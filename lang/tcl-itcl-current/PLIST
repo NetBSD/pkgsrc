@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/15 22:02:56 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:03:43 joerg Exp $
 include/itcl.h
 include/itclDecls.h
 include/itclInt.h
@@ -279,10 +279,3 @@ man/mann/iwidgets_watch.n
 man/mann/local.n
 man/mann/scope.n
 man/mann/usual.n
-@dirrm lib/tcl/iwidgets/scripts
-@dirrm lib/tcl/iwidgets/demos/images
-@dirrm lib/tcl/iwidgets/demos/html
-@dirrm lib/tcl/iwidgets/demos
-@dirrm lib/tcl/iwidgets
-@dirrm lib/tcl/itk3.3
-@dirrm lib/tcl/itcl3.3

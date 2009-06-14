@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/05 19:34:44 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:26 joerg Exp $
 bin/ettercap
 bin/etterfilter
 bin/etterlog
@@ -52,6 +52,3 @@ share/ettercap/etterfilter.cnt
 share/ettercap/etterfilter.tbl
 share/ettercap/etterlog.dtd
 share/examples/ettercap-NG/etter.conf
-@dirrm share/examples/ettercap-NG
-@dirrm share/ettercap
-@dirrm lib/ettercap

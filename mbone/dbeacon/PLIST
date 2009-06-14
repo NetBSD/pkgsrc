@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/26 15:01:54 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:06:15 joerg Exp $
 bin/dbeacon
 man/man1/dbeacon.1
 share/doc/dbeacon/FAQ
@@ -11,5 +11,3 @@ share/examples/dbeacon/matrix.conf.5
 share/examples/dbeacon/matrix.conf.sample
 share/examples/dbeacon/matrix.pl
 share/examples/dbeacon/xml2txt.pl
-@dirrm share/examples/dbeacon
-@dirrm share/doc/dbeacon

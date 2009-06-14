@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/15 00:56:21 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:48 joerg Exp $
 bin/whois3
 man/man1/whois3.1
 share/${PKGNAME}/FLAGS.txt
 share/${PKGNAME}/HELP.txt
-@dirrm share/${PKGNAME}

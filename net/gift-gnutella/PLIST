@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/25 23:32:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:28 joerg Exp $
 lib/giFT/libGnutella.la
 share/giFT/Gnutella/Gnutella.conf
 share/giFT/Gnutella/Gnutella.conf.template
 share/giFT/Gnutella/gwebcaches
 share/giFT/Gnutella/hostiles.txt
-@dirrm share/giFT/Gnutella
 @unexec ${RMDIR} %D/lib/giFT 2>/dev/null || ${TRUE}

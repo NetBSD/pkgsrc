@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:25 joerg Exp $
 bin/dhisd
 bin/dhisd-genkeys
 share/doc/dhisd/CONTRIBUTORS
@@ -8,5 +8,3 @@ share/doc/dhisd/MODULES
 share/doc/dhisd/README
 share/examples/dhisd/dhis.db.sample
 share/examples/dhisd/services.db.sample
-@dirrm share/doc/dhisd
-@dirrm share/examples/dhisd

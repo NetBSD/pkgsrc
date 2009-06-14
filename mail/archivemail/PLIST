@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/30 19:12:13 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:27 joerg Exp $
 bin/archivemail
 man/man1/archivemail.1
 share/archivemail/CHANGELOG
@@ -7,4 +7,3 @@ share/archivemail/MANIFEST
 share/archivemail/PKG-INFO
 share/archivemail/README
 share/archivemail/TODO
-@dirrm share/archivemail

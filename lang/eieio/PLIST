@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/03/20 05:34:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:03:30 joerg Exp $
 ${EMACS_INFOPREFIX}/eieio.info
 ${EMACS_LISPPREFIX}/eieio/call-tree.el
 ${EMACS_LISPPREFIX}/eieio/call-tree.elc
@@ -22,4 +22,3 @@ ${EMACS_LISPPREFIX}/eieio/linemark.el
 ${EMACS_LISPPREFIX}/eieio/linemark.elc
 ${EMACS_LISPPREFIX}/eieio/tree.el
 ${EMACS_LISPPREFIX}/eieio/tree.elc
-@dirrm ${EMACS_LISPPREFIX}/eieio

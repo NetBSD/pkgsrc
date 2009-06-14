@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/05/03 13:34:24 abs Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:19 joerg Exp $
 bin/geoiplookup
 bin/geoiplookup6
 bin/geoipupdate
@@ -12,5 +12,3 @@ man/man1/geoiplookup6.1
 man/man1/geoipupdate.1
 share/GeoIP/GeoIP.dat
 share/examples/GeoIP/GeoIP.conf.default
-@dirrm share/examples/GeoIP
-@dirrm share/GeoIP

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/04/12 20:46:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:05:46 joerg Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -1660,83 +1660,10 @@ share/octave/${PKGVERSION}/m/time/now.m
 share/octave/${PKGVERSION}/m/time/weekday.m
 share/octave/ls-R
 share/octave/site/m/startup/octaverc
-@dirrm share/octave/site/m/startup
-@comment @dirrm share/octave/site/m
-@dirrm share/octave/site/api-v32/m
-@dirrm share/octave/site/api-v32
-@dirrm share/octave/${PKGVERSION}/site/m
-@dirrm share/octave/${PKGVERSION}/site
-@dirrm share/octave/${PKGVERSION}/m/time
-@dirrm share/octave/${PKGVERSION}/m/testfun
-@dirrm share/octave/${PKGVERSION}/m/strings
-@dirrm share/octave/${PKGVERSION}/m/statistics/tests
-@dirrm share/octave/${PKGVERSION}/m/statistics/models
-@dirrm share/octave/${PKGVERSION}/m/statistics/distributions
-@dirrm share/octave/${PKGVERSION}/m/statistics/base
-@dirrm share/octave/${PKGVERSION}/m/statistics
-@dirrm share/octave/${PKGVERSION}/m/startup
-@dirrm share/octave/${PKGVERSION}/m/special-matrix
-@dirrm share/octave/${PKGVERSION}/m/specfun
-@dirrm share/octave/${PKGVERSION}/m/sparse
-@dirrm share/octave/${PKGVERSION}/m/signal
-@dirrm share/octave/${PKGVERSION}/m/set
-@dirrm share/octave/${PKGVERSION}/m/quaternion
-@dirrm share/octave/${PKGVERSION}/m/polynomial
-@dirrm share/octave/${PKGVERSION}/m/plot
-@dirrm share/octave/${PKGVERSION}/m/pkg
-@dirrm share/octave/${PKGVERSION}/m/path
-@dirrm share/octave/${PKGVERSION}/m/optimization
-@dirrm share/octave/${PKGVERSION}/m/miscellaneous
-@dirrm share/octave/${PKGVERSION}/m/linear-algebra
-@dirrm share/octave/${PKGVERSION}/m/io
-@dirrm share/octave/${PKGVERSION}/m/image
-@dirrm share/octave/${PKGVERSION}/m/geometry
-@dirrm share/octave/${PKGVERSION}/m/general
-@dirrm share/octave/${PKGVERSION}/m/finance
-@dirrm share/octave/${PKGVERSION}/m/elfun
-@dirrm share/octave/${PKGVERSION}/m/deprecated
-@dirrm share/octave/${PKGVERSION}/m/control/util
-@dirrm share/octave/${PKGVERSION}/m/control/system
-@dirrm share/octave/${PKGVERSION}/m/control/obsolete
-@dirrm share/octave/${PKGVERSION}/m/control/hinf
-@dirrm share/octave/${PKGVERSION}/m/control/base
-@dirrm share/octave/${PKGVERSION}/m/control
-@dirrm share/octave/${PKGVERSION}/m/audio
-@dirrm share/octave/${PKGVERSION}/m
-@dirrm share/octave/${PKGVERSION}/imagelib
-@dirrm share/octave/${PKGVERSION}/doc
-@dirrm share/octave/${PKGVERSION}
-@comment @dirrm share/octave
-@comment in xdg-dirs: @dirrm share/applications
 @exec ${MKDIR} %D/libexec/octave/site/oct/api-v32/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/oct/api-v32/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/oct/api-v32
 @exec ${MKDIR} %D/libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/oct
 @exec ${MKDIR} %D/libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/exec
-@dirrm libexec/octave/site
 @exec ${MKDIR} %D/libexec/octave/api-v32/site/exec/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/api-v32/site/exec/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/api-v32/site/exec
-@dirrm libexec/octave/api-v32/site
-@dirrm libexec/octave/api-v32
 @exec ${MKDIR} %D/libexec/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/${PKGVERSION}/site/oct
 @exec ${MKDIR} %D/libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/${PKGVERSION}/site/exec
-@dirrm libexec/octave/${PKGVERSION}/site
-@dirrm libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/${PKGVERSION}/oct
-@dirrm libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/${PKGVERSION}/exec
-@dirrm libexec/octave/${PKGVERSION}
-@dirrm libexec/octave
 @exec ${MKDIR} %D/lib/octave-${PKGVERSION}
-@dirrm lib/octave-${PKGVERSION}
-@dirrm include/octave-${PKGVERSION}/octave
-@dirrm include/octave-${PKGVERSION}

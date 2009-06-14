@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/21 00:21:31 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:46 joerg Exp $
 bin/twitux
 share/applications/twitux.desktop
 share/gconf/schemas/twitux.schemas
@@ -17,9 +17,3 @@ share/twitux/prefs_dlg.xml
 share/twitux/send_message_dlg.xml
 share/twitux/spell_dlg.xml
 share/twitux/tray_menu.xml
-@dirrm share/twitux
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications

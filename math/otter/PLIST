@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:33:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:47 joerg Exp $
 bin/otter
 share/doc/otter/Announce
 share/doc/otter/Changelog
@@ -181,13 +181,3 @@ share/examples/otter/wos/rob_occ.PII400
 share/examples/otter/wos/rob_occ.in
 share/examples/otter/wos/twoval.PII400
 share/examples/otter/wos/twoval.in
-@dirrm share/examples/otter/wos
-@dirrm share/examples/otter/split
-@dirrm share/examples/otter/program
-@dirrm share/examples/otter/misc
-@dirrm share/examples/otter/kalman
-@dirrm share/examples/otter/ivy
-@dirrm share/examples/otter/fringe
-@dirrm share/examples/otter/auto
-@dirrm share/examples/otter
-@dirrm share/doc/otter

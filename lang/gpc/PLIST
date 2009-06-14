@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/08 20:35:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:33 joerg Exp $
 ${GPC_SUBPREFIX}bin/gpc
 ${GPC_SUBPREFIX}bin/gpc-run
 ${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/collect2
@@ -305,7 +305,3 @@ share/doc/gpc/docdemos/whiledemo.pas
 share/doc/gpc/docdemos/wordbooldemo.pas
 share/doc/gpc/docdemos/worddemo.pas
 share/doc/gpc/docdemos/xordemo.pas
-@dirrm ${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units
-@dirrm share/doc/gpc/docdemos
-@dirrm share/doc/gpc/demos
-@dirrm share/doc/gpc

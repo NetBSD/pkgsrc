@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/06/21 16:54:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:30 joerg Exp $
 hobbit/cgi-bin/bb-ack.sh
 hobbit/cgi-bin/bb-csvinfo.sh
 hobbit/cgi-bin/bb-eventlog.sh
@@ -220,35 +220,3 @@ man/man8/hobbitd_history.8
 man/man8/hobbitd_larrd.8
 man/man8/hobbitd_sample.8
 man/man8/hobbitlaunch.8
-@dirrm hobbit/server/www/wml
-@dirrm hobbit/server/www/snap
-@dirrm hobbit/server/www/rep
-@dirrm hobbit/server/www/notes
-@dirrm hobbit/server/www/menu
-@dirrm hobbit/server/www/html
-@dirrm hobbit/server/www/help/manpages/man8
-@dirrm hobbit/server/www/help/manpages/man7
-@dirrm hobbit/server/www/help/manpages/man5
-@dirrm hobbit/server/www/help/manpages/man1
-@dirrm hobbit/server/www/help/manpages
-@dirrm hobbit/server/www/help
-@dirrm hobbit/server/www/gifs
-@dirrm hobbit/server/www
-@dirrm hobbit/server/web
-@dirrm hobbit/server/tmp
-@dirrm hobbit/server/ext
-@dirrm hobbit/server/etc
-@dirrm hobbit/server/bin
-@dirrm hobbit/server
-@dirrm hobbit/data/rrd
-@dirrm hobbit/data/logs
-@dirrm hobbit/data/histlogs/plan_info_espci_fr/info
-@dirrm hobbit/data/histlogs/plan_info_espci_fr
-@dirrm hobbit/data/histlogs
-@dirrm hobbit/data/hist
-@dirrm hobbit/data/disabled
-@dirrm hobbit/data/data
-@dirrm hobbit/data/acks
-@dirrm hobbit/data
-@dirrm hobbit/cgi-bin
-@dirrm hobbit

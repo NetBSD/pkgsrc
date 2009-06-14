@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/10/29 00:18:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:04:27 joerg Exp $
 bin/balsa
 bin/balsa-ab
 lib/bonobo/servers/GNOME_Balsa.server
@@ -143,26 +143,3 @@ share/omf/balsa/balsa-C.omf
 share/pixmaps/gnome-balsa2.png
 share/sounds/balsa/newmail.wav
 share/sounds/balsa/startup.wav
-@dirrm share/sounds/balsa
-@comment in xdg-dirs: @dirrm share/sounds
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/balsa
-@comment in rarian: @dirrm share/omf
-@comment in ORBit2: @dirrm share/idl
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/balsa/C/figures
-@dirrm share/gnome/help/balsa/C
-@dirrm share/gnome/help/balsa
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/examples/balsa
-@dirrm share/balsa/pixmaps
-@dirrm share/balsa/hicolor/24x24/apps
-@dirrm share/balsa/hicolor/24x24
-@dirrm share/balsa/hicolor/16x16/apps
-@dirrm share/balsa/hicolor/16x16
-@dirrm share/balsa/hicolor
-@dirrm share/balsa/gtksourceview-2.0
-@dirrm share/balsa
-@comment in xdg-dirs: @dirrm share/applications
-@comment in libbonobo: @dirrm lib/bonobo/servers

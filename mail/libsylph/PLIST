@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/13 12:38:30 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:36 joerg Exp $
 include/sylph/account.h
 include/sylph/base64.h
 include/sylph/codeconv.h
@@ -67,4 +67,3 @@ share/locale/uk/LC_MESSAGES/libsylph.mo
 share/locale/vi/LC_MESSAGES/libsylph.mo
 share/locale/zh_CN/LC_MESSAGES/libsylph.mo
 share/locale/zh_TW/LC_MESSAGES/libsylph.mo
-@dirrm include/sylph

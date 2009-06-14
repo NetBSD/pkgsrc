@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/17 10:16:53 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:42 joerg Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -219,17 +219,5 @@ share/sendmail/siteconfig/uucp.cogsci.m4
 share/sendmail/siteconfig/uucp.old.arpa.m4
 share/sendmail/siteconfig/uucp.ucbarpa.m4
 share/sendmail/siteconfig/uucp.ucbvax.m4
-@dirrm share/sendmail/siteconfig
-@dirrm share/sendmail/sh
-@dirrm share/sendmail/ostype
-@dirrm share/sendmail/mailer
-@dirrm share/sendmail/m4
-@dirrm share/sendmail/hack
-@dirrm share/sendmail/feature
-@dirrm share/sendmail/domain
-@dirrm share/sendmail/cf
-@dirrm share/sendmail
 @unexec ${RMDIR} %D/share/examples/sendmail 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} ${SMRSH_CMDDIR} 2>/dev/null || ${TRUE}
-@dirrm share/doc/sendmail
-@dirrm libexec/sendmail

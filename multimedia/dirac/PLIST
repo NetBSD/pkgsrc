@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/11 17:27:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:08:02 joerg Exp $
 bin/BMPtoRGB
 bin/RGBtoBMP
 bin/RGBtoUYVY
@@ -33,7 +33,3 @@ include/dirac/libdirac_encoder/dirac_encoder.h
 lib/libdirac_decoder.la
 lib/libdirac_encoder.la
 lib/pkgconfig/dirac.pc
-@dirrm include/dirac/libdirac_encoder
-@dirrm include/dirac/libdirac_decoder
-@dirrm include/dirac/libdirac_common
-@dirrm include/dirac

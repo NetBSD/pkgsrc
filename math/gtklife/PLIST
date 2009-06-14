@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/30 09:38:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:45 joerg Exp $
 bin/gtklife
 share/doc/gtklife/banner.gif
 share/doc/gtklife/billiard.gif
@@ -350,47 +350,3 @@ share/gtklife/patterns/lpa/synthesis/make_gun.glf
 share/gtklife/patterns/lpa/synthesis/make_hustler.glf
 share/gtklife/patterns/lpa/synthesis/make_osc.glf
 share/gtklife/patterns/lpa/synthesis/make_pole.glf
-@dirrm share/gtklife/patterns/lpa/synthesis
-@dirrm share/gtklife/patterns/lpa/spaceships
-@dirrm share/gtklife/patterns/lpa/space_fillers
-@dirrm share/gtklife/patterns/lpa/sawtooth
-@dirrm share/gtklife/patterns/lpa/rakes
-@dirrm share/gtklife/patterns/lpa/puffers
-@dirrm share/gtklife/patterns/lpa/oscillators
-@dirrm share/gtklife/patterns/lpa/miscellaneous
-@dirrm share/gtklife/patterns/lpa/math_and_CS
-@dirrm share/gtklife/patterns/lpa/guns
-@dirrm share/gtklife/patterns/lpa/growth_limit
-@dirrm share/gtklife/patterns/lpa/fuses
-@dirrm share/gtklife/patterns/lpa/corders
-@dirrm share/gtklife/patterns/lpa/breeders
-@dirrm share/gtklife/patterns/lpa/basics
-@dirrm share/gtklife/patterns/lpa
-@dirrm share/gtklife/patterns/jslife/velocity_other
-@dirrm share/gtklife/patterns/jslife/velocity_c5o
-@dirrm share/gtklife/patterns/jslife/velocity_c4o
-@dirrm share/gtklife/patterns/jslife/velocity_c4d
-@dirrm share/gtklife/patterns/jslife/velocity_c3
-@dirrm share/gtklife/patterns/jslife/velocity_c2
-@dirrm share/gtklife/patterns/jslife/velocity_c12d
-@dirrm share/gtklife/patterns/jslife/velocity_2c5
-@dirrm share/gtklife/patterns/jslife/synthesis
-@dirrm share/gtklife/patterns/jslife/slideguns
-@dirrm share/gtklife/patterns/jslife/sawtooth
-@dirrm share/gtklife/patterns/jslife/reflectors
-@dirrm share/gtklife/patterns/jslife/oscillators
-@dirrm share/gtklife/patterns/jslife/odds_&_ends
-@dirrm share/gtklife/patterns/jslife/mathematics
-@dirrm share/gtklife/patterns/jslife/loops
-@dirrm share/gtklife/patterns/jslife/guns
-@dirrm share/gtklife/patterns/jslife/growers
-@dirrm share/gtklife/patterns/jslife/fuses
-@dirrm share/gtklife/patterns/jslife/eaters
-@dirrm share/gtklife/patterns/jslife/builders
-@dirrm share/gtklife/patterns/jslife/build_&_burn
-@dirrm share/gtklife/patterns/jslife/breeders
-@dirrm share/gtklife/patterns/jslife
-@dirrm share/gtklife/patterns
-@dirrm share/gtklife/graphics
-@dirrm share/gtklife
-@dirrm share/doc/gtklife

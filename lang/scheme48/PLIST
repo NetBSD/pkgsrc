@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/05/02 09:22:21 degroote Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:40 joerg Exp $
 bin/scheme-r5rs
 bin/scheme-srfi-7
 bin/scheme48
@@ -232,17 +232,3 @@ share/${PKGNAME}/srfi/srfi-71.scm
 share/${PKGNAME}/srfi/srfi-74.scm
 share/${PKGNAME}/srfi/srfi-78.scm
 share/${PKGNAME}/srfi/test-packages.scm
-@dirrm share/${PKGNAME}/srfi
-@dirrm share/${PKGNAME}/sort
-@dirrm share/${PKGNAME}/rts
-@dirrm share/${PKGNAME}/posix
-@dirrm share/${PKGNAME}/opt
-@dirrm share/${PKGNAME}/misc
-@dirrm share/${PKGNAME}/link
-@dirrm share/${PKGNAME}/env
-@dirrm share/${PKGNAME}/cml
-@dirrm share/${PKGNAME}/big
-@dirrm share/${PKGNAME}
-@dirrm share/doc/${PKGNAME}/html
-@dirrm share/doc/${PKGNAME}
-@dirrm lib/${PKGNAME}

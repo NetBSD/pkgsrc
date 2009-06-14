@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/26 23:39:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:04:32 joerg Exp $
 bin/exchange-connector-setup-${EE_VER}
 lib/bonobo/servers/GNOME_Evolution_Exchange_Storage_${EE_VER}.server
 lib/evolution-data-server-1.2/camel-providers/libcamelexchange.la
@@ -144,13 +144,3 @@ share/locale/xh/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/zh_CN/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/zh_HK/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/zh_TW/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
-@dirrm share/gtk-doc/html/evolution-exchange
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/evolution-exchange/${EE_VER}/ui
-@dirrm share/evolution-exchange/${EE_VER}/images
-@dirrm share/evolution-exchange/${EE_VER}/glade
-@dirrm share/evolution-exchange/${EE_VER}
-@dirrm share/evolution-exchange
-@comment in evolution: @dirrm libexec/evolution/${EE_VER}
-@comment in evolution-data-server: @dirrm lib/evolution-data-server-1.2/camel-providers
-@comment in libbonobo: @dirrm lib/bonobo/servers

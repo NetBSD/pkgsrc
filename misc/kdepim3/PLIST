@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2008/08/27 12:15:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.33 2009/06/14 18:07:24 joerg Exp $
 bin/akregator
 bin/egroupwarewizard
 bin/exchangewizard
@@ -1941,360 +1941,34 @@ share/kde/servicetypes/kontactplugin.desktop
 share/kde/servicetypes/korganizerpart.desktop
 share/kde/servicetypes/korgprintplugin.desktop
 share/kde/servicetypes/kpilotconduit.desktop
-@comment in kde: @dirrm share/kde/servicetypes
-@dirrm share/kde/services/kresources/knotes
-@dirrm share/kde/services/kresources/kcal
-@comment in kde: @dirrm share/kde/services/kresources/kabc
-@comment in kde: @dirrm share/kde/services/kresources
-@dirrm share/kde/services/korganizer
-@dirrm share/kde/services/kontact
-@comment in kde: @dirrm share/kde/services/kded
-@comment in kde: @dirrm share/kde/services/kaddressbook
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/config.kcfg
-@comment in kde: @dirrm share/kde/config
-@comment in kde: @dirrm share/kde/autostart
-@dirrm share/kde/apps/libkleopatra/pics
-@dirrm share/kde/apps/libkleopatra
-@dirrm share/kde/apps/libkholidays
-@dirrm share/kde/apps/libkdepim/about
-@dirrm share/kde/apps/libkdepim
-@dirrm share/kde/apps/libical/zoneinfo/Pacific
-@dirrm share/kde/apps/libical/zoneinfo/Indian
-@dirrm share/kde/apps/libical/zoneinfo/Europe
-@dirrm share/kde/apps/libical/zoneinfo/Australia
-@dirrm share/kde/apps/libical/zoneinfo/Atlantic
-@dirrm share/kde/apps/libical/zoneinfo/Asia
-@dirrm share/kde/apps/libical/zoneinfo/Arctic
-@dirrm share/kde/apps/libical/zoneinfo/Antarctica
-@dirrm share/kde/apps/libical/zoneinfo/America/North_Dakota
-@dirrm share/kde/apps/libical/zoneinfo/America/Kentucky
-@dirrm share/kde/apps/libical/zoneinfo/America/Indiana
-@dirrm share/kde/apps/libical/zoneinfo/America/Argentina
-@dirrm share/kde/apps/libical/zoneinfo/America
-@dirrm share/kde/apps/libical/zoneinfo/Africa
-@dirrm share/kde/apps/libical/zoneinfo
-@dirrm share/kde/apps/libical
-@dirrm share/kde/apps/kwatchgnupg/pics
-@dirrm share/kde/apps/kwatchgnupg
-@dirrm share/kde/apps/ktnef/icons/locolor/16x16/actions
-@dirrm share/kde/apps/ktnef/icons/locolor/16x16
-@dirrm share/kde/apps/ktnef/icons/locolor
-@dirrm share/kde/apps/ktnef/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/ktnef/icons/hicolor/22x22
-@dirrm share/kde/apps/ktnef/icons/hicolor
-@dirrm share/kde/apps/ktnef/icons
-@dirrm share/kde/apps/ktnef
-@dirrm share/kde/apps/kpilot/sysinfoconduit
-@dirrm share/kde/apps/kpilot/pics
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/64x64/actions
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/64x64
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/48x48/apps
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/48x48/actions
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/48x48
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/32x32/apps
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/32x32
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/22x22/apps
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/22x22
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/16x16/apps
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/kpilot/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kpilot/icons/crystalsvg
-@dirrm share/kde/apps/kpilot/icons
-@dirrm share/kde/apps/kpilot
-@dirrm share/kde/apps/korganizer/sounds
-@dirrm share/kde/apps/korganizer/plugins
-@dirrm share/kde/apps/korganizer/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/korganizer/icons/crystalsvg/32x32
-@dirrm share/kde/apps/korganizer/icons/crystalsvg/22x22/actions/emptybox
-@dirrm share/kde/apps/korganizer/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/korganizer/icons/crystalsvg/22x22
-@dirrm share/kde/apps/korganizer/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/korganizer/icons/crystalsvg/16x16
-@dirrm share/kde/apps/korganizer/icons/crystalsvg
-@dirrm share/kde/apps/korganizer/icons
-@dirrm share/kde/apps/korganizer
-@dirrm share/kde/apps/korgac/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/korgac/icons/crystalsvg/22x22
-@dirrm share/kde/apps/korgac/icons/crystalsvg
-@dirrm share/kde/apps/korgac/icons
-@dirrm share/kde/apps/korgac
-@dirrm share/kde/apps/kontactsummary
-@dirrm share/kde/apps/kontact/profiles/OutlookDefaults
-@dirrm share/kde/apps/kontact/profiles/KontactDefaults
-@dirrm share/kde/apps/kontact/profiles
-@dirrm share/kde/apps/kontact/about
-@dirrm share/kde/apps/kontact
-@dirrm share/kde/apps/knotes/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/knotes/icons/crystalsvg/16x16
-@dirrm share/kde/apps/knotes/icons/crystalsvg
-@dirrm share/kde/apps/knotes/icons
-@dirrm share/kde/apps/knotes
-@dirrm share/kde/apps/knode/pics
-@dirrm share/kde/apps/knode/icons/crystalsvg/scalable/actions
-@dirrm share/kde/apps/knode/icons/crystalsvg/scalable
-@dirrm share/kde/apps/knode/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/knode/icons/crystalsvg/32x32
-@dirrm share/kde/apps/knode/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/knode/icons/crystalsvg/22x22
-@dirrm share/kde/apps/knode/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/knode/icons/crystalsvg/16x16
-@dirrm share/kde/apps/knode/icons/crystalsvg
-@dirrm share/kde/apps/knode/icons
-@dirrm share/kde/apps/knode/filters
-@dirrm share/kde/apps/knode
-@dirrm share/kde/apps/kmailcvt/pics
-@dirrm share/kde/apps/kmailcvt
-@dirrm share/kde/apps/kmail/plugins/bodypartformatter
-@dirrm share/kde/apps/kmail/plugins
-@dirrm share/kde/apps/kmail/pics
-@dirrm share/kde/apps/kmail/icons/crystalsvg/scalable/actions
-@dirrm share/kde/apps/kmail/icons/crystalsvg/scalable
-@dirrm share/kde/apps/kmail/icons/crystalsvg/48x48/actions
-@dirrm share/kde/apps/kmail/icons/crystalsvg/48x48
-@dirrm share/kde/apps/kmail/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/kmail/icons/crystalsvg/32x32
-@dirrm share/kde/apps/kmail/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/kmail/icons/crystalsvg/22x22
-@dirrm share/kde/apps/kmail/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/kmail/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kmail/icons/crystalsvg/128x128/actions
-@dirrm share/kde/apps/kmail/icons/crystalsvg/128x128
-@dirrm share/kde/apps/kmail/icons/crystalsvg
-@dirrm share/kde/apps/kmail/icons
-@dirrm share/kde/apps/kmail/about
-@dirrm share/kde/apps/kmail
-@dirrm share/kde/apps/kleopatra
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/64x64/apps
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/64x64
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/48x48/apps
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/48x48/actions
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/48x48
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/32x32/apps
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/32x32
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/22x22
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/16x16/apps
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/128x128/apps
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg/128x128
-@dirrm share/kde/apps/kitchensync/icons/crystalsvg
-@dirrm share/kde/apps/kitchensync/icons
-@dirrm share/kde/apps/kitchensync/about
-@dirrm share/kde/apps/kitchensync
-@dirrm share/kde/apps/kgantt/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/kgantt/icons/crystalsvg/32x32
-@dirrm share/kde/apps/kgantt/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/kgantt/icons/crystalsvg/22x22
-@dirrm share/kde/apps/kgantt/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/kgantt/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kgantt/icons/crystalsvg
-@dirrm share/kde/apps/kgantt/icons
-@dirrm share/kde/apps/kgantt
-@dirrm share/kde/apps/kdepimwidgets/pics
-@dirrm share/kde/apps/kdepimwidgets
-@dirrm share/kde/apps/kdepim/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/kdepim/icons/crystalsvg/32x32
-@dirrm share/kde/apps/kdepim/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/kdepim/icons/crystalsvg/22x22
-@dirrm share/kde/apps/kdepim/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/kdepim/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kdepim/icons/crystalsvg
-@dirrm share/kde/apps/kdepim/icons
-@dirrm share/kde/apps/kdepim
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@dirrm share/kde/apps/karmpart
-@dirrm share/kde/apps/karm/pics
-@dirrm share/kde/apps/karm
-@dirrm share/kde/apps/kandy
-@dirrm share/kde/apps/kalarm/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/kalarm/icons/crystalsvg/22x22
-@dirrm share/kde/apps/kalarm/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/kalarm/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kalarm/icons/crystalsvg
-@dirrm share/kde/apps/kalarm/icons
-@dirrm share/kde/apps/kalarm
-@dirrm share/kde/apps/kaddressbook/printing
-@dirrm share/kde/apps/kaddressbook/pics
-@dirrm share/kde/apps/kaddressbook/icons/locolor/22x22/actions
-@dirrm share/kde/apps/kaddressbook/icons/locolor/22x22
-@dirrm share/kde/apps/kaddressbook/icons/locolor/16x16/actions
-@dirrm share/kde/apps/kaddressbook/icons/locolor/16x16
-@dirrm share/kde/apps/kaddressbook/icons/locolor
-@dirrm share/kde/apps/kaddressbook/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/kaddressbook/icons/crystalsvg/32x32
-@dirrm share/kde/apps/kaddressbook/icons/crystalsvg/16x16/apps
-@dirrm share/kde/apps/kaddressbook/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/kaddressbook/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kaddressbook/icons/crystalsvg
-@dirrm share/kde/apps/kaddressbook/icons
-@dirrm share/kde/apps/kaddressbook/csv-templates
-@dirrm share/kde/apps/kaddressbook/contacteditorpages
-@comment in kde: @dirrm share/kde/apps/kaddressbook
-@dirrm share/kde/apps/akregator/pics
-@dirrm share/kde/apps/akregator/about
-@dirrm share/kde/apps/akregator
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Utilities
-@comment in kde: @dirrm share/kde/applnk/Applications
-@comment in kde: @dirrm share/kde/applnk/.hidden
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in kde: @dirrm share/icons/crystalsvg/64x64/actions
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/actions
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/actions
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/actions
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
-@dirrm share/doc/kde/HTML/en/kwatchgnupg
-@dirrm share/doc/kde/HTML/en/ktnef
-@dirrm share/doc/kde/HTML/en/kpilot
-@dirrm share/doc/kde/HTML/en/korn
-@dirrm share/doc/kde/HTML/en/korganizer
-@dirrm share/doc/kde/HTML/en/kontact
-@dirrm share/doc/kde/HTML/en/konsolekalendar
-@dirrm share/doc/kde/HTML/en/knotes
-@dirrm share/doc/kde/HTML/en/knode
-@dirrm share/doc/kde/HTML/en/kmail
-@dirrm share/doc/kde/HTML/en/kleopatra
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkpimidentities/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkpimidentities/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkpimidentities
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkpgp/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkpgp/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkpgp
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkmime/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkmime/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkmime
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkholidays/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkholidays/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkholidays
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkdepim/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkdepim/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkdepim
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkcal/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkcal/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkcal
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libemailfunctions/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libemailfunctions/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libemailfunctions
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kpilot/lib/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kpilot/lib/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kpilot/lib
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kpilot/kpilot/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kpilot/kpilot/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kpilot/kpilot
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kpilot/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kpilot/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kpilot
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/korganizer/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/korganizer/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/korganizer
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kontact/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kontact/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kontact
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/konsolekalendar/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/konsolekalendar/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/konsolekalendar
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/knotes/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/knotes/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/knotes
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kmail/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kmail/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kmail
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kitchensync/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kitchensync/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kitchensync
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/mbox/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/mbox/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/mbox
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/imap4/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/imap4/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/imap4
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kioslaves
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kgantt/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kgantt/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kgantt
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kdgantt/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kdgantt/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kdgantt
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/karm/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/karm/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/karm
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kandy/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kandy/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kandy
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kalarm/lib/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kalarm/lib/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kalarm/lib
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kalarm/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kalarm/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kalarm
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kaddressbook/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kaddressbook/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kaddressbook
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/certmanager/lib/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/certmanager/lib/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/certmanager/lib
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/certmanager/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/certmanager/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/certmanager
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/librss/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/librss/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/librss
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator/src
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/akregator/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs
-@dirrm share/doc/kde/HTML/en/karm
-@dirrm share/doc/kde/HTML/en/kandy
-@dirrm share/doc/kde/HTML/en/kalarm
-@dirrm share/doc/kde/HTML/en/kaddressbook
-@dirrm share/doc/kde/HTML/en/akregator
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3/plugins/designer
-@comment in kde: @dirrm lib/kde3
-@comment in kde: @dirrm lib/kconf_update_bin
-@dirrm include/qgpgme
-@dirrm include/mimelib
-@dirrm include/libkcal
-@dirrm include/libemailfunctions
-@dirrm include/ktnef
-@dirrm include/ksieve
-@dirrm include/kpilot
-@dirrm include/korganizer
-@dirrm include/kontact
-@dirrm include/kmail/interfaces
-@dirrm include/kmail
-@dirrm include/kleo
-@dirrm include/kgantt
-@dirrm include/kdepim
-@dirrm include/kaddressbook
-@comment in kde: @dirrm include/kabc
-@dirrm include/index
-@dirrm include/gpgme++/interfaces
-@dirrm include/gpgme++
-@dirrm include/calendar
-@dirrm include/akregator

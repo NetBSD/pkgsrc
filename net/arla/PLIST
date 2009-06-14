@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/04/12 22:43:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 18:09:21 joerg Exp $
 bin/afsfsperf
 bin/afstool
 ${PLIST.x11}bin/amon
@@ -136,6 +136,5 @@ share/examples/arla/ThisCell
 share/examples/arla/arla.conf
 share/examples/arla/fstab
 share/examples/arla/lkm.conf
-@dirrm share/examples/arla
 share/examples/rc.d/arlad
 share/gnats/stacken

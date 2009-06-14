@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/03/20 16:11:55 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:05:50 joerg Exp $
 bin/yacas
 bin/yacas.sh
 bin/yacas_client
@@ -438,68 +438,3 @@ share/yacas/univar.rep/sturm.ys.def
 share/yacas/yacas-gmtplot2d.sh
 share/yacas/yacas-gmtplot3d.sh
 share/yacas/yacasinit.ys
-@dirrm share/yacas/univar.rep
-@dirrm share/yacas/trigsimp.rep
-@dirrm share/yacas/transforms.rep
-@dirrm share/yacas/texform.rep
-@dirrm share/yacas/testers.rep
-@dirrm share/yacas/tensor.rep
-@dirrm share/yacas/sums.rep
-@dirrm share/yacas/substitute.rep
-@dirrm share/yacas/stubs.rep
-@dirrm share/yacas/stdfuncs.rep
-@dirrm share/yacas/stats.rep
-@dirrm share/yacas/statistics.rep
-@dirrm share/yacas/specfunc.rep
-@dirrm share/yacas/solve.rep
-@dirrm share/yacas/simplify.rep
-@dirrm share/yacas/random.rep
-@dirrm share/yacas/radsimp.rep
-@dirrm share/yacas/rabinmiller.rep
-@dirrm share/yacas/pslq.rep
-@dirrm share/yacas/probability.rep
-@dirrm share/yacas/predicates.rep
-@dirrm share/yacas/plots.rep
-@dirrm share/yacas/patterns.rep
-@dirrm share/yacas/padic.rep
-@dirrm share/yacas/osdep.rep
-@dirrm share/yacas/orthopoly.rep
-@dirrm share/yacas/openmath.rep
-@dirrm share/yacas/odesolver.rep
-@dirrm share/yacas/numbers.rep
-@dirrm share/yacas/newly.rep
-@dirrm share/yacas/multivar.rep
-@dirrm share/yacas/manmake
-@dirrm share/yacas/logic.rep
-@dirrm share/yacas/localrules.rep
-@dirrm share/yacas/lists.rep
-@dirrm share/yacas/linalg.rep
-@dirrm share/yacas/limit.rep
-@dirrm share/yacas/io.rep
-@dirrm share/yacas/integrate.rep
-@dirrm share/yacas/include/plat/linux32
-@dirrm share/yacas/include/plat
-@dirrm share/yacas/include
-@dirrm share/yacas/html.rep
-@dirrm share/yacas/functional.rep
-@dirrm share/yacas/fakedb.rep
-@dirrm share/yacas/factors.rep
-@dirrm share/yacas/examples
-@dirrm share/yacas/example.rep
-@dirrm share/yacas/documentation
-@dirrm share/yacas/deriv.rep
-@dirrm share/yacas/deffunc.rep
-@dirrm share/yacas/debug.rep
-@dirrm share/yacas/cstubgen.rep
-@dirrm share/yacas/controlflow.rep
-@dirrm share/yacas/constants.rep
-@dirrm share/yacas/complex.rep
-@dirrm share/yacas/compile.rep
-@dirrm share/yacas/codecheck.rep
-@dirrm share/yacas/c_form.rep
-@dirrm share/yacas/base.rep
-@dirrm share/yacas/assoc.rep
-@dirrm share/yacas/array.rep
-@dirrm share/yacas/addons
-@dirrm share/yacas
-@dirrm lib/yacas
