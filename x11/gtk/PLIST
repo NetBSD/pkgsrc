@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:24:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 22:06:39 joerg Exp $
 bin/gtk-config
 info/gdk.info
 info/gtk.info
@@ -218,4 +218,3 @@ share/locale/hr/LC_MESSAGES/gtk+.mo
 share/locale/sl/LC_MESSAGES/gtk+.mo
 share/locale/vi/LC_MESSAGES/gtk+.mo
 share/themes/Default/gtk/gtkrc
-@unexec ${RMDIR} %D/share/themes/Default 2>/dev/null || ${TRUE}

@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST.stub,v 1.1 2007/09/21 13:00:54 wiz Exp $
+@comment $NetBSD: PLIST.stub,v 1.2 2009/06/14 22:06:40 joerg Exp $
 lib/ocaml/stublibs/dlllablgtk.so
-@unexec ${RMDIR} %D/lib/ocaml/stublibs 2>/dev/null || ${TRUE}

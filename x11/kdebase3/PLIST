@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2009/06/14 18:24:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.53 2009/06/14 22:06:40 joerg Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -3978,9 +3978,9 @@ share/locale/l10n/zm/entry.desktop
 share/locale/l10n/zm/flag.png
 share/locale/l10n/zw/entry.desktop
 share/locale/l10n/zw/flag.png
-@exec ${MKDIR} %D/share/kde/templates/.source/emptydir
-@exec ${MKDIR} %D/share/kde/applnk/Settings/Information
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdebase-apidocs/libkonq/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdebase-apidocs/kwin/lib/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdebase-apidocs/kwin/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdebase-apidocs/kate/html
+@pkgdir share/kde/templates/.source/emptydir
+@pkgdir share/kde/applnk/Settings/Information
+@pkgdir share/doc/kde/HTML/en/kdebase-apidocs/libkonq/html
+@pkgdir share/doc/kde/HTML/en/kdebase-apidocs/kwin/lib/html
+@pkgdir share/doc/kde/HTML/en/kdebase-apidocs/kwin/html
+@pkgdir share/doc/kde/HTML/en/kdebase-apidocs/kate/html

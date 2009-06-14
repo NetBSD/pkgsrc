@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/06 16:29:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:06:40 joerg Exp $
 include/X11/fonts/FSlib.h
 lib/libFS.la
 lib/pkgconfig/libfs.pc
-@unexec ${RMDIR} %D/include/X11/fonts 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/include/X11 2>/dev/null || ${TRUE}
