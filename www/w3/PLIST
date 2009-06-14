@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/04/08 04:42:10 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:39 joerg Exp $
 ${ETCDIR}/default.css
 ${EMACS_INFOPREFIX}/w3-faq.info
 ${EMACS_INFOPREFIX}/w3.info
@@ -131,5 +131,3 @@ ${EMACS_LISPPREFIX}/w3/w3-xemac.el
 ${EMACS_LISPPREFIX}/w3/w3-xemac.elc
 ${EMACS_LISPPREFIX}/w3/w3.el
 ${EMACS_LISPPREFIX}/w3/w3.elc
-@dirrm ${EMACS_LISPPREFIX}/w3
-@unexec ${RMDIR} -p %D/${ETCDIR} 2>/dev/null || ${TRUE}

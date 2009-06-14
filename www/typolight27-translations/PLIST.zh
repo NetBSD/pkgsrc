@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.zh,v 1.2 2009/05/01 14:50:37 taca Exp $
+@comment $NetBSD: PLIST.zh,v 1.3 2009/06/14 22:00:39 joerg Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/zh/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/zh/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/zh/default.php
@@ -96,18 +96,3 @@ ${TL_WEBDIR}/system/modules/rss_reader/languages/zh/tl_module.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/zh/.htaccess
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/zh/modules.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/zh/tl_templates.php
-@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/rep_client/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/rep_base/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/registration/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/news/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/memberlist/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/listing/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/faq/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/comments/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/zh
-@dirrm ${TL_WEBDIR}/system/modules/backend/languages/zh

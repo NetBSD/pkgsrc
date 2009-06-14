@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.nl,v 1.2 2009/05/13 13:12:27 taca Exp $
+@comment $NetBSD: PLIST.nl,v 1.3 2009/06/14 22:00:39 joerg Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/nl/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/nl/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/nl/default.php
@@ -101,19 +101,3 @@ ${TL_WEBDIR}/system/modules/rss_reader/languages/nl/tl_module.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/nl/.htaccess
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/nl/modules.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/nl/tl_templates.php
-@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/rep_client/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/rep_base/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/registration/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/news/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/memberlist/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/listing/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/glossary/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/faq/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/comments/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/nl
-@dirrm ${TL_WEBDIR}/system/modules/backend/languages/nl

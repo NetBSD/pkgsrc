@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/03 18:04:10 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:40 joerg Exp $
 share/examples/websvn/distconfig.inc
 ${HTTPD_ROOT}/websvn/blame.php
 ${HTTPD_ROOT}/websvn/cache/tmp
@@ -84,12 +84,4 @@ ${HTTPD_ROOT}/websvn/templates/Zinn/index.tmpl
 ${HTTPD_ROOT}/websvn/templates/Zinn/log.tmpl
 ${HTTPD_ROOT}/websvn/templates/Zinn/styles.css
 ${HTTPD_ROOT}/websvn/wsvn.php
-@dirrm ${HTTPD_ROOT}/websvn/templates/Zinn
-@dirrm ${HTTPD_ROOT}/websvn/templates/Standard
-@dirrm ${HTTPD_ROOT}/websvn/templates/BlueGrey
-@dirrm ${HTTPD_ROOT}/websvn/templates
-@exec ${MKDIR} %D/${HTTPD_ROOT}/websvn/temp
-@dirrm ${HTTPD_ROOT}/websvn/temp
-@dirrm ${HTTPD_ROOT}/websvn/languages
-@dirrm ${HTTPD_ROOT}/websvn/cache
-@dirrm share/examples/websvn
+@pkgdir ${HTTPD_ROOT}/websvn/temp

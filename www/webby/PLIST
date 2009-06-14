@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:27:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:40 joerg Exp $
 bin/webby
 ${GEM_HOME}/cache/webby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
@@ -115,43 +115,3 @@ ${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_LIBDIR}/tasks/svn.rake
 ${GEM_LIBDIR}/tasks/website.rake
 ${GEM_HOME}/specifications/webby-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/tasks
-@dirrm ${GEM_LIBDIR}/spec/webby/resources
-@dirrm ${GEM_LIBDIR}/spec/webby
-@dirrm ${GEM_LIBDIR}/spec
-@dirrm ${GEM_LIBDIR}/lib/webby/stelan
-@dirrm ${GEM_LIBDIR}/lib/webby/resources
-@dirrm ${GEM_LIBDIR}/lib/webby/helpers
-@dirrm ${GEM_LIBDIR}/lib/webby/filters
-@dirrm ${GEM_LIBDIR}/lib/webby
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples/webby/templates
-@dirrm ${GEM_LIBDIR}/examples/webby/tasks
-@dirrm ${GEM_LIBDIR}/examples/webby/layouts
-@dirrm ${GEM_LIBDIR}/examples/webby/content/tutorial
-@dirrm ${GEM_LIBDIR}/examples/webby/content/tips_and_tricks
-@dirrm ${GEM_LIBDIR}/examples/webby/content/script
-@dirrm ${GEM_LIBDIR}/examples/webby/content/reference
-@dirrm ${GEM_LIBDIR}/examples/webby/content/manual
-@dirrm ${GEM_LIBDIR}/examples/webby/content/css/blueprint
-@dirrm ${GEM_LIBDIR}/examples/webby/content/css
-@dirrm ${GEM_LIBDIR}/examples/webby/content
-@dirrm ${GEM_LIBDIR}/examples/webby
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}/data/templates
-@dirrm ${GEM_LIBDIR}/data/tasks
-@dirrm ${GEM_LIBDIR}/data/lib
-@dirrm ${GEM_LIBDIR}/data/layouts
-@dirrm ${GEM_LIBDIR}/data/content/css/blueprint/plugins/fancy-type
-@dirrm ${GEM_LIBDIR}/data/content/css/blueprint/plugins/css-classes
-@dirrm ${GEM_LIBDIR}/data/content/css/blueprint/plugins/buttons/icons
-@dirrm ${GEM_LIBDIR}/data/content/css/blueprint/plugins/buttons
-@dirrm ${GEM_LIBDIR}/data/content/css/blueprint/plugins
-@dirrm ${GEM_LIBDIR}/data/content/css/blueprint/lib
-@dirrm ${GEM_LIBDIR}/data/content/css/blueprint/compressed
-@dirrm ${GEM_LIBDIR}/data/content/css/blueprint
-@dirrm ${GEM_LIBDIR}/data/content/css
-@dirrm ${GEM_LIBDIR}/data/content
-@dirrm ${GEM_LIBDIR}/data
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

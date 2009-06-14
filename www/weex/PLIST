@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:40 joerg Exp $
 bin/weex
 man/man1/weex.1
 share/doc/weex/AUTHORS
@@ -15,9 +15,7 @@ share/doc/weex/README.ja
 share/doc/weex/THANKS
 share/doc/weex/TODO
 share/doc/weex/TODO.ja
-@dirrm share/doc/weex
 share/examples/weex/sample.weexrc
-@dirrm share/examples/weex
 share/locale/de/LC_MESSAGES/weex.mo
 share/locale/es/LC_MESSAGES/weex.mo
 share/locale/fr/LC_MESSAGES/weex.mo

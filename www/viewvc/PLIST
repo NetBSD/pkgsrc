@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/06 21:21:10 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:39 joerg Exp $
 share/examples/viewvc/viewvc.conf
 share/examples/viewvc/cvsgraph.conf
 ${VIEWVCDIR}/bin/cgi/query.cgi
@@ -178,28 +178,3 @@ ${VIEWVCDIR}/templates-contrib/viewsvn/templates/query_results.ezt
 ${VIEWVCDIR}/templates-contrib/viewsvn/templates/revision.ezt
 ${VIEWVCDIR}/templates-contrib/viewsvn/templates/roots.ezt
 ${VIEWVCDIR}/templates-contrib/viewsvn/templates/rss.ezt
-@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/screenshots
-@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/extras
-@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn
-@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images
-@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot
-@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/templates/include
-@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/templates
-@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn
-@dirrm ${VIEWVCDIR}/templates-contrib
-@dirrm ${VIEWVCDIR}/templates/include
-@dirrm ${VIEWVCDIR}/templates/docroot/images
-@dirrm ${VIEWVCDIR}/templates/docroot
-@dirrm ${VIEWVCDIR}/templates
-@dirrm ${VIEWVCDIR}/lib/vclib/svn_ra
-@dirrm ${VIEWVCDIR}/lib/vclib/svn
-@dirrm ${VIEWVCDIR}/lib/vclib/ccvs/rcsparse
-@dirrm ${VIEWVCDIR}/lib/vclib/ccvs
-@dirrm ${VIEWVCDIR}/lib/vclib/bincvs
-@dirrm ${VIEWVCDIR}/lib/vclib
-@dirrm ${VIEWVCDIR}/lib
-@dirrm ${VIEWVCDIR}/bin/mod_python
-@dirrm ${VIEWVCDIR}/bin/cgi
-@dirrm ${VIEWVCDIR}/bin
-@unexec ${RMDIR} %D/${VIEWVCDIR} 2>/dev/null || ${TRUE}
-@dirrm share/examples/viewvc

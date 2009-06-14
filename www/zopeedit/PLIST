@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/09 16:11:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:42 joerg Exp $
 bin/zopeedit.py
 man/man1/zopeedit.1
 share/doc/zopeedit/README.txt
-@dirrm share/doc/zopeedit

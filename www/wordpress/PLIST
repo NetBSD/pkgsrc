@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/06 11:31:02 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:41 joerg Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -604,82 +604,4 @@ share/wordpress/wp-rss2.php
 share/wordpress/wp-settings.php
 share/wordpress/wp-trackback.php
 share/wordpress/xmlrpc.php
-@dirrm share/wordpress/wp-includes/js/tinymce/utils
-@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/img
-@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme
-@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7/img
-@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7
-@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/img
-@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default
-@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins
-@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/js
-@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/img
-@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced
-@dirrm share/wordpress/wp-includes/js/tinymce/themes
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpgallery/img
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpgallery
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/js
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/img
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/css
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage
-@exec ${MKDIR} %D/share/wordpress/wp-includes/js/tinymce/plugins/wordpress/js
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wordpress/js
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wordpress/css
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wordpress
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/includes
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/img
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/css
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes/utils
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/safari
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/paste/js
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/paste/css
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/paste
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/media/js
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/media/img
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/media/css
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/media
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/fullscreen
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/directionality
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins/autosave
-@dirrm share/wordpress/wp-includes/js/tinymce/plugins
-@dirrm share/wordpress/wp-includes/js/tinymce/langs
-@dirrm share/wordpress/wp-includes/js/tinymce
-@dirrm share/wordpress/wp-includes/js/thickbox
-@dirrm share/wordpress/wp-includes/js/swfupload/plugins
-@dirrm share/wordpress/wp-includes/js/swfupload
-@dirrm share/wordpress/wp-includes/js/scriptaculous
-@dirrm share/wordpress/wp-includes/js/jquery
-@dirrm share/wordpress/wp-includes/js/crop
-@dirrm share/wordpress/wp-includes/js
-@dirrm share/wordpress/wp-includes/images/wlw
-@dirrm share/wordpress/wp-includes/images/smilies
-@dirrm share/wordpress/wp-includes/images/crystal
-@dirrm share/wordpress/wp-includes/images
-@dirrm share/wordpress/wp-includes/Text/Diff/Renderer
-@dirrm share/wordpress/wp-includes/Text/Diff/Engine
-@dirrm share/wordpress/wp-includes/Text/Diff
-@dirrm share/wordpress/wp-includes/Text
-@dirrm share/wordpress/wp-includes
-@dirrm share/wordpress/wp-content/themes/default/images
-@dirrm share/wordpress/wp-content/themes/default
-@dirrm share/wordpress/wp-content/themes/classic
-@dirrm share/wordpress/wp-content/themes
-@dirrm share/wordpress/wp-content/plugins/akismet
-@dirrm share/wordpress/wp-content/plugins
-@dirrm share/wordpress/wp-content
-@dirrm share/wordpress/wp-admin/js
-@dirrm share/wordpress/wp-admin/includes
-@dirrm share/wordpress/wp-admin/import
-@dirrm share/wordpress/wp-admin/images
-@dirrm share/wordpress/wp-admin/css
-@dirrm share/wordpress/wp-admin
-@dirrm share/wordpress
-@dirrm share/examples/wordpress
-@dirrm share/doc/wordpress
+@pkgdir share/wordpress/wp-includes/js/tinymce/plugins/wordpress/js

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/24 00:58:30 kim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:41 joerg Exp $
 bin/wmb
 bin/wmd
 bin/wmk
@@ -198,28 +198,3 @@ man/man7/wml_intro.7
 man/man7/wml_macros.7
 man/man7/wml_tags.7
 man/man7/wml_tutorial.7
-@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML/GD
-@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML
-@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/auto/HTML/Clean
-@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/auto/HTML
-@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/auto
-@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/WML
-@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}
-@dirrm lib/wml/perl/lib/auto/HTML/Clean
-@dirrm lib/wml/perl/lib/auto/HTML
-@dirrm lib/wml/perl/lib/auto
-@dirrm lib/wml/perl/lib/HTML
-@dirrm lib/wml/perl/lib
-@dirrm lib/wml/perl
-@dirrm lib/wml/include/sys
-@dirrm lib/wml/include/sup
-@dirrm lib/wml/include/std
-@dirrm lib/wml/include/mod
-@dirrm lib/wml/include/imp
-@dirrm lib/wml/include/fmt
-@dirrm lib/wml/include/des
-@dirrm lib/wml/include
-@dirrm lib/wml/exec
-@dirrm lib/wml/data/logos
-@dirrm lib/wml/data
-@dirrm lib/wml
