@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/07/05 06:53:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:01:32 joerg Exp $
 bin/skkinput
 lib/X11/app-defaults/Skkinput
 ${IMAKE_MAN_DIR}/skkinput.${IMAKE_MAN_SUFFIX}
@@ -6,4 +6,3 @@ man/ja_JP.EUC/cat1/skkinput.${IMAKE_MAN_SUFFIX}
 share/doc/skkinput/BUGS.jis
 share/doc/skkinput/FAQ.jis
 share/doc/skkinput/README.jis
-@dirrm share/doc/skkinput

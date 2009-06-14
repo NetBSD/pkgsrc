@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/08 20:04:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:01:32 joerg Exp $
 bin/tcinput
 ${EMACS_INFOPREFIX}/tc.info
 ${EMACS_LISPPREFIX}/tc/eelll.el
@@ -74,5 +74,3 @@ share/tc/tchars.txt
 share/tc/tcode.txt
 share/tc/want.txt
 share/tc/where
-@dirrm share/tc
-@dirrm ${EMACS_LISPPREFIX}/tc
