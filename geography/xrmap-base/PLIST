@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:57:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 19:12:18 joerg Exp $
 bin/emx
 bin/xrmap
 ${IMAKE_MAN_DIR}/xrmap.${IMAKE_MANNEWSUFFIX}
@@ -102,5 +102,5 @@ share/rmap/themes/cloudy
 share/rmap/themes/coffee
 share/rmap/themes/default
 share/rmap/themes/sea
-@exec ${MKDIR} %D/share/rmap/flags
-@exec ${MKDIR} %D/share/rmap/factbook
+@pkgdir share/rmap/flags
+@pkgdir share/rmap/factbook
