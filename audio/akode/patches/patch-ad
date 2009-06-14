@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+$NetBSD: patch-ad,v 1.2 2009/06/14 12:46:44 hasso Exp $
 
 --- akode/plugins/ffmpeg_decoder/ffmpeg_decoder.cpp.orig	2006-08-10 21:37:20 +0300
-+++ akode/plugins/ffmpeg_decoder/ffmpeg_decoder.cpp	2009-02-20 13:57:54 +0200
++++ akode/plugins/ffmpeg_decoder/ffmpeg_decoder.cpp	2009-06-14 15:14:53 +0300
 @@ -26,9 +26,11 @@
  #include "decoder.h"
  
@@ -17,6 +17,24 @@ $NetBSD: patch-ad,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
  
  #include "ffmpeg_decoder.h"
  #include <iostream>
+@@ -45,7 +47,7 @@ extern "C" {
+         aKode::File *file = (aKode::File*)opaque;
+         return file->write((char*)buf, size);
+     }
+-    static offset_t akode_seek(void* opaque, offset_t pos, int whence)
++    static int64_t akode_seek(void* opaque, int64_t pos, int whence)
+     {
+         aKode::File *file = (aKode::File*)opaque;
+         return file->seek(pos, whence);
+@@ -314,7 +316,7 @@ bool FFMPEGDecoder::readFrame(AudioFrame
+     assert(d->packet.stream_index == d->audioStream);
+ 
+ retry:
+-    int len = avcodec_decode_audio( d->ic->streams[d->audioStream]->codec,
++    int len = avcodec_decode_audio2( d->ic->streams[d->audioStream]->codec,
+                                     (short*)d->buffer, &d->buffer_size,
+                                     d->packetData, d->packetSize );
+ 
 @@ -349,7 +351,7 @@ retry:
              assert(false);
      }
