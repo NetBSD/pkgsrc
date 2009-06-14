@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/06 06:19:07 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:32 joerg Exp $
 bin/adocman
 bin/xml_export
 ${PERL5_SUB_INSTALLVENDORLIB}/Alexandria/Client.pm
@@ -8,5 +8,3 @@ share/doc/html/adocman/README
 share/doc/html/adocman/TODO
 share/doc/html/adocman/adocman.html
 share/doc/html/adocman/xml_export.html
-@dirrm share/doc/html/adocman
-@dirrm ${PERL5_SUB_INSTALLVENDORLIB}/Alexandria

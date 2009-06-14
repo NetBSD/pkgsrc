@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2008/03/26 13:22:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/06/14 17:43:18 joerg Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -1075,34 +1075,3 @@ share/mysql/swedish/errmsg.sys
 share/mysql/swedish/errmsg.txt
 share/mysql/ukrainian/errmsg.sys
 share/mysql/ukrainian/errmsg.txt
-@dirrm share/mysql/ukrainian
-@dirrm share/mysql/swedish
-@dirrm share/mysql/spanish
-@dirrm share/mysql/slovak
-@dirrm share/mysql/serbian
-@dirrm share/mysql/russian
-@dirrm share/mysql/romanian
-@dirrm share/mysql/portuguese
-@dirrm share/mysql/polish
-@dirrm share/mysql/norwegian-ny
-@dirrm share/mysql/norwegian
-@dirrm share/mysql/korean
-@dirrm share/mysql/japanese-sjis
-@dirrm share/mysql/japanese
-@dirrm share/mysql/italian
-@dirrm share/mysql/hungarian
-@dirrm share/mysql/greek
-@dirrm share/mysql/german
-@dirrm share/mysql/french
-@dirrm share/mysql/estonian
-@dirrm share/mysql/english
-@dirrm share/mysql/dutch
-@dirrm share/mysql/danish
-@dirrm share/mysql/czech
-@dirrm share/mysql/charsets
-@dirrm share/mysql-test/t
-@dirrm share/mysql-test/std_data
-@dirrm share/mysql-test/r
-@dirrm share/mysql-test/lib
-@dirrm share/mysql-test/include
-@dirrm share/mysql-test

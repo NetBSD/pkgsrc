@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/09 13:46:24 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:22 joerg Exp $
 ${PYSITELIB}/pyPgSQL/PgSQL.py
 ${PYSITELIB}/pyPgSQL/PgSQL.pyc
 ${PYSITELIB}/pyPgSQL/PgSQL.pyo
@@ -9,5 +9,3 @@ ${PYSITELIB}/pyPgSQL/libpq/__init__.py
 ${PYSITELIB}/pyPgSQL/libpq/__init__.pyc
 ${PYSITELIB}/pyPgSQL/libpq/__init__.pyo
 ${PYSITELIB}/pyPgSQL/libpq/libpqmodule.so
-@dirrm ${PYSITELIB}/pyPgSQL/libpq
-@dirrm ${PYSITELIB}/pyPgSQL

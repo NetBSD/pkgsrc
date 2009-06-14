@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:18 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:40 joerg Exp $
 bin/malsync
 share/doc/malsync/README_avantgo
 share/doc/malsync/README_malsync
-@dirrm share/doc/malsync

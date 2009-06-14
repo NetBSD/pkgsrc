@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/01/18 12:00:53 shattered Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:38:40 joerg Exp $
 bin/jpilot
 bin/jpilot-dump
 bin/jpilot-sync
@@ -79,11 +79,3 @@ share/locale/uk/LC_MESSAGES/jpilot.mo
 share/locale/vi/LC_MESSAGES/jpilot.mo
 share/locale/zh_CN/LC_MESSAGES/jpilot.mo
 share/locale/zh_TW/LC_MESSAGES/jpilot.mo
-@dirrm share/jpilot
-@dirrm share/doc/jpilot/icons
-@dirrm share/doc/jpilot/manual
-@dirrm share/doc/jpilot
-@dirrm share/doc/jpilot
-@dirrm lib/jpilot/plugins
-@dirrm lib/jpilot
-@dirrm include/jpilot

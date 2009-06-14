@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/11/25 17:53:23 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:14 joerg Exp $
 share/adodb/adodb-active-record.inc.php
 share/adodb/adodb-csvlib.inc.php
 share/adodb/adodb-datadict.inc.php
@@ -181,13 +181,3 @@ share/doc/adodb/readme.htm
 share/doc/adodb/readme.txt
 share/doc/adodb/tips_portable_sql.htm
 share/doc/adodb/tute.htm
-@dirrm share/doc/adodb
-@dirrm share/adodb/xsl
-@dirrm share/adodb/tests
-@dirrm share/adodb/session
-@dirrm share/adodb/perf
-@dirrm share/adodb/lang
-@dirrm share/adodb/drivers
-@dirrm share/adodb/datadict
-@dirrm share/adodb/cute_icons_for_site
-@dirrm share/adodb

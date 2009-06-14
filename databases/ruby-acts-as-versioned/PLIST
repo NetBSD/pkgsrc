@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:15:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:24 joerg Exp $
 ${GEM_HOME}/cache/acts_as_versioned-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -18,8 +18,3 @@ ${GEM_LIBDIR}/test/migration_test.rb
 ${GEM_LIBDIR}/test/schema.rb
 ${GEM_LIBDIR}/test/versioned_test.rb
 ${GEM_HOME}/specifications/acts_as_versioned-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/fixtures/migrations
-@dirrm ${GEM_LIBDIR}/test/fixtures
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

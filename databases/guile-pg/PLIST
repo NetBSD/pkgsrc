@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/01/05 16:57:57 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:43:16 joerg Exp $
 info/guile-pg.info
 lib/guile/site/database/libpostgres.la
 lib/guile/site/database/postgres-col-defs.scm
@@ -11,6 +11,3 @@ lib/guile/site/database/postgres-table.scm
 lib/guile/site/database/postgres-types.scm
 lib/guile/site/database/postgres.la
 guile/1.6/share/guile/site/database
-@dirrm lib/guile/site/database
-@dirrm lib/guile/site
-@dirrm lib/guile

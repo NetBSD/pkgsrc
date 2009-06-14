@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/02/18 20:06:57 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:38:39 joerg Exp $
 bin/gnome-pilot-make-password
 bin/gpilot-install-file
 bin/gpilotd-control-applet
@@ -98,24 +98,3 @@ share/pixmaps/sync_broken.png
 share/pixmaps/sync_icon.png
 share/pixmaps/sync_paused.png
 share/pixmaps/syncing_icon.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/gnome-pilot
-@comment in rarian: @dirrm share/omf
-@comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/locale/sr@Latn/LC_MESSAGES
-@dirrm share/locale/sr@Latn
-@comment in ORBit2: @dirrm share/idl
-@dirrm share/gnome/help/gnome-pilot/C
-@dirrm share/gnome/help/gnome-pilot
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome-pilot/glade
-@dirrm share/gnome-pilot/conduits
-@dirrm share/gnome-pilot
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/gnome-pilot/conduits
-@dirrm lib/gnome-pilot
-@comment in libbonobo: @dirrm lib/bonobo/servers
-@dirrm include/libgpilotdCM
-@dirrm include/gpilotd
