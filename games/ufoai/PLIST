@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/09 12:46:36 kefren Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:57 joerg Exp $
 bin/ufo
 bin/ufoded
 share/ufoai/base/game.so
@@ -496,60 +496,3 @@ share/ufoai/base/maps/ucd/uc_ufo_fighter.bsp
 share/ufoai/base/maps/bunker01n.bsp
 share/ufoai/base/maps/mine01n.bsp
 share/ufoai/base/maps/frozend.ump
-@dirrm share/ufoai/base/i18n/th/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/sv/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/slo/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/ru/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/pt_BR/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/pl/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/ja/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/it/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/fr/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/fi/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/est/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/es_ES/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/es/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/en/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/el/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/de/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/da/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/cs/LC_MESSAGES
-@dirrm share/ufoai/base/i18n/th
-@dirrm share/ufoai/base/i18n/sv
-@dirrm share/ufoai/base/i18n/slo
-@dirrm share/ufoai/base/i18n/ru
-@dirrm share/ufoai/base/i18n/pt_BR
-@dirrm share/ufoai/base/i18n/pl
-@dirrm share/ufoai/base/i18n/ja
-@dirrm share/ufoai/base/i18n/it
-@dirrm share/ufoai/base/i18n/fr
-@dirrm share/ufoai/base/i18n/fi
-@dirrm share/ufoai/base/i18n/est
-@dirrm share/ufoai/base/i18n/es_ES
-@dirrm share/ufoai/base/i18n/es
-@dirrm share/ufoai/base/i18n/en
-@dirrm share/ufoai/base/i18n/el
-@dirrm share/ufoai/base/i18n/de
-@dirrm share/ufoai/base/i18n/da
-@dirrm share/ufoai/base/i18n/cs
-@dirrm share/ufoai/base/maps/countryd
-@dirrm share/ufoai/base/maps/iced
-@dirrm share/ufoai/base/maps/icen
-@dirrm share/ufoai/base/maps/orientald
-@dirrm share/ufoai/base/maps/orientaln
-@dirrm share/ufoai/base/maps/shelterd
-@dirrm share/ufoai/base/maps/sheltern
-@dirrm share/ufoai/base/maps/villagen
-@dirrm share/ufoai/base/maps/tropicd
-@dirrm share/ufoai/base/maps/frozend
-@dirrm share/ufoai/base/maps/villaged
-@dirrm share/ufoai/base/maps/frozenn
-@dirrm share/ufoai/base/maps/b
-@dirrm share/ufoai/base/maps/ucn
-@dirrm share/ufoai/base/maps/countryn
-@dirrm share/ufoai/base/maps/tropicn
-@dirrm share/ufoai/base/maps/ucd
-@dirrm share/ufoai/base/maps
-@dirrm share/ufoai/base/i18n
-@dirrm share/ufoai/base
-@dirrm share/ufoai

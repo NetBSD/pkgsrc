@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/12 15:18:12 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:40 joerg Exp $
 bin/aop
 share/aop/aop-level-01.txt
 share/aop/aop-level-02.txt
@@ -11,4 +11,3 @@ share/aop/aop-level-08.txt
 share/aop/aop-level-09.txt
 share/aop/aop-level-10.txt
 share/aop/aop-level-11.txt
-@dirrm share/aop

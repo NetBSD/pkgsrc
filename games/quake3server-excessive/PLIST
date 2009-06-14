@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/22 12:01:35 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:54 joerg Exp $
 lib/lokigames/quake3server/excessive/description.pk3
 lib/lokigames/quake3server/excessive/maplist.cfg
 lib/lokigames/quake3server/excessive/motd.cfg
 lib/lokigames/quake3server/excessive/readme.txt
 lib/lokigames/quake3server/excessive/vm/qagame.qvm
-@dirrm lib/lokigames/quake3server/excessive/vm
-@dirrm lib/lokigames/quake3server/excessive

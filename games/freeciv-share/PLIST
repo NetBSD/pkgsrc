@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/09/15 19:03:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:56:45 joerg Exp $
 man/man6/civclient.6
 man/man6/civserver.6
 share/freeciv/amplio.tilespec
@@ -689,19 +689,3 @@ share/locale/tr/LC_MESSAGES/freeciv.mo
 share/locale/uk/LC_MESSAGES/freeciv.mo
 share/locale/zh_CN/LC_MESSAGES/freeciv.mo
 share/pixmaps/freeciv-client.png
-@dirrm share/freeciv/wonders
-@dirrm share/freeciv/trident
-@dirrm share/freeciv/stdsounds
-@dirrm share/freeciv/scenario
-@dirrm share/freeciv/nation
-@dirrm share/freeciv/misc
-@dirrm share/freeciv/isotrident
-@dirrm share/freeciv/isophex
-@dirrm share/freeciv/hex2t
-@dirrm share/freeciv/flags
-@dirrm share/freeciv/default
-@dirrm share/freeciv/civ2
-@dirrm share/freeciv/civ1
-@dirrm share/freeciv/buildings
-@dirrm share/freeciv/amplio
-@dirrm share/freeciv

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/26 04:03:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:41 joerg Exp $
 bin/bocursor
 bin/bodebugdialog
 bin/boinfo
@@ -1050,72 +1050,5 @@ share/kde/apps/boson/themes/ui/standard/stop.png
 share/kde/apps/boson/topui.rc
 share/kde/config/bodebug.areas
 share/kde/config/bodebugrc
-@dirrm share/kde/apps/boson/themes/ui/standard
-@dirrm share/kde/apps/boson/themes/ui
-@dirrm share/kde/apps/boson/themes/textures
 @exec ${MKDIR} %D/share/kde/apps/boson/themes/species/neutral/objects
-@dirrm share/kde/apps/boson/themes/species/neutral/objects
-@dirrm share/kde/apps/boson/themes/species/neutral
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_transall
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_tornado
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_tiger
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_ship
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_puma
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_piranha
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_panther
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_oilharvester
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_mineralharvester
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_leopard
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_grizzly
-@dirrm share/kde/apps/boson/themes/species/human/units/mob_ferry
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_weaponsfactory
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_turret
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_techcenter
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_samsite
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_repairpad
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_powerplant
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_oiltower
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_oilrefinery
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_mineralrefinery
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_helipad
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_comsat
-@dirrm share/kde/apps/boson/themes/species/human/units/fix_commandbunker
-@dirrm share/kde/apps/boson/themes/species/human/units
-@dirrm share/kde/apps/boson/themes/species/human/sounds
-@dirrm share/kde/apps/boson/themes/species/human/pixmaps
-@dirrm share/kde/apps/boson/themes/species/human/particles
-@dirrm share/kde/apps/boson/themes/species/human/objects
-@dirrm share/kde/apps/boson/themes/species/human
-@dirrm share/kde/apps/boson/themes/species
-@dirrm share/kde/apps/boson/themes/grounds/earth/oil
-@dirrm share/kde/apps/boson/themes/grounds/earth/grass_water
-@dirrm share/kde/apps/boson/themes/grounds/earth/grass_desert
-@dirrm share/kde/apps/boson/themes/grounds/earth/dwater_water
-@dirrm share/kde/apps/boson/themes/grounds/earth/desert_water
-@dirrm share/kde/apps/boson/themes/grounds/earth
-@dirrm share/kde/apps/boson/themes/grounds
-@dirrm share/kde/apps/boson/themes/cursors/old/move
-@dirrm share/kde/apps/boson/themes/cursors/old/default
-@dirrm share/kde/apps/boson/themes/cursors/old/attack
-@dirrm share/kde/apps/boson/themes/cursors/old
-@dirrm share/kde/apps/boson/themes/cursors/default/move
-@dirrm share/kde/apps/boson/themes/cursors/default/default
-@dirrm share/kde/apps/boson/themes/cursors/default/attack
-@dirrm share/kde/apps/boson/themes/cursors/default
-@dirrm share/kde/apps/boson/themes/cursors
-@dirrm share/kde/apps/boson/themes
-@dirrm share/kde/apps/boson/pics
-@dirrm share/kde/apps/boson/music/Progressive
-@dirrm share/kde/apps/boson/music/Jungle
-@dirrm share/kde/apps/boson/music
-@dirrm share/kde/apps/boson/maps
-@dirrm share/kde/apps/boson
-@dirrm share/kde/applnk/Games/TacticStrategy/boson
-@dirrm share/kde/applnk/Games/TacticStrategy
-@dirrm share/kde/applnk/Games
-@dirrm share/doc/kde/HTML/en/boson/units
-@dirrm share/doc/kde/HTML/en/boson/game
-@dirrm share/doc/kde/HTML/en/boson/facilities
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/boson/editor
-@dirrm share/doc/kde/HTML/en/boson/editor
-@dirrm share/doc/kde/HTML/en/boson

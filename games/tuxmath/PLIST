@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/03 00:41:41 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:57 joerg Exp $
 bin/tuxmath
 share/doc/tuxmath/README.txt
 share/tuxmath/images/alpha.png
@@ -95,13 +95,3 @@ share/tuxmath/sounds/game3.mod
 share/tuxmath/sounds/laser.wav
 share/tuxmath/sounds/pop.wav
 share/tuxmath/sounds/shieldsdown.wav
-@dirrm share/tuxmath/sounds
-@dirrm share/tuxmath/images/ufos
-@dirrm share/tuxmath/images/tux
-@dirrm share/tuxmath/images/status
-@dirrm share/tuxmath/images/comets
-@dirrm share/tuxmath/images/cities
-@dirrm share/tuxmath/images/backgrounds
-@dirrm share/tuxmath/images
-@dirrm share/tuxmath
-@dirrm share/doc/tuxmath

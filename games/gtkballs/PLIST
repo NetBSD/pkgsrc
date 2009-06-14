@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:56:47 joerg Exp $
 bin/gtkballs
 man/man6/gtkballs.6
 share/gtkballs/COPYING
@@ -528,10 +528,4 @@ share/locale/de/LC_MESSAGES/gtkballs.mo
 share/locale/fr/LC_MESSAGES/gtkballs.mo
 share/locale/pl/LC_MESSAGES/gtkballs.mo
 share/locale/ru/LC_MESSAGES/gtkballs.mo
-@dirrm share/gtkballs/themes/mascots
-@dirrm share/gtkballs/themes/klines
-@dirrm share/gtkballs/themes/Default
-@dirrm share/gtkballs/themes/5balls-Big
-@dirrm share/gtkballs/themes
-@dirrm share/gtkballs
 @unexec echo Delete ${VARBASE}/games/gtkballs-scores if you do not need your hi-scores any more.

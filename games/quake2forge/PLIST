@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/08/10 01:33:48 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:54 joerg Exp $
 bin/quake2forge
 lib/quake2forge/baseq2/game.la
 lib/quake2forge/ctf/game.la
@@ -22,13 +22,5 @@ share/doc/quake2forge/changes.txt
 share/doc/quake2forge/joystick.txt
 share/doc/quake2forge/readme.txt
 share/quake2forge/baseq2/config.cfg
-@dirrm share/quake2forge/baseq2
-@dirrm share/quake2forge
-@dirrm share/doc/quake2forge
 @exec ${MKDIR} %D/lib/quake2forge/xatrix
-@dirrm lib/quake2forge/xatrix
 @exec ${MKDIR} %D/lib/quake2forge/rogue
-@dirrm lib/quake2forge/rogue
-@dirrm lib/quake2forge/ctf
-@dirrm lib/quake2forge/baseq2
-@dirrm lib/quake2forge

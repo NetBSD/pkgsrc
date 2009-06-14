@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:57:16 joerg Exp $
 bin/garble
 bin/gpsdrive
 bin/gpsfetchmap
@@ -41,5 +41,3 @@ share/locale/pt_BR/LC_MESSAGES/gpsdrive.mo
 share/locale/sk/LC_MESSAGES/gpsdrive.mo
 share/locale/sv/LC_MESSAGES/gpsdrive.mo
 share/locale/tr/LC_MESSAGES/gpsdrive.mo
-@dirrm share/gpsdrive/gpsdrive
-@dirrm share/gpsdrive

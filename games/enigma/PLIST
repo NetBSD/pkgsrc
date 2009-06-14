@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/06/14 17:55:03 heinz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:43 joerg Exp $
 bin/enigma
 @comment include/enet/callbacks.h
 @comment include/enet/enet.h
@@ -2457,50 +2457,4 @@ share/locale/pt/LC_MESSAGES/enigma.mo
 share/locale/ru/LC_MESSAGES/enigma.mo
 share/locale/sv/LC_MESSAGES/enigma.mo
 share/pixmaps/enigma.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/enigma/soundsets/enigma
-@dirrm share/enigma/soundsets
-@dirrm share/enigma/sound
-@dirrm share/enigma/schemas
-@dirrm share/enigma/levels/patches
-@dirrm share/enigma/levels/lib
-@dirrm share/enigma/levels/enigma_vii
-@dirrm share/enigma/levels/enigma_vi
-@dirrm share/enigma/levels/enigma_v
-@dirrm share/enigma/levels/enigma_tutorial
 @exec ${MKDIR} %D/share/enigma/levels/enigma_stable
-@dirrm share/enigma/levels/enigma_stable
-@dirrm share/enigma/levels/enigma_sokoban
-@dirrm share/enigma/levels/enigma_peroxyd
-@dirrm share/enigma/levels/enigma_oxydmagnum
-@dirrm share/enigma/levels/enigma_oxydextra
-@dirrm share/enigma/levels/enigma_oxyd
-@dirrm share/enigma/levels/enigma_microban
-@dirrm share/enigma/levels/enigma_mas_microban
-@dirrm share/enigma/levels/enigma_iv
-@dirrm share/enigma/levels/enigma_iii
-@dirrm share/enigma/levels/enigma_ii
-@dirrm share/enigma/levels/enigma_i
-@dirrm share/enigma/levels/enigma_experimental
-@dirrm share/enigma/levels/enigma_esprit
-@dirrm share/enigma/levels/enigma_cross
-@dirrm share/enigma/levels
-@dirrm share/enigma/gfx48
-@dirrm share/enigma/gfx40
-@dirrm share/enigma/gfx32
-@dirrm share/enigma/gfx
-@dirrm share/enigma/fonts
-@dirrm share/enigma
-@dirrm share/doc/enigma/reference/images
-@dirrm share/doc/enigma/reference
-@dirrm share/doc/enigma/manual/images
-@dirrm share/doc/enigma/manual
-@dirrm share/doc/enigma/images/flags25x15
-@dirrm share/doc/enigma/images
-@dirrm share/doc/enigma
-@comment in xdg-dirs: @dirrm share/applications
-@comment @dirrm include/enet

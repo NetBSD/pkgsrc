@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/31 03:04:37 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:53 joerg Exp $
 bin/pokerth
 bin/pokerth_server
 lib/libpokerth_lib.a
@@ -236,21 +236,3 @@ share/pokerth/data/translations/qt_es.qm
 share/pokerth/data/translations/qt_fr.qm
 share/pokerth/data/translations/qt_nl.qm
 share/pokerth/data/translations/qt_ru.qm
-@dirrm share/pokerth/data/translations
-@dirrm share/pokerth/data/sounds/default
-@dirrm share/pokerth/data/sounds
-@dirrm share/pokerth/data/misc
-@dirrm share/pokerth/data/gfx/gui/table/default
-@dirrm share/pokerth/data/gfx/gui/table
-@dirrm share/pokerth/data/gfx/gui/misc
-@dirrm share/pokerth/data/gfx/gui
-@dirrm share/pokerth/data/gfx/cards/default
-@dirrm share/pokerth/data/gfx/cards
-@dirrm share/pokerth/data/gfx/avatars/default/people
-@dirrm share/pokerth/data/gfx/avatars/default/misc
-@dirrm share/pokerth/data/gfx/avatars/default
-@dirrm share/pokerth/data/gfx/avatars
-@dirrm share/pokerth/data/gfx
-@dirrm share/pokerth/data/fonts
-@dirrm share/pokerth/data
-@dirrm share/pokerth

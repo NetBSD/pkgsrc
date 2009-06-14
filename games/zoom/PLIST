@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/16 14:28:34 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:02 joerg Exp $
 bin/zoom
 share/zoom/zoomrc
 share/doc/html/zoom/colours.png
@@ -17,5 +17,3 @@ share/doc/html/zoom/zicon.gif
 share/doc/html/zoom/zoom-icon.png
 share/doc/html/zoom/zoom.html
 share/doc/html/zoom/ztitle.html
-@dirrm share/zoom
-@dirrm share/doc/html/zoom
