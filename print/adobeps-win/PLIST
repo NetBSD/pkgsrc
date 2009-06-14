@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/28 08:25:06 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 21:16:21 joerg Exp $
 share/cups/drivers/ADFONTS.MFM
 share/cups/drivers/ADOBEPS4.DRV
 share/cups/drivers/ADOBEPS4.HLP
@@ -8,4 +8,3 @@ share/cups/drivers/ADOBEPSU.HLP
 share/cups/drivers/DEFPRTR2.PPD
 share/cups/drivers/ICONLIB.DLL
 share/cups/drivers/PSMON.DLL
-@unexec ${RMDIR} -p %D/share/cups/drivers 2>/dev/null || ${TRUE}

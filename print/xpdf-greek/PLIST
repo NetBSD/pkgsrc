@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:12:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:16:22 joerg Exp $
 share/xpdf/greek/Greek.nameToUnicode
 share/xpdf/greek/ISO-8859-7.unicodeMap
-@unexec ${RMDIR} share/xpdf 2>/dev/null || ${TRUE}
