@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:00:03 joerg Exp $
 man/man8/darkstat.8
 sbin/darkstat
 share/examples/rc.d/darkstat
-@exec ${MKDIR} %D/share/darkstat/chroot
+@pkgdir share/darkstat/chroot

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/03/01 19:33:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:00:04 joerg Exp $
 bin/do_unlinks
 bin/mirror
 bin/mirrormaster
@@ -10,4 +10,3 @@ lib/mirror/lsparse.pl
 lib/mirror/mirror.defaults.dist
 man/man1/mirror.1
 man/man1/mirrormaster.1
-@unexec ${RMDIR} %D/lib/mirror 2>/dev/null || ${TRUE}
