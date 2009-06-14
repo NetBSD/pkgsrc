@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/06/14 18:11:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 21:02:45 joerg Exp $
 include/nbcompat.h
 include/nbcompat/assert.h
 include/nbcompat/cdefs.h
@@ -39,5 +39,3 @@ include/nbcompat/unistd.h
 include/nbcompat/util.h
 include/nbcompat/vis.h
 lib/libnbcompat.a
-@unexec ${RMDIR} -p %D/include 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/lib 2>/dev/null || ${TRUE}
