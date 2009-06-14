@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:23:52 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/06/14 22:57:58 joerg Exp $
 
 BUILDLINK_TREE+=	audacious
 
@@ -8,11 +8,6 @@ AUDACIOUS_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.audacious+=	audacious>=1.5.0
 BUILDLINK_PKGSRCDIR.audacious?=	../../audio/audacious
 BUILDLINK_DEPMETHOD.audacious?=	build
-
-PRINT_PLIST_AWK+=       /^@dirrm share\/audacious\/images$$/ \
-                                { print "@comment in audacious: " $$0; next; }
-PRINT_PLIST_AWK+=       /^@dirrm share\/audacious$$/ \
-                                { print "@comment in audacious: " $$0; next; }
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

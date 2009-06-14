@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2008/05/26 02:13:21 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2009/06/14 22:58:01 joerg Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -136,9 +136,6 @@ post-install:
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
-		>> ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} -type d -print				\
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
