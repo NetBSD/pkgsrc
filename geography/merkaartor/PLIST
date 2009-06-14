@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/04 10:57:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:16 joerg Exp $
 bin/merkaartor
 share/merkaartor/translations/merkaartor_ar.qm
 share/merkaartor/translations/merkaartor_cs.qm
@@ -11,6 +11,3 @@ share/merkaartor/translations/merkaartor_ru.qm
 share/merkaartor/world_shp/world_adm0.dbf
 share/merkaartor/world_shp/world_adm0.shp
 share/merkaartor/world_shp/world_adm0.shx
-@dirrm share/merkaartor/world_shp
-@dirrm share/merkaartor/translations
-@dirrm share/merkaartor

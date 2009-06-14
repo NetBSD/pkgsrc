@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/13 00:12:29 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:48 joerg Exp $
 lib/ioquake3/baseq3/cgame${MACHINE_ARCH}.so
 lib/ioquake3/baseq3/qagame${MACHINE_ARCH}.so
 lib/ioquake3/baseq3/ui${MACHINE_ARCH}.so
@@ -7,6 +7,3 @@ lib/ioquake3/ioquake3.${MACHINE_ARCH}
 lib/ioquake3/missionpack/cgame${MACHINE_ARCH}.so
 lib/ioquake3/missionpack/qagame${MACHINE_ARCH}.so
 lib/ioquake3/missionpack/ui${MACHINE_ARCH}.so
-@dirrm lib/ioquake3/missionpack
-@dirrm lib/ioquake3/baseq3
-@dirrm lib/ioquake3

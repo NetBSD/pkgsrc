@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:50 joerg Exp $
 bin/xlincity
 man/man6/lincity.6
 man/man6/xlincity.6
@@ -533,8 +533,3 @@ share/lincity/opening/winfont_16x16.fnt
 share/lincity/opening/winfont_8x8.fnt
 share/locale/ca/LC_MESSAGES/lincity.mo
 share/locale/it/LC_MESSAGES/lincity.mo
-@dirrm share/lincity/opening
-@dirrm share/lincity/messages
-@dirrm share/lincity/icons
-@dirrm share/lincity/help
-@dirrm share/lincity

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/24 20:03:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:53 joerg Exp $
 bin/prboom
 bin/prboom-game-server
 man/man5/boom.cfg.5
@@ -14,5 +14,3 @@ share/doc/${PKGNAME}/README.compat
 share/doc/${PKGNAME}/README.demos
 share/doc/${PKGNAME}/boom.txt
 share/doom/prboom.wad
-@dirrm share/doom
-@dirrm share/doc/${PKGNAME}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/24 15:26:00 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:45 joerg Exp $
 bin/freedroid
 man/man6/freedroid.6
 share/freedroid/graphics/001.jpg
@@ -106,9 +106,3 @@ share/freedroid/sound/dreamfish-sanxion.mod
 share/freedroid/sound/dreamfish-uridium2_loader.mod
 share/freedroid/sound/kollaps-tron.mod
 share/freedroid/sound/starpaws.mod
-@dirrm share/freedroid/sound
-@dirrm share/freedroid/map
-@dirrm share/freedroid/graphics/lanzz_theme
-@dirrm share/freedroid/graphics/classic_theme
-@dirrm share/freedroid/graphics
-@dirrm share/freedroid

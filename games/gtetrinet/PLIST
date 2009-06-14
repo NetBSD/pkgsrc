@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/09/25 10:54:12 hira Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:56:47 joerg Exp $
 bin/gtetrinet
 man/man6/gtetrinet.6
 share/applications/gtetrinet.desktop
@@ -49,11 +49,3 @@ share/locale/zh_TW/LC_MESSAGES/gtetrinet.mo
 share/pixmaps/gtetrinet.png
 share/pixmaps/gtetrinet/alone.png
 share/pixmaps/gtetrinet/team.png
-@dirrm share/pixmaps/gtetrinet
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/gtetrinet/themes/small
-@dirrm share/gtetrinet/themes/default
-@dirrm share/gtetrinet/themes
-@dirrm share/gtetrinet
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
