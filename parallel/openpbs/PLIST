@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/17 14:19:16 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:10:40 joerg Exp $
 bin/chk_tree
 bin/hostn
 bin/nqs2pbs
@@ -171,10 +171,3 @@ sbin/pbs_mom
 sbin/pbs_rcp
 sbin/pbs_sched
 sbin/pbs_server
-@dirrm lib/xpbsmon/help
-@dirrm lib/xpbsmon/bitmaps
-@dirrm lib/xpbsmon
-@dirrm lib/xpbs/help
-@dirrm lib/xpbs/bitmaps
-@dirrm lib/xpbs/bin
-@dirrm lib/xpbs

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/13 21:00:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:10:41 joerg Exp $
 bin/qacct
 bin/qalter
 bin/qconf
@@ -659,60 +659,3 @@ sge/utilbin/${SGE_ARCH}/spooledit
 sge/utilbin/${SGE_ARCH}/spoolinit
 sge/utilbin/${SGE_ARCH}/testsuidroot
 sge/utilbin/${SGE_ARCH}/uidgid
-@dirrm sge/utilbin/${SGE_ARCH}
-@dirrm sge/utilbin
-@dirrm sge/util/upgrade_modules
-@dirrm sge/util/sgeST
-@dirrm sge/util/sgeSMF
-@dirrm sge/util/sgeCA
-@dirrm sge/util/resources/usersets
-@dirrm sge/util/resources/starter_methods
-@dirrm sge/util/resources/schemas/qstat
-@dirrm sge/util/resources/schemas/qrstat
-@dirrm sge/util/resources/schemas/qquota
-@dirrm sge/util/resources/schemas/qhost
-@dirrm sge/util/resources/schemas
-@dirrm sge/util/resources/pe
-@dirrm sge/util/resources/loadsensors
-@dirrm sge/util/resources/jsv
-@dirrm sge/util/resources/centry
-@dirrm sge/util/resources/calendars
-@dirrm sge/util/resources
-@dirrm sge/util/rctemplates
-@dirrm sge/util/install_modules
-@dirrm sge/util
-@dirrm sge/qmon/PIXMAPS/big
-@dirrm sge/qmon/PIXMAPS
-@dirrm sge/qmon
-@dirrm sge/pvm/src
-@dirrm sge/pvm
-@dirrm sge/mpi/myrinet
-@dirrm sge/mpi/SunHPCT5
-@dirrm sge/mpi
-@dirrm sge/man/man8
-@dirrm sge/man/man5
-@dirrm sge/man/man3
-@dirrm sge/man/man1
-@dirrm sge/man
-@dirrm sge/lib/${SGE_ARCH}
-@dirrm sge/lib
-@dirrm sge/include
-@dirrm sge/examples/jobsbin/${SGE_ARCH}
-@dirrm sge/examples/jobsbin
-@dirrm sge/examples/jobs
-@dirrm sge/examples/drmaa
-@dirrm sge/examples
-@dirrm sge/dtrace
-@dirrm sge/doc
-@dirrm sge/ckpt
-@dirrm sge/catman/cat/cat8
-@dirrm sge/catman/cat/cat5
-@dirrm sge/catman/cat/cat3
-@dirrm sge/catman/cat/cat1
-@dirrm sge/catman/cat
-@dirrm sge/catman
-@dirrm sge/bin/${SGE_ARCH}
-@dirrm sge/bin
-@dirrm sge/3rd_party/qmon
-@dirrm sge/3rd_party
-@dirrm sge
