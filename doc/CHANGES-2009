@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2335 2009/06/14 20:00:46 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2336 2009/06/14 20:06:08 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3132,3 +3132,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Task-Weaken to 1.03 [sno 2009-06-14]
 	Updated devel/p5-UNIVERSAL-can to 1.14 [sno 2009-06-14]
 	Updated devel/p5-UNIVERSAL-isa to 1.02 [sno 2009-06-14]
+	Updated security/p5-Digest to 1.16 [sno 2009-06-14]
