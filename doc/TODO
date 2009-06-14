@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8187 2009/06/13 12:35:37 hasso Exp $
+$NetBSD: TODO,v 1.8188 2009/06/14 11:06:38 zafer Exp $
 
 Suggested new packages
 ======================
@@ -763,6 +763,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o java-lang-spec-3.0
 	o jcabc2ps-20070110
 	o jdb-1.14
+	o jed-0.99-18
 	o jgrasp-183
 	o jhead-2.87
 	o joe-3.6
