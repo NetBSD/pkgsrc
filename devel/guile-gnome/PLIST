@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:48:12 joerg Exp $
 bin/guile-gnome-2
 include/guile-gnome-2/guile-gnome-corba/guile-gnome-corba-generic.h
 include/guile-gnome-2/guile-gnome-corba/guile-gnome-corba-primitives.h
@@ -196,5 +196,5 @@ share/guile-gnome-2/gnome/pango.scm
 share/guile-gnome-2/gnome/pangocairo.scm
 share/guile-gnome-2/gnome/vfs.scm
 share/guile/site/gnome-2.scm
-@exec ${MKDIR} %D/share/guile-gnome-platform/examples/gnome-vfs
-@exec ${MKDIR} %D/share/guile-gnome-platform/examples/gconf
+@pkgdir share/guile-gnome-platform/examples/gnome-vfs
+@pkgdir share/guile-gnome-platform/examples/gconf
