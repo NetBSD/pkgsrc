@@ -1,4 +1,4 @@
-# $NetBSD: schemas.mk,v 1.1 2007/09/21 12:58:13 wiz Exp $
+# $NetBSD: schemas.mk,v 1.2 2009/06/14 22:57:59 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GConf schema files.  It takes care of registering them in the GConf
@@ -50,10 +50,6 @@ FILES_SUBST+=		GCONF_SCHEMAS_DIR=${GCONF_SCHEMAS_DIR:Q}
 INSTALL_TEMPLATES+=	${.CURDIR}/../../devel/GConf/files/install.tmpl
 DEINSTALL_TEMPLATES+=	${.CURDIR}/../../devel/GConf/files/deinstall.tmpl
 .endif
-
-PRINT_PLIST_AWK+=	/^@dirrm share\/gconf$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/gconf\/schemas$$/ \
-				{ print "@comment in GConf: " $$0; next; }
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/GConf/buildlink3.mk"

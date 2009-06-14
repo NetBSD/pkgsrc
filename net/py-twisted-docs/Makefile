@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/08/22 21:49:08 epg Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/14 22:58:07 joerg Exp $
 
 PKGNAME=		py-twisted-docs-${TWISTED_VERSION}
 COMMENT=		Framework for writing networked applications
@@ -17,7 +17,5 @@ INSTALLATION_DIRS=	${HTMLDIR}
 do-install:
 	cd ${DOC_SRCDIR} && pax -rw -pe * ${DESTDIR}${PREFIX}/${HTMLDIR}
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
-	cd ${DESTDIR}${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
-	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
