@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/10 12:34:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:11:55 joerg Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -317,12 +317,4 @@ share/ghostscript/${GS_VERS}/vflib/kmapping.ps
 share/ghostscript/${GS_VERS}/vflib/koutline.ps
 share/ghostscript/${GS_VERS}/vflib/metrics2.ps
 share/ghostscript/${GS_VERS}/vflib/vchars.ps
-@dirrm share/ghostscript/${GS_VERS}/vflib
-@dirrm share/ghostscript/${GS_VERS}/lib
-@dirrm share/ghostscript/${GS_VERS}
 @unexec ${RMDIR} %D/share/ghostscript 2>/dev/null || ${TRUE}
-@dirrm share/examples/ghostscript
-@dirrm share/doc/html/ghostscript/hpijs
-@dirrm share/doc/html/ghostscript
-@dirrm share/doc/ghostscript/gdevmjc-0.8
-@dirrm share/doc/ghostscript

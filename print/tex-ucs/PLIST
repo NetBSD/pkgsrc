@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/16 21:45:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:12:02 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/UnicodeT.sfd
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/autofe.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/c00enc.def
@@ -217,6 +217,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/data/uninames.dat
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/ucs.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/ucsencs.def
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/utf8x.def
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/data
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs

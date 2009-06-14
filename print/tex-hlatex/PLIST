@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/15 19:59:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:12:01 joerg Exp $
 bin/hbibtex
 bin/hmakeindex
 ${PKG_LOCALTEXMFPREFIX}/bibtex/bst/hlatex/halpha.bst
@@ -69,8 +69,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex/josa.tab
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex/khyper.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex/showhkeys.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex/showhtags.sty
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/lambda/hlatex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/omega/otp/hlatex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/omega/ocp/hlatex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/bibtex/bst/hlatex
