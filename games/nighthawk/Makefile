@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/09/25 14:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2009/06/14 20:31:11 rillig Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -21,7 +21,7 @@ WRKSRC=			${WRKDIR}/nighthawk
 USE_TOOLS+=		gmake pax
 USE_LANGUAGES=		c c++
 
-MAKE_ENV+=		OSTYPE=${OPSYS:Q}
+MAKE_ENV+=		OSTYPE=${OPSYS}
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\"" \
 			-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\"" \
 			-DVARBASE="\"${VARBASE}\""
@@ -30,8 +30,9 @@ SETGIDGAME=		yes
 CONF_FILES_PERMS=	/dev/null ${VARBASE}/games/nighthawk.scores	\
 			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 SPECIAL_PERMS=		bin/nighthawk ${SETGID_GAMES_PERMS}
+BUILD_DEFS+=		VARBASE GAMEDATAMODE
 
-INSTALLATION_DIRS=	bin
+AUTO_MKDIRS=		yes
 MAKE_DIRS=		${VARBASE}/games
 
 .include "../../x11/libXpm/buildlink3.mk"
@@ -42,9 +43,6 @@ post-build:
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} nighthawk_sound
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/nighthawk
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/nighthawk
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/nighthawk/data
 	cd ${WRKSRC}/data && pax -rw . ${DESTDIR}${PREFIX}/share/nighthawk/data
 	${FIND} ${DESTDIR}${PREFIX}/share/nighthawk -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 	${FIND} ${DESTDIR}${PREFIX}/share/nighthawk -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
