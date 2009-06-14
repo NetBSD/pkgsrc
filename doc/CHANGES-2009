@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2322 2009/06/14 04:53:16 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2323 2009/06/14 06:04:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3119,3 +3119,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/loudmouth to 1.4.3nb1 [ahoka 2009-06-13]
 	Updated lang/mono to 2.4nb2 [ahoka 2009-06-13]
 	Added www/opengoo version 1.4.1 [taca 2009-06-14]
+	Updated textproc/tokyodystopia to 0.9.12 [obache 2009-06-14]
