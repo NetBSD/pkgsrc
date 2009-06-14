@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/17 23:39:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:49 joerg Exp $
 bin/jools
 ${PYSITELIB}/jools/__init__.py
 ${PYSITELIB}/jools/__init__.pyc
@@ -302,37 +302,3 @@ share/jools/sounds/01/point3.wav
 share/jools/sounds/01/point4.wav
 share/jools/sounds/01/point5.wav
 share/jools/sounds/01/point6.wav
-@dirrm share/jools/sounds/01/.arch-ids
-@dirrm share/jools/sounds/01
-@dirrm share/jools/sounds/00/.arch-ids
-@dirrm share/jools/sounds/00
-@dirrm share/jools/sounds/.arch-ids
-@dirrm share/jools/sounds
-@dirrm share/jools/music/untimed/.arch-ids
-@dirrm share/jools/music/untimed
-@dirrm share/jools/music/title/.arch-ids
-@dirrm share/jools/music/title
-@dirrm share/jools/music/timed/.arch-ids
-@dirrm share/jools/music/timed
-@dirrm share/jools/music/.arch-ids
-@dirrm share/jools/music
-@dirrm share/jools/images/sphere/.arch-ids
-@dirrm share/jools/images/sphere
-@dirrm share/jools/images/sapphire/.arch-ids
-@dirrm share/jools/images/sapphire
-@dirrm share/jools/images/ruby/.arch-ids
-@dirrm share/jools/images/ruby
-@dirrm share/jools/images/orange/.arch-ids
-@dirrm share/jools/images/orange
-@dirrm share/jools/images/emerald/.arch-ids
-@dirrm share/jools/images/emerald
-@dirrm share/jools/images/diamond/.arch-ids
-@dirrm share/jools/images/diamond
-@dirrm share/jools/images/amethyst/.arch-ids
-@dirrm share/jools/images/amethyst
-@dirrm share/jools/images/.arch-ids
-@dirrm share/jools/images
-@dirrm share/jools/fonts/.arch-ids
-@dirrm share/jools/fonts
-@dirrm share/jools
-@dirrm ${PYSITELIB}/jools

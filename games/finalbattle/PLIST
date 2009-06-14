@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:52:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:44 joerg Exp $
 bin/final
 share/finalbattle/sprites/asteroids/ast00.pbm
 share/finalbattle/sprites/asteroids/ast01.pbm
@@ -234,10 +234,3 @@ share/finalbattle/sprites/makeweapons
 share/finalbattle/sprites/title.xbm
 share/finalbattle/final.news
 share/finalbattle/README.txt
-@dirrm share/finalbattle/sprites/asteroids
-@dirrm share/finalbattle/sprites/obj
-@dirrm share/finalbattle/sprites/ships
-@dirrm share/finalbattle/sprites/upgrade
-@dirrm share/finalbattle/sprites/weapon
-@dirrm share/finalbattle/sprites
-@dirrm share/finalbattle

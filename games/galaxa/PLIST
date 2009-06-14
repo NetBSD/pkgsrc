@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:52:35 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:45 joerg Exp $
 bin/galaxa
 share/doc/galaxa/README.txt
 share/galaxa/sounds/buzz.au
@@ -130,7 +130,3 @@ share/galaxa/images/ship_1_5.ppm
 share/galaxa/images/ship_1_6.ppm
 share/galaxa/images/ship_1_7.ppm
 share/galaxa/images/tractorbeam.ppm
-@dirrm share/doc/galaxa
-@dirrm share/galaxa/sounds
-@dirrm share/galaxa/images
-@dirrm share/galaxa

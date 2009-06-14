@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/02/06 08:53:29 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:43 joerg Exp $
 bin/eboard
 bin/eboard-addtheme
 bin/eboard-config
@@ -19,4 +19,3 @@ share/eboard/eboard.pt_BR.dict
 share/eboard/eboard_themes.conf
 share/eboard/ghouls.png
 share/eboard/plastic.png
-@dirrm share/eboard

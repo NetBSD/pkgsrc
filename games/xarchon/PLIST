@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/20 01:51:34 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:58 joerg Exp $
 bin/xarchon
 man/man6/xarchon.6
 share/xarchon/archon/NAMES
@@ -477,64 +477,5 @@ share/xarchon/logo.xpm
 share/xarchon/statistics
 share/xarchon/xarchon-palette
 share/xarchon/xarchon.default
-@dirrm share/xarchon/archon/weapons/light/whirlwind
-@dirrm share/xarchon/archon/weapons/light/sword
-@dirrm share/xarchon/archon/weapons/light/magicspear
-@dirrm share/xarchon/archon/weapons/light/fireball
-@dirrm share/xarchon/archon/weapons/light/fieryexplosion
-@dirrm share/xarchon/archon/weapons/light/energybolt
-@dirrm share/xarchon/archon/weapons/light/boulder
-@dirrm share/xarchon/archon/weapons/light/arrow
-@dirrm share/xarchon/archon/weapons/light
-@dirrm share/xarchon/archon/weapons/elemental/tornado
-@dirrm share/xarchon/archon/weapons/elemental/icebolt
-@dirrm share/xarchon/archon/weapons/elemental/fierybolt
-@dirrm share/xarchon/archon/weapons/elemental/boulder
-@dirrm share/xarchon/archon/weapons/elemental
-@dirrm share/xarchon/archon/weapons/dark/tailspikes
-@dirrm share/xarchon/archon/weapons/dark/scream
-@dirrm share/xarchon/archon/weapons/dark/lightningbolt
-@dirrm share/xarchon/archon/weapons/dark/fierybreath
-@dirrm share/xarchon/archon/weapons/dark/eyebeam
-@dirrm share/xarchon/archon/weapons/dark/club
-@dirrm share/xarchon/archon/weapons/dark/boulder
-@dirrm share/xarchon/archon/weapons/dark
-@dirrm share/xarchon/archon/weapons
-@dirrm share/xarchon/archon/wav/side/light
-@dirrm share/xarchon/archon/wav/side/dark
-@dirrm share/xarchon/archon/wav/side
-@dirrm share/xarchon/archon/wav/generic
 @exec ${MKDIR} %D/share/xarchon/archon/wav/actor/weapon
-@dirrm share/xarchon/archon/wav/actor/weapon
 @exec ${MKDIR} %D/share/xarchon/archon/wav/actor/piece
-@dirrm share/xarchon/archon/wav/actor/piece
-@dirrm share/xarchon/archon/wav/actor
-@dirrm share/xarchon/archon/wav
-@dirrm share/xarchon/archon/floor
-@dirrm share/xarchon/archon/cursor
-@dirrm share/xarchon/archon/actors/light/wizard
-@dirrm share/xarchon/archon/actors/light/valkyrie
-@dirrm share/xarchon/archon/actors/light/unicorn
-@dirrm share/xarchon/archon/actors/light/phoenix
-@dirrm share/xarchon/archon/actors/light/knight
-@dirrm share/xarchon/archon/actors/light/golem
-@dirrm share/xarchon/archon/actors/light/djinni
-@dirrm share/xarchon/archon/actors/light/archer
-@dirrm share/xarchon/archon/actors/light
-@dirrm share/xarchon/archon/actors/elemental/water-elemental
-@dirrm share/xarchon/archon/actors/elemental/fire-elemental
-@dirrm share/xarchon/archon/actors/elemental/earth-elemental
-@dirrm share/xarchon/archon/actors/elemental/air-elemental
-@dirrm share/xarchon/archon/actors/elemental
-@dirrm share/xarchon/archon/actors/dark/troll
-@dirrm share/xarchon/archon/actors/dark/sorceress
-@dirrm share/xarchon/archon/actors/dark/shapeshifter
-@dirrm share/xarchon/archon/actors/dark/manticore
-@dirrm share/xarchon/archon/actors/dark/goblin
-@dirrm share/xarchon/archon/actors/dark/dragon
-@dirrm share/xarchon/archon/actors/dark/basilisk
-@dirrm share/xarchon/archon/actors/dark/banshee
-@dirrm share/xarchon/archon/actors/dark
-@dirrm share/xarchon/archon/actors
-@dirrm share/xarchon/archon
-@dirrm share/xarchon

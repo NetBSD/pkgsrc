@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/10 00:17:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:39 joerg Exp $
 bin/BlinkenPlayer
 bin/LostPixels
 bin/blpmatrix
@@ -18,5 +18,3 @@ share/doc/blinkensisters/HOWTOPLAY
 share/doc/blinkensisters/INSTALL
 share/doc/blinkensisters/LICENSE
 share/doc/blinkensisters/README
-@dirrm share/doc/blinkensisters
-@dirrm share/blinkensisters

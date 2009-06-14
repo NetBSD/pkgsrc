@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/15 19:31:19 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:46 joerg Exp $
 share/gnome-games-common/cards/anglo.svg
 share/gnome-games-common/cards/anglo_bitmap.svg
 share/gnome-games-common/cards/bellot.svg
@@ -37,19 +37,3 @@ share/gnome-games/same-gnome/themes/2.10/glass.png
 share/gnome-games/same-gnome/themes/2.10/marbles.png
 share/gnome-games/same-gnome/themes/2.10/matrix.png
 share/gnome-games/same-gnome/themes/2.10/rotate.svg
-@comment in gnome-games: @dirrm share/gnome-games/same-gnome/themes/2.10
-@comment in gnome-games: @dirrm share/gnome-games/same-gnome/themes
-@comment in gnome-games: @dirrm share/gnome-games/same-gnome
-@dirrm share/gnome-games/mahjongg/pixmaps
-@comment in gnome-games: @dirrm share/gnome-games/mahjongg
-@dirrm share/gnome-games/iagno/pixmaps
-@dirrm share/gnome-games/iagno
-@dirrm share/gnome-games/gnometris/pixmaps
-@dirrm share/gnome-games/gnometris
-@dirrm share/gnome-games/gnobots2/pixmaps
-@dirrm share/gnome-games/gnobots2
-@dirrm share/gnome-games/glines/pixmaps
-@dirrm share/gnome-games/glines
-@comment in gnome-games: @dirrm share/gnome-games-common/cards
-@comment in gnome-games: @dirrm share/gnome-games-common
-@comment in gnome-games: @dirrm share/gnome-games

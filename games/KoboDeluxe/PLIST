@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/02/08 18:16:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:38 joerg Exp $
 bin/kobodl
 man/man6/kobodl.6
 share/games/kobo-deluxe/gfx/bigship.pcx
@@ -60,6 +60,3 @@ share/games/kobo-deluxe/sfx/test2.mid
 share/games/kobo-deluxe/sfx/thunder1.agw
 share/games/kobo-deluxe/sfx/trance1.agw
 share/games/kobo-deluxe/sfx/trance1.mid
-@dirrm share/games/kobo-deluxe/sfx
-@dirrm share/games/kobo-deluxe/gfx
-@dirrm share/games/kobo-deluxe
