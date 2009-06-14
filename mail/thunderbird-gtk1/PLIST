@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:04:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 20:45:12 joerg Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2843,5 +2843,3 @@ share/pixmaps/${MOZILLA}.xpm
 @unexec ${RM} -f %D/lib/${MOZILLA}/chrome/app-chrome.manifest
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
-@comment begin DIRS
-@comment end DIRS
