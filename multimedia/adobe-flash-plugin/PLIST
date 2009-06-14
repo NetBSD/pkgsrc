@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/18 23:00:45 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 20:53:25 joerg Exp $
 lib/netscape/plugins/libflashplayer.so
-@unexec ${RMDIR} %D/lib/netscape/plugins 2>/dev/null || ${TRUE}

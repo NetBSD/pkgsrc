@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:07:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 20:52:13 joerg Exp $
 bin/screen
 bin/${DISTNAME}
 info/screen.info
@@ -25,4 +25,3 @@ share/screen/utf8encodings/c8
 share/screen/utf8encodings/cc
 share/screen/utf8encodings/cd
 share/screen/utf8encodings/d6
-${PLIST.terminfo}@unexec ${RMDIR} -p %D/share/lib/terminfo/s 2>/dev/null || ${TRUE}

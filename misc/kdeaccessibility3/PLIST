@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:07:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 20:52:12 joerg Exp $
 bin/kmag
 bin/kmousetool
 bin/kmouth
@@ -2874,4 +2874,3 @@ share/kde/services/kttsjobmgr.desktop
 share/kde/servicetypes/kttsd_audioplugin.desktop
 share/kde/servicetypes/kttsd_filterplugin.desktop
 share/kde/servicetypes/kttsd_synthplugin.desktop
-@exec ${MKDIR} %D/share/icons/mono/png

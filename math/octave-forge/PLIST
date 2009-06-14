@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:05:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 20:47:52 joerg Exp $
 bin/mex
 man/man1/mex.1
 share/octave/${OCT_VERSION}/site/octave-forge-alternatives/m/graceplot/PKG_ADD
@@ -956,6 +956,3 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_surf.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_text.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_thick_surf.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_transfo.m
-@unexec ${RMDIR} %D/${OCT_LOCALVERFCNFILEDIR} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/${OCT_LOCALVEROCTFILEDIR} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/${OCT_LOCALVERARCHLIBDIR} 2>/dev/null || ${TRUE}

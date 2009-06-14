@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:07:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/06/14 20:52:12 joerg Exp $
 bin/apmount
 bin/blinken
 bin/celestrongps
@@ -2513,27 +2513,24 @@ share/kde/services/kfile_drgeo.desktop
 share/kde/services/kfile_kig.desktop
 share/kde/services/kig_part.desktop
 share/kde/services/kmplot_part.desktop
-@unexec ${RMDIR} %D/share/kde/apps/klatin/data/vocabs 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/apps/klatin/data 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/kde/apps/klatin 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/libkdeedu/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kwordquiz/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kvoctrain/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kverbos/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kturtle/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/ktouch/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kstars/kstars/indi/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kstars/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kpercentage/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kmplot/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/klettres/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/klatin/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kiten/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kig/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/khangman/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/keduca/libkeduca/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/keduca/keducabuilder/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/keduca/keduca/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/keduca/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kbruch/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeedu-apidocs/kalzium/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/libkdeedu/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kwordquiz/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kvoctrain/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kverbos/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kturtle/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/ktouch/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kstars/kstars/indi/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kstars/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kpercentage/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kmplot/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/klettres/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/klatin/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kiten/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kig/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/khangman/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/keduca/libkeduca/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/keduca/keducabuilder/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/keduca/keduca/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/keduca/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kbruch/html
+@pkgdir share/doc/kde/HTML/en/kdeedu-apidocs/kalzium/html

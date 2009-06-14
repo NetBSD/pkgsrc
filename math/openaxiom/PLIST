@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 20:47:52 joerg Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -2613,6 +2613,6 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src/algebra/xpoly.spad
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src/algebra/ystream.spad
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src/algebra/zerodim.spad
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/timestamp
-@exec ${MKDIR} %D/lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph
-@exec ${MKDIR} %D/lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/.libs
-@exec ${MKDIR} %D/lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/.libs
+@pkgdir lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph
+@pkgdir lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/.libs
+@pkgdir lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/.libs
