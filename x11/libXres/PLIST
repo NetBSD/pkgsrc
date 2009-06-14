@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 22:05:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:59 joerg Exp $
 include/X11/extensions/XRes.h
 lib/libXRes.la
 lib/pkgconfig/xres.pc
@@ -8,4 +8,3 @@ man/man3/XResQueryClientResources.3
 man/man3/XResQueryClients.3
 man/man3/XResQueryExtension.3
 man/man3/XResQueryVersion.3
-@comment @dirrm include/X11/extensions

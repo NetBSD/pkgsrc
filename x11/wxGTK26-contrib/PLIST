@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/22 19:45:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:08 joerg Exp $
 include/wx-2.6/wx/animate/animate.h
 include/wx-2.6/wx/deprecated/expr.h
 include/wx-2.6/wx/deprecated/prop.h
@@ -90,12 +90,3 @@ lib/libwx_gtk2_ogl-2.6.la
 lib/libwx_gtk2_plot-2.6.la
 lib/libwx_gtk2_stc-2.6.la
 lib/libwx_gtk2_svg-2.6.la
-@dirrm include/wx-2.6/wx/svg
-@dirrm include/wx-2.6/wx/stc
-@dirrm include/wx-2.6/wx/plot
-@dirrm include/wx-2.6/wx/ogl
-@dirrm include/wx-2.6/wx/mmedia
-@dirrm include/wx-2.6/wx/gizmos
-@dirrm include/wx-2.6/wx/fl
-@dirrm include/wx-2.6/wx/deprecated
-@dirrm include/wx-2.6/wx/animate

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:18 joerg Exp $
 lib/xpns/pns
 lib/xpns/pns.hlp
 lib/xpns/pns.shell
@@ -11,5 +11,3 @@ share/doc/xpns/phil.net
 share/doc/xpns/rw.net
 share/doc/xpns/sub.net
 share/doc/xpns/sub2.net
-@dirrm share/doc/xpns
-@dirrm lib/xpns

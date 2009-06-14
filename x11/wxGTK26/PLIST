@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/22 19:44:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:08 joerg Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-2.6
@@ -499,21 +499,5 @@ share/locale/tr/LC_MESSAGES/wxstd.mo
 share/locale/uk/LC_MESSAGES/wxstd.mo
 share/locale/zh_CN/LC_MESSAGES/wxstd.mo
 share/locale/zh_TW/LC_MESSAGES/wxstd.mo
-@dirrm share/doc/wxGTK
-@dirrm share/bakefile/presets
-@dirrm share/bakefile
-@dirrm lib/wx/include/gtk2-${BUILDTYPE}-release-2.6/wx
-@dirrm lib/wx/include/gtk2-${BUILDTYPE}-release-2.6
 @unexec ${RMDIR} %D/lib/wx/include 2>/dev/null || ${TRUE}
-@dirrm lib/wx/config
 @unexec ${RMDIR} %D/lib/wx 2>/dev/null || ${TRUE}
-@dirrm include/wx-2.6/wx/xrc
-@dirrm include/wx-2.6/wx/xml
-@dirrm include/wx-2.6/wx/unix
-@dirrm include/wx-2.6/wx/protocol
-@dirrm include/wx-2.6/wx/html
-@dirrm include/wx-2.6/wx/gtk/gnome
-@dirrm include/wx-2.6/wx/gtk
-@dirrm include/wx-2.6/wx/generic
-@dirrm include/wx-2.6/wx
-@dirrm include/wx-2.6

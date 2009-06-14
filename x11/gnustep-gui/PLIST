@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/04/13 12:19:14 rh Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:24:49 joerg Exp $
 bin/gclose
 bin/gcloseall
 bin/gopen
@@ -415,48 +415,4 @@ lib/GNUstep/Services/GSspell.service/Resources/Info-gnustep.plist
 lib/libgnustep-gui.so.${PKGVERSION}
 lib/libgnustep-gui.so
 share/GNUstep/Makefiles/Additional/gui.make
-@dirrm lib/GNUstep/Services/GSspell.service/Resources
-@dirrm lib/GNUstep/Services/GSspell.service
-@dirrm lib/GNUstep/Services
-@dirrm lib/GNUstep/PostScript/PPD/English.lproj
-@dirrm lib/GNUstep/PostScript/PPD
-@dirrm lib/GNUstep/PostScript
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16/Resources/Lojban.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16/Resources/Italian.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16/Resources/German.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16/Resources/Esperanto.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16/Resources/English.lproj/GSSpellPanel.gorm
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16/Resources/English.lproj/GSPrintPanel.gorm
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16/Resources/English.lproj/GSPageLayout.gorm
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16/Resources/English.lproj/GSDataLinkPanel.gorm
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16/Resources/English.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16/Resources
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions/0.16
-@dirrm lib/GNUstep/Libraries/gnustep-gui/Versions
-@dirrm lib/GNUstep/Libraries/gnustep-gui
-@dirrm lib/GNUstep/KeyBindings
-@dirrm lib/GNUstep/Images
-@dirrm lib/GNUstep/ColorPickers/WheelPicker.bundle/Resources
-@dirrm lib/GNUstep/ColorPickers/WheelPicker.bundle
-@dirrm lib/GNUstep/ColorPickers/StandardPicker.bundle/Resources/Swedish.lproj
-@dirrm lib/GNUstep/ColorPickers/StandardPicker.bundle/Resources/French.lproj
-@dirrm lib/GNUstep/ColorPickers/StandardPicker.bundle/Resources/English.lproj
-@dirrm lib/GNUstep/ColorPickers/StandardPicker.bundle/Resources
-@dirrm lib/GNUstep/ColorPickers/StandardPicker.bundle
-@dirrm lib/GNUstep/ColorPickers/NamedPicker.bundle/Resources
-@dirrm lib/GNUstep/ColorPickers/NamedPicker.bundle
-@dirrm lib/GNUstep/ColorPickers
-@dirrm lib/GNUstep/Bundles/libgmodel.bundle/Resources
-@dirrm lib/GNUstep/Bundles/libgmodel.bundle
-@dirrm lib/GNUstep/Bundles/TextConverters/RTFConverter.bundle/Resources
-@dirrm lib/GNUstep/Bundles/TextConverters/RTFConverter.bundle
-@dirrm lib/GNUstep/Bundles/TextConverters
-@dirrm lib/GNUstep/Bundles/GSPrinting/GSLPR.bundle/Resources
-@dirrm lib/GNUstep/Bundles/GSPrinting/GSLPR.bundle
-@dirrm lib/GNUstep/Bundles/GSPrinting
-@dirrm lib/GNUstep/Applications
 @exec ${MKDIR} %D/lib/GNUstep/Applications
-@dirrm include/gnustep/gui
-@dirrm include/GNUstepGUI
-@dirrm include/Cocoa
-@dirrm include/AppKit

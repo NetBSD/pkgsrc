@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/28 13:17:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:44 joerg Exp $
 bin/ACE
 bin/gshterm
 bin/gtkshell
@@ -53,6 +53,3 @@ share/doc/antiright/COPYING
 share/doc/antiright/INSTALL
 share/doc/antiright/README
 share/doc/antiright/TODO
-@dirrm share/doc/antiright
-@dirrm share/ACE-desktop/icons
-@dirrm share/ACE-desktop

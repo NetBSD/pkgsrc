@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/10/20 10:53:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:24:55 joerg Exp $
 share/kde/apps/katepart/syntax/logohighlightstyle.sr@Latn.xml
 share/kde/apps/khangman/data/sr@Latn/animals.kvtml
 share/kde/apps/khangman/data/sr@Latn/easy.kvtml
@@ -581,12 +581,3 @@ share/locale/sr@Latn/LC_MESSAGES/webarchiver.mo
 share/locale/sr@Latn/charset
 share/locale/sr@Latn/entry.desktop
 share/locale/sr@Latn/flag.png
-@dirrm share/kde/apps/kturtle/examples/sr@Latn
-@comment in kde: @dirrm share/kde/apps/kturtle/examples
-@comment in kde: @dirrm share/kde/apps/kturtle/data
-@dirrm share/kde/apps/ktuberling/sounds/sr@Latn
-@comment in kde: @dirrm share/kde/apps/ktuberling/sounds
-@dirrm share/kde/apps/khangman/data/sr@Latn
-@comment in kde: @dirrm share/kde/apps/khangman/data
-@comment in kde: @dirrm share/kde/apps/khangman
-@comment in kde: @dirrm share/kde/apps/katepart/syntax

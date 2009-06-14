@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/23 11:53:47 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:25:15 joerg Exp $
 bin/CDE2Xfcepal
 bin/glob
 bin/startxfce
@@ -665,16 +665,3 @@ share/xfce/textures/oldwood.xpm
 share/xfce/textures/paper.xpm
 share/xfce/textures/silver.xpm
 share/xfce/textures/stripe.xpm
-@dirrm share/xfce/textures
-@dirrm share/xfce/sounds
-@dirrm share/xfce/palettes
-@dirrm share/xfce/icons
-@dirrm share/xfce/help/images
-@dirrm share/xfce/help/html/stylesheet-images
-@dirrm share/xfce/help/html
-@dirrm share/xfce/help
-@dirrm share/xfce/backdrops
-@dirrm lib/gtk/themes/engines
-@dirrm lib/gtk/themes
-@dirrm lib/gtk
-@dirrm etc/xfce

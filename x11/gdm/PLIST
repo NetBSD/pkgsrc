@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2009/03/02 15:13:10 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.40 2009/06/14 18:24:47 joerg Exp $
 ${PLIST.dmx}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -212,40 +212,3 @@ share/pixmaps/gdm-foot-logo.png
 share/pixmaps/nobody.png
 share/pixmaps/nohost.png
 share/xsessions/gnome.desktop
-@dirrm share/xsessions
-@dirrm share/pixmaps/faces
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/gdm
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/gdm/uk
-@dirrm share/gnome/help/gdm/sv
-@dirrm share/gnome/help/gdm/oc
-@dirrm share/gnome/help/gdm/ko
-@dirrm share/gnome/help/gdm/fr
-@dirrm share/gnome/help/gdm/es
-@dirrm share/gnome/help/gdm/en_GB
-@dirrm share/gnome/help/gdm/de
-@dirrm share/gnome/help/gdm/C
-@dirrm share/gnome/help/gdm
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gdm/themes/happygnome-list
-@dirrm share/gdm/themes/happygnome
-@dirrm share/gdm/themes/circles
-@dirrm share/gdm/themes
-@dirrm share/gdm/applications
-@dirrm share/gdm/BuiltInSessions
-@dirrm share/gdm
-@dirrm share/examples/gdm/modules
-@dirrm share/examples/gdm/PreSession
-@dirrm share/examples/gdm/PostSession
-@dirrm share/examples/gdm/PostLogin
-@dirrm share/examples/gdm/Init
-@dirrm share/examples/gdm
-@comment in gtk2: @dirrm lib/gtk-2.0/modules

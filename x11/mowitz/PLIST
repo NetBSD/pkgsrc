@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/09 19:00:25 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:25:01 joerg Exp $
 bin/mowitz-config
 include/Mowitz/Mowitz.h
 include/Mowitz/MwAnimator.h
@@ -215,8 +215,3 @@ share/doc/Mowitz/Slider.README
 share/doc/Mowitz/Slider.man
 share/doc/Mowitz/TreeFSel.gif
 share/doc/Mowitz/new.gif
-@dirrm share/doc/Mowitz
-@dirrm share/Mowitz/pixmaps
-@dirrm share/Mowitz/fonts
-@dirrm share/Mowitz
-@dirrm include/Mowitz

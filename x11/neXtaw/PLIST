@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/06/20 16:49:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:25:01 joerg Exp $
 include/X11/neXtaw/AllWidgets.h
 include/X11/neXtaw/AsciiSink.h
 include/X11/neXtaw/AsciiSinkP.h
@@ -112,6 +112,3 @@ share/examples/neXtaw/Xman
 share/examples/neXtaw/Xmessage
 share/examples/neXtaw/Xmh
 share/examples/neXtaw/Xvidtune
-@dirrm share/examples/neXtaw
-@dirrm share/doc/neXtaw
-@dirrm include/X11/neXtaw

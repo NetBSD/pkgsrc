@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/06/30 15:42:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:24:57 joerg Exp $
 bin/motif-config
 bin/mwm
 bin/mxmkmf
@@ -414,12 +414,3 @@ share/lesstif/doc/thread.html
 share/lesstif/doc/titlebar.html
 share/lesstif/doc/versions.html
 share/lesstif/doc/web_button.html
-@dirrm share/lesstif/doc/images
-@dirrm share/lesstif/doc/html
-@dirrm share/lesstif/doc
-@dirrm share/lesstif
-@dirrm lib/X11/mwm
-@dirrm include/uil
-@dirrm include/Xm
-@dirrm include/Mrm
-@dirrm include/Dt

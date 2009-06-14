@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/05/18 12:23:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:24:48 joerg Exp $
 bin/gnome-screensaver
 bin/gnome-screensaver-command
 bin/gnome-screensaver-preferences
@@ -108,16 +108,3 @@ share/pixmaps/backgrounds/cosmos/jupiter.jpg
 share/pixmaps/backgrounds/cosmos/sombrero.jpg
 share/pixmaps/backgrounds/cosmos/whirlpool.jpg
 share/pixmaps/gnome-logo-white.svg
-@dirrm share/pixmaps/backgrounds/cosmos
-@comment in xdg-dirs: @dirrm share/pixmaps/backgrounds
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/gnome-screensaver
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/examples/gnome-screensaver/xdg/menus
-@dirrm share/examples/gnome-screensaver/xdg
-@dirrm share/examples/gnome-screensaver/pam.d
-@dirrm share/examples/gnome-screensaver
-@comment in xdg-dirs: @dirrm share/desktop-directories
-@dirrm share/applications/screensavers
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm libexec/gnome-screensaver

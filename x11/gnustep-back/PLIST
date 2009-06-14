@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/04/13 12:21:37 rh Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:24:49 joerg Exp $
 bin/gpbs
 lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources/English.lproj/nfontFaceNames.strings
 lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources/Info-gnustep.plist
@@ -31,11 +31,3 @@ lib/GNUstep/Fonts/Helvetica.nfont/n019064l.afm
 lib/GNUstep/Fonts/Helvetica.nfont/n019064l.pfb
 lib/GNUstep/Fonts/Helvetica.nfont/n019064l.pfm
 man/man1/gpbs.1
-@dirrm lib/GNUstep/Fonts/Helvetica.nfont
-@dirrm lib/GNUstep/Fonts
-@dirrm lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources/Swedish.lproj
-@dirrm lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources/English.lproj
-@dirrm lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources
-@dirrm lib/GNUstep/Bundles/libgnustep-back-016.bundle
-@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Bundles
-@comment in devel/gnustep-base: @dirrm lib/GNUstep

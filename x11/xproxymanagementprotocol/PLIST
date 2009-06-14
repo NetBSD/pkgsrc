@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 13:47:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:18 joerg Exp $
 include/X11/PM/PM.h
 include/X11/PM/PMproto.h
 lib/pkgconfig/xproxymngproto.pc
-@dirrm include/X11/PM

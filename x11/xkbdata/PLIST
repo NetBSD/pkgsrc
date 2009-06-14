@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/07 17:27:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:17 joerg Exp $
 share/X11/xkb/compat.dir
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
@@ -361,31 +361,3 @@ share/X11/xkb/types/iso9995
 share/X11/xkb/types/mousekeys
 share/X11/xkb/types/numpad
 share/X11/xkb/types/pc
-@dirrm share/X11/xkb/types
-@dirrm share/X11/xkb/torture
-@dirrm share/X11/xkb/symbols/xfree68
-@dirrm share/X11/xkb/symbols/sun
-@dirrm share/X11/xkb/symbols/sony
-@dirrm share/X11/xkb/symbols/sgi
-@dirrm share/X11/xkb/symbols/pc
-@dirrm share/X11/xkb/symbols/nec
-@dirrm share/X11/xkb/symbols/macintosh
-@dirrm share/X11/xkb/symbols/hp
-@dirrm share/X11/xkb/symbols/fujitsu
-@dirrm share/X11/xkb/symbols/digital
-@dirrm share/X11/xkb/symbols
-@dirrm share/X11/xkb/semantics
-@dirrm share/X11/xkb/rules
-@dirrm share/X11/xkb/keymap/sun
-@dirrm share/X11/xkb/keymap/sgi
-@dirrm share/X11/xkb/keymap/digital
-@dirrm share/X11/xkb/keymap
-@dirrm share/X11/xkb/keycodes/sgi
-@dirrm share/X11/xkb/keycodes/digital
-@dirrm share/X11/xkb/keycodes
-@dirrm share/X11/xkb/geometry/sgi
-@dirrm share/X11/xkb/geometry/ibm
-@dirrm share/X11/xkb/geometry/digital
-@dirrm share/X11/xkb/geometry
-@dirrm share/X11/xkb/compat
-@dirrm share/X11/xkb

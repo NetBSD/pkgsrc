@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/07 02:53:41 bjs Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:25:01 joerg Exp $
 bin/nBundle
 bin/nTest
 bin/nucleo-config
@@ -122,34 +122,3 @@ share/nucleo/fonts/VeraSeBd.ttf
 share/nucleo/nucleo.icns
 share/nucleo/nucleo.pdf
 share/nucleo/plugin-list
-@dirrm share/nucleo/fonts
-@dirrm share/nucleo
-@dirrm lib/nucleo
-${PLIST.gnutls}@dirrm include/nucleo/xml
-@dirrm include/nucleo/utils
-${PLIST.gnutls}@dirrm include/nucleo/network/xmpp
-@dirrm include/nucleo/network/udp
-@dirrm include/nucleo/network/tcp
-@dirrm include/nucleo/network/http
-@dirrm include/nucleo/network/dnssd
-@dirrm include/nucleo/network
-@dirrm include/nucleo/image/source
-@dirrm include/nucleo/image/sink
-@dirrm include/nucleo/image/processing/noise
-@dirrm include/nucleo/image/processing/gamma
-@dirrm include/nucleo/image/processing/difference
-@dirrm include/nucleo/image/processing/convolution
-@dirrm include/nucleo/image/processing/chromakeying
-@dirrm include/nucleo/image/processing/basic
-@dirrm include/nucleo/image/processing
-@dirrm include/nucleo/image/encoding
-@dirrm include/nucleo/image
-@dirrm include/nucleo/helpers
-@dirrm include/nucleo/gl/window
-@dirrm include/nucleo/gl/texture
-@dirrm include/nucleo/gl/text
-@dirrm include/nucleo/gl/shading
-@dirrm include/nucleo/gl/scenegraph
-@dirrm include/nucleo/gl
-@dirrm include/nucleo/core
-@dirrm include/nucleo

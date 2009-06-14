@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/21 06:29:51 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:45 joerg Exp $
 bin/driconf
 ${PYSITELIB}/driconf/dri.py
 ${PYSITELIB}/driconf/dri.pyc
@@ -26,7 +26,3 @@ share/pixmaps/driconf/driconf-icon.png
 share/pixmaps/driconf/drilogo.jpg
 share/pixmaps/driconf/screen.png
 share/pixmaps/driconf/screencard.png
-@dirrm share/pixmaps/driconf
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm ${PYSITELIB}/driconf

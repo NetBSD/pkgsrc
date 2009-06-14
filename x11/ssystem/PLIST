@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:02:00 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:06 joerg Exp $
 bin/ssystem
 share/doc/ssystem/LICENSE
 share/doc/ssystem/README
@@ -31,6 +31,5 @@ share/ssystem/titan.jpg
 share/ssystem/triton.jpg
 share/ssystem/uranus.jpg
 share/ssystem/venus.jpg
-@dirrm share/doc/ssystem
 @unexec ${RMDIR} %D/share/ssystem/hires || ${TRUE}
 @unexec ${RMDIR} %D/share/ssystem || ${TRUE}

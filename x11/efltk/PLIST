@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:43:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:24:45 joerg Exp $
 bin/efltk-config
 include/efltk/Enumerations.h
 include/efltk/Fl.h
@@ -218,8 +218,3 @@ share/locale/hu/LC_MESSAGES/efltk.mo
 share/locale/id/LC_MESSAGES/efltk.mo
 share/locale/sk/LC_MESSAGES/efltk.mo
 share/locale/sr/LC_MESSAGES/efltk.mo
-@dirrm lib/fltk
-@dirrm include/efltk/xml
-@dirrm include/efltk/net
-@dirrm include/efltk/db
-@dirrm include/efltk

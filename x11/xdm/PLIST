@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/06 14:56:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:11 joerg Exp $
 bin/xdm
 bin/xdmshell
 lib/X11/app-defaults/Chooser
@@ -19,7 +19,3 @@ lib/X11/xdm/pixmaps/xorg.xpm
 lib/X11/xdm/xdm-config
 man/man1/xdm.1
 share/examples/rc.d/xdm
-@dirrm lib/X11/xdm/pixmaps
-@dirrm lib/X11/xdm
-@comment @dirrm lib/X11/app-defaults
-@comment @dirrm lib/X11

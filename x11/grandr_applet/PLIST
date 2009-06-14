@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/28 18:40:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:49 joerg Exp $
 lib/bonobo/servers/GrandrApplet.server
 libexec/grandr
 share/doc/grandr_applet/AUTHORS
@@ -10,6 +10,3 @@ share/doc/grandr_applet/README
 share/locale/en/LC_MESSAGES/grandr_applet.mo
 share/locale/sv/LC_MESSAGES/grandr_applet.mo
 share/pixmaps/grandr.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/doc/grandr_applet
-@comment in libbonobo: @dirrm lib/bonobo/servers

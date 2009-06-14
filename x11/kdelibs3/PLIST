@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2008/04/12 22:43:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.43 2009/06/14 18:24:56 joerg Exp $
 bin/artsmessage
 bin/checkXML
 ${PLIST.cups}bin/cupsdconf
@@ -5214,401 +5214,46 @@ share/kde/servicetypes/renamedlgplugin.desktop
 share/kde/servicetypes/scriptinterface.desktop
 share/locale/all_languages
 @comment in xmlcatmgr: share/sgml/catalog
-@comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/services/kresources/kabc
-@comment in kde: @dirrm share/kde/services/kresources
-@comment in kde: @dirrm share/kde/services/kded
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/video
-@comment in kde: @dirrm share/kde/mimelnk/uri
-@comment in kde: @dirrm share/kde/mimelnk/text
-@comment in kde: @dirrm share/kde/mimelnk/multipart
-@comment in kde: @dirrm share/kde/mimelnk/model
-@comment in kde: @dirrm share/kde/mimelnk/message
-@comment in kde: @dirrm share/kde/mimelnk/inode
-@comment in kde: @dirrm share/kde/mimelnk/image
-@comment in kde: @dirrm share/kde/mimelnk/audio
-@comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/mimelnk/all
-@comment in kde: @dirrm share/kde/mimelnk
-@dirrm share/kde/emoticons/Default
-@comment in kde: @dirrm share/kde/emoticons
-@dirrm share/kde/config/ui
-@dirrm share/kde/config/colors
-@comment in kde: @dirrm share/kde/config
-@comment in kde: @dirrm share/kde/autostart
-@dirrm share/kde/apps/proxyscout
-@dirrm share/kde/apps/ktexteditor_kdatatool
-@dirrm share/kde/apps/ktexteditor_isearch
-@dirrm share/kde/apps/ktexteditor_insertfile
-@dirrm share/kde/apps/ktexteditor_docwordcompletion
-@comment in kde: @dirrm share/kde/apps/kstyle/themes
-@dirrm share/kde/apps/kstyle/pixmaps/riscos
-@dirrm share/kde/apps/kstyle/pixmaps
-@comment in kde: @dirrm share/kde/apps/kstyle
-@dirrm share/kde/apps/kssl
-@dirrm share/kde/apps/ksgmltools2/docbook/xsl/params
-@dirrm share/kde/apps/ksgmltools2/docbook/xsl/manpages
-@dirrm share/kde/apps/ksgmltools2/docbook/xsl/lib
-@dirrm share/kde/apps/ksgmltools2/docbook/xsl/images/callouts
-@dirrm share/kde/apps/ksgmltools2/docbook/xsl/images
-@dirrm share/kde/apps/ksgmltools2/docbook/xsl/html
-@dirrm share/kde/apps/ksgmltools2/docbook/xsl/common
-@dirrm share/kde/apps/ksgmltools2/docbook/xsl
-@dirrm share/kde/apps/ksgmltools2/docbook/xml-dtd-4.2/ent
-@dirrm share/kde/apps/ksgmltools2/docbook/xml-dtd-4.2
-@dirrm share/kde/apps/ksgmltools2/docbook/xml-dtd-4.1.2/ent
-@dirrm share/kde/apps/ksgmltools2/docbook/xml-dtd-4.1.2
-@dirrm share/kde/apps/ksgmltools2/docbook
-@dirrm share/kde/apps/ksgmltools2/customization/zh-TW/entities
-@dirrm share/kde/apps/ksgmltools2/customization/zh-TW
-@dirrm share/kde/apps/ksgmltools2/customization/zh-CN/entities
-@dirrm share/kde/apps/ksgmltools2/customization/zh-CN
-@dirrm share/kde/apps/ksgmltools2/customization/xx/entities
-@dirrm share/kde/apps/ksgmltools2/customization/xx
-@dirrm share/kde/apps/ksgmltools2/customization/xsl
-@dirrm share/kde/apps/ksgmltools2/customization/xh/entities
-@dirrm share/kde/apps/ksgmltools2/customization/xh
-@dirrm share/kde/apps/ksgmltools2/customization/wa/entities
-@dirrm share/kde/apps/ksgmltools2/customization/wa
-@dirrm share/kde/apps/ksgmltools2/customization/uk/entities
-@dirrm share/kde/apps/ksgmltools2/customization/uk
-@dirrm share/kde/apps/ksgmltools2/customization/tr/entities
-@dirrm share/kde/apps/ksgmltools2/customization/tr
-@dirrm share/kde/apps/ksgmltools2/customization/sv/entities
-@dirrm share/kde/apps/ksgmltools2/customization/sv
-@dirrm share/kde/apps/ksgmltools2/customization/sr/entities
-@dirrm share/kde/apps/ksgmltools2/customization/sr
-@dirrm share/kde/apps/ksgmltools2/customization/sl/entities
-@dirrm share/kde/apps/ksgmltools2/customization/sl
-@dirrm share/kde/apps/ksgmltools2/customization/sk/entities
-@dirrm share/kde/apps/ksgmltools2/customization/sk
-@dirrm share/kde/apps/ksgmltools2/customization/ru/entities
-@dirrm share/kde/apps/ksgmltools2/customization/ru
-@dirrm share/kde/apps/ksgmltools2/customization/ro/entities
-@dirrm share/kde/apps/ksgmltools2/customization/ro
-@dirrm share/kde/apps/ksgmltools2/customization/pt/entities
-@dirrm share/kde/apps/ksgmltools2/customization/pt-BR/entities
-@dirrm share/kde/apps/ksgmltools2/customization/pt-BR
-@dirrm share/kde/apps/ksgmltools2/customization/pt
-@dirrm share/kde/apps/ksgmltools2/customization/pl/entities
-@dirrm share/kde/apps/ksgmltools2/customization/pl
-@dirrm share/kde/apps/ksgmltools2/customization/obsolete
-@dirrm share/kde/apps/ksgmltools2/customization/no/entities
-@dirrm share/kde/apps/ksgmltools2/customization/no
-@dirrm share/kde/apps/ksgmltools2/customization/nn/entities
-@dirrm share/kde/apps/ksgmltools2/customization/nn
-@dirrm share/kde/apps/ksgmltools2/customization/nl/entities
-@dirrm share/kde/apps/ksgmltools2/customization/nl
-@dirrm share/kde/apps/ksgmltools2/customization/lt/entities
-@dirrm share/kde/apps/ksgmltools2/customization/lt
-@dirrm share/kde/apps/ksgmltools2/customization/ko/entities
-@dirrm share/kde/apps/ksgmltools2/customization/ko
-@dirrm share/kde/apps/ksgmltools2/customization/ja/entities
-@dirrm share/kde/apps/ksgmltools2/customization/ja
-@dirrm share/kde/apps/ksgmltools2/customization/it/entities
-@dirrm share/kde/apps/ksgmltools2/customization/it
-@dirrm share/kde/apps/ksgmltools2/customization/id/entities
-@dirrm share/kde/apps/ksgmltools2/customization/id
-@dirrm share/kde/apps/ksgmltools2/customization/hu/entities
-@dirrm share/kde/apps/ksgmltools2/customization/hu
-@dirrm share/kde/apps/ksgmltools2/customization/he/entities
-@dirrm share/kde/apps/ksgmltools2/customization/he
-@dirrm share/kde/apps/ksgmltools2/customization/fr/entities
-@dirrm share/kde/apps/ksgmltools2/customization/fr
-@dirrm share/kde/apps/ksgmltools2/customization/fo/entities
-@dirrm share/kde/apps/ksgmltools2/customization/fo
-@dirrm share/kde/apps/ksgmltools2/customization/fi/entities
-@dirrm share/kde/apps/ksgmltools2/customization/fi
-@dirrm share/kde/apps/ksgmltools2/customization/et/entities
-@dirrm share/kde/apps/ksgmltools2/customization/et
-@dirrm share/kde/apps/ksgmltools2/customization/es/entities
-@dirrm share/kde/apps/ksgmltools2/customization/es
-@dirrm share/kde/apps/ksgmltools2/customization/entities
-@dirrm share/kde/apps/ksgmltools2/customization/en/entities
-@dirrm share/kde/apps/ksgmltools2/customization/en-GB/entities
-@dirrm share/kde/apps/ksgmltools2/customization/en-GB
-@dirrm share/kde/apps/ksgmltools2/customization/en
-@dirrm share/kde/apps/ksgmltools2/customization/el/entities
-@dirrm share/kde/apps/ksgmltools2/customization/el
-@dirrm share/kde/apps/ksgmltools2/customization/dtd
-@dirrm share/kde/apps/ksgmltools2/customization/de/entities
-@dirrm share/kde/apps/ksgmltools2/customization/de
-@dirrm share/kde/apps/ksgmltools2/customization/da/entities
-@dirrm share/kde/apps/ksgmltools2/customization/da
-@dirrm share/kde/apps/ksgmltools2/customization/cs/entities
-@dirrm share/kde/apps/ksgmltools2/customization/cs
-@dirrm share/kde/apps/ksgmltools2/customization/ca/entities
-@dirrm share/kde/apps/ksgmltools2/customization/ca
-@dirrm share/kde/apps/ksgmltools2/customization/bg/entities
-@dirrm share/kde/apps/ksgmltools2/customization/bg
-@dirrm share/kde/apps/ksgmltools2/customization/af/entities
-@dirrm share/kde/apps/ksgmltools2/customization/af
-@dirrm share/kde/apps/ksgmltools2/customization
-@dirrm share/kde/apps/ksgmltools2
-@dirrm share/kde/apps/knotify
-@dirrm share/kde/apps/knewstuff
-@dirrm share/kde/apps/kjava/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/kjava/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kjava/icons/crystalsvg
-@dirrm share/kde/apps/kjava/icons
-@dirrm share/kde/apps/kjava
-@dirrm share/kde/apps/kio_uiserver/icons/crystalsvg/16x16/apps
-@dirrm share/kde/apps/kio_uiserver/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kio_uiserver/icons/crystalsvg
-@dirrm share/kde/apps/kio_uiserver/icons
-@dirrm share/kde/apps/kio_uiserver
-@dirrm share/kde/apps/khtml/icons/crystalsvg/64x64/actions
-@dirrm share/kde/apps/khtml/icons/crystalsvg/64x64
-@dirrm share/kde/apps/khtml/icons/crystalsvg/48x48/actions
-@dirrm share/kde/apps/khtml/icons/crystalsvg/48x48
-@dirrm share/kde/apps/khtml/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/khtml/icons/crystalsvg/32x32
-@dirrm share/kde/apps/khtml/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/khtml/icons/crystalsvg/22x22
-@dirrm share/kde/apps/khtml/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/khtml/icons/crystalsvg/16x16
-@dirrm share/kde/apps/khtml/icons/crystalsvg/128x128/actions
-@dirrm share/kde/apps/khtml/icons/crystalsvg/128x128
-@dirrm share/kde/apps/khtml/icons/crystalsvg
-@dirrm share/kde/apps/khtml/icons
-@dirrm share/kde/apps/khtml/css
-@comment in kde: @dirrm share/kde/apps/khtml
-@dirrm share/kde/apps/kdewidgets/pics
-@dirrm share/kde/apps/kdewidgets
-@dirrm share/kde/apps/kdeui/pics
-@dirrm share/kde/apps/kdeui/about
-@dirrm share/kde/apps/kdeui
-@dirrm share/kde/apps/kdeprint/tools
-@dirrm share/kde/apps/kdeprint/plugins
-@dirrm share/kde/apps/kdeprint/pics
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/64x64/apps
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/64x64
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/48x48/apps
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/48x48
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/32x32/apps
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/32x32
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/22x22/apps
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/22x22
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/16x16/apps
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kdeprint/icons/crystalsvg
-@dirrm share/kde/apps/kdeprint/icons
-@dirrm share/kde/apps/kdeprint/filters
-@comment in kde: @dirrm share/kde/apps/kdeprint
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@comment in kde: @dirrm share/kde/apps/kcm_componentchooser
-@dirrm share/kde/apps/kcertpart
-@comment in kde: @dirrm share/kde/apps/katepart/syntax
-@dirrm share/kde/apps/katepart/scripts/indent
-@dirrm share/kde/apps/katepart/scripts
-@comment in kde: @dirrm share/kde/apps/katepart
-@comment in kde: @dirrm share/kde/apps/kabc/formats
-@comment in kde: @dirrm share/kde/apps/kabc
-@dirrm share/kde/apps/dcopidlng
-@dirrm share/kde/apps/LICENSES
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde
-@comment in kde: @dirrm share/icons/crystalsvg/scalable/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/scalable/filesystems
-@comment in kde: @dirrm share/icons/crystalsvg/scalable/devices
-@comment in kde: @dirrm share/icons/crystalsvg/scalable/apps
-@comment in kde: @dirrm share/icons/crystalsvg/scalable/actions
-@comment in kde: @dirrm share/icons/crystalsvg/64x64/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/64x64/filesystems
-@comment in kde: @dirrm share/icons/crystalsvg/64x64/devices
-@comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
-@comment in kde: @dirrm share/icons/crystalsvg/64x64/actions
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/filesystems
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/devices
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/actions
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/filesystems
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/devices
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/actions
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/filesystems
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/devices
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/actions
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/filesystems
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/devices
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
-@comment in kde: @dirrm share/icons/crystalsvg/128x128/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/128x128/filesystems
-@comment in kde: @dirrm share/icons/crystalsvg/128x128/devices
-@comment in kde: @dirrm share/icons/crystalsvg/128x128/apps
-@comment in kde: @dirrm share/icons/crystalsvg/128x128/actions
-@comment in kde: @dirrm share/icons/crystalsvg
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/examples/kdelibs3
-@dirrm share/doc/kde/HTML/en/kspell
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/libkscreensaver/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkscreensaver/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkscreensaver
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kwallet
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kutils
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kunittest/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kunittest/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kunittest
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kspell2/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kspell2/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kspell2
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kparts/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kparts/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kparts
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/kmdi/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/kmdi/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/kmdi
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/http/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/http/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/http
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kioslave
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kssl/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kssl/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kssl
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kpasswdserver/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kpasswdserver/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kpasswdserver
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kioexec/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kioexec/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kioexec
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kio/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kio/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kio
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kfile/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kfile/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kfile
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/httpfilter/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/httpfilter/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/httpfilter
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/html
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/bookmarks/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/bookmarks/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/bookmarks
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kinit/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kinit/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kinit
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kimgio/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kimgio/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kimgio
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/khtml
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdoctools/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdoctools/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdoctools
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdeui/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeui/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeui
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdesu/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdesu/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdesu
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdefx/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdefx/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdefx
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kded/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kded/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kded
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdecore
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kcmshell/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kcmshell/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kcmshell
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kate/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kate/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kate
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kabc/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kabc/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kabc
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/ktexteditor/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/ktexteditor/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/ktexteditor
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kspeech/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kspeech/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kspeech
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/library/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/library/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/library
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/interface/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/interface/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/interface
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/dnssd/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dnssd/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dnssd
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/dcop/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dcop/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dcop
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/arts/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs
-@comment in kde: @dirrm share/doc/kde/HTML/en/common
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/doc/kde/HTML
-@comment in kde: @dirrm share/doc/kde
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3/plugins/styles
-@comment in kde: @dirrm lib/kde3/plugins/designer
-@comment in kde: @dirrm lib/kde3/plugins
-@comment in kde: @dirrm lib/kde3
-@dirrm include/libkmid
-@dirrm include/kunittest
-@dirrm include/ktexteditor
-@dirrm include/kspell2
-@dirrm include/ksettings
-@dirrm include/kresources
-@comment in kde: @dirrm include/kparts
-@dirrm include/knewstuff
-@dirrm include/kmediaplayer
-@dirrm include/kmdi
-@dirrm include/kjs
-@dirrm include/kio
-@dirrm include/khexedit
-@dirrm include/kdesu
-@dirrm include/kdeprint/lpr
-@dirrm include/kdeprint
-@comment in kde: @dirrm include/kate
-@comment in kde: @dirrm include/kabc
-@comment in kde: @dirrm include/dom
-@dirrm include/dnssd
-@comment in arts: @dirrm include/arts

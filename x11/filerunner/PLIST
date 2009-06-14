@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/25 22:01:26 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:24:46 joerg Exp $
 bin/fr
 lib/FileRunner/FAQ
 lib/FileRunner/HISTORY
@@ -31,5 +31,3 @@ lib/FileRunner/frftp
 lib/FileRunner/ftp.tcl
 lib/FileRunner/http.tcl
 lib/FileRunner/tclIndex
-@dirrm lib/FileRunner/bitmaps
-@dirrm lib/FileRunner

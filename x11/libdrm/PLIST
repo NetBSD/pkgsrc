@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/05 04:22:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:24:59 joerg Exp $
 include/drm/drm.h
 include/drm/drm_mode.h
 include/drm/drm_sarea.h
@@ -21,4 +21,3 @@ lib/libdrm.la
 lib/libdrm_intel.la
 lib/pkgconfig/libdrm.pc
 lib/pkgconfig/libdrm_intel.pc
-@dirrm include/drm

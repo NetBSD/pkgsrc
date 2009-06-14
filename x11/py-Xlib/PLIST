@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/17 15:30:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:03 joerg Exp $
 ${PYSITELIB}/Xlib/X.py
 ${PYSITELIB}/Xlib/X.pyc
 ${PYSITELIB}/Xlib/X.pyo
@@ -149,9 +149,3 @@ ${PYSITELIB}/Xlib/xobject/icccm.pyo
 ${PYSITELIB}/Xlib/xobject/resource.py
 ${PYSITELIB}/Xlib/xobject/resource.pyc
 ${PYSITELIB}/Xlib/xobject/resource.pyo
-@dirrm ${PYSITELIB}/Xlib/xobject
-@dirrm ${PYSITELIB}/Xlib/support
-@dirrm ${PYSITELIB}/Xlib/protocol
-@dirrm ${PYSITELIB}/Xlib/keysymdef
-@dirrm ${PYSITELIB}/Xlib/ext
-@dirrm ${PYSITELIB}/Xlib

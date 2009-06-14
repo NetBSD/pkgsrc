@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/02/20 10:36:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:24:56 joerg Exp $
 share/doc/kde/HTML/zh_TW/common/1.png
 share/doc/kde/HTML/zh_TW/common/10.png
 share/doc/kde/HTML/zh_TW/common/2.png
@@ -647,7 +647,3 @@ share/locale/zh_TW/LC_MESSAGES/webarchiver.mo
 share/locale/zh_TW/charset
 share/locale/zh_TW/entry.desktop
 share/locale/zh_TW/flag.png
-@dirrm share/doc/kde/HTML/zh_TW/khelpcenter/faq
-@dirrm share/doc/kde/HTML/zh_TW/khelpcenter
-@comment in kde: @dirrm share/doc/kde/HTML/zh_TW/common
-@comment in kde: @dirrm share/doc/kde/HTML/zh_TW

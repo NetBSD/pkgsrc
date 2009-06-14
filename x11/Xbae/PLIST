@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/02/16 18:09:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:24:43 joerg Exp $
 include/Xbae/Caption.h
 include/Xbae/CaptionP.h
 include/Xbae/Clip.h
@@ -176,6 +176,3 @@ share/doc/Xbae/sites.html
 share/doc/Xbae/spancells.html
 share/doc/Xbae/title.html
 share/doc/Xbae/users.html
-@dirrm share/doc/Xbae/images
-@dirrm share/doc/Xbae
-@dirrm include/Xbae

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/29 13:58:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:47 joerg Exp $
 bin/ggiterm
 man/man1/ggiterm.1
 share/doc/ggiterm/README
 share/doc/ggiterm/ggiterm.termcap
 share/doc/ggiterm/ggiterm.terminfo
-@dirrm share/doc/ggiterm

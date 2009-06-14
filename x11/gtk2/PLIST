@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2009/06/04 11:16:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.65 2009/06/14 18:24:50 joerg Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-builder-convert
@@ -1218,39 +1218,7 @@ share/locale/zh_TW/LC_MESSAGES/gtk20.mo
 share/themes/Default/gtk-2.0-key/gtkrc
 share/themes/Emacs/gtk-2.0-key/gtkrc
 share/themes/Raleigh/gtk-2.0/gtkrc
-@dirrm share/themes/Raleigh/gtk-2.0
-@dirrm share/themes/Raleigh
-@dirrm share/themes/Emacs/gtk-2.0-key
-@dirrm share/themes/Emacs
-@dirrm share/themes/Default/gtk-2.0-key
 @unexec ${RMDIR} %D/share/themes/Default 2>/dev/null || ${TRUE}
-@comment in xdg-dirs: @dirrm share/themes
-@dirrm share/gtk-doc/html/gtk
-@dirrm share/gtk-doc/html/gdk-pixbuf
-@dirrm share/gtk-doc/html/gdk
-@dirrm share/gtk-doc/html/gail-libgail-util
-@dirrm share/gtk-2.0/demo
-@dirrm share/gtk-2.0
 @exec ${MKDIR} %D/lib/gtk-2.0/modules
-@dirrm lib/gtk-2.0/modules
-@dirrm lib/gtk-2.0/include
 @exec ${MKDIR} %D/lib/gtk-2.0/immodules
-@dirrm lib/gtk-2.0/immodules
-@dirrm lib/gtk-2.0/2.10.0/printbackends
-@dirrm lib/gtk-2.0/2.10.0/loaders
-@dirrm lib/gtk-2.0/2.10.0/immodules
 @exec ${MKDIR} %D/lib/gtk-2.0/2.10.0/filesystems
-@dirrm lib/gtk-2.0/2.10.0/filesystems
-@dirrm lib/gtk-2.0/2.10.0/engines
-@dirrm lib/gtk-2.0/2.10.0
-@dirrm lib/gtk-2.0
-@dirrm include/gtk-unix-print-2.0/gtk
-@dirrm include/gtk-unix-print-2.0
-@dirrm include/gtk-2.0/gtk
-${PLIST.x11}@dirrm include/gtk-2.0/gdk-pixbuf-xlib
-@dirrm include/gtk-2.0/gdk-pixbuf
-@dirrm include/gtk-2.0/gdk
-@dirrm include/gtk-2.0
-@dirrm include/gail-1.0/libgail-util
-@dirrm include/gail-1.0/gail
-@dirrm include/gail-1.0

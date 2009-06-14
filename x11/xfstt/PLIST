@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/05/02 20:34:09 reed Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:25:16 joerg Exp $
 bin/xfstt
 man/man1/xfstt.1
 share/doc/xfstt/CHANGES
@@ -7,5 +7,3 @@ share/doc/xfstt/THANKS
 share/doc/xfstt/TODO
 share/examples/rc.d/xfstt
 share/examples/xfstt/font.properties
-@dirrm share/examples/xfstt
-@dirrm share/doc/xfstt

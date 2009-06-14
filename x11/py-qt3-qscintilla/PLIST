@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/06 17:57:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:25:04 joerg Exp $
 ${PYSITELIB}/qtext.so
 share/sip${PYVERSSUFFIX}/qtext/copying.sip
 share/sip${PYVERSSUFFIX}/qtext/qextscintilla.sip
@@ -30,5 +30,3 @@ share/sip${PYVERSSUFFIX}/qtext/qextscintillalexertex.sip
 share/sip${PYVERSSUFFIX}/qtext/qextscintillamacro.sip
 share/sip${PYVERSSUFFIX}/qtext/qextscintillaprinter.sip
 share/sip${PYVERSSUFFIX}/qtext/qtextmod.sip
-@dirrm share/sip${PYVERSSUFFIX}/qtext
-@comment in py-qt3-base: @dirrm share/sip${PYVERSSUFFIX}

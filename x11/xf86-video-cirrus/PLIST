@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/20 16:11:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:12 joerg Exp $
 lib/xorg/modules/drivers/cirrus_alpine.la
 lib/xorg/modules/drivers/cirrus_drv.la
 lib/xorg/modules/drivers/cirrus_laguna.la
 man/man4/cirrus.4
-@comment @dirrm lib/xorg/modules/drivers
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg

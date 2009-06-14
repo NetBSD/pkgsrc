@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/06/19 14:37:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:25:06 joerg Exp $
 ${RUBY_VENDORARCHLIB}/tcltklib.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/tkutil.${RUBY_DLEXT}
 ${RUBY_VENDORLIB}/multi-tk.rb
@@ -1008,65 +1008,3 @@ ${RUBY_EG}/tk/tktimer3.rb
 ${RUBY_EG}/tk/tktree.rb
 ${RUBY_EG}/tk/tktree.tcl
 ${RUBY_EG}/tk/ttk_wrapper.rb
-@dirrm ${RUBY_EG}/tk/tkextlib/vu
-@dirrm ${RUBY_EG}/tk/tkextlib/treectrl/pics
-@dirrm ${RUBY_EG}/tk/tkextlib/treectrl
-@dirrm ${RUBY_EG}/tk/tkextlib/tktable
-@dirrm ${RUBY_EG}/tk/tkextlib/tkimg
-@dirrm ${RUBY_EG}/tk/tkextlib/tkHTML/page4
-@dirrm ${RUBY_EG}/tk/tkextlib/tkHTML/page3
-@dirrm ${RUBY_EG}/tk/tkextlib/tkHTML/page2
-@dirrm ${RUBY_EG}/tk/tkextlib/tkHTML/page1
-@dirrm ${RUBY_EG}/tk/tkextlib/tkHTML
-@dirrm ${RUBY_EG}/tk/tkextlib/tile/themes/plastik/plastik
-@dirrm ${RUBY_EG}/tk/tkextlib/tile/themes/plastik
-@dirrm ${RUBY_EG}/tk/tkextlib/tile/themes/kroc/kroc
-@dirrm ${RUBY_EG}/tk/tkextlib/tile/themes/kroc
-@dirrm ${RUBY_EG}/tk/tkextlib/tile/themes/keramik/keramik
-@dirrm ${RUBY_EG}/tk/tkextlib/tile/themes/keramik
-@dirrm ${RUBY_EG}/tk/tkextlib/tile/themes/blue/blue
-@dirrm ${RUBY_EG}/tk/tkextlib/tile/themes/blue
-@dirrm ${RUBY_EG}/tk/tkextlib/tile/themes
-@dirrm ${RUBY_EG}/tk/tkextlib/tile
-@dirrm ${RUBY_EG}/tk/tkextlib/tcllib
-@dirrm ${RUBY_EG}/tk/tkextlib/iwidgets/sample
-@dirrm ${RUBY_EG}/tk/tkextlib/iwidgets/catalog_demo/images
-@dirrm ${RUBY_EG}/tk/tkextlib/iwidgets/catalog_demo
-@dirrm ${RUBY_EG}/tk/tkextlib/iwidgets
-@dirrm ${RUBY_EG}/tk/tkextlib/bwidget
-@dirrm ${RUBY_EG}/tk/tkextlib/blt/scripts
-@dirrm ${RUBY_EG}/tk/tkextlib/blt/images
-@dirrm ${RUBY_EG}/tk/tkextlib/blt
-@dirrm ${RUBY_EG}/tk/tkextlib/ICONS
-@dirrm ${RUBY_EG}/tk/tkextlib
-@dirrm ${RUBY_EG}/tk/tcltklib
-@dirrm ${RUBY_EG}/tk/msgs_tk
-@dirrm ${RUBY_EG}/tk/msgs_rb2
-@dirrm ${RUBY_EG}/tk/msgs_rb
-@dirrm ${RUBY_EG}/tk/images
-@dirrm ${RUBY_EG}/tk/demos-jp/doc.org
-@dirrm ${RUBY_EG}/tk/demos-jp
-@dirrm ${RUBY_EG}/tk/demos-en/doc.org
-@dirrm ${RUBY_EG}/tk/demos-en
-@dirrm ${RUBY_EG}/tk
-@dirrm ${RUBY_VENDORLIB}/tkextlib/winico
-@dirrm ${RUBY_VENDORLIB}/tkextlib/vu
-@dirrm ${RUBY_VENDORLIB}/tkextlib/trofs
-@dirrm ${RUBY_VENDORLIB}/tkextlib/treectrl
-@dirrm ${RUBY_VENDORLIB}/tkextlib/tktrans
-@dirrm ${RUBY_VENDORLIB}/tkextlib/tktable
-@dirrm ${RUBY_VENDORLIB}/tkextlib/tkimg
-@dirrm ${RUBY_VENDORLIB}/tkextlib/tkHTML
-@dirrm ${RUBY_VENDORLIB}/tkextlib/tkDND
-@dirrm ${RUBY_VENDORLIB}/tkextlib/tile
-@dirrm ${RUBY_VENDORLIB}/tkextlib/tclx
-@dirrm ${RUBY_VENDORLIB}/tkextlib/tcllib
-@dirrm ${RUBY_VENDORLIB}/tkextlib/iwidgets
-@dirrm ${RUBY_VENDORLIB}/tkextlib/itk
-@dirrm ${RUBY_VENDORLIB}/tkextlib/itcl
-@dirrm ${RUBY_VENDORLIB}/tkextlib/bwidget
-@dirrm ${RUBY_VENDORLIB}/tkextlib/blt/tile
-@dirrm ${RUBY_VENDORLIB}/tkextlib/blt
-@dirrm ${RUBY_VENDORLIB}/tkextlib/ICONS
-@dirrm ${RUBY_VENDORLIB}/tkextlib
-@dirrm ${RUBY_VENDORLIB}/tk

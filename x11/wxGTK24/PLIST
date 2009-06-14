@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/22 19:54:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:25:08 joerg Exp $
 bin/wx24-config
 bin/wxgtk${GTKVER}-2.4-config
 include/wx/accel.h
@@ -394,23 +394,10 @@ share/wx/2.4/gs_afm/TimesBoO.afm
 share/wx/2.4/gs_afm/TimesO.afm
 share/wx/2.4/gs_afm/TimesRo.afm
 share/wx/2.4/gs_afm/Zapf.afm
-@dirrm share/wx/2.4/gs_afm
-@dirrm share/wx/2.4/afm
-@dirrm share/wx/2.4
 @unexec ${RMDIR} %D/share/wx 2>/dev/null || ${TRUE}
-@dirrm share/doc/wx/gtk
-@dirrm share/doc/wx
-@dirrm lib/wx/include/gtk${GTKVER}-2.4/wx
-@dirrm lib/wx/include/gtk${GTKVER}-2.4
 @exec ${MKDIR} %D/lib/wx/include/univ
 @unexec ${RMDIR} %D/lib/wx/include/univ 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/wx/include 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/wx 2>/dev/null || ${TRUE}
-@dirrm include/wx/unix
 @exec ${MKDIR} %D/include/wx/univ
-@dirrm include/wx/univ
-@dirrm include/wx/protocol
-@dirrm include/wx/html
-@dirrm include/wx/gtk
-@dirrm include/wx/generic
 @unexec ${RMDIR} %D/include/wx 2>/dev/null || ${TRUE}

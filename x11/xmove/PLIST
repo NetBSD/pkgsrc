@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/05/11 14:29:23 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:17 joerg Exp $
 bin/xmove
 bin/xmovectrl
 ${IMAKE_MAN_DIR}/xmove.${IMAKE_MAN_SUFFIX}
@@ -6,4 +6,3 @@ ${IMAKE_MAN_DIR}/xmovectrl.${IMAKE_MAN_SUFFIX}
 share/doc/xmove/features.txt
 share/doc/xmove/limitations.txt
 share/doc/xmove/using_xmove.txt
-@dirrm share/doc/xmove

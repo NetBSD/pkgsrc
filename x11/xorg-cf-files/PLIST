@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:17 joerg Exp $
 lib/X11/config/Amoeba.cf
 lib/X11/config/DGUX.cf
 lib/X11/config/DragonFly.cf
@@ -120,4 +120,3 @@ lib/X11/config/xorg.cf
 lib/X11/config/xorg.tmpl
 lib/X11/config/xorgsite.def
 lib/X11/config/xorgversion.def
-@dirrm lib/X11/config

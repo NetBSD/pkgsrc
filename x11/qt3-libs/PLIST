@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/12/28 11:07:17 ghen Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:25:05 joerg Exp $
 lib/pkgconfig/qt-mt.pc
 qt3/bin/moc
 qt3/include/jri.h
@@ -400,10 +400,3 @@ qt3/include/qxml.h
 qt3/lib/libqt-mt.la
 qt3/plugins/imageformats/libqjpeg.la
 qt3/plugins/imageformats/libqmng.la
-@dirrm qt3/plugins/imageformats
-@dirrm qt3/plugins
-@dirrm qt3/lib
-@dirrm qt3/include/private
-@dirrm qt3/include
-@dirrm qt3/bin
-@dirrm qt3

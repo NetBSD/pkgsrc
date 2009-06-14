@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/03/15 21:29:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 18:24:48 joerg Exp $
 bin/magnifier
 include/gnome-mag-1.0/magnifier/GNOME_Magnifier.h
 lib/bonobo/servers/GNOME_Magnifier.server
@@ -113,11 +113,3 @@ share/locale/vi/LC_MESSAGES/gnome-mag.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-mag.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-mag.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-mag.mo
-@dirrm share/idl/gnome-mag-1.0
-@comment in ORBit2: @dirrm share/idl
-@dirrm share/gnome-mag/1_32
-@dirrm share/gnome-mag
-@comment in ORBit2: @dirrm lib/orbit-2.0
-@comment in libbonobo: @dirrm lib/bonobo/servers
-@dirrm include/gnome-mag-1.0/magnifier
-@dirrm include/gnome-mag-1.0

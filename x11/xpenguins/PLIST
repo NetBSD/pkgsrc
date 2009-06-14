@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/26 20:44:02 snj Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:25:18 joerg Exp $
 bin/xpenguins
 man/man1/xpenguins.1
 share/xpenguins/themes/Big_Penguins/about
@@ -71,10 +71,3 @@ share/xpenguins/themes/Turtles/floater.xpm
 share/xpenguins/themes/Turtles/tumbler.xpm
 share/xpenguins/themes/Turtles/turtle.png
 share/xpenguins/themes/Turtles/walker.xpm
-@dirrm share/xpenguins/themes/Turtles
-@dirrm share/xpenguins/themes/Penguins
-@dirrm share/xpenguins/themes/Classic_Penguins
-@dirrm share/xpenguins/themes/Bill
-@dirrm share/xpenguins/themes/Big_Penguins
-@dirrm share/xpenguins/themes
-@dirrm share/xpenguins

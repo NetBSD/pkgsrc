@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/31 12:05:56 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:24:51 joerg Exp $
 bin/hot-babe
 man/man1/hot-babe.1
 share/doc/hot-babe/CONTRIBUTORS
@@ -15,5 +15,3 @@ share/hot-babe/hb01/hb01_2.png
 share/hot-babe/hb01/hb01_3.png
 share/hot-babe/hb01/hb01_4.png
 share/pixmaps/hot-babe.xpm
-@dirrm share/hot-babe/hb01
-@dirrm share/doc/hot-babe

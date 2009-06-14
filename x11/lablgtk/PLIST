@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/08 10:04:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:24:57 joerg Exp $
 bin/gdk_pixbuf_mlsource
 bin/lablgtk2
 lib/ocaml/lablgtk2/gAction.cmi
@@ -249,5 +249,4 @@ lib/ocaml/lablgtk2/wrappers.h
 lib/ocaml/lablgtk2/xml_lexer.mli
 ${PLIST.stubs}lib/ocaml/stublibs/dlllablgtk2.so
 @comment in ocaml: lib/ocaml/stublibs
-@dirrm lib/ocaml/lablgtk2
 @comment in ocaml: lib/ocaml

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/08/01 20:15:05 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:25:18 joerg Exp $
 bin/xplanet
 man/man1/xplanet.1
 share/xplanet/arcs/README
@@ -47,15 +47,3 @@ share/xplanet/spice/mgs.krn
 share/xplanet/spice/voyager
 share/xplanet/spice/voyager.krn
 share/xplanet/stars/BSC
-@dirrm share/xplanet/stars
-@dirrm share/xplanet/spice
-@dirrm share/xplanet/scripts
-@dirrm share/xplanet/satellites
-@dirrm share/xplanet/origin
-@dirrm share/xplanet/markers
-@dirrm share/xplanet/images
-@dirrm share/xplanet/fonts
-@dirrm share/xplanet/ephemeris
-@dirrm share/xplanet/config
-@dirrm share/xplanet/arcs
-@dirrm share/xplanet

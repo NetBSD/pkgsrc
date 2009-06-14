@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:25 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:43 joerg Exp $
 include/X11/Xaw3d/AllWidgets.h
 include/X11/Xaw3d/AsciiSink.h
 include/X11/Xaw3d/AsciiSinkP.h
@@ -121,5 +121,3 @@ share/pixmaps/wh_marble_3.xpm
 share/pixmaps/wh_marble_4.xpm
 share/pixmaps/wood-floor.xpm
 share/pixmaps/wood-floora.xpm
-@dirrm share/doc/Xaw-Xpm
-@dirrm include/X11/Xaw3d

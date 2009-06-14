@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/11/05 19:58:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:25:03 joerg Exp $
 lib/pkgconfig/gnome-python-extras-2.0.pc
 ${PYSITELIB}/gtk-2.0/egg/__init__.py
 ${PYSITELIB}/gtk-2.0/egg/__init__.pyc
@@ -22,6 +22,3 @@ share/gtk-doc/html/pygtkspell/pygtkspell.devhelp
 share/pygtk/2.0/defs/gtkhtml2.defs
 share/pygtk/2.0/defs/gtkmozembed.defs
 share/pygtk/2.0/defs/trayicon.defs
-@dirrm share/gtk-doc/html/pygtkspell
-@dirrm share/gtk-doc/html/pygtkmozembed
-@dirrm ${PYSITELIB}/gtk-2.0/egg

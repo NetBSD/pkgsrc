@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/15 08:19:02 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:07 joerg Exp $
 bin/tixwish
 lib/libtix82.so
 lib/tix8.2/Balloon.tcl
@@ -204,6 +204,3 @@ man/mann/tixStdButtonBox.n
 man/mann/tixTList.n
 man/mann/tixTree.n
 man/mann/tixUtils.n
-@dirrm lib/tix8.2/pref
-@dirrm lib/tix8.2/bitmaps
-@dirrm lib/tix8.2

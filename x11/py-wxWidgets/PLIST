@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/11 17:39:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:25:04 joerg Exp $
 include/wx-2.6/wx/wxPython/i_files/__controls_rename.i
 include/wx-2.6/wx/wxPython/i_files/__core_rename.i
 include/wx-2.6/wx/wxPython/i_files/__gdi_rename.i
@@ -941,27 +941,3 @@ ${PYSITELIB}/wxaddons/setup.pyo
 ${PYSITELIB}/wxversion.py
 ${PYSITELIB}/wxversion.pyc
 ${PYSITELIB}/wxversion.pyo
-@dirrm ${PYSITELIB}/wxaddons
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wxPython/tools
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wxPython/lib/mixins
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wxPython/lib/editor
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wxPython/lib/colourchooser
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wxPython/lib
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wxPython
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/tools/XRCed
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/tools
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/py
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/lib/ogl
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/lib/mixins
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/lib/masked
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/lib/floatcanvas
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/lib/editor
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/lib/colourchooser
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/lib/analogclock/lib_setup
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/lib/analogclock
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/lib
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx/build
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi/wx
-@dirrm ${PYSITELIB}/wx-2.6-gtk2-ansi
-@dirrm include/wx-2.6/wx/wxPython/i_files
-@dirrm include/wx-2.6/wx/wxPython

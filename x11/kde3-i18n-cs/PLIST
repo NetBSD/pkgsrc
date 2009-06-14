@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/02/20 10:36:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/06/14 18:24:52 joerg Exp $
 share/doc/kde/HTML/cs/common/1.png
 share/doc/kde/HTML/cs/common/10.png
 share/doc/kde/HTML/cs/common/2.png
@@ -786,45 +786,3 @@ share/locale/cs/LC_MESSAGES/webarchiver.mo
 share/locale/cs/charset
 share/locale/cs/entry.desktop
 share/locale/cs/flag.png
-@dirrm share/kde/apps/klettres/cs/syllab
-@dirrm share/kde/apps/klettres/cs/alpha
-@dirrm share/kde/apps/klettres/cs
-@comment in kde: @dirrm share/kde/apps/klettres
-@dirrm share/kde/apps/khangman/data/cs
-@comment in kde: @dirrm share/kde/apps/khangman/data
-@comment in kde: @dirrm share/kde/apps/khangman
-@dirrm share/doc/kde/HTML/cs/konsole
-@dirrm share/doc/kde/HTML/cs/kinfocenter/xserver
-@dirrm share/doc/kde/HTML/cs/kinfocenter/sound
-@dirrm share/doc/kde/HTML/cs/kinfocenter/scsi
-@dirrm share/doc/kde/HTML/cs/kinfocenter/processor
-@dirrm share/doc/kde/HTML/cs/kinfocenter/pcmcia
-@dirrm share/doc/kde/HTML/cs/kinfocenter/pci
-@dirrm share/doc/kde/HTML/cs/kinfocenter/partitions
-@dirrm share/doc/kde/HTML/cs/kinfocenter/memory
-@dirrm share/doc/kde/HTML/cs/kinfocenter/ioports
-@dirrm share/doc/kde/HTML/cs/kinfocenter/interrupts
-@dirrm share/doc/kde/HTML/cs/kinfocenter/dma
-@dirrm share/doc/kde/HTML/cs/kinfocenter/devices
-@dirrm share/doc/kde/HTML/cs/kinfocenter
-@dirrm share/doc/kde/HTML/cs/khelpcenter
-@dirrm share/doc/kde/HTML/cs/kgamma
-@dirrm share/doc/kde/HTML/cs/kdm
-@dirrm share/doc/kde/HTML/cs/kdeprint
-@dirrm share/doc/kde/HTML/cs/kcontrol/passwords
-@dirrm share/doc/kde/HTML/cs/kcontrol/laptop
-@dirrm share/doc/kde/HTML/cs/kcontrol/kmixcfg
-@dirrm share/doc/kde/HTML/cs/kcontrol/khtml
-@dirrm share/doc/kde/HTML/cs/kcontrol/kdm
-@dirrm share/doc/kde/HTML/cs/kcontrol/kcmstyle
-@dirrm share/doc/kde/HTML/cs/kcontrol/kcmsmserver
-@dirrm share/doc/kde/HTML/cs/kcontrol/kcmlowbatcrit
-@dirrm share/doc/kde/HTML/cs/kcontrol/kcmaccess
-@dirrm share/doc/kde/HTML/cs/kcontrol/email
-@dirrm share/doc/kde/HTML/cs/kcontrol/crypto
-@dirrm share/doc/kde/HTML/cs/kcontrol/clock
-@dirrm share/doc/kde/HTML/cs/kcontrol/bell
-@dirrm share/doc/kde/HTML/cs/kcontrol/arts
-@dirrm share/doc/kde/HTML/cs/kcontrol
-@comment in kde: @dirrm share/doc/kde/HTML/cs/common
-@comment in kde: @dirrm share/doc/kde/HTML/cs

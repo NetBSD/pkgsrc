@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/14 06:07:27 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:24:58 joerg Exp $
 include/X11/extensions/Xrandr.h
 lib/libXrandr.la
 lib/pkgconfig/xrandr.pc
@@ -17,4 +17,3 @@ man/man3/XRRSelectInput.3
 man/man3/XRRSetScreenConfig.3
 man/man3/XRRSetScreenConfigAndRate.3
 man/man3/Xrandr.3
-@comment @dirrm include/X11/extensions

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/05 13:26:33 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:25:03 joerg Exp $
 bin/kiwi-i18n
 bin/kiwi-ui-test
 ${PYSITELIB}/gazpacho/widgets/kiwiwidgets.py
@@ -611,21 +611,3 @@ share/locale/it/LC_MESSAGES/kiwi.mo
 share/locale/pl/LC_MESSAGES/kiwi.mo
 share/locale/pt_BR/LC_MESSAGES/kiwi.mo
 share/locale/sv/LC_MESSAGES/kiwi.mo
-@dirrm share/kiwi/pixmaps
-@dirrm share/kiwi/glade
-@dirrm share/kiwi
-@dirrm share/gazpacho/resources/kiwiwidgets
-@dirrm share/gazpacho/resources
-@dirrm share/gazpacho/catalogs
-@dirrm share/gazpacho
-@dirrm share/doc/kiwi/howto
-@dirrm share/doc/kiwi/api
-@dirrm share/doc/kiwi
-@dirrm ${PYSITELIB}/kiwi/ui/widgets
-@dirrm ${PYSITELIB}/kiwi/ui/test
-@dirrm ${PYSITELIB}/kiwi/ui
-@dirrm ${PYSITELIB}/kiwi/i18n
-@dirrm ${PYSITELIB}/kiwi/db
-@dirrm ${PYSITELIB}/kiwi
-@dirrm ${PYSITELIB}/gazpacho/widgets
-@dirrm ${PYSITELIB}/gazpacho
