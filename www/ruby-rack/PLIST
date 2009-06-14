@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/15 08:31:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:58:55 minskim Exp $
 bin/rackup
 ${GEM_HOME}/cache/rack-${PKGVERSION}.gem
-${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/KNOWN-ISSUES
 ${GEM_LIBDIR}/RDOX
@@ -25,7 +24,11 @@ ${GEM_LIBDIR}/lib/rack/auth/digest/request.rb
 ${GEM_LIBDIR}/lib/rack/auth/openid.rb
 ${GEM_LIBDIR}/lib/rack/builder.rb
 ${GEM_LIBDIR}/lib/rack/cascade.rb
+${GEM_LIBDIR}/lib/rack/chunked.rb
 ${GEM_LIBDIR}/lib/rack/commonlogger.rb
+${GEM_LIBDIR}/lib/rack/conditionalget.rb
+${GEM_LIBDIR}/lib/rack/content_length.rb
+${GEM_LIBDIR}/lib/rack/content_type.rb
 ${GEM_LIBDIR}/lib/rack/deflater.rb
 ${GEM_LIBDIR}/lib/rack/directory.rb
 ${GEM_LIBDIR}/lib/rack/file.rb
@@ -36,14 +39,21 @@ ${GEM_LIBDIR}/lib/rack/handler/fastcgi.rb
 ${GEM_LIBDIR}/lib/rack/handler/lsws.rb
 ${GEM_LIBDIR}/lib/rack/handler/mongrel.rb
 ${GEM_LIBDIR}/lib/rack/handler/scgi.rb
+${GEM_LIBDIR}/lib/rack/handler/swiftiplied_mongrel.rb
+${GEM_LIBDIR}/lib/rack/handler/thin.rb
 ${GEM_LIBDIR}/lib/rack/handler/webrick.rb
+${GEM_LIBDIR}/lib/rack/head.rb
 ${GEM_LIBDIR}/lib/rack/lint.rb
 ${GEM_LIBDIR}/lib/rack/lobster.rb
+${GEM_LIBDIR}/lib/rack/lock.rb
+${GEM_LIBDIR}/lib/rack/methodoverride.rb
+${GEM_LIBDIR}/lib/rack/mime.rb
 ${GEM_LIBDIR}/lib/rack/mock.rb
 ${GEM_LIBDIR}/lib/rack/recursive.rb
 ${GEM_LIBDIR}/lib/rack/reloader.rb
 ${GEM_LIBDIR}/lib/rack/request.rb
 ${GEM_LIBDIR}/lib/rack/response.rb
+${GEM_LIBDIR}/lib/rack/rewindable_input.rb
 ${GEM_LIBDIR}/lib/rack/session/abstract/id.rb
 ${GEM_LIBDIR}/lib/rack/session/cookie.rb
 ${GEM_LIBDIR}/lib/rack/session/memcache.rb
@@ -53,10 +63,17 @@ ${GEM_LIBDIR}/lib/rack/showstatus.rb
 ${GEM_LIBDIR}/lib/rack/static.rb
 ${GEM_LIBDIR}/lib/rack/urlmap.rb
 ${GEM_LIBDIR}/lib/rack/utils.rb
+${GEM_LIBDIR}/rack.gemspec
 ${GEM_LIBDIR}/test/cgi/lighttpd.conf
 ${GEM_LIBDIR}/test/cgi/test
 ${GEM_LIBDIR}/test/cgi/test.fcgi
 ${GEM_LIBDIR}/test/cgi/test.ru
+${GEM_LIBDIR}/test/multipart/binary
+${GEM_LIBDIR}/test/multipart/empty
+${GEM_LIBDIR}/test/multipart/ie
+${GEM_LIBDIR}/test/multipart/nested
+${GEM_LIBDIR}/test/multipart/none
+${GEM_LIBDIR}/test/multipart/text
 ${GEM_LIBDIR}/test/spec_rack_auth_basic.rb
 ${GEM_LIBDIR}/test/spec_rack_auth_digest.rb
 ${GEM_LIBDIR}/test/spec_rack_auth_openid.rb
@@ -64,30 +81,45 @@ ${GEM_LIBDIR}/test/spec_rack_builder.rb
 ${GEM_LIBDIR}/test/spec_rack_camping.rb
 ${GEM_LIBDIR}/test/spec_rack_cascade.rb
 ${GEM_LIBDIR}/test/spec_rack_cgi.rb
+${GEM_LIBDIR}/test/spec_rack_chunked.rb
 ${GEM_LIBDIR}/test/spec_rack_commonlogger.rb
+${GEM_LIBDIR}/test/spec_rack_conditionalget.rb
+${GEM_LIBDIR}/test/spec_rack_content_length.rb
+${GEM_LIBDIR}/test/spec_rack_content_type.rb
 ${GEM_LIBDIR}/test/spec_rack_deflater.rb
 ${GEM_LIBDIR}/test/spec_rack_directory.rb
 ${GEM_LIBDIR}/test/spec_rack_fastcgi.rb
 ${GEM_LIBDIR}/test/spec_rack_file.rb
 ${GEM_LIBDIR}/test/spec_rack_handler.rb
+${GEM_LIBDIR}/test/spec_rack_head.rb
 ${GEM_LIBDIR}/test/spec_rack_lint.rb
 ${GEM_LIBDIR}/test/spec_rack_lobster.rb
+${GEM_LIBDIR}/test/spec_rack_lock.rb
+${GEM_LIBDIR}/test/spec_rack_methodoverride.rb
 ${GEM_LIBDIR}/test/spec_rack_mock.rb
 ${GEM_LIBDIR}/test/spec_rack_mongrel.rb
 ${GEM_LIBDIR}/test/spec_rack_recursive.rb
 ${GEM_LIBDIR}/test/spec_rack_request.rb
 ${GEM_LIBDIR}/test/spec_rack_response.rb
+${GEM_LIBDIR}/test/spec_rack_rewindable_input.rb
 ${GEM_LIBDIR}/test/spec_rack_session_cookie.rb
 ${GEM_LIBDIR}/test/spec_rack_session_memcache.rb
 ${GEM_LIBDIR}/test/spec_rack_session_pool.rb
 ${GEM_LIBDIR}/test/spec_rack_showexceptions.rb
 ${GEM_LIBDIR}/test/spec_rack_showstatus.rb
 ${GEM_LIBDIR}/test/spec_rack_static.rb
+${GEM_LIBDIR}/test/spec_rack_thin.rb
 ${GEM_LIBDIR}/test/spec_rack_urlmap.rb
 ${GEM_LIBDIR}/test/spec_rack_utils.rb
 ${GEM_LIBDIR}/test/spec_rack_webrick.rb
 ${GEM_LIBDIR}/test/testrequest.rb
+${GEM_LIBDIR}/test/unregistered_handler/rack/handler/unregistered.rb
+${GEM_LIBDIR}/test/unregistered_handler/rack/handler/unregistered_long_one.rb
 ${GEM_HOME}/specifications/rack-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/test/unregistered_handler/rack/handler
+@dirrm ${GEM_LIBDIR}/test/unregistered_handler/rack
+@dirrm ${GEM_LIBDIR}/test/unregistered_handler
+@dirrm ${GEM_LIBDIR}/test/multipart
 @dirrm ${GEM_LIBDIR}/test/cgi
 @dirrm ${GEM_LIBDIR}/test
 @dirrm ${GEM_LIBDIR}/lib/rack/session/abstract
