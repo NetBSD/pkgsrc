@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/26 16:57:51 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:01 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/everypage/everypage.sty
 share/doc/tex-everypage/README
 share/doc/tex-everypage/everypage.pdf
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/everypage
-@dirrm share/doc/tex-everypage
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
 

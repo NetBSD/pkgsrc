@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/03 02:56:01 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:12:03 joerg Exp $
 bin/fig2dev
 bin/fig2ps2tex
 bin/fig2ps2tex.sh
@@ -75,6 +75,3 @@ ${IMAKE_MAN_DIR}/fig2dev.${IMAKE_MANNEWSUFFIX}
 ${IMAKE_MAN_DIR}/fig2ps2tex.${IMAKE_MANNEWSUFFIX}
 ${IMAKE_MAN_DIR}/pic2tpic.${IMAKE_MANNEWSUFFIX}
 ${IMAKE_MAN_DIR}/transfig.${IMAKE_MANNEWSUFFIX}
-@dirrm lib/fig2dev
-@dirrm lib/X11/xfig/bitmaps
-@dirrm lib/X11/xfig
