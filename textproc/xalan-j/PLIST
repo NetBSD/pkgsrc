@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 21:36:33 joerg Exp $
 lib/java/bsf.jar
 lib/java/xalan.jar
 share/doc/java/xalan/apidocs/allclasses-frame.html
@@ -519,4 +519,3 @@ share/examples/java/xalan/UseStylesheetParam/foo.xml
 share/examples/java/xalan/UseStylesheetParam/foo.xsl
 share/examples/java/xalan/UseStylesheetParam/readme.html
 share/examples/java/xalan/xalansamples.jar
-@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

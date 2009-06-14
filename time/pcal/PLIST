@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:38:08 joerg Exp $
 bin/pcal
 libexec/cgi-bin/pcal.cgi
 man/man1/pcal.1
 share/doc/pcal/ReadMe
 share/httpd/htdocs/pcal.html
 share/httpd/htdocs/pcalw.html
-@unexec ${RMDIR} -p %D/share/httpd/htdocs 2>/dev/null || ${TRUE}

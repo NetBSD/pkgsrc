@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 21:36:32 joerg Exp $
 ${GEM_HOME}/cache/BlueCloth-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -18,4 +18,3 @@ ${GEM_LIBDIR}/tests/data/re-overflow.txt
 ${GEM_LIBDIR}/tests/data/re-overflow2.txt
 ${GEM_LIBDIR}/utils.rb
 ${GEM_HOME}/specifications/BlueCloth-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/${GEM_DOCDIR}

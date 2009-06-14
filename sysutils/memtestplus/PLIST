@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:28:47 joerg Exp $
 mdec/memtestplus
 mdec/memtestplus.bin
 ${PLIST.iso}mdec/memtestplus.iso
 share/doc/memtestplus/FAQ
 share/doc/memtestplus/README
-@unexec ${RMDIR} %D/mdec 2>/dev/null || ${TRUE}
