@@ -1,14 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2006/01/01 22:11:09 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2009/06/14 20:40:57 sno Exp $
 
---- Makefile.PL.orig	2005-11-29 21:42:40.000000000 +0100
-+++ Makefile.PL
-@@ -5,9 +5,6 @@ my @makefileopts;
- if (grep { $_ eq 'PERL_CORE=1' } @ARGV) {
-     push @makefileopts, MAN3PODS => {};
- }
+--- Makefile.PL.orig	2009-06-09 20:34:33.000000000 +0000
++++ Makefile.PL	2009-06-14 20:28:34.000000000 +0000
+@@ -1,13 +1,7 @@
+ require 5.006;
+ use ExtUtils::MakeMaker;
+ 
+-my @makefileopts;
 -if ($] >= 5.008) {
 -    push @makefileopts, INSTALLDIRS => 'perl';
 -}
- 
+-
  WriteMakefile(
      NAME	 => 'MIME::Base64',
+     VERSION_FROM => 'Base64.pm',
+-    @makefileopts,
+ );
