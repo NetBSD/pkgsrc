@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/15 23:23:05 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:49 joerg Exp $
 bin/ketm
 share/ketm/README
 share/ketm/data/12side.bmp
@@ -67,5 +67,3 @@ share/ketm/data/weapon.bmp
 share/ketm/data/wolke01.bmp
 share/ketm/data/wolke02.bmp
 share/ketm/data/wolke03.bmp
-@dirrm share/ketm/data
-@dirrm share/ketm

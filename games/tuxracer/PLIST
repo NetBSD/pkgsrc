@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/25 01:32:58 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:57 joerg Exp $
 bin/tuxracer
 share/doc/html/tuxracer/download.html
 share/doc/html/tuxracer/faq.html
@@ -193,29 +193,3 @@ share/tuxracer/textures/tuxlife.rgb
 share/tuxracer/textures/wind_button.rgb
 share/tuxracer/tux.tcl
 share/tuxracer/tuxracer_init.tcl
-@dirrm share/tuxracer/textures
-@dirrm share/tuxracer/sounds
-@dirrm share/tuxracer/music
-@dirrm share/tuxracer/fonts
-@dirrm share/tuxracer/courses/twisty_slope
-@dirrm share/tuxracer/courses/path_of_daggers
-@dirrm share/tuxracer/courses/frozen_river
-@dirrm share/tuxracer/courses/contrib/twin_paths
-@dirrm share/tuxracer/courses/contrib/sentinel_towers
-@dirrm share/tuxracer/courses/contrib/penguins_cant_fly
-@dirrm share/tuxracer/courses/contrib/nebula
-@dirrm share/tuxracer/courses/contrib/jools_big_mountain
-@dirrm share/tuxracer/courses/contrib/ingos_speedway
-@dirrm share/tuxracer/courses/contrib/ice_canyon
-@dirrm share/tuxracer/courses/contrib/downhill_fear
-@dirrm share/tuxracer/courses/contrib
-@dirrm share/tuxracer/courses/common
-@dirrm share/tuxracer/courses/bunny_hill
-@dirrm share/tuxracer/courses/bumpy_ride
-@dirrm share/tuxracer/courses
-@dirrm share/tuxracer
-@dirrm share/examples/tuxracer/script-fu
-@dirrm share/examples/tuxracer
-@dirrm share/doc/html/tuxracer/images/manual
-@dirrm share/doc/html/tuxracer/images
-@dirrm share/doc/html/tuxracer

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/30 23:48:32 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:53 joerg Exp $
 bin/powermanga
 man/man6/powermanga.6
 share/powermanga/graphics/BIGSTAR0.SPR
@@ -379,6 +379,3 @@ share/powermanga/sounds/xploc1.wav
 share/powermanga/sounds/xploc2.wav
 share/powermanga/sounds/xploc3.wav
 share/powermanga/sounds/xploc4.wav
-@dirrm share/powermanga/sounds
-@dirrm share/powermanga/graphics
-@dirrm share/powermanga

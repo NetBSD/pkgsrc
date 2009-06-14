@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/01/23 16:46:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:57:00 joerg Exp $
 bin/xp-mapedit
 bin/xp-replay
 bin/xpilot
@@ -86,6 +86,3 @@ share/xpilot/textures/wall_ull.ppm
 share/xpilot/textures/wall_ur.ppm
 share/xpilot/textures/wall_url.ppm
 share/xpilot/textures/wormhole.ppm
-@dirrm share/xpilot/maps
-@dirrm share/xpilot/textures
-@dirrm share/xpilot

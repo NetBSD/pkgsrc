@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:58:06 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:01 joerg Exp $
 bin/tux_serv
 bin/xtux
 share/xtux/AUTHORS
@@ -516,12 +516,3 @@ share/xtux/doc/images
 share/xtux/doc/mapformat
 share/xtux/doc/weapons
 share/xtux/example-config
-@dirrm share/xtux/doc
-@dirrm share/xtux/data/maps
-@dirrm share/xtux/data/images/weapons
-@dirrm share/xtux/data/images/tiles
-@dirrm share/xtux/data/images/items
-@dirrm share/xtux/data/images/entities
-@dirrm share/xtux/data/images
-@dirrm share/xtux/data
-@dirrm share/xtux

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/11 10:33:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:56 joerg Exp $
 bin/stegavorto
 share/stegavorto/data/FreeMonoBold.ttf
 share/stegavorto/data/alpha_corner.png
@@ -29,5 +29,3 @@ share/stegavorto/data/yay_kitten_04.jpg
 share/stegavorto/data/yay_kitten_05.jpg
 share/stegavorto/data/yay_kitten_06.jpg
 share/stegavorto/stegavorto.py
-@dirrm share/stegavorto/data
-@dirrm share/stegavorto

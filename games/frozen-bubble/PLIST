@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/16 22:04:32 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:45 joerg Exp $
 bin/frozen-bubble
 bin/frozen-bubble-editor
 man/man6/frozen-bubble-editor.6
@@ -275,11 +275,3 @@ share/frozen-bubble/snd/rebound.wav
 share/frozen-bubble/snd/snore.wav
 share/frozen-bubble/snd/stick.wav
 share/frozen-bubble/snd/typewriter.wav
-@dirrm share/frozen-bubble/snd
-@dirrm share/frozen-bubble/gfx/shoot
-@dirrm share/frozen-bubble/gfx/pinguins
-@dirrm share/frozen-bubble/gfx/menu
-@dirrm share/frozen-bubble/gfx/balls
-@dirrm share/frozen-bubble/gfx
-@dirrm share/frozen-bubble/data
-@dirrm share/frozen-bubble

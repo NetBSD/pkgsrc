@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/14 17:36:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:41 joerg Exp $
 bin/dchest
 share/doc/chest/COPYRIGHT
 share/doc/chest/PGN_Standard.txt
@@ -6,5 +6,3 @@ share/doc/chest/README_LONG
 share/examples/chest/HMm2.epd
 share/examples/chest/HMm3.epd
 share/examples/chest/HMm4.epd
-@dirrm share/examples/chest
-@dirrm share/doc/chest

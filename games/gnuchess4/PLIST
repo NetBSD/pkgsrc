@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:53:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:47 joerg Exp $
 bin/gnuchess4
 bin/gnuchessr4
 bin/gnuchessn4
@@ -23,5 +23,3 @@ man/man6/game.6
 man/man6/gnuan.6
 man/man6/gnuchess4.6
 man/man6/postprint.6
-@dirrm share/gnuchess4
-@dirrm share/doc/gnuchess4

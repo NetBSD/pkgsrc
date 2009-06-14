@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/04/02 12:18:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:50 joerg Exp $
 bin/kclever-ai
 bin/kmoron-ai
 bin/koth
@@ -9,5 +9,3 @@ man/man6/koth.6
 man/man6/koths.6
 share/doc/koth/README
 share/examples/koth/koth.cfg
-@dirrm share/examples/koth
-@dirrm share/doc/koth

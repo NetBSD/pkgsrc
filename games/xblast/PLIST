@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/07 03:16:48 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:58 joerg Exp $
 bin/xblast
 bin/xbsndsrv
 man/man6/xblast.6
@@ -2851,12 +2851,3 @@ share/xblast/sounds/xbstep6.raw
 share/xblast/sounds/xbtele.raw
 share/xblast/sounds/xbtele1.raw
 share/xblast/sounds/xbtele2.raw
-@dirrm share/xblast/sounds
-@dirrm share/xblast/level
-@dirrm share/xblast/image/sprite
-@dirrm share/xblast/image/score
-@dirrm share/xblast/image/misc
-@dirrm share/xblast/image/explosion
-@dirrm share/xblast/image/block
-@dirrm share/xblast/image
-@dirrm share/xblast

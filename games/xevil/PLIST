@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/25 16:02:26 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:59 joerg Exp $
 bin/xevil
 share/doc/xevil/UNIXSetControls.gif
 share/doc/xevil/UNIXShowControls.gif
@@ -6,4 +6,3 @@ share/doc/xevil/UNIXmenu.gif
 share/doc/xevil/instructions.html
 share/doc/xevil/keysdlg.gif
 share/doc/xevil/optionsdlg.gif
-@dirrm share/doc/xevil

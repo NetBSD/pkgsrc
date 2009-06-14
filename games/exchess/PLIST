@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:52:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:43 joerg Exp $
 bin/exchess
 lib/exchess/search.par
 share/doc/exchess/readme.txt
-@dirrm share/doc/exchess
-@dirrm lib/exchess

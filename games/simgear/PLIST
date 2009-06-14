@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/14 14:49:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:56 joerg Exp $
 include/simgear/bucket/newbucket.hxx
 include/simgear/compiler.h
 include/simgear/constants.h
@@ -147,27 +147,3 @@ lib/libsgtgdb.a
 lib/libsgthreads.a
 lib/libsgtiming.a
 lib/libsgxml.a
-@dirrm include/simgear/xml
-@dirrm include/simgear/timing
-@dirrm include/simgear/threads
-@dirrm include/simgear/structure
-@dirrm include/simgear/sound
-@dirrm include/simgear/serial
-@dirrm include/simgear/screen
-@dirrm include/simgear/scene/tgdb
-@dirrm include/simgear/scene/sky
-@dirrm include/simgear/scene/model
-@dirrm include/simgear/scene/material
-@dirrm include/simgear/scene
-@dirrm include/simgear/route
-@dirrm include/simgear/props
-@dirrm include/simgear/nasal
-@dirrm include/simgear/misc
-@dirrm include/simgear/math
-@dirrm include/simgear/magvar
-@dirrm include/simgear/io
-@dirrm include/simgear/ephemeris
-@dirrm include/simgear/environment
-@dirrm include/simgear/debug
-@dirrm include/simgear/bucket
-@dirrm include/simgear

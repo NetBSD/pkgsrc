@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/02 21:48:17 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:52 joerg Exp $
 bin/openmortal
 share/openmortal/characters/Agent.dat
 share/openmortal/characters/Agent.dat.txt
@@ -210,9 +210,3 @@ share/openmortal/sound/thump3.voc
 share/openmortal/sound/top.wav
 share/openmortal/sound/ups.wav
 share/openmortal/sound/woman_screams.voc
-@dirrm share/openmortal/sound
-@dirrm share/openmortal/script
-@dirrm share/openmortal/gfx
-@dirrm share/openmortal/fonts
-@dirrm share/openmortal/characters
-@dirrm share/openmortal

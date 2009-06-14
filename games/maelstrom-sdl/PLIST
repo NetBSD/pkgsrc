@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/11 13:21:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:51 joerg Exp $
 bin/Maelstrom
 bin/Maelstrom-netd
 bin/macres
@@ -52,7 +52,3 @@ share/doc/Maelstrom/README
 share/doc/Maelstrom/README.joystick
 share/doc/Maelstrom/README.network
 share/doc/Maelstrom/README.options
-@dirrm share/doc/Maelstrom/Docs
-@dirrm share/doc/Maelstrom
-@dirrm share/Maelstrom/Images
-@dirrm share/Maelstrom

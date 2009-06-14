@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/08 22:32:33 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:52 joerg Exp $
 bin/nighthawk
 bin/nighthawk_sound
 share/doc/nighthawk/README
@@ -226,20 +226,3 @@ share/nighthawk/data/xpm/standard/power_bay.xpm
 share/nighthawk/data/xpm/standard/ship_complete.xpm
 share/nighthawk/data/xpm/standard/trans_terminated.xpm
 share/nighthawk/data/xpm/xpm.i
-@dirrm share/nighthawk/data/xpm/standard
-@dirrm share/nighthawk/data/xpm
-@dirrm share/nighthawk/data/music
-@dirrm share/nighthawk/data/fx
-@dirrm share/nighthawk/data/Zaxon
-@dirrm share/nighthawk/data/Tobruk
-@dirrm share/nighthawk/data/Seafarer
-@dirrm share/nighthawk/data/Ophukus
-@dirrm share/nighthawk/data/Mearkat
-@dirrm share/nighthawk/data/Haldeck
-@dirrm share/nighthawk/data/Friendship
-@dirrm share/nighthawk/data/Esperence
-@dirrm share/nighthawk/data/Discovery
-@dirrm share/nighthawk/data/Anoyle
-@dirrm share/nighthawk/data
-@dirrm share/nighthawk
-@dirrm share/doc/nighthawk

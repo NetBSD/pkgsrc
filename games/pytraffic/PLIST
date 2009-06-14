@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/31 16:26:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:53 joerg Exp $
 bin/pytraffic
 lib/pytraffic/_hint.so
 lib/pytraffic/_sdl_mixer.so
@@ -437,35 +437,3 @@ share/pytraffic/themes/DeLuxe3DLowRes/sound/engine.ogg
 share/pytraffic/themes/DeLuxe3DLowRes/sound/horn.ogg
 share/pytraffic/themes/DeLuxe3DLowRes/transform
 share/pytraffic/ttraffic.levels
-@dirrm share/pytraffic/themes/DeLuxe3DLowRes/sound
-@dirrm share/pytraffic/themes/DeLuxe3DLowRes/cars
-@dirrm share/pytraffic/themes/DeLuxe3DLowRes/background
-@dirrm share/pytraffic/themes/DeLuxe3DLowRes
-@dirrm share/pytraffic/themes
-@dirrm share/pytraffic/sound_test
-@dirrm share/pytraffic/music
-@dirrm share/pytraffic/libglade
-@dirrm share/pytraffic/extra_themes/Minimal2D/cars
-@dirrm share/pytraffic/extra_themes/Minimal2D/background
-@dirrm share/pytraffic/extra_themes/Minimal2D
-@dirrm share/pytraffic/extra_themes/FancyRotated/sound
-@dirrm share/pytraffic/extra_themes/FancyRotated/cars
-@dirrm share/pytraffic/extra_themes/FancyRotated/background
-@dirrm share/pytraffic/extra_themes/FancyRotated
-@dirrm share/pytraffic/extra_themes/Fancy2D/sound
-@dirrm share/pytraffic/extra_themes/Fancy2D/cars
-@dirrm share/pytraffic/extra_themes/Fancy2D/background
-@dirrm share/pytraffic/extra_themes/Fancy2D
-@dirrm share/pytraffic/extra_themes/DeLuxe3D/sound
-@dirrm share/pytraffic/extra_themes/DeLuxe3D/cars
-@dirrm share/pytraffic/extra_themes/DeLuxe3D/background
-@dirrm share/pytraffic/extra_themes/DeLuxe3D
-@dirrm share/pytraffic/extra_themes/Blocks/cars
-@dirrm share/pytraffic/extra_themes/Blocks/background
-@dirrm share/pytraffic/extra_themes/Blocks
-@dirrm share/pytraffic/extra_themes
-@dirrm share/pytraffic/doc
-@dirrm share/pytraffic
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/pytraffic

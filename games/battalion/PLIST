@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:50:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:40 joerg Exp $
 bin/battalion
 man/man6/battalion.6
 share/battalion/HELP/bathelp01.gif
@@ -38,10 +38,3 @@ share/battalion/battalion.data/TEXTURES/screenleft.tex
 share/battalion/battalion.data/TEXTURES/screenright.tex
 share/battalion/battalion.data/TEXTURES/treewood.tex
 share/battalion/battalion.data/battalion.sho
-@dirrm share/battalion/battalion.data/TEXTURES
-@dirrm share/battalion/battalion.data/DATA
-@dirrm share/battalion/battalion.data/MUSIC
-@dirrm share/battalion/battalion.data/SOUNDS
-@dirrm share/battalion/HELP
-@dirrm share/battalion/battalion.data
-@dirrm share/battalion

@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/22 13:22:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:55 joerg Exp $
 bin/bass
 share/games/bass/sky.dnr
 share/games/bass/sky.dsk
-@dirrm share/games/bass

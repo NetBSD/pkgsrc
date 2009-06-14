@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/02/29 20:53:02 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:52 joerg Exp $
 bin/netmaj
 bin/netmaj1
 bin/plview
@@ -115,5 +115,3 @@ share/doc/netmaj/tepai.gif
 share/doc/netmaj/title.gif
 share/doc/netmaj/ton.gif
 share/doc/netmaj/tonh.gif
-@dirrm share/doc/netmaj
-@dirrm lib/netmaj

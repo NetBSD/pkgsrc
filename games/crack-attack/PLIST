@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/19 06:49:33 snj Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:42 joerg Exp $
 bin/crack-attack
 man/man6/crack-attack.6
 share/crack-attack/clock_0.tga
@@ -171,5 +171,3 @@ share/doc/html/crack-attack/tn_screen_shot_7.jpg
 share/doc/html/crack-attack/tn_screen_shot_8.jpg
 share/doc/html/crack-attack/tn_wallpaper_a.jpg
 share/doc/html/crack-attack/tn_wallpaper_b.jpg
-@dirrm share/doc/html/crack-attack
-@dirrm share/crack-attack

@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/16 21:26:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:39 joerg Exp $
 bin/adom
 share/doc/adom/adomfaq.txt
 share/doc/adom/manual.doc
 share/doc/adom/readme.1st
-@dirrm share/doc/adom

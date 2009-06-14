@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/08 22:33:19 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:58 joerg Exp $
 bin/Wormz
 bin/Wormz-client16
 bin/Wormz-client24
@@ -29,4 +29,3 @@ share/Wormz/plasma2-cubism.tga
 share/Wormz/plasma2-mosaic.tga
 share/Wormz/plasma2.tga
 share/Wormz/plasma3-mosaic.tga
-@dirrm share/Wormz

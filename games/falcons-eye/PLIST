@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/18 16:22:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:43 joerg Exp $
 bin/falcons-eye
 bin/fe-config
 bin/recover-falcons-eye
@@ -260,8 +260,3 @@ share/falcons-eye-dir/wizard1.lev
 share/falcons-eye-dir/wizard2.lev
 share/falcons-eye-dir/wizard3.lev
 share/falcons-eye-dir/wizhelp
-@dirrm share/doc/falcons-eye
-@dirrm share/examples/falcons-eye
-@dirrm share/falcons-eye-dir/graphics
-@dirrm share/falcons-eye-dir/manual
-@dirrm share/falcons-eye-dir/sound

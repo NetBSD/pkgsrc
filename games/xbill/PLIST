@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/08 22:33:38 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:58 joerg Exp $
 bin/xbill
 man/man6/xbill.6
 share/examples/xbill.scores
@@ -63,6 +63,3 @@ share/xbill/pixmaps/sun.xpm
 share/xbill/pixmaps/suncpu.xpm
 share/xbill/pixmaps/toaster.xpm
 share/xbill/pixmaps/wingdows.xpm
-@dirrm share/xbill/pixmaps
-@dirrm share/xbill/bitmaps
-@dirrm share/xbill

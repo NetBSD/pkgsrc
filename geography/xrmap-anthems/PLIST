@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 12:20:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:17 joerg Exp $
 share/rmap/anthems/ad.ant
 share/rmap/anthems/ae.ant
 share/rmap/anthems/af.ant
@@ -193,4 +193,3 @@ share/rmap/anthems/yu.ant
 share/rmap/anthems/za.ant
 share/rmap/anthems/zm.ant
 share/rmap/anthems/zw.ant
-@dirrm share/rmap/anthems

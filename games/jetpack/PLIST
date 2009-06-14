@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:53:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:48 joerg Exp $
 bin/jetpack
 man/man6/jetpack.6
 share/jetpack/jetpack.lev000
-@dirrm share/jetpack

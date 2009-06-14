@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/07 13:14:15 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:44 joerg Exp $
 share/games/fortune/de/anekdoten
 share/games/fortune/de/anekdoten.dat
 share/games/fortune/de/asciiart
@@ -513,8 +513,3 @@ share/games/fortune/de/zitate/y
 share/games/fortune/de/zitate/y.dat
 share/games/fortune/de/zitate/z
 share/games/fortune/de/zitate/z.dat
-@dirrm share/games/fortune/de/zitate
-@dirrm share/games/fortune/de/witze
-@dirrm share/games/fortune/de/computer
-@dirrm share/games/fortune/de
-@dirrm share/games/fortune

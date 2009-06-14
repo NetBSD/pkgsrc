@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 12:29:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:18 joerg Exp $
 share/rmap/pdfmaps/af.pdf
 share/rmap/pdfmaps/africa.pdf
 share/rmap/pdfmaps/al.pdf
@@ -92,4 +92,3 @@ share/rmap/pdfmaps/ye.pdf
 share/rmap/pdfmaps/yu.pdf
 share/rmap/pdfmaps/za.pdf
 share/rmap/pdfmaps/zm.pdf
-@dirrm share/rmap/pdfmaps

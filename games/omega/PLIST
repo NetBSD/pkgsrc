@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:54:51 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:52 joerg Exp $
 bin/Omega
 man/man6/omega.6
 share/omega/omega.hi
@@ -57,5 +57,3 @@ share/omega/village3.dat
 share/omega/village4.dat
 share/omega/village5.dat
 share/omega/village6.dat
-@dirrm share/doc/omega
-@dirrm share/omega

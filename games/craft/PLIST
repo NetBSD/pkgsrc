@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/13 01:41:51 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:42 joerg Exp $
 bin/craft
 share/craft/.windefaults.params
 share/craft/buttons/default.mk
@@ -2234,9 +2234,3 @@ share/doc/craft/pic/winner.gif
 share/doc/craft/pic/wood.gif
 share/doc/craft/pic/worker.gif
 share/doc/craft/pic/wtog.gif
-@dirrm share/doc/craft/pic
-@dirrm share/doc/craft
-@dirrm share/craft/hcraft/edit
-@dirrm share/craft/hcraft
-@dirrm share/craft/buttons
-@dirrm share/craft

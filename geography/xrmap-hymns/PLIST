@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 12:28:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:17 joerg Exp $
 share/rmap/hymns/ad.mid
 share/rmap/hymns/ae.mid
 share/rmap/hymns/af.mid
@@ -185,4 +185,3 @@ share/rmap/hymns/yu.mid
 share/rmap/hymns/za.mid
 share/rmap/hymns/zm.mid
 share/rmap/hymns/zw.mid
-@dirrm share/rmap/hymns

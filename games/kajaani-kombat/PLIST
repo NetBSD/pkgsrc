@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/07 19:35:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:49 joerg Exp $
 bin/kajaani-kombat
 man/man6/kajaani-kombat.6
 share/kajaani-kombat/0ammo.png
@@ -164,4 +164,3 @@ share/kajaani-kombat/sound_block_rotate.ogg
 share/kajaani-kombat/sound_gui_navigation.ogg
 share/kajaani-kombat/sound_gui_select.ogg
 share/kajaani-kombat/three_sec_warning.ogg
-@dirrm share/kajaani-kombat

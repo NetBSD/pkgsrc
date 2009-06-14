@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/04 11:18:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:50 joerg Exp $
 bin/liquidwar
 bin/liquidwar-mapgen
 bin/liquidwar-server
@@ -20,8 +20,3 @@ share/games/liquidwar/texture/meditate.bmp
 share/games/liquidwar/texture/rust.bmp
 share/games/liquidwar/texture/warning.bmp
 share/pixmaps/liquidwar.xpm
-@dirrm share/games/liquidwar/texture
-@dirrm share/games/liquidwar/music
-@dirrm share/games/liquidwar/map
-@dirrm share/games/liquidwar
-@dirrm share/doc/liquidwar

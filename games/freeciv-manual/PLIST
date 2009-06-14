@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:52:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:45 joerg Exp $
 share/doc/html/freeciv/client-1.html
 share/doc/html/freeciv/client-2.html
 share/doc/html/freeciv/client-3.html
@@ -153,5 +153,3 @@ share/doc/html/freeciv/img/game-4-5.jpg
 share/doc/html/freeciv/manual.html
 share/doc/html/freeciv/other.html
 share/doc/html/freeciv/server.html
-@dirrm share/doc/html/freeciv/img
-@dirrm share/doc/html/freeciv

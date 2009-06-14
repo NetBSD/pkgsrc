@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/23 16:59:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:46 joerg Exp $
 bin/gnome-mastermind
 share/applications/gnome-mastermind.desktop
 share/gnome-mastermind/AUTHORS
@@ -73,26 +73,3 @@ share/omf/gnome-mastermind/gnome-mastermind-fr.omf
 share/omf/gnome-mastermind/gnome-mastermind-id.omf
 share/omf/gnome-mastermind/gnome-mastermind-it.omf
 share/pixmaps/gnome-mastermind.svg
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/gnome-mastermind
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/gnome-mastermind/it/figures
-@dirrm share/gnome/help/gnome-mastermind/it
-@dirrm share/gnome/help/gnome-mastermind/id/figures
-@dirrm share/gnome/help/gnome-mastermind/id
-@dirrm share/gnome/help/gnome-mastermind/fr/figures
-@dirrm share/gnome/help/gnome-mastermind/fr
-@dirrm share/gnome/help/gnome-mastermind/C/figures
-@dirrm share/gnome/help/gnome-mastermind/C
-@dirrm share/gnome/help/gnome-mastermind
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome-mastermind/ui
-@dirrm share/gnome-mastermind/themes
-@dirrm share/gnome-mastermind
-@comment in xdg-dirs: @dirrm share/applications

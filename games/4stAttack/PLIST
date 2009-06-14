@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/04 07:10:12 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:38 joerg Exp $
 bin/4stattack
 share/4stAttack/4stattack.py
 share/4stAttack/4stattack.pyc
@@ -247,20 +247,3 @@ share/4stAttack/themeresizer.pyc
 share/4stAttack/themeresizer.pyo
 share/4stAttack/themeresizer.sh
 share/4stAttack/version
-@dirrm share/4stAttack/players
-@dirrm share/4stAttack/kde/menu-items
-@dirrm share/4stAttack/kde/icons/64x64
-@dirrm share/4stAttack/kde/icons/48x48
-@dirrm share/4stAttack/kde/icons/32x32
-@dirrm share/4stAttack/kde/icons/22x22
-@dirrm share/4stAttack/kde/icons/16x16
-@dirrm share/4stAttack/kde/icons
-@dirrm share/4stAttack/kde
-@dirrm share/4stAttack/gui/dialogs
-@dirrm share/4stAttack/gui
-@dirrm share/4stAttack/data/themes/clean/1024x768
-@dirrm share/4stAttack/data/themes/clean
-@dirrm share/4stAttack/data/themes
-@dirrm share/4stAttack/data/music
-@dirrm share/4stAttack/data
-@dirrm share/4stAttack

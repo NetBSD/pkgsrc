@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/27 23:45:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:57:00 joerg Exp $
 bin/xpuyopuyo
 man/man6/xpuyopuyo.6
 share/gnome/apps/Games/xpuyopuyo.desktop
@@ -118,11 +118,3 @@ share/xpuyopuyo/themes/smileys/img_rock.xpm
 share/xpuyopuyo/themes/smileys/img_rockbig.xpm
 share/xpuyopuyo/themes/smileys/img_rockdemon.xpm
 share/xpuyopuyo/xpuyopuyo.txt
-@dirrm share/xpuyopuyo/themes/smileys
-@dirrm share/xpuyopuyo/themes/default
-@dirrm share/xpuyopuyo/themes/3dRokz
-@dirrm share/xpuyopuyo/themes
-@dirrm share/xpuyopuyo/sounds
-@dirrm share/xpuyopuyo
-@comment in gnome-dirs: @dirrm share/gnome/apps/Games
-@comment in gnome-dirs: @dirrm share/gnome/apps

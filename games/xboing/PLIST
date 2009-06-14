@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/15 09:01:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:59 joerg Exp $
 bin/xboing
 man/man6/xboing.6
 share/xboing/levels/demo.data
@@ -131,6 +131,3 @@ share/xboing/sounds/whoosh.au
 share/xboing/sounds/wzzz.au
 share/xboing/sounds/wzzz2.au
 share/xboing/sounds/youagod.au
-@dirrm share/xboing/sounds
-@dirrm share/xboing/levels
-@dirrm share/xboing

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/06 16:52:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:41 joerg Exp $
 bin/circuslinux
 share/circuslinux/data/images/acts/beachball-0.png
 share/circuslinux/data/images/acts/beachball-1.png
@@ -131,18 +131,3 @@ share/doc/${PKGNAME}/INSTALL.txt
 share/doc/${PKGNAME}/README-SDL.txt
 share/doc/${PKGNAME}/README.txt
 share/doc/${PKGNAME}/TODO.txt
-@dirrm share/doc/${PKGNAME}
-@dirrm share/circuslinux/data/sounds
-@dirrm share/circuslinux/data/music
-@dirrm share/circuslinux/data/images/title
-@dirrm share/circuslinux/data/images/teeter-totter
-@dirrm share/circuslinux/data/images/status
-@dirrm share/circuslinux/data/images/highscore
-@dirrm share/circuslinux/data/images/clowns
-@dirrm share/circuslinux/data/images/bouncers
-@dirrm share/circuslinux/data/images/balloons
-@dirrm share/circuslinux/data/images/backgrounds
-@dirrm share/circuslinux/data/images/acts
-@dirrm share/circuslinux/data/images
-@dirrm share/circuslinux/data
-@dirrm share/circuslinux

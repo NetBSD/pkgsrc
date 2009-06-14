@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/16 18:18:27 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:57 joerg Exp $
 bin/urban
 share/urban/intro.dat
 share/urban/levels.dat
@@ -58,7 +58,3 @@ share/urban/snd/samples/spots.wav
 share/urban/snd/samples/uzi.wav
 share/urban/snd/samples/weapon6.wav
 share/urban/urban.dat
-@dirrm share/urban/snd/samples
-@dirrm share/urban/snd/modules
-@dirrm share/urban/snd
-@dirrm share/urban

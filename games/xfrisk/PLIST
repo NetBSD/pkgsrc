@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/27 21:38:46 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:59 joerg Exp $
 bin/aiColson
 bin/aiConway
 bin/aiDummy
@@ -8,4 +8,3 @@ bin/xfrisk
 lib/xfrisk/Countries.risk
 lib/xfrisk/Help.risk
 lib/xfrisk/World.risk
-@dirrm lib/xfrisk

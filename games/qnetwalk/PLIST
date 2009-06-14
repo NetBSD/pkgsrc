@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/20 11:38:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:53 joerg Exp $
 bin/qnetwalk
 man/man6/qnetwalk.6
 share/games/qnetwalk/click.wav
@@ -15,7 +15,6 @@ share/games/qnetwalk/turn.wav
 share/games/qnetwalk/win.wav
 share/kde/share/applnk/Games/qnetwalk.desktop
 share/kde/share/icons/hicolor/16x16/apps/qnetwalk.png
-@dirrm share/games/qnetwalk
 @unexec ${RMDIR} %D/share/kde/share/icons/hicolor/16x16/apps 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/kde/share/icons/hicolor/16x16 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/kde/share/icons/hicolor 2>/dev/null || ${TRUE}

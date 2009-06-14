@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/08/16 15:35:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:56:40 joerg Exp $
 bin/bomberclone
 share/bomberclone/gfx/font0.png
 share/bomberclone/gfx/font1.png
@@ -160,25 +160,3 @@ share/doc/bomberclone/NEWS
 share/doc/bomberclone/README
 share/doc/bomberclone/TODO
 share/doc/bomberclone/bomberclone.nsi
-@dirrm share/doc/bomberclone
-@dirrm share/bomberclone/tileset/zbb_frog
-@dirrm share/bomberclone/tileset/uccia_garbage
-@dirrm share/bomberclone/tileset/tricked
-@dirrm share/bomberclone/tileset/supermario
-@dirrm share/bomberclone/tileset/sheep
-@dirrm share/bomberclone/tileset/radioactive
-@dirrm share/bomberclone/tileset/modern
-@dirrm share/bomberclone/tileset/jungle
-@dirrm share/bomberclone/tileset/hell
-@dirrm share/bomberclone/tileset/farm
-@dirrm share/bomberclone/tileset/default
-@dirrm share/bomberclone/tileset/cucumber
-@dirrm share/bomberclone/tileset/classic
-@dirrm share/bomberclone/tileset/cemetery
-@dirrm share/bomberclone/tileset
-@dirrm share/bomberclone/player
-@dirrm share/bomberclone/pixmaps
-@dirrm share/bomberclone/music
-@dirrm share/bomberclone/maps
-@dirrm share/bomberclone/gfx
-@dirrm share/bomberclone

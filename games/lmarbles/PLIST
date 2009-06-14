@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/14 09:22:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:50 joerg Exp $
 bin/lmarbles
 man/man6/lmarbles.6
 share/doc/lmarbles/arrow.jpg
@@ -73,12 +73,3 @@ share/lmarbles/sounds/score.wav
 share/lmarbles/sounds/select.wav
 share/lmarbles/sounds/stop.wav
 share/lmarbles/sounds/teleport.wav
-@dirrm share/lmarbles/sounds
-@dirrm share/lmarbles/levels
-@dirrm share/lmarbles/gfx/wood
-@dirrm share/lmarbles/gfx/stone
-@dirrm share/lmarbles/gfx/metal
-@dirrm share/lmarbles/gfx
-@dirrm share/lmarbles
-@dirrm share/examples/lmarbles
-@dirrm share/doc/lmarbles

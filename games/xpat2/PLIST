@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/03 13:28:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:57:00 joerg Exp $
 bin/xpat2
 lib/X11/app-defaults/XPat
 lib/xpat/PySol-large/COPYRIGHT
@@ -146,14 +146,3 @@ lib/xpat/russian/messages
 lib/xpat/russian/sq01.bdf
 lib/xpat/small.cards
 man/man6/xpat2.6
-@dirrm lib/xpat/russian
-@dirrm lib/xpat/italian
-@dirrm lib/xpat/german
-@dirrm lib/xpat/french
-@dirrm lib/xpat/fallback
-@dirrm lib/xpat/default
-@dirrm lib/xpat/audio
-@dirrm lib/xpat/PySol-small
-@dirrm lib/xpat/PySol-medium
-@dirrm lib/xpat/PySol-large
-@dirrm lib/xpat
