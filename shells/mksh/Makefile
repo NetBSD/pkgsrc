@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2009/06/03 13:46:03 ahoka Exp $
+# $NetBSD: Makefile,v 1.12 2009/06/14 11:51:41 ahoka Exp $
 
-DISTNAME=			mksh-R38b
+DISTNAME=			mksh-R38c
 PKGNAME=			${DISTNAME:S/-R/-/}
 CATEGORIES=			shells
 MASTER_SITES=			http://www.mirbsd.org/MirOS/dist/mir/mksh/ \
 				http://pub.allbsd.org/MirOS/dist/mir/mksh/
 EXTRACT_SUFX=			.cpio.gz
 
-MAINTAINER=			pkgsrc-users@NetBSD.org
+MAINTAINER=			ahoka@NetBSD.org
 HOMEPAGE=			http://mirbsd.de/mksh
 COMMENT=			MirBSD Korn Shell
 LICENSE=			miros
