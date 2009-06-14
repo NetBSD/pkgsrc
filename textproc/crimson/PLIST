@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 21:36:30 joerg Exp $
 lib/java/crimson.jar
 share/doc/java/crimson/api/allclasses-frame.html
 share/doc/java/crimson/api/deprecated-list.html
@@ -156,4 +156,3 @@ share/examples/java/crimson/samples/spec.dtd
 share/examples/java/crimson/samples/two_gent.xml
 share/examples/java/crimson/samples/weekly-euc-jp.dtd
 share/examples/java/crimson/samples/weekly-euc-jp.xml
-@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}
