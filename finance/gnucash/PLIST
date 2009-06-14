@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2009/06/14 17:53:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.37 2009/06/14 18:58:20 joerg Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -851,4 +851,4 @@ share/xml/gnucash/xsl/gnucash-gnccustomer-vcard2.xsl
 share/xml/gnucash/xsl/gnucash-std.xsl
 share/xml/gnucash/xsl/string.xsl
 share/xml/gnucash/xsl/vcard-gnccustomer.pl
-@exec ${MKDIR} %D/share/gnucash/guile-modules/srfi
+@pkgdir share/gnucash/guile-modules/srfi
