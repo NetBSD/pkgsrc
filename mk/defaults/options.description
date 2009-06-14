@@ -424,8 +424,8 @@ ssl			Enable SSL support.
 starttls		Enable TLS support.
 streamtuner-local	Enable local metadata support
 streamtuner-xiph	Enable the Xiph plugin	
-sun-jre-jce		Use unlimited strength cryptography extension.
 suhosin			Enable suhosin security enhancements for PHP.
+sun-jre-jce		Use unlimited strength cryptography extension.
 svg			Enable SVG support.
 svn			Enable subversion support
 syncdir			Force synchronous link() and related syscalls.
@@ -441,6 +441,7 @@ trn-nntpclnt		Use nntpclnt as NNTP client.
 typolight-liveupdate	Allow using TYPOlight Live Update service.
 ucspi-ssl-perl		Enable Perl support in ucspi-ssl.
 ucspi-tcp-nodefaultrbl	Remove the (nonexistent) default RBL from rblsmtpd.
+uds			Enable support for Unix domain sockets.
 uim			Enable UIM support.
 uim-fep			Enable UIM FEP support.
 unixodbc		Enable ODBC support via unixODBC.
@@ -480,9 +481,9 @@ x11			Enable X11 support.
 xapian-flint-backend	Enable "Flint" format Xapian database support.
 xapian-quartz-backend	Enable "Quartz" format Xapian database support.
 xaw			Enable Xaw support.
-xim			Enable X Input Method support.
 xblast-mini		Use a 480x392 window instead a 960x784 window in xblast
 xft2			Enable Xft support.
+xim			Enable X Input Method support.
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
 xml			Enable XML support.
