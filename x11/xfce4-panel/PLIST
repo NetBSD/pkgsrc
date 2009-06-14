@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:25:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 22:06:43 joerg Exp $
 bin/xfce4-panel
 bin/xfce4-popup-windowlist
 include/xfce4/libxfce4panel/xfce-arrow-button.h
@@ -136,7 +136,3 @@ share/xfce4/panel-plugins/showdesktop.desktop
 share/xfce4/panel-plugins/systray.desktop
 share/xfce4/panel-plugins/tasklist.desktop
 share/xfce4/panel-plugins/windowlist.desktop
-@unexec ${RMDIR} %D/libexec/xfce4/panel-plugins 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/libexec/xfce4 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/xdg/xfce4 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/xdg 2>/dev/null || ${TRUE}
