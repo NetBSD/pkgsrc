@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:04:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/06/14 20:45:11 joerg Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -446,4 +446,4 @@ share/examples/dovecot/dovecot-openssl.cnf
 share/examples/dovecot/dovecot-sql-example.conf
 share/examples/dovecot/mkcert.sh
 share/examples/rc.d/dovecot
-@exec ${MKDIR} %D/lib/dovecot/auth
+@pkgdir lib/dovecot/auth

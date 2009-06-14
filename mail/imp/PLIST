@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:04:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 20:45:11 joerg Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
@@ -558,5 +558,3 @@ share/horde/imp/themes/tango-blue/screen.css
 share/horde/imp/themes/tango-blue/themed_graphics
 share/horde/imp/thread.php
 share/horde/imp/view.php
-@unexec ${RMDIR} %D/share/horde/imp/config 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/horde/imp 2>/dev/null || ${TRUE}

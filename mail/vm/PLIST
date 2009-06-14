@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 20:45:12 joerg Exp $
 bin/base64-decode
 bin/base64-encode
 bin/qp-decode
@@ -170,5 +170,3 @@ ${EMACS_LISPPREFIX}/vm/vm-window.el
 ${EMACS_LISPPREFIX}/vm/vm-window.elc
 ${EMACS_LISPPREFIX}/vm/vm.el
 ${EMACS_LISPPREFIX}/vm/vm.elc
-@unexec ${RMDIR} -p %D/${PIXMAPDIR} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/${EMACS_LISPPREFIX} 2>/dev/null || ${TRUE}

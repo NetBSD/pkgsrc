@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:04:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 20:45:11 joerg Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -2217,4 +2217,3 @@ share/doc/mailman/mailman-member.ps
 share/doc/mailman/mailman-member.txt
 share/examples/mailman/mailman.conf
 share/examples/rc.d/mailman
-@unexec ${RMDIR} -p %D/lib/mailman/Mailman 2>/dev/null || ${TRUE}
