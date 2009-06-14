@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:24:51 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 22:06:40 joerg Exp $
 lib/gtk/themes/engines/libstep.la
 share/themes/Step/ICON.png
 share/themes/Step/README.html
 share/themes/Step/gtk/gtkrc
-@unexec ${RMDIR} %D/lib/gtk/themes/engines %D/lib/gtk/themes %D/lib/gtk 2>/dev/null || ${TRUE}

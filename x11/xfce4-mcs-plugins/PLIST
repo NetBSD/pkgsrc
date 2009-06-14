@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:25:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 22:06:43 joerg Exp $
 lib/xfce4/mcs-plugins/display_plugin.la
 lib/xfce4/mcs-plugins/fm_plugin.la
 lib/xfce4/mcs-plugins/keyboard_plugin.la
@@ -91,4 +91,3 @@ share/xfce4/doc/it/images/keyboard_settings.png
 share/xfce4/doc/it/images/mouse_settings.png
 share/xfce4/doc/it/images/user_interface_settings.png
 share/xfce4/doc/it/xfce-mcs-plugins.html
-@unexec ${RMDIR} %D/lib/xfce4 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:25:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:06:42 joerg Exp $
 bin/wx24-config
 bin/wxgtk${GTKVER}-2.4-config
 include/wx/accel.h
@@ -394,10 +394,5 @@ share/wx/2.4/gs_afm/TimesBoO.afm
 share/wx/2.4/gs_afm/TimesO.afm
 share/wx/2.4/gs_afm/TimesRo.afm
 share/wx/2.4/gs_afm/Zapf.afm
-@unexec ${RMDIR} %D/share/wx 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/lib/wx/include/univ
-@unexec ${RMDIR} %D/lib/wx/include/univ 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/wx/include 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/wx 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/include/wx/univ
-@unexec ${RMDIR} %D/include/wx 2>/dev/null || ${TRUE}
+@pkgdir lib/wx/include/univ
+@pkgdir include/wx/univ

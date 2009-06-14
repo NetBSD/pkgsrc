@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2009/06/14 18:24:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.66 2009/06/14 22:06:40 joerg Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-builder-convert
@@ -1218,7 +1218,6 @@ share/locale/zh_TW/LC_MESSAGES/gtk20.mo
 share/themes/Default/gtk-2.0-key/gtkrc
 share/themes/Emacs/gtk-2.0-key/gtkrc
 share/themes/Raleigh/gtk-2.0/gtkrc
-@unexec ${RMDIR} %D/share/themes/Default 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/lib/gtk-2.0/modules
-@exec ${MKDIR} %D/lib/gtk-2.0/immodules
-@exec ${MKDIR} %D/lib/gtk-2.0/2.10.0/filesystems
+@pkgdir lib/gtk-2.0/modules
+@pkgdir lib/gtk-2.0/immodules
+@pkgdir lib/gtk-2.0/2.10.0/filesystems

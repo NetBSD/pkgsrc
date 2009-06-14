@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:24:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 22:06:39 joerg Exp $
 bin/gclose
 bin/gcloseall
 bin/gopen
@@ -415,4 +415,4 @@ lib/GNUstep/Services/GSspell.service/Resources/Info-gnustep.plist
 lib/libgnustep-gui.so.${PKGVERSION}
 lib/libgnustep-gui.so
 share/GNUstep/Makefiles/Additional/gui.make
-@exec ${MKDIR} %D/lib/GNUstep/Applications
+@pkgdir lib/GNUstep/Applications

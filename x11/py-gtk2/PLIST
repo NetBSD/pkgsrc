@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/06/14 18:25:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/06/14 22:06:41 joerg Exp $
 bin/pygtk-codegen-2.0
 bin/pygtk-demo
 include/pygtk-2.0/pygtk/pygtk.h
@@ -626,5 +626,3 @@ share/pygtk/2.0/defs/pango-types.defs
 share/pygtk/2.0/defs/pango.defs
 share/pygtk/2.0/defs/pangocairo.defs
 share/pygtk/2.0/defs/pangocairo.override
-@unexec ${RMDIR} %D/share/pygtk 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/include/pygtk-2.0 2>/dev/null || ${TRUE}

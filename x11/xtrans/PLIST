@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:06:43 joerg Exp $
 include/X11/Xtrans/Xtrans.c
 include/X11/Xtrans/Xtrans.h
 include/X11/Xtrans/Xtransint.h
@@ -9,4 +9,3 @@ include/X11/Xtrans/Xtransutil.c
 include/X11/Xtrans/transport.c
 lib/pkgconfig/xtrans.pc
 share/aclocal/xtrans.m4
-@unexec ${RMDIR} %D/include/X11 2>/dev/null || ${TRUE}

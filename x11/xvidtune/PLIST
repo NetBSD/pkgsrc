@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/25 16:18:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:06:43 joerg Exp $
 bin/xvidtune
 lib/X11/app-defaults/Xvidtune
 man/man1/xvidtune.1
-@unexec ${RMDIR} %D/lib/X11/app-defaults 2>/dev/null || ${TRUE}
