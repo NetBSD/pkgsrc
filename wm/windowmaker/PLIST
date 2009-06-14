@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:19:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 21:40:05 joerg Exp $
 bin/convertfonts
 bin/get-wings-flags
 bin/get-wraster-flags
@@ -344,5 +344,3 @@ share/locale/sv/LC_MESSAGES/WindowMaker.mo
 share/locale/tr/LC_MESSAGES/WindowMaker.mo
 share/locale/zh_CN/LC_MESSAGES/WPrefs.mo
 share/locale/zh_CN/LC_MESSAGES/WindowMaker.mo
-@unexec ${RMDIR} %D/share/GNUstep/Applications 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/GNUstep 2>/dev/null || ${TRUE}

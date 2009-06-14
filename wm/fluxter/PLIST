@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:18:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 21:40:05 joerg Exp $
 bin/fluxter
 share/doc/fluxter/README.fluxter
 share/fluxbox/fluxter.bb
 share/fluxbox/fluxter.nobb
 share/examples/fluxter/fluxter.bb
-@unexec ${RMDIR} %D/share/fluxbox 2>/dev/null || ${TRUE}
