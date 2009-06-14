@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.7 2009/04/23 21:38:02 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.8 2009/06/14 22:44:34 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004-2009 The NetBSD Foundation, Inc.
@@ -351,13 +351,6 @@ PListEntryMakeDir(PListEntry *Node, FILE *Out)
 		(void)fprintf(Out, "@exec mkdir -m %o -p %%D/%s\n",
 		     Node->pe_DirMode, Node->pe_Name);
 	}
-}
-
-static void
-PListEntryRemoveDir(PListEntry *Node, FILE *Out)
-
-{
-	(void)fprintf(Out, "@dirrm %s\n", Node->pe_Name);
 }
 
 static void
@@ -953,8 +946,6 @@ main(int argc, char **argv)
 		ProcessPList(Dirs, PListEntryMakeDir, PLIST_ORDER_FORWARD,
 		    PListFile);
 		ProcessPList(Links, PListEntryLink, PLIST_ORDER_FORWARD,
-		    PListFile);
-		ProcessPList(Dirs, PListEntryRemoveDir, PLIST_ORDER_BACKWARD,
 		    PListFile);
 		(void)fclose(PListFile);
 	}
