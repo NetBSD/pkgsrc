@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.post,v 1.2 2007/05/31 12:48:34 dmcmahill Exp $
-@unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}
