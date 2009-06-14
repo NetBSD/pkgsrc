@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2343 2009/06/14 20:46:54 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2344 2009/06/14 20:56:49 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3140,3 +3140,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-HTTP-Proxy to 0.23 [sno 2009-06-14]
 	Updated converters/p5-MIME-Base64 to 3.08 [sno 2009-06-14]
 	Updated converters/p5-JSON to 2.15 [sno 2009-06-14]
+	Updated converters/p5-JSON-XS to 2.240 [sno 2009-06-14]
