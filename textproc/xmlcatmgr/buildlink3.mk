@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:25:34 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/06/14 22:58:09 joerg Exp $
 #
 # This Makefile fragment is included by packages that use xmlcatmgr.
 #
@@ -34,8 +34,6 @@ SGML_DEFAULT_CATALOG=	${PKG_SYSCONFBASEDIR}/sgml/catalog
 XML_DEFAULT_CATALOG=	${PKG_SYSCONFBASEDIR}/xml/catalog
 .endif
 
-PRINT_PLIST_AWK+=	/^@dirrm share\/(sgml|xml)$$/ \
-				{ print "@comment in xmlcatmgr: " $$0; next }
 .endif # XMLCATMGR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-xmlcatmgr

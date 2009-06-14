@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/02/09 21:09:23 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/06/14 22:58:10 joerg Exp $
 #
 
 DISTNAME=		mod_python-2.7.10
@@ -31,9 +31,6 @@ post-install:
 	cd ${PREFIX} && ${FIND} ${PYSITELIB}/mod_python \
 		share/doc/html/ap-mod_python \
 		-type f -print >>${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} -d ${PYSITELIB}/mod_python \
-		share/doc/html/ap-mod_python \
-		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
 .include "../../lang/python/extension.mk"
 .include "../../www/apache/buildlink3.mk"
