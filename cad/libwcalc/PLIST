@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:35:54 joerg Exp $
 bin/wcalc-config
 include/${WCALC_DIR}/air_coil.h
 include/${WCALC_DIR}/air_coil_loadsave.h
@@ -47,6 +47,3 @@ ${WCALC_HTMLDIR}/microstrip_model.png
 ${WCALC_HTMLDIR}/splash.png
 ${WCALC_HTMLDIR}/stripline.png
 ${WCALC_HTMLDIR}/stripline_model.png
-@dirrm ${WCALC_HTMLDIR}
-@dirrm share/${WCALC_DIR}
-@dirrm include/${WCALC_DIR}

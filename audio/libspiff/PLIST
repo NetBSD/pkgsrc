@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/31 22:36:28 bjs Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:16 joerg Exp $
 bin/spiff_check
 bin/spiff_strip
 include/spiff/ProjectOpus/ProjectOpusPlaylistExtension.h
@@ -26,5 +26,3 @@ include/spiff/SpiffWriter.h
 include/spiff/SpiffXmlFormatter.h
 include/spiff/spiff_c.h
 lib/libspiff.la
-@dirrm include/spiff/ProjectOpus
-@dirrm include/spiff

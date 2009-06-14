@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/29 17:31:44 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:28:17 joerg Exp $
 share/rox/Archive/.DirIcon
 share/rox/Archive/AppInfo.xml
 share/rox/Archive/AppRun
@@ -23,7 +23,3 @@ share/rox/Archive/findrox.py
 share/rox/Archive/formats.py
 share/rox/Archive/support.py
 share/rox/Archive/tests/testall.py
-@dirrm share/rox/Archive/tests
-@dirrm share/rox/Archive/Messages
-@dirrm share/rox/Archive/Help
-@dirrm share/rox/Archive

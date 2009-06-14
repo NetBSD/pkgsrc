@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:11 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:28:17 joerg Exp $
 bin/comprex-config
 include/libcomprex/archive.h
 include/libcomprex/archive_io.h
@@ -186,7 +186,3 @@ man/man3/cxWrite.3
 share/aclocal/libcomprex.m4
 share/locale/it/LC_MESSAGES/libcomprex.mo
 share/locale/nl/LC_MESSAGES/libcomprex.mo
-@dirrm lib/comprex/scheme
-@dirrm lib/comprex/archive
-@dirrm lib/comprex
-@dirrm include/libcomprex

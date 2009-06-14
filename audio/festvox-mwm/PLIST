@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/23 08:21:35 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:07 joerg Exp $
 share/festival/lib/voices/english/mwm_diphone/dic/mwmdemi.ms
 share/festival/lib/voices/english/mwm_diphone/dic/mwmdiph.ms
 share/festival/lib/voices/english/mwm_diphone/dic/mwmgain.dat
@@ -6,8 +6,3 @@ share/festival/lib/voices/english/mwm_diphone/festvox/mwm_diphone.scm
 share/festival/lib/voices/english/mwm_diphone/festvox/mwmdiph.ms
 share/festival/lib/voices/english/mwm_diphone/festvox/mwmgain.dat
 share/festival/lib/voices/english/mwm_diphone/group/mwm_di_resLPC.group
-@dirrm share/festival/lib/voices/english/mwm_diphone/dic
-@dirrm share/festival/lib/voices/english/mwm_diphone/festvox
-@dirrm share/festival/lib/voices/english/mwm_diphone/group
-@dirrm share/festival/lib/voices/english/mwm_diphone/work
-@dirrm share/festival/lib/voices/english/mwm_diphone

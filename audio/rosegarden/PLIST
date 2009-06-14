@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/28 21:24:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:32:21 joerg Exp $
 bin/rosegarden
 lib/X11/app-defaults/Rosegarden
 lib/rosegarden/bin/editor
@@ -14,10 +14,3 @@ lib/rosegarden/rosepetal-filters/harmonizer.tcl
 lib/rosegarden/rosepetal-filters/pattern.tcl
 lib/rosegarden/synth-patches/drums.sb
 lib/rosegarden/synth-patches/std.sb
-@dirrm lib/rosegarden/synth-patches
-@dirrm lib/rosegarden/rosepetal-filters
-@dirrm lib/rosegarden/petal
-@dirrm lib/rosegarden/help
-@dirrm lib/rosegarden/example
-@dirrm lib/rosegarden/bin
-@dirrm lib/rosegarden

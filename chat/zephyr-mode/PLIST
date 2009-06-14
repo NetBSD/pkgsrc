@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/02/20 19:04:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:52 joerg Exp $
 share/emacs/site-lisp/zephyr-mode/gnus-url.el
 share/emacs/site-lisp/zephyr-mode/hot-link.el
 share/emacs/site-lisp/zephyr-mode/hot-url.el
@@ -12,4 +12,3 @@ share/emacs/site-lisp/zephyr-mode/zephyr-remote.el
 share/emacs/site-lisp/zephyr-mode/zephyr-url.el
 share/emacs/site-lisp/zephyr-mode/zephyr.el
 share/emacs/site-lisp/zephyr-mode/zlocate-finger.el
-@dirrm share/emacs/site-lisp/zephyr-mode

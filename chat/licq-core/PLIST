@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/22 22:34:23 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:47 joerg Exp $
 bin/licq
 bin/viewurl-firefox.sh
 bin/viewurl-lynx.sh
@@ -111,12 +111,4 @@ share/licq/utilities/talk.utility
 share/licq/utilities/traceroute.utility
 share/licq/utilities/vnc.utility
 share/licq/utilities/xtraceroute.utility
-@dirrm share/licq/utilities
-@dirrm share/licq/translations
-@dirrm share/licq/sounds/icq
-@dirrm share/licq/sounds/fun
-@dirrm share/licq/sounds
-@dirrm share/licq
 @exec ${MKDIR} %D/lib/licq
-@dirrm lib/licq
-@dirrm include/licq

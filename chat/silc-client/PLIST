@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/01/12 06:46:43 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/06/14 17:37:49 joerg Exp $
 bin/silc
 lib/silc-client/libsilc.la
 lib/silc-client/libsilcclient.la
@@ -110,10 +110,3 @@ share/silc-client/help/window
 share/silc-client/irssi-config
 share/silc-client/themes/default.theme
 share/silc-client/themes/plugin.theme
-@dirrm share/silc-client/themes
-@dirrm share/silc-client/help
-@dirrm share/silc-client
-@dirrm share/examples/silc-client
-@dirrm share/doc/silc-client
-@dirrm lib/silc-client/modules
-@dirrm lib/silc-client

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/11/16 11:22:55 bjs Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:12 joerg Exp $
 bin/jack_alias
 bin/jack_connect
 bin/jack_disconnect
@@ -39,5 +39,3 @@ lib/libjackserver.la
 lib/pkgconfig/jack.pc
 man/man1/jackd.1
 man/man1/jackstart.1
-@dirrm lib/jack
-@dirrm include/jack

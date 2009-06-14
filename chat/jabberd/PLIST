@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:33:58 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:37:46 joerg Exp $
 include/jabberd/jabberd.h
 include/jabberd/lib/lib.h
 include/jabberd/lib/xmlparse.h
@@ -11,7 +11,3 @@ sbin/jabberd
 share/examples/jabberd/jabber.xml
 share/examples/jabberd/platform-settings
 share/examples/rc.d/jabberd
-@dirrm share/examples/jabberd
-@dirrm lib/jabberd
-@dirrm include/jabberd/lib
-@dirrm include/jabberd
