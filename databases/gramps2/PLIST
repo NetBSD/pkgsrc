@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/02/01 21:07:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:43:16 joerg Exp $
 bin/gramps
 man/fr/man1/gramps.1
 man/man1/gramps.1
@@ -1665,43 +1665,3 @@ share/mime-info/gramps.keys
 share/mime-info/gramps.mime
 share/mime/packages/gramps.xml
 share/pixmaps/gramps.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in xdg-dirs: @dirrm share/mime-info
-@comment in gnome-icon-theme: @dirrm share/icons/gnome/scalable/mimetypes
-@comment in gnome-icon-theme: @dirrm share/icons/gnome/48x48/mimetypes
-@dirrm share/gramps/plugins
-@dirrm share/gramps/images
-@dirrm share/gramps/glade
-@dirrm share/gramps/example
-@dirrm share/gramps/docgen
-@dirrm share/gramps/data
-@dirrm share/gramps/Selectors
-@dirrm share/gramps/ReportBase
-@dirrm share/gramps/RelLib
-@dirrm share/gramps/PluginUtils
-@dirrm share/gramps/Mime
-@dirrm share/gramps/Merge
-@dirrm share/gramps/GrampsLogger
-@dirrm share/gramps/GrampsDb
-@dirrm share/gramps/Filters/SideBar
-@dirrm share/gramps/Filters/Rules/Source
-@dirrm share/gramps/Filters/Rules/Repository
-@dirrm share/gramps/Filters/Rules/Place
-@dirrm share/gramps/Filters/Rules/Person
-@dirrm share/gramps/Filters/Rules/MediaObject
-@dirrm share/gramps/Filters/Rules/Family
-@dirrm share/gramps/Filters/Rules/Event
-@dirrm share/gramps/Filters/Rules
-@dirrm share/gramps/Filters
-@dirrm share/gramps/FilterEditor
-@dirrm share/gramps/Editors
-@dirrm share/gramps/DisplayTabs
-@dirrm share/gramps/DisplayModels
-@dirrm share/gramps/DateHandler
-@dirrm share/gramps/DataViews
-@dirrm share/gramps/Config
-@dirrm share/gramps
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry

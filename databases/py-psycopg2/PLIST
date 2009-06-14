@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/08/26 13:16:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:43:22 joerg Exp $
 ${PYSITELIB}/psycopg2/__init__.py
 ${PYSITELIB}/psycopg2/__init__.pyc
 ${PYSITELIB}/psycopg2/__init__.pyo
@@ -21,4 +21,3 @@ ${PYSITELIB}/psycopg2/psycopg1.pyo
 ${PYSITELIB}/psycopg2/tz.py
 ${PYSITELIB}/psycopg2/tz.pyc
 ${PYSITELIB}/psycopg2/tz.pyo
-@dirrm ${PYSITELIB}/psycopg2

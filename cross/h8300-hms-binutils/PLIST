@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/20 18:15:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:39:53 joerg Exp $
 bin/h8300-hms-addr2line
 bin/h8300-hms-ar
 bin/h8300-hms-as
@@ -106,30 +106,3 @@ libexec/cross-h8300-hms/share/locale/tr/LC_MESSAGES/binutils.mo
 libexec/cross-h8300-hms/share/locale/tr/LC_MESSAGES/gas.mo
 libexec/cross-h8300-hms/share/locale/tr/LC_MESSAGES/ld.mo
 libexec/cross-h8300-hms/share/locale/tr/LC_MESSAGES/opcodes.mo
-@dirrm libexec/cross-h8300-hms/share/locale/tr/LC_MESSAGES
-@dirrm libexec/cross-h8300-hms/share/locale/tr
-@dirrm libexec/cross-h8300-hms/share/locale/sv/LC_MESSAGES
-@dirrm libexec/cross-h8300-hms/share/locale/sv
-@dirrm libexec/cross-h8300-hms/share/locale/ja/LC_MESSAGES
-@dirrm libexec/cross-h8300-hms/share/locale/ja
-@dirrm libexec/cross-h8300-hms/share/locale/fr/LC_MESSAGES
-@dirrm libexec/cross-h8300-hms/share/locale/fr
-@dirrm libexec/cross-h8300-hms/share/locale/es/LC_MESSAGES
-@dirrm libexec/cross-h8300-hms/share/locale/es
-@dirrm libexec/cross-h8300-hms/share/locale/de/LC_MESSAGES
-@dirrm libexec/cross-h8300-hms/share/locale/de
-@dirrm libexec/cross-h8300-hms/share/locale/da/LC_MESSAGES
-@dirrm libexec/cross-h8300-hms/share/locale/da
-@dirrm libexec/cross-h8300-hms/share/locale
-@dirrm libexec/cross-h8300-hms/share
-@dirrm libexec/cross-h8300-hms/man/man1
-@dirrm libexec/cross-h8300-hms/man
-@dirrm libexec/cross-h8300-hms/lib
-@dirrm libexec/cross-h8300-hms/include
-@dirrm libexec/cross-h8300-hms/h8300-hms/lib/ldscripts
-@dirrm libexec/cross-h8300-hms/h8300-hms/lib
-@dirrm libexec/cross-h8300-hms/h8300-hms/bin
-@dirrm libexec/cross-h8300-hms/h8300-hms
-@dirrm libexec/cross-h8300-hms/binutils
-@dirrm libexec/cross-h8300-hms/bin
-@dirrm libexec/cross-h8300-hms

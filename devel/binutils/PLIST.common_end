@@ -1,5 +1,1 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2002/12/25 16:53:51 grant Exp $
-@dirrm ${MACHINE_GNU_PLATFORM}/lib/ldscripts
-@dirrm ${MACHINE_GNU_PLATFORM}/lib
-@dirrm ${MACHINE_GNU_PLATFORM}/bin
-@dirrm ${MACHINE_GNU_PLATFORM}
+@comment $NetBSD: PLIST.common_end,v 1.2 2009/06/14 17:48:34 joerg Exp $

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:03:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:39:53 joerg Exp $
 ${TARGET_ARCH}/bin/stubedit
 ${TARGET_ARCH}/bin/stubify
 ${TARGET_ARCH}/include/_ansi
@@ -155,11 +155,3 @@ lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/sys/types.h
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/sys/wait.h
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/time.h
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/unistd.h
-@dirrm ${TARGET_ARCH}/include/debug
-@dirrm ${TARGET_ARCH}/include/inlines
-@dirrm ${TARGET_ARCH}/include/libc
-@dirrm ${TARGET_ARCH}/include/libm
-@dirrm ${TARGET_ARCH}/include/machine
-@dirrm ${TARGET_ARCH}/include/netinet
-@dirrm ${TARGET_ARCH}/include/sys
-@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/sys
