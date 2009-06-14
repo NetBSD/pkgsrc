@@ -1,9 +1,8 @@
-# $NetBSD: print-plist.mk,v 1.17 2009/03/17 22:13:36 rillig Exp $
+# $NetBSD: print-plist.mk,v 1.18 2009/06/14 17:12:03 joerg Exp $
 
 ###
 ### Automatic PLIST generation
 ###  - files & symlinks first
-###  - @dirrm statements last
 ###  - empty directories are handled properly
 ###  - dirs from mtree files are excluded
 ###  - substitute for platform or package specifics substrings
@@ -33,7 +32,6 @@ _PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${PKGNAME_NOREV}/, "$${PKGNAME}");			\
 	gsub(/${PKGVERSION:S/./\./g:C/nb[0-9]*$$//}/, "$${PKGVERSION}");\
 	gsub(/^${PKGLOCALEDIR}\/locale/, "share/locale");		\
-	gsub(/^@dirrm ${PKGLOCALEDIR}\/locale/, "@dirrm share/locale");	\
 	gsub("^${PKGINFODIR}/", "info/");				\
 	gsub("^${PKGMANDIR}/", "man/");
 _PRINT_PLIST_AWK_SUBST+=}
@@ -189,13 +187,10 @@ print-PLIST:
 				${_PRINT_PLIST_COMMON_DIRS}'` ;		\
 	do								\
 		if [ `${LS} -la ${DESTDIR}${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
-			${ECHO} @exec \$${MKDIR} %D/$$i | ${AWK} '	\
+			${ECHO} @pkgdir $$i | ${AWK} '			\
 			${PRINT_PLIST_AWK}				\
 			{ print $$0; }' ;				\
 		fi ;							\
-		${ECHO} @dirrm $$i | ${AWK} '				\
-			${PRINT_PLIST_AWK}				\
-			{ print $$0; }' ;				\
 	done								\
 	| ${AWK} '${_PRINT_PLIST_AWK_SUBST} { print $$0; }'
 .endif # target(print-PLIST)
