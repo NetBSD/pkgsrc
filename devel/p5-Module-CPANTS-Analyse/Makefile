@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/04/25 09:33:40 sno Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/14 23:53:39 sno Exp $
 
-DISTNAME=		Module-CPANTS-Analyse-0.82
+DISTNAME=		Module-CPANTS-Analyse-0.83
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Module/}
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Module/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Module-CPANTS-Analyse/
 COMMENT=		Perl5 module to generate Kwalitee ratings for a distribution
+LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=	p5-Archive-Any>=0.06:../../archivers/p5-Archive-Any
 DEPENDS+=	{perl>=5.10,p5-Archive-Tar>=1.30}:../../archivers/p5-Archive-Tar
@@ -27,6 +28,10 @@ DEPENDS+=	p5-Test-YAML-Meta>=0.11:../../devel/p5-Test-YAML-Meta
 DEPENDS+=	p5-Text-CSV_XS>=0.45:../../textproc/p5-Text-CSV_XS
 DEPENDS+=	p5-YAML-Syck>=0.95:../../textproc/p5-YAML-Syck
 DEPENDS+=	{perl>=5.10,p5-version>=0.73}:../../devel/p5-version
+
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
