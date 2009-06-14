@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/23 11:28:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:39 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -273,19 +273,3 @@ ${PYSITELIB}/boto/tests/test_sqsconnection.pyo
 ${PYSITELIB}/boto/utils.py
 ${PYSITELIB}/boto/utils.pyc
 ${PYSITELIB}/boto/utils.pyo
-@dirrm ${PYSITELIB}/boto/tests
-@dirrm ${PYSITELIB}/boto/sqs
-@dirrm ${PYSITELIB}/boto/services
-@dirrm ${PYSITELIB}/boto/sdb/persist
-@dirrm ${PYSITELIB}/boto/sdb/db/manager
-@dirrm ${PYSITELIB}/boto/sdb/db
-@dirrm ${PYSITELIB}/boto/sdb
-@dirrm ${PYSITELIB}/boto/s3
-@dirrm ${PYSITELIB}/boto/pyami
-@dirrm ${PYSITELIB}/boto/mturk
-@dirrm ${PYSITELIB}/boto/mashups
-@dirrm ${PYSITELIB}/boto/ec2
-@dirrm ${PYSITELIB}/boto/contrib
-@dirrm ${PYSITELIB}/boto/cloudfront
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/boto

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/17 21:38:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:27 joerg Exp $
 bin/molden
 share/molden/doc/figures.ps.Z
 share/molden/doc/manual.ps.Z
@@ -53,7 +53,3 @@ share/molden/utils/ircextract.awk
 share/molden/utils/molden
 share/molden/utils/multi_vrml.csh
 share/molden/utils/multi_vrml_orbitals.csh
-@dirrm share/molden/utils
-@dirrm share/molden/test
-@dirrm share/molden/doc
-@dirrm share/molden

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/08/17 11:09:10 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:09:43 joerg Exp $
 bin/smokeping
 bin/tSmoke
 lib/smokeping/BER.pm
@@ -169,47 +169,3 @@ share/smokeping/resource/qx/widget/Windows/window/minimize.gif
 share/smokeping/resource/qx/widget/Windows/window/restore.gif
 share/smokeping/script/Tr.js
 share/smokeping/tr.html
-@dirrm share/smokeping/script
-@dirrm share/smokeping/resource/qx/widget/Windows/window
-@dirrm share/smokeping/resource/qx/widget/Windows/table
-@dirrm share/smokeping/resource/qx/widget/Windows/splitpane
-@dirrm share/smokeping/resource/qx/widget/Windows/menu
-@dirrm share/smokeping/resource/qx/widget/Windows/cursors
-@dirrm share/smokeping/resource/qx/widget/Windows/arrows
-@dirrm share/smokeping/resource/qx/widget/Windows
-@dirrm share/smokeping/resource/qx/widget
-@dirrm share/smokeping/resource/qx/static/image
-@dirrm share/smokeping/resource/qx/static
-@dirrm share/smokeping/resource/qx/icon/Nuvola/16/actions
-@dirrm share/smokeping/resource/qx/icon/Nuvola/16
-@dirrm share/smokeping/resource/qx/icon/Nuvola
-@dirrm share/smokeping/resource/qx/icon/CrystalClear/16/actions
-@dirrm share/smokeping/resource/qx/icon/CrystalClear/16
-@dirrm share/smokeping/resource/qx/icon/CrystalClear
-@dirrm share/smokeping/resource/qx/icon
-@dirrm share/smokeping/resource/qx
-@dirrm share/smokeping/resource/Tr/image
-@dirrm share/smokeping/resource/Tr
-@dirrm share/smokeping/resource
-@dirrm share/smokeping/cropper/lib
-@dirrm share/smokeping/cropper
-@dirrm share/smokeping
-@dirrm share/examples/smokeping
-@dirrm share/doc/smokeping
-@dirrm lib/smokeping/Smokeping/sorters
-@dirrm lib/smokeping/Smokeping/probes
-@dirrm lib/smokeping/Smokeping/matchers
-@dirrm lib/smokeping/Smokeping
-@dirrm lib/smokeping/Qooxdoo/Services
-@dirrm lib/smokeping/Qooxdoo
-@dirrm lib/smokeping/JSON
-@dirrm lib/smokeping/Digest
-@dirrm lib/smokeping/Config/Grammar
-@dirrm lib/smokeping/Config
-@dirrm lib/smokeping/CGI/Session/Test
-@dirrm lib/smokeping/CGI/Session/Serialize
-@dirrm lib/smokeping/CGI/Session/ID
-@dirrm lib/smokeping/CGI/Session/Driver
-@dirrm lib/smokeping/CGI/Session
-@dirrm lib/smokeping/CGI
-@dirrm lib/smokeping

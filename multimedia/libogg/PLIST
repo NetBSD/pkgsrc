@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/12/07 17:50:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:08:08 joerg Exp $
 include/ogg/config_types.h
 include/ogg/ogg.h
 include/ogg/os_types.h
@@ -78,6 +78,3 @@ share/doc/${PKGNAME}/stream.png
 share/doc/${PKGNAME}/vorbisword2.png
 share/doc/${PKGNAME}/white-ogg.png
 share/doc/${PKGNAME}/white-xifish.png
-@dirrm share/doc/${PKGNAME}/ogg
-@dirrm share/doc/${PKGNAME}
-@dirrm include/ogg

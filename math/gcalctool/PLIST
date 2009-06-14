@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/04/17 17:30:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/06/14 18:05:43 joerg Exp $
 bin/gcalctool
 bin/gnome-calculator
 man/man1/gcalctool.1
@@ -233,46 +233,3 @@ share/omf/gcalctool/gcalctool-sv.omf
 share/omf/gcalctool/gcalctool-zh_CN.omf
 share/omf/gcalctool/gcalctool-zh_HK.omf
 share/omf/gcalctool/gcalctool-zh_TW.omf
-@dirrm share/omf/gcalctool
-@comment in rarian: @dirrm share/omf
-@dirrm share/gnome/help/gcalctool/zh_TW/figures
-@dirrm share/gnome/help/gcalctool/zh_TW
-@dirrm share/gnome/help/gcalctool/zh_HK/figures
-@dirrm share/gnome/help/gcalctool/zh_HK
-@dirrm share/gnome/help/gcalctool/zh_CN/figures
-@dirrm share/gnome/help/gcalctool/zh_CN
-@dirrm share/gnome/help/gcalctool/sv/figures
-@dirrm share/gnome/help/gcalctool/sv
-@dirrm share/gnome/help/gcalctool/ru/figures
-@dirrm share/gnome/help/gcalctool/ru
-@dirrm share/gnome/help/gcalctool/pt_BR/figures
-@dirrm share/gnome/help/gcalctool/pt_BR
-@dirrm share/gnome/help/gcalctool/oc/figures
-@dirrm share/gnome/help/gcalctool/oc
-@dirrm share/gnome/help/gcalctool/ko/figures
-@dirrm share/gnome/help/gcalctool/ko
-@dirrm share/gnome/help/gcalctool/ja/figures
-@dirrm share/gnome/help/gcalctool/ja
-@dirrm share/gnome/help/gcalctool/it/figures
-@dirrm share/gnome/help/gcalctool/it
-@dirrm share/gnome/help/gcalctool/fr/figures
-@dirrm share/gnome/help/gcalctool/fr
-@dirrm share/gnome/help/gcalctool/eu/figures
-@dirrm share/gnome/help/gcalctool/eu
-@dirrm share/gnome/help/gcalctool/es/figures
-@dirrm share/gnome/help/gcalctool/es
-@dirrm share/gnome/help/gcalctool/el/figures
-@dirrm share/gnome/help/gcalctool/el
-@dirrm share/gnome/help/gcalctool/de/figures
-@dirrm share/gnome/help/gcalctool/de
-@dirrm share/gnome/help/gcalctool/ca/figures
-@dirrm share/gnome/help/gcalctool/ca
-@dirrm share/gnome/help/gcalctool/bg/figures
-@dirrm share/gnome/help/gcalctool/bg
-@dirrm share/gnome/help/gcalctool/C/figures
-@dirrm share/gnome/help/gcalctool/C
-@dirrm share/gnome/help/gcalctool
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/gcalctool
-@comment in xdg-dirs: @dirrm share/applications

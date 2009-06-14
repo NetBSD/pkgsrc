@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:26 joerg Exp $
 bin/ed2k_gui
 man/man1/ed2k-gtk-gui.1
 man/man1/ed2k_gui.1
@@ -451,18 +451,3 @@ share/locale/it/LC_MESSAGES/ed2k_gui.mo
 share/locale/nl/LC_MESSAGES/ed2k_gui.mo
 share/locale/pl/LC_MESSAGES/ed2k_gui.mo
 share/locale/sk/LC_MESSAGES/ed2k_gui.mo
-@dirrm share/ed2k_gui/ui
-@dirrm share/ed2k_gui/icons/orbit
-@dirrm share/ed2k_gui/icons/jara
-@dirrm share/ed2k_gui/icons/h2o
-@dirrm share/ed2k_gui/icons/gnome2
-@dirrm share/ed2k_gui/icons/default
-@dirrm share/ed2k_gui/icons/bluecore
-@dirrm share/ed2k_gui/icons
-@dirrm share/ed2k_gui
-@dirrm share/doc/ed2k_gui/pl
-@dirrm share/doc/ed2k_gui/francais
-@dirrm share/doc/ed2k_gui/espanol
-@dirrm share/doc/ed2k_gui/deutsch
-@dirrm share/doc/ed2k_gui
-@comment in xdg-dirs: @dirrm share/applications

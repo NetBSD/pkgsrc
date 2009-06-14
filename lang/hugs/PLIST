@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/21 11:19:28 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:33 joerg Exp $
 bin/cpphs-hugs
 bin/ffihugs
 bin/hsc2hs-hugs
@@ -437,63 +437,3 @@ lib/hugs/programs/hsc2hs/Main.hs
 lib/hugs/programs/hsc2hs/Paths_hsc2hs.hs
 man/man1/hugs.1
 share/hsc2hs-0.67/template-hsc.h
-@dirrm share/hsc2hs-0.67
-@dirrm lib/hugs/programs/hsc2hs
-@dirrm lib/hugs/programs/cpphs/Text/ParserCombinators
-@dirrm lib/hugs/programs/cpphs/Text
-@dirrm lib/hugs/programs/cpphs/Language/Preprocessor/Cpphs
-@dirrm lib/hugs/programs/cpphs/Language/Preprocessor
-@dirrm lib/hugs/programs/cpphs/Language
-@dirrm lib/hugs/programs/cpphs
-@dirrm lib/hugs/programs
-@dirrm lib/hugs/packages/hugsbase/Hugs
-@dirrm lib/hugs/packages/hugsbase
-@dirrm lib/hugs/packages/haskell98
-@dirrm lib/hugs/packages/cpphs/Text/ParserCombinators
-@dirrm lib/hugs/packages/cpphs/Text
-@dirrm lib/hugs/packages/cpphs/Language/Preprocessor/Cpphs
-@dirrm lib/hugs/packages/cpphs/Language/Preprocessor
-@dirrm lib/hugs/packages/cpphs/Language
-@dirrm lib/hugs/packages/cpphs
-@dirrm lib/hugs/packages/base/Text/Show
-@dirrm lib/hugs/packages/base/Text/Read
-@dirrm lib/hugs/packages/base/Text/PrettyPrint
-@dirrm lib/hugs/packages/base/Text/ParserCombinators
-@dirrm lib/hugs/packages/base/Text
-@dirrm lib/hugs/packages/base/System/Process
-@dirrm lib/hugs/packages/base/System/Posix
-@dirrm lib/hugs/packages/base/System/Mem
-@dirrm lib/hugs/packages/base/System/IO
-@dirrm lib/hugs/packages/base/System/Directory
-@dirrm lib/hugs/packages/base/System/Console
-@dirrm lib/hugs/packages/base/System
-@dirrm lib/hugs/packages/base/Foreign/Marshal
-@dirrm lib/hugs/packages/base/Foreign/C
-@dirrm lib/hugs/packages/base/Foreign
-@dirrm lib/hugs/packages/base/Debug
-@dirrm lib/hugs/packages/base/Data/STRef
-@dirrm lib/hugs/packages/base/Data/ByteString/Lazy
-@dirrm lib/hugs/packages/base/Data/ByteString
-@dirrm lib/hugs/packages/base/Data/Array/IO
-@dirrm lib/hugs/packages/base/Data/Array
-@dirrm lib/hugs/packages/base/Data
-@dirrm lib/hugs/packages/base/Control/Monad/ST
-@dirrm lib/hugs/packages/base/Control/Monad
-@dirrm lib/hugs/packages/base/Control/Concurrent
-@dirrm lib/hugs/packages/base/Control
-@dirrm lib/hugs/packages/base
-@dirrm lib/hugs/packages/Cabal/Language/Haskell
-@dirrm lib/hugs/packages/Cabal/Language
-@dirrm lib/hugs/packages/Cabal/Distribution/Simple
-@dirrm lib/hugs/packages/Cabal/Distribution/PreProcess
-@dirrm lib/hugs/packages/Cabal/Distribution/Compat
-@dirrm lib/hugs/packages/Cabal/Distribution
-@dirrm lib/hugs/packages/Cabal
-@dirrm lib/hugs/packages
-@dirrm lib/hugs/oldlib
-@dirrm lib/hugs/include
-@dirrm lib/hugs/docs
-@dirrm lib/hugs/demos/prolog
-@dirrm lib/hugs/demos/Cabal
-@dirrm lib/hugs/demos
-@dirrm lib/hugs

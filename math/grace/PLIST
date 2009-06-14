@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/07/18 17:22:47 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:05:44 joerg Exp $
 bin/xmgrace
 grace/auxiliary/README
 grace/auxiliary/convcal.c
@@ -132,14 +132,3 @@ grace/gracerc.user
 grace/include/grace_np.h
 grace/lib/libgrace_np.a
 grace/templates/Default.agr
-@dirrm grace/templates
-@dirrm grace/lib
-@dirrm grace/include
-@dirrm grace/fonts/type1
-@dirrm grace/fonts/enc
-@dirrm grace/fonts
-@dirrm grace/examples
-@dirrm grace/doc
-@dirrm grace/bin
-@dirrm grace/auxiliary
-@dirrm grace

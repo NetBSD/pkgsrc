@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/11 21:40:41 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:20 joerg Exp $
 bin/IglooFTP
 share/IglooFTP/app_ass/app_ass.GNOME
 share/IglooFTP/app_ass/app_ass.KDE
@@ -45,10 +45,3 @@ share/IglooFTP/html/images/softwares.jpg
 share/IglooFTP/html/images/viglooftp.gif
 share/IglooFTP/xpm/iglooftp.xpm
 share/IglooFTP/xpm/little_igloo.xpm
-@dirrm share/IglooFTP/xpm
-@dirrm share/IglooFTP/html/images
-@dirrm share/IglooFTP/html
-@dirrm share/IglooFTP/docs
-@dirrm share/IglooFTP/bookmarks
-@dirrm share/IglooFTP/app_ass
-@dirrm share/IglooFTP

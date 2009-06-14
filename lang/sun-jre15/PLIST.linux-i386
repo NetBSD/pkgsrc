@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.8 2008/08/15 15:06:35 he Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.9 2009/06/14 18:03:42 joerg Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -667,82 +667,4 @@ java/sun-1.5/plugin/desktop/sun_java.desktop
 java/sun-1.5/plugin/desktop/sun_java.png
 java/sun-1.5/plugin/i386/ns7-gcc29/libjavaplugin_oji.so
 java/sun-1.5/plugin/i386/ns7/libjavaplugin_oji.so
-@dirrm java/sun-1.5/plugin/i386/ns7-gcc29
-@dirrm java/sun-1.5/plugin/i386/ns7
-@dirrm java/sun-1.5/plugin/i386
-@dirrm java/sun-1.5/plugin/desktop
-@dirrm java/sun-1.5/plugin
-@dirrm java/sun-1.5/man/man1
-@dirrm java/sun-1.5/man/ja_JP.eucJP/man1
-@dirrm java/sun-1.5/man/ja_JP.eucJP
-@dirrm java/sun-1.5/man
-@dirrm java/sun-1.5/lib/zi/SystemV
-@dirrm java/sun-1.5/lib/zi/Pacific
-@dirrm java/sun-1.5/lib/zi/Indian
-@dirrm java/sun-1.5/lib/zi/Europe
-@dirrm java/sun-1.5/lib/zi/Etc
-@dirrm java/sun-1.5/lib/zi/Australia
-@dirrm java/sun-1.5/lib/zi/Atlantic
-@dirrm java/sun-1.5/lib/zi/Asia
-@dirrm java/sun-1.5/lib/zi/Antarctica
-@dirrm java/sun-1.5/lib/zi/America/North_Dakota
-@dirrm java/sun-1.5/lib/zi/America/Kentucky
-@dirrm java/sun-1.5/lib/zi/America/Indiana
-@dirrm java/sun-1.5/lib/zi/America/Argentina
-@dirrm java/sun-1.5/lib/zi/America
-@dirrm java/sun-1.5/lib/zi/Africa
-@dirrm java/sun-1.5/lib/zi
-@dirrm java/sun-1.5/lib/security
-@dirrm java/sun-1.5/lib/oblique-fonts
-@dirrm java/sun-1.5/lib/management
-@dirrm java/sun-1.5/lib/locale/zh_TW/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/zh_TW.BIG5/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/zh_TW.BIG5
-@dirrm java/sun-1.5/lib/locale/zh_TW
-@dirrm java/sun-1.5/lib/locale/zh_HK.BIG5HK/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/zh_HK.BIG5HK
-@dirrm java/sun-1.5/lib/locale/zh/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/zh.GBK/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/zh.GBK
-@dirrm java/sun-1.5/lib/locale/zh
-@dirrm java/sun-1.5/lib/locale/sv/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/sv
-@dirrm java/sun-1.5/lib/locale/ko/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/ko.UTF-8/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/ko.UTF-8
-@dirrm java/sun-1.5/lib/locale/ko
-@dirrm java/sun-1.5/lib/locale/ja/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/ja
-@dirrm java/sun-1.5/lib/locale/it/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/it
-@dirrm java/sun-1.5/lib/locale/fr/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/fr
-@dirrm java/sun-1.5/lib/locale/es/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/es
-@dirrm java/sun-1.5/lib/locale/de/LC_MESSAGES
-@dirrm java/sun-1.5/lib/locale/de
-@dirrm java/sun-1.5/lib/locale
-@dirrm java/sun-1.5/lib/javaws
-@dirrm java/sun-1.5/lib/images/icons
-@dirrm java/sun-1.5/lib/images/cursors
-@dirrm java/sun-1.5/lib/images
-@dirrm java/sun-1.5/lib/im
-@dirrm java/sun-1.5/lib/i386/xawt
-@dirrm java/sun-1.5/lib/i386/server
-@dirrm java/sun-1.5/lib/i386/native_threads
-@dirrm java/sun-1.5/lib/i386/motif21
-@dirrm java/sun-1.5/lib/i386/headless
-@dirrm java/sun-1.5/lib/i386/client
-@dirrm java/sun-1.5/lib/i386
-@dirrm java/sun-1.5/lib/fonts
-@dirrm java/sun-1.5/lib/ext
-@dirrm java/sun-1.5/lib/deploy
-@dirrm java/sun-1.5/lib/cmm
-@dirrm java/sun-1.5/lib/audio
 @exec ${MKDIR} %D/java/sun-1.5/lib/applet
-@dirrm java/sun-1.5/lib/applet
-@dirrm java/sun-1.5/lib
-@dirrm java/sun-1.5/javaws
-@dirrm java/sun-1.5/bin
-@dirrm java/sun-1.5/.systemPrefs
-@dirrm java/sun-1.5

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/26 10:29:51 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:24 joerg Exp $
 libexec/dgd
 share/doc/dgd/Copyright
 share/doc/dgd/Credits
@@ -151,25 +151,3 @@ share/examples/dgd/mud.dgd
 @exec ${MKDIR} %D/libdata/dgd/mud/usr/admin
 @exec ${MKDIR} %D/libdata/dgd/mud/usr
 @exec ${MKDIR} %D/libdata/dgd/tmp
-@dirrm share/doc/dgd/kfun
-@dirrm share/doc/dgd
-@dirrm libdata/dgd/mud/doc/kernel/efun
-@dirrm libdata/dgd/mud/doc/kernel/hook
-@dirrm libdata/dgd/mud/doc/kernel/lfun
-@dirrm libdata/dgd/mud/doc/kernel
-@dirrm libdata/dgd/mud/doc
-@dirrm libdata/dgd/mud/include/kernel
-@dirrm libdata/dgd/mud/include
-@dirrm libdata/dgd/mud/kernel/data
-@dirrm libdata/dgd/mud/kernel/lib/api
-@dirrm libdata/dgd/mud/kernel/lib
-@dirrm libdata/dgd/mud/kernel/obj
-@dirrm libdata/dgd/mud/kernel/sys
-@dirrm libdata/dgd/mud/kernel
-@dirrm libdata/dgd/mud/usr/System
-@dirrm libdata/dgd/mud/usr/admin
-@dirrm libdata/dgd/mud/usr
-@dirrm libdata/dgd/mud
-@dirrm libdata/dgd/tmp
-@dirrm libdata/dgd
-@dirrm share/examples/dgd

@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:27 joerg Exp $
 bin/lv
 bin/lgrep
 lib/lv/lv.hlp
 man/man1/lv.1
-@dirrm lib/lv

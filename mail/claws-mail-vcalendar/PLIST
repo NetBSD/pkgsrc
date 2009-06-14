@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/11 03:11:38 smb Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:30 joerg Exp $
 include/claws-mail/plugins/vcalendar/vcal_interface.h
 include/vcalendar/plugins/ical.h
 lib/claws-mail/plugins/vcalendar.la
@@ -15,6 +15,3 @@ share/locale/cs/LC_MESSAGES/vcalendar.mo
 share/locale/zh_CN/LC_MESSAGES/vcalendar.mo
 share/locale/sk/LC_MESSAGES/vcalendar.mo
 share/locale/sr/LC_MESSAGES/vcalendar.mo
-@dirrm include/vcalendar/plugins
-@dirrm include/vcalendar
-@dirrm include/claws-mail/plugins/vcalendar

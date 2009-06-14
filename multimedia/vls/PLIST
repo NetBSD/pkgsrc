@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/29 20:29:23 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:11 joerg Exp $
 bin/vls
 bin/vlsd
 lib/videolan/vls/dvdreader.so
 share/examples/vls/vls.cfg
-@dirrm share/examples/vls
-@dirrm lib/videolan/vls

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/15 11:18:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:26 joerg Exp $
 bin/EncPasswd
 bin/EncProxyPasswd
 bin/YoSucker
@@ -18,5 +18,3 @@ share/examples/YoSucker/sample1.conf
 share/examples/YoSucker/sample2.conf
 share/examples/YoSucker/sample3-procmail.conf
 share/examples/YoSucker/sample4-proxy.conf
-@dirrm share/examples/YoSucker
-@dirrm share/doc/YoSucker

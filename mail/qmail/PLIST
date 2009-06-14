@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/04/12 22:43:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:04:41 joerg Exp $
 bin/bouncesaying
 bin/condredirect
 bin/datemail
@@ -189,8 +189,3 @@ share/qmail/setup/dnsptr
 share/qmail/setup/hostname
 share/qmail/setup/install
 share/qmail/setup/ipmeprint
-@dirrm share/qmail/setup
-@dirrm share/qmail
-@dirrm share/examples/qmail/boot
-@dirrm share/examples/qmail
-@dirrm share/doc/qmail

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/02/04 12:58:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:09:48 joerg Exp $
 bin/wget
 info/wget.info
 man/man1/wget.1
@@ -41,4 +41,3 @@ share/locale/uk/LC_MESSAGES/wget.mo
 share/locale/vi/LC_MESSAGES/wget.mo
 share/locale/zh_CN/LC_MESSAGES/wget.mo
 share/locale/zh_TW/LC_MESSAGES/wget.mo
-@dirrm share/examples/wget

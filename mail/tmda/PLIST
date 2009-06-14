@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/07/31 04:44:01 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:04:45 joerg Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
@@ -378,27 +378,3 @@ ${SHAREDIR}/bounce_missing_pending.txt
 ${SHAREDIR}/confirm_accept.txt
 ${SHAREDIR}/confirm_request.txt
 share/examples/rc.d/tofmipd
-@dirrm ${SHAREDIR}
-@dirrm ${DOCDIR}
-@dirrm ${HTMLDIR}/attachments/HelpOnActions(2f)AttachFile
-@dirrm ${HTMLDIR}/attachments/HelpOnInstalling(2f)ApacheOnLinuxFtp
-@dirrm ${HTMLDIR}/attachments/HelpOnInstalling(2f)BasicInstallation
-@dirrm ${HTMLDIR}/attachments/HelpOnInstalling(2f)WikiInstanceCreation
-@dirrm ${HTMLDIR}/attachments/HelpOnTables
-@dirrm ${HTMLDIR}/attachments/TmdaFetchMailHowTo
-@dirrm ${HTMLDIR}/attachments/TmdaFingerprint
-@dirrm ${HTMLDIR}/attachments/TmdaPostfixPolicy
-@dirrm ${HTMLDIR}/attachments/WikiSandBox
-@dirrm ${HTMLDIR}/attachments
-@dirrm ${HTMLDIR}
-@dirrm ${EGDIR}/ofmipd-stunnel-xinetd
-@dirrm ${EGDIR}/ofmipd-stunnel-daemons
-@dirrm ${EGDIR}/dot-tmda/lists
-@dirrm ${EGDIR}/dot-tmda/filters
-@dirrm ${EGDIR}/dot-tmda
-@dirrm ${EGDIR}
-@dirrm ${PYSITELIB}/TMDA/Queue
-@dirrm ${PYSITELIB}/TMDA/pythonlib/email/mime
-@dirrm ${PYSITELIB}/TMDA/pythonlib/email
-@dirrm ${PYSITELIB}/TMDA/pythonlib
-@dirrm ${PYSITELIB}/TMDA

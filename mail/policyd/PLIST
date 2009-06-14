@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/20 07:29:53 ghen Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:39 joerg Exp $
 libexec/policyd/cleanup
 libexec/policyd/policyd
 libexec/policyd/stats
@@ -8,6 +8,3 @@ share/examples/policyd/blacklist_helo.sql
 share/examples/policyd/policyd.conf
 share/examples/policyd/whitelist.sql
 share/examples/rc.d/policyd
-@dirrm share/examples/policyd
-@dirrm share/doc/policyd
-@dirrm libexec/policyd

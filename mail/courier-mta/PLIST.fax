@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.fax,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+@comment $NetBSD: PLIST.fax,v 1.2 2009/06/14 18:04:30 joerg Exp $
 libexec/courier/modules/fax/courierfax
 man/man8/courierfax.8
 share/courier/faxmail/application-pdf.filter
@@ -15,5 +15,3 @@ share/examples/courier/faxcoverpage.tr.dist
 share/examples/courier/faxnotifyrc.dist
 share/examples/courier/faxrc.dist
 share/examples/courier/module.fax
-@dirrm share/courier/faxmail
-@dirrm libexec/courier/modules/fax

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/07/17 10:11:19 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:32 joerg Exp $
 include/BasicUsageEnvironment/BasicHashTable.hh
 include/BasicUsageEnvironment/BasicUsageEnvironment.hh
 include/BasicUsageEnvironment/BasicUsageEnvironment0.hh
@@ -155,8 +155,3 @@ share/examples/liblive/testOnDemandRTSPServer
 share/examples/liblive/testRelay
 share/examples/liblive/testWAVAudioStreamer
 share/examples/liblive/vobStreamer
-@dirrm share/examples/liblive
-@dirrm include/liveMedia
-@dirrm include/groupsock
-@dirrm include/UsageEnvironment
-@dirrm include/BasicUsageEnvironment

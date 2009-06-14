@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/12 19:09:38 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:43 joerg Exp $
 bin/rarchie
 bin/rfinger
 bin/rftp
@@ -31,4 +31,3 @@ share/examples/socks5/socks5.conf.gssapi
 share/examples/socks5/socks5.conf.multipleservers
 share/examples/socks5/socks5.conf.server2server
 share/examples/socks5/socks5.conf.singlehomed
-@dirrm share/examples/socks5

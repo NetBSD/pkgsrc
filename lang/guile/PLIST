@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/12/10 23:11:55 gdt Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:03:33 joerg Exp $
 bin/guile
 bin/guile-config
 bin/guile-snarf
@@ -279,20 +279,3 @@ share/guile/1.8/srfi/srfi-8.scm
 share/guile/1.8/srfi/srfi-88.scm
 share/guile/1.8/srfi/srfi-9.scm
 @exec ${MKDIR} %D/share/guile/site
-@dirrm share/guile/site
-@dirrm share/guile/1.8/srfi
-@dirrm share/guile/1.8/scripts
-@dirrm share/guile/1.8/oop/goops
-@dirrm share/guile/1.8/oop
-@dirrm share/guile/1.8/lang/elisp/primitives
-@dirrm share/guile/1.8/lang/elisp/internals
-@dirrm share/guile/1.8/lang/elisp
-@dirrm share/guile/1.8/lang
-@dirrm share/guile/1.8/ice-9/debugging
-@dirrm share/guile/1.8/ice-9/debugger
-@dirrm share/guile/1.8/ice-9
-@dirrm share/guile/1.8
-@dirrm share/guile
-@dirrm include/libguile
-@dirrm include/guile/srfi
-@dirrm include/guile

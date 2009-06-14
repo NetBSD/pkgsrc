@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 12:31:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:20 joerg Exp $
 bin/${BINNAME}
 lib/${BINNAME}/${JARNAME}
 share/doc/${BINNAME}/AUTHORS
@@ -6,5 +6,3 @@ share/doc/${BINNAME}/COPYING
 share/doc/${BINNAME}/README
 share/doc/${BINNAME}/mainscreen.jpg
 share/doc/${BINNAME}/manual.html
-@dirrm share/doc/${BINNAME}
-@dirrm lib/${BINNAME}

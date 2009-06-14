@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 01:00:45 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:48 joerg Exp $
 sbin/wastesrv
 share/doc/waste/README
-@dirrm share/doc/waste

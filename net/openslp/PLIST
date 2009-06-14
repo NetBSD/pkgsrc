@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/02 20:34:03 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:37 joerg Exp $
 bin/slptool
 include/slp.h
 lib/libslp.la
@@ -64,10 +64,3 @@ share/examples/openslp/slp.conf
 share/examples/openslp/slp.reg
 share/examples/openslp/slp.spi
 share/examples/rc.d/slpd
-@dirrm share/examples/openslp
-@dirrm share/doc/openslp/rfc
-@dirrm share/doc/openslp/html/UsersGuide
-@dirrm share/doc/openslp/html/ProgrammersGuide
-@dirrm share/doc/openslp/html/IntroductionToSLP
-@dirrm share/doc/openslp/html
-@dirrm share/doc/openslp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/09/23 01:24:55 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:04:30 joerg Exp $
 bin/cancelmsg
 bin/courier-config
 bin/couriermlm
@@ -232,8 +232,3 @@ share/examples/rc.d/courier
 share/examples/rc.d/courierd
 share/examples/rc.d/courierfilter
 share/examples/rc.d/webmlm
-@dirrm share/examples/courier/smtpaccess
-@dirrm share/examples/courier/aliases
-@dirrm share/courier/courierwebadmin
-@dirrm share/courier/couriermlm
-@dirrm libexec/courier/filters

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/04/18 14:58:32 tron Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:07:26 joerg Exp $
 bin/cd-drive
 bin/cd-info
 bin/cd-paranoia
@@ -69,5 +69,3 @@ man/man1/cd-paranoia.1
 man/man1/cd-read.1
 man/man1/iso-info.1
 man/man1/iso-read.1
-@dirrm include/cdio++
-@dirrm include/cdio

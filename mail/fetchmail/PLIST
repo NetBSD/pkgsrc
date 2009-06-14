@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/01/17 14:29:11 tron Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:04:33 joerg Exp $
 bin/fetchmail
 man/man1/fetchmail.1
 share/doc/fetchmail/README
@@ -21,4 +21,3 @@ share/locale/ru/LC_MESSAGES/fetchmail.mo
 share/locale/sq/LC_MESSAGES/fetchmail.mo
 share/locale/vi/LC_MESSAGES/fetchmail.mo
 share/examples/rc.d/fetchmail
-@dirrm share/doc/fetchmail
