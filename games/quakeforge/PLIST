@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/05/22 16:50:00 snj Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:56:55 joerg Exp $
 bin/bsp2img
 bin/hw-master
 ${PLIST.linux}bin/nq-fbdev
@@ -195,12 +195,3 @@ man/man1/qflight.1
 man/man1/qfvis.1
 man/man1/wad.1
 share/games/quakeforge/QF/menu.dat.gz
-@dirrm share/games/quakeforge/QF
-@dirrm share/games/quakeforge
-@dirrm lib/ruamoko
-@dirrm lib/quakeforge
-@dirrm include/QF/ruamoko/gui
-@dirrm include/QF/ruamoko
-@dirrm include/QF/plugin
-@dirrm include/QF/GL
-@dirrm include/QF

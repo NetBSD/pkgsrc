@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/26 04:03:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:49 joerg Exp $
 bin/knights
 share/doc/kde/HTML/de/knights/common
 share/doc/kde/HTML/en/knights/common
@@ -36,32 +36,3 @@ share/locale/et/LC_MESSAGES/knights.mo
 share/locale/fi/LC_MESSAGES/knights.mo
 share/locale/fr/LC_MESSAGES/knights.mo
 share/locale/it/LC_MESSAGES/knights.mo
-@comment in kde: @dirrm share/kde/mimelnk/application
-@dirrm share/kde/apps/knights/themes
-@dirrm share/kde/apps/knights
-@comment in kde: @dirrm share/kde/apps
-@dirrm share/kde/applnk/Games/Board
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@dirrm share/doc/kde/HTML/ru/knights
-@comment in kde: @dirrm share/doc/kde/HTML/ru
-@dirrm share/doc/kde/HTML/it/knights
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/fr/knights
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@dirrm share/doc/kde/HTML/fi/knights
-@comment in kde: @dirrm share/doc/kde/HTML/fi
-@dirrm share/doc/kde/HTML/et/knights
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/es/knights
-@comment in kde: @dirrm share/doc/kde/HTML/es
-@dirrm share/doc/kde/HTML/en/knights
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/de/knights
-@comment in kde: @dirrm share/doc/kde/HTML/de

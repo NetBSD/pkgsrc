@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/06/17 18:17:29 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:39 joerg Exp $
 bin/abuse
 bin/abuse.x11R6
 share/abuse/abuse.lsp
@@ -223,18 +223,3 @@ share/abuse/sfx/throw01.wav
 share/abuse/sfx/timerfst.wav
 share/abuse/sfx/zap2.wav
 share/abuse/sfx/zap3.wav
-@dirrm share/abuse/sfx
-@dirrm share/abuse/lisp
-@dirrm share/abuse/levels
-@dirrm share/abuse/art/tints/guns
-@dirrm share/abuse/art/tints/cop
-@dirrm share/abuse/art/tints/ant
-@dirrm share/abuse/art/tints
-@dirrm share/abuse/art/fore
-@dirrm share/abuse/art/chars
-@dirrm share/abuse/art/back
-@dirrm share/abuse/art
-@dirrm share/abuse/addon/example
-@dirrm share/abuse/addon/deathmat
-@dirrm share/abuse/addon
-@dirrm share/abuse

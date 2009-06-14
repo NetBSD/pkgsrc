@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/04 18:53:54 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:54 joerg Exp $
 bin/quake3arena-demo
 lib/lokigames/quake3arena-demo/demoq3/pak0.pk3
 lib/lokigames/quake3arena-demo/quake3arena-demo
@@ -234,19 +234,5 @@ share/doc/lokigames/quake3arena-Help/Support/Index.html
 share/doc/lokigames/quake3arena-Help/Support/Information/Improving_Performance.htm
 share/doc/lokigames/quake3arena-Help/Support/Information/Minimum_System_Requirements.htm
 share/doc/lokigames/quake3arena-demo-README
-@dirrm share/doc/lokigames/quake3arena-Help/Support/Information
-@dirrm share/doc/lokigames/quake3arena-Help/Support/CustomerSupport
-@dirrm share/doc/lokigames/quake3arena-Help/Support
-@dirrm share/doc/lokigames/quake3arena-Help/Manual/navart/weapons
-@dirrm share/doc/lokigames/quake3arena-Help/Manual/navart/subtitles
-@dirrm share/doc/lokigames/quake3arena-Help/Manual/navart/screens
-@dirrm share/doc/lokigames/quake3arena-Help/Manual/navart/charart
-@dirrm share/doc/lokigames/quake3arena-Help/Manual/navart
-@dirrm share/doc/lokigames/quake3arena-Help/Manual/htmlpages
-@dirrm share/doc/lokigames/quake3arena-Help/Manual
-@dirrm share/doc/lokigames/quake3arena-Help/DocsArt
-@dirrm share/doc/lokigames/quake3arena-Help
-@dirrm lib/lokigames/quake3arena-demo/demoq3
-@dirrm lib/lokigames/quake3arena-demo
 @unexec ${RMDIR} -p %D/lib/lokigames 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/share/doc/lokigames 2>/dev/null || ${TRUE}

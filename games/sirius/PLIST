@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:56 joerg Exp $
 bin/sirius
 share/applications/sirius.desktop
 share/locale/de/LC_MESSAGES/sirius.mo
@@ -10,6 +10,3 @@ share/pixmaps/sirius/marker_classic.png
 share/sirius/corner
 share/sirius/edge
 share/sirius/opening_book
-@dirrm share/sirius
-@dirrm share/pixmaps/sirius
-@comment in gnome2-dirs: @dirrm share/applications

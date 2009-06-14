@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:24 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:41 joerg Exp $
 bin/civctp-demo
 lib/lokigames/civctp-demo/appstr.txt
 lib/lokigames/civctp-demo/civctp-demo
@@ -554,35 +554,5 @@ lib/lokigames/civctp-demo/ctp_data/english/uidata/layouts/victorymovie.ldl
 lib/lokigames/civctp-demo/ctp_data/english/uidata/layouts/victoryscreen.ldl
 lib/lokigames/civctp-demo/ctp_data/english/uidata/layouts/wondermovie.ldl
 share/doc/lokigames/civctp-demo-README
-@dirrm lib/lokigames/civctp-demo/ctp_data/english/videos
-@dirrm lib/lokigames/civctp-demo/ctp_data/english/uidata/layouts
-@dirrm lib/lokigames/civctp-demo/ctp_data/english/uidata/fonts
-@dirrm lib/lokigames/civctp-demo/ctp_data/english/uidata
-@dirrm lib/lokigames/civctp-demo/ctp_data/english/sound
-@dirrm lib/lokigames/civctp-demo/ctp_data/english/graphics/pictures
-@dirrm lib/lokigames/civctp-demo/ctp_data/english/graphics/patterns
-@dirrm lib/lokigames/civctp-demo/ctp_data/english/graphics
-@dirrm lib/lokigames/civctp-demo/ctp_data/english/gamedata/gl
-@dirrm lib/lokigames/civctp-demo/ctp_data/english/gamedata
-@dirrm lib/lokigames/civctp-demo/ctp_data/english
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/videos
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/uidata/layouts
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/uidata/fonts
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/uidata
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/sound
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/scenarios
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/graphics/tiles
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/graphics/sprites
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/graphics/pictures
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/graphics/patterns
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/graphics/icons
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/graphics/cursors
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/graphics
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/gamedata
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/aidata/aips
-@dirrm lib/lokigames/civctp-demo/ctp_data/default/aidata
-@dirrm lib/lokigames/civctp-demo/ctp_data/default
-@dirrm lib/lokigames/civctp-demo/ctp_data
-@dirrm lib/lokigames/civctp-demo
 @unexec ${RMDIR} -p %D/lib/lokigames 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/share/doc/lokigames 2>/dev/null || ${TRUE}

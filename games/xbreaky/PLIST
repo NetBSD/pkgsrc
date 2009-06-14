@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:27 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:59 joerg Exp $
 bin/xbreaky
 bin/xbreaky.snd
 man/man6/xbreaky.6
@@ -18,6 +18,3 @@ share/games/xbreaky/level7.dat
 share/games/xbreaky/level8.dat
 share/games/xbreaky/level9.dat
 share/pixmaps/xbreaky.xpm
-@dirrm share/doc/xbreaky
-@dirrm share/games/xbreaky
-@dirrm share/games

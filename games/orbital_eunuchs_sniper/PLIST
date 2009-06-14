@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/08/12 16:08:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:52 joerg Exp $
 bin/snipe2d
 libexec/orbital_eunuchs_sniper/aimap.png
 libexec/orbital_eunuchs_sniper/audiooff.png
@@ -48,5 +48,3 @@ libexec/orbital_eunuchs_sniper/window.png
 libexec/orbital_eunuchs_sniper/windowh.png
 share/doc/orbital_eunuchs_sniper/README
 share/doc/orbital_eunuchs_sniper/readme.txt
-@dirrm share/doc/orbital_eunuchs_sniper
-@dirrm libexec/orbital_eunuchs_sniper

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:58:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:01 joerg Exp $
 bin/xsoldier
 share/xsoldier/Boss1.xpm
 share/xsoldier/Boss2.xpm
@@ -30,4 +30,3 @@ share/xsoldier/Star1.xpm
 share/xsoldier/Star2.xpm
 share/xsoldier/Title.xpm
 share/xsoldier/xsoldier.score.dist
-@dirrm share/xsoldier

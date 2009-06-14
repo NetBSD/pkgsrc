@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/04 14:45:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:56:59 joerg Exp $
 bin/imf2x
 bin/x2imf
 bin/xconq
@@ -204,6 +204,3 @@ share/xconq/lib/ww2s-42.g
 share/xconq/lib/ww2s-eur-42.g
 share/xconq/lib/ww2s-pac-41.g
 share/xconq/tkconq.tcl
-@dirrm share/xconq/lib
-@dirrm share/xconq/images
-@dirrm share/xconq

@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.6 2006/05/11 14:04:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:56:59 joerg Exp $
 bin/xemeraldia
 lib/X11/app-defaults/XEmeraldia
-@dirrm ${GAMES_DIR}/xemeraldia

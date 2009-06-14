@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/03/20 18:57:18 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:57:16 joerg Exp $
 bin/geos-config
 include/geos.h
 include/geos/algorithm/LineIntersector.h
@@ -173,34 +173,5 @@ include/geos/version.h
 include/geos_c.h
 lib/libgeos.la
 lib/libgeos_c.la
-@dirrm include/geos/util
-@dirrm include/geos/simplify
-@dirrm include/geos/precision
-@dirrm include/geos/planargraph
-@dirrm include/geos/operation/valid
-@dirrm include/geos/operation/union
-@dirrm include/geos/operation/relate
-@dirrm include/geos/operation/polygonize
-@dirrm include/geos/operation/overlay
-@dirrm include/geos/operation/linemerge
-@dirrm include/geos/operation/distance
-@dirrm include/geos/operation/buffer
-@dirrm include/geos/operation
-@dirrm include/geos/io
-@dirrm include/geos/index/sweepline
-@dirrm include/geos/index/strtree
-@dirrm include/geos/index/quadtree
 @exec ${MKDIR} %D/include/geos/index/intervalrtree
-@dirrm include/geos/index/intervalrtree
-@dirrm include/geos/index/chain
-@dirrm include/geos/index/bintree
-@dirrm include/geos/index
-@dirrm include/geos/geomgraph/index
-@dirrm include/geos/geomgraph
-@dirrm include/geos/geom/util
-@dirrm include/geos/geom/prep
-@dirrm include/geos/geom
 @exec ${MKDIR} %D/include/geos/algorithm/locate
-@dirrm include/geos/algorithm/locate
-@dirrm include/geos/algorithm
-@dirrm include/geos

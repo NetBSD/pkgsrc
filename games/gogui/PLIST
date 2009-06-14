@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/27 14:52:26 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:47 joerg Exp $
 bin/gmptogtp
 bin/gogui
 bin/gtpadapter
@@ -72,6 +72,3 @@ share/gogui/lib/netgtp.jar
 share/gogui/lib/sgfthumbnail.jar
 share/gogui/lib/sgftotex.jar
 share/gogui/lib/twogtp.jar
-@dirrm share/gogui/lib
-@dirrm share/gogui
-@dirrm share/doc/gogui

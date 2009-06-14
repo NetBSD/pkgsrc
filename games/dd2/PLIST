@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/03 03:20:19 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:42 joerg Exp $
 bin/dd2
 share/dd2/bgm1.xm
 share/dd2/bgm2.xm
@@ -20,5 +20,3 @@ share/doc/dd2/ChangeLog
 share/doc/dd2/NEWS
 share/doc/dd2/README
 share/doc/dd2/TODO
-@dirrm share/doc/dd2
-@dirrm share/dd2

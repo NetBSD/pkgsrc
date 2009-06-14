@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:51:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:41 joerg Exp $
 lib/X11/app-defaults/Cbzone
 share/cbzone/sounds/enemy_seen.au
 share/cbzone/sounds/game_begin.au
@@ -12,5 +12,3 @@ share/cbzone/cbzone.help
 share/cbzone/cbzone.motd
 bin/cbzone.exec
 bin/cbzone
-@dirrm share/cbzone/sounds
-@dirrm share/cbzone

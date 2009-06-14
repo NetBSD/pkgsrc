@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:56:43 joerg Exp $
 bin/dopewars
 man/man6/dopewars.6
 share/doc/${PKGNAME}/help/cops.html
@@ -49,9 +49,4 @@ share/locale/pt_BR/LC_MESSAGES/dopewars.mo
 share/pixmaps/dopewars-pill.png
 share/pixmaps/dopewars-shot.png
 share/pixmaps/dopewars-weed.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/dopewars
-@dirrm share/doc/${PKGNAME}/help
-@dirrm share/doc/${PKGNAME}
 @exec ${MKDIR} %D/lib/dopewars
-@dirrm lib/dopewars

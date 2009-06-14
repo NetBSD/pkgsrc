@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/27 06:36:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:56:47 joerg Exp $
 bin/grhino
 bin/gtp-rhino
 share/gnome/help/grhino/C/figures/gamelist.png
@@ -39,15 +39,3 @@ share/${PKGNAME}/theme/small/white_last.xpm
 share/locale/en_GB/LC_MESSAGES/grhino.mo
 share/omf/grhino/grhino-C.omf
 share/pixmaps/grhino.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/grhino
-@comment in rarian: @dirrm share/omf
-@dirrm share/${PKGNAME}/theme/small
-@dirrm share/${PKGNAME}/theme
-@dirrm share/${PKGNAME}/pattern
-@dirrm share/${PKGNAME}/book
-@dirrm share/${PKGNAME}
-@dirrm share/gnome/help/grhino/C/figures
-@dirrm share/gnome/help/grhino/C
-@dirrm share/gnome/help/grhino
-@comment in gnome2-dirs: @dirrm share/gnome/help

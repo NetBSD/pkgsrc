@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/09 15:22:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:46 joerg Exp $
 bin/gbrainy
 lib/gbrainy/gbrainy.exe
 lib/gbrainy/gbrainy.exe.config
@@ -15,12 +15,3 @@ share/icons/hicolor/scalable/apps/gbrainy.svg
 share/pixmaps/gbrainy.png
 share/pixmaps/gbrainy.svg
 share/pixmaps/gbrainy16.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/games/gbrainy
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/gbrainy

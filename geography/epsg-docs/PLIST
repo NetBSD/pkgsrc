@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/28 11:09:48 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:15 joerg Exp $
 share/doc/epsg/G7-1.pdf
 share/doc/epsg/G7-2.pdf
-@dirrm share/doc/epsg

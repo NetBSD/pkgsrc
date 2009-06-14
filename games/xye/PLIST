@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/23 16:56:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:01 joerg Exp $
 bin/xye
 share/doc/xye/AUTHORS
 share/doc/xye/COPYING
@@ -25,7 +25,3 @@ share/xye/res/fon.bmp
 share/xye/res/fon_bold.bmp
 share/xye/res/kye.png
 share/xye/res/xye.png
-@dirrm share/xye/res
-@dirrm share/xye/levels
-@dirrm share/xye
-@dirrm share/doc/xye

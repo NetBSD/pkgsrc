@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:57:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:00 joerg Exp $
 bin/xnibbles
 bin/xnleditor
 man/man6/xnibbles.6
@@ -37,6 +37,3 @@ share/xnibbles/sounds/pop.ub
 share/xnibbles/sounds/spring.ub
 share/xnibbles/sounds/start.ub
 share/xnibbles/sounds/teleport.ub
-@dirrm share/xnibbles/levels
-@dirrm share/xnibbles/sounds
-@dirrm share/xnibbles

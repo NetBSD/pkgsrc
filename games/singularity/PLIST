@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/05/21 11:02:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:56 joerg Exp $
 bin/singularity
 share/doc/singularity/README.txt
 share/singularity/code/__init__.py
@@ -74,12 +74,3 @@ share/singularity/data/techs_en_US.dat
 share/singularity/data/techs_es_AR.dat
 share/singularity/data/techs_sv_SE.dat
 @exec ${MKDIR} %D/share/singularity/music
-@dirrm share/singularity/music
-@dirrm share/singularity/data/sounds
-@dirrm share/singularity/data/music-src
-@dirrm share/singularity/data/images
-@dirrm share/singularity/data/fonts
-@dirrm share/singularity/data
-@dirrm share/singularity/code
-@dirrm share/singularity
-@dirrm share/doc/singularity

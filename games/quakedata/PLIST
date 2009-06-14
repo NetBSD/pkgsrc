@@ -1,4 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:55:26 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:55 joerg Exp $
 share/quake/id1/pak0.pak
-@dirrm share/quake/id1
-@dirrm share/quake

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/03 14:32:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:42 joerg Exp $
 bin/defendguin
 man/man6/defendguin.6
 share/defendguin/images/baiter/baiter0.bmp
@@ -169,27 +169,3 @@ share/defendguin/sounds/swarmers.wav
 share/defendguin/sounds/title/confirm.wav
 share/defendguin/sounds/title/impatience.wav
 share/defendguin/sounds/title/select.wav
-@dirrm share/defendguin/sounds/title
-@dirrm share/defendguin/sounds/ship
-@dirrm share/defendguin/sounds/peng
-@dirrm share/defendguin/sounds/gameover
-@dirrm share/defendguin/sounds/evilbill
-@dirrm share/defendguin/sounds
-@dirrm share/defendguin/music
-@dirrm share/defendguin/images/ufo
-@dirrm share/defendguin/images/tux
-@dirrm share/defendguin/images/title
-@dirrm share/defendguin/images/swarmer
-@dirrm share/defendguin/images/status
-@dirrm share/defendguin/images/ship
-@dirrm share/defendguin/images/points
-@dirrm share/defendguin/images/pod
-@dirrm share/defendguin/images/mutant
-@dirrm share/defendguin/images/loader
-@dirrm share/defendguin/images/land
-@dirrm share/defendguin/images/evilbill
-@dirrm share/defendguin/images/bullet
-@dirrm share/defendguin/images/bomber
-@dirrm share/defendguin/images/baiter
-@dirrm share/defendguin/images
-@dirrm share/defendguin

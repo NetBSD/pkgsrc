@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 12:26:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:17 joerg Exp $
 share/rmap/flags/big/ad.xpm.gz
 share/rmap/flags/big/ae.xpm.gz
 share/rmap/flags/big/af.xpm.gz
@@ -676,5 +676,3 @@ share/rmap/flags/small/yu.xpm.gz
 share/rmap/flags/small/za.xpm.gz
 share/rmap/flags/small/zm.xpm.gz
 share/rmap/flags/small/zw.xpm.gz
-@dirrm share/rmap/flags/small
-@dirrm share/rmap/flags/big

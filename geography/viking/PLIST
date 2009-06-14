@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/11 14:18:30 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:16 joerg Exp $
 bin/viking
 bin/viking-remote
 share/applications/viking.desktop
@@ -22,6 +22,3 @@ share/locale/sl/LC_MESSAGES/viking.mo
 share/locale/sv/LC_MESSAGES/viking.mo
 share/locale/zh_CN/LC_MESSAGES/viking.mo
 share/locale/zh_TW/LC_MESSAGES/viking.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/applications

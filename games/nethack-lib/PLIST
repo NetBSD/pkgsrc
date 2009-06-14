@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/08 22:31:15 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:56:52 joerg Exp $
 bin/nethack
 bin/recover
 man/man6/dgn_comp.6
@@ -136,4 +136,3 @@ share/nethackdir340/wizard1.lev
 share/nethackdir340/wizard2.lev
 share/nethackdir340/wizard3.lev
 share/nethackdir340/wizhelp
-@dirrm share/doc/nethack

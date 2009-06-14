@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/07 23:26:15 snj Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:57:01 joerg Exp $
 bin/xscorch
 bin/xscorch-server
 man/man6/xscorch.6
@@ -11,6 +11,3 @@ share/xscorch/scorings.def
 share/xscorch/sounds/README
 share/xscorch/weapons.def
 share/xscorch/xscorch.txt
-@dirrm share/xscorch/sounds
-@dirrm share/xscorch/images
-@dirrm share/xscorch

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/05 22:37:41 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:51 joerg Exp $
 bin/lpairs
 share/games/lpairs/gfx/0.bmp
 share/games/lpairs/gfx/1.bmp
@@ -30,6 +30,3 @@ share/games/lpairs/gfx/title.bmp
 share/games/lpairs/sound/click.wav
 share/games/lpairs/sound/fail.wav
 share/games/lpairs/sound/remove.wav
-@dirrm share/games/lpairs/sound
-@dirrm share/games/lpairs/gfx
-@dirrm share/games/lpairs

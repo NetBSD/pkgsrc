@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/29 13:55:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:43 joerg Exp $
 bin/et
 bin/etded
 lib/lokigames/et/CHANGES
@@ -240,27 +240,4 @@ lib/lokigames/et/Docs/Help/Compatibility/redstripe.jpg
 lib/lokigames/et/Docs/Help/Compatibility/style_ie.css
 lib/lokigames/et/Docs/Help/Default.htm
 lib/lokigames/et/Docs/EULA_Wolfenstein_Enemy_Territory.txt
-@dirrm lib/lokigames/et/pb/htm
-@dirrm lib/lokigames/et/pb
-@dirrm lib/lokigames/et/etmain/video
-@dirrm lib/lokigames/et/etmain
 @exec ${MKDIR} %D/lib/lokigames/et/Docs/Help/_private
-@dirrm lib/lokigames/et/Docs/Help/_private
-@dirrm lib/lokigames/et/Docs/Help/_borders
-@dirrm lib/lokigames/et/Docs/Help/Tech Help/vendor
-@dirrm lib/lokigames/et/Docs/Help/Tech Help/Information
-@dirrm lib/lokigames/et/Docs/Help/Tech Help/Customer Support
-@dirrm lib/lokigames/et/Docs/Help/Tech Help
-@dirrm lib/lokigames/et/Docs/Help/Readme
-@dirrm lib/lokigames/et/Docs/Help/Manual/images
-@dirrm lib/lokigames/et/Docs/Help/Manual/html
-@dirrm lib/lokigames/et/Docs/Help/Manual/et-pl
-@dirrm lib/lokigames/et/Docs/Help/Manual/et-ad
-@dirrm lib/lokigames/et/Docs/Help/Manual
-@dirrm lib/lokigames/et/Docs/Help/images
-@dirrm lib/lokigames/et/Docs/Help/Credits
-@dirrm lib/lokigames/et/Docs/Help/Compatibility
-@dirrm lib/lokigames/et/Docs/Help
-@dirrm lib/lokigames/et/Docs
-@dirrm lib/lokigames/et
-@dirrm lib/lokigames

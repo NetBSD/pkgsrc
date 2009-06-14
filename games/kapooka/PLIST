@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/24 17:05:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:49 joerg Exp $
 bin/kapooka
 share/kapooka/level.dat
 share/kapooka/interface/company_logo.png
@@ -37,9 +37,3 @@ share/kapooka/sprites/standard_move_in.png
 share/kapooka/sprites/standard_move_out.png
 share/kapooka/sprites/stuck_idle.png
 share/kapooka/sprites/teleport_idle.png
-@dirrm share/kapooka/sprites
-@dirrm share/kapooka/sound
-@dirrm share/kapooka/music
-@dirrm share/kapooka/levelDummy
-@dirrm share/kapooka/interface
-@dirrm share/kapooka

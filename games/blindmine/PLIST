@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/26 03:26:12 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:40 joerg Exp $
 bin/blindmine
 share/blindmine/blindmine.py
 share/blindmine/blindmine.pyc
@@ -72,6 +72,3 @@ share/blindmine/util.py
 share/blindmine/util.pyc
 share/blindmine/util.pyo
 share/doc/blindmine/howto.txt
-@dirrm share/doc/blindmine
-@dirrm share/blindmine/data
-@dirrm share/blindmine

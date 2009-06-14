@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:41 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:57 joerg Exp $
 bin/tanked
 bin/tankedserv
 share/tanked/maps/README
@@ -17,6 +17,3 @@ share/tanked/motd
 share/tanked/players
 @unexec ${RM} -f share/tanked/logs/*
 @unexec ${RM} -f %D/share/tanked/motd %D/share/tanked/players
-@dirrm share/tanked/maps
-@dirrm share/tanked/logs
-@dirrm share/tanked

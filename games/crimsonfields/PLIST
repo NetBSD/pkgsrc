@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/01/24 19:57:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:56:42 joerg Exp $
 bin/bi2cf
 bin/cf2bmp
 bin/cfed
@@ -52,8 +52,3 @@ share/crimson/sound/repair.wav
 share/crimson/sound/select.wav
 share/crimson/title.bmp
 share/pixmaps/crimson.png
-@dirrm share/crimson/sound
-@dirrm share/crimson/music
-@dirrm share/crimson/locale
-@dirrm share/crimson/levels
-@dirrm share/crimson

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/10 13:20:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:58 joerg Exp $
 bin/xbat
 share/games/Xbat/Domo/domoX0201.dat
 share/games/Xbat/Domo/domoX0202.dat
@@ -696,8 +696,3 @@ share/games/Xbat/Score/top10-1.txt
 share/games/Xbat/Score/top10-2.txt
 share/games/Xbat/Score/top10-3.txt
 share/games/Xbat/Score/top10-4.txt
-@dirrm share/games/Xbat/Domo
-@dirrm share/games/Xbat/Image
-@dirrm share/games/Xbat/Map
-@dirrm share/games/Xbat/Score
-@dirrm share/games/Xbat

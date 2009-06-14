@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/20 16:18:41 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:55 joerg Exp $
 bin/pgnfix
 bin/pgnscid
 bin/sc_addmove
@@ -17,4 +17,3 @@ bin/tcscid
 bin/tkscid
 share/scid/scid.eco
 share/scid/spelling.ssp
-@dirrm share/scid

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/16 07:12:09 snj Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:53 joerg Exp $
 bin/pysol.py
 ${PYSITELIB}/pysollib/__init__.py
 ${PYSITELIB}/pysollib/__init__.pyc
@@ -2894,68 +2894,3 @@ share/locale/ru/LC_MESSAGES/pysol.mo
 share/locale/ru_RU/LC_MESSAGES/pysol.mo
 share/pixmaps/pysol.xbm
 share/pixmaps/pysol.xpm
-@dirrm share/PySolFC/tiles/stretch
-@dirrm share/PySolFC/tiles
-@dirrm share/PySolFC/themes/clearlooks/clearlooks
-@dirrm share/PySolFC/themes/clearlooks
-@dirrm share/PySolFC/themes/blue/blue
-@dirrm share/PySolFC/themes/blue
-@dirrm share/PySolFC/themes
-@dirrm share/PySolFC/tcl
-@dirrm share/PySolFC/sound/extra
-@dirrm share/PySolFC/sound
-@dirrm share/PySolFC/images/tree
-@dirrm share/PySolFC/images/toolbar/default/small
-@dirrm share/PySolFC/images/toolbar/default/large
-@dirrm share/PySolFC/images/toolbar/default
-@dirrm share/PySolFC/images/toolbar/crystal/small
-@dirrm share/PySolFC/images/toolbar/crystal/large
-@dirrm share/PySolFC/images/toolbar/crystal
-@dirrm share/PySolFC/images/toolbar/bluecurve/xlarge
-@dirrm share/PySolFC/images/toolbar/bluecurve/small
-@dirrm share/PySolFC/images/toolbar/bluecurve/large
-@dirrm share/PySolFC/images/toolbar/bluecurve
-@dirrm share/PySolFC/images/toolbar
-@dirrm share/PySolFC/images/stats
-@dirrm share/PySolFC/images/pause
-@dirrm share/PySolFC/images/misc
-@dirrm share/PySolFC/images/logos
-@dirrm share/PySolFC/images/htmlviewer
-@dirrm share/PySolFC/images/dialog/default
-@dirrm share/PySolFC/images/dialog/bluecurve
-@dirrm share/PySolFC/images/dialog
-@dirrm share/PySolFC/images/demo
-@dirrm share/PySolFC/images/cards/small
-@dirrm share/PySolFC/images/cards/large
-@dirrm share/PySolFC/images/cards
-@dirrm share/PySolFC/images/buttons/bluecurve
-@dirrm share/PySolFC/images/buttons
-@dirrm share/PySolFC/images
-@dirrm share/PySolFC/html/rules
-@dirrm share/PySolFC/html/images
-@dirrm share/PySolFC/html
-@dirrm share/PySolFC/cardset-vienna-2k
-@dirrm share/PySolFC/cardset-tuxedo
-@dirrm share/PySolFC/cardset-standard
-@dirrm share/PySolFC/cardset-oxymoron
-@dirrm share/PySolFC/cardset-mughal-ganjifa
-@dirrm share/PySolFC/cardset-matrix
-@dirrm share/PySolFC/cardset-kintengu
-@dirrm share/PySolFC/cardset-hexadeck
-@dirrm share/PySolFC/cardset-gnome-mahjongg-1
-@dirrm share/PySolFC/cardset-dondorf
-@dirrm share/PySolFC/cardset-dashavatara-ganjifa
-@dirrm share/PySolFC/cardset-crystal-mahjongg
-@dirrm share/PySolFC/cardset-2000
-@dirrm share/PySolFC
-@dirrm ${PYSITELIB}/pysollib/winsystems
-@dirrm ${PYSITELIB}/pysollib/tk
-@dirrm ${PYSITELIB}/pysollib/tile
-@dirrm ${PYSITELIB}/pysollib/pysolgtk
-@dirrm ${PYSITELIB}/pysollib/macosx
-@dirrm ${PYSITELIB}/pysollib/games/ultra
-@dirrm ${PYSITELIB}/pysollib/games/special
-@dirrm ${PYSITELIB}/pysollib/games/mahjongg
-@dirrm ${PYSITELIB}/pysollib/games
-@dirrm ${PYSITELIB}/pysollib/configobj
-@dirrm ${PYSITELIB}/pysollib

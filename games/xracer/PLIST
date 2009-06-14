@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/28 17:45:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:57:00 joerg Exp $
 bin/xracer
 bin/xracer-blender2track.pl
 bin/xracer-blenderexport.py
@@ -60,17 +60,3 @@ share/xracer/track-textures/egyptsandbig.jpg
 share/xracer/track-textures/solid_grey.jpg
 share/xracer/track-textures/track5.jpg
 share/xracer/tracks/libtracksimple2.la
-@dirrm share/doc/xracer-0.96.9
-@dirrm share/xracer/fonts
-@dirrm share/xracer/tracks
-@dirrm share/xracer/craft
-@dirrm share/xracer/backdrops
-@dirrm share/xracer/powerups
-@dirrm share/xracer/sky
-@dirrm share/xracer/track-textures
-@dirrm share/xracer/flare-textures
-@dirrm share/xracer/scene-textures/snow
-@dirrm share/xracer/scene-textures/golgotha
-@dirrm share/xracer/scene-textures
-@dirrm share/xracer/video
-@dirrm share/xracer

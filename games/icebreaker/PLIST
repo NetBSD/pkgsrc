@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/30 22:56:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:48 joerg Exp $
 bin/icebreaker
 man/man6/icebreaker.6
 share/doc/icebreaker/README
@@ -38,5 +38,3 @@ share/icebreaker/tap.wav
 share/icebreaker/turtle.bmp
 share/icebreaker/turtles.ibt
 share/icebreaker/woodblock.bmp
-@dirrm share/icebreaker
-@dirrm share/doc/icebreaker
