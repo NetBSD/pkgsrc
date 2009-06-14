@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2325 2009/06/14 07:53:04 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2326 2009/06/14 08:33:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3122,3 +3122,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/tokyodystopia to 0.9.12 [obache 2009-06-14]
 	Updated emulators/sdlmame to 0.132 [wiz 2009-06-14]
 	Updated comms/conserver8 to 8.1.16nb2 [wiz 2009-06-14]
+	Updated www/analog to 6.0nb2 [wiz 2009-06-14]
