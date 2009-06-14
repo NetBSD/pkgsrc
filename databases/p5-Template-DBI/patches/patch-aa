@@ -1,0 +1,134 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/06/14 22:42:57 sno Exp $
+
+Skipping user interaction for running DBI tests
+
+--- Makefile.PL.orig	2009-06-03 20:23:48.000000000 +0000
++++ Makefile.PL	2009-06-03 20:32:01.000000000 +0000
+@@ -24,7 +24,7 @@
+ dbi_config();
+ 
+ my %opts = (
+-    'NAME'	       => 'Template-DBI',
++    'NAME'	       => 'Template::DBI',
+     'VERSION_FROM' => 'lib/Template/Plugin/DBI.pm',
+     'PMLIBDIRS'    => [ 'lib' ], 
+     'PREREQ_PM'    => { 
+@@ -59,63 +59,63 @@
+ sub dbi_config {
+     my ($dsn, $user, $pass) = ('') x 3;
+ 
+-    if (ttprompt("Do you want to run the DBI tests?\n" .
+-	       "It requires access to an existing test database.",
+-	       $RUN_TESTS) =~ /y/i) {
+-
+-        $RUN_TESTS = 1;
+-        my ($driver, $dbname);
+-        require DBI;
+-        my @drivers = DBI->available_drivers();
+-        local $" = ', ';
+-        
+-        my $default = (grep(/m.?sql/i, @drivers))[0] 
+-            || $drivers[0] || '';
+-        
+-        message(<<EOF);
+-
+-DBI Test Configuration
+-----------------------
+-
+-Please enter the driver name for the test database.
+-The DBD drivers installed on your system are
+-
+-    @drivers
+-
+-EOF
+-
+-        while (! $driver) {
+-            $driver = ttprompt("Enter driver name: ", $default);
+-            message("! No such DBD driver\n"), undef $driver
+-                unless grep(/^$driver$/, @drivers);
+-        }
+-        
+-        message(<<EOF);
+-
+-Now enter the data source (DSN) for the test database.
+-Many DBD drivers require only a database name (e.g. 'test') while
+-others may require an alternate format or additional parameters
+-(e.g. 'dbname=test').  Please consult your DBD documentation for
+-further details.
+-
+-EOF
+-
+-    	my $dbname_eg = $driver eq 'Pg' ? 'dbname=test' : 'test';
+-        while (! $dbname) {
+-            $dbname = ttprompt('Database name: ', $dbname_eg);
+-        }
+-    
+-        $dsn = "dbi:$driver:$dbname";
+-    	$user = ttprompt('Enter user name : ', '');
+-    	$pass = ttprompt('Enter password  : ', '');
+-    	$user = '' unless defined $user;
+-        $pass = '' unless defined $pass;
+-    }
+-    else {
++#    if (ttprompt("Do you want to run the DBI tests?\n" .
++#	       "It requires access to an existing test database.",
++#	       $RUN_TESTS) =~ /y/i) {
++#
++#        $RUN_TESTS = 1;
++#        my ($driver, $dbname);
++#        require DBI;
++#        my @drivers = DBI->available_drivers();
++#        local $" = ', ';
++#        
++#        my $default = (grep(/m.?sql/i, @drivers))[0] 
++#            || $drivers[0] || '';
++#        
++#        message(<<EOF);
++#
++#DBI Test Configuration
++#----------------------
++#
++#Please enter the driver name for the test database.
++#The DBD drivers installed on your system are
++#
++#    @drivers
++#
++#EOF
++#
++#        while (! $driver) {
++#            $driver = ttprompt("Enter driver name: ", $default);
++#            message("! No such DBD driver\n"), undef $driver
++#                unless grep(/^$driver$/, @drivers);
++#        }
++#        
++#        message(<<EOF);
++#
++#Now enter the data source (DSN) for the test database.
++#Many DBD drivers require only a database name (e.g. 'test') while
++#others may require an alternate format or additional parameters
++#(e.g. 'dbname=test').  Please consult your DBD documentation for
++#further details.
++#
++#EOF
++#
++#    	my $dbname_eg = $driver eq 'Pg' ? 'dbname=test' : 'test';
++#        while (! $dbname) {
++#            $dbname = ttprompt('Database name: ', $dbname_eg);
++#        }
++#    
++#        $dsn = "dbi:$driver:$dbname";
++#    	$user = ttprompt('Enter user name : ', '');
++#    	$pass = ttprompt('Enter password  : ', '');
++#    	$user = '' unless defined $user;
++#        $pass = '' unless defined $pass;
++#    }
++#    else {
+         $RUN_TESTS = 0;
+-    }
++#    }
+ 
+-    message("\nwriting $CONFIG_PATH\n");
++#    message("\nwriting $CONFIG_PATH\n");
+     open(CFGFILE, ">$CONFIG_PATH") || die "$CONFIG_PATH: $!\n";
+     print CFGFILE <<EOF;
+ \$run  = $RUN_TESTS;
