@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.5 2009/05/13 10:49:00 wiz Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.6 2009/06/14 15:17:10 joerg Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -114,7 +114,7 @@ way.</para></note>
 	Look at <filename>pkgsrc/mk/defaults/mk.conf</filename> for
 	details of the default settings. You will want to ensure that
 	<varname>ACCEPTABLE_LICENSES</varname> meet your local policy.
-	As used in this example, <varname>_ACCEPTABLE=yes</varname>
+	As used in this example, <varname>SKIP_LICENSE_CHECK=yes</varname>
 	completely bypasses the license check.</para>
 
 <programlisting>
@@ -125,7 +125,7 @@ BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
 OBJHOSTNAME?=   yes               # use work.`hostname`
 FAILOVER_FETCH= yes               # insist on the correct checksum
 PKG_DEVELOPER?= yes
-_ACCEPTABLE=    yes
+SKIP_LICENSE_CHECK=    yes
 </programlisting>
 
 	<para>Some options that are especially useful for bulk builds
@@ -638,7 +638,7 @@ $ <userinput>rm -rf /tmp/pbulk-bootstrap</userinput>
 <listitem><para><literal><varname>WRKOBJDIR</varname>=/tmp/pbulk-outer</literal>, to keep <filename>/usr/pkgsrc</filename> free from any modifications,</para></listitem>
 <listitem><para><literal><varname>DISTDIR</varname>=/distfiles</literal>, to have only one directory in which all distfiles (for the infrastructure and for the actual packages) are downloaded,</para></listitem>
 <listitem><para><literal><varname>ACCEPTABLE_LICENSES</varname>+=...</literal>, to select some licenses additional to the usual Free/Open Source licenses that are acceptable to you,</para></listitem>
-<listitem><para><literal><varname>_ACCEPTABLE</varname>=yes</literal>, to accept all licenses, no matter how restrictive they are.</para></listitem>
+<listitem><para><literal><varname>SKIP_LICENSE_CHECK</varname>=yes</literal>, to bypass the license checks.</para></listitem>
 </itemizedlist>
 
 <para>Now you are ready to build the rest of the pbulk infrastructure.</para>
