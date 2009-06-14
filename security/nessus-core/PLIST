@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/25 12:45:57 salo Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:13:33 joerg Exp $
 bin/nessus
 bin/nessus-fetch
 bin/nessus-mkcert-client
@@ -27,4 +27,3 @@ sbin/nessus-rmuser
 sbin/nessusd
 share/examples/rc.d/nessusd
 share/examples/nessus/nessus-services
-@dirrm share/examples/nessus

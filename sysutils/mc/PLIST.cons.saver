@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST.cons.saver,v 1.1 2005/01/15 21:15:26 wiz Exp $
+@comment $NetBSD: PLIST.cons.saver,v 1.2 2009/06/14 18:16:09 joerg Exp $
 lib/mc/cons.saver
-@dirrm lib/mc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/17 13:55:26 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:18 joerg Exp $
 share/examples/webmin/mysql/config
 share/webmin/mysql/CHANGELOG
 share/webmin/mysql/acl_security.pl
@@ -382,9 +382,3 @@ share/webmin/mysql/table_form.cgi
 share/webmin/mysql/useradmin_update.pl
 share/webmin/mysql/view-lib.pl
 share/webmin/mysql/view_table.cgi
-@dirrm share/webmin/mysql/lang
-@dirrm share/webmin/mysql/images
-@dirrm share/webmin/mysql/help
-@dirrm share/webmin/mysql
-@dirrm share/examples/webmin/mysql
-@dirrm etc/webmin/mysql

@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/19 14:54:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:13 joerg Exp $
 ${RUBY_VENDORARCHLIB}/quota.${RUBY_DLEXT}
 ${RUBY_DOC}/quota/ChangeLog
 ${RUBY_DOC}/quota/README
-@dirrm ${RUBY_DOC}/quota

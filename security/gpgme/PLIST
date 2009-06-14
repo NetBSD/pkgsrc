@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/03/23 20:04:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:13:29 joerg Exp $
 bin/gpgme-config
 include/gpgme.h
 info/gpgme.info
@@ -8,4 +8,3 @@ share/aclocal/gpgme.m4
 share/common-lisp/source/gpgme/gpgme-package.lisp
 share/common-lisp/source/gpgme/gpgme.asd
 share/common-lisp/source/gpgme/gpgme.lisp
-@dirrm share/common-lisp/source/gpgme

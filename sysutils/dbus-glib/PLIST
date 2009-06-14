@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/01/07 20:57:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:16:03 joerg Exp $
 bin/dbus-binding-tool
 include/dbus-1.0/dbus/dbus-glib-bindings.h
 include/dbus-1.0/dbus/dbus-glib-error-enum.h
@@ -29,6 +29,3 @@ share/gtk-doc/html/dbus-glib/left.png
 share/gtk-doc/html/dbus-glib/right.png
 share/gtk-doc/html/dbus-glib/style.css
 share/gtk-doc/html/dbus-glib/up.png
-@dirrm share/gtk-doc/html/dbus-glib
-@dirrm share/examples/dbus-glib
-@comment in dbus: @dirrm include/dbus-1.0/dbus

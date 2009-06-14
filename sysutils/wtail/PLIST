@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/16 00:25:30 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:21 joerg Exp $
 bin/wtail
 man/man1/wtail.1
 share/doc/wtail/CHANGES
@@ -6,4 +6,3 @@ share/doc/wtail/COPYING
 share/doc/wtail/FAQ
 share/doc/wtail/README
 share/doc/wtail/VERSION
-@dirrm share/doc/wtail

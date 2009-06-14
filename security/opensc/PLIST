@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/27 07:35:30 hasso Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:13:34 joerg Exp $
 bin/cardos-info
 bin/cardos-tool
 bin/cryptoflex-tool
@@ -126,6 +126,3 @@ share/opensc/pkcs15.profile
 share/opensc/rutoken.profile
 share/opensc/setcos.profile
 share/opensc/starcos.profile
-@dirrm share/doc/opensc
-@dirrm share/opensc
-@dirrm include/opensc

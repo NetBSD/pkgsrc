@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/17 13:30:14 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:18 joerg Exp $
 share/examples/webmin/mount/config
 share/webmin/mount/CHANGELOG
 share/webmin/mount/acl_security.pl
@@ -258,9 +258,3 @@ share/webmin/mount/smb_share.cgi
 share/webmin/mount/solaris-lib.pl
 share/webmin/mount/unixware-lib.pl
 share/webmin/mount/unmount.cgi
-@dirrm share/webmin/mount/lang
-@dirrm share/webmin/mount/images
-@dirrm share/webmin/mount/help
-@dirrm share/webmin/mount
-@dirrm share/examples/webmin/mount
-@dirrm etc/webmin/mount
