@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/27 12:34:16 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:05 joerg Exp $
 bin/gnome-device-manager
 include/gnome-device-manager/gdm-device.h
 include/gnome-device-manager/gdm-info-provider-iface.h
@@ -15,12 +15,3 @@ share/icons/hicolor/48x48/apps/gnome-device-manager-device-usb-interface.png
 share/icons/hicolor/48x48/apps/gnome-device-manager-device-usb.png
 share/icons/hicolor/48x48/apps/gnome-device-manager.png
 share/omf/gnome-device-manager/gnome-device-manager-C.omf
-@dirrm share/omf/gnome-device-manager
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/gnome-device-manager/C/figures
-@dirrm share/gnome/help/gnome-device-manager/C
-@dirrm share/gnome/help/gnome-device-manager
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm include/gnome-device-manager

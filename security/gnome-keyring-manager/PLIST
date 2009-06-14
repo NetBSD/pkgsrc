@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/11/03 17:35:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:13:28 joerg Exp $
 bin/gnome-keyring-manager
 man/man1/gnome-keyring-manager.1
 share/applications/gnome-keyring-manager.desktop
@@ -96,20 +96,3 @@ share/omf/gnome-keyring-manager/gnome-keyring-manager-oc.omf
 share/omf/gnome-keyring-manager/gnome-keyring-manager-sv.omf
 share/omf/gnome-keyring-manager/gnome-keyring-manager-uk.omf
 share/omf/gnome-keyring-manager/gnome-keyring-manager-vi.omf
-@dirrm share/omf/gnome-keyring-manager
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnome/help/gnome-keyring-manager/vi
-@dirrm share/gnome/help/gnome-keyring-manager/uk
-@dirrm share/gnome/help/gnome-keyring-manager/sv
-@dirrm share/gnome/help/gnome-keyring-manager/oc
-@dirrm share/gnome/help/gnome-keyring-manager/fr
-@dirrm share/gnome/help/gnome-keyring-manager/es
-@dirrm share/gnome/help/gnome-keyring-manager/en_GB
-@dirrm share/gnome/help/gnome-keyring-manager/da
-@dirrm share/gnome/help/gnome-keyring-manager/ca
-@dirrm share/gnome/help/gnome-keyring-manager/C
-@dirrm share/gnome/help/gnome-keyring-manager
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome-keyring-manager
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/02/01 21:39:44 shattered Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 18:13:29 joerg Exp $
 bin/afslog
 bin/compile_et
 bin/gss
@@ -831,9 +831,3 @@ share/examples/rc.d/kadmind
 share/examples/rc.d/kcm
 share/examples/rc.d/kdc
 share/examples/rc.d/kpasswdd
-${PLIST.ldap}@dirrm share/examples/heimdal
-@dirrm include/krb5/ss
-@dirrm include/krb5/roken
-@dirrm include/krb5/krb5
-@dirrm include/krb5/kadm5
-@dirrm include/krb5/gssapi

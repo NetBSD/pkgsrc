@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/04 11:33:02 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:25 joerg Exp $
 include/cky_applet.h
 include/cky_base.h
 include/cky_card.h
@@ -9,4 +9,3 @@ lib/libckyapplet.so.1
 lib/libckyapplet.so.1.0.0
 lib/pkcs11/libcoolkeypk11.so
 lib/pkgconfig/libckyapplet.pc
-@dirrm lib/pkcs11

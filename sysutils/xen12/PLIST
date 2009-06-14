@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2004/05/22 16:31:04 cl Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:21 joerg Exp $
 mdec/xen-1.2.gz
-@dirrm mdec

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/24 13:05:45 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:06 joerg Exp $
 bin/gnome-power-bugreport.sh
 bin/gnome-power-cmd.sh
 bin/gnome-power-manager
@@ -517,56 +517,3 @@ share/omf/gnome-power-manager/gnome-power-manager-oc.omf
 share/omf/gnome-power-manager/gnome-power-manager-pa.omf
 share/omf/gnome-power-manager/gnome-power-manager-ru.omf
 share/omf/gnome-power-manager/gnome-power-manager-sv.omf
-@dirrm share/omf/gnome-power-manager
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/gnome-power-manager/sv/figures
-@dirrm share/gnome/help/gnome-power-manager/sv
-@dirrm share/gnome/help/gnome-power-manager/ru/figures
-@dirrm share/gnome/help/gnome-power-manager/ru
-@dirrm share/gnome/help/gnome-power-manager/pa/figures
-@dirrm share/gnome/help/gnome-power-manager/pa
-@dirrm share/gnome/help/gnome-power-manager/oc/figures
-@dirrm share/gnome/help/gnome-power-manager/oc
-@dirrm share/gnome/help/gnome-power-manager/it/figures
-@dirrm share/gnome/help/gnome-power-manager/it
-@dirrm share/gnome/help/gnome-power-manager/hu/figures
-@dirrm share/gnome/help/gnome-power-manager/hu
-@dirrm share/gnome/help/gnome-power-manager/fr/figures
-@dirrm share/gnome/help/gnome-power-manager/fr
-@dirrm share/gnome/help/gnome-power-manager/es/figures
-@dirrm share/gnome/help/gnome-power-manager/es
-@dirrm share/gnome/help/gnome-power-manager/ca/figures
-@dirrm share/gnome/help/gnome-power-manager/ca
-@dirrm share/gnome/help/gnome-power-manager/C/figures
-@dirrm share/gnome/help/gnome-power-manager/C
-@dirrm share/gnome/help/gnome-power-manager
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome-power-manager/icons/hicolor/scalable/status
-@dirrm share/gnome-power-manager/icons/hicolor/scalable/actions
-@dirrm share/gnome-power-manager/icons/hicolor/scalable
-@dirrm share/gnome-power-manager/icons/hicolor/48x48/status
-@dirrm share/gnome-power-manager/icons/hicolor/48x48/actions
-@dirrm share/gnome-power-manager/icons/hicolor/48x48
-@dirrm share/gnome-power-manager/icons/hicolor/24x24/status
-@dirrm share/gnome-power-manager/icons/hicolor/24x24/actions
-@dirrm share/gnome-power-manager/icons/hicolor/24x24
-@dirrm share/gnome-power-manager/icons/hicolor/22x22/status
-@dirrm share/gnome-power-manager/icons/hicolor/22x22/actions
-@dirrm share/gnome-power-manager/icons/hicolor/22x22
-@dirrm share/gnome-power-manager/icons/hicolor/16x16/status
-@dirrm share/gnome-power-manager/icons/hicolor/16x16/actions
-@dirrm share/gnome-power-manager/icons/hicolor/16x16
-@dirrm share/gnome-power-manager/icons/hicolor
-@dirrm share/gnome-power-manager/icons
-@dirrm share/gnome-power-manager
-@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
-@dirrm share/doc/${PKGNAME}/spec
-@dirrm share/doc/${PKGNAME}
-@comment in dbus: @dirrm share/dbus-1/services
-@comment in xdg-dirs: @dirrm share/applications
-@comment in libbonobo: @dirrm lib/bonobo/servers

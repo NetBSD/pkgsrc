@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:14 joerg Exp $
 bin/smbldap-passwd
 ${PERL5_SUB_INSTALLVENDORLIB}/smbldap_tools.pm
 sbin/smbldap-groupadd
@@ -22,6 +22,3 @@ share/examples/smbldap-tools/slapd.conf
 share/examples/smbldap-tools/smb.conf
 share/examples/smbldap-tools/smbldap.conf
 share/examples/smbldap-tools/smbldap_bind.conf
-@dirrm share/examples/smbldap-tools
-@dirrm share/doc/smbldap-tools
-@dirrm sbin/smbldap-tools

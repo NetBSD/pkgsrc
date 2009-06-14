@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/21 16:14:08 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:15 joerg Exp $
 bin/system-tools-backends
 lib/pkgconfig/system-tools-backends-2.0.pc
 ${PLIST.hal}share/PolicyKit/policy/system-tools-backends.policy
@@ -52,13 +52,3 @@ share/system-tools-backends-2.0/scripts/Utils/Replace.pm
 share/system-tools-backends-2.0/scripts/Utils/Report.pm
 share/system-tools-backends-2.0/scripts/Utils/Util.pm
 share/system-tools-backends-2.0/scripts/Utils/XML.pm
-@dirrm share/examples/system-tools-backends
-@dirrm share/system-tools-backends-2.0/scripts/Utils
-@dirrm share/system-tools-backends-2.0/scripts/Users
-@dirrm share/system-tools-backends-2.0/scripts/Time
-@dirrm share/system-tools-backends-2.0/scripts/Shares
-@dirrm share/system-tools-backends-2.0/scripts/Network
-@dirrm share/system-tools-backends-2.0/scripts/Init
-@dirrm share/system-tools-backends-2.0/scripts
-@dirrm share/system-tools-backends-2.0/files
-@dirrm share/system-tools-backends-2.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/11/27 14:18:31 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:16:11 joerg Exp $
 bin/notification-properties
 lib/notification-daemon-1.0/engines/libstandard.la
 libexec/notification-daemon
@@ -18,7 +18,3 @@ share/locale/nl/LC_MESSAGES/notification-daemon.mo
 share/locale/pl/LC_MESSAGES/notification-daemon.mo
 share/locale/sv/LC_MESSAGES/notification-daemon.mo
 share/notification-daemon/notification-properties.glade
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in dbus: @dirrm share/dbus-1/services
-@dirrm lib/notification-daemon-1.0/engines
-@dirrm lib/notification-daemon-1.0

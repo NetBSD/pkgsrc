@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/16 19:07:10 kefren Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:16:18 joerg Exp $
 share/examples/webmin/mailboxes/config
 share/webmin/mailboxes/CHANGELOG
 share/webmin/mailboxes/Makefile
@@ -213,27 +213,3 @@ share/webmin/mailboxes/xinha/popups/popup.css
 share/webmin/mailboxes/xinha/popups/popup.js
 share/webmin/mailboxes/xinha/popups/select_color.html
 share/webmin/mailboxes/xinha/release-notes.txt
-@dirrm share/webmin/mailboxes/xinha/popups
-@dirrm share/webmin/mailboxes/xinha/modules/InternetExplorer
-@dirrm share/webmin/mailboxes/xinha/modules/InsertTable
-@dirrm share/webmin/mailboxes/xinha/modules/InsertImage
-@dirrm share/webmin/mailboxes/xinha/modules/GetHtml
-@dirrm share/webmin/mailboxes/xinha/modules/Gecko
-@dirrm share/webmin/mailboxes/xinha/modules/FullScreen/lang
-@dirrm share/webmin/mailboxes/xinha/modules/FullScreen
-@dirrm share/webmin/mailboxes/xinha/modules/Dialogs
-@dirrm share/webmin/mailboxes/xinha/modules/CreateLink
-@dirrm share/webmin/mailboxes/xinha/modules/ColorPicker
-@dirrm share/webmin/mailboxes/xinha/modules
-@dirrm share/webmin/mailboxes/xinha/lang
-@dirrm share/webmin/mailboxes/xinha/images/fr
-@dirrm share/webmin/mailboxes/xinha/images/de
-@dirrm share/webmin/mailboxes/xinha/images
-@dirrm share/webmin/mailboxes/xinha/examples
-@dirrm share/webmin/mailboxes/xinha/contrib
-@dirrm share/webmin/mailboxes/xinha
-@dirrm share/webmin/mailboxes/lang
-@dirrm share/webmin/mailboxes/images
-@dirrm share/webmin/mailboxes
-@dirrm share/examples/webmin/mailboxes
-@dirrm etc/webmin/mailboxes

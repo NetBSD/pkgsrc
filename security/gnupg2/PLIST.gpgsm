@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gpgsm,v 1.5 2007/11/08 09:56:03 shannonjr Exp $
+@comment $NetBSD: PLIST.gpgsm,v 1.6 2009/06/14 18:13:29 joerg Exp $
 bin/gpg-connect-agent
 bin/gpg2
 bin/gpgconf
@@ -39,4 +39,3 @@ share/gnupg/com-certs.pem
 share/gnupg/faq.html
 share/gnupg/gpg-conf.skel
 share/gnupg/qualified.txt
-@dirrm share/gnupg

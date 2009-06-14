@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/02/19 17:23:18 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:13:30 joerg Exp $
 bin/honeyd
 bin/honeydctl
 bin/honeydstats
@@ -42,14 +42,3 @@ share/examples/honeyd/webserver/server.py
 share/examples/honeyd/webserver/support.py
 share/examples/honeyd/xprobe2.conf
 share/examples/rc.d/honeyd
-@dirrm share/examples/honeyd/webserver/htdocs/templates/inc
-@dirrm share/examples/honeyd/webserver/htdocs/templates
-@dirrm share/examples/honeyd/webserver/htdocs/styles
-@dirrm share/examples/honeyd/webserver/htdocs/images
-@dirrm share/examples/honeyd/webserver/htdocs/graphs
-@dirrm share/examples/honeyd/webserver/htdocs
-@dirrm share/examples/honeyd/webserver
-@dirrm share/examples/honeyd
-@dirrm share/doc/honeyd
-@dirrm lib/honeyd
-@dirrm include/honeyd

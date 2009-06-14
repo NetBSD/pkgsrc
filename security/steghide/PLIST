@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:13:39 joerg Exp $
 bin/steghide
 man/man1/steghide.1
 share/doc/steghide/ABOUT-NLS
@@ -14,4 +14,3 @@ share/locale/de/LC_MESSAGES/steghide.mo
 share/locale/es/LC_MESSAGES/steghide.mo
 share/locale/fr/LC_MESSAGES/steghide.mo
 share/locale/ro/LC_MESSAGES/steghide.mo
-@dirrm share/doc/steghide

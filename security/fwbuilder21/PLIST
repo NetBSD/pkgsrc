@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/07/15 09:17:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:13:28 joerg Exp $
 bin/fwb_iosacl
 bin/fwb_ipf
 bin/fwb_ipfw
@@ -87,8 +87,3 @@ share/fwbuilder21/platform/pix.xml
 share/fwbuilder21/platform/unknown.xml
 share/fwbuilder21/resources.xml
 share/fwbuilder21/templates.xml
-@dirrm share/fwbuilder21/platform
-@dirrm share/fwbuilder21/os
-@dirrm share/fwbuilder21/locale
-@dirrm share/fwbuilder21
-@dirrm share/doc/fwbuilder-${PKGVERSION}

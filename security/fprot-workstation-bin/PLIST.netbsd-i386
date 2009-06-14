@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.netbsd-i386,v 1.1 2007/08/21 23:14:46 jlam Exp $
+@comment $NetBSD: PLIST.netbsd-i386,v 1.2 2009/06/14 18:13:28 joerg Exp $
 bin/f-prot
 libexec/fprot-workstation-bin/ENGLISH.TX0
 libexec/fprot-workstation-bin/f-prot
@@ -36,5 +36,3 @@ share/doc/fprot-workstation-bin/updt_signature.gif
 share/fprot-workstation-bin/MACRO.DEF
 share/fprot-workstation-bin/SIGN.DEF
 share/fprot-workstation-bin/SIGN2.DEF
-@dirrm share/doc/fprot-workstation-bin
-@dirrm share/fprot-workstation-bin

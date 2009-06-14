@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/17 16:39:12 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:39 joerg Exp $
 bin/seahorse-agent
 bin/seahorse-preferences
 bin/seahorse-tool
@@ -173,54 +173,3 @@ share/seahorse-plugins/glade/seahorse-multi-encrypt.glade
 share/seahorse-plugins/glade/seahorse-notify.glade
 share/seahorse-plugins/glade/seahorse-prefs.glade
 share/seahorse-plugins/glade/seahorse-progress.glade
-@dirrm share/seahorse-plugins/glade
-@dirrm share/seahorse-plugins
-@dirrm share/pixmaps/seahorse-plugins/scalable
-@dirrm share/pixmaps/seahorse-plugins/48x48
-@dirrm share/pixmaps/seahorse-plugins/22x22
-@dirrm share/pixmaps/seahorse-plugins
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/seahorse-plugins
-@dirrm share/omf/seahorse-applet
-@comment in rarian: @dirrm share/omf
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gnome/help/seahorse-plugins/vi
-@dirrm share/gnome/help/seahorse-plugins/sv
-@dirrm share/gnome/help/seahorse-plugins/ru
-@dirrm share/gnome/help/seahorse-plugins/oc
-@dirrm share/gnome/help/seahorse-plugins/it
-@dirrm share/gnome/help/seahorse-plugins/fr
-@dirrm share/gnome/help/seahorse-plugins/es
-@dirrm share/gnome/help/seahorse-plugins/en_GB
-@dirrm share/gnome/help/seahorse-plugins/el
-@dirrm share/gnome/help/seahorse-plugins/de
-@dirrm share/gnome/help/seahorse-plugins/cs
-@dirrm share/gnome/help/seahorse-plugins/ca
-@dirrm share/gnome/help/seahorse-plugins/C
-@dirrm share/gnome/help/seahorse-plugins
-@dirrm share/gnome/help/seahorse-applet/vi
-@dirrm share/gnome/help/seahorse-applet/sv
-@dirrm share/gnome/help/seahorse-applet/ru
-@dirrm share/gnome/help/seahorse-applet/oc
-@dirrm share/gnome/help/seahorse-applet/it
-@dirrm share/gnome/help/seahorse-applet/fr
-@dirrm share/gnome/help/seahorse-applet/es
-@dirrm share/gnome/help/seahorse-applet/C
-@dirrm share/gnome/help/seahorse-applet
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
-@comment in gnome2-dirs: @dirrm share/gnome-2.0
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@comment in seahorse: @dirrm lib/seahorse
-@comment in nautilus: @dirrm lib/nautilus/extensions-2.0
-@comment in nautilus: @dirrm lib/nautilus
-@comment in gedit: @dirrm lib/gedit-2
-@comment in libbonobo: @dirrm lib/bonobo/servers

@@ -1,2 +1,1 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2008/08/31 06:36:47 scottr Exp $
-@dirrm share/examples/vmware-tools
+@comment $NetBSD: PLIST.common_end,v 1.2 2009/06/14 18:16:11 joerg Exp $

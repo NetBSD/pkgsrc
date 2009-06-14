@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/05/16 17:57:05 kefren Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:16:16 joerg Exp $
 share/examples/webmin/bind8/config
 share/webmin/bind8/CHANGELOG
 share/webmin/bind8/acl_security.pl
@@ -268,7 +268,3 @@ share/webmin/bind8/view_text.cgi
 share/webmin/bind8/unfreeze_zone.cgi
 share/webmin/bind8/whois-servers
 share/webmin/bind8/whois.cgi
-@dirrm share/webmin/bind8/lang
-@dirrm share/webmin/bind8/images
-@dirrm share/webmin/bind8
-@dirrm share/examples/webmin/bind8

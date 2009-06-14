@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/16 16:17:37 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:28 joerg Exp $
 info/gnu-crypto.info
 info/gnu-crypto.info-1
 info/gnu-crypto.info-2
@@ -7,4 +7,3 @@ info/gnu-crypto.info-4
 lib/java/gnu-crypto/gnu-crypto.jar
 lib/java/gnu-crypto/javax-crypto.jar
 lib/java/gnu-crypto/javax-security.jar
-@dirrm lib/java/gnu-crypto

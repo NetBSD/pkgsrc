@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.3 2008/12/26 02:36:02 ahoka Exp $
+@comment $NetBSD: PLIST.Linux,v 1.4 2009/06/14 18:16:07 joerg Exp $
 lib/hal/scripts/linux/hal-dockstation-undock-linux
 lib/hal/scripts/linux/hal-luks-remove-linux
 lib/hal/scripts/linux/hal-luks-setup-linux
@@ -41,4 +41,3 @@ share/examples/hal/90-hal.rules
 share/hal/fdi/policy/10osvendor/10-cpufreq.fdi
 share/hal/fdi/policy/10osvendor/10-imac-backlight.fdi
 share/hal/fdi/policy/10osvendor/10-usbcsr-mice.fdi
-@dirrm lib/hal/scripts/linux

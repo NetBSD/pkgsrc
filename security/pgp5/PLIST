@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/08 22:36:00 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:13:35 joerg Exp $
 bin/pgp5
 bin/pgp_old
 bin/pgpe
@@ -18,4 +18,3 @@ man/man5/pgp.cfg.5
 man/man7/pgp-integration.7
 man/man7/pgp-intro.7
 share/pgp5/language50.txt
-@dirrm share/pgp5
