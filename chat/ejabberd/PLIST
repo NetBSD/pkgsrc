@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:37:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:28:43 joerg Exp $
 ${EJABBERD_EXDIR}/ejabberd.cfg
 ${EJABBERD_EXDIR}/ejabberdctl.cfg
 ${EJABBERD_EXDIR}/inetrc
@@ -203,4 +203,3 @@ share/examples/ejabberd/ejabberd.cfg
 share/examples/ejabberd/ejabberdctl.cfg
 share/examples/ejabberd/inetrc
 share/examples/rc.d/ejabberd
-@unexec ${RMDIR} %D/etc/ejabberd 2>/dev/null || ${TRUE}

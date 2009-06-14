@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:37:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:28:43 joerg Exp $
 bin/BitchX
 bin/BitchX-1.1-final
 bin/scr-bx
@@ -967,4 +967,4 @@ share/bx/translation/SWISS.bz2
 share/bx/translation/UNITED_KINGDOM.bz2
 share/bx/translation/UNITED_KINGDOM_COM.bz2
 share/bx/wserv
-@exec ${MKDIR} %D/lib/bx/plugins
+@pkgdir lib/bx/plugins
