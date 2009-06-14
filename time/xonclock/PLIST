@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/17 20:16:37 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:18:01 joerg Exp $
 bin/xonclock
 man/man1/xonclock.1
 share/xonclock/docs/AUTHORS
@@ -15,6 +15,3 @@ share/xonclock/skins/chrome-128.png
 share/xonclock/skins/chrome-260.png
 share/xonclock/skins/xonclock-a.png
 share/xonclock/skins/xonclock.png
-@dirrm share/xonclock/skins
-@dirrm share/xonclock/docs
-@dirrm share/xonclock

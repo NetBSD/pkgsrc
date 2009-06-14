@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/02 19:51:05 mrg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:31 joerg Exp $
 bin/pgm2txt
 bin/srttool
 bin/subtitle2pgm
@@ -12,5 +12,3 @@ libdata/subtitleripper/gocrfilter_en.sed
 libdata/subtitleripper/gocrfilter_fr.sed
 libdata/subtitleripper/gocrfilter_nl.sed
 libdata/subtitleripper/gocrfilter_none.sed
-@dirrm share/doc/subtitleripper
-@dirrm libdata/subtitleripper

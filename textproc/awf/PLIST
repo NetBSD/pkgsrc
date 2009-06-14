@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/04 08:33:59 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:12 joerg Exp $
 bin/awf
 man/man1/awf.1
 share/awf/common
@@ -10,4 +10,3 @@ share/awf/pass2.base
 share/awf/pass2.man
 share/awf/pass2.ms
 share/awf/pass3
-@dirrm share/awf

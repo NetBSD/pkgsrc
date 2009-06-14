@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/04/28 15:22:00 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:17:59 joerg Exp $
 bin/plan
 libexec/plan/netplan
 libexec/plan/notifier
@@ -45,5 +45,3 @@ share/plan/plan.lang.french
 share/plan/plan.lang.german
 share/plan/plan.lang.italian
 share/plan/plan.lang.spanish
-@dirrm share/plan/holiday
-@dirrm share/plan

@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/17 04:29:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:32 joerg Exp $
 lib/tcl/TclExpat-1.1/pkgIndex.tcl
 lib/tcl/TclExpat-1.1/tclexpat.la
 share/doc/tcl/TclExpat/README
-@dirrm share/doc/tcl/TclExpat
-@dirrm lib/tcl/TclExpat-1.1

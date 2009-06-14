@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/06 15:41:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:19:00 joerg Exp $
 bin/mlvwm
 ${IMAKE_MAN_DIR}/mlvwm.${IMAKE_MAN_SUFFIX}
 share/doc/mlvwm/CONFIGURATION
@@ -11,6 +11,3 @@ share/mlvwm/disk.xpm
 share/mlvwm/label1.xpm
 share/mlvwm/label2.xpm
 share/mlvwm/label3.xpm
-@dirrm share/mlvwm
-@dirrm share/examples/mlvwm
-@dirrm share/doc/mlvwm

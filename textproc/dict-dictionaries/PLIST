@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/27 02:43:47 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:13 joerg Exp $
 share/dictd/web1913.dict.dz
 share/dictd/web1913.index
 share/dictd/wn.dict.dz
@@ -17,4 +17,3 @@ share/dictd/hitchcock.dict.dz
 share/dictd/hitchcock.index
 share/dictd/world95.dict.dz
 share/dictd/world95.index
-@dirrm share/dictd
