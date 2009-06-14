@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2009/05/19 08:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2009/06/14 22:58:04 joerg Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.2.5
 PKGNAME=	spamassassin-3.2.5
@@ -166,9 +166,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${DESTDIR}${EGDIR}
-	set -e ; { for d in ${SA_INSTALLDIRS}; do			\
-		${ECHO} "@dirrm $$d";					\
-	done; } | ${SORT} -r >> ${PLIST_ADD};
 
 # make sure we install the patched version of init.pre but can run the
 # tests with the original file

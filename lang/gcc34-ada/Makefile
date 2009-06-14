@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/09/27 15:46:11 abs Exp $
+# $NetBSD: Makefile,v 1.25 2009/06/14 22:58:02 joerg Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -167,9 +167,6 @@ post-install:
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print	\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"	\
-		>> ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} -type d -print	\
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
 
 .if defined(USE_GCC34)

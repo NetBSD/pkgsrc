@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/11/03 06:56:24 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2009/06/14 22:58:09 joerg Exp $
 #
 
 DISTNAME=	xmlcatmgr-2.2
@@ -24,8 +24,6 @@ CONF_FILES+=	${EGDIR}/catalog.etc.xml ${PKG_SYSCONFDIR}/xml/catalog
 CONF_FILES+=	${EGDIR}/catalog.share.sgml ${PREFIX}/share/sgml/catalog
 CONF_FILES+=	${EGDIR}/catalog.share.xml ${PREFIX}/share/xml/catalog
 REQD_DIRS=	${PREFIX}/share/sgml ${PREFIX}/share/xml
-
-PRINT_PLIST_AWK+=	/^@dirrm share\/(sgml|xml)$$/ { next; }
 
 INSTALLATION_DIRS+=	share/examples/xmlcatmgr
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2009/06/05 22:17:08 zafer Exp $
+# $NetBSD: Makefile,v 1.54 2009/06/14 22:57:58 joerg Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
@@ -69,11 +69,7 @@ post-install:
 # Create PLIST fragment for Perl modules.
 #
 	@cd ${PREFIX} &&						     \
-		(							     \
-		${FIND} lib/${PKGBASE}/perl5 -type f > ${WRKDIR}/PLIST.perl; \
-		${FIND} lib/${PKGBASE}/perl5 -type d | ${SORT} -r |	     \
-			${SED} 's,^,@dirrm ,g' >> ${WRKDIR}/PLIST.perl	     \
-		)
+		${FIND} lib/${PKGBASE}/perl5 -type f > ${WRKDIR}/PLIST.perl
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"

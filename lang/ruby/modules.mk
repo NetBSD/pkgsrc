@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.26 2009/05/16 07:22:04 rillig Exp $
+# $NetBSD: modules.mk,v 1.27 2009/06/14 22:58:03 joerg Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -163,14 +163,4 @@ ruby-simple-install:
 .endif # USE_RUBY_INSTALL
 
 .include "replace.mk"
-
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITEARCHLIB:S|/|\\/|g}$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITELIB:S|/|\\/|g}$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_VENDORARCHLIB:S|/|\\/|g}$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_VENDORLIB:S|/|\\/|g}$$/ \
-			{ next; }
-
 .endif

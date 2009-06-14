@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:54 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/06/14 22:58:10 joerg Exp $
 #
 
 DISTNAME=	album_themes
@@ -35,10 +35,6 @@ pre-install:
 	@${RM} -f ${PLIST_SRC}
 	@${TAR} -tvzf ${DISTDIR}/${DISTFILES} | \
 	 ${SED} -n -e 's,^-.* ,${A_DATADIR}/,p' >> ${PLIST_SRC}
-	@${TAR} -tvzf ${DISTDIR}/${DISTFILES} | \
-	 ${SED} -n -e 's,^d.* ,@dirrm ${A_DATADIR}/,p' | ${SORT} -r >> ${PLIST_SRC}
-	@${ECHO} "@dirrm ${A_DATADIR}/Themes" >> ${PLIST_SRC}
-	@${ECHO} "@dirrm ${A_DATADIR}" >> ${PLIST_SRC}
 
 do-install:
 	cd ${DESTDIR}${PREFIX}/${A_DATADIR}; \

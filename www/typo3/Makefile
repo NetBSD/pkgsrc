@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/02/10 09:35:40 taca Exp $
+# $NetBSD: Makefile,v 1.13 2009/06/14 22:58:10 joerg Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -66,16 +66,10 @@ SUBST_STAGE.conf=	post-configure
 
 PRINT_PLIST_AWK+=	/^${EGDIR:S|/|\\/|g}/ \
 			{ gsub(/${EGDIR:S|/|\\/|g}/, "$${EGDIR}") }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/ \
+PRINT_PLIST_AWK+=	/^${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/ \
 			{ gsub(/${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/, \
 				"$${TYPO3DIR}/$${TYPO3NAME}") }
-PRINT_PLIST_AWK+=	/^@dirrm ${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/ \
-			{ gsub(/${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/, \
-				"$${TYPO3DIR}/$${TYPO3NAME}") }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/ \
-			{ gsub(/${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/, \
-				"$${TYPO3DIR}/$${SITEDIR}") }
-PRINT_PLIST_AWK+=	/^@dirrm ${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/ \
+PRINT_PLIST_AWK+=	/^${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/ \
 			{ gsub(/${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/, \
 				"$${TYPO3DIR}/$${SITEDIR}") }
 

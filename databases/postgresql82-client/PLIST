@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:43:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 22:57:59 joerg Exp $
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/af/LC_MESSAGES/libpq.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/initdb.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libpq.mo
@@ -1546,4 +1546,3 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/xplang.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/xtypes.html
 ${PG_SUBPREFIX}share/postgresql/pg_service.conf.sample
 ${PG_SUBPREFIX}share/postgresql/psqlrc.sample
-${PG_DIRRM_SUBPREFIX}

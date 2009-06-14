@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2009/06/10 14:49:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.19 2009/06/14 22:58:09 joerg Exp $
 #
 # used by audio/gnome-vfs-cdda/Makefile
 # used by net/gnome-vfs-dns-sd/Makefile
@@ -87,12 +87,6 @@ SUBST_SED.libs=		-e 's|../libgnomevfs/libgnomevfs-2.la|${BUILDLINK_PREFIX.gnome-
 
 BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=${GNOME_VFS_VERSION}
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-
-PRINT_PLIST_AWK+=	/^@dirrm lib\/gnome-vfs-2.0\/modules$$/ \
-				{ print "@comment in gnome-vfs: " $$0; next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/examples\/gnome-vfs-2.0$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/examples\/gnome-vfs-2.0\/modules$$/ \
-				{ print "@comment in gnome-vfs: " $$0; next; }
 
 INSTALLATION_DIRS+=	lib/gnome-vfs-2.0/modules
 

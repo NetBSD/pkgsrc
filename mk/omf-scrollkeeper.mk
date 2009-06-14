@@ -1,4 +1,4 @@
-# $NetBSD: omf-scrollkeeper.mk,v 1.1 2007/11/12 20:45:52 drochner Exp $
+# $NetBSD: omf-scrollkeeper.mk,v 1.2 2009/06/14 22:58:05 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # OMF files. It redirects callers to compatibility scripts provided
@@ -30,10 +30,6 @@ DEINSTALL_TEMPLATES+= \
 FILES_SUBST+=		SCROLLKEEPER_DATADIR=${SCROLLKEEPER_DATADIR:Q}
 FILES_SUBST+=		SCROLLKEEPER_REBUILDDB=${SCROLLKEEPER_REBUILDDB:Q}
 FILES_SUBST+=		SCROLLKEEPER_UPDATEDB=${SCROLLKEEPER_UPDATEDB:Q}
-
-PRINT_PLIST_AWK+=	/^@dirrm share\/omf$$/ \
-				{ print "@comment in rarian: " $$0; \
-				  next; }
 
 .include "../../textproc/rarian/buildlink3.mk"
 

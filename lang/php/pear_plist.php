@@ -1,5 +1,5 @@
 <?php
-# $NetBSD: pear_plist.php,v 1.6 2009/01/19 19:55:02 abs Exp $
+# $NetBSD: pear_plist.php,v 1.7 2009/06/14 22:58:02 joerg Exp $
 # Parses package XML file and outputs appropriate PLIST
 
 $PEAR_LIB = getenv('PEAR_LIB');
@@ -54,16 +54,5 @@ foreach($info['filelist'] as $f => $v) {
 
 	while(($f = dirname($f)) && $f != '.')
 		$dirrm["{$prefix}{$f}"] = true;
-}
-
-# output @dirrm directives, in reverse order so that deeper
-# directories are removed first
-$dirrm = array_keys($dirrm);
-rsort($dirrm);
-foreach($dirrm as $dir) {
-	$fulldir = "{$PEAR_LIB}/$dir";
-	if ($PEAR_DIRRM_EXCLUDE && substr($fulldir, 0, strlen($PEAR_DIRRM_EXCLUDE)) == $PEAR_DIRRM_EXCLUDE)
-		continue;
-	echo "@dirrm $fulldir\n";
 }
 ?>

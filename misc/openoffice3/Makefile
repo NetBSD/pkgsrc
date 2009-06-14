@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/05/10 03:41:22 hira Exp $
+# $NetBSD: Makefile,v 1.33 2009/06/14 22:58:05 joerg Exp $
 #
 
 OO_VER=			3.1.0
@@ -185,9 +185,7 @@ do-install:
 post-install:
 	cd ${DESTDIR}${PREFIX} &&				\
 	find lib/${OO_RELEASE} \! -type d -print |		\
-	sort > ${WRKDIR}/PLIST &&				\
-	find lib/${OO_RELEASE} -type d -print | sort -r |	\
-	awk '{print("@dirrm "$$1)}' >> ${WRKDIR}/PLIST
+	sort > ${WRKDIR}/PLIST
 
 # OS specific Makefile
 .if exists(Makefile.${OPSYS})

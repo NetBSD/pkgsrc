@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.2 2007/03/07 12:51:17 jmmv Exp $
+# $NetBSD: package.mk,v 1.3 2009/06/14 22:58:02 joerg Exp $
 #
 
 PKGNAME=	hugs98-${DISTNAME}
@@ -9,10 +9,6 @@ COMMENT+=	(Hugs package)
 HUGS_RUN=	${BUILDLINK_PREFIX.hugs98}/bin/runhugs
 HUGS_CPPHS=	${BUILDLINK_PREFIX.hugs98}/bin/cpphs-hugs
 HUGS_HSC2HS=	${BUILDLINK_PREFIX.hugs98}/bin/hsc2hs-hugs
-
-PRINT_PLIST_AWK+=	/^@dirrm lib\/hugs\/packages$$/ \
-				{ print "@comment in hugs: " $$0; next }
-
 
 .include "../../lang/hugs/buildlink3.mk"
 

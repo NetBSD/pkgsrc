@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: gencompat.sh,v 1.1 2007/12/31 19:52:19 jlam Exp $
+# $NetBSD: gencompat.sh,v 1.2 2009/06/14 22:58:00 joerg Exp $
 #
 # This script generates the distfiles and PLISTs for the NetBSD compat*
 # packages.
@@ -94,30 +94,16 @@ for arch in $archlist; do
 		[ -d $compat_extras_pkgdir ] || mkdir -p $compat_extras_pkgdir
 
 		# Generate PLISTs and distfiles.
-		( echo '@comment $NetBSD: gencompat.sh,v 1.1 2007/12/31 19:52:19 jlam Exp $'
+		( echo '@comment $NetBSD: gencompat.sh,v 1.2 2009/06/14 22:58:00 joerg Exp $'
 		  find $compat_dir \! -type d | sort |
 		  sed 's,'$compat_dir'/,${EMULSUBDIRSLASH},'
-		  find $compat_dir -type d | sort -r |
-		  sed 's,'$compat_dir'/,@dirrm ${EMULSUBDIRSLASH},' |
-		  while read d; do
-			case $d in
-			[@$]*)	echo $d ;;
-			esac
-		  done
 		) > $compat_pkgdir/PLIST.$arch
 		tar cf $compat_pkgdir/$compat_dir.tar $compat_dir
 		bzip2 -9 $compat_pkgdir/$compat_dir.tar
 
-		( echo '@comment $NetBSD: gencompat.sh,v 1.1 2007/12/31 19:52:19 jlam Exp $'
+		( echo '@comment $NetBSD: gencompat.sh,v 1.2 2009/06/14 22:58:00 joerg Exp $'
 		  find $compat_extras_dir \! -type d | sort |
 		  sed 's,'$compat_extras_dir'/,${EMULSUBDIRSLASH},'
-		  find $compat_extras_dir -type d | sort -r |
-		  sed 's,'$compat_extras_dir'/,@dirrm ${EMULSUBDIRSLASH},' |
-		  while read d; do
-			case $d in
-			[@$]*)	echo $d ;;
-			esac
-		  done
 		) > $compat_extras_pkgdir/PLIST.$arch
 		tar cf $compat_extras_pkgdir/$compat_extras_dir.tar $compat_extras_dir
 		bzip2 -9 $compat_extras_pkgdir/$compat_extras_dir.tar

@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.9 2006/12/05 21:00:12 minskim Exp $
+# $NetBSD: dirs.mk,v 1.10 2009/06/14 22:58:08 joerg Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -48,11 +48,6 @@ TEXMF_DIRS+=	web2c
 
 .if defined(_USE_TEXMF_DIRS) && !empty(_USE_TEXMF_DIRS)
 DEPENDS+=	texmf-dirs>=${_USE_TEXMF_DIRS}:../../print/texmf-dirs
-
-.  for dir in ${TEXMF_DIRS}
-PRINT_PLIST_AWK+=	/^@dirrm \$${PKG_LOCALTEXMFPREFIX}\/${dir:S|/|\\/|g}$$/ \
-			{ print "@comment In texmf-dirs: " $$0; next; }
-.  endfor
 .endif
 
 .endif			# !defined(DIRS_TEXMF_MK)

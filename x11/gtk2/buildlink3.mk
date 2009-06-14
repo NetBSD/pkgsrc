@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2009/03/20 19:25:42 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2009/06/14 22:58:11 joerg Exp $
 
 BUILDLINK_TREE+=	gtk2
 
@@ -8,13 +8,6 @@ GTK2_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.4.0
 BUILDLINK_ABI_DEPENDS.gtk2+=	gtk2+>=2.8.17nb1
 BUILDLINK_PKGSRCDIR.gtk2?=	../../x11/gtk2
-
-PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/(engines|filesystems|immodules|loaders|modules)$$/ \
-				{ print "@comment in gtk2: " $$0; next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.10.0$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.10.0\/(engines|filesystems|immodules|loaders|modules|printbackends)$$/ \
-				{ print "@comment in gtk2: " $$0; next; }
 
 .include "../../mk/bsd.fast.prefs.mk"
 

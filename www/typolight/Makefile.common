@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2009/05/30 16:51:06 taca Exp $
+# $NetBSD: Makefile.common,v 1.13 2009/06/14 22:58:10 joerg Exp $
 #
 # used by www/typolight26/Makefile
 # used by www/typolight27/Makefile
@@ -17,21 +17,13 @@ MESSAGE_SUBST+=	TL_VER=${TL_VER}
 PLIST_SUBST+=	TL_DOCDIR=${TL_DOCDIR:Q} TL_EGDIR=${TL_EGDIR:Q} \
 		TL_WEBDIR=${TL_WEBDIR:Q}
 
-PRINT_PLIST_AWK+=	/@dirrm ${TL_WEBDIR:S|/|\\/|g}\/templates$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/@dirrm ${TL_WEBDIR:S|/|\\/|g}\/system\/(tmp|log)$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/@dirrm ${TL_WEBDIR:S|/|\\/|g}\/system$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/@dirrm ${TL_WEBDIR:S|/|\\/|g}$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${TL_WEBDIR:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${TL_WEBDIR:S|/|\\/|g}/ \
 			{ gsub(/${TL_WEBDIR:S|/|\\/|g}/, "$${TL_WEBDIR}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${TL_DOCDIR:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${TL_DOCDIR:S|/|\\/|g}/ \
 			{ gsub(/${TL_DOCDIR:S|/|\\/|g}/, "$${TL_DOCDIR}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${TL_EGDIR:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${TL_EGDIR:S|/|\\/|g}/ \
 			{ gsub(/${TL_EGDIR:S|/|\\/|g}/, "$${TL_EGDIR}"); \
 			print; next; }
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2009/05/18 08:26:24 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2009/06/14 22:57:59 joerg Exp $
 #
 
 .include "../../devel/GConf/Makefile.common"
@@ -17,10 +17,6 @@ EGDIR=		${PREFIX}/share/examples/GConf
 CONF_FILES=	${EGDIR}/path ${PKG_SYSCONFDIR}/2/path
 CONF_FILES+=	${EGDIR}/org.gnome.GConf.Defaults.conf \
 		${PKG_SYSCONFBASEDIR}/dbus-1/system.d/org.gnome.GConf.Defaults.conf
-
-PRINT_PLIST_AWK+=	/^@dirrm (include\/gconf|lib\/GConf|share\/gconf)$$/ \
-				{ print "@unexec $${RMDIR} -p %D/" $$2 \
-				        " 2>/dev/null || $${TRUE}"; next}
 
 # XXX: We need to use XML_CATALOGS here to register the installed DTD.
 #      But we have to wait until a public identifier is choosen for it.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2009/02/25 23:39:36 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2009/06/14 22:58:06 joerg Exp $
 #
 # used by net/mldonkey/Makefile
 # used by net/mldonkey-gui/Makefile
@@ -29,10 +29,6 @@ MAKE_ENV+=		BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread}
 CONFIGURE_ARGS+=	--enable-pthread-lib
 
 UNLIMIT_RESOURCES=	stacksize
-
-PRINT_PLIST_AWK+=	/^@dirrm libexec\/mldonkey$$/ \
-				{ print "@unexec $${RMDIR} %D/libexec/mldonkey"\
-				  " >/dev/null 2>&1 || $${TRUE}"; next }
 
 # needs 3.10.1 or newer to work correctly on NetBSD/amd64
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10.1

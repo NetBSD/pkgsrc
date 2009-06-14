@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/03/04 16:44:28 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2009/06/14 22:58:09 joerg Exp $
 #
 
 DISTNAME=	docbook-simple-1.1
@@ -28,11 +28,6 @@ MISCFILES=	sdocbook.css
 XML_CATALOGS=	${DTDDIR}/catalog.xml
 XML_ENTRIES=	rewriteSystem http://www.oasis-open.org/docbook/xml/simple/1.1 \
 		${DTDDIR}
-
-# share/xml/docbook is shared with docbook-xml.
-PRINT_PLIST_AWK+=	/^@dirrm share\/xml\/docbook$$/ \
-			{ print "@unexec $${RMDIR} %D/share/xml/docbook" \
-			  " >/dev/null 2>&1"; next }
 
 do-install:
 	${INSTALL_DATA_DIR} ${DTDDIR}

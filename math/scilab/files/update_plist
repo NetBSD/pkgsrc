@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: update_plist,v 1.1 2007/03/23 22:08:56 dmcmahill Exp $
+# $NetBSD: update_plist,v 1.2 2009/06/14 22:58:04 joerg Exp $
 #
 
 # The scilab install uses tar which preserves times and makes
@@ -13,9 +13,3 @@ grep "^bin" PLIST >> plist.new
 
 find /usr/pkg/lib/scilab-4.1 -type f -print | sort | sed 's;/usr/pkg/lib/scilab-4.1;lib/${PKGNAME};g' >> plist.new
 find /usr/pkg/share/doc/scilab-4.1 -type f -print | sort | sed 's;/usr/pkg/share/doc/scilab-4.1;share/doc/${PKGNAME};g' >> plist.new
-
-find /usr/pkg/lib/scilab-4.1 -type d -print | sort -r | sed 's;/usr/pkg/lib/scilab-4.1;@dirrm lib/${PKGNAME};g' >> plist.new
-echo '@dirrm lib/${PKGNAME}' >> plist.new
-
-find /usr/pkg/share/doc/scilab-4.1 -type d -print | sort -r | sed 's;/usr/pkg/share/doc/scilab-4.1;@dirrm share/doc/${PKGNAME};g' >> plist.new
-echo '@dirrm share/doc/${PKGNAME}' >> plist.new

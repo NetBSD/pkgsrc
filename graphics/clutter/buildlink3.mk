@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:37 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/06/14 22:58:01 joerg Exp $
 #
 
 BUILDLINK_TREE+=	clutter
@@ -8,9 +8,6 @@ CLUTTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clutter+=	clutter>=0.8.0
 BUILDLINK_PKGSRCDIR.clutter?=	../../graphics/clutter
-
-PRINT_PLIST_AWK+=	/^@dirrm include\/clutter-0.8$$/ \
-				{ print "@comment in clutter: " $$0; next; }
 
 pkgbase := clutter
 .include "../../mk/pkg-build-options.mk"

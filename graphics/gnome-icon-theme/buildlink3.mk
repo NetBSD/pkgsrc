@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:24:39 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/06/14 22:58:01 joerg Exp $
 
 BUILDLINK_TREE+=	gnome-icon-theme
 
@@ -13,16 +13,6 @@ BUILDLINK_PKGSRCDIR.gnome-icon-theme?=	../../graphics/gnome-icon-theme
 # of packages that use gnome-icon-theme and are executed during build.
 #
 USE_TOOLS+=	perl
-
-.  include "../../mk/bsd.fast.prefs.mk"
-
-dirs!=	${GREP} "^@dirrm" ${.CURDIR}/../../graphics/gnome-icon-theme/PLIST | \
-	${CUT} -d ' ' -f 2
-.  for d in ${dirs}
-PRINT_PLIST_AWK+=	/^@dirrm ${d:S/\//\\\//g}$$/ \
-			{ print "@comment in gnome-icon-theme: " $$0; next; }
-.  endfor
-.  undef dirs
 .endif # GNOME_ICON_THEME_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gnome-icon-theme

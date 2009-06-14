@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2009/05/16 07:22:03 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2009/06/14 22:58:01 joerg Exp $
 
 BUILDLINK_TREE+=	hicolor-icon-theme
 
@@ -10,15 +10,6 @@ BUILDLINK_ABI_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.9nb1
 BUILDLINK_PKGSRCDIR.hicolor-icon-theme?=../../graphics/hicolor-icon-theme
 
 .include "../../mk/bsd.fast.prefs.mk"
-
-dirs!=	${GREP} "^@dirrm" ${.CURDIR}/../../graphics/hicolor-icon-theme/PLIST | \
-	${CUT} -d ' ' -f 2
-.  for d in ${dirs}
-PRINT_PLIST_AWK+=	/^@exec ..MKDIR. %D\/${d:S/\//\\\//g}$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${d:S/\//\\\//g}$$/ \
-			{ print "@comment in hicolor-icon-theme: " $$0; next; }
-.  endfor
-.  undef dirs
 
 .if !defined(HICOLOR_ICON_THEME_DEPEND_ONLY)
 EVAL_PREFIX+=		PREFIX.gtk2=gtk2+

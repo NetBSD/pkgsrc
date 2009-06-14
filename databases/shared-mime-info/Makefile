@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/02/23 09:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2009/06/14 22:57:59 joerg Exp $
 #
 
 DISTNAME=	shared-mime-info-0.60
@@ -30,8 +30,6 @@ FILES_SUBST+=		UPDATE_MIMEDB="${PREFIX}/bin/update-mime-database"
 
 PRINT_PLIST_AWK+=	/^share\/mime\/packages/ { print; next; }
 PRINT_PLIST_AWK+=	/^share\/mime/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/mime\/packages$$/ { print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/mime/ { next; }
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
