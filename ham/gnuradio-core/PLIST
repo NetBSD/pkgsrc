@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/11/13 16:59:22 wulf Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:00:33 joerg Exp $
 bin/microtune.py
 include/gnuradio/ccomplex_dotprod_generic.h
 include/gnuradio/ccomplex_dotprod_x86.h
@@ -730,13 +730,3 @@ ${PYSITELIB}/gnuradio/window.py
 ${PYSITELIB}/gnuradio/window.pyc
 ${PYSITELIB}/gnuradio/window.pyo
 share/examples/gnuradio/conf.d/gnuradio-core.conf
-@dirrm share/examples/gnuradio/conf.d
-@dirrm share/examples/gnuradio
-@dirrm ${PYSITELIB}/gnuradio/gruimpl
-@dirrm ${PYSITELIB}/gnuradio/gru
-@dirrm ${PYSITELIB}/gnuradio/gr
-@dirrm ${PYSITELIB}/gnuradio/blksimpl
-@dirrm ${PYSITELIB}/gnuradio/blks
-@dirrm ${PYSITELIB}/gnuradio
-@dirrm include/gnuradio/swig
-@dirrm include/gnuradio
