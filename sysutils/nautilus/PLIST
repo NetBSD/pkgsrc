@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2009/06/14 18:16:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.31 2009/06/14 21:28:48 joerg Exp $
 bin/nautilus
 bin/nautilus-autorun-software
 bin/nautilus-connect-server
@@ -213,4 +213,3 @@ share/pixmaps/nautilus/emblems.png
 share/pixmaps/nautilus/erase.png
 share/pixmaps/nautilus/knob.png
 share/pixmaps/nautilus/thumbnail_frame.png
-@unexec ${MKDIR} %D/lib/nautilus/extensions-2.0 2>/dev/null || ${TRUE}
