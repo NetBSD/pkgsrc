@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/10/13 11:55:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:30 joerg Exp $
 share/doc/p5-CGI/cgi-lib_porting.html
 share/doc/p5-CGI/cgi_docs.html
 share/doc/p5-CGI/examples/caution.xbm
@@ -37,5 +37,3 @@ share/doc/p5-CGI/examples/save_state.txt
 share/doc/p5-CGI/examples/tryit.cgi
 share/doc/p5-CGI/examples/tryit.txt
 share/doc/p5-CGI/examples/wilogo.gif
-@dirrm share/doc/p5-CGI/examples
-@dirrm share/doc/p5-CGI

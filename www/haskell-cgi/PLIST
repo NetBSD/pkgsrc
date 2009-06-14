@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:49 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:22 joerg Exp $
 share/examples/hugs-cgi/Counter.cgi
 share/examples/hugs-cgi/DownloadPapers.cgi
 share/examples/hugs-cgi/EnvPassed.cgi
@@ -8,5 +8,3 @@ share/examples/hugs-cgi/HelloPlain.cgi
 share/examples/hugs-cgi/README
 share/examples/hugs-cgi/TODO
 share/hugs/lib/CGI.lhs
-@unexec ${RMDIR} %D/share/hugs/lib 2>/dev/null || ${TRUE}
-@dirrm share/examples/hugs-cgi

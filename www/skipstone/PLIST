@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:00:35 joerg Exp $
 bin/skipdownload
 bin/skipstone
 bin/skipstone-bin
@@ -28,6 +28,3 @@ share/skipstone/pixmaps/default/stop.png
 share/skipstone/pixmaps/default/tab_loading.gif
 share/skipstone/pixmaps/default/tab_loading_alternative.gif
 share/skipstone/pixmaps/default/up.png
-@dirrm share/skipstone/pixmaps/default
-@dirrm share/skipstone/pixmaps
-@dirrm share/skipstone

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/08/23 09:56:55 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:00:36 joerg Exp $
 bin/swish-config
 bin/swish-e
 bin/swish-filter-test
@@ -102,18 +102,3 @@ share/swish-e/templates/markup.css
 share/swish-e/templates/page_layout
 share/swish-e/templates/search.tt
 share/swish-e/templates/style.css
-@dirrm share/swish-e/templates
-@dirrm share/swish-e
-@dirrm share/examples/swish-e/stopwords
-@dirrm share/examples/swish-e/prog-bin
-@dirrm share/examples/swish-e/filter-bin
-@dirrm share/examples/swish-e/filters
-@dirrm share/examples/swish-e
-@dirrm share/doc/swish-e/pod
-@dirrm share/doc/swish-e/html
-@dirrm share/doc/swish-e/examples
-@dirrm share/doc/swish-e
-@dirrm lib/swish-e/perl/SWISH/Filters
-@dirrm lib/swish-e/perl/SWISH
-@dirrm lib/swish-e/perl
-@dirrm lib/swish-e

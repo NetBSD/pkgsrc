@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/11 09:12:26 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:29 joerg Exp $
 sbin/nginx
 share/examples/nginx/conf/fastcgi_params
 share/examples/nginx/conf/koi-utf
@@ -9,6 +9,3 @@ share/examples/nginx/conf/win-utf
 share/examples/nginx/html/50x.html
 share/examples/nginx/html/index.html
 share/examples/rc.d/nginx
-@dirrm share/examples/nginx/html
-@dirrm share/examples/nginx/conf
-@dirrm share/examples/nginx

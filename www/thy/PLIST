@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/08 05:03:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:37 joerg Exp $
 info/thy.info
 man/man7/thy-auth.7
 man/man8/thy.8
@@ -21,4 +21,3 @@ share/examples/thy/http501.html
 share/examples/thy/http503.html
 share/examples/thy/http505.html
 share/examples/thy/thyrc
-@dirrm share/examples/thy
