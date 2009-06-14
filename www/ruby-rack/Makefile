@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/09/15 08:31:47 taca Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/14 17:58:55 minskim Exp $
 
-DISTNAME=	rack-0.4.0
+DISTNAME=	rack-1.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 
