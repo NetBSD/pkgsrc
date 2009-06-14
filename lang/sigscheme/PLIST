@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/29 13:11:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:41 joerg Exp $
 bin/sscm
 include/sigscheme/config-old.h
 include/sigscheme/config.h
@@ -33,7 +33,3 @@ share/sigscheme/lib/srfi-69.scm
 share/sigscheme/lib/srfi-9.scm
 share/sigscheme/lib/srfi-95.scm
 share/sigscheme/lib/unittest.scm
-@dirrm share/sigscheme/lib
-@dirrm share/sigscheme
-@dirrm share/doc/sigscheme
-@dirrm include/sigscheme

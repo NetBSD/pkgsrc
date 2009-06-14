@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/13 21:37:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:36 joerg Exp $
 bin/bchscheme
 bin/scheme
 lib/mit-scheme/SRC/edwin/abbrev.bci
@@ -611,18 +611,3 @@ lib/mit-scheme/xml/xml-struct.com
 lib/mit-scheme/xml/xml-unx.pkd
 libexec/bchscheme
 libexec/scheme
-@dirrm lib/mit-scheme/xml
-@dirrm lib/mit-scheme/star-parser
-@dirrm lib/mit-scheme/sos
-@dirrm lib/mit-scheme/options
-@dirrm lib/mit-scheme/imail
-@dirrm lib/mit-scheme/edwin/info
-@dirrm lib/mit-scheme/edwin/etc
-@dirrm lib/mit-scheme/edwin/autoload
-@dirrm lib/mit-scheme/edwin
-@dirrm lib/mit-scheme/doc
-@dirrm lib/mit-scheme/cref
-@dirrm lib/mit-scheme/SRC/runtime
-@dirrm lib/mit-scheme/SRC/edwin
-@dirrm lib/mit-scheme/SRC
-@dirrm lib/mit-scheme

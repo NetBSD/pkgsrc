@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/19 14:52:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:08:10 joerg Exp $
 ${RUBY_VENDORARCHLIB}/ming/mingc.${RUBY_DLEXT}
 ${RUBY_VENDORLIB}/ming/ming.rb
 ${RUBY_EG}/ming/README.examples
@@ -12,6 +12,3 @@ ${RUBY_EG}/ming/mousetrack.rb
 ${RUBY_EG}/ming/movieclip.rb
 ${RUBY_EG}/ming/newbutton.rb
 ${RUBY_EG}/ming/shape.rb
-@dirrm ${RUBY_VENDORARCHLIB}/ming
-@dirrm ${RUBY_VENDORLIB}/ming
-@dirrm ${RUBY_EG}/ming

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/26 10:19:45 itojun Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:44 joerg Exp $
 bin/utilisp
 lib/utilisp/cmpdef.h
 lib/utilisp/config.h
@@ -25,6 +25,3 @@ lib/utilisp/lisplib/trace.l
 lib/utilisp/lispsys.l
 lib/utilisp/lispsys.main.l
 lib/utilisp/utilisp.il
-@dirrm lib/utilisp/lisplib
-@dirrm lib/utilisp/lispcomp
-@dirrm lib/utilisp

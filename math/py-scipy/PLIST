@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/19 22:14:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:48 joerg Exp $
 ${PYSITELIB}/scipy/DEVELOPERS.txt
 ${PYSITELIB}/scipy/FORMAT_GUIDELINES.txt
 ${PYSITELIB}/scipy/INSTALL.txt
@@ -963,60 +963,3 @@ ${PYSITELIB}/scipy/weave/weave_version.pyo
 ${PYSITELIB}/scipy/weave/wx_spec.py
 ${PYSITELIB}/scipy/weave/wx_spec.pyc
 ${PYSITELIB}/scipy/weave/wx_spec.pyo
-@dirrm ${PYSITELIB}/scipy/weave/tests
-@dirrm ${PYSITELIB}/scipy/weave/scxx
-@dirrm ${PYSITELIB}/scipy/weave/examples
-@dirrm ${PYSITELIB}/scipy/weave/doc
-@dirrm ${PYSITELIB}/scipy/weave/blitz/blitz/meta
-@dirrm ${PYSITELIB}/scipy/weave/blitz/blitz/gnu
-@dirrm ${PYSITELIB}/scipy/weave/blitz/blitz/generate
-@dirrm ${PYSITELIB}/scipy/weave/blitz/blitz/array
-@dirrm ${PYSITELIB}/scipy/weave/blitz/blitz
-@dirrm ${PYSITELIB}/scipy/weave/blitz
-@dirrm ${PYSITELIB}/scipy/weave
-@dirrm ${PYSITELIB}/scipy/stsci
-@dirrm ${PYSITELIB}/scipy/stats/tests
-@dirrm ${PYSITELIB}/scipy/stats
-@dirrm ${PYSITELIB}/scipy/special/tests
-@dirrm ${PYSITELIB}/scipy/special
-@dirrm ${PYSITELIB}/scipy/sparse/tests
-@dirrm ${PYSITELIB}/scipy/sparse
-@dirrm ${PYSITELIB}/scipy/signal/tests
-@dirrm ${PYSITELIB}/scipy/signal
-@dirrm ${PYSITELIB}/scipy/sandbox
-@dirrm ${PYSITELIB}/scipy/optimize/tests
-@dirrm ${PYSITELIB}/scipy/optimize
-@dirrm ${PYSITELIB}/scipy/odr/tests
-@dirrm ${PYSITELIB}/scipy/odr
-@dirrm ${PYSITELIB}/scipy/ndimage/tests
-@dirrm ${PYSITELIB}/scipy/ndimage
-@dirrm ${PYSITELIB}/scipy/misc/tests/data
-@dirrm ${PYSITELIB}/scipy/misc/tests
-@dirrm ${PYSITELIB}/scipy/misc
-@dirrm ${PYSITELIB}/scipy/maxentropy/tests
-@dirrm ${PYSITELIB}/scipy/maxentropy/examples
-@dirrm ${PYSITELIB}/scipy/maxentropy
-@dirrm ${PYSITELIB}/scipy/linsolve/umfpack/tests
-@dirrm ${PYSITELIB}/scipy/linsolve/umfpack
-@dirrm ${PYSITELIB}/scipy/linsolve
-@dirrm ${PYSITELIB}/scipy/linalg/tests
-@dirrm ${PYSITELIB}/scipy/linalg
-@dirrm ${PYSITELIB}/scipy/lib/lapack/tests
-@dirrm ${PYSITELIB}/scipy/lib/lapack
-@dirrm ${PYSITELIB}/scipy/lib/blas/tests
-@dirrm ${PYSITELIB}/scipy/lib/blas
-@dirrm ${PYSITELIB}/scipy/lib
-@dirrm ${PYSITELIB}/scipy/io/tests/data
-@dirrm ${PYSITELIB}/scipy/io/tests
-@dirrm ${PYSITELIB}/scipy/io/examples
-@dirrm ${PYSITELIB}/scipy/io/docs
-@dirrm ${PYSITELIB}/scipy/io
-@dirrm ${PYSITELIB}/scipy/interpolate/tests
-@dirrm ${PYSITELIB}/scipy/interpolate
-@dirrm ${PYSITELIB}/scipy/integrate/tests
-@dirrm ${PYSITELIB}/scipy/integrate
-@dirrm ${PYSITELIB}/scipy/fftpack/tests
-@dirrm ${PYSITELIB}/scipy/fftpack
-@dirrm ${PYSITELIB}/scipy/cluster/tests
-@dirrm ${PYSITELIB}/scipy/cluster
-@dirrm ${PYSITELIB}/scipy

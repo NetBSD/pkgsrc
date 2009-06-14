@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:51 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:31 joerg Exp $
 etc/ispman/ispman.ldif
 etc/ispman/ispman.conf.default
 etc/ispman/templates/domain.ldif.template.default
@@ -59,13 +59,3 @@ share/ispman/htdocs/index.html
 share/ispman/htdocs/ispman_menu.html
 share/ispman/htdocs/js/list.js
 share/ispman/htdocs/title.html
-@dirrm share/ispman/htdocs/js
-@dirrm share/ispman/htdocs/gfx/but
-@dirrm share/ispman/htdocs/gfx
-@dirrm share/ispman/htdocs
-@dirrm share/ispman/cgi-bin/tmpl
-@dirrm share/ispman/cgi-bin
-@dirrm share/ispman/bin
-@dirrm share/ispman
-@dirrm etc/ispman/templates
-@dirrm etc/ispman

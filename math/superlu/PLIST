@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/28 01:14:03 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:49 joerg Exp $
 include/superlu/Cnames.h
 include/superlu/colamd.h
 include/superlu/csp_defs.h
@@ -11,5 +11,3 @@ include/superlu/util.h
 include/superlu/zsp_defs.h
 lib/libsuperlu.a
 share/doc/superlu/ug.ps
-@dirrm share/doc/superlu
-@dirrm include/superlu

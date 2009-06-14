@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:06 joerg Exp $
 bin/HandBrakeCLI
 bin/ghb
 share/applications/ghb.desktop
@@ -9,7 +9,3 @@ share/doc/ghb/INSTALL
 share/doc/ghb/NEWS
 share/doc/ghb/README
 share/icons/hicolor/128x128/apps/hb-icon.png
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/ghb
-@comment in xdg-dirs: @dirrm share/applications

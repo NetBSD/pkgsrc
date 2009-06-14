@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/06 18:45:32 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:41 joerg Exp $
 bin/inisqueak
 bin/squeak
 lib/squeak/3.9-8/AioPlugin
@@ -28,6 +28,3 @@ share/doc/squeak/LICENSE
 share/doc/squeak/README.Contributing
 share/doc/squeak/README.Keyboard
 share/doc/squeak/README.Sound
-@dirrm share/doc/squeak
-@dirrm lib/squeak/3.9-8
-@dirrm lib/squeak

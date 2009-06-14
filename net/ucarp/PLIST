@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:46 joerg Exp $
 sbin/ucarp
 share/doc/ucarp/AUTHORS
 share/doc/ucarp/COPYING
@@ -8,5 +8,3 @@ share/examples/ucarp/vip-down.sh
 share/examples/ucarp/vip-up.sh
 share/locale/en@boldquot/LC_MESSAGES/ucarp.mo
 share/locale/en@quot/LC_MESSAGES/ucarp.mo
-@dirrm share/examples/ucarp
-@dirrm share/doc/ucarp

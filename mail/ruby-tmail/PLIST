@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/13 05:25:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:04:42 joerg Exp $
 ${GEM_HOME}/cache/tmail-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGES
@@ -169,29 +169,3 @@ ${GEM_LIBDIR}/work/script/rdoc
 ${GEM_LIBDIR}/work/script/setup
 ${GEM_LIBDIR}/work/script/test
 ${GEM_HOME}/specifications/tmail-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/work/script
-@dirrm ${GEM_LIBDIR}/work
-@dirrm ${GEM_LIBDIR}/test/fixtures
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/site/reference
-@dirrm ${GEM_LIBDIR}/site/quickstart
-@dirrm ${GEM_LIBDIR}/site/outdated/rdd
-@dirrm ${GEM_LIBDIR}/site/outdated/doc.ja
-@dirrm ${GEM_LIBDIR}/site/outdated
-@dirrm ${GEM_LIBDIR}/site/log
-@dirrm ${GEM_LIBDIR}/site/js
-@dirrm ${GEM_LIBDIR}/site/img
-@dirrm ${GEM_LIBDIR}/site/download
-@dirrm ${GEM_LIBDIR}/site/css
-@dirrm ${GEM_LIBDIR}/site/contributing
-@dirrm ${GEM_LIBDIR}/site
-@dirrm ${GEM_LIBDIR}/sample/data
-@dirrm ${GEM_LIBDIR}/sample
-@dirrm ${GEM_LIBDIR}/meta
-@dirrm ${GEM_LIBDIR}/log
-@dirrm ${GEM_LIBDIR}/lib/tmail
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/tmailscanner/tmail
-@dirrm ${GEM_LIBDIR}/ext/tmailscanner
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}

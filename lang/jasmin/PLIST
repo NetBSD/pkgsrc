@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/22 13:51:26 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:34 joerg Exp $
 bin/jasmin
 jasmin/COPYING
 jasmin/README
@@ -444,33 +444,3 @@ jasmin/src/jasmin/parser.cup
 jasmin/src/jasmin/parser.java
 jasmin/src/jasmin/sym.java
 jasmin/src/jasmin/var_token.java
-@dirrm jasmin/src/jasmin
-@dirrm jasmin/src
-@dirrm jasmin/lib/jas/tests
-@dirrm jasmin/lib/jas/src/scm/autogen
-@dirrm jasmin/lib/jas/src/scm
-@dirrm jasmin/lib/jas/src/jas
-@dirrm jasmin/lib/jas/src
-@dirrm jasmin/lib/jas/scm
-@dirrm jasmin/lib/jas/reference/scm
-@dirrm jasmin/lib/jas/reference/jas/images
-@dirrm jasmin/lib/jas/reference/jas
-@dirrm jasmin/lib/jas/reference
-@dirrm jasmin/lib/jas/examples
-@dirrm jasmin/lib/jas
-@dirrm jasmin/lib/cup/simple_calc
-@dirrm jasmin/lib/cup/java_cup/runtime
-@dirrm jasmin/lib/cup/java_cup
-@dirrm jasmin/lib/cup
-@dirrm jasmin/lib
-@dirrm jasmin/examples
-@dirrm jasmin/doc/api/images
-@dirrm jasmin/doc/api
-@dirrm jasmin/doc
-@dirrm jasmin/classes/java_cup/runtime
-@dirrm jasmin/classes/java_cup
-@dirrm jasmin/classes/jasmin
-@dirrm jasmin/classes/jas
-@dirrm jasmin/classes
-@dirrm jasmin/bin
-@dirrm jasmin

@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2005/02/09 20:49:02 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:20 joerg Exp $
 man/man1/labrea.1
 man/man5/labrea.conf.5
 sbin/labrea
 share/doc/LaBrea/README
 share/doc/LaBrea/INSTALL
 share/examples/LaBrea/labrea.conf
-@dirrm share/doc/LaBrea
-@dirrm share/examples/LaBrea

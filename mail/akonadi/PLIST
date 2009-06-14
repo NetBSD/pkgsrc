@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/19 21:38:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:26 joerg Exp $
 bin/akonadi_control
 bin/akonadictl
 bin/akonadiserver
@@ -31,8 +31,3 @@ share/dbus-1/interfaces/org.freedesktop.Akonadi.Tracer.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.TracerNotification.xml
 share/dbus-1/services/org.freedesktop.Akonadi.Control.service
 share/mime/packages/akonadi-mime.xml
-@comment in dbus: @dirrm share/dbus-1/services
-@comment in kde: @dirrm share/dbus-1/interfaces
-@dirrm share/config/akonadi
-@dirrm include/akonadi/private
-@dirrm include/akonadi

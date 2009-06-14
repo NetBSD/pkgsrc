@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/04/12 08:25:43 tonio Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 18:04:38 joerg Exp $
 bin/flea
 bin/mutt
 bin/mutt_dotlock
@@ -106,6 +106,3 @@ share/locale/tr/LC_MESSAGES/mutt.mo
 share/locale/uk/LC_MESSAGES/mutt.mo
 share/locale/zh_CN/LC_MESSAGES/mutt.mo
 share/locale/zh_TW/LC_MESSAGES/mutt.mo
-@dirrm share/examples/mutt/iconv
-@dirrm share/examples/mutt
-@dirrm share/doc/mutt

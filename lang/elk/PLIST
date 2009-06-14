@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:43:02 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:30 joerg Exp $
 bin/elk
 bin/scheme-elk
 include/elk/compat.h
@@ -143,18 +143,3 @@ ${PLIST.xaw}share/elk/xaw.scm
 ${PLIST.x11}share/elk/xlib.scm
 ${PLIST.x11}share/elk/xwidgets.scm
 ${PLIST.motif}share/elk/motif.scm
-@dirrm share/elk
-@dirrm share/doc/elk/ps
-@dirrm share/doc/elk/examples/xlib
-@dirrm share/doc/elk/examples/xaw
-@dirrm share/doc/elk/examples/unix
-@dirrm share/doc/elk/examples/tests
-@dirrm share/doc/elk/examples/scheme
-@dirrm share/doc/elk/examples/regexp
-@dirrm share/doc/elk/examples/motif
-@dirrm share/doc/elk/examples/c++
-@dirrm share/doc/elk/examples
-@dirrm share/doc/elk
-@dirrm lib/elk
-@dirrm include/elk/extensions
-@dirrm include/elk

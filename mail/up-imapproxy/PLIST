@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/08 21:58:31 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:45 joerg Exp $
 sbin/in.imapproxyd
 sbin/pimpstat
 share/doc/up-imapproxy/README
@@ -6,5 +6,3 @@ share/doc/up-imapproxy/README.known_issues
 share/doc/up-imapproxy/README.ssl
 share/examples/rc.d/upimapproxy
 share/examples/up-imapproxy/imapproxy.conf
-@dirrm share/examples/up-imapproxy
-@dirrm share/doc/up-imapproxy

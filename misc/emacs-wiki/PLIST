@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/10 15:18:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:20 joerg Exp $
 share/emacs/site-lisp/emacs-wiki/contrib/cgi.el
 share/emacs/site-lisp/emacs-wiki/contrib/cgi.elc
 share/emacs/site-lisp/emacs-wiki/contrib/htmlize.el
@@ -37,5 +37,3 @@ share/emacs/site-lisp/emacs-wiki/emacs-wiki-transition.el
 share/emacs/site-lisp/emacs-wiki/emacs-wiki-transition.elc
 share/emacs/site-lisp/emacs-wiki/emacs-wiki.el
 share/emacs/site-lisp/emacs-wiki/emacs-wiki.elc
-@dirrm share/emacs/site-lisp/emacs-wiki/contrib
-@dirrm share/emacs/site-lisp/emacs-wiki

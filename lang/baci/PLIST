@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:22:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:28 joerg Exp $
 bin/bacc
 bin/badis
 bin/bainterp
@@ -9,4 +9,3 @@ share/doc/baci/disasm.ps
 share/doc/baci/disasm.tex
 share/doc/baci/guidepas.ps
 share/doc/baci/guidepas.tex
-@dirrm share/doc/baci

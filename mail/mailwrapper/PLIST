@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2004/07/23 23:01:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:04:37 joerg Exp $
 man/cat5/mailer.conf.0
 man/cat8/mailwrapper.0
 man/man5/mailer.conf.5
 man/man8/mailwrapper.8
 sbin/mailwrapper
 share/examples/mailwrapper/mailer.conf.sendmail
-@dirrm share/examples/mailwrapper

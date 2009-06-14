@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/23 21:14:32 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:10:06 joerg Exp $
 bin/nget
 bin/ngetlite
 man/man1/nget.1
@@ -9,5 +9,3 @@ share/nget/Changelog
 share/nget/FAQ
 share/nget/README
 share/nget/TODO
-@dirrm share/nget
-@dirrm share/examples/nget

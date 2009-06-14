@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/16 02:04:39 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:36 joerg Exp $
 bin/nstxd
 bin/nstxcd
 share/doc/nstx/README
-@dirrm share/doc/nstx

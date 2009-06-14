@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/22 18:28:33 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:44 joerg Exp $
 lib/gap4.3/pkg/autpgrp/doc/autpgrp.tex
 lib/gap4.3/pkg/autpgrp/doc/influen.tex
 lib/gap4.3/pkg/autpgrp/doc/manual.six
@@ -38,7 +38,3 @@ lib/gap4.3/pkg/autpgrp/htm/biblio.htm
 lib/gap4.3/pkg/autpgrp/htm/indxN.htm
 lib/gap4.3/pkg/autpgrp/PkgInfo.g
 lib/gap4.3/pkg/autpgrp/README
-@dirrm lib/gap4.3/pkg/autpgrp/doc
-@dirrm lib/gap4.3/pkg/autpgrp/gap
-@dirrm lib/gap4.3/pkg/autpgrp/htm
-@dirrm lib/gap4.3/pkg/autpgrp

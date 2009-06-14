@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:22:58 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:29 joerg Exp $
 bin/cuprolog
 share/doc/cu-prolog/CHANGES
 share/doc/cu-prolog/COPYRIGHT
@@ -17,5 +17,3 @@ share/examples/cu-prolog/jpsg.p
 share/examples/cu-prolog/kasper.p
 share/examples/cu-prolog/marcus.p
 share/examples/cu-prolog/memap.p
-@dirrm share/doc/cu-prolog
-@dirrm share/examples/cu-prolog

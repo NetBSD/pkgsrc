@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:36 joerg Exp $
 bin/apcmon
 bin/armon
 bin/bgpmon
@@ -120,8 +120,3 @@ share/nocol/gifs/warning.jpg
 share/nocol/gifs/yellowsq.gif
 share/nocol/help/default
 share/nocol/warning.wav
-@dirrm bin/hostmon-osclients
-@dirrm share/examples/nocol
-@dirrm share/nocol/help
-@dirrm share/nocol/gifs
-@dirrm share/nocol

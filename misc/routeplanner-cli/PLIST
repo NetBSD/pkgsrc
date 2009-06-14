@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/28 14:57:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:29 joerg Exp $
 bin/rpcli
 lib/routeplanner/Basic-USA.rpl3.gz
 lib/routeplanner/NorthAmerica.rpl3.gz
@@ -8,4 +8,3 @@ lib/routeplanner/rpcity.py
 lib/routeplanner/rpdbase.py
 lib/routeplanner/rproute.py
 lib/routeplanner/rpunits.py
-@dirrm lib/routeplanner

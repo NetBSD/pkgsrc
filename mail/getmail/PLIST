@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/04/07 04:39:44 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:04:34 joerg Exp $
 bin/getmail
 bin/getmail_fetch
 bin/getmail_maildir
@@ -62,5 +62,3 @@ ${PYSITELIB}/getmailcore/retrievers.pyo
 ${PYSITELIB}/getmailcore/utilities.py
 ${PYSITELIB}/getmailcore/utilities.pyc
 ${PYSITELIB}/getmailcore/utilities.pyo
-@dirrm share/doc/getmail
-@dirrm ${PYSITELIB}/getmailcore

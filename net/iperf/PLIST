@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/03 13:30:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:30 joerg Exp $
 bin/iperf
 share/doc/html/iperf/dast.gif
 share/doc/html/iperf/index.html
 share/doc/html/iperf/ui_license.html
-@dirrm share/doc/html/iperf

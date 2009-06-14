@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/05 23:14:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:29 joerg Exp $
 bin/edriver
 bin/itm
 bin/sgb2alt
@@ -8,4 +8,3 @@ share/doc/gt-itm/itm-doc.txt
 share/doc/gt-itm/metrics.ps
 share/doc/gt-itm/models.ps
 share/doc/gt-itm/sgb2alt-doc.txt
-@dirrm share/doc/gt-itm

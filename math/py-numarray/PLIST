@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/04/12 22:43:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:05:47 joerg Exp $
 ${PYINC}/numarray/arraybase.h
 ${PYINC}/numarray/arrayif.h
 ${PYINC}/numarray/arrayobject.h
@@ -289,17 +289,3 @@ ${PYSITELIB}/numarray/typeconv.pyo
 ${PYSITELIB}/numarray/ufunc.py
 ${PYSITELIB}/numarray/ufunc.pyc
 ${PYSITELIB}/numarray/ufunc.pyo
-@dirrm ${PYSITELIB}/numarray/random_array
-@dirrm ${PYSITELIB}/numarray/nd_image
-@dirrm ${PYSITELIB}/numarray/mlab
-@dirrm ${PYSITELIB}/numarray/matrix
-@dirrm ${PYSITELIB}/numarray/ma
-@dirrm ${PYSITELIB}/numarray/linear_algebra
-@dirrm ${PYSITELIB}/numarray/image
-@dirrm ${PYSITELIB}/numarray/fft
-@dirrm ${PYSITELIB}/numarray/examples/convolve
-@dirrm ${PYSITELIB}/numarray/examples
-@dirrm ${PYSITELIB}/numarray/convolve
-@dirrm ${PYSITELIB}/numarray/codegenerator
-@dirrm ${PYSITELIB}/numarray
-@dirrm ${PYINC}/numarray

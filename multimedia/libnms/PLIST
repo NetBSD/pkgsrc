@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/10 16:27:14 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:07 joerg Exp $
 bin/dump_info
 bin/dump_stream
 include/nemesi/bufferpool.h
@@ -18,4 +18,3 @@ include/nemesi/version.h
 include/nemesi/wsocket.h
 lib/libnemesi.la
 lib/pkgconfig/libnms.pc
-@dirrm include/nemesi

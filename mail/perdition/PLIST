@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:04:39 joerg Exp $
 include/jain.h
 lib/libjain.la
 lib/libperditiondb_nis.la
@@ -26,4 +26,3 @@ share/examples/rc.d/perdition.imap4
 share/examples/rc.d/perdition.imap4s
 share/examples/rc.d/perdition.pop3
 share/examples/rc.d/perdition.pop3s
-@dirrm share/examples/perdition

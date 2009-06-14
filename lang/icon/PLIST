@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/08 12:51:04 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:03:33 joerg Exp $
 bin/colrbook
 bin/colrpick
 bin/fontpick
@@ -862,5 +862,3 @@ share/doc/icon/port.htm
 share/doc/icon/relnotes.htm
 share/doc/icon/shortcut.gif
 share/doc/icon/wwwcube.gif
-@dirrm share/doc/icon
-@dirrm lib/icon

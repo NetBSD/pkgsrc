@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/08 01:44:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:36 joerg Exp $
 bin/imapfront-auth
 bin/mailfront
 bin/pop3front-auth
@@ -61,6 +61,3 @@ share/doc/mailfront/protocol-qmtp.html
 share/doc/mailfront/protocol-smtp.html
 share/doc/mailfront/std-handle.html
 share/examples/rc.d/smtpfront
-@dirrm share/doc/mailfront
-@dirrm lib/mailfront
-@dirrm include/mailfront

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:43 joerg Exp $
 sbin/shlight
 sbin/unshlight
 man/man8/shlight.8
 share/doc/sharity-light/FAQ.txt
 share/doc/sharity-light/README
-@dirrm share/doc/sharity-light

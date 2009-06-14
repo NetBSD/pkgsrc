@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:34:05 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:48 joerg Exp $
 include/randlib.h
 lib/librandlib.a
 lib/librandlib.so
@@ -14,5 +14,3 @@ share/examples/randlib/randlib.h
 share/examples/randlib/tstbot.c
 share/examples/randlib/tstgmn.c
 share/examples/randlib/tstmid.c
-@dirrm share/examples/randlib
-@dirrm share/doc/randlib

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.idx,v 1.5 2005/07/05 06:04:17 schmonz Exp $
+@comment $NetBSD: PLIST.idx,v 1.6 2009/06/14 18:04:33 joerg Exp $
 bin/ezmlm-accept
 bin/ezmlm-archive
 bin/ezmlm-check
@@ -65,4 +65,3 @@ share/examples/ezmlm-idx/ezcgirc
 share/examples/ezmlm-idx/ezmlmglrc
 share/examples/ezmlm-idx/ezmlmrc
 share/examples/ezmlm-idx/ezmlmsubrc
-@dirrm share/examples/ezmlm-idx

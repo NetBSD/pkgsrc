@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/12/14 13:19:15 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:05:41 joerg Exp $
 bin/algae
 bin/${PKGNAME}
 info/algae.info
@@ -89,9 +89,3 @@ share/doc/algae/algae_toc.html
 share/doc/algae/icon.gif
 share/doc/algae/index.html
 share/doc/algae/info.db
-@dirrm share/doc/algae
-@dirrm share/algae/${PKGVERSION}/tools
-@dirrm share/algae/${PKGVERSION}
-@dirrm share/algae
-@dirrm lib/algae/${PKGVERSION}
-@dirrm lib/algae

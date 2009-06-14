@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/24 09:54:31 heinz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:29 joerg Exp $
 bin/rlwrap
 man/man1/rlwrap.1
 share/rlwrap/coqtop
 share/rlwrap/ftp
 share/rlwrap/testclient
-@dirrm share/rlwrap

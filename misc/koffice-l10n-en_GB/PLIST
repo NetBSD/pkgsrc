@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/24 12:57:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:25 joerg Exp $
 share/doc/kde/HTML/en_GB/kpresenter/faq.docbook
 share/doc/kde/HTML/en_GB/kpresenter/great-presentations.docbook
 share/doc/kde/HTML/en_GB/kpresenter/guides.docbook
@@ -38,6 +38,3 @@ share/locale/en_GB/LC_MESSAGES/kthesaurus.mo
 share/locale/en_GB/LC_MESSAGES/kugar.mo
 share/locale/en_GB/LC_MESSAGES/kword.mo
 share/locale/en_GB/LC_MESSAGES/thesaurus_tool.mo
-@dirrm share/doc/kde/HTML/en_GB/kword
-@dirrm share/doc/kde/HTML/en_GB/kpresenter
-@comment in kde: @dirrm share/doc/kde/HTML/en_GB

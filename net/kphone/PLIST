@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2004/07/21 21:49:02 scw Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:32 joerg Exp $
 bin/kphone
 share/kphone/icons/dial.png
 share/kphone/icons/enter.png
@@ -10,5 +10,3 @@ share/kphone/icons/offline.png
 share/kphone/icons/online.png
 share/kphone/icons/phonebook.png
 share/kphone/icons/videocall.png
-@dirrm share/kphone/icons
-@dirrm share/kphone

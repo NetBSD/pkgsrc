@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/11 11:56:08 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:03:37 joerg Exp $
 bin/cob-config
 bin/cobc
 bin/cobcrun
@@ -23,6 +23,3 @@ share/open-cobol/config/ibm.conf
 share/open-cobol/config/mf.conf
 share/open-cobol/config/mvs.conf
 share/open-cobol/config/v023.conf
-@dirrm include/libcob
-@dirrm share/open-cobol/config
-@dirrm share/open-cobol

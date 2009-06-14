@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/05 23:01:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:05:41 joerg Exp $
 include/blitz/applics.h
 include/blitz/array-impl.h
 include/blitz/array-old.h
@@ -193,9 +193,3 @@ share/doc/blitz-0.8/sinsoid.gif
 share/doc/blitz-0.8/slice.gif
 share/doc/blitz-0.8/strideslice.gif
 share/doc/blitz-0.8/tensor1.gif
-@dirrm share/doc/blitz-0.8/doxygen
-@dirrm share/doc/blitz-0.8
-@dirrm include/random
-@dirrm include/blitz/meta
-@dirrm include/blitz/array
-@dirrm include/blitz

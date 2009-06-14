@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-i386,v 1.1 2008/10/07 09:57:58 sborrill Exp $
+@comment $NetBSD: PLIST.solaris-i386,v 1.2 2009/06/14 18:09:24 joerg Exp $
 lib/ICAClient/.config/appsrv.ini
 lib/ICAClient/.config/keyboard.ini
 lib/ICAClient/.config/module.ini
@@ -59,17 +59,3 @@ lib/ICAClient/dt/appconfig/types/C/Citrix_ica_winzip32.dt
 lib/ICAClient/keystore/cacerts/GTECTRoot.crt
 lib/ICAClient/pkginf/F.core.solaris
 lib/ICAClient/pkginf/Ver.core.solaris
-@dirrm lib/ICAClient/.config
-@dirrm lib/ICAClient/cache/zlcache
-@dirrm lib/ICAClient/cache
-@dirrm lib/ICAClient/dt/appconfig/help/C
-@dirrm lib/ICAClient/dt/appconfig/help
-@dirrm lib/ICAClient/dt/appconfig/icons/C
-@dirrm lib/ICAClient/dt/appconfig/icons
-@dirrm lib/ICAClient/dt/appconfig/types/C
-@dirrm lib/ICAClient/dt/appconfig/types
-@dirrm lib/ICAClient/dt/appconfig/appmanager/C/Citrix
-@dirrm lib/ICAClient/dt/appconfig/appmanager/C
-@dirrm lib/ICAClient/dt/appconfig/appmanager
-@dirrm lib/ICAClient/dt/appconfig
-@dirrm lib/ICAClient/dt

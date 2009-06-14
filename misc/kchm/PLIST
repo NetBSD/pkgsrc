@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/26 04:25:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:23 joerg Exp $
 bin/kchm
 include/chm_lib.h
 include/chmxx.h
@@ -18,16 +18,3 @@ share/kde/mimelnk/application/chmmime.desktop
 share/kde/services/chmnew.protocol
 share/kde/services/chmnew_part.desktop
 share/kde/servicetypes/kchm.desktop
-@comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/application
-@dirrm share/kde/apps/kchm
-@dirrm share/kde/apps/chmnewpart
-@dirrm share/kde/apps/chmnew
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in kde: @dirrm lib/kde3

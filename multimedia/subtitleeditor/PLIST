@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/21 14:47:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:08:10 joerg Exp $
 bin/subtitleeditor
 lib/libsubtitleeditor.la
 lib/subtitleeditor/plugins/actions/libabout.la
@@ -140,38 +140,3 @@ share/subtitleeditor/plugins-share/splitdocument/dialog-split-document.glade
 share/subtitleeditor/plugins-share/styleeditor/dialog-style-editor.glade
 share/subtitleeditor/plugins-share/viewmanager/dialog-view-manager.glade
 share/subtitleeditor/subtitleeditor.svg
-@dirrm share/subtitleeditor/plugins-share/viewmanager
-@dirrm share/subtitleeditor/plugins-share/styleeditor
-@dirrm share/subtitleeditor/plugins-share/splitdocument
-@dirrm share/subtitleeditor/plugins-share/spellchecking
-@dirrm share/subtitleeditor/plugins-share/scalesubtitles
-@dirrm share/subtitleeditor/plugins-share/preferences
-@dirrm share/subtitleeditor/plugins-share/movesubtitles
-@dirrm share/subtitleeditor/plugins-share/findandreplace
-@dirrm share/subtitleeditor/plugins-share/externalvideoplayer
-@dirrm share/subtitleeditor/plugins-share/errorchecking
-@dirrm share/subtitleeditor/plugins-share/configurekeyboardshortcuts
-@dirrm share/subtitleeditor/plugins-share/changeframerate
-@dirrm share/subtitleeditor/plugins-share
-@dirrm share/subtitleeditor/plugins-description/subtitleformats
-@dirrm share/subtitleeditor/plugins-description/actions
-@dirrm share/subtitleeditor/plugins-description
-@dirrm share/subtitleeditor/glade
-@dirrm share/subtitleeditor
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/subtitleeditor/plugins/subtitleformats
-@dirrm lib/subtitleeditor/plugins/actions
-@dirrm lib/subtitleeditor/plugins
-@dirrm lib/subtitleeditor

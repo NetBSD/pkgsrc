@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/20 20:02:13 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:08:04 joerg Exp $
 bin/gmplayer
 share/mplayer/Skin/AlienMind/README
 share/mplayer/Skin/AlienMind/VERSION
@@ -559,25 +559,3 @@ share/mplayer/Skin/xine-lcd/sub.png
 share/mplayer/Skin/xine-lcd/subt.png
 share/mplayer/Skin/xine-lcd/vcd.png
 share/mplayer/Skin/xine-lcd/volume.png
-@dirrm share/mplayer/Skin/xine-lcd
-@dirrm share/mplayer/Skin/xanim
-@dirrm share/mplayer/Skin/slim
-@dirrm share/mplayer/Skin/proton
-@dirrm share/mplayer/Skin/plastic
-@dirrm share/mplayer/Skin/phony
-@dirrm share/mplayer/Skin/neutron
-@dirrm share/mplayer/Skin/mentalic
-@dirrm share/mplayer/Skin/hwswskin
-@dirrm share/mplayer/Skin/hayraphon
-@dirrm share/mplayer/Skin/gnome
-@dirrm share/mplayer/Skin/avifile
-@dirrm share/mplayer/Skin/WMP6
-@dirrm share/mplayer/Skin/MidnightLove
-@dirrm share/mplayer/Skin/Cyrus
-@dirrm share/mplayer/Skin/CornerMP-aqua
-@dirrm share/mplayer/Skin/CornerMP
-@dirrm share/mplayer/Skin/Blue/icons
-@dirrm share/mplayer/Skin/Blue
-@dirrm share/mplayer/Skin/BlueHeart
-@dirrm share/mplayer/Skin/AlienMind
-@dirrm share/mplayer/Skin

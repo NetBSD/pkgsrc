@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:20:05 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:30 joerg Exp $
 bin/launchy
 ${GEM_HOME}/cache/launchy-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
@@ -18,8 +18,3 @@ ${GEM_LIBDIR}/spec/launchy_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/version_spec.rb
 ${GEM_HOME}/specifications/launchy-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/spec
-@dirrm ${GEM_LIBDIR}/lib/launchy
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

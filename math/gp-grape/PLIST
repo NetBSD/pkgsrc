@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/05 12:43:02 cjep Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:44 joerg Exp $
 lib/gap4.3/pkg/grape/COPYING
 lib/gap4.3/pkg/grape/bin/${GAP_PLATFORM}/drcanon4
 lib/gap4.3/pkg/grape/bin/${GAP_PLATFORM}/dreadnaut
@@ -62,11 +62,3 @@ lib/gap4.3/pkg/grape/prs/E8
 lib/gap4.3/pkg/grape/prs/McL
 lib/gap4.3/pkg/grape/prs/U
 lib/gap4.3/pkg/grape/read.me
-@dirrm lib/gap4.3/pkg/grape/prs
-@dirrm lib/gap4.3/pkg/grape/lib
-@dirrm lib/gap4.3/pkg/grape/htm
-@dirrm lib/gap4.3/pkg/grape/grh
-@dirrm lib/gap4.3/pkg/grape/doc
-@dirrm lib/gap4.3/pkg/grape/bin/${GAP_PLATFORM}
-@dirrm lib/gap4.3/pkg/grape/bin
-@dirrm lib/gap4.3/pkg/grape

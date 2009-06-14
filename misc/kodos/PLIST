@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/05/09 17:23:21 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:25 joerg Exp $
 bin/kodos.py
 ${PYSITELIB}/kodos.pth
 ${PYSITELIB}/kodos/__init__.py
@@ -179,12 +179,3 @@ share/kodos/screenshots/yellow.png
 share/kodos/translations/kodos_en.ts
 share/kodos/translations/kodos_pl.qm
 share/kodos/translations/kodos_pl.ts
-@dirrm share/kodos/translations
-@dirrm share/kodos/screenshots
-@dirrm share/kodos/modules
-@dirrm share/kodos/images
-@dirrm share/kodos/help/python
-@dirrm share/kodos/help
-@dirrm share/kodos
-@dirrm ${PYSITELIB}/kodos/modules
-@dirrm ${PYSITELIB}/kodos

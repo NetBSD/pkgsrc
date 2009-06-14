@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/09 19:16:15 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:31 joerg Exp $
 bin/egon
 bin/gvu
 bin/mgptotxt
@@ -461,36 +461,3 @@ share/siag/xcommon/form.scm
 share/siag/xfiler/FilesMagic
 share/siag/xfiler/Filesrc
 share/siag/xfiler/makeicons
-@dirrm share/siag/xfiler
-@dirrm share/siag/xcommon
-@dirrm share/siag/siod
-@dirrm share/siag/siag
-@dirrm share/siag/pw
-@dirrm share/siag/plugins
-@dirrm share/siag/egon
-@dirrm share/siag/common/themes
-@dirrm share/siag/common/bitmaps/ms
-@dirrm share/siag/common/bitmaps/kde2
-@dirrm share/siag/common/bitmaps/kde
-@dirrm share/siag/common/bitmaps/gnome
-@dirrm share/siag/common/bitmaps
-@dirrm share/siag/common
-@dirrm share/siag
-@dirrm share/doc/siag/xfiler
-@dirrm share/doc/siag/xedplus
-@dirrm share/doc/siag/xcommon
-@dirrm share/doc/siag/siod
-@dirrm share/doc/siag/siag/examples
-@dirrm share/doc/siag/siag
-@dirrm share/doc/siag/pw/examples
-@dirrm share/doc/siag/pw
-@dirrm share/doc/siag/plugins
-@dirrm share/doc/siag/gvu
-@dirrm share/doc/siag/egon/examples
-@dirrm share/doc/siag/egon
-@dirrm share/doc/siag/common/bitmaps
-@dirrm share/doc/siag/common
-@dirrm share/doc/siag
-@dirrm lib/siag/plugins
-@dirrm lib/siag/o3read
-@dirrm lib/siag

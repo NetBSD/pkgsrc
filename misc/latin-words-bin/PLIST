@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/20 22:54:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:26 joerg Exp $
 bin/latin-words
 libexec/latin-words
 libdata/latin-words/ADDONS.LAT
@@ -10,5 +10,3 @@ libdata/latin-words/UNIQUES.LAT
 share/doc/latin-words/README
 share/doc/latin-words/wordsdoc.html
 share/doc/latin-words/wordsdoc.txt
-@dirrm share/doc/latin-words
-@dirrm libdata/latin-words

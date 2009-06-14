@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/06/05 23:32:08 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:33 joerg Exp $
 guile/1.6/bin/guile
 guile/1.6/bin/guile-config
 guile/1.6/bin/guile-snarf
@@ -200,22 +200,3 @@ guile/1.6/share/guile/1.6/srfi/srfi-4.scm
 guile/1.6/share/guile/1.6/srfi/srfi-6.scm
 guile/1.6/share/guile/1.6/srfi/srfi-8.scm
 guile/1.6/share/guile/1.6/srfi/srfi-9.scm
-@dirrm guile/1.6/share/guile/1.6/srfi
-@dirrm guile/1.6/share/guile/1.6/scripts
-@dirrm guile/1.6/share/guile/1.6/oop/goops
-@dirrm guile/1.6/share/guile/1.6/oop
-@dirrm guile/1.6/share/guile/1.6/ice-9
-@dirrm guile/1.6/share/guile/1.6
-@dirrm guile/1.6/share/guile
-@dirrm guile/1.6/share/aclocal
-@dirrm guile/1.6/share
-@dirrm guile/1.6/lib
-@dirrm guile/1.6/info
-@dirrm guile/1.6/include/libguile
-@dirrm guile/1.6/include/guile/srfi
-@dirrm guile/1.6/include/guile-readline
-@dirrm guile/1.6/include/guile
-@dirrm guile/1.6/include
-@dirrm guile/1.6/bin
-@dirrm guile/1.6
-@dirrm guile

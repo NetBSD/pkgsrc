@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/04/13 12:56:34 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:08:11 joerg Exp $
 bin/xfmedia
 bin/xfmedia-remote
 include/xfmedia/xfmedia-interface.h
@@ -57,10 +57,3 @@ share/xfmedia/doc/C/images/prefs-options.png
 share/xfmedia/doc/C/index.html
 share/xfmedia/doc/xfce.css
 share/xfmedia/keybindings.rc
-@dirrm share/xfmedia/doc/C/images
-@dirrm share/xfmedia/doc/C
-@dirrm share/xfmedia/doc
-@dirrm share/xfmedia
-@dirrm lib/xfmedia/plugins
-@dirrm lib/xfmedia
-@dirrm include/xfmedia

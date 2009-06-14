@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/04 17:33:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:08:10 joerg Exp $
 lib/mozilla/plugins/libswfdecmozilla.la
 share/icons/hicolor/16x16/apps/swfdec-mozilla.png
 share/icons/hicolor/22x22/apps/swfdec-mozilla.png
@@ -6,19 +6,5 @@ share/icons/hicolor/24x24/apps/swfdec-mozilla.png
 share/icons/hicolor/32x32/apps/swfdec-mozilla.png
 share/icons/hicolor/48x48/apps/swfdec-mozilla.png
 share/icons/hicolor/scalable/apps/swfdec-mozilla.svg
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
 @unexec ${RMDIR} %D/lib/mozilla/plugins 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/mozilla 2>/dev/null || ${TRUE}

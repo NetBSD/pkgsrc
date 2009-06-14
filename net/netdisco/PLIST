@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/16 15:25:41 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:36 joerg Exp $
 netdisco/bin/catalyst_mac_vlan.pl
 netdisco/bin/debian_install.sh
 netdisco/bin/doc_munge
@@ -1288,24 +1288,3 @@ share/examples/netdisco/netdisco.crontab
 share/examples/netdisco/netdisco_apache.conf
 share/examples/netdisco/netdisco_apache_dir.conf
 share/examples/rc.d/netdisco
-@dirrm netdisco/bin
-@dirrm netdisco/sql
-@dirrm netdisco/mibs/rfc
-@dirrm netdisco/mibs/nortel
-@dirrm netdisco/mibs/netscreen
-@dirrm netdisco/mibs/net-snmp
-@dirrm netdisco/mibs/juniper
-@dirrm netdisco/mibs/hp
-@dirrm netdisco/mibs/foundry
-@dirrm netdisco/mibs/extreme
-@dirrm netdisco/mibs/dell
-@dirrm netdisco/mibs/cisco
-@dirrm netdisco/mibs/asante
-@dirrm netdisco/mibs/aruba
-@dirrm netdisco/mibs/allied
-@dirrm netdisco/mibs
-@dirrm netdisco/mason
-@dirrm netdisco/html/doc
-@dirrm netdisco/html
-@dirrm netdisco/doc
-@dirrm share/examples/netdisco

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/22 22:51:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:43 joerg Exp $
 bin/rss-to-site
 bin/sitescooper
 bin/subs-to-site
@@ -267,61 +267,3 @@ share/sitescooper/site_samples/weblog/tomalaks_realm.site
 share/sitescooper/site_samples/windows/betanews.site
 share/sitescooper/site_samples/windows/fileforum.site
 share/sitescooper/site_samples/windows/ntfaq.site
-@dirrm share/sitescooper/site_samples/windows
-@dirrm share/sitescooper/site_samples/weblog
-@dirrm share/sitescooper/site_samples/web
-@dirrm share/sitescooper/site_samples/weather
-@dirrm share/sitescooper/site_samples/tech/zdnn
-@dirrm share/sitescooper/site_samples/tech
-@dirrm share/sitescooper/site_samples/stocks
-@dirrm share/sitescooper/site_samples/security
-@dirrm share/sitescooper/site_samples/science
-@dirrm share/sitescooper/site_samples/sci_fi
-@dirrm share/sitescooper/site_samples/religion
-@dirrm share/sitescooper/site_samples/regional_washington
-@dirrm share/sitescooper/site_samples/regional_uk
-@dirrm share/sitescooper/site_samples/regional_toronto
-@dirrm share/sitescooper/site_samples/regional_switzerland
-@dirrm share/sitescooper/site_samples/regional_seattle
-@dirrm share/sitescooper/site_samples/regional_north_carolina
-@dirrm share/sitescooper/site_samples/regional_new_york
-@dirrm share/sitescooper/site_samples/regional_israel
-@dirrm share/sitescooper/site_samples/regional_ireland
-@dirrm share/sitescooper/site_samples/regional_hungary
-@dirrm share/sitescooper/site_samples/regional_hk/sing_tao
-@dirrm share/sitescooper/site_samples/regional_hk
-@dirrm share/sitescooper/site_samples/regional_germany
-@dirrm share/sitescooper/site_samples/regional_francais
-@dirrm share/sitescooper/site_samples/regional_california
-@dirrm share/sitescooper/site_samples/regional_belgium
-@dirrm share/sitescooper/site_samples/regional_australia
-@dirrm share/sitescooper/site_samples/regional_africa
-@dirrm share/sitescooper/site_samples/palm
-@dirrm share/sitescooper/site_samples/opinion
-@dirrm share/sitescooper/site_samples/odd
-@dirrm share/sitescooper/site_samples/news/wired_news
-@dirrm share/sitescooper/site_samples/news
-@dirrm share/sitescooper/site_samples/net
-@dirrm share/sitescooper/site_samples/misc
-@dirrm share/sitescooper/site_samples/linux
-@dirrm share/sitescooper/site_samples/lib
-@dirrm share/sitescooper/site_samples/languages
-@dirrm share/sitescooper/site_samples/humor
-@dirrm share/sitescooper/site_samples/health
-@dirrm share/sitescooper/site_samples/games
-@dirrm share/sitescooper/site_samples/consumer
-@dirrm share/sitescooper/site_samples/comics
-@dirrm share/sitescooper/site_samples/cinema
-@dirrm share/sitescooper/site_samples/cars
-@dirrm share/sitescooper/site_samples/business
-@dirrm share/sitescooper/site_samples/bsd
-@dirrm share/sitescooper/site_samples/admin
-@dirrm share/sitescooper/site_samples
-@dirrm share/sitescooper/lib/Sitescooper
-@dirrm share/sitescooper/lib/PDA
-@dirrm share/sitescooper/lib/Exten
-@dirrm share/sitescooper/lib/Algorithm
-@dirrm share/sitescooper/lib
-@dirrm share/sitescooper
-@dirrm share/examples/sitescooper
-@dirrm share/doc/sitescooper

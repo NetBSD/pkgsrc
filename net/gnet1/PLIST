@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:28 joerg Exp $
 bin/gnet-config
 include/gnet/conn.h
 include/gnet/gnet.h
@@ -44,8 +44,3 @@ share/doc/libgnet1.1-dev/html/index.sgml
 share/doc/libgnet1.1-dev/html/libgnet-reference.html
 share/doc/libgnet1.1-dev/html/sdr.html
 share/doc/libgnet1.1-dev/html/tests.html
-@dirrm share/doc/libgnet1.1-dev/html
-@dirrm share/doc/libgnet1.1-dev
-@dirrm lib/gnet/include
-@dirrm lib/gnet
-@dirrm include/gnet

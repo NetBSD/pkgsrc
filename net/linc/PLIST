@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/08/10 17:44:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:09:34 joerg Exp $
 bin/linc-cleanup-sockets
 bin/linc-config
 include/linc-1.0/linc/linc-config.h
@@ -24,6 +24,3 @@ share/gtk-doc/html/linc/linc-linc.html
 share/gtk-doc/html/linc/linc.devhelp
 share/gtk-doc/html/linc/right.png
 share/gtk-doc/html/linc/up.png
-@dirrm share/gtk-doc/html/linc
-@dirrm include/linc-1.0/linc
-@dirrm include/linc-1.0

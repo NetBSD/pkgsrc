@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/01 12:27:59 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:03:33 joerg Exp $
 bin/fd2c
 bin/gplc
 bin/gprolog
@@ -179,13 +179,3 @@ share/examples/gprolog/ExamplesPl/sendmore.pl
 share/examples/gprolog/ExamplesPl/tak.pl
 share/examples/gprolog/ExamplesPl/tak_gvar.pl
 share/examples/gprolog/ExamplesPl/zebra.pl
-@dirrm share/examples/gprolog/ExamplesPl
-@dirrm share/examples/gprolog/ExamplesFD
-@dirrm share/examples/gprolog/ExamplesC
-@dirrm share/examples/gprolog
-@dirrm share/doc/gprolog/html
-@dirrm share/doc/gprolog
-@dirrm lib/${PKGNAME}/lib
-@dirrm lib/${PKGNAME}/include
-@dirrm lib/${PKGNAME}/bin
-@dirrm lib/${PKGNAME}

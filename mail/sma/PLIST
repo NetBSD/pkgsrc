@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/14 12:31:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:43 joerg Exp $
 bin/sma
 man/man8/sma.8
 share/doc/sma/README
 share/examples/sma/sma.conf
-@dirrm share/examples/sma
-@dirrm share/doc/sma

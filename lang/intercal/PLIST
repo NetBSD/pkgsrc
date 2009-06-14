@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:41 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:34 joerg Exp $
 bin/ick
 include/intercal/abcess.h
 include/intercal/fiddle.h
@@ -50,7 +50,3 @@ lib/intercal/syslib.5i
 lib/intercal/syslib.6i
 lib/intercal/syslib.7i
 lib/intercal/syslib.i
-@dirrm lib/intercal
-@dirrm share/examples/intercal
-@dirrm share/doc/intercal
-@dirrm include/intercal

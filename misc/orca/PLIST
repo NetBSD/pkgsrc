@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/19 14:07:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:07:28 joerg Exp $
 bin/orca
 ${PYSITELIB}/orca/__init__.py
 ${PYSITELIB}/orca/__init__.pyc
@@ -455,35 +455,3 @@ share/orca/glade/orca-find.glade
 share/orca/glade/orca-mainwin.glade
 share/orca/glade/orca-quit.glade
 share/orca/glade/orca-setup.glade
-@dirrm share/orca/glade
-@dirrm share/orca
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm ${PYSITELIB}/orca/scripts/toolkits/J2SE-access-bridge
-@dirrm ${PYSITELIB}/orca/scripts/toolkits/Gecko
-@dirrm ${PYSITELIB}/orca/scripts/toolkits
-@dirrm ${PYSITELIB}/orca/scripts/apps/soffice
-@dirrm ${PYSITELIB}/orca/scripts/apps/rhythmbox
-@dirrm ${PYSITELIB}/orca/scripts/apps/planner
-@dirrm ${PYSITELIB}/orca/scripts/apps/pidgin
-@dirrm ${PYSITELIB}/orca/scripts/apps/gnome-window-properties
-@dirrm ${PYSITELIB}/orca/scripts/apps/gedit
-@dirrm ${PYSITELIB}/orca/scripts/apps/gcalctool
-@dirrm ${PYSITELIB}/orca/scripts/apps/evolution
-@dirrm ${PYSITELIB}/orca/scripts/apps/Thunderbird
-@dirrm ${PYSITELIB}/orca/scripts/apps
-@dirrm ${PYSITELIB}/orca/scripts
-@dirrm ${PYSITELIB}/orca

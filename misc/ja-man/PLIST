@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/02/17 02:23:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:22 joerg Exp $
 bin/jman
 man/${JAMANDIR}/cat1/Mail.0
 man/${JAMANDIR}/cat1/[.0
@@ -1604,7 +1604,6 @@ man/${JAMANDIR}/man9/wakeup.9
 man/${JAMANDIR}/man9/writedisklabel.9
 share/doc/jman/README
 share/examples/jman.conf
-@dirrm share/doc/jman
 share/groff/tmac/mdoc/doc-commonj
 share/groff/tmac/mdoc/doc-ditroffj
 share/groff/tmac/mdoc/doc-nroffj

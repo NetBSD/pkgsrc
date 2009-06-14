@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/12 19:09:37 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:20 joerg Exp $
 bin/dotfile
 bin/${PKGNAME}
 man/man1/dotfile.1
@@ -355,38 +355,3 @@ share/doc/${PKGNAME}/tcsh/posdef.gif
 share/doc/${PKGNAME}/tcsh/prompt.gif
 share/doc/${PKGNAME}/tcsh/time.gif
 share/doc/${PKGNAME}/tcsh/userdef.gif
-@dirrm share/${PKGNAME}/japanese/fvwm2/save-files
-@dirrm share/${PKGNAME}/japanese/fvwm2/exports
-@dirrm share/${PKGNAME}/japanese/fvwm2
-@dirrm share/${PKGNAME}/japanese/fvwm1/save-files
-@dirrm share/${PKGNAME}/japanese/fvwm1/exports
-@dirrm share/${PKGNAME}/japanese/fvwm1
-@dirrm share/${PKGNAME}/japanese/canna
-@dirrm share/${PKGNAME}/japanese
-@dirrm share/${PKGNAME}/english/tcsh/save-files
-@dirrm share/${PKGNAME}/english/tcsh/exports
-@dirrm share/${PKGNAME}/english/tcsh
-@dirrm share/${PKGNAME}/english/rtin/save-files
-@dirrm share/${PKGNAME}/english/rtin/exports
-@dirrm share/${PKGNAME}/english/rtin
-@dirrm share/${PKGNAME}/english/procmail/save-files
-@dirrm share/${PKGNAME}/english/procmail/exports
-@dirrm share/${PKGNAME}/english/procmail
-@dirrm share/${PKGNAME}/english/ipfwadm
-@dirrm share/${PKGNAME}/english/fvwm2/save-files
-@dirrm share/${PKGNAME}/english/fvwm2/exports
-@dirrm share/${PKGNAME}/english/fvwm2
-@dirrm share/${PKGNAME}/english/fvwm1/save-files
-@dirrm share/${PKGNAME}/english/fvwm1/exports
-@dirrm share/${PKGNAME}/english/fvwm1
-@dirrm share/${PKGNAME}/english/elm
-@dirrm share/${PKGNAME}/english/bash/save-files
-@dirrm share/${PKGNAME}/english/bash/exports
-@dirrm share/${PKGNAME}/english/bash
-@dirrm share/${PKGNAME}/english
-@dirrm share/${PKGNAME}/Generator/bitmaps
-@dirrm share/${PKGNAME}/Generator
-@dirrm share/doc/${PKGNAME}/tcsh
-@dirrm share/doc/${PKGNAME}/procmail
-@dirrm share/doc/${PKGNAME}/dotfile
-@dirrm share/doc/${PKGNAME}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:24:15 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:36 joerg Exp $
 bin/camlrunm
 bin/mosml
 bin/mosmlc
@@ -453,23 +453,3 @@ share/examples/moscow_ml/webserver/echoserver.sml
 share/examples/moscow_ml/webserver/minimalserver.sml
 share/examples/moscow_ml/webserver/mosmlserver.sml
 share/examples/moscow_ml/webserver/useit.sml
-@dirrm share/examples/moscow_ml/webserver
-@dirrm share/examples/moscow_ml/weak
-@dirrm share/examples/moscow_ml/units
-@dirrm share/examples/moscow_ml/small
-@dirrm share/examples/moscow_ml/pretty
-@dirrm share/examples/moscow_ml/paulson
-@dirrm share/examples/moscow_ml/parsercomb
-@dirrm share/examples/moscow_ml/modules
-@dirrm share/examples/moscow_ml/mls
-@dirrm share/examples/moscow_ml/manual
-@dirrm share/examples/moscow_ml/lexyacc/cl
-@dirrm share/examples/moscow_ml/lexyacc
-@dirrm share/examples/moscow_ml/cgi
-@dirrm share/examples/moscow_ml/calc
-@dirrm share/examples/moscow_ml
-@dirrm share/doc/moscow_ml/mosmllib
-@dirrm share/doc/moscow_ml
-@dirrm libexec/moscow_ml
-@dirrm lib/moscow_ml
-@dirrm include/moscow_ml

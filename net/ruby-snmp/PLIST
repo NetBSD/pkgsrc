@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/06 23:38:40 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:42 joerg Exp $
 ${GEM_HOME}/cache/snmp-${PKGVERSION}.gem
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
@@ -221,12 +221,3 @@ ${GEM_LIBDIR}/test/test_smi.rb
 ${GEM_LIBDIR}/test/test_varbind.rb
 ${GEM_LIBDIR}/test/test_walk.rb
 ${GEM_HOME}/specifications/snmp-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/snmp
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}/data/ruby/snmp/mibs
-@dirrm ${GEM_LIBDIR}/data/ruby/snmp
-@dirrm ${GEM_LIBDIR}/data/ruby
-@dirrm ${GEM_LIBDIR}/data
-@dirrm ${GEM_LIBDIR}

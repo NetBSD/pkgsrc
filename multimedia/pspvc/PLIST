@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/17 04:17:25 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:09 joerg Exp $
 bin/pspvc
 doc/pspvc/AUTHORS
 doc/pspvc/COPYING
@@ -20,6 +20,3 @@ share/pixmaps/pspvc_logo.png
 share/pixmaps/pspvc_thm.png
 share/pspvc/.keep
 share/pspvc/bin/ffmpeg
-@dirrm share/pspvc/bin
-@dirrm share/pspvc
-@dirrm doc/pspvc

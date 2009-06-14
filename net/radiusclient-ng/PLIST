@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/13 19:58:56 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:41 joerg Exp $
 share/examples/radiusclient-ng/dictionary
 share/examples/radiusclient-ng/dictionary.ascend
 share/examples/radiusclient-ng/dictionary.compat
@@ -16,4 +16,3 @@ sbin/radexample
 sbin/radiusclient
 sbin/radlogin
 sbin/radstatus
-@dirrm share/examples/radiusclient-ng

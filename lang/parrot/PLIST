@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/25 23:01:48 he Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:38 joerg Exp $
 bin/parrot
 bin/parrot_config
 bin/parrot_debugger
@@ -286,47 +286,3 @@ share/doc/parrot/${PKGVERSION}/pod/user/pir/exceptions.pod
 share/doc/parrot/${PKGVERSION}/pod/user/pir/intro.pod
 share/doc/parrot/${PKGVERSION}/pod/user/pir/objects.pod
 share/doc/parrot/${PKGVERSION}/pod/user/pir/pmcs.pod
-@dirrm share/doc/parrot/${PKGVERSION}/pod/user/pir
-@dirrm share/doc/parrot/${PKGVERSION}/pod/user
-@dirrm share/doc/parrot/${PKGVERSION}/pod/pmc
-@dirrm share/doc/parrot/${PKGVERSION}/pod/ops
-@dirrm share/doc/parrot/${PKGVERSION}/pod
-@dirrm share/doc/parrot/${PKGVERSION}
-@dirrm share/doc/parrot
-@dirrm lib/pkgconfig/parrot/${PKGVERSION}
-@dirrm lib/pkgconfig/parrot
-@dirrm lib/parrot/${PKGVERSION}/library/YAML/Parser
-@dirrm lib/parrot/${PKGVERSION}/library/YAML/Dumper
-@dirrm lib/parrot/${PKGVERSION}/library/YAML
-@dirrm lib/parrot/${PKGVERSION}/library/Test/Builder
-@dirrm lib/parrot/${PKGVERSION}/library/Test
-@dirrm lib/parrot/${PKGVERSION}/library/Tcl
-@dirrm lib/parrot/${PKGVERSION}/library/String
-@dirrm lib/parrot/${PKGVERSION}/library/Stream
-@dirrm lib/parrot/${PKGVERSION}/library/SDL
-@dirrm lib/parrot/${PKGVERSION}/library/Parrot
-@dirrm lib/parrot/${PKGVERSION}/library/PGE
-@dirrm lib/parrot/${PKGVERSION}/library/NCI
-@dirrm lib/parrot/${PKGVERSION}/library/Math/Random
-@dirrm lib/parrot/${PKGVERSION}/library/Math
-@dirrm lib/parrot/${PKGVERSION}/library/MIME
-@dirrm lib/parrot/${PKGVERSION}/library/HTTP
-@dirrm lib/parrot/${PKGVERSION}/library/Getopt
-@dirrm lib/parrot/${PKGVERSION}/library/Digest
-@dirrm lib/parrot/${PKGVERSION}/library/Data/Dumper
-@dirrm lib/parrot/${PKGVERSION}/library/Data
-@dirrm lib/parrot/${PKGVERSION}/library/Config
-@dirrm lib/parrot/${PKGVERSION}/library/CGI
-@dirrm lib/parrot/${PKGVERSION}/library
-@dirrm lib/parrot/${PKGVERSION}/languages/pge/PGE
-@dirrm lib/parrot/${PKGVERSION}/languages/pge
-@dirrm lib/parrot/${PKGVERSION}/languages
-@dirrm lib/parrot/${PKGVERSION}/include
-@dirrm lib/parrot/${PKGVERSION}/dynext
-@dirrm lib/parrot/${PKGVERSION}
-@dirrm lib/parrot
-@dirrm include/parrot/${PKGVERSION}/parrot/oplib
-@dirrm include/parrot/${PKGVERSION}/parrot/atomic
-@dirrm include/parrot/${PKGVERSION}/parrot
-@dirrm include/parrot/${PKGVERSION}
-@dirrm include/parrot

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/12 12:04:50 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:04:35 joerg Exp $
 share/doc/ingo/INSTALL
 share/doc/ingo/README
 share/doc/ingo/RELEASE_NOTES
@@ -183,97 +183,5 @@ share/horde/ingo/themes/tango-blue/graphics/whitelist.png
 share/horde/ingo/themes/tango-blue/themed_graphics
 share/horde/ingo/vacation.php
 share/horde/ingo/whitelist.php
-@dirrm share/horde/ingo/themes/tango-blue/graphics
-@dirrm share/horde/ingo/themes/tango-blue
-@dirrm share/horde/ingo/themes/silver/graphics
-@dirrm share/horde/ingo/themes/silver
-@dirrm share/horde/ingo/themes/graphics
-@dirrm share/horde/ingo/themes
-@dirrm share/horde/ingo/templates/whitelist
-@dirrm share/horde/ingo/templates/script
-@dirrm share/horde/ingo/templates/rule
-@dirrm share/horde/ingo/templates/javascript
-@dirrm share/horde/ingo/templates/filters
-@dirrm share/horde/ingo/templates/blacklist
-@dirrm share/horde/ingo/templates
-@dirrm share/horde/ingo/scripts/upgrades
-@dirrm share/horde/ingo/scripts/sql
-@dirrm share/horde/ingo/scripts
-@dirrm share/horde/ingo/po
-@dirrm share/horde/ingo/locale/zh_TW/LC_MESSAGES
-@dirrm share/horde/ingo/locale/zh_TW
-@dirrm share/horde/ingo/locale/zh_CN/LC_MESSAGES
-@dirrm share/horde/ingo/locale/zh_CN
-@dirrm share/horde/ingo/locale/uk_UA/LC_MESSAGES
-@dirrm share/horde/ingo/locale/uk_UA
-@dirrm share/horde/ingo/locale/tr_TR/LC_MESSAGES
-@dirrm share/horde/ingo/locale/tr_TR
-@dirrm share/horde/ingo/locale/sv_SE/LC_MESSAGES
-@dirrm share/horde/ingo/locale/sv_SE
-@dirrm share/horde/ingo/locale/sl_SI/LC_MESSAGES
-@dirrm share/horde/ingo/locale/sl_SI
-@dirrm share/horde/ingo/locale/sk_SK/LC_MESSAGES
-@dirrm share/horde/ingo/locale/sk_SK
-@dirrm share/horde/ingo/locale/ru_RU/LC_MESSAGES
-@dirrm share/horde/ingo/locale/ru_RU
-@dirrm share/horde/ingo/locale/ro_RO/LC_MESSAGES
-@dirrm share/horde/ingo/locale/ro_RO
-@dirrm share/horde/ingo/locale/pt_PT/LC_MESSAGES
-@dirrm share/horde/ingo/locale/pt_PT
-@dirrm share/horde/ingo/locale/pt_BR/LC_MESSAGES
-@dirrm share/horde/ingo/locale/pt_BR
-@dirrm share/horde/ingo/locale/pl_PL/LC_MESSAGES
-@dirrm share/horde/ingo/locale/pl_PL
-@dirrm share/horde/ingo/locale/nl_NL/LC_MESSAGES
-@dirrm share/horde/ingo/locale/nl_NL
-@dirrm share/horde/ingo/locale/nb_NO/LC_MESSAGES
-@dirrm share/horde/ingo/locale/nb_NO
-@dirrm share/horde/ingo/locale/lv_LV/LC_MESSAGES
-@dirrm share/horde/ingo/locale/lv_LV
-@dirrm share/horde/ingo/locale/lt_LT/LC_MESSAGES
-@dirrm share/horde/ingo/locale/lt_LT
-@dirrm share/horde/ingo/locale/ko_KR/LC_MESSAGES
-@dirrm share/horde/ingo/locale/ko_KR
-@dirrm share/horde/ingo/locale/ja_JP/LC_MESSAGES
-@dirrm share/horde/ingo/locale/ja_JP
-@dirrm share/horde/ingo/locale/it_IT/LC_MESSAGES
-@dirrm share/horde/ingo/locale/it_IT
-@dirrm share/horde/ingo/locale/hu_HU/LC_MESSAGES
-@dirrm share/horde/ingo/locale/hu_HU
-@dirrm share/horde/ingo/locale/fr_FR/LC_MESSAGES
-@dirrm share/horde/ingo/locale/fr_FR
-@dirrm share/horde/ingo/locale/fi_FI/LC_MESSAGES
-@dirrm share/horde/ingo/locale/fi_FI
-@dirrm share/horde/ingo/locale/eu_ES/LC_MESSAGES
-@dirrm share/horde/ingo/locale/eu_ES
-@dirrm share/horde/ingo/locale/et_EE/LC_MESSAGES
-@dirrm share/horde/ingo/locale/et_EE
-@dirrm share/horde/ingo/locale/es_ES/LC_MESSAGES
-@dirrm share/horde/ingo/locale/es_ES
-@dirrm share/horde/ingo/locale/en_US
-@dirrm share/horde/ingo/locale/el_GR/LC_MESSAGES
-@dirrm share/horde/ingo/locale/el_GR
-@dirrm share/horde/ingo/locale/de_DE/LC_MESSAGES
-@dirrm share/horde/ingo/locale/de_DE
-@dirrm share/horde/ingo/locale/da_DK/LC_MESSAGES
-@dirrm share/horde/ingo/locale/da_DK
-@dirrm share/horde/ingo/locale/cs_CZ/LC_MESSAGES
-@dirrm share/horde/ingo/locale/cs_CZ
-@dirrm share/horde/ingo/locale/ca_ES/LC_MESSAGES
-@dirrm share/horde/ingo/locale/ca_ES
-@dirrm share/horde/ingo/locale
-@dirrm share/horde/ingo/lib/tests/_data
-@dirrm share/horde/ingo/lib/tests
-@dirrm share/horde/ingo/lib/UI/VarRenderer
-@dirrm share/horde/ingo/lib/UI
-@dirrm share/horde/ingo/lib/Storage
-@dirrm share/horde/ingo/lib/Script/imap
-@dirrm share/horde/ingo/lib/Script
-@dirrm share/horde/ingo/lib/IMAP
-@dirrm share/horde/ingo/lib/Driver
-@dirrm share/horde/ingo/lib/Block
-@dirrm share/horde/ingo/lib
 @unexec ${RMDIR} %D/share/horde/ingo/config 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/horde/ingo 2>/dev/null || ${TRUE}
-@dirrm share/examples/ingo
-@dirrm share/doc/ingo

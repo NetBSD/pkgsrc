@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:41 joerg Exp $
 qmailanalog/bin/matchup
 qmailanalog/bin/columnt
 qmailanalog/bin/zoverall
@@ -36,9 +36,3 @@ qmailanalog/man/cat1/xqp.0
 qmailanalog/man/cat1/xsender.0
 qmailanalog/man/cat1/xrecipient.0
 qmailanalog/man/cat1/columnt.0
-@dirrm qmailanalog/man/man1
-@dirrm qmailanalog/man/cat1
-@dirrm qmailanalog/man
-@dirrm qmailanalog/doc
-@dirrm qmailanalog/bin
-@dirrm qmailanalog

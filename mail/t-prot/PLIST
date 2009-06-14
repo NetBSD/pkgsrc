@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/15 21:18:46 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:44 joerg Exp $
 bin/t-prot
 man/man1/t-prot.1
 share/doc/t-prot/muttrc.t-prot
-@dirrm share/doc/t-prot

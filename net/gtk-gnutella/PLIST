@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/05/05 06:46:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:09:29 joerg Exp $
 bin/gtk-gnutella
 share/applications/gtk-gnutella.desktop
 share/gtk-gnutella/bogons.txt
@@ -62,8 +62,3 @@ share/locale/uk/LC_MESSAGES/gtk-gnutella.mo
 share/locale/zh_CN/LC_MESSAGES/gtk-gnutella.mo
 share/pixmaps/gtk-gnutella.png
 share/pixmaps/gtk-gnutella.svg
-@dirrm share/gtk-gnutella/pixmaps
-@dirrm share/gtk-gnutella/ja
-@dirrm share/gtk-gnutella/en
-@dirrm share/gtk-gnutella/el
-@dirrm share/gtk-gnutella

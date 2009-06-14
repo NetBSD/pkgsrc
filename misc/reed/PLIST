@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/09 13:37:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:29 joerg Exp $
 bin/breed
 bin/reed
 bin/wrap
@@ -6,4 +6,3 @@ man/man1/breed.1
 man/man1/reed.1
 man/man1/wrap.1
 share/reed/help
-@dirrm share/reed

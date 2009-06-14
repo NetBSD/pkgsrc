@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/17 22:18:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:19 joerg Exp $
 bin/any2epub
 bin/any2lit
 bin/any2lrf
@@ -1954,72 +1954,3 @@ man/man1/rtf2lrf.1
 man/man1/txt2lrf.1
 man/man1/web2disk.1
 man/man1/web2lrf.1
-@dirrm ${PYSITELIB}/pyPdf
-@dirrm ${PYSITELIB}/odf
-@dirrm ${PYSITELIB}/encutils
-@dirrm ${PYSITELIB}/cssutils/stylesheets
-@dirrm ${PYSITELIB}/cssutils/css
-@dirrm ${PYSITELIB}/cssutils
-@dirrm ${PYSITELIB}/cherrypy/wsgiserver
-@dirrm ${PYSITELIB}/cherrypy/scaffold
-@dirrm ${PYSITELIB}/cherrypy/process
-@dirrm ${PYSITELIB}/cherrypy/lib
-@dirrm ${PYSITELIB}/cherrypy
-@dirrm ${PYSITELIB}/calibre/web/fetch
-@dirrm ${PYSITELIB}/calibre/web/feeds/recipes
-@dirrm ${PYSITELIB}/calibre/web/feeds
-@dirrm ${PYSITELIB}/calibre/web
-@dirrm ${PYSITELIB}/calibre/utils/genshi/template
-@dirrm ${PYSITELIB}/calibre/utils/genshi/filters
-@dirrm ${PYSITELIB}/calibre/utils/genshi
-@dirrm ${PYSITELIB}/calibre/utils
-@dirrm ${PYSITELIB}/calibre/translations
-@dirrm ${PYSITELIB}/calibre/trac/plugins
-@dirrm ${PYSITELIB}/calibre/trac
-@dirrm ${PYSITELIB}/calibre/plugins
-@dirrm ${PYSITELIB}/calibre/library
-@dirrm ${PYSITELIB}/calibre/gui2/viewer
-@dirrm ${PYSITELIB}/calibre/gui2/lrf_renderer
-@dirrm ${PYSITELIB}/calibre/gui2/dialogs
-@dirrm ${PYSITELIB}/calibre/gui2
-@dirrm ${PYSITELIB}/calibre/ebooks/rtf2xml
-@dirrm ${PYSITELIB}/calibre/ebooks/pdf
-@dirrm ${PYSITELIB}/calibre/ebooks/odt
-@dirrm ${PYSITELIB}/calibre/ebooks/mobi
-@dirrm ${PYSITELIB}/calibre/ebooks/metadata
-@dirrm ${PYSITELIB}/calibre/ebooks/markdown
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/web/profiles
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/web
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/txt
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/rtf
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/pylrs
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/pdf
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/mobi
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/lrs
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/lit
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/html
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/fonts/prs500
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/fonts/liberation
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/fonts
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/feeds
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/fb2
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/epub
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/comic
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf/any
-@dirrm ${PYSITELIB}/calibre/ebooks/lrf
-@dirrm ${PYSITELIB}/calibre/ebooks/lit/maps
-@dirrm ${PYSITELIB}/calibre/ebooks/lit
-@dirrm ${PYSITELIB}/calibre/ebooks/epub
-@dirrm ${PYSITELIB}/calibre/ebooks/chardet
-@dirrm ${PYSITELIB}/calibre/ebooks
-@dirrm ${PYSITELIB}/calibre/devices/usbms
-@dirrm ${PYSITELIB}/calibre/devices/prs700
-@dirrm ${PYSITELIB}/calibre/devices/prs505
-@dirrm ${PYSITELIB}/calibre/devices/prs500/cli
-@dirrm ${PYSITELIB}/calibre/devices/prs500
-@dirrm ${PYSITELIB}/calibre/devices/kindle
-@dirrm ${PYSITELIB}/calibre/devices/cybookg3
-@dirrm ${PYSITELIB}/calibre/devices
-@dirrm ${PYSITELIB}/calibre/customize
-@dirrm ${PYSITELIB}/calibre
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/06/21 08:48:41 mrg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:37 joerg Exp $
 bin/onyx
 bin/${PKGNAME}
 bin/onyx_config
@@ -213,13 +213,3 @@ share/doc/${PKGNAME}/html/up_g.png
 share/doc/${PKGNAME}/pdf/onyx.pdf
 share/doc/onyx
 share/onyx
-@dirrm share/${PKGNAME}/nxm
-@dirrm share/${PKGNAME}/nx/modprompt
-@dirrm share/${PKGNAME}/nx/modclopt
-@dirrm share/${PKGNAME}/nx
-@dirrm share/${PKGNAME}/libonyx
-@dirrm share/doc/${PKGNAME}/pdf
-@dirrm share/doc/${PKGNAME}/html
-@dirrm share/doc/${PKGNAME}
-@dirrm share/${PKGNAME}
-@dirrm include/libonyx

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/05/25 15:50:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:08:05 joerg Exp $
 lib/gstreamer-0.10/libgstalaw.la
 lib/gstreamer-0.10/libgstalpha.la
 lib/gstreamer-0.10/libgstalphacolor.la
@@ -79,7 +79,3 @@ share/locale/vi/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/zh_CN/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/zh_HK/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/zh_TW/LC_MESSAGES/gst-plugins-good-0.10.mo
-@dirrm share/gstreamer-0.10/presets
-@dirrm share/gstreamer-0.10
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in gstreamer0.10: @dirrm lib/gstreamer-0.10

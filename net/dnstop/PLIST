@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/25 00:44:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:25 joerg Exp $
 bin/dnstop
 man/man8/dnstop.8
 share/doc/dnstop/LICENSE
-@dirrm share/doc/dnstop

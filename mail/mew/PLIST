@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/01/19 15:10:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:04:37 joerg Exp $
 bin/incm
 bin/mew-pinentry
 bin/mewcat
@@ -203,7 +203,3 @@ ${EMACS_LISPPREFIX}/mew/mew-temacs.elc
 ${EMACS_LISPPREFIX}/mew/mew-unix.elc
 ${EMACS_LISPPREFIX}/mew/mew-win32.elc
 ${EMACS_LISPPREFIX}/mew/mew-xemacs.elc
-@dirrm ${EMACS_LISPPREFIX}/mew/contrib
-@dirrm ${EMACS_LISPPREFIX}/mew
-@dirrm share/mew/etc
-@dirrm share/mew

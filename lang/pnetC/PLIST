@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/05/29 12:20:15 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:03:38 joerg Exp $
 lib/cscc/lib/1.2.3400.0/libc.dll
 lib/cscc/lib/1.2.3400.0/libm.dll
 lib/cscc/lib/1.2.3400.0/libpthread.dll
@@ -119,10 +119,3 @@ share/cscc/include/varargs.h
 share/cscc/include/wchar.h
 share/cscc/include/wctype.h
 share/cscc/include/xlocale.h
-@dirrm share/cscc/include/sys
-@dirrm share/cscc/include/netinet
-@dirrm share/cscc/include/gnu
-@dirrm share/cscc/include/bits
-@dirrm share/cscc/include/assembly
-@dirrm share/cscc/include/arpa
-@dirrm share/cscc/include

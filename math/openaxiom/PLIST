@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/10 05:21:59 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:46 joerg Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -2613,28 +2613,6 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src/algebra/xpoly.spad
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src/algebra/ystream.spad
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src/algebra/zerodim.spad
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/timestamp
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src/algebra
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/msgs
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/hypertex/pages
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/hypertex/bitmaps
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/hypertex
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share
-${ecl}@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lisp
 @exec ${MKDIR} %D/lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph
 @exec ${MKDIR} %D/lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/.libs
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/.libs
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/input
 @exec ${MKDIR} %D/lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/.libs
-${ecl}@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/boot
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/.libs
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/USERS.DAASE
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DEPENDENTS.DAASE
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}
-@dirrm lib/open-axiom/${MACHINE_GNU_PLATFORM}
-@dirrm lib/open-axiom

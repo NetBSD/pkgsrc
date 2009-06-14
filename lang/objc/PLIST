@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/24 00:28:01 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:37 joerg Exp $
 bin/cvtimport
 bin/objc
 bin/objc1
@@ -200,8 +200,3 @@ man/man3/TextStyle.3
 man/man3/TypeInconsistency.3
 man/man3/UnknownType.3
 man/man3/Vector.3
-@dirrm include/ppi
-@dirrm include/oclib
-@dirrm include/objpak
-@dirrm include/objcrt
-@dirrm include/cakit

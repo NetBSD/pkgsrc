@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/20 18:16:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:05:46 joerg Exp $
 bin/mex
 man/man1/mex.1
 share/octave/${OCT_VERSION}/site/octave-forge-alternatives/m/graceplot/PKG_ADD
@@ -956,53 +956,6 @@ ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_surf.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_text.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_thick_surf.m
 ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml/vrml_transfo.m
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/vrml
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/tsa
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/time
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/testfun
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/symbolic
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/symband
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/struct
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/strings
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/statistics
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/splines
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/special-matrix
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/specfun
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/sparse
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/signal
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/set
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/plot
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/pdb
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/path
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/optim
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/ode
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/octcdf
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/miscellaneous
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/mex
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/mapping
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/linear-algebra
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/irsa
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/io
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/integration
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/image
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/ident
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/graceplot
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/geometry
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/general
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/econometrics
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/control
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/comm
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/civil
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/cell
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/audio
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/NaN
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge/FIXES
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/octave-forge
 @unexec ${RMDIR} %D/${OCT_LOCALVERFCNFILEDIR} 2>/dev/null || ${TRUE}
-@dirrm ${OCT_LOCALVEROCTFILEDIR}/octave-forge
 @unexec ${RMDIR} %D/${OCT_LOCALVEROCTFILEDIR} 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/${OCT_LOCALVERARCHLIBDIR} 2>/dev/null || ${TRUE}
-@dirrm share/octave/${OCT_VERSION}/site/octave-forge-alternatives/m/graceplot/
-@dirrm share/octave/${OCT_VERSION}/site/octave-forge-alternatives/m
-@dirrm share/octave/${OCT_VERSION}/site/octave-forge-alternatives
-@dirrm share/octave/${OCT_VERSION}/site

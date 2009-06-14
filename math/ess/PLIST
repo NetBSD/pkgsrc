@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/06/20 11:49:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:05:43 joerg Exp $
 ${EMACS_ETCPREFIX}/ess/ess-s4.S
 ${EMACS_ETCPREFIX}/ess/ess-sas-sh-command
 ${EMACS_ETCPREFIX}/ess/ess-sp3.S
@@ -115,6 +115,3 @@ ${EMACS_LISPPREFIX}/ess/noweb-font-lock-mode.el
 ${EMACS_LISPPREFIX}/ess/noweb-font-lock-mode.elc
 ${EMACS_LISPPREFIX}/ess/noweb-mode.el
 ${EMACS_LISPPREFIX}/ess/noweb-mode.elc
-@dirrm ${EMACS_LISPPREFIX}/ess
-@dirrm ${EMACS_ETCPREFIX}/ess/icons
-@dirrm ${EMACS_ETCPREFIX}/ess

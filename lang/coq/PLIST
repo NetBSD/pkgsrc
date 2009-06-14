@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:43:02 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:03:29 joerg Exp $
 bin/coq-interface
 bin/coq-tex
 bin/coq_makefile
@@ -358,38 +358,3 @@ share/emacs/site-lisp/coq-inferior.el
 share/emacs/site-lisp/coq.el
 share/emacs/site-lisp/coqdoc.sty
 @exec ${MKDIR} %D/lib/coq/user-contrib
-@dirrm lib/coq/user-contrib
-@dirrm lib/coq/tools/coqdoc
-@dirrm lib/coq/tools
-@dirrm lib/coq/theories/ZArith
-@dirrm lib/coq/theories/Wellfounded
-@dirrm lib/coq/theories/Strings
-@dirrm lib/coq/theories/Sorting
-@dirrm lib/coq/theories/Sets
-@dirrm lib/coq/theories/Setoids
-@dirrm lib/coq/theories/Relations
-@dirrm lib/coq/theories/Reals
-@dirrm lib/coq/theories/QArith
-@dirrm lib/coq/theories/NArith
-@dirrm lib/coq/theories/Logic
-@dirrm lib/coq/theories/Lists
-@dirrm lib/coq/theories/IntMap
-@dirrm lib/coq/theories/Init
-@dirrm lib/coq/theories/FSets
-@dirrm lib/coq/theories/Bool
-@dirrm lib/coq/theories/Arith
-@dirrm lib/coq/theories
-@dirrm lib/coq/states
-@dirrm lib/coq/ide
-@dirrm lib/coq/contrib/subtac
-@dirrm lib/coq/contrib/setoid_ring
-@dirrm lib/coq/contrib/rtauto
-@dirrm lib/coq/contrib/romega
-@dirrm lib/coq/contrib/ring
-@dirrm lib/coq/contrib/recdef
-@dirrm lib/coq/contrib/omega
-@dirrm lib/coq/contrib/interface
-@dirrm lib/coq/contrib/fourier
-@dirrm lib/coq/contrib/field
-@dirrm lib/coq/contrib
-@dirrm lib/coq

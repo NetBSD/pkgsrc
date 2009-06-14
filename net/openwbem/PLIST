@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/29 15:05:21 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:38 joerg Exp $
 bin/owcimindicationlistener
 bin/owcreatenamespace
 bin/owdeletenamespace
@@ -479,14 +479,3 @@ share/aclocal/openwbem.m4
 share/openwbem/OpenWBEM_Acl1.0.mof
 share/openwbem/OpenWBEM_Interop.mof
 @exec ${MKDIR} %D/var/openwbem
-@dirrm var/openwbem
-@dirrm share/openwbem
-@dirrm libexec/openwbem
-@dirrm lib/openwbem/services
-@dirrm lib/openwbem/requesthandlers
-@dirrm lib/openwbem/provifcs
-@dirrm lib/openwbem/c++providers
-@dirrm lib/openwbem/authentication
-@dirrm lib/openwbem
-@dirrm include/openwbem
-@dirrm etc/openwbem

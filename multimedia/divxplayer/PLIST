@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 13:28:19 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:02 joerg Exp $
 bin/divxPlayer
 bin/divxPlayer.bin
 share/divxplayer/Skins/Corner.zip
 share/divxplayer/Skins/Default.dps
 share/divxplayer/Skins/divxexplorer.dps
-@dirrm share/divxplayer/Skins
-@dirrm share/divxplayer

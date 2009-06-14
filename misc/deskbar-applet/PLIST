@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/03/18 01:51:36 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:07:19 joerg Exp $
 lib/bonobo/servers/Deskbar_Applet.server
 lib/deskbar-applet/deskbar-applet
 lib/deskbar-applet/modules-2.20-compatible/beagle-live.py
@@ -447,69 +447,3 @@ share/omf/deskbar/deskbar-ru.omf
 share/omf/deskbar/deskbar-sv.omf
 share/omf/deskbar/deskbar-uk.omf
 share/omf/deskbar/deskbar-zh_CN.omf
-@dirrm share/omf/deskbar
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gnome/help/deskbar/zh_CN/figures
-@dirrm share/gnome/help/deskbar/zh_CN
-@dirrm share/gnome/help/deskbar/uk/figures
-@dirrm share/gnome/help/deskbar/uk
-@dirrm share/gnome/help/deskbar/sv/figures
-@dirrm share/gnome/help/deskbar/sv
-@dirrm share/gnome/help/deskbar/ru/figures
-@dirrm share/gnome/help/deskbar/ru
-@dirrm share/gnome/help/deskbar/pt_BR/figures
-@dirrm share/gnome/help/deskbar/pt_BR
-@dirrm share/gnome/help/deskbar/oc/figures
-@dirrm share/gnome/help/deskbar/oc
-@dirrm share/gnome/help/deskbar/it/figures
-@dirrm share/gnome/help/deskbar/it
-@dirrm share/gnome/help/deskbar/fr/figures
-@dirrm share/gnome/help/deskbar/fr
-@dirrm share/gnome/help/deskbar/es/figures
-@dirrm share/gnome/help/deskbar/es
-@dirrm share/gnome/help/deskbar/en_GB/figures
-@dirrm share/gnome/help/deskbar/en_GB
-@dirrm share/gnome/help/deskbar/el/figures
-@dirrm share/gnome/help/deskbar/el
-@dirrm share/gnome/help/deskbar/de/figures
-@dirrm share/gnome/help/deskbar/de
-@dirrm share/gnome/help/deskbar/ca/figures
-@dirrm share/gnome/help/deskbar/ca
-@dirrm share/gnome/help/deskbar/C/figures
-@dirrm share/gnome/help/deskbar/C
-@dirrm share/gnome/help/deskbar
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/deskbar-applet/art
-@dirrm share/deskbar-applet
-@dirrm ${PYSITELIB}/deskbar/ui/preferences
-@dirrm ${PYSITELIB}/deskbar/ui/iconentry
-@dirrm ${PYSITELIB}/deskbar/ui/cuemiac
-@dirrm ${PYSITELIB}/deskbar/ui
-@dirrm ${PYSITELIB}/deskbar/osutils
-@dirrm ${PYSITELIB}/deskbar/interfaces
-@dirrm ${PYSITELIB}/deskbar/handlers/gdmclient
-@dirrm ${PYSITELIB}/deskbar/handlers/evolution
-@dirrm ${PYSITELIB}/deskbar/handlers/actions
-@dirrm ${PYSITELIB}/deskbar/handlers
-@dirrm ${PYSITELIB}/deskbar/core/updater
-@dirrm ${PYSITELIB}/deskbar/core/keybinder
-@dirrm ${PYSITELIB}/deskbar/core/_userdirs
-@dirrm ${PYSITELIB}/deskbar/core
-@dirrm ${PYSITELIB}/deskbar
-@dirrm lib/deskbar-applet/modules-2.20-compatible
-@dirrm lib/deskbar-applet
-@comment in libbonobo: @dirrm lib/bonobo/servers

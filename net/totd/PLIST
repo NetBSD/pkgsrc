@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/29 10:43:53 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:45 joerg Exp $
 man/man8/totd.8
 sbin/totd
 share/examples/totd/totd.conf.sample
-@dirrm share/examples/totd

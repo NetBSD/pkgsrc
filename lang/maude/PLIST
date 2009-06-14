@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/12/01 13:17:56 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:36 joerg Exp $
 bin/maude
 share/maude/linear.maude
 share/maude/machine-int.maude
@@ -8,4 +8,3 @@ share/maude/prelude.maude
 share/maude/prelude.maude
 share/maude/socket.maude
 share/maude/term-order.maude
-@dirrm share/maude

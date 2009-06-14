@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:33:40 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:45 joerg Exp $
 bin/graphchk
 bin/kmetis
 bin/mesh2dual
@@ -21,6 +21,3 @@ share/examples/metis/4elt.graph
 share/examples/metis/metis.mesh
 share/examples/metis/mtest.c
 share/examples/metis/test.mgraph
-@dirrm share/examples/metis
-@dirrm share/doc/metis
-@dirrm include/metis

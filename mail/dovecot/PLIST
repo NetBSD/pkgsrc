@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/01/08 00:02:43 abs Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:04:31 joerg Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -446,36 +446,4 @@ share/examples/dovecot/dovecot-openssl.cnf
 share/examples/dovecot/dovecot-sql-example.conf
 share/examples/dovecot/mkcert.sh
 share/examples/rc.d/dovecot
-@dirrm share/examples/dovecot
-@dirrm share/doc/dovecot/wiki
-@dirrm share/doc/dovecot
-@dirrm libexec/dovecot
-@dirrm lib/dovecot/pop3
-@dirrm lib/dovecot/lda
-@dirrm lib/dovecot/imap
 @exec ${MKDIR} %D/lib/dovecot/auth
-@dirrm lib/dovecot/auth
-@dirrm lib/dovecot
-@dirrm include/dovecot/src/pop3
-@dirrm include/dovecot/src/lib-storage/list
-@dirrm include/dovecot/src/lib-storage/index/raw
-@dirrm include/dovecot/src/lib-storage/index/mbox
-@dirrm include/dovecot/src/lib-storage/index/maildir
-@dirrm include/dovecot/src/lib-storage/index/dbox
-@dirrm include/dovecot/src/lib-storage/index/cydir
-@dirrm include/dovecot/src/lib-storage/index
-@dirrm include/dovecot/src/lib-storage
-@dirrm include/dovecot/src/lib-sql
-@dirrm include/dovecot/src/lib-settings
-@dirrm include/dovecot/src/lib-mail
-@dirrm include/dovecot/src/lib-index
-@dirrm include/dovecot/src/lib-imap
-@dirrm include/dovecot/src/lib-dict
-@dirrm include/dovecot/src/lib-charset
-@dirrm include/dovecot/src/lib-auth
-@dirrm include/dovecot/src/lib
-@dirrm include/dovecot/src/imap
-@dirrm include/dovecot/src/deliver
-@dirrm include/dovecot/src/auth
-@dirrm include/dovecot/src
-@dirrm include/dovecot

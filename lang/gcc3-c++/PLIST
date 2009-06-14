@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/08 10:22:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:32 joerg Exp $
 ${GCC_SUBPREFIX}/bin/c++
 ${GCC_SUBPREFIX}/bin/g++
 ${GCC_SUBPREFIX}/bin/${GCC_PLATFORM}-c++
@@ -194,10 +194,3 @@ ${GCC_SUBPREFIX}/lib/libstdc++.la
 ${GCC_SUBPREFIX}/lib/libsupc++.la
 ${GCC_SUBPREFIX}/man/man1/g++.1
 ${GCC_SUBPREFIX}/mk/c++.mk
-@dirrm ${GCC_SUBPREFIX}/include/c++/${PKGVERSION}/${GCC_PLATFORM}/bits
-@dirrm ${GCC_SUBPREFIX}/include/c++/${PKGVERSION}/${GCC_PLATFORM}
-@dirrm ${GCC_SUBPREFIX}/include/c++/${PKGVERSION}/ext
-@dirrm ${GCC_SUBPREFIX}/include/c++/${PKGVERSION}/bits
-@dirrm ${GCC_SUBPREFIX}/include/c++/${PKGVERSION}/backward
-@dirrm ${GCC_SUBPREFIX}/include/c++/${PKGVERSION}
-@dirrm ${GCC_SUBPREFIX}/include/c++

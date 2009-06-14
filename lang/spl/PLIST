@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/17 08:45:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:41 joerg Exp $
 bin/spl-config
 bin/splrun
 bin/webspld
@@ -320,12 +320,3 @@ share/examples/spl/example66.expected
 share/examples/spl/example66.spl
 share/examples/spl/example67.expected
 share/examples/spl/example67.spl
-@dirrm share/examples/spl
-@dirrm share/doc/spl/spldoc
-@dirrm share/doc/spl/qtdemo
-@dirrm share/doc/spl/webspltut
-@dirrm share/doc/spl/webspl_demo/images
-@dirrm share/doc/spl/webspl_demo
-@dirrm share/doc/spl
-@dirrm libexec/cgi-bin/webspl_cache
-@dirrm lib/spl_modules

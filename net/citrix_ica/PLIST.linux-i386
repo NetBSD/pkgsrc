@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.1 2007/07/29 05:19:46 jlam Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.2 2009/06/14 18:09:24 joerg Exp $
 lib/ICAClient/CHARICONV.DLL
 lib/ICAClient/pkginf/F.core.linuxx86
 lib/ICAClient/pkginf/Ver.core.linuxx86
@@ -25,5 +25,3 @@ lib/ICAClient/nls/en/UTF-8/Wfica
 lib/ICAClient/nls/en/UTF-8/pna.nls
 lib/ICAClient/nls/en/Wfcmgr
 lib/ICAClient/nls/en/Wfica
-@dirrm lib/ICAClient/nls/en/UTF-8
-@dirrm lib/ICAClient/config/usertemplate

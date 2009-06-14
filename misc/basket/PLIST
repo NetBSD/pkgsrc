@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/10 21:04:27 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:18 joerg Exp $
 bin/basket
 lib/kde3/basketthumbcreator.la
 lib/kde3/kcm_basket.la
@@ -133,37 +133,3 @@ share/locale/ru/LC_MESSAGES/basket.mo
 share/locale/tr/LC_MESSAGES/basket.mo
 share/locale/zh_CN/LC_MESSAGES/basket.mo
 share/locale/zh_TW/LC_MESSAGES/basket.mo
-@comment in kdepim: @dirrm share/kde/services/kontact
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/config/magic
-@comment in kdepim: @dirrm share/kde/apps/kontact/ksettingsdialog
-@comment in kdepim: @dirrm share/kde/apps/kontact
-@dirrm share/kde/apps/basket/welcome
-@dirrm share/kde/apps/basket/images
-@dirrm share/kde/apps/basket/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/basket/icons/crystalsvg/16x16
-@dirrm share/kde/apps/basket/icons/crystalsvg
-@dirrm share/kde/apps/basket/icons
-@dirrm share/kde/apps/basket/backgrounds/previews
-@dirrm share/kde/apps/basket/backgrounds
-@dirrm share/kde/apps/basket
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Utilities
-@comment in kde: @dirrm share/icons/crystalsvg/scalable/apps
-@comment in kde: @dirrm share/icons/crystalsvg/64x64/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
-@comment in kde: @dirrm share/icons/crystalsvg/128x128/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/128x128/apps
-@dirrm share/doc/kde/HTML/en/basket
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm lib/kde3

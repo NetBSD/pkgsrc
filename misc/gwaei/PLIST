@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/22 17:37:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:07:22 joerg Exp $
 bin/waei
 bin/gwaei
 share/applications/gwaei.desktop
@@ -36,25 +36,3 @@ share/locale/en@quot/LC_MESSAGES/gwaei.mo
 share/locale/es/LC_MESSAGES/gwaei.mo
 share/locale/it/LC_MESSAGES/gwaei.mo
 share/locale/ja/LC_MESSAGES/gwaei.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gwaei
-@dirrm share/gnome/help/gwaei/C
-@dirrm share/gnome/help/gwaei
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/doc/${PKGNAME}
-@comment in xdg-dirs: @dirrm share/applications

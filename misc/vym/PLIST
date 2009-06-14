@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/19 04:07:52 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:32 joerg Exp $
 bin/vym
 share/doc/packages/vym/vym.pdf
 share/vym/demos/lifeforms.vym
@@ -179,19 +179,3 @@ share/vym/styles/vym2kdebookmarks.xsl
 share/vym/styles/vym2taskjuggler.xsl
 share/vym/styles/vym2txt.xsl
 share/vym/styles/vym2xhtml.xsl
-@dirrm share/vym/styles
-@dirrm share/vym/scripts
-@dirrm share/vym/macros
-@dirrm share/vym/lang
-@dirrm share/vym/icons
-@dirrm share/vym/flags/freemind
-@dirrm share/vym/flags
-@dirrm share/vym/exports/template-orange-blue/Thumbnails
-@dirrm share/vym/exports/template-orange-blue/Pictures
-@dirrm share/vym/exports/template-orange-blue/META-INF
-@dirrm share/vym/exports/template-orange-blue
-@dirrm share/vym/exports
-@dirrm share/vym/demos
-@dirrm share/vym
-@dirrm share/doc/packages/vym
-@dirrm share/doc/packages

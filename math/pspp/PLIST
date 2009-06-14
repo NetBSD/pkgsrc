@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/05 23:01:16 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:05:47 joerg Exp $
 bin/pspp
 info/pspp.info
 share/doc/pspp/NEWS
@@ -8,5 +8,3 @@ share/examples/pspp/devices
 share/examples/pspp/html-prologue
 share/examples/pspp/papersize
 share/examples/pspp/ps-prologue
-@dirrm share/examples/pspp
-@dirrm share/doc/pspp

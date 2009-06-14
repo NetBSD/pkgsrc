@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/16 13:18:29 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:22 joerg Exp $
 bin/hanzim
 lib/hanzim/bushou.gb
 lib/hanzim/cidianf.gb
@@ -11,5 +11,3 @@ lib/hanzim/zidianf.gb
 lib/hanzim/zidianfl.b5
 man/man1/hanzim.1
 share/doc/hanzim/hanzim.doc
-@dirrm share/doc/hanzim
-@dirrm lib/hanzim

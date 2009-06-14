@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/02/05 00:53:09 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:43 joerg Exp $
 bin/skype
 share/applications/skype.desktop
 share/doc/skype/LICENSE
@@ -31,8 +31,3 @@ share/skype/sounds/TransferFailed.wav
 share/skype/sounds/TransferRequest.wav
 share/skype/sounds/VoicemailReceived.wav
 share/skype/skype
-@dirrm share/skype/sounds
-@dirrm share/skype/icons
-@dirrm share/skype
-@dirrm share/doc/skype
-@comment in xdg-dirs: @dirrm share/applications

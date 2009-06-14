@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:34:29 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:50 joerg Exp $
 bin/xlispstat
 libexec/xlispstat/xlisp
 libexec/xlispstat/xlisp.wks
@@ -36,8 +36,3 @@ share/xlispstat/Examples/rotatedemo.lsp
 share/xlispstat/Examples/tour.lsp
 share/xlispstat/Examples/tourdemo.lsp
 share/xlispstat/xlisp.hlp
-@dirrm share/xlispstat/Examples
-@dirrm share/xlispstat/Data
-@dirrm share/xlispstat/Autoload
-@dirrm share/xlispstat
-@dirrm libexec/xlispstat

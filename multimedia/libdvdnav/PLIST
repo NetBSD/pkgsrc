@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/14 22:30:46 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:08:07 joerg Exp $
 bin/dvdnav-config
 include/dvdnav/dvd_types.h
 include/dvdnav/dvdnav.h
@@ -8,4 +8,3 @@ lib/libdvdnavmini.la
 lib/pkgconfig/dvdnav.pc
 lib/pkgconfig/dvdnavmini.pc
 share/aclocal/dvdnav.m4
-@dirrm include/dvdnav

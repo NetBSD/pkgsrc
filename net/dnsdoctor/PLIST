@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/28 15:22:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:25 joerg Exp $
 bin/dnsdoctor
 libexec/dnsdoctor/cgi-bin/diagnose.cgi
 libexec/dnsdoctor/dnsdoctor/cache.rb
@@ -154,24 +154,3 @@ share/examples/dnsdoctor/dnsdoctor.conf
 share/examples/dnsdoctor/httpd-dnsdoctor.conf
 share/examples/dnsdoctor/reverse.profile
 share/examples/dnsdoctor/rootservers
-@dirrm share/examples/dnsdoctor
-@dirrm share/doc/dnsdoctor
-@dirrm libexec/dnsdoctor/www/style
-@dirrm libexec/dnsdoctor/www/js
-@dirrm libexec/dnsdoctor/www/img
-@dirrm libexec/dnsdoctor/www/html
-@dirrm libexec/dnsdoctor/www
-@dirrm libexec/dnsdoctor/test
-@dirrm libexec/dnsdoctor/locale/test
-@dirrm libexec/dnsdoctor/locale
-@dirrm libexec/dnsdoctor/lib/nresolv
-@dirrm libexec/dnsdoctor/lib/address
-@dirrm libexec/dnsdoctor/lib
-@dirrm libexec/dnsdoctor/dnsdoctor/report
-@dirrm libexec/dnsdoctor/dnsdoctor/publisher
-@dirrm libexec/dnsdoctor/dnsdoctor/input
-@dirrm libexec/dnsdoctor/dnsdoctor/ext
-@dirrm libexec/dnsdoctor/dnsdoctor/data
-@dirrm libexec/dnsdoctor/dnsdoctor
-@dirrm libexec/dnsdoctor/cgi-bin
-@dirrm libexec/dnsdoctor

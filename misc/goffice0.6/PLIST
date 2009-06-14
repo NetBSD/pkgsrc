@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/09/06 15:59:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:22 joerg Exp $
 include/libgoffice-0.6/goffice/app/error-info.h
 include/libgoffice-0.6/goffice/app/file.h
 include/libgoffice-0.6/goffice/app/go-cmd-context-impl.h
@@ -448,35 +448,6 @@ share/pixmaps/goffice/${PKGVERSION}/radar.xpm
 share/pixmaps/goffice/${PKGVERSION}/scatter.xpm
 share/pixmaps/goffice/${PKGVERSION}/stock.xpm
 share/pixmaps/goffice/${PKGVERSION}/surface.xpm
-@dirrm share/pixmaps/goffice/${PKGVERSION}
 @unexec ${RMDIR} %D/share/pixmaps/goffice 2>/dev/null || ${TRUE}
-@dirrm share/gtk-doc/html/goffice-0.6
-@dirrm share/goffice/${PKGVERSION}/patterns
-@dirrm share/goffice/${PKGVERSION}/glade
-@dirrm share/goffice/${PKGVERSION}
 @unexec ${RMDIR} %D/share/goffice 2>/dev/null || ${TRUE}
-@dirrm lib/goffice/${PKGVERSION}/plugins/smoothing
-@dirrm lib/goffice/${PKGVERSION}/plugins/reg_logfit
-@dirrm lib/goffice/${PKGVERSION}/plugins/reg_linear
-@dirrm lib/goffice/${PKGVERSION}/plugins/plot_xy
-@dirrm lib/goffice/${PKGVERSION}/plugins/plot_surface
-@dirrm lib/goffice/${PKGVERSION}/plugins/plot_radar
-@dirrm lib/goffice/${PKGVERSION}/plugins/plot_pie
-@dirrm lib/goffice/${PKGVERSION}/plugins/plot_boxes
-@dirrm lib/goffice/${PKGVERSION}/plugins/plot_barcol
-@dirrm lib/goffice/${PKGVERSION}/plugins
-@dirrm lib/goffice/${PKGVERSION}
 @unexec ${RMDIR} %D/lib/goffice 2>/dev/null || ${TRUE}
-@dirrm include/libgoffice-0.6/goffice/utils
-@dirrm include/libgoffice-0.6/goffice/ms-compat
-@dirrm include/libgoffice-0.6/goffice/math
-@dirrm include/libgoffice-0.6/goffice/gtk
-@dirrm include/libgoffice-0.6/goffice/graph
-@dirrm include/libgoffice-0.6/goffice/drawing
-@dirrm include/libgoffice-0.6/goffice/data
-@dirrm include/libgoffice-0.6/goffice/cut-n-paste/foocanvas
-@dirrm include/libgoffice-0.6/goffice/cut-n-paste
-@dirrm include/libgoffice-0.6/goffice/component
-@dirrm include/libgoffice-0.6/goffice/app
-@dirrm include/libgoffice-0.6/goffice
-@dirrm include/libgoffice-0.6

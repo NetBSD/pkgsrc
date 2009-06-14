@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/24 21:47:25 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:08 joerg Exp $
 bin/eyuvtojpeg
 bin/jmovie2jpeg
 bin/mpeg_demux
@@ -164,5 +164,3 @@ share/examples/mpeg_encode/walk52.5.param
 share/examples/mpeg_encode/walk52.param
 share/examples/mpeg_encode/walk53.param
 share/examples/mpeg_encode/walk93.param
-@dirrm share/examples/mpeg_encode
-@dirrm share/doc/mpeg_encode

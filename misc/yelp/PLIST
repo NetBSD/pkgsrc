@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/03/17 12:19:35 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:07:32 joerg Exp $
 bin/gnome-help
 bin/yelp
 share/applications/yelp.desktop
@@ -128,13 +128,3 @@ share/yelp/xslt/search2html.xsl
 share/yelp/xslt/toc2html.xsl
 share/yelp/xslt/yelp-common.xsl
 share/yelp/yelp.js
-@dirrm share/yelp/xslt
-@dirrm share/yelp/ui
-@dirrm share/yelp/icons
-@dirrm share/yelp
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/192x192/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/192x192
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/05 23:01:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:05:42 joerg Exp $
 ${EMACS_INFOPREFIX}/calc.info
 ${EMACS_LISPPREFIX}/calc/calc-aent.el
 ${EMACS_LISPPREFIX}/calc/calc-aent.elc
@@ -86,4 +86,3 @@ ${EMACS_LISPPREFIX}/calc/calc.el
 ${EMACS_LISPPREFIX}/calc/calc.elc
 ${EMACS_LISPPREFIX}/calc/calccard.tex
 ${EMACS_LISPPREFIX}/calc/macedit.el
-@dirrm ${EMACS_LISPPREFIX}/calc

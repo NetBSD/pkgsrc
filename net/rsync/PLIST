@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/02/21 09:34:17 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:42 joerg Exp $
 bin/rsync
 man/man1/rsync.1
 man/man5/rsyncd.conf.5
 share/doc/rsync/README
 share/doc/rsync/tech_report.tex
 share/examples/rc.d/rsyncd
-@dirrm share/doc/rsync

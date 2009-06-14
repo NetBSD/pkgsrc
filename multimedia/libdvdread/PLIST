@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/14 22:28:05 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:08:07 joerg Exp $
 bin/dvdread-config
 include/dvdread/bitreader.h
 include/dvdread/dvd_reader.h
@@ -12,4 +12,3 @@ include/dvdread/nav_types.h
 lib/libdvdread.la
 lib/pkgconfig/dvdread.pc
 share/aclocal/dvdread.m4
-@dirrm include/dvdread

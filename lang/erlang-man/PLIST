@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/04 14:05:06 ghen Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:31 joerg Exp $
 lib/erlang/man/man1/epmd.1
 lib/erlang/man/man1/erl.1
 lib/erlang/man/man1/erl_call.1
@@ -363,8 +363,3 @@ lib/erlang/man/man6/sasl.6
 lib/erlang/man/man6/snmp.6
 lib/erlang/man/man6/stdlib.6
 lib/erlang/man/man6/test_server.6
-@dirrm lib/erlang/man/man6
-@dirrm lib/erlang/man/man4
-@dirrm lib/erlang/man/man3
-@dirrm lib/erlang/man/man1
-@dirrm lib/erlang/man

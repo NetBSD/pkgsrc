@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:41 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:38 joerg Exp $
 bin/pconsole
 bin/pconsole.sh
 bin/ssh.sh
 share/doc/pconsole/README.pconsole
-@dirrm share/doc/pconsole

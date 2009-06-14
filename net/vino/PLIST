@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/10/29 14:42:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:09:47 joerg Exp $
 bin/vino-passwd
 bin/vino-preferences
 libexec/vino-server
@@ -82,9 +82,3 @@ share/locale/zh_HK/LC_MESSAGES/vino.mo
 share/locale/zh_TW/LC_MESSAGES/vino.mo
 share/vino/vino-preferences.glade
 share/vino/vino-prompt.glade
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/vino
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@comment in libbonobo: @dirrm lib/bonobo/servers

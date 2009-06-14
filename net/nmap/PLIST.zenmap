@@ -278,20 +278,3 @@ share/zenmap/pixmaps/win_75.png
 share/zenmap/pixmaps/wizard_logo.png
 share/zenmap/pixmaps/zenmap.png
 share/zenmap/su-to-zenmap.sh
-@dirrm ${PYSITELIB}/radialnet/core
-@dirrm ${PYSITELIB}/radialnet/gui
-@dirrm ${PYSITELIB}/radialnet/util
-@dirrm ${PYSITELIB}/radialnet/bestwidgets
-@dirrm ${PYSITELIB}/radialnet
-@dirrm ${PYSITELIB}/zenmapCore
-@dirrm ${PYSITELIB}/zenmapGUI/higwidgets
-@dirrm ${PYSITELIB}/zenmapGUI
-@dirrm share/zenmap/config
-@dirrm share/zenmap/locale/pt_BR/LC_MESSAGES
-@dirrm share/zenmap/locale/pt_BR
-@dirrm share/zenmap/locale
-@dirrm share/zenmap/docs
-@dirrm share/zenmap/misc
-@dirrm share/zenmap/pixmaps/radialnet
-@dirrm share/zenmap/pixmaps
-@dirrm share/zenmap

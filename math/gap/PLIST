@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/01/01 18:49:22 cjep Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:05:43 joerg Exp $
 bin/gap
 lib/gap4.3/bin/${GAP_PLATFORM}/gac
 lib/gap4.3/bin/${GAP_PLATFORM}/gap
@@ -4424,57 +4424,3 @@ lib/gap4.3/tst/weakptr.tst
 lib/gap4.3/tst/xgap.tst
 lib/gap4.3/tst/zlattice.tst
 lib/gap4.3/tst/zmodnz.tst
-@dirrm lib/gap4.3/tst
-@dirrm lib/gap4.3/trans
-@dirrm lib/gap4.3/small/small8
-@dirrm lib/gap4.3/small/small7
-@dirrm lib/gap4.3/small/small6
-@dirrm lib/gap4.3/small/small5
-@dirrm lib/gap4.3/small/small4
-@dirrm lib/gap4.3/small/small3
-@dirrm lib/gap4.3/small/small2
-@dirrm lib/gap4.3/small/id6
-@dirrm lib/gap4.3/small/id5
-@dirrm lib/gap4.3/small/id4
-@dirrm lib/gap4.3/small/id3
-@dirrm lib/gap4.3/small/id2
-@dirrm lib/gap4.3/small
-@dirrm lib/gap4.3/prim/grps
-@dirrm lib/gap4.3/prim
-@dirrm lib/gap4.3/pkg/tomlib/gap
-@dirrm lib/gap4.3/pkg/tomlib/data
-@dirrm lib/gap4.3/pkg/tomlib
-@dirrm lib/gap4.3/pkg/example/src
-@dirrm lib/gap4.3/pkg/example/htm
-@dirrm lib/gap4.3/pkg/example/gap
-@dirrm lib/gap4.3/pkg/example/doc
-@dirrm lib/gap4.3/pkg/example
-@dirrm lib/gap4.3/pkg/ctbllib/tst
-@dirrm lib/gap4.3/pkg/ctbllib/htm
-@dirrm lib/gap4.3/pkg/ctbllib/gap4
-@dirrm lib/gap4.3/pkg/ctbllib/gap3
-@dirrm lib/gap4.3/pkg/ctbllib/etc
-@dirrm lib/gap4.3/pkg/ctbllib/doc
-@dirrm lib/gap4.3/pkg/ctbllib/data
-@dirrm lib/gap4.3/pkg/ctbllib
-@dirrm lib/gap4.3/pkg
-@dirrm lib/gap4.3/lib
-@dirrm lib/gap4.3/grp
-@dirrm lib/gap4.3/etc/emacs
-@dirrm lib/gap4.3/etc
-@dirrm lib/gap4.3/doc/tut
-@dirrm lib/gap4.3/doc/ref
-@dirrm lib/gap4.3/doc/prg
-@dirrm lib/gap4.3/doc/new
-@dirrm lib/gap4.3/doc/htm/tut
-@dirrm lib/gap4.3/doc/htm/ref
-@dirrm lib/gap4.3/doc/htm/prg
-@dirrm lib/gap4.3/doc/htm/new
-@dirrm lib/gap4.3/doc/htm/ext
-@dirrm lib/gap4.3/doc/htm
-@dirrm lib/gap4.3/doc/ext
-@dirrm lib/gap4.3/doc
-@dirrm lib/gap4.3/cnf
-@dirrm lib/gap4.3/bin/${GAP_PLATFORM}
-@dirrm lib/gap4.3/bin
-@dirrm lib/gap4.3

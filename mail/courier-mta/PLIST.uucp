@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.uucp,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+@comment $NetBSD: PLIST.uucp,v 1.2 2009/06/14 18:04:30 joerg Exp $
 libexec/courier/modules/uucp/courieruucp
 man/man8/courieruucp.8
 man/man8/makeuucpneighbors.8
@@ -6,4 +6,3 @@ sbin/makeuucpneighbors
 share/courier/makeuucpneighbors
 share/doc/courier/courieruucp.html
 share/examples/courier/module.uucp
-@dirrm libexec/courier/modules/uucp

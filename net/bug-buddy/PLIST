@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/03/17 09:10:03 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 18:09:23 joerg Exp $
 bin/bug-buddy
 lib/gtk-2.0/modules/libgnomebreakpad.la
 man/man1/bug-buddy.1
@@ -98,9 +98,3 @@ share/locale/xh/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_CN/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_HK/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/bug-buddy
-@comment in xdg-dirs: @dirrm share/applications
-@comment in gtk2: @dirrm lib/gtk-2.0/modules

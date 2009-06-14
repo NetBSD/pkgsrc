@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/04/17 12:21:14 tonio Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:03:40 joerg Exp $
 bin/sablevm-java
 java/sablevm/bin/jar-sablevm
 java/sablevm/bin/java-sablevm
@@ -19,13 +19,3 @@ java/sablevm/share/sablevm/LGPL-2.1
 java/sablevm/share/sablevm/LICENSE
 man/man1/java-sablevm.1
 man/man1/sablevm.1
-@dirrm java/sablevm/share/sablevm
-@comment in sablevm-classpath: @dirrm java/sablevm/share
-@comment in sablevm-classpath: @dirrm java/sablevm/lib/sablevm/jre
-@dirrm java/sablevm/lib/sablevm/include
-@dirrm java/sablevm/lib/sablevm/bin
-@comment in sablevm-classpath: @dirrm java/sablevm/lib/sablevm
-@comment in sablevm-classpath: @dirrm java/sablevm/include
-@dirrm java/sablevm/bin
-@comment in sablevm-classpath: @dirrm java/sablevm/lib
-@comment in sablevm-classpath: @dirrm java/sablevm

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/01/03 22:48:40 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:19 joerg Exp $
 bin/cuebreakpoints
 bin/cueconvert
 bin/cueprint
@@ -6,4 +6,3 @@ man/man1/cuebreakpoints.1
 man/man1/cueconvert.1
 man/man1/cueprint.1
 share/doc/cuetools/formats.txt
-@dirrm share/doc/cuetools

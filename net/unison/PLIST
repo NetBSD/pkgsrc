@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/27 12:54:06 tonio Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:47 joerg Exp $
 bin/unison
 share/doc/unison/BUGS.txt
 share/doc/unison/CONTRIB
@@ -7,4 +7,3 @@ share/doc/unison/NEWS
 share/doc/unison/README
 share/doc/unison/ROADMAP.txt
 share/doc/unison/TODO.txt
-@dirrm share/doc/unison

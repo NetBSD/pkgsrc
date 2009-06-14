@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/05 09:36:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:32 joerg Exp $
 bin/whohas
 man/de/man1/whohas.1
 man/man1/whohas.1
 share/doc/whohas/intro.html
 share/doc/whohas/intro.txt
-@dirrm share/doc/whohas

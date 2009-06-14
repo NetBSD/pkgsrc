@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/07 20:52:44 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:06:15 joerg Exp $
 bin/rtpdump
 bin/rtpplay
 bin/rtpsend
@@ -7,5 +7,3 @@ share/doc/html/rtptools/ChangeLog.html
 share/doc/html/rtptools/rtptools.html
 share/examples/rtptools/multidump
 share/examples/rtptools/multiplay
-@dirrm share/examples/rtptools
-@dirrm share/doc/html/rtptools

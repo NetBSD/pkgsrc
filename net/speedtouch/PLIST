@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:43:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:09:44 joerg Exp $
 share/examples/rc.d/adsl
 @exec ${MKDIR} ${PKG_SYSCONFDIR}/speedtouch
 bin/speedtouch-setup
@@ -26,7 +26,3 @@ share/doc/speedtouch/ppp.conf.sample
 share/examples/speedtouch/adsl.sh.sample
 share/examples/speedtouch/ppp.conf.sample
 share/speedtouch/boot.v123.bin
-@dirrm share/speedtouch
-@dirrm share/examples/speedtouch
-@dirrm share/doc/speedtouch
-@dirrm libdata/speedtouch

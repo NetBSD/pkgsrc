@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.1.1.1 2005/01/02 02:51:41 cube Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2009/06/14 18:09:39 joerg Exp $
 include/pppd/md4.h
 lib/pppd/${PPPD_VERSION}/pppoatm.so
 lib/pppd/${PPPD_VERSION}/radius.so
@@ -8,5 +8,3 @@ lib/pppd/${PPPD_VERSION}/rp-pppoe.so
 man/man8/pppd-radius.8
 man/man8/pppd-radattr.8
 sbin/pppoe-discovery
-@dirrm lib/pppd/${PPPD_VERSION}
-@dirrm lib/pppd

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:59:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:31 joerg Exp $
 bin/deliver
 bin/header
 man/cat1/deliver.0
@@ -15,5 +15,3 @@ share/examples/deliver/s-aliases
 share/examples/deliver/u-chip
 share/examples/deliver/u-notify
 share/examples/deliver/u-vacation
-@dirrm share/examples/deliver
-@dirrm share/doc/deliver

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/12/19 23:16:22 tnn Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:05:44 joerg Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -228,4 +228,3 @@ man/man1/gsl-histogram.1
 man/man1/gsl-randist.1
 man/man3/gsl.3
 share/aclocal/gsl.m4
-@dirrm include/gsl

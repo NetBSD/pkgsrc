@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/03/13 20:11:23 kefren Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:08:11 joerg Exp $
 ${PLIST.skins}bin/svlc
 bin/vlc
 bin/vlc-config
@@ -426,51 +426,3 @@ share/vlc/vlc32x32.png
 share/vlc/vlc32x32.xpm
 share/vlc/vlc48x48.ico
 share/vlc/vlc48x48.png
-@dirrm share/vlc/skins2/fonts
-@dirrm share/vlc/skins2
-@dirrm share/vlc/osdmenu/dvd/volume
-@dirrm share/vlc/osdmenu/dvd/unselect
-@dirrm share/vlc/osdmenu/dvd/selection
-@dirrm share/vlc/osdmenu/dvd/selected
-@dirrm share/vlc/osdmenu/dvd
-@dirrm share/vlc/osdmenu/default/volume
-@dirrm share/vlc/osdmenu/default/selection
-@dirrm share/vlc/osdmenu/default/selected
-@dirrm share/vlc/osdmenu/default
-@dirrm share/vlc/osdmenu
-@dirrm share/vlc/http/requests
-@dirrm share/vlc/http/old/vlm
-@dirrm share/vlc/http/old/admin
-@dirrm share/vlc/http/old
-@dirrm share/vlc/http/js
-@dirrm share/vlc/http/images
-@dirrm share/vlc/http/dialogs
-@dirrm share/vlc/http
-@dirrm share/vlc
-@dirrm share/locale/fur/LC_MESSAGES
-@dirrm share/locale/fur
-@dirrm share/locale/co/LC_MESSAGES
-@dirrm share/locale/co
-@dirrm share/doc/vlc
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/vlc/visualization
-@dirrm lib/vlc/video_output
-@dirrm lib/vlc/video_filter
-@dirrm lib/vlc/video_chroma
-@dirrm lib/vlc/stream_out
-@dirrm lib/vlc/services_discovery
-@dirrm lib/vlc/packetizer
-@dirrm lib/vlc/mux
-@dirrm lib/vlc/misc
-@dirrm lib/vlc/gui
-@dirrm lib/vlc/demux
-@dirrm lib/vlc/control
-@dirrm lib/vlc/codec
-@dirrm lib/vlc/audio_output
-@dirrm lib/vlc/audio_mixer
-@dirrm lib/vlc/audio_filter
-@dirrm lib/vlc/access_output
-@dirrm lib/vlc/access_filter
-@dirrm lib/vlc/access
-@dirrm lib/vlc
-@dirrm include/vlc

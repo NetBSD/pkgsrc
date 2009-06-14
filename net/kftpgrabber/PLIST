@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/26 04:34:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:31 joerg Exp $
 bin/kftpgrabber
 include/kftpgrabber/kftpbookmarkimportplugin.h
 lib/kde3/kftpimportplugin_filezilla3.la
@@ -51,16 +51,3 @@ share/locale/sr@Latn/LC_MESSAGES/kftpgrabber.mo
 share/locale/sv/LC_MESSAGES/kftpgrabber.mo
 share/locale/tr/LC_MESSAGES/kftpgrabber.mo
 share/locale/zh_CN/LC_MESSAGES/kftpgrabber.mo
-@comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/config.kcfg
-@dirrm share/kde/apps/kftpgrabber
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3
-@dirrm include/kftpgrabber

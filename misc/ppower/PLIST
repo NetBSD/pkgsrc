@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/26 13:09:11 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:28 joerg Exp $
 bin/ppower
 man/man1/ppower.1
 man/man1/ppowerd.1
 sbin/ppowerd
 share/examples/ppower/ppower.conf
-@dirrm share/examples/ppower

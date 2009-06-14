@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/21 22:26:53 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:44 joerg Exp $
 sbin/tcptraceroute
 man/man8/tcptraceroute.8
 share/doc/tcptraceroute/examples.txt
-@dirrm share/doc/tcptraceroute

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/07/29 05:19:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:28 joerg Exp $
 bin/cgc
 include/Cg/cg.h
 include/Cg/cgContextManager.h
@@ -760,25 +760,3 @@ share/NVIDIA-Cg-linux/Cg/examples/simple_vs/reflection.cg
 share/NVIDIA-Cg-linux/Cg/examples/simple_vs/vertexlight.cg
 share/NVIDIA-Cg-linux/Cg/examples/simple_vs/vertexlight4.cg
 share/NVIDIA-Cg-linux/Cg/include/GL/glext.h
-@dirrm share/NVIDIA-Cg-linux/Cg/include/GL
-@dirrm share/NVIDIA-Cg-linux/Cg/include
-@dirrm share/NVIDIA-Cg-linux/Cg/examples/simple_vs
-@dirrm share/NVIDIA-Cg-linux/Cg/examples/simple_ps
-@dirrm share/NVIDIA-Cg-linux/Cg/examples/runtime_ogl_vertex_fragment
-@dirrm share/NVIDIA-Cg-linux/Cg/examples/runtime_ogl
-@dirrm share/NVIDIA-Cg-linux/Cg/examples/interfaces_ogl
-@dirrm share/NVIDIA-Cg-linux/Cg/examples/common
-@dirrm share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime/Art
-@dirrm share/NVIDIA-Cg-linux/Cg/examples/cgfx_runtime
-@dirrm share/NVIDIA-Cg-linux/Cg/examples
-@dirrm share/NVIDIA-Cg-linux/Cg/docs/runtime/txt
-@dirrm share/NVIDIA-Cg-linux/Cg/docs/runtime/html
-@dirrm share/NVIDIA-Cg-linux/Cg/docs/runtime/cgGL/txt
-@dirrm share/NVIDIA-Cg-linux/Cg/docs/runtime/cgGL/html
-@dirrm share/NVIDIA-Cg-linux/Cg/docs/runtime/cgGL
-@dirrm share/NVIDIA-Cg-linux/Cg/docs/runtime
-@dirrm share/NVIDIA-Cg-linux/Cg/docs
-@dirrm share/NVIDIA-Cg-linux/Cg
-@dirrm share/NVIDIA-Cg-linux
-@dirrm include/CgFX
-@dirrm include/Cg

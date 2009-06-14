@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:31 joerg Exp $
 bin/tds-setup
 share/doc/tds/FAQ.html
 share/doc/tds/FAQ.tdf
@@ -479,71 +479,3 @@ share/tds/web_diary_dir/title.cgi
 share/tds/web_diary_dir/update_sig.pl
 share/tds/web_diary_dir/upload.pl
 share/tds/web_diary_dir/url.cgi
-@dirrm share/tds/web_diary_dir/styles/xml
-@dirrm share/tds/web_diary_dir/styles/tom
-@dirrm share/tds/web_diary_dir/styles/tak3
-@dirrm share/tds/web_diary_dir/styles/t-hermes
-@dirrm share/tds/web_diary_dir/styles/standard
-@dirrm share/tds/web_diary_dir/styles/simple
-@dirrm share/tds/web_diary_dir/styles/palmscape
-@dirrm share/tds/web_diary_dir/styles/no_anchor
-@dirrm share/tds/web_diary_dir/styles/japanese
-@dirrm share/tds/web_diary_dir/styles/i-mode
-@dirrm share/tds/web_diary_dir/styles/hns
-@dirrm share/tds/web_diary_dir/styles/hdml
-@dirrm share/tds/web_diary_dir/styles/english
-@dirrm share/tds/web_diary_dir/styles/cake
-@dirrm share/tds/web_diary_dir/styles
-@dirrm share/tds/web_diary_dir/lib/auto/TDS/Collection
-@dirrm share/tds/web_diary_dir/lib/auto/TDS/Cache/Recent
-@dirrm share/tds/web_diary_dir/lib/auto/TDS/Cache/Display
-@dirrm share/tds/web_diary_dir/lib/auto/TDS/Cache
-@dirrm share/tds/web_diary_dir/lib/auto/TDS
-@dirrm share/tds/web_diary_dir/lib/auto/DateTime/Zone
-@dirrm share/tds/web_diary_dir/lib/auto/DateTime/Time
-@dirrm share/tds/web_diary_dir/lib/auto/DateTime/Date
-@dirrm share/tds/web_diary_dir/lib/auto/DateTime
-@dirrm share/tds/web_diary_dir/lib/auto
-@dirrm share/tds/web_diary_dir/lib/TDS/Tdf/Command
-@dirrm share/tds/web_diary_dir/lib/TDS/Tdf
-@dirrm share/tds/web_diary_dir/lib/TDS/Replacer
-@dirrm share/tds/web_diary_dir/lib/TDS/PIM
-@dirrm share/tds/web_diary_dir/lib/TDS/Navigator
-@dirrm share/tds/web_diary_dir/lib/TDS/List
-@dirrm share/tds/web_diary_dir/lib/TDS/Customizer
-@dirrm share/tds/web_diary_dir/lib/TDS/Cache
-@dirrm share/tds/web_diary_dir/lib/TDS/Admin/WriteServer
-@dirrm share/tds/web_diary_dir/lib/TDS/Admin
-@dirrm share/tds/web_diary_dir/lib/TDS/AccessLog
-@dirrm share/tds/web_diary_dir/lib/TDS
-@dirrm share/tds/web_diary_dir/lib/SimpleDB
-@dirrm share/tds/web_diary_dir/lib/Installer
-@dirrm share/tds/web_diary_dir/lib/Image
-@dirrm share/tds/web_diary_dir/lib/FileSpec
-@dirrm share/tds/web_diary_dir/lib/DateTime/Format
-@dirrm share/tds/web_diary_dir/lib/DateTime
-@dirrm share/tds/web_diary_dir/lib/Customizer
-@dirrm share/tds/web_diary_dir/lib/Container
-@dirrm share/tds/web_diary_dir/lib/CGI
-@dirrm share/tds/web_diary_dir/lib
-@dirrm share/tds/web_diary_dir/image
-@dirrm share/tds/web_diary_dir/admin
-@dirrm share/tds/web_diary_dir
-@dirrm share/tds/samples/tdssetup
-@dirrm share/tds/samples/tdf
-@dirrm share/tds/samples
-@dirrm share/tds/doc/dat
-@dirrm share/tds/doc
-@dirrm share/tds/diary_dir/dat
-@dirrm share/tds/diary_dir/custom
-@dirrm share/tds/diary_dir/conf
-@dirrm share/tds/diary_dir/2000/01
-@dirrm share/tds/diary_dir/2000
-@dirrm share/tds/diary_dir
-@dirrm share/tds/contrib/todaytdf
-@dirrm share/tds/contrib/tdf2html
-@dirrm share/tds/contrib/mail2tdf
-@dirrm share/tds/contrib
-@dirrm share/doc/tds/dat
-@dirrm share/doc/tds
-@dirrm share/tds

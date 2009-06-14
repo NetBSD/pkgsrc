@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/03 06:34:01 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:38 joerg Exp $
 bin/newspipe
 share/doc/newspipe/manual.html
 share/doc/newspipe/readme
@@ -7,6 +7,3 @@ share/examples/newspipe/test.opml
 share/newspipe/cache.py
 share/newspipe/newspipe.py
 share/newspipe/opml.py
-@dirrm share/newspipe
-@dirrm share/examples/newspipe
-@dirrm share/doc/newspipe

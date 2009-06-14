@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/18 17:39:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:21 joerg Exp $
 bin/FBReader
 lib/libzlcore.so.0.10
 lib/libzlcore.so.0.10.1
@@ -122,20 +122,3 @@ share/zlibrary/resources/ru.xml
 share/zlibrary/resources/sv.xml
 share/zlibrary/resources/uk.xml
 share/zlibrary/unicode.xml.gz
-@dirrm share/zlibrary/resources
-@dirrm share/zlibrary/encodings
-@dirrm share/zlibrary/default
-@dirrm share/zlibrary
-@dirrm share/pixmaps/FBReader
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm share/FBReader/resources
-@dirrm share/FBReader/help
-@dirrm share/FBReader/formats/xhtml
-@dirrm share/FBReader/formats/html
-@dirrm share/FBReader/formats/fb2
-@dirrm share/FBReader/formats
-@dirrm share/FBReader/default
-@dirrm share/FBReader
-@dirrm lib/zlibrary/ui
-@dirrm lib/zlibrary

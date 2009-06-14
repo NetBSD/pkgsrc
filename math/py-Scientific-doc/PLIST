@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/18 23:58:36 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:47 joerg Exp $
 share/doc/html/py-Scientific/Scientific.html
 share/doc/html/py-Scientific/Scientific_1.html
 share/doc/html/py-Scientific/Scientific_10.html
@@ -62,7 +62,3 @@ share/examples/py-Scientific/compile.py
 share/examples/py-Scientific/demomodule.c
 share/examples/py-Scientific/mpi.py
 share/examples/py-Scientific/netcdf_demo.py
-@dirrm share/examples/py-Scientific/BSP
-@dirrm share/examples/py-Scientific
-@dirrm share/doc/py-Scientific
-@dirrm share/doc/html/py-Scientific

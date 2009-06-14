@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:07:19 joerg Exp $
 bin/celestia
 share/celestia/COPYING
 share/celestia/controls.txt
@@ -309,15 +309,3 @@ share/locale/nl/LC_MESSAGES/celestia.mo
 share/locale/pt/LC_MESSAGES/celestia.mo
 share/locale/pt_br/LC_MESSAGES/celestia.mo
 share/locale/ru/LC_MESSAGES/celestia.mo
-@dirrm share/examples/celestia
-@dirrm share/celestia/textures/medres
-@dirrm share/celestia/textures/lores
-@dirrm share/celestia/textures/hires
-@dirrm share/celestia/textures
-@dirrm share/celestia/splash
-@dirrm share/celestia/shaders
-@dirrm share/celestia/models
-@dirrm share/celestia/fonts
-@dirrm share/celestia/extras
-@dirrm share/celestia/data
-@dirrm share/celestia

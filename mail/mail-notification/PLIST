@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/02/21 00:16:53 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:04:36 joerg Exp $
 bin/mail-notification
 lib/bonobo/servers/GNOME_MailNotification.server
 share/applications/mail-notification-properties.desktop
@@ -37,13 +37,3 @@ share/mail-notification/mailbox-properties-dialog.glade
 share/mail-notification/new-mail.wav
 share/mail-notification/properties-dialog.glade
 share/mail-notification/yahoo.png
-@dirrm share/omf/mail-notification
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/mail-notification
-@dirrm share/gnome/help/mail-notification/C/figures
-@dirrm share/gnome/help/mail-notification/C
-@dirrm share/gnome/help/mail-notification
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@comment in libbonobo: @dirrm lib/bonobo/servers
