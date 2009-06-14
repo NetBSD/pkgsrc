@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:11:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 21:16:22 joerg Exp $
 lib/libpoppler.la
 lib/pkgconfig/poppler-splash.pc
 lib/pkgconfig/poppler.pc
 share/doc/poppler/README
 share/doc/poppler/README-XPDF
-@exec ${MKDIR} %D/include/poppler
