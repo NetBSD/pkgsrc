@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/05/19 08:59:36 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/14 06:04:11 obache Exp $
 #
 
-DISTNAME=	tokyodystopia-0.9.11
+DISTNAME=	tokyodystopia-0.9.12
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
 
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--enable-bzip
 
 TEST_TARGET=	check
 
-BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.15
+BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.17
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
