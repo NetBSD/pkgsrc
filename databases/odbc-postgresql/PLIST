@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/19 03:51:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:36:20 joerg Exp $
 lib/libpsqlodbc.a
 lib/libpsqlodbc.so
 lib/libpsqlodbc.so.0
 lib/libpsqlodbc.so.0.27
 share/postgresql/odbc.sql
 share/postgresql/odbc-drop.sql
-@unexec ${RMDIR} -p %D/share/postgresql 2>/dev/null || ${TRUE}
