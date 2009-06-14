@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2329 2009/06/14 17:59:49 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2330 2009/06/14 18:40:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3126,3 +3126,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/opengoo to 1.4.1nb1 [taca 2009-06-14]
 	Updated www/opengoo to 1.4.1nb2 [taca 2009-06-14]
 	Updated www/ruby-rack to 1.0.0 [minskim 2009-06-14]
+	Updated textproc/ruby-redcloth to 4.2.0 [minskim 2009-06-14]
