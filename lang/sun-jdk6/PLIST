@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 20:34:15 joerg Exp $
 bin/sun6-appletviewer
 bin/sun6-apt
 bin/sun6-extcheck
@@ -3653,4 +3653,4 @@ java/sun-6/sample/webservices/EbayServer/src/ebay/server/Ebay.java
 java/sun-6/sample/webservices/EbayServer/src/ebay/server/ImageProvider.java
 java/sun-6/sample/webservices/EbayServer/src/ebay/server/Main.java
 java/sun-6/src.zip
-@exec ${MKDIR} %D/java/sun-6/db/demo/programs/localcal/lib
+@pkgdir java/sun-6/db/demo/programs/localcal/lib

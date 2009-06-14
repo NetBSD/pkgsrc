@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/10 12:46:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 20:34:14 joerg Exp $
 bin/erb${RUBY_VER}
 bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -106,8 +106,6 @@ ${RUBY_ARCHLIB}/thread.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/util.h
 ${RUBY_ARCHLIB}/version.h
 ${RUBY_ARCHLIB}/zlib.${RUBY_DLEXT}
-@exec ${MKDIR} %D/${RUBY_SITEARCHLIB}
-@exec ${MKDIR} %D/${RUBY_VENDORARCHLIB}
 ${RUBY_LIB}/importenv.rb
 ${PLIST.io}${RUBY_LIB}/io/nonblock.rb
 ${RUBY_LIB}/ipaddr.rb
@@ -774,3 +772,5 @@ ${RUBY_EG}/webrick/hello.rb
 ${RUBY_EG}/webrick/httpd.rb
 ${RUBY_EG}/webrick/httpproxy.rb
 ${RUBY_EG}/webrick/httpsd.rb
+@pkgdir ${RUBY_SITEARCHLIB}
+@pkgdir ${RUBY_VENDORARCHLIB}

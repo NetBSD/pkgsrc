@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 20:34:14 joerg Exp $
 ${JAVADIR}/${CLASSDIR}/org/OpenJIT/BCinfo.class
 ${JAVADIR}/${CLASSDIR}/org/OpenJIT/Compile.class
 ${JAVADIR}/${CLASSDIR}/org/OpenJIT/CompilerError.class
@@ -24,4 +24,3 @@ ${JAVADIR}/${CLASSDIR}/org/OpenJIT/X86code.class
 ${JAVADIR}/${CLASSDIR}/org/OpenJIT/X86reg.class
 ${JAVADIR}/${JRELIB}/libOpenJIT.so
 ${JAVADIR}/${JRELIB}/libOpenJIT_g.so
-@unexec ${RMDIR} -p %D/${JAVADIR}/${CLASSDIR}/org 2>/dev/null || ${TRUE}
