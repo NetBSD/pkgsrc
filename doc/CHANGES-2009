@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2362 2009/06/14 23:44:21 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2363 2009/06/14 23:54:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3159,3 +3159,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-IPC-Run3 to 0.043 [sno 2009-06-14]
 	Updated devel/p5-NEXT to 0.64 [sno 2009-06-14]
 	Updated devel/p5-PAR-Dist to 0.45 [sno 2009-06-14]
+	Updated devel/p5-Module-CPANTS-Analyse to 0.83 [sno 2009-06-14]
