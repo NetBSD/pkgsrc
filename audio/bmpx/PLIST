@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:10:28 joerg Exp $
 bin/beep-media-player-2
 bin/bmp-play-files-2.0
 bin/bmp-play-uris-2.0
@@ -238,4 +238,4 @@ share/locale/ru/LC_MESSAGES/bmpx.mo
 share/locale/sv/LC_MESSAGES/bmpx.mo
 share/locale/th_TH/LC_MESSAGES/bmpx.mo
 share/locale/zh_CN/LC_MESSAGES/bmpx.mo
-@exec ${MKDIR} %D/share/bmpx/data
+@pkgdir share/bmpx/data

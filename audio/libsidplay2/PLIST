@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:15 joerg Exp $
-@exec ${MKDIR} %D/include/libsidplay2/resid
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:10:29 joerg Exp $
 include/libsidplay2/sidplay/Buffer.h
 include/libsidplay2/sidplay/SidTune.h
 include/libsidplay2/sidplay/SmartPtr.h
