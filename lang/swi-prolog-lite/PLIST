@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:03:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 20:34:15 joerg Exp $
 bin/plld
 bin/plrc
 bin/swi-prolog
@@ -95,5 +95,5 @@ lib/swi-prolog-${PKGVERSION}/swipl
 man/man1/plld.1
 man/man1/plrc.1
 man/man1/swi-prolog.1
-@exec ${MKDIR} %D/lib/swi-prolog-${PKGVERSION}/man
-@exec ${MKDIR} %D/lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
+@pkgdir lib/swi-prolog-${PKGVERSION}/man
+@pkgdir lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.9 2009/06/14 18:03:42 joerg Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.10 2009/06/14 20:34:15 joerg Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -667,4 +667,4 @@ java/sun-1.5/plugin/desktop/sun_java.desktop
 java/sun-1.5/plugin/desktop/sun_java.png
 java/sun-1.5/plugin/i386/ns7-gcc29/libjavaplugin_oji.so
 java/sun-1.5/plugin/i386/ns7/libjavaplugin_oji.so
-@exec ${MKDIR} %D/java/sun-1.5/lib/applet
+@pkgdir java/sun-1.5/lib/applet

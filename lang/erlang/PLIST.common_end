@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST.common_end,v 1.8 2009/06/14 18:03:30 joerg Exp $
-@exec ${MKDIR} %D/lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/otpCA/crl
-@exec ${MKDIR} %D/lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/otpCA/certs
-@exec ${MKDIR} %D/lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/erlangCA/crl
-@exec ${MKDIR} %D/lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/erlangCA/certs
-@exec ${MKDIR} %D/lib/erlang/lib/orber-${VERSION.orber}/priv/lib
-@exec ${MKDIR} %D/lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/priv
-@exec ${MKDIR} %D/lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/ebin
-@exec ${MKDIR} %D/lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/logs
-@exec ${MKDIR} %D/lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/htdocs/secret/top_secret
-@exec ${MKDIR} %D/lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/htdocs/mnesia_secret/top_secret
-@exec ${MKDIR} %D/lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/auxdir
-@exec ${MKDIR} %D/lib/erlang/lib/common_test-${VERSION.common_test}/priv/lib
-@exec ${MKDIR} %D/lib/erlang/lib/common_test-${VERSION.common_test}/priv/bin
-@exec ${MKDIR} %D/lib/erlang/erts-${VERSION.erts}/man
-@exec ${MKDIR} %D/lib/erlang/erts-${VERSION.erts}/doc
+@comment $NetBSD: PLIST.common_end,v 1.9 2009/06/14 20:34:13 joerg Exp $
+@pkgdir lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/otpCA/crl
+@pkgdir lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/otpCA/certs
+@pkgdir lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/erlangCA/crl
+@pkgdir lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/erlangCA/certs
+@pkgdir lib/erlang/lib/orber-${VERSION.orber}/priv/lib
+@pkgdir lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/priv
+@pkgdir lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/ebin
+@pkgdir lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/logs
+@pkgdir lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/htdocs/secret/top_secret
+@pkgdir lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/htdocs/mnesia_secret/top_secret
+@pkgdir lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/auxdir
+@pkgdir lib/erlang/lib/common_test-${VERSION.common_test}/priv/lib
+@pkgdir lib/erlang/lib/common_test-${VERSION.common_test}/priv/bin
+@pkgdir lib/erlang/erts-${VERSION.erts}/man
+@pkgdir lib/erlang/erts-${VERSION.erts}/doc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:03:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 20:34:13 joerg Exp $
 bin/inform
 bin/inform-6.31
 share/inform/6.31/include/AdHints.h
@@ -254,7 +254,7 @@ share/zcode/ruins1.z5
 share/zcode/ruins2.z5
 share/zcode/ruins3.z5
 share/zcode/toyshop.z5
-@exec ${MKDIR} %D/share/inform/include
-@exec ${MKDIR} %D/share/inform/module
-@exec ${MKDIR} %D/share/inform/manual
-@exec ${MKDIR} %D/share/zcode
+@pkgdir share/inform/include
+@pkgdir share/inform/module
+@pkgdir share/inform/manual
+@pkgdir share/zcode

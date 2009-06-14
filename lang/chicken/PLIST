@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:03:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 20:34:13 joerg Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-profile
@@ -87,4 +87,4 @@ share/doc/${PKGNAME}/html/unit-tcp.html
 share/doc/${PKGNAME}/html/unit-utils.html
 share/doc/${PKGNAME}/html/using-the-compiler.html
 share/doc/${PKGNAME}/html/using-the-interpreter.html
-@exec ${MKDIR} %D/lib/chicken/3
+@pkgdir lib/chicken/3

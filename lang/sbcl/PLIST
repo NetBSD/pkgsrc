@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 20:34:15 joerg Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/CVS/Entries
@@ -247,5 +247,5 @@ share/doc/sbcl/COPYING
 share/doc/sbcl/CREDITS
 share/doc/sbcl/NEWS
 share/doc/sbcl/SUPPORT
-@exec ${MKDIR} %D/share/doc/sbcl/html
-@exec ${MKDIR} %D/lib/sbcl/site-systems
+@pkgdir share/doc/sbcl/html
+@pkgdir lib/sbcl/site-systems

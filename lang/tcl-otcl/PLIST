@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 20:34:16 joerg Exp $
 bin/otclsh
 bin/owish
 include/otcl.h
@@ -10,4 +10,3 @@ share/doc/tcl/otcl/class.html
 share/doc/tcl/otcl/object.html
 share/doc/tcl/otcl/tutorial.html
 share/doc/tcl/otcl/otcl-paper.ps.gz
-@unexec ${RMDIR} %D/share/doc/tcl 2>/dev/null || ${TRUE}

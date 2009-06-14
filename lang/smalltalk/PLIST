@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/06/14 18:03:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 20:34:15 joerg Exp $
 bin/gst
 bin/gst-blox
 bin/gst-config
@@ -272,4 +272,4 @@ share/smalltalk/unsupported/resolve.st
 share/smalltalk/unsupported/t.st
 share/smalltalk/unsupported/torture.st
 var/lib/smalltalk/gst.im
-@exec ${MKDIR} %D/include/snprintfv
+@pkgdir include/snprintfv
