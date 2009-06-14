@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/06 17:37:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:20 joerg Exp $
 bin/jing
 libexec/jing/isorelax.jar
 libexec/jing/jing.jar
@@ -201,28 +201,3 @@ share/doc/jing/doc/xhtml/xhtml-basic.rng
 share/doc/jing/doc/xhtml/xhtml-strict.rng
 share/doc/jing/doc/xhtml/xhtml.rng
 share/doc/jing/readme.html
-@dirrm share/doc/jing/doc/xhtml/modules
-@dirrm share/doc/jing/doc/xhtml/exclude
-@dirrm share/doc/jing/doc/xhtml
-@dirrm share/doc/jing/doc/api/jing/com/thaiopensource/xml/sax
-@dirrm share/doc/jing/doc/api/jing/com/thaiopensource/xml
-@dirrm share/doc/jing/doc/api/jing/com/thaiopensource/validate/xerces
-@dirrm share/doc/jing/doc/api/jing/com/thaiopensource/validate/schematron
-@dirrm share/doc/jing/doc/api/jing/com/thaiopensource/validate/rng
-@dirrm share/doc/jing/doc/api/jing/com/thaiopensource/validate/nrl
-@dirrm share/doc/jing/doc/api/jing/com/thaiopensource/validate/auto
-@dirrm share/doc/jing/doc/api/jing/com/thaiopensource/validate
-@dirrm share/doc/jing/doc/api/jing/com/thaiopensource/util
-@dirrm share/doc/jing/doc/api/jing/com/thaiopensource
-@dirrm share/doc/jing/doc/api/jing/com
-@dirrm share/doc/jing/doc/api/jing
-@dirrm share/doc/jing/doc/api/datatype/org/relaxng/datatype/helpers
-@dirrm share/doc/jing/doc/api/datatype/org/relaxng/datatype
-@dirrm share/doc/jing/doc/api/datatype/org/relaxng
-@dirrm share/doc/jing/doc/api/datatype/org
-@dirrm share/doc/jing/doc/api/datatype
-@dirrm share/doc/jing/doc/api
-@dirrm share/doc/jing/doc
-@dirrm share/doc/jing
-@dirrm libexec/jing/lib
-@dirrm libexec/jing

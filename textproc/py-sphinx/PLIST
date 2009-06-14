@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/31 05:31:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:25 joerg Exp $
 bin/sphinx-build
 bin/sphinx-quickstart
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -197,33 +197,3 @@ ${PYSITELIB}/sphinx/util/stemmer.pyo
 ${PYSITELIB}/sphinx/util/texescape.py
 ${PYSITELIB}/sphinx/util/texescape.pyc
 ${PYSITELIB}/sphinx/util/texescape.pyo
-@dirrm ${PYSITELIB}/sphinx/util
-@dirrm ${PYSITELIB}/sphinx/texinputs
-@dirrm ${PYSITELIB}/sphinx/templates/changes
-@dirrm ${PYSITELIB}/sphinx/templates
-@dirrm ${PYSITELIB}/sphinx/static
-@dirrm ${PYSITELIB}/sphinx/locale/zh_TW/LC_MESSAGES
-@dirrm ${PYSITELIB}/sphinx/locale/zh_TW
-@dirrm ${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES
-@dirrm ${PYSITELIB}/sphinx/locale/sl
-@dirrm ${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES
-@dirrm ${PYSITELIB}/sphinx/locale/pt_BR
-@dirrm ${PYSITELIB}/sphinx/locale/pl/LC_MESSAGES
-@dirrm ${PYSITELIB}/sphinx/locale/pl
-@dirrm ${PYSITELIB}/sphinx/locale/nl/LC_MESSAGES
-@dirrm ${PYSITELIB}/sphinx/locale/nl
-@dirrm ${PYSITELIB}/sphinx/locale/ja/LC_MESSAGES
-@dirrm ${PYSITELIB}/sphinx/locale/ja
-@dirrm ${PYSITELIB}/sphinx/locale/fr/LC_MESSAGES
-@dirrm ${PYSITELIB}/sphinx/locale/fr
-@dirrm ${PYSITELIB}/sphinx/locale/es/LC_MESSAGES
-@dirrm ${PYSITELIB}/sphinx/locale/es
-@dirrm ${PYSITELIB}/sphinx/locale/de/LC_MESSAGES
-@dirrm ${PYSITELIB}/sphinx/locale/de
-@dirrm ${PYSITELIB}/sphinx/locale/cs/LC_MESSAGES
-@dirrm ${PYSITELIB}/sphinx/locale/cs
-@dirrm ${PYSITELIB}/sphinx/locale
-@dirrm ${PYSITELIB}/sphinx/ext
-@dirrm ${PYSITELIB}/sphinx/directives
-@dirrm ${PYSITELIB}/sphinx
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

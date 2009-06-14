@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/11 19:07:40 tonio Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:18:57 joerg Exp $
 bin/blackbox
 man/man1/blackbox.1
 share/blackbox/menu
@@ -50,29 +50,3 @@ share/blackbox/styles/Shade
 share/blackbox/styles/Spiff
 share/blackbox/styles/TDF
 share/blackbox/styles/Twice
-@dirrm share/blackbox/styles
-@dirrm share/blackbox/nls/zh_TW
-@dirrm share/blackbox/nls/zh_CN
-@dirrm share/blackbox/nls/uk_UA
-@dirrm share/blackbox/nls/sv_SE
-@dirrm share/blackbox/nls/sl_SI
-@dirrm share/blackbox/nls/sk_SK
-@dirrm share/blackbox/nls/ru_RU
-@dirrm share/blackbox/nls/ro_RO
-@dirrm share/blackbox/nls/pt_BR
-@dirrm share/blackbox/nls/pl_PL
-@dirrm share/blackbox/nls/no_NO
-@dirrm share/blackbox/nls/nl_NL
-@dirrm share/blackbox/nls/lv_LV
-@dirrm share/blackbox/nls/ko_KR
-@dirrm share/blackbox/nls/ja_JP
-@dirrm share/blackbox/nls/it_IT
-@dirrm share/blackbox/nls/hu_HU
-@dirrm share/blackbox/nls/fr_FR
-@dirrm share/blackbox/nls/es_ES
-@dirrm share/blackbox/nls/es_AR
-@dirrm share/blackbox/nls/de_DE
-@dirrm share/blackbox/nls/da_DK
-@dirrm share/blackbox/nls/C
-@dirrm share/blackbox/nls
-@dirrm share/blackbox

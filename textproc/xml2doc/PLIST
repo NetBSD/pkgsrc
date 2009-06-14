@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/23 22:33:07 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:34 joerg Exp $
 bin/xml2doc
 share/doc/xml2doc/BUGS
 share/doc/xml2doc/README
@@ -11,5 +11,3 @@ share/doc/xml2doc/examples/manpage.xml
 share/doc/xml2doc/examples/sep.xml
 share/doc/xml2doc/examples/list.xml
 man/man1/xml2doc.1
-@dirrm share/doc/xml2doc/examples
-@dirrm share/doc/xml2doc

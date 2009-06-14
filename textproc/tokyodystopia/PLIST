@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 06:04:11 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:17:33 joerg Exp $
 bin/dystmgr
 bin/dysttest
 bin/lapumgr
@@ -36,5 +36,3 @@ share/tokyodystopia/COPYING
 share/tokyodystopia/ChangeLog
 share/tokyodystopia/THANKS
 share/tokyodystopia/doc/index.html
-@dirrm share/tokyodystopia/doc
-@dirrm share/tokyodystopia

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/16 10:30:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:15 joerg Exp $
 info/muse
 share/doc/emacs-muse/emacs-wiki-migration.txt
 share/doc/emacs-muse/muse.rnc
@@ -67,8 +67,3 @@ ${EMACS_LISPPREFIX}/muse/muse.elc
 share/examples/emacs-muse/QuickStart.muse
 share/examples/emacs-muse/emacs-muse.png
 share/examples/emacs-muse/muse-made-with.png
-@dirrm share/examples/emacs-muse
-@dirrm ${EMACS_LISPPREFIX}/muse/experimental
-@dirrm ${EMACS_LISPPREFIX}/muse/contrib
-@dirrm ${EMACS_LISPPREFIX}/muse
-@dirrm share/doc/emacs-muse

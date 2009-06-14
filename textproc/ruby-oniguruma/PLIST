@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/22 15:37:13 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:29 joerg Exp $
 ${GEM_HOME}/cache/oniguruma-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/History.txt
@@ -12,7 +12,3 @@ ${GEM_LIBDIR}/lib/oniguruma.rb
 ${GEM_LIBDIR}/lib/oregexp.${RUBY_DLEXT}
 ${GEM_LIBDIR}/test/test_oniguruma.rb
 ${GEM_HOME}/specifications/oniguruma-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}
