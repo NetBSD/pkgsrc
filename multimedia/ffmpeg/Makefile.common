@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2009/06/12 20:26:30 ahoka Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/06/14 19:28:10 ahoka Exp $
 
 DISTNAME=	ffmpeg-${DISTVERSION:S/-//g}
 CATEGORIES=	multimedia
@@ -41,6 +41,12 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR} \
 			--enable-runtime-cpudetect \
 			--enable-pthreads \
 			--enable-gpl
+
+# No posix_memalign() in NetBSD 4.0 and earlier
+#
+.if !empty(MACHINE_PLATFORM:MNetBSD-[1-4].*-*)
+CONFIGURE_ARGS+=	--enable-memalign-hack
+.endif
 
 pre-configure:
 	mkdir ${WRKSRC}/tmp
