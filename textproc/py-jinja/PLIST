@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/02 09:35:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:25 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -62,6 +62,3 @@ ${PYSITELIB}/jinja/translators/python.pyo
 ${PYSITELIB}/jinja/utils.py
 ${PYSITELIB}/jinja/utils.pyc
 ${PYSITELIB}/jinja/utils.pyo
-@dirrm ${PYSITELIB}/jinja/translators
-@dirrm ${PYSITELIB}/jinja
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

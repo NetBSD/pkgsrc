@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/05/21 16:15:44 sno Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:20 joerg Exp $
 bin/latex2html
 bin/pstoimg
 bin/texexpand
@@ -344,22 +344,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/ldump.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/techexplHTML.tex
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/url.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/verbatimfiles.sty
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/html
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
-@dirrm share/latex2html/versions
-@dirrm share/latex2html/texinputs
-@dirrm share/latex2html/styles
-@dirrm share/latex2html/makeseg
-@dirrm share/latex2html/icons
-@dirrm share/latex2html/foilhtml
-@dirrm share/latex2html/example
-@dirrm share/latex2html/docs/psfiles
-@dirrm share/latex2html/docs/hthtml
-@dirrm share/latex2html/docs/changebar
-@dirrm share/latex2html/docs
-@dirrm share/latex2html/cweb2html
-@dirrm share/latex2html/XyMTeX-HTML
-@dirrm share/latex2html/L2hos
-@dirrm share/latex2html/IndicTeX-HTML
-@dirrm share/latex2html
-@dirrm lib/latex2html

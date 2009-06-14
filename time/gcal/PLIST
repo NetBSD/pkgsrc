@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:58 joerg Exp $
 bin/gcal
 bin/gcal-daily
 bin/gcal-ddiff
@@ -128,14 +128,3 @@ share/locale/nl/LC_MESSAGES/gcal.mo
 share/locale/pl/LC_MESSAGES/gcal.mo
 share/locale/ru/LC_MESSAGES/gcal.mo
 share/locale/sv/LC_MESSAGES/gcal.mo
-@dirrm share/gcal/scripts
-@dirrm share/gcal/misc/wloc
-@dirrm share/gcal/misc/srss
-@dirrm share/gcal/misc/mrms
-@dirrm share/gcal/misc/moon
-@dirrm share/gcal/misc/gcalltx
-@dirrm share/gcal/misc/dst
-@dirrm share/gcal/misc/ddiff
-@dirrm share/gcal/misc/daily
-@dirrm share/gcal/misc
-@dirrm share/gcal

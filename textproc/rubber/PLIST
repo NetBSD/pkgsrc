@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/06/01 09:09:52 tonio Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:26 joerg Exp $
 bin/rubber
 bin/rubber-info
 bin/rubber-pipe
@@ -94,8 +94,3 @@ share/rubber/rubber/version.py
 share/rubber/rubber/version.py
 share/rubber/rubber/version.pyc
 share/rubber/rules.ini
-@dirrm share/rubber/rubber/rules/latex
-@dirrm share/rubber/rubber/rules
-@dirrm share/rubber/rubber
-@dirrm share/rubber/modules
-@dirrm share/rubber

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 23:46:27 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:33 joerg Exp $
 bin/w2l
 share/writer2latex04/COPYING.TXT
 share/writer2latex04/History.txt
@@ -40,9 +40,3 @@ share/writer2latex04/w2llogo.png
 share/writer2latex04/writer2latex.jar
 share/writer2latex04/writer2latex.xml
 share/writer2latex04/xmergefix.jar
-@dirrm share/writer2latex04/samples/xhtml
-@dirrm share/writer2latex04/samples/latex
-@dirrm share/writer2latex04/samples
-@dirrm share/writer2latex04/obsolete
-@dirrm share/writer2latex04/doc
-@dirrm share/writer2latex04

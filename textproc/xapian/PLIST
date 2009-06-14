@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/04/20 22:25:12 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:34 joerg Exp $
 bin/copydatabase
 bin/delve
 ${PLIST.quartz}bin/quartzcheck
@@ -333,7 +333,3 @@ share/doc/xapian-core/synonyms.html
 share/doc/xapian-core/termgenerator.html
 share/doc/xapian-core/tests.html
 share/doc/xapian-core/valueranges.html
-@dirrm share/doc/xapian-core/apidoc/html
-@dirrm share/doc/xapian-core/apidoc
-@dirrm share/doc/xapian-core
-@dirrm include/xapian

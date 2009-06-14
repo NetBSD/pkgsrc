@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/06/16 10:32:15 hauke Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:18:59 joerg Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -330,26 +330,3 @@ share/locale/vi/LC_MESSAGES/icewm.mo
 share/locale/zh_CN/LC_MESSAGES/icewm.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
 share/locale/zh_TW/LC_MESSAGES/icewm.mo
-@dirrm share/icewm/themes/yellowmotif
-@dirrm share/icewm/themes/win95
-@dirrm share/icewm/themes/warp4
-@dirrm share/icewm/themes/warp3
-@dirrm share/icewm/themes/nice2
-@dirrm share/icewm/themes/nice
-@dirrm share/icewm/themes/motif
-@dirrm share/icewm/themes/metal2
-@dirrm share/icewm/themes/icedesert
-@dirrm share/icewm/themes/gtk2
-@dirrm share/icewm/themes/Infadel2/taskbar
-@dirrm share/icewm/themes/Infadel2/mailbox
-@dirrm share/icewm/themes/Infadel2/icons
-@dirrm share/icewm/themes/Infadel2/cursors
-@dirrm share/icewm/themes/Infadel2
-@dirrm share/icewm/themes
-@dirrm share/icewm/taskbar
-@dirrm share/icewm/mailbox
-@dirrm share/icewm/ledclock
-@dirrm share/icewm/icons
-@dirrm share/icewm
-@dirrm share/doc/icewm/html
-@dirrm share/doc/icewm

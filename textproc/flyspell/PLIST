@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/04 09:12:09 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:16 joerg Exp $
 ${EMACS_LISPPREFIX}/flyspell/flyspell.el
-@dirrm ${EMACS_LISPPREFIX}/flyspell

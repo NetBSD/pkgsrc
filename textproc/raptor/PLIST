@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/08/14 19:17:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:26 joerg Exp $
 bin/rapper
 bin/raptor-config
 include/raptor.h
@@ -86,4 +86,3 @@ share/doc/raptor/tutorial-serializer-to-destination.html
 share/doc/raptor/tutorial-serializing.html
 share/doc/raptor/tutorial.html
 share/doc/raptor/up.png
-@dirrm share/doc/raptor

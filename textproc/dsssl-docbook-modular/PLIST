@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/02/18 16:17:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:14 joerg Exp $
 share/sgml/docbook/dsssl/modular/BUGS
 share/sgml/docbook/dsssl/modular/ChangeLog
 share/sgml/docbook/dsssl/modular/README
@@ -725,32 +725,5 @@ share/sgml/docbook/dsssl/modular/print/docbook.dsl
 share/sgml/docbook/dsssl/modular/print/notoc.dsl
 share/sgml/docbook/dsssl/modular/print/plain.dsl
 share/sgml/docbook/dsssl/modular/print/version.dsl
-@dirrm share/sgml/docbook/dsssl/modular/print
-@dirrm share/sgml/docbook/dsssl/modular/olink
-@dirrm share/sgml/docbook/dsssl/modular/lib
-@dirrm share/sgml/docbook/dsssl/modular/images/callouts
-@dirrm share/sgml/docbook/dsssl/modular/images
-@dirrm share/sgml/docbook/dsssl/modular/html
-@dirrm share/sgml/docbook/dsssl/modular/frames
-@dirrm share/sgml/docbook/dsssl/modular/dtds/olink
-@dirrm share/sgml/docbook/dsssl/modular/dtds/imagelib
-@dirrm share/sgml/docbook/dsssl/modular/dtds/html
-@dirrm share/sgml/docbook/dsssl/modular/dtds/decls
-@dirrm share/sgml/docbook/dsssl/modular/dtds/dbdsssl
-@dirrm share/sgml/docbook/dsssl/modular/dtds
-@dirrm share/sgml/docbook/dsssl/modular/contrib/subdoc
-@dirrm share/sgml/docbook/dsssl/modular/contrib/renumberinpart
-@dirrm share/sgml/docbook/dsssl/modular/contrib/print
-@dirrm share/sgml/docbook/dsssl/modular/contrib/imagemap
-@dirrm share/sgml/docbook/dsssl/modular/contrib/html
-@dirrm share/sgml/docbook/dsssl/modular/contrib
-@dirrm share/sgml/docbook/dsssl/modular/common
-@dirrm share/sgml/docbook/dsssl/modular/bin
-@dirrm share/sgml/docbook/dsssl/modular/doc/testdata
-@dirrm share/sgml/docbook/dsssl/modular/doc/print
-@dirrm share/sgml/docbook/dsssl/modular/doc/html
-@dirrm share/sgml/docbook/dsssl/modular/doc/lib
-@dirrm share/sgml/docbook/dsssl/modular/doc
-@dirrm share/sgml/docbook/dsssl/modular
 @unexec ${RMDIR} %D/share/sgml/docbook/dsssl 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/sgml/docbook 2>/dev/null || ${TRUE}

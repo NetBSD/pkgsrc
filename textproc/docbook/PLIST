@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/02/18 16:09:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:14 joerg Exp $
 share/sgml/docbook/2.4.1/241chg.txt
 share/sgml/docbook/2.4.1/announce.txt
 share/sgml/docbook/2.4.1/calstbl.mod
@@ -110,13 +110,3 @@ share/sgml/docbook/4.4/docbook.dtd
 share/sgml/docbook/4.4/docbookx.dtd
 share/sgml/docbook/4.4/htmltblx.mod
 share/sgml/docbook/4.4/soextblx.dtd
-@dirrm share/sgml/docbook/4.4
-@dirrm share/sgml/docbook/4.3
-@dirrm share/sgml/docbook/4.2
-@dirrm share/sgml/docbook/4.1
-@dirrm share/sgml/docbook/4.0
-@dirrm share/sgml/docbook/3.1
-@dirrm share/sgml/docbook/3.0
-@dirrm share/sgml/docbook/2.4.1
-@dirrm share/sgml/docbook
-@comment in xmlcatmgr: @dirrm share/sgml

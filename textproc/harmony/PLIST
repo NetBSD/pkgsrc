@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/11 15:55:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:17 joerg Exp $
 bin/harmonize-addresses
 bin/harmonize-basics
 bin/harmonize-bookmarks
@@ -10,4 +10,3 @@ bin/harmonize-structuredtext
 bin/harmony
 share/doc/harmony/main.pdf
 share/doc/harmony/manual.pdf
-@dirrm share/doc/harmony

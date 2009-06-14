@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/12 22:52:34 rillig Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:31 joerg Exp $
 bin/sabcmd
 bin/sablot-config
 include/sabcfg.h
@@ -215,9 +215,3 @@ share/doc/sablotron/sxp/apidocs/sparse-toc-grp.html
 share/doc/sablotron/sxp/apidocs/sparse-toc.html
 share/doc/sablotron/sxp/complete-frameset.html
 share/doc/sablotron/sxp/sparse-frameset.html
-@dirrm share/doc/sablotron/sxp/apidocs
-@dirrm share/doc/sablotron/sxp
-@dirrm share/doc/sablotron/sablot/apidocs
-@dirrm share/doc/sablotron/sablot
-@dirrm share/doc/sablotron/jsdom-ref/apidocs
-@dirrm share/doc/sablotron/jsdom-ref

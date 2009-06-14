@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/13 00:15:24 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:13 joerg Exp $
 lib/java/crimson.jar
 share/doc/java/crimson/api/allclasses-frame.html
 share/doc/java/crimson/api/deprecated-list.html
@@ -156,26 +156,4 @@ share/examples/java/crimson/samples/spec.dtd
 share/examples/java/crimson/samples/two_gent.xml
 share/examples/java/crimson/samples/weekly-euc-jp.dtd
 share/examples/java/crimson/samples/weekly-euc-jp.xml
-@dirrm share/examples/java/crimson/samples
-@dirrm share/examples/java/crimson/SAXTagCount
-@dirrm share/examples/java/crimson/DOMEcho
-@dirrm share/examples/java/crimson
-@dirrm share/doc/java/crimson/style
-@dirrm share/doc/java/crimson/api/org/xml/sax/helpers/class-use
-@dirrm share/doc/java/crimson/api/org/xml/sax/helpers
-@dirrm share/doc/java/crimson/api/org/xml/sax/ext/class-use
-@dirrm share/doc/java/crimson/api/org/xml/sax/ext
-@dirrm share/doc/java/crimson/api/org/xml/sax/class-use
-@dirrm share/doc/java/crimson/api/org/xml/sax
-@dirrm share/doc/java/crimson/api/org/xml
-@dirrm share/doc/java/crimson/api/org/w3c/dom/class-use
-@dirrm share/doc/java/crimson/api/org/w3c/dom
-@dirrm share/doc/java/crimson/api/org/w3c
-@dirrm share/doc/java/crimson/api/org
-@dirrm share/doc/java/crimson/api/javax/xml/parsers/class-use
-@dirrm share/doc/java/crimson/api/javax/xml/parsers
-@dirrm share/doc/java/crimson/api/javax/xml
-@dirrm share/doc/java/crimson/api/javax
-@dirrm share/doc/java/crimson/api
-@dirrm share/doc/java/crimson
 @unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

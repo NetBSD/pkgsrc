@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/02/03 12:23:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:33 joerg Exp $
 bin/wbxml2xml
 bin/xml2wbxml
 include/wbxml.h
@@ -33,4 +33,3 @@ share/doc/wbxml2-0.9.0/THANKS
 share/doc/wbxml2-0.9.0/TODO
 share/doc/wbxml2-0.9.0/bootstrap
 share/doc/wbxml2-0.9.0/doxygen.h
-@dirrm share/doc/wbxml2-0.9.0
