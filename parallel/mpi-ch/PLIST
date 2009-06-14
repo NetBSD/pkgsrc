@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/12/21 11:41:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:10:40 joerg Exp $
 bin/check_callstack
 bin/clog2_join
 bin/clog2_print
@@ -834,13 +834,3 @@ share/mpich2/examples_logging/pthread_allreduce.c
 share/mpich2/examples_logging/pthread_sendrecv.c
 share/mpich2/examples_logging/pthread_sendrecv_user.c
 share/mpich2/examples_logging/srtest.c
-@dirrm share/mpich2/examples_logging
-@dirrm share/mpich2/examples_graphics
-@dirrm share/mpich2/examples_collchk
-@dirrm share/mpich2/examples
-@dirrm share/mpich2
-@dirrm share/doc/mpich2/html/www4
-@dirrm share/doc/mpich2/html/www3
-@dirrm share/doc/mpich2/html/www1
-@dirrm share/doc/mpich2/html
-@dirrm share/doc/mpich2

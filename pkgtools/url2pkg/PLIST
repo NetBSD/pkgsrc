@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/02 16:49:30 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:11:03 joerg Exp $
 bin/url2pkg
 lib/url2pkg/ExtUtils/MakeMaker.pm
 man/man8/url2pkg.8
-@dirrm lib/url2pkg/ExtUtils
-@dirrm lib/url2pkg

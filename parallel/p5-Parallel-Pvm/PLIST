@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/13 04:30:05 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:10:40 joerg Exp $
 share/examples/p5-Parallel-Pvm/hello.pl
 share/examples/p5-Parallel-Pvm/hello_other.pl
-@dirrm share/examples/p5-Parallel-Pvm
