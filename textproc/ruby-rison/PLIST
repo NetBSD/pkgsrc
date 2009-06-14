@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 21:36:32 joerg Exp $
 ${GEM_HOME}/cache/rison-${PKGVERSION}.gem
 ${GEM_LIBDIR}/COPYING.txt
 ${GEM_LIBDIR}/README.html
@@ -12,4 +12,3 @@ ${GEM_LIBDIR}/lib/rison/parser.rb
 ${GEM_LIBDIR}/test/test_dump.rb
 ${GEM_LIBDIR}/test/test_parser.rb
 ${GEM_HOME}/specifications/rison-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/${GEM_DOCDIR}

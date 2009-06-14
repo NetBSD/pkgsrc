@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.x11,v 1.4 2009/06/14 18:17:16 joerg Exp $
+@comment $NetBSD: PLIST.x11,v 1.5 2009/06/14 21:36:31 joerg Exp $
 bin/gxditview
 bin/xtotroff
 lib/X11/app-defaults/GXditview
@@ -77,5 +77,3 @@ share/groff/${PKGVERSION}/font/devX75/TB
 share/groff/${PKGVERSION}/font/devX75/TBI
 share/groff/${PKGVERSION}/font/devX75/TI
 share/groff/${PKGVERSION}/font/devX75/TR
-@unexec ${RMDIR} %D/lib/X11/app-defaults 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/X11 2>/dev/null || ${TRUE}

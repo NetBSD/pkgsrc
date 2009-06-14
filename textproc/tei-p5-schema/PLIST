@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 21:36:33 joerg Exp $
 share/xml/tei/schema/catalog.xml
 share/xml/tei/schema/dtd/analysis-decl.dtd
 share/xml/tei/schema/dtd/analysis.dtd
@@ -83,4 +83,3 @@ share/xml/tei/schema/relaxng/transcr.rnc
 share/xml/tei/schema/relaxng/transcr.rng
 share/xml/tei/schema/relaxng/verse.rnc
 share/xml/tei/schema/relaxng/verse.rng
-@unexec ${RMDIR} %D/share/xml/tei 2>/dev/null || ${TRUE}

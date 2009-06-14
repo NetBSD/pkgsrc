@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 21:36:32 joerg Exp $
 ${PYSITELIB}/Ft/Lib/CommandLine/Arguments.py
 ${PYSITELIB}/Ft/Lib/CommandLine/Arguments.pyc
 ${PYSITELIB}/Ft/Lib/CommandLine/Arguments.pyo
@@ -3617,6 +3617,6 @@ ${PYSITELIB}/Ft/Xml/cDomlettec.so
 ${PYSITELIB}/Ft/__init__.py
 ${PYSITELIB}/Ft/__init__.pyc
 ${PYSITELIB}/Ft/__init__.pyo
-@exec ${MKDIR} %D/${PYSITELIB}/Ft/Share/LoadTest/Server/SCore
-@exec ${MKDIR} %D/${PYSITELIB}/Ft/Share/Docs/html/HowTos/images
-@exec ${MKDIR} %D/${PYSITELIB}/Ft/Share/Data/FlatFile
+@pkgdir ${PYSITELIB}/Ft/Share/LoadTest/Server/SCore
+@pkgdir ${PYSITELIB}/Ft/Share/Docs/html/HowTos/images
+@pkgdir ${PYSITELIB}/Ft/Share/Data/FlatFile

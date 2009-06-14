@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 21:28:47 joerg Exp $
 bin/ck-history
 bin/ck-launch-session
 bin/ck-list-sessions
@@ -21,5 +21,5 @@ share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Session.xml
 share/dbus-1/system-services/org.freedesktop.ConsoleKit.service
 share/examples/consolekit/ConsoleKit.conf
 share/examples/consolekit/00-primary.seat
-@exec ${MKDIR} %D/lib/ConsoleKit/run-session.d
+@pkgdir lib/ConsoleKit/run-session.d
 @exec ${MKDIR} %D/etc/ConsoleKit/seats.d

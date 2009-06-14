@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:36:32 joerg Exp $
 bin/maruku
 bin/marutex
 ${GEM_HOME}/cache/maruku-${PKGVERSION}.gem
@@ -205,4 +205,3 @@ ${GEM_LIBDIR}/tests/utf8-files/simple.md
 ${GEM_LIBDIR}/unit_test_block.sh
 ${GEM_LIBDIR}/unit_test_span.sh
 ${GEM_HOME}/specifications/maruku-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/${GEM_DOCDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:36:31 joerg Exp $
 @comment in xmlcatmgr: share/xml/catalog
 share/xml/docbook/simple/${PKGVERSION}/catalog.xml
 share/xml/docbook/simple/${PKGVERSION}/sdbcent.mod
@@ -10,4 +10,3 @@ share/xml/docbook/simple/${PKGVERSION}/sdocbook.dtd
 share/xml/docbook/simple/${PKGVERSION}/sdocbookref-custom.dtd
 share/xml/docbook/simple/${PKGVERSION}/sdocbookref.dtd
 share/xml/docbook/simple/${PKGVERSION}/sinclist.mod
-@unexec ${RMDIR} %D/share/xml/docbook >/dev/null 2>&1 || ${TRUE}
