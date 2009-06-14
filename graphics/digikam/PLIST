@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/06/14 17:59:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 20:05:41 joerg Exp $
 bin/digikam
 bin/digikamthemedesigner
 bin/digitaglinktree
@@ -749,5 +749,5 @@ share/locale/uk/LC_MESSAGES/digikam.mo
 share/locale/vi/LC_MESSAGES/digikam.mo
 share/locale/zh_CN/LC_MESSAGES/digikam.mo
 share/locale/zh_TW/LC_MESSAGES/digikam.mo
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/${HTMLDIR}-apidocs/digikam/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/${HTMLDIR}-apidocs/digikam/digikam/html
+@pkgdir share/doc/kde/HTML/en/${HTMLDIR}-apidocs/digikam/html
+@pkgdir share/doc/kde/HTML/en/${HTMLDIR}-apidocs/digikam/digikam/html

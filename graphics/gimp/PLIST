@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2009/06/14 17:59:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.41 2009/06/14 20:05:41 joerg Exp $
 bin/gimp
 bin/gimp-2.6
 bin/gimp-console
@@ -1987,4 +1987,4 @@ share/locale/zh_TW/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20-tips.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20.mo
-@exec ${MKDIR} %D/share/gimp/2.0/fonts
+@pkgdir share/gimp/2.0/fonts

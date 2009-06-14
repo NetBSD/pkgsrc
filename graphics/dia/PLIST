@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:59:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 20:05:41 joerg Exp $
 bin/dia
 lib/dia/libaadl_objects.la
 lib/dia/libbondgraph_objects.la
@@ -1719,5 +1719,3 @@ share/mime-info/dia.keys
 share/mime-info/dia.mime
 share/pixmaps/dia-diagram.png
 share/pixmaps/dia_gnome_icon.png
-@exec ${MKDIR} %D/share/omf/dia
-@exec ${MKDIR} %D/share/oaf
