@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/11 19:03:53 spz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:39 joerg Exp $
 bin/varnishadm
 bin/varnishhist
 bin/varnishlog
@@ -29,5 +29,3 @@ man/man1/varnishtest.1
 man/man1/varnishtop.1
 man/man7/vcl.7
 sbin/varnishd
-@dirrm include/varnish
-@dirrm etc/varnish

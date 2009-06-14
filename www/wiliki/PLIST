@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/18 01:07:55 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:41 joerg Exp $
 share/gauche/site/lib/.packages/WiLiKi.gpd
 share/gauche/site/lib/wiliki.scm
 share/gauche/site/lib/wiliki/db.scm
@@ -15,4 +15,3 @@ share/gauche/site/lib/wiliki/rssmix.scm
 share/gauche/site/lib/wiliki/scr-macros.scm
 share/gauche/site/lib/wiliki/util.scm
 share/gauche/site/lib/wiliki/version.scm
-@dirrm share/gauche/site/lib/wiliki

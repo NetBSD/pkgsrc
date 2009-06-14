@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/09 13:17:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:40 joerg Exp $
 bin/wcmgr
 bin/webalizer
 bin/webazolver
@@ -11,4 +11,3 @@ share/doc/webalizer/DNS.README
 share/doc/webalizer/README
 share/doc/webalizer/README.FIRST
 share/examples/webalizer.conf.sample
-@dirrm share/doc/webalizer

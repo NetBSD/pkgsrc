@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/25 19:18:23 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:39 joerg Exp $
 bin/urlgrabber
 ${PYSITELIB}/urlgrabber/__init__.py
 ${PYSITELIB}/urlgrabber/__init__.pyc
@@ -25,5 +25,3 @@ share/doc/${PKGNAME}/ChangeLog
 share/doc/${PKGNAME}/LICENSE
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/TODO
-@dirrm share/doc/${PKGNAME}
-@dirrm ${PYSITELIB}/urlgrabber

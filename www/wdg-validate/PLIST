@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/11/11 07:48:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:40 joerg Exp $
 bin/validate
 share/doc/validate.README
 share/wdg/sgml-lib/15445.dcl
@@ -117,13 +117,3 @@ share/wdg/sgml-lib/xhtml11/xhtml11-model-1.mod
 share/wdg/sgml-lib/xhtml11/xhtml11.dtd
 share/wdg/sgml-lib/xhtml11/xml1.dcl
 share/wdg/sgml-lib/xhtml11/xml1n.dcl
-@dirrm share/wdg/sgml-lib/xhtml11
-@dirrm share/wdg/sgml-lib/xhtml1
-@dirrm share/wdg/sgml-lib/xhtml-basic10
-@dirrm share/wdg/sgml-lib/mathml2/mathml
-@dirrm share/wdg/sgml-lib/mathml2/iso9573-13
-@dirrm share/wdg/sgml-lib/mathml2/iso8879
-@dirrm share/wdg/sgml-lib/mathml2/html
-@dirrm share/wdg/sgml-lib/mathml2
-@dirrm share/wdg/sgml-lib
-@dirrm share/wdg

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/04 22:48:26 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:41 joerg Exp $
 share/doc/wmd/apiExample.html
 share/doc/wmd/minimalExample.html
 share/doc/wmd/optionsExample.html
@@ -24,6 +24,3 @@ share/wmd/showdown.js
 share/wmd/wmd-base.js
 share/wmd/wmd-plus.js
 share/wmd/wmd.js
-@dirrm share/wmd/images
-@dirrm share/wmd
-@dirrm share/doc/wmd

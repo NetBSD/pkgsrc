@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 12:29:40 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:41 joerg Exp $
 bin/whisker
 share/doc/whisker/plugins.txt
 share/doc/whisker/tests.txt
@@ -8,5 +8,3 @@ share/whisker/LW.pm
 share/whisker/html.plugin
 share/whisker/main.test
 share/whisker/newbie.help
-@dirrm share/doc/whisker
-@dirrm share/whisker

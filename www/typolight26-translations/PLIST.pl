@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pl,v 1.1.1.1 2009/04/26 03:54:57 taca Exp $
+@comment $NetBSD: PLIST.pl,v 1.2 2009/06/14 22:00:38 joerg Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/pl/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/pl/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/pl/default.php
@@ -102,20 +102,3 @@ ${TL_WEBDIR}/system/modules/rss_reader/languages/pl/tl_module.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/pl/.htaccess
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/pl/modules.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/pl/tl_templates.php
-@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/rep_client/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/rep_base/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/registration/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/news/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/memberlist/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/listing/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/faq/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/development/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/comments/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/pl
-@dirrm ${TL_WEBDIR}/system/modules/backend/languages/pl
