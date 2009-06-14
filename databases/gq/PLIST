@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/10 21:42:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:43:15 joerg Exp $
 bin/gq
 share/applications/gq.desktop
 share/gq/gq.glade
@@ -10,5 +10,3 @@ share/pixmaps/gq/hide.xpm
 share/pixmaps/gq/new.xpm
 share/pixmaps/gq/textview.png
 share/pixmaps/gq/warning.xpm
-@dirrm share/pixmaps/gq
-@dirrm share/gq

@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/28 02:22:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:20 joerg Exp $
 share/examples/p5-AddressBook/SyncAbook.pm
 share/examples/p5-AddressBook/abook.palm
 share/examples/p5-AddressBook/ldap-abook.conf
 share/examples/p5-AddressBook/phonelist.cgi
-@dirrm share/examples/p5-AddressBook

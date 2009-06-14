@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/28 17:23:54 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:39:09 joerg Exp $
 bin/2vcard
 man/man1/2vcard.1
 share/doc/html/2vcard/index-1.html
@@ -7,4 +7,3 @@ share/doc/html/2vcard/index-3.html
 share/doc/html/2vcard/index-4.html
 share/doc/html/2vcard/index-5.html
 share/doc/html/2vcard/index.html
-@dirrm share/doc/html/2vcard

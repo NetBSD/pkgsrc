@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/20 20:42:29 bad Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:43:16 joerg Exp $
 bin/crl_to_db
 bin/db2dcliff
 bin/db_to_html_table
@@ -48,4 +48,3 @@ share/jdb/DbTDistr.pm
 share/jdb/README
 share/jdb/dblib.pl
 share/jdb/release
-@dirrm share/jdb

@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/08 18:55:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:43:21 joerg Exp $
 ${PG_SUBPREFIX}lib/postgresql/tsearch2.la
 ${PG_SUBPREFIX}share/doc/postgresql/contrib/README.tsearch2
 ${PG_SUBPREFIX}share/postgresql/contrib/english.stop
 ${PG_SUBPREFIX}share/postgresql/contrib/russian.stop
 ${PG_SUBPREFIX}share/postgresql/contrib/tsearch2.sql
 ${PG_SUBPREFIX}share/postgresql/contrib/untsearch2.sql
-@dirrm share/postgresql/contrib
-@dirrm share/doc/postgresql/contrib

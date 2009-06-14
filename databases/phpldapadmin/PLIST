@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/05/23 20:51:44 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:43:21 joerg Exp $
 share/doc/phpldapadmin/INSTALL
 share/doc/phpldapadmin/LICENSE
 share/examples/phpldapadmin/config.php.example
@@ -483,57 +483,5 @@ share/phpldapadmin/tools/po/make_po_it
 share/phpldapadmin/tools/po/make_po_ja
 share/phpldapadmin/tools/po/messages.header
 share/phpldapadmin/tools/unit_test.php
-@dirrm share/phpldapadmin/tools/po
-@dirrm share/phpldapadmin/tools
-@dirrm share/phpldapadmin/templates/creation
-@dirrm share/phpldapadmin/templates
-@dirrm share/phpldapadmin/locale/zh_TW/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/zh_TW
-@dirrm share/phpldapadmin/locale/zh_CN/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/zh_CN
-@dirrm share/phpldapadmin/locale/sv_FI/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/sv_FI
-@dirrm share/phpldapadmin/locale/ru_RU/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/ru_RU
-@dirrm share/phpldapadmin/locale/pt_BR/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/pt_BR
-@dirrm share/phpldapadmin/locale/pl_PL/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/pl_PL
-@dirrm share/phpldapadmin/locale/nl_BE/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/nl_BE
-@dirrm share/phpldapadmin/locale/ja_JP/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/ja_JP
-@dirrm share/phpldapadmin/locale/it_IT/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/it_IT
-@dirrm share/phpldapadmin/locale/hu_HU/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/hu_HU
-@dirrm share/phpldapadmin/locale/fr_FR/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/fr_FR
-@dirrm share/phpldapadmin/locale/es_ES/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/es_ES
-@dirrm share/phpldapadmin/locale/de_DE/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/de_DE
-@dirrm share/phpldapadmin/locale/cs_CZ/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/cs_CZ
-@dirrm share/phpldapadmin/locale/ca_ES/LC_MESSAGES
-@dirrm share/phpldapadmin/locale/ca_ES
-@dirrm share/phpldapadmin/locale
-@dirrm share/phpldapadmin/lib
-@dirrm share/phpldapadmin/htdocs/js/phplayersmenu/menuimages
-@dirrm share/phpldapadmin/htdocs/js/phplayersmenu/libjs
-@dirrm share/phpldapadmin/htdocs/js/phplayersmenu/lib
-@dirrm share/phpldapadmin/htdocs/js/phplayersmenu
-@dirrm share/phpldapadmin/htdocs/js/jscalendar/skins/aqua
-@dirrm share/phpldapadmin/htdocs/js/jscalendar/skins
-@dirrm share/phpldapadmin/htdocs/js/jscalendar/lang
-@dirrm share/phpldapadmin/htdocs/js/jscalendar
-@dirrm share/phpldapadmin/htdocs/js
-@dirrm share/phpldapadmin/htdocs/images/countries
-@dirrm share/phpldapadmin/htdocs/images
-@dirrm share/phpldapadmin/htdocs/css
-@dirrm share/phpldapadmin/htdocs
-@dirrm share/phpldapadmin/doc
 @unexec ${RMDIR} %D/share/phpldapadmin/config 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/phpldapadmin 2>/dev/null || ${TRUE}
-@dirrm share/examples/phpldapadmin
-@dirrm share/doc/phpldapadmin

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/26 21:31:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:38:39 joerg Exp $
 bin/gammu
 bin/gammu-config
 bin/gammu-smsd
@@ -170,23 +170,3 @@ share/locale/zh_CN/LC_MESSAGES/gammu.mo
 share/locale/zh_CN/LC_MESSAGES/libgammu.mo
 share/locale/zh_TW/LC_MESSAGES/gammu.mo
 share/locale/zh_TW/LC_MESSAGES/libgammu.mo
-@dirrm share/doc/gammu/symbian
-@dirrm share/doc/gammu/examples/sql
-@dirrm share/doc/gammu/examples/php/smsd-mysql-list
-@dirrm share/doc/gammu/examples/php/smsd-mysql-linked
-@dirrm share/doc/gammu/examples/php/smsd-mysql-intergammu/proc
-@dirrm share/doc/gammu/examples/php/smsd-mysql-intergammu/funcoes
-@dirrm share/doc/gammu/examples/php/smsd-mysql-intergammu
-@dirrm share/doc/gammu/examples/php/smsd-mysql-admin
-@dirrm share/doc/gammu/examples/php/class_gammu
-@dirrm share/doc/gammu/examples/php
-@dirrm share/doc/gammu/examples/media
-@dirrm share/doc/gammu/examples/config
-@dirrm share/doc/gammu/examples
-@dirrm share/doc/gammu/devel/sounds
-@dirrm share/doc/gammu/devel/sms
-@dirrm share/doc/gammu/devel/protocol
-@dirrm share/doc/gammu/devel/examples
-@dirrm share/doc/gammu/devel
-@dirrm share/doc/gammu
-@dirrm include/gammu

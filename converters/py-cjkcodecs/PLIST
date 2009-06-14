@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/07 14:31:57 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:39:10 joerg Exp $
 ${PYSITELIB}/cjkcodecs.pth
 ${PYSITELIB}/cjkcodecs/__init__.py
 ${PYSITELIB}/cjkcodecs/__init__.pyc
@@ -107,4 +107,3 @@ ${PYSITELIB}/cjkcodecs/utf_7.pyo
 ${PYSITELIB}/cjkcodecs/utf_8.py
 ${PYSITELIB}/cjkcodecs/utf_8.pyc
 ${PYSITELIB}/cjkcodecs/utf_8.pyo
-@dirrm ${PYSITELIB}/cjkcodecs

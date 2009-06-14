@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/02/14 18:05:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:43:17 joerg Exp $
 bin/kmysqladmin
 share/doc/kde/HTML/en/kmysqladmin/Logo.png
 share/doc/kde/HTML/en/kmysqladmin/common
@@ -25,14 +25,3 @@ share/kde/apps/kmysqladmin/toolbar/threads.xpm
 share/kde/apps/kmysqladmin/toolbar/viewtab.xpm
 share/locale/de/LC_MESSAGES/kmysqladmin.mo
 share/locale/hu/LC_MESSAGES/kmysqladmin.mo
-@dirrm share/kde/apps/kmysqladmin/toolbar
-@dirrm share/kde/apps/kmysqladmin
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Applications
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@dirrm share/doc/kde/HTML/en/kmysqladmin
-@comment in kde: @dirrm share/doc/kde/HTML/en

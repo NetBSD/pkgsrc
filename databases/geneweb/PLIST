@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/06/15 22:55:22 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:43:15 joerg Exp $
 bin/consang
 bin/ged2gwb
 bin/gwb2ged
@@ -331,20 +331,3 @@ share/geneweb/setup/lang/save.htm
 share/geneweb/setup/lang/simple.htm
 share/geneweb/setup/lang/traces.htm
 share/geneweb/setup/lang/welcome.htm
-@dirrm share/geneweb/setup/lang
-@dirrm share/geneweb/setup
-@dirrm share/geneweb/lang
-@dirrm share/geneweb/images
-@dirrm share/geneweb/gwtp_tmp/lang
-@dirrm share/geneweb/gwtp_tmp
-@dirrm share/geneweb/etc
-@dirrm share/geneweb
-@dirrm share/examples/geneweb
-@dirrm share/doc/geneweb/sv
-@dirrm share/doc/geneweb/nl
-@dirrm share/doc/geneweb/it
-@dirrm share/doc/geneweb/images
-@dirrm share/doc/geneweb/fr
-@dirrm share/doc/geneweb/en
-@dirrm share/doc/geneweb/de
-@dirrm share/doc/geneweb

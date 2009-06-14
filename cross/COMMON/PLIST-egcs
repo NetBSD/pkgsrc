@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-egcs,v 1.3 2006/02/16 18:11:49 wiz Exp $
+@comment $NetBSD: PLIST-egcs,v 1.4 2009/06/14 17:39:52 joerg Exp $
 ${TARGET_ARCH}/bin/cc
 ${TARGET_ARCH}/bin/gcc
 bin/${TARGET_ARCH}-cc
@@ -40,7 +40,4 @@ lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/va-v850.h
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/varargs.h
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/libgcc.a
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/specs
-@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include
-@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}
-@dirrm lib/gcc-lib/${TARGET_ARCH}
 @unexec ${RMDIR} %D/lib/gcc-lib 2>/dev/null || ${TRUE}

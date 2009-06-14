@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/12/29 10:13:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:37 joerg Exp $
 include/drvrsmem.h
 include/fitsio.h
 include/fitsio2.h
@@ -6,4 +6,3 @@ include/longnam.h
 lib/libcfitsio.la
 lib/pkgconfig/cfitsio.pc
 share/doc/cfitsio/fitsio.doc
-@dirrm share/doc/cfitsio

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/26 14:00:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:38:39 joerg Exp $
 share/pixmaps/gscmxx/addressbook.xpm
 share/pixmaps/gscmxx/addressbook_20.xpm
 share/pixmaps/gscmxx/addressbook_30.xpm
@@ -29,7 +29,3 @@ share/gscmxx/i18n/english
 share/gscmxx/i18n/german
 share/gscmxx/i18n/italian
 share/gscmxx/i18n/magyar
-@dirrm share/pixmaps/gscmxx/groups
-@dirrm share/pixmaps/gscmxx
-@dirrm share/gscmxx/i18n
-@dirrm share/gscmxx

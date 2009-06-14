@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/23 00:51:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:43:20 joerg Exp $
 bin/pgadmin3
 bin/pgagent
 share/pgadmin3/branding/branding.ini
@@ -331,45 +331,3 @@ ${PLIST.debug}share/pgadmin3/ui/frmPassword.xrc
 ${PLIST.debug}share/pgadmin3/ui/frmReport.xrc
 ${PLIST.debug}share/pgadmin3/ui/frmRestore.xrc
 ${PLIST.debug}share/pgadmin3/ui/frmStatus.xrc
-${PLIST.debug}@dirrm share/pgadmin3/ui
-@dirrm share/pgadmin3/i18n/zh_TW
-@dirrm share/pgadmin3/i18n/zh_CN
-@dirrm share/pgadmin3/i18n/sr_YU
-@dirrm share/pgadmin3/i18n/ru_RU
-@dirrm share/pgadmin3/i18n/pt_PT
-@dirrm share/pgadmin3/i18n/pt_BR
-@dirrm share/pgadmin3/i18n/pl_PL
-@dirrm share/pgadmin3/i18n/nl_NL
-@dirrm share/pgadmin3/i18n/ko_KR
-@dirrm share/pgadmin3/i18n/ja_JP
-@dirrm share/pgadmin3/i18n/it_IT
-@dirrm share/pgadmin3/i18n/gl_ES
-@dirrm share/pgadmin3/i18n/fr_FR
-@dirrm share/pgadmin3/i18n/fi_FI
-@dirrm share/pgadmin3/i18n/es_ES
-@dirrm share/pgadmin3/i18n/de_DE
-@dirrm share/pgadmin3/i18n/ca_ES
-@dirrm share/pgadmin3/i18n/bg_BG
-@dirrm share/pgadmin3/i18n/af_ZA
-@dirrm share/pgadmin3/i18n
-@dirrm share/pgadmin3/docs/zh_TW/hints
-@dirrm share/pgadmin3/docs/zh_TW
-@dirrm share/pgadmin3/docs/zh_CN/hints
-@dirrm share/pgadmin3/docs/zh_CN
-@dirrm share/pgadmin3/docs/sl_SI/hints
-@dirrm share/pgadmin3/docs/sl_SI
-@dirrm share/pgadmin3/docs/it_IT
-@dirrm share/pgadmin3/docs/fr_FR/hints
-@dirrm share/pgadmin3/docs/fr_FR
-@dirrm share/pgadmin3/docs/fi_FI/hints
-@dirrm share/pgadmin3/docs/fi_FI
-@dirrm share/pgadmin3/docs/es_ES/hints
-@dirrm share/pgadmin3/docs/es_ES
-@dirrm share/pgadmin3/docs/en_US/images
-@dirrm share/pgadmin3/docs/en_US/hints
-@dirrm share/pgadmin3/docs/en_US
-@dirrm share/pgadmin3/docs/de_DE/hints
-@dirrm share/pgadmin3/docs/de_DE
-@dirrm share/pgadmin3/docs
-@dirrm share/pgadmin3/branding
-@dirrm share/pgadmin3

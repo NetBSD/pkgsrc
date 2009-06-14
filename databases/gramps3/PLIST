@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/04 17:29:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:43:16 joerg Exp $
 bin/gramps
 man/fr/man1/gramps.1
 man/man1/gramps.1
@@ -2412,72 +2412,3 @@ share/mime-info/gramps.keys
 share/mime-info/gramps.mime
 share/mime/packages/gramps.xml
 share/pixmaps/gramps.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in xdg-dirs: @dirrm share/mime-info
-@comment in gnome-icon-theme: @dirrm share/icons/gnome/scalable/mimetypes
-@comment in gnome-icon-theme: @dirrm share/icons/gnome/48x48/mimetypes
-@dirrm share/gramps/widgets
-@dirrm share/gramps/plugins/webreport
-@dirrm share/gramps/plugins/tool
-@dirrm share/gramps/plugins/textreport
-@dirrm share/gramps/plugins/rel
-@dirrm share/gramps/plugins/quickview
-@dirrm share/gramps/plugins/mapservices
-@dirrm share/gramps/plugins/lib
-@dirrm share/gramps/plugins/import
-@dirrm share/gramps/plugins/graph
-@dirrm share/gramps/plugins/gramplet
-@dirrm share/gramps/plugins/export
-@dirrm share/gramps/plugins/drawreport
-@dirrm share/gramps/plugins/docgen
-@dirrm share/gramps/plugins
-@dirrm share/gramps/mapstraction
-@dirrm share/gramps/images/scalable
-@dirrm share/gramps/images/48x48
-@dirrm share/gramps/images/22x22
-@dirrm share/gramps/images/16x16
-@dirrm share/gramps/images
-@dirrm share/gramps/glade
-@dirrm share/gramps/gen/utils
-@dirrm share/gramps/gen/proxy
-@dirrm share/gramps/gen/plug/menu
-@dirrm share/gramps/gen/plug
-@dirrm share/gramps/gen/lib
-@dirrm share/gramps/gen/db
-@dirrm share/gramps/gen
-@dirrm share/gramps/example
-@dirrm share/gramps/docgen
-@dirrm share/gramps/data/templates
-@dirrm share/gramps/data
-@dirrm share/gramps/Simple
-@dirrm share/gramps/Selectors
-@dirrm share/gramps/ReportBase
-@dirrm share/gramps/PluginUtils
-@dirrm share/gramps/Mime
-@dirrm share/gramps/Merge
-@dirrm share/gramps/GrampsLogger
-@dirrm share/gramps/GrampsLocale
-@dirrm share/gramps/GrampsDbUtils
-@dirrm share/gramps/Filters/SideBar
-@dirrm share/gramps/Filters/Rules/Source
-@dirrm share/gramps/Filters/Rules/Repository
-@dirrm share/gramps/Filters/Rules/Place
-@dirrm share/gramps/Filters/Rules/Person
-@dirrm share/gramps/Filters/Rules/Note
-@dirrm share/gramps/Filters/Rules/MediaObject
-@dirrm share/gramps/Filters/Rules/Family
-@dirrm share/gramps/Filters/Rules/Event
-@dirrm share/gramps/Filters/Rules
-@dirrm share/gramps/Filters
-@dirrm share/gramps/FilterEditor
-@dirrm share/gramps/Editors
-@dirrm share/gramps/DisplayTabs
-@dirrm share/gramps/DisplayModels
-@dirrm share/gramps/DateHandler
-@dirrm share/gramps/DataViews
-@dirrm share/gramps/Config
-@dirrm share/gramps/BasicUtils
-@dirrm share/gramps
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry

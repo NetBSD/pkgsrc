@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.emacs,v 1.4 2007/09/15 11:29:45 wiz Exp $
+@comment $NetBSD: PLIST.emacs,v 1.5 2009/06/14 17:48:33 joerg Exp $
 ${EMACS_LISPPREFIX}/emu/apel-ver.el
 ${EMACS_LISPPREFIX}/emu/apel-ver.elc
 ${EMACS_LISPPREFIX}/emu/broken.el
@@ -55,5 +55,3 @@ ${EMACS_LISPPREFIX}/apel/install.el
 ${EMACS_LISPPREFIX}/apel/install.elc
 ${EMACS_LISPPREFIX}/apel/path-util.el
 ${EMACS_LISPPREFIX}/apel/path-util.elc
-@dirrm ${EMACS_LISPPREFIX}/emu
-@dirrm ${EMACS_LISPPREFIX}/apel

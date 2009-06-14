@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/09/19 09:39:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:43:26 joerg Exp $
 bin/dltest
 bin/isql
 bin/iusql
@@ -36,5 +36,3 @@ ${UNIXODBC_DRIVERS_DIR}/libsapdbS.la
 ${UNIXODBC_DRIVERS_DIR}/libtdsS.la
 ${UNIXODBC_DRIVERS_DIR}/libtemplate.la
 share/examples/unixodbc/odbc.ini
-@dirrm share/examples/unixodbc
-@dirrm ${UNIXODBC_DRIVERS_DIR}

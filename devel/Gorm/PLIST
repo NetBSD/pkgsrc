@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/04/13 12:29:14 rh Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 17:48:30 joerg Exp $
 bin/Gorm
 include/GormCore/GormBoxEditor.h
 include/GormCore/GormClassEditor.h
@@ -384,82 +384,3 @@ lib/libGormObjCHeaderParser.so
 lib/libGormObjCHeaderParser.so.1.1.0
 lib/libGormPrefs.so
 lib/libGormPrefs.so.${PKGVERSION}
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/Nib.plugin/Resources
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/Nib.plugin
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/Gorm.plugin/Resources
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/Gorm.plugin
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/GModel.plugin/Resources
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/GModel.plugin
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormViewSizeInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormSoundInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormShelfPref.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormSetName.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormScrollViewAttributesInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormPreferences.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormPrefPlugins.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormPrefPalettes.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormPrefHeaders.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormPrefGuideline.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormPrefGeneral.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormPrefColors.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormPalettePanel.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormObjectInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormNSSplitViewInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormInspectorPanel.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormInconsistenciesPanel.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormImageInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormHelpInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormFontView.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormDummyInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormDocument.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormCustomClassInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormConnectionInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormClassPanel.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormClassInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/GormClassEditor.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj/Gorm.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSTextViewInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSNumberFormatterInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSImageViewInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSDateFormatterInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSComboBoxInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/4Data.palette/Resources
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/4Data.palette
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTabViewInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableViewInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnSizeInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSBrowserInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/3Containers.palette/Resources
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/3Containers.palette
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSTextFieldInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSStepperInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSSliderInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSProgressIndicatorInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSPopUpButtonInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSMatrixInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSFormInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSColorWellInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSCellInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSButtonInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette/Resources
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/2Controls.palette
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowSizeInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormDrawerAttributesInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/1Windows.palette/Resources
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/1Windows.palette
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/0Menus.palette/Resources/GormMenuItemAttributesInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/0Menus.palette/Resources/GormMenuAttributesInspector.gorm
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/0Menus.palette/Resources
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources/0Menus.palette
-@dirrm lib/GNUstep/Applications/Gorm.app/Resources
-@dirrm lib/GNUstep/Applications/Gorm.app
-@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
-@dirrm include/InterfaceBuilder
-@dirrm include/GormPrefs
-@dirrm include/GormObjCHeaderParser
-@dirrm include/GormCore

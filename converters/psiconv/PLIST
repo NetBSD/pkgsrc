@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/08 13:19:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:39:10 joerg Exp $
 bin/psiconv
 bin/psiconv-config
 include/psiconv/buffer.h
@@ -18,5 +18,3 @@ man/man1/psiconv-config.1
 man/man1/psiconv.1
 share/examples/psiconv/psiconv.conf
 share/examples/psiconv/psiconv.conf.eg
-@dirrm include/psiconv
-@dirrm share/examples/psiconv

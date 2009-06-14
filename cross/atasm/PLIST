@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/13 23:00:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:39:52 joerg Exp $
 bin/atasm
 man/man1/atasm.1
 share/doc/atasm/atasm.txt
-@dirrm share/doc/atasm

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/07 22:06:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:38:43 joerg Exp $
 bin/install_iminitel
 bin/make_xtel_lignes
 bin/mdmdetect
@@ -37,7 +37,3 @@ share/examples/xtel/chat-iminitel
 share/examples/xtel/ip-down.iminitel
 share/examples/xtel/ip-up.iminitel
 share/examples/xtel/peers/iminitel
-@dirrm share/examples/xtel/peers
-@dirrm share/examples/xtel
-@dirrm lib/X11/xtel
-@dirrm lib/X11/fonts/xtel

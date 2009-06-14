@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/04/12 22:42:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:48:32 joerg Exp $
 bin/allegro-config
 bin/colormap
 bin/dat
@@ -105,9 +105,3 @@ lib/liballeg-${PKGVERSION}.so
 lib/liballeg.so.4.2
 lib/liballeg_unsharable.a
 share/aclocal/allegro.m4
-@dirrm lib/allegro/4.2.2
-@dirrm lib/allegro
-@dirrm include/allegro/platform
-@dirrm include/allegro/internal
-@dirrm include/allegro/inline
-@dirrm include/allegro

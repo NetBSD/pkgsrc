@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/05/22 11:45:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:48:35 joerg Exp $
 include/gc.h
 include/gc/gc.h
 include/gc/gc_allocator.h
@@ -57,5 +57,3 @@ share/doc/gc/porting.html
 share/doc/gc/scale.html
 share/doc/gc/simple_example.html
 share/doc/gc/tree.html
-@dirrm share/doc/gc
-@dirrm include/gc

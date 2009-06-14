@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/26 22:53:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:22 joerg Exp $
 ${PYSITELIB}/IndexedCatalog/Aggregate.pyc
 ${PYSITELIB}/IndexedCatalog/Aggregate.pyo
 ${PYSITELIB}/IndexedCatalog/Aggregate.py
@@ -103,6 +103,3 @@ ${PYSITELIB}/IndexedCatalog/_Util.so
 ${PYSITELIB}/IndexedCatalog/__init__.pyc
 ${PYSITELIB}/IndexedCatalog/__init__.pyo
 ${PYSITELIB}/IndexedCatalog/__init__.py
-@dirrm ${PYSITELIB}/IndexedCatalog/Parser/common
-@dirrm ${PYSITELIB}/IndexedCatalog/Parser
-@dirrm ${PYSITELIB}/IndexedCatalog

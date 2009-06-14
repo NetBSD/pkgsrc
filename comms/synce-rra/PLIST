@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/13 16:57:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:42 joerg Exp $
 bin/synce-matchmaker
 include/rra/appointment.h
 include/rra/contact.h
@@ -10,4 +10,3 @@ include/rra/uint32vector.h
 lib/librra.la
 man/man1/synce-matchmaker.1
 share/aclocal/rra.m4
-@dirrm include/rra

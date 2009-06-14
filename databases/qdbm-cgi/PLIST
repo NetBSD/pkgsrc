@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/23 06:51:57 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:23 joerg Exp $
 libexec/cgi-bin/qadm.cgi
 libexec/cgi-bin/qupl.cgi
 libexec/cgi-bin/qfts.cgi
@@ -7,4 +7,3 @@ share/doc/qdbm/cgi/cgispex-ja.html
 share/doc/qdbm/cgi/qadm.conf
 share/doc/qdbm/cgi/qupl.conf
 share/doc/qdbm/cgi/qfts.conf
-@dirrm share/doc/qdbm/cgi

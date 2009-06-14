@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/06/11 00:58:39 darcy Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:43:22 joerg Exp $
 ${PYSITELIB}/_pg.so
 ${PYSITELIB}/pg.py
 ${PYSITELIB}/pg.pyc
@@ -27,6 +27,3 @@ share/doc/${PYPKGPREFIX}-postgresql/tutorial/advanced.py
 share/doc/${PYPKGPREFIX}-postgresql/tutorial/basics.py
 share/doc/${PYPKGPREFIX}-postgresql/tutorial/func.py
 share/doc/${PYPKGPREFIX}-postgresql/tutorial/syscat.py
-@dirrm share/doc/${PYPKGPREFIX}-postgresql/tutorial
-@dirrm share/doc/${PYPKGPREFIX}-postgresql/docs
-@dirrm share/doc/${PYPKGPREFIX}-postgresql

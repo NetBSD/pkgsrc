@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/04/13 12:33:43 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:31 joerg Exp $
 bin/GSMarkupBrowser
 bin/GSMarkupLocalizableStrings
 include/Renaissance/GNUstep.h
@@ -74,10 +74,3 @@ lib/GNUstep/Applications/GSMarkupLocalizableStrings.app/Resources/Info-gnustep.p
 lib/GNUstep/Applications/GSMarkupLocalizableStrings.app/stamp.make
 lib/libRenaissance.so
 lib/libRenaissance.so.${PKGVERSION}
-@dirrm lib/GNUstep/Applications/GSMarkupLocalizableStrings.app/Resources
-@dirrm lib/GNUstep/Applications/GSMarkupLocalizableStrings.app
-@dirrm lib/GNUstep/Applications/GSMarkupBrowser.app/Resources
-@dirrm lib/GNUstep/Applications/GSMarkupBrowser.app
-@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
-@comment in devel/gnustep-base: @dirrm lib/GNUstep
-@dirrm include/Renaissance

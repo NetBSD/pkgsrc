@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/02/21 19:32:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:43:14 joerg Exp $
 bin/db3_archive
 bin/db3_checkpoint
 bin/db3_deadlock
@@ -787,49 +787,3 @@ share/doc/db3/utility/db_stat.html
 share/doc/db3/utility/db_upgrade.html
 share/doc/db3/utility/db_verify.html
 share/doc/db3/utility/index.html
-@dirrm share/doc/db3/utility
-@dirrm share/doc/db3/sleepycat
-@dirrm share/doc/db3/ref/xa
-@dirrm share/doc/db3/ref/upgrade.3.3
-@dirrm share/doc/db3/ref/upgrade.3.2
-@dirrm share/doc/db3/ref/upgrade.3.1
-@dirrm share/doc/db3/ref/upgrade.3.0
-@dirrm share/doc/db3/ref/upgrade.2.0
-@dirrm share/doc/db3/ref/upgrade
-@dirrm share/doc/db3/ref/txn
-@dirrm share/doc/db3/ref/transapp
-@dirrm share/doc/db3/ref/test
-@dirrm share/doc/db3/ref/tcl
-@dirrm share/doc/db3/ref/splash
-@dirrm share/doc/db3/ref/simple_tut
-@dirrm share/doc/db3/ref/sendmail
-@dirrm share/doc/db3/ref/rpc
-@dirrm share/doc/db3/ref/refs
-@dirrm share/doc/db3/ref/program
-@dirrm share/doc/db3/ref/perl
-@dirrm share/doc/db3/ref/mp
-@dirrm share/doc/db3/ref/log
-@dirrm share/doc/db3/ref/lock
-@dirrm share/doc/db3/ref/java
-@dirrm share/doc/db3/ref/intro
-@dirrm share/doc/db3/ref/install
-@dirrm share/doc/db3/ref/env
-@dirrm share/doc/db3/ref/dumpload
-@dirrm share/doc/db3/ref/distrib
-@dirrm share/doc/db3/ref/debug
-@dirrm share/doc/db3/ref/cam
-@dirrm share/doc/db3/ref/build_win
-@dirrm share/doc/db3/ref/build_vxworks
-@dirrm share/doc/db3/ref/build_unix
-@dirrm share/doc/db3/ref/arch
-@dirrm share/doc/db3/ref/am_misc
-@dirrm share/doc/db3/ref/am_conf
-@dirrm share/doc/db3/ref/am
-@dirrm share/doc/db3/ref
-@dirrm share/doc/db3/images
-@dirrm share/doc/db3/api_tcl
-@dirrm share/doc/db3/api_java
-@dirrm share/doc/db3/api_cxx
-@dirrm share/doc/db3/api_c
-@dirrm share/doc/db3
-@dirrm include/db3

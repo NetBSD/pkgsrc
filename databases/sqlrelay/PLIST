@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:42:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:43:26 joerg Exp $
 bin/backupschema
 bin/fields
 bin/query
@@ -144,37 +144,3 @@ share/doc/sqlrelay/windows.html
 share/examples/rc.d/sqlrelay
 share/examples/sqlrelay/sqlrelay.conf.example
 share/examples/sqlrelay/sqlrelay.dtd
-@dirrm share/examples/sqlrelay
-@dirrm share/doc/sqlrelay/programming/zope
-@dirrm share/doc/sqlrelay/programming
-@dirrm share/doc/sqlrelay/gettingstarted/sybase
-@dirrm share/doc/sqlrelay/gettingstarted/oracle/linux/slackware/8
-@dirrm share/doc/sqlrelay/gettingstarted/oracle/linux/slackware/7
-@dirrm share/doc/sqlrelay/gettingstarted/oracle/linux/slackware
-@dirrm share/doc/sqlrelay/gettingstarted/oracle/linux/redhat/9
-@dirrm share/doc/sqlrelay/gettingstarted/oracle/linux/redhat/8
-@dirrm share/doc/sqlrelay/gettingstarted/oracle/linux/redhat/7
-@dirrm share/doc/sqlrelay/gettingstarted/oracle/linux/redhat/6
-@dirrm share/doc/sqlrelay/gettingstarted/oracle/linux/redhat/5
-@dirrm share/doc/sqlrelay/gettingstarted/oracle/linux/redhat
-@dirrm share/doc/sqlrelay/gettingstarted/oracle/linux
-@dirrm share/doc/sqlrelay/gettingstarted/oracle
-@dirrm share/doc/sqlrelay/gettingstarted
-@dirrm share/doc/sqlrelay/dropin
-@dirrm share/doc/sqlrelay/css
-@dirrm share/doc/sqlrelay/api/tcl
-@dirrm share/doc/sqlrelay/api/ruby
-@dirrm share/doc/sqlrelay/api/python
-@dirrm share/doc/sqlrelay/api/php
-@dirrm share/doc/sqlrelay/api/perl
-@dirrm share/doc/sqlrelay/api/java/resources
-@dirrm share/doc/sqlrelay/api/java/com/firstworks/sqlrelay
-@dirrm share/doc/sqlrelay/api/java/com/firstworks
-@dirrm share/doc/sqlrelay/api/java/com
-@dirrm share/doc/sqlrelay/api/java
-@dirrm share/doc/sqlrelay/api/c++
-@dirrm share/doc/sqlrelay/api/c
-@dirrm share/doc/sqlrelay/api
-@dirrm share/doc/sqlrelay
-@dirrm include/sqlrelay/private
-@dirrm include/sqlrelay

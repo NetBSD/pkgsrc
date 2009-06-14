@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/09/15 09:26:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:43:25 joerg Exp $
 ${GEM_HOME}/cache/sqlite3-ruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/doc/faq/faq.html
@@ -34,17 +34,3 @@ ${GEM_LIBDIR}/test/tc_errors.rb
 ${GEM_LIBDIR}/test/tc_integration.rb
 ${GEM_LIBDIR}/test/tests.rb
 ${GEM_HOME}/specifications/sqlite3-ruby-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/driver/dl
-@dirrm ${GEM_LIBDIR}/test/driver
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/sqlite3/driver/native
-@dirrm ${GEM_LIBDIR}/lib/sqlite3/driver/dl
-@dirrm ${GEM_LIBDIR}/lib/sqlite3/driver
-@dirrm ${GEM_LIBDIR}/lib/sqlite3
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/sqlite3_api/win32
-@dirrm ${GEM_LIBDIR}/ext/sqlite3_api
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/doc/faq
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}

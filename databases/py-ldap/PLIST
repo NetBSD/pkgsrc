@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/27 05:38:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:22 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -84,13 +84,3 @@ share/doc/py-ldap/Demo/simplebrowse.py
 share/doc/py-ldap/INSTALL
 share/doc/py-ldap/README
 share/doc/py-ldap/TODO
-@dirrm share/doc/py-ldap/Demo/pyasn1
-@dirrm share/doc/py-ldap/Demo/Lib/ldif
-@dirrm share/doc/py-ldap/Demo/Lib/ldapurl
-@dirrm share/doc/py-ldap/Demo/Lib/ldap/async
-@dirrm share/doc/py-ldap/Demo/Lib/ldap
-@dirrm share/doc/py-ldap/Demo/Lib
-@dirrm share/doc/py-ldap/Demo
-@dirrm share/doc/py-ldap
-@dirrm ${PYSITELIB}/ldap/schema
-@dirrm ${PYSITELIB}/ldap

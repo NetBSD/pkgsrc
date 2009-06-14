@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/08/24 19:53:44 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:39:53 joerg Exp $
 include/ansidecl.h
 include/bfd.h
 include/symcat.h
@@ -2231,8 +2231,6 @@ libexec/binutils/strip
 libexec/binutils/sysdump
 libexec/binutils/sysinfo
 libexec/binutils/windres
-@dirrm libexec/binutils
-@dirrm lib/ldscripts
 @exec ln -s %D/libexec/binutils/cross-env ${LOCALBASE}/bin/cross-env
 @unexec ${RM} ${LOCALBASE}/bin/cross-env
 @unexec ${RM} -f %D/lib/libbfd.so %D/lib/libopcodes.so 2> /dev/null || ${TRUE}

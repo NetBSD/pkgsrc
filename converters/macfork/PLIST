@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:50:54 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:39:10 joerg Exp $
 bin/macfork
 share/doc/macfork/README
-@dirrm share/doc/macfork

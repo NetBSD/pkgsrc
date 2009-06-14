@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/28 19:48:03 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:23 joerg Exp $
 bin/rrdcgi
 bin/rrdtool
 bin/rrdupdate
@@ -121,9 +121,3 @@ share/examples/rrdtool/piped-demo.pl
 share/examples/rrdtool/shared-demo.pl
 share/examples/rrdtool/stripes.pl
 share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
-@dirrm share/examples/rrdtool
-@dirrm share/rrdtool/fonts
-@dirrm share/rrdtool
-@dirrm share/doc/rrdtool-${PKGVERSION}/html
-@dirrm share/doc/rrdtool-${PKGVERSION}/txt
-@dirrm share/doc/rrdtool-${PKGVERSION}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/04/13 12:31:54 rh Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:30 joerg Exp $
 bin/ProjectCenter
 include/ProjectCenter
 lib/GNUstep/Applications/ProjectCenter.app/ProjectCenter
@@ -224,58 +224,3 @@ lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/Current
 lib/GNUstep/Frameworks/ProjectCenter.framework/libProjectCenter.so
 lib/libProjectCenter.so
 lib/libProjectCenter.so.${PKGVERSION}
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectWindow.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectInspector.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectDescription.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectAttributes.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/Preferences.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/NewSubproject.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/NewFile.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/LogPanel.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/FileAttributes.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuilderPanel.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuilderOptions.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/Builder.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuildAttributes.gorm
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/Protocols
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions
-@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework
-@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Frameworks
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources/Inspector.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/Resources/Inspector.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/Resources
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.parser/Resources
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.parser
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources/Inspector.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Resources/Inspector.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Resources
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/ProjectCenter.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/Info.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/FindPanel.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Resources/Inspector.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Resources
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Main.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Inspector.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Resources/Inspector.gorm
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Resources
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project
-@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources
-@dirrm lib/GNUstep/Applications/ProjectCenter.app
-@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
-@comment in devel/gnustep-base: @dirrm lib/GNUstep

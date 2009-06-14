@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/07 14:12:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:38:42 joerg Exp $
 bin/xisp
 bin/xispid
 bin/xisprccv
@@ -11,6 +11,3 @@ share/examples/xisp/ip-down
 share/examples/xisp/ip-up
 share/examples/xisp/peers/xisp_dialer
 share/examples/xisp/peers/xisp_modem
-@dirrm share/examples/xisp/peers
-@dirrm share/examples/xisp
-@dirrm share/doc/xisp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/23 15:42:43 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:30 joerg Exp $
 ${RT_HTML_DIR}/Callbacks/RTFM/Ticket/Update.html/BeforeMessageBox
 ${RT_HTML_DIR}/Callbacks/RTFM/Ticket/Elements/Tabs/Default
 ${RT_HTML_DIR}/Callbacks/RTFM/autohandler/Default
@@ -105,26 +105,3 @@ share/RTFM/acl.mysql
 share/RTFM/schema.Oracle
 share/RTFM/schema.Pg
 share/RTFM/schema.mysql
-@dirrm ${RT_HTML_DIR}/Callbacks/RTFM/Ticket/Update.html
-@dirrm ${RT_HTML_DIR}/Callbacks/RTFM/Ticket/Elements/Tabs
-@dirrm ${RT_HTML_DIR}/Callbacks/RTFM/Ticket/Elements
-@dirrm ${RT_HTML_DIR}/Callbacks/RTFM/Ticket
-@dirrm ${RT_HTML_DIR}/Callbacks/RTFM/Elements/Tabs
-@dirrm ${RT_HTML_DIR}/Callbacks/RTFM/Elements/MessageBox
-@dirrm ${RT_HTML_DIR}/Callbacks/RTFM/Elements
-@dirrm ${RT_HTML_DIR}/Callbacks/RTFM/autohandler
-@dirrm ${RT_HTML_DIR}/Callbacks/RTFM
-@dirrm ${RT_HTML_DIR}/RTFM/Article/Elements
-@dirrm ${RT_HTML_DIR}/RTFM/Article
-@dirrm ${RT_HTML_DIR}/RTFM/Admin/Classes
-@dirrm ${RT_HTML_DIR}/RTFM/Admin/CustomFields
-@dirrm ${RT_HTML_DIR}/RTFM/Admin/Elements
-@dirrm ${RT_HTML_DIR}/RTFM/Admin/Global
-@dirrm ${RT_HTML_DIR}/RTFM/Admin
-@dirrm ${RT_HTML_DIR}/RTFM/Elements
-@dirrm ${RT_HTML_DIR}/RTFM
-@dirrm ${RT_I18N_DIR}/RTFM
-@dirrm lib/rt3/RT/FM
-@dirrm lib/rt3/RT/Framework/Interface
-@dirrm lib/rt3/RT/Framework
-@dirrm share/RTFM

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/28 21:25:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:32 joerg Exp $
 bin/accerciser
 ${PYSITELIB}/accerciser/__init__.py
 ${PYSITELIB}/accerciser/__init__.pyc
@@ -286,53 +286,3 @@ share/omf/accerciser/accerciser-fr.omf
 share/omf/accerciser/accerciser-oc.omf
 share/omf/accerciser/accerciser-pt_BR.omf
 share/omf/accerciser/accerciser-sv.omf
-@dirrm share/omf/accerciser
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gnome/help/accerciser/sv/figures
-@dirrm share/gnome/help/accerciser/sv
-@dirrm share/gnome/help/accerciser/pt_BR/figures
-@dirrm share/gnome/help/accerciser/pt_BR
-@dirrm share/gnome/help/accerciser/oc/figures
-@dirrm share/gnome/help/accerciser/oc
-@dirrm share/gnome/help/accerciser/fr/figures
-@dirrm share/gnome/help/accerciser/fr
-@dirrm share/gnome/help/accerciser/es/figures
-@dirrm share/gnome/help/accerciser/es
-@dirrm share/gnome/help/accerciser/en_GB/figures
-@dirrm share/gnome/help/accerciser/en_GB
-@dirrm share/gnome/help/accerciser/el/figures
-@dirrm share/gnome/help/accerciser/el
-@dirrm share/gnome/help/accerciser/de/figures
-@dirrm share/gnome/help/accerciser/de
-@dirrm share/gnome/help/accerciser/cs/figures
-@dirrm share/gnome/help/accerciser/cs
-@dirrm share/gnome/help/accerciser/ca/figures
-@dirrm share/gnome/help/accerciser/ca
-@dirrm share/gnome/help/accerciser/C/figures
-@dirrm share/gnome/help/accerciser/C
-@dirrm share/gnome/help/accerciser
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm share/accerciser/plugins
-@dirrm share/accerciser/plugindata/validate
-@dirrm share/accerciser/plugindata
-@dirrm share/accerciser/pixmaps/hicolor/22x22
-@dirrm share/accerciser/pixmaps/hicolor
-@dirrm share/accerciser/pixmaps
-@dirrm share/accerciser
-@dirrm ${PYSITELIB}/accerciser/plugin
-@dirrm ${PYSITELIB}/accerciser

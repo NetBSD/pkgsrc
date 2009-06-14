@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/11/30 18:14:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:38:41 joerg Exp $
 bin/pilot-addresses
 bin/pilot-clip
 bin/pilot-csd
@@ -47,7 +47,3 @@ share/pilot-link/pix/casemask.xbm
 share/pilot-link/prc/getrom.prc
 share/pilot-link/prc/getrom2.prc
 share/pilot-link/udev/60-libpisock.rules
-@dirrm share/pilot-link/udev
-@dirrm share/pilot-link/prc
-@dirrm share/pilot-link/pix
-@dirrm share/pilot-link

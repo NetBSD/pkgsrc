@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/08/04 11:13:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:43:18 joerg Exp $
 lib/libgda-3.0/providers/libgda-postgres.la
 lib/pkgconfig/libgda-postgres-3.0.pc
 share/libgda-3.0/postgres_specs_add_column.xml
@@ -11,5 +11,3 @@ share/libgda-3.0/postgres_specs_drop_index.xml
 share/libgda-3.0/postgres_specs_drop_table.xml
 share/libgda-3.0/postgres_specs_dsn.xml
 share/libgda-3.0/postgres_specs_rename_table.xml
-@comment in libgda: @dirrm share/libgda-3.0
-@comment in libgda: @dirrm lib/libgda-3.0/providers

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/10 17:44:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:35 joerg Exp $
 include/blib-1.0/blib/beffects.h
 include/blib-1.0/blib/blib-directfb.h
 include/blib-1.0/blib/blib-gtk.h
@@ -85,9 +85,3 @@ share/gtk-doc/html/blib/index.sgml
 share/gtk-doc/html/blib/left.png
 share/gtk-doc/html/blib/right.png
 share/gtk-doc/html/blib/up.png
-@dirrm share/gtk-doc/html/blib
-@dirrm share/blib-1.0
-@dirrm lib/blib-1.0/modules
-@dirrm lib/blib-1.0
-@dirrm include/blib-1.0/blib
-@dirrm include/blib-1.0

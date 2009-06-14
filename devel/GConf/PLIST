@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2009/03/06 00:08:08 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.27 2009/06/14 17:48:30 joerg Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -125,15 +125,7 @@ share/locale/zh_CN/LC_MESSAGES/GConf2.mo
 share/locale/zh_HK/LC_MESSAGES/GConf2.mo
 share/locale/zh_TW/LC_MESSAGES/GConf2.mo
 share/sgml/gconf/gconf-1.0.dtd
-@dirrm share/sgml/gconf
-@comment in xmlcatmgr: @dirrm share/sgml
-@dirrm share/gtk-doc/html/gconf
 @exec ${MKDIR} %D/share/gconf/schemas
-@dirrm share/gconf/schemas
 @unexec ${RMDIR} -p %D/share/gconf 2>/dev/null || ${TRUE}
-@dirrm share/examples/GConf
-@dirrm lib/GConf/2
 @unexec ${RMDIR} -p %D/lib/GConf 2>/dev/null || ${TRUE}
-@dirrm include/gconf/2/gconf
-@dirrm include/gconf/2
 @unexec ${RMDIR} -p %D/include/gconf 2>/dev/null || ${TRUE}

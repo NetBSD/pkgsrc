@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/25 01:58:09 rumble Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:39:54 joerg Exp $
 bin/uisp
 man/man1/uisp.1
 share/doc/uisp/AUTHORS
@@ -10,4 +10,3 @@ share/doc/uisp/ChangeLog-2002
 share/doc/uisp/ChangeLog-2003
 share/doc/uisp/INSTALL
 share/doc/uisp/TODO
-@dirrm share/doc/uisp

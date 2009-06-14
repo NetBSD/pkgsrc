@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/10 21:03:58 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:38 joerg Exp $
 include/CUnit/Automated.h
 include/CUnit/Basic.h
 include/CUnit/CUError.h
@@ -36,7 +36,3 @@ share/doc/CUnit/managing_tests.html
 share/doc/CUnit/running_tests.html
 share/doc/CUnit/test_registry.html
 share/doc/CUnit/writing_tests.html
-@dirrm share/doc/CUnit/headers
-@dirrm share/doc/CUnit
-@dirrm share/CUnit
-@dirrm include/CUnit
