@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 21:51:06 plunky Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:31 joerg Exp $
 include/libfprint/fprint.h
 lib/libfprint.a
 lib/libfprint.la
 lib/libfprint.so
 lib/libfprint.so.0
 lib/pkgconfig/libfprint.pc
-@dirrm include/libfprint

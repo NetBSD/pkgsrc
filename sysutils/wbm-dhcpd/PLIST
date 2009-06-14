@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 18:41:06 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:17 joerg Exp $
 share/examples/webmin/dhcpd/config
 share/webmin/dhcpd/CHANGELOG
 share/webmin/dhcpd/acl_security.pl
@@ -159,9 +159,3 @@ share/webmin/dhcpd/save_text.cgi
 share/webmin/dhcpd/save_zones.cgi
 share/webmin/dhcpd/start.cgi
 share/webmin/dhcpd/stop.cgi
-@dirrm share/webmin/dhcpd/lang
-@dirrm share/webmin/dhcpd/images
-@dirrm share/webmin/dhcpd/help
-@dirrm share/webmin/dhcpd
-@dirrm share/examples/webmin/dhcpd
-@dirrm etc/webmin/dhcpd

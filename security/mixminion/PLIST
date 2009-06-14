@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/27 22:58:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:33 joerg Exp $
 bin/mixminion
 bin/mixminiond
 ${PYSITELIB}/mixminion/BuildMessage.py
@@ -120,6 +120,3 @@ man/man1/mixminion.1
 man/man5/mixminiond.conf.5
 man/man5/mixminionrc.5
 man/man8/mixminiond.8
-@dirrm ${PYSITELIB}/mixminion/server
-@dirrm ${PYSITELIB}/mixminion/directory
-@dirrm ${PYSITELIB}/mixminion

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/12/11 12:31:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:16:05 joerg Exp $
 bin/gcdmaster
 man/man1/gcdmaster.1
 share/application-registry/gcdmaster.applications
@@ -9,10 +9,3 @@ share/mime-info/gcdmaster.mime
 share/mime/packages/gcdmaster.xml
 share/pixmaps/gcdmaster-doc.png
 share/pixmaps/gcdmaster.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/gcdmaster/glade
-@dirrm share/gcdmaster
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/09/14 11:59:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:13:27 joerg Exp $
 libexec/crack/cracker
 libexec/crack/dawg
 libexec/crack/dictfilt
@@ -138,13 +138,3 @@ share/doc/crack/manual.html
 share/doc/crack/manual.txt
 share/doc/crack/threading.txt
 share/doc/crack/usenet-article.txt
-@dirrm share/doc/crack
-@dirrm share/crack/scripts
-@dirrm share/crack/run/dict
-@dirrm share/crack/run
-@dirrm share/crack/extra
-@dirrm share/crack/dict/3
-@dirrm share/crack/dict/2
-@dirrm share/crack/dict/1
-@dirrm share/crack/conf
-@dirrm libexec/crack

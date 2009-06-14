@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/13 00:20:22 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:10 joerg Exp $
 bin/mgm
 lib/mgm/lib/fishframe.xpm
 lib/mgm/lib/helvetica.xpm
@@ -109,11 +109,3 @@ share/doc/mgm/screenshot2.gif
 share/doc/mgm/trouble.html
 share/doc/mgm/villa.gif
 share/doc/mgm/white-xifish.gif
-@dirrm share/doc/mgm
-@dirrm lib/mgm/modules/solaris
-@dirrm lib/mgm/modules/share
-@dirrm lib/mgm/modules/netbsd
-@dirrm lib/mgm/modules/linux
-@dirrm lib/mgm/modules
-@dirrm lib/mgm/lib
-@dirrm lib/mgm

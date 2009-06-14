@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/08 00:46:23 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:09 joerg Exp $
 man/man5/lilo.conf.5
 man/man8/lilo.8
 man/man8/mkrescue.8
@@ -8,5 +8,3 @@ sbin/mkrescue
 share/doc/lilo/README
 share/lilo/lilo.conf.example
 share/lilo/lilo.sample.conf
-@dirrm share/lilo
-@dirrm share/doc/lilo

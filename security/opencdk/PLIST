@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/11/08 19:43:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:13:33 joerg Exp $
 bin/opencdk-config
 include/opencdk.h
 lib/libopencdk.la
@@ -24,5 +24,3 @@ share/examples/opencdk/t-stream.c
 share/examples/opencdk/testpa.c
 share/examples/opencdk/ts.gpg
 share/examples/opencdk/wkold.gpg
-@dirrm share/examples/opencdk
-@dirrm share/doc/html/opencdk

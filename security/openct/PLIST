@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/08 08:55:56 hasso Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:13:34 joerg Exp $
 bin/openct-tool
 include/openct/apdu.h
 include/openct/buffer.h
@@ -61,6 +61,3 @@ share/doc/openct/api/types_8h-source.html
 share/examples/openct/openct.conf
 share/examples/openct/reader.conf
 share/examples/rc.d/openct
-@dirrm share/doc/openct
-@dirrm share/examples/openct
-@dirrm include/openct

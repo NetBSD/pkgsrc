@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/23 11:47:48 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:26 joerg Exp $
 bin/avcheck
 bin/uchroot
 man/man1/avcheck.1
@@ -9,5 +9,3 @@ share/doc/avcheck/README.Postfix
 share/doc/avcheck/README.Sendmail
 share/examples/avcheck/infected.ex1
 share/examples/avcheck/infected.ex2
-@dirrm share/doc/avcheck
-@dirrm share/examples/avcheck

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/07 15:28:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:13:39 joerg Exp $
 bin/dirsearch
 bin/newaid
 bin/rex
@@ -185,7 +185,3 @@ share/sfs/sfsauthd_config
 share/sfs/sfscd_config
 share/sfs/sfssd_config
 @exec ${MKDIR} %D/var/sfs
-@dirrm share/examples/sfs
-@dirrm share/sfs
-@dirrm lib/${PKGNAME}
-@dirrm include/${PKGNAME}

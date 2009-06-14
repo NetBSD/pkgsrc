@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2007/04/10 02:23:34 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:10 joerg Exp $
 man/man8/mklivecd.8
 sbin/mklivecd
 share/mklivecd/livecd
 share/mklivecd/personal_config
-@dirrm share/mklivecd

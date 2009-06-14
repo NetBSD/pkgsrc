@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 18:46:31 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:18 joerg Exp $
 share/examples/webmin/fetchmail/config
 share/webmin/fetchmail/CHANGELOG
 share/webmin/fetchmail/acl_security.pl
@@ -75,8 +75,3 @@ share/webmin/fetchmail/save_global.cgi
 share/webmin/fetchmail/save_poll.cgi
 share/webmin/fetchmail/start.cgi
 share/webmin/fetchmail/stop.cgi
-@dirrm share/webmin/fetchmail/lang
-@dirrm share/webmin/fetchmail/images
-@dirrm share/webmin/fetchmail
-@dirrm share/examples/webmin/fetchmail
-@dirrm etc/webmin/fetchmail

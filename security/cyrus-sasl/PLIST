@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/10/04 12:07:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:13:27 joerg Exp $
 include/sasl/hmac-md5.h
 include/sasl/md5.h
 include/sasl/md5global.h
@@ -98,6 +98,3 @@ share/doc/cyrus-sasl/sysadmin.html
 share/doc/cyrus-sasl/testing.txt
 share/doc/cyrus-sasl/upgrading.html
 share/doc/cyrus-sasl/windows.html
-@dirrm share/doc/cyrus-sasl
-@dirrm lib/sasl2
-@dirrm include/sasl

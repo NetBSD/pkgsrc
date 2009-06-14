@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/13 13:58:31 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:39 joerg Exp $
 bin/skey
 bin/skeyaudit
 bin/skeyinfo
@@ -14,4 +14,3 @@ man/man1/skeyinfo.1
 man/man1/skeyinit.1
 man/man8/skeyprune.8
 share/examples/skey/skeykeys
-@dirrm share/examples/skey

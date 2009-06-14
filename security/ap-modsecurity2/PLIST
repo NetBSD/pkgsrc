@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/14 13:45:38 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:13:26 joerg Exp $
 lib/httpd/mod_security2.so
 share/doc/ap-modsecurity/apache_request_cycle-modsecurity.jpg
 share/doc/ap-modsecurity/breach-logo-small.gif
@@ -31,6 +31,3 @@ share/doc/ap-modsecurity/modsecurity2-data-formats.xml
 share/doc/ap-modsecurity/modsecurity.gif
 share/doc/ap-modsecurity/modsecurity-reference.css
 share/examples/ap-modsecurity/modsecurity.conf-minimal
-@dirrm share/doc/ap-modsecurity/html-multipage
-@dirrm share/doc/ap-modsecurity
-@dirrm share/examples/ap-modsecurity

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/17 14:11:12 kefren Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:19 joerg Exp $
 share/examples/webmin/qmailadmin/config
 share/webmin/qmailadmin/CHANGELOG
 share/webmin/qmailadmin/autoreply.pl
@@ -94,8 +94,3 @@ share/webmin/qmailadmin/save_virt.cgi
 share/webmin/qmailadmin/start.cgi
 share/webmin/qmailadmin/stop.cgi
 share/webmin/qmailadmin/view_queue.cgi
-@dirrm share/webmin/qmailadmin/lang
-@dirrm share/webmin/qmailadmin/images
-@dirrm share/webmin/qmailadmin/help
-@dirrm share/webmin/qmailadmin
-@dirrm share/examples/webmin/qmailadmin

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/02 20:34:05 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:16:04 joerg Exp $
 include/fam.h
 lib/libfam.la
 man/man3/fam.3
@@ -7,4 +7,3 @@ man/man8/famd.8
 sbin/famd
 share/examples/fam/fam.conf
 share/examples/rc.d/famd
-@dirrm share/examples/fam

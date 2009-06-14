@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:15 joerg Exp $
 sbin/user
 sbin/useradd
 sbin/userdel
@@ -12,4 +12,3 @@ sbin/groupmod
 share/examples/usermgmt/.cshrc
 share/examples/usermgmt/.login
 share/examples/usermgmt/.profile
-@dirrm share/examples/usermgmt

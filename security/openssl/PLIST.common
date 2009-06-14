@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.14 2009/01/08 16:38:22 tnn Exp $
+@comment $NetBSD: PLIST.common,v 1.15 2009/06/14 18:13:34 joerg Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -1101,7 +1101,4 @@ share/examples/openssl/c_info
 share/examples/openssl/c_issuer
 share/examples/openssl/c_name
 share/examples/openssl/openssl.cnf
-@dirrm share/examples/openssl
 @unexec ${RMDIR} -p %D/lib/pkgconfig 2>/dev/null || ${TRUE}
-@dirrm lib/engines
-@dirrm include/openssl

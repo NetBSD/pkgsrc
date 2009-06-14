@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:43:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:13:26 joerg Exp $
 include/security/_pam_aconf.h
 include/security/_pam_compat.h
 include/security/_pam_macros.h
@@ -66,7 +66,3 @@ ${PLIST.limits}share/examples/${PKGBASE}/limits.conf
 share/examples/${PKGBASE}/pam.conf
 share/examples/${PKGBASE}/pam_env.conf
 share/examples/${PKGBASE}/time.conf
-@dirrm share/examples/${PKGBASE}
-@dirrm lib/security/pam_filter
-@dirrm lib/security
-@dirrm include/security

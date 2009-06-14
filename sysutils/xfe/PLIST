@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/09/12 20:44:20 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:16:22 joerg Exp $
 bin/xfe
 bin/xfi
 bin/xfp
@@ -2055,13 +2055,3 @@ share/xfe/icons/xfe-theme/zoomin.png
 share/xfe/icons/xfe-theme/zoomout.png
 share/xfe/icons/xfe-theme/zoomwin.png
 share/xfe/xferc
-@dirrm share/xfe/icons/xfe-theme
-@dirrm share/xfe/icons/xfce-theme
-@dirrm share/xfe/icons/windows-theme
-@dirrm share/xfe/icons/gnomeblue-theme
-@dirrm share/xfe/icons/gnome-theme
-@dirrm share/xfe/icons/brown-theme
-@dirrm share/xfe/icons/blue-theme
-@dirrm share/xfe/icons
-@dirrm share/xfe
-@comment in xdg-dirs: @dirrm share/pixmaps

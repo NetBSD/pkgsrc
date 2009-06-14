@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2009/05/19 21:46:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2009/06/14 18:16:11 joerg Exp $
 bin/nautilus
 bin/nautilus-autorun-software
 bin/nautilus-connect-server
@@ -213,31 +213,4 @@ share/pixmaps/nautilus/emblems.png
 share/pixmaps/nautilus/erase.png
 share/pixmaps/nautilus/knob.png
 share/pixmaps/nautilus/thumbnail_frame.png
-@dirrm share/pixmaps/nautilus
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/nautilus/ui
-@dirrm share/nautilus/patterns
-@dirrm share/nautilus/icons/hicolor/48x48/emblems
-@dirrm share/nautilus/icons/hicolor/48x48
-@dirrm share/nautilus/icons/hicolor/24x24/emblems
-@dirrm share/nautilus/icons/hicolor/24x24
-@dirrm share/nautilus/icons/hicolor/16x16/emblems
-@dirrm share/nautilus/icons/hicolor/16x16
-@dirrm share/nautilus/icons/hicolor
-@dirrm share/nautilus/icons
-@dirrm share/nautilus
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gtk-doc/html/libnautilus-extension
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
 @unexec ${MKDIR} %D/lib/nautilus/extensions-2.0 2>/dev/null || ${TRUE}
-@dirrm lib/nautilus/extensions-2.0
-@dirrm lib/nautilus
-@dirrm include/nautilus/libnautilus-extension
-@dirrm include/nautilus

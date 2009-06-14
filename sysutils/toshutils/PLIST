@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/23 20:39:50 riz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:15 joerg Exp $
 bin/alarm
 bin/dispswitch
 bin/fan
@@ -26,4 +26,3 @@ share/doc/toshutils/style.html
 share/doc/toshutils/toshiba.tex
 share/doc/toshutils/tuxtime.html
 share/doc/toshutils/whatis.html
-@dirrm share/doc/toshutils

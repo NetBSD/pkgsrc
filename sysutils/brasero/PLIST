@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/20 13:21:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:01 joerg Exp $
 bin/brasero
 include/brasero/brasero-drive-selection.h
 include/brasero/brasero-drive.h
@@ -306,73 +306,3 @@ share/omf/brasero/brasero-it.omf
 share/omf/brasero/brasero-pl.omf
 share/omf/brasero/brasero-ru.omf
 share/omf/brasero/brasero-sv.omf
-@dirrm share/omf/brasero
-@comment in rarian: @dirrm share/omf
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gtk-doc/html/brasero
-@dirrm share/gnome/help/brasero/sv/figures
-@dirrm share/gnome/help/brasero/sv
-@dirrm share/gnome/help/brasero/ru/figures
-@dirrm share/gnome/help/brasero/ru
-@dirrm share/gnome/help/brasero/pl/figures
-@dirrm share/gnome/help/brasero/pl
-@dirrm share/gnome/help/brasero/it/figures
-@dirrm share/gnome/help/brasero/it
-@dirrm share/gnome/help/brasero/fr/figures
-@dirrm share/gnome/help/brasero/fr
-@dirrm share/gnome/help/brasero/es/figures
-@dirrm share/gnome/help/brasero/es
-@dirrm share/gnome/help/brasero/en_GB/figures
-@dirrm share/gnome/help/brasero/en_GB
-@dirrm share/gnome/help/brasero/el/figures
-@dirrm share/gnome/help/brasero/el
-@dirrm share/gnome/help/brasero/de/figures
-@dirrm share/gnome/help/brasero/de
-@dirrm share/gnome/help/brasero/ca/figures
-@dirrm share/gnome/help/brasero/ca
-@dirrm share/gnome/help/brasero/C/figures
-@dirrm share/gnome/help/brasero/C
-@dirrm share/gnome/help/brasero
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/brasero/icons/hicolor/scalable/status
-@dirrm share/brasero/icons/hicolor/scalable/actions
-@dirrm share/brasero/icons/hicolor/scalable
-@dirrm share/brasero/icons/hicolor/48x48/actions
-@dirrm share/brasero/icons/hicolor/48x48
-@dirrm share/brasero/icons/hicolor/32x32/status
-@dirrm share/brasero/icons/hicolor/32x32/actions
-@dirrm share/brasero/icons/hicolor/32x32
-@dirrm share/brasero/icons/hicolor/24x24/status
-@dirrm share/brasero/icons/hicolor/24x24/actions
-@dirrm share/brasero/icons/hicolor/24x24
-@dirrm share/brasero/icons/hicolor/22x22/status
-@dirrm share/brasero/icons/hicolor/22x22/actions
-@dirrm share/brasero/icons/hicolor/22x22
-@dirrm share/brasero/icons/hicolor/16x16/status
-@dirrm share/brasero/icons/hicolor/16x16/actions
-@dirrm share/brasero/icons/hicolor/16x16
-@dirrm share/brasero/icons/hicolor
-@dirrm share/brasero/icons
-@dirrm share/brasero
-@comment in xdg-dirs: @dirrm share/applications
-@comment in nautilus: @dirrm lib/nautilus/extensions-2.0
-@comment in nautilus: @dirrm lib/nautilus
-@dirrm lib/brasero/plugins
-@dirrm lib/brasero
-@dirrm include/brasero

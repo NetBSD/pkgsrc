@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/06 11:26:19 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:13:26 joerg Exp $
 share/base/admin/base_roleadmin.php
 share/base/admin/base_useradmin.php
 share/base/admin/index.php
@@ -122,17 +122,6 @@ share/doc/base/UPGRADE
 share/doc/base/base_faq.rtf
 share/examples/base/base.conf
 share/examples/base/base_conf.php
-@dirrm share/examples/base
-@dirrm share/doc/base
-@dirrm share/base/styles
-@dirrm share/base/sql
-@dirrm share/base/setup
-@dirrm share/base/scripts
-@dirrm share/base/languages
 @unexec ${RMDIR} %D/share/base/includes/templates/default 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/base/includes/templates 2>/dev/null || ${TRUE}
-@dirrm share/base/includes
-@dirrm share/base/images
-@dirrm share/base/help
-@dirrm share/base/admin
 @unexec ${RMDIR} %D/share/base 2>/dev/null || ${TRUE}

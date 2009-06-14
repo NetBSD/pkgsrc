@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/03/31 23:56:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:16:16 joerg Exp $
 bin/cdxa2mpeg
 bin/vcd-info
 bin/vcdimager
@@ -26,4 +26,3 @@ man/man1/vcdxbuild.1
 man/man1/vcdxgen.1
 man/man1/vcdxminfo.1
 man/man1/vcdxrip.1
-@dirrm include/libvcd

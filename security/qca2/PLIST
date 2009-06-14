@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/12 10:35:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:13:37 joerg Exp $
 lib/pkgconfig/qca2.pc
 qt4/include/QtCrypto/QtCrypto
 qt4/include/QtCrypto/qca.h
@@ -21,8 +21,3 @@ qt4/lib/pkgconfig/qca2.pc
 qt4/mkspecs/features/crypto.prf
 qt4/share/qca/certs/README
 qt4/share/qca/certs/rootcerts.pem
-@dirrm qt4/share/qca/certs
-@dirrm qt4/share/qca
-@dirrm qt4/plugins/crypto
-@dirrm qt4/lib/pkgconfig
-@dirrm qt4/include/QtCrypto

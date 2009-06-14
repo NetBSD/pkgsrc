@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 18:52:35 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:18 joerg Exp $
 share/examples/webmin/htaccess-htpasswd/config
 share/webmin/htaccess-htpasswd/CHANGELOG
 share/webmin/htaccess-htpasswd/acl_security.pl
@@ -56,8 +56,3 @@ share/webmin/htaccess-htpasswd/save_group.cgi
 share/webmin/htaccess-htpasswd/save_user.cgi
 share/webmin/htaccess-htpasswd/search.cgi
 share/webmin/htaccess-htpasswd/useradmin_update.pl
-@dirrm share/webmin/htaccess-htpasswd/lang
-@dirrm share/webmin/htaccess-htpasswd/images
-@dirrm share/webmin/htaccess-htpasswd
-@dirrm share/examples/webmin/htaccess-htpasswd
-@dirrm etc/webmin/htaccess-htpasswd

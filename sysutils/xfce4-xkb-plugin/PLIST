@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/04/12 09:55:19 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:22 joerg Exp $
 libexec/xfce4/panel-plugins/xfce4-xkb-plugin
 share/locale/bg/LC_MESSAGES/xfce4-xkb-plugin.mo
 share/locale/ca/LC_MESSAGES/xfce4-xkb-plugin.mo
@@ -88,5 +88,3 @@ share/xfce4/xkb/flags/uy.png
 share/xfce4/xkb/flags/vn.png
 share/xfce4/xkb/flags/ye.png
 share/xfce4/xkb/flags/yu.png
-@dirrm share/xfce4/xkb/flags
-@dirrm share/xfce4/xkb

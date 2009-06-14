@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/01/07 21:20:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:16:12 joerg Exp $
 include/dbus-1.0/dbus/dbus-python.h
 lib/pkgconfig/dbus-python.pc
 ${PYSITELIB}/_dbus_bindings.la
@@ -72,7 +72,3 @@ share/doc/dbus-python/TODO
 share/doc/dbus-python/TODO.html
 share/doc/dbus-python/tutorial.html
 share/doc/dbus-python/tutorial.txt
-@dirrm share/doc/dbus-python
-@dirrm ${PYSITELIB}/dbus/mainloop
-@dirrm ${PYSITELIB}/dbus
-@comment in dbus: @dirrm include/dbus-1.0/dbus

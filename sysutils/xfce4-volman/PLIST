@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/09 10:32:26 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:22 joerg Exp $
 bin/thunar-volman
 libexec/thunar-volman-settings
 share/applications/thunar-volman-settings.desktop
@@ -20,5 +20,3 @@ share/locale/pt_BR/LC_MESSAGES/thunar-volman.mo
 share/locale/uk/LC_MESSAGES/thunar-volman.mo
 share/locale/ur/LC_MESSAGES/thunar-volman.mo
 share/locale/zh_TW/LC_MESSAGES/thunar-volman.mo
-@dirrm share/locale/nb_NO/LC_MESSAGES
-@dirrm share/locale/nb_NO

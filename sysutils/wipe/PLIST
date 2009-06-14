@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/16 20:15:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:20 joerg Exp $
 bin/wipe
 man/man1/wipe.1
 share/doc/wipe/CHANGES
@@ -8,4 +8,3 @@ share/doc/wipe/README
 share/doc/wipe/TESTING
 share/doc/wipe/TODO
 share/doc/wipe/copyright
-@dirrm share/doc/wipe

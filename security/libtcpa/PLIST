@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/22 01:40:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:32 joerg Exp $
 bin/createkey
 bin/evictkey
 bin/loadkey
@@ -19,4 +19,3 @@ man/man3/tpm_takeownership.3
 man/man3/tpm_transmit.3
 share/doc/libtcpa/License
 share/doc/libtcpa/README
-@dirrm share/doc/libtcpa

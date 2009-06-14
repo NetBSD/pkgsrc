@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/11/27 08:27:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:13:35 joerg Exp $
 lib/security/pam_ldap.la
 man/man5/pam_ldap.5
 share/doc/pam-ldap/COPYING
@@ -6,5 +6,3 @@ share/doc/pam-ldap/COPYING.LIB
 share/examples/pam-ldap/ldapns.schema
 share/examples/pam-ldap/ns-pwd-policy.schema
 share/examples/pam-ldap/pam_ldap.conf
-@dirrm share/examples/pam-ldap
-@dirrm share/doc/pam-ldap

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/05/18 15:32:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:13:38 joerg Exp $
 bin/seahorse
 bin/seahorse-daemon
 include/libcryptui/cryptui-key-chooser.h
@@ -203,60 +203,3 @@ share/seahorse/glade/seahorse-signer.glade
 share/seahorse/glade/seahorse-ssh-generate.glade
 share/seahorse/glade/seahorse-ssh-key-properties.glade
 share/seahorse/glade/seahorse-ssh-upload.glade
-@dirrm share/seahorse/glade
-@dirrm share/seahorse
-@dirrm share/pixmaps/seahorse/scalable
-@dirrm share/pixmaps/seahorse/48x48
-@dirrm share/pixmaps/seahorse/22x22
-@dirrm share/pixmaps/seahorse
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/seahorse
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gtk-doc/html/libcryptui
-@dirrm share/gnome/help/seahorse/vi/figures
-@dirrm share/gnome/help/seahorse/vi
-@dirrm share/gnome/help/seahorse/sv/figures
-@dirrm share/gnome/help/seahorse/sv
-@dirrm share/gnome/help/seahorse/ru/figures
-@dirrm share/gnome/help/seahorse/ru
-@dirrm share/gnome/help/seahorse/oc/figures
-@dirrm share/gnome/help/seahorse/oc
-@dirrm share/gnome/help/seahorse/it/figures
-@dirrm share/gnome/help/seahorse/it
-@dirrm share/gnome/help/seahorse/fr/figures
-@dirrm share/gnome/help/seahorse/fr
-@dirrm share/gnome/help/seahorse/eu/figures
-@dirrm share/gnome/help/seahorse/eu
-@dirrm share/gnome/help/seahorse/es/figures
-@dirrm share/gnome/help/seahorse/es
-@dirrm share/gnome/help/seahorse/en_GB/figures
-@dirrm share/gnome/help/seahorse/en_GB
-@dirrm share/gnome/help/seahorse/el/figures
-@dirrm share/gnome/help/seahorse/el
-@dirrm share/gnome/help/seahorse/de/figures
-@dirrm share/gnome/help/seahorse/de
-@dirrm share/gnome/help/seahorse/ca/figures
-@dirrm share/gnome/help/seahorse/ca
-@dirrm share/gnome/help/seahorse/C/figures
-@dirrm share/gnome/help/seahorse/C
-@dirrm share/gnome/help/seahorse
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in dbus: @dirrm share/dbus-1/services
-@comment in dbus: @dirrm share/dbus-1
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/seahorse
-@dirrm include/libcryptui

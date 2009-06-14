@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/02/18 12:24:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:16:12 joerg Exp $
 bin/rdiff-backup
 bin/rdiff-backup-statistics
 ${PYSITELIB}/rdiff_backup/C.so
@@ -112,5 +112,3 @@ share/doc/${PKGNAME}/COPYING
 share/doc/${PKGNAME}/FAQ.html
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/examples.html
-@dirrm share/doc/${PKGNAME}
-@dirrm ${PYSITELIB}/rdiff_backup

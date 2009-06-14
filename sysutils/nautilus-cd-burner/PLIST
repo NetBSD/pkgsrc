@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/12/02 19:58:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:16:11 joerg Exp $
 bin/nautilus-cd-burner
 include/libnautilus-burn/nautilus-burn-drive-monitor.h
 include/libnautilus-burn/nautilus-burn-drive-selection.h
@@ -106,13 +106,3 @@ share/nautilus-cd-burner/cdspin6.png
 share/nautilus-cd-burner/cdspin7.png
 share/nautilus-cd-burner/cdspin8.png
 share/nautilus-cd-burner/nautilus-cd-burner.glade
-@dirrm share/nautilus-cd-burner
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@comment in nautilus: @dirrm lib/nautilus/extensions-2.0
-@dirrm include/libnautilus-burn

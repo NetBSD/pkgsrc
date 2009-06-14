@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/17 14:45:56 kefren Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:20 joerg Exp $
 share/examples/webmin/tunnel/config
 share/webmin/tunnel/CHANGELOG
 share/webmin/tunnel/config
@@ -26,7 +26,3 @@ share/webmin/tunnel/login.cgi
 share/webmin/tunnel/module.info
 share/webmin/tunnel/seturl.cgi
 share/webmin/tunnel/tunnel-lib.pl
-@dirrm share/webmin/tunnel/lang
-@dirrm share/webmin/tunnel/images
-@dirrm share/webmin/tunnel
-@dirrm share/examples/webmin/tunnel

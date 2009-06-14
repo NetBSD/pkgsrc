@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/30 23:03:05 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:23 joerg Exp $
 bin/xfs_admin
 bin/xfs_bmap
 bin/xfs_check
@@ -41,4 +41,3 @@ share/doc/xfsprogs/COPYING
 share/doc/xfsprogs/CREDITS
 share/doc/xfsprogs/PORTING
 share/doc/xfsprogs/README
-@dirrm share/doc/xfsprogs

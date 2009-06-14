@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/08 08:56:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:16:11 joerg Exp $
 bin/ntfscat
 bin/ntfscluster
 bin/ntfscmp
@@ -61,4 +61,3 @@ sbin/ntfscp
 sbin/ntfslabel
 sbin/ntfsresize
 sbin/ntfsundelete
-@dirrm include/ntfs

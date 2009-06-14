@@ -1,3 +1,1 @@
-@comment $NetBSD: PLIST.common_end,v 1.1.1.1 2006/02/05 01:25:12 rillig Exp $
-@dirrm include/botan
-@dirrm share/doc/Botan-1.4.11
+@comment $NetBSD: PLIST.common_end,v 1.2 2009/06/14 18:13:27 joerg Exp $

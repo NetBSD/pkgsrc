@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/02 12:23:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:13:27 joerg Exp $
 ${PLIST.wtmpx}bin/check_wtmpx
 bin/chkdirs
 bin/chklastlog
@@ -11,4 +11,3 @@ bin/strings-static
 share/doc/chkrootkit/README
 share/doc/chkrootkit/README.chklastlog
 share/doc/chkrootkit/README.chkwtmp
-@dirrm share/doc/chkrootkit

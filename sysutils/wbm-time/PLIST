@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/17 14:44:23 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:20 joerg Exp $
 share/examples/webmin/time/config
 share/webmin/time/CHANGELOG
 share/webmin/time/acl_security.pl
@@ -156,9 +156,3 @@ share/webmin/time/sync.pl
 share/webmin/time/time-lib.pl
 share/webmin/time/time.js
 share/webmin/time/uninstall.pl
-@dirrm share/webmin/time/lang
-@dirrm share/webmin/time/images
-@dirrm share/webmin/time/help
-@dirrm share/webmin/time
-@dirrm share/examples/webmin/time
-@dirrm etc/webmin/time

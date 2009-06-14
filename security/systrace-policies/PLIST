@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/06/04 00:35:28 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:13:40 joerg Exp $
 share/examples/systrace-policies/00FILELIST.txt
 share/examples/systrace-policies/00README-X11.txt
 share/examples/systrace-policies/00README.txt
@@ -206,4 +206,3 @@ share/examples/systrace-policies/usr_sbin_pkg_create
 share/examples/systrace-policies/usr_sbin_pkg_info
 share/examples/systrace-policies/usr_sbin_tcpdump
 share/examples/systrace-policies/usr_sbin_zzz
-@dirrm share/examples/systrace-policies

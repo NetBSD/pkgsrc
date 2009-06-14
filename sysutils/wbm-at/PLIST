@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 17:14:32 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:16 joerg Exp $
 share/examples/webmin/at/config
 share/webmin/at/CHANGELOG
 share/webmin/at/acl_security.pl
@@ -92,7 +92,3 @@ share/webmin/at/openserver-lib.pl
 share/webmin/at/rbac-mapping
 share/webmin/at/save_allow.cgi
 share/webmin/at/solaris-lib.pl
-@dirrm share/webmin/at/lang
-@dirrm share/webmin/at/images
-@dirrm share/webmin/at
-@dirrm share/examples/webmin/at

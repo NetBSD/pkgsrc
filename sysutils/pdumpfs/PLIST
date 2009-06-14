@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/04 02:38:06 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:12 joerg Exp $
 bin/pdumpfs
 man/ja_JP.EUC/man8/pdumpfs.8
 man/man8/pdumpfs.8
@@ -8,5 +8,3 @@ share/doc/pdumpfs/images/pdumpfs-mini.png
 share/doc/pdumpfs/images/pdumpfs.png
 share/doc/pdumpfs/pdumpfs-ja.html
 share/doc/pdumpfs/pdumpfs.html
-@dirrm share/doc/pdumpfs/images
-@dirrm share/doc/pdumpfs

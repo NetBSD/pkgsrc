@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/16 18:23:22 kefren Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:17 joerg Exp $
 share/examples/webmin/cluster-webmin/config
 share/webmin/cluster-webmin/CHANGELOG
 share/webmin/cluster-webmin/add.cgi
@@ -50,8 +50,3 @@ share/webmin/cluster-webmin/sync_form.cgi
 share/webmin/cluster-webmin/update.cgi
 share/webmin/cluster-webmin/upgrade.cgi
 share/webmin/cluster-webmin/user_form.cgi
-@dirrm share/webmin/cluster-webmin/lang
-@dirrm share/webmin/cluster-webmin/images
-@dirrm share/webmin/cluster-webmin/help
-@dirrm share/webmin/cluster-webmin
-@dirrm share/examples/webmin/cluster-webmin

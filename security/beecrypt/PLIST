@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/05 09:02:11 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:13:27 joerg Exp $
 include/beecrypt/aes.h
 include/beecrypt/aesopt.h
 include/beecrypt/api.h
@@ -46,4 +46,3 @@ include/beecrypt/sha512.h
 include/beecrypt/timestamp.h
 include/beecrypt/win.h
 lib/libbeecrypt.la
-@dirrm include/beecrypt

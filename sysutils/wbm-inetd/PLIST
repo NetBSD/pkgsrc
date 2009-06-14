@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/16 18:54:37 kefren Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:16:18 joerg Exp $
 share/examples/webmin/inetd/config
 share/webmin/inetd/backup_config.pl
 share/webmin/inetd/config-aix
@@ -95,9 +95,3 @@ share/webmin/inetd/module.info
 share/webmin/inetd/restart_inetd.cgi
 share/webmin/inetd/save_rpc.cgi
 share/webmin/inetd/save_serv.cgi
-@dirrm share/webmin/inetd/lang
-@dirrm share/webmin/inetd/images
-@dirrm share/webmin/inetd/help
-@dirrm share/webmin/inetd
-@dirrm share/examples/webmin/inetd
-@dirrm etc/webmin/inetd

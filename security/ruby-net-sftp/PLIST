@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:20:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:38 joerg Exp $
 ${GEM_HOME}/cache/net-sftp-${PKGVERSION}.gem
 ${GEM_LIBDIR}/doc/LICENSE-BSD
 ${GEM_LIBDIR}/doc/LICENSE-GPL
@@ -88,26 +88,3 @@ ${GEM_LIBDIR}/test/protocol/05/tc_impl.rb
 ${GEM_LIBDIR}/test/protocol/05/tc_packet_assistant.rb
 ${GEM_LIBDIR}/test/protocol/tc_driver.rb
 ${GEM_HOME}/specifications/net-sftp-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/protocol/05
-@dirrm ${GEM_LIBDIR}/test/protocol/04
-@dirrm ${GEM_LIBDIR}/test/protocol/03
-@dirrm ${GEM_LIBDIR}/test/protocol/02
-@dirrm ${GEM_LIBDIR}/test/protocol/01
-@dirrm ${GEM_LIBDIR}/test/protocol
-@dirrm ${GEM_LIBDIR}/test/operations
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/uri
-@dirrm ${GEM_LIBDIR}/lib/net/sftp/protocol/05
-@dirrm ${GEM_LIBDIR}/lib/net/sftp/protocol/04
-@dirrm ${GEM_LIBDIR}/lib/net/sftp/protocol/03
-@dirrm ${GEM_LIBDIR}/lib/net/sftp/protocol/02
-@dirrm ${GEM_LIBDIR}/lib/net/sftp/protocol/01
-@dirrm ${GEM_LIBDIR}/lib/net/sftp/protocol
-@dirrm ${GEM_LIBDIR}/lib/net/sftp/operations
-@dirrm ${GEM_LIBDIR}/lib/net/sftp
-@dirrm ${GEM_LIBDIR}/lib/net
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}/doc/faq
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/25 17:07:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:13:36 joerg Exp $
 ${PYSITELIB}/Crypto/Cipher/AES.so
 ${PYSITELIB}/Crypto/Cipher/ARC2.so
 ${PYSITELIB}/Crypto/Cipher/ARC4.so
@@ -76,9 +76,3 @@ ${PYSITELIB}/Crypto/__init__.pyo
 ${PYSITELIB}/Crypto/test.py
 ${PYSITELIB}/Crypto/test.pyc
 ${PYSITELIB}/Crypto/test.pyo
-@dirrm ${PYSITELIB}/Crypto/Util
-@dirrm ${PYSITELIB}/Crypto/PublicKey
-@dirrm ${PYSITELIB}/Crypto/Protocol
-@dirrm ${PYSITELIB}/Crypto/Hash
-@dirrm ${PYSITELIB}/Crypto/Cipher
-@dirrm ${PYSITELIB}/Crypto

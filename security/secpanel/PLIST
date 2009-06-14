@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/14 01:06:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:39 joerg Exp $
 bin/secpanel
 lib/secpanel/images/arrow_left.gif
 lib/secpanel/images/arrow_right.gif
@@ -20,5 +20,3 @@ lib/secpanel/secpanel.wait
 lib/secpanel/convert_profile.tcl
 lib/secpanel/export_profiles.tcl
 lib/secpanel/sp_scp.tcl
-@dirrm lib/secpanel/images
-@dirrm lib/secpanel
