@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:03:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 20:34:14 joerg Exp $
 bin/php
 bin/php-config
 bin/phpize
@@ -161,7 +161,6 @@ include/php/ext/standard/url_scanner.h
 include/php/ext/standard/url_scanner_ex.h
 include/php/ext/xml/expat_compat.h
 include/php/ext/xml/php_xml.h
-@exec ${MKDIR} %D/include/php/include
 include/php/main/SAPI.h
 include/php/main/build-defs.h
 include/php/main/config.w32.h
@@ -227,4 +226,4 @@ man/man1/phpize.1
 share/examples/php/php.ini-dist
 share/examples/php/php.ini-recommended
 share/php/php.gif
-@unexec ${RMDIR} %D/lib/php 2>/dev/null || ${TRUE}
+@pkgdir include/php/include

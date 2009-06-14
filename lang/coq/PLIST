@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:03:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 20:34:13 joerg Exp $
 bin/coq-interface
 bin/coq-tex
 bin/coq_makefile
@@ -357,4 +357,4 @@ man/man1/parser.1
 share/emacs/site-lisp/coq-inferior.el
 share/emacs/site-lisp/coq.el
 share/emacs/site-lisp/coqdoc.sty
-@exec ${MKDIR} %D/lib/coq/user-contrib
+@pkgdir lib/coq/user-contrib

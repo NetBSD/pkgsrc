@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:03:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 20:34:13 joerg Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -258,15 +258,5 @@ share/gauche/${PKGVERSION}/template.extension.h
 share/gauche/${PKGVERSION}/template.extensionlib.stub
 share/gauche/${PKGVERSION}/template.module.scm
 share/gauche/${PKGVERSION}/template.test.scm
-@exec ${MKDIR} %D/lib/gauche/site 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/lib/gauche/site/${PKGVERSION} 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/lib/gauche/site/${PKGVERSION}/${MACHINE_GNU_PLATFORM} 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/share/gauche/site 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/share/gauche/site/lib 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gauche/site/lib 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gauche/site 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gauche 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/gauche/site/${PKGVERSION}/${MACHINE_GNU_PLATFORM} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/gauche/site/${PKGVERSION} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/gauche/site 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/gauche 2>/dev/null || ${TRUE}
+@pkgdir lib/gauche/site/${PKGVERSION}/${MACHINE_GNU_PLATFORM}
+@pkgdir share/gauche/site/lib 2>/dev/null || ${TRUE}

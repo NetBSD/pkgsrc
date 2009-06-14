@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.7 2009/06/14 18:03:42 joerg Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.8 2009/06/14 20:34:15 joerg Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -613,4 +613,4 @@ java/sun-1.5/man/man1/rmiregistry.1
 java/sun-1.5/man/man1/servertool.1
 java/sun-1.5/man/man1/tnameserv.1
 java/sun-1.5/man/man1/unpack200.1
-@exec ${MKDIR} %D/java/sun-1.5/lib/applet
+@pkgdir java/sun-1.5/lib/applet
