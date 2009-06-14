@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/12 17:37:17 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:39 joerg Exp $
 bin/htadm
 sbin/cgiparse
 sbin/cgiutils
@@ -33,6 +33,3 @@ share/w3c-httpd/icons/unknown.doc.xbm
 share/w3c-httpd/icons/unknown.old.xbm
 share/w3c-httpd/icons/unknown.xbm
 share/w3c-httpd/icons/uu.xbm
-@dirrm share/w3c-httpd/icons
-@dirrm share/w3c-httpd
-@dirrm share/examples/w3c-httpd
