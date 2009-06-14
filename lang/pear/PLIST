@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 20:34:14 joerg Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -11,8 +11,6 @@ lib/php/.depdb
 lib/php/.depdblock
 lib/php/.filemap
 lib/php/.lock
-@exec ${MKDIR} %D/lib/php/.registry/.channel.__uri
-@exec ${MKDIR} %D/lib/php/.registry/.channel.pecl.php.net
 lib/php/.registry/archive_tar.reg
 lib/php/.registry/console_getopt.reg
 lib/php/.registry/pear.reg
@@ -146,7 +144,5 @@ lib/php/test/Structures_Graph/tests/README
 lib/php/test/Structures_Graph/tests/all-tests.php
 lib/php/test/Structures_Graph/tests/testCase/BasicGraph.php
 share/examples/pear/pear.conf
-@unexec ${RMDIR} %D/lib/php/data 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/php/test 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/php/doc 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/php/.registry 2>/dev/null || ${TRUE}
+@pkgdir lib/php/.registry/.channel.__uri
+@pkgdir lib/php/.registry/.channel.pecl.php.net

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:03:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/06/14 20:34:13 joerg Exp $
 bin/guile
 bin/guile-config
 bin/guile-snarf
@@ -278,4 +278,4 @@ share/guile/1.8/srfi/srfi-69.scm
 share/guile/1.8/srfi/srfi-8.scm
 share/guile/1.8/srfi/srfi-88.scm
 share/guile/1.8/srfi/srfi-9.scm
-@exec ${MKDIR} %D/share/guile/site
+@pkgdir share/guile/site
