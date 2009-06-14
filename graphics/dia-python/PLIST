@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/04/19 20:14:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:09 joerg Exp $
 lib/dia/libpython_plugin.la
 share/dia/python-startup.py
 share/dia/python-startup.pyc
@@ -26,6 +26,3 @@ share/dia/python/scascale.py
 share/dia/python/scascale.pyc
 share/dia/python/select_by.py
 share/dia/python/select_by.pyc
-@dirrm share/dia/python
-@comment in dia: @dirrm share/dia
-@comment in dia: @dirrm lib/dia
