@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:04:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 20:45:11 joerg Exp $
 share/doc/ingo/INSTALL
 share/doc/ingo/README
 share/doc/ingo/RELEASE_NOTES
@@ -183,5 +183,3 @@ share/horde/ingo/themes/tango-blue/graphics/whitelist.png
 share/horde/ingo/themes/tango-blue/themed_graphics
 share/horde/ingo/vacation.php
 share/horde/ingo/whitelist.php
-@unexec ${RMDIR} %D/share/horde/ingo/config 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/horde/ingo 2>/dev/null || ${TRUE}

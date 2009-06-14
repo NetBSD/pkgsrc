@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:04:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 20:45:12 joerg Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -273,5 +273,3 @@ share/horde/turba/themes/tango-blue/graphics/za_secondary.png
 share/horde/turba/themes/tango-blue/themed_graphics
 share/horde/turba/vcard.php
 share/horde/turba/view.php
-@unexec ${RMDIR} %D/share/horde/turba/config 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/horde/turba 2>/dev/null || ${TRUE}
