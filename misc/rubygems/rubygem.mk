@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.42 2009/06/14 17:55:59 minskim Exp $
+# $NetBSD: rubygem.mk,v 1.43 2009/06/14 18:12:48 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -135,16 +135,12 @@ PLIST_SUBST+=		GEM_DOCDIR=${GEM_DOCDIR:S|^${PREFIX}/||}
 # print-PLIST support
 PRINT_PLIST_AWK+=	/${GEM_NAME:S/./[.]/g}[.](gem|gemspec)$$/ \
 			{ gsub(/${PKGVERSION_NOREV:S|/|\\/|g}[.]gem/, "$${PKGVERSION}.gem"); }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_LIBDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${GEM_LIBDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ gsub(/${GEM_LIBDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_LIBDIR}"); print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${GEM_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}(\/(gems|cache|doc|specifications))?$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/ruby\/gems$$/ { next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ gsub(/${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_HOME}"); print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/ruby$$/ { next; }
 
 ###
 ### gem-extract
