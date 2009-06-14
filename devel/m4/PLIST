@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/04/20 09:57:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:48:57 joerg Exp $
 bin/${GNU_PROGRAM_PREFIX}m4
 ${PLIST.gm4}bin/gm4
 info/m4.info
@@ -47,4 +47,3 @@ share/examples/m4/wrap.m4
 share/examples/m4/wrapfifo.m4
 share/examples/m4/wraplifo.m4
 share/examples/m4/wraplifo2.m4
-@dirrm share/examples/m4

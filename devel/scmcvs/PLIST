@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/05/27 09:49:50 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:13 joerg Exp $
 bin/cvs
 bin/cvsbug
 bin/rcs2log
@@ -25,5 +25,3 @@ share/cvs/contrib/rcs-to-cvs
 share/cvs/contrib/rcs2log
 share/cvs/contrib/rcslock
 share/cvs/contrib/sccs2rcs
-@dirrm share/cvs/contrib
-@dirrm share/cvs

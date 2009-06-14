@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/16 19:43:36 bad Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:09 joerg Exp $
 etc/rc.conf.d/linuxrtc
 etc/rc.conf.d/vmmon
 etc/rc.conf.d/vmnet
@@ -14,7 +14,6 @@ lkm/linuxrtc.o
 lkm/linuxrtc_post.sh
 lkm/vmmon.o
 lkm/vmmon_post.sh
-@dirrm etc/rc.conf.d
 @unexec ${RM} -f %D/lkm/vmnet 2>/dev/null || ${TRUE}
 @unexec ${RM} -f %D/lkm/linuxrtc 2>/dev/null || ${TRUE}
 @unexec ${RM} -f %D/lkm/vmmon 2>/dev/null || ${TRUE}

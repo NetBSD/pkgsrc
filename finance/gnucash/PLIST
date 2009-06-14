@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2009/02/24 11:55:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2009/06/14 17:53:34 joerg Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -851,72 +851,4 @@ share/xml/gnucash/xsl/gnucash-gnccustomer-vcard2.xsl
 share/xml/gnucash/xsl/gnucash-std.xsl
 share/xml/gnucash/xsl/string.xsl
 share/xml/gnucash/xsl/vcard-gnccustomer.pl
-@dirrm share/xml/gnucash/xsl
-@dirrm share/xml/gnucash
-@comment in xmlcatmgr: @dirrm share/xml
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gnucash/xml/qsf
-@dirrm share/gnucash/xml
-@dirrm share/gnucash/ui
-@dirrm share/gnucash/scm/qif-import
-@dirrm share/gnucash/scm/gnumeric
-@dirrm share/gnucash/scm
-@dirrm share/gnucash/pixmaps
 @exec ${MKDIR} %D/share/gnucash/guile-modules/srfi
-@dirrm share/gnucash/guile-modules/srfi
-@dirrm share/gnucash/guile-modules/gnucash/tax
-@dirrm share/gnucash/guile-modules/gnucash/report/locale-specific
-@dirrm share/gnucash/guile-modules/gnucash/report
-@dirrm share/gnucash/guile-modules/gnucash/import-export
-@dirrm share/gnucash/guile-modules/gnucash
-@dirrm share/gnucash/guile-modules
-@dirrm share/gnucash/glade
-@dirrm share/gnucash/doc/examples
-@dirrm share/gnucash/doc
-@dirrm share/gnucash/checks
-@dirrm share/gnucash/accounts/zh_CN
-@dirrm share/gnucash/accounts/tr_TR
-@dirrm share/gnucash/accounts/sk
-@dirrm share/gnucash/accounts/ru
-@dirrm share/gnucash/accounts/pt_PT
-@dirrm share/gnucash/accounts/pt_BR
-@dirrm share/gnucash/accounts/nl
-@dirrm share/gnucash/accounts/nb
-@dirrm share/gnucash/accounts/ja
-@dirrm share/gnucash/accounts/it
-@dirrm share/gnucash/accounts/hu_HU
-@dirrm share/gnucash/accounts/fr_FR
-@dirrm share/gnucash/accounts/fr_CH
-@dirrm share/gnucash/accounts/fr_CA
-@dirrm share/gnucash/accounts/fi_FI
-@dirrm share/gnucash/accounts/es_MX
-@dirrm share/gnucash/accounts/es_ES
-@dirrm share/gnucash/accounts/en_GB
-@dirrm share/gnucash/accounts/el_GR
-@dirrm share/gnucash/accounts/de_DE
-@dirrm share/gnucash/accounts/de_CH
-@dirrm share/gnucash/accounts/de_AT
-@dirrm share/gnucash/accounts/da
-@dirrm share/gnucash/accounts/C
-@dirrm share/gnucash/accounts
-@dirrm share/gnucash
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm libexec/gnucash/overrides
-@dirrm libexec/gnucash
-@dirrm lib/gnucash
-@dirrm include/gnucash
-@dirrm etc/gnucash

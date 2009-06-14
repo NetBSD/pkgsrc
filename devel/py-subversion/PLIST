@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/05/30 00:16:47 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:49:06 joerg Exp $
 lib/libsvn_swig_py-1.la
 ${PYSITELIB}/libsvn/__init__.py
 ${PYSITELIB}/libsvn/__init__.pyc
@@ -56,8 +56,3 @@ share/examples/subversion/python/putfile.py
 share/examples/subversion/python/revplist.py
 share/examples/subversion/python/svnlook.py
 share/examples/subversion/python/svnshell.py
-@dirrm share/examples/subversion/python
-@dirrm share/examples/subversion/hook-scripts
-@dirrm share/examples/subversion
-@dirrm ${PYSITELIB}/svn
-@dirrm ${PYSITELIB}/libsvn

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/07 14:16:26 peter Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:16 joerg Exp $
 bin/dtplite
 bin/page
 bin/tcldocstrip
@@ -469,75 +469,3 @@ man/mann/uri.n
 man/mann/uuencode.n
 man/mann/uuid.n
 man/mann/yencode.n
-@dirrm lib/tcllib${PKGVERSION}/uuid
-@dirrm lib/tcllib${PKGVERSION}/uri
-@dirrm lib/tcllib${PKGVERSION}/units
-@dirrm lib/tcllib${PKGVERSION}/treeql
-@dirrm lib/tcllib${PKGVERSION}/tie
-@dirrm lib/tcllib${PKGVERSION}/textutil
-@dirrm lib/tcllib${PKGVERSION}/tar
-@dirrm lib/tcllib${PKGVERSION}/struct
-@dirrm lib/tcllib${PKGVERSION}/stooop
-@dirrm lib/tcllib${PKGVERSION}/soundex
-@dirrm lib/tcllib${PKGVERSION}/snit
-@dirrm lib/tcllib${PKGVERSION}/smtpd
-@dirrm lib/tcllib${PKGVERSION}/sha1
-@dirrm lib/tcllib${PKGVERSION}/sasl
-@dirrm lib/tcllib${PKGVERSION}/ripemd
-@dirrm lib/tcllib${PKGVERSION}/report
-@dirrm lib/tcllib${PKGVERSION}/rcs
-@dirrm lib/tcllib${PKGVERSION}/rc4
-@dirrm lib/tcllib${PKGVERSION}/profiler
-@dirrm lib/tcllib${PKGVERSION}/pop3d
-@dirrm lib/tcllib${PKGVERSION}/pop3
-@dirrm lib/tcllib${PKGVERSION}/png
-@dirrm lib/tcllib${PKGVERSION}/pluginmgr
-@dirrm lib/tcllib${PKGVERSION}/page/plugins
-@dirrm lib/tcllib${PKGVERSION}/page
-@dirrm lib/tcllib${PKGVERSION}/ntp
-@dirrm lib/tcllib${PKGVERSION}/nntp
-@dirrm lib/tcllib${PKGVERSION}/ncgi
-@dirrm lib/tcllib${PKGVERSION}/multiplexer
-@dirrm lib/tcllib${PKGVERSION}/mime
-@dirrm lib/tcllib${PKGVERSION}/md5crypt
-@dirrm lib/tcllib${PKGVERSION}/md5
-@dirrm lib/tcllib${PKGVERSION}/md4
-@dirrm lib/tcllib${PKGVERSION}/math
-@dirrm lib/tcllib${PKGVERSION}/log/msgs
-@dirrm lib/tcllib${PKGVERSION}/log
-@dirrm lib/tcllib${PKGVERSION}/ldap
-@dirrm lib/tcllib${PKGVERSION}/jpeg
-@dirrm lib/tcllib${PKGVERSION}/javascript
-@dirrm lib/tcllib${PKGVERSION}/irc
-@dirrm lib/tcllib${PKGVERSION}/inifile
-@dirrm lib/tcllib${PKGVERSION}/ident
-@dirrm lib/tcllib${PKGVERSION}/http
-@dirrm lib/tcllib${PKGVERSION}/htmlparse
-@dirrm lib/tcllib${PKGVERSION}/html
-@dirrm lib/tcllib${PKGVERSION}/grammar_peg
-@dirrm lib/tcllib${PKGVERSION}/grammar_me
-@dirrm lib/tcllib${PKGVERSION}/grammar_fa
-@dirrm lib/tcllib${PKGVERSION}/fumagic
-@dirrm lib/tcllib${PKGVERSION}/ftpd
-@dirrm lib/tcllib${PKGVERSION}/ftp
-@dirrm lib/tcllib${PKGVERSION}/fileutil
-@dirrm lib/tcllib${PKGVERSION}/exif
-@dirrm lib/tcllib${PKGVERSION}/doctools/mpformats
-@dirrm lib/tcllib${PKGVERSION}/doctools
-@dirrm lib/tcllib${PKGVERSION}/docstrip
-@dirrm lib/tcllib${PKGVERSION}/dns/msgs
-@dirrm lib/tcllib${PKGVERSION}/dns
-@dirrm lib/tcllib${PKGVERSION}/des
-@dirrm lib/tcllib${PKGVERSION}/csv
-@dirrm lib/tcllib${PKGVERSION}/crc
-@dirrm lib/tcllib${PKGVERSION}/counter
-@dirrm lib/tcllib${PKGVERSION}/control
-@dirrm lib/tcllib${PKGVERSION}/comm
-@dirrm lib/tcllib${PKGVERSION}/cmdline
-@dirrm lib/tcllib${PKGVERSION}/blowfish
-@dirrm lib/tcllib${PKGVERSION}/bibtex
-@dirrm lib/tcllib${PKGVERSION}/bee
-@dirrm lib/tcllib${PKGVERSION}/base64
-@dirrm lib/tcllib${PKGVERSION}/asn
-@dirrm lib/tcllib${PKGVERSION}/aes
-@dirrm lib/tcllib${PKGVERSION}

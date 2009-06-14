@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/06 14:32:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:14 joerg Exp $
 lib/X11/fonts/TTF/LinLibertine-2.1.0.ttf
 lib/X11/fonts/TTF/LinLibertineU-2.1.0.ttf
 lib/X11/fonts/TTF/LinLibertineU_Bd-2.1.0.ttf
@@ -7,4 +7,3 @@ lib/X11/fonts/TTF/LinLibertine_BdIt-2.1.0.ttf
 lib/X11/fonts/TTF/LinLibertine_It-2.1.0.ttf
 share/doc/linux-libertine-ttf/Readme
 share/doc/linux-libertine-ttf/gpl.txt
-@dirrm share/doc/linux-libertine-ttf

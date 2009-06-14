@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/03/18 01:59:43 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 17:50:22 joerg Exp $
 bin/gconf-editor
 man/man1/gconf-editor.1
 share/applications/gconf-editor.desktop
@@ -221,47 +221,3 @@ share/omf/gconf-editor/gconf-editor-ru.omf
 share/omf/gconf-editor/gconf-editor-sv.omf
 share/omf/gconf-editor/gconf-editor-th.omf
 share/omf/gconf-editor/gconf-editor-uk.omf
-@dirrm share/omf/gconf-editor
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gnome/help/gconf-editor/uk/figures
-@dirrm share/gnome/help/gconf-editor/uk
-@dirrm share/gnome/help/gconf-editor/th/figures
-@dirrm share/gnome/help/gconf-editor/th
-@dirrm share/gnome/help/gconf-editor/sv/figures
-@dirrm share/gnome/help/gconf-editor/sv
-@dirrm share/gnome/help/gconf-editor/ru/figures
-@dirrm share/gnome/help/gconf-editor/ru
-@dirrm share/gnome/help/gconf-editor/pt_BR/figures
-@dirrm share/gnome/help/gconf-editor/pt_BR
-@dirrm share/gnome/help/gconf-editor/oc/figures
-@dirrm share/gnome/help/gconf-editor/oc
-@dirrm share/gnome/help/gconf-editor/it/figures
-@dirrm share/gnome/help/gconf-editor/it
-@dirrm share/gnome/help/gconf-editor/fr/figures
-@dirrm share/gnome/help/gconf-editor/fr
-@dirrm share/gnome/help/gconf-editor/es/figures
-@dirrm share/gnome/help/gconf-editor/es
-@dirrm share/gnome/help/gconf-editor/en_GB/figures
-@dirrm share/gnome/help/gconf-editor/en_GB
-@dirrm share/gnome/help/gconf-editor/el/figures
-@dirrm share/gnome/help/gconf-editor/el
-@dirrm share/gnome/help/gconf-editor/de/figures
-@dirrm share/gnome/help/gconf-editor/de
-@dirrm share/gnome/help/gconf-editor/ca/figures
-@dirrm share/gnome/help/gconf-editor/ca
-@dirrm share/gnome/help/gconf-editor/C/figures
-@dirrm share/gnome/help/gconf-editor/C
-@dirrm share/gnome/help/gconf-editor
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/gconf-editor/icons/hicolor/16x16/status
-@dirrm share/gconf-editor/icons/hicolor/16x16
-@dirrm share/gconf-editor/icons/hicolor
-@dirrm share/gconf-editor/icons
-@dirrm share/gconf-editor
-@comment in xdg-dirs: @dirrm share/applications

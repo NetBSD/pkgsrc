@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/06/19 14:47:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:49:11 joerg Exp $
 bin/racc
 bin/racc2y
 bin/y2racc
@@ -41,8 +41,3 @@ ${RUBY_EG}/racc/hash.y
 ${RUBY_EG}/racc/lalr.y
 ${RUBY_EG}/racc/syntax.y
 ${RUBY_EG}/racc/yyerr.y
-@dirrm ${RUBY_VENDORLIB}/racc
-@dirrm ${RUBY_DOC}/racc/en
-@dirrm ${RUBY_DOC}/racc/ja
-@dirrm ${RUBY_DOC}/racc
-@dirrm ${RUBY_EG}/racc

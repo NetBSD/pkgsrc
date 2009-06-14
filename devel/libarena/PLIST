@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/12 02:40:37 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:50 joerg Exp $
 include/arena/align.h
 include/arena/arena.h
 include/arena/pool.h
@@ -8,5 +8,3 @@ include/arena/rbits.h
 include/arena/util.h
 lib/libarena.la
 share/examples/libarena/stacked.c
-@dirrm include/arena
-@dirrm share/examples/libarena

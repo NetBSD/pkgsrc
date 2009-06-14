@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/13 19:42:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:55 joerg Exp $
 include/libsexy/sexy-enum-types.h
 include/libsexy/sexy-icon-entry.h
 include/libsexy/sexy-spell-entry.h
@@ -23,5 +23,3 @@ share/gtk-doc/html/libsexy/libsexy.devhelp2
 share/gtk-doc/html/libsexy/right.png
 share/gtk-doc/html/libsexy/style.css
 share/gtk-doc/html/libsexy/up.png
-@dirrm share/gtk-doc/html/libsexy
-@dirrm include/libsexy

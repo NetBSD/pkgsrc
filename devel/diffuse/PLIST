@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/04/06 10:13:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:41 joerg Exp $
 bin/diffuse
 man/man1/diffuse.1
 share/applications/diffuse.desktop
@@ -32,13 +32,3 @@ share/examples/diffuse/diffuserc
 share/gnome/help/diffuse/C/diffuse.xml
 share/omf/diffuse/diffuse-C.omf
 share/pixmaps/diffuse.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/diffuse
-@comment in rarian: @dirrm share/omf
-@dirrm share/gnome/help/diffuse/C
-@dirrm share/gnome/help/diffuse
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/examples/diffuse
-@dirrm share/diffuse/syntax
-@dirrm share/diffuse
-@comment in xdg-dirs: @dirrm share/applications

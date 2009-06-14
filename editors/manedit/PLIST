@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/30 00:00:17 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:24 joerg Exp $
 bin/manedit
 bin/manview
 bin/manwrap
@@ -10,6 +10,3 @@ share/manedit/templates/api.mpt
 share/manedit/templates/config.mpt
 share/manedit/templates/intro.mpt
 share/manedit/templates/program.mpt
-@dirrm share/manedit/templates
-@dirrm share/manedit/icons
-@dirrm share/manedit

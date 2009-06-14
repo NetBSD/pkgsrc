@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:53:35 joerg Exp $
 bin/kmymoney
 bin/kmymoney2
 include/kmymoney/export.h
@@ -349,46 +349,3 @@ share/locale/pt_BR/LC_MESSAGES/kmymoney2.mo
 share/locale/pt_PT/LC_MESSAGES/kmymoney2.mo
 share/locale/ru/LC_MESSAGES/kmymoney2.mo
 share/locale/sk/LC_MESSAGES/kmymoney2.mo
-@comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/mimelnk/application
-@dirrm share/kde/apps/kmymoney2/templates/ru_SU
-@dirrm share/kde/apps/kmymoney2/templates/pt_BR
-@dirrm share/kde/apps/kmymoney2/templates/gl_ES
-@dirrm share/kde/apps/kmymoney2/templates/fr_FR
-@dirrm share/kde/apps/kmymoney2/templates/en_US
-@dirrm share/kde/apps/kmymoney2/templates/en_GB
-@dirrm share/kde/apps/kmymoney2/templates/de_DE
-@dirrm share/kde/apps/kmymoney2/templates/C
-@dirrm share/kde/apps/kmymoney2/templates
-@dirrm share/kde/apps/kmymoney2/pics
-@dirrm share/kde/apps/kmymoney2/icons/hicolor/64x64/apps
-@dirrm share/kde/apps/kmymoney2/icons/hicolor/64x64
-@dirrm share/kde/apps/kmymoney2/icons/hicolor/48x48/apps
-@dirrm share/kde/apps/kmymoney2/icons/hicolor/48x48
-@dirrm share/kde/apps/kmymoney2/icons/hicolor/32x32/apps
-@dirrm share/kde/apps/kmymoney2/icons/hicolor/32x32
-@dirrm share/kde/apps/kmymoney2/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kmymoney2/icons/hicolor/22x22
-@dirrm share/kde/apps/kmymoney2/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kmymoney2/icons/hicolor/16x16
-@dirrm share/kde/apps/kmymoney2/icons/hicolor
-@dirrm share/kde/apps/kmymoney2/icons
-@dirrm share/kde/apps/kmymoney2/html/images
-@dirrm share/kde/apps/kmymoney2/html
-@dirrm share/kde/apps/kmymoney2
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@dirrm share/doc/kde/HTML/en/kmymoney2
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde
-@dirrm include/kmymoney

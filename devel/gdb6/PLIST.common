@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2009/04/04 13:49:17 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2009/06/14 17:48:44 joerg Exp $
 bin/gdb
 ${PLIST.tui}bin/gdbtui
 include/gdb6/ansidecl.h
@@ -38,5 +38,3 @@ share/locale/sv/LC_MESSAGES/opcodes.mo
 share/locale/tr/LC_MESSAGES/bfd.mo
 share/locale/tr/LC_MESSAGES/opcodes.mo
 share/locale/zh_CN/LC_MESSAGES/bfd.mo
-@dirrm lib/gdb6
-@dirrm include/gdb6

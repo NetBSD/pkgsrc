@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/01/17 13:27:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:48:41 joerg Exp $
 bin/distcc
 bin/distccd
 bin/distccmon-text
@@ -25,7 +25,4 @@ share/doc/distcc/reporting-bugs.txt
 share/doc/distcc/status-1.txt
 share/doc/distcc/survey.txt
 share/examples/rc.d/distccd
-@dirrm share/doc/distcc/example
-@dirrm share/doc/distcc
 @exec ${MKDIR} %D/share/distcc
-@dirrm share/distcc

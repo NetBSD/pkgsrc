@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/22 12:29:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:54:15 joerg Exp $
 bin/ttx
 ${PYSITELIB}/FontTools.pth
 ${PYSITELIB}/FontTools/fontTools/__init__.py
@@ -270,11 +270,3 @@ ${PYSITELIB}/FontTools/xmlWriter.py
 ${PYSITELIB}/FontTools/xmlWriter.pyc
 ${PYSITELIB}/FontTools/xmlWriter.pyo
 man/man1/ttx.1
-@dirrm ${PYSITELIB}/FontTools/fontTools/ttLib/test
-@dirrm ${PYSITELIB}/FontTools/fontTools/ttLib/tables
-@dirrm ${PYSITELIB}/FontTools/fontTools/ttLib
-@dirrm ${PYSITELIB}/FontTools/fontTools/pens
-@dirrm ${PYSITELIB}/FontTools/fontTools/misc
-@dirrm ${PYSITELIB}/FontTools/fontTools/encodings
-@dirrm ${PYSITELIB}/FontTools/fontTools
-@dirrm ${PYSITELIB}/FontTools

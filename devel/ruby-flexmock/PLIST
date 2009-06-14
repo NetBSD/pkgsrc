@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/15 08:55:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:09 joerg Exp $
 ${GEM_HOME}/cache/flexmock-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/README
@@ -69,12 +69,3 @@ ${GEM_LIBDIR}/test/test_tu_integration.rb
 ${GEM_LIBDIR}/test/test_undefined.rb
 ${GEM_LIBDIR}/test/test_unit_integration/test_auto_test_unit.rb
 ${GEM_HOME}/specifications/flexmock-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/test_unit_integration
-@dirrm ${GEM_LIBDIR}/test/rspec_integration
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/flexmock/rails
-@dirrm ${GEM_LIBDIR}/lib/flexmock
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/doc/releases
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/26 04:12:22 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:09 joerg Exp $
 bin/ucon64
 share/doc/ucon64/changes.html
 share/doc/ucon64/developers.html
@@ -35,6 +35,3 @@ share/examples/ucon64/snescopy.txt
 share/examples/ucon64/snesntsc.txt
 share/examples/ucon64/snespal.txt
 share/examples/ucon64/snesslow.txt
-@dirrm share/examples/ucon64
-@dirrm share/doc/ucon64/images
-@dirrm share/doc/ucon64

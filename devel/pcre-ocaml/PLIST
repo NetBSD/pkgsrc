@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/08/31 13:20:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:02 joerg Exp $
 lib/ocaml/site-lib/pcre/META
 lib/ocaml/site-lib/pcre/dllpcre_stubs.so
 lib/ocaml/site-lib/pcre/libpcre_stubs.a
@@ -23,11 +23,5 @@ share/examples/pcre-ocaml/subst/Makefile
 share/examples/pcre-ocaml/subst/OMakefile
 share/examples/pcre-ocaml/subst/README
 share/examples/pcre-ocaml/subst/subst.ml
-@dirrm share/examples/pcre-ocaml/subst
-@dirrm share/examples/pcre-ocaml/pcregrep
-@dirrm share/examples/pcre-ocaml/count_hash
-@dirrm share/examples/pcre-ocaml/cloc
-@dirrm share/examples/pcre-ocaml
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/pcre
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/pcre
-@dirrm lib/ocaml/site-lib/pcre

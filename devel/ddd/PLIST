@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/03/30 03:44:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:48:40 joerg Exp $
 bin/ddd
 info/ddd-themes.info
 info/ddd.info
@@ -37,8 +37,3 @@ share/doc/ddd/README
 share/doc/ddd/ddd-paper.ps.gz
 share/doc/ddd/ddd.pdf
 share/doc/ddd/ddd.ps.gz
-@dirrm share/doc/ddd
-@dirrm share/${PKGNAME}/vsllib
-@dirrm share/${PKGNAME}/themes
-@dirrm share/${PKGNAME}/ddd
-@dirrm share/${PKGNAME}

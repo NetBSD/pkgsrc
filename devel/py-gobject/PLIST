@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/09 13:25:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:49:05 joerg Exp $
 bin/pygobject-codegen-2.0
 include/pygtk-2.0/pyglib.h
 lib/libpyglib-2.0-python${PYVERSSUFFIX}.la
@@ -160,12 +160,3 @@ share/pygobject/xsl/html.xsl
 share/pygobject/xsl/pdf-style.xsl
 share/pygobject/xsl/pdf.xsl
 share/pygobject/xsl/ref-html-style.xsl
-@dirrm share/pygobject/xsl
-@dirrm share/pygobject/2.0/defs
-@dirrm share/pygobject/2.0/codegen
-@dirrm share/pygobject/2.0
-@dirrm share/pygobject
-@dirrm share/gtk-doc/html/pygobject
-@dirrm ${PYSITELIB}/gtk-2.0/gobject
-@dirrm ${PYSITELIB}/gtk-2.0/glib
-@dirrm ${PYSITELIB}/gtk-2.0/gio

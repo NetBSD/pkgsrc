@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/09/17 03:39:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:14 joerg Exp $
 include/silc/aes.h
 include/silc/blowfish.h
 include/silc/cast.h
@@ -1126,8 +1126,3 @@ share/doc/silc-toolkit/manual/silcvcard.xref
 share/doc/silc-toolkit/manual/space.gif
 share/doc/silc-toolkit/manual/toolkit_index.html
 share/doc/silc-toolkit/manual/zlib.html
-@dirrm share/doc/silc-toolkit/manual
-@dirrm share/doc/silc-toolkit
-@dirrm lib/silc/modules
-@dirrm lib/silc
-@dirrm include/silc

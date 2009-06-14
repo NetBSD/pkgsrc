@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/09/03 13:02:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:53:35 joerg Exp $
 bin/ofx2qif
 bin/ofxconnect
 bin/ofxdump
@@ -288,8 +288,3 @@ share/libofx/dtd/ofc.dtd
 share/libofx/dtd/ofx160.dtd
 share/libofx/dtd/ofx201.dtd
 share/libofx/dtd/opensp.dcl
-@dirrm share/libofx/dtd
-@dirrm share/libofx
-@dirrm share/doc/libofx/html
-@dirrm share/doc/libofx
-@dirrm include/libofx

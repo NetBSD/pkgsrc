@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/02 22:59:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:59 joerg Exp $
 include/itools/X11/Xfuncproto.h
 include/itools/X11/Xos.h
 include/itools/X11/Xosdefs.h
@@ -111,9 +111,3 @@ libexec/itools/makedepend
 libexec/itools/mkdirhier
 libexec/itools/msub
 libexec/itools/xmkmf
-@dirrm include/itools/X11
-@dirrm include/itools
-@dirrm lib/itools/X11/config
-@dirrm lib/itools/X11
-@dirrm lib/itools
-@dirrm libexec/itools

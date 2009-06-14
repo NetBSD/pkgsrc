@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/08/22 17:28:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:49:03 joerg Exp $
 bin/pvs
 pvs/README
 pvs/bin/pvs-platform
@@ -520,20 +520,4 @@ pvs/pvs.sty
 pvs/wish/gray.xbm
 pvs/wish/pvs-support.tcl
 pvs/wish/sequent.xbm
-@dirrm pvs/wish
-@dirrm pvs/lib/finite_sets/pvsbin
-@dirrm pvs/lib/finite_sets
-@dirrm pvs/lib/bitvectors/pvsbin
-@dirrm pvs/lib/bitvectors
-@dirrm pvs/lib
-@dirrm pvs/emacs/xemacs21
-@dirrm pvs/emacs/emacs20
-@dirrm pvs/emacs/emacs-src/ilisp
-@dirrm pvs/emacs/emacs-src
-@dirrm pvs/emacs
-@dirrm pvs/doc/release-notes
-@dirrm pvs/doc
-@dirrm pvs/bin
 @exec ${MKDIR} %D/pvs/Examples
-@dirrm pvs/Examples
-@dirrm pvs
