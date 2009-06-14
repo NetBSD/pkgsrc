@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:11:55 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 21:16:22 joerg Exp $
 bin/cups-calibrate
 bin/escputil
 bin/testpattern
@@ -314,4 +314,4 @@ share/locale/sv/LC_MESSAGES/gutenprint.mo
 share/locale/sv/gutenprint_sv.po
 share/locale/zh_TW/LC_MESSAGES/gutenprint.mo
 share/locale/zh_TW/gutenprint_zh_TW.po
-@exec ${MKDIR} %D/lib/gutenprint/${INSTALLVERSION}/modules
+@pkgdir lib/gutenprint/${INSTALLVERSION}/modules
