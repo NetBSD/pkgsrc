@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:51:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:42 joerg Exp $
 bin/dipmap
 libexec/mapit
 share/doc/mapit/README
@@ -39,5 +39,3 @@ share/mapit/regular.map.ps
 share/mapit/youngstown.cmap.ps
 share/mapit/youngstown.info
 share/mapit/youngstown.map.ps
-@dirrm share/mapit
-@dirrm share/doc/mapit

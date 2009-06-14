@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/21 06:25:10 simonb Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:51 joerg Exp $
 bin/moria
 man/man6/moria.6
 share/doc/moria/ERRORS
@@ -22,5 +22,3 @@ share/games/moria/scores.dist
 share/games/moria/version.hlp
 share/games/moria/welcome.hlp
 @exec if [ ! -f /var/games/moria.scores ]; then cp -p %D/share/games/moria/scores.dist /var/games/moria.scores; fi
-@dirrm share/games/moria
-@dirrm share/doc/moria

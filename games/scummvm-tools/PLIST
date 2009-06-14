@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/02 09:47:44 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:56 joerg Exp $
 bin/compress_kyra
 bin/compress_queen
 bin/compress_saga
@@ -20,4 +20,3 @@ bin/extract_scumm_mac
 bin/extract_simon1_amiga
 bin/extract_zak_c64
 share/doc/scummvm-tools/README
-@dirrm share/doc/scummvm

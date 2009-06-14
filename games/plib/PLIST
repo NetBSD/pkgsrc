@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/07/12 19:48:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:53 joerg Exp $
 include/plib/fnt.h
 include/plib/js.h
 include/plib/net.h
@@ -52,4 +52,3 @@ lib/libplibsm.a
 lib/libplibssg.a
 lib/libplibssgaux.a
 lib/libplibul.a
-@dirrm include/plib

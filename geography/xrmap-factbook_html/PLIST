@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 12:24:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:17 joerg Exp $
 share/rmap/factbook/countrylisting.html
 share/rmap/factbook/flags/aa-flag.gif
 share/rmap/factbook/flags/aa-flag.html
@@ -1084,8 +1084,3 @@ share/rmap/factbook/maps/za-map.gif
 share/rmap/factbook/maps/zh-map.gif
 share/rmap/factbook/maps/zi-map.gif
 share/rmap/factbook/maps/zn-map.gif
-@dirrm share/rmap/factbook/maps
-@dirrm share/rmap/factbook/graphics/flaginterface
-@dirrm share/rmap/factbook/graphics
-@dirrm share/rmap/factbook/geos
-@dirrm share/rmap/factbook/flags

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/10/13 03:14:40 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:56:41 joerg Exp $
 bin/bzadmin
 bin/bzflag
 bin/bzfs
@@ -175,6 +175,3 @@ share/bzflag/title.png
 share/bzflag/wall.png
 share/bzflag/water.png
 share/bzflag/zone_ground.png
-@dirrm share/bzflag/l10n
-@dirrm share/bzflag/fonts
-@dirrm share/bzflag

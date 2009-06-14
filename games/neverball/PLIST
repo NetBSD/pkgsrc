@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/02 14:01:09 christos Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:52 joerg Exp $
 bin/neverball
 share/doc/neverball/README
 share/neverball/data/back/alien.png
@@ -565,25 +565,5 @@ share/neverball/data/shot-rlk/zigzag.jpg
 share/neverball/data/ttf/VeraBd.ttf
 share/neverball/neverball
 share/neverball/neverputt
-@dirrm share/neverball/data
-@dirrm share/neverball/data/back
-@dirrm share/neverball/data/bgm
-@dirrm share/neverball/data/map-back
-@dirrm share/neverball/data/obj
-@dirrm share/neverball/data/map-misc
-@dirrm share/neverball/data/map-mym
-@dirrm share/neverball/data/map-paxed
-@dirrm share/neverball/data/map-putt
-@dirrm share/neverball/data/map-rlk
-@dirrm share/neverball/data/mtrl
-@dirrm share/neverball/data/png
-@dirrm share/neverball/data/shot-misc
-@dirrm share/neverball/data/shot-mym
-@dirrm share/neverball/data/snd
-@dirrm share/neverball/data/shot-putt
-@dirrm share/neverball/data/shot-rlk
-@dirrm share/neverball/data/ttf
 @exec ${MKDIR} %D/share/neverball/data/shot-misc
 @exec ${MKDIR} %D/share/neverball/data/map-misc
-@dirrm share/neverball
-@dirrm share/doc/neverball

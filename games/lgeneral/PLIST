@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/15 17:28:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:50 joerg Exp $
 bin/lgeneral
 share/games/lgeneral/gfx/font_credit.bmp
 share/games/lgeneral/gfx/title.bmp
@@ -34,28 +34,13 @@ share/games/lgeneral/themes/default/setup_confirm_buttons.bmp
 share/games/lgeneral/themes/default/unit_buttons.bmp
 share/games/lgeneral/themes/default/wallpaper.bmp
 @exec ${MKDIR} %D/share/games/lgeneral/units
-@dirrm share/games/lgeneral/units
-@dirrm share/games/lgeneral/themes/default
-@dirrm share/games/lgeneral/themes
 @exec ${MKDIR} %D/share/games/lgeneral/sounds
-@dirrm share/games/lgeneral/sounds
 @exec ${MKDIR} %D/share/games/lgeneral/scenarios
-@dirrm share/games/lgeneral/scenarios
 @exec ${MKDIR} %D/share/games/lgeneral/nations
-@dirrm share/games/lgeneral/nations
 @exec ${MKDIR} %D/share/games/lgeneral/music
-@dirrm share/games/lgeneral/music
 @exec ${MKDIR} %D/share/games/lgeneral/maps
-@dirrm share/games/lgeneral/maps
 @exec ${MKDIR} %D/share/games/lgeneral/gfx/units
-@dirrm share/games/lgeneral/gfx/units
 @exec ${MKDIR} %D/share/games/lgeneral/gfx/terrain
-@dirrm share/games/lgeneral/gfx/terrain
 @exec ${MKDIR} %D/share/games/lgeneral/gfx/flags
-@dirrm share/games/lgeneral/gfx/flags
-@dirrm share/games/lgeneral/gfx
 @exec ${MKDIR} %D/share/games/lgeneral/campaigns
-@dirrm share/games/lgeneral/campaigns
 @exec ${MKDIR} %D/share/games/lgeneral/ai_modules
-@dirrm share/games/lgeneral/ai_modules
-@dirrm share/games/lgeneral

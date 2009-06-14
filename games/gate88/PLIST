@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/14 01:01:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:45 joerg Exp $
 bin/gate88
 bin/gate88server
 lib/gate88/audio.conf
@@ -66,9 +66,3 @@ share/doc/gate88/LGPL_license.txt
 share/doc/gate88/license.txt
 share/doc/gate88/manual.html
 share/doc/gate88/readme.txt
-@dirrm share/doc/gate88
-@dirrm lib/gate88/sound
-@dirrm lib/gate88/music/non-ingame
-@dirrm lib/gate88/music
-@dirrm lib/gate88/lib
-@dirrm lib/gate88
