@@ -1,4 +1,4 @@
-# $NetBSD: plist-locale.awk,v 1.2 2006/04/17 06:30:48 jlam Exp $
+# $NetBSD: plist-locale.awk,v 1.3 2009/06/14 23:10:39 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -55,8 +55,4 @@ BEGIN {
 (USE_PKGLOCALEDIR ~ /[yY][eE][sS]/) && \
 /^share\/locale\// {
 	sub("^share", PKGLOCALEDIR)
-}
-(USE_PKGLOCALEDIR ~ /[yY][eE][sS]/) && \
-/^@dirrm share\/locale\// {
-	sub("^@dirrm share", "@dirrm " PKGLOCALEDIR)
 }
