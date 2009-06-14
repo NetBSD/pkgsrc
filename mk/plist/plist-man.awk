@@ -1,4 +1,4 @@
-# $NetBSD: plist-man.awk,v 1.6 2009/06/14 22:58:05 joerg Exp $
+# $NetBSD: plist-man.awk,v 1.7 2009/06/14 23:10:39 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -90,10 +90,6 @@ BEGIN {
 	sub("[0-9ln]$", section, components[n])
 	$0 = join(components, 1, n, "/")
 }
-(IMAKE_MANINSTALL == "maninstall") && \
-/^@dirrm ([^\/]*\/)+cat[1-9ln]/ {
-	next
-}
 
 ###
 ### Rewrite "imake-installed" man pages as catman pages if imake only
@@ -106,10 +102,6 @@ BEGIN {
 	section = "0"
 	sub("[0-9ln]$", section, components[n])
 	$0 = join(components, 1, n, "/")
-}
-(IMAKE_MANINSTALL == "catinstall") && \
-/^@dirrm ([^\/]*\/)+man[1-9ln]/ {
-	next
 }
 
 ###
