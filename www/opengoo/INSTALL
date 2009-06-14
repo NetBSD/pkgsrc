@@ -1,0 +1,10 @@
+# $NetBSD: INSTALL,v 1.1 2009/06/14 11:38:34 taca Exp $
+
+OG_DIR="@PREFIX@/@OG_DIR@"
+
+case ${STAGE} in
+DEINSTALL)
+	# enable to edit language translation.
+	(cd "${OG_DIR}"; ${CHOWN} -R language)
+	;;
+esac
