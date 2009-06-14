@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2009/06/14 18:30:59 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2009/06/14 18:39:59 minskim Exp $
 
-DISTNAME=	RedCloth-4.0.4
+DISTNAME=	RedCloth-4.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc
 
