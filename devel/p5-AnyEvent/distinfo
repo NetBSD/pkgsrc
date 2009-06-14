@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2009/05/21 11:17:41 sno Exp $
+$NetBSD: distinfo,v 1.11 2009/06/14 22:19:56 sno Exp $
 
-SHA1 (AnyEvent-4.41.tar.gz) = 430922b924304d683f8cf4e044e1ab978e2213fb
-RMD160 (AnyEvent-4.41.tar.gz) = c1cfa4be49fe02822e497c670843c05dc1ebc501
-Size (AnyEvent-4.41.tar.gz) = 128417 bytes
+SHA1 (AnyEvent-4.411.tar.gz) = af1f11a9d0b228898a5eb12ceea5ae7479b9c5dc
+RMD160 (AnyEvent-4.411.tar.gz) = 09dcea7f4431744998ae6a0d4969a7361dc35f26
+Size (AnyEvent-4.411.tar.gz) = 128485 bytes
