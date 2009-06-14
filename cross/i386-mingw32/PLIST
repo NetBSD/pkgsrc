@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:39:53 joerg Exp $
 bin/i386-mingw32-addr2line
 bin/i386-mingw32-ar
 bin/i386-mingw32-as
@@ -695,23 +695,3 @@ lib/gcc-lib/i386-mingw32/${GCC_VERSION}/include/varargs.h
 lib/gcc-lib/i386-mingw32/${GCC_VERSION}/include/xmmintrin.h
 lib/gcc-lib/i386-mingw32/${GCC_VERSION}/libgcc.a
 lib/gcc-lib/i386-mingw32/${GCC_VERSION}/specs
-@dirrm bin
-@dirrm i386-mingw32/bin
-@dirrm i386-mingw32/include/sys
-@dirrm i386-mingw32/include/ddk
-@dirrm i386-mingw32/include/c++/${GCC_VERSION}/i386-mingw32/bits
-@dirrm i386-mingw32/include/c++/${GCC_VERSION}/i386-mingw32
-@dirrm i386-mingw32/include/c++/${GCC_VERSION}/ext
-@dirrm i386-mingw32/include/c++/${GCC_VERSION}/bits
-@dirrm i386-mingw32/include/c++/${GCC_VERSION}/backward
-@dirrm i386-mingw32/include/c++/${GCC_VERSION}
-@dirrm i386-mingw32/include/c++
-@dirrm i386-mingw32/include/GL
-@dirrm i386-mingw32/include
-@dirrm i386-mingw32/lib
-@dirrm i386-mingw32
-@dirrm lib/gcc-lib/i386-mingw32/${GCC_VERSION}/include
-@dirrm lib/gcc-lib/i386-mingw32/${GCC_VERSION}
-@dirrm lib/gcc-lib/i386-mingw32
-@dirrm lib/gcc-lib
-@dirrm lib

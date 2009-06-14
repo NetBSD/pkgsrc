@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/03/15 00:15:08 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:41 joerg Exp $
 share/examples/p5-Asterisk/agi-enum.agi
 share/examples/p5-Asterisk/agi-sayani.agi
 share/examples/p5-Asterisk/agi-test.agi
@@ -7,4 +7,3 @@ share/examples/p5-Asterisk/manager-test.pl
 share/examples/p5-Asterisk/tts-bofh.agi
 share/examples/p5-Asterisk/tts-line.agi
 share/examples/p5-Asterisk/tts-ping.agi
-@dirrm share/examples/p5-Asterisk

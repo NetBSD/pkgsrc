@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/14 10:48:13 wulf Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:35 joerg Exp $
 bin/Boa
 share/boa-constructor-${PKGVERSION}/About.py
 share/boa-constructor-${PKGVERSION}/AppModuleProps.py
@@ -3184,78 +3184,3 @@ share/boa-constructor-${PKGVERSION}/relpath.py
 share/boa-constructor-${PKGVERSION}/sourceconst.py
 share/boa-constructor-${PKGVERSION}/wxNamespace.py
 share/boa-constructor-${PKGVERSION}/wxPopen.py
-@dirrm share/boa-constructor-${PKGVERSION}/Companions
-@dirrm share/boa-constructor-${PKGVERSION}/Config
-@dirrm share/boa-constructor-${PKGVERSION}/Debugger
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/boa/apphelp
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/boa/guide/image
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/boa/guide
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/boa/icons
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/boa
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/cache
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/cvsmanual
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/api
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/dist
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/doc
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/ext
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/icons
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/inst
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/lib
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/mac
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/ref
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/tut
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python/whatsnew
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/python
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/wxpython/ogl
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/wxpython/stc
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/wxpython/wx
-@dirrm share/boa-constructor-${PKGVERSION}/Docs/wxpython
-@dirrm share/boa-constructor-${PKGVERSION}/Docs
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/advanced/AttrMixins
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/advanced/CustomClasses
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/advanced/FramePanels
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/advanced/SpecialAttributes
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/advanced
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/frames
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/guide
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/helpbook
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/images/ResourceModules
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/images
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/layout
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/mdi
-@dirrm share/boa-constructor-${PKGVERSION}/Examples/xrc
-@dirrm share/boa-constructor-${PKGVERSION}/Examples
-@dirrm share/boa-constructor-${PKGVERSION}/Explorers
-@dirrm share/boa-constructor-${PKGVERSION}/ExternalLib/WebDAV
-@dirrm share/boa-constructor-${PKGVERSION}/ExternalLib
-@dirrm share/boa-constructor-${PKGVERSION}/Images/CvsPics
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Debug
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Editor
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Icons
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Inspector
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Modules
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Palette
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Shared
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Views/Explore
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Views/Hierarchy
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Views/UML
-@dirrm share/boa-constructor-${PKGVERSION}/Images/Views
-@dirrm share/boa-constructor-${PKGVERSION}/Images/ZOA
-@dirrm share/boa-constructor-${PKGVERSION}/Images
-@dirrm share/boa-constructor-${PKGVERSION}/Models
-@dirrm share/boa-constructor-${PKGVERSION}/Plug-ins/Images/Modules
-@dirrm share/boa-constructor-${PKGVERSION}/Plug-ins/Images/Palette
-@dirrm share/boa-constructor-${PKGVERSION}/Plug-ins/Images/ZOA
-@dirrm share/boa-constructor-${PKGVERSION}/Plug-ins/Images
-@dirrm share/boa-constructor-${PKGVERSION}/Plug-ins
-@dirrm share/boa-constructor-${PKGVERSION}/PropEdit
-@dirrm share/boa-constructor-${PKGVERSION}/Views
-@dirrm share/boa-constructor-${PKGVERSION}/ZopeLib/DateTime
-@dirrm share/boa-constructor-${PKGVERSION}/ZopeLib/zoa/props/Formulator
-@dirrm share/boa-constructor-${PKGVERSION}/ZopeLib/zoa/props
-@dirrm share/boa-constructor-${PKGVERSION}/ZopeLib/zoa
-@dirrm share/boa-constructor-${PKGVERSION}/ZopeLib
-@dirrm share/boa-constructor-${PKGVERSION}/bcrtl/activex
-@dirrm share/boa-constructor-${PKGVERSION}/bcrtl/user
-@dirrm share/boa-constructor-${PKGVERSION}/bcrtl
-@dirrm share/boa-constructor-${PKGVERSION}

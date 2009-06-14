@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/06/20 11:48:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:48:38 joerg Exp $
 bin/DllPlugInTester
 bin/cppunit-config
 bin/simple
@@ -1468,15 +1468,3 @@ share/cppunit/html/ui_2text_2_text_test_runner_8h__dep__incl.png
 share/cppunit/html/ui_2text_2_text_test_runner_8h__incl.map
 share/cppunit/html/ui_2text_2_text_test_runner_8h__incl.md5
 share/cppunit/html/ui_2text_2_text_test_runner_8h__incl.png
-@dirrm share/cppunit/html
-@dirrm share/cppunit
-@dirrm include/cppunit/ui/text
-@dirrm include/cppunit/ui/qt
-@dirrm include/cppunit/ui/mfc
-@dirrm include/cppunit/ui
-@dirrm include/cppunit/tools
-@dirrm include/cppunit/portability
-@dirrm include/cppunit/plugin
-@dirrm include/cppunit/extensions
-@dirrm include/cppunit/config
-@dirrm include/cppunit

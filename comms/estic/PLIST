@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:39 joerg Exp $
 bin/xestic
 bin/estic.res
 share/doc/estic/estic.doc
 share/examples/estic/alias.dat
 share/examples/estic/cron.dat
 share/examples/estic/estic.ini
-@dirrm share/examples/estic
-@dirrm share/doc/estic

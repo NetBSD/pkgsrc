@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/17 17:52:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:22 joerg Exp $
 ${PYINC}/ZODB3/ExtensionClass.h
 ${PYINC}/ZODB3/cPersistence.h
 ${PYSITELIB}/Acquisition.so
@@ -668,29 +668,3 @@ bin/zconfig
 bin/zdctl.py
 bin/zdrun.py
 bin/zeopack.py
-@dirrm ${PYSITELIB}/zdaemon/tests
-@dirrm ${PYSITELIB}/zdaemon
-@dirrm ${PYSITELIB}/zLOG/tests
-@dirrm ${PYSITELIB}/zLOG
-@dirrm ${PYSITELIB}/ZopeUndo/tests
-@dirrm ${PYSITELIB}/ZopeUndo
-@dirrm ${PYSITELIB}/ZODB/tests
-@dirrm ${PYSITELIB}/ZODB
-@dirrm ${PYSITELIB}/ZEO/zrpc
-@dirrm ${PYSITELIB}/ZEO/tests
-@dirrm ${PYSITELIB}/ZEO/auth
-@dirrm ${PYSITELIB}/ZEO
-@dirrm ${PYSITELIB}/ZConfig/tests/library/widget
-@dirrm ${PYSITELIB}/ZConfig/tests/library/thing/extras
-@dirrm ${PYSITELIB}/ZConfig/tests/library/thing
-@dirrm ${PYSITELIB}/ZConfig/tests/library
-@dirrm ${PYSITELIB}/ZConfig/tests/input
-@dirrm ${PYSITELIB}/ZConfig/tests
-@dirrm ${PYSITELIB}/ZConfig
-@dirrm ${PYSITELIB}/ThreadedAsync
-@dirrm ${PYSITELIB}/Persistence
-@dirrm ${PYSITELIB}/BTrees/tests
-@dirrm ${PYSITELIB}/BTrees
-@dirrm ${PYSITELIB}/BDBStorage/tests
-@dirrm ${PYSITELIB}/BDBStorage
-@dirrm ${PYINC}/ZODB3

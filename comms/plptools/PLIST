@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:38:42 joerg Exp $
 bin/plpbackup
 bin/plpftp
 bin/sisinstall
@@ -44,5 +44,3 @@ share/locale/de/LC_MESSAGES/plptools.mo
 share/locale/sv/LC_MESSAGES/plptools.mo
 share/plptools/fontmap
 share/plptools/prolog.ps
-@dirrm share/plptools
-@dirrm include/plptools

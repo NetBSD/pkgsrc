@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/29 16:56:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:43:24 joerg Exp $
 ${GEM_HOME}/cache/activerecord-odbc-adapter-${PKGVERSION}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
@@ -74,21 +74,3 @@ ${GEM_LIBDIR}/test/fixtures/db_definitions/virtuoso.sql
 ${GEM_LIBDIR}/test/fixtures/db_definitions/virtuoso2.drop.sql
 ${GEM_LIBDIR}/test/fixtures/db_definitions/virtuoso2.sql
 ${GEM_HOME}/specifications/activerecord-odbc-adapter-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/fixtures/db_definitions
-@dirrm ${GEM_LIBDIR}/test/fixtures
-@dirrm ${GEM_LIBDIR}/test/connections/native_odbc
-@dirrm ${GEM_LIBDIR}/test/connections
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/support/test
-@dirrm ${GEM_LIBDIR}/support/rake_fixes
-@dirrm ${GEM_LIBDIR}/support/rake
-@dirrm ${GEM_LIBDIR}/support/lib/active_record/connection_adapters/abstract
-@dirrm ${GEM_LIBDIR}/support/lib/active_record/connection_adapters
-@dirrm ${GEM_LIBDIR}/support/lib/active_record
-@dirrm ${GEM_LIBDIR}/support/lib
-@dirrm ${GEM_LIBDIR}/support
-@dirrm ${GEM_LIBDIR}/lib/active_record/vendor
-@dirrm ${GEM_LIBDIR}/lib/active_record/connection_adapters
-@dirrm ${GEM_LIBDIR}/lib/active_record
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

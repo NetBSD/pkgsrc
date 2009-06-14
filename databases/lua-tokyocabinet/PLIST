@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/24 03:04:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:18 joerg Exp $
 bin/tcbtest.lua
 bin/tcftest.lua
 bin/tchtest.lua
@@ -7,5 +7,3 @@ ${LUA_CDIR}/tokyocabinet.so
 share/tokyocabinet/doc/lua/index.html
 share/tokyocabinet/doc/lua/luadoc.css
 share/tokyocabinet/doc/lua/modules/tokyocabinet.html
-@dirrm share/tokyocabinet/doc/lua/modules
-@dirrm share/tokyocabinet/doc/lua

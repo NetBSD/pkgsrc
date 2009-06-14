@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/04/07 17:13:26 minskim Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:43:24 joerg Exp $
 ${GEM_HOME}/cache/activerecord-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README
@@ -328,55 +328,3 @@ ${GEM_LIBDIR}/test/schema/schema.rb
 ${GEM_LIBDIR}/test/schema/schema2.rb
 ${GEM_LIBDIR}/test/schema/sqlite_specific_schema.rb
 ${GEM_HOME}/specifications/activerecord-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/schema
-@dirrm ${GEM_LIBDIR}/test/models
-@dirrm ${GEM_LIBDIR}/test/migrations/valid
-@dirrm ${GEM_LIBDIR}/test/migrations/missing
-@dirrm ${GEM_LIBDIR}/test/migrations/interleaved/pass_3
-@dirrm ${GEM_LIBDIR}/test/migrations/interleaved/pass_2
-@dirrm ${GEM_LIBDIR}/test/migrations/interleaved/pass_1
-@dirrm ${GEM_LIBDIR}/test/migrations/interleaved
-@dirrm ${GEM_LIBDIR}/test/migrations/duplicate_names
-@dirrm ${GEM_LIBDIR}/test/migrations/duplicate
-@dirrm ${GEM_LIBDIR}/test/migrations/decimal
-@dirrm ${GEM_LIBDIR}/test/migrations/broken
-@dirrm ${GEM_LIBDIR}/test/migrations
-@dirrm ${GEM_LIBDIR}/test/fixtures/reserved_words
-@dirrm ${GEM_LIBDIR}/test/fixtures/naked/yml
-@dirrm ${GEM_LIBDIR}/test/fixtures/naked/csv
-@dirrm ${GEM_LIBDIR}/test/fixtures/naked
-@dirrm ${GEM_LIBDIR}/test/fixtures/categories/subsubdir
-@dirrm ${GEM_LIBDIR}/test/fixtures/categories
-@dirrm ${GEM_LIBDIR}/test/fixtures/all
-@dirrm ${GEM_LIBDIR}/test/fixtures
-@dirrm ${GEM_LIBDIR}/test/connections/native_sybase
-@dirrm ${GEM_LIBDIR}/test/connections/native_sqlite3
-@dirrm ${GEM_LIBDIR}/test/connections/native_sqlite
-@dirrm ${GEM_LIBDIR}/test/connections/native_postgresql
-@dirrm ${GEM_LIBDIR}/test/connections/native_oracle
-@dirrm ${GEM_LIBDIR}/test/connections/native_openbase
-@dirrm ${GEM_LIBDIR}/test/connections/native_mysql
-@dirrm ${GEM_LIBDIR}/test/connections/native_frontbase
-@dirrm ${GEM_LIBDIR}/test/connections/native_firebird
-@dirrm ${GEM_LIBDIR}/test/connections/native_db2
-@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbcsqlite3
-@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbcpostgresql
-@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbcmysql
-@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbchsqldb
-@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbch2
-@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbcderby
-@dirrm ${GEM_LIBDIR}/test/connections
-@dirrm ${GEM_LIBDIR}/test/cases/associations
-@dirrm ${GEM_LIBDIR}/test/cases
-@dirrm ${GEM_LIBDIR}/test/assets
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/active_record/serializers
-@dirrm ${GEM_LIBDIR}/lib/active_record/locking
-@dirrm ${GEM_LIBDIR}/lib/active_record/locale
-@dirrm ${GEM_LIBDIR}/lib/active_record/connection_adapters/abstract
-@dirrm ${GEM_LIBDIR}/lib/active_record/connection_adapters
-@dirrm ${GEM_LIBDIR}/lib/active_record/associations
-@dirrm ${GEM_LIBDIR}/lib/active_record
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}

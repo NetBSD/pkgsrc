@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/08 09:38:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:39:10 joerg Exp $
 ${PYSITELIB}/chardet/big5freq.py
 ${PYSITELIB}/chardet/big5freq.pyc
 ${PYSITELIB}/chardet/big5freq.pyo
@@ -104,4 +104,3 @@ ${PYSITELIB}/chardet/universaldetector.pyo
 ${PYSITELIB}/chardet/utf8prober.py
 ${PYSITELIB}/chardet/utf8prober.pyc
 ${PYSITELIB}/chardet/utf8prober.pyo
-@dirrm ${PYSITELIB}/chardet

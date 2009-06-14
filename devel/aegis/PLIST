@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/10 11:16:36 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:32 joerg Exp $
 bin/ae-cvs-ci
 bin/ae-repo-ci
 bin/ae-sccs-put
@@ -440,22 +440,3 @@ share/locale/pt_BR/LC_MESSAGES/aegis.mo
 share/locale/ro/LC_MESSAGES/aegis.mo
 share/locale/ru/LC_MESSAGES/aegis.mo
 share/locale/vi/LC_MESSAGES/aegis.mo
-@dirrm share/examples/aegis/profile.d
-@dirrm share/examples/aegis
-@dirrm share/aegis/wish
-@dirrm share/aegis/report
-@dirrm share/aegis/remind
-@dirrm share/aegis/man1/en
-@dirrm share/aegis/man1
-@dirrm share/aegis/icon
-@dirrm share/aegis/fr/LC_MESSAGES
-@dirrm share/aegis/fr
-@dirrm share/aegis/en/notes
-@dirrm share/aegis/en/man5
-@dirrm share/aegis/en/man1
-@dirrm share/aegis/en/html
-@dirrm share/aegis/en
-@dirrm share/aegis/de/LC_MESSAGES
-@dirrm share/aegis/de
-@dirrm share/aegis/config.example
-@dirrm share/aegis

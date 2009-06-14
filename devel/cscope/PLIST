@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:51 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:38 joerg Exp $
 bin/cscope
 man/man1/cscope.1
 share/cscope/ocs
-@dirrm share/cscope
