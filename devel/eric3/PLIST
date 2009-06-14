@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:48:10 joerg Exp $
 bin/eric3
 bin/eric3-api
 bin/eric3-doc
@@ -1666,4 +1666,4 @@ ${PYSITELIB}/eric3/uninstall.pyc
 ${PYSITELIB}/eric3config.py
 ${PYSITELIB}/sitecustomize.py
 ${PYSITELIB}/sitecustomize.pyc
-@exec ${MKDIR} %D/lib/python2.4/site-packages/eric3/i18n
+@pkgdir ${PYSITELIB}/eric3/i18n

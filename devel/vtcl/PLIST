@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:48:18 joerg Exp $
 bin/vtcl
 lib/vtcl/images/anchor.gif
 lib/vtcl/images/anchor_c.ppm
@@ -425,4 +425,4 @@ share/examples/vtcl/sample/notebook.tcl
 share/examples/vtcl/sample/notebook_recurse.tcl
 share/examples/vtcl/sample/panedwindow.tcl
 share/examples/vtcl/sample/sampleBLT.tcl
-@exec ${MKDIR} %D/lib/vtcl/lib/Widgets/user
+@pkgdir lib/vtcl/lib/Widgets/user

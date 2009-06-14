@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2009/06/14 17:48:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.47 2009/06/14 18:48:11 joerg Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -498,5 +498,4 @@ share/locale/yi/LC_MESSAGES/glib20.mo
 share/locale/zh_CN/LC_MESSAGES/glib20.mo
 share/locale/zh_HK/LC_MESSAGES/glib20.mo
 share/locale/zh_TW/LC_MESSAGES/glib20.mo
-@exec ${MKDIR} %D/lib/gio/modules 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/include/glib 2>/dev/null || ${TRUE}
+@pkgdir lib/gio/modules

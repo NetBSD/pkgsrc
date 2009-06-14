@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:48:13 joerg Exp $
 include/libFoundation/Foundation/Foundation.h
 include/libFoundation/Foundation/NSAccount.h
 include/libFoundation/Foundation/NSAllocDebugZone.h
@@ -252,7 +252,5 @@ lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/WET
 lib/libFoundation.so
 lib/libFoundation.so.1.1.7
 share/GNUstep/Makefiles/Additional/libFoundation.make
-@exec ${MKDIR} %D/lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Asia
-@exec ${MKDIR} %D/lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Africa
-@unexec ${RMDIR} %D/lib/GNUstep/Libraries 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/GNUstep 2>/dev/null || ${TRUE}
+@pkgdir lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Asia
+@pkgdir lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Africa

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/06/14 17:48:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:48:11 joerg Exp $
 bin/HTMLLinker
 bin/autogsdoc
 bin/cvtenc
@@ -810,8 +810,6 @@ man/man1/sfparse.1
 man/man1/xmlparse.1
 man/man8/gdomap.8
 share/GNUstep/Makefiles/Additional/base.make
-@exec ${MKDIR} %D/lib/GNUstep/Bundles
-@unexec ${RMDIR} %D/lib/GNUstep/Libraries 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/lib/GNUstep/Frameworks
-@unexec ${RMDIR} %D/lib/GNUstep 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/include/GNUstepBase/unicode
+@pkgdir lib/GNUstep/Bundles
+@pkgdir lib/GNUstep/Frameworks
+@pkgdir include/GNUstepBase/unicode

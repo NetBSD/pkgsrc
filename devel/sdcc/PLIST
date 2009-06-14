@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:48:17 joerg Exp $
 bin/as-gbz80
 bin/as-hc08
 bin/as-z80
@@ -3216,6 +3216,6 @@ share/sdcc/sdcc/lib/z80/time.o
 share/sdcc/sdcc/lib/z80/vprintf.asm
 share/sdcc/sdcc/lib/z80/vprintf.o
 share/sdcc/sdcc/lib/z80/z80.lib
-@exec ${MKDIR} %D/share/sdcc/sdcc/lib/src/small
-@exec ${MKDIR} %D/share/sdcc/sdcc/lib/src/medium
-@exec ${MKDIR} %D/share/sdcc/sdcc/lib/src/large
+@pkgdir share/sdcc/sdcc/lib/src/small
+@pkgdir share/sdcc/sdcc/lib/src/medium
+@pkgdir share/sdcc/sdcc/lib/src/large

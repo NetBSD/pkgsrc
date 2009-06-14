@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:50:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:53:00 joerg Exp $
 bin/emacs
 bin/emacs-${EMACSVERSION}
 bin/emacs-b2m
@@ -49,7 +49,6 @@ man/man1/emacs-ctags.1
 man/man1/emacs-etags.1
 man/man1/emacs-gfdl.1
 man/man1/emacs.1
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
 share/emacs/${EMACSVERSION}/etc/BABYL
 share/emacs/${EMACSVERSION}/etc/CENSORSHIP
 share/emacs/${EMACSVERSION}/etc/COOKIES
@@ -171,7 +170,7 @@ share/emacs/${EMACSVERSION}/etc/ulimit.hack
 share/emacs/${EMACSVERSION}/etc/vipcard.tex
 share/emacs/${EMACSVERSION}/etc/viperCard.tex
 share/emacs/${EMACSVERSION}/etc/yow.lines
-@exec ${MKDIR} %D/share/emacs/${EMACSVERSION}/leim
+@pkgdir share/emacs/${EMACSVERSION}/leim
 share/emacs/${EMACSVERSION}/lisp/COPYING
 share/emacs/${EMACSVERSION}/lisp/README
 share/emacs/${EMACSVERSION}/lisp/abbrev.el
@@ -1768,5 +1767,3 @@ share/emacs/${EMACSVERSION}/lisp/xt-mouse.el
 share/emacs/${EMACSVERSION}/lisp/xt-mouse.elc
 share/emacs/${EMACSVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}

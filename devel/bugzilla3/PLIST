@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:48:09 joerg Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Attachment/PatchReader.pm
@@ -587,10 +587,3 @@ share/doc/bugzilla/en/Bugzilla-Guide.txt
 share/doc/bugzilla/en/rel_notes.txt
 share/examples/bugzilla/bugzilla.conf
 share/examples/bugzilla/localconfig
-@unexec ${RMDIR} %D/share/bugzilla/template 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/bugzilla/skins/contrib/Dusk 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/bugzilla/skins/contrib 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/bugzilla/skins 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/bugzilla/lib 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/bugzilla/Bugzilla 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/bugzilla 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:49:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:48:17 joerg Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -216,4 +216,4 @@ ${PLIST.gui}share/gitk/lib/msgs/de.msg
 ${PLIST.gui}share/gitk/lib/msgs/es.msg
 ${PLIST.gui}share/gitk/lib/msgs/it.msg
 ${PLIST.gui}share/gitk/lib/msgs/sv.msg
-@exec ${MKDIR} %D/share/examples/scmgit/templates/branches
+@pkgdir share/examples/scmgit/templates/branches

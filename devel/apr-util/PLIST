@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/10 15:58:29 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:48:08 joerg Exp $
 bin/apu-1-config
 include/apr-1/apr_anylock.h
 include/apr-1/apr_base64.h
@@ -39,4 +39,3 @@ ${PLIST.pgsql}lib/apr-util-1/apr_dbd_pgsql.la
 ${PLIST.sqlite3}lib/apr-util-1/apr_dbd_sqlite3.la
 ${PLIST.db4}lib/apr-util-1/apr_dbm_db.la
 lib/pkgconfig/apr-util-1.pc
-@unexec ${RMDIR} %D/lib/apr-util-1 2>/dev/null || ${TRUE}
