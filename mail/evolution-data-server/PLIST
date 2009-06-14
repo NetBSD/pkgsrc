@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2009/04/17 17:27:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.28 2009/06/14 18:04:32 joerg Exp $
 include/evolution-data-server-2.26/camel/camel-address.h
 include/evolution-data-server-2.26/camel/camel-arg.h
 include/evolution-data-server-2.26/camel/camel-block-file.h
@@ -715,36 +715,3 @@ share/pixmaps/evolution-data-server/category_status_16.png
 share/pixmaps/evolution-data-server/category_strategies_16.png
 share/pixmaps/evolution-data-server/category_suppliers_16.png
 share/pixmaps/evolution-data-server/category_time-and-expenses_16.png
-@dirrm share/pixmaps/evolution-data-server
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/idl/evolution-data-server-1.2
-@comment in ORBit2: @dirrm share/idl
-@dirrm share/gtk-doc/html/libedataserverui
-@dirrm share/gtk-doc/html/libedataserver
-@dirrm share/gtk-doc/html/libedata-cal
-@dirrm share/gtk-doc/html/libedata-book
-@dirrm share/gtk-doc/html/libecal
-@dirrm share/gtk-doc/html/libebook
-@dirrm share/gtk-doc/html/libebackend
-@dirrm share/gtk-doc/html/camel
-@dirrm share/evolution-data-server-2.26/weather
-@dirrm share/evolution-data-server-2.26/glade
-@dirrm share/evolution-data-server-2.26
-@dirrm lib/evolution-data-server-1.2/extensions
-@dirrm lib/evolution-data-server-1.2/camel-providers
-@dirrm lib/evolution-data-server-1.2
-@comment in libbonobo: @dirrm lib/bonobo/servers
-@dirrm include/evolution-data-server-2.26/libedataserverui
-@dirrm include/evolution-data-server-2.26/libedataserver
-@dirrm include/evolution-data-server-2.26/libedata-cal
-@dirrm include/evolution-data-server-2.26/libedata-book
-@dirrm include/evolution-data-server-2.26/libecal
-@dirrm include/evolution-data-server-2.26/libebook
-@dirrm include/evolution-data-server-2.26/libebackend
-@dirrm include/evolution-data-server-2.26/groupwise
-@dirrm include/evolution-data-server-2.26/google/libgdata-google
-@dirrm include/evolution-data-server-2.26/google/libgdata
-@dirrm include/evolution-data-server-2.26/google
-@dirrm include/evolution-data-server-2.26/exchange
-@dirrm include/evolution-data-server-2.26/camel
-@dirrm include/evolution-data-server-2.26

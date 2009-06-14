@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/06 07:50:01 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:29 joerg Exp $
 bin/hlfl
 man/man1/hlfl.1
 share/hlfl/CodingStyle
@@ -10,4 +10,3 @@ share/hlfl/sample_3.hlfl
 share/hlfl/services.hlfl
 share/hlfl/syntax.txt
 share/hlfl/test.hlfl
-@dirrm share/hlfl

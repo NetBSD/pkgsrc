@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2007/09/20 00:02:43 wiz Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2009/06/14 18:07:22 joerg Exp $
 bin/gfloppy
 man/man1/gfloppy.1
 share/applications/gfloppy.desktop
@@ -19,12 +19,3 @@ share/omf/gnome-utils/gfloppy-C.omf
 share/omf/gnome-utils/gfloppy-ja.omf
 share/omf/gnome-utils/gfloppy-nl.omf
 share/omf/gnome-utils/gfloppy-uk.omf
-@dirrm share/gnome/help/gfloppy/uk/figures
-@dirrm share/gnome/help/gfloppy/uk
-@dirrm share/gnome/help/gfloppy/nl/figures
-@dirrm share/gnome/help/gfloppy/nl
-@dirrm share/gnome/help/gfloppy/ja/figures
-@dirrm share/gnome/help/gfloppy/ja
-@dirrm share/gnome/help/gfloppy/C/figures
-@dirrm share/gnome/help/gfloppy/C
-@dirrm share/gnome/help/gfloppy

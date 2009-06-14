@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/18 10:00:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:21 joerg Exp $
 share/gnome/help/accessibility-devel-guide/C/accessibility-devel-guide.xml
 share/gnome/help/accessibility-devel-guide/C/figures/GNOME_desktop_Accessibility.png
 share/gnome/help/accessibility-devel-guide/C/figures/at-arch.png
@@ -436,55 +436,3 @@ share/omf/platform-overview/platform-overview-fr.omf
 share/omf/platform-overview/platform-overview-it.omf
 share/omf/platform-overview/platform-overview-oc.omf
 share/omf/platform-overview/platform-overview-ru.omf
-@dirrm share/omf/platform-overview
-@dirrm share/omf/optimization-guide
-@dirrm share/omf/integration-guide
-@dirrm share/omf/hig-book
-@dirrm share/omf/gdp-style-guide
-@dirrm share/omf/gdp-handbook
-@dirrm share/omf/accessibility-devel-guide
-@comment in rarian: @dirrm share/omf
-@dirrm share/gnome/help/platform-overview/ru/figures
-@dirrm share/gnome/help/platform-overview/ru
-@dirrm share/gnome/help/platform-overview/oc/figures
-@dirrm share/gnome/help/platform-overview/oc
-@dirrm share/gnome/help/platform-overview/it/figures
-@dirrm share/gnome/help/platform-overview/it
-@dirrm share/gnome/help/platform-overview/fr/figures
-@dirrm share/gnome/help/platform-overview/fr
-@dirrm share/gnome/help/platform-overview/es/figures
-@dirrm share/gnome/help/platform-overview/es
-@dirrm share/gnome/help/platform-overview/el/figures
-@dirrm share/gnome/help/platform-overview/el
-@dirrm share/gnome/help/platform-overview/de/figures
-@dirrm share/gnome/help/platform-overview/de
-@dirrm share/gnome/help/platform-overview/C/figures
-@dirrm share/gnome/help/platform-overview/C
-@dirrm share/gnome/help/platform-overview
-@dirrm share/gnome/help/optimization-guide/C/figures
-@dirrm share/gnome/help/optimization-guide/C
-@dirrm share/gnome/help/optimization-guide
-@dirrm share/gnome/help/integration-guide/zh_CN
-@dirrm share/gnome/help/integration-guide/sv
-@dirrm share/gnome/help/integration-guide/pt_BR
-@dirrm share/gnome/help/integration-guide/fr
-@dirrm share/gnome/help/integration-guide/es
-@dirrm share/gnome/help/integration-guide/en_GB
-@dirrm share/gnome/help/integration-guide/el
-@dirrm share/gnome/help/integration-guide/de
-@dirrm share/gnome/help/integration-guide/cs
-@dirrm share/gnome/help/integration-guide/C
-@dirrm share/gnome/help/integration-guide
-@dirrm share/gnome/help/hig-book/C/images
-@dirrm share/gnome/help/hig-book/C
-@dirrm share/gnome/help/hig-book
-@dirrm share/gnome/help/gdp-style-guide/C/figures
-@dirrm share/gnome/help/gdp-style-guide/C
-@dirrm share/gnome/help/gdp-style-guide
-@dirrm share/gnome/help/gdp-handbook/C
-@dirrm share/gnome/help/gdp-handbook
-@dirrm share/gnome/help/accessibility-devel-guide/C/figures
-@dirrm share/gnome/help/accessibility-devel-guide/C
-@dirrm share/gnome/help/accessibility-devel-guide
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome

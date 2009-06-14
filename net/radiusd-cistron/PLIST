@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/05/02 20:34:03 reed Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:09:41 joerg Exp $
 bin/radclient
 bin/radlast
 bin/radtest
@@ -51,8 +51,6 @@ share/examples/raddb/naspasswd.sample
 share/examples/raddb/realms.sample
 share/examples/raddb/users.sample
 share/examples/rc.d/radiusd
-@dirrm share/examples/raddb
-@dirrm share/doc/radiusd-cistron
 @unexec ${RM} -f /var/log/radius.log
 @unexec ${RM} -f /var/run/radiusd.pid
 @unexec echo "Leaving /var/run/radutmp, /var/log/radwtmp and /var/log/radacct alone."

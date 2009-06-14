@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/22 19:21:11 abs Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:47 joerg Exp $
 bin/Xvnc
 bin/vncconnect
 bin/vncserver
@@ -102,4 +102,3 @@ share/doc/vnc/winvnctray.GIF
 share/doc/vnc/winvncviewer.html
 share/doc/vnc/xvnc.html
 share/doc/vnc/xvncviewer.html
-@dirrm share/doc/vnc

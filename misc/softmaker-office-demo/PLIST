@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/07 20:58:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:31 joerg Exp $
 bin/planmaker
 bin/textmaker
 lib/softmaker/fonts/coup.pfb
@@ -413,92 +413,4 @@ lib/softmaker/tm2006_en.pdf
 lib/softmaker/tmhi.bmp
 lib/softmaker/vgahlv.dwf
 lib/softmaker/vgasys.dwf
-@dirrm lib/softmaker/spell
-@dirrm lib/softmaker/install_tr/Templates/English/PlanMaker
-@dirrm lib/softmaker/install_tr/Templates/English/Misc
-@dirrm lib/softmaker/install_tr/Templates/English/Memo
-@dirrm lib/softmaker/install_tr/Templates/English/Letter
-@dirrm lib/softmaker/install_tr/Templates/English/Fax
-@dirrm lib/softmaker/install_tr/Templates/English/Business Card
-@dirrm lib/softmaker/install_tr/Templates/English
-@dirrm lib/softmaker/install_tr/Templates
-@dirrm lib/softmaker/install_tr/Documents
-@dirrm lib/softmaker/install_tr/Config
-@dirrm lib/softmaker/install_tr
-@dirrm lib/softmaker/install_ru/Templates/English/PlanMaker
-@dirrm lib/softmaker/install_ru/Templates/English/Misc
-@dirrm lib/softmaker/install_ru/Templates/English/Memo
-@dirrm lib/softmaker/install_ru/Templates/English/Letter
-@dirrm lib/softmaker/install_ru/Templates/English/Fax
-@dirrm lib/softmaker/install_ru/Templates/English/Business Card
-@dirrm lib/softmaker/install_ru/Templates/English
-@dirrm lib/softmaker/install_ru/Templates
-@dirrm lib/softmaker/install_ru/Documents
-@dirrm lib/softmaker/install_ru/Config
-@dirrm lib/softmaker/install_ru
-@dirrm lib/softmaker/install_pb/Templates/English/PlanMaker
-@dirrm lib/softmaker/install_pb/Templates/English/Misc
-@dirrm lib/softmaker/install_pb/Templates/English/Memo
-@dirrm lib/softmaker/install_pb/Templates/English/Letter
-@dirrm lib/softmaker/install_pb/Templates/English/Fax
-@dirrm lib/softmaker/install_pb/Templates/English/Business Card
-@dirrm lib/softmaker/install_pb/Templates/English
-@dirrm lib/softmaker/install_pb/Templates
-@dirrm lib/softmaker/install_pb/Documents/Samples
-@dirrm lib/softmaker/install_pb/Documents
-@dirrm lib/softmaker/install_pb/Config
-@dirrm lib/softmaker/install_pb
-@dirrm lib/softmaker/install_hu/Templates/English
-@dirrm lib/softmaker/install_hu/Templates
-@dirrm lib/softmaker/install_hu/Documents
 @exec ${MKDIR} %D/lib/softmaker/install_hu/Config 2>/dev/null || ${TRUE}
-@dirrm lib/softmaker/install_hu/Config
-@dirrm lib/softmaker/install_hu
-@dirrm lib/softmaker/install_fr/Templates/English/PlanMaker
-@dirrm lib/softmaker/install_fr/Templates/English
-@dirrm lib/softmaker/install_fr/Templates
-@dirrm lib/softmaker/install_fr/Documents
-@dirrm lib/softmaker/install_fr/Config
-@dirrm lib/softmaker/install_fr
-@dirrm lib/softmaker/install_es/Templates/English/PlanMaker
-@dirrm lib/softmaker/install_es/Templates/English/Misc
-@dirrm lib/softmaker/install_es/Templates/English/Memo
-@dirrm lib/softmaker/install_es/Templates/English/Letter
-@dirrm lib/softmaker/install_es/Templates/English/Fax
-@dirrm lib/softmaker/install_es/Templates/English/Business Card
-@dirrm lib/softmaker/install_es/Templates/English
-@dirrm lib/softmaker/install_es/Templates
-@dirrm lib/softmaker/install_es/Documents/Samples
-@dirrm lib/softmaker/install_es/Documents
-@dirrm lib/softmaker/install_es/Config
-@dirrm lib/softmaker/install_es
-@dirrm lib/softmaker/install_en/Templates/English/PlanMaker
-@dirrm lib/softmaker/install_en/Templates/English/Misc
-@dirrm lib/softmaker/install_en/Templates/English/Memo
-@dirrm lib/softmaker/install_en/Templates/English/Letter
-@dirrm lib/softmaker/install_en/Templates/English/Fax
-@dirrm lib/softmaker/install_en/Templates/English/Business Card
-@dirrm lib/softmaker/install_en/Templates/English
-@dirrm lib/softmaker/install_en/Templates
-@dirrm lib/softmaker/install_en/Documents/Samples
-@dirrm lib/softmaker/install_en/Documents
-@dirrm lib/softmaker/install_en/Config
-@dirrm lib/softmaker/install_en
-@dirrm lib/softmaker/install_de/Templates/English/Short Letter
-@dirrm lib/softmaker/install_de/Templates/English/PlanMaker
-@dirrm lib/softmaker/install_de/Templates/English/Misc
-@dirrm lib/softmaker/install_de/Templates/English/Memo
-@dirrm lib/softmaker/install_de/Templates/English/Letter
-@dirrm lib/softmaker/install_de/Templates/English/Fax
-@dirrm lib/softmaker/install_de/Templates/English/Business Card
-@dirrm lib/softmaker/install_de/Templates/English
-@dirrm lib/softmaker/install_de/Templates
-@dirrm lib/softmaker/install_de/Documents/Beispiele
-@dirrm lib/softmaker/install_de/Documents
-@dirrm lib/softmaker/install_de/Config
-@dirrm lib/softmaker/install_de
-@dirrm lib/softmaker/icons
-@dirrm lib/softmaker/html/images
-@dirrm lib/softmaker/html
-@dirrm lib/softmaker/fonts
-@dirrm lib/softmaker

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/20 15:34:33 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:05:49 joerg Exp $
 ${RUBY_VENDORLIB}/gsl.rb
 ${RUBY_VENDORLIB}/gsl/gnuplot.rb
 ${RUBY_VENDORLIB}/gsl/oper.rb
@@ -396,41 +396,3 @@ ${RUBY_EG}/gsl/vector/write.rb
 ${RUBY_EG}/gsl/vector/zip.rb
 ${RUBY_EG}/gsl/wavelet/ecg.dat
 ${RUBY_EG}/gsl/wavelet/wavelet1.rb
-@dirrm ${RUBY_EG}/gsl/wavelet
-@dirrm ${RUBY_EG}/gsl/vector
-@dirrm ${RUBY_EG}/gsl/stats
-@dirrm ${RUBY_EG}/gsl/sort
-@dirrm ${RUBY_EG}/gsl/sf
-@dirrm ${RUBY_EG}/gsl/roots
-@dirrm ${RUBY_EG}/gsl/random
-@dirrm ${RUBY_EG}/gsl/poly
-@dirrm ${RUBY_EG}/gsl/permutation
-@dirrm ${RUBY_EG}/gsl/pdf
-@dirrm ${RUBY_EG}/gsl/ool
-@dirrm ${RUBY_EG}/gsl/odeiv
-@dirrm ${RUBY_EG}/gsl/ntuple
-@dirrm ${RUBY_EG}/gsl/narray
-@dirrm ${RUBY_EG}/gsl/multiroot
-@dirrm ${RUBY_EG}/gsl/multimin
-@dirrm ${RUBY_EG}/gsl/monte
-@dirrm ${RUBY_EG}/gsl/matrix
-@dirrm ${RUBY_EG}/gsl/math
-@dirrm ${RUBY_EG}/gsl/linalg
-@dirrm ${RUBY_EG}/gsl/jacobi
-@dirrm ${RUBY_EG}/gsl/interp
-@dirrm ${RUBY_EG}/gsl/integration
-@dirrm ${RUBY_EG}/gsl/histogram
-@dirrm ${RUBY_EG}/gsl/gallery/rgplot
-@dirrm ${RUBY_EG}/gsl/gallery
-@dirrm ${RUBY_EG}/gsl/function
-@dirrm ${RUBY_EG}/gsl/fit
-@dirrm ${RUBY_EG}/gsl/fft
-@dirrm ${RUBY_EG}/gsl/eigen
-@dirrm ${RUBY_EG}/gsl/deriv
-@dirrm ${RUBY_EG}/gsl/const
-@dirrm ${RUBY_EG}/gsl/complex
-@dirrm ${RUBY_EG}/gsl/blas
-@dirrm ${RUBY_EG}/gsl
-@dirrm ${RUBY_DOC}/gsl
-@dirrm ${RUBY_VENDORLIB}/ool
-@dirrm ${RUBY_VENDORLIB}/gsl

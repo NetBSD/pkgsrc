@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/11 15:43:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:37 joerg Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/smtp
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/nethttpd
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/netstring
@@ -225,8 +225,3 @@ lib/ocaml/site-lib/smtp/smtp.cma
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/netstring
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/pop
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/smtp
-@dirrm lib/ocaml/site-lib/smtp
-@dirrm lib/ocaml/site-lib/pop
-@dirrm lib/ocaml/site-lib/netstring
-@dirrm lib/ocaml/site-lib/nethttpd
-@dirrm lib/ocaml/site-lib/cgi

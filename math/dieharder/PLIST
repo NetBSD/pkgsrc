@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/13 10:07:36 gson Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:42 joerg Exp $
 bin/dieharder
 include/dieharder/Dtest.h
 include/dieharder/Vtest.h
@@ -37,4 +37,3 @@ include/dieharder/verbose.h
 lib/libdieharder.la
 man/man1/dieharder.1
 man/man3/libdieharder.3
-@dirrm include/dieharder

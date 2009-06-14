@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/05/28 14:06:31 jonb Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:40 joerg Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/CVS/Entries
@@ -248,35 +248,4 @@ share/doc/sbcl/CREDITS
 share/doc/sbcl/NEWS
 share/doc/sbcl/SUPPORT
 @exec ${MKDIR} %D/share/doc/sbcl/html
-@dirrm share/doc/sbcl/html
-@dirrm share/doc/sbcl
 @exec ${MKDIR} %D/lib/sbcl/site-systems
-@dirrm lib/sbcl/site-systems
-@dirrm lib/sbcl/sb-sprof
-@dirrm lib/sbcl/sb-simple-streams/CVS
-@dirrm lib/sbcl/sb-simple-streams
-@dirrm lib/sbcl/sb-rt/CVS
-@dirrm lib/sbcl/sb-rt
-@dirrm lib/sbcl/sb-rotate-byte/CVS
-@dirrm lib/sbcl/sb-rotate-byte
-@dirrm lib/sbcl/sb-posix/test-lab
-@dirrm lib/sbcl/sb-posix/CVS
-@dirrm lib/sbcl/sb-posix
-@dirrm lib/sbcl/sb-md5/CVS
-@dirrm lib/sbcl/sb-md5
-@dirrm lib/sbcl/sb-introspect
-@dirrm lib/sbcl/sb-grovel/CVS
-@dirrm lib/sbcl/sb-grovel
-@dirrm lib/sbcl/sb-executable
-@dirrm lib/sbcl/sb-cover/CVS
-@dirrm lib/sbcl/sb-cover
-@dirrm lib/sbcl/sb-cltl2/CVS
-@dirrm lib/sbcl/sb-cltl2
-@dirrm lib/sbcl/sb-bsd-sockets/CVS
-@dirrm lib/sbcl/sb-bsd-sockets
-@dirrm lib/sbcl/sb-aclrepl/CVS
-@dirrm lib/sbcl/sb-aclrepl
-@dirrm lib/sbcl/asdf-install/CVS
-@dirrm lib/sbcl/asdf-install
-@dirrm lib/sbcl/asdf
-@dirrm lib/sbcl

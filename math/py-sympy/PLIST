@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/29 17:59:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:48 joerg Exp $
 bin/isympy${PYVERSSUFFIX}
 ${PYSITELIB}/sympy/__init__.py
 ${PYSITELIB}/sympy/__init__.pyc
@@ -973,73 +973,3 @@ ${PYSITELIB}/sympy/utilities/tests/test_tests_names.py
 ${PYSITELIB}/sympy/utilities/tests/test_tests_names.pyc
 ${PYSITELIB}/sympy/utilities/tests/test_tests_names.pyo
 man/man1/isympy${PYVERSSUFFIX}.1
-@dirrm ${PYSITELIB}/sympy/utilities/tests
-@dirrm ${PYSITELIB}/sympy/utilities/mathml/data
-@dirrm ${PYSITELIB}/sympy/utilities/mathml
-@dirrm ${PYSITELIB}/sympy/utilities
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/window/xlib
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/window/win32
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/window/carbon
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/window
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/media/drivers/openal
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/media/drivers/directsound
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/media/drivers/alsa
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/media/drivers
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/media
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/image/codecs
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/image
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/gl
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/font
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet
-@dirrm ${PYSITELIB}/sympy/thirdparty/pyglet
-@dirrm ${PYSITELIB}/sympy/thirdparty/mpmath
-@dirrm ${PYSITELIB}/sympy/thirdparty
-@dirrm ${PYSITELIB}/sympy/test_external
-@dirrm ${PYSITELIB}/sympy/statistics/tests
-@dirrm ${PYSITELIB}/sympy/statistics
-@dirrm ${PYSITELIB}/sympy/specfun/tests
-@dirrm ${PYSITELIB}/sympy/specfun
-@dirrm ${PYSITELIB}/sympy/solvers/tests
-@dirrm ${PYSITELIB}/sympy/solvers
-@dirrm ${PYSITELIB}/sympy/simplify/tests
-@dirrm ${PYSITELIB}/sympy/simplify
-@dirrm ${PYSITELIB}/sympy/series/tests
-@dirrm ${PYSITELIB}/sympy/series
-@dirrm ${PYSITELIB}/sympy/printing/tests
-@dirrm ${PYSITELIB}/sympy/printing/pretty/tests
-@dirrm ${PYSITELIB}/sympy/printing/pretty
-@dirrm ${PYSITELIB}/sympy/printing
-@dirrm ${PYSITELIB}/sympy/polys/tests
-@dirrm ${PYSITELIB}/sympy/polys
-@dirrm ${PYSITELIB}/sympy/polynomials/tests
-@dirrm ${PYSITELIB}/sympy/polynomials/fast
-@dirrm ${PYSITELIB}/sympy/polynomials
-@dirrm ${PYSITELIB}/sympy/plotting/tests
-@dirrm ${PYSITELIB}/sympy/plotting
-@dirrm ${PYSITELIB}/sympy/physics/tests
-@dirrm ${PYSITELIB}/sympy/physics
-@dirrm ${PYSITELIB}/sympy/parsing/tests
-@dirrm ${PYSITELIB}/sympy/parsing
-@dirrm ${PYSITELIB}/sympy/numerics/tests
-@dirrm ${PYSITELIB}/sympy/numerics
-@dirrm ${PYSITELIB}/sympy/ntheory/tests
-@dirrm ${PYSITELIB}/sympy/ntheory
-@dirrm ${PYSITELIB}/sympy/matrices/tests
-@dirrm ${PYSITELIB}/sympy/matrices
-@dirrm ${PYSITELIB}/sympy/interactive
-@dirrm ${PYSITELIB}/sympy/integrals/tests
-@dirrm ${PYSITELIB}/sympy/integrals
-@dirrm ${PYSITELIB}/sympy/geometry/tests
-@dirrm ${PYSITELIB}/sympy/geometry
-@dirrm ${PYSITELIB}/sympy/functions/special/tests
-@dirrm ${PYSITELIB}/sympy/functions/special
-@dirrm ${PYSITELIB}/sympy/functions/elementary/tests
-@dirrm ${PYSITELIB}/sympy/functions/elementary
-@dirrm ${PYSITELIB}/sympy/functions/combinatorial/tests
-@dirrm ${PYSITELIB}/sympy/functions/combinatorial
-@dirrm ${PYSITELIB}/sympy/functions
-@dirrm ${PYSITELIB}/sympy/core/tests
-@dirrm ${PYSITELIB}/sympy/core
-@dirrm ${PYSITELIB}/sympy/concrete/tests
-@dirrm ${PYSITELIB}/sympy/concrete
-@dirrm ${PYSITELIB}/sympy

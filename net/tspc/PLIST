@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/23 10:18:02 ghen Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:46 joerg Exp $
 man/man5/tspc.conf.5
 man/man8/tspc.8
 sbin/tspc
@@ -8,6 +8,3 @@ share/tspc/template/README
 share/tspc/template/checktunnel.sh
 share/tspc/template/${TARGET}.sh
 share/tspc/template/variables_environ
-@dirrm share/tspc/template
-@dirrm share/tspc
-@dirrm share/examples/tspc

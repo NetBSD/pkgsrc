@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/10 21:44:31 minskim Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:07:30 joerg Exp $
 bin/gem
 ${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rbconfig/datadir.rb
@@ -90,10 +90,3 @@ ${RUBY_VENDORLIB}/rubygems/version.rb
 ${RUBY_VENDORLIB}/rubygems/version_option.rb
 ${RUBY_VENDORLIB}/rubygems.rb
 ${RUBY_VENDORLIB}/ubygems.rb
-@dirrm ${RUBY_VENDORLIB}/rubygems/package/tar_reader
-@dirrm ${RUBY_VENDORLIB}/rubygems/package
-@dirrm ${RUBY_VENDORLIB}/rubygems/ext
-@dirrm ${RUBY_VENDORLIB}/rubygems/digest
-@dirrm ${RUBY_VENDORLIB}/rubygems/commands
-@dirrm ${RUBY_VENDORLIB}/rubygems
-@dirrm ${RUBY_VENDORLIB}/rbconfig

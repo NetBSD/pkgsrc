@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:34:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:49 joerg Exp $
 bin/tochnog
 share/doc/tochnog/tnp.ps.gz
 share/doc/tochnog/tnu.ps.gz
@@ -209,7 +209,3 @@ share/tochnog/tools/aba2tn.cc
 share/tochnog/tools/gmsh2tn.awk
 share/tochnog/tools/mkansys.awk
 share/tochnog/tools/mkgmsh.awk
-@dirrm share/tochnog/test
-@dirrm share/tochnog/tools
-@dirrm share/tochnog
-@dirrm share/doc/tochnog

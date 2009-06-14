@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/10 08:19:46 martin Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:28 joerg Exp $
 bin/cw2300
 bin/dump2300
 bin/fetch2300
@@ -11,4 +11,3 @@ bin/open2300
 bin/wu2300
 bin/xml2300
 share/examples/open2300/open2300.conf
-@dirrm share/examples/open2300

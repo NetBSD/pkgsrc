@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/29 02:05:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:34 joerg Exp $
 bin/logjam
 man/man1/logjam.1
 share/applications/logjam.desktop
@@ -12,5 +12,3 @@ share/locale/ru_RU/LC_MESSAGES/logjam.mo
 share/locale/uk_UA/LC_MESSAGES/logjam.mo
 share/pixmaps/logjam_goat.png
 share/pixmaps/logjam_pencil.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

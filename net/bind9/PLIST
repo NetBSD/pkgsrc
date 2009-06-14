@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/01/04 00:16:03 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:09:22 joerg Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -300,10 +300,3 @@ sbin/rndc
 sbin/rndc-confgen
 share/examples/rc.d/lwresd
 share/examples/rc.d/named9
-@dirrm include/lwres
-@dirrm include/isccfg
-@dirrm include/isccc
-@dirrm include/isc
-@dirrm include/dst
-@dirrm include/dns
-@dirrm include/bind9

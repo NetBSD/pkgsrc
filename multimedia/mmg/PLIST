@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/12/11 18:06:23 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:08:08 joerg Exp $
 bin/mmg
 man/man1/mmg.1
 share/doc/mmg/images/addingremovingattachments.gif
@@ -17,5 +17,3 @@ share/doc/mmg/images/videotrackoptions.gif
 share/doc/mmg/mkvmerge-gui.hhc
 share/doc/mmg/mkvmerge-gui.hhp
 share/doc/mmg/mkvmerge-gui.html
-@dirrm share/doc/mmg/images
-@dirrm share/doc/mmg

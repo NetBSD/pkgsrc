@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.python,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+@comment $NetBSD: PLIST.python,v 1.2 2009/06/14 18:09:21 joerg Exp $
 ${PYSITELIB}/avahi/__init__.py
 ${PYSITELIB}/avahi/__init__.pyc
 ${PYSITELIB}/avahi/__init__.pyo
@@ -16,5 +16,3 @@ man/man1/avahi-discover.1
 man/man1/avahi-set-host-name.1
 share/applications/avahi-discover.desktop
 share/avahi/interfaces/avahi-discover.glade
-@dirrm ${PYSITELIB}/avahi_discover
-@dirrm ${PYSITELIB}/avahi

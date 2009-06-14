@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/01/05 16:48:58 obache Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:03:29 joerg Exp $
 bin/gappletviewer
 bin/gjar
 bin/gjarsigner
@@ -142,26 +142,3 @@ share/classpath/examples/gnu/classpath/examples/swing/textstyles.html
 share/classpath/examples/gnu/classpath/examples/swing/welcome.html
 share/classpath/glibj.zip
 share/classpath/tools.zip
-@dirrm share/classpath/examples/gnu/classpath/examples/swing
-@dirrm share/classpath/examples/gnu/classpath/examples/print
-@dirrm share/classpath/examples/gnu/classpath/examples/midi
-@dirrm share/classpath/examples/gnu/classpath/examples/management
-@dirrm share/classpath/examples/gnu/classpath/examples/jawt
-@dirrm share/classpath/examples/gnu/classpath/examples/java2d
-@dirrm share/classpath/examples/gnu/classpath/examples/icons
-@dirrm share/classpath/examples/gnu/classpath/examples/html
-@dirrm share/classpath/examples/gnu/classpath/examples/datatransfer
-@dirrm share/classpath/examples/gnu/classpath/examples/awt
-@dirrm share/classpath/examples/gnu/classpath/examples/CORBA/swing/x5
-@dirrm share/classpath/examples/gnu/classpath/examples/CORBA/swing
-@dirrm share/classpath/examples/gnu/classpath/examples/CORBA/SimpleCommunication/communication
-@dirrm share/classpath/examples/gnu/classpath/examples/CORBA/SimpleCommunication
-@dirrm share/classpath/examples/gnu/classpath/examples/CORBA/NamingService
-@dirrm share/classpath/examples/gnu/classpath/examples/CORBA
-@dirrm share/classpath/examples/gnu/classpath/examples
-@dirrm share/classpath/examples/gnu/classpath
-@dirrm share/classpath/examples/gnu
-@dirrm share/classpath/examples
-@dirrm share/classpath
-@dirrm lib/security
-@dirrm lib/classpath

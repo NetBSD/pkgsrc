@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/13 17:11:33 shattered Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:35 joerg Exp $
 libexec/nagios/check_by_ssh
 libexec/nagios/check_clamd
 libexec/nagios/check_dhcp
@@ -49,8 +49,3 @@ libexec/nagios/utils.pm
 libexec/nagios/utils.sh
 share/nagios/locale/de/LC_MESSAGES/nagios-plugins.mo
 share/nagios/locale/fr/LC_MESSAGES/nagios-plugins.mo
-@dirrm share/nagios/locale/fr/LC_MESSAGES
-@dirrm share/nagios/locale/fr
-@dirrm share/nagios/locale/de/LC_MESSAGES
-@dirrm share/nagios/locale/de
-@dirrm share/nagios/locale

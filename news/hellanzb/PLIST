@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/30 13:26:39 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:10:06 joerg Exp $
 bin/hellanzb.py
 ${PYSITELIB}/Hellanzb/Core.py
 ${PYSITELIB}/Hellanzb/Core.pyc
@@ -92,10 +92,3 @@ ${PYSITELIB}/Hellanzb/external/elementtree/__init__.pyc
 ${PYSITELIB}/Hellanzb/external/elementtree/__init__.pyo
 share/doc/hellanzb/README
 share/examples/hellanzb/hellanzb.conf
-@dirrm share/examples/hellanzb
-@dirrm share/doc/hellanzb
-@dirrm ${PYSITELIB}/Hellanzb/external/elementtree
-@dirrm ${PYSITELIB}/Hellanzb/external
-@dirrm ${PYSITELIB}/Hellanzb/NZBLeecher
-@dirrm ${PYSITELIB}/Hellanzb/HellaXMLRPC
-@dirrm ${PYSITELIB}/Hellanzb

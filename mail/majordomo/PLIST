@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/23 22:56:16 he Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:37 joerg Exp $
 bin/approve
 bin/bounce
 bin/medit
@@ -52,12 +52,3 @@ share/examples/majordomo/lists/example-l-digest.passwd
 share/examples/majordomo/lists/example-l.info
 share/examples/majordomo/lists/example-l.passwd
 share/examples/majordomo/majordomo.cf
-@dirrm share/examples/majordomo/lists
-@dirrm share/examples/majordomo/digests/example-l-digest
-@dirrm share/examples/majordomo/digests
-@dirrm share/examples/majordomo/archives/example-l
-@dirrm share/examples/majordomo/archives
-@dirrm share/examples/majordomo
-@dirrm share/doc/majordomo
-@dirrm libexec/majordomo/Tools
-@dirrm libexec/majordomo
