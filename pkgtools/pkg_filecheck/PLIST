@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/13 16:15:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:02 joerg Exp $
 bin/builddb
 bin/pkg_filecheck
 man/man1/builddb.1
 man/man1/pkg_filecheck.1
 man/man5/pkg_filecheck.conf.5
 share/examples/pkg_filecheck/pkg_filecheck.conf
-@dirrm share/examples/pkg_filecheck

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/10 20:23:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:10:40 joerg Exp $
 bin/PVM_CLEAN
 bin/dqs_times332
 bin/dqs_execd332
@@ -30,5 +30,3 @@ share/doc/dqs/error_msg.htm
 share/examples/dqs/conf_file
 share/examples/dqs/key_file
 share/examples/dqs/resolve_file
-@dirrm share/examples/dqs
-@dirrm share/doc/dqs
