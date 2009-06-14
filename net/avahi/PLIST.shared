@@ -1,8 +1,3 @@
-@comment $NetBSD: PLIST.shared,v 1.2 2009/06/14 18:09:21 joerg Exp $
-@unexec ${RMDIR} %D/share/examples/avahi 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/avahi/introspection 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/avahi/interfaces 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/avahi 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/avahi 2>/dev/null || ${TRUE}
+@comment $NetBSD: PLIST.shared,v 1.3 2009/06/14 21:00:03 joerg Exp $
 @unexec ${RMDIR} %D/etc/avahi/services 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/avahi 2>/dev/null || ${TRUE}

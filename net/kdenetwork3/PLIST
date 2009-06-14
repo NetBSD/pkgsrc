@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2009/06/14 18:09:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.30 2009/06/14 21:00:04 joerg Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -1574,6 +1574,5 @@ share/kde/sounds/Kopete_Received.ogg
 share/kde/sounds/Kopete_Sent.ogg
 share/kde/sounds/Kopete_User_is_Online.ogg
 share/kde/sounds/ktalkd.wav
-@unexec ${RMDIR} %D/share/kde/apps/knewsticker 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdenetwork-apidocs/kopete/libkopete/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdenetwork-apidocs/kopete/html
+@pkgdir share/doc/kde/HTML/en/kdenetwork-apidocs/kopete/libkopete/html
+@pkgdir share/doc/kde/HTML/en/kdenetwork-apidocs/kopete/html

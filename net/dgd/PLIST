@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 21:00:03 joerg Exp $
 libexec/dgd
 share/doc/dgd/Copyright
 share/doc/dgd/Credits
@@ -146,8 +146,7 @@ libdata/dgd/mud/kernel/sys/objregd.c
 libdata/dgd/mud/kernel/sys/rsrcd.c
 libdata/dgd/mud/kernel/sys/userd.c
 share/examples/dgd/mud.dgd
-@exec ${MKDIR} %D/libdata/dgd/mud/kernel/data
-@exec ${MKDIR} %D/libdata/dgd/mud/usr/System
-@exec ${MKDIR} %D/libdata/dgd/mud/usr/admin
-@exec ${MKDIR} %D/libdata/dgd/mud/usr
-@exec ${MKDIR} %D/libdata/dgd/tmp
+@pkgdir libdata/dgd/mud/kernel/data
+@pkgdir libdata/dgd/mud/usr/System
+@pkgdir libdata/dgd/mud/usr/admin
+@pkgdir libdata/dgd/tmp

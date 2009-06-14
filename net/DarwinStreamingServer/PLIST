@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 21:00:03 joerg Exp $
 bin/MP3Broadcaster
 bin/PlaylistBroadcaster
 bin/QTBroadcaster
@@ -150,4 +150,4 @@ share/streaming/movies/sample_h264_100kbit.mp4
 share/streaming/movies/sample_h264_1mbit.mp4
 share/streaming/movies/sample_h264_300kbit.mp4
 share/streaming/readme.txt
-@exec ${MKDIR} %D/share/streaming/playlists
+@pkgdir share/streaming/playlists
