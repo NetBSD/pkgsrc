@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2340 2009/06/14 20:26:35 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2341 2009/06/14 20:32:42 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3137,3 +3137,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-DateTime-TimeZone to 0.91 [sno 2009-06-14]
 	Updated time/p5-DateTime-Format-Flexible to 0.09 [sno 2009-06-14]
 	Updated www/p5-HTTP-DAV to 0.38 [sno 2009-06-14]
+	Updated www/p5-HTTP-Proxy to 0.23 [sno 2009-06-14]
