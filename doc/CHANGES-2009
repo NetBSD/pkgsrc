@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2348 2009/06/14 22:01:11 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2349 2009/06/14 22:08:05 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3145,3 +3145,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/dnsmasq to 2.49 [roy 2009-06-14]
 	Updated databases/p5-DBD-ODBC to 1.22 [sno 2009-06-14]
 	Updated databases/p5-SQL-Abstract to 1.56 [sno 2009-06-14]
+	Updated databases/p5-Sort-SQL to 0.05 [sno 2009-06-14]
