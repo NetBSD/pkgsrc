@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/02 02:51:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:01:32 joerg Exp $
 share/doc/prime/emacs/customize.html
 share/doc/prime/emacs/figures/screenshots/conversion_1.png
 share/doc/prime/emacs/figures/screenshots/conversion_2.png
@@ -36,8 +36,3 @@ ${EMACS_LISPPREFIX}/prime-el/prime-server.el
 ${EMACS_LISPPREFIX}/prime-el/prime-socialite.el
 ${EMACS_LISPPREFIX}/prime-el/prime-style.el
 ${EMACS_LISPPREFIX}/prime-el/prime.el
-@dirrm ${EMACS_LISPPREFIX}/prime-el/contrib
-@dirrm ${EMACS_LISPPREFIX}/prime-el
-@dirrm share/doc/prime/emacs/figures/screenshots
-@dirrm share/doc/prime/emacs/figures
-@dirrm share/doc/prime/emacs

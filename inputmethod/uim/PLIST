@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/01/23 13:40:32 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:01:33 joerg Exp $
 ${PLIST.qt}bin/uim-chardict-qt
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
 ${PLIST.fep}bin/uim-fep
@@ -358,19 +358,4 @@ share/uim/wnn-custom.scm
 share/uim/wnn-key-custom.scm
 share/uim/wnn.scm
 share/uim/zaurus.scm
-@dirrm share/uim/pixmaps
-@dirrm share/uim/lib
-${PLIST.helperdata}@dirrm share/uim/helperdata
-@dirrm share/uim
-@comment in kde: @dirrm share/kde/apps/kicker/applets
-@dirrm share/doc/uim/uim-fep
-@dirrm share/doc/uim
-@comment in xdg-dirs: @dirrm share/applications
 @exec ${MKDIR} %D/lib/uim/notify
-@dirrm lib/uim/notify
-@dirrm lib/uim/plugin
-@dirrm lib/uim
-@comment in kde: @dirrm lib/kde3
-@comment in gtk2: @dirrm lib/gtk-2.0/2.10.0/immodules
-@comment in libbonobo: @dirrm lib/bonobo/servers
-@dirrm include/uim

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/28 02:42:06 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:01:31 joerg Exp $
 include/chewing/char.h
 include/chewing/chewing.h
 include/chewing/chewingio.h
@@ -16,5 +16,3 @@ share/chewing/dict.dat
 share/chewing/fonetree.dat
 share/chewing/ph_index.dat
 share/chewing/us_freq.dat
-@dirrm share/chewing
-@dirrm include/chewing

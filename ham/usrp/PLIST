@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/08/08 03:24:47 wulf Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:00:35 joerg Exp $
 bin/usrp_cal_dc_offset
 bin/usrper
 include/usrp_basic.h
@@ -33,6 +33,3 @@ share/usrp/rev4/multi_2rxhb_2tx.rbf
 share/usrp/rev4/std.ihx
 share/usrp/rev4/std_2rxhb_2tx.rbf
 share/usrp/rev4/std_4rx_0tx.rbf
-@dirrm share/usrp/rev4
-@dirrm share/usrp/rev2
-@dirrm share/usrp

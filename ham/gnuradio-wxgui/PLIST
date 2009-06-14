@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/08/08 03:23:20 wulf Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:00:34 joerg Exp $
 ${PYSITELIB}/gnuradio/wxgui/__init__.py
 ${PYSITELIB}/gnuradio/wxgui/__init__.pyc
 ${PYSITELIB}/gnuradio/wxgui/__init__.pyo
@@ -27,4 +27,3 @@ ${PYSITELIB}/gnuradio/wxgui/waterfallsink.py
 ${PYSITELIB}/gnuradio/wxgui/waterfallsink.pyc
 ${PYSITELIB}/gnuradio/wxgui/waterfallsink.pyo
 share/examples/gnuradio/conf.d/gr-wxgui.conf
-@dirrm ${PYSITELIB}/gnuradio/wxgui

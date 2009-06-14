@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/23 13:42:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:01:33 joerg Exp $
 qt4/plugins/inputmethods/libuiminputcontextplugin.la
-@comment in qt4-libs: @dirrm qt4/plugins/inputmethods

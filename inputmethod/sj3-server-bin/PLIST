@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:33:59 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:01:32 joerg Exp $
 bin/sj3
 bin/sj3dic
 bin/sj3mkdic
@@ -21,4 +21,3 @@ share/sj3/sj3lib.ms
 share/sj3/sj3serv.ms
 share/sj3/sjrc
 share/sj3/sjrk
-@dirrm share/sj3

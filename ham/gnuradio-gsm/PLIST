@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/08 03:12:26 wulf Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:00:33 joerg Exp $
 include/gnuradio/gsm_fr_decode_ps.h
 include/gnuradio/gsm_fr_encode_sp.h
 include/gnuradio/swig/gsm_full_rate.i
@@ -9,4 +9,3 @@ ${PYSITELIB}/gnuradio/vocoder/_gsm_full_rate.la
 ${PYSITELIB}/gnuradio/vocoder/gsm_full_rate.py
 ${PYSITELIB}/gnuradio/vocoder/gsm_full_rate.pyc
 ${PYSITELIB}/gnuradio/vocoder/gsm_full_rate.pyo
-@dirrm ${PYSITELIB}/gnuradio/vocoder

@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/02 15:18:12 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:01:30 joerg Exp $
 bin/kasumi
 share/kasumi/kasumi.png
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/kasumi.mo
-@dirrm share/kasumi

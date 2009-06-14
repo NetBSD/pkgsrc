@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:43:02 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:01:32 joerg Exp $
 ${EMACS_INFOPREFIX}/skk.info
 ${FOR_emacs20}${EMACS_LISPPREFIX}/skk/ccc.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/skk/ccc.el
@@ -108,9 +108,7 @@ ${FOR_xemacs215}${EMACS_LISPPREFIX}/skk/skk-xemacs.el
 ${FOR_xemacs215}${EMACS_LISPPREFIX}/skk/skk-xemacs.elc
 ${EMACS_LISPPREFIX}/skk/skk.el
 ${EMACS_LISPPREFIX}/skk/skk.elc
-@dirrm ${EMACS_LISPPREFIX}/skk
 share/skk/NICOLA-SKK.tut
 share/skk/SKK.tut
 share/skk/SKK.tut.E
 share/skk/skk.xpm
-@dirrm share/skk

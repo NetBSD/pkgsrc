@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/27 05:57:25 wulf Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:00:34 joerg Exp $
 bin/grig
 man/man1/grig.1
 share/grig/AUTHORS
@@ -11,5 +11,3 @@ share/pixmaps/grig/digits_small.png
 share/pixmaps/grig/grig-logo.png
 share/pixmaps/grig/ic910.png
 share/pixmaps/grig/smeter.png
-@dirrm share/pixmaps/grig
-@dirrm share/grig

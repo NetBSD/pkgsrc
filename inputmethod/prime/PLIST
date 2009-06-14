@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:50:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:01:32 joerg Exp $
 bin/prime
 bin/prime-dict-convert
 bin/prime-dict-index
@@ -65,12 +65,3 @@ share/doc/prime/uim_prime.html
 share/doc/prime/usage.html
 share/prime/grammar/prime-grammar
 share/prime/makedict/canna2prime.table
-@dirrm share/prime/makedict
-@dirrm share/prime/grammar
-@dirrm share/doc/prime/uim
-@dirrm share/doc/prime/figures
-@dirrm share/doc/prime/examples
-@dirrm share/doc/prime
-@dirrm ${RUBY_VENDORLIB}/prime/makedict
-@dirrm ${RUBY_VENDORLIB}/prime/grammar
-@dirrm ${RUBY_VENDORLIB}/prime/engine
