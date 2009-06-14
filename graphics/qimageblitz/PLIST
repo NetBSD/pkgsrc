@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/04 10:07:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:27 joerg Exp $
 bin/blitztest
 include/qimageblitz/blitzcpu.h
 include/qimageblitz/qimageblitz.h
@@ -7,4 +7,3 @@ lib/libqimageblitz.so
 lib/libqimageblitz.so.4
 lib/libqimageblitz.so.4.0.0
 lib/pkgconfig/qimageblitz.pc
-@dirrm include/qimageblitz

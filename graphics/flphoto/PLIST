@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/28 16:48:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:12 joerg Exp $
 bin/flphoto
 man/man1/flphoto.1
 man/man5/album.5
@@ -41,4 +41,3 @@ share/locale/fr/flphoto_fr
 share/locale/it/flphoto_it
 share/locale/nl/flphoto_nl
 share/locale/pt/flphoto_pt
-@dirrm share/doc/flphoto

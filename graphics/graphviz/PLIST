@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2009/05/17 12:55:52 sno Exp $
+@comment $NetBSD: PLIST,v 1.33 2009/06/14 17:59:16 joerg Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -414,52 +414,20 @@ share/graphviz/lefty/lefty.psp
 share/graphviz/lefty/slides.lefty
 share/graphviz/lefty/tree.lefty
 @exec ${MKDIR} %D/share/graphviz/smyrna
-@dirrm share/graphviz/smyrna
-@dirrm share/graphviz/lefty
-@dirrm share/graphviz/graphs/undirected
-@dirrm share/graphviz/graphs/directed
-@dirrm share/graphviz/graphs
 @exec ${MKDIR} %D/share/graphviz/examples
-@dirrm share/graphviz/examples
-@dirrm share/graphviz/doc/pdf
-@dirrm share/graphviz/doc/html/schema
-@dirrm share/graphviz/doc/html/info
-@dirrm share/graphviz/doc/html
-@dirrm share/graphviz/doc
 @exec ${MKDIR} %D/share/graphviz/demo/pathplan_data
-@dirrm share/graphviz/demo/pathplan_data
-@dirrm share/graphviz/demo
-@dirrm share/graphviz
 @exec ${MKDIR} %D/lib/lua/5.1
-@dirrm lib/lua/5.1
-@dirrm lib/graphviz/tcl
 @exec ${MKDIR} %D/lib/graphviz/sharp
-@dirrm lib/graphviz/sharp
 @exec ${MKDIR} %D/lib/graphviz/ruby
-@dirrm lib/graphviz/ruby
 @exec ${MKDIR} %D/lib/graphviz/python25
-@dirrm lib/graphviz/python25
 @exec ${MKDIR} %D/lib/graphviz/python24
-@dirrm lib/graphviz/python24
 @exec ${MKDIR} %D/lib/graphviz/python23
-@dirrm lib/graphviz/python23
 @exec ${MKDIR} %D/lib/graphviz/python
-@dirrm lib/graphviz/python
 @exec ${MKDIR} %D/lib/graphviz/php
-@dirrm lib/graphviz/php
 @exec ${MKDIR} %D/lib/graphviz/perl
-@dirrm lib/graphviz/perl
 @exec ${MKDIR} %D/lib/graphviz/ocaml
-@dirrm lib/graphviz/ocaml
 @exec ${MKDIR} %D/lib/graphviz/lua
-@dirrm lib/graphviz/lua
 @exec ${MKDIR} %D/lib/graphviz/java
-@dirrm lib/graphviz/java
 @exec ${MKDIR} %D/lib/graphviz/io
-@dirrm lib/graphviz/io
 @exec ${MKDIR} %D/lib/graphviz/guile
-@dirrm lib/graphviz/guile
 @exec ${MKDIR} %D/lib/graphviz/R
-@dirrm lib/graphviz/R
-@dirrm lib/graphviz
-@dirrm include/graphviz

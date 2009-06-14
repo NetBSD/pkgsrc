@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/26 04:13:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:24 joerg Exp $
 bin/pixie
 lib/libpixie_misc.la
 lib/pixie.la
@@ -233,12 +233,3 @@ share/kde/mimelnk/image/x-miff.desktop
 share/kde/mimelnk/image/x-pict.desktop
 share/kde/mimelnk/image/x-tga.desktop
 share/kde/mimelnk/image/x-xwd.desktop
-@dirrm share/kde/apps/pixie/toolbar
-@dirrm share/kde/apps/pixie/doc/en/roundcorner
-@dirrm share/kde/apps/pixie/doc/en/list
-@dirrm share/kde/apps/pixie/doc/en/liquid
-@dirrm share/kde/apps/pixie/doc/en/framed
-@dirrm share/kde/apps/pixie/doc/en/basic
-@dirrm share/kde/apps/pixie/doc/en
-@dirrm share/kde/apps/pixie/doc
-@dirrm share/kde/apps/pixie

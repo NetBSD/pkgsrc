@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:59:18 joerg Exp $
 bin/imlib2-config
 ${PLIST.x11}bin/imlib2_bumpmap
 ${PLIST.x11}bin/imlib2_colorspace
@@ -48,10 +48,3 @@ share/imlib2/data/images/sh2.png
 share/imlib2/data/images/sh3.png
 share/imlib2/data/images/stop.png
 share/imlib2/data/images/tnt.png
-@dirrm share/imlib2/data/images
-@dirrm share/imlib2/data/fonts
-@dirrm share/imlib2/data
-@dirrm share/imlib2
-@dirrm lib/imlib2/loaders
-@dirrm lib/imlib2/filters
-@dirrm lib/imlib2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/18 21:40:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:29 joerg Exp $
 bin/sk2ppm
 bin/sk2ps
 bin/skconvert
@@ -601,28 +601,3 @@ share/examples/skencil/line.sk
 share/examples/skencil/pathtext.sk
 share/examples/skencil/pattern.ppm
 share/examples/skencil/text.sk
-@dirrm share/examples/skencil
-@dirrm share/doc/skencil/Doc/Images
-@dirrm share/doc/skencil/Doc
-@dirrm share/doc/skencil
-@dirrm lib/${PKGNAME}/Sketch/UI
-@dirrm lib/${PKGNAME}/Sketch/Scripting
-@dirrm lib/${PKGNAME}/Sketch/Pixmaps/New12
-@dirrm lib/${PKGNAME}/Sketch/Pixmaps
-@dirrm lib/${PKGNAME}/Sketch/Modules
-@dirrm lib/${PKGNAME}/Sketch/Lib
-@dirrm lib/${PKGNAME}/Sketch/Graphics
-@dirrm lib/${PKGNAME}/Sketch/Base
-@dirrm lib/${PKGNAME}/Sketch
-@dirrm lib/${PKGNAME}/Script
-@dirrm lib/${PKGNAME}/Resources/Misc
-@dirrm lib/${PKGNAME}/Resources/Fontmetrics
-@dirrm lib/${PKGNAME}/Resources
-@dirrm lib/${PKGNAME}/Plugins/Objects/Lib/multilinetext
-@dirrm lib/${PKGNAME}/Plugins/Objects/Lib
-@dirrm lib/${PKGNAME}/Plugins/Objects
-@dirrm lib/${PKGNAME}/Plugins/Filters/Lib
-@dirrm lib/${PKGNAME}/Plugins/Filters
-@dirrm lib/${PKGNAME}/Plugins
-@dirrm lib/${PKGNAME}/Lib
-@dirrm lib/${PKGNAME}

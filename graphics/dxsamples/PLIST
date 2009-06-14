@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/13 16:40:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:09 joerg Exp $
 dx/samples/callmodule/README
 dx/samples/callmodule/Simple.c
 dx/samples/callmodule/ThunderStreamlines.c
@@ -1366,54 +1366,3 @@ dx/samples/util/mpeg/write_yuv.cfg
 dx/samples/util/mpeg/write_yuv.net
 dx/samples/util/plot3d/Plot3DtoDX.c
 dx/samples/util/plot3d/README
-@dirrm dx/samples/util/plot3d
-@dirrm dx/samples/util/mpeg
-@dirrm dx/samples/util/fluent
-@dirrm dx/samples/util/dxf
-@dirrm dx/samples/util/biorad-pic
-@dirrm dx/samples/util
-@dirrm dx/samples/user
-@dirrm dx/samples/tutorial
-@dirrm dx/samples/supervise/simpledemo/interactors
-@dirrm dx/samples/supervise/simpledemo
-@dirrm dx/samples/supervise/mediumdemo/interactors
-@dirrm dx/samples/supervise/mediumdemo
-@dirrm dx/samples/supervise/interactors
-@dirrm dx/samples/supervise/imagedemo
-@dirrm dx/samples/supervise/complexdemo/nets
-@dirrm dx/samples/supervise/complexdemo/interactors
-@dirrm dx/samples/supervise/complexdemo/data
-@dirrm dx/samples/supervise/complexdemo
-@dirrm dx/samples/supervise
-@dirrm dx/samples/stereo/src
-@dirrm dx/samples/stereo
-@dirrm dx/samples/scripts
-@dirrm dx/samples/programs/SUPERVISE
-@dirrm dx/samples/programs/SIMPLE
-@dirrm dx/samples/programs/SEQUENCER
-@dirrm dx/samples/programs/SCATTERED
-@dirrm dx/samples/programs/RENDERING
-@dirrm dx/samples/programs/PROBES
-@dirrm dx/samples/programs/PLOTTING
-@dirrm dx/samples/programs/MISC
-@dirrm dx/samples/programs/LOOPING
-@dirrm dx/samples/programs/INTERFACE_CONTROL
-@dirrm dx/samples/programs/IMPORTING
-@dirrm dx/samples/programs/IMAGE_PROCESSING
-@dirrm dx/samples/programs/DISTRIBUTED_PROCESSING
-@dirrm dx/samples/programs/DEBUGGING
-@dirrm dx/samples/programs/DATA_DRIVEN_INTERACTORS
-@dirrm dx/samples/programs/COMPUTE
-@dirrm dx/samples/programs/COLORMAP_EDITOR
-@dirrm dx/samples/programs/CATEGORICAL
-@dirrm dx/samples/programs/ANNOTATION
-@dirrm dx/samples/programs/3D_DATA
-@dirrm dx/samples/programs/2D_DATA
-@dirrm dx/samples/programs
-@dirrm dx/samples/program_guide
-@dirrm dx/samples/outboard
-@dirrm dx/samples/macros
-@dirrm dx/samples/dxlink
-@dirrm dx/samples/data
-@dirrm dx/samples/callmodule
-@dirrm dx/samples

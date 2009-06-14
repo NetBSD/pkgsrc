@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/08/31 23:22:21 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:17 joerg Exp $
 include/gtkimageview/cursors.h
 include/gtkimageview/gdkpixbufdrawcache.h
 include/gtkimageview/gtkanimview.h
@@ -45,5 +45,3 @@ share/gtk-doc/html/gtkimageview/rn01.html
 share/gtk-doc/html/gtkimageview/sourcecode.html
 share/gtk-doc/html/gtkimageview/style.css
 share/gtk-doc/html/gtkimageview/up.png
-@dirrm share/gtk-doc/html/gtkimageview
-@dirrm include/gtkimageview

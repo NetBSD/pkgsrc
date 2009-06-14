@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/07/15 19:11:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:32 joerg Exp $
 bin/bggen
 bin/vdcomp
 bin/xcmap
@@ -12,4 +12,3 @@ ${IMAKE_MAN_DIR}/xcmap.${IMAKE_MANNEWSUFFIX}
 ${IMAKE_MAN_DIR}/xvpictoppm.${IMAKE_MANNEWSUFFIX}
 share/doc/xv/README
 share/doc/xv/xvdocs.ps
-@dirrm share/doc/xv

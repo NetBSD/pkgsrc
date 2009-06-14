@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:16 joerg Exp $
 bin/dc21x_cam
 bin/gphoto
 bin/gphoto-exifdump
@@ -51,9 +51,3 @@ share/gphoto/gallery/RedNGray/next.gif
 share/gphoto/gallery/RedNGray/picture.html
 share/gphoto/gallery/RedNGray/previous.gif
 share/gphoto/gallery/RedNGray/thumbnail.html
-@dirrm share/gphoto/gallery/RedNGray
-@dirrm share/gphoto/gallery/Default
-@dirrm share/gphoto/gallery/CSStheme
-@dirrm share/gphoto/gallery
-@dirrm share/gphoto/doc
-@dirrm share/gphoto

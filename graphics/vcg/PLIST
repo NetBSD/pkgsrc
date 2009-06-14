@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:18 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:30 joerg Exp $
 bin/pbm2hp
 bin/pbmrot90
 bin/pbmshift
@@ -43,5 +43,3 @@ share/examples/vcg/tree1.vcg
 share/examples/vcg/tree2.vcg
 share/examples/vcg/tstree.vcg
 share/examples/vcg/xerox.vcg
-@dirrm share/doc/vcg
-@dirrm share/examples/vcg
