@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/06/19 14:46:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:26 joerg Exp $
 bin/vaporadmin
 ${RUBY_VENDORLIB}/vapor.rb
 ${RUBY_VENDORLIB}/vapor/persistencemgr.rb
@@ -114,22 +114,3 @@ ${RUBY_DOC}/vapor/examples/university/university.xml
 ${RUBY_DOC}/vapor/metadata-example.xml
 ${RUBY_DOC}/vapor/vapor.dtd
 ${RUBY_EG}/vapor
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor/Exceptions/ClassNotDeletableError.src
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor/Exceptions/ClassNotKnownError.src
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor/Exceptions/CommitError.src
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor/Exceptions
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor/Extent.src
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor/Persistable.src
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor/PersistenceManager.src
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor/RepositoryManager.src
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor/Transaction.src
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor/TransactionLog.src
-@dirrm ${RUBY_DOC}/vapor/api/classes/Vapor
-@dirrm ${RUBY_DOC}/vapor/api/classes
-@dirrm ${RUBY_DOC}/vapor/api/files/vapor
-@dirrm ${RUBY_DOC}/vapor/api/files
-@dirrm ${RUBY_DOC}/vapor/api
-@dirrm ${RUBY_DOC}/vapor/examples/university
-@dirrm ${RUBY_DOC}/vapor/examples
-@dirrm ${RUBY_DOC}/vapor
-@dirrm ${RUBY_VENDORLIB}/vapor

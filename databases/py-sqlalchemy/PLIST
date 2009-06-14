@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/04 20:42:28 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:22 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -196,11 +196,3 @@ ${PYSITELIB}/sqlalchemy/types.pyo
 ${PYSITELIB}/sqlalchemy/util.py
 ${PYSITELIB}/sqlalchemy/util.pyc
 ${PYSITELIB}/sqlalchemy/util.pyo
-@dirrm ${PYSITELIB}/sqlalchemy/sql
-@dirrm ${PYSITELIB}/sqlalchemy/orm
-@dirrm ${PYSITELIB}/sqlalchemy/mods
-@dirrm ${PYSITELIB}/sqlalchemy/ext
-@dirrm ${PYSITELIB}/sqlalchemy/engine
-@dirrm ${PYSITELIB}/sqlalchemy/databases
-@dirrm ${PYSITELIB}/sqlalchemy
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/01/18 22:13:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:39:11 joerg Exp $
 bin/wvAbw
 bin/wvCleanLatex
 bin/wvConvert
@@ -480,7 +480,3 @@ share/wv/wvText.xml
 share/wv/wvWml.xml
 share/wv/wvXml.dtd
 share/wv/wvXml.xml
-@dirrm share/wv/wingdingfont
-@dirrm share/wv/patterns
-@dirrm share/wv
-@dirrm include/wv

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/01 09:42:13 cube Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:31 joerg Exp $
 sbin/rtx-shredder
 sbin/rtx-validator
 ${RT_SHARE_DIR}/html/Admin/Tools/Shredder/Elements/Error/NoRights
@@ -16,15 +16,3 @@ ${RT_SHARE_DIR}/html/Admin/Tools/Shredder/index.html
 ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/Admin/Elements/ToolTabs/Default
 ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/Elements/Header/Head
 ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/Search/Results.html/SearchActions
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/Search/Results.html
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/Search
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/Elements/Header
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/Elements
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/Admin/Elements/ToolTabs
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/Admin/Elements
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/Admin
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-Shredder/
-@dirrm ${RT_SHARE_DIR}/html/Admin/Tools/Shredder/Elements/Object
-@dirrm ${RT_SHARE_DIR}/html/Admin/Tools/Shredder/Elements/Error
-@dirrm ${RT_SHARE_DIR}/html/Admin/Tools/Shredder/Elements
-@dirrm ${RT_SHARE_DIR}/html/Admin/Tools/Shredder

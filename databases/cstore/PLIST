@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/10 11:33:00 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:14 joerg Exp $
 bin/cstoreqp
 cstore/data/D1.data.mini
 cstore/data/D1.data.retsupp50sort
@@ -64,6 +64,3 @@ share/doc/cstore/ReleaseOverview.txt
 share/doc/cstore/Union.doc
 share/doc/cstore/thesis.pdf
 share/doc/cstore/vldb.pdf
-@dirrm share/doc/cstore
-@dirrm cstore/data
-@dirrm cstore

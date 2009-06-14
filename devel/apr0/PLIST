@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/24 19:31:24 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:33 joerg Exp $
 bin/apr-config
 bin/apu-config
 include/apr-0/apr.h
@@ -87,7 +87,3 @@ libexec/apr/libtool
 libexec/apr/make_exports.awk
 libexec/apr/make_var_export.awk
 libexec/apr/mkdir.sh
-@dirrm libexec/apr
-@dirrm include/apr-0/arch/unix
-@dirrm include/apr-0/arch
-@dirrm include/apr-0

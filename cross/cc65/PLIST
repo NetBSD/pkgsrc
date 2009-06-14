@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/08 19:53:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:39:53 joerg Exp $
 bin/ar65
 bin/ca65
 bin/ca65html
@@ -246,19 +246,3 @@ share/doc/cc65/supervision16.cfg
 share/doc/cc65/supervision64.cfg
 share/doc/cc65/supervision.cfg
 share/doc/cc65/vic20.cfg
-@dirrm share/doc/cc65
-@dirrm lib/cc65/tgi
-@dirrm lib/cc65/ser
-@dirrm lib/cc65/mou
-@dirrm lib/cc65/lib
-@dirrm lib/cc65/joy
-@dirrm lib/cc65/include/tgi
-@dirrm lib/cc65/include/sys
-@dirrm lib/cc65/include/mouse
-@dirrm lib/cc65/include/joystick
-@dirrm lib/cc65/include/geos
-@dirrm lib/cc65/include/em
-@dirrm lib/cc65/include
-@dirrm lib/cc65/emd
-@dirrm lib/cc65/asminc
-@dirrm lib/cc65

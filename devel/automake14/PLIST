@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/30 03:44:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:34 joerg Exp $
 bin/aclocal-1.4
 bin/automake-1.4
 info/automake14.info
@@ -77,5 +77,3 @@ share/automake-1.4/texi-vers.am
 share/automake-1.4/texinfo.tex
 share/automake-1.4/texinfos.am
 share/automake-1.4/ylwrap
-@dirrm share/aclocal-1.4
-@dirrm share/automake-1.4
