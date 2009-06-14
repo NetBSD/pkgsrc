@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/04 18:53:54 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 19:10:38 joerg Exp $
 bin/quake3arena
 lib/lokigames/quake3arena/quake3arena
 lib/lokigames/quake3arena/baseq3/pak1.pk3
@@ -10,7 +10,3 @@ lib/lokigames/quake3arena/baseq3/pak6.pk3
 lib/lokigames/quake3arena/baseq3/pak7.pk3
 lib/lokigames/quake3arena/baseq3/pak8.pk3
 share/doc/lokigames/quake3arena-README
-@unexec ${RMDIR} -p %D/share/doc/lokigames 2>/dev/null || ${TRUE}
-@comment next dir not necessarily empty, since the game data file could
-@comment be there
-@unexec ${RMDIR} -p %D/lib/lokigames/quake3arena/baseq3 2>/dev/null || ${TRUE}

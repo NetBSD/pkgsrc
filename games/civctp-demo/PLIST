@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 19:10:35 joerg Exp $
 bin/civctp-demo
 lib/lokigames/civctp-demo/appstr.txt
 lib/lokigames/civctp-demo/civctp-demo
@@ -554,5 +554,3 @@ lib/lokigames/civctp-demo/ctp_data/english/uidata/layouts/victorymovie.ldl
 lib/lokigames/civctp-demo/ctp_data/english/uidata/layouts/victoryscreen.ldl
 lib/lokigames/civctp-demo/ctp_data/english/uidata/layouts/wondermovie.ldl
 share/doc/lokigames/civctp-demo-README
-@unexec ${RMDIR} -p %D/lib/lokigames 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/share/doc/lokigames 2>/dev/null || ${TRUE}

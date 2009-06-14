@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 19:10:38 joerg Exp $
 bin/tegclient
 bin/tegrobot
 bin/tegserver
@@ -256,5 +256,5 @@ share/pixmaps/teg_pix/themes/sentimental/turquia.png
 share/pixmaps/teg_pix/themes/sentimental/uruguay.png
 share/pixmaps/teg_pix/themes/sentimental/yukon.png
 share/pixmaps/teg_pix/themes/sentimental/zaire.png
-@exec ${MKDIR} %D/share/gnome/help/teg/pl/stylesheet-images
-@exec ${MKDIR} %D/share/gnome/help/teg/C/stylesheet-images
+@pkgdir share/gnome/help/teg/pl/stylesheet-images
+@pkgdir share/gnome/help/teg/C/stylesheet-images

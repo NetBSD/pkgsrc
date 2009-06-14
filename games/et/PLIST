@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 19:10:36 joerg Exp $
 bin/et
 bin/etded
 lib/lokigames/et/CHANGES
@@ -240,4 +240,4 @@ lib/lokigames/et/Docs/Help/Compatibility/redstripe.jpg
 lib/lokigames/et/Docs/Help/Compatibility/style_ie.css
 lib/lokigames/et/Docs/Help/Default.htm
 lib/lokigames/et/Docs/EULA_Wolfenstein_Enemy_Territory.txt
-@exec ${MKDIR} %D/lib/lokigames/et/Docs/Help/_private
+@pkgdir lib/lokigames/et/Docs/Help/_private

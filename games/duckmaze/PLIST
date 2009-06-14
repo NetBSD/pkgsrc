@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 19:10:36 joerg Exp $
 bin/duckmaze
 share/duckmaze/doc/COPYING.txt
 share/duckmaze/doc/TODO.txt
@@ -35,5 +35,5 @@ share/duckmaze/levels/level_018
 share/duckmaze/mopelib/__init__.py
 share/duckmaze/mopelib/mopelib.py
 share/duckmaze/version
-@exec ${MKDIR} %D/share/duckmaze/sounds
-@exec ${MKDIR} %D/share/duckmaze/music
+@pkgdir share/duckmaze/sounds
+@pkgdir share/duckmaze/music

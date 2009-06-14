@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/06/14 17:56:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 19:10:37 joerg Exp $
 bin/atlantik
 bin/kasteroids
 bin/katomic
@@ -2482,4 +2482,4 @@ share/kde/mimelnk/application/x-kolf.desktop
 share/kde/mimelnk/application/x-kourse.desktop
 share/kde/mimelnk/application/x-tuberling.desktop
 share/kde/services/atlantik.protocol
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdegames-apidocs/libkdegames/html
+@pkgdir share/doc/kde/HTML/en/kdegames-apidocs/libkdegames/html

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 19:10:35 joerg Exp $
 bin/angband
 share/games/angband/lib/apex/scores.raw
 share/games/angband/lib/data/artifact.raw
@@ -112,4 +112,3 @@ share/games/angband/lib/script/store.lua
 share/games/angband/lib/script/test.lua
 share/games/angband/lib/script/trace.lua
 share/games/angband/lib/xtra/font/16x16.txt
-@unexec ${RM} %D/share/games 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 19:10:36 joerg Exp $
 bin/heretic2-demo
 lib/lokigames/heretic2-demo/base/book/back/b_conback8.bk
 lib/lokigames/heretic2-demo/base/book/back/b_conback8_00.m8
@@ -1888,5 +1888,3 @@ lib/lokigames/heretic2-demo/icon.xpm
 lib/lokigames/heretic2-demo/ref_glx.so
 share/doc/lokigames/heretic2-demo-QuickStart.txt
 share/doc/lokigames/heretic2-demo-README
-@unexec ${RMDIR} -p %D/lib/lokigames 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/share/doc/lokigames 2>/dev/null || ${TRUE}
