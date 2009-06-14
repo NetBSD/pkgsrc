@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/12/11 13:30:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:00:23 joerg Exp $
 bin/htmllint
 libexec/cgi-bin/htmllint.cgi
 libexec/cgi-bin/htmllint.env
@@ -127,7 +127,3 @@ share/httpd/htdocs/htmllint/xhtml1-frameset.rul
 share/httpd/htdocs/htmllint/xhtml1-strict.rul
 share/httpd/htdocs/htmllint/xhtml1-transitional.rul
 share/httpd/htdocs/htmllint/xhtml11.rul
-@dirrm share/httpd/htdocs/htmllint/images
-@dirrm share/httpd/htdocs/htmllint
-@unexec ${RMDIR} %D/share/httpd/htdocs 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/httpd 2>/dev/null || ${TRUE}

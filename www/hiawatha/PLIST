@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:07 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:23 joerg Exp $
 lib/java/hiawatha/hiawatha.jar
 lib/java/hiawatha/xsls.jar
 share/examples/hiawatha/simple.cfg
@@ -78,22 +78,3 @@ share/examples/hiawatha/WEBROOT/index.xml
 share/examples/hiawatha/WEBROOT/index.xsl
 share/examples/hiawatha/WEBROOT/images/sitedrivenby.gif
 share/examples/rc.d/hiawatha
-@dirrm share/examples/hiawatha/pault.com/xsl-include
-@dirrm share/examples/hiawatha/pault.com/xsl-bin
-@dirrm share/examples/hiawatha/pault.com/unsup/Some2XML
-@dirrm share/examples/hiawatha/pault.com/unsup/Pxsl
-@dirrm share/examples/hiawatha/pault.com/unsup/Phttpd
-@dirrm share/examples/hiawatha/pault.com/unsup/PJC
-@dirrm share/examples/hiawatha/pault.com/unsup
-@dirrm share/examples/hiawatha/pault.com/prod/XSLScript
-@dirrm share/examples/hiawatha/pault.com/prod/Ux/uxdoc
-@dirrm share/examples/hiawatha/pault.com/prod/Ux
-@dirrm share/examples/hiawatha/pault.com/prod/Hiawatha
-@dirrm share/examples/hiawatha/pault.com/prod
-@dirrm share/examples/hiawatha/pault.com/images
-@dirrm share/examples/hiawatha/pault.com/css
-@dirrm share/examples/hiawatha/pault.com
-@dirrm share/examples/hiawatha/WEBROOT/images
-@dirrm share/examples/hiawatha/WEBROOT
-@dirrm share/examples/hiawatha
-@dirrm lib/java/hiawatha

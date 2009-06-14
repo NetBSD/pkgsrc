@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:22:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:21 joerg Exp $
 bin/erubis
 ${GEM_HOME}/cache/erubis-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES.txt
@@ -291,31 +291,3 @@ ${GEM_LIBDIR}/test/test-users-guide.rb
 ${GEM_LIBDIR}/test/test.rb
 ${GEM_LIBDIR}/test/testutil.rb
 ${GEM_HOME}/specifications/erubis-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/data/users-guide
-@dirrm ${GEM_LIBDIR}/test/data
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/erubis/helpers
-@dirrm ${GEM_LIBDIR}/lib/erubis/engine
-@dirrm ${GEM_LIBDIR}/lib/erubis
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples/pi
-@dirrm ${GEM_LIBDIR}/examples/basic
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}/doc-api/files/erubis/helpers
-@dirrm ${GEM_LIBDIR}/doc-api/files/erubis/engine
-@dirrm ${GEM_LIBDIR}/doc-api/files/erubis
-@dirrm ${GEM_LIBDIR}/doc-api/files
-@dirrm ${GEM_LIBDIR}/doc-api/classes/Erubis/PI
-@dirrm ${GEM_LIBDIR}/doc-api/classes/Erubis/Helpers/RailsHelper
-@dirrm ${GEM_LIBDIR}/doc-api/classes/Erubis/Helpers
-@dirrm ${GEM_LIBDIR}/doc-api/classes/Erubis/Basic
-@dirrm ${GEM_LIBDIR}/doc-api/classes/Erubis
-@dirrm ${GEM_LIBDIR}/doc-api/classes
-@dirrm ${GEM_LIBDIR}/doc-api
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}/contrib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}/benchmark/templates
-@dirrm ${GEM_LIBDIR}/benchmark
-@dirrm ${GEM_LIBDIR}
-@exec ${MKDIR} %D/${GEM_DOCDIR}

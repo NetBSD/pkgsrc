@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/05 01:58:41 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:32 joerg Exp $
 ${PYSITELIB}/Nevow.pth
 ${PYSITELIB}/Nevow/formless/freeform-default.css
 ${PYSITELIB}/Nevow/formless/__init__.py
@@ -176,9 +176,3 @@ ${PYSITELIB}/Nevow/nevow/vhost.pyo
 ${PYSITELIB}/Nevow/nevow/wsgi.py
 ${PYSITELIB}/Nevow/nevow/wsgi.pyc
 ${PYSITELIB}/Nevow/nevow/wsgi.pyo
-@dirrm ${PYSITELIB}/Nevow/nevow/test
-@dirrm ${PYSITELIB}/Nevow/nevow/flat
-@dirrm ${PYSITELIB}/Nevow/nevow
-@dirrm ${PYSITELIB}/Nevow/formless/test
-@dirrm ${PYSITELIB}/Nevow/formless
-@dirrm ${PYSITELIB}/Nevow

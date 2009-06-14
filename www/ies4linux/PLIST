@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/02 20:30:44 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:23 joerg Exp $
 bin/ies4linux
 share/ies4linux/LICENSE
 share/ies4linux/README
@@ -63,11 +63,3 @@ share/ies4linux/winereg/ie5.reg
 share/ies4linux/winereg/ie55.reg
 share/ies4linux/winereg/ie6.reg
 share/ies4linux/winereg/ie7.reg
-@dirrm share/ies4linux/winereg
-@dirrm share/ies4linux/ui/pygtk
-@dirrm share/ies4linux/ui/kommander
-@dirrm share/ies4linux/ui
-@dirrm share/ies4linux/mac
-@dirrm share/ies4linux/lib
-@dirrm share/ies4linux/lang
-@dirrm share/ies4linux

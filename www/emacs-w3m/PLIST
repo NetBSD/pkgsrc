@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:43:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 22:00:21 joerg Exp $
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
 ${EMACS_LISPPREFIX}/w3m/ChangeLog.1
 ${EMACS_LISPPREFIX}/w3m/mew-w3m.el
@@ -340,5 +340,3 @@ ${PLIST.gui}${ETCDIR}/state-11.xpm
 ${PLIST.gui}${ETCDIR}/weather-up.xpm
 info/emacs-w3m-ja.info
 info/emacs-w3m.info
-@dirrm ${EMACS_LISPPREFIX}/w3m
-@dirrm ${ETCDIR}

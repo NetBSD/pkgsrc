@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/14 20:41:19 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:19 joerg Exp $
 include/cgi.h
 lib/libcgi.la
 libexec/cgi-bin/cgitest
@@ -18,4 +18,3 @@ man/man3/cgiSetType.3
 man/man5/cgi.5
 share/examples/cgilib/cgitest.c
 share/examples/cgilib/jumpto.c
-@dirrm share/examples/cgilib

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2008/07/10 15:18:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.38 2009/06/14 22:00:18 joerg Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -951,7 +951,6 @@ share/httpd/manual/style/css/manual-zip-100pc.css
 share/httpd/manual/style/css/manual-zip.css
 share/httpd/manual/style/css/manual.css
 share/httpd/manual/style/faq.dtd
-@exec ${MKDIR} %D/share/httpd/manual/style/lang
 share/httpd/manual/style/lang.dtd
 share/httpd/manual/style/latex/atbeginend.sty
 share/httpd/manual/style/latex/common.xsl
@@ -1035,30 +1034,4 @@ share/httpd/manual/vhosts/name-based.html.en
 share/httpd/manual/vhosts/name-based.html.es
 share/httpd/manual/vhosts/name-based.html.ja.euc-jp
 share/httpd/manual/vhosts/name-based.html.ko.euc-kr
-@unexec ${RMDIR} %D/libexec/cgi-bin 2>/dev/null || ${TRUE}
-@dirrm share/httpd/manual/vhosts
-@dirrm share/httpd/manual/style/xsl/util
-@dirrm share/httpd/manual/style/xsl
-@dirrm share/httpd/manual/style/latex
-@dirrm share/httpd/manual/style/lang
-@dirrm share/httpd/manual/style/css
-@dirrm share/httpd/manual/style
-@dirrm share/httpd/manual/ssl
-@dirrm share/httpd/manual/rewrite
-@dirrm share/httpd/manual/programs
-@dirrm share/httpd/manual/platform
-@dirrm share/httpd/manual/mod
-@dirrm share/httpd/manual/misc
-@dirrm share/httpd/manual/images
-@dirrm share/httpd/manual/howto
-@dirrm share/httpd/manual/faq
-@dirrm share/httpd/manual/developer
-@dirrm share/httpd/manual
-@dirrm share/httpd/icons/small
-@dirrm share/httpd/icons
-@dirrm share/httpd/error/include
-@dirrm share/httpd/error
-@dirrm share/httpd/build
-@dirrm share/examples/httpd
-@dirrm lib/httpd
-@dirrm include/httpd
+@pkgdir share/httpd/manual/style/lang

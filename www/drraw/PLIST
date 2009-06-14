@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/10/06 19:21:03 kleink Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:20 joerg Exp $
 libexec/cgi-bin/drraw.cgi
 share/doc/drraw/CHANGES
 share/doc/drraw/INSTALL
@@ -12,6 +12,3 @@ share/examples/drraw/icons/generic.gif
 share/examples/drraw/icons/link.gif
 share/examples/drraw/icons/text.gif
 share/examples/drraw/icons/unknown.gif
-@dirrm share/examples/drraw/icons
-@dirrm share/examples/drraw
-@dirrm share/doc/drraw

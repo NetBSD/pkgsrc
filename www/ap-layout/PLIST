@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/28 09:06:00 grant Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:16 joerg Exp $
 lib/httpd/mod_layout.so
 share/httpd/htdocs/manual/mod/mod_layout/faq.html
 share/httpd/htdocs/manual/mod/mod_layout/directives/Layout.html
@@ -35,5 +35,3 @@ share/httpd/htdocs/manual/mod/mod_layout/directives/LayoutPostAsync.html
 share/httpd/htdocs/manual/mod/mod_layout/directives/LayoutProxy.html
 share/httpd/htdocs/manual/mod/mod_layout/directives/LayoutReplaceTags.html
 share/httpd/htdocs/manual/mod/mod_layout/directives/LayoutTimeFormat.html
-@dirrm share/httpd/htdocs/manual/mod/mod_layout/directives
-@dirrm share/httpd/htdocs/manual/mod/mod_layout

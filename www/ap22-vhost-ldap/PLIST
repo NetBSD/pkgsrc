@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/21 15:59:20 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:17 joerg Exp $
 lib/httpd/mod_vhost_ldap.so
 share/examples/mod_vhost_ldap/vhost_ldap.conf
 share/examples/mod_vhost_ldap/mod_vhost_ldap.schema
-@dirrm share/examples/mod_vhost_ldap

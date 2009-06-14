@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:26:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:34 joerg Exp $
 ${GEM_HOME}/cache/mechanize-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG.txt
 ${GEM_LIBDIR}/EXAMPLES.txt
@@ -135,14 +135,3 @@ ${GEM_LIBDIR}/test/tc_textarea.rb
 ${GEM_LIBDIR}/test/tc_upload.rb
 ${GEM_LIBDIR}/test/test_all.rb
 ${GEM_HOME}/specifications/mechanize-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/htdocs/relative
-@dirrm ${GEM_LIBDIR}/test/htdocs
-@dirrm ${GEM_LIBDIR}/test/data
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/www/mechanize/page
-@dirrm ${GEM_LIBDIR}/lib/www/mechanize/form
-@dirrm ${GEM_LIBDIR}/lib/www/mechanize
-@dirrm ${GEM_LIBDIR}/lib/www
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/eg
-@dirrm ${GEM_LIBDIR}

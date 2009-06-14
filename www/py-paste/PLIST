@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/10 16:34:51 epg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:32 joerg Exp $
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -265,12 +265,3 @@ ${PYSITELIB}/paste/wsgilib.pyo
 ${PYSITELIB}/paste/wsgiwrappers.py
 ${PYSITELIB}/paste/wsgiwrappers.pyc
 ${PYSITELIB}/paste/wsgiwrappers.pyo
-@dirrm ${PYSITELIB}/paste/util
-@dirrm ${PYSITELIB}/paste/exceptions
-@dirrm ${PYSITELIB}/paste/evalexception/mochikit
-@dirrm ${PYSITELIB}/paste/evalexception/media
-@dirrm ${PYSITELIB}/paste/evalexception
-@dirrm ${PYSITELIB}/paste/debug
-@dirrm ${PYSITELIB}/paste/auth
-@dirrm ${PYSITELIB}/paste
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

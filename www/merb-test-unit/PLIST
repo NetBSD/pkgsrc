@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:25:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:28 joerg Exp $
 ${GEM_HOME}/cache/merb_test_unit-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -14,17 +14,3 @@ ${GEM_LIBDIR}/test_unit_generators/merb_model_test/merb_model_test_generator.rb
 ${GEM_LIBDIR}/test_unit_generators/merb_model_test/templates/test/unit/%model_file_name%_test.rb
 ${GEM_LIBDIR}/test_unit_generators/merb_resource_controller_test/merb_resource_controller_test_generator.rb
 ${GEM_HOME}/specifications/merb_test_unit-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merb_resource_controller_test
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merb_model_test/templates/test/unit
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merb_model_test/templates/test
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merb_model_test/templates
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merb_model_test
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merb_controller_test/templates/test/functional
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merb_controller_test/templates/test
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merb_controller_test/templates
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merb_controller_test
-@dirrm ${GEM_LIBDIR}/test_unit_generators
-@dirrm ${GEM_LIBDIR}/lib/merb_test_unit
-@dirrm ${GEM_LIBDIR}/lib/asserts
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

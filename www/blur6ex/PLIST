@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/18 07:07:43 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:19 joerg Exp $
 share/doc/blur6ex/INSTALL.txt
 share/doc/blur6ex/blur6ex_tables.sql
 share/examples/blur6ex/db.php
@@ -99,31 +99,4 @@ ${HTTPD_ROOT}/blog/images/sparkling/24x24/apps/openoffice.png
 ${HTTPD_ROOT}/blog/images/test1.png
 ${HTTPD_ROOT}/blog/images/testlogo.jpg
 ${HTTPD_ROOT}/blog/trackback.php
-@dirrm ${HTTPD_ROOT}/blog/images/sparkling/24x24/apps
-@dirrm ${HTTPD_ROOT}/blog/images/sparkling/24x24
-@dirrm ${HTTPD_ROOT}/blog/images/sparkling
-@dirrm ${HTTPD_ROOT}/blog/images/logos
-@dirrm ${HTTPD_ROOT}/blog/images
-@exec ${MKDIR} %D/${HTTPD_ROOT}/blog/engine/shards/xmlcache
-@dirrm ${HTTPD_ROOT}/blog/engine/shards/xmlcache
-@dirrm ${HTTPD_ROOT}/blog/engine/shards
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/yuma/images
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/yuma
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/singularity/images
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/singularity
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/simpatico/images
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/simpatico
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/parcel
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/mesquite/images
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/mesquite
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/kubrick/images
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/kubrick
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/cleanbrick/images
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/cleanbrick
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts/bluerobot
-@dirrm ${HTTPD_ROOT}/blog/engine/grafts
-@dirrm ${HTTPD_ROOT}/blog/engine/core
-@dirrm ${HTTPD_ROOT}/blog/engine
-@dirrm ${HTTPD_ROOT}/blog
-@dirrm share/examples/blur6ex
-@dirrm share/doc/blur6ex
+@pkgdir ${HTTPD_ROOT}/blog/engine/shards/xmlcache

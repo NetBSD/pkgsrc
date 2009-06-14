@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/21 16:09:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:36 joerg Exp $
 bin/thin
 ${GEM_HOME}/cache/thin-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -138,40 +138,3 @@ ${GEM_LIBDIR}/tasks/site.rake
 ${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_LIBDIR}/tasks/stats.rake
 ${GEM_HOME}/specifications/thin-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/tasks
-@dirrm ${GEM_LIBDIR}/spec/server
-@dirrm ${GEM_LIBDIR}/spec/request
-@dirrm ${GEM_LIBDIR}/spec/rails_app/script/process
-@dirrm ${GEM_LIBDIR}/spec/rails_app/script/performance
-@dirrm ${GEM_LIBDIR}/spec/rails_app/script
-@dirrm ${GEM_LIBDIR}/spec/rails_app/public/javascripts
-@dirrm ${GEM_LIBDIR}/spec/rails_app/public/images
-@dirrm ${GEM_LIBDIR}/spec/rails_app/public
-@dirrm ${GEM_LIBDIR}/spec/rails_app/config/initializers
-@dirrm ${GEM_LIBDIR}/spec/rails_app/config/environments
-@dirrm ${GEM_LIBDIR}/spec/rails_app/config
-@dirrm ${GEM_LIBDIR}/spec/rails_app/app/views/simple
-@dirrm ${GEM_LIBDIR}/spec/rails_app/app/views
-@dirrm ${GEM_LIBDIR}/spec/rails_app/app/helpers
-@dirrm ${GEM_LIBDIR}/spec/rails_app/app/controllers
-@dirrm ${GEM_LIBDIR}/spec/rails_app/app
-@dirrm ${GEM_LIBDIR}/spec/rails_app
-@dirrm ${GEM_LIBDIR}/spec/rack
-@dirrm ${GEM_LIBDIR}/spec/perf
-@dirrm ${GEM_LIBDIR}/spec/controllers
-@dirrm ${GEM_LIBDIR}/spec/configs
-@dirrm ${GEM_LIBDIR}/spec/backends
-@dirrm ${GEM_LIBDIR}/spec
-@dirrm ${GEM_LIBDIR}/lib/thin/controllers
-@dirrm ${GEM_LIBDIR}/lib/thin/backends
-@dirrm ${GEM_LIBDIR}/lib/thin
-@dirrm ${GEM_LIBDIR}/lib/rack/handler
-@dirrm ${GEM_LIBDIR}/lib/rack/adapter
-@dirrm ${GEM_LIBDIR}/lib/rack
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/thin_parser
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/example
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}/benchmark
-@dirrm ${GEM_LIBDIR}

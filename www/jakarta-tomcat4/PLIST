@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/12/09 21:33:54 erh Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 22:00:24 joerg Exp $
 share/examples/rc.d/tomcat4
 tomcat4/LICENSE
 tomcat4/README.txt
@@ -1467,21 +1467,7 @@ tomcat4/webapps/webdav/tomcat.gif
 @unexec ${RM} -f %D/tomcat4/conf/mod_jk.conf-auto
 @unexec ${RM} -f %D/tomcat4/conf/obj.conf-auto
 @unexec ${RM} -f %D/tomcat4/conf/uriworkermap.properties-auto
-@dirrm tomcat4/webapps
-@dirrm tomcat4/temp
-@dirrm tomcat4/shared/lib
-@dirrm tomcat4/shared/classes
-@dirrm tomcat4/shared
-@dirrm tomcat4/server/lib
-@dirrm tomcat4/server/classes
-@dirrm tomcat4/server
-@dirrm tomcat4/logs
 @comment Directory removal handled by PKG_SYSCONFDIR setting:
 @comment tomcat4/conf
-@dirrm tomcat4/common/lib
-@dirrm tomcat4/common/endorsed
-@dirrm tomcat4/common/classes
-@dirrm tomcat4/common
-@dirrm tomcat4/bin
 @comment Directory removal handled by PKG_SYSCONFDIR setting:
 @comment tomcat4

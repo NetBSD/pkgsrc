@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/01/15 12:12:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 22:00:18 joerg Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -692,27 +692,3 @@ share/doc/awstats/pad_awstats.xml
 share/doc/awstats/styles.css
 share/examples/awstats/awstats.conf
 share/examples/awstats/example.pm
-@dirrm share/examples/awstats
-@dirrm share/doc/awstats/images
-@dirrm share/doc/awstats
-@dirrm awstats/js
-@dirrm awstats/icon/other
-@dirrm awstats/icon/os
-@dirrm awstats/icon/mime
-@dirrm awstats/icon/flags
-@dirrm awstats/icon/cpu
-@dirrm awstats/icon/clock
-@dirrm awstats/icon/browser
-@dirrm awstats/icon
-@dirrm awstats/css
-@dirrm awstats/classes/src
-@dirrm awstats/classes
-@dirrm awstats/cgi-bin/plugins
-@dirrm awstats/cgi-bin/lib
-@dirrm awstats/cgi-bin/lang/tooltips_w
-@dirrm awstats/cgi-bin/lang/tooltips_m
-@dirrm awstats/cgi-bin/lang/tooltips_f
-@dirrm awstats/cgi-bin/lang
-@dirrm awstats/cgi-bin
-@dirrm awstats/bin
-@dirrm awstats

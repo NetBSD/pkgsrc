@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/23 18:26:39 kim Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:30 joerg Exp $
 ${AG_SHAREDIR}/htdocs/agfolder.png
 ${AG_SHAREDIR}/htdocs/application-doc.png
 ${AG_SHAREDIR}/htdocs/application-pdf.png
@@ -15,7 +15,6 @@ ${AG_SHAREDIR}/htdocs/video-mov.png
 ${AG_SHAREDIR}/htdocs/video-mpeg.png
 ${AG_SHAREDIR}/htdocs/video-mpg.png
 ${AG_SHAREDIR}/htdocs/video-wmv.png
-@dirrm ${AG_SHAREDIR}/htdocs
 ${AG_SHAREDIR}/templates/default/dircomment.tpl
 ${AG_SHAREDIR}/templates/default/directory.tpl
 ${AG_SHAREDIR}/templates/default/error.tpl
@@ -37,7 +36,6 @@ ${AG_SHAREDIR}/templates/default/scaleactive.tpl
 ${AG_SHAREDIR}/templates/default/showpicture.tpl
 ${AG_SHAREDIR}/templates/default/slideshowisoff.tpl
 ${AG_SHAREDIR}/templates/default/slideshowoff.tpl
-@dirrm ${AG_SHAREDIR}/templates/default
 ${AG_SHAREDIR}/templates/new/dircomment.tpl
 ${AG_SHAREDIR}/templates/new/directory.tpl
 ${AG_SHAREDIR}/templates/new/error.tpl
@@ -59,14 +57,9 @@ ${AG_SHAREDIR}/templates/new/scaleactive.tpl
 ${AG_SHAREDIR}/templates/new/showpicture.tpl
 ${AG_SHAREDIR}/templates/new/slideshowisoff.tpl
 ${AG_SHAREDIR}/templates/new/slideshowoff.tpl
-@dirrm ${AG_SHAREDIR}/templates/new
-@dirrm ${AG_SHAREDIR}/templates
-@dirrm ${AG_SHAREDIR}
 ${AG_DOCDIR}/Changes
 ${AG_DOCDIR}/INSTALL
 ${AG_DOCDIR}/LICENSE
 ${AG_DOCDIR}/README
 ${AG_DOCDIR}/UPGRADE
-@dirrm ${AG_DOCDIR}
 ${AG_EGDIR}/${AG}.conf
-@dirrm ${AG_EGDIR}

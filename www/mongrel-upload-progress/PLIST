@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:25:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:28 joerg Exp $
 ${GEM_HOME}/cache/mongrel_upload_progress-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
@@ -9,7 +9,3 @@ ${GEM_LIBDIR}/lib/mongrel_upload_progress/init.rb
 ${GEM_LIBDIR}/mongrel_upload_progress.gemspec
 ${GEM_LIBDIR}/resources/defaults.yaml
 ${GEM_HOME}/specifications/mongrel_upload_progress-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/resources
-@dirrm ${GEM_LIBDIR}/lib/mongrel_upload_progress
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

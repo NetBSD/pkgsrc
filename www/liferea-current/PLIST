@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/08 10:22:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:25 joerg Exp $
 bin/liferea
 bin/liferea-add-feed
 lib/liferea/liblinotiflibnotify.la
@@ -142,21 +142,3 @@ share/locale/ru/LC_MESSAGES/liferea.mo
 share/locale/sk/LC_MESSAGES/liferea.mo
 share/locale/sv/LC_MESSAGES/liferea.mo
 share/locale/tr/LC_MESSAGES/liferea.mo
-@dirrm share/liferea/xslt
-@dirrm share/liferea/pixmaps
-@dirrm share/liferea/opml
-@dirrm share/liferea/dtd
-@dirrm share/liferea/doc/html
-@dirrm share/liferea/doc
-@dirrm share/liferea/css
-@dirrm share/liferea
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/liferea

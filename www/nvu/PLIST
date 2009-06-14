@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:29 joerg Exp $
 bin/nvu
 bin/nvu-config
 include/${PKGNAME}/accessibility/nsAccessNode.h
@@ -2938,454 +2938,132 @@ share/idl/${PKGNAME}/nsrootidl.idl
 share/idl/${PKGNAME}/xpccomponents.idl
 share/idl/${PKGNAME}/xpcexception.idl
 share/idl/${PKGNAME}/xpcjsid.idl
-@dirrm share/idl/${PKGNAME}
-@dirrm share/idl
-@dirrm lib/${PKGNAME}/res/throbber
-@dirrm lib/${PKGNAME}/res/samples/sampleimages
-@dirrm lib/${PKGNAME}/res/samples
-@dirrm lib/${PKGNAME}/res/rdf
-@dirrm lib/${PKGNAME}/res/html
-@dirrm lib/${PKGNAME}/res/entityTables
-@dirrm lib/${PKGNAME}/res/dtd
-@dirrm lib/${PKGNAME}/res/builtin
-@dirrm lib/${PKGNAME}/res
-@dirrm lib/${PKGNAME}/plugins
-@dirrm lib/${PKGNAME}/icons
-@dirrm lib/${PKGNAME}/greprefs
-@dirrm lib/${PKGNAME}/defaults/wallet
-@dirrm lib/${PKGNAME}/defaults/profile/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
-@dirrm lib/${PKGNAME}/defaults/profile/extensions
-@dirrm lib/${PKGNAME}/defaults/profile/US
-@dirrm lib/${PKGNAME}/defaults/profile
-@dirrm lib/${PKGNAME}/defaults/pref
-@dirrm lib/${PKGNAME}/defaults/autoconfig
-@dirrm lib/${PKGNAME}/defaults
-@dirrm lib/${PKGNAME}/components/myspell
-@dirrm lib/${PKGNAME}/components
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/mozapps/xpinstall
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/mozapps/xpinstall
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/mozapps/update
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/mozapps/update
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/mozapps/shared
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/mozapps/shared
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/mozapps/profile
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/mozapps/profile
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/mozapps/plugins
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/mozapps/plugins
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/mozapps/extensions
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/mozapps/extensions
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/mozapps/downloads
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/mozapps/downloads
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/mozapps
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/global/xml
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/global/xml
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/global/bindings
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/global/bindings
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/global-region
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/global-region
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/toolkit/content/global-platform
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/global-platform
-@dirrm lib/${PKGNAME}/chrome/toolkit/content/global
-@dirrm lib/${PKGNAME}/chrome/toolkit/content
-@dirrm lib/${PKGNAME}/chrome/toolkit
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/tipoftheday/content/tipoftheday
-@dirrm lib/${PKGNAME}/chrome/tipoftheday/content/tipoftheday
-@dirrm lib/${PKGNAME}/chrome/tipoftheday/content
-@dirrm lib/${PKGNAME}/chrome/tipoftheday
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/pippki/content/pippki
-@dirrm lib/${PKGNAME}/chrome/pippki/content/pippki
-@dirrm lib/${PKGNAME}/chrome/pippki/content
-@dirrm lib/${PKGNAME}/chrome/pippki
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/pipnss/content/pipnss
-@dirrm lib/${PKGNAME}/chrome/pipnss/content/pipnss
-@dirrm lib/${PKGNAME}/chrome/pipnss/content
-@dirrm lib/${PKGNAME}/chrome/pipnss
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/pinger/content/pinger
-@dirrm lib/${PKGNAME}/chrome/pinger/content/pinger
-@dirrm lib/${PKGNAME}/chrome/pinger/content
-@dirrm lib/${PKGNAME}/chrome/pinger
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/help/skin/help
-@dirrm lib/${PKGNAME}/chrome/help/skin/help
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/help/skin/classic/help
-@dirrm lib/${PKGNAME}/chrome/help/skin/classic/help
-@dirrm lib/${PKGNAME}/chrome/help/skin/classic
-@dirrm lib/${PKGNAME}/chrome/help/skin
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/help/locale/en-US/help/images
-@dirrm lib/${PKGNAME}/chrome/help/locale/en-US/help/images
-@dirrm lib/${PKGNAME}/chrome/help/locale/en-US/help
-@dirrm lib/${PKGNAME}/chrome/help/locale/en-US
-@dirrm lib/${PKGNAME}/chrome/help/locale
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/help/content/help
-@dirrm lib/${PKGNAME}/chrome/help/content/help
-@dirrm lib/${PKGNAME}/chrome/help/content
-@dirrm lib/${PKGNAME}/chrome/help
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/wallet
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/wallet
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/tipoftheday
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/tipoftheday
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/pippki
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/pippki
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/pipnss
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/pipnss
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/pinger
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/pinger
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/passwordmgr
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/passwordmgr
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/necko
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/necko
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/navigator-platform/win
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/navigator-platform/win
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/navigator-platform/unix
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/navigator-platform/unix
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/navigator-platform/mac
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/navigator-platform/mac
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/navigator-platform
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/mozapps/xpinstall
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/mozapps/xpinstall
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/mozapps/update
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/mozapps/update
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/mozapps/profile
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/mozapps/profile
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/mozapps/plugins
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/mozapps/plugins
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/mozapps/extensions
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/mozapps/extensions
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/mozapps/downloads
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/mozapps/downloads
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/mozapps
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global/xpinstall
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global/xpinstall
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global/xml
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global/xml
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global/webservices
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global/webservices
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global/security
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global/security
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global/layout
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global/layout
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global/history
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global/history
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global/dom
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global/dom
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global-region
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global-region
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global-platform/win
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global-platform/win
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global-platform/unix
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global-platform/unix
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/global-platform/mac
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global-platform/mac
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global-platform
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/global
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-region
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-region
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-platform/win
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-platform/win
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-platform/unix
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-platform/unix
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-platform/mac
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-platform/mac
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-platform
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/en-US/cascades
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/en-US/cascades
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/en-US
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/editor-region
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/editor-region
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/editor
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/editor
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/communicator/wallet
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator/wallet
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/communicator/sidebar
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator/sidebar
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/communicator/search
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator/search
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/communicator/pref
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator/pref
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/communicator/history
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator/history
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/communicator/directory
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator/directory
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/communicator-region/wallet
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator-region/wallet
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator-region
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/win/pref
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/win/pref
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/win
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/unix/pref
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/unix/pref
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/unix
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/mac/pref
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/mac/pref
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/mac
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator-platform
-@dirrm lib/${PKGNAME}/chrome/en-US/locale/communicator
-@dirrm lib/${PKGNAME}/chrome/en-US/locale
-@dirrm lib/${PKGNAME}/chrome/en-US
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/embed-sample/skin/classic/embed
-@dirrm lib/${PKGNAME}/chrome/embed-sample/skin/classic/embed
-@dirrm lib/${PKGNAME}/chrome/embed-sample/skin/classic
-@dirrm lib/${PKGNAME}/chrome/embed-sample/skin
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/embed-sample/locale/en-US/embed
-@dirrm lib/${PKGNAME}/chrome/embed-sample/locale/en-US/embed
-@dirrm lib/${PKGNAME}/chrome/embed-sample/locale/en-US
-@dirrm lib/${PKGNAME}/chrome/embed-sample/locale
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/embed-sample/content/embed
-@dirrm lib/${PKGNAME}/chrome/embed-sample/content/embed
-@dirrm lib/${PKGNAME}/chrome/embed-sample/content
-@dirrm lib/${PKGNAME}/chrome/embed-sample
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/xbl-marquee
-@dirrm lib/${PKGNAME}/chrome/comm/content/xbl-marquee
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/wallet
-@dirrm lib/${PKGNAME}/chrome/comm/content/wallet
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/necko
-@dirrm lib/${PKGNAME}/chrome/comm/content/necko
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/navigator-region
-@dirrm lib/${PKGNAME}/chrome/comm/content/navigator-region
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/navigator-platform/win
-@dirrm lib/${PKGNAME}/chrome/comm/content/navigator-platform/win
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/navigator-platform/unix
-@dirrm lib/${PKGNAME}/chrome/comm/content/navigator-platform/unix
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/navigator-platform/mac
-@dirrm lib/${PKGNAME}/chrome/comm/content/navigator-platform/mac
-@dirrm lib/${PKGNAME}/chrome/comm/content/navigator-platform
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/navigator
-@dirrm lib/${PKGNAME}/chrome/comm/content/navigator
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/editor/images
-@dirrm lib/${PKGNAME}/chrome/comm/content/editor/images
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/editor/bindings
-@dirrm lib/${PKGNAME}/chrome/comm/content/editor/bindings
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/editor-region
-@dirrm lib/${PKGNAME}/chrome/comm/content/editor-region
-@dirrm lib/${PKGNAME}/chrome/comm/content/editor
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator/wallet
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator/wallet
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator/sidebar
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator/sidebar
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator/search
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator/search
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator/related
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator/related
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator/pref
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator/pref
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator/history
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator/history
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator/downloadmanager
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator/downloadmanager
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator/directory
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator/directory
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator/alerts
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator/alerts
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator-region
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator-region
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/communicator-platform
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator-platform
-@dirrm lib/${PKGNAME}/chrome/comm/content/communicator
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/comm/content/autoconfig
-@dirrm lib/${PKGNAME}/chrome/comm/content/autoconfig
-@dirrm lib/${PKGNAME}/chrome/comm/content
-@dirrm lib/${PKGNAME}/chrome/comm
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/navigator/icons
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/navigator/icons
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/navigator/btn1
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/navigator/btn1
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/navigator
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/xpinstall
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/xpinstall
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/update
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/update
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/shared
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/shared
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/profile
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/profile
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/pref
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/pref
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/extensions
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/extensions
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/downloads
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/downloads
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/mozapps
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/messenger/smime/icons
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/messenger/smime/icons
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/messenger/smime
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/messenger/messengercompose
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/messenger/messengercompose
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/messenger/icons
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/messenger/icons
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/messenger/addressbook/icons
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/messenger/addressbook/icons
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/messenger/addressbook
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/messenger
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/tree
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/tree
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/toolbar
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/toolbar
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/splitter
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/splitter
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/scrollbar
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/scrollbar
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/radio
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/radio
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/progressmeter
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/progressmeter
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/menu
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/menu
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/icons
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/icons
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/filepicker
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/filepicker
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/console
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/console
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/checkbox
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/checkbox
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/global/arrow
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global/arrow
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/global
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/editor/icons/smallicons
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/editor/icons/smallicons
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/editor/icons
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/editor
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/xpinstall
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/xpinstall
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/taskbar
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/taskbar
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/sidebar
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/sidebar
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/search
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/search
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/related
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/related
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/profile
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/profile
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/pref
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/pref
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/icons/smileys
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/icons/smileys
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/icons
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/directory
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/directory
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/brand
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/brand
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/bookmarks
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/bookmarks
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/classic/skin/classic/communicator/alerts
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator/alerts
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic/communicator
-@dirrm lib/${PKGNAME}/chrome/classic/skin/classic
-@dirrm lib/${PKGNAME}/chrome/classic/skin
-@dirrm lib/${PKGNAME}/chrome/classic
-@exec ${MKDIR} %D/lib/${PKGNAME}/chrome/cascades/content/cascades
-@dirrm lib/${PKGNAME}/chrome/cascades/content/cascades
-@dirrm lib/${PKGNAME}/chrome/cascades/content
-@dirrm lib/${PKGNAME}/chrome/cascades
-@dirrm lib/${PKGNAME}/chrome
-@dirrm lib/${PKGNAME}
-@dirrm include/${PKGNAME}/zlib
-@dirrm include/${PKGNAME}/xultmpl
-@dirrm include/${PKGNAME}/xuldoc
-@dirrm include/${PKGNAME}/xulapp
-@dirrm include/${PKGNAME}/xul
-@dirrm include/${PKGNAME}/xremoteservice
-@dirrm include/${PKGNAME}/xprintutil
-@dirrm include/${PKGNAME}/xpinstall
-@dirrm include/${PKGNAME}/xpconnect
-@dirrm include/${PKGNAME}/xpcom_obsolete
-@dirrm include/${PKGNAME}/xpcom
-@dirrm include/${PKGNAME}/xmlextras
-@dirrm include/${PKGNAME}/xml-rpc
-@dirrm include/${PKGNAME}/xlibrgb
-@dirrm include/${PKGNAME}/windowwatcher
-@dirrm include/${PKGNAME}/widget
-@dirrm include/${PKGNAME}/websrvcs
-@dirrm include/${PKGNAME}/webshell
-@dirrm include/${PKGNAME}/webbrwsr
-@dirrm include/${PKGNAME}/webbrowserpersist
-@dirrm include/${PKGNAME}/walletviewers
-@dirrm include/${PKGNAME}/wallet
-@dirrm include/${PKGNAME}/view
-@dirrm include/${PKGNAME}/util
-@dirrm include/${PKGNAME}/uriloader
-@dirrm include/${PKGNAME}/update
-@dirrm include/${PKGNAME}/unicharutil
-@dirrm include/${PKGNAME}/ucvtw2
-@dirrm include/${PKGNAME}/ucvtw
-@dirrm include/${PKGNAME}/ucvlatin
-@dirrm include/${PKGNAME}/ucvko
-@dirrm include/${PKGNAME}/ucvja
-@dirrm include/${PKGNAME}/ucvibm
-@dirrm include/${PKGNAME}/ucvcn
-@dirrm include/${PKGNAME}/uconv
-@dirrm include/${PKGNAME}/txtsvc
-@dirrm include/${PKGNAME}/txmgr
-@dirrm include/${PKGNAME}/string
-@dirrm include/${PKGNAME}/spellchecker
-@dirrm include/${PKGNAME}/sidebar
-@dirrm include/${PKGNAME}/shistory
-@dirrm include/${PKGNAME}/rdfutil
-@dirrm include/${PKGNAME}/rdf
-@dirrm include/${PKGNAME}/progressDlg
-@dirrm include/${PKGNAME}/profile
-@dirrm include/${PKGNAME}/profdirserviceprovider
-@dirrm include/${PKGNAME}/prefetch
-@dirrm include/${PKGNAME}/pref
-@dirrm include/${PKGNAME}/png
-@dirrm include/${PKGNAME}/plugin
-@dirrm include/${PKGNAME}/pippki
-@dirrm include/${PKGNAME}/pipnss
-@dirrm include/${PKGNAME}/pipboot
-@dirrm include/${PKGNAME}/nvuhelpers
-@dirrm include/${PKGNAME}/nspr/private
-@dirrm include/${PKGNAME}/nspr/obsolete
-@dirrm include/${PKGNAME}/nspr/md
-@dirrm include/${PKGNAME}/nspr
-@dirrm include/${PKGNAME}/nkcache
-@dirrm include/${PKGNAME}/necko2
-@dirrm include/${PKGNAME}/necko
-@dirrm include/${PKGNAME}/mork
-@dirrm include/${PKGNAME}/mimetype
-@dirrm include/${PKGNAME}/lwbrk
-@dirrm include/${PKGNAME}/locale
-@dirrm include/${PKGNAME}/libreg
-@dirrm include/${PKGNAME}/layout
-@dirrm include/${PKGNAME}/jsurl
-@dirrm include/${PKGNAME}/jsdebug
-@dirrm include/${PKGNAME}/jsconsole
-@dirrm include/${PKGNAME}/js
-@dirrm include/${PKGNAME}/jpeg
-@dirrm include/${PKGNAME}/java
-@dirrm include/${PKGNAME}/jar
-@dirrm include/${PKGNAME}/intl
-@dirrm include/${PKGNAME}/imglib2
-@dirrm include/${PKGNAME}/httpindex
-@dirrm include/${PKGNAME}/htmlparser
-@dirrm include/${PKGNAME}/history
-@dirrm include/${PKGNAME}/helperAppDlg
-@dirrm include/${PKGNAME}/gtkxtbin
-@dirrm include/${PKGNAME}/gtkembedmoz
-@dirrm include/${PKGNAME}/gfx
-@dirrm include/${PKGNAME}/find
-@dirrm include/${PKGNAME}/filepicker
-@dirrm include/${PKGNAME}/fastfind
-@dirrm include/${PKGNAME}/exthandler
-@dirrm include/${PKGNAME}/extensions
-@dirrm include/${PKGNAME}/expat
-@dirrm include/${PKGNAME}/embedcomponents
-@dirrm include/${PKGNAME}/embed_base
-@dirrm include/${PKGNAME}/editor
-@dirrm include/${PKGNAME}/downloadmanager
-@dirrm include/${PKGNAME}/dom
-@dirrm include/${PKGNAME}/docshell
-@dirrm include/${PKGNAME}/dbm
-@dirrm include/${PKGNAME}/content
-@dirrm include/${PKGNAME}/composer
-@dirrm include/${PKGNAME}/commandhandler
-@dirrm include/${PKGNAME}/chardet
-@dirrm include/${PKGNAME}/caps
-@dirrm include/${PKGNAME}/browser
-@dirrm include/${PKGNAME}/autoconfig
-@dirrm include/${PKGNAME}/autocomplete
-@dirrm include/${PKGNAME}/appshell
-@dirrm include/${PKGNAME}/appcomps
-@dirrm include/${PKGNAME}/accessibility
-@dirrm include/${PKGNAME}
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/mozapps/xpinstall
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/mozapps/update
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/mozapps/shared
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/mozapps/profile
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/mozapps/plugins
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/mozapps/extensions
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/mozapps/downloads
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/global/xml
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/global/bindings
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/global-region
+@pkgdir lib/${PKGNAME}/chrome/toolkit/content/global-platform
+@pkgdir lib/${PKGNAME}/chrome/tipoftheday/content/tipoftheday
+@pkgdir lib/${PKGNAME}/chrome/pippki/content/pippki
+@pkgdir lib/${PKGNAME}/chrome/pipnss/content/pipnss
+@pkgdir lib/${PKGNAME}/chrome/pinger/content/pinger
+@pkgdir lib/${PKGNAME}/chrome/help/skin/help
+@pkgdir lib/${PKGNAME}/chrome/help/skin/classic/help
+@pkgdir lib/${PKGNAME}/chrome/help/locale/en-US/help/images
+@pkgdir lib/${PKGNAME}/chrome/help/content/help
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/wallet
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/tipoftheday
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/pippki
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/pipnss
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/pinger
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/passwordmgr
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/necko
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/navigator-platform/win
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/navigator-platform/unix
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/navigator-platform/mac
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/mozapps/xpinstall
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/mozapps/update
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/mozapps/profile
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/mozapps/plugins
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/mozapps/extensions
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/mozapps/downloads
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global/xpinstall
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global/xml
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global/webservices
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global/security
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global/layout
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global/history
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global/dom
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global-region
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global-platform/win
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global-platform/unix
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/global-platform/mac
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-region
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-platform/win
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-platform/unix
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator-platform/mac
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/en-US/navigator
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/en-US/cascades
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/editor-region
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/editor
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/communicator/wallet
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/communicator/sidebar
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/communicator/search
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/communicator/pref
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/communicator/history
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/communicator/directory
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/communicator-region/wallet
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/win/pref
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/unix/pref
+@pkgdir lib/${PKGNAME}/chrome/en-US/locale/communicator-platform/mac/pref
+@pkgdir lib/${PKGNAME}/chrome/embed-sample/skin/classic/embed
+@pkgdir lib/${PKGNAME}/chrome/embed-sample/locale/en-US/embed
+@pkgdir lib/${PKGNAME}/chrome/embed-sample/content/embed
+@pkgdir lib/${PKGNAME}/chrome/comm/content/xbl-marquee
+@pkgdir lib/${PKGNAME}/chrome/comm/content/wallet
+@pkgdir lib/${PKGNAME}/chrome/comm/content/necko
+@pkgdir lib/${PKGNAME}/chrome/comm/content/navigator-region
+@pkgdir lib/${PKGNAME}/chrome/comm/content/navigator-platform/win
+@pkgdir lib/${PKGNAME}/chrome/comm/content/navigator-platform/unix
+@pkgdir lib/${PKGNAME}/chrome/comm/content/navigator-platform/mac
+@pkgdir lib/${PKGNAME}/chrome/comm/content/navigator
+@pkgdir lib/${PKGNAME}/chrome/comm/content/editor/images
+@pkgdir lib/${PKGNAME}/chrome/comm/content/editor/bindings
+@pkgdir lib/${PKGNAME}/chrome/comm/content/editor-region
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator/wallet
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator/sidebar
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator/search
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator/related
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator/pref
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator/history
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator/downloadmanager
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator/directory
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator/alerts
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator-region
+@pkgdir lib/${PKGNAME}/chrome/comm/content/communicator-platform
+@pkgdir lib/${PKGNAME}/chrome/comm/content/autoconfig
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/navigator/icons
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/navigator/btn1
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/xpinstall
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/update
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/shared
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/profile
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/pref
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/extensions
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/mozapps/downloads
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/messenger/smime/icons
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/messenger/messengercompose
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/messenger/icons
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/messenger/addressbook/icons
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/tree
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/toolbar
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/splitter
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/scrollbar
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/radio
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/progressmeter
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/menu
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/icons
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/filepicker
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/console
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/checkbox
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/global/arrow
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/editor/icons/smallicons
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/xpinstall
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/taskbar
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/sidebar
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/search
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/related
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/profile
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/pref
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/icons/smileys
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/directory
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/brand
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/bookmarks
+@pkgdir lib/${PKGNAME}/chrome/classic/skin/classic/communicator/alerts
+@pkgdir lib/${PKGNAME}/chrome/cascades/content/cascades

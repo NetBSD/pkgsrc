@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/19 15:05:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:34 joerg Exp $
 ${RUBY_VENDORLIB}/htmlrepair.rb
 ${RUBY_VENDORLIB}/webunit.rb
 ${RUBY_VENDORLIB}/webunit/assert.rb
@@ -45,9 +45,3 @@ ${RUBY_EG}/webunit/conv/test_digit.rb
 ${RUBY_EG}/webunit/conv/test_digit_view-0.rb
 ${RUBY_EG}/webunit/conv/test_digit_view-1.rb
 ${RUBY_EG}/webunit/conv/digit-0.cgi
-@dirrm ${RUBY_VENDORLIB}/webunit/ui/cui
-@dirrm ${RUBY_VENDORLIB}/webunit/ui
-@dirrm ${RUBY_VENDORLIB}/webunit
-@dirrm ${RUBY_DOC}/webunit
-@dirrm ${RUBY_EG}/webunit/conv
-@dirrm ${RUBY_EG}/webunit

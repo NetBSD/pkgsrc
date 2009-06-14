@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2007/03/14 15:50:53 rillig Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 22:00:18 joerg Exp $
 bin/bluefish
 man/man1/bluefish.1
 share/application-registry/bluefish.applications
@@ -55,9 +55,3 @@ share/mime-info/bluefish.mime
 share/mime/packages/bluefish.xml
 share/pixmaps/bluefish-icon.png
 share/pixmaps/gnome-mime-application-bluefish-project.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/bluefish
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry

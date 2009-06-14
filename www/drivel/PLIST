@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/09/25 10:54:20 hira Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 22:00:20 joerg Exp $
 bin/drivel
 share/application-registry/drivel.applications
 share/applications/gnome-drivel.desktop
@@ -67,19 +67,3 @@ share/pixmaps/drivel/rightarrow.png
 share/pixmaps/drivel/tray_livejournal.png
 share/pixmaps/drivel/user.png
 share/pixmaps/drivel/xmms.xpm
-@dirrm share/pixmaps/drivel
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/drivel
-@comment in scrollkeeper: @dirrm share/omf
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in xdg-dirs: @dirrm share/mime-info
-@comment in gnome-icon-theme: @dirrm share/icons/gnome/48x48/mimetypes
-@dirrm share/gnome/help/drivel/C
-@dirrm share/gnome/help/drivel
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/drivel/languages
-@dirrm share/drivel/glade
-@dirrm share/drivel
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry

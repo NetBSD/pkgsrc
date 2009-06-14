@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:23:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:26 joerg Exp $
 ${GEM_HOME}/cache/merb-builder-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -7,6 +7,3 @@ ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/lib/merb-builder.rb
 ${GEM_LIBDIR}/lib/merb-builder/template.rb
 ${GEM_HOME}/specifications/merb-builder-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/merb-builder
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:07 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:23 joerg Exp $
 share/doc/instiki/README
 share/examples/rc.d/instiki
 share/instiki/app/controllers/wiki.rb
@@ -84,15 +84,3 @@ share/instiki/libraries/zip/tempfile_bugfixed.rb
 share/instiki/libraries/zip/zip.rb
 share/instiki/libraries/zip/zipfilesystem.rb
 share/instiki/libraries/zip/ziprequire.rb
-@dirrm share/instiki/libraries/zip
-@dirrm share/instiki/libraries/madeleine
-@dirrm share/instiki/libraries/diff
-@dirrm share/instiki/libraries
-@dirrm share/instiki/app/views/wiki
-@dirrm share/instiki/app/views
-@dirrm share/instiki/app/models/chunks
-@dirrm share/instiki/app/models
-@dirrm share/instiki/app/controllers
-@dirrm share/instiki/app
-@dirrm share/instiki
-@dirrm share/doc/instiki

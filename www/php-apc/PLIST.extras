@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST.extras,v 1.1 2006/05/03 14:02:30 tv Exp $
+@comment $NetBSD: PLIST.extras,v 1.2 2009/06/14 22:00:30 joerg Exp $
 share/doc/${PKGBASE}/INSTALL
-@dirrm share/doc/${PKGBASE}

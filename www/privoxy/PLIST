@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/04/07 00:21:46 mjl Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 22:00:31 joerg Exp $
 man/man1/privoxy.1
 sbin/privoxy
 share/doc/privoxy/AUTHORS
@@ -92,11 +92,3 @@ share/examples/privoxy/trust
 share/examples/privoxy/user.action
 share/examples/privoxy/user.filter
 share/examples/rc.d/privoxy
-@dirrm share/examples/privoxy/templates
-@dirrm share/examples/privoxy
-@dirrm share/doc/privoxy/user-manual
-@dirrm share/doc/privoxy/man-page
-@dirrm share/doc/privoxy/images
-@dirrm share/doc/privoxy/faq
-@dirrm share/doc/privoxy/developer-manual
-@dirrm share/doc/privoxy

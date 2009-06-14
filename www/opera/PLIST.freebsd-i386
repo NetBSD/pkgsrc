@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.freebsd-i386,v 1.2 2009/01/08 12:23:30 obache Exp $
+@comment $NetBSD: PLIST.freebsd-i386,v 1.3 2009/06/14 22:00:29 joerg Exp $
 bin/opera
 man/man1/opera.1
 share/doc/opera/LGPL
@@ -244,54 +244,4 @@ share/opera/svg-sa.dat
 share/opera/svg-sabd.dat
 share/opera/svg-se.dat
 share/opera/svg-sebd.dat
-@dirrm share/opera/styles/user
-@dirrm share/opera/styles/images
-@dirrm share/opera/styles
-@dirrm share/opera/skin
-@exec ${MKDIR} %D/share/opera/plugins
-@dirrm share/opera/plugins
-@dirrm share/opera/locale/zh-tw
-@dirrm share/opera/locale/zh-cn
-@dirrm share/opera/locale/uk
-@dirrm share/opera/locale/tr
-@dirrm share/opera/locale/te
-@dirrm share/opera/locale/ta
-@dirrm share/opera/locale/sv
-@dirrm share/opera/locale/ru
-@dirrm share/opera/locale/pt-BR
-@dirrm share/opera/locale/pt
-@dirrm share/opera/locale/pl
-@dirrm share/opera/locale/nn
-@dirrm share/opera/locale/nl
-@dirrm share/opera/locale/nb
-@dirrm share/opera/locale/mk
-@dirrm share/opera/locale/lt
-@dirrm share/opera/locale/ko
-@dirrm share/opera/locale/ka
-@dirrm share/opera/locale/ja
-@dirrm share/opera/locale/it
-@dirrm share/opera/locale/id
-@dirrm share/opera/locale/hu
-@dirrm share/opera/locale/hr
-@dirrm share/opera/locale/hi
-@dirrm share/opera/locale/fy
-@dirrm share/opera/locale/fr-CA
-@dirrm share/opera/locale/fr
-@dirrm share/opera/locale/fi
-@dirrm share/opera/locale/et
-@dirrm share/opera/locale/es-LA
-@dirrm share/opera/locale/es-ES
-@dirrm share/opera/locale/en-GB
-@dirrm share/opera/locale/en
-@dirrm share/opera/locale/el
-@dirrm share/opera/locale/de
-@dirrm share/opera/locale/da
-@dirrm share/opera/locale/cs
-@dirrm share/opera/locale/bg
-@dirrm share/opera/locale/be
-@dirrm share/opera/locale
-@dirrm share/opera/java
-@dirrm share/opera/ini
-@dirrm share/opera/bin
-@comment @dirrm share/opera
-@dirrm share/doc/opera
+@pkgdir share/opera/plugins

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/10/08 01:47:18 salo Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:30 joerg Exp $
 bin/paros
 lib/paros/autoupd.bat
 lib/paros/db/def.txt
@@ -48,11 +48,3 @@ lib/paros/xml/session.dtd
 lib/paros/xml/session.xml
 lib/paros/xml/test.xml
 lib/paros/xml/untitledsession.xml
-@dirrm lib/paros/xml
-@dirrm lib/paros/session
-@dirrm lib/paros/plugin
-@dirrm lib/paros/log
-@dirrm lib/paros/license
-@dirrm lib/paros/filter
-@dirrm lib/paros/db
-@dirrm lib/paros

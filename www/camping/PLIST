@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:22:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:19 joerg Exp $
 bin/camping
 ${GEM_HOME}/cache/camping-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -21,10 +21,3 @@ ${GEM_LIBDIR}/lib/camping/reloader.rb
 ${GEM_LIBDIR}/lib/camping/session.rb
 ${GEM_LIBDIR}/lib/camping/webrick.rb
 ${GEM_HOME}/specifications/camping-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/camping
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/extras
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

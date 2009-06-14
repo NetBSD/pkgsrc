@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/04/07 11:29:52 kefren Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:00:28 joerg Exp $
 bin/asp-state
 bin/asp-state1
 bin/asp-state2
@@ -210,40 +210,3 @@ man/man1/dbsessmgr.1
 man/man1/fastcgi-mono-server.1
 man/man1/mod-mono-server.1
 man/man1/xsp.1
-@dirrm lib/xsp/test/controls
-@dirrm lib/xsp/test/bin
-@dirrm lib/xsp/test/App_Code
-@dirrm lib/xsp/test/2.0/treeview/TreeLineImages
-@dirrm lib/xsp/test/2.0/treeview
-@dirrm lib/xsp/test/2.0/menu
-@dirrm lib/xsp/test/2.0/masterpages
-@dirrm lib/xsp/test/2.0
-@dirrm lib/xsp/test/1.1/webservice
-@dirrm lib/xsp/test/1.1/webcontrols
-@dirrm lib/xsp/test/1.1/html
-@dirrm lib/xsp/test/1.1/handlers
-@dirrm lib/xsp/test/1.1/databind
-@dirrm lib/xsp/test/1.1/customcontrol
-@dirrm lib/xsp/test/1.1/authtest
-@dirrm lib/xsp/test/1.1/asp.net
-@dirrm lib/xsp/test/1.1
-@dirrm lib/xsp/test
-@dirrm lib/xsp/2.0
-@dirrm lib/xsp/1.0
-@dirrm lib/xsp
-@dirrm lib/mono/gac/xsp2/2.4.0.0__0738eb9f132ed756
-@dirrm lib/mono/gac/xsp2
-@dirrm lib/mono/gac/xsp/2.4.0.0__0738eb9f132ed756
-@dirrm lib/mono/gac/xsp
-@dirrm lib/mono/gac/mod-mono-server2/2.4.0.0__0738eb9f132ed756
-@dirrm lib/mono/gac/mod-mono-server2
-@dirrm lib/mono/gac/mod-mono-server/2.4.0.0__0738eb9f132ed756
-@dirrm lib/mono/gac/mod-mono-server
-@dirrm lib/mono/gac/fastcgi-mono-server2/2.4.0.0__0738eb9f132ed756
-@dirrm lib/mono/gac/fastcgi-mono-server2
-@dirrm lib/mono/gac/fastcgi-mono-server/2.4.0.0__0738eb9f132ed756
-@dirrm lib/mono/gac/fastcgi-mono-server
-@dirrm lib/mono/gac/Mono.WebServer2/0.2.0.0__0738eb9f132ed756
-@dirrm lib/mono/gac/Mono.WebServer2
-@dirrm lib/mono/gac/Mono.WebServer/0.1.0.0__0738eb9f132ed756
-@dirrm lib/mono/gac/Mono.WebServer

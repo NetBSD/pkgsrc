@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2009/06/09 18:31:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2009/06/14 22:00:20 joerg Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -116,6 +116,3 @@ share/examples/curl/simplepost.c
 share/examples/curl/simplessl.c
 share/examples/curl/synctime.c
 share/examples/curl/threaded-ssl.c
-@dirrm share/examples/curl
-@dirrm share/doc/curl
-@dirrm include/curl

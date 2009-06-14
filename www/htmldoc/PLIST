@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/08 11:57:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:23 joerg Exp $
 bin/htmldoc
 man/man1/htmldoc.1
 share/doc/htmldoc/help.html
@@ -79,7 +79,3 @@ share/htmldoc/fonts/Times-Italic.afm
 share/htmldoc/fonts/Times-Italic.pfa
 share/htmldoc/fonts/Times-Roman.afm
 share/htmldoc/fonts/Times-Roman.pfa
-@dirrm share/htmldoc/fonts
-@dirrm share/htmldoc/data
-@dirrm share/htmldoc
-@dirrm share/doc/htmldoc

@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/17 19:23:25 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:15 joerg Exp $
 lib/httpd/mod_ntlm.so
 share/examples/mod_ntlm/ntlm.conf
-@dirrm share/examples/mod_ntlm

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/12 12:40:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:23 joerg Exp $
 bin/junkbuster
 man/man1/junkbuster.1
 share/examples/junkbuster/junkbuster.ini
@@ -7,4 +7,3 @@ share/examples/junkbuster/sblock.ini
 share/examples/junkbuster/scookie.ini
 share/examples/junkbuster/sforward.ini
 share/examples/junkbuster/strust.ini
-@dirrm share/examples/junkbuster

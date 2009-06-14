@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/16 20:06:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:31 joerg Exp $
 ${PYSITELIB}/atom/__init__.py
 ${PYSITELIB}/atom/__init__.pyc
 ${PYSITELIB}/atom/__init__.pyo
@@ -119,19 +119,3 @@ ${PYSITELIB}/gdata/youtube/__init__.pyo
 ${PYSITELIB}/gdata/youtube/service.py
 ${PYSITELIB}/gdata/youtube/service.pyc
 ${PYSITELIB}/gdata/youtube/service.pyo
-@dirrm ${PYSITELIB}/gdata/youtube
-@dirrm ${PYSITELIB}/gdata/spreadsheet
-@dirrm ${PYSITELIB}/gdata/photos
-@dirrm ${PYSITELIB}/gdata/media
-@dirrm ${PYSITELIB}/gdata/geo
-@dirrm ${PYSITELIB}/gdata/exif
-@dirrm ${PYSITELIB}/gdata/docs
-@dirrm ${PYSITELIB}/gdata/contacts
-@dirrm ${PYSITELIB}/gdata/codesearch
-@dirrm ${PYSITELIB}/gdata/calendar
-@dirrm ${PYSITELIB}/gdata/blogger
-@dirrm ${PYSITELIB}/gdata/base
-@dirrm ${PYSITELIB}/gdata/apps
-@dirrm ${PYSITELIB}/gdata/alt
-@dirrm ${PYSITELIB}/gdata
-@dirrm ${PYSITELIB}/atom

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/04 16:53:58 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:32 joerg Exp $
 ${PYSITELIB}/simpletal/DummyLogger.py
 ${PYSITELIB}/simpletal/DummyLogger.pyc
 ${PYSITELIB}/simpletal/DummyLogger.pyo
@@ -23,4 +23,3 @@ ${PYSITELIB}/simpletal/simpleTALES.pyo
 ${PYSITELIB}/simpletal/simpleTALUtils.py
 ${PYSITELIB}/simpletal/simpleTALUtils.pyc
 ${PYSITELIB}/simpletal/simpleTALUtils.pyo
-@dirrm ${PYSITELIB}/simpletal

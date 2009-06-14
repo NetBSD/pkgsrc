@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/22 20:52:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:33 joerg Exp $
 bin/raggle
 man/man1/raggle.1
 share/doc/raggle/AUTHORS
@@ -308,50 +308,3 @@ share/raggle/themes/minidesc.yaml
 share/raggle/themes/mono.yaml
 share/raggle/themes/pane.yaml
 share/raggle/themes/vert.yaml
-@dirrm share/raggle/themes
-@dirrm share/raggle/extras/win32
-@dirrm share/raggle/extras/web_ui/inc
-@dirrm share/raggle/extras/web_ui/images
-@dirrm share/raggle/extras/web_ui
-@dirrm share/raggle/extras/sql
-@dirrm share/raggle/extras
-@dirrm share/raggle
-@dirrm share/doc/raggle/api/files/raggle.src
-@dirrm share/doc/raggle/api/files
-@dirrm share/doc/raggle/api/classes/String.src
-@dirrm share/doc/raggle/api/classes/Raggle/Syndic8.src
-@dirrm share/doc/raggle/api/classes/Raggle/Proxy.src
-@dirrm share/doc/raggle/api/classes/Raggle/Path.src
-@dirrm share/doc/raggle/api/classes/Raggle/OPML.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/NcursesInterface/Window.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/NcursesInterface/TextWindow.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/NcursesInterface/ListWindow.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/NcursesInterface/Key.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/NcursesInterface.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/NcursesInterface
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/HTTPServerInterface/HTTPServer.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/HTTPServerInterface.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/HTTPServerInterface
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/DRbServerInterface/DRbServer.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/DRbServerInterface/DRbInterface.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/DRbServerInterface.src
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces/DRbServerInterface
-@dirrm share/doc/raggle/api/classes/Raggle/Interfaces
-@dirrm share/doc/raggle/api/classes/Raggle/HTML/TagSet/Tag.src
-@dirrm share/doc/raggle/api/classes/Raggle/HTML/TagSet.src
-@dirrm share/doc/raggle/api/classes/Raggle/HTML/TagSet
-@dirrm share/doc/raggle/api/classes/Raggle/HTML/Renderer.src
-@dirrm share/doc/raggle/api/classes/Raggle/HTML/Parser.src
-@dirrm share/doc/raggle/api/classes/Raggle/HTML.src
-@dirrm share/doc/raggle/api/classes/Raggle/HTML
-@dirrm share/doc/raggle/api/classes/Raggle/Feed/List.src
-@dirrm share/doc/raggle/api/classes/Raggle/Feed/Channel.src
-@dirrm share/doc/raggle/api/classes/Raggle/Feed
-@dirrm share/doc/raggle/api/classes/Raggle/Engine.src
-@dirrm share/doc/raggle/api/classes/Raggle/CLI.src
-@dirrm share/doc/raggle/api/classes/Raggle
-@dirrm share/doc/raggle/api/classes/Proc.src
-@dirrm share/doc/raggle/api/classes/Kernel.src
-@dirrm share/doc/raggle/api/classes
-@dirrm share/doc/raggle/api
-@dirrm share/doc/raggle
