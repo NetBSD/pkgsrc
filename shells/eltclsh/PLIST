@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/08/22 07:42:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:14:21 joerg Exp $
 bin/eltclsh
 ${PLIST.tk}bin/elwish
 man/man1/eltclsh.1
@@ -6,4 +6,3 @@ share/eltcl/complete.tcl
 share/eltcl/init.tcl
 share/eltcl/pkgIndex.tcl
 share/eltcl/tools.tcl
-@dirrm share/eltcl

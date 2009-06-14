@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/06/07 15:11:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:17 joerg Exp $
 share/examples/webmin/cyrus-imapd/config
 share/webmin/cyrus-imapd/AUTHORS
 share/webmin/cyrus-imapd/BUGS
@@ -55,9 +55,3 @@ share/webmin/cyrus-imapd/treeMenu/ftv2pnode.gif
 share/webmin/cyrus-imapd/treeMenu/ftv2vertline.gif
 share/webmin/cyrus-imapd/treeMenu/ua.js
 share/webmin/cyrus-imapd/useradmin_update.pl
-@dirrm share/webmin/cyrus-imapd/treeMenu
-@dirrm share/webmin/cyrus-imapd/lang
-@dirrm share/webmin/cyrus-imapd/images
-@dirrm share/webmin/cyrus-imapd/help
-@dirrm share/webmin/cyrus-imapd
-@dirrm share/examples/webmin/cyrus-imapd

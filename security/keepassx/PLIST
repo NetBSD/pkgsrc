@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/21 13:51:01 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:30 joerg Exp $
 bin/keepass
 share/keepass/i18n/keepass-de_DE.qm
 share/keepass/i18n/keepass-fr_FR.qm
@@ -34,11 +34,3 @@ share/keepass/icons/ok.png
 share/keepass/icons/search.png
 share/keepass/icons/settings.png
 share/keepass/license.html
-@dirrm share/keepass/icons/nuvola/32x32/filesystems
-@dirrm share/keepass/icons/nuvola/32x32/apps
-@dirrm share/keepass/icons/nuvola/32x32/actions
-@dirrm share/keepass/icons/nuvola/32x32
-@dirrm share/keepass/icons/nuvola
-@dirrm share/keepass/icons
-@dirrm share/keepass/i18n
-@dirrm share/keepass

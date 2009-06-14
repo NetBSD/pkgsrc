@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/03/20 18:15:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:13:32 joerg Exp $
 bin/compile_et
 bin/gss-client
 bin/kdestroy
@@ -113,8 +113,3 @@ share/examples/krb5/services.append
 share/examples/rc.d/kadmind
 share/examples/rc.d/kdc
 share/gnats/mit
-@dirrm share/gnats
-@dirrm share/examples/krb5
-@dirrm share/et
-@dirrm include/gssrpc
-@dirrm include/gssapi

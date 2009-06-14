@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/04/12 22:43:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:16:06 joerg Exp $
 bin/mbchk
 info/grub.info
 info/multiboot.info
@@ -28,6 +28,3 @@ sbin/grub-md5-crypt
 sbin/grub-set-default
 sbin/grub-terminfo
 ${PLIST.netboot}share/doc/grub/README.netboot
-@dirrm lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}
-@dirrm lib/grub
-${PLIST.netboot}@dirrm share/doc/grub

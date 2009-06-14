@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/28 05:34:25 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:37 joerg Exp $
 bin/tls.py
 bin/tlsdb.py
 ${PYSITELIB}/tlslite/BaseDB.py
@@ -181,6 +181,3 @@ ${PYSITELIB}/tlslite/utils/rijndael.pyo
 ${PYSITELIB}/tlslite/utils/xmltools.py
 ${PYSITELIB}/tlslite/utils/xmltools.pyc
 ${PYSITELIB}/tlslite/utils/xmltools.pyo
-@dirrm ${PYSITELIB}/tlslite/utils
-@dirrm ${PYSITELIB}/tlslite/integration
-@dirrm ${PYSITELIB}/tlslite
