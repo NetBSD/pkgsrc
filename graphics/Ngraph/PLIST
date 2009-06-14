@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 20:05:40 joerg Exp $
 bin/ngraph
 libexec/Ngraph/.Ngraph
 libexec/Ngraph/.Ngraph.ngp
@@ -157,4 +157,3 @@ libexec/Ngraph/doc/dialogs/merge.jpg
 libexec/Ngraph/doc/dialogs/pageord.jpg
 libexec/Ngraph/doc/dialogs/prefmisc.jpg
 libexec/Ngraph/doc/dialogs/save.jpg
-@exec ${MKDIR} %D/libexec/Ngraph/doc

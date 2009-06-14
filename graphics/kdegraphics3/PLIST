@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2009/06/14 17:59:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.32 2009/06/14 20:05:42 joerg Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -1154,5 +1154,5 @@ share/kde/servicetypes/kimageviewer.desktop
 share/kde/servicetypes/kimageviewercanvas.desktop
 share/kde/servicetypes/kmultipage.desktop
 share/kde/servicetypes/ksvgrenderer.desktop
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdegraphics-apidocs/kviewshell/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdegraphics-apidocs/kfaxview/html
+@pkgdir share/doc/kde/HTML/en/kdegraphics-apidocs/kviewshell/html
+@pkgdir share/doc/kde/HTML/en/kdegraphics-apidocs/kfaxview/html
