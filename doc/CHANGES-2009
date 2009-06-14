@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2359 2009/06/14 23:26:57 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2360 2009/06/14 23:32:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3156,3 +3156,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-ExtUtils-ModuleMaker-TT version 0.93 [sno 2009-06-14]
 	Added textproc/p5-Template-Plugin-CSV version 0.04 [sno 2009-06-14]
 	Updated devel/p5-IPC-Cmd to 0.46 [sno 2009-06-14]
+	Updated devel/p5-IPC-Run3 to 0.043 [sno 2009-06-14]
