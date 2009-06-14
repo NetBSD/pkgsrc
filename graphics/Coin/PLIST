@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 20:05:39 joerg Exp $
 bin/coin-config
 include/Inventor/C/base/hash.h
 include/Inventor/C/base/heap.h
@@ -701,6 +701,3 @@ share/Coin/draggerDefaults/transformerDragger.iv
 share/Coin/draggerDefaults/translate1Dragger.iv
 share/Coin/draggerDefaults/translate2Dragger.iv
 share/aclocal/coin.m4
-@unexec ${RMDIR} %D/share/Coin/draggerDefaults 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/Coin/conf 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/Coin 2>/dev/null || ${TRUE}
