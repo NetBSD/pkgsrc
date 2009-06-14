@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: substplistbasedirs,v 1.2 2004/09/27 00:31:30 rh Exp $
+#	$NetBSD: substplistbasedirs,v 1.3 2009/06/14 22:40:45 joerg Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,7 @@
 # in a base package
 #
 
-REV=`echo '$Revision: 1.2 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.3 $' | sed 's/\\$//g'`
 CURDIR=`pwd | sed 's|^.*/\([^/]*/[^/]*\)$|\1|'`
 PLIST=PLIST
 MDFLAG=true
@@ -71,20 +71,3 @@ if [ ! -f $PLIST ]; then
 	echo "###> a working $PLIST is required!                         <###"
 	exit 1
 fi
-
-##
-## create @dirrm substitution patterns
-## 
-grep '^@dirrm' $PLIST | sort | sed					\
-	-e 's|/|\\/|g'							\
-	-e 's|^|PRINT_PLIST_AWK+=	/\^|'				\
-	-e "s|$|\$\$/ { print \"@comment in ${CURDIR}: \" \$\$0; next; }|"
-
-##
-## create @exec ${MKDIR} removal patterns
-## 
-[ "$MDFLAG" != "true" ] || grep '^@dirrm' $PLIST | sort | sed		\
-	-e 's|/|\\/|g'							\
-	-e 's|^|PRINT_PLIST_AWK+=	/\^|'				\
-	-e 's|@dirrm |@exec \\$${MKDIR} %D\\/|'				\
-	-e "s|$|\$\$/ { next; }|"
