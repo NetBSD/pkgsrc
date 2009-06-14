@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/21 23:28:32 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:01 joerg Exp $
 man/man8/autoswc.8
 sbin/autoswc
 share/autoswc/autoswc.mk
 share/autoswc/config.site
 share/autoswc/configure.ac
-@dirrm share/autoswc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/05 06:53:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:10:40 joerg Exp $
 now/bin/${MACHINE_ARCH}-${OPSYS}-tcp/daemon
 now/bin/${MACHINE_ARCH}-${OPSYS}-tcp/master
 now/bin/GLUnix-bin
@@ -111,18 +111,4 @@ now/man/mhtml3/Glib_GetTotalNodes.3
 now/man/mhtml3/Glib_Initialize.3
 now/man/mhtml3/Glib_SetPartition.3
 now/man/mhtml3/Glib_Spawn.3
-@dirrm now/lib/${MACHINE_ARCH}-${OPSYS}-tcp
-@dirrm now/lib/perl-lib/Time
-@dirrm now/lib/perl-lib
-@dirrm now/bin/${MACHINE_ARCH}-${OPSYS}-tcp
-@dirrm now/man/mhtml3
-@dirrm now/man/mhtml1
-@dirrm now/man/html1
-@dirrm now/man/man1
-@dirrm now/man
-@dirrm now/lib
-@dirrm now/bin
-@dirrm now/include/glib
-@dirrm now/include
-@dirrm now
 @unexec /bin/rm -rf %D/now/data

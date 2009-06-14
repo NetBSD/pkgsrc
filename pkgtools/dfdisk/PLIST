@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/17 08:42:00 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:02 joerg Exp $
 bin/dfdisk
 man/man1/dfdisk.1
 share/examples/dfdisk/dfdisk.conf
-@dirrm share/examples/dfdisk

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/07 18:07:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:11:02 joerg Exp $
 bin/bulkbuild
 bin/bulkbuild-rebuild
 bin/bulkbuild-restart
@@ -18,5 +18,3 @@ libexec/pbulk/scan
 libexec/pbulk/scan-client-start
 libexec/pbulk/upload
 share/examples/pbulk/pbulk.conf
-@dirrm share/examples/pbulk
-@dirrm libexec/pbulk

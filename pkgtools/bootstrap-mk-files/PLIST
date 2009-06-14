@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/24 17:49:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:11:02 joerg Exp $
 share/mk/bsd.README
 share/mk/bsd.dep.mk
 share/mk/bsd.depall.mk
@@ -20,4 +20,3 @@ share/mk/bsd.prog.mk
 share/mk/bsd.subdir.mk
 share/mk/bsd.sys.mk
 share/mk/sys.mk
-@dirrm share/mk

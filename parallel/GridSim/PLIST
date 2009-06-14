@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/16 14:15:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:10:40 joerg Exp $
 GridSim/application/gridbroker/doc/broker.html
 GridSim/application/gridbroker/doc/brokerresource.html
 GridSim/application/gridbroker/doc/experiment.html
@@ -324,33 +324,3 @@ share/examples/GridSim/example9/newgridresource.java
 share/examples/GridSim/example9/output.txt
 share/examples/GridSim/example9/readme.txt
 share/examples/GridSim/readme.txt
-@dirrm share/examples/GridSim/example9
-@dirrm share/examples/GridSim/example8
-@dirrm share/examples/GridSim/example7
-@dirrm share/examples/GridSim/example6
-@dirrm share/examples/GridSim/example5
-@dirrm share/examples/GridSim/example4
-@dirrm share/examples/GridSim/example3
-@dirrm share/examples/GridSim/example2
-@dirrm share/examples/GridSim/example1
-@dirrm share/doc/html/GridSim/resources
-@dirrm share/doc/html/GridSim/gridsim
-@dirrm share/doc/html/GridSim/eduni/simjava/distributions
-@dirrm share/doc/html/GridSim/eduni/simjava
-@dirrm share/doc/html/GridSim/eduni
-@dirrm share/doc/html/GridSim
-@dirrm share/doc/GridSim
-@dirrm GridSim/source/gridsim
-@dirrm GridSim/source
-@dirrm GridSim/jars
-@dirrm GridSim/application/visualmodeler/src/image
-@dirrm GridSim/application/visualmodeler/src
-@dirrm GridSim/application/visualmodeler/doc/image
-@dirrm GridSim/application/visualmodeler/doc
-@dirrm GridSim/application/visualmodeler
-@dirrm GridSim/application/gridbroker/src
-@dirrm GridSim/application/gridbroker/example
-@dirrm GridSim/application/gridbroker/doc
-@dirrm GridSim/application/gridbroker
-@dirrm GridSim/application
-@dirrm GridSim

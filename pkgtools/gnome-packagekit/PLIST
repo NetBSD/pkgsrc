@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/08 00:22:46 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:02 joerg Exp $
 bin/gpk-application
 bin/gpk-backend-status
 bin/gpk-install-catalog
@@ -386,54 +386,3 @@ share/omf/gnome-packagekit/gnome-packagekit-es.omf
 share/omf/gnome-packagekit/gnome-packagekit-oc.omf
 share/omf/gnome-packagekit/gnome-packagekit-pl.omf
 share/omf/gnome-packagekit/gnome-packagekit-sv.omf
-@dirrm share/omf/gnome-packagekit
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/gnome-packagekit/sv/figures
-@dirrm share/gnome/help/gnome-packagekit/sv
-@dirrm share/gnome/help/gnome-packagekit/pl/figures
-@dirrm share/gnome/help/gnome-packagekit/pl
-@dirrm share/gnome/help/gnome-packagekit/oc/figures
-@dirrm share/gnome/help/gnome-packagekit/oc
-@dirrm share/gnome/help/gnome-packagekit/es/figures
-@dirrm share/gnome/help/gnome-packagekit/es
-@dirrm share/gnome/help/gnome-packagekit/el/figures
-@dirrm share/gnome/help/gnome-packagekit/el
-@dirrm share/gnome/help/gnome-packagekit/C/figures
-@dirrm share/gnome/help/gnome-packagekit/C
-@dirrm share/gnome/help/gnome-packagekit
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome-packagekit/icons/hicolor/scalable/status
-@dirrm share/gnome-packagekit/icons/hicolor/scalable/actions
-@dirrm share/gnome-packagekit/icons/hicolor/scalable
-@dirrm share/gnome-packagekit/icons/hicolor/48x48/status
-@dirrm share/gnome-packagekit/icons/hicolor/48x48/animations
-@dirrm share/gnome-packagekit/icons/hicolor/48x48/actions
-@dirrm share/gnome-packagekit/icons/hicolor/48x48
-@dirrm share/gnome-packagekit/icons/hicolor/24x24/status
-@dirrm share/gnome-packagekit/icons/hicolor/24x24/animations
-@dirrm share/gnome-packagekit/icons/hicolor/24x24/actions
-@dirrm share/gnome-packagekit/icons/hicolor/24x24
-@dirrm share/gnome-packagekit/icons/hicolor/22x22/status
-@dirrm share/gnome-packagekit/icons/hicolor/22x22/animations
-@dirrm share/gnome-packagekit/icons/hicolor/22x22/actions
-@dirrm share/gnome-packagekit/icons/hicolor/22x22
-@dirrm share/gnome-packagekit/icons/hicolor/16x16/status
-@dirrm share/gnome-packagekit/icons/hicolor/16x16/animations
-@dirrm share/gnome-packagekit/icons/hicolor/16x16/actions
-@dirrm share/gnome-packagekit/icons/hicolor/16x16
-@dirrm share/gnome-packagekit/icons/hicolor
-@dirrm share/gnome-packagekit/icons
-@dirrm share/gnome-packagekit
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/python2.5/site-packages/packagekit
