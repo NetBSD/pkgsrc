@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/06/14 17:37:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:28:43 joerg Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -628,5 +628,3 @@ share/irc/translation/SWEDISH_NAMES_COM
 share/irc/translation/SWISS
 share/irc/translation/UNITED_KINGDOM
 share/irc/translation/UNITED_KINGDOM_COM
-@unexec ${RMDIR} %D/share/irc/script 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/irc 2>/dev/null || ${TRUE}

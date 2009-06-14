@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:28:44 joerg Exp $
 libexec/telepathy-idle
 man/man8/telepathy-idle.8
 share/dbus-1/services/org.freedesktop.Telepathy.ConnectionManager.idle.service
 share/telepathy/managers/idle.manager
-@unexec ${RMDIR} %D/share/telepathy/managers 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/telepathy 2>/dev/null || ${TRUE}
