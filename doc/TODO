@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8190 2009/06/14 18:40:45 minskim Exp $
+$NetBSD: TODO,v 1.8191 2009/06/14 21:17:43 roy Exp $
 
 Suggested new packages
 ======================
@@ -522,7 +522,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dirac-1.0.2
 	o dircproxy-devel-1.2.0.2
 	o dmenu-4.0
-	o dnsmasq-2.49
 	o dnstop-20070307
 	o dnstracer-1.9
 	o doxygen-1.5.9
