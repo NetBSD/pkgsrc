@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/01/21 05:05:15 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:25:17 joerg Exp $
 ${LITE}bin/xglock
 bin/xlock
 lib/X11/app-defaults/XLock
@@ -8,6 +8,3 @@ lib/X11/xlock/sounds/not-programmed.au
 lib/X11/xlock/sounds/thank-you.au
 man/man1/xlock.1
 ${LITE}share/xlock/xglockrc
-${LITE}@dirrm share/xlock
-@dirrm lib/X11/xlock/sounds
-@dirrm lib/X11/xlock

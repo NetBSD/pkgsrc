@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/02/20 10:36:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 18:24:55 joerg Exp $
 share/doc/kde/HTML/sl/common/1.png
 share/doc/kde/HTML/sl/common/10.png
 share/doc/kde/HTML/sl/common/2.png
@@ -917,64 +917,3 @@ share/locale/sl/LC_MESSAGES/webarchiver.mo
 share/locale/sl/charset
 share/locale/sl/entry.desktop
 share/locale/sl/flag.png
-@dirrm share/kde/apps/kturtle/examples/sl
-@comment in kde: @dirrm share/kde/apps/kturtle/examples
-@comment in kde: @dirrm share/kde/apps/kturtle/data
-@dirrm share/kde/apps/ktuberling/sounds/sl
-@comment in kde: @dirrm share/kde/apps/ktuberling/sounds
-@dirrm share/kde/apps/khangman/data/sl
-@comment in kde: @dirrm share/kde/apps/khangman/data
-@comment in kde: @dirrm share/kde/apps/khangman
-@comment in kde: @dirrm share/kde/apps/katepart/syntax
-@dirrm share/doc/kde/HTML/sl/kppp
-@dirrm share/doc/kde/HTML/sl/kpackage
-@dirrm share/doc/kde/HTML/sl/konsole
-@dirrm share/doc/kde/HTML/sl/konqueror
-@dirrm share/doc/kde/HTML/sl/kioslave
-@dirrm share/doc/kde/HTML/sl/kinfocenter/xserver
-@dirrm share/doc/kde/HTML/sl/kinfocenter/sound
-@dirrm share/doc/kde/HTML/sl/kinfocenter/scsi
-@dirrm share/doc/kde/HTML/sl/kinfocenter/samba
-@dirrm share/doc/kde/HTML/sl/kinfocenter/protocols
-@dirrm share/doc/kde/HTML/sl/kinfocenter/processor
-@dirrm share/doc/kde/HTML/sl/kinfocenter/pcmcia
-@dirrm share/doc/kde/HTML/sl/kinfocenter/pci
-@dirrm share/doc/kde/HTML/sl/kinfocenter/partitions
-@dirrm share/doc/kde/HTML/sl/kinfocenter/dma
-@dirrm share/doc/kde/HTML/sl/kinfocenter/blockdevices
-@dirrm share/doc/kde/HTML/sl/kinfocenter
-@dirrm share/doc/kde/HTML/sl/khelpcenter/visualdict
-@dirrm share/doc/kde/HTML/sl/khelpcenter/userguide
-@dirrm share/doc/kde/HTML/sl/khelpcenter/glossary
-@dirrm share/doc/kde/HTML/sl/khelpcenter/faq
-@dirrm share/doc/kde/HTML/sl/khelpcenter
-@dirrm share/doc/kde/HTML/sl/kfind
-@dirrm share/doc/kde/HTML/sl/kdm
-@dirrm share/doc/kde/HTML/sl/kdesu
-@dirrm share/doc/kde/HTML/sl/kdeprint
-@dirrm share/doc/kde/HTML/sl/kcontrol/windowmanagement
-@dirrm share/doc/kde/HTML/sl/kcontrol/spellchecking
-@dirrm share/doc/kde/HTML/sl/kcontrol/smb
-@dirrm share/doc/kde/HTML/sl/kcontrol/proxy
-@dirrm share/doc/kde/HTML/sl/kcontrol/powerctrl
-@dirrm share/doc/kde/HTML/sl/kcontrol/laptop
-@dirrm share/doc/kde/HTML/sl/kcontrol/kwindecoration
-@dirrm share/doc/kde/HTML/sl/kcontrol/kmixcfg
-@dirrm share/doc/kde/HTML/sl/kcontrol/keyboard
-@dirrm share/doc/kde/HTML/sl/kcontrol/kcmsmserver
-@dirrm share/doc/kde/HTML/sl/kcontrol/kcmlowbatwarn
-@dirrm share/doc/kde/HTML/sl/kcontrol/kcmlowbatcrit
-@dirrm share/doc/kde/HTML/sl/kcontrol/kcmlaunch
-@dirrm share/doc/kde/HTML/sl/kcontrol/kcmcss
-@dirrm share/doc/kde/HTML/sl/kcontrol/kalarmd
-@dirrm share/doc/kde/HTML/sl/kcontrol/filetypes
-@dirrm share/doc/kde/HTML/sl/kcontrol/ebrowsing
-@dirrm share/doc/kde/HTML/sl/kcontrol/crypto
-@dirrm share/doc/kde/HTML/sl/kcontrol/cookies
-@dirrm share/doc/kde/HTML/sl/kcontrol/clock
-@dirrm share/doc/kde/HTML/sl/kcontrol/bell
-@dirrm share/doc/kde/HTML/sl/kcontrol/arts
-@dirrm share/doc/kde/HTML/sl/kcontrol
-@dirrm share/doc/kde/HTML/sl/kaddressbook
-@comment in kde: @dirrm share/doc/kde/HTML/sl/common
-@comment in kde: @dirrm share/doc/kde/HTML/sl

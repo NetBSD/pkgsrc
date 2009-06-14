@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/03/31 14:38:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 18:25:05 joerg Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
@@ -149,67 +149,3 @@ qt3/plugins/designer/libdlgplugin.la
 qt3/plugins/designer/libkdevdlgplugin.la
 qt3/plugins/designer/librcplugin.la
 qt3/plugins/designer/libwizards.la
-@dirrm qt3/plugins/designer
-@comment @dirrm qt3/plugins
-@dirrm qt3/mkspecs/win32-watcom
-@dirrm qt3/mkspecs/win32-msvc.net
-@dirrm qt3/mkspecs/win32-msvc2005
-@dirrm qt3/mkspecs/win32-msvc
-@dirrm qt3/mkspecs/win32-icc
-@dirrm qt3/mkspecs/win32-g++
-@dirrm qt3/mkspecs/win32-borland
-@dirrm qt3/mkspecs/unixware-g++
-@dirrm qt3/mkspecs/unixware-cc
-@dirrm qt3/mkspecs/tru64-g++
-@dirrm qt3/mkspecs/tru64-cxx
-@dirrm qt3/mkspecs/solaris-g++-64
-@dirrm qt3/mkspecs/solaris-g++
-@dirrm qt3/mkspecs/solaris-cc-64
-@dirrm qt3/mkspecs/solaris-cc
-@dirrm qt3/mkspecs/sco-g++
-@dirrm qt3/mkspecs/sco-cc
-@dirrm qt3/mkspecs/reliant-cds-64
-@dirrm qt3/mkspecs/reliant-cds
-@dirrm qt3/mkspecs/qnx-g++
-@dirrm qt3/mkspecs/openbsd-g++
-@dirrm qt3/mkspecs/netbsd-g++
-@dirrm qt3/mkspecs/macx-xlc
-@dirrm qt3/mkspecs/macx-pbuilder
-@dirrm qt3/mkspecs/macx-mwerks
-@dirrm qt3/mkspecs/macx-g++
-@dirrm qt3/mkspecs/lynxos-g++
-@dirrm qt3/mkspecs/linux-pgcc
-@dirrm qt3/mkspecs/linux-kylix
-@dirrm qt3/mkspecs/linux-kcc
-@dirrm qt3/mkspecs/linux-icc
-@dirrm qt3/mkspecs/linux-g++-64
-@dirrm qt3/mkspecs/linux-g++-32
-@dirrm qt3/mkspecs/linux-g++
-@dirrm qt3/mkspecs/linux-ecc-64
-@dirrm qt3/mkspecs/linux-cxx
-@dirrm qt3/mkspecs/irix-g++
-@dirrm qt3/mkspecs/irix-cc-o32
-@dirrm qt3/mkspecs/irix-cc-64
-@dirrm qt3/mkspecs/irix-cc
-@dirrm qt3/mkspecs/interix-g++
-@dirrm qt3/mkspecs/hurd-g++
-@dirrm qt3/mkspecs/hpuxi-acc-64
-@dirrm qt3/mkspecs/hpuxi-acc-32
-@dirrm qt3/mkspecs/hpux-g++-64
-@dirrm qt3/mkspecs/hpux-g++
-@dirrm qt3/mkspecs/hpux-cc
-@dirrm qt3/mkspecs/hpux-acc-o64
-@dirrm qt3/mkspecs/hpux-acc-64
-@dirrm qt3/mkspecs/hpux-acc
-@dirrm qt3/mkspecs/freebsd-icc
-@dirrm qt3/mkspecs/freebsd-g++34
-@dirrm qt3/mkspecs/freebsd-g++
-@dirrm qt3/mkspecs/dgux-g++
-@dirrm qt3/mkspecs/darwin-g++
-@dirrm qt3/mkspecs/cygwin-g++
-@dirrm qt3/mkspecs/bsdi-g++
-@dirrm qt3/mkspecs/aix-xlc-64
-@dirrm qt3/mkspecs/aix-xlc
-@dirrm qt3/mkspecs/aix-g++-64
-@dirrm qt3/mkspecs/aix-g++
-@dirrm qt3/mkspecs

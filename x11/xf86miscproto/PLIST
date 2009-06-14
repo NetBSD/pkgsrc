@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/14 14:53:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:15 joerg Exp $
 include/X11/extensions/xf86misc.h
 include/X11/extensions/xf86mscstr.h
 lib/pkgconfig/xf86miscproto.pc
-@comment @dirrm include/X11/extensions

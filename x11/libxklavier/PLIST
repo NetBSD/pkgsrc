@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/10/24 23:21:20 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:25:00 joerg Exp $
 include/libxklavier/xkl_config_item.h
 include/libxklavier/xkl_config_rec.h
 include/libxklavier/xkl_config_registry.h
@@ -23,5 +23,3 @@ share/gtk-doc/html/libxklavier/libxklavier.devhelp2
 share/gtk-doc/html/libxklavier/right.png
 share/gtk-doc/html/libxklavier/style.css
 share/gtk-doc/html/libxklavier/up.png
-@dirrm share/gtk-doc/html/libxklavier
-@dirrm include/libxklavier

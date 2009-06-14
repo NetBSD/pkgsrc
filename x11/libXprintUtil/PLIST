@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/12 15:05:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:58 joerg Exp $
 include/X11/XprintUtil/xprintutil.h
 lib/libXprintUtil.la
 lib/pkgconfig/xprintutil.pc
-@dirrm include/X11/XprintUtil

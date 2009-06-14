@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/03/06 00:20:27 snj Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:25:06 joerg Exp $
 bin/urxvt
 bin/urxvtc
 bin/urxvtd
@@ -29,7 +29,3 @@ man/man7/urxvt.7
 share/doc/rxvt-unicode/README.FAQ
 share/examples/rxvt-unicode/rxvt-unicode.termcap
 share/examples/rxvt-unicode/rxvt-unicode.terminfo
-@dirrm share/doc/rxvt-unicode
-@dirrm share/examples/rxvt-unicode
-${PLIST.perl}@dirrm lib/urxvt/perl
-${PLIST.perl}@dirrm lib/urxvt
