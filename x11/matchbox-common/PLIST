@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/31 13:26:20 peter Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:00 joerg Exp $
 bin/matchbox-session
 share/icons/blondie/48x48/apps/mbfolder.png
 share/icons/blondie/48x48/apps/mbfolderprev.png
@@ -21,4 +21,3 @@ share/pixmaps/mbfolderprev.png
 share/pixmaps/mbnoapp.png
 share/pixmaps/mbremove.png
 share/pixmaps/mbup.png
-@dirrm share/matchbox/vfolders

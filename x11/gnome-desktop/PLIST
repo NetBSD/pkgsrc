@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2009/05/26 18:34:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.37 2009/06/14 18:24:47 joerg Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnome/gnome-desktop-utils.h
@@ -320,67 +320,3 @@ share/pixmaps/monitor.png
 share/pixmaps/netbsd-logo-icon-transparent.png
 share/pixmaps/netbsd-logo-icon.png
 share/pixmaps/vnterm.xpm
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/lgpl
-@dirrm share/omf/gpl
-@dirrm share/omf/fdl
-@comment in rarian: @dirrm share/omf
-@dirrm share/gtk-doc/html/gnome-desktop
-@dirrm share/gnome/help/lgpl/zh_CN
-@dirrm share/gnome/help/lgpl/vi
-@dirrm share/gnome/help/lgpl/uk
-@dirrm share/gnome/help/lgpl/sv
-@dirrm share/gnome/help/lgpl/pa
-@dirrm share/gnome/help/lgpl/oc
-@dirrm share/gnome/help/lgpl/ko
-@dirrm share/gnome/help/lgpl/hu
-@dirrm share/gnome/help/lgpl/fr
-@dirrm share/gnome/help/lgpl/fi
-@dirrm share/gnome/help/lgpl/eu
-@dirrm share/gnome/help/lgpl/es
-@dirrm share/gnome/help/lgpl/el
-@dirrm share/gnome/help/lgpl/de
-@dirrm share/gnome/help/lgpl/ar
-@comment in gnome2-dirs: @dirrm share/gnome/help/lgpl/C
-@comment in gnome2-dirs: @dirrm share/gnome/help/lgpl
-@dirrm share/gnome/help/gpl/zh_CN
-@dirrm share/gnome/help/gpl/vi
-@dirrm share/gnome/help/gpl/uk
-@dirrm share/gnome/help/gpl/sv
-@dirrm share/gnome/help/gpl/pa
-@dirrm share/gnome/help/gpl/oc
-@dirrm share/gnome/help/gpl/ko
-@dirrm share/gnome/help/gpl/hu
-@dirrm share/gnome/help/gpl/fr
-@dirrm share/gnome/help/gpl/fi
-@dirrm share/gnome/help/gpl/eu
-@dirrm share/gnome/help/gpl/es
-@dirrm share/gnome/help/gpl/el
-@dirrm share/gnome/help/gpl/de
-@dirrm share/gnome/help/gpl/cs
-@dirrm share/gnome/help/gpl/ca
-@dirrm share/gnome/help/gpl/ar
-@comment in gnome2-dirs: @dirrm share/gnome/help/gpl/C
-@comment in gnome2-dirs: @dirrm share/gnome/help/gpl
-@dirrm share/gnome/help/fdl/vi
-@dirrm share/gnome/help/fdl/uk
-@dirrm share/gnome/help/fdl/sv
-@dirrm share/gnome/help/fdl/oc
-@dirrm share/gnome/help/fdl/ko
-@dirrm share/gnome/help/fdl/hu
-@dirrm share/gnome/help/fdl/fr
-@dirrm share/gnome/help/fdl/eu
-@dirrm share/gnome/help/fdl/es
-@dirrm share/gnome/help/fdl/el
-@dirrm share/gnome/help/fdl/de
-@dirrm share/gnome/help/fdl/ar
-@comment in gnome2-dirs: @dirrm share/gnome/help/fdl/C
-@comment in gnome2-dirs: @dirrm share/gnome/help/fdl
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome-about/headers
-@dirrm share/gnome-about
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm include/gnome-desktop-2.0/libgnomeui
-@dirrm include/gnome-desktop-2.0/libgnome
-@dirrm include/gnome-desktop-2.0

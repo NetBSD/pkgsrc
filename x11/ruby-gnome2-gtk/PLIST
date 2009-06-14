@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2008/10/22 10:42:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:25:06 joerg Exp $
 ${RUBY_VENDORLIB}/gtk2.rb
 ${RUBY_VENDORLIB}/gtk2/base.rb
 ${RUBY_VENDORARCHLIB}/gtk2.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/rbgtk.h
 ${RUBY_VENDORARCHLIB}/rbgtkconversions.h
-@dirrm ${RUBY_VENDORLIB}/gtk2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:24:45 joerg Exp $
 bin/ecolorconf
 bin/econtrol
 bin/edewm
@@ -570,21 +570,3 @@ share/locale/sr/LC_MESSAGES/etimedate.mo
 share/locale/sr/LC_MESSAGES/etip.mo
 share/locale/sr/LC_MESSAGES/ewmconf.mo
 share/locale/sr/LC_MESSAGES/eworkpanel.mo
-@dirrm share/ede/programs/Utilities
-@dirrm share/ede/programs/System
-@dirrm share/ede/programs/Settings
-@dirrm share/ede/programs/Multimedia
-@dirrm share/ede/programs/Internet
-@dirrm share/ede/programs/Graphics
-@dirrm share/ede/programs/Games
-@dirrm share/ede/programs/Development
-@dirrm share/ede/programs/Applications
-@dirrm share/ede/programs
-@dirrm share/ede/icons/48x48
-@dirrm share/ede/icons/16x16
-@dirrm share/ede/icons
-@dirrm share/ede/doc
-@dirrm share/ede/.ede/schemes
-@dirrm share/ede/.ede/desktop
-@dirrm share/ede/.ede
-@dirrm share/ede

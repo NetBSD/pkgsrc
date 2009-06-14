@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/29 17:54:13 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:06 joerg Exp $
 share/rox/Wallpaper/.DirIcon
 share/rox/Wallpaper/AppInfo.xml
 share/rox/Wallpaper/AppRun
@@ -18,6 +18,3 @@ share/rox/Wallpaper/actions.py
 share/rox/Wallpaper/findrox.py
 share/rox/Wallpaper/main.py
 share/rox/Wallpaper/options.py
-@dirrm share/rox/Wallpaper/Messages
-@dirrm share/rox/Wallpaper/Help
-@dirrm share/rox/Wallpaper

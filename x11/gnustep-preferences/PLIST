@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/04/19 09:21:24 rh Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:24:49 joerg Exp $
 bin/Preferences
 include/PrefsModule
 lib/GNUstep/Applications/Preferences.app/Preferences
@@ -37,19 +37,3 @@ lib/GNUstep/Preferences/Keyboard.prefs/Resources/Keyboard.gorm
 lib/GNUstep/Preferences/Keyboard.prefs/stamp.make
 lib/libPrefsModule.so
 lib/libPrefsModule.so.0.0.1
-@dirrm lib/GNUstep/Preferences/Keyboard.prefs/Resources
-@dirrm lib/GNUstep/Preferences/Keyboard.prefs
-@dirrm lib/GNUstep/Preferences
-@dirrm lib/GNUstep/Frameworks/PrefsModule.framework/Versions/0/Resources
-@dirrm lib/GNUstep/Frameworks/PrefsModule.framework/Versions/0/Headers
-@dirrm lib/GNUstep/Frameworks/PrefsModule.framework/Versions/0
-@dirrm lib/GNUstep/Frameworks/PrefsModule.framework/Versions
-@dirrm lib/GNUstep/Frameworks/PrefsModule.framework
-@comment in x11/gnustep-base: @dirrm lib/GNUstep/Frameworks
-@dirrm lib/GNUstep/Applications/Preferences.app/Resources/PrefsApp.prefs/Resources
-@dirrm lib/GNUstep/Applications/Preferences.app/Resources/PrefsApp.prefs
-@dirrm lib/GNUstep/Applications/Preferences.app/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/Preferences.app/Resources
-@dirrm lib/GNUstep/Applications/Preferences.app
-@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
-@comment in devel/gnustep-base: @dirrm lib/GNUstep

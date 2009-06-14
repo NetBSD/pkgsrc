@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/07/15 10:37:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:25:02 joerg Exp $
 bin/mwm
 bin/uil
 bin/xmbind
@@ -979,7 +979,3 @@ man/man5/Traits.5
 man/man5/UIL.5
 man/man5/WML.5
 man/man5/mwmrc.5
-@dirrm include/Mrm
-@dirrm include/Xm
-@dirrm include/uil
-@dirrm lib/X11/bindings

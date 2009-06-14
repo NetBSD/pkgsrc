@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:43:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:25:00 joerg Exp $
 bin/matchbox-panel
 ${PLIST.apm}bin/mb-applet-battery
 bin/mb-applet-clock
@@ -30,5 +30,3 @@ share/pixmaps/signal-1-40.png
 share/pixmaps/signal-41-60.png
 share/pixmaps/signal-61-80.png
 share/pixmaps/signal-81-100.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

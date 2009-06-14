@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:24:50 joerg Exp $
 lib/gtk/themes/engines/libmetal.la
 lib/gtk/themes/engines/libnotif.la
 lib/gtk/themes/engines/libpixmap.la
@@ -88,14 +88,4 @@ share/themes/Raleigh/gtk/gtkrc
 share/themes/Redmond95/ICON.png
 share/themes/Redmond95/README.html
 share/themes/Redmond95/gtk/gtkrc
-@dirrm share/themes/Raleigh/gtk
-@dirrm share/themes/Raleigh
-@dirrm share/themes/Redmond95/gtk
-@dirrm share/themes/Redmond95
-@dirrm share/themes/Pixmap/gtk
-@dirrm share/themes/Pixmap
-@dirrm share/themes/Notif/gtk
-@dirrm share/themes/Notif
-@dirrm share/themes/Metal/gtk
-@dirrm share/themes/Metal
 @unexec ${RMDIR} -p %D/lib/gtk/themes/engines 2>/dev/null || ${TRUE}
