@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/19 20:32:12 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:12 joerg Exp $
 bin/jack-rack
 share/applications/jack-rack.desktop
 share/examples/jack-rack/ecarack.py
@@ -15,4 +15,3 @@ share/locale/de/LC_MESSAGES/jack-rack.mo
 share/locale/fr/LC_MESSAGES/jack-rack.mo
 share/locale/ru/LC_MESSAGES/jack-rack.mo
 share/pixmaps/jack-rack-icon.png
-@dirrm share/jack-rack

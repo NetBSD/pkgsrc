@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/07 15:00:08 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:21 joerg Exp $
 bin/qjackctl
 share/applications/qjackctl.desktop
 share/pixmaps/qjackctl.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

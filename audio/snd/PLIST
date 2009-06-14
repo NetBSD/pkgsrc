@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/28 12:47:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:22 joerg Exp $
 bin/snd
 man/man1/snd.1
 share/locale/de/LC_MESSAGES/snd.mo
@@ -177,4 +177,3 @@ share/snd/xm-enved.rb
 share/snd/xm-enved.scm
 share/snd/zip.rb
 share/snd/zip.scm
-@dirrm share/snd

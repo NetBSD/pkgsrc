@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/16 10:38:27 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:42 joerg Exp $
 bin/atheme-services
 lib/atheme/modules/backend/flatfile.so
 lib/atheme/modules/chanserv/akick.so
@@ -328,30 +328,3 @@ share/examples/atheme/atheme.conf.userserv-example
 share/examples/atheme/atheme.cron.example
 share/examples/atheme/atheme.motd.example
 share/examples/rc.d/atheme
-@dirrm share/doc/atheme/technical
-@dirrm share/doc/atheme
-@dirrm share/atheme/help/userserv
-@dirrm share/atheme/help/saslserv
-@dirrm share/atheme/help/oservice
-@dirrm share/atheme/help/nickserv
-@dirrm share/atheme/help/memoserv
-@dirrm share/atheme/help/gservice
-@dirrm share/atheme/help/gameserv
-@dirrm share/atheme/help/cservice
-@dirrm share/atheme/help
-@dirrm share/atheme
-@dirrm share/examples/atheme
-@dirrm lib/atheme/modules/xmlrpc
-@dirrm lib/atheme/modules/saslserv
-@dirrm lib/atheme/modules/protocol
-@dirrm lib/atheme/modules/operserv
-@dirrm lib/atheme/modules/nickserv
-@dirrm lib/atheme/modules/misc
-@dirrm lib/atheme/modules/memoserv
-@dirrm lib/atheme/modules/global
-@dirrm lib/atheme/modules/gameserv
-@dirrm lib/atheme/modules/crypto
-@dirrm lib/atheme/modules/chanserv
-@dirrm lib/atheme/modules/backend
-@dirrm lib/atheme/modules
-@dirrm lib/atheme

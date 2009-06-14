@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/26 12:58:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:48 joerg Exp $
 bin/ninja
 bin/${PKGNAME}
 bin/ninjaflush
@@ -522,22 +522,5 @@ share/ninja/translation/SWEDISH_NAMES_COM
 share/ninja/translation/SWISS
 share/ninja/translation/UNITED_KINGDOM
 share/ninja/translation/UNITED_KINGDOM_COM
-@dirrm share/ninja/translation
 @exec ${MKDIR} %D/share/ninja/script 2>/dev/null || ${TRUE}
-@dirrm share/ninja/script
-@dirrm share/ninja/help/window
-@dirrm share/ninja/help/set
-@dirrm share/ninja/help/on
-@dirrm share/ninja/help/note
 @exec ${MKDIR} %D/share/ninja/help/ndcc 2>/dev/null || ${TRUE}
-@dirrm share/ninja/help/ndcc
-@dirrm share/ninja/help/load
-@dirrm share/ninja/help/ircii
-@dirrm share/ninja/help/friend
-@dirrm share/ninja/help/enemy
-@dirrm share/ninja/help/dcc
-@dirrm share/ninja/help/ctcp
-@dirrm share/ninja/help/bind
-@dirrm share/ninja/help/alias
-@dirrm share/ninja/help
-@dirrm share/ninja

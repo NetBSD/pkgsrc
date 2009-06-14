@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/04/12 22:42:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:37:51 joerg Exp $
 bin/weechat-curses
 ${PLIST.lua}lib/weechat/plugins/lua.la
 ${PLIST.python}lib/weechat/plugins/python.la
@@ -21,10 +21,3 @@ share/locale/es/LC_MESSAGES/weechat.mo
 share/locale/fr/LC_MESSAGES/weechat.mo
 share/locale/hu/LC_MESSAGES/weechat.mo
 share/locale/ru/LC_MESSAGES/weechat.mo
-@dirrm share/doc/weechat/html/fr
-@dirrm share/doc/weechat/html/en
-@dirrm share/doc/weechat/html/de
-@dirrm share/doc/weechat/html
-@dirrm share/doc/weechat
-${PLIST.plugin}@dirrm lib/weechat/plugins
-${PLIST.plugin}@dirrm lib/weechat

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/10 16:37:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:54 joerg Exp $
 bin/cver
 lib/gplcver/pli_incs/acc_user.h
 lib/gplcver/pli_incs/cv_acc_user.h
@@ -6,5 +6,3 @@ lib/gplcver/pli_incs/cv_veriuser.h
 lib/gplcver/pli_incs/cv_vpi_user.h
 lib/gplcver/pli_incs/veriuser.h
 lib/gplcver/pli_incs/vpi_user.h
-@dirrm lib/gplcver/pli_incs
-@dirrm lib/gplcver

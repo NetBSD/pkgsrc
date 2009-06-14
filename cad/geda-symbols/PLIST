@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/02/01 02:34:23 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 17:35:53 joerg Exp $
 share/doc/geda-doc/nc.pdf
 share/gEDA/gafrc.d/geda-clib.scm
 share/gEDA/scheme/geda-font.scm
@@ -1638,55 +1638,5 @@ share/gEDA/sym/xilinx/XC2S50-5PQ208C.sym
 share/gEDA/sym/xilinx/XC2S50-5PQ208I.sym
 share/gEDA/sym/xilinx/XC2S50-6PQ208C.sym
 share/gEDA/sym/xilinx/XC95108-PC84.sym
-@dirrm share/gEDA/sym/xilinx
-@dirrm share/gEDA/sym/vhdl
-@dirrm share/gEDA/sym/verilog
-@dirrm share/gEDA/sym/tube
-@dirrm share/gEDA/sym/transistor
-@dirrm share/gEDA/sym/titleblock
-@dirrm share/gEDA/sym/switch
-@dirrm share/gEDA/sym/switcap
-@dirrm share/gEDA/sym/supervisor
-@dirrm share/gEDA/sym/st
-@dirrm share/gEDA/sym/spice
-@dirrm share/gEDA/sym/rf
-@dirrm share/gEDA/sym/relay
-@dirrm share/gEDA/sym/radio
-@dirrm share/gEDA/sym/power
-@dirrm share/gEDA/sym/pla
-@dirrm share/gEDA/sym/philips
-@dirrm share/gEDA/sym/opto
-@dirrm share/gEDA/sym/national
-@dirrm share/gEDA/sym/misc
-@dirrm share/gEDA/sym/minicircuits
-@dirrm share/gEDA/sym/micro
-@dirrm share/gEDA/sym/memory
-@dirrm share/gEDA/sym/maxim
 @exec ${MKDIR} %D/share/gEDA/sym/local
-@dirrm share/gEDA/sym/local
-@dirrm share/gEDA/sym/linear
-@dirrm share/gEDA/sym/lattice
-@dirrm share/gEDA/sym/irf
-@dirrm share/gEDA/sym/io
-@dirrm share/gEDA/sym/idt
-@dirrm share/gEDA/sym/gnetman
-@dirrm share/gEDA/sym/font
-@dirrm share/gEDA/sym/ecl
-@dirrm share/gEDA/sym/diode
-@dirrm share/gEDA/sym/dec
-@dirrm share/gEDA/sym/connector
-@dirrm share/gEDA/sym/cascade
-@dirrm share/gEDA/sym/bus
-@dirrm share/gEDA/sym/asicpads
-@dirrm share/gEDA/sym/asic
-@dirrm share/gEDA/sym/apex
-@dirrm share/gEDA/sym/analog
-@dirrm share/gEDA/sym/amphenol
-@dirrm share/gEDA/sym/altera
-@dirrm share/gEDA/sym/allegro
-@dirrm share/gEDA/sym/IEC417
-@dirrm share/gEDA/sym/74
-@dirrm share/gEDA/sym/4000
-@dirrm share/gEDA/sym
-@dirrm share/gEDA
 @unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:04 joerg Exp $
 bin/csound5
 include/csound5/CppSound.hpp
 include/csound5/CsoundFile.hpp
@@ -64,6 +64,3 @@ lib/csound5/plugins/libwidgets.so
 lib/csound5/plugins/opcodes.dir
 lib/csound5/lib_csnd.so
 lib/csound5/libcsound.a
-@dirrm include/csound5
-@dirrm lib/csound5/plugins
-@dirrm lib/csound5

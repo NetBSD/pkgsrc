@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/15 01:00:05 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:09 joerg Exp $
 bin/glurp
 share/glurp/glurp.glade
 share/glurp/pixmaps/add.png
@@ -17,5 +17,3 @@ share/glurp/pixmaps/player-stop.png
 share/glurp/pixmaps/playlist.png
 share/glurp/pixmaps/playlists.png
 share/glurp/pixmaps/remove.png
-@dirrm share/glurp/pixmaps
-@dirrm share/glurp

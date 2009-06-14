@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/10/29 04:32:57 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:37:46 joerg Exp $
 bin/dcc
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-commands.el
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-commands.elc
@@ -32,4 +32,3 @@ ${EMACS_LISPPREFIX}/irchat-pj/irchat-vars.el
 ${EMACS_LISPPREFIX}/irchat-pj/irchat-vars.elc
 ${EMACS_LISPPREFIX}/irchat-pj/irchat.el
 ${EMACS_LISPPREFIX}/irchat-pj/irchat.elc
-@dirrm ${EMACS_LISPPREFIX}/irchat-pj

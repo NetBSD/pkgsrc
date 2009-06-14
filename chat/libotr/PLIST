@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/17 13:58:08 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:37:47 joerg Exp $
 bin/otr_mackey
 bin/otr_modify
 bin/otr_parse
@@ -29,4 +29,3 @@ man/man1/otr_remac.1
 man/man1/otr_sesskeys.1
 man/man1/otr_toolkit.1
 share/aclocal/libotr.m4
-@dirrm include/libotr

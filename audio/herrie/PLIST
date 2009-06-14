@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/10/31 22:48:02 bjs Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:11 joerg Exp $
 bin/herrie
 man/man1/herrie.1
 share/examples/herrie/herrie.conf
@@ -17,4 +17,3 @@ share/locale/tr/LC_MESSAGES/herrie.mo
 share/locale/uk/LC_MESSAGES/herrie.mo
 share/locale/vi/LC_MESSAGES/herrie.mo
 share/locale/zh_CN/LC_MESSAGES/herrie.mo
-@dirrm share/examples/herrie
