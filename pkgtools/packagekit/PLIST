@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/15 16:44:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:11:02 joerg Exp $
 bin/packagekit-bugreport.sh
 bin/pkcon
 bin/pkgenpack
@@ -180,18 +180,3 @@ share/locale/zh_TW/LC_MESSAGES/PackageKit.mo
 share/mime/packages/packagekit-catalog.xml
 share/mime/packages/packagekit-package-list.xml
 share/mime/packages/packagekit-servicepack.xml
-@comment in shared-mime-info: @dirrm share/mime/packages
-@dirrm share/gtk-doc/html/PackageKit
-@dirrm share/examples/packagekit
-@dirrm share/PackageKit/helpers/test_spawn
-@dirrm share/PackageKit/helpers/pkgsrc
-@dirrm share/PackageKit/helpers
-@dirrm share/PackageKit
-@dirrm ${PYSITELIB}/packagekit
-@dirrm lib/pm-utils/sleep.d
-@dirrm lib/pm-utils
-@dirrm lib/packagekit-backend
-@comment in gtk2: @dirrm lib/gtk-2.0/modules
-@dirrm include/PackageKit/packagekit-glib
-@dirrm include/PackageKit/backend
-@dirrm include/PackageKit
