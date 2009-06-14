@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/01/14 08:51:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:56:50 joerg Exp $
 bin/lbreakout2
 bin/lbreakout2server
 share/doc/html/lbreakout2/b0.jpg
@@ -253,14 +253,4 @@ share/lbreakout2/sounds/verygood.wav
 share/lbreakout2/sounds/wall.wav
 share/lbreakout2/sounds/weak_ball.wav
 share/lbreakout2/sounds/wontgiveup.wav
-@dirrm share/lbreakout2/sounds
-@dirrm share/lbreakout2/levels
-@dirrm share/lbreakout2/gfx/Oz
-@dirrm share/lbreakout2/gfx/Moiree
-@dirrm share/lbreakout2/gfx/Classic
-@dirrm share/lbreakout2/gfx/AbsoluteB
-@dirrm share/lbreakout2/gfx
-@dirrm share/lbreakout2/gui_theme
-@dirrm share/lbreakout2
-@dirrm share/doc/html/lbreakout2
 @unexec echo Please remove highscore file %D/var/lbreakout2.hscr manually.

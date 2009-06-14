@@ -1,15 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/12 00:18:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:51 joerg Exp $
 bin/mirrormagic
 @exec install -d -m 775 -o games -g games /var/games/mirrormagic
 @exec install -d -m 775 -o games -g games /var/games/mirrormagic/scores
 @exec install -d -m 775 -o games -g games /var/games/mirrormagic/scores/classic_deflektor
 @exec install -d -m 775 -o games -g games /var/games/mirrormagic/scores/classic_mindbender
 @unexec echo Delete /var/games/mirrormagic if you do not need your hiscores anymore.
-@dirrm share/mirrormagic/sounds
-@dirrm share/mirrormagic/music
-@dirrm share/mirrormagic/levels/Classic_Games/classic_mindbender
-@dirrm share/mirrormagic/levels/Classic_Games/classic_deflektor
-@dirrm share/mirrormagic/levels/Classic_Games
-@dirrm share/mirrormagic/levels
-@dirrm share/mirrormagic/graphics
-@dirrm share/mirrormagic

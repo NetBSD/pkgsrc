@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/15 16:05:43 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:57 joerg Exp $
 bin/warzone2100
 share/applications/warzone2100.desktop
 share/doc/warzone2100/AUTHORS
@@ -52,12 +52,3 @@ share/warzone2100/mods/global/newst_tiles.wz
 share/warzone2100/mods/multiplay/ntw.wz
 share/warzone2100/mp.wz
 share/warzone2100/warzone.wz
-@dirrm share/warzone2100/mods/multiplay
-@dirrm share/warzone2100/mods/global/autoload/music/music
-@dirrm share/warzone2100/mods/global/autoload/music
-@dirrm share/warzone2100/mods/global/autoload
-@dirrm share/warzone2100/mods/global
-@dirrm share/warzone2100/mods
-@dirrm share/warzone2100
-@dirrm share/doc/warzone2100/styles
-@dirrm share/doc/warzone2100

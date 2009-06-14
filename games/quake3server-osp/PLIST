@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/21 07:20:48 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:54 joerg Exp $
 lib/lokigames/quake3server/osp/1v1.cfg
 lib/lokigames/quake3server/osp/cfg-defaultmodereference/1v1.cfg
 lib/lokigames/quake3server/osp/cfg-defaultmodereference/clanarena.cfg
@@ -268,21 +268,3 @@ lib/lokigames/quake3server/osp/zz-osp-pak1.pk3
 lib/lokigames/quake3server/osp/zz-osp-pak2.pk3
 lib/lokigames/quake3server/osp/zz-osp-pak3.pk3
 lib/lokigames/quake3server/osp/zz-osp-server3a.pk3
-@dirrm lib/lokigames/quake3server/osp/voodoo/server
-@dirrm lib/lokigames/quake3server/osp/voodoo/log-backup
-@dirrm lib/lokigames/quake3server/osp/voodoo/html/images/maps
-@dirrm lib/lokigames/quake3server/osp/voodoo/html/images/awards
-@dirrm lib/lokigames/quake3server/osp/voodoo/html/images
-@dirrm lib/lokigames/quake3server/osp/voodoo/html
-@dirrm lib/lokigames/quake3server/osp/voodoo
-@dirrm lib/lokigames/quake3server/osp/vm
-@dirrm lib/lokigames/quake3server/osp/locs
-@dirrm lib/lokigames/quake3server/osp/docs/rus
-@dirrm lib/lokigames/quake3server/osp/docs/esp
-@dirrm lib/lokigames/quake3server/osp/docs/chn
-@dirrm lib/lokigames/quake3server/osp/docs
-@dirrm lib/lokigames/quake3server/osp/cfg-maps
-@dirrm lib/lokigames/quake3server/osp/cfg-gfxexample
-@dirrm lib/lokigames/quake3server/osp/cfg-defaultmodereference
-@dirrm lib/lokigames/quake3server/osp
-@dirrm lib/lokigames/quake3server

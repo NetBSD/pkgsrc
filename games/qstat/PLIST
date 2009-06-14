@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/03 23:19:43 peter Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:54 joerg Exp $
 bin/qstat
 share/doc/${PKGBASE}/qstatdoc.html
 share/doc/${PKGBASE}/template/brocTh.html
@@ -19,6 +19,3 @@ share/doc/${PKGBASE}/template/unrealTs.html
 share/doc/${PKGBASE}/template/unrealTt.html
 share/examples/${PKGBASE}/contrib.cfg
 share/examples/${PKGBASE}/qstat.cfg
-@dirrm share/doc/${PKGBASE}/template
-@dirrm share/doc/${PKGBASE}
-@dirrm share/examples/${PKGBASE}

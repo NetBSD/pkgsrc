@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/25 23:52:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:54 joerg Exp $
 bin/qonk
 share/qonk/font.ttf
 share/qonk/highlight.png
 share/qonk/normal.png
-@dirrm share/qonk
