@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:25:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/15 13:12:02 joerg Exp $
 bin/pr3287
 bin/x3270
 bin/x3270if
@@ -21,11 +21,6 @@ lib/X11/fonts/misc/3270gt32b.pcf.gz
 lib/X11/fonts/misc/3270gt8.pcf.gz
 lib/X11/fonts/misc/3270h.pcf.gz
 lib/X11/x3270/ibm_hosts
-@exec {CHMOD} u+w %D/lib/X11/fonts/misc %D/lib/X11/fonts/misc/fonts.dir
-@exec ${X11BASE}/bin/mkfontdir %D/lib/X11/fonts/misc
-@unexec ${X11BASE}/bin/mkfontdir %D/lib/X11/fonts/misc
-@exec ${CHMOD} u=rwx,go=rx %D/lib/X11/fonts/misc
-@exec ${CHMOD} a=r %D/lib/X11/fonts/misc/fonts.dir
 ${IMAKE_MAN_DIR}/ibm_hosts.${IMAKE_MANNEWSUFFIX}
 ${IMAKE_MAN_DIR}/pr3287.${IMAKE_MANNEWSUFFIX}
 ${IMAKE_MAN_DIR}/x3270-script.${IMAKE_MANNEWSUFFIX}
