@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.52 2009/06/14 11:00:59 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.53 2009/06/15 11:59:46 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -152,3 +152,5 @@ Pullup ticket #2795 - requested by tron
 apache22: compatibility fix
 Pullup ticket #2796 - requested by tron
 firefox3: security update
+Pullup ticket #2797 - requested by kefren
+p5-Compress-Raw-Zlib: security update
