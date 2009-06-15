@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/01/03 17:35:59 wiz Exp $
+$NetBSD: distinfo,v 1.6 2009/06/15 18:59:23 sno Exp $
 
-SHA1 (XML-NamespaceSupport-1.09.tar.gz) = 2587fd1576467627d4abeeccaa9efbc02c573882
-RMD160 (XML-NamespaceSupport-1.09.tar.gz) = ea8c50cfaf26f413b2cc180303079def6dd0490f
-Size (XML-NamespaceSupport-1.09.tar.gz) = 8036 bytes
+SHA1 (XML-NamespaceSupport-1.10.tar.gz) = 729eaa53c02fc728b3ee72bd859eba037e848ee6
+RMD160 (XML-NamespaceSupport-1.10.tar.gz) = 4fb92231a51fa970e0d8727e936af0c692038b78
+Size (XML-NamespaceSupport-1.10.tar.gz) = 27887 bytes
