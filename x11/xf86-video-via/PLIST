@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:14 joerg Exp $
-${PLIST.XvMC}lib/libviaXvMC.la
-${PLIST.XvMC}lib/libviaXvMCPro.la
-lib/xorg/modules/drivers/via_drv.la
-man/man4/via.4

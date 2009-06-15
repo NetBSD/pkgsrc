@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/06/15 10:49:15 hasso Exp $
+# $NetBSD: Makefile,v 1.15 2009/06/15 11:05:15 hasso Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.3
@@ -51,7 +51,6 @@ DEPENDS+=	xf86-video-trident-[0-9]*:../../x11/xf86-video-trident
 DEPENDS+=	xf86-video-tseng-[0-9]*:../../x11/xf86-video-tseng
 DEPENDS+=	xf86-video-vesa-[0-9]*:../../x11/xf86-video-vesa
 DEPENDS+=	xf86-video-vga-[0-9]*:../../x11/xf86-video-vga
-DEPENDS+=	xf86-video-via-[0-9]*:../../x11/xf86-video-via
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	xf86-video-vmware-[0-9]*:../../x11/xf86-video-vmware
 .endif
