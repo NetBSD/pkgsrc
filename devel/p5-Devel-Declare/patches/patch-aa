@@ -1,18 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/10/12 17:26:15 abs Exp $
+$NetBSD: patch-aa,v 1.2 2009/06/15 23:07:30 sno Exp $
 
 Do not error out if perl was built without PERL_MALLOC_WRAP
 
---- stolen_chunk_of_toke.c.orig	2008-01-22 02:58:19.000000000 +0000
-+++ stolen_chunk_of_toke.c
-@@ -34,7 +34,10 @@ STATIC char*    S_scan_word(pTHX_ char *
- #define DPTR2FPTR(t,p) ((t)PTR2nat(p))  /* data pointer to function pointer */
- #define FPTR2DPTR(t,p) ((t)PTR2nat(p))  /* function pointer to data pointer */
- #define PTR2nat(p)       (PTRV)(p)       /* pointer to integer of PTRSIZE */
--#define MEM_WRAP_CHECK_(n,t) MEM_WRAP_CHECK(n,t),
-+
-+#ifdef PERL_MALLOC_WRAP
-+# define MEM_WRAP_CHECK_(n,t) MEM_WRAP_CHECK(n,t),
-+#endif
+--- stolen_chunk_of_toke.c.orig	2009-06-05 13:57:22.000000000 +0000
++++ stolen_chunk_of_toke.c	2009-06-15 22:50:52.000000000 +0000
+@@ -44,7 +44,7 @@
+ #ifndef SvPVX_const
+ #define SvPVX_const(sv) ((const char*) (0 + SvPVX(sv)))
+ #endif
+-#ifndef MEM_WRAP_CHECK_
++#if defined(PERL_MALLOC_WRAP) && !defined(MEM_WRAP_CHECK_)
+ #define MEM_WRAP_CHECK_(n,t) MEM_WRAP_CHECK(n,t),
+ #endif
  
- /* conditionalise these two because as of 5.9.5 we already get them from
-    the headers (mst) */
