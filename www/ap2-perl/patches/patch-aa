@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.3 2009/06/15 17:38:21 he Exp $
+
+This is revision 760926 from modperl's svn repository:
+http://svn.apache.org/viewvc/perl/modperl/trunk/lib/Apache2/Status.pm?view=log&pathrev=761081
+Fix an XSS bug in Apache2::Status, ref. CVE-2009-0796.
+
+--- lib/Apache2/Status.pm.orig	2007/12/31 08:05:11	607697
++++ lib/Apache2/Status.pm	2009/04/01 15:39:56	760926
+@@ -29,7 +29,7 @@
+ 
+ use Apache2::Const -compile => qw(OK);
+ 
+-$Apache2::Status::VERSION = '4.00'; # mod_perl 2.0
++$Apache2::Status::VERSION = '4.01'; # mod_perl 2.0
+ 
+ use constant IS_WIN32 => ($^O eq "MSWin32");
+ 
+@@ -126,7 +126,7 @@
+         $r->print(symdump($r, $qs));
+     }
+     else {
+-        my $uri = $r->uri;
++        my $uri = $r->location;
+         $r->print('<p>');
+         $r->print(
+             map { qq[<a href="$uri?$_">$status{$_}</a><br />\n] } sort { lc $a cmp lc $b } keys %status
+@@ -198,7 +198,7 @@
+ sub status_inc {
+     my ($r) = @_;
+ 
+-    my $uri = $r->uri;
++    my $uri = $r->location;
+     my @retval = (
+         '<table border="1">',
+         "<tr>",
+@@ -289,7 +289,7 @@
+     my ($r) = @_;
+ 
+     local $_;
+-    my $uri = $r->uri;
++    my $uri = $r->location;
+     my $cache = __PACKAGE__->registry_cache;
+ 
+     my @retval = "<h2>Compiled registry scripts grouped by their handler</h2>";
+@@ -765,7 +765,7 @@
+     my ($self, $package, $r) = @_;
+ 
+     my @m = qw(<table>);
+-    my $uri = $r->uri;
++    my $uri = $r->location;
+     my $is_main = $package eq "main";
+ 
+     my $do_dump = has($r, "dumper");
