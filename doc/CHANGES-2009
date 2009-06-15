@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2382 2009/06/15 21:31:43 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2383 2009/06/15 21:38:42 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3180,3 +3180,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-File-ChangeNotify to 0.06 [sno 2009-06-15]
 	Updated devel/p5-MooseX-AttributeHelpers to 0.19 [sno 2009-06-15]
 	Updated devel/p5-MooseX-Emulate-Class-Accessor-Fast to 0.00900 [sno 2009-06-15]
+	Updated devel/p5-MooseX-Types to 0.12 [sno 2009-06-15]
