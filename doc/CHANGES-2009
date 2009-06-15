@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2371 2009/06/15 19:06:51 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2372 2009/06/15 19:37:07 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3105,6 +3105,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Added multimedia/ffplay version 20090611 [ahoka 2009-06-12]
 	Updated x11/dri2proto to 2.1 [wiz 2009-06-12]
 	Updated misc/rubygems to 1.3.4nb1 [minskim 2009-06-12]
+	Added comms/asterisk16 version 1.6.0.10 [jnemeth 2009-06-12]
 	Downgraded graphics/babl to 0.0.22 [wiz 2009-06-13]
 	Updated x11/qt4-docs to 4.5.1 [hasso 2009-06-13]
 	Updated x11/qt4-libs to 4.5.1 [hasso 2009-06-13]
