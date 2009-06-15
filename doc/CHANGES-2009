@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2389 2009/06/15 22:39:30 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2390 2009/06/15 22:45:23 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3187,3 +3187,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.22 [sno 2009-06-15]
 	Updated www/p5-Catalyst-Devel to 1.18 [sno 2009-06-15]
 	Updated www/p5-Catalyst-Plugin-Authentication to 0.100120 [sno 2009-06-15]
+	Updated www/p5-Catalyst-Component-ACCEPT_CONTEXT to 0.07 [sno 2009-06-15]
