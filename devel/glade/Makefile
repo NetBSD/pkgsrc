@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2009/06/15 11:55:54 obache Exp $
+# $NetBSD: Makefile,v 1.60 2009/06/15 12:03:05 obache Exp $
 
 DISTNAME=	glade-2.12.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glade/2.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,4 +29,5 @@ CONFIGURE_ARGS+=	--disable-gnome-db
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
