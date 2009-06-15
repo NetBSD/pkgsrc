@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2379 2009/06/15 21:16:43 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2380 2009/06/15 21:20:44 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3177,3 +3177,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-C3-Adopt-NEXT to 0.12 [sno 2009-06-15]
 	Updated www/p5-Catalyst-Manual to 5.8000 [sno 2009-06-15]
 	Updated devel/p5-Moose to 0.81 [sno 2009-06-15]
+	Updated devel/p5-File-ChangeNotify to 0.06 [sno 2009-06-15]
