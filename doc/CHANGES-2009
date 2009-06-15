@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2366 2009/06/15 11:09:04 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2367 2009/06/15 12:03:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3163,3 +3163,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-PPPort to 3.19 [sno 2009-06-14]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2009Q2 branch [agc 2009-06-14]
 	Removed x11/xf86-video-via [hasso 2009-06-15]
+	Updated devel/glade to 2.12.2nb1 [obache 2009-06-15]
