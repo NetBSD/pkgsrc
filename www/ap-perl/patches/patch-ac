@@ -1,0 +1,35 @@
+$NetBSD: patch-ac,v 1.1 2009/06/15 17:42:04 he Exp $
+
+This is revision 761081 from
+http://svn.apache.org/viewvc/perl/modperl/branches/1.x/lib/Apache/Status.pm?view=log&pathrev=761081
+Fixes an XSS bug in Apache::Status, ref. CVE-2009-0796.
+
+--- lib/Apache/Status.pm.orig	2005/05/23 01:08:52	177851
++++ lib/Apache/Status.pm	2009/04/01 21:57:52	761081
+@@ -72,7 +72,7 @@
+ 	$r->print(symdump($r, $newQ->($r), $qs));
+     }
+     else {
+-	my $uri = $r->uri;
++	my $uri = $r->location;
+ 	$r->print(
+  	    map { qq[<a href="$uri?$_">$status{$_}</a><br>\n] } keys %status
+         );
+@@ -140,7 +140,7 @@
+ sub status_inc {
+     my($r,$q) = @_;
+     my(@retval, $module, $v, $file);
+-    my $uri = $r->uri;
++    my $uri = $r->location;
+     push @retval, "<table border=1>";
+     push @retval, 
+     "<tr>", 
+@@ -198,7 +198,7 @@
+     my($r,$q) = @_;
+     my(@retval);
+     local $_;
+-    my $uri = $r->uri;
++    my $uri = $r->location;
+     my $cache = __PACKAGE__->registry_cache;
+     push @retval, "<b>Click on package name to see its symbol table</b><p>\n";
+     foreach (sort keys %$cache) {
