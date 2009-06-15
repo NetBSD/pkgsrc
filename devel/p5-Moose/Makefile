@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2009/06/07 11:31:05 seb Exp $
+# $NetBSD: Makefile,v 1.25 2009/06/15 21:16:02 sno Exp $
 #
 
-DISTNAME=	Moose-0.80
+DISTNAME=	Moose-0.81
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -9,9 +9,9 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://moose.perl.org/
 COMMENT=	Postmodern object system for Perl 5
-LICENSE=	artistic-2.0
+LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Class-MOP>=0.83:../../devel/p5-Class-MOP
+DEPENDS+=	p5-Class-MOP>=0.85:../../devel/p5-Class-MOP
 DEPENDS+=	p5-Data-OptList-[0-9]*:../../devel/p5-Data-OptList
 DEPENDS+=	p5-List-MoreUtils>=0.12:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Sub-Exporter>=0.972:../../devel/p5-Sub-Exporter
@@ -39,6 +39,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Moose/.packlist
+
+# keep bundled Module::Install - it's modified
+MAKE_PARAMS+=		--skipdeps
+#PERL5_MODULE_TYPE=	Module::Install
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
