@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2373 2009/06/15 19:44:34 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2374 2009/06/15 19:47:46 manu Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3171,3 +3171,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-XML-NamespaceSupport to 1.10 [sno 2009-06-15]
 	Updated archivers/p5-Archive-Tar to 1.52 [sno 2009-06-15]
 	Updated databases/p5-SQL-Translator to 0.09006 [sno 2009-06-15]
+	Updated www/ap2-auth-mellon to 0.2.2 [manu 2009-06-15]
