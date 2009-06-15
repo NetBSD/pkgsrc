@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2005/06/24 06:58:26 jlam Exp $
+$NetBSD: distinfo,v 1.11 2009/06/15 17:42:04 he Exp $
 
 SHA1 (mod_perl-1.29.tar.gz) = 6cdc30b5bc6db26997a18da02570bd2822cdf956
 RMD160 (mod_perl-1.29.tar.gz) = 4a6eb2223f0bdedf1608bac2dbba543475fed42b
 Size (mod_perl-1.29.tar.gz) = 378877 bytes
 SHA1 (patch-aa) = dfdc20ee2ce2ffdc5a5e87b02f4946e92b43bc6d
 SHA1 (patch-ab) = 18b02747ae4b9ab17ce252cf003bf9fd7e4b2560
+SHA1 (patch-ac) = acdc9722b1564421311788f718e3bf57f0715233
