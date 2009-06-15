@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/06/11 12:06:12 abs Exp $
+$NetBSD: distinfo,v 1.8 2009/06/15 21:52:22 sno Exp $
 
-SHA1 (Catalyst-Runtime-5.80004.tar.gz) = 47c17ee98c52f34a92b63e0c955048f6c43401a8
-RMD160 (Catalyst-Runtime-5.80004.tar.gz) = c1da6bbd2a45c0ea366924fc10705e1bd295895a
-Size (Catalyst-Runtime-5.80004.tar.gz) = 207938 bytes
+SHA1 (Catalyst-Runtime-5.80005.tar.gz) = 89f58146effc91874f1d4ac370243ba19bbfe94f
+RMD160 (Catalyst-Runtime-5.80005.tar.gz) = a72aa1221de50f153c60ccba3cbbc73e9b132415
+Size (Catalyst-Runtime-5.80005.tar.gz) = 207046 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2009/06/11 12:06:12 abs Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/15 21:52:22 sno Exp $
 
-DISTNAME=	Catalyst-Runtime-5.80004
+DISTNAME=	Catalyst-Runtime-5.80005
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://www.catalystframework.org/
 COMMENT=	The Elegant MVC Web Application Framework
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 CONFLICTS+=	p5-Catalyst-[0-9]*
 
@@ -42,8 +42,8 @@ DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 DEPENDS+=	p5-B-Hooks-OP-Check-StashChange-[0-9]*:../../devel/p5-B-Hooks-OP-Check-StashChange
 
 BUILD_DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
-BUILD_DEPENDS+=	p5-Test-Aggregate>=0.35:../../devel/p5-Test-Aggregate
-BUILD_DEPENDS+=	p5-Test-MockObject>=0:../../devel/p5-Test-MockObject
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	p5-Test-MockObject>=1.07:../../devel/p5-Test-MockObject
 
 MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skipdeps
 PERL5_PACKLIST= auto/Catalyst/Runtime/.packlist
