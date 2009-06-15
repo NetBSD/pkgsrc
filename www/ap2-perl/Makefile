@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2009/06/12 20:54:22 spz Exp $
+# $NetBSD: Makefile,v 1.34 2009/06/15 17:38:21 he Exp $
 
 DISTNAME=	mod_perl-2.0.4
-PKGREVISION=	4
+PKGREVISION=	5
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=	www perl5
 MASTER_SITES=	http://perl.apache.org/dist/
@@ -16,7 +16,7 @@ CONFLICTS=	ap-perl-[0-9]* p5-Apache-Test-[0-9]*
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
 
-APACHE_MODULE=		# defined
+APACHE_MODULE=		# empty
 PERL5_PACKLIST=		auto/mod_perl2/.packlist
 
 MAKE_PARAMS+=		MP_APXS=${APXS}
