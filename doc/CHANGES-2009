@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2387 2009/06/15 22:18:13 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2388 2009/06/15 22:26:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3185,3 +3185,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-Sort-SQL to 0.06 [sno 2009-06-15]
 	Updated databases/p5-CatalystX-CRUD to 0.45 [sno 2009-06-15]
 	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.22 [sno 2009-06-15]
+	Updated www/p5-Catalyst-Devel to 1.18 [sno 2009-06-15]
