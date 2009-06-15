@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2391 2009/06/15 23:08:09 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2392 2009/06/15 23:24:28 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3189,3 +3189,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Plugin-Authentication to 0.100120 [sno 2009-06-15]
 	Updated www/p5-Catalyst-Component-ACCEPT_CONTEXT to 0.07 [sno 2009-06-15]
 	Updated devel/p5-Devel-Declare to 0.005005 [sno 2009-06-15]
+	Updated time/p5-DateTime-Format-Natural to 0.77 [sno 2009-06-15]
