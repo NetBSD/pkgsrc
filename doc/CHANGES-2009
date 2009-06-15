@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2376 2009/06/15 20:31:03 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2377 2009/06/15 20:59:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3174,3 +3174,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ap2-auth-mellon to 0.2.2 [manu 2009-06-15]
 	Updated devel/p5-Path-Class to 0.17 [sno 2009-06-15]
 	Updated databases/p5-DBIx-Class to 0.08107 [sno 2009-06-15]
+	Updated devel/p5-Class-C3-Adopt-NEXT to 0.12 [sno 2009-06-15]
