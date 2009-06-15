@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2367 2009/06/15 12:03:56 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2368 2009/06/15 16:53:20 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3164,3 +3164,4 @@ Changes to the packages collection and infrastructure in 2009:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2009Q2 branch [agc 2009-06-14]
 	Removed x11/xf86-video-via [hasso 2009-06-15]
 	Updated devel/glade to 2.12.2nb1 [obache 2009-06-15]
+	Updated net/rsync to 3.0.6 [tron 2009-06-15]
