@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2368 2009/06/15 16:53:20 tron Exp $
+$NetBSD: CHANGES-2009,v 1.2369 2009/06/15 17:42:58 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3165,3 +3165,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed x11/xf86-video-via [hasso 2009-06-15]
 	Updated devel/glade to 2.12.2nb1 [obache 2009-06-15]
 	Updated net/rsync to 3.0.6 [tron 2009-06-15]
+	Updated www/ap2-perl to 2.0.4nb5 [he 2009-06-15]
+	Updated www/ap-perl to 1.29nb2 [he 2009-06-15]
