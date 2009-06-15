@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2009/02/21 09:34:17 tron Exp $
+# $NetBSD: Makefile,v 1.82 2009/06/15 16:53:02 tron Exp $
 
-DISTNAME=	rsync-3.0.5
-PKGREVISION=	1
+DISTNAME=	rsync-3.0.6
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		http://rsync.samba.org/ftp/rsync/old-versions/  \
@@ -11,6 +10,7 @@ MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 OWNER=		tron@NetBSD.org
 HOMEPAGE=	http://rsync.samba.org/
 COMMENT=	Network file distribution/synchronisation utility
+LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -33,6 +33,10 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	rsync.1 rsyncd.conf.5
 SUBST_SED.paths=	-e 's|/etc/rsyncd|${PKG_SYSCONFDIR}/rsyncd|g'
 SUBST_SED.paths+=	-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/tech_report.tex \
+	  ${PREFIX}/share/doc/rsync
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
