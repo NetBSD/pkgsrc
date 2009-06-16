@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.13 2009/06/14 22:58:04 joerg Exp $
+# $NetBSD: Makefile.extension,v 1.14 2009/06/16 15:25:31 joerg Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -32,7 +32,7 @@ R_HOMEPAGE_BASE=	http://cran.r-project.org/web/packages
 R_PKG_INSTALL_ARGS=	-l ${DESTDIR}${PREFIX}/${R_LIB}
 
 GENERATE_PLIST+=	( cd ${DESTDIR}${PREFIX}; for dir in ${R_INST_DIRS}; do \
-	${FIND} ${R_LIB}/$${dir} \( -type f -o -type l \) -print; done ) | ${SORT} -u
+	${FIND} ${R_LIB}/$${dir} \( -type f -o -type l \) -print; done ) | ${SORT} -u;
 
 INSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
 DEINSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
