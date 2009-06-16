@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2009/06/14 22:58:08 joerg Exp $
+# $NetBSD: Makefile,v 1.55 2009/06/16 15:25:32 joerg Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	7
@@ -47,7 +47,7 @@ GENERATE_PLIST+= \
 	cd ${WRKSRC}/filters &&						\
 	for f in *-filter; do						\
 	  ${ECHO} ${FILTER_DIR}/"$$f";					\
-	done								\
+	done;
 
 post-install:
 	set -e;								\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/06/14 22:57:58 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2009/06/16 15:25:31 joerg Exp $
 
 DISTNAME=	freetds-0.82
 PKGREVISION=	2
@@ -52,10 +52,7 @@ GENERATE_PLIST+=	\
 	( cd ${WRKSRC}/doc/doc/${DISTNAME} &&				\
 	  ${FIND} reference userguide \! -type d -print &&		\
 	  cd ${WRKSRC}/doc && ${FIND} images -name "*.gif" -print ) |	\
-	${SED} -e "s,^,"${DOCDIR:S|${PREFIX}/||:Q}"/," | ${SORT} &&	\
-	( cd ${WRKSRC}/doc/doc/${DISTNAME} &&				\
-	  ${FIND} reference userguide -type d -print &&			\
-	  cd ${WRKSRC}/doc && ${FIND} images -type d -print ) |		\
+	${SED} -e "s,^,"${DOCDIR:S|${PREFIX}/||:Q}"/," | ${SORT};
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
