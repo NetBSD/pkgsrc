@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.140 2008/08/27 12:02:31 markd Exp $
+# $NetBSD: Makefile,v 1.141 2009/06/16 16:09:36 hasso Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -57,8 +58,11 @@ SUBST_FILES.kdemagic=	kio/magic
 SUBST_SED.kdemagic=	-n -e 'p' -e 's:/usr/local/bin:${LOCALBASE}/bin:p'
 
 SPECIAL_PERMS+=	${PREFIX}/bin/fileshareset	${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=	${PREFIX}/bin/kgrantpty		${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/bin/kpac_dhcp_helper	${SETUID_ROOT_PERMS}
+
+# ${SETUID_ROOT_PERMS} doesn't work here because the locate() method used to
+# find the path to the kgrantpty expects it to have read permissions set.
+SPECIAL_PERMS+=	${PREFIX}/bin/kgrantpty	${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4555
 
 .include "options.mk"
 
