@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2009/06/08 08:31:31 obache Exp $
+# $NetBSD: Makefile,v 1.45 2009/06/16 18:05:34 reed Exp $
 #
 
 DISTNAME=	xorg-server-1.6.1.901
@@ -82,6 +82,7 @@ BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
 BUILDLINK_API_DEPENDS.glproto+=		glproto>=1.4.9
 BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=1.5
 BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
+BUILDLINK_API_DEPENDS.pixman+=		pixman>=0.13.2
 BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.2.99.1
 BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.9.3
 BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.3
