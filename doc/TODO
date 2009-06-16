@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8194 2009/06/16 05:27:45 schmonz Exp $
+$NetBSD: TODO,v 1.8195 2009/06/16 15:42:30 taca Exp $
 
 Suggested new packages
 ======================
@@ -1198,8 +1198,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rudiments-0.30
 	o sabayon-2.25.0 [GNOME 2.26]
 	o sablecc-3.2
-	o samba-3.2.11
-	o samba-3.3.4
+	o samba-3.2.12
+	o samba-3.3.5
 	o sane-backends-1.0.20
 	o sarg-2.2.5
 	o sawfish-1.3.5.3
@@ -1352,6 +1352,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webby-0.9.3
+	o webmin-1.480
 	o websvn-2.0
 	o weechat-0.2.6.2
 	o weewm-0.01
