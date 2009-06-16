@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2392 2009/06/15 23:24:28 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2393 2009/06/16 15:11:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3190,3 +3190,11 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Component-ACCEPT_CONTEXT to 0.07 [sno 2009-06-15]
 	Updated devel/p5-Devel-Declare to 0.005005 [sno 2009-06-15]
 	Updated time/p5-DateTime-Format-Natural to 0.77 [sno 2009-06-15]
+	Updated lang/ruby18-base to 1.8.7.174 [taca 2009-06-16]
+	Updated databases/ruby-gdbm to 1.8.7.174 [taca 2009-06-16]
+	Updated devel/ruby-curses to 1.8.7.174 [taca 2009-06-16]
+	Updated devel/ruby-readline to 1.8.7.174 [taca 2009-06-16]
+	Updated x11/ruby-tk to 1.8.7.174 [taca 2009-06-16]
+	Updated lang/ruby18 to 1.8.7.174 [taca 2009-06-16]
+	Updated lang/ruby to 1.8.7.174 [taca 2009-06-16]
+	Updated devel/ruby-mode to 1.8.7.174 [taca 2009-06-16]
