@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/20 13:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/06/16 22:40:06 bjs Exp $
 #
 
 DISTNAME=	brasero-2.26.2
@@ -13,9 +13,14 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+# gnome-common provides m4 files we need
+#
+BUILD_DEPENDS+=         gnome-common>=2.26.0:../../devel/gnome-common
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake intltool autoconf automake gawk msgfmt
+USE_TOOLS+=	pkg-config gmake intltool gawk msgfmt
+USE_TOOLS+=	autoreconf autoconf automake
 USE_DIRS+=	gnome2-1.6
 
 CONFIGURE_ARGS+=	--disable-inotify
@@ -28,7 +33,7 @@ post-extract:
 	cp ${FILESDIR}/scsi-netbsd.c ${WRKSRC}/libbrasero-media/
 
 pre-configure:
-	cd ${WRKSRC} && automake && autoconf
+	cd ${WRKSRC} && autoreconf -i
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf/schemas.mk"
