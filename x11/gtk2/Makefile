@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2009/06/17 17:08:29 drochner Exp $
+# $NetBSD: Makefile,v 1.178 2009/06/17 17:57:55 asau Exp $
 
 DISTNAME=		gtk+-2.16.2
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -61,6 +61,11 @@ PYTHON_PATCH_SCRIPTS=	gtk/gtk-builder-convert
 .include "../../lang/python/pyversion.mk"
 .if ${PYPKGPREFIX} == "py24" || ${PYPKGPREFIX} == "py23"
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+.endif
+
+# Work around build problems, disable unstable PAPI, PR #41608:
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=       --disable-papi
 .endif
 
 .include "options.mk"
