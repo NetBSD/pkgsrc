@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2396 2009/06/17 08:06:54 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2397 2009/06/17 08:19:04 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3205,3 +3205,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/py-qt3-modules to 3.18.1 [hasso 2009-06-17]
 	Updated x11/py-qt3-qscintilla to 3.18.1 [hasso 2009-06-17]
 	Updated x11/py-qt4 to 4.5.1 [hasso 2009-06-17]
+	Updated pkgtools/pkg_rolling-replace to 0.17 [tnn 2009-06-17]
