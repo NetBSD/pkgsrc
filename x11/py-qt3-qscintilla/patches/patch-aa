@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2008/10/08 14:23:24 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2009/06/17 07:11:04 hasso Exp $
 
---- configure.py.orig	2007-12-06 14:28:06.000000000 +0000
-+++ configure.py
+--- configure.py.orig	2009-06-16 11:47:29 +0300
++++ configure.py	2009-06-17 05:50:50 +0300
 @@ -195,22 +195,6 @@ class ConfigurePyQt3(ConfigureBase):
      """This class defines the methods to configure PyQt v3.
      """
@@ -90,9 +90,9 @@ $NetBSD: patch-aa,v 1.5 2008/10/08 14:23:24 wiz Exp $
          elif qt_version >= 0x020000:
              sipconfig.inform("Creating pyuic Makefile...")
  
-@@ -1002,7 +928,7 @@ def check_license():
-     print "Type 'no' to decline the terms of the license."
-     print
+@@ -1010,7 +936,7 @@ Type 'no' to decline the terms of the li
+ 
+ """)
  
 -    while 1:
 +    while 0:
