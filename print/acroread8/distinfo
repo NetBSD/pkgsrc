@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2009/06/04 08:32:46 obache Exp $
+$NetBSD: distinfo,v 1.6 2009/06/17 04:42:48 obache Exp $
 
-SHA1 (AdobeReader_enu-8.1.5-1.i486.tar.gz) = bce21b5dc04fecfb72761e67d53a898acfcd25a6
-RMD160 (AdobeReader_enu-8.1.5-1.i486.tar.gz) = 9ff9e0598d26ae39121a2f38d350d6ce2a944476
-Size (AdobeReader_enu-8.1.5-1.i486.tar.gz) = 49736176 bytes
+SHA1 (AdobeReader_enu-8.1.6-1.i486.tar.gz) = 2ee3c546ce2e0703212d2195f2d8f18031870701
+RMD160 (AdobeReader_enu-8.1.6-1.i486.tar.gz) = bde4c61ac5f21906ff19819b108c0d8de9a15c97
+Size (AdobeReader_enu-8.1.6-1.i486.tar.gz) = 49762921 bytes
 SHA1 (patch-aa) = 0fea43814bc9059ad02ed96792d544a1d4e20b69
