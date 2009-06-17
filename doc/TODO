@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8195 2009/06/16 15:42:30 taca Exp $
+$NetBSD: TODO,v 1.8196 2009/06/17 08:07:54 hasso Exp $
 
 Suggested new packages
 ======================
@@ -1106,7 +1106,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-mutagen-1.15
 	o py-psycopg-2.0.11
 	o py-pytz-2009g
-	o py-qt3-base-3.18
 	o py-setuptools-0.6
 	o py-sqlite2-2.5.1
 	o py-subversion-1.6.2
