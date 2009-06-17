@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2393 2009/06/16 15:11:16 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2394 2009/06/17 04:43:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3198,3 +3198,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/ruby18 to 1.8.7.174 [taca 2009-06-16]
 	Updated lang/ruby to 1.8.7.174 [taca 2009-06-16]
 	Updated devel/ruby-mode to 1.8.7.174 [taca 2009-06-16]
+	Updated print/acroread8 to 8.1.6 [obache 2009-06-17]
