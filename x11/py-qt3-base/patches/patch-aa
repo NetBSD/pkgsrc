@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2008/10/08 14:23:24 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2009/06/17 07:11:03 hasso Exp $
 
---- configure.py.orig	2007-12-06 15:28:06.000000000 +0100
-+++ configure.py
+--- configure.py.orig	2009-06-16 11:47:29 +0300
++++ configure.py	2009-06-17 05:21:23 +0300
 @@ -197,23 +197,23 @@ class ConfigurePyQt3(ConfigureBase):
      def check_modules(self):
          pyqt_modules.append("qt")
@@ -76,16 +76,16 @@ $NetBSD: patch-aa,v 1.6 2008/10/08 14:23:24 wiz Exp $
                  makefile.extra_defines.append("QT_MODULE_XML")
  
              makefile.generate()
-@@ -1002,7 +1002,7 @@ def check_license():
-     print "Type 'no' to decline the terms of the license."
-     print
+@@ -1010,7 +1010,7 @@ Type 'no' to decline the terms of the li
+ 
+ """)
  
 -    while 1:
 +    while 0:
          try:
              resp = raw_input("Do you accept the terms of the license? ")
          except:
-@@ -1380,7 +1380,7 @@ def main(argv):
+@@ -1392,7 +1392,7 @@ def main(argv):
      check_license()
  
      # Check for QScintilla.
