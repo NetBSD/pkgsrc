@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2009/06/17 17:54:46 drochner Exp $
+
+--- gl/tests/Makefile.in.orig	2009-06-17 19:44:48.000000000 +0200
++++ gl/tests/Makefile.in
+@@ -949,6 +949,7 @@ test_select_LDADD = $(LDADD) @LIBSOCKET@
+ test_select_fd_LDADD = $(LDADD) @LIBSOCKET@
+ test_select_stdin_LDADD = $(LDADD) @LIBSOCKET@
+ test_sockets_LDADD = $(LDADD) @LIBSOCKET@
++LINK_WARNING_H = $(top_srcdir)/build-aux/link-warning.h
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
