@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2395 2009/06/17 04:47:55 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2396 2009/06/17 08:06:54 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3200,3 +3200,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ruby-mode to 1.8.7.174 [taca 2009-06-16]
 	Updated print/acroread8 to 8.1.6 [obache 2009-06-17]
 	Updated net/p5-Net-Amazon to 0.53 [obache 2009-06-17]
+	Updated x11/py-sip to 4.8.1 [hasso 2009-06-17]
+	Updated x11/py-qt3-base to 3.18.1 [hasso 2009-06-17]
+	Updated x11/py-qt3-modules to 3.18.1 [hasso 2009-06-17]
+	Updated x11/py-qt3-qscintilla to 3.18.1 [hasso 2009-06-17]
+	Updated x11/py-qt4 to 4.5.1 [hasso 2009-06-17]
