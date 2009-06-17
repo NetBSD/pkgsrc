@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2009/06/17 08:34:07 tnn Exp $
+
+--- lib/getdate.y.orig	2009-05-15 08:24:00.000000000 +0200
++++ lib/getdate.y
+@@ -113,7 +113,9 @@
+    wraps around, but there's no portable way to check for that at
+    compile-time.  */
+ verify (TYPE_IS_INTEGER (time_t));
++/* This assertion fails on NetBSD-current/i386 due to 64-bit time_t
+ verify (LONG_MIN <= TYPE_MINIMUM (time_t) && TYPE_MAXIMUM (time_t) <= LONG_MAX);
++*/
+ 
+ /* An integer value, and the number of digits in its textual
+    representation.  */
