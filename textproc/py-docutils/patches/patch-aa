@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2009/06/17 14:07:35 tnn Exp $
+
+--- setup.py.orig	2007-03-22 00:00:23.000000000 +0100
++++ setup.py
+@@ -148,14 +148,13 @@ classifiers = [
+ Python 2.3 and up."""
+ 
+ extra_modules = [('optparse', '1.4.1', None),
+-                 ('textwrap', None, None),
+-                 ('roman', '1.4', ['toRoman', 'fromRoman',
+-                                   'InvalidRomanNumeralError'])]
++                 ('textwrap', None, None)]
++
+ """Third-party modules to install if they're not already present.
+ List of (module name, minimum __version__ string, [attribute names])."""
+ 
+ def get_extras():
+-    extras = []
++    extras = ['roman']
+     for module_name, version, attributes in extra_modules:
+         try:
+             module = __import__(module_name)
