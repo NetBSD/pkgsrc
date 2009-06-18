@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.13 2009/05/16 07:22:04 rillig Exp $
+# $NetBSD: packlist.mk,v 1.14 2009/06/18 05:30:24 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -63,15 +63,8 @@ PERL5_PLIST_FILES_CMD= \
 	{ ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_REAL_PACKLIST}; do ${TEST} ! -f "${DESTDIR}$$f" || ${ECHO} "$$f"; done; } \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\\./,/,g" -e "s,${PREFIX}/,," \
 	| ${SORT} -u
-PERL5_PLIST_DIRS_CMD= \
-	{ ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_REAL_PACKLIST}; do ${TEST} ! -f "${DESTDIR}$$f" || ${ECHO} "$$f"; done; } \
-	| ${SED} -e "s,[ 	].*,," -e "s,/\\./,/,g" -e "s,${PREFIX}/,," \
-		-e "s,^,@unexec "${RMDIR:Q}" -p %D/," \
-		-e "s,/[^/]*\$$, 2>/dev/null || "${TRUE:Q}"," \
-	| ${SORT} -ur
 PERL5_GENERATE_PLIST=	${PERL5_PLIST_COMMENT_CMD}; \
-			${PERL5_PLIST_FILES_CMD}; \
-			${PERL5_PLIST_DIRS_CMD};
+			${PERL5_PLIST_FILES_CMD};
 GENERATE_PLIST+=	${PERL5_GENERATE_PLIST}
 .endif
 
