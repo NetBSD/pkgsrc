@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/05/20 01:09:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/06/18 11:10:55 adam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-clientonly-/}
 PKGREVISION=		1
@@ -26,8 +26,6 @@ CONF_FILES+=		${EXAMPLESDIR}/bconsole.conf ${PKG_SYSCONFDIR}/bconsole.conf
 RCD_SCRIPTS=		bacula-fd
 
 .include "../../sysutils/bacula/Makefile.common"
-
-PLIST_SRC+=		${.CURDIR}/../../sysutils/bacula/PLIST.common_end
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/scripts/dvd-handler ${DESTDIR}${EXAMPLESDIR}
