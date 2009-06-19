@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/06/07 11:23:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/06/19 18:35:14 hasso Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
@@ -12,6 +12,7 @@ BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../x11/modular-xorg-server
 .include "../../x11/pixman/buildlink3.mk"
 
 .include "../../x11/compositeproto/buildlink3.mk"
+.include "../../x11/dri2proto/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
