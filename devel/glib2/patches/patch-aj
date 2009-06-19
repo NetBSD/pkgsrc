@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.7 2009/06/19 23:43:56 sketch Exp $
+
+--- glib/giounix.c.orig	Sat Jun 20 00:30:50 2009
++++ glib/giounix.c	Sat Jun 20 00:31:33 2009
+@@ -33,6 +33,7 @@
+ 
+ #include "config.h"
+ 
++#define _XOPEN_SOURCE 600
+ #define _POSIX_SOURCE		/* for SSIZE_MAX */
+ 
+ #include <sys/types.h>
