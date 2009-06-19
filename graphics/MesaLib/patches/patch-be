@@ -1,0 +1,57 @@
+$NetBSD: patch-be,v 1.1 2009/06/19 18:19:15 hasso Exp $
+
+--- src/mesa/drivers/osmesa/Makefile.orig	2009-06-19 13:36:30 +0300
++++ src/mesa/drivers/osmesa/Makefile	2009-06-19 13:45:04 +0300
+@@ -19,7 +19,7 @@ INCLUDE_DIRS = \
+ 	-I$(TOP)/src/mesa \
+ 	-I$(TOP)/src/mesa/main
+ 
+-CORE_MESA = $(TOP)/src/mesa/libmesa.a $(TOP)/src/mesa/libglapi.a
++CORE_MESA = $(TOP)/src/mesa/libmesa.la $(TOP)/src/mesa/libglapi.la
+ 
+ 
+ .PHONY: osmesa8
+@@ -27,7 +27,8 @@ CORE_MESA = $(TOP)/src/mesa/libmesa.a $(
+ 
+ 
+ .c.o:
+-	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) -c $(INCLUDE_DIRS) \
++		$(CFLAGS) $< -o $(@:.o=.lo)
+ 
+ 
+ default: $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME)
+@@ -44,11 +45,11 @@ default: $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_
+ osmesa8: $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME)
+ 
+ $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME): $(OBJECTS)
+-	$(MKLIB) -o $(OSMESA_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
+-		-major $(MESA_MAJOR) -minor $(MESA_MINOR) -patch $(MESA_TINY) \
+-		-install $(TOP)/$(LIB_DIR) $(MKLIB_OPTIONS) \
+-		-id $(INSTALL_LIB_DIR)/lib$(OSMESA_LIB).$(MESA_MAJOR).dylib \
+-		$(OSMESA_LIB_DEPS) $(OBJECTS)
++	$(LIBTOOL) --mode=link $(CC) \
++		-o $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME:.so=.la) $(LDFLAGS) \
++		-rpath $(PREFIX)/lib \
++		-version-info $(MESA_MAJOR):$(MESA_MINOR):0 \
++		$(OSMESA_LIB_DEPS) $(OBJECTS:.o=.lo)
+ 
+ 
+ 
+@@ -56,11 +57,11 @@ $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME): $(
+ # The libOSMesa16/libOSMesa32 libraries do not use libGL but rather are built
+ # with all the other Mesa sources (compiled with -DCHAN_BITS=16/32
+ osmesa16: $(OBJECTS) $(CORE_MESA)
+-	$(MKLIB) -o $(OSMESA_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
+-		-major $(MESA_MAJOR) -minor $(MESA_MINOR) -patch $(MESA_TINY) \
+-		-install $(TOP)/$(LIB_DIR) $(MKLIB_OPTIONS) \
+-		-id $(INSTALL_LIB_DIR)/lib$(OSMESA_LIB).$(MESA_MAJOR).dylib \
+-		$(OSMESA_LIB_DEPS) $(OBJECTS) $(CORE_MESA)
++	$(LIBTOOL) --mode=link $(CC) \
++		-o $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME:.so=.la) $(LDFLAGS) \
++		-rpath $(PREFIX)/lib \
++		-version-info $(MESA_MAJOR):$(MESA_MINOR):0 \
++		$(OSMESA_LIB_DEPS) $(OBJECTS:.o=.lo) $(CORE_MESA)
+ 
+ 
+ 
