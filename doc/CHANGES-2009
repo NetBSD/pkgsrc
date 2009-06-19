@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2402 2009/06/19 13:13:51 he Exp $
+$NetBSD: CHANGES-2009,v 1.2403 2009/06/19 18:37:12 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3211,3 +3211,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/sunbird to 0.9nb1 [he 2009-06-19]
 	Updated mail/thunderbird to 2.0.0.21nb1 [he 2009-06-19]
 	Updated mail/thunderbird-gtk1 to 2.0.0.21nb1 [he 2009-06-19]
+	Updated graphics/MesaLib to 7.4.2nb3 [hasso 2009-06-19]
