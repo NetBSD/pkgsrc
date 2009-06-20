@@ -1,4 +1,6 @@
-$NetBSD: patch-aj,v 1.7 2009/06/19 23:43:56 sketch Exp $
+$NetBSD: patch-aj,v 1.8 2009/06/20 08:35:01 wiz Exp $
+
+PR 41601, connected to http://bugzilla.gnome.org/show_bug.cgi?id=133344
 
 --- glib/giounix.c.orig	Sat Jun 20 00:30:50 2009
 +++ glib/giounix.c	Sat Jun 20 00:31:33 2009
