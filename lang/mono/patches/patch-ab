@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.18 2009/06/13 13:41:53 ahoka Exp $
+$NetBSD: patch-ab,v 1.19 2009/06/21 21:37:48 ahoka Exp $
 
 --- configure.orig	2009-03-13 15:51:11.000000000 +0100
 +++ configure
@@ -46,6 +46,15 @@ $NetBSD: patch-ab,v 1.18 2009/06/13 13:41:53 ahoka Exp $
  _ACEOF
  if { (ac_try="$ac_cpp conftest.$ac_ext"
  case "(($ac_try" in
+@@ -39626,7 +39633,7 @@ LIBC="libc.so.6"
+ INTL="libc.so.6"
+ SQLITE="libsqlite.so.0"
+ SQLITE3="libsqlite3.so.0"
+-X11="libX11.so"
++X11="@X11BASE@/lib/libX11.so"
+ 
+ sizeof_register="SIZEOF_VOID_P"
+ 
 @@ -40046,10 +40053,10 @@ case "$host" in
  	X11="libX11.dylib"
  	;;
