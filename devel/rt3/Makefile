@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.36 2009/06/09 17:34:50 abs Exp $
+# $NetBSD: Makefile,v 1.37 2009/06/21 15:31:39 spz Exp $
 
-DISTNAME=		rt-3.8.1
-PKGREVISION=		1
+DISTNAME=		rt-3.8.4
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bestpractical.com/rt/
 COMMENT=		Industrial-grade ticketing system
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "options.mk"
 
@@ -96,7 +98,7 @@ MAKE_FLAGS+=	RT_SPEEDYCGI_HANDLER=""
 .PHONY: rm-speedycgi
 post-install: rm-speedycgi
 rm-speedycgi:
-	rm -f ${PREFIX}/bin/mason_handler.scgi
+	rm -f ${DESTDIR}${PREFIX}/bin/mason_handler.scgi
 .endif
 
 # Back-end dependencies
