@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.11 2008/08/23 23:58:29 tonnerre Exp $
+# $NetBSD: Makefile.install,v 1.12 2009/06/21 15:31:39 spz Exp $
 
 .include "dirs.mk"
 
@@ -33,6 +33,11 @@ SUBST_FILES.etcpath=	sbin/rt-setup-database.in
 SUBST_SED.etcpath=	-e 's,\$$RT::EtcPath,"${RT_SHARE_DIR}/etc",'
 SUBST_STAGE.etcpath=	post-patch
 
+SUBST_CLASSES+=		hardwired
+SUBST_FILES.hardwired=	share/html/NoAuth/RichText/FCKeditor/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellchecker.pl
+SUBST_SED.hardwired=	-e 's,/usr/bin/perl,'${PERL5}','
+SUBST_STAGE.hardwired=	post-patch
+
 RT_CONFIG_FILES=	RT_Config.pm RT_SiteConfig.pm
 
 .for _file_ in ${RT_CONFIG_FILES}
@@ -43,9 +48,10 @@ CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_}	\
 
 RT_ETC_FILES=		acl.Oracle acl.Pg acl.mysql constraints.mysql	\
 			drop.Oracle initialdata schema.Oracle schema.Pg	\
-			schema.SQLite schema.mysql
+			schema.SQLite schema.mysql-4.0 schema.mysql-4.1
 RT_UPGRADE_DIRS=	3.3.0 3.3.11 3.5.1 3.7.1 3.7.3 3.7.10 3.7.15	\
-			3.7.19 3.7.81 3.7.82 3.7.85 3.7.86 3.7.87
+			3.7.19 3.7.81 3.7.82 3.7.85 3.7.86 3.7.87 \
+			3.8.0 3.8.1 3.8.2 3.8.3 3.8.4
 
 MESSAGE_SUBST+=		RTVARDIR=${RT_VAR_DIR:Q} RTSHAREDIR=${RT_SHARE_DIR:Q}
 
@@ -53,37 +59,47 @@ USE_TOOLS+=	pax
 
 do-install:
 	@${ECHO} "=> Configuration files"
-	${INSTALL_DATA_DIR} ${RT_EXAMPLE_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RT_EXAMPLE_DIR}
 .for _file_ in ${RT_CONFIG_FILES}
-	${INSTALL_DATA} ${WRKSRC}/etc/${_file_} ${RT_EXAMPLE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/${_file_} ${DESTDIR}${RT_EXAMPLE_DIR}
 .endfor
-	${INSTALL_DATA_DIR} ${RT_SHARE_DIR}/etc
+	${INSTALL_DATA_DIR} ${DESTDIR}${RT_SHARE_DIR}/etc
 .for _file_ in ${RT_ETC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/etc/${_file_} ${RT_SHARE_DIR}/etc
+	${INSTALL_DATA} ${WRKSRC}/etc/${_file_} ${DESTDIR}${RT_SHARE_DIR}/etc
 .endfor
-	${INSTALL_DATA_DIR} ${RT_SHARE_DIR}/etc/upgrade
+	${INSTALL_DATA_DIR} ${DESTDIR}${RT_SHARE_DIR}/etc/upgrade
 .for _dir_ in ${RT_UPGRADE_DIRS}
-	${INSTALL_DATA_DIR} ${RT_SHARE_DIR}/etc/upgrade/${_dir_}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RT_SHARE_DIR}/etc/upgrade/${_dir_}
 	cd ${WRKSRC}/etc/upgrade/${_dir_} &&						\
 		${FIND} . -type f ! -name '*.orig' 2>/dev/null | 			\
-		pax -rw ${RT_SHARE_DIR}/etc/upgrade/${_dir_}
+		pax -rw ${DESTDIR}${RT_SHARE_DIR}/etc/upgrade/${_dir_}
 .endfor
 	@${ECHO} "=> Libraries"
-	${INSTALL_DATA_DIR} ${RT_LIB_DIR}
-	cd ${WRKSRC}/lib && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | pax -rw ${RT_LIB_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RT_LIB_DIR}
+	cd ${WRKSRC}/lib && ${FIND} . -type f ! -name '*.orig' -o -name '*.in' 2>/dev/null | pax -rw ${DESTDIR}${RT_LIB_DIR}
+	${FIND} ${DESTDIR}${RT_LIB_DIR} -type f -exec ${CHMOD} 644 {} \;
 	@${ECHO} "=> Binaries"
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/bin
+	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/rt-mailgate ${WRKSRC}/bin/rt-crontool		\
 		${WRKSRC}/bin/mason_handler.fcgi ${WRKSRC}/bin/mason_handler.scgi	\
 		${WRKSRC}/bin/standalone_httpd ${WRKSRC}/bin/mason_handler.svc		\
 		${WRKSRC}/bin/rt ${WRKSRC}/bin/webmux.pl 				\
-		${PREFIX}/bin
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/sbin/rt-dump-database		\
 		${WRKSRC}/sbin/rt-setup-database			\
-		${WRKSRC}/sbin/rt-test-dependencies ${PREFIX}/sbin
+		${WRKSRC}/sbin/rt-email-digest				\
+		${WRKSRC}/sbin/rt-email-dashboards			\
+		${WRKSRC}/sbin/rt-email-group-admin			\
+		${WRKSRC}/sbin/rt-server				\
+		${WRKSRC}/sbin/rt-test-dependencies			\
+		${WRKSRC}/sbin/rt-clean-sessions			\
+		${WRKSRC}/sbin/rt-shredder				\
+		${WRKSRC}/sbin/rt-validator	 ${DESTDIR}${PREFIX}/sbin
 	@${ECHO} "=> HTML documents"
-	${INSTALL_DATA_DIR} ${RT_HTML_DIR}
-	cd ${WRKSRC}/share/html && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | pax -rw ${RT_HTML_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RT_HTML_DIR}
+	cd ${WRKSRC}/share/html && ${FIND} . -type f ! -name '*.orig' -o -name '*.in' 2>/dev/null | pax -rw ${DESTDIR}${RT_HTML_DIR}
+	${FIND} ${DESTDIR}${RT_HTML_DIR} -type f -exec ${CHMOD} 644 {} \;
 	@${ECHO} "=> Documentation"
-	${INSTALL_DATA_DIR} ${RT_DOC_DIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${RT_DOC_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RT_DOC_DIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${RT_DOC_DIR}
