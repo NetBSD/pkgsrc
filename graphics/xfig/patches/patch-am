@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1 2009/06/22 18:29:33 drochner Exp $
+
+--- w_intersect.c.orig	2009-06-05 21:22:32.000000000 +0200
++++ w_intersect.c
+@@ -26,7 +26,6 @@
+ #include "w_msgpanel.h"
+ #include "f_util.h"
+ #include "u_quartic.h"
+-#include <alloca.h>
+ #include <math.h>
+ #undef I
+   
