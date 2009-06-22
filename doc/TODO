@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8202 2009/06/22 01:11:40 wiz Exp $
+$NetBSD: TODO,v 1.8203 2009/06/22 07:56:21 he Exp $
 
 Suggested new packages
 ======================
@@ -1026,7 +1026,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o paprefs-0.9.8
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
-	o parrot-1.2.0
 	o patchutils-0.3.1
 	o pavucontrol-0.9.8
 	o pcal-4.8
