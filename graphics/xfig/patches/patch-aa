@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.9 2003/01/07 06:30:35 rh Exp $
+$NetBSD: patch-aa,v 1.10 2009/06/22 18:29:33 drochner Exp $
 
---- Fig.ad.orig	Wed Dec 18 17:05:41 2002
+--- Fig.ad.orig	2009-05-07 01:11:09.000000000 +0200
 +++ Fig.ad
-@@ -24,7 +24,7 @@
+@@ -29,7 +29,7 @@ Fig.browser:	firefox -remote 'openFile(%
  
  ! pdfviewer - put your favorite pdf viewer here.  
  !		This is for viewing the xfig how-to guide and man pages
--Fig.pdfviewer:			acroread %f
+-Fig.pdfviewer:			xpdf %f
 +Fig.pdfviewer:			gv %f
  
  ! Spell check program - put your favorite spelling check program here.

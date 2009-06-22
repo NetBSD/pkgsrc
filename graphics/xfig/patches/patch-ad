@@ -1,22 +1,22 @@
-$NetBSD: patch-ad,v 1.4 2005/11/12 16:08:21 itohy Exp $
+$NetBSD: patch-ad,v 1.5 2009/06/22 18:29:33 drochner Exp $
 
---- w_cmdpanel.c.orig	Wed Mar 17 09:53:55 2004
-+++ w_cmdpanel.c	Sat Nov 12 19:55:19 2005
-@@ -349,7 +349,7 @@ rebuild_file_menu(menu)
+--- w_cmdpanel.c.orig	2008-07-17 17:50:06.000000000 +0200
++++ w_cmdpanel.c
+@@ -375,7 +375,7 @@ rebuild_file_menu(Widget menu)
+ 	for (j = 0; j < MAX_RECENT_FILES; j++) {
  	    sprintf(id, "%1d", j + 1);
  	    FirstArg(XtNvertSpace, 10);
- 	    NextArg(XtNunderline, 0); /* underline # digit */
 -#ifndef XAW3D1_5E
 +#ifndef XAW3D
+ 	    NextArg(XtNunderline, 0); /* underline # digit */
  	    entry = XtCreateWidget(id, figSmeBSBObjectClass, menu, Args, ArgCount);
  #else
- 	    entry = XtCreateWidget(id, smeBSBObjectClass, menu, Args, ArgCount);
-@@ -407,7 +407,7 @@ create_menu_item(menup)
+@@ -432,7 +432,7 @@ create_menu_item(main_menu_info *menup)
+ 		if (menup->menu[i].checkmark) {
  		    NextArg(XtNleftMargin, 12);
  		}
- 		NextArg(XtNunderline, menup->menu[i].u_line); /* any underline */
 -#ifndef XAW3D1_5E
 +#ifndef XAW3D
+ 		NextArg(XtNunderline, menup->menu[i].u_line); /* any underline */
  		entry = XtCreateManagedWidget(menup->menu[i].name, figSmeBSBObjectClass, 
  					menu, Args, ArgCount);
- #else
