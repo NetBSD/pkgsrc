@@ -1,0 +1,24 @@
+$NetBSD: patch-al,v 1.1 2009/06/22 18:29:33 drochner Exp $
+
+--- w_keyboard.c.orig	2008-05-20 21:38:18.000000000 +0200
++++ w_keyboard.c
+@@ -18,9 +18,7 @@
+ 
+ #include <sys/types.h>
+ #include <regex.h>
+-#ifndef __FreeBSD__
+-#include <alloca.h>
+-#endif
++#include <stdlib.h>
+ #include <string.h>
+ #include <math.h>
+ 
+@@ -244,7 +242,7 @@ handle_keyboard_input(w, event)
+     origin_y = fix_y;
+   }
+   
+-  if (REG_NOERROR == (rc = regexec(&preg, val, preg.re_nsub, pmatch, 0))) {
++  if (!(rc = regexec(&preg, val, preg.re_nsub, pmatch, 0))) {
+ #if 0    
+     int i;
+     for (i = 0; i < 1 + preg.re_nsub; i++) {

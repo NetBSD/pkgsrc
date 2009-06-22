@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2009/06/22 18:29:33 drochner Exp $
 
-DISTNAME=	xfig.3.2.5-alpha5.full
-PKGNAME=	xfig-3.2.5alpha5
-PKGREVISION=	7
+DISTNAME=	xfig.3.2.5b.full
+PKGNAME=	xfig-3.2.5b
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://epb.lbl.gov/xfig/alpha/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xfig.org/
@@ -15,7 +14,7 @@ DEPENDS+=	transfig>=3.2.4:../../print/transfig
 # version means we need a patch, which is currently used unconditionally
 BUILDLINK_API_DEPENDS.Xaw3d+=	Xaw3d>=1.5E
 
-WRKSRC=			${WRKDIR}/xfig.3.2.5-alpha5
+WRKSRC=			${WRKDIR}/xfig.3.2.5b
 USE_IMAKE=		YES
 XAW_TYPE?=		3d
 
@@ -27,11 +26,13 @@ CFLAGS+=		-I${X11PREFIX}/include/X11
 
 post-extract:
 	cd ${WRKSRC} && ${RM} -f Doc/*.orig Doc/*/*.orig Doc/*/*/*.orig
+	find ${WRKSRC}/Libraries -type d -exec ${CHMOD} 0755 {} \;
+	find ${WRKSRC}/Libraries -type f -exec ${CHMOD} 0644 {} \;
 
 SUBST_CLASSES+=		xaw
-SUBST_STAGE.xaw=	post-configure
+SUBST_STAGE.xaw=	post-patch
 SUBST_MESSAGE.xaw=	Fixing Imakefile
-SUBST_FILES.xaw=	IMakefile
+SUBST_FILES.xaw=	Imakefile
 .if defined(XAW_TYPE) && ${XAW_TYPE} == "3d"
 # define XAW3D and XAW3D1_5E
 SUBST_SED.xaw+=		-e 's/.*\(\#define.XAW3D\)/\1/'

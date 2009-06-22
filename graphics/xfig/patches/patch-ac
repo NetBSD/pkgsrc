@@ -1,14 +1,14 @@
-$NetBSD: patch-ac,v 1.6 2006/11/16 02:28:58 markd Exp $
+$NetBSD: patch-ac,v 1.7 2009/06/22 18:29:33 drochner Exp $
 
---- f_util.c.orig	2004-01-07 08:46:08.000000000 +1300
+--- f_util.c.orig	2007-01-16 18:58:18.000000000 +0100
 +++ f_util.c
-@@ -111,15 +111,15 @@ change_directory(path)
- get_directory(direct)
-     char	   *direct;
+@@ -119,15 +119,15 @@ change_directory(char *path)
+ 
+ int get_directory(char *direct)
  {
 -#if defined(SYSV) || defined(SVR4) || defined(_POSIX_SOURCE)
 +#if defined(SYSV) || defined(SVR4) || defined(_POSIX_SOURCE) || defined(__NetBSD__)
-     extern char	   *getcwd();
+     extern char	   *getcwd(char *, size_t);
  
  #else
      extern char	   *getwd();
@@ -21,7 +21,7 @@ $NetBSD: patch-ac,v 1.6 2006/11/16 02:28:58 markd Exp $
      if (getcwd(direct, PATH_MAX) == NULL) {	/* get current working dir */
  	file_msg("Can't get current directory");
  	beep();
-@@ -127,7 +127,7 @@ get_directory(direct)
+@@ -135,7 +135,7 @@ int get_directory(char *direct)
      if (getwd(direct) == NULL) {		/* get current working dir */
  	file_msg("%s", direct);			/* err msg is in direct var */
  	beep();
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.6 2006/11/16 02:28:58 markd Exp $
  	*direct = '\0';
  	return 0;
      }
-@@ -782,7 +782,7 @@ uncompress_file(name)
+@@ -781,7 +781,7 @@ uncompress_file(char *name)
      else strcpy(dirname, ".");
  
      if (access(dirname, W_OK) == 0) {  /* OK - the directory is writable */
@@ -39,7 +39,7 @@ $NetBSD: patch-ac,v 1.6 2006/11/16 02:28:58 markd Exp $
        if (system(unc) != 0)
  	file_msg("Couldn't uncompress the file: \"%s\"", unc);
        strcpy(name, plainname);
-@@ -793,7 +793,7 @@ uncompress_file(name)
+@@ -792,7 +792,7 @@ uncompress_file(char *name)
  	  sprintf(tmpfile, "%s%s", TMPDIR, c);
        else
  	  sprintf(tmpfile, "%s/%s", TMPDIR, plainname);
