@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1 2009/06/22 02:02:47 ahoka Exp $
+
+--- Monsoon/Monsoon.exe.config.orig	2008-06-18 21:10:52.000000000 +0200
++++ Monsoon/Monsoon.exe.config
+@@ -1,4 +1,3 @@
+ <configuration>
+-  <dllmap dll="libgdk-x11-2.0.dll" target="libgdk-x11-2.0.so.0"/>
+-  <dllmap dll="libX11" target="libX11.so.6"/>
++  <dllmap dll="libgdk-x11-2.0.dll" target="libgdk-x11-2.0.so"/>
+ </configuration>
