@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8201 2009/06/21 23:18:13 dholland Exp $
+$NetBSD: TODO,v 1.8202 2009/06/22 01:11:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -485,7 +485,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o compiz-0.8.0
-	o cone-0.78
+	o cone-0.78 [pkg/41623]
 	o connect-1.96
 	o cook-2.31
 	o courier-0.62.0
@@ -1326,6 +1326,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
+	o tokyocabinet-1.4.27
 	o tomboy-0.14.3
 	o top-3.8beta1
 	o tpasm-1.2
