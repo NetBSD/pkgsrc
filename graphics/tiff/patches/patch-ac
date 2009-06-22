@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.19 2008/08/30 08:12:45 tron Exp $
+$NetBSD: patch-ac,v 1.20 2009/06/22 14:54:44 drochner Exp $
 
---- libtiff/tif_lzw.c.orig	2006-03-21 16:42:50.000000000 +0000
-+++ libtiff/tif_lzw.c	2008-08-30 09:03:37.000000000 +0100
-@@ -237,6 +237,13 @@
+--- libtiff/tif_lzw.c.orig	2006-03-21 17:42:50.000000000 +0100
++++ libtiff/tif_lzw.c
+@@ -237,6 +237,13 @@ LZWSetupDecode(TIFF* tif)
                      sp->dec_codetab[code].length = 1;
                      sp->dec_codetab[code].next = NULL;
                  } while (code--);
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.19 2008/08/30 08:12:45 tron Exp $
  	}
  	return (1);
  }
-@@ -408,12 +415,20 @@
+@@ -408,12 +415,20 @@ LZWDecode(TIFF* tif, tidata_t op0, tsize
  			break;
  		if (code == CODE_CLEAR) {
  			free_entp = sp->dec_codetab + CODE_FIRST;
@@ -37,7 +37,7 @@ $NetBSD: patch-ac,v 1.19 2008/08/30 08:12:45 tron Exp $
  			*op++ = (char)code, occ--;
  			oldcodep = sp->dec_codetab + code;
  			continue;
-@@ -604,12 +619,20 @@
+@@ -604,12 +619,20 @@ LZWDecodeCompat(TIFF* tif, tidata_t op0,
  			break;
  		if (code == CODE_CLEAR) {
  			free_entp = sp->dec_codetab + CODE_FIRST;
@@ -58,3 +58,20 @@ $NetBSD: patch-ac,v 1.19 2008/08/30 08:12:45 tron Exp $
  			*op++ = code, occ--;
  			oldcodep = sp->dec_codetab + code;
  			continue;
+@@ -647,6 +670,7 @@ LZWDecodeCompat(TIFF* tif, tidata_t op0,
+ 		}
+ 		oldcodep = codep;
+ 		if (code >= 256) {
++			char *op_orig = op;
+ 			/*
+ 		 	 * Code maps to a string, copy string
+ 			 * value to output (written in reverse).
+@@ -681,7 +705,7 @@ LZWDecodeCompat(TIFF* tif, tidata_t op0,
+ 			tp = op;
+ 			do {
+ 				*--tp = codep->value;
+-			} while( (codep = codep->next) != NULL);
++			} while( (codep = codep->next) != NULL && tp > op_orig);
+ 		} else
+ 			*op++ = code, occ--;
+ 	}
