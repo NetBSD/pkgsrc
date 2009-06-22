@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1 2009/06/22 18:29:33 drochner Exp $
+
+--- e_chop.c.orig	2009-03-30 17:52:10.000000000 +0200
++++ e_chop.c
+@@ -19,9 +19,6 @@
+ /* >>>>>>>>>>>>>>>>>>> fixme -- don't forget undo ! <<<<<<<<<<<<<<<< */
+ 
+ #include <stdlib.h>
+-#ifndef __FreeBSD__
+-#include <alloca.h>
+-#endif
+ #include <math.h>
+ #include "fig.h"
+ #include "resources.h"
