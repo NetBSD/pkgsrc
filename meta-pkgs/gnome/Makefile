@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2009/06/22 16:18:10 drochner Exp $
+# $NetBSD: Makefile,v 1.120 2009/06/23 19:41:36 drochner Exp $
 
 DISTNAME=	gnome-2.26.2
 CATEGORIES=	meta-pkgs x11 gnome
@@ -23,8 +23,7 @@ DEPENDS+=	alacarte>=0.12.1:../../x11/alacarte
 DEPENDS+=	brasero>=2.26.2:../../sysutils/brasero
 DEPENDS+=	bug-buddy>=2.26.0:../../net/bug-buddy
 DEPENDS+=	cheese>=2.26.2:../../graphics/cheese
-#DEPENDS+=	dasher>=4.10.1:../../editors/dasher
-DEPENDS+=	dasher>=4.10.0:../../editors/dasher
+DEPENDS+=	dasher>=4.10.1:../../editors/dasher
 DEPENDS+=	deskbar-applet>=2.26.2:../../misc/deskbar-applet
 # needs opal->ffmpeg->lame, which has a special license
 #DEPENDS+=	ekiga>=3.2.1:../../net/ekiga
@@ -71,8 +70,7 @@ DEPENDS+=	gnome-power-manager>=2.24.2:../../sysutils/gnome-power-manager
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.26.0:../../x11/py-gnome2-desktop
 DEPENDS+=	gnome-screensaver>=2.26.1:../../x11/gnome-screensaver
 DEPENDS+=	gnome-session>=2.26.1:../../x11/gnome-session
-#DEPENDS+=	gnome-settings-daemon>=2.26.1:../../sysutils/gnome-settings-daemon
-DEPENDS+=	gnome-settings-daemon>=2.26.0:../../sysutils/gnome-settings-daemon
+DEPENDS+=	gnome-settings-daemon>=2.26.1:../../sysutils/gnome-settings-daemon
 DEPENDS+=	gnome-sharp>=2.24.1:../../x11/gnome-sharp
 DEPENDS+=	gnome-speech>=0.4.25:../../audio/gnome-speech
 DEPENDS+=	gnome-system-monitor>=2.26.1:../../sysutils/gnome-system-monitor
