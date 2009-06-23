@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/06/14 13:39:22 taca Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/23 11:30:24 taca Exp $
 #
 
-DISTNAME=	opengoo_${VER}
-PKGNAME=	opengoo-${VER}
-PKGREVISION=	2
+DISTNAME=	opengoo_1.4.2
+PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
 EXTRACT_SUFX=	.zip
@@ -19,7 +18,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.1.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-VER=		1.4.1
 
 WRKSRC=		${WRKDIR}/opengoo
 USE_TOOLS=	pax
@@ -35,6 +33,10 @@ MAKE_DIRS_PERMS+= ${OG_DIR}/tmp/saveatt ${BINOWN} ${APACHE_GROUP} 0770
 BUILD_DEFS+=	APACHE_GROUP APACHE_USER
 FILES_SUBST+=	OG_DIR=${OG_DIR} APACHE_USER=${APACHE_USER}
 PLIST_SUBST+=	OG_DIR=${OG_DIR}
+
+PRINT_PLIST_AWK+=	/^${OG_DIR:S|/|\\/|g}/ \
+			{ gsub(/${OG_DIR:S|/|\\/|g}/, "$${OG_DIR}"); \
+			print; next; }
 
 .include "../../mk/bsd.prefs.mk"
 
