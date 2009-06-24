@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2408 2009/06/24 09:17:15 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.2409 2009/06/24 14:44:53 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3220,3 +3220,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/seamonkey to 1.1.17 [ghen 2009-06-24]
 	Updated www/seamonkey-bin to 1.1.17 [ghen 2009-06-24]
 	Updated www/seamonkey-gtk1 to 1.1.17 [ghen 2009-06-24]
+	Updated chat/libpurple to 2.5.7 [kefren 2009-06-24]
