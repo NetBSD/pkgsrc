@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2406 2009/06/23 11:31:08 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2407 2009/06/24 08:46:47 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3215,3 +3215,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27 to 2.7.1nb1 [taca 2009-06-22]
 	Updated www/typolight27-translations to 20090620 [taca 2009-06-22]
 	Updated www/opengoo to 1.4.2 [taca 2009-06-23]
+	Updated mail/thunderbird to 2.0.0.22 [ghen 2009-06-24]
+	Updated mail/thunderbird-gtk1 to 2.0.0.22 [ghen 2009-06-24]
