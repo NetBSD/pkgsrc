@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2407 2009/06/24 08:46:47 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.2408 2009/06/24 09:17:15 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3217,3 +3217,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/opengoo to 1.4.2 [taca 2009-06-23]
 	Updated mail/thunderbird to 2.0.0.22 [ghen 2009-06-24]
 	Updated mail/thunderbird-gtk1 to 2.0.0.22 [ghen 2009-06-24]
+	Updated www/seamonkey to 1.1.17 [ghen 2009-06-24]
+	Updated www/seamonkey-bin to 1.1.17 [ghen 2009-06-24]
+	Updated www/seamonkey-gtk1 to 1.1.17 [ghen 2009-06-24]
