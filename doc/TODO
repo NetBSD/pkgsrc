@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8206 2009/06/24 04:10:44 taca Exp $
+$NetBSD: TODO,v 1.8207 2009/06/24 05:49:29 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -837,6 +837,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
+	o libmp3splt-0.5.6 [schmonz]
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libntlm-1.1
@@ -921,6 +922,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
 	o mp3blaster-3.2.3
+	o mp3splt-2.2.5 [schmonz]
 	o mpc-0.16
 	o mpeg4ip-1.6.1
 	o mpg123-1.8.1
