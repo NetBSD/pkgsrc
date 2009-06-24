@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2009/06/08 10:16:22 hasso Exp $
+# $NetBSD: Makefile,v 1.87 2009/06/24 07:06:33 hasso Exp $
 
 DISTNAME=		lftp-3.7.14
 CATEGORIES=		net
@@ -16,6 +16,7 @@ LICENSE=		gnu-gpl-v3
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=		bison
 MAKE_JOBS_SAFE=		no
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
