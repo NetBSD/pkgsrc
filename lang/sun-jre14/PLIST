@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2009/06/14 18:03:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.26 2009/06/25 11:43:41 obache Exp $
 bin/sun14-java
 bin/sun14-keytool
 bin/sun14-orbd
@@ -258,7 +258,9 @@ java/sun-1.4/lib/zi/America/Argentina/Jujuy
 java/sun-1.4/lib/zi/America/Argentina/La_Rioja
 java/sun-1.4/lib/zi/America/Argentina/Mendoza
 java/sun-1.4/lib/zi/America/Argentina/Rio_Gallegos
+java/sun-1.4/lib/zi/America/Argentina/Salta
 java/sun-1.4/lib/zi/America/Argentina/San_Juan
+java/sun-1.4/lib/zi/America/Argentina/San_Luis
 java/sun-1.4/lib/zi/America/Argentina/Tucuman
 java/sun-1.4/lib/zi/America/Argentina/Ushuaia
 java/sun-1.4/lib/zi/America/Aruba
@@ -357,6 +359,7 @@ java/sun-1.4/lib/zi/America/Recife
 java/sun-1.4/lib/zi/America/Regina
 java/sun-1.4/lib/zi/America/Resolute
 java/sun-1.4/lib/zi/America/Rio_Branco
+java/sun-1.4/lib/zi/America/Santarem
 java/sun-1.4/lib/zi/America/Santiago
 java/sun-1.4/lib/zi/America/Santo_Domingo
 java/sun-1.4/lib/zi/America/Sao_Paulo
@@ -401,7 +404,6 @@ java/sun-1.4/lib/zi/Asia/Bangkok
 java/sun-1.4/lib/zi/Asia/Beirut
 java/sun-1.4/lib/zi/Asia/Bishkek
 java/sun-1.4/lib/zi/Asia/Brunei
-java/sun-1.4/lib/zi/Asia/Calcutta
 java/sun-1.4/lib/zi/Asia/Choibalsan
 java/sun-1.4/lib/zi/Asia/Chongqing
 java/sun-1.4/lib/zi/Asia/Colombo
@@ -412,6 +414,7 @@ java/sun-1.4/lib/zi/Asia/Dubai
 java/sun-1.4/lib/zi/Asia/Dushanbe
 java/sun-1.4/lib/zi/Asia/Gaza
 java/sun-1.4/lib/zi/Asia/Harbin
+java/sun-1.4/lib/zi/Asia/Ho_Chi_Minh
 java/sun-1.4/lib/zi/Asia/Hong_Kong
 java/sun-1.4/lib/zi/Asia/Hovd
 java/sun-1.4/lib/zi/Asia/Irkutsk
@@ -423,6 +426,7 @@ java/sun-1.4/lib/zi/Asia/Kamchatka
 java/sun-1.4/lib/zi/Asia/Karachi
 java/sun-1.4/lib/zi/Asia/Kashgar
 java/sun-1.4/lib/zi/Asia/Katmandu
+java/sun-1.4/lib/zi/Asia/Kolkata
 java/sun-1.4/lib/zi/Asia/Krasnoyarsk
 java/sun-1.4/lib/zi/Asia/Kuala_Lumpur
 java/sun-1.4/lib/zi/Asia/Kuching
@@ -446,7 +450,6 @@ java/sun-1.4/lib/zi/Asia/Riyadh
 java/sun-1.4/lib/zi/Asia/Riyadh87
 java/sun-1.4/lib/zi/Asia/Riyadh88
 java/sun-1.4/lib/zi/Asia/Riyadh89
-java/sun-1.4/lib/zi/Asia/Saigon
 java/sun-1.4/lib/zi/Asia/Sakhalin
 java/sun-1.4/lib/zi/Asia/Samarkand
 java/sun-1.4/lib/zi/Asia/Seoul
@@ -580,6 +583,7 @@ java/sun-1.4/lib/zi/Indian/Reunion
 java/sun-1.4/lib/zi/MET
 java/sun-1.4/lib/zi/MST
 java/sun-1.4/lib/zi/MST7MDT
+java/sun-1.4/lib/zi/PST8PDT
 java/sun-1.4/lib/zi/Pacific/Apia
 java/sun-1.4/lib/zi/Pacific/Auckland
 java/sun-1.4/lib/zi/Pacific/Chatham
@@ -618,7 +622,6 @@ java/sun-1.4/lib/zi/Pacific/Tongatapu
 java/sun-1.4/lib/zi/Pacific/Truk
 java/sun-1.4/lib/zi/Pacific/Wake
 java/sun-1.4/lib/zi/Pacific/Wallis
-java/sun-1.4/lib/zi/PST8PDT
 java/sun-1.4/lib/zi/WET
 java/sun-1.4/lib/zi/ZoneInfoMappings
 java/sun-1.4/man/ja
