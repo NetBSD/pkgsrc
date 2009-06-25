@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/06/13 12:28:44 hasso Exp $
+$NetBSD: distinfo,v 1.4 2009/06/25 09:41:45 drochner Exp $
 
 SHA1 (net6-1.3.9.tar.gz) = 86c15f3b3bcd89bfa8da9cef68518b32349ba36f
 RMD160 (net6-1.3.9.tar.gz) = 178c0093edfc9edc3f11afed06c4743ef86052e8
 Size (net6-1.3.9.tar.gz) = 449368 bytes
-SHA1 (patch-aa) = af9e96ff38f967c93ca60f56200694c4976e2a10
+SHA1 (patch-aa) = 4cbce62de477d34a0fab810a57646de0bf528834
