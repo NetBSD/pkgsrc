@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2007/08/16 00:31:22 joerg Exp $
+$NetBSD: distinfo,v 1.19 2009/06/25 14:22:08 dmcmahill Exp $
 
 SHA1 (f2c-20001205.tar.gz) = f3cc1653eb962fee45d850df50890fc53448a17f
 RMD160 (f2c-20001205.tar.gz) = b376105c33ca53df46cab458082b26dbc9a53762
@@ -10,6 +10,6 @@ SHA1 (patch-ae) = f17254cab1449273ca44e652ed2f1a586a9a3e19
 SHA1 (patch-af) = fe24139c21862e85c576118166b7deab8e421572
 SHA1 (patch-ag) = 08d145e598ea5d376cee34ec42c7a98cae80668d
 SHA1 (patch-ah) = 54e4679e33cf3adc3b0d2b8b5b4e98cf26370319
-SHA1 (patch-ai) = a8f5aa7137cf3352e3e89ce6d787e01128abe8ec
+SHA1 (patch-ai) = d8c1f731c18394e0953b6128d0bd597986ab910f
 SHA1 (patch-aj) = c58361fbbfc06e033b2a47e1d1e370716c4b185c
 SHA1 (patch-ak) = 5d95d88cb7118ee7b1047db24880cbd49a782807
