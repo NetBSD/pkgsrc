@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2009/05/23 08:12:08 tron Exp $
+# $NetBSD: Makefile,v 1.33 2009/06/25 09:38:25 drochner Exp $
 
 DISTNAME=		wireshark-1.0.8
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.wireshark.org/download/src/ \
 			${MASTER_SITE_SOURCEFORGE:=wireshark/}
@@ -28,6 +29,8 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
+# XXX work around missing "libgnutls-config" in gnutls-2.8
+CONFIGURE_ENV+=		LIBGNUTLS_CONFIG=${WRKDIR}/libgnutls-config
 
 PTHREAD_OPTS+=		require
 
@@ -40,6 +43,11 @@ USE_BUILTIN.libpcap=	no
 
 # wireshark no longer builds with NetBSD 3.x provided zlib
 BUILDLINK_API_DEPENDS.zlib=zlib>=1.2.1
+
+pre-configure:
+	${SED} "s|@SH@|${SH}|" <${FILESDIR}/libgnutls-config \
+		>${WRKDIR}/libgnutls-config
+	${CHMOD} +x ${WRKDIR}/libgnutls-config
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
