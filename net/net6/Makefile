@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/06/13 12:28:44 hasso Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/25 09:41:45 drochner Exp $
 #
 
 DISTNAME=	net6-1.3.9
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://releases.0x539.de/net6/
 
