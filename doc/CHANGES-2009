@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2409 2009/06/24 14:44:53 kefren Exp $
+$NetBSD: CHANGES-2009,v 1.2410 2009/06/25 05:35:36 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3221,3 +3221,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/seamonkey-bin to 1.1.17 [ghen 2009-06-24]
 	Updated www/seamonkey-gtk1 to 1.1.17 [ghen 2009-06-24]
 	Updated chat/libpurple to 2.5.7 [kefren 2009-06-24]
+	Updated mail/squirrelmail-locales to 1.4.18 [martti 2009-06-25]
+	Updated editors/vim-share to 7.2.218 [martti 2009-06-25]
