@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2009/06/13 12:28:44 hasso Exp $
+$NetBSD: patch-aa,v 1.2 2009/06/25 09:41:45 drochner Exp $
 
---- configure.ac.orig	2009-06-12 19:09:16 +0300
-+++ configure.ac	2009-06-12 19:09:53 +0300
-@@ -73,17 +73,7 @@ AM_CONDITIONAL(WIN32, test x$win32 = xtr
+--- configure.ac.orig	2009-01-03 21:56:07.000000000 +0100
++++ configure.ac
+@@ -73,16 +73,8 @@ AM_CONDITIONAL(WIN32, test x$win32 = xtr
  
  # Checks for libraries.
  PKG_CHECK_MODULES([libnet6], [sigc++-2.0])
@@ -16,8 +16,8 @@ $NetBSD: patch-aa,v 1.1 2009/06/13 12:28:44 hasso Exp $
 -]]))
 -addlibs="$addlibs $LIBGNUTLS_LIBS"
 -addcflags="$LIBGNUTLS_CFLAGS"
--AC_SUBST(addcflags)
 +PKG_CHECK_MODULES([LIBGNUTLS], [gnutls])
++addcflags="$LIBGNUTLS_CFLAGS"
+ AC_SUBST(addcflags)
  
  # gettext / i18n
- AM_GNU_GETTEXT([external])
