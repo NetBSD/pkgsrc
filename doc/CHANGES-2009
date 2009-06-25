@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2411 2009/06/25 06:42:10 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2412 2009/06/25 11:35:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3224,3 +3224,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/squirrelmail-locales to 1.4.18 [martti 2009-06-25]
 	Updated editors/vim-share to 7.2.218 [martti 2009-06-25]
 	Updated security/pcsc-lite to 1.5.4 [hasso 2009-06-25]
+	Updated net/ldns to 1.5.1 [he 2009-06-25]
