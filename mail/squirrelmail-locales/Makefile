@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2009/05/12 12:27:19 martti Exp $
+# $NetBSD: Makefile,v 1.26 2009/06/25 05:29:18 martti Exp $
 
-DISTNAME=	all_locales-${VER}-20071220
+DISTNAME=	all_locales-${VER}-20090526
 PKGNAME=	squirrelmail-locales-${VER}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
@@ -9,9 +9,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	Locale package for SquirrelMail
+
 LICENSE=	gnu-gpl-v2
 
-VER=		1.4.13
+VER=		1.4.18
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
