@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8209 2009/06/26 05:40:32 dholland Exp $
+$NetBSD: TODO,v 1.8210 2009/06/26 11:03:26 obache Exp $
 
 Suggested new packages
 ======================
@@ -960,6 +960,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o netperf-2.4.4
 	o netpipe-3.6.2
 	o netramet-50
+	o neverball-1.5.1 [pkg/41637]
 	o newmail-1.0.2
 	o newmat-11
 	o newt-0.52.2 (ubuntu)
