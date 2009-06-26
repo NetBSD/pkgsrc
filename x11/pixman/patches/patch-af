@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.6 2009/06/26 20:30:16 sketch Exp $
+
+--- pixman/pixman-bits-image.c.orig	Fri Jun 26 21:16:52 2009
++++ pixman/pixman-bits-image.c	Fri Jun 26 21:17:57 2009
+@@ -272,7 +272,7 @@
+ 	coords[i + 1] = y;
+     }
+ 
+-    return bits_image_fetch_pixels_src_clip (image, buffer, n_pixels);
++    bits_image_fetch_pixels_src_clip (image, buffer, n_pixels);
+ }
+ 
+ #define N_TMP_PIXELS	(256)
