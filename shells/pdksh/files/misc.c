@@ -1,4 +1,4 @@
-/*	$NetBSD: misc.c,v 1.3 2008/06/15 14:20:09 tnn Exp $	*/
+/*	$NetBSD: misc.c,v 1.4 2009/06/27 23:42:39 ahoka Exp $	*/
 
 /*
  * Miscellaneous functions
@@ -319,6 +319,12 @@ change_flag(f, what, newval)
 	if (f == FPRIVILEGED && oldval && !newval) {
 #ifdef OS2
 		;
+#elif defined(__hpux)
+		ksheuid = getuid();
+		setresuid((uid_t) -1, getuid(), (uid_t) -1);
+		setuid(ksheuid);
+		setresgid((gid_t) -1, getgid(), (gid_t) -1);
+		setgid(getgid());
 #else /* OS2 */
 		seteuid(ksheuid = getuid());
 		setuid(ksheuid);
