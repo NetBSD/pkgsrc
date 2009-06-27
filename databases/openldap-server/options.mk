@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.11 2009/04/27 07:13:02 ghen Exp $
+# $NetBSD: options.mk,v 1.12 2009/06/27 09:55:09 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
-PKG_SUPPORTED_OPTIONS=	bdb kerberos sasl slp inet6 smbk5pwd dso
+PKG_SUPPORTED_OPTIONS=	bdb sasl slp inet6 smbk5pwd dso
 PKG_OPTIONS_OPTIONAL_GROUPS+=	odbc
 PKG_OPTIONS_GROUP.odbc=	iodbc unixodbc
 PKG_SUGGESTED_OPTIONS=	bdb
@@ -42,15 +42,6 @@ CONFIGURE_ARGS+=	--enable-sql
 
 .if empty(PKG_OPTIONS:Miodbc) && empty(PKG_OPTIONS:Munixodbc)
 CONFIGURE_ARGS+=	--disable-sql
-.endif
-
-###
-### Kerberos authentication is via SASL.
-###
-.if !empty(PKG_OPTIONS:Mkerberos)
-.  if empty(PKG_OPTIONS:Msasl)
-PKG_OPTIONS+=		sasl
-.  endif
 .endif
 
 ###
