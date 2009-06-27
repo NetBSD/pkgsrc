@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/02/21 13:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2009/06/27 20:45:48 wiz Exp $
 
 DISTNAME=		audacity-src-1.2.6
 PKGREVISION=		3
@@ -10,9 +10,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://audacity.sourceforge.net/
 COMMENT=		Audio editor
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 DEPENDS+=		zip>=0.0:../../archivers/zip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
