@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8210 2009/06/26 11:03:26 obache Exp $
+$NetBSD: TODO,v 1.8211 2009/06/27 01:01:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ZenTest-3.11.1
 	o ZIPIdent-2.9
 	o abcm2ps-5.9.5
-	o abcmidi-20090317
+	o abcmidi-20090623
 	o acme-091
 	o acr-0.5.2
 	o adns-1.4
@@ -380,7 +380,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o alsa-plugins-pulse-1.0.20
 	o amanda-2.6.1
 	o amavis-perl-0.3.12 [called just amavis]
-	o amavisd-new-2.6.3
+	o amavisd-new-2.6.4
 	o amaya-11.1
 	o angband-3.0.9
 	o anjuta-2.26.2.2 [GNOME 2.26]
@@ -456,7 +456,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o boson-0.13
 	o botan-1.8.1
 	o byacc-20080824
-	o bzr-1.16
+	o bzr-1.16.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o caff-1.1.1
@@ -505,6 +505,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cvs2svn-2.2.0
 	o cvsd-1.0.16
 	o cygwin_lib-1.5.24.2
+	o cyrus-imapd-2.3.13
 	o dansguardian-2.10.0.3
 	o dap-3.7
 	o dar-2.3.9
@@ -549,7 +550,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o egtk-0.3.6.2
 	o eigen2-2.0.2
 	o ekiga-3.2.4
-	o electric-8.08
+	o electric-8.09
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
@@ -579,7 +580,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
 	o exiftool-7.67
-	o exiv2-0.18.1
+	o exiv2-0.18.2
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20090102
@@ -1308,7 +1309,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
-	o tcpreplay-3.4.2
+	o tcpreplay-3.4.3
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tdir-1.67
@@ -1339,6 +1340,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tokyocabinet-1.4.27
 	o tomboy-0.14.3
 	o top-3.8beta1
+	o tor-0.2.0.35
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transcode-1.1.2
@@ -1454,6 +1456,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmmsctrl-1.8
 	o xmon-1.5.6
+	o xmp-2.6.0
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-util-macros-1.2.2
