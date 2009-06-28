@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8211 2009/06/27 01:01:07 wiz Exp $
+$NetBSD: TODO,v 1.8212 2009/06/28 16:29:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -371,7 +371,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aegis-4.24
 	o aewm++-1.0.27
 	o afterstep-2.2.8
-	o akonadi-1.1.90
+	o akonadi-1.1.95
 	o album-4.05
 	o alee-ttf-11.2
 	o aliados-0.2.0
@@ -605,6 +605,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fluxbox-1.1.0
 	o fmsx-3.0
 	o fondu-040927
+	o fontconfig-2.7.0
 	o fop-0.20.5
 	o fotoxx-6.8
 	o freeciv-2.1.9
@@ -654,6 +655,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.6.6 [GNOME 2.26]
 	o glchess-1.0.5
 	o gle-4.2.0
+	o glib2-2.20.4
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
@@ -703,6 +705,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtexinfo-4.13
 	o gtick-0.4.2
 	o gtk-systrace-20030623
+	o gtk2-2.16.3
 	o gtkglarea-2.0.0
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
@@ -759,6 +762,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irssi-0.8.13
 	o iselect-1.4.0
+	o iso-codes-3.10.1
 	o ispell-gaeilge-4.1
 	o ispell-german-20090107
 	o ispell-slovak-0.3.2
@@ -781,6 +785,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o joe-3.6
 	o john-1.7.3.1
 	o jools-1.0
+	o jpeg-7
 	o jpilot-1.6.2
 	o kadu-0.6.5
 	o kaffeine-0.8.7
@@ -844,6 +849,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libntlm-1.1
+	o libogg-1.1.4
 	o libole2-2.2.8
 	o librep-0.17.4
 	o libshout-2.2.2 [pkg/41468]
@@ -857,6 +863,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtorrent-0.12.4
 	o libunique-1.0.8
 	o libv4l-0.5.99
+	o libvorbis-1.2.2
 	o licq-1.3.6
 	o liferea-1.6.0rc6
 	o lighttpd-1.4.23
@@ -1011,10 +1018,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Compress-Raw-Bzip2-2.020
 	o p5-Compress-Raw-Zlib-2.020
 	o p5-DBD-Sybase-1.08
-	o p5-DBD-mysql-4.011
+	o p5-DBD-mysql-4.012
 	o p5-DateTime-TimeZone-0.91
 	o p5-Digest-1.16
 	o p5-Digest-MD5-2.39
+	o p5-ExtUtils-CBuilder-0.25
 	o p5-Filter-1.37
 	o p5-HTML-Parser-3.61
 	o p5-IO-Compress-2.020
@@ -1025,7 +1033,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Test-Simple-0.88
 	o p5-XML-NamespaceSupport-1.10
 	o p5-ispman-1.2
-	o p5-libwww-5.827
+	o p5-libwww-5.828
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.55
 	o packagekit-0.4.8
@@ -1118,6 +1126,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-4.7.6
+	o py-cairo-1.8.6
 	o py-checker-0.8.17
 	o py-cups-1.9.46
 	o py-dns-2.3.3
@@ -1149,6 +1158,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt3-qscintilla-2.4
+	o qt4-libs-4.5.2
 	o qvplay-0.95
 	o radiance-3.7.2
 	o raine-0.51.3
@@ -1239,8 +1249,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.1.1
 	o scm-5e5
-	o scmgit-base-1.6.3.2
-	o scmgit-docs-1.6.3.2
+	o scmgit-base-1.6.3.3
+	o scmgit-docs-1.6.3.3
 	o scribus-1.3.3.13
 	o scrollz-1.9.99
 	o scsh-1.3.0
@@ -1318,7 +1328,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ted-2.17
 	o ted-en-us-2.17
 	o telepathy-gabble-0.7.29
-	o telepathy-glib-0.7.32
+	o telepathy-glib-0.7.33
 	o telepathy-idle-0.1.4
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.9.1
@@ -1456,7 +1466,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmmsctrl-1.8
 	o xmon-1.5.6
-	o xmp-2.6.0
+	o xmp-2.6.1
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-util-macros-1.2.2
