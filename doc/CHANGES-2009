@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2413 2009/06/25 11:46:30 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2414 2009/06/28 07:40:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3227,3 +3227,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/ldns to 1.5.1 [he 2009-06-25]
 	Updated lang/sun-jre14 to 2.19 [obache 2009-06-25]
 	Updated lang/sun-jdk14 to 2.19 [obache 2009-06-25]
+	Updated www/typolight27 to 2.7.2 [taca 2009-06-28]
