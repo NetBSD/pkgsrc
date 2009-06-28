@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2414 2009/06/28 07:40:55 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2415 2009/06/28 07:47:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3228,3 +3228,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/sun-jre14 to 2.19 [obache 2009-06-25]
 	Updated lang/sun-jdk14 to 2.19 [obache 2009-06-25]
 	Updated www/typolight27 to 2.7.2 [taca 2009-06-28]
+	Updated www/typolight27-translations to 20090626 [taca 2009-06-28]
