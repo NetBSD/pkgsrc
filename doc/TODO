@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8212 2009/06/28 16:29:58 wiz Exp $
+$NetBSD: TODO,v 1.8213 2009/06/28 16:34:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -607,7 +607,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fondu-040927
 	o fontconfig-2.7.0
 	o fop-0.20.5
-	o fotoxx-6.8
+	o fotoxx-7.3
 	o freeciv-2.1.9
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -1507,7 +1507,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zope34-3.4.0
 	o zopeedit-0.8
 	o zsh-4.3.10
-	o zziplib-0.13.54
+	o zziplib-0.13.56
 
 Infrastructure problems which need addressing
 =============================================
