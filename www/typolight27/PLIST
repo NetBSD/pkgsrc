@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/28 07:39:38 taca Exp $
 ${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
 ${TL_EGDIR}/print.css
@@ -72,8 +72,6 @@ ${TL_WEBDIR}/plugins/highlighter/styles/shCore.css
 ${TL_WEBDIR}/plugins/highlighter/styles/shThemeDefault.css
 ${TL_WEBDIR}/plugins/highlighter/styles/shThemeTYPOlight.css
 ${TL_WEBDIR}/plugins/highlighter/styles/wrapping.png
-${TL_WEBDIR}/plugins/http/class.http.php
-${TL_WEBDIR}/plugins/http/license.txt
 ${TL_WEBDIR}/plugins/mootools/images/blank.gif
 ${TL_WEBDIR}/plugins/mootools/images/moor_arrows.gif
 ${TL_WEBDIR}/plugins/mootools/images/moor_boverlay.png
@@ -1217,11 +1215,9 @@ ${TL_WEBDIR}/system/modules/listing/dca/.htaccess
 ${TL_WEBDIR}/system/modules/listing/dca/tl_module.php
 ${TL_WEBDIR}/system/modules/listing/html/details.gif
 ${TL_WEBDIR}/system/modules/listing/languages/de/.htaccess
-${TL_WEBDIR}/system/modules/listing/languages/de/default.php
 ${TL_WEBDIR}/system/modules/listing/languages/de/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/de/tl_module.php
 ${TL_WEBDIR}/system/modules/listing/languages/en/.htaccess
-${TL_WEBDIR}/system/modules/listing/languages/en/default.php
 ${TL_WEBDIR}/system/modules/listing/languages/en/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/en/tl_module.php
 ${TL_WEBDIR}/system/modules/listing/templates/.htaccess
