@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.37 2007/02/22 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2009/06/29 15:53:35 joerg Exp $
 
 DISTNAME=	vicsrc-2.8
 PKGNAME=	${DISTNAME:S/src//}
 PKGREVISION=	3
 CATEGORIES=	mbone tk
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vic/
+
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 

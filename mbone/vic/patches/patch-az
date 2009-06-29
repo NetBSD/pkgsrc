@@ -1,0 +1,13 @@
+$NetBSD: patch-az,v 1.1 2009/06/29 15:53:35 joerg Exp $
+
+--- p64/p64.cc.orig	2010-05-24 09:36:18.000000000 +0200
++++ p64/p64.cc
+@@ -1066,7 +1066,7 @@ int P64Decoder::decode(const u_char* bp,
+ 	 * If input buffer not aligned, prime bit-buffer
+ 	 * with 8 bits; otherwise, prime it with a 16.
+ 	 */
+-	if ((int)bp & 1) {
++	if ((size_t)bp & 1) {
+ 		bs_ = (u_short*)(bp + 1);
+ 		bb_ = *bp;
+ 		nbb_ = 8 - sbit;
