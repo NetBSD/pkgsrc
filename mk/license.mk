@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.24 2009/06/14 15:15:24 joerg Exp $
+# $NetBSD: license.mk,v 1.25 2009/06/29 14:49:57 joerg Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -127,10 +127,14 @@ SKIP_LICENSE_CHECK?=	no
 .if !empty(SKIP_LICENSE_CHECK:M[Yy][Ee][Ss])
 _ACCEPTABLE_LICENSE=	skipped
 .else
-_ACCEPTABLE_LICENSE!=	${SETENV} \
-    PKGSRC_ACCEPTABLE_LICENSES=${ACCEPTABLE_LICENSES:Q} \
-    PKGSRC_DEFAULT_ACCEPTABLE_LICENSES=${DEFAULT_ACCEPTABLE_LICENSES:Q} \
-    ${PKG_ADMIN} check-license ${LICENSE:Q} || echo failure
+_ACCEPTABLE_LICENSE!=	\
+    if test `${PKG_ADMIN} -V` -lt 20090528; then \
+	echo outdated; \
+    else \
+	${SETENV} PKGSRC_ACCEPTABLE_LICENSES=${ACCEPTABLE_LICENSES:Q} \
+	PKGSRC_DEFAULT_ACCEPTABLE_LICENSES=${DEFAULT_ACCEPTABLE_LICENSES:Q} \
+	${PKG_ADMIN} check-license ${LICENSE:Q} || echo failure; \
+    fi
 .endif
 
 .if ${_ACCEPTABLE_LICENSE} == "no"
@@ -147,6 +151,17 @@ _PKG_INSTALL_CONF?=	/etc/pkg_install.conf
 _PKG_INSTALL_CONF?=	${PREFIX}/etc/pkg_install.conf
 .endif
 
+.  if empty(LICENSE:MAND) && empty(LICENSE:MOR) && empty(LICENSE:M*[()]*)
+PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license condition: " \
+    "    "${LICENSE:Q} \
+    "You can mark the license \`\`license'' as acceptable by adding" \
+    "    ACCEPTABLE_LICENSES+= ${LICENSE}" \
+    "to ${_MAKE_CONF} or by adding" \
+    "    ACCEPTABLE_LICENSES= ${LICENSE}" \
+    "to ${_PKG_INSTALL_CONF}."
+PKG_FAIL_REASON+= "The following command will show you the license text:" \
+    "    ${MAKE} show-license"
+.  else
 PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license condition: " \
     "    "${LICENSE:Q} \
     "You can mark the license \`\`license'' as acceptable by adding" \
@@ -154,13 +169,14 @@ PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license condition: " \
     "to ${_MAKE_CONF} or by adding" \
     "    ACCEPTABLE_LICENSES= license" \
     "to ${_PKG_INSTALL_CONF}."
-.  if empty(LICENSE:M*[A-Z()])
-PKG_FAIL_REASON+= "The following command will show you the license text:" \
-    "    ${MAKE} show-license"
 .  endif
 
 .elif ${_ACCEPTABLE_LICENSE} == "failure"
 PKG_FAIL_REASON+= "License conditions for ${PKGNAME} could not be evaluated"
+.elif ${_ACCEPTABLE_LICENSE} == "outdated"
+PKG_FAIL_REASON+= \
+    "Your pkg_install is too old to evaluate license conditions" \
+    "You can bypass this check by setting SKIP_LICENSE_CHECK=yes"
 .endif
 
 .endif
