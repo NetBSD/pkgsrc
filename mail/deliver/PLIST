@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/29 22:40:28 joerg Exp $
 bin/deliver
 bin/header
-man/cat1/deliver.0
-man/cat1/header.0
 man/man1/deliver.1
 man/man1/header.1
 share/doc/deliver/INSTALL
