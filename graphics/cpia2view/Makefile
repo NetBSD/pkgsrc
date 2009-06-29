@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/06 03:08:21 obache Exp $
+# $NetBSD: Makefile,v 1.13 2009/06/29 22:38:39 joerg Exp $
 #
 
 DISTNAME=	cpia2_driver-1.0
@@ -18,6 +18,8 @@ COMMENT=	USB cameras based CPiA2 Utility Programs
 
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		groff nroff
+
+INSTALLATION_DIRS=	${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
