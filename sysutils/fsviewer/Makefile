@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.23 2008/06/12 02:14:46 joerg Exp $
+
+# $NetBSD: Makefile,v 1.24 2009/06/29 23:08:53 joerg Exp $
 
 DISTNAME=	FSViewer.app-0.2.5
 PKGNAME=	FSViewer-0.2.5
@@ -21,5 +22,6 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 .include "../../wm/windowmaker/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
