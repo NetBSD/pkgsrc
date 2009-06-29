@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/07 18:19:22 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/29 16:01:40 joerg Exp $
 #
 
 DISTNAME=		udpcast-20060619
@@ -11,7 +11,7 @@ COMMENT=		Send data simultaneously to many destinations on a LAN
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pod2man
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1
 
