@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/06/29 17:10:27 joerg Exp $
 #
 
 DISTNAME=	qce-ga-0.40d
@@ -14,6 +14,8 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://www.medias.ne.jp/~takam/bsd/NetBSD.html#qcam
 COMMENT=	Logitech Quickcam Express USB Utilities
+
+INSTALLATION_DIRS=	${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 MAKE_ENV+=	${BSD_MAKE_ENV}
 
