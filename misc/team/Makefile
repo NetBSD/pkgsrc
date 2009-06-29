@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/07/18 18:10:29 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2009/06/29 16:13:30 joerg Exp $
 
 DISTNAME=	team-3.1
 CATEGORIES=	misc
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Portable multi-buffered tape streaming utility
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
+
+INSTALLATION_DIRS=	${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
 MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP} MANMODE=${MANMODE}
