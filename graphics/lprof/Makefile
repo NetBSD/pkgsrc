@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/05/12 10:53:14 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/06/30 00:07:17 joerg Exp $
 #
 
 DISTNAME=		lprof-1.10.1
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lprof/}
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://lprof.sourceforge.net/
 COMMENT=		ICC Profile generation tool (for IT8.7 targets)
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	gmake
 

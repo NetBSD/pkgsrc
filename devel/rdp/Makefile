@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2009/06/30 00:07:14 joerg Exp $
 
 DISTNAME=		rdp1_5
 PKGNAME=		rdp-1.5
@@ -13,6 +13,8 @@ HOMEPAGE=		http://www.cs.rhul.ac.uk/research/languages/projects/rdp.shtml
 COMMENT=		Compiles attributed LL(1) grammars into recursive descent compilers
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/rdp
 MAKE_FILE=		makefile

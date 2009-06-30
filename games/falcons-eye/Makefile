@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/09/25 14:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/06/30 00:07:15 joerg Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://falconseye.sourceforge.net/
 COMMENT=		Falcon's Eye NetHack
+
+MAKE_JOBS_SAFE=		no
 
 EXTRACT_OPTS_ZIP=	-aq
 HAS_CONFIGURE=		yes

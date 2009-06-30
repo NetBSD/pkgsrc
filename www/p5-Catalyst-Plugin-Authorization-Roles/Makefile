@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:19:06 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/30 00:07:24 joerg Exp $
 
 DISTNAME=	Catalyst-Plugin-Authorization-Roles-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Authorization-Roles/
 COMMENT=	Role based authorization for Catalyst
+
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.7:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Catalyst-Plugin-Authentication>=0.10003:../../www/p5-Catalyst-Plugin-Authentication

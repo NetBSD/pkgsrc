@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/12/12 20:42:31 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2009/06/30 00:07:24 joerg Exp $
 #
 
 DISTNAME=	mMosaic-3.7.2
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.enst.fr/pub/mbone/mMosaic/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perso.enst.fr/~dauphin/mMosaic/
 COMMENT=	Modern derivative of NCSA XMosaic
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/mMosaic-src-3.7.2
 
