@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/06/30 00:07:16 joerg Exp $
 #
 
 DISTNAME=		SimGear-1.0.0
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.simgear.org/
 COMMENT=		Simulator Construction Tools
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/12/15 14:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/06/30 00:07:09 joerg Exp $
 #
 
 DISTNAME=		csound-4.23f13gbs.0
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/csound/
 COMMENT=		Software synthesizer and sequencer
+
+MAKE_JOBS_SAFE=		no
 
 DIST_SUBDIR=		csound
 CONFLICTS+=		csound-bath-4*

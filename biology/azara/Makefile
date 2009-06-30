@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/16 22:01:20 zafer Exp $
+# $NetBSD: Makefile,v 1.8 2009/06/30 00:07:10 joerg Exp $
 #
 
 DISTNAME=		azara-2.7-src
@@ -12,6 +12,8 @@ HOMEPAGE=		http://www.ccpn.ac.uk/azara/
 COMMENT=		Programs to process and view NMR data
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/azara-2.7
 MAKE_FILE=		makefile

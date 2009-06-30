@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/13 10:07:36 gson Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/30 00:07:20 joerg Exp $
 #
 
 DISTNAME=	dieharder-2.24.4
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=	http://www.phy.duke.edu/~rgb/General/dieharder.php
 COMMENT=	Random number generator test suite
+
+MAKE_JOBS_SAFE=		no
 
 AUTOMAKE_REQD=	1.9.6
 USE_TOOLS+=	automake gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/08/19 16:14:24 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2009/06/30 00:07:18 joerg Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -18,6 +18,8 @@ BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.7
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}/unix
 USE_LIBTOOL=		yes
