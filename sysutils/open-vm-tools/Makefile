@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/03/25 22:37:14 he Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/30 11:05:06 obache Exp $
 
 DISTNAME=	open-vm-tools-2008.08.08-109361
 PKGNAME=	open-vm-tools-2008.08.08.109361
@@ -11,6 +11,8 @@ HOMEPAGE=	http://open-vm-tools.sourceforge.net/
 COMMENT=	Open source VMware tools
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
