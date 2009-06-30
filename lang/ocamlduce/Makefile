@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/13 13:13:37 obache Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/30 00:07:18 joerg Exp $
 #
 
 DISTNAME=	ocamlduce-3.10.2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://gallium.inria.fr/~frisch/ocamlcduce/download/
 MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://gallium.inria.fr/~frisch/ocamlcduce/
 COMMENT=	Library to integrate XML features into OCaml
+
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
