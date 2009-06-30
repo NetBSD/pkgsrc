@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/02/15 18:52:40 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2009/06/30 00:07:17 joerg Exp $
 #
 
 DISTNAME=	hamlib-1.2.7.1
@@ -11,6 +11,8 @@ HOMEPAGE=	http://hamlib.sourceforge.net/
 COMMENT=	API for digital communications equipment
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
