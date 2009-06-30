@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.squid,v 1.8 2009/06/14 22:58:10 joerg Exp $
+# $NetBSD: Makefile.squid,v 1.9 2009/06/30 17:11:29 taca Exp $
 #
 # used by www/squid26/Makefile
 # used by www/squid27/Makefile
@@ -79,8 +79,13 @@ post-install:
 	${CHMOD} -w ${PREFIX}/libexec/pinger
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	(							\
+	cd ${WRKSRC}/errors;					\
+	for i in *; do						\
+		${TEST} -d $$i &&				\
+		(${LS} $$i/ERR_* |				\
+		${SED} -e 's@^@share/squid/errors/@');		\
+	done; 							\
 	cd ${WRKSRC}/icons;					\
 	${LS} anthony-*.gif |					\
 		${SED} -e 's@^@share/squid/icons/@';		\
 	) >>${PLIST_SRC}
-	${CAT} ${PKGDIR}/PLIST.common_end >>${PLIST_SRC}
