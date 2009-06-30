@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/06/10 09:03:19 heinz Exp $
+# $NetBSD: Makefile,v 1.14 2009/06/30 00:07:14 joerg Exp $
 #
 
 DISTNAME=		silc-toolkit-0.9.13
@@ -13,6 +13,8 @@ HOMEPAGE=		http://www.silcnet.org/
 COMMENT=		Secure Internet Live Conferencing (SILC) protocol Toolkit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 CONFLICTS+=		silc-client<1.0.1nb1
 

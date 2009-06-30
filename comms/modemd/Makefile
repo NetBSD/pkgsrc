@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/07/14 12:56:00 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/06/30 00:07:11 joerg Exp $
 
 DISTNAME=	modemd-970221
 PKGNAME=	modemd-19970221
@@ -10,6 +10,8 @@ MAINTAINER=	tsarna@NetBSD.org
 COMMENT=	Replacement getty for dialup ttys and a modem server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 MANCOMPRESSED_IF_MANZ=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/02/25 17:23:34 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2009/06/30 00:07:15 joerg Exp $
 
 DISTNAME=	mmix-20060918
 CATEGORIES=	emulators devel lang
@@ -11,6 +11,8 @@ COMMENT=	Simulators for Knuth's MMIX RISC architecture
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 TEX_DEPMETHOD=	build
 TEX_ACCEPTED=	teTeX3
