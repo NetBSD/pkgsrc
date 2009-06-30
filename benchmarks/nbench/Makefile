@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/03 00:51:44 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/30 00:07:10 joerg Exp $
 #
 
 DISTNAME=	nbench-byte-2.2.2
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.tux.org/~mayer/linux/
 COMMENT=	Benchmark tool for CPU, FPU and memory
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 BUILD_TARGET=	default
 

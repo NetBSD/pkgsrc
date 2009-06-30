@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/03 18:25:53 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2009/06/30 00:07:14 joerg Exp $
 
 DISTNAME=	ne-1.31
 CATEGORIES=	editors
@@ -9,6 +9,8 @@ MAINTAINER=	bjh@mail.dotcom.fr
 COMMENT=	Re-write of Phoenix E.  A sensible light-weight editor
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}/src

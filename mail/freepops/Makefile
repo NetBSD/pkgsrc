@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/11/02 20:51:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2009/06/30 00:07:19 joerg Exp $
 #
 
 DISTNAME=		freepops-0.2.8
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.freepops.org/
 COMMENT=		POP3 gateway to AOL, Gmail, Hotmail, Juno, Yahoo, etc.
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash:run bison gmake gsed patch tar

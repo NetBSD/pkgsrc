@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/10/19 19:19:17 he Exp $
+# $NetBSD: Makefile,v 1.21 2009/06/30 00:07:24 joerg Exp $
 
 DISTNAME=	libapreq-1.33
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,8 @@ HOMEPAGE=	http://httpd.apache.org/apreq/
 COMMENT=	Lots of Apache specific httpd handling modules
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	p5-Apache-Test>=1.13:../../www/p5-Apache-Test
 

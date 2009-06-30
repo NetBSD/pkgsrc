@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:32 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/30 00:07:22 joerg Exp $
 #
 
 DISTNAME=		whoson-2.03
@@ -11,6 +11,8 @@ HOMEPAGE=		http://whoson.sourceforge.net/
 COMMENT=		Check if (dynamic) IP address is connected
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

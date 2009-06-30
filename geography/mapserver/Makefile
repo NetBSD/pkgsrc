@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/08/04 06:50:36 obache Exp $
+# $NetBSD: Makefile,v 1.18 2009/06/30 00:07:16 joerg Exp $
 #
 
 DISTNAME=		mapserver-4.0
@@ -11,6 +11,8 @@ HOMEPAGE=		http://mapserver.gis.umn.edu/
 COMMENT=		Environment for building spatially enabled Internet apps
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/04/28 19:22:09 zafer Exp $
+# $NetBSD: Makefile,v 1.34 2009/06/30 00:07:11 joerg Exp $
 #
 
 DISTNAME=	ircservices-5.0.63
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.ircservices.za.net/
 COMMENT=	Services for IRC networks
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 HAS_CONFIGURE=	YES
 USE_TOOLS+=	gmake grep gsed perl

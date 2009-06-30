@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/05/20 00:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/06/30 00:07:11 joerg Exp $
 #
 
 DISTNAME=	magic-7.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://vlsi.cornell.edu/magic/
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://vlsi.cornell.edu/magic/
 COMMENT=	Integrated circuit layout system
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	gmake printf
 USE_GNU_READLINE=	# uses rl_*_completion_function

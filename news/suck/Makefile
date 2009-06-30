@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/01/18 05:08:53 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2009/06/30 00:07:22 joerg Exp $
 #
 
 DISTNAME=	suck-4.3.2
@@ -12,6 +12,8 @@ COMMENT=	Feed a local news server without a dedicated newsfeed
 
 GNU_CONFIGURE=	yes
 USE_FEATURES=	snprintf
+
+MAKE_JOBS_SAFE=		no
 
 .include "options.mk"
 

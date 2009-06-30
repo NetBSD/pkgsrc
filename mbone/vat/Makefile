@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2009/02/03 06:11:12 obache Exp $
+# $NetBSD: Makefile,v 1.57 2009/06/30 00:07:20 joerg Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -12,6 +12,8 @@ HOMEPAGE=		http://www-nrg.ee.lbl.gov/vat/
 COMMENT=		The Visual Audio Tool - multicast audioconferencing
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes

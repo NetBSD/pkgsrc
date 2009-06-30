@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/07/27 16:47:46 dholland Exp $
+# $NetBSD: Makefile,v 1.30 2009/06/30 00:07:23 joerg Exp $
 #
 
 DISTNAME=	lavaps-2.7
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 COMMENT=	Lava lamp of currently running processes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl

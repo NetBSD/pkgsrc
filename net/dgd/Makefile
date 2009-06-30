@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/05/19 08:59:26 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/06/30 00:07:20 joerg Exp $
 
 DISTNAME=	dgd-1.2p4
 PKGNAME=	dgd-1.2.0.4
@@ -12,6 +12,8 @@ COMMENT=	Object-oriented programmable server
 LICENSE=	fee-based-commercial-use
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gtar
 WRKSRC=			${WRKDIR}/dgd

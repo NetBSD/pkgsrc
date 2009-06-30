@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/09/02 02:08:33 obache Exp $
+# $NetBSD: Makefile,v 1.25 2009/06/30 00:07:20 joerg Exp $
 
 DISTNAME=	yorick-1.6.02
 PKGREVISION=	2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://yorick.sourceforge.net/
 COMMENT=	Numerical algebra system (similar to Matlab)
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/yorick-1.6
 BUILD_DIRS=	${WRKSRC} ${WRKSRC}/doc

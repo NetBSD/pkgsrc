@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/06/30 00:07:15 joerg Exp $
 
 DISTNAME=		gnuchess-4.0.pl80
 PKGNAME=		gnuchess4-4.0.80
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.gnu.org/software/chess/chess.html
 COMMENT=		The "classic" GNU chess
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 CONFLICTS=		gnuchess-4.*
 

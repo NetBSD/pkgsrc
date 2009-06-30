@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/02/28 11:58:47 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2009/06/30 00:07:12 joerg Exp $
 
 DISTNAME=	cn2jp1.4b
 PKGNAME=	cn2jp-1.4b
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	rxg@NetBSD.org
 # HOMEPAGE=	http://w3.sys.es.osaka-u.ac.jp/~seke/software/cn2jp/
 COMMENT=	Library for code translation between Chinese and Japanese
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/cn2jp
 USE_LIBTOOL=	yes

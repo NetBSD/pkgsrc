@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/07/26 12:27:18 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2009/06/30 00:07:22 joerg Exp $
 #
 
 DISTNAME=	tsocks-1.8beta5
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tsocks/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tsocks.sourceforge.net/
 COMMENT=	Transparent SOCKS proxying library
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/tsocks-1.8
 GNU_CONFIGURE=		YES

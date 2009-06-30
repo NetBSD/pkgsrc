@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/23 17:43:15 darcy Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/30 00:07:12 joerg Exp $
 #
 
 DISTNAME=	cc65-sources-2.12.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cc65.org/
 COMMENT=	C cross compiler for 6502 target systems
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 MAKE_FILE=	make/gcc.mak

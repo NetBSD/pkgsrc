@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/06/20 01:09:31 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2009/06/30 00:07:21 joerg Exp $
 
 DISTNAME=	ngrep-1.45
 CATEGORIES=	net
@@ -10,6 +10,8 @@ HOMEPAGE=	http://ngrep.sourceforge.net/
 COMMENT=	Network grep
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

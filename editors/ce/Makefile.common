@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2007/12/02 13:04:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2009/06/30 00:07:14 joerg Exp $
 #
 
 DISTNAME=		ce-${VERSION}
@@ -10,6 +10,8 @@ MASTER_SITES=		ftp://ftp.cwru.edu/pub/chet/ \
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://tiswww.case.edu/php/chet/
 COMMENT=		Chet's Emacs: small, fast emacs-like editor
+
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/share/doc

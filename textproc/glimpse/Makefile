@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2009/05/19 08:59:35 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2009/06/30 00:07:23 joerg Exp $
 
 DISTNAME=	glimpse-4.18.5
 CATEGORIES=	textproc databases
@@ -14,6 +14,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	gmake lex
 GNU_CONFIGURE=	yes
