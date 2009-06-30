@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/02/09 23:30:07 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2009/06/30 00:07:09 joerg Exp $
 
 DISTNAME=	arj-3.10.22
 CATEGORIES=	archivers
@@ -10,6 +10,8 @@ COMMENT=	Open-source ARJ archiver
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		autoconf gmake
 GNU_CONFIGURE=		yes

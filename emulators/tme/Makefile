@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:18 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/06/30 00:07:15 joerg Exp $
 #
 
 DISTNAME=		tme-0.6
@@ -11,6 +11,8 @@ MAINTAINER=		skrll@NetBSD.org
 # Instead, assign them to the package author, fredette.
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 HOMEPAGE=		http://csail.mit.edu/~fredette/tme/
 COMMENT=		The Machine Emulator

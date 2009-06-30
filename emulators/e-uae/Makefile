@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/12/20 15:16:52 ahoka Exp $
+# $NetBSD: Makefile,v 1.8 2009/06/30 00:07:15 joerg Exp $
 
 DISTNAME=	e-uae-0.8.28
 PKGREVISION=	3
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.rcdrummond.net/uae/
 COMMENT=	Enhanced Ubiquitous Amiga Emulator
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 CONFLICTS+=	uae-[0-9]*
 

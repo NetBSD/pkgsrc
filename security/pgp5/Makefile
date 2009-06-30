@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/05/19 08:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2009/06/30 00:07:22 joerg Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -17,6 +17,8 @@ COMMENT=	Public-key encryption and digital signature utilities (v5)
 LICENSE=	idea-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	perl
 

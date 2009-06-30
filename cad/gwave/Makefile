@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/05/20 00:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2009/06/30 00:07:11 joerg Exp $
 #
 
 DISTNAME=	gwave-20060606
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.cs.unc.edu/~tell/gwave.html
 COMMENT=	Viewer for spice-like simulator output and other analog data
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes
