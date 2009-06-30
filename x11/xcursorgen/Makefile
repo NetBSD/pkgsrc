@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:45 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/06/30 00:07:25 joerg Exp $
 
 DISTNAME=	xcursorgen-4.3.0
 PKGREVISION=	4
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	Create an X cursor file from a collection of PNG images
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*//}
 USE_IMAKE=	YES

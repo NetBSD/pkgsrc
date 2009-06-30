@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/07/14 02:03:12 dholland Exp $
+# $NetBSD: Makefile,v 1.43 2009/06/30 00:07:18 joerg Exp $
 
 DISTNAME=		sather-1.2.3
 CATEGORIES=		lang
@@ -10,6 +10,8 @@ COMMENT=		Compiler for the Sather object oriented programming language
 #LICENSE=		gnu-gpl-v3 gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake makeinfo pax perl:run
 

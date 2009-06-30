@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/03/21 05:43:53 darcy Exp $
+# $NetBSD: Makefile,v 1.13 2009/06/30 00:07:18 joerg Exp $
 #
 
 DISTNAME=	joos-0.2
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.brics.dk/~mis/dOvs/index.html
 COMMENT=	Java Object Oriented Subset
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_JAVA=	run
 USE_TOOLS+=	pax

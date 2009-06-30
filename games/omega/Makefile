@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/08/12 15:11:18 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2009/06/30 00:07:16 joerg Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -12,6 +12,8 @@ COMMENT=	Complex rogue-like game of exploration with a sense of humor
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 SETGIDGAME=		yes
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/omega
 BUILD_TARGET=		# empty

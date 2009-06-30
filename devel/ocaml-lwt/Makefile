@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/02 11:19:35 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/30 00:07:13 joerg Exp $
 #
 
 DISTNAME=	lwt-1.1.0
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.ocsigen.org/download/
 MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://www.ocsigen.org/
 COMMENT=	Cooperative threading library for OCaml
+
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 

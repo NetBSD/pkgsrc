@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/11/01 17:42:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/30 00:07:15 joerg Exp $
 #
 
 DISTNAME=	generator-0.35-cbiere-r4
@@ -12,6 +12,8 @@ HOMEPAGE=	http://squish.net/generator/
 COMMENT=	Sega Mega drive genesis emulator (Improved)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 

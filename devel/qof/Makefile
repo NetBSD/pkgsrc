@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/30 00:07:13 joerg Exp $
 #
 
 DISTNAME=	qof-0.7.5
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qof/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qof.alioth.debian.org/
 COMMENT=	Query Object Framework
+
+MAKE_JOBS_SAFE=		no
 
 BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 

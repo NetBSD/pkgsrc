@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/09/29 16:19:09 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/30 00:07:24 joerg Exp $
 
 DISTNAME=	Kahua-1.0.1
 PKGNAME=	${DISTNAME:C/Kahua/kahua/}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.kahua.org/
 COMMENT=	Continuation-based framework to develop application service
+
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	Gauche>=0.8.8:../../lang/gauche
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/19 09:16:22 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2009/06/30 00:07:16 joerg Exp $
 #
 
 DISTNAME=		tanked-0.90
@@ -9,6 +9,8 @@ MASTER_SITES=		# empty
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://ogresoft.dyn.ml.org/tanked.html
 COMMENT=		Multiplayer internet tank game for X11
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS=		imake
 SETGIDGAME=		yes

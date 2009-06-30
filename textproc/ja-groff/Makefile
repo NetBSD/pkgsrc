@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/24 06:59:38 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2009/06/30 00:07:23 joerg Exp $
 
 DISTNAME=	groff-1.10
 PKGNAME=	ja-groff-0.99
@@ -14,6 +14,8 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/groff/groff.html
 COMMENT=	Japanese enhancement of GNU groff
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	gmake perl:run
 USE_LANGUAGES=	c c++

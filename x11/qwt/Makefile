@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/02/28 11:58:49 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2009/06/30 00:07:25 joerg Exp $
 
 DISTNAME=	qwt-5.0.2
 CATEGORIES=	x11
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/qwt/
 COMMENT=	Qt widget library for technical purposes
+
+MAKE_JOBS_SAFE=		no
 
 USE_X11BASE=	yes
 USE_LANGUAGES=	c++

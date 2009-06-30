@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/12/27 11:43:51 obache Exp $
+# $NetBSD: Makefile,v 1.24 2009/06/30 00:07:21 joerg Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tinyfugue.sourceforge.net/
 COMMENT=	Popular programmable MUD client, with macro support and more
 
+MAKE_JOBS_SAFE=		no
 
 MAKE_FILE=	${WRKSRC}/unix/Makefile
 MAKE_ENV+=	TFVER=${DISTNAME:S/^tf-//:Q}

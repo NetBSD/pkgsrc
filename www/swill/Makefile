@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/03/24 19:21:33 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/30 00:07:24 joerg Exp $
 
 DISTNAME=		swill-0.1
 CATEGORIES=		www devel
@@ -11,5 +11,7 @@ COMMENT=		The Simple Web Interface Link Library
 WRKSRC=			${WRKDIR}/SWILL-0.1
 GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	include lib
+
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.pkg.mk"

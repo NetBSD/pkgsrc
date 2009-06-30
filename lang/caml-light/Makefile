@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/09/05 02:07:51 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2009/06/30 00:07:18 joerg Exp $
 #
 
 DISTNAME=		cl74unix
@@ -12,6 +12,8 @@ HOMEPAGE=		http://caml.inria.fr/caml-light/index.en.html
 COMMENT=		Another implementation of Caml
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/cl74/src
 BUILD_TARGET=		world

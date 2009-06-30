@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/05/20 00:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2009/06/30 00:07:12 joerg Exp $
 #
 
 DISTNAME=	cgdb-0.4.0
@@ -11,6 +11,8 @@ HOMEPAGE=	http://cgdb.sourceforge.net/
 COMMENT=	Curses-based interface to the GNU Debugger (GDB)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

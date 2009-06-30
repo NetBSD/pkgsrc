@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/30 00:07:21 joerg Exp $
 #
 
 DISTNAME=		pdns-recursor-3.1.7
@@ -10,6 +10,8 @@ MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://www.powerdns.com/
 COMMENT=		PowerDNS resolver/recursing nameserver
 LICENSE=		gnu-gpl-v2
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS=		gmake
 USE_LANGUAGES=		c c++

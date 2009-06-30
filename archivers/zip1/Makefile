@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2009/05/19 08:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2009/06/30 00:07:09 joerg Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -16,6 +16,8 @@ LICENSE=	generic-nonlicense
 RESTRICTED=	Do not modify.  Do not sell for profit.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
+
+MAKE_JOBS_SAFE=	no
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir

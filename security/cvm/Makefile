@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/04/07 03:04:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2009/06/30 00:07:22 joerg Exp $
 #
 
 DISTNAME=		cvm-0.95
@@ -8,6 +8,8 @@ MASTER_SITES=		${HOMEPAGE}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/cvm/
 COMMENT=		Credential Validation Modules
+
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 

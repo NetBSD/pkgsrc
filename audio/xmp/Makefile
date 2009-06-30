@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/02/07 21:10:47 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/06/30 00:07:10 joerg Exp $
 
 DISTNAME=	xmp-2.5.1
 CATEGORIES=	audio
@@ -9,6 +9,8 @@ HOMEPAGE=	http://xmp.sourceforge.net/
 COMMENT=	Player for many different Amiga and PC module formats
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-alsa \

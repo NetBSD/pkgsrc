@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/12/22 20:47:19 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2009/06/30 00:07:17 joerg Exp $
 
 DISTNAME=	grap-1.41
 PKGREVISION=	1
@@ -11,6 +11,8 @@ COMMENT=	Language for typesetting graphs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	ac_cv_header_ext_hash_map=no

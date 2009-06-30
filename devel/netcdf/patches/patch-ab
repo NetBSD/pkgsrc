@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2005/02/25 09:52:47 adam Exp $
+$NetBSD: patch-ab,v 1.5 2009/06/30 00:07:13 joerg Exp $
 
 --- macros.make.in.orig	2004-12-18 16:32:32.000000000 +0000
 +++ macros.make.in
@@ -42,7 +42,7 @@ $NetBSD: patch-ab,v 1.4 2005/02/25 09:52:47 adam Exp $
 -ARFLAGS		= @ARFLAGS@
 -RANLIB		= @RANLIB@
 +AR		= $(LIBTOOL) --mode=link @CC@
-+ARFLAGS		= -rpath $(LIBDIR) -version-info 3:6
++ARFLAGS		= -rpath $(prefix)/lib -version-info 3:6
 +RANLIB		= echo
  TARFLAGS	= -chf
  

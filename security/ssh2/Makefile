@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/06/30 00:07:23 joerg Exp $
 
 DISTNAME=	ssh-3.2.9.1
 PKGNAME=	${DISTNAME:C/ssh-/ssh2-/}
@@ -13,6 +13,8 @@ LICENSE=	ssh-communications-security-license
 RESTRICTED=		Reciprocal grant required for derivative works.  Non-comercial use restrictions on some systems.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+MAKE_JOBS_SAFE=		no
 
 COMMENT=	Secure Shell client and server for V.2 SSH protocol
 

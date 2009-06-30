@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/07/28 18:50:00 plunky Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/30 00:07:23 joerg Exp $
 
 DISTNAME=		hcidump-1.5.1
 CATEGORIES=		sysutils
@@ -8,6 +8,8 @@ MAINTAINER=		plunky@rya-online.net
 COMMENT=		Bluetooth traffic dumper, similar to tcpdump
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 ONLY_FOR_PLATFORM=	NetBSD-[4-9].*-*	\
 			NetBSD-3.99.[2-9][0-9]-*

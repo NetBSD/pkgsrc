@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/03 17:45:35 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2009/06/30 00:07:13 joerg Exp $
 #
 
 DISTNAME=		ETM-1.09
@@ -11,6 +11,8 @@ HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Exception and termination manager
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/etm
 INSTALLATION_DIRS=	include lib

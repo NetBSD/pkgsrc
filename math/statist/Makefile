@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/04 18:12:59 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2009/06/30 00:07:20 joerg Exp $
 #
 
 DISTNAME=	statist-1.0.1
@@ -13,6 +13,8 @@ COMMENT=	Small and portable statistics program
 DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_LIBTOOL=	YES

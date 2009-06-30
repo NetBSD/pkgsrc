@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/03/08 15:56:44 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/06/30 00:07:12 joerg Exp $
 #
 
 DISTNAME=		gramps-1.0.11
@@ -11,6 +11,8 @@ HOMEPAGE=	http://gramps-project.org/
 COMMENT=	Genealogical Research and Analysis Management Programming System
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	yelp>=2.2:../../misc/yelp
 

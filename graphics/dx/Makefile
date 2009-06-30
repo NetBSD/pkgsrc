@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/06/12 02:14:31 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2009/06/30 00:07:17 joerg Exp $
 
 DISTNAME=	dx-4.4.4
 PKGREVISION=	1
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.opendx.org/
 COMMENT=	Open Visualization Data Explorer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++
 USE_X11BASE=		yes
