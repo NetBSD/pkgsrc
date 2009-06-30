@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/06/17 07:57:49 hasso Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/30 15:33:06 wiz Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-qt4-${PYQT_VERSION}
@@ -27,6 +27,14 @@ INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR:Q}
 PYTHON_VERSIONS_ACCEPTED=	26 25 24
 PY_PATCHPLIST=			yes
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+
+# This is a hack. CPPFLAGS and CXXFLAGS from the environment are ignored,
+# however, so I don't know a better way to fix it.
+SUBST_CLASSES+=			PIC
+SUBST_STAGE.PIC=		post-configure
+SUBST_FILES.PIC=		qpy/QtCore/Makefile qpy/QtGui/Makefile
+SUBST_SED.PIC=			-e "s/CXXFLAGS      =/CXXFLAGS      = -fPIC/"
+SUBST_MESSAGE.PIC=		Adding -fPIC to CXXFLAGS.
 
 #SUBST_CLASSES+=		pyversfx
 #SUBST_STAGE.pyversfx=	pre-configure
