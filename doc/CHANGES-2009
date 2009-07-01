@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2418 2009/07/01 01:03:49 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2419 2009/07/01 01:37:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3232,3 +3232,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/squid30 to 3.0.16 [taca 2009-06-30]
 	Updated www/typolight27-translations to 20090630 [taca 2009-06-30]
 	Updated www/opengoo to 1.4.2nb1 [taca 2009-07-01]
+	Updated www/drupal6-translations to 20090621 [taca 2009-07-01]
