@@ -218,6 +218,7 @@ lablgtk			Use lablgtk.
 lablgtk1		Use lablgtk1 (GTK1).
 lame			Use the lame encoder to create MP3 files.
 lang-af			Add Afrikaans language support.
+lang-be			Add Belarusian language support.
 lang-bg			Add Bulgarian language support.
 lang-ca			Add Catalan language support.
 lang-cs			Add Czech language support.
