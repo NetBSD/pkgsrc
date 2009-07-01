@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST.common,v 1.9 2009/05/15 10:29:05 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.10 2009/07/01 10:39:05 adam Exp $
 lib/bpipe-fd.a
 lib/bpipe-fd.so
 lib/libbac.la
 lib/libbaccfg.la
 lib/libbacfind.la
 lib/libbacpy.la
-lib/libbacsql.la
 libexec/bacula/bacula
 libexec/bacula/bacula-ctl-dir
 libexec/bacula/bacula-ctl-fd
