@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2417 2009/06/30 17:20:12 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2418 2009/07/01 01:03:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3231,3 +3231,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20090626 [taca 2009-06-28]
 	Updated www/squid30 to 3.0.16 [taca 2009-06-30]
 	Updated www/typolight27-translations to 20090630 [taca 2009-06-30]
+	Updated www/opengoo to 1.4.2nb1 [taca 2009-07-01]
