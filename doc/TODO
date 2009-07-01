@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8214 2009/07/01 01:38:34 taca Exp $
+$NetBSD: TODO,v 1.8215 2009/07/01 13:26:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -455,6 +455,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bos-2.5
 	o boson-0.13
 	o botan-1.8.1
+	o brasero-2.26.3
 	o byacc-20080824
 	o bzr-1.16.1
 	o c4-1.10 [schmonz]
@@ -474,6 +475,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
+	o cheese-2.26.3
 	o chemtool-1.6.11
 	o cherokee-0.99.19
 	o chicken-4.0.0
@@ -562,6 +564,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o empathy-2.26.2 [GNOME 2.26]
 	o enchant-1.5.0
 	o enlightenment-1.0.0
+	o eog-2.26.3
 	o epic4-2.6
 	o epiphany-2.26.2
 	o epiphany-extensions-2.26.1
@@ -575,7 +578,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o evolution-mapi-0.26.1 [GNOME 2.26]
+	o evolution-mapi-0.26.2 [GNOME 2.26]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
@@ -594,6 +597,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o felt-3.07
 	o fetchyahoo-2.13.0
 	o ffmpeg-0.5
+	o file-roller-2.26.3
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
@@ -625,6 +629,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gated-3.6
 	o gauche-0.8.14
 	o gbdfed-1.5
+	o gcalctool-5.26.3
 	o gcc-4.3.2
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
@@ -652,7 +657,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
-	o glade3-3.6.6 [GNOME 2.26]
+	o glade3-3.6.7 [GNOME 2.26]
 	o glchess-1.0.5
 	o gle-4.2.0
 	o glib2-2.20.4
@@ -665,9 +670,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-applets-2.26.2
+	o gnome-applets-2.26.3
+	o gnome-desktop-2.26.3
+	o gnome-games-2.26.3
+	o gnome-keyring-2.26.3
+	o gnome-mag-0.15.7
+	o gnome-menus-2.26.2
 	o gnome-packagekit-0.4.5
 	o gnome-power-manager-2.26.2 [GNOME 2.26, wants DeviceKit-power]
+	o gnome-themes-2.26.3
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
@@ -722,6 +733,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gxemul-0.4.7.1
 	o hackbot-2.21
 	o hal-0.5.12
+	o hamster-applet-2.26.3
 	o hanzim-2.4
 	o haskell-mode-1.45
 	o hatari-1.2.0
@@ -838,6 +850,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
 	o libgsf-1.14.15
+	o libgweather-2.26.2.1
 	o libhydrogen-0.9.2
 	o libiconv-1.13
 	o libixp-0.5
@@ -853,6 +866,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libole2-2.2.8
 	o librep-0.17.4
 	o libshout-2.2.2 [pkg/41468]
+	o libsoup24-2.26.3
 	o libssh-0.3
 	o libssh2-1.1
 	o libstree-0.4.2
@@ -864,6 +878,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libunique-1.0.8
 	o libv4l-0.5.99
 	o libvorbis-1.2.2
+	o libwnck-2.26.2
+	o libxklavier-4.0
 	o licq-1.3.6
 	o liferea-1.6.0rc6
 	o lighttpd-1.4.23
@@ -929,8 +945,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
+	o modular-xorg-server-1.6.1.902
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
+	o mousetweaks-2.26.3
 	o mp3blaster-3.2.3
 	o mp3splt-2.2.5 [schmonz]
 	o mpc-0.16
@@ -952,6 +970,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysqlcc-0.9.8
 	o nagios-3.1.0
 	o nap-1.5.3
+	o nasm-2.06
 	o nautilus-sendto-1.1.5
 	o navi2ch-1.8.1
 	o nawk-20071023
@@ -1007,6 +1026,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmsx-0.7.0
 	o openoffice3-bin-3.1.0
 	o openttd-0.7.0
+	o orca-2.26.3
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -1038,7 +1058,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.55
 	o packagekit-0.4.8
 	o pam-smbpass-3.0.13
-	o pango-1.24.3
+	o pango-1.24.4
 	o paprefs-0.9.8
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
@@ -1064,7 +1084,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pear-Numbers_Words-0.15.0
 	o pear-SOAP-0.10.1
 	o pen-0.17.3
-	o pessulus-2.26.0 [GNOME 2.26]
+	o pessulus-2.26.2 [GNOME 2.26]
 	o pfqueue-0.5.6
 	o pgpool-3.1.1
 	o phoon-20050629
@@ -1074,9 +1094,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
 	o php5-5.2.10
-	o phpmyadmin-3.2.0
+	o phpmyadmin-3.2.0.1
 	o phylip-3.68
 	o picp-0.6.8
+	o pidgin-2.5.8
 	o pilot-link-libs-0.12.4
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1332,7 +1353,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o telepathy-glib-0.7.33
 	o telepathy-idle-0.1.4
 	o tex-musixtex-113 [pkg/34758]
-	o texmaker-1.9.1
+	o texmaker-1.9.2
 	o tfmxplay-1.1.6
 	o thin-1.0.0
 	o thoth-0.2.1
@@ -1352,6 +1373,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tomboy-0.14.3
 	o top-3.8beta1
 	o tor-0.2.0.35
+	o totem-2.26.3
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transcode-1.1.2
@@ -1359,7 +1381,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttf2pk-1.5.20050518
-	o tuxpaint-0.9.20
+	o tuxpaint-0.9.21
 	o twelf-1.5r1
 	o txt2html-2.51
 	o uae-0.8.29
@@ -1374,7 +1396,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-2.90
 	o uriparser-0.7.5
 	o userppp-030706
-	o vala-0.6.1
+	o vala-0.7.4
 	o valgrind-3.4.1
 	o varnish-2.0.4 [pkg/41118]
 	o vera-1.17
@@ -1397,7 +1419,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vttest-20071216
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
-	o warzone2100-2.2.0
+	o warzone2100-2.2.1
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webby-0.9.3
@@ -1467,7 +1489,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmmsctrl-1.8
 	o xmon-1.5.6
-	o xmp-2.6.1
+	o xmp-2.6.2
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-util-macros-1.2.2
@@ -1494,6 +1516,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yasm-0.8.0
 	o yaz-3.0.46
 	o yodl-2.14.3
+	o youtube-dl-20090629
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o yorick-2.1.05
