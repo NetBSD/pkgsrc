@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2009/01/21 14:03:44 taca Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/01 01:36:45 taca Exp $
 #
 
-DISTNAME=	drupal6-translations-20090118
+DISTNAME=	drupal6-translations-20090621
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 DISTFILES=	${DL_DISTFILES}
@@ -10,8 +10,9 @@ DIST_SUBDIR=	drupal6-${STAMP}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drupal.org/project/Translations
 COMMENT=	Langate translation files for drupal 6.x
+LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	drupal>=6.3:../../www/drupal6
+#DEPENDS+=	drupal>=6.3:../../www/drupal6
 
 #
 # update STAMP when any distfile's content changed without its filename.
@@ -32,6 +33,7 @@ DRUPAL_BASE?=	share/drupal
 
 pre-install:
 	cd ${WRKSRC}; ${CHMOD} ${NONBINMODE} *.txt
+	cd ${WRKSRC}; ${RM} -fr drupal google_groups
 
 do-install:
 	cd ${WRKSRC}; pax -rw . ${DESTDIR}${PREFIX}/${DRUPAL_BASE}
