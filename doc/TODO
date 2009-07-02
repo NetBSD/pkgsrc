@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8217 2009/07/02 05:37:04 epg Exp $
+$NetBSD: TODO,v 1.8218 2009/07/02 19:28:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -476,7 +476,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgicc-3.2.7
 	o cheese-2.26.3
 	o chemtool-1.6.11
-	o cherokee-0.99.19
+	o cherokee-0.99.20
 	o chicken-4.0.0
 	o cinepaint-0.23
 	o cint-5.16
@@ -485,6 +485,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o claws-mail-3.7.1
 	o climm-0.6.4
 	o clive-2.2.1
+	o clutter-0.9.6
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o compiz-0.8.0
@@ -678,8 +679,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-mag-0.15.7
 	o gnome-menus-2.26.2
 	o gnome-packagekit-0.4.5
+	o gnome-panel-2.26.3
 	o gnome-power-manager-2.26.2 [GNOME 2.26, wants DeviceKit-power]
-	o gnome-themes-2.26.3
+	o gnome-session-2.26.2
+	o gnome-themes-2.26.3.1
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
@@ -717,7 +720,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtexinfo-4.13
 	o gtick-0.4.2
 	o gtk-systrace-20030623
-	o gtk2-2.16.3
+	o gtk2-2.16.4
 	o gtkglarea-2.0.0
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
@@ -827,6 +830,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o leafpad-0.8.15
 	o less-429
 	o lft-2.5 [at http://pwhois.org/]
+	o libXaw-1.0.6
+	o libXt-1.0.6
 	o libarchive-2.7.0
 	o libast-0.7
 	o libcanberra-0.12
@@ -930,6 +935,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o merb-sequel-1.0.0
 	o merb-stories-0.9.13
 	o merb-test-unit-0.9.13
+	o mercurial-1.3
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -1095,6 +1101,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
 	o php5-5.2.10
+	o php5-5.3.0
 	o phpmyadmin-3.2.0.1
 	o phylip-3.68
 	o picp-0.6.8
@@ -1121,6 +1128,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
+	o postgresql-8.4.0
 	o powermanga-0.90
 	o pptp-1.7.1 [pkg/38038]
 	o profit-2.5.3
@@ -1175,6 +1183,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-yaml-3.08
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
+	o python-3.0.1
+	o python-3.1
 	o qbrew-0.3.9
 	o qemu-0.10.5
 	o qnetwalk-1.3
@@ -1463,7 +1473,24 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-video-amd-2.11.2 [now xf86-video-geode]
+	o xf86-video-cirrus-1.3.1
+	o xf86-video-dummy-0.3.2
 	o xf86-video-geode-2.11.2
+	o xf86-video-glint-1.2.3
+	o xf86-video-i128-1.3.2
+	o xf86-video-i740-1.3.1
+	o xf86-video-neomagic-1.2.3
+	o xf86-video-nv-2.1.14
+	o xf86-video-rendition-4.2.2
+	o xf86-video-s3-0.6.2
+	o xf86-video-s3virge-1.10.3
+	o xf86-video-savage-2.3.0
+	o xf86-video-siliconmotion-1.7.2
+	o xf86-video-sisusb-0.9.2
+	o xf86-video-tdfx-1.4.2
+	o xf86-video-trident-1.3.2
+	o xf86-video-tseng-1.2.2
+	o xf86-video-voodoo-1.2.2
 	o xfce-4.6.0 [pkg/40984]
 	o xfce-4.6.1
 	o xfe-1.19.1
