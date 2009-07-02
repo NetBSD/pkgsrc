@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/07/02 11:42:17 ghen Exp $
+bin/agrep
 include/tre/regex.h
 include/tre/tre-config.h
 lib/libtre.la
 lib/pkgconfig/tre.pc
+man/man1/agrep.1
 share/doc/tre/tre-api.html
 share/doc/tre/tre-syntax.html
 share/locale/fi/LC_MESSAGES/tre.mo
