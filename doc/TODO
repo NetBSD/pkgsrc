@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8215 2009/07/01 13:26:31 wiz Exp $
+$NetBSD: TODO,v 1.8216 2009/07/02 00:41:47 taca Exp $
 
 Suggested new packages
 ======================
@@ -537,6 +537,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o drivel-2.0.4
 	o dropbear-0.52
 	o drscheme-4.0.2
+	o drupal-5.19 (security release)
+	o drupal-6.13 (security release)
 	o dspam-3.9.0
 	o dvdstyler-1.7.2
 	o dvipng-1.12
