@@ -10,3 +10,10 @@ is the length of the text. The used space is also quadratic on the length
 of the regex, but does not depend on the searched string. This quadratic
 behaviour occurs only on pathological cases which are probably very rare
 in practice.
+
+TRE includes a version of the agrep (approximate grep) command line tool
+for approximate regexp matching in the style of grep. Unlike other agrep
+implementations (like the one by Sun Wu and Udi Manber from University of
+Arizona available  here) TRE agrep allows full regexps of any length, any
+number of errors, and non-uniform costs for insertion, deletion and
+substitution.
