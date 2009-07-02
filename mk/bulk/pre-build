@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.74 2008/06/10 08:17:47 sketch Exp $
+# $NetBSD: pre-build,v 1.75 2009/07/02 22:34:16 sketch Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -89,7 +89,7 @@ if [ x"$BMAKE" = x"bmake" ]; then
 	( cd "$LOCALBASE" && tar cf /tmp/$$.tar \
 		sbin/audit-packages sbin/download-vulnerability-list         \
 		sbin/pkg_add sbin/pkg_admin sbin/pkg_create                  \
-		sbin/pkg_delete sbin/pkg_info sbin/pkg_view sbin/linkfarm    \
+		sbin/pkg_delete sbin/pkg_info \
 		share/mk/sys.mk share/mk/bsd.dep.mk share/mk/bsd.depall.mk   \
 		share/mk/bsd.files.mk share/mk/bsd.hostprog.mk               \
 		share/mk/bsd.doc.mk share/mk/bsd.inc.mk share/mk/bsd.info.mk \
@@ -98,26 +98,17 @@ if [ x"$BMAKE" = x"bmake" ]; then
 		share/mk/bsd.links.mk share/mk/bsd.man.mk                    \
 		share/mk/bsd.nls.mk share/mk/bsd.obj.mk                      \
 		share/mk/bsd.prog.mk share/mk/bsd.subdir.mk                  \
-		share/mk/bsd.sys.mk share/mk/bsd.own.mk                      \
-		bin/bmake bin/ftp bin/digest bin/nawk bin/nbsed bin/pdksh    \
-		bin/install-sh bin/pax bin/tar bin/cpio                      \
-		man/cat1/audit-packages.0                                    \
-		man/cat1/download-vulnerability-list.0                       \
-		man/cat1/ftp.1 man/cat1/pax.0                                \
-		man/cat1/tar.0 man/cat1/cpio.0 man/cat1/pkg_add.0            \
-		man/cat1/pkg_admin.0 man/cat1/pkg_create.0                   \
-		man/cat1/pkg_delete.0 man/cat1/pkg_info.0                    \
-		man/cat1/pkg_view.0 man/cat1/linkfarm.0                      \
-		man/cat5/audit-packages.conf.0                               \
-		man/man1/audit-packages.1                                    \
-		man/man1/download-vulnerability-list.1                       \
-		man/man1/digest.1 man/man1/pax.1 man/man1/cpio.1             \
-		man/man1/tar.1 man/man1/nbsed.1 man/man1/pkg_add.1           \
+		share/mk/bsd.sys.mk share/mk/bsd.own.mk share/mk/bsd.README  \
+		bin/bmake bin/nawk bin/nbsed bin/pdksh bin/install-sh        \
+		man/cat1/nbsed.0 man/cat1/pkg_add.0 man/cat1/pkg_admin.0     \
+		man/cat1/pkg_create.0 man/cat1/pkg_delete.0                  \
+		man/cat1/pkg_info.0 man/cat5/pkg_install.conf.0              \
+		man/cat5/pkg_summary.0 man/cat7/pkgsrc.0 man/man1/bmake.1    \
+		man/man1/nawk.1 man/man1/nbsed.1 man/man1/pkg_add.1          \
 		man/man1/pkg_admin.1 man/man1/pkg_create.1                   \
-		man/man1/pkg_delete.1 man/man1/pkg_info.1                    \
-		man/man1/pkg_view.1 man/man1/linkfarm.1 man/man1/pdksh.1     \
-		man/man5/audit-packages.conf.5 man/cat7/packages.0           \
-		etc/mk.conf share/examples/pkg_install/audit-packages.conf )
+		man/man1/pkg_delete.1 man/man1/pkg_info.1 man/man1/pdksh.1   \
+		man/man5/pkg_install.conf.5 man/man5/pkg_summary.5           \
+		man/man7/pkgsrc.7 etc/mk.conf )
 fi
 
 #
@@ -272,9 +263,9 @@ done
 # bootstrap-pkgsrc generated files and thus would break the following builds.
 
 if [ x"$BMAKE" = x"bmake" ]; then
-	for pkg in archivers/pax devel/bmake devel/mk-files lang/nawk \
-	    net/tnftp pkgtools/bootstrap-mk-files pkgtools/bootstrap-extras \
-	    pkgtools/tnftp pkgtools/pax pkgtools/pkg_install \
+	for pkg in devel/bmake devel/mk-files lang/nawk \
+	    pkgtools/bootstrap-mk-files pkgtools/bootstrap-extras \
+	    pkgtools/pkg_install \
 	    shells/pdksh sysutils/install-sh textproc/nbsed; do
 		mkdir -p "${BULKFILESDIR}/${pkg}"
 		echo "Don't blow away bootstrap-pkgsrc stuff!" \
