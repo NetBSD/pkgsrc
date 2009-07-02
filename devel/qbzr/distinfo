@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/05/16 15:21:52 epg Exp $
+$NetBSD: distinfo,v 1.5 2009/07/02 05:27:04 epg Exp $
 
-SHA1 (qbzr-0.9.9.tar.gz) = fc02527ad94bd27a7e9f102881649d74df17fe38
-RMD160 (qbzr-0.9.9.tar.gz) = b63177b69fe4161f7b91dbbc48aba1d6ce7428a1
-Size (qbzr-0.9.9.tar.gz) = 378966 bytes
+SHA1 (qbzr-0.11.tar.gz) = d3427d6b0134b5033fa14bc732a29ee4b32917bc
+RMD160 (qbzr-0.11.tar.gz) = fea43505334e7855ad5affc99afa1346a885cbd6
+Size (qbzr-0.11.tar.gz) = 395115 bytes
