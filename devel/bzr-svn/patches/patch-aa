@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1 2009/07/02 05:31:42 epg Exp $
+
+Fix some errors when running tests without TDB support.
+
+--- tests/test_cache.py.orig	2009-06-18 06:22:27.000000000 -0700
++++ tests/test_cache.py
+@@ -134,7 +134,7 @@ class TdbRevidMapCacheTests(TestCaseInTe
+         try:
+             from bzrlib.plugins.svn.cache.tdbcache import RevisionIdMapCache, tdb_open
+         except ImportError:
+-            raise UnavailableFeature
++            raise UnavailableFeature("TDB")
+         import tdb
+         self.cache = RevisionIdMapCache(tdb_open("cache.tdb", 0, tdb.DEFAULT, os.O_RDWR|os.O_CREAT))
+ 
+@@ -191,7 +191,7 @@ class TdbRevInfoCacheTests(TestCaseInTem
+         try:
+             from bzrlib.plugins.svn.cache.tdbcache import RevisionInfoCache, tdb_open
+         except ImportError:
+-            raise UnavailableFeature
++            raise UnavailableFeature("TDB")
+         import tdb
+         self.cache = RevisionInfoCache(tdb_open("cache.tdb", 0, tdb.DEFAULT, os.O_RDWR|os.O_CREAT))
+ 
+@@ -234,6 +234,6 @@ class TdbParentsCacheTests(TestCaseInTem
+         try:
+             from bzrlib.plugins.svn.cache.tdbcache import ParentsCache, tdb_open
+         except ImportError:
+-            raise UnavailableFeature
++            raise UnavailableFeature("TDB")
+         import tdb
+         self.cache = ParentsCache(tdb_open("cache.tdb", 0, tdb.DEFAULT, os.O_RDWR|os.O_CREAT))
