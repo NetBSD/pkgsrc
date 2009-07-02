@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2008/09/28 22:15:30 tonnerre Exp $
+$NetBSD: patch-aa,v 1.7 2009/07/02 12:23:44 obache Exp $
 
---- Makefile.in.orig	2008-07-12 21:41:08.000000000 +0200
+--- Makefile.in.orig	2009-02-03 23:39:56.000000000 +0000
 +++ Makefile.in
 @@ -453,7 +453,7 @@ CLEANFILES = authldaprc.h authmysqlrc.h 
  
@@ -212,11 +212,11 @@ $NetBSD: patch-aa,v 1.6 2008/09/28 22:15:30 tonnerre Exp $
  				$(DESTDIR)$(sbindir)/userdbpw ; \
  		$(INSTALL_SCRIPT) userdb-test-cram-md5.pl \
  				$(DESTDIR)$(sbindir)/userdb-test-cram-md5
--	for f in $(pkglib_LTLIBRARIES); do . $$f; rm -f $(DESTDIR)$(pkglibdir)/$$dlname.0 $(DESTDIR)$(pkglibdir)/$$dlname.0.0; ln -s $$dlname $(DESTDIR)$(pkglibdir)/$$dlname.0; done
+-	for f in $(pkglib_LTLIBRARIES); do . ./$$f; rm -f $(DESTDIR)$(pkglibdir)/$$dlname.0 $(DESTDIR)$(pkglibdir)/$$dlname.0.0; ln -s $$dlname $(DESTDIR)$(pkglibdir)/$$dlname.0; done
  
  uninstall-hook: uninstall-authldaprc uninstall-authdaemonrc uninstall-authmysqlrc uninstall-authpgsqlrc
  	rm -f $(DESTDIR)$(pkglibexecdir)/authdaemond
-@@ -1747,13 +1746,13 @@ README_authlib.html: README_authlib.html
+@@ -1751,13 +1750,13 @@ README_authlib.html: README_authlib.html
  authdaemond.o: authdaemonrc.h authdaemond.c
  
  install-migrate: authmigrate
