@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:25:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/07/02 18:26:45 wiz Exp $
 lib/pkgconfig/Qt3Support.pc
 lib/pkgconfig/QtCore.pc
 lib/pkgconfig/QtGui.pc
 lib/pkgconfig/QtNetwork.pc
 lib/pkgconfig/QtOpenGL.pc
 lib/pkgconfig/QtScript.pc
+lib/pkgconfig/QtScriptTools.pc
 lib/pkgconfig/QtSql.pc
 lib/pkgconfig/QtSvg.pc
 lib/pkgconfig/QtTest.pc
@@ -20,6 +21,7 @@ qt4/lib/libQtGui.la
 qt4/lib/libQtNetwork.la
 qt4/lib/libQtOpenGL.la
 qt4/lib/libQtScript.la
+qt4/lib/libQtScriptTools.la
 qt4/lib/libQtSql.la
 qt4/lib/libQtSvg.la
 qt4/lib/libQtTest.la
