@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2421 2009/07/02 11:44:11 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.2422 2009/07/02 12:24:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3238,3 +3238,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bzr-svn to 0.6.2 [epg 2009-07-02]
 	Updated devel/qbzr to 0.11 [epg 2009-07-02]
 	Updated devel/tre to 0.7.5nb6 [ghen 2009-07-02]
+	Updated security/courier-authlib to 0.62.2 [obache 2009-07-02]
