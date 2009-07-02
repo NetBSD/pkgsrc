@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2008/09/28 22:15:30 tonnerre Exp $
+$NetBSD: distinfo,v 1.13 2009/07/02 12:23:44 obache Exp $
 
-SHA1 (courier-authlib-0.61.0.tar.bz2) = 0caf0f435411124b02fe2594b39feceff5b23159
-RMD160 (courier-authlib-0.61.0.tar.bz2) = 91fb8ac8960659b7cc4ea9574e1af11fa8f7dc86
-Size (courier-authlib-0.61.0.tar.bz2) = 2174172 bytes
-SHA1 (patch-aa) = ef77c9c240659f2a553735dcc8ec27bfb144f973
-SHA1 (patch-ab) = 7d9ffb781102b998a9bd5c9c7ec3d04aa44770d3
+SHA1 (courier-authlib-0.62.2.tar.bz2) = dc495ad6c54c271483d4862e09788621d86629a9
+RMD160 (courier-authlib-0.62.2.tar.bz2) = c0f4f32994056f8034f30055cfe55238d137a2ca
+Size (courier-authlib-0.62.2.tar.bz2) = 2233216 bytes
+SHA1 (patch-aa) = 6984af03cce59cee3987526d5c87bb71c8eac635
+SHA1 (patch-ab) = 0f3d86e9bd296c9abc044917656495fd8584bc08
