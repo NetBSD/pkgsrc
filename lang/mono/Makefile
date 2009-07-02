@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2009/06/21 21:37:47 ahoka Exp $
+# $NetBSD: Makefile,v 1.88 2009/07/02 17:00:48 drochner Exp $
 
 DISTNAME=	mono-${MONO_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -128,10 +128,10 @@ SUBST_FILES.fix-cfgdir=		mcs/tools/mconfig/Makefile
 SUBST_SED.fix-cfgdir=		-e 's,$$(sysconfdir)/mono,${EGDIR},g'
 
 SUBST_CLASSES+=			fix-libx11
-SUBST_STAGE.fix-prefix=		pre-configure
-SUBST_MESSAGE.fix-prefix=	Fixing libX11 search path configuration
-SUBST_FILES.fix-prefix=		configure
-SUBST_SED.fix-prefix=		-e 's,@X11BASE@,${X11BASE},g'
+SUBST_STAGE.fix-libx11=		pre-configure
+SUBST_MESSAGE.fix-libx11=	Fixing libX11 search path configuration
+SUBST_FILES.fix-libx11=		configure
+SUBST_SED.fix-libx11=		-e 's,@X11BASE@,${X11BASE},g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
