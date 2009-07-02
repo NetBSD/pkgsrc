@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/05/25 20:45:28 tron Exp $
+# $NetBSD: Makefile,v 1.36 2009/07/02 19:13:53 tnn Exp $
 
 DISTNAME=	wmbiff-0.4.26
 PKGREVISION=	7
@@ -19,6 +19,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/wmbiff/sample.wmbiffrc ${EX_DIR}
 
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/gnutls/libgnutls-config.mk"
 .include "../../wm/windowmaker/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
