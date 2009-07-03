@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/06/25 09:41:45 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/03 15:59:49 drochner Exp $
 #
 
 DISTNAME=	net6-1.3.9
@@ -25,4 +25,5 @@ pre-configure:
 
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/gnutls/libgnutls-config.mk"
 .include "../../mk/bsd.pkg.mk"
