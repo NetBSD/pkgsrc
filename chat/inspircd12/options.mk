@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/01/04 00:52:27 adrianp Exp $
+# $NetBSD: options.mk,v 1.2 2009/07/03 14:50:34 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inspircd
 
@@ -71,6 +71,7 @@ MODULES+=		m_ssl_openssl.cpp
 ###
 .if !empty(PKG_OPTIONS:Mgnutls)
 .	include "../../security/gnutls/buildlink3.mk"
+.       include "../../security/gnutls/libgnutls-config.mk"
 CONFIGURE_ARGS+=	--enable-gnutls
 MODULES+=		m_ssl_gnutls.cpp
 .endif
