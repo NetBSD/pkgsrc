@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/05/22 13:31:40 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/03 14:15:41 drochner Exp $
 #
 
 DISTNAME=	cherokee-0.5.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.cherokee-project.com/download/0.5/0.5.3/
 
@@ -66,6 +66,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .if !empty(PKG_OPTIONS:Mgnutls)
 CONFIGURE_ARGS+=	--enable-tls=gnutls
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/gnutls/libgnutls-config.mk"
 CONF_FILES+=		${EGDIR}/cherokee/mods-available/ssl \
 			${PKG_SYSCONFDIR}/cherokee/mods-enabled/ssl
 .elif !empty(PKG_OPTIONS:Mopenssl)
