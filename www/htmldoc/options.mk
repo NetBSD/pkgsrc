@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/01/08 11:57:24 obache Exp $
+# $NetBSD: options.mk,v 1.3 2009/07/03 14:04:12 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.htmldoc
 PKG_SUPPORTED_OPTIONS=		x11
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--disable-openssl
 .  endif
 .  if !empty(PKG_OPTIONS:Mgnutls)
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/gnutls/libgnutls-config.mk"
 CONFIGURE_ARGS+=	--enable-gnutls
 .  else
 CONFIGURE_ARGS+=	--disable-gnutls
