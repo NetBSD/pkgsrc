@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2425 2009/07/03 07:41:04 manu Exp $
+$NetBSD: CHANGES-2009,v 1.2426 2009/07/03 07:42:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -554,6 +554,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/mediainfo to 0.7.9 [jmcneill 2009-01-27]
 	Updated databases/mysql5-client to 5.0.67nb2 [he 2009-01-27]
 	Updated devel/automoc4 to 0.9.88 [markd 2009-01-27]
+	Added graphics/geeqie to 1.0alpha3 [drochner 2009-01-27]
 	Updated multimedia/vlc to 0.9.8anb3 [jmcneill 2009-01-28]
 	Updated net/rsync to 3.0.5 [tron 2009-01-28]
 	Updated www/midori to 0.1.1nb2 [ahoka 2009-01-28]
