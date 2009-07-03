@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2009/02/10 16:46:03 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/03 11:01:01 drochner Exp $
 
 DISTNAME=	thy-0.9.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	ftp://bonehunter.rulez.org/pub/thy/stable/
 
@@ -47,4 +47,6 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/gnutls/libgnutls-config.mk"
+.include "../../security/gnutls/libgnutls-extra-config.mk"
 .include "../../mk/bsd.pkg.mk"
