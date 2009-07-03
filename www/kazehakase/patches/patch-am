@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1 2009/07/03 14:00:24 drochner Exp $
+
+--- module/embed/gecko/Makefile.in.orig	2009-07-03 15:34:08.000000000 +0200
++++ module/embed/gecko/Makefile.in
+@@ -428,7 +428,6 @@ gecko_la_SOURCES = kz-gecko-embed-module
+ gecko_la_LIBADD = $(MOZILLA_COMPONENT_LIBS) $(GTK_LIBS) \
+ 	$(top_builddir)/src/libkazehakase.la $(am__append_3)
+ gecko_la_CPPFLAGS = \
+-	-DGTK_DISABLE_DEPRECATED=1		\
+ 	-DGDK_DISABLE_DEPRECATED=1		\
+ 	-DMOZILLA_HOME=\"$(MOZILLA_HOME)\"	\
+ 	-DMOZILLA_PREFIX=\"$(MOZILLA_PREFIX)\"	\
