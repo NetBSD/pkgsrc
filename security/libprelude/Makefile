@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/02/10 21:11:13 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2009/07/03 10:27:02 drochner Exp $
 #
 DISTNAME=		libprelude-0.9.21.1
 CATEGORIES=		security
@@ -58,5 +58,6 @@ SUBST_SED.make=		-e 's,@EGDIR@,${EGDIR},g'
 INSTALLATION_DIRS=	share/examples/libprelude
 
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/gnutls/libgnutls-config.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
