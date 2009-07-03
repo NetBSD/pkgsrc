@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2009/07/02 19:25:47 tnn Exp $
+# $NetBSD: Makefile.common,v 1.22 2009/07/03 16:05:28 drochner Exp $
 #
 # used by audio/gnome-vfs-cdda/Makefile
 # used by net/gnome-vfs-dns-sd/Makefile
@@ -18,7 +18,6 @@ COMMENT=		GNOME Virtual File System (v2)
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/gnome-vfs/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/gnome-vfs/patches
-FILESDIR=		${.CURDIR}/../../sysutils/gnome-vfs/files
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
