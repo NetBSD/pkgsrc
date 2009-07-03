@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2007/10/27 13:03:50 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2009/07/03 14:00:24 drochner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kazehakase
@@ -10,7 +10,8 @@ PKG_SUGGESTED_OPTIONS+=	gnutls
 
 .if !empty(PKG_OPTIONS:Mgnutls)
 .  include "../../security/gnutls/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-ssl
+.  include "../../security/gnutls/libgnutls-config.mk"
+#CONFIGURE_ARGS+=	--enable-ssl
 .else
 CONFIGURE_ARGS+=	--disable-ssl
 .endif

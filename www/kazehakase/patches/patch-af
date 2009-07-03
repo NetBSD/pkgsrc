@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2007/10/27 13:03:51 wiz Exp $
+$NetBSD: patch-af,v 1.5 2009/07/03 14:00:24 drochner Exp $
 
---- src/Makefile.in.orig	2007-09-29 04:59:16.000000000 +0000
+--- src/Makefile.in.orig	2008-03-29 09:20:54.000000000 +0100
 +++ src/Makefile.in
-@@ -145,7 +145,7 @@ AM_CPPFLAGS = \
+@@ -143,11 +143,10 @@ AM_CPPFLAGS = \
  	-DKZ_LIBDIR=\""$(kzlibdir)"\"			\
  	-DKZ_EXTDIR=\""$(extdir)"\"			\
  	-DKZ_RUBY_EXTDIR=\""$(extrubydir)"\"		\
@@ -11,3 +11,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 13:03:51 wiz Exp $
  	-DKZ_DATADIR=\""$(datadir)/$(PACKAGE)"\"	\
  	-DKZ_SEARCH_MODULEDIR=\""$(searchdir)"\"	\
  	-DKZ_EMBED_MODULEDIR=\""$(embeddir)"\"		\
+-	-DGTK_DISABLE_DEPRECATED=1			\
+ 	-DGDK_DISABLE_DEPRECATED=1			\
+ 	-DG_LOG_DOMAIN=\"Kazehakase\"			\
+ 	-DG_DISABLE_DEPRECATED=1

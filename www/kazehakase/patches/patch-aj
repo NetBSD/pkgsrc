@@ -1,8 +1,15 @@
-$NetBSD: patch-aj,v 1.2 2005/09/17 22:40:36 reed Exp $
+$NetBSD: patch-aj,v 1.3 2009/07/03 14:00:24 drochner Exp $
 
---- src/bookmarks/Makefile.in.orig	2005-08-28 23:22:16.000000000 +0000
+--- src/bookmarks/Makefile.in.orig	2008-03-29 09:20:55.000000000 +0100
 +++ src/bookmarks/Makefile.in
-@@ -91,7 +91,7 @@ AM_CPPFLAGS = \
+@@ -88,14 +88,13 @@ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+ AM_CFLAGS = @AM_CFLAGS@
+ AM_CPPFLAGS = \
+-	-DGTK_DISABLE_DEPRECATED=1 \
+ 	-DGDK_DISABLE_DEPRECATED=1 \
+ 	-DG_LOG_DOMAIN=\"Kazehakase-Bookmarks\" \
+ 	-DG_DISABLE_DEPRECATED=1 \
          -DLOCALEDIR=\""$(localedir)"\" \
          -DSYSCONFDIR=\""$(sysconfdir)"\" \
          -DDATADIR=\""$(datadir)"\" \
