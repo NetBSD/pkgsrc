@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2009/07/03 13:35:12 abs Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2009/07/04 18:27:55 hasso Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -11,7 +11,7 @@ ${PYSITELIB}/PyQt4/QtHelp.so
 ${PYSITELIB}/PyQt4/QtNetwork.so
 ${PYSITELIB}/PyQt4/QtOpenGL.so
 ${PYSITELIB}/PyQt4/QtScript.so
-${PYSITELIB}/PyQt4/QtScriptTools.so 
+${PYSITELIB}/PyQt4/QtScriptTools.so
 ${PYSITELIB}/PyQt4/QtSql.so
 ${PYSITELIB}/PyQt4/QtSvg.so
 ${PYSITELIB}/PyQt4/QtTest.so
@@ -389,8 +389,8 @@ share/sip${PYVERSSUFFIX}/QtScript/qscriptengineagent.sip
 share/sip${PYVERSSUFFIX}/QtScript/qscriptstring.sip
 share/sip${PYVERSSUFFIX}/QtScript/qscriptvalue.sip
 share/sip${PYVERSSUFFIX}/QtScript/qscriptvalueiterator.sip
-share/sip${PYVERSSUFFIX}/QtScriptTools/QtScriptToolsmod.sip 
-share/sip${PYVERSSUFFIX}/QtScriptTools/qscriptenginedebugger.sip 
+share/sip${PYVERSSUFFIX}/QtScriptTools/QtScriptToolsmod.sip
+share/sip${PYVERSSUFFIX}/QtScriptTools/qscriptenginedebugger.sip
 share/sip${PYVERSSUFFIX}/QtSql/QtSqlmod.sip
 share/sip${PYVERSSUFFIX}/QtSql/qsql.sip
 share/sip${PYVERSSUFFIX}/QtSql/qsqldatabase.sip
