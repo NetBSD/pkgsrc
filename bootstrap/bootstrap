@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.148 2009/06/27 22:30:50 ahoka Exp $
+# $NetBSD: bootstrap,v 1.149 2009/07/05 12:35:13 ahoka Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -502,7 +502,6 @@ HPUX)
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
-	need_ksh=yes
 	set_opsys=no
 	machine_arch=`uname -m | sed 's/^9000.*$/hppa/'`
 	;;
