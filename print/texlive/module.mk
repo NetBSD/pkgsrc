@@ -1,7 +1,7 @@
-# $NetBSD: module.mk,v 1.5 2009/06/14 22:58:08 joerg Exp $
+# $NetBSD: module.mk,v 1.6 2009/07/05 21:57:38 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
-# TeX Live packages.
+# TeX Live 2008 packages.
 #
 # Package-settable variables:
 #
