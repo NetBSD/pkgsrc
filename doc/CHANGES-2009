@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2427 2009/07/05 10:41:39 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2428 2009/07/05 21:33:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3243,3 +3243,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20090701 [taca 2009-07-02]
 	Updated x11/qt4-libs to 4.5.1nb2 [wiz 2009-07-02]
 	Added lang/php5-perl version 1.0.0 [manu 2009-07-03]
+	Updated print/tex-pdftex to 1.40.9.12898nb1 [minskim 2009-07-05]
