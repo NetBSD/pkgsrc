@@ -4,7 +4,7 @@ community.  The software is released under an Apache/BSD-style open
 source license.
 
 This is a meta-package.  It installs no files, but it depends on all
-the Subversion components, including the base pacakge with the
+the Subversion components, including the base package with the
 subversion client and server, the apache module, and four language
 bindings.  (If you just want the basic svn and svnadmin programs see
 devel/subversion-base.)
