@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.3 2009/07/06 22:01:34 joerg Exp $
+
+--- lasso/registry.c.orig	2010-05-31 15:45:21.000000000 +0200
++++ lasso/registry.c
+@@ -116,7 +116,7 @@ guint lasso_registry_direct_mapping_hash
+ {
+ 	return g_direct_hash((void*)(record->from_namespace
+ 		^ record->from_name
+-		^ record->to_namespace));
++		^ (size_t)record->to_namespace));
+ }
+ 
+ /**
+@@ -129,7 +129,7 @@ guint lasso_registry_direct_mapping_hash
+  */
+ guint lasso_registry_functional_mapping_hash(LassoRegistryFunctionalMappingRecord *record)
+ {
+-	return g_direct_hash((void*)(record->from_namespace ^ record->to_namespace));
++	return g_direct_hash((void*)(record->from_namespace ^ (size_t)record->to_namespace));
+ }
+ 
+ /**

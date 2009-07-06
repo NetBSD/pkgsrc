@@ -1,14 +1,13 @@
-$NetBSD: patch-bc,v 1.2 2009/05/26 05:26:00 manu Exp $
---- lasso/xml/tools.c.orig	2009-04-05 11:24:03.000000000 +0200
-+++ lasso/xml/tools.c	2009-04-05 11:24:47.000000000 +0200
-@@ -1209,9 +1209,9 @@
- {
+$NetBSD: patch-bc,v 1.3 2009/07/06 22:01:34 joerg Exp $
+
+--- lasso/xml/tools.c.orig	2009-03-27 17:12:48.000000000 +0100
++++ lasso/xml/tools.c
+@@ -1210,7 +1210,7 @@ is_base64(const char *message)
  	const char *c;
  
  	c = message;
 -	while (*c != 0 && (isalnum(*c) || *c == '+' || *c == '/' || *c == '\n' || *c == '\r')) c++;
-+	while (*c != 0 && (isalnum((int)*c) || *c == '+' || *c == '/' || *c == '\n' || *c == '\r')) c++;
++	while (*c != 0 && (isalnum((unsigned char)*c) || *c == '+' || *c == '/' || *c == '\n' || *c == '\r')) c++;
  	while (*c == '=' || *c == '\n' || *c == '\r') c++; /* trailing = */
  
  	if (*c == 0)
- 		return TRUE;
