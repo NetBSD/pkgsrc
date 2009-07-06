@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2009/05/19 13:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2009/07/06 10:49:55 drochner Exp $
 #
 
 DISTNAME=	file-roller-2.26.2
@@ -29,6 +29,11 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.12.0
 BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.10.0
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.4.0
+
+# XXX force regen, bundled one doesn't fit
+# see gnome bugzilla #587869
+post-extract:
+	${RM} ${WRKSRC}/src/fr-enum-types.c
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
