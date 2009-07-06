@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2007/07/24 15:14:49 joerg Exp $
+$NetBSD: distinfo,v 1.5 2009/07/06 16:06:58 joerg Exp $
 
 SHA1 (Chinput-3.0.tar.gz) = de6da2c8c53b38c1b23aee73c1aced90628e57d8
 RMD160 (Chinput-3.0.tar.gz) = f51ee0f87bc38b760bf4d585466d25d4b6176518
@@ -12,3 +12,4 @@ SHA1 (patch-af) = db621ebb06d22d948513451c4b5b670494dd5d46
 SHA1 (patch-ag) = ca121a6672f02808275b6ffe73ad1f2287e75443
 SHA1 (patch-ah) = 88caa0cd5a7c689c28096b2f6537570c6dc7b493
 SHA1 (patch-ai) = 79d0e1ac1d99fe4cb79eea957ba9f1153c39a783
+SHA1 (patch-aj) = 7ba12e09e26b289be34e07c9e84eb2c69e890299
