@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2007/09/21 13:00:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/06 22:35:22 joerg Exp $
 
 DISTNAME=	lablgtk-1.2.7
 PKGNAME=	lablgtk1-1.2.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html
 COMMENT=	GTK+ bindings for ocaml
+
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=	gmake
 
@@ -21,7 +23,7 @@ CONFLICTS+=	lablgtk-1.*
 
 # currently ocamlopt is only available on i386, sparc and powerpc.
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc")
+    (${MACHINE_ARCH} == "sparc") || ${MACHINE_ARCH} == "x86_64"
 USE_DOTOPT=	YES
 .else
 CAMLOPT=	ocamlc
