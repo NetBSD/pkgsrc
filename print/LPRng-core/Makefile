@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/12/02 11:33:01 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2009/07/06 16:08:30 joerg Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lprng.com/
 COMMENT=	Enhanced Printer Spooler
+
+MAKE_JOBS_SAFE=		no
 
 CONFLICTS+=		cups-[0-9]*
 
