@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.3 2009/07/06 22:42:24 joerg Exp $
+
+--- src/ml_panel.c.orig	2010-05-31 16:31:03.000000000 +0200
++++ src/ml_panel.c
+@@ -23,6 +23,7 @@
+ #include <string.h>
+ 
+ #include <libgnomeui/gnome-client.h>
++#include <libgnomeui/gnome-ui-init.h>
+ #include <panel-applet.h>
+ 
+ #include <caml/mlvalues.h>
