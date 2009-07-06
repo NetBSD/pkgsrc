@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2007/09/21 13:00:55 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/06 22:35:22 joerg Exp $
 
 --- src/Makefile.orig	2003-05-15 16:17:53.000000000 +0200
 +++ src/Makefile
+@@ -38,7 +38,7 @@ CFLAGS = -g $(GTKCFLAGS)
+ MLLINK += -cclib -lcamlrund
+ MLFLAGS = -g
+ else
+-CFLAGS = -O -DGTK_NO_CHECK_CASTS -DGTK_DISABLE_COMPAT_H $(GTKCFLAGS)
++CFLAGS = -O -fPIC -DGTK_NO_CHECK_CASTS -DGTK_DISABLE_COMPAT_H $(GTKCFLAGS)
+ endif
+ 
+ THFLAGS = -thread
 @@ -137,32 +137,39 @@ testcc: lablgladecc lablgtktop
  	rm -f testcc.ml
  
