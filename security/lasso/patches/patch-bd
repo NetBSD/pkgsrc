@@ -1,14 +1,25 @@
-$NetBSD: patch-bd,v 1.2 2009/05/26 05:26:00 manu Exp $
---- lasso/xml/xml.c.orig	2009-04-05 11:25:55.000000000 +0200
-+++ lasso/xml/xml.c	2009-04-05 11:26:27.000000000 +0200
-@@ -1591,9 +1591,9 @@
- {
+$NetBSD: patch-bd,v 1.3 2009/07/06 22:01:34 joerg Exp $
+
+--- lasso/xml/xml.c.orig	2009-03-27 17:12:48.000000000 +0100
++++ lasso/xml/xml.c
+@@ -1554,8 +1554,9 @@ lasso_node_new_from_xmlNode(xmlNode *xml
+ 			}
+ 		}
+ 	}
+-
+-	node = lasso_node_new_from_xmlNode_with_type(xmlnode, typename);
++	if (typename) {
++		node = lasso_node_new_from_xmlNode_with_type(xmlnode, typename);
++	}
+ 	lasso_release(typename);
+ 
+ 	return node;
+@@ -1592,7 +1593,7 @@ is_base64(const char *message)
  	const char *c;
  
  	c = message;
 -	while (*c != 0 && (isalnum(*c) || *c == '+' || *c == '/' || *c == '\n' || *c == '\r')) c++;
-+	while (*c != 0 && (isalnum((int)*c) || *c == '+' || *c == '/' || *c == '\n' || *c == '\r')) c++;
++	while (*c != 0 && (isalnum((unsigned char)*c) || *c == '+' || *c == '/' || *c == '\n' || *c == '\r')) c++;
  	while (*c == '=' || *c == '\n' || *c == '\r') c++; /* trailing = */
  
  	if (*c == 0)
- 		return TRUE;
