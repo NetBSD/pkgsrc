@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/10 00:17:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/06 16:09:21 joerg Exp $
 #
 
 DISTNAME=	LostPixels-0.5.3-source
@@ -13,6 +13,8 @@ COMMENT=	Blinken Sisters - Hunt for the Lost Pixels (80s-style Jump'n'Run)
 WRKSRC=		${WRKDIR}/blinkensisters/lostpixels/game/software
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+ALL_ENV+=	SDLDIR=${BUILDLINK_PREFIX.SDL}/include/SDL
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
