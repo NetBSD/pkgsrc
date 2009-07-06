@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 22:00:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/07/06 15:15:44 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2813,7 +2813,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/backgrounds/toolbar-sep.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/backgrounds/top_logo_back.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/backgrounds/top_logo_bg.jpg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/backgrounds/ul.gif
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/debuglib.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/ext_localconf.php
@@ -3833,10 +3832,10 @@ ${TYPO3DIR}/${SITEDIR}/_.htaccess
 ${TYPO3DIR}/${SITEDIR}/clear.gif
 ${TYPO3DIR}/${SITEDIR}/fileadmin/_temp_/.htaccess
 ${TYPO3DIR}/${SITEDIR}/fileadmin/_temp_/index.html
+${TYPO3DIR}/${SITEDIR}/index.php
+${TYPO3DIR}/${SITEDIR}/t3lib
+${TYPO3DIR}/${SITEDIR}/typo3
+${TYPO3DIR}/${SITEDIR}/typo3_src
 ${TYPO3DIR}/${SITEDIR}/typo3conf/extTables.php
 ${TYPO3DIR}/${SITEDIR}/typo3conf/index.html
-${TYPO3DIR}/${SITEDIR}/typo3_src
-${TYPO3DIR}/${SITEDIR}/typo3
-${TYPO3DIR}/${SITEDIR}/t3lib
-${TYPO3DIR}/${SITEDIR}/index.php
 ${TYPO3DIR}/${SITEDIR}/uploads/index.html
