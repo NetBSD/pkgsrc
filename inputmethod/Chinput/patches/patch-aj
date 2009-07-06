@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2009/07/06 16:06:58 joerg Exp $
+
+--- src/IMdkit/lib/i18nClbk.c.orig	2010-05-31 09:18:25.000000000 +0200
++++ src/IMdkit/lib/i18nClbk.c
+@@ -129,7 +129,7 @@ int _Xi18nPreeditDrawCallback (XIMS ims,
+     XIMPreeditDrawCallbackStruct *draw =
+         (XIMPreeditDrawCallbackStruct *) &preedit_CB->todo.draw;
+     CARD16 connect_id = call_data->any.connect_id;
+-    register int feedback_count;
++    int feedback_count;
+     register int i;
+     BITMASK32 status = 0x0;
+ 
