@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:48:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/07/07 17:16:47 sno Exp $
 bin/cvs2svn
 ${PYSITELIB}/cvs2svn_lib/__init__.py
 ${PYSITELIB}/cvs2svn_lib/__init__.pyc
@@ -12,9 +12,6 @@ ${PYSITELIB}/cvs2svn_lib/artifact.pyo
 ${PYSITELIB}/cvs2svn_lib/artifact_manager.py
 ${PYSITELIB}/cvs2svn_lib/artifact_manager.pyc
 ${PYSITELIB}/cvs2svn_lib/artifact_manager.pyo
-${PYSITELIB}/cvs2svn_lib/boolean.py
-${PYSITELIB}/cvs2svn_lib/boolean.pyc
-${PYSITELIB}/cvs2svn_lib/boolean.pyo
 ${PYSITELIB}/cvs2svn_lib/changeset.py
 ${PYSITELIB}/cvs2svn_lib/changeset.pyc
 ${PYSITELIB}/cvs2svn_lib/changeset.pyo
@@ -135,6 +132,9 @@ ${PYSITELIB}/cvs2svn_lib/record_table.pyo
 ${PYSITELIB}/cvs2svn_lib/repository_delegate.py
 ${PYSITELIB}/cvs2svn_lib/repository_delegate.pyc
 ${PYSITELIB}/cvs2svn_lib/repository_delegate.pyo
+${PYSITELIB}/cvs2svn_lib/repository_mirror.py
+${PYSITELIB}/cvs2svn_lib/repository_mirror.pyc
+${PYSITELIB}/cvs2svn_lib/repository_mirror.pyo
 ${PYSITELIB}/cvs2svn_lib/revision_manager.py
 ${PYSITELIB}/cvs2svn_lib/revision_manager.pyc
 ${PYSITELIB}/cvs2svn_lib/revision_manager.pyo
@@ -144,9 +144,6 @@ ${PYSITELIB}/cvs2svn_lib/run_options.pyo
 ${PYSITELIB}/cvs2svn_lib/serializer.py
 ${PYSITELIB}/cvs2svn_lib/serializer.pyc
 ${PYSITELIB}/cvs2svn_lib/serializer.pyo
-${PYSITELIB}/cvs2svn_lib/set_support.py
-${PYSITELIB}/cvs2svn_lib/set_support.pyc
-${PYSITELIB}/cvs2svn_lib/set_support.pyo
 ${PYSITELIB}/cvs2svn_lib/stats_keeper.py
 ${PYSITELIB}/cvs2svn_lib/stats_keeper.pyc
 ${PYSITELIB}/cvs2svn_lib/stats_keeper.pyo
@@ -165,9 +162,9 @@ ${PYSITELIB}/cvs2svn_lib/svn_commit_item.pyo
 ${PYSITELIB}/cvs2svn_lib/svn_output_option.py
 ${PYSITELIB}/cvs2svn_lib/svn_output_option.pyc
 ${PYSITELIB}/cvs2svn_lib/svn_output_option.pyo
-${PYSITELIB}/cvs2svn_lib/svn_repository_mirror.py
-${PYSITELIB}/cvs2svn_lib/svn_repository_mirror.pyc
-${PYSITELIB}/cvs2svn_lib/svn_repository_mirror.pyo
+${PYSITELIB}/cvs2svn_lib/svn_repository_delegate.py
+${PYSITELIB}/cvs2svn_lib/svn_repository_delegate.pyc
+${PYSITELIB}/cvs2svn_lib/svn_repository_delegate.pyo
 ${PYSITELIB}/cvs2svn_lib/svn_revision_range.py
 ${PYSITELIB}/cvs2svn_lib/svn_revision_range.pyc
 ${PYSITELIB}/cvs2svn_lib/svn_revision_range.pyo
