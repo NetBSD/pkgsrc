@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:54 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2009/07/07 19:35:44 joerg Exp $
 
 DISTNAME=	icewmconf-2.1.0
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://sdboyd.dyndns.org/icewmconf/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sdboyd56.com/icewmconf/
 COMMENT=	Graphical configuration tool for IceWM
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	tk-[0-9]*:../../x11/tk
 
@@ -26,6 +28,6 @@ post-patch:
 		< ${FILENAME}.orig > ${FILENAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${FILENAME} ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${FILENAME} ${DESTDIR}${PREFIX}/bin/
 
 .include "../../mk/bsd.pkg.mk"
