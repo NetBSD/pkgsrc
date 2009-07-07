@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2006/01/04 14:54:17 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2009/07/07 17:47:26 joerg Exp $
 
 --- Makefile.orig	1999-07-19 07:56:27.000000000 -0500
 +++ Makefile	2003-11-14 12:31:20.000000000 -0600
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/04 14:54:17 joerg Exp $
  ####### Installation directory
  
 -XGLOBE_DIR     = /usr/local
-+XGLOBE_DIR     = ${PREFIX}
++XGLOBE_DIR     = ${DESTDIR}${PREFIX}
  XGLOBE_LIB_DIR = $(XGLOBE_DIR)/lib/xglobe
  XGLOBE_BIN_DIR = $(XGLOBE_DIR)/bin
  
