@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2434 2009/07/07 11:38:22 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2435 2009/07/07 11:42:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3251,3 +3251,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyocabinet to 1.4.29 [obache 2009-07-07]
 	Updated databases/p5-tokyocabinet to 1.29 [obache 2009-07-07]
 	Updated textproc/tokyodystopia to 0.9.13 [obache 2009-07-07]
+	Updated databases/tokyotyrant to 1.1.30 [obache 2009-07-07]
