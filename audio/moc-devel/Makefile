@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/02/21 13:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/07 21:18:52 joerg Exp $
 
 DISTNAME=		moc-2.5.0-alpha3
 PKGNAME=		${DISTNAME:S/-alpha/./:moc%=moc-devel%}
@@ -18,12 +18,8 @@ CONFLICTS=		moc-[0-9]*
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_NCURSES=		yes
 USE_TOOLS+=		pkg-config
 #USE_TOOLS+=		autoconf automake
-
-# We require ncurses because with curses arrow key navigation is buggy
-CONFIGURE_ARGS+=	--with-ncurses
 
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
