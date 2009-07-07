@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2009/07/01 02:17:46 taca Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/07 18:25:13 tron Exp $
 
-DISTNAME=	squid-3.1.0.8
+DISTNAME=	squid-3.1.0.9
 PKGNAME=	${DISTNAME}	# Necessary for "pkgsrc/www/squid/options.mk"
 CATEGORIES=	www
 MASTER_SITES=	${SQUID_MASTER_SITES} \
@@ -17,6 +17,8 @@ USE_TOOLS+=		perl gmake
 GNU_CONFIGURE=		yes
 PKG_DESTDIR_SUPPORT=	destdir
 
+POST_INSTALL_EXTRA=	install-error-pages
+
 .include "../../www/squid/Makefile.squid"
 
 CONFIGURE_ARGS+=	--with-default-user=${SQUID_USER}
@@ -32,5 +34,18 @@ SQUID_NTLM_AUTH_HELPERS?=  fakeauth
 post-build:
 	${CP} -pf ${WRKSRC}/src/squid.conf.documented \
 	  ${WRKSRC}/src/squid.conf.default
+
+install-error-pages:
+	cd ${WRKSRC}/errors &&					\
+	for DIR in *; do					\
+	  if [ -d $$DIR ]; then				\
+	    ERROR_DIR=${PREFIX}/share/squid/errors/$$DIR;	\
+	    ${INSTALL_DATA_DIR} $$ERROR_DIR;			\
+	    for FILE in $$DIR/ERR_*; do			\
+	      ${INSTALL_DATA} $$FILE $$ERROR_DIR; 		\
+	    done;						\
+	  fi;							\
+	done
+	${LN} -s en ${PREFIX}/share/squid/errors/templates
 
 .include "../../mk/bsd.pkg.mk"
