@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2009/07/07 19:05:20 joerg Exp $
+
+--- Makefile.in.orig	2009-07-07 21:01:57.000000000 +0200
++++ Makefile.in
+@@ -57,11 +57,11 @@ $(OBJS):	pound.h
+ 
+ install:	all
+ 		@INSTALL@ -d ${DESTDIR}@sbindir@
+-		@INSTALL@ -o @I_OWNER@ -g @I_GRP@ -m 555 pound ${DESTDIR}@sbindir@/pound
+-		@INSTALL@ -o @I_OWNER@ -g @I_GRP@ -m 555 poundctl ${DESTDIR}@sbindir@/poundctl
++		${BSD_INSTALL_PROGRAM} pound ${DESTDIR}@sbindir@/pound
++		${BSD_INSTALL_PROGRAM} poundctl ${DESTDIR}@sbindir@/poundctl
+ 		@INSTALL@ -d ${DESTDIR}@mandir@/man8
+-		@INSTALL@ -o @I_OWNER@ -g @I_GRP@ -m 644 pound.8 ${DESTDIR}@mandir@/man8/pound.8
+-		@INSTALL@ -o @I_OWNER@ -g @I_GRP@ -m 644 poundctl.8 ${DESTDIR}@mandir@/man8/poundctl.8
++		${BSD_INSTALL_DATA} pound.8 ${DESTDIR}@mandir@/man8/pound.8
++		${BSD_INSTALL_DATA} poundctl.8 ${DESTDIR}@mandir@/man8/poundctl.8
+ 
+ clean:
+ 		rm -f pound $(OBJS) poundctl poundctl.o
