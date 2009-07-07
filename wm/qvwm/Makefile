@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/05/01 13:29:07 zafer Exp $
+# $NetBSD: Makefile,v 1.35 2009/07/07 19:34:28 joerg Exp $
 #
 
 DISTNAME=	qvwm-1.1.12
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csg.is.titech.ac.jp/~kourai/qvwm/
 COMMENT=	Windows 95/98/NT like window manager for X11
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake rm lex
 CONFIGURE_ENV+=	PATH_RM=${TOOLS_RM:Q}
@@ -20,7 +22,7 @@ USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--with-imlib
 
 post-install:
-	${MV} ${PREFIX}/${PKGMANDIR}/man1/qvwm.1x ${PREFIX}/${PKGMANDIR}/man1/qvwm.1
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/qvwm.1x ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/qvwm.1
 
 .include "options.mk"
 .include "../../audio/esound/buildlink3.mk"

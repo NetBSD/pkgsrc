@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/07/07 19:34:24 joerg Exp $
+
+--- data/actions/Makefile.in.orig	2009-07-07 21:32:01.000000000 +0200
++++ data/actions/Makefile.in
+@@ -228,7 +228,7 @@ uninstall-am: uninstall-actionsDATA unin
+ 
+ 
+ install-data-local:
+-	cd $(pkgdatadir)/actions && \
++	cd ${DESTDIR}$(pkgdatadir)/actions && \
+ 	ln -sf action.sloppy-focus action
+ 
+ uninstall-local:
