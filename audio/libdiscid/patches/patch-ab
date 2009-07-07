@@ -1,0 +1,114 @@
+$NetBSD: patch-ab,v 1.1 2009/07/07 17:44:51 drochner Exp $
+
+--- src/disc_freebsd.c.orig	2008-01-12 12:41:51.000000000 +0100
++++ src/disc_freebsd.c
+@@ -45,6 +45,9 @@
+ 
+ #define XA_INTERVAL			((60 + 90 + 2) * CD_FRAMES)
+ 
++#ifdef __NetBSD__
++#define CDIOREADTOCENTRY CDIOREADTOCENTRIES
++#endif
+ 
+ /* TODO: make sure it's available */
+ int snprintf(char *str, size_t size, const char *format, ...);
+@@ -52,7 +55,12 @@ int snprintf(char *str, size_t size, con
+ 
+ static int read_toc_header(int fd, int *first, int *last) {
+ 	struct ioc_toc_header th;
++#ifdef __NetBSD__
++	struct cd_toc_entry td;
++	struct ioc_read_toc_entry te;
++#else
+ 	struct ioc_read_toc_single_entry te;
++#endif
+ 
+ 	int ret = ioctl(fd, CDIOREADTOCHEADER, &th);
+ 
+@@ -68,10 +76,20 @@ static int read_toc_header(int fd, int *
+ 	 * session are handled correctly.
+ 	 */
+ 	te.address_format = CD_LBA_FORMAT;
++#ifdef __NetBSD__
++	te.starting_track = th.ending_track;
++	te.data_len = sizeof(td);
++	te.data = &td;
++#else
+ 	te.track = th.ending_track;
++#endif
+ 	ret = ioctl(fd, CDIOREADTOCENTRY, &te);
+ 
++#ifdef __NetBSD__
++	if (( td.control & CD_DATA_TRACK) != 0 )
++#else
+ 	if (( te.entry.control & CD_DATA_TRACK) != 0 )
++#endif
+ 		(*last)--;
+ 
+ 	return ret;
+@@ -79,17 +97,32 @@ static int read_toc_header(int fd, int *
+ 
+ 
+ static int read_toc_entry(int fd, int track_num, unsigned long *lba) {
++#ifdef __NetBSD__
++	struct cd_toc_entry td;
++	struct ioc_read_toc_entry te;
++#else
+ 	struct ioc_read_toc_single_entry te;
++#endif
+ 	int ret;
+ 
++#ifdef __NetBSD__
++	te.starting_track = track_num;
++	te.data_len = sizeof(td);
++	te.data = &td;
++#else
+ 	te.track = track_num;
++#endif
+ 	te.address_format = CD_LBA_FORMAT;
+ 
+ 	ret = ioctl(fd, CDIOREADTOCENTRY, &te);
+ 	assert( te.address_format == CD_LBA_FORMAT );
+ 
+ 	if ( ret == 0 )
++#ifdef __NetBSD__
++		*lba = td.addr.lba;
++#else
+ 		*lba = ntohl(te.entry.addr.lba);
++#endif
+ 
+ 	return ret;
+ }
+@@ -97,16 +130,32 @@ static int read_toc_entry(int fd, int tr
+ 
+ static int read_leadout(int fd, unsigned long *lba) {
+ 	struct ioc_toc_header th;
++#ifdef __NetBSD__
++	struct cd_toc_entry td;
++	struct ioc_read_toc_entry te;
++#else
+ 	struct ioc_read_toc_single_entry te;
++#endif
+ 	int ret;
+    
+ 	ret = ioctl(fd, CDIOREADTOCHEADER, &th);
++#ifdef __NetBSD__
++	te.starting_track = th.ending_track;
++	te.data_len = sizeof(td);
++	te.data = &td;
++#else
+ 	te.track = th.ending_track;
++#endif
+ 	te.address_format = CD_LBA_FORMAT;
+ 	ret = ioctl(fd, CDIOREADTOCENTRY, &te);
+ 
++#ifdef __NetBSD__
++	if (( td.control & CD_DATA_TRACK) != 0 ) {
++		*lba = td.addr.lba - 11400;
++#else
+ 	if (( te.entry.control & CD_DATA_TRACK) != 0 ) {
+ 		*lba = ntohl(te.entry.addr.lba) - 11400;
++#endif
+ 		return ret;
+ 	}
+ 
