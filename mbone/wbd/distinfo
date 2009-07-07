@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/07 16:10:18 sborrill Exp $
+
+SHA1 (wbd-1.0ucl4.tar.gz) = 09a399ed435372d7a62fd1c98c6a06aca15cb4e3
+RMD160 (wbd-1.0ucl4.tar.gz) = ae094420243f35edc664b1be5c496e4f504e277e
+Size (wbd-1.0ucl4.tar.gz) = 53591
+SHA1 (patch-aa) = 40400d1e4e0fe32b613c18f3fa6bbcf3f486b67e
+SHA1 (patch-ab) = 70c932caacddb93aacbf245ea8aab3ed685fed8c
+SHA1 (patch-ac) = 8e72488495f29bc42d9572901d1d766025b11c9e
