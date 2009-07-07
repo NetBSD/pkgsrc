@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/10/11 09:31:58 uebayasi Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/07 20:26:10 joerg Exp $
 #
 
 DISTNAME=		xslide-0.2.2
@@ -11,6 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xslide.sourceforge.net/
 COMMENT=		XSL major mode for emacs
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../editors/emacs/modules.mk"
 
@@ -33,10 +34,10 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/${PKGBASE}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} ${EMACS_LISPPREFIX}/${PKGBASE}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xslide
-	${INSTALL_DATA} ${WRKSRC}/README.TXT ${PREFIX}/share/doc/xslide
-	${INSTALL_DATA} ${WRKSRC}/dot_emacs ${PREFIX}/share/doc/xslide
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xslide
+	${INSTALL_DATA} ${WRKSRC}/README.TXT ${DESTDIR}${PREFIX}/share/doc/xslide
+	${INSTALL_DATA} ${WRKSRC}/dot_emacs ${DESTDIR}${PREFIX}/share/doc/xslide
 
 .include "../../mk/bsd.pkg.mk"
