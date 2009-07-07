@@ -1,0 +1,19 @@
+$NetBSD: patch-aj,v 1.1 2009/07/07 16:49:05 joerg Exp $
+
+--- src/splay/Makefile.in.orig	2009-07-07 18:43:05.000000000 +0200
++++ src/splay/Makefile.in
+@@ -118,11 +118,11 @@ maintainer-clean-binPROGRAMS:
+ 
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(bindir)
++	$(mkinstalldirs) ${DESTDIR}$(bindir)
+ 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo "  $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p|sed '$(transform)'`"; \
+-	     $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p|sed '$(transform)'`; \
++	    echo "  $(INSTALL_PROGRAM) $$p ${DESTDIR}$(bindir)/`echo $$p|sed '$(transform)'`"; \
++	     $(INSTALL_PROGRAM) $$p ${DESTDIR}$(bindir)/`echo $$p|sed '$(transform)'`; \
+ 	  else :; fi; \
+ 	done
+ 
