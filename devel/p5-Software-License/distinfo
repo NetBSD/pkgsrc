@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/05/21 10:54:05 sno Exp $
+$NetBSD: distinfo,v 1.5 2009/07/07 21:26:19 sno Exp $
 
-SHA1 (Software-License-0.011.tar.gz) = 87b5a9c8b9f5956428b17fe31ae82f25387945ec
-RMD160 (Software-License-0.011.tar.gz) = a7e208e54ba60007cf3b7428ad4facc7b3a481d7
-Size (Software-License-0.011.tar.gz) = 99971 bytes
+SHA1 (Software-License-0.012.tar.gz) = 08f6325d5e43ee9076c31daaf8445ac6383895d6
+RMD160 (Software-License-0.012.tar.gz) = aac4e885841417ae6b410c5003a27b8e98eba6e8
+Size (Software-License-0.012.tar.gz) = 100564 bytes
