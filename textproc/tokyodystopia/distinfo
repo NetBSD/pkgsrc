@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2009/06/14 06:04:11 obache Exp $
+$NetBSD: distinfo,v 1.7 2009/07/07 11:37:46 obache Exp $
 
-SHA1 (tokyodystopia-0.9.12.tar.gz) = 5e0e69e2850d04e3a4de5a162f0c25d0451f43d3
-RMD160 (tokyodystopia-0.9.12.tar.gz) = 1655855a420306689e0eec9a2d83c54129cdaddc
-Size (tokyodystopia-0.9.12.tar.gz) = 148938 bytes
+SHA1 (tokyodystopia-0.9.13.tar.gz) = 073b2edd6a74e2ae1bbdc7faea42a8a219bdf169
+RMD160 (tokyodystopia-0.9.13.tar.gz) = d45728a60653b9fc183a5a5e13507875c3440afb
+Size (tokyodystopia-0.9.13.tar.gz) = 150182 bytes
 SHA1 (patch-aa) = d3338fcb9892631ce1f8dc438b8426cc0f67f393
 SHA1 (patch-ab) = c72afa653bfa8cf86665ab5e8ca535127292ebea
