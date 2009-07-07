@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/10/31 02:02:44 snj Exp $
+# $NetBSD: Makefile,v 1.43 2009/07/07 14:24:05 joerg Exp $
 
 DISTNAME=	dillo-2.0
 CATEGORIES=	www
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dillo.org/
 COMMENT=	Very small and fast graphical web-browser
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
@@ -22,14 +24,14 @@ EGDIR=		${PREFIX}/share/examples/dillo
 CONF_FILES=	${EGDIR}/dillorc ${PKG_SYSCONFDIR}/dillorc
 CONF_FILES+=	${EGDIR}/dpidrc ${PKG_SYSCONFDIR}/dpidrc
 
+INSTALLATION_DIRS=	share/doc/dillo ${EGDIR}
+
 .include "options.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dillo
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${PREFIX}/share/doc/dillo
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/dillo
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/dillorc ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/dillo
+	${INSTALL_DATA} ${WRKSRC}/doc/README ${DESTDIR}${PREFIX}/share/doc/dillo
+	${INSTALL_DATA} ${WRKSRC}/dillorc ${DESTDIR}${EGDIR}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
