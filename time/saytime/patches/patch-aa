@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/07/07 21:23:21 is Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/07 20:04:53 joerg Exp $
 
 --- Makefile.orig	1995-11-11 20:39:27.000000000 +0100
 +++ Makefile
@@ -34,3 +34,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/07/07 21:23:21 is Exp $
  
  all:		saytime
  
+@@ -30,10 +26,10 @@ saytime:	saytime.o
+ 	$(CC) $(CFLAGS) -c $<
+ 
+ install:        all
+-	rm -f $(BINDIR)/saytime
+-	cp saytime $(BINDIR)
+-	rm -f $(MANDIR)/saytime.1
+-	cp saytime.1 $(MANDIR)
++	rm -f ${DESTDIR}$(BINDIR)/saytime
++	cp saytime ${DESTDIR}$(BINDIR)
++	rm -f ${DESTDIR}$(MANDIR)/saytime.1
++	cp saytime.1 ${DESTDIR}$(MANDIR)
+ 
+ clean:
+ 	rm -f saytime *.o a.out core
