@@ -1,17 +1,7 @@
-$NetBSD: distinfo,v 1.16 2008/11/21 17:35:12 adam Exp $
+$NetBSD: distinfo,v 1.17 2009/07/07 16:38:29 drochner Exp $
 
-SHA1 (transcode-1.0.7.tar.bz2) = 480f1997ae391f29f6493993ec7b1cdbcf8afbc6
-RMD160 (transcode-1.0.7.tar.bz2) = f302972d8cf784e356753f7c21a012a73246ae71
-Size (transcode-1.0.7.tar.bz2) = 1942127 bytes
-SHA1 (patch-aa) = d6f632f99ea8452686797aeb22928a155c1a0775
-SHA1 (patch-ab) = ce8477442d9e9bb5680fef2aacd6e496f95a5ff2
-SHA1 (patch-ac) = ab93f1f98c1788db135e62653250a474c8d6f140
-SHA1 (patch-ae) = 901c88fb1a47d9a4b084d2d3918390584cdf9c42
-SHA1 (patch-aj) = ff2d3ed5e82d4c669561ab041fb709ff3db91f75
-SHA1 (patch-ao) = 4ece2603c4d504911cb3669e10222cb5bfd95caa
-SHA1 (patch-ar) = 8e13af23fb6d5c3a3140a43387955a922f88a48b
-SHA1 (patch-as) = f52658ae005ad3d68134a33878eb634e949a269a
-SHA1 (patch-at) = 60e6c507049e3fd1723440859b90e828aac968ad
-SHA1 (patch-au) = 3d06c68c60cda13d235a440b13a07d11b8de7877
-SHA1 (patch-av) = a48a2f2389091007ed7658763ac93d694094a766
-SHA1 (patch-aw) = 8af9050101faf78fe82145400677d0a398aa7fec
+SHA1 (transcode-1.1.2.tar.bz2) = 91060d3495dbecb67eb81dddf6cb633829adb1d6
+RMD160 (transcode-1.1.2.tar.bz2) = 3208f338721327cf88b864f4058b1c31d3350845
+Size (transcode-1.1.2.tar.bz2) = 2116876 bytes
+SHA1 (patch-ac) = 0640a062611c87d8666b7983594ab93b068c6580
+SHA1 (patch-aw) = a2a118bad9e3783f98e8cbfa62cff8771118ac17

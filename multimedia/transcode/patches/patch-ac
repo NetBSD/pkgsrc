@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.4 2008/11/21 17:35:12 adam Exp $
+$NetBSD: patch-ac,v 1.5 2009/07/07 16:38:29 drochner Exp $
 
---- configure.orig	2008-11-15 10:57:26.000000000 +0100
+--- configure.orig	2009-03-28 10:13:11.000000000 +0100
 +++ configure
-@@ -9832,7 +9832,7 @@ fi
+@@ -4864,7 +4864,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
  
- 
- case "$host_os" in
+     ;;
 -  freebsd*|openbsd*|netbsd*|bsdi*|darwin*|rhapsody*)
 +  freebsd*|openbsd*|netbsd*|bsdi*|darwin*|rhapsody*|dragonfly*)
+     is_bsd=yes
  
  cat >>confdefs.h <<\_ACEOF
- #define SYS_BSD 1
-@@ -9864,7 +9864,7 @@ case "$host" in
+@@ -21959,7 +21959,7 @@ case "$host" in
  esac
  # let user override
  if test -n "$PTHREAD_LIBS" ; then
@@ -20,38 +20,12 @@ $NetBSD: patch-ac,v 1.4 2008/11/21 17:35:12 adam Exp $
  fi
  if test -n "$PTHREAD_CFLAGS" ; then
    pthread_cflags="$PTHREAD_CFLAGS"
-@@ -41961,7 +41961,7 @@ echo "${ECHO_T}default" >&6; }
-   for l in $imagemagick_ll ; do
-     case $l in
-       -L*) lpaths="$lpaths $l" ;;
--      -l*) test x"$l" != x"-lMagick" && xlibs="$xlibs $l" ;;
-+      -l*) test x"$l" != x"-lMagickCore" && xlibs="$xlibs $l" ;;
-         *) xlf="$xlf $l" ;;
-     esac
-   done
-@@ -41977,13 +41977,13 @@ echo "${ECHO_T}default" >&6; }
-   if test x"Magick" != x"none" ; then
-     save_LDFLAGS="$LDFLAGS"
-     LDFLAGS="$LDFLAGS $imagemagick_ll"
--    { echo "$as_me:$LINENO: checking for InitializeMagick in -lMagick" >&5
--echo $ECHO_N "checking for InitializeMagick in -lMagick... $ECHO_C" >&6; }
-+    { echo "$as_me:$LINENO: checking for InitializeMagick in -lMagickCore" >&5
-+echo $ECHO_N "checking for InitializeMagick in -lMagickCore... $ECHO_C" >&6; }
- if test "${ac_cv_lib_Magick_InitializeMagick+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-lMagick $IMAGEMAGICK_EXTRA_LIBS $LIBS"
-+LIBS="-lMagickCore $IMAGEMAGICK_EXTRA_LIBS $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
-@@ -42039,7 +42039,7 @@ fi
- { echo "$as_me:$LINENO: result: $ac_cv_lib_Magick_InitializeMagick" >&5
- echo "${ECHO_T}$ac_cv_lib_Magick_InitializeMagick" >&6; }
- if test $ac_cv_lib_Magick_InitializeMagick = yes; then
--  IMAGEMAGICK_LIBS="$imagemagick_ll -lMagick $IMAGEMAGICK_EXTRA_LIBS"
-+  IMAGEMAGICK_LIBS="$imagemagick_ll -lMagickCore $IMAGEMAGICK_EXTRA_LIBS"
- else
- 
- tc_pkg_err="yes"
+@@ -42108,7 +42108,7 @@ if test "${enable_nuv+set}" = set; then
+ echo "$as_me: error: liblzo2 is required for NuppelVideo support, try --enable-lzo" >&2;}
+    { (exit 1); exit 1; }; }
+          fi
+-    	 if test true == "$have_x86_64cpu"; then
++    	 if test true = "$have_x86_64cpu"; then
+            { echo "$as_me:$LINENO: WARNING: NuppelVideo support on x86_64 platform is ***EXPERIMENTAL***" >&5
+ echo "$as_me: WARNING: NuppelVideo support on x86_64 platform is ***EXPERIMENTAL***" >&2;}
+          elif test true != "$have_x86cpu"; then
