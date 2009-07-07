@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/07 12:36:31 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/07 14:22:42 sborrill Exp $
 
 PKGNAME=		space_dapp-20060717
 CATEGORIES=		x11
@@ -25,4 +25,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/space_dapp ${DESTDIR}${PREFIX}/bin/
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
