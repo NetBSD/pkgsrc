@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/07 12:36:31 sborrill Exp $
+
+SHA1 (space_dapp.c) = 64c7c592459a0e29b06b00c68e3d35e4224ac93e
+RMD160 (space_dapp.c) = 65ba055800b04a69da3519b3230944d6f3d12017
+Size (space_dapp.c) = 4938 bytes
+SHA1 (patch-space_dapp.c) = 1220ee13501986e99a89001bb4a567f148c93443
