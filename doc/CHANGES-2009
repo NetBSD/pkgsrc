@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2478 2009/07/07 20:14:45 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2479 2009/07/07 20:17:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3295,3 +3295,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Perl-Tidy to 20090616 [sno 2009-07-07]
 	Updated devel/p5-File-Temp to 0.22 [sno 2009-07-07]
 	Updated finance/p5-Finance-Currency-Convert-WebserviceX to 0.07001 [sno 2009-07-07]
+	Updated databases/p5-DBD-mysql to 4.012 [sno 2009-07-07]
