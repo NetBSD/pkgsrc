@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/04 11:40:24 hasso Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/07 17:54:26 joerg Exp $
 #
 
 DISTNAME=	xdg-user-dirs-0.10
@@ -8,6 +8,8 @@ MASTER_SITES=	http://user-dirs.freedesktop.org/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/xdg-user-dirs
 COMMENT=	Tool to manage "well known" user directories
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
