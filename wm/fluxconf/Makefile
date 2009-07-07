@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/11/01 14:52:25 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/07 19:52:56 joerg Exp $
 #
 
 DISTNAME=	fluxconf-0.9.9
@@ -9,6 +9,8 @@ MASTER_SITES=	http://devaux.fabien.free.fr/flux/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://devaux.fabien.free.fr/flux/
 COMMENT=	GTK based configuration tool for the fluxbox window manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		fluxbox-[0-9]*:../../wm/fluxbox
 
