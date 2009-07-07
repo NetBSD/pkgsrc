@@ -1,0 +1,5 @@
+Picard is the next generation MusicBrainz tagging application. This new
+tagging concept is album oriented, as opposed to track/file oriented
+like the ClassicTagger was. Picard is written in Python, which is a
+cross-platform language, and makes use of cross-platform libraries -
+this allows the same code to run both on Windows, Linux and Mac OS X.
