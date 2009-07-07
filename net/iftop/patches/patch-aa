@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2009/07/07 21:20:37 joerg Exp $
+
+--- iftop.c.orig	2009-07-05 17:30:23.000000000 +0200
++++ iftop.c
+@@ -528,6 +528,12 @@ void packet_init() {
+     else if(dlt == DLT_PPP) {
+         packet_handler = handle_ppp_packet;
+     }
++#ifdef DLT_PPP_SERIAL
++    else if(dlt == DLT_PPP_SERIAL) {
++        packet_handler = handle_ppp_packet;
++    }
++
++#endif
+ /* 
+  * SLL support not available in older libpcaps
+  */
