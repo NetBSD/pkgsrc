@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/05/26 22:25:25 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2009/07/07 05:51:28 joerg Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -14,6 +14,8 @@ CONFLICTS+=	openldap-client-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM=	Linux-*-*
+
+MAKE_JOBS_SAFE=	no
 
 WRKSRC=		${WRKDIR}/mozilla
 USE_TOOLS+=	gmake perl
