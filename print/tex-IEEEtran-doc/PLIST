@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/07 23:25:17 minskim Exp $
+share/texmf-dist/doc/latex/IEEEtran/IEEEtran_HOWTO.pdf
+share/texmf-dist/doc/latex/IEEEtran/IEEEtran_bst_HOWTO.pdf
+share/texmf-dist/doc/latex/IEEEtran/IEEEtrantools_doc.txt
+share/texmf-dist/doc/latex/IEEEtran/README
+share/texmf-dist/doc/latex/IEEEtran/README.bibtex
+share/texmf-dist/doc/latex/IEEEtran/README.extras
+share/texmf-dist/doc/latex/IEEEtran/README.testflow
+share/texmf-dist/doc/latex/IEEEtran/README.tools
+share/texmf-dist/doc/latex/IEEEtran/bare_adv.tex
+share/texmf-dist/doc/latex/IEEEtran/bare_conf.tex
+share/texmf-dist/doc/latex/IEEEtran/bare_jrnl.tex
+share/texmf-dist/doc/latex/IEEEtran/bare_jrnl_compsoc.tex
+share/texmf-dist/doc/latex/IEEEtran/changelog.txt
+share/texmf-dist/doc/latex/IEEEtran/font_install_how.txt
+share/texmf-dist/doc/latex/IEEEtran/testflow.tex
+share/texmf-dist/doc/latex/IEEEtran/testflow_ctl_A4.pdf
+share/texmf-dist/doc/latex/IEEEtran/testflow_ctl_LTR.pdf
+share/texmf-dist/doc/latex/IEEEtran/testflow_doc.pdf
+share/texmf-dist/doc/latex/IEEEtran/tux.eps
