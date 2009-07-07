@@ -1,15 +1,31 @@
-$NetBSD: patch-ag,v 1.1 2002/03/19 12:21:08 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2009/07/07 16:38:39 joerg Exp $
 
---- do-install.orig	Tue Oct 21 18:20:43 1997
+--- do-install.orig	1997-10-21 23:20:43.000000000 +0200
 +++ do-install
-@@ -57,9 +57,10 @@
+@@ -23,12 +23,12 @@ echo
+ echo Thanks
+ echo
+ 
+-ROSELIBDIR=$LIBDIR/rosegarden
++ROSELIBDIR=${DESTDIR}$LIBDIR/rosegarden
+ 
+ ( set -x
+ 
+-$install -d $BINDIR
+-$install -s -c ./bin/rosegarden $BINDIR
++$install -d ${DESTDIR}$BINDIR
++$install -s -c ./bin/rosegarden ${DESTDIR}$BINDIR
+ 
+ $install -d $ROSELIBDIR/bin
+ $install -s -c ./bin/sequencer  $ROSELIBDIR/bin
+@@ -57,9 +57,10 @@ $install -d $ROSELIBDIR/rosepetal-filter
  $install -c ./petal/harmonizer.tcl $ROSELIBDIR/rosepetal-filters
  $install -c ./petal/pattern.tcl $ROSELIBDIR/rosepetal-filters
  
 -test -d $HOME/.. || exit 0  # not set
 -test -f $HOME/Rosegarden && mv $HOME/Rosegarden $HOME/Rosegarden.SAVED
 -$install -c -m 644 Rosegarden $HOME
-+ADDIR=$LIBDIR/X11/app-defaults
++ADDIR=${DESTDIR}$LIBDIR/X11/app-defaults
 +test -d $ADDIR &&\
 + sed -e s:/usr/local/lib:$LIBDIR: -e s:/usr/local/bin:$BINDIR: Rosegarden.in >Rosegarden &&\
 + $install -c -m 644 Rosegarden $ADDIR

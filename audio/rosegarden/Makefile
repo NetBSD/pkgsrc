@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/11/10 17:21:33 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/07 16:38:39 joerg Exp $
 
 DISTNAME=	rosegarden-2.1pl4
 PKGNAME=	rosegarden-2.1.4
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.rosegardenmusic.com/
 COMMENT=	Notation editor & MIDI sequencer
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake makedepend
