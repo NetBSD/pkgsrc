@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/01/18 05:09:54 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2009/07/07 18:50:54 joerg Exp $
 #
 
 DISTNAME=	tinyproxy-1.6.2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tinyproxy/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tinyproxy.sourceforge.net/
 COMMENT=	Lightweight HTTP/SSL proxy
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 
@@ -49,13 +51,13 @@ SUBST_SED.docs+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.docs+=	-e 's,@DATADIR@,${PREFIX}/share/tinyproxy,g'
 SUBST_SED.docs+=	-e 's,@VARBASE@,${VARBASE},g'
 
+INSTALLATION_DIRS=	${EGDIR} share/doc/tinyproxy
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/tinyproxy.conf \
-		${EGDIR}/tinyproxy.conf.default
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tinyproxy
+		${DESTDIR}${EGDIR}/tinyproxy.conf.default
 	${INSTALL_DATA} ${WRKSRC}/doc/filter-howto.txt \
-		${PREFIX}/share/doc/tinyproxy/
+		${DESTDIR}${PREFIX}/share/doc/tinyproxy/
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
