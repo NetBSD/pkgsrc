@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/03 14:02:57 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2009/07/07 20:54:28 sno Exp $
 
-SHA1 (Class-Gomor-1.01.tar.gz) = 68a53cbc43095db7b4a5f76a70db57455ae85d54
-RMD160 (Class-Gomor-1.01.tar.gz) = d391af42f158b8e8845f1aacc757cb492bface66
-Size (Class-Gomor-1.01.tar.gz) = 8862 bytes
+SHA1 (Class-Gomor-1.02.tar.gz) = 4853568de0f276937e92041a087f733efeef3e82
+RMD160 (Class-Gomor-1.02.tar.gz) = b9cbab4ee557ac1f5a67742c51cfc14c267c5a8e
+Size (Class-Gomor-1.02.tar.gz) = 9190 bytes
