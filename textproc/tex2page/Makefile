@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/20 00:58:28 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/07 20:37:28 joerg Exp $
 #
 
 DISTNAME=		tex2page
@@ -11,6 +11,8 @@ MASTER_SITES=		http://www.ccs.neu.edu/home/dorai/tex2page/
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.ccs.neu.edu/home/dorai/tex2page/
 COMMENT=		Converts TeX manuscripts into (HTML) web pages
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
@@ -25,10 +27,11 @@ do-build:
 	(cd ${WRKSRC} && ./my-tex2page tex2page-doc)
 	(cd ${WRKSRC} && ./my-tex2page tex2page-doc)
 
+INSTALLATION_DIRS=	bin share/doc//tex2page
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/my-tex2page ${PREFIX}/bin/tex2page
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc//tex2page
-	${INSTALL} ${WRKSRC}/*.html ${WRKSRC}/*.gif ${PREFIX}/share/doc//tex2page
+	${INSTALL_SCRIPT} ${WRKSRC}/my-tex2page ${DESTDIR}${PREFIX}/bin/tex2page
+	${INSTALL} ${WRKSRC}/*.html ${WRKSRC}/*.gif ${DESTDIR}${PREFIX}/share/doc//tex2page
 
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../lang/guile16/buildlink3.mk"
