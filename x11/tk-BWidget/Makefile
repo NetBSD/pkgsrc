@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/05/21 09:58:23 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/07 18:21:47 joerg Exp $
 
 DISTNAME=	BWidget-1.7.0
 PKGNAME=	tk-${DISTNAME}
@@ -14,6 +14,7 @@ DEPENDS+=	tcl>=8.4:../../lang/tcl
 DEPENDS+=	tk>=8.4:../../x11/tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_EXTRACT=	YES
 NO_BUILD=	YES
@@ -21,9 +22,10 @@ NO_CONFIGURE=	YES
 
 USE_TOOLS+=	gtar
 
+INSTALLATION_DIRS=	lib/tcl
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/tcl
-	cd ${PREFIX}/lib/tcl && ${GTAR} zxpf ${DISTDIR}/${DISTFILES}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/tcl/${DISTNAME}
+	cd ${DESTDIR}${PREFIX}/lib/tcl && ${GTAR} zxpf ${DISTDIR}/${DISTFILES}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/lib/tcl/${DISTNAME}
 
 .include "../../mk/bsd.pkg.mk"

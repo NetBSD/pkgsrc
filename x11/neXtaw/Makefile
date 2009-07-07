@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/01/04 01:25:51 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/07 18:22:37 joerg Exp $
 
 DISTNAME=	neXtaw-0.15.1
 PKGREVISION=	3
@@ -8,6 +8,8 @@ MASTER_SITES=	http://siag.nu/pub/neXtaw/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://siag.nu/neXtaw/
 COMMENT=	NeXTstep-like widgets based on the Athena Widget set
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
@@ -22,17 +24,17 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 GCC_REQD+=	2.95
 .endif
 
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/FAQ ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/README.XAW3D ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/FAQ ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/README.XAW3D ${DESTDIR}${DOCDIR}
 	set -e; cd ${WRKSRC}/doc/app-defaults; for file in *; do	\
 		case "$${file}" in					\
 		Makefile*)	continue ;;				\
 		esac;							\
-		${INSTALL_DATA} "$$file" ${EGDIR};			\
+		${INSTALL_DATA} "$$file" ${DESTDIR}${EGDIR};			\
 	done
 
 .include "../../x11/libXext/buildlink3.mk"
