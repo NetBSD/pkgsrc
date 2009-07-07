@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/13 02:31:56 epg Exp $
+$NetBSD: distinfo,v 1.2 2009/07/07 17:44:50 drochner Exp $
 
-SHA1 (libdiscid-0.1.0.tar.gz) = fbd4494155086206a717e0ef94e08d0f2978b317
-RMD160 (libdiscid-0.1.0.tar.gz) = f18b21bdb33eb0f4471b5e68a3b7bff295c70ab7
-Size (libdiscid-0.1.0.tar.gz) = 327716 bytes
+SHA1 (libdiscid-0.2.2.tar.gz) = 103ead94eeb8bea04ad92ab15ed6832be9b3fad9
+RMD160 (libdiscid-0.2.2.tar.gz) = 200703a02cb47d19f478b9a9c83e01a22737f491
+Size (libdiscid-0.2.2.tar.gz) = 347907 bytes
+SHA1 (patch-aa) = da67f45f26672a5c4e08d81954696bc0a5907022
+SHA1 (patch-ab) = 364cc81b7db9f84a82fe7dd7330f8648fa23cf21
