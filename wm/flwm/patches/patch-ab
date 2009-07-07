@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2009/07/07 20:04:17 joerg Exp $
+
+--- Makefile.orig	2009-07-07 22:01:57.000000000 +0200
++++ Makefile
+@@ -44,8 +44,8 @@ makedepend:
+ include makedepend
+ 
+ install: $(PROGRAM)
+-	$(INSTALL) -s $(PROGRAM) $(bindir)/$(PROGRAM)
+-	$(INSTALL) $(PROGRAM).$(MANPAGE) $(mandir)/man$(MANPAGE)/$(PROGRAM).$(MANPAGE)
++	$(INSTALL) -s $(PROGRAM) ${DESTDIR}$(bindir)/$(PROGRAM)
++	$(INSTALL) $(PROGRAM).$(MANPAGE) ${DESTDIR}$(mandir)/man$(MANPAGE)/$(PROGRAM).$(MANPAGE)
+ 
+ uninstall:
+ 	-@ rm -f $(bindir)/$(PROGRAM)
