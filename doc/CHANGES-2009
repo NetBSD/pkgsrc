@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2437 2009/07/07 11:44:41 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2438 2009/07/07 12:38:06 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3254,3 +3254,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyotyrant to 1.1.30 [obache 2009-07-07]
 	Updated databases/p5-tokyotyrant to 1.13 [obache 2009-07-07]
 	Updated databases/ruby-tokyotyrant to 1.10 [obache 2009-07-07]
+	Added x11/space_dapp version 20060717 [sborrill 2009-07-07]
