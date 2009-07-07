@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2441 2009/07/07 16:00:26 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2442 2009/07/07 16:12:02 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3258,3 +3258,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated comms/p5-Asterisk to 1.01 [sno 2009-07-07]
 	Updated wm/fluxbox to 1.1.1 [sborrill 2009-07-07]
 	Updated devel/p5-Term-ANSIColor to 2.01 [sno 2009-07-07]
+	Added mbone/wbd version 1.0p4 [sborrill 2009-07-07]
