@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2007/01/07 09:14:16 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/07 17:58:21 joerg Exp $
 #
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/xbindkeys/Makefile.common"
 
@@ -15,7 +17,7 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/xbindkeys_show ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/xbindkeys_show.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/xbindkeys_show ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/xbindkeys_show.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
