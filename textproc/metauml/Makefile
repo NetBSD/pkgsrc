@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/01 20:41:37 tonio Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/07 21:08:34 joerg Exp $
 #
 
 DISTNAME=	metauml_lib_0.2.5
@@ -11,6 +11,8 @@ MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://metauml.sourceforge.net/
 COMMENT=	MetaPost library for typesetting UML diagrams
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PKGBASE}_lib
 MPDIR=		${PKG_LOCALTEXMFPREFIX}/metapost/${PKGBASE}
@@ -18,7 +20,7 @@ PLIST_SUBST+=	MPDIR=${MPDIR:C|^${PREFIX}/||}
 INSTALLATION_DIRS+=	${MPDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/thrunk/*.mp ${MPDIR}
+	${INSTALL_DATA} ${WRKSRC}/thrunk/*.mp ${DESTDIR}${MPDIR}
 
 .include "../../print/teTeX/module.mk"
 .include "../../mk/bsd.pkg.mk"
