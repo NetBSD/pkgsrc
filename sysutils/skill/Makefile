@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/10/28 02:18:08 obache Exp $
+# $NetBSD: Makefile,v 1.25 2009/07/07 19:58:19 joerg Exp $
 #
 
 DISTNAME=	skill-4.1.4
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://mysite.verizon.net/jforys/jeffware.html
 COMMENT=	Signal processes given user names, ttys, commands, or pids
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM+= Interix-*-* # currently no machdep support
 
@@ -39,11 +41,13 @@ MAKE_ENV+=	OSTYPE=aix-3
 MAKE_ENV+=	OSTYPE=hpux-10
 .endif
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 pre-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/skill ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/skill.1 ${PREFIX}/${PKGMANDIR}/man1
-	${RM} -f ${PREFIX}/bin/snice ${PREFIX}/${PKGMANDIR}/man1/snice.1
-	${LN} -s skill ${PREFIX}/bin/snice
-	${LN} -s skill.1 ${PREFIX}/${PKGMANDIR}/man1/snice.1
+	${INSTALL_PROGRAM} ${WRKSRC}/skill ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/skill.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${RM} -f ${DESTDIR}${PREFIX}/bin/snice ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/snice.1
+	${LN} -s skill ${DESTDIR}${PREFIX}/bin/snice
+	${LN} -s skill.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/snice.1
 
 .include "../../mk/bsd.pkg.mk"
