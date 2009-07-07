@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2008/11/27 21:15:36 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2009/07/07 19:01:17 joerg Exp $
 
 --- src/Makefile.in.orig	2008-11-17 16:55:36.000000000 +0900
 +++ src/Makefile.in
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.4 2008/11/27 21:15:36 minskim Exp $
 -	${INSTALL_DATA} ${SLIBREALNAME} ${LIBDIR}/${SLIBREALNAME}
 -	${RM} -f ${LIBDIR}/${SLIBNAME}
 -	${LN_S} ${LIBDIR}/${SLIBREALNAME} ${LIBDIR}/${SLIBNAME}
-+	${LIBTOOL} --mode=install ${INSTALL} ${LIBNAME:.a=.la} ${LIBDIR}
++	${LIBTOOL} --mode=install ${INSTALL} ${LIBNAME:.a=.la} ${DESTDIR}${LIBDIR}
  
  deinstall: uninstall
  uninstall:
