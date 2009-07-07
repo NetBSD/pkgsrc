@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2009/06/09 22:34:39 minskim Exp $
+# $NetBSD: Makefile,v 1.34 2009/07/07 23:20:12 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -58,24 +58,26 @@ DEPENDS+=	tex-hyphen-turkish-[0-9]*:../../print/tex-hyphen-turkish
 DEPENDS+=	tex-hyphen-ukrainian-[0-9]*:../../print/tex-hyphen-ukrainian
 DEPENDS+=	tex-lambda-[0-9]*:../../print/tex-lambda
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
+DEPENDS+=	tex-lm-[0-9]*:../../fonts/tex-lm
 DEPENDS+=	tex-ltxmisc-[0-9]*:../../print/tex-ltxmisc
 DEPENDS+=	tex-marvosym-[0-9]*:../../fonts/tex-marvosym
 DEPENDS+=	tex-makeindex-[0-9]*:../../textproc/tex-makeindex
 DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
 DEPENDS+=	tex-mflogo-[0-9]*:../../fonts/tex-mflogo
+DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
 DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
+DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
 DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
 DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
 DEPENDS+=	tex-symbol-[0-9]*:../../fonts/tex-symbol
+DEPENDS+=	tex-times-[0-9]*:../../fonts/tex-times
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-wasy-[0-9]*:../../fonts/tex-wasy
 DEPENDS+=	tex-zapfding-[0-9]*:../../fonts/tex-zapfding
 
-EXTRACT_ELEMENTS+=	ChangeLog
-EXTRACT_ELEMENTS+=	LICENSE.texmf
 EXTRACT_ELEMENTS+=	aliases
 EXTRACT_ELEMENTS+=	bibtex
 EXTRACT_ELEMENTS+=	context
@@ -122,10 +124,6 @@ TEX_MAP_FILES+=		qtm.map
 TEX_MAP_FILES+=		qzc.map
 TEX_MAP_FILES+=		cmcyr.map
 TEX_MAP_FILES+=		contnav.map
-TEX_MAP_FILES+=		cork-lm.map
-TEX_MAP_FILES+=		qx-lm.map
-TEX_MAP_FILES+=		texnansi-lm.map
-TEX_MAP_FILES+=		ts1-lm.map
 TEX_MAP_FILES+=		mathpple.map
 TEX_MAP_FILES+=		omega.map
 TEX_MAP_FILES+=		pxfonts.map
@@ -145,8 +143,7 @@ TEX_MIXEDMAP_FILES+=	vnr.map
 
 post-extract:
 	rm -f ${WRKSRC}/ls-R
-	rm -rf ${WRKSRC}/bibtex/bib/ams
-	rm -f ${WRKSRC}/bibtex/bib/base/xampl.bib
+	rm -rf ${WRKSRC}/bibtex/bib/[A-Za-o]*
 	rm -rf ${WRKSRC}/bibtex/bst/ams
 	rm -rf ${WRKSRC}/bibtex/bst/base
 	rm -rf ${WRKSRC}/bibtex/bst/misc
@@ -155,6 +152,7 @@ post-extract:
 	rmdir ${WRKSRC}/doc/generic/pdfcrop
 	rm -rf ${WRKSRC}/doc/etex
 	rm -rf ${WRKSRC}/doc/fonts/am*
+	rm -rf ${WRKSRC}/doc/fonts/lm
 	rm -rf ${WRKSRC}/doc/fonts/mar*
 	rm -rf ${WRKSRC}/doc/generic/[a-f]*
 	rm -rf ${WRKSRC}/doc/latex/ams[f-z]*
@@ -166,6 +164,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/natbib
 	rm -rf ${WRKSRC}/doc/latex/oberdiek
 	rm -rf ${WRKSRC}/doc/latex/placeins
+	rm -rf ${WRKSRC}/doc/latex/preprint
 	rm -rf ${WRKSRC}/doc/latex/rotating
 	rm -rf ${WRKSRC}/doc/latex/stmaryrd
 	rm -rf ${WRKSRC}/doc/latex/tools
@@ -175,15 +174,18 @@ post-extract:
 	rm -rf ${WRKSRC}/dvips/[b-l]*
 	rm -f ${WRKSRC}/dvips/misc/resolution400.ps
 	rm -rf ${WRKSRC}/dvips/tetex
-	rm -rf ${WRKSRC}/fonts/afm/adobe/symbol
+	rm -rf ${WRKSRC}/fonts/afm/adobe/[q-y]*
 	rm -rf ${WRKSRC}/fonts/afm/adobe/zapfding
+	rm -rf ${WRKSRC}/fonts/afm/public/lm
 	rm -rf ${WRKSRC}/fonts/afm/public/marvosym
-	rm -rf ${WRKSRC}/fonts/afm/urw/symbol
+	rm -rf ${WRKSRC}/fonts/afm/urw/[q-y]*
 	rm -rf ${WRKSRC}/fonts/afm/urw/zapfding
 	rmdir ${WRKSRC}/fonts/cmap
 	rm -rf ${WRKSRC}/fonts/enc/dvips/base
+	rm -rf ${WRKSRC}/fonts/enc/dvips/lm
 	rmdir ${WRKSRC}/fonts/lig
 	rmdir ${WRKSRC}/fonts/map/dvipdfm/updmap
+	rm -rf ${WRKSRC}/fonts/map/dvips/lm
 	rm -f ${WRKSRC}/fonts/map/dvips/misc/marvosym.map
 	rm -f ${WRKSRC}/fonts/map/dvips/tetex/bsr*
 	rm -f ${WRKSRC}/fonts/map/dvips/tetex/tt*
@@ -193,12 +195,13 @@ post-extract:
 	rmdir ${WRKSRC}/fonts/opentype
 	rmdir ${WRKSRC}/fonts/pk
 	rmdir ${WRKSRC}/fonts/sfd
-	rm -rf ${WRKSRC}/fonts/tfm/adobe/symbol
+	rm -rf ${WRKSRC}/fonts/tfm/adobe/[q-y]*
 	rm -rf ${WRKSRC}/fonts/tfm/adobe/zapfding
-	rm -rf ${WRKSRC}/fonts/tfm/cg/symbol
+	rm -rf ${WRKSRC}/fonts/tfm/cg/[p-s]*
+	rm -rf ${WRKSRC}/fonts/tfm/cg/times
 	rmdir ${WRKSRC}/fonts/truetype
 	rm -rf ${WRKSRC}/fonts/type1/public/tt2001
-	rm -rf ${WRKSRC}/fonts/type1/urw/symbol
+	rm -rf ${WRKSRC}/fonts/type1/urw/[q-y]*
 	rm -rf ${WRKSRC}/fonts/type1/urw/zapfding
 	rmdir ${WRKSRC}/fonts/type3
 	rmdir ${WRKSRC}/fonts/type42
@@ -225,14 +228,20 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/tfm/ams
 	rm -rf ${WRKSRC}/fonts/tfm/public/cm
 	rm -rf ${WRKSRC}/fonts/tfm/public/latex
+	rm -rf ${WRKSRC}/fonts/tfm/public/lm
 	rm -rf ${WRKSRC}/fonts/tfm/public/marvosym
 	rm -rf ${WRKSRC}/fonts/tfm/public/mflogo
 	rm -f ${WRKSRC}/fonts/tfm/public/misc/[b-q]*.tfm
 	rm -rf ${WRKSRC}/fonts/tfm/public/[r-s]*
 	rm -rf ${WRKSRC}/fonts/tfm/public/w*
+	rm -rf ${WRKSRC}/fonts/tfm/yandy/times
 	rm -rf ${WRKSRC}/fonts/type1/bluesky
 	rm -rf ${WRKSRC}/fonts/type1/hoekwater/[d-z]*
+	rm -rf ${WRKSRC}/fonts/type1/public/lm
 	rm -rf ${WRKSRC}/fonts/type1/public/marvosym
+	rm -rf ${WRKSRC}/fonts/vf/adobe/[q-y]*
+	rm -rf ${WRKSRC}/fonts/vf/cg/times
+	rm -rf ${WRKSRC}/fonts/vf/yandy/times
 	rm -rf ${WRKSRC}/metafont/[a-l]*
 	rm -f ${WRKSRC}/metafont/misc/[a-w]*
 	rm -rf ${WRKSRC}/omega/ocp/misc
@@ -269,13 +278,16 @@ post-extract:
 	rm -f ${WRKSRC}/tex/latex/graphics/p[a-r]*
 	rm -f ${WRKSRC}/tex/latex/graphics/t[cr]*
 	rm -rf ${WRKSRC}/tex/latex/hyperref
+	rm -rf ${WRKSRC}/tex/latex/lm
 	rm -rf ${WRKSRC}/tex/latex/marvosym
 	rm -rf ${WRKSRC}/tex/latex/mflogo
+	rm -rf ${WRKSRC}/tex/latex/multirow
 	rm -rf ${WRKSRC}/tex/latex/n[a-n]*
 	rm -f ${WRKSRC}/tex/latex/oberdiek/[a-u]*
 	rm -rf ${WRKSRC}/tex/latex/optional
 	rm -rf ${WRKSRC}/tex/latex/parskip
 	rm -rf ${WRKSRC}/tex/latex/placeins
+	rm -rf ${WRKSRC}/tex/latex/preprint
 	rm -rf ${WRKSRC}/tex/latex/psnfss
 	rm -rf ${WRKSRC}/tex/latex/relsize
 	rm -rf ${WRKSRC}/tex/latex/rotating
