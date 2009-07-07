@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2009/07/07 20:34:11 joerg Exp $
 
 DISTNAME=		unroff-1.0
 PKGNAME=		unroff-1.0.2
@@ -13,6 +13,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www-rn.informatik.uni-bremen.de/software/unroff/
 COMMENT=		Programmable troff translator with backend for HTML
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=		unroff
 
 USE_TOOLS+=	pax
@@ -26,18 +28,14 @@ post-patch:
 
 LIBDIR=		${PREFIX}/share/unroff
 
+INSTALLATION_DIRS=	bin ${LIBDIR}/doc ${LIBDIR}/misc ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${LIBDIR}
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} src/unroff ${PREFIX}/bin/unroff
-	cd ${WRKSRC} && pax -wr scm ${LIBDIR}
-	${INSTALL_DATA_DIR} ${LIBDIR}/doc
-	cd ${WRKSRC} && ${INSTALL_DATA} doc/manual.ms ${LIBDIR}/doc
-	${INSTALL_DATA_DIR} ${LIBDIR}/misc
-	cd ${WRKSRC} && ${INSTALL_DATA} doc/tmac.hyper misc/sample.unroff ${LIBDIR}/misc
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${LIBDIR}
-	cd ${WRKSRC} && ${INSTALL_MAN} doc/*.1 ${PREFIX}/${PKGMANDIR}/man1
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} src/unroff ${DESTDIR}${PREFIX}/bin/unroff
+	cd ${WRKSRC} && pax -wr scm ${DESTDIR}${LIBDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} doc/manual.ms ${DESTDIR}${LIBDIR}/doc
+	cd ${WRKSRC} && ${INSTALL_DATA} doc/tmac.hyper misc/sample.unroff ${DESTDIR}${LIBDIR}/misc
+	cd ${WRKSRC} && ${INSTALL_MAN} doc/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/elk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

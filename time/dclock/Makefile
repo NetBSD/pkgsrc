@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/01 23:37:53 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/07 20:27:10 joerg Exp $
 #
 
 DISTNAME=	dclock
@@ -11,10 +11,14 @@ EXTRACT_SUFX=	.shar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Digital clock for X
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS+=	ivtools-*
 
 WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

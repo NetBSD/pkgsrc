@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/05/30 00:24:00 zafer Exp $
+# $NetBSD: Makefile,v 1.22 2009/07/07 20:25:27 joerg Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_FREEBSD}
 MAINTAINER=	minoura@NetBSD.org
 COMMENT=	Analog clock with image in the middle
 LICENSE=	emiclock-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	Do not distribute
 NO_SRC_ON_FTP=${RESTRICTED}
@@ -28,10 +30,11 @@ post-patch:
 	${ECHO} "#undef USE_XAW3D" > ${WRKSRC}/xawconfig.h
 .endif
 
+INSTALLATION_DIRS=	lib/X11/ja_JP.eucJP/app-defaults
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/ja_JP.eucJP/app-defaults
 	${INSTALL_DATA} ${WRKSRC}/resources/R6/EUC/EmiClock.ad \
-		${PREFIX}/lib/X11/ja_JP.eucJP/app-defaults/EmiClock
+		${DESTDIR}${PREFIX}/lib/X11/ja_JP.eucJP/app-defaults/EmiClock
 
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
