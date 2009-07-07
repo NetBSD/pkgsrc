@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/03/18 13:00:54 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2009/07/07 11:00:44 zafer Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.26.0
@@ -23,7 +23,7 @@ DEPENDS+=	bug-buddy>=2.16:../../net/bug-buddy
 
 PKGCONFIG_OVERRIDE+=	gnome-python-desktop-2.0.pc.in
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	26 25 24
 
 .include "../../lang/python/extension.mk"
 .include "../../devel/libwnck/buildlink3.mk"
