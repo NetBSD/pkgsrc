@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.591 2009/06/18 16:43:51 agc Exp $
+# $NetBSD: Makefile,v 1.592 2009/07/07 12:38:06 sborrill Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -315,6 +315,7 @@ SUBDIR+=	scrnsaverproto
 SUBDIR+=	sessreg
 SUBDIR+=	setxkbmap
 SUBDIR+=	slock
+SUBDIR+=	space_dapp
 SUBDIR+=	speyes
 SUBDIR+=	ssystem
 SUBDIR+=	stalonetray
