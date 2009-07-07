@@ -1,37 +1,28 @@
-$NetBSD: patch-bf,v 1.1 2007/11/01 13:08:06 rillig Exp $
+$NetBSD: patch-bf,v 1.2 2009/07/07 15:47:59 sborrill Exp $
 
 Adding "const" to a primitive type is useless. Sunpro doesn't like it.
 
---- src/CurrentWindowCmd.cc.orig	2007-03-19 20:57:09.000000000 +0100
-+++ src/CurrentWindowCmd.cc	2007-11-01 13:05:58.247018000 +0100
-@@ -111,7 +111,7 @@ FluxboxWindow &WindowHelperCmd::fbwindow
-     return *FocusControl::focusedFbWindow();
- }
+--- src/CurrentWindowCmd.cc.orig	2008-09-01 16:59:05.000000000 +0100
++++ src/CurrentWindowCmd.cc	2009-07-06 12:50:49.000000000 +0100
+@@ -348,7 +348,7 @@
+ REGISTER_COMMAND_PARSER(moveup, MoveCmd::parse, void);
+ REGISTER_COMMAND_PARSER(movedown, MoveCmd::parse, void);
  
 -MoveCmd::MoveCmd(const int step_size_x, const int step_size_y) :
 +MoveCmd::MoveCmd(int step_size_x, int step_size_y) :
    m_step_size_x(step_size_x), m_step_size_y(step_size_y) { }
  
  void MoveCmd::real_execute() {
-@@ -120,7 +120,7 @@ void MoveCmd::real_execute() {
-       fbwindow().y() + m_step_size_y);
- }
+@@ -379,7 +379,7 @@
+ REGISTER_COMMAND_PARSER(resizehorizontal, ResizeCmd::parse, void);
+ REGISTER_COMMAND_PARSER(resizevertical, ResizeCmd::parse, void);
  
 -ResizeCmd::ResizeCmd(const int step_size_x, const int step_size_y) :
 +ResizeCmd::ResizeCmd(int step_size_x, int step_size_y) :
      m_step_size_x(step_size_x), m_step_size_y(step_size_y) { }
  
  void ResizeCmd::real_execute() {
-@@ -134,7 +134,7 @@ void ResizeCmd::real_execute() {
-     fbwindow().resize(w, h);
- }
- 
--MoveToCmd::MoveToCmd(const int step_size_x, const int step_size_y, const unsigned int refc) :
-+MoveToCmd::MoveToCmd(int step_size_x, int step_size_y, unsigned int refc) :
-     m_step_size_x(step_size_x), m_step_size_y(step_size_y), m_refc(refc) { }
- 
- void MoveToCmd::real_execute() {
-@@ -161,7 +161,7 @@ void MoveToCmd::real_execute() {
+@@ -440,7 +440,7 @@
  }
  
  

@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.10 2007/11/04 15:34:09 rillig Exp $
+$NetBSD: patch-aa,v 1.11 2009/07/07 15:47:59 sborrill Exp $
 
 * "grep -q" doesn't work everywhere.
 * Do not use the home directory of the user building the package.
 
---- util/fluxbox-generate_menu.in.orig	2007-10-08 18:49:08.000000000 +0000
-+++ util/fluxbox-generate_menu.in	2007-11-04 15:31:20.000000000 +0000
-@@ -51,7 +51,7 @@ WHOAMI=`whoami`
+--- util/fluxbox-generate_menu.in.orig	2009-07-06 11:35:35.000000000 +0100
++++ util/fluxbox-generate_menu.in	2009-07-06 11:38:59.000000000 +0100
+@@ -48,7 +48,7 @@
  [ "$WHOAMI" = root ] && PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
  
  # Check for Imlib2-support
--if fluxbox -info 2> /dev/null | grep -q "^IMLIB"; then
-+if fluxbox -info 2> /dev/null | grep "^IMLIB" > /dev/null; then
+-if @pkgprefix@fluxbox@pkgsuffix@ -info 2> /dev/null | grep -q "^IMLIB"; then
++if @pkgprefix@fluxbox@pkgsuffix@ -info 2> /dev/null | grep "^IMLIB" > /dev/null; then
      PNG_ICONS="yes"
  else
      # better assume to assume "no"
-@@ -338,7 +338,7 @@ searchForIcon(){
+@@ -308,7 +308,7 @@
      # echo "^.${entry_exec}.[[:space:]]*<.*/${icon_base}\....>" 
      if [ -f "$entry_icon" ]; then
      # if icon exists and entry does not already exists, add it
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.10 2007/11/04 15:34:09 rillig Exp $
              echo -e "\"${entry_exec}\" \t <${entry_icon}>" >> $ICONMAPPING
          else 
              : echo "#    mapping already exists for ${entry_exec}" >> $ICONMAPPING
-@@ -1210,7 +1210,7 @@ case ${LC_ALL} in
+@@ -1185,7 +1185,7 @@
  esac
  
  # Set Defaults
@@ -32,12 +32,3 @@ $NetBSD: patch-aa,v 1.10 2007/11/04 15:34:09 rillig Exp $
  MENUFILENAME="${MENUFILENAME:=${USERFLUXDIR}/menu}"
  MENUTITLE="${MENUTITLE:=Fluxbox}"
  HOMEPAGE="${HOMEPAGE:=fluxbox.org}"
-@@ -1708,7 +1708,7 @@ append_submenu "${MULTIMEDIAMENU}"
-        append_submenu "${XUTILSMENU}"
-            normal_find xfontsel xman xload xbiff editres viewres xclock \
-                xmag wmagnify gkrellm gkrellm2 vmware portagemaster agave 
--           find_it xrdb append "[exec] (Reload .Xdefaults) {xrdb -load $HOME/.Xdefaults}"
-+           find_it xrdb append "[exec] (Reload .Xdefaults) {xrdb -load \$HOME/.Xdefaults}"
-        append_menu_end
- append_menu_end
- 

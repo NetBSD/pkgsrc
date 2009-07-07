@@ -1,34 +1,17 @@
-$NetBSD: patch-ac,v 1.9 2007/11/01 13:08:05 rillig Exp $
+$NetBSD: patch-ac,v 1.10 2009/07/07 15:47:59 sborrill Exp $
 
---- src/fluxbox.cc.orig	2007-03-19 20:57:09.000000000 +0100
-+++ src/fluxbox.cc	2007-10-31 00:54:40.610976000 +0100
-@@ -94,7 +94,8 @@ class Toolbar { };
+--- src/fluxbox.cc.orig	2009-07-06 12:28:48.000000000 +0100
++++ src/fluxbox.cc	2009-07-06 12:35:00.000000000 +0100
+@@ -84,7 +84,7 @@
  #ifdef SHAPE
  #include <X11/extensions/shape.h>
  #endif // SHAPE
 -#ifdef HAVE_RANDR
-+#undef HAVE_RANDR
-+#if defined(HAVE_RANDR) && !defined(__sun)
++#if !defined(__sun)
  #include <X11/extensions/Xrandr.h>
  #endif // HAVE_RANDR
  
-@@ -596,11 +597,11 @@ void Fluxbox::setupConfigFiles() {
- 
-     bool create_init = false, create_keys = false, create_menu = false;
- 
--    string dirname = getenv("HOME") + string("/.") + m_RC_PATH + "/";
-+    string dirname = getenv("HOME") + string("/.") + m_RC_PATH;
-     string init_file, keys_file, menu_file, slitlist_file;
--    init_file = dirname + m_RC_INIT_FILE;
--    keys_file = dirname + "keys";
--    menu_file = dirname + "menu";
-+    init_file = dirname + "/" + m_RC_INIT_FILE;
-+    keys_file = dirname + "/" + "keys";
-+    menu_file = dirname + "/" + "menu";
- 
-     struct stat buf;
- 
-@@ -1349,7 +1350,7 @@ void Fluxbox::saveWindowSearchGroup(Wind
+@@ -1227,7 +1227,7 @@
  }
  
  void Fluxbox::saveGroupSearch(Window window, WinClient *data) {

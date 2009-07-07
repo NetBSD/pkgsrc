@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/06/14 18:18:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/07/07 15:47:59 sborrill Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fbsetroot
@@ -11,11 +11,16 @@ man/man1/fbrun.1
 man/man1/fbsetbg.1
 man/man1/fbsetroot.1
 man/man1/fluxbox.1
+man/man1/fluxbox-remote.1
 man/man1/fluxstyle.1
 man/man1/startfluxbox.1
+man/man5/fluxbox-keys.5
+share/fluxbox/apps
 share/fluxbox/init
 share/fluxbox/keys
 share/fluxbox/menu
+share/fluxbox/overlay
+share/fluxbox/windowmenu
 share/fluxbox/nls/C/fluxbox.cat
 share/fluxbox/nls/be_BY.CP1251/fluxbox.cat
 share/fluxbox/nls/be_BY.UTF-8/fluxbox.cat
@@ -56,6 +61,7 @@ share/fluxbox/nls/ko_KR.EUC-KR/fluxbox.cat
 share/fluxbox/nls/ko_KR.UTF-8/fluxbox.cat
 share/fluxbox/nls/lv_LV.ISO-8859-13/fluxbox.cat
 share/fluxbox/nls/lv_LV.UTF-8/fluxbox.cat
+share/fluxbox/nls/mk_MK.UTF-8/fluxbox.cat
 share/fluxbox/nls/nb_NO.UTF-8/fluxbox.cat
 share/fluxbox/nls/nl_NL.ISO-8859-15/fluxbox.cat
 share/fluxbox/nls/nl_NL.UTF-8/fluxbox.cat
@@ -75,7 +81,7 @@ share/fluxbox/nls/sl_SI.ISO-8859-2/fluxbox.cat
 share/fluxbox/nls/sl_SI.UTF-8/fluxbox.cat
 share/fluxbox/nls/sv_SE.ISO-8859-1/fluxbox.cat
 share/fluxbox/nls/sv_SE.UTF-8/fluxbox.cat
-share/fluxbox/nls/tr_TR.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/tr_TR.ISO-8859-9/fluxbox.cat
 share/fluxbox/nls/tr_TR.UTF-8/fluxbox.cat
 share/fluxbox/nls/uk_UA.KOI8-U/fluxbox.cat
 share/fluxbox/nls/uk_UA.UTF-8/fluxbox.cat
@@ -85,6 +91,7 @@ share/fluxbox/nls/zh_CN.GB18030/fluxbox.cat
 share/fluxbox/nls/zh_CN.GB2312/fluxbox.cat
 share/fluxbox/nls/zh_CN.GBK/fluxbox.cat
 share/fluxbox/nls/zh_CN.UTF-8/fluxbox.cat
+share/fluxbox/nls/zh_TW.UTF-8/fluxbox.cat
 share/fluxbox/styles/Artwiz
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_active.xpm
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_pressed.xpm
