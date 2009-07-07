@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/11/10 17:21:38 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/07 20:00:27 joerg Exp $
 
 DISTNAME=	xalarm-3.06
 PKGREVISION=	1
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 interactive alarm clock
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	skill>=4.0:../../sysutils/skill
 
