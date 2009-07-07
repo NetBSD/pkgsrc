@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2448 2009/07/07 17:41:46 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2449 2009/07/07 17:47:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3265,3 +3265,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/p5-DBIx-Class-Cursor-Cached version 1.0.1 [sno 2009-07-07]
 	Added devel/p5-B-Compiling version 0.02 [sno 2009-07-07]
 	Updated devel/p5-Devel-Declare to 0.005006 [sno 2009-07-07]
+	Added time/p5-DateTime-Format-SQLite version 0.10 [sno 2009-07-07]

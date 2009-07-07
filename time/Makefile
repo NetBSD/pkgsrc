@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2009/06/09 17:36:21 abs Exp $
+# $NetBSD: Makefile,v 1.98 2009/07/07 17:47:47 sno Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -60,6 +60,7 @@ SUBDIR+=	p5-DateTime-Format-Mail
 SUBDIR+=	p5-DateTime-Format-MySQL
 SUBDIR+=	p5-DateTime-Format-Natural
 SUBDIR+=	p5-DateTime-Format-Pg
+SUBDIR+=	p5-DateTime-Format-SQLite
 SUBDIR+=	p5-DateTime-Format-Strptime
 SUBDIR+=	p5-DateTime-Format-W3CDTF
 SUBDIR+=	p5-DateTime-Locale
