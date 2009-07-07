@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2462 2009/07/07 18:58:28 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2463 2009/07/07 19:03:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3279,3 +3279,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-MooseX-Traits version 0.06 [sno 2009-07-07]
 	Added devel/p5-MooseX-Traits-Pluggable version 0.04 [sno 2009-07-07]
 	Added devel/p5-namespace-autoclean version 0.08 [sno 2009-07-07]
+	Added www/p5-CatalystX-Component-Traits version 0.03 [sno 2009-07-07]
