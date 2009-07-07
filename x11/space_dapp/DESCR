@@ -1,0 +1,5 @@
+This is a little dockapp that does absolutely nothing except for sitting in
+the dockapp area. It consumes very little resources. It is useful in
+conjunction with a window manager that allows maximised windows to be
+prevented from covering the dockapp area; it allows access to the root
+window or menu even when windows are maximised.
