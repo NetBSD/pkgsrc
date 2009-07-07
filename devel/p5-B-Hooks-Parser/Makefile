@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/19 18:02:57 abs Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/07 20:46:53 sno Exp $
 #
 
-DISTNAME=	B-Hooks-Parser-0.08
+DISTNAME=	B-Hooks-Parser-0.09
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=B/}
@@ -9,9 +9,12 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=B/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/B-Hooks-Parser/
 COMMENT=	Interface to perls parser variables
+LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-ExtUtils-Depends>0:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-parent>0:../../devel/p5-parent
+
+BUILD_DEPENDS+=	p5-B-Hooks-EndOfScope-[0-9]*:../../devel/p5-B-Hooks-EndOfScope
+BUILD_DEPENDS+=	p5-ExtUtils-Depends>0:../../devel/p5-ExtUtils-Depends
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
