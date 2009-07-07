@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8226 2009/07/07 22:07:23 sno Exp $
+$NetBSD: TODO,v 1.8227 2009/07/07 22:39:40 sno Exp $
 
 Suggested new packages
 ======================
@@ -1039,7 +1039,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-BerkeleyDB-0.39
 	o p5-Filter-1.37
 	o p5-Net-OpenID-Consumer-1.03
-	o p5-Test-Simple-0.88
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.55
