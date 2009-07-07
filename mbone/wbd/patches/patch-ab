@@ -1,0 +1,47 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/07/07 16:10:18 sborrill Exp $
+--- main.c.orig	1999-02-09 16:29:46.000000000 +0000
++++ main.c	2005-12-22 17:28:24.000000000 +0000
+@@ -87,6 +87,7 @@
+ int maxhops    = 5;
+ int orient     = 1;
+ int readonly   = 0;
++int blockimport = 0;
+ int pssize     = 32768;
+ int datarate   = 32768 * 2;
+ char *username = "";
+@@ -125,6 +126,10 @@
+ 	"Landscape mode"},
+     {"+l", TK_ARGV_CONSTANT, (char *) 3, (char *) &orient,
+ 	"Landscape mode"},
++    {"-i", TK_ARGV_CONSTANT, (char *) 1, (char *) &blockimport,
++	"No imports"},
++    {"+i", TK_ARGV_CONSTANT, (char *) 0, (char *) &blockimport,
++	"Allow import"},
+     {"-r", TK_ARGV_CONSTANT, (char *) 1, (char *) &readonly,
+ 	"Read only"},
+     {"+r", TK_ARGV_CONSTANT, (char *) 0, (char *) &readonly,
+@@ -263,7 +268,7 @@
+ void usage (void)
+ {
+     printf ("Usage: wbd [-N username] [-C confname] [-maxhops n]\n");
+-    printf ("           [-p|-l|+l] [-r|+r] [+d|-d] [-geometry wxh+x+y]  \n");
++    printf ("           [-p|-l|+l] [-r|+r] [+d|-d] [+i|-i] [-geometry wxh+x+y]  \n");
+     printf ("           [-P filesize] [-R bandwidth] [-help] address/port\n");
+ }
+ 
+@@ -278,6 +283,7 @@
+     printf ("    -t n         Set the TTL to n, (as -maxhops).\n");
+     printf ("    -p,-l,+l     Portrait/Landscape mode,\n");
+     printf ("    -r,+r        Disable/Enable writing to the whiteboard.\n");
++    printf ("    -i,+i        Disable/Enable import into the whiteboard.\n");
+     printf ("    -geometry g  Set the window's geometry to g (wxh+x+y).\n");
+     printf ("    -P size      Set the Postscript file size limit to size.\n");
+     printf ("    -R bw        Set the bandwidth limit to bw (bits/s).\n");
+@@ -407,6 +413,7 @@
+     tkStringSet  ("geometry", geometry);
+     tkIntegerSet ("orientation", orient);
+     tkIntegerSet ("readonly", readonly);
++    tkIntegerSet ("blockimport", blockimport);
+     tkIntegerSet ("pssize", pssize);
+     tkIntegerSet ("relate", relate);
+ 

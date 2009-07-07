@@ -1,0 +1,60 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/07/07 16:10:18 sborrill Exp $
+--- wbd.tcl.orig	1999-02-16 17:34:49.000000000 +0000
++++ wbd.tcl	2005-12-23 08:34:15.000000000 +0000
+@@ -1,4 +1,3 @@
+-#
+ # Copyright (c) 1997 Loughborough University
+ # All rights reserved.
+ #
+@@ -1294,6 +1293,7 @@
+ 
+ proc StateWB {state} {
+ 
++	global W
+ 	if {$state == "0"} {set state normal}
+ 	if {$state == "1"} {set state disabled}
+ 
+@@ -1314,8 +1314,10 @@
+         $w2.font configure -state $state
+ #       $w1.quit configure -state $state
+         $w3.newpage configure -state $state
+-        $w3.impps configure -state $state
+-        $w3.imptext configure -state $state
++	if {$W(blockimport) == 0} {
++	        $w3.impps configure -state $state
++        	$w3.imptext configure -state $state
++        }
+ #	$w3.dump configure -state $state
+ #	$w3.load configure -state $state
+ 	$w3.grab configure -state $state
+@@ -1635,20 +1637,21 @@
+ 
+ proc BuildInfo {w} {
+ 
+-	global GWbdFont
++	global GWbdFont W
+ 
+ 	button $w.newpage -width 8 -text {New Page} \
+ 		 -font $GWbdFont -command PageNew
+ 	pack $w.newpage -side left
+ 
+-	button $w.impps -width 8 -text {Import PS} \
+-		 -font $GWbdFont -command ImportPS
+-	pack $w.impps -side left
+-
+-	button $w.imptext -width 8 -text {Import Text} \
+-		 -font $GWbdFont -command ImportText
+-	pack $w.imptext -side left
+-
++	if {$W(blockimport) == 0} {
++		button $w.impps -width 8 -text {Import PS} \
++			 -font $GWbdFont -command ImportPS
++		pack $w.impps -side left
++	
++		button $w.imptext -width 8 -text {Import Text} \
++			 -font $GWbdFont -command ImportText
++		pack $w.imptext -side left
++	}
+ #	button $w.ps -width 8 -text {Print} -command PrintWB \
+ #		 -font $GWbdFont
+ #	pack $w.ps -side left
