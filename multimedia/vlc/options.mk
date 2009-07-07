@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.13 2008/12/25 18:21:59 jmcneill Exp $
+# $NetBSD: options.mk,v 1.14 2009/07/07 16:17:47 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		debug faad arts dbus hal skins sdl esound pulseaudio x11 gnome
+PKG_SUPPORTED_OPTIONS=		debug faad dbus hal skins sdl esound pulseaudio x11 gnome
 PKG_SUGGESTED_OPTIONS=		x11 esound pulseaudio
 
 .include "../../mk/bsd.options.mk"
@@ -123,14 +123,4 @@ PLIST.faad=		yes
 .include "../../audio/faad2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-faad
-.endif
-
-## ARTS audio system support
-
-.if !empty(PKG_OPTIONS:Marts)
-CONFIGURE_ARGS+=	--enable-arts
-PLIST.arts=		yes
-.include "../../audio/arts/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-arts
 .endif
