@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.squid,v 1.10 2009/07/01 02:17:11 taca Exp $
+# $NetBSD: Makefile.squid,v 1.11 2009/07/07 15:01:12 tron Exp $
 #
 # used by www/squid26/Makefile
 # used by www/squid27/Makefile
@@ -65,7 +65,9 @@ INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man8 sbin \
 			share/squid share/squid/errors share/squid/icons \
 			${DOCDIR} ${EGDIR}
 
-post-install:
+POST_INSTALL_EXTRA?=
+
+post-install: ${POST_INSTALL_EXTRA}
 	for f in ${EGFILES}; do \
 		${INSTALL_DATA}	${WRKSRC}/$$f \
 			${DESTDIR}${PREFIX}/${EGDIR}/`basename $$f .default`; \
@@ -80,14 +82,6 @@ post-install:
 	done
 	${CHMOD} -w ${PREFIX}/libexec/pinger
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	(							\
-	cd ${WRKSRC}/errors;					\
-	for i in *; do						\
-		${TEST} -d $$i &&				\
-		(${LS} $$i/ERR_* |				\
-		${SED} -e 's@^@share/squid/errors/@');		\
-	done; 							\
-	cd ${WRKSRC}/icons;					\
-	${LS} anthony-*.gif |					\
-		${SED} -e 's@^@share/squid/icons/@';		\
-	) >>${PLIST_SRC}
+	(${FIND} ${PREFIX}/share/squid/errors -type f -print;	\
+	 ${FIND} ${PREFIX}/share/squid/icons -type f -print) |	\
+	${SED} -e 's#^${PREFIX}/##' | ${SORT} >>${PLIST_SRC}
