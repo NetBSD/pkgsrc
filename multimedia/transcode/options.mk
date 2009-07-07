@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2008/04/12 22:43:08 jlam Exp $
+# $NetBSD: options.mk,v 1.6 2009/07/07 16:38:29 drochner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.transcode
-PKG_SUPPORTED_OPTIONS=	a52 freetype2 mjpegtools mpeg3 lzo libxml2
+PKG_SUPPORTED_OPTIONS=	a52 freetype2 mjpegtools lzo libxml2
 PKG_SUPPORTED_OPTIONS+=	dv imagemagick
 
-PKG_SUGGESTED_OPTIONS=	a52 freetype2 mjpegtools mpeg3 libxml2
+PKG_SUGGESTED_OPTIONS=	a52 freetype2 mjpegtools libxml2
 PKG_SUGGESTED_OPTIONS+=	imagemagick
 
 .include "../../mk/bsd.options.mk"
@@ -35,16 +35,6 @@ PLIST.mjpegtools=	yes
 CONFIGURE_ARGS+=	--enable-mjpegtools
 .else
 CONFIGURE_ARGS+=	--disable-mjpegtools
-.endif
-
-.if !empty(PKG_OPTIONS:Mmpeg3)
-BUILDLINK_API_DEPENDS.libmpeg3+=	libmpeg3>=1.7
-.  include "../../multimedia/libmpeg3/buildlink3.mk"
-PLIST.mpeg3=		yes
-CONFIGURE_ARGS+=	--with-libmpeg3-prefix=${BUILDLINK_PREFIX.libmpeg3}
-CONFIGURE_ARGS+=	--enable-libmpeg3
-.else
-CONFIGURE_ARGS+=	--disable-libmpeg3
 .endif
 
 .if !empty(PKG_OPTIONS:Mlzo)
