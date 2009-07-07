@@ -1,0 +1,5 @@
+The bundle comprises authblk, which permits footnote style
+author/affiliation input in the \author command, balance, to balance
+the end of \twocolumn pages, figcaps, to send figure captions, etc.,
+to end document, fullpage, to set narrow page margins and set a fixed
+page style, and sublabel, which permits counters to be subnumbered.
