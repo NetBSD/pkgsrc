@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:31:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/07/07 08:14:42 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -31,8 +31,10 @@ include/asterisk/compat.h
 include/asterisk/compiler.h
 include/asterisk/config.h
 include/asterisk/crypto.h
+include/asterisk/datastore.h
 include/asterisk/devicestate.h
 include/asterisk/dial.h
+include/asterisk/dlinkedlists.h
 include/asterisk/dns.h
 include/asterisk/dnsmgr.h
 include/asterisk/doxyref.h
@@ -51,6 +53,7 @@ include/asterisk/fskmodem_float.h
 include/asterisk/fskmodem_int.h
 include/asterisk/global_datastores.h
 include/asterisk/hashtab.h
+include/asterisk/heap.h
 include/asterisk/http.h
 include/asterisk/image.h
 include/asterisk/indications.h
@@ -88,11 +91,13 @@ include/asterisk/speech.h
 include/asterisk/srv.h
 include/asterisk/stringfields.h
 include/asterisk/strings.h
+include/asterisk/taskprocessor.h
 include/asterisk/tcptls.h
 include/asterisk/tdd.h
 include/asterisk/term.h
 include/asterisk/threadstorage.h
 include/asterisk/time.h
+include/asterisk/timing.h
 include/asterisk/transcap.h
 include/asterisk/translate.h
 include/asterisk/udptl.h
@@ -133,7 +138,6 @@ lib/asterisk/modules/app_morsecode.so
 lib/asterisk/modules/app_mp3.so
 lib/asterisk/modules/app_nbscat.so
 lib/asterisk/modules/app_parkandannounce.so
-lib/asterisk/modules/app_pickupchan.so
 lib/asterisk/modules/app_playback.so
 lib/asterisk/modules/app_privacy.so
 lib/asterisk/modules/app_queue.so
@@ -204,6 +208,7 @@ lib/asterisk/modules/func_blacklist.so
 lib/asterisk/modules/func_callerid.so
 lib/asterisk/modules/func_cdr.so
 lib/asterisk/modules/func_channel.so
+lib/asterisk/modules/func_config.so
 lib/asterisk/modules/func_curl.so
 lib/asterisk/modules/func_cut.so
 lib/asterisk/modules/func_db.so
@@ -249,6 +254,7 @@ lib/asterisk/modules/res_config_ldap.so
 ${PLIST.unixodbc}lib/asterisk/modules/res_config_odbc.so
 lib/asterisk/modules/res_convert.so
 lib/asterisk/modules/res_crypto.so
+lib/asterisk/modules/res_curl.so
 lib/asterisk/modules/res_indications.so
 lib/asterisk/modules/res_limit.so
 lib/asterisk/modules/res_monitor.so
@@ -258,6 +264,7 @@ lib/asterisk/modules/res_phoneprov.so
 lib/asterisk/modules/res_realtime.so
 lib/asterisk/modules/res_smdi.so
 lib/asterisk/modules/res_speech.so
+lib/asterisk/modules/res_timing_pthread.so
 lib/pkgconfig/asterisk.pc
 libdata/asterisk/firmware/iax/iaxy.bin
 libdata/asterisk/images/asterisk-intro.jpg
@@ -274,10 +281,11 @@ libdata/asterisk/phoneprov/000000000000-directory.xml
 libdata/asterisk/phoneprov/000000000000-phone.cfg
 libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
-libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.14
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.14
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.14
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.14
+libdata/asterisk/phoneprov/polycom_line.xml
+libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.15
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.15
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.15
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.15
 libdata/asterisk/sounds/en/agent-alreadyon.gsm
 libdata/asterisk/sounds/en/agent-incorrect.gsm
 libdata/asterisk/sounds/en/agent-loggedoff.gsm
@@ -726,6 +734,10 @@ libdata/asterisk/static-http/docs/img2.png
 libdata/asterisk/static-http/docs/img3.png
 libdata/asterisk/static-http/docs/img4.png
 libdata/asterisk/static-http/docs/img5.png
+libdata/asterisk/static-http/docs/img6.png
+libdata/asterisk/static-http/docs/img7.png
+libdata/asterisk/static-http/docs/img8.png
+libdata/asterisk/static-http/docs/img9.png
 libdata/asterisk/static-http/docs/index.html
 libdata/asterisk/static-http/docs/internals.pl
 libdata/asterisk/static-http/docs/labels.pl
@@ -1025,12 +1037,14 @@ sbin/conf2ael
 sbin/hashtest
 sbin/hashtest2
 sbin/rasterisk
+sbin/refcounter
 sbin/safe_asterisk
 sbin/stereorize
 sbin/streamplayer
 share/examples/asterisk/adsi.conf
 share/examples/asterisk/adtranvofr.conf
 share/examples/asterisk/agents.conf
+share/examples/asterisk/ais.conf
 share/examples/asterisk/alarmreceiver.conf
 share/examples/asterisk/alsa.conf
 share/examples/asterisk/amd.conf
@@ -1048,7 +1062,9 @@ share/examples/asterisk/chan_dahdi.conf
 share/examples/asterisk/cli.conf
 share/examples/asterisk/codecs.conf
 share/examples/asterisk/console.conf
+share/examples/asterisk/dbsep.conf
 share/examples/asterisk/dnsmgr.conf
+share/examples/asterisk/dsp.conf
 share/examples/asterisk/dundi.conf
 share/examples/asterisk/enum.conf
 share/examples/asterisk/extconfig.conf
@@ -1103,3 +1119,5 @@ share/examples/asterisk/users.conf
 share/examples/asterisk/voicemail.conf
 share/examples/asterisk/vpb.conf
 share/examples/rc.d/asterisk
+@pkgdir libdata/asterisk/sounds/fr
+@pkgdir libdata/asterisk/sounds/es

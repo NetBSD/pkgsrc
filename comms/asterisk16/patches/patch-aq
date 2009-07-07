@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.1.1.1 2009/06/12 09:04:57 jnemeth Exp $
+$NetBSD: patch-aq,v 1.2 2009/07/07 08:14:43 jnemeth Exp $
 
---- configure.orig	2009-01-29 15:47:00.000000000 -0800
+--- configure.orig	2009-03-19 11:14:55.000000000 -0700
 +++ configure
-@@ -17890,6 +17890,144 @@ _ACEOF
+@@ -18161,6 +18161,144 @@ _ACEOF
  fi
  
  
@@ -147,3 +147,12 @@ $NetBSD: patch-aq,v 1.1.1.1 2009/06/12 09:04:57 jnemeth Exp $
  
  { echo "$as_me:$LINENO: checking for int" >&5
  echo $ECHO_N "checking for int... $ECHO_C" >&6; }
+@@ -31464,6 +31602,8 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
++#include <sys/types.h>
++#include <sys/socket.h>
+ #include <ifaddrs.h>
+ int
+ main ()
