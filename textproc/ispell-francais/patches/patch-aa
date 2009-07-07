@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 12:14:02 agc Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/07 21:52:41 joerg Exp $
 
 Use the buildhash program from the base installation
 
@@ -25,8 +25,8 @@ Use the buildhash program from the base installation
  install: francais.hash
 -	install francais.hash $(LIBDIR)
 -	install $(AFFIXES) $(LIBDIR)
-+	${BSD_INSTALL_DATA} francais.hash $(LIBDIR)
-+	${BSD_INSTALL_DATA} $(AFFIXES) $(LIBDIR)
++	${BSD_INSTALL_DATA} francais.hash ${DESTDIR}$(LIBDIR)
++	${BSD_INSTALL_DATA} $(AFFIXES) ${DESTDIR}$(LIBDIR)
  
  # Ne pas faire ceci sans buildict!
  # francais.dico requiert buildict et d'importantes ressources informatiques
