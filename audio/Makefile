@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.409 2009/07/07 09:42:35 drochner Exp $
+# $NetBSD: Makefile,v 1.410 2009/07/07 19:06:59 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -191,6 +191,7 @@ SUBDIR+=	libmp3splt
 SUBDIR+=	libmpcdec
 SUBDIR+=	libmpd
 SUBDIR+=	libmpg123
+SUBDIR+=	libmtag
 SUBDIR+=	libmusepack
 SUBDIR+=	libmusicbrainz
 SUBDIR+=	libofa
@@ -286,6 +287,7 @@ SUBDIR+=	py-ao
 SUBDIR+=	py-cddb
 SUBDIR+=	py-daap
 SUBDIR+=	py-karaoke
+SUBDIR+=	py-libmtag
 SUBDIR+=	py-mad
 SUBDIR+=	py-mpd
 SUBDIR+=	py-musicbrainz
