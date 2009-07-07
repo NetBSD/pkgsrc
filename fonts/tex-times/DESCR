@@ -1,0 +1,4 @@
+The times package is now obsolete, replaced by the mathptmx package,
+which supports Times Roman text and (mostly) matching mathematics.
+The times package remains available, for compatibility; both it and
+mathptmx are part of psnfss.
