@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/14 21:23:57 sno Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/07 15:23:15 sno Exp $
 #
 
 DISTNAME=	DBD-ODBC-1.22
@@ -11,11 +11,10 @@ HOMEPAGE=	http://search.cpan.org/dist/DBD-ODBC/
 COMMENT=	Perl DBI/DBD driver for ODBC
 LICENSE=	${PERL5_LICENSE}
 
-.include "options.mk"
-
 PKG_DESTDIR_SUPPORT=	user-destdir
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+.include "options.mk"
 
 PERL5_PACKLIST=	auto/DBD/ODBC/.packlist
 
