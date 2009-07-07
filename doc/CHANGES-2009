@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2475 2009/07/07 20:03:12 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2476 2009/07/07 20:06:16 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3292,3 +3292,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-UNIVERSAL-can to 1.15 [sno 2009-07-07]
 	Updated devel/p5-UNIVERSAL-isa to 1.03 [sno 2009-07-07]
 	Updated www/p5-WWW-Amazon-Wishlist to 1.602 [sno 2009-07-07]
+	Updated devel/p5-Perl-Tidy to 20090616 [sno 2009-07-07]
