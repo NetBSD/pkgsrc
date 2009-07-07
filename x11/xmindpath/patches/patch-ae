@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2009/07/07 17:38:13 joerg Exp $
+
+--- Makefile.in.orig	2009-07-07 19:27:30.000000000 +0200
++++ Makefile.in
+@@ -24,8 +24,8 @@ main.o:	$(srcdir)/main.c
+ uucplock.o:	$(srcdir)/uucplock.c
+ 
+ install::
+-	$(INSTALL) -s -o uucp -g bin -m 4755 $(TARGET) $(bindir)
+-	$(INSTALL) -o bin -g bin -m 444 $(TARGET).1 $(mandir)/man1
++	$(BSD_INSTALL_PROGRAM) $(TARGET) ${DESTDIR}$(bindir)
++	$(BSD_INSTALL_MAN) $(TARGET).1 ${DESTDIR}$(mandir)/man1
+ 
+ includes::
+ 
