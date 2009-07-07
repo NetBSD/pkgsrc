@@ -1,11 +1,13 @@
-# $NetBSD: builtin.mk,v 1.23 2008/02/29 16:19:21 jlam Exp $
+# $NetBSD: builtin.mk,v 1.24 2009/07/07 11:04:55 joerg Exp $
 
 BUILTIN_PKG:=	ncurses
 
 BUILTIN_FIND_LIBS:=		ncurses curses
-BUILTIN_FIND_FILES_VAR:=	H_NCURSES
+BUILTIN_FIND_FILES_VAR:=	H_NCURSES H_CURSES
 BUILTIN_FIND_FILES.H_NCURSES=	/usr/include/ncurses.h /usr/include/curses.h
 BUILTIN_FIND_GREP.H_NCURSES=	\#define[ 	]*NCURSES_VERSION
+BUILTIN_FIND_FILES.H_CURSES=	/usr/include/ncurses.h /usr/include/curses.h
+BUILTIN_FIND_GREP.H_CURSES=	mvwchgat
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -91,11 +93,15 @@ USE_BUILTIN.ncurses=	no
 .endif
 MAKEVARS+=	USE_BUILTIN.ncurses
 
-# If USE_NCURSES is defined, then force the use of an ncurses
-# implementation.
+# If USE_NCURSES is set to yes, the use of an ncurses implementation
+# is forced.
 #
+# If it is set to chgat, a curses implementation with chgat(3) support
+# is considered good enough.
 .if defined(USE_NCURSES)
-.  if !empty(IS_BUILTIN.ncurses:M[nN][oO])
+.  if empty(USE_NCURSES:M[yY][eE][sS]) && !empty(USE_NCURSES:Mchgat) &&\
+      empty(H_CURSES:M__nonexistent__)
+.  elif !empty(IS_BUILTIN.ncurses:M[nN][oO])
 USE_BUILTIN.ncurses=	no
 .  endif
 .endif
