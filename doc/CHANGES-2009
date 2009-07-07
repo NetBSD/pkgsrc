@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2456 2009/07/07 18:25:25 tron Exp $
+$NetBSD: CHANGES-2009,v 1.2457 2009/07/07 18:34:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3273,3 +3273,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Exception-Handler version 1.004 [sno 2009-07-07]
 	Added devel/p5-File-Util version 3.27 [sno 2009-07-07]
 	Updated www/squid31 to 3.1.0.9 [tron 2009-07-07]
+	Updated devel/p5-Class-MOP to 0.89 [sno 2009-07-07]
