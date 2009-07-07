@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/19 04:04:04 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/07 14:59:00 joerg Exp $
 #
 
 DISTNAME=	alsa-plugins-1.0.18
@@ -11,15 +11,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.alsa-project.org/
 COMMENT=	Advanced Linux Sound Architecture (ALSA) - PulseAudio plugin
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_TOOLS=	pkg-config gmake
 USE_LIBTOOL=	yes
 
-do-build:
-	cd ${WRKSRC}/pulse && ${GMAKE}
-
-do-install:
-	cd ${WRKSRC}/pulse && ${GMAKE} install
+BUILD_DIRS=	pulse
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
