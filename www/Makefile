@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.651 2009/07/07 08:58:47 sborrill Exp $
+# $NetBSD: Makefile,v 1.652 2009/07/07 19:03:24 sno Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -291,6 +291,7 @@ SUBDIR+=	p5-Catalyst-View-TT
 SUBDIR+=	p5-CatalystX-CRUD-Controller-RHTMLO
 SUBDIR+=	p5-CatalystX-CRUD-View-Excel
 SUBDIR+=	p5-CatalystX-CRUD-YUI
+SUBDIR+=	p5-CatalystX-Component-Traits
 SUBDIR+=	p5-FCGI
 SUBDIR+=	p5-FCGI-ProcManager
 SUBDIR+=	p5-HTML-Clean
