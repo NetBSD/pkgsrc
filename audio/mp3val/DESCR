@@ -1,0 +1,4 @@
+MP3val is a small, high-speed, free software tool for checking MPEG
+audio files' integrity. It can be useful for finding corrupted files
+(e.g. incompletely downloaded, truncated, containing garbage).
+MP3val is also able to fix most of the problems.
