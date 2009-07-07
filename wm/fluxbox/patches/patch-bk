@@ -1,22 +1,13 @@
-$NetBSD: patch-bk,v 1.1 2007/11/01 13:08:07 rillig Exp $
+$NetBSD: patch-bk,v 1.2 2009/07/07 15:47:59 sborrill Exp $
 
---- src/CurrentWindowCmd.hh.orig	2007-03-19 20:57:09.000000000 +0100
-+++ src/CurrentWindowCmd.hh	2007-11-01 13:47:51.707603000 +0100
-@@ -137,7 +137,7 @@ private:
+--- src/CurrentWindowCmd.hh.orig	2008-09-01 16:59:05.000000000 +0100
++++ src/CurrentWindowCmd.hh	2009-07-06 12:53:48.000000000 +0100
+@@ -144,7 +144,7 @@
  // move cmd, relative position
  class MoveCmd: public WindowHelperCmd {
  public:
 -    explicit MoveCmd(const int step_size_x, const int step_size_y);
 +    explicit MoveCmd(int step_size_x, int step_size_y);
+     static FbTk::Command<void> *parse(const std::string &command,
+                                 const std::string &args, bool trusted);
  protected:
-     void real_execute();
- 
-@@ -170,7 +170,7 @@ public:
-         IGNORE_X = 1 << 8,
-         IGNORE_Y = 1 << 9
-     };
--    explicit MoveToCmd(const int step_size_x, const int step_size_y, const unsigned int refc);
-+    explicit MoveToCmd(int step_size_x, int step_size_y, unsigned int refc);
- protected:
-     void real_execute();
- 
