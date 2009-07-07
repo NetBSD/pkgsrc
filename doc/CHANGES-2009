@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2432 2009/07/07 11:34:24 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2433 2009/07/07 11:36:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3249,3 +3249,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated comms/asterisk16 to 1.6.1.1 [jnemeth 2009-07-07]
 	Added www/p5-HTML-WikiConverter-DokuWiki version 0.53 [sborrill 2009-07-07]
 	Updated databases/tokyocabinet to 1.4.29 [obache 2009-07-07]
+	Updated databases/p5-tokyocabinet to 1.29 [obache 2009-07-07]
