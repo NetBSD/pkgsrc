@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2485 2009/07/07 20:47:34 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2486 2009/07/07 20:50:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3302,3 +3302,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Any-Moose to 0.10 [sno 2009-07-07]
 	Updated devel/p5-AnyEvent to 4.800 [sno 2009-07-07]
 	Updated devel/p5-B-Hooks-Parser to 0.09 [sno 2009-07-07]
+	Updated devel/p5-CPAN to 1.9402 [sno 2009-07-07]
