@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/07/07 20:47:53 joerg Exp $
 #
 
 DISTNAME=	saxon
@@ -12,6 +12,8 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://users.breathe.com/mhkay/saxon/
 COMMENT=	Michael H. Kay's Java XSLT processor
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_JAVA=	run
@@ -23,13 +25,12 @@ USE_TOOLS+=	pax
 post-extract:
 	chmod -R u+w,go-w ${WRKSRC}
 
+INSTALLATION_DIRS= lib/java share/doc/java share/examples/java/saxon
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/saxon.jar ${PREFIX}/lib/java
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java
-	cd ${WRKSRC} && pax -rw -s '/^doc/saxon/' doc ${PREFIX}/share/doc/java
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/saxon
-	cd ${WRKSRC} && pax -rw -s '/^samples/saxon/' samples ${PREFIX}/share/examples/java
+	${INSTALL_DATA} ${WRKSRC}/saxon.jar ${DESTDIR}${PREFIX}/lib/java
+	cd ${WRKSRC} && pax -rw -s '/^doc/saxon/' doc ${DESTDIR}${PREFIX}/share/doc/java
+	cd ${WRKSRC} && pax -rw -s '/^samples/saxon/' samples ${DESTDIR}${PREFIX}/share/examples/java
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
