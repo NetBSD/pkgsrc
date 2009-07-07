@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/07 23:15:24 minskim Exp $
+share/texmf-dist/tex/latex/multirow/bigdelim.sty
+share/texmf-dist/tex/latex/multirow/bigstrut.sty
+share/texmf-dist/tex/latex/multirow/multirow.sty
