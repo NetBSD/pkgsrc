@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/05/17 04:29:00 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2009/07/07 20:43:58 joerg Exp $
 
 --- Makefile.orig	1998-08-25 07:25:20.000000000 +0000
 +++ Makefile
@@ -59,10 +59,10 @@ $NetBSD: patch-aa,v 1.4 2006/05/17 04:29:00 minskim Exp $
 -	mkdir $$instdir/TclExpat-$(TCLEXPAT_VERSION) ; \
 -	cp $(LIB) pkgIndex.tcl $$instdir
 -	
-+	${BSD_INSTALL_DATA_DIR} $$instdir/TclExpat-$(TCLEXPAT_VERSION) ; \
-+	${SHLIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${LIB:.so=.la} $$instdir/TclExpat-${TCLEXPAT_VERSION}; \
-+	${SHLIBTOOL} --mode=finish $$instdir/TclExpat-${TCLEXPAT_VERSION}; \
-+	${BSD_INSTALL_DATA} pkgIndex.tcl $$instdir/TclExpat-${TCLEXPAT_VERSION}
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$$instdir/TclExpat-$(TCLEXPAT_VERSION) ; \
++	${SHLIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${LIB:.so=.la} ${DESTDIR}$$instdir/TclExpat-${TCLEXPAT_VERSION}; \
++	${SHLIBTOOL} --mode=finish ${DESTDIR}$$instdir/TclExpat-${TCLEXPAT_VERSION}; \
++	${BSD_INSTALL_DATA} pkgIndex.tcl ${DESTDIR}$$instdir/TclExpat-${TCLEXPAT_VERSION}
  
  clean:
 -	@cd expat; make clean
