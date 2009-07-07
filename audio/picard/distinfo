@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/07 09:39:22 drochner Exp $
+
+SHA1 (picard-0.11.tar.gz) = 702e6be6d0e595c87b21e7a20894d004efc3693f
+RMD160 (picard-0.11.tar.gz) = 208e45621e10706fe7f5198718659b3b85eba4aa
+Size (picard-0.11.tar.gz) = 442371 bytes
+SHA1 (patch-aa) = b045a8e14f88bb242974a31d9390fd48351fd452
