@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/04/08 22:43:25 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/07/07 22:02:39 joerg Exp $
 #
 
 DISTNAME=	html-4.01
@@ -13,6 +13,7 @@ COMMENT=	SGML DTDs for the Hypertext Markup Language
 DEPENDS+=	iso8879>=1986:../../textproc/iso8879
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
@@ -24,11 +25,12 @@ ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog
 
 SGML_CATALOGS=	${INSTDIR}/catalog
 
+INSTALLATION_DIRS=	${INSTDIR}
+
 do-install:
-	${INSTALL_DATA_DIR} ${INSTDIR}
-	cd ${INSTDIR} && \
+	cd ${DESTDIR}${INSTDIR} && \
 		${TAR} -zxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
-	${ECHO} "CATALOG \"${ISOCAT}\"" >> ${INSTDIR}/catalog
+	${ECHO} "CATALOG \"${ISOCAT}\"" >> ${DESTDIR}${INSTDIR}/catalog
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
