@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.408 2009/06/07 12:53:29 ahoka Exp $
+# $NetBSD: Makefile,v 1.409 2009/07/07 09:42:35 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -236,6 +236,7 @@ SUBDIR+=	mp3asm
 SUBDIR+=	mp3blaster
 SUBDIR+=	mp3check
 SUBDIR+=	mp3cut
+SUBDIR+=	mp3diags
 SUBDIR+=	mp3info
 SUBDIR+=	mp3splt
 SUBDIR+=	mp3to
@@ -277,6 +278,7 @@ SUBDIR+=	paman
 SUBDIR+=	paprefs
 SUBDIR+=	pavucontrol
 SUBDIR+=	pavumeter
+SUBDIR+=	picard
 SUBDIR+=	portaudio
 SUBDIR+=	portaudio-devel
 SUBDIR+=	pulseaudio
