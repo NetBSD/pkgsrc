@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:47 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/07 21:52:41 joerg Exp $
 #
 
 DISTNAME=	francais-IREQ-1.4
@@ -10,7 +10,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/ispell/ispell.html
 COMMENT=	French dictionary for interactive spelling checker
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
+
+INSTALLATION_DIRS=	lib
 
 WRKSRC=		${WRKDIR}
 
