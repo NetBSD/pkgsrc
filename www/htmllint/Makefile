@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/07/10 10:43:31 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2009/07/07 19:26:27 joerg Exp $
 #
 
 DISTNAME=	htmllint
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/k16/htmllint/
 COMMENT=	Another HTML-Lint program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Jcode>=0.68:../../converters/p5-Jcode
 DEPENDS+=	p5-libwww>=5.8:../../www/p5-libwww
@@ -26,7 +28,7 @@ CGIDIR=		${PREFIX}/libexec/cgi-bin
 HTMLDIR=	${PREFIX}/share/httpd/htdocs/htmllint
 IMGDIR=		${HTMLDIR}/images
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${CGIDIR} ${HTMLDIR} ${IMGDIR}
 
 SUBST_CLASSES+=		hl
 SUBST_STAGE.hl=		pre-configure
@@ -35,19 +37,16 @@ SUBST_FILES.hl=		faq.html htmllintenv htmllint htmllint.caller
 SUBST_SED.hl=		-e 's!@PREFIX@!${PREFIX}!g'
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/htmllint.caller ${PREFIX}/bin/htmllint
-	${INSTALL_SCRIPT_DIR} ${CGIDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${CGIDIR}
-	${INSTALL_DATA} ${WRKSRC}/htmllintrc ${CGIDIR}
-	${INSTALL_DATA} ${WRKSRC}/htmllintenv ${CGIDIR}/htmllint.env.default
-	${TEST} -f ${CGIDIR}/htmllint.env \
-	|| ${INSTALL_DATA} ${CGIDIR}/htmllint.env.default  ${CGIDIR}/htmllint.env
-	${INSTALL_SCRIPT_DIR} ${HTMLDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/htmllint ${HTMLDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${WRKSRC}/*.pm ${HTMLDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/htmllint.caller ${DESTDIR}${PREFIX}/bin/htmllint
+	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${DESTDIR}${CGIDIR}
+	${INSTALL_DATA} ${WRKSRC}/htmllintrc ${DESTDIR}${CGIDIR}
+	${INSTALL_DATA} ${WRKSRC}/htmllintenv ${DESTDIR}${CGIDIR}/htmllint.env.default
+	${TEST} -f ${DESTDIR}${CGIDIR}/htmllint.env \
+	|| ${INSTALL_DATA} ${DESTDIR}${CGIDIR}/htmllint.env.default  ${DESTDIR}${CGIDIR}/htmllint.env
+	${INSTALL_SCRIPT} ${WRKSRC}/htmllint ${DESTDIR}${HTMLDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${WRKSRC}/*.pm ${DESTDIR}${HTMLDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} *.css *.dtd *.ent *.html *.rul	\
-		*.txt ${HTMLDIR}
-	${INSTALL_DATA_DIR} ${IMGDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.gif ${IMGDIR}
+		*.txt ${DESTDIR}${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.gif ${DESTDIR}${IMGDIR}
 
 .include "../../mk/bsd.pkg.mk"
