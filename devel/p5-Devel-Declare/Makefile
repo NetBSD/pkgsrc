@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/06/15 23:07:30 sno Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/07 05:59:17 joerg Exp $
 #
 
 DISTNAME=	Devel-Declare-0.005005
@@ -15,14 +15,13 @@ DEPENDS+=	p5-B-Hooks-EndOfScope>0.05:../../devel/p5-B-Hooks-EndOfScope
 DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 
 BUILD_DEPENDS+=	p5-ExtUtils-Depends>0:../../devel/p5-ExtUtils-Depends
-BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.42:../../devel/p5-ExtUtils-MakeMaker
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 
 PERL5_PACKLIST=	auto/Devel/Declare/.packlist
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	MakeMaker
 
 .include "../../devel/p5-B-Hooks-OP-Check/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
