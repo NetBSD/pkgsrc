@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/05/12 12:27:20 martti Exp $
+# $NetBSD: Makefile,v 1.22 2009/07/07 19:07:35 joerg Exp $
 
 DISTNAME=		JAlbum${VERSION}
 PKGNAME=		jalbum-${VERSION}
@@ -12,6 +12,8 @@ MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://jalbum.net/
 COMMENT=		Web photo album generator
 LICENSE=		gnu-lgpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=		7.1
 
@@ -30,8 +32,8 @@ do-build:
 		< ${FILESDIR:Q}/jalbum > ${WRKDIR:Q}/jalbum
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR:Q}/jalbum ${PREFIX:Q}/bin
-	(cd ${WRKDIR:Q}/JAlbum && pax -rw * ${PREFIX:Q}/share/jalbum)
+	${INSTALL_SCRIPT} ${WRKDIR:Q}/jalbum ${DESTDIR}${PREFIX}/bin
+	(cd ${WRKDIR:Q}/JAlbum && pax -rw * ${DESTDIR}${PREFIX}/share/jalbum)
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
