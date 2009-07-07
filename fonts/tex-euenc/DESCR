@@ -1,0 +1,5 @@
+This package is the first release of the first step towards offering a
+LaTeX font encoding based on unicode.  No macro support is offered
+(the encoding is just a placeholder for now) but an EU1 Latin Modern
+encoding is offered in order to access the OpenType versions of those
+fonts.

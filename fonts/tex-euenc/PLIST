@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/07 22:36:10 minskim Exp $
+share/texmf-dist/tex/xelatex/euenc/eu1enc.def
+share/texmf-dist/tex/xelatex/euenc/eu1lmdh.fd
+share/texmf-dist/tex/xelatex/euenc/eu1lmr.fd
+share/texmf-dist/tex/xelatex/euenc/eu1lmss.fd
+share/texmf-dist/tex/xelatex/euenc/eu1lmssq.fd
+share/texmf-dist/tex/xelatex/euenc/eu1lmtt.fd
+share/texmf-dist/tex/xelatex/euenc/eu1lmvtt.fd
