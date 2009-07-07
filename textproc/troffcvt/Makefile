@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/07 09:14:14 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2009/07/07 20:35:27 joerg Exp $
 #
 
 DISTNAME=		troffcvt-1.04
@@ -10,10 +10,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Troff/groff to RTF/HTML/TEXT converter
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		perl:run
 
 INSTALL_TARGET=		install install.man
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 lib/troffcvt
 
 post-patch:
 	for i in `${FIND} ${WRKSRC} -name Makefile -print`; do \
@@ -29,30 +31,29 @@ post-patch:
 	done
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/troffcvt/troffcvt ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tblcvt/tblcvt ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/troffcvt/troffcvt ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tblcvt/tblcvt ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}/post && ${INSTALL_PROGRAM} tc2null tc2html tc2rtf tc2text \
-		${PREFIX}/bin
+		${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}/post && ${INSTALL_SCRIPT} troff2null tc2html-toc \
-		troff2html troff2rtf unroff ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/troffcvt
+		troff2html troff2rtf unroff ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}/troffcvt && ${INSTALL_DATA} actions actions-html \
 		tc.man tc.man-html tc.me tc.me-html tc.mm tc.mm-html tc.ms \
-		tc.ms-html tc.mdoc tc.mdoc-html ${PREFIX}/lib/troffcvt
+		tc.ms-html tc.mdoc tc.mdoc-html ${DESTDIR}${PREFIX}/lib/troffcvt
 	cd ${WRKSRC}/post && ${INSTALL_DATA} tcr-fonts html-fonts \
 		html-specials rtf-fonts rtf-spec-ansi rtf-spec-mac \
 		rtf-spec-pc rtf-spec-pca text-specials text-8-specials \
-		${PREFIX}/lib/troffcvt
-	${INSTALL_MAN} ${WRKSRC}/man/tblcvt.man ${PREFIX}/${PKGMANDIR}/man1/tblcvt.1
-	${INSTALL_MAN} ${WRKSRC}/man/unroff.man ${PREFIX}/${PKGMANDIR}/man1/unroff.1
+		${DESTDIR}${PREFIX}/lib/troffcvt
+	${INSTALL_MAN} ${WRKSRC}/man/tblcvt.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tblcvt.1
+	${INSTALL_MAN} ${WRKSRC}/man/unroff.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/unroff.1
 	${INSTALL_MAN} ${WRKSRC}/man/troff2rtf.man \
-		${PREFIX}/${PKGMANDIR}/man1/troff2rtf.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/troff2rtf.1
 	${INSTALL_MAN} ${WRKSRC}/man/tc2html-toc.man \
-		${PREFIX}/${PKGMANDIR}/man1/tc2html-toc.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tc2html-toc.1
 	${INSTALL_MAN} ${WRKSRC}/man/troff2html.man \
-		${PREFIX}/${PKGMANDIR}/man1/troff2html.1
-	${INSTALL_MAN} ${WRKSRC}/man/tc2html.man ${PREFIX}/${PKGMANDIR}/man1/tc2html.1
-	${INSTALL_MAN} ${WRKSRC}/man/troffcvt.man ${PREFIX}/${PKGMANDIR}/man1/troffcvt.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/troff2html.1
+	${INSTALL_MAN} ${WRKSRC}/man/tc2html.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tc2html.1
+	${INSTALL_MAN} ${WRKSRC}/man/troffcvt.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/troffcvt.1
 
 .include "../../devel/libmemmgr/buildlink3.mk"
 .include "../../devel/libportlib/buildlink3.mk"
