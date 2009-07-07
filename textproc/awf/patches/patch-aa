@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/04 08:33:59 agc Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/07 22:24:37 joerg Exp $
 
---- Makefile	2003/11/04 18:25:04	1.1
-+++ Makefile	2003/11/04 18:23:55
-@@ -1,17 +1,15 @@
+--- Makefile.orig	2009-07-08 00:23:21.000000000 +0200
++++ Makefile
+@@ -1,29 +1,27 @@
 -AWFLIB = /usr/lib/awf	# beware, awf itself knows this
 -BIN = /usr/bin
 -MAN = /usr/man/man1
@@ -25,9 +25,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/04 08:33:59 agc Exp $
 +	AWFLIB=. ./awf -man awf.1 >tmp
  
  install:
- 	-if test ! -d $(AWFLIB) ; then mkdir $(AWFLIB) ; fi
-@@ -20,10 +18,10 @@
- 	cp awf.1 $(MAN)
+-	-if test ! -d $(AWFLIB) ; then mkdir $(AWFLIB) ; fi
+-	cp $(CP) $(AWFLIB)
+-	cp awf $(BIN)
+-	cp awf.1 $(MAN)
++	-if test ! -d ${DESTDIR}$(AWFLIB) ; then mkdir ${DESTDIR}$(AWFLIB) ; fi
++	cp $(CP) ${DESTDIR}$(AWFLIB)
++	cp awf ${DESTDIR}$(BIN)
++	cp awf.1 ${DESTDIR}$(MAN)
  
  rr:	r testm tests.Z tests.out.Z
 -	AWFLIB=. awf -man testm >tmp
