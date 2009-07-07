@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.squid,v 1.11 2009/07/07 15:01:12 tron Exp $
+# $NetBSD: Makefile.squid,v 1.12 2009/07/07 15:21:36 tron Exp $
 #
 # used by www/squid26/Makefile
 # used by www/squid27/Makefile
@@ -82,6 +82,6 @@ post-install: ${POST_INSTALL_EXTRA}
 	done
 	${CHMOD} -w ${PREFIX}/libexec/pinger
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	(${FIND} ${PREFIX}/share/squid/errors -type f -print;	\
-	 ${FIND} ${PREFIX}/share/squid/icons -type f -print) |	\
+	(${FIND} ${PREFIX}/share/squid/errors \! -type d -print;	\
+	 ${FIND} ${PREFIX}/share/squid/icons \! -type d -print) |	\
 	${SED} -e 's#^${PREFIX}/##' | ${SORT} >>${PLIST_SRC}
