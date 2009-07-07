@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/07/07 14:48:04 ghen Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/07 20:58:04 joerg Exp $
 
 --- Makefile.orig	2005-01-07 09:28:47.000000000 +0100
 +++ Makefile
@@ -15,3 +15,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/07/07 14:48:04 ghen Exp $
  DOCS = COPYING INSTALL README TODO ChangeLog filformat.sxw
  BINS = o3read o3totxt o3tohtml utf8tolatin1
  SRCS = o3read.h main.c o3read.c o3totxt.c o3tohtml.c utf8tolatin1.c
+@@ -42,9 +39,9 @@ strip: $(BINS)
+ 	strip $(BINS)
+ 
+ install: $(BINS)
+-	mkdir -p $(BINDIR) $(MANDIR)
+-	cp $(BINS) $(BINDIR)
+-	cp $(MANS) $(MANDIR)
++	mkdir -p ${DESTDIR}$(BINDIR) ${DESTDIR}$(MANDIR)
++	cp $(BINS) ${DESTDIR}$(BINDIR)
++	cp $(MANS) ${DESTDIR}$(MANDIR)
+ 
+ uninstall:
+ 	cd $(BINDIR) && rm -f $(BINS)
