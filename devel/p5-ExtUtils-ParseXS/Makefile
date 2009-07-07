@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/10/19 19:17:53 he Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/07 22:15:45 sno Exp $
 
-DISTNAME=	ExtUtils-ParseXS-2.19
+DISTNAME=	ExtUtils-ParseXS-2.20
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5epx
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
@@ -10,11 +9,11 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-ParseXS/
 COMMENT=	Perl5 module for converting Perl XS code into C code
+LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-ExtUtils-CBuilder-[0-9]*:../../devel/p5-ExtUtils-CBuilder
-
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/ExtUtils/ParseXS/.packlist
+PERL5_MODULE_TYPE=	Module::Build
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
