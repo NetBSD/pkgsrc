@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/03/04 13:19:36 kleink Exp $
+# $NetBSD: Makefile,v 1.15 2009/07/07 16:49:11 joerg Exp $
 #
 
 DISTNAME=		drraw-2.2b2
@@ -8,6 +8,8 @@ MASTER_SITES=		http://web.taranis.org/drraw/dist/
 MAINTAINER=		kleink@NetBSD.org
 HOMEPAGE=		http://web.taranis.org/drraw/
 COMMENT=		Simple web based presentation front-end for RRDtool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 USE_TOOLS+=		perl:run
@@ -29,20 +31,18 @@ CONF_FILES=		${EGDIR}/drraw.conf ${PKG_SYSCONFDIR}/drraw.conf
 
 DEPENDS+=		rrdtool>=1.2.9:../../databases/rrdtool
 
+INSTALLATION_DIRS=	libexec/cgi-bin ${EGDIR}/icons ${DOCDIR}
+
 do-install:
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/libexec/cgi-bin
-	${INSTALL_SCRIPT} ${WRKSRC}/drraw.cgi ${PREFIX}/libexec/cgi-bin
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/drraw.cgi ${DESTDIR}${PREFIX}/libexec/cgi-bin
 .for f in ${DRRAW_CONF_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${EGDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${EGDIR}/${f}
 .endfor
-	${INSTALL_DATA_DIR} ${EGDIR}/icons
 .for f in ${DRRAW_ICONS}
-	${INSTALL_DATA} ${WRKSRC}/icons/${f} ${EGDIR}/icons/${f}
+	${INSTALL_DATA} ${WRKSRC}/icons/${f} ${DESTDIR}${EGDIR}/icons/${f}
 .endfor
-	${INSTALL_DATA_DIR} ${DOCDIR}
 .for f in ${DRRAW_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
 .endfor
 
 SUBST_CLASSES+=		prefix
