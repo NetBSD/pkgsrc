@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/05/19 08:59:36 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2009/07/07 20:02:12 joerg Exp $
 #
 
 DISTNAME=		titrax-1.98
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.alvestrand.no/titrax/TimeTracker.html
 COMMENT=		Little X11 tool to track project times
 LICENSE=		titrax-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		Do not sell for "real money".
 # XXX Arguably NO_*_ON_CDROM is not necessary, because "real money" seems
@@ -26,8 +28,7 @@ post-patch:
 		-e "s|@X11BASE@|${X11PREFIX}|g"				\
 		${WRKSRC}/Imakefile.bak > ${WRKSRC}/Imakefile
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/titrax
+INSTALLATION_DIRS=	libexec/titrax
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
