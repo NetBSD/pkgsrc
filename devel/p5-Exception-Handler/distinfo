@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/07 18:16:45 sno Exp $
+
+SHA1 (Exception-Handler-1.004.tar.gz) = 178cf29855eb9944b0c7f2c314b09c62d5469921
+RMD160 (Exception-Handler-1.004.tar.gz) = d9fc6b3ceb3a7152b9e3aa4da19f79ddaea67fe4
+Size (Exception-Handler-1.004.tar.gz) = 3565 bytes
