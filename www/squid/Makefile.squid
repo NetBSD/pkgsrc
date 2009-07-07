@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.squid,v 1.12 2009/07/07 15:21:36 tron Exp $
+# $NetBSD: Makefile.squid,v 1.13 2009/07/07 18:44:28 tron Exp $
 #
-# used by www/squid26/Makefile
 # used by www/squid27/Makefile
 # used by www/squid30/Makefile
 # used by www/squid31/Makefile
 
 .include "Makefile.common"
 
-SQUID_MASTER_SITES=	ftp://ftp.squid-cache.org/pub/squid/
+SQUID_MASTER_SITES=	ftp://ftp.squid-cache.org/pub/squid/ \
+			http://ftp.nluug.nl/internet/squid/
 
 DOCDIR=		share/doc/squid
 EGDIR=		share/examples/squid
