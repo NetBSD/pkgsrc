@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:24 agc Exp $
+$NetBSD: patch-aa,v 1.3 2009/07/07 17:22:27 joerg Exp $
 
---- Imakefile.orig	Thu Jun  2 16:22:14 1994
-+++ Imakefile	Fri Dec 27 18:52:23 1996
+--- Imakefile.orig	1994-06-03 01:22:14.000000000 +0200
++++ Imakefile
 @@ -5,7 +5,8 @@
   *	-DPRINTCMD=\"/usr/ucb/lpr\"	- path to send file to printer
   *	-DTILDE_EXPANSION		- perform ~ expansion on filenames
@@ -12,3 +12,12 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:18:24 agc Exp $
  
  
             SRCS = help.c init.c popup.c util.c callbacks.c window.c main.c \
+@@ -27,7 +28,7 @@ LOCAL_LIBRARIES = -Lregexp -lregexp XawC
+ MakeSubdirs($(SUBDIRS))
+ ComplexProgramTarget(xless)
+ 
+-InstallNonExec(xless.help, $(LIBDIR))
++InstallNonExec(xless.help,$(LIBDIR))
+ InstallAppDefaults(XLess)
+ 
+ #if ProjectX >= 5
