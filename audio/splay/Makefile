@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/07/22 05:54:52 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2009/07/07 16:49:05 joerg Exp $
 #
 
 DISTNAME=		splay-0.8.2
@@ -10,6 +10,7 @@ HOMEPAGE=		http://splay.sourceforge.net/
 COMMENT=		Audio player/decoder that decodes MPEG Layer I,II,III and WAV files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
