@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2504 2009/07/07 21:42:07 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2505 2009/07/07 21:44:19 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3321,3 +3321,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-FormValidator-Simple to 0.28 [sno 2009-07-07]
 	Updated www/p5-Catalyst-Plugin-Session to 0.24 [sno 2009-07-07]
 	Updated www/p5-Catalyst-Plugin-Session-Store-FastMmap to 0.11 [sno 2009-07-07]
+	Updated www/p5-Catalyst-Plugin-Authentication to 0.100130 [sno 2009-07-07]
