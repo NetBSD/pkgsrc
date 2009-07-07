@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2009/05/19 08:59:39 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2009/07/07 17:57:22 joerg Exp $
 
 DISTNAME=	xephem-3.7.3
 CATEGORIES=	x11
@@ -8,6 +8,8 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
 COMMENT=	Interactive astronomical ephemeris program
 LICENSE=	xephem-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Pending adjustment of license wording to clarify the copyright
 # holder's intent, permission has been granted to distribute the
@@ -48,13 +50,13 @@ INSTALLATION_DIRS=	bin lib/X11/app-defaults share/xephem/tools \
 	${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xephem ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xephem.man ${PREFIX}/${PKGMANDIR}/man1/xephem.1
+	${INSTALL_PROGRAM} ${WRKSRC}/xephem ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/xephem.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xephem.1
 	${SED} s,@PREFIX@,${PREFIX}, ${FILESDIR}/XEphem.ad > ${WRKDIR}/XEphem
-	${INSTALL_DATA} ${WRKDIR}/XEphem ${PREFIX}/lib/X11/app-defaults
+	${INSTALL_DATA} ${WRKDIR}/XEphem ${DESTDIR}${PREFIX}/lib/X11/app-defaults
 	cd ${WRKSRC}; ${CP} -R auxil catalogs fifos fits gallery help lo \
-		${PREFIX}/share/xephem
-	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/xephem
+		${DESTDIR}${PREFIX}/share/xephem
+	${CHOWN} -R ${SHAREOWN} ${DESTDIR}${PREFIX}/share/xephem
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
