@@ -1,0 +1,10 @@
+Finds problems in MP3 files and helps the user to fix many of them. Looks
+at both the audio part (VBR info, quality, normalization) and the tags
+containing track information (ID3.)
+
+Has a tag editor, which can download album information (including cover art)
+from MusicBrainz and Discogs, as well as paste data from the clipboard.
+Track information can also be extracted from a file's name.
+
+Another component is the file renamer, which can rename files based on
+the fields in their ID3V2 tag (artist, track number, album, genre, ...)
