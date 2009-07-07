@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/05/20 00:58:28 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2009/07/07 22:50:08 joerg Exp $
 #
 
 DISTNAME=	compiz-0.6.2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compiz.org/
 COMMENT=	Compositing window manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		intltool pkg-config msgfmt
@@ -65,7 +67,7 @@ SUBST_STAGE.paths=	post-patch
 
 post-install:
 .for schema in ${COMPIZ_GCONF_SCHEMAS}
-	${INSTALL_DATA} ${WRKSRC}/metadata/${schema} ${PREFIX}/share/gconf/schemas
+	${INSTALL_DATA} ${WRKSRC}/metadata/${schema} ${DESTDIR}${PREFIX}/share/gconf/schemas
 .endfor
 
 .include "../../mk/bsd.options.mk"
