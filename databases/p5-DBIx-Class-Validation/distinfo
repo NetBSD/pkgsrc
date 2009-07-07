@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/15 08:42:49 abs Exp $
+$NetBSD: distinfo,v 1.2 2009/07/07 18:10:38 sno Exp $
 
-SHA1 (DBIx-Class-Validation-0.02003.tar.gz) = 4e60af0b4a7af3442ccd71592be2ec082ccc6a63
-RMD160 (DBIx-Class-Validation-0.02003.tar.gz) = 3ba5a7fb46a9346e0d76e24c3c65ffd74a9c5ea5
-Size (DBIx-Class-Validation-0.02003.tar.gz) = 23318 bytes
+SHA1 (DBIx-Class-Validation-0.02004.tar.gz) = dccb10293eaa05bccc19bbb455ebdb71bf697a7f
+RMD160 (DBIx-Class-Validation-0.02004.tar.gz) = 420409690d2830ba5d225979bacab1359646f5d3
+Size (DBIx-Class-Validation-0.02004.tar.gz) = 26947 bytes
