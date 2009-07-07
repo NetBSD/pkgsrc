@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/10/19 19:18:47 he Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/07 22:10:29 joerg Exp $
 #
 
 DISTNAME=	dtdparse-2.0beta6
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dtdparse/}
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://dtdparse.sourceforge.net/
 COMMENT=	Reads an SGML or XML DTD and constructs an XML database
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM
@@ -21,7 +23,8 @@ XML_CATALOGS=	${XMLDIR}/catalog
 SCRIPTS=	dtdflatten dtdformat dtdparse \
 		tools/contentmodel tools/dtdstats tools/elements
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PERL5_INSTALLVENDORLIB}/XML/DTDParse \
+			${DOCDIR} ${EGDIR} ${XMLDIR}
 
 do-build:
 	cd ${WRKSRC}; \
@@ -29,20 +32,16 @@ do-build:
 	${PERL5} -pi -e 's,modules/,XML/DTDParse/,' ${WRKSRC}/dtdformat
 
 do-install:
-	cd ${WRKSRC}; ${INSTALL_SCRIPT} ${SCRIPTS} ${PREFIX}/bin
-	${MKDIR} ${PERL5_INSTALLVENDORLIB}/XML/DTDParse
+	cd ${WRKSRC}; ${INSTALL_SCRIPT} ${SCRIPTS} ${{DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/XML/DTDParse/*.pm ${WRKSRC}/modules/*.pl \
-		${PERL5_INSTALLVENDORLIB}/XML/DTDParse
-	${MKDIR} ${XMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/dtd.dtd ${XMLDIR}
-	${INSTALL_DATA} ${FILESDIR}/catalog ${XMLDIR}/catalog
+		${DESTDIR}${PERL5_INSTALLVENDORLIB}/XML/DTDParse
+	${INSTALL_DATA} ${WRKSRC}/dtd.dtd ${DESTDIR}${XMLDIR}
+	${INSTALL_DATA} ${FILESDIR}/catalog ${DESTDIR}${XMLDIR}/catalog
 
 post-install:
-	${MKDIR} ${EGDIR}
 	cd ${WRKSRC}/sample; \
-		${INSTALL_DATA} sample* simple* ${EGDIR}
-	${MKDIR} ${DOCDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} README WhatsNew ${DOCDIR}
+		${INSTALL_DATA} sample* simple* ${DESTDIR}${EGDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} README WhatsNew ${DESTDIR}${DOCDIR}
 
 .include "../../lang/perl5/module.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
