@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/01/04 17:31:28 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/07 15:14:04 joerg Exp $
 #
 
 DISTNAME=	juke-0.7
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.moll.no/oyvind/distfiles/
 MAINTAINER=	mob@bicekru.org
 #HOMEPAGE=	http://johan.nocrew.org/nav10/unix/juke/
 COMMENT=	Simple ncurses based jukebox
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 
@@ -24,11 +26,11 @@ SUBST_FILES.paths=	doc/juke.1 MANUAL src/conf.c
 SUBST_STAGE.paths=	post-patch
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
 
+INSTALLATION_DIRS=	${EGDIR} share/doc/juke
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/juke
-	${INSTALL_DATA} ${WRKSRC}/juke.conf ${EGDIR}/juke.conf.default
-	${INSTALL_DATA} ${WRKSRC}/MANUAL ${PREFIX}/share/doc/juke/
+	${INSTALL_DATA} ${WRKSRC}/juke.conf ${DESTDIR}${EGDIR}/juke.conf.default
+	${INSTALL_DATA} ${WRKSRC}/MANUAL ${DESTDIR}${PREFIX}/share/doc/juke/
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
