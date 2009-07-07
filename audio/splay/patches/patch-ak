@@ -1,0 +1,29 @@
+$NetBSD: patch-ak,v 1.1 2009/07/07 16:49:05 joerg Exp $
+
+--- Makefile.in.orig	2009-07-07 18:46:23.000000000 +0200
++++ Makefile.in
+@@ -125,19 +125,19 @@ distclean-hdr:
+ maintainer-clean-hdr:
+ install-man: $(MANS)
+ 	$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(mandir)/man1
++	$(mkinstalldirs) ${DESTDIR}$(mandir)/man1
+ 	@sect=1;				\
+ 	inst=`echo "splay" | sed '$(transform)'`.1; \
+ 	if test -f $(srcdir)/splay.1; then file=$(srcdir)/splay.1; \
+ 	else file=splay.1; fi; \
+-	echo " $(INSTALL_DATA) $$file $(mandir)/man$$sect/$$inst"; \
+-	$(INSTALL_DATA) $$file $(mandir)/man$$sect/$$inst
++	echo " $(INSTALL_DATA) $$file ${DESTDIR}$(mandir)/man$$sect/$$inst"; \
++	$(INSTALL_DATA) $$file ${DESTDIR}$(mandir)/man$$sect/$$inst
+ 	@sect=1;				\
+ 	inst=`echo "xsplay" | sed '$(transform)'`.1; \
+ 	if test -f $(srcdir)/xsplay.1; then file=$(srcdir)/xsplay.1; \
+ 	else file=xsplay.1; fi; \
+-	echo " $(INSTALL_DATA) $$file $(mandir)/man$$sect/$$inst"; \
+-	$(INSTALL_DATA) $$file $(mandir)/man$$sect/$$inst
++	echo " $(INSTALL_DATA) $$file ${DESTDIR}$(mandir)/man$$sect/$$inst"; \
++	$(INSTALL_DATA) $$file ${DESTDIR}$(mandir)/man$$sect/$$inst
+ 
+ uninstall-man:
+ 	$(NORMAL_UNINSTALL)
