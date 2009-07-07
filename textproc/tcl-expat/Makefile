@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/17 04:29:00 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/07 20:43:58 joerg Exp $
 #
 
 DISTNAME=	TclExpat-1.1
@@ -11,6 +11,8 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.zveno.com/zm.cgi/in-tclxml/
 COMMENT=	XML parser implemented entirely in Tcl
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LIBTOOL=	yes
 
 MAKE_ENV+=	SHLIBTOOL=${SHLIBTOOL:Q}
@@ -18,10 +20,10 @@ MAKE_ENV+=	SHLIBTOOL=${SHLIBTOOL:Q}
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/tcl
 
+INSTALLATION_DIRS=	share/doc/tcl/TclExpat
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcl
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcl/TclExpat
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tcl/TclExpat
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/tcl/TclExpat
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
