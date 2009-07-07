@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.84 2008/03/10 12:37:12 drochner Exp $
+# $NetBSD: Makefile,v 1.85 2009/07/07 17:28:04 joerg Exp $
 
 COMMENT=	Screen saver and locker for the X window system
 
 CONFLICTS+=	xscreensaver-gnome<4.14
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
@@ -20,11 +22,11 @@ MESSAGE_SUBST+=		EGDIR=${EGDIR:Q}
 post-extract:
 	cd ${WRKSRC}/po && ${RM} -f ca.po pt_BR.po
 
-post-install: installpamex
-installpamex:
-	${INSTALL_DATA_DIR} ${EGDIR}/pam.d
+INSTALLATION_DIRS=	${EGDIR}/pam.d
+
+post-install:
 	${INSTALL_DATA} ${FILESDIR}/pam-xscreensaver-NetBSD \
-                ${EGDIR}/pam.d/xscreensaver-NetBSD
+	    ${DESTDIR}${EGDIR}/pam.d/xscreensaver-NetBSD
 
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
