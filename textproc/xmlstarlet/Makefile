@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/06 06:22:52 reed Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/07 20:27:24 joerg Exp $
 #
 
 DISTNAME=		xmlstarlet-1.0.1
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmlstar/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xmlstar.sourceforge.net/
 COMMENT=		Command line utilities for XML manipulation
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -24,8 +26,8 @@ TEST_TARGET=	check
 INSTALLATION_DIRS+=	share/doc/xmlstarlet
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/xmlstarlet-ug.pdf ${PREFIX}/share/doc/xmlstarlet
-	${INSTALL_DATA} ${WRKSRC}/doc/xmlstarlet.txt ${PREFIX}/share/doc/xmlstarlet
+	${INSTALL_DATA} ${WRKSRC}/doc/xmlstarlet-ug.pdf ${DESTDIR}${PREFIX}/share/doc/xmlstarlet
+	${INSTALL_DATA} ${WRKSRC}/doc/xmlstarlet.txt ${DESTDIR}${PREFIX}/share/doc/xmlstarlet
 
 
 .include "../../textproc/libxml2/buildlink3.mk"
