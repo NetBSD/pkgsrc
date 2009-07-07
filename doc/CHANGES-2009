@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2459 2009/07/07 18:43:58 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2460 2009/07/07 18:51:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3276,3 +3276,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-MOP to 0.89 [sno 2009-07-07]
 	Added time/p5-DateTime-Calendar-Mayan version 0.06.01 [sno 2009-07-07]
 	Updated devel/p5-Moose to 0.87 [sno 2009-07-07]
+	Added devel/p5-MooseX-Traits version 0.06 [sno 2009-07-07]
