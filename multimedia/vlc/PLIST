@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.30 2009/07/07 16:17:47 tnn Exp $
+@comment $NetBSD: PLIST,v 1.31 2009/07/07 19:23:48 ahoka Exp $
 ${PLIST.altivec}lib/vlc/misc/libmemcpyaltivec_plugin.la
 ${PLIST.altivec}lib/vlc/video_chroma/libi420_yuy2_altivec_plugin.la
 ${PLIST.cdda}lib/vlc/access/libcdda_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
-${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.la
-${PLIST.esound}lib/vlc/audio_output/libesd_plugin.la
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.gnome}lib/vlc/access/libaccess_gnomevfs_plugin.la
+${PLIST.gnome}lib/vlc/misc/libtelepathy_plugin.la
 ${PLIST.hal}lib/vlc/misc/libprobe_hal_plugin.la
 ${PLIST.hal}lib/vlc/services_discovery/libhal_plugin.la
 ${PLIST.pulseaudio}lib/vlc/audio_output/libpulse_plugin.la
@@ -516,4 +515,9 @@ share/vlc/vlc32x32.png
 share/vlc/vlc32x32.xpm
 share/vlc/vlc48x48-christmas.png
 share/vlc/vlc48x48.png
-@pkgdir share/vlc/skins2/fonts
+@pkgdir share/vlc/osdmenu/dvd/volume
+@pkgdir share/vlc/osdmenu/dvd/unselect
+@pkgdir share/vlc/osdmenu/dvd/selection
+@pkgdir share/vlc/osdmenu/dvd/selected
+@pkgdir share/vlc/http/old/vlm
+@pkgdir share/vlc/http/old/admin
