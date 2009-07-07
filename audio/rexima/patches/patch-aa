@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/10/23 09:24:55 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/07 15:28:47 joerg Exp $
 
 --- Makefile.orig	2003-06-30 14:45:27.000000000 +0200
 +++ Makefile
@@ -27,13 +27,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/10/23 09:24:55 wiz Exp $
 +	$(CC) $(CFLAGS) -o rexima rexima.o -lncurses ${LIBOSSAUDIO}
  
  installdirs:
- 	/bin/sh ./mkinstalldirs $(BINDIR) $(MANDIR)
+-	/bin/sh ./mkinstalldirs $(BINDIR) $(MANDIR)
++	/bin/sh ./mkinstalldirs ${DESTDIR}$(BINDIR) ${DESTDIR}$(MANDIR)
  
  install: rexima installdirs
 -	install -s -m 755 rexima $(BINDIR)
 -	install -m 644 rexima.1 $(MANDIR)
-+	${BSD_INSTALL_PROGRAM} rexima $(BINDIR)
-+	${BSD_INSTALL_DATA} rexima.1 $(MANDIR)
++	${BSD_INSTALL_PROGRAM} rexima ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_DATA} rexima.1 ${DESTDIR}$(MANDIR)
  
  uninstall:
  	$(RM) $(BINDIR)/rexima $(MANDIR)/rexima.1
