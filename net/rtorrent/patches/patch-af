@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2009/07/07 21:22:08 joerg Exp $
+
+--- src/display/canvas.h.orig	2008-05-07 14:19:11.000000000 +0200
++++ src/display/canvas.h
+@@ -37,6 +37,7 @@
+ #ifndef RTORRENT_DISPLAY_CANVAS_H
+ #define RTORRENT_DISPLAY_CANVAS_H
+ 
++#include <cstdarg>
+ #include <string>
+ #include <vector>
+ 
