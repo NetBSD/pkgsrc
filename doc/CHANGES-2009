@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2444 2009/07/07 16:32:09 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2445 2009/07/07 17:17:51 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3261,3 +3261,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added mbone/wbd version 1.0p4 [sborrill 2009-07-07]
 	Updated multimedia/vlc to 1.0.0 [tnn 2009-07-07]
 	Updated textproc/p5-Search-Xapian to 1.0.13.1 [sno 2009-07-07]
+	Updated devel/cvs2svn to 2.2.0 [sno 2009-07-07]
