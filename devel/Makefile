@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1186 2009/07/07 18:15:05 sno Exp $
+# $NetBSD: Makefile,v 1.1187 2009/07/07 18:18:11 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -559,6 +559,7 @@ SUBDIR+=	p5-Event
 SUBDIR+=	p5-Event-ExecFlow
 SUBDIR+=	p5-Event-RPC
 SUBDIR+=	p5-Exception-Class
+SUBDIR+=	p5-Exception-Handler
 SUBDIR+=	p5-Expect
 SUBDIR+=	p5-Expect-Simple
 SUBDIR+=	p5-Exporter-Lite
