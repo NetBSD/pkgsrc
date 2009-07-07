@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2493 2009/07/07 21:08:31 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2494 2009/07/07 21:12:10 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3310,3 +3310,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Data-UUID to 1.20.2 [sno 2009-07-07]
 	Updated devel/p5-MooseX-AttributeHelpers to 0.20 [sno 2009-07-07]
 	Updated devel/p5-MooseX-Singleton to 0.18 [sno 2009-07-07]
+	Updated devel/p5-MooseX-Types to 0.16 [sno 2009-07-07]
