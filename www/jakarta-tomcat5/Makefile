@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/05/26 02:13:25 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/07 19:09:09 joerg Exp $
 
 PKGNAME=	jakarta-tomcat5-${TOMCAT_VERSION}
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}
@@ -10,6 +10,8 @@ CATEGORIES=	www java
 MAINTAINER=	erh@NetBSD.org
 HOMEPAGE=	http://tomcat.apache.org/
 COMMENT=	The Apache Project's Java Servlet 2.4 and JSP 2.0 server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 TOMCAT_VERSION= 5.0.30
 
@@ -52,21 +54,22 @@ FILES_SUBST+=	JAVA_HOME=${PKG_JAVA_HOME:Q} TOMCAT_LIB=${TOMCAT_LIB:Q}
 
 do-build:
 	@${MV} ${WRKSRC}/conf ${WRKDIR}
+
+INSTALLATION_DIRS=	${EGDIR} ${EGDIR2} ${TOMCAT_LIB}
+
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR2}
 .for f in ${CFILES}
-	${INSTALL_DATA} ${WRKDIR}/conf/${f} ${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/conf/${f} ${DESTDIR}${EGDIR}
 .endfor
 .for f in ${CF2FILES}
-	${INSTALL_DATA} ${WRKDIR}/conf/${CATALINA_DIR}/${f} ${EGDIR2}
+	${INSTALL_DATA} ${WRKDIR}/conf/${CATALINA_DIR}/${f} ${DESTDIR}${EGDIR2}
 .endfor
-	${INSTALL_DATA_DIR} ${TOMCAT_LIB}
-	@(cd ${WRKSRC} && pax -rw -pm . ${TOMCAT_LIB};		\
-	${FIND} ${TOMCAT_LIB} -type f -print | ${XARGS} ${CHMOD} a+r;	\
-	${FIND} ${TOMCAT_LIB} \( -type f -o -perm -u+x \) -print	\
+	@(cd ${WRKSRC} && pax -rw -pm . ${DESTDIR}${TOMCAT_LIB};		\
+	${FIND} ${DESTDIR}${TOMCAT_LIB} -type f -print | ${XARGS} ${CHMOD} a+r;	\
+	${FIND} ${DESTDIR}${TOMCAT_LIB} \( -type f -o -perm -u+x \) -print	\
 		| ${XARGS} ${CHMOD} a+rx;				\
-	${FIND} ${TOMCAT_LIB} -type d -print | ${XARGS} ${CHMOD} a+rx;	\
-	${FIND} ${TOMCAT_LIB} -type f -name \*.bat -print |		\
+	${FIND} ${DESTDIR}${TOMCAT_LIB} -type d -print | ${XARGS} ${CHMOD} a+rx;	\
+	${FIND} ${DESTDIR}${TOMCAT_LIB} -type f -name \*.bat -print |		\
 		${XARGS} ${RM} -f)
 
 .include "../../mk/java-vm.mk"
