@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/04/07 16:10:37 bjs Exp $
+$NetBSD: patch-ad,v 1.2 2009/07/07 21:18:52 joerg Exp $
 
---- configure.orig	2008-02-25 17:38:19.000000000 -0500
+--- configure.orig	2008-02-25 23:38:19.000000000 +0100
 +++ configure
 @@ -22895,6 +22895,72 @@ if test `eval echo '${'$as_ac_var'}'` = 
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
@@ -75,3 +75,11 @@ $NetBSD: patch-ad,v 1.1.1.1 2008/04/07 16:10:37 bjs Exp $
  fi
  done
  
+@@ -27118,6 +27184,7 @@ else
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ 	mp_cv_ncursesw=no
++        LIBS="$mp_save_LIBS"
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
