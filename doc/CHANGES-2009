@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2465 2009/07/07 19:25:02 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2466 2009/07/07 19:28:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3282,3 +3282,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/p5-CatalystX-Component-Traits version 0.03 [sno 2009-07-07]
 	Updated archivers/p5-Archive-Zip to 1.30 [sno 2009-07-07]
 	Updated devel/p5-Array-Compare to 1.18 [sno 2009-07-07]
+	Updated time/p5-Time-Piece to 1.15 [sno 2009-07-07]
