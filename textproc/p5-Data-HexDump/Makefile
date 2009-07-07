@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/04 00:29:26 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/07 16:17:16 sno Exp $
 #
 
 DISTNAME=	Data-HexDump-0.02
@@ -9,6 +9,9 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/F/FT/FTASSIN/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/F/FT/FTASSIN/
 COMMENT=	Hexadecial Dumper
+LICENSE=	${PERL5_LICENSE}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Data/HexDump/.packlist
 USE_LANGUAGES=	# none
