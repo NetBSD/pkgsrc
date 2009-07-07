@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/10/28 07:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2009/07/07 11:02:37 zafer Exp $
 #
 
 DISTNAME=	pyorbit-2.24.0
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	pyorbit-2.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	26 25 24
 
 do-test:
 	(cd ${WRKSRC}/tests/c-inproc && ${PYTHONBIN} test-c-inproc.py)
