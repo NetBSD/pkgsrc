@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/09 11:34:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/07 22:00:41 joerg Exp $
 #
 
 DISTNAME=	igerman98-20090107
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.j3e.de/ispell/igerman98/
 COMMENT=	German dictionaries for hunspell
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	ispell-base>=3.1.20nb1:../../textproc/ispell-base
 DEPENDS+=	hunspell>=1.1.5:../../textproc/hunspell
@@ -32,7 +34,7 @@ SUBST_MESSAGE.sed=	Fixing path to sed.
 INSTALLATION_DIRS=	share/hunspell
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/hunspell/de*aff ${PREFIX}/share/hunspell
-	${INSTALL_DATA} ${WRKSRC}/hunspell/de*dic ${PREFIX}/share/hunspell
+	${INSTALL_DATA} ${WRKSRC}/hunspell/de*aff ${DESTDIR}${PREFIX}/share/hunspell
+	${INSTALL_DATA} ${WRKSRC}/hunspell/de*dic ${DESTDIR}${PREFIX}/share/hunspell
 
 .include "../../mk/bsd.pkg.mk"
