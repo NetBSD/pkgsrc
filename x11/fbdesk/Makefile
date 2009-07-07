@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/05/10 16:19:16 obache Exp $
+# $NetBSD: Makefile,v 1.24 2009/07/07 18:29:04 joerg Exp $
 #
 
 DISTNAME=	fbdesk-1.4.1
@@ -9,14 +9,17 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fluxbox.sourceforge.net/fbdesk/
 COMMENT=	Application that creates and manage icons on your desktop
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
+INSTALLATION_DIRS=	share/doc/fbdesk
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fbdesk
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/fbdesk/
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/fbdesk/
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
