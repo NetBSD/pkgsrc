@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2517 2009/07/07 23:19:23 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2518 2009/07/07 23:20:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3341,3 +3341,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-multirow-doc version 1.6 [minskim 2009-07-07]
 	Added print/tex-preprint version 2008.7340 [minskim 2009-07-07]
 	Added print/tex-preprint-doc version 2008.7340 [minskim 2009-07-07]
+	Updated print/teTeX3-texmf to 3.0nb17 [minskim 2009-07-07]
