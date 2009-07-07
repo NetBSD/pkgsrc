@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/18 16:16:38 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/07 18:34:01 joerg Exp $
 #
 
 VERSION=	1.4.2
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.oroborus.org/debian/dists/sid/main/source/x11/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oroborus.org/?node=Download
 COMMENT=	X utility for providing root menus
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake pkg-config
@@ -26,9 +28,9 @@ SUBST_SED.fix-paths=		-e 's,"/etc,"${PKG_SYSCONFBASE},g'
 BUILD_DEFS+=	PKG_SYSCONFBASE
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/deskmenu ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/deskmenu ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/example_rc \
-		${PREFIX}/share/examples/deskmenu/deskmenurc
+		${DESTDIR}${PREFIX}/share/examples/deskmenu/deskmenurc
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
