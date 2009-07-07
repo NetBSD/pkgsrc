@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2470 2009/07/07 19:41:00 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2471 2009/07/07 19:46:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3287,3 +3287,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added time/p5-Time-Format_XS version 1.03 [sno 2009-07-07]
 	Updated www/p5-HTML-Parser to 3.61 [sno 2009-07-07]
 	Updated www/p5-libwww to 5.828 [sno 2009-07-07]
+	Updated www/p5-Template-Toolkit to 2.21 [sno 2009-07-07]
