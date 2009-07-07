@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2488 2009/07/07 20:55:17 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2489 2009/07/07 20:58:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3305,3 +3305,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-CPAN to 1.9402 [sno 2009-07-07]
 	Updated devel/p5-Cache-FastMmap to 1.34 [sno 2009-07-07]
 	Updated devel/p5-Class-Gomor to 1.02 [sno 2009-07-07]
+	Updated devel/p5-Class-Method-Modifiers to 1.04 [sno 2009-07-07]
