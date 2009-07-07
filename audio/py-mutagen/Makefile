@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:14 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/07 17:56:40 drochner Exp $
 #
 
-DISTNAME=	mutagen-1.10
+DISTNAME=	mutagen-1.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	http://www.sacredchao.net/~piman/software/
