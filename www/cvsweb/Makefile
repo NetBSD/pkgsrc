@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/01/24 17:43:58 reed Exp $
+# $NetBSD: Makefile,v 1.35 2009/07/07 16:43:50 joerg Exp $
 #
 
 DISTNAME=		cvsweb-3.0.6
@@ -9,6 +9,8 @@ MASTER_SITES=		ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/scop/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.freebsd.org/projects/cvsweb.html
 COMMENT=		Web interface for browsing a CVS repository
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-File-Temp>=0.12:../../devel/p5-File-Temp
 DEPENDS+=		p5-IPC-Run>=0.74:../../devel/p5-IPC-Run
@@ -44,24 +46,21 @@ CVSWEB_DOCS=		ChangeLog INSTALL NEWS README TODO
 
 CONF_FILES=		${EGDIR}/cvsweb.conf ${PKG_SYSCONFDIR}/cvsweb.conf
 
+INSTALLATION_DIRS=	libexec/cgi-bin ${EGDIR}/icons ${EGDIR}/css ${DOCDIR}
+
 do-install:
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/libexec/cgi-bin
-	${INSTALL_SCRIPT} ${WRKSRC}/cvsweb.cgi ${PREFIX}/libexec/cgi-bin
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/cvsweb.cgi ${DESTDIR}${PREFIX}/libexec/cgi-bin
 .for f in ${CVSWEB_CONF_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${EGDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${EGDIR}/${f}
 .endfor
-	${INSTALL_DATA_DIR} ${EGDIR}/icons
 .for f in ${CVSWEB_ICONS}
-	${INSTALL_DATA} ${WRKSRC}/icons/${f} ${EGDIR}/icons/${f}
+	${INSTALL_DATA} ${WRKSRC}/icons/${f} ${DESTDIR}${EGDIR}/icons/${f}
 .endfor
-	${INSTALL_DATA_DIR} ${EGDIR}/css
 .for f in ${CVSWEB_CSS}
-	${INSTALL_DATA} ${WRKSRC}/css/${f} ${EGDIR}/css/${f}
+	${INSTALL_DATA} ${WRKSRC}/css/${f} ${DESTDIR}${EGDIR}/css/${f}
 .endfor
-	${INSTALL_DATA_DIR} ${DOCDIR}
 .for f in ${CVSWEB_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
 .endfor
 
 SUBST_CLASSES+=		prefix
