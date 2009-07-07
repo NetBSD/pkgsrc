@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/04/27 04:08:19 uebayasi Exp $
+# $NetBSD: Makefile,v 1.30 2009/07/07 21:10:44 joerg Exp $
 #
 
 DISTNAME=	ndtpd-3.1.5
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/ndtpd/
 COMMENT=	Server for accessing CD-ROM books with NDTP
 
 PKG_INSTALLATION_TYPES=	pkgviews overwrite
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	makeinfo perl:run
 USE_LIBTOOL=	YES
@@ -41,10 +42,11 @@ NDTPD_LOGDIR=	/var/log
 NDTPD_RUNDIR=	/var/run
 # XXX NDTPD actually uses ${NDTPD_RUNDIR}/ndtpd.
 
+INSTALLATION_DIRS=	${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/ndtpd.conf.sample \
-		${EGDIR}/ndtpd.conf.default
+		${DESTDIR}${EGDIR}/ndtpd.conf.default
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/eb/buildlink3.mk"
