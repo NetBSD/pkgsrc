@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:24:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/07/07 10:02:51 drochner Exp $
 
 BUILDLINK_TREE+=	exiv2
 
@@ -9,6 +9,8 @@ EXIV2_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.exiv2+=	exiv2>=0.18
 BUILDLINK_ABI_DEPENDS.exiv2+=	exiv2>=0.18
 BUILDLINK_PKGSRCDIR.exiv2?=	../../graphics/exiv2
+
+.include "../../textproc/expat/buildlink3.mk"
 .endif # EXIV2_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-exiv2
