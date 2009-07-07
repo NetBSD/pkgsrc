@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/22 07:32:24 lukem Exp $
+# $NetBSD: Makefile,v 1.16 2009/07/07 19:06:13 joerg Exp $
 #
 
 DISTNAME=	make_album_1_6
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.burren.cx/david/make_album.html
 COMMENT=	Generate HTML albums of images
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 MY_SCRIPTS=	index_albums ingest make_album newimagedir populate_master
@@ -22,16 +24,15 @@ REPLACE_PERL=	${MY_SCRIPTS}
 # in pre-configure stage
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	bin lib
+INSTALLATION_DIRS=	bin lib share/doc/make_album
 
 do-install:
 	for f in ${MY_SCRIPTS}; do \
-		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/bin; \
+		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/bin; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/cameras.txt ${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/make_album
+	${INSTALL_DATA} ${WRKSRC}/cameras.txt ${DESTDIR}${PREFIX}/lib
 	for f in CHANGES README TODO; do \
-		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/make_album; \
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/share/doc/make_album; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
