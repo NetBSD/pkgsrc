@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2006/10/23 14:54:11 adam Exp $
+# $NetBSD: Makefile,v 1.24 2009/07/07 18:10:58 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt3-libs/Makefile.common"
 
@@ -10,33 +12,31 @@ BUILD_QT3=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
+INSTALLATION_DIRS=	${QTPREFIX}/doc/html ${QTPREFIX}/man/man3
+
 do-install:
-	${INSTALL_DATA_DIR} ${QTPREFIX}/doc
-	${INSTALL_DATA_DIR} ${QTPREFIX}/man
-	${INSTALL_MAN_DIR}  ${QTPREFIX}/man/man3
 	@cd ${WRKSRC}/doc/man/man3; PAGES="`ls -1 | ${SED} -e 's,3qt$$,3,'`"; \
 	(for PAGE in $$PAGES; do \
-	    ${ECHO} installing ${QTPREFIX}/man/man3/$${PAGE}; \
+	    ${ECHO} installing ${DESTDIR}${QTPREFIX}/man/man3/$${PAGE}; \
 	    set - X `head -1 $${PAGE}qt`; \
 	    if [ $$# -eq 3 ] && [ "$$2" = .so ]; then \
 		${LN} -fs `basename $$3 | ${SED} s/qt$$//` \
-		  ${QTPREFIX}/man/man3/$${PAGE}; \
+		  ${DESTDIR}${QTPREFIX}/man/man3/$${PAGE}; \
 	    else \
-		${INSTALL_MAN} $${PAGE}qt ${QTPREFIX}/man/man3/$${PAGE}; \
+		${INSTALL_MAN} $${PAGE}qt ${DESTDIR}${QTPREFIX}/man/man3/$${PAGE}; \
 	    fi; \
 	 done)
-	${INSTALL_DATA_DIR} ${QTPREFIX}/doc/html
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README-QT.TXT ${QTPREFIX}/doc/html
+	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README-QT.TXT ${DESTDIR}${QTPREFIX}/doc/html
 	cd ${WRKSRC};  \
 	DOCDIRS="`${FIND} doc/html -type d -print | ${SORT}`"; \
 	(for d in $${DOCDIRS}; do \
-	    ${ECHO} installing ${QTPREFIX}/$${d}; \
-	    ${INSTALL_DATA_DIR} ${QTPREFIX}/$${d}; \
+	    ${ECHO} installing ${DESTDIR}${QTPREFIX}/$${d}; \
+	    ${INSTALL_DATA_DIR} ${DESTDIR}${QTPREFIX}/$${d}; \
 	done) ; \
 	DOCFILES="`${FIND} doc/html -type f -print | ${SORT}`"; \
 	(for f in $${DOCFILES}; do \
-	    ${ECHO} installing ${QTPREFIX}/$${f}; \
-	    ${INSTALL_DATA} $${f} ${QTPREFIX}/$${f}; \
+	    ${ECHO} installing ${DESTDIR}${QTPREFIX}/$${f}; \
+	    ${INSTALL_DATA} $${f} ${DESTDIR}${QTPREFIX}/$${f}; \
 	done)
 
 .include "../../x11/qt3-libs/buildlink3.mk"
