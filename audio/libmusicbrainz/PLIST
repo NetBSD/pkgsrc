@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/07/07 17:49:00 drochner Exp $
 include/musicbrainz3/artist.h
 include/musicbrainz3/artistalias.h
 include/musicbrainz3/defines.h
@@ -8,6 +8,8 @@ include/musicbrainz3/factory.h
 include/musicbrainz3/filters.h
 include/musicbrainz3/includes.h
 include/musicbrainz3/iwebservice.h
+include/musicbrainz3/label.h
+include/musicbrainz3/labelalias.h
 include/musicbrainz3/lists.h
 include/musicbrainz3/mb_c.h
 include/musicbrainz3/mbxmlparser.h
@@ -19,11 +21,12 @@ include/musicbrainz3/relation.h
 include/musicbrainz3/release.h
 include/musicbrainz3/releaseevent.h
 include/musicbrainz3/results.h
+include/musicbrainz3/tag.h
 include/musicbrainz3/track.h
 include/musicbrainz3/user.h
 include/musicbrainz3/utils.h
 include/musicbrainz3/webservice.h
 lib/libmusicbrainz3.so
 lib/libmusicbrainz3.so.6
-lib/libmusicbrainz3.so.6.1.0
+lib/libmusicbrainz3.so.6.2.0
 lib/pkgconfig/libmusicbrainz3.pc
