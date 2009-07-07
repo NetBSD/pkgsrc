@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/07 21:34:26 joerg Exp $
 #
 
 DISTNAME=		jing-20030619
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.thaiopensource.com/relaxng/trang.html
 COMMENT=		RELAX NG validator in Java
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	pax
 
 USE_JAVA=		run
@@ -19,16 +21,14 @@ do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/jing
 	${ECHO} "${PKG_JAVA_HOME}/bin/java -jar ${PREFIX}/libexec/jing/jing.jar"' "$$@"' >> ${WRKSRC}/jing
 
+INSTALLATION_DIRS=	bin libexec/jing/lib share/doc/jing/doc
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/jing ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/jing
-	${INSTALL_DATA} ${WRKSRC}/bin/* ${PREFIX}/libexec/jing
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/jing/lib
-	${INSTALL_DATA} ${WRKSRC}/lib/* ${PREFIX}/libexec/jing/lib
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jing
-	${INSTALL_DATA} ${WRKSRC}/readme.html ${PREFIX}/share/doc/jing
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jing/doc
-	cd ${WRKSRC}/doc && pax -pp -rw * ${PREFIX}/share/doc/jing/doc
+	${INSTALL_SCRIPT} ${WRKSRC}/jing ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/bin/* ${DESTDIR}${PREFIX}/libexec/jing
+	${INSTALL_DATA} ${WRKSRC}/lib/* ${DESTDIR}${PREFIX}/libexec/jing/lib
+	${INSTALL_DATA} ${WRKSRC}/readme.html ${DESTDIR}${PREFIX}/share/doc/jing
+	cd ${WRKSRC}/doc && pax -pp -rw * ${DESTDIR}${PREFIX}/share/doc/jing/doc
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
