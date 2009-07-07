@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2519 2009/07/07 23:24:37 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2520 2009/07/07 23:26:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3343,3 +3343,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-preprint-doc version 2008.7340 [minskim 2009-07-07]
 	Updated print/teTeX3-texmf to 3.0nb17 [minskim 2009-07-07]
 	Updated print/tex-IEEEtran to 1.7anb2 [minskim 2009-07-07]
+	Added print/tex-IEEEtran-doc version 1.7a [minskim 2009-07-07]
