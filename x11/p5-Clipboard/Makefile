@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/17 13:04:21 seb Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/07 17:19:37 sno Exp $
 #
 
 DISTNAME=	Clipboard-0.09
@@ -10,6 +10,10 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/K/KI/KING/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Clipboard/
 COMMENT=	Copy and paste with any OS
+LICENSE=	${PERL5_LICENSE}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
@@ -18,8 +22,6 @@ DEPENDS+=	p5-IO-All-[0-9]*:../../devel/p5-IO-All
 
 DEPENDS+=	p5-Spiffy-[0-9]*:../../devel/p5-Spiffy
 DEPENDS+=	xclip-[0-9]*:../../x11/xclip
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Clipboard/.packlist
 
