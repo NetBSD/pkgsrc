@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/05/19 08:59:36 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/07 19:41:54 joerg Exp $
 
 DISTNAME=	fvwm-1.24r
 PKGNAME=	${DISTNAME:S/fvwm/fvwm1/}
@@ -10,6 +10,8 @@ MAINTAINER=	cjs@NetBSD.org
 HOMEPAGE=	http://www.fvwm.org/
 COMMENT=	Virtual window manager for X
 LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 
@@ -37,14 +39,14 @@ post-patch:
 	${SED} -e 's#$${PREFIX}#${PREFIX}#g' \
 	  -e 's#$${X11BASE}#${X11BASE}#g' configure.h.old >configure.h
 
+INSTALLATION_DIRS=	lib/X11/fvwm/pixmaps lib/X11/fvwm/bitmaps
+
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fvwm/pixmaps
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fvwm/bitmaps
 	${INSTALL_DATA} ${WRKSRC}/fvwm_icons/*.xpm \
-	  ${PREFIX}/lib/X11/fvwm/pixmaps
+	  ${DESTDIR}${PREFIX}/lib/X11/fvwm/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/fvwm_icons/*.xbm \
 	  ${WRKSRC}/fvwm_icons/*.bitmap ${WRKSRC}/fvwm_icons/*.icon \
-	  ${PREFIX}/lib/X11/fvwm/bitmaps
+	  ${DESTDIR}${PREFIX}/lib/X11/fvwm/bitmaps
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
