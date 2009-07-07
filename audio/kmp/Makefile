@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/08/06 10:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/07 15:20:45 joerg Exp $
 
 DISTNAME=		kmp-0.01
 PKGREVISION=		4
@@ -10,10 +10,14 @@ MAINTAINER=		pkg@burningsoda.com
 #HOMEPAGE=		http://www.threadbox.net/index.php/code/kmp/
 COMMENT=		Qt client for the Music Player Daemon
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	${PREFIX}
+
+INSTALLATION_DIRS=	bin
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
