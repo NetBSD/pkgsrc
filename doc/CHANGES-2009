@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2436 2009/07/07 11:43:36 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2437 2009/07/07 11:44:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3253,3 +3253,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/tokyodystopia to 0.9.13 [obache 2009-07-07]
 	Updated databases/tokyotyrant to 1.1.30 [obache 2009-07-07]
 	Updated databases/p5-tokyotyrant to 1.13 [obache 2009-07-07]
+	Updated databases/ruby-tokyotyrant to 1.10 [obache 2009-07-07]
