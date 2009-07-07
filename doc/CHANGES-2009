@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2516 2009/07/07 22:40:46 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2517 2009/07/07 23:19:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3334,3 +3334,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Data-Section to 0.091.820 [sno 2009-07-07]
 	Added fonts/tex-euenc version 0.1d [minskim 2009-07-07]
 	Added fonts/tex-euenc-doc version 0.1d [minskim 2009-07-07]
+	Added fonts/tex-times version 2008.7340 [minskim 2009-07-07]
+	Added fonts/tex-lm version 1.106 [minskim 2009-07-07]
+	Added fonts/tex-lm-doc version 1.106 [minskim 2009-07-07]
+	Added print/tex-multirow version 1.6 [minskim 2009-07-07]
+	Added print/tex-multirow-doc version 1.6 [minskim 2009-07-07]
+	Added print/tex-preprint version 2008.7340 [minskim 2009-07-07]
+	Added print/tex-preprint-doc version 2008.7340 [minskim 2009-07-07]
