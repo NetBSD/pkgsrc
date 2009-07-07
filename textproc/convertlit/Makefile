@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/09/09 02:46:08 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/07 22:22:58 joerg Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -15,6 +15,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${CONVERTLIT_HOMEPAGE}
 COMMENT=		Convert Microsoft Legal Reader format eBooks into open format
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		lib clit18
@@ -33,8 +35,10 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/clit18/clit ${PREFIX}/bin/convertlit
+	${INSTALL_PROGRAM} ${WRKSRC}/clit18/clit ${DESTDIR}${PREFIX}/bin/convertlit
 
 .include "../../math/ltm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
