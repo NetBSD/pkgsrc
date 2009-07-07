@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2008/11/05 15:07:10 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/07/07 20:17:11 sno Exp $
 #
 
-DISTNAME=		DBD-mysql-4.010
+DISTNAME=		DBD-mysql-4.012
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5dmy
 CATEGORIES=		databases perl5
@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBD/}
 MAINTAINER=		bad@NetBSD.org
 HOMEPAGE=		http://dev.mysql.com/downloads/dbi.html
 COMMENT=		Perl DBI/DBD driver for MySQL databases
+LICENSE=		${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
