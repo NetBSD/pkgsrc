@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/11/17 12:04:14 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/07 22:17:24 joerg Exp $
 
 DISTNAME=	#
 PKGNAME=	dict-data-1.8.0
@@ -15,6 +15,8 @@ DISTFILES=	dict-gazetteer-1.3.tar.gz \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary data for DICTD
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	dict-server>=1.8.0nb1:../../textproc/dict-server
 
@@ -70,23 +72,24 @@ do-build:
 		fi; \
 	done
 
+INSTALLATION_DIRS=	share/dictd
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/dictd
 	for f in ${LEXICONS}; do \
 		${INSTALL_DATA} ${WRKDIR}/dict-misc-1.5/$$f \
-		    ${PREFIX}/share/dictd; \
+		    ${DESTDIR}${PREFIX}/share/dictd; \
 	done
 	for f in ${GAZETTEER}; do \
 		${INSTALL_DATA} ${WRKDIR}/dict-gazetteer-1.3/$$f \
-		    ${PREFIX}/share/dictd; \
+		    ${DESTDIR}${PREFIX}/share/dictd; \
 	done
 	for f in ${WEB1913}; do \
 		${INSTALL_DATA} ${WRKDIR}/dict-web1913-1.4/$$f \
-		    ${PREFIX}/share/dictd; \
+		    ${DESTDIR}${PREFIX}/share/dictd; \
 	done
 	for f in ${WN}; do \
 		${INSTALL_DATA} ${WRKDIR}/dict-wn-1.5/$$f \
-		    ${PREFIX}/share/dictd; \
+		    ${DESTDIR}${PREFIX}/share/dictd; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

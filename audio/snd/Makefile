@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/04/28 12:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2009/07/07 22:19:01 joerg Exp $
 #
 
 DISTNAME=		snd-9.9
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=snd/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ccrma.stanford.edu/software/snd/
 COMMENT=		X based sound editor
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		flac-[0-9]*:../../audio/flac
 DEPENDS+=		speex-[0-9]*:../../audio/speex
@@ -21,9 +23,12 @@ BUILD_TARGET=		snd
 MAKE_FILE=		makefile
 WRKSRC=			${WRKDIR}/snd-9
 
+INSTALLATION_DIRS=	${PKGLOCALEDIR}/locale/de/LC_MESSAGES
+INSTALL_MAKE_FLAGS+=	localedir=${DESTDIR}${PREFIX}/${PKGLOCALEDIR}/locale
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/po/de.gmo \
-		${PREFIX}/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/snd.mo
+	    ${DESTDIR}${PREFIX}/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/snd.mo
 
 .include "options.mk"
 
