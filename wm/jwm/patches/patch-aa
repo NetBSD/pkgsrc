@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/08/04 01:08:21 reed Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/07 19:39:56 joerg Exp $
 
 --- Makefile.in.orig	2005-11-21 04:02:12.000000000 +0000
 +++ Makefile.in
@@ -17,10 +17,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/08/04 01:08:21 reed Exp $
 -	install -m 644 example.jwmrc $(SYSCONF)/system.jwmrc
 -	install -d $(MANDIR)/man1
 -	install -m 644 jwm.1 $(MANDIR)/man1/jwm.1
-+	${BSD_INSTALL_DATA_DIR} $(SYSCONF)
-+	${BSD_INSTALL_DATA} example.jwmrc $(SYSCONF)/system.jwmrc
-+	${BSD_INSTALL_MAN_DIR} $(MANDIR)/man1
-+	${BSD_INSTALL_MAN} jwm.1 $(MANDIR)/man1/jwm.1
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(SYSCONF)
++	${BSD_INSTALL_DATA} example.jwmrc ${DESTDIR}$(SYSCONF)/system.jwmrc
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}$(MANDIR)/man1
++	${BSD_INSTALL_MAN} jwm.1 ${DESTDIR}$(MANDIR)/man1/jwm.1
  
  depend:
  	cd src ; $(MAKE) depend
