@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/04/08 22:43:25 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/07 21:54:17 joerg Exp $
 
 DISTNAME=	iso12083-1993
 PKGREVISION=	5
@@ -10,6 +10,8 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://xml.coverpages.org/sgml-xml.html
 COMMENT=	SGML DTDs from the The Electronic Publishing Special Interest Group
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=	iso12083
 
 WRKSRC=		${WRKDIR}
@@ -20,14 +22,13 @@ INSTDIR=	${PREFIX}/share/sgml/iso12083
 
 SGML_CATALOGS=	${INSTDIR}/catalog
 
-pre-install:
-	${INSTALL_DATA_DIR} ${INSTDIR}
+INSTALLATION_DIRS=	${INSTDIR}
 
 do-install:
 	@for i in ${DISTFILES}; do \
-		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$i ${INSTDIR}/$$i; \
+		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$i ${DESTDIR}${INSTDIR}/$$i; \
 	done
-	@${INSTALL_DATA} ${FILESDIR}/catalog ${INSTDIR}/catalog
+	@${INSTALL_DATA} ${FILESDIR}/catalog ${DESTDIR}${INSTDIR}/catalog
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
