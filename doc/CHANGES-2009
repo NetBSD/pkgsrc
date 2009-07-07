@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2483 2009/07/07 20:40:39 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2484 2009/07/07 20:44:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3300,3 +3300,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-Rose-DBx-Garden-Catalyst to 0.14 [sno 2009-07-07]
 	Updated databases/p5-SQL-Translator to 0.09007 [sno 2009-07-07]
 	Updated devel/p5-Any-Moose to 0.10 [sno 2009-07-07]
+	Updated devel/p5-AnyEvent to 4.800 [sno 2009-07-07]
