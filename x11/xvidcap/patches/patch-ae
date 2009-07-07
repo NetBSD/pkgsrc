@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2006/05/17 05:06:28 reed Exp $
+$NetBSD: patch-ae,v 1.4 2009/07/07 17:38:09 joerg Exp $
 
 --- src/Makefile.in.orig	2004-02-14 12:06:20.000000000 -0800
 +++ src/Makefile.in	2006-05-16 21:57:37.000000000 -0700
@@ -39,9 +39,9 @@ $NetBSD: patch-ae,v 1.3 2006/05/17 05:06:28 reed Exp $
 -	mkdir -p ${datadir}/doc/${PACKAGE_TARNAME}_${PACKAGE_VERSION}
 -	./mkresfile.sh > XVidcap.ad && cp XVidcap.ad ${datadir}/doc/${PACKAGE_TARNAME}_${PACKAGE_VERSION}
 -	cp ../README ../NEWS ../TODO ../INSTALL ../AUTHORS ../ChangeLog ${datadir}/doc/${PACKAGE_TARNAME}_${PACKAGE_VERSION}
-+	mkdir -p ${docdir}
-+	cp ../README ../NEWS ../TODO ../INSTALL ../AUTHORS ../ChangeLog ${docdir}
-+@WITHGTK2_FALSE@	./mkresfile.sh > XVidcap.ad && cp XVidcap.ad ${datadir}/doc/${PACKAGE_TARNAME}_${PACKAGE_VERSION}
++	mkdir -p ${DESTDIR}${docdir}
++	cp ../README ../NEWS ../TODO ../INSTALL ../AUTHORS ../ChangeLog ${DESTDIR}${docdir}
++@WITHGTK2_FALSE@	./mkresfile.sh > XVidcap.ad && cp XVidcap.ad ${DESTDIR}${datadir}/doc/${PACKAGE_TARNAME}_${PACKAGE_VERSION}
  
  uninstall-hook:
  	rm -rf ${datadir}/doc/${PACKAGE_TARNAME}_${PACKAGE_VERSION}
