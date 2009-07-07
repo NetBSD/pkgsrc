@@ -1,0 +1,3 @@
+libmtag is an advanced C music tagging library with a simple API.
+It uses taglib as a backend, and as taglib, it supports: ID3v1, ID3v2
+for MP3 files, Ogg Vorbis and FLAC files.
