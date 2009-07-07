@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/06/14 06:33:44 hasso Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/07 18:01:07 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -17,10 +19,11 @@ do-build:
 
 IMGFMTDIR=	${QTPREFIX}/plugins/imageformats
 
+INSTALLATION_DIRS=	${IMGFMTDIR}
+
 do-install:
-	${INSTALL_DATA_DIR} ${IMGFMTDIR}
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/plugins/imageformats/libqtiff.la \
-		${IMGFMTDIR}
+		${DESTDIR}${IMGFMTDIR}
 
 # up to 4.3.2 a builtin libtiff is used
 BUILDLINK_API_DEPENDS.qt4-libs+= qt4-libs>=4.3.2nb1
