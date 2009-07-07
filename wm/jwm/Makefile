@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/03/21 16:29:45 darcy Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/07 19:39:55 joerg Exp $
 #
 
 DISTNAME=		jwm-2.0.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.joewing.net/programs/jwm/
 COMMENT=		Lightweight window manager with virtual desktops
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
@@ -30,6 +32,8 @@ SUBST_SED.egdir=	-e 's,@@EGDIR@@,${EGDIR},g'
 PKG_SYSCONFSUBDIR=	jwm
 EGDIR=			${PREFIX}/share/examples/jwm
 CONF_FILES=	${EGDIR}/system.jwmrc ${PKG_SYSCONFDIR}/system.jwmrc
+
+INSTALLATION_DIRS=	bin
 
 .include "options.mk"
 
