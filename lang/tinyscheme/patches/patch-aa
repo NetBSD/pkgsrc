@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/03/24 16:30:45 agc Exp $
+$NetBSD: patch-aa,v 1.5 2009/07/07 20:35:53 agc Exp $
 
 --- makefile	2003-01-07 19:01:04.000000000 +0000
 +++ makefile	2005-03-24 16:19:11.000000000 +0000
@@ -157,11 +157,11 @@ $NetBSD: patch-aa,v 1.4 2005/03/24 16:30:45 agc Exp $
 +	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:35
 +
 +install: all
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${STATICLIBTARGET:.a=.la} ${PREFIX}/lib
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} scheme${EXE_EXT} ${PREFIX}/bin/tinyscheme
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/tinyscheme
-+	${BSD_INSTALL_DATA} init.scm ${PREFIX}/share/tinyscheme
-+	${BSD_INSTALL_DATA} scheme.h ${PREFIX}/include/tinyscheme.h
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${STATICLIBTARGET:.a=.la} ${DESTDIR}${PREFIX}/lib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} scheme${EXE_EXT} ${DESTDIR}${PREFIX}/bin/tinyscheme
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/tinyscheme
++	${BSD_INSTALL_DATA} init.scm ${DESTDIR}${PREFIX}/share/tinyscheme
++	${BSD_INSTALL_DATA} scheme.h ${DESTDIR}${PREFIX}/include/tinyscheme.h
 +
 +$(OBJS): scheme.h scheme-private.h opdefines.h
 +dynload.$(Osuf): dynload.h 
