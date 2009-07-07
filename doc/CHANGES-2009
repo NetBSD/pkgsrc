@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2439 2009/07/07 15:45:38 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2440 2009/07/07 15:50:06 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3256,3 +3256,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/ruby-tokyotyrant to 1.10 [obache 2009-07-07]
 	Added x11/space_dapp version 20060717 [sborrill 2009-07-07]
 	Updated comms/p5-Asterisk to 1.01 [sno 2009-07-07]
+	Updated wm/fluxbox to 1.1.1 [sborrill 2009-07-07]
