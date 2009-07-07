@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8223 2009/07/07 18:25:25 tron Exp $
+$NetBSD: TODO,v 1.8224 2009/07/07 19:14:48 sno Exp $
 
 Suggested new packages
 ======================
@@ -1036,13 +1036,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
-	o p5-Archive-Tar-1.52
-	o p5-Archive-Zip-1.28
 	o p5-Array-Compare-1.18
 	o p5-BerkeleyDB-0.39
 	o p5-Compress-Raw-Bzip2-2.020
 	o p5-Compress-Raw-Zlib-2.020
-	o p5-DBD-Sybase-1.08
 	o p5-DBD-mysql-4.012
 	o p5-DateTime-TimeZone-0.91
 	o p5-Digest-1.16
@@ -1054,7 +1051,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-MIME-Base64-3.08
 	o p5-Net-OpenID-Consumer-1.03
 	o p5-Perl-Tidy-20090616
-	o p5-Search-Xapian-1.0.13.1
 	o p5-Test-Simple-0.88
 	o p5-XML-NamespaceSupport-1.10
 	o p5-ispman-1.2
