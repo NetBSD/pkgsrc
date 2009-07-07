@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/05/25 21:42:22 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2009/07/07 22:08:46 joerg Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -21,6 +21,8 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://xmlgraphics.apache.org/fop/
 COMMENT=	The Apache Project's XSL Formatting Objects implementation
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 USE_JAVA=	run
 USE_TOOLS+=	pax
@@ -39,9 +41,9 @@ post-extract:
 	cd ${WRKSRC} && chmod -R go-w .
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/build/fop.jar ${PREFIX}/lib/java/fop.jar
-	${INSTALL_DATA} ${WRKSRC}/lib/w3c.jar ${PREFIX}/lib/java/fop-w3c.jar
-	cd ${WRKSRC}/docs && pax -rw . ${PREFIX}/share/doc/java/fop
+	${INSTALL_DATA} ${WRKSRC}/build/fop.jar ${DESTDIR}${PREFIX}/lib/java/fop.jar
+	${INSTALL_DATA} ${WRKSRC}/lib/w3c.jar ${DESTDIR}${PREFIX}/lib/java/fop-w3c.jar
+	cd ${WRKSRC}/docs && pax -rw . ${DESTDIR}${PREFIX}/share/doc/java/fop
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
