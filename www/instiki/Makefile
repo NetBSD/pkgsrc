@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/19 15:24:04 taca Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/07 19:10:37 joerg Exp $
 
 DISTNAME=	instiki-0.9.2
 PKGREVISION=	4
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://instiki.org/show/HomePage
 COMMENT=	Wiki clone that focuses on simple installation and running
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 
@@ -40,7 +42,7 @@ do-install:
 	${FIND} ${DESTDIR}${PREFIX}/${INSTIKI_DIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DESTDIR}${PREFIX}/${INSTIKI_DIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 	${INSTALL_SCRIPT} ${WRKSRC}/instiki ${DESTDIR}${PREFIX}/${INSTIKI_DIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/ruby/replace.mk"
 .include "../../lang/ruby/buildlink3.mk"
