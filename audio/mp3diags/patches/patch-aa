@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/07/07 09:34:39 drochner Exp $
+
+--- src/OsFile.cpp.orig	2009-06-22 15:53:58.000000000 +0200
++++ src/OsFile.cpp
+@@ -69,7 +69,12 @@ public:
+     //const char* m_szCurrentPath;
+ 
+ #ifndef WIN32
++#ifdef Linux
+     struct stat64 m_crtStat;
++#else
++    struct stat m_crtStat;
++#define lstat64 lstat
++#endif
+ #endif
+ 
+     //glob_t m_findData;
