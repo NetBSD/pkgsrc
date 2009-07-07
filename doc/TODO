@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8221 2009/07/07 11:45:26 obache Exp $
+$NetBSD: TODO,v 1.8222 2009/07/07 15:50:06 sborrill Exp $
 
 Suggested new packages
 ======================
@@ -607,7 +607,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o flashplayer-0.4.13
 	o flightgear-1.9.0
 	o flpsed-0.4.4
-	o fluxbox-1.1.0
 	o fmsx-3.0
 	o fondu-040927
 	o fontconfig-2.7.0
