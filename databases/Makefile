@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.301 2009/06/14 22:45:30 sno Exp $
+# $NetBSD: Makefile,v 1.302 2009/07/07 17:30:18 sno Exp $
 #
 
 COMMENT=	Databases
@@ -105,6 +105,7 @@ SUBDIR+=	p5-DBICx-TestDatabase
 SUBDIR+=	p5-DBIWrapper
 SUBDIR+=	p5-DBIx-Abstract
 SUBDIR+=	p5-DBIx-Class
+SUBDIR+=	p5-DBIx-Class-Cursor-Cached
 SUBDIR+=	p5-DBIx-Class-DigestColumns
 SUBDIR+=	p5-DBIx-Class-DynamicDefault
 SUBDIR+=	p5-DBIx-Class-Fixtures
