@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2499 2009/07/07 21:27:01 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2500 2009/07/07 21:29:35 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3316,3 +3316,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Return-Value to 1.666.001 [sno 2009-07-07]
 	Updated devel/p5-Set-Scalar to 1.24 [sno 2009-07-07]
 	Updated devel/p5-Software-License to 0.012 [sno 2009-07-07]
+	Updated devel/p5-sapnwrfc to 0.30 [sno 2009-07-07]
