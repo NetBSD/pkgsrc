@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2008/07/24 12:55:20 markd Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/07 18:03:05 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -21,17 +23,19 @@ do-build:
 	cd ${WRKSRC}/src/dbus && env ${MAKE_ENV} ${GMAKE}
 	cd ${WRKSRC}/tools/qdbus && env ${MAKE_ENV} ${GMAKE}
 
+INSTALLATION_DIRS=	${QTPREFIX}/bin ${QTPREFIX}/lib lib/pkgconfig
+
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/libQtDBus.la \
-		${QTPREFIX}/lib/
+		${DESTDIR}${QTPREFIX}/lib/
 	${SED} -e "s:${WRKSRC}:${QTPREFIX}:g" \
 		${WRKSRC}/lib/pkgconfig/QtDBus.pc > ${WRKDIR}/QtDBus.pc
-	${INSTALL_DATA} ${WRKDIR}/QtDBus.pc ${PREFIX}/lib/pkgconfig/
-	cd ${WRKSRC}/src/dbus && env ${MAKE_ENV} \
+	${INSTALL_DATA} ${WRKDIR}/QtDBus.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
+	cd ${WRKSRC}/src/dbus && env ${MAKE_ENV} DESTDIR=${DESTDIR} \
                 ${MAKE_PROGRAM} install_flat_headers install_targ_headers
 .for prog in qdbus qdbuscpp2xml qdbusviewer qdbusxml2cpp
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
-		${QTPREFIX}/bin
+		${DESTDIR}${QTPREFIX}/bin
 .endfor
 
 .include "../../x11/qt4-libs/buildlink3.mk"
