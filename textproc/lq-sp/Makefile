@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/22 09:22:15 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/07 21:11:08 joerg Exp $
 #
 
 DISTNAME=	lq-sp-1.3.4.12
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.htmlhelp.com/tools/validator/offline/
 COMMENT=	Modified SP package
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 
@@ -25,6 +26,6 @@ SUBST_SED.paths=	-e 's,/usr/local,${PREFIX},g'
 INSTALLATION_DIRS+=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nsgmls/lq-nsgmls ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/nsgmls/lq-nsgmls ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
