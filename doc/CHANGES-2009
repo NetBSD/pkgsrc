@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2471 2009/07/07 19:46:20 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2472 2009/07/07 19:53:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3288,3 +3288,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-HTML-Parser to 3.61 [sno 2009-07-07]
 	Updated www/p5-libwww to 5.828 [sno 2009-07-07]
 	Updated www/p5-Template-Toolkit to 2.21 [sno 2009-07-07]
+	Updated net/arping to 2.08 [sno 2009-07-07]
