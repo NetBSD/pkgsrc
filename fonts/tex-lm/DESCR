@@ -1,0 +1,10 @@
+The Latin Modern family of fonts consists of 72 text fonts and 20
+mathematics fonts, and is based on the Computer Modern fonts released
+into public domain by AMS (copyright (c) 1997 AMS). The lm font set
+contains a lot of additional characters, mainly accented ones, but not
+exclusively. There is one set of fonts, available both in Adobe Type 1
+format (*.pfb) and in OpenType format (*.otf). There are five sets of
+TeX Font Metric files, corresponding to: Cork encoding (cork-*.tfm);
+QX encoding (qx- *.tfm); TeX'n'ANSI aka LY1 encoding (texnansi-*.tfm);
+T5 (Vietnamese) encoding (t5-*.tfm); and Text Companion for EC fonts
+aka TS1 (ts1-*.tfm).
