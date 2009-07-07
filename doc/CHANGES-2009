@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2511 2009/07/07 22:24:47 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2512 2009/07/07 22:27:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3328,3 +3328,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-ExtUtils-ParseXS to 2.20 [sno 2009-07-07]
 	Updated devel/p5-ExtUtils-Depends to 0.302 [sno 2009-07-07]
 	Added print/tex-xunicode version 0.91 [minskim 2009-07-07]
+	Added print/tex-xunicode-doc version 0.91 [minskim 2009-07-07]
