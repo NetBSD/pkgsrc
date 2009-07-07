@@ -1,0 +1,3 @@
+Time::Format_XS, provides a huge performance improvement for the main
+formatting function in Time::Format. This is the time_format function,
+usually accessed via the %time hash.
