@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/02/22 19:30:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/07/07 18:19:30 joerg Exp $
 #
 
 DISTNAME=		qscintilla-1.65-gpl-1.6
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.riverbankcomputing.co.uk/qscintilla/
 COMMENT=		Scintilla C++ editor class for Qt
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/${DISTNAME}/qt
 
 # needs qmake
@@ -22,15 +24,15 @@ USE_LANGUAGES=		c++
 
 MAKE_ENV+=	QTPREFIX=${QTDIR:Q}
 
+INSTALLATION_DIRS=	${QTDIR}/lib ${QTDIR}/include
+
 do-configure:
 	(cd ${WRKSRC} && ${QTDIR}/bin/qmake -o Makefile qscintilla.pro)
 
 do-install:
-	${INSTALL_LIB_DIR} ${QTDIR}/lib
-	(cd ${WRKSRC} && ${LIBTOOL} --mode=install \
-		${INSTALL_DATA} libqscintilla.la ${QTDIR}/lib)
-	${INSTALL_DATA_DIR} ${QTDIR}/include
-	(cd ${WRKSRC} && ${CP} qextscintilla*.h ${QTDIR}/include)
+	${LIBTOOL} --mode=install ${INSTALL_DATA} \
+	    ${WRKSRC}/libqscintilla.la ${DESTDIR}${QTDIR}/lib
+	${INSTALL_DATA} ${WRKSRC}/qextscintilla*.h ${DESTDIR}${QTDIR}/include
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
