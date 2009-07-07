@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/05/03 22:36:09 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2009/07/07 22:00:07 joerg Exp $
 
 --- Makefile.orig	Mon Apr 29 11:36:52 2002
 +++ Makefile	Mon Apr 29 11:42:53 2002
@@ -67,12 +67,12 @@ $NetBSD: patch-aa,v 1.2 2002/05/03 22:36:09 jtb Exp $
 -	cp $(BIN_DIR)/Iget $(INSTALL)
 -	cp $(BIN_DIR)/zsearch $(INSTALL)
 -	cp $(BIN_DIR)/zpresent $(INSTALL)
-+	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Iindex $(INSTALL)
-+	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Isearch $(INSTALL)
-+	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Iutil $(INSTALL)
-+	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Iget $(INSTALL)
-+	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/zsearch $(INSTALL)
-+	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/zpresent $(INSTALL)
++	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Iindex ${DESTDIR}$(INSTALL)
++	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Isearch ${DESTDIR}$(INSTALL)
++	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Iutil ${DESTDIR}$(INSTALL)
++	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Iget ${DESTDIR}$(INSTALL)
++	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/zsearch ${DESTDIR}$(INSTALL)
++	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/zpresent ${DESTDIR}$(INSTALL)
  	@echo ""
  	@echo "To install Isearch-cgi, cd into the Isearch-cgi directory"
  	@echo "Then run the configure script"
