@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2467 2009/07/07 19:32:48 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2468 2009/07/07 19:35:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3284,3 +3284,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Array-Compare to 1.18 [sno 2009-07-07]
 	Updated time/p5-Time-Piece to 1.15 [sno 2009-07-07]
 	Updated time/p5-Time-Format to 1.11 [sno 2009-07-07]
+	Added time/p5-Time-Format_XS version 1.03 [sno 2009-07-07]
