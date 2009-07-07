@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/04/12 17:14:35 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2009/07/07 18:07:11 joerg Exp $
 
 --- Makefile.orig	2003-02-25 22:21:15.000000000 +0100
 +++ Makefile
@@ -31,5 +31,5 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/04/12 17:14:35 minskim Exp $
  install: $(PROG)
 -	install -D -p -m 755 -s $(PROG) $(PREFIX)/bin/$(PROG)
 -	install -D -p -m 755 $(PROG).1 $(MANDIR)/man1/$(PROG).1
-+	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
-+	$(BSD_INSTALL_PROGRAM) $(PROG) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) $(PROG) ${DESTDIR}$(PREFIX)/bin
