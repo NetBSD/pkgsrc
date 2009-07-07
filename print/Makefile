@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2009/07/07 22:27:17 minskim Exp $
+# $NetBSD: Makefile,v 1.263 2009/07/07 23:19:23 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -238,6 +238,8 @@ SUBDIR+=	tex-luatex-doc
 SUBDIR+=	tex-memhangul-ucs
 SUBDIR+=	tex-memoir
 SUBDIR+=	tex-misc
+SUBDIR+=	tex-multirow
+SUBDIR+=	tex-multirow-doc
 SUBDIR+=	tex-musixtex
 SUBDIR+=	tex-natbib
 SUBDIR+=	tex-natbib-doc
@@ -252,6 +254,8 @@ SUBDIR+=	tex-pgf
 SUBDIR+=	tex-placeins
 SUBDIR+=	tex-placeins-doc
 SUBDIR+=	tex-plain
+SUBDIR+=	tex-preprint
+SUBDIR+=	tex-preprint-doc
 SUBDIR+=	tex-prosper
 SUBDIR+=	tex-resume
 SUBDIR+=	tex-rotating
