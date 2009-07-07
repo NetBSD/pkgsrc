@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/06/30 00:07:24 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/07 19:06:34 joerg Exp $
 #
 
 DISTNAME=	mMosaic-3.7.2
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perso.enst.fr/~dauphin/mMosaic/
 COMMENT=	Modern derivative of NCSA XMosaic
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/mMosaic-src-3.7.2
@@ -17,7 +19,7 @@ WRKSRC=		${WRKDIR}/mMosaic-src-3.7.2
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/mMosaic ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/src/mMosaic ${DESTDIR}${PREFIX}/bin/
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
