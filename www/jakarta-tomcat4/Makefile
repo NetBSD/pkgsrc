@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/05/26 02:13:25 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/07/07 19:09:45 joerg Exp $
 
 PKGNAME=	jakarta-tomcat4-${TOMCAT_VERSION}
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}
@@ -11,6 +11,8 @@ CATEGORIES=	www java
 MAINTAINER=	erh@NetBSD.org
 HOMEPAGE=	http://tomcat.apache.org/
 COMMENT=	The Apache Project's Java Servlet 2.3 and JSP 1.2 server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 TOMCAT_VERSION=	4.1.30
 
@@ -43,14 +45,15 @@ do-build:
 	${MV} -f ${WRKSRC}/conf/${FILE} ${WRKSRC}/conf/${FILE}.default
 .endfor
 
+INSTALLATION_DIRS=	${TOMCAT_LIB}
+
 do-install:
-	${INSTALL_DATA_DIR} ${TOMCAT_LIB}
-	cd ${WRKSRC} && pax -rw -pm . ${TOMCAT_LIB}
-	@${FIND} ${TOMCAT_LIB} -type f -print \
+	cd ${WRKSRC} && pax -rw -pm . ${DESTDIR}${TOMCAT_LIB}
+	@${FIND} ${DESTDIR}${TOMCAT_LIB} -type f -print \
 		| ${XARGS} ${CHMOD} a+r
-	@${FIND} ${TOMCAT_LIB} \( -type f -o -perm -u+x \) -print \
+	@${FIND} ${DESTDIR}${TOMCAT_LIB} \( -type f -o -perm -u+x \) -print \
 		| ${XARGS} ${CHMOD} a+rx
-	@${FIND} ${TOMCAT_LIB} -type d -print \
+	@${FIND} ${DESTDIR}${TOMCAT_LIB} -type d -print \
 		| ${XARGS} ${CHMOD} a+rx
 
 .include "../../mk/bsd.pkg.mk"
