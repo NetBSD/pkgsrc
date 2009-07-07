@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/12 17:14:35 minskim Exp $
+$NetBSD: distinfo,v 1.2 2009/07/07 18:07:11 joerg Exp $
 
 SHA1 (ratmen-2.2.2.tar.gz) = 789e2ce43a74f22b81021427d748e49c1637491c
 RMD160 (ratmen-2.2.2.tar.gz) = ee356aa2bdfb7948810c7b243d600b79845107a3
 Size (ratmen-2.2.2.tar.gz) = 22906 bytes
 SHA1 (patch-aa) = c8d7cbc65272a3f852c4950c3c647b5fe063137e
-SHA1 (patch-ab) = 681e4382850b23de29aa9440726b05d73dab27ee
+SHA1 (patch-ab) = dc55759b6fb08b4bb523625d06da82c45d840498
