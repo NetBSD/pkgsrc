@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/06/03 23:27:23 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2009/07/08 16:03:35 joerg Exp $
 
 DISTNAME=	xcircuit-3.4.26
 CATEGORIES=	cad graphics
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	shaun@inerd.com
 HOMEPAGE=	http://opencircuitdesign.com/xcircuit/
 COMMENT=	Drawing program for X11 (especially for circuits)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	gs:run
@@ -30,15 +32,15 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 BUILD_TARGET=	tcl
 INSTALL_TARGET= install-tcl
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/examples/xcircuit
 
 post-extract:
 	${MV} -f ${WRKSRC}/examples/.xcircuitrc ${WRKSRC}/examples/xcircuitrc
 	${TOUCH} ${WRKSRC}/menudep.h
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xcircuit
-	${INSTALL_DATA} ${WRKSRC}/examples/*.* ${PREFIX}/share/examples/xcircuit/
-	${INSTALL_DATA} ${WRKSRC}/examples/xcircuitrc ${PREFIX}/share/examples/xcircuit/
+	${INSTALL_DATA} ${WRKSRC}/examples/*.* ${DESTDIR}${PREFIX}/share/examples/xcircuit/
+	${INSTALL_DATA} ${WRKSRC}/examples/xcircuitrc ${DESTDIR}${PREFIX}/share/examples/xcircuit/
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
