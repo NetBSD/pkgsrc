@@ -1,0 +1,11 @@
+--- gettext_xs/Makefile.PL.orig	2009-07-08 08:55:07.000000000 +0000
++++ gettext_xs/Makefile.PL	2009-07-08 08:55:29.000000000 +0000
+@@ -38,7 +38,7 @@
+     ),
+     PREREQ_PM => { File::Spec => 0 },
+ 	PL_FILES        => {},
+-	LIBS => ['-lintl -liconv'],
++	LIBS => [$ENV{LDFLAGS} . ' -lintl -liconv'],
+ );
+ 
+ __END__
