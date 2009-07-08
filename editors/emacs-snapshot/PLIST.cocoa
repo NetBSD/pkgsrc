@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.cocoa,v 1.2 2009/06/14 17:50:22 joerg Exp $
+@comment $NetBSD: PLIST.cocoa,v 1.3 2009/07/08 13:32:39 minskim Exp $
 Applications/Emacs.app/Contents/Info.plist
 Applications/Emacs.app/Contents/MacOS/Emacs
 Applications/Emacs.app/Contents/PkgInfo
@@ -6,4 +6,3 @@ Applications/Emacs.app/Contents/Resources/Credits.html
 Applications/Emacs.app/Contents/Resources/Emacs.icns
 Applications/Emacs.app/Contents/Resources/English.lproj/InfoPlist.strings
 Applications/Emacs.app/Contents/Resources/document.icns
-bin/mac-fix-env
