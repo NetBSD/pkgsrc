@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2009/04/21 17:48:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.189 2009/07/08 10:26:47 sno Exp $
 
 COMMENT=	Mathematics
 
@@ -113,6 +113,7 @@ SUBDIR+=	p5-Math-Base85
 SUBDIR+=	p5-Math-BaseCnv
 SUBDIR+=	p5-Math-Bezier
 SUBDIR+=	p5-Math-BigInt-GMP
+SUBDIR+=	p5-Math-BigInt-Pari
 SUBDIR+=	p5-Math-BigInteger
 SUBDIR+=	p5-Math-FFT
 SUBDIR+=	p5-Math-GMP
