@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/10/04 20:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/08 15:15:15 joerg Exp $
 #
 
 DISTNAME=	dflowers-1.2
@@ -12,7 +12,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 # AWOL
 COMMENT=	XMMS plugin for dual flower scope
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LIBTOOL=		YES
+
+INSTALLATION_DIRS=	lib/xmms/Visualization
 
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
