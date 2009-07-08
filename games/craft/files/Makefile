@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/12/19 10:51:19 tron Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/08 17:20:52 joerg Exp $
 #
 #---------------------------------------------------------------------
 #
@@ -43,10 +43,10 @@ hcc/hcc: hcc/hcc.cc
 	${GPP} ${CFLAGS} $< -o hcc/hcc
 
 install: craft
-	${BSD_INSTALL_PROGRAM} craft ${PREFIX}/bin
-	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/craft
-	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/doc/craft
-	cp -R hcraft ${PREFIX}/share/craft
-	cp -R buttons ${PREFIX}/share/craft
-	cp -R html/* ${PREFIX}/share/doc/craft
-	${BSD_INSTALL_DATA} .windefaults.params ${PREFIX}/share/craft
+	${BSD_INSTALL_PROGRAM} craft ${DESTDIR}${PREFIX}/bin
+	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/craft
+	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/craft
+	cp -R hcraft ${DESTDIR}${PREFIX}/share/craft
+	cp -R buttons ${DESTDIR}${PREFIX}/share/craft
+	cp -R html/* ${DESTDIR}${PREFIX}/share/doc/craft
+	${BSD_INSTALL_DATA} .windefaults.params ${DESTDIR}${PREFIX}/share/craft
