@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.72 2009/07/02 09:37:12 joerg Exp $
+# $NetBSD: pyversion.mk,v 1.73 2009/07/08 13:55:59 joerg Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -156,6 +156,10 @@ BUILDLINK_DEPMETHOD.python?=	build
 .endif
 
 PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
+PY_COMPILE_ALL= \
+	${PYTHONBIN} ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
+PY_COMPILE_O_ALL= \
+	${PYTHONBIN} -O ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
 
 .if exists(${PYTHONBIN})
 PYINC!=	${PYTHONBIN} -c "import distutils.sysconfig; \
