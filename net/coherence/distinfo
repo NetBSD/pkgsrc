@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/08 17:20:50 drochner Exp $
+
+SHA1 (Coherence-0.6.4.tar.gz) = bd03b299b2d4dc9e939a06dc54e9600f5a93c1a2
+RMD160 (Coherence-0.6.4.tar.gz) = 9f49338416605e361905399614c210c67fba4008
+Size (Coherence-0.6.4.tar.gz) = 308824 bytes
+SHA1 (patch-aa) = 3d0e0966a12bb6f42015dac259db085923135fae

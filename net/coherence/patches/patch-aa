@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/07/08 17:20:50 drochner Exp $
+
+--- coherence/upnp/core/event.py.orig	2009-03-29 22:27:52.000000000 +0200
++++ coherence/upnp/core/event.py
+@@ -372,7 +372,8 @@ def send_notification(s, xml):
+     if path == '':
+         path = '/'
+     if host_port.find(':') != -1:
+-        host,port = tuple(host_port.split(':'))
++        # XXX deal with IPv6 addresses correctly
++        host,port = tuple(host_port.rsplit(':', 1))
+         port = int(port)
+     else:
+         host = host_port
