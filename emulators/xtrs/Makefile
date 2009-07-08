@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/20 00:58:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/08 16:46:14 joerg Exp $
 #
 
 DISTNAME=	xtrs-4.9
@@ -10,6 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITES}
 COMMENT=	TRS-80 Model I/III/4 Emulator for Unix
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	default
 
@@ -22,11 +23,13 @@ SUBST_SED.mf=		-e 's|/usr/local|${PREFIX}|g' \
 			-e 's|^\(LDFLAGS = \)-L/usr/X11R6/lib|\1-Wl,-R${X11BASE}/lib -L${X11BASE}/lib|g' \
 			-e 's|/share/man|/man|g'
 
+INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin \
+			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALLATION_DIRS=	bin lib/xtrs ${PKGMANDIR}/man1 share/doc/xtrs
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/xtrs
-	${INSTALL_DATA} ${WRKSRC}/xtrsrom4p.hex ${PREFIX}/lib/xtrs/romimage.m4p
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xtrs
-	${INSTALL_DATA} ${WRKSRC}/xtrsrom4p.README ${PREFIX}/share/doc/xtrs
+	${INSTALL_DATA} ${WRKSRC}/xtrsrom4p.hex ${DESTDIR}${PREFIX}/lib/xtrs/romimage.m4p
+	${INSTALL_DATA} ${WRKSRC}/xtrsrom4p.README ${DESTDIR}${PREFIX}/share/doc/xtrs
 
 # The sources assume <malloc.h> exists.  Create a fake one for platforms
 # that don't have it.

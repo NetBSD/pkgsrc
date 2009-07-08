@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/29 09:39:17 sborrill Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/08 16:43:51 joerg Exp $
 #
 
 DISTNAME=	gphotofs-0.4.0
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gphoto.sourceforge.net/proj/gphotofs/
 COMMENT=	FUSE filesystem for accessing digital cameras
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
@@ -18,7 +20,7 @@ USE_TOOLS+=	gmake pkg-config
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
