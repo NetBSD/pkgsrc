@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.25 2009/03/23 23:03:59 joerg Exp $
+$NetBSD: manual-libtool.m4,v 1.26 2009/07/08 21:01:43 markd Exp $
 
 Local pkgsrc changes:
 - override the basename to point to the actual backend compiler,
@@ -9,8 +9,9 @@ Local pkgsrc changes:
 - Interix3 support
 - disable static linkage on OS X by default
 - DragonFly support decoupled from FreeBSD
+- support g95 on NetBSD
 
---- libtool.m4.orig	2008-02-01 17:26:47.000000000 +0100
+--- libtool.m4.orig	2008-02-02 05:26:47.000000000 +1300
 +++ libtool.m4
 @@ -249,7 +249,10 @@ AC_DEFUN([_LT_CC_BASENAME],
      *) break;;
@@ -436,7 +437,7 @@ Local pkgsrc changes:
    *djgpp*)
      _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)=
      ;;
-@@ -5791,6 +5893,17 @@ EOF
+@@ -5791,8 +5893,19 @@ EOF
        fi
        ;;
  
@@ -452,8 +453,11 @@ Local pkgsrc changes:
 +      ;;
 +
      netbsd*)
-       if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | grep __G95__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+ 	wlarc=
+       else
 @@ -5856,6 +5969,11 @@ _LT_EOF
        _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
        ;;
