@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:52 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/08 13:56:00 joerg Exp $
 #
 
 DISTNAME=		cmTemplate-0.3.2
@@ -14,12 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=	# empty
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
-PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
 INSTALLATION_DIRS=	${PYSITELIB} share/doc/${PYPKGPREFIX}-cmTemplate
 
 do-build:
-	${PYTHONBIN} ${PYCOMPILEALL} -l ${WRKSRC}
+	${PY_COMPILE_ALL} -l ${WRKSRC}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/cmTemplate.py ${DESTDIR}${PREFIX}/${PYSITELIB}
