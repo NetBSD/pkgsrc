@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/02/09 22:56:22 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/07/08 13:55:58 joerg Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
 PKGREVISION=	5
@@ -32,8 +32,6 @@ SUBST_STAGE.py=		post-patch
 SUBST_FILES.py=		ExmanIDE
 SUBST_SED.py=		-e 's,python \$$0\.pyw,${PYTHONBIN} ${PREFIX}/share/${PKGBASE}/ExmanIDE.pyw,g'
 
-PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
-
 INSTALLATION_DIRS=	 bin share/ExmanIDE
 
 do-install:
@@ -41,8 +39,8 @@ do-install:
 	cd ${WRKSRC} && pax -rwppm '-s|.*/CVS.*$$||'	\
 		'-s|.*/ExmanIDE$$||' '-s|.*/.xvpics.*$$||' \
 		. ${DESTDIR}${PREFIX}/share/ExmanIDE
-	${PYTHONBIN} ${PYCOMPILEALL} ${DESTDIR}${PREFIX}/share/ExmanIDE
-	${PYTHONBIN} -O ${PYCOMPILEALL} ${DESTDIR}${PREFIX}/share/ExmanIDE
+	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/share/ExmanIDE
+	${PY_COMPILE_O_ALL} ${DESTDIR}${PREFIX}/share/ExmanIDE
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
