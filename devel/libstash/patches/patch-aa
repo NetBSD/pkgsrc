@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2000/09/24 17:32:26 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2009/07/08 16:09:00 joerg Exp $
 
---- Makefile.bsd.in.orig	Mon Sep 13 02:32:44 1999
+--- Makefile.bsd.in.orig	2009-07-08 18:05:44.000000000 +0200
 +++ Makefile.bsd.in
 @@ -101,11 +101,11 @@
  
@@ -16,12 +16,65 @@ $NetBSD: patch-aa,v 1.2 2000/09/24 17:32:26 hubertf Exp $
  
  CFLAGS := -Wall -pipe @CFLAGS@
  ST_CFLAGS := 
-@@ -296,7 +296,7 @@
+@@ -290,47 +290,47 @@ install_r : install_stat_dbg_r install_s
+ 
+ install_common : all
+ 	$(SHELL) -c \
+-	'@INSTALL@ -d @prefix@/include/libstash; \
++	'@INSTALL@ -d ${DESTDIR}@prefix@/include/libstash; \
+ 	for i in $(INCS); do \
+-	@INSTALL@ -m 0644 $$i @prefix@/include/libstash/; \
++	@INSTALL@ -m 0644 $$i ${DESTDIR}@prefix@/include/libstash/; \
  	done; \
- 	@INSTALL@ -d @prefix@/man/man3; \
+-	@INSTALL@ -d @prefix@/man/man3; \
++	@INSTALL@ -d ${DESTDIR}@prefix@/man/man3; \
  	for i in $(MANPAGES); do \
 -	@INSTALL@ -m 0644 $$i @prefix@/man/man3/; \
-+	@INSTALL@ -m 0644 $$i @prefix@/$${i%s}; \
++	@INSTALL@ -m 0644 $$i ${DESTDIR}@prefix@/$${i%s}; \
  	done; \
- 	@INSTALL@ -d @prefix@/lib; \
+-	@INSTALL@ -d @prefix@/lib; \
++	@INSTALL@ -d ${DESTDIR}@prefix@/lib; \
  	'
+ 
+ install_common_r : install_common
+ 	$(SHELL) -c \
+ 	'for i in $(INCS_R); do \
+-	@INSTALL@ -m 0644 $$i @prefix@/include/libstash/; \
++	@INSTALL@ -m 0644 $$i ${DESTDIR}@prefix@/include/libstash/; \
+ 	done; \
+ 	'
+ 
+ install_stat_dbg : stat_dbg install_common
+-	@INSTALL@ -m 0444 $(LIB_ST_D) @prefix@/lib
++	@INSTALL@ -m 0444 $(LIB_ST_D) ${DESTDIR}@prefix@/lib
+ 
+ install_stat_opt : stat_opt install_common
+-	@INSTALL@ -m 0444 $(LIB_ST_O) @prefix@/lib
++	@INSTALL@ -m 0444 $(LIB_ST_O) ${DESTDIR}@prefix@/lib
+ 
+ install_shar_opt : shar_opt install_common
+-	@INSTALL@ -m 0444 $(LIB_SH_O) @prefix@/lib
++	@INSTALL@ -m 0444 $(LIB_SH_O) ${DESTDIR}@prefix@/lib
+ 
+ install_stat_prof : stat_prof install_common
+-	@INSTALL@ -m 0444 $(LIB_ST_P) @prefix@/lib
++	@INSTALL@ -m 0444 $(LIB_ST_P) ${DESTDIR}@prefix@/lib
+ 
+ install_stat_dbg_r : stat_dbg_r install_common install_common_r
+-	@INSTALL@ -m 0444 $(LIB_ST_R_D) @prefix@/lib
++	@INSTALL@ -m 0444 $(LIB_ST_R_D) ${DESTDIR}@prefix@/lib
+ 
+ install_stat_opt_r : stat_opt_r install_common install_common_r
+-	@INSTALL@ -m 0444 $(LIB_ST_R_O) @prefix@/lib
++	@INSTALL@ -m 0444 $(LIB_ST_R_O) ${DESTDIR}@prefix@/lib
+ 
+ install_shar_opt_r : shar_opt_r install_common install_common_r
+-	@INSTALL@ -m 0444 $(LIB_SH_R_O) @prefix@/lib
++	@INSTALL@ -m 0444 $(LIB_SH_R_O) ${DESTDIR}@prefix@/lib
+ 
+ install_stat_prof_r : stat_prof_r install_common install_common_r
+-	@INSTALL@ -m 0444 $(LIB_ST_R_P) @prefix@/lib
++	@INSTALL@ -m 0444 $(LIB_ST_R_P) ${DESTDIR}@prefix@/lib
+ 
+ uninstall :
+ 	rm -f @prefix@/lib/lib$(LIB)*
