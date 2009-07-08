@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8233 2009/07/08 20:06:07 hasso Exp $
+$NetBSD: TODO,v 1.8234 2009/07/08 20:24:39 hasso Exp $
 
 Suggested new packages
 ======================
@@ -1499,7 +1499,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmp-2.6.2
 	o xmule-1.12.2
 	o xnap-2.5r3
-	o xorg-util-macros-1.2.2
 	o xpad-2.13
 	o xplanet-1.2.1
 	o xpuyopuyo-0.9.8
