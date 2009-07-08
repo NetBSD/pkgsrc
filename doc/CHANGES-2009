@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2540 2009/07/08 11:10:26 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2541 2009/07/08 11:16:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3364,3 +3364,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added math/p5-Math-BigInt-Pari version 1.13 [sno 2009-07-08]
 	Updated security/p5-Crypt-DH to 0.06nb2 [sno 2009-07-08]
 	Updated textproc/p5-Text-SimpleTable to 1.2 [sno 2009-07-08]
+	Updated textproc/p5-Text-RewriteRules to 0.21 [sno 2009-07-08]
