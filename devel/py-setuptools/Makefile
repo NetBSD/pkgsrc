@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/05/28 21:24:44 zafer Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/08 13:55:59 joerg Exp $
 #
 
 EGG_VERSION=		0.6c9
@@ -20,7 +20,6 @@ USE_TOOLS+=		unzip pax
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	EGG_NAME=${EGG_NAME}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX} PYPKGPREFIX=${PYPKGPREFIX}
-PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
 CHECK_FILES_SKIP+=	${PREFIX}/${PYSITELIB}/easy-install.pth
 
@@ -47,8 +46,8 @@ do-build:
 	${SED} -e 's,@PYTHON@,${PYTHONBIN},' \
 	       -e 's,@PKGVERSION@,${EGG_VERSION},' \
 	       ${FILESDIR}/easy_install.py > ${WRKDIR}/easy_install.py
-	${PYTHONBIN} ${PYCOMPILEALL} -f -d ${TARGET_NAME} ${WRKSRC}
-	${PYTHONBIN} -O ${PYCOMPILEALL} -f -d ${TARGET_NAME} ${WRKSRC}
+	${PY_COMPILE_ALL} -f -d ${TARGET_NAME} ${WRKSRC}
+	${PY_COMPILE_O_ALL} -f -d ${TARGET_NAME} ${WRKSRC}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/easy_install.py \

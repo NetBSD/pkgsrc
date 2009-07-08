@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2009/06/03 06:55:07 adam Exp $
+# $NetBSD: Makefile,v 1.59 2009/07/08 13:55:59 joerg Exp $
 
 DISTNAME=	mailman-2.1.12
 CATEGORIES=	mail www
@@ -95,8 +95,6 @@ SUBST_SED.paths+=	-e 's,@EXECDIR@,${EXECDIR},g'
 SUBST_SED.paths+=	-e 's,@MAILMAN_DATADIR@,${MAILMAN_DATADIR},g'
 SUBST_STAGE.paths=	post-patch
 
-PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
-
 # mailman depends a lot on it and will bitch if changed.
 CHECK_PERMS=	no
 
@@ -126,7 +124,7 @@ post-install:
 	${CHOWN} -R root:${MAILMAN_GROUP} ${EXECDIR}
 	${CHMOD} -R g+w ${EXECDIR}
 	${CHMOD} g+s ${EXECDIR}/cgi-bin/*
-	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/lib/mailman/bin ${PREFIX}/lib/mailman/cron ${PREFIX}/lib/mailman/scripts
+	${PY_COMPILE_ALL} ${PREFIX}/lib/mailman/bin ${PREFIX}/lib/mailman/cron ${PREFIX}/lib/mailman/scripts
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

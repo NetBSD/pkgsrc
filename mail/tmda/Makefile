@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/02/09 22:56:25 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2009/07/08 13:56:00 joerg Exp $
 #
 
 DISTNAME=	tmda-1.1.12
@@ -14,7 +14,6 @@ COMMENT=	Python-based SPAM reduction system
 
 PYTHON_PATCH_SCRIPTS=	${TMDA_PROGRAMS}
 PY_PATCHPLIST=		yes
-PYCOMPILEALL=		${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 
@@ -91,7 +90,7 @@ do-install:
 	cp -Rp ${WRKSRC}/doc/html/* ${PREFIX}/${HTMLDIR}
 
 post-install:
-	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/${PYSITELIB}/TMDA \
+	${PY_COMPILE_ALL} ${PREFIX}/${PYSITELIB}/TMDA \
 		${PREFIX}/${PYSITELIB}/TMDA/Queue \
 		${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email \
 		${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email/mime

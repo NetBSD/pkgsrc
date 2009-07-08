@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/04/07 05:26:59 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/08 13:55:58 joerg Exp $
 #
 
 DISTNAME=		solfege-3.14.1
@@ -26,7 +26,6 @@ USE_TOOLS+=		gmake gm4 makeinfo pkg-config msgfmt bash:run
 REPLACE_BASH=		lesson-files/bin/csound-play-harmonic-interval.sh
 
 PYTHON_PATCH_SCRIPTS=	*.py *.py.in */*.py */*.py.in
-PYCOMPILEALL=		${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
 SUBST_CLASSES+=		sound
 SUBST_STAGE.sound=	do-configure
@@ -59,9 +58,9 @@ DEPENDS+=	qtplay-[0-9]*:../../audio/qtplay
 .endif
 
 post-install:
-	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/share/solfege/mpd \
-		${PREFIX}/share/solfege/soundcard \
-		${PREFIX}/share/solfege/src
+	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/share/solfege/mpd \
+		${DESTDIR}${PREFIX}/share/solfege/soundcard \
+		${DESTDIR}${PREFIX}/share/solfege/src
 
 PYTHON_VERSIONS_INCOMPATIBLE=	23
 .include "../../lang/python/application.mk"
