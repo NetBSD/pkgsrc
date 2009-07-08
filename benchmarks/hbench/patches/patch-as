@@ -1,0 +1,15 @@
+$NetBSD: patch-as,v 1.1 2009/07/08 14:19:46 joerg Exp $
+
+--- do-install.orig	2009-07-08 16:18:25.000000000 +0200
++++ do-install
+@@ -27,8 +27,8 @@ for files in $DOCS; do
+ done
+ cat <<EOF >$PREFIX/bin/run-hbench
+ #!/bin/sh
+-${PREFIX}/bin/hbench/interactive-setup
+-${PREFIX}/bin/hbench/maindriver ${PREFIX}/share/hbench/conf/`hostname`.run
++${REAL_PREFIX}/bin/hbench/interactive-setup
++${REAL_PREFIX}/bin/hbench/maindriver ${REAL_PREFIX}/share/hbench/conf/`hostname`.run
+ EOF
+ chown $BINOWN:$BINGRP ${PREFIX}/bin/run-hbench
+ chmod 0755 ${PREFIX}/bin/run-hbench
