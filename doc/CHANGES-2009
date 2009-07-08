@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2559 2009/07/08 16:18:10 drochner Exp $
+$NetBSD: CHANGES-2009,v 1.2560 2009/07/08 16:25:01 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3395,3 +3395,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/exiv2 to 0.18.2 [drochner 2009-07-08]
 	Added audio/picard version 0.11 [drochner 2009-07-08]
 	Added audio/mp3diags version 0.99.02.020 [drochner 2009-07-08]
+	Updated devel/libjit to 0.1.2 [joerg 2009-07-08]
