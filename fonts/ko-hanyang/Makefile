@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/25 15:12:27 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/08 16:56:29 joerg Exp $
 #
 
 DISTNAME=	hanyang-font-pcf
@@ -11,13 +11,15 @@ MASTER_SITES+=	ftp://ftp.kaist.ac.kr/pub/hangul/fonts/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 fonts for KSC 5601 standard
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS+=	ksc5601fonts-[0-9]*
 
 USE_X11BASE=	yes
 USE_TOOLS+=	gzip
 EXTRACT_ONLY=	# empty
 
-MAKE_ENV+=	FONTDIR=${FONTDIR:Q} GZIP_CMD=${GZIP_CMD:Q}
+MAKE_ENV+=	FONTDIR=${DESTDIR}${FONTDIR:Q} GZIP_CMD=${GZIP_CMD:Q}
 
 # fonts
 EXTRACT_ONLY+=	hanyang-font-pcf.tar.gz
@@ -39,7 +41,6 @@ post-build:
 		${MV} ${WRKDIR}/$$i ${WRKSRC}; \
 	done
 
-pre-install:
-	[ -d ${FONTDIR} ] || ${INSTALL_DATA_DIR} ${FONTDIR}
+INSTALLATION_DIRS=	${FONTDIR}
 
 .include "../../mk/bsd.pkg.mk"
