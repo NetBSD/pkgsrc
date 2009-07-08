@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/11/10 00:46:57 ahoka Exp $
+# $NetBSD: Makefile,v 1.18 2009/07/08 14:22:52 joerg Exp $
 
 DISTNAME=	httperf-0.8
 CATEGORIES=	benchmarks www
@@ -10,11 +10,15 @@ HOMEPAGE=	http://www.hpl.hp.com/research/linux/httperf/
 COMMENT=	Popular web server benchmarking program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		gmake
 CFLAGS+=		-DFD_SETSIZE=16424
+
+INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR} \
+			bindir=${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.prefs.mk"
 
