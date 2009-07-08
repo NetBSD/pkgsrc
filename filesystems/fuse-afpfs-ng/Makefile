@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/20 00:58:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/08 16:24:53 joerg Exp $
 
 DISTNAME=	afpfs-ng-0.8.1
 PKGNAME=	fuse-${DISTNAME}
@@ -11,10 +11,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/afpfs-ng
 COMMENT=	FUSE filesystem for network mounting using AFP
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
+
+REPLACE_SH+=	fuse/afpfs
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
