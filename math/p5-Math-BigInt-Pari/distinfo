@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/08 10:24:53 sno Exp $
+
+SHA1 (Math-BigInt-Pari-1.13.tar.gz) = d3f0f2dfea808302ac517f93b6c6e4d30d3efe11
+RMD160 (Math-BigInt-Pari-1.13.tar.gz) = ff0cf28f8360686668b1a10eea489813326aee79
+Size (Math-BigInt-Pari-1.13.tar.gz) = 47431 bytes
