@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/05 20:49:51 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2009/07/08 15:40:58 joerg Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Three-dimensional inductance extraction program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
@@ -35,5 +37,7 @@ MAKE_ENV+=	LIBS=${LIBS:M*:Q}
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
 .endif
+
+INSTALLATION_DIRS=	bin
 
 .include "../../mk/bsd.pkg.mk"
