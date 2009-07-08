@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/06/08 19:26:29 hasso Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/08 20:59:11 hasso Exp $
 
-DISTNAME=	tmux-0.8
+DISTNAME=	tmux-0.9
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tmux/}
 
@@ -11,7 +11,7 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CONFIGURE=	yes
+HAS_CONFIGURE=	yes
 USE_NCURSES=	yes
 
 .include "../../devel/ncurses/buildlink3.mk"
