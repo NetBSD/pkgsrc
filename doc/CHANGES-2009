@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2560 2009/07/08 16:25:01 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.2561 2009/07/08 17:58:41 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3396,3 +3396,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added audio/picard version 0.11 [drochner 2009-07-08]
 	Added audio/mp3diags version 0.99.02.020 [drochner 2009-07-08]
 	Updated devel/libjit to 0.1.2 [joerg 2009-07-08]
+	Updated x11/modular-xorg-server to 1.6.2 [hasso 2009-07-08]

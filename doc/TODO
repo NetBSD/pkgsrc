@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8230 2009/07/08 14:16:29 sno Exp $
+$NetBSD: TODO,v 1.8231 2009/07/08 17:58:41 hasso Exp $
 
 Suggested new packages
 ======================
@@ -959,7 +959,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
-	o modular-xorg-server-1.6.2
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
 	o mousetweaks-2.26.3
