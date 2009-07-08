@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2558 2009/07/08 14:23:18 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2559 2009/07/08 16:18:10 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3382,3 +3382,16 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/p5-Net-DNS-SEC to 0.15 [sno 2009-07-08]
 	Updated textproc/p5-Filter to 1.37 [sno 2009-07-08]
 	Updated devel/p5-Proc-Simple to 1.25 [sno 2009-07-08]
+	Added audio/mp3val version 0.1.8 [drochner 2009-07-08]
+	Added audio/py-id3lib version 0.5.1 [drochner 2009-07-08]
+	Added audio/py-libmtag version 0.3.0 [drochner 2009-07-08]
+	Added audio/libmtag version 0.3.1 [drochner 2009-07-08]
+	Updated audio/py-mutagen to 1.15 [drochner 2009-07-08]
+	Updated audio/libmusicbrainz to 3.0.2 [drochner 2009-07-08]
+	Updated audio/libdiscid to 0.2.2 [drochner 2009-07-08]
+	Updated multimedia/transcode to 1.1.2 [drochner 2009-07-08]
+	Updated qt4 to 4.5.2 [drochner 2009-07-08]
+	Added graphics/exiv2-organize version 0.18.2 [drochner 2009-07-08]
+	Updated graphics/exiv2 to 0.18.2 [drochner 2009-07-08]
+	Added audio/picard version 0.11 [drochner 2009-07-08]
+	Added audio/mp3diags version 0.99.02.020 [drochner 2009-07-08]
