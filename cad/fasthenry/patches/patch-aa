@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2004/09/20 02:08:58 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.6 2009/07/08 15:40:58 joerg Exp $
 
 --- Makefile.orig	Tue Nov 12 19:18:57 1996
 +++ Makefile
@@ -10,42 +10,42 @@ $NetBSD: patch-aa,v 1.5 2004/09/20 02:08:58 dmcmahill Exp $
 +
 +# install target added for NetBSD package
 +install:
-+	${BSD_INSTALL_PROGRAM} ./bin/fasthenry ${PREFIX}/bin
-+	${BSD_INSTALL_PROGRAM} ./bin/zbuf ${PREFIX}/bin
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/30pin.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/3d_example2.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/3d_example2_coarse.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/Zc_3d_examp2.mat ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/Zc_pin_con7.mat ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/broken.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/gpexamp_copper.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/hole.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/holey_gp.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/make_nonuniform.c ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/msm.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/nonuni01.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/onebargp.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/pin-con2seg.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/pin-con7.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/pin-connect.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/plane.in ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/rom_check_con7_r20.ckt ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/simple_gp.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/template.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/together.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/together_nonuni.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/trace.test.release ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/trace_over_mesh_new.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/tree_sample.hier ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/tree_sample.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA} ./examples/vias.inp ${PREFIX}/share/examples/fasthenry
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/doc/fasthenry
-+	${BSD_INSTALL_DATA} ./doc/README ${PREFIX}/share/doc/fasthenry
-+	${BSD_INSTALL_DATA} ./doc/manual_001.ps ${PREFIX}/share/doc/fasthenry
-+	${BSD_INSTALL_DATA} ./doc/manual_002.ps ${PREFIX}/share/doc/fasthenry
-+	${BSD_INSTALL_DATA} ./doc/manual_003.ps ${PREFIX}/share/doc/fasthenry
-+	${BSD_INSTALL_DATA} ./doc/nonuniform_manual_1.ps ${PREFIX}/share/doc/fasthenry
-+	${BSD_INSTALL_DATA} ./doc/nonuniform_manual_2.ps ${PREFIX}/share/doc/fasthenry
++	${BSD_INSTALL_PROGRAM} ./bin/fasthenry ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} ./bin/zbuf ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/30pin.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/3d_example2.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/3d_example2_coarse.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/Zc_3d_examp2.mat ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/Zc_pin_con7.mat ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/broken.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/gpexamp_copper.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/hole.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/holey_gp.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/make_nonuniform.c ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/msm.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/nonuni01.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/onebargp.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/pin-con2seg.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/pin-con7.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/pin-connect.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/plane.in ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/rom_check_con7_r20.ckt ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/simple_gp.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/template.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/together.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/together_nonuni.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/trace.test.release ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/trace_over_mesh_new.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/tree_sample.hier ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/tree_sample.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA} ./examples/vias.inp ${DESTDIR}${PREFIX}/share/examples/fasthenry
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/fasthenry
++	${BSD_INSTALL_DATA} ./doc/README ${DESTDIR}${PREFIX}/share/doc/fasthenry
++	${BSD_INSTALL_DATA} ./doc/manual_001.ps ${DESTDIR}${PREFIX}/share/doc/fasthenry
++	${BSD_INSTALL_DATA} ./doc/manual_002.ps ${DESTDIR}${PREFIX}/share/doc/fasthenry
++	${BSD_INSTALL_DATA} ./doc/manual_003.ps ${DESTDIR}${PREFIX}/share/doc/fasthenry
++	${BSD_INSTALL_DATA} ./doc/nonuniform_manual_1.ps ${DESTDIR}${PREFIX}/share/doc/fasthenry
++	${BSD_INSTALL_DATA} ./doc/nonuniform_manual_2.ps ${DESTDIR}${PREFIX}/share/doc/fasthenry
 +
 +
