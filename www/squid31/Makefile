@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/07/07 18:25:13 tron Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/08 15:02:01 tron Exp $
 
 DISTNAME=	squid-3.1.0.9
 PKGNAME=	${DISTNAME}	# Necessary for "pkgsrc/www/squid/options.mk"
@@ -36,15 +36,15 @@ post-build:
 	  ${WRKSRC}/src/squid.conf.default
 
 install-error-pages:
-	cd ${WRKSRC}/errors &&					\
-	for DIR in *; do					\
-	  if [ -d $$DIR ]; then				\
-	    ERROR_DIR=${PREFIX}/share/squid/errors/$$DIR;	\
-	    ${INSTALL_DATA_DIR} $$ERROR_DIR;			\
-	    for FILE in $$DIR/ERR_*; do			\
-	      ${INSTALL_DATA} $$FILE $$ERROR_DIR; 		\
-	    done;						\
-	  fi;							\
+	cd ${WRKSRC}/errors &&						\
+	for DIR in *; do						\
+	  if [ -d $$DIR ]; then						\
+	    ERROR_DIR=${DESTDIR}${PREFIX}/share/squid/errors/$$DIR;	\
+	    ${INSTALL_DATA_DIR} $$ERROR_DIR;				\
+	    for FILE in $$DIR/ERR_*; do					\
+	      ${INSTALL_DATA} $$FILE $$ERROR_DIR; 			\
+	    done;							\
+	  fi;								\
 	done
 	${LN} -s en ${PREFIX}/share/squid/errors/templates
 
