@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/02/09 22:56:27 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/07/08 13:56:00 joerg Exp $
 #
 
 DISTNAME=	browser-bookmarks-menu-0.6
@@ -22,8 +22,6 @@ SUBST_FILES.paths=	BrowserBookmarksMenu.server
 SUBST_SED.paths= -e 's|/usr/lib/browser-bookmarks-menu|${PREFIX}/libexec|g'
 SUBST_SED.paths+= -e 's|/usr/share|${PREFIX}/share|g'
 
-PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
-
 INSTALLATION_DIRS=	lib/bonobo/servers libexec
 
 do-install:
@@ -31,7 +29,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/lib/bonobo/servers/
 	${INSTALL_SCRIPT} ${WRKSRC}/browser-bookmarks-menu.py \
 	    ${DESTDIR}${PREFIX}/libexec
-	${PYTHONBIN} ${PYCOMPILEALL} ${DESTDIR}${PREFIX}/libexec
+	${PYTHONBIN} ${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/libexec
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"

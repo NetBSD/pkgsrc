@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/03/16 22:22:07 jmcneill Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/08 13:55:58 joerg Exp $
 #
 
 DISTNAME=		at-spi-1.26.0
@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	${PYATSPIDIR}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/pyatspi/*.py ${DESTDIR}${PYATSPIDIR}
-	${PYTHONBIN} ${PREFIX}/${PYLIB}/compileall.py ${DESTDIR}${PYATSPIDIR}
+	${PY_COMPILE_ALL} ${DESTDIR}${PYATSPIDIR}
 
 .include "../../lang/python/extension.mk"
 .include "../../devel/at-spi/buildlink3.mk"

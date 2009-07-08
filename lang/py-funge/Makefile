@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:33 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/08 13:55:59 joerg Exp $
 
 DISTNAME=	pyfunge-0.2-beta1
 PKGNAME=	${PYPKGPREFIX}-funge-0.2beta1
@@ -22,16 +22,14 @@ PYTHON_VERSIONS_ACCEPTED?=	23
 WRKSRC?=	${WRKDIR}/PyFunge
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
 
-PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
-
 INSTALLATION_DIRS=	${PYSITELIB}/PyFunge share/doc/${PKGBASE}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.ko ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	cd ${WRKSRC} && pax -rwppm '-s|.*/README.ko||' \
 		. ${DESTDIR}${PREFIX}/${PYSITELIB}/PyFunge
-	${PYTHONBIN} ${PYCOMPILEALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/PyFunge
-	${PYTHONBIN} -O ${PYCOMPILEALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/PyFunge
+	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/PyFunge
+	${PY_COMPILE_O_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/PyFunge
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

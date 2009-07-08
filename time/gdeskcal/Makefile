@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/06/20 01:09:38 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2009/07/08 13:56:00 joerg Exp $
 #
 
 DISTNAME=		gDeskCal-0_57_1
@@ -24,8 +24,7 @@ post-extract:
 
 do-install:
 	(cd ${WRKSRC} && ${CP} -r . ${DESTDIR}${PREFIX}/lib/gdeskcal)
-	${PYTHONBIN} ${LOCALBASE}/${PYLIB}/compileall.py \
-		${DESTDIR}${PREFIX}/lib/gdeskcal/code
+	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/lib/gdeskcal/code
 	${LN} -s ../lib/gdeskcal/gdeskcal ${DESTDIR}${PREFIX}/bin
 
 .include "../../x11/py-gtk2/buildlink3.mk"
