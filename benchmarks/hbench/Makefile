@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/01/14 12:20:57 sketch Exp $
+# $NetBSD: Makefile,v 1.42 2009/07/08 14:19:46 joerg Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -13,6 +13,7 @@ COMMENT=		Suite of portable benchmarks to measure the OS and the hardware
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/hbench-OS
 OSVERSION_SPECIFIC=	YES
@@ -43,9 +44,12 @@ SUBST_FILES.hb+=	Results/Makefile
 SUBST_SED.hb=		-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.hb+=		-e 's,/bin/hbench,/libexec/hbench,g'
 
+INSTALLATION_DIRS=	bin
+
 do-install:
 	${SETENV} ${MAKE_ENV} WRKSRC=${WRKSRC} BINOWN=${BINOWN} \
-		BINGRP=${BINGRP} ${WRKSRC}/do-install
+		REAL_PREFIX=${PREFIX} BINGRP=${BINGRP} \
+		PREFIX=${DESTDIR}${PREFIX} ${WRKSRC}/do-install
 
 benchmark:
 	@if [ `id -u` != 0 ]; then ${ECHO} "This benchmark must be run as root!" ; exit 1 ; fi
