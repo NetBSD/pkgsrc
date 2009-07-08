@@ -1,32 +1,34 @@
-$NetBSD: patch-aa,v 1.2 2004/06/16 16:45:21 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2009/07/08 16:57:05 joerg Exp $
 
---- Makefile.orig	2000-09-23 21:57:57.000000000 -0500
+--- Makefile.orig	2000-09-24 04:57:57.000000000 +0200
 +++ Makefile
 @@ -1,6 +1,6 @@
  # Makefile for mozilla-fonts
  
 -DESTDIR	= /usr/local/lib/X11/fonts/Mozilla
-+DESTDIR	= $(PREFIX)/lib/X11/fonts/Mozilla
++DEST	= $(PREFIX)/lib/X11/fonts/Mozilla
  
  INSTALL = install
  
-@@ -111,12 +111,15 @@ all: $(PCFFILES)
+@@ -111,13 +111,16 @@ all: $(PCFFILES)
  	bdftopcf $< -o $@
  
  install: $(PCFFILES)
 -	mkdir -p $(DESTDIR)
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(DEST)
  	@for font in $(PCFFILES) ; do \
 -		echo " $(INSTALL) -m 644 $$font $(DESTDIR)/$$font" ; \
 -		$(INSTALL) -m 644 $$font $(DESTDIR)/$$font || exit 1 ; \
-+		echo " $(BSD_INSTALL_DATA) $$font $(DESTDIR)/$$font" ; \
-+		$(BSD_INSTALL_DATA) -m 644 $$font $(DESTDIR)/$$font || exit 1 ; \
-+		rm -f $(DESTDIR)/$$font.* ; \
-+		echo " Compressing $(DESTDIR)/$$font" ; \
-+		gzip $(DESTDIR)/$$font ; \
++		echo " $(BSD_INSTALL_DATA) $$font ${DESTDIR}$(DEST)/$$font" ; \
++		$(BSD_INSTALL_DATA) -m 644 $$font ${DESTDIR}$(DEST)/$$font || exit 1 ; \
++		rm -f ${DESTDIR}$(DEST)/$$font.* ; \
++		echo " Compressing ${DESTDIR}$(DEST)/$$font" ; \
++		gzip ${DESTDIR}$(DEST)/$$font ; \
  	done
 -	$(INSTALL) -m 644 fonts.alias $(DESTDIR)/fonts.alias
-+	$(BSD_INSTALL_DATA) fonts.alias $(DESTDIR)/fonts.alias
- 	cd $(DESTDIR) && mkfontdir
+-	cd $(DESTDIR) && mkfontdir
++	$(BSD_INSTALL_DATA) fonts.alias ${DESTDIR}$(DEST)/fonts.alias
++	cd ${DESTDIR}$(DEST) && mkfontdir
  
  clean:
+ 	rm -f *.pcf
