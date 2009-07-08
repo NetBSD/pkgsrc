@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/05 18:51:26 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/08 15:40:54 joerg Exp $
 
 DISTNAME=	pymol-0_98-src
 PKGNAME=	${PYPKGPREFIX}-mol-0.98
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pymol.sourceforge.net/
 COMMENT=	Molecular Visualization System
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pymol-0.98
 PYDISTUTILSPKG=	yes
@@ -20,9 +21,11 @@ CONFLICTS=	pymol-[0-9]*
 
 REPLACE_PYTHON=	test/cyg test/run test/show test/win.py
 
+INSTALLATION_DIRS=	bin
+
 post-install:
-	cd ${WRKSRC} && env ${MAKE_ENV} ${PYTHONBIN} setup2.py
-	${INSTALL_SCRIPT} ${WRKSRC}/pymol.com ${PREFIX}/bin/pymol
+	cd ${WRKSRC} && env ${MAKE_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} setup2.py
+	${INSTALL_SCRIPT} ${WRKSRC}/pymol.com ${DESTDIR}${PREFIX}/bin/pymol
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
