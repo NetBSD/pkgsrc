@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2525 2009/07/08 07:41:25 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2526 2009/07/08 07:57:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3349,3 +3349,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/dvtm to 0.5.2 [tnn 2009-07-08]
 	Updated time/p5-DateTime-Format-Pg to 0.16004 [sno 2009-07-08]
 	Updated time/p5-DateTime-Locale to 0.43 [sno 2009-07-08]
+	Updated converters/p5-JSON-Any to 1.21 [sno 2009-07-08]
