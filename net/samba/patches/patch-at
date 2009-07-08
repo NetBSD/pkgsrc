@@ -1,16 +1,24 @@
-$NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
+$NetBSD: patch-at,v 1.13 2009/07/08 19:37:27 tron Exp $
 
---- configure.orig	2009-01-19 11:00:12.000000000 +0000
-+++ configure	2009-03-21 14:45:27.000000000 +0000
-@@ -667,6 +667,7 @@
- target_os
- configdir
- lockdir
-+statedir
- piddir
- logfilebase
+--- configure.orig	2009-06-22 22:02:40.000000000 +0100
++++ configure	2009-07-08 15:21:45.000000000 +0100
+@@ -765,6 +765,7 @@
  privatedir
-@@ -1399,6 +1400,7 @@
+ logfilebase
+ piddir
++statedir
+ lockdir
+ configdir
+ target_os
+@@ -827,6 +828,7 @@
+ with_privatedir
+ with_rootsbindir
+ with_lockdir
++with_statedir
+ with_piddir
+ with_swatdir
+ with_configdir
+@@ -1537,6 +1539,7 @@
    --with-privatedir=DIR   Where to put smbpasswd ($ac_default_prefix/private)
    --with-rootsbindir=DIR  Which directory to use for root sbin ($ac_default_prefix/sbin)
    --with-lockdir=DIR      Where to put lock files ($ac_default_prefix/var/locks)
@@ -18,7 +26,7 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
    --with-piddir=DIR       Where to put pid files ($ac_default_prefix/var/locks)
    --with-swatdir=DIR      Where to put SWAT files ($ac_default_prefix/swat)
    --with-configdir=DIR    Where to put configuration files ($libdir)
-@@ -2141,6 +2143,7 @@
+@@ -2296,6 +2299,7 @@
  
  rootsbindir="\${SBINDIR}"
  lockdir="\${VARDIR}/locks"
@@ -26,7 +34,7 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
  piddir="\${VARDIR}/locks"
  test "${mandir}" || mandir="\${prefix}/man"
  logfilebase="\${VARDIR}"
-@@ -2155,7 +2158,8 @@
+@@ -2310,7 +2314,8 @@
  if test "${with_fhs+set}" = set; then
    withval=$with_fhs;  case "$withval" in
    yes)
@@ -36,7 +44,7 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
      piddir="\${VARDIR}/run"
      mandir="\${prefix}/share/man"
      logfilebase="\${VARDIR}/log/samba"
-@@ -2229,6 +2233,26 @@
+@@ -2384,6 +2389,26 @@
  
  
  #################################################
@@ -49,8 +57,8 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
 +  #
 +  # Just in case anybody calls it without argument
 +  #
-+    { echo "$as_me:$LINENO: WARNING: --with-statedir called without argument - will use default" >&5
-+echo "$as_me: WARNING: --with-statedir called without argument - will use default" >&2;}
++    { $as_echo "$as_me:$LINENO: WARNING: --with-statedir called without argument - will use default" >&5
++$as_echo "$as_me: WARNING: --with-statedir called without argument - will use default" >&2;}
 +  ;;
 +  * )
 +    statedir="$withval"
@@ -63,7 +71,7 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
  # set pid directory location
  
  # Check whether --with-piddir was given.
-@@ -2469,6 +2493,7 @@
+@@ -2624,6 +2649,7 @@
  
  
  
@@ -71,7 +79,7 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
  ## check for --enable-debug first before checking CFLAGS before
  ## so that we don't mix -O and -g
  # Check whether --enable-debug was given.
-@@ -31354,7 +31379,8 @@
+@@ -33459,7 +33485,8 @@
  
  
  
@@ -79,16 +87,16 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
 +
 +for ac_func in getdents getdents64 getpwent_r
  do
- as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
- { echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -46820,6 +46846,74 @@
+ as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ { $as_echo "$as_me:$LINENO: checking for $ac_func" >&5
+@@ -49772,6 +49799,77 @@
  ##################
  # look for a method of finding the list of network interfaces
  iface=no;
-+{ echo "$as_me:$LINENO: checking for iface ifaddrs" >&5
-+echo $ECHO_N "checking for iface ifaddrs... $ECHO_C" >&6; }
++{ $as_echo "$as_me:$LINENO: checking for iface ifaddrs" >&5
++$as_echo_n "checking for iface ifaddrs... " >&6; }
 +if test "${samba_cv_HAVE_IFACE_IFADDRS+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
++  $as_echo_n "(cached) " >&6
 +else
 +
 +SAVE_CPPFLAGS="$CPPFLAGS"
@@ -113,36 +121,39 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
 +  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
 +  *) ac_try_echo=$ac_try;;
 +esac
-+eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++eval ac_try_echo="\"\$as_me:$LINENO: $ac_try_echo\""
++$as_echo "$ac_try_echo") >&5
 +  (eval "$ac_link") 2>&5
 +  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); } && { ac_try='./conftest$ac_exeext'
 +  { (case "(($ac_try" in
 +  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
 +  *) ac_try_echo=$ac_try;;
 +esac
-+eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++eval ac_try_echo="\"\$as_me:$LINENO: $ac_try_echo\""
++$as_echo "$ac_try_echo") >&5
 +  (eval "$ac_try") 2>&5
 +  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); }; }; then
 +  samba_cv_HAVE_IFACE_IFADDRS=yes
 +else
-+  echo "$as_me: program exited with status $ac_status" >&5
-+echo "$as_me: failed program was:" >&5
++  $as_echo "$as_me: program exited with status $ac_status" >&5
++$as_echo "$as_me: failed program was:" >&5
 +sed 's/^/| /' conftest.$ac_ext >&5
 +
 +( exit $ac_status )
 +samba_cv_HAVE_IFACE_IFADDRS=no
 +fi
++rm -rf conftest.dSYM
 +rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
 +fi
 +
 +
 +fi
-+{ echo "$as_me:$LINENO: result: $samba_cv_HAVE_IFACE_IFADDRS" >&5
-+echo "${ECHO_T}$samba_cv_HAVE_IFACE_IFADDRS" >&6; }
++{ $as_echo "$as_me:$LINENO: result: $samba_cv_HAVE_IFACE_IFADDRS" >&5
++$as_echo "$samba_cv_HAVE_IFACE_IFADDRS" >&6; }
 +CPPFLAGS="$SAVE_CPPFLAGS"
 +if test x"$samba_cv_HAVE_IFACE_IFADDRS" = x"yes"; then
 +	iface=yes;
@@ -153,31 +164,31 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
 +fi
 +
 +if test $iface = no; then
- { echo "$as_me:$LINENO: checking for iface AIX" >&5
- echo $ECHO_N "checking for iface AIX... $ECHO_C" >&6; }
+ { $as_echo "$as_me:$LINENO: checking for iface AIX" >&5
+ $as_echo_n "checking for iface AIX... " >&6; }
  if test "${samba_cv_HAVE_IFACE_AIX+set}" = set; then
-@@ -46887,6 +46981,7 @@
+@@ -49842,6 +49940,7 @@
  _ACEOF
  
  fi
 +fi
  
  if test $iface = no; then
- { echo "$as_me:$LINENO: checking for iface ifconf" >&5
-@@ -50266,9 +50361,9 @@
+ { $as_echo "$as_me:$LINENO: checking for iface ifconf" >&5
+@@ -53369,9 +53468,9 @@
  
  
  
--        { echo "$as_me:$LINENO: checking for des_set_key in -lcrypto" >&5
--echo $ECHO_N "checking for des_set_key in -lcrypto... $ECHO_C" >&6; }
+-        { $as_echo "$as_me:$LINENO: checking for des_set_key in -lcrypto" >&5
+-$as_echo_n "checking for des_set_key in -lcrypto... " >&6; }
 -if test "${ac_cv_lib_ext_crypto_des_set_key+set}" = set; then
-+        { echo "$as_me:$LINENO: checking for EVP_des_cbc in -lcrypto" >&5
-+echo $ECHO_N "checking for EVP_des_cbc in -lcrypto... $ECHO_C" >&6; }
++        { $as_echo "$as_me:$LINENO: checking for EVP_des_cbc in -lcrypto" >&5
++$as_echo_n "checking for EVP_des_cbc in -lcrypto... " >&6; }
 +if test "${ac_cv_lib_ext_crypto_EVP_des_cbc+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+   $as_echo_n "(cached) " >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -50284,11 +50379,11 @@
+@@ -53387,11 +53486,11 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -191,15 +202,15 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
    ;
    return 0;
  }
-@@ -50311,13 +50406,13 @@
- 	 test ! -s conftest.err
-        } && test -s conftest$ac_exeext &&
-        $as_test_x conftest$ac_exeext; then
+@@ -53417,13 +53516,13 @@
+ 	 test "$cross_compiling" = yes ||
+ 	 $as_test_x conftest$ac_exeext
+        }; then
 -  ac_cv_lib_ext_crypto_des_set_key=yes;
 +  ac_cv_lib_ext_crypto_EVP_des_cbc=yes;
  		  ac_cv_lib_ext_crypto=yes
  else
-   echo "$as_me: failed program was:" >&5
+   $as_echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
 -	ac_cv_lib_ext_crypto_des_set_key=no;
@@ -207,15 +218,15 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
  		  ac_cv_lib_ext_crypto=no
  fi
  
-@@ -50325,11 +50420,11 @@
+@@ -53432,11 +53531,11 @@
        conftest$ac_exeext conftest.$ac_ext
  
  fi
--{ echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_des_set_key" >&5
--echo "${ECHO_T}$ac_cv_lib_ext_crypto_des_set_key" >&6; }
+-{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_des_set_key" >&5
+-$as_echo "$ac_cv_lib_ext_crypto_des_set_key" >&6; }
 -    if test $ac_cv_lib_ext_crypto_des_set_key = yes; then
-+{ echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_EVP_des_cbc" >&5
-+echo "${ECHO_T}$ac_cv_lib_ext_crypto_EVP_des_cbc" >&6; }
++{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_EVP_des_cbc" >&5
++$as_echo "$ac_cv_lib_ext_crypto_EVP_des_cbc" >&6; }
 +    if test $ac_cv_lib_ext_crypto_EVP_des_cbc = yes; then
    cat >>confdefs.h <<_ACEOF
 -#define HAVE_DES_SET_KEY 1
@@ -223,7 +234,7 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
  _ACEOF
  
  fi
-@@ -63573,31 +63668,39 @@
+@@ -67188,31 +67287,39 @@
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
  		;;
@@ -285,36 +296,3 @@ $NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
  		;;
  	*irix*)
  		# IRIX has differently named shared libraries
-@@ -68126,6 +68229,7 @@
- target_os!$target_os$ac_delim
- configdir!$configdir$ac_delim
- lockdir!$lockdir$ac_delim
-+statedir!$statedir$ac_delim
- piddir!$piddir$ac_delim
- logfilebase!$logfilebase$ac_delim
- privatedir!$privatedir$ac_delim
-@@ -68169,7 +68273,6 @@
- KRB5_LIBS!$KRB5_LIBS$ac_delim
- UUID_LIBS!$UUID_LIBS$ac_delim
- LDAP_LIBS!$LDAP_LIBS$ac_delim
--PAM_MODULES!$PAM_MODULES$ac_delim
- _ACEOF
- 
-   if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
-@@ -68211,6 +68314,7 @@
- ac_delim='%!_!# '
- for ac_last_try in false false false false false :; do
-   cat >conf$$subs.sed <<_ACEOF
-+PAM_MODULES!$PAM_MODULES$ac_delim
- INSTALL_PAM_MODULES!$INSTALL_PAM_MODULES$ac_delim
- UNINSTALL_PAM_MODULES!$UNINSTALL_PAM_MODULES$ac_delim
- NSS_MODULES!$NSS_MODULES$ac_delim
-@@ -68298,7 +68402,7 @@
- LTLIBOBJS!$LTLIBOBJS$ac_delim
- _ACEOF
- 
--  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 85; then
-+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 86; then
-     break
-   elif $ac_last_try; then
-     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
