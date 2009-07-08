@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/08 15:02:15 joerg Exp $
 
---- Makefile.orig	Mon Nov 27 08:21:21 2000
+--- Makefile.orig	2000-11-27 08:21:21.000000000 +0100
 +++ Makefile
-@@ -3,7 +3,7 @@
+@@ -3,13 +3,13 @@ LIB=libfuntimedancer.so
  all: $(LIB)
  
  libfuntimedancer.so: FunTimeDancer.c FunTimeDancer.h
@@ -11,3 +11,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
  
  clean:
  	rm -f *.o $(LIB)
+ 
+ install: $(LIB)
+-	cp $(LIB) `xmms-config --visualization-plugin-dir`
++	cp $(LIB) ${DESTDIR}`xmms-config --visualization-plugin-dir`
+ 
+ uninstall:
+ 	rm `xmms-config --visualization-plugin-dir`/$(LIB)
