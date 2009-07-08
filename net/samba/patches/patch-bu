@@ -1,9 +1,9 @@
-$NetBSD: patch-bu,v 1.7 2009/03/21 18:25:35 tron Exp $
+$NetBSD: patch-bu,v 1.8 2009/07/08 19:37:27 tron Exp $
 
---- ../docs/manpages/smb.conf.5.orig	2009-01-19 10:44:00.000000000 +0000
-+++ ../docs/manpages/smb.conf.5	2009-03-21 14:50:38.000000000 +0000
-@@ -6152,6 +6152,15 @@
- \fI\fIpasswd chat timeout\fR\fR\fI = \fR\fI2\fR\fI \fR
+--- ../docs/manpages/smb.conf.5.orig	2009-06-22 21:41:19.000000000 +0100
++++ ../docs/manpages/smb.conf.5	2009-07-07 22:05:08.000000000 +0100
+@@ -7084,6 +7084,15 @@
+ \fI\fIpasswd chat\fR\fR\fI = \fR\fI\FC"*Enter NEW password*" %n\en "*Reenter NEW password*" %n\en "*Password changed*"\F[]\fR\fI \fR
  .RE
  
 +passwd expand gecos (G)
@@ -16,10 +16,10 @@ $NetBSD: patch-bu,v 1.7 2009/03/21 18:25:35 tron Exp $
 +.sp
 +
  passwd program (G)
+ .\" passwd program
  .PP
- .RS 4
-@@ -8030,6 +8039,15 @@
- \fI\fIstat cache\fR\fR\fI = \fR\fIyes\fR\fI \fR
+@@ -9198,6 +9207,15 @@
+ \fI\fIstat cache\fR\fR\fI = \fR\fI\FCyes\F[]\fR\fI \fR
  .RE
  
 +state directory (G)
@@ -32,5 +32,5 @@ $NetBSD: patch-bu,v 1.7 2009/03/21 18:25:35 tron Exp $
 +.RE
 +
  store dos attributes (S)
+ .\" store dos attributes
  .PP
- .RS 4
