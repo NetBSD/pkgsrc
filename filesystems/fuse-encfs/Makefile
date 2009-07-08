@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/01/18 05:06:33 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/08 16:31:59 joerg Exp $
 #
 
 DISTNAME=	encfs-1.2.0-2
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://arg0.net/wiki/encfs
 COMMENT=	FUSE Encrypted Filesystem
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-2//}
 GNU_CONFIGURE=	yes

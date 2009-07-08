@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/27 14:18:50 bjs Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/08 16:27:31 joerg Exp $
 #
 
 DISTNAME=	curlftpfs-0.9.1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=curlftpfs/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://curlftpfs.sourceforge.net/
 COMMENT=	FUSE filesystem for acessing FTP hosts
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
