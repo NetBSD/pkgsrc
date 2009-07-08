@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2009/04/15 07:40:00 sno Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/08 10:07:19 sno Exp $
 #
 
-DISTNAME=	NetAddr-IP-4.026
+DISTNAME=	NetAddr-IP-4.027
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5nai
 CATEGORIES=	net perl5
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=NetAddr/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/NetAddr-IP/
 COMMENT=	Perl5 module for managing IP addresses
-LICENSE=	artistic-2.0
+LICENSE=	artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,6 +21,7 @@ REPLACE_PERL+=	IP.pm
 REPLACE_PERL+=	Lite/Lite.pm
 REPLACE_PERL+=	Lite/Util/Util.pm
 REPLACE_PERL+=	Lite/Util/lib/NetAddr/IP/UtilPP.pm
+REPLACE_PERL+=	Lite/Util/tlib/NetAddr/IP/Util_IS.pm
 
 SUBST_CLASSES+=	fixperl
 SUBST_STAGE.fixperl=	pre-install
