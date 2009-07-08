@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2544 2009/07/08 11:46:50 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2545 2009/07/08 11:51:28 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3368,3 +3368,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-Reflow to 1.07 [sno 2009-07-08]
 	Added textproc/p5-String-RewritePrefix version 0.004 [sno 2009-07-08]
 	Updated www/p5-Catalyst-Runtime to 5.80007 [sno 2009-07-08]
+	Updated www/p5-Catalyst-Plugin-ConfigLoader to 0.24 [sno 2009-07-08]
