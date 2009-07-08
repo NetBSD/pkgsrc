@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/11/10 17:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2009/07/08 17:07:41 joerg Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xbill.org/
 COMMENT=		Stop the dreaded Windows virus from infecting computers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gnome-games-[0-9]*
 
@@ -30,8 +32,8 @@ CONF_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores ${VARBASE}/games/xbill.
 INSTALLATION_DIRS+=	${PKGMANDIR}/man6 share/examples
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/xbill.man ${PREFIX}/${PKGMANDIR}/man6/xbill.6
-	${INSTALL_DATA} ${WRKSRC}/scores ${PREFIX}/share/examples/xbill.scores
+	${INSTALL_MAN} ${WRKSRC}/xbill.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/xbill.6
+	${INSTALL_DATA} ${WRKSRC}/scores ${DESTDIR}${PREFIX}/share/examples/xbill.scores
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
