@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2005/06/11 11:45:53 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2009/07/08 17:17:48 joerg Exp $
 
 --- Makefile.in.orig	1998-05-08 15:31:05.000000000 +0200
 +++ Makefile.in
@@ -11,12 +11,18 @@ $NetBSD: patch-aa,v 1.2 2005/06/11 11:45:53 wiz Exp $
  
  CC   = @CC@
  LEX  = @LEX@
-@@ -163,7 +163,7 @@ dummylibs:
+@@ -163,12 +163,12 @@ dummylibs:
  ###############################################################################
  
  installdirs:
 -	$(INSTALL_PROGRAM) -d $(bindir)
-+	$(BSD_INSTALL_PROGRAM_DIR) -d $(bindir)
++	$(BSD_INSTALL_PROGRAM_DIR) -d ${DESTDIR}$(bindir)
  
  install: all installdirs
  	case '${MFLAGS}' in *[ik]*) set +e;; *) set -e;; esac; \
+ 	for p in $(INSTALL_PROGS); do \
+-	  $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p | sed 's,.*/,,; $(transform)'`; \
++	  $(INSTALL_PROGRAM) $$p ${DESTDIR}$(bindir)/`echo $$p | sed 's,.*/,,; $(transform)'`; \
+ 	done
+ 
+ uninstall:

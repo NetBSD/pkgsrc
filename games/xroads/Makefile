@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/02 17:13:01 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/08 17:19:05 joerg Exp $
 #
 
 DISTNAME=	xroads-v0.5
@@ -10,6 +10,10 @@ MASTER_SITES=	http://www.autobahn.mb.ca/~foxtrot/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# http://freshmeat.net/homepage/898367442/
 COMMENT=	Overhead view maze-based shoot 'em up game
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS=	bin
 
 WRKSRC=		${WRKDIR}/xroads-v0.5
 

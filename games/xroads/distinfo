@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2006/08/02 19:24:55 kristerw Exp $
+$NetBSD: distinfo,v 1.7 2009/07/08 17:19:05 joerg Exp $
 
 SHA1 (xroads-v0.5.tar.gz) = 559f916eda55ba4700c2cea6fcb42d1b1a47fa06
 RMD160 (xroads-v0.5.tar.gz) = c0399b391d2113d93c08c25ad6370273791261b7
 Size (xroads-v0.5.tar.gz) = 48641 bytes
-SHA1 (patch-aa) = 4978b1b718b920871d06acff54895da60642c949
+SHA1 (patch-aa) = 4484ea71864b6db650faddf793b850ab251f34ad
 SHA1 (patch-ab) = f22b139e84c4e2d4d9d190d818d0ce6aba816a23
 SHA1 (patch-ac) = 19c91236e36cced0c26f527fdc99a565dfdb245f
 SHA1 (patch-ad) = eb76c3ee57d8b18f70e7f8bcd41d96d5e1dd4dad
