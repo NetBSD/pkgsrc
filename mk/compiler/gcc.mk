@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.97 2009/05/30 18:16:26 joerg Exp $
+# $NetBSD: gcc.mk,v 1.98 2009/07/08 21:25:30 markd Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -48,7 +48,7 @@ _DEF_VARS.gcc=	\
 	_GCC_FC _GCC_LDFLAGS _GCC_LIBDIRS _GCC_PKG \
 	_GCC_PKGBASE _GCC_PKGSRCDIR _GCC_PKG_SATISFIES_DEP \
 	_GCC_PREFIX _GCC_REQD _GCC_STRICTEST_REQD _GCC_SUBPREFIX \
-	_GCC_TEST_DEPENDS _GCC_USE_F2C _GCC_VARS _GCC_VERSION \
+	_GCC_TEST_DEPENDS _GCC_NEEDS_A_FORTRAN _GCC_VARS _GCC_VERSION \
 	_GCC_VERSION_STRING \
 	_IGNORE_GCC _IGNORE_GCC3CXX _IGNORE_GCC3F77 _IGNORE_GCC3OBJC \
 	_IS_BUILTIN_GCC \
@@ -505,20 +505,22 @@ ${_GCC_${_var_}}:
 .endfor
 
 # On older NetBSD systems and where the Fortran compiler doesn't exist,
-# force the use of f2c-f77.
+# force the use of f2c-f77 or some other fortran.
 #
-_GCC_USE_F2C=	no
+PKGSRC_FORTRAN?=f2c
+
+_GCC_NEEDS_A_FORTRAN=	no
 .if !exists(${FCPATH})
-_GCC_USE_F2C=	yes
+_GCC_NEEDS_A_FORTRAN=	yes
 .else
 .  for _pattern_ in 0.* 1.[0-4] 1.[0-4].*
 .    if !empty(MACHINE_PLATFORM:MNetBSD-${_pattern_}-*)
-_GCC_USE_F2C=	yes
+_GCC_NEEDS_A_FORTRAN=	yes
 .    endif
 .  endfor
 .endif
-.if !empty(_GCC_USE_F2C:M[yY][eE][sS])
-.  include "../../mk/compiler/f2c.mk"
+.if !empty(_GCC_NEEDS_A_FORTRAN:M[yY][eE][sS])
+.  include "../../mk/compiler/${PKGSRC_FORTRAN}.mk"
 .endif
 
 .endif	# COMPILER_GCC_MK
