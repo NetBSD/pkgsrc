@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/05/16 20:38:39 zafer Exp $
+# $NetBSD: Makefile,v 1.33 2009/07/08 14:23:23 joerg Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -12,12 +12,13 @@ HOMEPAGE=		http://www.bitmover.com/lm/lmbench/
 COMMENT=		Complete benchmark that gives a large amount of information
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl:run
 BUILD_TARGET=		build
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man8
 
 post-extract:
 	${INSTALL_SCRIPT} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/scripts/gnu-os
@@ -40,7 +41,7 @@ post-configure:
 	${CHMOD} 0755 ${WRKSRC}/scripts/lmbench
 
 do-install:
-	${SETENV} ${MAKE_ENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} \
+	${SETENV} ${MAKE_ENV} DESTDIR=${DESTDIR} PREFIX=${PREFIX} WRKSRC=${WRKSRC} \
 		INSTALL_PROGRAM=${INSTALL:Q} ${FILESDIR}/do-install
 
 .include "../../mk/bsd.prefs.mk"
