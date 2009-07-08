@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2007/05/13 15:34:05 agc Exp $
+$NetBSD: patch-aa,v 1.3 2009/07/08 16:44:49 joerg Exp $
 
 --- makefile	2007/04/23 21:54:35	1.1
 +++ makefile	2007/04/23 21:55:35
@@ -19,9 +19,9 @@ $NetBSD: patch-aa,v 1.2 2007/05/13 15:34:05 agc Exp $
  
  install: u9fs
 -	cp u9fs ../../bin
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/libexec
-+	${BSD_INSTALL_PROGRAM} u9fs ${PREFIX}/libexec/
-+	${BSD_INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man8
-+	${BSD_INSTALL_MAN} u9fs.8 ${PREFIX}/${PKGMANDIR}/man8/
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libexec
++	${BSD_INSTALL_PROGRAM} u9fs ${DESTDIR}${PREFIX}/libexec/
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
++	${BSD_INSTALL_MAN} u9fs.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
  
  .PHONY: clean install

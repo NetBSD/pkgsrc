@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/07/18 16:19:04 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/08 16:49:05 joerg Exp $
 
---- Makefile.orig	Sat Dec 16 21:00:46 1995
+--- Makefile.orig	1995-12-16 21:00:46.000000000 +0100
 +++ Makefile
 @@ -2,13 +2,13 @@
  #	Kau Chauo Chinese Fanti Ming Fonts Version 1.05 For FreeBSD
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/18 16:19:04 wiz Exp $
  FONTS	=kc24f.pcf.gz kc15f.pcf.gz kc8x15.pcf.gz kc12x24.pcf.gz
  PROGS	=kc24f kc15f kc8x15 kc12x24 kca2et
  OBJS	=tran.o kc24f.o kc15f.o kc8x15.o kc12x24.o kca2et.o
-@@ -22,10 +22,14 @@
+@@ -22,10 +22,14 @@ kc15f.pcf.gz:	kc15f
  	./kc15f | bdftopcf | gzip - > kc15f.pcf.gz 
  kc8x15.pcf.gz:	kca2et kc8x15
  	./kca2et kctext16.f00 ascfont.15 256 16 15
@@ -37,11 +37,19 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/18 16:19:04 wiz Exp $
  
  kc24f:		tran.o kc24f.o
  	$(CC) $(CFLAGS) tran.o kc24f.o -o $@
-@@ -42,6 +46,7 @@
- 	if [ ! -d $(CFONTDIR) ]; then mkdir $(CFONTDIR); fi
- 	cp kc*f.pcf.gz $(CFONTDIR)
- 	cp kc*x*.pcf.gz $(EFONTDIR)
-+	cp fonts.alias $(CFONTDIR)
- 	mkfontdir $(CFONTDIR)
- 	mkfontdir $(EFONTDIR)
+@@ -39,11 +43,10 @@ kca2et:		kca2et.o
+ 	$(CC) $(CFLAGS) kca2et.o -o $@
  
+ install:
+-	if [ ! -d $(CFONTDIR) ]; then mkdir $(CFONTDIR); fi
+-	cp kc*f.pcf.gz $(CFONTDIR)
+-	cp kc*x*.pcf.gz $(EFONTDIR)
+-	mkfontdir $(CFONTDIR)
+-	mkfontdir $(EFONTDIR)
++	if [ ! -d ${DESTDIR}$(CFONTDIR) ]; then mkdir ${DESTDIR}$(CFONTDIR); fi
++	${BSD_INSTALL_DATA} kc*f.pcf.gz ${DESTDIR}$(CFONTDIR)
++	${BSD_INSTALL_DATA} kc*x*.pcf.gz ${DESTDIR}$(EFONTDIR)
++	${BSD_INSTALL_DATA} fonts.alias ${DESTDIR}$(CFONTDIR)
+ 
+ clean:
+ 	rm -f kc*.pcf.gz ascfont.* *.o *~ $(PROGS)
