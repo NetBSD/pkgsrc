@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/07 09:13:47 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2009/07/08 14:03:26 joerg Exp $
 
 DISTNAME=	tosha-0.05
 PKGREVISION=	1
@@ -10,6 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Read CD digital audio data through the SCSI bus
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 
