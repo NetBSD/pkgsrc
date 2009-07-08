@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.56 2009/02/05 19:03:29 joerg Exp $
+# $NetBSD: defaults.mk,v 1.57 2009/07/08 12:51:16 minskim Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -145,6 +145,7 @@ _TOOLS_VARNAME.wc=		WC
 _TOOLS_VARNAME.wish=		WISH
 _TOOLS_VARNAME.xargs=		XARGS
 _TOOLS_VARNAME.xmkmf=		XMKMF_CMD
+_TOOLS_VARNAME.xzcat=		XZCAT
 _TOOLS_VARNAME.yacc=		YACC
 
 ######################################################################

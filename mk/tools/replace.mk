@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.220 2009/04/22 14:13:52 joerg Exp $
+# $NetBSD: replace.mk,v 1.221 2009/07/08 12:51:16 minskim Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -558,10 +558,10 @@ TOOLS_PATH.lha=			${TOOLS_PREFIX.lha}/bin/lha
 .endif
 
 .if !defined(TOOLS_IGNORE.lzcat) && !empty(_USE_TOOLS:Mlzcat)
-.  if !empty(PKGPATH:Marchivers/lzma-utils)
+.  if !empty(PKGPATH:Marchivers/xz)
 MAKEFLAGS+=			TOOLS_IGNORE.lzcat=
 .  elif !empty(_TOOLS_USE_PKGSRC.lzcat:M[yY][eE][sS])
-TOOLS_DEPENDS.lzcat?=		lzma-utils>=4.32.7:../../archivers/lzma-utils
+TOOLS_DEPENDS.lzcat?=		xz>=4.999.8beta:../../archivers/xz
 TOOLS_CREATE+=			lzcat
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lzcat=lzcat
 TOOLS_PATH.lzcat=		${TOOLS_PREFIX.lzcat}/bin/lzcat
@@ -850,6 +850,17 @@ TOOLS_CREATE+=			xargs
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xargs=findutils
 TOOLS_PATH.xargs=		${TOOLS_PREFIX.xargs}/bin/${GNU_PROGRAM_PREFIX}xargs
 TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.xzcat) && !empty(_USE_TOOLS:Mxzcat)
+.  if !empty(PKGPATH:Marchivers/xz)
+MAKEFLAGS+=			TOOLS_IGNORE.xzcat=
+.  elif !empty(_TOOLS_USE_PKGSRC.xzcat:M[yY][eE][sS])
+TOOLS_DEPENDS.xzcat?=		xz>=4.999.8beta:../../archivers/xz
+TOOLS_CREATE+=			xzcat
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xzcat=xzcat
+TOOLS_PATH.xzcat=		${TOOLS_PREFIX.xzcat}/bin/xzcat
 .  endif
 .endif
 
