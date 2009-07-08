@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2006/11/21 10:59:25 tron Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/08 14:28:29 joerg Exp $
 
---- makefile.orig	2004-09-22 06:33:40.000000000 +0900
-+++ makefile	2004-12-02 15:39:16.000000000 +0900
-@@ -15,8 +15,8 @@
+--- makefile.orig	2004-09-21 23:33:40.000000000 +0200
++++ makefile
+@@ -15,8 +15,8 @@ VERSION = 2.3pl1
  # for the rest of the world, it is probably better to put the binaries
  # in /usr/local/netperf or /opt/netperf
  #
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1 2006/11/21 10:59:25 tron Exp $
  
  # The compiler on your system might be somewhere else, and/or have
  # a different name.
-@@ -113,7 +113,8 @@
+@@ -113,7 +113,8 @@ CC = cc
  #                   netserver via the netperf command line with -T
  
  LOG_FILE=DEBUG_LOG_FILE="\"/tmp/netperf.debug\""
@@ -23,3 +23,28 @@ $NetBSD: patch-aa,v 1.1 2006/11/21 10:59:25 tron Exp $
  
  # Some platforms, and some options, require additional libraries.
  # you can add to the "LIBS =" line to accomplish this. if you find
+@@ -216,19 +217,12 @@ nettest_dns.o:  nettest_dns.c nettest_dn
+ netserver.o:	netserver.c nettest_bsd.h netlib.h makefile
+ 
+ install:	netperf netserver
+-		mkdir -p $(NETPERF_HOME)
++		mkdir -p ${DESTDIR}$(NETPERF_HOME)
+ 		chmod -w *.[ch]
+-		chmod +x $(NETPERF_SCRIPTS)
+-		@if [ ! -d $(NETPERF_HOME) ]; then \
+-			mkdir $(NETPERF_HOME) && chmod a+rx $(NETPERF_HOME); \
+-		fi
+-		cp netperf $(NETPERF_HOME)
+-		cp netserver $(NETPERF_HOME)
+-		cp $(NETPERF_SCRIPTS) $(NETPERF_HOME)
+-		chmod a+rx $(NETPERF_HOME)/netperf $(NETPERF_HOME)/netserver
+-		@for i in $(NETPERF_SCRIPTS); do \
+-			chmod a+rx $(NETPERF_HOME)/$$i; \
+-		done
++		${BSD_INSTALL_PROGRAM} netperf ${DESTDIR}$(NETPERF_HOME)
++		${BSD_INSTALL_PROGRAM} netserver ${DESTDIR}$(NETPERF_HOME)
++		${BSD_INSTALL_SCRIPT} $(NETPERF_SCRIPTS) ${DESTDIR}$(NETPERF_HOME)
++
+ clean:
+ 	rm -f *.o netperf netserver core
+ 
