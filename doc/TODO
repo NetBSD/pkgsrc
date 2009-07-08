@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8231 2009/07/08 17:58:41 hasso Exp $
+$NetBSD: TODO,v 1.8232 2009/07/08 19:37:44 tron Exp $
 
 Suggested new packages
 ======================
@@ -1253,7 +1253,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rudiments-0.30
 	o sabayon-2.25.0 [GNOME 2.26]
 	o sablecc-3.2
-	o samba-3.0.35
 	o samba-3.2.13
 	o samba-3.3.6
 	o sane-backends-1.0.20
