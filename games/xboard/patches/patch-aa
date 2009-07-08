@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2006/07/16 09:17:15 rillig Exp $
+$NetBSD: patch-aa,v 1.9 2009/07/08 17:11:23 joerg Exp $
 
 --- Makefile.in.orig	2003-11-28 22:12:57.000000000 +0100
-+++ Makefile.in	2006-07-16 10:56:17.000000000 +0200
++++ Makefile.in
 @@ -18,10 +18,7 @@ bindir = @bindir@
  mandir = @mandir@
  man6dir = $(mandir)/man6
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.8 2006/07/16 09:17:15 rillig Exp $
  
  CC = @CC@
  CFLAGS = @CFLAGS@ @CPPFLAGS@ -DINFODIR=\"$(infodir)\"
-@@ -63,15 +60,14 @@ default: xboard zic2xpm
+@@ -63,18 +60,17 @@ default: xboard zic2xpm
  all: default pseudosource info FAQ html dvi ps
  
  install: installdirs default
@@ -24,16 +24,21 @@ $NetBSD: patch-aa,v 1.8 2006/07/16 09:17:15 rillig Exp $
 -	$(INSTALL_PROGRAM) $(srcdir)/pxboard $(bindir)/pxboard
 -	$(INSTALL_DATA) $(srcdir)/xboard.man $(man6dir)/xboard$(man6ext)
 -	$(INSTALL_DATA) $(srcdir)/zic2xpm.man $(man6dir)/zic2xpm$(man6ext)
-+	$(BSD_INSTALL_PROGRAM) xboard $(bindir)/xboard
-+	$(BSD_INSTALL_PROGRAM) zic2xpm $(bindir)/zic2xpm
-+	$(BSD_INSTALL_SCRIPT) cmail $(bindir)/cmail
-+	$(BSD_INSTALL_SCRIPT) $(srcdir)/pxboard $(bindir)/pxboard
-+	$(BSD_INSTALL_MAN) $(srcdir)/xboard.man $(man6dir)/xboard$(man6ext)
-+	$(BSD_INSTALL_MAN) $(srcdir)/zic2xpm.man $(man6dir)/zic2xpm$(man6ext)
- 	$(INSTALL_DATA) xboard.info $(infodir)/xboard.info
+-	$(INSTALL_DATA) xboard.info $(infodir)/xboard.info
 -	-PATH=$$PATH:/sbin:/usr/sbin install-info \
 -		$(infodir)/xboard.info $(infodir)/dir
-+	$(INSTALL_INFO) $(infodir)/xboard.info $(infodir)/dir
++	$(BSD_INSTALL_PROGRAM) xboard ${DESTDIR}$(bindir)/xboard
++	$(BSD_INSTALL_PROGRAM) zic2xpm ${DESTDIR}$(bindir)/zic2xpm
++	$(BSD_INSTALL_SCRIPT) cmail ${DESTDIR}$(bindir)/cmail
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/pxboard ${DESTDIR}$(bindir)/pxboard
++	$(BSD_INSTALL_MAN) $(srcdir)/xboard.man ${DESTDIR}$(man6dir)/xboard$(man6ext)
++	$(BSD_INSTALL_MAN) $(srcdir)/zic2xpm.man ${DESTDIR}$(man6dir)/zic2xpm$(man6ext)
++	$(INSTALL_DATA) xboard.info ${DESTDIR}$(infodir)/xboard.info
++	$(INSTALL_INFO) ${DESTDIR}$(infodir)/xboard.info ${DESTDIR}$(infodir)/dir
  
  installdirs: mkinstalldirs
- 	$(srcdir)/mkinstalldirs $(bindir) $(mandir) $(man6dir) $(infodir)
+-	$(srcdir)/mkinstalldirs $(bindir) $(mandir) $(man6dir) $(infodir)
++	$(srcdir)/mkinstalldirs ${DESTDIR}$(bindir) ${DESTDIR}$(mandir) ${DESTDIR}$(man6dir) ${DESTDIR}$(infodir)
+ 
+ uninstall:
+ 	rm -f $(bindir)/xboard $(bindir)/cmail $(bindir)/pxboard

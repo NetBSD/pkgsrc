@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2005/10/23 22:57:55 rillig Exp $
+$NetBSD: patch-aa,v 1.10 2009/07/08 17:07:41 joerg Exp $
 
---- Imakefile.orig	1997-01-23 10:38:35.000000000 -0600
+--- Imakefile.orig	1997-01-23 17:38:35.000000000 +0100
 +++ Imakefile
 @@ -1,4 +1,4 @@
 -XBILL_DIR = /var/lib/games/xbill/
@@ -45,9 +45,11 @@ $NetBSD: patch-aa,v 1.9 2005/10/23 22:57:55 rillig Exp $
  ComplexProgramTarget($(TARGET))
  
 -InstallProgramWithFlags(scores, $(XBILL_DIR), -m 777)
+-InstallMultiple ($(XPMS), $(XBILL_DIR)pixmaps)
+-InstallMultiple ($(XBMS), $(XBILL_DIR)bitmaps)
 +install::
-+	mkdir -p $(XBILL_DIR)
-+	${INSTALL} -c -s -m ${GAMEMODE} -o ${GAMEOWN} -g ${GAMEGRP} xbill $(PREFIX)/bin
++	mkdir -p ${DESTDIR}$(XBILL_DIR)
++	${INSTALL} -c -s -m ${GAMEMODE} -o ${GAMEOWN} -g ${GAMEGRP} xbill ${DESTDIR}$(PREFIX)/bin
 +
- InstallMultiple ($(XPMS), $(XBILL_DIR)pixmaps)
- InstallMultiple ($(XBMS), $(XBILL_DIR)bitmaps)
++InstallMultiple ($(XPMS),$(XBILL_DIR)pixmaps)
++InstallMultiple ($(XBMS),$(XBILL_DIR)bitmaps)
