@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.66 2009/06/19 18:19:15 hasso Exp $
+$NetBSD: distinfo,v 1.67 2009/07/08 20:00:58 hasso Exp $
 
-SHA1 (Mesa-7.4.2/MesaDemos-7.4.2.tar.bz2) = cbba586829c76a5e7a54a906567b4b2174d6e1aa
-RMD160 (Mesa-7.4.2/MesaDemos-7.4.2.tar.bz2) = c6434d325897540618130e97891f391721b543b5
-Size (Mesa-7.4.2/MesaDemos-7.4.2.tar.bz2) = 1367293 bytes
-SHA1 (Mesa-7.4.2/MesaGLUT-7.4.2.tar.bz2) = 85f357345d71dfe60b785f0cbb03d1e070841c2d
-RMD160 (Mesa-7.4.2/MesaGLUT-7.4.2.tar.bz2) = caa69b7f2aa7136377cda2f690699415396c64ab
-Size (Mesa-7.4.2/MesaGLUT-7.4.2.tar.bz2) = 328646 bytes
-SHA1 (Mesa-7.4.2/MesaLib-7.4.2.tar.bz2) = fe70945ccf2c08d18ae4e83000018f0400352065
-RMD160 (Mesa-7.4.2/MesaLib-7.4.2.tar.bz2) = e70b8fd203325e676d90485632bf266e39d46a7e
-Size (Mesa-7.4.2/MesaLib-7.4.2.tar.bz2) = 3371577 bytes
+SHA1 (Mesa-7.4.4/MesaDemos-7.4.4.tar.bz2) = 190b51dd1e456f12c70cd428ec47ca8de0ed72fe
+RMD160 (Mesa-7.4.4/MesaDemos-7.4.4.tar.bz2) = 492850ff48aa54d35f1acdd09ac90e61a9d93bc1
+Size (Mesa-7.4.4/MesaDemos-7.4.4.tar.bz2) = 1367659 bytes
+SHA1 (Mesa-7.4.4/MesaGLUT-7.4.4.tar.bz2) = 41635a1c5b3bfe4bff4f9a086fb0b17fd441c431
+RMD160 (Mesa-7.4.4/MesaGLUT-7.4.4.tar.bz2) = 33a9e1a7b014d284ea4ec785c1912baccc5b2176
+Size (Mesa-7.4.4/MesaGLUT-7.4.4.tar.bz2) = 328900 bytes
+SHA1 (Mesa-7.4.4/MesaLib-7.4.4.tar.bz2) = 1cdcef24900489bc0a879013b2138c0d9aedffe3
+RMD160 (Mesa-7.4.4/MesaLib-7.4.4.tar.bz2) = 9c9a5e8b7f8d2fd175cc8542e2aecf48edf8c084
+Size (Mesa-7.4.4/MesaLib-7.4.4.tar.bz2) = 3375615 bytes
 SHA1 (patch-aa) = 9afc2758ebbef3737f8c858f74f0c93d86bb0861
 SHA1 (patch-ab) = 27b44d856602d590d2596f41cd17cdaf18bdc96e
 SHA1 (patch-ac) = ed3ec49ea2aacf231bbcb38093f3dc01a0cb2468
@@ -19,6 +19,8 @@ SHA1 (patch-ag) = da4de00aaebf226489ca3f5c25470fe3ed41e3b7
 SHA1 (patch-ah) = 2ecaee79c6b139272ef247d97d2a9f5834550a9f
 SHA1 (patch-ai) = 620c80ffbca1249469138f0af28eec575c546b87
 SHA1 (patch-aj) = 3749b279b500b1a93e45985ae956e8a70d854d9c
+SHA1 (patch-ak) = d991d27d0ef5f3a4d98dbddfd973a3ff752745d4
+SHA1 (patch-al) = 0970dfcc87f464df6ab979a272aeac3d7f869388
 SHA1 (patch-am) = 744f13b6a2fc79746bcacecf11461e78de7bf1ef
 SHA1 (patch-aq) = 0e6099b0d23f5931b5d6ee80debc2231f9a58de5
 SHA1 (patch-at) = a6ec9a663b8d1634ae20216fc3e6a0b52220e905
@@ -29,8 +31,6 @@ SHA1 (patch-ax) = 9a1c488526ba1a7a0cdd0f34c85861edcd5976e3
 SHA1 (patch-ay) = 8a5eb2d874026032f9b9c15e06abb40863a21a8a
 SHA1 (patch-ba) = 44e258235ac949713c4fcead25cb7ab7498cbb7f
 SHA1 (patch-bb) = 4fd8a770bd0275c3467447f77f51e957996c93ac
-SHA1 (patch-bc) = 6b8df3762d666c2e7720183b6d292053bda86f5a
-SHA1 (patch-bd) = 61cb50ef49e64ecc0f87750d60244f1ff7b44bd4
-SHA1 (patch-be) = 5407ae34110aa37b8d05801723f2b4739fd95021
+SHA1 (patch-be) = 28caa14529347138ff1a86fa64964fe253989cb5
 SHA1 (patch-cb) = 83789d71de41aed2ba81a8239fb035a4cd295477
 SHA1 (patch-cc) = 737d8b474b1c296f3ceb4de515dd385aae072394

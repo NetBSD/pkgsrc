@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2009/06/11 07:23:24 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2009/07/08 20:00:58 hasso Exp $
 
 PKGNAME=	glut-${MESA_PKGVERSION}
-PKGREVISION=	1
 COMMENT=	GLUT Graphics library similar to SGI's OpenGL
 
 CONFLICTS+=	Mesa-glx-[0-9]*
