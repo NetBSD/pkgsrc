@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/09 22:56:21 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/08 14:04:06 joerg Exp $
 #
 
 DISTNAME=	tunapie-2.1.6
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tunapie/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tunapie.sourceforge.net/
 COMMENT=	Directory browser for Internet radio and TV streams
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -21,14 +23,14 @@ INSTALLATION_DIRS=	bin share/tunapie ${PKGMANDIR}/man1
 
 do-install:
 	${PYTHONBIN} ${WRKSRC}/src/compile
-	${INSTALL_SCRIPT} ${WRKSRC}/src/*.py* ${PREFIX}/share/tunapie/
-	${INSTALL_DATA} ${WRKSRC}/src/*.xpm ${PREFIX}/share/tunapie/
-	${INSTALL_DATA} ${WRKSRC}/src/*.png ${PREFIX}/share/tunapie/
-	${INSTALL_MAN} ${WRKSRC}/tunapie.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/src/*.py* ${DESTDIR}${PREFIX}/share/tunapie/
+	${INSTALL_DATA} ${WRKSRC}/src/*.xpm ${DESTDIR}${PREFIX}/share/tunapie/
+	${INSTALL_DATA} ${WRKSRC}/src/*.png ${DESTDIR}${PREFIX}/share/tunapie/
+	${INSTALL_MAN} ${WRKSRC}/tunapie.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/tunapie.sh
 	${ECHO} "${PYTHONBIN} ${PREFIX}/share/tunapie/Tunapie.py" >> \
 		${WRKSRC}/tunapie.sh
-	${INSTALL_SCRIPT} ${WRKSRC}/tunapie.sh ${PREFIX}/bin/tunapie
+	${INSTALL_SCRIPT} ${WRKSRC}/tunapie.sh ${DESTDIR}${PREFIX}/bin/tunapie
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
