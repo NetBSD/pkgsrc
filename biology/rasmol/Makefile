@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/01/11 11:38:50 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2009/07/08 15:26:26 joerg Exp $
 
 DISTNAME=	RasMol_2.7.3
 PKGNAME=	rasmol-2.7.3
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.bernstein-plus-sons.com/software/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bernstein-plus-sons.com/software/rasmol/
 COMMENT=	Molecular Graphics Visualisation Tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_IMAKE=	YES
@@ -38,20 +40,20 @@ pre-configure:
 		rasmol.h.new && ${MV} rasmol.h.new rasmol.h
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/NOTICE ${PREFIX}/share/doc/rasmol
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/NOTICE ${DESTDIR}${PREFIX}/share/doc/rasmol
 	for doc in manualA4.pdf.gz manualA4.ps.gz manualA4.rtf.gz	\
 			manualUS.pdf.gz manualUS.ps.gz manualUS.rtf.gz	\
 			refcardA4.pdf.gz refcardA4.ps.gz		\
 			refcardA4.rtf.gz refcardUS.pdf.gz		\
 			refcardUS.ps.gz refcardUS.rtf.gz; do		\
 		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/$$doc		\
-			${PREFIX}/share/doc/rasmol;			\
+			${DESTDIR}${PREFIX}/share/doc/rasmol;		\
 	done
 	for data in 1crn.pdb 1gpd.pdb.gz 1ldb.pdb.gz 1ldm.pdb.gz	\
 			3cro.pdb 4hir.ent.gz 4ins.CIF 7lyz.pdb		\
 			IUCR9800028.cif asprin.alc pdb2mcg.ent; do	\
 		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/data/$$data	\
-			${PREFIX}/share/examples/rasmol;		\
+			${DESTDIR}${PREFIX}/share/examples/rasmol;	\
 	done
 
 .include "../../x11/libXext/buildlink3.mk"
