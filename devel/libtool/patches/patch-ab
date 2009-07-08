@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.62 2009/03/23 23:03:59 joerg Exp $
+$NetBSD: patch-ab,v 1.63 2009/07/08 21:01:43 markd Exp $
 
---- configure.orig	2008-02-01 17:38:42.000000000 +0100
+--- configure.orig	2008-02-02 05:38:42.000000000 +1300
 +++ configure
 @@ -630,11 +630,11 @@ else
  
@@ -119,7 +119,7 @@ $NetBSD: patch-ab,v 1.62 2009/03/23 23:03:59 joerg Exp $
  
    case $host_os in
    cygwin* | mingw* | pw32*)
-@@ -8678,6 +8692,17 @@ EOF
+@@ -8678,8 +8692,19 @@ EOF
        fi
        ;;
  
@@ -135,8 +135,11 @@ $NetBSD: patch-ab,v 1.62 2009/03/23 23:03:59 joerg Exp $
 +      ;;
 +
      netbsd*)
-       if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | grep __G95__ >/dev/null; then
  	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+ 	wlarc=
+       else
 @@ -8743,6 +8768,11 @@ _LT_EOF
        hardcode_shlibpath_var=no
        ;;
@@ -637,7 +640,7 @@ $NetBSD: patch-ab,v 1.62 2009/03/23 23:03:59 joerg Exp $
  
    case $host_os in
    cygwin* | mingw* | pw32*)
-@@ -15338,6 +15499,17 @@ EOF
+@@ -15338,8 +15499,19 @@ EOF
        fi
        ;;
  
@@ -653,8 +656,11 @@ $NetBSD: patch-ab,v 1.62 2009/03/23 23:03:59 joerg Exp $
 +      ;;
 +
      netbsd*)
-       if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | grep __G95__ >/dev/null; then
  	archive_cmds_F77='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+ 	wlarc=
+       else
 @@ -15403,6 +15575,11 @@ _LT_EOF
        hardcode_shlibpath_var_F77=no
        ;;
@@ -885,7 +891,7 @@ $NetBSD: patch-ab,v 1.62 2009/03/23 23:03:59 joerg Exp $
  
    case $host_os in
    cygwin* | mingw* | pw32*)
-@@ -17943,6 +18177,17 @@ EOF
+@@ -17943,8 +18177,19 @@ EOF
        fi
        ;;
  
@@ -901,8 +907,11 @@ $NetBSD: patch-ab,v 1.62 2009/03/23 23:03:59 joerg Exp $
 +      ;;
 +
      netbsd*)
-       if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | grep __G95__ >/dev/null; then
  	archive_cmds_GCJ='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+ 	wlarc=
+       else
 @@ -18008,6 +18253,11 @@ _LT_EOF
        hardcode_shlibpath_var_GCJ=no
        ;;
