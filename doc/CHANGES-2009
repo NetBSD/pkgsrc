@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2552 2009/07/08 12:54:57 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2553 2009/07/08 13:33:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3376,3 +3376,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/p5-Template-Plugin-YAML version 1.23 [sno 2009-07-08]
 	Added textproc/p5-XML-LibXML-Simple version 0.13 [sno 2009-07-08]
 	Added time/p5-Template-Plugin-DateTime version 0.06.001 [sno 2009-07-08]
+	Updated editors/emacs-snapshot to 23.0.95.20090703 [minskim 2009-07-08]
