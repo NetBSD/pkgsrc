@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.68 2009/06/23 20:36:27 drochner Exp $
+$NetBSD: distinfo,v 1.69 2009/07/08 19:37:27 tron Exp $
 
-SHA1 (samba-3.0.34.tar.gz) = 18104d1bf509cd3fd3107c09fa6205666e04ac16
-RMD160 (samba-3.0.34.tar.gz) = d79cd544b5ab2b4a7130b8c52c19edcfc89083ea
-Size (samba-3.0.34.tar.gz) = 24835363 bytes
+SHA1 (samba-3.0.35.tar.gz) = c75e20890f893decfd4285480041b7e39d43ed3d
+RMD160 (samba-3.0.35.tar.gz) = 81c708aa6ab048f9fa24999650992a92a95f7da3
+Size (samba-3.0.35.tar.gz) = 24839204 bytes
 SHA1 (patch-aa) = b323c778c0c4f01cd102d019a996914d0d7eb106
 SHA1 (patch-ac) = 47529dfe904768e6a3076131978c89fe2d1e3619
 SHA1 (patch-ae) = 28fc3d1ad158f8025f1f9ba8e170d93c31fa45ba
 SHA1 (patch-af) = 9f14842b7d0b5e66bf1d52bcacefe5e1aa392b7c
 SHA1 (patch-ag) = c73e717e053b6618b2a334602fefabe5a5f98a98
 SHA1 (patch-ak) = 0c69720954282022c7982d36eaee94a03db7b689
-SHA1 (patch-at) = 708177043510be725b81ed66ac2f02518a560802
+SHA1 (patch-at) = d8f7ce814a2ce460d419ce6abf047505f170f3f2
 SHA1 (patch-au) = a3990e7da879e35bc184704547c08311bd8fa05e
 SHA1 (patch-av) = c29ba19e96c24ef95a9a043f8678d77c00d73506
 SHA1 (patch-aw) = 5b6c1bf65d23564eaabf1bafda41a29d1f687538
@@ -29,7 +29,7 @@ SHA1 (patch-bp) = 08f2387324aaec8161f3114de84d81c815dd8179
 SHA1 (patch-bq) = dc25eb43336d4ad7ecef1b4ea8c5dcd72cc91a7b
 SHA1 (patch-br) = fc0d4c1f638a534f86e59ed8ebaddbf1978fa64f
 SHA1 (patch-bs) = 1c08caf388e337497464097a11c909ddd5f9a3ff
-SHA1 (patch-bu) = 72c0c5bb830d9f0d231502e622215ba59255914f
+SHA1 (patch-bu) = b5f5dd7b2f4d8d246acc32a71556e0ff2f005b68
 SHA1 (patch-bv) = 2d80f4e24edab32bf4f620f651e70b9e63d28cc5
 SHA1 (patch-bw) = 11f9b3713382a23075ed5980d7b8a2dbd11ecf54
 SHA1 (patch-ca) = 0c2c4c1bdb3348de3e8719cc468a6e0c28a36b73
@@ -38,4 +38,3 @@ SHA1 (patch-cf) = 8b50f657f8f4fa71936ec4766c2517ca5d128ff7
 SHA1 (patch-cg) = 2755a019759826a39c3e201f6a0d1646e6dd2fba
 SHA1 (patch-ch) = 3c4c404519154e294cee134ddb4d2b9c7d8e02a2
 SHA1 (patch-da) = 2dddd250b2207d658b02ff43b46199ce4305b7f8
-SHA1 (patch-db) = 2c8d11db6761ef0a9074bd16971eedf1820c8168
