@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2006/06/24 08:37:40 rillig Exp $
+$NetBSD: patch-aa,v 1.11 2009/07/08 14:03:26 joerg Exp $
 
 --- Makefile.orig	1997-05-21 01:57:17.000000000 +0200
 +++ Makefile	2006-06-24 10:36:24.000000000 +0200
@@ -41,8 +41,8 @@ $NetBSD: patch-aa,v 1.10 2006/06/24 08:37:40 rillig Exp $
 -	gzip -f -9 $(MANDIR)/man$(SECTION)/tosha.1 \
 -		$(MANDIR)/man$(SECTION)/pcmplay.1 \
 -		$(MANDIR)/man$(SECTION)/pcmfade.1
-+	${BSD_INSTALL_PROGRAM} tosha pcmplay pcmfade $(BINDIR)
-+	${BSD_INSTALL_MAN} tosha.1 pcmplay.1 pcmfade.1 $(MANDIR)/man$(SECTION)
++	${BSD_INSTALL_PROGRAM} tosha pcmplay pcmfade ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_MAN} tosha.1 pcmplay.1 pcmfade.1 ${DESTDIR}$(MANDIR)/man$(SECTION)
  
  clean:
  	rm -f *.o *~ *core tosha pcmplay pcmfade
