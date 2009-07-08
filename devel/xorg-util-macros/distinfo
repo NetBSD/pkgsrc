@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/05/18 18:16:14 hasso Exp $
+$NetBSD: distinfo,v 1.4 2009/07/08 20:22:54 hasso Exp $
 
-SHA1 (util-macros-1.2.1.tar.bz2) = 820737f9aaac814f0e0898ab8cca3be71a689afd
-RMD160 (util-macros-1.2.1.tar.bz2) = 89df6a48adae2372269a1c2c1bd6c791a1690c04
-Size (util-macros-1.2.1.tar.bz2) = 48602 bytes
+SHA1 (util-macros-1.2.2.tar.bz2) = ecec7d56466f8701603bba1f7bb4781b380f7ddc
+RMD160 (util-macros-1.2.2.tar.bz2) = 5e9ea54cbd73aa5f5a04ab2a909a2ccc181ae65f
+Size (util-macros-1.2.2.tar.bz2) = 49552 bytes
