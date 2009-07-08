@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8228 2009/07/08 07:50:43 sno Exp $
+$NetBSD: TODO,v 1.8229 2009/07/08 08:22:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.4
-	o bonnie++-1.03e
+	o bonnie++-1.96
 	o boolean-6.99
 	o bos-2.5
 	o boson-0.13
@@ -469,6 +469,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdparanoia-3.0.10.2
+	o cdrtools-2.01.01alpha61
 	o cfitsio-3181
 	o cflow-1.2
 	o cgdb-0.6.4
@@ -481,7 +482,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.98
-	o claws-mail-3.7.1
+	o claws-mail-3.7.2
 	o climm-0.6.4
 	o clive-2.2.1
 	o clutter-0.9.6
@@ -494,7 +495,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o courier-0.62.0
 	o courier-authlib-0.62.2
 	o courier-imap-4.5.0
-	o covered-0.7.4
+	o covered-20090705
 	o cpio-2.9
 	o cpmtools-2.6
 	o cppunit-1.12.0
@@ -502,6 +503,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cryptopp-5.6.0
 	o cssc-1.2.0
 	o cuetools-1.3.1
+	o cups-1.3.11
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.16
 	o cygwin_lib-1.5.24.2
@@ -524,13 +526,16 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dhid-5.3
 	o dia-0.97
 	o diffstat-1.47
-	o dillo-2.1
+	o diffuse-0.3.4
+	o digikam-0.9.6
+	o dillo-2.1.1 [pkg/41670]
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-1.0.2
 	o dircproxy-devel-1.2.0.2
 	o dnstop-20070307
 	o dnstracer-1.9
+	o dovecot-1.2.0
 	o doxygen-1.5.9
 	o drivel-2.0.4
 	o dropbear-0.52
@@ -551,7 +556,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
 	o eigen2-2.0.2
-	o ekiga-3.2.4
+	o ekiga-3.2.5
 	o electric-8.09
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -570,7 +575,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epiphany-extensions-2.26.1
 	o epsg-6.14
 	o epstool-3.08
-	o eric3-4.3.4 [now called eric4]
+	o eric3-4.3.5 [now called eric4]
 	o erlang-13b
 	o erubis-2.6.2
 	o esh-0.8.5
@@ -640,7 +645,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdsreader-0.3.2
 	o geany-0.17
 	o geda-1.5.2.20090328
+	o gedit-2.26.3
 	o gedit-plugins-2.26.1 [GNOME 2.26]
+	o geeqie-1.0beta2
 	o gentoo-0.15.5
 	o gettext-0.17
 	o gettext-m4-0.17
@@ -677,7 +684,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-menus-2.26.2
 	o gnome-packagekit-0.4.5
 	o gnome-panel-2.26.3
-	o gnome-power-manager-2.26.2 [GNOME 2.26, wants DeviceKit-power]
+	o gnome-power-manager-2.26.3 [GNOME 2.26, wants DeviceKit-power]
 	o gnome-session-2.26.2
 	o gnome-themes-2.26.3.1
 	o gnome-user-share-2.26.0 [GNOME 2.26]
@@ -726,6 +733,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
 	o gtranslator-1.9.5
+	o guile-1.8.7
 	o guile-gtk-2.0
 	o guile-www-2.24
 	o gutenprint-5.2.2
@@ -744,7 +752,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o heyu-2.6.0
-	o hiawatha-6.14
+	o hiawatha-6.15
 	o highlight-2.10
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hoe-1.8.3
@@ -809,7 +817,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdrill-6.5
 	o kid3-1.2
 	o kinput2-3.1
-	o kipi-plugins-0.3.0
+	o kipi-plugins-0.4.0
 	o kmess-1.5.1
 	o kmp-0.5
 	o kmymoney2-0.9
@@ -827,6 +835,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o leafpad-0.8.15
 	o less-429
 	o lft-2.5 [at http://pwhois.org/]
+	o libFS-1.0.2
 	o libXaw-1.0.6
 	o libXt-1.0.6
 	o libarchive-2.7.0
@@ -840,9 +849,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdarie-0.2.1 [break ABI with 0.1.x]
 	o libdiscid-0.2.1
 	o libdockapp-0.6.1
-	o libelf-0.8.11
+	o libelf-0.8.12
 	o libevent-1.4.11
-	o libextractor-0.5.22
+	o libextractor-0.5.23
 	o libflash-0.4.13
 	o libgda-4.0.2 [GNOME 2.26]
 	o libggi-2.2.2
@@ -855,7 +864,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgsf-1.14.15
 	o libgweather-2.26.2.1
 	o libhydrogen-0.9.2
-	o libiconv-1.13
+	o libiconv-1.13.1
 	o libixp-0.5
 	o libjit-1.0.2
 	o libltdl-2.2.6a
@@ -867,7 +876,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libntlm-1.1
 	o libogg-1.1.4
 	o libole2-2.2.8
-	o librep-0.17.4
+	o librep-0.90.0
 	o libshout-2.2.2 [pkg/41468]
 	o libsoup24-2.26.3
 	o libssh-0.3
@@ -896,6 +905,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lsof-4.81
 	o ltris-1.0.12
 	o lucy-1.20
+	o lynx-2.8.7rel1
 	o mDNSResponder-176.3
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
@@ -940,7 +950,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mftrace-1.2.15
 	o mgetty+sendfax-1.1.35
 	o mimedefang-2.67
-	o mined-2000.15.2
+	o mined-2000.15.4
 	o minivmac-3.0.4
 	o miredo-1.1.6
 	o mirmon-1.37
@@ -949,7 +959,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
-	o modular-xorg-server-1.6.1.902
+	o modular-xorg-server-1.6.2
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
 	o mousetweaks-2.26.3
@@ -1021,7 +1031,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ogre-0.12.3
 	o olvwm-4.5
 	o oo2c-2.1.7
-	o opal-3.6.2
+	o opal-3.6.4
 	o openafs-1.4.10 [pkg/41262]
 	o opencobol-1.0
 	o openh323-1.19.1
@@ -1078,7 +1088,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o php5-5.2.10
 	o php5-5.3.0
 	o phpmyadmin-3.2.0.1
 	o phylip-3.68
@@ -1114,7 +1123,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o proxsmtp-1.6
 	o psmisc-21.9
 	o pspp-0.6.1
-	o ptlib-2.6.2
+	o ptlib-2.6.4
 	o puf-0.93.3
 	o pulseaudio-0.9.15
 	o puppet-24.8
@@ -1183,9 +1192,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o redland-1.0.9
 	o regionset-0.2
 	o remind-3.1.7
-	o rep-gtk-0.18.6
+	o rep-gtk-0.18.6r2
 	o resize_image-0.7
-	o rhythmbox-0.12.2
+	o rhythmbox-0.12.3
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
 	o robodoc-4.99.6
@@ -1252,7 +1261,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o samba-3.3.6
 	o sane-backends-1.0.20
 	o sarg-2.2.5
-	o sawfish-1.3.5.3
+	o sawfish-1.5.0
 	o sbcl-1.0.29
 	o scamper-20070201
 	o scew-0.4.0
@@ -1309,7 +1318,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o star-1.5
 	o statist-1.3.0
 	o stella-2.8.1 [dholland]
-	o stella-2.8.3
+	o stella-2.8.4
 	o stlport-4.6.2
 	o strace-4.5.16
 	o stratagus-2.2.2
@@ -1527,7 +1536,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.3.7
+	o zile-2.3.8
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zope-3.4.0
