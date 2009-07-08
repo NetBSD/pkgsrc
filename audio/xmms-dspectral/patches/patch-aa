@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/02/15 00:44:42 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/08 15:05:52 joerg Exp $
 
 --- Makefile.orig	Sat Jan 20 06:19:26 2001
 +++ Makefile
@@ -51,6 +51,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/02/15 00:44:42 hubertf Exp $
 -	install libdspectral.so $(INSTALL-DIR) 
 -	mkdir -p $(XMMS_DATADIR)/$(THEME_SUBDIR)
 -	install bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
-+	${LIBTOOL} ${INSTALL} libdspectral.la $(INSTALL-DIR) 
-+	${BSD_INSTALL_DATA_DIR} $(XMMS_DATADIR)/$(THEME_SUBDIR)
-+	${BSD_INSTALL_DATA} bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
++	${LIBTOOL} ${INSTALL} libdspectral.la ${DESTDIR}$(INSTALL-DIR) 
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(XMMS_DATADIR)/$(THEME_SUBDIR)
++	${BSD_INSTALL_DATA} bg_*.xpm ${DESTDIR}$(XMMS_DATADIR)/$(THEME_SUBDIR)
