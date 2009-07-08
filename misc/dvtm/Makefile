@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2009/02/17 10:08:15 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/08 06:28:22 tnn Exp $
 #
 
-DISTNAME=	dvtm-0.5.1
+DISTNAME=	dvtm-0.5.2
 CATEGORIES=	misc
 MASTER_SITES=	http://www.brain-dump.org/projects/dvtm/
 
 MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://www.brain-dump.org/projects/dvtm/
 COMMENT=	Dynamic virtual terminal manager
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
