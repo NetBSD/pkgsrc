@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/12/13 05:19:12 epg Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/08 05:41:30 hasso Exp $
 
 Force shared libraries, from
 http://cvs.fedora.redhat.com/viewvc/devel/PyQt4/PyQt-x11-gpl-4.4.4-QT_SHARED.patch?revision=1.1&view=markup&pathrev=HEAD
 
---- configure.py.orig	2008-11-08 03:55:49.000000000 -0800
-+++ configure.py
-@@ -1584,11 +1584,7 @@ int main(int, char **)
+ActiveQt seems to be under open source license starting from 4.5.2.
+
+--- configure.py.orig	2009-06-16 11:37:38 +0300
++++ configure.py	2009-06-26 10:10:30 +0300
+@@ -1675,11 +1675,7 @@ int main(int, char **)
      out << QT_VERSION << '\\n';
      out << QT_EDITION << '\\n';
  
@@ -17,3 +19,17 @@ http://cvs.fedora.redhat.com/viewvc/devel/PyQt4/PyQt-x11-gpl-4.4.4-QT_SHARED.pat
  
      // Determine which features should be disabled.
  
+@@ -1786,10 +1782,10 @@ int main(int, char **)
+ 
+     # Now convert the edition to a descriptive string.  The order of testing is
+     # important.
+-    if qt_edition & 0x200:
++    # if qt_edition & 0x200:
+         # It has ActiveQt.
+-        qt_edition = "Desktop"
+-    elif qt_edition & 0x008:
++	# qt_edition = "Desktop"
++    if qt_edition & 0x008:
+         # It has OpenGL.
+         qt_edition = "free"
+     elif qt_edition & 0x002:
