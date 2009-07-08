@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.4 2008/11/03 22:01:29 bjs Exp $
+$NetBSD: patch-aa,v 1.5 2009/07/08 06:00:47 hasso Exp $
 
---- Makefile.orig	2008-09-19 14:09:09.000000000 -0400
-+++ Makefile
+--- Makefile.orig	2009-02-01 18:49:22 +0200
++++ Makefile	2009-06-19 11:24:05 +0300
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
- # (c) 1998--2008 Martin Mares <mj@ucw.cz>
+ # (c) 1998--2009 Martin Mares <mj@ucw.cz>
  
 -OPT=-O2
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
-+CFLAGS+=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
++CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.0.2
- DATE=2008-09-19
-@@ -12,7 +11,7 @@ HOST=
- RELEASE=
+ VERSION=3.1.3
+ DATE=2009-07-04
+@@ -13,7 +12,7 @@ RELEASE=
+ CROSS_COMPILE=
  
  # Support for compressed pci.ids (yes/no, default: detect)
 -ZLIB=
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.4 2008/11/03 22:01:29 bjs Exp $
  
  # Support for resolving ID's by DNS (yes/no, default: detect)
  DNS=
-@@ -21,22 +20,22 @@ DNS=
+@@ -22,23 +21,23 @@ DNS=
  SHARED=no
  
  # ABI version suffix in the name of the shared library
@@ -46,13 +46,15 @@ $NetBSD: patch-aa,v 1.4 2008/11/03 22:01:29 bjs Exp $
 -INSTALL=install
 -DIRINSTALL=install -d
 -STRIP=-s
+-CC=$(CROSS_COMPILE)gcc
 +#INSTALL=install
-+#DIRINSTALL=$(INSTALL) -d
++#DIRINSTALL=install -d
 +#STRIP=-s
- AR=ar
- RANLIB=ranlib
++#CC=$(CROSS_COMPILE)gcc
+ AR=$(CROSS_COMPILE)ar
+ RANLIB=$(CROSS_COMPILE)ranlib
  
-@@ -90,23 +89,31 @@ distclean: clean
+@@ -100,23 +99,31 @@ distclean: clean
  
  install: all
  # -c is ignored on Linux, but required on FreeBSD
