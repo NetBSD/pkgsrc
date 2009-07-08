@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.774 2009/04/21 14:19:21 roy Exp $
+# $NetBSD: Makefile,v 1.775 2009/07/08 17:45:45 drochner Exp $
 #
 
 COMMENT=	Networking tools
@@ -66,6 +66,7 @@ SUBDIR+=	citrix_ica
 SUBDIR+=	clive
 SUBDIR+=	cmu-dhcpd
 SUBDIR+=	coda
+SUBDIR+=	coherence
 SUBDIR+=	connect
 SUBDIR+=	corkscrew
 SUBDIR+=	couriertcpd
@@ -533,6 +534,7 @@ SUBDIR+=	unison
 SUBDIR+=	unison-devel
 SUBDIR+=	unworkable
 SUBDIR+=	upclient
+SUBDIR+=	upnpinspector
 SUBDIR+=	urlgfe
 SUBDIR+=	userppp
 SUBDIR+=	uucp
