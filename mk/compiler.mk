@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.69 2009/05/30 18:16:26 joerg Exp $
+# $NetBSD: compiler.mk,v 1.70 2009/07/08 21:17:16 markd Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -102,7 +102,7 @@ _USE_PKGSRC_GCC=	yes
 .endif
 
 _COMPILERS=		ccc gcc icc ido mipspro mipspro-ucode sunpro xlc hp pcc
-_PSEUDO_COMPILERS=	ccache distcc f2c
+_PSEUDO_COMPILERS=	ccache distcc f2c g95
 
 .if defined(NOT_FOR_COMPILER) && !empty(NOT_FOR_COMPILER)
 .  for _compiler_ in ${_COMPILERS}
