@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/06/08 19:26:29 hasso Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/08 18:09:25 hasso Exp $
 
 DISTNAME=		xsd-3.2.0+dep
 EXTRACT_SUFX=		.tar.bz2
@@ -31,7 +31,7 @@ SUBST_SED.rpath=	-e 's|cxx_rpath[ ]*:=[ ]*n|cxx_rpath := y|g'
 
 do-build:
 	# XXX: rapth needs a better hack. TODO: add optimization
-	cd ${WRKSRC} && LDFLAGS="-rpath ${PREFIX}/lib" ./build.sh
+	cd ${WRKSRC} && LDFLAGS="-Wl,-rpath ${PREFIX}/lib" ./build.sh
 
 do-install:
 	cd ${WRKSRC} && MAKEFLAGS="install_prefix=${DESTDIR}${PREFIX} \
