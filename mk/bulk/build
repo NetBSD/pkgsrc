@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.105 2008/06/13 21:52:16 sketch Exp $
+# $NetBSD: build,v 1.105.14.1 2009/07/09 20:10:39 tron Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -260,6 +260,7 @@ load_vars () {
 		BULK_DBFILE DEPENDSFILE INDEXFILE ORDERFILE STARTFILE
 		SUPPORTSFILE BULK_BUILD_ID_FILE BUILDLOG BROKENFILE
 		BROKENWRKLOG
+		PREFIX
 		AWK GREP MAIL_CMD MKDIR PAX PERL5 SED
 		PKG_DELETE PKG_INFO PKGBASE"
 
@@ -333,10 +334,20 @@ do_real_bulk_build () {
 				$makeargs </dev/null | post_filter_cmd
 			) || true
 			echo "$pkgdir" >> "${main_buildlog}"
+			check_pkg_dirs
 		fi
 	done
 
 	echo "build> Build finished."
+}
+
+check_pkg_dirs () {
+	for d in bin etc include info lib libexec man sbin share; do
+		if [ -f $PREFIX/$d ]; then
+			echo "Removing file, should be dir: $PREFIX/$d" >&2
+			rm -f $PREFIX/$d
+		fi
+	done
 }
 
 # clean up installed packages left over
