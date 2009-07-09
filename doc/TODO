@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8235 2009/07/09 05:04:40 snj Exp $
+$NetBSD: TODO,v 1.8236 2009/07/09 08:11:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.7.1
 	o aegis-4.24
 	o aewm++-1.0.27
-	o afterstep-2.2.8
+	o afterstep-2.2.9
 	o akonadi-1.1.95
 	o album-4.05
 	o alee-ttf-11.2
@@ -1272,6 +1272,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sendfile-20010424
 	o ser-0.9.6
 	o sessreg-1.0.4
+	o setxkbmap-1.1.0
 	o sharity-3.7
 	o sharity-light-1.3
 	o shc-3.8
@@ -1431,6 +1432,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4
 	o x11perf-1.5
+	o x11vnc-0.9.8
 	o x264-devel-20090620
 	o xanalyser-1.30
 	o xapian-1.0.13
@@ -1478,6 +1480,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xinput-1.4.2
 	o xisp-2.7p4
 	o xjman-0.7
+	o xkbcomp-1.1.0
 	o xkbset-0.5
 	o xli-2006.11.10
 	o xlog-2.0.2
@@ -1528,7 +1531,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.3.8
+	o zile-2.3.9
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zope-3.4.0
