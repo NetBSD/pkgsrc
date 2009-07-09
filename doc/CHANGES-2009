@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2575 2009/07/09 22:17:02 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.2576 2009/07/09 22:54:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3413,3 +3413,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/tex-cm-super version 0.3.4 [minskim 2009-07-09]
 	Added fonts/tex-cm-super-doc version 0.3.4 [minskim 2009-07-09]
 	Updated www/ikiwiki to 3.1415 [schmonz 2009-07-09]
+	Added print/tex-enumitem version 2.1 [minskim 2009-07-09]
+	Added print/tex-enumitem-doc version 2.1 [minskim 2009-07-09]
