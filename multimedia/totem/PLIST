@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/06/14 18:08:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/07/09 18:20:19 drochner Exp $
 bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
@@ -93,6 +93,15 @@ share/gnome/help/totem/cs/figures/totem_start_window.png
 share/gnome/help/totem/cs/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/cs/figures/totem_volume_mute_button.png
 share/gnome/help/totem/cs/totem.xml
+share/gnome/help/totem/da/figures/totem_next_button.png
+share/gnome/help/totem/da/figures/totem_pause_button.png
+share/gnome/help/totem/da/figures/totem_play_button.png
+share/gnome/help/totem/da/figures/totem_previous_button.png
+share/gnome/help/totem/da/figures/totem_show_playlist_button.png
+share/gnome/help/totem/da/figures/totem_start_window.png
+share/gnome/help/totem/da/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/da/figures/totem_volume_mute_button.png
+share/gnome/help/totem/da/totem.xml
 share/gnome/help/totem/de/figures/totem_next_button.png
 share/gnome/help/totem/de/figures/totem_pause_button.png
 share/gnome/help/totem/de/figures/totem_play_button.png
@@ -246,6 +255,7 @@ share/gnome/help/totem/zh_TW/figures/totem_start_window.png
 share/gnome/help/totem/zh_TW/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/zh_TW/figures/totem_volume_mute_button.png
 share/gnome/help/totem/zh_TW/totem.xml
+share/gtk-doc/html/totem/BaconVideoWidget.html
 share/gtk-doc/html/totem/TotemCellRendererVideo.html
 share/gtk-doc/html/totem/TotemObject.html
 share/gtk-doc/html/totem/TotemPlugin.html
@@ -363,6 +373,7 @@ share/omf/totem/totem-C.omf
 share/omf/totem/totem-bg.omf
 share/omf/totem/totem-ca.omf
 share/omf/totem/totem-cs.omf
+share/omf/totem/totem-da.omf
 share/omf/totem/totem-de.omf
 share/omf/totem/totem-el.omf
 share/omf/totem/totem-en_GB.omf
