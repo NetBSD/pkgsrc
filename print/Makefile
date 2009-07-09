@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2009/07/09 22:54:13 minskim Exp $
+# $NetBSD: Makefile,v 1.266 2009/07/09 22:57:48 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -174,6 +174,8 @@ SUBDIR+=	tex-fancyhdr
 SUBDIR+=	tex-fancyhdr-doc
 SUBDIR+=	tex-fixme
 SUBDIR+=	tex-foiltex
+SUBDIR+=	tex-footmisc
+SUBDIR+=	tex-footmisc-doc
 SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-graphics
 SUBDIR+=	tex-graphics-doc
