@@ -1,0 +1,7 @@
+A collection of verbatim facilities that provide line-numbered
+verbatim, verbatim that obey's TAB characters, verbatim input and
+verbatim output to file.  The package makes use of the LaTeX required
+verbatim package.  The package formed from a series of small pieces,
+and is somewhat unstructured.  The user who looks for thought-through
+verbatim facilities is advised to consider using the fancyvrb package
+in place of moreverb.
