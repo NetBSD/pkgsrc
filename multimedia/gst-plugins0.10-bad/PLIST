@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:08:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/07/09 18:15:23 drochner Exp $
 include/gstreamer-0.10/gst/interfaces/photography-enumtypes.h
 include/gstreamer-0.10/gst/interfaces/photography.h
 lib/gstreamer-0.10/libgstaacparse.la
+lib/gstreamer-0.10/libgstadpcmdec.la
 lib/gstreamer-0.10/libgstaiffparse.la
 lib/gstreamer-0.10/libgstamrparse.la
 lib/gstreamer-0.10/libgstapexsink.la
@@ -17,6 +18,8 @@ lib/gstreamer-0.10/libgstdvdspu.la
 lib/gstreamer-0.10/libgstfestival.la
 lib/gstreamer-0.10/libgstfreeze.la
 lib/gstreamer-0.10/libgsth264parse.la
+lib/gstreamer-0.10/libgsthdvparse.la
+lib/gstreamer-0.10/libgstid3tag.la
 lib/gstreamer-0.10/libgstlegacyresample.la
 lib/gstreamer-0.10/libgstliveadder.la
 lib/gstreamer-0.10/libgstmpeg4videoparse.la
@@ -37,6 +40,7 @@ lib/gstreamer-0.10/libgstrtpmux.la
 lib/gstreamer-0.10/libgstscaletempoplugin.la
 lib/gstreamer-0.10/libgstsdpelem.la
 lib/gstreamer-0.10/libgstselector.la
+lib/gstreamer-0.10/libgstshapewipe.la
 lib/gstreamer-0.10/libgstsiren.la
 lib/gstreamer-0.10/libgstspeed.la
 lib/gstreamer-0.10/libgststereo.la
@@ -61,6 +65,7 @@ share/locale/fr/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/hu/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/id/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/it/LC_MESSAGES/gst-plugins-bad-0.10.mo
+share/locale/ja/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/ky/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/lt/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/mt/LC_MESSAGES/gst-plugins-bad-0.10.mo
