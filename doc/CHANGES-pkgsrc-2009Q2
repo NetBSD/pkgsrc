@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.2 2009/07/09 09:32:55 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.3 2009/07/09 20:11:17 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -7,3 +7,5 @@ Create pkgsrc-2009Q2 branch [agc 2009-07-07 06:18 UTC]
 
 Pullup ticket #2803 - requested by he
 math/tasp-vsipl: build fix
+Pullup ticket #2804 - by he
+mk/bulk/build: robustness improvement
