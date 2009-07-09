@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/09 20:54:38 minskim Exp $
+share/texmf-dist/doc/fonts/cm-super/COPYING
+share/texmf-dist/doc/fonts/cm-super/ChangeLog
+share/texmf-dist/doc/fonts/cm-super/FAQ
+share/texmf-dist/doc/fonts/cm-super/INSTALL
+share/texmf-dist/doc/fonts/cm-super/README
+share/texmf-dist/doc/fonts/cm-super/TODO
+share/texmf-dist/doc/fonts/cm-super/cm-super-inf.tar.bz2
