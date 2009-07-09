@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/06/08 10:22:10 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/09 19:11:23 drochner Exp $
 
-DISTNAME=		liferea-1.6.0-rc4
-PKGNAME=		liferea-1.6.0rc4
+DISTNAME=		liferea-1.6.0-rc6
+PKGNAME=		liferea-1.6.0rc6
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 
@@ -28,7 +28,6 @@ GCONF_SCHEMAS=		liferea.schemas
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
