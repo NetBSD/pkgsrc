@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2009/06/14 18:05:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.26 2009/07/09 18:39:29 drochner Exp $
 bin/gcalctool
 bin/gnome-calculator
 man/man1/gcalctool.1
@@ -28,6 +28,13 @@ share/gnome/help/gcalctool/ca/figures/gcalctool_menu_symbol.png
 share/gnome/help/gcalctool/ca/figures/gcalctool_programming_window.png
 share/gnome/help/gcalctool/ca/figures/gcalctool_scientific_window.png
 share/gnome/help/gcalctool/ca/gcalctool.xml
+share/gnome/help/gcalctool/cs/figures/gcalctool_advanced_window.png
+share/gnome/help/gcalctool/cs/figures/gcalctool_basic_window.png
+share/gnome/help/gcalctool/cs/figures/gcalctool_financial_window.png
+share/gnome/help/gcalctool/cs/figures/gcalctool_menu_symbol.png
+share/gnome/help/gcalctool/cs/figures/gcalctool_programming_window.png
+share/gnome/help/gcalctool/cs/figures/gcalctool_scientific_window.png
+share/gnome/help/gcalctool/cs/gcalctool.xml
 share/gnome/help/gcalctool/de/figures/gcalctool_advanced_window.png
 share/gnome/help/gcalctool/de/figures/gcalctool_basic_window.png
 share/gnome/help/gcalctool/de/figures/gcalctool_financial_window.png
@@ -146,6 +153,7 @@ share/locale/bn/LC_MESSAGES/gcalctool.mo
 share/locale/bn_IN/LC_MESSAGES/gcalctool.mo
 share/locale/bs/LC_MESSAGES/gcalctool.mo
 share/locale/ca/LC_MESSAGES/gcalctool.mo
+share/locale/ca@valencia/LC_MESSAGES/gcalctool.mo
 share/locale/cs/LC_MESSAGES/gcalctool.mo
 share/locale/cy/LC_MESSAGES/gcalctool.mo
 share/locale/da/LC_MESSAGES/gcalctool.mo
@@ -218,6 +226,7 @@ share/locale/zh_TW/LC_MESSAGES/gcalctool.mo
 share/omf/gcalctool/gcalctool-C.omf
 share/omf/gcalctool/gcalctool-bg.omf
 share/omf/gcalctool/gcalctool-ca.omf
+share/omf/gcalctool/gcalctool-cs.omf
 share/omf/gcalctool/gcalctool-de.omf
 share/omf/gcalctool/gcalctool-el.omf
 share/omf/gcalctool/gcalctool-es.omf
