@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.24 2009/06/04 19:23:51 tron Exp $
+$NetBSD: distinfo,v 1.25 2009/07/09 10:42:28 tron Exp $
 
-SHA1 (libtorrent-0.12.2.tar.gz) = a53d2c671e9f2dd971d0622d5b3672da91c46ef9
-RMD160 (libtorrent-0.12.2.tar.gz) = 88cdc415f98afd8b87fa6d7330906737c3e434fa
-Size (libtorrent-0.12.2.tar.gz) = 585374 bytes
+SHA1 (libtorrent-0.12.4.tar.gz) = 6deab3f6af5e9566c987131d586751c7dc3b5dbb
+RMD160 (libtorrent-0.12.4.tar.gz) = 23fd8a242f493171f7e2afa714dc7b74359ff7bc
+Size (libtorrent-0.12.4.tar.gz) = 600778 bytes
 SHA1 (patch-aa) = d864808b9e9524b3a7f72bcc1b465d4e6b2d4f4a
-SHA1 (patch-ab) = 8fdc29520ea79282d7253a85834e15b1eb47a1e6
+SHA1 (patch-ab) = db2dd21aa97b190d59e555ad6986a2432d755808

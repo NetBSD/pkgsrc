@@ -1,60 +1,13 @@
-$NetBSD: patch-ab,v 1.10 2009/06/04 19:23:51 tron Exp $
+$NetBSD: patch-ab,v 1.11 2009/07/09 10:42:29 tron Exp $
 
-Deal with the kqueue(2) API differences between NetBSD and the other BSDs.
-The upstream bug report is here:
-
-http://libtorrent.rakshasa.no/ticket/1765
-
---- src/torrent/poll_kqueue.cc.orig	2008-05-07 13:19:13.000000000 +0100
-+++ src/torrent/poll_kqueue.cc	2009-06-04 18:10:50.000000000 +0100
-@@ -57,6 +57,12 @@
+--- src/torrent/poll_kqueue.cc.orig	2008-10-28 03:48:48.000000000 +0000
++++ src/torrent/poll_kqueue.cc	2009-07-09 11:27:45.000000000 +0100
+@@ -54,6 +54,8 @@
+ #include <sys/time.h>
+ #endif
+ 
++#include <cassert>
++
+ namespace torrent {
  
  #ifdef USE_KQUEUE
- 
-+#ifdef __NetBSD__
-+typedef uintptr_t kevent_udata_t;
-+#else
-+typedef void *kevent_udata_t;
-+#endif
-+
- inline uint32_t
- PollKQueue::event_mask(Event* e) {
-   return m_table[e->file_descriptor()];
-@@ -83,7 +89,7 @@
- 
-   struct kevent* itr = m_changes + (m_changedEvents++);
- 
--  EV_SET(itr, event->file_descriptor(), mask, op, 0, 0, event);
-+  EV_SET(itr, event->file_descriptor(), mask, op, 0, 0, (kevent_udata_t)event);
- }
- 
- PollKQueue*
-@@ -146,10 +152,10 @@
- 
-     // Also check current mask.
- 
--    if (itr->filter == EVFILT_READ && itr->udata != NULL && event_mask((Event*)itr->udata) & flag_read)
-+    if (itr->filter == EVFILT_READ && itr->udata != (kevent_udata_t)NULL && event_mask((Event*)itr->udata) & flag_read)
-       ((Event*)itr->udata)->event_read();
- 
--    if (itr->filter == EVFILT_WRITE && itr->udata != NULL && event_mask((Event*)itr->udata) & flag_write)
-+    if (itr->filter == EVFILT_WRITE && itr->udata != (kevent_udata_t)NULL && event_mask((Event*)itr->udata) & flag_write)
-       ((Event*)itr->udata)->event_write();
-   }
- 
-@@ -173,10 +179,12 @@
-     throw internal_error("PollKQueue::close(...) called but the file descriptor is active");
- 
-   for (struct kevent *itr = m_events, *last = m_events + m_waitingEvents; itr != last; ++itr)
--    if (itr->udata == event)
--      itr->udata = NULL;
-+    if (itr->udata == (kevent_udata_t)event)
-+      itr->udata = (kevent_udata_t)NULL;
-+
-+  struct kevent *oitr = m_changes;
- 
--  m_changedEvents = std::remove_if(m_changes, m_changes + m_changedEvents, rak::equal(event, rak::mem_ref(&kevent::udata))) - m_changes;
-+  m_changedEvents = std::remove_if(m_changes, m_changes + m_changedEvents, rak::equal((kevent_udata_t)event, rak::mem_ref(&kevent::udata))) - m_changes;
- }
- 
- // Use custom defines for EPOLL* to make the below code compile with
