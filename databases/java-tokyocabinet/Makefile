@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/24 12:40:31 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/09 11:30:29 obache Exp $
 #
 
-DISTNAME=	tokyocabinet-java-1.19
+DISTNAME=	tokyocabinet-java-1.20
 PKGNAME=	java-${DISTNAME:S/-java//}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
@@ -24,7 +24,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/index.html \
 		${DESTDIR}${PREFIX}/share/tokyocabinet/doc/java/index.html
 
-BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.21
+BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.29
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../mk/java-vm.mk"
 PTHREAD_AUTO_VARS=	yes
