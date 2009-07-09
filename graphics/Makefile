@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.525 2009/07/07 10:09:51 drochner Exp $
+# $NetBSD: Makefile,v 1.526 2009/07/09 19:46:14 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -204,6 +204,7 @@ SUBDIR+=	kphotoalbum
 SUBDIR+=	kphotobook
 SUBDIR+=	kphotools
 SUBDIR+=	lcms
+SUBDIR+=	lensfun
 SUBDIR+=	lib3ds
 SUBDIR+=	libart
 SUBDIR+=	libcaca
