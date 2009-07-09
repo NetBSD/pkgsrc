@@ -1,0 +1,6 @@
+This package provides user control over the layout of the three basic
+list environments: enumerate, itemize, and description.  It supersedes
+both enumerate and mdwlist (providing well- structured replacements
+for all their funtionality), and in addition provides functions to
+compute the layout of labels, and to `clone' the standard
+environments, to create new environments with counters of their own.
