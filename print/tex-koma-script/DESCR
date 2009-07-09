@@ -1,0 +1,12 @@
+The KOMA-Script bundle provides drop-in replacements for the
+article/report/book classes with emphasis on typography and
+versatility.  There is also a letter class, different from all other
+letter classes.  It also offers e.g. a package for calculated type
+areas in the way laid down by the typographer Jan Tschichold, a
+package for easily changing and defining of page styles, a package for
+getting not only the current date but also the name of day and a
+package for getting current time.  All these packages may be used not
+only with KOMA-Script classes but also with standard classes.  Since
+every package has its own version number, the number below is only the
+version of scrbook, scrreprt, scrartcl, scrlttr2, and typearea.  These
+are the main parts of the bundle.
