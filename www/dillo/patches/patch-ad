@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2009/07/09 05:04:03 snj Exp $
+
+--- configure.orig	2009-07-08 21:32:56.000000000 -0700
++++ configure	2009-07-08 21:33:06.000000000 -0700
+@@ -2346,7 +2346,7 @@ am__tar='${AMTAR} chof - "$$tardir"'; am
+ 
+ ac_config_headers="$ac_config_headers config.h"
+ 
+-sysconfdir=${sysconfdir}/${PACKAGE}
++sysconfdir=${sysconfdir}
+ 
+ 
+ 
