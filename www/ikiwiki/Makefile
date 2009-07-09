@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2009/06/01 20:24:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/09 22:15:09 schmonz Exp $
 #
 
-DISTNAME=	ikiwiki_3.13
+DISTNAME=	ikiwiki_3.1415
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
@@ -10,6 +10,8 @@ MAINTAINER=	reed@NetBSD.org
 HOMEPAGE=	http://ikiwiki.info/
 COMMENT=	Wiki compiler
 LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Text-Markdown-[0-9]*:../../textproc/p5-Text-Markdown
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
