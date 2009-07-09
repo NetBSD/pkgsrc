@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/07/07 23:14:12 he Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/09 09:19:03 tron Exp $
 
 DISTNAME=	tvcpp0p8
 PKGNAME=	tasp-vsipl-20030710
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/lib
 DIST_SUBDIR=	tasp-vsipl
 
 INSTALLATION_DIRS+=	include
+INSTALLATION_DIRS+=	lib
 INSTALLATION_DIRS+=	share/doc/tasp-vsipl
 
 post-extract:
