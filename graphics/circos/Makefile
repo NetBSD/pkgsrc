@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/05/04 22:26:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/09 19:48:23 joerg Exp $
 #
 
 DISTNAME=	circos-0.49
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://mkweb.bcgsc.ca/circos/distribution/
 EXTRACT_SUFX=	.tgz
@@ -11,8 +12,10 @@ HOMEPAGE=	http://mkweb.bcgsc.ca/circos/
 COMMENT=	Concise, explanatory, unique and print-ready data visualization
 #LICENSE=
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=	# none
-USE_TOOLS+=	pax perl
+USE_TOOLS+=	pax perl bash:run
 NO_BUILD=	yes
 
 DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
@@ -41,12 +44,14 @@ SUBST_SED.paths+=	-e 's|@PREFIX@|${PREFIX}|g'
 REPLACE_PERL+=	data/3/make_random_highlights data/6/hist.random.make
 REPLACE_PERL+=	svg/textrotation.svg
 
+REPLACE_BASH+=	data/6/gene.density
+
 post-extract:
 	cd ${WRKSRC} && rm -f bin/${PKGBASE} \
 		&& mv bin/${PKGNAME_NOREV} bin/${PKGBASE}
 
 do-configure:
-	cd ${WRKSRC} && ( ${ECHO} ${PERL5:Q} ; ${ECHO} ) | ./install
+	cd ${WRKSRC} && ( ${ECHO} ${PERL5:Q} ; ${ECHO} ) | ${BASH} ./install
 
 pre-configure:
 	cd ${WRKSRC} && rm -f bin/*.orig
@@ -54,14 +59,14 @@ pre-configure:
 do-install:
 	cd ${WRKSRC} &&							\
 	for f in CHANGES README TODO; do				\
-		${INSTALL_DATA} $${f} ${PREFIX}/share/doc/${PKGBASE};	\
+		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE};	\
 	done;								\
 	for f in bin/*; do						\
-		${INSTALL_SCRIPT} $${f} ${PREFIX}/bin;			\
+		${INSTALL_SCRIPT} $${f} ${DESTDIR}${PREFIX}/bin;			\
 	done;								\
 	for f in etc/*; do						\
-		${INSTALL_DATA} $${f} ${PREFIX}/${EGDIR};		\
+		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/${EGDIR};		\
 	done;								\
-	pax -rw -pp data fonts images svg tutorials ${PREFIX}/share/circos
+	pax -rw -pp data fonts images svg tutorials ${DESTDIR}${PREFIX}/share/circos
 
 .include "../../mk/bsd.pkg.mk"
