@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2009/07/09 23:00:02 minskim Exp $
+# $NetBSD: Makefile,v 1.268 2009/07/09 23:06:05 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -243,6 +243,8 @@ SUBDIR+=	tex-luatex
 SUBDIR+=	tex-luatex-doc
 SUBDIR+=	tex-memhangul-ucs
 SUBDIR+=	tex-memoir
+SUBDIR+=	tex-microtype
+SUBDIR+=	tex-microtype-doc
 SUBDIR+=	tex-misc
 SUBDIR+=	tex-multirow
 SUBDIR+=	tex-multirow-doc
