@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2574 2009/07/09 21:00:42 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2575 2009/07/09 22:17:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3412,3 +3412,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/nas to 1.9.1nb2 [hasso 2009-07-09]
 	Added fonts/tex-cm-super version 0.3.4 [minskim 2009-07-09]
 	Added fonts/tex-cm-super-doc version 0.3.4 [minskim 2009-07-09]
+	Updated www/ikiwiki to 3.1415 [schmonz 2009-07-09]
