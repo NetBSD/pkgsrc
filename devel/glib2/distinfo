@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.119 2009/06/20 08:35:01 wiz Exp $
+$NetBSD: distinfo,v 1.120 2009/07/09 17:33:54 drochner Exp $
 
-SHA1 (glib-2.20.3.tar.bz2) = 9cc9dc579f790d87dacc21413aec6600b9eccfce
-RMD160 (glib-2.20.3.tar.bz2) = 75a1bede14759d3b7bc5ca320d2a094d242bc6dc
-Size (glib-2.20.3.tar.bz2) = 5008689 bytes
+SHA1 (glib-2.20.4.tar.bz2) = a0cee2b75bb485de926fa43b33887adc8f9c19bb
+RMD160 (glib-2.20.4.tar.bz2) = e9dbefd8d0f94ead3dfddeb059eb5ee4b319fa7c
+Size (glib-2.20.4.tar.bz2) = 5035410 bytes
 SHA1 (patch-aa) = e8d533e6279a537fc536f61ef397165518c4bcd7
 SHA1 (patch-ab) = 757cfd7f686d3e3147d13f530d1c85c7835bf762
 SHA1 (patch-ac) = 96e153339675457356f71e35d20375bed669d337
