@@ -1,0 +1,9 @@
+The package provides a LaTeX interface to pdfTeX's micro-typographic
+extensions: character protrusion and font expansion.  The package allows
+you to restrict character protrusion and/or font expansion to a certain
+set of fonts, or to certain parts of the document (for example, based on
+selected language), and to configure micro-typographic aspects of the
+fonts in a straight-forward and flexible way.  Settings for various fonts
+are provided.  The bundle also provides a letterspace package; this
+improves on the alternatives (letterspacing and soul), and also provides
+a means of protecting ligatures--notably those in fraktur fonts.
