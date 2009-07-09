@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/04/05 13:57:53 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2009/07/09 01:53:28 agc Exp $
 
 To use luaexpat in your lua programs you must set this environment
 variable:
 
    LUA_INIT = "loadlib('${PREFIX}/lib/liblualxp.so','luaopen_lxp')();"
 
-Examples were installed on:
+The examples have been installed in:
 
    ${PREFIX}/share/examples/lua
 
