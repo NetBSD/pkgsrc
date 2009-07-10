@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/07/10 15:41:14 tron Exp $
+# $NetBSD: Makefile,v 1.16 2009/07/10 15:42:04 tron Exp $
 
 DISTNAME=	signing-party_1.1.1.orig
 PKGNAME=	${DISTNAME:S/signing-party_/caff-/S/.orig//}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 MAINTAINER=	ghen@NetBSD.org,tonio@NetBSD.org
 HOMEPAGE=	http://pgp-tools.alioth.debian.org/
 COMMENT=	Various GnuPG related tools
-LICENSE=	gnu-gpl-v2 and modified-bsd
+LICENSE=	gnu-gpl-v2 AND modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
