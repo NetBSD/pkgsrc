@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2582 2009/07/10 00:21:39 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2583 2009/07/10 00:49:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3426,3 +3426,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-ms-doc version 2009.7340 [minskim 2009-07-10]
 	Added print/tex-paralist version 2.3b [minskim 2009-07-10]
 	Added print/tex-paralist-doc version 2.3b [minskim 2009-07-10]
+	Added print/tex-sectsty version 2.0.2 [minskim 2009-07-10]
+	Added print/tex-sectsty-doc version 2.0.2 [minskim 2009-07-10]
