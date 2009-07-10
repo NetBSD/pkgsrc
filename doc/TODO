@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8241 2009/07/10 09:24:42 obache Exp $
+$NetBSD: TODO,v 1.8242 2009/07/10 09:26:26 obache Exp $
 
 Suggested new packages
 ======================
@@ -1015,7 +1015,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nut-14.4
 	o nxtvepg-2.8.1
 	o objc-3.2.8
-	o ocaml-3.11.1
+	o ocaml-3.11.1 [pkg/41695]
+	o ocamlduce-3.11.1.0 [pkg/41696]
 	o ocamlnet-2.2.4
 	o ocrad-0.18 [pkg/41617]
 	o ocsigen-1.1.0 [pkg/40761]
