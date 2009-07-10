@@ -1,0 +1,5 @@
+This package provides support for setting the spacing between lines in
+a document.  Package options include singlespacing, onehalfspacing,
+and doublespacing.  Alternatively the spacing can be changed as
+required with the \singlespacing, \onehalfspacing, and \doublespacing
+commands.  Other size spacings also available.
