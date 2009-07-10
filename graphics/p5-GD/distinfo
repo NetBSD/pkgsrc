@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2009/04/12 00:32:42 sno Exp $
+$NetBSD: distinfo,v 1.15 2009/07/10 08:36:53 sno Exp $
 
-SHA1 (GD-2.41.tar.gz) = e5f6ff0346b454924a54532364787c2b6f5e846d
-RMD160 (GD-2.41.tar.gz) = 01751d1c3ce669cb2555b6ea17a6611de215f3f1
-Size (GD-2.41.tar.gz) = 258133 bytes
+SHA1 (GD-2.43.tar.gz) = c02933680ab125dd73a897cbf36d7d9da416346a
+RMD160 (GD-2.43.tar.gz) = b77758fbd684625eabda9cc14d80bd011812b8b2
+Size (GD-2.43.tar.gz) = 258346 bytes
