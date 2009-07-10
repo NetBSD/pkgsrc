@@ -1,12 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:02 joerg Exp $
-${PKG_LOCALTEXMFPREFIX}/doc/latex/memoir/README
-${PKG_LOCALTEXMFPREFIX}/doc/latex/memoir/memman.pdf
-${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir/mem10.clo
-${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir/mem11.clo
-${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir/mem12.clo
-${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir/mem14.clo
-${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir/mem17.clo
-${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir/mem9.clo
-${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir/memhfixc.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir/memoir.cls
-${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir/mempatch.sty
+@comment $NetBSD: PLIST,v 1.3 2009/07/10 23:38:31 minskim Exp $
+share/texmf-dist/makeindex/memoir/basic.gst
+share/texmf-dist/makeindex/memoir/memman.gst
+share/texmf-dist/makeindex/memoir/memman.ist
+share/texmf-dist/tex/latex/memoir/mem10.clo
+share/texmf-dist/tex/latex/memoir/mem11.clo
+share/texmf-dist/tex/latex/memoir/mem12.clo
+share/texmf-dist/tex/latex/memoir/mem14.clo
+share/texmf-dist/tex/latex/memoir/mem17.clo
+share/texmf-dist/tex/latex/memoir/mem20.clo
+share/texmf-dist/tex/latex/memoir/mem25.clo
+share/texmf-dist/tex/latex/memoir/mem30.clo
+share/texmf-dist/tex/latex/memoir/mem36.clo
+share/texmf-dist/tex/latex/memoir/mem48.clo
+share/texmf-dist/tex/latex/memoir/mem60.clo
+share/texmf-dist/tex/latex/memoir/mem9.clo
+share/texmf-dist/tex/latex/memoir/memhfixc.sty
+share/texmf-dist/tex/latex/memoir/memoir.cls
+share/texmf-dist/tex/latex/memoir/mempatch.sty
