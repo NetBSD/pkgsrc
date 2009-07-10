@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/07/07 23:20:12 minskim Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/07/10 23:41:07 minskim Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bib/plbib/plbib.bib
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
@@ -490,8 +490,6 @@ share/texmf-dist/doc/generic/vntex/vntest2.tex
 share/texmf-dist/doc/generic/vntex/vntest3.tex
 share/texmf-dist/doc/generic/vntex/vntest4.tex
 share/texmf-dist/doc/generic/vntex/vntest5.tex
-share/texmf-dist/doc/generic/xkeyval/pst-xkey.dvi
-share/texmf-dist/doc/generic/xkeyval/xkeyval.dvi
 share/texmf-dist/doc/generic/xypic/CATALOG
 share/texmf-dist/doc/generic/xypic/COPYING
 share/texmf-dist/doc/generic/xypic/MANIFEST
@@ -3137,8 +3135,6 @@ share/texmf-dist/doc/latex/eepic/epic-eg4.fig
 share/texmf-dist/doc/latex/eepic/epic-eg4.tex
 share/texmf-dist/doc/latex/eepic/readme
 share/texmf-dist/doc/latex/endfloat/endfloat.dvi
-share/texmf-dist/doc/latex/enumitem/README
-share/texmf-dist/doc/latex/enumitem/enumitem.dvi
 share/texmf-dist/doc/latex/eo/README
 share/texmf-dist/doc/latex/eo/readme.dvi
 share/texmf-dist/doc/latex/eo/readme.ltx
@@ -3167,8 +3163,6 @@ share/texmf-dist/doc/latex/floatflt/floatexm.tex
 share/texmf-dist/doc/latex/floatflt/floatfge.dvi
 share/texmf-dist/doc/latex/floatflt/floatflt.dvi
 share/texmf-dist/doc/latex/footbib/footbib.dvi
-share/texmf-dist/doc/latex/footmisc/README
-share/texmf-dist/doc/latex/footmisc/footmisc.dvi
 share/texmf-dist/doc/latex/footnpag/footnpag-user.dvi
 share/texmf-dist/doc/latex/fp/readme.fp
 share/texmf-dist/doc/latex/g-brief/beispiel.tex
@@ -3209,16 +3203,6 @@ share/texmf-dist/doc/latex/jurabib/jb-opt-ref.html
 share/texmf-dist/doc/latex/jurabib/jbendoc.dvi
 share/texmf-dist/doc/latex/jurabib/jbgerdoc.dvi
 share/texmf-dist/doc/latex/jurabib/jurabib-faq.dvi
-share/texmf-dist/doc/latex/koma-script/INSTALL.TXT
-share/texmf-dist/doc/latex/koma-script/INSTALLD.TXT
-share/texmf-dist/doc/latex/koma-script/LEGAL.TXT
-share/texmf-dist/doc/latex/koma-script/LEGALDE.TXT
-share/texmf-dist/doc/latex/koma-script/koma-script.pdf
-share/texmf-dist/doc/latex/koma-script/komabug.tex
-share/texmf-dist/doc/latex/koma-script/liesmich.txt
-share/texmf-dist/doc/latex/koma-script/readme.txt
-share/texmf-dist/doc/latex/koma-script/scrguide.pdf
-share/texmf-dist/doc/latex/koma-script/scrguien.pdf
 share/texmf-dist/doc/latex/labels/labels.dvi
 share/texmf-dist/doc/latex/lastpage/lastpage.dvi
 share/texmf-dist/doc/latex/layouts/layman.dvi
@@ -3248,8 +3232,6 @@ share/texmf-dist/doc/latex/mdwtools/mdwmath.dvi
 share/texmf-dist/doc/latex/mdwtools/mdwtab.dvi
 share/texmf-dist/doc/latex/mdwtools/sverb.dvi
 share/texmf-dist/doc/latex/mdwtools/syntax.dvi
-share/texmf-dist/doc/latex/memoir/README
-share/texmf-dist/doc/latex/memoir/memman.pdf
 share/texmf-dist/doc/latex/mfnfss/manifest.txt
 share/texmf-dist/doc/latex/mfnfss/oldgerm.dvi
 share/texmf-dist/doc/latex/mfnfss/readme.txt
@@ -3258,9 +3240,6 @@ share/texmf-dist/doc/latex/mh/empheq.dvi
 share/texmf-dist/doc/latex/mh/empheq07.dvi
 share/texmf-dist/doc/latex/mh/mathtools.dvi
 share/texmf-dist/doc/latex/mh/mhsetup.dvi
-share/texmf-dist/doc/latex/microtype/README
-share/texmf-dist/doc/latex/microtype/microtype.dvi
-share/texmf-dist/doc/latex/microtype/test-microtype.tex
 share/texmf-dist/doc/latex/minitoc/README
 share/texmf-dist/doc/latex/minitoc/add.tex
 share/texmf-dist/doc/latex/minitoc/catalog
@@ -3270,20 +3249,7 @@ share/texmf-dist/doc/latex/minitoc/minitoc.bug
 share/texmf-dist/doc/latex/minitoc/minitoc.dvi
 share/texmf-dist/doc/latex/mltex/README
 share/texmf-dist/doc/latex/mltex/mltex.txt
-share/texmf-dist/doc/latex/moreverb/moreverb.dvi
 share/texmf-dist/doc/latex/mparhack/mparhack.dvi
-share/texmf-dist/doc/latex/ms/count1to.bug
-share/texmf-dist/doc/latex/ms/count1to.dvi
-share/texmf-dist/doc/latex/ms/eso-p-t.tex
-share/texmf-dist/doc/latex/ms/everysel.bug
-share/texmf-dist/doc/latex/ms/everysel.dvi
-share/texmf-dist/doc/latex/ms/everyshi.bug
-share/texmf-dist/doc/latex/ms/everyshi.dvi
-share/texmf-dist/doc/latex/ms/multitoc.bug
-share/texmf-dist/doc/latex/ms/multitoc.dvi
-share/texmf-dist/doc/latex/ms/prelim2e.bug
-share/texmf-dist/doc/latex/ms/prelim2e.dvi
-share/texmf-dist/doc/latex/ms/ragged2e.dvi
 share/texmf-dist/doc/latex/mt11p/0readme
 share/texmf-dist/doc/latex/mt11p/mt11p.dvi
 share/texmf-dist/doc/latex/mt11p/test11p.tex
@@ -3312,7 +3278,6 @@ share/texmf-dist/doc/latex/onlyamsmath/onlyamsmathtest.tex
 share/texmf-dist/doc/latex/overpic/README
 share/texmf-dist/doc/latex/overpic/opic-abs.tex
 share/texmf-dist/doc/latex/overpic/opic-rel.tex
-share/texmf-dist/doc/latex/paralist/paralist.dvi
 share/texmf-dist/doc/latex/pb-diagram/COPYING
 share/texmf-dist/doc/latex/pb-diagram/README
 share/texmf-dist/doc/latex/pb-diagram/pb-examples.tex
@@ -3386,7 +3351,6 @@ share/texmf-dist/doc/latex/rotfloat/examples.tex
 share/texmf-dist/doc/latex/rotfloat/rotfloat.dvi
 share/texmf-dist/doc/latex/scale/README
 share/texmf-dist/doc/latex/scale/scale.dvi
-share/texmf-dist/doc/latex/sectsty/sectsty.dvi
 share/texmf-dist/doc/latex/seminar/Seminar-Bugs.html
 share/texmf-dist/doc/latex/seminar/Seminar-FAQ.css
 share/texmf-dist/doc/latex/seminar/Seminar-FAQ.html
@@ -3484,7 +3448,6 @@ share/texmf-dist/doc/latex/totpages/readme.txt
 share/texmf-dist/doc/latex/totpages/totpages.dvi
 share/texmf-dist/doc/latex/treesvr/legal.txt
 share/texmf-dist/doc/latex/treesvr/treedoc.dvi
-share/texmf-dist/doc/latex/type1cm/type1cm.txt
 share/texmf-dist/doc/latex/units/README
 share/texmf-dist/doc/latex/units/units.dvi
 share/texmf-dist/doc/latex/vmargin/vmargin.dvi
@@ -10181,10 +10144,6 @@ share/texmf-dist/tex/generic/texdraw/txdps.tex
 share/texmf-dist/tex/generic/texdraw/txdtools.tex
 share/texmf-dist/tex/generic/thumbpdf/thumbpdf.sty
 share/texmf-dist/tex/generic/thumbpdf/thumbpdf.tex
-share/texmf-dist/tex/generic/xkeyval/keyval.tex
-share/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
-share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-share/texmf-dist/tex/generic/xkeyval/xkvtxhdr.tex
 share/texmf-dist/tex/generic/xypic/movie.cls
 share/texmf-dist/tex/generic/xypic/xy.sty
 share/texmf-dist/tex/generic/xypic/xy.tex
@@ -10681,7 +10640,6 @@ share/texmf-dist/tex/latex/eepic/eepicemu.sty
 share/texmf-dist/tex/latex/eepic/epic.sty
 share/texmf-dist/tex/latex/endfloat/efxmpl.cfg
 share/texmf-dist/tex/latex/endfloat/endfloat.sty
-share/texmf-dist/tex/latex/enumitem/enumitem.sty
 share/texmf-dist/tex/latex/eo/eo.ldf
 share/texmf-dist/tex/latex/eo/eo.sty
 share/texmf-dist/tex/latex/eo/latin3eo.def
@@ -10718,7 +10676,6 @@ share/texmf-dist/tex/latex/float/float.sty
 share/texmf-dist/tex/latex/floatflt/floatflt.sty
 share/texmf-dist/tex/latex/fontinst/fontdoc.sty
 share/texmf-dist/tex/latex/footbib/footbib.sty
-share/texmf-dist/tex/latex/footmisc/footmisc.sty
 share/texmf-dist/tex/latex/footnpag/footnpag.sty
 share/texmf-dist/tex/latex/fp/defpattern.sty
 share/texmf-dist/tex/latex/fp/fp-addons.sty
@@ -10773,23 +10730,6 @@ share/texmf-dist/tex/latex/jurabib/jurabib.sty
 share/texmf-dist/tex/latex/jurabib/nojbbib.ldf
 share/texmf-dist/tex/latex/jurabib/ptjbbib.ldf
 share/texmf-dist/tex/latex/jurabib/spjbbib.ldf
-share/texmf-dist/tex/latex/koma-script/DIN.lco
-share/texmf-dist/tex/latex/koma-script/DINmtext.lco
-share/texmf-dist/tex/latex/koma-script/KOMAold.lco
-share/texmf-dist/tex/latex/koma-script/SN.lco
-share/texmf-dist/tex/latex/koma-script/SNleft.lco
-share/texmf-dist/tex/latex/koma-script/scraddr.sty
-share/texmf-dist/tex/latex/koma-script/scrartcl.cls
-share/texmf-dist/tex/latex/koma-script/scrbook.cls
-share/texmf-dist/tex/latex/koma-script/scrdate.sty
-share/texmf-dist/tex/latex/koma-script/scrlettr.cls
-share/texmf-dist/tex/latex/koma-script/scrlfile.sty
-share/texmf-dist/tex/latex/koma-script/scrlttr2.cls
-share/texmf-dist/tex/latex/koma-script/scrpage.sty
-share/texmf-dist/tex/latex/koma-script/scrpage2.sty
-share/texmf-dist/tex/latex/koma-script/scrreprt.cls
-share/texmf-dist/tex/latex/koma-script/scrtime.sty
-share/texmf-dist/tex/latex/koma-script/typearea.sty
 share/texmf-dist/tex/latex/labels/labels.sty
 share/texmf-dist/tex/latex/labels/olabels.sty
 share/texmf-dist/tex/latex/lastpage/lastpage.sty
@@ -10877,15 +10817,6 @@ share/texmf-dist/tex/latex/mdwtools/mdwmath.sty
 share/texmf-dist/tex/latex/mdwtools/mdwtab.sty
 share/texmf-dist/tex/latex/mdwtools/sverb.sty
 share/texmf-dist/tex/latex/mdwtools/syntax.sty
-share/texmf-dist/tex/latex/memoir/mem10.clo
-share/texmf-dist/tex/latex/memoir/mem11.clo
-share/texmf-dist/tex/latex/memoir/mem12.clo
-share/texmf-dist/tex/latex/memoir/mem14.clo
-share/texmf-dist/tex/latex/memoir/mem17.clo
-share/texmf-dist/tex/latex/memoir/mem9.clo
-share/texmf-dist/tex/latex/memoir/memhfixc.sty
-share/texmf-dist/tex/latex/memoir/memoir.cls
-share/texmf-dist/tex/latex/memoir/mempatch.sty
 share/texmf-dist/tex/latex/mfnfss/oldgerm.sty
 share/texmf-dist/tex/latex/mfnfss/ot1panr.fd
 share/texmf-dist/tex/latex/mfnfss/ot1pss.fd
@@ -10898,14 +10829,6 @@ share/texmf-dist/tex/latex/mh/empheq07.sty
 share/texmf-dist/tex/latex/mh/mathtools.sty
 share/texmf-dist/tex/latex/mh/mhsetup.sty
 share/texmf-dist/tex/latex/mh/ntheorem.fix
-share/texmf-dist/tex/latex/microtype/microtype.cfg
-share/texmf-dist/tex/latex/microtype/microtype.sty
-share/texmf-dist/tex/latex/microtype/mt-bch.cfg
-share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-share/texmf-dist/tex/latex/microtype/mt-pad.cfg
-share/texmf-dist/tex/latex/microtype/mt-pmn.cfg
-share/texmf-dist/tex/latex/microtype/mt-ppl.cfg
-share/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 share/texmf-dist/tex/latex/minitoc/acadian.mld
 share/texmf-dist/tex/latex/minitoc/acadien.mld
 share/texmf-dist/tex/latex/minitoc/afrikaan.mld
@@ -10988,14 +10911,7 @@ share/texmf-dist/tex/latex/minitoc/welsh.mld
 share/texmf-dist/tex/latex/mltex/lo1enc.def
 share/texmf-dist/tex/latex/mltex/mlltxchg.def
 share/texmf-dist/tex/latex/mltex/mltex.sty
-share/texmf-dist/tex/latex/moreverb/moreverb.sty
 share/texmf-dist/tex/latex/mparhack/mparhack.sty
-share/texmf-dist/tex/latex/ms/count1to.sty
-share/texmf-dist/tex/latex/ms/everysel.sty
-share/texmf-dist/tex/latex/ms/everyshi.sty
-share/texmf-dist/tex/latex/ms/multitoc.sty
-share/texmf-dist/tex/latex/ms/prelim2e.sty
-share/texmf-dist/tex/latex/ms/ragged2e.sty
 share/texmf-dist/tex/latex/mt11p/mt11p.sty
 share/texmf-dist/tex/latex/multibib/multibib.sty
 share/texmf-dist/tex/latex/multibox/multibox.sty
@@ -11032,7 +10948,6 @@ share/texmf-dist/tex/latex/palatcm/omspplcm.fd
 share/texmf-dist/tex/latex/palatcm/omxpplcm.fd
 share/texmf-dist/tex/latex/palatcm/ot1pplcm.fd
 share/texmf-dist/tex/latex/palatcm/palatcm.sty
-share/texmf-dist/tex/latex/paralist/paralist.sty
 share/texmf-dist/tex/latex/pb-diagram/lamsarrow.sty
 share/texmf-dist/tex/latex/pb-diagram/pb-diagram.sty
 share/texmf-dist/tex/latex/pb-diagram/pb-lams.sty
@@ -11183,7 +11098,6 @@ share/texmf-dist/tex/latex/revtex4/revtex4.cls
 share/texmf-dist/tex/latex/revtex4/rmp.rtx
 share/texmf-dist/tex/latex/rotfloat/rotfloat.sty
 share/texmf-dist/tex/latex/scale/scale.sty
-share/texmf-dist/tex/latex/sectsty/sectsty.sty
 share/texmf-dist/tex/latex/seminar/2up.sty
 share/texmf-dist/tex/latex/seminar/2up.tex
 share/texmf-dist/tex/latex/seminar/npsfont.sty
@@ -11201,7 +11115,6 @@ share/texmf-dist/tex/latex/seminar/semlcmss.sty
 share/texmf-dist/tex/latex/seminar/semrot.sty
 share/texmf-dist/tex/latex/seminar/slidesec.sty
 share/texmf-dist/tex/latex/seminar/xcomment.sty
-share/texmf-dist/tex/latex/setspace/setspace.sty
 share/texmf-dist/tex/latex/shapepar/shapepar.sty
 share/texmf-dist/tex/latex/showdim/showdim.sty
 share/texmf-dist/tex/latex/showlabels/showlabels.sty
@@ -11268,7 +11181,6 @@ share/texmf-dist/tex/latex/txfonts/utxsya.fd
 share/texmf-dist/tex/latex/txfonts/utxsyb.fd
 share/texmf-dist/tex/latex/txfonts/utxsyc.fd
 share/texmf-dist/tex/latex/txfonts/utxtt.fd
-share/texmf-dist/tex/latex/type1cm/type1cm.sty
 share/texmf-dist/tex/latex/umlaute/atari.def
 share/texmf-dist/tex/latex/umlaute/isolatin.def
 share/texmf-dist/tex/latex/umlaute/mac.def
@@ -11322,9 +11234,6 @@ share/texmf-dist/tex/latex/wasysym/wasysym.sty
 share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 share/texmf-dist/tex/latex/xcolor/svgnam.def
 share/texmf-dist/tex/latex/xcolor/xcolor.sty
-share/texmf-dist/tex/latex/xkeyval/pst-xkey.sty
-share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-share/texmf-dist/tex/latex/xkeyval/xkvltxp.sty
 share/texmf-dist/tex/latex/xtab/xtab.sty
 share/texmf-dist/tex/latex/yfonts/yfonts.sty
 share/texmf-dist/tex/mex/base/mex.tex
