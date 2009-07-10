@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2009/07/07 23:20:12 minskim Exp $
+# $NetBSD: Makefile,v 1.35 2009/07/10 23:41:07 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -22,8 +22,10 @@ DEPENDS+=	tex-carlisle-[0-9]*:../../print/tex-carlisle
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
 DEPENDS+=	tex-dvips-[0-9]*:../../print/tex-dvips
 DEPENDS+=	tex-enctex-[0-9]*:../../print/tex-enctex
+DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
+DEPENDS+=	tex-footmisc-[0-9]*:../../print/tex-footmisc
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-hyphen-basque-[0-9]*:../../print/tex-hyphen-basque
 DEPENDS+=	tex-hyphen-bulgarian-[0-9]*:../../print/tex-hyphen-bulgarian
@@ -56,6 +58,7 @@ DEPENDS+=	tex-hyphen-spanish-[0-9]*:../../print/tex-hyphen-spanish
 DEPENDS+=	tex-hyphen-swedish-[0-9]*:../../print/tex-hyphen-swedish
 DEPENDS+=	tex-hyphen-turkish-[0-9]*:../../print/tex-hyphen-turkish
 DEPENDS+=	tex-hyphen-ukrainian-[0-9]*:../../print/tex-hyphen-ukrainian
+DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
 DEPENDS+=	tex-lambda-[0-9]*:../../print/tex-lambda
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-lm-[0-9]*:../../fonts/tex-lm
@@ -63,19 +66,28 @@ DEPENDS+=	tex-ltxmisc-[0-9]*:../../print/tex-ltxmisc
 DEPENDS+=	tex-marvosym-[0-9]*:../../fonts/tex-marvosym
 DEPENDS+=	tex-makeindex-[0-9]*:../../textproc/tex-makeindex
 DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
+DEPENDS+=	tex-memoir-[0-9]*:../../print/tex-memoir
 DEPENDS+=	tex-mflogo-[0-9]*:../../fonts/tex-mflogo
+DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
+DEPENDS+=	tex-moreverb-[0-9]*:../../print/tex-moreverb
+DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
 DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
 DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
+DEPENDS+=	tex-paralist-[0-9]*:../../print/tex-paralist
 DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
 DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
 DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
+DEPENDS+=	tex-sectsty-[0-9]*:../../print/tex-sectsty
+DEPENDS+=	tex-setspace-[0-9]*:../../print/tex-setspace
 DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
 DEPENDS+=	tex-symbol-[0-9]*:../../fonts/tex-symbol
 DEPENDS+=	tex-times-[0-9]*:../../fonts/tex-times
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+DEPENDS+=	tex-type1cm-[0-9]*:../../print/tex-type1cm
 DEPENDS+=	tex-wasy-[0-9]*:../../fonts/tex-wasy
+DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 DEPENDS+=	tex-zapfding-[0-9]*:../../fonts/tex-zapfding
 
 EXTRACT_ELEMENTS+=	aliases
@@ -155,19 +167,30 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/fonts/lm
 	rm -rf ${WRKSRC}/doc/fonts/mar*
 	rm -rf ${WRKSRC}/doc/generic/[a-f]*
+	rm -rf ${WRKSRC}/doc/generic/xk*
 	rm -rf ${WRKSRC}/doc/latex/ams[f-z]*
 	rm -rf ${WRKSRC}/doc/latex/carlisle
+	rm -rf ${WRKSRC}/doc/latex/enumitem
 	rm -rf ${WRKSRC}/doc/latex/exam
 	rm -rf ${WRKSRC}/doc/latex/fancyh*
+	rm -rf ${WRKSRC}/doc/latex/footmisc
 	rm -rf ${WRKSRC}/doc/latex/hyperref
+	rm -rf ${WRKSRC}/doc/latex/k*
+	rm -rf ${WRKSRC}/doc/latex/memoir
 	rm -rf ${WRKSRC}/doc/latex/mflogo
+	rm -rf ${WRKSRC}/doc/latex/microtype
+	rm -rf ${WRKSRC}/doc/latex/moreverb
+	rm -rf ${WRKSRC}/doc/latex/ms
 	rm -rf ${WRKSRC}/doc/latex/natbib
 	rm -rf ${WRKSRC}/doc/latex/oberdiek
+	rm -rf ${WRKSRC}/doc/latex/paralist
 	rm -rf ${WRKSRC}/doc/latex/placeins
 	rm -rf ${WRKSRC}/doc/latex/preprint
 	rm -rf ${WRKSRC}/doc/latex/rotating
+	rm -rf ${WRKSRC}/doc/latex/sectsty
 	rm -rf ${WRKSRC}/doc/latex/stmaryrd
 	rm -rf ${WRKSRC}/doc/latex/tools
+	rm -rf ${WRKSRC}/doc/latex/ty*
 	rm -rf ${WRKSRC}/doc/latex/wasysym/wasydoc.dvi
 	rm -rf ${WRKSRC}/doc/makeindex
 	rm -rf ${WRKSRC}/doc/pdftex
@@ -256,6 +279,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/generic/ruhyphen
 	rm -rf ${WRKSRC}/tex/generic/texnames
 	rm -rf ${WRKSRC}/tex/generic/ukrhyph
+	rm -rf ${WRKSRC}/tex/generic/xk*
 	rm -rf ${WRKSRC}/tex/lambda
 	rm -rf ${WRKSRC}/tex/latex/a4wide
 	rm -rf ${WRKSRC}/tex/latex/ams[d-z]*
@@ -269,38 +293,49 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/config
 	rm -f ${WRKSRC}/tex/latex/dvipdfm/dvipdfm.def
 	rm -rf ${WRKSRC}/tex/latex/endnotes
+	rm -rf ${WRKSRC}/tex/latex/enumitem
 	rm -rf ${WRKSRC}/tex/latex/etex
 	rm -rf ${WRKSRC}/tex/latex/exam
 	rm -rf ${WRKSRC}/tex/latex/fancyh*
 	rm -rf ${WRKSRC}/tex/latex/fnpara
+	rm -rf ${WRKSRC}/tex/latex/footmisc
 	rm -rf ${WRKSRC}/tex/latex/framed
 	rm -f ${WRKSRC}/tex/latex/graphics/[a-l]*
 	rm -f ${WRKSRC}/tex/latex/graphics/p[a-r]*
 	rm -f ${WRKSRC}/tex/latex/graphics/t[cr]*
 	rm -rf ${WRKSRC}/tex/latex/hyperref
+	rm -rf ${WRKSRC}/tex/latex/k*
 	rm -rf ${WRKSRC}/tex/latex/lm
 	rm -rf ${WRKSRC}/tex/latex/marvosym
+	rm -rf ${WRKSRC}/tex/latex/memoir
 	rm -rf ${WRKSRC}/tex/latex/mflogo
+	rm -rf ${WRKSRC}/tex/latex/microtype
+	rm -rf ${WRKSRC}/tex/latex/moreverb
+	rm -rf ${WRKSRC}/tex/latex/ms
 	rm -rf ${WRKSRC}/tex/latex/multirow
 	rm -rf ${WRKSRC}/tex/latex/n[a-n]*
 	rm -f ${WRKSRC}/tex/latex/oberdiek/[a-u]*
 	rm -rf ${WRKSRC}/tex/latex/optional
-	rm -rf ${WRKSRC}/tex/latex/parskip
+	rm -rf ${WRKSRC}/tex/latex/par*
 	rm -rf ${WRKSRC}/tex/latex/placeins
 	rm -rf ${WRKSRC}/tex/latex/preprint
 	rm -rf ${WRKSRC}/tex/latex/psnfss
 	rm -rf ${WRKSRC}/tex/latex/relsize
 	rm -rf ${WRKSRC}/tex/latex/rotating
 	rm -rf ${WRKSRC}/tex/latex/selectp
+	rm -rf ${WRKSRC}/tex/latex/sec*
+	rm -rf ${WRKSRC}/tex/latex/set*
 	rm -rf ${WRKSRC}/tex/latex/shadow
 	rm -rf ${WRKSRC}/tex/latex/showtags
 	rm -rf ${WRKSRC}/tex/latex/stmaryrd
 	rm -rf ${WRKSRC}/tex/latex/tabls
 	rm -rf ${WRKSRC}/tex/latex/threeparttable
 	rm -rf ${WRKSRC}/tex/latex/tools
+	rm -rf ${WRKSRC}/tex/latex/ty*
 	rm -rf ${WRKSRC}/tex/latex/ulem
 	rm -rf ${WRKSRC}/tex/latex/url
 	rm -rf ${WRKSRC}/tex/latex/version
+	rm -rf ${WRKSRC}/tex/latex/xk*
 	rm -rf ${WRKSRC}/tex/plain/amsfonts
 	rm -f ${WRKSRC}/tex/plain/base/[gmp-z]*
 	rm -f ${WRKSRC}/tex/plain/base/letter*
