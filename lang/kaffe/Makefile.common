@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2009/04/08 22:43:24 joerg Exp $
+# $NetBSD: Makefile.common,v 1.18 2009/07/10 19:58:12 abs Exp $
 
 DISTNAME=		kaffe-1.1.7
 CATEGORIES=		lang java
@@ -19,6 +19,8 @@ JAVA_NAME=		kaffe
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 TEST_TARGET=		check
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k 	\
 			*-*-mipsel *-*-sparc *-*-powerpc
