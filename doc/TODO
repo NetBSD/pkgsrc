@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8245 2009/07/10 12:30:38 tron Exp $
+$NetBSD: TODO,v 1.8246 2009/07/10 13:59:59 joerg Exp $
 
 Suggested new packages
 ======================
@@ -1547,36 +1547,6 @@ Licenses of packages
 
 [This section contains discussion of enhancements needed to the
 licensing framework.]
-
-	o Some packages are dual licensed, meaning that permission is
-	  granted to copy under either of two licenses.  An example is
-	  perl, with the license choice being GPL or the Artistic
-	  license.  A way is needed to encode this situation in a
-	  LICENSE= statement.  Possibilities include:
-
-	  * Add a new license file that explains the dual licensing
-            situation and refers to license files for the two
-            licenses.  This may not scale, but a small number may
-            cover many common cases (in particular, GPL/Artistic may
-            cover most of them).
-
-	  * Add some syntax that expresses dual licensing by referring
-            to multiple licenses.  For example, one could redefine the
-            value of LICENSE= to be an s-expression rather than a
-            token, and ues "(dual gnu-gpl-v2 artistic)".
-
-	o Some packages have multiple licenses, each covering a
-	  different part of the package.  Redistribution requires
-	  following the terms of all them.  It is not clear how often
-	  this situation occurs, but an example is openssl when
-	  patented algorithms are enabled.
-
-	  * We could use "(multiple gnu-gpl-v2 modified-bsd)" to
-            represent this.
-
-	o The dual and multiple license situations can occur at the
-	  same time, so ideally an arbitrary grammar is in order.
-	  But this seems too complicated.
 
 	o Documentation sometimes refers to a user "accepting a
 	  license".  This wording makes it sound like pkgsrc
