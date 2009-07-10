@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2581 2009/07/10 00:16:46 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2582 2009/07/10 00:21:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3424,3 +3424,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-moreverb-doc version 2.3 [minskim 2009-07-09]
 	Added print/tex-ms version 2008.7340 [minskim 2009-07-10]
 	Added print/tex-ms-doc version 2009.7340 [minskim 2009-07-10]
+	Added print/tex-paralist version 2.3b [minskim 2009-07-10]
+	Added print/tex-paralist-doc version 2.3b [minskim 2009-07-10]
