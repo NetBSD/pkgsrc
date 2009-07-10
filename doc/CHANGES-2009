@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2585 2009/07/10 00:53:47 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2586 2009/07/10 08:20:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3431,3 +3431,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-setspace version 6.7 [minskim 2009-07-10]
 	Added print/tex-type1cm version 0.03 [minskim 2009-07-10]
 	Added print/tex-type1cm-doc version 0.03 [minskim 2009-07-10]
+	Updated sysutils/ipa to 2.0.6 [obache 2009-07-10]
