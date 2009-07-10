@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/10 09:00:41 obache Exp $
 #
 
 DISTNAME=	pdumpfs-${VER}
@@ -9,6 +9,7 @@ MASTER_SITES=	http://0xcc.net/pdumpfs/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://0xcc.net/pdumpfs/
 COMMENT=	Simple daily backup system similar to Plan9's dumpfs
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
