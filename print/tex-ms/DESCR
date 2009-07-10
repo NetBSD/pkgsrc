@@ -1,0 +1,8 @@
+A bundle of LaTeX packages by Martin Schroeder; the collection
+comprises:
+  - count1to, make use of fixed TeX counters,
+  - everysel, set commands to execute every time a font is selected,
+  - everyshi, set commands to execute whenever a page is shipped out,
+  - multitoc, typeset the table of contents in multiple columns,
+  - prelim2e, mark typeset pages as preliminary, and
+  - ragged2e, typeset ragged text and allow hyphenation.
