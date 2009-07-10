@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/01 08:29:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/10 09:20:39 obache Exp $
 #
 
 DISTNAME=	sary-1.2.0
@@ -8,6 +8,7 @@ MASTER_SITES=	http://sary.sourceforge.net/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://sary.sourceforge.net/
 COMMENT=	Suffix array library and tools
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
