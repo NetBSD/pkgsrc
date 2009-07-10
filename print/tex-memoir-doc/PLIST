@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/10 23:23:50 minskim Exp $
+share/texmf-dist/doc/latex/memoir/README
+share/texmf-dist/doc/latex/memoir/anvil2.mps
+share/texmf-dist/doc/latex/memoir/memfonts.sty
+share/texmf-dist/doc/latex/memoir/memlays.sty
+share/texmf-dist/doc/latex/memoir/memman.pdf
+share/texmf-dist/doc/latex/memoir/memman.tex
+share/texmf-dist/doc/latex/memoir/memnoidxnum.tex
+share/texmf-dist/doc/latex/memoir/memsty.sty
+share/texmf-dist/doc/latex/memoir/titlepages.sty
