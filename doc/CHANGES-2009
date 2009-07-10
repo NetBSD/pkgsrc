@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2593 2009/07/10 23:36:33 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2594 2009/07/10 23:38:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3439,3 +3439,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-memoir-doc version 1.6180339e.6.0c [minskim 2009-07-10]
 	Added print/tex-xkeyval-doc version 2.6a [minskim 2009-07-10]
 	Updated print/tex-xkeyval to 2.6a [minskim 2009-07-10]
+	Updated print/tex-memoir to 1.6180339e.6.0c [minskim 2009-07-10]
