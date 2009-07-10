@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2008/10/17 07:31:58 adam Exp $
+# $NetBSD: Makefile,v 1.66 2009/07/10 11:23:10 tron Exp $
 
-DISTNAME=		stunnel-4.26
+DISTNAME=		stunnel-4.27
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/security/stunnel/ \
 			ftp://stunnel.mirt.net/stunnel/ \
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/security/stunnel/ \
 MAINTAINER=		shaun@inerd.com
 HOMEPAGE=		http://www.stunnel.org/
 COMMENT=		Universal SSL tunnel
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
