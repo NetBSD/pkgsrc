@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2590 2009/07/10 19:49:34 jdolecek Exp $
+$NetBSD: CHANGES-2009,v 1.2591 2009/07/10 23:24:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3436,3 +3436,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/stunnel to 4.27 [tron 2009-07-10]
 	Updated security/caff to 1.1.1 [tron 2009-07-10]
 	Updated www/php-apc to 3.1.2 [jdolecek 2009-07-10]
+	Added print/tex-memoir-doc version 1.6180339e.6.0c [minskim 2009-07-10]
