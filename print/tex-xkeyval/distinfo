@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/05/25 11:53:15 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2009/07/10 23:36:04 minskim Exp $
 
-SHA1 (xkeyval.zip) = 87f354a6449efbeb2a3786e46e8907a59dcbc791
-RMD160 (xkeyval.zip) = 4e59b29399da5915e3a52caec420a0b6990995f8
-Size (xkeyval.zip) = 455774 bytes
+SHA1 (tex-xkeyval-2.6a/xkeyval.tar.lzma) = 7e24e2c4545a1a63b85255926804169d38638535
+RMD160 (tex-xkeyval-2.6a/xkeyval.tar.lzma) = 8a1443ac6fb30cec0ccde5c9699d1ad200cacf7c
+Size (tex-xkeyval-2.6a/xkeyval.tar.lzma) = 8774 bytes
