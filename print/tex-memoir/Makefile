@@ -1,28 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/09 21:45:51 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/10 23:38:31 minskim Exp $
+# TeX Live Revision 12115
 
 DISTNAME=	memoir
-PKGNAME=	tex-${DISTNAME}-1.618
-CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/}
-EXTRACT_SUFX=	.zip
+PKGNAME=	tex-${DISTNAME}-1.6180339e.6.0c
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://tug.ctan.org/tex-archive/macros/latex/contrib/memoir/
-COMMENT=	Typeset fiction, non-fiction, and mathematical books
+COMMENT=	Typeset fiction, non-fiction and mathematical books
 
-USE_DIRS+=	texmf-1.0
+CONFLICTS+=	teTeX-texmf<=3.0nb17
+DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
+DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 
-.include "../../print/teTeX/module.mk"
-
-do-build:
-	cd ${WRKSRC} && latex memoir.ins
-
-do-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/latex/memoir
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/memman.pdf \
-		${PKG_LOCALTEXMFPREFIX}/doc/latex/memoir
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir
-	${INSTALL_DATA} ${WRKSRC}/*.cl? ${WRKSRC}/*.sty \
-		${PKG_LOCALTEXMFPREFIX}/tex/latex/memoir
-
+.include "../../print/texlive/module.mk"
 .include "../../mk/bsd.pkg.mk"
