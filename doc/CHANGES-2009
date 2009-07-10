@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2588 2009/07/10 11:23:25 tron Exp $
+$NetBSD: CHANGES-2009,v 1.2589 2009/07/10 12:30:38 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3434,3 +3434,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/ipa to 2.0.6 [obache 2009-07-10]
 	Updated graphics/p5-GD to 2.43 [sno 2009-07-10]
 	Updated security/stunnel to 4.27 [tron 2009-07-10]
+	Updated security/caff to 1.1.1 [tron 2009-07-10]
