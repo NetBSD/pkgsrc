@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8244 2009/07/10 11:23:25 tron Exp $
+$NetBSD: TODO,v 1.8245 2009/07/10 12:30:38 tron Exp $
 
 Suggested new packages
 ======================
@@ -455,7 +455,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o byacc-20080824
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
-	o caff-1.1.1
 	o cairo-1.8.8
 	o cal3d-0.11.0
 	o calamaris-2.59
