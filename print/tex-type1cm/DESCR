@@ -1,0 +1,11 @@
+LaTeX, by default, restricts the sizes at which you can use its
+default computer modern fonts, to a fixed set of discrete sizes
+(effectively, a set specified by Knuth).  The type1cm package removes
+this restriction; this is particularly useful when using scalable
+versions of the cm fonts (Bakoma, or the versions from BSR/Y&Y, or
+True Type versions from Kinch, PCTeX, etc.).  In fact, since modern
+distributions will automatically generate any bitmap font you might
+need, type1cm has wider application than just those using scaleable
+versions of the fonts.  Note that the LaTeX distribution now contains
+a package fix-cm, which performs the task of type1cm, as well as doing
+the same job for T1- and TS1-encoded ec fonts.
