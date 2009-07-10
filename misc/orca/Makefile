@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/05/19 14:07:24 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2009/07/10 22:22:47 abs Exp $
 #
 
 DISTNAME=	orca-2.26.2
@@ -18,7 +18,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool pkg-config gmake msgfmt
 USE_DIRS+=	xdg-1.1
 
-PYTHON_VERSIONS_ACCEPTED= 25 24
+PYTHON_VERSIONS_ACCEPTED= 26 25 24
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
 
