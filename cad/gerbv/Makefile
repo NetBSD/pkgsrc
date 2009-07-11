@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.35 2009/01/23 12:00:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.36 2009/07/11 01:49:54 dmcmahill Exp $
 #
 
-DISTNAME=	gerbv-2.2.0
+DISTNAME=	gerbv-2.3.0
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gerbv/}
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://gerbv.sourceforge.net/
 COMMENT=	Gerber file viewer
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
