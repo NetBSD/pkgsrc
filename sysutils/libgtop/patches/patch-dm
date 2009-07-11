@@ -1,0 +1,18 @@
+$NetBSD: patch-dm,v 1.1 2009/07/11 13:14:13 hasso Exp $
+
+--- sysdeps/freebsd/netload.c.orig	2009-07-11 13:42:20 +0300
++++ sysdeps/freebsd/netload.c	2009-07-11 14:01:00 +0300
+@@ -91,6 +91,7 @@ void
+ glibtop_get_netload_p (glibtop *server, glibtop_netload *buf,
+                        const char *interface)
+ {
++#ifndef __DragonFly__ /* TODO */
+         struct ifnet ifnet;
+         u_long ifnetaddr, ifnetfound;
+         struct sockaddr *sa = NULL;
+@@ -251,4 +252,5 @@ glibtop_get_netload_p (glibtop *server, 
+                 }
+                 return;
+         }
++#endif /* !__DragonFly__ */
+ }
