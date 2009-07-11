@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.23 2007/10/12 20:13:29 rillig Exp $
+# $NetBSD: Makefile.common,v 1.24 2009/07/11 09:11:13 rillig Exp $
+# used by x11/qt3-libs/Makefile.common
 
 QTVERSION=	3.3.8
 

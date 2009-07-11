@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/07/07 18:10:58 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2009/07/11 09:11:13 rillig Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -15,18 +15,20 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	${QTPREFIX}/doc/html ${QTPREFIX}/man/man3
 
 do-install:
-	@cd ${WRKSRC}/doc/man/man3; PAGES="`ls -1 | ${SED} -e 's,3qt$$,3,'`"; \
+	set -e; \
+	cd ${WRKSRC}/doc/man/man3; PAGES="`ls -1 | ${SED} -e 's,3qt$$,3,'`"; \
 	(for PAGE in $$PAGES; do \
 	    ${ECHO} installing ${DESTDIR}${QTPREFIX}/man/man3/$${PAGE}; \
 	    set - X `head -1 $${PAGE}qt`; \
 	    if [ $$# -eq 3 ] && [ "$$2" = .so ]; then \
-		${LN} -fs `basename $$3 | ${SED} s/qt$$//` \
+		${LN} -fs `basename $$3 | ${SED} 's/qt$$//'` \
 		  ${DESTDIR}${QTPREFIX}/man/man3/$${PAGE}; \
 	    else \
 		${INSTALL_MAN} $${PAGE}qt ${DESTDIR}${QTPREFIX}/man/man3/$${PAGE}; \
 	    fi; \
 	 done)
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README-QT.TXT ${DESTDIR}${QTPREFIX}/doc/html
+	set -e; \
 	cd ${WRKSRC};  \
 	DOCDIRS="`${FIND} doc/html -type d -print | ${SORT}`"; \
 	(for d in $${DOCDIRS}; do \
