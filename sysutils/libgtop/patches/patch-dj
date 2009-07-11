@@ -1,0 +1,22 @@
+$NetBSD: patch-dj,v 1.1 2009/07/11 13:14:13 hasso Exp $
+
+--- sysdeps/freebsd/procsignal.c.orig	2009-07-11 00:06:33 +0300
++++ sysdeps/freebsd/procsignal.c	2009-07-11 00:08:36 +0300
+@@ -66,10 +66,17 @@ glibtop_get_proc_signal_p (glibtop *serv
+ 		return;
+ 	}
+ 
++#ifdef __DragonFly__
++#define	PROC_SIGLIST	kp_siglist
++#define	PROC_SIGMASK	kp_lwp.kl_sigmask
++#define	PROC_SIGIGNORE	kp_sigignore
++#define	PROC_SIGCATCH	kp_sigcatch
++#else
+ #define	PROC_SIGLIST	ki_siglist
+ #define	PROC_SIGMASK	ki_sigmask
+ #define	PROC_SIGIGNORE	ki_sigignore
+ #define	PROC_SIGCATCH	ki_sigcatch
++#endif
+ 
+ 	/* signal: mask of pending signals.
+ 	 *         pinfo [0].kp_proc.p_siglist

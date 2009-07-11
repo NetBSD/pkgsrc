@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2009/05/26 18:49:04 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2009/07/11 13:14:13 hasso Exp $
 
 DISTNAME=		libgtop-2.26.1
+PKGREVISION=		1
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.26/}
 EXTRACT_SUFX=		.tar.bz2
@@ -60,6 +61,11 @@ PLIST.suid.h=	yes
 .if defined(PLIST.server)
 post-install:
 	${CHMOD} g+s ${DESTDIR}${PREFIX}/bin/libgtop_server2
+.endif
+
+PLIST_VARS+=    glibtop_private.h
+.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+PLIST.glibtop_private.h= yes
 .endif
 
 # XXX This needs a check in the configure script, which should be clean
