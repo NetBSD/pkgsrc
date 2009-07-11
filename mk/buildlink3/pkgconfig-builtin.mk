@@ -1,17 +1,34 @@
-# $NetBSD: pkgconfig-builtin.mk,v 1.4 2008/10/06 13:19:11 cube Exp $
+# $NetBSD: pkgconfig-builtin.mk,v 1.5 2009/07/11 07:56:25 rillig Exp $
 
-# This file is used to factor out a common pattern in builtin.mk files backed
-# up by the existence of a pkgconfig file.
+# This file is used to factor out a common pattern in builtin.mk files
+# backed up by the existence of a pkgconfig file.
 #
-# Caller has to define BUILTIN_PKG and PKGCONFIG_FILE.<BUILTIN_PKG>.
+# Parameters:
 #
-# Optionally, caller may define PKGCONFIG_BASE.<BUILTIN_PKG> as the base
-# location for a native implementation of the package.  It conveniently
-# defaults to X11BASE.
+# BUILTIN_PKG
+#	The name of the package that is tested.
 #
-# The caller may also override the default, pkgconfig-specific, version
-# script.  That means this file can be called by a lot more generic
-# builtin.mk files.
+# PKGCONFIG_FILE.<BUILTIN_PKG>
+#	The absolute path where the pkgconfig file of the native
+#	implementation of the package is stored.
+#
+#	Example: ${X11BASE}/lib/pkgconfig/fontcacheproto.pc
+#
+# PKGCONFIG_BASE.<BUILTIN_PKG> (optional)
+#	The base location for a native implementation of the package.
+#
+#	Default: ${X11BASE}
+#
+# BUILTIN_VERSION_SCRIPT.<BUILTIN_PKG> (optional)
+#	The program that is used to extract the version number from the
+#	PKGCONFIG_FILE.<BUILTIN_PKG>. The expected output is the plain
+#	version number on a single line.
+#
+#	By defining a custom script this file can be called by a lot
+#	more generic builtin.mk files.
+#
+#	Default: (something suitable for pkgconfig files)
+# 
 
 BUILTIN_FIND_FILES_VAR:=			FIND_FILES_${BUILTIN_PKG}
 BUILTIN_FIND_FILES.FIND_FILES_${BUILTIN_PKG}=	${PKGCONFIG_FILE.${BUILTIN_PKG}}
@@ -33,9 +50,7 @@ MAKEVARS:=	${MAKEVARS} IS_BUILTIN.${BUILTIN_PKG}
     (!empty(FIND_FILES_${BUILTIN_PKG}:M*.pc) || \
      (empty(FIND_FILES_${BUILTIN_PKG}:M__nonexistent__) && \
      defined(BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG})))
-. if !defined(BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG})
-BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}=	${SED} -n -e 's/Version: //p'
-. endif
+BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}?=	${SED} -n -e 's/Version: //p'
 BUILTIN_VERSION.${BUILTIN_PKG}!= ${BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}} \
 					${FIND_FILES_${BUILTIN_PKG}}
 BUILTIN_PKG.${BUILTIN_PKG}:= ${BUILTIN_PKG}-${BUILTIN_VERSION.${BUILTIN_PKG}}
