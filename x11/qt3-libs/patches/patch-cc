@@ -1,8 +1,7 @@
-$NetBSD: patch-cc,v 1.1 2007/08/01 20:51:24 tron Exp $
+$NetBSD: patch-cc,v 1.2 2009/07/11 09:11:13 rillig Exp $
 
 --- src/sql/qsqldatabase.cpp	Mon Jul 16 10:45:03 CEST 2007
 +++ src/sql/qsqldatabase.cpp	Mon Jul 16 10:45:03 CEST 2007
-
 @@ -234,7 +234,8 @@
  	db->open();
  #ifdef QT_CHECK_RANGE
@@ -22,4 +21,3 @@ $NetBSD: patch-cc,v 1.1 2007/08/01 20:51:24 tron Exp $
  #endif
  	d->driver = new QNullDriver();
  	d->driver->setLastError( QSqlError( "Driver not loaded", "Driver not loaded" ) );
-
