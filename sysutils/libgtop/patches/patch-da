@@ -1,0 +1,22 @@
+$NetBSD: patch-da,v 1.1 2009/07/11 13:14:13 hasso Exp $
+
+--- configure.orig	2009-04-13 22:32:32 +0300
++++ configure	2009-07-11 14:14:29 +0300
+@@ -21527,7 +21527,7 @@ echo $ECHO_N "checking for libgtop sysde
+ 	  libgtop_need_server=yes
+ 	  libgtop_postinstall='chgrp kmem $(bindir)/libgtop_server2 && chmod 2755 $(bindir)/libgtop_server2'
+ 	  ;;
+-	freebsd*|kfreebsd*)
++	freebsd*|kfreebsd*|dragonfly*)
+ 	  libgtop_sysdeps_dir=freebsd
+ 	  libgtop_use_machine_h=yes
+ 	  libgtop_need_server=yes
+@@ -21594,7 +21594,7 @@ echo "${ECHO_T}$libgtop_sysdeps_dir" >&6
+ 
+ 
+ 	case "$host_os" in
+-	*bsd*)
++	*bsd*|dragonfly*)
+ 		case "$host_os" in
+ 		*kfreebsd*)
+ 		{ echo "$as_me:$LINENO: checking for kvm_open in -lkvm" >&5

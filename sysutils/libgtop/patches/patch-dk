@@ -1,0 +1,43 @@
+$NetBSD: patch-dk,v 1.1 2009/07/11 13:14:13 hasso Exp $
+
+--- sysdeps/freebsd/procmap.c.orig	2008-08-18 18:23:36 +0300
++++ sysdeps/freebsd/procmap.c	2009-07-11 14:53:45 +0300
+@@ -19,6 +19,8 @@
+    Boston, MA 02111-1307, USA.
+ */
+ 
++#ifndef __DragonFly__ /* TODO */
++
+ #include <config.h>
+ #include <glibtop.h>
+ #include <glibtop/error.h>
+@@ -299,3 +301,29 @@ glibtop_get_proc_map_p (glibtop *server,
+ 
+         return (glibtop_map_entry*) g_array_free(maps, FALSE);
+ }
++#else /* __DragonFly__ */
++
++#include <config.h>
++#include <glibtop.h>
++#include <glibtop/error.h>
++#include <glibtop/procmap.h>
++
++static const unsigned long _glibtop_sysdeps_proc_map = 0;
++
++/* Init function. */
++
++void
++_glibtop_init_proc_map_p (glibtop *server)
++{
++        server->sysdeps.proc_map = _glibtop_sysdeps_proc_map;
++}
++
++/* Provides detailed information about a process. */
++
++glibtop_map_entry *
++glibtop_get_proc_map_p (glibtop *server, glibtop_proc_map *buf, pid_t pid)
++{
++        memset (buf, 0, sizeof (glibtop_proc_map));
++        return NULL;
++}
++#endif /* __DragonFly__ */
