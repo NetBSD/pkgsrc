@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.99 2009/04/09 00:51:31 joerg Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.100 2009/07/11 05:46:38 minskim Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1789,27 +1789,28 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
     <para>If a package installs TeX packages into the texmf tree,
     the <filename>ls-R</filename> database of the tree needs to be
     updated.</para>
-    <note><para>Except the main TeX packages such as teTeX-texmf,
+    <note><para>Except the main TeX packages such as kpathsea,
     packages should install files
-    into <varname>PKG_LOCALTEXMFPREFIX</varname>,
-    not <varname>PKG_TEXMFPREFIX</varname>.</para></note>
+    into <filename>${PREFIX}/share/texmf-dist</filename>,
+    not <filename>${PREFIX}/share/texmf</filename>.</para></note>
 
     <orderedlist>
       <listitem><para>Include
-      <filename>../../print/teTeX/module.mk</filename> instead
-      of <filename>../../mk/tex.buildlink3.mk</filename>.  This
+      <filename>../../print/kpathsea/texmf.mk</filename>.  This
       takes care of rebuilding the <filename>ls-R</filename>
       database at installation and deinstallation time.</para>
       </listitem>
 
       <listitem><para>If your package installs files into a texmf
       tree other than the one
-      at <varname>PKG_LOCALTEXMFPREFIX</varname>,
-      set <varname>TEXMFDIRS</varname> to the list of all texmf
+      at <filename>${PREFIX}/share/texmf-dist</filename>,
+      set <varname>TEX_TEXMF_DIRS</varname> to the list of all texmf
       trees that need database update.</para>
       <para>If your package also installs font map files that need
       to be registered using <command>updmap</command>,
-      set <varname>TEX_FONTMAPS</varname> to the list of all
+      include <filename>../../print/texlive-tetex/map.mk</filename> and
+      set <varname>TEX_MAP_FILES</varname> and/or
+      <varname>TEX_MIXEDMAP_FILES</varname> to the list of all
       such font map files.  Then <command>updmap</command> will
       be run automatically at installation/deinstallation to
       enable/disable font map files for TeX output
