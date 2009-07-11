@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2599 2009/07/11 08:05:28 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2600 2009/07/11 13:16:57 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3445,3 +3445,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated cad/gerbv to 2.3.0 [dmcmahill 2009-07-10]
 	Removed print/hugeotp2ocp [minskim 2009-07-11]
 	Updated graphics/ocrad to 0.18 [obache 2009-07-11]
+	Updated sysutils/libgtop to 2.26.1nb1 [hasso 2009-07-11]
