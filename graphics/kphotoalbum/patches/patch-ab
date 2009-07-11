@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2009/07/11 19:36:44 hasso Exp $
+
+--- src/DB/NewImageFinder.cpp.orig	2009-07-11 21:56:18 +0300
++++ src/DB/NewImageFinder.cpp	2009-07-11 21:55:38 +0300
+@@ -34,6 +34,10 @@
+ #  include "Exif/Database.h"
+ #endif
+ 
++#ifndef MAXNAMLEN
++#define MAXNAMLEN NAME_MAX
++#endif
++
+ using namespace DB;
+ 
+ bool NewImageFinder::findImages()
