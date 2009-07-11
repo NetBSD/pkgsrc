@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2598 2009/07/11 05:26:16 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2599 2009/07/11 08:05:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3444,3 +3444,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-kotex version 0.1.1 [minskim 2009-07-10]
 	Updated cad/gerbv to 2.3.0 [dmcmahill 2009-07-10]
 	Removed print/hugeotp2ocp [minskim 2009-07-11]
+	Updated graphics/ocrad to 0.18 [obache 2009-07-11]
