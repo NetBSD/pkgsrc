@@ -1,0 +1,29 @@
+$NetBSD: patch-di,v 1.1 2009/07/11 13:14:13 hasso Exp $
+
+--- sysdeps/freebsd/procmem.c.orig	2009-07-10 23:55:49 +0300
++++ sysdeps/freebsd/procmem.c	2009-07-11 00:04:52 +0300
+@@ -34,8 +34,10 @@
+ #include <vm/vm_map.h>
+ 
+ #include <sys/vnode.h>
++#ifndef __DragonFly__
+ #include <ufs/ufs/quota.h>
+ #include <ufs/ufs/inode.h>
++#endif
+ 
+ #include <sys/ucred.h>
+ #include <sys/user.h>
+@@ -93,6 +95,7 @@ glibtop_get_proc_mem_p (glibtop *server,
+ 		return;
+ 	}
+ 
++#ifndef __DragonFly__ /* TODO */
+ #define        PROC_VMSPACE   ki_vmspace
+ 
+        buf->rss_rlim = pinfo [0].ki_rssize;
+@@ -157,4 +160,5 @@ glibtop_get_proc_mem_p (glibtop *server,
+ 
+ 	buf->flags = _glibtop_sysdeps_proc_mem |
+ 		_glibtop_sysdeps_proc_mem_share;
++#endif
+ }
