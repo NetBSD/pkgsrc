@@ -1,0 +1,14 @@
+$NetBSD: patch-db,v 1.1 2009/07/11 13:14:13 hasso Exp $
+
+--- sysdeps/freebsd/glibtop_machine.h.orig	2009-07-10 22:47:31 +0300
++++ sysdeps/freebsd/glibtop_machine.h	2009-07-10 22:47:58 +0300
+@@ -25,7 +25,9 @@
+ #include <sys/param.h>
+ #include <nlist.h>
+ #include <kvm.h>
++#ifndef __DragonFly__
+ #include <sys/dkstat.h>
++#endif
+ #include <time.h>
+ #include <sys/user.h>
+ #include <sys/types.h>

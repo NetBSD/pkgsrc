@@ -1,0 +1,28 @@
+$NetBSD: patch-dh,v 1.1 2009/07/11 13:14:13 hasso Exp $
+
+--- sysdeps/freebsd/proctime.c.orig	2009-07-10 23:46:59 +0300
++++ sysdeps/freebsd/proctime.c	2009-07-10 23:53:38 +0300
+@@ -80,7 +80,9 @@ glibtop_get_proc_time_p (glibtop *server
+ 
+ 	glibtop_suid_leave (server);
+ 
++#ifndef __DragonFly__ /* TODO */
+ 	buf->rtime = pinfo [0].ki_runtime * 1e-6;
++#endif
+ 
+ 	len = sizeof (ci);
+ 	if (sysctlbyname ("kern.clockrate", &ci, &len, NULL, 0)) {
+@@ -94,6 +96,7 @@ glibtop_get_proc_time_p (glibtop *server
+ 
+ 	buf->rtime *= buf->frequency;
+ 
++#ifndef __DragonFly__ /* TODO */
+        if ((pinfo [0].ki_flag & PS_INMEM)) {
+            buf->utime = (pinfo [0].ki_runtime * 1e-6) * buf->frequency;
+ 	   buf->stime = tv2sec (pinfo [0].ki_rusage.ru_stime) * buf->frequency;
+@@ -106,4 +109,5 @@ glibtop_get_proc_time_p (glibtop *server
+            buf->start_time = tv2sec (pinfo [0].ki_start);
+            buf->flags |= _glibtop_sysdeps_proc_time_user;
+        }
++#endif
+ }

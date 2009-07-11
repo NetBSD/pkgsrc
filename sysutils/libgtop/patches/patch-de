@@ -1,0 +1,82 @@
+$NetBSD: patch-de,v 1.1 2009/07/11 13:14:13 hasso Exp $
+
+--- sysdeps/freebsd/proclist.c.orig	2009-07-10 23:21:10 +0300
++++ sysdeps/freebsd/proclist.c	2009-07-10 23:30:28 +0300
+@@ -95,7 +95,11 @@ glibtop_get_proclist_p (glibtop *server,
+ 	for (i = 0; i < len; i++) {
+ 		pid_t pid;
+ 
++#ifdef __DragonFly__
++		pid = (pid_t) pinfo[i].kp_pid;
++#else
+ 		pid = (pid_t) pinfo[i].ki_pid;
++#endif
+ 
+ 		switch (which & GLIBTOP_KERN_PROC_MASK) {
+ 			case GLIBTOP_KERN_PROC_ALL:
+@@ -105,29 +109,53 @@ glibtop_get_proclist_p (glibtop *server,
+ 					continue;
+ 				break;
+ 			case GLIBTOP_KERN_PROC_UID:
++#ifdef __DragonFly__
++				if ((uid_t) arg != pinfo[i].kp_ruid)
++#else
+ 				if ((uid_t) arg != pinfo[i].ki_ruid)
++#endif
+ 					continue;
+ 				break;
+ 			case GLIBTOP_KERN_PROC_PGRP:
++#ifdef __DragonFly__
++				if ((pid_t) arg != pinfo[i].kp_pgid)
++#else
+ 				if ((pid_t) arg != pinfo[i].ki_pgid)
++#endif
+ 					continue;
+ 				break;
+ 			case GLIBTOP_KERN_PROC_SESSION:
++#ifdef __DragonFly__
++				if ((pid_t) arg != pinfo[i].kp_sid)
++#else
+ 				if ((pid_t) arg != pinfo[i].ki_sid)
++#endif
+ 					continue;
+ 				break;
+ 			case GLIBTOP_KERN_PROC_TTY:
++#ifdef __DragonFly__
++				if ((dev_t) arg != pinfo[i].kp_tdev)
++#else
+ 				if ((dev_t) arg != pinfo[i].ki_tdev)
++#endif
+ 					continue;
+ 				break;
+ 			case GLIBTOP_KERN_PROC_RUID:
++#ifdef __DragonFly__
++				if ((uid_t) arg != pinfo[i].kp_ruid)
++#else
+ 				if ((uid_t) arg != pinfo[i].ki_ruid)
++#endif
+ 					continue;
+ 				break;
+ 			}
+ 
+ 		if (which & GLIBTOP_EXCLUDE_NOTTY)
++#ifdef __DragonFly__
++			if (pinfo[i].kp_tdev == (dev_t) -1) continue;
++#else
+ 			if (pinfo[i].ki_tdev == (dev_t) -1) continue;
++#endif
+ 
+ 		if (which & GLIBTOP_EXCLUDE_IDLE) {
+ 			glibtop_get_proc_state_p (server, &procstate, pid);
+@@ -136,7 +164,11 @@ glibtop_get_proclist_p (glibtop *server,
+ 		}
+ 
+ 		if (which & GLIBTOP_EXCLUDE_SYSTEM)
++#ifdef __DragonFly__
++			if (pinfo[i].kp_ruid == (uid_t) 0) continue;
++#else
+ 			if (pinfo[i].ki_ruid == (uid_t) 0) continue;
++#endif
+ 
+ 		g_array_append_val (pids, pid);
+ 	}

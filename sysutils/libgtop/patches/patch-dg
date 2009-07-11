@@ -1,0 +1,30 @@
+$NetBSD: patch-dg,v 1.1 2009/07/11 13:14:13 hasso Exp $
+
+--- sysdeps/freebsd/procuid.c.orig	2009-07-10 23:41:21 +0300
++++ sysdeps/freebsd/procuid.c	2009-07-10 23:43:41 +0300
+@@ -64,6 +64,17 @@ glibtop_get_proc_uid_p (glibtop *server,
+ 		return;
+ 	}
+ 
++#ifdef __DragonFly__
++#define	PROC_RUID	kp_ruid
++#define	PROC_EUID	kp_uid
++#define	PROC_RGID	kp_rgid
++#define	PROC_SVGID	kp_svgid
++#define	PROC_PPID	kp_ppid
++#define	PROC_PGID	kp_pgid
++#define	PROC_TPGID	kp_tpgid
++#define	PROC_NICE	kp_nice
++#define	PROC_PRIORITY	kp_lwp.kl_tdprio
++#else
+ #define	PROC_RUID	ki_ruid
+ #define	PROC_EUID	ki_uid
+ #define	PROC_RGID	ki_rgid
+@@ -73,6 +84,7 @@ glibtop_get_proc_uid_p (glibtop *server,
+ #define	PROC_TPGID	ki_tpgid
+ #define	PROC_NICE	ki_nice
+ #define	PROC_PRIORITY	ki_pri.pri_user
++#endif
+ 
+ 	buf->uid  = pinfo [0].PROC_RUID;
+ 	buf->euid = pinfo [0].PROC_EUID;
