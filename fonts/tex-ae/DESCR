@@ -1,0 +1,6 @@
+A set of virtual fonts which emulates T1 coded fonts using the
+standard CM fonts.  The package name, AE fonts, supposedly stands for
+"Almost European".  The main use of the package was to produce PDF
+files using Adobe Type 1 versions of the CM fonts instead of bitmapped
+EC fonts.  Note that direct substitutes for the bitmapped fonts are
+now available, via the CM-super, Latin Modern, and CM-LGC font sets.
