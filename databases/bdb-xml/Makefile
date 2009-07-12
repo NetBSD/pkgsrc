@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2008/09/24 19:32:00 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2009/07/12 12:07:44 obache Exp $
 
 DISTNAME=	dbxml-1.2.1
 PKGNAME=	${DISTNAME:S/db/bdb-/}
 PKGREVISION=	9
 CATEGORIES=	databases
-MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
+MASTER_SITES=	http://download.oracle.com/berkeley-db/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.sleepycat.com/products/xml.shtml
+HOMEPAGE=	http://www.oracle.com/database/berkeley-db/xml/index.html
 COMMENT=	Native XML data manager built on Berkeley DB
 
 PKG_DESTDIR_SUPPORT=	user-destdir
