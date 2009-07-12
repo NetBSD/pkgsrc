@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/12 02:55:54 minskim Exp $
+share/texmf-dist/tex/latex/amsrefs/amsbst.sty
+share/texmf-dist/tex/latex/amsrefs/amsrefs.sty
+share/texmf-dist/tex/latex/amsrefs/ifoption.sty
+share/texmf-dist/tex/latex/amsrefs/mathscinet.sty
+share/texmf-dist/tex/latex/amsrefs/pcatcode.sty
+share/texmf-dist/tex/latex/amsrefs/rkeyval.sty
+share/texmf-dist/tex/latex/amsrefs/textcmds.sty
