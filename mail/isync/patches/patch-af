@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.4 2009/07/12 20:26:59 tonio Exp $
+
+time_t may be 64bits
+
+--- src/drv_maildir.c.orig	2008-02-23 10:02:21.000000000 +0100
++++ src/drv_maildir.c
+@@ -936,7 +936,7 @@ maildir_store_msg( store_t *gctx, msg_da
+ 	int ret, fd, bl;
+ 	char buf[_POSIX_PATH_MAX], nbuf[_POSIX_PATH_MAX], fbuf[NUM_FLAGS + 3], base[128];
+ 
+-	bl = nfsnprintf( base, sizeof(base), "%ld.%d_%d.%s", time( 0 ), Pid, ++MaildirCount, Hostname );
++	bl = nfsnprintf( base, sizeof(base), "%lld.%d_%d.%s", (long long int) time( 0 ), Pid, ++MaildirCount, Hostname );
+ 	if (uid) {
+ #ifdef USE_DB
+ 		if (ctx->db) {
+@@ -1086,8 +1086,8 @@ maildir_trash_msg( store_t *gctx, messag
+ 	for (;;) {
+ 		nfsnprintf( buf, sizeof(buf), "%s/%s/%s", gctx->path, subdirs[gmsg->status & M_RECENT], msg->base );
+ 		s = strstr( msg->base, ":2," );
+-		nfsnprintf( nbuf, sizeof(nbuf), "%s%s/%s/%ld.%d_%d.%s%s", gctx->conf->path, gctx->conf->trash,
+-		            subdirs[gmsg->status & M_RECENT], time( 0 ), Pid, ++MaildirCount, Hostname, s ? s : "" );
++		nfsnprintf( nbuf, sizeof(nbuf), "%s%s/%s/%lld.%d_%d.%s%s", gctx->conf->path, gctx->conf->trash,
++		            subdirs[gmsg->status & M_RECENT], (long long int) time( 0 ), Pid, ++MaildirCount, Hostname, s ? s : "" );
+ 		if (!rename( buf, nbuf ))
+ 			break;
+ 		if (!stat( buf, &st )) {
