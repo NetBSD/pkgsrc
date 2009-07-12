@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2617 2009/07/12 17:32:52 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.2618 2009/07/12 20:29:54 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3470,3 +3470,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/emacs-snapshot to 23.0.96.20090710 [minskim 2009-07-12]
 	Updated emulators/stella to 2.8.4 [dholland 2009-07-12]
 	Updated devel/ncurses to 5.7nb2 [ahoka 2009-07-12]
+	Updated mail/isync to 1.0.4 [tonio 2009-07-12]
