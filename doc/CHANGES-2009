@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2612 2009/07/12 04:03:33 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2613 2009/07/12 04:46:55 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3390,7 +3390,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/libmusicbrainz to 3.0.2 [drochner 2009-07-08]
 	Updated audio/libdiscid to 0.2.2 [drochner 2009-07-08]
 	Updated multimedia/transcode to 1.1.2 [drochner 2009-07-08]
-	Updated qt4 to 4.5.2 [drochner 2009-07-08]
+	Updated x11/qt4 to 4.5.2 [drochner 2009-07-08]
 	Added graphics/exiv2-organize version 0.18.2 [drochner 2009-07-08]
 	Updated graphics/exiv2 to 0.18.2 [drochner 2009-07-08]
 	Added audio/picard version 0.11 [drochner 2009-07-08]
