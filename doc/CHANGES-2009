@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2603 2009/07/12 00:17:53 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2604 2009/07/12 02:18:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3450,3 +3450,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/tex-makeindex to 2.12nb1 [minskim 2009-07-12]
 	Added print/tex-leaflet version 1.0c [minskim 2009-07-12]
 	Added print/tex-leaflet-doc version 1.0c [minskim 2009-07-12]
+	Added print/tex-sttools version 2008.7340 [minskim 2009-07-12]
+	Added print/tex-sttools-doc version 2008.7340 [minskim 2009-07-12]
