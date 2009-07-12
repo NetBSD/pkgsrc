@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2604 2009/07/12 02:18:48 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2605 2009/07/12 02:21:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3452,3 +3452,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-leaflet-doc version 1.0c [minskim 2009-07-12]
 	Added print/tex-sttools version 2008.7340 [minskim 2009-07-12]
 	Added print/tex-sttools-doc version 2008.7340 [minskim 2009-07-12]
+	Added print/tex-acmconf version 1.3 [minskim 2009-07-12]
+	Added print/tex-acmconf-doc version 1.3 [minskim 2009-07-12]
