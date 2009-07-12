@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/12 02:17:00 minskim Exp $
+share/texmf-dist/tex/latex/sttools/boundbox.sty
+share/texmf-dist/tex/latex/sttools/cuted.sty
+share/texmf-dist/tex/latex/sttools/floatpag.sty
+share/texmf-dist/tex/latex/sttools/flushend.sty
+share/texmf-dist/tex/latex/sttools/marginal.sty
+share/texmf-dist/tex/latex/sttools/midfloat.sty
+share/texmf-dist/tex/latex/sttools/stabular.sty
+share/texmf-dist/tex/latex/sttools/stfloats.sty
+share/texmf-dist/tex/latex/sttools/texsort.sty

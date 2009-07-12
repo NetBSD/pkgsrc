@@ -1,0 +1,7 @@
+A collection of tools and macros, including a document "Inside LaTeX2e
+kernel" (which discusses some of the functions of the packages),
+miscellaneous float control, page styles for floats, multipage
+tabulars, even columns at end of twocolumn region, switching between
+one- and two- column anywhere, getting more mileage from \marginpar,
+simulating the effect of "midfloats", create a bounding box, a package
+to manipulate numerical lists, and arrays.
