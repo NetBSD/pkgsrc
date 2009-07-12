@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2618 2009/07/12 20:29:54 tonio Exp $
+$NetBSD: CHANGES-2009,v 1.2619 2009/07/12 22:13:17 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3471,3 +3471,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/stella to 2.8.4 [dholland 2009-07-12]
 	Updated devel/ncurses to 5.7nb2 [ahoka 2009-07-12]
 	Updated mail/isync to 1.0.4 [tonio 2009-07-12]
+	Updated emulators/vice to 1.22nb6 [hasso 2009-07-13]
