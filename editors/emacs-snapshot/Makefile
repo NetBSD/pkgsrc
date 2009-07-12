@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/07/08 13:32:39 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/12 11:56:54 minskim Exp $
 
-DISTNAME=	emacs-snapshot_20090703.orig
+DISTNAME=	emacs-snapshot_20090710.orig
 PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
 CATEGORIES=	editors
 MASTER_SITES=	http://emacs.orebokech.com/pool/main/e/emacs-snapshot/
@@ -29,7 +29,7 @@ BUILD_DEFS+=		GAMEDATAMODE
 PLIST_SRC+=		PLIST
 
 BUILD_TARGET=		bootstrap
-EMACS_VERSION=		23.0.95
+EMACS_VERSION=		23.0.96
 PLIST_SUBST+=		EMACS_VERSION=${EMACS_VERSION}
 
 REPLACE_PERL=		lib-src/grep-changelog
