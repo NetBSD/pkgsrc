@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/12 03:32:57 minskim Exp $
+share/texmf-dist/doc/latex/geometry/README
+share/texmf-dist/doc/latex/geometry/changes.txt
+share/texmf-dist/doc/latex/geometry/geometry-samples.tex
+share/texmf-dist/doc/latex/geometry/geometry.cfg
+share/texmf-dist/doc/latex/geometry/geometry.pdf
