@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2610 2009/07/12 02:57:27 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2611 2009/07/12 03:34:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3463,3 +3463,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-amscls to 2008.12163nb1 [minskim 2009-07-12]
 	Added print/tex-amsrefs version 2.02 [minskim 2009-07-12]
 	Added print/tex-amsrefs-doc version 2.02 [minskim 2009-07-12]
+	Added print/tex-geometry version 4.1 [minskim 2009-07-12]
+	Added print/tex-geometry-doc version 4.1 [minskim 2009-07-12]
