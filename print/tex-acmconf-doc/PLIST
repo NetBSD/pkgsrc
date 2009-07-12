@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/12 02:19:56 minskim Exp $
+share/texmf-dist/doc/latex/acmconf/README
+share/texmf-dist/doc/latex/acmconf/THIS-IS-VERSION-${PKGVERSION}
+share/texmf-dist/doc/latex/acmconf/accept.tex
+share/texmf-dist/doc/latex/acmconf/acmconf.pdf
+share/texmf-dist/doc/latex/acmconf/body.eps
+share/texmf-dist/doc/latex/acmconf/error.tex
+share/texmf-dist/doc/latex/acmconf/prepare.tex
+share/texmf-dist/doc/latex/acmconf/print.tex
+share/texmf-dist/doc/latex/acmconf/pubform.bib
+share/texmf-dist/doc/latex/acmconf/pubform.tex
+share/texmf-dist/doc/latex/acmconf/publish.tex
+share/texmf-dist/doc/latex/acmconf/submit.tex
