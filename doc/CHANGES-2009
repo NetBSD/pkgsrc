@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2605 2009/07/12 02:21:15 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2606 2009/07/12 02:25:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3454,3 +3454,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-sttools-doc version 2008.7340 [minskim 2009-07-12]
 	Added print/tex-acmconf version 1.3 [minskim 2009-07-12]
 	Added print/tex-acmconf-doc version 1.3 [minskim 2009-07-12]
+	Added print/tex-titlesec version 2.8 [minskim 2009-07-12]
+	Added print/tex-titlesec-doc version 2.8 [minskim 2009-07-12]
