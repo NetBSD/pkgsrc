@@ -1,0 +1,4 @@
+This class may be used to typeset articles to be published in the
+proceedings of ACM (Association for Computing Machinery) conferences
+and workshops.  The layout produced by the acmconf class is based on
+the ACM's own specification.
