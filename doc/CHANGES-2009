@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2602 2009/07/12 00:11:10 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2603 2009/07/12 00:17:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3448,3 +3448,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/libgtop to 2.26.1nb1 [hasso 2009-07-11]
 	Updated textproc/mdocml to 1.7.23 [joerg 2009-07-11]
 	Updated textproc/tex-makeindex to 2.12nb1 [minskim 2009-07-12]
+	Added print/tex-leaflet version 1.0c [minskim 2009-07-12]
+	Added print/tex-leaflet-doc version 1.0c [minskim 2009-07-12]

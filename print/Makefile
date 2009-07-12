@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2009/07/11 05:24:19 minskim Exp $
+# $NetBSD: Makefile,v 1.279 2009/07/12 00:17:53 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -238,6 +238,8 @@ SUBDIR+=	tex-kotex
 SUBDIR+=	tex-lambda
 SUBDIR+=	tex-latex
 SUBDIR+=	tex-latexconfig
+SUBDIR+=	tex-leaflet
+SUBDIR+=	tex-leaflet-doc
 SUBDIR+=	tex-ltxmisc
 SUBDIR+=	tex-luatex
 SUBDIR+=	tex-luatex-doc
