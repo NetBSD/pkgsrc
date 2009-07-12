@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2009/03/20 19:24:24 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2009/07/12 17:23:13 ahoka Exp $
 
 BUILDLINK_TREE+=	ncurses
 
@@ -13,21 +13,34 @@ BUILDLINK_LIBNAME.ncurses=	ncurses
 BUILDLINK_LDADD.ncurses?=	${BUILDLINK_LIBNAME.ncurses:S/^/-l/:S/^-l$//}
 
 # Many packages expect the ncurses headers and libraries to be usable as
-# <curses.h> and -lcurses.
+# <curses.h> and -lcurses and they often only look in include/ rather than
+# some properly written autoconf macros wich also try to puck up
+# ncurses/ncurses.h.
 #
-BUILDLINK_TARGETS+=		buildlink-ncurses-curses-h
+BUILDLINK_TARGETS+=		buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
 BUILDLINK_TRANSFORM+=		l:curses:${BUILDLINK_LIBNAME.ncurses}
 
-.PHONY: buildlink-ncurses-curses-h
+.PHONY: buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
 buildlink-ncurses-curses-h:
-	${RUN}								\
-	src=${BUILDLINK_PREFIX.ncurses:Q}"/include/ncurses.h";		\
-	dest=${BUILDLINK_DIR:Q}"/include/curses.h";			\
-	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
-		${ECHO_BUILDLINK_MSG} "Linking curses.h -> ncurses.h.";	\
-		${MKDIR} `${DIRNAME} "$$dest"`;				\
-		${LN} -s "$$src" "$$dest";				\
+	${RUN}									\
+	src=${BUILDLINK_PREFIX.ncurses:Q}"/include/ncurses/curses.h";		\
+	dest=${BUILDLINK_DIR:Q}"/include/curses.h";				\
+	if ${TEST} ! -f "$$dest" -a -f "$$src"; then				\
+		${ECHO_BUILDLINK_MSG} "Linking ncurses/curses.h -> curses.h.";	\
+		${MKDIR} `${DIRNAME} "$$dest"`;					\
+		${LN} -s "$$src" "$$dest";					\
 	fi
+
+buildlink-ncurses-ncurses-h:
+	${RUN}									\
+	src=${BUILDLINK_PREFIX.ncurses:Q}"/include/ncurses/ncurses.h";		\
+	dest=${BUILDLINK_DIR:Q}"/include/ncurses.h";				\
+	if ${TEST} ! -f "$$dest" -a -f "$$src"; then				\
+		${ECHO_BUILDLINK_MSG} "Linking ncurses/ncurses.h -> ncurses.h.";\
+		${MKDIR} `${DIRNAME} "$$dest"`;					\
+		${LN} -s "$$src" "$$dest";					\
+	fi
+
 .endif # NCURSES_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ncurses
