@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8248 2009/07/12 16:32:29 dholland Exp $
+$NetBSD: TODO,v 1.8249 2009/07/12 17:17:42 dholland Exp $
 
 Suggested new packages
 ======================
@@ -840,7 +840,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libchewing-0.3.0
 	o libclucene-0.9.21b
 	o libdaemon-0.13
-	o libdarie-0.2.1 [break ABI with 0.1.x]
 	o libdiscid-0.2.1
 	o libdockapp-0.6.1
 	o libelf-0.8.12
