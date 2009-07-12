@@ -1,0 +1,5 @@
+Amsrefs is a LaTeX package for bibliographies that provides an
+archival data format similar to the format of BibTeX database files,
+but adapted to make direct processing by LaTeX easier.  The package
+can be used either in conjunction with BibTeX or as a replacement for
+BibTeX.
