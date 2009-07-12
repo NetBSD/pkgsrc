@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.10 2008/11/16 17:03:00 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.11 2009/07/12 17:23:13 ahoka Exp $
 #
 # used by devel/ncursesw/Makefile
 
 DISTNAME=	ncurses-${NC_VERS}
 NC_VERS=	5.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/} \
 		ftp://dickey.his.com/ncurses/ \
@@ -25,12 +25,12 @@ CONFIGURE_ARGS+=	--enable-bsdpad
 CONFIGURE_ARGS+=	--enable-overwrite
 CONFIGURE_ARGS+=	--with-cxx-binding
 CONFIGURE_ARGS+=	--without-ada
-CONFIGURE_ARGS+=	--without-curses-h
 CONFIGURE_ARGS+=	--without-gpm
 CONFIGURE_ARGS+=	--with-manpage-format=normal
 CONFIGURE_ARGS+=	--with-manpage-tbl
 CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncurses
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
