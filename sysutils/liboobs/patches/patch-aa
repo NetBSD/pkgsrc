@@ -1,12 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/11/15 18:30:22 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/12 10:33:12 hasso Exp $
 
---- oobs/oobs-group.c.orig	2008-11-15 09:06:29.000000000 -0500
-+++ oobs/oobs-group.c
-@@ -27,7 +27,11 @@
+--- oobs/oobs-group.c.orig	2008-01-02 16:07:38 +0200
++++ oobs/oobs-group.c	2009-07-12 10:43:25 +0300
+@@ -18,6 +18,10 @@
+  * Authors: Carlos Garnacho Parro  <carlosg@gnome.org>
+  */
+ 
++#if defined(HAVE_CONFIG_H)
++#include <config.h>
++#endif
++
+ #include <glib-object.h>
+ #include "oobs-session.h"
+ #include "oobs-group.h"
+@@ -27,7 +31,11 @@
  #include "oobs-usersconfig.h"
  #include "oobs-defines.h"
  #include "utils.h"
-+#ifndef __NetBSD__
++#ifdef HAVE_CRYPT_H
  #include <crypt.h>
 +#else
 +#include <unistd.h>
