@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2607 2009/07/12 02:36:22 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2608 2009/07/12 02:42:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3458,3 +3458,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-titlesec-doc version 2.8 [minskim 2009-07-12]
 	Added fonts/tex-ae version 1.4 [minskim 2009-07-12]
 	Added fonts/tex-ae-doc version 1.4 [minskim 2009-07-12]
+	Added print/tex-amscls version 2008.12163 [minskim 2009-07-12]
+	Added print/tex-amscls-doc version 2008.12163 [minskim 2009-07-12]
