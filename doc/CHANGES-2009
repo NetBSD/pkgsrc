@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2614 2009/07/12 09:48:48 tron Exp $
+$NetBSD: CHANGES-2009,v 1.2615 2009/07/12 11:57:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3467,3 +3467,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-geometry-doc version 4.1 [minskim 2009-07-12]
 	Updated print/teTeX3-texmf to 3.0nb19 [minskim 2009-07-12]
 	Updated www/squid31 to 3.1.0.9nb1 [tron 2009-07-12]
+	Updated editors/emacs-snapshot to 23.0.96.20090710 [minskim 2009-07-12]
