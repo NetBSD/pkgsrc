@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.9 2009/07/12 22:10:59 hasso Exp $
+
+--- configure.orig	2009-07-12 21:48:36 +0300
++++ configure	2009-07-12 21:49:57 +0300
+@@ -27831,7 +27831,7 @@ _ACEOF
+ 
+ 
+ case "$host_os" in
+-  netbsd*)
++  *)
+     VICEDIR="$PREFIX/share/vice";
+ 
+ 
+@@ -27844,32 +27844,6 @@ else
+ fi
+ 
+     ;;
+-  freebsd*)
+-    VICEDIR="$PREFIX/lib/vice";
+-
+-
+-if true; then
+-  ALTERNATE_DOCDIR_TRUE=
+-  ALTERNATE_DOCDIR_FALSE='#'
+-else
+-  ALTERNATE_DOCDIR_TRUE='#'
+-  ALTERNATE_DOCDIR_FALSE=
+-fi
+-
+-    ;;
+-  *)
+-    VICEDIR="$PREFIX/lib/vice";
+-
+-
+-if false; then
+-  ALTERNATE_DOCDIR_TRUE=
+-  ALTERNATE_DOCDIR_FALSE='#'
+-else
+-  ALTERNATE_DOCDIR_TRUE='#'
+-  ALTERNATE_DOCDIR_FALSE=
+-fi
+-
+-    ;;
+ esac
+ 
+ 
