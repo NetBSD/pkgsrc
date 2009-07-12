@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2009/07/10 23:41:07 minskim Exp $
+# $NetBSD: Makefile,v 1.36 2009/07/12 04:02:59 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 CONFLICTS+=	teTeX-share-[0-9]*
+DEPENDS+=	tex-ae-[0-9]*:../../fonts/tex-ae
+DEPENDS+=	tex-amscls-[0-9]*:../../print/tex-amscls
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
@@ -26,6 +28,7 @@ DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-footmisc-[0-9]*:../../print/tex-footmisc
+DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-hyphen-basque-[0-9]*:../../print/tex-hyphen-basque
 DEPENDS+=	tex-hyphen-bulgarian-[0-9]*:../../print/tex-hyphen-bulgarian
@@ -84,6 +87,7 @@ DEPENDS+=	tex-setspace-[0-9]*:../../print/tex-setspace
 DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
 DEPENDS+=	tex-symbol-[0-9]*:../../fonts/tex-symbol
 DEPENDS+=	tex-times-[0-9]*:../../fonts/tex-times
+DEPENDS+=	tex-titlesec-[0-9]*:../../print/tex-titlesec
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-type1cm-[0-9]*:../../print/tex-type1cm
 DEPENDS+=	tex-wasy-[0-9]*:../../fonts/tex-wasy
@@ -163,17 +167,19 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/bibtex/base
 	rmdir ${WRKSRC}/doc/generic/pdfcrop
 	rm -rf ${WRKSRC}/doc/etex
+	rm -rf ${WRKSRC}/doc/fonts/ae*
 	rm -rf ${WRKSRC}/doc/fonts/am*
 	rm -rf ${WRKSRC}/doc/fonts/lm
 	rm -rf ${WRKSRC}/doc/fonts/mar*
 	rm -rf ${WRKSRC}/doc/generic/[a-f]*
 	rm -rf ${WRKSRC}/doc/generic/xk*
-	rm -rf ${WRKSRC}/doc/latex/ams[f-z]*
+	rm -rf ${WRKSRC}/doc/latex/am*
 	rm -rf ${WRKSRC}/doc/latex/carlisle
 	rm -rf ${WRKSRC}/doc/latex/enumitem
 	rm -rf ${WRKSRC}/doc/latex/exam
 	rm -rf ${WRKSRC}/doc/latex/fancyh*
 	rm -rf ${WRKSRC}/doc/latex/footmisc
+	rm -rf ${WRKSRC}/doc/latex/geo*
 	rm -rf ${WRKSRC}/doc/latex/hyperref
 	rm -rf ${WRKSRC}/doc/latex/k*
 	rm -rf ${WRKSRC}/doc/latex/memoir
@@ -189,6 +195,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/rotating
 	rm -rf ${WRKSRC}/doc/latex/sectsty
 	rm -rf ${WRKSRC}/doc/latex/stmaryrd
+	rm -rf ${WRKSRC}/doc/latex/ti*
 	rm -rf ${WRKSRC}/doc/latex/tools
 	rm -rf ${WRKSRC}/doc/latex/ty*
 	rm -rf ${WRKSRC}/doc/latex/wasysym/wasydoc.dvi
@@ -249,6 +256,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/source/public/[r-s]*
 	rm -rf ${WRKSRC}/fonts/source/public/w*
 	rm -rf ${WRKSRC}/fonts/tfm/ams
+	rm -rf ${WRKSRC}/fonts/tfm/public/ae*
 	rm -rf ${WRKSRC}/fonts/tfm/public/cm
 	rm -rf ${WRKSRC}/fonts/tfm/public/latex
 	rm -rf ${WRKSRC}/fonts/tfm/public/lm
@@ -263,6 +271,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/type1/public/lm
 	rm -rf ${WRKSRC}/fonts/type1/public/marvosym
 	rm -rf ${WRKSRC}/fonts/vf/adobe/[q-y]*
+	rm -rf ${WRKSRC}/fonts/vf/public/ae*
 	rm -rf ${WRKSRC}/fonts/vf/cg/times
 	rm -rf ${WRKSRC}/fonts/vf/yandy/times
 	rm -rf ${WRKSRC}/metafont/[a-l]*
@@ -282,7 +291,8 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/generic/xk*
 	rm -rf ${WRKSRC}/tex/lambda
 	rm -rf ${WRKSRC}/tex/latex/a4wide
-	rm -rf ${WRKSRC}/tex/latex/ams[d-z]*
+	rm -rf ${WRKSRC}/tex/latex/ae
+	rm -rf ${WRKSRC}/tex/latex/am*
 	rm -rf ${WRKSRC}/tex/latex/base
 	rm -rf ${WRKSRC}/tex/latex/bo[a-np-z]*
 	rm -rf ${WRKSRC}/tex/latex/can*
@@ -300,6 +310,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/fnpara
 	rm -rf ${WRKSRC}/tex/latex/footmisc
 	rm -rf ${WRKSRC}/tex/latex/framed
+	rm -rf ${WRKSRC}/tex/latex/geo*
 	rm -f ${WRKSRC}/tex/latex/graphics/[a-l]*
 	rm -f ${WRKSRC}/tex/latex/graphics/p[a-r]*
 	rm -f ${WRKSRC}/tex/latex/graphics/t[cr]*
@@ -330,6 +341,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/stmaryrd
 	rm -rf ${WRKSRC}/tex/latex/tabls
 	rm -rf ${WRKSRC}/tex/latex/threeparttable
+	rm -rf ${WRKSRC}/tex/latex/ti*
 	rm -rf ${WRKSRC}/tex/latex/tools
 	rm -rf ${WRKSRC}/tex/latex/ty*
 	rm -rf ${WRKSRC}/tex/latex/ulem
