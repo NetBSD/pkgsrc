@@ -1,0 +1,6 @@
+A package providing an interface to sectioning commands for selection
+from various title styles.  E.g., marginal titles and to change the
+font of all headings with a single command, also providing simple
+one-step page styles.  Also includes a package to change the page
+styles when there are floats in a page.  You may assign
+headers/footers to individual floats, too.
