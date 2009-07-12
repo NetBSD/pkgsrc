@@ -1,0 +1,11 @@
+The package provides an easy and flexible user interface to customize
+page layout, implementing auto-centering and auto- balancing
+mechanisms so that the users have only to give the least description
+for the page layout.  For example, if you want to set each margin 2cm
+without header space, what you need is just
+\usepackage[margin=2cm,nohead]{geometry}.  The package knows about all
+the standard paper sizes, so that the user need not know what the
+nominal 'real' dimensions of the paper are, just its standard name
+(such as a4, letter, etc.).  An important feature is the package's
+ability to communicate the paper size it's set up to the output
+(whether via DVI \specials or via direct interaction with PDF(La)TeX).
