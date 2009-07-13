@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/07/13 18:37:55 tonio Exp $
 bin/rubber
 bin/rubber-info
 bin/rubber-pipe
@@ -18,6 +18,7 @@ share/rubber/modules/minitoc-hyper.rub
 share/rubber/modules/ntheroem.rub
 share/rubber/modules/omega.rub
 share/rubber/modules/revtex4.rub
+share/rubber/rubber-${RUBBERVERSUFFIX}-py${PYVERSSUFFIX}.egg-info
 share/rubber/rubber/__init__.py
 share/rubber/rubber/__init__.pyc
 share/rubber/rubber/cmd_info.py
