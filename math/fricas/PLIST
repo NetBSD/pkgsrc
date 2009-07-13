@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 20:47:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/07/13 19:57:22 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -116,6 +116,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMBOPC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMMONOP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMMUPC.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPAR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPFACT.${FASL}
@@ -290,7 +291,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FLOAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FLOATCP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FLOATRP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FM.${FASL}
-lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FM1.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FM2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMFUN.${FASL}
@@ -838,6 +839,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QFCAT2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QFORM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUAT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUAT2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUATCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUATCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUATCT2.${FASL}
@@ -1942,6 +1944,8 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/POLY.ht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/POLY.pht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/QUAT.ht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/QUAT.pht
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/QUAT2.ht
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/QUAT2.pht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/RADIX.ht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/RADIX.pht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/RECLOS.ht
