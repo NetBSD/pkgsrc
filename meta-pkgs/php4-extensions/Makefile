@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2007/12/19 12:27:30 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2009/07/13 14:49:15 joerg Exp $
 
 DISTNAME=	php-extensions-4.4
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	meta-pkgs www php4
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -47,7 +47,6 @@ DEPENDS+=	php4-posix-4.4.*:../../devel/php-posix
 DEPENDS+=	php4-shmop-4.4.*:../../devel/php-shmop
 DEPENDS+=	php4-snmp-4.4.*:../../net/php-snmp
 DEPENDS+=	php4-sockets-4.4.*:../../net/php-sockets
-DEPENDS+=	php4-sqlite-4.4.*:../../databases/php-sqlite
 DEPENDS+=	php4-sysvsem-4.4.*:../../devel/php-sysvsem
 DEPENDS+=	php4-sysvshm-4.4.*:../../devel/php-sysvshm
 DEPENDS+=	php4-wddx-4.4.*:../../textproc/php-wddx
