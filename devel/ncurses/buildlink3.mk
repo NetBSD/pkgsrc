@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2009/07/12 17:41:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2009/07/13 20:36:42 ahoka Exp $
 
 BUILDLINK_TREE+=	ncurses
 
@@ -19,6 +19,7 @@ BUILDLINK_LDADD.ncurses?=	${BUILDLINK_LIBNAME.ncurses:S/^/-l/:S/^-l$//}
 #
 BUILDLINK_TARGETS+=		buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
 BUILDLINK_TRANSFORM+=		l:curses:${BUILDLINK_LIBNAME.ncurses}
+BUILDLINK_INCDIRS.ncurses+=	include/ncurses
 
 .PHONY: buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
 buildlink-ncurses-curses-h:
