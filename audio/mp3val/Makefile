@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/07 19:36:19 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/13 07:07:26 wiz Exp $
 #
 
 DISTNAME=	mp3val-0.1.8-src
@@ -15,7 +15,9 @@ USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.linux
 BUILD_TARGET=	mp3val
-PKG_DESTDIR_SUPPORT= user-destdir
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mp3val ${DESTDIR}${PREFIX}/bin
