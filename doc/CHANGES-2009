@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2621 2009/07/13 18:28:43 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2622 2009/07/13 19:45:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3474,3 +3474,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/vice to 1.22nb6 [hasso 2009-07-13]
 	Updated databases/tokyotyrant to 1.1.31 [obache 2009-07-13]
 	Updated chat/irchat-pj to 2.4.24.22nb2 [hasso 2009-07-13]
+	Added archivers/pigz version 2.1.4 [wiz 2009-07-13]
