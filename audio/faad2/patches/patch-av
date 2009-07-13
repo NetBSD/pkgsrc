@@ -1,0 +1,23 @@
+$NetBSD: patch-av,v 1.1 2009/07/13 12:55:54 tonio Exp $
+
+install mp4ff
+
+--- ./common/mp4ff/mp4ff.h.orig	2007-11-01 13:33:29.000000000 +0100
++++ ./common/mp4ff/mp4ff.h
+@@ -35,7 +35,15 @@
+ extern "C" {
+ #endif /* __cplusplus */
+ 
+-#include "mp4ff_int_types.h"
++#if HAVE_SYS_TYPES_H
++#include <sys/types.h>
++#endif
++#if HAVE_INTTYPES_H
++#include <inttypes.h>
++#endif
++#if HAVE_STDINT_H
++#include <stdint.h>
++#endif
+ 
+ /* file callback structure */
+ typedef struct
