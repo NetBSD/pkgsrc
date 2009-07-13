@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2009/02/09 22:56:27 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/07/13 18:37:55 tonio Exp $
 #
 
 DISTNAME=		rubber-1.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		textproc
 MASTER_SITES=		http://ebeffara.free.fr/pub/
 
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--datadir=${PREFIX:Q}/share
 CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR:Q}
 CONFIGURE_ARGS+=	--infodir=${PREFIX:Q}/${PKGINFODIR:Q}
+
+PLIST_SUBST+=		RUBBERVERSUFFIX=${PKGVERSION_NOREV}
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/tex.buildlink3.mk"
