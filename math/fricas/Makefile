@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2009/04/30 19:55:47 asau Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/13 19:57:22 asau Exp $
 
-PKGNAME=		fricas-1.0.6
+PKGNAME=		fricas-1.0.7
 DISTNAME=		${PKGNAME_NOREV}-full
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://fricas.sourceforge.net/
 COMMENT=		FriCAS is a fork of the Axiom computer algebra system
+
+LICENSE=		modified-bsd
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
@@ -22,7 +24,6 @@ MAKE_JOBS_SAFE=		no
 
 # Problems:
 # 4. Emacs files should go into "site-lisp".
-# 5. view3D hangs sometimes (?), killing it doesn't affect binary package.
 
 .include "options.mk"
 
