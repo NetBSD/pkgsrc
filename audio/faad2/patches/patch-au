@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2009/07/13 12:55:54 tonio Exp $
+
+install mp4ff
+
+--- ./common/mp4ff/Makefile.am.orig	2006-05-07 20:09:00.000000000 +0200
++++ ./common/mp4ff/Makefile.am
+@@ -1,4 +1,5 @@
+-noinst_LTLIBRARIES = libmp4ff.la
++lib_LTLIBRARIES = libmp4ff.la
++include_HEADERS = mp4ff.h
+ 
+ libmp4ff_la_CFLAGS = -DUSE_TAGGING=1
+ 
