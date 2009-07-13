@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/08 17:20:50 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/13 14:50:40 joerg Exp $
 #
 
 DISTNAME=	Coherence-0.6.4
@@ -13,7 +13,7 @@ COMMENT=	Media server framework
 USE_LANGUAGES=	# none
 PKG_DESTDIR_SUPPORT= user-destdir
 
-DEPENDS+= ${PYPKGPREFIX}-twisted:../../net/py-twisted
+DEPENDS+= ${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
