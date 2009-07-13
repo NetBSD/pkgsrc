@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.2.2 2009/07/13 18:49:58 tron Exp $
+
+--- web2c/splitup.c.orig	2008-03-24 08:47:15.000000000 -0700
++++ web2c/splitup.c
+@@ -13,7 +13,6 @@
+ #define unlink delete
+ #endif
+ 
+-char *program_invocation_name;
+ int filenumber = 0, ifdef_nesting = 0, lines_in_file = 0;
+ char *output_name = NULL;
+ boolean has_ini;
