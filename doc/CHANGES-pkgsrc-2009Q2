@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.3 2009/07/09 20:11:17 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.4 2009/07/13 18:50:41 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -9,3 +9,9 @@ Pullup ticket #2803 - requested by he
 math/tasp-vsipl: build fix
 Pullup ticket #2804 - by he
 mk/bulk/build: robustness improvement
+Pullup ticket #2806 - requested by minskim
+ruby-stream: build fix
+Pullup ticket #2807 - requested by minskim
+emacs-ilisp: build fix
+Pullup ticket #2808 - requested by minskim
+xetex: build fix
