@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/04/11 21:35:19 minskim Exp $
+$NetBSD: patch-ad,v 1.1.1.1.2.1 2009/07/13 18:49:57 tron Exp $
 
 --- web2c/Makefile.in.orig	2008-04-15 16:20:46.000000000 -0700
 +++ web2c/Makefile.in
+@@ -38,7 +38,7 @@ $(LEX_OUTPUT_ROOT).c: web2c.l
+ fixwrites: fixwrites.o kps.o
+ 	$(build_link_command) fixwrites.o kps.o
+ splitup: splitup.o kps.o
+-	$(build_link_command) splitup.o kps.o
++	$(kpathsea_link) splitup.o kps.o $(kpathsea)
+ regfix: regfix.o kps.o
+ 	$(build_link_command) regfix.o kps.o
+ makecpool: makecpool.o 
 @@ -71,4 +71,3 @@ clean::
  	rm -f y_tab.c y_tab.h y.out* yacc.* $(LEX_OUTPUT_ROOT).c
  
