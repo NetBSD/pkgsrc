@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2009/07/07 11:09:51 minskim Exp $
+# $NetBSD: Makefile,v 1.113 2009/07/13 19:45:24 wiz Exp $
 #
 
 COMMENT=	Archivers
@@ -62,6 +62,7 @@ SUBDIR+=	pdbar
 SUBDIR+=	php-bz2
 SUBDIR+=	php-zip
 SUBDIR+=	php-zlib
+SUBDIR+=	pigz
 SUBDIR+=	ppmd
 SUBDIR+=	ppunpack
 SUBDIR+=	rar
