@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2006/09/02 20:13:58 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/07/14 18:56:00 rafal Exp $
 bin/shncat
 bin/shncmp
 bin/shnconv
 bin/shncue
 bin/shnfix
+bin/shngen
+bin/shnhash
 bin/shninfo
 bin/shnjoin
 bin/shnlen
-bin/shnmd5
 bin/shnpad
 bin/shnsplit
 bin/shnstrip
 bin/shntool
+bin/shntrim
 man/man1/shntool.1
