@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8251 2009/07/14 10:34:34 tnn Exp $
+$NetBSD: TODO,v 1.8252 2009/07/14 18:21:58 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1165,7 +1165,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o randread-0.2
 	o rapidsvn-0.9.8
 	o rat-4.2.25
-	o ratpoison-1.4.4
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
