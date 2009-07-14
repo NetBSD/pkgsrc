@@ -1,0 +1,207 @@
+$NetBSD: patch-ak,v 1.1 2009/07/14 06:19:43 dholland Exp $
+
+The standard says that failing () doesn't stop the shell, even when -e
+is set, so () constructs need || exit $? on the end. (Which needs to be
+$$? when it's coming from inside make.)
+
+--- Imake.rules~	2005-11-08 01:33:24.000000000 -0500
++++ Imake.rules	2008-08-30 11:57:32.000000000 -0400
+@@ -534,9 +534,9 @@
+ 		set +x; \						@@\
+ 	else \								@@\
+ 		if [ -h dir ]; then \					@@\
+-			(set -x; rm -f dir); \				@@\
++			(set -x; rm -f dir) || exit $$?; \		@@\
+ 		fi; \							@@\
+-		(set -x; $(MKDIRHIER) dir); \				@@\
++		(set -x; $(MKDIRHIER) dir) || exit $$?; \		@@\
+ 	fi
+ #endif /* MakeDir */
+ 
+@@ -545,9 +545,9 @@
+ 		:; \							@@\
+ 	else \								@@\
+ 		if [ -h dir ]; then \					@@\
+-			(set -x; rm -f dir); \				@@\
++			(set -x; rm -f dir) || exit $$?; \		@@\
+ 		fi; \							@@\
+-		(set -x; $(MKDIRHIER) dir); \				@@\
++		(set -x; $(MKDIRHIER) dir) || exit $$?; \		@@\
+ 	fi
+ #endif /* MakeDirInline */
+ 
+@@ -571,7 +571,7 @@
+ 	@(set -x; cd $(BUILDINCDIR) && for i in srclist; do \		@@\
+ 		RemoveFile($$i); \					@@\
+ 		$(LN) $(BUILDINCTOP)/$(CURRENT_DIR)/$$i .; \		@@\
+-	done)
++	done) || exit $$?
+ #endif /* BuildIncludesTop */
+ 
+ #ifndef BuildIncludes
+@@ -581,7 +581,7 @@
+ 	@(set -x; cd $(BUILDINCDIR)/dstsubdir && for i in srclist; do \	@@\
+ 		RemoveFile($$i); \					@@\
+ 		$(LN) $(BUILDINCTOP)/dstupdir/$(CURRENT_DIR)/$$i .; \	@@\
+-	done)
++	done) || exit $$?
+ #endif /* BuildIncludes */
+ 
+ /*
+@@ -604,7 +604,7 @@
+ 	@(set -x; cd $(BUILDINCDIR)/dstsubdir && for i in srclist; do \	@@\
+ 		RemoveFile($$i); \					@@\
+ 		$(LN) $(BUILDINCTOP)/dstupdir/$(CURRENT_DIR)/$$i .; \	@@\
+-	done)
++	done) || exit $$?
+ #endif /* BuildInterfaces */
+ 
+ /*
+@@ -1302,7 +1302,7 @@
+ 	RemoveFile($${TMP}); \						@@\
+ 	echo .so `basename destdir`/file.$(MANSUFFIX) > $${TMP}; \	@@\
+ 	for i in aliases; do (set -x; \					@@\
+-	$(INSTALL) $(INSTALLFLAGS) $(INSTMANFLAGS) $${TMP} $(DESTDIR)destdir/$$i.$(MANSUFFIX)); \ @@\
++	$(INSTALL) $(INSTALLFLAGS) $(INSTMANFLAGS) $${TMP} $(DESTDIR)destdir/$$i.$(MANSUFFIX)) || exit $$?; \ @@\
+ 	done; \								@@\
+ 	RemoveFile($${TMP}))
+ #endif /* InstallManPageAliases */
+@@ -1337,7 +1337,7 @@
+ 	RemoveFile($${TMP}); \						@@\
+ 	echo .so `basename destdir`/file.suffix > $${TMP}; \		@@\
+ 	for i in aliases; do (set -x; \					@@\
+-	$(INSTALL) $(INSTALLFLAGS) $(INSTMANFLAGS) $${TMP} $(DESTDIR)destdir/$$i.suffix); \ @@\
++	$(INSTALL) $(INSTALLFLAGS) $(INSTMANFLAGS) $${TMP} $(DESTDIR)destdir/$$i.suffix) || exit $$?; \ @@\
+ 	done; \								@@\
+ 	RemoveFile($${TMP}))
+ #endif /* InstallGenManPageAliases */
+@@ -1397,8 +1397,8 @@
+ 	for i in aliases; do (set -x; \					@@\
+ 	$(RM) $(DESTDIR)destdir/$$i.*; \				@@\
+ 	(cd $(DESTDIR)destdir; $(LN) file.$${SUFFIX} \			@@\
+-	$$i.$${SUFFIX})); \						@@\
+-	done)
++	$$i.$${SUFFIX}) || exit $$?) || exit $$?; \			@@\
++	done) || exit $$?
+ #endif
+ 
+ #ifndef InstallManPageAliases
+@@ -1499,7 +1499,8 @@
+ 	for i in aliases; do (set -x; \					@@\
+ 	  RemoveFile($(DESTDIR)$(DOCHTMLDIR)/$$i.$$SUF.html); \		@@\
+ 	  (cd $(DESTDIR)$(DOCHTMLDIR); \				@@\
+-	    $(LN) file.$$SUF.html $$i.$$SUF.html)); \			@@\
++	    $(LN) file.$$SUF.html $$i.$$SUF.html) || exit $$? \		@@\
++	) || exit $$?; \						@@\
+ 	done
+ #else
+ #define InstallHtmlManPageAliases(file,aliases,suffix) /**/
+@@ -1681,7 +1682,7 @@
+ #ifndef MakeNamedTargetSubdir
+ #define MakeNamedTargetSubdir(dir,flags,subname)\
+ 		(cd dir && $(MAKE) $(MFLAGS) $(PARALLELMFLAGS) \	@@\
+-			flags subname)
++			flags subname) || exit $$?
+ #endif
+ 
+ /*
+@@ -1692,7 +1693,7 @@
+ step::									@@\
+ 	@MakeFlagsToShellFlags(i,set +e); \				@@\
+ 	echo "	cd" dir; cd dir && \					@@\
+-	for i in list; do (set -x; $(LN) -f sub/$$i .); done
++	for i in list; do (set -x; $(LN) -f sub/$$i .) || exit $$?; done
+ #endif
+ 
+ 
+@@ -1809,7 +1810,7 @@
+ 	MakeDir($(DESTDIR)dest)						@@\
+ 	@MakeFlagsToShellFlags(i,set +e); \				@@\
+ 	for i in list; do \						@@\
+-		(set -x; $(INSTALL) $(INSTALLFLAGS) flags $$i $(DESTDIR)dest); \	@@\
++		(set -x; $(INSTALL) $(INSTALLFLAGS) flags $$i $(DESTDIR)dest) || exit $$?; \	@@\
+ 	done
+ #endif /* InstallMultipleDestFlags */
+ 
+@@ -1876,7 +1877,7 @@
+ 	MakeDir($(DESTDIR)dest)						@@\
+ 	@MakeFlagsToShellFlags(i,set +e); \				@@\
+ 	for i in list; do \						@@\
+-	  (set -x; $(INSTALL) $(INSTALLFLAGS) $(INSTMANFLAGS) $$i.suffix $(DESTDIR)dest/$$i.$(MANSUFFIX)); \	@@\
++	  (set -x; $(INSTALL) $(INSTALLFLAGS) $(INSTMANFLAGS) $$i.suffix $(DESTDIR)dest/$$i.$(MANSUFFIX)) || exit $$?; \	@@\
+ 	done
+ #endif /* InstallMultipleManSuffix */
+ 
+@@ -2601,7 +2602,8 @@
+ #define LinkBuildLibraryMaybe(lib,doit) MakeDir($(BUILDLIBDIR))		@@\
+ 	@if doit; then (set -x; \					@@\
+ 	  RemoveFile($(BUILDLIBDIR)/lib); \				@@\
+-	  cd $(BUILDLIBDIR) && $(LN) $(BUILDLIBTOP)/$(CURRENT_DIR)/lib .); fi
++	  cd $(BUILDLIBDIR) && \					@@\
++	    $(LN) $(BUILDLIBTOP)/$(CURRENT_DIR)/lib .) || exit $$?; fi
+ #endif
+ #endif /* LinkBuildLibraryMaybe */
+ 
+@@ -2615,7 +2617,9 @@
+ #else
+ #define LinkBuildSonameLibrary(lib) MakeDirInline($(BUILDLIBDIR));\	@@\
+ 	(set -x; RemoveFile($(BUILDLIBDIR)/lib);\			@@\
+-	(cd $(BUILDLIBDIR) && $(LN) $(BUILDLIBTOP)/$(CURRENT_DIR)/lib .))
++	  (cd $(BUILDLIBDIR) && \					@@\
++	    $(LN) $(BUILDLIBTOP)/$(CURRENT_DIR)/lib .) || exit $$? \	@@\
++	) || exit $$?
+ #endif
+ #endif /* LinkBuildSonameLibrary */
+ 
+@@ -2713,9 +2717,9 @@
+ 									@@\
+ LibraryTargetName(libname): objlist1 objlist2 objlist3 $(EXTRALIBRARYDEPS)	@@\
+ 	RemoveFile($@)							@@\
+-	(cd down && MakeLibrary(up/$@,objlist1))			@@\
+-	(cd down && MakeLibrary(up/$@,objlist2))			@@\
+-	(cd down && MakeLibrary(up/$@,objlist3))			@@\
++	(cd down && MakeLibrary(up/$@,objlist1)) || exit $$?		@@\
++	(cd down && MakeLibrary(up/$@,objlist2)) || exit $$?		@@\
++	(cd down && MakeLibrary(up/$@,objlist3)) || exit $$?		@@\
+ 	RanLibrary($@)							@@\
+ 	_LinkBuildLibrary($@)
+ #endif /* UnsharedLibraryTarget3 */
+@@ -2952,7 +2956,7 @@
+ 	@-(list=`echo srclist | sed -e 's/[^ ]*\///g'`; \		@@\
+ 		set -x; cd dir && RemoveFiles($$list))			@@\
+ 	@for i in srclist; do \						@@\
+-		(set -x; cd dir && $(LN) ../$$i .); \			@@\
++		(set -x; cd dir && $(LN) ../$$i .) || exit $$?; \	@@\
+ 	done								@@\
+ 									@@\
+ dir::									@@\
+@@ -2974,8 +2978,9 @@
+ 	@MakeFlagsToShellFlags(ik,set +e); \				@@\
+ 	for i in dirs ;\						@@\
+ 	do \								@@\
+-		echo verb "in $(CURRENT_DIR)/$$i..."; \			@@\
+-		(cd $$i && LANG=lang $(MAKE) $(MFLAGS) flags subname);\ @@\
++	    echo verb "in $(CURRENT_DIR)/$$i..."; \			@@\
++	    (cd $$i && \						@@\
++	       LANG=lang $(MAKE) $(MFLAGS) flags subname) || exit $$?; \ @@\
+ 	done
+ #endif
+ 
+@@ -3384,7 +3389,7 @@
+ step::									@@\
+ 	DirFailPrefix@MakeFlagsToShellFlags(i,set +e); \		@@\
+ 	for i in dirs; do if [ -d $(DESTDIR)$$i ]; then \		@@\
+-		set +x; else (set -x; $(MKDIRHIER) $(DESTDIR)$$i); fi; \ @@\
++		set +x; else (set -x; $(MKDIRHIER) $(DESTDIR)$$i) || exit $$?; fi; \ @@\
+ 	done
+ #endif /* MakeDirectories */
+ 
+@@ -3610,7 +3615,7 @@
+ 	@$(CP) Concat3(libpath,/lib,libname.a) tmp			@@\
+ 	@(cd tmp; set -x; ArExtCmd Concat(lib,libname.a); \		@@\
+ 	  $(LD) $(LDCOMBINEFLAGS) *.Osuf -o ../$@; \			@@\
+-	  RemoveFiles(*.Osuf))						@@\
++	  RemoveFiles(*.Osuf)) || exit $$?				@@\
+ 	@$(RM) -r tmp							@@\
+ 									@@\
+ clean::									@@\
