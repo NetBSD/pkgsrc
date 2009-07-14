@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/06/23 16:14:34 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/07/14 22:16:35 joerg Exp $
 #
 
 DISTNAME=		edb-1.0.5
@@ -18,7 +18,7 @@ USE_LANGUAGES=		c c++
 USE_NCURSES=		YES # putwin
 PKGCONFIG_OVERRIDE=	edb.pc.in
 
-CONFIGURE_ARGS+=	--enable-cxx
+CONFIGURE_ARGS+=	--enable-cxx --disable-gtk
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
