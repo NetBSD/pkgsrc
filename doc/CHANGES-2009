@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2632 2009/07/14 18:21:58 tonio Exp $
+$NetBSD: CHANGES-2009,v 1.2633 2009/07/14 18:46:23 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3487,3 +3487,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/pokerth to 0.7.1 [hasso 2009-07-14]
 	Updated sysutils/acpica-utils to 20090625 [tnn 2009-07-14]
 	Updated wm/ratpoison to 1.4.5 [tonio 2009-07-14]
+	Updated multimedia/dirac to 1.0.2nb1 [hasso 2009-07-14]
