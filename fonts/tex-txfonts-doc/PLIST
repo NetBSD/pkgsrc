@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/14 22:15:34 minskim Exp $
+share/texmf-dist/doc/fonts/txfonts/00bug_fix.txt
+share/texmf-dist/doc/fonts/txfonts/COPYRIGHT
+share/texmf-dist/doc/fonts/txfonts/README
+share/texmf-dist/doc/fonts/txfonts/txfontsdoc.pdf
+share/texmf-dist/doc/fonts/txfonts/txfontsdoc.tex
+share/texmf-dist/doc/fonts/txfonts/txfontsdocA4.pdf
+share/texmf-dist/doc/fonts/txfonts/txfontsdocA4.tex
+share/texmf-dist/doc/fonts/txfonts/txmi.vpl
