@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2635 2009/07/14 19:31:34 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2636 2009/07/14 20:24:39 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3490,3 +3490,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/dirac to 1.0.2nb1 [hasso 2009-07-14]
 	Updated textproc/mdocml to 1.8.0 [joerg 2009-07-14]
 	Updated audio/gtkpod to 0.99.14nb1 [hasso 2009-07-14]
+	Updated x11/nucleo to 0.7.5 [hasso 2009-07-14]
