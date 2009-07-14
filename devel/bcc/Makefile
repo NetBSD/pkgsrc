@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/03/08 00:13:43 reed Exp $
+# $NetBSD: Makefile,v 1.22 2009/07/14 17:26:35 tnn Exp $
 
 DISTNAME=		bcc
 PKGREVISION=		1
@@ -11,7 +11,7 @@ COMMENT=		Bruce Evans' C compiler (with as and ld); can do 16-bit code
 CONFLICTS=		bin86-[0-9]*
 CONFLICTS+=		dev86-[0-9]*
 
-NOT_FOR_PLATFORM=	*-*-alpha *-*-x86_64	# Severe LP64 problems
+NOT_FOR_PLATFORM=	*-*-alpha
 NOT_FOR_PLATFORM+=	Interix-*-*		# no <a.out.h>
 
 USE_BSD_MAKEFILE=	yes
@@ -20,6 +20,12 @@ USE_TOOLS+=		groff nroff
 INSTALLATION_DIRS=	bin lib/bcc ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH}  == "x86_64"
+# Has LP64 issues, so must build as 32-bit binary
+CFLAGS+=		-m32
+LDFLAGS+=		-m32
+.endif
 
 .if ${OPSYS} == "DragonFly"
 CPPFLAGS+=	-D_POSIX_SOURCE
