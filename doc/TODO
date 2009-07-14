@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8252 2009/07/14 18:21:58 tonio Exp $
+$NetBSD: TODO,v 1.8253 2009/07/14 18:55:59 rafal Exp $
 
 Suggested new packages
 ======================
@@ -1259,7 +1259,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sharity-light-1.3
 	o shc-3.8
 	o shmux-1.0.2
-	o shntool-3.0.8
 	o sign-1.0.7
 	o silc-server-1.1.15
 	o silc-toolkit-2.1.9
