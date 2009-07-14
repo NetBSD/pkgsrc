@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2009/06/10 06:52:01 minskim Exp $
+# $NetBSD: Makefile.common,v 1.5 2009/07/14 22:16:25 joerg Exp $
 
-DISTNAME=	evas-0.9.9.060
+DISTNAME=	evas-0.9.9.061
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-04-22/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-06-14/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
@@ -41,4 +41,4 @@ CONFIGURE_ARGS+=	--disable-image-loader-${mod}
 CONFIGURE_ARGS+=	--enable-cpu-altivec
 .endif
 
-PLIST_SUBST=	MODULE_ARCH=${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}-${LOWER_ARCH}-ver-pre-01
+PLIST_SUBST=	MODULE_ARCH=${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}-${LOWER_ARCH}-ver-svn-02
