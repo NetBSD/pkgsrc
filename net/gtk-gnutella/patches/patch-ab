@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.7 2009/07/14 09:41:31 hasso Exp $
+
+SVN rev 16947 from upstream.
+
+--- src/lib/entropy.c.orig	2009-07-14 12:11:05 +0300
++++ src/lib/entropy.c	2009-07-14 12:11:54 +0300
+@@ -120,15 +120,12 @@ entropy_collect(struct sha1 *digest)
+ 		 * Compute the SHA1 of the output (either ps or /dev/urandom).
+ 		 */
+ 
+-		SHA1Input(&ctx, f, sizeof *f);		/* Initial state */
+-
+ 		for (;;) {
+ 			guint8 data[1024];
+ 			int r;
+ 			int len = is_pipe ? sizeof(data) : 128;
+ 
+ 			r = fread(data, 1, len, f);
+-			SHA1Input(&ctx, f, sizeof *f);	/* Changes as we read */
+ 			if (r)
+ 				SHA1Input(&ctx, data, r);
+ 			if (r < len || !is_pipe)		/* Read once from /dev/urandom */
