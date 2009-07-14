@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2008/04/10 18:04:51 tonio Exp $
+$NetBSD: distinfo,v 1.14 2009/07/14 18:20:46 tonio Exp $
 
-SHA1 (ratpoison-1.4.3.tar.gz) = cde8c14c32da82a04ea921545f999ed83045ef4f
-RMD160 (ratpoison-1.4.3.tar.gz) = f17f3db64cb11758e76c875cf1743931a0c623ec
-Size (ratpoison-1.4.3.tar.gz) = 418364 bytes
+SHA1 (ratpoison-1.4.5.tar.gz) = e32430de49c4ab5d501653c03dd19dfb623cb08b
+RMD160 (ratpoison-1.4.5.tar.gz) = ae2fc0cd7ef561944cf7aea0623875a7148771ce
+Size (ratpoison-1.4.5.tar.gz) = 427366 bytes
