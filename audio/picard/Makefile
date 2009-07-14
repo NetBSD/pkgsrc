@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/07 09:39:21 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/14 09:03:04 hasso Exp $
 #
 
 DISTNAME=	picard-0.11
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=	yes
 USE_DIRS+=	xdg-1.1
+
+USE_TOOLS+=	msgfmt
 
 do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py config)
