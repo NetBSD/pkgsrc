@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2009/06/12 17:24:54 ahoka Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/14 20:23:16 hasso Exp $
 #
 
-DISTNAME=	nucleo-0.7.1
-PKGREVISION=	4
+DISTNAME=	nucleo-0.7.5
 CATEGORIES=	x11
-MASTER_SITES=	http://www.lri.fr/~cardona/sources/nucleo/
+MASTER_SITES=	http://insitu.lri.fr/metisse/download/nucleo/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
