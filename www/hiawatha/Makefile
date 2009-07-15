@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/07/07 19:27:24 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2009/07/15 20:58:57 joerg Exp $
 #
 
 DISTNAME=	hiawatha
@@ -13,6 +13,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.pault.com/pault/downloads/
 COMMENT=	Barebones HTTP server with XML and XSLT support (and more)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	saxon-[0-9]*:../../textproc/saxon
 
