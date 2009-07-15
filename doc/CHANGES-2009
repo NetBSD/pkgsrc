@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2645 2009/07/15 22:58:16 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.2646 2009/07/15 23:55:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3547,3 +3547,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/mrxvt to 0.5.4 [tnn 2009-07-15]
 	Updated audio/wavpack to 4.50.1 [tnn 2009-07-15]
 	Updated games/KoboDeluxe to 0.5.1 [tnn 2009-07-15]
+	Added fonts/tex-courier version 2008.7340 [minskim 2009-07-15]
