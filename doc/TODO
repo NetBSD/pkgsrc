@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8254 2009/07/15 08:55:34 wiz Exp $
+$NetBSD: TODO,v 1.8255 2009/07/15 12:27:31 kefren Exp $
 
 Suggested new packages
 ======================
@@ -840,7 +840,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libextractor-0.5.23
 	o libflash-0.4.13
 	o libgda-4.0.2 [GNOME 2.26]
-	o libgdiplus-2.4.2
 	o libggi-2.2.2
 	o libggigcp-1.0.2
 	o libggimisc-2.2.2
@@ -940,9 +939,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
-	o mono-2.4.2.1
-	o mono-tools-2.4.2
-	o mono-xsp-2.4.2
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
 	o mousetweaks-2.26.3
