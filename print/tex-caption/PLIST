@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/15 20:46:03 minskim Exp $
+share/texmf-dist/tex/latex/caption/caption.sty
+share/texmf-dist/tex/latex/caption/caption2.sty
+share/texmf-dist/tex/latex/caption/caption3.sty
+share/texmf-dist/tex/latex/caption/ltcaption.sty
+share/texmf-dist/tex/latex/caption/subcaption.sty

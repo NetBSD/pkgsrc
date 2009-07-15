@@ -1,0 +1,8 @@
+The caption package provides many ways to customise the captions in
+floating environments like figure and table, and cooperates with many
+other packages.  Includes rotating captions, sideways captions,
+continued captions (for tables or figures that come in several parts).
+A list of compatibility notes, for other packages, is provided in the
+documentation.  The package also provides the "caption outside float"
+facility, in the same way that simpler packages like capt-of do.  The
+package supersedes caption2.
