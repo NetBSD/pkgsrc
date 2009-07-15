@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2009/07/14 22:17:06 minskim Exp $
+# $NetBSD: Makefile,v 1.138 2009/07/15 21:01:35 minskim Exp $
 #
 
 COMMENT=	Fonts
@@ -146,6 +146,7 @@ SUBDIR+=	tex-cmex
 SUBDIR+=	tex-euenc
 SUBDIR+=	tex-euenc-doc
 SUBDIR+=	tex-glyphlist
+SUBDIR+=	tex-helvetic
 SUBDIR+=	tex-kotex-base
 SUBDIR+=	tex-kotex-base-doc
 SUBDIR+=	tex-latex-fonts
