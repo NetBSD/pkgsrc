@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.5 2009/06/10 20:15:11 joerg Exp $	*/
+/*	$NetBSD: license.c,v 1.6 2009/07/15 10:24:13 tron Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -56,7 +56,9 @@ const char *default_acceptable_licenses =
     "artistic artistic-2.0 "
     "cddl-1.0 "
     "cpl-1.0 "
-    "open-font-license ";
+    "open-font-license "
+    "mpl-1.1 "
+    "zpl";
 
 #ifdef DEBUG
 static size_t hash_collisions;
