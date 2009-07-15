@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.27 2009/07/15 06:12:45 ver Exp $
+# $NetBSD: license.mk,v 1.28 2009/07/15 09:31:20 joerg Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -36,11 +36,17 @@
 #
 #	The license of the package.
 #
-#	Sometimes licensing is other than a single text file.  See
-#	doc/TODO for discussion of how to handle packages with dual
-#	licensing (a choice) or where multiple licenses apply
-#	simultaneously.
-# 
+#	Dual licenses can be specified with OR expressions:
+#	LICENSE=	license1 OR license2
+#
+#	If more than one license applies at the same time, AND expressions
+#	can be used:
+#	LICENSE=	license1 AND license2
+#
+#	Expressions can be nested if necessary:
+#	LICENSE=	(license1 AND license2) OR license3
+#	Parenthesis are required when mixing AND and OR.
+#
 #	Every package should specify its license.  (Prior to early 2009,
 #	Open Source and Free software did not have license tags.)
 #
