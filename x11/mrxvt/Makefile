@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2008/03/31 20:28:28 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2009/07/15 20:53:21 tnn Exp $
 #
 
-DISTNAME=	mrxvt-0.5.3
-PKGREVISION=	3
+DISTNAME=	mrxvt-0.5.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=materm/}
 PATCH_SITES=	${MASTER_SITES}
-PATCHFILES=	no-scroll-with-buffer-mrxvt-0.5.3.patch
+PATCHFILES=	mrxvt-0.5.4-001-fix-segfault-when-wd-empty.patch
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://materm.sourceforge.net/
