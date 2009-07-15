@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.44 2008/11/01 13:35:33 tonio Exp $
+# $NetBSD: Makefile,v 1.45 2009/07/15 22:14:18 tonio Exp $
 #
 
 DISTNAME=		bitlbee-1.2.3
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
+PKGREVISION=		1
 
 MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.bitlbee.org/
@@ -20,7 +21,7 @@ CONFIGURE_ARGS+=	--etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--config=${STATEDIR}
 CONFIGURE_ARGS+=	--flood=0
-CONFIGURE_ARGS+=	--ssl=openssl
+CONFIGURE_ARGS+=	--ssl=gnutls
 
 PKG_SYSCONFSUBDIR=	bitlbee
 CONF_FILES=		${DATADIR}/motd.txt ${PKG_SYSCONFDIR}/motd.txt
@@ -64,7 +65,10 @@ CONFIGURE_ARGS+=	--ipv6=1
 CONFIGURE_ARGS+=	--ipv6=0
 .endif
 
+RCD_SCRIPTS=		bitlbee
+RCD_SCRIPT_SRC.estd=	${FILESDIR}/bitlbee.sh
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
