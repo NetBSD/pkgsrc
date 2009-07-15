@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2643 2009/07/15 20:49:53 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2644 2009/07/15 21:01:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3542,3 +3542,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/mono-tools to 2.4.2 [kefren 2009-07-15]
 	Added print/tex-caption version 3.1j [minskim 2009-07-15]
 	Added print/tex-caption-doc version 3.1j [minskim 2009-07-15]
+	Added fonts/tex-helvetic version 2008.7340 [minskim 2009-07-15]
