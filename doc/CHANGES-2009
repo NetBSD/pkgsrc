@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2641 2009/07/15 08:37:59 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2642 2009/07/15 12:27:31 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3515,3 +3515,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-CatalystX-CRUD-ModelAdapter-DBIC to 0.10 [sno 2009-07-15]
 	Updated www/p5-libwww to 5.829 [sno 2009-07-15]
 	Added archivers/lzip version 1.7 [wiz 2009-07-15]
+	Updated lang/mono to 2.4.2.1 [kefren 2009-07-15]
+	Updated lang/mono-basic to 2.4.2 [kefren 2009-07-15]
+	Updated graphics/libgdiplus to 2.4.2 [kefren 2009-07-15]
+	Updated www/mono-xsp to 2.4.2 [kefren 2009-07-15]
+	Updated www/ap-mono to 2.4.2 [kefren 2009-07-15]
+	Updated devel/mono-tools to 2.4.2 [kefren 2009-07-15]
