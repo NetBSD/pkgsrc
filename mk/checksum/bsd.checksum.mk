@@ -1,4 +1,4 @@
-# $NetBSD: bsd.checksum.mk,v 1.9 2008/05/22 16:27:22 joerg Exp $
+# $NetBSD: bsd.checksum.mk,v 1.10 2009/07/15 09:40:30 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "checksum" phase.
@@ -13,6 +13,9 @@
 # checksum-phase:
 #	Same as "checksum" but is meant to run automatically by pkgsrc.
 #	This target does not run after the "extract" phase is complete.
+#
+# depends-checksum:
+#	Run checksum for the current package and all dependencies.
 #
 # Public targets for pkgsrc developers:
 #
