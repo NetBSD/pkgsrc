@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2009/07/07 19:40:30 sno Exp $
+# $NetBSD: Makefile,v 1.72 2009/07/15 06:33:46 sno Exp $
 
-DISTNAME=	libwww-perl-5.828
+DISTNAME=	libwww-perl-5.829
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
 SVR4_PKGNAME=	p5lww
 CATEGORIES=	www perl5
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/libwww-perl/
 COMMENT=	Perl5 library for WWW access
+LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
