@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/07/07 18:03:05 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/15 11:12:25 joerg Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -31,7 +31,7 @@ do-install:
 	${SED} -e "s:${WRKSRC}:${QTPREFIX}:g" \
 		${WRKSRC}/lib/pkgconfig/QtDBus.pc > ${WRKDIR}/QtDBus.pc
 	${INSTALL_DATA} ${WRKDIR}/QtDBus.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
-	cd ${WRKSRC}/src/dbus && env ${MAKE_ENV} DESTDIR=${DESTDIR} \
+	cd ${WRKSRC}/src/dbus && env ${MAKE_ENV} INSTALL_ROOT=${DESTDIR} \
                 ${MAKE_PROGRAM} install_flat_headers install_targ_headers
 .for prog in qdbus qdbuscpp2xml qdbusviewer qdbusxml2cpp
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
