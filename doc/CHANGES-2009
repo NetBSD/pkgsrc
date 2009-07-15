@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2644 2009/07/15 21:01:35 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2645 2009/07/15 22:58:16 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3543,3 +3543,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-caption version 3.1j [minskim 2009-07-15]
 	Added print/tex-caption-doc version 3.1j [minskim 2009-07-15]
 	Added fonts/tex-helvetic version 2008.7340 [minskim 2009-07-15]
+	Updated wm/dwm to 5.6 [tnn 2009-07-15]
+	Updated x11/mrxvt to 0.5.4 [tnn 2009-07-15]
+	Updated audio/wavpack to 4.50.1 [tnn 2009-07-15]
+	Updated games/KoboDeluxe to 0.5.1 [tnn 2009-07-15]
