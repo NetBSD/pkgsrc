@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.42 2009/03/17 22:13:36 rillig Exp $
+# $NetBSD: fetch.mk,v 1.43 2009/07/15 09:40:30 joerg Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -311,3 +311,13 @@ show-distfiles:
 	done
 .  endif
 .endif
+
+.PHONY: depends-fetch
+depends-fetch:
+	${RUN}                                                          \
+	${_DEPENDS_WALK_CMD} ${PKGPATH} |                               \
+	while read dir; do                                              \
+		${ECHO} "===> Checksumming for $${dir}" &&              \
+		cd ${.CURDIR}/../../$$dir &&                            \
+		${RECURSIVE_MAKE} ${MAKEFLAGS} fetch;   		\
+	done
