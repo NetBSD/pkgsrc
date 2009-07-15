@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2007/02/08 18:16:09 drochner Exp $
+$NetBSD: distinfo,v 1.4 2009/07/15 21:45:47 tnn Exp $
 
-SHA1 (KoboDeluxe-0.4pre10.tar.gz) = 7b1f37482d40e9f68291527d8b1b9dd7d88dd25c
-RMD160 (KoboDeluxe-0.4pre10.tar.gz) = 0b5cc8062bbde8697eadce6f5cf95e61485f21bc
-Size (KoboDeluxe-0.4pre10.tar.gz) = 800650 bytes
-SHA1 (patch-aa) = f6aed754db79fb584ef7274f9fadfe79e0918cc9
-SHA1 (patch-ab) = 40a7d8b47055c9a1b8afb5c9dbaaa0a2cbbbe822
+SHA1 (KoboDeluxe-0.5.1.tar.bz2) = bc49dbbae562baffd312444b373c7ebbf5e233c6
+RMD160 (KoboDeluxe-0.5.1.tar.bz2) = b196054f2220fe1b479a490723b1f5da4e74aa1f
+Size (KoboDeluxe-0.5.1.tar.bz2) = 1781752 bytes
+SHA1 (patch-ab) = 43a984ad4cba7ea0a989959dbf55d2b4d6cb24fb
