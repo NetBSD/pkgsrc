@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2653 2009/07/16 07:57:53 kefren Exp $
+$NetBSD: CHANGES-2009,v 1.2654 2009/07/16 11:01:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3557,3 +3557,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/monotorrent to 0.72 [kefren 2009-07-16]
 	Added net/mono-nat version 1.0.2 [kefren 2009-07-16]
 	Updated net/monsoon to 0.20 [kefren 2009-07-16]
+	Updated www/ruby-actionpack to 2.3.2nb1 [minskim 2009-07-16]
