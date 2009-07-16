@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/16 14:54:02 wiz Exp $
+
+SHA1 (mp3fs-0.13.tar.gz) = b246bd747a32256cb8364b7ac0cc8b7a4e1d3f74
+RMD160 (mp3fs-0.13.tar.gz) = 6ad1126ee22b35fe4987dd6addbc41a25c74a508
+Size (mp3fs-0.13.tar.gz) = 301642 bytes
+SHA1 (patch-aa) = 7fb2cfc0fa9d3afcd42a98cd73f5834f94245141
+SHA1 (patch-ab) = 9b259b045decb4556dd72eeb65e0275554a93b6f
