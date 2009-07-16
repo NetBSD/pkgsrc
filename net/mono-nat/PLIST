@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/16 07:52:40 kefren Exp $
+lib/mono-nat/Mono.Nat.dll
+lib/mono-nat/Mono.Nat.dll.mdb
+lib/pkgconfig/mono.nat.pc
