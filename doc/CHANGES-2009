@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2671 2009/07/16 23:26:44 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2672 2009/07/16 23:29:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3577,3 +3577,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-float-doc version 1.3d [minskim 2009-07-16]
 	Added print/tex-algorithms version 2008.7340 [minskim 2009-07-16]
 	Added print/tex-algorithms-doc version 2008.7340 [minskim 2009-07-16]
+	Added print/tex-subfig version 1.3 [minskim 2009-07-16]
+	Added print/tex-subfig-doc version 1.3 [minskim 2009-07-16]
