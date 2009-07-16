@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2652 2009/07/16 06:29:51 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2653 2009/07/16 07:57:53 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3554,3 +3554,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/p5-GD to 2.44 [sno 2009-07-16]
 	Updated print/p5-LaTeX-Table to 0.9.16 [sno 2009-07-16]
 	Updated security/p5-Net-OpenSSH to 0.36 [sno 2009-07-16]
+	Updated net/monotorrent to 0.72 [kefren 2009-07-16]
+	Added net/mono-nat version 1.0.2 [kefren 2009-07-16]
+	Updated net/monsoon to 0.20 [kefren 2009-07-16]
