@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2649 2009/07/16 06:13:59 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2650 2009/07/16 06:18:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3551,3 +3551,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-ClassAPI to 1.06 [sno 2009-07-16]
 	Updated devel/p5-Test-Inline to 2.211 [sno 2009-07-16]
 	Updated devel/p5-Test-Pod to 1.40 [sno 2009-07-16]
+	Updated graphics/p5-GD to 2.44 [sno 2009-07-16]
