@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/16 23:25:44 minskim Exp $
+share/texmf-dist/doc/latex/algorithms/COPYING
+share/texmf-dist/doc/latex/algorithms/README
+share/texmf-dist/doc/latex/algorithms/THANKS
+share/texmf-dist/doc/latex/algorithms/algorithms.pdf
+share/texmf-dist/doc/latex/algorithms/algorithms.tex
