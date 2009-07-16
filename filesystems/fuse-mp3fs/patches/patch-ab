@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/07/16 14:54:02 wiz Exp $
+
+--- src/transcode.c.orig	2008-12-14 05:24:21.000000000 +0000
++++ src/transcode.c
+@@ -24,7 +24,6 @@
+ #include <fcntl.h>
+ #include <dirent.h>
+ #include <errno.h>
+-#include <sys/statfs.h>
+ 
+ #include <FLAC/metadata.h>
+ #ifdef LEGACY_FLAC
