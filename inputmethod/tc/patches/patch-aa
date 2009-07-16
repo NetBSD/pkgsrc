@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2009/07/16 22:51:50 uebayasi Exp $
+
+--- acinclude.m4.orig	2002-03-25 09:15:51.000000000 +0900
++++ acinclude.m4
+@@ -50,7 +50,7 @@ mule1)
+ 	ELC_FILES="tc-is18.elc"
+ 	NO_COMPILE_EL_FILES="tc-sysdep.el tc-is19.el tc-is20.el"
+ 	;;
+-mule4|mule5)
++mule4|mule5|mule6)
+ 	EL_FILES="tc-is20.el"
+ 	ELC_FILES="tc-is20.elc"
+ 	NO_COMPILE_EL_FILES="tc-sysdep.el tc-is18.el tc-is19.el"

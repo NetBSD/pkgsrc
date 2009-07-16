@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 2009/07/16 22:51:50 uebayasi Exp $
+
+--- lisp/guess.orig	2002-03-25 09:16:05.000000000 +0900
++++ lisp/guess
+@@ -13,4 +13,5 @@
+     ((string-match "^3.[0-9]" mule-version) "mule3")
+     ((string-match "^4.[0-9]" mule-version) "mule4")
+     ((string-match "^5.[0-9]" mule-version) "mule5")
++    ((string-match "^6.[0-9]" mule-version) "mule6")
+     (t "mule1"))))
