@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2009/03/22 09:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2009/07/16 22:12:17 zafer Exp $
 #
 
 DISTNAME=	mercurial-1.2.1
 CATEGORIES=	devel scm
-MASTER_SITES=	http://www.selenic.com/mercurial/release/
+MASTER_SITES=	http://mercurial.selenic.com/release/
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.selenic.com/mercurial/wiki/index.cgi/Mercurial
+HOMEPAGE=	http://mercurial.selenic.com/wiki/
 COMMENT=	Fast, lightweight source control management system
 
 PKG_DESTDIR_SUPPORT=	user-destdir
