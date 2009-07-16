@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2009/04/12 00:40:08 sno Exp $
+# $NetBSD: Makefile,v 1.45.2.1 2009/07/16 21:18:40 tron Exp $
 
-DISTNAME=	IO-Socket-SSL-1.24
+DISTNAME=	IO-Socket-SSL-1.26
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5iss
 CATEGORIES=	security net perl5
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IO-Socket-SSL/
 COMMENT=	Perl5 SSL socket interface class
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-IO-Socket-INET6-[0-9]*:../../net/p5-IO-Socket-INET6
 DEPENDS+=	p5-Net-LibIDN-[0-9]*:../../net/p5-Net-LibIDN
