@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/16 23:30:38 minskim Exp $
+share/texmf-dist/doc/latex/subfigure/README
+share/texmf-dist/doc/latex/subfigure/ltxdoc.cfg
+share/texmf-dist/doc/latex/subfigure/subfigure.pdf
+share/texmf-dist/doc/latex/subfigure/test.tex
+share/texmf-dist/doc/latex/subfigure/test2.tex
+share/texmf-dist/doc/latex/subfigure/test3.tex
+share/texmf-dist/doc/latex/subfigure/test4.tex
+share/texmf-dist/doc/latex/subfigure/test5.tex
