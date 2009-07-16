@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.6 2009/07/16 09:24:26 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.7 2009/07/16 20:49:21 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -25,3 +25,5 @@ Pullup ticket #2811 - requested by minskim
 ruby-mocha: build fix
 Pullup ticket #2813 - requested by obache
 tor: security update
+Pullup ticket #2805 - requested by tron
+Darwin.mk: build fix
