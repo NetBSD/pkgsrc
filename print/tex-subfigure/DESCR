@@ -1,0 +1,9 @@
+This package provides support for the manipulation and reference of
+small or `sub' figures and tables within a single figure or table
+environment.  It is convenient to use this package when your
+subfigures are to be separately captioned, referenced, or are to be
+included in the List-of-Figures.  A new \subfigure command is
+introduced which can be used inside a figure environment for each
+subfigure.  An optional first argument is used as the caption for that
+subfigure.  This package is now obsolescent; new users should use
+tex-subfig instead.
