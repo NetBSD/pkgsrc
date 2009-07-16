@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/06/12 11:48:40 taca Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2009/07/16 09:20:06 tron Exp $
 
 DISTNAME=	mocha-0.9.1
 PKGNAME=	${RUBYGEM_PKGPREFIX}-${DISTNAME}
@@ -10,4 +10,8 @@ COMMENT=	Ruby library for mocking and stubbing
 LICENSE=	mit
 
 .include "../../misc/rubygems/rubygem.mk"
+
+pre-configure:
+	${RM} ${WRKSRC}/Rakefile.orig
+
 .include "../../mk/bsd.pkg.mk"
