@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2674 2009/07/16 23:58:23 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2675 2009/07/16 23:59:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3582,3 +3582,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-subfigure version 2.1.5 [minskim 2009-07-16]
 	Added print/tex-subfigure-doc version 2.1.5 [minskim 2009-07-16]
 	Updated print/teTeX3-texmf to 3.0nb20 [minskim 2009-07-16]
+	Updated print/tex-ltxmisc to 2008.12680nb1 [minskim 2009-07-16]
