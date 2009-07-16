@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2656 2009/07/16 14:54:34 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2657 2009/07/16 16:13:59 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3560,3 +3560,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ruby-actionpack to 2.3.2nb1 [minskim 2009-07-16]
 	Updated www/swill to 0.3 [zafer 2009-07-16]
 	Added filesystems/fuse-mp3fs version 0.13 [wiz 2009-07-16]
+	Updated misc/cuetools to 1.3.1 [jakllsch 2009-07-16]
