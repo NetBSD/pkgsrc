@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.38 2009/06/07 11:34:27 schwarz Exp $
+# $NetBSD: Darwin.mk,v 1.38.2.1 2009/07/16 20:47:55 spz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -117,7 +117,7 @@ CONFIGURE_ENV+=		ac_cv_func_poll=no
 .endif
 
 # Use "/bin/ksh" for buildlink3 wrapper script to improve build performance.
-.if exists(/bin/ksh)
+.if empty(OS_VERSION:M[0-8].*) && exists(/bin/ksh)
 WRAPPER_BIN_SH?=	/bin/ksh
 .endif
 
