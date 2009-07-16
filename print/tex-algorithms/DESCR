@@ -1,0 +1,5 @@
+Consists of two environments: algorithm and algorithmic.  The
+algorithm package defines a floating algorithm environment designed to
+work with the algorithmic style.  Within an algorithmic environment a
+number of commands for typesetting popular algorithmic constructs are
+available.
