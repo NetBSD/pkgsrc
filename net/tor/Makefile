@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.63 2009/02/27 22:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.63.4.1 2009/07/16 09:23:44 tron Exp $
 #
 
-DISTNAME=		tor-0.2.0.34
-PKGREVISION=		1
+DISTNAME=		tor-0.2.0.35
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
 MAINTAINER=		athaba@inode.at
 HOMEPAGE=		http://www.torproject.org/
 COMMENT=		Anonymizing overlay network for TCP
+LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -40,6 +40,8 @@ USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700
 
+AUTO_MKDIRS=		yes
+
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
 CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
@@ -57,7 +59,6 @@ CFLAGS+=		-c99
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/tor
 	${INSTALL_DATA} ${WRKSRC}/src/config/torrc.sample		\
 		${DESTDIR}${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
