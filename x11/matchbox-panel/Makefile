@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2008/04/12 22:43:14 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2009/07/16 21:44:08 zafer Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
 PKGREVISION=		3
 CATEGORIES=		x11
-MASTER_SITES=		http://projects.o-hand.com/matchbox/sources/matchbox-panel/0.9/
+MASTER_SITES=		http://matchbox-project.org/sources/matchbox-panel/0.9/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://projects.o-hand.com/matchbox/
+HOMEPAGE=		http://matchbox-project.org/
 COMMENT=		Panel for Matchbox
 
 BROKEN_GETTEXT_DETECTION=	yes
