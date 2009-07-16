@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2009/05/14 19:37:02 adrianp Exp $
+# $NetBSD: Makefile,v 1.40 2009/07/16 18:11:06 adrianp Exp $
 
-DISTNAME=	drupal-5.18
+DISTNAME=	drupal-5.19
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
 
