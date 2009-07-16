@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.287 2009/07/16 23:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.288 2009/07/16 23:26:44 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -132,6 +132,8 @@ SUBDIR+=	tex-abc
 SUBDIR+=	tex-acmconf
 SUBDIR+=	tex-acmconf-doc
 SUBDIR+=	tex-algorithm2e
+SUBDIR+=	tex-algorithms
+SUBDIR+=	tex-algorithms-doc
 SUBDIR+=	tex-ams
 SUBDIR+=	tex-amscls
 SUBDIR+=	tex-amscls-doc
