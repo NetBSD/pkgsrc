@@ -1,0 +1,35 @@
+$NetBSD: patch-af,v 1.1.2.2 2009/07/16 05:37:25 spz Exp $
+
+Fix for CVE-2009-1891 taken from here:
+
+http://svn.apache.org/viewvc/httpd/httpd/branches/2.2.x/server/core_filters.c?r1=421103&r2=791454&pathrev=791454
+
+--- server/core_filters.c.orig	2006-07-12 04:38:44.000000000 +0100
++++ server/core_filters.c	2009-07-14 13:01:09.000000000 +0100
+@@ -542,6 +542,12 @@
+     apr_read_type_e eblock = APR_NONBLOCK_READ;
+     apr_pool_t *input_pool = b->p;
+ 
++    /* Fail quickly if the connection has already been aborted. */
++    if (c->aborted) {
++        apr_brigade_cleanup(b);
++        return APR_ECONNABORTED;
++    }
++
+     if (ctx == NULL) {
+         ctx = apr_pcalloc(c->pool, sizeof(*ctx));
+         net->out_ctx = ctx;
+@@ -909,12 +915,9 @@
+             /* No need to check for SUCCESS, we did that above. */
+             if (!APR_STATUS_IS_EAGAIN(rv)) {
+                 c->aborted = 1;
++                return APR_ECONNABORTED;
+             }
+ 
+-            /* The client has aborted, but the request was successful. We
+-             * will report success, and leave it to the access and error
+-             * logs to note that the connection was aborted.
+-             */
+             return APR_SUCCESS;
+         }
+ 
