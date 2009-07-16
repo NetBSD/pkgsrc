@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2008/07/14 12:56:19 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/16 21:39:51 zafer Exp $
 #
 
 DISTNAME=		matchbox-common-0.9.1
 PKGREVISION=		3
 CATEGORIES=		x11
-MASTER_SITES=		http://projects.o-hand.com/matchbox/sources/matchbox-common/0.9/
+MASTER_SITES=		http://matchbox-project.org/sources/matchbox-common/0.9/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://projects.o-hand.com/matchbox/
+HOMEPAGE=		http://matchbox-project.org/
 COMMENT=		Shared icons and configuration data for Matchbox
 
 PKG_DESTDIR_SUPPORT=	user-destdir
