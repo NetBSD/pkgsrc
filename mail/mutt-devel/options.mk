@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.35 2009/04/12 08:25:43 tonio Exp $
+# $NetBSD: options.mk,v 1.36 2009/07/16 20:23:41 tonio Exp $
 
 # Global and legacy options
 
@@ -8,7 +8,7 @@ PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
 PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache mutt-smtp
 # Comment the following line out on updates.
-PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
+#PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
 #PKG_SUPPORTED_OPTIONS+=	mutt-xlabel
 PKG_SUGGESTED_OPTIONS=	ssl smime curses
@@ -125,7 +125,7 @@ CONFIGURE_ARGS+=	--disable-smtp
 ###
 .if !empty(PKG_OPTIONS:Mmutt-sidebar)
 PATCH_SITES=		http://lunar-linux.org/~tchan/mutt/
-PATCHFILES+=		patch-1.5.19.sidebar.20090308.txt
+PATCHFILES+=		patch-1.5.20.sidebar.20090619.txt
 PATCH_DIST_STRIP=	-p1
 PATCH_FUZZ_FACTOR=	-F1
 .endif
