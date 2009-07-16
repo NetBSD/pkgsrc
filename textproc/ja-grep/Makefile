@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/07 21:45:56 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/16 14:53:13 joerg Exp $
 
 DISTNAME=	grep-2.4.2
 PKGNAME=	ja-grep-2.4.2
@@ -26,7 +26,8 @@ INFO_FILES=	# PLIST
 
 INSTALLATION_DIRS=	share/doc/ja-grep
 
-INSTALL_MAKE_FLAGS+=	gnulocaledir=${DESTDIR}${PREFIX}/${PKGLOCALEDIR}/locale
+INSTALL_MAKE_FLAGS+=	gnulocaledir=${DESTDIR}${PREFIX}/${PKGLOCALEDIR}/locale \
+			datadir=${DESTDIR}${PREFIX}/share
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.MB ${DESTDIR}${PREFIX}/share/doc/ja-grep
