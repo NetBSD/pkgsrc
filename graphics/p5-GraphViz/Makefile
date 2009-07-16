@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/07/07 16:07:18 sno Exp $
+# $NetBSD: Makefile,v 1.25 2009/07/16 10:51:17 joerg Exp $
 #
 
 DISTNAME=	GraphViz-2.04
@@ -28,7 +28,7 @@ REPLACE_PERL+=	examples/*
 
 post-install:
 	cd ${WRKSRC}/examples &&	\
-	  pax -pm -rw . ${PREFIX}/share/examples/p5-GraphViz
+	  pax -pm -rw . ${DESTDIR}${PREFIX}/share/examples/p5-GraphViz
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
