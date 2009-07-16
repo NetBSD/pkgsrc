@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2672 2009/07/16 23:29:51 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2673 2009/07/16 23:32:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3579,3 +3579,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-algorithms-doc version 2008.7340 [minskim 2009-07-16]
 	Added print/tex-subfig version 1.3 [minskim 2009-07-16]
 	Added print/tex-subfig-doc version 1.3 [minskim 2009-07-16]
+	Added print/tex-subfigure version 2.1.5 [minskim 2009-07-16]
+	Added print/tex-subfigure-doc version 2.1.5 [minskim 2009-07-16]
