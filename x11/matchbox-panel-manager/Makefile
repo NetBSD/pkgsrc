@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2008/07/14 12:56:19 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/16 21:46:39 zafer Exp $
 #
 
 DISTNAME=	matchbox-panel-manager-0.1
 PKGREVISION=	3
 CATEGORIES=	x11
-MASTER_SITES=	http://projects.o-hand.com/matchbox/sources/matchbox-panel-manager/0.1/
+MASTER_SITES=	http://matchbox-project.org/sources/matchbox-panel-manager/0.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://projects.o-hand.com/matchbox/
+HOMEPAGE=	http://matchbox-project.org/
 COMMENT=	Manager panel for the Matchbox desktop
 
 PKG_DESTDIR_SUPPORT=	user-destdir
