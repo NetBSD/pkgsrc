@@ -1,0 +1,6 @@
+Improves the interface for defining floating objects such as figures
+and tables.  Introduces the boxed float, the ruled float and the
+plaintop float.  You can define your own floats and improve the
+behaviour of the old ones.  The package also provides the H float
+modifier option of the obsolete here package.  You can select this as
+automatic default with \floatplacement{figure}{H}.
