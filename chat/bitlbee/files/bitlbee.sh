@@ -8,7 +8,7 @@
 name="bitlbee"
 rcvar=$name
 command="@PREFIX@/sbin/bitlbee"
-pidfile="/var/run/${name}.pid"
+pidfile="@VARBASE@/run/${name}/pid"
 command_args="-D"	# run as a daemon
 
 if [ -f /etc/rc.subr ]; then

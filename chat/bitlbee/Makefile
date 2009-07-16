@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2009/07/15 22:14:18 tonio Exp $
+# $NetBSD: Makefile,v 1.46 2009/07/16 19:19:18 tonio Exp $
 #
 
 DISTNAME=		bitlbee-1.2.3
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.bitlbee.org/
@@ -20,12 +20,17 @@ CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--config=${STATEDIR}
+CONFIGURE_ARGS+=	--pidfile=${VARBASE}/run/bitlbee/pid
+CONFIGURE_ARGS+=	--ipcsocket=${VARBASE}/run/bitlbee/sock
 CONFIGURE_ARGS+=	--flood=0
 CONFIGURE_ARGS+=	--ssl=gnutls
 
 PKG_SYSCONFSUBDIR=	bitlbee
 CONF_FILES=		${DATADIR}/motd.txt ${PKG_SYSCONFDIR}/motd.txt
 CONF_FILES+=		${EGDIR}/bitlbee.conf ${PKG_SYSCONFDIR}/bitlbee.conf
+OWN_DIRS+=		${VARBASE}/run/bitlbee
+
+BUILD_DEFS+=		VARBASE
 
 EGDIR=			${PREFIX}/share/examples/bitlbee
 DATADIR=		${PREFIX}/share/bitlbee
