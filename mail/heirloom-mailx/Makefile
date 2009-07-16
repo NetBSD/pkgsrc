@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/30 13:01:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/16 14:48:56 joerg Exp $
 #
 
 DISTNAME=	mailx-12.4
@@ -12,6 +12,7 @@ HOMEPAGE=	http://heirloom.sourceforge.net/mailx.html
 COMMENT=	BSD mail utility with MIME extensions
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c
 
