@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/04/30 21:07:45 zafer Exp $
+# $NetBSD: Makefile,v 1.39 2009/07/16 14:38:32 joerg Exp $
 
 DISTNAME=	delegate9.9.1
 PKGNAME=	delegate-9.9.1
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.delegate.org/delegate/
 COMMENT=	General purpose TCP/IP proxy system
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,20 +25,18 @@ FILES_SUBST+=		ADMIN=${DELEGATE_MANAGER:Q}
 OWN_DIRS_PERMS+=${VARBASE}/spool/delegate/cache ${ROOT_USER} ${ROOT_GROUP} 1777
 OWN_DIRS_PERMS+=${VARBASE}/spool/delegate-nobody nobody nobody 755
 
-INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS=	sbin share/doc/delegate
 
 pre-build:
 	@${ECHO} "ADMIN=${DELEGATE_MANAGER}" >> ${WRKSRC}/DELEGATE_CONF
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/delegated ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/delegate
+	${INSTALL_PROGRAM} ${WRKSRC}/src/delegated ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/doc/Manual.htm \
-	   ${PREFIX}/share/doc/delegate/manual.html
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/delegate
+	   ${DESTDIR}${PREFIX}/share/doc/delegate/manual.html
 	${INSTALL_DATA} ${WRKSRC}/doc/tutor-en.htm \
-	   ${PREFIX}/share/doc/delegate/tutorial-en.html
+	   ${DESTDIR}${PREFIX}/share/doc/delegate/tutorial-en.html
 	${INSTALL_DATA} ${WRKSRC}/doc/tutor-jp.htm \
-	   ${PREFIX}/share/doc/delegate/tutorial-jp.html
+	   ${DESTDIR}${PREFIX}/share/doc/delegate/tutorial-jp.html
 
 .include "../../mk/bsd.pkg.mk"
