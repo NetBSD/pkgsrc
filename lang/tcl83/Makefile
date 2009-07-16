@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2009/04/30 20:32:41 zafer Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/16 23:00:01 zafer Exp $
 #
 
 DISTNAME=		tcl8.3.4
 PKGNAME=		tcl-8.3.4
 PKGREVISION=		2
 CATEGORIES=		lang
-MASTER_SITES=		ftp://gd.tuwien.ac.at/languages/tcl/scriptics/tcl8_3/ \
-			ftp://ftp.funet.fi/pub/languages/tcl/tcl/tcl8_3/ 
+MASTER_SITES=	ftp://ftp.funet.fi/pub/languages/tcl/tcl/tcl8_3/ 
 
 MAINTAINER=		jwise@NetBSD.org
 HOMEPAGE=		http://www.tcltk.com/
-COMMENT=		Ousterhout's Tool Command Language, a scripting language
+COMMENT=		Ousterhout\'s Tool Command Language, a scripting language
 
 CONFLICTS+=		tclman80-[0-9]*
 
