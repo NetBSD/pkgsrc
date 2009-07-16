@@ -1,9 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/07/02 09:03:02 jmmv Exp $
+$NetBSD: MESSAGE,v 1.2 2009/07/16 19:19:18 tonio Exp $
 
-bitlbee needs to be started from inetd(8) for now.  Add the following line
+bitlbee can be to be started from inetd(8).  Add the following line
 to its configuration file (/etc/inetd.conf):
 
 	6667 stream tcp nowait bitlbee ${PREFIX}/sbin/bitlbee bitlbee
 
+bitlbee can act as a system-wide daemon, using the start-up script installed by
+the package.
+
+	${PREFIX}/share/examples/rc.d/bitlbee
 ===========================================================================
