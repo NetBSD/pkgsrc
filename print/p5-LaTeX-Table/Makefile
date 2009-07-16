@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/06/01 18:57:00 sno Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/16 06:25:52 sno Exp $
 #
 
-DISTNAME=	LaTeX-Table-0.9.15
+DISTNAME=	LaTeX-Table-0.9.16
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LaTeX/}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LaTeX/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/LaTeX-Table/
 COMMENT=	Perl extension for the automatic generation of LaTeX tables
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
