@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2009/05/21 12:01:25 sno Exp $
+# $NetBSD: Makefile,v 1.21 2009/07/16 06:07:04 sno Exp $
 
-DISTNAME=		Test-Inline-2.210
+DISTNAME=		Test-Inline-2.211
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5tin
 CATEGORIES=		devel perl5
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 MAINTAINER=		rhaen@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-Inline/
 COMMENT=		Inlining your tests next to the code being tested
-LICENSE=		gnu-gpl-v2 # OR artistic
+LICENSE=		${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,6 +17,7 @@ BUILD_DEPENDS+=		p5-Test-ClassAPI>=1.02:../../devel/p5-Test-ClassAPI
 BUILD_DEPENDS+=		p5-Test-Script>=1.02:../../devel/p5-Test-Script
 
 DEPENDS+=		p5-Algorithm-Dependency>=1.02:../../devel/p5-Algorithm-Dependency
+DEPENDS+=		p5-Class-Autouse>=1.29:../../devel/p5-Class-Autouse
 DEPENDS+=		p5-Config-Tiny>=2.00:../../devel/p5-Config-Tiny
 DEPENDS+=		p5-File-Find-Rule>=0.26:../../devel/p5-File-Find-Rule
 DEPENDS+=		p5-File-Flat>=1.00:../../devel/p5-File-Flat
@@ -27,6 +28,7 @@ DEPENDS+=		p5-Params-Util>=0.21:../../devel/p5-Params-Util
 DEPENDS+=		p5-Pod-Tests>=0.18:../../textproc/p5-Pod-Tests
 
 PERL5_PACKLIST=		auto/Test/Inline/.packlist
+PERL5_MODULE_TYPE=	Module::Install
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
