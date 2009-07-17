@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/05/19 08:59:31 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/07/17 18:00:22 adrianp Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-src
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://freeworld.thc.org/releases/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freeworld.thc.org/thc-hydra/
 COMMENT=	Login password cracker
 LICENSE=	hydra-license

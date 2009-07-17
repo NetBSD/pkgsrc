@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/10/12 12:04:50 adrianp Exp $
+# $NetBSD: Makefile,v 1.16 2009/07/17 18:00:17 adrianp Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -6,7 +6,7 @@ CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/ingo/ \
 		ftp://ftp.horde.org/pub/ingo/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/ingo/
 COMMENT=	Horde based generic and complete mail filter rule frontend
 

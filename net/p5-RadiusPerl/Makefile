@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/07 16:15:31 sno Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:19 adrianp Exp $
 #
 
 DISTNAME=	RadiusPerl-0.13
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MA/MANOWAR/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/M/MA/MANOWAR/
 COMMENT=	Provide simple Radius client facilities
 LICENSE=	artistic

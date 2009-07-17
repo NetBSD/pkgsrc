@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/01/19 20:14:00 abs Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:15 adrianp Exp $
 
 DISTNAME=	MDB2_Driver_pgsql-1.5.0b2
 CATEGORIES=	databases
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pear.php.net/package/MDB2_Driver_pgsql
 COMMENT=	Pgsql MDB2 driver
 
