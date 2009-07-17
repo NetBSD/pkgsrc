@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8258 2009/07/16 20:25:06 tonio Exp $
+$NetBSD: TODO,v 1.8259 2009/07/17 20:13:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -544,7 +544,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dspam-3.9.0
 	o dvdstyler-1.7.2 [pkg/41681]
 	o dvipng-1.12
-	o dwm-5.6
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
@@ -600,6 +599,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o felt-3.07
 	o fetchyahoo-2.13.0
 	o ffmpeg-0.5
+	o fftw-3.2.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
@@ -651,7 +651,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gforth-0.7.0
 	o gfract-0.33
 	o ggiterm-0.7.1
-	o ghc-6.10.2
+	o ghc-6.10.4
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
 	o gimp-docs-2.4.2
@@ -663,6 +663,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.6.7 [GNOME 2.26]
 	o glchess-1.0.5
 	o gle-4.2.0
+	o glibmm-2.20.1
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
@@ -781,7 +782,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.6.1.1
 	o jabberd2-2.2.2 [pkg/39212]
-	o jabberd2-2.2.8
+	o jabberd2-2.2.9
 	o java-lang-spec-3.0
 	o jcabc2ps-20070110
 	o jdb-1.14
@@ -823,6 +824,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libFS-1.0.2
 	o libX11-1.2.2
 	o libXaw-1.0.6
+	o libXext-1.0.99.3
 	o libXi-1.2.99.2
 	o libXt-1.0.6
 	o libarchive-2.7.0
@@ -872,6 +874,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libunique-1.0.8
 	o libv4l-0.6.0
 	o libvorbis-1.2.3
+	o libxcb-1.4
 	o libxklavier-4.0
 	o licq-1.3.6
 	o lighttpd-1.4.23
@@ -955,7 +958,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o multitail-5.2.2
 	o munin-1.3.4
 	o muse-0.9.2
-	o musicpd-0.15
+	o musicpd-0.15.1
 	o mysql-5.1.34
 	o mysql-5.2.3
 	o mysql5-client-5.0.83
@@ -1012,6 +1015,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oo2c-2.1.7
 	o opal-3.6.4
 	o openafs-1.4.10 [pkg/41262]
+	o openafs-1.4.11
 	o opencobol-1.0
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1086,7 +1090,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plotutils-2.5
 	o plptools-0.13 [pkg/30244]
 	o plptools-1.0.8
+	o png-1.2.38
 	o pngcheck-2.3.0
+	o pngcrush-1.6.20
 	o po4a-0.29
 	o poedit-1.4.2
 	o polsms-2.1.0
@@ -1302,12 +1308,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o subversion-1.6.3
 	o subversion-base-1.6.3
 	o sudo-1.7.2
+	o sun-jdk15-5.0.19
+	o sun-jre15-5.0.19
 	o suse_base-11.0
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
 	o systrace-1.6e
 	o tacacs-4.0.4.14
 	o tads-3.0.16
+	o taskjuggler-2.4.3
 	o tcl-8.5.5
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
@@ -1433,6 +1442,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xerces-c-2.9.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
+	o xextproto-7.0.99.1
 	o xf86-video-amd-2.11.2 [now xf86-video-geode]
 	o xf86-video-cirrus-1.3.1
 	o xf86-video-dummy-0.3.2
