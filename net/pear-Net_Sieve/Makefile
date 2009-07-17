@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2007/05/05 22:09:19 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/17 18:00:21 adrianp Exp $
 
 DISTNAME=	Net_Sieve-1.1.1
 CATEGORIES+=	net
 PKGREVISION=	1
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pear.php.net/package/Net_Sieve/
 COMMENT=	PHP classes that handles talking to timsieved
 

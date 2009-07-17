@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/05/20 00:58:27 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/17 18:00:23 adrianp Exp $
 #
 
 DISTNAME=	honeyd-1.5b
@@ -6,7 +6,7 @@ PKGREVISION=	9
 CATEGORIES=	security net
 MASTER_SITES=	http://www.citi.umich.edu/u/provos/honeyd/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.honeyd.org/
 COMMENT=	Small daemon that creates virtual hosts on a network
 

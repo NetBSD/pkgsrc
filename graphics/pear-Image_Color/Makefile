@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:32 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/17 18:00:16 adrianp Exp $
 
 DISTNAME=	Image_Color-1.0.2
 PKGREVISION=	1
 CATEGORIES=	graphics
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pear.php.net/package/Image_Color/
 COMMENT=	Manage and handles color data and conversions
 

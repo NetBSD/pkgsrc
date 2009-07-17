@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/05/30 22:59:52 abs Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/17 18:00:16 adrianp Exp $
 #
 
 DISTNAME=	PEAR-1.5.4
@@ -8,7 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pear.php.net/
 COMMENT=	PEAR Base System for PHP
 

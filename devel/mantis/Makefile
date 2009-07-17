@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2009/04/23 10:45:21 gavan Exp $
+# $NetBSD: Makefile,v 1.35 2009/07/17 18:00:15 adrianp Exp $
 
 DISTNAME=	mantisbt-1.1.7
 PKGNAME=	${DISTNAME:S/mantisbt/mantis/}
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mantisbt.org/
 COMMENT=	PHP/MySQL/web based bugtracking system
 

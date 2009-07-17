@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2008/12/19 12:53:48 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/17 18:00:22 adrianp Exp $
 
 DISTNAME=	barnyard-0.2.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.snort.org/dl/barnyard/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.snort.org/
 COMMENT=	Fast output system for snort
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2009/04/13 22:25:25 adrianp Exp $
+# $NetBSD: Makefile,v 1.54 2009/07/17 18:00:16 adrianp Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -6,7 +6,7 @@ CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/imp/ \
 		ftp://ftp.horde.org/pub/imp/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/imp/
 COMMENT=	Internet Messaging Program
 

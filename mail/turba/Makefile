@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/12/15 23:19:35 adrianp Exp $
+# $NetBSD: Makefile,v 1.33 2009/07/17 18:00:17 adrianp Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -6,7 +6,7 @@ CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/turba/ \
 		ftp://ftp.horde.org/pub/turba/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/turba/
 COMMENT=	Horde contact management application
 

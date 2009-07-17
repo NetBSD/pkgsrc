@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.62 2009/01/30 22:22:26 adrianp Exp $
+# $NetBSD: Makefile,v 1.63 2009/07/17 18:00:26 adrianp Exp $
 
 DISTNAME=	horde-3.3.3
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.horde.org/pub/horde/ \
 		ftp://ftp.horde.org/pub/horde/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/
 COMMENT=	PHP application framework
 

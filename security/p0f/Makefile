@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/03/05 20:31:51 adrianp Exp $
+# $NetBSD: Makefile,v 1.24 2009/07/17 18:00:23 adrianp Exp $
 #
 
 DISTNAME=	p0f-2.0.8
@@ -6,7 +6,7 @@ CATEGORIES=	security net
 MASTER_SITES=	http://lcamtuf.coredump.cx/p0f/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lcamtuf.coredump.cx/p0f.shtml
 COMMENT=	Passive OS fingerprinting tool
 

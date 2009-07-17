@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/10/19 19:19:08 he Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/17 18:00:26 adrianp Exp $
 
 DISTNAME=	HTML-LinkExtractor-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/HTML-LinkExtractor/
 COMMENT=	Extract links from an HTML document
 

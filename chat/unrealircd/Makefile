@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/04/13 16:20:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.27 2009/07/17 18:00:14 adrianp Exp $
 
 DISTNAME=	Unreal3.2.7
 PKGNAME=	unrealircd-3.2.7
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://unreal.brueggisite.de/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.unrealircd.com/
 COMMENT=	Advanced IRC server with IPv6 and SSL support
 

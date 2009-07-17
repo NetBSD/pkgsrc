@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:11 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:16 adrianp Exp $
 #
 
 DISTNAME=	Template-GD-2.66
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AB/ABW/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/A/AB/ABW/
 COMMENT=	GD plugin(s) for the Template Toolkit
 

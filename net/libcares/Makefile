@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/07/14 12:56:10 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/17 18:00:20 adrianp Exp $
 
 #
 # Please do not update or modify this package as it has been imported only
@@ -11,7 +11,7 @@ PKGNAME=	libcares-1.4.0
 CATEGORIES=	net
 MASTER_SITES=	http://daniel.haxx.se/projects/c-ares/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://daniel.haxx.se/projects/c-ares/
 COMMENT=	Asynchronous resolver library
 

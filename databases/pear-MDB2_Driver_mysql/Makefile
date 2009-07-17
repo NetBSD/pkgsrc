@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/01/19 20:13:38 abs Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:14 adrianp Exp $
 
 DISTNAME=	MDB2_Driver_mysql-1.5.0b2
 CATEGORIES=	databases
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pear.php.net/package/MDB2_Driver_mysql
 COMMENT=	Mysql MDB2 driver
 
