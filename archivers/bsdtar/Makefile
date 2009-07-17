@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/04/09 00:48:06 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/17 04:47:27 rillig Exp $
 #
 
 DISTNAME=	bsdtar-2.5.5
@@ -40,12 +40,12 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
 .if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
-	@${CP} -R ${FILESDIR.bzip2} ${WRKDIR}/bzip2
+	${RUN}${CP} -R ${FILESDIR.bzip2} ${WRKDIR}/bzip2
 .endif
 .if empty(USE_BUILTIN.zlib:M[yY][eE][sS])
-	@${CP} -R ${FILESDIR.zlib} ${WRKDIR}/zlib
+	${RUN}${CP} -R ${FILESDIR.zlib} ${WRKDIR}/zlib
 .endif
-	@${CP} -R ${FILESDIR.libarchive} ${WRKSRC}
+	${RUN}${CP} -R ${FILESDIR.libarchive} ${WRKSRC}
 
 pre-configure:
 .if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
