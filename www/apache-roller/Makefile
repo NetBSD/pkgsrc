@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/13 20:21:28 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:26 adrianp Exp $
 #
 
 DISTNAME=	apache-roller-${ROLLER_VER}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=roller/roller-4/v${ROLLER_VER}/bin/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://roller.apache.org/
 COMMENT=	Full-featured, multi-user and group-blog server
 

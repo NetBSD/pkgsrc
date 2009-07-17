@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2008/01/18 05:08:41 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/17 18:00:20 adrianp Exp $
 
 DISTNAME=	ettercap-NG-0.7.3
 PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ettercap/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ettercap.sourceforge.net/
 COMMENT=	Multipurpose sniffer/interceptor/logger for switched LAN
 

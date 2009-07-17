@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/10/25 18:35:19 adrianp Exp $
+# $NetBSD: Makefile,v 1.41 2009/07/17 18:00:20 adrianp Exp $
 #
 
 DISTNAME=		snort-2.8.3.1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.snort.org/dl/ \
 			http://www.snort.org/dl/current/ \
 			http://www.snort.org/dl/old/
 
-MAINTAINER=		adrianp@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.snort.org/
 COMMENT=		The Open Source Network Intrusion Detection System
 

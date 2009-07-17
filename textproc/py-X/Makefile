@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/05 18:51:32 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/17 18:00:24 adrianp Exp $
 #
 
 DISTNAME=	PyX-0.9
@@ -13,7 +13,7 @@ DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
 
 PYDISTUTILSPKG=	yes
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pyx.sourceforge.net/
 COMMENT=	Package for the creation of PostScript and PDF files
 

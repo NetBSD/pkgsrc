@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/21 13:51:01 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/17 18:00:24 adrianp Exp $
 #
 
 DISTNAME=	KeePassX-0.2.2
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/KeePassX/keepassx/}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=keepassx/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://keepassx.sourceforge.net/
 COMMENT=	Password manager or safe
 

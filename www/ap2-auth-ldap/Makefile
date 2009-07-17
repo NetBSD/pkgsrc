@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/01/18 05:09:47 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2009/07/17 18:00:25 adrianp Exp $
 
 DISTNAME=	mod_auth_ldap3.05
 PKGNAME=	ap2-auth-ldap-3.05
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.muquit.com/muquit/software/mod_auth_ldap/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITES}/mod_auth_ldap.html
 COMMENT=	Module to allow apache2 authentication against an LDAP directory
 

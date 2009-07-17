@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2008/12/08 13:06:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/17 18:00:20 adrianp Exp $
 
 DISTNAME=	oinkmaster-2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oinkmaster/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oinkmaster.sourceforge.net/
 COMMENT=	Manage snort rule updates
 

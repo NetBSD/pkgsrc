@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/01/18 05:09:38 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/17 18:00:22 adrianp Exp $
 #
 # This package currently exists as a dependency for the hydra package but
 # the later versions of it are not supported by hydra.
@@ -11,7 +11,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.0xbadc0de.be/libssh/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://0xbadc0de.be/
 COMMENT=	Library providing working SSH implementation
 

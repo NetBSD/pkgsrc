@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:17:43 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:14 adrianp Exp $
 #
 
 DISTNAME=	Unicode-UTF8simple-1.06
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unicode/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~gus/Unicode-UTF8simple-1.06/
 COMMENT=	Conversions to/from UTF8 from/to charactersets
 

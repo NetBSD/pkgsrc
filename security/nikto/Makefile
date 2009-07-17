@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2007/03/08 19:25:33 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/07/17 18:00:23 adrianp Exp $
 
 DISTNAME=	nikto-1.36
 CATEGORIES=	security www
 MASTER_SITES=	http://www.cirt.net/nikto/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cirt.net/code/nikto.shtml
 COMMENT=	URL scanner used to search for known vulnerable CGIs on websites
 

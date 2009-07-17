@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/03 15:21:07 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/17 18:00:14 adrianp Exp $
 #
 
 DISTNAME=	adodb496a
@@ -7,7 +7,7 @@ CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adodb/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://adodb.sourceforge.net/
 COMMENT=	Active Data Objects Data Base for php4
 

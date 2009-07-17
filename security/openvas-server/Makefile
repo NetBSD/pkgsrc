@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/04 01:11:55 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/17 18:00:24 adrianp Exp $
 #
 
 DISTNAME=	openvas-server-2.0.0
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/550/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openvas.org/
 COMMENT=	Server for the Open Vulnerability Assessment System
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/06/05 09:14:07 hasso Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/17 18:00:19 adrianp Exp $
 #
 
 DISTNAME=		httping-1.2.9
@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://www.vanheusden.com/httping/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		adrianp@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.vanheusden.com/httping/
 COMMENT=		Like 'ping' but for http-requests
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2005/10/14 15:05:53 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:21 adrianp Exp $
 
 DISTNAME=	Community-Rules-2.4
 PKGNAME=	snort-rules-2.4
 CATEGORIES=	net security
 MASTER_SITES=	http://www.snort.org/pub-bin/downloads.cgi/Download/comm_rules/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.snort.org/
 COMMENT=	Network Intrusion Detection System (Community Rules)
 

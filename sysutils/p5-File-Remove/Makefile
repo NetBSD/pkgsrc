@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/10/19 19:18:47 he Exp $
+# $NetBSD: Makefile,v 1.15 2009/07/17 18:00:19 adrianp Exp $
 
 DISTNAME=	File-Remove-1.42
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	perl5 sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-Remove/
 COMMENT=	Remove files and directories
 

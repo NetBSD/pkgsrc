@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/11/10 12:09:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:13 adrianp Exp $
 #
 
 DISTNAME=	atheme-services-3.0.4
@@ -8,7 +8,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://distfiles.atheme.org/
 EXTRACT_SUFX=	.tbz2
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.atheme.org/
 COMMENT=	Flexible IRC services system with proven scalability
 
