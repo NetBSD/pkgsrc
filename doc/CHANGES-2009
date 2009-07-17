@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2683 2009/07/17 20:23:01 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2684 2009/07/17 20:28:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3591,3 +3591,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/cdrtools to 2.01.01alpha61 [wiz 2009-07-17]
 	Updated x11/setxkbmap to 1.1.0 [wiz 2009-07-17]
 	Updated multimedia/libogg to 1.1.4 [wiz 2009-07-17]
+	Updated audio/libvorbis to 1.2.3 [wiz 2009-07-17]
