@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2007/05/22 12:53:01 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/17 01:10:07 jakllsch Exp $
 
-DISTNAME=	wide-dhcpv6-20070507
+DISTNAME=	wide-dhcpv6-20080615
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wide-dhcpv6/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wide-dhcpv6.sourceforge.net/
 COMMENT=	DHCP6 client, server and relay agent by WIDE project
+LICENSE=	modified-bsd
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	lex yacc
 GNU_CONFIGURE=	yes
@@ -34,16 +37,16 @@ SUBST_SED.fix-paths=	-e 's,/usr/local/etc,${PKG_SYSCONFDIR:Q},g'
 
 do-install:
 .for f in ${COMMANDS}
-	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/sbin
 .endfor
 .for f in ${MAN5}
-	${INSTALL_MAN} ${WRKSRC}/${f} ${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 .endfor
 .for f in ${MAN8}
-	${INSTALL_MAN} ${WRKSRC}/${f} ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 .endfor
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/${f}.sample ${EGDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f}.sample ${DESTDIR}${EGDIR}/${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
