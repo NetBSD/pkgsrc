@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/16 14:54:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/17 10:43:21 wiz Exp $
 #
 
 DISTNAME=	mp3fs-0.13
 PKGNAME=	fuse-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3fs/}
 
