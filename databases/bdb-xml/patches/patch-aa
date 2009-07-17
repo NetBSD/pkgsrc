@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2009/05/16 19:27:07 hasso Exp $
+$NetBSD: patch-aa,v 1.5 2009/07/17 18:26:30 hasso Exp $
 
---- ../dist/configure.orig	2004-01-27 16:12:02.000000000 +0000
-+++ ../dist/configure
+--- ../dist/configure.orig	2004-01-27 18:12:02 +0200
++++ ../dist/configure	2009-07-17 18:36:29 +0300
 @@ -3443,14 +3443,14 @@ echo "${ECHO_T}$with_berkeleydb" >&6
  if test "$with_berkeleydb" = "no"; then
  	with_berkeleydb="/usr/local/BerkeleyDB.4.2"
@@ -120,7 +120,7 @@ $NetBSD: patch-aa,v 1.4 2009/05/16 19:27:07 hasso Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -19369,7 +19369,7 @@ echo "${ECHO_T}$JMODSUFFIX" >&6
+@@ -19369,12 +19369,12 @@ echo "${ECHO_T}$JMODSUFFIX" >&6
  INSTALLER="\$(LIBTOOL) --mode=install cp -p"
  
  MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
@@ -129,6 +129,12 @@ $NetBSD: patch-aa,v 1.4 2009/05/16 19:27:07 hasso Exp $
  MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
  MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
  MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
+ MAKEFILE_CXXLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK}"
+-LIBTOOL="$SHELL ./libtool"
++LIBTOOL="libtool"
+ 
+ # Configure for shared libraries, static libraries, or both.  If both are
+ # configured, build the utilities and example programs with shared versions.
 @@ -19825,7 +19825,7 @@ if test "$_JTOPDIR" != "/usr"; then
  	case "$host_os" in
  	aix*)		_JNI_INC_SUBDIRS="aix";;
