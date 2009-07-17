@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2678 2009/07/17 17:05:13 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.2679 2009/07/17 17:05:34 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3585,4 +3585,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-ltxmisc to 2008.12680nb1 [minskim 2009-07-16]
 	Updated net/wide-dhcpv6 to 20080615 [jakllsch 2009-07-17]
 	Updated databases/p5-DBD-Sybase to 1.09 [sno 2009-07-17]
+	Updated devel/bugzilla3 to 3.2.4 [adrianp 2009-07-17]
 	Updated devel/bugzilla3 to 3.2.4 [adrianp 2009-07-17]
