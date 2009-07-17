@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.8 2009/07/16 21:20:07 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.9 2009/07/17 13:56:23 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -31,3 +31,11 @@ Pullup ticket #2814 - requested by minskim
 ruby-actionpack: security patch
 Pullup ticket #2816 - requested by obache
 p5-IO-Socket-SSL: security update
+Pullup ticket #2815 - requested by obache
+dillo: security update
+Pullup ticket #2817 - requested by adrianp
+drupal6: security update
+Pullup ticket #2818 - requested by adrianp
+isc-dhcp4: security update
+Pullup ticket #2819 - requested by adrianp
+drupal: security update
