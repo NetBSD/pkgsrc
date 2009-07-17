@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.44 2009/02/06 15:27:00 joerg Exp $
+# $NetBSD: depends.mk,v 1.45 2009/07/17 23:24:57 agc Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -79,7 +79,7 @@ _DEPENDS_INSTALL_CMD=							\
 		${STEP_MSG} "Verifying $$target for $$dir";		\
 		[ -d "$$dir" ] || ${FAIL_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
 		cd $$dir;						\
-		${SETENV} ${PKGSRC_MAKE_ENV} _PKGSRC_DEPS="${PKGNAME} ${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target; \
+		${SETENV} ${PKGSRC_MAKE_ENV} _PKGSRC_DEPS=" ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target; \
 		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
 		case "$$pkg" in						\
 		"")	${ERROR_MSG} "[depends.mk] A package matching \`\`$$pattern'' should"; \
@@ -142,10 +142,10 @@ pkg_install-depends:
 	${RUN}if [ `${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302` -lt ${PKGTOOLS_REQD} ]; then \
 	${PHASE_MSG} "Trying to handle out-dated pkg_install..."; \
 	cd ../../pkgtools/pkg_install && ${SETENV} ${PKGSRC_MAKE_ENV} \
-	    _PKGSRC_DEPS="${PKGNAME} ${_PKGSRC_DEPS}" \
+	    _PKGSRC_DEPS=" ${PKGNAME}${_PKGSRC_DEPS}" \
 	    ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes clean && \
 	cd ../../pkgtools/pkg_install && ${SETENV} ${PKGSRC_MAKE_ENV} \
-	    _PKGSRC_DEPS="${PKGNAME} ${_PKGSRC_DEPS}" \
+	    _PKGSRC_DEPS=" ${PKGNAME}${_PKGSRC_DEPS}" \
 	    ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes ${DEPENDS_TARGET:Q}; \
 	fi
 
