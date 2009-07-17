@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/04 01:10:17 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/17 18:00:24 adrianp Exp $
 #
 
 DISTNAME=	openvas-plugins-1.0.5
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/539/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openvas.org/
 COMMENT=	Plugins for the Open Vulnerability Assessment System
 

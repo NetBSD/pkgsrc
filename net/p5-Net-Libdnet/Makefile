@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:32 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:22 adrianp Exp $
 #
 
 DISTNAME=	Net-Libdnet-0.01
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/V/VM/VMAN/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/V/VM/VMAN/
 COMMENT=	Perl interface to libdnet
 
