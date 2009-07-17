@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/07/16 14:54:02 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/17 10:43:21 wiz Exp $
 
---- src/mp3fs.c.orig	2008-12-14 05:17:35.000000000 +0000
+--- src/mp3fs.c.orig	2008-12-14 06:17:35.000000000 +0100
 +++ src/mp3fs.c
 @@ -30,7 +30,11 @@
  #include <fcntl.h>
@@ -40,3 +40,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/07/16 14:54:02 wiz Exp $
    if(res == -1)
      return -errno;
    
+@@ -252,7 +265,7 @@ int main(int argc, char *argv[]) {
+   basepath = argv[1];
+   bitrate = 0;
+ 
+-  rate = strchr(basepath, ',');
++  rate = strrchr(basepath, ',');
+   if(rate) {
+     rate[0] = '\0';
+     bitrate = atoi(rate + 1);
