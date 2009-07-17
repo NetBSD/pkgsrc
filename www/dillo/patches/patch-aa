@@ -1,25 +1,20 @@
-$NetBSD: patch-aa,v 1.7 2008/10/31 02:02:44 snj Exp $
+$NetBSD: patch-aa,v 1.7.6.1 2009/07/17 13:23:37 tron Exp $
 
---- ./dpid/Makefile.in.orig	2008-10-30 07:40:38.000000000 -0700
-+++ dpid/Makefile.in	2008-10-30 07:46:09.000000000 -0700
-@@ -485,13 +485,13 @@
+--- dpid/Makefile.in.orig	2009-07-01 10:56:37.000000000 -0700
++++ dpid/Makefile.in	2009-07-08 20:42:08.000000000 -0700
+@@ -320,12 +320,12 @@ distclean-compile:
+ uninstall-info-am:
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(sysconfdir)" || $(mkdir_p) "$(DESTDIR)$(sysconfdir)"
++	test -z "$(datadir)/examples/$(PACKAGE)" || $(mkdir_p) "$(DESTDIR)$(datadir)/examples/$(PACKAGE)"
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
+-	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
++	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(datadir)/examples/$(PACKAGE)/$$f'"; \
++	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(datadir)/examples/$(PACKAGE)/$$f"; \
+ 	done
  
- 
- install-data-local :
--	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
--	echo dpi_dir=$(libdir)/dillo/dpi > $(DESTDIR)$(sysconfdir)/dpidrc
--	echo >> $(DESTDIR)$(sysconfdir)/dpidrc
--	echo "proto.file=file/file.dpi" >> $(DESTDIR)$(sysconfdir)/dpidrc
--	echo "proto.ftp=ftp/ftp.filter.dpi" >> $(DESTDIR)$(sysconfdir)/dpidrc
--	echo "proto.https=https/https.filter.dpi" >> $(DESTDIR)$(sysconfdir)/dpidrc
--	echo "proto.data=datauri/datauri.filter.dpi" >> $(DESTDIR)$(sysconfdir)/dpidrc
-+	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/$(PACKAGE)
-+	echo dpi_dir=$(libdir)/dillo/dpi > $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
-+	echo >> $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
-+	echo "proto.file=file/file.dpi" >> $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
-+	echo "proto.ftp=ftp/ftp.filter.dpi" >> $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
-+	echo "proto.https=https/https.filter.dpi" >> $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
-+	echo "proto.data=datauri/datauri.filter.dpi" >> $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+ uninstall-sysconfDATA:
