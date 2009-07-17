@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.813 2009/06/13 06:30:25 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.814 2009/07/17 04:39:33 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4482,6 +4482,11 @@ sub checkline_mk_shelltext($$) {
 
 			} elsif ($shellword =~ m"^\$\{([\w_]+)\}$" && defined($type = get_variable_type($line, $1)) && $type->basic_type eq "ShellCommand") {
 				checkline_mk_shellcmd_use($line, $shellword);
+
+			} elsif ($shellword =~ m"^\$\{(\w+)\}$" && defined($pkgctx_vardef) && exists($pkgctx_vardef->{$1})) {
+				# When the package author has explicitly
+				# defined a command variable, assume it
+				# to be valid.
 
 			} elsif ($shellword =~ m"^(?:\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exec|exit|export|fi|for|if|read|set|shift|then|umask|unset|while)$") {
 				# Shell builtins are fine.
