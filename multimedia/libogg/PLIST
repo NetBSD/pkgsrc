@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:08:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/07/17 20:22:50 wiz Exp $
 include/ogg/config_types.h
 include/ogg/ogg.h
 include/ogg/os_types.h
@@ -69,11 +69,10 @@ share/doc/${PKGNAME}/ogg/oggpack_writetrunc.html
 share/doc/${PKGNAME}/ogg/overview.html
 share/doc/${PKGNAME}/ogg/reference.html
 share/doc/${PKGNAME}/ogg/style.css
-share/doc/${PKGNAME}/ogg/vorbis_comment.html
-share/doc/${PKGNAME}/ogg/vorbis_info.html
 share/doc/${PKGNAME}/oggstream.html
 share/doc/${PKGNAME}/rfc3533.txt
-share/doc/${PKGNAME}/rfc3534.txt
+share/doc/${PKGNAME}/rfc5334.txt
+share/doc/${PKGNAME}/skeleton.html
 share/doc/${PKGNAME}/stream.png
 share/doc/${PKGNAME}/vorbisword2.png
 share/doc/${PKGNAME}/white-ogg.png
