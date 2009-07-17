@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/07/07 19:31:48 sno Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/17 18:00:25 adrianp Exp $
 #
 
 DISTNAME=	Time-Format-1.11
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Time/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Time-Format/
 COMMENT=	Easy-to-use date/time formatting
 

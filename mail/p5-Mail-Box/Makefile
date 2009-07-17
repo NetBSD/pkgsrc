@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2009/04/24 17:15:23 sno Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/17 18:00:17 adrianp Exp $
 
 DISTNAME=	Mail-Box-2.086
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perl.overmeer.net/mailbox/
 COMMENT=	Set of packages which implement methods to handle e-mail
 

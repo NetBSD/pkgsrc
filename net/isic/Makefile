@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/22 19:26:53 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/17 18:00:20 adrianp Exp $
 #
 
 DISTNAME=	isic-0.06
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.packetfactory.net/Projects/ISIC/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.packetfactory.net/Projects/ISIC/
 COMMENT=	Ip Stack Integrity Checker (IP, TCP, UDP, ICMP et. al.)
 
