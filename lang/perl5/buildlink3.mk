@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2009/03/20 19:24:51 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2009/07/17 06:43:27 sno Exp $
 
 BUILDLINK_TREE+=	perl
 
@@ -19,6 +19,9 @@ BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
 FIND_PREFIX:=	PERLDIR=perl
 .include "../../mk/find-prefix.mk"
 PERL5=		${PERLDIR}/bin/perl
+
+pkgbase := perl
+.include "../../mk/pkg-build-options.mk"
 
 PERL5_OPTIONS?=		# empty
 .  if !empty(PERL5_OPTIONS:Mthreads)
