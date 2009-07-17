@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/11/15 18:32:14 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/17 18:43:15 hasso Exp $
 
---- src/users/user-settings.c.orig	2008-11-15 09:27:00.000000000 -0500
-+++ src/users/user-settings.c
+--- src/users/user-settings.c.orig	2009-03-17 17:21:01 +0200
++++ src/users/user-settings.c	2009-07-17 21:13:38 +0300
 @@ -29,7 +29,13 @@
  #include <sys/types.h>
  #include <sys/stat.h>
@@ -16,8 +16,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/15 18:32:14 jmcneill Exp $
  #include <ctype.h>
  
  #include "users-table.h"
-@@ -281,7 +287,7 @@ set_login_length (GtkWidget *entry)
- #ifdef __FreeBSD__
+@@ -278,10 +284,10 @@ static void
+ set_login_length (GtkWidget *entry)
+ {
+ 	gint max_len;
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
  	max_len = UT_NAMESIZE;
  #else
 -	struct utmp ut;
