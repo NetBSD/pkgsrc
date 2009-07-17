@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.814 2009/07/17 04:39:33 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.815 2009/07/17 20:06:22 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2562,6 +2562,34 @@ sub relative_path($$) {
 	}
 }
 
+sub resolve_variable_rec1($$);
+sub resolve_variable_rec2($$);
+
+sub resolve_variable_rec1($$) {
+	my ($varname, $visited) = @_;
+	$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "resolve_variable_rec1($varname)");
+
+	if (!exists($visited->{$varname})) {
+		$visited->{$varname} = true;
+		if (defined($pkgctx_vardef) && exists($pkgctx_vardef->{$varname})) {
+			return resolve_variable_rec2($pkgctx_vardef->{$varname}->get("value"), $visited);
+		}
+		if (defined($mkctx_vardef) && exists($mkctx_vardef->{$varname})) {
+			return resolve_variable_rec2($mkctx_vardef->{$varname}->get("value"), $visited);
+		}
+	}
+	return "\${$varname}";
+}
+
+sub resolve_variable_rec2($$) {
+	my ($string, $visited) = @_;
+	$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "resolve_variable_rec2(\"$string\")");
+
+	my $expanded = $string;
+	$expanded =~ s/\$\{(\w+)\}/resolve_variable_rec1($1, $visited)/eg;
+	return $expanded;
+}
+
 sub expand_variable($) {
 	my ($varname) = @_;
 
@@ -2571,7 +2599,11 @@ sub expand_variable($) {
 
 	$value = resolve_relative_path($value, true);
 	if ($value =~ regex_unresolved) {
-		$opt_debug_misc and log_debug(NO_FILE, NO_LINES, "[expand_variable] The variable ${varname} could not be resolved completely. Its value is \"${value}\".");
+		$opt_debug_misc and log_debug(NO_FILE, NO_LINES, "[expand_variable] Trying harder to resolve variable references in ${varname}=\"${value}\".");
+		$value = resolve_variable_rec2($value, {});
+		if ($value =~ regex_unresolved) {
+			$opt_debug_misc and log_debug(NO_FILE, NO_LINES, "[expand_variable] Failed to resolve ${varname}=\"${value}\".");
+		}
 	}
 	return $value;
 }
