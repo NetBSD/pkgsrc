@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.30 2009/07/16 22:12:17 zafer Exp $
+# $NetBSD: Makefile,v 1.31 2009/07/17 20:35:48 wiz Exp $
 #
 
-DISTNAME=	mercurial-1.2.1
+DISTNAME=	mercurial-1.3
 CATEGORIES=	devel scm
 MASTER_SITES=	http://mercurial.selenic.com/release/
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://mercurial.selenic.com/wiki/
 COMMENT=	Fast, lightweight source control management system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
-PY_PATCHPLIST=	yes
-PYDISTUTILSPKG=	yes
-USE_TOOLS+=	gmake msgfmt
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+PY_PATCHPLIST=			yes
+PYDISTUTILSPKG=			yes
+PYTHON_VERSIONS_INCOMPATIBLE=	23
+USE_TOOLS+=			gmake msgfmt
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
