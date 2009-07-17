@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2008/08/17 10:03:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/17 18:00:19 adrianp Exp $
 
 DISTNAME=	libol-0.3.18
 CATEGORIES=	sysutils
 PKGREVISION=	2
 MASTER_SITES=	http://www.balabit.com/downloads/libol/0.3/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.balabit.com/network-security/syslog-ng/
 COMMENT=	Support library for syslog-ng
 
