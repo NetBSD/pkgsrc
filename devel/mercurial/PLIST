@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:48:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/07/17 20:35:48 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -6,9 +6,6 @@ ${PYSITELIB}/hgext/__init__.pyo
 ${PYSITELIB}/hgext/acl.py
 ${PYSITELIB}/hgext/acl.pyc
 ${PYSITELIB}/hgext/acl.pyo
-${PYSITELIB}/hgext/alias.py
-${PYSITELIB}/hgext/alias.pyc
-${PYSITELIB}/hgext/alias.pyo
 ${PYSITELIB}/hgext/bookmarks.py
 ${PYSITELIB}/hgext/bookmarks.pyc
 ${PYSITELIB}/hgext/bookmarks.pyo
@@ -123,6 +120,9 @@ ${PYSITELIB}/hgext/rebase.pyo
 ${PYSITELIB}/hgext/record.py
 ${PYSITELIB}/hgext/record.pyc
 ${PYSITELIB}/hgext/record.pyo
+${PYSITELIB}/hgext/share.py
+${PYSITELIB}/hgext/share.pyc
+${PYSITELIB}/hgext/share.pyo
 ${PYSITELIB}/hgext/transplant.py
 ${PYSITELIB}/hgext/transplant.pyc
 ${PYSITELIB}/hgext/transplant.pyo
@@ -170,6 +170,9 @@ ${PYSITELIB}/mercurial/cmdutil.pyo
 ${PYSITELIB}/mercurial/commands.py
 ${PYSITELIB}/mercurial/commands.pyc
 ${PYSITELIB}/mercurial/commands.pyo
+${PYSITELIB}/mercurial/config.py
+${PYSITELIB}/mercurial/config.pyc
+${PYSITELIB}/mercurial/config.pyo
 ${PYSITELIB}/mercurial/context.py
 ${PYSITELIB}/mercurial/context.pyc
 ${PYSITELIB}/mercurial/context.pyo
@@ -186,6 +189,9 @@ ${PYSITELIB}/mercurial/dirstate.pyo
 ${PYSITELIB}/mercurial/dispatch.py
 ${PYSITELIB}/mercurial/dispatch.pyc
 ${PYSITELIB}/mercurial/dispatch.pyo
+${PYSITELIB}/mercurial/encoding.py
+${PYSITELIB}/mercurial/encoding.pyc
+${PYSITELIB}/mercurial/encoding.pyo
 ${PYSITELIB}/mercurial/error.py
 ${PYSITELIB}/mercurial/error.pyc
 ${PYSITELIB}/mercurial/error.pyo
@@ -253,9 +259,15 @@ ${PYSITELIB}/mercurial/i18n.py
 ${PYSITELIB}/mercurial/i18n.pyc
 ${PYSITELIB}/mercurial/i18n.pyo
 ${PYSITELIB}/mercurial/i18n/da.po
+${PYSITELIB}/mercurial/i18n/de.po
+${PYSITELIB}/mercurial/i18n/el.po
+${PYSITELIB}/mercurial/i18n/fr.po
+${PYSITELIB}/mercurial/i18n/hggettext
 ${PYSITELIB}/mercurial/i18n/it.po
 ${PYSITELIB}/mercurial/i18n/ja.po
-${PYSITELIB}/mercurial/i18n/zh.po
+${PYSITELIB}/mercurial/i18n/pt_BR.po
+${PYSITELIB}/mercurial/i18n/zh_CN.po
+${PYSITELIB}/mercurial/i18n/zh_TW.po
 ${PYSITELIB}/mercurial/ignore.py
 ${PYSITELIB}/mercurial/ignore.pyc
 ${PYSITELIB}/mercurial/ignore.pyo
@@ -263,9 +275,14 @@ ${PYSITELIB}/mercurial/keepalive.py
 ${PYSITELIB}/mercurial/keepalive.pyc
 ${PYSITELIB}/mercurial/keepalive.pyo
 ${PYSITELIB}/mercurial/locale/da/LC_MESSAGES/hg.mo
+${PYSITELIB}/mercurial/locale/de/LC_MESSAGES/hg.mo
+${PYSITELIB}/mercurial/locale/el/LC_MESSAGES/hg.mo
+${PYSITELIB}/mercurial/locale/fr/LC_MESSAGES/hg.mo
 ${PYSITELIB}/mercurial/locale/it/LC_MESSAGES/hg.mo
 ${PYSITELIB}/mercurial/locale/ja/LC_MESSAGES/hg.mo
-${PYSITELIB}/mercurial/locale/zh/LC_MESSAGES/hg.mo
+${PYSITELIB}/mercurial/locale/pt_BR/LC_MESSAGES/hg.mo
+${PYSITELIB}/mercurial/locale/zh_CN/LC_MESSAGES/hg.mo
+${PYSITELIB}/mercurial/locale/zh_TW/LC_MESSAGES/hg.mo
 ${PYSITELIB}/mercurial/localrepo.py
 ${PYSITELIB}/mercurial/localrepo.pyc
 ${PYSITELIB}/mercurial/localrepo.pyo
@@ -275,6 +292,9 @@ ${PYSITELIB}/mercurial/lock.pyo
 ${PYSITELIB}/mercurial/lsprof.py
 ${PYSITELIB}/mercurial/lsprof.pyc
 ${PYSITELIB}/mercurial/lsprof.pyo
+${PYSITELIB}/mercurial/lsprofcalltree.py
+${PYSITELIB}/mercurial/lsprofcalltree.pyc
+${PYSITELIB}/mercurial/lsprofcalltree.pyo
 ${PYSITELIB}/mercurial/mail.py
 ${PYSITELIB}/mercurial/mail.pyc
 ${PYSITELIB}/mercurial/mail.pyo
@@ -299,6 +319,9 @@ ${PYSITELIB}/mercurial/parsers.so
 ${PYSITELIB}/mercurial/patch.py
 ${PYSITELIB}/mercurial/patch.pyc
 ${PYSITELIB}/mercurial/patch.pyo
+${PYSITELIB}/mercurial/posix.py
+${PYSITELIB}/mercurial/posix.pyc
+${PYSITELIB}/mercurial/posix.pyo
 ${PYSITELIB}/mercurial/repair.py
 ${PYSITELIB}/mercurial/repair.pyc
 ${PYSITELIB}/mercurial/repair.pyo
@@ -329,6 +352,9 @@ ${PYSITELIB}/mercurial/streamclone.pyo
 ${PYSITELIB}/mercurial/strutil.py
 ${PYSITELIB}/mercurial/strutil.pyc
 ${PYSITELIB}/mercurial/strutil.pyo
+${PYSITELIB}/mercurial/subrepo.py
+${PYSITELIB}/mercurial/subrepo.pyc
+${PYSITELIB}/mercurial/subrepo.pyo
 ${PYSITELIB}/mercurial/templatefilters.py
 ${PYSITELIB}/mercurial/templatefilters.pyc
 ${PYSITELIB}/mercurial/templatefilters.pyo
@@ -345,6 +371,7 @@ ${PYSITELIB}/mercurial/templates/atom/tagentry.tmpl
 ${PYSITELIB}/mercurial/templates/atom/tags.tmpl
 ${PYSITELIB}/mercurial/templates/coal/header.tmpl
 ${PYSITELIB}/mercurial/templates/coal/map
+${PYSITELIB}/mercurial/templates/gitweb/branches.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/changeset.tmpl
@@ -367,6 +394,7 @@ ${PYSITELIB}/mercurial/templates/gitweb/tags.tmpl
 ${PYSITELIB}/mercurial/templates/map-cmdline.changelog
 ${PYSITELIB}/mercurial/templates/map-cmdline.compact
 ${PYSITELIB}/mercurial/templates/map-cmdline.default
+${PYSITELIB}/mercurial/templates/monoblue/branches.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/changeset.tmpl
@@ -386,6 +414,7 @@ ${PYSITELIB}/mercurial/templates/monoblue/search.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/shortlog.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/summary.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/tags.tmpl
+${PYSITELIB}/mercurial/templates/paper/branches.tmpl
 ${PYSITELIB}/mercurial/templates/paper/changeset.tmpl
 ${PYSITELIB}/mercurial/templates/paper/error.tmpl
 ${PYSITELIB}/mercurial/templates/paper/fileannotate.tmpl
@@ -421,6 +450,7 @@ ${PYSITELIB}/mercurial/templates/rss/header.tmpl
 ${PYSITELIB}/mercurial/templates/rss/map
 ${PYSITELIB}/mercurial/templates/rss/tagentry.tmpl
 ${PYSITELIB}/mercurial/templates/rss/tags.tmpl
+${PYSITELIB}/mercurial/templates/spartan/branches.tmpl
 ${PYSITELIB}/mercurial/templates/spartan/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/spartan/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/spartan/changeset.tmpl
@@ -466,12 +496,15 @@ ${PYSITELIB}/mercurial/url.pyo
 ${PYSITELIB}/mercurial/util.py
 ${PYSITELIB}/mercurial/util.pyc
 ${PYSITELIB}/mercurial/util.pyo
-${PYSITELIB}/mercurial/util_win32.py
-${PYSITELIB}/mercurial/util_win32.pyc
-${PYSITELIB}/mercurial/util_win32.pyo
 ${PYSITELIB}/mercurial/verify.py
 ${PYSITELIB}/mercurial/verify.pyc
 ${PYSITELIB}/mercurial/verify.pyo
+${PYSITELIB}/mercurial/win32.py
+${PYSITELIB}/mercurial/win32.pyc
+${PYSITELIB}/mercurial/win32.pyo
+${PYSITELIB}/mercurial/windows.py
+${PYSITELIB}/mercurial/windows.pyc
+${PYSITELIB}/mercurial/windows.pyo
 man/man1/hg.1
 man/man5/hgignore.5
 man/man5/hgrc.5
