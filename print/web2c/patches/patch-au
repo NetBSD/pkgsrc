@@ -1,0 +1,17 @@
+$NetBSD: patch-au,v 1.1 2009/07/17 06:55:14 minskim Exp $
+
+--- cpascal.h.orig	2008-05-24 16:56:44.000000000 -0700
++++ cpascal.h
+@@ -272,6 +272,12 @@ typedef struct option getoptstruct;
+ #undef getname
+ #define getname vms_getname
+ #endif
++
++#ifdef getline
++#undef getline
++#endif
++#define getline web2c_getline
++
+ 
+ /* Declarations for the routines we provide ourselves in lib/.  */
+ 
