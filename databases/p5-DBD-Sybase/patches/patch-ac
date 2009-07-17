@@ -1,0 +1,30 @@
+--- dbdimp.c.orig	2009-07-07 14:58:51.000000000 +0000
++++ dbdimp.c	2009-07-07 14:59:26.000000000 +0000
+@@ -774,22 +774,22 @@
+ 
+ #if defined(CS_VERSION_150)
+ 	if(cs_ver == CS_VERSION_150)
+-		BLK_VERSION = BLK_VERSION_150;
++		BLK_VERSION = CS_VERSION_150;
+ #endif
+ #if defined(CS_VERSION_125)
+ 	if(cs_ver == CS_VERSION_125)
+-		BLK_VERSION = BLK_VERSION_125;
++		BLK_VERSION = CS_VERSION_125;
+ #endif
+ #if defined(CS_VERSION_120)
+ 	if(cs_ver == CS_VERSION_120)
+-		BLK_VERSION = BLK_VERSION_120;
++		BLK_VERSION = CS_VERSION_120;
+ #endif
+ #if defined(CS_VERSION_110)
+ 	if(cs_ver == CS_VERSION_110)
+-		BLK_VERSION = BLK_VERSION_110;
++		BLK_VERSION = CS_VERSION_110;
+ #endif
+ 	if (cs_ver == CS_VERSION_100)
+-		BLK_VERSION = BLK_VERSION_100;
++		BLK_VERSION = CS_VERSION_100;
+ 
+ #if USE_CSLIB_CB
+ 	if (cs_config(context, CS_SET, CS_MESSAGE_CB,
