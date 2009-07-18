@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2726 2009/07/18 20:35:39 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2727 2009/07/18 21:27:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3634,3 +3634,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/clive to 2.2.1 [wiz 2009-07-18]
 	Updated graphics/digikam to 0.9.6 [wiz 2009-07-18]
 	Updated x11/py-gtk2 to 2.14.1nb1 [wiz 2009-07-18]
+	Updated net/p5-RPC-XML to 0.67 [sno 2009-07-18]
