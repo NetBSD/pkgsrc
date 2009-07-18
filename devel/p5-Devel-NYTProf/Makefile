@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/04/22 06:38:47 seb Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/18 21:40:49 sno Exp $
 #
 
-DISTNAME=	Devel-NYTProf-2.09
+DISTNAME=	Devel-NYTProf-2.10
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Devel-NYTProf/
 COMMENT=	Powerful feature-rich Perl 5 source code profiler
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
