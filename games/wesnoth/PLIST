@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2009/06/14 19:10:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.31 2009/07/18 14:02:24 wiz Exp $
 bin/wesnoth
 bin/wesnothd
 man/cs/man6/wesnoth.6
@@ -35,6 +35,8 @@ man/tr/man6/wesnoth.6
 man/tr/man6/wesnothd.6
 man/zh_CN/man6/wesnoth.6
 man/zh_CN/man6/wesnothd.6
+man/zh_TW/man6/wesnoth.6
+man/zh_TW/man6/wesnothd.6
 share/applications/wesnoth.desktop
 share/applications/wesnoth_editor.desktop
 share/doc/wesnoth/manual/CMakeLists.txt
@@ -641,18 +643,18 @@ share/wesnoth/data/campaigns/Liberty/utils/utils.cfg
 share/wesnoth/data/campaigns/Northern_Rebirth/_main.cfg
 share/wesnoth/data/campaigns/Northern_Rebirth/images/campaign_image.jpg
 share/wesnoth/data/campaigns/Northern_Rebirth/images/hatchling.png
-share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Anita.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Arthian.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Camerin.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Elenia.png
-share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Father_Marcus.png
+share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Eryssa.png
+share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Father_Morvin.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Hamel.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Hidel.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Malifor.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Rakshas.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Ro_Sothian.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Sisal.png
-share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Sister_Theta.png
+share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Sister_Thera.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Stalrag.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Tallin-Evil.png
 share/wesnoth/data/campaigns/Northern_Rebirth/images/portraits/Tallin.png
@@ -9428,3 +9430,4 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth-tutorial.mo
 share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth-units.mo
 share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth-utbs.mo
 share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
+@pkgdir var/run/wesnothd
