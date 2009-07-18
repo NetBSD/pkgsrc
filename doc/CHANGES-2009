@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2712 2009/07/18 18:01:32 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2713 2009/07/18 18:07:35 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3620,3 +3620,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-File-Find-Rule-Perl to 1.08 [sno 2009-07-18]
 	Updated devel/p5-File-Find-Rule-VCS to 1.06 [sno 2009-07-18]
 	Updated devel/p5-IO-Zlib to 1.10 [sno 2009-07-18]
+	Updated textproc/p5-Encode to 2.35 [sno 2009-07-18]
