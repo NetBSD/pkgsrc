@@ -1,0 +1,4 @@
+The acmtrans2e class formats articles in the style of ACM
+transactions.  Users who have prepared their document with LaTeX can,
+with very little effort, produce camera-ready copy for these journals.
+The accompanying BibTeX style is based on the chicago style.
