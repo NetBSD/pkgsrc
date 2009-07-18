@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2008/01/08 20:05:40 heinz Exp $
+$NetBSD: distinfo,v 1.7 2009/07/18 18:01:21 sno Exp $
 
-SHA1 (IO-Zlib-1.09.tar.gz) = d7e5d740ed1de260019f2e6b8f1dc11726aaab18
-RMD160 (IO-Zlib-1.09.tar.gz) = 97047909f79c3e55bb99299ab96a6be6867e787b
-Size (IO-Zlib-1.09.tar.gz) = 10092 bytes
+SHA1 (IO-Zlib-1.10.tar.gz) = 8d530d2268e3c32f7644495287219361e6e262fb
+RMD160 (IO-Zlib-1.10.tar.gz) = e7e021350568003f004a41aa9f08933836b37237
+Size (IO-Zlib-1.10.tar.gz) = 10144 bytes
