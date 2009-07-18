@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/06/17 04:47:40 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/18 02:29:32 obache Exp $
 
-DISTNAME=	Net-Amazon-0.53
+DISTNAME=	Net-Amazon-0.54
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
