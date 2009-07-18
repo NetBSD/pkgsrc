@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/07/18 18:38:28 wiz Exp $
+
+--- Makefile.orig	2009-07-18 00:37:39.000000000 +0000
++++ Makefile
+@@ -30,7 +30,7 @@ man1dir=$(mandir)/man1
+ all: blackbox bridges cube dominosa fifteen filling fillingsolver flip \
+ 		galaxies galaxiespicture galaxiessolver guess inertia \
+ 		latincheck lightup lightupsolver loopy loopysolver map \
+-		mapsolver mineobfusc mines net netslide nullgame obfusc \
++		mapsolver mineobfusc mines netgame netslide nullgame obfusc \
+ 		pattern patternsolver pegs rect samegame sixteen slant \
+ 		slantsolver solo solosolver tents tentssolver twiddle \
+ 		unequal unequalsolver untangle
+@@ -146,7 +146,7 @@ mines: drawing.o gtk.o malloc.o midend.o
+ 		mines-icon.o misc.o printing.o ps.o random.o tree234.o \
+ 		version.o 
+ 
+-net: drawing.o dsf.o gtk.o malloc.o midend.o misc.o net.o net-icon.o \
++netgame: drawing.o dsf.o gtk.o malloc.o midend.o misc.o net.o net-icon.o \
+ 		printing.o ps.o random.o tree234.o version.o
+ 	$(CC) $(XLDFLAGS) -o $@ drawing.o dsf.o gtk.o malloc.o midend.o \
+ 		misc.o net.o net-icon.o printing.o ps.o random.o tree234.o \
+@@ -502,7 +502,7 @@ GAMES += lightup
+ GAMES += loopy
+ GAMES += map
+ GAMES += mines
+-GAMES += net
++GAMES += netgame
+ GAMES += netslide
+ GAMES += pattern
+ GAMES += pegs
+@@ -531,4 +531,4 @@ install:
+ 	done
+ 
+ clean:
+-	rm -f *.o blackbox bridges cube dominosa fifteen filling fillingsolver flip galaxies galaxiespicture galaxiessolver guess inertia latincheck lightup lightupsolver loopy loopysolver map mapsolver mineobfusc mines net netslide nullgame obfusc pattern patternsolver pegs rect samegame sixteen slant slantsolver solo solosolver tents tentssolver twiddle unequal unequalsolver untangle
++	rm -f *.o blackbox bridges cube dominosa fifteen filling fillingsolver flip galaxies galaxiespicture galaxiessolver guess inertia latincheck lightup lightupsolver loopy loopysolver map mapsolver mineobfusc mines netgame netslide nullgame obfusc pattern patternsolver pegs rect samegame sixteen slant slantsolver solo solosolver tents tentssolver twiddle unequal unequalsolver untangle
