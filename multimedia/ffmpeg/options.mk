@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2009/06/12 16:25:34 ahoka Exp $
+# $NetBSD: options.mk,v 1.13 2009/07/18 10:39:44 wiz Exp $
 
 # Global and legacy options
 
@@ -9,7 +9,6 @@ PKG_SUGGESTED_OPTIONS=	theora xvid x264
 #PKG_OPTIONS_GROUP.aac-decoder=	faad faac
 
 .include "../../mk/bsd.options.mk"
-.include "../../mk/bsd.prefs.mk"
 
 ###
 ### faad option
@@ -28,20 +27,6 @@ CONFIGURE_ARGS+=  --enable-libfaad
 CONFIGURE_ARGS+=	--enable-libfaac \
 			--enable-nonfree
 .include "../../audio/faac/buildlink3.mk"
-.endif
-
-###
-### SDL support
-###
-### You can build the frontend with SDL support enabled
-###
-
-.if !empty(PKG_OPTIONS:Msdl)
-CONFIGURE_ARGS+=	--enable-ffplay
-PLIST.sdl=		yes
-.include "../../devel/SDL/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-ffplay
 .endif
 
 ###
