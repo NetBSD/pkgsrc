@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2695 2009/07/18 10:19:20 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2696 2009/07/18 10:21:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3603,3 +3603,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/weechat to 0.2.6.3 [tonio 2009-07-18]
 	Updated x11/pixman to 0.15.16 [wiz 2009-07-18]
 	Updated meta-pkgs/modular-xorg-drivers to 1.4 [wiz 2009-07-18]
+	Updated x11/libX11 to 1.2.2 [wiz 2009-07-18]
