@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2721 2009/07/18 19:27:20 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2722 2009/07/18 19:32:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3629,3 +3629,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-Reflow to 1.09 [sno 2009-07-18]
 	Updated x11/gtk2 to 2.16.5 [wiz 2009-07-18]
 	Updated mail/gmime24 to 2.4.7 [wiz 2009-07-18]
+	Updated devel/gindent to 2.2.9 [wiz 2009-07-18]
