@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2698 2009/07/18 10:28:59 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2699 2009/07/18 10:30:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3606,3 +3606,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/libX11 to 1.2.2 [wiz 2009-07-18]
 	Updated x11/libXaw to 1.0.6 [wiz 2009-07-18]
 	Updated x11/libXt to 1.0.6 [wiz 2009-07-18]
+	Updated x11/libFS to 1.0.2 [wiz 2009-07-18]
