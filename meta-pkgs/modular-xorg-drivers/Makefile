@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/06/15 11:05:15 hasso Exp $
+# $NetBSD: Makefile,v 1.16 2009/07/18 10:19:08 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-drivers-1.3
+PKGNAME=	modular-xorg-drivers-1.4
 CATEGORIES=	meta-pkgs drivers x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
