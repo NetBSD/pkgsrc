@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2704 2009/07/18 13:20:11 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2705 2009/07/18 14:02:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3612,3 +3612,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/cairomm to 1.8.2 [wiz 2009-07-18]
 	Updated security/libtasn1 to 2.2 [wiz 2009-07-18]
 	Updated fonts/fontconfig to 2.7.0 [wiz 2009-07-18]
+	Updated games/wesnoth to 1.6.4 [wiz 2009-07-18]
