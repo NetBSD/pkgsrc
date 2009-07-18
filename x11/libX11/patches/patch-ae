@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2009/06/06 22:37:28 wiz Exp $
+$NetBSD: patch-ae,v 1.6 2009/07/18 10:20:51 wiz Exp $
 
---- src/util/Makefile.in.orig	2009-04-07 22:40:59.000000000 +0000
+--- src/util/Makefile.in.orig	2009-07-10 04:08:51.000000000 +0000
 +++ src/util/Makefile.in
-@@ -34,7 +34,8 @@ PRE_UNINSTALL = :
+@@ -36,7 +36,8 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
  build_triplet = @build@
  host_triplet = @host@
@@ -12,31 +12,28 @@ $NetBSD: patch-ae,v 1.5 2009/06/06 22:37:28 wiz Exp $
  subdir = src/util
  DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-@@ -53,6 +54,9 @@ makekeys_LDADD = $(LDADD)
+@@ -56,6 +57,9 @@ makekeys_LDADD = $(LDADD)
  makekeys_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
  	--mode=link $(CCLD) $(makekeys_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
  	$(LDFLAGS) -o $@
 +xmakekeys_SOURCES = xmakekeys.c
 +xmakekeys_OBJECTS = xmakekeys.$(OBJEXT)
 +xmakekeys_LDADD = $(LDADD)
- DEFAULT_INCLUDES = -I. -I$(top_builddir)/src -I$(top_builddir)/include/X11@am__isrc@
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/src -I$(top_builddir)/include/X11
  depcomp = $(SHELL) $(top_srcdir)/depcomp
  am__depfiles_maybe = depfiles
-@@ -62,8 +66,11 @@ CCLD = $(CC)
+@@ -66,8 +70,8 @@ CCLD = $(CC)
  LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
  	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
  	$(LDFLAGS) -o $@
 -SOURCES = makekeys.c
 -DIST_SOURCES = makekeys.c
-+LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
-+	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
-+	$(LDFLAGS) -o $@
 +SOURCES = makekeys.c xmakekeys.c
 +DIST_SOURCES = makekeys.c xmakekeys.c
  ETAGS = etags
  CTAGS = ctags
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-@@ -279,6 +286,9 @@ clean-noinstPROGRAMS:
+@@ -291,6 +295,9 @@ clean-noinstPROGRAMS:
  makekeys$(EXEEXT): $(makekeys_OBJECTS) $(makekeys_DEPENDENCIES) 
  	@rm -f makekeys$(EXEEXT)
  	$(makekeys_LINK) $(makekeys_OBJECTS) $(makekeys_LDADD) $(LIBS)
@@ -46,7 +43,7 @@ $NetBSD: patch-ae,v 1.5 2009/06/06 22:37:28 wiz Exp $
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT)
-@@ -287,6 +297,7 @@ distclean-compile:
+@@ -299,6 +306,7 @@ distclean-compile:
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/makekeys-makekeys.Po@am__quote@
@@ -54,7 +51,7 @@ $NetBSD: patch-ae,v 1.5 2009/06/06 22:37:28 wiz Exp $
  
  .c.o:
  @am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-@@ -506,6 +517,10 @@ uninstall-am:
+@@ -539,6 +547,10 @@ uninstall-am:
  	pdf pdf-am ps ps-am tags uninstall uninstall-am
  
  
@@ -64,4 +61,4 @@ $NetBSD: patch-ae,v 1.5 2009/06/06 22:37:28 wiz Exp $
 +
  @LINT_TRUE@lint:
  @LINT_TRUE@	$(LINT) $(ALL_LINT_FLAGS) makekeys.c
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ 
