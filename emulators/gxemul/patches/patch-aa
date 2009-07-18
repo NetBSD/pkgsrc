@@ -1,20 +1,11 @@
-$NetBSD: patch-aa,v 1.6 2008/10/24 19:31:01 minskim Exp $
+$NetBSD: patch-aa,v 1.7 2009/07/18 18:43:56 tsutsui Exp $
 
---- src/promemul/arcbios.c.orig	2008-01-18 11:12:33.000000000 -0800
-+++ src/promemul/arcbios.c
-@@ -2211,7 +2211,10 @@ static void arc_environment_setup(struct
- 	}
- 
- 	if (machine->machine_type == MACHINE_ARC)
--		strlcat(init_bootpath, "\\", bootpath_len);
-+		snprintf(init_bootpath + strlen(init_bootpath),
-+		    bootpath_len - strlen(init_bootpath),
-+		    "scsi(0)disk(%i)rdisk(0)partition(1)",
-+		    machine->bootdev_id);
- 
- 	CHECK_ALLOCATION(machine->bootstr = malloc(ARC_BOOTSTR_BUFLEN));
- 
-@@ -2362,20 +2365,17 @@ static void arc_environment_setup(struct
+A patch pulled from upstream trunk for NetBSD/arc:
+http://gxemul.svn.sourceforge.net/viewvc/gxemul?view=rev&revision=5473
+
+--- src/promemul/arcbios.c	2009/07/04 19:41:47
++++ src/promemul/arcbios.c	2009/07/11 10:04:28
+@@ -2363,20 +2363,19 @@
  		add_environment_string(cpu, "kernname=unix", &addr);
  	} else {
  		char *tmp;
@@ -23,13 +14,14 @@ $NetBSD: patch-aa,v 1.6 2008/10/24 19:31:01 minskim Exp $
 +		size_t mlen = ARC_BOOTSTR_BUFLEN;
  		CHECK_ALLOCATION(tmp = malloc(mlen));
  		snprintf(tmp, mlen, "OSLOADOPTIONS=%s", machine->bootarg);
- 		store_pointer_and_advance(cpu, &addr2, addr, is64bit);
- 		add_environment_string(cpu, tmp, &addr);
--
 -		store_pointer_and_advance(cpu, &addr2, addr, is64bit);
+-		add_environment_string(cpu, tmp, &addr);
+ 
+ 		store_pointer_and_advance(cpu, &addr2, addr, is64bit);
 -		add_environment_string(cpu, "OSLOADPARTITION=scsi(0)cdrom(6)"
 -		    "fdisk(0);scsi(0)disk(0)rdisk(0)partition(1)", &addr);
--
++		add_environment_string(cpu, tmp, &addr);
+ 
  		store_pointer_and_advance(cpu, &addr2, addr, is64bit);
 -		add_environment_string(cpu, "SYSTEMPARTITION=scsi(0)cdrom(6)"
 -		    "fdisk(0);scsi(0)disk(0)rdisk(0)partition(1)", &addr);
