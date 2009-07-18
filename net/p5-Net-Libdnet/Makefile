@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/18 18:35:32 sno Exp $
 #
 
-DISTNAME=	Net-Libdnet-0.01
+DISTNAME=	Net-Libdnet-0.92
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/V/VM/VMAN/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
+#MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/V/VM/VMAN/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/V/VM/VMAN/
+HOMEPAGE=	http://search.cpan.org/dist/Net-Libdnet/
 COMMENT=	Perl interface to libdnet
 
 PKG_DESTDIR_SUPPORT=	user-destdir
