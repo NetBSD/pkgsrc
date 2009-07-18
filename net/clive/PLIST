@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.9 2009/01/08 16:08:57 wiz Exp $
-bin/clive
-man/man1/clive.1
