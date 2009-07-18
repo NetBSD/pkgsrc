@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2008/11/14 06:42:34 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2009/07/18 18:43:56 tsutsui Exp $
 #
 
-DISTNAME=	gxemul-0.4.6.6
+DISTNAME=	gxemul-0.4.7.2
 CATEGORIES=	emulators
-MASTER_SITES=	http://gavare.se/gxemul/src/
+MASTER_SITES=	http://gxemul.sourceforge.net/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gavare.se/gxemul/
+HOMEPAGE=	http://gxemul.sourceforge.net/
 COMMENT=	Machine emulator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
