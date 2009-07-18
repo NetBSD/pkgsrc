@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2009/03/22 10:09:12 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2009/07/18 20:18:12 wiz Exp $
 
-DISTNAME=		digikam-0.9.5
+DISTNAME=		digikam-0.9.6
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.digikam.org/
 COMMENT=		Advanced digital photo management application for KDE
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake msgfmt perl:run pkg-config
 USE_LANGUAGES=		c c++
