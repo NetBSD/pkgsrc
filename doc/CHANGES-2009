@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2732 2009/07/18 22:00:18 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2733 2009/07/18 22:04:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3640,3 +3640,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-Declare to 0.005007 [sno 2009-07-18]
 	Updated devel/p5-Module-Build to 0.34000 [sno 2009-07-18]
 	Updated time/p5-DateTime-Format-Strptime to 1.1000 [sno 2009-07-18]
+	Updated textproc/p5-Text-SimpleTable to 1.4 [sno 2009-07-18]
