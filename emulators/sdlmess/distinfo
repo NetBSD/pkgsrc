@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/06/06 21:42:45 wiz Exp $
+$NetBSD: distinfo,v 1.5 2009/07/18 14:58:01 wiz Exp $
 
-SHA1 (sdlmess0131.zip) = 6ec927600377b1625c342c430363a6fb776abc34
-RMD160 (sdlmess0131.zip) = a31b463cd133813226f5d5a64ff4af8b3dcfb1ab
-Size (sdlmess0131.zip) = 31925502 bytes
+SHA1 (sdlmess0132.zip) = e77405b1517ced9032b793b241c7240654132008
+RMD160 (sdlmess0132.zip) = 59e08509b8547b2b741ecce06591441bb1a0db2a
+Size (sdlmess0132.zip) = 32310226 bytes
 SHA1 (patch-aa) = 38c0eb8560fcc4d5721d6461c2966785d1e8abc7
 SHA1 (patch-ab) = c49551959d68aaad754121ce8dc874b936f3b4de
 SHA1 (patch-ae) = dbcf17c973733727a6e1cc7a18f879d2b90d7184
