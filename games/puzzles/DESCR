@@ -1,0 +1,19 @@
+This package contains a collection of small computer programs which
+implement one-player puzzle games. All of them run natively on Unix
+(GTK), on Windows, and on Mac OS X; they can also be played on the
+web, as Java applets.
+
+Simon Tatham wrote this collection because he thought there should
+be more small desktop toys available: little games you can pop up
+in a window and play for two or three minutes while you take a
+break from whatever else you were doing. And he was also annoyed
+that every time he found a good game on (say) Unix, it wasn't
+available the next time he was sitting at a Windows machine, or
+vice versa; so he arranged that everything in my personal puzzle
+collection will happily run on both those platforms and more. When
+he finds (or perhaps invent) further puzzle games that he likes,
+they'll be added to this collection and will immediately be available
+on both platforms. And if anyone feels like writing any other front
+ends - Mac OS pre-10, PocketPC, or whatever it might be - then all
+the games in this framework will immediately become available on
+another platform as well.

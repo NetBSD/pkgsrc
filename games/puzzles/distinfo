@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/18 18:38:28 wiz Exp $
+
+SHA1 (puzzles-r8605.tar.gz) = 881ab754e67b03ad8710e14bb632e3ddeb3a51f2
+RMD160 (puzzles-r8605.tar.gz) = 3eeb594459e7b01fcc6eebf97ab684570dd0e378
+Size (puzzles-r8605.tar.gz) = 2155651 bytes
+SHA1 (patch-aa) = 67a8ddecf7c22a629344787be39603acf0a7aac4
