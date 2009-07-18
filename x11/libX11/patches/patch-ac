@@ -1,30 +1,30 @@
-$NetBSD: patch-ac,v 1.8 2009/06/06 22:37:28 wiz Exp $
+$NetBSD: patch-ac,v 1.9 2009/07/18 10:20:51 wiz Exp $
 
 _POSIX_THREAD_SAFE_FUNCTIONS is not used on NetBSD.  Instead,
 let's use _REENTRANT.
 
---- configure.orig	2009-04-07 22:40:47.000000000 +0000
+--- configure.orig	2009-07-10 04:08:41.000000000 +0000
 +++ configure
-@@ -929,6 +929,8 @@ XKB_FALSE
- XKBPROTO_CFLAGS
- XKBPROTO_LIBS
- XKBPROTO_REQUIRES
-+CROSS_COMPILING_TRUE
-+CROSS_COMPILING_FALSE
- LINT
- LINT_FLAGS
+@@ -812,6 +812,8 @@ LINT_FALSE
  LINT_TRUE
-@@ -23139,43 +23141,38 @@ _ACEOF
+ LINT_FLAGS
+ LINT
++CROSS_COMPILING_FALSE
++CROSS_COMPILING_TRUE
+ XKBPROTO_REQUIRES
+ XKBPROTO_LIBS
+ XKBPROTO_CFLAGS
+@@ -15467,44 +15469,39 @@ _ACEOF
  	;;
  esac
  
--{ echo "$as_me:$LINENO: checking for pthread_self in -lc" >&5
--echo $ECHO_N "checking for pthread_self in -lc... $ECHO_C" >&6; }
+-{ $as_echo "$as_me:$LINENO: checking for pthread_self in -lc" >&5
+-$as_echo_n "checking for pthread_self in -lc... " >&6; }
 -if test "${ac_cv_lib_c_pthread_self+set}" = set; then
-+{ echo "$as_me:$LINENO: checking whether pthread_self is declared" >&5
-+echo $ECHO_N "checking whether pthread_self is declared... $ECHO_C" >&6; }
++{ $as_echo "$as_me:$LINENO: checking whether pthread_self is declared" >&5
++$as_echo_n "checking whether pthread_self is declared... " >&6; }
 +if test "${ac_cv_have_decl_pthread_self+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+   $as_echo_n "(cached) " >&6
  else
 -  ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lc  $LIBS"
@@ -64,41 +64,45 @@ let's use _REENTRANT.
    *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
    *) ac_try_echo=$ac_try;;
  esac
- eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
+ eval ac_try_echo="\"\$as_me:$LINENO: $ac_try_echo\""
+ $as_echo "$ac_try_echo") >&5
 -  (eval "$ac_link") 2>conftest.er1
 +  (eval "$ac_compile") 2>conftest.er1
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -23184,28 +23181,35 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+@@ -15513,31 +15510,35 @@ $as_echo "$ac_try_echo") >&5
    (exit $ac_status); } && {
  	 test -z "$ac_c_werror_flag" ||
  	 test ! -s conftest.err
--       } && test -s conftest$ac_exeext &&
--       $as_test_x conftest$ac_exeext; then
+-       } && test -s conftest$ac_exeext && {
+-	 test "$cross_compiling" = yes ||
+-	 $as_test_x conftest$ac_exeext
+-       }; then
 -  ac_cv_lib_c_pthread_self=yes
 +       } && test -s conftest.$ac_objext; then
 +  ac_cv_have_decl_pthread_self=yes
  else
-   echo "$as_me: failed program was:" >&5
+   $as_echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
 -	ac_cv_lib_c_pthread_self=no
 +	ac_cv_have_decl_pthread_self=no
  fi
  
+-rm -rf conftest.dSYM
 -rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
 -      conftest$ac_exeext conftest.$ac_ext
 -LIBS=$ac_check_lib_save_LIBS
 +rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  fi
--{ echo "$as_me:$LINENO: result: $ac_cv_lib_c_pthread_self" >&5
--echo "${ECHO_T}$ac_cv_lib_c_pthread_self" >&6; }
--if test $ac_cv_lib_c_pthread_self = yes; then
+-{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_c_pthread_self" >&5
+-$as_echo "$ac_cv_lib_c_pthread_self" >&6; }
+-if test "x$ac_cv_lib_c_pthread_self" = x""yes; then
 -  thrstubs="no"
-+{ echo "$as_me:$LINENO: result: $ac_cv_have_decl_pthread_self" >&5
-+echo "${ECHO_T}$ac_cv_have_decl_pthread_self" >&6; }
-+if test $ac_cv_have_decl_pthread_self = yes; then
++{ $as_echo "$as_me:$LINENO: result: $ac_cv_have_decl_pthread_self" >&5
++$as_echo "$ac_cv_have_decl_pthread_self" >&6; }
++if test "x$ac_cv_have_decl_pthread_self" = x""yes; then
 +
 +cat >>confdefs.h <<_ACEOF
 +#define HAVE_DECL_PTHREAD_SELF 1
@@ -118,7 +122,7 @@ let's use _REENTRANT.
   if test x$thrstubs = xyes; then
    THRSTUBS_TRUE=
    THRSTUBS_FALSE='#'
-@@ -23220,8 +23224,8 @@ if test x$xthreads = xyes ; then
+@@ -15552,8 +15553,8 @@ if test x$xthreads = xyes ; then
      linux*|openbsd*|gnu*|k*bsd*-gnu)
          XTHREADLIB=-lpthread ;;
      netbsd*)
@@ -129,7 +133,7 @@ let's use _REENTRANT.
      freebsd*)
          XTHREAD_CFLAGS="-D_THREAD_SAFE"
          XTHREADLIB="-pthread" ;;
-@@ -23702,6 +23706,15 @@ else
+@@ -16082,6 +16083,15 @@ else
  fi
  
  
@@ -145,35 +149,17 @@ let's use _REENTRANT.
  
  
  for ac_header in stdlib.h unistd.h
-@@ -24850,6 +24863,13 @@ echo "$as_me: error: conditional \"XKB\"
+@@ -17206,6 +17216,13 @@ $as_echo "$as_me: error: conditional \"X
  Usually this means the macro was only invoked conditionally." >&2;}
     { (exit 1); exit 1; }; }
  fi
 +if test -z "${CROSS_COMPILING_TRUE}" && test -z "${CROSS_COMPILING_FALSE}"; then
-+  { { echo "$as_me:$LINENO: error: conditional \"CROSS_COMPILING\" was never defined.
++  { { $as_echo "$as_me:$LINENO: error: conditional \"CROSS_COMPILING\" was never defined.
 +Usually this means the macro was only invoked conditionally." >&5
-+echo "$as_me: error: conditional \"CROSS_COMPILING\" was never defined.
++$as_echo "$as_me: error: conditional \"CROSS_COMPILING\" was never defined.
 +Usually this means the macro was only invoked conditionally." >&2;}
 +   { (exit 1); exit 1; }; }
 +fi
  if test -z "${LINT_TRUE}" && test -z "${LINT_FALSE}"; then
-   { { echo "$as_me:$LINENO: error: conditional \"LINT\" was never defined.
+   { { $as_echo "$as_me:$LINENO: error: conditional \"LINT\" was never defined.
  Usually this means the macro was only invoked conditionally." >&5
-@@ -25679,6 +25699,8 @@ XKB_FALSE!$XKB_FALSE$ac_delim
- XKBPROTO_CFLAGS!$XKBPROTO_CFLAGS$ac_delim
- XKBPROTO_LIBS!$XKBPROTO_LIBS$ac_delim
- XKBPROTO_REQUIRES!$XKBPROTO_REQUIRES$ac_delim
-+CROSS_COMPILING_TRUE!$CROSS_COMPILING_TRUE$ac_delim
-+CROSS_COMPILING_FALSE!$CROSS_COMPILING_FALSE$ac_delim
- LINT!$LINT$ac_delim
- LINT_FLAGS!$LINT_FLAGS$ac_delim
- LINT_TRUE!$LINT_TRUE$ac_delim
-@@ -25705,7 +25727,7 @@ LIBOBJS!$LIBOBJS$ac_delim
- LTLIBOBJS!$LTLIBOBJS$ac_delim
- _ACEOF
- 
--  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 87; then
-+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 89; then
-     break
-   elif $ac_last_try; then
-     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
