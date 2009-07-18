@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.2 2009/07/09 11:30:29 obache Exp $
+$NetBSD: patch-ab,v 1.3 2009/07/18 01:46:55 obache Exp $
 
---- configure.orig	2009-07-08 03:07:52.000000000 +0000
+--- configure.orig	2009-07-10 06:46:06.000000000 +0000
 +++ configure
 @@ -1804,20 +1804,16 @@ MYLIBRARYFILES=""
- MYLIBOBJFILES="hdb.o bdb.o bdbcur.o fdb.o tdb.o tdbqry.o util.o myconf.o"
+ MYLIBOBJFILES="hdb.o bdb.o bdbcur.o fdb.o tdb.o tdbqry.o adb.o util.o myconf.o"
  
  # Building flags
 -MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char -O2"
