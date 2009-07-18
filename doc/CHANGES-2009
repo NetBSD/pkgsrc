@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2707 2009/07/18 15:00:27 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2708 2009/07/18 17:17:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3615,3 +3615,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/wesnoth to 1.6.4 [wiz 2009-07-18]
 	Updated emulators/sdlmess to 0.132 [wiz 2009-07-18]
 	Updated x11/xkbcomp to 1.1.0 [wiz 2009-07-18]
+	Updated textproc/p5-Text-Diff to 1.37 [sno 2009-07-18]
