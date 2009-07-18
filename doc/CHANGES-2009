@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2685 2009/07/17 20:36:04 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2686 2009/07/18 00:13:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3593,3 +3593,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/libogg to 1.1.4 [wiz 2009-07-17]
 	Updated audio/libvorbis to 1.2.3 [wiz 2009-07-17]
 	Updated devel/mercurial to 1.3 [wiz 2009-07-17]
+	Updated graphics/p5-Image-ExifTool to 7.82 [gdt 2009-07-18]
