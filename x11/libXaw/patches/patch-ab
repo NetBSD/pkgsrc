@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.3 2008/11/10 17:21:06 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2009/07/18 10:23:55 wiz Exp $
 
---- Makefile.in.orig	2008-11-07 18:17:02.000000000 +0000
+--- Makefile.in.orig	2009-07-02 17:35:22.000000000 +0000
 +++ Makefile.in
-@@ -704,7 +704,6 @@ uninstall-am: uninstall-pkgconfigDATA
+@@ -710,7 +710,6 @@ uninstall-am: uninstall-pkgconfigDATA
  
  
  @PLATFORM_WIN32_FALSE@install-exec-hook:
--@PLATFORM_WIN32_FALSE@	cd $(DESTDIR)$(libdir) && rm -f libXaw.so && ln -s $(DEFAULT_LIB) libXaw.so
+-@PLATFORM_WIN32_FALSE@	cd $(DESTDIR)$(libdir) && rm -f libXaw.@LIBEXT@ && ln -s $(DEFAULT_LIB) libXaw.@LIBEXT@
  
  .PHONY: ChangeLog
  
