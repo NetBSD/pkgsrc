@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/14 09:03:04 hasso Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/18 14:58:17 drochner Exp $
 #
 
 DISTNAME=	picard-0.11
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=	yes
 USE_DIRS+=	xdg-1.1
+PKG_DESTDIR_SUPPORT= user-destdir
 
 USE_TOOLS+=	msgfmt
 
