@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/07/08 11:24:23 sno Exp $
+$NetBSD: distinfo,v 1.4 2009/07/18 18:45:15 sno Exp $
 
-SHA1 (Text-Reflow-1.07.tar.gz) = beba977cf026e38bea0fca52bcdf4db62ac4f694
-RMD160 (Text-Reflow-1.07.tar.gz) = c05e05fd052bd6e1e3e7e3d649f0f9689f665665
-Size (Text-Reflow-1.07.tar.gz) = 15780 bytes
+SHA1 (Text-Reflow-1.09.tar.gz) = e8c2db0e3852be1c865d6086448e2ab0225afe0e
+RMD160 (Text-Reflow-1.09.tar.gz) = 98f6d9cfc95bd10776cc5f044b2da86116d74320
+Size (Text-Reflow-1.09.tar.gz) = 15804 bytes
