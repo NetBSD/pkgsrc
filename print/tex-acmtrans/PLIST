@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/18 23:33:56 minskim Exp $
+share/texmf-dist/bibtex/bib/acmtrans/acmtr.bib
+share/texmf-dist/bibtex/bst/acmtrans/acmtrans.bst
+share/texmf-dist/tex/latex/acmtrans/acmtrans2e.cls
