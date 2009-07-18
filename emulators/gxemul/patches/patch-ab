@@ -1,13 +1,20 @@
-$NetBSD: patch-ab,v 1.3 2008/10/24 19:55:10 minskim Exp $
+$NetBSD: patch-ab,v 1.4 2009/07/18 18:43:56 tsutsui Exp $
 
---- src/devices/bus_pci.c.orig	2008-01-18 11:12:27.000000000 -0800
-+++ src/devices/bus_pci.c
-@@ -776,6 +776,8 @@ int piix_ide_cfg_reg_write(struct pci_de
- 	void *wdc1 = ((struct piix_ide_extra *)pd->extra)->wdc1;
- 	int enabled = 0;
+A patch pulled from upstream trunk for NetBSD/cobalt:
+http://gxemul.svn.sourceforge.net/viewvc/gxemul?view=rev&revision=5485
+
+--- src/devices/bus_pci.c	2009/07/04 19:41:47
++++ src/devices/bus_pci.c	2009/07/12 11:35:33
+@@ -974,7 +974,11 @@
+ 	 *  netbsd/usr/src/sys/arch/cobalt/cobalt/machdep.c read_board_id()
+ 	 *  for details.
+ 	 */
+-	PCI_SET_DATA(0x94, 4 << 4);
++	if (machine->machine_type == MACHINE_COBALT) {
++#define	COBALT_PCIB_BOARD_ID_REG	0x94
++#define	COBALT_QUBE2_ID			5
++		PCI_SET_DATA(COBALT_PCIB_BOARD_ID_REG, COBALT_QUBE2_ID << 4);
++	}
+ }
  
-+	PCI_SET_DATA(reg, value);
-+
- 	switch (reg) {
- 	case PCI_COMMAND_STATUS_REG:
- 		if (value & PCI_COMMAND_IO_ENABLE)
+ struct vt82c586_ide_extra {
