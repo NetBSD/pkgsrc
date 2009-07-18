@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2008/11/24 09:37:15 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/18 19:37:42 wiz Exp $
 
-DISTNAME=	geany-0.15
+DISTNAME=	geany-0.17
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=geany/}
 
@@ -32,6 +32,7 @@ BUILDLINK_TRANSFORM+=	rm:-lstdc++
 CONFIGURE_ARGS+=	CC=gcc
 .endif
 
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
