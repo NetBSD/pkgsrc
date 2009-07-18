@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/29 08:30:14 sno Exp $
+$NetBSD: distinfo,v 1.2 2009/07/18 17:56:46 sno Exp $
 
-SHA1 (File-Find-Rule-VCS-1.05.tar.gz) = 11037363b56911528ed01124fe6609f04e4fd681
-RMD160 (File-Find-Rule-VCS-1.05.tar.gz) = 3ba63342194ff82c5cc4a14ca0b43a3553d40141
-Size (File-Find-Rule-VCS-1.05.tar.gz) = 23012 bytes
+SHA1 (File-Find-Rule-VCS-1.06.tar.gz) = e6e4ba14938de5c0dacbded06ba8c11982709239
+RMD160 (File-Find-Rule-VCS-1.06.tar.gz) = 3c2ca079ac7b5bd6734e631d9707eeddc50371ce
+Size (File-Find-Rule-VCS-1.06.tar.gz) = 25734 bytes
