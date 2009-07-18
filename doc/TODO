@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8261 2009/07/18 10:54:07 wiz Exp $
+$NetBSD: TODO,v 1.8262 2009/07/18 16:55:30 zafer Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aria2-1.4.1
 	o arla-0.90
 	o arnold-20040104
-	o arping-2.08
 	o asapm-3.1
 	o asc-2.2.0
 	o asp2php-0.77.3
