@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2009/05/19 08:59:31 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2009/07/18 13:11:57 wiz Exp $
 
-DISTNAME=	libtasn1-2.1
+DISTNAME=	libtasn1-2.2
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gnutls/} \
 		ftp://ftp.gnutls.org/pub/gnutls/libtasn1/ \
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gnutls/} \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	ASN.1 structure parser library
-#LICENSE=		gnu-lgpl-v2.1 AND gnu-gpl-3.0
+LICENSE= 	gnu-fdl-v1.3 AND gnu-lgpl-v2.1 AND gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
