@@ -366,6 +366,7 @@ qpopper-servermode	Enable server mode.
 qt			Enable support for QT.
 quartz			Enable Quartz support on Mac OS X.	
 rsaref			Use RSAREF library.
+ruby			Enable Ruby support.
 ruby-build-ri-db	Build and install database for Ruby's ri utility.
 samplerate		Enable libsamplerate support.
 sane			Enable support for SANE scanners.
