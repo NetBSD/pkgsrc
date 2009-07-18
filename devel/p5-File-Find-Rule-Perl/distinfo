@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/29 08:39:02 sno Exp $
+$NetBSD: distinfo,v 1.2 2009/07/18 17:50:56 sno Exp $
 
-SHA1 (File-Find-Rule-Perl-1.06.tar.gz) = 731069f7810c054d3cf475ca8f90b95cf21ef843
-RMD160 (File-Find-Rule-Perl-1.06.tar.gz) = f7e2d85e52cfdff43e6bac284b74ae4da85f22a9
-Size (File-Find-Rule-Perl-1.06.tar.gz) = 26421 bytes
+SHA1 (File-Find-Rule-Perl-1.08.tar.gz) = 2cb220999cf7c638f27d2abbde790a1b24c08aa0
+RMD160 (File-Find-Rule-Perl-1.08.tar.gz) = 3bf119bf9c822deba06c7fc299926d6255543b30
+Size (File-Find-Rule-Perl-1.08.tar.gz) = 26809 bytes
