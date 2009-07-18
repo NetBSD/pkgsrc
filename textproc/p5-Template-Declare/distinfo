@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/03/07 05:38:37 seb Exp $
+$NetBSD: distinfo,v 1.6 2009/07/18 21:43:02 sno Exp $
 
-SHA1 (Template-Declare-0.39.tar.gz) = 94e042c7d571564990b9512317782279413bb143
-RMD160 (Template-Declare-0.39.tar.gz) = 600ba3d1497eb8824971c9f1ff5329137bccb471
-Size (Template-Declare-0.39.tar.gz) = 63158 bytes
+SHA1 (Template-Declare-0.40.tar.gz) = d98953937e0ab3f4c634af2ae16ecdfaf0930b4e
+RMD160 (Template-Declare-0.40.tar.gz) = b19bd5b77990c9ef0549a84253fbff171e10efa0
+Size (Template-Declare-0.40.tar.gz) = 61261 bytes
