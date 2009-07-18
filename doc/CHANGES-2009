@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2735 2009/07/18 22:29:20 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.2736 2009/07/18 23:36:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3644,3 +3644,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Module-CPANTS-Analyse to 0.85 [sno 2009-07-18]
 	Updated textproc/xapian to 1.0.13 [schmonz 2009-07-18]
 	Updated textproc/xapian-omega to 1.0.13 [schmonz 2009-07-18]
+	Added print/tex-acmtrans version 2008.7340 [minskim 2009-07-18]
+	Added print/tex-acmtrans-doc version 2008.7340 [minskim 2009-07-18]
