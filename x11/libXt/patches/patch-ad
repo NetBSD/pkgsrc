@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.2 2007/09/20 08:30:15 rillig Exp $
+$NetBSD: patch-ad,v 1.3 2009/07/18 10:28:47 wiz Exp $
 
---- src/Makefile.in.orig	2007-01-28 07:31:13.000000000 +0100
-+++ src/Makefile.in	2007-09-20 10:23:58.000000000 +0200
-@@ -103,6 +103,8 @@ CCDEPMODE = @CCDEPMODE@
- CFLAGS = @CFLAGS@
+--- src/Makefile.in.orig	2009-07-02 17:25:58.000000000 +0000
++++ src/Makefile.in
+@@ -103,6 +103,8 @@ CFLAGS = @CFLAGS@
+ CHANGELOG_CMD = @CHANGELOG_CMD@
  CPP = @CPP@
  CPPFLAGS = @CPPFLAGS@
 +CROSS_COMPILING_FALSE = @CROSS_COMPILING_FALSE@
 +CROSS_COMPILING_TRUE = @CROSS_COMPILING_TRUE@
- CXX = @CXX@
- CXXCPP = @CXXCPP@
- CXXDEPMODE = @CXXDEPMODE@
-@@ -299,6 +301,8 @@ BUILT_SOURCE = StringDefs.c 
+ CWARNFLAGS = @CWARNFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+ DEFS = @DEFS@
+@@ -308,6 +310,8 @@ BUILT_SOURCE = StringDefs.c 
  BUILT_HEADER = $(top_builddir)/include/X11/StringDefs.h $(top_builddir)/include/X11/Shell.h
  BUILT_FILES = $(BUILT_SOURCE) $(BUILT_HEADER)
  STRING_LIST = $(top_srcdir)/util/string.list
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.2 2007/09/20 08:30:15 rillig Exp $
  all: $(BUILT_SOURCES)
  	$(MAKE) $(AM_MAKEFLAGS) all-am
  
-@@ -637,7 +641,7 @@ all-local: $(BUILT_FILES)
+@@ -651,7 +655,7 @@ all-local: $(BUILT_FILES)
  $(BUILT_HEADER): $(BUILT_SOURCE)
  
  $(BUILT_SOURCE):

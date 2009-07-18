@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2007/09/20 08:30:14 rillig Exp $
+$NetBSD: patch-ab,v 1.5 2009/07/18 10:28:47 wiz Exp $
 
---- util/Makefile.in.orig	2007-01-28 07:31:13.000000000 +0100
-+++ util/Makefile.in	2007-09-20 10:23:58.000000000 +0200
-@@ -38,7 +38,9 @@ POST_UNINSTALL = :
+--- util/Makefile.in.orig	2009-07-02 17:25:58.000000000 +0000
++++ util/Makefile.in
+@@ -34,7 +34,9 @@ POST_UNINSTALL = :
  build_triplet = @build@
  host_triplet = @host@
  @INSTALL_MAKESTRS_TRUE@bin_PROGRAMS = makestrs$(EXEEXT)
@@ -13,7 +13,7 @@ $NetBSD: patch-ab,v 1.4 2007/09/20 08:30:14 rillig Exp $
  subdir = util
  DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-@@ -51,10 +53,14 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -47,10 +49,14 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(appmandir)"
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
@@ -25,13 +25,13 @@ $NetBSD: patch-ab,v 1.4 2007/09/20 08:30:14 rillig Exp $
 +xmakestrs_SOURCES = xmakestrs.c
 +xmakestrs_OBJECTS = xmakestrs.$(OBJEXT)
 +xmakestrs_LDADD = $(LDADD)
- DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
- depcomp = $(SHELL) $(top_srcdir)/depcomp
- am__depfiles_maybe = depfiles
-@@ -66,8 +72,8 @@ LTCOMPILE = $(LIBTOOL) --tag=CC --mode=c
- CCLD = $(CC)
- LINK = $(LIBTOOL) --tag=CC --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
- 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ makestrs_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(CCLD) $(makestrs_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+ 	$(LDFLAGS) -o $@
+@@ -66,8 +72,8 @@ CCLD = $(CC)
+ LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+ 	$(LDFLAGS) -o $@
 -SOURCES = $(makestrs_SOURCES)
 -DIST_SOURCES = $(makestrs_SOURCES)
 +SOURCES = $(makestrs_SOURCES) xmakestrs.c
@@ -39,16 +39,16 @@ $NetBSD: patch-ab,v 1.4 2007/09/20 08:30:14 rillig Exp $
  am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
  am__vpath_adj = case $$p in \
      $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
-@@ -97,6 +103,8 @@ CCDEPMODE = @CCDEPMODE@
- CFLAGS = @CFLAGS@
- CPP = @CPP@
- CPPFLAGS = @CPPFLAGS@
+@@ -101,6 +107,8 @@ CWARNFLAGS = @CWARNFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+ DEFS = @DEFS@
+ DEPDIR = @DEPDIR@
 +CROSS_COMPILING_FALSE = @CROSS_COMPILING_FALSE@
 +CROSS_COMPILING_TRUE = @CROSS_COMPILING_TRUE@
- CXX = @CXX@
- CXXCPP = @CXXCPP@
- CXXDEPMODE = @CXXDEPMODE@
-@@ -211,6 +219,7 @@ target_alias = @target_alias@
+ DRIVER_MAN_DIR = @DRIVER_MAN_DIR@
+ DRIVER_MAN_SUFFIX = @DRIVER_MAN_SUFFIX@
+ DSYMUTIL = @DSYMUTIL@
+@@ -220,6 +228,7 @@ top_srcdir = @top_srcdir@
  EXTRA_DIST = Shell.ht StrDefs.ct StrDefs.ht string.list $(appman_PRE)
  makestrs_CFLAGS = $(XT_CFLAGS)
  makestrs_SOURCES = makestrs.c
@@ -56,26 +56,26 @@ $NetBSD: patch-ab,v 1.4 2007/09/20 08:30:14 rillig Exp $
  
  # Man page
  appmandir = $(APP_MAN_DIR)
-@@ -298,6 +307,9 @@ clean-noinstPROGRAMS:
- makestrs$(EXEEXT): $(makestrs_OBJECTS) $(makestrs_DEPENDENCIES) 
- 	@rm -f makestrs$(EXEEXT)
- 	$(LINK) $(makestrs_LDFLAGS) $(makestrs_OBJECTS) $(makestrs_LDADD) $(LIBS)
+@@ -303,6 +312,9 @@ clean-noinstPROGRAMS:
+ 	  echo " rm -f $$p $$f"; \
+ 	  rm -f $$p $$f ; \
+ 	done
 +@CROSS_COMPILING_FALSE@xmakestrs$(EXEEXT): $(xmakestrs_OBJECTS) $(xmakestrs_DEPENDENCIES) 
 +@CROSS_COMPILING_FALSE@	@rm -f xmakestrs$(EXEEXT)
 +@CROSS_COMPILING_FALSE@	$(LINK) $(xmakestrs_LDFLAGS) $(xmakestrs_OBJECTS) $(xmakestrs_LDADD) $(LIBS)
- 
- mostlyclean-compile:
- 	-rm -f *.$(OBJEXT)
-@@ -306,6 +318,7 @@ distclean-compile:
+ makestrs$(EXEEXT): $(makestrs_OBJECTS) $(makestrs_DEPENDENCIES) 
+ 	@rm -f makestrs$(EXEEXT)
+ 	$(makestrs_LINK) $(makestrs_OBJECTS) $(makestrs_LDADD) $(LIBS)
+@@ -314,6 +326,7 @@ distclean-compile:
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/makestrs-makestrs.Po@am__quote@
 +@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xmakestrs.Po@am__quote@
  
  .c.o:
- @am__fastdepCC_TRUE@	if $(COMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" -c -o $@ $<; \
-@@ -542,6 +555,10 @@ uninstall-am: uninstall-appmanDATA unins
- 	uninstall-appmanDATA uninstall-binPROGRAMS uninstall-info-am
+ @am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+@@ -555,6 +568,10 @@ uninstall-am: uninstall-appmanDATA unins
+ 	uninstall-appmanDATA uninstall-binPROGRAMS
  
  
 +@CROSS_COMPILING_TRUE@xmakestrs$(EXEEXT): makestrs.c

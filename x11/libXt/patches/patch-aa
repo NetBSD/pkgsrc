@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2007/08/01 16:52:48 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2009/07/18 10:28:47 wiz Exp $
 
---- util/Makefile.am.orig	2006-07-11 20:05:55.000000000 +0200
+--- util/Makefile.am.orig	2009-07-02 17:22:11.000000000 +0000
 +++ util/Makefile.am
 @@ -1,7 +1,8 @@
  if INSTALL_MAKESTRS
@@ -11,8 +11,8 @@ $NetBSD: patch-aa,v 1.3 2007/08/01 16:52:48 joerg Exp $
 +noinst_PROGRAMS = makestrs $(MAKESTRS_PROG)
  endif
  
- EXTRA_DIST = \
-@@ -13,6 +14,13 @@ EXTRA_DIST = \
+ CC = @CC_FOR_BUILD@
+@@ -15,6 +16,13 @@ EXTRA_DIST = \
  makestrs_CFLAGS = $(XT_CFLAGS)
  makestrs_SOURCES = makestrs.c
  
