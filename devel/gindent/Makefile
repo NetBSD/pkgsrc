@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2008/06/20 01:09:12 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2009/07/18 19:32:38 wiz Exp $
 #
 
-DISTNAME=	indent-2.2.8a
-PKGNAME=	g${DISTNAME:S/a/.1/}
-PKGREVISION=	3
+DISTNAME=	indent-2.2.9
+PKGNAME=	g${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=indent/}
 
@@ -16,7 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
