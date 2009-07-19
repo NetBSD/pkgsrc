@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8264 2009/07/19 00:35:09 asau Exp $
+$NetBSD: TODO,v 1.8265 2009/07/19 06:47:04 obache Exp $
 
 Suggested new packages
 ======================
@@ -1392,6 +1392,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webby-0.9.3
+	o webkit-gtk-1.1.11
 	o webmin-1.480
 	o websvn-2.0
 	o weewm-0.01
