@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2737 2009/07/19 00:35:09 asau Exp $
+$NetBSD: CHANGES-2009,v 1.2738 2009/07/19 01:33:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3647,3 +3647,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-acmtrans version 2008.7340 [minskim 2009-07-18]
 	Added print/tex-acmtrans-doc version 2008.7340 [minskim 2009-07-18]
 	Updated math/octave to 3.2.0 [asau 2009-07-19]
+	Updated devel/scmgit-base to 1.6.3.3 [minskim 2009-07-19]
+	Updated devel/scmgit-docs to 1.6.3.3 [minskim 2009-07-19]
+	Updated devel/scmgit to 1.6.3.3 [minskim 2009-07-19]
