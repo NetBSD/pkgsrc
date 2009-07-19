@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2747 2009/07/19 11:14:20 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2748 2009/07/19 11:18:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3659,3 +3659,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-WWW-Curl to 4.09 [sno 2009-07-19]
 	Updated databases/p5-DBIx-Class to 0.08108 [sno 2009-07-19]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001003 [sno 2009-07-19]
+	Updated databases/p5-DBIx-Class-Validation to 0.02005 [sno 2009-07-19]
