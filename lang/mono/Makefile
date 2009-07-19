@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2009/07/15 11:37:16 kefren Exp $
+# $NetBSD: Makefile,v 1.90 2009/07/19 07:53:53 kefren Exp $
 
 DISTNAME=	mono-${MONO_VERSION}
 CATEGORIES=	lang
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 CONFLICTS=	pnet-[0-9]*
 
-MONO_VERSION=		2.4.2.1
+MONO_VERSION=		2.4.2.2
 ALL_ENV+=		MONO_SHARED_DIR=${WRKDIR:Q}
 
 USE_TOOLS+=		bison gmake gtar perl:run pkg-config bash:run msgfmt
