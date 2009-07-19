@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/06/05 23:32:00 hasso Exp $
+# $NetBSD: Makefile,v 1.46 2009/07/19 16:07:13 tnn Exp $
 
 BASH_VERSION=		4.0
 BASH_PATCHLEVEL=	24
@@ -85,5 +85,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/bash.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/bashbug.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
