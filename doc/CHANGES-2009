@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2738 2009/07/19 01:33:27 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2739 2009/07/19 07:54:44 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3650,3 +3650,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/scmgit-base to 1.6.3.3 [minskim 2009-07-19]
 	Updated devel/scmgit-docs to 1.6.3.3 [minskim 2009-07-19]
 	Updated devel/scmgit to 1.6.3.3 [minskim 2009-07-19]
+	Updated lang/mono to 2.4.2.2 [kefren 2009-07-19]
