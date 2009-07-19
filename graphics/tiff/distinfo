@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2009/06/22 14:54:44 drochner Exp $
+$NetBSD: distinfo,v 1.42.2.1 2009/07/19 19:31:37 spz Exp $
 
 SHA1 (tiff-3.8.2.tar.gz) = 549e67b6a15b42bfcd72fe17cda7c9a198a393eb
 RMD160 (tiff-3.8.2.tar.gz) = 1b4d825e3be08764e953fc58246d0c25ab4dd17d
@@ -16,3 +16,5 @@ SHA1 (patch-az) = ec57ebacc6052221ae63084d23c7c7b4aea029d8
 SHA1 (patch-ba) = d4bd9c67a9bf2be93286f8268ac520c4b88ba3ae
 SHA1 (patch-bb) = cbc7feda655a02809de55be6470cc25cda942a08
 SHA1 (patch-bc) = 9baa1c138cd3cb6366ae3e638518b94dfea172cc
+SHA1 (patch-ca) = 3c90d9735f0586632db05ceb50b336cbfdf279b6
+SHA1 (patch-cb) = 349c8764091d69f5eca84588837022d218b2165c
