@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2750 2009/07/19 11:45:54 tron Exp $
+$NetBSD: CHANGES-2009,v 1.2751 2009/07/19 11:46:51 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3662,3 +3662,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-DBIx-Class-Validation to 0.02005 [sno 2009-07-19]
 	Updated databases/p5-DBIx-SearchBuilder to 1.56 [sno 2009-07-19]
 	Updated graphics/tiff to 3.8.2nb6 [tron 2009-07-19]
+	Updated www/p5-App-Nopaste to 0.15 [sno 2009-07-19]
