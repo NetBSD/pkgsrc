@@ -1,0 +1,18 @@
+$NetBSD: patch-bf,v 1.1 2009/07/19 18:14:59 tnn Exp $
+
+--- src/DirEntry.c++.orig	2003-01-18 15:18:12.000000000 +0100
++++ src/DirEntry.c++
+@@ -20,12 +20,11 @@
+ //  with this program; if not, write the Free Software Foundation, Inc., 59
+ //  Temple Place - Suite 330, Boston MA 02111-1307, USA.
+ 
+-#include "DirEntry.h"
+-
+ #include <assert.h>
+ #include <stdio.h>
+ #include <sys/param.h>
+ 
++#include "DirEntry.h"
+ #include "Directory.h"
+ 
+ // A DirEntry may be polled iff its parent is not polled.
