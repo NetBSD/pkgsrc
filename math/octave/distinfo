@@ -1,16 +1,17 @@
-$NetBSD: distinfo,v 1.20 2009/04/12 20:46:20 adam Exp $
+$NetBSD: distinfo,v 1.21 2009/07/19 00:33:10 asau Exp $
 
-SHA1 (octave-3.0.5.tar.bz2) = 56a83139575caeda647ab8a0d306a276bb0473f3
-RMD160 (octave-3.0.5.tar.bz2) = 051526f9a16542e08d2fe154fe3008b8891dddd1
-Size (octave-3.0.5.tar.bz2) = 10158578 bytes
-SHA1 (patch-aa) = 1c11f2fb487e505bc9d821d2affecfcc93be0257
-SHA1 (patch-ab) = d8d6dbbfdaa0a24f12c25cb1a816c5ce8d1641df
-SHA1 (patch-ac) = 5790b21c5a16f6fab53c0e41d6b3eafe90972e2d
-SHA1 (patch-ad) = 5dab610cedc11ef829fde1fa5a765c19fe651992
-SHA1 (patch-ae) = 97c3ea2393d40701e996ca650e8bcffec2bb56b9
-SHA1 (patch-af) = 208f5426de78396895a891a615dad602a75918a8
-SHA1 (patch-ag) = a3399b6560538e43cfc30e022ed292a3f28e0c1a
-SHA1 (patch-ah) = 240fd27ce0b4b9a18e39851139cecd9c71a0bdcc
-SHA1 (patch-ai) = 3010250a18e6b854103d6369015ee2e659bfa186
-SHA1 (patch-aj) = a1fa393f4e499190a6d9aa04082b3a9f861bc2f6
-SHA1 (patch-ak) = c75507996d566157624621584725b9161358947e
+SHA1 (octave-3.2.0.tar.bz2) = 3408483adcb55e991ac46349ec7aa626a4f63615
+RMD160 (octave-3.2.0.tar.bz2) = 88935c2f560a7bc400d0ca182be0189b7c7df90c
+Size (octave-3.2.0.tar.bz2) = 12011861 bytes
+SHA1 (patch-aa) = 80912c04b72b9affd43e1dc48517f29ff827b3ee
+SHA1 (patch-ab) = 55983c073f773c8f5aa6147a65f03e0351c6ece4
+SHA1 (patch-ac) = fa39afe6f033e0be57ffde20d49b845c0243f91d
+SHA1 (patch-ad) = 621496f7a0c57fb6d5157ddb737366747f1e19d2
+SHA1 (patch-ae) = c0dd9102322bb4733c06766942aaa907f7058d8d
+SHA1 (patch-af) = f3080fa8afbb3863b6b88832fb3b46fe7005476e
+SHA1 (patch-ag) = 73bbc1f19be94d747b914543c7b88a3803494505
+SHA1 (patch-ah) = a2c6e3c6cb4c4570647edb4f484f514d75dda3ba
+SHA1 (patch-ai) = d7b4841238f7358bea50dd1b1b22cd94ab2af229
+SHA1 (patch-ak) = 98aa84ac66fac0b7b0dcdb69e911dc9d42fd6673
+SHA1 (patch-al) = 16840b51decba58d943503d15eea036f37a2a80f
+SHA1 (patch-am) = 3115a8a303be4939ce45f157ffcafa62b4d83bce
