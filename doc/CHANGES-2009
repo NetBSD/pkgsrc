@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2752 2009/07/19 11:55:50 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2753 2009/07/19 13:17:56 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3664,3 +3664,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/tiff to 3.8.2nb6 [tron 2009-07-19]
 	Updated www/p5-App-Nopaste to 0.15 [sno 2009-07-19]
 	Updated devel/p5-MooseX-Getopt to 0.20 [sno 2009-07-19]
+	Updated net/youtube-dl to 20090630 [zafer 2009-07-19]
+	Updated net/httping to 1.30 [zafer 2009-07-19]
+	Updated net/socat to 1.7.1.1 [zafer 2009-07-19]
+	Updated editors/zile to 2.3.9 [zafer 2009-07-19]
