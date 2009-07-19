@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.11 2009/07/17 18:00:19 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/19 11:54:51 zafer Exp $
 #
 
-DISTNAME=		httping-1.2.9
+DISTNAME=		httping-1.3.0
 CATEGORIES=		net
-MASTER_SITES=		http://www.vanheusden.com/httping/
-EXTRACT_SUFX=		.tgz
+MASTER_SITES=	http://www.vanheusden.com/httping/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.vanheusden.com/httping/
-COMMENT=		Like 'ping' but for http-requests
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.vanheusden.com/httping/
+COMMENT=	Like 'ping' but for http-requests
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -20,9 +23,11 @@ LDFLAGS.SunOS=		-lnsl -lsocket
 CFLAGS+=	-DHAVE_STRNDUP
 .endif
 
+INSTALLATION_DIRS=      ${PKGMANDIR}/man1 bin
+
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/httping.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_PROGRAM} ${WRKSRC}/httping ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/httping.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/httping ${DESTDIR}${PREFIX}/bin
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
