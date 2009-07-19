@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2743 2009/07/19 10:40:10 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2744 2009/07/19 10:45:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3655,3 +3655,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-WWW-Mechanize to 1.58 [sno 2009-07-19]
 	Updated misc/p5-Locale-Maketext-Simple to 0.20 [sno 2009-07-19]
 	Updated www/p5-WWW-Amazon-Wishlist to 2.001 [sno 2009-07-19]
+	Updated time/p5-Data-ICal to 0.16 [sno 2009-07-19]
