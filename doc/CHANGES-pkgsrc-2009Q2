@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.11 2009/07/19 20:04:49 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.12 2009/07/19 20:35:58 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -43,3 +43,8 @@ Pullup ticket #2823 - requested by tron
 tiff: security fix
 Pullup ticket #2824 - requested by tron
 mysql5-server: security fix
+Pullup ticket #2821 - requested by adrianp
+isc-dhcp: security update
+isc-dhclient: security update
+isc-dhcpd: security update
+isc-dhcrelay: security update
