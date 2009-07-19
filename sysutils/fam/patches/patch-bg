@@ -1,0 +1,22 @@
+$NetBSD: patch-bg,v 1.1 2009/07/19 18:14:59 tnn Exp $
+
+--- src/TCP_Client.c++.orig	2003-01-18 15:18:12.000000000 +0100
++++ src/TCP_Client.c++
+@@ -20,8 +20,6 @@
+ //  with this program; if not, write the Free Software Foundation, Inc., 59
+ //  Temple Place - Suite 330, Boston MA 02111-1307, USA.
+ 
+-#include "TCP_Client.h"
+-
+ #include <assert.h>
+ #include <ctype.h>
+ #include <stdio.h>
+@@ -29,6 +27,8 @@
+ #include <string.h>
+ #include <unistd.h>
+ 
++#include "TCP_Client.h"
++
+ #include "Cred.h"
+ #include "Event.h"
+ #include "Interest.h"

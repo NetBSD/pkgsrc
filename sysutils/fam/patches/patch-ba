@@ -1,6 +1,6 @@
-$NetBSD: patch-ba,v 1.1 2005/01/25 03:30:40 tv Exp $
+$NetBSD: patch-ba,v 1.2 2009/07/19 18:14:59 tnn Exp $
 
---- lib/Client.c++.orig	2005-01-24 22:29:27.000000000 -0500
+--- lib/Client.c++.orig	2003-01-18 15:18:12.000000000 +0100
 +++ lib/Client.c++
 @@ -24,6 +24,7 @@
  #include <stdlib.h>
@@ -10,3 +10,12 @@ $NetBSD: patch-ba,v 1.1 2005/01/25 03:30:40 tv Exp $
  #include <sys/un.h>
  #include <sys/socket.h>
  #include <rpc/rpc.h>
+@@ -34,7 +35,7 @@
+ #include <syslog.h>
+ #include <errno.h>
+ 
+-#include <iostream.h>
++#include <iostream>
+ 
+ #include "fam.h"
+ #include "Client.h"
