@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.9 2009/07/17 13:56:23 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.10 2009/07/19 19:32:45 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -39,3 +39,5 @@ Pullup ticket #2818 - requested by adrianp
 isc-dhcp4: security update
 Pullup ticket #2819 - requested by adrianp
 drupal: security update
+Pullup ticket #2823 - requested by tron
+tiff: security fix
