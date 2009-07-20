@@ -1,0 +1,34 @@
+$NetBSD: patch-uvm,v 1.1.1.1 2009/07/20 14:06:02 ahoka Exp $
+
+--- sys_netbsd.c.orig	2003-10-11 21:06:09.000000000 +0200
++++ sys_netbsd.c
+@@ -78,9 +78,9 @@ int system_cpu(void)
+ int system_memory(void)
+ {
+ #define pagetob(size) ((size) << (uvmexp.pageshift))
+-	struct uvmexp uvmexp;
++	struct uvmexp_sysctl uvmexp;
+ 	int nswap, rnswap, i;
+-	int mib[] = { CTL_VM, VM_UVMEXP };
++	int mib[] = { CTL_VM, VM_UVMEXP2 };
+ 	size_t size = sizeof (uvmexp);
+ 
+ 	if (sysctl(mib, 2, &uvmexp, &size, NULL, 0) < 0)
+@@ -91,12 +91,13 @@ int system_memory(void)
+ 	bm.swap_used = 0;
+ 	bm.swap_max = 0;
+ 	if ((nswap = swapctl(SWAP_NSWAP, 0, 0)) != 0) {
+-		struct swapent *swdev = malloc(nswap * sizeof(*swdev));
+-		if((rnswap = swapctl(SWAP_STATS, swdev, nswap)) != nswap) {
++		struct swapent *swdev = malloc(nswap * sizeof(swdev));
++		if((rnswap = swapctl(SWAP_STATS, swdev, nswap)) == nswap) {
+ 			for (i = 0; i < nswap; i++) {
+ 				if (swdev[i].se_flags & SWF_ENABLE) {
+-					bm.swap_used += (swdev[i].se_inuse / (1024 / DEV_BSIZE));
+-					bm.swap_max += (swdev[i].se_nblks / (1024 / DEV_BSIZE));
++					/* actually, these are expected in bytes */
++					bm.swap_used += (swdev[i].se_inuse * DEV_BSIZE);
++					bm.swap_max += (swdev[i].se_nblks * DEV_BSIZE);
+ 				}
+ 			}
+ 		}
