@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/05/19 08:59:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/20 02:52:56 obache Exp $
 #
 
-DISTNAME=	msdl-1.2.4-r1
-PKGNAME=	msdl-1.2.4r1
+DISTNAME=	msdl-1.2.5
 CATEGORIES=	net multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=msdl/}
 
