@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2009/05/05 06:21:16 minskim Exp $
+$NetBSD: patch-aa,v 1.7.2.1 2009/07/20 09:58:40 tron Exp $
 
---- Makefile.orig	2009-03-04 08:18:50.000000000 +0000
-+++ Makefile
-@@ -230,12 +230,8 @@ GITWEB_SITE_FOOTER =
+--- Makefile.orig	2009-06-22 09:24:25 +0300
++++ Makefile	2009-07-20 06:07:34 +0300
+@@ -249,12 +249,8 @@ GITWEB_SITE_FOOTER =
  
  export prefix bindir sharedir sysconfdir
  
@@ -15,8 +15,8 @@ $NetBSD: patch-aa,v 1.7 2009/05/05 06:21:16 minskim Exp $
  RPMBUILD = rpmbuild
  TCL_PATH = tclsh
  TCLTK_PATH = wish
-@@ -659,9 +655,10 @@ ifeq ($(uname_S),Darwin)
- 	THREADED_DELTA_SEARCH = YesPlease
+@@ -694,9 +690,10 @@ ifeq ($(uname_S),Darwin)
+ 	USE_ST_TIMESPEC = YesPlease
  endif
  ifeq ($(uname_S),SunOS)
 +	NEEDS_LIBICONV = YesPlease
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.7 2009/05/05 06:21:16 minskim Exp $
  	NO_STRCASESTR = YesPlease
  	NO_MEMMEM = YesPlease
  	NO_HSTRERROR = YesPlease
-@@ -679,8 +676,6 @@ ifeq ($(uname_S),SunOS)
+@@ -714,8 +711,6 @@ ifeq ($(uname_S),SunOS)
  		NO_C99_FORMAT = YesPlease
  		NO_STRTOUMAX = YesPlease
  	endif
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.7 2009/05/05 06:21:16 minskim Exp $
  	BASIC_CFLAGS += -D__EXTENSIONS__
  endif
  ifeq ($(uname_O),Cygwin)
-@@ -722,9 +717,7 @@ ifeq ($(uname_S),OpenBSD)
+@@ -759,14 +754,19 @@ ifeq ($(uname_S),OpenBSD)
  	THREADED_DELTA_SEARCH = YesPlease
  endif
  ifeq ($(uname_S),NetBSD)
@@ -47,7 +47,19 @@ $NetBSD: patch-aa,v 1.7 2009/05/05 06:21:16 minskim Exp $
  	BASIC_CFLAGS += -I/usr/pkg/include
  	BASIC_LDFLAGS += -L/usr/pkg/lib $(CC_LD_DYNPATH)/usr/pkg/lib
  	THREADED_DELTA_SEARCH = YesPlease
-@@ -1116,7 +1109,7 @@ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_P
+ 	USE_ST_TIMESPEC = YesPlease
+ endif
++ifeq ($(uname_S),DragonFly)
++	NEEDS_LIBICONV = YesPlease
++	BASIC_CFLAGS += -I/usr/pkg/include
++	BASIC_LDFLAGS += -L/usr/pkg/lib
++	USE_ST_TIMESPEC = YesPlease
++	THREADED_DELTA_SEARCH = YesPlease
++endif
+ ifeq ($(uname_S),AIX)
+ 	NO_STRCASESTR=YesPlease
+ 	NO_MEMMEM = YesPlease
+@@ -1183,7 +1183,7 @@ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_P
  PERL_PATH_SQ = $(subst ','\'',$(PERL_PATH))
  TCLTK_PATH_SQ = $(subst ','\'',$(TCLTK_PATH))
  
@@ -56,7 +68,7 @@ $NetBSD: patch-aa,v 1.7 2009/05/05 06:21:16 minskim Exp $
  
  BASIC_CFLAGS += -DSHA1_HEADER='$(SHA1_HEADER_SQ)' \
  	$(COMPAT_CFLAGS)
-@@ -1452,10 +1445,10 @@ gitexec_instdir_SQ = $(subst ','\'',$(gi
+@@ -1535,10 +1535,10 @@ gitexec_instdir_SQ = $(subst ','\'',$(gi
  export gitexec_instdir
  
  install: all
@@ -69,5 +81,5 @@ $NetBSD: patch-aa,v 1.7 2009/05/05 06:21:16 minskim Exp $
 +	$(BSD_INSTALL_SCRIPT) $(ALL_PROGRAMS) '$(DESTDIR_SQ)$(gitexec_instdir_SQ)'
 +	$(BSD_INSTALL_SCRIPT) git$X git-upload-pack$X git-receive-pack$X git-upload-archive$X git-shell$X git-cvsserver '$(DESTDIR_SQ)$(bindir_SQ)'
  	$(MAKE) -C templates DESTDIR='$(DESTDIR_SQ)' install
+ ifndef NO_PERL
  	$(MAKE) -C perl prefix='$(prefix_SQ)' DESTDIR='$(DESTDIR_SQ)' install
- ifndef NO_TCLTK
