@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2764 2009/07/20 09:49:53 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2765 2009/07/20 11:10:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3680,3 +3680,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-AttributeHelpers to 0.21 [sno 2009-07-20]
 	Updated devel/p5-Devel-REPL to 1.003007 [sno 2009-07-20]
 	Updated devel/p5-Perl-Critic to 1.100 [sno 2009-07-20]
+	Added print/tex-bin-kotex version 0.1.1 [minskim 2009-07-20]
