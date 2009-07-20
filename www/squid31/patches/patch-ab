@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.3 2009/07/20 13:56:31 tron Exp $
+
+Fix for Squid bug 2395, taken from here:
+
+http://www.squid-cache.org/bugs/show_bug.cgi?id=2395
+http://www.squid-cache.org/bugs/attachment.cgi?id=2017
+
+--- src/ftp.cc.orig	2009-07-19 06:11:14.000000000 +0100
++++ src/ftp.cc	2009-07-20 14:44:35.000000000 +0100
+@@ -2447,9 +2447,13 @@
+         /* server response with list of supported methods   */
+         /*   522 Network protocol not supported, use (1)    */
+         /*   522 Network protocol not supported, use (1,2)  */
++        /* TODO: handle the (1,2) case. We might get it back after EPSV ALL 
++         * which means close data + control without self-destructing and re-open from scratch. */
+         debugs(9, 5, HERE << "scanning: " << ftpState->ctrl.last_reply);
++        buf = ftpState->ctrl.last_reply;
++        while (buf != NULL && *buf != '\0' && *buf != '\n' && *buf != '(') ++buf;
++        if (buf != NULL && *buf == '\n') ++buf;
+ 
+-        buf = ftpState->ctrl.last_reply + strcspn(ftpState->ctrl.last_reply, "(1,2)");
+         if (buf == NULL || *buf == '\0') {
+             /* handle broken server (RFC 2428 says MUST specify supported protocols in 522) */
+             debugs(9, DBG_IMPORTANT, "Broken FTP Server at " << fd_table[ftpState->ctrl.fd].ipaddr << ". 522 error missing protocol negotiation hints");
+@@ -2473,6 +2477,11 @@
+             ftpSendPassive(ftpState);
+ #endif
+         }
++        else {
++            /* handle broken server (RFC 2428 says MUST specify supported protocols in 522) */
++            debugs(9, DBG_IMPORTANT, "WARNING: Server at " << fd_table[ftpState->ctrl.fd].ipaddr << " sent unknown protocol negotiation hint: " << buf);
++            ftpSendPassive(ftpState);
++        }
+         return;
+     }
+ 
