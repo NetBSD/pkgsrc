@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2759 2009/07/20 02:59:18 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2760 2009/07/20 03:01:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3674,3 +3674,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-tokyocabinet to 1.32 [obache 2009-07-20]
 	Updated databases/ruby-tokyocabinet to 1.29 [obache 2009-07-20]
 	Updated databases/java-tokyocabinet to 1.22 [obache 2009-07-20]
+	Updated databases/lua-tokyocabinet to 1.8 [obache 2009-07-20]
