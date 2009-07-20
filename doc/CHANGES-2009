@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2769 2009/07/20 14:14:19 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.2770 2009/07/20 18:13:12 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3684,3 +3684,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-kotex to 0.1.1nb1 [minskim 2009-07-20]
 	Updated www/squid31 to 3.1.0.11nb1 [tron 2009-07-20]
 	Added sysutils/bubblemon version 1.46 [ahoka 2009-07-20]
+	Updated www/trac to 0.11.5 [gdt 2009-07-20]
