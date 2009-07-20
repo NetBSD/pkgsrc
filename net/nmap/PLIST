@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/07/20 19:40:08 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/07/20 20:49:40 adrianp Exp $
 bin/ncat
 bin/nmap
 man/man1/ncat.1
@@ -100,7 +100,3 @@ share/nmap/scripts/sslv2.nse
 share/nmap/scripts/telnet-brute.nse
 share/nmap/scripts/upnp-info.nse
 share/nmap/scripts/whois.nse
-@dirrm share/nmap/nselib
-@dirrm share/nmap/scripts
-@dirrm share/nmap
-@dirrm share/ncat
