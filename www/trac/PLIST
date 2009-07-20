@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/06/14 22:00:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/07/20 18:13:01 gdt Exp $
 bin/trac-admin
 bin/tracd
 libexec/trac/trac.cgi
@@ -103,6 +103,7 @@ ${PYSITELIB}/trac/htdocs/css/wiki.css
 ${PYSITELIB}/trac/htdocs/desc.png
 ${PYSITELIB}/trac/htdocs/dots.gif
 ${PYSITELIB}/trac/htdocs/draft.png
+${PYSITELIB}/trac/htdocs/download.png
 ${PYSITELIB}/trac/htdocs/edit_toolbar.png
 ${PYSITELIB}/trac/htdocs/editedticket.png
 ${PYSITELIB}/trac/htdocs/envelope.png
@@ -241,6 +242,9 @@ ${PYSITELIB}/trac/tests/functional/better_twill.pyo
 ${PYSITELIB}/trac/tests/functional/compat.py
 ${PYSITELIB}/trac/tests/functional/compat.pyc
 ${PYSITELIB}/trac/tests/functional/compat.pyo
+${PYSITELIB}/trac/tests/functional/svntestenv.py
+${PYSITELIB}/trac/tests/functional/svntestenv.pyc
+${PYSITELIB}/trac/tests/functional/svntestenv.pyo
 ${PYSITELIB}/trac/tests/functional/testcases.py
 ${PYSITELIB}/trac/tests/functional/testcases.pyc
 ${PYSITELIB}/trac/tests/functional/testcases.pyo
@@ -412,6 +416,9 @@ ${PYSITELIB}/trac/versioncontrol/svn_authz.pyo
 ${PYSITELIB}/trac/versioncontrol/svn_fs.py
 ${PYSITELIB}/trac/versioncontrol/svn_fs.pyc
 ${PYSITELIB}/trac/versioncontrol/svn_fs.pyo
+${PYSITELIB}/trac/versioncontrol/svn_prop.py
+${PYSITELIB}/trac/versioncontrol/svn_prop.pyc
+${PYSITELIB}/trac/versioncontrol/svn_prop.pyo
 ${PYSITELIB}/trac/versioncontrol/templates/browser.html
 ${PYSITELIB}/trac/versioncontrol/templates/changeset.html
 ${PYSITELIB}/trac/versioncontrol/templates/diff_form.html
