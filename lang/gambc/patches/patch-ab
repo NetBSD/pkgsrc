@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2009/07/20 18:18:11 hasso Exp $
+
+--- lib/os.h.orig	2009-07-20 19:29:42 +0300
++++ lib/os.h	2009-07-20 19:30:15 +0300
+@@ -847,6 +847,8 @@ ___END_C_LINKAGE
+ #define INCLUDE_pty_h
+ #undef INCLUDE_util_h
+ #define INCLUDE_util_h
++#undef INCLUDE_libutil_h
++#define INCLUDE_libutil_h
+ #endif
+ 
+ #ifdef USE_tcgetattr
