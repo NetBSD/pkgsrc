@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.5 2009/07/19 23:28:04 tron Exp $
+$NetBSD: patch-aa,v 1.6 2009/07/20 10:49:17 tron Exp $
 
-http://www.squid-cache.org/bugs/show_bug.cgi?id=2716
+Build fix for NetBSD/amd64 taken from here:
+http://www.squid-cache.org/Versions/v3/3.1/changesets/b9648.patch
 
 --- src/client_side.cc.orig	2009-07-19 06:11:13.000000000 +0100
-+++ src/client_side.cc	2009-07-19 23:43:24.000000000 +0100
++++ src/client_side.cc	2009-07-20 11:29:30.000000000 +0100
 @@ -2222,7 +2222,7 @@
      // when we read chunked requests, the entire body is buffered
      // XXX: this check ignores header size and its limits.
      if (conn->in.dechunkingState == ConnStateData::chunkParsing)
 -        return conn->in.notYetUsed < Config.maxChunkedRequestBodySize;
-+        return (ssize_t)conn->in.notYetUsed < Config.maxChunkedRequestBodySize;
++        return ((int64_t)conn->in.notYetUsed) < Config.maxChunkedRequestBodySize;
  
      return conn->in.notYetUsed >= Config.maxRequestHeaderSize ? 0 : 1;
  }
