@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/10 23:46:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/20 11:15:49 minskim Exp $
 # TeX Live Revision 18
 
 DISTNAME=	kotex
 PKGNAME=	tex-${DISTNAME}-0.1.1
+PKGREVISION=	1
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/texlive/2008/archive/
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/ko.TeX/
 COMMENT=	TeX macro package to typeset Korean
 
+DEPENDS+=	tex-bin-kotex-[0-9]*:../../print/tex-bin-kotex
 DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 DEPENDS+=	tex-etex-pkg-[0-9]*:../../print/tex-etex-pkg
