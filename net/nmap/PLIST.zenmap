@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.zenmap,v 1.4 2009/07/20 19:40:08 adrianp Exp $
+@comment $NetBSD: PLIST.zenmap,v 1.5 2009/07/20 20:49:40 adrianp Exp $
 bin/nmapfe
 bin/uninstall_zenmap
 bin/xnmap
@@ -259,26 +259,3 @@ share/zenmap/pixmaps/win_32.png
 share/zenmap/pixmaps/win_75.png
 share/zenmap/pixmaps/zenmap.png
 share/zenmap/su-to-zenmap.sh
-@dirrm ${PYSITELIB}/radialnet/bestwidgets
-@dirrm ${PYSITELIB}/radialnet/core
-@dirrm ${PYSITELIB}/radialnet/gui
-@dirrm ${PYSITELIB}/radialnet/util
-@dirrm ${PYSITELIB}/radialnet
-@dirrm ${PYSITELIB}/zenmapCore
-@dirrm ${PYSITELIB}/zenmapGUI/higwidgets
-@dirrm ${PYSITELIB}/zenmapGUI
-@dirrm share/zenmap/config
-@dirrm share/zenmap/locale/de/LC_MESSAGES
-@dirrm share/zenmap/locale/fr/LC_MESSAGES
-@dirrm share/zenmap/locale/hr/LC_MESSAGES
-@dirrm share/zenmap/locale/pt_BR/LC_MESSAGES
-@dirrm share/zenmap/locale/de
-@dirrm share/zenmap/locale/fr
-@dirrm share/zenmap/locale/hr
-@dirrm share/zenmap/locale/pt_BR
-@dirrm share/zenmap/locale
-@dirrm share/zenmap/docs
-@dirrm share/zenmap/misc
-@dirrm share/zenmap/pixmaps/radialnet
-@dirrm share/zenmap/pixmaps
-@dirrm share/zenmap
