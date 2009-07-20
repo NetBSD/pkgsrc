@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.7 2009/07/20 19:40:08 adrianp Exp $
+
+--- ndiff/setup.py.orig	2009-06-24 22:35:54.000000000 +0100
++++ ndiff/setup.py
+@@ -29,5 +29,5 @@ class checked_install(distutils.command.
+                 + "Installing your distribution's python-dev package may solve this problem.")
+ 
+ distutils.core.setup(name = u"ndiff", scripts = [u"ndiff"],
+-    data_files = [(u"share/man/man1", [u"docs/ndiff.1"])],
++    data_files = [(u"@@PKGMANDIR@@/man1", [u"docs/ndiff.1"])],
+     cmdclass = {"install_egg_info": null_command, "install": checked_install})
