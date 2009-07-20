@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.473 2009/06/07 13:48:45 wiz Exp $
+# $NetBSD: Makefile,v 1.474 2009/07/20 14:14:19 ahoka Exp $
 #
 
 COMMENT=	System utilities
@@ -37,6 +37,7 @@ SUBDIR+=	boxbackup-server
 SUBDIR+=	brasero
 SUBDIR+=	bsign
 SUBDIR+=	btpin-qt
+SUBDIR+=	bubblemon
 SUBDIR+=	burn
 SUBDIR+=	capistrano
 SUBDIR+=	ccd2iso
