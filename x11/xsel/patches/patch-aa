@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/07/20 18:51:53 hasso Exp $
+
+--- xsel.c.orig	2009-07-20 21:08:25 +0300
++++ xsel.c	2009-07-20 21:09:11 +0300
+@@ -465,7 +465,7 @@ get_timestamp (void)
+  */
+ 
+ /* The jmp_buf to longjmp out of the signal handler */
+-static jmp_buf env_alrm;
++static sigjmp_buf env_alrm;
+ 
+ /*
+  * alarm_handler (sig)
