@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.22 2009/01/04 15:16:11 adrianp Exp $
+$NetBSD: patch-aa,v 1.23 2009/07/20 19:40:08 adrianp Exp $
 
---- Makefile.in.orig	2008-09-05 06:32:06.000000000 +0100
+--- Makefile.in.orig	2009-06-24 22:35:54.000000000 +0100
 +++ Makefile.in
 @@ -24,8 +24,8 @@ CXX = @CXX@
  CCOPT = 
@@ -12,8 +12,8 @@ $NetBSD: patch-aa,v 1.22 2009/01/04 15:16:11 adrianp Exp $
 +#LIBPCREDIR = @LIBPCREDIR@
  export LIBDNETDIR = @LIBDNETDIR@
  ZENMAPDIR = zenmap
- PYTHON = @PYTHON@
-@@ -82,14 +82,14 @@ $(TARGET): @LUA_DEPENDS@ @PCAP_DEPENDS@ 
+ NDIFFDIR = ndiff
+@@ -95,14 +95,14 @@ $(TARGET): @LUA_DEPENDS@ @PCAP_DEPENDS@ 
  	rm -f $@
  	$(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
  
