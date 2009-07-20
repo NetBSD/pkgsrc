@@ -1,12 +1,12 @@
-$NetBSD: patch-aj,v 1.3 2008/10/01 22:12:01 joerg Exp $
+$NetBSD: patch-aj,v 1.4 2009/07/20 03:47:20 hasso Exp $
 
 Tags: not-for-upstream
 
 We don't want xview at all. An additional problem is that on Solaris 10,
 there is -lxview, but <xview/xview.h> is missing.
 
---- configure.orig	2001-07-11 22:58:54.000000000 +0200
-+++ configure	2007-01-17 03:12:56.435501068 +0100
+--- configure.orig	2001-07-11 22:58:54 +0200
++++ configure	2009-07-19 21:48:11 +0300
 @@ -1634,7 +1634,7 @@ int main() {
  xv_main_loop()
  ; return 0; }
@@ -16,7 +16,17 @@ there is -lxview, but <xview/xview.h> is missing.
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -1951,6 +1951,18 @@ case "$host_os" in
+@@ -1946,11 +1946,28 @@ case "$host_os" in
+     OS_LDFLAGS='-L/usr/local/lib'
+     OS_LIBCQCAM_OBJS=''
+   ;;
++  dragonfly*)
++    OS_CFLAGS='-O2 -DFREEBSD'
++    OS_LDFLAGS=''
++    OS_LIBCQCAM_OBJS=''
++  ;;
+   bsdi*)
+     OS_CFLAGS='-O2 -I/usr/local/include -DBSDI'
      OS_LDFLAGS='-L/usr/local/lib'
      OS_LIBCQCAM_OBJS=''
    ;;
@@ -35,7 +45,7 @@ there is -lxview, but <xview/xview.h> is missing.
    openbsd*)
      OS_CFLAGS='-O2 -DOPENBSD'
      OS_LDFLAGS='-L/usr/local/lib'
-@@ -1981,6 +1993,7 @@ esac
+@@ -1981,6 +1998,7 @@ esac
  if test "$no_asm" = "yes"; then
    OS_CFLAGS=$OS_CFLAGS' -DNO_ASM'
  fi
