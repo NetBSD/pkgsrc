@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.ndiff,v 1.1 2009/07/20 19:40:52 adrianp Exp $
+bin/ndiff
+man/man1/ndiff.1
