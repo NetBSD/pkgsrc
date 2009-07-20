@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/07/18 01:46:55 obache Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/20 02:59:05 obache Exp $
 #
 
-DISTNAME=	tokyocabinet-java-1.21
+DISTNAME=	tokyocabinet-java-1.22
 PKGNAME=	java-${DISTNAME:S/-java//}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
