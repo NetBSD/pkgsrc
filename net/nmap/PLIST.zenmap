@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.zenmap,v 1.4 2009/07/20 19:40:08 adrianp Exp $
 bin/nmapfe
 bin/uninstall_zenmap
 bin/xnmap
@@ -52,6 +53,8 @@ ${PYSITELIB}/radialnet/gui/NodeWindow.py
 ${PYSITELIB}/radialnet/gui/NodeWindow.pyc
 ${PYSITELIB}/radialnet/gui/RadialNet.py
 ${PYSITELIB}/radialnet/gui/RadialNet.pyc
+${PYSITELIB}/radialnet/gui/SaveDialog.py
+${PYSITELIB}/radialnet/gui/SaveDialog.pyc
 ${PYSITELIB}/radialnet/gui/Toolbar.py
 ${PYSITELIB}/radialnet/gui/Toolbar.pyc
 ${PYSITELIB}/radialnet/gui/__init__.py
@@ -72,8 +75,6 @@ ${PYSITELIB}/zenmapCore/BugRegister.py
 ${PYSITELIB}/zenmapCore/BugRegister.pyc
 ${PYSITELIB}/zenmapCore/Diff.py
 ${PYSITELIB}/zenmapCore/Diff.pyc
-${PYSITELIB}/zenmapCore/DiffHtml.py
-${PYSITELIB}/zenmapCore/DiffHtml.pyc
 ${PYSITELIB}/zenmapCore/I18N.py
 ${PYSITELIB}/zenmapCore/I18N.pyc
 ${PYSITELIB}/zenmapCore/Name.py
@@ -164,8 +165,6 @@ ${PYSITELIB}/zenmapGUI/TargetCombo.py
 ${PYSITELIB}/zenmapGUI/TargetCombo.pyc
 ${PYSITELIB}/zenmapGUI/TopologyPage.py
 ${PYSITELIB}/zenmapGUI/TopologyPage.pyc
-${PYSITELIB}/zenmapGUI/Wizard.py
-${PYSITELIB}/zenmapGUI/Wizard.pyc
 ${PYSITELIB}/zenmapGUI/__init__.py
 ${PYSITELIB}/zenmapGUI/__init__.pyc
 ${PYSITELIB}/zenmapGUI/higwidgets/__init__.py
@@ -211,70 +210,75 @@ share/zenmap/config/scan_profile.usp
 share/zenmap/config/zenmap.conf
 share/zenmap/config/zenmap_version
 share/zenmap/docs/help.html
-share/zenmap/locale/pt_BR/LC_MESSAGES/umit.mo
-share/zenmap/misc/options.xml
+share/zenmap/locale/de/LC_MESSAGES/zenmap.mo
+share/zenmap/locale/fr/LC_MESSAGES/zenmap.mo
+share/zenmap/locale/hr/LC_MESSAGES/zenmap.mo
+share/zenmap/locale/pt_BR/LC_MESSAGES/zenmap.mo
 share/zenmap/misc/profile_editor.xml
-share/zenmap/misc/wizard.xml
-share/zenmap/pixmaps/default.svg
 share/zenmap/pixmaps/default_32.png
 share/zenmap/pixmaps/default_75.png
-share/zenmap/pixmaps/freebsd.svg
 share/zenmap/pixmaps/freebsd_32.png
 share/zenmap/pixmaps/freebsd_75.png
-share/zenmap/pixmaps/irix.svg
 share/zenmap/pixmaps/irix_32.png
 share/zenmap/pixmaps/irix_75.png
-share/zenmap/pixmaps/linux.svg
 share/zenmap/pixmaps/linux_32.png
 share/zenmap/pixmaps/linux_75.png
-share/zenmap/pixmaps/macosx.svg
 share/zenmap/pixmaps/macosx_32.png
 share/zenmap/pixmaps/macosx_75.png
-share/zenmap/pixmaps/openbsd.svg
 share/zenmap/pixmaps/openbsd_32.png
 share/zenmap/pixmaps/openbsd_75.png
 share/zenmap/pixmaps/radialnet/border.png
-share/zenmap/pixmaps/radialnet/close.png
-share/zenmap/pixmaps/radialnet/collapse.png
-share/zenmap/pixmaps/radialnet/expand.png
 share/zenmap/pixmaps/radialnet/firewall.png
 share/zenmap/pixmaps/radialnet/logo.png
-share/zenmap/pixmaps/radialnet/logo.svg
 share/zenmap/pixmaps/radialnet/padlock.png
 share/zenmap/pixmaps/radialnet/router.png
 share/zenmap/pixmaps/radialnet/switch.png
 share/zenmap/pixmaps/radialnet/wireless.png
-share/zenmap/pixmaps/redhat.svg
 share/zenmap/pixmaps/redhat_32.png
 share/zenmap/pixmaps/redhat_75.png
-share/zenmap/pixmaps/solaris.svg
 share/zenmap/pixmaps/solaris_32.png
 share/zenmap/pixmaps/solaris_75.png
 share/zenmap/pixmaps/splash.png
-share/zenmap/pixmaps/ubuntu.svg
+share/zenmap/pixmaps/throbber.gif
+share/zenmap/pixmaps/throbber.png
 share/zenmap/pixmaps/ubuntu_32.png
 share/zenmap/pixmaps/ubuntu_75.png
-share/zenmap/pixmaps/unknown.svg
 share/zenmap/pixmaps/unknown_32.png
 share/zenmap/pixmaps/unknown_75.png
-share/zenmap/pixmaps/vl_1.svg
 share/zenmap/pixmaps/vl_1_32.png
 share/zenmap/pixmaps/vl_1_75.png
-share/zenmap/pixmaps/vl_2.svg
 share/zenmap/pixmaps/vl_2_32.png
 share/zenmap/pixmaps/vl_2_75.png
-share/zenmap/pixmaps/vl_3.svg
 share/zenmap/pixmaps/vl_3_32.png
 share/zenmap/pixmaps/vl_3_75.png
-share/zenmap/pixmaps/vl_4.svg
 share/zenmap/pixmaps/vl_4_32.png
 share/zenmap/pixmaps/vl_4_75.png
-share/zenmap/pixmaps/vl_5.svg
 share/zenmap/pixmaps/vl_5_32.png
 share/zenmap/pixmaps/vl_5_75.png
-share/zenmap/pixmaps/win.svg
 share/zenmap/pixmaps/win_32.png
 share/zenmap/pixmaps/win_75.png
-share/zenmap/pixmaps/wizard_logo.png
 share/zenmap/pixmaps/zenmap.png
 share/zenmap/su-to-zenmap.sh
+@dirrm ${PYSITELIB}/radialnet/bestwidgets
+@dirrm ${PYSITELIB}/radialnet/core
+@dirrm ${PYSITELIB}/radialnet/gui
+@dirrm ${PYSITELIB}/radialnet/util
+@dirrm ${PYSITELIB}/radialnet
+@dirrm ${PYSITELIB}/zenmapCore
+@dirrm ${PYSITELIB}/zenmapGUI/higwidgets
+@dirrm ${PYSITELIB}/zenmapGUI
+@dirrm share/zenmap/config
+@dirrm share/zenmap/locale/de/LC_MESSAGES
+@dirrm share/zenmap/locale/fr/LC_MESSAGES
+@dirrm share/zenmap/locale/hr/LC_MESSAGES
+@dirrm share/zenmap/locale/pt_BR/LC_MESSAGES
+@dirrm share/zenmap/locale/de
+@dirrm share/zenmap/locale/fr
+@dirrm share/zenmap/locale/hr
+@dirrm share/zenmap/locale/pt_BR
+@dirrm share/zenmap/locale
+@dirrm share/zenmap/docs
+@dirrm share/zenmap/misc
+@dirrm share/zenmap/pixmaps/radialnet
+@dirrm share/zenmap/pixmaps
+@dirrm share/zenmap
