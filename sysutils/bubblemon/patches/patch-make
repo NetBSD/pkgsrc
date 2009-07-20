@@ -1,0 +1,64 @@
+$NetBSD: patch-make,v 1.1.1.1 2009/07/20 14:06:02 ahoka Exp $
+
+--- Makefile.orig	2003-10-04 02:22:07.000000000 +0200
++++ Makefile
+@@ -7,12 +7,12 @@ EXTRA += -DKERNEL_26
+ # EXTRA += -DUPSIDE_DOWN_DUCK
+ 
+ # where to install this program
+-PREFIX = /usr/local
++PREFIX ?= /usr/local
+ 
+ # no user serviceable parts below
+ EXTRA += $(WMAN)
+ # optimization cflags
+-CFLAGS = -O3 -ansi -Wall `gtk-config --cflags` ${EXTRA}
++CFLAGS = -O2 -ansi -Wall $(shell pkg-config --cflags gtk+-2.0) $(EXTRA)
+ # profiling cflags
+ # CFLAGS = -ansi -Wall -pg -O3 `gtk-config --cflags` ${EXTRA} -DPRO
+ # test coverage cflags
+@@ -22,28 +22,34 @@ CFLAGS = -O3 -ansi -Wall `gtk-config --c
+ SHELL=sh
+ OS = $(shell uname -s)
+ OBJS = bubblemon.o
+-CC = gcc
++CC ?= gcc
++
++LIBS = $(shell pkg-config --libs gtk+-2.0)
+ 
+ # special things for Linux
+ ifeq ($(OS), Linux)
+     OBJS += sys_linux.o
+-    LIBS = `gtk-config --libs | sed "s/-lgtk//g"`
+     INSTALL = -m 755
+ endif
+ 
+ # special things for FreeBSD
+ ifeq ($(OS), FreeBSD)
+     OBJS += sys_freebsd.o
+-    LIBS = `gtk-config --libs | sed "s/-lgtk//g"` -lkvm
++    LIBS += -lkvm
+     INSTALL = -c -g kmem -m 2755 -o root
+ endif
+ 
+ # special things for OpenBSD
+ ifeq ($(OS), OpenBSD)
+     OBJS += sys_openbsd.o
+-    LIBS = `gtk-config --libs | sed "s/-lgtk//g"`
+ endif
+ 
++# special things for NetBSD
++ifeq ($(OS), NetBSD)
++    OBJS += sys_netbsd.o
++endif
++
++
+ #special things for SunOS
+ ifeq ($(OS), SunOS)
+ 
+@@ -78,4 +84,4 @@ clean:
+ 	rm -f bubblemon *.o *.bb* *.gcov gmon.* *.da *~
+ 
+ install:
+-	install $(INSTALL) bubblemon $(PREFIX)/bin
++	install $(INSTALL) bubblemon $(DESTDIR)$(PREFIX)/bin
