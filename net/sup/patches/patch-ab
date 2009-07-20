@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2009/07/20 18:19:25 hasso Exp $
+
+--- ffilecopy.c.orig	2009-07-20 20:11:38 +0300
++++ ffilecopy.c	2009-07-20 20:12:10 +0300
+@@ -39,7 +39,7 @@
+  *	after we've hacked the buffers up
+  */
+ 
+-#if defined(__SEOF)
++#if defined(__SEOF) && !defined(__DragonFly__)
+ 
+ # define FBUF_HACK(here,there) \
+ 	do { \
