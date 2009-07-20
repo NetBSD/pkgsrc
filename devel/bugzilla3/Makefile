@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2009/04/20 09:28:28 abs Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2009/07/20 09:22:07 tron Exp $
 #
 
-DISTNAME=	bugzilla-3.2.3
+DISTNAME=	bugzilla-3.2.4
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bugzilla.org/
 COMMENT=	Web based bug tracking system
 
