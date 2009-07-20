@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/05 06:21:17 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2009/07/20 09:58:40 tron Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -32,6 +32,7 @@ man/man1/git-diff-files.1
 man/man1/git-diff-index.1
 man/man1/git-diff-tree.1
 man/man1/git-diff.1
+man/man1/git-difftool.1
 man/man1/git-fast-export.1
 man/man1/git-fast-import.1
 man/man1/git-fetch-pack.1
@@ -69,6 +70,7 @@ man/man1/git-merge-one-file.1
 man/man1/git-merge-tree.1
 man/man1/git-merge.1
 man/man1/git-mergetool.1
+man/man1/git-mergetool--lib.1
 man/man1/git-mktag.1
 man/man1/git-mktree.1
 man/man1/git-mv.1
