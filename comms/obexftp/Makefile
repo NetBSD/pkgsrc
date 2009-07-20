@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2009/05/22 07:16:58 plunky Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/20 05:56:02 hasso Exp $
 #
 
 DISTNAME=	obexftp-0.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--disable-swig
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "NetBSD" && exists(/usr/include/bluetooth.h))
+.if ((${OPSYS} == "NetBSD" && exists(/usr/include/bluetooth.h)) || ${OPSYS} == "DragonFly")
 CPPFLAGS+=		-DCOMPAT_BLUEZ -DSDP_COMPAT
 .endif
 
