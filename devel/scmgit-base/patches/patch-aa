@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2009/07/19 01:29:33 minskim Exp $
+$NetBSD: patch-aa,v 1.9 2009/07/20 03:43:07 hasso Exp $
 
---- Makefile.orig	2009-06-21 23:24:25.000000000 -0700
-+++ Makefile
+--- Makefile.orig	2009-06-22 09:24:25 +0300
++++ Makefile	2009-07-20 06:07:34 +0300
 @@ -249,12 +249,8 @@ GITWEB_SITE_FOOTER =
  
  export prefix bindir sharedir sysconfdir
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.8 2009/07/19 01:29:33 minskim Exp $
  	BASIC_CFLAGS += -D__EXTENSIONS__
  endif
  ifeq ($(uname_O),Cygwin)
-@@ -759,9 +754,7 @@ ifeq ($(uname_S),OpenBSD)
+@@ -759,14 +754,19 @@ ifeq ($(uname_S),OpenBSD)
  	THREADED_DELTA_SEARCH = YesPlease
  endif
  ifeq ($(uname_S),NetBSD)
@@ -47,7 +47,19 @@ $NetBSD: patch-aa,v 1.8 2009/07/19 01:29:33 minskim Exp $
  	BASIC_CFLAGS += -I/usr/pkg/include
  	BASIC_LDFLAGS += -L/usr/pkg/lib $(CC_LD_DYNPATH)/usr/pkg/lib
  	THREADED_DELTA_SEARCH = YesPlease
-@@ -1183,7 +1176,7 @@ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_P
+ 	USE_ST_TIMESPEC = YesPlease
+ endif
++ifeq ($(uname_S),DragonFly)
++	NEEDS_LIBICONV = YesPlease
++	BASIC_CFLAGS += -I/usr/pkg/include
++	BASIC_LDFLAGS += -L/usr/pkg/lib
++	USE_ST_TIMESPEC = YesPlease
++	THREADED_DELTA_SEARCH = YesPlease
++endif
+ ifeq ($(uname_S),AIX)
+ 	NO_STRCASESTR=YesPlease
+ 	NO_MEMMEM = YesPlease
+@@ -1183,7 +1183,7 @@ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_P
  PERL_PATH_SQ = $(subst ','\'',$(PERL_PATH))
  TCLTK_PATH_SQ = $(subst ','\'',$(TCLTK_PATH))
  
@@ -56,7 +68,7 @@ $NetBSD: patch-aa,v 1.8 2009/07/19 01:29:33 minskim Exp $
  
  BASIC_CFLAGS += -DSHA1_HEADER='$(SHA1_HEADER_SQ)' \
  	$(COMPAT_CFLAGS)
-@@ -1535,10 +1528,10 @@ gitexec_instdir_SQ = $(subst ','\'',$(gi
+@@ -1535,10 +1535,10 @@ gitexec_instdir_SQ = $(subst ','\'',$(gi
  export gitexec_instdir
  
  install: all
