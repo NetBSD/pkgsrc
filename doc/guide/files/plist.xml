@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.17 2009/04/03 01:52:24 snj Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.18 2009/07/20 15:04:27 wiz Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -246,71 +246,21 @@ ${PLIST.foo}@dirrm share/bar
 
     <para>A <quote>shared directory</quote> is a directory where
     multiple (and unrelated) packages install files.  These
-    directories are problematic because you have to add special tricks
-    in the PLIST to conditionally remove them, or have some
+    directories were problematic because you had to add special
+    tricks in the PLIST to conditionally remove them, or have some
     centralized package handle them.</para>
 
-    <para>Within pkgsrc, you'll find both approaches.  If a directory
-    is shared by a few unrelated packages, it's often not worth to add
-    an extra package to remove it.  Therefore, one simply does:</para>
+    <para>In pkgsrc, it is now easy: Each package should create
+    directories and install files as needed; <command>pkg_delete</command>
+    will remove any directories left empty after uninstalling a
+    package.</para>
 
+    <para>If a package needs an empty directory to work, create
+    the directory during installation as usual, and also add an
+    entry to the PLIST:
     <programlisting>
-@unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
+@pkgdir path/to/empty/directory
     </programlisting>
-
-    <para>in the PLISTs of all affected packages, instead of the
-    regular "@dirrm" line.</para>
-
-    <para>However, if the directory is shared across many packages, two
-    different solutions are available:</para>
-
-    <orderedlist>
-      <listitem>
-	<para>If the packages have a common dependency, the directory
-	can be removed in that.  For example, see
-	<filename role="pkg">textproc/scrollkeeper</filename>, which
-	removes the shared directory
-	<filename>share/omf</filename>.</para>
-      </listitem>
-
-      <listitem>
-	<para>If the packages using the directory are not related at
-	all (they have no common dependencies), a *-dirs package is
-	used.</para>
-      </listitem>
-    </orderedlist>
-
-    <para>From now on, we'll discuss the second solution.  To get an
-    idea of the *-dirs packages available, issue:</para>
-
-    <programlisting>
-&cprompt; cd .../pkgsrc
-&cprompt; ls -d */*-dirs
-    </programlisting>
-
-    <para>Their use from other packages is very simple.  The
-    <varname>USE_DIRS</varname> variable takes a list of package names
-    (without the <quote>-dirs</quote> part) together with the required
-    version number (always pick the latest one when writing new
-    packages).</para>
-
-    <para>For example, if a package installs files under
-    <filename>share/applications</filename>, it should have the
-    following line in it:</para>
-
-    <programlisting>
-USE_DIRS+=      xdg-1.1
-    </programlisting>
-
-    <para>After regenerating the PLIST using <command>make
-    print-PLIST</command>, you should get the right (commented out)
-    lines.</para>
-
-    <para>Note that even if your package is using
-    <filename>$X11BASE</filename>, it must not depend on the
-    *-x11-dirs packages.  Just specify the name without that part and
-    pkgsrc (in particular, <filename>mk/dirs.mk</filename>) will take
-    care of it.</para>
   </sect1>
 
 </chapter>
