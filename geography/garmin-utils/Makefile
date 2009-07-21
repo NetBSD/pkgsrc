@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/02/22 22:07:52 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/21 13:08:40 gdt Exp $
 #
 
 DISTNAME=		garmin-utils-2.5
@@ -12,9 +12,6 @@ HOMEPAGE=		http://www.snafu.org/
 COMMENT=		Utilities for Garmin GPS receivers
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# This seems excessive; on other ones it can be made to work.
-ONLY_FOR_PLATFORM=	NetBSD-*-* Linux-*-*
 
 INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
