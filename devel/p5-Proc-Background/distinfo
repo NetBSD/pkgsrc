@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/15 20:57:01 seb Exp $
+$NetBSD: distinfo,v 1.2 2009/07/21 22:49:22 sno Exp $
 
-SHA1 (Proc-Background-1.08.tar.gz) = 44da27bbf556a4d1b6c1251f6c83c7cc04dda650
-RMD160 (Proc-Background-1.08.tar.gz) = 91ce8c2508846d302084a08cef93631b969ca573
-Size (Proc-Background-1.08.tar.gz) = 14687 bytes
+SHA1 (Proc-Background-1.10.tar.gz) = 3e530b18adf4cf0904495af0bb431b5add3888d9
+RMD160 (Proc-Background-1.10.tar.gz) = c0623ee1b051a2d7a8bc261084e8dfe6ad6ada81
+Size (Proc-Background-1.10.tar.gz) = 15113 bytes
