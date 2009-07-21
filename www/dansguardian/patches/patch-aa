@@ -1,0 +1,67 @@
+$NetBSD: patch-aa,v 1.1 2009/07/21 05:31:46 hasso Exp $
+
+--- configure.orig	2005-08-14 02:47:57 +0300
++++ configure	2009-07-21 07:13:41 +0300
+@@ -54,7 +54,7 @@ case `uname -s` in
+ 	OpenBSD*)
+ 		extendedecho='echo -e'
+ 	;;
+-	FreeBSD*)
++	FreeBSD*|DragonFly*)
+ 		extendedecho='echo -e'
+ 	;;
+ 	NetBSD*)
+@@ -2538,7 +2538,7 @@ case `uname -s` in
+ 		$extendedecho  "#define __PROXYGROUP \"$runas_grp\"" >>autoconf/platform.h
+ 		$extendedecho  "#define __ENDIANH \"$endianh\"" >>autoconf/platform.h
+ 	;;
+-	FreeBSD*)
++	FreeBSD*|DragonFly*)
+ 		echo "#define __BSD 1" >autoconf/platform.h
+ 		$extendedecho "#define __CONFFILE \"$prefixdir$sysconfdir\c" >>autoconf/platform.h;
+ 		echo "dansguardian.conf\"" >>autoconf/platform.h;
+@@ -2662,7 +2662,7 @@ case `uname -s` in
+                 echo "exit 0" >> dansguardian.bsdv
+                 chmod u+x dansguardian.bsdv
+ 	;;
+-	FreeBSD*)
++	FreeBSD*|DragonFly*)
+ 		if [ -f dansguardian.bsdv ]; then
+                         rm -f dansguardian.bsdv
+                 fi
+@@ -3451,7 +3451,7 @@ case `uname -s` in
+ 	        echo "dansguardian.sh stop > /dev/null" >>logrotation
+ 	        echo "" >>logrotation
+ 	;;
+-	FreeBSD*)
++	FreeBSD*|DragonFly*)
+ 	        $extendedecho "$prefixdir$sysvdir\c" >>logrotation
+ 	        echo "dansguardian.sh stop > /dev/null" >>logrotation
+ 	        echo "" >>logrotation
+@@ -3508,7 +3508,7 @@ case `uname -s` in
+ 	        echo "dansguardian.sh start > /dev/null" >>logrotation
+ 	        echo "" >>logrotation
+ 	;;
+-	FreeBSD*)
++	FreeBSD*|DragonFly*)
+ 	        $extendedecho "$prefixdir$sysvdir\c" >>logrotation
+ 	        echo "dansguardian.sh start > /dev/null" >>logrotation
+ 	        echo "" >>logrotation
+@@ -3552,7 +3552,7 @@ case `uname -s` in
+ 	        $extendedecho "    $prefixdir$sysvdir\c" >>logrotate.dansguardian
+ 	        echo "dansguardian.sh stop > /dev/null" >>logrotate.dansguardian
+ 	;;
+-	FreeBSD*)
++	FreeBSD*|DragonFly*)
+ 	        $extendedecho "    $prefixdir$sysvdir\c" >>logrotate.dansguardian
+ 	        echo "dansguardian.sh stop > /dev/null" >>logrotate.dansguardian
+ 	;;
+@@ -3583,7 +3583,7 @@ case `uname -s` in
+ 	        $extendedecho "    $prefixdir$sysvdir\c" >>logrotate.dansguardian
+ 	        echo "dansguardian.sh start > /dev/null" >>logrotate.dansguardian
+ 	;;
+-	FreeBSD*)
++	FreeBSD*|DragonFly*)
+ 	        $extendedecho "    $prefixdir$sysvdir\c" >>logrotate.dansguardian
+ 	        echo "dansguardian.sh start > /dev/null" >>logrotate.dansguardian
+ 	;;
