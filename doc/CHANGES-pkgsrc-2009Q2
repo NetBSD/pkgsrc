@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.13 2009/07/20 09:59:10 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.14 2009/07/21 14:30:00 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -54,3 +54,15 @@ Pullup ticket #2825 - requested by minskim
 scmgit: security update
 scmgit-base: security update
 scmgit-docs: security update
+Pullup ticket #2826 - requested by kefren
+mono: security update
+Pullup ticket #2827 - requested by kefren
+ap-mono: keep in sync with mono
+Pullup ticket #2828 - requested by kefren
+libgdiplus: keep in sync with mono
+Pullup ticket #2829 - requested by kefren
+mono-xsp: keep in sync with mono
+Pullup ticket #2830 - requested by kefren
+mono-basic: keep in sync with mono
+Pullup ticket #2831 - requested by kefren
+mono-tools: keep in sync with mono
