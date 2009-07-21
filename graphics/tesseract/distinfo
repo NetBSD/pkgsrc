@@ -1,5 +1,23 @@
-$NetBSD: distinfo,v 1.5 2008/10/30 22:12:59 wiz Exp $
+$NetBSD: distinfo,v 1.6 2009/07/21 16:00:19 brook Exp $
 
+SHA1 (tesseract-2.00.deu.tar.gz) = d8d89e2681421a144f3a1ec61ee0c530686f5096
+RMD160 (tesseract-2.00.deu.tar.gz) = c7e6755e94084114fb1a1be8e9308c8dddd2fdda
+Size (tesseract-2.00.deu.tar.gz) = 1373777 bytes
+SHA1 (tesseract-2.00.eng.tar.gz) = 40292c8d206090c4ab342f6b7814ea41c075abce
+RMD160 (tesseract-2.00.eng.tar.gz) = 4a8090729504c216b3988f189ea79a5a5e223173
+Size (tesseract-2.00.eng.tar.gz) = 1013090 bytes
+SHA1 (tesseract-2.00.fra.tar.gz) = 24f58cab2b1418816ba09e6f28e33aee34605889
+RMD160 (tesseract-2.00.fra.tar.gz) = 96bf4e6bfca6ac2b9a3ec03b545a4fd12d8f343e
+Size (tesseract-2.00.fra.tar.gz) = 1007776 bytes
+SHA1 (tesseract-2.00.ita.tar.gz) = 8ac6c41708950660fd66789f5925068577fb89b1
+RMD160 (tesseract-2.00.ita.tar.gz) = 05e739d684ab138b5bb032526e019bfa01e1a2f6
+Size (tesseract-2.00.ita.tar.gz) = 977683 bytes
+SHA1 (tesseract-2.00.nld.tar.gz) = 8bc0a5877c1992ab10a9e124643fd9006ff30350
+RMD160 (tesseract-2.00.nld.tar.gz) = ce16fbf17d4ce544269b37f5c07d5239fad22bff
+Size (tesseract-2.00.nld.tar.gz) = 1408071 bytes
+SHA1 (tesseract-2.00.spa.tar.gz) = 49206b79407cb23bc23b1cd95bee02544f2fcf9b
+RMD160 (tesseract-2.00.spa.tar.gz) = 0e1fcb5739b95d4131efeea440d353f5638bb57d
+Size (tesseract-2.00.spa.tar.gz) = 1365863 bytes
 SHA1 (tesseract-2.03.tar.gz) = b7859278ff98a8b64bf98b5a519688e1559cec57
 RMD160 (tesseract-2.03.tar.gz) = 7519e7f4d876444bd3264d599dbf423e22443311
 Size (tesseract-2.03.tar.gz) = 1075509 bytes
