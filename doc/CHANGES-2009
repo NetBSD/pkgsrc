@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2778 2009/07/21 06:49:45 adam Exp $
+$NetBSD: CHANGES-2009,v 1.2779 2009/07/21 07:27:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3693,3 +3693,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Traits-Pluggable to 0.06 [sno 2009-07-21]
 	Updated net/p5-Cisco-Abbrev to 0.03 [sno 2009-07-21]
 	Updated graphics/pngcrush to 1.7.0 [adam 2009-07-21]
+	Added fonts/tex-fontspec version 1.18 [minskim 2009-07-21]
+	Added fonts/tex-fontspec-doc version 1.18 [minskim 2009-07-21]
