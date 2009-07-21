@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/02/12 16:06:32 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2009/07/21 09:59:09 tnn Exp $
 #
 
 DISTNAME=	ispell-3.3.02
@@ -58,4 +58,5 @@ do-configure:
 	${ECHO} "#define MAKE_SORTTMP \"\"" >> local.h;
 .endif
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
