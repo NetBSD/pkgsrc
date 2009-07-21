@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/07/18 18:43:56 tsutsui Exp $
+# $NetBSD: Makefile,v 1.42 2009/07/21 20:52:21 asau Exp $
 #
 
 DISTNAME=	gxemul-0.4.7.2
@@ -11,6 +11,8 @@ COMMENT=	Machine emulator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=	pax
 
