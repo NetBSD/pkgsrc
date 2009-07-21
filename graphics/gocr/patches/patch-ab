@@ -1,23 +1,33 @@
-$NetBSD: patch-ab,v 1.3 2008/06/20 01:09:22 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2009/07/21 20:23:55 brook Exp $
 
 --- src/Makefile.in.orig	2005-02-28 14:40:39.000000000 +0000
 +++ src/Makefile.in
-@@ -30,6 +30,8 @@ LIBOBJS=pgm2asc.o \
+@@ -37,6 +37,8 @@
  # these two lines are for cross-compiling, not tested
  #srcdir = @srcdir@
  #VPATH = @srcdir@
 +prefix = @prefix@
 +exec_prefix = @exec_prefix@
  bindir = @bindir@
- libdir = @libdir@
- includedir = @includedir@
-@@ -67,9 +69,7 @@ $(LIBOBJS): Makefile
+ #  lib removed for simplification
+ #libdir = @libdir@
+@@ -78,7 +80,7 @@
+ $(PROGRAM): $(LIBOBJS) gocr.o
+ 	# make it conform to ld --as-needed
+ 	#$(CC) -o $@ $(LDFLAGS) gocr.o ./lib$(PGMASCLIB).a $(LIBS)
+-	$(CC) -o $@ gocr.o $(LIBOBJS) $(LIBS)
++	$(CC) -o $@ $(LDFLAGS) gocr.o $(LIBOBJS) $(LIBS)
+ 	if test -r $(PROGRAM); then cp $@ ../bin; fi
+ 
+ libs: lib$(PGMASCLIB).a lib$(PGMASCLIB).@PACKAGE_VERSION@.so
+@@ -97,10 +99,7 @@
  # PHONY = don't look at file clean, -rm = start rm and ignore errors
- .PHONY : clean proper install
+ .PHONY : clean proper install uninstall
  install: all
--	$(INSTALL) -d $(DESTDIR)$(bindir) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+-	#$(INSTALL) -d $(DESTDIR)$(bindir) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+-	$(INSTALL) -d $(DESTDIR)$(bindir)
  	$(INSTALL) ../bin/$(PROGRAM) $(DESTDIR)$(bindir)
 -	$(INSTALL) ../bin/gocr.tcl   $(DESTDIR)$(bindir)  # better X11/bin?
- 	$(INSTALL) $(LIBPGMASCLIB) $(DESTDIR)$(libdir)
- 	$(INSTALL) $(INCLUDEFILES) $(DESTDIR)$(includedir)
- 
+ 	if test -f lib$(PGMASCLIB).a; then\
+ 	 $(INSTALL) lib$(PGMASCLIB).a $(DESTDIR)$(libdir);\
+ 	 $(INSTALL) lib$(PGMASCLIB).@PACKAGE_VERSION@.so $(DESTDIR)$(libdir);\
