@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/07 11:23:51 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/21 16:53:49 hasso Exp $
 #
 
 DISTNAME=	gtklp-1.2.6
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 MAKE_FLAGS+=		install_sh=${WRKSRC}/install-sh
 
 .include "../../devel/glib2/buildlink3.mk"
