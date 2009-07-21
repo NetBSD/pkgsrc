@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.16 2009/05/25 09:03:15 adam Exp $
+$NetBSD: patch-ab,v 1.17 2009/07/21 19:17:53 hasso Exp $
 
---- configure.in.orig	2009-05-06 16:55:22.000000000 +0200
-+++ configure.in
-@@ -431,6 +431,15 @@ case "${target}:${CC}" in
+--- configure.in.orig	2009-05-06 17:55:22 +0300
++++ configure.in	2009-07-21 21:19:57 +0300
+@@ -431,6 +431,19 @@ case "${target}:${CC}" in
          echo "* This appears to be ${DEFINEOS} (release not checked)"
        ;;
  
@@ -14,11 +14,15 @@ $NetBSD: patch-ab,v 1.16 2009/05/25 09:03:15 adam Exp $
 +	DEFINEOS="OPENBSD"
 +        echo "* This appears to be ${DEFINEOS}"
 +      ;;
++    *-*-dragonfly*:* )
++	DEFINEOS="DRAGONFLY"
++        echo "* This appears to be ${DEFINEOS}"
++      ;;
 +
      * )
          echo "* ${target} is an unknown/unsupported OS"
          echo "*"
-@@ -621,8 +630,8 @@ if test ".${PCAPRING_DIR}" != .; then
+@@ -621,8 +634,8 @@ if test ".${PCAPRING_DIR}" != .; then
  else
  if test ".${PCAP_ROOT}" != .; then
    if test -d $PCAP_ROOT &&
@@ -29,7 +33,7 @@ $NetBSD: patch-ab,v 1.16 2009/05/25 09:03:15 adam Exp $
         PCAP_ROOT=`cd ${PCAP_ROOT} && pwd`
         CORELIBS="${CORELIBS} -L$PCAP_ROOT -lpcap"
         INCS="${INCS} -I$PCAP_ROOT"
-@@ -1656,18 +1665,10 @@ LUA_VERSION=lua-5.1.4
+@@ -1656,18 +1669,10 @@ LUA_VERSION=lua-5.1.4
  if test -f "$LUA_VERSION.tar.gz"; then
     echo "Lua already present on this machine"
  else
@@ -50,7 +54,7 @@ $NetBSD: patch-ab,v 1.16 2009/05/25 09:03:15 adam Exp $
  AC_DEFINE_UNQUOTED(HAVE_LUA, 1, [LUA is supported])
  
  dnl>
-@@ -1966,36 +1967,20 @@ dnl> GeoIP (http://www.maxmind.com/)
+@@ -1966,36 +1971,20 @@ dnl> GeoIP (http://www.maxmind.com/)
  if test -f "GeoIP.tar.gz"; then
     echo "GeoIP already present on this machine"
  else
