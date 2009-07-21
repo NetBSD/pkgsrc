@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2008/06/20 01:09:22 joerg Exp $
+$NetBSD: distinfo,v 1.4 2009/07/21 20:23:55 brook Exp $
 
-SHA1 (gocr-0.40.tar.gz) = 6a5097281664ca3ffd01b11756f1dd5b565e673e
-RMD160 (gocr-0.40.tar.gz) = 1e34277b7d923706789d6e5c85996968d8506427
-Size (gocr-0.40.tar.gz) = 780744 bytes
-SHA1 (patch-aa) = c6f235f82d6c53a52547225045808e595a33b810
-SHA1 (patch-ab) = 45286b824b9ff310e0024896cb917db454755b09
+SHA1 (gocr-0.47.tar.gz) = cfea611c6e53d277470796e4fce310e5add7c40b
+RMD160 (gocr-0.47.tar.gz) = 834329eeb9c1708a7df0e79decd751b9eaf9cefb
+Size (gocr-0.47.tar.gz) = 363267 bytes
+SHA1 (patch-aa) = 75cfdf569d04472cf01df4e537320848909184b9
+SHA1 (patch-ab) = 157464742cd6fa0342e4127d5fe9ee8ad8fbe27c
+SHA1 (patch-ac) = b4ff83990ca84580a81abd41f0939ca6926e0920
