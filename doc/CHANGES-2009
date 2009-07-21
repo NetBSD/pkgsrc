@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2771 2009/07/20 19:40:25 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.2772 2009/07/21 06:10:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3686,3 +3686,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added sysutils/bubblemon version 1.46 [ahoka 2009-07-20]
 	Updated www/trac to 0.11.5 [gdt 2009-07-20]
 	Updated net/nmap to 5.00 [adrianp 2009-07-20]
+	Updated devel/p5-MooseX-Singleton to 0.19 [sno 2009-07-21]
