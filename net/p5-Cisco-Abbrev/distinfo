@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/29 22:00:17 seb Exp $
+$NetBSD: distinfo,v 1.2 2009/07/21 06:40:48 sno Exp $
 
-SHA1 (Cisco-Abbrev-0.02.tar.gz) = 209fc476bfe8c0507d74fad3aa51bd58cb58dfeb
-RMD160 (Cisco-Abbrev-0.02.tar.gz) = 29bf75bc4114ca4e4838677fad1bbe6ce17209b2
-Size (Cisco-Abbrev-0.02.tar.gz) = 4273 bytes
+SHA1 (Cisco-Abbrev-0.03.tar.gz) = 5049c2ca91867277ae86eb2556fb48c211e1f175
+RMD160 (Cisco-Abbrev-0.03.tar.gz) = a84cee8285e89ba21b431f605de12877daa8f1ab
+Size (Cisco-Abbrev-0.03.tar.gz) = 4412 bytes
