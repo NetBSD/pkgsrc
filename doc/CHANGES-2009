@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2783 2009/07/21 11:36:10 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2784 2009/07/21 20:12:43 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3699,3 +3699,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-tokyotyrant to 1.14 [obache 2009-07-21]
 	Updated databases/ruby-tokyotyrant to 1.11 [obache 2009-07-21]
 	Updated databases/tokyocabinet to 1.4.30 [obache 2009-07-21]
+	Updated x11/xf86-video-tdfx to 1.4.2 [abs 2009-07-21]
