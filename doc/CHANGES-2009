@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2777 2009/07/21 06:40:59 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2778 2009/07/21 06:49:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3692,3 +3692,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-SemiAffordanceAccessor to 0.05 [sno 2009-07-21]
 	Updated devel/p5-MooseX-Traits-Pluggable to 0.06 [sno 2009-07-21]
 	Updated net/p5-Cisco-Abbrev to 0.03 [sno 2009-07-21]
+	Updated graphics/pngcrush to 1.7.0 [adam 2009-07-21]
