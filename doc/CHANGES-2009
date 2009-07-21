@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2781 2009/07/21 11:33:55 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2782 2009/07/21 11:34:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3697,3 +3697,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/tex-fontspec-doc version 1.18 [minskim 2009-07-21]
 	Updated databases/tokyotyrant to 1.1.33 [obache 2009-07-21]
 	Updated databases/p5-tokyotyrant to 1.14 [obache 2009-07-21]
+	Updated databases/ruby-tokyotyrant to 1.11 [obache 2009-07-21]
