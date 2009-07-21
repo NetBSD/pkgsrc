@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2786 2009/07/21 22:16:59 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2787 2009/07/21 22:20:41 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3702,3 +3702,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-tdfx to 1.4.2 [abs 2009-07-21]
 	Updated net/wireshark to 1.2.1 [tron 2009-07-21]
 	Updated time/p5-DateTime-Set to 0.28 [sno 2009-07-21]
+	Updated time/p5-DateTime-TimeZone to 0.93 [sno 2009-07-21]
