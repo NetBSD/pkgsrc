@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2009/05/22 19:30:47 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 12:45:05 wiz Exp $
 #
 
-DISTNAME=		libdrm-2.4.11
+DISTNAME=		libdrm-2.4.12
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
