@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2008/02/28 14:55:17 tron Exp $
+$NetBSD: patch-aa,v 1.9.16.1 2009/07/22 06:56:56 spz Exp $
 
---- text2pcap.c.orig	2008-02-27 19:59:35.000000000 +0000
-+++ text2pcap.c	2008-02-28 13:25:19.000000000 +0000
+--- text2pcap.c.orig	2009-07-20 00:23:54.000000000 +0200
++++ text2pcap.c
 @@ -90,7 +90,7 @@
  #  define __USE_XOPEN
  #endif
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.9 2008/02/28 14:55:17 tron Exp $
 +#  define _XOPEN_SOURCE 4
  #endif
  
- #include <ctype.h>
+ /*
