@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/07/22 20:57:47 wiz Exp $
 bin/cntraining
 bin/mftraining
 bin/tesseract
@@ -273,6 +273,7 @@ libexec/tesseract
 share/doc/tesseract/README
 share/tessdata/configs/api_config
 share/tessdata/configs/box.train
+share/tessdata/configs/box.train.stderr
 share/tessdata/configs/inter
 share/tessdata/configs/kannada
 share/tessdata/configs/makebox
