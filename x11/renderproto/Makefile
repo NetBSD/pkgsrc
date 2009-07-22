@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/05/24 21:45:20 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/22 12:56:45 wiz Exp $
 #
 
-DISTNAME=		renderproto-0.9.3
-PKGREVISION=		1
+DISTNAME=		renderproto-0.11
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
