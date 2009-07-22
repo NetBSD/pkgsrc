@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2009/05/20 00:58:16 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2009/07/22 09:01:26 wiz Exp $
 #
 
 DISTNAME=		gnucash-2.2.9
@@ -17,7 +17,6 @@ DEPENDS+=		guile-www>=2.21:../../devel/guile-www
 DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 
-USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool makeinfo msgfmt perl:run pkg-config

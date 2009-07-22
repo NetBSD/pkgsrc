@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/18 13:30:45 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/22 09:01:45 wiz Exp $
 #
 
 POLICYKIT_GNOME_VER=	0.9.2
@@ -17,7 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEFS+=		VARBASE
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES

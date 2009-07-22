@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/03/08 15:56:44 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2009/07/22 09:01:20 wiz Exp $
 #
 
 DISTNAME=	gossip-0.10.2
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

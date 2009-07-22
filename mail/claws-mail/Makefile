@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/05/20 00:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/07/22 09:01:34 wiz Exp $
 
 .include "Makefile.common"
 
@@ -16,7 +16,6 @@ PKGCONFIG_OVERRIDE+=	claws-mail.pc.in
 PKG_SYSCONFSUBDIR=	claws-mail
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-USE_DIRS+=		xdg-1.4
 
 .include "../../mk/bsd.prefs.mk"
 

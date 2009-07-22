@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2009/04/30 20:57:57 zafer Exp $
+# $NetBSD: Makefile,v 1.45 2009/07/22 09:01:40 wiz Exp $
 #
 
 DISTNAME=	dc_gui2-0.75
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	dctc>=0.85.4:../../net/dctc
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
 USE_TOOLS+=		gmake pkg-config msgfmt

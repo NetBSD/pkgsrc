@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2009/02/24 12:24:48 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2009/07/22 09:01:42 wiz Exp $
 #
 
 DISTNAME=		pan-0.133
@@ -13,7 +13,6 @@ COMMENT=		Newsreader for GTK2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake msgfmt perl pkg-config
-USE_DIRS+=		gnome2-1.5
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

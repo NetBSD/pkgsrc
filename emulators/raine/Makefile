@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/19 19:14:59 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/22 09:01:26 wiz Exp $
 #
 
 DISTNAME=	raines-0.43.3
@@ -20,7 +20,6 @@ MAKE_ENV+=	OSTYPE=linux
 REPLACE_PERL=	makedep
 PTHREAD_OPTS+=	require
 
-USE_DIRS+=	xdg-1.1
 
 # XXX Really?
 ONLY_FOR_PLATFORM=  *-*-i386

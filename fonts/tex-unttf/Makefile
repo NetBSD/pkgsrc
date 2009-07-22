@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/26 02:13:18 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/22 09:01:27 wiz Exp $
 #
 
 DISTNAME=	fonts-unttf-20070507
@@ -17,7 +17,6 @@ DEPENDS+=	un-extra-ttf>=1.0.1:../../fonts/un-extra-ttf
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/fonts-unttf
-USE_DIRS+=	texmf-1.0
 USE_TOOLS+=	pax
 NO_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2008/08/22 06:37:39 tron Exp $
+# $NetBSD: Makefile,v 1.62 2009/07/22 09:01:21 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -12,7 +12,6 @@ CONFLICTS=		xchat-gnome-[0-9]*
 
 USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	YES
-USE_DIRS+=		xdg-1.1
 GCONF_SCHEMAS=		apps_xchat_url_handler.schemas
 
 CONFIGURE_ARGS+=	--enable-tcl=no

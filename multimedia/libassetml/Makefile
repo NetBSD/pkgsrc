@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/07/14 12:56:09 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:01:39 wiz Exp $
 #
 
 DISTNAME=		libassetml-1.2.1
@@ -12,7 +12,6 @@ COMMENT=		Library for sharing image and audio files between projects
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome2-1.5	# share/gnome/help
 USE_TOOLS+=		gmake pkg-config texi2html msgfmt
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

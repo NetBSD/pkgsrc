@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/07/16 21:44:08 zafer Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/22 09:01:54 wiz Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
@@ -13,7 +13,6 @@ COMMENT=		Panel for Matchbox
 
 BROKEN_GETTEXT_DETECTION=	yes
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

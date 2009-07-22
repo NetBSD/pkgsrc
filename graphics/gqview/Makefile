@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2008/11/24 22:19:09 tnn Exp $
+# $NetBSD: Makefile,v 1.67 2009/07/22 09:01:32 wiz Exp $
 
 DISTNAME=	gqview-2.0.4
 CATEGORIES=	graphics x11
@@ -12,7 +12,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		msgfmt pkg-config
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 LIBS+=			-lm
 LIBS.SunOS+=		-lsocket

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/06/30 00:07:15 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/22 09:01:27 wiz Exp $
 #
 
 DISTNAME=		ec-fonts-mftraced-1.0.8
@@ -12,7 +12,6 @@ COMMENT=		EC PostScript Type1 fonts with TFMs for TeX
 
 MAKE_JOBS_SAFE=		no
 
-USE_DIRS+=		texmf-1.1
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/06/08 21:17:04 ahoka Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/22 09:01:51 wiz Exp $
 
 DISTNAME=	midori-0.1.7
 CATEGORIES=	www
@@ -11,7 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 
 HAS_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_DIRS+=	xdg-1.4
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
 
 PKG_DESTDIR_SUPPORT=	user-destdir

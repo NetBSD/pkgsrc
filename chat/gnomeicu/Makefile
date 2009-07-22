@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2009/03/08 15:56:44 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2009/07/22 09:01:20 wiz Exp $
 
 DISTNAME=	gnomeicu-0.99.12
 PKGREVISION=	6
@@ -13,7 +13,6 @@ COMMENT=	GNOME ICQ client
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES

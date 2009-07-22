@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/13 18:29:57 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:26 wiz Exp $
 
 DISTNAME=	yabause-0.9.5
 CATEGORIES=	emulators
@@ -13,7 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_TOOLS+=	pkg-config
-USE_DIRS+=	xdg-1.4
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"

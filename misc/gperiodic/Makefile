@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/06/20 01:09:26 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2009/07/22 09:01:37 wiz Exp $
 
 DISTNAME=		gperiodic-2.0.8
 PKGREVISION=		3
@@ -11,7 +11,6 @@ COMMENT=		Displays a periodic table of the elements
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/09/06 20:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2009/07/22 09:01:41 wiz Exp $
 #
 
 DISTNAME=		tsclient-0.132
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	rdesktop-[0-9]*:../../net/rdesktop
 DEPENDS+=	vncviewer-[0-9]*:../../net/vncviewer
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

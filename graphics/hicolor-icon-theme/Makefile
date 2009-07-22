@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/30 13:38:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2009/07/22 09:01:33 wiz Exp $
 #
 
 DISTNAME=	hicolor-icon-theme-0.10
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 NO_BUILD=	YES
-USE_DIRS+=	xdg-1.1
 USE_LANGUAGES=	# none, not even C
 USE_TOOLS+=	gmake
 

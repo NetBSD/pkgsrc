@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/01/06 18:41:26 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/22 09:01:48 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -13,7 +13,6 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xarchiver/}
 COMMENT=	Xfce archiver handler
 
-USE_DIRS+=	xdg-1.1
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxfce4gui/buildlink3.mk"

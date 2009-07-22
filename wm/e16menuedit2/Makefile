@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/03/08 15:56:47 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/07/22 09:01:49 wiz Exp $
 #
 
 DISTNAME=		e16menuedit2-0.0.3
@@ -18,7 +18,6 @@ BROKEN_GETTEXT_DETECTION=	yes
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		intltool msgfmt pkg-config
-USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"

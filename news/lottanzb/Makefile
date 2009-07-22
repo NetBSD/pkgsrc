@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/02/09 22:56:26 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:01:42 wiz Exp $
 #
 
 DISTNAME=	lottanzb-0.4.0
@@ -17,7 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PY_PATCHPLIST=          yes
 PYDISTUTILSPKG=         yes
 USE_PKGLOCALEDIR=	yes
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		intltool msgfmt pkg-config
 
 PYTHON_VERSIONS_ACCEPTED=	25 24

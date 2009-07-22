@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2009/07/09 18:07:01 drochner Exp $
+# $NetBSD: Makefile,v 1.75 2009/07/22 09:01:52 wiz Exp $
 #
 
 DISTNAME=		gnome-applets-2.26.3
@@ -16,7 +16,6 @@ BUILD_DEPENDS+=		gst-plugins0.10-esound>=0.10.0:../../audio/gst-plugins0.10-esou
 BUILD_DEPENDS+=		gst-plugins0.10-oss>=0.10.0:../../audio/gst-plugins0.10-oss
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

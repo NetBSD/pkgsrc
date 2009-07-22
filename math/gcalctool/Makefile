@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2009/07/09 18:39:29 drochner Exp $
+# $NetBSD: Makefile,v 1.83 2009/07/22 09:01:35 wiz Exp $
 #
 
 DISTNAME=		gcalctool-5.26.3
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		HAVE_YACC=yes
 
-USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison gmake intltool flex msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes

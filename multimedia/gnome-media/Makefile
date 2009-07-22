@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/03/22 19:01:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/07/22 09:01:38 wiz Exp $
 
 DISTNAME=		gnome-media-2.26.0
 CATEGORIES=		multimedia gnome
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=		gst-plugins0.10-pulse>=0.10.0:../../audio/gst-plugins0.10-pulse
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config xgettext

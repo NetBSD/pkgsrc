@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2009/07/19 00:33:10 asau Exp $
+# $NetBSD: Makefile,v 1.81 2009/07/22 09:01:35 wiz Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -26,7 +26,6 @@ USE_GNU_READLINE=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makeinfo perl gsed pkg-config
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.1
 
 GCC_REQD+=		3.0
 USE_LANGUAGES=		c c++ fortran

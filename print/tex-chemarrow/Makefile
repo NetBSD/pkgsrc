@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:23 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 09:01:43 wiz Exp $
 #
 
 DISTNAME=	chemarrow
@@ -14,7 +14,6 @@ COMMENT=	New arrow heads for chemical reaction schemes
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_DIRS+=	texmf-1.0
 
 USE_TOOLS+=	pax
 

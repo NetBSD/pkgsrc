@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2009/07/07 16:17:47 tnn Exp $
+# $NetBSD: Makefile,v 1.79 2009/07/22 09:01:39 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -22,7 +22,6 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
-USE_DIRS+=		xdg-1.4
 PLIST_VARS+=		x86simd altivec v4l2 vcd cdda
 
 .include "../../mk/bsd.prefs.mk"

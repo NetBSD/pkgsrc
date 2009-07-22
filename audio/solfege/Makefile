@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/07/08 13:55:58 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/07/22 09:01:19 wiz Exp $
 #
 
 DISTNAME=		solfege-3.14.1
@@ -12,7 +12,6 @@ COMMENT=		Practice several musical ear training exercises
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILD_DEPENDS+=		txt2man-[0-9]*:../../converters/txt2man
 
-USE_DIRS+=		xdg-1.2
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/05/19 08:59:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/22 09:01:23 wiz Exp $
 #
 
 DISTNAME=	diffuse-0.3.3
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
-USE_DIRS=	xdg-1.4 gnome2-1.6
 
 CONF_FILES+=	${PREFIX}/share/examples/diffuse/diffuserc \
 		${PKG_SYSCONFDIR}/diffuserc

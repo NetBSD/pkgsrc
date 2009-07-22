@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/02/25 17:55:00 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2009/07/22 09:01:44 wiz Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -18,7 +18,6 @@ TEX_ACCEPTED=	teTeX3
 
 WRKSRC=		${WRKDIR}/musixtex-T112
 NO_CONFIGURE=	yes
-USE_DIRS+=	texmf-1.0
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

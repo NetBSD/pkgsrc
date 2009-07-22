@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/07/14 12:56:04 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2009/07/22 09:01:30 wiz Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		6
@@ -12,7 +12,6 @@ COMMENT=		Tetris-like puzzle game
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome1-1.5
 USE_TOOLS+=		automake autoconf gmake
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES

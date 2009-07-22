@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2009/02/09 22:56:24 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2009/07/22 09:01:33 wiz Exp $
 #
 
 DISTNAME=	scigraphica-2.1.0
@@ -10,7 +10,6 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://scigraphica.sourceforge.net/
 COMMENT=	Data analysis and technical graphics
 
-USE_DIRS+=		gnome1-1.5
 USE_TOOLS+=		gmake intltool pkg-config
 USE_GNU_READLINE=	YES
 

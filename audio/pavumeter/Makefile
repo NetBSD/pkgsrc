@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/31 16:08:47 abs Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:19 wiz Exp $
 #
 
 DISTNAME=	pavumeter-0.9.3
@@ -12,7 +12,6 @@ COMMENT=	Volume meter for the PulseAudio sound server
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake intltool perl
-USE_DIRS+=	gnome2-1.5
 
 CONFIGURE_ARGS+=	--disable-lynx
 

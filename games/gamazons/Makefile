@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:30 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/22 09:01:28 wiz Exp $
 #
 
 DISTNAME=	gamazons-0.83
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
-USE_DIRS+=	gnome2-1.6 xdg-1.4
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

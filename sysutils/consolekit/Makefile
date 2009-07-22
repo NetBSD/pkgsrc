@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/03/18 13:30:45 jmcneill Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 09:01:45 wiz Exp $
 #
 
 CONSOLEKIT_VER=		0.3.0
@@ -26,7 +26,6 @@ BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		xdg-1.4
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_TOOLS+=		autoconf automake autoreconf

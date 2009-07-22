@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/21 18:06:16 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:01:24 wiz Exp $
 #
 
 DISTNAME=	valide-0.4.0
@@ -12,7 +12,6 @@ COMMENT=	IDE for the Vala programming language
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config msgfmt intltool
-USE_DIRS+=	xdg-1.4
 
 PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON+=	wscript waf \

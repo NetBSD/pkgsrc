@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/06/20 01:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2009/07/22 09:01:53 wiz Exp $
 
 DISTNAME=		gtk-engines-0.12
 PKGREVISION=		9
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		gtk2-engines-*
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.1
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	# empty

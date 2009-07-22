@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/01/23 13:40:32 obache Exp $
+# $NetBSD: Makefile,v 1.37 2009/07/22 09:01:34 wiz Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
@@ -7,7 +7,6 @@ COMMENT=		Multilingual input method library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool pkg-config msgfmt

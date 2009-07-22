@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/07 04:47:20 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 09:01:44 wiz Exp $
 
 DISTNAME=	HLaTeX-1.0.1
 PKGNAME=	tex-hlatex-${DISTNAME:S/HLaTeX-//}
@@ -12,7 +12,6 @@ COMMENT=	LaTeX package to typeset Hangul
 
 DEPENDS+=	tex-uhc-fonts-base>=1.0:../../fonts/tex-uhc-fonts-base
 
-USE_DIRS+=	texmf-1.0
 WRKSRC=		${WRKDIR}/HLaTeX
 
 .include "../../print/teTeX/module.mk"
