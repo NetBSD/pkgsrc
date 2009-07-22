@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.195 2009/06/13 06:30:25 rillig Exp $
+# $NetBSD: makevars.map,v 1.196 2009/07/22 09:13:49 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -701,16 +701,6 @@ USE_BSD_MAKEFILE	Yes [$package]
 USE_BUILTIN.*		YesNo_Indirectly [builtin.mk:s]
 USE_CMAKE		Yes [$package]
 USE_CROSSBASE		Yes [m:s]
-USE_DIRS		List of {					\
-				gnome1-1.0 gnome1-1.5			\
-				gnome2-1.3 gnome2-1.5 gnome2-1.6	\
-				kde3-1.0 kde4-1.0			\
-				texmf-1.0 texmf-1.1 texmf-1.2		\
-				texmf-1.3 texmf-1.4 			\
-				theme-1.0 theme-1.1			\
-				xdg-1.1 xdg-1.2 xdg-1.3 xdg-1.4		\
-				xorg-1.0				\
-			} [m:a,c:a]
 USE_FEATURES		List of Identifier [$package]
 USE_GNU_CONFIGURE_HOST	YesNo [$package]
 USE_GNU_ICONV		Yes [m:s,c:s,o:s]
