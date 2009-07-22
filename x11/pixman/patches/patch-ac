@@ -1,22 +1,22 @@
-$NetBSD: patch-ac,v 1.9 2009/07/19 12:25:03 tron Exp $
+$NetBSD: patch-ac,v 1.10 2009/07/22 12:37:17 wiz Exp $
 
---- test/Makefile.in.orig	2009-07-14 02:59:06.000000000 +0100
-+++ test/Makefile.in	2009-07-19 13:17:38.000000000 +0100
-@@ -57,7 +57,7 @@
+--- test/Makefile.in.orig	2009-07-21 11:18:53.000000000 +0000
++++ test/Makefile.in
+@@ -57,7 +57,7 @@ CONFIG_CLEAN_FILES =
  @HAVE_GTK_TRUE@	composite-test$(EXEEXT) gradient-test$(EXEEXT) \
  @HAVE_GTK_TRUE@	alpha-test$(EXEEXT) screen-test$(EXEEXT) \
  @HAVE_GTK_TRUE@	convolution-test$(EXEEXT) trap-test$(EXEEXT)
 -am__EXEEXT_2 = region-test$(EXEEXT) scaling-test$(EXEEXT) \
 +am__EXEEXT_2 = region-test$(EXEEXT) \
- 	fetch-test$(EXEEXT) oob-test$(EXEEXT) trap-crasher$(EXEEXT) \
- 	$(am__EXEEXT_1)
+ 	fetch-test$(EXEEXT) oob-test$(EXEEXT) window-test$(EXEEXT) \
+ 	trap-crasher$(EXEEXT) $(am__EXEEXT_1)
  PROGRAMS = $(noinst_PROGRAMS)
-@@ -277,7 +277,7 @@
+@@ -279,7 +279,7 @@ top_srcdir = @top_srcdir@
  TEST_LDADD = $(top_builddir)/pixman/libpixman-1.la
  INCLUDES = -I$(top_srcdir)/pixman -I$(top_builddir)/pixman \
  	$(am__append_2)
 -TESTPROGRAMS = region-test scaling-test fetch-test oob-test \
 +TESTPROGRAMS = region-test fetch-test oob-test \
- 	trap-crasher $(am__append_1)
+ 	window-test trap-crasher $(am__append_1)
  fetch_test_LDADD = $(TEST_LDADD)
  region_test_LDADD = $(TEST_LDADD)
