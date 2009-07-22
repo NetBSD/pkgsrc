@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 07:04:44 abs Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:18 wiz Exp $
 #
 
 DISTNAME=	paman-0.9.4
@@ -12,7 +12,6 @@ COMMENT=	GTK frontend for the PulseAudio sound server
 PKG_DESTDIR_SUPPORT=   user-destdir
 
 GNU_CONFIGURE=	yes
-USE_DIRS=	gnome2-1.5
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c++
 

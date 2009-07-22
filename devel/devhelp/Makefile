@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/10/24 16:56:55 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2009/07/22 09:01:23 wiz Exp $
 
 DISTNAME=		devhelp-0.21
 CATEGORIES=		devel x11
@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://developer.imendio.com/projects/devhelp
 COMMENT=		Documentation viewer based on GNOME2
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

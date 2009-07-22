@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/06/20 01:09:37 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2009/07/22 09:01:48 wiz Exp $
 
 DISTNAME=	gnome-spell-1.0.8
 PKGREVISION=	1
@@ -13,7 +13,6 @@ COMMENT=	Spell checking as you type like gtkspell
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.3
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES

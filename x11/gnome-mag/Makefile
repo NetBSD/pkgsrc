@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2009/05/19 08:59:38 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2009/07/22 09:01:52 wiz Exp $
 #
 
 DISTNAME=		gnome-mag-0.15.6
@@ -13,7 +13,6 @@ LICENSE=		gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

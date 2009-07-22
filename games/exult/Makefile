@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/06/30 00:07:15 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:01:27 wiz Exp $
 #
 
 DISTNAME=		exult-1.2
@@ -12,7 +12,6 @@ COMMENT=		Open-source Ultima 7 engine
 
 MAKE_JOBS_SAFE=		no
 
-USE_DIRS+=		xdg-1.2
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/03/08 15:56:47 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2009/07/22 09:01:48 wiz Exp $
 #
 
 DISTNAME=	gtk-doc-1.11
@@ -19,7 +19,6 @@ DEPENDS+=	docbook-xsl>=1.68.1:../../textproc/docbook-xsl
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	gtk-doc.pc.in
 CONFIGURE_ARGS+=	--with-xml-catalog=${XML_DEFAULT_CATALOG:Q}
-USE_DIRS+=		gnome2-1.6
 USE_TOOLS+=		gmake perl:run pkg-config
 
 .include "options.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/05/19 08:59:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/07/22 09:01:28 wiz Exp $
 
 DISTNAME=	gcompris-8.4.4
 PKGREVISION=	3
@@ -18,7 +18,6 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 CHECK_PORTABILITY_SKIP+= macosx/build-gtk.sh
-USE_DIRS+=	xdg-1.1 gnome2-1.5
 INFO_FILES=	yes
 
 DEPENDS+=	gnuchess-[0-9]*:../../games/gnuchess

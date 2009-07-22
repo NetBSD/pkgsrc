@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2009/07/09 18:41:26 drochner Exp $
+# $NetBSD: Makefile,v 1.73 2009/07/22 09:01:53 wiz Exp $
 #
 
 DISTNAME=		gnome-themes-2.26.3.1
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		clearlooks-metacity-[0-9]*
 
-USE_DIRS+=		gnome2-1.5 theme-1.0 xdg-1.4
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

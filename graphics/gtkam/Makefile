@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/03/08 15:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2009/07/22 09:01:33 wiz Exp $
 #
 
 DISTNAME=	gtkam-0.1.16
@@ -12,7 +12,6 @@ COMMENT=	Digital camera access graphical client (GTK2)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		intltool pkg-config perl msgfmt

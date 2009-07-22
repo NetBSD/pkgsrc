@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/06/20 01:09:21 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/22 09:01:31 wiz Exp $
 #
 
 DISTNAME=	g3d-0.0.2
@@ -12,7 +12,6 @@ COMMENT=	3D modeller with a view of 3D modelling
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/g3d
-USE_DIRS+=	xdg-1.1
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake
 USE_X11BASE=	YES

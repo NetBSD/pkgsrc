@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2009/07/09 18:20:19 drochner Exp $
+# $NetBSD: Makefile.common,v 1.50 2009/07/22 09:01:39 wiz Exp $
 #
 # used by multimedia/totem-browser-plugin/Makefile
 # used by multimedia/totem-nautilus/Makefile
@@ -19,7 +19,6 @@ FILESDIR=	${.CURDIR}/../../multimedia/totem/files
 PLIST_SRC=	${.CURDIR}/../../multimedia/totem/PLIST
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config gawk
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

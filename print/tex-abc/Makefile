@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/10 20:16:06 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:01:43 wiz Exp $
 
 DISTNAME=	abc
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -13,7 +13,6 @@ COMMENT=	Support ABC music notation in LaTeX
 DEPENDS+=	abcm2ps-[0-9]*:../../print/abcm2ps
 DEPENDS+=	ps2eps-[0-9]*:../../graphics/ps2eps
 
-USE_DIRS+=	texmf-dirs-1.0
 
 .include "../../print/teTeX/module.mk"
 

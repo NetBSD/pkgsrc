@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/09/25 14:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/22 09:01:28 wiz Exp $
 #
 
 DISTNAME=	ggz-client-libs-0.0.14.1
@@ -13,7 +13,6 @@ COMMENT=	GGZ Gaming Zone libraries
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_DIRS+=	xdg-1.4
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt
 

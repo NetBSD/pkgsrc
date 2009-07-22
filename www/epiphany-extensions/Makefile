@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2009/03/15 19:16:58 jmcneill Exp $
+# $NetBSD: Makefile,v 1.52 2009/07/22 09:01:51 wiz Exp $
 #
 
 DISTNAME=	epiphany-extensions-2.26.0
@@ -17,7 +17,6 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
-USE_DIRS+=		gnome2-1.5
 
 # Avoid -Werror, which breaks the build sometimes.
 CONFIGURE_ARGS+=	--enable-compile-warnings=no

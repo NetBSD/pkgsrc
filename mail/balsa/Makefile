@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2009/03/08 15:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2009/07/22 09:01:34 wiz Exp $
 
 DISTNAME=	balsa-2.3.26
 CATEGORIES=	mail gnome
@@ -11,7 +11,6 @@ COMMENT=	GNOME2 EMail client
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

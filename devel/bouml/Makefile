@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/09/01 12:24:54 tonnerre Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:01:22 wiz Exp $
 #
 
 DISTNAME=		bouml_${BOUMLVERSION}
@@ -18,7 +18,6 @@ USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake pax
 USE_LANGUAGES=		c++
 BUILD_TARGET=		compile
-USE_DIRS+=		xdg-1.3
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"

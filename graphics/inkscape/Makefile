@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/06/04 00:05:19 reed Exp $
+# $NetBSD: Makefile,v 1.42 2009/07/22 09:01:33 wiz Exp $
 
 DISTNAME=	inkscape-0.46
 PKGREVISION=	4
@@ -17,7 +17,6 @@ BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 .endif
 
 GCC_REQD+=		3.0
-USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/02/28 15:30:13 adam Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:01:26 wiz Exp $
 
 DISTNAME=	wine-1.1.16
 CATEGORIES=	emulators
@@ -18,7 +18,6 @@ BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/06/06 13:08:27 obache Exp $
+# $NetBSD: Makefile,v 1.39 2009/07/22 09:01:40 wiz Exp $
 
 DISTNAME=	aMule-2.2.5
 PKGNAME=	${DISTNAME:S/aMule/amule/}
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		xmule-[0-9]*
 
-USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config perl:run

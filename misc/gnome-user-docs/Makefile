@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/05/19 14:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/22 09:01:36 wiz Exp $
 #
 
 DISTNAME=	gnome-user-docs-2.26.2
@@ -17,7 +17,6 @@ CONFLICTS+=		gnome2-user-docs-[0-9]*
 
 MAKE_JOBS_SAFE=		no
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

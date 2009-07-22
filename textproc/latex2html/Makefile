@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/05/21 16:15:44 sno Exp $
+# $NetBSD: Makefile,v 1.35 2009/07/22 09:01:48 wiz Exp $
 
 DISTNAME=	latex2html-2008
 #PKGNAME=	latex2html-2008
@@ -14,7 +14,6 @@ DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	netpbm>=10.29nb2:../../graphics/netpbm
 
 TEX_ACCEPTED=		teTeX3
-USE_DIRS+=		texmf-1.0
 USE_TOOLS+=		gs:run perl:run
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2009/07/09 18:44:20 drochner Exp $
+# $NetBSD: Makefile,v 1.151 2009/07/22 09:01:34 wiz Exp $
 
 DISTNAME=		evolution-2.26.3
 CATEGORIES=		mail time gnome
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

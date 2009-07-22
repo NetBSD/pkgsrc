@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/02/20 19:49:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2009/07/22 09:01:31 wiz Exp $
 
 DISTNAME=		digikam-doc-0.9.5
 CATEGORIES=		graphics kde
@@ -11,7 +11,6 @@ COMMENT=		Documentation for Digikam
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes

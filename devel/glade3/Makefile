@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:12 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 09:01:23 wiz Exp $
 #
 
 DISTNAME=		glade3-3.4.5
@@ -16,7 +16,6 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config intltool gmake msgfmt
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.1
 
 PKGCONFIG_OVERRIDE+=	data/gladeui-1.0.pc.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2009/07/14 10:33:28 tnn Exp $
+# $NetBSD: Makefile,v 1.51 2009/07/22 09:01:50 wiz Exp $
 #
 
 DISTNAME=		sawfish-1.5.0
@@ -25,7 +25,6 @@ INFO_FILES=		YES
 PKGCONFIG_OVERRIDE+=	sawfish.pc.in
 USE_TOOLS+=		gmake makeinfo msgfmt pkg-config xgettext
 USE_TOOLS+=		gtar:run	# for librep run-time theme extraction
-USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 

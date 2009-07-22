@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/06/14 22:58:05 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2009/07/22 09:01:37 wiz Exp $
 #
 
 OO_VER=			3.1.0
@@ -44,7 +44,6 @@ CONFLICTS+=		openoffice2-bin-[0-9]*
 CONFLICTS+=		openoffice3-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		bash gmake imake perl pkg-config tar
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes

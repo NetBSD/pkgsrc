@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/03/17 21:40:46 darcy Exp $
+# $NetBSD: Makefile,v 1.21 2009/07/22 09:01:33 wiz Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
@@ -18,7 +18,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/xdvipresent
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
-USE_DIRS+=	texmf-1.0
 
 STYDIR=		${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent
 EXAMPLES_DIR=	${PREFIX}/share/examples/xdvipresent

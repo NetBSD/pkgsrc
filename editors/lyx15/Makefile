@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/04/28 19:56:45 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/22 09:01:25 wiz Exp $
 #
 
 DISTNAME=		lyx-1.5.4
@@ -22,7 +22,6 @@ CONFLICTS=		lyx-qt-[0-9]*
 CONFLICTS+=		lyx-xforms-[0-9]*
 UNLIMIT_RESOURCES+=	datasize
 
-USE_DIRS+=		texmf-1.0
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run

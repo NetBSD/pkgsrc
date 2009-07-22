@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/05/29 17:15:59 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2009/07/22 09:01:18 wiz Exp $
 #
 
 DISTNAME=	gnome-audio-2.22.2
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
-USE_DIRS+=	xdg-1.4
 USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.pkg.mk"

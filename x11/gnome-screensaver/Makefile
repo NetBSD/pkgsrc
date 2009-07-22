@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/05/19 08:59:38 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2009/07/22 09:01:52 wiz Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.26.1
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.3
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

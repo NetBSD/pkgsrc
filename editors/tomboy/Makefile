@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/06/11 08:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 09:01:25 wiz Exp $
 #
 
 DISTNAME=		tomboy-0.14.2
@@ -14,7 +14,6 @@ LICENSE=		gnu-lgpl-v2.1
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=  yes
-USE_DIRS=	xdg-1.4 gnome2-1.6
 USE_LIBTOOL=    yes
 USE_TOOLS+=     gmake intltool pkg-config bash:run msgfmt
 

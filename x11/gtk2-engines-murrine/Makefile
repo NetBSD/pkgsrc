@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/20 18:36:59 hasso Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/22 09:01:53 wiz Exp $
 
 DISTNAME=	murrine-0.90.2
 PKGNAME=	${DISTNAME:S/^/gtk2-engines-/}
@@ -13,7 +13,6 @@ COMMENT=	GTK2+ engine featuring a modern glassy look
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.4
 USE_TOOLS+=		gmake pkg-config intltool msgfmt
 USE_LIBTOOL=		yes
 

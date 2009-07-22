@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/05/20 00:58:24 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2009/07/22 09:01:40 wiz Exp $
 #
 
 DISTNAME=		xine-ui-0.99.5
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		msgfmt pkg-config
-USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	yes

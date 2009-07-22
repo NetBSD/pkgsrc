@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2008/06/12 02:14:55 joerg Exp $
+# $NetBSD: Makefile,v 1.80 2009/07/22 09:01:50 wiz Exp $
 
 DISTNAME=	bluefish-1.0.7
 PKGREVISION=	5
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		weblint-[0-9]*:../../www/weblint
 
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		find gmake grep msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

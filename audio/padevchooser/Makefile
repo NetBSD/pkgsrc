@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/20 18:38:30 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:18 wiz Exp $
 #
 
 DISTNAME=	padevchooser-0.9.3
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS=	pkg-config gmake
 USE_LIBTOOL=	yes
-USE_DIRS+=	gnome2-1.5
 
 CONFIGURE_ARGS+=	--disable-lynx
 

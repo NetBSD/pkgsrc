@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2009/03/17 00:12:08 jmcneill Exp $
+# $NetBSD: Makefile,v 1.64 2009/07/22 09:01:32 wiz Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.26.0
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_PKGLOCALEDIR=	yes
 

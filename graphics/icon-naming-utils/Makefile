@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/02/22 15:48:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/22 09:01:33 wiz Exp $
 #
 
 DISTNAME=	icon-naming-utils-0.8.90
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	p5-XML-Simple>=2.14:../../textproc/p5-XML-Simple
 
 GNU_CONFIGURE=	yes
-USE_DIRS+=	xdg-1.4
 USE_LANGUAGES=	# none, not even C
 USE_TOOLS+=	gmake intltool perl:run
 

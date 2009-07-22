@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/06/11 08:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2009/07/22 09:01:25 wiz Exp $
 #
 
 DISTNAME=	mlview-0.9.0
@@ -14,7 +14,6 @@ COMMENT=	XML editor for the GNOME environment
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++

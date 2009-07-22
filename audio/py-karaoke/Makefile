@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/07/14 09:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 09:01:19 wiz Exp $
 #
 
 DISTNAME=	pykaraoke-0.6
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # for .kar files, untested for lack of files
 #DEPENDS+=	timidity-[0-9]*:../../audio/timidity
 
-USE_DIRS+=	xdg-1.4
 PYTHON_VERSIONS_ACCEPTED=	25 24
 PYDISTUTILSPKG=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/07/08 17:03:35 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2009/07/22 09:01:27 wiz Exp $
 
 DISTNAME=	dopewars-1.5.12
 CATEGORIES=	games
@@ -10,7 +10,6 @@ COMMENT=	Make a fortune dealing drugs on the streets of New York
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config

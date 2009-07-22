@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.182 2009/07/07 10:48:53 obache Exp $
+# $NetBSD: Makefile,v 1.183 2009/07/22 09:01:32 wiz Exp $
 
 DISTNAME=	gimp-2.6.6
 CATEGORIES=	graphics
@@ -22,7 +22,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_DIRS+=		xdg-1.1
 
 PKG_SYSCONFSUBDIR=	gimp/2.0
 

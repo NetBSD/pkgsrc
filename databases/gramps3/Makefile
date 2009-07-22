@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/06/04 17:29:41 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:01:22 wiz Exp $
 #
 
 DISTNAME=		gramps-3.1.1
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # not clear, leave off for now
 MAKE_JOBS_SAFE=		no
 
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		msgfmt pkg-config intltool msgconv
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -37,7 +36,7 @@ PYTHON_VERSIONS_ACCEPTED=	25 24
 #   librsvg2 (svg icon view)
 # recommended:
 #   graphviz
-#   xdg (above via USE_DIRS??)
+#   xdg
 # optional (skipping for now)
 #   gtkspell
 #   ttf-freefont

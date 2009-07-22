@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/05/02 16:21:45 reed Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/22 09:01:41 wiz Exp $
 #
 
 DISTNAME=		ekiga-3.2.0
@@ -14,7 +14,6 @@ COMMENT=		VoIP and video conferencing application for GNOME
 PKG_DESTDIR_SUPPORT=	user-destdir
 PREV_PKGPATH=		net/ekiga-devel
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_TOOLS+=		autoconf
 USE_PKGLOCALEDIR=	yes

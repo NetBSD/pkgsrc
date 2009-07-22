@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/07 03:55:22 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/22 09:01:45 wiz Exp $
 #
 
 DISTNAME=	unicode
@@ -15,7 +15,6 @@ COMMENT=	LaTeX UTF-8 support
 WRKSRC=		${WRKDIR}/ucs
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_DIRS+=	texmf-1.0
 
 UCSFILES=	ucs.sty utf8x.def ucsencs.def
 UCSDIR=		${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs

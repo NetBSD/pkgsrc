@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2009/05/20 00:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2009/07/22 09:01:22 wiz Exp $
 #
 
 DISTNAME=		mergeant-0.66
@@ -13,7 +13,6 @@ COMMENT=		GNOME2 GNOME-DB database front-end
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool perl pkg-config msgfmt
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

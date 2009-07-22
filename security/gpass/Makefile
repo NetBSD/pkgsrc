@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/06/20 01:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2009/07/22 09:01:45 wiz Exp $
 #
 
 DISTNAME=	gpass-0.4.4
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
-USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 

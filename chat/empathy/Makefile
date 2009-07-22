@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/03/22 19:01:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/22 09:01:20 wiz Exp $
 
 DISTNAME=	empathy-2.24.1
 PKGREVISION=	1
@@ -14,7 +14,6 @@ DEPENDS+=	telepathy-gabble-[0-9]*:../../chat/telepathy-gabble
 DEPENDS+=	telepathy-idle-[0-9]*:../../chat/telepathy-idle
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gawk gmake intltool msgfmt pkg-config
 USE_TOOLS+=		autoconf
 USE_LIBTOOL=		yes
