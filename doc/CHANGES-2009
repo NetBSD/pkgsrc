@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2797 2009/07/22 12:48:57 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2798 2009/07/22 12:55:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3714,3 +3714,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/pixman to 0.15.18 [wiz 2009-07-22]
 	Updated x11/libdrm to 2.4.12 [wiz 2009-07-22]
 	Updated devel/pango to 1.24.5 [wiz 2009-07-22]
+	Updated graphics/py-cairo to 1.8.6 [wiz 2009-07-22]
