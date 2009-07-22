@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/19 14:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/22 09:01:37 wiz Exp $
 #
 
 DISTNAME=	mousetweaks-2.26.2
@@ -19,7 +19,6 @@ GCONF_SCHEMAS+=	mousetweaks.schemas
 GCONF_SCHEMAS+=	pointer-capture-applet.schemas
 
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
-USE_DIRS+=	gnome2-1.6
 
 BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.16.0
 .include "../../devel/GConf/schemas.mk"

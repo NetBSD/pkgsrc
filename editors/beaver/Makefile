@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/08/04 21:34:39 bjs Exp $
+# $NetBSD: Makefile,v 1.15 2009/07/22 09:01:24 wiz Exp $
 #
 
 DISTNAME=	beaver${BEAVER_VERSION:S/./_/g}
@@ -16,7 +16,6 @@ COMMENT=	Lightweight GTK+ text editor with syntax highlighting
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=	src
-USE_DIRS+=	xdg-1.4
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 

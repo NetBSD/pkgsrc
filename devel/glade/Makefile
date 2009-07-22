@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/06/15 12:03:05 obache Exp $
+# $NetBSD: Makefile,v 1.61 2009/07/22 09:01:23 wiz Exp $
 
 DISTNAME=	glade-2.12.2
 PKGREVISION=	1
@@ -17,7 +17,6 @@ CONFLICTS+=		glade2-[0-9]* glade2-gnome-[0-9]*
 CONFLICTS+=		glade-gnome-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

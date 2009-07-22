@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/02/21 13:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2009/07/22 09:01:20 wiz Exp $
 #
 
 DISTNAME=	sweep-0.9.3
@@ -12,7 +12,6 @@ COMMENT=	Full-featured digital sound editor
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES

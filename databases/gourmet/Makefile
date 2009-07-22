@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/02/09 22:56:22 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:01:22 wiz Exp $
 #
 
 DISTNAME=		gourmet-0.8.5.14
@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://grecipe-manager.sourceforge.net/
 COMMENT=		Recipe database
 
-USE_DIRS+=		xdg-1.2
 USE_PKGLOCALEDIR=	yes
 PYDISTUTILSPKG=		yes
 

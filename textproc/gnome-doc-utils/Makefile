@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/07/08 13:56:00 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2009/07/22 09:01:48 wiz Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.16.1
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.12:../../textproc/py-libxslt
 DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 
 USE_TOOLS+=		intltool pkg-config gmake gawk msgfmt
-USE_DIRS+=		gnome2-1.5
 GNU_CONFIGURE=		YES
 TEST_TARGET=		check
 USE_PKGLOCALEDIR=	YES

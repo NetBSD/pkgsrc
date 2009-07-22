@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2009/07/09 18:04:31 drochner Exp $
+# $NetBSD: Makefile,v 1.65 2009/07/22 09:01:27 wiz Exp $
 #
 
 DISTNAME=	gucharmap-2.26.3.1
@@ -14,7 +14,6 @@ COMMENT=	Unicode/ISO10646 character map and font viewer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

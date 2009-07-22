@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/05/28 21:18:40 zafer Exp $
+# $NetBSD: Makefile,v 1.23 2009/07/22 09:01:24 wiz Exp $
 
 DISTNAME=	monodevelop-2.0
 CATEGORIES=	devel
@@ -15,7 +15,6 @@ USE_TOOLS+=	gmake perl:run pkg-config bash:run msgfmt
 EXTRACT_USING=	gtar
 MAKE_JOBS_SAFE=	no
 
-USE_DIRS+=	xdg-1.4
 
 REPLACE_BASH+=	mdtool.in
 REPLACE_BASH+=	monodevelop.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/26 16:59:23 reed Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:01:43 wiz Exp $
 
 DISTNAME=	draftwatermark
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -15,7 +15,6 @@ DEPENDS+=	tex-everypage>=1.0:../../print/tex-everypage
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-USE_DIRS+=	texmf-1.4
 
 INSTALLATION_DIRS=	share/doc/tex-draftwatermark
 
