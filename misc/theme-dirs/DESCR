@@ -1,3 +1,0 @@
-theme-dirs installs a set of shared directories used by GTK2+ (gtk2-engines)
-and other GNOME packages (such as metacity and gnome-themes).  It is useful
-to simplify PLIST handling in other packages.
