@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2009/07/21 16:00:19 brook Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/22 20:57:47 wiz Exp $
 #
 
-DISTNAME=	tesseract-2.03
+DISTNAME=	tesseract-2.04
 CATEGORIES=	graphics
 MASTER_SITES=	http://tesseract-ocr.googlecode.com/files/
 DISTFILES+=	${DISTNAME}.tar.gz
 .for l in deu eng fra ita nld spa
-DISTFILES+=	tesseract-2.00.$l.tar.gz
+DISTFILES+=	tesseract-2.00.${l}.tar.gz
 .endfor
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/tesseract-ocr/
 COMMENT=	Commercial quality open source OCR engine
+LICENSE=	apache-2.0
 
-PKG_DESTDIR_SUPPORT=user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	libexec share/doc/tesseract share/tesseract
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -27,14 +29,12 @@ post-build:
 		> ${WRKSRC}/tesseract.sh
 
 post-install:
-	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/libexec
 	${MV} ${DESTDIR}${PREFIX}/bin/tesseract ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_SCRIPT} ${WRKSRC}/tesseract.sh ${DESTDIR}${PREFIX}/bin/tesseract
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tesseract
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/tesseract
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/tesseract
 	${INSTALL_DATA} ${WRKSRC}/phototest.tif ${DESTDIR}${PREFIX}/share/tesseract
 	cd ${WRKDIR}/tessdata && ${PAX} -rw * ${DESTDIR}${PREFIX}/share/tessdata
+	chmod a-x ${DESTDIR}${PREFIX}/share/tessdata/*.*
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
