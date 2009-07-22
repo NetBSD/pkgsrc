@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2009/05/19 08:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/22 12:55:20 wiz Exp $
 #
 
-DISTNAME=		pycairo-1.8.4
+DISTNAME=		pycairo-1.8.6
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=		graphics
 MASTER_SITES=		http://cairographics.org/releases/
@@ -9,7 +9,7 @@ MASTER_SITES=		http://cairographics.org/releases/
 MAINTAINER=		leuzi@trash.net
 HOMEPAGE=		http://cairographics.org/pycairo/
 COMMENT=		Python bindings for cairo
-#LICENSE=		gnu-lgpl-v2.1 OR mpl-v1.1
+LICENSE=		gnu-lgpl-v2.1 OR mpl-v1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
