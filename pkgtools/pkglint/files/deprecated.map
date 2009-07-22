@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.61 2009/04/09 00:55:12 joerg Exp $
+# $NetBSD: deprecated.map,v 1.62 2009/07/22 09:14:15 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -39,6 +39,7 @@ USE_BUILDLINK2		You can just remove it.
 USE_BUILDLINK3		You can just remove it.
 USE_CANNA		Use the PKG_OPTIONS framework instead.
 USE_DB4			Use the PKG_OPTIONS framework instead.
+USE_DIRS		You can just remove it.
 USE_ESOUND		Use the PKG_OPTIONS framework instead.
 USE_GIF			Use the PKG_OPTIONS framework instead.
 USE_GMAKE		Use USE_TOOLS+=gmake instead.
