@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2803 2009/07/22 13:29:24 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2804 2009/07/22 13:31:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3720,3 +3720,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/kchmviewer to 4.1 [wiz 2009-07-22]
 	Updated textproc/iso-codes to 3.10.1 [wiz 2009-07-22]
 	Updated devel/glibmm to 2.20.1 [wiz 2009-07-22]
+	Updated games/gnugo to 3.8 [wiz 2009-07-22]
