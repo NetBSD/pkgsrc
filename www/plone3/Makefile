@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/02/09 22:56:27 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/22 09:36:31 wiz Exp $
 # FreeBSD: ports/www/plone/Makefile,v 1.25 2007/02/17 08:32:54 rafan Exp
 #
 
@@ -47,7 +47,6 @@ post-build:
 			${TEST} -f $$mo || msgfmt -o $$mo $$f; \
 			${ECHO} "${PLONE_BASE}/$$mo" >> ${WRKDIR}/PLIST; \
 		done
-	${CAT} ${PKGDIR}/PLIST.common_end >> ${WRKDIR}/PLIST
 
 post-install:
 	cd ${WRKSRC}/lib; pax -rw . ${DESTDIR}${ZOPE_DIR}/lib
