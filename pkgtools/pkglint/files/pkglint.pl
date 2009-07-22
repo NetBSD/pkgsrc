@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.816 2009/07/22 09:13:49 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.817 2009/07/22 22:11:54 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7652,7 +7652,7 @@ sub checkfile_PLIST($) {
 			if ($cmd eq "unexec" && $arg =~ m"^(rmdir|\$\{RMDIR\} \%D/)(.*)") {
 				my ($rmdir, $rest) = ($1, $2);
 				if ($rest !~ m"(?:true|\$\{TRUE\})") {
-					$line->log_warning("Please use \"\@dirrm\" instead of \"\@unexec rmdir\".");
+					$line->log_warning("Please remove this line. It is no longer necessary.");
 				}
 
 			} elsif (($cmd eq "exec" || $cmd eq "unexec")) {
@@ -7669,7 +7669,7 @@ sub checkfile_PLIST($) {
 			} elsif ($cmd eq "dirrm") {
 				$line->log_warning("\@dirrm is obsolete. Please remove this line.");
 				$line->explain_warning(
-"Directories are removed automatically when empty.",
+"Directories are removed automatically when they are empty.",
 "When a package needs an empty directory, it can use the \@pkgdir",
 "command in the PLIST");
 
