@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2009/06/09 13:11:25 wiz Exp $
+$NetBSD: distinfo,v 1.23 2009/07/22 13:24:01 wiz Exp $
 
-SHA1 (iso-codes-3.10.tar.gz) = 7c75565d70b43cbb1b1809dd72bcf4d2fe8a62df
-RMD160 (iso-codes-3.10.tar.gz) = 0f9db6a61cf46de686b5251e2a175e5d9452a0ad
-Size (iso-codes-3.10.tar.gz) = 9150621 bytes
+SHA1 (iso-codes-3.10.1.tar.gz) = 317b49b84b8080ba922283fd6dd4e8742d284421
+RMD160 (iso-codes-3.10.1.tar.gz) = f67e9316bff3e8967d3f1cf3aa37a71927b43133
+Size (iso-codes-3.10.1.tar.gz) = 9145651 bytes
