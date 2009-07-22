@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/22 18:20:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/22 09:01:47 wiz Exp $
 #
 
 DISTNAME=		gnome-system-tools-2.22.2
@@ -23,7 +23,6 @@ PKG_SUGGESTED_OPTIONS=	hal
 .endif
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES

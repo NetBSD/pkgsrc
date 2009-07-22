@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/19 20:32:12 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:01:18 wiz Exp $
 #
 
 DISTNAME=	jack-rack-1.4.7
@@ -13,7 +13,6 @@ COMMENT=	Effects "rack" for JACK
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.4
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config

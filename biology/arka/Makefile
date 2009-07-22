@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/05/16 21:56:15 zafer Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/22 09:01:20 wiz Exp $
 #
 
 DISTNAME=	arka-0.11
@@ -15,7 +15,6 @@ DEPENDS+=	gp-[0-9]*:../../biology/gp
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=	xdg-1.1
 
 CONF_FILES=	${PREFIX}/share/examples/arka/arkarc ${PKG_SYSCONFDIR}/arkarc
 CPPFLAGS+=	-DARKA_GLOBAL=\"${PKG_SYSCONFDIR}/arkarc\"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/15 04:04:13 reed Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:01:32 wiz Exp $
 #
 
 DISTNAME=	gimmage-0.2.3
@@ -13,7 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	share/doc/gimmage
-USE_DIRS+=		xdg-1.4
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config

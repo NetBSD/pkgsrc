@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/07 03:26:16 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:01:44 wiz Exp $
 #
 
 DISTNAME=	ocr-b
@@ -19,7 +19,6 @@ DISTFILES= ocrb10.mf ocrb10e.mf ocrb10f.mf ocrb10g.mf ocrb10l.mf \
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_DIRS+=	texmf-1.0
 
 PLIST_SUBST+=	LOCALTEXMF=${PKG_LOCALTEXMFPREFIX:S/${PREFIX}\///}
 

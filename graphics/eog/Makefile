@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2009/07/09 18:18:58 drochner Exp $
+# $NetBSD: Makefile,v 1.50 2009/07/22 09:01:31 wiz Exp $
 #
 
 DISTNAME=	eog-2.26.3
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		yes
 

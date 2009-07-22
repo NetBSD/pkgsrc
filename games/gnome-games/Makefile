@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2009/07/15 09:53:11 joerg Exp $
+# $NetBSD: Makefile,v 1.100 2009/07/22 09:01:28 wiz Exp $
 
 DISTNAME=		gnome-games-2.26.3
 CATEGORIES=		games gnome
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=		xbill-[0-9]*
 SUPERSEDES=		glchess-[0-9]*
 
-USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_CONFIG_WRAPPER=	yes

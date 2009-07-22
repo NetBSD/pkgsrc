@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/19 15:05:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/22 09:01:36 wiz Exp $
 #
 
 DISTNAME=	gnome-devel-docs-2.26.2
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
