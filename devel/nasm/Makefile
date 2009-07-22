@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2008/11/05 12:48:35 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2009/07/22 21:21:33 wiz Exp $
 
-DISTNAME=	nasm-2.05.01
+DISTNAME=	nasm-2.07
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nasm/}
 EXTRACT_SUFX=	.tar.bz2
@@ -8,9 +8,12 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nasm.sourceforge.net/
 COMMENT=	General-purpose x86 assembler
+# actually only 2-clause BSD
+LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+AUTO_MKDIRS=		yes
 
 USE_TOOLS+=		gmake makeinfo perl
 GCC_REQD+=		3.0
@@ -23,13 +26,5 @@ INSTALL_TARGET=		install_everything
 INSTALL_ENV+=	INSTALLROOT=${DESTDIR}
 
 MAKE_ENV+=	PERL5=${PERL5:Q}
-
-AUTO_MKDIRS=	yes
-
-.include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:Mgcc-2*)
-BUILDLINK_TRANSFORM+=	rm:-std=c99
-.endif
 
 .include "../../mk/bsd.pkg.mk"
