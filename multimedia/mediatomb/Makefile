@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/06/12 17:24:53 ahoka Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/22 09:01:39 wiz Exp $
 
 DISTNAME=	mediatomb-0.11.0
 PKGREVISION=	6
@@ -13,7 +13,6 @@ GNU_CONFIGURE=	yes
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config automake autoconf autoreconf
-USE_DIRS+=	xdg-1.4
 
 RCD_SCRIPTS=	mediatomb
 

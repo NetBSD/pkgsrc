@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2009/06/11 08:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2009/07/22 09:01:22 wiz Exp $
 
 DISTNAME=	anjuta-2.24.2
 PKGREVISION=	1
@@ -22,7 +22,6 @@ DEPENDS+=	yelp>=2.4.2:../../misc/yelp
 
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
-USE_DIRS+=		gnome2-1.5
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

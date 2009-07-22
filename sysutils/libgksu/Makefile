@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/07 15:16:31 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:47 wiz Exp $
 #
 
 DISTNAME=	libgksu-2.0.7
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 
-USE_DIRS+=	xdg-1.4
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config
 

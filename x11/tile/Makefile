@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/07/07 18:18:11 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/22 09:01:54 wiz Exp $
 #
 
 DISTNAME=		tile_0.7.3
@@ -15,7 +15,6 @@ COMMENT=		X11 Window Tiler
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_DIRS+=		xdg-1.2
 GNU_CONFIGURE=		yes
 
 INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}

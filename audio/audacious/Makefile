@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/11/11 12:36:58 hasso Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:01:17 wiz Exp $
 #
 
 DISTNAME=		audacious-1.5.1
@@ -14,7 +14,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-USE_DIRS+=		xdg-1.4
 
 CONFIGURE_ARGS+=	--enable-chardet --enable-nls
 

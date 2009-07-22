@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/19 07:05:11 abs Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:01:46 wiz Exp $
 #
 
 DISTNAME=		gnome-mount-0.8
@@ -11,7 +11,6 @@ HOMEPAGE=	http://hal.freedesktop.org/
 COMMENT=	Programs for mounting, unmounting and ejecting storage devices
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES

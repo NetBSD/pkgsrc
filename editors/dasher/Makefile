@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2009/05/21 16:04:03 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2009/07/22 09:01:24 wiz Exp $
 
 DISTNAME=	dasher-4.10.1
 CATEGORIES=	editors gnome
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome2-1.5
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

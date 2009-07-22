@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/03/26 23:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/22 09:01:17 wiz Exp $
 #
 
 DISTNAME=	bmpx-0.40.14
@@ -15,7 +15,6 @@ DEPENDS+=	zip-[0-9]*:../../archivers/zip
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.2 kde3-1.0
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes

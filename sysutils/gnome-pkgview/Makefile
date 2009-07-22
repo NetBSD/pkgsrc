@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/06/20 01:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2009/07/22 09:01:46 wiz Exp $
 #
 
 DISTNAME=	gnome-pkgview-1.0.6
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 
 GCONF_SCHEMAS=		gnome-pkgview.schemas

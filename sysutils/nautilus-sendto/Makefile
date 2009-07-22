@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/13 09:44:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:47 wiz Exp $
 #
 
 DISTNAME=		nautilus-sendto-1.1.1
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.gnome.org/projects/nautilus/
 COMMENT=		Convenience application to send a file via email or instant messenger
 
 USE_PKGLOCALEDIR=	yes
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 GCONF_SCHEMAS=		nst.schemas
