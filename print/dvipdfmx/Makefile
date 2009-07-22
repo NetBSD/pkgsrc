@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/06/09 21:31:04 minskim Exp $
+# $NetBSD: Makefile,v 1.31 2009/07/22 09:01:42 wiz Exp $
 
 DISTNAME=	dvipdfmx-20070518
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
@@ -15,7 +15,6 @@ DEPENDS+=	adobe-cmaps>=20060615:../../fonts/adobe-cmaps
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
 
-USE_DIRS+=		texmf-1.4
 USE_TOOLS+=		gs:run
 GNU_CONFIGURE=		YES
 MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PREFIX:Q}/share/texmf-dist

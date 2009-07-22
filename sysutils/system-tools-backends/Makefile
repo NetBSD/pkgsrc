@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/21 16:14:08 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/22 09:01:48 wiz Exp $
 #
 
 DISTNAME=		system-tools-backends-2.6.0
@@ -28,7 +28,6 @@ EGDIR=		${PREFIX}/share/examples/system-tools-backends
 CONF_FILES+=	${EGDIR}/system-tools-backends.conf ${PKG_SYSCONFDIR}/dbus-1/system.d/system-tools-backends.conf
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		xdg-1.4
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES

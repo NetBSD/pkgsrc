@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2009/04/08 16:56:53 drochner Exp $
+# $NetBSD: Makefile,v 1.60 2009/07/22 09:01:43 wiz Exp $
 
 DISTNAME=		scribus-1.3.3.12
 PKGREVISION=		2
@@ -12,7 +12,6 @@ COMMENT=		Publishing layout with graphical interface
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		xdg-1.4
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake perl pkg-config

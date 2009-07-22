@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/12/19 23:58:18 hira Exp $
+# $NetBSD: Makefile,v 1.24 2009/07/22 09:01:55 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -26,7 +26,6 @@ OWN_DIRS+=              ${PKG_SYSCONFDIR}/xdg/xfce4-session
 OWN_DIRS+=              ${PKG_SYSCONFDIR}/xdg/autostart
 
 USE_TOOLS+=		iceauth:run
-USE_DIRS+=		xdg-1.4
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/xfce4-mcs-plugins/buildlink3.mk"

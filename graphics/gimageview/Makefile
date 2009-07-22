@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2009/02/25 01:17:01 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2009/07/22 09:01:31 wiz Exp $
 
 DISTNAME=	gimageview-0.2.27
 PKGREVISION=	15
@@ -11,7 +11,6 @@ COMMENT=	GTK+ based image viewer with tabbed browsing
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

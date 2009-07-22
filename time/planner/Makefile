@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/05/13 01:00:49 dsainty Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/22 09:01:49 wiz Exp $
 #
 
 DISTNAME=	planner-0.14.4
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2 # OR any later version
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes

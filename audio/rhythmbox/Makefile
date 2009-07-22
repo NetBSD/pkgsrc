@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2009/06/04 11:44:24 drochner Exp $
+# $NetBSD: Makefile,v 1.66 2009/07/22 09:01:19 wiz Exp $
 #
 
 DISTNAME=	rhythmbox-0.12.2
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

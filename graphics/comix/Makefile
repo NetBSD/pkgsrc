@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/05/19 08:59:16 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/07/22 09:01:30 wiz Exp $
 #
 
 DISTNAME=		comix-4.0.4
@@ -20,7 +20,6 @@ DEPENDS+=		unrar-[0-9]*:../../archivers/unrar
 DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 .endif
 
-USE_DIRS+=		xdg-1.3
 MANCOMPRESSED=		yes
 
 SUBST_CLASSES+=			install-path

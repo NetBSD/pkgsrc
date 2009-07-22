@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/05/10 08:02:04 obache Exp $
+# $NetBSD: Makefile,v 1.42 2009/07/22 09:01:49 wiz Exp $
 
 DISTNAME=	AfterStep-2.1.2
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
@@ -13,7 +13,6 @@ COMMENT=	Window manager based on the look and feel of the NeXTStep interface
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		bash:run gmake perl:run pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-send-postcard-to-developer

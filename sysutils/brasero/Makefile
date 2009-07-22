@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/07/06 15:22:14 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 09:01:45 wiz Exp $
 #
 
 DISTNAME=	brasero-2.26.2
@@ -20,7 +20,6 @@ BUILD_DEPENDS+=         gnome-common>=2.26.0:../../devel/gnome-common
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake intltool gawk msgfmt
-USE_DIRS+=	gnome2-1.6
 
 CONFIGURE_ARGS+=	--disable-inotify
 

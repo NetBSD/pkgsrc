@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/07/07 17:56:35 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:01:55 wiz Exp $
 #
 
 DISTNAME=	xdesktopwaves-1.1
@@ -12,7 +12,6 @@ COMMENT=	Simulates water waves on the X Windows desktop
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		xdg-1.1
 
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:M*:Q}
 MAKE_FLAGS+=		LFLAGS=${LDFLAGS:M*:Q}
