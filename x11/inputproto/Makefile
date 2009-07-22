@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2009/01/07 21:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/22 12:34:33 wiz Exp $
 #
 
-DISTNAME=		inputproto-1.5.0
+DISTNAME=		inputproto-1.5.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
