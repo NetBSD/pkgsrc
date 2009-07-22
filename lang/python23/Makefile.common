@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2008/11/10 19:41:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.41 2009/07/22 09:29:57 wiz Exp $
 #
 
 DISTNAME=	Python-2.3.7
@@ -33,7 +33,6 @@ PLIST_SRC=	${.CURDIR}/../../lang/python23/PLIST.common
 .if exists(${.CURDIR}/../../lang/python23/PLIST.${OPSYS})
 PLIST_SRC+=	${.CURDIR}/../../lang/python23/PLIST.${OPSYS}
 .endif
-PLIST_SRC+=	${.CURDIR}/../../lang/python23/PLIST.common_end
 
 .if ${OPSYS} == "NetBSD"
 PRIVILEGED_STAGES+=	clean
