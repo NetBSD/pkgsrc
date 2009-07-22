@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.64 2009/05/04 22:45:16 abs Exp $
+# $Id: pkg_chk.sh,v 1.65 2009/07/22 21:56:13 sketch Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -184,7 +184,7 @@ extract_variables()
 	    then
 	    cd $PKGSRCDIR/pkgtools/pkg_chk
 	    extract_make_vars Makefile \
-		    AWK GREP GZIP_CMD ID PACKAGES PKGCHK_CONF PKGCHK_NOTAGS \
+		    AWK GREP GZCAT GZIP_CMD ID PACKAGES PKGCHK_CONF PKGCHK_NOTAGS \
 		    PKGCHK_TAGS PKGCHK_UPDATE_CONF PKG_ADD PKG_DBDIR \
 		    PKG_DELETE PKG_ADMIN PKG_INFO PKG_SUFX SED SORT SU_CMD TSORT
 	    if [ -z "$PACKAGES" ];then
@@ -258,7 +258,7 @@ get_bin_pkg_info()
     if [ -f $summary_file ] ; then
 	if [ -z "$(find $PACKAGES -type f -newer $summary_file -name '*.t[bg]z')" ] ; then
 	    msg_progress Reading $summary_file
-	    zcat $summary_file
+	    ${GZCAT} $summary_file
 	    return;
 	fi
 	echo "*** Ignoring $SUMMARY_FILE as PACKAGES contains newer files" >&2
@@ -746,6 +746,7 @@ unset PKG_PATH || true
 
 test -n "$AWK"        || AWK="@AWK@"
 test -n "$GREP"       || GREP="@GREP@"
+test -n "$GZCAT"      || GZCAT="@GZCAT@"
 test -n "$GZIP_CMD"   || GZIP_CMD="@GZIP_CMD@"
 export GZIP_CMD
 test -n "$ID"         || ID="@ID@"
