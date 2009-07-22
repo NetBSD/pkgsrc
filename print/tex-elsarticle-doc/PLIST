@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/22 07:01:55 minskim Exp $
+share/texmf-dist/doc/latex/elsarticle/README
+share/texmf-dist/doc/latex/elsarticle/elsarticle-template-harv.tex
+share/texmf-dist/doc/latex/elsarticle/elsarticle-template-num.tex
+share/texmf-dist/doc/latex/elsarticle/elsdoc.pdf
+share/texmf-dist/doc/latex/elsarticle/manifest.txt
