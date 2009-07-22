@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2792 2009/07/22 10:00:28 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2793 2009/07/22 12:23:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3709,3 +3709,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-elsarticle version 1.0.1 [minskim 2009-07-22]
 	Added print/tex-elsarticle-doc version 1.0.1 [minskim 2009-07-22]
 	Updated news/tin to 1.9.4 [wiz 2009-07-22]
+	Updated devel/libgsf to 1.14.15 [wiz 2009-07-22]
