@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2009/07/02 19:13:05 tnn Exp $
+# $NetBSD: Makefile,v 1.34.2.1 2009/07/22 06:56:55 spz Exp $
 
-DISTNAME=		wireshark-1.0.8
-PKGREVISION=		1
+DISTNAME=		wireshark-1.2.1
 CATEGORIES=		net
 MASTER_SITES=		http://www.wireshark.org/download/src/ \
 			${MASTER_SITE_SOURCEFORGE:=wireshark/}
@@ -21,6 +20,7 @@ USE_TOOLS+=		gmake perl pkg-config
 
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
+CHECK_PORTABILITY_SKIP+= packaging/macosx/*/*
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-static=no
@@ -48,7 +48,6 @@ BUILDLINK_API_DEPENDS.zlib=zlib>=1.2.1
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/libsmi/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../security/gnutls/libgnutls-config.mk"
 .include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
