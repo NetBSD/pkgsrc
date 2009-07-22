@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2812 2009/07/22 21:21:43 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2813 2009/07/22 21:28:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3729,3 +3729,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/tesseract to 2.04 [wiz 2009-07-22]
 	Updated devel/yasm to 0.8.0 [wiz 2009-07-22]
 	Updated devel/nasm to 2.07 [wiz 2009-07-22]
+	Updated misc/mousetweaks to 2.26.3 [wiz 2009-07-22]
