@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/03/22 19:01:41 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/07/22 09:01:52 wiz Exp $
 #
 
 DISTNAME=	gnome-control-center-2.26.0
@@ -13,7 +13,6 @@ COMMENT=	GNOME2 configuration utility
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		gnome2-1.6
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes

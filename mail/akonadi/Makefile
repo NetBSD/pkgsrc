@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/06 11:08:17 markd Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/22 09:01:34 wiz Exp $
 
 DISTNAME=	akonadi-1.1.2
 CATEGORIES=	mail
@@ -18,7 +18,6 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql5-server
 DEPENDS+=	qt4-mysql-[0-9]*:../../x11/qt4-mysql
 
-USE_DIRS+=	kde4-1.0
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes

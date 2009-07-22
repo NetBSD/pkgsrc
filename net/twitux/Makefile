@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/18 13:31:19 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:41 wiz Exp $
 #
 
 DISTNAME=		twitux-0.62
@@ -13,7 +13,6 @@ COMMENT=		GTK+ Twitter client
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES

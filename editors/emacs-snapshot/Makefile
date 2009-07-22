@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/12 11:56:54 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:01:24 wiz Exp $
 
 DISTNAME=	emacs-snapshot_20090710.orig
 PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
@@ -16,7 +16,6 @@ CONFLICTS+=	emacs-nox11-[0-9]*
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
-USE_DIRS+=	xdg-1.1
 USE_TOOLS+=	gmake makeinfo gzip
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/\.[0-9]*$//}
 

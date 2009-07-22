@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/03 15:22:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:45 wiz Exp $
 
 DISTNAME=	resume
 PKGNAME=	tex-${DISTNAME}-20010823
@@ -13,7 +13,6 @@ COMMENT=	Resume document style
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
-USE_DIRS+=	texmf-1.4
 
 .include "../../print/teTeX/module.mk"
 

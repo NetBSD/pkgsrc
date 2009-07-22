@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/06/30 11:05:06 obache Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/22 09:01:47 wiz Exp $
 
 DISTNAME=	open-vm-tools-2008.08.08-109361
 PKGNAME=	open-vm-tools-2008.08.08.109361
@@ -18,7 +18,6 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_DIRS+=	xdg-1.4
 
 PLIST_SRC=	PLIST.common
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/05/19 07:07:50 abs Exp $
+# $NetBSD: Makefile,v 1.39 2009/07/22 09:01:38 wiz Exp $
 
 DISTNAME=	gxine-0.5.904
 CATEGORIES=	multimedia
@@ -15,7 +15,6 @@ USE_TOOLS+=		gmake pkg-config perl:build
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--disable-lirc
-USE_DIRS+=		xdg-1.1
 
 BROKEN_GETTEXT_DETECTION=	yes
 PTHREAD_OPTS+=			require

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/05/19 08:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/22 09:01:23 wiz Exp $
 #
 
 DISTNAME=		meld-1.3.0
@@ -15,7 +15,6 @@ DEPENDS+=		${PYPKGPREFIX}-gtk2>=2.8.0:../../x11/py-gtk2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=			gnome2-1.6 xdg-1.3
 USE_PKGLOCALEDIR=		YES
 USE_TOOLS+=			gmake msgfmt intltool
 MAKE_FLAGS+=			prefix=${PREFIX}
