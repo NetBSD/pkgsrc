@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/22 07:01:38 minskim Exp $
+share/texmf-dist/bibtex/bst/elsarticle/elsarticle-harv.bst
+share/texmf-dist/bibtex/bst/elsarticle/elsarticle-num-names.bst
+share/texmf-dist/bibtex/bst/elsarticle/elsarticle-num.bst
+share/texmf-dist/tex/latex/elsarticle/elsarticle.cls
