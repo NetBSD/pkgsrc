@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2009/07/21 09:45:12 tnn Exp $
+$NetBSD: patch-ae,v 1.4 2009/07/22 10:33:21 tnn Exp $
 
---- src/atomic_ops/sysdeps/Makefile.in.orig	2009-07-21 11:41:01.000000000 +0200
-+++ src/atomic_ops/sysdeps/Makefile.in
-@@ -219,7 +219,6 @@ nobase_sysdep_HEADERS = generic_pthread.
+--- src/atomic_ops/sysdeps/Makefile.am.orig	2008-05-31 02:59:36.000000000 +0200
++++ src/atomic_ops/sysdeps/Makefile.am
+@@ -25,7 +25,6 @@ nobase_sysdep_HEADERS= generic_pthread.h
  	  README \
  	\
  	  gcc/alpha.h gcc/arm.h gcc/x86.h \
