@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/07/22 15:16:44 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2009/07/22 17:13:18 drochner Exp $
 #
 
 DISTNAME=		sound-juicer-2.26.1
@@ -28,7 +28,7 @@ DEPENDS+=	gst-plugins0.10-vorbis>=0.10.22:../../audio/gst-plugins0.10-vorbis
 DEPENDS+=	gst-plugins0.10-gio>=0.10.21:../../sysutils/gst-plugins0.10-gio
 
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../audio/musicbrainz/buildlink3.mk"
+.include "../../audio/libmusicbrainz/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
