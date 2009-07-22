@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/06/12 02:14:56 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2009/07/22 09:01:51 wiz Exp $
 #
 
 DISTNAME=		Xaw-XPM-1.1
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=		Xaw3d-[0-9]*
 
 WRKSRC=			${WRKDIR}/XawXpm
-USE_DIRS+=		xdg-1.1
 USE_IMAKE=		YES
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 

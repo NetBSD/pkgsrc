@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2009/05/21 10:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2009/07/22 09:01:45 wiz Exp $
 
 DISTNAME=	seahorse-2.26.2
 CATEGORIES=	security
@@ -26,7 +26,6 @@ SSH_KEYGEN_PATH=${PREFIX}/ssh-keygen
 .endif
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gawk gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

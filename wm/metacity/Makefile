@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2009/03/16 20:10:19 jmcneill Exp $
+# $NetBSD: Makefile,v 1.81 2009/07/22 09:01:50 wiz Exp $
 #
 
 DISTNAME=	metacity-2.26.0
@@ -12,7 +12,6 @@ COMMENT=	GNOME-compliant window manager
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=		gnome2-1.5 theme-1.0 xdg-1.4
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2009/07/09 17:51:42 drochner Exp $
+# $NetBSD: Makefile,v 1.91 2009/07/22 09:01:34 wiz Exp $
 #
 
 DISTNAME=	evolution-data-server-2.26.3
@@ -14,7 +14,6 @@ LICENSE=	gnu-lgpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
