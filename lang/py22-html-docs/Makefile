@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/06/14 22:58:03 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/22 09:28:15 wiz Exp $
 #
 
 DISTNAME=	html-2.2.2
@@ -26,7 +26,6 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTMLDIR}
-	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	cd ${WRKSRC} && pax -rw -pe [a-z]* ${DESTDIR}${PREFIX}/${HTMLDIR}
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
