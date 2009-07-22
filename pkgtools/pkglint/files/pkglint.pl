@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.815 2009/07/17 20:06:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.816 2009/07/22 09:13:49 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2349,27 +2349,6 @@ sub load_shared_dirs() {
 	$load_shared_dirs_dir_to_varname = $dir_to_varname;
 	$load_shared_dirs_varname_to_dirs = $varname_to_dirs;
 	$load_shared_dirs_dir_to_id = $dir_to_id;
-}
-
-# Given a directory name, returns a list of possible identifiers to be
-# used in USE_DIRS.
-sub get_shared_dir_ids($$) {
-	my ($line, $dir) = @_;
-	my @ids;
-
-	$opt_debug_trace and $line->log_debug("get_shared_dir_ids(\"$dir\")");
-
-	load_shared_dirs();
-	my $varname = $load_shared_dirs_dir_to_varname->{$dir};
-	return () unless $varname;
-	#print "varname=$varname\n";
-	foreach my $dir2 (@{$load_shared_dirs_varname_to_dirs->{$varname}}) {
-		#print "dir2=$dir2\n";
-		my $id = $load_shared_dirs_dir_to_id->{$dir2};
-		#print "id=$id\n";
-		push(@ids, $id);
-	}
-	return @ids;
 }
 
 #
@@ -4992,10 +4971,6 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			} elsif ($pkg eq "gmake") {
 				$line->log_warning("Please use USE_TOOLS+=gmake instead of this dependency.");
 
-			} elsif ($pkg =~ m"^([-a-zA-Z0-9]+)-dirs[-><=]+(.*)$") {
-				my ($dirs, $version) = ($1, $2);
-
-				$line->log_warning("Please use USE_DIRS+=${dirs}-${version} instead of this dependency.");
 			}
 
 		} elsif ($value =~ m":\.\./[^/]+$") {
@@ -7692,23 +7667,13 @@ sub checkfile_PLIST($) {
 				# nothing to do
 
 			} elsif ($cmd eq "dirrm") {
-				my @ids = get_shared_dir_ids($line, $arg);
-				if (@ids == 0) {
-					# Nothing to do
-				} elsif (@ids == 1) {
-					$line->log_warning("Please add \"USE_DIRS+= $ids[0]\" to the package Makefile and remove this line.");
-				} else {
-					my $s = join(" or ", map { "\"USE_DIRS+= $_\"" } @ids);
-					$line->log_warning("Please add $s to the package Makefile and remove this line.");
-				}
-				if (!exists($all_dirs->{$arg})) {
-					$line->log_warning("The PLIST does not contain files for \"$arg\".");
-					$line->explain_warning(
-"A package should only remove those directories that it created. When",
-"there are no files in the directory, it is unlikely that the package",
-"created the directory.");
-				}
+				$line->log_warning("\@dirrm is obsolete. Please remove this line.");
+				$line->explain_warning(
+"Directories are removed automatically when empty.",
+"When a package needs an empty directory, it can use the \@pkgdir",
+"command in the PLIST");
 
+				# XXX: this check should be made independent of dirrm
 				if ($pkgpath ne "graphics/hicolor-icon-theme" && $arg =~ m"^share/icons/hicolor(?:$|/)") {
 					$line->log_error("Please .include \"../../graphics/hicolor-icon-theme/buildlink3.mk\" and remove this line.");
 				}
@@ -7862,7 +7827,6 @@ sub checkfile_PLIST($) {
 				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
 					$line->log_warning("Packages that install a .desktop entry should .include \"$f\".");
 				}
-				# TODO: check that USE_DIRS contains any xdg-*
 
 			} elsif ($dirname eq "share/aclocal" && $basename =~ m"\.m4$") {
 				# Fine.
