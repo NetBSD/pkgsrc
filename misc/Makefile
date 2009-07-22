@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.326 2009/05/09 23:40:09 seb Exp $
+# $NetBSD: Makefile,v 1.327 2009/07/22 09:05:23 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -65,11 +65,8 @@ SUBDIR+=	gkrellm-leds
 SUBDIR+=	gkrellm-moon
 SUBDIR+=	gkrellm-weather
 SUBDIR+=	gnome-devel-docs
-SUBDIR+=	gnome-dirs
 SUBDIR+=	gnome-user-docs
 SUBDIR+=	gnome-utils
-SUBDIR+=	gnome1-dirs
-SUBDIR+=	gnome2-dirs
 SUBDIR+=	gnuls
 SUBDIR+=	goffice0.6
 SUBDIR+=	gok
@@ -93,8 +90,6 @@ SUBDIR+=	kanjidic2
 SUBDIR+=	kanjipad
 SUBDIR+=	kchm
 SUBDIR+=	kchmviewer
-SUBDIR+=	kde3-dirs
-SUBDIR+=	kde4-dirs
 SUBDIR+=	kdeaccessibility3
 SUBDIR+=	kdeaddons3
 SUBDIR+=	kdeadmin3
@@ -209,7 +204,6 @@ SUBDIR+=	tds
 SUBDIR+=	team
 SUBDIR+=	tellico
 SUBDIR+=	teseq
-SUBDIR+=	theme-dirs
 SUBDIR+=	tmux
 SUBDIR+=	ttyrec
 SUBDIR+=	udfclient
@@ -226,9 +220,7 @@ SUBDIR+=	watch
 SUBDIR+=	wdic
 SUBDIR+=	whohas
 SUBDIR+=	xchm
-SUBDIR+=	xdg-dirs
 SUBDIR+=	xdg-utils
-SUBDIR+=	xdg-x11-dirs
 SUBDIR+=	xfce4-weather-plugin
 SUBDIR+=	xjdic
 SUBDIR+=	xrolodex
