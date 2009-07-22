@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2009/07/18 10:32:32 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2009/07/22 16:50:07 drochner Exp $
 
 DISTNAME=	gnutls-2.8.1
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/ \
 		ftp://ftp.gnupg.org/gcrypt/gnutls/ \
@@ -22,6 +23,9 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 INFO_FILES=		yes
+
+# this library duplicates (and conflicts with) openssl
+CONFIGURE_ARGS+=	--disable-openssl-compatibility
 
 PKGCONFIG_OVERRIDE=	lib/gnutls.pc.in
 PKGCONFIG_OVERRIDE+=	libextra/gnutls-extra.pc.in
