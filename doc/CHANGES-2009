@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2807 2009/07/22 15:16:56 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2808 2009/07/22 16:02:34 manu Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3724,3 +3724,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xplanet to 1.2.1 [wiz 2009-07-22]
 	Updated x11/gnome-mag to 0.15.7 [wiz 2009-07-22]
 	Updated audio/sound-juicer to 2.26.1 [wiz 2009-07-22]
+	Updated databases/php-ldap to 5.2.10nb4 [manu 2009-07-22]
