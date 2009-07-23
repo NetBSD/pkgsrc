@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2009/04/13 18:34:24 cube Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/23 22:11:47 wiz Exp $
 
-DISTNAME=	ptlib-2.6.1
-PKGREVISION=	1
+DISTNAME=	ptlib-2.6.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ptlib/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ekiga.net/
 COMMENT=	Portable Windows Libary
+# modified-bsd stands for Spencer's regex license, quite similar
+LICENSE=	mpl-1.0 AND modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
