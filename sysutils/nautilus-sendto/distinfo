@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/01/13 09:44:14 wiz Exp $
+$NetBSD: distinfo,v 1.3 2009/07/23 12:20:20 wiz Exp $
 
-SHA1 (nautilus-sendto-1.1.1.tar.bz2) = 5d8b9b432921d551dfcfaf399388b9445b39f33c
-RMD160 (nautilus-sendto-1.1.1.tar.bz2) = 8ca1877ea02ee2195b75adab01358322b6389b04
-Size (nautilus-sendto-1.1.1.tar.bz2) = 384415 bytes
+SHA1 (nautilus-sendto-1.1.5.tar.bz2) = 95ba98dde620c78458aa64abc9d294a7ac98a089
+RMD160 (nautilus-sendto-1.1.5.tar.bz2) = 0ee1fb96e4a23e5c46ef42634ecb6197822787c8
+Size (nautilus-sendto-1.1.5.tar.bz2) = 365803 bytes
 SHA1 (patch-aa) = f8a652e150effc4a1989cb8a4844e4d2deebe8de
