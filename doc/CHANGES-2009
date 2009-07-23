@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2814 2009/07/22 21:57:43 sketch Exp $
+$NetBSD: CHANGES-2009,v 1.2815 2009/07/23 11:29:21 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3731,3 +3731,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/nasm to 2.07 [wiz 2009-07-22]
 	Updated misc/mousetweaks to 2.26.3 [wiz 2009-07-22]
 	Updated pkgtools/pkg_chk to 2.0 [sketch 2009-07-22]
+	Updated textproc/libclucene to 0.9.21b [markd 2009-07-23]
+	Updated sysutils/strigi to 0.6.4 [markd 2009-07-23]
+	Updated textproc/raptor to 1.4.19 [markd 2009-07-23]
+	Updated textproc/redland to 1.0.9 [markd 2009-07-23]
+	Updated textproc/soprano to 2.3 [markd 2009-07-23]
