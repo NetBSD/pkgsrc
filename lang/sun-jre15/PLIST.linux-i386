@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.10 2009/06/14 20:34:15 joerg Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.11 2009/07/23 17:14:39 abs Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -187,12 +187,16 @@ java/sun-1.5/lib/psfontj2d.properties.default
 java/sun-1.5/lib/rt.jar
 ${PLIST.jce}java/sun-1.5/lib/security/COPYRIGHT.html
 ${PLIST.jce}java/sun-1.5/lib/security/README.txt
+java/sun-1.5/lib/security/COPYRIGHT.html
+java/sun-1.5/lib/security/README.txt
 java/sun-1.5/lib/security/US_export_policy.jar
 java/sun-1.5/lib/security/cacerts
 java/sun-1.5/lib/security/java.policy
 java/sun-1.5/lib/security/java.security.default
 java/sun-1.5/lib/security/javaws.policy
 java/sun-1.5/lib/security/local_policy.jar
+java/sun-1.5/lib/servicetag/jdk_header.png
+java/sun-1.5/lib/servicetag/registration.xml
 java/sun-1.5/lib/sound.properties.default
 java/sun-1.5/lib/zi/Africa/Abidjan
 java/sun-1.5/lib/zi/Africa/Accra
@@ -257,6 +261,7 @@ java/sun-1.5/lib/zi/America/Argentina/Jujuy
 java/sun-1.5/lib/zi/America/Argentina/La_Rioja
 java/sun-1.5/lib/zi/America/Argentina/Mendoza
 java/sun-1.5/lib/zi/America/Argentina/Rio_Gallegos
+java/sun-1.5/lib/zi/America/Argentina/Salta
 java/sun-1.5/lib/zi/America/Argentina/San_Juan
 java/sun-1.5/lib/zi/America/Argentina/San_Luis
 java/sun-1.5/lib/zi/America/Argentina/Tucuman
@@ -357,6 +362,7 @@ java/sun-1.5/lib/zi/America/Recife
 java/sun-1.5/lib/zi/America/Regina
 java/sun-1.5/lib/zi/America/Resolute
 java/sun-1.5/lib/zi/America/Rio_Branco
+java/sun-1.5/lib/zi/America/Santarem
 java/sun-1.5/lib/zi/America/Santiago
 java/sun-1.5/lib/zi/America/Santo_Domingo
 java/sun-1.5/lib/zi/America/Sao_Paulo
@@ -422,7 +428,7 @@ java/sun-1.5/lib/zi/Asia/Kabul
 java/sun-1.5/lib/zi/Asia/Kamchatka
 java/sun-1.5/lib/zi/Asia/Karachi
 java/sun-1.5/lib/zi/Asia/Kashgar
-java/sun-1.5/lib/zi/Asia/Katmandu
+java/sun-1.5/lib/zi/Asia/Kathmandu
 java/sun-1.5/lib/zi/Asia/Kolkata
 java/sun-1.5/lib/zi/Asia/Krasnoyarsk
 java/sun-1.5/lib/zi/Asia/Kuala_Lumpur
