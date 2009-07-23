@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.412 2009/07/07 19:37:21 drochner Exp $
+# $NetBSD: Makefile,v 1.413 2009/07/23 16:07:44 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -130,6 +130,7 @@ SUBDIR+=	gst-plugins0.10-alsa
 SUBDIR+=	gst-plugins0.10-cdparanoia
 SUBDIR+=	gst-plugins0.10-dts
 SUBDIR+=	gst-plugins0.10-esound
+SUBDIR+=	gst-plugins0.10-faac
 SUBDIR+=	gst-plugins0.10-faad
 SUBDIR+=	gst-plugins0.10-flac
 SUBDIR+=	gst-plugins0.10-fluendo-mp3
