@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/07/23 23:08:37 wiz Exp $
+
+--- src/main.c.orig	2009-07-02 17:45:20.000000000 +0000
++++ src/main.c
+@@ -698,6 +698,10 @@ void exit_program(void)
+  */
+ /* FIXME: this probably needs some better ifdefs. Please report any compilation problems */
+ 
++#ifndef MAP_ANONYMOUS
++#define MAP_ANONYMOUS 0
++#endif
++
+ #ifdef SIGBUS
+ static void sigbus_handler_cb(int signum, siginfo_t *info, void *context)
+ {
