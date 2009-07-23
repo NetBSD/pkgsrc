@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/07 20:58:37 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/23 09:26:27 markd Exp $
 
 DISTNAME=	rasqal-0.9.16
 CATEGORIES=	textproc
@@ -7,6 +7,7 @@ MASTER_SITES=	http://download.librdf.org/source/
 MAINTAINER=	mkirby@NetBSD.org
 HOMEPAGE=	http://librdf.org/rasqal
 COMMENT=	Library that handles RDF query syntaxes
+LICENSE=	gnu-lgpl-v2.1 OR apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
