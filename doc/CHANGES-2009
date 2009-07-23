@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2816 2009/07/23 12:20:39 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2817 2009/07/23 13:12:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3737,3 +3737,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/redland to 1.0.9 [markd 2009-07-23]
 	Updated textproc/soprano to 2.3 [markd 2009-07-23]
 	Updated sysutils/nautilus-sendto to 1.1.5 [wiz 2009-07-23]
+	Updated x11/fixesproto to 4.1 [wiz 2009-07-23]
