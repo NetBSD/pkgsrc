@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2819 2009/07/23 17:19:37 abs Exp $
+$NetBSD: CHANGES-2009,v 1.2820 2009/07/23 19:30:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3741,3 +3741,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/octave to 3.2.2 [asau 2009-07-23]
 	Updated lang/sun-jre15 to 5.0.19 [abs 2009-07-23]
 	Updated lang/sun-jdk15 to 5.0.19 [abs 2009-07-23]
+	Updated textproc/xapian to 1.0.14 [schmonz 2009-07-23]
+	Updated textproc/xapian-omega to 1.0.14 [schmonz 2009-07-23]
