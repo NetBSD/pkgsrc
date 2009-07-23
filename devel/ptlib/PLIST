@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:49:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/07/23 22:11:47 wiz Exp $
 bin/ptlib-config
 include/ptbuildopts.h
 include/ptclib/asnber.h
@@ -23,8 +23,8 @@ include/ptclib/mime.h
 include/ptclib/modem.h
 include/ptclib/paec.h
 include/ptclib/pasn.h
-include/ptclib/pffvdev.h
 include/ptclib/pdns.h
+include/ptclib/pffvdev.h
 include/ptclib/pils.h
 include/ptclib/pldap.h
 include/ptclib/pnat.h
@@ -48,9 +48,9 @@ include/ptclib/random.h
 include/ptclib/rfc1155.h
 include/ptclib/shttpsvc.h
 include/ptclib/snmp.h
-include/ptclib/sockagg.h
 include/ptclib/socks.h
 include/ptclib/telnet.h
+include/ptclib/threadpool.h
 include/ptclib/url.h
 include/ptclib/vsdl.h
 include/ptclib/vxml.h
@@ -78,7 +78,6 @@ include/ptlib/indchan.h
 include/ptlib/int64.h
 include/ptlib/ipdsock.h
 include/ptlib/ipsock.h
-include/ptlib/ipxsock.h
 include/ptlib/lists.h
 include/ptlib/mail.h
 include/ptlib/mutex.h
@@ -106,7 +105,6 @@ include/ptlib/smartptr.h
 include/ptlib/socket.h
 include/ptlib/sockets.h
 include/ptlib/sound.h
-include/ptlib/spxsock.h
 include/ptlib/svcproc.h
 include/ptlib/syncpoint.h
 include/ptlib/syncthrd.h
