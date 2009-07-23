@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/07/23 23:08:37 wiz Exp $
 bin/geeqie
+lib/geeqie/geeqie-import
+lib/geeqie/geeqie-rotate
+lib/geeqie/geeqie-symlink
+lib/geeqie/geeqie-ufraw
 man/man1/geeqie.1
 share/applications/geeqie.desktop
 share/doc/${PKGNAME}/COPYING
@@ -56,6 +60,14 @@ share/doc/${PKGNAME}/html/sidebars_exif.html
 share/doc/${PKGNAME}/html/sidebars_keywords.html
 share/doc/${PKGNAME}/html/sidebars_sort_manager.html
 share/doc/${PKGNAME}/html/style.css
+share/geeqie/applications/geeqie-import-geeqie.desktop
+share/geeqie/applications/geeqie-import-gqview.desktop
+share/geeqie/applications/geeqie-ufraw-id.desktop
+share/geeqie/applications/geeqie-ufraw-recursive.desktop
+share/geeqie/applications/geeqie-ufraw.desktop
+share/geeqie/applications/rotate.desktop
+share/geeqie/applications/symlink.desktop
+share/geeqie/template.desktop
 share/locale/ar/LC_MESSAGES/geeqie.mo
 share/locale/be/LC_MESSAGES/geeqie.mo
 share/locale/bg/LC_MESSAGES/geeqie.mo
