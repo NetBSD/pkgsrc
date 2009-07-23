@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2009/05/19 08:59:20 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2009/07/23 17:14:39 abs Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
-DISTNAME=	jre-1_5_0_16-linux-${DIST_ARCH}
-PKGNAME=	sun-jre15-5.0.16
+DISTNAME=	jre-1_5_0_19-linux-${DIST_ARCH}
+PKGNAME=	sun-jre15-5.0.19
 MASTER_SITES=	# empty
 
 LICENSE=	sun-jre6-license
@@ -27,8 +27,8 @@ CONF_FILES=	# empty
 
 .sinclude "sfiles-${EMUL_ARCH}.mk"
 
-.for FILE in ${SFILES}
-CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
+.for sfile in ${SFILES}
+CONF_FILES+=	${JAVA_HOME}/lib/${sfile}.default ${JAVA_HOME}/lib/${sfile}
 .endfor
 
 CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${EMUL_ARCH}/client/classes.jsa
