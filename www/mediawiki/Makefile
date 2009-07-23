@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/18 21:14:50 abs Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/23 17:34:09 abs Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -9,8 +9,6 @@ HOMEPAGE=	http://www.mediawiki.org/
 COMMENT=	Free software wiki package originally written for Wikipedia
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.10:../../databases/php-mysql
-
 EGDIR=			share/examples/mediawiki
 MEDIAWIKI=		${PREFIX}/share/mediawiki
 
@@ -18,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 VER=			1.13
