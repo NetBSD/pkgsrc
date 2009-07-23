@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2815 2009/07/23 11:29:21 markd Exp $
+$NetBSD: CHANGES-2009,v 1.2816 2009/07/23 12:20:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3736,3 +3736,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/raptor to 1.4.19 [markd 2009-07-23]
 	Updated textproc/redland to 1.0.9 [markd 2009-07-23]
 	Updated textproc/soprano to 2.3 [markd 2009-07-23]
+	Updated sysutils/nautilus-sendto to 1.1.5 [wiz 2009-07-23]
