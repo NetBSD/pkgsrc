@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/07/23 12:20:20 wiz Exp $
 bin/nautilus-sendto
-lib/nautilus-sendto/plugins/libnstbalsa.la
+lib/evolution/2.26/plugins/liborg-gnome-evolution-send-attachments-to.la
+lib/evolution/2.26/plugins/org-gnome-evolution-send-attachments-to.eplug
 lib/nautilus-sendto/plugins/libnstbluetooth.la
+lib/nautilus-sendto/plugins/libnstburn.la
 lib/nautilus-sendto/plugins/libnstevolution.la
 lib/nautilus-sendto/plugins/libnstpidgin.la
-lib/nautilus-sendto/plugins/libnstsylpheed.la
-lib/nautilus-sendto/plugins/libnstthunderbird.la
+lib/nautilus-sendto/plugins/libnstremovable_devices.la
 lib/nautilus/extensions-2.0/libnautilus-sendto.la
 lib/pidgin/nautilus.la
 man/man1/nautilus-sendto.1
@@ -29,6 +30,7 @@ share/locale/eu/LC_MESSAGES/nautilus-sendto.mo
 share/locale/fi/LC_MESSAGES/nautilus-sendto.mo
 share/locale/fr/LC_MESSAGES/nautilus-sendto.mo
 share/locale/gl/LC_MESSAGES/nautilus-sendto.mo
+share/locale/gu/LC_MESSAGES/nautilus-sendto.mo
 share/locale/he/LC_MESSAGES/nautilus-sendto.mo
 share/locale/hu/LC_MESSAGES/nautilus-sendto.mo
 share/locale/it/LC_MESSAGES/nautilus-sendto.mo
@@ -37,6 +39,7 @@ share/locale/ka/LC_MESSAGES/nautilus-sendto.mo
 share/locale/ko/LC_MESSAGES/nautilus-sendto.mo
 share/locale/lt/LC_MESSAGES/nautilus-sendto.mo
 share/locale/mk/LC_MESSAGES/nautilus-sendto.mo
+share/locale/mr/LC_MESSAGES/nautilus-sendto.mo
 share/locale/nb/LC_MESSAGES/nautilus-sendto.mo
 share/locale/ne/LC_MESSAGES/nautilus-sendto.mo
 share/locale/nl/LC_MESSAGES/nautilus-sendto.mo
