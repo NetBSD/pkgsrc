@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.24 2008/05/26 02:13:21 joerg Exp $
+# $NetBSD: Makefile.common,v 1.25 2009/07/23 17:14:39 abs Exp $
+# used by lang/sun-jdk15/Makefile
+# used by lang/sun-jre15/Makefile
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -35,7 +37,7 @@ DIST_ARCH=		${EMUL_ARCH}
 INTERACTIVE_STAGE=	fetch
 BUILD_DIRS=		# empty
 
-JAVA_HOME=	${LOCALBASE}/java/sun-1.5
+JAVA_HOME=	${PREFIX}/java/sun-1.5
 JAVA_NAME=	sun15
 JAVA_UNLIMIT=	datasize
 
@@ -62,7 +64,7 @@ FETCH_MESSAGE+=	" license, then choose 'Linux self-extracting file'."
 USE_TOOLS+=	pax
 
 post-fetch:
-	@if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
+	if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
 		${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX};	\
 	fi
 
