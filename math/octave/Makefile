@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2009/07/22 09:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2009/07/23 13:43:25 asau Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	bison>=1.875:../../devel/bison
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-OCTAVE_VER=	3.2.0
+OCTAVE_VER=	3.2.2
 CONFLICTS+=	octave-2.*
 
 .if (${MACHINE_ARCH} == "arm32")
@@ -52,6 +52,9 @@ OCTAVE_DOC=	faq/Octave-FAQ.ps  liboctave/liboctave.ps \
 
 INSTALLATION_DIRS+=	share/octave/${OCTAVE_VER}/doc
 UNWRAP_FILES+=		mkoctfile octave-bug src/oct-conf.h
+
+# Doesn't work yet, needs to sort out libtool shared libraries handling:
+#TEST_TARGET=	check
 
 post-extract:
 	find ${WRKSRC}/doc -type f -name '*.info*' -print | xargs rm -f
