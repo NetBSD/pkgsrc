@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8279 2009/07/23 13:44:45 asau Exp $
+$NetBSD: TODO,v 1.8280 2009/07/23 14:02:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -602,14 +602,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
-	o firefox-2.0.0.20
+	o firefox3-3.0.12
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flightgear-1.9.0
 	o flpsed-0.4.4
 	o fmsx-3.0
 	o fondu-040927
-	o fontconfig-2.7.0
 	o fop-0.20.5
 	o fotoxx-7.5
 	o freeciv-2.1.9
@@ -660,7 +659,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.6.7 [GNOME 2.26]
 	o glchess-1.0.5
 	o gle-4.2.0
-	o glibmm-2.20.1
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
@@ -669,7 +667,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-mag-0.15.7
 	o gnome-packagekit-0.4.5
 	o gnome-power-manager-2.26.3 [GNOME 2.26, wants DeviceKit-power]
 	o gnome-subtitles-0.9.1
@@ -678,7 +675,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnugo-3.8
 	o gnupg2-2.0.12
 	o gnustep-base-1.19.1
 	o gob2-2.0.16
@@ -764,7 +760,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irssi-0.8.13
 	o iselect-1.4.0
-	o iso-codes-3.10.1
 	o ispell-gaeilge-4.1
 	o ispell-german-20090107
 	o ispell-slovak-0.3.2
@@ -792,7 +787,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kadu-0.6.5
 	o kaffeine-0.8.7
 	o kapooka-0.3
-	o kchmviewer-4.1
 	o kdbg-2.1.1
 	o kde4-4.2.2
 	o kdevelop-3.5.4
@@ -826,7 +820,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdaemon-0.13
 	o libdiscid-0.2.1
 	o libdockapp-0.6.1
-	o libdrm-2.4.12
 	o libelf-0.8.12
 	o libevent-1.4.11
 	o libextractor-0.5.23
@@ -931,7 +924,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moc-2.4.4
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
-	o mousetweaks-2.26.3
 	o mp3blaster-3.2.3
 	o mp3diags-0.99.04.026
 	o mp3splt-2.2.5 [schmonz]
@@ -954,8 +946,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysqlcc-0.9.8
 	o nagios-3.1.0
 	o nap-1.5.3
-	o nasm-2.07
-	o nautilus-sendto-1.1.5
 	o navi2ch-1.8.1
 	o nawk-20071023
 	o ncftp3-3.2.1 [pkg/37859]
@@ -1073,7 +1063,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pinfo-0.6.9
 	o pioneers-0.12.2
 	o pircbot-1.4.4
-	o pixman-0.15.18
 	o pks-0.9.6
 	o plone-3.2.2 [should be plone-32?]
 	o ploticus-2.41
@@ -1117,7 +1106,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-4.7.6
-	o py-cairo-1.8.6
 	o py-checker-0.8.17
 	o py-cups-1.9.46
 	o py-dns-2.3.3
@@ -1162,9 +1150,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
-	o regionset-0.2
-	o remind-3.1.7
-	o renderproto-0.11
 	o resize_image-0.7
 	o rhythmbox-0.12.3
 	o rio500-0.8.1
@@ -1272,7 +1257,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snort-2.8.4
 	o solfege-3.14.5
 	o sope-4.6
-	o sound-juicer-2.26.1
 	o source-highlight-3.1
 	o sox-14.2.0
 	o spcaview-20060501
@@ -1316,7 +1300,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o telepathy-gabble-0.7.30
 	o telepathy-glib-0.7.33
 	o telepathy-idle-0.1.4
-	o tesseract-2.04
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.9.2
 	o tfmxplay-1.1.6
@@ -1335,7 +1318,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tob-0.26
 	o tomboy-0.14.3
 	o top-3.8beta1
-	o totem-2.26.3
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.11.5
@@ -1407,6 +1389,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o x11perf-1.5
 	o x264-devel-20090620
 	o xanalyser-1.30
+	o xapian-1.0.14
+	o xapian-omega-1.0.14
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
@@ -1471,7 +1455,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xpad-2.13
-	o xplanet-1.2.1
 	o xpuyopuyo-0.9.8
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33.1
@@ -1490,7 +1473,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yabause-0.9.10
 	o yacas-1.2.0
 	o yafc-1.1
-	o yasm-0.8.0
 	o yaz-3.0.47
 	o yodl-2.14.3
 	o ysm-2.9.9.1
