@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2009/07/18 22:28:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/23 19:27:21 schmonz Exp $
 #
 
-DISTNAME=		xapian-omega-1.0.13
+DISTNAME=		xapian-omega-1.0.14
 CATEGORIES=		textproc
-MASTER_SITES=		http://oligarchy.co.uk/xapian/1.0.13/
+MASTER_SITES=		http://oligarchy.co.uk/xapian/1.0.14/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://xapian.org/docs/omega/overview.html
