@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.474 2009/07/20 14:14:19 ahoka Exp $
+# $NetBSD: Makefile,v 1.475 2009/07/23 15:31:20 drochner Exp $
 #
 
 COMMENT=	System utilities
@@ -114,6 +114,7 @@ SUBDIR+=	gkrellm
 SUBDIR+=	gkrellm-est
 SUBDIR+=	gkrellm-server
 SUBDIR+=	gkrellm-share
+SUBDIR+=	gnome-commander
 SUBDIR+=	gnome-device-manager
 SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-mount
