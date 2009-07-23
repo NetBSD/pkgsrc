@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8280 2009/07/23 14:02:08 wiz Exp $
+$NetBSD: TODO,v 1.8281 2009/07/23 14:05:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o adocman-0.13
 	o adtool-1.3
 	o advi-1.7.1
-	o aegis-4.24
 	o aewm++-1.0.27
 	o afterstep-2.2.9
 	o akonadi-1.1.95
@@ -494,7 +493,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o connect-1.96
 	o cook-2.31
 	o courier-0.62.0
-	o courier-authlib-0.62.2
 	o courier-imap-4.5.0
 	o covered-20090705
 	o cpio-2.9
@@ -530,7 +528,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o diffuse-0.3.4
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
-	o dirac-1.0.2
 	o dircproxy-devel-1.2.0.2
 	o dnstop-20070307
 	o dnstracer-1.9
@@ -539,7 +536,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o drivel-2.0.4
 	o dropbear-0.52
 	o drscheme-4.0.2
-	o drupal-5.19 (security release)
 	o drupal-6.13 (security release)
 	o dspam-3.9.0
 	o dvdstyler-1.7.2 [pkg/41681]
@@ -551,8 +547,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ed-1.4
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o eet-1.2.1
-	o eggdrop-1.6.19
 	o egtk-0.3.6.2
 	o eigen2-2.0.2
 	o ekiga-3.2.5
@@ -566,7 +560,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
 	o empathy-2.26.2 [GNOME 2.26]
-	o enchant-1.5.0
 	o enlightenment-1.0.0
 	o epic4-2.6
 	o epiphany-extensions-2.26.1
@@ -585,7 +578,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
 	o exiftool-7.67
-	o exiv2-0.18.2
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20090102
@@ -713,11 +705,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtranslator-1.9.5
 	o guile-1.8.7
 	o guile-gtk-2.0
-	o guile-www-2.24
 	o gutenprint-5.2.2
 	o gv-3.6.7
 	o gwaei-1.0
-	o gxemul-0.4.7.2 [pkg/41742]
 	o hackbot-2.21
 	o hal-0.5.13
 	o hal-info-20090716
@@ -818,7 +808,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcddb-1.3.1
 	o libchewing-0.3.0
 	o libdaemon-0.13
-	o libdiscid-0.2.1
 	o libdockapp-0.6.1
 	o libelf-0.8.12
 	o libevent-1.4.11
@@ -841,7 +830,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liblzo-2.02
 	o libmatheval-1.1.6
 	o libmp3splt-0.5.6 [schmonz]
-	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libntlm-1.1
 	o libole2-2.2.8
@@ -884,7 +872,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o matchbox-panel-0.9.3
 	o mathomatic-14.5.2
 	o mc-4.6.2
-	o mediawiki-1.5.0
 	o memconf-2.9 [pkg/40201]
 	o memtestplus-2.11
 	o merb-1.0.8.1
@@ -967,7 +954,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o newt-0.52.2 (ubuntu)
 	o ng-1.4.4
 	o nikto-2.0.1
-	o nmap-5.00
 	o ns-3.5
 	o ns-flash-10
 	o ns-plugger-common-5.1.3
@@ -977,7 +963,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nspr-4.8
 	o nss-3.11.7
 	o ntp-4.2.5p161
-	o nucleo-0.7.3
 	o nulib2-220
 	o nullmailer-1.04
 	o nut-14.4
@@ -1009,7 +994,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-BerkeleyDB-0.39
-	o p5-DateTime-Set-0.28
 	o p5-Pod-Simple-3.08
 	o p5-Test-Manifest-1.23
 	o p5-ispman-1.2
@@ -1017,7 +1001,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.55
 	o packagekit-0.4.8
 	o pam-smbpass-3.0.13
-	o pango-1.24.5
 	o paprefs-0.9.8
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
@@ -1120,7 +1103,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-mad-0.6
 	o py-moin-1.8.4
 	o py-musicbrainz-0.4.1
-	o py-mutagen-1.15
 	o py-psycopg-2.0.11
 	o py-pytz-2009j
 	o py-qt4-4.5.2
@@ -1176,7 +1158,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-DBD-mysql-0.4.2 [should be replace with new ruby-dbi]
 	o ruby-DBI-0.4.1 [should be replace with new ruby-dbi]
 	o ruby-SDL-2.0.1b
-	o ruby-activemerchant-1.4.1
 	o ruby-builder-2.2.0
 	o ruby-cmd-0.8.0
 	o ruby-coderay-0.8.1
@@ -1200,7 +1181,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-mysql-2.7.7 [or 2.8?]
 	o ruby-net-ssh-1.1.4
 	o ruby-parsetree-3.0.3
-	o ruby-postgres-pr-0.5.0
 	o ruby-racc-1.4.6
 	o ruby-rgl-0.4.0
 	o ruby-rspec-1.1.12
@@ -1222,8 +1202,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.1.1
 	o scm-5e5
-	o scmgit-base-1.6.3.3
-	o scmgit-docs-1.6.3.3
 	o scribus-1.3.3.13
 	o scrollz-1.9.99
 	o scsh-1.3.0
@@ -1320,7 +1298,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
-	o trac-0.11.5
 	o transcode-1.1.3
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -1360,7 +1337,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vobcopy-1.2.0
 	o vp-1.6
 	o vsftpd-2.1.2
-	o vte-0.20.4
 	o vttest-20071216
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1431,7 +1407,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xforms-1.0.91
 	o xfstt-1.7
 	o xhippo-3.5
-	o xinput-1.4.2
 	o xisp-2.7p4
 	o xjman-0.7
 	o xkbset-0.5
