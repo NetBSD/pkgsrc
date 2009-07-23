@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/07/22 09:01:39 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/23 08:28:41 tron Exp $
 
 DISTNAME=	mediatomb-0.11.0
 PKGREVISION=	6
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mediatomb/}
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://mediatomb.cc/
 COMMENT=	UPnP MediaServer with a web user interface
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 
@@ -40,6 +41,8 @@ SUBST_CLASSES+=		config
 SUBST_FILES.config=	config.xml mediatomb.desktop
 SUBST_VARS.config=	MEDIATOMB_HOME PREFIX OPSYS
 SUBST_STAGE.config=	post-patch
+
+INSTALLATION_DIRS+=	share/applications
 
 post-extract:
 	${CP} ${FILESDIR}/config.xml.in ${WRKSRC}/config.xml
