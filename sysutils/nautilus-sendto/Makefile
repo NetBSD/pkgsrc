@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/23 12:20:20 wiz Exp $
 #
 
-DISTNAME=		nautilus-sendto-1.1.1
+DISTNAME=		nautilus-sendto-1.1.5
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus-sendto/1.1/}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +9,9 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/nautilus/
 COMMENT=		Convenience application to send a file via email or instant messenger
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
@@ -25,13 +28,13 @@ GNU_CONFIGURE=		yes
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
-# XXX: add option for thunderbird support? buildlink3.mk doesn't exist yet.
-#.include "../../mail/thunderbird/buildlink3.mk"
+.include "../../mail/evolution/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 # not possible to enable it yet, see 
 # http://bugzilla.gnome.org/show_bug.cgi?id=556774
-#.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
+.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
+# no gupnp-av package available
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
