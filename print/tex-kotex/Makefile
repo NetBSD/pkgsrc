@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/07/20 11:15:49 minskim Exp $
-# TeX Live Revision 18
+# $NetBSD: Makefile,v 1.3 2009/07/23 06:26:59 minskim Exp $
+# TeX Live Revision 19
 
 DISTNAME=	kotex
 PKGNAME=	tex-${DISTNAME}-0.1.1
 PKGREVISION=	1
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/texlive/2008/archive/
+DIST_SUBDIR=	${PKGNAME_NOREV}-19
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/ko.TeX/
