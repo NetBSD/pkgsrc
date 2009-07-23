@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2009/07/23 16:30:37 yyamano Exp $
+
+--- src/st_lzw.c.orig	2005-06-20 14:17:39.000000000 -0700
++++ src/st_lzw.c
+@@ -68,6 +68,7 @@
+ 
+ #include <errno.h>
+ #include <stddef.h>
++#include <sys/types.h>
+ 
+ #include "config.h"
+ #include "exceptions.h"
