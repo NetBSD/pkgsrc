@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2009/07/22 09:01:23 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2009/07/24 18:42:18 drochner Exp $
 
-DISTNAME=		devhelp-0.21
+DISTNAME=		devhelp-0.23
 CATEGORIES=		devel x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/0.21/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/0.23/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -28,7 +28,7 @@ GCONF_SCHEMAS=		devhelp.schemas
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../www/seamonkey/gecko-depends.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 post-install:
