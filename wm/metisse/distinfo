@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.3 2007/06/30 15:22:09 joerg Exp $
+$NetBSD: distinfo,v 1.4 2009/07/24 12:10:18 obache Exp $
 
-SHA1 (metisse-0.4.0-rc4.tar.bz2) = 01b4893fd68d46eb44d8ab7d8d11bee442de3017
-RMD160 (metisse-0.4.0-rc4.tar.bz2) = 9ff492c68081b01d51c564d2d5c2136d8db1c19c
-Size (metisse-0.4.0-rc4.tar.bz2) = 6017779 bytes
-SHA1 (patch-aa) = 4773fb8ba08d82bc3b4317c1bb91cdfbcf299e6f
-SHA1 (patch-ab) = 8f74e223ba8344e35a4e43ce286466738a53c8ca
-SHA1 (patch-ac) = 4f8bb2c57834d927907c56a1a9413866e05cf99b
-SHA1 (patch-ad) = d66bc0a8fa3d0d1397c2e59cd0c1d8a997c7f920
-SHA1 (patch-ae) = 4bafefd35ba57588b50d5d4d1eb0fc50dc8ff74d
-SHA1 (patch-af) = 546e808741ed585594336ca918dc8903b2e55884
+SHA1 (metisse-0.4.1.tar.bz2) = acf97b125905d91988955560a9b14b06a530eed6
+RMD160 (metisse-0.4.1.tar.bz2) = 7487322f22a3655d756b5d3d3cc59afbf277d137
+Size (metisse-0.4.1.tar.bz2) = 6178680 bytes
+SHA1 (patch-aa) = 4dc24324dfaa54f5fbd0b6732707245c79047c6c
+SHA1 (patch-ab) = 8fa77eaed337a617b8f14d75de0d92b0dc1529df
+SHA1 (patch-ac) = 2ed1d666d535ee2003cb3d11e58188ff9cff7de9
+SHA1 (patch-ad) = 6c8f66b54c96f18b3e835fea490d5eb444514b52
+SHA1 (patch-ae) = eab55e17f7e3518434d4ad42e7637c18cef5bf72
+SHA1 (patch-af) = 45cf852490bd30d17cac341916d83b0688f7bce0
+SHA1 (patch-ag) = b7159e56a1d1f1b5b12ea99ca60de0071bcf5294
