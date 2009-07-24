@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 22:00:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/07/24 18:37:31 drochner Exp $
 bin/jsc
 include/webkit-1.0/JavaScriptCore/JSBase.h
 include/webkit-1.0/JavaScriptCore/JSContextRef.h
@@ -91,6 +91,7 @@ share/webkit-1.0/webinspector/Images/profileIcon.png
 share/webkit-1.0/webinspector/Images/profileSmallIcon.png
 share/webkit-1.0/webinspector/Images/profilesIcon.png
 share/webkit-1.0/webinspector/Images/profilesSilhouette.png
+share/webkit-1.0/webinspector/Images/radioDot.png
 share/webkit-1.0/webinspector/Images/recordButtons.png
 share/webkit-1.0/webinspector/Images/reloadButtons.png
 share/webkit-1.0/webinspector/Images/resourceCSSIcon.png
