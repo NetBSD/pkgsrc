@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2009/04/22 02:33:06 schmonz Exp $
+# $NetBSD: options.mk,v 1.3 2009/07/24 05:09:02 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		ikiwiki-amazon-s3 ikiwiki-search
 PKG_SUPPORTED_OPTIONS+=		imagemagick python svn w3m
-PKG_OPTIONS_LEGACY_OPTS+=	amazon_s3:ikiwiki-amazon-s3
 
 .include "../../mk/bsd.options.mk"
 
