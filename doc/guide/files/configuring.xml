@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.35 2009/05/09 14:59:09 joerg Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.36 2009/07/24 19:16:27 joerg Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -79,9 +79,11 @@ works.</para>
 	    (<quote>mipsel</quote>, etc.).</para>
 	</listitem>
 	<listitem><para><varname>ACCEPTABLE_LICENSES</varname>:
-	    List of acceptable licenses. Whenever you try to build a package
-	    whose license is not in this list, you will get an error message
-	    that includes instructions on how to change this variable.</para>
+	    List of acceptable licenses. License names are case-sensitive.
+	    Whenever you try to build a package whose license is not in this
+	    list, you will get an error message. If the license condition is
+	    simple enough, the error message will include specific
+	    instructions on how to change this variable.</para>
 	</listitem>
       </itemizedlist>
   </sect1>
