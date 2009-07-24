@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2007/06/30 15:22:09 joerg Exp $
+$NetBSD: patch-af,v 1.2 2009/07/24 12:10:18 obache Exp $
 
---- FvwmCompositor/main/AScreen.cxx.orig	2007-06-30 14:47:06.000000000 +0000
+--- FvwmCompositor/main/AScreen.cxx.orig	2008-11-25 10:22:45.000000000 +0000
 +++ FvwmCompositor/main/AScreen.cxx
-@@ -32,6 +32,7 @@
+@@ -36,6 +36,7 @@
  #include <math.h>
  #include <stdio.h>
  #include <stdexcept>
