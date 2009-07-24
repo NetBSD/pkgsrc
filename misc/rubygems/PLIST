@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:07:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/07/24 06:38:53 minskim Exp $
 bin/gem
 ${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rbconfig/datadir.rb
@@ -72,7 +72,6 @@ ${RUBY_VENDORLIB}/rubygems/platform.rb
 ${RUBY_VENDORLIB}/rubygems/remote_fetcher.rb
 ${RUBY_VENDORLIB}/rubygems/require_paths_builder.rb
 ${RUBY_VENDORLIB}/rubygems/requirement.rb
-${RUBY_VENDORLIB}/rubygems/rubygems_version.rb
 ${RUBY_VENDORLIB}/rubygems/security.rb
 ${RUBY_VENDORLIB}/rubygems/server.rb
 ${RUBY_VENDORLIB}/rubygems/source_index.rb
