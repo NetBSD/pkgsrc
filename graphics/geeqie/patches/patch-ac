@@ -1,15 +1,22 @@
-$NetBSD: patch-ac,v 1.1 2009/07/23 23:08:37 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2009/07/24 10:51:16 drochner Exp $
 
---- src/main.c.orig	2009-07-02 17:45:20.000000000 +0000
+--- src/main.c.orig	2009-07-02 19:45:20.000000000 +0200
 +++ src/main.c
-@@ -698,6 +698,10 @@ void exit_program(void)
+@@ -698,7 +698,7 @@ void exit_program(void)
   */
  /* FIXME: this probably needs some better ifdefs. Please report any compilation problems */
  
-+#ifndef MAP_ANONYMOUS
-+#define MAP_ANONYMOUS 0
-+#endif
-+
- #ifdef SIGBUS
+-#ifdef SIGBUS
++#if 0
  static void sigbus_handler_cb(int signum, siginfo_t *info, void *context)
  {
+ 	unsigned long pagesize = sysconf(_SC_PAGE_SIZE);
+@@ -709,7 +709,7 @@ static void sigbus_handler_cb(int signum
+ 
+ static void setup_sigbus_handler(void)
+ {
+-#ifdef SIGBUS
++#if 0
+ 	struct sigaction sigbus_action;
+ 	sigfillset(&sigbus_action.sa_mask);
+ 	sigbus_action.sa_sigaction = sigbus_handler_cb;
