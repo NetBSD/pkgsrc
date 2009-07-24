@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/07/24 05:09:02 schmonz Exp $
+# $NetBSD: options.mk,v 1.4 2009/07/24 14:35:14 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		ikiwiki-amazon-s3 ikiwiki-search
@@ -37,7 +37,6 @@ PLIST_VARS+=		w3m
 .if !empty(PKG_OPTIONS:Mw3m)
 DEPENDS+=		w3m-[0-9]*:../../www/w3m
 PLIST.w3m=		yes
-SUBST_SED.makefile+=	-e 's,/lib/w3m/cgi-bin,/libexec/w3m/cgi-bin,'
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}/w3mmode
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/html/w3mmode.html \
@@ -45,5 +44,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/w3mmode/ikiwiki.setup \
 		${PREFIX}/share/doc/${PKGBASE}/w3mmode/ikiwiki.setup
 .else
-SUBST_SED.makefile+=	-e 's,^\(.*install .*W3M_CGI_BIN\),\#\1,'
+SUBST_CLASSES+=		w3m
+SUBST_STAGE.w3m=	post-patch
+SUBST_FILES.w3m=	Makefile.PL
+SUBST_SED.w3m+=		-e 's,^\(.*install .*W3M_CGI_BIN\),\#\1,'
 .endif
