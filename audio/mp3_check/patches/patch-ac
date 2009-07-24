@@ -1,8 +1,19 @@
-$NetBSD: patch-ac,v 1.1 2002/01/21 11:34:57 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2009/07/24 18:29:24 drochner Exp $
 
---- support_functions.h.orig	Sat Jul 29 08:41:38 2000
+--- support_functions.h.orig	2000-07-29 08:41:38.000000000 +0200
 +++ support_functions.h
-@@ -680,7 +680,7 @@
+@@ -490,8 +490,8 @@ print_sys_usage(void)
+ 		(void)fprintf(stderr, "Could not get system usage for myself.");
+ 	else {
+ 		printf("\n");
+-		printf("%-20s%1ld.%02lds\n", "USER_TIME", process_usage.ru_utime.tv_sec, process_usage.ru_utime.tv_usec / 10000);
+-		printf("%-20s%1ld.%02lds\n", "SYS_TIME", process_usage.ru_stime.tv_sec, process_usage.ru_stime.tv_usec / 10000);
++		printf("%-20s%1lld.%02ds\n", "USER_TIME", (long long)process_usage.ru_utime.tv_sec, process_usage.ru_utime.tv_usec / 10000);
++		printf("%-20s%1lld.%02ds\n", "SYS_TIME", (long long)process_usage.ru_stime.tv_sec, process_usage.ru_stime.tv_usec / 10000);
+ 	}
+ }
+ 
+@@ -680,7 +680,7 @@ print_frame_info(mp3_i, file_info)
  	printf("%-20s%d\n", "BitRate", mp3_i->BIT_RATE);
  	printf("%-20s%d\n", "SampRate", mp3_i->SAMPLE_FREQ);
  	printf("%-20s%s\n", "BinString", mp3_i->BIN_STRING);
