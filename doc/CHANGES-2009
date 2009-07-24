@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2829 2009/07/24 15:19:13 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.2830 2009/07/24 19:08:39 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3752,3 +3752,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/fontforge to 20090622 [adam 2009-07-24]
 	Updated wm/metisse to 0.4.1 [obache 2009-07-24]
 	Updated www/neon to 0.28.5 [tnn 2009-07-24]
+	Updated chat/jabberd2 to 2.1.24 [gdt 2009-07-24]
