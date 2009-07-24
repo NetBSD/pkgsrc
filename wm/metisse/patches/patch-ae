@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.2 2007/06/30 15:22:09 joerg Exp $
+$NetBSD: patch-ae,v 1.3 2009/07/24 12:10:18 obache Exp $
 
---- FvwmCompositor/main/LayerManager.cxx	2007/06/02 12:31:01	1.1
-+++ FvwmCompositor/main/LayerManager.cxx	2007/06/02 12:32:00
-@@ -24,6 +24,20 @@
- #define A_PAGER_MODE_MARGIN_P 0.02
+--- FvwmCompositor/main/LayerManager.cxx.orig	2008-08-25 13:54:44.000000000 +0000
++++ FvwmCompositor/main/LayerManager.cxx
+@@ -25,6 +25,20 @@
+ using namespace std;
  
  // --------------------------------------------------------------------
 +#if defined(__NetBSD__) || defined(__DragonFly__)
