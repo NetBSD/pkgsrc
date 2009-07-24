@@ -1,0 +1,12 @@
+$NetBSD: patch-bq,v 1.3 2009/07/24 01:24:39 christos Exp $
+
+--- icb/main.c.orig	1995-02-24 16:20:24.000000000 -0500
++++ icb/main.c	2009-07-23 21:19:32.000000000 -0400
+@@ -7,6 +7,7 @@
+ #include "externs.h"
+ #include <sys/wait.h>
+ #include <sys/dir.h>
++#include <time.h>
+ #include "getswitch.h"
+ 
+ char *optv[] = { "clear", "list", "who", "restricted", "nickname:", "group:",
