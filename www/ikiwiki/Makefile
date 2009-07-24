@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/07/24 05:09:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.28 2009/07/24 17:52:00 schmonz Exp $
 #
 
 DISTNAME=	ikiwiki_3.14159
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 
-MAINTAINER=	reed@NetBSD.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://ikiwiki.info/
 COMMENT=	Wiki compiler
 LICENSE=	gnu-gpl-v2
