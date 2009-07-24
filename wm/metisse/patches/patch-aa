@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2007/06/29 22:46:50 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2009/07/24 12:10:18 obache Exp $
 
---- fvwm-insitu/config.h.in	2007/06/02 08:47:27	1.1
-+++ fvwm-insitu/config.h.in	2007/06/02 08:51:55
-@@ -526,8 +526,12 @@
+--- fvwm-insitu/config.h.in.orig	2008-12-09 12:56:45.000000000 +0000
++++ fvwm-insitu/config.h.in
+@@ -554,8 +554,12 @@
  #  ifdef _AIX
         #pragma alloca
  #  else

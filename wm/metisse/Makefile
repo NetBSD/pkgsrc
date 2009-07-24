@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2009/06/12 17:24:54 ahoka Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/24 12:10:18 obache Exp $
 #
 
-DISTNAME=	metisse-0.4.0-rc4
-PKGNAME=	metisse-0.4.0rc4
-PKGREVISION=	5
+DISTNAME=	metisse-0.4.1
 CATEGORIES=	wm x11
-MASTER_SITES=	http://insitu.lri.fr/metisse/download/0.4.0-rc4/
+MASTER_SITES=	http://insitu.lri.fr/metisse/download/metisse/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://insitu.lri.fr/metisse/
 COMMENT=	Window manager with novel features
+LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config msgfmt perl
@@ -20,6 +21,12 @@ USE_LIBTOOL=		yes
 USE_GNU_READLINE=	yes	# uses read_history_range, append_history & history_truncate_file
 
 DEPENDS+=	rxvt>=2.7.10nb5:../../x11/rxvt
+
+CONFIGURE_ARGS+=	--with-fontdir=${X11BASE}/lib/X11/fonts
+
+REPLACE_PERL+=	FvwmCompositor/config/scripting.pl
+
+.include "options.mk"
 
 .include "../../audio/rplay/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

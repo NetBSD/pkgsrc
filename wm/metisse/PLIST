@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:19:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/07/24 12:10:18 obache Exp $
 bin/FvwmCommand
 bin/Xmetisse
 bin/Xwnc
@@ -14,10 +14,9 @@ bin/fvwm-perllib
 bin/fvwm-root
 bin/fvwmi
 bin/fvwmi-config
-bin/metisse-combo2radio
-bin/metisse-combo2radio-edit
-bin/metisse-demo-address-app
-bin/metisse-dummy-win
+${PLIST.python}bin/metisse-combo2radio
+${PLIST.python}bin/metisse-combo2radio-edit
+${PLIST.python}bin/metisse-demo-address-app
 bin/metisse-start-fvwm
 bin/metisse-xlib
 bin/opale-start-fvwmi
@@ -28,9 +27,9 @@ include/libmetisse/auth.h
 include/libmetisse/proto.h
 lib/libmetisse.la
 lib/pkgconfig/libmetisse.pc
-lib/python2.4/site-packages/facade_setup.py
-lib/python2.4/site-packages/facade_setup.pyc
-lib/python2.4/site-packages/facade_setup.pyo
+${PLIST.python}${PYSITELIB}/facade_setup.py
+${PLIST.python}${PYSITELIB}/facade_setup.pyc
+${PLIST.python}${PYSITELIB}/facade_setup.pyo
 libexec/fvwm-insitu/2.5.20/FvwmAnimate
 libexec/fvwm-insitu/2.5.20/FvwmAudio
 libexec/fvwm-insitu/2.5.20/FvwmAuto
@@ -304,12 +303,15 @@ share/metisse/fvwm/background
 share/metisse/fvwm/bindings
 share/metisse/fvwm/bindings-functions
 share/metisse/fvwm/colours/Ia_Ora_blue.theme
+share/metisse/fvwm/colours/Ia_Ora_free.theme
+share/metisse/fvwm/colours/Ia_Ora_gray.theme
 share/metisse/fvwm/colours/Ia_Ora_orange.theme
 share/metisse/fvwm/colours/Metisse.theme
 share/metisse/fvwm/colours/Metisse_Contrast.theme
 share/metisse/fvwm/colours/Opale.theme
 share/metisse/fvwm/config
 share/metisse/fvwm/config-files-list
+share/metisse/fvwm/demos
 share/metisse/fvwm/desks
 share/metisse/fvwm/fonts
 share/metisse/fvwm/images/backgrounds/sky-metisse.jpg
@@ -350,6 +352,8 @@ share/metisse/fvwm/shading
 share/metisse/fvwm/stroke
 share/metisse/fvwm/styles
 share/metisse/fvwm/themes/Ia_Ora_blue.theme
+share/metisse/fvwm/themes/Ia_Ora_free.theme
+share/metisse/fvwm/themes/Ia_Ora_gray.theme
 share/metisse/fvwm/themes/Ia_Ora_orange.theme
 share/metisse/fvwm/themes/Metisse.theme
 share/metisse/fvwm/themes/Metisse_Constrast.theme
@@ -365,3 +369,4 @@ share/metisse/fvwm/window/Vectors.theme
 share/metisse/shaders/blur-f.glsl
 share/metisse/shaders/shaders-files-list
 share/metisse/shaders/simple-anim-f.glsl
+@pkgdir share/metisse/glade
