@@ -1,26 +1,22 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:48:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/07/24 18:42:18 drochner Exp $
 bin/devhelp
+include/devhelp-1.0/devhelp/dh-assistant-view.h
+include/devhelp-1.0/devhelp/dh-assistant.h
 include/devhelp-1.0/devhelp/dh-base.h
 include/devhelp-1.0/devhelp/dh-book-tree.h
 include/devhelp-1.0/devhelp/dh-error.h
-include/devhelp-1.0/devhelp/dh-html.h
 include/devhelp-1.0/devhelp/dh-keyword-model.h
 include/devhelp-1.0/devhelp/dh-link.h
-include/devhelp-1.0/devhelp/dh-parser.h
-include/devhelp-1.0/devhelp/dh-preferences.h
 include/devhelp-1.0/devhelp/dh-search.h
-include/devhelp-1.0/devhelp/dh-util.h
 include/devhelp-1.0/devhelp/dh-window.h
-include/devhelp-1.0/devhelp/eggfindbar.h
 lib/libdevhelp-1.la
 lib/pkgconfig/libdevhelp-1.0.pc
 share/applications/devhelp.desktop
-share/devhelp/default-prefs.js
-share/devhelp/devhelp.glade
+share/devhelp/assistant/assistant.css
+share/devhelp/assistant/assistant.js
+share/devhelp/devhelp.defaults
 share/devhelp/dtd/devhelp-1.dtd
-share/devhelp/images/book_closed.png
-share/devhelp/images/book_open.png
-share/devhelp/images/helpdoc.png
+share/devhelp/ui/devhelp.builder
 share/devhelp/ui/window.ui
 share/doc/devhelp/AUTHORS
 share/doc/devhelp/COPYING
@@ -71,7 +67,6 @@ share/locale/lt/LC_MESSAGES/devhelp.mo
 share/locale/lv/LC_MESSAGES/devhelp.mo
 share/locale/mk/LC_MESSAGES/devhelp.mo
 share/locale/ml/LC_MESSAGES/devhelp.mo
-share/locale/mr/LC_MESSAGES/devhelp.mo
 share/locale/ms/LC_MESSAGES/devhelp.mo
 share/locale/nb/LC_MESSAGES/devhelp.mo
 share/locale/ne/LC_MESSAGES/devhelp.mo
@@ -81,6 +76,7 @@ share/locale/oc/LC_MESSAGES/devhelp.mo
 share/locale/or/LC_MESSAGES/devhelp.mo
 share/locale/pa/LC_MESSAGES/devhelp.mo
 share/locale/pl/LC_MESSAGES/devhelp.mo
+share/locale/ps/LC_MESSAGES/devhelp.mo
 share/locale/pt/LC_MESSAGES/devhelp.mo
 share/locale/pt_BR/LC_MESSAGES/devhelp.mo
 share/locale/ru/LC_MESSAGES/devhelp.mo
@@ -89,7 +85,7 @@ share/locale/sk/LC_MESSAGES/devhelp.mo
 share/locale/sl/LC_MESSAGES/devhelp.mo
 share/locale/sq/LC_MESSAGES/devhelp.mo
 share/locale/sr/LC_MESSAGES/devhelp.mo
-share/locale/sr@latin/LC_MESSAGES/devhelp.mo
+share/locale/sr@Latn/LC_MESSAGES/devhelp.mo
 share/locale/sv/LC_MESSAGES/devhelp.mo
 share/locale/ta/LC_MESSAGES/devhelp.mo
 share/locale/te/LC_MESSAGES/devhelp.mo
