@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.6 2009/07/15 10:24:13 tron Exp $	*/
+/*	$NetBSD: license.c,v 1.7 2009/07/24 19:06:45 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -66,7 +66,8 @@ static size_t hash_collisions;
 
 static char **license_hash[HASH_SIZE];
 static const char license_spaces[] = " \t\n";
-static const char license_chars[] = "abcdefghijklmnopqrstuvwxyz0123456789_-.";
+static const char license_chars[] =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-.";
 
 static size_t
 hash_license(const char *license, size_t len)
