@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2007/06/30 15:22:09 joerg Exp $
+$NetBSD: patch-ad,v 1.3 2009/07/24 12:10:18 obache Exp $
 
---- FvwmCompositor/renderer/WindowRenderer.cxx	2007/06/02 12:23:48	1.1
-+++ FvwmCompositor/renderer/WindowRenderer.cxx	2007/06/02 12:27:40
-@@ -46,6 +46,20 @@
+--- FvwmCompositor/renderer/WindowRenderer.cxx.orig	2008-08-25 14:32:09.000000000 +0000
++++ FvwmCompositor/renderer/WindowRenderer.cxx
+@@ -51,6 +51,20 @@ float WindowRenderer::borderVisLens = 1.
  // ---------------------------------------------------------------------------
  //
  
