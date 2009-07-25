@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/07/13 11:15:27 tonnerre Exp $
+$NetBSD: distinfo,v 1.6 2009/07/25 19:33:45 schmonz Exp $
 
-SHA1 (WebSVN_161.tar.gz) = 7fecbaa9619e3061ea57dda0a4bfcb4a3cca888d
-RMD160 (WebSVN_161.tar.gz) = aedd187926ff286b5582f2359cbe3fb56d7a0bc9
-Size (WebSVN_161.tar.gz) = 89305 bytes
-SHA1 (patch-aa) = 021727c38d33ccedeaec8c82de912ed94baae565
-SHA1 (patch-ab) = 4724707d5fd3f3699918dfd9754ac92eefec9c8f
-SHA1 (patch-ac) = 6cde8ef4cf0ee0dfd4619a5acebfe09aff40e95c
-SHA1 (patch-ad) = a4c673d6f27629573d520213bd66b9d084a11a64
-SHA1 (patch-ae) = d74b9be874c88edd213fbbd297e8cd0f8bbaf46a
-SHA1 (patch-af) = 92464e74e3aa86529bb0438d7d015dfce9c82de5
+SHA1 (websvn-2.2.1.tar.gz) = 4e4bd9ec58cb54f9430913695e03dfd766d873be
+RMD160 (websvn-2.2.1.tar.gz) = 02d4d8d264d1a685bbca1c88175baf0da1e45b42
+Size (websvn-2.2.1.tar.gz) = 664548 bytes
+SHA1 (patch-ag) = 5dbac2f9264001f86db1845d9dc937acd6e080af
