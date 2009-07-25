@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8287 2009/07/25 10:42:55 obache Exp $
+$NetBSD: TODO,v 1.8288 2009/07/25 11:18:10 gdt Exp $
 
 Suggested new packages
 ======================
@@ -759,8 +759,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.6.1.1
-	o jabberd2-2.2.2 [pkg/39212]
-	o jabberd2-2.2.9
+	o jabberd2-2.2.9 (wip/jabberd2, supercedes 2.2.2 in pkg/39212)
 	o java-lang-spec-3.0
 	o jcabc2ps-20070110
 	o jdb-1.14
