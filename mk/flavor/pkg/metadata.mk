@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.31 2009/05/02 16:14:37 reed Exp $
+# $NetBSD: metadata.mk,v 1.31.2.1 2009/07/25 19:15:25 tron Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -267,24 +267,6 @@ ${_PRESERVE_FILE}:
 
 ######################################################################
 ###
-### +SIZE_ALL - Package size-of-dependencies file
-###
-### This is the total size of the dependencies that this package was
-### built against.
-###
-_SIZE_ALL_FILE=		${PKG_DB_TMPDIR}/+SIZE_ALL
-_METADATA_TARGETS+=	${_SIZE_ALL_FILE}
-
-${_SIZE_ALL_FILE}: ${_RDEPENDS_FILE}
-	${RUN}${MKDIR} ${.TARGET:H}
-	${RUN}								\
-	${_FULL_DEPENDS_CMD} | ${SORT} -u |				\
-	${XARGS} -n 256 ${PKG_INFO} -qs |				\
-	${AWK} 'BEGIN { s = 0 } /^[0-9]+$$/ { s += $$1 } END { print s }' \
-		> ${.TARGET}
-
-######################################################################
-###
 ### +SIZE_PKG - Package size file
 ###
 ### This is the total size of the files contained in the package.
@@ -304,6 +286,27 @@ ${_SIZE_PKG_FILE}: plist
 	${SED} -e "s,^/,${DESTDIR}/," -e "s/'/'\\\\''/g" -e "s/.*/'&'/" | \
 	${XARGS} -n 256 ${LS} -ld 2>/dev/null |				\
 	${AWK} 'BEGIN { s = 0 } { s += $$5 } END { print s }'		\
+		> ${.TARGET}
+
+######################################################################
+###
+### +SIZE_ALL - Package size-of-dependencies file
+###
+### This is the total size of the dependencies that this package was
+### built against and the package itself.
+###
+_SIZE_ALL_FILE=		${PKG_DB_TMPDIR}/+SIZE_ALL
+_METADATA_TARGETS+=	${_SIZE_ALL_FILE}
+
+${_SIZE_ALL_FILE}: ${_RDEPENDS_FILE} ${_SIZE_PKG_FILE}
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}								\
+	{								\
+		${CAT} ${_SIZE_PKG_FILE} &&				\
+		${_FULL_DEPENDS_CMD} | ${SORT} -u |			\
+		${XARGS} -n 256 ${PKG_INFO} -qs;			\
+	} |								\
+	${AWK} 'BEGIN { s = 0 } /^[0-9]+$$/ { s += $$1 } END { print s }' \
 		> ${.TARGET}
 
 ######################################################################
