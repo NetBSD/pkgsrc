@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2832 2009/07/25 01:19:46 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.2833 2009/07/25 07:55:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3755,3 +3755,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/jabberd2 to 2.1.24 [gdt 2009-07-24]
 	Updated security/xml-security-c to 1.5.1 [hasso 2009-07-24]
 	Updated mail/roundcube to 0.2.2 [schmonz 2009-07-25]
+	Added print/tex-xltxtra version 0.4 [minskim 2009-07-25]
+	Added print/tex-xltxtra-doc version 0.4 [minskim 2009-07-25]
