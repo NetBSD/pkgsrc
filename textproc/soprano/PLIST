@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/07/23 09:46:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/07/25 11:52:55 markd Exp $
 bin/onto2vocabularyclass
 bin/sopranocmd
 bin/sopranod
@@ -160,12 +160,12 @@ lib/soprano/libsoprano_nquadserializer.so
 lib/soprano/libsoprano_raptorparser.so
 lib/soprano/libsoprano_raptorserializer.so
 lib/soprano/libsoprano_redlandbackend.so
-share/apps/cmake/modules/SopranoAddOntology.cmake
 share/dbus-1/interfaces/org.soprano.Model.xml
 share/dbus-1/interfaces/org.soprano.NodeIterator.xml
 share/dbus-1/interfaces/org.soprano.QueryResultIterator.xml
 share/dbus-1/interfaces/org.soprano.Server.xml
 share/dbus-1/interfaces/org.soprano.StatementIterator.xml
+share/kde/apps/cmake/modules/SopranoAddOntology.cmake
 share/soprano/plugins/nquadparser.desktop
 share/soprano/plugins/nquadserializer.desktop
 share/soprano/plugins/raptorparser.desktop
