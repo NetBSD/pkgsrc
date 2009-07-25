@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2834 2009/07/25 10:26:32 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2835 2009/07/25 12:35:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3758,3 +3758,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-xltxtra version 0.4 [minskim 2009-07-25]
 	Added print/tex-xltxtra-doc version 0.4 [minskim 2009-07-25]
 	Updated net/dnstop to 20090128 [obache 2009-07-25]
+	Updated net/argus to 3.6 [markd 2009-07-25]
+	Updated math/py-numpy to 1.3.0 [markd 2009-07-25]
+	Updated math/py-scipy to 0.7.0 [markd 2009-07-25]
+	Updated mail/akonadi to 1.1.95 [markd 2009-07-25]
