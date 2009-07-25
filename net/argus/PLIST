@@ -1,28 +1,28 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/07/25 11:44:49 markd Exp $
 bin/argus-config
-etc/argus/config.example
-etc/argus/locale/de_DE
-etc/argus/locale/el_gr
-etc/argus/locale/eubonics
-etc/argus/locale/piglatin
-etc/argus/locale/sp_ar
-etc/argus/locale/template
-etc/argus/log
-etc/argus/notno
-etc/argus/users.example
 lib/argus/Alias.pm
 lib/argus/Argus/Agent.pm
+lib/argus/Argus/Archive.pm
+lib/argus/Argus/Archivist.pm
 lib/argus/Argus/Asterisk.pm
-lib/argus/Argus/BER.pm
+lib/argus/Argus/Compute.pm
 lib/argus/Argus/Ctl.pm
 lib/argus/Argus/Encode.pm
+lib/argus/Argus/Graph/Data.pm
+lib/argus/Argus/HashDir.pm
 lib/argus/Argus/IP.pm
+lib/argus/Argus/MonEl/Expand.pm
+lib/argus/Argus/MonEl/Noise.pm
+lib/argus/Argus/MonEl/Trans.pm
 lib/argus/Argus/RPC.pm
 lib/argus/Argus/RPC/TCP.pm
 lib/argus/Argus/RPC/UDP.pm
 lib/argus/Argus/SIP.pm
 lib/argus/Argus/SIP/TCP.pm
 lib/argus/Argus/SIP/UDP.pm
+lib/argus/Argus/SNMP.pm
+lib/argus/Argus/SNMP/Helper.pm
+lib/argus/Argus/Web/Overview.pm
 lib/argus/Artistic
 lib/argus/BaseIO.pm
 lib/argus/Chart/Strip.pm
@@ -31,14 +31,22 @@ lib/argus/Conf.pm
 lib/argus/Configable.pm
 lib/argus/Control.pm
 lib/argus/Cron.pm
+lib/argus/DARP.pm
+lib/argus/DARP/Conf.pm
+lib/argus/DARP/Master.pm
+lib/argus/DARP/Misc.pm
+lib/argus/DARP/Service.pm
+lib/argus/DARP/Slave.pm
+lib/argus/DARP/Watch.pm
 lib/argus/DNS.pm
 lib/argus/DNS/TCP.pm
 lib/argus/DNS/UDP.pm
 lib/argus/DataBase.pm
 lib/argus/Doc.pm
+lib/argus/Encoding/BER.pm
+lib/argus/Encoding/BER/SNMP.pm
 lib/argus/Error.pm
 lib/argus/Graph.pm
-lib/argus/GraphData.pm
 lib/argus/Group.pm
 lib/argus/LICENSE
 lib/argus/LOCATION
@@ -52,7 +60,6 @@ lib/argus/Ping.pm
 lib/argus/Prog.pm
 lib/argus/README
 lib/argus/Resolv.pm
-lib/argus/SNMP.pm
 lib/argus/SSL.pm
 lib/argus/Self.pm
 lib/argus/Server.pm
@@ -68,17 +75,39 @@ lib/argus/graphd
 lib/argus/localization.pl
 lib/argus/misc.pl
 lib/argus/picasso
+lib/argus/web_about.pl
 lib/argus/web_acl.pl
 lib/argus/web_auth_file.pl
+lib/argus/web_graph.pl
+lib/argus/web_login.pl
 lib/argus/web_misc.pl
+lib/argus/web_notify.pl
+lib/argus/web_override.pl
+lib/argus/web_page.pl
+lib/argus/web_utils.pl
+lib/argus/web_web20.pl
+libexec/cgi-bin/arguscgi
+libexec/cgi-bin/argusvxml
 sbin/argus-agent
-sbin/arguscgi
 sbin/argusctl
 sbin/argusd
+share/examples/argus/config.example
+share/examples/argus/locale/de_DE
+share/examples/argus/locale/el_gr
+share/examples/argus/locale/fr_fr
+share/examples/argus/locale/lt_LT
+share/examples/argus/locale/nl_NL
+share/examples/argus/locale/piglatin
+share/examples/argus/locale/ru_RU
+share/examples/argus/locale/sp_ar
+share/examples/argus/locale/template
+share/examples/argus/log
+share/examples/argus/notno
+share/examples/argus/users.example
 share/examples/rc.d/argusd
-@exec ${MKDIR} %D/etc/argus/stats
-@exec ${MKDIR} %D/etc/argus/perl
-@exec ${MKDIR} %D/etc/argus/notify
-@exec ${MKDIR} %D/etc/argus/html
-@exec ${MKDIR} %D/etc/argus/gdata
-@exec ${MKDIR} %D/etc/argus/gcache
+@pkgdir share/examples/argus/stats
+@pkgdir share/examples/argus/perl
+@pkgdir share/examples/argus/notify
+@pkgdir share/examples/argus/html
+@pkgdir share/examples/argus/gdata
+@pkgdir share/examples/argus/gcache
