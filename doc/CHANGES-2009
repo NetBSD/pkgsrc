@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2838 2009/07/25 21:14:05 seb Exp $
+$NetBSD: CHANGES-2009,v 1.2839 2009/07/25 21:29:46 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3479,6 +3479,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ncurses to 5.7nb3 [ahoka 2009-07-13]
 	Updated www/typolight27 to 2.7.2nb1 [taca 2009-07-13]
 	Updated www/typolight27-translations to 20090707 [taca 2009-07-13]
+	Updated mail/dovecot to 1.1.17 [ghen 2009-07-13]
 	Updated x11/xorg-cf-files to 1.0.2nb9 [dholland 2009-07-14]
 	Updated lang/librep to 0.90.0 [tnn 2009-07-14]
 	Updated x11/rep-gtk2 to 0.18.6r2 [tnn 2009-07-14]
