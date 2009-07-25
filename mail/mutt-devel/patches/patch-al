@@ -1,8 +1,17 @@
-$NetBSD: patch-al,v 1.8 2007/11/07 21:19:38 tonio Exp $
+$NetBSD: patch-al,v 1.9 2009/07/25 17:37:04 tonnerre Exp $
 
---- configure.orig	Thu Nov  1 20:13:15 2007
+--- configure.orig	2009-06-09 08:50:42.000000000 +0200
 +++ configure
-@@ -13234,7 +13234,7 @@ docdir=$mutt_cv_docdir
+@@ -11623,7 +11623,7 @@ fi
+ 
+         old_LIBS="$LIBS"
+         LIBS="$LIBS $MUTTLIBS"
+-        for ac_func in start_color typeahead bkgdset curs_set meta use_default_colors resizeterm
++        for ac_func in start_color typeahead bkgdset curs_set meta use_default_colors resizeterm mvchgat mvwchgat
+ do
+ 
+ { $as_echo "$as_me:$LINENO: checking for $ac_func declaration" >&5
+@@ -14939,7 +14939,7 @@ docdir=$mutt_cv_docdir
  
  if test x$mutt_cv_setgid = xyes; then
          DOTLOCK_GROUP='mail'
@@ -11,3 +20,12 @@ $NetBSD: patch-al,v 1.8 2007/11/07 21:19:38 tonio Exp $
  else
          DOTLOCK_GROUP=''
          DOTLOCK_PERMISSION=755
+@@ -22796,6 +22796,8 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
