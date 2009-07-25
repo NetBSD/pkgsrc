@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.15 2009/07/22 06:58:30 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.16 2009/07/25 19:42:40 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -68,3 +68,11 @@ Pullup ticket #2831 - requested by kefren
 mono-tools: keep in sync with mono
 Pullup ticket #2832 - requested by tron
 wireshark: security update
+Pullup ticket #2833 - requested by joerg
+nsd: portability fix
+Pullup ticket #2834 - requested by joerg
+mk/flavor/pkg/metadata.mk: bug fix
+Pullup ticket #2835 - requested hasso
+xml-security-c: security update
+Pullup ticket #2836 - requested by joerg
+pkg_install: bug fix
