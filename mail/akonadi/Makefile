@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2009/07/22 09:01:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/25 12:30:37 markd Exp $
 
-DISTNAME=	akonadi-1.1.2
+DISTNAME=	akonadi-1.1.95
 CATEGORIES=	mail
 MASTER_SITES=	http://download.akonadi-project.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://pim.kde.org/akonadi/
 COMMENT=	The KDE PIM Storage Service
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -38,6 +39,7 @@ SUBST_SED.mysql=	-e "s:MYSQLD_EXECUTABLE mysqld:MYSQLD_EXECUTABLE mysqld ${PREFI
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../textproc/soprano/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"

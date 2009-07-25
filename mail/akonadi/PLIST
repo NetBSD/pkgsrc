@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/07/25 12:30:37 markd Exp $
 bin/akonadi_control
 bin/akonadictl
 bin/akonadiserver
@@ -8,6 +8,8 @@ include/akonadi/private/imapset_p.h
 include/akonadi/private/notificationmessage_p.h
 include/akonadi/private/protocol_p.h
 include/akonadi/private/xdgbasedirs_p.h
+lib/cmake/Akonadi/AkonadiConfig.cmake
+lib/cmake/Akonadi/AkonadiConfigVersion.cmake
 lib/libakonadiprivate.so
 lib/libakonadiprivate.so.1
 lib/libakonadiprivate.so.${PKGVERSION}
