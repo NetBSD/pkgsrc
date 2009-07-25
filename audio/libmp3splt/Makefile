@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2009/02/12 21:35:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/25 14:58:00 schmonz Exp $
 #
 
-DISTNAME=	libmp3splt-0.5.4
+DISTNAME=	libmp3splt-0.5.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3splt/}
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://mp3splt.sourceforge.net/
 COMMENT=	Utility library for MP3 splitting/manipulation
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
