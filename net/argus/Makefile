@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2009/02/10 17:47:59 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/07/25 11:44:49 markd Exp $
 
-DISTNAME=	argus-3.4
-PKGREVISION=	1
+DISTNAME=	argus-3.6
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcp4me.com/code/argus-archive/
 EXTRACT_SUFX=	.tgz
@@ -9,8 +8,11 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	argus@tcp4me.com
 HOMEPAGE=	http://argus.tcp4me.com/
 COMMENT=	System and Network Monitoring Application
+LICENSE=	artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEFS+=	VARBASE
 
 DEPENDS+=	fping>=2.4b2:../../net/fping
 DEPENDS+=	p5-GD>=2.11:../../graphics/p5-GD
@@ -25,7 +27,8 @@ CONFIGURE_SCRIPT=	${WRKSRC}/Configure
 CONFIGURE_ARGS+=	--bin_dir ${PREFIX}/bin
 CONFIGURE_ARGS+=	--sbin_dir ${PREFIX}/sbin
 CONFIGURE_ARGS+=	--lib_dir ${PREFIX}/lib/argus
-CONFIGURE_ARGS+=	--data_dir ${PREFIX}/etc/argus
+CONFIGURE_ARGS+=	--cgi_dir ${PREFIX}/libexec/cgi-bin
+CONFIGURE_ARGS+=	--data_dir ${VARBASE}/argus
 CONFIGURE_ENV+=		PERL=${TOOLS_PERL5:Q}
 
 REPLACE_PERL+=		${WRKSRC}/built/argus-config
@@ -34,8 +37,28 @@ RCD_SCRIPTS=		argusd
 
 INSTALL_MAKE_FLAGS+= 	INSTALL_BIN=${DESTDIR}${PREFIX}/bin \
 			INSTALL_SBIN=${DESTDIR}${PREFIX}/sbin \
+			INSTALL_CGI=${DESTDIR}${PREFIX}/libexec/cgi-bin \
 			INSTALL_LIB=${DESTDIR}${PREFIX}/lib/argus \
-			INSTALL_DATA=${DESTDIR}${PREFIX}/etc/argus
+			INSTALL_DATA=${DESTDIR}${PREFIX}/share/examples/argus
+
+OWN_DIRS_PERMS=		${VARBASE}/argus ${ROOT_USER} ${ROOT_GROUP} 0777
+OWN_DIRS_PERMS+=	${VARBASE}/argus/perl ${ROOT_USER} ${ROOT_GROUP} 0777
+OWN_DIRS_PERMS+=	${VARBASE}/argus/gcache ${ROOT_USER} ${ROOT_GROUP} 0777
+OWN_DIRS_PERMS+=	${VARBASE}/argus/gdata ${ROOT_USER} ${ROOT_GROUP} 0777
+OWN_DIRS=		${VARBASE}/argus/stats
+OWN_DIRS+=		${VARBASE}/argus/notify
+OWN_DIRS+=		${VARBASE}/argus/locale
+OWN_DIRS+=		${VARBASE}/argus/html
+CONF_FILES=		${PREFIX}/share/examples/argus/config.example ${VARBASE}/argus/config
+CONF_FILES+=		${PREFIX}/share/examples/argus/users.example ${VARBASE}/argus/users
+CONF_FILES+=		${PREFIX}/share/examples/argus/log ${VARBASE}/argus/log
+CONF_FILES+=		${PREFIX}/share/examples/argus/notno ${VARBASE}/argus/notno
+.for f in de_DE el_gr fr_fr lt_LT nl_NL piglatin ru_RU sp_ar template
+CONF_FILES+=		${PREFIX}/share/examples/argus/locale/${f} ${VARBASE}/argus/locale/${f}
+.endfor
+
+post-install:
+	(cd ${DESTDIR}${PREFIX}/share/examples/argus; chmod 755 . perl gcache gdata)
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"

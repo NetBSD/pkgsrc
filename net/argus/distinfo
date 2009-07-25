@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2007/03/18 18:59:17 adam Exp $
+$NetBSD: distinfo,v 1.6 2009/07/25 11:44:49 markd Exp $
 
-SHA1 (argus-3.4.tgz) = e7be66d511f8d31e367ec31e454a367c3ed106ef
-RMD160 (argus-3.4.tgz) = be206840f1ceaf516a75caab4bdd80df75ed019e
-Size (argus-3.4.tgz) = 297042 bytes
+SHA1 (argus-3.6.tgz) = 132b0ee35a0c4523a65c93673ba838ce8dbe9e09
+RMD160 (argus-3.6.tgz) = a53283ef6162c94864438d90d79de43916032b0f
+Size (argus-3.6.tgz) = 380302 bytes
 SHA1 (patch-aa) = 85725be47608b8f7a7f675c50e90b763fb6cfbe9
