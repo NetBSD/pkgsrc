@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8290 2009/07/25 15:00:05 schmonz Exp $
+$NetBSD: TODO,v 1.8291 2009/07/25 19:34:44 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1344,7 +1344,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webby-0.9.3
 	o webkit-gtk-1.1.11
 	o webmin-1.480
-	o websvn-2.0
 	o weewm-0.01
 	o whohas-0.23
 	o windowlab-1.34
