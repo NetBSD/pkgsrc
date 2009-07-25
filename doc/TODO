@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8285 2009/07/25 01:19:46 schmonz Exp $
+$NetBSD: TODO,v 1.8286 2009/07/25 10:27:37 obache Exp $
 
 Suggested new packages
 ======================
@@ -529,7 +529,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dircproxy-devel-1.2.0.2
-	o dnstop-20070307
 	o dnstracer-1.9
 	o dovecot-1.2.0
 	o doxygen-1.5.9
