@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8284 2009/07/24 05:09:57 schmonz Exp $
+$NetBSD: TODO,v 1.8285 2009/07/25 01:19:46 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1139,7 +1139,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o root-5.14.0
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
-	o roundcube-0.2.1
 	o roundup-1.4.8
 	o rox-2.9
 	o rox-session-0.29
