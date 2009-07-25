@@ -1,0 +1,10 @@
+The package loads the fixltx2e package from the LaTeX distribution,
+and etex.sty from the e-TeX distribution.  The package then patches
+the \- (discretionary hyphen command) to use the current hyphen
+character (which may be different from than the default, which is the
+character at the ASCII hyphen slot), and the \textsuperscript command
+(from the LaTeX kernel) and the \textsubscript command (from the
+fixltx2e package).  The package also provides parameterised versions
+of the "bumpy road" logos for TeX, LaTeX and XeTeX; these versions of
+the logos are designed to respond to the font that is being used for
+typesetting.
