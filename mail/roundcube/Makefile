@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.19 2009/03/20 10:50:02 adrianp Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/25 01:19:16 schmonz Exp $
 #
 
 DISTNAME=	roundcubemail-${RCVERSION}-dep
 PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep/-${VERSION}/}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-RCVERSION=	0.2.1
+RCVERSION=	0.2.2
 VERSION=	${RCVERSION:S/-//}
 
 PKG_DESTDIR_SUPPORT=  	user-destdir
