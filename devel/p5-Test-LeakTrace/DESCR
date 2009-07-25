@@ -1,0 +1,3 @@
+The Perl 5 module Test::LeakTrace provides several functions that
+trace memory leaks. It scans arenas, the memory allocation system,
+so it can detect any leaked SVs in given blocks.
