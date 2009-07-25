@@ -15,7 +15,8 @@ DDEESSCCRRIIPPTTIIOONN
      The following variables are supported:
 
      ACCEPTABLE_LICENSES
-             List of licenses packages are allowed to carry.
+             List of licenses packages are allowed to carry.  License names
+             are case-sensitive.
 
      ACTIVE_FTP
              Force the use of active FTP.
@@ -51,7 +52,8 @@ DDEESSCCRRIIPPTTIIOONN
 
      DEFAULT_ACCEPTABLE_LICENSES
              List of common Free and Open Source licenses packages are allowed
-             to carry.
+             to carry.  The default value contains all OSI approved licenses
+             in pkgsrc on the date pkg_install was released.
 
      GPG     Path to gpg(1), which can be used to verify the signature in the
              _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file when running
