@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2009/07/25 19:40:54 tron Exp $
 bin/c14n
 bin/checksig
 bin/cipher
@@ -13,6 +13,7 @@ include/xsec/canon/XSECXMLNSStack.hpp
 include/xsec/dsig/DSIGAlgorithmHandlerDefault.hpp
 include/xsec/dsig/DSIGConstants.hpp
 include/xsec/dsig/DSIGKeyInfo.hpp
+include/xsec/dsig/DSIGKeyInfoExt.hpp
 include/xsec/dsig/DSIGKeyInfoList.hpp
 include/xsec/dsig/DSIGKeyInfoMgmtData.hpp
 include/xsec/dsig/DSIGKeyInfoName.hpp
