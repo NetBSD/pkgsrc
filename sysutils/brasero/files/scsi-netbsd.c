@@ -1,4 +1,4 @@
-/* $NetBSD: scsi-netbsd.c,v 1.2 2009/03/22 09:30:39 wiz Exp $ */
+/* $NetBSD: scsi-netbsd.c,v 1.3 2009/07/26 18:25:01 drochner Exp $ */
 /* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
 /*
  * Libbrasero-media
@@ -164,14 +164,11 @@ brasero_device_handle_open (const gchar *path,
 	int fd;
 	int flags = OPEN_FLAGS;
 	BraseroDeviceHandle *handle;
-	gchar *rdevnode;
 
 	if (exclusive)
 		flags |= O_EXCL;
 
-	rdevnode = g_strdup_printf ("/dev/r%s", path + strlen ("/dev/"));
-	fd = open (rdevnode, flags);
-	g_free (rdevnode);
+	fd = open (path, flags);
 	if (fd < 0) {
 		if (code) {
 			if (errno == EAGAIN
