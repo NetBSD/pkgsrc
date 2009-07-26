@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2009/06/11 08:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/26 18:45:21 drochner Exp $
 #
 
 DISTNAME=	gnome-desktop-sharp-2.26.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop-sharp/2.26/}
 
@@ -41,8 +41,6 @@ BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.18.0
 .include "../../print/libgnomeprint/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.18.0
 .include "../../print/libgnomeprintui/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nautilus-cd-burner+=	nautilus-cd-burner>=2.22.1
-.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtkhtml314+=	gtkhtml314>=3.23.5
 .include "../../www/gtkhtml314/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.26.0
