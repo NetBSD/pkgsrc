@@ -1,0 +1,9 @@
+gsftopk is a program that uses Ghostscript to render PostScript fonts
+(including mock-ups of the ``built-in'' 35; e.g., Times-Roman) and
+convert the bitmaps to .pk format for use with xdvi or other .dvi
+viewers.  Contrary to what its name may suggest, gsftopk can handle
+all types of fonts acceptable to Ghostscript, including .pfa, .pfb,
+and .ttf (TrueType) files.
+
+gsftopkk is the same basic program, modified to work with Karl Berry's
+Kpathsea path-searching library.
