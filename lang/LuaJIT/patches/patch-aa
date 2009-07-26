@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/07/26 19:34:33 rillig Exp $
+
+--- Makefile.orig	2008-10-25 09:00:00.000000000 +0900
++++ Makefile
+@@ -61,15 +61,22 @@ test:	dummy
+ 	src/luajit -O -e 'io.write("Hello world, from ", jit.version, "!\n")'
+ 
+ install: dummy
+-	cd src && $(MKDIR) $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN) $(INSTALL_LMOD) $(INSTALL_CMOD) $(INSTALL_LMOD)/jit
+-	cd src && $(INSTALL_EXEC) $(TO_BIN) $(INSTALL_BIN)
+-	###cd src && $(INSTALL_DATA) $(TO_INC) $(INSTALL_INC)
+-	###cd src && $(INSTALL_DATA) $(TO_LIB) $(INSTALL_LIB)
+-	###cd doc && $(INSTALL_DATA) $(TO_MAN) $(INSTALL_MAN)
+-	cd jit && $(INSTALL_DATA) *.lua $(INSTALL_LMOD)/jit
++	cd src && $(MKDIR) \
++		$(DESTDIR)$(INSTALL_BIN) \
++		$(DESTDIR)$(INSTALL_INC) \
++		$(DESTDIR)$(INSTALL_LIB) \
++		$(DESTDIR)$(INSTALL_MAN) \
++		$(DESTDIR)$(INSTALL_LMOD) \
++		$(DESTDIR)$(INSTALL_CMOD) \
++		$(DESTDIR)$(INSTALL_LMOD)/jit
++	cd src && $(INSTALL_EXEC) $(TO_BIN) $(DESTDIR)$(INSTALL_BIN)
++	###cd src && $(INSTALL_DATA) $(TO_INC) $(DESTDIR)$(INSTALL_INC)
++	###cd src && $(INSTALL_DATA) $(TO_LIB) $(DESTDIR)$(INSTALL_LIB)
++	###cd doc && $(INSTALL_DATA) $(TO_MAN) $(DESTDIR)$(INSTALL_MAN)
++	cd jit && $(INSTALL_DATA) *.lua $(DESTDIR)$(INSTALL_LMOD)/jit
+ 
+ ranlib:
+-	cd src && cd $(INSTALL_LIB) && $(RANLIB) $(TO_LIB)
++	cd src && cd $(DESTDIR)$(INSTALL_LIB) && $(RANLIB) $(TO_LIB)
+ 
+ none:
+ 	@echo "Please do"
