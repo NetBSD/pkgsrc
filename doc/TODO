@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8292 2009/07/26 09:10:15 obache Exp $
+$NetBSD: TODO,v 1.8293 2009/07/26 10:30:28 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1457,7 +1457,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zope34-3.4.0
 	o zopeedit-0.8
 	o zsh-4.3.10
-	o zziplib-0.13.56
 
 Infrastructure problems which need addressing
 =============================================
