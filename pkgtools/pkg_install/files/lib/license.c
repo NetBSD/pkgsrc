@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.7 2009/07/24 19:06:45 joerg Exp $	*/
+/*	$NetBSD: license.c,v 1.8 2009/07/26 09:18:29 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -57,7 +57,7 @@ const char *default_acceptable_licenses =
     "cddl-1.0 "
     "cpl-1.0 "
     "open-font-license "
-    "mpl-1.1 "
+    "mpl-1.0 mpl-1.1 "
     "zpl";
 
 #ifdef DEBUG
