@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.26 2008/09/22 17:11:02 ahoka Exp $
+# $NetBSD: BSDOS.mk,v 1.27 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -75,6 +75,8 @@ _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 SERIAL_DEVICES?=	/dev/null
+
+_OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 PKG_CREATE_USERGROUP=	NO # until it works
 

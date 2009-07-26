@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.33 2008/10/30 18:52:08 joerg Exp $
+# $NetBSD: AIX.mk,v 1.34 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -69,6 +69,8 @@ _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 DEFAULT_SERIAL_DEVICE?=	/dev/tty0
 SERIAL_DEVICES?=	/dev/tty0 \
 			/dev/tty
+
+_OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.

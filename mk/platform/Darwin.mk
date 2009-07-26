@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.39 2009/07/11 10:32:41 tron Exp $
+# $NetBSD: Darwin.mk,v 1.40 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -99,6 +99,8 @@ _USE_RPATH=		no	# don't add rpath to LDFLAGS
 # this is GNU ld.
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
 _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
+
+_OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-Wl,-x} # cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip

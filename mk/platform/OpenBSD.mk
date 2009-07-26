@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.28 2008/03/04 06:45:34 jlam Exp $
+# $NetBSD: OpenBSD.mk,v 1.29 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -94,6 +94,8 @@ SERIAL_DEVICES?=	/dev/ttya \
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 SERIAL_DEVICES?=	/dev/null
 .endif
+
+_OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.

@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.27 2009/03/17 17:58:49 tnn Exp $
+# $NetBSD: OSF1.mk,v 1.28 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -68,6 +68,8 @@ SERIAL_DEVICES?=	/dev/tty00 \
 			/dev/tty01
 
 _INCOMPAT_ICONV=   OSF1-*-*
+
+_OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 # sysutils/fam is not usable on OSF1.
 FAM_DEFAULT?=		gamin
