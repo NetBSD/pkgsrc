@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2009/07/07 18:33:52 sno Exp $
+# $NetBSD: Makefile,v 1.25 2009/07/26 07:04:05 seb Exp $
 #
 
-DISTNAME=	Class-MOP-0.89
+DISTNAME=	Class-MOP-0.90
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
@@ -21,6 +21,8 @@ BUILD_DEPENDS+=	p5-PathTools-[0-9]*:../../devel/p5-PathTools
 BUILD_DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER # t/050_scala_style_mixin_composition.t
 BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Simple>=0.77:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output # t/310_inline_structor.t
+BUILD_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace # t/312_anon_class_leak.t
 
 USE_LANGUAGES=	c
 MAKE_JOBS_SAFE= no
