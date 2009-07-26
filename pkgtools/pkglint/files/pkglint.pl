@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.818 2009/07/26 19:30:33 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.819 2009/07/26 21:03:19 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1374,6 +1374,7 @@ my $regex_shellword		=  qr"\s*(
 	|	\$[/\@<^]		# special make(1) variables
 	|	\$\$[0-9A-Z_a-z]+	# shell variable
 	|	\$\$[\#?@]		# special shell variables
+	|	\$\$\$\$		# the special pid shell variable
 	|	\$\$\{[0-9A-Z_a-z]+\}	# shell variable in braces
 	|	\$\$\(			# POSIX-style backticks replacement
 	|	[^\(\)'\"\\\s;&\|<>\`\$] # non-special character
@@ -4204,7 +4205,8 @@ sub checkline_mk_shellword($$$) {
 				$state = SWST_BACKT;
 			} elsif ($rest =~ s/^\\(?:[ !"#'\(\)*;?\\^{|}]|\$\$)//) {
 			} elsif ($rest =~ s/^\$\$([0-9A-Z_a-z]+|\#)//
-			    || $rest =~ s/^\$\$\{([0-9A-Z_a-z]+|\#)\}//) {
+			    || $rest =~ s/^\$\$\{([0-9A-Z_a-z]+|\#)\}//
+			    || $rest =~ s/^\$\$(\$)\$//) {
 				my ($shvarname) = ($1);
 				if ($opt_warn_quoting && $check_quoting) {
 					$line->log_warning("Unquoted shell variable \"${shvarname}\".");
