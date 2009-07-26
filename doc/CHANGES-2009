@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2840 2009/07/25 22:26:26 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2841 2009/07/26 04:32:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3768,3 +3768,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/websvn to 2.2.1 [schmonz 2009-07-25]
 	Added devel/p5-Test-LeakTrace version 0.10 [seb 2009-07-25]
 	Updated emulators/sdlmame to 0.133 [wiz 2009-07-25]
+	Updated www/typolight27-translations to 20090725 [taca 2009-07-26]
