@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/03/04 01:01:45 jmcneill Exp $
+$NetBSD: distinfo,v 1.3 2009/07/26 20:13:31 drochner Exp $
 
-SHA1 (unique-1.0.6.tar.gz) = c68d1a47e9c2326a671f054c5373d41fc296f2d6
-RMD160 (unique-1.0.6.tar.gz) = c2f9d24030625d6887d839aaeff4ac5f35d3a98e
-Size (unique-1.0.6.tar.gz) = 449242 bytes
+SHA1 (libunique-1.0.8.tar.gz) = 3497b89b69c5d8ed70b487d32bd449bb0b7bc91f
+RMD160 (libunique-1.0.8.tar.gz) = 6fb3469fc8282e248e9776cc4972f2eac75971db
+Size (libunique-1.0.8.tar.gz) = 457465 bytes
