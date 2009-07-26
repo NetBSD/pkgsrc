@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/07/26 18:25:01 drochner Exp $
 bin/brasero
 include/brasero/brasero-drive-selection.h
 include/brasero/brasero-drive.h
@@ -29,11 +29,9 @@ lib/brasero/plugins/libbrasero-vcdimager.la
 lib/brasero/plugins/libbrasero-vob.la
 lib/brasero/plugins/libbrasero-wodim.la
 lib/libbrasero-media.la
-lib/nautilus/extensions-2.0/libnautilus-brasero-extension.la
 lib/pkgconfig/libbrasero-media.pc
 man/man1/brasero.1
 share/applications/brasero-copy-medium.desktop
-share/applications/brasero-nautilus.desktop
 share/applications/brasero-open-image.desktop
 share/applications/brasero-open-playlist.desktop
 share/applications/brasero-open-project.desktop
