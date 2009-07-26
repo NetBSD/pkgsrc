@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2009/07/06 15:22:14 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2009/07/26 18:25:01 drochner Exp $
 
---- configure.orig	2009-05-18 17:06:56.000000000 +0200
+--- configure.orig	2009-07-01 03:03:18.000000000 +0200
 +++ configure
-@@ -912,6 +912,8 @@ HAVE_SG_IO_HDR_T_FALSE
- HAVE_SG_IO_HDR_T_TRUE
- HAVE_CAM_LIB_H_FALSE
- HAVE_CAM_LIB_H_TRUE
+@@ -900,6 +900,8 @@ ENABLE_GTK_DOC_TRUE
+ GTKDOC_CHECK
+ PKG_CONFIG
+ HTML_DIR
 +HAVE_SCSIIO_H_FALSE
 +HAVE_SCSIIO_H_TRUE
- BRASERO_SCSI_LIBS
- LIBTOOL
- ac_ct_F77
-@@ -21715,6 +21717,116 @@ else
+ HAVE_USCSI_H_FALSE
+ HAVE_USCSI_H_TRUE
+ HAVE_SG_IO_HDR_T_FALSE
+@@ -12828,6 +12830,116 @@ else
  fi
  
  
@@ -128,7 +128,7 @@ $NetBSD: patch-ac,v 1.1 2009/07/06 15:22:14 joerg Exp $
  { $as_echo "$as_me:$LINENO: checking for struct uscsi_cmd" >&5
  $as_echo_n "checking for struct uscsi_cmd... " >&6; }
  if test "${ac_cv_type_struct_uscsi_cmd+set}" = set; then
-@@ -21829,11 +21941,13 @@ if test x"$has_cam" = x"yes"; then
+@@ -12942,11 +13054,13 @@ if test x"$has_cam" = x"yes"; then
      BRASERO_SCSI_LIBS="-lcam"
  elif test x"$has_sg" = x"yes"; then
  	:
@@ -144,7 +144,7 @@ $NetBSD: patch-ac,v 1.1 2009/07/06 15:22:14 joerg Exp $
     { (exit 1); exit 1; }; }
  fi
  
-@@ -21861,6 +21975,14 @@ else
+@@ -12974,6 +13088,14 @@ else
    HAVE_USCSI_H_FALSE=
  fi
  
@@ -159,7 +159,7 @@ $NetBSD: patch-ac,v 1.1 2009/07/06 15:22:14 joerg Exp $
  
  
  # Check whether --enable-largefile was given.
-@@ -28616,6 +28738,13 @@ $as_echo "$as_me: error: conditional \"H
+@@ -19787,6 +19909,13 @@ $as_echo "$as_me: error: conditional \"H
  Usually this means the macro was only invoked conditionally." >&2;}
     { (exit 1); exit 1; }; }
  fi
@@ -173,12 +173,3 @@ $NetBSD: patch-ac,v 1.1 2009/07/06 15:22:14 joerg Exp $
  if test -z "${ENABLE_GTK_DOC_TRUE}" && test -z "${ENABLE_GTK_DOC_FALSE}"; then
    { { $as_echo "$as_me:$LINENO: error: conditional \"ENABLE_GTK_DOC\" was never defined.
  Usually this means the macro was only invoked conditionally." >&5
-@@ -29161,6 +29290,8 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;

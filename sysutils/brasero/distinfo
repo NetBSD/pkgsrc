@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.4 2009/07/06 15:22:14 joerg Exp $
+$NetBSD: distinfo,v 1.5 2009/07/26 18:25:01 drochner Exp $
 
-SHA1 (brasero-2.26.2.tar.bz2) = a65f0167d209e86535611d37887481beb21e33c8
-RMD160 (brasero-2.26.2.tar.bz2) = 5110cd570448b9f3c4213483ee90f8f13a7dc038
-Size (brasero-2.26.2.tar.bz2) = 3326163 bytes
+SHA1 (brasero-2.26.3.tar.bz2) = 97273908948481ea2f97d4a12e7bf5031ca613cb
+RMD160 (brasero-2.26.3.tar.bz2) = f1f811b239f4b5edfa0a3dfde65b028c43e4906c
+Size (brasero-2.26.3.tar.bz2) = 3312144 bytes
 SHA1 (patch-aa) = 3799e6f3a59e03bc8a187b0eca025c1f15bf5135
 SHA1 (patch-ab) = 5e9c3a4c3608a04270d6c7e034b5e3dd0c25e44f
-SHA1 (patch-ac) = 9829e879d145586bb00390c26d76879d8d999179
+SHA1 (patch-ac) = ab62c40cc9046020c9088ae7958fe3e7a3af8eba
 SHA1 (patch-ad) = 80632fe45694e98692ab2aa69d24f97ad13de346
+SHA1 (patch-ae) = e5dfb8da776b860074aa935a97152968222ae9bc
+SHA1 (patch-af) = 41414c465307b08de981a281e4fa1219dd47f28e
+SHA1 (patch-ag) = a97f16bfc2a82d50904c2432daab9bb456cbe5ce
+SHA1 (patch-ah) = 91325870ad2bbfe307bbf3bc82243375b43e229c
