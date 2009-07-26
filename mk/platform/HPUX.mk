@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.17 2009/03/17 17:58:49 tnn Exp $
+# $NetBSD: HPUX.mk,v 1.18 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -74,6 +74,8 @@ SERIAL_DEVICES?=	/dev/tty0p0 \
 			/dev/tty1p0
 
 _INCOMPAT_ICONV=   HPUX-*-*
+
+_OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 # sysutils/fam is not usable on HP-UX.
 FAM_DEFAULT?=		gamin
