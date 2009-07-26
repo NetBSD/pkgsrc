@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 22:00:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/07/26 20:20:51 drochner Exp $
 bin/midori
 lib/midori/libcolorful-tabs.so
 lib/midori/libcookie-manager.so
 lib/midori/libfeed-panel.so
 lib/midori/libmouse-gestures.so
 lib/midori/libpage-holder.so
+lib/midori/libshortcuts.so
 lib/midori/libstatusbar-features.so
+lib/midori/libtab-panel.so
+lib/midori/libtoolbar-editor.so
 share/applications/midori.desktop
 share/doc/midori/AUTHORS
 share/doc/midori/COPYING
@@ -21,6 +24,9 @@ share/icons/hicolor/16x16/status/news-feed.png
 share/icons/hicolor/22x22/apps/midori.png
 share/icons/hicolor/22x22/categories/extension.png
 share/icons/hicolor/22x22/status/news-feed.png
+share/icons/hicolor/24x24/apps/midori.png
+share/icons/hicolor/24x24/categories/extension.png
+share/icons/hicolor/24x24/status/news-feed.png
 share/icons/hicolor/32x32/apps/midori.png
 share/icons/hicolor/32x32/categories/extension.png
 share/icons/hicolor/32x32/status/news-feed.png
@@ -48,6 +54,8 @@ share/locale/pt/LC_MESSAGES/midori.mo
 share/locale/ro/LC_MESSAGES/midori.mo
 share/locale/ru/LC_MESSAGES/midori.mo
 share/locale/sk/LC_MESSAGES/midori.mo
+share/locale/sr/LC_MESSAGES/midori.mo
+share/locale/sr@latin/LC_MESSAGES/midori.mo
 share/locale/sv/LC_MESSAGES/midori.mo
 share/locale/tr/LC_MESSAGES/midori.mo
 share/locale/uk/LC_MESSAGES/midori.mo
