@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2009/07/07 11:00:44 zafer Exp $
+# $NetBSD: Makefile,v 1.29 2009/07/26 19:05:30 drochner Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.26/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ PY_PATCHPLIST=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
-DEPENDS+=	bug-buddy>=2.16:../../net/bug-buddy
+#DEPENDS+=	bug-buddy>=2.16:../../net/bug-buddy
 
 PKGCONFIG_OVERRIDE+=	gnome-python-desktop-2.0.pc.in
 
@@ -37,7 +37,6 @@ PYTHON_VERSIONS_ACCEPTED=	26 25 24
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
-.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 # disabled in configure script by default
 # CONFIGURE_ARGS+=	--enable-metacity
 #.include "../../wm/metacity/buildlink3.mk"
