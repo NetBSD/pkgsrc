@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/26 23:50:00 minskim Exp $
+bin/mag
+bin/pfb2pfa
+bin/pk2bm
+bin/ps2pk
+man/man1/mag.1
+man/man1/pfb2pfa.1
+man/man1/pk2bm.1
+man/man1/ps2pk.1

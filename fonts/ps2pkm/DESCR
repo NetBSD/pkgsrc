@@ -1,0 +1,5 @@
+ps2pk is a tool that converts a PostScript type1 font into a
+corresponding TeX PK font.  The tool is especially interesting if you
+want to use fully hinted type1 fonts in your DVI previewer (instead of
+the unhinted type1 fonts currently used in GhostScript) or on a
+printer that has no PostScript interpreter.
