@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/03/04 01:01:45 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/26 20:13:31 drochner Exp $
 #
 
-DISTNAME=	unique-1.0.6
-PKGNAME=	lib${DISTNAME}
+DISTNAME=	libunique-1.0.8
 CATEGORIES=	devel
-MASTER_SITES=	http://www.gnome.org/~ebassi/source/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libunique/1.0/}
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/LibUnique
@@ -14,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	unique.pc.in
 
