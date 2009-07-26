@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:13 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/26 21:15:10 minskim Exp $
 
 MODNAME=		zip
+PKGREVISION=		1
 PECL_VERSION=		1.0
 CATEGORIES+=		archivers
 COMMENT=		PHP extension for ZIP archive handling
