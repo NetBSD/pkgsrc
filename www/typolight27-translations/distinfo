@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2009/07/13 20:45:39 taca Exp $
+$NetBSD: distinfo,v 1.20 2009/07/26 04:31:57 taca Exp $
 
 SHA1 (TYPOlight-Afrikaans-v1.zip) = 4768afb2c105acbfe98c26cc579837d2d2a8620c
 RMD160 (TYPOlight-Afrikaans-v1.zip) = 7a2d4ad7c3dda26b3c48ef30b74de6c62f2abb03
@@ -33,9 +33,9 @@ Size (TYPOlight-Icelandic-v2.zip) = 76117 bytes
 SHA1 (TYPOlight-Indonesian-v1.zip) = b814c0903c4f4efe3deec2f25977befe98f9c9cb
 RMD160 (TYPOlight-Indonesian-v1.zip) = 67d09a5aba444e103d60428c8c010cd05ed2c7b4
 Size (TYPOlight-Indonesian-v1.zip) = 72232 bytes
-SHA1 (TYPOlight-Italian-v15.zip) = ee1785eb60255a6ca6147082fd84a983014caa66
-RMD160 (TYPOlight-Italian-v15.zip) = 3a1912f56175077998aad93d9724e5e704e8464f
-Size (TYPOlight-Italian-v15.zip) = 150261 bytes
+SHA1 (TYPOlight-Italian-v16.zip) = 72d4c9223d0748ce35d398d46dc99e8fd7f41e80
+RMD160 (TYPOlight-Italian-v16.zip) = b0d8adaadff111849332f4ee2b0660502f90b520
+Size (TYPOlight-Italian-v16.zip) = 147323 bytes
 SHA1 (TYPOlight-Japanese-v22.zip) = e43a9b62890c50741411c9da3fc1157b6542da5c
 RMD160 (TYPOlight-Japanese-v22.zip) = 47e5aff4c34e8de8124c308884e76a010ed34437
 Size (TYPOlight-Japanese-v22.zip) = 156592 bytes
@@ -78,9 +78,9 @@ Size (TYPOlight-Swedish-v33.zip) = 149858 bytes
 SHA1 (TYPOlight-Thai-v2.zip) = 90e87265f460fb917f57fb5ba25a0aeecaa9a54a
 RMD160 (TYPOlight-Thai-v2.zip) = e3fb7addc9a57b1ffb11b0ec8cab248927dd0822
 Size (TYPOlight-Thai-v2.zip) = 153160 bytes
-SHA1 (TYPOlight-Turkish-v1.zip) = 050cda9394e46a402eddd08ca85273bfcbdc79d5
-RMD160 (TYPOlight-Turkish-v1.zip) = e289c509621e35322048a62b38031215469d6131
-Size (TYPOlight-Turkish-v1.zip) = 68706 bytes
+SHA1 (TYPOlight-Turkish-v2.zip) = 12c47d7fb661c3a330b26bc62d005953fc17c174
+RMD160 (TYPOlight-Turkish-v2.zip) = f395c5196a3dea4aca0bd7638763a7b7fb987670
+Size (TYPOlight-Turkish-v2.zip) = 90327 bytes
 SHA1 (TYPOlight-Ukrainian-v9.zip) = 4c051a654310a403acf0569c85361081ebe718fd
 RMD160 (TYPOlight-Ukrainian-v9.zip) = 67132cf885af76f23f792b0ca59d96948351a964
 Size (TYPOlight-Ukrainian-v9.zip) = 168862 bytes
