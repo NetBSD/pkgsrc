@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.817 2009/07/22 22:11:54 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.818 2009/07/26 19:30:33 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2714,6 +2714,21 @@ sub var_is_used($) {
 		return $pkgctx_varuse->{$varcanon} if exists($pkgctx_varuse->{$varcanon});
 	}
 	return false;
+}
+
+sub def_var($$) {
+	my ($line, $varname) = @_;
+	my $varcanon = varname_canon($varname);
+
+	if (defined($mkctx_vardef)) {
+		$mkctx_vardef->{$varname} = $line;
+		$mkctx_vardef->{$varcanon} = $line;
+	}
+
+	if (defined($pkgctx_vardef)) {
+		$pkgctx_vardef->{$varname} = $line;
+		$pkgctx_vardef->{$varcanon} = $line;
+	}
 }
 
 sub var_is_defined($) {
@@ -5874,6 +5889,7 @@ sub checklines_package_Makefile_varorder($) {
 		[ "Legal issues", optional,
 			[
 				[ "LICENSE", once ],
+				[ "LICENSE_FILE", optional ],
 				[ "RESTRICTED", optional ],
 				[ "NO_BIN_ON_CDROM", optional ],
 				[ "NO_BIN_ON_FTP", optional ],
@@ -6048,6 +6064,12 @@ sub checklines_mk($) {
 			foreach my $svar (split(/\s+/, $line->get("value"))) {
 				use_var($svar, varname_canon($svar));
 				$opt_debug_misc and $line->log_debug("varuse $svar");
+			}
+
+		} elsif ($varcanon eq "OPSYSVARS") {
+			foreach my $osvar (split(/\s+/, $line->get("value"))) {
+				use_var($line, "$osvar.*");
+				def_var($line, $osvar);
 			}
 		}
 	}
@@ -7686,6 +7708,9 @@ sub checkfile_PLIST($) {
 						warn_about_PLIST_imake_mannewsuffix($line);
 					}
 				}
+
+			} elsif ($cmd eq "pkgdir") {
+				# TODO: What can we check here?
 
 			} else {
 				$line->log_warning("Unknown PLIST directive \"\@$cmd\".");
