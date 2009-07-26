@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.61 2009/06/02 14:51:03 joerg Exp $
+# $NetBSD: Interix.mk,v 1.62 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -148,6 +148,8 @@ _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 DEFAULT_SERIAL_DEVICE?=	/dev/tty00
 SERIAL_DEVICES?=	/dev/tty00 /dev/tty01 /dev/tty02 /dev/tty03
+
+_OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 # poll(2) is broken; try to work around it by making autoconf believe
 # it's missing.  (Packages without autoconf will need explicit fixing.)

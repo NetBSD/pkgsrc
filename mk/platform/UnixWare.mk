@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.27 2008/03/04 06:45:34 jlam Exp $
+# $NetBSD: UnixWare.mk,v 1.28 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -75,6 +75,8 @@ _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip
 
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
+
+_OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.

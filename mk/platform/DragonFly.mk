@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.36 2008/03/04 06:45:34 jlam Exp $
+# $NetBSD: DragonFly.mk,v 1.37 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -74,6 +74,8 @@ _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 DEFAULT_SERIAL_DEVICE?=	/dev/cuaa0
 SERIAL_DEVICES?=	/dev/cuaa0
+
+_OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
 
 # check for kqueue(2) support
 .if exists(/usr/include/sys/event.h)

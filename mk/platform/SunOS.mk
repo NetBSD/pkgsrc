@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.36 2009/01/14 23:33:48 sketch Exp $
+# $NetBSD: SunOS.mk,v 1.37 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -83,6 +83,8 @@ _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
+
+_OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.

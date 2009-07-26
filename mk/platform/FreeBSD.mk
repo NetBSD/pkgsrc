@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.25 2008/05/13 11:40:24 tnn Exp $
+# $NetBSD: FreeBSD.mk,v 1.26 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -81,6 +81,8 @@ SERIAL_DEVICES?=	/dev/cuaa0
 .if exists(/usr/include/sys/event.h)
 PKG_HAVE_KQUEUE=	# defined
 .endif
+
+_OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
