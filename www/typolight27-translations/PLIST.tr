@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.tr,v 1.3 2009/06/14 22:00:39 joerg Exp $
+@comment $NetBSD: PLIST.tr,v 1.4 2009/07/26 04:31:57 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/tr/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/tr/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/tr/default.php
@@ -50,10 +50,19 @@ ${TL_WEBDIR}/system/modules/faq/languages/tr/tl_module.php
 ${TL_WEBDIR}/system/modules/frontend/languages/tr/.htaccess
 ${TL_WEBDIR}/system/modules/frontend/languages/tr/default.php
 ${TL_WEBDIR}/system/modules/frontend/languages/tr/modules.php
+${TL_WEBDIR}/system/modules/glossary/languages/tr/.htaccess
+${TL_WEBDIR}/system/modules/glossary/languages/tr/modules.php
+${TL_WEBDIR}/system/modules/glossary/languages/tr/tl_glossary.php
+${TL_WEBDIR}/system/modules/glossary/languages/tr/tl_glossary_term.php
+${TL_WEBDIR}/system/modules/glossary/languages/tr/tl_module.php
 ${TL_WEBDIR}/system/modules/listing/languages/tr/.htaccess
-${TL_WEBDIR}/system/modules/listing/languages/tr/default.php
 ${TL_WEBDIR}/system/modules/listing/languages/tr/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/tr/tl_module.php
+${TL_WEBDIR}/system/modules/memberlist/languages/tr/.htaccess
+${TL_WEBDIR}/system/modules/memberlist/languages/tr/default.php
+${TL_WEBDIR}/system/modules/memberlist/languages/tr/modules.php
+${TL_WEBDIR}/system/modules/memberlist/languages/tr/tl_member.php
+${TL_WEBDIR}/system/modules/memberlist/languages/tr/tl_module.php
 ${TL_WEBDIR}/system/modules/news/languages/tr/.htaccess
 ${TL_WEBDIR}/system/modules/news/languages/tr/default.php
 ${TL_WEBDIR}/system/modules/news/languages/tr/modules.php
@@ -77,6 +86,14 @@ ${TL_WEBDIR}/system/modules/registration/languages/tr/.htaccess
 ${TL_WEBDIR}/system/modules/registration/languages/tr/default.php
 ${TL_WEBDIR}/system/modules/registration/languages/tr/modules.php
 ${TL_WEBDIR}/system/modules/registration/languages/tr/tl_module.php
+${TL_WEBDIR}/system/modules/rep_base/languages/tr/.htaccess
+${TL_WEBDIR}/system/modules/rep_base/languages/tr/modules.php
+${TL_WEBDIR}/system/modules/rep_base/languages/tr/tl_repository.php
+${TL_WEBDIR}/system/modules/rep_base/languages/tr/tl_settings.php
+${TL_WEBDIR}/system/modules/rep_client/languages/tr/.htaccess
+${TL_WEBDIR}/system/modules/rep_client/languages/tr/modules.php
+${TL_WEBDIR}/system/modules/rep_client/languages/tr/tl_repository.php
+${TL_WEBDIR}/system/modules/rep_client/languages/tr/tl_settings.php
 ${TL_WEBDIR}/system/modules/rss_reader/languages/tr/.htaccess
 ${TL_WEBDIR}/system/modules/rss_reader/languages/tr/modules.php
 ${TL_WEBDIR}/system/modules/rss_reader/languages/tr/tl_module.php
