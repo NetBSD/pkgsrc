@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.34 2008/03/04 06:45:34 jlam Exp $
+# $NetBSD: IRIX.mk,v 1.35 2009/07/26 05:32:43 agc Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -104,6 +104,8 @@ CONFIGURE_ENV+=		ABI=${ABI:Q}
 MAKE_ENV+=		ABI=${ABI:Q}
 
 LIBABISUFFIX?=		${ABI}
+
+_OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
