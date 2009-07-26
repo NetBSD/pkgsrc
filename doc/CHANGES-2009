@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2843 2009/07/26 09:08:23 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2844 2009/07/26 10:10:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3772,3 +3772,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-MOP to 0.90 [seb 2009-07-26]
 	Updated devel/p5-Moose to 0.88 [seb 2009-07-26]
 	Updated net/bind96 to 9.6.1 [obache 2009-07-26]
+	Updated print/web2c to 7.5.7nb5 [minskim 2009-07-26]
