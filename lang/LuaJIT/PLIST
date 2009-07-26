@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/26 19:34:33 rillig Exp $
+bin/luajit
+share/lua/5.1/jit/dis_x86.lua
+share/lua/5.1/jit/dump.lua
+share/lua/5.1/jit/dumphints.lua
+share/lua/5.1/jit/opt.lua
+share/lua/5.1/jit/opt_inline.lua
+share/lua/5.1/jit/trace.lua
+@pkgdir lib/lua/5.1
