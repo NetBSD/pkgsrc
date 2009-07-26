@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2848 2009/07/26 21:15:36 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2849 2009/07/26 21:28:01 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3776,4 +3776,14 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/zziplib to 0.13.56 [minskim 2009-07-26]
 	Updated www/php-eaccelerator to 0.9.5.3 [jdolecek 2009-07-26]
 	Added lang/LuaJIT version 1.1.5 [rillig 2009-07-26]
+<<<<<<< CHANGES-2009
+	Added audio/xmms2 version 0.2rc10nb3 [rillig 2009-07-26]
+	Added audio/xmms2 version 0.2rc10nb3 [rillig 2009-07-26]
+	Added audio/xmms2 version 0.2rc10nb3 [rillig 2009-07-26]
+	Added audio/xmms2 version 0.2rc10nb3 [rillig 2009-07-26]
+	Added audio/xmms2 version 0.2rc10nb3 [rillig 2009-07-26]
+	Added audio/xmms2 version 0.2rc10nb3 [rillig 2009-07-26]
+=======
 	Updated archivers/php-zip to 5.2.10.1.0nb1 [minskim 2009-07-26]
+>>>>>>> 1.2848
+	Added shells/dash version 0.5.5.1 [rillig 2009-07-26]
