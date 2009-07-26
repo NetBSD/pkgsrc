@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8291 2009/07/25 19:34:44 schmonz Exp $
+$NetBSD: TODO,v 1.8292 2009/07/26 09:10:15 obache Exp $
 
 Suggested new packages
 ======================
@@ -442,7 +442,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o benchfft-3.1
 	o bftpd-2.3
 	o biew-5.7.3.1
-	o bind-9.6.1 [pkg/41772]
 	o binutils-2.19.1
 	o bioperl-1.5.0
 	o blender-2.49
