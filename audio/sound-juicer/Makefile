@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2009/07/22 17:13:18 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/26 18:31:22 drochner Exp $
 #
 
 DISTNAME=		sound-juicer-2.26.1
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.burtonini.com/computing/ \
 			${MASTER_SITE_GNOME:=sources/sound-juicer/2.26/}
@@ -43,7 +44,6 @@ BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.15
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
 .include "../../sysutils/brasero/buildlink3.mk"
-.include "../../sysutils/hal/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
