@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:25:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/07/26 19:05:30 drochner Exp $
 lib/pkgconfig/gnome-python-desktop-2.0.pc
 ${PYSITELIB}/gtk-2.0/bugbuddy.py
 ${PYSITELIB}/gtk-2.0/bugbuddy.pyc
@@ -24,7 +24,6 @@ ${PYSITELIB}/gtk-2.0/gnomeprint/ui.la
 ${PYSITELIB}/gtk-2.0/gtksourceview.la
 ${PYSITELIB}/gtk-2.0/gtop.la
 ${PYSITELIB}/gtk-2.0/mediaprofiles.la
-${PYSITELIB}/gtk-2.0/nautilusburn.la
 ${PYSITELIB}/gtk-2.0/rsvg.la
 ${PYSITELIB}/gtk-2.0/totem/__init__.py
 ${PYSITELIB}/gtk-2.0/totem/__init__.pyc
@@ -74,7 +73,6 @@ share/pygtk/2.0/defs/evince.defs
 share/pygtk/2.0/defs/gnomekeyring.defs
 share/pygtk/2.0/defs/gtksourceview.defs
 share/pygtk/2.0/defs/mediaprofiles.defs
-share/pygtk/2.0/defs/nautilus_burn.defs
 share/pygtk/2.0/defs/print.defs
 share/pygtk/2.0/defs/printui.defs
 share/pygtk/2.0/defs/wnck.defs
