@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2009/07/23 22:11:48 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2009/07/26 09:19:06 wiz Exp $
 
 --- src/ptclib/pssl.cxx.orig	2009-07-05 05:52:49.000000000 +0000
 +++ src/ptclib/pssl.cxx
-@@ -800,7 +800,7 @@ PSSLContext::PSSLContext(const void * se
+@@ -800,7 +800,11 @@ PSSLContext::PSSLContext(const void * se
  void PSSLContext::Construct(Method method, const void * sessionId, PINDEX idSize)
  {
    // create the new SSL context
--  SSL_METHOD * meth;
++#if OPENSSL_VERSION_NUMBER >= 0x00909000L
 +  const SSL_METHOD * meth;
++#else
+   SSL_METHOD * meth;
++#endif
  
    switch (method) {
      case SSLv2:
