@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2009/07/27 08:42:02 minskim Exp $
+
+--- dvi2xx.h.orig	2008-02-17 04:58:17.000000000 -0800
++++ dvi2xx.h
+@@ -19,7 +19,6 @@
+ #include <kpathsea/tex-glyph.h>
+ #include <kpathsea/tex-hush.h>
+ #include <kpathsea/tex-make.h>
+-#include <kpathsea/c-vararg.h>
+ #include <c-auto.h>
+ #else
+ #include <string.h>
