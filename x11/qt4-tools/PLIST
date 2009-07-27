@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/07/07 16:36:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/07/27 19:57:51 drochner Exp $
 lib/pkgconfig/QtAssistantClient.pc
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
@@ -12,6 +12,9 @@ qt4/bin/linguist
 qt4/bin/lrelease
 qt4/bin/lupdate
 qt4/bin/pixeltool
+qt4/bin/qcollectiongenerator
+qt4/bin/qhelpconverter
+qt4/bin/qhelpgenerator
 qt4/bin/qmake
 qt4/bin/qt3to4
 qt4/bin/qtconfig
@@ -479,3 +482,4 @@ qt4/phrasebooks/russian.qph
 qt4/phrasebooks/spanish.qph
 qt4/phrasebooks/swedish.qph
 qt4/plugins/designer/libqt3supportwidgets.la
+qt4/tools/qdoc3/qdoc3
