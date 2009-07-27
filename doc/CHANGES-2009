@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2855 2009/07/27 08:50:33 he Exp $
+$NetBSD: CHANGES-2009,v 1.2856 2009/07/27 13:01:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3783,3 +3783,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/dhcpcd-dbus to 0.4.2 [roy 2009-07-27]
 	Updated net/dhcpcd-gtk to 0.4.1 [roy 2009-07-27]
 	Updated lang/parrot to 1.4.0 [he 2009-07-27]
+	Updated chat/irssi to 0.8.13 [obache 2009-07-27]
+	Updated chat/irssi-icb to 0.14nb14 [obache 2009-07-27]
