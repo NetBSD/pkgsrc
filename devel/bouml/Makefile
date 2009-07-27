@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/07/22 09:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/27 05:15:53 obache Exp $
 #
 
 DISTNAME=		bouml_${BOUMLVERSION}
@@ -6,7 +6,7 @@ PKGNAME=		bouml-${BOUMLVERSION}
 CATEGORIES=		devel
 MASTER_SITES=		http://bouml.free.fr/
 
-MAINTAINER=		kcf@users.sourceforge.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bouml.free.fr/
 COMMENT=		UML modeling tool, generates C++, JAVA, and IDL
 
