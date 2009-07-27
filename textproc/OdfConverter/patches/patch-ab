@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2009/07/27 05:39:21 dsainty Exp $
+
+--- source/Spreadsheet/Converter/Makefile.orig	2008-09-26 21:49:52.000000000 +1200
++++ source/Spreadsheet/Converter/Makefile	2009-07-16 17:10:15.000000000 +1200
+@@ -25,6 +25,9 @@
+ SOURCE=${wildcard *.cs}
+ DISTFILES=$(SOURCE) $(ODF2OOX_RES) $(OOX2ODF_RES)
+ 
++RESOURCE_FLAGS+=-r:System.Drawing
++RESOURCE_FLAGS+=-r:System.Windows.Forms
++
+ all-local: Spreadsheet.dll SpreadsheetStatic.dll 
+ Spreadsheet.dll: $(SOURCE) Makefile $(OOX2ODF_RES) $(ODF2OOX_RES)
+ 	$(CSC) $(CSC_DEBUG) $(RESOURCE_FLAGS) -target:library \

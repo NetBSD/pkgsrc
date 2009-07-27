@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/04/14 18:33:30 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/27 05:39:21 dsainty Exp $
 
---- source/Shell/OdfConverterTest/Makefile.orig	2007-12-19 15:16:04.000000000 +0100
-+++ source/Shell/OdfConverterTest/Makefile
+--- source/shell/odfconverter/Makefile.orig	2007-12-19 15:16:04.000000000 +0100
++++ source/shell/odfconverter/Makefile
 @@ -71,9 +71,9 @@ else
  	    bundle.o \
  	    $(EXPORTDYNAMIC) \
