@@ -1,0 +1,5 @@
+Album Player is a lightweight GTK-based audio player. Many people archive
+their CD and record collections into a single FLAC file for every record,
+accompanied by a cue sheet that holds the track information. Album Player
+is made specifically for the task of playing FLAC files that have such a
+cue sheet, a track list and cover art embedded.
