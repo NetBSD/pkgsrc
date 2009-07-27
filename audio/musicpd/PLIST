@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/07/27 20:08:38 drochner Exp $
 bin/mpd
 man/man1/mpd.1
 man/man5/mpd.conf.5
@@ -6,7 +6,6 @@ share/doc/mpd/AUTHORS
 share/doc/mpd/COPYING
 share/doc/mpd/NEWS
 share/doc/mpd/README
-share/doc/mpd/TODO
 share/doc/mpd/UPGRADING
 share/doc/mpd/mpdconf.example
 share/examples/mpd/mpd.conf
