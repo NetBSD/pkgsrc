@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2009/05/19 08:59:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/27 06:24:54 roy Exp $
 #
 
-DISTNAME=		dhcpcd-ui-0.4.0
-PKGNAME=		dhcpcd-gtk-0.4.0
+DISTNAME=		dhcpcd-ui-0.4.1
+PKGNAME=		dhcpcd-gtk-0.4.1
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
 MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
