@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/07/27 19:35:00 drochner Exp $
+
+--- mkcue.cc.orig	2004-10-27 08:20:30.000000000 +0200
++++ mkcue.cc
+@@ -12,6 +12,9 @@ static char ident[] =
+ 
+ #include "diskid.h"
+ 
++/* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=439790 */
++#define MSF_OFFSET 150
++
+ void
+ DiskId::ReportError(char *err)
+ {
+@@ -54,16 +57,12 @@ main(int argc, char *argv[])
+     }
+ 
+     puts("FILE \"dummy.wav\" WAVE");
+-    puts("  TRACK 01 AUDIO");
+-    puts("    INDEX 01 00:00:00");
+ 
+ #define min(x, y) ((x) < (y) ? (x) : (y))
+-    for (track = cdinfo.FirstTrack + 1;
++    for (track = cdinfo.FirstTrack;
+          track <= min(trackcount, cdinfo.LastTrack);
+          track++) {
+-        /* There is frequently (always?) an offset of 150 sectors, so
+-         * subtract the first track's offset. */
+-        cdinfo.FrameOffset[track] -= cdinfo.FrameOffset[1];
++        cdinfo.FrameOffset[track] -= MSF_OFFSET;
+ 
+         minutes = seconds = sectors = 0;
+         sectors = cdinfo.FrameOffset[track] % 75;
+@@ -76,6 +75,9 @@ main(int argc, char *argv[])
+         }
+ 
+         printf("  TRACK %02d AUDIO\n", track);
++	if (track == 1 && cdinfo.FrameOffset[track] > 0) {
++	    printf("    INDEX 00 00:00:00\n");
++	}
+         printf("    INDEX 01 %02d:%02d:%02d\n", minutes, seconds, sectors);
+     }
+ 
