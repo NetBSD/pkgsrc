@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.488 2009/07/08 12:52:17 sno Exp $
+# $NetBSD: Makefile,v 1.489 2009/07/27 13:49:08 drochner Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -472,6 +472,7 @@ SUBDIR+=	texi2roff
 SUBDIR+=	tokyodystopia
 SUBDIR+=	trang
 SUBDIR+=	troffcvt
+SUBDIR+=	unac
 SUBDIR+=	unroff
 SUBDIR+=	untex
 SUBDIR+=	uriparser
