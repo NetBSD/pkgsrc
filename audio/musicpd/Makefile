@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2009/07/13 12:57:00 tonio Exp $
+# $NetBSD: Makefile,v 1.38 2009/07/27 20:08:38 drochner Exp $
 
-DISTNAME=		mpd-0.14.2
+DISTNAME=		mpd-0.15.1
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=		1
 CATEGORIES=		audio
 #MASTER_SITES=		http://musicpd.org/uploads/files/
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
@@ -19,6 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
+USE_LANGUAGES=		c c++
 
 .include "options.mk"
 
@@ -30,7 +30,7 @@ LDFLAGS+=		${LIBOSSAUDIO}
 
 SUBST_CLASSES+=		config paths
 SUBST_STAGE.config=	pre-configure
-SUBST_FILES.config=	src/main.c
+SUBST_FILES.config=	src/cmdline.c
 SUBST_SED.config=	-e s,/etc/mpd.conf,${PKG_SYSCONFDIR}/mpd.conf,
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	mpd.conf
