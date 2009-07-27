@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8295 2009/07/27 10:49:09 obache Exp $
+$NetBSD: TODO,v 1.8296 2009/07/27 13:03:28 obache Exp $
 
 Suggested new packages
 ======================
@@ -745,7 +745,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o intercal-0.24
 	o ircservices-5.1.18
 	o irrd-2.3.4 [pkg/36813|38002]
-	o irssi-0.8.13
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
 	o ispell-german-20090107
