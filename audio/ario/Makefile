@@ -1,0 +1,37 @@
+# $NetBSD: Makefile,v 1.1.1.1 2009/07/27 19:53:20 drochner Exp $
+#
+
+DISTNAME=	ario-1.3
+CATEGORIES=	audio
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ario-player/1.3/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://ario-player.sourceforge.net/
+COMMENT=	mpd client
+LICENSE=	gnu-gpl-v2
+
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	intltool pkg-config gmake
+USE_LIBTOOL=	yes
+CONFIGURE_ARGS+= --disable-avahi
+PKG_DESTDIR_SUPPORT= user-destdir
+
+.for fl in clobbered empty-body ignored-qualifiers \
+	missing-parameter-type old-style-declaration \
+	override-init type-limits
+BUILDLINK_TRANSFORM+=	rm:-W${fl}
+.endfor
+
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../net/libsoup24/buildlink3.mk"
+#.include "../../net/avahi/buildlink3.mk"
+.include "../../audio/taglib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
