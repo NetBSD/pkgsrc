@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2854 2009/07/27 06:25:09 roy Exp $
+$NetBSD: CHANGES-2009,v 1.2855 2009/07/27 08:50:33 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3782,3 +3782,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/ps2pkm version 1.5 [minskim 2009-07-26]
 	Updated net/dhcpcd-dbus to 0.4.2 [roy 2009-07-27]
 	Updated net/dhcpcd-gtk to 0.4.1 [roy 2009-07-27]
+	Updated lang/parrot to 1.4.0 [he 2009-07-27]
