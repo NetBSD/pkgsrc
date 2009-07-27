@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8294 2009/07/27 04:35:51 obache Exp $
+$NetBSD: TODO,v 1.8295 2009/07/27 10:49:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -454,6 +454,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bos-2.5
 	o boson-0.13
 	o botan-1.8.4
+	o bouml-4.13.1
 	o brasero-2.26.3
 	o bugzilla-3.2.4
 	o byacc-20080824
