@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/07/27 08:23:10 he Exp $
 bin/parrot
 bin/parrot_config
 bin/parrot_debugger
@@ -34,8 +34,6 @@ include/parrot/${PKGVERSION}/parrot/extend.h
 include/parrot/${PKGVERSION}/parrot/extend_vtable.h
 include/parrot/${PKGVERSION}/parrot/feature.h
 include/parrot/${PKGVERSION}/parrot/gc_api.h
-include/parrot/${PKGVERSION}/parrot/gc_mark_sweep.h
-include/parrot/${PKGVERSION}/parrot/gc_pools.h
 include/parrot/${PKGVERSION}/parrot/global.h
 include/parrot/${PKGVERSION}/parrot/global_setup.h
 include/parrot/${PKGVERSION}/parrot/has_header.h
@@ -73,7 +71,8 @@ include/parrot/${PKGVERSION}/parrot/pmc.h
 include/parrot/${PKGVERSION}/parrot/pmc_freeze.h
 include/parrot/${PKGVERSION}/parrot/pobj.h
 include/parrot/${PKGVERSION}/parrot/register.h
-include/parrot/${PKGVERSION}/parrot/resources.h
+include/parrot/${PKGVERSION}/parrot/runcore_api.h
+include/parrot/${PKGVERSION}/parrot/runcore_trace.h
 include/parrot/${PKGVERSION}/parrot/scheduler.h
 include/parrot/${PKGVERSION}/parrot/scheduler_private.h
 include/parrot/${PKGVERSION}/parrot/settings.h
@@ -118,7 +117,7 @@ lib/parrot/${PKGVERSION}/include/mmd.pasm
 lib/parrot/${PKGVERSION}/include/parrotlib.pbc
 lib/parrot/${PKGVERSION}/include/pmctypes.pasm
 lib/parrot/${PKGVERSION}/include/signal.pasm
-lib/parrot/${PKGVERSION}/include/sockets.pasm
+lib/parrot/${PKGVERSION}/include/socket.pasm
 lib/parrot/${PKGVERSION}/include/stat.pasm
 lib/parrot/${PKGVERSION}/include/stdio.pasm
 lib/parrot/${PKGVERSION}/include/stringinfo.pasm
@@ -127,6 +126,7 @@ lib/parrot/${PKGVERSION}/include/test_more.pir
 lib/parrot/${PKGVERSION}/include/timer.pasm
 lib/parrot/${PKGVERSION}/include/tm.pasm
 lib/parrot/${PKGVERSION}/include/warnings.pasm
+lib/parrot/${PKGVERSION}/languages/parrot/parrot.pir
 lib/parrot/${PKGVERSION}/languages/pge/P6Rule.grammar
 lib/parrot/${PKGVERSION}/languages/pge/PGE.pir
 lib/parrot/${PKGVERSION}/languages/pge/PGE/Exp.pir
@@ -137,23 +137,29 @@ lib/parrot/${PKGVERSION}/languages/pge/PGE/Perl6Regex.pir
 lib/parrot/${PKGVERSION}/languages/pge/PGE/Regex.pir
 lib/parrot/${PKGVERSION}/languages/pge/PGE/builtins.pg
 lib/parrot/${PKGVERSION}/languages/pge/STATUS
-lib/parrot/${PKGVERSION}/languages/pge/demo.pir
 lib/parrot/${PKGVERSION}/library/CGI/QueryHash.pbc
 lib/parrot/${PKGVERSION}/library/CGI/QueryHash.pir
+lib/parrot/${PKGVERSION}/library/Config/JSON.pbc
 lib/parrot/${PKGVERSION}/library/Config/JSON.pir
+lib/parrot/${PKGVERSION}/library/Crow.pbc
 lib/parrot/${PKGVERSION}/library/Crow.pir
+lib/parrot/${PKGVERSION}/library/Curses.pir
 lib/parrot/${PKGVERSION}/library/Data/Dumper.pbc
 lib/parrot/${PKGVERSION}/library/Data/Dumper.pir
 lib/parrot/${PKGVERSION}/library/Data/Dumper/Base.pbc
 lib/parrot/${PKGVERSION}/library/Data/Dumper/Base.pir
 lib/parrot/${PKGVERSION}/library/Data/Dumper/Default.pbc
 lib/parrot/${PKGVERSION}/library/Data/Dumper/Default.pir
+lib/parrot/${PKGVERSION}/library/Data/Replace.pbc
 lib/parrot/${PKGVERSION}/library/Data/Replace.pir
+lib/parrot/${PKGVERSION}/library/Digest/MD5.pbc
 lib/parrot/${PKGVERSION}/library/Digest/MD5.pir
 lib/parrot/${PKGVERSION}/library/Getopt/Obj.pbc
 lib/parrot/${PKGVERSION}/library/Getopt/Obj.pir
 lib/parrot/${PKGVERSION}/library/HTTP/Daemon.pir
+lib/parrot/${PKGVERSION}/library/Iter.pbc
 lib/parrot/${PKGVERSION}/library/Iter.pir
+lib/parrot/${PKGVERSION}/library/JSON.pbc
 lib/parrot/${PKGVERSION}/library/JSON.pir
 lib/parrot/${PKGVERSION}/library/MIME/Base64.pbc
 lib/parrot/${PKGVERSION}/library/MIME/Base64.pir
@@ -161,9 +167,11 @@ lib/parrot/${PKGVERSION}/library/Math/Rand.pbc
 lib/parrot/${PKGVERSION}/library/Math/Rand.pir
 lib/parrot/${PKGVERSION}/library/Math/Random/mt19937ar.pbc
 lib/parrot/${PKGVERSION}/library/Math/Random/mt19937ar.pir
+lib/parrot/${PKGVERSION}/library/NCI/Utils.pir
 lib/parrot/${PKGVERSION}/library/NCI/call_toolkit_init.pbc
 lib/parrot/${PKGVERSION}/library/NCI/call_toolkit_init.pir
 lib/parrot/${PKGVERSION}/library/OpenGL.pir
+lib/parrot/${PKGVERSION}/library/OpenGL/Math.pir
 lib/parrot/${PKGVERSION}/library/P6object.pbc
 lib/parrot/${PKGVERSION}/library/P6object.pir
 lib/parrot/${PKGVERSION}/library/PGE.pbc
@@ -185,6 +193,7 @@ lib/parrot/${PKGVERSION}/library/Parrot/Exception.pir
 lib/parrot/${PKGVERSION}/library/Pg.pir
 lib/parrot/${PKGVERSION}/library/Protoobject.pbc
 lib/parrot/${PKGVERSION}/library/Protoobject.pir
+lib/parrot/${PKGVERSION}/library/Range.pbc
 lib/parrot/${PKGVERSION}/library/Range.pir
 lib/parrot/${PKGVERSION}/library/SDL.pir
 lib/parrot/${PKGVERSION}/library/SDL/App.pir
@@ -220,15 +229,25 @@ lib/parrot/${PKGVERSION}/library/Stream/Sub.pir
 lib/parrot/${PKGVERSION}/library/Stream/Writer.pbc
 lib/parrot/${PKGVERSION}/library/Stream/Writer.pir
 lib/parrot/${PKGVERSION}/library/String/Utils.pir
+lib/parrot/${PKGVERSION}/library/Tcl/Glob.pbc
 lib/parrot/${PKGVERSION}/library/Tcl/Glob.pir
+lib/parrot/${PKGVERSION}/library/TclLibrary.pbc
 lib/parrot/${PKGVERSION}/library/TclLibrary.pir
+lib/parrot/${PKGVERSION}/library/Test/Builder.pbc
 lib/parrot/${PKGVERSION}/library/Test/Builder.pir
+lib/parrot/${PKGVERSION}/library/Test/Builder/Output.pbc
 lib/parrot/${PKGVERSION}/library/Test/Builder/Output.pir
+lib/parrot/${PKGVERSION}/library/Test/Builder/Test.pbc
 lib/parrot/${PKGVERSION}/library/Test/Builder/Test.pir
+lib/parrot/${PKGVERSION}/library/Test/Builder/TestPlan.pbc
 lib/parrot/${PKGVERSION}/library/Test/Builder/TestPlan.pir
+lib/parrot/${PKGVERSION}/library/Test/Builder/Tester.pbc
 lib/parrot/${PKGVERSION}/library/Test/Builder/Tester.pir
+lib/parrot/${PKGVERSION}/library/Test/Class.pbc
 lib/parrot/${PKGVERSION}/library/Test/Class.pir
+lib/parrot/${PKGVERSION}/library/Test/More.pbc
 lib/parrot/${PKGVERSION}/library/Test/More.pir
+lib/parrot/${PKGVERSION}/library/YAML/Dumper.pbc
 lib/parrot/${PKGVERSION}/library/YAML/Dumper.pir
 lib/parrot/${PKGVERSION}/library/YAML/Dumper/Base.pir
 lib/parrot/${PKGVERSION}/library/YAML/Dumper/Default.pir
@@ -237,6 +256,7 @@ lib/parrot/${PKGVERSION}/library/config.pbc
 lib/parrot/${PKGVERSION}/library/config.pir
 lib/parrot/${PKGVERSION}/library/dumper.pbc
 lib/parrot/${PKGVERSION}/library/dumper.pir
+lib/parrot/${PKGVERSION}/library/libpcre.pbc
 lib/parrot/${PKGVERSION}/library/libpcre.pir
 lib/parrot/${PKGVERSION}/library/ncurses.declarations
 lib/parrot/${PKGVERSION}/library/ncurses.pasm
@@ -244,6 +264,7 @@ lib/parrot/${PKGVERSION}/library/ncurses.pbc
 lib/parrot/${PKGVERSION}/library/ncurses.pir
 lib/parrot/${PKGVERSION}/library/parrotlib.pbc
 lib/parrot/${PKGVERSION}/library/parrotlib.pir
+lib/parrot/${PKGVERSION}/library/pcore.pbc
 lib/parrot/${PKGVERSION}/library/pcore.pir
 lib/parrot/${PKGVERSION}/library/pcre.pbc
 lib/parrot/${PKGVERSION}/library/pcre.pir
@@ -251,9 +272,9 @@ lib/parrot/${PKGVERSION}/library/postgres.declarations
 lib/parrot/${PKGVERSION}/library/postgres.pasm
 lib/parrot/${PKGVERSION}/library/postgres.pir
 lib/parrot/${PKGVERSION}/library/random_lib.pir
-lib/parrot/${PKGVERSION}/library/tcpstream.pir
 lib/parrot/${PKGVERSION}/library/uuid.pir
 lib/parrot/${PKGVERSION}/library/yaml_dumper.pir
+lib/parrot/${PKGVERSION}/parrot_config.o
 lib/pkgconfig/parrot/${PKGVERSION}/parrot.pc
 share/doc/parrot/${PKGVERSION}/LICENSE
 share/doc/parrot/${PKGVERSION}/NEWS
@@ -271,7 +292,6 @@ share/doc/parrot/${PKGVERSION}/pod/ops/experimental.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/io.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/math.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/object.pod
-share/doc/parrot/${PKGVERSION}/pod/ops/obscure.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/pic.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/pmc.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/set.pod
