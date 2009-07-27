@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2009/03/19 21:35:14 asau Exp $
+# $NetBSD: options.mk,v 1.12 2009/07/27 20:08:38 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 PKG_SUPPORTED_OPTIONS=	aac audiofile curl flac id3 libao jack libmikmod musepack ogg inet6
@@ -29,6 +29,9 @@ CONFIGURE_ARGS+=	--disable-curl
 
 .if !empty(PKG_OPTIONS:Mflac)
 .  include "../../audio/flac/buildlink3.mk"
+# XXX whole album flac files can appearently be parsed without libcue,
+# so I've yet to find out what libcue is good for
+#.  include "../../audio/libcue/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-flac
 .else
 CONFIGURE_ARGS+=	--disable-flac
@@ -57,9 +60,9 @@ CONFIGURE_ARGS+=	--disable-jack
 
 .if !empty(PKG_OPTIONS:Mlibmikmod)
 .  include "../../audio/libmikmod/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-mod
+CONFIGURE_ARGS+=	--enable-mikmod
 .else
-CONFIGURE_ARGS+=	--disable-mod
+CONFIGURE_ARGS+=	--disable-mikmod
 .endif
 
 .if !empty(PKG_OPTIONS:Mmusepack)
@@ -72,9 +75,9 @@ CONFIGURE_ARGS+=	--disable-mpc
 
 .if !empty(PKG_OPTIONS:Mogg)
 .  include "../../audio/libvorbis/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-oggvorbis
+CONFIGURE_ARGS+=	--enable-vorbis
 .else
-CONFIGURE_ARGS+=	--disable-oggvorbis
+CONFIGURE_ARGS+=	--disable-vorbis
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
