@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8293 2009/07/26 10:30:28 minskim Exp $
+$NetBSD: TODO,v 1.8294 2009/07/27 04:35:51 obache Exp $
 
 Suggested new packages
 ======================
@@ -1169,6 +1169,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-facter-1.5.3
 	o ruby-fastercsv-1.4.0
 	o ruby-gettext-2.0.3
+	o ruby-gnome2-0.19.1
 	o ruby-haml-2.0.7
 	o ruby-itex2MML-1.3.5
 	o ruby-jsmin-1.0.1
