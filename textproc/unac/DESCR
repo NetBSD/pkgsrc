@@ -1,0 +1,3 @@
+unac is a C library that removes accents from characters, regardless
+of the character set (ISO-8859-15, ISO-CELTIC, KOI8-RU...)  as long as
+iconv(3) is able to convert it into UTF-16 (Unicode).
