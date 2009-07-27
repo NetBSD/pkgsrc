@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/07/27 13:46:57 drochner Exp $
+
+--- Makefile.in.orig	2002-09-02 12:51:42.000000000 +0200
++++ Makefile.in
+@@ -188,7 +188,7 @@ am_libunac_la_OBJECTS = unac.lo
+ libunac_la_OBJECTS = $(am_libunac_la_OBJECTS)
+ bin_PROGRAMS = unaccent$(EXEEXT)
+ noinst_PROGRAMS = unactest$(EXEEXT) unactest1$(EXEEXT)
+-PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
++PROGRAMS = $(bin_PROGRAMS) #$(noinst_PROGRAMS)
+ 
+ am_unaccent_OBJECTS = unaccent.$(OBJEXT)
+ unaccent_OBJECTS = $(am_unaccent_OBJECTS)

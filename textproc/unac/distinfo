@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/27 13:46:57 drochner Exp $
+
+SHA1 (unac-1.7.0.tar.gz) = 7e83ce8c1a38ce821a96f6289c34c7d0b9965386
+RMD160 (unac-1.7.0.tar.gz) = 4f1470aadf692600c4b4129c0eb3334d9b2ccd0e
+Size (unac-1.7.0.tar.gz) = 441956 bytes
+SHA1 (patch-aa) = 25dbfe363b32171c7af7059e48ddf041739c603b

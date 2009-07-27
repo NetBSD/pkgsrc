@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/27 13:46:57 drochner Exp $
+bin/unaccent
+include/unac.h
+lib/libunac.la
+lib/pkgconfig/unac.pc
+man/man1/unaccent.1
+man/man3/unac.3
