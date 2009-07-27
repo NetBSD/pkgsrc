@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:37:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/07/27 12:59:44 obache Exp $
 bin/irssi
-include/irssi/config.h
+include/irssi/irssi-config.h
 include/irssi/irssi-version.h
 include/irssi/src/common.h
 include/irssi/src/core/args.h
@@ -48,7 +48,6 @@ include/irssi/src/core/special-vars.h
 include/irssi/src/core/window-item-def.h
 include/irssi/src/core/window-item-rec.h
 include/irssi/src/core/write-buffer.h
-include/irssi/src/fe-common/core/autorun.h
 include/irssi/src/fe-common/core/chat-completion.h
 include/irssi/src/fe-common/core/command-history.h
 include/irssi/src/fe-common/core/completion.h
@@ -67,7 +66,6 @@ include/irssi/src/fe-common/core/module-formats.h
 include/irssi/src/fe-common/core/module.h
 include/irssi/src/fe-common/core/printtext.h
 include/irssi/src/fe-common/core/themes.h
-include/irssi/src/fe-common/core/translation.h
 include/irssi/src/fe-common/core/window-activity.h
 include/irssi/src/fe-common/core/window-items.h
 include/irssi/src/fe-common/core/windows-layout.h
@@ -79,6 +77,7 @@ include/irssi/src/fe-common/irc/module-formats.h
 include/irssi/src/fe-common/irc/module.h
 include/irssi/src/fe-common/irc/notifylist/module-formats.h
 include/irssi/src/fe-common/irc/notifylist/module.h
+include/irssi/src/fe-text/statusbar-item.h
 include/irssi/src/irc/core/bans.h
 include/irssi/src/irc/core/channel-rejoin.h
 include/irssi/src/irc/core/ctcp.h
@@ -113,12 +112,8 @@ include/irssi/src/irc/notifylist/notify-setup.h
 include/irssi/src/irc/notifylist/notifylist.h
 include/irssi/src/lib-config/iconfig.h
 include/irssi/src/lib-config/module.h
-include/irssi/src/lib-popt/findme.h
-include/irssi/src/lib-popt/popt.h
-include/irssi/src/lib-popt/poptint.h
 lib/irssi/modules/libirc_proxy.la
 man/man1/irssi.1
-share/doc/irssi/botnet.txt
 share/doc/irssi/design.txt
 share/doc/irssi/faq.html
 share/doc/irssi/faq.txt
@@ -129,7 +124,6 @@ share/doc/irssi/signals.txt
 share/doc/irssi/special_vars.txt
 share/doc/irssi/startup-HOWTO.html
 share/examples/irssi/irssi.conf
-share/irssi/config.h
 share/irssi/help/accept
 share/irssi/help/action
 share/irssi/help/admin
@@ -146,7 +140,6 @@ share/irssi/help/completion
 share/irssi/help/connect
 share/irssi/help/ctcp
 share/irssi/help/cycle
-share/irssi/help/date
 share/irssi/help/dcc
 share/irssi/help/dehilight
 share/irssi/help/deop
@@ -157,7 +150,6 @@ share/irssi/help/echo
 share/irssi/help/eval
 share/irssi/help/exec
 share/irssi/help/flushbuffer
-share/irssi/help/flushbuffers
 share/irssi/help/format
 share/irssi/help/hash
 share/irssi/help/help
@@ -245,7 +237,6 @@ share/irssi/help/version
 share/irssi/help/voice
 share/irssi/help/wait
 share/irssi/help/wall
-share/irssi/help/wallchops
 share/irssi/help/wallops
 share/irssi/help/watch
 share/irssi/help/who
@@ -266,6 +257,7 @@ share/irssi/scripts/mlock.pl
 share/irssi/scripts/msg-event.pl
 share/irssi/scripts/quitmsg.pl
 share/irssi/scripts/redirect.pl
+share/irssi/scripts/sb_search.pl
 share/irssi/scripts/scriptassist.pl
 share/irssi/scripts/splitlong.pl
 share/irssi/scripts/usercount.pl
