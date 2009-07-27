@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2007/10/13 16:27:15 adrianp Exp $
+$NetBSD: patch-aa,v 1.6 2009/07/27 12:59:44 obache Exp $
+
+Check if sp is a null pointer before parsing it.
 
 --- src/fe-text/tparm.c.orig	2007-10-06 10:40:39.000000000 +0100
 +++ src/fe-text/tparm.c
@@ -7,7 +9,7 @@ $NetBSD: patch-aa,v 1.5 2007/10/13 16:27:15 adrianp Exp $
  	pos = 0;
  	termcap = 1;
 -	while (*sp != '\0') {
-+	while ((*sp != '\0') && (sp != NULL)) {
++	while ((sp != NULL) && (*sp != '\0')) {
  		switch(*sp) {
  		case '\\':
  			if (scan_for) {
