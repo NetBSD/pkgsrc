@@ -1,4 +1,7 @@
-$NetBSD: patch-ad,v 1.8 2008/12/04 12:53:55 tonnerre Exp $
+$NetBSD: patch-ad,v 1.9 2009/07/27 12:59:44 obache Exp $
+
+PerlIO mutex must be initialized before trying to fiddle with the
+interpreter.
 
 --- src/perl/perl-core.c.orig	2008-12-04 13:45:24.000000000 +0100
 +++ src/perl/perl-core.c

@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.28 2008/12/04 12:53:55 tonnerre Exp $
+$NetBSD: distinfo,v 1.29 2009/07/27 12:59:44 obache Exp $
 
-SHA1 (irssi-0.8.12.tar.bz2) = 00ecca04766c51feef057b2327f67166be473fa3
-RMD160 (irssi-0.8.12.tar.bz2) = 0588e6c2df0425c4f36bd84c1621d9ad170b6a81
-Size (irssi-0.8.12.tar.bz2) = 935918 bytes
-SHA1 (patch-aa) = 3333b23ae2b2c3f8f3ef246502badf1b263103c6
-SHA1 (patch-ab) = 287fd013349b3b6761d08f69ff8aeb8820d65b8c
-SHA1 (patch-ac) = c1bb6ae10be8b52a844f3d7c1c725cd4cc6db246
-SHA1 (patch-ad) = 278e45b6cb28966f1bf1a5dfea329b164cd6ebed
-SHA1 (patch-ae) = 975777ae62374aa50ad76e83ed857927e8f3cbe8
-SHA1 (patch-af) = 47b399f9549ef9772f40bd5e7d27344bffe1cebe
-SHA1 (patch-ag) = 4716b80fa1db0edb3e68b527396fcce03de06f47
+SHA1 (irssi-0.8.13.tar.bz2) = 8ad6e5de345e64a2aad372ae237fd59a7b43f47b
+RMD160 (irssi-0.8.13.tar.bz2) = d09b76fcb6cbdacea510cefd63ad5638b623f5a3
+Size (irssi-0.8.13.tar.bz2) = 946203 bytes
+SHA1 (patch-aa) = 83a0f6def09cb283aa55b63a249a81121748232b
+SHA1 (patch-ab) = 94d44084c6b89e59e2e454a43cf8bc0e0fb34695
+SHA1 (patch-ad) = 8cb41612afcd6088b869235166da9a6eb37e6ec7
+SHA1 (patch-ae) = b5475edc01da7b8778522a77155b2b76b2a7b738
