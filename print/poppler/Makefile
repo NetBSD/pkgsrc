@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2009/06/14 21:16:22 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2009/07/28 18:22:49 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=		PDF rendering library
 MAINTAINER=		reed@reedmedia.net
