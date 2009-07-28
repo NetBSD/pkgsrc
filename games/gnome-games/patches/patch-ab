@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2009/07/28 18:52:07 drochner Exp $
+
+--- libgames-support/Makefile.in.orig	2009-07-28 17:53:51.000000000 +0200
++++ libgames-support/Makefile.in
+@@ -584,7 +584,7 @@ libgames_support_la_SOURCES = $(BUILT_SO
+ libgames_support_la_CPPFLAGS = -DPKGDATADIR="\"$(pkgdatadir)\"" \
+ 	-DDATADIR="\"$(datadir)\"" \
+ 	-DCOMMON_DATADIR="\"$(datadir)/gnome-games-common\"" \
+-	-DSCORESDIR="\"$(scoredir)\"" $(NULL) $(am__append_15)
++	-DSCORESDIR="\"/var/games\"" $(NULL) $(am__append_15)
+ libgames_support_la_CFLAGS = $(GTK_CFLAGS) $(AM_CFLAGS) \
+ 	$(am__append_12) $(am__append_18) $(am__append_20) \
+ 	$(am__append_21) $(am__append_23) $(am__append_25) \
