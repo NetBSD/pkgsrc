@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.3 2009/07/28 19:12:37 drochner Exp $
+
+--- src/external/GLee.h.orig	2009-07-09 17:30:53.000000000 +0200
++++ src/external/GLee.h
+@@ -797,10 +797,10 @@ GLEE_EXTERN GLboolean _GLEE_SGIX_texture
+ 
+ 	/* GLX */
+ 
+-	typedef void (*__GLXextFuncPtr)(void);
+ 
+ 	#ifndef GLX_ARB_get_proc_address 
+ 	#define GLX_ARB_get_proc_address 1
++	    typedef void (*__GLXextFuncPtr)(void);
+ 	    extern __GLXextFuncPtr glXGetProcAddressARB (const GLubyte *);
+ 	    extern void ( * glXGetProcAddressARB (const GLubyte *procName))(void);
+ 	    typedef __GLXextFuncPtr ( * PFNGLXGETPROCADDRESSARBPROC) (const GLubyte *procName);
