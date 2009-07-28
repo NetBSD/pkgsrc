@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2872 2009/07/28 21:20:36 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.2873 2009/07/28 21:35:28 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3814,3 +3814,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/sqlite to 2.8.17 [drochner 2009-07-28]
 	Updated textproc/db2latex to 0.8pre1nb6 [minskim 2009-07-28]
 	Updated www/wordpress to 2.8.2 [adrianp 2009-07-28]
+	Added devel/p5-MooseX-Meta-TypeConstraint-ForceCoercion version 0.01 [seb 2009-07-28]
