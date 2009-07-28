@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.98 2009/07/08 21:25:30 markd Exp $
+# $NetBSD: gcc.mk,v 1.99 2009/07/28 06:55:24 rillig Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -100,8 +100,12 @@ MAKEFLAGS+=	_CC=${_CC:Q}
 .endif
 
 .if !defined(_GCC_VERSION)
+# FIXME: ALL_ENV is not set at this point, so LC_ALL must be set
+# explicitly. In the show-all and show-var targets, it appears
+# nevertheless because "References to undefined variables are not
+# expanded" when using the := operator.
 _GCC_VERSION_STRING!=	\
-	( ${SETENV} ${ALL_ENV} ${_CC} -v 2>&1 | ${GREP} 'gcc version' ) 2>/dev/null || ${ECHO} 0
+	( ${SETENV} ${ALL_ENV} LC_ALL=C ${_CC} -v 2>&1 | ${GREP} 'gcc version' ) 2>/dev/null || ${ECHO} 0
 .  if !empty(_GCC_VERSION_STRING:Megcs*)
 _GCC_VERSION=	2.8.1		# egcs is considered to be gcc-2.8.1.
 .  elif !empty(_GCC_VERSION_STRING:Mgcc*)
