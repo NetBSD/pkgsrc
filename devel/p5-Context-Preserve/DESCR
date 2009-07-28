@@ -1,0 +1,4 @@
+The Perl 5 module Context::Preserve automates the process of calling
+a function, getting the results, acting on the results, then returning
+the result of the function in the appropriate void, scalar, or list
+context.
