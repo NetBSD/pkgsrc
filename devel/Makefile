@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1192 2009/07/25 21:13:30 seb Exp $
+# $NetBSD: Makefile,v 1.1193 2009/07/28 04:38:19 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -503,6 +503,7 @@ SUBDIR+=	p5-Config-INI
 SUBDIR+=	p5-Config-IniFiles
 SUBDIR+=	p5-Config-Std
 SUBDIR+=	p5-Config-Tiny
+SUBDIR+=	p5-Context-Preserve
 SUBDIR+=	p5-Contextual-Return
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Curses-UI
