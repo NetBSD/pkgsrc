@@ -1,0 +1,4 @@
+The Perl 5 module MooseX::Meta::TypeConstraint::ForceCoercion
+provides a class which allows to wrap any Moose::Meta::TypeConstraint
+in a way that will force coercion of the value when checking or
+validating a value against it.
