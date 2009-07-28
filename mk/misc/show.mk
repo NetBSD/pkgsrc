@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.9 2008/11/19 08:06:36 rillig Exp $
+# $NetBSD: show.mk,v 1.10 2009/07/28 07:01:56 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -87,6 +87,13 @@ show-build-defs: .PHONY
 #		* "usr" for user-settable variables,
 #		* "pkg" for package-settable variables,
 #		* "sys" for system-defined variables.
+#
+#	CAVEAT: Some few variable values that are shown here may be
+#	misleading. For example, make(1)'s := operator leaves references
+#	to undefined variables as-is, so they may be resolved later. So
+#	if you want to take a snapshot of the exact value of a variable,
+#	you have to use "snapshot!=printf %s ''${var:q}" instead of
+#	"snapshot:=${var}".
 #
 # Keywords: debug show _vargroups
 #
