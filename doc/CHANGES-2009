@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2862 2009/07/28 06:09:48 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2863 2009/07/28 06:16:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3791,3 +3791,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ja-trac to 0.11.5pl1 [obache 2009-07-28]
 	Added devel/p5-Context-Preserve version 0.01 [seb 2009-07-28]
 	Updated devel/p5-List-MoreUtils to 0.24 [sno 2009-07-28]
+	Updated devel/p5-Bit-Vector to 6.6 [sno 2009-07-28]
