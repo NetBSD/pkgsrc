@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/28 21:32:54 seb Exp $
+
+SHA1 (MooseX-Meta-TypeConstraint-ForceCoercion-0.01.tar.gz) = cc5330d0ab55afc23a2f7905f224d08b1edb9942
+RMD160 (MooseX-Meta-TypeConstraint-ForceCoercion-0.01.tar.gz) = f47cf34fe805146092dc0cd55b4d32245aacd758
+Size (MooseX-Meta-TypeConstraint-ForceCoercion-0.01.tar.gz) = 9079 bytes
