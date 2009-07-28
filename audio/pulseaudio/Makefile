@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2009/07/22 09:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/28 12:52:40 tnn Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
 
 DISTNAME=	pulseaudio-0.9.14
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
 
@@ -47,6 +47,8 @@ CONFIGURE_ARGS+=	--with-system-group=${PULSE_GROUP}
 CONFIGURE_ARGS+=	--with-realtime-group=${PULSE_GROUP_REALTIME}
 CONFIGURE_ARGS+=	--with-access-group=${PULSE_GROUP_ACCESS}
 MAKE_ENV+=		EGDIR=${EGDIR}
+
+SPECIAL_PERMS+=		bin/pulseaudio ${SETUID_ROOT_PERMS}
 
 SUBST_CLASSES+=		padsp
 SUBST_MESSAGE.padsp=	Fixing LD_PRELOAD paths
