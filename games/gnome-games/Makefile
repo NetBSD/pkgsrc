@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2009/07/22 09:01:28 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2009/07/28 18:52:07 drochner Exp $
 
 DISTNAME=		gnome-games-2.26.3
+PKGREVISION=		1
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.26/}
 EXTRACT_SUFX=		.tar.bz2
@@ -62,6 +63,7 @@ BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.10.0
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../games/ggz-client-libs/buildlink3.mk"
+.include "../../games/ggz-client-libs/ggz-client.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
