@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/06 11:31:02 adrianp Exp $
+$NetBSD: distinfo,v 1.1.1.1.2.1 2009/07/28 22:11:15 tron Exp $
 
-SHA1 (wordpress-2.7.1.tar.gz) = 00ba80d6123e18b675952a6cafb84fca066b54d4
-RMD160 (wordpress-2.7.1.tar.gz) = 06b1db93f3f14591a781edd1586c77543d7f3a1b
-Size (wordpress-2.7.1.tar.gz) = 1624416 bytes
+SHA1 (wordpress-2.8.2.tar.gz) = c896ac4358aa7e89ceaece7cfa0071c24b09c80b
+RMD160 (wordpress-2.8.2.tar.gz) = ee9748c0354c3d1b289c8d9f2d10f21d521c5189
+Size (wordpress-2.8.2.tar.gz) = 2078041 bytes
