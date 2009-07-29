@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2877 2009/07/29 18:01:12 seb Exp $
+$NetBSD: CHANGES-2009,v 1.2878 2009/07/29 23:14:43 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3825,3 +3825,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/py-django to 1.0.3 [joerg 2009-07-29]
 	Updated devel/apache-maven to 2.2.0 [yyamano 2009-07-29]
 	Added devel/p5-Devel-PartialDump version 0.09 [seb 2009-07-29]
+	Added devel/p5-MooseX-Types-Structured version 0.16 [seb 2009-07-29]
