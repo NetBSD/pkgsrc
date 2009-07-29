@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1194 2009/07/28 21:34:17 seb Exp $
+# $NetBSD: Makefile,v 1.1195 2009/07/29 18:00:20 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -547,6 +547,7 @@ SUBDIR+=	p5-Devel-Leak-Object
 SUBDIR+=	p5-Devel-LexAlias
 SUBDIR+=	p5-Devel-NYTProf
 SUBDIR+=	p5-Devel-PPPort
+SUBDIR+=	p5-Devel-PartialDump
 SUBDIR+=	p5-Devel-Profile
 SUBDIR+=	p5-Devel-REPL
 SUBDIR+=	p5-Devel-Size
