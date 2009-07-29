@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2009/07/29 07:59:53 spz Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -103,6 +103,7 @@ include/isc/hmacmd5.h
 include/isc/httpd.h
 include/isc/int.h
 include/isc/interfaceiter.h
+include/isc/iterated_hash.h
 include/isc/lang.h
 include/isc/lex.h
 include/isc/lfsr.h
@@ -195,6 +196,7 @@ lib/libisccc.la
 lib/libisccfg.la
 lib/liblwres.la
 man/man1/dig.1
+man/man1/isc-config.sh.1
 man/man1/host.1
 man/man1/nslookup.1
 man/man1/nsupdate.1
@@ -489,6 +491,8 @@ share/doc/bind9/rfc/rfc4641.txt
 share/doc/bind9/rfc/rfc4648.txt
 share/doc/bind9/rfc/rfc4701.txt
 share/doc/bind9/rfc/rfc5155.txt
+share/doc/bind9/rfc/rfc5205.txt
+share/doc/bind9/rfc/rfc5507.txt
 share/doc/bind9/rfc/rfc952.txt
 share/examples/rc.d/lwresd
 share/examples/rc.d/named9

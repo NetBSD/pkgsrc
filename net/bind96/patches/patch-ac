@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2009/02/21 14:51:43 adrianp Exp $
+$NetBSD: patch-ac,v 1.2.4.1 2009/07/29 07:59:53 spz Exp $
 
 --- lib/lwres/getaddrinfo.c.orig	2007-09-12 21:45:18.000000000 -0700
 +++ lib/lwres/getaddrinfo.c
@@ -37,25 +37,3 @@ $NetBSD: patch-ac,v 1.2 2009/02/21 14:51:43 adrianp Exp $
  			if (p != NULL && ep != NULL && ep[0] == '\0')
  				*p = '\0';
  			else {
-@@ -709,17 +721,17 @@ lwres_freeaddrinfo(struct addrinfo *ai) 
- static int
- get_local(const char *name, int socktype, struct addrinfo **res) {
- 	struct addrinfo *ai;
--	struct sockaddr_un *sun;
-+	struct sockaddr_un *un;
- 
- 	if (socktype == 0)
- 		return (EAI_SOCKTYPE);
- 
--	ai = ai_alloc(AF_LOCAL, sizeof(*sun));
-+	ai = ai_alloc(AF_LOCAL, sizeof(*un));
- 	if (ai == NULL)
- 		return (EAI_MEMORY);
- 
--	sun = SUN(ai->ai_addr);
--	strncpy(sun->sun_path, name, sizeof(sun->sun_path));
-+	un = SUN(ai->ai_addr);
-+	strncpy(un->sun_path, name, sizeof(un->sun_path));
- 
- 	ai->ai_socktype = socktype;
- 	/*
