@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/01/04 00:21:36 adrianp Exp $
+# $NetBSD: options.mk,v 1.1.1.1.4.1 2009/07/29 07:59:53 spz Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.bind96
-PKG_SUPPORTED_OPTIONS=  bind-xml-statistics-server inet6 threads
-PKG_SUPPORTED_OPTIONS+=	mysql pgsql ldap dlz-filesystem
+PKG_SUPPORTED_OPTIONS=  bind-dig-sigchase bind-xml-statistics-server
+PKG_SUPPORTED_OPTIONS+=	inet6 threads mysql pgsql ldap dlz-filesystem
 
 .include "../../mk/pthread.buildlink3.mk"
 
@@ -73,4 +73,13 @@ CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--enable-threads
 .else
 CONFIGURE_ARGS+=	--disable-threads
+.endif
+
+###
+### dig(1) option +sigchase for DNSSEC signature chasing
+###
+.if !empty(PKG_OPTIONS:Mbind-dig-sigchase)
+# If anything else needs to add entries to STD_CDEFINES, this will need
+# to be changed so that the two can cooperate.
+CONFIGURE_ENV+=		STD_CDEFINES=-DDIG_SIGCHASE=1
 .endif
