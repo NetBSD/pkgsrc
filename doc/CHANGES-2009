@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2876 2009/07/29 17:45:59 yyamano Exp $
+$NetBSD: CHANGES-2009,v 1.2877 2009/07/29 18:01:12 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3824,3 +3824,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/postgresql84-pltcl version 8.4.0 [adam 2009-07-29]
 	Updated www/py-django to 1.0.3 [joerg 2009-07-29]
 	Updated devel/apache-maven to 2.2.0 [yyamano 2009-07-29]
+	Added devel/p5-Devel-PartialDump version 0.09 [seb 2009-07-29]
