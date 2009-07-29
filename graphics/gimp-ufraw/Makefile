@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2009/07/22 09:01:32 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2009/07/29 17:49:41 drochner Exp $
 
 DISTNAME=		ufraw-0.15
 PKGNAME=		gimp-${DISTNAME}
@@ -27,6 +27,14 @@ PTHREAD_AUTO_VARS=	yes
 # This package uses too much C99 code to be patched.
 GCC_REQD+=		3.0
 BUILDLINK_TRANSFORM+=	rm:-std=gnu99
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.ufraw
+PKG_SUPPORTED_OPTIONS=	lensfun
+.include "../../mk/bsd.options.mk"
+.if !empty(PKG_OPTIONS:Mlensfun)
+CONFIGURE_ARGS+=	--with-lensfun
+.include "../../graphics/lensfun/buildlink3.mk"
+.endif
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/GConf/schemas.mk"
