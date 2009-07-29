@@ -1,0 +1,2 @@
+The Perl 5 module Devel::PartialDump is a data dumper optimized for
+logging of arbitrary parameters.
