@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/07/29 06:26:18 adam Exp $
+
+--- src/backend/Makefile.orig	2009-01-01 18:23:34.000000000 +0100
++++ src/backend/Makefile
+@@ -14,6 +14,10 @@ subdir = src/backend
+ top_builddir = ../..
+ include $(top_builddir)/src/Makefile.global
+ 
++CFLAGS+= $(DL_CFLAGS)
++LDFLAGS+= $(DL_LDFLAGS)
++LIBS+= $(DL_LIBS)
++
+ SUBDIRS = access bootstrap catalog parser commands executor foreign lib libpq \
+ 	main nodes optimizer port postmaster regex rewrite \
+ 	storage tcop tsearch utils $(top_builddir)/src/timezone
