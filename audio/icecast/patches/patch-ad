@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2009/07/29 13:59:59 drochner Exp $
+
+--- src/main.c.orig	2008-04-23 07:18:53.000000000 +0200
++++ src/main.c
+@@ -398,6 +398,10 @@ static void _ch_root_uid_setup(void)
+                fprintf(stdout, "Changed groupid to %i.\n", (int)gid);
+            else
+                fprintf(stdout, "Error changing groupid: %s.\n", strerror(errno));
++	   if(!setgroups(1, &gid))
++	       fprintf(stdout, "Dropped root's group memberships.\n");
++	   else
++	       fprintf(stdout, "Error dropping group memberships.\n");
+        }
+ 
+        if(uid != -1) {
