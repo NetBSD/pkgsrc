@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/05/28 23:27:12 yyamano Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/29 17:45:59 yyamano Exp $
 #
 
-DISTNAME=	apache-maven-2.1.0
+DISTNAME=	apache-maven-2.2.0
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=maven/binaries/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +14,7 @@ COMMENT=	Apache Project's software project management and comprehension tool
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=	run
-USE_JAVA2=	yes
+USE_JAVA2=	1.5
 USE_TOOLS+=	pax
 NO_BUILD=	yes
 
