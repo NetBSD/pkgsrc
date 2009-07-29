@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/29 06:30:30 adam Exp $
+${PG_SUBPREFIX}lib/postgresql/plpython.la
+${PG_SUBPREFIX}share/locale/de/LC_MESSAGES/plpython0-8.4.mo
+${PG_SUBPREFIX}share/locale/es/LC_MESSAGES/plpython0-8.4.mo
+${PG_SUBPREFIX}share/locale/fr/LC_MESSAGES/plpython0-8.4.mo
+${PG_SUBPREFIX}share/locale/ja/LC_MESSAGES/plpython0-8.4.mo
+${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/plpython0-8.4.mo
+${PG_SUBPREFIX}share/locale/tr/LC_MESSAGES/plpython0-8.4.mo
