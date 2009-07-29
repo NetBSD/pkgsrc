@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 22:00:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10.2.1 2009/07/29 20:36:04 tron Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -779,6 +779,9 @@ ${PYSITELIB}/django/contrib/gis/db/models/sql/__init__.pyo
 ${PYSITELIB}/django/contrib/gis/db/models/sql/query.py
 ${PYSITELIB}/django/contrib/gis/db/models/sql/query.pyc
 ${PYSITELIB}/django/contrib/gis/db/models/sql/query.pyo
+${PYSITELIB}/django/contrib/gis/db/models/sql/subqueries.py
+${PYSITELIB}/django/contrib/gis/db/models/sql/subqueries.pyc
+${PYSITELIB}/django/contrib/gis/db/models/sql/subqueries.pyo
 ${PYSITELIB}/django/contrib/gis/db/models/sql/where.py
 ${PYSITELIB}/django/contrib/gis/db/models/sql/where.pyc
 ${PYSITELIB}/django/contrib/gis/db/models/sql/where.pyo
@@ -1000,6 +1003,9 @@ ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/tx.wkt
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/test_feeds.py
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/test_feeds.pyc
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/test_feeds.pyo
+${PYSITELIB}/django/contrib/gis/tests/geoapp/test_regress.py
+${PYSITELIB}/django/contrib/gis/tests/geoapp/test_regress.pyc
+${PYSITELIB}/django/contrib/gis/tests/geoapp/test_regress.pyo
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/test_sitemaps.py
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/test_sitemaps.pyc
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/test_sitemaps.pyo
@@ -1035,6 +1041,9 @@ ${PYSITELIB}/django/contrib/gis/tests/layermap/models.pyo
 ${PYSITELIB}/django/contrib/gis/tests/layermap/tests.py
 ${PYSITELIB}/django/contrib/gis/tests/layermap/tests.pyc
 ${PYSITELIB}/django/contrib/gis/tests/layermap/tests.pyo
+${PYSITELIB}/django/contrib/gis/tests/layermap/tests_mysql.py
+${PYSITELIB}/django/contrib/gis/tests/layermap/tests_mysql.pyc
+${PYSITELIB}/django/contrib/gis/tests/layermap/tests_mysql.pyo
 ${PYSITELIB}/django/contrib/gis/tests/relatedapp/__init__.py
 ${PYSITELIB}/django/contrib/gis/tests/relatedapp/__init__.pyc
 ${PYSITELIB}/django/contrib/gis/tests/relatedapp/__init__.pyo

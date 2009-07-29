@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2009/05/02 16:21:46 reed Exp $
+# $NetBSD: Makefile,v 1.17.2.1 2009/07/29 20:36:04 tron Exp $
 
-DJANGOVERS=	1.0.2
-DISTNAME=	Django-${DJANGOVERS}-final
+DJANGOVERS=	1.0.3
+DISTNAME=	Django-${DJANGOVERS}
 PKGNAME=	${PYPKGPREFIX}-django-${DJANGOVERS}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	http://media.djangoproject.com/releases/${DJANGOVERS}/
 
