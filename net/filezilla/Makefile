@@ -1,0 +1,33 @@
+# $NetBSD: Makefile,v 1.1 2009/07/30 16:07:08 zafer Exp $
+#
+
+VERSION=	3.2.6.1
+DISTNAME=	FileZilla_${VERSION}_src
+PKGNAME=	filezilla-${VERSION}
+CATEGORIES=	net x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filezilla/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://filezilla-project.org/
+COMMENT=	FTP, FTPS and SFTP client with intuitive GUI
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake pkg-config msgfmt msgmerge
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+
+CONFIGURE_ARGS+=	--disable-autoupdatecheck
+
+.include "options.mk"
+
+.include "../../devel/libidn/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../security/gnutls/libgnutls-config.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
