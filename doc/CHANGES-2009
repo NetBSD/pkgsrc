@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2888 2009/07/30 22:42:10 seb Exp $
+$NetBSD: CHANGES-2009,v 1.2889 2009/07/30 23:05:16 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3837,3 +3837,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/irssi to 0.8.14 [adrianp 2009-07-30]
 	Updated chat/irssi-icb to 0.14nb15 [adrianp 2009-07-30]
 	Updated devel/p5-Devel-Declare to 0.005008 [seb 2009-07-30]
+	Added devel/p5-MooseX-Method-Signatures version 0.16 [seb 2009-07-30]
