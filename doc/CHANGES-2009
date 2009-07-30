@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2883 2009/07/30 16:46:45 zafer Exp $
+$NetBSD: CHANGES-2009,v 1.2884 2009/07/30 19:28:46 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3832,3 +3832,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-Manifest to 1.23 [sno 2009-07-30]
 	Updated graphics/ruby-RMagick to 2.11.0 [obache 2009-07-30]
 	Added net/filezilla version 3.2.6.1 [zafer 2009-07-30]
+	Removed x11/qgtkstyle [hasso 2009-07-30]
