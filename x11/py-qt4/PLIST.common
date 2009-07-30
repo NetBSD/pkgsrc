@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2009/07/04 18:27:55 hasso Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2009/07/30 11:34:18 drochner Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -35,12 +35,14 @@ ${PYSITELIB}/PyQt4/uic/exceptions.py
 ${PYSITELIB}/PyQt4/uic/icon_cache.py
 ${PYSITELIB}/PyQt4/uic/objcreator.py
 ${PYSITELIB}/PyQt4/uic/port_v2/__init__.py
+${PYSITELIB}/PyQt4/uic/port_v2/ascii_upper.py
 ${PYSITELIB}/PyQt4/uic/port_v2/encode_utf8.py
 ${PYSITELIB}/PyQt4/uic/port_v2/invoke.py
 ${PYSITELIB}/PyQt4/uic/port_v2/load_plugin.py
 ${PYSITELIB}/PyQt4/uic/port_v2/proxy_base.py
 ${PYSITELIB}/PyQt4/uic/port_v2/string_io.py
 ${PYSITELIB}/PyQt4/uic/port_v3/__init__.py
+${PYSITELIB}/PyQt4/uic/port_v3/ascii_upper.py
 ${PYSITELIB}/PyQt4/uic/port_v3/encode_utf8.py
 ${PYSITELIB}/PyQt4/uic/port_v3/invoke.py
 ${PYSITELIB}/PyQt4/uic/port_v3/load_plugin.py
