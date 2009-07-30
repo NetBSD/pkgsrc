@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8301 2009/07/30 07:28:06 sno Exp $
+$NetBSD: TODO,v 1.8302 2009/07/30 16:58:33 zafer Exp $
 
 Suggested new packages
 ======================
@@ -310,10 +310,6 @@ Suggested new packages
 	flyback [pkgsrc-wip]
 	http://code.google.com/p/flyback/
 	Backup software inspired by Apple's Time Machine
-
-	filezilla client
-	http://filezilla-project.org
-	Featureful FTP, FTPS and SFTP client	
 
 	SpiralSynthModular (spiralmodular)
 	http://www.pawfal.org/Software/SSM/
