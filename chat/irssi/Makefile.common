@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2009/07/27 12:59:44 obache Exp $
+# $NetBSD: Makefile.common,v 1.10 2009/07/30 21:58:15 adrianp Exp $
 # used by chat/irssi-icb/Makefile
 
 # Specific distribution information.
-IRSSI_VERSION=		0.8.13
+IRSSI_VERSION=		0.8.14
 IRSSI_DISTNAME=		irssi-${IRSSI_VERSION}
 IRSSI_EXTRACT_SUFX=	.tar.bz2
 IRSSI_DISTFILE=		${IRSSI_DISTNAME}${IRSSI_EXTRACT_SUFX}
@@ -11,3 +11,7 @@ IRSSI_DISTFILE=		${IRSSI_DISTNAME}${IRSSI_EXTRACT_SUFX}
 # plugins to compile properly.
 IRSSI_CONFIG=		${PREFIX}/share/irssi/irssi-config
 IRSSI_CONFIG_H=		${PREFIX}/include/irssi/irssi-config.h
+
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=YES
+.endif
