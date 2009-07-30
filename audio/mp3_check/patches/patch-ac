@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2009/07/24 18:29:24 drochner Exp $
+$NetBSD: patch-ac,v 1.3 2009/07/30 20:12:39 drochner Exp $
 
 --- support_functions.h.orig	2000-07-29 08:41:38.000000000 +0200
 +++ support_functions.h
@@ -8,8 +8,8 @@ $NetBSD: patch-ac,v 1.2 2009/07/24 18:29:24 drochner Exp $
  		printf("\n");
 -		printf("%-20s%1ld.%02lds\n", "USER_TIME", process_usage.ru_utime.tv_sec, process_usage.ru_utime.tv_usec / 10000);
 -		printf("%-20s%1ld.%02lds\n", "SYS_TIME", process_usage.ru_stime.tv_sec, process_usage.ru_stime.tv_usec / 10000);
-+		printf("%-20s%1lld.%02ds\n", "USER_TIME", (long long)process_usage.ru_utime.tv_sec, process_usage.ru_utime.tv_usec / 10000);
-+		printf("%-20s%1lld.%02ds\n", "SYS_TIME", (long long)process_usage.ru_stime.tv_sec, process_usage.ru_stime.tv_usec / 10000);
++		printf("%-20s%1lld.%02lds\n", "USER_TIME", (long long)process_usage.ru_utime.tv_sec, (long)process_usage.ru_utime.tv_usec / 10000);
++		printf("%-20s%1lld.%02lds\n", "SYS_TIME", (long long)process_usage.ru_stime.tv_sec, (long)process_usage.ru_stime.tv_usec / 10000);
  	}
  }
  
