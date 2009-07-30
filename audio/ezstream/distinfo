@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/30 16:31:24 drochner Exp $
+
+SHA1 (ezstream-0.5.4.tar.gz) = 4bfd4f0883b39a036c4d1d8c5f80e1768cbbfe11
+RMD160 (ezstream-0.5.4.tar.gz) = 4279b23844feb93612c58f9fe6793ee5592390a9
+Size (ezstream-0.5.4.tar.gz) = 245171 bytes

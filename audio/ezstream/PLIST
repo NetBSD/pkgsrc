@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/30 16:31:24 drochner Exp $
+bin/ezstream
+man/man1/ezstream.1
+share/doc/ezstream/COPYING
+share/doc/ezstream/NEWS
+share/doc/ezstream/README
+share/examples/ezstream/ezstream_metadata.xml
+share/examples/ezstream/ezstream_mp3.xml
+share/examples/ezstream/ezstream_reencode_mp3.xml
+share/examples/ezstream/ezstream_reencode_theora.xml
+share/examples/ezstream/ezstream_reencode_vorbis.xml
+share/examples/ezstream/ezstream_stdin_vorbis.xml
+share/examples/ezstream/ezstream_vorbis.xml
+share/examples/ezstream/meta.sh
+share/examples/ezstream/play.sh
