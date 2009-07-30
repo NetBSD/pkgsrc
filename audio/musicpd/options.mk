@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.12 2009/07/27 20:08:38 drochner Exp $
+# $NetBSD: options.mk,v 1.13 2009/07/30 16:51:04 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	aac audiofile curl flac id3 libao jack libmikmod musepack ogg inet6
+PKG_SUPPORTED_OPTIONS=	aac audiofile curl flac id3 libao jack libmikmod musepack ogg inet6 shout
 PKG_SUGGESTED_OPTIONS=	aac audiofile curl flac id3 libao musepack ogg
 
 .include "../../mk/bsd.options.mk"
@@ -84,4 +84,12 @@ CONFIGURE_ARGS+=	--disable-vorbis
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mshout)
+.  include "../../audio/libshout/buildlink3.mk"
+.  include "../../audio/lame/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-shout
+.else
+CONFIGURE_ARGS+=	--disable-shout
 .endif
