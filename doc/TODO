@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8299 2009/07/29 14:24:40 obache Exp $
+$NetBSD: TODO,v 1.8300 2009/07/30 04:28:17 taca Exp $
 
 Suggested new packages
 ======================
@@ -397,6 +397,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
+	o apache-2.2.12
 	o apache-tomcat55-6.0.14
 	o apr-1.3.6
 	o apr-util-1.3.8
@@ -1042,7 +1043,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pioneers-0.12.2
 	o pircbot-1.4.4
 	o pks-0.9.6
-	o plone-3.2.2 [should be plone-32?]
+	o plone-3.2.3 [should make plone-32?]
 	o ploticus-2.41
 	o ploticus-examples-230
 	o plotutils-2.5
@@ -1193,7 +1194,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sabayon-2.25.0 [GNOME 2.26]
 	o sablecc-3.2
 	o samba-3.2.13
-	o samba-3.3.6
+	o samba-3.3.7
 	o sane-backends-1.0.20
 	o sarg-2.2.5
 	o sbcl-1.0.30
