@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1196 2009/07/29 23:12:50 seb Exp $
+# $NetBSD: Makefile,v 1.1197 2009/07/30 20:51:24 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -747,6 +747,7 @@ SUBDIR+=	p5-Params-Coerce
 SUBDIR+=	p5-Params-Util
 SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Parse-CPAN-Meta
+SUBDIR+=	p5-Parse-Method-Signatures
 SUBDIR+=	p5-Parse-RecDescent
 SUBDIR+=	p5-Parse-Yapp
 SUBDIR+=	p5-PatchReader
