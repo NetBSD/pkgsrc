@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2009/07/22 09:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2009/07/31 08:50:27 drochner Exp $
 #
 
-DISTNAME=	rhythmbox-0.12.2
+DISTNAME=	rhythmbox-0.12.3
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,7 +31,7 @@ GCONF_SCHEMAS=		rhythmbox.schemas
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
 BUILDLINK_API_DEPENDS.musicbrainz+=	musicbrainz>=2.1.0
-.include "../../audio/musicbrainz/buildlink3.mk"
+.include "../../audio/libmusicbrainz/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -46,7 +46,7 @@ BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
+.include "../../sysutils/brasero/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
