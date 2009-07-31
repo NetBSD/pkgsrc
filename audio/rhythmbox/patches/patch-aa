@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.10 2009/07/31 08:50:27 drochner Exp $
+
+--- plugins/coherence/upnp_coherence/UpnpSource.py.orig	2009-06-30 01:38:57.000000000 +0200
++++ plugins/coherence/upnp_coherence/UpnpSource.py
+@@ -132,7 +132,7 @@ class UpnpSource(rb.BrowserSource,log.Lo
+ 
+                     if duration is not None:
+                         h,m,s = duration.split(':')
+-                        seconds = int(h)*3600 + int(m)*60 + int(s)
++                        seconds = int(h)*3600 + int(m)*60 + int(round(float(s)))
+                         self.info("%r %r:%r:%r %r", duration, h, m , s, seconds)
+                         self.__db.set(entry, rhythmdb.PROP_DURATION, seconds)
+ 
