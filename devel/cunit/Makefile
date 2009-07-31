@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/10 21:03:58 agc Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/31 21:23:14 agc Exp $
 
 DISTNAME=		CUnit-2.1-0-src
 PKGNAME=		CUnit-2.1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cunit/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://cunit.sourceforge.net/
-COMMENT=		C Unit xhecking test software
+COMMENT=		C Unit checking test software
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
