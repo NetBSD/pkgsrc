@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.3 2009/08/01 05:24:08 hasso Exp $
+
+--- lowess.c.orig	2000-11-25 01:17:38 +0200
++++ lowess.c	2009-07-31 00:39:55 +0300
+@@ -12,7 +12,9 @@
+ /* forward declarations */
+ static double pow2 P1H(double);
+ static double pow3 P1H(double x);
++#if !(defined(__DragonFly__) && __DragonFly_version >= 200204)
+ static double fmax P2H(double, double);
++#endif
+ static VOID sort P2H(double *, int);
+ static VOID lowest P11H(double *, double *, int, double, double *,
+                         int, int, double *, int, double *, int *);
+@@ -20,7 +22,9 @@ static VOID lowest P11H(double *, double
+ 
+ static double pow2 P1C(double, x) { return(x * x); }
+ static double pow3 P1C(double, x) { return(x * x * x); }
++#if !(defined(__DragonFly__) && __DragonFly_version >= 200204)
+ static double fmax P2C(double, x, double, y) { return (x > y ? x : y); }
++#endif
+ 
+ int lowess P9C(double *, x, double *, y, int, n, double, f, int, nsteps, double, delta,
+                double *, ys, double *, rw, double *, res)
