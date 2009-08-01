@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2892 2009/08/01 03:02:06 schnoebe Exp $
+$NetBSD: CHANGES-2009,v 1.2893 2009/08/01 07:09:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3841,3 +3841,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-MooseX-Declare version 0.23 [seb 2009-07-31]
 	Updated pkgtools/url2pkg to 2.11 [rillig 2009-07-31]
 	Added net/udns version 0.0.9 [schnoebe 2009-08-01]
+	Added print/tex-cite version 5.1 [minskim 2009-08-01]
+	Added print/tex-cite-doc version 5.1 [minskim 2009-08-01]
