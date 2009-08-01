@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.777 2009/07/30 16:38:42 zafer Exp $
+# $NetBSD: Makefile,v 1.778 2009/08/01 14:55:19 schnoebe Exp $
 #
 
 COMMENT=	Networking tools
@@ -528,6 +528,7 @@ SUBDIR+=	twitux
 SUBDIR+=	ucarp
 SUBDIR+=	ucspi-ssl
 SUBDIR+=	ucspi-tcp
+SUBDIR+=	udns
 SUBDIR+=	udpcast
 SUBDIR+=	udptunnel
 SUBDIR+=	unbound
