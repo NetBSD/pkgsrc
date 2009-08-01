@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2895 2009/08/01 13:33:27 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2896 2009/08/01 16:23:02 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3845,3 +3845,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-cite-doc version 5.1 [minskim 2009-08-01]
 	Updated textproc/p5-Search-Xapian to 1.0.14.0 [schmonz 2009-08-01]
 	Updated x11/modular-xorg-server to 1.6.3 [hasso 2009-08-01]
+	Updated cad/electric to 7.00nb3 [dholland 2009-08-01]
