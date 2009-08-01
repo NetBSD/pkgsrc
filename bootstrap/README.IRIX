@@ -1,4 +1,4 @@
-$NetBSD: README.IRIX,v 1.6 2006/09/02 11:21:44 schwarz Exp $
+$NetBSD: README.IRIX,v 1.7 2009/08/01 20:16:25 dholland Exp $
 
 You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
 compiler (cc/c89).  Please set the CC environment variable according to your
@@ -38,7 +38,7 @@ up passing invalid flags to the compiler.  Note that bootstrap should create
 an appropriate mk.conf.example by default.
 
 If you have both the MIPSPro compiler chain installed as well as gcc, but want
-to make sure that MIPRPro is used, please set your PATH to not include the
+to make sure that MIPSPro is used, please set your PATH to not include the
 location of gcc (often /usr/freeware/bin), and (important), pass the
 '--preserve-path' flag.
 
