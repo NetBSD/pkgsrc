@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.149 2009/07/05 12:35:13 ahoka Exp $
+# $NetBSD: bootstrap,v 1.150 2009/08/01 20:19:37 dholland Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -508,6 +508,9 @@ HPUX)
 IRIX*)
 	if [ -d "/usr/freeware/bin" ]; then
 		overpath="/usr/freeware/bin:$overpath"
+	fi
+	if [ -d "/usr/bsd" ]; then
+		overpath="/usr/bsd:$overpath"
 	fi
 	if [ -d "/usr/bsd/bin" ]; then
 		overpath="/usr/bsd/bin:$overpath"
