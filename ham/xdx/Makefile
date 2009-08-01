@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2009/07/22 09:01:34 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2009/08/01 18:56:03 zafer Exp $
 #
 
-DISTNAME=	xdx-2.2
-PKGREVISION=	1
+DISTNAME=	xdx-2.4.2
 CATEGORIES=	ham
 MASTER_SITES=	http://www.qsl.net/pg4i/download/
 
 MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://www.qsl.net/pg4i/linux/xdx.html
 COMMENT=	Amateur Radio tcp/ip DX-cluster client
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,5 +18,6 @@ USE_PKGLOCALEDIR=yes
 
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
