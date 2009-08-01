@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2897 2009/08/01 18:59:47 zafer Exp $
+$NetBSD: CHANGES-2009,v 1.2898 2009/08/01 19:13:59 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3847,3 +3847,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/modular-xorg-server to 1.6.3 [hasso 2009-08-01]
 	Updated cad/electric to 7.00nb3 [dholland 2009-08-01]
 	Updated ham/xdx to 2.4.2 [zafer 2009-08-01]
+	Updated textproc/groff to 1.20.1nb1 [dholland 2009-08-01]
