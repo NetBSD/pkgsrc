@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2009/07/21 11:15:53 drochner Exp $
+# $NetBSD: Makefile,v 1.50 2009/08/01 11:06:23 hasso Exp $
 #
 
-DISTNAME=	xorg-server-1.6.2
+DISTNAME=	xorg-server-1.6.3
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -64,7 +63,6 @@ CONFIGURE_ARGS+=	--disable-xsdl
 CONFIGURE_ARGS+=	--disable-xfbdev
 CONFIGURE_ARGS+=	--disable-kbd_mode	# deprecated
 CONFIGURE_ARGS+=	--disable-xorgcfg	# deprecated
-CONFIGURE_ARGS+=	--enable-install-libxf86config # needed by some drivers
 
 CONFIGURE_ARGS+=	--with-int10=x86emu
 
