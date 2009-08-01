@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/04/30 20:17:03 zafer Exp $
+# $NetBSD: Makefile,v 1.10 2009/08/01 20:37:05 dholland Exp $
 
 DISTNAME=	pcc-0.9.9
 CATEGORIES=	lang
@@ -13,6 +13,8 @@ HOMEPAGE=	http://pcc.ludd.ltu.se/
 COMMENT=	Portable C compiler
 
 USE_TOOLS+=	lex yacc
+# XXX For some reason building with bmake fails randomly.
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	no
 
