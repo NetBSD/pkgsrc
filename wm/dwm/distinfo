@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2009/07/15 20:35:18 tnn Exp $
+$NetBSD: distinfo,v 1.9 2009/08/01 23:26:14 tnn Exp $
 
-SHA1 (dwm-5.6.tar.gz) = 51c46de13c26d2e63fde06530a079e45f8b5116e
-RMD160 (dwm-5.6.tar.gz) = 824609f80b73d8dfa1b757d93ae0325573b1de90
-Size (dwm-5.6.tar.gz) = 19294 bytes
+SHA1 (dwm-5.6.1.tar.gz) = 99be44a97835db3714027750798542cd20e9fccb
+RMD160 (dwm-5.6.1.tar.gz) = c12f6cff053db68623396ccc5c8a8570ddb5baa0
+Size (dwm-5.6.1.tar.gz) = 19415 bytes
