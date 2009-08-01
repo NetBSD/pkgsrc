@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2893 2009/08/01 07:09:52 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2894 2009/08/01 08:43:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3843,3 +3843,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/udns version 0.0.9 [schnoebe 2009-08-01]
 	Added print/tex-cite version 5.1 [minskim 2009-08-01]
 	Added print/tex-cite-doc version 5.1 [minskim 2009-08-01]
+	Updated textproc/p5-Search-Xapian to 1.0.14.0 [schmonz 2009-08-01]
