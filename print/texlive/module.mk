@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.6 2009/07/05 21:57:38 minskim Exp $
+# $NetBSD: module.mk,v 1.7 2009/08/01 07:04:27 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live 2008 packages.
@@ -41,7 +41,7 @@ USE_TOOLS+=	pax
 NO_BUILD?=	yes
 WRKSRC?=	${WRKDIR}
 
-.PHONY: _texlive-set-permission:
+.PHONY: _texlive-set-permission _texlive-man _texlive-install
 _texlive-set-permission:
 .for _pat in ${TEXLIVE_IGNORE_PATTERNS}
 	${RM} -rf ${WRKSRC}/${_pat}
@@ -53,7 +53,14 @@ _texlive-set-permission:
 	fi
 .endfor
 
-.PHONY: _texlive-install:
+_texlive-man:
+	if [ -d ${WRKSRC}/texmf/doc/man ]; then \
+		${MKDIR} ${WRKSRC}/man; \
+		${MV} ${WRKSRC}/texmf/doc/man/* ${WRKSRC}/man; \
+		${FIND} ${WRKSRC}/man -name \*.pdf -exec ${RM} {} \; ; \
+		${RMDIR} -p ${WRKSRC}/texmf/doc/man || ${TRUE}; \
+	fi
+
 _texlive-install:
 .for _texmf in texmf texmf-dist
 	if [ -d ${WRKSRC}/${_texmf} ]; then \
@@ -67,8 +74,25 @@ _texlive-install:
 		pax -rwpm -s ',.*\.orig$$,,' texmf-doc/* \
 			${DESTDIR}${PREFIX}/share/doc/texmf; \
 	fi
+	if [ -d ${WRKSRC}/bin ]; then \
+		${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin; \
+		for script in ${WRKSRC}/bin/*; do \
+			${INSTALL_SCRIPT} $$script ${DESTDIR}${PREFIX}/bin; \
+		done; \
+	fi
+	if [ -d ${WRKSRC}/man ]; then \
+		${FIND} ${WRKSRC}/man -name \*.orig -exec ${RM} {} \; ; \
+		${INSTALL_MAN_DIR} -p ${DESTDIR}${PREFIX}/${PKGMANDIR}; \
+		for f in ${WRKSRC}/man/*; do \
+			d=${DESTDIR}${PREFIX}/${PKGMANDIR}/`${BASENAME} $$f`; \
+			${INSTALL_MAN_DIR} $$d; \
+			${INSTALL_MAN} $$f/* $$d; \
+		done; \
+	fi
 
+.if empty(TEX_TEXMF_DIRS) || ${TEX_TEXMF_DIRS} != "none"
 .include "../../print/kpathsea/texmf.mk"
+.endif
 .if !empty(TEX_FORMAT_NAMES)
 .  include "../../print/texlive-tetex/format.mk"
 .endif
@@ -79,5 +103,5 @@ _texlive-install:
 .  include "../../print/texlive-tetex/map.mk"
 .endif
 
-post-extract: _texlive-set-permission
+post-extract: _texlive-set-permission _texlive-man
 do-install: _texlive-install
