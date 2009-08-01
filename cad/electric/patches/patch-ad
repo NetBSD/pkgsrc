@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2009/08/01 16:22:26 dholland Exp $
+
+Hack around silly behavior that unlocks every newly created pthread mutex.
+
+--- src/include/global.h.orig	2009-08-01 12:18:08.000000000 -0400
++++ src/include/global.h	2009-08-01 12:18:21.000000000 -0400
+@@ -2404,6 +2404,7 @@ void         enewthread(void* (*function
+ void        *emakemutex(void);
+ void         emutexlock(void *vmutex);
+ void         emutexunlock(void *vmutex);
++void         emutexensureunlocked(void *vmutex);
+ CHAR       **eprinterlist(void);
+ void         flushscreen(void);
+ void         exitprogram(void);
