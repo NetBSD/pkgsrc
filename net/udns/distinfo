@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/08/01 02:41:22 schnoebe Exp $
+
+SHA1 (udns_0.0.9.tar.gz) = 9792ac12619d23d3086f960561428238c41a25e0
+RMD160 (udns_0.0.9.tar.gz) = c2d79b97cda87614a644da6a1be2d55f354d8a22
+Size (udns_0.0.9.tar.gz) = 84307 bytes
+SHA1 (patch-aa) = 0a931b98584a8b1ab83cec093de95f76b2494aa4

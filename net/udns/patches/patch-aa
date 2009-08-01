@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/01 02:41:22 schnoebe Exp $
+
+# update to use libtool for portability
+
+--- Makefile.in.orig	2007-01-15 22:19:08.000000000 +0100
++++ Makefile.in
+@@ -34,7 +34,7 @@ DIST   = COPYING.LGPL udns.h udns.3 dnsg
+ 
+ OBJS   = $(SRCS:.c=.o) $(GEN:.c=.o)
+ LIB    = lib$(NAME).a
+-LIBFL  = -L. -l$(NAME)
++LIBFL  = lib$(NAME).la
+ 
+ SOVER  = 0
+ SOBJS  = $(OBJS:.o=.lo)
+@@ -63,10 +63,10 @@ all: static
+ static: $(LIB) $(UTILS)
+ staticlib: $(LIB)
+ $(LIB): $(OBJS)
+-	-rm -f $@
+-	$(AR) rv $@ $(OBJS)
++	${LIBTOOL} --mode=link ${CC} -o ${LIB:.a=.la} ${OBJS:.o=.lo} \
++            -rpath ${PREFIX}/lib -version-info 0:9
+ .c.o:
+-	$(CC) $(CFLAGS) $(CDEFS) -c $<
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) $(CDEFS) -c $<
+ 
+ shared: $(SOLIBV) $(SOUTILS)
+ sharedlib: $(SOLIBV)
+@@ -183,14 +183,14 @@ dnsget.o dnsget.lo: dnsget.c config.h ud
+ rblcheck.o rblcheck.lo: rblcheck.c udns.h getopt.c
+ ex-rdns.o ex-rdns.lo: ex-rdns.c udns.h
+ dnsget: dnsget.o $(LIB)
+-	$(CC) $(CFLAGS) -o $@ dnsget.o $(LIBFL)
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o $@ dnsget.o $(LIBFL)
+ dnsget_s: dnsget.o $(SOLIB)
+ 	$(CC) $(CFLAGS) -o $@ dnsget.o $(SOLIBFL)
+ rblcheck: rblcheck.o $(LIB)
+-	$(CC) $(CFLAGS) -o $@ rblcheck.o $(LIBFL)
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o $@ rblcheck.o $(LIBFL)
+ rblcheck_s: rblcheck.o $(SOLIB)
+ 	$(CC) $(CFLAGS) -o $@ rblcheck.o $(SOLIBFL)
+ ex-rdns: ex-rdns.o $(LIB)
+-	$(CC) $(CFLAGS) -o $@ ex-rdns.o $(LIBFL)
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o $@ ex-rdns.o $(LIBFL)
+ ex-rdns_s: ex-rdns.o $(SOLIB)
+ 	$(CC) $(CFLAGS) -o $@ ex-rdns.o $(SOLIBFL)
