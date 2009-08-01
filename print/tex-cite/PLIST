@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/01 07:08:03 minskim Exp $
+share/texmf-dist/tex/latex/cite/chapterbib.sty
+share/texmf-dist/tex/latex/cite/cite.sty
+share/texmf-dist/tex/latex/cite/drftcite.sty
+share/texmf-dist/tex/latex/cite/overcite.sty

@@ -1,0 +1,4 @@
+The package supports compressed, sorted lists of numerical citations,
+and also deals with various punctuation and other issues of
+representation, including comprehensive management of break points.
+The package is compatible with both hyperref and backref.
