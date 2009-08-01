@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2896 2009/08/01 16:23:02 dholland Exp $
+$NetBSD: CHANGES-2009,v 1.2897 2009/08/01 18:59:47 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3846,3 +3846,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Search-Xapian to 1.0.14.0 [schmonz 2009-08-01]
 	Updated x11/modular-xorg-server to 1.6.3 [hasso 2009-08-01]
 	Updated cad/electric to 7.00nb3 [dholland 2009-08-01]
+	Updated ham/xdx to 2.4.2 [zafer 2009-08-01]
