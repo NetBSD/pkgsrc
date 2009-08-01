@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8305 2009/08/01 23:52:44 zafer Exp $
+$NetBSD: TODO,v 1.8306 2009/08/01 23:56:11 zafer Exp $
 
 Suggested new packages
 ======================
@@ -452,7 +452,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o boson-0.13
 	o botan-1.8.4
 	o bouml-4.13.1
-	o brasero-2.26.3
 	o bugzilla-3.2.4
 	o byacc-20080824
 	o bzr-1.17
