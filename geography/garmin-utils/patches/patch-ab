@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.5 2009/08/01 05:26:24 hasso Exp $
+
+--- lib/gps1.c.orig	2009-07-30 23:13:40 +0300
++++ lib/gps1.c	2009-07-30 23:14:17 +0300
+@@ -23,6 +23,7 @@
+ /*
+  * Define the various serial I/O types
+  */
++#undef BSD
+ #define BSD	0
+ #define Linux	1
+ 
