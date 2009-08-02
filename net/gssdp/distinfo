@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/08/02 11:24:06 drochner Exp $
+
+SHA1 (gssdp-0.6.4.tar.gz) = c618fa3438f38ff6b7cf7a1b470fc2cd4420eb90
+RMD160 (gssdp-0.6.4.tar.gz) = 8dfbd41f96a55407bc7ccef6a2ca4e278acff55d
+Size (gssdp-0.6.4.tar.gz) = 390297 bytes
+SHA1 (patch-aa) = dbccb5fad660287041f63076b6bdd7ddca9e1305
+SHA1 (patch-ab) = 16088d79afd534ec44b47f26ee30d3f9be126897
