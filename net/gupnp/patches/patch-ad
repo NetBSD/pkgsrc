@@ -1,0 +1,37 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/08/02 11:35:26 drochner Exp $
+
+--- libgupnp/gupnp-service.c.orig	2009-06-02 14:10:25.000000000 +0200
++++ libgupnp/gupnp-service.c
+@@ -30,7 +30,11 @@
+ #include <gobject/gvaluecollector.h>
+ #include <gmodule.h>
+ #include <libsoup/soup-date.h>
++#if defined(__NetBSD__)
++#include <uuid.h>
++#else
+ #include <uuid/uuid.h>
++#endif
+ #include <string.h>
+ #include "gupnp-service.h"
+ #include "gupnp-root-device.h"
+@@ -843,9 +847,19 @@ generate_sid (void)
+ {
+         uuid_t id;
+         char out[39];
+-
++#if defined(__NetBSD__)
++	char *myout;
++#endif
++
++#if defined(__NetBSD__)
++	uuid_create(&id, 0);
++	uuid_to_string(&id, &myout, 0);
++	strncpy(out, myout, sizeof(out));
++	free(myout);
++#else
+         uuid_generate (id);
+         uuid_unparse (id, out);
++#endif
+ 
+         return g_strdup_printf ("uuid:%s", out);
+ }

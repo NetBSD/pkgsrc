@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/02 11:35:26 drochner Exp $
+
+--- libgupnp/gupnp-context.c.orig	2009-04-30 14:31:58.000000000 +0200
++++ libgupnp/gupnp-context.c
+@@ -146,11 +146,13 @@ get_host_ip (const char *name)
+                         p = inet_ntop (AF_INET,
+                                        &s4->sin_addr, ip, sizeof (ip));
+                         break;
++#if 0 /* XXX doesn't work with scoped addresses */
+                 case AF_INET6:
+                         s6 = (struct sockaddr_in6 *) ifa->ifa_addr;
+                         p = inet_ntop (AF_INET6,
+                                        &s6->sin6_addr, ip, sizeof (ip));
+                         break;
++#endif
+                 default:
+                         continue; /* Unknown: ignore */
+                 }
+@@ -184,8 +186,8 @@ get_default_host_ip (void)
+         unsigned long dest;
+         gboolean found = FALSE;
+         
+-#if defined(__FreeBSD__)
+-	if ((fp = popen ("netstat -r -f inet -n -W", "r"))) {
++#if defined(__FreeBSD__) || defined(__NetBSD__)
++	if ((fp = popen ("netstat -r -f inet -n", "r"))) {
+ 		char buffer[BUFSIZ];
+ 
+ 		char destination[32];

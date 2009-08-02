@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/08/02 11:35:26 drochner Exp $
+
+--- libgupnp/gupnp-control-point.c.orig	2009-04-30 13:54:20.000000000 +0200
++++ libgupnp/gupnp-control-point.c
+@@ -572,7 +572,7 @@ parse_usn (const char *usn,
+         /* Count elements */
+         count = g_strv_length (bits);
+ 
+-        if (count == 1) {
++        if (count == 1 || (count == 2 && strlen(bits[1]) == 0)) {
+                 /* uuid:device-UUID */
+ 
+                 *udn = bits[0];
