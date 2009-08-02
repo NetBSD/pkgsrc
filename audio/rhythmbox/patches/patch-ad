@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.8 2009/08/02 12:10:39 drochner Exp $
+
+--- plugins/coherence/upnp_coherence/MediaPlayer.py.orig	2009-07-31 15:50:21.000000000 +0200
++++ plugins/coherence/upnp_coherence/MediaPlayer.py
+@@ -260,7 +260,7 @@ class RhythmboxPlayer(log.Loggable):
+ 
+                 if duration is not None:
+                     h,m,s = duration.split(':')
+-                    seconds = int(h)*3600 + int(m)*60 + int(s)
++                    seconds = int(h)*3600 + int(m)*60 + int(round(float(s)))
+                     self.info("%r %r:%r:%r %r", duration, h, m , s, seconds)
+                     self.shell.props.db.set(self.entry, rhythmdb.PROP_DURATION, seconds)
+ 
