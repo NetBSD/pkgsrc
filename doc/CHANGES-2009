@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2905 2009/08/02 19:50:21 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2906 2009/08/02 22:25:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3832,7 +3832,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-Manifest to 1.23 [sno 2009-07-30]
 	Updated graphics/ruby-RMagick to 2.11.0 [obache 2009-07-30]
 	Added net/filezilla version 3.2.6.1 [zafer 2009-07-30]
-	Removed x11/qgtkstyle [hasso 2009-07-30]
+	Removed x11/qgtkstyle successor x11/qt4-libs [hasso 2009-07-30]
 	Added devel/p5-Parse-Method-Signatures version 1.003009 [seb 2009-07-30]
 	Updated chat/irssi to 0.8.14 [adrianp 2009-07-30]
 	Updated chat/irssi-icb to 0.14nb15 [adrianp 2009-07-30]
