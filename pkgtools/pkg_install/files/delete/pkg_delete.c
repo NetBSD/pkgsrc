@@ -34,7 +34,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_delete.c,v 1.6 2009/04/24 14:00:25 joerg Exp $");
+__RCSID("$NetBSD: pkg_delete.c,v 1.7 2009/08/02 17:56:44 joerg Exp $");
 
 #if HAVE_ERR_H
 #include <err.h>
@@ -43,10 +43,6 @@ __RCSID("$NetBSD: pkg_delete.c,v 1.6 2009/04/24 14:00:25 joerg Exp $");
 #include <stdlib.h>
 
 #include "lib.h"
-
-#ifndef __UNCONST
-#define __UNCONST(a)	((void *)(unsigned long)(const void *)(a))
-#endif
 
 static const char *pkgdb;
 static const char *destdir;
@@ -531,7 +527,8 @@ remove_line(const char *fname, const char *fname_tmp, const char *text)
 	if (rename(fname_tmp, fname) == -1) {
 		warn("Unable to rename `%s' to `%s'", fname_tmp, fname);
 		rv = 1;
-	}
+	} else
+		rv = 0;
 	remove(fname_tmp);
 
 	return rv;
@@ -735,6 +732,8 @@ remove_pkg(const char *pkg)
 	fname = pkgdb_pkg_file(pkg, VIEWS_FNAME);
 	if (fexists(fname))
 		is_depoted_pkg = TRUE;
+	else
+		is_depoted_pkg = FALSE;
 	free(fname);
 
 	if (Fake)

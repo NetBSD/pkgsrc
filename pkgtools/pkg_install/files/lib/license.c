@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.8 2009/07/26 09:18:29 wiz Exp $	*/
+/*	$NetBSD: license.c,v 1.9 2009/08/02 17:56:45 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -265,8 +265,6 @@ acceptable_pkg_license_internal(const char **licensep, int toplevel, const char 
 		}
 		license += len;
 	}
-
-	return is_true;
 }
 
 int
