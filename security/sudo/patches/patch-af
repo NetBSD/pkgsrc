@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.21 2009/02/05 13:48:12 taca Exp $
+$NetBSD: patch-af,v 1.22 2009/08/02 07:39:27 hasso Exp $
 
---- configure.in.orig	2008-12-10 06:13:01.000000000 +0900
-+++ configure.in
-@@ -153,7 +153,6 @@ else
+--- configure.in.orig	2009-07-20 16:34:37 +0300
++++ configure.in	2009-08-01 22:19:54 +0300
+@@ -156,7 +156,6 @@ else
  fi
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -10,11 +10,11 @@ $NetBSD: patch-af,v 1.21 2009/02/05 13:48:12 taca Exp $
  
  dnl
  dnl Deprecated --with options (these all warn or generate an error)
-@@ -277,6 +276,19 @@ AC_ARG_WITH(csops, [  --with-csops      
+@@ -294,6 +293,19 @@ AC_ARG_WITH(csops, [AS_HELP_STRING([--wi
  		;;
  esac])
  
-+AC_ARG_WITH(nbsdops, [  --with-nbsdops          add NetBSD standard options],
++AC_ARG_WITH(nbsdops, [AS_HELP_STRING([--with-nbsdops], [add NetBSD standard options])],
 +[case $with_nbsdops in
 +    yes)	echo 'Adding NetBSD standard options'
 +		CHECKSIA=false
@@ -27,10 +27,10 @@ $NetBSD: patch-af,v 1.21 2009/02/05 13:48:12 taca Exp $
 +		;;
 +esac])
 +
- AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
+ AC_ARG_WITH(passwd, [AS_HELP_STRING([--without-passwd], [don't use passwd/shadow file for authentication])],
  [case $with_passwd in
      yes|no)	AC_MSG_CHECKING(whether to use shadow/passwd file authentication)
-@@ -1716,7 +1728,7 @@ fi
+@@ -1790,7 +1802,7 @@ fi
  if test ${with_logincap-'no'} != "no"; then
      AC_CHECK_HEADERS(login_cap.h, [LOGINCAP_USAGE='[[-c class|-]] '; LCMAN=""
  	case "$OS" in
@@ -39,7 +39,7 @@ $NetBSD: patch-af,v 1.21 2009/02/05 13:48:12 taca Exp $
  	    ;;
  	esac
      ])
-@@ -2148,6 +2160,8 @@ if test ${with_kerb5-'no'} != "no" -a -z
+@@ -2237,6 +2249,8 @@ if test ${with_kerb5-'no'} != "no" -a -z
  	    AC_CHECK_LIB(krb5support, main, [SUDO_LIBS="${SUDO_LIBS} -lkrb5support,"])
      ])
      AUTH_OBJS="$AUTH_OBJS kerb5.o"
