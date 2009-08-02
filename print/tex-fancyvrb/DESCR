@@ -1,0 +1,6 @@
+Flexible handling of verbatim text including: verbatim commands in
+footnotes; a variety of verbatim environments with many parameters;
+ability to define new customized verbatim environments; save and
+restore verbatim text and environments; write and read files in
+verbatim mode; build "example" environments (showing both result and
+verbatim source).
