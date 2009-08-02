@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.87 2009/05/28 08:59:59 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.88 2009/08/02 17:56:44 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.87 2009/05/28 08:59:59 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.88 2009/08/02 17:56:44 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -120,7 +120,7 @@ static const struct pkg_meta_desc {
 	{ offsetof(struct pkg_meta, meta_views), VIEWS_FNAME, 0, 0444 },
 	{ offsetof(struct pkg_meta, meta_required_by), REQUIRED_BY_FNAME, 0, 0644 },
 	{ offsetof(struct pkg_meta, meta_installed_info), INSTALLED_INFO_FNAME, 0, 0644 },
-	{ 0, NULL, 0 },
+	{ 0, NULL, 0, 0 },
 };
 
 static int pkg_do(const char *, int, int);
@@ -780,7 +780,7 @@ pkg_register_depends(struct pkg_task *pkg)
 		if (fd == -1) {
 			warn("can't open dependency file '%s',"
 			    "registration is incomplete!", required_by);
-		} else if (write(fd, text, text_len) != text_len) {
+		} else if (write(fd, text, text_len) != (ssize_t)text_len) {
 			warn("can't write to dependency file `%s'", required_by);
 			close(fd);
 		} else if (close(fd) == -1)
