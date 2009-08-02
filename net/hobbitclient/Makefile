@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/07/28 19:42:26 spz Exp $
+# $NetBSD: Makefile,v 1.9 2009/08/02 22:11:46 wiz Exp $
 #
 
 DISTNAME=	hobbit-4.2.0
@@ -6,11 +6,11 @@ PKGNAME=	hobbitclient-4.2.0
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hobbitmon/}
-LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	gendalia@NetBSD.org
 HOMEPAGE=	http://hobbitmon.sourceforge.net/
 COMMENT=	Free-software client for the Hobbit monitor
+LICENSE=	gnu-gpl-v2
 
 PATCHFILES+=allinone.patch
 SITES.allinone.patch=http://www.hobbitmon.com/hobbitsw/patches/
