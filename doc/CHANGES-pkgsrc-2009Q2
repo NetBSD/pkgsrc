@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.22 2009/07/29 20:38:29 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.23 2009/08/02 13:19:47 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -90,3 +90,5 @@ bind95: security update
 bind96: security update
 Pullup ticket #2845 - requested by joerg
 py-django: security update
+Pullup ticket #2840 - requested by tron
+squid31: security update
