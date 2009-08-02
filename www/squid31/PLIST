@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/04 22:29:41 tron Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2009/08/02 13:17:58 spz Exp $
 bin/squidclient
 libexec/cachemgr.cgi
 ${PLIST.da_ldap}libexec/digest_ldap_auth
@@ -17,6 +17,7 @@ ${PLIST.eacl_ldap_group}libexec/squid_ldap_group
 ${PLIST.eacl_unix_group}libexec/squid_unix_group
 ${PLIST.unlinkd}libexec/unlinkd
 ${PLIST.ba_YP}libexec/yp_auth
+man/man1/squidclient.1
 man/man8/cachemgr.cgi.8
 ${PLIST.ba_NCSA}man/man8/ncsa_auth.8
 ${PLIST.ba_PAM}man/man8/pam_auth.8
