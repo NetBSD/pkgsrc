@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/02 11:24:06 drochner Exp $
+
+--- ./libgssdp/gssdp-socket-source.c.orig	2009-01-06 15:44:15.000000000 +0100
++++ ./libgssdp/gssdp-socket-source.c
+@@ -121,6 +121,16 @@ gssdp_socket_source_new (GSSDPSocketSour
+                 if (res == -1)
+                         goto error;
+ 
++#ifdef __NetBSD__
++                res = setsockopt (socket_source->poll_fd.fd,
++                                  SOL_SOCKET,
++                                  SO_REUSEPORT,
++                                  &boolean,
++                                  sizeof (boolean));
++                if (res == -1)
++                        goto error;
++#endif
++
+                 /* Subscribe to multicast channel */
+                 mreq.imr_multiaddr.s_addr = inet_addr (SSDP_ADDR);
+                 mreq.imr_interface.s_addr = htonl (INADDR_ANY);
