@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8306 2009/08/01 23:56:11 zafer Exp $
+$NetBSD: TODO,v 1.8307 2009/08/02 00:38:35 zafer Exp $
 
 Suggested new packages
 ======================
@@ -597,7 +597,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fondu-040927
 	o fop-0.20.5
 	o fotoxx-7.5
-	o freeciv-2.1.9
 	o freeglut-2.4.0
 	o freenet-0.7
 	o freesci-0.6.4
