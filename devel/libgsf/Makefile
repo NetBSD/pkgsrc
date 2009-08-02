@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2009/07/22 12:23:37 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2009/08/02 10:52:06 drochner Exp $
 #
 
 DISTNAME=	libgsf-1.14.15
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/1.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +20,6 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	libgsf-1.pc.in
-PKGCONFIG_OVERRIDE+=	libgsf-gnome-1.pc.in
 
 CONFIGURE_ARGS+=	--without-python
 
@@ -30,9 +30,7 @@ GCONF_SCHEMAS=	gsf-office-thumbnailer.schemas
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../mk/bsd.pkg.mk"

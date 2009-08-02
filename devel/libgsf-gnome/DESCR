@@ -1,0 +1,3 @@
+libgsf provides an efficient extensible I/O abstraction for dealing with
+different structured file formats.  It has support for Microsoft OLE2
+streams and Zip import.  The aim of this library is to replace libole2.
