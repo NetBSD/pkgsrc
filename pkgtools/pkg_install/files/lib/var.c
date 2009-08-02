@@ -1,4 +1,4 @@
-/*	$NetBSD: var.c,v 1.7 2009/02/02 12:35:01 joerg Exp $	*/
+/*	$NetBSD: var.c,v 1.8 2009/08/02 17:56:45 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2005, 2008 The NetBSD Foundation, Inc.
@@ -39,7 +39,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: var.c,v 1.7 2009/02/02 12:35:01 joerg Exp $");
+__RCSID("$NetBSD: var.c,v 1.8 2009/08/02 17:56:45 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -65,7 +65,7 @@ static void var_print(FILE *, const char *, const char *);
 int
 var_copy_list(const char *buf, const char **variables)
 {
-	const char *eol, *next, *p;
+	const char *eol, *next;
 	size_t len;
 	int i;
 
@@ -79,8 +79,8 @@ var_copy_list(const char *buf, const char **variables)
 		}
 
 		for (i=0; variables[i]; i++) {
-			if ((p=var_cmp(buf, len, variables[i],
-				       strlen(variables[i]))) != NULL) {
+			if (var_cmp(buf, len, variables[i],
+				       strlen(variables[i])) != NULL) {
 				printf("%.*s\n", (int)len, buf);
 				break;
 			}

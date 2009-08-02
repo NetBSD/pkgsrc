@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.13 2009/05/10 21:11:43 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.14 2009/08/02 17:56:44 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: audit.c,v 1.13 2009/05/10 21:11:43 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.14 2009/08/02 17:56:44 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -379,7 +379,7 @@ fetch_pkg_vulnerabilities(int argc, char **argv)
 		err(EXIT_FAILURE, "Cannot create pkg-vulnerability file %s",
 		    pkg_vulnerabilities_file);
 
-	if (write(fd, buf, buf_len) != buf_len)
+	if (write(fd, buf, buf_len) != (ssize_t)buf_len)
 		err(EXIT_FAILURE, "Cannot write pkg-vulnerability file");
 	if (close(fd) == -1)
 		err(EXIT_FAILURE, "Cannot close pkg-vulnerability file after write");
