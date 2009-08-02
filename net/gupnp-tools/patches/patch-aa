@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/02 11:41:49 drochner Exp $
+
+--- src/network-light/upnp.c.orig	2009-04-30 14:30:23.000000000 +0200
++++ src/network-light/upnp.c
+@@ -25,7 +25,11 @@
+ #include <stdio.h>
+ #include <locale.h>
+ #include <string.h>
++#if defined(__NetBSD__)
++#include <uuid.h>
++#else
+ #include <uuid/uuid.h>
++#endif
+ #include <glib/gstdio.h>
+ 
+ #include "gui.h"
+@@ -265,6 +269,9 @@ change_uuid (xmlDoc *doc)
+         xmlNode *uuid_node;
+         uuid_t uuid;
+         char *udn, uuidstr[37];
++#if defined(__NetBSD__)
++	char *myuuidstr;
++#endif
+ 
+         uuid_node = xml_util_get_element ((xmlNode *) doc,
+                                           "root",
+@@ -278,8 +285,15 @@ change_uuid (xmlDoc *doc)
+                 return NULL;
+         }
+ 
++#if defined(__NetBSD__)
++	uuid_create(&uuid, 0);
++	uuid_to_string(&uuid, &myuuidstr, 0);
++	strncpy(uuidstr, myuuidstr, sizeof(uuidstr));
++	free(myuuidstr);
++#else
+         uuid_generate (uuid);
+         uuid_unparse (uuid, uuidstr);
++#endif
+ 
+         if (uuidstr == NULL) {
+                 udn = (char *) xmlNodeGetContent (uuid_node);
