@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2009/06/07 08:36:36 tron Exp $
+$NetBSD: patch-ad,v 1.4.2.1 2009/08/02 13:17:58 spz Exp $
 
---- tools/Makefile.in.orig	2009-05-23 13:31:26.000000000 +0100
-+++ tools/Makefile.in	2009-06-06 17:34:58.000000000 +0100
-@@ -752,7 +752,7 @@
+--- tools/Makefile.in.orig	2009-07-19 06:11:36.000000000 +0100
++++ tools/Makefile.in	2009-07-19 15:20:43.000000000 +0100
+@@ -805,7 +805,7 @@
  
  info-am:
  
--install-data-am: install-data-local
-+install-data-am:
+-install-data-am: install-data-local install-man
++install-data-am: install-man
  
  install-dvi: install-dvi-recursive
  
