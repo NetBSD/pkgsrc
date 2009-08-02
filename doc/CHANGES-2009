@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2900 2009/08/01 23:27:44 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.2901 2009/08/02 07:41:29 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3850,3 +3850,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/groff to 1.20.1nb1 [dholland 2009-08-01]
 	Added devel/ETL version 0.04.11 [minskim 2009-08-01]
 	Updated wm/dwm to 5.6.1 [tnn 2009-08-01]
+	Updated security/sudo to 1.7.2p1 [hasso 2009-08-02]
