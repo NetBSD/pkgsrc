@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.13 2008/07/13 12:04:11 tonnerre Exp $
+$NetBSD: patch-aa,v 1.14 2009/08/02 19:18:40 tonnerre Exp $
 
---- apps/irssi/docs/help/Makefile.in.orig	2007-12-07 18:10:34.000000000 +0100
-+++ apps/irssi/docs/help/Makefile.in	2007-12-07 18:10:48.000000000 +0100
-@@ -211,7 +211,7 @@
- target_alias = @target_alias@
+--- apps/irssi/docs/help/Makefile.in.orig	2009-08-01 08:53:41.000000000 +0200
++++ apps/irssi/docs/help/Makefile.in
+@@ -215,7 +215,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
 -@SILCPLUGIN_FALSE@helpdir = $(datadir)/silc/help
