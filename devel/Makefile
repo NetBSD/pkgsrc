@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1202 2009/08/02 11:51:44 drochner Exp $
+# $NetBSD: Makefile,v 1.1203 2009/08/02 19:50:21 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -354,6 +354,7 @@ SUBDIR+=	libwhisker2
 SUBDIR+=	libwnck
 SUBDIR+=	lincvs
 SUBDIR+=	ltsa
+SUBDIR+=	lua-alt-getopt
 SUBDIR+=	lua-mode
 SUBDIR+=	lua-stdlib
 SUBDIR+=	lua-stdlib-doc
