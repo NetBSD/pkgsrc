@@ -1,0 +1,99 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/08/02 11:35:26 drochner Exp $
+
+--- configure.orig	2009-06-02 14:25:31.000000000 +0200
++++ configure
+@@ -12882,15 +12882,13 @@ if test -n "$LIBGUPNP_CFLAGS"; then
+                             gmodule-2.0 \\
+                             gssdp-1.0 >= 0.6 \\
+                             libsoup-2.4 >= 2.4.1 \\
+-                            libxml-2.0 \\
+-                            uuid\"") >&5
++                            libxml-2.0\"") >&5
+   ($PKG_CONFIG --exists --print-errors "glib-2.0 >= 2.18 \
+                             gobject-2.0 >= 2.18 \
+                             gmodule-2.0 \
+                             gssdp-1.0 >= 0.6 \
+                             libsoup-2.4 >= 2.4.1 \
+-                            libxml-2.0 \
+-                            uuid") 2>&5
++                            libxml-2.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+@@ -12899,8 +12897,7 @@ if test -n "$LIBGUPNP_CFLAGS"; then
+                             gmodule-2.0 \
+                             gssdp-1.0 >= 0.6 \
+                             libsoup-2.4 >= 2.4.1 \
+-                            libxml-2.0 \
+-                            uuid" 2>/dev/null`
++                            libxml-2.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -12916,15 +12913,13 @@ if test -n "$LIBGUPNP_LIBS"; then
+                             gmodule-2.0 \\
+                             gssdp-1.0 >= 0.6 \\
+                             libsoup-2.4 >= 2.4.1 \\
+-                            libxml-2.0 \\
+-                            uuid\"") >&5
++                            libxml-2.0\"") >&5
+   ($PKG_CONFIG --exists --print-errors "glib-2.0 >= 2.18 \
+                             gobject-2.0 >= 2.18 \
+                             gmodule-2.0 \
+                             gssdp-1.0 >= 0.6 \
+                             libsoup-2.4 >= 2.4.1 \
+-                            libxml-2.0 \
+-                            uuid") 2>&5
++                            libxml-2.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+@@ -12933,8 +12928,7 @@ if test -n "$LIBGUPNP_LIBS"; then
+                             gmodule-2.0 \
+                             gssdp-1.0 >= 0.6 \
+                             libsoup-2.4 >= 2.4.1 \
+-                            libxml-2.0 \
+-                            uuid" 2>/dev/null`
++                            libxml-2.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -12957,16 +12951,14 @@ fi
+                             gmodule-2.0 \
+                             gssdp-1.0 >= 0.6 \
+                             libsoup-2.4 >= 2.4.1 \
+-                            libxml-2.0 \
+-                            uuid" 2>&1`
++                            libxml-2.0" 2>&1`
+         else
+ 	        LIBGUPNP_PKG_ERRORS=`$PKG_CONFIG --print-errors "glib-2.0 >= 2.18 \
+                             gobject-2.0 >= 2.18 \
+                             gmodule-2.0 \
+                             gssdp-1.0 >= 0.6 \
+                             libsoup-2.4 >= 2.4.1 \
+-                            libxml-2.0 \
+-                            uuid" 2>&1`
++                            libxml-2.0" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$LIBGUPNP_PKG_ERRORS" >&5
+@@ -12976,8 +12968,7 @@ fi
+                             gmodule-2.0 \
+                             gssdp-1.0 >= 0.6 \
+                             libsoup-2.4 >= 2.4.1 \
+-                            libxml-2.0 \
+-                            uuid) were not met:
++                            libxml-2.0) were not met:
+ 
+ $LIBGUPNP_PKG_ERRORS
+ 
+@@ -12993,8 +12984,7 @@ $as_echo "$as_me: error: Package require
+                             gmodule-2.0 \
+                             gssdp-1.0 >= 0.6 \
+                             libsoup-2.4 >= 2.4.1 \
+-                            libxml-2.0 \
+-                            uuid) were not met:
++                            libxml-2.0) were not met:
+ 
+ $LIBGUPNP_PKG_ERRORS
+ 
