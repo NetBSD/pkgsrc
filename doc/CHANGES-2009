@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2904 2009/08/02 19:20:51 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2905 2009/08/02 19:50:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3855,3 +3855,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/silc-client to 1.1.8 [tonnerre 2009-08-02]
 	Added print/tex-fancyvrb version 2.7a [minskim 2009-08-02]
 	Added print/tex-fancyvrb-doc version 2.7a [minskim 2009-08-02]
+	Added devel/lua-alt-getopt version 0.6.0 [minskim 2009-08-02]
