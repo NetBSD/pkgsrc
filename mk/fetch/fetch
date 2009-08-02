@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.13 2009/07/20 09:09:02 tnn Exp $
+# $NetBSD: fetch,v 1.14 2009/08/02 02:38:52 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -267,12 +267,20 @@ ${TEST} -z "$distsize" || ${ECHO} "=> Total size: $distsize $distunits"
 #
 while ${TEST} $# -gt 0; do
 	site="$1"; shift
+	case "$site" in
+	-*)
+		url=${site#-}
+		;;
+	*)
+		url=$site$file
+		;;
+	esac
 
 	( cd $fetchdir
 	  if ${TEST} -n "$resume"; then
-		fetch_cmd="${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} ${FETCH_OUTPUT_ARGS} $outputfile $site$file"
+		fetch_cmd="${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} ${FETCH_OUTPUT_ARGS} $outputfile $url"
 	  else
-		fetch_cmd="${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_OUTPUT_ARGS} $outputfile $site$file ${FETCH_AFTER_ARGS}"
+		fetch_cmd="${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_OUTPUT_ARGS} $outputfile $url ${FETCH_AFTER_ARGS}"
 	  fi
 	  ${TEST} -z "$verbose" || ${ECHO} "$fetch_cmd"
 	  $fetch_cmd )
