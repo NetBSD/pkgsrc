@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2902 2009/08/02 10:45:28 jun Exp $
+$NetBSD: CHANGES-2009,v 1.2903 2009/08/02 19:19:22 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3852,3 +3852,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated wm/dwm to 5.6.1 [tnn 2009-08-01]
 	Updated security/sudo to 1.7.2p1 [hasso 2009-08-02]
 	Updated editors/emacs to 22.3nb3 [jun 2009-08-02]
+	Updated chat/silc-client to 1.1.8 [tonnerre 2009-08-02]
