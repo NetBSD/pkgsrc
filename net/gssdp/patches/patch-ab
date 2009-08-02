@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/08/02 11:24:06 drochner Exp $
+
+--- tools/gssdp-device-sniffer.c.orig	2009-03-29 22:07:57.000000000 +0200
++++ tools/gssdp-device-sniffer.c
+@@ -317,7 +317,7 @@ resource_available_cb (GSSDPResourceBrow
+ 
+         uuid = usn_tokens[0] + 5; /* skip the prefix 'uuid:' */
+ 
+-        if (usn_tokens[1]) {
++        if (usn_tokens[1] && strlen(usn_tokens[1]) != 0) {
+                 char **urn_tokens;
+ 
+                 urn_tokens = g_strsplit (usn_tokens[1], ":device:", -1);
