@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.60 2009/04/09 00:51:31 joerg Exp $ -->
+<!-- $NetBSD: build.xml,v 1.61 2009/08/02 02:41:53 joerg Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -296,6 +296,10 @@ http://www.somewhereelse.com/mirror/somehow/
 <programlisting>
 MASTER_SITES=   http://www.example.com/download.cgi?file=
 </programlisting>
+
+      <para> The exception to this rule are URLs starting with a dash.
+      In that case the URL is taken as is, fetched and the result stored
+      under the name of the distfile.</para>
 
       <para>There are some predefined values for
       <varname>MASTER_SITES</varname>, which can be used in
