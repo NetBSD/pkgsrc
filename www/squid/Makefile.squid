@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.squid,v 1.10 2009/07/01 02:17:11 taca Exp $
+# $NetBSD: Makefile.squid,v 1.10.2.1 2009/08/02 13:17:58 spz Exp $
 #
-# used by www/squid26/Makefile
 # used by www/squid27/Makefile
 # used by www/squid30/Makefile
 # used by www/squid31/Makefile
 
 .include "Makefile.common"
 
-SQUID_MASTER_SITES=	ftp://ftp.squid-cache.org/pub/squid/
+SQUID_MASTER_SITES=	ftp://ftp.squid-cache.org/pub/squid/ \
+			http://ftp.nluug.nl/internet/squid/
 
 DOCDIR=		share/doc/squid
 EGDIR=		share/examples/squid
@@ -65,7 +65,9 @@ INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man8 sbin \
 			share/squid share/squid/errors share/squid/icons \
 			${DOCDIR} ${EGDIR}
 
-post-install:
+POST_INSTALL_EXTRA?=
+
+post-install: ${POST_INSTALL_EXTRA}
 	for f in ${EGFILES}; do \
 		${INSTALL_DATA}	${WRKSRC}/$$f \
 			${DESTDIR}${PREFIX}/${EGDIR}/`basename $$f .default`; \
@@ -78,16 +80,8 @@ post-install:
 		${INSTALL_DATA} ${PKGDIR}/../squid/files/$$f \
 			${DESTDIR}${PREFIX}/${DOCDIR}; \
 	done
-	${CHMOD} -w ${PREFIX}/libexec/pinger
+	${CHMOD} -w ${DESTDIR}${PREFIX}/libexec/pinger
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	(							\
-	cd ${WRKSRC}/errors;					\
-	for i in *; do						\
-		${TEST} -d $$i &&				\
-		(${LS} $$i/ERR_* |				\
-		${SED} -e 's@^@share/squid/errors/@');		\
-	done; 							\
-	cd ${WRKSRC}/icons;					\
-	${LS} anthony-*.gif |					\
-		${SED} -e 's@^@share/squid/icons/@';		\
-	) >>${PLIST_SRC}
+	(${FIND} ${DESTDIR}${PREFIX}/share/squid/errors \! -type d -print; \
+	 ${FIND} ${DESTDIR}${PREFIX}/share/squid/icons \! -type d -print) | \
+	${SED} -e 's#^${DESTDIR}${PREFIX}/##' | ${SORT} >>${PLIST_SRC}
