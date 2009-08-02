@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.115 2009/07/17 20:16:22 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2009/08/02 17:31:46 tnn Exp $
 
 DISTNAME=	libpng-1.2.38
 PKGNAME=	${DISTNAME:S/lib//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		ftp://ftp.fu-berlin.de/unix/graphics/png/src/
@@ -26,9 +27,9 @@ CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
 .endif
 
 SUBST_CLASSES+=		rpathfix
-SUBST_FILES.rpathfix=	scripts/libpng-config.in
-SUBST_MESSAGE.rpathfix=	Adding rpath to libpng-config.
-SUBST_SED.rpathfix=	-e '/^L_opts=/s|-L\([	 ]*[^	 ]*\)"|${COMPILER_RPATH_FLAG}\1 -L\1"|g'
+SUBST_FILES.rpathfix=	scripts/libpng-config.in scripts/libpng.pc-configure.in
+SUBST_MESSAGE.rpathfix=	Adding rpath to libpng-config and libpng.pc
+SUBST_SED.rpathfix=	-e 's/-L$${libdir}/${COMPILER_RPATH_FLAG}$${libdir} -L$${libdir}/g'
 SUBST_STAGE.rpathfix=	pre-configure
 
 .include "../../devel/zlib/buildlink3.mk"
