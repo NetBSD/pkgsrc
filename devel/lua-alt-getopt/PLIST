@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/02 19:49:16 minskim Exp $
+${LUA_LDIR}/alt_getopt.lua
