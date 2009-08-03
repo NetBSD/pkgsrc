@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/05 20:28:24 hasso Exp $
+$NetBSD: distinfo,v 1.2 2009/08/03 18:43:00 hasso Exp $
 
-SHA1 (libp11-0.2.4.tar.gz) = 04914daf930544c330bd25798edd899050b7f4eb
-RMD160 (libp11-0.2.4.tar.gz) = f73598f34d356fdc58207759afdab18eb11b3fa2
-Size (libp11-0.2.4.tar.gz) = 414058 bytes
+SHA1 (libp11-0.2.6.tar.gz) = 87a7e59c1d7a93f3e1ee863ad462487c4479ae27
+RMD160 (libp11-0.2.6.tar.gz) = 0f568e22d9a5813e4fcea22fc927c3cb4b3eb93a
+Size (libp11-0.2.6.tar.gz) = 376101 bytes
 SHA1 (patch-aa) = 97e85e23d74f7fdc7db67bc8f40844679846e96c
