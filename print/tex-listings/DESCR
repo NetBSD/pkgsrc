@@ -1,0 +1,10 @@
+Typeset programs (programming code) within LaTeX.  The source code is
+read directly by TeX.  Keywords, comments and strings can be typeset
+using different styles (default is bold for keywords, italic for
+comments and no special style for strings).  Includes support for
+hyperref.  To use, simply \usepackage{listings}, identify the language
+with \lstset{language=Python}, then employ the \begin{lstlisting} ...
+\end{lstlisting} environment or the \lstinputlisting{filename.py}
+command.  Short (in-line) listings are also available, using either
+\lstinline|...| or | ... | (after defining the | token with the
+\lstMakeShortInline command).
