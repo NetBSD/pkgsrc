@@ -1,9 +1,11 @@
-# $NetBSD: Makefile.common,v 1.7 2007/08/30 20:19:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2009/08/03 23:30:06 taya Exp $
+# used by inputmethod/anthy/Makefile
+# used by inputmethod/anthy-elisp/Makefile
 
-ANTHY_VERSION=	9100
+ANTHY_VERSION=	9100h
 DISTNAME=	anthy-${ANTHY_VERSION}
 CATEGORIES=	inputmethod
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=anthy/26131/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=anthy/37536/}
 DISTFILES=	${DISTNAME}.tar.gz
 
 DISTINFO_FILE=	${.CURDIR}/../../inputmethod/anthy/distinfo
