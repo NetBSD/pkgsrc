@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/07 14:22:42 sborrill Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/03 15:26:25 joerg Exp $
 
 PKGNAME=		space_dapp-20060717
 CATEGORIES=		x11
@@ -10,6 +10,8 @@ COMMENT=		Tiny dock app to create an empty space
 DISTNAME=		space_dapp.c
 EXTRACT_SUFX=
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS=	bin
 
 NO_CONFIGURE=		yes
 
