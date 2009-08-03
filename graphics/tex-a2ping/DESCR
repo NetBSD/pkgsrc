@@ -1,0 +1,10 @@
+a2ping is a Perl script command line utility written for Unix that
+converts many raster image and vector graphics formats to EPS or PDF
+and other page description formats.  Accepted input file formats are:
+PS (PostScript), EPS, PDF, PNG, JPEG, TIFF, PNM, BMP, GIF, LBM, XPM,
+PCX, TGA.  Accepted output formats are: EPS, PCL5, PDF, PDF1, PBM,
+PGM, PPM, PS, markedEPS, markedPS, PNG, XWD, BMP, TIFF, JPEG, GIF,
+XPM.  a2ping delegates the low- level work to Ghostscript (GS),
+pdftops and sam2p.  a2ping fixes many glitches during the EPS to EPS
+conversion, so its output is often more compatible and better
+embeddable than its input.
