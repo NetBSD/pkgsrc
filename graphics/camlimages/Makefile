@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/04/12 22:43:01 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2009/08/03 12:56:29 joerg Exp $
 
 DISTNAME=		camlimages-2.2.0
 PKGREVISION=		5
@@ -23,7 +23,8 @@ PLIST_SRC=		${PKGDIR}/PLIST
 
 CONFIGURE_ARGS+=	--with-lablgtk=${PREFIX}/lib/ocaml/lablgtk
 
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
+    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
 BUILD_TARGET+=	all
 PLIST_SRC+=	${PKGDIR}/PLIST.opt
 .endif
