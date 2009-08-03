@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8309 2009/08/03 12:56:10 wiz Exp $
+$NetBSD: TODO,v 1.8310 2009/08/03 13:12:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,6 +339,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
+	o GraphicsMagick-1.3.6
 	o GridSim-3.3
 	o GutenMark-20090216
 	o MAMEDiff-2.30
@@ -368,6 +369,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o afterstep-2.2.9
 	o akonadi-1.2.0
 	o album-4.05
+	o albumplayer-0.3
 	o alee-ttf-11.2
 	o aliados-0.2.0
 	o alsa-lib-1.0.20
@@ -403,7 +405,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aqsis-1.4.1
 	o aranym-0.9.7
 	o argtable-2.9
-	o aria2-1.5.0
+	o aria2-1.5.1
 	o arla-0.90
 	o arnold-20040104
 	o asapm-3.1
@@ -455,7 +457,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o boson-0.13
 	o botan-1.8.5
 	o bouml-4.13.1
-	o bugzilla-3.2.4
+	o bugzilla-3.4.1
 	o byacc-20080824
 	o bzr-1.17
 	o c4-1.10 [schmonz]
@@ -469,6 +471,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdparanoia-3.0.10.2
+	o cdrtools-2.01.01alpha62
 	o cfitsio-3181
 	o cflow-1.3
 	o cgdb-0.6.4
@@ -483,6 +486,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o claws-mail-3.7.2
 	o climm-0.6.4
+	o clisp-2.48
+	o clive-2.2.4
 	o clutter-1.0.0
 	o clutter-gst-0.10.0
 	o clutter-gtk-0.10.2
@@ -494,7 +499,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cook-2.31
 	o courier-0.62.0
 	o courier-imap-4.5.0
-	o covered-20090705
+	o covered-20090802
 	o cpio-2.9
 	o cpmtools-2.6
 	o cppunit-1.12.0
@@ -519,7 +524,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ddclient-3.7.3
 	o ddrescue-1.11
 	o defendguin-0.0.11
-	o delegate-9.9.3
+	o delegate-9.9.4
 	o devIL-1.7.8
 	o dhid-5.3
 	o dia-0.97
@@ -529,7 +534,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-mode-9.3e
 	o dircproxy-devel-1.2.0.2
 	o dnstracer-1.9
-	o dovecot-1.2.0
+	o dovecot-1.2.2
 	o doxygen-1.5.9
 	o drivel-2.0.4
 	o dropbear-0.52
@@ -546,6 +551,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eet-1.2.2
+	o efax-gtk-3.0.19
 	o egtk-0.3.6.2
 	o eigen2-2.0.2
 	o ekiga-3.2.5
@@ -565,7 +571,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epiphany-extensions-2.26.1
 	o epsg-6.14
 	o epstool-3.08
-	o eric3-4.3.5 [now called eric4]
+	o eric3-4.3.6 [now called eric4]
 	o erlang-13b
 	o erubis-2.6.2
 	o esh-0.8.5
@@ -590,6 +596,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fdgw-20040609
 	o festival-1.96
 	o felt-3.07
+	o fetchmail-6.3.10
 	o fetchyahoo-2.13.0
 	o fftw-3.2.2
 	o fillets-ng-0.7.4
@@ -722,8 +729,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o heyu-2.6.0
-	o hiawatha-6.15
-	o highlight-2.10
+	o hiawatha-6.16
+	o highlight-2.11
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hoe-1.8.3
 	o honeyd-1.5c
@@ -746,7 +753,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o instiki-0.13
 	o intercal-0.24
-	o ircservices-5.1.18
+	o ircservices-5.1.19
 	o irrd-2.3.4 [pkg/36813|38002]
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
@@ -797,7 +804,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lcc-4.2
 	o ldapsdk-6.0.2
 	o leafpad-0.8.15
-	o less-429
+	o less-436
 	o lft-2.5 [at http://pwhois.org/]
 	o libarchive-2.7.0
 	o libast-0.7
@@ -843,6 +850,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxklavier-4.0
 	o libxml++-2.26.1
 	o licq-1.3.6
+	o liferea-1.6.0
 	o lighttpd-1.4.23
 	o lincvs-2.1.3 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -871,7 +879,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mc-4.6.2
 	o mediawiki-1.14.1 [pkg/41789]
 	o memconf-2.9 [pkg/40201]
-	o memtester-4.1.0
+	o memtester-4.1.2
 	o memtestplus-2.11
 	o merb-1.0.8.1
 	o merb-action-args-1.0.8.1
@@ -912,7 +920,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
 	o mp3blaster-3.2.3
-	o mp3diags-0.99.04.026
+	o mp3diags-0.99.05.030
 	o mpc-0.16
 	o mpeg4ip-1.6.1
 	o mpg123-1.8.1
@@ -1065,6 +1073,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o prelude-correlator-0.9.0beta6 [pkg/41763]
 	o prelude-lm-0.9.15 [pkg/41763]
 	o prelude-manager-0.9.15 [pkg/41763]
+	o privoxy-3.0.14
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
@@ -1094,6 +1103,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-cups-1.9.46
 	o py-dns-2.3.3
 	o py-fpconst-0.7.3
+	o py-game-1.9.0
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
@@ -1205,6 +1215,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.1.1
 	o scm-5e5
+	o scmgit-1.6.4
 	o scmgit-base-1.6.4
 	o scmgit-docs-1.6.4
 	o scribus-1.3.3.13
@@ -1221,7 +1232,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o shc-3.8
 	o shmux-1.0.2
 	o sign-1.0.7
-	o silc-server-1.1.15
+	o silc-server-1.1.17
 	o silc-toolkit-2.1.9
 	o simulavr-0.1.2.2
 	o singularity-0.30
@@ -1275,7 +1286,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-24.0.0
+	o tea-25.0.0
 	o ted-2.17
 	o ted-en-us-2.17
 	o telepathy-gabble-0.7.31
@@ -1333,6 +1344,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vifm-0.4
 	o vino-2.26.2 [GNOME 2.26]
 	o visual-regexp-3.1
+	o vlc-1.0.1
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
 	o vmware-5.5
