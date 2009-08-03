@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/27 07:13:01 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/03 14:54:00 joerg Exp $
 
 PKGNAME=		${DISTNAME:S/-/-cloak-/}
 COMMENT=		Remove null-ops for OpenLDAP
@@ -13,8 +13,9 @@ USE_LIBTOOL=		yes
 
 BUILD_DIRS=		include contrib/slapd-modules/cloak
 
+INSTALLATION_DIRS=	lib/openldap
+
 do-install:
-	${INSTALL_LIB_DIR} ${PREFIX}/lib/openldap
 	${INSTALL_MAN} ${WRKSRC}/contrib/slapd-modules/cloak/slapo-cloak.5\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${LIBTOOL} --mode=install 					\
