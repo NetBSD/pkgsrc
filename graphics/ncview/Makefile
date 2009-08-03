@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/08/03 14:49:09 joerg Exp $
 
 DISTNAME=		ncview-1.92d
 PKGREVISION=	3
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://cirrus.ucsd.edu/pub/ncview/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://meteora.ucsd.edu/~pierce/ncview_home_page.html
 COMMENT=		Visual browser for netCDF format files
+
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
