@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/27 13:40:28 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/03 09:55:36 drochner Exp $
 #
 
 DISTNAME=	albumplayer-0.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://rvb.mytanet.de/
+# XXX distfile was modified after release
+DIST_SUBDIR=	albumplayer_modified_0.2
 
 MAINTAINER=	pkgstc-users@NetBSD.org
 HOMEPAGE=	http://rvb.mytanet.de/
