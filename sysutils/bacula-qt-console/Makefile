@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/06 16:22:30 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/03 12:42:56 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/-/-qt-console-/}
 PKGREVISION=	1
@@ -17,7 +17,7 @@ BUILD_DIRS=		src/lib
 BUILD_DIRS+=		src/qt-console
 INSTALL_DIRS=		src/qt-console
 
-INSTALLATION_DIRS=	share/examples/bacula
+INSTALLATION_DIRS=	bin share/examples/bacula
 
 CONF_FILES+=		${EXAMPLESDIR}/bat.conf ${PKG_SYSCONFDIR}/bat.conf
 
