@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2907 2009/08/03 15:52:56 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.2908 2009/08/03 18:46:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3857,3 +3857,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-fancyvrb-doc version 2.7a [minskim 2009-08-02]
 	Added devel/lua-alt-getopt version 0.6.0 [minskim 2009-08-02]
 	Updated sysutils/memtester to 4.1.2 [schmonz 2009-08-03]
+	Updated graphics/dvipng to 1.11nb3 [minskim 2009-08-03]
