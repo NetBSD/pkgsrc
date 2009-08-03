@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/03 23:45:46 minskim Exp $
+share/texmf-dist/tex/latex/listings/listings.cfg
+share/texmf-dist/tex/latex/listings/listings.sty
+share/texmf-dist/tex/latex/listings/lstdoc.sty
+share/texmf-dist/tex/latex/listings/lstlang1.sty
+share/texmf-dist/tex/latex/listings/lstlang2.sty
+share/texmf-dist/tex/latex/listings/lstlang3.sty
+share/texmf-dist/tex/latex/listings/lstmisc.sty
