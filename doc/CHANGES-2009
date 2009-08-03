@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2912 2009/08/03 23:38:34 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2913 2009/08/03 23:47:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3866,3 +3866,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/tidy to 20090326 [wiz 2009-08-03]
 	Updated inputmethod/anthy 9100h [taya 2009-08-03]
 	Added print/texlive-pdftools version 2008 [minskim 2009-08-03]
+	Added print/tex-listings version 1.4 [minskim 2009-08-03]
+	Added print/tex-listings-doc version 1.4 [minskim 2009-08-03]
