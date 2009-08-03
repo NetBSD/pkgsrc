@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8308 2009/08/02 22:28:46 wiz Exp $
+$NetBSD: TODO,v 1.8309 2009/08/03 12:56:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -366,6 +366,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.7.1
 	o aewm++-1.0.27
 	o afterstep-2.2.9
+	o akonadi-1.2.0
 	o album-4.05
 	o alee-ttf-11.2
 	o aliados-0.2.0
@@ -378,6 +379,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amaya-11.1
 	o angband-3.0.9
 	o anjuta-2.26.2.2 [GNOME 2.26]
+	o anthy-9100h [pkg/41805]
 	o antiright-8.6
 	o ap-Embperl-1.3.6
 	o ap-auth-kerb-5.4
@@ -418,6 +420,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aterm-1.0.1
 	o auctex-11.85
 	o audacious-plugins-2.1
+	o autoconf-2.64
 	o autoconvert-0.3.16
 	o autogen-5.9.7
 	o avcheck-0.91
@@ -425,7 +428,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
 	o avrdude-5.8 [pkg/41750]
-	o awesome-3.3.1
+	o awesome-3.3.2
 	o babl-0.1.0
 	o baci-20040415
 	o bacula-3.0.2
@@ -542,6 +545,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ed-1.4
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o eet-1.2.2
 	o egtk-0.3.6.2
 	o eigen2-2.0.2
 	o ekiga-3.2.5
@@ -552,6 +556,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elfsh-0.78
 	o elm-me-2.4pl124b
 	o elscreen-1.4.6
+	o emacs-23.1
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
 	o empathy-2.26.2 [GNOME 2.26]
@@ -568,6 +573,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
+	o etm-290
 	o evolution-mapi-0.26.2 [GNOME 2.26]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
@@ -596,6 +602,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o flpsed-0.4.4
 	o fmsx-3.0
 	o fondu-040927
+	o fontconfig-2.7.1
 	o fop-0.20.5
 	o fotoxx-7.5
 	o freeglut-2.4.0
@@ -649,7 +656,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
-	o glpk-4.37
+	o glpk-4.39
 	o gmp-4.3.1
 	o gnash-0.8.5
 	o gnet1-1.1.9
@@ -827,6 +834,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libssh-0.3.1
 	o libssh2-1.1
 	o libstree-0.4.2
+	o libtasn1-2.3
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
@@ -861,6 +869,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o matchbox-panel-0.9.3
 	o mathomatic-14.5.2
 	o mc-4.6.2
+	o mediawiki-1.14.1 [pkg/41789]
 	o memconf-2.9 [pkg/40201]
 	o memtester-4.1.0
 	o memtestplus-2.11
@@ -899,6 +908,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
+	o mono-2.4.2.3
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
 	o mp3blaster-3.2.3
@@ -982,6 +992,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-BerkeleyDB-0.39
+	o p5-DBD-postgresql-2.14.1
+	o p5-Image-Info-1.29
 	o p5-Pod-Simple-3.08
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1063,6 +1075,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-24.8
 	o pureftpd-1.0.22
 	o puzzle-5.2
+	o puzzles-8610
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1183,7 +1196,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sabayon-2.25.0 [GNOME 2.26]
 	o sablecc-3.2
 	o samba-3.2.13
-	o samba-3.3.7
+	o samba-3.4.0
 	o sane-backends-1.0.20
 	o sarg-2.2.5
 	o sbcl-1.0.30
@@ -1192,6 +1205,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.1.1
 	o scm-5e5
+	o scmgit-base-1.6.4
+	o scmgit-docs-1.6.4
 	o scribus-1.3.3.13
 	o scrollz-1.9.99
 	o scsh-1.3.0
@@ -1350,7 +1365,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20090620
+	o x264-devel-20090801
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
