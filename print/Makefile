@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2009/08/02 19:20:51 minskim Exp $
+# $NetBSD: Makefile,v 1.299 2009/08/03 23:38:34 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -327,6 +327,7 @@ SUBDIR+=	tex-xltxtra-doc
 SUBDIR+=	tex-xunicode
 SUBDIR+=	tex-xunicode-doc
 #SUBDIR+=	texlive				# place holder directory
+SUBDIR+=	texlive-pdftools
 SUBDIR+=	texlive-tetex
 SUBDIR+=	transfig
 SUBDIR+=	web2c
