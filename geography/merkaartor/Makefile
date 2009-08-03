@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/04 10:57:59 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/03 14:46:24 joerg Exp $
 #
 
 DISTNAME=	merkaartor-0.13.2
@@ -28,6 +28,8 @@ SUBST_MESSAGE.installtarget=	Fixing wrong install target
 SUBST_STAGE.installtarget=	post-configure
 SUBST_FILES.installtarget=	${WRKSRC}/Makefile
 SUBST_SED.installtarget=	-e 's:--mode=install cp "$$(QMAKE_TARGET)":--mode=install cp "$$(TARGET)":'
+
+INSTALL_ENV+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
 	cd ${WRKSRC} && \
