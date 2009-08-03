@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/07/07 15:46:47 sno Exp $
+# $NetBSD: Makefile,v 1.18 2009/08/03 15:18:35 joerg Exp $
 
 DISTNAME=	AddressBook-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -26,12 +26,11 @@ REPLACE_PERL+=	examples/abook.palm
 REPLACE_PERL+=	examples/phonelist.cgi
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+INSTALLATION_DIRS=	${EGDIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC};							\
 	for file in ${REPLACE_PERL} examples/ldap-abook.conf; do	\
-		${INSTALL_DATA} $${file} ${EGDIR};			\
+		${INSTALL_DATA} ${WRKSRC}/$${file} ${DESTDIR}${EGDIR};	\
 	done
 
 .include "../../lang/perl5/module.mk"
