@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/12/02 08:32:24 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2009/08/03 14:20:14 joerg Exp $
 
 DISTNAME=	irrd2.2.8
 PKGNAME=	irrd-2.2.8
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.irrd.net/
 COMMENT=	Internet Routing Registry Daemon
+
+MAKE_JOBS_SAFE=	no
 
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	wget-[0-9]*:../../net/wget
