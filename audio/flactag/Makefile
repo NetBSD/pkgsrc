@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/27 13:51:12 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/03 13:39:45 joerg Exp $
 #
 
 DISTNAME=	flactag-1.1
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c++
 USE_TOOLS=	gmake
 PKG_DESTDIR_SUPPORT= user-destdir
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/flactag ${DESTDIR}${PREFIX}/bin
