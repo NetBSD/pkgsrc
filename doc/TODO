@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8310 2009/08/03 13:12:51 wiz Exp $
+$NetBSD: TODO,v 1.8311 2009/08/03 15:52:56 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -879,7 +879,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mc-4.6.2
 	o mediawiki-1.14.1 [pkg/41789]
 	o memconf-2.9 [pkg/40201]
-	o memtester-4.1.2
 	o memtestplus-2.11
 	o merb-1.0.8.1
 	o merb-action-args-1.0.8.1
