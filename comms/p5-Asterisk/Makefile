@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/07 15:42:13 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/03 15:19:17 joerg Exp $
 #
 
 DISTNAME=		asterisk-perl-1.01
@@ -26,10 +26,11 @@ EXAMPLE_FILES+= 	tts-bofh.agi tts-line.agi tts-ping.agi
 REPLACE_PERL+=		${WRKSRC}/examples/${file}
 .endfor
 
+INSTALLATION_DIRS=	${EXAMPLES_DIR}
+
 post-install:
-	${INSTALL_SCRIPT_DIR} ${EXAMPLES_DIR}
 .for file in ${EXAMPLE_FILES}
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/${file} ${EXAMPLES_DIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/${file} ${DESTDIR}${EXAMPLES_DIR}
 .endfor
 
 .include "../../lang/perl5/module.mk"
