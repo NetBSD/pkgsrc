@@ -1,0 +1,69 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/03 23:49:19 minskim Exp $
+
+--- man/man1/a2ping.1.orig	2006-01-02 16:00:18.000000000 -0800
++++ man/man1/a2ping.1
+@@ -145,13 +145,13 @@
+ .ad n
+ 
+ .SH "NAME"
+-a2ping.pl \-\- convert between PS, EPS and PDF and other page description
++a2ping \-\- convert between PS, EPS and PDF and other page description
+ formats
+ .SH "SYNOPSIS"
+ .IX Header "SYNOPSIS"
+-\&\& \fBa2ping.pl\fR [\fB\-\-\fR]\fBhelp\fR
+- \fBa2ping.pl\fR [\fB\-\-\fR]\fBdoc\fR
+- \fBa2ping.pl\fR [\fIoptions\fR] <\fIinputfile\fR> [[\fIoutformat\fR:] \fIoutputfile\fR]
++\&\& \fBa2ping\fR [\fB\-\-\fR]\fBhelp\fR
++ \fBa2ping\fR [\fB\-\-\fR]\fBdoc\fR
++ \fBa2ping\fR [\fIoptions\fR] <\fIinputfile\fR> [[\fIoutformat\fR:] \fIoutputfile\fR]
+ .SH "DESCRIPTION"
+ .IX Header "DESCRIPTION"
+ \&\fBa2ping\fR is a \s-1UNIX\s0 command line utility written in Perl that
+@@ -182,8 +182,8 @@ file matters if \fIoutformat\fR is missi
+ extension of the output file determines the FileFormat (\fIoutformat\fR).
+ .SH "EXTERNAL PROGRAMS"
+ .IX Header "EXTERNAL PROGRAMS"
+-The internal file format of \fBa2ping.pl\fR is \s-1PS/EPS\s0. Everything read is
+-first converted to \s-1PS\s0 or \s-1EPS\s0, then processed by \fBa2ping.pl\fR, then
++The internal file format of \fBa2ping\fR is \s-1PS/EPS\s0. Everything read is
++first converted to \s-1PS\s0 or \s-1EPS\s0, then processed by \fBa2ping\fR, then
+ converted to the output format.
+ .PP
+ To analyse the bounding box and other properties of non-EPS \s-1PS\s0 files
+@@ -196,7 +196,7 @@ To read \s-1PDF\s0 files, \fBpdftops\fR 
+ .PP
+ Sampled input formats are \s-1PNG\s0, \s-1JPEG\s0, \s-1TIFF\s0, \s-1PNM\s0, \s-1BMP\s0, \s-1GIF\s0, \s-1LBM\s0, \s-1XPM\s0, \s-1PCX\s0
+ and \s-1TGA\s0. To read sampled input formats, \fBsam2p\fR is used. \fBsam2p\fR is
+-a raster image converter written in \*(C+ by the author of \fBa2ping.pl\fR.
++a raster image converter written in \*(C+ by the author of \fBa2ping\fR.
+ .PP
+ Extra output formats are \s-1PNG\s0, \s-1XWD\s0, \s-1BMP\s0, \s-1TIFF\s0, \s-1JPEG\s0, \s-1GIF\s0 and \s-1XPM\s0. To
+ write extra output formats, \fBsam2p\fR and \s-1GS\s0 are used.
+@@ -209,7 +209,7 @@ is used.
+ Call with the \fB\-v\fR option to see progress and debug messages.
+ .IP "\(bu" 2
+ If your \s-1EPS\s0 contains a wrong bounding box, you can fix it by running
+-\&\f(CW\*(C`a2ping.pl \-v \-\-bboxfrom=compute\-gs thefile.eps \-\-\*(C'\fR
++\&\f(CW\*(C`a2ping \-v \-\-bboxfrom=compute\-gs thefile.eps \-\-\*(C'\fR
+ .IP "\(bu" 2
+ You can specify \fB\-\fR as \fIinputfile\fR to get stdin and as \fIoutputfile\fR
+ to get stdout. This works even for \s-1PDF\s0 files (which must be seekable),
+@@ -225,7 +225,7 @@ If you specify \fB\-\-\fR as \fIoutputfi
+ \&\fBa2ping\fR respects \fB\-\-Duplex\fR for FileFormat \s-1PCL5\s0, even though \s-1GS\s0 doesn't.
+ .IP "\(bu" 2
+ If you have an incompatible \s-1PS\s0 that \s-1GS\s0 can read but your printer cannot print,
+-just run \f(CW\*(C`a2ping.pl foo.ps PDF: \- | a2ping.pl \- PS: foo.ps\*(C'\fR
++just run \f(CW\*(C`a2ping foo.ps PDF: \- | a2ping \- PS: foo.ps\*(C'\fR
+ .IP "\(bu" 2
+ If you have a \s-1PS\s0 coming from Win32 (often with extension \f(CW\*(C`.prn\*(C'\fR), run
+ it through \fBa2ping\fR. It will remove the resolution changes and the
+@@ -358,7 +358,7 @@ texutil.
+ \& * improved bbox discovery
+ \& * many bugfixes
+ \& * MetaPost EPS input fixes for prologues:=0;
+-\& * a2ping.pl -v --papersize=50,60 --bboxfrom=compute-gs t.ps t2.ps
++\& * a2ping -v --papersize=50,60 --bboxfrom=compute-gs t.ps t2.ps
+ \& * consistent bbox, --PageSize, /PageSize handling
+ \& * consistent --Resolution and --Duplex handling
+ .Ve
