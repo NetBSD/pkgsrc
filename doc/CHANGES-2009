@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2909 2009/08/03 18:54:22 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2910 2009/08/03 22:35:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3863,3 +3863,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/openct to 0.6.17 [hasso 2009-08-03]
 	Updated security/opensc to 0.11.9 [hasso 2009-08-03]
 	Updated security/pcsc-lite to 1.5.5 [hasso 2009-08-03]
+	Updated www/tidy to 20090326 [wiz 2009-08-03]
