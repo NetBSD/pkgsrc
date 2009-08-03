@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/07/14 12:56:05 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/03 12:58:28 joerg Exp $
 
 DISTNAME=		koverartist-0.5
 PKGREVISION=		3
 CATEGORIES=		graphics kde
-MASTER_SITES=		http://www.kde-apps.org/content/
+MASTER_SITES=		# empty
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		markd@NetBSD.org
@@ -18,11 +18,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 WRKSRC=			${WRKDIR}/koverartist
-
-DISTURL=${MASTER_SITES}download.php?content=38195&id=1
-pre-fetch:
-	${TEST} -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} || \
-	(cd ${DISTDIR} && ${FETCH_CMD} -o ${DISTNAME}${EXTRACT_SUFX} ${DISTURL:Q})
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
