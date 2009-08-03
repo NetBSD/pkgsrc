@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/03/05 17:44:00 plunky Exp $
+# $NetBSD: Makefile,v 1.16 2009/08/03 14:25:26 joerg Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -52,6 +52,10 @@ SUBST_MESSAGE.path=	Fixing hardcoded paths.
 
 # VIM_SUBDIR comes from "editors/vim-share/version.mk"
 PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR:Q}
+
+INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
+INSTALLATION_DIRS=	bin share/vim/${VIM_SUBDIR}/ftplugin \
+			share/vim/${VIM_SUBDIR}/syntax
 
 do-configure:
 .   for dir in ${CONFIGURE_DIRS}
