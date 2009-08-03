@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/28 21:28:39 zafer Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/03 16:01:08 joerg Exp $
 #
 
 DISTNAME=		FlightGear-1.0.0
@@ -13,6 +13,8 @@ HOMEPAGE=		http://www.flightgear.org/
 COMMENT=		The FlightGear Simulator
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
