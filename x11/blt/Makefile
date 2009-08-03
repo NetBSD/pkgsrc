@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/02/16 20:22:18 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/08/03 12:46:26 joerg Exp $
 #
 
 DISTNAME=	BLT2.4z
@@ -13,6 +13,8 @@ COMMENT=	Extension to Tcl/Tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=	no
 
 WRKSRC=			${WRKDIR}/blt2.4z
 GNU_CONFIGURE=		YES
