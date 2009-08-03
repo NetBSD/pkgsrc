@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2009/05/20 00:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2009/08/03 14:01:32 joerg Exp $
 
 DISTNAME=	gale-0.99fruit
 PKGNAME=	gale-0.99f
@@ -12,6 +12,8 @@ HOMEPAGE=	http://gale.org/
 COMMENT=	Secure instant messaging system
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=	no
 
 USE_GNU_READLINE=	yes	# needs rl_named_function()
 USE_LIBTOOL=		yes
