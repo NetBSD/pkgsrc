@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/03 13:45:10 joerg Exp $
 #
 
 DISTNAME=	frameworks-0.3.7
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://frameworks.polycrystal.org/release/
 COMMENT=	Stop-motion animation frame capture software
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake autoconf
 
@@ -19,6 +21,8 @@ SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Fixing paths in xdg menu entries.
 SUBST_FILES.xdg=	frameworks.desktop
 SUBST_SED.xdg=		-e 's,@PREFIX@,${PREFIX},g'
+
+INSTALLATION_DIRS=	share/applications share/icons/hicolor/48x48/apps
 
 post-extract:
 	cp ${FILESDIR}/frameworks.desktop.in ${WRKSRC}/frameworks.desktop
