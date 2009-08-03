@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/07/22 09:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/08/03 14:06:16 joerg Exp $
 #
 
 DISTNAME=		genius-1.0.6
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.jirka.org/genius.html
 COMMENT=		Calculator and math tool
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
