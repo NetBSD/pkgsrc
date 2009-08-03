@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/03 18:25:53 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2009/08/03 15:55:52 joerg Exp $
 
 DISTNAME=		xcoral-3.2
 PKGREVISION=		1
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multiwindow mouse-based text editor for X
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
@@ -21,11 +22,9 @@ LIBFILES=	DEPEND README cmd.sc color.sc comments.sc compare-win.sc \
 		rcs.sc save.sc sun-keydef.sc title.sc top-ten.sc \
 		utilities.sc version.sc window-utilities.sc xcoralrc.lf
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin lib/xcoral share/doc/xcoral/HTML/icons
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/xcoral
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xcoral/HTML/icons
 	${INSTALL_PROGRAM} ${WRKSRC}/xcoral ${DESTDIR}${PREFIX}/bin
 .for FILE in ${LIBFILES}
 	${INSTALL_DATA} ${WRKSRC}/SmacLib/${FILE} ${DESTDIR}${PREFIX}/lib/xcoral
