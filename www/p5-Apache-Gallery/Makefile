@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/07/07 16:27:33 sno Exp $
+# $NetBSD: Makefile,v 1.40 2009/08/03 15:18:03 joerg Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.9.1
@@ -88,22 +88,18 @@ post-build:
 	    done; \
 	done
 
+INSTALLATION_DIRS=	${AG_SHAREDIR}/htdocs ${AG_SHAREDIR}/templates \
+			${AG_DOCDIR} ${AG_EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${AG_SHAREDIR}
-	@set +x; \
-	for i in htdocs templates; \
-	do \
-	    ${INSTALL_DATA_DIR} ${AG_SHAREDIR}/$$i; \
-	    cd ${WRKSRC}/$$i && pax -rw . ${AG_SHAREDIR}/$$i; \
-	done; \
-	${INSTALL_DATA_DIR} ${AG_DOCDIR}; \
-	for i in Changes INSTALL LICENSE README UPGRADE; \
-	do \
-	    ${INSTALL_DATA} ${WRKSRC}/$$i ${AG_DOCDIR}; \
-	done
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${AG_SHAREDIR}; \
-	${INSTALL_DATA_DIR} ${AG_EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/${AG}.conf ${AG_EGDIR}
+	cd ${WRKSRC}/htdocs && pax -rw . ${DESTDIR}${AG_SHAREDIR}/htdocs
+	cd ${WRKSRC}/templates && pax -rw . ${DESTDIR}${AG_SHAREDIR}/templates
+	${INSTALL_DATA} ${WRKSRC}/Changes ${DESTDIR}${AG_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${AG_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${AG_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${AG_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/UPGRADE ${DESTDIR}${AG_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${AG}.conf ${DESTDIR}${AG_EGDIR}
 
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
