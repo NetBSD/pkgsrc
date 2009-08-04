@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2917 2009/08/04 10:11:03 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.2918 2009/08/04 10:14:06 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3873,3 +3873,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/vim-share to 7.2.245 [martti 2009-08-04]
 	Updated www/mediawiki to 1.15.1 [martti 2009-08-04]
 	Updated devel/apr to 1.3.7 [tonnerre 2009-08-04]
+	Updated devel/apr-util to 1.3.8 [tonnerre 2009-08-04]
