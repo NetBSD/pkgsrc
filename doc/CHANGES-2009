@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2922 2009/08/04 22:16:38 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.2923 2009/08/04 22:18:06 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3878,3 +3878,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/wordpress to 2.8.3 [adrianp 2009-08-04]
 	Updated math/eigen2 to 2.0.4 [markd 2009-08-04]
 	Updated mail/akonadi to 1.2.0 [markd 2009-08-04]
+	Updated chat/inspircd12 to 1.2.0rc4 [adrianp 2009-08-04]
