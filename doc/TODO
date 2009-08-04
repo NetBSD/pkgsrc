@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8311 2009/08/03 15:52:56 schmonz Exp $
+$NetBSD: TODO,v 1.8312 2009/08/04 21:53:06 markd Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.7.1
 	o aewm++-1.0.27
 	o afterstep-2.2.9
-	o akonadi-1.2.0
 	o album-4.05
 	o albumplayer-0.3
 	o alee-ttf-11.2
@@ -553,7 +552,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eet-1.2.2
 	o efax-gtk-3.0.19
 	o egtk-0.3.6.2
-	o eigen2-2.0.2
 	o ekiga-3.2.5
 	o electric-8.09
 	o electricfence-2.4.16
