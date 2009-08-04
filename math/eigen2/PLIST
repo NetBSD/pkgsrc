@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:05:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/04 21:13:30 markd Exp $
 include/eigen2/Eigen/Array
 include/eigen2/Eigen/Cholesky
 include/eigen2/Eigen/Core
@@ -99,6 +99,7 @@ include/eigen2/Eigen/src/Sparse/SparseBlock.h
 include/eigen2/Eigen/src/Sparse/SparseCwise.h
 include/eigen2/Eigen/src/Sparse/SparseCwiseBinaryOp.h
 include/eigen2/Eigen/src/Sparse/SparseCwiseUnaryOp.h
+include/eigen2/Eigen/src/Sparse/SparseDiagonalProduct.h
 include/eigen2/Eigen/src/Sparse/SparseDot.h
 include/eigen2/Eigen/src/Sparse/SparseFlagged.h
 include/eigen2/Eigen/src/Sparse/SparseFuzzy.h
@@ -116,5 +117,6 @@ include/eigen2/Eigen/src/Sparse/SuperLUSupport.h
 include/eigen2/Eigen/src/Sparse/TaucsSupport.h
 include/eigen2/Eigen/src/Sparse/TriangularSolver.h
 include/eigen2/Eigen/src/Sparse/UmfPackSupport.h
-include/eigen2/Eigen/src/StdVector/StdVector.h
-include/eigen2/Eigen/src/StdVector/UnalignedType.h
+include/eigen2/unsupported/Eigen/IterativeSolvers
+include/eigen2/unsupported/Eigen/src/IterativeSolvers/ConstrainedConjGrad.h
+include/eigen2/unsupported/Eigen/src/IterativeSolvers/IterationController.h
