@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2009/04/16 17:11:12 taca Exp $
+# $NetBSD: Makefile,v 1.51 2009/08/04 19:47:16 hasso Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
-#PKGREVISION=
+PKGREVISION=	1
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
@@ -64,9 +64,10 @@ PLIST.io=	yes
 .endif
 
 #
-# Work around for getucontext(3)
+# Work around for ucontext(3). It was broken in older DragonFly
+# versions and is slow in newer ones.
 #
-.if ${OPSYS} == "DragonFly" && ${OS_VERSION} == "1.8.0"
+.if ${OPSYS} == "DragonFly"
 CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
 .endif
 
