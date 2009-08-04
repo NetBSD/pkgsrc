@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2009/07/23 17:14:39 abs Exp $
+# $NetBSD: Makefile,v 1.58 2009/08/04 08:13:56 abs Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -87,6 +87,8 @@ do-configure:
 	done
 
 pre-install:
+	# This file is generated the *first* time the package is built on a box
+	${RM} -f ${WRKSRC}/lib/servicetag/registration.xml
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 	cd ${WRKDIR}/jce ; pax -rw -pe -v . ${WRKSRC}/lib/security
 .endif
