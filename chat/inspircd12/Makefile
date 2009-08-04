@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/07/22 09:24:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/04 22:17:36 adrianp Exp $
 #
 
-DISTNAME=	InspIRCd-1.2.0rc3
+DISTNAME=	InspIRCd-1.2.0rc4
 PKGNAME=	${DISTNAME:S/InspIRCd/inspircd/}
 CATEGORIES=	chat
 MASTER_SITES=	http://www.inspircd.org/downloads/
@@ -23,6 +23,7 @@ USE_LANGUAGES=		c++
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 RCD_SCRIPTS+=		inspircd
 PKG_SYSCONFSUBDIR=	inspircd
+MAKE_FILE=		GNUmakefile
 
 FILES_SUBST+=		INSPIRCD_USER=${INSPIRCD_USER:Q}
 FILES_SUBST+=		INSPIRCD_GROUP=${INSPIRCD_GROUP:Q}
@@ -65,7 +66,7 @@ SUBST_MESSAGE.conf=	Fixing configuration files.
 
 SUBST_CLASSES+=		install
 SUBST_STAGE.install=	post-configure
-SUBST_FILES.install=	Makefile
+SUBST_FILES.install=	GNUmakefile
 SUBST_SED.install+=	-e "s|-cp conf|\#-cp conf|g"
 SUBST_MESSAGE.install=	Fixing installation files.
 

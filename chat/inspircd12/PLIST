@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:37:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/04 22:17:36 adrianp Exp $
 bin/inspircd
 lib/inspircd/cmd_admin.so
 lib/inspircd/cmd_away.so
@@ -172,7 +172,7 @@ share/inspircd/modules/m_showwhois.so
 share/inspircd/modules/m_silence.so
 share/inspircd/modules/m_spanningtree.so
 share/inspircd/modules/m_spy.so
-share/inspircd/modules/m_ssl_dummy.so
+share/inspircd/modules/m_sslinfo.so
 share/inspircd/modules/m_sslmodes.so
 share/inspircd/modules/m_stripcolor.so
 share/inspircd/modules/m_svshold.so
