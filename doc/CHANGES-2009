@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2914 2009/08/03 23:52:11 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2915 2009/08/04 05:53:28 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3870,3 +3870,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-listings-doc version 1.4 [minskim 2009-08-03]
 	Added graphics/tex-a2ping version 2.77p [minskim 2009-08-03]
 	Added graphics/tex-a2ping-doc version 2.77p [minskim 2009-08-03]
+	Updated editors/vim-share to 7.2.245 [martti 2009-08-04]
