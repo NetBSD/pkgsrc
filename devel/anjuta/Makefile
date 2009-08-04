@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2009/07/22 09:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2009/08/04 11:13:11 drochner Exp $
 
 DISTNAME=	anjuta-2.24.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/2.24/}
 #MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=anjuta/}
@@ -31,6 +31,8 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--disable-plugin-valgrind
 CONFIGURE_ARGS+=	--enable-plugin-scintilla
+# pkgsrc devhelp is currently API incompatible
+CONFIGURE_ARGS+=	--disable-plugin-devhelp
 
 SUBST_CLASSES+=		unused
 SUBST_STAGE.unused=	pre-configure
@@ -61,7 +63,7 @@ GCONF_SCHEMAS+=	anjuta.schemas
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 
-.include "../../devel/devhelp/buildlink3.mk"
+#.include "../../devel/devhelp/buildlink3.mk"
 .include "../../devel/gdl/buildlink3.mk"
 .include "../../devel/glade3/buildlink3.mk"
 .include "../../devel/gnome-build/buildlink3.mk"
