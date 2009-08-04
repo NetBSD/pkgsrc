@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2009/08/03 14:52:01 joerg Exp $
+# $NetBSD: Makefile.common,v 1.26 2009/08/04 13:58:57 joerg Exp $
 #
 
 NETHACK_BASEVER=	3.4.3
@@ -13,6 +13,8 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pooka@NetBSD.org
 HOMEPAGE=		http://www.nethack.org/
+
+MAKE_JOBS_SAFE=		no
 
 .if !defined(META_PACKAGE)
 
