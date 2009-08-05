@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/08/05 22:23:57 minskim Exp $
+
+--- WL-MK.orig	2008-02-14 19:12:35.000000000 -0800
++++ WL-MK
+@@ -392,8 +392,7 @@
+ 	;; We can't know file names if splitted.
+ 	(texinfo-format-buffer t)
+ 	;; Emacs20.2's default is 'raw-text-unix.
+-	(and (fboundp 'set-buffer-file-coding-system)
+-	     (set-buffer-file-coding-system wl-cs-local))
++	(set-buffer-file-coding-system 'utf-8)
+ 	(save-buffer)
+ 	(kill-buffer (current-buffer)) ;; info
+ 	(kill-buffer obuf)) ;; texi
