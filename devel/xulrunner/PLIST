@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/05 02:59:47 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/05 06:10:31 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -472,6 +472,10 @@ include/xulrunner/unstable/crmft.h
 include/xulrunner/unstable/cryptohi.h
 include/xulrunner/unstable/cryptoht.h
 include/xulrunner/unstable/ecl-exp.h
+include/xulrunner/unstable/gfxCore.h
+include/xulrunner/unstable/gtkmozembed.h
+include/xulrunner/unstable/gtkmozembed_glue.cpp
+include/xulrunner/unstable/gtkmozembed_internal.h
 include/xulrunner/unstable/hasht.h
 include/xulrunner/unstable/jar-ds.h
 include/xulrunner/unstable/jar.h
@@ -529,6 +533,20 @@ include/xulrunner/unstable/key.h
 include/xulrunner/unstable/keyhi.h
 include/xulrunner/unstable/keyt.h
 include/xulrunner/unstable/keythi.h
+include/xulrunner/unstable/mozilla-config.h
+include/xulrunner/unstable/nsCoord.h
+include/xulrunner/unstable/nsICommandManager.h
+include/xulrunner/unstable/nsICommandParams.h
+include/xulrunner/unstable/nsIDOMNSEvent.h
+include/xulrunner/unstable/nsIDocShell.h
+include/xulrunner/unstable/nsIPrintProgressParams.h
+include/xulrunner/unstable/nsIPrintSettings.h
+include/xulrunner/unstable/nsIPrintingPromptService.h
+include/xulrunner/unstable/nsISelectionController.h
+include/xulrunner/unstable/nsISelectionDisplay.h
+include/xulrunner/unstable/nsITypeAheadFind.h
+include/xulrunner/unstable/nsMargin.h
+include/xulrunner/unstable/nsMathUtils.h
 include/xulrunner/unstable/nss.h
 include/xulrunner/unstable/nssb64.h
 include/xulrunner/unstable/nssb64t.h
@@ -845,6 +863,8 @@ lib/xulrunner/libsoftokn3.chk
 lib/xulrunner/libsoftokn3.so
 lib/xulrunner/libssl3.so
 lib/xulrunner/libxpcom.so
+lib/xulrunner/libxpcomglue.a
+lib/xulrunner/libxpcomglue_s.a
 lib/xulrunner/libxul.so
 lib/xulrunner/modules/DownloadLastDir.jsm
 lib/xulrunner/modules/DownloadUtils.jsm
