@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/08/05 20:35:01 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/05 20:58:42 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -477,9 +477,36 @@ include/xulrunner/unstable/cryptoht.h
 include/xulrunner/unstable/domstubs.h
 include/xulrunner/unstable/ecl-exp.h
 include/xulrunner/unstable/ftpCore.h
+include/xulrunner/unstable/gfxASurface.h
+include/xulrunner/unstable/gfxAlphaRecovery.h
+include/xulrunner/unstable/gfxBlur.h
+include/xulrunner/unstable/gfxColor.h
+include/xulrunner/unstable/gfxContext.h
 include/xulrunner/unstable/gfxCore.h
+include/xulrunner/unstable/gfxFont.h
+include/xulrunner/unstable/gfxFontTest.h
+include/xulrunner/unstable/gfxFontUtils.h
+include/xulrunner/unstable/gfxGdkNativeRenderer.h
 include/xulrunner/unstable/gfxIFormats.h
 include/xulrunner/unstable/gfxIImageFrame.h
+include/xulrunner/unstable/gfxImageSurface.h
+include/xulrunner/unstable/gfxMatrix.h
+include/xulrunner/unstable/gfxPDFSurface.h
+include/xulrunner/unstable/gfxPSSurface.h
+include/xulrunner/unstable/gfxPangoFonts.h
+include/xulrunner/unstable/gfxPath.h
+include/xulrunner/unstable/gfxPattern.h
+include/xulrunner/unstable/gfxPlatform.h
+include/xulrunner/unstable/gfxPlatformGtk.h
+include/xulrunner/unstable/gfxPoint.h
+include/xulrunner/unstable/gfxRect.h
+include/xulrunner/unstable/gfxSkipChars.h
+include/xulrunner/unstable/gfxTextRunCache.h
+include/xulrunner/unstable/gfxTextRunWordCache.h
+include/xulrunner/unstable/gfxTypes.h
+include/xulrunner/unstable/gfxUserFontSet.h
+include/xulrunner/unstable/gfxUtils.h
+include/xulrunner/unstable/gfxXlibSurface.h
 include/xulrunner/unstable/gfxtypes.h
 include/xulrunner/unstable/gtkmozembed.h
 include/xulrunner/unstable/gtkmozembed_glue.cpp
@@ -724,6 +751,7 @@ include/xulrunner/unstable/nsIAboutModule.h
 include/xulrunner/unstable/nsIAllocator.h
 include/xulrunner/unstable/nsIAnonymousContentCreator.h
 include/xulrunner/unstable/nsIAppShell.h
+include/xulrunner/unstable/nsIAppStartupNotifier.h
 include/xulrunner/unstable/nsIApplicationCache.h
 include/xulrunner/unstable/nsIApplicationCacheChannel.h
 include/xulrunner/unstable/nsIApplicationCacheContainer.h
@@ -1396,6 +1424,12 @@ include/xulrunner/unstable/nsILocalFile.h
 include/xulrunner/unstable/nsILocalFileWin.h
 include/xulrunner/unstable/nsILocale.h
 include/xulrunner/unstable/nsILocaleService.h
+include/xulrunner/unstable/nsILoginInfo.h
+include/xulrunner/unstable/nsILoginManager.h
+include/xulrunner/unstable/nsILoginManagerIEMigrationHelper.h
+include/xulrunner/unstable/nsILoginManagerPrompter.h
+include/xulrunner/unstable/nsILoginManagerStorage.h
+include/xulrunner/unstable/nsILoginMetaInfo.h
 include/xulrunner/unstable/nsILookAndFeel.h
 include/xulrunner/unstable/nsIMIMEHeaderParam.h
 include/xulrunner/unstable/nsIMIMEInfo.h
@@ -1617,6 +1651,8 @@ include/xulrunner/unstable/nsIStreamListener.h
 include/xulrunner/unstable/nsIStreamListenerTee.h
 include/xulrunner/unstable/nsIStreamLoader.h
 include/xulrunner/unstable/nsIStreamTransportService.h
+include/xulrunner/unstable/nsIStringBundle.h
+include/xulrunner/unstable/nsIStringBundleOverride.h
 include/xulrunner/unstable/nsIStringCharsetDetector.h
 include/xulrunner/unstable/nsIStringEnumerator.h
 include/xulrunner/unstable/nsIStringStream.h
@@ -1815,6 +1851,7 @@ include/xulrunner/unstable/nsPresShellIterator.h
 include/xulrunner/unstable/nsPresState.h
 include/xulrunner/unstable/nsPrintfCString.h
 include/xulrunner/unstable/nsProcess.h
+include/xulrunner/unstable/nsProfileDirServiceProvider.h
 include/xulrunner/unstable/nsPromiseFlatString.h
 include/xulrunner/unstable/nsPromptUtils.h
 include/xulrunner/unstable/nsPropertyTable.h
