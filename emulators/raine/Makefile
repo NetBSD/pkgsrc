@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/07/22 09:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2009/08/05 00:02:22 wiz Exp $
 #
 
 DISTNAME=	raines-0.43.3
@@ -20,6 +20,7 @@ MAKE_ENV+=	OSTYPE=linux
 REPLACE_PERL=	makedep
 PTHREAD_OPTS+=	require
 
+INSTALLATION_DIRS=	share/pixmaps
 
 # XXX Really?
 ONLY_FOR_PLATFORM=  *-*-i386
