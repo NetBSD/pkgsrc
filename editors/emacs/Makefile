@@ -1,68 +1,11 @@
-# $NetBSD: Makefile,v 1.122 2009/08/02 10:44:48 jun Exp $
+# $NetBSD: Makefile,v 1.123 2009/08/05 22:04:50 minskim Exp $
 
-PKGNAME?=	${DISTNAME}
-COMMENT?=	GNU editing macros (editor)
-
-DISTNAME=	emacs-22.3
-PKGREVISION=	3
-CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
-
-MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
-LICENSE=	gnu-gpl-v3
-
-CONFLICTS+=	elisp-manual-[0-9]*
-CONFLICTS+=	emacs-[0-9]*
 CONFLICTS+=	emacs-nox11-[0-9]*
-CONFLICTS+=	mule-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-USE_TOOLS+=		gmake gzip mktemp:run perl:run pkg-config
-GNU_CONFIGURE=		yes
-INFO_FILES=		# PLIST
+.include "../../editors/emacs/Makefile.common"
 
 .include "options.mk"
 
-MAKEFLAGS+=		EMACSLOADPATH=${WRKSRC}/lisp
-
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
-
-BUILD_DEFS+=		VARBASE
-BUILD_DEFS+=		GAMEDATAMODE
-
-# build PATH in the dumped emacs is not a problem
-CHECK_WRKREF_SKIP+=	bin/emacs
-CHECK_WRKREF_SKIP+=	bin/emacs-[0-9]*
-
-REPLACE_PERL=		lib-src/grep-changelog
-
-SUBST_CLASSES+=			test_equal
-SUBST_STAGE.test_equal=		pre-configure
-SUBST_MESSAGE.test_equal=	Fixing bashisms in test(1) usage.
-SUBST_FILES.test_equal=		mac/make-package
-SUBST_SED.test_equal=		-e 's/ == / = /g'
-
-MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs \
-			${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q}
-CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
-			${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
-CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
-			${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
-SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM}/update-game-score ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEMODE:Q}
-
-.if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
-CPPFLAGS+=		-DDFLY_CRT_USRLIB
-.endif
-
-post-extract:
-	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
-	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
-	${CHMOD} -R go-w ${WRKSRC}
-
-.include "../../mk/oss.buildlink3.mk"
-.include "../../mk/termcap.buildlink3.mk"
-
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
