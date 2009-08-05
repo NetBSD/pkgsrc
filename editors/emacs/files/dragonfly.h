@@ -21,8 +21,8 @@ along with GNU Emacs; see the file COPYING.  If not, write to
 the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 Boston, MA 02111-1307, USA.  */
 
-/* Get most of the stuff from bsd4.3 */
-#include "bsd4-3.h"
+/* Get most of the stuff from bsd-common */
+#include "bsd-common.h"
 
 /* For mem-limits.h. */
 #define BSD4_2
@@ -35,6 +35,8 @@ Boston, MA 02111-1307, USA.  */
 
 #define LIBS_DEBUG
 #define LIBS_SYSTEM -lutil
+#define TERMINFO
+#define LIBS_TERMCAP -lncurses
 #define SYSV_SYSTEM_DIR
 
 /* freebsd has POSIX-style pgrp behavior. */
@@ -76,12 +78,6 @@ Boston, MA 02111-1307, USA.  */
    It is already a controlling terminal of subprocess, because we did
    ioctl TIOCSCTTY.  */
 #define DONT_REOPEN_PTY
-
-/* CLASH_DETECTION is defined in bsd4-3.h.
-   In FreeBSD 2.1.5 (and other 2.1.x), this results useless symbolic links
-   remaining in /tmp or other directories with +t bit.
-   To avoid this problem, you could #undef it to use no file lock. */
-/* #undef CLASH_DETECTION */
 
 /* If the system's imake configuration file defines `NeedWidePrototypes'
    as `NO', we must define NARROWPROTO manually.  Such a define is
