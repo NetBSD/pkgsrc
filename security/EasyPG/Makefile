@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/11/13 08:15:34 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/05 08:01:36 minskim Exp $
 
 DISTNAME=	epg-0.0.16
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/epg/EasyPG/}
@@ -17,7 +17,7 @@ INFO_FILES=	epa.info
 # per README: GnuPG 1.4.3
 DEPENDS+=	gnupg>=1.4.3:../../security/gnupg
 # per README: GNU Emacs 21.4, XEmacs 21.4, or later
-EMACS_VERSIONS_ACCEPTED= emacs21 emacs21nox emacs22 emacs22nox xemacs214 xemacs215
+EMACS_VERSIONS_ACCEPTED= emacs23 emacs21 emacs21nox emacs22 emacs22nox xemacs214 xemacs215
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
