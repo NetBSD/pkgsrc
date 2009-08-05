@@ -1,0 +1,15 @@
+$NetBSD: patch-au,v 1.1.1.1 2009/08/05 10:30:29 minskim Exp $
+
+--- src/callproc.c.orig	2008-10-10 10:35:49.000000000 +0900
++++ src/callproc.c
+@@ -26,10 +26,6 @@ Boston, MA 02110-1301, USA.  */
+ #include <errno.h>
+ #include <stdio.h>
+ 
+-#ifndef USE_CRT_DLL
+-extern int errno;
+-#endif
+-
+ /* Define SIGCHLD as an alias for SIGCLD.  */
+ 
+ #if !defined (SIGCHLD) && defined (SIGCLD)

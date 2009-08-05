@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/05 10:30:29 minskim Exp $
+
+--- man/Makefile.in.orig	2008-10-10 10:35:49.000000000 +0900
++++ man/Makefile.in
+@@ -36,7 +36,7 @@ MAKEINFO = makeinfo --force
+ INFO_TARGETS = ../info/emacs ../info/ccmode ../info/cl \
+ 	        ../info/dired-x ../info/ediff ../info/forms ../info/gnus \
+ 		../info/message ../info/sieve ../info/pgg ../info/emacs-mime \
+-		../info/info ../info/mh-e ../info/reftex \
++		../info/mh-e ../info/reftex \
+ 		../info/sc ../info/vip ../info/viper ../info/widget \
+ 		../info/efaq ../info/ada-mode ../info/autotype ../info/calc \
+ 		../info/idlwave ../info/eudc ../info/ebrowse ../info/pcl-cvs \
+@@ -120,6 +120,7 @@ EMACSSOURCES= \
+ 	${srcdir}/kmacro.texi \
+ 	$(EMACS_XTRA)
+ 
++all: info
+ info: $(top_srcdir)/info $(INFO_TARGETS)
+ 
+ $(top_srcdir)/info:
+@@ -136,12 +137,6 @@ dvi: $(DVI_TARGETS)
+ # the @setfilename directive in info.texi, which is required for
+ # the Texinfo distribution.
+ 
+-../info/info: ${INFOSOURCES}
+-	cd $(srcdir); $(MAKEINFO) --no-split info.texi -o $@
+-
+-info.dvi: ${INFOSOURCES}
+-	$(ENVADD) $(TEXI2DVI) ${srcdir}/info.texi
+-
+ ../info/emacs: ${EMACSSOURCES}
+ 	cd $(srcdir); $(MAKEINFO) emacs.texi
+ 
