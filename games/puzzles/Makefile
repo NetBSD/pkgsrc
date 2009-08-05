@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/18 18:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/05 00:02:54 wiz Exp $
 #
 
 DISTNAME=	puzzles-r8605
@@ -14,6 +14,7 @@ LICENSE=	mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin share/doc/puzzles
 
+DIST_SUBDIR=	puzzles-20090803
 USE_TOOLS+=	gmake pkg-config
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
