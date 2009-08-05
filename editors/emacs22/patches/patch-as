@@ -1,0 +1,15 @@
+$NetBSD: patch-as,v 1.1.1.1 2009/08/05 10:30:29 minskim Exp $
+
+--- src/lread.c.orig	2008-10-10 10:35:49.000000000 +0900
++++ src/lread.c
+@@ -78,10 +78,6 @@ Boston, MA 02110-1301, USA.  */
+ #define file_tell ftell
+ #endif
+ 
+-#ifndef USE_CRT_DLL
+-extern int errno;
+-#endif
+-
+ Lisp_Object Qread_char, Qget_file_char, Qstandard_input, Qcurrent_load_list;
+ Lisp_Object Qvariable_documentation, Vvalues, Vstandard_input, Vafter_load_alist;
+ Lisp_Object Qascii_character, Qload, Qload_file_name;
