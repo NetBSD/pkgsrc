@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.9 2008/04/21 17:10:40 bjs Exp $
+# $NetBSD: options.mk,v 1.10 2009/08/05 17:10:37 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xterm
-PKG_SUPPORTED_OPTIONS=		debug pcre freetype
-PKG_SUGGESTED_OPTIONS=		freetype
+PKG_SUPPORTED_OPTIONS=		debug pcre freetype luit
+PKG_SUGGESTED_OPTIONS=		freetype luit
 
 .include "../../mk/bsd.options.mk"
 
@@ -27,4 +27,11 @@ CONFIGURE_ARGS+= --enable-freetype
 CONFIGURE_ARGS+= --with-pcre
 CONFIGURE_ENV+=  ac_cv_lib_pcreposix_pcreposix_regcomp=yes
 .  include "../../devel/pcre/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mluit)
+DEPENDS+=	luit-[0-9]*:../../x11/luit
+CONFIGURE_ARGS+= --enable-luit --enable-mini-luit
+.else
+CONFIGURE_ARGS+= --disable-luit --disable-mini-luit
 .endif
