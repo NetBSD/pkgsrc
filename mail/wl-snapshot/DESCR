@@ -1,0 +1,3 @@
+Wanderlust is a mail/news management system with IMAP4rev1 support for
+Emacs.  This is cvs version of mail/wl (Wanderlust) mailer for Emacs.
+See mail/wl/DESCR for more information.
