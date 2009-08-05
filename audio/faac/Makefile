@@ -1,13 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2007/12/27 22:38:25 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/08/05 11:22:38 ahoka Exp $
 #
 
 DISTNAME=	faac-1.25
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.audiocoding.com/
 COMMENT=	AAC audio encoder
+
+RESTRICTED=		This software may require the payment of patent royalties
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
