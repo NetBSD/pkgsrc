@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/05 22:23:57 minskim Exp $
+
+--- WL-CFG.orig	Tue Oct 23 20:44:04 2001
++++ WL-CFG
+@@ -9,7 +9,7 @@
+ ;		 load-path))
+ 
+ ;; If you want to install utils, uncomment following line.
+-;(setq wl-install-utils t)
++(setq wl-install-utils t)
+ 
+ ;; Set language for info file ("ja" or "en", both in default).
+ ;; If you only need manual in English, uncomment following line.
