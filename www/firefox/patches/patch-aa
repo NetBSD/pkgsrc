@@ -1,0 +1,57 @@
+$NetBSD: patch-aa,v 1.6 2009/08/05 02:43:47 tnn Exp $
+
+--- configure.in.orig	2009-07-30 17:30:11.000000000 +0200
++++ configure.in
+@@ -1799,7 +1799,7 @@ case "$target" in
+     fi
+     ;;
+ 
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
+ 	DLL_SUFFIX=".so.1.0"
+ 	DSO_LDOPTS="-shared"
+@@ -1813,6 +1813,9 @@ case "$target" in
+ #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
+ #	MKSHLIB_UNFORCE_ALL=''
+ #    fi
++    if test "$LIBRUNPATH"; then
++       DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++    fi
+     ;; 
+ 
+ *-hpux*)
+@@ -2349,8 +2352,15 @@ case "$target" in
+     if test "$LIBRUNPATH"; then
+ 	DSO_LDOPTS="-R$LIBRUNPATH $DSO_LDOPTS"
+     fi
++    case "${target_cpu}" in
++    alpha*)
++       CFLAGS="$CFLAGS -mieee"
++       CXXFLAGS="$CXXFLAGS -mieee"
++    ;;
++    esac
+     ;;
+ 
++
+ *-openvms*) 
+     AC_DEFINE(NO_PW_GECOS)
+     AC_DEFINE(NO_UDSOCK)
+@@ -3043,6 +3053,9 @@ dnl ====================================
+ case $target in
+ *-hpux11.*)
+ 	;;
++*-dragonfly*)
++	AC_CHECK_LIB(c, gethostbyname_r)
++	;;
+ *)
+ 	AC_CHECK_LIB(c_r, gethostbyname_r)
+ 	;;
+@@ -8468,6 +8481,7 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+     AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
+     if test "$OS_ARCH" != "WINNT" && test "$OS_ARCH" != "WINCE"; then
+        NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
++       NSPR_LIBS="-Wl,-R${prefix}/lib/\${MOZILLA_PKG_NAME} ${NSPR_LIBS}"
+        $PERL -pi.bak -e "s '^NSPR_LIBS\\s*=.*'NSPR_LIBS = $NSPR_LIBS'" config/autoconf.mk
+        NSPR_CFLAGS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --includedir=$LIBXUL_DIST/include/nspr --cflags`
+        $PERL -pi.bak -e "s '^NSPR_CFLAGS\\s*=.*'NSPR_CFLAGS = $NSPR_CFLAGS'" config/autoconf.mk
