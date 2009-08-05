@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:01:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/08/05 07:16:18 minskim Exp $
 ${EMACS_INFOPREFIX}/skk.info
 ${FOR_emacs20}${EMACS_LISPPREFIX}/skk/ccc.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/skk/ccc.el
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/skk/ccc.el
 ${FOR_emacs22}${EMACS_LISPPREFIX}/skk/ccc.el
 ${FOR_emacs22nox}${EMACS_LISPPREFIX}/skk/ccc.el
+${FOR_emacs23}${EMACS_LISPPREFIX}/skk/ccc.el
 ${FOR_emacs20}${EMACS_LISPPREFIX}/skk/ccc.elc
 ${FOR_emacs21}${EMACS_LISPPREFIX}/skk/ccc.elc
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/skk/ccc.elc
 ${FOR_emacs22}${EMACS_LISPPREFIX}/skk/ccc.elc
 ${FOR_emacs22nox}${EMACS_LISPPREFIX}/skk/ccc.elc
+${FOR_emacs23}${EMACS_LISPPREFIX}/skk/ccc.elc
 ${EMACS_LISPPREFIX}/skk/context-skk.el
 ${EMACS_LISPPREFIX}/skk/context-skk.elc
 ${FOR_emacs20}${EMACS_LISPPREFIX}/skk/leim-list.el
@@ -17,6 +19,7 @@ ${FOR_emacs21}${EMACS_LISPPREFIX}/skk/leim-list.el
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/skk/leim-list.el
 ${FOR_emacs22}${EMACS_LISPPREFIX}/skk/leim-list.el
 ${FOR_emacs22nox}${EMACS_LISPPREFIX}/skk/leim-list.el
+${FOR_emacs23}${EMACS_LISPPREFIX}/skk/leim-list.el
 ${EMACS_LISPPREFIX}/skk/queue-m.el
 ${EMACS_LISPPREFIX}/skk/queue-m.elc
 ${EMACS_LISPPREFIX}/skk/skk-abbrev.el
@@ -47,10 +50,12 @@ ${FOR_emacs21}${EMACS_LISPPREFIX}/skk/skk-e21.el
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/skk/skk-e21.el
 ${FOR_emacs22}${EMACS_LISPPREFIX}/skk/skk-e21.el
 ${FOR_emacs22nox}${EMACS_LISPPREFIX}/skk/skk-e21.el
+${FOR_emacs23}${EMACS_LISPPREFIX}/skk/skk-e21.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/skk/skk-e21.elc
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/skk/skk-e21.elc
 ${FOR_emacs22}${EMACS_LISPPREFIX}/skk/skk-e21.elc
 ${FOR_emacs22nox}${EMACS_LISPPREFIX}/skk/skk-e21.elc
+${FOR_emacs23}${EMACS_LISPPREFIX}/skk/skk-e21.elc
 ${EMACS_LISPPREFIX}/skk/skk-gadget.el
 ${EMACS_LISPPREFIX}/skk/skk-gadget.elc
 ${EMACS_LISPPREFIX}/skk/skk-hint.el
@@ -65,6 +70,8 @@ ${FOR_emacs21}${EMACS_LISPPREFIX}/skk/skk-jisx0213.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/skk/skk-jisx0213.elc
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/skk/skk-jisx0213.el
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/skk/skk-jisx0213.elc
+${FOR_emacs23}${EMACS_LISPPREFIX}/skk/skk-jisx0213.el
+${FOR_emacs23}${EMACS_LISPPREFIX}/skk/skk-jisx0213.elc
 ${EMACS_LISPPREFIX}/skk/skk-jisyo-edit-mode.el
 ${EMACS_LISPPREFIX}/skk/skk-jisyo-edit-mode.elc
 ${EMACS_LISPPREFIX}/skk/skk-kakasi.el
