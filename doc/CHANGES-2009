@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2929 2009/08/05 10:57:14 adam Exp $
+$NetBSD: CHANGES-2009,v 1.2930 2009/08/05 11:07:20 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3885,3 +3885,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/py-feedparser to 4.2pre294 [schmonz 2009-08-05]
 	Updated www/squid31 to 3.1.0.13 [tron 2009-08-05]
 	Updated textproc/p5-PDF-API2 to 0.73 [adam 2009-08-05]
+	Added textproc/py-jinja2 version 2.1.1 [markd 2009-08-05]
+	Updated textproc/py-sphinx to 0.6.2 [markd 2009-08-05]
+	Updated graphics/py-matplotlib to 0.98.4 [markd 2009-08-05]
+	Updated graphics/py-matplotlib-gtk2 to 0.98.4 [markd 2009-08-05]
+	Updated graphics/py-matplotlib-tk to 0.98.4 [markd 2009-08-05]
