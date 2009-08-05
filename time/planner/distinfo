@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/05/13 00:06:12 dsainty Exp $
+$NetBSD: distinfo,v 1.4 2009/08/05 17:14:47 drochner Exp $
 
 SHA1 (planner-0.14.4.tar.bz2) = 43ba90bd18fcd271c0da31e66d2fa1294831cf28
 RMD160 (planner-0.14.4.tar.bz2) = 61fae3ac84e703d360b1cba97410a89da876a293
 Size (planner-0.14.4.tar.bz2) = 3738005 bytes
+SHA1 (patch-aa) = 5f2d0b4e8efb62efb736741fc60f4ca87a18778d
