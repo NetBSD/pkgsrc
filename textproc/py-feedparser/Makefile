@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/08/07 14:56:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2009/08/05 05:01:14 schmonz Exp $
 #
 
-DISTNAME=		feedparser-2008-08-05-4.2-pre-290-svn
-PKGNAME=		${PYPKGPREFIX}-feedparser-4.2pre290
+DISTNAME=		feedparser-2009-03-04-4.2-pre-294-svn
+PKGNAME=		${PYPKGPREFIX}-feedparser-4.2pre294
 CATEGORIES=		textproc python
 MASTER_SITES=		http://nightly.feedparser.org/dist/
 EXTRACT_SUFX=		.zip
