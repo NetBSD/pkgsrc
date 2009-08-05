@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/06/23 11:30:24 taca Exp $
+$NetBSD: distinfo,v 1.3 2009/08/05 15:55:25 taca Exp $
 
-SHA1 (opengoo_1.4.2.zip) = 600a48a926823bae5f04cebdca84303bd0ea0096
-RMD160 (opengoo_1.4.2.zip) = ea83b0ba4eed25fbda5570dd6f12b4fe2064a6fd
-Size (opengoo_1.4.2.zip) = 6615173 bytes
+SHA1 (opengoo_1.5.1.zip) = 1eead8f2b8e59fd94f7c2b138bafed87dd83c343
+RMD160 (opengoo_1.5.1.zip) = aac0463f306e700f1eb54b2c76d41c75ce80f994
+Size (opengoo_1.5.1.zip) = 6948895 bytes
