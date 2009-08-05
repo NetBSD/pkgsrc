@@ -1,0 +1,26 @@
+$NetBSD: patch-mp,v 1.1.1.1 2009/08/05 02:37:11 tnn Exp $
+
+Use Sun audio on NetBSD and OSS on DragonFlyBSD.
+
+--- media/libsydneyaudio/src/Makefile.in.orig	2009-06-29 18:15:03.000000000 +0200
++++ media/libsydneyaudio/src/Makefile.in
+@@ -65,12 +65,18 @@ CSRCS		= \
+ OS_LIBS += -framework CoreAudio -framework AudioToolbox -framework AudioUnit -framework Carbon
+ endif
+ 
+-ifeq ($(OS_ARCH),SunOS)
++ifneq (,$(filter SunOS NetBSD,$(OS_ARCH)))
+ CSRCS		= \
+ 		sydney_audio_sunaudio.c \
+ 		$(NULL)
+ endif
+ 
++ifeq ($(OS_ARCH),DragonFly)
++CSRCS		= \
++		sydney_audio_oss.c \
++		$(NULL)
++endif
++
+ ifeq ($(OS_ARCH),WINNT)
+ OS_LIBS += winmm.lib
+ endif
