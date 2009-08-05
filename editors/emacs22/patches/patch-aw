@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1.1.1 2009/08/05 10:30:29 minskim Exp $
+
+--- configure.in.org	2009-07-30 10:39:48.000000000 +0900
++++ configure.in
+@@ -1260,7 +1260,7 @@ fi
+ ### Tests for sytems that we beleive are obsolete and should be desupported.
+ 
+ case "${machine}" in
+-     pmax | hp9000s300 | ibm370aix | ncr386 | ews4800 | mips-siemens | powerpcle | tandem-s2 )
++     hp9000s300 | ibm370aix | ncr386 | ews4800 | mips-siemens | powerpcle | tandem-s2 )
+      	  echo "The system that you are configuring on: ${canonical} is considered to be obsolete"
+ 	  echo "and it is planned to be desupported in the next version of Emacs"
+ 	  echo "Please email emacs-devel@gnu.org as soon as possible if this system is still in use."

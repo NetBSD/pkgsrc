@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1.1.1 2009/08/05 10:30:29 minskim Exp $
+
+--- src/keyboard.c.orig	2008-10-10 10:35:49.000000000 +0900
++++ src/keyboard.c
+@@ -83,10 +83,6 @@ Boston, MA 02110-1301, USA.  */
+ #include "macterm.h"
+ #endif
+ 
+-#ifndef USE_CRT_DLL
+-extern int errno;
+-#endif
+-
+ /* Variables for blockinput.h: */
+ 
+ /* Non-zero if interrupt input is blocked right now.  */
