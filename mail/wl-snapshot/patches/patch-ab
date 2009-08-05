@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/08/05 22:23:57 minskim Exp $
+
+--- wanderlust/wl/wl-vars.el.orig	2008-02-15 23:10:39.000000000 +0900
++++ wl/wl-vars.el	2008-11-19 08:56:50.000000000 +0900
+@@ -172,8 +172,8 @@
+ 
+ (defcustom wl-icon-directory (if (fboundp 'locate-data-directory)
+ 				 (locate-data-directory "wl")
+-			       (let ((icons (expand-file-name "wl/icons/"
+-							      data-directory)))
++			       (let ((icons (expand-file-name "share/wl"
++							      "%%PREFIX%%")))
+ 				 (if (file-directory-p icons)
+ 				     icons)))
+   "*Directory to load the icon files from, or nil if none."
