@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2009/08/05 06:10:31 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/05 15:52:11 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
 XULRUNNER_VER=	1.9.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -80,6 +80,7 @@ create-rm-wrapper:
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
 
+.include "includes.mk"
 post-install:
 	# XXX fix the pkg-config files instead
 	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue.a
@@ -90,24 +91,7 @@ post-install:
 	  ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue_s.a
 	cd ${WRKSRC}/dist/include && \
 	  ${INSTALL_DATA} `find js -name "*.h" -print` js/jsproto.tbl \
-	  mozilla-config.h \
-	  commandhandler/nsICommandManager.h \
-	  commandhandler/nsICommandParams.h \
-	  content/nsISelectionController.h \
-	  content/nsISelectionDisplay.h \
-	  docshell/nsIDocShell.h \
-	  dom/nsIDOMNSEvent.h \
-	  fastfind/nsITypeAheadFind.h \
-	  gfx/gfxCore.h \
-	  gfx/nsCoord.h \
-	  gfx/nsMargin.h \
-	  gtkembedmoz/gtkmozembed.h \
-	  gtkembedmoz/gtkmozembed_glue.cpp \
-	  gtkembedmoz/gtkmozembed_internal.h \
-	  layout/nsIPrintProgressParams.h \
-	  webbrwsr/nsIPrintingPromptService.h \
-	  widget/nsIPrintSettings.h \
-	  xpcom/nsMathUtils.h \
+	  ${NS_EXTRA_INCLUDES} \
 	  ${DESTDIR}${PREFIX}/include/xulrunner/unstable
 
 .include "../../archivers/bzip2/buildlink3.mk"
