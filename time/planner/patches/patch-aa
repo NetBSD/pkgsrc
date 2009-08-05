@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2009/08/05 17:14:48 drochner Exp $
+
+--- libplanner/mrp-time.c.orig	2009-04-18 20:21:54.000000000 +0200
++++ libplanner/mrp-time.c
+@@ -171,6 +171,7 @@ mrp_time_from_tm (struct tm *tm)
+ 	/* This is a hack. Set the timezone to UTC temporarily. */
+ 	old_tz = g_strdup (g_getenv ("TZ"));
+ 	g_setenv ("TZ", "UTC", TRUE);
++	tm->tm_isdst = 0;
+ 	
+ 	t = mktime (tm);
+ 
