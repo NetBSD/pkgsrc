@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2009/07/24 18:39:37 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/05 16:56:23 drochner Exp $
 
-DISTNAME=		liferea-1.6.0-rc7
-PKGNAME=		liferea-1.6.0rc7
+DISTNAME=		liferea-1.6.0
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
+#MASTER_SITE_SFNEW=	http://downloads.sourceforge.net/project/
+#MASTER_SITES= ${MASTER_SITE_SFNEW:S,$,liferea/Liferea%20Stable/1.6.0/,}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://liferea.sourceforge.net/
