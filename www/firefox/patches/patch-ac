@@ -1,0 +1,83 @@
+$NetBSD: patch-ac,v 1.12 2009/08/05 02:43:47 tnn Exp $
+
+--- nsprpub/configure.in.orig	2009-07-30 17:30:26.000000000 +0200
++++ nsprpub/configure.in
+@@ -71,7 +71,7 @@ OBJDIR_NAME=.
+ OBJDIR_SUFFIX=OBJ
+ NSINSTALL='$(MOD_DEPTH)/config/$(OBJDIR_NAME)/nsinstall'
+ NOSUCHFILE=/no-such-file
+-LIBNSPR='-L$(dist_libdir) -lnspr$(MOD_MAJOR_VERSION)'
++LIBNSPR='-Wl,-R${prefix}/lib/${MOZILLA_PKG_NAME} -L$(dist_libdir) -lnspr$(MOD_MAJOR_VERSION)'
+ LIBPLC='-L$(dist_libdir) -lplc$(MOD_MAJOR_VERSION)'
+ CYGWIN_WRAPPER=
+ MACOS_SDK_DIR=
+@@ -1160,6 +1160,34 @@ tools are selected during the Xcode/Deve
+     DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
+     MDCPUCFG_H=_freebsd.cfg
+     PR_MD_CSRCS=freebsd.c
++    if test "$LIBRUNPATH"; then
++        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
++    fi
++    ;;
++
++*-dragonfly*)
++    if test -z "$USE_NSPR_THREADS"; then
++        USE_PTHREADS=1
++    fi
++    AC_DEFINE(XP_UNIX)
++    AC_DEFINE(FREEBSD)
++    AC_DEFINE(HAVE_BSD_FLOCK)
++    AC_DEFINE(HAVE_SOCKLEN_T)
++    CFLAGS="$CFLAGS $(DSO_CFLAGS) -ansi -Wall"
++    MOZ_OBJFORMAT=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
++    if test "$MOZ_OBJFORMAT" = "elf"; then
++        DLL_SUFFIX=so
++    else
++        DLL_SUFFIX=so.1.0
++    fi
++    MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
++    DSO_CFLAGS=-fPIC
++    DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
++    MDCPUCFG_H=_freebsd.cfg
++    PR_MD_CSRCS=freebsd.c
++    if test "$LIBRUNPATH"; then
++        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
++    fi
+     ;;
+ 
+ *-hpux*)
+@@ -1731,6 +1759,7 @@ mips-nec-sysv*)
+     AC_DEFINE(XP_UNIX)
+     AC_DEFINE(NETBSD)
+     AC_DEFINE(HAVE_BSD_FLOCK)
++    AC_DEFINE(HAVE_SOCKLEN_T)
+     if test -z "$USE_NSPR_THREADS"; then
+         USE_PTHREADS=1
+     fi
+@@ -2511,7 +2540,7 @@ if test -n "$USE_PTHREADS"; then
+ 	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
+ 	    ac_cv_have_dash_pthread=yes
+ 		case "$target_os" in
+-	    freebsd*)
++	    freebsd* | dragonfly*)
+ # Freebsd doesn't use -pthread for compiles, it uses them for linking
+             ;;
+ 	    *)
+@@ -2549,7 +2578,7 @@ if test -n "$USE_PTHREADS"; then
+             _PTHREAD_LDFLAGS=
+         fi
+ 	    ;;
+-    *-freebsd*)
++    *-freebsd* | *-dragonfly*)
+ 	    AC_DEFINE(_REENTRANT)
+ 	    AC_DEFINE(_THREAD_SAFE)
+ 	    dnl -pthread links in -lc_r, so don't specify it explicitly.
+@@ -2630,7 +2659,7 @@ case "$target" in
+         AC_DEFINE(_PR_NEED_PTHREAD_INIT)
+     fi
+     ;;
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+     if test -n "$USE_NSPR_THREADS"; then
+         AC_DEFINE(_PR_LOCAL_THREADS_ONLY)
+     fi
