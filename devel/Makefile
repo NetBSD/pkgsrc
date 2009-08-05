@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1203 2009/08/02 19:50:21 minskim Exp $
+# $NetBSD: Makefile,v 1.1204 2009/08/05 03:00:53 tnn Exp $
 #
 
 COMMENT=	Development utilities
@@ -1143,6 +1143,7 @@ SUBDIR+=	xfce4-dev-tools
 SUBDIR+=	xmake
 SUBDIR+=	xorg-util-macros
 SUBDIR+=	xsd
+SUBDIR+=	xulrunner
 SUBDIR+=	xxgdb
 SUBDIR+=	yasm
 SUBDIR+=	z80-asm
