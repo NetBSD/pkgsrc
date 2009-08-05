@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2009/02/02 09:44:44 markd Exp $
+$NetBSD: patch-aa,v 1.2 2009/08/05 10:41:18 markd Exp $
 
 pkgsrc's docutils doesn't install an egg-info
 
@@ -9,7 +9,7 @@ pkgsrc's docutils doesn't install an egg-info
      sys.exit(1)
  
 -if sys.version_info < (2, 5):
-+if sys.version_info < (2, 6):
++if sys.version_info < (2, 7):
      # Python 2.4's distutils doesn't automatically install an egg-info,
      # so an existing docutils install won't be detected -- in that case,
      # remove the dependency from setup.py
