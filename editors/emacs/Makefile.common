@@ -1,0 +1,59 @@
+# $NetBSD: Makefile.common,v 1.22 2009/08/05 22:04:50 minskim Exp $
+
+DISTNAME=	emacs-${EMACS_VERSION}
+CATEGORIES=	editors
+MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
+
+MAINTAINER=	markd@NetBSD.org
+HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+COMMENT=	GNU editing macros (editor)
+LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS+=	emacs-nox11-[0-9]*
+
+GNU_CONFIGURE=	yes
+INFO_FILES=	yes
+USE_TOOLS+=	gmake makeinfo gzip
+
+CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN}
+
+BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		GAMEDATAMODE
+PLIST_SRC+=		../../editors/emacs/PLIST
+
+.include "../../editors/emacs/version.mk"
+
+BUILD_TARGET=		bootstrap
+EMACS_VERSION=		${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}
+PLIST_SUBST+=		EMACS_VERSION=${EMACS_VERSION}
+
+REPLACE_PERL=		lib-src/grep-changelog
+CHECK_INTERPRETER_SKIP=	bin/grep-changelog
+
+MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN} ${GAMEGRP} ${GAMEDIRMODE}
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
+			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
+			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+
+# build PATH in the dumped emacs is not a problem
+CHECK_WRKREF_SKIP+=	bin/emacs
+CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
+CPPFLAGS+=		-DDFLY_CRT_USRLIB
+.endif
+
+.include "../../mk/termcap.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
+
+post-extract:
+	cp ${.CURDIR}/../../editors/emacs/files/site-init.el ${WRKSRC}/lisp
+	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
+	${CHMOD} -R go-w ${WRKSRC}
