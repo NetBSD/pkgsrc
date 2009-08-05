@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/10/11 09:31:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.22 2009/08/05 06:47:53 minskim Exp $
 #
 
 DISTNAME=	python-mode-1.0
@@ -18,7 +18,7 @@ ELISP_FILES=	python-mode.el
 
 # Note that XEmacs >=21.4.4 includes a python-mode in the prog-modes
 # package. Also, python-mode does not appear to work as is with XEmacs 21.1
-EMACS_VERSIONS_ACCEPTED= emacs22 emacs22nox emacs21 emacs21nox emacs20
+EMACS_VERSIONS_ACCEPTED= emacs23 emacs22 emacs22nox emacs21 emacs21nox emacs20
 
 .include "../../editors/emacs/modules.mk"
 
