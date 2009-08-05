@@ -1,0 +1,14 @@
+$NetBSD: patch-ar,v 1.1.1.1 2009/08/05 10:30:29 minskim Exp $
+
+--- src/floatfns.c.orig	2008-10-10 10:35:49.000000000 +0900
++++ src/floatfns.c
+@@ -108,9 +108,6 @@ extern double logb ();
+ #ifdef FLOAT_CHECK_ERRNO
+ # include <errno.h>
+ 
+-#ifndef USE_CRT_DLL
+-extern int errno;
+-#endif
+ #endif
+ 
+ /* Avoid traps on VMS from sinh and cosh.
