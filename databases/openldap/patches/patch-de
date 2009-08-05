@@ -1,0 +1,19 @@
+$NetBSD: patch-de,v 1.1 2009/08/05 02:14:42 manu Exp $
+--- contrib/slapd-modules/smbk5pwd/smbk5pwd.c.orig	2009-08-04 17:38:01.000000000 +0200
++++ contrib/slapd-modules/smbk5pwd/smbk5pwd.c	2009-08-04 22:56:06.000000000 +0200
+@@ -67,9 +67,15 @@
+ #ifdef HAVE_GNUTLS
+ #include <gcrypt.h>
+ typedef unsigned char DES_cblock[8];
+ #else
++#ifdef __NetBSD__
++#include <des.h>
++typedef des_key_schedule DES_key_schedule;
++typedef des_cblock DES_cblock;
++#else
+ #include <openssl/des.h>
++#endif
+ #include <openssl/md4.h>
+ #endif
+ #include "ldap_utf8.h"
+ 
