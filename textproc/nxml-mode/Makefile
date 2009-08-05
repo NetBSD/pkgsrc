@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/07 20:59:43 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/05 07:56:23 minskim Exp $
 
 DISTNAME=		nxml-mode-20041004
 PKGREVISION=		1
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 USE_TOOLS+=		makeinfo
-EMACS_VERSIONS_ACCEPTED= emacs22 emacs22nox emacs21 emacs21nox
+EMACS_VERSIONS_ACCEPTED= emacs23 emacs22 emacs22nox emacs21 emacs21nox
 
 MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX:Q}
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:Q}/nxml-mode/schema \
