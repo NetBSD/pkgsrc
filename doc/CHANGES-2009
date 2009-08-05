@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2927 2009/08/05 05:01:57 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.2928 2009/08/05 10:29:26 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3883,3 +3883,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/firefox3 to 3.0.13 [tnn 2009-08-04]
 	Updated www/squid30 to 3.0.18 [taca 2009-08-05]
 	Updated textproc/py-feedparser to 4.2pre294 [schmonz 2009-08-05]
+	Updated www/squid31 to 3.1.0.13 [tron 2009-08-05]
