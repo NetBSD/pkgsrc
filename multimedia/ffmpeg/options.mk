@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2009/07/18 10:39:44 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2009/08/05 11:22:17 ahoka Exp $
 
 # Global and legacy options
 
@@ -24,6 +24,9 @@ CONFIGURE_ARGS+=  --enable-libfaad
 ###
 
 .if !empty(PKG_OPTIONS:Mfaac)
+RESTRICTED=		This software may require the payment of patent royalties
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 CONFIGURE_ARGS+=	--enable-libfaac \
 			--enable-nonfree
 .include "../../audio/faac/buildlink3.mk"
