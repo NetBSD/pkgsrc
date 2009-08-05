@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2009/08/05 15:52:11 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/05 20:35:01 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
 XULRUNNER_VER=	1.9.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -80,7 +80,12 @@ create-rm-wrapper:
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
 
-.include "includes.mk"
+INCLUDE_SUBDIRS=\
+	caps chardet cookie commandhandler content docshell dom exthandler fastfind find gfx gtkembedmoz \
+	java js layout locale mimetype necko nkcache nspr oji pipboot pipnss pref shistory \
+	string uconv uriloader webbrowserpersist webbrwsr webshell widget windowwatcher xpcom \
+	xpconnect xulapp
+
 post-install:
 	# XXX fix the pkg-config files instead
 	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue.a
@@ -90,9 +95,12 @@ post-install:
 	ln -s ${PREFIX}/lib/xulrunner-sdk/sdk/lib/libxpcomglue_s.a \
 	  ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue_s.a
 	cd ${WRKSRC}/dist/include && \
-	  ${INSTALL_DATA} `find js -name "*.h" -print` js/jsproto.tbl \
-	  ${NS_EXTRA_INCLUDES} \
+	  ${INSTALL_DATA} `find ${INCLUDE_SUBDIRS} -name "*.h" -print` \
+	  js/jsproto.tbl mozilla-config.h gtkembedmoz/gtkmozembed_glue.cpp \
 	  ${DESTDIR}${PREFIX}/include/xulrunner/unstable
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/xulrunner/unstable/obsolete
+	cd ${WRKSRC}/dist/include/nspr/obsolete && ${INSTALL_DATA} protypes.h \
+	  ${DESTDIR}${PREFIX}/include/xulrunner/unstable/obsolete
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
