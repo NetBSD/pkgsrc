@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 22:00:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10.2.1 2009/08/05 11:16:33 tron Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -628,7 +628,6 @@ include/${MOZILLA}/sslerr.h
 include/${MOZILLA}/sslproto.h
 include/${MOZILLA}/sslt.h
 include/${MOZILLA}/utilrename.h
-include/${MOZILLA}/watcomfx.h
 include/${MOZILLA}/xpcom-config.h
 @comment end INCLUDE-SDK
 @comment begin INCLUDE
@@ -2550,7 +2549,6 @@ include/${MOZILLA}/nss/secport.h
 include/${MOZILLA}/nss/secerr.h
 include/${MOZILLA}/nss/cryptohi.h
 include/${MOZILLA}/nss/utilrename.h
-include/${MOZILLA}/nss/watcomfx.h
 include/${MOZILLA}/nss/blapit.h
 include/${MOZILLA}/nss/shsign.h
 include/${MOZILLA}/nss/ecl-exp.h
