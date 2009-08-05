@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/08/07 14:56:11 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2009/08/05 05:01:14 schmonz Exp $
 
-SHA1 (feedparser-2008-08-05-4.2-pre-290-svn.zip) = 3b88b2f8c4db12155e8ba487b5edd0b65e6dc6c1
-RMD160 (feedparser-2008-08-05-4.2-pre-290-svn.zip) = f373c3326a38dc702df77151d2f4614d62938093
-Size (feedparser-2008-08-05-4.2-pre-290-svn.zip) = 312714 bytes
+SHA1 (feedparser-2009-03-04-4.2-pre-294-svn.zip) = 99da5d4f2d19a40672611085d16fe9437a8ab1a3
+RMD160 (feedparser-2009-03-04-4.2-pre-294-svn.zip) = a05da4f1e927b8c4868af37f3f9e805bfed353e5
+Size (feedparser-2009-03-04-4.2-pre-294-svn.zip) = 312730 bytes
