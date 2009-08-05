@@ -1,28 +1,30 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/05/14 13:54:13 he Exp $
+$NetBSD: patch-ab,v 1.2 2009/08/05 11:02:12 markd Exp $
 
 Ensure we skip installation of the non-Tk stuff, installed
 by py-matplotlib itself.
 
---- setup.py.orig	2008-05-30 10:47:09.000000000 +1200
+--- setup.py.orig	2008-12-10 14:53:21.000000000 +1300
 +++ setup.py
-@@ -92,11 +92,11 @@ if not check_for_numpy():
+@@ -93,12 +93,12 @@ if not check_for_numpy():
  if not check_for_freetype():
      sys.exit(1)
  
 -build_ft2font(ext_modules, packages)
 -build_ttconv(ext_modules, packages)
 -build_contour(ext_modules, packages)
+-build_delaunay(ext_modules, packages)
 -build_nxutils(ext_modules, packages)
 -build_path(ext_modules, packages)
 +#build_ft2font(ext_modules, packages)
 +#build_ttconv(ext_modules, packages)
 +#build_contour(ext_modules, packages)
++#build_delaunay(ext_modules, packages)
 +#build_nxutils(ext_modules, packages)
 +#build_path(ext_modules, packages)
  
  print_raw("")
  print_raw("OPTIONAL BACKEND DEPENDENCIES")
-@@ -133,13 +133,13 @@ if options['build_wxagg']:
+@@ -139,13 +139,13 @@ if options['build_wxagg']:
              print_message("WxAgg extension not required for wxPython >= 2.8")
          rc['backend'] = 'WXAgg'
  
@@ -38,7 +40,7 @@ by py-matplotlib itself.
          build_gtkagg(ext_modules, packages)
          rc['backend'] = 'GTKAgg'
  
-@@ -197,9 +197,9 @@ check_for_pdftops()
+@@ -212,9 +212,9 @@ check_for_pdftops()
  # TODO: comment out for mpl release:
  print_raw("")
  print_raw("EXPERIMENTAL CONFIG PACKAGE DEPENDENCIES")
@@ -51,7 +53,7 @@ by py-matplotlib itself.
  
  print_raw("")
  print_raw("[Edit setup.cfg to suppress the above messages]")
-@@ -238,11 +238,11 @@ distrib = setup(name="matplotlib",
+@@ -255,11 +255,11 @@ distrib = setup(name="matplotlib",
        interfaces and hardcopy output formats.  There is a 'pylab' mode
        which emulates matlab graphics
        """,
