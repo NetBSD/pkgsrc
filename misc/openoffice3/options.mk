@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.15 2009/05/09 18:43:41 hira Exp $
+# $NetBSD: options.mk,v 1.16 2009/08/05 01:35:42 tnn Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde ooo-external-libwpd
 PKG_OPTIONS_OPTIONAL_GROUPS=	browser
-PKG_OPTIONS_GROUP.browser=	firefox firefox3 seamonkey
+PKG_OPTIONS_GROUP.browser=	firefox3 seamonkey
 # The list from completelangiso in solenv/inc/postset.mk.
 OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br brx bn bn-BD bn-IN bs \
 				by ca cs cy da de dgo dz el en-GB en-US en-ZA \
@@ -42,11 +42,7 @@ OO_LANGS?=	en-US
 OO_BASELANG?=	en-US
 OO_LANGPACKS?=	${OO_LANGS:S/${OO_BASELANG}//1}
 
-.if !empty(PKG_OPTIONS:Mfirefox)
-MOZ_FLAVOUR=		firefox
-CONFIGURE_ARGS+=	--with-system-mozilla=firefox
-.include "../../www/firefox/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mfirefox3)
+.if !empty(PKG_OPTIONS:Mfirefox3)
 MOZ_FLAVOUR=		firefox3
 CONFIGURE_ARGS+=	--with-system-mozilla=firefox3
 .include "../../www/firefox3/buildlink3.mk"
