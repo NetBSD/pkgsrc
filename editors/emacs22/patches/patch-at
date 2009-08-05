@@ -1,0 +1,14 @@
+$NetBSD: patch-at,v 1.1.1.1 2009/08/05 10:30:29 minskim Exp $
+
+--- src/process.c.orig	2008-10-10 10:35:49.000000000 +0900
++++ src/process.c
+@@ -203,9 +203,6 @@ extern Lisp_Object QCfilter;
+ 
+ extern char *get_operating_system_release ();
+ 
+-#ifndef USE_CRT_DLL
+-extern int errno;
+-#endif
+ #ifdef VMS
+ extern char *sys_errlist[];
+ #endif
