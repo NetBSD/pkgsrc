@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2009/07/22 09:01:38 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/08/05 03:03:20 tnn Exp $
 
 DISTNAME=	gxine-0.5.904
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xine/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,12 +32,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/xulrunner/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../www/firefox/buildlink3.mk"
-# XXX does not work with pkgsrc firefox3
-#.include "../../www/firefox3/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
