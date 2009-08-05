@@ -1,0 +1,15 @@
+$NetBSD: patch-me,v 1.1.1.1 2009/08/05 02:37:11 tnn Exp $
+
+Add DragonFly support.
+
+--- security/nss/lib/freebl/Makefile.orig	2009-06-29 18:15:13.000000000 +0200
++++ security/nss/lib/freebl/Makefile
+@@ -212,7 +212,7 @@ endif
+ # to bind the blapi function references in FREEBLVector vector
+ # (ldvector.c) to the blapi functions defined in the freebl
+ # shared libraries.
+-ifeq (,$(filter-out BSD_OS FreeBSD Linux NetBSD OpenBSD, $(OS_TARGET)))
++ifeq (,$(filter-out BSD_OS DragonFly FreeBSD Linux NetBSD OpenBSD, $(OS_TARGET)))
+     MKSHLIB += -Wl,-Bsymbolic
+ endif
+ 
