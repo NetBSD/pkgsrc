@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/10/11 09:31:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/05 09:47:50 minskim Exp $
 #
 
 DISTNAME=		rsltcsrc
@@ -22,11 +22,14 @@ USE_TOOLS+=		gmake lex
 WRKSRC=			${WRKDIR}/rsl.2.4
 INSTALLATION_DIRS=	bin
 
+post-extract:
+	${CP} ${FILESDIR}/path.el ${WRKSRC}
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rsltc ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/emacs/site-lisp/rsl
 	(cd ${WRKSRC} ; for i in rsltc.el tokenise.el rslconvert.el rsl-mode.el ; do\
-		${EMACS_BIN} -batch -f batch-byte-compile $$i ;\
+		${EMACS_BIN} -batch -l path.el -f batch-byte-compile $$i ;\
 		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/share/emacs/site-lisp/rsl ;\
 		${INSTALL_DATA} $${i}c ${DESTDIR}${PREFIX}/share/emacs/site-lisp/rsl ;\
 	done)
