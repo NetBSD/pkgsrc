@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/04 23:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/05 00:18:04 wiz Exp $
 #
 
 DISTNAME=	geeqie-1.0beta2
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS=		bash gmake intltool msgfmt pkg-config
+USE_TOOLS=		bash:run gmake intltool msgfmt pkg-config
 REPLACE_BASH=		plugins/rotate/geeqie-rotate
 REPLACE_BASH+=		plugins/ufraw/geeqie-ufraw
 REPLACE_BASH+=		plugins/import/geeqie-import
