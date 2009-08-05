@@ -1,0 +1,18 @@
+$NetBSD: patch-ah,v 1.7 2009/08/05 02:43:47 tnn Exp $
+
+--- xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h.orig	2009-06-29 18:15:33.000000000 +0200
++++ xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h
+@@ -77,6 +77,13 @@
+ #define THUNK_BASED_THIS_ADJUST
+ #endif
+ 
++#elif defined(__DragonFly__)
++#  if defined(__FreeBSD_cc_version)
++#    define CFRONT_STYLE_THIS_ADJUST
++#  else
++#    define THUNK_BASED_THIS_ADJUST
++#  endif
++
+ #elif defined(__FreeBSD__) 
+ /* System versions of gcc on FreeBSD don't use thunks.  On 3.x, the system
+  * compiler is gcc 2.7.2.3, which doesn't use thunks by default.  On 4.x and
