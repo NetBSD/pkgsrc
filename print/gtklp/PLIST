@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/20 05:50:44 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/05 17:25:27 drochner Exp $
 bin/gtklp
 bin/gtklpq
 man/man1/gtklp.1
@@ -9,6 +9,7 @@ share/locale/chs/LC_MESSAGES/gtklp.mo
 share/locale/cht/LC_MESSAGES/gtklp.mo
 share/locale/cz/LC_MESSAGES/gtklp.mo
 share/locale/de/LC_MESSAGES/gtklp.mo
+share/locale/dk/LC_MESSAGES/gtklp.mo
 share/locale/en/LC_MESSAGES/gtklp.mo
 share/locale/es/LC_MESSAGES/gtklp.mo
 share/locale/fr/LC_MESSAGES/gtklp.mo
