@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.7 2009/08/05 06:53:29 minskim Exp $
+# $NetBSD: modules.mk,v 1.8 2009/08/05 10:41:55 minskim Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -226,8 +226,8 @@ _EMACS_PKGDIR_MAP= \
 	emacs20@../../editors/emacs20 \
 	emacs21@../../editors/emacs21 \
 	emacs21nox@../../editors/emacs21-nox11 \
-	emacs22@../../editors/emacs \
-	emacs22nox@../../editors/emacs-nox11 \
+	emacs22@../../editors/emacs22 \
+	emacs22nox@../../editors/emacs22-nox11 \
 	emacs23@../../editors/emacs-snapshot \
 	xemacs214@../../editors/xemacs \
 	xemacs214nox@../../editors/xemacs-nox11 \
