@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2930 2009/08/05 11:07:20 markd Exp $
+$NetBSD: CHANGES-2009,v 1.2931 2009/08/05 11:25:18 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3890,3 +3890,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/py-matplotlib to 0.98.4 [markd 2009-08-05]
 	Updated graphics/py-matplotlib-gtk2 to 0.98.4 [markd 2009-08-05]
 	Updated graphics/py-matplotlib-tk to 0.98.4 [markd 2009-08-05]
+	Updated audio/faac to 1.25nb1 [ahoka 2009-08-05]
