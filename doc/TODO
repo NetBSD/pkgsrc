@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8315 2009/08/06 19:18:04 zafer Exp $
+$NetBSD: TODO,v 1.8316 2009/08/06 21:45:02 minskim Exp $
 
 Suggested new packages
 ======================
@@ -557,7 +557,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elfsh-0.78
 	o elm-me-2.4pl124b
 	o elscreen-1.4.6
-	o emacs-23.1
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
 	o empathy-2.26.2 [GNOME 2.26]
