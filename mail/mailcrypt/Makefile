@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/10/11 09:31:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.16 2009/08/06 00:49:40 minskim Exp $
 
 DISTNAME=	mailcrypt-3.5.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Emacs frontend for PGP and GPG
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # What we would like to say here is: "we want GNU emacs"
-EMACS_VERSIONS_ACCEPTED=	emacs22 emacs22nox emacs21 emacs21nox emacs20
+EMACS_VERSIONS_ACCEPTED=	emacs23 emacs22 emacs22nox emacs21 emacs21nox emacs20
 
 GNU_CONFIGURE=	yes
 MAKE_FLAGS+=	prefix=${DESTDIR:Q}${PREFIX:Q} \
