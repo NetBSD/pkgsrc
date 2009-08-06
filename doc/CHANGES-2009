@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2946 2009/08/06 21:52:19 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2947 2009/08/06 22:09:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3910,3 +3910,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/john to 1.7.3.1 [zafer 2009-08-06]
 	Updated editors/poedit to 1.4.2 [joerg 2009-08-06]
 	Updated devel/diffuse to 0.3.4 [wiz 2009-08-06]
+	Updated devel/subversion to 1.6.4 [gdt 2009-08-06]
