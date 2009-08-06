@@ -34,7 +34,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_delete.c,v 1.7 2009/08/02 17:56:44 joerg Exp $");
+__RCSID("$NetBSD: pkg_delete.c,v 1.8 2009/08/06 16:53:34 joerg Exp $");
 
 #if HAVE_ERR_H
 #include <err.h>
@@ -48,6 +48,7 @@ static const char *pkgdb;
 static const char *destdir;
 static const char *prefix;
 
+static int keep_preserve;
 static int no_deinstall;
 static int find_by_filename;
 static int unregister_only;
@@ -59,7 +60,7 @@ static int delete_automatic_leaves;
 static void
 usage(void)
 {
-	fprintf(stderr, "usage: pkg_delete [-DFfNnORrVv] [-K pkg_dbdir]"
+	fprintf(stderr, "usage: pkg_delete [-DFfkNnORrVv] [-K pkg_dbdir]"
 	    " [-P destdir] [-p prefix] pkg-name ...\n");
 	exit(1);
 }
@@ -365,18 +366,23 @@ find_new_leaves(lpkg_head_t *pkgs)
 static int
 find_preserve_pkgs(lpkg_head_t *pkgs)
 {
-	lpkg_t *lpp;
+	lpkg_t *lpp, *lpp_next;
 	char *fname;
 	int found_preserve;
 
 	found_preserve = 0;
-	TAILQ_FOREACH(lpp, pkgs, lp_link) {
+	TAILQ_FOREACH_SAFE(lpp, pkgs, lp_link, lpp_next) {
 		fname = pkgdb_pkg_file(lpp->lp_name, PRESERVE_FNAME);
 		if (!fexists(fname)) {
 			free(fname);
 			continue;
 		}
 		free(fname);
+		if (keep_preserve) {
+			TAILQ_REMOVE(pkgs, lpp, lp_link);
+			free_lpkg(lpp);
+			continue;
+		}
 		if (!found_preserve)
 			warnx("The following packages are marked as not "
 			    "for deletion:");
@@ -772,7 +778,7 @@ main(int argc, char *argv[])
 	TAILQ_INIT(&sorted_pkgs);
 
 	setprogname(argv[0]);
-	while ((ch = getopt(argc, argv, "ADFfNnORrVvK:P:p:")) != -1) {
+	while ((ch = getopt(argc, argv, "ADFfK:kNnOP:p:RrVv")) != -1) {
 		switch (ch) {
 		case 'A':
 			delete_automatic_leaves = 1;
@@ -788,6 +794,9 @@ main(int argc, char *argv[])
 			break;
 		case 'K':
 			pkgdb = optarg;
+			break;
+		case 'k':
+			keep_preserve = 1;
 			break;
 		case 'N':
 			unregister_only = 1;
