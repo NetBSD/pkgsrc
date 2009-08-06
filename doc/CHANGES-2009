@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2936 2009/08/06 03:08:33 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2937 2009/08/06 06:24:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3897,3 +3897,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/emacs-w3m-snapshot version 1.4.364.20090802 [minskim 2009-08-05]
 	Added mail/wl-snapshot version 2.15.6.20090322 [minskim 2009-08-05]
 	Updated www/opengoo to 1.5.1nb1 [taca 2009-08-06]
+	Added editors/Sigil version 0.1.1 [wiz 2009-08-06]
