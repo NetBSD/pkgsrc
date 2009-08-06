@@ -289,12 +289,11 @@ EEXXAAMMPPLLEESS
 CCOONNFFIIGGUURRAATTIIOONN VVAARRIIAABBLLEESS
      The following variables change the behavior of ppkkgg__aadddd and are described
      in pkg_install.conf(5):
-
-     CERTIFICATE_ANCHOR_PKGS
-
-     CERTIFICATE_CHAIN
-
-     VERIFIED_INSTALLATION
+           CHECK_LICENSE
+           CHECK_VULNERABILITIES
+           CERTIFICATE_ANCHOR_PKGS
+           CERTIFICATE_CHAIN
+           VERIFIED_INSTALLATION
 
 SSEEEE AALLSSOO
      pkg_admin(1), pkg_create(1), pkg_delete(1), pkg_info(1), tar(1),

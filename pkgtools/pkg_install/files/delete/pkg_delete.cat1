@@ -5,7 +5,7 @@ NNAAMMEE
      age distributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__ddeelleettee [--AADDFFffNNnnOORRrrVVvv] [--KK _p_k_g___d_b_d_i_r] [--PP _d_e_s_t_d_i_r] [--pp _p_r_e_f_i_x]
+     ppkkgg__ddeelleettee [--AADDFFffkkNNnnOORRrrVVvv] [--KK _p_k_g___d_b_d_i_r] [--PP _d_e_s_t_d_i_r] [--pp _p_r_e_f_i_x]
                 _p_k_g_-_n_a_m_e _._._.
 
 DDEESSCCRRIIPPTTIIOONN
@@ -13,8 +13,10 @@ DDEESSCCRRIIPPTTIIOONN
      ously installed with the pkg_add(1) command.  The given packages are
      sorted, so that the dependencies of a package are deleted after the pack-
      age.  Before any action is executed, ppkkgg__ddeelleettee checks for packages that
-     are marked as pprreesseerrvveedd or have depending packages left.  Unless the --ff
-     flag is given, ppkkgg__ddeelleettee stops on the first error.
+     are marked as pprreesseerrvveedd or have depending packages left.  If the --kk flag
+     is given, preserved packages are removed from the list of packages to
+     remove.  Unless the --ff flag is given, ppkkgg__ddeelleettee stops on the first
+     error.
 
 WWAARRNNIINNGG
      _S_i_n_c_e _t_h_e ppkkgg__ddeelleettee _c_o_m_m_a_n_d _m_a_y _e_x_e_c_u_t_e _s_c_r_i_p_t_s _o_r _p_r_o_g_r_a_m_s _p_r_o_v_i_d_e_d _b_y

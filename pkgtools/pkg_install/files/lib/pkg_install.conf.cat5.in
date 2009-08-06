@@ -37,6 +37,18 @@ DDEESSCCRRIIPPTTIIOONN
              used for completing certificate chains when validating binary
              packages or pkg-vulnerabilities files.
 
+     CHECK_LICENSE
+             Check the license conditions of packages before installing them.
+             Supported values are:
+
+             no             The check is not performed.
+
+             yes            The check is performed if the package has license
+                            conditions set.
+
+             always         Passing the license check is required.  Missing
+                            license conditions are considered an error.
+
      CHECK_VULNERABILITIES
              Check for vulnerabilities when installing packages.  Supported
              values are:
@@ -53,7 +65,8 @@ DDEESSCCRRIIPPTTIIOONN
      DEFAULT_ACCEPTABLE_LICENSES
              List of common Free and Open Source licenses packages are allowed
              to carry.  The default value contains all OSI approved licenses
-             in pkgsrc on the date pkg_install was released.
+             in pkgsrc on the date pkg_install was released.  License names
+             are case-sensitive.
 
      GPG     Path to gpg(1), which can be used to verify the signature in the
              _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file when running
