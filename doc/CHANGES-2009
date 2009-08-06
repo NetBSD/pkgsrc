@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2941 2009/08/06 07:49:47 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.2942 2009/08/06 10:44:21 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3905,3 +3905,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/midori to 0.1.9 [hasso 2009-08-06]
 	Updated www/apache22 to 2.2.12 [tron 2009-08-06]
 	Updated www/galeon to 2.0.7 [tnn 2009-08-06]
+	Updated devel/xulrunner to 1.9.1.2 [tnn 2009-08-06]
