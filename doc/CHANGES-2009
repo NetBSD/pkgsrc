@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2940 2009/08/06 07:09:15 tron Exp $
+$NetBSD: CHANGES-2009,v 1.2941 2009/08/06 07:49:47 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3904,3 +3904,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/pcc-current to 0.9.9.20090731 [hasso 2009-08-06]
 	Updated www/midori to 0.1.9 [hasso 2009-08-06]
 	Updated www/apache22 to 2.2.12 [tron 2009-08-06]
+	Updated www/galeon to 2.0.7 [tnn 2009-08-06]
