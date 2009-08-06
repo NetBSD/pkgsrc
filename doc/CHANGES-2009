@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2938 2009/08/06 06:45:35 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.2939 2009/08/06 06:52:24 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3900,3 +3900,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Added mail/wl-snapshot version 2.15.6.20090322 [minskim 2009-08-05]
 	Updated www/opengoo to 1.5.1nb1 [taca 2009-08-06]
 	Added editors/Sigil version 0.1.1 [wiz 2009-08-06]
+	Updated shells/bash to 4.0.28 [hasso 2009-08-06]
+	Updated lang/pcc-current to 0.9.9.20090731 [hasso 2009-08-06]
+	Updated www/midori to 0.1.9 [hasso 2009-08-06]
