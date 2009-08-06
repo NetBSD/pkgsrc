@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/09 12:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/06 01:44:54 minskim Exp $
 #
 
 DISTNAME=	texdrive
 PKGNAME=	texdrive-0.0.20081126.171834
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.djcbsoftware.nl/code/texdrive/
 EXTRACT_SUFX=	.el

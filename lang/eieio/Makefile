@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2008/10/11 09:31:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.19 2009/08/06 01:44:53 minskim Exp $
 #
 
 DISTNAME=	eieio-0.17
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2008/10/11 09:31:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.17 2009/08/06 01:44:53 minskim Exp $
 
 DISTNAME=		etach-1.2.9
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		http://rulnick.com/etach/download/
 
