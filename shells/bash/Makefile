@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2009/07/19 16:07:13 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2009/08/06 06:38:46 hasso Exp $
 
 BASH_VERSION=		4.0
-BASH_PATCHLEVEL=	24
+BASH_PATCHLEVEL=	28
 
 DISTNAME=	bash-${BASH_VERSION}
 PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
@@ -14,7 +14,8 @@ PATCHFILES+=	bash40-001 bash40-002 bash40-003 bash40-004 bash40-005
 PATCHFILES+=	bash40-006 bash40-007 bash40-008 bash40-009 bash40-010
 PATCHFILES+=	bash40-011 bash40-012 bash40-013 bash40-014 bash40-015
 PATCHFILES+=	bash40-016 bash40-017 bash40-018 bash40-019 bash40-020
-PATCHFILES+=	bash40-021 bash40-022 bash40-023 bash40-024
+PATCHFILES+=	bash40-021 bash40-022 bash40-023 bash40-024 bash40-025
+PATCHFILES+=	bash40-026 bash40-027 bash40-028
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
