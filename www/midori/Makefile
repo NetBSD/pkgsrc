@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2009/07/26 20:20:51 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/06 06:48:11 hasso Exp $
 
-DISTNAME=	midori-0.1.8
+DISTNAME=	midori-0.1.9
 CATEGORIES=	www
-MASTER_SITES=	http://goodies.xfce.org/releases/midori/
+MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.twotoasts.de/media/midori/
+HOMEPAGE=	http://www.twotoasts.de/index.php?/pages/midori_summary.html
 COMMENT=	Lightweight web browser using WebKit
 EXTRACT_SUFX=	.tar.bz2
 
