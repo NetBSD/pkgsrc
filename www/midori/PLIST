@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2009/07/26 20:20:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/08/06 06:48:11 hasso Exp $
 bin/midori
+lib/midori/libadblock.so
 lib/midori/libcolorful-tabs.so
 lib/midori/libcookie-manager.so
 lib/midori/libfeed-panel.so
