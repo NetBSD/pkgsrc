@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2009/08/06 23:21:31 joerg Exp $
+
+--- src/_graphics.i.orig	2009-08-06 08:22:41.000000000 +0200
++++ src/_graphics.i
+@@ -1062,8 +1062,6 @@ public :
+                                                         const wxColour &oColor, const wxColour &cColor);
+ 
+     virtual wxGraphicsFont CreateFont( const wxFont &font , const wxColour &col = *wxBLACK );
+-
+-    wxGraphicsBitmap CreateBitmap( const wxBitmap &bmp );
+ };
+ 
+ 
