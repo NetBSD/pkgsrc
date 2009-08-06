@@ -1,8 +1,17 @@
-$NetBSD: patch-al,v 1.2 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-al,v 1.3 2009/08/06 08:24:29 plunky Exp $
 
---- icb/protos.h.orig	1995-02-24 16:20:25.000000000 -0500
-+++ icb/protos.h	2008-12-16 20:18:00.000000000 -0500
-@@ -64,7 +64,7 @@
+--- icb/protos.h.orig	1995-02-24 21:20:25.000000000 +0000
++++ icb/protos.h
+@@ -49,7 +49,7 @@ int filtertext(char *s);
+ int fnexit(void);
+ int fnterm(void);
+ int oset(char *clientData, Tcl_Interp *interp, int argc, char *argv[]);
+-char *getline(char *prompt, int expand);
++char *get_line(char *prompt, int expand);
+ int getterm(void);
+ int getwinsize(void);
+ int gunlink(USAGE *u, USAGE **first, USAGE **last);
+@@ -64,7 +64,7 @@ int importantmsg(char *pkt);
  int inserttab(void);
  int ishushed(char *nick);
  int lcaseit(char *s);
@@ -11,7 +20,7 @@ $NetBSD: patch-al,v 1.2 2008/12/17 02:19:59 christos Exp $
  int linebuffer(FILE *fp);
  #else
  int linebuffer(struct _iobuf *fp);
-@@ -78,7 +78,7 @@
+@@ -78,7 +78,7 @@ int mbreakprint(int per, char *from, cha
  int mprint(int per, char *from, char *s);
  int numeric(char *txt);
  int parse(char *s);
@@ -20,7 +29,7 @@ $NetBSD: patch-al,v 1.2 2008/12/17 02:19:59 christos Exp $
  int printcutetime(void);
  int printmilitarytime(void);
  int printnormaltime(void);
-@@ -107,7 +107,7 @@
+@@ -107,7 +107,7 @@ int specialchar(register int c, char *s,
  int split(char *s);
  int startsessionlog(Tcl_Interp *interp, char *path);
  int statusmsg(char *pkt);
@@ -29,7 +38,7 @@ $NetBSD: patch-al,v 1.2 2008/12/17 02:19:59 christos Exp $
  int strcicmp(char *s1, char *s2);
  int strcincmp(char *s1, char *s2, int n);
  int strlinkafter(STRLIST *s, STRLIST *i, STRLIST **head, STRLIST **tail);
-@@ -115,7 +115,7 @@
+@@ -115,7 +115,7 @@ int strlinkalpha(STRLIST *s, STRLIST **h
  int strlinkbefore(STRLIST *s, STRLIST *i, STRLIST **head, STRLIST **tail);
  int strlinkhead(STRLIST *s, STRLIST **head, STRLIST **tail);
  int strlinktail(STRLIST *s, STRLIST **head, STRLIST **tail);
@@ -38,7 +47,7 @@ $NetBSD: patch-al,v 1.2 2008/12/17 02:19:59 christos Exp $
  int strunlink(STRLIST *s, STRLIST **head, STRLIST **tail);
  sighandler suspend();
  int tclinit(void);
-@@ -140,3 +140,4 @@
+@@ -140,3 +140,4 @@ struct server *getserver(void);
  struct server *getservbyname(char *name);
  void listservers(void);
  sighandler icbexit();
