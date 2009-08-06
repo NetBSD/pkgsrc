@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/06 22:36:50 wiz Exp $
 #
 
 DISTNAME=	gaupol-0.13.1
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-enchant-[0-9]*:../../textproc/py-enchant
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.12:../../x11/py-gtk2
 
-PYTHON_VERSIONS_ACCEPTED=	25
+PYTHON_VERSIONS_ACCEPTED=	26 25
 PYDISTUTILSPKG= 		yes
 USE_LANGUAGES=			# none
 USE_TOOLS+=			intltool msgfmt
