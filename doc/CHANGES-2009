@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2937 2009/08/06 06:24:48 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2938 2009/08/06 06:45:35 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3881,6 +3881,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/inspircd12 to 1.2.0rc4 [adrianp 2009-08-04]
 	Updated graphics/geeqie to 1.0beta2nb1 [wiz 2009-08-04]
 	Updated www/firefox3 to 3.0.13 [tnn 2009-08-04]
+	Added devel/xulrunner version 1.9.1 [tnn 2009-08-05]
+	Updated www/firefox to 3.5.2 [tnn 2009-08-05]
 	Updated www/squid30 to 3.0.18 [taca 2009-08-05]
 	Updated textproc/py-feedparser to 4.2pre294 [schmonz 2009-08-05]
 	Updated www/squid31 to 3.1.0.13 [tron 2009-08-05]
