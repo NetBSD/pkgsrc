@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2009/07/22 09:01:51 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2009/08/06 11:34:21 tnn Exp $
 #
 
 DISTNAME=	epiphany-extensions-2.26.0
@@ -22,8 +22,6 @@ USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
 CONFIGURE_ARGS+=	--with-extensions=all
 
-.include "options.mk"
-
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.5
@@ -36,7 +34,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.5
 .include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.epiphany+=	epiphany>=2.26.0
 .include "../../www/epiphany/buildlink3.mk"
-.include "../../www/seamonkey/gecko-depends.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.11.6
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
