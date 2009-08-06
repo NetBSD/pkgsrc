@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2008/10/11 09:31:58 uebayasi Exp $
+# $NetBSD: Makefile,v 1.19 2009/08/06 01:44:56 minskim Exp $
 #
 
 DISTNAME=	flyspell-1.7m.el
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/.el//}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://www-sop.inria.fr/mimosa/personnel/Manuel.Serrano/flyspell/
 EXTRACT_SUFX=	# empty
