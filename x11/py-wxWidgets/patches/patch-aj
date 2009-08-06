@@ -1,0 +1,23 @@
+$NetBSD: patch-aj,v 1.1 2009/08/06 23:21:31 joerg Exp $
+
+--- src/gtk/xrc.py.orig	2009-08-06 08:28:08.000000000 +0200
++++ src/gtk/xrc.py
+@@ -441,18 +441,6 @@ class XmlNode(object):
+         """SetProperties(self, XmlProperty prop)"""
+         return _xrc.XmlNode_SetProperties(*args, **kwargs)
+ 
+-    def GetAttribute(*args, **kwargs):
+-        """GetAttribute(self, String attrName, String defaultVal) -> String"""
+-        return _xrc.XmlNode_GetAttribute(*args, **kwargs)
+-
+-    def AddAttribute(*args, **kwargs):
+-        """AddAttribute(self, String attrName, String value)"""
+-        return _xrc.XmlNode_AddAttribute(*args, **kwargs)
+-
+-    def GetAttributes(*args, **kwargs):
+-        """GetAttributes(self) -> XmlProperty"""
+-        return _xrc.XmlNode_GetAttributes(*args, **kwargs)
+-
+     Children = property(GetChildren,SetChildren,doc="See `GetChildren` and `SetChildren`") 
+     Content = property(GetContent,SetContent,doc="See `GetContent` and `SetContent`") 
+     Name = property(GetName,SetName,doc="See `GetName` and `SetName`") 

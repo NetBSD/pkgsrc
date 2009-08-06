@@ -1,0 +1,18 @@
+$NetBSD: patch-ah,v 1.1 2009/08/06 23:21:31 joerg Exp $
+
+--- src/_xml.i.orig	2009-08-06 08:27:28.000000000 +0200
++++ src/_xml.i
+@@ -134,13 +134,6 @@ public:
+ 
+     void SetProperties(wxXmlProperty *prop);
+ 
+-    wxString GetAttribute(const wxString& attrName,
+-                          const wxString& defaultVal) const;
+-    //bool GetAttribute(const wxString& attrName, wxString *value) const;
+-    void AddAttribute(const wxString& attrName, const wxString& value);
+-    wxXmlProperty* GetAttributes() const;
+-
+-    
+     %property(Children, GetChildren, SetChildren, doc="See `GetChildren` and `SetChildren`");
+     %property(Content, GetContent, SetContent, doc="See `GetContent` and `SetContent`");
+     %property(Name, GetName, SetName, doc="See `GetName` and `SetName`");

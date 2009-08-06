@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/08/06 23:21:31 joerg Exp $
+
+--- src/gtk/_core.py.orig	2009-08-06 08:13:06.000000000 +0200
++++ src/gtk/_core.py
+@@ -6034,10 +6034,6 @@ class ShowEvent(Event):
+         """GetShow(self) -> bool"""
+         return _core_.ShowEvent_GetShow(*args, **kwargs)
+ 
+-    def IsShown(*args, **kwargs):
+-        """IsShown(self) -> bool"""
+-        return _core_.ShowEvent_IsShown(*args, **kwargs)
+-
+     Show = property(GetShow,SetShow,doc="See `GetShow` and `SetShow`") 
+ _core_.ShowEvent_swigregister(ShowEvent)
+ 

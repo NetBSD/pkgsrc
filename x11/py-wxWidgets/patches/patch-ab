@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.1 2009/08/06 23:21:31 joerg Exp $
+
+--- src/gtk/_core_wrap.cpp.orig	2009-08-06 08:11:01.000000000 +0200
++++ src/gtk/_core_wrap.cpp
+@@ -28673,36 +28673,6 @@ fail:
+ }
+ 
+ 
+-SWIGINTERN PyObject *_wrap_ShowEvent_IsShown(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+-  PyObject *resultobj = 0;
+-  wxShowEvent *arg1 = (wxShowEvent *) 0 ;
+-  bool result;
+-  void *argp1 = 0 ;
+-  int res1 = 0 ;
+-  PyObject *swig_obj[1] ;
+-  
+-  if (!args) SWIG_fail;
+-  swig_obj[0] = args;
+-  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_wxShowEvent, 0 |  0 );
+-  if (!SWIG_IsOK(res1)) {
+-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ShowEvent_IsShown" "', expected argument " "1"" of type '" "wxShowEvent const *""'"); 
+-  }
+-  arg1 = reinterpret_cast< wxShowEvent * >(argp1);
+-  {
+-    PyThreadState* __tstate = wxPyBeginAllowThreads();
+-    result = (bool)((wxShowEvent const *)arg1)->IsShown();
+-    wxPyEndAllowThreads(__tstate);
+-    if (PyErr_Occurred()) SWIG_fail;
+-  }
+-  {
+-    resultobj = result ? Py_True : Py_False; Py_INCREF(resultobj);
+-  }
+-  return resultobj;
+-fail:
+-  return NULL;
+-}
+-
+-
+ SWIGINTERN PyObject *ShowEvent_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+   PyObject *obj;
+   if (!SWIG_Python_UnpackTuple(args,(char*)"swigregister", 1, 1,&obj)) return NULL;
+@@ -61296,7 +61266,6 @@ static PyMethodDef SwigMethods[] = {
+ 	 { (char *)"new_ShowEvent", (PyCFunction) _wrap_new_ShowEvent, METH_VARARGS | METH_KEYWORDS, NULL},
+ 	 { (char *)"ShowEvent_SetShow", (PyCFunction) _wrap_ShowEvent_SetShow, METH_VARARGS | METH_KEYWORDS, NULL},
+ 	 { (char *)"ShowEvent_GetShow", (PyCFunction)_wrap_ShowEvent_GetShow, METH_O, NULL},
+-	 { (char *)"ShowEvent_IsShown", (PyCFunction)_wrap_ShowEvent_IsShown, METH_O, NULL},
+ 	 { (char *)"ShowEvent_swigregister", ShowEvent_swigregister, METH_VARARGS, NULL},
+ 	 { (char *)"ShowEvent_swiginit", ShowEvent_swiginit, METH_VARARGS, NULL},
+ 	 { (char *)"new_IconizeEvent", (PyCFunction) _wrap_new_IconizeEvent, METH_VARARGS | METH_KEYWORDS, NULL},

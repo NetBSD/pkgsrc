@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2009/08/06 23:21:31 joerg Exp $
+
+--- src/_event.i.orig	2009-08-06 08:09:32.000000000 +0200
++++ src/_event.i
+@@ -1873,7 +1873,6 @@ public:
+ 
+     void SetShow(bool show);
+     bool GetShow() const;
+-    bool IsShown() const;
+     
+     %property(Show, GetShow, SetShow, doc="See `GetShow` and `SetShow`");
+ };
