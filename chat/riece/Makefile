@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2009/08/05 06:36:29 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2009/08/06 01:44:46 minskim Exp $
 #
 
 DISTNAME=	riece-5.0.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	chat japanese
 MASTER_SITES=	http://download.savannah.gnu.org/releases/riece/
 
