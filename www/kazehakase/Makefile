@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2009/07/22 09:01:51 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2009/08/06 12:21:37 tnn Exp $
 #
 
 DISTNAME=	kazehakase-0.5.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kazehakase/30219/}
 
@@ -35,8 +35,8 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/mozilla
 CONF_FILES+=	${EGDIR}/mozilla/encodings.xml ${PKG_SYSCONFDIR}/mozilla/encodings.xml
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/xulrunner/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../www/seamonkey/gecko-depends.mk"
 .include "../../mk/bsd.pkg.mk"
