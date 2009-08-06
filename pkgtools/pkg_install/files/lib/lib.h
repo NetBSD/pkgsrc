@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.56 2009/08/02 17:56:45 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.57 2009/08/06 16:53:34 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -183,7 +183,8 @@ typedef enum bi_ent_t {
 	BI_MACHINE_ARCH,	/*  2 */
 	BI_IGNORE_RECOMMENDED,	/*  3 */
 	BI_USE_ABI_DEPENDS,	/*  4 */
-	BI_ENUM_COUNT		/*  5 */
+	BI_LICENSE,		/*  5 */
+	BI_ENUM_COUNT		/*  6 */
 }	bi_ent_t;
 
 /* Types */
@@ -425,6 +426,7 @@ extern const char *certs_pkg_vulnerabilities;
 extern const char *check_vulnerabilities;
 extern const char *config_file;
 extern const char *config_pkg_path;
+extern const char *do_license_check;
 extern const char *verified_installation;
 extern const char *gpg_cmd;
 extern const char *gpg_keyring_pkgvuln;
