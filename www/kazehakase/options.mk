@@ -1,11 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2009/07/03 14:00:24 drochner Exp $
+# $NetBSD: options.mk,v 1.5 2009/08/06 12:21:37 tnn Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kazehakase
 PKG_SUPPORTED_OPTIONS=	gnutls
 PKG_SUGGESTED_OPTIONS+=	gnutls
 
-.include "../../www/seamonkey/gecko-options.mk"
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgnutls)
