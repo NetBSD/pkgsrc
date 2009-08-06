@@ -1,0 +1,13 @@
+$NetBSD: patch-bs,v 1.1 2009/08/06 08:24:29 plunky Exp $
+
+--- icb/ipcf.c.orig	2009-08-06 09:17:56.000000000 +0100
++++ icb/ipcf.c
+@@ -60,7 +60,7 @@ c_userchar()
+ 	static char *s;	/* user input string */
+ 
+ 	/* user typed one or more characters - gather a line of input */
+-	s=getline(NULL, 1);
++	s=get_line(NULL, 1);
+ 
+ 	if (!s) /* EOF */
+ 	{ 	
