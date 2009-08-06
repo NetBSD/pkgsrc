@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2009/07/24 18:42:18 drochner Exp $
+# $NetBSD: Makefile,v 1.51 2009/08/06 12:37:06 tnn Exp $
 
 DISTNAME=		devhelp-0.23
 CATEGORIES=		devel x11
@@ -18,8 +18,6 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libdevhelp-1.0.pc.in
 GCONF_SCHEMAS=		devhelp.schemas
-
-.include "options.mk"
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
