@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/05/31 09:00:49 obache Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/06 08:49:39 tnn Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtkmozembed-${VERSION}
+PKGREVISION=		1
 COMMENT=		Ruby binding of gtkmozembed
 CATEGORIES=		www
 
@@ -13,15 +14,11 @@ DEPENDS+=               ${RUBY_PKGPREFIX}-gnome2-gtk>=${VERSION}:../../x11/ruby-
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.ruby-gnome2-gtkmozembed
-.include "../../www/seamonkey/gecko-options.mk"
-.include "../../mk/bsd.options.mk"
-
 BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}
 BUILDLINK_DEPMETHOD.ruby-gnome2-glib=	build
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.ruby-gnome2-pango+=${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}
 .include "../../devel/ruby-gnome2-pango/buildlink3.mk"
+.include "../../devel/xulrunner/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../www/seamonkey/gecko-depends.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"
