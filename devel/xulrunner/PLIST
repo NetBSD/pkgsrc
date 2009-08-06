@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/08/06 10:42:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/08/06 10:56:46 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -584,7 +584,11 @@ include/xulrunner/unstable/keythi.h
 include/xulrunner/unstable/mozAutoDocUpdate.h
 include/xulrunner/unstable/mozFlushType.h
 include/xulrunner/unstable/mozIJSSubScriptLoader.h
+include/xulrunner/unstable/mozIPersonalDictionary.h
 include/xulrunner/unstable/mozISanitizingSerializer.h
+include/xulrunner/unstable/mozISpellCheckingEngine.h
+include/xulrunner/unstable/mozISpellI18NManager.h
+include/xulrunner/unstable/mozISpellI18NUtil.h
 include/xulrunner/unstable/mozITXTToHTMLConv.h
 include/xulrunner/unstable/mozcontainer.h
 include/xulrunner/unstable/mozdrawingarea.h
