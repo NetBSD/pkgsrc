@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2008/10/11 09:31:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.17 2009/08/06 01:44:51 minskim Exp $
 
 DISTNAME=	sml-mode-3.9.5
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel editors
 MASTER_SITES=	ftp://flint.cs.yale.edu/pub/monnier/sml-mode/
 

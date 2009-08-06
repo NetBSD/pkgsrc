@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2008/10/11 09:31:54 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2009/08/06 01:44:45 minskim Exp $
 #
 
 DISTNAME=	dinotrace-9.3c
 PKGNAME=	${EMACS_PKGNAME_PREFIX}dinotrace-mode-9.3c
+PKGREVISION=	1
 CATEGORIES=	cad editors
 MASTER_SITES=	http://www.veripool.com/ftp/
 EXTRACT_SUFX=	.tgz
