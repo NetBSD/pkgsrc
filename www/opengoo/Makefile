@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2009/08/05 15:55:25 taca Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/06 03:07:47 taca Exp $
 #
 
 DISTNAME=	opengoo_1.5.1
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
 EXTRACT_SUFX=	.zip
+DIST_SUBDIR=	${DISTNAME}-20090806
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.opengoo.org/
