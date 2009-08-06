@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2009/08/06 23:21:31 joerg Exp $
+
+--- src/gtk/_gdi.py.orig	2009-08-06 08:15:46.000000000 +0200
++++ src/gtk/_gdi.py
+@@ -3538,10 +3538,6 @@ class DC(_core.Object):
+         """
+         return _gdi_.DC_SetClippingRect(*args, **kwargs)
+ 
+-    def SetDeviceClippingRegion(*args, **kwargs):
+-        """SetDeviceClippingRegion(self, Region region)"""
+-        return _gdi_.DC_SetDeviceClippingRegion(*args, **kwargs)
+-
+     def DrawLines(*args, **kwargs):
+         """
+         DrawLines(self, List points, int xoffset=0, int yoffset=0)

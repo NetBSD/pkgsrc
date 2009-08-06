@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/08/06 23:21:31 joerg Exp $
+
+--- src/_dc.i.orig	2009-08-06 08:16:36.000000000 +0200
++++ src/_dc.i
+@@ -379,8 +379,6 @@ screen is damaged.", "
+     %Rename(SetClippingRegionAsRegion, void, SetClippingRegion(const wxRegion& region));
+     %Rename(SetClippingRect, void, SetClippingRegion(const wxRect& rect));
+ 
+-    void SetDeviceClippingRegion(const wxRegion& region);
+-    
+     DocDeclAStr(
+         void , DrawLines(int points, wxPoint* points_array,
+                          wxCoord xoffset = 0, wxCoord yoffset = 0),
