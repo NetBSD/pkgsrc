@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2943 2009/08/06 13:12:50 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2944 2009/08/06 19:19:10 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3907,3 +3907,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/galeon to 2.0.7 [tnn 2009-08-06]
 	Updated devel/xulrunner to 1.9.1.2 [tnn 2009-08-06]
 	Updated net/filezilla to 3.2.6.1nb1 [obache 2009-08-06]
+	Updated security/john to 1.7.3.1 [zafer 2009-08-06]
