@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2009/05/20 00:58:30 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2009/08/06 09:45:13 tnn Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.14.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-extras/2.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -34,9 +34,7 @@ SUBST_VARS.ffhome=	LOCALBASE
 .include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-# seamonkey untested.
-#.include "../../www/seamonkey/buildlink3.mk"
-.include "../../www/firefox/buildlink3.mk"
+.include "../../devel/xulrunner/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../devel/gdl/buildlink3.mk"
 # needs older version than is in pkgsrc
