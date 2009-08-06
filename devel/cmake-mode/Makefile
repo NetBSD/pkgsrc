@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/11/10 16:08:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/06 01:44:47 minskim Exp $
 #
 
 DISTNAME=	cmake-mode
 PKGNAME=	cmake-mode-20080606
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/CMakeDocs/
 EXTRACT_SUFX=	.el
