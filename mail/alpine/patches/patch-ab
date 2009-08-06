@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.4 2009/08/06 20:01:50 plunky Exp $
+
+OpenSSL provides a version of STRING that conflicts with the Alpine
+internal version. Since we don't use it, just define it away for now..
+
+--- imap/src/osdep/unix/ssl_unix.c.orig	2009-08-06 20:45:06.000000000 +0100
++++ imap/src/osdep/unix/ssl_unix.c
+@@ -27,6 +27,7 @@
+  */
+ 
+ #define crypt ssl_private_crypt
++#define STRING ssl_private_STRING
+ #include <x509v3.h>
+ #include <ssl.h>
+ #include <err.h>
+@@ -36,6 +37,7 @@
+ #include <crypto.h>
+ #include <rand.h>
+ #undef crypt
++#undef STRING
+ 
+ #define SSLBUFLEN 8192
+ #define SSLCIPHERLIST "ALL:!LOW"
