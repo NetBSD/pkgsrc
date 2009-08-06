@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/08/06 07:37:33 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/06 10:42:50 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
-XULRUNNER_VER=	1.9.1
-PKGREVISION=	4
+XULRUNNER_VER=	1.9.1.2
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -84,7 +83,8 @@ INCLUDE_SUBDIRS=\
 	caps chardet cookie commandhandler content docshell dom exthandler fastfind find gfx gtkembedmoz \
 	java js layout locale mimetype necko nkcache nspr oji pipboot pipnss pref shistory \
 	string uconv uriloader webbrowserpersist webbrwsr webshell widget windowwatcher xpcom \
-	xpconnect xulapp profdirserviceprovider thebes embedcomponents intl loginmgr
+	xpconnect xulapp profdirserviceprovider thebes embedcomponents intl loginmgr \
+	toolkitcomps downloads
 
 post-install:
 	# XXX fix the pkg-config files instead
