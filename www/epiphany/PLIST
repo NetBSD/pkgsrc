@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2009/07/09 18:27:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.36 2009/08/06 11:03:49 tnn Exp $
 bin/epiphany
 include/epiphany/2.26/epiphany/ephy-adblock-manager.h
 include/epiphany/2.26/epiphany/ephy-adblock.h
@@ -50,6 +50,8 @@ share/epiphany/chrome/app-chrome.manifest
 share/epiphany/chrome/branding/brand.dtd
 share/epiphany/chrome/branding/brand.properties
 share/epiphany/chrome/global/about.xhtml
+share/epiphany/chrome/global/netError.dtd
+share/epiphany/components/epiphany.xpt
 share/epiphany/default-prefs.js
 share/epiphany/ephy-xml2ini.xsl
 share/epiphany/epiphany-bookmark-editor-ui.xml
