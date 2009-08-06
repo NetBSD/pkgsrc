@@ -1,0 +1,13 @@
+$NetBSD: patch-bt,v 1.1 2009/08/06 08:24:29 plunky Exp $
+
+--- icb/s_person.c.orig	2009-08-06 09:20:29.000000000 +0100
++++ icb/s_person.c
+@@ -106,7 +106,7 @@ int echoflag;
+ 	{
+ 		do
+ 		{
+-			text = getline(">> ",0);
++			text = get_line(">> ",0);
+ 
+ 			if (!text || (!*text && !last_command_was_kill))
+ 			{
