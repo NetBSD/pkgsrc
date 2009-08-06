@@ -1,5 +1,15 @@
-$NetBSD: distinfo,v 1.4 2006/08/11 17:39:38 drochner Exp $
+$NetBSD: distinfo,v 1.5 2009/08/06 23:21:31 joerg Exp $
 
-SHA1 (wxPython-src-2.6.3.3.tar.bz2) = e55a3a8cfbd1aff394be15297ae205a8c597bed8
-RMD160 (wxPython-src-2.6.3.3.tar.bz2) = 7feacff6808574143590a0a421ee60f3692eb783
-Size (wxPython-src-2.6.3.3.tar.bz2) = 18963104 bytes
+SHA1 (wxPython-src-2.8.10.1.tar.bz2) = 6598fbafd979a91f20100171fa23a91779f6dc62
+RMD160 (wxPython-src-2.8.10.1.tar.bz2) = bb606046d140623041b988e64ab268ced9aa958f
+Size (wxPython-src-2.8.10.1.tar.bz2) = 29770994 bytes
+SHA1 (patch-aa) = 62a8f5cc148c13948be6add01ddf64f63343f024
+SHA1 (patch-ab) = 5bc9ebcf10d7bd3479199c4820d566d83e501439
+SHA1 (patch-ac) = 9f8d72d987306301c82b03aba6e447a77ff98fdc
+SHA1 (patch-ad) = c0d32790bd1c22bafe6a4f1aa7157de1696e9561
+SHA1 (patch-ae) = 7e455a4df9a534e18e9ad72bc58f47bd68a5e441
+SHA1 (patch-af) = 06f0f3f7fbbb940b5d54c68517850a0e0e3a9d0f
+SHA1 (patch-ag) = e3cfa58ba6b9542e93d63e34b24ec87718491904
+SHA1 (patch-ah) = 90fb9cfaf2f57ec9401b33e066222c737985433e
+SHA1 (patch-ai) = 9d16ebd84b6eb1f7b3a64818af4db96f2a1ab6dd
+SHA1 (patch-aj) = 6a3a36023188ffcde7c547047c8f7a96f1f16143
