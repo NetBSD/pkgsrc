@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/05 20:58:42 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/06 10:42:50 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -850,6 +850,10 @@ include/xulrunner/unstable/nsICollation.h
 include/xulrunner/unstable/nsICollection.h
 include/xulrunner/unstable/nsIComboboxControlFrame.h
 include/xulrunner/unstable/nsICommandHandler.h
+include/xulrunner/unstable/nsICommandLine.h
+include/xulrunner/unstable/nsICommandLineHandler.h
+include/xulrunner/unstable/nsICommandLineRunner.h
+include/xulrunner/unstable/nsICommandLineValidator.h
 include/xulrunner/unstable/nsICommandManager.h
 include/xulrunner/unstable/nsICommandParams.h
 include/xulrunner/unstable/nsIComponentManager.h
@@ -1284,7 +1288,11 @@ include/xulrunner/unstable/nsIDocumentLoaderFactory.h
 include/xulrunner/unstable/nsIDocumentObserver.h
 include/xulrunner/unstable/nsIDocumentTransformer.h
 include/xulrunner/unstable/nsIDocumentViewer.h
+include/xulrunner/unstable/nsIDownload.h
 include/xulrunner/unstable/nsIDownloadHistory.h
+include/xulrunner/unstable/nsIDownloadManager.h
+include/xulrunner/unstable/nsIDownloadManagerUI.h
+include/xulrunner/unstable/nsIDownloadProgressListener.h
 include/xulrunner/unstable/nsIDownloader.h
 include/xulrunner/unstable/nsIDragDropHandler.h
 include/xulrunner/unstable/nsIDragService.h
@@ -1554,6 +1562,7 @@ include/xulrunner/unstable/nsIReflowCallback.h
 include/xulrunner/unstable/nsIRefreshURI.h
 include/xulrunner/unstable/nsIRegion.h
 include/xulrunner/unstable/nsIRelativeFilePref.h
+include/xulrunner/unstable/nsIRemoteService.h
 include/xulrunner/unstable/nsIRenderingContext.h
 include/xulrunner/unstable/nsIRequest.h
 include/xulrunner/unstable/nsIRequestObserver.h
@@ -1931,6 +1940,7 @@ include/xulrunner/unstable/nsThreadUtils.h
 include/xulrunner/unstable/nsThreadUtilsInternal.h
 include/xulrunner/unstable/nsTime.h
 include/xulrunner/unstable/nsTimeStamp.h
+include/xulrunner/unstable/nsToolkitCompsCID.h
 include/xulrunner/unstable/nsTraceRefcnt.h
 include/xulrunner/unstable/nsTraceRefcntImpl.h
 include/xulrunner/unstable/nsTransform2D.h
