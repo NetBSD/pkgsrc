@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/10/11 09:31:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/06 01:44:49 minskim Exp $
 #
 
 DISTNAME=	php-mode-1.4.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=php-mode/}
 
