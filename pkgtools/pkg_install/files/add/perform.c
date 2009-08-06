@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.88 2009/08/02 17:56:44 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.89 2009/08/06 16:53:34 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.88 2009/08/02 17:56:44 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.89 2009/08/06 16:53:34 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -478,6 +478,8 @@ read_buildinfo(struct pkg_task *pkg)
 		else if (strncmp(data, "USE_ABI_DEPENDS=", 16) == 0)
 			pkg->buildinfo[BI_USE_ABI_DEPENDS] = dup_value(data,
 			    eol);
+		else if (strncmp(data, "LICENSE=", 8) == 0)
+			pkg->buildinfo[BI_LICENSE] = dup_value(data, eol);
 	}
 	if (pkg->buildinfo[BI_OPSYS] == NULL ||
 	    pkg->buildinfo[BI_OS_VERSION] == NULL ||
@@ -1241,6 +1243,34 @@ check_vulnerable(struct pkg_task *pkg)
 	return 0;
 }
 
+static int
+check_license(struct pkg_task *pkg)
+{
+	if (LicenseCheck == 0)
+		return 0;
+
+	if ((pkg->buildinfo[BI_LICENSE] == NULL ||
+	     *pkg->buildinfo[BI_LICENSE] == '\0')) {
+	
+		if (LicenseCheck == 1)
+			return 0;
+		warnx("No LICENSE set for package `%s'", pkg->pkgname);
+		return 1;
+	}
+
+	switch (acceptable_license(pkg->buildinfo[BI_LICENSE])) {
+	case 0:
+		warnx("License `%s' of package `%s' is not acceptable",
+		    pkg->buildinfo[BI_LICENSE], pkg->pkgname);
+		return 1;
+	case 1:
+		return 0;
+	default:
+		warnx("Invalid LICENSE for package `%s'", pkg->pkgname);
+		return 1;
+	}
+}
+
 /*
  * Install a single package.
  */
@@ -1276,7 +1306,13 @@ pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 	if (check_signature(pkg, invalid_sig))
 		goto clean_memory;
 
+	if (read_buildinfo(pkg))
+		goto clean_memory;
+
 	if (check_vulnerable(pkg))
+		goto clean_memory;
+
+	if (check_license(pkg))
 		goto clean_memory;
 
 	if (pkg->meta_data.meta_mtree != NULL)
@@ -1316,9 +1352,6 @@ pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 		status = 0;
 		goto clean_memory;
 	}
-
-	if (read_buildinfo(pkg))
-		goto clean_memory;
 
 	if (check_platform(pkg))
 		goto clean_memory;
