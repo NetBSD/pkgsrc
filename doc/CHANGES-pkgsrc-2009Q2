@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.28 2009/08/07 18:45:31 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.29 2009/08/07 21:34:01 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -112,3 +112,5 @@ apr: security update
 apr-util: security update
 Pullup ticket #2856 - requested by gdt
 apr: security update
+Pullup ticket #2852 - requested by tron
+apache22: bugfix update
