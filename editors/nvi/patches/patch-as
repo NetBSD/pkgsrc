@@ -1,0 +1,16 @@
+$NetBSD: patch-as,v 1.1 2009/08/07 16:39:21 lukem Exp $
+
+--- ../ex/ex_cmd.c.orig	2007-11-19 03:41:42.000000000 +1100
++++ ../ex/ex_cmd.c
+@@ -302,6 +302,11 @@ EXCMDLIST const cmds[] = {
+ 	    "!",
+ 	    "rew[ind][!]",
+ 	    "re-edit all the files in the file argument list"},
++/* C_RTAG */
++	{L("rtag"),	ex_rtag_push,	E_NEWSCREEN,
++	    "!w1o",
++	    "rta[g][!] [string]",
++	    "edit the file containing the tag"},
+ /*
+  * !!!
+  * Adding new commands starting with 's' may break the substitute command code
