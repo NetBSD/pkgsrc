@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:16:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/08/07 12:49:21 cegger Exp $
 bin/lsevtchn
 bin/pygrub
 bin/readnotes
@@ -482,7 +482,6 @@ sbin/blktapctrl
 sbin/flask-loadpolicy
 sbin/fs-backend
 sbin/img2qcow
-sbin/netfix
 sbin/qcow-create
 sbin/qcow2raw
 sbin/tapdisk

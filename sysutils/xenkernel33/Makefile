@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2009/02/18 20:31:29 cegger Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/07 12:43:46 cegger Exp $
 #
 
-VERSION=	3.3.1
+VERSION=	3.3.2
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel33-${VERSION}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	cegger@NetBSD.org
 HOMEPAGE=	http://xen.org/
-COMMENT=	Xen 3.3.1 Kernel
+COMMENT=	Xen 3.3.2 Kernel
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
