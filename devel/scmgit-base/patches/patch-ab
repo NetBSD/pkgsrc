@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2008/08/20 03:04:20 bjs Exp $
+$NetBSD: patch-ab,v 1.5 2009/08/07 02:39:51 minskim Exp $
 
---- git-compat-util.h.orig	2008-08-17 16:43:06.000000000 -0400
+--- git-compat-util.h.orig	2009-07-29 01:18:18.000000000 -0700
 +++ git-compat-util.h
-@@ -39,7 +39,7 @@
- /* Approximation of the length of the decimal representation of this type. */
- #define decimal_length(x)	((int)(sizeof(x) * 2.56 + 0.5) + 1)
- 
--#if !defined(__APPLE__) && !defined(__FreeBSD__)  && !defined(__USLC__) && !defined(_M_UNIX)
-+#if !defined(__APPLE__) && !defined(__FreeBSD__)  && !defined(__USLC__) && !defined(_M_UNIX) && !defined(__sun)
+@@ -55,7 +55,7 @@
+ # else
+ # define _XOPEN_SOURCE 500
+ # endif
+-#elif !defined(__APPLE__) && !defined(__FreeBSD__)  && !defined(__USLC__) && !defined(_M_UNIX) && !defined(sgi)
++#elif !defined(__APPLE__) && !defined(__FreeBSD__)  && !defined(__USLC__) && !defined(_M_UNIX) && !defined(sgi) && !defined(__sun)
  #define _XOPEN_SOURCE 600 /* glibc2 and AIX 5.3L need 500, OpenBSD needs 600 for S_ISLNK() */
+ #ifndef __sun__
  #define _XOPEN_SOURCE_EXTENDED 1 /* AIX 5.3L needs this */
- #endif
