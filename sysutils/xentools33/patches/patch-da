@@ -1,17 +1,17 @@
-$NetBSD: patch-da,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+$NetBSD: patch-da,v 1.2 2009/08/07 12:49:21 cegger Exp $
 
---- libfsimage/common/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
+--- libfsimage/common/Makefile.orig	2009-08-06 14:56:35.000000000 +0200
 +++ libfsimage/common/Makefile
-@@ -4,7 +4,7 @@ include $(XEN_ROOT)/tools/Rules.mk
+@@ -4,6 +4,8 @@ include $(XEN_ROOT)/tools/Rules.mk
  MAJOR = 1.0
  MINOR = 0
  
--CFLAGS += -Werror -Wp,-MD,.$(@F).d
-+CFLAGS += -Werror -Wp,-MD,.$(@F).d -DFSIMAGE_FSDIR=\"$(LIBDIR)/fs\"
- DEPS = .*.d
- 
++CFLAGS += -DFSIMAGE_FSDIR=\"$(LIBDIR)/fs\"
++
  LDFLAGS-$(CONFIG_SunOS) = -Wl,-M -Wl,mapfile-SunOS
-@@ -22,14 +22,14 @@ all: $(LIB)
+ LDFLAGS-$(CONFIG_Linux) = -Wl,mapfile-GNU
+ LDFLAGS = $(LDFLAGS-y)
+@@ -19,14 +21,14 @@ all: $(LIB)
  
  .PHONY: install
  install: all
