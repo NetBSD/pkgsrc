@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2009/05/19 08:59:12 wiz Exp $
+# $NetBSD: Makefile.common,v 1.32.2.1 2009/08/07 11:09:47 tron Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -9,7 +9,7 @@
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel scm
-MASTER_SITES=		http://subversion.tigris.org/tarballs/
+MASTER_SITES=		http://subversion.tigris.org/downloads/
 
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://subversion.tigris.org/
