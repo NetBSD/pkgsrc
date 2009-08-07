@@ -10,3 +10,4 @@ Weather data display:
     - dew point (degC)
     - altitude of 0C isotherm
     - snow depth and risk
+    - convective available potential energy
