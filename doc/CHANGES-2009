@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2948 2009/08/07 02:41:23 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2949 2009/08/07 03:10:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3914,3 +3914,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/scmgit-base to 1.6.4 [minskim 2009-08-07]
 	Updated devel/scmgit-docs to 1.6.4 [minskim 2009-08-07]
 	Updated devel/scmgit to 1.6.4 [minskim 2009-08-07]
+	Updated mail/getmail to 4.10.0 [schmonz 2009-08-07]
