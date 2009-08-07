@@ -1,0 +1,19 @@
+$NetBSD: patch-ay,v 1.1 2009/08/07 16:39:21 lukem Exp $
+
+--- ../ex/ex_txt.c.orig	2007-11-19 03:41:42.000000000 +1100
++++ ../ex/ex_txt.c
+@@ -403,8 +403,12 @@ txt_dent(SCR *sp, TEXT *tp)
+ 	 *
+ 	 * Count up spaces/tabs needed to get to the target.
+ 	 */
+-	for (cno = 0, tabs = 0; cno + COL_OFF(cno, ts) <= scno; ++tabs)
+-		cno += COL_OFF(cno, ts);
++	cno = 0;
++	tabs = 0;
++	if (!O_ISSET(sp, O_EXPANDTAB)) {
++		for (; cno + COL_OFF(cno, ts) <= scno; ++tabs)
++			cno += COL_OFF(cno, ts);
++	}
+ 	spaces = scno - cno;
+ 
+ 	/* Make sure there's enough room. */
