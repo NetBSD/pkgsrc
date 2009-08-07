@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/05 22:17:58 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/07 09:31:53 minskim Exp $
 
 DISTNAME=	w3m-el-snapshot_1.4.364+0.20090802.orig
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/w3m-el-snapshot_/emacs-w3m-/:S/+0//:S/.orig//}
@@ -30,6 +30,8 @@ BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
 
 PLIST_SRC+=		PLIST
+
+.include "options.mk"
 
 .include "../../devel/apel/buildlink3.mk"
 .include "../../devel/flim/buildlink3.mk"
