@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.3 2009/08/07 16:39:21 lukem Exp $
+
+--- ../catalog/french.base.orig	2007-11-19 03:41:42.000000000 +1100
++++ ../catalog/french.base
+@@ -43,8 +43,7 @@
+ 044 "L'option lisp n'est pas implémentée"
+ 045 "Les messages ne sont pas désactivés : %s"
+ 046 "Les messages ne sont pas activés : %s"
+-048 "L'option de paragraphe doit être en groupe de deux caractères"
+-049 "L'option de section doit être en groupe de deux caractères"
++047 "D‚finition : l'option de %s doit ˆtre en groupe de deux caractŠres"
+ 053 "Le tampon par défaut est vide"
+ 054 "Le tampon %s est vide"
+ 055 "Les fichiers dont le nom contient des caractères de saut de ligne sont irrécupérables"
