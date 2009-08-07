@@ -1,4 +1,4 @@
-#	$NetBSD: Linux.bsd.man.mk,v 1.6 2009/02/26 07:05:10 wiz Exp $
+#	$NetBSD: Linux.bsd.man.mk,v 1.7 2009/08/07 07:48:59 dsainty Exp $
 #	@(#)bsd.man.mk	8.1 (Berkeley) 6/8/93
 
 .if !target(__initialized__)
@@ -22,6 +22,8 @@ cleandir: cleanman
 TMACDIR?=	${DESTDIR}/usr/share/groff/1.20.1/tmac
 .elif exists(${DESTDIR}/usr/share/groff/1.19.2/tmac)
 TMACDIR?=	${DESTDIR}/usr/share/groff/1.19.2/tmac
+.elif exists(${DESTDIR}/usr/share/groff/1.19.1/tmac)
+TMACDIR?=	${DESTDIR}/usr/share/groff/1.19.1/tmac
 .elif exists(${DESTDIR}/usr/share/groff/1.18.1.1/tmac)
 TMACDIR?=	${DESTDIR}/usr/share/groff/1.18.1.1/tmac
 .elif exists(${DESTDIR}/usr/share/groff/1.18.1.4/tmac)
