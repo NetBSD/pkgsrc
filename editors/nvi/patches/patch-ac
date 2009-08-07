@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.3 2009/08/07 16:39:21 lukem Exp $
+
+--- ../catalog/dutch.base.orig	2007-11-19 03:41:42.000000000 +1100
++++ ../catalog/dutch.base
+@@ -43,8 +43,7 @@
+ 044 "De lisp optie is niet ondersteund"
+ 045 "messages niet uitgeschakeld: %s"
+ 046 "messages niet geactiveerd: %s"
+-048 "De paragraph optie moet karakter paren bevatten"
+-049 "De section optie moet karakter paren bevatten"
++047 "set: de %s optie moet karakter paren bevatten"
+ 053 "De standaard buffer is leeg"
+ 054 "Buffer %s is leeg"
+ 055 "Bestanden met newlines in de naam kunnen niet hersteld worden"

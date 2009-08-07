@@ -1,0 +1,22 @@
+$NetBSD: patch-ax,v 1.1 2009/08/07 16:39:21 lukem Exp $
+
+--- ../ex/ex_shift.c.orig	2007-11-19 03:41:42.000000000 +1100
++++ ../ex/ex_shift.c
+@@ -131,10 +131,13 @@ shift(SCR *sp, EXCMD *cmdp, enum which r
+ 		 * Build a new indent string and count the number of
+ 		 * characters it uses.
+ 		 */
+-		for (tbp = bp, newidx = 0;
+-		    newcol >= O_VAL(sp, O_TABSTOP); ++newidx) {
+-			*tbp++ = '\t';
+-			newcol -= O_VAL(sp, O_TABSTOP);
++		tbp = bp;
++		newidx = 0;
++		if (!O_ISSET(sp, O_EXPANDTAB)) {
++			for (; newcol >= O_VAL(sp, O_TABSTOP); ++newidx) {
++				*tbp++ = '\t';
++				newcol -= O_VAL(sp, O_TABSTOP);
++			}
+ 		}
+ 		for (; newcol > 0; --newcol, ++newidx)
+ 			*tbp++ = ' ';
