@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.17 2009/03/20 19:42:20 hasso Exp $
+# $NetBSD: Makefile,v 1.18 2009/08/07 12:18:33 plunky Exp $
 #
 
-DISTNAME=	openobex-1.3
-PKGREVISION=	2
+DISTNAME=	openobex-1.5
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://openobex.triq.net/
+HOMEPAGE=	http://www.openobex.org/
 COMMENT=	Implementation of the Object Exchange (OBEX) protocol
+
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,17 +18,6 @@ USE_TOOLS+=	autoconf gmake pkg-config
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE=	openobex.pc.in
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ((${OPSYS} == "NetBSD" && exists(/usr/include/bluetooth.h)) || ${OPSYS} == "DragonFly")
-SUBST_CLASSES+=		bt
-SUBST_STAGE.bt=		post-patch
-SUBST_FILES.bt=		include/obex.h
-SUBST_SED.bt=		-e "s,\#ifndef SOL_RFCOMM,\#if defined(__NetBSD__) || defined(__DragonFly__),"
-SUBST_SED.bt+=		-e "s,typedef char\* bdaddr_t\;,\#include \<bluetooth.h\>,"
-SUBST_MESSAGE.bt=	Fixing bluetooth detection.
-.endif
 
 post-patch:
 	cd ${WRKSRC} && autoconf

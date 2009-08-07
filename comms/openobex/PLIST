@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:38:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/07 12:18:33 plunky Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 lib/libopenobex.la
 lib/pkgconfig/openobex.pc
-share/aclocal/openobex.m4
