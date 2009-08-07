@@ -1,6 +1,6 @@
-$NetBSD: patch-de,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+$NetBSD: patch-de,v 1.2 2009/08/07 12:49:21 cegger Exp $
 
---- examples/Makefile.orig	2008-08-07 10:56:22.000000000 +0200
+--- examples/Makefile.orig	2009-08-06 14:56:33.000000000 +0200
 +++ examples/Makefile
 @@ -7,7 +7,7 @@ XENDOMAINS_INITD = init.d/xendomains
  XENDOMAINS_SYSCONFIG = init.d/sysconfig.xendomains
@@ -20,7 +20,7 @@ $NetBSD: patch-de,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
  XEN_SCRIPTS = network-bridge vif-bridge
  XEN_SCRIPTS += network-route vif-route
  XEN_SCRIPTS += network-nat vif-nat
-@@ -41,10 +41,10 @@ XEN_SCRIPT_DATA += xen-hotplug-common.sh
+@@ -41,7 +41,7 @@ XEN_SCRIPT_DATA += xen-hotplug-common.sh
  XEN_SCRIPT_DATA += block-common.sh vtpm-common.sh vtpm-hotplug-common.sh
  XEN_SCRIPT_DATA += vtpm-migration.sh vtpm-impl
  
@@ -28,12 +28,27 @@ $NetBSD: patch-de,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
 +XEN_HOTPLUG_DIR = ${PKG_SYSCONFDIR}/hotplug
  XEN_HOTPLUG_SCRIPTS = xen-backend.agent
  
+ UDEVVER = 0
+@@ -52,7 +52,7 @@ ifeq ($(shell [ -x /usr/bin/udevinfo ] &
+ UDEVVER = $(shell /usr/bin/udevinfo -V | sed -e 's/^[^0-9]* \([0-9]\{1,\}\)[^0-9]\{0,\}/\1/' )
+ endif
+ 
 -UDEV_RULES_DIR = /etc/udev
 +UDEV_RULES_DIR = ${PKG_SYSCONFDIR}/udev
  UDEV_RULES = xen-backend.rules
  
  DI = $(if $(DISTDIR),$(shell readlink -f $(DISTDIR)),)
-@@ -79,52 +79,47 @@ install-readmes:
+@@ -79,60 +79,55 @@ install: all install-readmes install-ini
+ .PHONY: install-readmes
+ install-readmes:
+ 	[ -d $(DESTDIR)$(XEN_CONFIG_DIR) ] || \
+-		$(INSTALL_DIR) $(DESTDIR)$(XEN_CONFIG_DIR)
++		$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(XEN_CONFIG_DIR)
+ 	set -e; for i in $(XEN_READMES); \
+ 	    do [ -e $(DESTDIR)$(XEN_CONFIG_DIR)/$$i ] || \
+-	    $(INSTALL_DATA) $$i $(DESTDIR)$(XEN_CONFIG_DIR); \
++	    $(BSD_INSTALL_DATA) $$i $(DESTDIR)$(XEN_CONFIG_DIR); \
+ 	done
  
  .PHONY: install-initd
  install-initd:
