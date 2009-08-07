@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/07 14:00:49 joerg Exp $
 bin/rapidsvn
 include/svncpp/annotate_line.hpp
 include/svncpp/apr.hpp
-include/svncpp/check.hpp
 include/svncpp/client.hpp
 include/svncpp/context.hpp
 include/svncpp/context_listener.hpp
@@ -10,14 +9,20 @@ include/svncpp/datetime.hpp
 include/svncpp/dirent.hpp
 include/svncpp/entry.hpp
 include/svncpp/exception.hpp
+include/svncpp/info.hpp
 include/svncpp/log_entry.hpp
+include/svncpp/map_wrapper.hpp
 include/svncpp/path.hpp
 include/svncpp/pool.hpp
 include/svncpp/property.hpp
 include/svncpp/revision.hpp
 include/svncpp/status.hpp
+include/svncpp/status_selection.hpp
+include/svncpp/string_wrapper.hpp
 include/svncpp/targets.hpp
 include/svncpp/url.hpp
+include/svncpp/utility_wrapper.hpp
+include/svncpp/vector_wrapper.hpp
+include/svncpp/version.hpp
 include/svncpp/wc.hpp
 lib/libsvncpp.la
-man/man1/rapidsvn.1
