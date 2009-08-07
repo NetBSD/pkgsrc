@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/05/20 00:58:30 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2009/08/07 06:34:01 dholland Exp $
 
 DISTNAME=		wxhaskell-src-0.9.4
 PKGNAME=		${DISTNAME:S/-src//}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wxhaskell/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://wxhaskell.sourceforge.net/index.html
+HOMEPAGE=		http://haskell.org/haskellwiki/WxHaskell
 COMMENT=		wxGTK binding for Haskell
 
 USE_LANGUAGES=		c c++
