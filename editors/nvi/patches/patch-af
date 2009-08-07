@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.3 2009/08/07 16:39:21 lukem Exp $
+
+--- ../catalog/spanish.base.orig	2007-11-19 03:41:42.000000000 +1100
++++ ../catalog/spanish.base
+@@ -43,8 +43,7 @@
+ 044 "La opci¢n lisp no est  implementada"
+ 045 "mensajes no desconectados: %s"
+ 046 "mensajes no conectados: %s"
+-048 "La opci¢n de p rrafo debe estar en dos grupos de caracteres"
+-049 "La opci¢n de secci¢n debe estar en dos grupos de caracteres"
++047 "determinar: La opci¢n de %s debe estar en dos grupos de caracteres"
+ 053 "El buffer por omisi¢n est  vac¡o"
+ 054 "El buffer %s est  vac¡o"
+ 055 "Los archivos con nuevas l¡neas en el nombre son irrecuperables"
