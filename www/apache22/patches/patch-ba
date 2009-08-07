@@ -1,42 +1,15 @@
-$NetBSD: patch-ba,v 1.2 2009/06/11 20:30:59 tron Exp $
+$NetBSD: patch-ba,v 1.2.2.1 2009/08/07 21:08:15 spz Exp $
 
-Patch for CVE-2009-1195 taken from:
+Fix build problems with newer versions of OpenSSL.
 
-http://svn.apache.org/viewvc?view=rev&revision=773881
-http://svn.apache.org/viewvc?view=rev&revision=779472
-
---- include/http_core.h.orig	2008-02-26 19:47:51.000000000 +0000
-+++ include/http_core.h	2009-06-11 20:53:26.000000000 +0100
-@@ -65,7 +65,7 @@
- #define OPT_NONE 0
- /** Indexes directive */
- #define OPT_INDEXES 1
--/**  Includes directive */
-+/** SSI is enabled without exec= permission  */
- #define OPT_INCLUDES 2
- /**  FollowSymLinks directive */
- #define OPT_SYM_LINKS 4
-@@ -80,9 +80,22 @@
- /** MultiViews directive */
- #define OPT_MULTI 128
- /**  All directives */
--#define OPT_ALL (OPT_INDEXES|OPT_INCLUDES|OPT_SYM_LINKS|OPT_EXECCGI)
-+#define OPT_ALL (OPT_INDEXES|OPT_INCLUDES|OPT_INCNOEXEC|OPT_SYM_LINKS|OPT_EXECCGI)
- /** @} */
+--- modules/ssl/ssl_engine_init.c.orig	2009-08-05 09:37:09.000000000 +0200
++++ modules/ssl/ssl_engine_init.c
+@@ -573,7 +573,7 @@ static void ssl_init_ctx_verify(server_r
+             ssl_die();
+         }
  
-+#ifdef CORE_PRIVATE
-+/* For internal use only - since 2.2.12, the OPT_INCNOEXEC bit is
-+ * internally replaced by OPT_INC_WITH_EXEC.  The internal semantics
-+ * of the two SSI-related bits are hence:
-+ *
-+ *  OPT_INCLUDES => "enable SSI, without exec= permission"
-+ *  OPT_INC_WITH_EXEC => "iff OPT_INCLUDES is set, also enable exec="
-+ *
-+ * The set of options exposed via ap_allow_options() retains the
-+ * semantics of OPT_INCNOEXEC by flipping the bit. */
-+#define OPT_INC_WITH_EXEC OPT_INCNOEXEC
-+#endif
-+
- /**
-  * @defgroup get_remote_host Remote Host Resolution 
-  * @ingroup APACHE_CORE_HTTPD
+-        SSL_CTX_set_client_CA_list(ctx, (STACK *)ca_list);
++        SSL_CTX_set_client_CA_list(ctx, ca_list);
+     }
+ 
+     /*
