@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2009/08/07 16:39:21 lukem Exp $
+
+--- ../common/exf.c.orig	2007-11-19 03:41:42.000000000 +1100
++++ ../common/exf.c
+@@ -184,7 +184,7 @@ file_init(SCR *sp, FREF *frp, char *rcv_
+ 	CALLOC_RET(sp, ep, EXF *, 1, sizeof(EXF));
+ 	CIRCLEQ_INIT(&ep->scrq);
+ 	sp->c_lno = ep->c_nlines = OOBLNO;
+-	ep->rcv_fd = ep->fcntl_fd = -1;
++	ep->fd = ep->rcv_fd = ep->fcntl_fd = -1;
+ 	F_SET(ep, F_FIRSTMODIFY);
+ 
+ 	/*
