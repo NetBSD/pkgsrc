@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.25 2009/08/05 12:00:31 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.26 2009/08/07 11:10:13 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -100,3 +100,10 @@ Pullup ticket #2849 - requested by tnn
 firefox3: security update
 Pullup ticket #2850 - requested by taca
 squid30: security update
+Pullup ticket #2853 - requested by gdt
+ap22-subversion: security update
+p5-subversion: security update
+py25-subversion: security update
+ruby18-subversion: security update
+subversion-base: security update
+subversion: security update
