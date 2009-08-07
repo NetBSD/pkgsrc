@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/07 13:45:01 plunky Exp $
 #
 
-DISTNAME=	zyGrib-3.3.0
+DISTNAME=	zyGrib-3.5.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.zygrib.org/files/
 EXTRACT_SUFX=	.tgz
@@ -20,7 +20,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Fixing shared data paths.
-SUBST_FILES.paths=	GisReader.cpp MenuBar.cpp MainWindow.cpp main.cpp
+SUBST_FILES.paths=	GisReader.cpp GribAnimator.cpp
+SUBST_FILES.paths+=	MenuBar.cpp MainWindow.cpp main.cpp
 SUBST_SED.paths+=	-e "s|maps/|${PREFIX}/share/zyGrib/maps/|"
 SUBST_SED.paths+=	-e "s|img/|${PREFIX}/share/zyGrib/img/|"
 SUBST_SED.paths+=	-e "s|tr/|${PREFIX}/share/zyGrib/tr/|"
@@ -80,14 +81,24 @@ INSTALL_FILES+=	maps/gshhs/wdb_borders_l.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_c.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_i.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_l.b
+INSTALL_FILES+=	tr/zyGrib_de.qm
+INSTALL_FILES+=	tr/zyGrib_de.ts
 INSTALL_FILES+=	tr/zyGrib_en.qm
 INSTALL_FILES+=	tr/zyGrib_en.ts
+INSTALL_FILES+=	tr/zyGrib_es.qm
+INSTALL_FILES+=	tr/zyGrib_es.ts
+INSTALL_FILES+=	tr/zyGrib_it.qm
+INSTALL_FILES+=	tr/zyGrib_it.ts
+INSTALL_FILES+=	tr/zyGrib_nl.qm
+INSTALL_FILES+=	tr/zyGrib_nl.ts
+INSTALL_FILES+=	tr/zyGrib_ru.qm
+INSTALL_FILES+=	tr/zyGrib_ru.ts
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/zyGrib ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/../zyGrib ${DESTDIR}${PREFIX}/bin
 .for f in ${INSTALL_FILES}
 	${INSTALL_DATA} ${WRKDIR}/zyGrib/${f} ${DESTDIR}${PREFIX}/share/zyGrib/${f}
 .endfor
