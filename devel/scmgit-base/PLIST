@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/07/19 01:29:33 minskim Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/08/07 02:39:51 minskim Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -6,6 +6,7 @@ bin/git-shell
 bin/git-upload-archive
 bin/git-upload-pack
 ${PLIST.gui}bin/gitk
+libexec/git-core/git
 libexec/git-core/git-add
 libexec/git-core/git-add--interactive
 libexec/git-core/git-am
