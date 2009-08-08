@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2009/08/05 02:43:47 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2009/08/08 04:14:18 tnn Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}-source
@@ -53,6 +53,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 .include "options.mk"
+.include "../../mk/bsd.prefs.mk"
 
 MOZILLA=firefox
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
@@ -67,7 +68,6 @@ pre-configure:
 	cd ${WRKSRC} && autoconf
 	cd ${WRKSRC}/js/src && autoconf
 	cd ${WRKSRC}/nsprpub && autoconf
-
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
@@ -92,6 +92,9 @@ install-desktop:
 	${INSTALL_DATA} ${MOZILLA_ICON}					\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
 
+.if ${OPSYS} == "Linux"
+.include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
