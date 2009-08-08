@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/10/28 10:10:09 heinz Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/08 05:20:02 tnn Exp $
 #
 
 DISTNAME=	tree-1.5.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://mama.indstate.edu/linux/tree/
 EXTRACT_SUFX=	.tgz
