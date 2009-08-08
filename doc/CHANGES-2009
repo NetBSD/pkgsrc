@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2983 2009/08/08 19:43:01 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2984 2009/08/08 20:12:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3951,3 +3951,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-mag to 0.15.8 [wiz 2009-08-08]
 	Added devel/p5-TryCatch version 1.001001 [sno 2009-08-08]
 	Added devel/libev version 3.7 [sno 2009-08-08]
+	Added devel/p5-common-sense version 0.04 [sno 2009-08-08]
