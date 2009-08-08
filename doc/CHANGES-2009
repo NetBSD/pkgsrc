@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2958 2009/08/08 06:11:33 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2959 2009/08/08 06:41:00 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3925,3 +3925,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/GraphicsMagick to 1.3.6 [obache 2009-08-08]
 	Updated misc/m17n-db to 1.5.5 [obache 2009-08-08]
 	Updated misc/m17n-contrib to 1.1.10 [obache 2009-08-08]
+	Removed time/p5-Date-Calc successor devel/p5-Date-Calc [tnn 2009-08-08]
+	Removed x11/p5-Gtk2-GladeXML successor devel/p5-Gtk2-GladeXML [tnn 2009-08-08]
