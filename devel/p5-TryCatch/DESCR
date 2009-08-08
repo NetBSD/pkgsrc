@@ -1,0 +1,4 @@
+TryCatch implements first a class try catch semantics for Perl, without
+source filters. The main benefits are:
+- return from subroutines within the try blocks
+- Moose type checking
