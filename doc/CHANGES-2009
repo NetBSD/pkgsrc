@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2988 2009/08/08 20:58:39 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2989 2009/08/08 21:03:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3956,3 +3956,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Async-Interrupt version 1.01 [sno 2009-08-08]
 	Added devel/p5-Guard version 1.021 [sno 2009-08-08]
 	Updated devel/p5-AnyEvent to 4.910 [sno 2009-08-08]
+	Updated converters/p5-JSON-XS to 2.250 [sno 2009-08-08]
