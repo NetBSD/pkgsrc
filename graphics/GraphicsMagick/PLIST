@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 20:05:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/08/08 04:45:28 obache Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -16,10 +16,10 @@ include/GraphicsMagick/Magick++/Montage.h
 include/GraphicsMagick/Magick++/Pixels.h
 include/GraphicsMagick/Magick++/STL.h
 include/GraphicsMagick/Magick++/TypeMetric.h
-include/GraphicsMagick/magick/PreRvIcccm.h
 include/GraphicsMagick/magick/api.h
 include/GraphicsMagick/magick/attribute.h
 include/GraphicsMagick/magick/blob.h
+include/GraphicsMagick/magick/cdl.h
 include/GraphicsMagick/magick/channel.h
 include/GraphicsMagick/magick/color.h
 include/GraphicsMagick/magick/colorspace.h
@@ -27,6 +27,7 @@ include/GraphicsMagick/magick/command.h
 include/GraphicsMagick/magick/compare.h
 include/GraphicsMagick/magick/composite.h
 include/GraphicsMagick/magick/compress.h
+include/GraphicsMagick/magick/confirm_access.h
 include/GraphicsMagick/magick/constitute.h
 include/GraphicsMagick/magick/decorate.h
 include/GraphicsMagick/magick/delegate.h
@@ -38,6 +39,7 @@ include/GraphicsMagick/magick/error.h
 include/GraphicsMagick/magick/forward.h
 include/GraphicsMagick/magick/fx.h
 include/GraphicsMagick/magick/gem.h
+include/GraphicsMagick/magick/hclut.h
 include/GraphicsMagick/magick/image.h
 include/GraphicsMagick/magick/list.h
 include/GraphicsMagick/magick/log.h
@@ -55,6 +57,7 @@ include/GraphicsMagick/magick/pixel_cache.h
 include/GraphicsMagick/magick/pixel_iterator.h
 include/GraphicsMagick/magick/profile.h
 include/GraphicsMagick/magick/quantize.h
+include/GraphicsMagick/magick/random.h
 include/GraphicsMagick/magick/registry.h
 include/GraphicsMagick/magick/render.h
 include/GraphicsMagick/magick/resize.h
@@ -66,8 +69,6 @@ include/GraphicsMagick/magick/timer.h
 include/GraphicsMagick/magick/transform.h
 include/GraphicsMagick/magick/utility.h
 include/GraphicsMagick/magick/version.h
-include/GraphicsMagick/magick/widget.h
-include/GraphicsMagick/magick/xwindow.h
 include/GraphicsMagick/wand/drawing_wand.h
 include/GraphicsMagick/wand/magick_wand.h
 include/GraphicsMagick/wand/pixel_wand.h
@@ -133,6 +134,7 @@ share/doc/GraphicsMagick/www/Magick++/Geometry.html
 share/doc/GraphicsMagick/www/Magick++/Image.fig
 share/doc/GraphicsMagick/www/Magick++/Image.html
 share/doc/GraphicsMagick/www/Magick++/Image.png
+share/doc/GraphicsMagick/www/Magick++/Image.rst
 share/doc/GraphicsMagick/www/Magick++/ImageDesign.html
 share/doc/GraphicsMagick/www/Magick++/ImageMagick.png
 share/doc/GraphicsMagick/www/Magick++/Install.html
@@ -169,10 +171,12 @@ share/doc/GraphicsMagick/www/api/api.rst
 share/doc/GraphicsMagick/www/api/api_hyperlinks.rst
 share/doc/GraphicsMagick/www/api/attribute.html
 share/doc/GraphicsMagick/www/api/blob.html
+share/doc/GraphicsMagick/www/api/cdl.html
 share/doc/GraphicsMagick/www/api/channel.html
 share/doc/GraphicsMagick/www/api/color.html
 share/doc/GraphicsMagick/www/api/compare.html
 share/doc/GraphicsMagick/www/api/composite.html
+share/doc/GraphicsMagick/www/api/confirm_access.html
 share/doc/GraphicsMagick/www/api/constitute.html
 share/doc/GraphicsMagick/www/api/decorate.html
 share/doc/GraphicsMagick/www/api/deprecate.html
@@ -182,6 +186,7 @@ share/doc/GraphicsMagick/www/api/effect.html
 share/doc/GraphicsMagick/www/api/enhance.html
 share/doc/GraphicsMagick/www/api/error.html
 share/doc/GraphicsMagick/www/api/fx.html
+share/doc/GraphicsMagick/www/api/hclut.html
 share/doc/GraphicsMagick/www/api/image.html
 share/doc/GraphicsMagick/www/api/list.html
 share/doc/GraphicsMagick/www/api/magick.html
@@ -225,10 +230,12 @@ share/doc/GraphicsMagick/www/docutils-api.css
 share/doc/GraphicsMagick/www/docutils-articles.css
 share/doc/GraphicsMagick/www/download.html
 share/doc/GraphicsMagick/www/download.rst
+share/doc/GraphicsMagick/www/favicon.ico
 share/doc/GraphicsMagick/www/formats.html
 share/doc/GraphicsMagick/www/formats.rst
 share/doc/GraphicsMagick/www/gm.html
 share/doc/GraphicsMagick/www/identify.html
+share/doc/GraphicsMagick/www/images/ball.png
 share/doc/GraphicsMagick/www/images/banner_bg.png
 share/doc/GraphicsMagick/www/images/examples.jpg
 share/doc/GraphicsMagick/www/images/gm-107x76.png
