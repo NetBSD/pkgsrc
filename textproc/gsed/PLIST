@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/04/17 07:07:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/08/08 21:26:49 wiz Exp $
 bin/${GNU_PROGRAM_PREFIX}sed
 info/sed.info
 man/man1/${GNU_PROGRAM_PREFIX}sed.1
@@ -11,6 +11,7 @@ share/locale/el/LC_MESSAGES/sed.mo
 share/locale/eo/LC_MESSAGES/sed.mo
 share/locale/es/LC_MESSAGES/sed.mo
 share/locale/et/LC_MESSAGES/sed.mo
+share/locale/eu/LC_MESSAGES/sed.mo
 share/locale/fi/LC_MESSAGES/sed.mo
 share/locale/fr/LC_MESSAGES/sed.mo
 share/locale/ga/LC_MESSAGES/sed.mo
@@ -24,6 +25,7 @@ share/locale/ja/LC_MESSAGES/sed.mo
 share/locale/ko/LC_MESSAGES/sed.mo
 share/locale/nl/LC_MESSAGES/sed.mo
 share/locale/pl/LC_MESSAGES/sed.mo
+share/locale/pt/LC_MESSAGES/sed.mo
 share/locale/pt_BR/LC_MESSAGES/sed.mo
 share/locale/ro/LC_MESSAGES/sed.mo
 share/locale/ru/LC_MESSAGES/sed.mo
@@ -32,4 +34,7 @@ share/locale/sl/LC_MESSAGES/sed.mo
 share/locale/sr/LC_MESSAGES/sed.mo
 share/locale/sv/LC_MESSAGES/sed.mo
 share/locale/tr/LC_MESSAGES/sed.mo
+share/locale/uk/LC_MESSAGES/sed.mo
+share/locale/vi/LC_MESSAGES/sed.mo
 share/locale/zh_CN/LC_MESSAGES/sed.mo
+share/locale/zh_TW/LC_MESSAGES/sed.mo
