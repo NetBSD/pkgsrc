@@ -1,20 +1,21 @@
-$NetBSD: patch-ae,v 1.1.2.1 2009/08/02 13:17:58 spz Exp $
+$NetBSD: patch-ae,v 1.1.2.2 2009/08/08 00:23:26 salo Exp $
 
---- errors/Makefile.in.orig	2009-07-19 06:11:27.000000000 +0100
-+++ errors/Makefile.in	2009-07-19 15:21:48.000000000 +0100
+--- errors/Makefile.in.orig	2009-08-04 14:32:30.000000000 +0100
++++ errors/Makefile.in	2009-08-05 10:30:29.000000000 +0100
 @@ -418,13 +418,13 @@
- 	  fi \
  	done; \
- 	$(INSTALL_DATA) $(srcdir)/TRANSLATORS $(DESTDIR)TRANSLATORS; \
+ 	$(INSTALL_DATA) $(srcdir)/TRANSLATORS $(DESTDIR)$(DEFAULT_ERROR_DIR)/TRANSLATORS; \
+ 	$(INSTALL_DATA) $(srcdir)/COPYRIGHT $(DESTDIR)$(DEFAULT_ERROR_DIR)/COPYRIGHT; \
 -	$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET).default; \
 -	if test -f $(DESTDIR)$(DEFAULT_STYLESHEET) ; then \
-+#	$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET).default; \
-+#	if test -f $(DESTDIR)$(DEFAULT_STYLESHEET) ; then \
- 		echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_STYLESHEET)" ; \
+-		echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_STYLESHEET)" ; \
 -	else \
 -		echo "$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET)"; \
 -		$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET); \
 -	fi ; \
++#	$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET).default; \
++#	if test -f $(DESTDIR)$(DEFAULT_STYLESHEET) ; then \
++#		echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_STYLESHEET)" ; \
 +#	else \
 +#		echo "$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET)"; \
 +#		$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET); \
