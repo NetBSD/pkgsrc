@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2007/10/28 10:10:10 heinz Exp $
+$NetBSD: patch-ab,v 1.4 2009/08/08 05:20:02 tnn Exp $
 
---- Makefile.orig	2007-06-11 15:22:47.000000000 +0200
+--- Makefile.orig	2007-06-11 22:22:47.000000000 +0900
 +++ Makefile
 @@ -8,7 +8,8 @@
  
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.3 2007/10/28 10:10:10 heinz Exp $
  #LDFLAGS=-s -Zomf -Zsmall-conv
  
 -prefix = /usr
-+PREFIX = /usr
++PREFIX = /NONEXISTENT
  
  VERSION=1.5.1.1
  TREE_DEST=tree
