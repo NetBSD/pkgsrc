@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2971 2009/08/08 14:07:36 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2972 2009/08/08 15:12:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3939,3 +3939,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-CSV to 1.13 [sno 2009-08-08]
 	Updated devel/p5-File-Which to 1.07 [sno 2009-08-08]
 	Updated devel/p5-Storable to 2.21 [sno 2009-08-08]
+	Updated lang/chicken to 4.1.0 [wiz 2009-08-08]
