@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/07/22 09:01:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/08 15:52:57 wiz Exp $
 
 DISTNAME=	bzr-gtk-${VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/bzr-gtk/0.95/${VER}/+download/
 VER=		0.95.0
@@ -15,7 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-cairo>=1.0:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.8:../../x11/py-gtk2
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED=	25
+PYTHON_VERSIONS_ACCEPTED=	26 25
+REPLACE_PYTHON=	create-credits.py
 
 USE_TOOLS+=	msgfmt
 
@@ -26,5 +28,6 @@ PRIVILEGED_STAGES+=	clean
 
 .include "../../devel/bzr/plugin.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
