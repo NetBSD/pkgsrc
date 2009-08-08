@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/08/06 10:56:46 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2009/08/08 04:14:18 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
@@ -64,12 +64,12 @@ PYTHON_FOR_BUILD_ONLY=	yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 .include "options.mk"
+.include "../../mk/bsd.prefs.mk"
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
 	cd ${WRKSRC}/js/src && autoconf
 	cd ${WRKSRC}/nsprpub && autoconf
-
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
@@ -102,6 +102,9 @@ post-install:
 	cd ${WRKSRC}/dist/include/nspr/obsolete && ${INSTALL_DATA} protypes.h \
 	  ${DESTDIR}${PREFIX}/include/xulrunner/unstable/obsolete
 
+.if ${OPSYS} == "Linux"
+.include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
