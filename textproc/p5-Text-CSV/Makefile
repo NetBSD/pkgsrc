@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/01 18:49:13 sno Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/08 13:54:54 sno Exp $
 #
 
-DISTNAME=	Text-CSV-1.12
+DISTNAME=	Text-CSV-1.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-CSV/
 COMMENT=	Comma-separated values manipulator (using XS or PurePerl)
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
