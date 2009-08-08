@@ -1,0 +1,14 @@
+This module implements a single feature only of interest to advanced perl
+modules, namely asynchronous interruptions (think "UNIX signals", which are
+very similar).
+
+Sometimes, modules wish to run code asynchronously (in another thread, or
+from a signal handler), and then signal the perl interpreter on certain
+events. One common way is to write some data to a pipe and use an event
+handling toolkit to watch for I/O events. Another way is to send a signal.
+Those methods are slow, and in the case of a pipe, also not asynchronous -
+it won't interrupt a running perl interpreter.
+
+This module implements asynchronous notifications that enable you to signal
+running perl code from another thread, asynchronously, and sometimes even
+without using a single syscall.
