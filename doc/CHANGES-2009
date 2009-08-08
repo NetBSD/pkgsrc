@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2991 2009/08/08 21:27:13 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2992 2009/08/08 23:00:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3959,3 +3959,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated converters/p5-JSON-XS to 2.250 [sno 2009-08-08]
 	Updated mail/getmail to 4.11.0 [schmonz 2009-08-08]
 	Updated textproc/gsed to 4.2 [wiz 2009-08-08]
+	Updated devel/ruby-rcsparse to 0.0.0.45 [wiz 2009-08-08]
