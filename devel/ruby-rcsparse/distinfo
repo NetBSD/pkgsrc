@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/02/15 18:53:02 wiz Exp $
+$NetBSD: distinfo,v 1.6 2009/08/08 22:59:41 wiz Exp $
 
-SHA1 (rcsparse/0aa8fb608963.tar.bz2) = c16b05e8c2f0a97bc3798614c7572663ad372e5b
-RMD160 (rcsparse/0aa8fb608963.tar.bz2) = 5286f9d777f70b2976ff0abf901bf30636a0d558
-Size (rcsparse/0aa8fb608963.tar.bz2) = 101877 bytes
+SHA1 (rcsparse/75d93404707d.tar.bz2) = ca86839830abd00abaa666bbbb42e5220fd5a743
+RMD160 (rcsparse/75d93404707d.tar.bz2) = 1573dee21f22fb676a52e726991583c52f5523f9
+Size (rcsparse/75d93404707d.tar.bz2) = 101892 bytes
