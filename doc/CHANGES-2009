@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2972 2009/08/08 15:12:44 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2973 2009/08/08 15:52:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3940,3 +3940,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-File-Which to 1.07 [sno 2009-08-08]
 	Updated devel/p5-Storable to 2.21 [sno 2009-08-08]
 	Updated lang/chicken to 4.1.0 [wiz 2009-08-08]
+	Updated devel/bzr to 1.17 [wiz 2009-08-08]
