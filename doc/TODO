@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8317 2009/08/07 02:41:23 minskim Exp $
+$NetBSD: TODO,v 1.8318 2009/08/08 04:46:24 obache Exp $
 
 Suggested new packages
 ======================
@@ -339,7 +339,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
-	o GraphicsMagick-1.3.6
 	o GridSim-3.3
 	o GutenMark-20090216
 	o MAMEDiff-2.30
