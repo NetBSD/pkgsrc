@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2978 2009/08/08 16:18:24 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2979 2009/08/08 16:24:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3946,3 +3946,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/clive to 2.2.4 [wiz 2009-08-08]
 	Updated time/etm to 290 [wiz 2009-08-08]
 	Updated fonts/fontconfig to 2.7.1 [wiz 2009-08-08]
+	Updated lang/gawk to 3.1.7 [wiz 2009-08-08]
