@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2009/06/06 21:56:14 wiz Exp $
+$NetBSD: distinfo,v 1.11 2009/08/08 16:15:19 wiz Exp $
 
-SHA1 (etm-286.tar.gz) = 0b8ebe04f75cf5047b8fabecc1a585cfc06b708a
-RMD160 (etm-286.tar.gz) = 61089bf3a8b7e3e02344f40a81e775ff36338e5c
-Size (etm-286.tar.gz) = 51644 bytes
+SHA1 (etm-290.tar.gz) = d0d3b40369c1d84fff1ca3d41960ae3c540035c9
+RMD160 (etm-290.tar.gz) = 54856d12b0920ce6d6f2805b04d4740b48f5ee49
+Size (etm-290.tar.gz) = 52990 bytes
