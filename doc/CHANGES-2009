@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2985 2009/08/08 20:18:03 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2986 2009/08/08 20:37:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3953,3 +3953,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/libev version 3.7 [sno 2009-08-08]
 	Added devel/p5-common-sense version 0.04 [sno 2009-08-08]
 	Added devel/p5-EV version 3.7 [sno 2009-08-08]
+	Added devel/p5-Async-Interrupt version 1.01 [sno 2009-08-08]
