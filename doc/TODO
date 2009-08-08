@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8319 2009/08/08 13:16:19 taca Exp $
+$NetBSD: TODO,v 1.8320 2009/08/08 22:40:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -379,7 +379,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amaya-11.1
 	o angband-3.0.9
 	o anjuta-2.26.2.2 [GNOME 2.26]
-	o anthy-9100h [pkg/41805]
 	o antiright-8.6
 	o ap-Embperl-1.3.6
 	o ap-auth-kerb-5.4
@@ -454,11 +453,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bouml-4.13.1
 	o bugzilla-3.4.1
 	o byacc-20080824
-	o bzr-1.17
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
+	o calibre-0.6.0
 	o capc-calc-2.12.4
 	o capistrano-2.5.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -466,15 +465,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdparanoia-3.0.10.2
-	o cdrtools-2.01.01alpha62
 	o cfitsio-3181
 	o cflow-1.3
 	o cgdb-0.6.4
 	o cgicc-3.2.7
-	o cheese-2.26.3
 	o chemtool-1.6.11
-	o cherokee-0.99.20
-	o chicken-4.0.0
+	o cherokee-0.99.22
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
@@ -482,7 +478,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o claws-mail-3.7.2
 	o climm-0.6.4
 	o clisp-2.48
-	o clive-2.2.4
 	o clutter-1.0.0
 	o clutter-gst-0.10.0
 	o clutter-gtk-0.10.2
@@ -524,7 +519,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dhid-5.3
 	o dia-0.97
 	o diffstat-1.47
-	o diffuse-0.3.4
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dircproxy-devel-1.2.0.2
@@ -541,6 +535,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
+	o ecl-9.8.1 [pkg/41846]
 	o eclipse-3.2.0
 	o ed-1.4
 	o ede-2.0
@@ -572,7 +567,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-290
 	o evolution-mapi-0.26.2 [GNOME 2.26]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
@@ -580,6 +574,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o exiftool-7.67
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
+	o f-spot-0.6.0.0
 	o f2c-20090102
 	o faac-1.26
 	o faces-1.7.7
@@ -603,9 +598,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fmsx-3.0
 	o fondu-040927
 	o font-util-1.0.2
-	o fontconfig-2.7.1
 	o fop-0.20.5
-	o fotoxx-7.5
+	o fotoxx-8.0
 	o freeglut-2.4.0
 	o freenet-0.7
 	o freesci-0.6.4
@@ -622,8 +616,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.14
-	o gawk-3.1.7
-	o gbdfed-1.5
 	o gcc-4.3.2
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
@@ -662,9 +654,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-mag-0.15.8
 	o gnome-packagekit-0.4.5
-	o gnome-power-manager-2.26.3 [GNOME 2.26, wants DeviceKit-power]
+	o gnome-power-manager-2.26.4 [GNOME 2.26, wants DeviceKit-power]
 	o gnome-subtitles-0.9.1
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-web-photo-0.6 [GNOME 2.26]
@@ -688,10 +679,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o graphviz-2.24.0
 	o grep-2.5.4
 	o gsasl-1.2
-	o gsed-4.2
 	o gsharutils-4.7
 	o gss-0.1.0
+	o gst-plugins0.10-base-0.10.24
 	o gst-plugins0.10-ffmpeg-0.10.7
+	o gstreamer0.10-0.10.24
 	o gtar-1.22
 	o gtar-base-1.22
 	o gtexinfo-4.13
@@ -735,6 +727,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o html2wml-0.4.11
 	o htop-0.8.3
 	o http_load-20060312
+	o httping-1.31
 	o httptunnel-3.3
 	o hydrogen-0.9.3 [pkg/37424]
 	o hylafax-5.2.9
@@ -812,7 +805,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libextractor-0.5.23
 	o libflash-0.4.13
 	o libgda-4.0.2 [GNOME 2.26]
-	o libgee-0.2.0
+	o libgee-0.3.0
 	o libggi-2.2.2
 	o libggigcp-1.0.2
 	o libggimisc-2.2.2
@@ -832,7 +825,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libole2-2.2.8
 	o libprelude-0.9.24 [pkg/41763]
 	o libpreludedb-0.9.15.3 [pkg/41763]
-	o libssh-0.3.1
+	o libssh-0.3.2
 	o libssh2-1.1
 	o libstree-0.4.2
 	o libtasn1-2.3
@@ -844,7 +837,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxklavier-4.0
 	o libxml++-2.26.1
 	o licq-1.3.6
-	o liferea-1.6.0
 	o lighttpd-1.4.23
 	o lincvs-2.1.3 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -869,9 +861,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
-	o mathomatic-14.5.2
+	o mathomatic-14.5.3
 	o mc-4.6.2
-	o mediawiki-1.14.1 [pkg/41789]
 	o memconf-2.9 [pkg/40201]
 	o memtestplus-2.11
 	o merb-1.0.8.1
@@ -994,7 +985,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o otpCalc-0.97
 	o p5-BerkeleyDB-0.39
 	o p5-DBD-postgresql-2.14.1
-	o p5-Image-Info-1.29
 	o p5-Pod-Simple-3.08
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1055,7 +1045,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plptools-1.0.8
 	o pngcheck-2.3.0
 	o po4a-0.29
-	o poedit-1.4.2
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o poppy-4.01
@@ -1077,7 +1066,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-24.8
 	o pureftpd-1.0.22
 	o puzzle-5.2
-	o puzzles-8610
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1096,7 +1084,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-cups-1.9.46
 	o py-dns-2.3.3
 	o py-fpconst-0.7.3
-	o py-game-1.9.0
+	o py-game-1.9.1
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
@@ -1198,6 +1186,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rudiments-0.30
 	o sabayon-2.25.0 [GNOME 2.26]
 	o sablecc-3.2
+	o samba-3.0.36
 	o samba-3.2.13
 	o samba-3.4.0
 	o sane-backends-1.0.20
@@ -1240,7 +1229,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snd-10.6
 	o snes9x-1.51
 	o snort-2.8.4
-	o solfege-3.14.5
+	o solfege-3.14.6
 	o sope-4.6
 	o source-highlight-3.1
 	o sox-14.2.0
@@ -1257,8 +1246,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
-	o subversion-1.6.3
-	o subversion-base-1.6.3
 	o suse_base-11.0
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
