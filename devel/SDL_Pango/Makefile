@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/08 06:44:53 tnn Exp $
 #
 
 DISTNAME=	SDL_Pango-0.1.2
@@ -18,7 +18,7 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	SDL_Pango.pc.in
 
-CONFIGURE_ARGS+=	--with-sdl-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-sdl-prefix=${BUILDLINK_PREFIX.SDL}
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
