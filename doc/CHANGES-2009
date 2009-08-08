@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2990 2009/08/08 21:22:24 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.2991 2009/08/08 21:27:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3958,3 +3958,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-AnyEvent to 4.910 [sno 2009-08-08]
 	Updated converters/p5-JSON-XS to 2.250 [sno 2009-08-08]
 	Updated mail/getmail to 4.11.0 [schmonz 2009-08-08]
+	Updated textproc/gsed to 4.2 [wiz 2009-08-08]
