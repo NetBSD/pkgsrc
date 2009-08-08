@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/05/24 21:45:21 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/08 23:19:48 wiz Exp $
 #
 
-DISTNAME=		font-util-1.0.1
-PKGREVISION=		1
+DISTNAME=		font-util-1.0.2
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,8 +17,5 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 LDFLAGS.IRIX+=		-lgen	# for basename(3)
-
-post-extract:
-	${CP} ${FILESDIR}/bdftruncate.c ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
