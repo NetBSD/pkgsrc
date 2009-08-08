@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2964 2009/08/08 09:37:19 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2965 2009/08/08 13:19:22 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3932,3 +3932,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/goocanvasmm to 0.15.0 [obache 2009-08-08]
 	Updated graphics/glu to 7.4.4nb1 [wiz 2009-08-08]
 	Updated sysutils/cdrtools to 2.01.01alpha62 [wiz 2009-08-08]
+	Updated www/p5-Template-Toolkit to 2.22 [sno 2009-08-08]
