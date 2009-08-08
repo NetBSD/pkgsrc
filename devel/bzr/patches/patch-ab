@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.5 2007/10/27 11:46:43 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2009/08/08 15:52:09 wiz Exp $
 
---- setup.py.orig	2007-09-26 02:47:54.000000000 +0000
-+++ setup.py
-@@ -320,7 +320,7 @@ else:
-     DATA_FILES = []
+--- setup.py.orig	2009-08-06 10:40:13.000000000 +0200
++++ setup.py	2009-08-06 10:41:02.000000000 +0200
+@@ -659,7 +659,7 @@
      if not 'bdist_egg' in sys.argv:
-         # generate and install bzr.1 only with plain install, not easy_install one
+         # generate and install bzr.1 only with plain install, not the
+         # easy_install one
 -        DATA_FILES = [('man/man1', ['bzr.1'])]
 +        DATA_FILES = [(os.getenv('PKGMANDIR', 'man') + '/man1', ['bzr.1'])]
  
