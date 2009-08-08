@@ -1,15 +1,20 @@
-# $NetBSD: Makefile,v 1.37 2008/10/07 15:28:44 ahoka Exp $
+# $NetBSD: Makefile,v 1.38 2009/08/08 15:12:24 wiz Exp $
 #
 
-DISTNAME=	chicken-3.4.0
+DISTNAME=	chicken-4.1.0
 CATEGORIES=	lang
-MASTER_SITES=	http://chicken.wiki.br/releases/${PKGVERSION_NOREV}/
+MASTER_SITES=	http://chicken.wiki.br/releases/${PKGVERSION_NOREV}/ \
+		http://galinha.ucpel.tche.br/releases/${PKGVERSION_NOREV}/ \
+		${HOMEPAGE}
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-with-current-continuation.org/
 COMMENT=	Scheme to C compiler, handling R5RS
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 INFO_FILES=		yes
 USE_LIBTOOL=		yes
@@ -17,14 +22,14 @@ USE_TOOLS+=		gmake makeinfo
 UNLIMIT_RESOURCES=	datasize
 
 INSTALLATION_DIRS=	share/chicken
-OWN_DIRS=		${PREFIX}/lib/chicken ${PREFIX}/lib/chicken/3
+OWN_DIRS=		${PREFIX}/lib/chicken ${PREFIX}/lib/chicken/4
 
-BUILD_TARGET=		all chicken.info
+BUILD_TARGET=		all
 
 .include "../../mk/bsd.prefs.mk"
 
 # PLATFORM detection:
-.if !empty(OPSYS:M*BSD)  || ${OPSYS} == "DragonFly"
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 PLATFORM=	bsd
 .elif ${OPSYS} == "Linux"
 PLATFORM=	linux
@@ -45,14 +50,9 @@ MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}
 MAKE_FLAGS+=	TOPMANDIR=${PREFIX:Q}/${PKGMANDIR}
 MAKE_FLAGS+=	INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}
 MAKE_FLAGS+=	DOCDIR=${PREFIX:Q}/share/doc/${PKGNAME_NOREV}
-MAKE_FLAGS+=	USE_HOST_PCRE=yes
-
-SUBST_CLASSES+=		add-rpath
-SUBST_STAGE.add-rpath=	pre-configure
-SUBST_FILES.add-rpath=	defaults.make
-SUBST_SED.add-rpath=	-e 's|-lpcre|${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib -lpcre|'
 
 TEST_TARGET=	check
 
-.include "../../devel/pcre/buildlink3.mk"
+CHECK_PORTABILITY_SKIP += scripts/test-dist.sh
+
 .include "../../mk/bsd.pkg.mk"
