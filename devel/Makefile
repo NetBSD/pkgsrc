@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1204 2009/08/05 03:00:53 tnn Exp $
+# $NetBSD: Makefile,v 1.1205 2009/08/08 19:08:38 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -886,6 +886,7 @@ SUBDIR+=	p5-Tie-ToObject
 SUBDIR+=	p5-Tree-DAG_Node
 SUBDIR+=	p5-Tree-Simple
 SUBDIR+=	p5-Tree-Simple-VisitorFactory
+SUBDIR+=	p5-TryCatch
 SUBDIR+=	p5-UNIVERSAL-can
 SUBDIR+=	p5-UNIVERSAL-isa
 SUBDIR+=	p5-UNIVERSAL-moniker
