@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2960 2009/08/08 07:32:15 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2961 2009/08/08 07:51:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3928,3 +3928,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed time/p5-Date-Calc successor devel/p5-Date-Calc [tnn 2009-08-08]
 	Removed x11/p5-Gtk2-GladeXML successor devel/p5-Gtk2-GladeXML [tnn 2009-08-08]
 	Updated devel/libthai to 0.1.12 [obache 2009-08-08]
+	Updated graphics/goocanvas to 0.15 [obache 2009-08-08]
