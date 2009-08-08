@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.3 2009/08/08 22:17:43 wiz Exp $
+
+--- Makefile.in.orig	2008-08-04 06:51:16.000000000 +0000
++++ Makefile.in
+@@ -123,7 +123,7 @@ EXTRA_DIST = fcrackzip.txt fcrackzip.htm
+ #CFLAGS = @CFLAGS@
+ #LDFLAGS = -g
+ man_MANS = fcrackzip.1
+-bin_PROGRAMS = fcrackzip zipinfo
++bin_PROGRAMS = fcrackzip fcrackzipinfo
+ noinst_HEADERS = getopt.h
+ fcrackzip_SOURCES = main.c crack.c crack.h crc32.h
+ fcrackzip_LDADD = @LIBOBJS@
+@@ -134,7 +134,7 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = config.h
+ CONFIG_CLEAN_FILES =
+-bin_PROGRAMS = fcrackzip$(EXEEXT) zipinfo$(EXEEXT)
++bin_PROGRAMS = fcrackzip$(EXEEXT) fcrackzipinfo$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+ am_fcrackzip_OBJECTS = main.$(OBJEXT) crack.$(OBJEXT)
+@@ -249,7 +249,7 @@ installcheck-binPROGRAMS: $(bin_PROGRAMS
+ fcrackzip$(EXEEXT): $(fcrackzip_OBJECTS) $(fcrackzip_DEPENDENCIES) 
+ 	@rm -f fcrackzip$(EXEEXT)
+ 	$(LINK) $(fcrackzip_LDFLAGS) $(fcrackzip_OBJECTS) $(fcrackzip_LDADD) $(LIBS)
+-zipinfo$(EXEEXT): $(zipinfo_OBJECTS) $(zipinfo_DEPENDENCIES) 
++fcrackzipinfo$(EXEEXT): $(zipinfo_OBJECTS) $(zipinfo_DEPENDENCIES) 
+ 	@rm -f zipinfo$(EXEEXT)
+ 	$(LINK) $(zipinfo_LDFLAGS) $(zipinfo_OBJECTS) $(zipinfo_LDADD) $(LIBS)
+ 
