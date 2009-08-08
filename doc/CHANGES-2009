@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2992 2009/08/08 23:00:01 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2993 2009/08/08 23:20:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3960,3 +3960,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/getmail to 4.11.0 [schmonz 2009-08-08]
 	Updated textproc/gsed to 4.2 [wiz 2009-08-08]
 	Updated devel/ruby-rcsparse to 0.0.0.45 [wiz 2009-08-08]
+	Updated fonts/font-util to 1.0.2 [wiz 2009-08-08]
