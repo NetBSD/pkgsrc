@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2966 2009/08/08 13:33:27 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2967 2009/08/08 13:41:23 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3934,3 +3934,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/cdrtools to 2.01.01alpha62 [wiz 2009-08-08]
 	Updated www/p5-Template-Toolkit to 2.22 [sno 2009-08-08]
 	Updated graphics/p5-Image-Info to 1.29 [sno 2009-08-08]
+	Updated devel/p5-Class-MOP to 0.91 [sno 2009-08-08]
