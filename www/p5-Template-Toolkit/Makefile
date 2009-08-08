@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2009/07/07 19:45:49 sno Exp $
+# $NetBSD: Makefile,v 1.31 2009/08/08 13:19:08 sno Exp $
 #
 
-DISTNAME=	Template-Toolkit-2.21
+DISTNAME=	Template-Toolkit-2.22
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5tto
 CATEGORIES=	www perl5
@@ -14,13 +14,13 @@ COMMENT=	Perl5 text template and dynamic web page integration toolkit
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-AppConfig>=1.56:../../devel/p5-AppConfig
+# recommended because of default-plugin
+DEPENDS+=	p5-Image-Info-[0-9]*:../../graphics/p5-Image-Info
+DEPENDS+=	p5-Pod-POM-[0-9]*:../../textproc/p5-Pod-POM
 
 PERL5_PACKLIST=	auto/Template/.packlist
 
 MAKE_PARAMS=	TT_ACCEPT=y
-#MAKE_PARAMS+=	TT_PREFIX=${PREFIX}/share/tt2
-#MAKE_PARAMS+=	TT_BUILD_DOCS=y
-#MAKE_PARAMS+=	TT_EXAMPLES=y
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
