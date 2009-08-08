@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 22:37:30 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/08 23:32:17 tnn Exp $
 
 DISTNAME=	se
 PKGNAME=	SmartEiffel-2.0
@@ -11,9 +11,9 @@ HOMEPAGE=	http://smarteiffel.loria.fr/
 COMMENT=	The GNU Eiffel Compiler
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 WRKSRC=		${WRKDIR}/SmartEiffel
+USE_TOOLS+=	pax
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
@@ -31,12 +31,14 @@ post-patch:
 
 post-build:
 	${MV} -f ${WRKSRC}/sys/system.se ${WRKSRC}/sys/system.se.bak
-	${SED} "s:${WRKDIR}:${LOCALBASE}:g" ${WRKSRC}/sys/system.se.bak > \
+	${SED} "s:${WRKDIR}:${PREFIX}:g" ${WRKSRC}/sys/system.se.bak > \
 		${WRKSRC}/sys/system.se
 	${RM} -f ${WRKSRC}/sys/system.se.bak
 	${RM} -f ${WRKSRC}/sys/system.se~
+	${RM} -f ${WRKSRC}/Makefile.orig
 
 do-install:
-	${CP} -r ${WRKSRC} ${DESTDIR}${PREFIX}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/SmartEiffel
+	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/SmartEiffel
 
 .include "../../mk/bsd.pkg.mk"
