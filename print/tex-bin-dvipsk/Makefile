@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/06/09 22:47:54 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/08 11:08:18 minskim Exp $
 # TeX Live Revision 12898
 
 DISTNAME=	bin-dvipsk
@@ -22,8 +22,5 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MV} ${WRKSRC}/texmf/scripts/pkfix/pkfix.pl ${WRKSRC}/bin/pkfix
 	${RM} -rf ${WRKSRC}/texmf/scripts
-
-post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/pkfix ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
