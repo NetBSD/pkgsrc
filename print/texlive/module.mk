@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.7 2009/08/01 07:04:27 minskim Exp $
+# $NetBSD: module.mk,v 1.8 2009/08/08 11:05:35 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live 2008 packages.
@@ -75,6 +75,7 @@ _texlive-install:
 			${DESTDIR}${PREFIX}/share/doc/texmf; \
 	fi
 	if [ -d ${WRKSRC}/bin ]; then \
+		${FIND} ${WRKSRC}/bin -name \*.orig -exec ${RM} {} \; ; \
 		${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin; \
 		for script in ${WRKSRC}/bin/*; do \
 			${INSTALL_SCRIPT} $$script ${DESTDIR}${PREFIX}/bin; \
