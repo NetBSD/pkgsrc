@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/09 21:45:47 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -35,6 +35,9 @@ ${PYSITELIB}/lxml/html/_dictmixin.pyo
 ${PYSITELIB}/lxml/html/_diffcommand.py
 ${PYSITELIB}/lxml/html/_diffcommand.pyc
 ${PYSITELIB}/lxml/html/_diffcommand.pyo
+${PYSITELIB}/lxml/html/_html5builder.py
+${PYSITELIB}/lxml/html/_html5builder.pyc
+${PYSITELIB}/lxml/html/_html5builder.pyo
 ${PYSITELIB}/lxml/html/_setmixin.py
 ${PYSITELIB}/lxml/html/_setmixin.pyc
 ${PYSITELIB}/lxml/html/_setmixin.pyo
@@ -53,6 +56,9 @@ ${PYSITELIB}/lxml/html/diff.pyo
 ${PYSITELIB}/lxml/html/formfill.py
 ${PYSITELIB}/lxml/html/formfill.pyc
 ${PYSITELIB}/lxml/html/formfill.pyo
+${PYSITELIB}/lxml/html/html5parser.py
+${PYSITELIB}/lxml/html/html5parser.pyc
+${PYSITELIB}/lxml/html/html5parser.pyo
 ${PYSITELIB}/lxml/html/soupparser.py
 ${PYSITELIB}/lxml/html/soupparser.pyc
 ${PYSITELIB}/lxml/html/soupparser.pyo
