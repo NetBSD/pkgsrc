@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/08/11 14:59:49 he Exp $
+$NetBSD: distinfo,v 1.9 2009/08/09 08:01:29 sno Exp $
 
-SHA1 (Pod-Simple-3.07.tar.gz) = 536638975323830cd25f28508e9ee4ad157444b5
-RMD160 (Pod-Simple-3.07.tar.gz) = 7aa02fadbed44e4b474a08b3a1e050ca64e68761
-Size (Pod-Simple-3.07.tar.gz) = 238988 bytes
+SHA1 (Pod-Simple-3.08.tar.gz) = bfff05440a83ad93eaf582ed34203bb427adaf89
+RMD160 (Pod-Simple-3.08.tar.gz) = 44bdcc2660f82eb075ce54b0b669772df7f0ba0a
+Size (Pod-Simple-3.08.tar.gz) = 265719 bytes
