@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3032 2009/08/09 12:13:38 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3033 2009/08/09 12:27:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4003,3 +4003,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/mew to 6.2 [minskim 2009-08-09]
 	Updated devel/p5-MooseX-MethodAttributes to 0.15 [sno 2009-08-09]
 	Updated devel/p5-Object-InsideOut to 3.56 [sno 2009-08-09]
+	Updated devel/p5-PAR to 0.994 [sno 2009-08-09]
