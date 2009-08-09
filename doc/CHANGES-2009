@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3013 2009/08/09 09:33:39 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3014 2009/08/09 09:38:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3984,3 +3984,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-aliased to 0.30 [sno 2009-08-09]
 	Updated devel/p5-version to 0.7701 [sno 2009-08-09]
 	Updated textproc/py-yaml to 3.08 [wiz 2009-08-09]
+	Updated devel/p5-Parse-Method-Signatures to 1.003010 [sno 2009-08-09]
