@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3072 2009/08/09 22:56:23 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3073 2009/08/09 22:57:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4044,3 +4044,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-savage to 2.3.1 [wiz 2009-08-09]
 	Updated x11/xf86-video-siliconmotion to 1.7.3 [wiz 2009-08-09]
 	Updated x11/xf86-video-sis to 0.10.2 [wiz 2009-08-09]
+	Updated x11/xf86-video-tdfx to 1.4.3 [wiz 2009-08-09]
