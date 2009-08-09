@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8324 2009/08/09 23:03:15 wiz Exp $
+$NetBSD: TODO,v 1.8325 2009/08/09 23:16:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -819,7 +819,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libole2-2.2.8
 	o libprelude-0.9.24 [pkg/41763]
 	o libpreludedb-0.9.15.3 [pkg/41763]
-	o libsigsegv-2.7
 	o libssh-0.3.2
 	o libssh2-1.1
 	o libstree-0.4.2
@@ -828,8 +827,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-base-2.2.6a
 	o libv4l-0.6.0
 	o libxcb-1.4
-	o libxklavier-4.0
-	o libxml++-2.26.1
 	o licq-1.3.6
 	o lighttpd-1.4.23
 	o lincvs-2.1.3 [now called CrossVC]
@@ -898,7 +895,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.26.3 [GNOME 2.26]
 	o mp3blaster-3.2.3
 	o mp3diags-0.99.05.030
-	o mpc-0.16
 	o mpeg4ip-1.6.1
 	o mpg123-1.8.1
 	o mpich-1.4
@@ -921,7 +917,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nawk-20071023
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncftp3-3.2.2
-	o ncmpc-0.14
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
@@ -948,7 +943,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.5p161
 	o nulib2-220
 	o nullmailer-1.04
-	o nut-14.4
 	o nxtvepg-2.8.1
 	o objc-3.2.8
 	o ocaml-3.11.1 [pkg/41695]
