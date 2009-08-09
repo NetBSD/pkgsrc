@@ -1,17 +1,17 @@
-$NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
+$NetBSD: patch-cf,v 1.11 2009/08/09 16:00:53 drochner Exp $
 
---- interface/scan_devices.c.orig	2001-03-26 00:44:01.000000000 -0500
-+++ interface/scan_devices.c	2009-05-18 20:11:24.000000000 -0400
+--- interface/scan_devices.c.orig	2008-08-26 11:55:22.000000000 +0200
++++ interface/scan_devices.c
 @@ -1,6 +1,8 @@
  /******************************************************************
-  * CopyPolicy: GNU Public License 2 applies
-  * Copyright (C) 1998 Monty xiphmont@mit.edu
+  * CopyPolicy: GNU Lesser General Public License 2.1 applies
+  * Copyright (C) 1998-2008 Monty xiphmont@mit.edu
 + * FreeBSD porting (c) 2003
 + *	Simon 'corecode' Schubert <corecode@corecode.ath.cx>
   * 
   * Autoscan for or verify presence of a cdrom device
   * 
-@@ -19,6 +21,8 @@
+@@ -22,6 +24,8 @@
  #include "common_interface.h"
  #include "utils.h"
  
@@ -20,7 +20,7 @@ $NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
  #define MAX_DEV_LEN 20 /* Safe because strings only come from below */
  /* must be absolute paths! */
  static char *scsi_cdrom_prefixes[]={
-@@ -49,11 +53,30 @@ static char *cdrom_devices[]={
+@@ -52,11 +56,30 @@ static char *cdrom_devices[]={
    "/dev/cm206cd",
    "/dev/gscd",
    "/dev/optcd",NULL};
@@ -51,7 +51,7 @@ $NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
    /* Brute force... */
    
    int i=0;
-@@ -75,10 +98,12 @@ cdrom_drive *cdda_find_a_cdrom(int messa
+@@ -78,10 +101,12 @@ cdrom_drive *cdda_find_a_cdrom(int messa
  	if((d=cdda_identify(buffer,messagedest,messages)))
  	  return(d);
  	idmessage(messagedest,messages,"",NULL);
@@ -64,44 +64,48 @@ $NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
        }
      }else{
        /* Name.  Go for it. */
-@@ -97,8 +122,11 @@ cdrom_drive *cdda_find_a_cdrom(int messa
- 	      temp->pw_name);
+@@ -93,11 +118,13 @@ cdrom_drive *cdda_find_a_cdrom(int messa
+     i++;
    }
-   return(NULL);
+   idmessage(messagedest,messages,
+-	    "\n\nNo cdrom drives accessible to %s found.\n",
+-	    cuserid(NULL));
++	    "\n\nNo cdrom drives found.\n", NULL);
 +#endif
+   return(NULL);
  }
 +#endif	/* __linux__ */
  
 +#if !(defined(__APPLE__) && defined(__MACH__))
  cdrom_drive *cdda_identify(const char *device, int messagedest,char **messages){
    struct stat st;
-   cdrom_drive *d=NULL;
-@@ -117,8 +145,14 @@ cdrom_drive *cdda_identify(const char *d
-   }
- #endif
+   cdrom_drive *d=NULL;  
+@@ -119,8 +146,14 @@ cdrom_drive *cdda_identify(const char *d
  
+   /* an IDE device may have scsi-ide support, SG_IO support and cooked
+      support.  Prefer the SCSI variants, they give the most control */
 +#if defined(__linux__) || defined(__NetBSD__)
-   d=cdda_identify_cooked(device,messagedest,messages);
-   if(!d)d=cdda_identify_scsi(device,NULL,messagedest,messages);
+   d=cdda_identify_scsi(NULL,device,messagedest,messages);
+   if(!d)d=cdda_identify_cooked(device,messagedest,messages);
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
 +  d = cdda_identify_scsi(device, NULL, messagedest, messages);
 +  if (d == NULL)
 +	d = cdda_identify_cooked(device, messagedest, messages);
 +#endif
- 
+   
  #ifdef CDDA_TEST
    if(!d)d=cdda_identify_test(device,messagedest,messages);
-@@ -146,6 +180,7 @@ char *test_resolve_symlink(const char *f
+@@ -148,6 +181,7 @@ char *test_resolve_symlink(const char *f
  cdrom_drive *cdda_identify_cooked(const char *dev, int messagedest,
  				  char **messages){
  
 +#ifdef __linux__
    cdrom_drive *d=NULL;
    struct stat st;
-   int fd=-1;
-@@ -273,8 +308,60 @@ cdrom_drive *cdda_identify_cooked(const 
+   int fd=-1, i;
+@@ -272,8 +306,60 @@ cdrom_drive *cdda_identify_cooked(const 
+   }
    idmessage(messagedest,messages,"\t\tCDROM sensed: %s\n",description);
-   
    return(d);
 +#elif defined(__NetBSD__)
 +  /* no kernel support for CD-DA */
@@ -160,7 +164,7 @@ $NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
  struct  sg_id {
    long    l1; /* target | lun << 8 | channel << 16 | low_ino << 24 */
    long    l2; /* Unique id */
-@@ -289,12 +376,18 @@ typedef struct scsiid{
+@@ -288,12 +374,18 @@ typedef struct scsiid{
  /* Even *this* isn't as simple as it bloody well should be :-P */
  /* SG has an easy interface, but SCSI overall does not */
  static int get_scsi_id(int fd, scsiid *id){
@@ -179,7 +183,7 @@ $NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
    if(ioctl(fd,SCSI_IOCTL_GET_IDLUN,&argid))return(-1);
    id->bus=argid.l2; /* for now */
    id->id=argid.l1&0xff;
-@@ -302,6 +395,13 @@ static int get_scsi_id(int fd, scsiid *i
+@@ -301,6 +393,13 @@ static int get_scsi_id(int fd, scsiid *i
  
    if(ioctl(fd,SCSI_IOCTL_GET_BUS_NUMBER,&busarg)==0)
      id->bus=busarg;
@@ -193,7 +197,7 @@ $NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
    
    return(0);
  }
-@@ -390,6 +490,7 @@ matchfail:
+@@ -400,6 +499,7 @@ matchfail:
    if(dev!=-1)close(dev);
    return(NULL);
  }
@@ -201,7 +205,7 @@ $NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
  
  void strscat(char *a,char *b,int n){
    int i;
-@@ -401,6 +502,7 @@ void strscat(char *a,char *b,int n){
+@@ -411,6 +511,7 @@ void strscat(char *a,char *b,int n){
    strcat(a," ");
  }
  
@@ -209,119 +213,127 @@ $NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
  /* At this point, we're going to punt compatability before SG2, and
     allow only SG2 and SG3 */
  static int verify_SG_version(cdrom_drive *d,int messagedest,
-@@ -430,7 +532,9 @@ static int verify_SG_version(cdrom_drive
-   idmessage(messagedest,messages,buffer,"");
-   return(major);
+@@ -488,7 +589,9 @@ int check_sgio(const char *device, int m
+   close(fd);
+   return 0;
  }
 +#endif
  
 +#if defined(__linux__) || defined(__NetBSD__)
- cdrom_drive *cdda_identify_scsi(const char *generic_device, 
- 				const char *ioctl_device, int messagedest,
- 				char **messages){
-@@ -460,6 +564,7 @@ cdrom_drive *cdda_identify_scsi(const ch
- 	       generic_device);
+ /* scanning is always done by specifying a device name in
+    specialized_device; generic_device is only filled when the generic device
+    force option is used, and in that case, use of SG (not SGIO) should indeed be
+@@ -527,11 +630,13 @@ cdrom_drive *cdda_identify_scsi(const ch
        return(NULL);
      }
+ 
 +#ifdef __linux__
      if((int)(g_st.st_rdev>>8)!=SCSI_GENERIC_MAJOR){
-       if((int)(g_st.st_rdev>>8)!=SCSI_CDROM_MAJOR){
- 	idmessage(messagedest,messages,"\t\t%s is not a SCSI device",
-@@ -471,6 +576,7 @@ cdrom_drive *cdda_identify_scsi(const ch
- 	ioctl_device=temp;
-       }
-     }
-+#endif
-   }
-   if(ioctl_device){
-     if(stat(ioctl_device,&i_st)){
-@@ -478,6 +584,7 @@ cdrom_drive *cdda_identify_scsi(const ch
- 	       ioctl_device);
+       idmessage(messagedest,messages,"\t\t%s is not a generic SCSI device",
+ 		generic_device);
        return(NULL);
      }
-+#ifdef __linux__
-     if((int)(i_st.st_rdev>>8)!=SCSI_CDROM_MAJOR){
-       if((int)(i_st.st_rdev>>8)!=SCSI_GENERIC_MAJOR){
- 	idmessage(messagedest,messages,"\t\t%s is not a SCSI device",
-@@ -489,6 +596,7 @@ cdrom_drive *cdda_identify_scsi(const ch
- 	ioctl_device=temp;
-       }
-     }
-+#endif
-   }
- 
-   /* we need to resolve any symlinks for the lookup code to work */
-@@ -505,6 +613,7 @@ cdrom_drive *cdda_identify_scsi(const ch
-   }
- 
-   if(!generic_device || !ioctl_device){
-+#ifdef __linux__
-     if(generic_device){
-       ioctl_device=
- 	scsi_match(generic_device,scsi_cdrom_prefixes,
-@@ -520,6 +629,12 @@ cdrom_drive *cdda_identify_scsi(const ch
-       if(!generic_device)	
- 	goto cdda_identify_scsi_fail;
-     }
-+#else
-+    if(!generic_device)
-+      generic_device = strdup(ioctl_device);
-+    else
-+      ioctl_device = strdup(generic_device);
 +#endif
    }
    
-   idmessage(messagedest,messages,"\t\tgeneric device: %s",generic_device);
-@@ -556,6 +671,7 @@ cdrom_drive *cdda_identify_scsi(const ch
- 
-     type=(int)(i_st.st_rdev>>8);
+   if(specialized_device){ 
+@@ -553,6 +658,7 @@ cdrom_drive *cdda_identify_scsi(const ch
+     if(specialized_device==NULL)goto cdda_identify_scsi_fail;
+   }
  
 +#ifdef __linux__
-     if(type==SCSI_CDROM_MAJOR){
-       if (!S_ISBLK(i_st.st_mode)) {
- 	idmessage(messagedest,messages,"\t\tSCSI CDROM device %s not a "
-@@ -567,8 +683,10 @@ cdrom_drive *cdda_identify_scsi(const ch
- 		"major number",ioctl_device);
+   /* sgio is always preferred if it's there, unless user has forced the generic scsi device name */
+   if(use_sgio){
+     if(check_sgio(specialized_device,messagedest,messages)){
+@@ -562,18 +668,24 @@ cdrom_drive *cdda_identify_scsi(const ch
+       use_sgio=0;
+     }
+   }
++#else
++  use_sgio=0;
++#endif
+   
+   if(!use_sgio){
+ 
+     /* was a generic device passed in as the specialized device name? */
+     if(specialized_device){ 
++#ifdef __linux__
+       if((int)(i_st.st_rdev>>8)==SCSI_GENERIC_MAJOR){
+ 	char *temp=(char *)generic_device;
+ 	generic_device=specialized_device;
+ 	specialized_device=temp;
+       }
++#endif
+       
+       if(!generic_device || !specialized_device){
++#ifdef __linux__
+ 	if(generic_device){
+ 	  specialized_device=
+ 	    scsi_match(generic_device,scsi_cdrom_prefixes,
+@@ -589,6 +701,12 @@ cdrom_drive *cdda_identify_scsi(const ch
+ 	  if(!generic_device)	
+ 	    goto cdda_identify_scsi_fail;
+ 	}
++#else
++    if(!generic_device)
++      generic_device = strdup(specialized_device);
++    else
++      specialized_device = strdup(generic_device);
++#endif
+       }
+     }
+     
+@@ -639,6 +757,7 @@ cdrom_drive *cdda_identify_scsi(const ch
+     type=(int)(i_st.st_rdev>>8);
+ 
+     if(!use_sgio){
++#ifdef __linux__
+       if(type==SCSI_CDROM_MAJOR){
+ 	if (!S_ISBLK(i_st.st_mode)) {
+ 	  idmessage(messagedest,messages,"\t\tSCSI CDROM device %s not a "
+@@ -650,10 +769,12 @@ cdrom_drive *cdda_identify_scsi(const ch
+ 		  "major number",specialized_device);
+ 	goto cdda_identify_scsi_fail;
+       }
++#endif
+     }
+   }
+   
+   if(g_fd != -1){
++#ifdef __linux__
+     if((int)(g_st.st_rdev>>8)==SCSI_GENERIC_MAJOR){
+       if (!S_ISCHR(g_st.st_mode)) {
+ 	idmessage(messagedest,messages,"\t\tGeneric SCSI device %s not a "
+@@ -665,6 +786,7 @@ cdrom_drive *cdda_identify_scsi(const ch
+ 		"major number",generic_device);
        goto cdda_identify_scsi_fail;
      }
 +#endif
    }
  
-+#ifdef __linux__
-   if((int)(g_st.st_rdev>>8)==SCSI_GENERIC_MAJOR){
-     if (!S_ISCHR(g_st.st_mode)) {
-       idmessage(messagedest,messages,"\t\tGeneric SCSI device %s not a "
-@@ -580,6 +698,7 @@ cdrom_drive *cdda_identify_scsi(const ch
- 	      "major number",generic_device);
-     goto cdda_identify_scsi_fail;
-   }
-+#endif
-   
- 
    d=calloc(1,sizeof(cdrom_drive));
-@@ -590,6 +709,7 @@ cdrom_drive *cdda_identify_scsi(const ch
-   d->bigendianp=-1; /* We don't know yet... */
-   d->nsectors=-1;
- 
+@@ -685,6 +807,7 @@ cdrom_drive *cdda_identify_scsi(const ch
+     d->private->sg_buffer=(unsigned char *)(d->private->sg_hd=malloc(MAX_BIG_BUFF_SIZE));
+     g_fd=d->cdda_fd=dup(d->ioctl_fd);
+   }else{
 +#ifdef __linux__
-   version=verify_SG_version(d,messagedest,messages);
-   switch(version){
-   case -1:case 0:case 1:
-@@ -599,6 +719,9 @@ cdrom_drive *cdda_identify_scsi(const ch
-     d->interface=GENERIC_SCSI;
-     break;
-   }
+     version=verify_SG_version(d,messagedest,messages);
+     switch(version){
+     case -1:case 0:case 1:
+@@ -694,6 +817,9 @@ cdrom_drive *cdda_identify_scsi(const ch
+       d->interface=GENERIC_SCSI;
+       break;
+     }
 +#else
 +  d->interface=GENERIC_SCSI;
 +#endif
  
-   /* malloc our big buffer for scsi commands */
-   d->sg=malloc(MAX_BIG_BUFF_SIZE);
-@@ -617,7 +740,16 @@ cdrom_drive *cdda_identify_scsi(const ch
- 
+     /* malloc our big buffer for scsi commands */
+     d->private->sg_hd=malloc(MAX_BIG_BUFF_SIZE);
+@@ -740,6 +866,15 @@ cdrom_drive *cdda_identify_scsi(const ch
+   }
+   
    /* It would seem some TOSHIBA CDROMs gets things wrong */
-  
--  if (!strncmp (p + 8, "TOSHIBA", 7) &&
 +#ifndef TYPE_DISK
 +#define TYPE_DISK	0	/* direct */
 +#endif
@@ -331,12 +343,11 @@ $NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
 +#ifndef TYPE_ROM
 +#define TYPE_ROM	5	/* CD-ROM */
 +#endif
-+  if (p && !strncmp (p + 8, "TOSHIBA", 7) &&
+   if (p &&
+       !strncmp (p + 8, "TOSHIBA", 7) &&
        !strncmp (p + 16, "CD-ROM", 6) &&
-       p[0] == TYPE_DISK) {
-     p[0] = TYPE_ROM;
-@@ -653,6 +785,88 @@ cdda_identify_scsi_fail:
-   if(g_fd!=-1)close(g_fd);
+@@ -780,6 +915,88 @@ cdda_identify_scsi_fail:
+   }
    return(NULL);
  }
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
@@ -424,7 +435,7 @@ $NetBSD: patch-cf,v 1.10 2009/05/19 00:36:06 dholland Exp $
  
  #ifdef CDDA_TEST
  
-@@ -702,3 +916,4 @@ cdrom_drive *cdda_identify_test(const ch
+@@ -829,3 +1046,4 @@ cdrom_drive *cdda_identify_test(const ch
  }
  
  #endif
