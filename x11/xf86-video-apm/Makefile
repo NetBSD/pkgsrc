@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/06/07 11:24:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/09 21:55:11 wiz Exp $
 #
 
-DISTNAME=	xf86-video-apm-1.2.1
-PKGREVISION=	1
+DISTNAME=	xf86-video-apm-1.2.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
