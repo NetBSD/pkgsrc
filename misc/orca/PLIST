@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:07:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/08/09 08:29:03 wiz Exp $
 bin/orca
 ${PYSITELIB}/orca/__init__.py
 ${PYSITELIB}/orca/__init__.pyc
@@ -160,6 +160,9 @@ ${PYSITELIB}/orca/scripts/apps/__init__.pyo
 ${PYSITELIB}/orca/scripts/apps/acroread.py
 ${PYSITELIB}/orca/scripts/apps/acroread.pyc
 ${PYSITELIB}/orca/scripts/apps/acroread.pyo
+${PYSITELIB}/orca/scripts/apps/ekiga.py
+${PYSITELIB}/orca/scripts/apps/ekiga.pyc
+${PYSITELIB}/orca/scripts/apps/ekiga.pyo
 ${PYSITELIB}/orca/scripts/apps/evolution/__init__.py
 ${PYSITELIB}/orca/scripts/apps/evolution/__init__.pyc
 ${PYSITELIB}/orca/scripts/apps/evolution/__init__.pyo
