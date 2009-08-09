@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/06/09 09:16:52 hasso Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/09 22:52:17 wiz Exp $
 #
 
-DISTNAME=	xf86-video-s3virge-1.10.2
+DISTNAME=	xf86-video-s3virge-1.10.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
