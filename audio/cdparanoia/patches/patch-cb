@@ -1,8 +1,8 @@
-$NetBSD: patch-cb,v 1.5 2006/09/03 17:13:30 ben Exp $
+$NetBSD: patch-cb,v 1.6 2009/08/09 16:00:53 drochner Exp $
 
---- interface/low_interface.h.orig	2001-03-25 22:12:11.000000000 -0800
+--- interface/low_interface.h.orig	2008-09-11 12:43:52.000000000 +0200
 +++ interface/low_interface.h
-@@ -25,6 +25,7 @@
+@@ -26,6 +26,7 @@
  #include <sys/time.h>
  #include <sys/types.h>
  
@@ -10,7 +10,7 @@ $NetBSD: patch-cb,v 1.5 2006/09/03 17:13:30 ben Exp $
  #include <linux/major.h>
  #include <linux/version.h>
  
-@@ -48,12 +49,32 @@
+@@ -54,6 +55,20 @@
  #include <linux/cdrom.h>
  #include <linux/major.h>
  
@@ -30,6 +30,8 @@ $NetBSD: patch-cb,v 1.5 2006/09/03 17:13:30 ben Exp $
 +
  #include "cdda_interface.h"
  
+ #ifndef SG_EMULATED_HOST
+@@ -107,10 +122,18 @@ struct cdda_private_data {
  #define MAX_RETRIES 8
  #define MAX_BIG_BUFF_SIZE 65536
  #define MIN_BIG_BUFF_SIZE 4096
@@ -40,11 +42,6 @@ $NetBSD: patch-cb,v 1.5 2006/09/03 17:13:30 ben Exp $
 +#elif defined(__NetBSD__)
 +#define SG_OFF sizeof(scsireq_t)
 +#endif
- 
- #ifndef SG_EMULATED_HOST
- /* old kernel version; the check for the ioctl is still runtime, this
-@@ -64,7 +85,9 @@
- #endif
  
  extern int  cooked_init_drive (cdrom_drive *d);
 +#if !defined(__FreeBSD__) && !defined(__DragonFly__)
