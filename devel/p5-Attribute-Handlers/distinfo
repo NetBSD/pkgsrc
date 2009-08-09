@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2009/06/14 22:24:12 sno Exp $
+$NetBSD: distinfo,v 1.9 2009/08/09 11:13:07 sno Exp $
 
-SHA1 (Attribute-Handlers-0.85.tar.gz) = 707cdb430858d030d5b3799ca6d9553325c92d84
-RMD160 (Attribute-Handlers-0.85.tar.gz) = faf156eb1122aff8ae8b39c20be575e57c2c4dbb
-Size (Attribute-Handlers-0.85.tar.gz) = 22223 bytes
+SHA1 (Attribute-Handlers-0.86.tar.gz) = 140de5d6018d22a6ba8643506bdb4a3a99161dce
+RMD160 (Attribute-Handlers-0.86.tar.gz) = 3f5f4a1a383dcf7eef02d2347e367aa549b39ba0
+Size (Attribute-Handlers-0.86.tar.gz) = 22411 bytes
