@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3066 2009/08/09 22:48:57 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3067 2009/08/09 22:50:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4038,3 +4038,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-neomagic to 1.2.4 [wiz 2009-08-09]
 	Updated x11/xf86-video-nv to 2.1.14 [wiz 2009-08-09]
 	Updated x11/xf86-video-r128 to 6.8.1 [wiz 2009-08-09]
+	Updated x11/xf86-video-rendition to 4.2.2 [wiz 2009-08-09]
