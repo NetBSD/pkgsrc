@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/20 01:10:16 ahoka Exp $
+$NetBSD: distinfo,v 1.2 2009/08/09 09:39:13 wiz Exp $
 
-SHA1 (yaml-0.1.1.tar.gz) = 9215223c6c947182725882e6b7509e9f61e4313b
-RMD160 (yaml-0.1.1.tar.gz) = cd6d6a96b0564dcc5a643bc5bf120f2f0a4cd9f7
-Size (yaml-0.1.1.tar.gz) = 466770 bytes
+SHA1 (yaml-0.1.2.tar.gz) = db151c273474bb0b76b17974e7625d094c8cce53
+RMD160 (yaml-0.1.2.tar.gz) = 7da49975832132205efa0a96e1789e48ac341115
+Size (yaml-0.1.2.tar.gz) = 460685 bytes
