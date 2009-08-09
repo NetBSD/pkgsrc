@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2008/06/20 01:09:22 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2009/08/09 22:25:07 wiz Exp $
 #
 
 DISTNAME=	gle-3.1.0
 PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gle/}		\
-		http://www.linas.org/gle/pub/			\
-		http://metalab.unc.edu/pub/Linux/libs/X/	\
-		ftp://tsx-11.mit.edu/pub/linux/sources/libs/
+		http://www.linas.org/gle/pub/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.linas.org/gle/
