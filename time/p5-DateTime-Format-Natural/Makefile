@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/06/15 23:23:43 sno Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/09 07:31:59 sno Exp $
 
-DISTNAME=	DateTime-Format-Natural-0.77
+DISTNAME=	DateTime-Format-Natural-0.78
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
@@ -11,7 +11,7 @@ COMMENT=	Create machine readable date/time with natural parsing logic
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-boolean>=0:../../devel/p5-boolean
-DEPENDS+=	p5-Date-Calc>=0:../../time/p5-Date-Calc
+DEPENDS+=	p5-Date-Calc>=0:../../devel/p5-Date-Calc
 DEPENDS+=	p5-DateTime>=0:../../time/p5-DateTime
 DEPENDS+=	p5-List-MoreUtils>=0:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Params-Validate>=0:../../devel/p5-Params-Validate
