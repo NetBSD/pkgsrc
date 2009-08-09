@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/07/20 09:49:42 sno Exp $
+# $NetBSD: Makefile,v 1.10 2009/08/09 12:50:15 sno Exp $
 #
 
-DISTNAME=	Perl-Critic-1.100
+DISTNAME=	Perl-Critic-1.103
 PKGNAME=	p5-${DISTNAME}
 #PKGNAME=	p5-${DISTNAME:C/0[0-9][0-9]$/.&/}
 CATEGORIES=	devel perl5
@@ -20,7 +20,7 @@ DEPENDS+=	p5-Exception-Class>=1.23:../../devel/p5-Exception-Class
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	{perl>=5.10,p5-Module-Pluggable>=3.1}:../../devel/p5-Module-Pluggable
-DEPENDS+=	p5-PPI>=1.203:../../devel/p5-PPI
+DEPENDS+=	p5-PPI>=1.205:../../devel/p5-PPI
 DEPENDS+=	p5-Readonly>=1.03:../../devel/p5-Readonly
 DEPENDS+=	p5-String-Format>=1.13:../../devel/p5-String-Format
 DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version
@@ -32,6 +32,8 @@ DEPENDS+=	p5-Perl-Tidy>=0:../../devel/p5-Perl-Tidy
 DEPENDS+=	p5-Pod-Spell>=1:../../textproc/p5-Pod-Spell
 DEPENDS+=	p5-Readonly-XS>=0:../../devel/p5-Readonly-XS
 DEPENDS+=	p5-Regexp-Parser>=0.20:../../devel/p5-Regexp-Parser
+
+BUILD_DEPENDS+=	p5-Module-Build>=0.34000:../../devel/p5-Module-Build
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Perl/Critic/.packlist
