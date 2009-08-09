@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/11/17 03:04:01 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/09 11:41:42 sno Exp $
 #
 
-DISTNAME=	Lexical-Persistence-0.98
+DISTNAME=	Lexical-Persistence-1.01
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lexical/}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lexical/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Lexical-Persistence/
 COMMENT=	Perl 5 module providing persistent lexical variables
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
