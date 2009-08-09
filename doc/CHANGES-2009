@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3051 2009/08/09 21:51:27 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3052 2009/08/09 21:55:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4023,3 +4023,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/py-mad to 0.6 [wiz 2009-08-09]
 	Updated time/py-pytz to 2009j [wiz 2009-08-09]
 	Updated audio/py-musicbrainz to 0.4.1 [wiz 2009-08-09]
+	Updated x11/xf86-video-apm to 1.2.2 [wiz 2009-08-09]
