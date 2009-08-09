@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3019 2009/08/09 09:59:38 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3020 2009/08/09 11:13:19 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3990,3 +3990,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-YAML-Tiny to 1.40 [sno 2009-08-09]
 	Updated devel/p5-prefork to 1.04 [sno 2009-08-09]
 	Updated devel/p5-B-Hooks-OP-PPAddr to 0.03 [sno 2009-08-09]
+	Updated devel/p5-Attribute-Handlers to 0.86 [sno 2009-08-09]
