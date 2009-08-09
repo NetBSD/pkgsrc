@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/08/06 10:56:46 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/08/09 09:45:49 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -44,7 +44,7 @@ include/xulrunner/stable/md/_irix64.cfg
 include/xulrunner/stable/md/_linux.cfg
 include/xulrunner/stable/md/_ncr.cfg
 include/xulrunner/stable/md/_nec.cfg
-include/xulrunner/stable/md/_${LOWER_OPSYS}.cfg
+include/xulrunner/stable/md/_netbsd.cfg
 include/xulrunner/stable/md/_nextstep.cfg
 include/xulrunner/stable/md/_nto.cfg
 include/xulrunner/stable/md/_openbsd.cfg
