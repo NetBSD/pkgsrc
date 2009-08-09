@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2009/03/23 17:41:51 darcy Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/09 21:47:34 wiz Exp $
 #
 
-DISTNAME=		pymad-0.5.4
+DISTNAME=		pymad-0.6
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=		audio python
 MASTER_SITES=		http://spacepants.org/src/pymad/download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://spacepants.org/src/pymad/
 COMMENT=		Python bindings for libmad
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
