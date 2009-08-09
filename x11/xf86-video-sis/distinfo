@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2009/06/09 06:50:08 hasso Exp $
+$NetBSD: distinfo,v 1.6 2009/08/09 22:56:13 wiz Exp $
 
-SHA1 (xf86-video-sis-0.10.1.tar.bz2) = 27d5090d04c496ca0c1192d3ea3f74ffa6d44a42
-RMD160 (xf86-video-sis-0.10.1.tar.bz2) = 3f04b42b6390e3fc6ee1ed4f6d07938671b0e84b
-Size (xf86-video-sis-0.10.1.tar.bz2) = 637423 bytes
+SHA1 (xf86-video-sis-0.10.2.tar.bz2) = c7369196d504671b6fdc9e17c90c0f07aa8e0c24
+RMD160 (xf86-video-sis-0.10.2.tar.bz2) = ba5773d307af3c5d1b6820c48d2934165aae910e
+Size (xf86-video-sis-0.10.2.tar.bz2) = 642160 bytes
 SHA1 (patch-aa) = d0157c386200821133f2049beb5b698cab21126a
 SHA1 (patch-ab) = 72557e7a7ff406549471bc59570f0fa5074df2a8
 SHA1 (patch-ac) = 6ce332ff427b33c40a25efb86101038510c532ed
