@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2009/05/17 21:29:34 dholland Exp $
+$NetBSD: patch-ae,v 1.7 2009/08/09 16:00:53 drochner Exp $
 
---- main.c.orig	2001-03-25 22:44:50.000000000 -0500
-+++ main.c	2009-05-17 17:20:20.000000000 -0400
-@@ -49,7 +49,9 @@
+--- main.c.orig	2008-09-11 23:11:02.000000000 +0200
++++ main.c
+@@ -25,7 +25,9 @@
  #include <unistd.h>
  #include <string.h>
  #include <fcntl.h>
@@ -12,27 +12,31 @@ $NetBSD: patch-ae,v 1.6 2009/05/17 21:29:34 dholland Exp $
  #include <errno.h>
  #include <math.h>
  #include <sys/time.h>
-@@ -231,6 +233,7 @@ VERSION"\n"
+@@ -204,6 +206,7 @@ VERSION"\n"
  "  cdparanoia [options] <span> [outfile]\n\n"
  
  "OPTIONS:\n"
 +#ifdef GETOPT_LONG
- "  -v --verbose                    : extra verbose operation\n"
- "  -q --quiet                      : quiet operation\n"
- "  -e --stderr-progress            : force output of progress information to\n"
-@@ -256,9 +259,11 @@ VERSION"\n"
+ "  -A --analyze-drive              : run and log a complete analysis of drive\n"
+ "                                    caching, timing and reading behavior;\n"
+ "                                    verifies that cdparanoia is correctly\n"
+@@ -239,6 +242,7 @@ VERSION"\n"
  "                                    to n sectors\n"
  "  -o --force-search-overlap  <n>  : force minimum overlap search during\n"
  "                                    verification to n sectors\n"
 +#if !(defined(__APPLE__) && defined(__MACH__))
  "  -d --force-cdrom-device   <dev> : use specified device; disallow \n"
  "                                    autosense\n"
- "  -g --force-generic-device <dev> : use specified generic scsi device\n"
+ "  -k --force-cooked-device  <dev> : use specified cdrom device and force\n"
+@@ -248,6 +252,7 @@ VERSION"\n"
+ "  -g --force-generic-device <dev> : use specified generic scsi device and\n"
+ "                                    force use of the old SG kernel\n"
+ "                                    interface. -g cannot be used with -k.\n"
 +#endif
- "  -S --force-read-speed <n>       : read from device at specified speed\n"
- "  -t --toc-offset <n>             : Add <n> sectors to the values reported\n"
- "                                    when addressing tracks. May be negative\n"
-@@ -276,6 +281,52 @@ VERSION"\n"
+ "  -S --force-read-speed <n>       : read from device at specified speed; by\n"
+ "                                    default, cdparanoia sets drive to full\n"
+ "                                    speed.\n"
+@@ -267,6 +272,52 @@ VERSION"\n"
  "  -Z --disable-paranoia           : disable all paranoia checking\n"
  "  -Y --disable-extra-paranoia     : only do cdda2wav-style overlap checking\n"
  "  -X --abort-on-skip              : abort on imperfect reads/skips\n\n"
@@ -85,24 +89,15 @@ $NetBSD: patch-ae,v 1.6 2009/05/17 21:29:34 dholland Exp $
  
  "OUTPUT SMILIES:\n"
  "  :-)   Normal operation, low/no jitter\n"
-@@ -376,7 +427,7 @@ static void callback(long inpos, int fun
-   int graph=30;
-   char buffer[256];
-   static long c_sector=0,v_sector=0;
--  static char dispcache[30]="                              ";
-+  static char dispcache[30 + 1]="                              ";
-   static int last=0;
-   static long lasttime=0;
-   long sector,osector=0;
-@@ -587,6 +638,7 @@ static void callback(long inpos, int fun
+@@ -606,6 +657,7 @@ static void callback(long inpos, int fun
  
- const char *optstring = "escCn:o:O:d:g:S:prRwafvqVQhZz::YXWBi:Tt:";
+ const char *optstring = "escCn:o:O:d:g:k:S:prRwafvqVQhZz::YXWBi:Tt:l::L::A";
  
 +#ifdef GETOPT_LONG
  struct option options [] = {
  	{"stderr-progress",no_argument,NULL,'e'},
  	{"search-for-drive",no_argument,NULL,'s'},
-@@ -621,6 +673,7 @@ struct option options [] = {
+@@ -644,6 +696,7 @@ struct option options [] = {
  
  	{NULL,0,NULL,0}
  };
@@ -110,7 +105,7 @@ $NetBSD: patch-ae,v 1.6 2009/05/17 21:29:34 dholland Exp $
  
  long blocking_write(int outf, char *buffer, long num){
    long words=0,temp;
-@@ -673,7 +726,12 @@ int main(int argc,char *argv[]){
+@@ -703,7 +756,12 @@ int main(int argc,char *argv[]){
  
    atexit(cleanup);
  
@@ -124,7 +119,7 @@ $NetBSD: patch-ae,v 1.6 2009/05/17 21:29:34 dholland Exp $
      switch(c){
      case 'B':
        batch=1;
-@@ -690,6 +748,7 @@ int main(int argc,char *argv[]){
+@@ -720,6 +778,7 @@ int main(int argc,char *argv[]){
      case 'o':
        force_cdrom_overlap=atoi(optarg);
        break;
@@ -132,15 +127,15 @@ $NetBSD: patch-ae,v 1.6 2009/05/17 21:29:34 dholland Exp $
      case 'd':
        if(force_cdrom_device)free(force_cdrom_device);
        force_cdrom_device=copystring(optarg);
-@@ -698,6 +757,7 @@ int main(int argc,char *argv[]){
+@@ -733,6 +792,7 @@ int main(int argc,char *argv[]){
        if(force_generic_device)free(force_generic_device);
        force_generic_device=copystring(optarg);
        break;
 +#endif
-     case 'S':
-       force_cdrom_speed=atoi(optarg);
-       break;
-@@ -811,6 +871,18 @@ int main(int argc,char *argv[]){
+     case 'k':
+       if(force_generic_device || force_cdrom_device){
+ 	report("-k option incompatable with -d and -g\n");
+@@ -939,6 +999,18 @@ int main(int argc,char *argv[]){
  
    /* Query the cdrom/disc; we may need to override some settings */
  
@@ -156,24 +151,24 @@ $NetBSD: patch-ae,v 1.6 2009/05/17 21:29:34 dholland Exp $
 +    force_cdrom_device=copystring(force_generic_device);
 +#endif
 +
-   if(force_generic_device)
-     d=cdda_identify_scsi(force_generic_device,force_cdrom_device,verbose,NULL);
-   else
-@@ -841,6 +913,7 @@ int main(int argc,char *argv[]){
- 	    report("");
+   if(force_cooked_device){
+     d=cdda_identify_cooked(force_cooked_device,verbose,NULL);
+   }else if(force_generic_device)
+@@ -971,6 +1043,7 @@ int main(int argc,char *argv[]){
+ 	    report(" ");
  	}
        }
 +#endif /* __APPLE__ && __DARWIN__ */
  
    if(!d){
      if(!verbose)
-@@ -878,7 +951,9 @@ int main(int argc,char *argv[]){
- 	      "ignoring preset and autosense",force_cdrom_sectors);
-       report(buffer);
-       d->nsectors=force_cdrom_sectors;
+@@ -1005,7 +1078,9 @@ int main(int argc,char *argv[]){
+     report("Forcing default to read %d sectors; "
+ 	   "ignoring preset and autosense",force_cdrom_sectors);
+     d->nsectors=force_cdrom_sectors;
 +#if !(defined(__APPLE__) && defined(__MACH__))
-       d->bigbuff=force_cdrom_sectors*CD_FRAMESIZE_RAW;
+     d->bigbuff=force_cdrom_sectors*CD_FRAMESIZE_RAW;
 +#endif
-     }
    }
    if(force_cdrom_overlap!=-1){
+     if(force_cdrom_overlap<0 || force_cdrom_overlap>75){

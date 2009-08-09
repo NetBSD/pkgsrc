@@ -1,9 +1,9 @@
-$NetBSD: patch-ca,v 1.7 2009/05/19 00:36:06 dholland Exp $
+$NetBSD: patch-ca,v 1.8 2009/08/09 16:00:53 drochner Exp $
 
---- interface/Makefile.in.orig	1999-12-13 20:27:59.000000000 -0800
+--- interface/Makefile.in.orig	2008-08-21 18:08:54.000000000 +0200
 +++ interface/Makefile.in
 @@ -18,12 +18,10 @@ RANLIB=@RANLIB@
- LIBS = -lm
+ LIBS = -lm -lrt
  CPPFLAGS+=-D_REENTRANT
  
 -OFILES = scan_devices.o	common_interface.o cooked_interface.o interface.o\
@@ -27,28 +27,29 @@ $NetBSD: patch-ca,v 1.7 2009/05/19 00:36:06 dholland Exp $
 -	[ -e libcdda_interface.so.0 ] || ln -s libcdda_interface.so libcdda_interface.so.0
 +	$(MAKE) libcdda_interface.la VERSION=$(VERSION) CFLAGS="$(OPT)" 
  
- test:	
+-test:	
++test:
 +	$(MAKE) lessmessy
  	$(MAKE) libcdda_interface.a CFLAGS="$(DEBUG)"
  	$(CC) $(DEBUG) -c test.c
 -	$(LD) $(DEBUG) test.o $(LDFLAGS) -o cdda_test $(LIBS) libcdda_interface.a
 +	$(LIBTOOL) --mode=link $(LD) $(DEBUG) test.o $(LDFLAGS) -o cdda_test $(LIBS) libcdda_interface.la
 +
-+libcdda_interface.la: 	$(OFILES)	
++libcdda_interface.la: 	$(OFILES)
 +	$(LIBTOOL) --mode=link $(CC) -o libcdda_interface.la $(OFILES:.o=.lo) \
 +	    -version-info 1:0 -rpath $(PREFIX)/lib $(LDFLAGS)
 +
-+libcdda_interface.a: 	libcdda_interface.la
++libcdda_interface.a:	libcdda_interface.la
  
 -libcdda_interface.a: 	$(OFILES)	
 -	$(AR) -r libcdda_interface.a $(OFILES)
 -	$(RANLIB) libcdda_interface.a
 -
 -libcdda_interface.so: 	$(OFILES)	
--	$(CC) -fpic -shared -o libcdda_interface.so.0.$(VERSION) -Wl,-soname -Wl,libcdda_interface.so.0 $(OFILES)
+-	$(CC) -fpic -shared -o libcdda_interface.so.0.$(VERSION) -Wl,-soname -Wl,libcdda_interface.so.0 $(OFILES) $(LIBS)
 -	[ -e libcdda_interface.so.0 ] || ln -s libcdda_interface.so.0.$(VERSION) libcdda_interface.so.0
 -	[ -e libcdda_interface.so ] || ln -s libcdda_interface.so.0.$(VERSION) libcdda_interface.so
-+libcdda_interface.so: 	libcdda_interface.la
++libcdda_interface.so:	libcdda_interface.la
  
  .c.o:
 -	$(CC) $(CFLAGS) -c $<
