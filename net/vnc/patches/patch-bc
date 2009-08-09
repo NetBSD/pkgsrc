@@ -1,0 +1,22 @@
+$NetBSD: patch-bc,v 1.1 2009/08/09 00:53:09 smb Exp $
+
+--- Xvnc/config/makedepend/parse.c.orig	2009-08-08 20:34:37.000000000 -0400
++++ Xvnc/config/makedepend/parse.c	2009-08-08 20:35:18.000000000 -0400
+@@ -40,7 +40,7 @@
+ 	register char	*line;
+ 	register int	type;
+ 
+-	while (line = getline(filep)) {
++	while (line = get_line(filep)) {
+ 		switch(type = deftype(line, filep, file_red, file, FALSE)) {
+ 		case IF:
+ 		case IFFALSE:
+@@ -529,7 +529,7 @@
+ 	register int	type;
+ 	boolean recfailOK;
+ 
+-	while (line = getline(filep)) {
++	while (line = get_line(filep)) {
+ 		switch(type = deftype(line, filep, file_red, file, TRUE)) {
+ 		case IF:
+ 		doif:
