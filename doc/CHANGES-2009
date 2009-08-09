@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3045 2009/08/09 21:13:34 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3046 2009/08/09 21:38:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4017,3 +4017,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated comms/openobex to 1.5 [plunky 2009-08-09]
 	Updated misc/zyGrib to 3.5.1 [plunky 2009-08-09]
 	Updated devel/autoconf to 2.64 [wiz 2009-08-09]
+	Updated textproc/p5-XML-RSS to 1.45 [schmonz 2009-08-09]
