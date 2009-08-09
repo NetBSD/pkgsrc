@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3078 2009/08/09 23:04:41 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3079 2009/08/09 23:07:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4050,3 +4050,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-vesa to 2.2.1 [wiz 2009-08-09]
 	Updated x11/xf86-video-vmware to 10.16.7 [wiz 2009-08-09]
 	Updated devel/libsigsegv to 2.7 [wiz 2009-08-09]
+	Updated textproc/libxml++ to 2.26.1 [wiz 2009-08-09]
