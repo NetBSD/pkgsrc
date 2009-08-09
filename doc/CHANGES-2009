@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3011 2009/08/09 09:26:41 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3012 2009/08/09 09:32:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3982,3 +3982,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Bit-Vector to 6.7 [sno 2009-08-09]
 	Updated devel/p5-Date-Calc to 5.6 [sno 2009-08-09]
 	Updated devel/p5-aliased to 0.30 [sno 2009-08-09]
+	Updated devel/p5-version to 0.7701 [sno 2009-08-09]
