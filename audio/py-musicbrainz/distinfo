@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/13 02:32:45 epg Exp $
+$NetBSD: distinfo,v 1.2 2009/08/09 21:51:14 wiz Exp $
 
-SHA1 (python-musicbrainz2-0.4.0.tar.gz) = 19c5c68190a0b3923788cdafbd18f7296f053d13
-RMD160 (python-musicbrainz2-0.4.0.tar.gz) = f27d83f8be98c38eff5ce8aa8d069fac960c1b78
-Size (python-musicbrainz2-0.4.0.tar.gz) = 56557 bytes
+SHA1 (python-musicbrainz2-0.4.1.tar.gz) = 3b44727beef2e0898984b612d82e59179a9ef726
+RMD160 (python-musicbrainz2-0.4.1.tar.gz) = 855fba56861f6528b11acf6f71dc17fb76d98ed4
+Size (python-musicbrainz2-0.4.1.tar.gz) = 56768 bytes
