@@ -1,26 +1,28 @@
-# $NetBSD: Makefile,v 1.12 2009/04/11 23:15:19 sno Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/09 12:27:31 sno Exp $
 #
 
-DISTNAME=		PAR-0.992
+DISTNAME=		PAR-0.994
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=PAR/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/PAR/
 COMMENT=		Cross-Platform Packaging and Debugging Tool
+LICENSE=		${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Archive-Zip>=1:../../archivers/p5-Archive-Zip
-DEPENDS+=		p5-Module-ScanDeps>=0.45:../../devel/p5-Module-ScanDeps
-DEPENDS+=		p5-PAR-Dist>=0.32:../../devel/p5-PAR-Dist
-DEPENDS+=		p5-Module-Signature>=0.35:../../security/p5-Module-Signature
+DEPENDS+=		p5-AutoLoader>5.66:../../devel/p5-AutoLoader
 DEPENDS+=		p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
-DEPENDS+=		p5-AutoLoader>=5.66.02:../../devel/p5-AutoLoader
+DEPENDS+=		p5-Module-ScanDeps>=0.45:../../devel/p5-Module-ScanDeps
+DEPENDS+=		p5-Module-Signature>=0.35:../../security/p5-Module-Signature
+DEPENDS+=		p5-PAR-Dist>=0.32:../../devel/p5-PAR-Dist
 
 PERL5_PACKLIST=		auto/PAR/.packlist
+#PERL5_MODULE_TYPE=	Module::Install
+MAKE_PARAMS=		--skipdeps
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
