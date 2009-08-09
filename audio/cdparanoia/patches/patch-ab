@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.9 2009/05/19 00:36:06 dholland Exp $
+$NetBSD: patch-ab,v 1.10 2009/08/09 16:00:53 drochner Exp $
 
---- Makefile.in.orig	2001-03-27 17:46:58.000000000 -0500
-+++ Makefile.in	2009-05-17 17:21:32.000000000 -0400
+--- Makefile.in.orig	2008-09-11 22:33:30.000000000 +0200
++++ Makefile.in
 @@ -3,12 +3,12 @@
  # DO NOT EDIT BELOW! ##########################################################
  # (unless, of course, you know what you are doing :) ##########################
  
--VERSION=9.8
-+VERSION=98
+-VERSION=10.2
++VERSION=102
  VPATH=@srcdir@
  srcdir=@srcdir@
  
@@ -17,19 +17,19 @@ $NetBSD: patch-ab,v 1.9 2009/05/19 00:36:06 dholland Exp $
  OPT=@OPT@ $(FLAGS)
  DEBUG=@DEBUG@ $(FLAGS)
  CC=@CC@
-@@ -27,29 +27,29 @@ PWD = $(shell pwd)
+@@ -27,28 +27,28 @@ PWD = $(shell pwd)
  
- OFILES = main.o report.o header.o buffering_write.o
+ OFILES = main.o report.o header.o buffering_write.o cachetest.o
  
 -export STATIC 
  export VERSION
  
 -ifeq ($(STATIC),TRUE)
 -	LIBS = interface/libcdda_interface.a paranoia/libcdda_paranoia.a \
--		-static -lm
+-		-static -lm -lrt
 -	LIBDEP = interface/libcdda_interface.a paranoia/libcdda_paranoia.a
 -else
--	LIBS = -lcdda_interface -lcdda_paranoia -lm
+-	LIBS = -lcdda_interface -lcdda_paranoia -lm -lrt
 -	LIBDEP = interface/libcdda_interface.so paranoia/libcdda_paranoia.so
 -endif
 +STLIBS = interface/libcdda_interface.a paranoia/libcdda_paranoia.a -lm
@@ -39,20 +39,18 @@ $NetBSD: patch-ab,v 1.9 2009/05/19 00:36:06 dholland Exp $
 +SHLIBS = $(SHLIBDEP) @EXTRA_LIBS@ -lm
  
 -all: 	
-+
 +all:
  	cd interface && $(MAKE) all
  	cd paranoia && $(MAKE) all
 -	$(MAKE) cdparanoia CFLAGS="$(OPT)" 
--	strip cdparanoia
 +	$(MAKE) cdparanoia CFLAGS="$(OPT)" LIBS="$(SHLIBS)" LIBDEP="$(SHLIBDEP)"
-+
+ 
+-debug:  
 +static:
 +	cd interface && $(MAKE) lib
 +	cd paranoia && $(MAKE) lib
 +	$(MAKE) cdparanoia CFLAGS="$(OPT)" LIBS="$(STLIBS)" LIBDEP="$(STLIBDEP)"
- 
--debug:  
++
 +debug:
  	cd interface && $(MAKE) debug
  	cd paranoia && $(MAKE) debug
@@ -61,12 +59,12 @@ $NetBSD: patch-ab,v 1.9 2009/05/19 00:36:06 dholland Exp $
  
  test:	
  	cd interface && $(MAKE) all
-@@ -64,32 +64,20 @@ slib:
+@@ -63,32 +63,20 @@ slib:
  	cd paranoia && $(MAKE) slib
  
  install:
 -	$(INSTALL) -d -m 0755 $(BINDIR)
--	$(INSTALL) -m 0755 $(srcdir)/cdparanoia $(BINDIR)
+-	$(INSTALL) -m 755 $(srcdir)/cdparanoia $(BINDIR)
 -	$(INSTALL) -d -m 0755 $(MANDIR)
 -	$(INSTALL) -d -m 0755 $(MANDIR)/man1
 -	$(INSTALL) -m 0644 $(srcdir)/cdparanoia.1 $(MANDIR)/man1
