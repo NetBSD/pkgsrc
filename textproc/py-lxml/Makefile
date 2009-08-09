@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/02/17 15:35:45 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/09 21:45:47 wiz Exp $
 #
 
-DISTNAME=	lxml-2.1.3
+DISTNAME=	lxml-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://codespeak.net/lxml/
 EXTRACT_SUFX=	.tgz
