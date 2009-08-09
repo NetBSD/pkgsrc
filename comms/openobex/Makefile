@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2009/08/07 12:18:33 plunky Exp $
+# $NetBSD: Makefile,v 1.19 2009/08/09 08:00:46 plunky Exp $
 #
 
 DISTNAME=	openobex-1.5
 CATEGORIES=	comms
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
+MASTER_SITES=	http://www.kernel.org/pub/linux/bluetooth/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openobex.org/
