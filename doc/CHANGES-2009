@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3038 2009/08/09 13:06:58 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3039 2009/08/09 13:17:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4009,3 +4009,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Proc-Simple to 1.26 [sno 2009-08-09]
 	Updated www/p5-CGI to 3.44 [sno 2009-08-09]
 	Updated www/p5-HTTP-Response-Encoding to 0.06 [sno 2009-08-09]
+	Updated textproc/p5-Text-SimpleTable to 2.0 [sno 2009-08-09]
