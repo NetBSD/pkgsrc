@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2009/07/08 08:21:28 sno Exp $
+# $NetBSD: Makefile,v 1.17 2009/08/09 11:53:34 sno Exp $
 #
 
-DISTNAME=	Module-ScanDeps-0.91
+DISTNAME=	Module-ScanDeps-0.93
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5msd
 CATEGORIES=	devel perl5
@@ -12,8 +12,9 @@ HOMEPAGE=	http://search.cpan.org/dist/Module-ScanDeps/
 COMMENT=	Perl 5 module to recursively scan Perl code for dependencies
 LICENSE=	${PERL5_LICENSE}
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Module/ScanDeps/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Module/ScanDeps/.packlist
+PERL5_MODULE_TYPE=	Module::Install
 
 REPLACE_PERL+=	script/scandeps.pl
 
