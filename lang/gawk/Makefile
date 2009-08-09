@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/08/08 16:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/08/09 11:35:47 tron Exp $
 
 DISTNAME=	gawk-3.1.7
 CATEGORIES=	lang
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gawk/gawk.html
 COMMENT=	GNU awk
+LICENSE=	gnu-gpl-v3
 
 CONFLICTS=	ja-gawk-[0-9]*
 
