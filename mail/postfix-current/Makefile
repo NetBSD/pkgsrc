@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2009/06/04 14:08:06 martti Exp $
+# $NetBSD: Makefile,v 1.108 2009/08/09 21:17:49 heinz Exp $
 
 DISTNAME=	postfix-2.7-20090528
 PKGNAME=	postfix-2.7.20090528
@@ -17,6 +17,7 @@ LICENSE=	postfix-license
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 CONFLICTS+=	postfix-2.6-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	perl
@@ -126,7 +127,7 @@ CONF_FILES+=		${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 CONF_FILES_PERMS=	# empty
 .for i in post-install postfix-script
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i} \
-			${ROOT_USER} ${ROOT_GROUP} 755
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 .endfor
 
 MAKE_ENV+=		DEBUG= # empty
@@ -135,6 +136,12 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
+
+.if !empty(USE_DESTDIR:M[Yy][Ee][Ss])
+DESTDIR_INSTALLOPTIONS=-package install_root="${DESTDIR}"
+.endif
+
+INSTALLATION_DIRS+=	${LIBEXECDIR} ${EXAMPLEDIR} ${DOCDIR}
 
 post-extract:
 	cp ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
@@ -151,21 +158,19 @@ post-build:
 .endif
 
 do-install:
-	${INSTALL_DATA_DIR} ${LIBEXECDIR}
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
 	rm -f ${WRKSRC}/conf/*.orig
 .if !empty(PKG_OPTIONS:Msasl)
-	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${DESTDIR}${EXAMPLEDIR}
 .endif
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${EXAMPLEDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLEDIR}/mailer.conf
 	cd ${WRKSRC} && sh ./postfix-install -non-interactive		\
-		config_directory="${EXAMPLEDIR}"
+		${DESTDIR_INSTALLOPTIONS} config_directory="${EXAMPLEDIR}"
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
+		${DESTDIR}${EXAMPLEDIR}/mailer.conf
 	${INSTALL_SCRIPT} ${WRKSRC}/auxiliary/qshape/qshape.pl \
-		${PREFIX}/sbin/qshape
+		${DESTDIR}${PREFIX}/sbin/qshape
 	${INSTALL_MAN} ${WRKSRC}/man/man1/qshape.1 \
-		${PREFIX}/${PKGMANDIR}/man1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
