@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2009/05/14 12:57:57 taca Exp $
+$NetBSD: distinfo,v 1.17 2009/08/09 22:40:15 wiz Exp $
 
-SHA1 (xf86-video-intel-2.7.1.tar.bz2) = f863ee65b4b7779077af9f819b07033264284628
-RMD160 (xf86-video-intel-2.7.1.tar.bz2) = 25208fe03f0fe849974a703f4a81e734e67cad18
-Size (xf86-video-intel-2.7.1.tar.bz2) = 780625 bytes
-SHA1 (patch-ad) = db9a5a55cd0c31e1e0d62b9cd94393143ab23c08
+SHA1 (xf86-video-intel-2.8.0.tar.bz2) = 77ea9054e46662d84d5b33a088a48cb175662915
+RMD160 (xf86-video-intel-2.8.0.tar.bz2) = da08598a0f19bab17f014a8ef84ccfbe028ae023
+Size (xf86-video-intel-2.8.0.tar.bz2) = 750394 bytes
+SHA1 (patch-aa) = 1cdd617d6ad213ec6e619822345abdd7a3f2fb28
 SHA1 (patch-ag) = 68f282d59e03c74727de4577eb48297d9022e542
