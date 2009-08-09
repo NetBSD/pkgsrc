@@ -1,0 +1,17 @@
+Shamir's Secret Sharing Scheme (SSSS) is an implementation of a
+threshold scheme for sharing a secret between third parties, and
+requiring a threshold of those parties to collaborate to reveal the
+secret.
+
+Taken from the Wikipedia article about Secret Sharing:
+
+	In cryptography, a secret sharing scheme is a method for
+	distributing a secret amongst a group of participants, each of
+	which is allocated a share of the secret.  The secret can only
+	be reconstructed when the shares are combined together;
+	individual shares are of no use on their own.
+
+Shamir's scheme is provable secure:  in a (t,n) scheme one can prove
+that it makes no difference whether an attacker has t-1 valid shares
+at his disposal or none at all; as long as he has less than t shares,
+there is no better option than guessing to find out the secret.
