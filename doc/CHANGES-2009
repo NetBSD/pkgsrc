@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3049 2009/08/09 21:47:46 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3050 2009/08/09 21:49:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4021,3 +4021,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/py-cups to 1.9.46 [wiz 2009-08-09]
 	Updated textproc/py-lxml to 2.2.2 [wiz 2009-08-09]
 	Updated audio/py-mad to 0.6 [wiz 2009-08-09]
+	Updated time/py-pytz to 2009j [wiz 2009-08-09]
