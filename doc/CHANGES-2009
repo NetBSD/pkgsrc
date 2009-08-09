@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3028 2009/08/09 11:53:48 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3029 2009/08/09 11:59:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3999,3 +3999,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Lexical-Persistence to 1.01 [sno 2009-08-09]
 	Updated devel/p5-Log-Log4perl to 1.24 [sno 2009-08-09]
 	Updated devel/p5-Module-ScanDeps to 0.93 [sno 2009-08-09]
+	Updated devel/p5-MooseX-Traits-Pluggable to 0.07 [sno 2009-08-09]
