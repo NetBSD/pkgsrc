@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2009/08/05 02:43:47 tnn Exp $
+@comment $NetBSD: PLIST,v 1.35 2009/08/09 23:05:42 tnn Exp $
 bin/firefox
 include/firefox/stable/base64.h
 include/firefox/stable/blapit.h
@@ -678,7 +678,6 @@ lib/firefox/icons/mozicon50.xpm
 lib/firefox/icons/updater.png
 lib/firefox/libfreebl3.chk
 lib/firefox/libfreebl3.so
-${PLIST.jemalloc}lib/firefox/libjemalloc.so
 lib/firefox/libmozjs.so
 lib/firefox/libnspr4.so
 lib/firefox/libnss3.so
