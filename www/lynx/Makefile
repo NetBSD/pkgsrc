@@ -1,22 +1,16 @@
-# $NetBSD: Makefile,v 1.105 2009/05/01 15:16:12 zafer Exp $
+# $NetBSD: Makefile,v 1.106 2009/08/09 08:20:27 wiz Exp $
 
-#
-# NOTE: Please do not enable the lynxcgi feature unless it is lynx
-# version 2.8.6dev.15 or later.  There is a known security issue
-# with this feature in earlier versions (CVE-2005-2929, CVE-2008-4690).
-#
-
-DISTNAME=	lynx2.8.6rel.5
-PKGNAME=	lynx-2.8.6.5
-PKGREVISION=	2
+DISTNAME=	lynx2.8.7
+PKGNAME=	lynx-2.8.7
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${SUBDIR:Q}/ \
-		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/ 
+		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lynx.isc.org/
 COMMENT=	Alphanumeric display oriented World-Wide Web Client
+LICENSE=	gnu-gpl-v2
 
 # problem with WWW/Library/Implementation
 MAKE_JOBS_SAFE=		no
@@ -24,8 +18,8 @@ MAKE_JOBS_SAFE=		no
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-SUBDIR=			current
-WRKSRC=			${WRKDIR}/lynx2-8-6
+SUBDIR=			${DISTNAME}
+WRKSRC=			${WRKDIR}/lynx2-8-7
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 BROKEN_GETTEXT_DETECTION= yes
