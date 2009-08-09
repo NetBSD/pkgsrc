@@ -1,0 +1,11 @@
+It's easy to create memory leaks in Catalyst applications and often they're
+hard to find. This module tries to help you finding them by automatically
+checking for common causes of leaks.
+
+Right now, only one cause for leaks is looked for: putting a closure, that
+closes over the Catalyst context (often called $ctx or $c), onto the stash,
+without weakening the reference first. More checks might be implemented in
+the future.
+
+This module is intended for debugging only. I suggest to not enable it in a
+production environment.
