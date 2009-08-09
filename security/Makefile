@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.353 2009/07/23 05:53:05 jnemeth Exp $
+# $NetBSD: Makefile,v 1.354 2009/08/09 05:53:28 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -297,6 +297,7 @@ SUBDIR+=	sshfp
 SUBDIR+=	ssldump
 SUBDIR+=	sslproxy
 SUBDIR+=	sslwrap
+SUBDIR+=	ssss
 SUBDIR+=	starttls
 SUBDIR+=	steghide
 SUBDIR+=	stegtunnel
