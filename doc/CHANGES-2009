@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3043 2009/08/09 14:06:19 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3044 2009/08/09 15:11:02 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4014,3 +4014,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/p5-CatalystX-LeakChecker version 0.02 [sno 2009-08-09]
 	Updated misc/esniper to 2.19.0nb1 [heinz 2009-08-09]
 	Updated textproc/p5-Text-Balanced to 2.02 [sno 2009-08-09]
+	Updated comms/openobex to 1.5 [plunky 2009-08-09]
+	Updated misc/zyGrib to 3.5.1 [plunky 2009-08-09]
