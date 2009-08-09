@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/08/09 09:45:49 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/08/09 21:05:01 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -456,8 +456,16 @@ include/xulrunner/stable/sslproto.h
 include/xulrunner/stable/sslt.h
 include/xulrunner/stable/utilrename.h
 include/xulrunner/stable/xpcom-config.h
+${PLIST.jit}include/xulrunner/unstable/Assembler.h
+${PLIST.jit}include/xulrunner/unstable/Fragmento.h
+${PLIST.jit}include/xulrunner/unstable/LIR.h
+${PLIST.jit}include/xulrunner/unstable/Native.h
+${PLIST.jit}include/xulrunner/unstable/Native${MACHINE_ARCH}.h
 include/xulrunner/unstable/ProxyJNI.h
+${PLIST.jit}include/xulrunner/unstable/RegAlloc.h
+${PLIST.jit}include/xulrunner/unstable/TraceTreeDrawer.h
 include/xulrunner/unstable/XPCIDispatch.h
+${PLIST.jit}include/xulrunner/unstable/avmplus.h
 include/xulrunner/unstable/base64.h
 include/xulrunner/unstable/blapit.h
 include/xulrunner/unstable/bool.h
@@ -536,6 +544,7 @@ include/xulrunner/unstable/jsautocfg.h
 include/xulrunner/unstable/jsautokw.h
 include/xulrunner/unstable/jsbit.h
 include/xulrunner/unstable/jsbool.h
+${PLIST.jit}include/xulrunner/unstable/jsbuiltins.h
 include/xulrunner/unstable/jsclist.h
 include/xulrunner/unstable/jscntxt.h
 include/xulrunner/unstable/jscompat.h
@@ -593,6 +602,7 @@ include/xulrunner/unstable/mozITXTToHTMLConv.h
 include/xulrunner/unstable/mozcontainer.h
 include/xulrunner/unstable/mozdrawingarea.h
 include/xulrunner/unstable/mozilla-config.h
+${PLIST.jit}include/xulrunner/unstable/nanojit.h
 include/xulrunner/unstable/necko-config.h
 include/xulrunner/unstable/netCore.h
 include/xulrunner/unstable/nsASocketHandler.h
