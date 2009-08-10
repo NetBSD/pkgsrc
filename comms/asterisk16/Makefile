@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/07/07 08:14:42 jnemeth Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/10 06:51:06 jnemeth Exp $
 #
 
-DISTNAME=	asterisk-1.6.1.1
+DISTNAME=	asterisk-1.6.1.2
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 CATEGORIES=	comms net audio
