@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2009/08/10 10:00:19 drochner Exp $
+
+--- src/sj-main.c.orig	2009-02-24 13:05:50.000000000 +0100
++++ src/sj-main.c
+@@ -1416,7 +1416,8 @@ void on_artist_edit_changed(GtkEditable 
+ 
+   if (current_album->artist) {
+     former_album_artist = current_album->artist;
+-  }
++  } else
++    former_album_artist = g_strdup("");
+   current_album->artist = gtk_editable_get_chars (widget, 0, -1); /* get all the characters */
+ 
+   if (!gtk_tree_model_get_iter_first (GTK_TREE_MODEL (track_store), &iter)) {
