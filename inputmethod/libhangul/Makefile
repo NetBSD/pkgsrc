@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/12/20 22:59:59 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/10 13:17:34 minskim Exp $
 
 DISTNAME=	libhangul-0.0.9
 CATEGORIES=	inputmethod korean
@@ -10,6 +10,7 @@ COMMENT=	Library used by Korean input methods
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libhangul.pc.in
