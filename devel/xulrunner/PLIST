@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/08/09 21:05:01 tnn Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/08/10 13:13:42 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -2372,6 +2372,7 @@ lib/xulrunner/defaults/profile/localstore.rdf
 lib/xulrunner/dependentlibs.list
 lib/xulrunner/dictionaries/en-US.aff
 lib/xulrunner/dictionaries/en-US.dic
+lib/xulrunner/gre.d/${PKGVERSION}.system.conf
 lib/xulrunner/greprefs/all.js
 lib/xulrunner/greprefs/security-prefs.js
 lib/xulrunner/greprefs/xpinstall.js
