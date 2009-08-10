@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2009/08/10 00:27:49 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/10 13:13:42 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
 XULRUNNER_VER=	1.9.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -59,7 +59,15 @@ CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 
 ALL_ENV+=		MOZILLA_PKG_NAME=xulrunner
-INSTALL_ENV+=		SKIP_GRE_REGISTRATION=defined
+
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		xpcom/build/nsXPCOMPrivate.h
+SUBST_FILES.fix-paths+=		xulrunner/app/nsRegisterGREUnix.cpp
+SUBST_FILES.fix-paths+=		xulrunner/installer/Makefile.in
+SUBST_FILES.fix-paths+=		extensions/java/xpcom/interfaces/org/mozilla/xpcom/Mozilla.java
+SUBST_SED.fix-paths=		-e 's,/etc/gre.d,${PREFIX}/lib/xulrunner/gre.d,g'
 
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
