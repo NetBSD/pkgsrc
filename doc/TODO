@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8325 2009/08/09 23:16:53 wiz Exp $
+$NetBSD: TODO,v 1.8326 2009/08/10 06:18:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1351,6 +1351,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xextproto-7.1.0 [wait for modular-xorg-server>1.6.3, libXext, libXtst]
 	o xf86-video-dummy-0.3.2
 	o xf86-video-geode-2.11.3 [wip]
+	o xf86-video-intel-2.8.0
 	o xf86-video-sisusb-0.9.2
 	o xf86-video-voodoo-1.2.2
 	o xfce-4.6.0 [pkg/40984]
