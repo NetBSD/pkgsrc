@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.31 2009/08/08 22:55:47 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.32 2009/08/10 11:59:23 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -118,3 +118,5 @@ Pullup ticket #2851 - requested by tron
 squid31: security update
 Pullup ticket #2857 - requested by obache
 GraphicsMagick: security update
+Pullup ticket #2858 - requested by bouyer
+py-smbpasswd: build fix
