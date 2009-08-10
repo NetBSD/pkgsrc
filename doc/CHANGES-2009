@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3086 2009/08/10 06:41:57 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3087 2009/08/10 06:49:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4058,3 +4058,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Downgraded x11/fx86-video-intel to 2.7.1nb1 [wiz 2009-08-10]
 	Updated fonts/inconsolata-ttf to 20090207 [wiz 2009-08-10]
 	Updated security/p5-Module-Signature to 0.55nb2 [sno 2009-08-10]
+	Updated textproc/p5-Text-CSV_XS to 0.67 [sno 2009-08-10]
