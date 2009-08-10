@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3088 2009/08/10 08:47:58 tron Exp $
+$NetBSD: CHANGES-2009,v 1.3089 2009/08/10 11:45:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4061,3 +4061,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-CSV_XS to 0.67 [sno 2009-08-10]
 	Updated mail/fetchmail to 6.3.11 [tron 2009-08-10]
 	Updated mail/fetchmailconf to 6.3.11 [tron 2009-08-10]
+	Updated www/apache22 to 2.2.13 [tron 2009-08-10]
