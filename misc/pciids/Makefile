@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/03/01 15:03:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/10 23:12:11 wiz Exp $
 #
 
-DISTNAME=	pciids-20090224
+DISTNAME=	pciids-20090807
 CATEGORIES=	misc
 MASTER_SITES=	http://people.freebsd.org/~ahze/distfiles/
 EXTRACT_SUFX=	.tar.bz2
