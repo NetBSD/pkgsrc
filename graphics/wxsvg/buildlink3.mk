@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:24:45 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/08/10 16:57:43 wiz Exp $
 
 BUILDLINK_TREE+=	wxsvg
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.wxsvg?=	../../graphics/wxsvg
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
-.include "../../x11/wxGTK26/buildlink3.mk"
+.include "../../x11/wxGTK28/buildlink3.mk"
 .endif # WXSVG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-wxsvg
