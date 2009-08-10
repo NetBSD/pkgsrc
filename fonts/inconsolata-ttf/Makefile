@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/10 02:41:28 perry Exp $
 #
 
 DISTNAME=	Inconsolata.otf
-PKGNAME=	inconsolata-20070822
+PKGNAME=	inconsolata-20080207
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.levien.com/type/myfonts/
 EXTRACT_SUFX=	# empty
