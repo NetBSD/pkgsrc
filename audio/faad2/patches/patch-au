@@ -1,13 +1,17 @@
-$NetBSD: patch-au,v 1.1 2009/07/13 12:55:54 tonio Exp $
+$NetBSD: patch-au,v 1.2 2009/08/10 00:01:56 tnn Exp $
 
-install mp4ff
-
---- ./common/mp4ff/Makefile.am.orig	2006-05-07 20:09:00.000000000 +0200
-+++ ./common/mp4ff/Makefile.am
-@@ -1,4 +1,5 @@
--noinst_LTLIBRARIES = libmp4ff.la
+--- common/mp4ff/Makefile.am.orig	2009-02-06 15:24:21.000000000 +0100
++++ common/mp4ff/Makefile.am
+@@ -1,7 +1,8 @@
+-lib_LIBRARIES = libmp4ff.a
 +lib_LTLIBRARIES = libmp4ff.la
-+include_HEADERS = mp4ff.h
+ include_HEADERS = mp4ff.h mp4ffint.h
  
- libmp4ff_la_CFLAGS = -DUSE_TAGGING=1
+-libmp4ff_a_CFLAGS = -DUSE_TAGGING=1
++libmp4ff_la_CFLAGS = -DUSE_TAGGING=1
  
+-libmp4ff_a_SOURCES = mp4ff.c mp4atom.c mp4meta.c mp4sample.c mp4util.c \
+-		     mp4tagupdate.c mp4ff.h mp4ffint.h mp4ff_int_types.h
++libmp4ff_la_SOURCES = mp4ff.c mp4atom.c mp4meta.c mp4sample.c mp4util.c mp4tagupdate.c
++
++libmp4ff_la_INCLUDES= mp4ff.h mp4ffint.h mp4ff_int_types.h
