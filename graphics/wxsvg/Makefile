@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2008/09/22 20:21:03 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/08/10 16:57:43 wiz Exp $
 #
 
 DISTNAME=	wxsvg-1.0b6
 PKGNAME=	${DISTNAME:S/b/beta/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxsvg/}
 
@@ -20,5 +20,5 @@ USE_TOOLS+=		gmake pkg-config
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
-.include "../../x11/wxGTK26/buildlink3.mk"
+.include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
