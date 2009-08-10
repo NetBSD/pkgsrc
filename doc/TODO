@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8327 2009/08/10 08:47:58 tron Exp $
+$NetBSD: TODO,v 1.8328 2009/08/10 17:53:45 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1336,7 +1336,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
-	o xchm-1.17
 	o xcircuit-3.6.85
 	o xdaliclock-2.25
 	o xdelta-3.0v2
