@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3094 2009/08/10 17:00:36 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3095 2009/08/10 17:50:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4067,3 +4067,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/mmg to 1.7.0nb1 [wiz 2009-08-10]
 	Updated multimedia/dvdstyler to 1.5.1nb1 [wiz 2009-08-10]
 	Updated misc/xchm to 1.13nb1 [wiz 2009-08-10]
+	Updated misc/xchm to 1.17 [minskim 2009-08-10]
