@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2009/08/10 14:18:12 apb Exp $
+
+On some systems, curses.h defines TRUE and FALSE, so conditionalise
+them here to avoid compiler complaints about duplicate definitions.
+
+--- lib.h.orig	2009-06-01 18:29:32.000000000 +0200
++++ lib.h
+@@ -54,8 +54,12 @@
+ #  define N_(a) a
+ # endif
+ 
+-# define TRUE 1
+-# define FALSE 0
++# ifndef TRUE
++#  define TRUE 1
++# endif
++# ifndef FALSE
++#  define FALSE 0
++# endif
+ 
+ # define HUGE_STRING	5120
+ # define LONG_STRING     1024
