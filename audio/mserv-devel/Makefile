@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/26 05:45:55 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/10 11:32:40 drochner Exp $
 #
 
 DISTNAME=	mserv-0.39a
@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 
 REPLACE_PERL=		support/mservedit webclient/main.cgi \
 			webclient/margin.cgi webclient/mserv.cgi
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run pkg-config
 
 post-configure:
 	${MV} ${WRKSRC}/mserv/soundcard.h ${WRKSRC}/mserv/mservsoundcard.h
