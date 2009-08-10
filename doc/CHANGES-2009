@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3087 2009/08/10 06:49:46 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3088 2009/08/10 08:47:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4059,3 +4059,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/inconsolata-ttf to 20090207 [wiz 2009-08-10]
 	Updated security/p5-Module-Signature to 0.55nb2 [sno 2009-08-10]
 	Updated textproc/p5-Text-CSV_XS to 0.67 [sno 2009-08-10]
+	Updated mail/fetchmail to 6.3.11 [tron 2009-08-10]
+	Updated mail/fetchmailconf to 6.3.11 [tron 2009-08-10]

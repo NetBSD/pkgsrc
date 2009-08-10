@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8326 2009/08/10 06:18:52 wiz Exp $
+$NetBSD: TODO,v 1.8327 2009/08/10 08:47:58 tron Exp $
 
 Suggested new packages
 ======================
@@ -582,7 +582,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fdgw-20040609
 	o festival-1.96
 	o felt-3.07
-	o fetchmail-6.3.10
 	o fetchyahoo-2.13.0
 	o fftw-3.2.2
 	o fillets-ng-0.7.4
