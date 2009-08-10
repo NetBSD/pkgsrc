@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3092 2009/08/10 16:58:29 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3093 2009/08/10 16:59:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4065,3 +4065,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/Transmission to 1.73 [tnn 2009-08-10]
 	Updated graphics/wxsvg to 1.0beta6nb2 [wiz 2009-08-10]
 	Updated multimedia/mmg to 1.7.0nb1 [wiz 2009-08-10]
+	Updated multimedia/dvdstyler to 1.5.1nb1 [wiz 2009-08-10]
