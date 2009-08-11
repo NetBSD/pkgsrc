@@ -1,0 +1,15 @@
+$NetBSD: patch-ds,v 1.1 2009/08/11 14:26:59 taca Exp $
+
+* Constify.
+
+--- ext/openssl/ossl_x509cert.c.orig	2007-06-09 00:02:04.000000000 +0900
++++ ext/openssl/ossl_x509cert.c
+@@ -690,7 +690,7 @@ static VALUE
+ ossl_x509_inspect(VALUE self)
+ {
+     VALUE str;
+-    char *cname = rb_class2name(rb_obj_class(self));
++    const char *cname = rb_class2name(rb_obj_class(self));
+ 
+     str = rb_str_new2("#<");
+     rb_str_cat2(str, cname);
