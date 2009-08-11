@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.18 2009/02/22 19:11:48 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.19 2009/08/11 20:48:06 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -261,17 +261,17 @@ int
 fetch_bind(int sd, int af, const char *addr)
 {
 	struct addrinfo hints, *res, *res0;
-	int error;
 
 	memset(&hints, 0, sizeof(hints));
 	hints.ai_family = af;
 	hints.ai_socktype = SOCK_STREAM;
 	hints.ai_protocol = 0;
-	if ((error = getaddrinfo(addr, NULL, &hints, &res0)) != 0)
+	if (getaddrinfo(addr, NULL, &hints, &res0))
 		return (-1);
-	for (res = res0; res; res = res->ai_next)
+	for (res = res0; res; res = res->ai_next) {
 		if (bind(sd, res->ai_addr, res->ai_addrlen) == 0)
 			return (0);
+	}
 	return (-1);
 }
 
@@ -614,7 +614,7 @@ int
 fetch_putln(conn_t *conn, const char *str, size_t len)
 {
 	struct iovec iov[2];
-	int ret;
+	ssize_t ret;
 
 	iov[0].iov_base = DECONST(char *, str);
 	iov[0].iov_len = len;
