@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2009/08/10 00:01:56 tnn Exp $
+$NetBSD: patch-ab,v 1.5 2009/08/11 11:16:38 drochner Exp $
 
 --- frontend/Makefile.am.orig	2009-02-06 17:03:37.000000000 +0100
 +++ frontend/Makefile.am
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.4 2009/08/10 00:01:56 tnn Exp $
  
  faad_LDADD = $(top_builddir)/libfaad/libfaad.la \
 -	     $(top_builddir)/common/mp4ff/libmp4ff.a
-+	     $(top_builddir)/common/mp4ff/.libs/libmp4ff.a
++	     $(top_builddir)/common/mp4ff/libmp4ff.la
  
  faad_SOURCES = main.c \
 -	       audio.c audio.h \
