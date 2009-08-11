@@ -1,0 +1,15 @@
+$NetBSD: patch-do,v 1.1 2009/08/11 14:26:59 taca Exp $
+
+* Constify.
+
+--- ext/openssl/ossl_ns_spki.c.orig	2007-06-09 00:02:04.000000000 +0900
++++ ext/openssl/ossl_ns_spki.c
+@@ -56,7 +56,7 @@ ossl_spki_initialize(int argc, VALUE *ar
+ {
+     NETSCAPE_SPKI *spki;
+     VALUE buffer;
+-    unsigned char *p;
++    const unsigned char *p;
+ 	
+     if (rb_scan_args(argc, argv, "01", &buffer) == 0) {
+ 	return self;
