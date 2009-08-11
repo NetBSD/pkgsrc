@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/08/06 14:38:18 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2009/08/11 21:03:56 hasso Exp $
 #
 
 DISTNAME=	libfetch-2.24
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_FEATURES=		nbcompat
 
 USE_BSD_MAKEFILE=	yes
+
+MAKE_JOBS_SAFE=		NO
 
 INSTALLATION_DIRS=	include lib ${PKGMANDIR}/cat3 ${PKGMANDIR}/man3
 
