@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2009/07/13 08:00:10 ghen Exp $
+# $NetBSD: Makefile,v 1.137 2009/08/11 10:45:01 tron Exp $
 
 DISTNAME=		dovecot-1.1.17
 CATEGORIES=		mail
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.dovecot.org/releases/1.1/
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.dovecot.org/
 COMMENT=		Secure IMAP and POP3 server
+LICENSE=		mit AND gnu-lgpl-v2.1 AND modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
