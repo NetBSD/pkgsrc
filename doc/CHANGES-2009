@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3097 2009/08/10 23:12:37 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3098 2009/08/11 06:07:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4070,3 +4070,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/xchm to 1.17 [minskim 2009-08-10]
 	Added audio/bmp-scrobbler version 0.4.0 [kefren 2009-08-10]
 	Updated misc/pciids to 20090807 [wiz 2009-08-10]
+	Updated textproc/iso-codes to 3.10.2 [wiz 2009-08-11]
