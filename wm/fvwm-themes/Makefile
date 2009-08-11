@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/01/13 14:18:07 heinz Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/11 12:12:34 drochner Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
@@ -30,5 +30,5 @@ post-install:
 	${PREFIX}/bin/fvwm-themes-config --site --install \
 		${DISTDIR}/fvwm-themes-extra-${THEM_VER}.tar.bz2
 
-.include "../../graphics/ImageMagick/buildlink3.mk"
+DEPENDS+= ImageMagick-[0-9]*:../../graphics/ImageMagick
 .include "../../mk/bsd.pkg.mk"
