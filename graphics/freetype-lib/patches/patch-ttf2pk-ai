@@ -1,0 +1,33 @@
+$NetBSD: patch-ttf2pk-ai,v 1.1 2009/08/11 15:26:22 taca Exp $
+
+Avoid confliction with getline(3).
+
+--- contrib/ttf2pk/parse.c.orig	2002-03-15 10:33:52.000000000 +0900
++++ contrib/ttf2pk/parse.c
+@@ -63,7 +63,7 @@ gettoken(char **bufferp, size_t *offsetp
+       if (*bufferp)
+         free(*bufferp);
+ 
+-      if (getline(bufferp, f) == False)
++      if (pkgetline(bufferp, f) == False)
+         oops("Premature end in encoding file.");
+ 
+       curp = *bufferp;
+@@ -187,7 +187,7 @@ readencoding(char **enc, Font *fnt, Bool
+         "Token 258 in encoding must be make-array (]).");
+     free(p);
+ 
+-    while (getline(&buffer, enc_file))
++    while (pkgetline(&buffer, enc_file))
+     {
+       for (p = buffer; *p; p++)
+         if (*p == '%')
+@@ -246,7 +246,7 @@ get_replacements(Font *fnt)
+   if (replacement_file == NULL)
+     oops("Cannot open replacement file `%s'.", real_replacement_name);
+ 
+-  while (getline(&buffer, replacement_file))
++  while (pkgetline(&buffer, replacement_file))
+   {
+     for (p = buffer; *p; p++)
+       if (*p == '%')
