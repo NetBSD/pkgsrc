@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2008/07/14 12:55:58 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/08/11 11:17:56 drochner Exp $
 
-DISTNAME=		faad2-2.6.1
-PKGNAME=		xmms-faad-2.6.1
+DISTNAME=		faad2-2.7
+PKGNAME=		xmms-faad-2.7
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=faac/}
 
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 #NO_BIN_ON_FTP=		${RESTRICTED}
 #NO_BIN_ON_CDROM=	${RESTRICTED}
 
-WRKSRC=			${WRKDIR}/faad2
 USE_TOOLS+=		automake gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
@@ -28,7 +27,7 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--with-xmms
 CONFIGURE_ARGS+=	--with-mp4v2
-BUILD_DIRS=		common/mp4ff plugins/xmms/src
+BUILD_DIRS=		plugins/xmms/src
 INSTALL_DIRS=		plugins/xmms
 
 pre-configure:
