@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/22 18:29:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/08/11 19:42:31 hasso Exp $
 bin/xfig
 lib/X11/app-defaults/Fig
 lib/X11/xfig/CompKeyDB
@@ -2521,7 +2521,7 @@ lib/X11/xfig/Libraries/Welding/tv.1.fig
 lib/X11/xfig/Libraries/Welding/tv.2.fig
 lib/X11/xfig/Libraries/Welding/tv.3.fig
 lib/X11/xfig/Libraries/Welding/u.1.fig
-man/cat1/xfig.0
+${IMAKE_MAN_DIR}/xfig.${IMAKE_MANNEWSUFFIX}
 share/doc/xfig/FORMAT1.3
 share/doc/xfig/FORMAT1.4
 share/doc/xfig/FORMAT2.0
