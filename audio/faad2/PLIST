@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2009/08/10 00:01:55 tnn Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/08/11 11:16:37 drochner Exp $
 bin/faad
 include/faad2/faad.h
 include/faad2/faad2-config.h
+include/faad2/mp4ff_int_types.h
 include/faad2/mp4ff.h
-include/faad2/mp4ffint.h
 include/faad2/neaacdec.h
 lib/libfaad.la
 lib/libmp4ff.la
