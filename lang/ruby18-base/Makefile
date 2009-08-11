@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.51 2009/08/04 19:47:16 hasso Exp $
+# $NetBSD: Makefile,v 1.52 2009/08/11 14:26:58 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
@@ -28,7 +28,7 @@ TEST_TARGET=	test
 CONFIGURE_ARGS+= --enable-shared \
 		--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
 		--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
-CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
+CONFIGURE_ENV+=		PREFIX=${PREFIX}
 WRKSRC=		${RUBY_WRKSRC}
 
 .include "../../mk/compiler.mk"
