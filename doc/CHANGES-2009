@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3104 2009/08/11 19:48:42 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3105 2009/08/11 20:40:18 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4083,3 +4083,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/liferea-current to 1.6.0 [drochner 2009-08-11]
 	Updated comms/xtel to 3.3.0nb9 [hasso 2009-08-11]
 	Updated graphics/xfig to 3.2.5bnb1 [hasso 2009-08-11]
+	Updated x11/kdebase3 to 3.5.10nb4 [hasso 2009-08-11]
