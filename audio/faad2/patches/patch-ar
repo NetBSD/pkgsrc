@@ -1,4 +1,4 @@
-$NetBSD: patch-ar,v 1.4 2009/08/10 00:01:56 tnn Exp $
+$NetBSD: patch-ar,v 1.5 2009/08/11 11:16:38 drochner Exp $
 
 --- plugins/xmms/src/Makefile.am.orig	2009-01-26 23:51:44.000000000 +0100
 +++ plugins/xmms/src/Makefile.am
@@ -8,7 +8,7 @@ $NetBSD: patch-ar,v 1.4 2009/08/10 00:01:56 tnn Exp $
  
 -libmp4_la_LIBADD = $(top_builddir)/libfaad/libfaad.la \
 -       $(top_builddir)/common/mp4ff/libmp4ff.a
-+libmp4_la_LIBADD = $(top_builddir)/common/mp4ff/libmp4ff.a
++libmp4_la_LIBADD = -L$(prefix)/lib -lmp4ff -lfaad
  
 -libmp4_la_LDFLAGS = -module -avoid-version $(local_LDFLAGS) -lpthread
 +libmp4_la_LDFLAGS = -module -avoid-version $(local_LDFLAGS) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
