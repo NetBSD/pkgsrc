@@ -1,0 +1,82 @@
+$NetBSD: patch-dq,v 1.1 2009/08/11 14:26:59 taca Exp $
+
+* Use modern OpenSSL API to catch up OpenSSL 1.0.0 and later.
+* Constify (some cases are depends on OpenSSL's version).
+
+--- ext/openssl/ossl_ssl.c.orig	2008-06-06 17:05:24.000000000 +0900
++++ ext/openssl/ossl_ssl.c
+@@ -26,6 +26,12 @@
+ #  define TO_SOCKET(s) s
+ #endif
+ 
++#if OPENSSL_VERSION_NUMBER >= 0x00909000L
++#define OSSL_CONST	const
++#else
++#define OSSL_CONST
++#endif
++
+ VALUE mSSL;
+ VALUE eSSLError;
+ VALUE cSSLContext;
+@@ -95,7 +101,7 @@ ID ID_callback_state;
+  */
+ struct {
+     const char *name;
+-    SSL_METHOD *(*func)(void);
++    OSSL_CONST SSL_METHOD *(*func)(void);
+ } ossl_ssl_method_tab[] = {
+ #define OSSL_SSL_METHOD_ENTRY(name) { #name, name##_method }
+     OSSL_SSL_METHOD_ENTRY(TLSv1),
+@@ -144,7 +150,7 @@ ossl_sslctx_s_alloc(VALUE klass)
+ static VALUE
+ ossl_sslctx_set_ssl_version(VALUE self, VALUE ssl_method)
+ {
+-    SSL_METHOD *method = NULL;
++    OSSL_CONST SSL_METHOD *method = NULL;
+     const char *s;
+     int i;
+ 
+@@ -585,7 +591,7 @@ ossl_sslctx_setup(VALUE self)
+ }
+ 
+ static VALUE
+-ossl_ssl_cipher_to_ary(SSL_CIPHER *cipher)
++ossl_ssl_cipher_to_ary(const SSL_CIPHER *cipher)
+ {
+     VALUE ary;
+     int bits, alg_bits;
+@@ -623,10 +629,10 @@ ossl_sslctx_get_ciphers(VALUE self)
+     if (!ciphers)
+         return rb_ary_new();
+ 
+-    num = sk_num((STACK*)ciphers);
++    num = sk_SSL_CIPHER_num(ciphers);
+     ary = rb_ary_new2(num);
+     for(i = 0; i < num; i++){
+-        cipher = (SSL_CIPHER*)sk_value((STACK*)ciphers, i);
++        cipher = sk_SSL_CIPHER_value(ciphers, i);
+         rb_ary_push(ary, ossl_ssl_cipher_to_ary(cipher));
+     }
+     return ary;
+@@ -1196,10 +1202,10 @@ ossl_ssl_get_peer_cert_chain(VALUE self)
+     }
+     chain = SSL_get_peer_cert_chain(ssl);
+     if(!chain) return Qnil;
+-    num = sk_num(chain);
++    num = sk_X509_num(chain);
+     ary = rb_ary_new2(num);
+     for (i = 0; i < num; i++){
+-	cert = (X509*)sk_value(chain, i);
++	cert = sk_X509_value(chain, i);
+ 	rb_ary_push(ary, ossl_x509_new(cert));
+     }
+ 
+@@ -1214,7 +1220,7 @@ static VALUE
+ ossl_ssl_get_cipher(VALUE self)
+ {
+     SSL *ssl;
+-    SSL_CIPHER *cipher;
++    const SSL_CIPHER *cipher;
+ 
+     Data_Get_Struct(self, SSL, ssl);
+     if (!ssl) {
