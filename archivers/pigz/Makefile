@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/13 19:44:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/11 23:09:27 zafer Exp $
 #
 
-DISTNAME=	pigz-2.1.4
+DISTNAME=	pigz-2.1.5
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.zlib.net/pigz/
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.zlib.net/pigz/
 COMMENT=	Parallel implementation of gzip
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin share/doc/pigz
