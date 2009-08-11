@@ -1,0 +1,15 @@
+$NetBSD: patch-du,v 1.1 2009/08/11 14:26:59 taca Exp $
+
+Constify.
+
+--- ext/openssl/ossl_x509ext.c.orig	2007-06-09 00:02:04.000000000 +0900
++++ ext/openssl/ossl_x509ext.c
+@@ -273,7 +273,7 @@ static VALUE
+ ossl_x509ext_initialize(int argc, VALUE *argv, VALUE self)
+ {
+     VALUE oid, value, critical;
+-    unsigned char *p;
++    const unsigned char *p;
+     X509_EXTENSION *ext;
+ 
+     GetX509Ext(self, ext);
