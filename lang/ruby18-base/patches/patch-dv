@@ -1,0 +1,15 @@
+$NetBSD: patch-dv,v 1.1 2009/08/11 14:26:59 taca Exp $
+
+Constify.
+
+--- ext/openssl/ossl_x509name.c.orig	2007-07-15 22:24:51.000000000 +0900
++++ ext/openssl/ossl_x509name.c
+@@ -135,7 +135,7 @@ ossl_x509name_initialize(int argc, VALUE
+ 	    rb_block_call(tmp, rb_intern("each"), 0, 0, ossl_x509name_init_i, args);
+ 	}
+ 	else{
+-	    unsigned char *p;
++	    const unsigned char *p;
+ 	    VALUE str = ossl_to_der_if_possible(arg);
+ 	    StringValue(str);
+ 	    p = RSTRING_PTR(str);

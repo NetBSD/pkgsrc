@@ -1,0 +1,24 @@
+$NetBSD: patch-dj,v 1.4 2009/08/11 14:26:58 taca Exp $
+
+* Constify.
+
+--- ext/openssl/ossl_ocsp.c.orig	2009-03-09 20:59:27.000000000 +0900
++++ ext/openssl/ossl_ocsp.c
+@@ -103,7 +103,7 @@ static VALUE
+ ossl_ocspreq_initialize(int argc, VALUE *argv, VALUE self)
+ {
+     VALUE arg;
+-    unsigned char *p;
++    const unsigned char *p;
+ 
+     rb_scan_args(argc, argv, "01", &arg);
+     if(!NIL_P(arg)){
+@@ -310,7 +310,7 @@ static VALUE
+ ossl_ocspres_initialize(int argc, VALUE *argv, VALUE self)
+ {
+     VALUE arg;
+-    unsigned char *p;
++    const unsigned char *p;
+ 
+     rb_scan_args(argc, argv, "01", &arg);
+     if(!NIL_P(arg)){
