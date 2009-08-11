@@ -1,0 +1,15 @@
+$NetBSD: patch-dr,v 1.1 2009/08/11 14:26:59 taca Exp $
+
+* Constify.
+
+--- ext/openssl/ossl_x509attr.c.orig	2007-06-09 00:02:04.000000000 +0900
++++ ext/openssl/ossl_x509attr.c
+@@ -93,7 +93,7 @@ ossl_x509attr_initialize(int argc, VALUE
+ {
+     VALUE oid, value;
+     X509_ATTRIBUTE *attr;
+-    unsigned char *p;
++    const unsigned char *p;
+ 
+     GetX509Attr(self, attr);
+     if(rb_scan_args(argc, argv, "11", &oid, &value) == 1){

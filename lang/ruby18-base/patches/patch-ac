@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.6 2007/10/28 02:33:24 taca Exp $
+$NetBSD: patch-ac,v 1.7 2009/08/11 14:26:58 taca Exp $
+
+* Accept db3 or db4 as include/library.
 
 --- ext/dbm/extconf.rb.orig	2007-02-13 08:01:19.000000000 +0900
 +++ ext/dbm/extconf.rb
