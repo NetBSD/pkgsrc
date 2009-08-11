@@ -1,0 +1,15 @@
+$NetBSD: patch-ttf2pk-ah,v 1.1 2009/08/11 15:26:22 taca Exp $
+
+Avoid confliction with getline(3).
+
+--- contrib/ttf2pk/newobj.h.orig	2002-01-08 21:48:27.000000000 +0900
++++ contrib/ttf2pk/newobj.h
+@@ -26,7 +26,7 @@ void *mycalloc(size_t len);
+ void *myrealloc(void *oldp, size_t len);
+ 
+ char *get_line(FILE *f);
+-Boolean getline(char **bufferp, FILE *f);
++Boolean pkgetline(char **bufferp, FILE *f);
+ char *newstring(char *s);
+ 
+ ttfinfo *newchar(Font *fnt);
