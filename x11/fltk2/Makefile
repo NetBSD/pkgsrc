@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/14 12:06:49 abs Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/11 22:10:34 zafer Exp $
 
 VERS=		6129
 PKGREVISION=	1
@@ -6,7 +6,6 @@ DISTNAME=	fltk-2.0.x-r${VERS}
 PKGNAME=	fltk2-2.0pre${VERS}
 CATEGORIES=	x11
 MASTER_SITES=	http://ftp.easysw.com/pub/fltk/snapshots/ \
-		http://mirror.nu6.org/ftp.easysw.com/pub/fltk/snapshots/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/fltk/snapshots/ \
 		ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/fltk/snapshots/
 EXTRACT_SUFX=	.tar.bz2
