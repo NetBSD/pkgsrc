@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2009/08/11 14:52:28 taca Exp $
+$NetBSD: patch-aa,v 1.2 2009/08/11 14:59:09 taca Exp $
+
+Avoid confliction with getline(3).
 
 --- t1asm.c.orig	2008-03-02 02:59:11.000000000 +0900
 +++ t1asm.c
