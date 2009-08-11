@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3101 2009/08/11 14:27:44 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3102 2009/08/11 15:54:36 manu Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4075,3 +4075,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/iso-codes to 3.10.2 [wiz 2009-08-11]
 	Updated www/typolight27-translations to 20090810 [taca 2009-08-11]
 	Updated lang/ruby18-base to 1.8.7.174nb2 [taca 2009-08-11]
+	Updated www/ap2-auth-mellon to 0.2.4 [manu 2009-08-11]
