@@ -1,0 +1,22 @@
+$NetBSD: patch-ttf2pk-ag,v 1.1 2009/08/11 15:26:22 taca Exp $
+
+Avoid confliction with getline(3).
+
+--- contrib/ttf2pk/newobj.c.orig	2002-06-21 02:34:37.000000000 +0900
++++ contrib/ttf2pk/newobj.c
+@@ -128,13 +128,13 @@ get_line(FILE *f)
+ 
+ 
+ /*
+- *   getline() is a wrapper function for get_line().  It returns `False' in
++ *   pkgetline() is a wrapper function for get_line().  It returns `False' in
+  *   case of error and expects a pointer to a buffer to store the current
+  *   line.   Additionally, the final newline character is stripped.
+  */
+ 
+ Boolean
+-getline(char **bufferp, FILE *f)
++pkgetline(char **bufferp, FILE *f)
+ {
+   size_t l;
+ 
