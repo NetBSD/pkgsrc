@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/13 19:44:58 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/08/11 23:09:27 zafer Exp $
 
-SHA1 (pigz-2.1.4.tar.gz) = 72f639ffb296c6a5dd7b1a45ed2620a5834d55e1
-RMD160 (pigz-2.1.4.tar.gz) = 9c6651d5b75ac9bb67e66420c7b0c3bfbf4b1b15
-Size (pigz-2.1.4.tar.gz) = 35951 bytes
+SHA1 (pigz-2.1.5.tar.gz) = 9e169aa2f1b08be057760c03c480e64651fa3299
+RMD160 (pigz-2.1.5.tar.gz) = b02f012e9f87f9f69309574ef7000bf6242b2114
+Size (pigz-2.1.5.tar.gz) = 93788 bytes
