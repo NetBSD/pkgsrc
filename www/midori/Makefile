@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2009/08/06 06:48:11 hasso Exp $
+# $NetBSD: Makefile,v 1.14 2009/08/11 11:55:28 drochner Exp $
 
 DISTNAME=	midori-0.1.9
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.1/
 
