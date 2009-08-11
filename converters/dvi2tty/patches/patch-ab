@@ -1,0 +1,78 @@
+$NetBSD: patch-ab,v 1.1 2009/08/11 15:01:14 taca Exp $
+
+Avoid confliction with getline(3).
+
+--- dvistuff.c.orig	2009-08-11 23:56:48.000000000 +0900
++++ dvistuff.c
+@@ -123,7 +123,7 @@ void            rule            (bool, l
+ void            ruleaux         (long, long, char);
+ long            horizontalmove  (long);
+ int             skipnops        (void);
+-linetype    *   getline         (void);
++linetype    *   get_line         (void);
+ linetype    *   findline        (void);
+ unsigned long   num             (int);
+ long            snum            (int);
+@@ -148,7 +148,7 @@ void            rule            ();
+ void            ruleaux         ();
+ long            horizontalmove  ();
+ int             skipnops        ();
+-linetype    *   getline         ();
++linetype    *   get_line         ();
+ linetype    *   findline        ();
+ unsigned long   num             ();
+ long            snum            ();
+@@ -290,7 +290,7 @@ void initpage()
+     h = 0L;  v = 0L;                        /* initialize coordinates   */
+     x = 0L;  w = 0L;  y = 0L;  z = 0L;      /* initialize amounts       */
+     sptr = 0;                               /* initialize stack         */
+-    currentline = getline();                /* initialize list of lines */
++    currentline = get_line();                /* initialize list of lines */
+     currentline->vv = 0L;
+     firstline   = currentline;
+     lastline    = currentline;
+@@ -647,7 +647,7 @@ int skipnops()                      /* s
+ 
+ /*----------------------------------------------------------------------------*/
+ 
+-linetype *getline()             /* returns an initialized line-object */
++linetype *get_line()             /* returns an initialized line-object */
+ {
+     register int  i;
+     register linetype *temp;
+@@ -662,7 +662,7 @@ linetype *getline()             /* retur
+     temp->text[i] = '\0';
+     return temp;
+ 
+-} /* getline */
++} /* get_line */
+ 
+ /*----------------------------------------------------------------------------*/
+ 
+@@ -673,7 +673,7 @@ linetype *findline()            /* find 
+ 
+     if (v <= firstline->vv) {                      /* above first line */
+         if (firstline->vv - v > VERTICALEPSILON) {
+-            temp = getline();
++            temp = get_line();
+             temp->next = firstline;
+             firstline->prev = temp;
+             temp->vv = v;
+@@ -684,7 +684,7 @@ linetype *findline()            /* find 
+ 
+     if (v >= lastline->vv) {                       /* below last line */
+         if (v - lastline->vv > VERTICALEPSILON) {
+-            temp = getline();
++            temp = get_line();
+             temp->prev = lastline;
+             lastline->next = temp;
+             temp->vv = v;
+@@ -707,7 +707,7 @@ linetype *findline()            /* find 
+             return temp->next;
+ 
+     /* no line fits suitable, generate a new one */
+-    currentline = getline();
++    currentline = get_line();
+     currentline->next = temp->next;
+     currentline->prev = temp;
+     temp->next->prev = currentline;
