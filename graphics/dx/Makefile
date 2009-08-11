@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/06/30 00:07:17 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2009/08/11 15:44:01 drochner Exp $
 
 DISTNAME=	dx-4.4.4
 PKGREVISION=	1
@@ -29,6 +29,7 @@ CONFIGURE_ENV+=		ARCH=""
 
 .include "../../devel/hdf/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
+# XXX ImageMagick detection in "configure" is broken
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
