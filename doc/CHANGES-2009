@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3109 2009/08/12 04:19:45 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3110 2009/08/12 04:51:34 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4072,6 +4072,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/xchm to 1.17 [minskim 2009-08-10]
 	Added audio/bmp-scrobbler version 0.4.0 [kefren 2009-08-10]
 	Updated misc/pciids to 20090807 [wiz 2009-08-10]
+	Updated comms/asterisk16 to 1.6.1.2 [jnemeth 2009-08-10]
 	Updated textproc/iso-codes to 3.10.2 [wiz 2009-08-11]
 	Updated www/typolight27-translations to 20090810 [taca 2009-08-11]
 	Updated lang/ruby18-base to 1.8.7.174nb2 [taca 2009-08-11]
@@ -4087,3 +4088,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/pigz to 2.1.5 [zafer 2009-08-11]
 	Updated archivers/php-zip to 1.8.10 [dsainty 2009-08-12]
 	Updated devel/apr0 to 0.9.17.2.0.63nb2 [taca 2009-08-12]
+	Updated comms/asterisk16 to 1.6.1.4 [jnemeth 2009-08-12]
