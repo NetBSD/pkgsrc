@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2009/03/21 18:03:42 ahoka Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/12 11:43:57 ahoka Exp $
 #
 
-DISTNAME=	vala-0.5.7
-PKGREVISION=	1
+DISTNAME=	vala-0.7.5
 CATEGORIES=	lang gnome
-MASTER_SITES=	http://download.gnome.org/sources/vala/0.5/
+MASTER_SITES=	http://download.gnome.org/sources/vala/0.7/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Vala
 COMMENT=	Compiler for the GObject type system
+
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -22,6 +23,12 @@ PKGCONFIG_OVERRIDE+=	vala-1.0.pc.in
 BUILDLINK_API_DEPENDS.glib2+=                   glib2>=2.12.0
 BUILDLINK_API_DEPENDS.gtk2+=                    gtk2+>=2.10.0
 BUILDLINK_DEPMETHOD.libxslt?=			build
+
+INSTALLATION_DIRS=     share/doc/vala
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/vala
 
 .include "options.mk"
 
