@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/07/26 21:15:10 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2009/08/12 02:38:24 dsainty Exp $
 
 MODNAME=		zip
-PKGREVISION=		1
-PECL_VERSION=		1.0
+PECL_VERSION=		1.8.10
 CATEGORIES+=		archivers
 COMMENT=		PHP extension for ZIP archive handling
 
@@ -10,8 +9,9 @@ CONFLICTS=	php-zip-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFIGURE_ARGS+=	--with-zip=shared,${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--enable-zip
+CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib}
 
 .include "../../lang/php/ext.mk"
-.include "../../archivers/zziplib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
