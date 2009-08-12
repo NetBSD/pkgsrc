@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/08/11 14:03:11 drochner Exp $
+# $NetBSD: Makefile,v 1.46 2009/08/12 07:45:10 abs Exp $
 #
 
 DISTNAME=	dvdrip-0.98.10
@@ -35,6 +35,7 @@ USE_LANGUAGES=		c
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		perl
 MAKE_ENV+=		SKIP_UNPACK_REQUIRED_MODULES=1
+MAKE_JOBS_SAFE=		no
 
 PERL5_PACKLIST= auto/Video/DVDRip/.packlist
 
