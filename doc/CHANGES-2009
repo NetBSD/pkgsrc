@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3110 2009/08/12 04:51:34 jnemeth Exp $
+$NetBSD: CHANGES-2009,v 1.3111 2009/08/12 07:54:32 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4089,3 +4089,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/php-zip to 1.8.10 [dsainty 2009-08-12]
 	Updated devel/apr0 to 0.9.17.2.0.63nb2 [taca 2009-08-12]
 	Updated comms/asterisk16 to 1.6.1.4 [jnemeth 2009-08-12]
+	Updated math/maxima to 5.19.0 [asau 2009-08-12]
