@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/28 13:43:57 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/12 12:43:09 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-libglade-${VERSION}
@@ -11,8 +11,6 @@ RUBY_EXTCONF_SUBDIRS=	libglade
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gtk>=${VERSION}:../../x11/ruby-gnome2-gtk
 USE_TOOLS+=		pkg-config
-
-INSTALL_TARGET=		install
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
