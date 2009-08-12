@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/06/15 09:51:59 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/12 12:20:04 markd Exp $
 
 META_PACKAGE=	yes
 
@@ -8,7 +8,6 @@ DISTNAME=       gnuradio-${VERSION}
 CATEGORIES=	meta-pkgs ham
 MASTER_SITES=	# empty
 DISTFILES=	# empty
-PKGREVISION=	1
 
 MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gnuradio/
@@ -17,7 +16,7 @@ COMMENT=	"meta-package" for GNU Radio
 .include "options.mk"
 
 DEPENDS+=	gnuradio-core-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-core
-DEPENDS+=	gnuradio-core-docs-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-core-docs
+#DEPENDS+=	gnuradio-core-docs-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-core-docs
 DEPENDS+=	gnuradio-audio-jack-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-audio-jack
 DEPENDS+=	gnuradio-audio-oss-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-audio-oss
 DEPENDS+=	gnuradio-audio-portaudio-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-audio-portaudio
