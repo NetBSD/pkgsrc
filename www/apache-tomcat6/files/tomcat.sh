@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tomcat.sh,v 1.1.1.1 2009/02/14 12:02:09 adrianp Exp $
+# $NetBSD: tomcat.sh,v 1.2 2009/08/12 20:07:57 adrianp Exp $
 #
 # PROVIDE: tomcat
 # REQUIRE: DAEMON
@@ -14,6 +14,7 @@ fi
 name="tomcat"
 rcvar=$name
 command="@TOMCAT_HOME@/bin/catalina.sh"
+pidfile="@VARBASE@/run/tomcat/catalina.pid"
 tomcat_user="@TOMCAT_USER@"
 tomcat_group="@TOMCAT_GROUP@"
 start_cmd="$command start"
@@ -23,6 +24,7 @@ run_cmd="tomcat_run"
 version_cmd="tomcat_version"
 debug_cmd="tomcat_debug"
 extra_commands="run version debug"
+start_precmd="tomcat_precmd"
 
 PREFIX=@PREFIX@
 
@@ -34,8 +36,10 @@ fi
 
 CATALINA_HOME=@TOMCAT_HOME@
 TOMCAT_HOME=@TOMCAT_HOME@
+CATALINA_PID=${pidfile}
 export CATALINA_HOME
 export TOMCAT_HOME
+export CATALINA_PID
 
 CLASSPATH=${CLASSPATH}:${PREFIX}/lib/java/servlet.jar:${PREFIX}/lib/java/jaxp.jar:${PREFIX}/lib/java/parser.jar:${PREFIX}/lib/java/crimson.jar:${PREFIX}/lib/java/ant.jar
 
@@ -45,19 +49,36 @@ then
 fi
 export CLASSPATH
 
+tomcat_precmd()
+{
+	if [ ! -d @VARBASE@/run/tomcat ]; then
+		@MKDIR@ @VARBASE@/run/tomcat
+		@CHMOD@ 0750 @VARBASE@/run/tomcat
+		@CHOWN@ ${tomcat_user}:${tomcat_group} @VARBASE@/run/tomcat
+	fi
+}
+
+tomcat_start()
+{
+	cd $CATALINA_HOME/logs
+	@SU@ ${tomcat_user} -c "${command} start"
+}
+
 tomcat_run()
 {
-	${command} run
+	cd ${CATALINA_HOME}/logs
+	@SU@ ${tomcat_user} -c "${command} run"
 }
 
 tomcat_version()
 {
-	${command} version
+	@SU@ ${tomcat_user} -c "${command} version"
 }
 
 tomcat_debug()
 {
-	${command} debug
+	cd ${CATALINA_HOME}/logs
+	@SU@ ${tomcat_user} -c "${command} debug"
 }
 
 if [ -f /etc/rc.subr ]
