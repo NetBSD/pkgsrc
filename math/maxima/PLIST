@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:05:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/08/12 07:53:21 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -561,12 +561,15 @@ share/maxima/${PKGVERSION}/share/contrib/graphs/load-graphs.lisp
 share/maxima/${PKGVERSION}/share/contrib/graphs/matching.lisp
 share/maxima/${PKGVERSION}/share/contrib/graphs/rtest_graphs.mac
 share/maxima/${PKGVERSION}/share/contrib/graphs/spring_embedding.lisp
+share/maxima/${PKGVERSION}/share/contrib/graphs/wiener_index.lisp
 share/maxima/${PKGVERSION}/share/contrib/impdiff.mac
 share/maxima/${PKGVERSION}/share/contrib/implicit_plot.lisp
 share/maxima/${PKGVERSION}/share/contrib/integer_sequence.lisp
 share/maxima/${PKGVERSION}/share/contrib/integration/abs_integrate.html
 share/maxima/${PKGVERSION}/share/contrib/integration/abs_integrate.mac
 share/maxima/${PKGVERSION}/share/contrib/integration/abs_integrate.texi
+share/maxima/${PKGVERSION}/share/contrib/integration/hyperint.mac
+share/maxima/${PKGVERSION}/share/contrib/integration/partition.mac
 share/maxima/${PKGVERSION}/share/contrib/integration/rtest_abs_integrate.mac
 share/maxima/${PKGVERSION}/share/contrib/levin/levin.dem
 share/maxima/${PKGVERSION}/share/contrib/levin/levin.mac
@@ -702,6 +705,7 @@ share/maxima/${PKGVERSION}/share/contrib/sarag/examples.mac
 share/maxima/${PKGVERSION}/share/contrib/sarag/hard_test.mac
 share/maxima/${PKGVERSION}/share/contrib/sarag/intervalArithmetic.mac
 share/maxima/${PKGVERSION}/share/contrib/sarag/lowLevel.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/multiCertificateOfPositivity.mac
 share/maxima/${PKGVERSION}/share/contrib/sarag/readme.txt
 share/maxima/${PKGVERSION}/share/contrib/sarag/rootCounting.mac
 share/maxima/${PKGVERSION}/share/contrib/sarag/rootIsolation.mac
@@ -814,6 +818,12 @@ share/maxima/${PKGVERSION}/share/dynamics/complex_dynamics.lisp
 share/maxima/${PKGVERSION}/share/dynamics/dynamics.mac
 share/maxima/${PKGVERSION}/share/dynamics/plotdf.lisp
 share/maxima/${PKGVERSION}/share/dynamics/rtest_dynamics.mac
+share/maxima/${PKGVERSION}/share/hypergeometric/abramowitz_id.mac
+share/maxima/${PKGVERSION}/share/hypergeometric/hypergeometric.lisp
+share/maxima/${PKGVERSION}/share/hypergeometric/hypergeometric_mac.mac
+share/maxima/${PKGVERSION}/share/hypergeometric/nfloat.lisp
+share/maxima/${PKGVERSION}/share/hypergeometric/rtest_hg.mac
+share/maxima/${PKGVERSION}/share/hypergeometric/rtest_nfloat.mac
 share/maxima/${PKGVERSION}/share/integequations/inteqn.mac
 share/maxima/${PKGVERSION}/share/integequations/inteqn.usg
 share/maxima/${PKGVERSION}/share/integequations/intexs.mac
@@ -1132,8 +1142,8 @@ share/maxima/${PKGVERSION}/share/orthopoly/README
 share/maxima/${PKGVERSION}/share/orthopoly/changes_0.9_to_0.94.txt
 share/maxima/${PKGVERSION}/share/orthopoly/h_atom.dem
 share/maxima/${PKGVERSION}/share/orthopoly/orthopoly.lisp
-share/maxima/${PKGVERSION}/share/orthopoly/test_orthopoly.mac
 share/maxima/${PKGVERSION}/share/orthopoly/rtest_pochhammer.mac
+share/maxima/${PKGVERSION}/share/orthopoly/test_orthopoly.mac
 share/maxima/${PKGVERSION}/share/orthopoly/variational_method.dem
 share/maxima/${PKGVERSION}/share/physics/battex.sty
 share/maxima/${PKGVERSION}/share/physics/dimen.dem
@@ -1330,6 +1340,7 @@ share/maxima/${PKGVERSION}/src/fortra.lisp
 share/maxima/${PKGVERSION}/src/gamma.lisp
 share/maxima/${PKGVERSION}/src/generate-sys-proclaim.lisp
 share/maxima/${PKGVERSION}/src/generr.lisp
+share/maxima/${PKGVERSION}/src/getopt.lisp
 share/maxima/${PKGVERSION}/src/gnuplot.lisp
 share/maxima/${PKGVERSION}/src/grind.lisp
 share/maxima/${PKGVERSION}/src/hayat.lisp
@@ -1632,6 +1643,7 @@ share/maxima/${PKGVERSION}/tests/rtest_integrate_special.mac
 share/maxima/${PKGVERSION}/tests/rtest_lambert_w.mac
 share/maxima/${PKGVERSION}/tests/rtest_map.mac
 share/maxima/${PKGVERSION}/tests/rtest_mset.mac
+share/maxima/${PKGVERSION}/tests/rtest_plot.mac
 share/maxima/${PKGVERSION}/tests/rtest_round.mac
 share/maxima/${PKGVERSION}/tests/rtest_scalarp.mac
 share/maxima/${PKGVERSION}/tests/rtest_sign.mac
