@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3111 2009/08/12 07:54:32 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3112 2009/08/12 11:47:23 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4090,3 +4090,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/apr0 to 0.9.17.2.0.63nb2 [taca 2009-08-12]
 	Updated comms/asterisk16 to 1.6.1.4 [jnemeth 2009-08-12]
 	Updated math/maxima to 5.19.0 [asau 2009-08-12]
+	Updated lang/vala to 0.7.5 [ahoka 2009-08-12]
