@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.48 2009/05/17 23:11:21 dholland Exp $
+# $NetBSD: Makefile,v 1.49 2009/08/12 13:36:06 asau Exp $
 
 .include "../../sysutils/coreutils/Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 
-CONFLICTS=	fileutils-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
+CONFLICTS=	fileutils-[0-9]* gnuls-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
 
 # if GNU_PROGRAM_PREFIX == 'g'
 # devel/id-utils installs a 'gid' program, so conflict with it
