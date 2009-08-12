@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/07/31 04:02:40 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/12 12:21:39 markd Exp $
 
 PKGNAME=	gnuradio-audio-jack-${VERSION}
-PKGREVISION=	1
 COMMENT=	GNU Radio module for jack low latency audio server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -10,6 +9,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONF_FILES+=    ${EGDIR}/gr-audio-jack.conf ${PKG_SYSCONFDIR}/gr-audio-jack.conf
 CONFIGURE_ARGS+=--enable-gr-audio-jack
+CONFIGURE_ARGS+=--with-gnuradio-core --with-omnithread --with-gruel
 
 PYTHON_PATCH_SCRIPTS+=	gr-audio-jack/src/python/qa_jack.py
 
