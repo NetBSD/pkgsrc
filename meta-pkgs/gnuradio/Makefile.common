@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2009/05/19 08:59:23 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2009/08/12 12:20:04 markd Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
@@ -28,6 +28,7 @@ PKG_SYSCONFSUBDIR=gnuradio/conf.d
 
 CONFIGURE_ARGS+=        --sysconfdir=${PREFIX}/share/examples
 CONFIGURE_ARGS+=        --disable-all-components
+CONFIGURE_ARGS+=	--with-boost-thread=mt
 
 pre-configure:
 .if  empty(PKGNAME:Mgnuradio-howto-*)
