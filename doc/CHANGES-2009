@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3114 2009/08/12 12:51:06 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3115 2009/08/12 13:50:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4133,3 +4133,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.19.1 [obache 2009-08-12]
 	Updated x11/ruby-gnome2-panelapplet to 0.19.1 [obache 2009-08-12]
 	Updated x11/ruby-gnome2-vte to 0.19.1 [obache 2009-08-12]
+	Updated databases/tokyocabinet to 1.4.31 [obata 2009-08-12]
