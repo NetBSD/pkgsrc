@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/07/09 22:15:09 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/08/12 21:14:35 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-makerepo
 bin/ikiwiki-transition
@@ -26,6 +26,7 @@ share/ikiwiki/basewiki/ikiwiki/markdown.mdwn
 share/ikiwiki/basewiki/ikiwiki/openid.mdwn
 share/ikiwiki/basewiki/ikiwiki/pagespec.mdwn
 share/ikiwiki/basewiki/ikiwiki/pagespec/attachment.mdwn
+share/ikiwiki/basewiki/ikiwiki/pagespec/po.mdwn
 share/ikiwiki/basewiki/ikiwiki/preprocessordirective.mdwn
 share/ikiwiki/basewiki/ikiwiki/searching.mdwn
 share/ikiwiki/basewiki/ikiwiki/subpage.mdwn
@@ -163,6 +164,7 @@ share/ikiwiki/templates/microblog.tmpl
 share/ikiwiki/templates/misc.tmpl
 share/ikiwiki/templates/page.tmpl
 share/ikiwiki/templates/passwordmail.tmpl
+share/ikiwiki/templates/pocreatepage.tmpl
 share/ikiwiki/templates/recentchanges.tmpl
 share/ikiwiki/templates/renamesummary.tmpl
 share/ikiwiki/templates/rssitem.tmpl
@@ -170,13 +172,3 @@ share/ikiwiki/templates/rsspage.tmpl
 share/ikiwiki/templates/searchform.tmpl
 share/ikiwiki/templates/searchquery.tmpl
 share/ikiwiki/templates/titlepage.tmpl
-share/locale/bg/LC_MESSAGES/ikiwiki.mo
-share/locale/cs/LC_MESSAGES/ikiwiki.mo
-share/locale/da/LC_MESSAGES/ikiwiki.mo
-share/locale/de/LC_MESSAGES/ikiwiki.mo
-share/locale/es/LC_MESSAGES/ikiwiki.mo
-share/locale/fr/LC_MESSAGES/ikiwiki.mo
-share/locale/gu/LC_MESSAGES/ikiwiki.mo
-share/locale/pl/LC_MESSAGES/ikiwiki.mo
-share/locale/sv/LC_MESSAGES/ikiwiki.mo
-share/locale/vi/LC_MESSAGES/ikiwiki.mo
