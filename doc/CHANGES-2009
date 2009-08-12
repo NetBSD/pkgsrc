@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3106 2009/08/11 23:11:59 zafer Exp $
+$NetBSD: CHANGES-2009,v 1.3107 2009/08/12 02:44:52 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4085,3 +4085,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/xfig to 3.2.5bnb1 [hasso 2009-08-11]
 	Updated x11/kdebase3 to 3.5.10nb4 [hasso 2009-08-11]
 	Updated archivers/pigz to 2.1.5 [zafer 2009-08-11]
+	Updated archivers/php-zip to 1.8.10 [dsainty 2009-08-12]
