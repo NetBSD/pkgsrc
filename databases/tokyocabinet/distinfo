@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2009/07/21 11:35:47 obache Exp $
+$NetBSD: distinfo,v 1.33 2009/08/12 13:50:02 obache Exp $
 
-SHA1 (tokyocabinet-1.4.30.tar.gz) = 36d17c6aa42925e55183cc1f490ebbba2b2ff753
-RMD160 (tokyocabinet-1.4.30.tar.gz) = 0c7dbd2917acb83951bd7cc4b9beda2bae9ef6d0
-Size (tokyocabinet-1.4.30.tar.gz) = 945988 bytes
+SHA1 (tokyocabinet-1.4.31.tar.gz) = f513d23b0786b4541d58132a27c334a4c1ba3001
+RMD160 (tokyocabinet-1.4.31.tar.gz) = 153807183d4211e0665bec204e5c1c4c3556737b
+Size (tokyocabinet-1.4.31.tar.gz) = 947500 bytes
 SHA1 (patch-aa) = f81f4ff8d80f632e0b06e2aad6050b95a4819c97
