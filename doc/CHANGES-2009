@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3108 2009/08/12 03:39:31 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3109 2009/08/12 04:19:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4087,4 +4087,3 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/pigz to 2.1.5 [zafer 2009-08-11]
 	Updated archivers/php-zip to 1.8.10 [dsainty 2009-08-12]
 	Updated devel/apr0 to 0.9.17.2.0.63nb2 [taca 2009-08-12]
-	Updated www/apache2 to 2.0.63nb5 [taca 2009-08-12]
