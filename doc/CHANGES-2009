@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3118 2009/08/12 21:15:31 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.3119 2009/08/12 22:40:19 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4138,3 +4138,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/lua-stdlib-doc to 11 [minskim 2009-08-12]
 	Updated www/wordpress to 2.8.4 [adrianp 2009-08-12]
 	Updated www/ikiwiki to 3.141592 [schmonz 2009-08-12]
+	Updated mail/sympa to 5.4.4nb1 [bouyer 2009-08-13]
