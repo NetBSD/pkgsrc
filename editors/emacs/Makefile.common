@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2009/08/05 22:04:50 minskim Exp $
+# $NetBSD: Makefile.common,v 1.23 2009/08/12 18:11:24 hasso Exp $
 
 DISTNAME=	emacs-${EMACS_VERSION}
 CATEGORIES=	editors
@@ -50,7 +50,12 @@ CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
 CPPFLAGS+=		-DDFLY_CRT_USRLIB
 .endif
 
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "OpenBSD"
+.include "../../mk/curses.buildlink3.mk"
+.else
 .include "../../mk/termcap.buildlink3.mk"
+.endif
+
 .include "../../mk/oss.buildlink3.mk"
 
 post-extract:
