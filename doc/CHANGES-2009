@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3112 2009/08/12 11:47:23 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.3113 2009/08/12 12:28:44 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4091,3 +4091,18 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated comms/asterisk16 to 1.6.1.4 [jnemeth 2009-08-12]
 	Updated math/maxima to 5.19.0 [asau 2009-08-12]
 	Updated lang/vala to 0.7.5 [ahoka 2009-08-12]
+	Updated meta-pkgs/gnuradio to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-audio-jack to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-audio-oss to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-audio-portaudio to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-core to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-examples to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-gsm to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-howto to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-radio-astronomy to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-trellis to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-usrp to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-video-sdl to 3.2 [markd 2009-08-12]
+	Updated ham/gnuradio-wxgui to 3.2 [markd 2009-08-12]
+	Updated ham/usrp to 3.2 [markd 2009-08-12]
+	Updated ham/usrp-docs to 3.2 [markd 2009-08-12]
