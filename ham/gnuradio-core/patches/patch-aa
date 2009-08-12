@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2006/11/13 16:59:22 wulf Exp $
+$NetBSD: patch-aa,v 1.3 2009/08/12 12:21:40 markd Exp $
 
---- gnuradio-core/src/lib/runtime/gr_dispatcher.cc.orig	2006-09-14 07:00:04.000000000 +0930
-+++ gnuradio-core/src/lib/runtime/gr_dispatcher.cc	2006-10-13 23:21:03.000000000 +0930
-@@ -29,18 +29,17 @@
- #include <errno.h>
+--- gnuradio-core/src/lib/runtime/gr_dispatcher.cc.orig	2008-05-09 18:35:10.000000000 +1200
++++ gnuradio-core/src/lib/runtime/gr_dispatcher.cc
+@@ -30,18 +30,17 @@
+ #include <stdio.h>
  
  #ifdef HAVE_SELECT
 +#  ifdef HAVE_SYS_TIME_H

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2008/03/15 15:09:54 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/08/12 12:21:39 markd Exp $
 
 PKGNAME=        gnuradio-core-${VERSION}
-PKGREVISION=	1
 COMMENT=	Runtime system and DSP blocks for GNU Radio
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -12,6 +11,8 @@ PATCHDIR=	${.CURDIR}/../../ham/gnuradio-core/patches
 
 CONF_FILES+=	${EGDIR}/gnuradio-core.conf ${PKG_SYSCONFDIR}/gnuradio-core.conf
 CONFIGURE_ARGS+=--enable-gnuradio-core
+CONFIGURE_ARGS+=--enable-omnithread
+CONFIGURE_ARGS+=--enable-gruel
 
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/swig/gen-swig-bug-fix
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/bin/microtune.py
@@ -71,8 +72,10 @@ PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/tests/test_buffers.py
 
 .include "../../devel/swig/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
