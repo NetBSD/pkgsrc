@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/09/17 00:21:49 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/12 12:43:10 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnomeprint-${VERSION}
@@ -13,11 +13,6 @@ DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-gli
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}:../../devel/ruby-gnome2-pango
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-libart>=${VERSION}:../../graphics/ruby-gnome2-libart
 USE_TOOLS+=		pkg-config
-
-# Need rblibgnomeprintversion.h for build ruby-gnome2-gnomeprintui.
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/gnomeprint/src/rblibgnomeprintversion.h \
-		${DESTDIR}${RUBY_VENDORARCHLIBDIR}
 
 do-test:
 	${RUN} cd ${WRKSRC}/gnomeprint/test; ${SETENV} ${TEST_ENV} ${RUBY} run-test.rb
