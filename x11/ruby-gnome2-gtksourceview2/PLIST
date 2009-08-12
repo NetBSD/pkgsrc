@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/10/22 10:42:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/12 12:43:11 obache Exp $
+lib/pkgconfig/gtksourceview-2.0-ruby.pc
 ${RUBY_VENDORLIB}/gtksourceview2.rb
 ${RUBY_VENDORARCHLIB}/gtksourceview2.${RUBY_DLEXT}
