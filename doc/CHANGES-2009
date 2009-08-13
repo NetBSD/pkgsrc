@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3123 2009/08/13 18:18:56 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3124 2009/08/13 19:02:37 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4144,3 +4144,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/imapsync to 1.286 [abs 2009-08-13]
 	Removed mail/p5-Mail-IMAPClient2 [abs 2009-08-13]
 	Updated lang/ecl to 9.8.3 [asau 2009-08-13]
+	Updated security/gnutls to 2.8.3 [snj 2009-08-13]
+	Updated chat/finch to 2.5.8 [snj 2009-08-13]
+	Updated chat/libpurple to 2.5.8 [snj 2009-08-13]
+	Updated chat/pidgin to 2.5.8 [snj 2009-08-13]
+	Updated chat/pidgin-sametime to 2.5.8 [snj 2009-08-13]
+	Updated chat/pidgin-silc to 2.5.8 [snj 2009-08-13]
