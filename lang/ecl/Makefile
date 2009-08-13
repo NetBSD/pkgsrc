@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2008/12/19 23:12:46 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/13 18:17:18 asau Exp $
 #
 
-DISTNAME=		ecl-8.12.0
+DISTNAME=		ecl-9.8.3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://ecls.sourceforge.net/
@@ -18,9 +19,12 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 
-CONFIGURE_ARGS+=	--enable-boehm=system
-CONFIGURE_ENV+=		ECL_BOEHM_GC_HEADER=gc/gc.h
-CONFIGURE_ARGS+=	--with-system-gmp
+CONFIGURE_ARGS+=	--enable-boehm=system --with-system-gmp
+
+.include "options.mk"
+
+PLIST_SUBST=	PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:R} \
+		PKGVERSION_MAJOR=${PKGVERSION_NOREV:R:R}
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
