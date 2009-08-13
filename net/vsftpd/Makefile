@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/09/22 11:02:21 abs Exp $
+# $NetBSD: Makefile,v 1.30 2009/08/13 20:20:24 joerg Exp $
 #
 
 DISTNAME=	vsftpd-2.0.7
@@ -27,8 +27,6 @@ PKG_USERS=	${VSFTPD_USER}:${VSFTPD_GROUP}
 DOCDIR=		${PREFIX}/share/doc/vsftpd
 EGDIR=		${PREFIX}/share/examples/vsftpd
 
-CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
-
 CONF_FILES=	${EGDIR}/vsftpd.conf.default ${PKG_SYSCONFDIR}/vsftpd.conf
 MAKE_DIRS=	${VARBASE}/chroot
 OWN_DIRS=	${VARBASE}/chroot/vsftpd
@@ -45,6 +43,7 @@ MAKE_ENV+=		LIBS=${LIBS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
+CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 LIBS.SunOS=	-lsocket -lnsl -lrt -lsendfile
 
 .include "options.mk"
