@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8334 2009/08/13 12:57:59 ahoka Exp $
+$NetBSD: TODO,v 1.8335 2009/08/13 18:18:56 asau Exp $
 
 Suggested new packages
 ======================
@@ -533,7 +533,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
-	o ecl-9.8.1 [pkg/41846]
 	o eclipse-3.2.0
 	o ed-1.4
 	o ede-2.0
