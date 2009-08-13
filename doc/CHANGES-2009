@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3120 2009/08/13 13:24:21 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.3121 2009/08/13 15:21:18 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4140,3 +4140,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ikiwiki to 3.141592 [schmonz 2009-08-12]
 	Updated mail/sympa to 5.4.4nb1 [bouyer 2009-08-13]
 	Updated mail/sylpheed to 2.7.1 [ahoka 2009-08-13]
+	Updated mail/p5-Mail-IMAPClient to 3.19 [abs 2009-08-13]
+	Updated mail/imapsync to 1.286 [abs 2009-08-13]
