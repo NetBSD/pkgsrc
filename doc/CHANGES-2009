@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3122 2009/08/13 15:23:37 abs Exp $
+$NetBSD: CHANGES-2009,v 1.3123 2009/08/13 18:18:56 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4143,3 +4143,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/p5-Mail-IMAPClient to 3.19 [abs 2009-08-13]
 	Updated mail/imapsync to 1.286 [abs 2009-08-13]
 	Removed mail/p5-Mail-IMAPClient2 [abs 2009-08-13]
+	Updated lang/ecl to 9.8.3 [asau 2009-08-13]
