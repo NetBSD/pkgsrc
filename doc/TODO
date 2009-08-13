@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8333 2009/08/12 21:15:31 schmonz Exp $
+$NetBSD: TODO,v 1.8334 2009/08/13 12:57:59 ahoka Exp $
 
 Suggested new packages
 ======================
@@ -1285,8 +1285,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-2.90
 	o uriparser-0.7.5
 	o userppp-030706
-	o vala-0.7.4 [pkg/41676]
-	o vala-0.7.5
 	o valgrind-3.4.1
 	o varnish-2.0.4 [pkg/41118]
 	o vera-1.17
