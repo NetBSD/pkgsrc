@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3127 2009/08/14 14:21:35 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3128 2009/08/14 15:47:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4152,3 +4152,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/pidgin-silc to 2.5.8 [snj 2009-08-13]
 	Updated security/mixminion to 0.0.8alpha3 [joerg 2009-08-14]
 	Updated net/pygopherd to 2.0.16 [joerg 2009-08-14]
+	Updated x11/libgnomekbd to 2.26.0nb1 [wiz 2009-08-14]
