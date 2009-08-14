@@ -1,0 +1,92 @@
+$NetBSD: patch-ab,v 1.1.2.2 2009/08/14 10:18:19 tron Exp $
+
+Fix for http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2412.
+
+--- apr-util/misc/apr_rmm.c.orig	2005-08-05 20:02:06.000000000 +0900
++++ apr-util/misc/apr_rmm.c
+@@ -47,6 +47,7 @@ struct apr_rmm_t {
+ static apr_rmm_off_t find_block_by_offset(apr_rmm_t *rmm, apr_rmm_off_t next, 
+                                           apr_rmm_off_t find, int includes)
+ {
++    apr_size_t size;
+     apr_rmm_off_t prev = 0;
+ 
+     while (next) {
+@@ -277,13 +278,17 @@ APU_DECLARE(apr_status_t) apr_rmm_detach
+ 
+ APU_DECLARE(apr_rmm_off_t) apr_rmm_malloc(apr_rmm_t *rmm, apr_size_t reqsize)
+ {
++    apr_size_t size;
+     apr_rmm_off_t this;
+     
+-    reqsize = APR_ALIGN_DEFAULT(reqsize) + RMM_BLOCK_SIZE;
++    size = APR_ALIGN_DEFAULT(reqsize) + RMM_BLOCK_SIZE;
++    if (size < reqsize) {
++        return 0;
++    }
+ 
+     APR_ANYLOCK_LOCK(&rmm->lock);
+ 
+-    this = find_block_of_size(rmm, reqsize);
++    this = find_block_of_size(rmm, size);
+ 
+     if (this) {
+         move_block(rmm, this, 0);
+@@ -296,18 +301,22 @@ APU_DECLARE(apr_rmm_off_t) apr_rmm_mallo
+ 
+ APU_DECLARE(apr_rmm_off_t) apr_rmm_calloc(apr_rmm_t *rmm, apr_size_t reqsize)
+ {
++    apr_size_t size;
+     apr_rmm_off_t this;
+         
+-    reqsize = APR_ALIGN_DEFAULT(reqsize) + RMM_BLOCK_SIZE;
++    size = APR_ALIGN_DEFAULT(reqsize) + RMM_BLOCK_SIZE;
++    if (size < reqsize) {
++        return 0;
++    }
+ 
+     APR_ANYLOCK_LOCK(&rmm->lock);
+ 
+-    this = find_block_of_size(rmm, reqsize);
++    this = find_block_of_size(rmm, size);
+ 
+     if (this) {
+         move_block(rmm, this, 0);
+         this += RMM_BLOCK_SIZE;
+-        memset((char*)rmm->base + this, 0, reqsize - RMM_BLOCK_SIZE);
++        memset((char*)rmm->base + this, 0, size - RMM_BLOCK_SIZE);
+     }
+ 
+     APR_ANYLOCK_UNLOCK(&rmm->lock);
+@@ -320,16 +329,19 @@ APU_DECLARE(apr_rmm_off_t) apr_rmm_reall
+     apr_rmm_off_t this;
+     apr_rmm_off_t old;
+     struct rmm_block_t *blk;
+-    apr_size_t oldsize;
++    apr_size_t size, oldsize;
+ 
+     if (!entity) {
+         return apr_rmm_malloc(rmm, reqsize);
+     }
+ 
+-    reqsize = APR_ALIGN_DEFAULT(reqsize);
++    size = APR_ALIGN_DEFAULT(reqsize);
++    if (size < reqsize) {
++        return 0;
++    }
+     old = apr_rmm_offset_get(rmm, entity);
+ 
+-    if ((this = apr_rmm_malloc(rmm, reqsize)) == 0) {
++    if ((this = apr_rmm_malloc(rmm, size)) == 0) {
+         return 0;
+     }
+ 
+@@ -337,7 +349,7 @@ APU_DECLARE(apr_rmm_off_t) apr_rmm_reall
+     oldsize = blk->size;
+ 
+     memcpy(apr_rmm_addr_get(rmm, this),
+-           apr_rmm_addr_get(rmm, old), oldsize < reqsize ? oldsize : reqsize);
++           apr_rmm_addr_get(rmm, old), oldsize < size ? oldsize : size);
+     apr_rmm_free(rmm, old);
+ 
+     return this;
