@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8338 2009/08/14 15:06:44 wiz Exp $
+$NetBSD: TODO,v 1.8339 2009/08/14 16:15:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -583,7 +583,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o festival-1.96
 	o felt-3.07
 	o fetchyahoo-2.13.0
-	o fftw-3.2.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
@@ -959,7 +958,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ogre-0.12.3
 	o olvwm-4.5
 	o oo2c-2.1.7
-	o opal-3.6.4
 	o openafs-1.4.10 [pkg/41262]
 	o openafs-1.4.11
 	o opencobol-1.0
