@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/08/14 22:52:20 asau Exp $
+# $NetBSD: Makefile,v 1.26 2009/08/14 22:54:49 asau Exp $
 
 DISTNAME=		gforth-0.7.0
 CATEGORIES=		lang
@@ -8,7 +8,7 @@ MASTER_SITES+=		http://www.complang.tuwien.ac.at/forth/gforth/
 MAINTAINER=		simonb@NetBSD.org
 HOMEPAGE=		http://www.complang.tuwien.ac.at/forth/gforth/
 COMMENT=		Fast interpreter for the Forth language
-LICENSE=		
+LICENSE=		gnu-gpl-v3
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 *-*-m68k *-*-powerpc *-*-sparc
 
