@@ -1,0 +1,11 @@
+--- modules/access/rtsp/real.c.orig	2009-08-09 15:28:43.000000000 +0300
++++ modules/access/rtsp/real.c	2009-08-09 15:29:26.000000000 +0300
+@@ -598,6 +598,8 @@ int real_get_rdt_chunk(rtsp_client_t *rt
+ 
+   int n;
+   rmff_dump_pheader(ph, *buffer);
++  if (ph->length < 12)
++	return 0;
+   n=rtsp_read_data(rtsp_session, *buffer + 12, ph->length - 12);
+   return (n <= 0) ? 0 : n+12;
+ }
