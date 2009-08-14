@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/14 15:31:58 wiz Exp $
 #
 
 DISTNAME=	gnome-packagekit-0.4.0
@@ -11,6 +11,8 @@ COMMENT=	GNOME frontend for PackageKit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PYTHON_VERSIONS_INCOMPATIBLE=	26
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake intltool perl msgfmt
@@ -21,6 +23,7 @@ GCONF_SCHEMAS+=	gnome-packagekit.schemas
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../pkgtools/packagekit/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
