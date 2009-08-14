@@ -1,4 +1,4 @@
-$NetBSD: patch-ce,v 1.6 2009/08/09 16:00:53 drochner Exp $
+$NetBSD: patch-ce,v 1.7 2009/08/14 15:51:06 drochner Exp $
 
 --- interface/cooked_interface.c.orig	2008-08-26 11:55:22.000000000 +0200
 +++ interface/cooked_interface.c
@@ -11,7 +11,7 @@ $NetBSD: patch-ce,v 1.6 2009/08/09 16:00:53 drochner Exp $
   *
   * CDROM code specific to the cooked ioctl interface
   *
-@@ -24,9 +26,11 @@ static int timed_ioctl(cdrom_drive *d, i
+@@ -24,6 +26,7 @@ static int timed_ioctl(cdrom_drive *d, i
    return ret2;
  }
  
@@ -19,88 +19,9 @@ $NetBSD: patch-ce,v 1.6 2009/08/09 16:00:53 drochner Exp $
  static int cooked_readtoc (cdrom_drive *d){
    int i;
    int tracks;
-+#ifdef __linux__
-   struct cdrom_tochdr hdr;
-   struct cdrom_tocentry entry;
- 
-@@ -66,6 +70,45 @@ static int cooked_readtoc (cdrom_drive *
-   d->disc_toc[i].dwStartSector = entry.cdte_addr.lba;
- 
-   tracks=hdr.cdth_trk1+1;
-+#endif
-+
-+#ifdef __NetBSD__
-+  struct ioc_read_toc_entry hdr;
-+  struct cd_toc_entry entries[MAXTRK + 1];	/* + 1 for leadout */
-+
-+  hdr.address_format = CD_LBA_FORMAT;
-+  hdr.starting_track = 1;
-+  hdr.data_len = sizeof entries;
-+  hdr.data = entries;
-+  memset(entries, 0, sizeof entries);
-+
-+  /* get all TOC entries at once */
-+#ifndef CDIOREADTOCENTRIES
-+#define CDIOREADTOCENTRIES CDIOREADTOCENTRYS
-+#endif
-+  if(ioctl(d->ioctl_fd, CDIOREADTOCENTRIES, &hdr))
-+    switch(errno){
-+    case EPERM:
-+      cderror(d,"102: Permision denied on cdrom (ioctl) device\n");
-+      return(-102);
-+    default:
-+      cderror(d,"004: Unable to read table of contents header\n");
-+      return(-4);
-+    }
-+
-+  for(i = 0; i < MAXTRK + 1; i++) {
-+    d->disc_toc[i].bFlags = (entries[i].addr_type << 4) | (entries[i].control & 0x0f);
-+    d->disc_toc[i].bTrack = entries[i].track;
-+    d->disc_toc[i].dwStartSector = entries[i].addr.lba;
-+    if (entries[i].track == 0) {
-+      cderror(d,"005: Unable to read table of contents entry\n");
-+      return(-5);
-+    }
-+    if (entries[i].track >= 100)
-+      break;	/* leadout */
-+  }
-+  tracks = i;
-+#endif
-   d->cd_extra=FixupTOC(d,tracks);
-   return(--tracks);  /* without lead-out */
- }
-@@ -73,10 +116,15 @@ static int cooked_readtoc (cdrom_drive *
- /* Set operating speed */
- static int cooked_setspeed(cdrom_drive *d, int speed)
- {
-+#ifdef __linux__
-   if(d->ioctl_fd!=-1)
-     return ioctl(d->ioctl_fd, CDROM_SELECT_SPEED, speed);
-   else
-     return 0;
-+#endif
-+#ifdef __NetBSD__
-+  errx(1, "cooked_setspeed: not implemented");
-+#endif
- }
- 
- /* read 'SectorBurst' adjacent sectors of audio sectors 
-@@ -84,6 +132,7 @@ static int cooked_setspeed(cdrom_drive *
-  */
- 
- static long cooked_read (cdrom_drive *d, void *p, long begin, long sectors){
-+#ifdef __linux__
-   int retry_count,err,ret=0;
-   struct cdrom_read_audio arg;
-   char *buffer=(char *)p;
-@@ -155,7 +204,147 @@ static long cooked_read (cdrom_drive *d,
-  done:
+@@ -156,6 +159,141 @@ static long cooked_read (cdrom_drive *d,
    if(p==NULL && buffer)free(buffer);
    return ret;
-+#endif
-+#ifdef __NetBSD__
-+  errx(1, "cooked_read: not implemented");
-+#endif
  }
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
 +static int
@@ -237,24 +158,18 @@ $NetBSD: patch-ce,v 1.6 2009/08/09 16:00:53 drochner Exp $
 +	return sectors;
 +}
 +#endif
-+
  
  /* hook */
  static int Dummy (cdrom_drive *d,int Switch){
-@@ -219,8 +408,11 @@ static void check_exceptions(cdrom_drive
- 
- /* set function pointers to use the ioctl routines */
+@@ -221,6 +359,7 @@ static void check_exceptions(cdrom_drive
  int cooked_init_drive (cdrom_drive *d){
-+#ifdef __NetBSD__
-+  errx(1, "cooked_init_drive: not implemented");
-+#else
    int ret;
--
+ 
 +#ifdef __linux__
    switch(d->drive_type){
    case MATSUSHITA_CDROM_MAJOR:	/* sbpcd 1 */
    case MATSUSHITA_CDROM2_MAJOR:	/* sbpcd 2 */
-@@ -271,6 +463,9 @@ int cooked_init_drive (cdrom_drive *d){
+@@ -271,6 +410,9 @@ int cooked_init_drive (cdrom_drive *d){
    default:
      d->nsectors=40; 
    }
@@ -264,10 +179,3 @@ $NetBSD: patch-ce,v 1.6 2009/08/09 16:00:53 drochner Exp $
    d->enable_cdda = Dummy;
    d->read_audio = cooked_read;
    d->read_toc = cooked_readtoc;
-@@ -283,5 +478,6 @@ int cooked_init_drive (cdrom_drive *d){
-   if((ret=verify_read_command(d)))return(ret);
-   d->error_retry=1;
-   return(0);
-+#endif
- }
- 
