@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2007/02/20 19:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2009/08/14 22:52:20 asau Exp $
 
-DISTNAME=		gforth-0.6.2
-PKGREVISION=		2
+DISTNAME=		gforth-0.7.0
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gforth/}
 MASTER_SITES+=		http://www.complang.tuwien.ac.at/forth/gforth/
@@ -9,20 +8,32 @@ MASTER_SITES+=		http://www.complang.tuwien.ac.at/forth/gforth/
 MAINTAINER=		simonb@NetBSD.org
 HOMEPAGE=		http://www.complang.tuwien.ac.at/forth/gforth/
 COMMENT=		Fast interpreter for the Forth language
+LICENSE=		
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 *-*-m68k *-*-powerpc *-*-sparc
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+INFO_FILES=		yes
+
 GNU_CONFIGURE=		YES
+
+USE_LIBTOOL=		yes
+USE_TOOLS+=		autoconf automake aclocal
+USE_TOOLS+=		makeinfo gzip
+USE_TOOLS+=		perl:build
+
+MAKE_JOBS_SAFE=		no # fresh Gforth is required to build doc
+BUILD_TARGET=		all info # doc
+TEST_TARGET=		check
 
 # Make sure elisp will be installed even if no emacs installed.
 CONFIGURE_ENV+=		EMACS=${PREFIX}/bin/emacs
 CFLAGS+=		-Dunix
-INFO_FILES=		# PLIST
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 			infodir=${PREFIX:Q}/${PKGINFODIR:Q}		\
 			mandir=${PREFIX:Q}/${PKGMANDIR:Q}
 
-TEST_TARGET=	test
+INSTALLATION_DIRS=	share/emacs/site-lisp
 
 # Kernel image filename is arch dependent
 KERNEL_FI_cmd=								\
@@ -39,9 +50,7 @@ PLIST_SUBST+=	KERNEL_FI=${KERNEL_FI_cmd:sh:Q}
 
 # XXX Need test.
 #.include "../../mk/dlopen.buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/ffcall/buildlink3.mk"
-
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
-
 .include "../../mk/bsd.pkg.mk"

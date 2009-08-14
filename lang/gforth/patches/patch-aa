@@ -1,32 +1,23 @@
-$NetBSD: patch-aa,v 1.3 2003/12/05 00:26:38 uebayasi Exp $
+$NetBSD: patch-aa,v 1.4 2009/08/14 22:52:21 asau Exp $
 
---- Makefile.in.orig	Mon Aug 25 16:57:49 2003
-+++ Makefile.in
-@@ -51,7 +51,7 @@ osclass = @OSCLASS@
- # -------------	Utility programs
+Don't generate and install Emacs byte code file.
+
+--- Makefile.in.orig	2008-11-01 20:22:27.000000000 +0300
++++ Makefile.in	2009-08-15 02:04:09.000000000 +0400
+@@ -430,7 +430,7 @@
  
- SHELL	= /bin/sh
--RM	= rm
-+RM	= rm -f
- RMTREE	= rm -rf
- CP	= cp -p
- MV	= mv
-@@ -60,6 +60,7 @@ INSTALL	= @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
- INSTALL_DATA = @INSTALL_DATA@
- INSTALL_INFO = @INSTALL_INFO@
-+INSTALL_SCRIPT = @INSTALL_SCRIPT@
- LN_S	= @LN_S@
- GCC	= @CC@
- CC	= $(GCC)
-@@ -528,8 +529,8 @@ install:	gforth$(EXE) $(FORTH_SRC) $(ker
- 		(cd $(bindir) && $(LN_S) gforth-fast-$(VERSION)$(EXE) gforth-fast$(EXE))
- 		$(INSTALL_PROGRAM) -s gforth-itc$(EXE) $(bindir)/gforth-itc-$(VERSION)$(EXE)
- 		(cd $(bindir) && $(LN_S) gforth-itc-$(VERSION)$(EXE) gforth-itc$(EXE))
--		$(INSTALL_PROGRAM) gforthmi $(bindir)/gforthmi-$(VERSION)
--		$(INSTALL_PROGRAM) vmgen $(bindir)/vmgen-$(VERSION)
-+		$(INSTALL_SCRIPT) gforthmi $(bindir)/gforthmi-$(VERSION)
-+		$(INSTALL_SCRIPT) vmgen $(bindir)/vmgen-$(VERSION)
- 		$(INSTALL_PROGRAM) gforth-ditc $(libdir)/gforth/$(VERSION)
- 		(cd $(bindir) && $(LN_S) gforthmi-$(VERSION) gforthmi)
- 		(cd $(bindir) && $(LN_S) vmgen-$(VERSION) vmgen)
+ ENGINES_FAST = gforth-fast$(OPT)$(EC)$(EXE) #gforth-native$(OPT)$(EC)$(EXE) 
+ 
+-GEN = $(ENGINES) $(ENGINES_FAST) gforth.elc
++GEN = $(ENGINES) $(ENGINES_FAST)
+ 
+ # things that need a working forth system to be generated
+ FORTH_GEN_ENGINE=engine/prim.i engine/prim_lab.i engine/prim_names.i \
+@@ -615,7 +615,6 @@
+ 		$(INSTALL_DATA) $(kernel_fi) $(DESTDIR)$(datadir)/gforth/$(VERSION)
+ 		@if test -d "$(DESTDIR)$(emacssitelispdir)"; then \
+ 			$(INSTALL_DATA) gforth.el $(DESTDIR)$(emacssitelispdir); \
+-			$(INSTALL_DATA) gforth.elc $(DESTDIR)$(emacssitelispdir); \
+ 		else \
+ 			echo '>>>>>Please install gforth.{el,elc} in your .../emacs/site-lisp directory'; \
+ 		fi

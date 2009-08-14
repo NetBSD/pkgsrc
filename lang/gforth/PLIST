@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 20:34:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/08/14 22:52:20 asau Exp $
 bin/gforth
 bin/${PKGNAME}
 bin/gforth-fast
@@ -9,10 +9,16 @@ bin/gforthmi
 bin/gforthmi-${PKGVERSION}
 bin/vmgen
 bin/vmgen-${PKGVERSION}
+include/gforth/${PKGVERSION}/config.h
+include/gforth/${PKGVERSION}/libcc.h
 info/gforth.info
 info/vmgen.info
 lib/gforth/${PKGVERSION}/gforth-ditc
 lib/gforth/${PKGVERSION}/gforth.fi
+lib/gforth/${PKGVERSION}/libcc-named/cstr.la
+lib/gforth/${PKGVERSION}/libcc-named/fflib.la
+lib/gforth/${PKGVERSION}/libcc-named/libffi.la
+lib/gforth/${PKGVERSION}/libcc-named/socket.la
 man/man1/gforth.1
 share/emacs/site-lisp/gforth.el
 share/gforth/${PKGVERSION}/TAGS
@@ -24,9 +30,17 @@ share/gforth/${PKGVERSION}/arch/386/asm.fs
 share/gforth/${PKGVERSION}/arch/386/disasm.fs
 share/gforth/${PKGVERSION}/arch/alpha/asm.fs
 share/gforth/${PKGVERSION}/arch/alpha/disasm.fs
+share/gforth/${PKGVERSION}/arch/alpha/testasm.fs
+share/gforth/${PKGVERSION}/arch/amd64/asm.fs
+share/gforth/${PKGVERSION}/arch/amd64/disasm.fs
 share/gforth/${PKGVERSION}/arch/mips/asm.fs
 share/gforth/${PKGVERSION}/arch/mips/disasm.fs
 share/gforth/${PKGVERSION}/arch/mips/insts.fs
+share/gforth/${PKGVERSION}/arch/mips/testasm.fs
+share/gforth/${PKGVERSION}/arch/mips/testdisasm.fs
+share/gforth/${PKGVERSION}/arch/power/asm.fs
+share/gforth/${PKGVERSION}/arch/power/disasm.fs
+share/gforth/${PKGVERSION}/arch/power/inst.fs
 share/gforth/${PKGVERSION}/asm/README
 share/gforth/${PKGVERSION}/asm/basic.fs
 share/gforth/${PKGVERSION}/asm/bitmask.fs
@@ -39,6 +53,7 @@ share/gforth/${PKGVERSION}/blocked.fb
 share/gforth/${PKGVERSION}/blocks.fs
 share/gforth/${PKGVERSION}/bubble.fs
 share/gforth/${PKGVERSION}/bufio.fs
+share/gforth/${PKGVERSION}/build-ec.in
 share/gforth/${PKGVERSION}/chains.fs
 share/gforth/${PKGVERSION}/code.fs
 share/gforth/${PKGVERSION}/colorize.fs
@@ -49,15 +64,21 @@ share/gforth/${PKGVERSION}/compat/assert.fs
 share/gforth/${PKGVERSION}/compat/control.fs
 share/gforth/${PKGVERSION}/compat/defer.fs
 share/gforth/${PKGVERSION}/compat/exception.fs
+share/gforth/${PKGVERSION}/compat/execute-parsing.fs
 share/gforth/${PKGVERSION}/compat/loops.fs
 share/gforth/${PKGVERSION}/compat/required.fs
 share/gforth/${PKGVERSION}/compat/strcomp.fs
 share/gforth/${PKGVERSION}/compat/struct.fs
 share/gforth/${PKGVERSION}/compat/vocabulary.fs
+share/gforth/${PKGVERSION}/complex.fs
 share/gforth/${PKGVERSION}/cross.fs
+share/gforth/${PKGVERSION}/cstr.fs
 share/gforth/${PKGVERSION}/debug.fs
 share/gforth/${PKGVERSION}/debugs.fs
+share/gforth/${PKGVERSION}/depth-changes.fs
+share/gforth/${PKGVERSION}/dis-gdb.fs
 share/gforth/${PKGVERSION}/doc/makedoc.fs
+share/gforth/${PKGVERSION}/dosekey.fs
 share/gforth/${PKGVERSION}/doskey.fs
 share/gforth/${PKGVERSION}/ds2texi.fs
 share/gforth/${PKGVERSION}/ec/README
@@ -67,6 +88,7 @@ share/gforth/${PKGVERSION}/ec/mirror.fs
 share/gforth/${PKGVERSION}/ec/nesting.fs
 share/gforth/${PKGVERSION}/ec/shex.fs
 share/gforth/${PKGVERSION}/ekey.fs
+share/gforth/${PKGVERSION}/endtry-iferror.fs
 share/gforth/${PKGVERSION}/environ.fs
 share/gforth/${PKGVERSION}/envos.dos
 share/gforth/${PKGVERSION}/envos.fs
@@ -77,17 +99,20 @@ share/gforth/${PKGVERSION}/exboot.fs
 share/gforth/${PKGVERSION}/except.fs
 share/gforth/${PKGVERSION}/extend.fs
 share/gforth/${PKGVERSION}/fflib.fs
+share/gforth/${PKGVERSION}/fft.fs
 share/gforth/${PKGVERSION}/fi2c.fs
 share/gforth/${PKGVERSION}/fib.fs
 share/gforth/${PKGVERSION}/filedump.fs
 share/gforth/${PKGVERSION}/fixpath.fs
 share/gforth/${PKGVERSION}/float.fs
+share/gforth/${PKGVERSION}/fsl-util.4th
 share/gforth/${PKGVERSION}/glocals.fs
 share/gforth/${PKGVERSION}/glosgen.fs
 share/gforth/${PKGVERSION}/gray.fs
 share/gforth/${PKGVERSION}/hash.fs
 share/gforth/${PKGVERSION}/history.fs
 share/gforth/${PKGVERSION}/httpd.fs
+share/gforth/${PKGVERSION}/install-tags.fs
 share/gforth/${PKGVERSION}/intcomp.fs
 share/gforth/${PKGVERSION}/kernel/accept.fs
 share/gforth/${PKGVERSION}/kernel/aliases.fs
@@ -119,8 +144,11 @@ share/gforth/${PKGVERSION}/kernel/saccept.fs
 share/gforth/${PKGVERSION}/kernel/tools.fs
 share/gforth/${PKGVERSION}/kernel/toolsext.fs
 share/gforth/${PKGVERSION}/kernel/vars.fs
+share/gforth/${PKGVERSION}/kernel/xchars.fs
 share/gforth/${PKGVERSION}/${KERNEL_FI}
 share/gforth/${PKGVERSION}/lib.fs
+share/gforth/${PKGVERSION}/libcc.fs
+share/gforth/${PKGVERSION}/libffi.fs
 share/gforth/${PKGVERSION}/locals.fs
 share/gforth/${PKGVERSION}/locate.fs
 share/gforth/${PKGVERSION}/look.fs
@@ -134,20 +162,25 @@ share/gforth/${PKGVERSION}/machpc.fs.in
 share/gforth/${PKGVERSION}/make-app.fs
 share/gforth/${PKGVERSION}/matrix.fs
 share/gforth/${PKGVERSION}/mini-oof.fs
+share/gforth/${PKGVERSION}/mkdir.fs
 share/gforth/${PKGVERSION}/moof-exm.fs
 share/gforth/${PKGVERSION}/moofglos.fs
 share/gforth/${PKGVERSION}/more.fs
 share/gforth/${PKGVERSION}/objects.fs
 share/gforth/${PKGVERSION}/objexamp.fs
 share/gforth/${PKGVERSION}/oldlib.fs
+share/gforth/${PKGVERSION}/onebench.fs
 share/gforth/${PKGVERSION}/oof.fs
 share/gforth/${PKGVERSION}/oofsampl.fs
 share/gforth/${PKGVERSION}/other.fs
 share/gforth/${PKGVERSION}/prim
 share/gforth/${PKGVERSION}/prims2x.fs
+share/gforth/${PKGVERSION}/prims2x0.6.2.fs
 share/gforth/${PKGVERSION}/proxy.fs
 share/gforth/${PKGVERSION}/quotes.fs
 share/gforth/${PKGVERSION}/random.fs
+share/gforth/${PKGVERSION}/recover-endtry.fs
+share/gforth/${PKGVERSION}/regexp.fs
 share/gforth/${PKGVERSION}/savesys.fs
 share/gforth/${PKGVERSION}/search.fs
 share/gforth/${PKGVERSION}/see-ext.fs
@@ -160,41 +193,37 @@ share/gforth/${PKGVERSION}/source.fs
 share/gforth/${PKGVERSION}/startup.fs
 share/gforth/${PKGVERSION}/string.fs
 share/gforth/${PKGVERSION}/struct.fs
+share/gforth/${PKGVERSION}/struct0x.fs
 share/gforth/${PKGVERSION}/stuff.fs
 share/gforth/${PKGVERSION}/table.fs
 share/gforth/${PKGVERSION}/tags.fs
 share/gforth/${PKGVERSION}/tasker.fs
 share/gforth/${PKGVERSION}/termsize.fs
 share/gforth/${PKGVERSION}/test/checkans.fs
+share/gforth/${PKGVERSION}/test/coreext.fs
+share/gforth/${PKGVERSION}/test/coremore.fs
 share/gforth/${PKGVERSION}/test/coretest.fs
 share/gforth/${PKGVERSION}/test/dbltest.fs
+share/gforth/${PKGVERSION}/test/deferred.fs
 share/gforth/${PKGVERSION}/test/float.fs
+share/gforth/${PKGVERSION}/test/gforth-nofast.fs
 share/gforth/${PKGVERSION}/test/gforth.fs
+share/gforth/${PKGVERSION}/test/libcc.fs
 share/gforth/${PKGVERSION}/test/other.fs
 share/gforth/${PKGVERSION}/test/postpone.fs
+share/gforth/${PKGVERSION}/test/primtest.fs
+share/gforth/${PKGVERSION}/test/search.fs
 share/gforth/${PKGVERSION}/test/signals.fs
 share/gforth/${PKGVERSION}/test/string.fs
 share/gforth/${PKGVERSION}/test/tester.fs
+share/gforth/${PKGVERSION}/test/ttester.fs
 share/gforth/${PKGVERSION}/tt.fs
 share/gforth/${PKGVERSION}/unbuffer.fs
 share/gforth/${PKGVERSION}/unix/socket.fs
+share/gforth/${PKGVERSION}/utf-8.fs
 share/gforth/${PKGVERSION}/vt100.fs
 share/gforth/${PKGVERSION}/vt100key.fs
 share/gforth/${PKGVERSION}/wordinfo.fs
 share/gforth/${PKGVERSION}/wordsets.fs
+share/gforth/${PKGVERSION}/xwords.fs
 share/gforth/site-forth/siteinit.fs
-@pkgdir share/gforth/${PKGVERSION}/arch/sparc
-@pkgdir share/gforth/${PKGVERSION}/arch/shboom
-@pkgdir share/gforth/${PKGVERSION}/arch/sharc
-@pkgdir share/gforth/${PKGVERSION}/arch/power
-@pkgdir share/gforth/${PKGVERSION}/arch/misc
-@pkgdir share/gforth/${PKGVERSION}/arch/m68k
-@pkgdir share/gforth/${PKGVERSION}/arch/ia64
-@pkgdir share/gforth/${PKGVERSION}/arch/hppa
-@pkgdir share/gforth/${PKGVERSION}/arch/h8
-@pkgdir share/gforth/${PKGVERSION}/arch/generic
-@pkgdir share/gforth/${PKGVERSION}/arch/c165
-@pkgdir share/gforth/${PKGVERSION}/arch/avr
-@pkgdir share/gforth/${PKGVERSION}/arch/8086
-@pkgdir share/gforth/${PKGVERSION}/arch/6502
-@pkgdir share/gforth/${PKGVERSION}/arch/4stack
