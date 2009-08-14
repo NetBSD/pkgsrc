@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:35:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/14 19:09:48 joerg Exp $
 bin/boolean
 bin/edit
 share/boolean/default/config/boolean.ad
@@ -212,7 +212,7 @@ share/boolean/default/process/tworec.prs
 share/boolean/default/process/tworec2.prs
 share/boolean/default/process/vijf.prs
 share/boolean/default/process/wil1.prs
-share/boolean/gdsuser/6.6_version
+share/boolean/gdsuser/6.9_version
 share/boolean/gdsuser/config/gdsapp.cfg
 share/boolean/gdsuser/config/history.set
 share/boolean/gdsuser/config/user.set
