@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.118 2009/08/13 13:22:17 ahoka Exp $
+# $NetBSD: Makefile,v 1.119 2009/08/14 17:59:51 tnn Exp $
 
 DISTNAME=	sylpheed-2.7.1
+PKGREVISION=	1
 CATEGORIES=	mail news x11
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v2.7/
 EXTRACT_SUFX=	.tar.bz2
