@@ -142,4 +142,3 @@ lib/${PKGNAME}/encodings/WINDOWS-CP936.BIN
 lib/${PKGNAME}/encodings/WINDOWS-CP949.BIN
 lib/${PKGNAME}/encodings/WINDOWS-CP950.BIN
 lib/${PKGNAME}/encodings/tools.lisp
-@dirrm lib/${PKGNAME}/encodings
