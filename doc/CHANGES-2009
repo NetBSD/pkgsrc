@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3132 2009/08/14 19:19:49 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3133 2009/08/14 19:41:45 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4157,3 +4157,11 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/fftw to 3.2.2 [wiz 2009-08-14]
 	Updated mail/mew to 6.2nb1 [minskim 2009-08-14]
 	Updated cad/boolean to 6.99 [joerg 2009-08-14]
+	Removed databases/postgresql81 [joerg 2009-08-14]
+	Removed databases/postgresql81-client [joerg 2009-08-14]
+	Removed databases/postgresql81-plperl [joerg 2009-08-14]
+	Removed databases/postgresql81-plpython [joerg 2009-08-14]
+	Removed databases/postgresql81-pltcl [joerg 2009-08-14]
+	Removed databases/postgresql81-server [joerg 2009-08-14]
+	Removed databases/postgresql81-tsearch2 [joerg 2009-08-14]
+	Removed databases/jdbc-postgresql81 [joerg 2009-08-14]
