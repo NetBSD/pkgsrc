@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.26 2009/07/29 06:33:03 adam Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.27 2009/08/14 19:40:48 joerg Exp $
 #
 # User-settable variables:
 #
@@ -26,7 +26,7 @@ _SYS_VARS.pgsql=	PG_LIB_EXT PGSQL_TYPE PGPKGSRCDIR
 .include "../../mk/bsd.prefs.mk"
 
 PGSQL_VERSION_DEFAULT?=		82
-PGSQL_VERSIONS_ACCEPTED?=	84 83 82 81
+PGSQL_VERSIONS_ACCEPTED?=	84 83 82
 
 # transform the list into individual variables
 .for pv in ${PGSQL_VERSIONS_ACCEPTED}
@@ -50,18 +50,6 @@ _PGSQL_VERSION_83_INSTALLED=	yes
 .if exists(${LOCALBASE}/lib/libecpg.5.0.2.dylib)
 _PGSQL_VERSION_82_INSTALLED=	yes
 .endif
-.if exists(${LOCALBASE}/lib/libecpg.5.0.1.dylib)
-_PGSQL_VERSION_81_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/lib/libecpg.5.0.dylib)
-_PGSQL_VERSION_80_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/lib/libecpg.4.1.dylib)
-_PGSQL_VERSION_74_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/lib/libecpg.3.dylib)
-_PGSQL_VERSION_73_INSTALLED=yes
-.endif
 .else
 .if exists(${LOCALBASE}/lib/libecpg.so.6.0.1)
 _PGSQL_VERSION_84_INSTALLED=	yes
@@ -71,18 +59,6 @@ _PGSQL_VERSION_83_INSTALLED=	yes
 .endif
 .if exists(${LOCALBASE}/lib/libecpg.so.5.0.2)
 _PGSQL_VERSION_82_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/lib/libecpg.so.5.0.1)
-_PGSQL_VERSION_81_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/lib/libecpg.so.5.0.0)
-_PGSQL_VERSION_80_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/lib/libecpg.so.4.1)
-_PGSQL_VERSION_74_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/lib/libecpg.so.3)
-_PGSQL_VERSION_73_INSTALLED=yes
 .endif
 .endif
 
@@ -132,12 +108,6 @@ PGPKGSRCDIR=	../../databases/postgresql83-client
 .elif ${_PGSQL_VERSION} == "82"
 PGSQL_TYPE=	postgresql82-client
 PGPKGSRCDIR=	../../databases/postgresql82-client
-.elif ${_PGSQL_VERSION} == "81"
-PGSQL_TYPE=	postgresql81-client
-PGPKGSRCDIR=	../../databases/postgresql81-client
-.elif ${_PGSQL_VERSION} == "80"
-PGSQL_TYPE=	postgresql80-client
-PGPKGSRCDIR=	../../databases/postgresql80-client
 .else
 # force an error
 PGSQL_TYPE=		none
