@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2009/08/09 16:00:53 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2009/08/14 15:51:06 drochner Exp $
 
 --- configure.in.orig	2006-08-16 20:02:25.000000000 +0200
 +++ configure.in
-@@ -12,6 +12,17 @@ AC_PROG_RANLIB
+@@ -12,6 +12,25 @@ AC_PROG_RANLIB
  AC_CHECK_PROG(AR,ar,ar)
  AC_CHECK_PROG(INSTALL,install,install)
  
@@ -10,6 +10,14 @@ $NetBSD: patch-aa,v 1.5 2009/08/09 16:00:53 drochner Exp $
 +*-*-darwin*)
 +  EXTRA_OBJS=osx_interface.o
 +  EXTRA_LIBS=-framework CoreFoundation -framework IOKit
++  ;;
++*-*-linux*)
++  EXTRA_OBJS="cooked_interface.o scsi_interface.o"
++  EXTRA_LIBS=-lrt
++  ;;
++*-*-netbsd*)
++  EXTRA_OBJS=scsi_interface.o
++  EXTRA_LIBS=
 +  ;;
 +*)
 +  EXTRA_OBJS="cooked_interface.o scsi_interface.o"
@@ -20,7 +28,7 @@ $NetBSD: patch-aa,v 1.5 2009/08/09 16:00:53 drochner Exp $
  if test -z "$GCC"; then
  	DEBUG="-g"
  	OPT="-O"
-@@ -20,6 +31,12 @@ else
+@@ -20,6 +39,12 @@ else
  	i?86-*-linux*)
  		DEBUG="-g -Wall -fsigned-char"
  		OPT="-O2 -ffast-math -fsigned-char -finline-functions";;
@@ -33,7 +41,7 @@ $NetBSD: patch-aa,v 1.5 2009/08/09 16:00:53 drochner Exp $
  	*)
  		DEBUG="-g -Wall -fsigned-char"
  		OPT="-O2 -fsigned-char";;
-@@ -56,15 +73,27 @@ fi
+@@ -56,15 +81,27 @@ fi
  	
  AC_CHECK_HEADERS(linux/sbpcd.h, SBPCD_H="-DSBPCD_H='1' ")
  AC_CHECK_HEADERS(linux/ucdrom.h, UCDROM_H="-DUCDROM_H='1' ")

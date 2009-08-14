@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2009/08/09 16:00:53 drochner Exp $
+# $NetBSD: Makefile,v 1.29 2009/08/14 15:51:05 drochner Exp $
 #
 
 DISTNAME=	cdparanoia-III-10.2
 PKGNAME=	cdparanoia-3.0.10.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/cdparanoia/
 EXTRACT_SUFX=	.src.tgz
@@ -23,6 +24,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/cdparanoia
 
 MAKE_ENV+=	GCC=yes
+CFLAGS+=	-Dprivate_data=private
 
 LDFLAGS.FreeBSD+=	-lcam
 LDFLAGS.DragonFly+=	-lcam

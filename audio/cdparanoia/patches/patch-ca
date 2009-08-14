@@ -1,9 +1,13 @@
-$NetBSD: patch-ca,v 1.8 2009/08/09 16:00:53 drochner Exp $
+$NetBSD: patch-ca,v 1.9 2009/08/14 15:51:06 drochner Exp $
 
 --- interface/Makefile.in.orig	2008-08-21 18:08:54.000000000 +0200
 +++ interface/Makefile.in
-@@ -18,12 +18,10 @@ RANLIB=@RANLIB@
- LIBS = -lm -lrt
+@@ -15,15 +15,13 @@ LD=@CC@
+ LDFLAGS=@LDFLAGS@ $(FLAGS)
+ AR=@AR@
+ RANLIB=@RANLIB@
+-LIBS = -lm -lrt
++LIBS = -lm @EXTRA_LIBS@
  CPPFLAGS+=-D_REENTRANT
  
 -OFILES = scan_devices.o	common_interface.o cooked_interface.o interface.o\
@@ -37,7 +41,7 @@ $NetBSD: patch-ca,v 1.8 2009/08/09 16:00:53 drochner Exp $
 +
 +libcdda_interface.la: 	$(OFILES)
 +	$(LIBTOOL) --mode=link $(CC) -o libcdda_interface.la $(OFILES:.o=.lo) \
-+	    -version-info 1:0 -rpath $(PREFIX)/lib $(LDFLAGS)
++	    -version-info 1:0 -rpath $(PREFIX)/lib $(LDFLAGS) $(LIBS)
 +
 +libcdda_interface.a:	libcdda_interface.la
  
