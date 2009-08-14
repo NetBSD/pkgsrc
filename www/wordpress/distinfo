@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1.2.2 2009/08/05 10:37:39 tron Exp $
+$NetBSD: distinfo,v 1.1.1.1.2.3 2009/08/14 10:02:07 tron Exp $
 
-SHA1 (wordpress-2.8.3.tar.gz) = 669cdf11a1728321283c724a0207eb37653caf73
-RMD160 (wordpress-2.8.3.tar.gz) = 5813e1c8aaac355734b91e03e8fbdf6f110fb87f
-Size (wordpress-2.8.3.tar.gz) = 2078634 bytes
+SHA1 (wordpress-2.8.4.tar.gz) = af9a37283b25f26a3a3aa3a7c5db23222e18e0fc
+RMD160 (wordpress-2.8.4.tar.gz) = ab449a9d20737d7fb032f6f1a247e16adba88fc4
+Size (wordpress-2.8.4.tar.gz) = 2078669 bytes
