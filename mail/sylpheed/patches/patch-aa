@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.7 2009/08/14 17:59:51 tnn Exp $
+
+--- libsylph/prefs_common.c.orig	2009-06-10 09:55:45.000000000 +0200
++++ libsylph/prefs_common.c
+@@ -463,7 +463,7 @@ static PrefParam param[] = {
+ 	 P_STRING},
+ 
+ 	/* Update check */
+-	{"auto_update_check", "TRUE", &prefs_common.auto_update_check, P_BOOL},
++	{"auto_update_check", "FALSE", &prefs_common.auto_update_check, P_BOOL},
+ 	{"use_http_proxy", "FALSE", &prefs_common.use_http_proxy, P_BOOL},
+ 	{"http_proxy_host", NULL, &prefs_common.http_proxy_host, P_STRING},
+ 
