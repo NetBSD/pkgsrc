@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3134 2009/08/14 22:58:19 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3135 2009/08/14 23:20:53 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4166,3 +4166,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed databases/postgresql81-tsearch2 [joerg 2009-08-14]
 	Removed databases/jdbc-postgresql81 [joerg 2009-08-14]
 	Updated lang/gforth to 0.7.0 [asau 2009-08-14]
+	Updated print/epdfview to 0.1.7nb1 [snj 2009-08-14]
