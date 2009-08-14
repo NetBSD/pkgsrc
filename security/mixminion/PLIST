@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/08/14 14:09:28 joerg Exp $
 bin/mixminion
 bin/mixminiond
 ${PYSITELIB}/mixminion/BuildMessage.py
 ${PYSITELIB}/mixminion/BuildMessage.pyc
 ${PYSITELIB}/mixminion/BuildMessage.pyo
+${PYSITELIB}/mixminion/ClientAPI.py
+${PYSITELIB}/mixminion/ClientAPI.pyc
+${PYSITELIB}/mixminion/ClientAPI.pyo
 ${PYSITELIB}/mixminion/ClientDirectory.py
 ${PYSITELIB}/mixminion/ClientDirectory.pyc
 ${PYSITELIB}/mixminion/ClientDirectory.pyo
@@ -40,6 +43,12 @@ ${PYSITELIB}/mixminion/NetUtils.pyo
 ${PYSITELIB}/mixminion/Packet.py
 ${PYSITELIB}/mixminion/Packet.pyc
 ${PYSITELIB}/mixminion/Packet.pyo
+${PYSITELIB}/mixminion/SExpression.py
+${PYSITELIB}/mixminion/SExpression.pyc
+${PYSITELIB}/mixminion/SExpression.pyo
+${PYSITELIB}/mixminion/ScheduleUtils.py
+${PYSITELIB}/mixminion/ScheduleUtils.pyc
+${PYSITELIB}/mixminion/ScheduleUtils.pyo
 ${PYSITELIB}/mixminion/ServerInfo.py
 ${PYSITELIB}/mixminion/ServerInfo.pyc
 ${PYSITELIB}/mixminion/ServerInfo.pyo
@@ -53,15 +62,15 @@ ${PYSITELIB}/mixminion/__init__.py
 ${PYSITELIB}/mixminion/__init__.pyc
 ${PYSITELIB}/mixminion/__init__.pyo
 ${PYSITELIB}/mixminion/_minionlib.so
-${PYSITELIB}/mixminion/_textwrap.py
-${PYSITELIB}/mixminion/_textwrap.pyc
-${PYSITELIB}/mixminion/_textwrap.pyo
 ${PYSITELIB}/mixminion/benchmark.py
 ${PYSITELIB}/mixminion/benchmark.pyc
 ${PYSITELIB}/mixminion/benchmark.pyo
 ${PYSITELIB}/mixminion/directory/DirCGI.py
 ${PYSITELIB}/mixminion/directory/DirCGI.pyc
 ${PYSITELIB}/mixminion/directory/DirCGI.pyo
+${PYSITELIB}/mixminion/directory/DirFormats.py
+${PYSITELIB}/mixminion/directory/DirFormats.pyc
+${PYSITELIB}/mixminion/directory/DirFormats.pyo
 ${PYSITELIB}/mixminion/directory/DirMain.py
 ${PYSITELIB}/mixminion/directory/DirMain.pyc
 ${PYSITELIB}/mixminion/directory/DirMain.pyo
@@ -95,6 +104,9 @@ ${PYSITELIB}/mixminion/server/Modules.pyo
 ${PYSITELIB}/mixminion/server/PacketHandler.py
 ${PYSITELIB}/mixminion/server/PacketHandler.pyc
 ${PYSITELIB}/mixminion/server/PacketHandler.pyo
+${PYSITELIB}/mixminion/server/Pinger.py
+${PYSITELIB}/mixminion/server/Pinger.pyc
+${PYSITELIB}/mixminion/server/Pinger.pyo
 ${PYSITELIB}/mixminion/server/ServerConfig.py
 ${PYSITELIB}/mixminion/server/ServerConfig.pyc
 ${PYSITELIB}/mixminion/server/ServerConfig.pyo
