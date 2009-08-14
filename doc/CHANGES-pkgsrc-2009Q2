@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.33 2009/08/14 14:02:37 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.34 2009/08/14 15:57:16 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -126,3 +126,9 @@ Pullup ticket #2864 - requested by adrianp
 wordpress: security update
 Pullup ticket #2865 - requested by taca
 apr0: security patch
+Pullup ticket #2861 - requested by kefren
+vlc08: security patch
+Pullup ticket #2862 - requested by kefren
+mplayer: security patch
+Pullup ticket #2863 - requested by kefren
+gmplayer: security patch
