@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3126 2009/08/14 14:11:00 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3127 2009/08/14 14:21:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4151,3 +4151,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/pidgin-sametime to 2.5.8 [snj 2009-08-13]
 	Updated chat/pidgin-silc to 2.5.8 [snj 2009-08-13]
 	Updated security/mixminion to 0.0.8alpha3 [joerg 2009-08-14]
+	Updated net/pygopherd to 2.0.16 [joerg 2009-08-14]
