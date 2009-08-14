@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3130 2009/08/14 16:14:27 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3131 2009/08/14 17:23:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4155,3 +4155,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/libgnomekbd to 2.26.0nb1 [wiz 2009-08-14]
 	Updated devel/opal to 3.6.4 [wiz 2009-08-14]
 	Updated math/fftw to 3.2.2 [wiz 2009-08-14]
+	Updated mail/mew to 6.2nb1 [minskim 2009-08-14]
