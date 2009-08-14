@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8337 2009/08/14 12:07:25 asau Exp $
+$NetBSD: TODO,v 1.8338 2009/08/14 15:06:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -366,7 +366,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.7.1
 	o aewm++-1.0.27
 	o afterstep-2.2.9
-	o album-4.05
+	o album-4.06
 	o albumplayer-0.3
 	o alee-ttf-11.2
 	o aliados-0.2.0
@@ -448,7 +448,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o boolean-6.99
 	o bos-2.5
 	o boson-0.13
-	o botan-1.8.5
+	o botan-1.8.6
 	o bouml-4.13.1
 	o bugzilla-3.4.1
 	o byacc-20080824
@@ -463,6 +463,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cddbd-1.5.2
 	o cdif-1.19
 	o cdlabelgen-4.1.0
+	o cdrtools-2.01.01alpha63
 	o cfitsio-3181
 	o cflow-1.3
 	o cgdb-0.6.4
@@ -516,7 +517,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o devIL-1.7.8
 	o dhid-5.3
 	o dia-0.97
-	o diffstat-1.47
+	o diffstat-1.48
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dircproxy-devel-1.2.0.2
@@ -644,10 +645,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
 	o glpk-4.39
+	o gmime-2.2.24
+	o gmime24-2.4.8
 	o gmp-4.3.1
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-commander-1.2.8.1
 	o gnome-packagekit-0.4.5
 	o gnome-power-manager-2.26.4 [GNOME 2.26, wants DeviceKit-power]
 	o gnome-subtitles-0.9.1
@@ -658,6 +662,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.12
 	o gnustep-base-1.19.1
+	o gnutls-2.8.2
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
 	o golem-0.0.6
@@ -764,7 +769,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kapooka-0.3
 	o kdbg-2.1.1
 	o kde4-4.2.2
-	o kdevelop-3.5.4
+	o kdevelop-3.5.5
 	o kdrill-6.5
 	o kid3-1.2
 	o kinput2-3.1
@@ -783,6 +788,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o latex2rtf-1.9.19
 	o lcc-4.2
 	o ldapsdk-6.0.2
+	o ldns-1.6.0 [pkg/41868]
 	o leafpad-0.8.15
 	o less-436
 	o lft-2.5 [at http://pwhois.org/]
@@ -884,7 +890,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o miredo-1.1.7
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-2.9.7
+	o mkvtoolnix-2.9.8
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
@@ -893,8 +899,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.26.3 [GNOME 2.26]
 	o mp3blaster-3.2.3
 	o mp3diags-0.99.05.030
+	o mpc-0.17
 	o mpeg4ip-1.6.1
-	o mpg123-1.8.1
+	o mpg123-1.9.0
 	o mpich-1.4
 	o mpop-1.0.17
 	o mserv-devel-0.41
@@ -908,7 +915,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysql5-client-5.0.83
 	o mysql5-server-5.0.83
 	o mysqlcc-0.9.8
-	o nagios-3.1.0
+	o nagios-3.2.0
 	o nap-1.5.3
 	o nautilus-sendto-1.1.6
 	o navi2ch-1.8.1
@@ -973,7 +980,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Pod-Simple-3.08
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
-	o p5-xmltv-0.5.55
+	o p5-xmltv-0.5.56
 	o packagekit-0.4.8
 	o pam-smbpass-3.0.13
 	o paprefs-0.9.8
@@ -1013,7 +1020,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
 	o php5-5.3.0
-	o phpmyadmin-3.2.0.1
+	o phpmyadmin-3.2.1
 	o phylip-3.68
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -1021,6 +1028,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pinfo-0.6.9
 	o pioneers-0.12.2
 	o pircbot-1.4.4
+	o pixman-0.15.20
 	o pks-0.9.6
 	o plone-3.2.3 [should make plone-32?]
 	o ploticus-2.41
@@ -1028,6 +1036,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plotutils-2.5
 	o plptools-0.13 [pkg/30244]
 	o plptools-1.0.8
+	o png-1.2.39
 	o pngcheck-2.3.0
 	o po4a-0.36.3
 	o polsms-2.1.0
@@ -1161,7 +1170,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sabayon-2.25.0 [GNOME 2.26]
 	o sablecc-3.2
 	o samba-3.0.36
-	o samba-3.2.13
+	o samba-3.2.14
 	o samba-3.4.0
 	o sane-backends-1.0.20
 	o sarg-2.2.5
@@ -1277,6 +1286,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucblogo-5.5
 	o udunits-1.12.9
 	o uim-1.5.6
+	o unbound-1.3.3 [pkg/41871]
 	o unixodbc-2.2.13
 	o unrealircd-3.2.8.1
 	o ups-nut-2.2.1 [pkgsrc-wip]
@@ -1301,7 +1311,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-1.2.0
 	o vp-1.6
-	o vsftpd-2.1.2
+	o vsftpd-2.2.0
 	o vttest-20071216
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1314,7 +1324,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weewm-0.01
 	o whohas-0.23
 	o windowlab-1.34
-	o wine-devel-1.1.26
+	o wine-devel-1.1.27
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1378,12 +1388,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xnap-2.5r3
 	o xpad-2.13
 	o xpuyopuyo-0.9.8
+	o xrandr-1.3.1
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33.1
 	o xrn-9.02
 	o xsane-0.99.6
 	o xskat-4.0
 	o xsoldier-1.4
+	o xterm-245
 	o xtraceroute-0.9.1
 	o xtu-1.3
 	o xtux-20030306
@@ -1402,6 +1414,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
+	o zile-2.3.10
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zope-3.4.0
