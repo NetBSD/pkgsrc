@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.303 2009/07/29 06:33:03 adam Exp $
+# $NetBSD: Makefile,v 1.304 2009/08/14 19:41:45 joerg Exp $
 #
 
 COMMENT=	Databases
@@ -35,7 +35,6 @@ SUBDIR+=	java-tokyocabinet
 SUBDIR+=	jdb
 SUBDIR+=	jdbc-mysql31
 SUBDIR+=	jdbc-mysql5
-SUBDIR+=	jdbc-postgresql81
 SUBDIR+=	jdbc-postgresql82
 SUBDIR+=	jdbc-postgresql83
 SUBDIR+=	kmysqladmin
@@ -190,13 +189,6 @@ SUBDIR+=	php5-mysqli
 SUBDIR+=	phpldapadmin
 SUBDIR+=	phpmyadmin
 SUBDIR+=	phppgadmin
-SUBDIR+=	postgresql81
-SUBDIR+=	postgresql81-client
-SUBDIR+=	postgresql81-plperl
-SUBDIR+=	postgresql81-plpython
-SUBDIR+=	postgresql81-pltcl
-SUBDIR+=	postgresql81-server
-SUBDIR+=	postgresql81-tsearch2
 SUBDIR+=	postgresql82
 SUBDIR+=	postgresql82-adminpack
 SUBDIR+=	postgresql82-client
