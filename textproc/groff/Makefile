@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2009/08/01 19:13:15 dholland Exp $
+# $NetBSD: Makefile,v 1.52 2009/08/14 15:41:18 wiz Exp $
 #
 
 DISTNAME=	groff-1.20.1
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/groff/groff.html
 COMMENT=	GNU roff text processing suite
 
 CHECK_PERMS=		NO
+MAKE_JOBS_SAFE=		NO
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	share/groff/site-tmac
