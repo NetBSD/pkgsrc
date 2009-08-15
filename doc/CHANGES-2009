@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3142 2009/08/15 15:39:45 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3143 2009/08/15 15:47:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4174,3 +4174,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-control-center to 2.26.0nb1 [wiz 2009-08-15]
 	Updated archivers/unrar to 3.9.5 [christos 2009-09-15]
 	Updated net/ekiga to 3.2.5 [wiz 2009-08-15]
+	Updated x11/xrandr to 1.3.1 [wiz 2009-08-15]
