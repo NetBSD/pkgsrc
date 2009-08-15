@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/06/01 15:25:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/15 15:57:53 wiz Exp $
 
 DISTNAME=	kiax-0.8.51-src
 PKGNAME=	kiax-0.8.51
@@ -9,12 +9,14 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kiax/}
 MAINTAINER=	reinoud@NetBSD.org
 HOMEPAGE=	http://www.kiax.org/
 COMMENT=	Open internet telephony system
+LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 HAS_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		no
 
 do-configure:
 	(cd ${WRKSRC} && ${QTDIR}/bin/qmake -o Makefile qkiax.pro)
