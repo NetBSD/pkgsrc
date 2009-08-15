@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.3 2009/08/15 17:15:32 wiz Exp $
+
+--- src/c/getline.h.orig	2006-06-12 21:16:23.000000000 +0000
++++ src/c/getline.h
+@@ -1,6 +1,6 @@
+ char *getline_expand (FILE *fp);
+   /* grab a line in buffer, return new buffer or NULL for eof
+      tabs in line are expanded according to tabsize */
+-char *getline (FILE *fp);
++char *get_line (FILE *fp);
+   /* grab a line in the buffer, return a new buffer or NULL for eof
+      no expansion of tabs */
