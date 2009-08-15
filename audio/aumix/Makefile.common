@@ -1,17 +1,16 @@
-# $NetBSD: Makefile.common,v 1.4 2008/06/12 02:14:13 joerg Exp $
+# $NetBSD: Makefile.common,v 1.5 2009/08/15 23:27:19 zafer Exp $
 
 DISTNAME=	aumix-2.8
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aumix/} \
 		http://jpj.net/~trevor/aumix/ \
-		${MASTER_SITE_SUNSITE:=apps/sound/mixers/} \
-		ftp://aumix.sourceforge.net/pub/aumix/stable/ \
-		http://jpj.net/~trevor/aumix/old/
+		${MASTER_SITE_SUNSITE:=apps/sound/mixers/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	trevor@jpj.net
 HOMEPAGE=	http://jpj.net/~trevor/aumix.html
 COMMENT=	Set mix levels
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
