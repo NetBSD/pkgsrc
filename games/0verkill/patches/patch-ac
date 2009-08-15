@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2009/08/15 06:01:13 snj Exp $
+
+--- net.c.orig	2009-08-14 22:29:07.000000000 -0700
++++ net.c	2009-08-14 22:30:17.000000000 -0700
+@@ -91,7 +91,7 @@ client has: sender_server 1, recipient m
+ 	r=p[8]+(p[9]<<8)+(p[10]<<16)+(p[11]<<24);
+ 	mem_free(p);
+ 	if (retval==-1)return -1;
+-	if (crc!=crc32(packet,retval-12))return -1;
++	if (retval < 12 || crc!=crc32(packet,retval-12))return -1;
+ 	if (r!=recipient)return -1;
+ 	if (sender_server&&s)return -1;
+ 	return retval-12;
