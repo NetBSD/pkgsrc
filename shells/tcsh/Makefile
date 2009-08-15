@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2008/11/10 09:45:43 adam Exp $
+# $NetBSD: Makefile,v 1.66 2009/08/15 23:43:26 zafer Exp $
 
 DISTNAME=	tcsh-6.16.00
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
-		ftp://ftp.gw.com/pub/unix/tcsh/ \
 		ftp://ftp.funet.fi/pub/unix/shells/tcsh/
 
 MAINTAINER=	kim@tac.nyc.ny.us
