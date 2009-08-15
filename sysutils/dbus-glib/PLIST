@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:16:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/08/15 21:10:11 wiz Exp $
 bin/dbus-binding-tool
 include/dbus-1.0/dbus/dbus-glib-bindings.h
 include/dbus-1.0/dbus/dbus-glib-error-enum.h
@@ -8,6 +8,7 @@ include/dbus-1.0/dbus/dbus-gtype-specialized.h
 lib/libdbus-glib-1.la
 lib/pkgconfig/dbus-glib-1.pc
 libexec/dbus-bash-completion-helper
+man/man1/dbus-binding-tool.1
 share/examples/dbus-glib/dbus-bash-completion.sh
 share/gtk-doc/html/dbus-glib/ch01.html
 share/gtk-doc/html/dbus-glib/ch02.html
