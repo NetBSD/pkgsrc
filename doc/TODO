@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8340 2009/08/14 22:58:18 asau Exp $
+$NetBSD: TODO,v 1.8341 2009/08/15 05:56:13 obache Exp $
 
 Suggested new packages
 ======================
@@ -855,6 +855,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o matchbox-panel-0.9.3
 	o mathomatic-14.5.3
 	o mc-4.6.2
+	o memcached-1.4.0
 	o memconf-2.9 [pkg/40201]
 	o memtestplus-2.11
 	o merb-1.0.8.1
