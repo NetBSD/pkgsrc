@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3136 2009/08/15 05:59:02 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3137 2009/08/15 06:33:40 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4168,3 +4168,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/gforth to 0.7.0 [asau 2009-08-14]
 	Updated print/epdfview to 0.1.7nb1 [snj 2009-08-14]
 	Removed geography/postgresql81-postgis [wiz 2009-08-14]
+	Updated games/0verkill to 0.16nb1 [snj 2009-08-15]
