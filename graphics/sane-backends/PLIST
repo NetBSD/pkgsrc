@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/06/14 20:05:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/08/15 17:53:11 wiz Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -16,9 +16,11 @@ lib/sane/libsane-avision.la
 lib/sane/libsane-bh.la
 lib/sane/libsane-canon.la
 lib/sane/libsane-canon630u.la
+lib/sane/libsane-canon_dr.la
 lib/sane/libsane-cardscan.la
 lib/sane/libsane-coolscan.la
 lib/sane/libsane-coolscan2.la
+lib/sane/libsane-coolscan3.la
 lib/sane/libsane-dc210.la
 lib/sane/libsane-dc240.la
 lib/sane/libsane-dc25.la
@@ -57,6 +59,7 @@ lib/sane/libsane-pixma.la
 lib/sane/libsane-plustek.la
 lib/sane/libsane-plustek_pp.la
 lib/sane/libsane-ricoh.la
+lib/sane/libsane-rts8891.la
 lib/sane/libsane-s9036.la
 lib/sane/libsane-sceptre.la
 lib/sane/libsane-sharp.la
@@ -75,6 +78,7 @@ lib/sane/libsane-u12.la
 lib/sane/libsane-umax.la
 lib/sane/libsane-umax1220u.la
 lib/sane/libsane-umax_pp.la
+lib/sane/libsane-xerox_mfp.la
 man/man1/gamma4scanimage.1
 man/man1/sane-config.1
 man/man1/sane-find-scanner.1
@@ -89,10 +93,11 @@ man/man5/sane-avision.5
 man/man5/sane-bh.5
 man/man5/sane-canon.5
 man/man5/sane-canon630u.5
-man/man5/sane-canon_pp.5
+man/man5/sane-canon_dr.5
 man/man5/sane-cardscan.5
 man/man5/sane-coolscan.5
 man/man5/sane-coolscan2.5
+man/man5/sane-coolscan3.5
 man/man5/sane-dc210.5
 man/man5/sane-dc240.5
 man/man5/sane-dc25.5
@@ -100,9 +105,9 @@ man/man5/sane-dll.5
 man/man5/sane-dmc.5
 man/man5/sane-epjitsu.5
 man/man5/sane-epson.5
+man/man5/sane-epson2.5
 man/man5/sane-fujitsu.5
 man/man5/sane-genesys.5
-man/man5/sane-gphoto2.5
 man/man5/sane-gt68xx.5
 man/man5/sane-hp.5
 man/man5/sane-hp3500.5
@@ -111,7 +116,6 @@ man/man5/sane-hp4200.5
 man/man5/sane-hp5400.5
 man/man5/sane-hp5590.5
 man/man5/sane-hpljm1005.5
-man/man5/sane-hpsj5s.5
 man/man5/sane-hs2p.5
 man/man5/sane-ibm.5
 man/man5/sane-leo.5
@@ -121,7 +125,6 @@ man/man5/sane-matsushita.5
 man/man5/sane-microtek.5
 man/man5/sane-microtek2.5
 man/man5/sane-mustek.5
-man/man5/sane-mustek_pp.5
 man/man5/sane-mustek_usb.5
 man/man5/sane-mustek_usb2.5
 man/man5/sane-nec.5
@@ -132,9 +135,8 @@ man/man5/sane-pint.5
 man/man5/sane-pixma.5
 man/man5/sane-plustek.5
 man/man5/sane-plustek_pp.5
-man/man5/sane-pnm.5
-man/man5/sane-qcam.5
 man/man5/sane-ricoh.5
+man/man5/sane-rts8891.5
 man/man5/sane-s9036.5
 man/man5/sane-sceptre.5
 man/man5/sane-scsi.5
@@ -155,7 +157,7 @@ man/man5/sane-umax.5
 man/man5/sane-umax1220u.5
 man/man5/sane-umax_pp.5
 man/man5/sane-usb.5
-man/man5/sane-v4l.5
+man/man5/sane-xerox_mfp.5
 man/man7/sane.7
 man/man8/saned.8
 sbin/saned
@@ -251,9 +253,11 @@ share/examples/sane/avision.conf
 share/examples/sane/bh.conf
 share/examples/sane/canon.conf
 share/examples/sane/canon630u.conf
+share/examples/sane/canon_dr.conf
 share/examples/sane/cardscan.conf
 share/examples/sane/coolscan.conf
 share/examples/sane/coolscan2.conf
+share/examples/sane/coolscan3.conf
 share/examples/sane/dc210.conf
 share/examples/sane/dc240.conf
 share/examples/sane/dc25.conf
@@ -282,9 +286,11 @@ share/examples/sane/mustek_usb.conf
 share/examples/sane/nec.conf
 share/examples/sane/net.conf
 share/examples/sane/pie.conf
+share/examples/sane/pixma.conf
 share/examples/sane/plustek.conf
 share/examples/sane/plustek_pp.conf
 share/examples/sane/ricoh.conf
+share/examples/sane/rts8891.conf
 share/examples/sane/s9036.conf
 share/examples/sane/saned.conf
 share/examples/sane/sceptre.conf
@@ -303,10 +309,12 @@ share/examples/sane/u12.conf
 share/examples/sane/umax.conf
 share/examples/sane/umax1220u.conf
 share/examples/sane/umax_pp.conf
+share/examples/sane/xerox_mfp.conf
 share/locale/bg/LC_MESSAGES/sane-backends.mo
 share/locale/cs/LC_MESSAGES/sane-backends.mo
 share/locale/da/LC_MESSAGES/sane-backends.mo
 share/locale/de/LC_MESSAGES/sane-backends.mo
+share/locale/en_GB/LC_MESSAGES/sane-backends.mo
 share/locale/eo/LC_MESSAGES/sane-backends.mo
 share/locale/es/LC_MESSAGES/sane-backends.mo
 share/locale/fi/LC_MESSAGES/sane-backends.mo
@@ -322,3 +330,4 @@ share/locale/sv/LC_MESSAGES/sane-backends.mo
 @pkgdir share/sane/gt68xx
 @pkgdir share/sane/epjitsu
 @pkgdir share/sane/artec_eplus48u
+@pkgdir share/examples/sane/dll.d
