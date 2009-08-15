@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/07/22 09:01:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/15 15:39:23 wiz Exp $
 #
 
-DISTNAME=		ekiga-3.2.0
-PKGREVISION=		1
+DISTNAME=		ekiga-3.2.5
 CATEGORIES=		net comms
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ekiga/3.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,15 +9,16 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ekiga.org/
 COMMENT=		VoIP and video conferencing application for GNOME
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PREV_PKGPATH=		net/ekiga-devel
 
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_TOOLS+=		autoconf
 USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client:Q}
+CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client}
+CONFIGURE_ARGS+=	--with-libsasl2-dir=${BUILDLINK_PREFIX.cyrus-sasl}
 CONFIGURE_ARGS+=	--enable-gstreamer
 
 .include "options.mk"
@@ -28,9 +28,6 @@ GCONF_SCHEMAS=		ekiga.schemas
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
