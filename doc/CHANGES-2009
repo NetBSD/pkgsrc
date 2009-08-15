@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3150 2009/08/15 21:10:54 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3151 2009/08/15 21:28:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4182,3 +4182,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/pixman to 0.15.20 [wiz 2009-08-15]
 	Updated sysutils/cdrtools to 2.01.01alpha63 [wiz 2009-08-15]
 	Updated sysutils/dbus-glib to 0.82 [wiz 2009-08-15]
+	Updated devel/kdevelop-base to 3.5.5 [wiz 2009-08-15]
