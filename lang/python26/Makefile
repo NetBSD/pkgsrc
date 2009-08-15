@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2009/07/18 10:41:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/15 23:13:19 zafer Exp $
 
 DISTNAME=	Python-2.6.2
 PKGNAME=	python26-2.6.2
 PKGREVISION=	3
 CATEGORIES=	lang python
-MASTER_SITES=	ftp://ftp.python.org/pub/python/2.6.2/ \
-		http://www.python.org/ftp/python/2.6.2/
+MASTER_SITES=	http://www.python.org/ftp/python/2.6.2/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
