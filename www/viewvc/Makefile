@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2009/07/07 18:46:37 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/08/15 08:33:13 adrianp Exp $
 #
 
-DISTNAME=	viewvc-1.0.7
-PKGREVISION=	2
+DISTNAME=	viewvc-1.0.9
 CATEGORIES=	devel www
-MASTER_SITES=	http://viewvc.tigris.org/files/documents/3330/44050/
+MASTER_SITES=	http://viewvc.tigris.org/files/documents/3330/46487/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.viewvc.org/
@@ -60,6 +59,12 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/viewvc/viewvc.conf
 	${INSTALL_DATA} ${WRKSRC}/cvsgraph.conf.dist \
 		${DESTDIR}${PREFIX}/share/examples/viewvc/cvsgraph.conf
+
+post-install:
+	${CHMOD} ${SHAREMODE} \
+		${DESTDIR}/${PREFIX}/share/viewvc/bin/mod_python/.htaccess
+	${CHMOD} ${SHAREMODE} \
+		${DESTDIR}/${PREFIX}/share/viewvc/bin/mod_python/*.py
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
