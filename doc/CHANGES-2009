@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3139 2009/08/15 14:31:51 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3140 2009/08/15 14:48:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4171,3 +4171,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/0verkill to 0.16nb1 [snj 2009-08-15]
 	Updated www/viewvc to 1.0.9 [adrianp 2009-08-15]
 	Added time/ical2rem version 0.5.2 [wiz 2009-08-15]
+	Updated x11/gnome-control-center to 2.26.0nb1 [wiz 2009-08-15]
