@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3137 2009/08/15 06:33:40 snj Exp $
+$NetBSD: CHANGES-2009,v 1.3138 2009/08/15 08:33:26 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4169,3 +4169,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/epdfview to 0.1.7nb1 [snj 2009-08-14]
 	Removed geography/postgresql81-postgis [wiz 2009-08-14]
 	Updated games/0verkill to 0.16nb1 [snj 2009-08-15]
+	Updated www/viewvc to 1.0.9 [adrianp 2009-08-15]
