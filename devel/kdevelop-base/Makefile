@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.76 2009/05/20 00:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2009/08/15 17:04:51 wiz Exp $
 
-DISTNAME=	kdevelop-3.5.3
-PKGNAME=	kdevelop-base-3.5.3
-PKGREVISION=	2
+DISTNAME=	kdevelop-3.5.4
+PKGNAME=	kdevelop-base-3.5.4
 CATEGORIES=	devel kde
 
 HOMEPAGE=	http://www.kdevelop.org/
 COMMENT=	Base modules for IDE for Unix/X11/KDE
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
