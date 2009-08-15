@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/15 14:31:07 wiz Exp $
+bin/ical2rem
