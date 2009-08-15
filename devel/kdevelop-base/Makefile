@@ -1,14 +1,18 @@
-# $NetBSD: Makefile,v 1.77 2009/08/15 17:04:51 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2009/08/15 21:28:12 wiz Exp $
 
-DISTNAME=	kdevelop-3.5.4
-PKGNAME=	kdevelop-base-3.5.4
+DISTNAME=	kdevelop_3.5.5.orig
+PKGNAME=	kdevelop-base-3.5.5
 CATEGORIES=	devel kde
+MASTER_SITES=	http://download.opensuse.org/repositories/home:/amilcarlucas/xUbuntu_6.06/
+EXTRACT_SUFX=	.tar.gz
 
 HOMEPAGE=	http://www.kdevelop.org/
 COMMENT=	Base modules for IDE for Unix/X11/KDE
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/kdevelop-3.5.5
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
