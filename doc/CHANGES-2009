@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3146 2009/08/15 17:29:41 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3147 2009/08/15 17:53:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4178,3 +4178,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/kdevelop-base to 3.5.4 [wiz 2009-08-15]
 	Updated emulators/sdlmess to 0.133 [wiz 2009-08-15]
 	Updated graphics/png to 1.2.39 [wiz 2009-08-15]
+	Updated graphics/sane-backends to 1.0.20 [wiz 2009-08-15]
