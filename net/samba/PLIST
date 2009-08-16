@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2009/06/14 18:09:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.44 2009/08/16 16:37:19 wiz Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -93,7 +93,6 @@ man/man5/smbpasswd.5
 man/man7/libsmbclient.7
 man/man7/pam_winbind.7
 man/man7/samba.7
-man/man8/cifs.upcall.8
 man/man8/eventlogadm.8
 man/man8/idmap_ad.8
 man/man8/idmap_ldap.8
