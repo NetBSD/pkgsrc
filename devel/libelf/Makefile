@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2009/08/16 14:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/16 14:27:30 wiz Exp $
 #
 
-DISTNAME=		libelf-0.8.10
+DISTNAME=		libelf-0.8.12
 CATEGORIES=		devel
 MASTER_SITES=		http://www.mr511.de/software/
 
 MAINTAINER=		petrov@NetBSD.org
 HOMEPAGE=		http://www.mr511.de/software/english.html
 COMMENT=		ELF object file access library
+LICENSE=		gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
