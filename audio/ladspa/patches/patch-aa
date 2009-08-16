@@ -1,21 +1,21 @@
-$NetBSD: patch-aa,v 1.3 2009/07/07 15:23:05 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2009/08/16 14:17:44 wiz Exp $
 
---- makefile.orig	2004-02-28 17:30:22.000000000 +0100
-+++ makefile	2004-02-28 17:35:17.000000000 +0100
-@@ -5,9 +5,9 @@
- # Change these if you want to install somewhere else. In particularly
- # you may wish to remove the middle "local/" part of each entry.
+--- makefile.orig	2007-11-06 10:42:45.000000000 +0000
++++ makefile
+@@ -4,9 +4,9 @@
+ #
+ # Change these if you want to install somewhere else.
  
--INSTALL_PLUGINS_DIR	=	/usr/local/lib/ladspa/
+-INSTALL_PLUGINS_DIR	=	/usr/lib/ladspa/
 -INSTALL_INCLUDE_DIR	=	/usr/include/
--INSTALL_BINARY_DIR	=	/usr/local/bin/
-+INSTALL_PLUGINS_DIR	=	${PREFIX}/lib/ladspa
-+INSTALL_INCLUDE_DIR	=	${PREFIX}/include
-+INSTALL_BINARY_DIR	=	${PREFIX}/bin
+-INSTALL_BINARY_DIR	=	/usr/bin/
++INSTALL_PLUGINS_DIR	=	${PREFIX}/lib/ladspa/
++INSTALL_INCLUDE_DIR	=	${PREFIX}/include/
++INSTALL_BINARY_DIR	=	${PREFIX}/bin/
  
  ###############################################################################
  #
-@@ -15,8 +15,8 @@
+@@ -14,8 +14,8 @@ INSTALL_BINARY_DIR	=	/usr/bin/
  #
  
  INCLUDES	=	-I.
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.3 2009/07/07 15:23:05 joerg Exp $
  CXXFLAGS	=	$(CFLAGS)
  PLUGINS		=	../plugins/amp.so				\
  			../plugins/delay.so				\
-@@ -26,8 +26,8 @@
+@@ -25,8 +25,8 @@ PLUGINS		=	../plugins/amp.so				\
  PROGRAMS	=	../bin/analyseplugin				\
  			../bin/applyplugin 				\
  			../bin/listplugins
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.3 2009/07/07 15:23:05 joerg Exp $
  
  ###############################################################################
  #
-@@ -39,32 +39,19 @@
+@@ -38,8 +38,8 @@ CPP		=	c++
  	$(LD) -o ../plugins/$*.so plugins/$*.o -shared
  
  ../plugins/%.so:	plugins/%.cpp ladspa.h
@@ -48,36 +48,28 @@ $NetBSD: patch-aa,v 1.3 2009/07/07 15:23:05 joerg Exp $
  
  ###############################################################################
  #
- # TARGETS
- #
+@@ -58,13 +58,13 @@ test:	/tmp/test.wav ../snd/noise.wav alw
+ 	-sndfile-play /tmp/test.wav
+ 	@echo Test complete.
  
--test:	/tmp/test.wav ../snd/noise.wav always
--	@echo ---------------------------------------------
--	@echo First listen to the white noise input signal:
--	@echo ---------------------------------------------
--	play ../snd/noise.wav
--	@echo -------------------------
--	@echo Compare to plugin output.
--	@echo -------------------------
--	@echo Should be a noise band around 6000Hz, repeated quietly after 1s.
--	play /tmp/test.wav
--
 -install:	targets
--	-mkdirhier	$(INSTALL_PLUGINS_DIR)				\
--			$(INSTALL_INCLUDE_DIR)				\
--			$(INSTALL_BINARY_DIR)
+-	-mkdirhier $(INSTALL_PLUGINS_DIR)
+-	-mkdirhier $(INSTALL_INCLUDE_DIR)
+-	-mkdirhier $(INSTALL_BINARY_DIR)
 -	cp ../plugins/* $(INSTALL_PLUGINS_DIR)
 -	cp ladspa.h $(INSTALL_INCLUDE_DIR)
 -	cp ../bin/* $(INSTALL_BINARY_DIR)
 +install:
-+	$(BSD_INSTALL_DATA_DIR)	${DESTDIR}$(INSTALL_PLUGINS_DIR)
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(INSTALL_PLUGINS_DIR)
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(INSTALL_INCLUDE_DIR)
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(INSTALL_BINARY_DIR)
 +	$(BSD_INSTALL_DATA) ../plugins/* ${DESTDIR}$(INSTALL_PLUGINS_DIR)
 +	$(BSD_INSTALL_DATA) ladspa.h ${DESTDIR}$(INSTALL_INCLUDE_DIR)
 +	$(BSD_INSTALL_PROGRAM) ../bin/* ${DESTDIR}$(INSTALL_BINARY_DIR)
  
  /tmp/test.wav:	targets ../snd/noise.wav
  	../bin/listplugins
-@@ -82,7 +69,7 @@
+@@ -82,7 +82,7 @@ install:	targets
  				../plugins/delay.so delay_5s 1 0.1	\
  				../plugins/amp.so amp_mono 4		\
  
