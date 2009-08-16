@@ -1,14 +1,8 @@
-$NetBSD: distinfo,v 1.27 2008/11/21 13:12:12 jmcneill Exp $
+$NetBSD: distinfo,v 1.28 2009/08/16 13:42:33 wiz Exp $
 
-SHA1 (gmp-4.2.4.tar.bz2) = bb721f94fbeeb8c609104540b408da6707c370ec
-RMD160 (gmp-4.2.4.tar.bz2) = 15c6c40c377088a3bcf9d432bcc27c777991cb12
-Size (gmp-4.2.4.tar.bz2) = 1710660 bytes
-SHA1 (mpf_eq.diff) = 5fe6dd4dba6574baf3db8f3d2a16fbd73dc295e1
-RMD160 (mpf_eq.diff) = 52036e74d5d118db1fd0ad844ba871249fdbaefc
-Size (mpf_eq.diff) = 9252 bytes
-SHA1 (mpf_set_str.c.4.diff) = b14fc8b7644183e021406f05b5e168589d9acd1d
-RMD160 (mpf_set_str.c.4.diff) = 03015e15518bdd5887d09f8b3fb12f9c8d2b4beb
-Size (mpf_set_str.c.4.diff) = 860 bytes
+SHA1 (gmp-4.3.1.tar.bz2) = acbd1edc61230b1457e9742136994110e4f381b2
+RMD160 (gmp-4.3.1.tar.bz2) = f325d809dde1f87816eea3697bcfe00f3ec8f10d
+Size (gmp-4.3.1.tar.bz2) = 1881090 bytes
 SHA1 (patch-aa) = a53db34c8ecf38d6556a59a0fa7382456c30fab6
 SHA1 (patch-ab) = e768eca25c117871041d12a618e38d9d252f25e5
 SHA1 (patch-ac) = 9c7e6817632596bfd6c86a30e3b2d7f78fccd5ff
