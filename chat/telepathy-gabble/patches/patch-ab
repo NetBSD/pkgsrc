@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2009/01/17 20:36:28 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2009/08/16 18:46:27 wiz Exp $
+
+http://bugs.freedesktop.org/show_bug.cgi?id=23348
 
 --- lib/gibber/gibber-fd-transport.h.orig	2008-12-18 17:41:05.000000000 +0100
 +++ lib/gibber/gibber-fd-transport.h
