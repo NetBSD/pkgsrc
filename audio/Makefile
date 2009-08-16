@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.417 2009/08/10 19:02:16 kefren Exp $
+# $NetBSD: Makefile,v 1.418 2009/08/16 15:52:52 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -269,6 +269,7 @@ SUBDIR+=	ncmpc
 SUBDIR+=	normalize
 SUBDIR+=	nosefart
 SUBDIR+=	nspmod
+SUBDIR+=	ocp
 SUBDIR+=	oggasm
 SUBDIR+=	openal
 SUBDIR+=	p5-Audio-CD
