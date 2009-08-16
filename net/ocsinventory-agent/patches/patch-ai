@@ -1,0 +1,26 @@
+$NetBSD: patch-ai,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+
+--- /dev/null	2009-06-25 18:59:27.000000000 +0200
++++ ./lib/Ocsinventory/Agent/Backend/OS/BSD/Pcictl/Pcictl.pm	2009-06-25 18:59:02.000000000 +0200
+@@ -0,0 +1,21 @@
++package Ocsinventory::Agent::Backend::OS::BSD::Pcictl::Pcictl;
++require Exporter;
++@ISA = qw(Exporter);
++@EXPORT = qw(runpcictl);
++use strict;
++
++sub runpcictl {
++	my @devices;
++	opendir DEV, "/dev" or die "can't open /dev";
++	while (my $file = readdir DEV) {
++		if ($file =~ m/^pci[0-9]+$/) {
++			foreach (`pcictl $file list 2>/dev/null`) {
++				chop $_;
++				push @devices, $_;
++			}
++		}
++	}
++	return @devices;
++}
++
++1;

@@ -1,0 +1,21 @@
+$NetBSD: patch-al,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+
+--- lib/Ocsinventory/Agent/Backend/OS/BSD/Archs/Sgimips.pm.orig	2009-07-30 15:47:09.000000000 +0200
++++ lib/Ocsinventory/Agent/Backend/OS/BSD/Archs/Sgimips.pm	2009-07-30 15:53:34.000000000 +0200
+@@ -45,10 +45,12 @@
+   # cpu0 at mainbus0: MIPS R5000 CPU rev 2.1 180 MHz with R5000 based FPC rev 1.0
+   # cpu0: cache L1-I 32KB D 32KB 2 way, L2 512KB direct
+ 
+-  for (`dmesg`) {
+-      if (/$SystemModel\s*\[\S*\s*(\S*)\]/) { $SystemSerial = $1; }
+-      if (/cpu0 at mainbus0:\s*(.*)$/) { $processort = $1; }
+-      if (/CPU\s*.*\D(\d+)\s*MHz/) { $processors = $1; }
++  if ( -r "/var/run/dmesg.boot") {
++	for (`cat /var/run/dmesg.boot`) {
++	    if (/$SystemModel\s*\[\S*\s*(\S*)\]/) { $SystemSerial = $1; }
++	    if (/cpu0 at mainbus0:\s*(.*)$/) { $processort = $1; }
++	    if (/CPU\s*.*\D(\d+)\s*MHz/) { $processors = $1; }
++	}
+   }
+   
+   # number of procs with sysctl (hw.ncpu)

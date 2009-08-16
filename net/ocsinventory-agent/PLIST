@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+bin/ocsinventory-agent
+share/examples/ocsinventory-agent/ocsinventory-agent.cfg
+share/examples/ocsinventory-agent/modules.conf
