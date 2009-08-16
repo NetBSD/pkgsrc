@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3171 2009/08/16 15:53:10 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3172 2009/08/16 16:03:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4205,3 +4205,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libevent to 1.4.12 [wiz 2009-08-16]
 	Updated x11/libxcb to 1.4 [wiz 2009-08-16]
 	Added audio/ocp version 0.1.17 [wiz 2009-08-16]
+	Updated databases/p5-BerkeleyDB to 0.39 [wiz 2009-08-16]
