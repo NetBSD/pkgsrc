@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3153 2009/08/16 12:46:35 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3154 2009/08/16 13:28:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4185,3 +4185,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/dbus-glib to 0.82 [wiz 2009-08-15]
 	Updated devel/kdevelop-base to 3.5.5 [wiz 2009-08-15]
 	Updated editors/nvi to 1.81.6nb5 [lukem 2009-08-16]
+	Updated devel/doxygen to 1.5.9 [wiz 2009-08-16]
