@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2009/07/08 19:37:27 tron Exp $
+# $NetBSD: Makefile,v 1.193 2009/08/16 16:37:19 wiz Exp $
 
 .include "Makefile.mirrors"
 
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite
 LICENSE=		gnu-gpl-v2
 
-VERSION=		3.0.35
+VERSION=		3.0.36
 CONFLICTS+=		ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]*	\
 			winbind-[0-9]*
 MAKE_JOBS_SAFE=		NO
