@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3176 2009/08/16 17:59:20 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3177 2009/08/16 18:01:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4210,3 +4210,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/py-gdata to 1.2.4 [wiz 2009-08-16]
 	Updated net/samba to 3.0.36 [wiz 2009-08-16]
 	Updated chat/telepathy-glib to 0.7.33 [wiz 2009-08-16]
+	Updated chat/telepathy-idle to 0.1.4 [wiz 2009-08-16]
