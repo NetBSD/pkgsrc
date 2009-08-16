@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3177 2009/08/16 18:01:16 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3178 2009/08/16 18:22:04 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4211,3 +4211,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/samba to 3.0.36 [wiz 2009-08-16]
 	Updated chat/telepathy-glib to 0.7.33 [wiz 2009-08-16]
 	Updated chat/telepathy-idle to 0.1.4 [wiz 2009-08-16]
+	Updated textproc/p5-XML-SAX to 0.96nb3 [bouyer 2009-08-16]
