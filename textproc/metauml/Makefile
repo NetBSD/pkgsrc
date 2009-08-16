@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/07/07 21:08:34 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/16 21:50:38 minskim Exp $
 #
 
 DISTNAME=	metauml_lib_0.2.5
 PKGNAME=	${DISTNAME:S/_lib_/-/}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=metauml/}
 EXTRACT_SUFX=	.tgz
@@ -15,12 +16,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PKGBASE}_lib
-MPDIR=		${PKG_LOCALTEXMFPREFIX}/metapost/${PKGBASE}
-PLIST_SUBST+=	MPDIR=${MPDIR:C|^${PREFIX}/||}
+MPDIR=		share/texmf-dist/metapost/${PKGBASE}
+
 INSTALLATION_DIRS+=	${MPDIR}
 
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/thrunk/*.mp ${DESTDIR}${MPDIR}
+.include "../../print/kpathsea/texmf.mk"
 
-.include "../../print/teTeX/module.mk"
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/thrunk/*.mp ${DESTDIR}${PREFIX}/${MPDIR}
+
 .include "../../mk/bsd.pkg.mk"
