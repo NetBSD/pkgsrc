@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.1 2009/08/07 16:39:21 lukem Exp $
+$NetBSD: patch-aw,v 1.2 2009/08/16 08:34:34 lukem Exp $
 
 --- ../vi/v_ex.c.orig	2007-11-19 03:41:42.000000000 +1100
 +++ ../vi/v_ex.c
@@ -12,3 +12,11 @@ $NetBSD: patch-aw,v 1.1 2009/08/07 16:39:21 lukem Exp $
  	ex_cinit(sp, &cmd, C_TAG, 0, OOBLNO, 0, 0);
  	argv_exp0(sp, &cmd, VIP(sp)->keyw, STRLEN(VIP(sp)->keyw) + 1);
  	return (v_exec_ex(sp, vp, &cmd));
+@@ -521,6 +524,7 @@ v_ecl(SCR *sp)
+ 
+ 	new->frp = wp->ccl_sp->frp;
+ 	new->frp->flags = sp->frp->flags;
++	new->conv = wp->ccl_sp->conv;
+ 
+ 	/* Move the cursor to the end. */
+ 	(void)db_last(new, &new->lno);
