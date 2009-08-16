@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3159 2009/08/16 13:42:43 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3160 2009/08/16 13:47:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4191,3 +4191,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/gmime to 2.2.24 [wiz 2009-08-16]
 	Updated mail/gmime24 to 2.4.8 [wiz 2009-08-16]
 	Updated devel/gmp to 4.3.1 [wiz 2009-08-16]
+	Updated www/curl to 7.19.6 [wiz 2009-08-16]
