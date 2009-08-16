@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:24:17 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2009/08/16 15:35:35 wiz Exp $
 
 BUILDLINK_TREE+=	libevent
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libevent
 LIBEVENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libevent+=libevent>=0.6
-BUILDLINK_ABI_DEPENDS.libevent+=libevent-1.4.9* # exact match -- see Makefile
+BUILDLINK_ABI_DEPENDS.libevent+=libevent-1.4.12* # exact match -- see Makefile
 BUILDLINK_PKGSRCDIR.libevent?=	../../devel/libevent
 .endif # LIBEVENT_BUILDLINK3_MK
 
