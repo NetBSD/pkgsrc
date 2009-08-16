@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+
+--- postinst.pl.orig	2009-06-25 15:14:19.000000000 +0200
++++ postinst.pl	2009-06-25 15:15:00.000000000 +0200
+@@ -163,7 +163,7 @@
+ }
+ 
+ 
+-my $configdir = pickConfigdir ("/etc/ocsinventory", "/usr/local/etc/ocsinventory", "/etc/ocsinventory-agent");
++my $configdir = pickConfigdir ("@PKG_SYSCONFDIR@");
+ 
+ if (-f $old_linux_agent_dir.'/ocsinv.conf' && ask_yn("Should the old linux_agent settings be imported?", 'y')) {
+     my $ocsinv = XMLin($old_linux_agent_dir.'/ocsinv.conf');
+@@ -220,7 +220,7 @@
+     close CONFIG;
+ }
+ 
+-print "[info] The config file will be written in /etc/ocsinventory/ocsinventory-agent.cfg,\n";
++print "[info] The config file will be written in @PKG_SYSCONFDIR@/ocsinventory-agent.cfg,\n";
+ 
+ my $tmp = promptUser('What is the address of your ocs server', exists ($config->{server})?$config->{server}:'ocsinventory-ng');
+ $config->{server} = mkFullServerUrl($tmp);
