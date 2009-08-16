@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3161 2009/08/16 13:54:10 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3162 2009/08/16 13:57:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4195,3 +4195,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/gtar-base to 1.22 [wiz 2009-08-16]
 	Updated archivers/gtar-info to 1.22 [wiz 2009-08-16]
 	Updated archivers/gtar to 1.22 [wiz 2009-08-16]
+	Updated devel/gtexinfo to 4.13 [wiz 2009-08-16]
