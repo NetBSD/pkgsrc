@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3154 2009/08/16 13:28:42 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3155 2009/08/16 13:33:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4186,3 +4186,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/kdevelop-base to 3.5.5 [wiz 2009-08-15]
 	Updated editors/nvi to 1.81.6nb5 [lukem 2009-08-16]
 	Updated devel/doxygen to 1.5.9 [wiz 2009-08-16]
+	Updated devel/eet to 1.2.2 [wiz 2009-08-16]
