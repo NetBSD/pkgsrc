@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3152 2009/08/16 08:40:53 lukem Exp $
+$NetBSD: CHANGES-2009,v 1.3153 2009/08/16 12:46:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4173,7 +4173,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/viewvc to 1.0.9 [adrianp 2009-08-15]
 	Added time/ical2rem version 0.5.2 [wiz 2009-08-15]
 	Updated x11/gnome-control-center to 2.26.0nb1 [wiz 2009-08-15]
-	Updated archivers/unrar to 3.9.5 [christos 2009-09-15]
+	Updated archivers/unrar to 3.9.5 [christos 2009-08-15]
 	Updated net/ekiga to 3.2.5 [wiz 2009-08-15]
 	Updated x11/xrandr to 1.3.1 [wiz 2009-08-15]
 	Updated devel/kdevelop-base to 3.5.4 [wiz 2009-08-15]
