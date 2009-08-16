@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2009/03/14 18:53:21 hasso Exp $
+$NetBSD: distinfo,v 1.6 2009/08/16 18:46:27 wiz Exp $
 
 SHA1 (telepathy-gabble-0.7.21.tar.gz) = b6c19456ace1812e98c69b52648b324fdf6f1faa
 RMD160 (telepathy-gabble-0.7.21.tar.gz) = 3f2ba18a09bab5bc9fb1f58ce3dd5922f8a3fcbc
 Size (telepathy-gabble-0.7.21.tar.gz) = 1597740 bytes
 SHA1 (patch-aa) = c6f579acd92f43bd327136b4ebabce8d3a54976c
-SHA1 (patch-ab) = 13941682938233289efe12328f1cf0b325475700
-SHA1 (patch-ac) = 143af77c7b31a6c42feb94cc5efd01e749a47043
+SHA1 (patch-ab) = 15bf26b3b3be950db46b63b8904e98f52d5e2547
+SHA1 (patch-ac) = afe4969ae0845dc1ac07881beaa90713c0d65490
