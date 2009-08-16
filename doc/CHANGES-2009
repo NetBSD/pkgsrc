@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3166 2009/08/16 14:17:55 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3167 2009/08/16 14:24:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4200,3 +4200,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/hal-info to 20090716 [wiz 2009-08-16]
 	Updated devel/kdbg to 2.1.1 [wiz 2009-08-16]
 	Updated audio/ladspa to 1.13 [wiz 2009-08-16]
+	Updated devel/libdaemon to 0.13 [wiz 2009-08-16]
