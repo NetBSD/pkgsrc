@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3165 2009/08/16 14:11:41 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3166 2009/08/16 14:17:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4199,3 +4199,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/guile to 1.8.7 [wiz 2009-08-16]
 	Updated sysutils/hal-info to 20090716 [wiz 2009-08-16]
 	Updated devel/kdbg to 2.1.1 [wiz 2009-08-16]
+	Updated audio/ladspa to 1.13 [wiz 2009-08-16]
