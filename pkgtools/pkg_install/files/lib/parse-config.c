@@ -1,4 +1,4 @@
-/*	$NetBSD: parse-config.c,v 1.6 2009/08/06 16:53:34 joerg Exp $	*/
+/*	$NetBSD: parse-config.c,v 1.7 2009/08/16 14:26:46 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: parse-config.c,v 1.6 2009/08/06 16:53:34 joerg Exp $");
+__RCSID("$NetBSD: parse-config.c,v 1.7 2009/08/16 14:26:46 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -133,7 +133,7 @@ pkg_install_config(void)
 
 	snprintf(fetch_flags, sizeof(fetch_flags), "%s%s%s",
 	    (verbose_netio && *verbose_netio) ? "v" : "",
-	    (active_ftp && *active_ftp) ? "" : "p",
+	    (active_ftp && *active_ftp) ? "a" : "",
 	    (ignore_proxy && *ignore_proxy) ? "d" : "");
 }
 
