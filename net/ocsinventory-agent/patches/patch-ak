@@ -1,0 +1,29 @@
+$NetBSD: patch-ak,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+
+--- lib/Ocsinventory/Agent/Backend/OS/BSD/Archs/I386.pm.orig	2009-07-30 15:47:09.000000000 +0200
++++ lib/Ocsinventory/Agent/Backend/OS/BSD/Archs/I386.pm	2009-07-30 15:52:59.000000000 +0200
+@@ -29,14 +29,16 @@
+   # proc type with sysctl (hw.model)
+   chomp($processort=`sysctl -n hw.model`);
+   # XXX quick and dirty _attempt_ to get proc speed through dmesg
+-  for(`dmesg`){
+-      my $tmp;
+-      if (/^cpu\S*\s.*\D[\s|\(]([\d|\.]+)[\s|-]mhz/i) { # XXX unsure
+-	  $tmp = $1;
+-	  $tmp =~ s/\..*//;
+-	  $processors=$tmp;
+-	  last
+-	  }
++  if ( -r "/var/run/dmesg.boot") {
++	for(`cat /var/run/dmesg.boot`){
++	    my $tmp;
++	    if (/^cpu\S*\s.*\D[\s|\(]([\d|\.]+)[\s|-]mhz/i) { # XXX unsure
++		  $tmp = $1;
++		  $tmp =~ s/\..*//;
++		  $processors=$tmp;
++		  last
++		  }
++	}
+   }
+ 
+ # Writing data
