@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/08/16 15:52:11 wiz Exp $
+
+--- Makefile.in.orig	2009-06-27 10:15:43.000000000 +0000
++++ Makefile.in
+@@ -50,7 +50,6 @@ endif
+ 	mkdir -p "$(DESTDIR)$(BINDIR)"
+ 	$(CP) ocp "$(DESTDIR)$(BINDIR)/ocp$(DIR_SUFFIX)"
+ 	if ! test -z $(DIR_SUFFIX); then ln -sf "ocp$(DIR_SUFFIX)" "$(DESTDIR)$(BINDIR)/ocp"; fi
+-	$(CP) ultrafix.sh "$(DESTDIR)$(BINDIR)/ultrafix.sh"
+ 	mkdir -p "$(DESTDIR)$(ULTRADIR)"
+ 	$(MAKE) -C doc DESTDIR="$(DESTDIR)" install TOPDIR="../$(TOPDIR)"
+ ifeq ($(HAVE_X11),1)
