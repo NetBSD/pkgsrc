@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2009/07/22 09:01:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/16 21:21:51 wiz Exp $
 #
 
-DISTNAME=	warzone2100-2.1.1
-PKGREVISION=	1
+DISTNAME=	warzone2100-2.2.1
 CATEGORIES=	games
-MASTER_SITES=	http://download.gna.org/warzone/releases/2.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=warzone2100/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,12 +18,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config bison msgfmt intltool gmake gsed gawk flex
-TOOLS_PLATFORM.gsed=	#empty, override nonsense in tools
+USE_TOOLS+=	pkg-config bison msgfmt intltool gmake gawk flex
 
 CONFIGURE_ARGS+=	--with-distributor=pkgsrc
-
-CHECK_WRKREF_SKIP=	share/warzone2100/mods/global/aivolution.wz
 
 post-build:
 	cd ${WRKSRC}/po && ${SETENV} ${MAKE_ENV} ${MAKE} update-gmo
@@ -46,5 +42,7 @@ BUILDLINK_API_DEPENDS.flex+=	flex>=2.5.35
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/quesoglc/buildlink3.mk"
+.include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

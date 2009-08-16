@@ -1,22 +1,12 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/02/15 16:05:43 jmcneill Exp $
+$NetBSD: patch-ad,v 1.2 2009/08/16 21:21:51 wiz Exp $
 
---- lib/framework/strlfuncs.h.orig	2008-12-21 13:41:15.000000000 -0500
-+++ lib/framework/strlfuncs.h
-@@ -22,6 +22,9 @@
- #include <stddef.h>
- #include <assert.h>
+--- lib/ivis_opengl/GLee.h.orig	2009-06-21 15:15:42.000000000 +0000
++++ lib/ivis_opengl/GLee.h
+@@ -814,7 +814,6 @@ GLEE_EXTERN GLboolean _GLEE_SGIX_texture
  
-+#if defined(__NetBSD__)
-+#include <string.h>
-+#else
- /** 
-  *	A safer variant of \c strncpy and its completely unsafe variant \c strcpy.
-  *	Copy src to string dst of size siz.  At most siz-1 characters
-@@ -105,6 +108,7 @@ static inline size_t strlcat(char *WZ_DE
+ 	/* GLX */
  
- 	return(dlen + (s - src));        /* count does not include NUL */
- }
-+#endif
+-	typedef void (*__GLXextFuncPtr)(void);
  
- /* Static array versions of common string functions. Safer because one less parameter to screw up. 
-  * Can only be used on strings longer than the length of a pointer, because we use this for debugging. */
+ 	#ifndef GLX_ARB_get_proc_address 
+ 	#define GLX_ARB_get_proc_address 1
