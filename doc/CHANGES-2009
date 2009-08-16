@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3151 2009/08/15 21:28:32 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3152 2009/08/16 08:40:53 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3923,6 +3923,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/xentools33 to 3.3.2 [cegger 2009-08-07]
 	Updated devel/apr to 1.3.8 [gdt 2009-08-07]
 	Added print/tex-kotex-doc version 0.1.1 [minskim 2009-08-07]
+	Updated editors/nvi to 1.81.6nb4 [lukem 2009-08-07]
 	Updated graphics/GraphicsMagick to 1.3.5nb1 [obache 2009-08-08]
 	Updated graphics/GraphicsMagick to 1.3.6 [obache 2009-08-08]
 	Updated misc/m17n-db to 1.5.5 [obache 2009-08-08]
@@ -4183,3 +4184,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/cdrtools to 2.01.01alpha63 [wiz 2009-08-15]
 	Updated sysutils/dbus-glib to 0.82 [wiz 2009-08-15]
 	Updated devel/kdevelop-base to 3.5.5 [wiz 2009-08-15]
+	Updated editors/nvi to 1.81.6nb5 [lukem 2009-08-16]
