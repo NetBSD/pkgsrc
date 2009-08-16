@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/08/16 15:52:11 wiz Exp $
+
+--- devp/Makefile.orig	2008-01-14 18:48:59.000000000 +0000
++++ devp/Makefile
+@@ -21,7 +21,7 @@ devpnone$(LIB_SUFFIX): $(devpnone_so)
+ 
+ devposs_so=devposs.o
+ devposs$(LIB_SUFFIX):$(devposs_so)
+-	$(CC) $(SHARED_FLAGS) $(LDFLAGS) $(OSS_LIBS) -o $@ $^
++	$(CC) $(SHARED_FLAGS) $(LDFLAGS) $(LIBOSSAUDIO) -o $@ $^
+ 
+ devpdisk_so=devpdisk.o
+ devpdisk$(LIB_SUFFIX):$(devpdisk_so)
