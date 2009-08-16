@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2009/03/11 08:52:29 hasso Exp $
+$NetBSD: patch-ab,v 1.2 2009/08/16 19:22:49 wiz Exp $
+
+http://bugs.freedesktop.org/show_bug.cgi?id=23352
 
 --- src/idle-server-connection.c.orig	2009-03-11 09:06:07 +0200
 +++ src/idle-server-connection.c	2009-03-11 09:06:17 +0200
