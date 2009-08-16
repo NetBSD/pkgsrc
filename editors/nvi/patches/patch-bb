@@ -1,0 +1,20 @@
+$NetBSD: patch-bb,v 1.1 2009/08/16 08:34:34 lukem Exp $
+
+--- ../common/multibyte.h.orig	2007-11-19 03:41:42.000000000 +1100
++++ ../common/multibyte.h
+@@ -20,6 +20,7 @@ typedef	u_int		UCHAR_T;
+ #define STRPBRK		wcspbrk
+ #define TOUPPER		towupper
+ #define STRSET		wmemset
++#define STRCHR		wcschr
+ 
+ #define L(ch)		L ## ch
+ 
+@@ -39,6 +40,7 @@ typedef	u_char		UCHAR_T;
+ #define STRPBRK		strpbrk
+ #define TOUPPER		toupper
+ #define STRSET		memset
++#define STRCHR		strchr
+ 
+ #define L(ch)		ch
+ 
