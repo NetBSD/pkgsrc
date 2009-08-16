@@ -1,0 +1,17 @@
+$NetBSD: patch-ao,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+
+--- lib/Ocsinventory/Agent/Backend/OS/Generic/Lspci.pm.orig	2009-08-16 17:53:53.000000000 +0200
++++ lib/Ocsinventory/Agent/Backend/OS/Generic/Lspci.pm	2009-08-16 17:59:58.000000000 +0200
+@@ -1,7 +1,11 @@
+ package Ocsinventory::Agent::Backend::OS::Generic::Lspci;
+ use strict;
+ 
+-sub check {can_run("lspci")}
++sub check {
++   return if can_run("pcictl");
++   return unless can_run("lspci");
++   1;
++}
+ 
+ 
+ sub run {}
