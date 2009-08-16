@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/08/16 15:52:11 wiz Exp $
+
+--- config.h.in.orig	2008-01-14 18:48:57.000000000 +0000
++++ config.h.in
+@@ -215,7 +215,7 @@
+ #include <duma.h>
+ #endif
+ 
+-#if defined(HAVE_DUMA)|defined(HAVE_EFENCE)
++#if defined(HAVE_DUMA)||defined(HAVE_EFENCE)||defined(__NetBSD__)
+ #define NO_DLCLOSE
+ #endif
+ 

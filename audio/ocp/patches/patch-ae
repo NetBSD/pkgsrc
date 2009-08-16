@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/08/16 15:52:11 wiz Exp $
+
+--- stuff/Makefile.orig	2009-06-27 10:15:43.000000000 +0000
++++ stuff/Makefile
+@@ -29,7 +29,7 @@ framelock$(LIB_SUFFIX): $(framelock_so)
+ 	$(CC) $(SHARED_FLAGS) -o $@ $^
+ 
+ poutput$(LIB_SUFFIX): $(poutput_so)
+-	$(CC) $(SHARED_FLAGS) $(LINUX_LIBS) -o $@ $^ -lncurses $(X11_LIBS)
++	$(CC) $(SHARED_FLAGS) $(LDFLAGS) $(LINUX_LIBS) -o $@ $^ -lncurses $(X11_LIBS)
+ 
+ hardware$(LIB_SUFFIX): $(hardware_so)
+ 	$(CC) $(SHARED_FLAGS) -o $@ $^
