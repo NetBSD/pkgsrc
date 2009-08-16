@@ -1,0 +1,41 @@
+$NetBSD: patch-ab,v 1.1 2009/08/16 18:21:04 bouyer Exp $
+
+From http://rt.cpan.org/Public/Bug/Display.html?id=43174
+
+--- SAX/PurePerl.pm.orig	2009-08-16 17:34:04.000000000 +0200
++++ SAX/PurePerl.pm	2009-08-16 17:36:40.000000000 +0200
+@@ -308,21 +308,27 @@
+     
+     $self->start_cdata({});
+     
+-    $data = $reader->data;
++    my $chars;
+     while (1) {
+-        $self->parser_error("EOF looking for CDATA section end", $reader)
+-            unless length($data);
++        # do not miss "]]>", so try to read at least 3 chars
++        $data = $reader->data(3);
++        $self->parser_error
++                ("EOF looking for CDATA section end", $reader)
++                unless length($data) >= 3;
+         
+         if ($data =~ /^(.*?)\]\]>/s) {
+-            my $chars = $1;
++            $chars = $1;
+             $reader->move_along(length($chars) + 3);
+             $self->characters({Data => $chars});
+             last;
+         }
+         else {
+-            $self->characters({Data => $data});
+-            $reader->move_along(length($data));
+-            $data = $reader->data;
++            # the last one or two "]" could be the beginning of a "]]>",
++            # so do no eat them
++            $data =~ /^(.*?)\]{0,2}+$/s;
++            $chars = $1;
++            $reader->move_along(length($chars));
++            $self->characters({Data => $chars});
+         }
+     }
+     $self->end_cdata({});
