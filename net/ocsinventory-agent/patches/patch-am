@@ -1,0 +1,19 @@
+$NetBSD: patch-am,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+
+--- lib/Ocsinventory/Agent/Backend/OS/BSD/Archs/Sparc.pm.orig	2009-07-30 15:47:09.000000000 +0200
++++ lib/Ocsinventory/Agent/Backend/OS/BSD/Archs/Sparc.pm	2009-07-30 15:54:21.000000000 +0200
+@@ -52,9 +52,11 @@
+   # c) FreeBSD
+   # cpu0: Sun Microsystems UltraSparc-I Processor (167.00 MHz CPU)
+ 
+-  for (`dmesg`) {
+-      if (/^mainbus0 \(root\):\s*(.*)$/) { $SystemModel = $1; }
+-      if (/^cpu[^:]*:\s*(.*)$/i) { $processort = $1 unless $processort; }
++  if ( -r "/var/run/dmesg.boot") {
++	for(`cat /var/run/dmesg.boot`){
++          if (/^mainbus0 \(root\):\s*(.*)$/) { $SystemModel = $1; }
++          if (/^cpu[^:]*:\s*(.*)$/i) { $processort = $1 unless $processort; }
++	}
+   }
+   $SystemModel || chomp ($SystemModel = `sysctl -n hw.model`); # for FreeBSD
+   $SystemManufacturer = "SUN";

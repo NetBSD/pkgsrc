@@ -1,0 +1,19 @@
+$NetBSD: patch-aj,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+
+--- lib/Ocsinventory/Agent/Backend/OS/BSD/Archs/Alpha.pm.orig	2009-07-30 15:47:09.000000000 +0200
++++ lib/Ocsinventory/Agent/Backend/OS/BSD/Archs/Alpha.pm	2009-07-30 15:52:08.000000000 +0200
+@@ -33,9 +33,11 @@
+   # FreeBSD:   AlphaStation 255 4/232, 232MHz
+   #            CPU: EV45 (21064A) major=6 minor=2
+ 
+-  for (`dmesg`) {
+-      if (/^cpu[^:]*:\s*(.*)$/i) { $processort = $1; }
+-      if (/$SystemModel,\s*(\S+)\s*MHz.*$/) { $processors = $1; }
++  if ( -r "/var/run/dmesg.boot") {
++	for (`cat /var/run/dmesg.boot`) {
++	    if (/^cpu[^:]*:\s*(.*)$/i) { $processort = $1; }
++	    if (/$SystemModel,\s*(\S+)\s*MHz.*$/) { $processors = $1; }
++	}
+   }
+   
+ 
