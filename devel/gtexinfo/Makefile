@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.73 2008/09/06 13:13:30 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2009/08/16 13:57:43 wiz Exp $
 
-DISTNAME=		texinfo-4.12
+DISTNAME=		texinfo-4.13
 PKGNAME=		g${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel sysutils
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 COMMENT=		GNU info documentation utilities
+LICENSE=		gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -34,13 +34,6 @@ PLIST_SRC+=		${PKGDIR}/PLIST.locale
 .else
 CONFIGURE_ARGS+=	--disable-nls
 .endif
-
-SUBST_CLASSES+=		macro
-SUBST_STAGE.macro=	pre-configure
-SUBST_MESSAGE.macro=	Replacing use of __ macro.
-SUBST_FILES.macro=	makeinfo/*.c makeinfo/makeinfo.h
-SUBST_SED.macro=	-e 's,\#define __(s) getdocumenttext(s),,'
-SUBST_SED.macro+=	-e 's,__(",getdocumenttext(",g'
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
