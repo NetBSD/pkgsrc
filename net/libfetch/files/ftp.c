@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.28 2009/08/06 14:02:38 tnn Exp $	*/
+/*	$NetBSD: ftp.c,v 1.29 2009/08/16 20:31:29 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -584,6 +584,7 @@ ftp_closefn(void *v)
 	}
 	fetch_close(io->dconn);
 	io->dir = -1;
+	io->dconn->is_active = 0;
 	io->dconn = NULL;
 	r = ftp_chkerr(io->cconn);
 	if (io->cconn == cached_connection && io->cconn->ref == 1)
@@ -607,6 +608,7 @@ ftp_setup(conn_t *cconn, conn_t *dconn, int mode)
 	io->dconn = dconn;
 	io->dir = mode;
 	io->eof = io->err = 0;
+	io->cconn->is_active = 1;
 	f = fetchIO_unopen(io, ftp_readfn, ftp_writefn, ftp_closefn);
 	if (f == NULL)
 		free(io);
@@ -1048,6 +1050,7 @@ static int
 ftp_isconnected(struct url *url)
 {
 	return (cached_connection
+	    && (cached_connection->is_active == 0)
 	    && (strcmp(url->host, cached_host.host) == 0)
 	    && (strcmp(url->user, cached_host.user) == 0)
 	    && (strcmp(url->pwd, cached_host.pwd) == 0)
