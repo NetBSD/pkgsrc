@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.1 2009/08/07 16:39:21 lukem Exp $
+$NetBSD: patch-ba,v 1.2 2009/08/16 08:34:34 lukem Exp $
 
 --- ../ex/version.h.orig	2007-11-19 03:43:55.000000000 +1100
 +++ ../ex/version.h
 @@ -1 +1 @@
 -#define VI_VERSION "nvi-1.81.6 (2007-11-18)"
-+#define VI_VERSION "nvi-1.81.6nb4 (2009-08-07)"
++#define VI_VERSION "nvi-1.81.6nb5 (2009-08-11)"

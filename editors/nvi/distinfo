@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2009/08/07 16:39:20 lukem Exp $
+$NetBSD: distinfo,v 1.12 2009/08/16 08:34:34 lukem Exp $
 
 SHA1 (nvi-1.81.6.tar.bz2) = d3445ed69166102735335a2ff60d092d9a9143c6
 RMD160 (nvi-1.81.6.tar.bz2) = 0db8568bea96392d9a027044177c60317c8ade36
@@ -25,8 +25,10 @@ SHA1 (patch-as) = ca88e0416999ad81098a41d041e51031092d2f4d
 SHA1 (patch-at) = 1fc5d51b90d282de9a8c2ed13ff85498167e98f3
 SHA1 (patch-au) = c34912b6d07acf95973426b352f55110c936a66f
 SHA1 (patch-av) = 218174e98f01ed8344aae44dcc28db77cc0fdc60
-SHA1 (patch-aw) = 678945c18fbbd9c5908aee4b1348ddfc2a3bda00
+SHA1 (patch-aw) = e77239863df8c89b9b1b3fc8b3f8569466a4e884
 SHA1 (patch-ax) = a93cc5271ff924d561b7d532dec280093637f42d
 SHA1 (patch-ay) = db7c5d05a28bb14fb351645de9426b34b659ed4b
 SHA1 (patch-az) = ba04f94a768c0c9d72f9810689c2f0c46e2e4e92
-SHA1 (patch-ba) = 3249565cb20d4b73acce2cc27945bddb0f9ab0da
+SHA1 (patch-ba) = 7c292f358fca845c478dbedae88cafe2c9155c9c
+SHA1 (patch-bb) = 2b5b91418fdcbe36c17b4cb8f635846ca408b4eb
+SHA1 (patch-bc) = 49bf2469b6d22b190a7ed41f222ea80b8721e663
