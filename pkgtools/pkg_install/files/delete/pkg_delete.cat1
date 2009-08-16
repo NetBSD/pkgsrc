@@ -58,13 +58,16 @@ OOPPTTIIOONNSS
              the deinstall script fails.
 
      --ffff     Force removal of the package, even if the package is marked as a
-             pprreesseerrvveedd package.  Note that this is a dangerous operation.
+             pprreesseerrvveedd package.  Note that this is a dangerous operation.  See
+             also the --kk option.
 
      --KK _p_k_g___d_b_d_i_r
              Set _p_k_g___d_b_d_i_r as the package database directory.  If this option
              isn't specified, then the package database directory is taken
              from the value of the environment variable PKG_DBDIR if it's set,
              otherwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
+
+     --kk      Silently skip all packages that are marked as pprreesseerrvveedd.
 
      --NN      Remove the package's registration and its entries from the pack-
              age database, but leave the files installed.  Don't run any dein-
@@ -169,4 +172,4 @@ AAUUTTHHOORRSS
              Rewrote most of the code to compute correct order of deinstalla-
              tion and to improve error handling.
 
-NetBSD 5.0                      August 6, 2009                      NetBSD 5.0
+NetBSD 5.0                      August 16, 2009                     NetBSD 5.0
