@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/16 15:52:11 wiz Exp $
+
+--- configure.orig	2009-06-27 10:15:43.000000000 +0000
++++ configure
+@@ -7340,7 +7340,7 @@ test "x$exec_prefix" = xNONE && exec_pre
+ { $as_echo "$as_me:$LINENO: checking gcc version" >&5
+ $as_echo_n "checking gcc version... " >&6; }
+ cc_version=`( $CC -dumpversion ) 2>&1`
+-if test "$?" -gt 0 || test x$cc_version == x; then
++if test "$?" -gt 0 || test x$cc_version = x; then
+ 	{ { $as_echo "$as_me:$LINENO: error: not found" >&5
+ $as_echo "$as_me: error: not found" >&2;}
+    { (exit 1); exit 1; }; }

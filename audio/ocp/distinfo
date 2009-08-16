@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/08/16 15:52:10 wiz Exp $
+
+SHA1 (ocp-0.1.17.tar.lzma) = e501070a1331ecf1a5deed0c2b8235783376ec3d
+RMD160 (ocp-0.1.17.tar.lzma) = b247baf8859c1e3274488100c4af6928c36510ad
+Size (ocp-0.1.17.tar.lzma) = 562501 bytes
+SHA1 (patch-aa) = 5d098b551214eb5d557fee6218666237021a3b2c
+SHA1 (patch-ab) = 0514496cade761375371adc561257a1019a5fa1d
+SHA1 (patch-ac) = f28f3ebc5e3d61858f2f5bed79094fff57130da6
+SHA1 (patch-ad) = 1a3e3aa02eeae905faebac7fc7fc27eb93fa0e46
+SHA1 (patch-ae) = f68302eaedcb9841952f9b1670c5b0534f8fa63a
+SHA1 (patch-af) = d379ded1f683c8299293436a3f9f7c0d32b06ec4

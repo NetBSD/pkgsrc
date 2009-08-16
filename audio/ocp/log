@@ -1,0 +1,103 @@
+2008-01-20: */*: Removed some overhead in `struct modlist` and fixed sorting logic when adding a directory to the playlist, and added recursivity to the logic when deleting a directory from the playlist aswell.
+
+2008-01-29: */*: Removed the dependency on libid3tag (we only used one simple function from it)
+
+2008-02-01: boot/plinkman.c: missing closedir() fixed
+
+2008-02-02: playxm/xmlmxm.c: Added a length-check constraint, fixes crash when loading broken MXM files (however, they are played wrong then)
+
+2008-02-20: */*: Added KEY_CTRL_PGUP, KEY_CTRL_PGDN, KEY_CTRL_UP and KEY_CTRL_DOWN (not reachable from curses driver) and relevant code
+
+2008-03-20: filesel/pfilesel.c boot/psetting.c: Add support for @some.m3u support as stated on the help text.
+
+2008-03-30: ctrl+j and alt+enter was mapped to the same key id. Also added two missing key names in the keyhelp (alt+k window)
+
+2008-04-24: boot/* cpiface/cpikeyhelp.c stuff/*: Grey-out keys in the keyhelp that aren't available in the currently used consoledriver.
+
+2008-06-24: desktop/opencubicplayer.desktop.in: Changed encoding to UTF-8, thanks to Adam Sampson <ats@offog.org>
+
+2008-06-24: devp/devpalsa: Various updates: "default" mixer device, bugfix for the ALSA PulseAudio plugin, thanks to Chuck Anderson <cra@WPI.EDU>
+
+2008-06-24: *: Make MAD (mpeg) support optional, thanks to Chuck Anderson <cra@WPI.EDU>
+
+2008-06-24: configure.ac: exec_prefix should now expand to prefix unless specicied with --exec-prefix=
+
+2008-06-26: devw/dwmixa.c: Minor updates in the low-quality-mixer (both assembler and C versions)
+
+2008-06-29: Makefile.in ocp.spec: move documentation stuff into prefix/doc/ocp-version  instead of prefix/share/ocp-version, Chuck Anderson <cra@WPI.EDU>
+
+2008-06-29: Makefile.in: relative symlink on ocp-suffix instead of absolute, thanks to Chuck Anderson <cra@WPI.EDU>
+
+2008-06-29: doc/texi/Makefile doc/texi/ocp.texi.in: Add ocp to the global info directory, thanks to Chuck Anderson <cra@WPI.EDU>
+
+2008-08-03: playxm/xmplay: Fixed a crash bug when playing certain files.
+
+2008-11-06: */*: Various small array underflow/overflow warnings were fixed (non-fatal all of them)
+
+2008-11-06: ocp.ini.in: renamed [x11]:framebuffer to [x11]:autodetect and added [x11]:font
+
+2008-11-16: stuff/poutput-x11.c Redid resolution and fullscreen handling
+
+2008-11-16: configure.ac install-sh config.sub config.guess: Enabled cross-compiling (and added needed files from automake 1.10)
+
+2008-11-16: help/cphelper.c: KEY_UP was broken, and rendering errors on big-screens
+
+2008-11-16: cpiface/cpimvol.c: One of the volumebars were insymetrical.
+
+2008-11-17: *: use autoload feature in boot/plinkman.c; This makes it possible to have filesupport in different packages without regenerating ocp.ini
+
+2008-11-21: config.h.in playmp2/mpptype.c: Added debug-info and fixed a minor parsing bug (could cause random data at end of strings)
+
+2008-11-21: filesel/pfilsel.c: KEY_PPAGE/KEY_UP would cause wrap-around, now all UP/DOWN movements are boundary checked
+
+2008-11-21: pfilesel/modlist.c: playing the last song on a playlist would cause strange behaviour and random crashes
+
+2008-11-22: *: Add support for "previous" in playlist (see ALT-K for keys CTRL-J and CTRL-K). Keys make even more sense if you disable "remove from playlist" on ALT-C setup screen
+
+2008-11-25: Added fnmatch from gnulib, so that OS-X can compile without patches, and behave the same (other issues remain on OS-X however).
+
+2008-12-05: filesel/fsmain.c: increased the intelligence of esc-handling, fileselector interaction and broken files handling (several freeze conditions)
+
+2008-12-30: stuff/poutput-x11.c configure.ac: Add icons on x11 window (Adds libXpm dependency)
+
+2008-12-30: playxm/xmload.c: try to load even more module files correct
+
+2008-12-30: playit/itload.c: don't fail to load .it files without instruments
+
+2008-12-30: updated gnulib
+
+2008-12-31: cpiface/cpikube.c: Fixed some segfaults
+
+2008-12-31: VERSION 0.1.16
+
+2009-01-02: playgmd/gmdlokt.c: endian-issue made the file fail to load on little-endian (x86) hosts.
+
+2009-02-01: devp/devpcoreaudio.c: Re-arranged code a bit, made x11 support work-aswell (no idea why that bOrked before)
+
+2009-02-08: remove autoload away from ocp.ini (no need to have it there, since it will change for each version of OCP. OCP should know this statically, based on where it found libocp.so
+
+2009-02-08: boot/pmain.c: auto-update ocp.ini from earlier versions of ocp
+
+2009-02-09: filesel/pfilesel.c: playlist now cover entire screen when selected. Pressing INSERT while in playlist now also works as expected
+
+2009-02-11: binfile/*: removed support for ocp.pak. We only had one file left in it, and we don't bother if ocp spans of multiple files either any more (dlopen() is more easy to use when you don't use an archieve aswell)
+
+2009-02-13: design change: remove interface= and preprocess= away from dllinfo, and let plugins call apropriate register/unregister instead.
+
+2009-03-28: playopl/oplplay.cpp: big-endian hosts didn't play right.
+
+2009-04-24: boot/plinkman* cpiface/cpilink.c: Added backend support for static plugins, however it is not used yet
+
+2009-05-12: playgmi/gmiload.c: Fixed a small possible buffer overflow (readonly while parsing) that could lead to SEGFAULT on broken midi files. Also removed a optimization that were broken (only some gcc setups hit it in a wrong maner)
+
+2009-06-04: doc/texi/Makefile: Don't fail if install-info isn't available
+
+2009-06-04: dev/mix.c: typecast pointers via long int, and not just uint32_t when you want to do shifting on them (even though other arcs not using x86  assembler inlines doesn't use the variables, but we still want it beeing sane)
+
+2009-06-04: dev/player.*: Fixed issues regarding x86_64 (segfaulting). Mixing 64bit unsigned and 32bit signed variables doing simple + math can lead to undefined behaviour.
+
+2009-06-04: playflac/flacplay.c: wrong footprint on a callback (visible on 64bit hosts)
+
+2009-06-04: playit/itload.c playxm/xmload.c: (debug) printf format string warnings on 64 hosts fixed
+
+2009-06-15: boot/kickload.c playmp2/charset.c: getenv() pointers are safe to keep for long. Also added some more constraints (const, etc).
