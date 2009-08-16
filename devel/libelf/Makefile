@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2009/03/20 20:01:42 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/16 14:25:26 wiz Exp $
 #
 
 DISTNAME=		libelf-0.8.10
 CATEGORIES=		devel
-MASTER_SITES=		http://www.mr511.de/software/english.html
+MASTER_SITES=		http://www.mr511.de/software/
 
 MAINTAINER=		petrov@NetBSD.org
-HOMEPAGE=		http://www.mr511.de/software/
+HOMEPAGE=		http://www.mr511.de/software/english.html
 COMMENT=		ELF object file access library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
