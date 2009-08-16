@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.57 2009/08/06 16:53:34 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.58 2009/08/16 21:10:15 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -324,6 +324,7 @@ struct archive_entry;
 struct archive *open_archive(const char *);
 struct archive *find_archive(const char *, int);
 void	process_pkg_path(void);
+struct url *find_best_package(const char *, const char *, int);
 
 /* Packing list */
 plist_t *new_plist_entry(void);

@@ -1,4 +1,4 @@
-/*	$NetBSD: parse-config.c,v 1.7 2009/08/16 14:26:46 joerg Exp $	*/
+/*	$NetBSD: parse-config.c,v 1.8 2009/08/16 21:10:15 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,10 +7,10 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: parse-config.c,v 1.7 2009/08/16 14:26:46 joerg Exp $");
+__RCSID("$NetBSD: parse-config.c,v 1.8 2009/08/16 21:10:15 joerg Exp $");
 
 /*-
- * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
+ * Copyright (c) 2008, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -41,6 +41,7 @@ __RCSID("$NetBSD: parse-config.c,v 1.7 2009/08/16 14:26:46 joerg Exp $");
 #if HAVE_ERR_H
 #include <err.h>
 #endif
+#include <errno.h>
 #if HAVE_STRING_H
 #include <string.h>
 #endif
@@ -99,17 +100,58 @@ static struct config_variable {
 	{ NULL, NULL }
 };
 
+char *config_tmp_variables[sizeof config_variables/sizeof config_variables[0]];
+
+static void
+parse_pkg_install_conf(void)
+{
+	struct config_variable *var;
+	FILE *fp;
+	char *line, *value;
+	size_t len, var_len, i;
+
+	fp = fopen(config_file, "r");
+	if (!fp) {
+		if (errno != ENOENT)
+			warn("Can't open '%s' for reading", config_file);
+		return;
+	}
+
+	while ((line = fgetln(fp, &len)) != (char *) NULL) {
+		if (line[len - 1] == '\n')
+			--len;
+		for (i = 0; (var = &config_variables[i])->name != NULL; ++i) {
+			var_len = strlen(var->name);
+			if (strncmp(var->name, line, var_len) != 0)
+				continue;
+			if (line[var_len] != '=')
+				continue;
+			line += var_len + 1;
+			len -= var_len + 1;
+			if (config_tmp_variables[i])
+				value = xasprintf("%s\n%.*s",
+				    config_tmp_variables[i], (int)len, line);
+			else
+				value = xasprintf("%.*s", (int)len, line);
+			free(config_tmp_variables[i]);
+			config_tmp_variables[i] = value;
+			break;
+		}
+	}
+
+	for (i = 0; (var = &config_variables[i])->name != NULL; ++i) {
+		if (config_tmp_variables[i] == NULL)
+			continue;
+		*var->var = config_tmp_variables[i];
+		config_tmp_variables[i] = NULL;
+	}
+}
+
 void
 pkg_install_config(void)
 {
 	char *value;
-	struct config_variable *var;
-
-	for (var = config_variables; var->name != NULL; ++var) {
-		value = var_get(config_file, var->name);
-		if (value != NULL)
-			*var->var = value;
-	}
+	parse_pkg_install_conf();
 
 	if (pkg_vulnerabilities_dir == NULL)
 		pkg_vulnerabilities_dir = _pkgdb_getPKGDB_DIR();
