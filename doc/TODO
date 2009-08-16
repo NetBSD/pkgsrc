@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8345 2009/08/16 21:20:35 wiz Exp $
+$NetBSD: TODO,v 1.8346 2009/08/16 21:22:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1283,7 +1283,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vttest-20071216
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
-	o warzone2100-2.2.1
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webby-0.9.3
