@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3157 2009/08/16 13:36:08 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3158 2009/08/16 13:37:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4189,3 +4189,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/eet to 1.2.2 [wiz 2009-08-16]
 	Updated math/p5-Math-Pari to 2.010801nb2 [he 2009-08-16]
 	Updated mail/gmime to 2.2.24 [wiz 2009-08-16]
+	Updated mail/gmime24 to 2.4.8 [wiz 2009-08-16]
