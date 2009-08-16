@@ -1,0 +1,29 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+
+--- /dev/null	2009-06-25 18:52:46.000000000 +0200
++++ ./lib/Ocsinventory/Agent/Backend/OS/BSD/Pcictl/Modems.pm	2009-06-25 18:50:26.000000000 +0200
+@@ -0,0 +1,24 @@
++package Ocsinventory::Agent::Backend::OS::BSD::Pcictl::Modems;
++use strict;
++use Ocsinventory::Agent::Backend::OS::BSD::Pcictl::Pcictl;
++
++sub run {
++  my $params = shift;
++  my $inventory = $params->{inventory};
++
++  foreach (runpcictl()) {
++
++    if(/modem/i && /^\S+:\s(.+)\s\(([^,]+)(,.+)?\)$/i) {
++      my $name = $1;
++      my $description = $2;
++
++
++      $inventory->addModems({
++	  'DESCRIPTION'  => $description,
++	  'NAME'          => $name,
++	});
++    }
++  }
++}
++
++1

@@ -1,0 +1,21 @@
+$NetBSD: patch-an,v 1.1.1.1 2009/08/16 18:25:53 bouyer Exp $
+
+--- lib/Ocsinventory/Agent/Backend/OS/BSD/Storages.pm.orig	2009-07-30 16:04:02.000000000 +0200
++++ lib/Ocsinventory/Agent/Backend/OS/BSD/Storages.pm	2009-07-30 16:04:06.000000000 +0200
+@@ -19,10 +19,12 @@
+   }
+   for my $dev (@devices) {
+     my ($model,$capacity,$found, $manufacturer);
+-    for(`dmesg`){
+-      if(/^$dev/) { $found = 1;}
+-      if(/^$dev.*<(.*)>/) { $model = $1; }
+-      if(/^$dev.*\s+(\d+)\s*MB/) { $capacity = $1;}
++    if ( -r "/var/run/dmesg.boot") {
++      for (`cat /var/run/dmesg.boot`) {
++        if(/^$dev/) { $found = 1;}
++        if(/^$dev.*<(.*)>/) { $model = $1; }
++        if(/^$dev.*\s+(\d+)\s*MB/) { $capacity = $1;}
++      }
+     }
+ 
+     if ($model =~ s/^(SGI|SONY|WDC|ASUS|LG|TEAC|SAMSUNG|PHILIPS|PIONEER|MAXTOR|PLEXTOR|SEAGATE|IBM|SUN|SGI|DEC|FUJITSU|TOSHIBA|YAMAHA|HITACHI|VERITAS)\s*//i) {
