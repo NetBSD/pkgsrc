@@ -1,0 +1,11 @@
+--- Makefile.PL.orig	2009-08-17 19:13:38.000000000 +0000
++++ Makefile.PL	2009-08-17 19:13:56.000000000 +0000
+@@ -5,7 +5,7 @@
+ use ExtUtils::MakeMaker;
+ 
+ my %opts = (
+-    'NAME'         => 'Template-Plugin-Autoformat',
++    'NAME'         => 'Template::Plugin::Autoformat',
+     'VERSION_FROM' => 'lib/Template/Plugin/Autoformat.pm',
+     'PMLIBDIRS'    => [ 'lib' ], 
+     'PREREQ_PM'    => { 
