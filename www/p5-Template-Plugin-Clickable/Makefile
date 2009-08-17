@@ -1,0 +1,24 @@
+# $NetBSD: Makefile,v 1.1.1.1 2009/08/17 18:35:36 sno Exp $
+
+DISTNAME=	Template-Plugin-Clickable-0.06
+PKGNAME=	p5-${DISTNAME}
+SVR4_PKGNAME=	p5ttm
+CATEGORIES=	www perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/Template-Plugin-Clickable/
+COMMENT=	TT2 plugin to make URLs clickable in HTML
+LICENSE=	${PERL5_LICENSE}
+
+DEPENDS+=	p5-Template-Toolkit>=2.07:../../www/p5-Template-Toolkit
+DEPENDS+=	p5-UNIVERSAL-require-[0-9]*:../../devel/p5-UNIVERSAL-require
+DEPENDS+=	p5-URI-Find>=0.13:../../www/p5-URI-Find
+
+USE_LANGUAGES=	# empty
+PERL5_PACKLIST=	auto/Template/Plugin/Clickable/.packlist
+
+PKG_DESTDIR_SUPPORT=    user-destdir
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"
