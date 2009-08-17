@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/06/07 12:49:01 ahoka Exp $
+# $NetBSD: options.mk,v 1.2 2009/08/17 14:24:32 ahoka Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts libao mpcdec faad wavpack #alsa
-PKG_SUPPORTED_OPTIONS+=		wide-curses
+PKG_SUPPORTED_OPTIONS+=		wide-curses ffmpeg
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
 PKG_SUGGESTED_OPTIONS=		flac mad libao vorbis modplug
-PKG_OPTIONS_LEGACY_OPTS=ao:libao
+PKG_OPTIONS_LEGACY_OPTS=	ao:libao
 
 .include "../../mk/bsd.options.mk"
 
@@ -96,6 +96,16 @@ CONFIGURE_ARGS+=	CONFIG_WAVPACK=y
 PLIST.wavpack=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_WAVPACK=n
+.endif
+
+# FFMPEG support
+#
+.if !empty(PKG_OPTIONS:Mffmpeg)
+.include "../../multimedia/ffmpeg/buildlink3.mk"
+CONFIGURE_ARGS+=	CONFIG_FFMPEG=y
+PLIST.ffmpeg=		yes
+.else
+CONFIGURE_ARGS+=	CONFIG_FFMPEG=n
 .endif
 
 # modplay support
