@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3195 2009/08/17 19:15:47 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3196 2009/08/17 19:29:38 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4227,3 +4227,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-SVN-Web to 0.53nb3 [sno 2009-08-17]
 	Updated www/p5-Template-Extract to 0.41nb2 [sno 2009-08-17]
 	Updated www/p5-Template-Generate to 0.04nb8 [sno 2009-08-17]
+	Added textproc/p5-Template-Plugin-Autoformat version 2.71 [sno 2009-08-17]
