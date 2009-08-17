@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3202 2009/08/17 21:13:49 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3203 2009/08/17 21:16:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4234,3 +4234,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/gupnp-igd version 0.1.3 [wiz 2009-08-17]
 	Added net/libnice version 0.0.9 [wiz 2009-08-17]
 	Added multimedia/farsight2 version 0.0.14 [wiz 2009-08-17]
+	Added chat/telepathy-farsight version 0.0.8 [wiz 2009-08-17]
