@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.11 2009/08/15 20:51:30 wiz Exp $
+$NetBSD: patch-ac,v 1.12 2009/08/17 07:39:44 dsainty Exp $
 
 blitters-test disabled because of
 https://bugs.freedesktop.org/show_bug.cgi?id=23331
 
 --- test/Makefile.in.orig	2009-08-11 17:54:00.000000000 +0000
 +++ test/Makefile.in
-@@ -57,7 +57,7 @@ CONFIG_CLEAN_FILES =
+@@ -57,8 +57,8 @@ CONFIG_CLEAN_FILES =
  @HAVE_GTK_TRUE@	composite-test$(EXEEXT) gradient-test$(EXEEXT) \
  @HAVE_GTK_TRUE@	alpha-test$(EXEEXT) screen-test$(EXEEXT) \
  @HAVE_GTK_TRUE@	convolution-test$(EXEEXT) trap-test$(EXEEXT)
@@ -15,6 +15,7 @@ https://bugs.freedesktop.org/show_bug.cgi?id=23331
 +	fetch-test$(EXEEXT) oob-test$(EXEEXT) \
  	window-test$(EXEEXT) trap-crasher$(EXEEXT) $(am__EXEEXT_1)
  PROGRAMS = $(noinst_PROGRAMS)
+ am__alpha_test_SOURCES_DIST = alpha-test.c utils.c utils.h
 @@ -282,7 +282,7 @@ top_srcdir = @top_srcdir@
  TEST_LDADD = $(top_builddir)/pixman/libpixman-1.la
  INCLUDES = -I$(top_srcdir)/pixman -I$(top_builddir)/pixman \
