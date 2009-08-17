@@ -1,0 +1,24 @@
+$NetBSD: patch-ai,v 1.1 2009/08/17 14:40:43 gson Exp $
+
+--- pTk/mTk/generic/tkBind.c.orig	2009-08-17 12:41:17.000000000 +0300
++++ pTk/mTk/generic/tkBind.c
+@@ -585,6 +585,9 @@ char *eventTypeName[TK_LASTEVENT] = {
+    "ColormapNotify",
+    "ClientMessage",
+    "MappingNotify",
++#ifdef GenericEvent
++   "GenericEvent", /* Introduced in xproto-7.0.13 */
++#endif 
+    "VirtualEvent",
+    "Activate",
+    "Deactivate"
+@@ -629,6 +632,9 @@ static int flagArray[TK_LASTEVENT] = {
+    /* ColormapNotify */		COLORMAP,
+    /* ClientMessage */		0,
+    /* MappingNotify */		0,
++#ifdef GenericEvent
++   /* GenericEvent */           0, /* Introduced in xproto-7.0.13 */
++#endif 
+    /* VirtualEvent */		VIRTUAL,
+    /* Activate */		ACTIVATE,
+    /* Deactivate */		ACTIVATE,
