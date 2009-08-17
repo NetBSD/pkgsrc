@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.781 2009/08/17 21:08:18 wiz Exp $
+# $NetBSD: Makefile,v 1.782 2009/08/17 21:10:53 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -214,6 +214,7 @@ SUBDIR+=	libdnet
 SUBDIR+=	libfetch
 SUBDIR+=	liblive
 SUBDIR+=	libmms
+SUBDIR+=	libnice
 SUBDIR+=	libnids
 SUBDIR+=	libnipper
 SUBDIR+=	libpcap
