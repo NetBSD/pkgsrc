@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2009/08/06 01:44:52 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2009/08/17 15:28:24 taca Exp $
 
 DISTNAME=	tamago-4.0.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}tamago-20020909
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	http://unit.aist.go.jp/itri/itri-gist/ftp.m17n.org/pub/tamago/
 
