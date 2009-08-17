@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3181 2009/08/16 21:51:17 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.3182 2009/08/17 11:24:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4215,3 +4215,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/ocsinventory-agent version 1.0.2 [bouyer 2009-08-16]
 	Updated games/warzone2100 to 2.2.1 [wiz 2009-08-16]
 	Updated textproc/metauml to 0.2.5nb1 [minskim 2009-08-16]
+	Updated www/tidy to 20090326nb1 [wiz 2009-08-17]
