@@ -1,0 +1,5 @@
+URI::Find does one thing: Finds URIs and URLs in plain text. It finds
+them quickly and it finds them all (or what URI::URL considers a URI to
+be.) It only finds URIs which include a scheme (http:// or the like),
+for something a bit less strict have a look at included
+URI::Find::Schemeless.
