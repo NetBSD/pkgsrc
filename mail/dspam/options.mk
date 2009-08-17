@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2009/03/13 10:11:14 roy Exp $
+# $NetBSD: options.mk,v 1.24 2009/08/17 19:09:13 sno Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -136,7 +136,7 @@ CONFIGURE_ARGS+=	--enable-homedir
 ### Enable DSPAM's graph.cgi to produce graphs of spam statistics.
 ###
 .if !empty(PKG_OPTIONS:Mgraphs)
-DEPENDS+=		p5-GDGraph3d-[0-9]*:../../graphics/p5-GDGraph3d
+DEPENDS+=		p5-GD-Graph3d-[0-9]*:../../graphics/p5-GD-Graph3d
 .endif
 
 ###
