@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3191 2009/08/17 19:04:37 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3192 2009/08/17 19:09:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4223,3 +4223,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added mail/p5-Email-Find version 0.10 [sno 2009-08-17]
 	Added www/p5-Template-Plugin-Clickable-Email version 0.01 [sno 2009-08-17]
 	Added www/p5-Template-Plugin-Subst version 0.02 [sno 2009-08-17]
+	Updated mail/dspam to 3.8.0nb4 [sno 2009-08-17]
