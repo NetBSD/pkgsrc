@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:06 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/17 17:48:00 drochner Exp $
 #
 
 GST_PLUGINS0.10_NAME=	cdparanoia
@@ -11,5 +11,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia
 
+BUILDLINK_API_DEPENDS.cdparanoia+= cdparanoia>=3.0.10.2
 .include "../../audio/cdparanoia/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
