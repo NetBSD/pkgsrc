@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/06/04 11:05:51 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2009/08/17 07:57:48 wiz Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -19,7 +19,6 @@ SUBDIR+=	libdrg
 SUBDIR+=	mapserver
 SUBDIR+=	merkaartor
 SUBDIR+=	p5-Geo-Distance
-SUBDIR+=	postgresql81-postgis
 SUBDIR+=	proj-swig
 SUBDIR+=	py-proj
 SUBDIR+=	shapelib
