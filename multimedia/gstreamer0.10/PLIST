@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:08:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/08/17 17:40:25 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -17,6 +17,7 @@ include/gstreamer-0.10/gst/base/gstpushsrc.h
 include/gstreamer-0.10/gst/base/gsttypefindhelper.h
 ${PLIST.gstcheck}include/gstreamer-0.10/gst/check/gstbufferstraw.h
 ${PLIST.gstcheck}include/gstreamer-0.10/gst/check/gstcheck.h
+${PLIST.gstcheck}include/gstreamer-0.10/gst/check/gstconsistencychecker.h
 include/gstreamer-0.10/gst/controller/gstcontroller.h
 include/gstreamer-0.10/gst/controller/gstcontrolsource.h
 include/gstreamer-0.10/gst/controller/gstinterpolationcontrolsource.h
@@ -26,6 +27,7 @@ include/gstreamer-0.10/gst/glib-compat.h
 include/gstreamer-0.10/gst/gst.h
 include/gstreamer-0.10/gst/gstbin.h
 include/gstreamer-0.10/gst/gstbuffer.h
+include/gstreamer-0.10/gst/gstbufferlist.h
 include/gstreamer-0.10/gst/gstbus.h
 include/gstreamer-0.10/gst/gstcaps.h
 include/gstreamer-0.10/gst/gstchildproxy.h
@@ -68,6 +70,7 @@ include/gstreamer-0.10/gst/gstsystemclock.h
 include/gstreamer-0.10/gst/gsttaglist.h
 include/gstreamer-0.10/gst/gsttagsetter.h
 include/gstreamer-0.10/gst/gsttask.h
+include/gstreamer-0.10/gst/gsttaskpool.h
 include/gstreamer-0.10/gst/gsttrace.h
 include/gstreamer-0.10/gst/gsttypefind.h
 include/gstreamer-0.10/gst/gsttypefindfactory.h
@@ -122,6 +125,7 @@ share/gtk-doc/html/gstreamer-0.10/GstRegistry.html
 share/gtk-doc/html/gstreamer-0.10/GstSystemClock.html
 share/gtk-doc/html/gstreamer-0.10/GstTagSetter.html
 share/gtk-doc/html/gstreamer-0.10/GstTask.html
+share/gtk-doc/html/gstreamer-0.10/GstTaskPool.html
 share/gtk-doc/html/gstreamer-0.10/GstTypeFindFactory.html
 share/gtk-doc/html/gstreamer-0.10/GstXML.html
 share/gtk-doc/html/gstreamer-0.10/api-index-deprecated.html
@@ -132,6 +136,7 @@ share/gtk-doc/html/gstreamer-0.10/gstreamer-0.10.devhelp
 share/gtk-doc/html/gstreamer-0.10/gstreamer-0.10.devhelp2
 share/gtk-doc/html/gstreamer-0.10/gstreamer-Gst.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstBuffer.html
+share/gtk-doc/html/gstreamer-0.10/gstreamer-GstBufferList.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstCaps.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstEvent.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstFilter.html
