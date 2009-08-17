@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/08/17 10:26:17 tron Exp $
+
+--- libdaemon/dfork.c.orig	2008-07-28 20:37:56.000000000 +0100
++++ libdaemon/dfork.c	2009-08-17 11:23:13.000000000 +0100
+@@ -662,6 +662,10 @@
+     return r;
+ }
+ 
++#if !defined(_NSIG) && defined(__DARWIN_NSIG)
++#define	_NSIG	__DARWIN_NSIG
++#endif
++
+ int daemon_reset_sigsv(const int except[]) {
+     int sig;
+ 
