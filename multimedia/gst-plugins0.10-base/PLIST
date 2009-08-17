@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:08:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/08/17 17:45:52 drochner Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/app/gstappbuffer.h
 include/gstreamer-0.10/gst/app/gstappsink.h
@@ -308,6 +308,7 @@ share/locale/id/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/it/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/ja/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/lt/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/lv/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/nb/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/nl/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/or/LC_MESSAGES/gst-plugins-base-0.10.mo
@@ -318,6 +319,7 @@ share/locale/sk/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sq/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sr/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sv/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/tr/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/uk/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/vi/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/zh_CN/LC_MESSAGES/gst-plugins-base-0.10.mo
