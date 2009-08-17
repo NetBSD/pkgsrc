@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3187 2009/08/17 18:32:34 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3188 2009/08/17 18:37:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4219,3 +4219,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/p5-Tk to 804.028nb1 [gson 2009-08-17]
 	Added graphics/p5-GD-Graph3d version 0.63 [sno 2009-08-17]
 	Added www/p5-URI-Find version 20090319 [sno 2009-08-17]
+	Added www/p5-Template-Plugin-Clickable version 0.06 [sno 2009-08-17]
