@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3194 2009/08/17 19:14:25 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3195 2009/08/17 19:15:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4226,3 +4226,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/dspam to 3.8.0nb4 [sno 2009-08-17]
 	Updated www/p5-SVN-Web to 0.53nb3 [sno 2009-08-17]
 	Updated www/p5-Template-Extract to 0.41nb2 [sno 2009-08-17]
+	Updated www/p5-Template-Generate to 0.04nb8 [sno 2009-08-17]
