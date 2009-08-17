@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2008/10/22 10:35:30 markd Exp $
+# $NetBSD: Makefile,v 1.61 2009/08/17 14:40:43 gson Exp $
 
 DISTNAME=	Tk-804.028
+PKGREVISION=	1
 PKGNAME=	p5-Tk-804.028
 SVR4_PKGNAME=	p5tk
 CATEGORIES=	x11 tk perl5
