@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2008/10/19 19:19:17 he Exp $
+# $NetBSD: Makefile,v 1.27 2009/08/17 19:11:37 sno Exp $
 
 DISTNAME=	SVN-Web-0.53
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NI/NIKC/}
 
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Date-Calc>=4.3:../../devel/p5-Date-Calc
 DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 DEPENDS+=	p5-DBI>=1.18:../../databases/p5-DBI
 DEPENDS+=	p5-GD>=1.32:../../graphics/p5-GD
-DEPENDS+=	p5-GDGraph3d>=0.55:../../graphics/p5-GDGraph3d
+DEPENDS+=	p5-GD-Graph3d>=0.55:../../graphics/p5-GD-Graph3d
 DEPENDS+=	p5-GDGraph>=1.33:../../graphics/p5-GDGraph
 DEPENDS+=	p5-Locale-Maketext-Lexicon-[0-9]*:../../misc/p5-Locale-Maketext-Lexicon
 DEPENDS+=	p5-Locale-Maketext-Simple-[0-9]*:../../misc/p5-Locale-Maketext-Simple
@@ -39,10 +39,10 @@ DEPENDS+=	p5-XML-RSS>=0.97:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-YAML>=0.35:../../textproc/p5-YAML
 DEPENDS+=	subversion-base>=1.4:../../devel/subversion-base
 
-# TODO: Recommends:
-#        Template::Plugin::Clickable
-#        Template::Plugin::Clickable::Email
-#        Template::Plugin::Subst
+# Recommended dependencies:
+DEPENDS+=	p5-Template-Plugin-Clickable-[0-9]*:../../www/p5-Template-Plugin-Clickable
+DEPENDS+=	p5-Template-Plugin-Clickable-Email-[0-9]*:../../www/p5-Template-Plugin-Clickable-Email
+DEPENDS+=	p5-Template-Plugin-Subst-[0-9]*:../../www/p5-Template-Plugin-Subst
 
 MAKE_PARAMS+=		--skip_questions
 PERL5_MODULE_TYPE=	Module::Build
