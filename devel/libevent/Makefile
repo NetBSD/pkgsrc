@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/08/16 15:35:03 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2009/08/17 11:07:55 drochner Exp $
 #
 # WARNING: updating this package (as of the 1.1/1.2 releases) means
 # updating BUILDLINK_ABI_DEPENDS in buildlink3.mk and a PKGREVISION
@@ -15,6 +15,8 @@ MASTER_SITES=	http://monkey.org/~provos/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monkey.org/~provos/libevent/
 COMMENT=	Asynchronous event notification library
+
+CONFLICTS+=	libev-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
