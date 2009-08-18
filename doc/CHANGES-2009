@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3224 2009/08/18 23:12:52 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.3225 2009/08/18 23:30:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4258,3 +4258,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/cparser to 0.9.9 [hasso 2009-08-18]
 	Added devel/p5-MooseX-Role-Parameterized version 0.12 [seb 2009-08-18]
 	Updated www/ap-auth-kerb to 5.4 [minskim 2009-08-18]
+	Updated graphics/p5-Image-ExifTool to 7.89 [gdt 2009-08-18]
