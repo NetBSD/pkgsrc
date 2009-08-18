@@ -1,22 +1,22 @@
-$NetBSD: patch-ag,v 1.6 2009/05/16 08:06:57 adam Exp $
+$NetBSD: patch-ag,v 1.7 2009/08/18 15:23:59 joerg Exp $
 
 --- src/gnome2-console/Makefile.in.orig	2009-02-18 12:40:09.000000000 +0100
 +++ src/gnome2-console/Makefile.in
-@@ -64,7 +64,7 @@ support.o:   support.c
+@@ -62,7 +62,7 @@ support.o:   support.c
+ 	sed "s%parent = g_object_get_data%parent = \(GtkWidget \*\)g_object_get_data%" support.c.orig >support.c
+ 	$(CXX) $(DEFS) $(DEBUG) -c $(CPPFLAGS) $(CONS_INC) -I$(srcdir) -I$(basedir) $(DINCLUDE) $(CFLAGS) $<
  
- bgnome-console: Makefile $(CONSOBJS) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) 
+-bgnome-console: Makefile $(CONSOBJS) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) 
++bgnome-console: Makefile $(CONSOBJS)
  	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) $(CONS_LDFLAGS) -L../lib -o $@ $(CONSOBJS) \
--	      $(LIBS) $(DLIB) $(CONS_LIBS) -lbaccfg -lbac -lm
-+	      $(LIBS) $(DLIB) $(CONS_LIBS) ../lib/libbaccfg.la ../lib/libbac.la -lm
- 
- static-console: static-bgnome-console
+ 	      $(LIBS) $(DLIB) $(CONS_LIBS) -lbaccfg -lbac -lm
  
 @@ -106,14 +106,14 @@ install: all
  	fi
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bgnome-console $(DESTDIR)$(sbindir)/bgnome-console
  	@srcconf=bgnome-console.conf; \
 -	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
-+	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
++	if  test -f ${DESTDIR}/usr/pkg/share/examples/bacula/$$srcconf; then \
  	   destconf=$$srcconf.new; \
  	   echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
  	else \
@@ -24,8 +24,8 @@ $NetBSD: patch-ag,v 1.6 2009/05/16 08:06:57 adam Exp $
  	fi; \
 -	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf"; \
 -	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
-+	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
-+	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
++	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf"; \
++	${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf
  	if test -f static-bgnome-console; then \
  	   $(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) static-bgnome-console $(DESTDIR)$(sbindir)/static-bgnome-console; \
  	fi 

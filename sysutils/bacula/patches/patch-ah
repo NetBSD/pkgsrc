@@ -1,22 +1,22 @@
-$NetBSD: patch-ah,v 1.6 2009/05/16 08:06:57 adam Exp $
+$NetBSD: patch-ah,v 1.7 2009/08/18 15:23:59 joerg Exp $
 
 --- src/wx-console/Makefile.in.orig	2009-03-09 16:34:05.000000000 +0100
 +++ src/wx-console/Makefile.in
-@@ -83,7 +83,7 @@ bwx-console.app: bwx-console
+@@ -81,7 +81,7 @@ bwx-console.app: bwx-console
+ 	mv bwx-console bwx-console.app/Contents/MacOS/bwx-console
+ 	cp bwx-console.conf /Library/Preferences/org.bacula.wxconsole.conf
  
- bwx-console: Makefile $(CONSOBJS) @WIN32@ ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
+-bwx-console: Makefile $(CONSOBJS) @WIN32@ ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
++bwx-console: Makefile $(CONSOBJS) @WIN32@
  	$(LIBTOOL_LINK) $(CXX) $(CONSOBJS) $(WIN32RES) -o $@ $(LIBS) -L../lib $(CONS_LDFLAGS) \
--	  -lbaccfg -lbac $(OPENSSL_LIBS)
-+	  ../lib/libbaccfg.la ../lib/libbac.la $(OPENSSL_LIBS)
+ 	  -lbaccfg -lbac $(OPENSSL_LIBS)
  
- win32: bwx-console_private.res
- 	
 @@ -114,14 +114,14 @@ install: all
  	fi
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bwx-console $(DESTDIR)$(sbindir)/bwx-console
  	@srcconf=bwx-console.conf; \
 -	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
-+	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
++	if  test -f ${DESTDIR}/usr/pkg/share/examples/bacula/$$srcconf; then \
  	   destconf=$$srcconf.new; \
  	   echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
  	else \
@@ -24,8 +24,8 @@ $NetBSD: patch-ah,v 1.6 2009/05/16 08:06:57 adam Exp $
  	fi; \
 -	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf"; \
 -	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
-+	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
-+	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
++	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf"; \
++	${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf
  
  uninstall:
  	(cd $(DESTDIR)$(sbindir); $(RMF) bwx-console)
