@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/22 09:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/08/18 15:43:58 joerg Exp $
 
 DISTNAME=	HLaTeX-1.0.1
 PKGNAME=	tex-hlatex-${DISTNAME:S/HLaTeX-//}
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.ktug.or.kr/pub/ktug/hlatex/
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/hlatex/
 COMMENT=	LaTeX package to typeset Hangul
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	tex-uhc-fonts-base>=1.0:../../fonts/tex-uhc-fonts-base
 
@@ -22,35 +24,38 @@ do-build:
 	${CC} ${CPPFLAGS} ${CFLAGS} -o ${WRKSRC}/hmakeindex \
 		${WRKSRC}/contrib/hmakeindex.c
 
+INSTALLATION_DIRS=	bin \
+			${PKG_LOCALTEXMFPREFIX}/bibtex/bst/hlatex \
+			${PKG_LOCALTEXMFPREFIX}/omega/ocp/hlatex \
+			${PKG_LOCALTEXMFPREFIX}/omega/otp/hlatex \
+			${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex \
+			${PKG_LOCALTEXMFPREFIX}/tex/lambda/hlatex \
+			${PKG_LOCALTEXMFPREFIX}/makeindex/
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hbibtex ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/hmakeindex ${PREFIX}/bin/
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex
+	${INSTALL_PROGRAM} ${WRKSRC}/hbibtex ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/hmakeindex ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/latex/* \
-		${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex/
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex/
 	${INSTALL_DATA} ${WRKSRC}/contrib/hbname-k.tex \
-		${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex/
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex/
 	${INSTALL_DATA} ${WRKSRC}/contrib/*.sty ${WRKSRC}/contrib/hfn-k.tex \
-		${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex/
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/lambda/hlatex
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/hlatex/
 .for f in u8hangul.tex uhc-test.tex uhc*.fd
 	${INSTALL_DATA} ${WRKSRC}/lambda/${f} \
-		${PKG_LOCALTEXMFPREFIX}/tex/lambda/hlatex/
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/lambda/hlatex/
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/contrib/hbname-u.tex \
-		${PKG_LOCALTEXMFPREFIX}/tex/lambda/hlatex/
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/lambda/hlatex/
 	${INSTALL_DATA} ${WRKSRC}/contrib/hfn-u.tex \
-		${PKG_LOCALTEXMFPREFIX}/tex/lambda/hlatex/
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/omega/ocp/hlatex
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/lambda/hlatex/
 	${INSTALL_DATA} ${WRKSRC}/lambda/hlatex.ocp \
-		${PKG_LOCALTEXMFPREFIX}/omega/ocp/hlatex/
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/omega/otp/hlatex
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/omega/ocp/hlatex/
 	${INSTALL_DATA} ${WRKSRC}/lambda/hlatex.otp \
-		${PKG_LOCALTEXMFPREFIX}/omega/otp/hlatex/
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/bibtex/bst/hlatex
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/omega/otp/hlatex/
 	${INSTALL_DATA} ${WRKSRC}/contrib/halpha.bst \
-		${PKG_LOCALTEXMFPREFIX}/bibtex/bst/hlatex/
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/bibtex/bst/hlatex/
 	${INSTALL_DATA} ${WRKSRC}/contrib/*.ist \
-		${PKG_LOCALTEXMFPREFIX}/makeindex/
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/makeindex/
 
 .include "../../mk/bsd.pkg.mk"
