@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.8 2009/08/01 18:56:03 zafer Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/08/18 15:53:18 joerg Exp $
 bin/xdx
 man/man1/xdx.1
 share/applications/Xdx.desktop
 share/locale/es/LC_MESSAGES/xdx.mo
+share/locale/de/LC_MESSAGES/xdx.mo
 share/locale/fr/LC_MESSAGES/xdx.mo
 share/locale/nl/LC_MESSAGES/xdx.mo
 share/locale/pl/LC_MESSAGES/xdx.mo
+share/locale/pt/LC_MESSAGES/xdx.mo
 share/xdx/MANUAL
 share/xdx/MANUAL.es
 share/xdx/MANUAL.fr
 share/xdx/MANUAL.nl
 share/xdx/MANUAL.pl
+share/xdx/cty.dat
 share/xdx/pixmaps/bigsmile.png
 share/xdx/pixmaps/cry.png
 share/xdx/pixmaps/sad.png
