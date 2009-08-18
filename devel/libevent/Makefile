@@ -1,11 +1,5 @@
-# $NetBSD: Makefile,v 1.33 2009/08/17 11:07:55 drochner Exp $
+# $NetBSD: Makefile,v 1.34 2009/08/18 16:53:14 drochner Exp $
 #
-# WARNING: updating this package (as of the 1.1/1.2 releases) means
-# updating BUILDLINK_ABI_DEPENDS in buildlink3.mk and a PKGREVISION
-# bump of all first-level dependents.  This is because the shlib
-# name contains the exact libevent release number, preventing it
-# from being ABI compatible across releases until this is fixed.
-# [tvierling 20070210]
 
 DISTNAME=	libevent-1.4.12-stable
 PKGNAME=	${DISTNAME:S/-stable//}
