@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/08/01 17:23:21 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2009/08/18 05:48:08 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=	threads

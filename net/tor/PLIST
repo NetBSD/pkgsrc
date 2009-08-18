@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:09:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/08/18 05:48:08 obache Exp $
 bin/tor
 bin/tor-gencert
 bin/tor-resolve
