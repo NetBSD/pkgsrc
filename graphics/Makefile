@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.528 2009/08/17 17:51:41 sno Exp $
+# $NetBSD: Makefile,v 1.529 2009/08/18 12:57:30 hasso Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -260,7 +260,6 @@ SUBDIR+=	p5-GD-SVG
 SUBDIR+=	p5-GD-SecurityImage
 SUBDIR+=	p5-GDGraph
 SUBDIR+=	p5-GDGraph-boxplot
-SUBDIR+=	p5-GDGraph3d
 SUBDIR+=	p5-GDTextUtil
 SUBDIR+=	p5-GIFgraph
 SUBDIR+=	p5-Gdk-Imlib
