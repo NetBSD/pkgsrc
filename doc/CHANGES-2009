@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3222 2009/08/18 19:04:27 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3223 2009/08/18 22:01:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4256,3 +4256,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-Declare to 0.005011 [sno 2009-08-18]
 	Updated devel/libfirm to 1.17.0 [hasso 2009-08-18]
 	Updated lang/cparser to 0.9.9 [hasso 2009-08-18]
+	Added devel/p5-MooseX-Role-Parameterized version 0.12 [seb 2009-08-18]
