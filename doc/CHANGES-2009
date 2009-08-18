@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3215 2009/08/18 15:55:38 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3216 2009/08/18 16:18:10 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4248,3 +4248,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-URI to 1.40 [sno 2009-08-18]
 	Updated www/p5-libwww to 5.831 [sno 2009-08-18]
 	Updated www/typolight27-translations to 20090815 [taca 2009-08-18]
+	Updated textproc/p5-Text-Textile to 2.12 [sno 2009-08-18]
