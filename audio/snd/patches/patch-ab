@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.4 2009/08/18 16:47:18 joerg Exp $
+
+--- makefile.in.orig	2009-08-18 18:34:38.000000000 +0200
++++ makefile.in
+@@ -190,14 +190,14 @@ audinfo: $(SNDLIB_HEADERS)
+ 	$(CC) $(LDFLAGS) $(CFLAGS) headers.o io.o audio.o sound.o audinfo.o -o audinfo $(JACK_LIBS) $(AUDIO_LIB) $(LIBS)
+ 
+ install: snd
+-	${SHELL} ${top_srcdir}/mkinstalldirs ${bindir}
+-	${SHELL} ${top_srcdir}/mkinstalldirs ${mandir}
+-	${SHELL} ${top_srcdir}/mkinstalldirs ${mandir}/man1
+-	${SHELL} ${top_srcdir}/mkinstalldirs ${pkgdatadir}
++	${SHELL} ${top_srcdir}/mkinstalldirs ${DESTDIR}${bindir}
++	${SHELL} ${top_srcdir}/mkinstalldirs ${DESTDIR}${mandir}
++	${SHELL} ${top_srcdir}/mkinstalldirs ${DESTDIR}${mandir}/man1
++	${SHELL} ${top_srcdir}/mkinstalldirs ${DESTDIR}${pkgdatadir}
+ 	(cd po && $(MAKE) install)
+-	$(INSTALL) snd ${bindir}/snd
+-	$(INSTALL) ${top_srcdir}/snd.1 ${mandir}/man1
+-	(cd ${top_srcdir} && for f in ${SND_SCRIPTS}; do ${INSTALL_DATA} ${top_srcdir}/$${f} ${pkgdatadir}/$${f}; done)
++	$(BSD_INSTALL_PROGRAM) snd ${DESTDIR}${bindir}/snd
++	$(INSTALL) ${top_srcdir}/snd.1 ${DESTDIR}${mandir}/man1
++	(cd ${top_srcdir} && for f in ${SND_SCRIPTS}; do ${INSTALL_DATA} ${top_srcdir}/$${f} ${DESTDIR}${pkgdatadir}/$${f}; done)
+ 
+ uninstall:
+ 	rm -f ${bindir}/snd
