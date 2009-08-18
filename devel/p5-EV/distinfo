@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/08 20:16:38 sno Exp $
+$NetBSD: distinfo,v 1.2 2009/08/18 14:12:06 sno Exp $
 
-SHA1 (EV-3.7.tar.gz) = 104c113cfd78fa919037aeee3e9a68c2f8a8291d
-RMD160 (EV-3.7.tar.gz) = 07cca06256b7048a907ea77991dd15c6c9dbc294
-Size (EV-3.7.tar.gz) = 148124 bytes
+SHA1 (EV-3.8.tar.gz) = a205192861aa5a668592468833d0e99749274aeb
+RMD160 (EV-3.8.tar.gz) = 0bb514debdb615b37f5c16164a47c5934aacbdd9
+Size (EV-3.8.tar.gz) = 151268 bytes
