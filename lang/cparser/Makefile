@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/12/17 16:59:19 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/18 19:01:26 hasso Exp $
 #
 
-DISTNAME=	cparser-0.9.7
+DISTNAME=	cparser-0.9.9
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cparser/}
 EXTRACT_SUFX=	.tar.bz2
