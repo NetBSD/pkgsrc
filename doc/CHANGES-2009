@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3213 2009/08/18 14:32:51 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3214 2009/08/18 14:36:53 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4246,3 +4246,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CGI to 3.45 [sno 2009-08-18]
 	Updated www/p5-HTML-Parser to 3.62 [sno 2009-08-18]
 	Updated www/p5-URI to 1.40 [sno 2009-08-18]
+	Updated www/p5-libwww to 5.831 [sno 2009-08-18]
