@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/08/02 11:41:49 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2009/08/18 18:31:18 hasso Exp $
 
 --- src/network-light/upnp.c.orig	2009-04-30 14:30:23.000000000 +0200
 +++ src/network-light/upnp.c
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/08/02 11:41:49 drochner Exp $
  #include <stdio.h>
  #include <locale.h>
  #include <string.h>
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#include <uuid.h>
 +#else
  #include <uuid/uuid.h>
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/08/02 11:41:49 drochner Exp $
          xmlNode *uuid_node;
          uuid_t uuid;
          char *udn, uuidstr[37];
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +	char *myuuidstr;
 +#endif
  
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/08/02 11:41:49 drochner Exp $
                  return NULL;
          }
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +	uuid_create(&uuid, 0);
 +	uuid_to_string(&uuid, &myuuidstr, 0);
 +	strncpy(uuidstr, myuuidstr, sizeof(uuidstr));
