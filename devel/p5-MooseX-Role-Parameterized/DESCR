@@ -1,0 +1,2 @@
+The Perl 5 module MooseX::Role::Parameterized empowers Moose roles
+by allowing parameters to be specified when they are combined.
