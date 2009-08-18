@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3206 2009/08/18 12:48:53 he Exp $
+$NetBSD: CHANGES-2009,v 1.3207 2009/08/18 14:03:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4239,3 +4239,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-MOP to 0.92 [seb 2009-08-18]
 	Updated devel/p5-Moose to 0.89 [seb 2009-08-18]
 	Updated net/ldns to 1.6.1 [he 2009-08-18]
+	Updated math/p5-Statistics-Descriptive to 3.0100 [sno 2009-08-18]
