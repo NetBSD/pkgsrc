@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/06/11 19:09:50 heinz Exp $
+$NetBSD: distinfo,v 1.2 2009/08/18 16:17:57 sno Exp $
 
-SHA1 (Text-Textile-2.03.tar.gz) = 21c35fb0411c29192289b3ba24fffff52fe02314
-RMD160 (Text-Textile-2.03.tar.gz) = 5a51bf1704d9bc73c437b697ce0e5a0e3d6c12f9
-Size (Text-Textile-2.03.tar.gz) = 31583 bytes
+SHA1 (Text-Textile-2.12.tar.gz) = e78d9cffccbe86cff488e38fd7bc0f5726da282c
+RMD160 (Text-Textile-2.12.tar.gz) = 4f3565e8015ae8e073748f0efad4e30e2edaf73b
+Size (Text-Textile-2.12.tar.gz) = 34418 bytes
