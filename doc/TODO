@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8348 2009/08/18 05:49:27 obache Exp $
+$NetBSD: TODO,v 1.8349 2009/08/18 13:02:44 he Exp $
 
 Suggested new packages
 ======================
@@ -765,7 +765,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o latex2rtf-1.9.19
 	o lcc-4.2
 	o ldapsdk-6.0.2
-	o ldns-1.6.0 [pkg/41868]
 	o leafpad-0.8.15
 	o less-436
 	o lft-2.5 [at http://pwhois.org/]
