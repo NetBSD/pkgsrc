@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3221 2009/08/18 17:11:31 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3222 2009/08/18 19:04:27 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4254,3 +4254,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Bit-Vector to 6.9 [sno 2009-08-18]
 	Updated misc/p5-Locale-Maketext-Simple to 0.21 [sno 2009-08-18]
 	Updated devel/p5-Devel-Declare to 0.005011 [sno 2009-08-18]
+	Updated devel/libfirm to 1.17.0 [hasso 2009-08-18]
+	Updated lang/cparser to 0.9.9 [hasso 2009-08-18]
