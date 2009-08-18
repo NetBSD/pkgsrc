@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3203 2009/08/17 21:16:32 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3204 2009/08/18 05:48:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4235,3 +4235,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/libnice version 0.0.9 [wiz 2009-08-17]
 	Added multimedia/farsight2 version 0.0.14 [wiz 2009-08-17]
 	Added chat/telepathy-farsight version 0.0.8 [wiz 2009-08-17]
+	Updated net/tor to 0.2.1.19 [obata 2009-08-18]
