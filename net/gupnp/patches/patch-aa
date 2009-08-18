@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/08/02 11:35:26 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2009/08/18 18:31:18 hasso Exp $
 
 --- libgupnp/gupnp-context.c.orig	2009-04-30 14:31:58.000000000 +0200
 +++ libgupnp/gupnp-context.c
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/08/02 11:35:26 drochner Exp $
          
 -#if defined(__FreeBSD__)
 -	if ((fp = popen ("netstat -r -f inet -n -W", "r"))) {
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
 +	if ((fp = popen ("netstat -r -f inet -n", "r"))) {
  		char buffer[BUFSIZ];
  
