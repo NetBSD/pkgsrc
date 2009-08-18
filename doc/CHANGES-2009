@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3204 2009/08/18 05:48:24 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3205 2009/08/18 12:15:32 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4236,3 +4236,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added multimedia/farsight2 version 0.0.14 [wiz 2009-08-17]
 	Added chat/telepathy-farsight version 0.0.8 [wiz 2009-08-17]
 	Updated net/tor to 0.2.1.19 [obata 2009-08-18]
+	Updated devel/p5-Class-MOP to 0.92 [seb 2009-08-18]
+	Updated devel/p5-Moose to 0.89 [seb 2009-08-18]
