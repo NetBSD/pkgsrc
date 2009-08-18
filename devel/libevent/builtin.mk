@@ -1,9 +1,10 @@
-# $NetBSD: builtin.mk,v 1.7 2008/04/22 17:16:54 tnn Exp $
+# $NetBSD: builtin.mk,v 1.8 2009/08/18 17:14:55 drochner Exp $
 
 BUILTIN_PKG:=	libevent
 
-BUILTIN_FIND_FILES_VAR:=	H_LIBEVENT
+BUILTIN_FIND_FILES_VAR:=	H_LIBEVENT H_LIBEVENTCONFIG
 BUILTIN_FIND_FILES.H_LIBEVENT=	/usr/include/event.h
+BUILTIN_FIND_FILES.H_LIBEVENTCONFIG= /usr/include/event-config.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -26,6 +27,9 @@ MAKEVARS+=	IS_BUILTIN.libevent
 .if !defined(BUILTIN_PKG.libevent) && \
     !empty(IS_BUILTIN.libevent:M[yY][eE][sS]) && \
     empty(H_LIBEVENT:M__nonexistent__)
+.if empty(H_LIBEVENTCONFIG:M__nonexistent__)
+BUILTIN_VERSION.libevent=	1.4.4
+.else
 # libevent>=1.3: bufferevent_base_set added
 _BLTN_EVENT_13!=	\
 	${GREP} -c bufferevent_base_set ${H_LIBEVENT} || ${TRUE}
@@ -81,6 +85,7 @@ BUILTIN_VERSION.libevent=	0.6
 .  else
 BUILTIN_VERSION.libevent=	0.5
 .  endif
+.endif
 BUILTIN_PKG.libevent=	libevent-${BUILTIN_VERSION.libevent}
 .endif
 MAKEVARS+=	BUILTIN_PKG.libevent
