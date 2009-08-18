@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2008/12/17 16:59:19 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2009/08/18 19:01:26 hasso Exp $
 
---- Makefile.orig	2008-12-01 18:57:31.000000000 +0100
-+++ Makefile
+--- Makefile.orig	2009-05-15 15:14:07 +0300
++++ Makefile	2009-08-08 15:00:51 +0300
 @@ -8,18 +8,18 @@ BUILDDIR ?= build
  FIRM_CFLAGS ?= `pkg-config --cflags libfirm`
  FIRM_LIBS   ?= `pkg-config --libs libfirm`
@@ -26,9 +26,9 @@ $NetBSD: patch-aa,v 1.2 2008/12/17 16:59:19 joerg Exp $
  
  LFLAGS += $(FIRM_LIBS)
  
-@@ -55,13 +55,13 @@ SOURCES := \
- 	driver/gen_firm_asm.c \
- 	preprocessor.c
+@@ -57,13 +57,13 @@ SOURCES := \
+ 	wrappergen/write_fluffy.c \
+ 	wrappergen/write_jna.c
  
 -OBJECTS = $(SOURCES:%.c=build/%.o)
 +OBJECTS = $(SOURCES:%.c=build/%.lo)
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.2 2008/12/17 16:59:19 joerg Exp $
  
  Q = @
  
-@@ -97,7 +97,8 @@ UNUSED := $(shell mkdir -p $(DIRS))
+@@ -99,7 +99,8 @@ UNUSED := $(shell mkdir -p $(DIRS))
  
  $(GOAL): $(OBJECTS) $(LIBFIRM_FILE)
  	@echo "===> LD $@"
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.2 2008/12/17 16:59:19 joerg Exp $
  
  splint: $(SPLINTS)
  
-@@ -127,35 +128,42 @@ builtins.h: builtins/builtins.c create_b
+@@ -129,35 +130,42 @@ builtins.h: builtins/builtins.c create_b
  
  main.c: builtins.h
  
