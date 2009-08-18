@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2009/07/30 22:41:36 seb Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/18 17:11:20 sno Exp $
 #
 
-DISTNAME=	Devel-Declare-0.005008
+DISTNAME=	Devel-Declare-0.005011
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
@@ -16,6 +16,7 @@ DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 
 BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
 BUILD_DEPENDS+= p5-B-Compiling-[0-9]*:../../devel/p5-B-Compiling # t/lines.t
+BUILD_DEPENDS+=	p5-Test-Simple>=0.88:../../devel/p5-Test-Simple
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
