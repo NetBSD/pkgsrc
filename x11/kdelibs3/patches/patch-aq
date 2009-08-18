@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.11 2009/08/18 11:57:33 markd Exp $
+
+KDE svn 1002164 fixes CVE-2009-1725
+
+--- khtml/html/htmltokenizer.cpp.orig	2007-05-14 19:52:39.000000000 +1200
++++ khtml/html/htmltokenizer.cpp
+@@ -736,7 +736,7 @@ void HTMLTokenizer::parseEntity(Tokenize
+ #ifdef TOKEN_DEBUG
+                 kdDebug( 6036 ) << "unknown entity!" << endl;
+ #endif
+-                checkBuffer(10);
++                checkBuffer(11);
+                 // ignore the sequence, add it to the buffer as plaintext
+                 *dest++ = '&';
+                 for(unsigned int i = 0; i < cBufferPos; i++)
