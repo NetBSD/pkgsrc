@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3209 2009/08/18 14:12:19 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3210 2009/08/18 14:18:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4242,3 +4242,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Statistics-Descriptive to 3.0100 [sno 2009-08-18]
 	Updated devel/libev to 3.8 [sno 2009-08-18]
 	Updated devel/p5-EV to 3.8 [sno 2009-08-18]
+	Updated devel/p5-AnyEvent to 5.111 [sno 2009-08-18]
