@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8347 2009/08/17 23:00:07 jnemeth Exp $
+$NetBSD: TODO,v 1.8348 2009/08/18 05:49:27 obache Exp $
 
 Suggested new packages
 ======================
@@ -1236,7 +1236,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.8beta1
-	o tor-0.2.1.19
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transcode-1.1.3
