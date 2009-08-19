@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2009/05/13 21:00:25 markd Exp $
+# $NetBSD: Makefile,v 1.36 2009/08/19 09:56:22 markd Exp $
 #
 
 PKGNAME=		sge-6.2.2.1
 DISTNAME=		ge-V62u2_1_TAG-src
+PKGREVISION=		1
 CATEGORIES=		parallel sysutils
 MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/197/
 
@@ -41,6 +42,12 @@ CONFIG_GUESS_OVERRIDE=	source/3rdparty/qmake/config.guess \
 		source/3rdparty/qtcsh/config.guess
 CONFIG_SUB_OVERRIDE=	source/3rdparty/qmake/config.sub \
 		source/3rdparty/qtcsh/config.sub
+
+REPLACE_INTERPRETER+=	tclsh
+REPLACE.tclsh.old=	.*tclsh
+REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
+REPLACE_FILES.tclsh=	source/dist/util/resources/jsv/jsv.tcl
+REPLACE_PERL+=		source/dist/util/resources/jsv/jsv.pl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -118,14 +125,14 @@ do-build:
 	cd ${WRKSRC}/source && ${SETENV} ${MAKE_ENV} ./scripts/zerodepend
 	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-qmake -no-qtcsh depend
 	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni
-	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -man
+	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -man -sunman
 
 do-install:
 	${MKDIR} ${DESTDIR}${SGE_ROOT}
 	#${CHOWN} ${SGE_USER} ${DESTDIR}${SGE_ROOT}
 	#${CHGRP} ${SGE_GROUP} ${DESTDIR}${SGE_ROOT}
 	cd ${WRKSRC}/source && \
-		${ECHO} "Y" | ${SETENV} LOCALBASE=${LOCALBASE} DESTDIR=${DESTDIR} SGE_ROOT=${SGE_ROOT} ./scripts/distinst -local -all -nobdb -noopenssl ${SGE_ARCH} -- doc man
+		${ECHO} "Y" | ${SETENV} LOCALBASE=${LOCALBASE} DESTDIR=${DESTDIR} SGE_ROOT=${SGE_ROOT} ./scripts/distinst -local -all -nobdb -noopenssl -mansrc sge ${SGE_ARCH} -- doc man
 	for f in archive checkpoint deadlock dump load printlog recover stat upgrade verify ; do \
 		ln -s ${DESTDIR}${LOCALBASE}/bin/db4_$${f} ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/db_$${f} ; done
 	ln -s ${DESTDIR}${LOCALBASE}/bin/berkeley_db4_svc ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/berkeley_db_svc
