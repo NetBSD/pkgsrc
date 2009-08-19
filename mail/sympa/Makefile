@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2009/06/07 10:44:54 hasso Exp $
+# $NetBSD: Makefile,v 1.40.2.1 2009/08/19 09:07:14 tron Exp $
 #
 
 DISTNAME=	sympa-5.4.4
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/ \
 		http://www.sympa.org/distribution/old/
@@ -33,6 +34,7 @@ DEPENDS+=	p5-XML-LibXML>=1.61:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-Regexp-Common>=2.120:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-HTML-StripScripts-Parser>=1.02:../../www/p5-HTML-StripScripts-Parser
 DEPENDS+=	p5-MIME-EncWords>=1.010.101:../../mail/p5-MIME-EncWords
+DEPENDS+=	p5-Template-Toolkit>=2.20:../../www/p5-Template-Toolkit
 DEPENDS.SunOS+=	{perl>=5.10,p5-DB_File>=1.75}:../../databases/p5-DB_File
 
 OPSYSVARS+=	DEPENDS
