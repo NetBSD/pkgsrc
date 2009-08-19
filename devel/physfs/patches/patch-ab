@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2005/07/25 12:12:54 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2009/08/19 08:59:46 yyamano Exp $
 
---- configure.orig	2005-07-24 00:14:17.000000000 +0200
+--- configure.orig	2005-07-23 15:14:17.000000000 -0700
 +++ configure
-@@ -10378,6 +10378,20 @@ echo $ECHO_N "checking if this is FreeBS
+@@ -9682,6 +9682,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+       have_readline="yes"
++      LIBS="-lreadline -lcurses $LIBS"
+     fi
+   fi
+ fi
+@@ -10378,6 +10379,20 @@ echo $ECHO_N "checking if this is FreeBS
  echo "${ECHO_T}$this_is_freebsd" >&6
  fi
  
