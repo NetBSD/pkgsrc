@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2009/07/19 11:08:00 sno Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/19 06:55:47 sno Exp $
 
-DISTNAME=	DBIx-Class-0.08108
+DISTNAME=	DBIx-Class-0.08109
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
@@ -28,9 +28,10 @@ DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.19}:../../devel/p5-Scalar-List-Uti
 DEPENDS+=	{perl>=5.10,p5-Storable-[0-9]*}:../../devel/p5-Storable
 DEPENDS+=	p5-Sub-Name>=0.04:../../devel/p5-Sub-Name
 
+BUILD_DEPENDS+=	p5-File-Temp>=0.22:../../devel/p5-File-Temp
 BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Simple>=0.82:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-Test-Simple>=0.92:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
 
 PKG_DESTDIR_SUPPORT=	user-destdir
