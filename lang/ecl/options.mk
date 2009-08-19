@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2009/08/13 18:17:18 asau Exp $
+# $NetBSD: options.mk,v 1.2 2009/08/19 14:21:03 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ecl
 PKG_SUPPORTED_OPTIONS+=		threads unicode
 PKG_SUGGESTED_OPTIONS+=		# empty
 # Unicode support proved to break Axioms.
-# Threads are off, since threaded ECL build crashes on NetBSD and FreeBSD.
+# Threads are off, since threaded ECL requires threads support
+# in Boehm GC (off by default).
 
 .include "../../mk/bsd.options.mk"
 
