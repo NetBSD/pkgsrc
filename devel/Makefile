@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1213 2009/08/19 20:12:23 sno Exp $
+# $NetBSD: Makefile,v 1.1214 2009/08/19 20:19:02 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -908,6 +908,7 @@ SUBDIR+=	p5-accessors
 SUBDIR+=	p5-aliased
 SUBDIR+=	p5-autobox
 SUBDIR+=	p5-autobox-Core
+SUBDIR+=	p5-autodie
 SUBDIR+=	p5-boolean
 SUBDIR+=	p5-capitalization
 SUBDIR+=	p5-common-sense
