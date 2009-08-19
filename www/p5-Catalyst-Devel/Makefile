@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2009/07/08 11:54:41 sno Exp $
+# $NetBSD: Makefile,v 1.10 2009/08/19 18:41:24 sno Exp $
 
-DISTNAME=	Catalyst-Devel-1.19
+DISTNAME=	Catalyst-Devel-1.20
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Catalyst-Plugin-Static-Simple>=0.16:../../www/p5-Catalyst-Plugin-St
 DEPENDS+=	p5-Catalyst-Runtime>=5.80000:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Config-General>=2.42:../../devel/p5-Config-General
-DEPENDS+=	p5-File-ChangeNotify>=0.03:../../devel/p5-File-ChangeNotify
+DEPENDS+=	p5-File-ChangeNotify>=0.07:../../devel/p5-File-ChangeNotify
 DEPENDS+=	p5-File-Copy-Recursive>=0:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-Module-Install>=0.91:../../devel/p5-Module-Install
 DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
