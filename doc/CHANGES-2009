@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3228 2009/08/19 05:10:43 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3229 2009/08/19 05:14:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4262,3 +4262,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/jabberd2 to 2.1.24.1 [gdt 2009-08-18]
 	Updated print/gutenprint-lib to 5.2.4 [gdt 2009-08-19]
 	Updated time/p5-DateTime-TimeZone to 0.96 [sno 2009-08-19]
+	Updated devel/p5-MooseX-Types to 0.17 [sno 2009-08-19]
