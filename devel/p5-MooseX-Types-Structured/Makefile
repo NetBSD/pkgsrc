@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/29 23:12:20 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/19 06:25:32 sno Exp $
 #
 
-DISTNAME=	MooseX-Types-Structured-0.16
+DISTNAME=	MooseX-Types-Structured-0.18
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
@@ -17,13 +17,16 @@ DEPENDS+=	p5-MooseX-Types>=0.08:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-Sub-Exporter>=0.982:../../devel/p5-Sub-Exporter
 
 # For test target
+BUILD_DEPENDS+=	p5-MooseX-Types-DateTime-[0-9]*:../../time/p5-MooseX-Types-DateTime
+BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
-PERL5_MODULE_TYPE=	Module::Install
+#PERL5_MODULE_TYPE=	Module::Install
+MAKE_PARAMS=	--skipdeps
 PERL5_PACKLIST=	auto/MooseX/Types/Structured/.packlist
 
 .include "../../lang/perl5/module.mk"
