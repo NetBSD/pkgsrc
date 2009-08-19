@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3259 2009/08/19 19:04:17 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3260 2009/08/19 19:12:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4293,3 +4293,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-HTTP-Server-Simple-Mason to 0.12 [sno 2009-08-19]
 	Updated www/p5-LWPx-ParanoidAgent to 1.07 [sno 2009-08-19]
 	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.26 [sno 2009-08-19]
+	Updated www/p5-FCGI-ProcManager to 0.19 [sno 2009-08-19]
