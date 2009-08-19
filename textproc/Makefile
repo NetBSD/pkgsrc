@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.491 2009/08/17 19:29:38 sno Exp $
+# $NetBSD: Makefile,v 1.492 2009/08/19 09:08:09 sno Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -279,6 +279,7 @@ SUBDIR+=	p5-Text-SimpleTable
 SUBDIR+=	p5-Text-SpellChecker
 SUBDIR+=	p5-Text-Substitute
 SUBDIR+=	p5-Text-Tabs+Wrap
+SUBDIR+=	p5-Text-TabularDisplay
 SUBDIR+=	p5-Text-Template
 SUBDIR+=	p5-Text-Textile
 SUBDIR+=	p5-Text-Unaccent
