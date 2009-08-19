@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3233 2009/08/19 06:19:32 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3234 2009/08/19 06:25:51 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4267,3 +4267,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/emacs-w3m-snapshot to 1.4.364.20090802nb1 [minskim 2009-08-19]
 	Updated www/w3m-img to 0.5.2nb3 [minskim 2009-08-19]
 	Updated time/p5-MooseX-Types-DateTime to 0.04 [sno 2009-08-19]
+	Updated devel/p5-MooseX-Types-Structured to 0.18 [sno 2009-08-19]
