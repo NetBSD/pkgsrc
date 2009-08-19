@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/03/23 17:39:12 darcy Exp $
+# $NetBSD: Makefile,v 1.29 2009/08/19 15:00:09 joerg Exp $
 
 DISTNAME=		nspr-4.6.7
 PKGREVISION=		1
@@ -51,6 +51,12 @@ HW_CLASS!=	${UNAME} -m
 .    if ${HW_CLASS} == "sun4u"
 PLIST.sun4u_32=		yes
 .    endif
+.  endif
+.endif
+
+.if ${OPSYS} == "Linux"
+.  if defined(ABI) && ${ABI} == "64"
+CONFIGURE_ARGS+=	--enable-64bit
 .  endif
 .endif
 
