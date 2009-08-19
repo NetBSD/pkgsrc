@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2009/07/18 02:49:15 smb Exp $
+$NetBSD: distinfo,v 1.11 2009/08/19 04:04:40 yyamano Exp $
 
 SHA1 (frotz-2.43.tar.gz) = 2b2684ec670b471489c15be732c7dd1c59821b00
 RMD160 (frotz-2.43.tar.gz) = ccfc303e116e517caff0fec8f3bd555dfc02ae4e
 Size (frotz-2.43.tar.gz) = 160771 bytes
-SHA1 (patch-aa) = a938f7889bca24f182a440c18f468eabe6ce40a5
+SHA1 (patch-aa) = 1d6f92a0c5fae76d13e4de0ce4a9886eda4d1ca9
 SHA1 (patch-pb) = e7d63332e82b5835de051ec0696a76dbe3822042
