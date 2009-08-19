@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/08/13 18:17:18 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/19 14:16:02 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -31,6 +31,8 @@ lib/${PKGNAME}/profile.asd
 lib/${PKGNAME}/profile.fas
 lib/${PKGNAME}/rt.asd
 lib/${PKGNAME}/rt.fas
+lib/${PKGNAME}/sb-bsd-sockets.asd
+lib/${PKGNAME}/sb-bsd-sockets.fas
 lib/${PKGNAME}/serve-event.asd
 lib/${PKGNAME}/serve-event.fas
 lib/${PKGNAME}/sockets.asd
