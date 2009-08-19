@@ -1,0 +1,2 @@
+The Perl 5 module MooseX::NonMoose allows for easily subclassing
+non-Moose classes with Moose, taking care of the annoying details.
