@@ -1,6 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/06 06:23:23 wiz Exp $
-bin/Sigil
-libexec/Sigil/Sigil
-libexec/Sigil/data/basicmeta.csv
-libexec/Sigil/data/languages.csv
-libexec/Sigil/data/relator.csv
+@comment $NetBSD: PLIST,v 1.2 2009/08/19 14:43:36 wiz Exp $
+bin/sigil
