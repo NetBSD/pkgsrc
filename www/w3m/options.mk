@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.9 2008/12/13 08:52:13 obache Exp $
+# $NetBSD: options.mk,v 1.10 2009/08/19 05:47:17 minskim Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.w3m
-PKG_SUPPORTED_OPTIONS=	inet6 w3m-lynx-key w3m-m17n w3m-unicode
-PKG_SUGGESTED_OPTIONS=	w3m-m17n
+PKG_SUPPORTED_OPTIONS=	inet6 w3m-lynx-key
 
 .if ${_W3M_USE_IMAGE} == "YES"
 PKG_OPTIONS_REQUIRED_GROUPS+=	imagelib
@@ -13,40 +12,12 @@ PKG_OPTIONS_OPTIONAL_GROUPS+=	imagelib
 PKG_OPTIONS_GROUP.imagelib=	w3m-image-gdk-pixbuf w3m-image-imlib	\
 				w3m-image-imlib2 w3m-image-gtk2
 
-# Memo about W3m configuration:
-#
-#	* pkgsrc should export only user configurable build options that can't
-#	  be configured at run-time.
-#
-#	* As of 0.5, W3m is moving from English/Japanese (localized model) to
-#	  internationalized model.  The set of its options are not well refined
-#	  nor tested yet.  These configuration should be revisited later.
-#
-#	* --enable-m17n enables multibyte encoding support, and
-#	  --enable-unicode adds UTF-7/UTF-8 support.  W3m has a home-grown M17N
-#	  library (libwc) instead of using libc's I18N functions, that means
-#	  enabling M17N much increases the size of W3m binary.  Additionary W3m
-#	  has a home-grown Unicode mapping table, which is huge too!
-#
-
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
-.endif
-
-.if !empty(PKG_OPTIONS:Mw3m-m17n)
-CONFIGURE_ARGS+=	--enable-m17n
-.else
-CONFIGURE_ARGS+=	--disable-m17n
-.endif
-
-.if !empty(PKG_OPTIONS:Mw3m-unicode)
-CONFIGURE_ARGS+=	--enable-unicode
-.else
-CONFIGURE_ARGS+=	--disable-unicode
 .endif
 
 .if !empty(PKG_OPTIONS:Mw3m-lynx-key)
