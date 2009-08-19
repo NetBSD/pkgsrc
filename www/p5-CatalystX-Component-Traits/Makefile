@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/07 19:00:51 sno Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/19 18:01:23 sno Exp $
 
-DISTNAME=	CatalystX-Component-Traits-0.03
+DISTNAME=	CatalystX-Component-Traits-0.08
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
@@ -11,10 +11,12 @@ COMMENT=	Automatic Trait Loading and Resolution for Catalyst Components
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.80005:../../www/p5-Catalyst-Runtime
-DEPENDS+=	p5-Moose-Autobox-[0-9]*:../../devel/p5-Moose-Autobox
-DEPENDS+=	p5-MooseX-Traits-Pluggable-[0-9]*:../../devel/p5-MooseX-Traits-Pluggable
-DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
+DEPENDS+=	p5-Moose-Autobox-[0-9]*:../../devel/p5-Moose-Autobox
+DEPENDS+=	p5-MooseX-Traits-Pluggable>=0.06:../../devel/p5-MooseX-Traits-Pluggable
+DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+
+BUILD_DEPENDS+=	p5-Module-Pluggable>=3.9:../../devel/p5-Module-Pluggable
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/CatalystX/Component/Traits/.packlist
