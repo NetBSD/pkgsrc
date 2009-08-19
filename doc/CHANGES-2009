@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3245 2009/08/19 13:04:39 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3246 2009/08/19 14:16:59 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4279,3 +4279,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-SQL-Translator to 0.11001 [sno 2009-08-19]
 	Downgraded devel/libixp.down to 0.4 [ghen 2009-08-19]
 	Updated lang/sbcl to 1.0.30 [asau 2009-08-19]
+	Updated lang/ecl to 9.8.4 [asau 2009-08-19]
