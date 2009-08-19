@@ -1,18 +1,9 @@
-$NetBSD: distinfo,v 1.6 2008/05/28 14:06:31 jonb Exp $
+$NetBSD: distinfo,v 1.7 2009/08/19 13:03:30 asau Exp $
 
-SHA1 (sbcl-1.0.16-source.tar.bz2) = 81b05d25b2478e2bdee5d2885d2318612d09b6fd
-RMD160 (sbcl-1.0.16-source.tar.bz2) = 64082b1c1885ce5d31636ccc7a65bfd9334072f9
-Size (sbcl-1.0.16-source.tar.bz2) = 3213890 bytes
-SHA1 (sbcl-NetBSD-i386-3.0.3.tgz) = e7e43bd175bc56f25aa727f917686c24271f255e
-RMD160 (sbcl-NetBSD-i386-3.0.3.tgz) = fbefaa572a80cf016d61dbc737b6eed11b9f758e
-Size (sbcl-NetBSD-i386-3.0.3.tgz) = 9474559 bytes
-SHA1 (sbcl-NetBSD-i386-4.0.tgz) = 47edaac902e435ef7678a84837586fd243d2ea0a
-RMD160 (sbcl-NetBSD-i386-4.0.tgz) = 5f4ccc3075a42f3801db458ca157e38f83f005a1
-Size (sbcl-NetBSD-i386-4.0.tgz) = 9334199 bytes
-SHA1 (sbcl-NetBSD-i386-4.0_STABLE.tgz) = 47edaac902e435ef7678a84837586fd243d2ea0a
-RMD160 (sbcl-NetBSD-i386-4.0_STABLE.tgz) = 5f4ccc3075a42f3801db458ca157e38f83f005a1
-Size (sbcl-NetBSD-i386-4.0_STABLE.tgz) = 9334199 bytes
-SHA1 (patch-aa) = 8f1c02fc96233af1063ca8dd62bc6033eb435db2
-SHA1 (patch-ab) = 5b3e831bae400f4d61b0144d7812864a8d5e6c86
+SHA1 (sbcl-1.0.30-source.tar.bz2) = 446fe474566f4709d9852278e950f253a20722d6
+RMD160 (sbcl-1.0.30-source.tar.bz2) = 96c5b38d495bbd959730162828b4d58ead245b5e
+Size (sbcl-1.0.30-source.tar.bz2) = 3348181 bytes
+SHA1 (patch-aa) = 3bd72ba259fc23c3ae09bf104c8e395f3826fff0
+SHA1 (patch-ab) = e8420a7aa51f6920d6556e84ef3f0ca32fdeb2fd
 SHA1 (patch-ac) = bce87555a5944cfeb25c65df9d41c3f49b5d4866
-SHA1 (patch-ad) = 2bb746d49ee22fc0aa532129997726393a35d267
+SHA1 (patch-ad) = 4a10e7d498b686a09b067c527010981c15f0f8c8

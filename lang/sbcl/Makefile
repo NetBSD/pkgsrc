@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.18 2008/06/25 23:42:19 obache Exp $
-
-.include "../../mk/bsd.prefs.mk"
+# $NetBSD: Makefile,v 1.19 2009/08/19 13:03:30 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			sbcl-${OPSYS}-${MACHINE_ARCH}-${OS_VERSION}.tgz
-PKGNAME=		sbcl-1.0.16
+PKGNAME=		sbcl-1.0.30
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
-SITES.sbcl-${OPSYS}-${MACHINE_ARCH}-${OS_VERSION}.tgz= \
-			ftp://ftp.NetBSD.org/pub/NetBSD/misc/jonb/sbcl/
 
 MAINTAINER=		jonb@NetBSD.org
 HOMEPAGE=		http://www.sbcl.org/
 COMMENT=		SBCL, a Common Lisp implementation
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	Linux-*-i386
+# It should be possible to have SBCL working on amd64, powerpc,
+# sparc, alpha, mips, and HPPA hardware also, but they probably
+# need a bit of porting work done in SBCL itself.
+# In addition, SBCL should also work on Darwin, Solaris, OpenBSD,
+# and possibly Win32, OSF/1, HP-UX, and Irix.
 
 # SBCL creates a new release with minor updates and fixes every
 # month.  The maintainer of this package does not have the time
@@ -25,51 +26,74 @@ ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 # 1) change the PKGNAME variable above as desired
 # 2) make fetch && make makesum && make package
 
-# It should be possible to have SBCL working on amd64, powerpc,
-# sparc, alpha, mips, and HPPA hardware also, but they probably
-# need a bit of porting work done in SBCL itself.
-# In addition, SBCL should also work on Linux, Darwin, Solaris,
-# FreeBSD, OpenBSD, and possibly Win32, OSF/1, HP-UX, and Irix.
-
-# SBCL needs an existing Common Lisp system to build it...
-# In theory CLisp, CMUCL, OpenMCL, and SBCL itself should work.
-# In practice, CLisp has been a PITA, while CMUCL and OpenMCL
-# haven't been ported to NetBSD.  That leaves SBCL itself to
-# do the build, so pull in a working binary package of SBCL
-# along with the sources when building.
-
 USE_TOOLS+=		gmake gtar:run
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-SUBST_CLASSES+=		fix-paths
-SUBST_STAGE.fix-paths=	pre-configure
-SUBST_MESSAGE.fix-paths=fixing pathnames
-SUBST_FILES.fix-paths=	install.sh src/runtime/runtime.c doc/sbcl.1
-SUBST_SED.fix-paths=	-e 's,@PREFIX@,${PREFIX},g'
+.include "../../mk/bsd.prefs.mk"
 
-SUBST_CLASSES+=		fix-gtar
-SUBST_STAGE.fix-gtar=	pre-configure
-SUBST_MESSAGE.fix-gtar=	fixing gtar references
-SUBST_FILES.fix-gtar=	contrib/asdf-install/installer.lisp
-SUBST_SED.fix-gtar=	-e 's,@GTAR@,${GTAR},g'
+#
+# Bootstrap section.
+#
+# SBCL needs an existing Common Lisp system to build it...
+# Currently allowed systems are CLISP, CMUCL, OpenMCL, and SBCL itself.
+#
+#  Note that CLISP 2.39nb1 worked two or three times when testing
+#  this package and it failed to build SBCL twice.  It is also at
+#  least twice as slow as using SBCL when building on an i386 platform.
+#
+#  I have reports that CLISP will build on PowerPC platforms, but is
+#  unable to build SBCL.
+#
+#  If SBCL is installed in an unusual place when trying to build this
+#  package, you may need to set the full path in SBCL_BOOT_SYSTEM and
+#  build the package with "SBCL_HOME=/path/to/SBCL/core/image/ make"
+
+#SBCL_BOOT_SYSTEM=	clisp			# CLisp
+#SBCL_BOOT_SYSTEM=	"lisp -batch"		# CMUCL
+#SBCL_BOOT_SYSTEM=	"openmcl --batch"	# OpenMCL
+#SBCL_BOOT_SYSTEM=	sbcl			# SBCL
+
+.if !defined(SBCL_BOOT_SYSTEM)
+# Use "clisp -ansi -on-error abort" to make the build more reproducible,
+# per Christophe Rhodes:
+SBCL_BOOT_SYSTEM=	clisp -ansi -on-error abort
+BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
+ULIMIT_RESOURCES=	datasize
+.elif ${SBCL_BOOT_SYSTEM} == clisp
+BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
+ULIMIT_RESOURCES=	datasize
+.elif ${SBCL_BOOT_SYSTEM} == sbcl
+# Get bootstrap version:
+BUILD_DEPENDS+=		sbcl-[0-9]*:../../lang/sbcl
+.endif
+
+
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		install.sh src/runtime/runtime.c doc/sbcl.1
+SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.fix-paths+=           -e 's,/var/log,${VARBASE}/log,g'
+
+SUBST_CLASSES+=			fix-gtar
+SUBST_STAGE.fix-gtar=		pre-configure
+SUBST_MESSAGE.fix-gtar=		Fixing GNU tar references.
+SUBST_FILES.fix-gtar=		contrib/asdf-install/installer.lisp
+SUBST_SED.fix-gtar=		-e 's,@GTAR@,${GTAR},'
 
 do-build:
-	export SBCL_HOME=${WRKDIR}/lib/sbcl/ \
-	&& cd ${WRKSRC} \
-	&& ${SH} make.sh ${WRKDIR}/bin/sbcl
-
-# Rather not do this, but the file names seem to be hash values of
-# timestamps or something and the pkgsrc system does *not* like
-# randomly named and always changing file names
+	cd ${WRKSRC} && ${SH} make.sh ${SBCL_BOOT_SYSTEM:Q}
 post-build:
-	${RM} -rf ${WRKSRC}/contrib/sb-cover/test-output
+	cd ${WRKSRC} && ${RM} -f contrib/sb-cover/test-output/*
 
 do-install:
-	cd ${WRKSRC} \
-	&& INSTALL_ROOT=${PREFIX} \
-	   MAN_DIR=${PREFIX}/${PKGMANDIR} \
-	   ${SH} install.sh
+	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR:Q} INSTALL_ROOT=${PREFIX:Q} MAN_DIR=${PREFIX:Q}/${PKGMANDIR} ${SH} install.sh
+	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/asdf-install/installer.lisp.orig
+
+do-test:
+	cd ${WRKSRC}/tests && ${SH} ./run-tests.sh
 
 .include "../../mk/bsd.pkg.mk"

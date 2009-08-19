@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 20:34:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/08/19 13:03:30 asau Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
-lib/sbcl/asdf-install/CVS/Entries
-lib/sbcl/asdf-install/CVS/Repository
-lib/sbcl/asdf-install/CVS/Root
 lib/sbcl/asdf-install/Makefile
 lib/sbcl/asdf-install/README
 lib/sbcl/asdf-install/asdf-install.asd
@@ -12,13 +9,9 @@ lib/sbcl/asdf-install/defpackage.fasl
 lib/sbcl/asdf-install/defpackage.lisp
 lib/sbcl/asdf-install/installer.fasl
 lib/sbcl/asdf-install/installer.lisp
-lib/sbcl/asdf-install/installer.lisp.orig
 lib/sbcl/asdf-install/test-passed
 lib/sbcl/asdf/asdf.fasl
 lib/sbcl/sb-aclrepl/.cvsignore
-lib/sbcl/sb-aclrepl/CVS/Entries
-lib/sbcl/sb-aclrepl/CVS/Repository
-lib/sbcl/sb-aclrepl/CVS/Root
 lib/sbcl/sb-aclrepl/Makefile
 lib/sbcl/sb-aclrepl/README
 lib/sbcl/sb-aclrepl/debug.fasl
@@ -36,9 +29,6 @@ lib/sbcl/sb-aclrepl/tests.lisp
 lib/sbcl/sb-aclrepl/toplevel.fasl
 lib/sbcl/sb-aclrepl/toplevel.lisp
 lib/sbcl/sb-bsd-sockets/.cvsignore
-lib/sbcl/sb-bsd-sockets/CVS/Entries
-lib/sbcl/sb-bsd-sockets/CVS/Repository
-lib/sbcl/sb-bsd-sockets/CVS/Root
 lib/sbcl/sb-bsd-sockets/FAQ
 lib/sbcl/sb-bsd-sockets/Makefile
 lib/sbcl/sb-bsd-sockets/NEWS
@@ -74,9 +64,6 @@ lib/sbcl/sb-bsd-sockets/win32-constants.lisp
 lib/sbcl/sb-bsd-sockets/win32-lib.lisp
 lib/sbcl/sb-bsd-sockets/win32-sockets.lisp
 lib/sbcl/sb-cltl2/.cvsignore
-lib/sbcl/sb-cltl2/CVS/Entries
-lib/sbcl/sb-cltl2/CVS/Repository
-lib/sbcl/sb-cltl2/CVS/Root
 lib/sbcl/sb-cltl2/Makefile
 lib/sbcl/sb-cltl2/compiler-let.fasl
 lib/sbcl/sb-cltl2/compiler-let.lisp
@@ -92,9 +79,6 @@ lib/sbcl/sb-cltl2/test-passed
 lib/sbcl/sb-cltl2/tests.fasl
 lib/sbcl/sb-cltl2/tests.lisp
 lib/sbcl/sb-cover/.cvsignore
-lib/sbcl/sb-cover/CVS/Entries
-lib/sbcl/sb-cover/CVS/Repository
-lib/sbcl/sb-cover/CVS/Root
 lib/sbcl/sb-cover/Makefile
 lib/sbcl/sb-cover/cover.fasl
 lib/sbcl/sb-cover/cover.lisp
@@ -112,9 +96,6 @@ lib/sbcl/sb-cover/tests.fasl
 lib/sbcl/sb-cover/tests.lisp
 lib/sbcl/sb-executable/sb-executable.fasl
 lib/sbcl/sb-grovel/.cvsignore
-lib/sbcl/sb-grovel/CVS/Entries
-lib/sbcl/sb-grovel/CVS/Repository
-lib/sbcl/sb-grovel/CVS/Root
 lib/sbcl/sb-grovel/Makefile
 lib/sbcl/sb-grovel/def-to-lisp.fasl
 lib/sbcl/sb-grovel/def-to-lisp.lisp
@@ -129,9 +110,6 @@ lib/sbcl/sb-grovel/sb-grovel.texinfo
 lib/sbcl/sb-grovel/test-passed
 lib/sbcl/sb-introspect/sb-introspect.fasl
 lib/sbcl/sb-md5/.cvsignore
-lib/sbcl/sb-md5/CVS/Entries
-lib/sbcl/sb-md5/CVS/Repository
-lib/sbcl/sb-md5/CVS/Root
 lib/sbcl/sb-md5/Makefile
 lib/sbcl/sb-md5/README
 lib/sbcl/sb-md5/md5-tests.fasl
@@ -143,9 +121,6 @@ lib/sbcl/sb-md5/sb-md5.fasl
 lib/sbcl/sb-md5/sb-md5.texinfo
 lib/sbcl/sb-md5/test-passed
 lib/sbcl/sb-posix/.cvsignore
-lib/sbcl/sb-posix/CVS/Entries
-lib/sbcl/sb-posix/CVS/Repository
-lib/sbcl/sb-posix/CVS/Root
 lib/sbcl/sb-posix/Makefile
 lib/sbcl/sb-posix/README
 lib/sbcl/sb-posix/TODO
@@ -168,10 +143,8 @@ lib/sbcl/sb-posix/sb-posix.asd
 lib/sbcl/sb-posix/sb-posix.fasl
 lib/sbcl/sb-posix/sb-posix.texinfo
 lib/sbcl/sb-posix/test-passed
+lib/sbcl/sb-queue/sb-queue.fasl
 lib/sbcl/sb-rotate-byte/.cvsignore
-lib/sbcl/sb-rotate-byte/CVS/Entries
-lib/sbcl/sb-rotate-byte/CVS/Repository
-lib/sbcl/sb-rotate-byte/CVS/Root
 lib/sbcl/sb-rotate-byte/Makefile
 lib/sbcl/sb-rotate-byte/README
 lib/sbcl/sb-rotate-byte/compiler.fasl
@@ -190,9 +163,6 @@ lib/sbcl/sb-rotate-byte/test-passed
 lib/sbcl/sb-rotate-byte/x86-vm.fasl
 lib/sbcl/sb-rotate-byte/x86-vm.lisp
 lib/sbcl/sb-rt/.cvsignore
-lib/sbcl/sb-rt/CVS/Entries
-lib/sbcl/sb-rt/CVS/Repository
-lib/sbcl/sb-rt/CVS/Root
 lib/sbcl/sb-rt/Makefile
 lib/sbcl/sb-rt/rt.fasl
 lib/sbcl/sb-rt/rt.lisp
@@ -200,9 +170,6 @@ lib/sbcl/sb-rt/sb-rt.asd
 lib/sbcl/sb-rt/sb-rt.fasl
 lib/sbcl/sb-rt/test-passed
 lib/sbcl/sb-simple-streams/.cvsignore
-lib/sbcl/sb-simple-streams/CVS/Entries
-lib/sbcl/sb-simple-streams/CVS/Repository
-lib/sbcl/sb-simple-streams/CVS/Root
 lib/sbcl/sb-simple-streams/Makefile
 lib/sbcl/sb-simple-streams/README
 lib/sbcl/sb-simple-streams/TODO
@@ -246,6 +213,3 @@ share/doc/sbcl/BUGS
 share/doc/sbcl/COPYING
 share/doc/sbcl/CREDITS
 share/doc/sbcl/NEWS
-share/doc/sbcl/SUPPORT
-@pkgdir share/doc/sbcl/html
-@pkgdir lib/sbcl/site-systems
