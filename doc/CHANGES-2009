@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3255 2009/08/19 18:48:38 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3256 2009/08/19 18:53:07 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4289,3 +4289,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-WWW-Mechanize to 1.60 [sno 2009-08-19]
 	Updated www/p5-Catalyst-Devel to 1.20 [sno 2009-08-19]
 	Updated www/p5-HTTP-Proxy to 0.24 [sno 2009-08-19]
+	Updated www/p5-HTTP-Server-Simple to 0.40 [sno 2009-08-19]
