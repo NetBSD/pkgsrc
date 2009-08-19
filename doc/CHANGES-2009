@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3237 2009/08/19 08:22:32 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3238 2009/08/19 08:30:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4271,3 +4271,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Parse-Method-Signatures to 1.003011 [sno 2009-08-19]
 	Updated databases/p5-DBIx-Class to 0.08109 [sno 2009-08-19]
 	Added devel/p5-MooseX-LazyRequire version 0.03 [sno 2009-08-19]
+	Updated devel/p5-MooseX-Method-Signatures to 0.21 [sno 2009-08-19]
