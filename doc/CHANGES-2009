@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3246 2009/08/19 14:16:59 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3247 2009/08/19 14:43:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4280,3 +4280,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Downgraded devel/libixp.down to 0.4 [ghen 2009-08-19]
 	Updated lang/sbcl to 1.0.30 [asau 2009-08-19]
 	Updated lang/ecl to 9.8.4 [asau 2009-08-19]
+	Updated editors/Sigil to 0.1.2 [wiz 2009-08-19]
