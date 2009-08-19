@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2009/05/19 21:32:08 sno Exp $
+# $NetBSD: Makefile,v 1.9 2009/08/19 20:42:18 sno Exp $
 
-DISTNAME=	Rose-DB-0.752
+DISTNAME=	Rose-DB-0.753
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
@@ -8,10 +8,11 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 MAINTAINER=	abs@absd.org
 HOMEPAGE=	http://search.cpan.org/~jsiracusa/Rose-DB/
 COMMENT=	DBI wrapper and abstraction layer
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Bit-Vector>=6.4:../../devel/p5-Bit-Vector
 DEPENDS+=	p5-Clone-PP-[0-9]*:../../devel/p5-Clone-PP
+DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-MySQL-[0-9]*:../../time/p5-DateTime-Format-MySQL
 DEPENDS+=	p5-DateTime-Format-Pg>=0.11:../../time/p5-DateTime-Format-Pg
 DEPENDS+=	p5-Rose-DateTime>=0.532:../../time/p5-Rose-DateTime
