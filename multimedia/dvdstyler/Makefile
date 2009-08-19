@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/08/17 17:32:09 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2009/08/19 08:44:06 drochner Exp $
 #
 
 DISTNAME=	DVDStyler-1.7.3
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	dvdauthor>=0.6.10:../../multimedia/dvdauthor
 DEPENDS+=	dvd+rw-tools-[0-9]*:../../sysutils/dvd+rw-tools
 DEPENDS+=	mpgtx-[0-9]*:../../graphics/mpgtx
+BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
