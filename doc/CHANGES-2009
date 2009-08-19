@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3267 2009/08/19 20:12:23 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3268 2009/08/19 20:19:02 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4301,3 +4301,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/p5-App-MrShell to 2.0205 [sno 2009-08-19]
 	Updated devel/p5-Test-TempDir to 0.05 [sno 2009-08-19]
 	Added devel/p5-IPC-System-Simple version 1.18 [sno 2009-08-19]
+	Added devel/p5-autodie version 2.06 [sno 2009-08-19]
