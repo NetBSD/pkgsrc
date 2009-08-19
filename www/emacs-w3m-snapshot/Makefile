@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/08/07 09:31:53 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/19 06:01:37 minskim Exp $
 
 DISTNAME=	w3m-el-snapshot_1.4.364+0.20090802.orig
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/w3m-el-snapshot_/emacs-w3m-/:S/+0//:S/.orig//}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/w3m-el-snapshot/}
 
@@ -14,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	makeinfo gzip autoconf
 INFO_FILES=	yes
 
-DEPENDS+=	w3m>=0.5.1nb2:../../www/w3m
+DEPENDS+=	w3m>=0.5.2nb3:../../www/w3m
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
