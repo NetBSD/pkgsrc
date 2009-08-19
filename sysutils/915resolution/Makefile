@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/08/25 15:11:47 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/19 08:41:45 ghen Exp $
 #
 
-DISTNAME=	915resolution-0.5.2
+DISTNAME=	915resolution-0.5.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 
