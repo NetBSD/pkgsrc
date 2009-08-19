@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2008/08/25 15:11:47 joerg Exp $
+$NetBSD: distinfo,v 1.4 2009/08/19 08:41:45 ghen Exp $
 
-SHA1 (915resolution-0.5.2.tar.gz) = 9f26eb1b728ca0b2d28c948207b034a49b477089
-RMD160 (915resolution-0.5.2.tar.gz) = 722b352a83f41f0e9822ed4e096e8064f239dcc1
-Size (915resolution-0.5.2.tar.gz) = 21183 bytes
+SHA1 (915resolution-0.5.3.tar.gz) = 377a32d33f1987adf372341c8c6664d5673da9b8
+RMD160 (915resolution-0.5.3.tar.gz) = a406c6810bbfcf94c5352ea1b1e9178af4078589
+Size (915resolution-0.5.3.tar.gz) = 22583 bytes
 SHA1 (patch-aa) = a37e71ef741cc5c981376db8bcc1eff60c32e2db
 SHA1 (patch-ab) = 5e6a865e4f0707390bf0c602aed9f7fc3c2284b4
