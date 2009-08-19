@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8350 2009/08/18 23:12:52 minskim Exp $
+$NetBSD: TODO,v 1.8351 2009/08/19 12:23:40 obache Exp $
 
 Suggested new packages
 ======================
@@ -387,7 +387,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap-jk-1.2.27 [pkg/40542]
 	o ap-layout-3.4
 	o ap-mp3-0.40
-	o ap-python-3.3.1
+	o ap-python-2.7.11
 	o ap-ruby-1.3.0
 	o ap-xslt-1.3.8
 	o ap2-auth-ldap-3.11
