@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/31 05:37:25 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/19 08:36:04 sno Exp $
 #
 
-DISTNAME=	MooseX-Declare-0.23
+DISTNAME=	MooseX-Declare-0.27
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
@@ -11,10 +11,11 @@ HOMEPAGE=	http://search.cpan.org/dist/MooseX-Declare/
 COMMENT=	Perl 5 module providing declarative syntax for Moose
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-B-Hooks-EndOfScope-[0-9]*:../../devel/p5-B-Hooks-EndOfScope
-DEPENDS+=	p5-Devel-Declare>=0.005001:../../devel/p5-Devel-Declare
+DEPENDS+=	p5-Devel-Declare>=0.005011:../../devel/p5-Devel-Declare
 DEPENDS+=	p5-Moose>=0.82:../../devel/p5-Moose
-DEPENDS+=	p5-MooseX-Method-Signatures>=0.16:../../devel/p5-MooseX-Method-Signatures
+DEPENDS+=	p5-MooseX-Method-Signatures>=0.21:../../devel/p5-MooseX-Method-Signatures
+DEPENDS+=	p5-MooseX-Role-Parameterized>=0.12:../../devel/p5-MooseX-Role-Parameterized
+DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-namespace-autoclean>=0.05:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
