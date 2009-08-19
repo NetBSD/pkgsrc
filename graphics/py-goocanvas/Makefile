@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/06/16 01:36:28 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/19 08:07:46 tnn Exp $
 #
 
 DISTNAME=	pygoocanvas-0.14.1
@@ -25,7 +25,7 @@ PY_PATCHPLIST=	yes
 
 # This restriction came from py-gtk2 and py-cairo,
 # pygoocanvas itself just require >=22.
-PYTHON_VERSIONS_ACCEPTED= 26 25 24
+PYTHON_VERSIONS_ACCEPTED= 26 25
 
 .include "../../lang/python/pyversion.mk"
 
