@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2009/06/03 10:56:01 wiz Exp $
+# $NetBSD: Makefile.common,v 1.54 2009/08/19 05:47:17 minskim Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -39,7 +39,9 @@ CONFIGURE_ARGS+=	--disable-messagel10n
 CONFIGURE_ARGS+=	--disable-help_cgi
 CONFIGURE_ARGS+=	--enable-color
 CONFIGURE_ARGS+=	--enable-cookie
+CONFIGURE_ARGS+=	--enable-m17n
 CONFIGURE_ARGS+=	--enable-mouse
+CONFIGURE_ARGS+=	--enable-unicode
 CONFIGURE_ARGS+=	--with-browser=
 CONFIGURE_ARGS+=	--with-termlib
 CONFIGURE_ARGS+=	--with-editor=vi
