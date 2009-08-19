@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3262 2009/08/19 19:18:58 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3263 2009/08/19 19:46:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4296,3 +4296,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-FCGI-ProcManager to 0.19 [sno 2009-08-19]
 	Updated devel/p5-Module-ScanDeps to 0.94 [sno 2009-08-19]
 	Updated devel/p5-Path-Dispatcher to 0.13 [sno 2009-08-19]
+	Updated devel/p5-App-Cmd to 0.205 [sno 2009-08-19]
