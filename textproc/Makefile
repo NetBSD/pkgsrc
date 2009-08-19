@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.492 2009/08/19 09:08:09 sno Exp $
+# $NetBSD: Makefile,v 1.493 2009/08/19 09:16:14 sno Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -271,6 +271,7 @@ SUBDIR+=	p5-Text-LevenshteinXS
 SUBDIR+=	p5-Text-Markdown
 SUBDIR+=	p5-Text-PDF
 SUBDIR+=	p5-Text-Quoted
+SUBDIR+=	p5-Text-RecordParser
 SUBDIR+=	p5-Text-Reflow
 SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Text-RewriteRules
