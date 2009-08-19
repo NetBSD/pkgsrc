@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/08/09 07:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/19 09:50:59 ghen Exp $
 
-DISTNAME=		libixp-0.5
+DISTNAME=		libixp-0.4
 CATEGORIES=		devel
 MASTER_SITES=		http://code.suckless.org/dl/libs/
 
