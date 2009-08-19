@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:52 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/08/19 14:27:04 tnn Exp $
 
 DISTNAME=	gdick-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	English-Korean Dictionary Client for GNOME2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 PYDISTUTILSPKG=	yes
 NO_CONFIGURE=	yes
