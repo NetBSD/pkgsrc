@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3275 2009/08/20 08:48:38 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3276 2009/08/20 09:07:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-TAP-Harness-Archive to 0.14 [sno 2009-08-20]
 	Updated lang/sun-jre15 to 5.0.20 [obata 2009-08-20]
 	Updated lang/sun-jdk15 to 5.0.20 [obata 2009-08-20]
+	Updated devel/diffuse to 0.4.0 [wiz 2009-08-20]
