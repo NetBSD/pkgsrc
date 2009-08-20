@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/06 21:52:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/20 09:06:40 wiz Exp $
 bin/diffuse
 man/man1/diffuse.1
 share/applications/diffuse.desktop
@@ -7,6 +7,7 @@ share/diffuse/syntax/c++.syntax
 share/diffuse/syntax/csh.syntax
 share/diffuse/syntax/csharp.syntax
 share/diffuse/syntax/css.syntax
+share/diffuse/syntax/fortran.syntax
 share/diffuse/syntax/gettext.syntax
 share/diffuse/syntax/glsl.syntax
 share/diffuse/syntax/html.syntax

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/08/06 21:52:07 wiz Exp $
+$NetBSD: distinfo,v 1.6 2009/08/20 09:06:40 wiz Exp $
 
-SHA1 (diffuse-0.3.4.tar.bz2) = f221d248b44d978fc031cb739e382d9058ca4efc
-RMD160 (diffuse-0.3.4.tar.bz2) = 54f8ffaed9bc2153e1ed3acb64a3e9fd000ee2a1
-Size (diffuse-0.3.4.tar.bz2) = 102845 bytes
-SHA1 (patch-aa) = d314791a740b878af9041c70920562fa6385708d
+SHA1 (diffuse-0.4.0.tar.bz2) = d143c5415c71ac07e9b57ff8b3b79f196bf810ca
+RMD160 (diffuse-0.4.0.tar.bz2) = 91cd8f13e40eb25bccab57c47ea3311e53ed38d9
+Size (diffuse-0.4.0.tar.bz2) = 109438 bytes
