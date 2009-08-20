@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3290 2009/08/20 18:46:00 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3291 2009/08/20 18:56:10 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4326,3 +4326,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Plugin-Session-State-Cookie to 0.13 [sno 2009-08-20]
 	Updated www/p5-CGI-Application to 4.31 [sno 2009-08-20]
 	Updated net/p5-IO-Socket-Multicast to 1.07 [sno 2009-08-20]
+	Updated databases/p5-Rose-DB-Object to 0.782 [sno 2009-08-20]
