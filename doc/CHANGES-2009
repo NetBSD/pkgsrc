@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3292 2009/08/20 19:00:02 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3293 2009/08/20 19:13:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4328,3 +4328,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-IO-Socket-Multicast to 1.07 [sno 2009-08-20]
 	Updated databases/p5-Rose-DB-Object to 0.782 [sno 2009-08-20]
 	Updated databases/p5-Rose-DBx-AutoReconnect to 0.03 [sno 2009-08-20]
+	Updated textproc/p5-XML-Generator to 1.03 [sno 2009-08-20]
