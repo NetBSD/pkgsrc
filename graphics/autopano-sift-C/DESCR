@@ -1,0 +1,12 @@
+The SIFT algorithm provides the capability to identify key feature points within
+arbitrary images. It further extracts highly distinct information for each
+such point and allows to characterize the point invariant to a number of
+modifications to the image. It is invariant to contrast/brightness changes, to
+rotation, scaling and partially invariant to other kinds of transformations.
+The algorithm can be flexibly used to create input data for image matching,
+object identification and other computer vision related algorithms.
+
+This package provides an implementation of the SIFT algorithm and a set of
+utilities to utilize the algorithm to match two or more images. As output, a
+number of control points are created, which specify one and the same image
+location in two images.
