@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:39:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/20 17:15:21 epg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,6 +20,9 @@ ${PYSITELIB}/simplejson/scanner.pyo
 ${PYSITELIB}/simplejson/tests/__init__.py
 ${PYSITELIB}/simplejson/tests/__init__.pyc
 ${PYSITELIB}/simplejson/tests/__init__.pyo
+${PYSITELIB}/simplejson/tests/test_check_circular.py
+${PYSITELIB}/simplejson/tests/test_check_circular.pyc
+${PYSITELIB}/simplejson/tests/test_check_circular.pyo
 ${PYSITELIB}/simplejson/tests/test_decode.py
 ${PYSITELIB}/simplejson/tests/test_decode.pyc
 ${PYSITELIB}/simplejson/tests/test_decode.pyo
