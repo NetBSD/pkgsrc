@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3287 2009/08/20 18:12:39 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3288 2009/08/20 18:22:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4323,3 +4323,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Apache2-AuthCookieDBI to 2.05 [sno 2009-08-20]
 	Updated www/p5-Catalyst-Plugin-Session to 0.26 [sno 2009-08-20]
 	Updated audio/p5-CDDB to 1.21 [sno 2009-08-20]
+	Updated www/p5-Catalyst-Plugin-Session-State-Cookie to 0.13 [sno 2009-08-20]
