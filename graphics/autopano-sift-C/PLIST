@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/20 20:24:28 adam Exp $
+bin/autopano
+bin/autopano-c-complete.sh
+bin/autopano-sift-c
+bin/generatekeys
+share/man/man1/autopano-c-complete.1
+share/man/man1/autopano.1
+share/man/man1/generatekeys.1
+share/man/man7/autopano-sift-c.7
