@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/05/27 06:36:38 kleink Exp $
+$NetBSD: distinfo,v 1.6 2009/08/20 17:47:21 sno Exp $
 
-SHA1 (XML-Atom-SimpleFeed-0.84.tar.gz) = 7f8f9cb0b7b802c3e403b69b2728a97aee937ed1
-RMD160 (XML-Atom-SimpleFeed-0.84.tar.gz) = 2ab3cbf8663c2eb76fa9e17c685876e91289597a
-Size (XML-Atom-SimpleFeed-0.84.tar.gz) = 11933 bytes
+SHA1 (XML-Atom-SimpleFeed-0.86.tar.gz) = e4dd4b0eed75a1699bd12e8856759cd6350691f4
+RMD160 (XML-Atom-SimpleFeed-0.86.tar.gz) = 071bfc241ce93011bdba3977b2b6ea18c4fdf0bc
+Size (XML-Atom-SimpleFeed-0.86.tar.gz) = 13742 bytes
