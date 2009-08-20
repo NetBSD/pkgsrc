@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3280 2009/08/20 10:19:16 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3281 2009/08/20 17:17:50 epg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4316,3 +4316,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/liboobs to 2.22.1 [wiz 2009-08-20]
 	Updated devel/p5-POE-Test-Loops to 1.021 [minskim 2009-08-20]
 	Updated net/clive to 2.2.5 [wiz 2009-08-20]
+	Updated converters/py-simplejson to 2.0.9 [epg 2009-08-20]
