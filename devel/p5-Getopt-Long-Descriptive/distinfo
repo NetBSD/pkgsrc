@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/07/30 13:15:37 he Exp $
+$NetBSD: distinfo,v 1.3 2009/08/20 22:28:00 seb Exp $
 
-SHA1 (Getopt-Long-Descriptive-0.074.tar.gz) = a277cda0f592c5324a11e9beb604c77d229a4cee
-RMD160 (Getopt-Long-Descriptive-0.074.tar.gz) = 57acca555a9cfb2b1d506c0ad7f90d7043dbb956
-Size (Getopt-Long-Descriptive-0.074.tar.gz) = 8000 bytes
+SHA1 (Getopt-Long-Descriptive-0.076.tar.gz) = 333e59756104151f3f375170d8877f4135375b56
+RMD160 (Getopt-Long-Descriptive-0.076.tar.gz) = 9279b08e716b07de028942829f8466e90aacff9c
+Size (Getopt-Long-Descriptive-0.076.tar.gz) = 9119 bytes
