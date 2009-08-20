@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3282 2009/08/20 17:42:29 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3283 2009/08/20 17:47:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4318,3 +4318,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/clive to 2.2.5 [wiz 2009-08-20]
 	Updated converters/py-simplejson to 2.0.9 [epg 2009-08-20]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.5100 [sno 2009-08-20]
+	Updated textproc/p5-XML-Atom-SimpleFeed to 0.86 [sno 2009-08-20]
