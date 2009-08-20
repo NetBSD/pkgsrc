@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/03/15 12:41:36 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2009/08/20 15:24:58 jwise Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ PKGNAME=	tcl-expect-${EXPECT_VERSION}
 PKGREVISION=	1
 CATEGORIES=	lang
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Extensions to Tcl to support scripting of interactive programs
 
 CONFLICTS+=	expect-[0-9]*

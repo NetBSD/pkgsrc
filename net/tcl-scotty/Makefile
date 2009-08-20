@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/02/22 19:27:00 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/08/20 15:24:59 jwise Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -7,7 +7,7 @@ PKGREVISION=	4
 CATEGORIES=	net tcl
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nosuchname.net/scotty/
 COMMENT=	Network management extensions to TCL
 

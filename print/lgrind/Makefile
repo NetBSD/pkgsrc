@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/07/22 09:01:43 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2009/08/20 15:24:59 jwise Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Source pretty printer for LaTeX
 
 WRKSRC=		${WRKDIR}/lgrind/source

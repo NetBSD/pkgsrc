@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2009/07/07 22:08:46 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2009/08/20 15:25:00 jwise Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
 # required to build it.
 #
 # Note: please do NOT update this package to a more recent version of FOP --
-# this is the most recent version which works with cocoon.  If you need a
-# newer version, let me know, and I will import the latest version as
-# fop-current -- jwise@NetBSD.org
+# this is the most recent version which works with cocoon.
 #
 
 DISTNAME=	fop-0_15_0-forBeginners
@@ -17,7 +15,7 @@ CATEGORIES=	textproc www
 MASTER_SITES=	http://xmlgraphics.apache.org/dist/fop/recent/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmlgraphics.apache.org/fop/
 COMMENT=	The Apache Project's XSL Formatting Objects implementation
 
