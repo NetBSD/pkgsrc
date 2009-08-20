@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3277 2009/08/20 09:13:00 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3278 2009/08/20 09:14:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4313,3 +4313,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/sun-jre15 to 5.0.20 [obata 2009-08-20]
 	Updated lang/sun-jdk15 to 5.0.20 [obata 2009-08-20]
 	Updated devel/diffuse to 0.4.0 [wiz 2009-08-20]
+	Updated sysutils/liboobs to 2.22.1 [wiz 2009-08-20]
