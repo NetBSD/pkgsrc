@@ -1,0 +1,8 @@
+The pano13 library is the backend library used by many applications.
+Also included are:
+* PTOptimizer, a utility for optimising control points.
+* panoinfo a utility for querying the library version.
+* PTmender a replacement for PTStitcher.
+* PTblender implements just the colour and brightness correction of PTmender.
+* PTtiff2psd Converts a set of TIFF files into a PSD file.
+* PTuncrop Converts 'cropped TIFF' files into 'normal' TIFF files.
