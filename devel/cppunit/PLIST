@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:48:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/08/20 03:56:53 hasso Exp $
 bin/DllPlugInTester
 bin/cppunit-config
 bin/simple
@@ -85,7 +85,7 @@ share/cppunit/html/_additional_message_8cpp.html
 share/cppunit/html/_additional_message_8cpp__incl.map
 share/cppunit/html/_additional_message_8cpp__incl.md5
 share/cppunit/html/_additional_message_8cpp__incl.png
-share/cppunit/html/_additional_message_8h-source.html
+share/cppunit/html/_additional_message_8h_source.html
 share/cppunit/html/_additional_message_8h.html
 share/cppunit/html/_additional_message_8h__dep__incl.map
 share/cppunit/html/_additional_message_8h__dep__incl.md5
@@ -93,7 +93,7 @@ share/cppunit/html/_additional_message_8h__dep__incl.png
 share/cppunit/html/_additional_message_8h__incl.map
 share/cppunit/html/_additional_message_8h__incl.md5
 share/cppunit/html/_additional_message_8h__incl.png
-share/cppunit/html/_algorithm_8h-source.html
+share/cppunit/html/_algorithm_8h_source.html
 share/cppunit/html/_algorithm_8h.html
 share/cppunit/html/_algorithm_8h__dep__incl.map
 share/cppunit/html/_algorithm_8h__dep__incl.md5
@@ -105,7 +105,7 @@ share/cppunit/html/_asserter_8cpp.html
 share/cppunit/html/_asserter_8cpp__incl.map
 share/cppunit/html/_asserter_8cpp__incl.md5
 share/cppunit/html/_asserter_8cpp__incl.png
-share/cppunit/html/_asserter_8h-source.html
+share/cppunit/html/_asserter_8h_source.html
 share/cppunit/html/_asserter_8h.html
 share/cppunit/html/_asserter_8h__dep__incl.map
 share/cppunit/html/_asserter_8h__dep__incl.md5
@@ -113,7 +113,7 @@ share/cppunit/html/_asserter_8h__dep__incl.png
 share/cppunit/html/_asserter_8h__incl.map
 share/cppunit/html/_asserter_8h__incl.md5
 share/cppunit/html/_asserter_8h__incl.png
-share/cppunit/html/_auto_register_suite_8h-source.html
+share/cppunit/html/_auto_register_suite_8h_source.html
 share/cppunit/html/_auto_register_suite_8h.html
 share/cppunit/html/_auto_register_suite_8h__dep__incl.map
 share/cppunit/html/_auto_register_suite_8h__dep__incl.md5
@@ -129,7 +129,7 @@ share/cppunit/html/_brief_test_progress_listener_8cpp.html
 share/cppunit/html/_brief_test_progress_listener_8cpp__incl.map
 share/cppunit/html/_brief_test_progress_listener_8cpp__incl.md5
 share/cppunit/html/_brief_test_progress_listener_8cpp__incl.png
-share/cppunit/html/_brief_test_progress_listener_8h-source.html
+share/cppunit/html/_brief_test_progress_listener_8h_source.html
 share/cppunit/html/_brief_test_progress_listener_8h.html
 share/cppunit/html/_brief_test_progress_listener_8h__dep__incl.map
 share/cppunit/html/_brief_test_progress_listener_8h__dep__incl.md5
@@ -141,7 +141,7 @@ share/cppunit/html/_compiler_outputter_8cpp.html
 share/cppunit/html/_compiler_outputter_8cpp__incl.map
 share/cppunit/html/_compiler_outputter_8cpp__incl.md5
 share/cppunit/html/_compiler_outputter_8cpp__incl.png
-share/cppunit/html/_compiler_outputter_8h-source.html
+share/cppunit/html/_compiler_outputter_8h_source.html
 share/cppunit/html/_compiler_outputter_8h.html
 share/cppunit/html/_compiler_outputter_8h__dep__incl.map
 share/cppunit/html/_compiler_outputter_8h__dep__incl.md5
@@ -149,17 +149,17 @@ share/cppunit/html/_compiler_outputter_8h__dep__incl.png
 share/cppunit/html/_compiler_outputter_8h__incl.map
 share/cppunit/html/_compiler_outputter_8h__incl.md5
 share/cppunit/html/_compiler_outputter_8h__incl.png
-share/cppunit/html/_config_8h-source.html
+share/cppunit/html/_config_8h_source.html
 share/cppunit/html/_config_8h.html
 share/cppunit/html/_config_8h__dep__incl.map
 share/cppunit/html/_config_8h__dep__incl.md5
 share/cppunit/html/_config_8h__dep__incl.png
-share/cppunit/html/_cpp_unit_api_8h-source.html
+share/cppunit/html/_cpp_unit_api_8h_source.html
 share/cppunit/html/_cpp_unit_api_8h.html
 share/cppunit/html/_cpp_unit_api_8h__dep__incl.map
 share/cppunit/html/_cpp_unit_api_8h__dep__incl.md5
 share/cppunit/html/_cpp_unit_api_8h__dep__incl.png
-share/cppunit/html/_cpp_unit_deque_8h-source.html
+share/cppunit/html/_cpp_unit_deque_8h_source.html
 share/cppunit/html/_cpp_unit_deque_8h.html
 share/cppunit/html/_cpp_unit_deque_8h__dep__incl.map
 share/cppunit/html/_cpp_unit_deque_8h__dep__incl.md5
@@ -167,7 +167,7 @@ share/cppunit/html/_cpp_unit_deque_8h__dep__incl.png
 share/cppunit/html/_cpp_unit_deque_8h__incl.map
 share/cppunit/html/_cpp_unit_deque_8h__incl.md5
 share/cppunit/html/_cpp_unit_deque_8h__incl.png
-share/cppunit/html/_cpp_unit_map_8h-source.html
+share/cppunit/html/_cpp_unit_map_8h_source.html
 share/cppunit/html/_cpp_unit_map_8h.html
 share/cppunit/html/_cpp_unit_map_8h__dep__incl.map
 share/cppunit/html/_cpp_unit_map_8h__dep__incl.md5
@@ -175,7 +175,7 @@ share/cppunit/html/_cpp_unit_map_8h__dep__incl.png
 share/cppunit/html/_cpp_unit_map_8h__incl.map
 share/cppunit/html/_cpp_unit_map_8h__incl.md5
 share/cppunit/html/_cpp_unit_map_8h__incl.png
-share/cppunit/html/_cpp_unit_set_8h-source.html
+share/cppunit/html/_cpp_unit_set_8h_source.html
 share/cppunit/html/_cpp_unit_set_8h.html
 share/cppunit/html/_cpp_unit_set_8h__dep__incl.map
 share/cppunit/html/_cpp_unit_set_8h__dep__incl.md5
@@ -183,12 +183,12 @@ share/cppunit/html/_cpp_unit_set_8h__dep__incl.png
 share/cppunit/html/_cpp_unit_set_8h__incl.map
 share/cppunit/html/_cpp_unit_set_8h__incl.md5
 share/cppunit/html/_cpp_unit_set_8h__incl.png
-share/cppunit/html/_cpp_unit_stack_8h-source.html
+share/cppunit/html/_cpp_unit_stack_8h_source.html
 share/cppunit/html/_cpp_unit_stack_8h.html
 share/cppunit/html/_cpp_unit_stack_8h__incl.map
 share/cppunit/html/_cpp_unit_stack_8h__incl.md5
 share/cppunit/html/_cpp_unit_stack_8h__incl.png
-share/cppunit/html/_cpp_unit_vector_8h-source.html
+share/cppunit/html/_cpp_unit_vector_8h_source.html
 share/cppunit/html/_cpp_unit_vector_8h.html
 share/cppunit/html/_cpp_unit_vector_8h__dep__incl.map
 share/cppunit/html/_cpp_unit_vector_8h__dep__incl.md5
@@ -200,7 +200,7 @@ share/cppunit/html/_default_protector_8cpp.html
 share/cppunit/html/_default_protector_8cpp__incl.map
 share/cppunit/html/_default_protector_8cpp__incl.md5
 share/cppunit/html/_default_protector_8cpp__incl.png
-share/cppunit/html/_default_protector_8h-source.html
+share/cppunit/html/_default_protector_8h_source.html
 share/cppunit/html/_default_protector_8h.html
 share/cppunit/html/_default_protector_8h__dep__incl.map
 share/cppunit/html/_default_protector_8h__dep__incl.md5
@@ -216,7 +216,7 @@ share/cppunit/html/_dynamic_library_manager_8cpp.html
 share/cppunit/html/_dynamic_library_manager_8cpp__incl.map
 share/cppunit/html/_dynamic_library_manager_8cpp__incl.md5
 share/cppunit/html/_dynamic_library_manager_8cpp__incl.png
-share/cppunit/html/_dynamic_library_manager_8h-source.html
+share/cppunit/html/_dynamic_library_manager_8h_source.html
 share/cppunit/html/_dynamic_library_manager_8h.html
 share/cppunit/html/_dynamic_library_manager_8h__dep__incl.map
 share/cppunit/html/_dynamic_library_manager_8h__dep__incl.md5
@@ -228,7 +228,7 @@ share/cppunit/html/_dynamic_library_manager_exception_8cpp.html
 share/cppunit/html/_dynamic_library_manager_exception_8cpp__incl.map
 share/cppunit/html/_dynamic_library_manager_exception_8cpp__incl.md5
 share/cppunit/html/_dynamic_library_manager_exception_8cpp__incl.png
-share/cppunit/html/_dynamic_library_manager_exception_8h-source.html
+share/cppunit/html/_dynamic_library_manager_exception_8h_source.html
 share/cppunit/html/_dynamic_library_manager_exception_8h.html
 share/cppunit/html/_dynamic_library_manager_exception_8h__dep__incl.map
 share/cppunit/html/_dynamic_library_manager_exception_8h__dep__incl.md5
@@ -240,7 +240,7 @@ share/cppunit/html/_exception_8cpp.html
 share/cppunit/html/_exception_8cpp__incl.map
 share/cppunit/html/_exception_8cpp__incl.md5
 share/cppunit/html/_exception_8cpp__incl.png
-share/cppunit/html/_exception_8h-source.html
+share/cppunit/html/_exception_8h_source.html
 share/cppunit/html/_exception_8h.html
 share/cppunit/html/_exception_8h__dep__incl.map
 share/cppunit/html/_exception_8h__dep__incl.md5
@@ -248,7 +248,7 @@ share/cppunit/html/_exception_8h__dep__incl.png
 share/cppunit/html/_exception_8h__incl.map
 share/cppunit/html/_exception_8h__incl.md5
 share/cppunit/html/_exception_8h__incl.png
-share/cppunit/html/_exception_test_case_decorator_8h-source.html
+share/cppunit/html/_exception_test_case_decorator_8h_source.html
 share/cppunit/html/_exception_test_case_decorator_8h.html
 share/cppunit/html/_exception_test_case_decorator_8h__dep__incl.map
 share/cppunit/html/_exception_test_case_decorator_8h__dep__incl.md5
@@ -256,7 +256,7 @@ share/cppunit/html/_exception_test_case_decorator_8h__dep__incl.png
 share/cppunit/html/_exception_test_case_decorator_8h__incl.map
 share/cppunit/html/_exception_test_case_decorator_8h__incl.md5
 share/cppunit/html/_exception_test_case_decorator_8h__incl.png
-share/cppunit/html/_helper_macros_8h-source.html
+share/cppunit/html/_helper_macros_8h_source.html
 share/cppunit/html/_helper_macros_8h.html
 share/cppunit/html/_helper_macros_8h__incl.map
 share/cppunit/html/_helper_macros_8h__incl.md5
@@ -265,7 +265,7 @@ share/cppunit/html/_message_8cpp.html
 share/cppunit/html/_message_8cpp__incl.map
 share/cppunit/html/_message_8cpp__incl.md5
 share/cppunit/html/_message_8cpp__incl.png
-share/cppunit/html/_message_8h-source.html
+share/cppunit/html/_message_8h_source.html
 share/cppunit/html/_message_8h.html
 share/cppunit/html/_message_8h__dep__incl.map
 share/cppunit/html/_message_8h__dep__incl.md5
@@ -273,7 +273,7 @@ share/cppunit/html/_message_8h__dep__incl.png
 share/cppunit/html/_message_8h__incl.map
 share/cppunit/html/_message_8h__incl.md5
 share/cppunit/html/_message_8h__incl.png
-share/cppunit/html/_mfc_test_runner_8h-source.html
+share/cppunit/html/_mfc_test_runner_8h_source.html
 share/cppunit/html/_mfc_test_runner_8h.html
 share/cppunit/html/_mfc_test_runner_8h__dep__incl.map
 share/cppunit/html/_mfc_test_runner_8h__dep__incl.md5
@@ -282,12 +282,12 @@ share/cppunit/html/_mfc_test_runner_8h__incl.map
 share/cppunit/html/_mfc_test_runner_8h__incl.md5
 share/cppunit/html/_mfc_test_runner_8h__incl.png
 share/cppunit/html/_money_8dox.html
-share/cppunit/html/_orthodox_8h-source.html
+share/cppunit/html/_orthodox_8h_source.html
 share/cppunit/html/_orthodox_8h.html
 share/cppunit/html/_orthodox_8h__incl.map
 share/cppunit/html/_orthodox_8h__incl.md5
 share/cppunit/html/_orthodox_8h__incl.png
-share/cppunit/html/_outputter_8h-source.html
+share/cppunit/html/_outputter_8h_source.html
 share/cppunit/html/_outputter_8h.html
 share/cppunit/html/_outputter_8h__dep__incl.map
 share/cppunit/html/_outputter_8h__dep__incl.md5
@@ -299,7 +299,7 @@ share/cppunit/html/_plug_in_manager_8cpp.html
 share/cppunit/html/_plug_in_manager_8cpp__incl.map
 share/cppunit/html/_plug_in_manager_8cpp__incl.md5
 share/cppunit/html/_plug_in_manager_8cpp__incl.png
-share/cppunit/html/_plug_in_manager_8h-source.html
+share/cppunit/html/_plug_in_manager_8h_source.html
 share/cppunit/html/_plug_in_manager_8h.html
 share/cppunit/html/_plug_in_manager_8h__dep__incl.map
 share/cppunit/html/_plug_in_manager_8h__dep__incl.md5
@@ -311,7 +311,7 @@ share/cppunit/html/_plug_in_parameters_8cpp.html
 share/cppunit/html/_plug_in_parameters_8cpp__incl.map
 share/cppunit/html/_plug_in_parameters_8cpp__incl.md5
 share/cppunit/html/_plug_in_parameters_8cpp__incl.png
-share/cppunit/html/_plug_in_parameters_8h-source.html
+share/cppunit/html/_plug_in_parameters_8h_source.html
 share/cppunit/html/_plug_in_parameters_8h.html
 share/cppunit/html/_plug_in_parameters_8h__dep__incl.map
 share/cppunit/html/_plug_in_parameters_8h__dep__incl.md5
@@ -319,7 +319,7 @@ share/cppunit/html/_plug_in_parameters_8h__dep__incl.png
 share/cppunit/html/_plug_in_parameters_8h__incl.map
 share/cppunit/html/_plug_in_parameters_8h__incl.md5
 share/cppunit/html/_plug_in_parameters_8h__incl.png
-share/cppunit/html/_portability_8h-source.html
+share/cppunit/html/_portability_8h_source.html
 share/cppunit/html/_portability_8h.html
 share/cppunit/html/_portability_8h__incl.map
 share/cppunit/html/_portability_8h__incl.md5
@@ -328,7 +328,7 @@ share/cppunit/html/_protector_8cpp.html
 share/cppunit/html/_protector_8cpp__incl.map
 share/cppunit/html/_protector_8cpp__incl.md5
 share/cppunit/html/_protector_8cpp__incl.png
-share/cppunit/html/_protector_8h-source.html
+share/cppunit/html/_protector_8h_source.html
 share/cppunit/html/_protector_8h.html
 share/cppunit/html/_protector_8h__dep__incl.map
 share/cppunit/html/_protector_8h__dep__incl.md5
@@ -340,7 +340,7 @@ share/cppunit/html/_protector_chain_8cpp.html
 share/cppunit/html/_protector_chain_8cpp__incl.map
 share/cppunit/html/_protector_chain_8cpp__incl.md5
 share/cppunit/html/_protector_chain_8cpp__incl.png
-share/cppunit/html/_protector_chain_8h-source.html
+share/cppunit/html/_protector_chain_8h_source.html
 share/cppunit/html/_protector_chain_8h.html
 share/cppunit/html/_protector_chain_8h__dep__incl.map
 share/cppunit/html/_protector_chain_8h__dep__incl.md5
@@ -348,7 +348,7 @@ share/cppunit/html/_protector_chain_8h__dep__incl.png
 share/cppunit/html/_protector_chain_8h__incl.map
 share/cppunit/html/_protector_chain_8h__incl.md5
 share/cppunit/html/_protector_chain_8h__incl.png
-share/cppunit/html/_protector_context_8h-source.html
+share/cppunit/html/_protector_context_8h_source.html
 share/cppunit/html/_protector_context_8h.html
 share/cppunit/html/_protector_context_8h__dep__incl.map
 share/cppunit/html/_protector_context_8h__dep__incl.md5
@@ -356,7 +356,7 @@ share/cppunit/html/_protector_context_8h__dep__incl.png
 share/cppunit/html/_protector_context_8h__incl.map
 share/cppunit/html/_protector_context_8h__incl.md5
 share/cppunit/html/_protector_context_8h__incl.png
-share/cppunit/html/_qt_test_runner_8h-source.html
+share/cppunit/html/_qt_test_runner_8h_source.html
 share/cppunit/html/_qt_test_runner_8h.html
 share/cppunit/html/_qt_test_runner_8h__dep__incl.map
 share/cppunit/html/_qt_test_runner_8h__dep__incl.md5
@@ -368,7 +368,7 @@ share/cppunit/html/_repeated_test_8cpp.html
 share/cppunit/html/_repeated_test_8cpp__incl.map
 share/cppunit/html/_repeated_test_8cpp__incl.md5
 share/cppunit/html/_repeated_test_8cpp__incl.png
-share/cppunit/html/_repeated_test_8h-source.html
+share/cppunit/html/_repeated_test_8h_source.html
 share/cppunit/html/_repeated_test_8h.html
 share/cppunit/html/_repeated_test_8h__dep__incl.map
 share/cppunit/html/_repeated_test_8h__dep__incl.md5
@@ -376,7 +376,7 @@ share/cppunit/html/_repeated_test_8h__dep__incl.png
 share/cppunit/html/_repeated_test_8h__incl.map
 share/cppunit/html/_repeated_test_8h__incl.md5
 share/cppunit/html/_repeated_test_8h__incl.png
-share/cppunit/html/_select_dll_loader_8h-source.html
+share/cppunit/html/_select_dll_loader_8h_source.html
 share/cppunit/html/_select_dll_loader_8h.html
 share/cppunit/html/_select_dll_loader_8h__dep__incl.map
 share/cppunit/html/_select_dll_loader_8h__dep__incl.md5
@@ -389,7 +389,7 @@ share/cppunit/html/_source_line_8cpp.html
 share/cppunit/html/_source_line_8cpp__incl.map
 share/cppunit/html/_source_line_8cpp__incl.md5
 share/cppunit/html/_source_line_8cpp__incl.png
-share/cppunit/html/_source_line_8h-source.html
+share/cppunit/html/_source_line_8h_source.html
 share/cppunit/html/_source_line_8h.html
 share/cppunit/html/_source_line_8h__dep__incl.map
 share/cppunit/html/_source_line_8h__dep__incl.md5
@@ -401,7 +401,7 @@ share/cppunit/html/_string_tools_8cpp.html
 share/cppunit/html/_string_tools_8cpp__incl.map
 share/cppunit/html/_string_tools_8cpp__incl.md5
 share/cppunit/html/_string_tools_8cpp__incl.png
-share/cppunit/html/_string_tools_8h-source.html
+share/cppunit/html/_string_tools_8h_source.html
 share/cppunit/html/_string_tools_8h.html
 share/cppunit/html/_string_tools_8h__dep__incl.map
 share/cppunit/html/_string_tools_8h__dep__incl.md5
@@ -413,7 +413,7 @@ share/cppunit/html/_synchronized_object_8cpp.html
 share/cppunit/html/_synchronized_object_8cpp__incl.map
 share/cppunit/html/_synchronized_object_8cpp__incl.md5
 share/cppunit/html/_synchronized_object_8cpp__incl.png
-share/cppunit/html/_synchronized_object_8h-source.html
+share/cppunit/html/_synchronized_object_8h_source.html
 share/cppunit/html/_synchronized_object_8h.html
 share/cppunit/html/_synchronized_object_8h__dep__incl.map
 share/cppunit/html/_synchronized_object_8h__dep__incl.md5
@@ -425,7 +425,7 @@ share/cppunit/html/_test_8cpp.html
 share/cppunit/html/_test_8cpp__incl.map
 share/cppunit/html/_test_8cpp__incl.md5
 share/cppunit/html/_test_8cpp__incl.png
-share/cppunit/html/_test_8h-source.html
+share/cppunit/html/_test_8h_source.html
 share/cppunit/html/_test_8h.html
 share/cppunit/html/_test_8h__dep__incl.map
 share/cppunit/html/_test_8h__dep__incl.md5
@@ -437,7 +437,7 @@ share/cppunit/html/_test_assert_8cpp.html
 share/cppunit/html/_test_assert_8cpp__incl.map
 share/cppunit/html/_test_assert_8cpp__incl.md5
 share/cppunit/html/_test_assert_8cpp__incl.png
-share/cppunit/html/_test_assert_8h-source.html
+share/cppunit/html/_test_assert_8h_source.html
 share/cppunit/html/_test_assert_8h.html
 share/cppunit/html/_test_assert_8h__dep__incl.map
 share/cppunit/html/_test_assert_8h__dep__incl.md5
@@ -445,7 +445,7 @@ share/cppunit/html/_test_assert_8h__dep__incl.png
 share/cppunit/html/_test_assert_8h__incl.map
 share/cppunit/html/_test_assert_8h__incl.md5
 share/cppunit/html/_test_assert_8h__incl.png
-share/cppunit/html/_test_caller_8h-source.html
+share/cppunit/html/_test_caller_8h_source.html
 share/cppunit/html/_test_caller_8h.html
 share/cppunit/html/_test_caller_8h__dep__incl.map
 share/cppunit/html/_test_caller_8h__dep__incl.md5
@@ -457,7 +457,7 @@ share/cppunit/html/_test_case_8cpp.html
 share/cppunit/html/_test_case_8cpp__incl.map
 share/cppunit/html/_test_case_8cpp__incl.md5
 share/cppunit/html/_test_case_8cpp__incl.png
-share/cppunit/html/_test_case_8h-source.html
+share/cppunit/html/_test_case_8h_source.html
 share/cppunit/html/_test_case_8h.html
 share/cppunit/html/_test_case_8h__dep__incl.map
 share/cppunit/html/_test_case_8h__dep__incl.md5
@@ -469,7 +469,7 @@ share/cppunit/html/_test_case_decorator_8cpp.html
 share/cppunit/html/_test_case_decorator_8cpp__incl.map
 share/cppunit/html/_test_case_decorator_8cpp__incl.md5
 share/cppunit/html/_test_case_decorator_8cpp__incl.png
-share/cppunit/html/_test_case_decorator_8h-source.html
+share/cppunit/html/_test_case_decorator_8h_source.html
 share/cppunit/html/_test_case_decorator_8h.html
 share/cppunit/html/_test_case_decorator_8h__dep__incl.map
 share/cppunit/html/_test_case_decorator_8h__dep__incl.md5
@@ -481,7 +481,7 @@ share/cppunit/html/_test_composite_8cpp.html
 share/cppunit/html/_test_composite_8cpp__incl.map
 share/cppunit/html/_test_composite_8cpp__incl.md5
 share/cppunit/html/_test_composite_8cpp__incl.png
-share/cppunit/html/_test_composite_8h-source.html
+share/cppunit/html/_test_composite_8h_source.html
 share/cppunit/html/_test_composite_8h.html
 share/cppunit/html/_test_composite_8h__dep__incl.map
 share/cppunit/html/_test_composite_8h__dep__incl.md5
@@ -493,7 +493,7 @@ share/cppunit/html/_test_decorator_8cpp.html
 share/cppunit/html/_test_decorator_8cpp__incl.map
 share/cppunit/html/_test_decorator_8cpp__incl.md5
 share/cppunit/html/_test_decorator_8cpp__incl.png
-share/cppunit/html/_test_decorator_8h-source.html
+share/cppunit/html/_test_decorator_8h_source.html
 share/cppunit/html/_test_decorator_8h.html
 share/cppunit/html/_test_decorator_8h__dep__incl.map
 share/cppunit/html/_test_decorator_8h__dep__incl.md5
@@ -501,7 +501,7 @@ share/cppunit/html/_test_decorator_8h__dep__incl.png
 share/cppunit/html/_test_decorator_8h__incl.map
 share/cppunit/html/_test_decorator_8h__incl.md5
 share/cppunit/html/_test_decorator_8h__incl.png
-share/cppunit/html/_test_factory_8h-source.html
+share/cppunit/html/_test_factory_8h_source.html
 share/cppunit/html/_test_factory_8h.html
 share/cppunit/html/_test_factory_8h__dep__incl.map
 share/cppunit/html/_test_factory_8h__dep__incl.md5
@@ -513,7 +513,7 @@ share/cppunit/html/_test_factory_registry_8cpp.html
 share/cppunit/html/_test_factory_registry_8cpp__incl.map
 share/cppunit/html/_test_factory_registry_8cpp__incl.md5
 share/cppunit/html/_test_factory_registry_8cpp__incl.png
-share/cppunit/html/_test_factory_registry_8h-source.html
+share/cppunit/html/_test_factory_registry_8h_source.html
 share/cppunit/html/_test_factory_registry_8h.html
 share/cppunit/html/_test_factory_registry_8h__dep__incl.map
 share/cppunit/html/_test_factory_registry_8h__dep__incl.md5
@@ -525,7 +525,7 @@ share/cppunit/html/_test_failure_8cpp.html
 share/cppunit/html/_test_failure_8cpp__incl.map
 share/cppunit/html/_test_failure_8cpp__incl.md5
 share/cppunit/html/_test_failure_8cpp__incl.png
-share/cppunit/html/_test_failure_8h-source.html
+share/cppunit/html/_test_failure_8h_source.html
 share/cppunit/html/_test_failure_8h.html
 share/cppunit/html/_test_failure_8h__dep__incl.map
 share/cppunit/html/_test_failure_8h__dep__incl.md5
@@ -533,7 +533,7 @@ share/cppunit/html/_test_failure_8h__dep__incl.png
 share/cppunit/html/_test_failure_8h__incl.map
 share/cppunit/html/_test_failure_8h__incl.md5
 share/cppunit/html/_test_failure_8h__incl.png
-share/cppunit/html/_test_fixture_8h-source.html
+share/cppunit/html/_test_fixture_8h_source.html
 share/cppunit/html/_test_fixture_8h.html
 share/cppunit/html/_test_fixture_8h__dep__incl.map
 share/cppunit/html/_test_fixture_8h__dep__incl.md5
@@ -541,7 +541,7 @@ share/cppunit/html/_test_fixture_8h__dep__incl.png
 share/cppunit/html/_test_fixture_8h__incl.map
 share/cppunit/html/_test_fixture_8h__incl.md5
 share/cppunit/html/_test_fixture_8h__incl.png
-share/cppunit/html/_test_fixture_factory_8h-source.html
+share/cppunit/html/_test_fixture_factory_8h_source.html
 share/cppunit/html/_test_fixture_factory_8h.html
 share/cppunit/html/_test_fixture_factory_8h__dep__incl.map
 share/cppunit/html/_test_fixture_factory_8h__dep__incl.md5
@@ -553,7 +553,7 @@ share/cppunit/html/_test_leaf_8cpp.html
 share/cppunit/html/_test_leaf_8cpp__incl.map
 share/cppunit/html/_test_leaf_8cpp__incl.md5
 share/cppunit/html/_test_leaf_8cpp__incl.png
-share/cppunit/html/_test_leaf_8h-source.html
+share/cppunit/html/_test_leaf_8h_source.html
 share/cppunit/html/_test_leaf_8h.html
 share/cppunit/html/_test_leaf_8h__dep__incl.map
 share/cppunit/html/_test_leaf_8h__dep__incl.md5
@@ -561,7 +561,7 @@ share/cppunit/html/_test_leaf_8h__dep__incl.png
 share/cppunit/html/_test_leaf_8h__incl.map
 share/cppunit/html/_test_leaf_8h__incl.md5
 share/cppunit/html/_test_leaf_8h__incl.png
-share/cppunit/html/_test_listener_8h-source.html
+share/cppunit/html/_test_listener_8h_source.html
 share/cppunit/html/_test_listener_8h.html
 share/cppunit/html/_test_listener_8h__dep__incl.map
 share/cppunit/html/_test_listener_8h__dep__incl.md5
@@ -573,7 +573,7 @@ share/cppunit/html/_test_namer_8cpp.html
 share/cppunit/html/_test_namer_8cpp__incl.map
 share/cppunit/html/_test_namer_8cpp__incl.md5
 share/cppunit/html/_test_namer_8cpp__incl.png
-share/cppunit/html/_test_namer_8h-source.html
+share/cppunit/html/_test_namer_8h_source.html
 share/cppunit/html/_test_namer_8h.html
 share/cppunit/html/_test_namer_8h__dep__incl.map
 share/cppunit/html/_test_namer_8h__dep__incl.md5
@@ -585,7 +585,7 @@ share/cppunit/html/_test_path_8cpp.html
 share/cppunit/html/_test_path_8cpp__incl.map
 share/cppunit/html/_test_path_8cpp__incl.md5
 share/cppunit/html/_test_path_8cpp__incl.png
-share/cppunit/html/_test_path_8h-source.html
+share/cppunit/html/_test_path_8h_source.html
 share/cppunit/html/_test_path_8h.html
 share/cppunit/html/_test_path_8h__dep__incl.map
 share/cppunit/html/_test_path_8h__dep__incl.md5
@@ -593,7 +593,7 @@ share/cppunit/html/_test_path_8h__dep__incl.png
 share/cppunit/html/_test_path_8h__incl.map
 share/cppunit/html/_test_path_8h__incl.md5
 share/cppunit/html/_test_path_8h__incl.png
-share/cppunit/html/_test_plug_in_8h-source.html
+share/cppunit/html/_test_plug_in_8h_source.html
 share/cppunit/html/_test_plug_in_8h.html
 share/cppunit/html/_test_plug_in_8h__dep__incl.map
 share/cppunit/html/_test_plug_in_8h__dep__incl.md5
@@ -605,7 +605,7 @@ share/cppunit/html/_test_plug_in_default_impl_8cpp.html
 share/cppunit/html/_test_plug_in_default_impl_8cpp__incl.map
 share/cppunit/html/_test_plug_in_default_impl_8cpp__incl.md5
 share/cppunit/html/_test_plug_in_default_impl_8cpp__incl.png
-share/cppunit/html/_test_plug_in_default_impl_8h-source.html
+share/cppunit/html/_test_plug_in_default_impl_8h_source.html
 share/cppunit/html/_test_plug_in_default_impl_8h.html
 share/cppunit/html/_test_plug_in_default_impl_8h__dep__incl.map
 share/cppunit/html/_test_plug_in_default_impl_8h__dep__incl.md5
@@ -613,7 +613,7 @@ share/cppunit/html/_test_plug_in_default_impl_8h__dep__incl.png
 share/cppunit/html/_test_plug_in_default_impl_8h__incl.map
 share/cppunit/html/_test_plug_in_default_impl_8h__incl.md5
 share/cppunit/html/_test_plug_in_default_impl_8h__incl.png
-share/cppunit/html/_test_plug_in_interface_8h-source.html
+share/cppunit/html/_test_plug_in_interface_8h_source.html
 share/cppunit/html/_test_plug_in_interface_8h.html
 share/cppunit/html/_test_plug_in_interface_8h__incl.map
 share/cppunit/html/_test_plug_in_interface_8h__incl.md5
@@ -622,7 +622,7 @@ share/cppunit/html/_test_result_8cpp.html
 share/cppunit/html/_test_result_8cpp__incl.map
 share/cppunit/html/_test_result_8cpp__incl.md5
 share/cppunit/html/_test_result_8cpp__incl.png
-share/cppunit/html/_test_result_8h-source.html
+share/cppunit/html/_test_result_8h_source.html
 share/cppunit/html/_test_result_8h.html
 share/cppunit/html/_test_result_8h__dep__incl.map
 share/cppunit/html/_test_result_8h__dep__incl.md5
@@ -634,7 +634,7 @@ share/cppunit/html/_test_result_collector_8cpp.html
 share/cppunit/html/_test_result_collector_8cpp__incl.map
 share/cppunit/html/_test_result_collector_8cpp__incl.md5
 share/cppunit/html/_test_result_collector_8cpp__incl.png
-share/cppunit/html/_test_result_collector_8h-source.html
+share/cppunit/html/_test_result_collector_8h_source.html
 share/cppunit/html/_test_result_collector_8h.html
 share/cppunit/html/_test_result_collector_8h__dep__incl.map
 share/cppunit/html/_test_result_collector_8h__dep__incl.md5
@@ -646,7 +646,7 @@ share/cppunit/html/_test_runner_8cpp.html
 share/cppunit/html/_test_runner_8cpp__incl.map
 share/cppunit/html/_test_runner_8cpp__incl.md5
 share/cppunit/html/_test_runner_8cpp__incl.png
-share/cppunit/html/_test_runner_d_s_plugin_v_c6_8h-source.html
+share/cppunit/html/_test_runner_d_s_plugin_v_c6_8h_source.html
 share/cppunit/html/_test_runner_d_s_plugin_v_c6_8h.html
 share/cppunit/html/_test_runner_d_s_plugin_v_c6_8h__incl.map
 share/cppunit/html/_test_runner_d_s_plugin_v_c6_8h__incl.md5
@@ -655,7 +655,7 @@ share/cppunit/html/_test_set_up_8cpp.html
 share/cppunit/html/_test_set_up_8cpp__incl.map
 share/cppunit/html/_test_set_up_8cpp__incl.md5
 share/cppunit/html/_test_set_up_8cpp__incl.png
-share/cppunit/html/_test_set_up_8h-source.html
+share/cppunit/html/_test_set_up_8h_source.html
 share/cppunit/html/_test_set_up_8h.html
 share/cppunit/html/_test_set_up_8h__dep__incl.map
 share/cppunit/html/_test_set_up_8h__dep__incl.md5
@@ -667,7 +667,7 @@ share/cppunit/html/_test_success_listener_8cpp.html
 share/cppunit/html/_test_success_listener_8cpp__incl.map
 share/cppunit/html/_test_success_listener_8cpp__incl.md5
 share/cppunit/html/_test_success_listener_8cpp__incl.png
-share/cppunit/html/_test_success_listener_8h-source.html
+share/cppunit/html/_test_success_listener_8h_source.html
 share/cppunit/html/_test_success_listener_8h.html
 share/cppunit/html/_test_success_listener_8h__dep__incl.map
 share/cppunit/html/_test_success_listener_8h__dep__incl.md5
@@ -679,7 +679,7 @@ share/cppunit/html/_test_suite_8cpp.html
 share/cppunit/html/_test_suite_8cpp__incl.map
 share/cppunit/html/_test_suite_8cpp__incl.md5
 share/cppunit/html/_test_suite_8cpp__incl.png
-share/cppunit/html/_test_suite_8h-source.html
+share/cppunit/html/_test_suite_8h_source.html
 share/cppunit/html/_test_suite_8h.html
 share/cppunit/html/_test_suite_8h__dep__incl.map
 share/cppunit/html/_test_suite_8h__dep__incl.md5
@@ -691,7 +691,7 @@ share/cppunit/html/_test_suite_builder_context_8cpp.html
 share/cppunit/html/_test_suite_builder_context_8cpp__incl.map
 share/cppunit/html/_test_suite_builder_context_8cpp__incl.md5
 share/cppunit/html/_test_suite_builder_context_8cpp__incl.png
-share/cppunit/html/_test_suite_builder_context_8h-source.html
+share/cppunit/html/_test_suite_builder_context_8h_source.html
 share/cppunit/html/_test_suite_builder_context_8h.html
 share/cppunit/html/_test_suite_builder_context_8h__dep__incl.map
 share/cppunit/html/_test_suite_builder_context_8h__dep__incl.md5
@@ -699,7 +699,7 @@ share/cppunit/html/_test_suite_builder_context_8h__dep__incl.png
 share/cppunit/html/_test_suite_builder_context_8h__incl.map
 share/cppunit/html/_test_suite_builder_context_8h__incl.md5
 share/cppunit/html/_test_suite_builder_context_8h__incl.png
-share/cppunit/html/_test_suite_factory_8h-source.html
+share/cppunit/html/_test_suite_factory_8h_source.html
 share/cppunit/html/_test_suite_factory_8h.html
 share/cppunit/html/_test_suite_factory_8h__dep__incl.map
 share/cppunit/html/_test_suite_factory_8h__dep__incl.md5
@@ -711,7 +711,7 @@ share/cppunit/html/_text_outputter_8cpp.html
 share/cppunit/html/_text_outputter_8cpp__incl.map
 share/cppunit/html/_text_outputter_8cpp__incl.md5
 share/cppunit/html/_text_outputter_8cpp__incl.png
-share/cppunit/html/_text_outputter_8h-source.html
+share/cppunit/html/_text_outputter_8h_source.html
 share/cppunit/html/_text_outputter_8h.html
 share/cppunit/html/_text_outputter_8h__dep__incl.map
 share/cppunit/html/_text_outputter_8h__dep__incl.md5
@@ -723,7 +723,7 @@ share/cppunit/html/_text_test_progress_listener_8cpp.html
 share/cppunit/html/_text_test_progress_listener_8cpp__incl.map
 share/cppunit/html/_text_test_progress_listener_8cpp__incl.md5
 share/cppunit/html/_text_test_progress_listener_8cpp__incl.png
-share/cppunit/html/_text_test_progress_listener_8h-source.html
+share/cppunit/html/_text_test_progress_listener_8h_source.html
 share/cppunit/html/_text_test_progress_listener_8h.html
 share/cppunit/html/_text_test_progress_listener_8h__dep__incl.map
 share/cppunit/html/_text_test_progress_listener_8h__dep__incl.md5
@@ -735,7 +735,7 @@ share/cppunit/html/_text_test_result_8cpp.html
 share/cppunit/html/_text_test_result_8cpp__incl.map
 share/cppunit/html/_text_test_result_8cpp__incl.md5
 share/cppunit/html/_text_test_result_8cpp__incl.png
-share/cppunit/html/_text_test_result_8h-source.html
+share/cppunit/html/_text_test_result_8h_source.html
 share/cppunit/html/_text_test_result_8h.html
 share/cppunit/html/_text_test_result_8h__dep__incl.map
 share/cppunit/html/_text_test_result_8h__dep__incl.md5
@@ -747,7 +747,7 @@ share/cppunit/html/_text_test_runner_8cpp.html
 share/cppunit/html/_text_test_runner_8cpp__incl.map
 share/cppunit/html/_text_test_runner_8cpp__incl.md5
 share/cppunit/html/_text_test_runner_8cpp__incl.png
-share/cppunit/html/_text_test_runner_8h-source.html
+share/cppunit/html/_text_test_runner_8h_source.html
 share/cppunit/html/_text_test_runner_8h.html
 share/cppunit/html/_text_test_runner_8h__incl.map
 share/cppunit/html/_text_test_runner_8h__incl.md5
@@ -756,7 +756,7 @@ share/cppunit/html/_type_info_helper_8cpp.html
 share/cppunit/html/_type_info_helper_8cpp__incl.map
 share/cppunit/html/_type_info_helper_8cpp__incl.md5
 share/cppunit/html/_type_info_helper_8cpp__incl.png
-share/cppunit/html/_type_info_helper_8h-source.html
+share/cppunit/html/_type_info_helper_8h_source.html
 share/cppunit/html/_type_info_helper_8h.html
 share/cppunit/html/_type_info_helper_8h__dep__incl.map
 share/cppunit/html/_type_info_helper_8h__dep__incl.md5
@@ -776,7 +776,7 @@ share/cppunit/html/_xml_document_8cpp.html
 share/cppunit/html/_xml_document_8cpp__incl.map
 share/cppunit/html/_xml_document_8cpp__incl.md5
 share/cppunit/html/_xml_document_8cpp__incl.png
-share/cppunit/html/_xml_document_8h-source.html
+share/cppunit/html/_xml_document_8h_source.html
 share/cppunit/html/_xml_document_8h.html
 share/cppunit/html/_xml_document_8h__dep__incl.map
 share/cppunit/html/_xml_document_8h__dep__incl.md5
@@ -788,7 +788,7 @@ share/cppunit/html/_xml_element_8cpp.html
 share/cppunit/html/_xml_element_8cpp__incl.map
 share/cppunit/html/_xml_element_8cpp__incl.md5
 share/cppunit/html/_xml_element_8cpp__incl.png
-share/cppunit/html/_xml_element_8h-source.html
+share/cppunit/html/_xml_element_8h_source.html
 share/cppunit/html/_xml_element_8h.html
 share/cppunit/html/_xml_element_8h__dep__incl.map
 share/cppunit/html/_xml_element_8h__dep__incl.md5
@@ -800,7 +800,7 @@ share/cppunit/html/_xml_outputter_8cpp.html
 share/cppunit/html/_xml_outputter_8cpp__incl.map
 share/cppunit/html/_xml_outputter_8cpp__incl.md5
 share/cppunit/html/_xml_outputter_8cpp__incl.png
-share/cppunit/html/_xml_outputter_8h-source.html
+share/cppunit/html/_xml_outputter_8h_source.html
 share/cppunit/html/_xml_outputter_8h.html
 share/cppunit/html/_xml_outputter_8h__dep__incl.map
 share/cppunit/html/_xml_outputter_8h__dep__incl.md5
@@ -812,7 +812,7 @@ share/cppunit/html/_xml_outputter_hook_8cpp.html
 share/cppunit/html/_xml_outputter_hook_8cpp__incl.map
 share/cppunit/html/_xml_outputter_hook_8cpp__incl.md5
 share/cppunit/html/_xml_outputter_hook_8cpp__incl.png
-share/cppunit/html/_xml_outputter_hook_8h-source.html
+share/cppunit/html/_xml_outputter_hook_8h_source.html
 share/cppunit/html/_xml_outputter_hook_8h.html
 share/cppunit/html/_xml_outputter_hook_8h__dep__incl.map
 share/cppunit/html/_xml_outputter_hook_8h__dep__incl.md5
@@ -1201,7 +1201,7 @@ share/cppunit/html/class_xml_outputter_hook-members.html
 share/cppunit/html/class_xml_outputter_hook.html
 share/cppunit/html/classes.html
 share/cppunit/html/cookbook_8dox.html
-share/cppunit/html/cppunit_2_test_runner_8h-source.html
+share/cppunit/html/cppunit_2_test_runner_8h_source.html
 share/cppunit/html/cppunit_2_test_runner_8h.html
 share/cppunit/html/cppunit_2_test_runner_8h__dep__incl.map
 share/cppunit/html/cppunit_2_test_runner_8h__dep__incl.md5
@@ -1209,17 +1209,17 @@ share/cppunit/html/cppunit_2_test_runner_8h__dep__incl.png
 share/cppunit/html/cppunit_2_test_runner_8h__incl.map
 share/cppunit/html/cppunit_2_test_runner_8h__incl.md5
 share/cppunit/html/cppunit_2_test_runner_8h__incl.png
-share/cppunit/html/cppunit_2ui_2mfc_2_test_runner_8h-source.html
+share/cppunit/html/cppunit_2ui_2mfc_2_test_runner_8h_source.html
 share/cppunit/html/cppunit_2ui_2mfc_2_test_runner_8h.html
 share/cppunit/html/cppunit_2ui_2mfc_2_test_runner_8h__incl.map
 share/cppunit/html/cppunit_2ui_2mfc_2_test_runner_8h__incl.md5
 share/cppunit/html/cppunit_2ui_2mfc_2_test_runner_8h__incl.png
-share/cppunit/html/cppunit_2ui_2qt_2_test_runner_8h-source.html
+share/cppunit/html/cppunit_2ui_2qt_2_test_runner_8h_source.html
 share/cppunit/html/cppunit_2ui_2qt_2_test_runner_8h.html
 share/cppunit/html/cppunit_2ui_2qt_2_test_runner_8h__incl.map
 share/cppunit/html/cppunit_2ui_2qt_2_test_runner_8h__incl.md5
 share/cppunit/html/cppunit_2ui_2qt_2_test_runner_8h__incl.png
-share/cppunit/html/cppunit_2ui_2text_2_test_runner_8h-source.html
+share/cppunit/html/cppunit_2ui_2text_2_test_runner_8h_source.html
 share/cppunit/html/cppunit_2ui_2text_2_test_runner_8h.html
 share/cppunit/html/cppunit_2ui_2text_2_test_runner_8h__incl.map
 share/cppunit/html/cppunit_2ui_2text_2_test_runner_8h__incl.md5
@@ -1424,7 +1424,7 @@ share/cppunit/html/inherit__graph__9.png
 share/cppunit/html/inherits.html
 share/cppunit/html/modules.html
 share/cppunit/html/money_example.html
-share/cppunit/html/msvc6_2testrunner_2_test_runner_8h-source.html
+share/cppunit/html/msvc6_2testrunner_2_test_runner_8h_source.html
 share/cppunit/html/msvc6_2testrunner_2_test_runner_8h.html
 share/cppunit/html/msvc6_2testrunner_2_test_runner_8h__incl.map
 share/cppunit/html/msvc6_2testrunner_2_test_runner_8h__incl.md5
@@ -1460,7 +1460,7 @@ share/cppunit/html/tab_l.gif
 share/cppunit/html/tab_r.gif
 share/cppunit/html/tabs.css
 share/cppunit/html/todo.html
-share/cppunit/html/ui_2text_2_text_test_runner_8h-source.html
+share/cppunit/html/ui_2text_2_text_test_runner_8h_source.html
 share/cppunit/html/ui_2text_2_text_test_runner_8h.html
 share/cppunit/html/ui_2text_2_text_test_runner_8h__dep__incl.map
 share/cppunit/html/ui_2text_2_text_test_runner_8h__dep__incl.md5
