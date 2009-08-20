@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2009/04/30 21:26:53 sno Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/20 18:55:57 sno Exp $
 
-DISTNAME=	Rose-DB-Object-0.781
+DISTNAME=	Rose-DB-Object-0.782
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
@@ -8,14 +8,16 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 MAINTAINER=	abs@absd.org
 HOMEPAGE=	http://search.cpan.org/~jsiracusa/Rose-DB-Object/
 COMMENT=	Extensible, high performance RDBMS-OO mapper
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Bit-Vector>=6.4:../../devel/p5-Bit-Vector
-DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
+DEPENDS+=	p5-Clone>=0.29:../../devel/p5-Clone
+DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
-DEPENDS+=	p5-Rose-DB>=0.748:../../databases/p5-Rose-DB
+DEPENDS+=	p5-Rose-DB>=0.753:../../databases/p5-Rose-DB
 DEPENDS+=	p5-Rose-DateTime>=0.532:../../time/p5-Rose-DateTime
 DEPENDS+=	p5-Rose-Object>=0.854:../../devel/p5-Rose-Object
+DEPENDS+=	p5-Time-Clock-[0-9]*:../../time/p5-Time-Clock
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Rose/DB/Object/.packlist
