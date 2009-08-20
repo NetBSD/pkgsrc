@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/08/15 17:53:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/08/20 03:53:20 hasso Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -131,7 +131,7 @@ man/man5/sane-nec.5
 man/man5/sane-net.5
 man/man5/sane-niash.5
 man/man5/sane-pie.5
-man/man5/sane-pint.5
+${PLIST.pint}man/man5/sane-pint.5
 man/man5/sane-pixma.5
 man/man5/sane-plustek.5
 man/man5/sane-plustek_pp.5
