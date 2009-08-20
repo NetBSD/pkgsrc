@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/07/07 08:14:42 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/20 20:37:06 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -271,12 +271,15 @@ libdata/asterisk/images/asterisk-intro.jpg
 libdata/asterisk/images/kpad2.jpg
 libdata/asterisk/keys/freeworlddialup.pub
 libdata/asterisk/keys/iaxtel.pub
-libdata/asterisk/moh/.asterisk-moh-freeplay-wav
-libdata/asterisk/moh/CHANGES-asterisk-moh-freeplay-wav
-libdata/asterisk/moh/LICENSE-asterisk-moh-freeplay-wav
-libdata/asterisk/moh/fpm-calm-river.wav
-libdata/asterisk/moh/fpm-sunshine.wav
-libdata/asterisk/moh/fpm-world-mix.wav
+libdata/asterisk/moh/.asterisk-moh-opsound-wav
+libdata/asterisk/moh/CHANGES-asterisk-moh-opsound-wav
+libdata/asterisk/moh/CREDITS-asterisk-moh-opsound-wav
+libdata/asterisk/moh/LICENSE-asterisk-moh-opsound-wav
+libdata/asterisk/moh/macroform-cold_day.wav
+libdata/asterisk/moh/macroform-robot_dity.wav
+libdata/asterisk/moh/macroform-the_simplicity.wav
+libdata/asterisk/moh/manolo_camp-morning_coffee.wav
+libdata/asterisk/moh/reno_project-system.wav
 libdata/asterisk/phoneprov/000000000000-directory.xml
 libdata/asterisk/phoneprov/000000000000-phone.cfg
 libdata/asterisk/phoneprov/000000000000.cfg
@@ -1119,5 +1122,3 @@ share/examples/asterisk/users.conf
 share/examples/asterisk/voicemail.conf
 share/examples/asterisk/vpb.conf
 share/examples/rc.d/asterisk
-@pkgdir libdata/asterisk/sounds/fr
-@pkgdir libdata/asterisk/sounds/es
