@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/09/25 14:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2009/08/20 15:24:58 jwise Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA5
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://www.draga.com/~jwise/i2cb/
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.draga.com/~jwise/i2cb/
 COMMENT=	Next generation Internet Citizens Band chat server
 
