@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/20 09:13:51 wiz Exp $
 #
 
-DISTNAME=		liboobs-2.22.0
-PKGREVISION=		1
+DISTNAME=		liboobs-2.22.1
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/liboobs/2.22/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,16 +9,11 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Lightweight GObject based interface to system-tools-backends
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.liboobs
-PKG_SUPPORTED_OPTIONS+=	hal
-PKG_SUGGESTED_OPTIONS+=	hal
-.include "../../mk/bsd.options.mk"
-.if !empty(PKG_OPTIONS:Mhal)
-.include "../../sysutils/hal/buildlink3.mk"
-.endif
+.include "options.mk"
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
