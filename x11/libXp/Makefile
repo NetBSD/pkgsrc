@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 21:45:15 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/20 17:59:10 joerg Exp $
 #
 
 DISTNAME=		libXp-1.0.0
@@ -23,6 +23,14 @@ PKGCONFIG_OVERRIDE+=	xp.pc.in
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
+
+.if ${X11_TYPE} == "native"
+XPRINT_CFLAGS=	-I${X11BASE}/include
+XPRINT_LIBS=	-Wl,-rpath,${X11BASE}/lib -L${X11BASE}/lib -lX11 -lXext -lXau
+
+CONFIGURE_ARGS+=	XPRINT_CFLAGS=${XPRINT_CFLAGS:Q} \
+			XPRINT_LIBS=${XPRINT_LIBS:Q}
 .endif
 
 .include "../../x11/libX11/buildlink3.mk"
