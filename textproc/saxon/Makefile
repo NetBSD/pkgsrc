@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/07/07 20:47:53 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/08/20 15:25:00 jwise Exp $
 #
 
 DISTNAME=	saxon
@@ -8,7 +8,7 @@ CATEGORIES=	textproc www
 MASTER_SITES=	${HOMEPAGE}saxon6.0.2/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://users.breathe.com/mhkay/saxon/
 COMMENT=	Michael H. Kay's Java XSLT processor
 
