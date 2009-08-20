@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/06/12 02:14:52 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/08/20 15:25:00 jwise Exp $
 #
 
 DISTNAME=	xt
@@ -8,7 +8,7 @@ CATEGORIES=	textproc www
 MASTER_SITES=	ftp://ftp.jclark.com/pub/xml/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jclark.com/xml/
 COMMENT=	James Clark's Java implementation of XSLT
 
