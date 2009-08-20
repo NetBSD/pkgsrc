@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8353 2009/08/20 09:08:05 wiz Exp $
+$NetBSD: TODO,v 1.8354 2009/08/20 09:16:38 obache Exp $
 
 Suggested new packages
 ======================
@@ -393,6 +393,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
+	o ap2-wsgi-2.5
 	o apache-tomcat55-6.0.14
 	o apsfilter-7.2.8
 	o aqsis-1.4.1
