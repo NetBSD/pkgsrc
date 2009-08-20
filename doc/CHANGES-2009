@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3271 2009/08/19 20:54:18 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3272 2009/08/20 04:18:22 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4305,3 +4305,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-Search-QueryParser-SQL to 0.008 [sno 2009-08-19]
 	Updated databases/p5-Rose-DB to 0.753 [sno 2009-08-19]
 	Added devel/p5-MooseX-NonMoose version 0.05 [seb 2009-08-19]
+	Updated graphics/sane-backends to 1.0.20nb1 [hasso 2009-08-20]
+	Updatec devel/qof to 0.7.5nb2 [hasso 2009-08-20]
+	Updated devel/cppunit to 1.10.2nb9 [hasso 2009-08-20]
