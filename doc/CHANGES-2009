@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3281 2009/08/20 17:17:50 epg Exp $
+$NetBSD: CHANGES-2009,v 1.3282 2009/08/20 17:42:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4317,3 +4317,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-POE-Test-Loops to 1.021 [minskim 2009-08-20]
 	Updated net/clive to 2.2.5 [wiz 2009-08-20]
 	Updated converters/py-simplejson to 2.0.9 [epg 2009-08-20]
+	Updated math/p5-Spreadsheet-ParseExcel to 0.5100 [sno 2009-08-20]
