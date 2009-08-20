@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2008/08/06 04:09:12 dsainty Exp $
+# $NetBSD: Makefile,v 1.63 2009/08/20 15:25:01 jwise Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
-MAINTAINER=	jwise@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tcl.tk/
 COMMENT=	Graphical toolkit for TCL
 
