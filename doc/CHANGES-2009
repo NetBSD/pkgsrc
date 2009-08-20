@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3284 2009/08/20 17:52:40 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3285 2009/08/20 18:02:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4320,3 +4320,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Spreadsheet-ParseExcel to 0.5100 [sno 2009-08-20]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.86 [sno 2009-08-20]
 	Updated textproc/p5-XML-SemanticDiff to 1.0000 [sno 2009-08-20]
+	Updated www/p5-Apache2-AuthCookieDBI to 2.05 [sno 2009-08-20]
