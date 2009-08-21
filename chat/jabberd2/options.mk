@@ -1,30 +1,39 @@
-# $NetBSD: options.mk,v 1.21 2008/05/27 13:23:43 obache Exp $
-#
+# $NetBSD: options.mk,v 1.22 2009/08/21 02:28:12 schnoebe Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
-PKG_OPTIONS_REQUIRED_GROUPS=	auth storage
+PKG_OPTIONS_REQUIRED_GROUPS=	auth storage sasl
 # Authentication backend
 PKG_OPTIONS_GROUP.auth=		auth-mysql auth-pgsql auth-sqlite
 PKG_OPTIONS_GROUP.auth+=	auth-db auth-ldap auth-pam
 # Storage backend
 PKG_OPTIONS_GROUP.storage=	storage-mysql storage-pgsql
 PKG_OPTIONS_GROUP.storage+=	storage-sqlite storage-db
+# SASL implementation
+PKG_OPTIONS_GROUP.sasl=		sasl-cyrus sasl-gnu
+# debugging
 PKG_SUPPORTED_OPTIONS+=		debug
-PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite
+PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite sasl-gnu
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		db ldap mysql pam pgsql sqlite
+PLIST_VARS+=	db ldap mysql pam pgsql sqlite
+
+.if !empty(PKG_OPTIONS:Msasl-cyrus)
+CONFIGURE_ARGS+=	--with-sasl=cyrus
+.  include "../../security/cyrus-sasl/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Msasl-gnu)
+CONFIGURE_ARGS+=	--with-sasl=gsasl
+.  include "../../security/gsasl/buildlink3.mk"
+.endif
 
 .if !empty(PKG_OPTIONS:Mauth-db) || !empty(PKG_OPTIONS:Mstorage-db)
-.  include "../../databases/db4/buildlink3.mk"
-# XXX: configure script is broken, always using -ldb even if detect db4.
-SUBST_CLASSES+=		fixdb
-SUBST_STAGE.fixdb=	pre-configure
-SUBST_FILES.fixdb=	storage/Makefile.in
-SUBST_SED.fixdb=	-e "s|@DB_LIBS@|${BUILDLINK_LDADD.db4}|g"
-PLIST.db=		yes
 CONFIGURE_ARGS+=	--enable-db
+PLIST.db=		yes
+BDB_ACCEPTED=		db4
+BUILDLINK_TRANSFORM+=	l:db:db4
+.  include "../../databases/db4/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-db
 .endif
@@ -72,4 +81,5 @@ CONFIGURE_ARGS+=	--disable-pam
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
+CONFIGURE_ARGS+=	--enable-developer
 .endif
