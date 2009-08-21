@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2008/02/20 14:33:04 xtraeme Exp $
+$NetBSD: patch-ac,v 1.5 2009/08/21 02:28:13 schnoebe Exp $
 
---- etc/sm.xml.in.orig	2008-01-08 04:23:48.000000000 -0600
+--- etc/sm.xml.in.orig	2009-04-27 04:05:14.000000000 -0500
 +++ etc/sm.xml.in
-@@ -8,7 +8,7 @@
+@@ -7,7 +7,7 @@
  
    <!-- The process ID file. Comment this out if you don't need to know
         the process ID from outside the process (eg for control scripts) -->
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.4 2008/02/20 14:33:04 xtraeme Exp $
  
    <!-- Router connection configuration -->
    <router>
-@@ -30,7 +30,7 @@
+@@ -29,7 +29,7 @@
           If this is commented out, or the file can't be read, no attempt
           will be made to establish an encrypted channel with the router. -->
      <!--
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.4 2008/02/20 14:33:04 xtraeme Exp $
      -->
  
      <!-- Router connection retry -->
-@@ -63,7 +63,7 @@
+@@ -62,7 +62,7 @@
  
      <!-- If logging to file, this is the filename of the logfile -->
      <!--
@@ -29,8 +29,8 @@ $NetBSD: patch-ac,v 1.4 2008/02/20 14:33:04 xtraeme Exp $
      -->
    </log>
  
-@@ -152,7 +152,7 @@
-     <!-- Berkeley DB driver configuration -->
+@@ -153,7 +153,7 @@
+          implementation does not implement the 'count' callback). -->
      <db>
        <!-- Directory to store database files under -->
 -      <path>@localstatedir@/jabberd/db</path>
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.4 2008/02/20 14:33:04 xtraeme Exp $
  
        <!-- Synchronize the database to disk after each write. If you
             disable this, database accesses may be faster, but data may
-@@ -177,7 +177,7 @@
+@@ -178,7 +178,7 @@
      <!-- SQLite driver configuration -->
      <sqlite>
        <!-- Database name -->
@@ -47,7 +47,16 @@ $NetBSD: patch-ac,v 1.4 2008/02/20 14:33:04 xtraeme Exp $
  
        <!-- Transacation support. If this is commented out, transactions
             will be disabled. This might make database accesses faster,
-@@ -625,7 +625,7 @@
+@@ -192,7 +192,7 @@
+     <!-- Filesystem driver configuration -->
+     <fs>
+       <!-- Directory to store database files under. -->
+-      <path>@localstatedir@/lib/jabberd2/fs</path>
++      <path>@DBDIR@/fs</path>
+     </fs>
+ 
+     <!-- LDAPVCARD driver configuration -->
+@@ -654,7 +654,7 @@
  
        <!-- If you defined publish, you should comment <roster> -->
        <!--

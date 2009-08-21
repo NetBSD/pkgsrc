@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2009/08/21 02:28:12 schnoebe Exp $
+
+	Review ${PREFIX}/share/doc/jabberd/UPGRADE if you're upgrading
+	from an earlier release of Jabberd 2.x.
+===========================================================================
