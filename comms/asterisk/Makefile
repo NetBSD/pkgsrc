@@ -1,6 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2009/06/05 23:07:11 jnemeth Exp $
+# $NetBSD: Makefile,v 1.63.2.1 2009/08/21 12:17:35 tron Exp $
 
 DISTNAME=	asterisk-1.2.33
+PKGREVISION=	1
+# delete this with next version, this is only to account for the moh change
+DIST_SUBDIR=    ${PKGNAME_NOREV}-newmoh
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/releases/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -8,6 +11,7 @@ MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/releases/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
 COMMENT=	The Asterisk Software PBX
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -73,11 +77,11 @@ OWN_DIRS+=		${ASTVARLIBDIR}/sounds/priv-callerintros
 
 CONF_FILES=		# empty
 .for f in asterisk.conf extensions.conf
-CONF_FILES+=	${ASTEXAMPLEDIR:Q}/${f:Q} ${ASTETCDIR:Q}/${f:Q}
+CONF_FILES+=	${ASTEXAMPLEDIR}/${f:Q} ${ASTETCDIR}/${f:Q}
 .endfor
 
-MAKE_ENV+=		VARBASE=${VARBASE:Q}
-MAKE_FLAGS+=		INSTALL_PREFIX=${PREFIX:Q}
+MAKE_ENV+=		VARBASE=${VARBASE}
+MAKE_FLAGS+=		INSTALL_PREFIX=${PREFIX}
 
 # if we put all the files in $CONF_FILES, the message is _way_ too long.
 .for f in adsi.conf adtranvofr.conf agents.conf alarmreceiver.conf	\
@@ -90,14 +94,14 @@ MAKE_FLAGS+=		INSTALL_PREFIX=${PREFIX:Q}
 	res_odbc.conf rpt.conf rtp.conf sip.conf 			\
 	skinny.conf voicemail.conf vpb.conf zapata.conf asterisk.adsi 	\
 	telcordia-1.adsi
-CONF_FILES+=		${ASTEXAMPLEDIR:Q}/${f:Q} ${ASTETCDIR:Q}/${f:Q}
+CONF_FILES+=		${ASTEXAMPLEDIR}/${f:Q} ${ASTETCDIR}/${f:Q}
 .endfor
 
 PTHREAD_OPTS+=	require native
 
 .if (${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h))
 post-patch:
-	${ECHO} "#include <sys/poll.h>" > ${WRKSRC:Q}/include/asterisk/poll-compat.h
+	${ECHO} "#include <sys/poll.h>" > ${WRKSRC}/include/asterisk/poll-compat.h
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"
