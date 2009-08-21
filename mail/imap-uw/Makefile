@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2009/05/17 16:03:08 plunky Exp $
+# $NetBSD: Makefile,v 1.131 2009/08/21 11:55:50 obache Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -19,6 +19,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 MAKE_ENV+=		LIBTOOL=libtool
@@ -109,42 +111,42 @@ post-build:
 	${LIBTOOL} --mode=link ${CC} -o ${CCLIENT_PICLIB:.a=.la} *.lo
 
 do-install: install-headers install-lib install-doc
-	${LTINSTALL_PROGRAM} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
-	${LTINSTALL_PROGRAM} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
-	${LTINSTALL_PROGRAM} ${WRKSRC}/ipopd/ipop3d ${PREFIX}/libexec
-	${LTINSTALL_PROGRAM} ${WRKSRC}/mtest/mtest ${PREFIX}/sbin
-	${LN} -sf ../libexec/imapd ${PREFIX}/sbin/rimapd
-	${INSTALL_MAN} ${WRKSRC}/src/imapd/imapd.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/src/ipopd/ipopd.8 ${PREFIX}/${PKGMANDIR}/man8
-	${LN} -sf ipopd.8 ${PREFIX}/${PKGMANDIR}/man8/ipop2d.8
-	${LN} -sf ipopd.8 ${PREFIX}/${PKGMANDIR}/man8/ipop3d.8
-	${LTINSTALL_PROGRAM} ${WRKSRC}/mailutil/mailutil ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/src/mailutil/mailutil.1 ${PREFIX}/${PKGMANDIR}/man1
-	${LTINSTALL_PROGRAM} ${WRKSRC}/dmail/dmail ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/src/dmail/dmail.1 ${PREFIX}/${PKGMANDIR}/man1
-	${LTINSTALL_PROGRAM} ${WRKSRC}/mlock/mlock ${PREFIX}/bin
-	${LTINSTALL_PROGRAM} ${WRKSRC}/tmail/tmail ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/src/tmail/tmail.1 ${PREFIX}/${PKGMANDIR}/man1
+	${LTINSTALL_PROGRAM} ${WRKSRC}/imapd/imapd ${DESTDIR}${PREFIX}/libexec
+	${LTINSTALL_PROGRAM} ${WRKSRC}/ipopd/ipop2d ${DESTDIR}${PREFIX}/libexec
+	${LTINSTALL_PROGRAM} ${WRKSRC}/ipopd/ipop3d ${DESTDIR}${PREFIX}/libexec
+	${LTINSTALL_PROGRAM} ${WRKSRC}/mtest/mtest ${DESTDIR}${PREFIX}/sbin
+	${LN} -sf ../libexec/imapd ${DESTDIR}${PREFIX}/sbin/rimapd
+	${INSTALL_MAN} ${WRKSRC}/src/imapd/imapd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/src/ipopd/ipopd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${LN} -sf ipopd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/ipop2d.8
+	${LN} -sf ipopd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/ipop3d.8
+	${LTINSTALL_PROGRAM} ${WRKSRC}/mailutil/mailutil ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/src/mailutil/mailutil.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${LTINSTALL_PROGRAM} ${WRKSRC}/dmail/dmail ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/src/dmail/dmail.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${LTINSTALL_PROGRAM} ${WRKSRC}/mlock/mlock ${DESTDIR}${PREFIX}/bin
+	${LTINSTALL_PROGRAM} ${WRKSRC}/tmail/tmail ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/src/tmail/tmail.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .PHONY: install-headers install-lib install-doc
 install-headers:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/c-client
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/c-client
 	${CAT} ${PKGDIR}/PLIST |					\
 	while read entry; do						\
 		case "$$entry" in					\
 		include/c-client/*)					\
 			src="${WRKSRC}/c-client/`${BASENAME} $$entry`";	\
-			dest="${PREFIX}/$$entry";			\
+			dest="${DESTDIR}${PREFIX}/$$entry";		\
 			${INSTALL_DATA} $$src $$dest;			\
 		esac;							\
 	done
 
 install-lib:
-	${LTINSTALL_LIB} ${WRKSRC}/c-client/${CCLIENT_LIB} ${PREFIX}/lib
-	${INSTALL_LIB} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${PREFIX}/lib
-	${RANLIB} ${PREFIX}/lib/${CCLIENT_PICLIB}
+	${LTINSTALL_LIB} ${WRKSRC}/c-client/${CCLIENT_LIB} ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${DESTDIR}${PREFIX}/lib
+	${RANLIB} ${DESTDIR}${PREFIX}/lib/${CCLIENT_PICLIB}
 
-DOCDIR=	${PREFIX}/share/doc/${PKGBASE}
+DOCDIR=	${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 install-doc:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${CP} -R ${WRKSRC}/docs/* ${DOCDIR}
