@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3319 2009/08/21 23:37:05 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3320 2009/08/21 23:39:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4358,3 +4358,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/doxygen to 1.6.0 [wiz 2009-08-21]
 	Added devel/p5-Proc-Queue version 1.23 [wiz 2009-08-21]
 	Updated devel/cflow to 1.3 [wiz 2009-08-21]
+	Updated textproc/diffstat to 1.48 [wiz 2009-08-21]
