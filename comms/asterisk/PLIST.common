@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.15 2009/01/26 13:15:49 jnemeth Exp $
+@comment $NetBSD: PLIST.common,v 1.15.4.1 2009/08/21 12:17:35 tron Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -208,9 +208,11 @@ libdata/asterisk/images/asterisk-intro.jpg
 libdata/asterisk/keys/freeworlddialup.pub
 libdata/asterisk/keys/iaxtel.pub
 libdata/asterisk/mohmp3/LICENSE
-libdata/asterisk/mohmp3/fpm-calm-river.mp3
-libdata/asterisk/mohmp3/fpm-sunshine.mp3
-libdata/asterisk/mohmp3/fpm-world-mix.mp3
+libdata/asterisk/mohmp3/macroform-cold_day.mp3
+libdata/asterisk/mohmp3/macroform-robot_dity.mp3
+libdata/asterisk/mohmp3/macroform-the_simplicity.mp3
+libdata/asterisk/mohmp3/manolo_camp-morning_coffee.mp3
+libdata/asterisk/mohmp3/reno_project-system.mp3
 libdata/asterisk/sounds/agent-alreadyon.gsm
 libdata/asterisk/sounds/agent-incorrect.gsm
 libdata/asterisk/sounds/agent-loggedoff.gsm
