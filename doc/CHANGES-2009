@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3309 2009/08/21 15:35:00 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3310 2009/08/21 15:39:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4346,3 +4346,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/mdocml to 1.9.1 [joerg 2009-08-21]
 	Updated chat/empathy to 2.26.1 [wiz 2009-08-21]
 	Updated chat/empathy to 2.26.2 [wiz 2009-08-21]
+	Updated meta-pkgs/gnome-mobile to 2.26.1.100 [wiz 2009-08-21]
