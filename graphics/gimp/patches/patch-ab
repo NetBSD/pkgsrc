@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.29 2009/08/21 19:41:56 adam Exp $
+$NetBSD: patch-ab,v 1.30 2009/08/21 19:46:27 adam Exp $
 
 --- configure.orig	2009-08-13 21:37:15.000000000 +0200
 +++ configure
