@@ -1,0 +1,2 @@
+Proc::Queue limits the number of forked processes that can be
+running concurrently.
