@@ -1,8 +1,28 @@
-$NetBSD: patch-am,v 1.6 2008/08/27 12:12:04 markd Exp $
+$NetBSD: patch-am,v 1.7 2009/08/21 08:27:29 abs Exp $
 
---- krfb/libvncserver/rfb.h.orig	2005-09-10 20:20:13.000000000 +1200
+--- krfb/libvncserver/rfb.h.orig	2008-08-19 19:13:37.000000000 +0100
 +++ krfb/libvncserver/rfb.h
-@@ -62,7 +60,7 @@ typedef unsigned long KeySym;
+@@ -41,6 +41,19 @@ extern "C"
+ typedef unsigned char CARD8;
+ typedef unsigned short CARD16;
+ 
++/* Copied from Xmd.h */
++#if defined (_LP64) || \
++    defined(__alpha) || defined(__alpha__) || \
++    defined(__ia64__) || defined(ia64) || \
++    defined(__sparc64__) || \
++    defined(__s390x__) || \
++    (defined(__hppa__) && defined(__LP64__)) || \
++    defined(__amd64__) || defined(amd64) || \
++    defined(__powerpc64__) || \
++    (defined(sgi) && (_MIPS_SZLONG == 64))
++#define LONG64                          /* 32/64-bit architecture */
++#endif
++
+ #ifdef LONG64
+ typedef unsigned long CARD64;
+ typedef unsigned int CARD32;
+@@ -69,7 +82,7 @@ typedef unsigned long KeySym;
  
  #ifdef __linux__
  #include <endian.h>
@@ -11,7 +31,7 @@ $NetBSD: patch-am,v 1.6 2008/08/27 12:12:04 markd Exp $
  #include <sys/types.h>
  #include <machine/endian.h>
  #ifndef _BYTE_ORDER
-@@ -76,7 +74,7 @@ typedef unsigned long KeySym;
+@@ -83,7 +96,7 @@ typedef unsigned long KeySym;
  #if defined(__sparc)
    /* SPARC here (big endian) */
  #define _BYTE_ORDER 4321
