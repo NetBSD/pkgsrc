@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.120 2009/06/23 19:41:36 drochner Exp $
+# $NetBSD: Makefile,v 1.121 2009/08/21 15:37:42 wiz Exp $
 
 DISTNAME=	gnome-2.26.2
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -27,16 +28,14 @@ DEPENDS+=	dasher>=4.10.1:../../editors/dasher
 DEPENDS+=	deskbar-applet>=2.26.2:../../misc/deskbar-applet
 # needs opal->ffmpeg->lame, which has a special license
 #DEPENDS+=	ekiga>=3.2.1:../../net/ekiga
-#DEPENDS+=	empathy>=2.26.2:../../chat/empathy
-DEPENDS+=	empathy>=2.24.1:../../chat/empathy
+DEPENDS+=	empathy>=2.26.2:../../chat/empathy
 DEPENDS+=	eog>=2.26.2:../../graphics/eog
-#DEPENDS+=	epiphany>=2.26.2:../../www/epiphany
+DEPENDS+=	epiphany>=2.26.2:../../www/epiphany
 DEPENDS+=	epiphany>=2.26.0:../../www/epiphany
 DEPENDS+=	evince>=2.26.2:../../print/evince
 DEPENDS+=	evolution>=2.26.2:../../mail/evolution
 DEPENDS+=	evolution-data-server>=2.26.2:../../mail/evolution-data-server
-#DEPENDS+=	evolution-exchange>=2.26.2:../../mail/evolution-exchange
-DEPENDS+=	evolution-exchange>=2.26.0:../../mail/evolution-exchange
+DEPENDS+=	evolution-exchange>=2.26.2:../../mail/evolution-exchange
 # XXX: unpackaged
 #DEPENDS+=	evolution-mapi>=0.27.1:../../mail/evolution-mapi
 DEPENDS+=	evolution-webcal>=2.26.0:../../time/evolution-webcal
@@ -44,7 +43,7 @@ DEPENDS+=	file-roller>=2.26.2:../../archivers/file-roller
 DEPENDS+=	gcalctool>=5.26.2:../../math/gcalctool
 DEPENDS+=	gconf-editor>=2.26.0:../../editors/gconf-editor
 #DEPENDS+=	gdm>=2.26.1:../../x11/gdm
-DEPENDS+=	gdm-[0-9]*:../../x11/gdm
+DEPENDS+=	gdm>=2.20.10:../../x11/gdm
 DEPENDS+=	gedit>=2.26.2:../../editors/gedit
 DEPENDS+=	gnome-applets>=2.26.1:../../x11/gnome-applets
 DEPENDS+=	gnome-backgrounds>=2.24.1:../../graphics/gnome-backgrounds
@@ -115,8 +114,7 @@ DEPENDS+=	orca>=2.26.2:../../misc/orca
 DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.6.0:../../x11/py-gtksourceview
 DEPENDS+=	seahorse>=2.26.1:../../security/seahorse
 DEPENDS+=	seahorse-plugins>=2.26.1:../../security/seahorse-plugins
-#DEPENDS+=	sound-juicer>=2.26.1:../../audio/sound-juicer
-DEPENDS+=	sound-juicer>=2.26.0:../../audio/sound-juicer
+DEPENDS+=	sound-juicer>=2.26.1:../../audio/sound-juicer
 DEPENDS+=	swfdec-gnome>=2.26.0:../../multimedia/swfdec-gnome
 DEPENDS+=	tomboy>=0.14.2:../../editors/tomboy
 DEPENDS+=	totem>=2.26.2:../../multimedia/totem
