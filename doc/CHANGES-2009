@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3298 2009/08/20 23:02:12 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3299 2009/08/21 01:57:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4335,3 +4335,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Getopt-Long-Descriptive to 0.076 [seb 2009-08-20]
 	Updated comms/asterisk to 1.2.33nb1 [jnemeth 2009-08-20]
 	Updated devel/p5-App-Cmd to 0.206 [seb 2009-08-20]
+	Added devel/p5-MooseX-App-Cmd version 0.05 [seb 2009-08-21]
