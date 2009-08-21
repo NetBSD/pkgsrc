@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2009/08/21 14:54:30 adam Exp $
+
+--- boost/config/platform/bsd.hpp.orig	2009-08-20 17:55:59.000000000 +0200
++++ boost/config/platform/bsd.hpp
+@@ -37,7 +37,7 @@
+ // and not in <unistd.h>
+ //
+ #if (defined(__FreeBSD__) && (__FreeBSD__ <= 3))\
+-   || defined(__OpenBSD__) || defined(__DragonFly__) 
++   || defined(__OpenBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
+ #  define BOOST_HAS_PTHREADS
+ #endif
+ 
