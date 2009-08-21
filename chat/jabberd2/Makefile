@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.51 2009/08/18 23:50:53 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.52 2009/08/21 02:28:12 schnoebe Exp $
 
-DISTNAME=		jabberd-2.1.24.1
+DISTNAME=		jabberd-2.2.8
 CATEGORIES=		chat
-MASTER_SITES=		http://codex.xiaoka.com/pub/jabberd2/releases/
+MASTER_SITES=		http://ftp.xiaoka.com/jabberd2/releases/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://jabberd2.xiaoka.com/
-COMMENT=		Instant messaging server (version 2)
+COMMENT=		XMPP (Jabber) instant messaging server
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -31,7 +31,15 @@ CONFIGURE_ARGS+=	--enable-pipe
 CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
-CONFIGURE_ARGS+=	--with-sasl=gsasl
+
+.if (${MACHINE_ARCH} == alpha) || (${MACHINE_ARCH} == x86_64)
+CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
+CONFIGURE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
+MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
+CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:C/-O./-O1/:Q}
+CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-O1/:Q}
+MAKE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-O1/:Q}
+.endif
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		tools/*.pl
@@ -44,7 +52,7 @@ BUILD_DEFS+=		VARBASE JABBERD_USER JABBERD_GROUP
 BUILD_DEFS+=		JABBERD_LOGDIR JABBERD_PIDDIR JABBERD_DBDIR
 
 PKG_SYSCONFSUBDIR=	jabberd
-RCD_SCRIPTS=		jabberd c2s sm resolver router s2s
+RCD_SCRIPTS=		jabberd c2s sm router s2s
 JABBERD_USER?=		jabberd
 JABBERD_GROUP?=		jabberd
 FILES_SUBST+=		JABBERD_USER=${JABBERD_USER:Q}
@@ -60,14 +68,14 @@ BINDIR=			${PREFIX}/bin
 EGDIR=			${PREFIX}/share/examples/jabberd
 DOCDIR=			${PREFIX}/share/doc/jabberd
 
-FILES=			jabberd.cfg c2s.xml resolver.xml router.xml	\
+FILES=			jabberd.cfg c2s.xml router.xml	\
 			router-users.xml router-filter.xml s2s.xml	\
 			sm.xml
 DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
-			db-update.mysql	db-setup.sqlite
+			db-update.mysql	db-setup.sqlite db-update.sqlite
 DOCFILES=		README.protocol README UPGRADE ChangeLog
 
-INSTALLATION_DIRS=      bin share/examples/jabberd share/doc/jabberd
+INSTALLATION_DIRS=	bin ${EGDIR} ${DOCDIR}
 
 .for f in ${FILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
@@ -113,9 +121,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
 
+.include "../../net/udns/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
-.include "../../security/gsasl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

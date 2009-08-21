@@ -1,21 +1,15 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:37:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/08/21 02:28:12 schnoebe Exp $
 bin/c2s
 bin/jabberd
 bin/migrate.pl
 bin/pipe-auth.pl
-bin/resolver
 bin/router
 bin/s2s
 bin/sm
 lib/jabberd/authreg_anon.la
 ${PLIST.db}lib/jabberd/authreg_db.la
 ${PLIST.ldap}lib/jabberd/authreg_ldap.la
-${PLIST.ldap}lib/jabberd/authreg_ldapfull.a
 ${PLIST.ldap}lib/jabberd/authreg_ldapfull.la
-${PLIST.ldap}lib/jabberd/authreg_ldapfull.so
-${PLIST.ldap}lib/jabberd/storage_ldapvcard.a
-${PLIST.ldap}lib/jabberd/storage_ldapvcard.la
-${PLIST.ldap}lib/jabberd/storage_ldapvcard.so
 ${PLIST.mysql}lib/jabberd/authreg_mysql.la
 ${PLIST.pam}lib/jabberd/authreg_pam.la
 ${PLIST.pgsql}lib/jabberd/authreg_pgsql.la
@@ -47,12 +41,12 @@ lib/jabberd/mod_vacation.la
 lib/jabberd/mod_validate.la
 lib/jabberd/storage_fs.la
 ${PLIST.db}lib/jabberd/storage_db.la
+${PLIST.ldap}lib/jabberd/storage_ldapvcard.la
 ${PLIST.mysql}lib/jabberd/storage_mysql.la
 ${PLIST.pgsql}lib/jabberd/storage_pgsql.la
 ${PLIST.sqlite}lib/jabberd/storage_sqlite.la
 man/man8/c2s.8
 man/man8/jabberd.8
-man/man8/resolver.8
 man/man8/router.8
 man/man8/s2s.8
 man/man8/sm.8
@@ -66,8 +60,8 @@ share/examples/jabberd/db-setup.mysql
 share/examples/jabberd/db-setup.pgsql
 share/examples/jabberd/db-setup.sqlite
 share/examples/jabberd/db-update.mysql
+share/examples/jabberd/db-update.sqlite
 share/examples/jabberd/jabberd.cfg
-share/examples/jabberd/resolver.xml
 share/examples/jabberd/roster.xml
 share/examples/jabberd/router-filter.xml
 share/examples/jabberd/router-users.xml
@@ -76,7 +70,6 @@ share/examples/jabberd/s2s.xml
 share/examples/jabberd/sm.xml
 share/examples/rc.d/c2s
 share/examples/rc.d/jabberd
-share/examples/rc.d/resolver
 share/examples/rc.d/router
 share/examples/rc.d/s2s
 share/examples/rc.d/sm

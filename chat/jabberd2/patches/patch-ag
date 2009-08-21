@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.7 2008/02/20 14:33:04 xtraeme Exp $
+$NetBSD: patch-ag,v 1.8 2009/08/21 02:28:13 schnoebe Exp $
 
---- etc/c2s.xml.in.orig	2008-02-03 08:23:09.000000000 -0600
+--- etc/c2s.xml.in.orig	2009-07-05 16:54:18.000000000 -0500
 +++ etc/c2s.xml.in
 @@ -5,7 +5,7 @@
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ag,v 1.7 2008/02/20 14:33:04 xtraeme Exp $
      -->
    </log>
  
-@@ -118,7 +118,7 @@
+@@ -125,7 +125,7 @@
      <id register-enable='true'>localhost.localdomain</id>
      <!-- or
      <id realm='company.int'
@@ -38,7 +38,7 @@ $NetBSD: patch-ag,v 1.7 2008/02/20 14:33:04 xtraeme Exp $
          verify-mode='7'
          require-starttls='true'
          register-enable='true'
-@@ -157,7 +157,7 @@
+@@ -164,7 +164,7 @@
           use STARTTLS over the standard XMPP port 5222 then you
           MUST specify the pemfile in the 'id' tag above. -->
      <!--
@@ -47,7 +47,7 @@ $NetBSD: patch-ag,v 1.7 2008/02/20 14:33:04 xtraeme Exp $
      -->
  
      <!-- SSL verify mode - see SSL_CTX_set_verify(3), mode parameter -->
-@@ -284,7 +284,7 @@
+@@ -312,7 +312,7 @@
    <stats>
      <!-- file containing count of packets that went through -->
      <!--
@@ -56,7 +56,7 @@ $NetBSD: patch-ag,v 1.7 2008/02/20 14:33:04 xtraeme Exp $
      -->
    </stats>
  
-@@ -393,7 +393,7 @@
+@@ -382,7 +382,7 @@
      <!-- SQLite driver configuration -->
      <sqlite>
        <!-- Database name -->
@@ -65,7 +65,7 @@ $NetBSD: patch-ag,v 1.7 2008/02/20 14:33:04 xtraeme Exp $
  
        <!-- Transacation support. If this is commented out, transactions
             will be disabled. This might make database accesses faster,
-@@ -407,7 +407,7 @@
+@@ -459,7 +459,7 @@
      <!-- Berkeley DB module configuration -->
      <db>
        <!-- Directory to store database files under -->
@@ -74,7 +74,7 @@ $NetBSD: patch-ag,v 1.7 2008/02/20 14:33:04 xtraeme Exp $
  
        <!-- Synchronize the database to disk after each write. If you
             disable this, database accesses may be faster, but data may
-@@ -535,7 +535,7 @@
+@@ -587,7 +587,7 @@
      <!-- Pipe module configuration -->
      <pipe>
        <!-- Program to execute -->
