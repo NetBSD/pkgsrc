@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3317 2009/08/21 23:13:58 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3318 2009/08/21 23:32:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4356,3 +4356,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/gimp to 2.6.7 [adam 2009-08-21]
 	Added graphics/asymptote version 1.84 [wiz 2009-08-21]
 	Updated devel/doxygen to 1.6.0 [wiz 2009-08-21]
+	Added devel/p5-Proc-Queue version 1.23 [wiz 2009-08-21]
