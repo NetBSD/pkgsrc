@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/08/21 19:41:13 adam Exp $
 bin/gegl
 include/gegl-0.0/gegl-buffer.h
 include/gegl-0.0/gegl-chant.h
@@ -9,7 +9,9 @@ include/gegl-0.0/gegl-paramspecs.h
 include/gegl-0.0/gegl-path.h
 include/gegl-0.0/gegl-plugin.h
 include/gegl-0.0/gegl-simd.h
+include/gegl-0.0/gegl-types.h
 include/gegl-0.0/gegl-utils.h
+include/gegl-0.0/gegl-version.h
 include/gegl-0.0/gegl.h
 include/gegl-0.0/operation/gegl-operation-area-filter.h
 include/gegl-0.0/operation/gegl-operation-composer.h
@@ -29,6 +31,8 @@ lib/gegl-0.0/affine.la
 lib/gegl-0.0/bilateral-filter.la
 lib/gegl-0.0/box-blur.la
 lib/gegl-0.0/brightness-contrast.la
+lib/gegl-0.0/buffer-sink.la
+lib/gegl-0.0/buffer-source.la
 lib/gegl-0.0/c2g.la
 lib/gegl-0.0/checkerboard.la
 lib/gegl-0.0/clear.la
@@ -63,7 +67,6 @@ lib/gegl-0.0/jpg-load.la
 lib/gegl-0.0/layer.la
 lib/gegl-0.0/levels.la
 lib/gegl-0.0/lighten.la
-lib/gegl-0.0/load-buffer.la
 lib/gegl-0.0/load.la
 lib/gegl-0.0/magick-load.la
 lib/gegl-0.0/mblur.la
@@ -81,13 +84,13 @@ lib/gegl-0.0/pixbuf.la
 lib/gegl-0.0/plus.la
 lib/gegl-0.0/png-load.la
 lib/gegl-0.0/png-save.la
+lib/gegl-0.0/ppm-load.la
+lib/gegl-0.0/ppm-save.la
 lib/gegl-0.0/raw-load.la
 lib/gegl-0.0/rectangle.la
 lib/gegl-0.0/remap.la
-lib/gegl-0.0/save-buffer.la
 lib/gegl-0.0/save-pixbuf.la
 lib/gegl-0.0/screen.la
-lib/gegl-0.0/shift.la
 lib/gegl-0.0/snn-mean.la
 lib/gegl-0.0/soft-light.la
 lib/gegl-0.0/src-atop.la
@@ -110,6 +113,7 @@ lib/gegl-0.0/tonemap.la
 lib/gegl-0.0/unsharp-mask.la
 ${PLIST.v4l}lib/gegl-0.0/v4l.la
 lib/gegl-0.0/value-invert.la
+lib/gegl-0.0/weighted_blend.la
 lib/gegl-0.0/whitebalance.la
 lib/gegl-0.0/write-buffer.la
 lib/gegl-0.0/xor.la

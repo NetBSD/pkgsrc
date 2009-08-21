@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/04/15 12:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/21 19:41:13 adam Exp $
 
-DISTNAME=	gegl-0.0.22
-PKGREVISION=	2
+DISTNAME=	gegl-0.1.0
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gegl/0.0/
+MASTER_SITES=	ftp://ftp.gimp.org/pub/gegl/0.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
@@ -25,7 +24,7 @@ PKGCONFIG_OVERRIDE+=	gegl.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=    v4l
+PLIST_VARS+=	v4l
 
 .if ${OPSYS} == "Linux" && exists(/usr/include/linux/videodev.h)
 PLIST.v4l=	yes
