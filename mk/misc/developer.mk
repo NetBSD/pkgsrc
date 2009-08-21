@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.16 2009/08/21 12:51:07 wiz Exp $
+# $NetBSD: developer.mk,v 1.17 2009/08/21 23:34:42 wiz Exp $
 #
 # Public targets for developers:
 #
@@ -127,5 +127,5 @@ changes-entry-noupdate: .PHONY ce-error-check changes-entry-add todo-entry-remov
 changes-entry: .PHONY ce-error-check changes-entry-update changes-entry-add todo-entry-remove
 	@${DO_NADA}
 
-commit-changes-entry cce: .PHONY ce-error-check changes-entry-update changes-entry-add changes-entry-commit
+commit-changes-entry cce: .PHONY ce-error-check changes-entry-update changes-entry-add todo-entry-remove changes-entry-commit
 	@${DO_NADA}
