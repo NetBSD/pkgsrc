@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8357 2009/08/21 12:48:14 wiz Exp $
+$NetBSD: TODO,v 1.8358 2009/08/21 12:55:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -474,7 +474,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o claws-mail-3.7.2
 	o climm-0.6.4
 	o clisp-2.48 [don't update until either openaxiom or clisp gets fixed]
-	o clive-2.2.5
 	o clutter-1.0.2
 	o clutter-gst-0.10.0
 	o clutter-gtk-0.10.2
@@ -772,7 +771,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcares-1.6.0
 	o libchewing-0.3.0
 	o libdockapp-0.6.1
-	o libevent-1.4.12
 	o libextractor-0.5.23
 	o libflash-0.4.13
 	o libgda-4.0.2 [GNOME 2.26]
@@ -793,7 +791,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libnasl-2.3.1
 	o libntlm-1.1
 	o libole2-2.2.8
-	o liboobs-2.22.1
 	o libprelude-0.9.24 [pkg/41763]
 	o libpreludedb-0.9.15.3 [pkg/41763]
 	o libproxy-0.3.0
@@ -808,7 +805,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lighttpd-1.4.23
 	o lincvs-2.1.3 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
-	o lmms-0.2.1
+	o lmms-0.4.5
 	o lout-3.38
 	o lpairs-1.0.4
 	o lq-sp-1.3.4.13
@@ -992,6 +989,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phpmyadmin-3.2.1
 	o phylip-3.68
 	o picp-0.6.8
+	o pidgin-2.6.1
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
@@ -1193,7 +1191,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o suse_base-11.0
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
-	o system-tools-backends-2.8.1
+	o system-tools-backends-2.8.1 [needs polkit>=1.0?]
 	o systrace-1.6e
 	o tacacs-4.0.4.14
 	o tads-3.0.16
