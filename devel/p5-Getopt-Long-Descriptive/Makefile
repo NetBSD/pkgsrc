@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/20 22:28:00 seb Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/21 05:36:37 sno Exp $
 
 DISTNAME=		Getopt-Long-Descriptive-0.076
 PKGNAME=		p5-${DISTNAME}
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Getopt/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Getopt-Long-Descriptive/
 COMMENT=		Perl 5 module providing Getopt::Long with usage text
+LICENSE=		${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
