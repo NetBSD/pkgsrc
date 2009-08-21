@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2008/09/01 10:06:33 dholland Exp $
+$NetBSD: patch-ac,v 1.3 2009/08/21 15:02:32 adam Exp $
 
---- Makefile.orig	2006-03-02 18:02:51.000000000 -0500
-+++ Makefile	2008-09-01 06:02:30.000000000 -0400
-@@ -87,7 +87,7 @@ lib/$(LIB.STATIC): $(LIB.OBJS)
+--- Makefile.orig	2009-08-19 19:40:40.000000000 +0200
++++ Makefile
+@@ -84,7 +84,7 @@ lib/$(LIB.STATIC): $(LIB.OBJS)
  	$(AR) cr $@ $^
  
  lib/$(LIB.SHARED): $(LIB.SOBJS)
@@ -11,74 +11,59 @@ $NetBSD: patch-ac,v 1.2 2008/09/01 10:06:33 dholland Exp $
  ifeq ($(patsubst mingw%,mingw,$(SYSTEM)), mingw)
  else
  	$(LN) $(LIB.SHARED) lib/$(LIB.SONAME)
-@@ -95,10 +95,10 @@ else
+@@ -92,10 +92,10 @@ else
  endif
  
- bin/$(GLEWINFO.BIN): $(GLEWINFO.BIN.SRCS)
--	$(CC) $(CFLAGS) -o $@ $^ $(BIN.LIBS)
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(BIN.LIBS)
+ bin/$(GLEWINFO.BIN): $(GLEWINFO.BIN.SRCS) lib/$(LIB.SHARED)
+-	$(CC) $(CFLAGS) -o $@ $(GLEWINFO.BIN.SRCS) $(BIN.LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(GLEWINFO.BIN.SRCS) $(BIN.LIBS)
  
- bin/$(VISUALINFO.BIN): $(VISUALINFO.BIN.SRCS)
--	$(CC) $(CFLAGS) -o $@ $^ $(BIN.LIBS)
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(BIN.LIBS)
+ bin/$(VISUALINFO.BIN): $(VISUALINFO.BIN.SRCS) lib/$(LIB.SHARED)
+-	$(CC) $(CFLAGS) -o $@ $(VISUALINFO.BIN.SRCS) $(BIN.LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(VISUALINFO.BIN.SRCS) $(BIN.LIBS)
  
  %.o: %.c
  	$(CC) -c $(CFLAGS) -o $@ $<
-@@ -111,40 +111,40 @@ src/glew.pic_o: src/glew.c include/GL/gl
+@@ -108,31 +108,31 @@ src/glew.pic_o: src/glew.c include/GL/gl
  
  install: all
  # directories
--	$(INSTALL) -d -m 0755 $(GLEW_DEST)/bin
--	$(INSTALL) -d -m 0755 $(GLEW_DEST)/include/GL
+-	$(INSTALL) -d -m 0755 $(BINDIR)
+-	$(INSTALL) -d -m 0755 $(INCDIR)
 -	$(INSTALL) -d -m 0755 $(LIBDIR)
-+	$(INSTALL) -d -m 0755 $(DESTDIR)$(GLEW_DEST)/bin
-+	$(INSTALL) -d -m 0755 $(DESTDIR)$(GLEW_DEST)/include/GL
++	$(INSTALL) -d -m 0755 $(DESTDIR)$(BINDIR)
++	$(INSTALL) -d -m 0755 $(DESTDIR)$(INCDIR)
 +	$(INSTALL) -d -m 0755 $(DESTDIR)$(LIBDIR)
  # runtime
  ifeq ($(patsubst mingw%,mingw,$(SYSTEM)), mingw)
--	$(INSTALL) $(STRIP) -m 0644 lib/$(LIB.SHARED) $(GLEW_DEST)/bin/
-+	$(INSTALL) $(STRIP) -m 0644 lib/$(LIB.SHARED) $(DESTDIR)$(GLEW_DEST)/bin/
+ 	$(STRIP) -x lib/$(LIB.SHARED)
+ 	$(INSTALL) -m 0644 lib/$(LIB.SHARED) $(BINDIR)/
  else
-   ifeq ($(patsubst darwin%,darwin,$(SYSTEM)), darwin)
- 	strip -x lib/$(LIB.SHARED)
+ 	$(STRIP) -x lib/$(LIB.SHARED)
 -	$(INSTALL) -m 0644 lib/$(LIB.SHARED) $(LIBDIR)/
 -	$(LN) $(LIB.SHARED) $(LIBDIR)/$(LIB.SONAME)
 +	$(INSTALL) -m 0644 lib/$(LIB.SHARED) $(DESTDIR)$(LIBDIR)/
 +	$(LN) $(LIB.SHARED) $(DESTDIR)$(LIBDIR)/$(LIB.SONAME)
-   else
--	$(INSTALL) $(STRIP) -m 0644 lib/$(LIB.SHARED) $(LIBDIR)/
--	$(LN) $(LIB.SHARED) $(LIBDIR)/$(LIB.SONAME)
-+	$(INSTALL) $(STRIP) -m 0644 lib/$(LIB.SHARED) $(DESTDIR)$(LIBDIR)/
-+	$(LN) $(LIB.SHARED) $(DESTDIR)$(LIBDIR)/$(LIB.SONAME)
-   endif
  endif
  # development files
--	$(INSTALL) -m 0644 include/GL/wglew.h $(GLEW_DEST)/include/GL
--	$(INSTALL) -m 0644 include/GL/glew.h $(GLEW_DEST)/include/GL
--	$(INSTALL) -m 0644 include/GL/glxew.h $(GLEW_DEST)/include/GL
-+	$(INSTALL) -m 0644 include/GL/wglew.h $(DESTDIR)$(GLEW_DEST)/include/GL
-+	$(INSTALL) -m 0644 include/GL/glew.h $(DESTDIR)$(GLEW_DEST)/include/GL
-+	$(INSTALL) -m 0644 include/GL/glxew.h $(DESTDIR)$(GLEW_DEST)/include/GL
+-	$(INSTALL) -m 0644 include/GL/wglew.h $(INCDIR)/
+-	$(INSTALL) -m 0644 include/GL/glew.h $(INCDIR)/
+-	$(INSTALL) -m 0644 include/GL/glxew.h $(INCDIR)/
++	$(INSTALL) -m 0644 include/GL/wglew.h $(DESTDIR)$(INCDIR)/
++	$(INSTALL) -m 0644 include/GL/glew.h $(DESTDIR)$(INCDIR)/
++	$(INSTALL) -m 0644 include/GL/glxew.h $(DESTDIR)$(INCDIR)/
  ifeq ($(patsubst mingw%,mingw,$(SYSTEM)), mingw)
--	$(INSTALL) -m 0644 lib/$(LIB.DEVLNK) $(LIBDIR)/
-+	$(INSTALL) -m 0644 lib/$(LIB.DEVLNK) $(DESTDIR)$(LIBDIR)/
+ 	$(INSTALL) -m 0644 lib/$(LIB.DEVLNK) $(LIBDIR)/
  else
-   ifeq ($(patsubst darwin%,darwin,$(SYSTEM)), darwin)
  	strip -x lib/$(LIB.STATIC)
 -	$(INSTALL) -m 0644 lib/$(LIB.STATIC) $(LIBDIR)/
 -	$(LN) $(LIB.SHARED) $(LIBDIR)/$(LIB.DEVLNK)
 +	$(INSTALL) -m 0644 lib/$(LIB.STATIC) $(DESTDIR)$(LIBDIR)/
 +	$(LN) $(LIB.SHARED) $(DESTDIR)$(LIBDIR)/$(LIB.DEVLNK)
-   else
--	$(INSTALL) $(STRIP) -m 0644 lib/$(LIB.STATIC) $(LIBDIR)/
--	$(LN) $(LIB.SHARED) $(LIBDIR)/$(LIB.DEVLNK)
-+	$(INSTALL) $(STRIP) -m 0644 lib/$(LIB.STATIC) $(DESTDIR)$(LIBDIR)/
-+	$(LN) $(LIB.SHARED) $(DESTDIR)$(LIBDIR)/$(LIB.DEVLNK)
-   endif
  endif
  # utilities
--	$(INSTALL) -s -m 0755 bin/$(GLEWINFO.BIN) bin/$(VISUALINFO.BIN) $(GLEW_DEST)/bin/
-+	$(INSTALL) -s -m 0755 bin/$(GLEWINFO.BIN) bin/$(VISUALINFO.BIN) $(DESTDIR)$(GLEW_DEST)/bin/
+-	$(INSTALL) -s -m 0755 bin/$(GLEWINFO.BIN) bin/$(VISUALINFO.BIN) $(BINDIR)/
++	$(INSTALL) -s -m 0755 bin/$(GLEWINFO.BIN) bin/$(VISUALINFO.BIN) $(DESTDIR)$(BINDIR)/
  
  uninstall:
- 	$(RM) $(GLEW_DEST)/include/GL/wglew.h
+ 	$(RM) $(INCDIR)/wglew.h
