@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/09 19:44:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/21 23:43:42 wiz Exp $
 include/lensfun.h
 lib/liblensfun.so
 lib/liblensfun.so.0
@@ -44,7 +44,7 @@ share/doc/${PKGNAME}/manual/group__Database.html
 share/doc/${PKGNAME}/manual/group__Lens.html
 share/doc/${PKGNAME}/manual/group__Mount.html
 share/doc/${PKGNAME}/manual/index.html
-share/doc/${PKGNAME}/manual/lensfun_8h-source.html
+share/doc/${PKGNAME}/manual/lensfun_8h_source.html
 share/doc/${PKGNAME}/manual/lensfun_8h.html
 share/doc/${PKGNAME}/manual/lgpl.html
 share/doc/${PKGNAME}/manual/license.html
