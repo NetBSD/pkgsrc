@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8355 2009/08/21 08:30:42 wiz Exp $
+$NetBSD: TODO,v 1.8356 2009/08/21 11:29:28 adam Exp $
 
 Suggested new packages
 ======================
@@ -531,7 +531,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ed-1.4
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.0.19
 	o egtk-0.3.6.2
 	o electric-8.09
 	o electricfence-2.4.16
