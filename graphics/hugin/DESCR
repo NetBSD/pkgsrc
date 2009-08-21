@@ -1,0 +1,17 @@
+Hugin is an opensource graphical user interface (GUI) for Panorama tools.
+
+Like other GUI front-ends, hugin provides an easy-to-use unified point-and-click
+interface to a whole range of other command-line tools including:
+* autopano-sift, autopano-sift-C, panomatic or autopano for automatic creation
+  of control points.
+* nona for remapping input images and rendering output images.
+* enblend and enfuse for seamless blending of output images.
+
+The Hugin project's mission is not only to provide a powerful GUI, but also to
+provide opensource replacements for the small number of closed source components
+of Panorama tools, especially PTStitcher. A PTStitcher replacement, called nona
+has been developed, supporting its most important features.
+
+Among the many flexible Hugin workflow options, it is possible to correct
+exposure, Vignetting and White balance between photos; generate HDR or exposure
+blended output from bracketed photos; or use 16bit and HDR input data natively.
