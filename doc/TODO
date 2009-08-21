@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8356 2009/08/21 11:29:28 adam Exp $
+$NetBSD: TODO,v 1.8357 2009/08/21 12:48:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -871,7 +871,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
 	o mp3blaster-3.2.3
-	o mp3diags-0.99.05.031
 	o mpc-0.17
 	o mpeg4ip-1.6.1
 	o mpg123-1.9.0
