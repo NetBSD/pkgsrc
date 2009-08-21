@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8358 2009/08/21 12:55:04 wiz Exp $
+$NetBSD: TODO,v 1.8359 2009/08/21 15:35:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -540,7 +540,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elscreen-1.4.6
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o empathy-2.26.2 [GNOME 2.26]
 	o enlightenment-1.0.0
 	o epic4-2.6
 	o epiphany-extensions-2.26.1
