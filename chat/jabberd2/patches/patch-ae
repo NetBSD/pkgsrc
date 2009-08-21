@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.4 2008/02/20 14:33:04 xtraeme Exp $
+$NetBSD: patch-ae,v 1.5 2009/08/21 02:28:13 schnoebe Exp $
 
---- etc/router.xml.in.orig	2008-01-08 04:23:48.000000000 -0600
+--- etc/router.xml.in.orig	2008-07-16 04:36:58.000000000 -0500
 +++ etc/router.xml.in
 @@ -5,7 +5,7 @@
  
@@ -38,11 +38,12 @@ $NetBSD: patch-ae,v 1.4 2008/02/20 14:33:04 xtraeme Exp $
      -->
    </local>
  
-@@ -185,6 +185,6 @@
+@@ -191,7 +191,7 @@
  
-   <!-- File containing packet filter rules.
-        May be used for fine grained packet routing control. -->
--  <filter>@sysconfdir@/router-filter.xml</filter>
-+  <filter>@PKG_SYSCONFDIR@/router-filter.xml</filter>
+     <!-- File containing packet filter rules.
+          May be used for fine grained packet routing control. -->
+-    <filter>@sysconfdir@/router-filter.xml</filter>
++    <filter>@PKG_SYSCONFDIR@/router-filter.xml</filter>
  
- </router>
+   </aci>
+ 
