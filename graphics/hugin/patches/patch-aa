@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/21 18:08:46 adam Exp $
+
+--- src/hugin1/hugin/config_defaults.h.orig	2009-08-21 19:36:01.000000000 +0200
++++ src/hugin1/hugin/config_defaults.h
+@@ -148,7 +148,7 @@
+ 
+ #endif
+ 
+-#elif defined unix
++#else
+ 
+ #define HUGIN_PT_SCRIPTFILE                   "PT_script.txt"
+ 
