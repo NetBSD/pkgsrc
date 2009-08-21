@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.21 2009/05/17 23:35:01 snj Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.22 2009/08/21 12:54:07 wiz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -84,8 +84,10 @@
   <varname>CTYPE</varname> variable on the command line to "Added",
   "Moved", or "Removed".  You can set <varname>NETBSD_LOGIN_NAME</varname>
   in &mk.conf; if your local login name is
-  not the same as your NetBSD login name. Don't forget to commit
-  the changes to <filename>pkgsrc/doc/CHANGES-<replaceable>YYYY</replaceable></filename>!</para>
+  not the same as your NetBSD login name. The target also automatically
+  removes possibly existing entries for the package in the
+  <filename>TODO</filename> file. Don't forget to commit
+  the changes, e.g. by using <command>make changes-entry-commit</command>!</para>
 </sect1>
 
 <sect1 id="committing-importing">
