@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3306 2009/08/21 14:45:11 plunky Exp $
+$NetBSD: CHANGES-2009,v 1.3307 2009/08/21 14:48:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4343,3 +4343,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated comms/efax-gtk to 3.0.20 [adam 2009-08-21]
 	Updated audio/mp3diags to 0.99.05.031 [wiz 2009-08-21]
 	Updated comms/obexapp to 1.4.12 [plunky 2009-08-21]
+	Updated textproc/mdocml to 1.9.1 [joerg 2009-08-21]
