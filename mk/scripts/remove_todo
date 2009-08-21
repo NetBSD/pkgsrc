@@ -1,0 +1,42 @@
+#!/bin/sh
+# usage:
+# $0 TODO-FILE PKGBASE PKGVERSION
+# for example
+# $0 /usr/pkgsrc/doc/TODO opal 3.6.4
+# removes an entry for opal 3.6.4 or an older version from /usr/pkgsrc/doc/TODO
+#
+# test cases:
+# remove_todo foo-1.2 with no foo entry in TODO
+# remove_todo foo-1.2 with "foo-1.1", "foo-1.2", or "foo-1.3" in TODO
+# remove_todo foo-1.2 with "foo-bar-1.1" in TODO
+# remove_todo foo-1.2 with "foo-1.1 [some comment]", "foo-1.2 [some comment]", "foo-1.3 [some comment] in TODO
+set -e
+
+if [ "$#" != 3 ]
+then
+    echo incorrect number of arguments >&2
+    echo usage: $0 TODO-FILE PKGBASE PKGVERSION >&2
+    exit 1
+fi
+
+TODO=$1
+PKGBASE=$2
+PKGVERSION=$3
+TMPFILE="$TODO.$$"
+
+MATCH=$(grep -n '^[ 	]*o '"$PKGBASE"'-[0-9]' "$TODO" | sed 's/^\([^:]*:\)[ 	]*o /\1/;s/ .*//')
+
+if [ $(echo "$MATCH" | wc -l) != 1 ]; then
+     echo "$0: multiple matches" 1>&2
+     echo "$MATCH" 1>&2
+     exit 1
+fi
+
+LINE=$(echo "$MATCH" | sed 's/:.*//')
+FOUNDPKG=$(echo "$MATCH" | sed -e "s/^[^:]*://")
+
+if pkg_admin pmatch "$PKGBASE"\<="$PKGVERSION" "$FOUNDPKG"; then
+    echo Removing "$FOUNDPKG" from TODO
+    sed < "$TODO" "$LINE"d > "$TMPFILE"
+    mv "$TMPFILE" "$TODO"
+fi
