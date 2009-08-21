@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2009/08/21 15:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2009/08/21 15:56:32 wiz Exp $
 
 DISTNAME=	gnome-2.26.2
 PKGREVISION=	1
@@ -120,6 +120,7 @@ DEPENDS+=	tomboy>=0.14.2:../../editors/tomboy
 DEPENDS+=	totem>=2.26.2:../../multimedia/totem
 DEPENDS+=	totem-pl-parser>=2.26.2:../../multimedia/totem-pl-parser
 DEPENDS+=	vinagre>=2.26.2:../../net/vinagre
+# compilation errors on NetBSD, see wip/vino
 #DEPENDS+=	vino>=2.26.2:../../net/vino
 DEPENDS+=	vino>=2.24.1:../../net/vino
 DEPENDS+=	vte>=0.20.2:../../x11/vte
