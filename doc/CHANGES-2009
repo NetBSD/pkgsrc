@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3308 2009/08/21 15:29:39 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3309 2009/08/21 15:35:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4345,3 +4345,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated comms/obexapp to 1.4.12 [plunky 2009-08-21]
 	Updated textproc/mdocml to 1.9.1 [joerg 2009-08-21]
 	Updated chat/empathy to 2.26.1 [wiz 2009-08-21]
+	Updated chat/empathy to 2.26.2 [wiz 2009-08-21]
