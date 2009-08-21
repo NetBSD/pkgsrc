@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/05/21 11:41:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/21 15:39:09 wiz Exp $
 
-DISTNAME=	gnome-mobile-2.26.1.99
+DISTNAME=	gnome-mobile-2.26.1.100
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -20,8 +20,7 @@ DEPENDS+=	atk>=1.26.0:../../devel/atk
 DEPENDS+=	glib2>=2.20.2:../../devel/glib2
 #DEPENDS+=	gst-plugins0.10-base>=0.10.23:../../multimedia/gst-plugins0.10-base
 DEPENDS+=	gst-plugins0.10-base>=0.10.22:../../multimedia/gst-plugins0.10-base
-#DEPENDS+=	gstreamer0.10>=0.10.23:../../multimedia/gstreamer0.10
-DEPENDS+=	gstreamer0.10>=0.10.22:../../multimedia/gstreamer0.10
+DEPENDS+=	gstreamer0.10>=0.10.23:../../multimedia/gstreamer0.10
 DEPENDS+=	gtk2+>=2.16.1:../../x11/gtk2
 DEPENDS+=	gtk-doc>=1.11:../../textproc/gtk-doc
 DEPENDS+=	pango>=1.24.2:../../devel/pango
