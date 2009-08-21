@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1216 2009/08/21 01:56:59 seb Exp $
+# $NetBSD: Makefile,v 1.1217 2009/08/21 23:31:19 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -783,6 +783,7 @@ SUBDIR+=	p5-Proc-Daemon
 SUBDIR+=	p5-Proc-PID-File
 SUBDIR+=	p5-Proc-Pidfile
 SUBDIR+=	p5-Proc-ProcessTable
+SUBDIR+=	p5-Proc-Queue
 SUBDIR+=	p5-Proc-Simple
 SUBDIR+=	p5-Readonly
 SUBDIR+=	p5-Readonly-XS
