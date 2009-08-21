@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8360 2009/08/21 19:48:29 adam Exp $
+$NetBSD: TODO,v 1.8361 2009/08/21 21:37:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -341,6 +341,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o GutenMark-20090216
+	o ImageMagick-6.5.4
 	o MAMEDiff-2.30
 	o Mesa-7.5
 	o MesaLib-7.5
@@ -517,6 +518,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dircproxy-devel-1.2.0.2
 	o dnstracer-1.9
 	o dovecot-1.2.2
+	o doxygen-1.6.0
 	o drivel-2.0.4
 	o dropbear-0.52
 	o drscheme-4.0.2
@@ -662,7 +664,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.7
 	o gss-0.1.0
 	o gst-plugins0.10-ffmpeg-0.10.7
-	o gtexinfo-4.13
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.1
@@ -1041,6 +1042,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
 	o py-html2text-2.36
+	o py-karaoke-0.7.0
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6 [pkg/41675]
 	o py-m2crypto-0.19.1
