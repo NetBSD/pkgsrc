@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3300 2009/08/21 02:30:53 schnoebe Exp $
+$NetBSD: CHANGES-2009,v 1.3301 2009/08/21 03:22:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4337,3 +4337,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-App-Cmd to 0.206 [seb 2009-08-20]
 	Added devel/p5-MooseX-App-Cmd version 0.05 [seb 2009-08-21]
 	Updated chat/jabberd2 to 2.2.8 [schnoebe 2009-08-21]
+	Updated devel/ragel to 6.5 [minskim 2009-08-21]
