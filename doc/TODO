@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8359 2009/08/21 15:35:00 wiz Exp $
+$NetBSD: TODO,v 1.8360 2009/08/21 19:48:29 adam Exp $
 
 Suggested new packages
 ======================
@@ -423,7 +423,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avr-libc-1.4.5
 	o avrdude-5.8 [pkg/41750]
 	o awesome-3.3.2
-	o babl-0.1.0
 	o baci-20040415
 	o bacula-3.0.2
 	o balance-3.42
@@ -611,7 +610,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geany-0.18
 	o geda-1.5.2.20090328
 	o gedit-plugins-2.26.3 [GNOME 2.26]
-	o gegl-0.1.0
 	o genius-1.0.7
 	o gentoo-0.15.6
 	o gettext-0.17
@@ -621,7 +619,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ghc-6.10.4
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
-	o gimp-2.6.7
 	o gimp-docs-2.4.2
 	o gkrellm-2.3.1
 	o gkrellm-multiping-2.0.13
