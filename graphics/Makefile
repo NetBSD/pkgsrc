@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.531 2009/08/21 18:10:00 adam Exp $
+# $NetBSD: Makefile,v 1.532 2009/08/21 23:02:55 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -29,6 +29,7 @@ SUBDIR+=	aalib
 SUBDIR+=	agg
 SUBDIR+=	aqsis
 SUBDIR+=	artist
+SUBDIR+=	asymptote
 SUBDIR+=	autopano-sift-C
 SUBDIR+=	autotrace
 SUBDIR+=	aview
