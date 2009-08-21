@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3315 2009/08/21 23:04:19 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3316 2009/08/21 23:10:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4354,5 +4354,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/babl to 0.1.0 [adam 2009-08-21]
 	Updated graphics/gegl to 0.1.0 [adam 2009-08-21]
 	Updated graphics/gimp to 2.6.7 [adam 2009-08-21]
-	Added graphics/asymptote version 1.84 [wiz 2009-08-21]
 	Added graphics/asymptote version 1.84 [wiz 2009-08-21]
