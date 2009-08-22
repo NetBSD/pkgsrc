@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2009/08/12 07:53:21 asau Exp $
+# $NetBSD: Makefile,v 1.23 2009/08/22 15:57:37 asau Exp $
 #
 
-DISTNAME=		maxima-5.19.0
+DISTNAME=		maxima-5.19.1
 # On updates, please make sure editors/TeXmacs knows about the new
 # version number.
 # (if needed, patch plugins/maxima/bin/{maxima_detect,tm_maxima})
@@ -11,6 +11,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=maxima/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://maxima.sourceforge.net/
 COMMENT=		Computer algebra system
+LICENSE=		gnu-gpl-v2
 
 # Note: lisp backend is depended and setup up for in options.mk
 DEPENDS+=		tk-[0-9]*:../../x11/tk
