@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/08/19 14:16:02 asau Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/22 11:44:39 asau Exp $
 #
 
 DISTNAME=		ecl-9.8.4
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://ecls.sourceforge.net/
 COMMENT=		Embeddable Common Lisp
-LICENSE=		
+LICENSE=		gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
