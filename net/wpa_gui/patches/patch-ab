@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2006/11/27 14:26:06 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2009/08/22 06:33:40 dsainty Exp $
 
---- wpa_gui/wpagui.ui.h.orig	2006-11-27 14:14:56.000000000 +0000
-+++ wpa_gui/wpagui.ui.h
+--- wpa_supplicant/wpa_gui/wpagui.ui.h.orig	2006-11-27 14:14:56.000000000 +0000
++++ wpa_supplicant/wpa_gui/wpagui.ui.h
 @@ -10,12 +10,7 @@
  ** destructor.
  *****************************************************************************/
@@ -12,6 +12,6 @@ $NetBSD: patch-ab,v 1.1 2006/11/27 14:26:06 joerg Exp $
  #include <unistd.h>
 -#endif
 -
+ #include <stdlib.h>
  
  void WpaGui::init()
- {
