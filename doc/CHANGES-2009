@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3325 2009/08/22 12:04:12 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3326 2009/08/22 12:05:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4364,3 +4364,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyocabinet to 1.4.32 [obata 2009-08-22]
 	Updated www/http_load to 20060312 [obata 2009-08-22]
 	Added devel/p5-lib-abs version 0.90 [seb 2009-08-22]
+	Updated devel/p5-ex-lib to 0.90 [seb 2009-08-22]
