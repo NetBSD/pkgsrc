@@ -1,4 +1,3 @@
-The Perl 5 module ex::lib is a library to transform relative paths
-to absolute paths at the BEGIN stage, and push them to @INC.  Relative
-path origin is not the current working directory, but the location
-of the file the statement is in.
+Don't use this Perl 5 module (ex::lib). It's just a compatibility
+wrapper for lib::abs. But if you want, see the docs for lib::abs
+(devel/p5-lib-abs package). Interface is the same.
