@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/08/12 07:53:21 asau Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/08/22 15:57:37 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -945,6 +945,11 @@ share/maxima/${PKGVERSION}/share/lapack/lapack/dlaexc.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlahqr.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlahrd.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlaln2.lisp
+share/maxima/${PKGVERSION}/share/lapack/lapack/dlamc1.lisp
+share/maxima/${PKGVERSION}/share/lapack/lapack/dlamc2.lisp
+share/maxima/${PKGVERSION}/share/lapack/lapack/dlamc3.lisp
+share/maxima/${PKGVERSION}/share/lapack/lapack/dlamc4.lisp
+share/maxima/${PKGVERSION}/share/lapack/lapack/dlamc5.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlamch.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlamrg.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlange.lisp
