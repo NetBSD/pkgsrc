@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3322 2009/08/22 06:38:18 dsainty Exp $
+$NetBSD: CHANGES-2009,v 1.3323 2009/08/22 06:42:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4361,3 +4361,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/diffstat to 1.48 [wiz 2009-08-21]
 	Updated graphics/lensfun to 0.2.3nb1 [wiz 2009-08-21]
 	Updated net/wpa_gui to 0.6.9 [dsainty 2009-08-22]
+	Updated databases/tokyocabinet to 1.4.32 [obata 2009-08-22]
