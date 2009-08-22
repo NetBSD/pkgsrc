@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8364 2009/08/21 23:39:31 wiz Exp $
+$NetBSD: TODO,v 1.8365 2009/08/22 06:38:18 dsainty Exp $
 
 Suggested new packages
 ======================
@@ -1281,7 +1281,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wmweather-2.4.4
 	o wmx-7
 	o worker-2.17.4
-	o wpa_gui-0.6.4 [pkg/39811]
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9e
 	o wxRemind-101
