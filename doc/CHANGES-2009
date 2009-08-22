@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3324 2009/08/22 12:01:37 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3325 2009/08/22 12:04:12 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4363,3 +4363,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/wpa_gui to 0.6.9 [dsainty 2009-08-22]
 	Updated databases/tokyocabinet to 1.4.32 [obata 2009-08-22]
 	Updated www/http_load to 20060312 [obata 2009-08-22]
+	Added devel/p5-lib-abs version 0.90 [seb 2009-08-22]
