@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 20:34:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/08/22 22:46:01 abs Exp $
 bin/sun6-appletviewer
 bin/sun6-apt
 bin/sun6-extcheck
@@ -447,6 +447,7 @@ java/sun-6/db/docs/html/devguide/cdevconcepts844813.html
 java/sun-6/db/docs/html/devguide/cdevconcepts89097.html
 java/sun-6/db/docs/html/devguide/cdevconcepts89498.html
 java/sun-6/db/docs/html/devguide/cdevconcepts95005.html
+java/sun-6/db/docs/html/devguide/cdevconceptssavepoints.html
 java/sun-6/db/docs/html/devguide/cdevcsecure10983.html
 java/sun-6/db/docs/html/devguide/cdevcsecure12392.html
 java/sun-6/db/docs/html/devguide/cdevcsecure21547.html
@@ -3146,6 +3147,7 @@ java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-api-progress.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-api-visual.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-core-execution.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-core-multiview.xml
+java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-core-nativeaccess.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-core-output2.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-core-ui.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-core-windows.xml
@@ -3166,6 +3168,8 @@ java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-modules-queries.xm
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-modules-sendopts.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-modules-settings.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-modules-templates.xml
+java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-spi-quicksearch.xml
+java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-swing-outline.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-swing-plaf.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-netbeans-swing-tabcontrol.xml
 java/sun-6/lib/visualvm/platform9/config/Modules/org-openide-actions.xml
@@ -3197,6 +3201,7 @@ java/sun-6/lib/visualvm/platform9/modules/org-netbeans-api-progress.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-api-visual.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-core-execution.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-core-multiview.jar
+java/sun-6/lib/visualvm/platform9/modules/org-netbeans-core-nativeaccess.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-core-output2.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-core-ui.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-core-windows.jar
@@ -3217,6 +3222,8 @@ java/sun-6/lib/visualvm/platform9/modules/org-netbeans-modules-queries.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-modules-sendopts.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-modules-settings.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-modules-templates.jar
+java/sun-6/lib/visualvm/platform9/modules/org-netbeans-spi-quicksearch.jar
+java/sun-6/lib/visualvm/platform9/modules/org-netbeans-swing-outline.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-swing-plaf.jar
 java/sun-6/lib/visualvm/platform9/modules/org-netbeans-swing-tabcontrol.jar
 java/sun-6/lib/visualvm/platform9/modules/org-openide-actions.jar
@@ -3238,6 +3245,7 @@ java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-api-visual.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-bootstrap.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-core-execution.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-core-multiview.xml
+java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-core-nativeaccess.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-core-output2.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-core-startup.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-core-ui.xml
@@ -3259,6 +3267,8 @@ java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-modules-queries.x
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-modules-sendopts.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-modules-settings.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-modules-templates.xml
+java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-spi-quicksearch.xml
+java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-swing-outline.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-swing-plaf.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-netbeans-swing-tabcontrol.xml
 java/sun-6/lib/visualvm/platform9/update_tracking/org-openide-actions.xml
@@ -3287,15 +3297,16 @@ java/sun-6/lib/visualvm/profiler3/lib/deployed/jdk15/linux/libprofilerinterface.
 java/sun-6/lib/visualvm/profiler3/lib/deployed/jdk16/linux/libprofilerinterface.so
 java/sun-6/lib/visualvm/profiler3/lib/jfluid-server-15.jar
 java/sun-6/lib/visualvm/profiler3/lib/jfluid-server.jar
-java/sun-6/lib/visualvm/profiler3/modules/org-netbeans-modules-profiler.jar
 java/sun-6/lib/visualvm/profiler3/modules/org-netbeans-lib-profiler-common.jar
 java/sun-6/lib/visualvm/profiler3/modules/org-netbeans-lib-profiler-ui.jar
 java/sun-6/lib/visualvm/profiler3/modules/org-netbeans-lib-profiler.jar
+java/sun-6/lib/visualvm/profiler3/modules/org-netbeans-modules-profiler.jar
 java/sun-6/lib/visualvm/profiler3/modules/org-netbeans-modules-profiler.jar
 java/sun-6/lib/visualvm/profiler3/update_tracking/org-netbeans-lib-profiler-common.xml
 java/sun-6/lib/visualvm/profiler3/update_tracking/org-netbeans-lib-profiler-ui.xml
 java/sun-6/lib/visualvm/profiler3/update_tracking/org-netbeans-lib-profiler.xml
 java/sun-6/lib/visualvm/profiler3/update_tracking/org-netbeans-modules-profiler.xml
+java/sun-6/lib/visualvm/visualvm/.lastModified
 java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-application-views.xml
 java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-application.xml
 java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-attach.xml
@@ -3340,6 +3351,7 @@ java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-threaddump.jar
 java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-tools.jar
 java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-core-windows_visualvm.jar
 java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-core_visualvm.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-profiler_visualvm.jar
 java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-application-views.xml
 java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-application.xml
 java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-attach.xml
