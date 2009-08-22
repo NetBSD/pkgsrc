@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2007/02/26 17:55:14 snj Exp $
+$NetBSD: patch-ab,v 1.4 2009/08/22 21:44:27 abs Exp $
 
---- lsdvd.c.orig	2006-08-24 11:51:58.000000000 +0200
-+++ lsdvd.c	2006-08-24 11:52:09.000000000 +0200
+--- lsdvd.c.orig	2006-03-02 13:48:11.000000000 +0000
++++ lsdvd.c
 @@ -13,6 +13,7 @@
   *  2003-04-19  Cleanups get_title_name, added dvdtime2msec, added helper macros,
   *			  output info structures in form of a Perl module, by Henk Vergonet.
@@ -47,8 +47,22 @@ $NetBSD: patch-ab,v 1.3 2007/02/26 17:55:14 snj Exp $
  
  	program_name = argv[0];
  
-@@ -309,8 +318,6 @@ int main(int argc, char *argv[])
+@@ -276,6 +285,9 @@ int main(int argc, char *argv[])
+ 		fprintf(stderr, "Can't find device %s\n", dvd_device);
+ 		return 1;
+ 	}
++
++	/* On at least NetBSD this fails if called after DVDOpen */
++	has_title = get_title_name(dvd_device, title);
+ 	
+ 	dvd = DVDOpen(dvd_device);
+ 	if( !dvd ) {
+@@ -305,12 +317,8 @@ int main(int argc, char *argv[])
+ 		return 5;
+ 	}
  
+-	has_title = get_title_name(dvd_device, title);
+-
  	vmgi_mat = ifo_zero->vmgi_mat;
  
 -	struct dvd_info dvd_info;
@@ -56,7 +70,7 @@ $NetBSD: patch-ab,v 1.3 2007/02/26 17:55:14 snj Exp $
  	dvd_info.discinfo.device = dvd_device;
  	dvd_info.discinfo.disc_title = has_title ? "unknown" : title;
  	dvd_info.discinfo.vmg_id =  vmgi_mat->vmg_identifier;
-@@ -409,14 +416,16 @@ int main(int argc, char *argv[])
+@@ -409,14 +417,16 @@ int main(int argc, char *argv[])
  
  		cell = 0;
  		if (opt_c) {
@@ -75,3 +89,11 @@ $NetBSD: patch-ab,v 1.3 2007/02/26 17:55:14 snj Exp $
  				if (i == pgc->nr_of_programs - 1) next = pgc->nr_of_cells + 1;
  
  				while (cell < next - 1)
+@@ -500,6 +510,7 @@ int main(int argc, char *argv[])
+ 
+ 	for (i=1; i <= ifo_zero->vts_atrt->nr_of_vtss; i++) { ifoClose(ifo[i]);	}
+ 
++
+ 	ifoClose(ifo_zero);
+ 	DVDClose(dvd);
+ 
