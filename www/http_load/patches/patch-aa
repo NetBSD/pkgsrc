@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2009/07/07 19:21:57 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2009/08/22 09:30:38 obache Exp $
 
 --- Makefile.orig	2002-01-03 21:54:43.000000000 -0800
 +++ Makefile
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.5 2009/07/07 19:21:57 joerg Exp $
 -BINDIR =	/usr/local/bin
 -MANDIR =	/usr/local/man/man1
 +BINDIR =	$(PREFIX)/bin
-+MANDIR =	$(PREFIX)/man/man1
++MANDIR =	$(PREFIX)/$(PKGMANDIR)/man1
  CC =		gcc -Wall
  CFLAGS =	-O $(SRANDOM_DEFS) $(SSL_DEFS) $(SSL_INC)
  #CFLAGS =	-g $(SRANDOM_DEFS) $(SSL_DEFS) $(SSL_INC)
