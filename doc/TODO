@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8365 2009/08/22 06:38:18 dsainty Exp $
+$NetBSD: TODO,v 1.8366 2009/08/22 12:03:32 obache Exp $
 
 Suggested new packages
 ======================
@@ -696,7 +696,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o html2ps-1.0b5
 	o html2wml-0.4.11
 	o htop-0.8.3
-	o http_load-20060312
 	o httping-1.31
 	o httptunnel-3.3
 	o hydrogen-0.9.3 [pkg/37424]
