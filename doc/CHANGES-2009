@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3327 2009/08/22 15:59:37 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3328 2009/08/22 17:19:40 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4366,3 +4366,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-lib-abs version 0.90 [seb 2009-08-22]
 	Updated devel/p5-ex-lib to 0.90 [seb 2009-08-22]
 	Updated math/maxima to 5.19.1 [asau 2009-08-22]
+	Updated net/filezilla to 3.2.7 [zafer 2009-08-22]
