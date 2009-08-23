@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/08/23 02:07:31 obache Exp $
+# $NetBSD: Makefile,v 1.16 2009/08/23 02:12:51 obache Exp $
 
 DISTNAME=	divx-player-installer
 PKGNAME=	divxplayer-0.2.0
@@ -16,8 +16,7 @@ EMUL_MODULES.linux=	compat x11
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/divx-player-installer
-BUILD_DIRS=	# empty
+NO_BUILD=	yes
 
 BINARY=		divxPlayer.bin
 DATADIR=	${PREFIX}/share/divxplayer
