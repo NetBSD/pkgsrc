@@ -1,0 +1,73 @@
+$NetBSD: patch-aa,v 1.1 2009/08/23 13:47:04 seb Exp $
+
+Prevent CPAN's interactive configuration process to take place!
+
+--- Makefile.PL.orig	2009-08-06 02:45:48.000000000 +0000
++++ Makefile.PL
+@@ -123,36 +123,36 @@ delete $ENV{PERL5_CPAN_IS_RUNNING} if $n
+ 
+ # and make sure that the user doesn't have any existing CPAN config that'll
+ # cause us problems for the next few steps.
+-{
+-    local $@;
+-    eval { require CPAN::HandleConfig; };
+-    # Need newish CPAN.pm for this, ergo skip it if that version of CPAN isn't
+-    # installed yet.
+-    # It will already be installed by the time we reach here if bootstrapping,
+-    # otherwise, if we're running from CPAN then it will be installed soon
+-    # enough, and we'll come back here..
+-    if (!$@) {
+-        CPAN::HandleConfig->load;
+-        for my $eumm_setting ( qw/makepl_arg make_install_arg/ ) {
+-            if ($CPAN::Config->{$eumm_setting} =~ /(?:PREFIX|INSTALL_BASE)/) {
+-                die "Possibly invalid config detected in $eumm_setting: " . $CPAN::Config->{$eumm_setting};
+-            }
+-        }
+-
+-        for my $mb_setting (qw/mbuild_arg mbuild_install_arg mbuildpl_arg/) {
+-            if ($CPAN::Config->{$mb_setting} =~ /(?:--prefix|--install_base)/) {
+-                die "Possibly invalid config detected in $mb_setting: " . $CPAN::Config->{$mb_setting};
+-            }
+-        }
+-    }
+-    else {
+-        my $error = $@;
+-        require CPAN;
+-        # Explode if it looks like requiring CPAN::HandleConfig should
+-        # have worked, but didn't.
+-        die($error) if $CPAN::VERSION >= $required_CPAN;
+-    }
+-}
++#{
++#    local $@;
++#    eval { require CPAN::HandleConfig; };
++#    # Need newish CPAN.pm for this, ergo skip it if that version of CPAN isn't
++#    # installed yet.
++#    # It will already be installed by the time we reach here if bootstrapping,
++#    # otherwise, if we're running from CPAN then it will be installed soon
++#    # enough, and we'll come back here..
++#    if (!$@) {
++#        CPAN::HandleConfig->load;
++#        for my $eumm_setting ( qw/makepl_arg make_install_arg/ ) {
++#            if ($CPAN::Config->{$eumm_setting} =~ /(?:PREFIX|INSTALL_BASE)/) {
++#                die "Possibly invalid config detected in $eumm_setting: " . $CPAN::Config->{$eumm_setting};
++#            }
++#        }
++#
++#        for my $mb_setting (qw/mbuild_arg mbuild_install_arg mbuildpl_arg/) {
++#            if ($CPAN::Config->{$mb_setting} =~ /(?:--prefix|--install_base)/) {
++#                die "Possibly invalid config detected in $mb_setting: " . $CPAN::Config->{$mb_setting};
++#            }
++#        }
++#    }
++#    else {
++#        my $error = $@;
++#        require CPAN;
++#        # Explode if it looks like requiring CPAN::HandleConfig should
++#        # have worked, but didn't.
++#        die($error) if $CPAN::VERSION >= $required_CPAN;
++#    }
++#}
+ 
+ if ($bootstrapping) {
+   auto_install_now;
