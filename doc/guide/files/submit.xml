@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.22 2009/08/21 12:54:07 wiz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.23 2009/08/23 18:12:12 joerg Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -87,7 +87,11 @@
   not the same as your NetBSD login name. The target also automatically
   removes possibly existing entries for the package in the
   <filename>TODO</filename> file. Don't forget to commit
-  the changes, e.g. by using <command>make changes-entry-commit</command>!</para>
+  the changes, e.g. by using <command>make changes-entry-commit</command>!
+  If you are not using a checkout directly from cvs.netbsd.org, but e.g.
+  a local copy of the repository, you can set USE_NETBSD_REPO=yes. This
+  makes the cvs commands use the main repository.
+  </para>
 </sect1>
 
 <sect1 id="committing-importing">
