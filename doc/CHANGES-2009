@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3341 2009/08/23 20:09:22 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3342 2009/08/23 22:22:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4383,3 +4383,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/libprelude-python version 0.9.24 [hasso 2009-08-23]
 	Added security/libprelude-ruby version 0.9.24 [hasso 2009-08-23]
 	Updated security/prelude-lml to 0.9.15 [hasso 2009-08-23]
+	Removed textproc/fop [wiz 2009-08-23]
+	Removed www/cocoon [wiz 2009-08-23]
