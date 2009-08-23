@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3339 2009/08/23 18:04:18 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3340 2009/08/23 19:18:08 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4377,3 +4377,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/rdiff-backup to 1.2.8nb1 [wiz 2009-08-23]
 	Updated lang/mzscheme to 4.2.1 [asau 2009-08-23]
 	Updated pkgtools/pbulk-base to 0.39 [joerg 2009-08-23]
+	Updated security/libprelude to 0.9.24 [hasso 2009-08-23]
+	Added security/libprelude-lua version 0.9.24 [hasso 2009-08-23]
+	Added security/libprelude-perl version 0.9.24 [hasso 2009-08-23]
+	Added security/libprelude-python version 0.9.24 [hasso 2009-08-23]
+	Added security/libprelude-ruby version 0.9.24 [hasso 2009-08-23]
