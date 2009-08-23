@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3344 2009/08/23 23:01:29 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3345 2009/08/23 23:12:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4387,3 +4387,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed www/cocoon [wiz 2009-08-23]
 	Updated databases/p5-Jifty-DBI to 0.58 [seb 2009-08-23]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.5200 [seb 2009-08-23]
+	Updated devel/p5-common-sense to 1.0 [seb 2009-08-23]
