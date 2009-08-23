@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/04/12 10:35:45 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/23 22:27:47 seb Exp $
 
-DISTNAME=	Jifty-DBI-0.53
+DISTNAME=	Jifty-DBI-0.58
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Jifty/}
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Jifty/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Jifty-DBI/
 COMMENT=	Perl 5 object-relational persistence framework
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -40,7 +41,6 @@ DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
 DEPENDS+=	p5-UNIVERSAL-require>=0.11:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
-DEPENDS+=	{perl>=5.10,p5-version-[0-9]*}:../../devel/p5-version
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
