@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:32:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9.2.1 2009/08/23 10:33:57 tron Exp $
 include/vorbis/codec.h
 include/vorbis/vorbisenc.h
 include/vorbis/vorbisfile.h
@@ -9,29 +9,21 @@ lib/pkgconfig/vorbis.pc
 lib/pkgconfig/vorbisenc.pc
 lib/pkgconfig/vorbisfile.pc
 share/aclocal/vorbis.m4
-share/doc/${PKGNAME}/components.png
-share/doc/${PKGNAME}/draft-ietf-avt-rtp-vorbis-06.txt
-share/doc/${PKGNAME}/draft-ietf-avt-rtp-vorbis-06.xml
 share/doc/${PKGNAME}/eightphase.png
 share/doc/${PKGNAME}/evenlsp.png
-share/doc/${PKGNAME}/floor1-1.png
-share/doc/${PKGNAME}/floor1-2.png
-share/doc/${PKGNAME}/floor1-3.png
-share/doc/${PKGNAME}/floor1-4.png
+share/doc/${PKGNAME}/fish_xiph_org.png
 share/doc/${PKGNAME}/floor1_inverse_dB_table.html
 share/doc/${PKGNAME}/floorval.png
 share/doc/${PKGNAME}/fourphase.png
 share/doc/${PKGNAME}/framing.html
 share/doc/${PKGNAME}/helper.html
-share/doc/${PKGNAME}/hufftree-under.png
-share/doc/${PKGNAME}/hufftree.png
 share/doc/${PKGNAME}/index.html
 share/doc/${PKGNAME}/lspmap.png
 share/doc/${PKGNAME}/oddlsp.png
 share/doc/${PKGNAME}/oggstream.html
 share/doc/${PKGNAME}/programming.html
-share/doc/${PKGNAME}/residue-pack.png
-share/doc/${PKGNAME}/residue2.png
+share/doc/${PKGNAME}/rfc5215.txt
+share/doc/${PKGNAME}/rfc5215.xml
 share/doc/${PKGNAME}/squarepolar.png
 share/doc/${PKGNAME}/stereo.html
 share/doc/${PKGNAME}/stream.png
@@ -40,13 +32,20 @@ share/doc/${PKGNAME}/vorbis-clip.txt
 share/doc/${PKGNAME}/vorbis-errors.txt
 share/doc/${PKGNAME}/vorbis-fidelity.html
 share/doc/${PKGNAME}/vorbis.html
+share/doc/${PKGNAME}/vorbisenc/changes.html
+share/doc/${PKGNAME}/vorbisenc/examples.html
 share/doc/${PKGNAME}/vorbisenc/index.html
+share/doc/${PKGNAME}/vorbisenc/ov_ectl_ratemanage2_arg.html
+share/doc/${PKGNAME}/vorbisenc/ov_ectl_ratemanage_arg.html
 share/doc/${PKGNAME}/vorbisenc/overview.html
 share/doc/${PKGNAME}/vorbisenc/reference.html
 share/doc/${PKGNAME}/vorbisenc/style.css
 share/doc/${PKGNAME}/vorbisenc/vorbis_encode_ctl.html
 share/doc/${PKGNAME}/vorbisenc/vorbis_encode_init.html
 share/doc/${PKGNAME}/vorbisenc/vorbis_encode_init_vbr.html
+share/doc/${PKGNAME}/vorbisenc/vorbis_encode_setup_init.html
+share/doc/${PKGNAME}/vorbisenc/vorbis_encode_setup_managed.html
+share/doc/${PKGNAME}/vorbisenc/vorbis_encode_setup_vbr.html
 share/doc/${PKGNAME}/vorbisenc/vorbis_info.html
 share/doc/${PKGNAME}/vorbisfile/OggVorbis_File.html
 share/doc/${PKGNAME}/vorbisfile/callbacks.html
@@ -66,6 +65,7 @@ share/doc/${PKGNAME}/vorbisfile/ov_callbacks.html
 share/doc/${PKGNAME}/vorbisfile/ov_clear.html
 share/doc/${PKGNAME}/vorbisfile/ov_comment.html
 share/doc/${PKGNAME}/vorbisfile/ov_crosslap.html
+share/doc/${PKGNAME}/vorbisfile/ov_fopen.html
 share/doc/${PKGNAME}/vorbisfile/ov_info.html
 share/doc/${PKGNAME}/vorbisfile/ov_open.html
 share/doc/${PKGNAME}/vorbisfile/ov_open_callbacks.html
@@ -108,7 +108,4 @@ share/doc/${PKGNAME}/vorbisfile/vorbis_info.html
 share/doc/${PKGNAME}/vorbisfile/vorbisfile_example_c.html
 share/doc/${PKGNAME}/vorbisword2.png
 share/doc/${PKGNAME}/wait.png
-share/doc/${PKGNAME}/white-ogg.png
 share/doc/${PKGNAME}/white-xifish.png
-share/doc/${PKGNAME}/window1.png
-share/doc/${PKGNAME}/window2.png
