@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3343 2009/08/23 22:28:06 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3344 2009/08/23 23:01:29 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4386,3 +4386,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed textproc/fop [wiz 2009-08-23]
 	Removed www/cocoon [wiz 2009-08-23]
 	Updated databases/p5-Jifty-DBI to 0.58 [seb 2009-08-23]
+	Updated math/p5-Spreadsheet-ParseExcel to 0.5200 [seb 2009-08-23]
