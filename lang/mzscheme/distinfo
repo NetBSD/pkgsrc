@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.7 2007/06/07 13:01:35 pooka Exp $
+$NetBSD: distinfo,v 1.8 2009/08/23 17:04:24 asau Exp $
 
-SHA1 (mz-360-src-unix.tgz) = 02c177183b1c78aaba6654421585919a4edf7063
-RMD160 (mz-360-src-unix.tgz) = 16e589c0e2da1b3981b4810171990cc84434b0ee
-Size (mz-360-src-unix.tgz) = 4221733 bytes
-SHA1 (patch-ab) = c2969f4a71d5e373ddc06015677e3a88e813fad7
-SHA1 (patch-aj) = 9e5095279a34ea763423962db1072cc9b3fe13dc
-SHA1 (patch-ak) = 2c7027b60b386dc66f51fca265718f1b68673576
+SHA1 (mz-4.2.1-src-unix.tgz) = 50539a021a7a76d9b37e41c118c010fad155277c
+RMD160 (mz-4.2.1-src-unix.tgz) = b82dc1397657e577801b7e5650ef667186200a55
+Size (mz-4.2.1-src-unix.tgz) = 4806712 bytes
