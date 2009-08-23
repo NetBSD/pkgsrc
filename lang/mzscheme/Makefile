@@ -1,46 +1,35 @@
-# $NetBSD: Makefile,v 1.22 2009/05/21 09:29:12 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2009/08/23 17:04:24 asau Exp $
 
-DISTNAME=		mz-360-src-unix
-PKGNAME=		mzscheme-360
+PLT_VERSION=		4.2.1
+MASTER_SITES_PLT=	http://download.plt-scheme.org/bundles/ \
+			http://www.eecs.northwestern.edu/plt-scheme/ \
+			http://www.cs.utah.edu/plt/download/ \
+			http://mirror.informatik.uni-tuebingen.de/mirror/plt/ \
+			ftp://infogroep.be/pub/plt/bundles/ \
+			http://gd.tuwien.ac.at/languages/scheme/plt/ \
+			http://russell.cs.bilgi.edu.tr/plt-bundles/
+
+DISTNAME=		mz-$(PLT_VERSION)-src-unix
+PKGNAME=		mzscheme-$(PLT_VERSION)
 CATEGORIES=		lang
-MASTER_SITES=		http://download.plt-scheme.org/bundles/360/mz/
+MASTER_SITES=		$(MASTER_SITES_PLT:=$(PLT_VERSION)/mz/)
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.plt-scheme.org/software/mzscheme/
-COMMENT=		R5RS-compliant scheme
+HOMEPAGE=		http://plt-scheme.org/
+COMMENT=		R5RS and R6RS compliant Scheme
 
-CONFLICTS+=		drscheme-[0-9]*
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/mz-360
+WRKSRC=			$(WRKDIR)/mz-$(PLT_VERSION)
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
-CONFIGURE_SCRIPT=	./configure
-# causes the build to use libtool
-CONFIGURE_ARGS=		--enable-shared
+USE_LANGUAGES=		c c++
+USE_TOOLS=		pkg-config
 USE_LIBTOOL=		yes
 MAKE_JOBS_SAFE=		no
+UNLIMIT_RESOURCES=	datasize
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
-ONLY_FOR_PLATFORM+=	Linux-*-i386
-ONLY_FOR_PLATFORM+=	Linux-*-x86_64
-ONLY_FOR_PLATFORM+=	SunOS-*-*
-
-INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGNAME}
-
-SUBST_CLASSES+=		mz
-SUBST_STAGE.mz=		pre-configure
-SUBST_MESSAGE.mz=	Adjusting installation prefix.
-SUBST_FILES.mz+=	collects/make/setup-extension.ss
-SUBST_FILES.mz+=	collects/slibinit/init.ss
-SUBST_FILES.mz+=	src/configure
-SUBST_SED.mz=		-e 's@XXXPREFIXXXX@${PREFIX}@g'
-SUBST_SED.mz+=		-e 's@XXXMZDOCDIRXXX@${PREFIX}/share/doc/${PKGNAME}@g'
-
-LIBTOOL_OVERRIDE=	src/lt/libtool src/foreign/gcc/libffi/libtool
-
-post-patch:
-	${RM} ${WRKSRC}/collects/make/setup-extension.ss.orig
-	${RM} ${WRKSRC}/collects/slibinit/init.ss.orig
+CHECK_INTERPRETER_SKIP=	include/plt/* lib/plt/collects/*
 
 .include "../../mk/bsd.pkg.mk"
