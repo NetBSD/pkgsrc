@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.17 2009/08/21 23:34:42 wiz Exp $
+# $NetBSD: developer.mk,v 1.18 2009/08/23 18:09:45 joerg Exp $
 #
 # Public targets for developers:
 #
@@ -37,6 +37,10 @@
 #		obsolete entries are removed
 #		The default is ${PKGSRCDIR}/TODO.
 #
+#	USE_NETBSD_REPO
+#		Explicitly use cvs.netbsd.org:/cvsroot for all cvs commands
+#		issues by changes-entry and co.
+#
 #	Example usage:
 #		% cd /usr/pkgsrc/category/package
 #		% make changes-entry CTYPE=Added
@@ -63,6 +67,12 @@ PKGSRC_TODO?=		${PKGSRC_CHANGES_DIR}/TODO
 _CYEAR_cmd=		${DATE} -u +%Y
 _CDATE_cmd=		${DATE} -u +%Y-%m-%d
 _NETBSD_LOGIN_NAME_cmd=	${ID} -nu
+
+USE_NETBSD_REPO?=	no
+
+.if !empty(USE_NETBSD_REPO:M[Yy][Ee][Ss])
+_NB_CVSROOT=	-d ${NETBSD_LOGIN_NAME:Q}@cvs.NetBSD.org:/cvsroot
+.endif
 
 .if !empty(CTYPE:tl:Mup*)				# updated
 _CE_MSG1=	Updated ${PKGPATH} to ${PKGVERSION}
@@ -98,9 +108,9 @@ _CE_MSG=	${_CE_MSG1} ${_CE_MSG2}
 # Targets for the update, add, commit elementary operations.
 changes-entry-update: .PHONY ce-error-check
 	@${STEP_MSG} "Updating ${PKGSRC_CHANGES:T} and ${PKGSRC_TODO:T}"
-	${RUN} cd ${PKGSRC_CHANGES_DIR} && cvs update ${PKGSRC_CHANGES:T} ${PKGSRC_TODO:T}
-	${RUN} cd ${PKGSRC_CHANGES_DIR} && test -w ${PKGSRC_CHANGES:T} || cvs edit ${PKGSRC_CHANGES:T}
-	${RUN} cd ${PKGSRC_CHANGES_DIR} && test -w ${PKGSRC_TODO:T} || cvs edit ${PKGSRC_TODO:T}
+	${RUN} cd ${PKGSRC_CHANGES_DIR} && cvs ${_NB_CVSROOT} update ${PKGSRC_CHANGES:T} ${PKGSRC_TODO:T}
+	${RUN} cd ${PKGSRC_CHANGES_DIR} && test -w ${PKGSRC_CHANGES:T} || cvs ${_NB_CVSROOT} edit ${PKGSRC_CHANGES:T}
+	${RUN} cd ${PKGSRC_CHANGES_DIR} && test -w ${PKGSRC_TODO:T} || cvs ${_NB_CVSROOT} edit ${PKGSRC_TODO:T}
 
 changes-entry-add: .PHONY ce-error-check
 	@${STEP_MSG} "Adding the change"
@@ -111,7 +121,7 @@ todo-entry-remove:
 
 changes-entry-commit: .PHONY ce-error-check
 	@${STEP_MSG} "Committing the change"
-	${RUN} cd ${PKGSRC_CHANGES_DIR} && cvs commit -m ${_CE_MSG1:Q} ${PKGSRC_CHANGES:T} ${PKGSRC_TODO:T}
+	${RUN} cd ${PKGSRC_CHANGES_DIR} && cvs ${_NB_CVSROOT} commit -m ${_CE_MSG1:Q} ${PKGSRC_CHANGES:T} ${PKGSRC_TODO:T}
 
 ce-error-check: .PHONY
 .if defined(_CE_ERRORS) && !empty(_CE_ERRORS:M*)
