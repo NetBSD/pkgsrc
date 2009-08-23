@@ -1,0 +1,55 @@
+# $NetBSD: Makefile.common,v 1.1 2009/08/23 18:56:34 hasso Exp $
+#
+# used by security/libprelude/Makefile
+# used by security/libprelude-lua/Makefile
+# used by security/libprelude-perl/Makefile
+# used by security/libprelude-python/Makefile
+# used by security/libprelude-ruby/Makefile
+
+DISTNAME=		libprelude-${VERSION}
+VERSION=		0.9.24
+CATEGORIES=		security
+MASTER_SITES=		http://www.prelude-ids.com/download/releases/libprelude/
+
+MAINTAINER=		shannonjr@NetBSD.org
+HOMEPAGE=		http://www.prelude-ids.org/download/releases/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEFS+=		VARBASE
+
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		chown bison gawk gmake pkg-config
+USE_LANGUAGES=		c c++
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--enable-easy-bindings
+PKG_SYSCONFSUBDIR=	prelude
+
+PRELUDE_USER?=		_prelude
+PRELUDE_GROUP?=		_prelude
+PRELUDE_HOME?=		${VARBASE}/spool/prelude
+
+PKG_GROUPS=		${PRELUDE_GROUP}
+PKG_USERS=		${PRELUDE_USER}:${PRELUDE_GROUP}
+
+PKG_GROUPS_VARS+=	PRELUDE_GROUP
+PKG_USERS_VARS+=	PRELUDE_USER
+
+PKG_GECOS.${PRELUDE_USER}=	Prelude IDS
+PKG_HOME.${PRELUDE_USER}=	${PRELUDE_HOME}
+
+EGDIR=			${PREFIX}/share/examples/libprelude
+REQD_DIRS=		${EGDIR}
+MAKE_DIRS=		${PKG_SYSCONFDIR}/default ${PKG_SYSCONFDIR}/profile
+MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/profile ${ROOT_USER} ${ROOT_GROUP} 0711
+
+SUBST_CLASSES+=		make
+SUBST_STAGE.make=	post-patch
+SUBST_FILES.make=	Makefile.in
+SUBST_SED.make=		-e 's,@EGDIR@,${EGDIR},g'
+
+INSTALLATION_DIRS=	share/examples/libprelude
