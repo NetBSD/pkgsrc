@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3329 2009/08/22 23:28:35 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.3330 2009/08/23 03:12:10 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4368,3 +4368,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/maxima to 5.19.1 [asau 2009-08-22]
 	Updated net/filezilla to 3.2.7 [zafer 2009-08-22]
 	Updated devel/subversion to 1.6.5 [gdt 2009-08-22]
+	Updated audio/flac2mp3 to 20041223nb2 [snj 2009-08-23]
