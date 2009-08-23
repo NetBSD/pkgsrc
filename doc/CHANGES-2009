@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3342 2009/08/23 22:22:33 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3343 2009/08/23 22:28:06 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4385,3 +4385,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/prelude-lml to 0.9.15 [hasso 2009-08-23]
 	Removed textproc/fop [wiz 2009-08-23]
 	Removed www/cocoon [wiz 2009-08-23]
+	Updated databases/p5-Jifty-DBI to 0.58 [seb 2009-08-23]
