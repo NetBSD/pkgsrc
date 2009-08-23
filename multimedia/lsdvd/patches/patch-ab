@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2009/08/22 21:44:27 abs Exp $
+$NetBSD: patch-ab,v 1.5 2009/08/23 15:06:37 wiz Exp $
 
 --- lsdvd.c.orig	2006-03-02 13:48:11.000000000 +0000
 +++ lsdvd.c
@@ -89,11 +89,3 @@ $NetBSD: patch-ab,v 1.4 2009/08/22 21:44:27 abs Exp $
  				if (i == pgc->nr_of_programs - 1) next = pgc->nr_of_cells + 1;
  
  				while (cell < next - 1)
-@@ -500,6 +510,7 @@ int main(int argc, char *argv[])
- 
- 	for (i=1; i <= ifo_zero->vts_atrt->nr_of_vtss; i++) { ifoClose(ifo[i]);	}
- 
-+
- 	ifoClose(ifo_zero);
- 	DVDClose(dvd);
- 
