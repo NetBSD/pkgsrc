@@ -3,3 +3,6 @@ sensors, managers, and a display console. LibPrelude
 is the glue that binds all aspects of Prelude together.
 LibPrelude is a library which enables Prelude
 components to communicate in a standard IDMEF method.
+
+This is just the base packages which installs
+LibPrelude's libraries and c++ easy bindings.

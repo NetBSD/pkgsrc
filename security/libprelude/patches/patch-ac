@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.7 2009/08/23 18:56:34 hasso Exp $
+
+--- src/Makefile.in.orig	2008-12-12 15:49:25 +0100
++++ src/Makefile.in	2008-12-12 15:49:32 +0100
+@@ -183,7 +183,7 @@
+ libprelude_la_OBJECTS = $(am_libprelude_la_OBJECTS)
+ libprelude_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+-	$(libprelude_la_LDFLAGS) $(LDFLAGS) -o $@
++	$(libprelude_la_LDFLAGS) $(LDFLAGS) $(LIBMULTITHREAD) -o $@
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles

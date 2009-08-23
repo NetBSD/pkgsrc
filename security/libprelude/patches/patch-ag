@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2009/08/23 18:56:34 hasso Exp $
+
+--- bindings/lua/Makefile.in.orig	2009-07-24 19:26:18 +0300
++++ bindings/lua/Makefile.in	2009-07-24 19:27:20 +0300
+@@ -194,7 +194,7 @@ am__base_list = \
+   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+ am__installdirs = "$(DESTDIR)$(PreludeEasydir)"
+ LTLIBRARIES = $(PreludeEasy_LTLIBRARIES)
+-@HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@PreludeEasy_la_DEPENDENCIES = $(top_builddir)/bindings/c++/.libs/libpreludecpp.la
++@HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@PreludeEasy_la_DEPENDENCIES = $(top_builddir)/../.buildlink/lib/libpreludecpp.la
+ am__PreludeEasy_la_SOURCES_DIST = PreludeEasy.cxx
+ @HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@am_PreludeEasy_la_OBJECTS =  \
+ @HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@	PreludeEasy.lo
+@@ -860,7 +860,7 @@ top_srcdir = @top_srcdir@
+ @HAVE_EASY_BINDINGS_TRUE@EXTRA_DIST = libpreludecpp-lua.i PreludeEasy.cxx
+ @HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@AM_CPPFLAGS = -I@top_srcdir@ -I@top_builddir@/src/include -I@top_srcdir@/src/include -I@top_builddir@/src/libprelude-error -I@top_srcdir@/bindings/c++/include @LUA_CFLAGS@ -I@top_srcdir@/libmissing -I@top_builddir@/libmissing
+ @HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@PreludeEasy_la_LDFLAGS = -module -avoid-version @LUA_LIBS@
+-@HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@PreludeEasy_la_LIBADD = $(top_builddir)/bindings/c++/.libs/libpreludecpp.la
++@HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@PreludeEasy_la_LIBADD = $(top_builddir)/../.buildlink/lib/libpreludecpp.la
+ @HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@PreludeEasy_la_SOURCES = PreludeEasy.cxx
+ @HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@PreludeEasydir = $(libdir)
+ @HAVE_EASY_BINDINGS_TRUE@@HAVE_LUA_TRUE@PreludeEasy_LTLIBRARIES = PreludeEasy.la
