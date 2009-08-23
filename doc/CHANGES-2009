@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3338 2009/08/23 17:06:50 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3339 2009/08/23 18:04:18 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4376,3 +4376,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Module-Starter to 1.520 [seb 2009-08-23]
 	Updated sysutils/rdiff-backup to 1.2.8nb1 [wiz 2009-08-23]
 	Updated lang/mzscheme to 4.2.1 [asau 2009-08-23]
+	Updated pkgtools/pbulk-base to 0.39 [joerg 2009-08-23]
