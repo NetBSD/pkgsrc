@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:13:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/08/23 19:49:27 hasso Exp $
 bin/prelude-lml
 include/prelude-lml/prelude-lml.h
 lib/prelude-lml/debug.la
@@ -20,7 +20,6 @@ share/examples/prelude-lml/ruleset/honeyd.rules
 share/examples/prelude-lml/ruleset/httpd.rules
 share/examples/prelude-lml/ruleset/ipchains.rules
 share/examples/prelude-lml/ruleset/ipfw.rules
-share/examples/prelude-lml/ruleset/ipso.rules
 share/examples/prelude-lml/ruleset/linksys-wap11.rules
 share/examples/prelude-lml/ruleset/modsecurity.rules
 share/examples/prelude-lml/ruleset/ms-sql.rules
@@ -53,13 +52,10 @@ share/examples/prelude-lml/ruleset/vigor.rules
 share/examples/prelude-lml/ruleset/vpopmail.rules
 share/examples/prelude-lml/ruleset/webmin.rules
 share/examples/prelude-lml/ruleset/wu-ftp.rules
-share/examples/prelude-lml/ruleset/zywall.rules
-share/examples/prelude-lml/ruleset/zyxel.rules
 share/examples/prelude-lml/ruleset/cacti-thold.rules
 share/examples/prelude-lml/ruleset/cisco-asa.rules
 share/examples/prelude-lml/ruleset/cisco-css.rules
 share/examples/prelude-lml/ruleset/cisco-ips.rules
-share/examples/prelude-lml/ruleset/exim.rules
 share/examples/prelude-lml/ruleset/ms-cluster.rules
 share/examples/prelude-lml/ruleset/bonding.rules
 share/examples/prelude-lml/ruleset/cisco-common.rules
@@ -68,4 +64,10 @@ share/examples/prelude-lml/ruleset/honeytrap.rules
 share/examples/prelude-lml/ruleset/kojoney.rules
 share/examples/prelude-lml/ruleset/rishi.rules
 share/examples/prelude-lml/ruleset/suhosin.rules
+share/examples/prelude-lml/ruleset/ppp.rules
 share/examples/rc.d/preludelml
+
+${PLIST.unsupported}share/examples/prelude-lml/ruleset/exim.rules
+${PLIST.unsupported}share/examples/prelude-lml/ruleset/zywall.rules
+${PLIST.unsupported}share/examples/prelude-lml/ruleset/zyxel.rules
+${PLIST.unsupported}share/examples/prelude-lml/ruleset/ipso.rules

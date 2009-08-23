@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2008/10/18 13:29:28 shannonjr Exp $
+# $NetBSD: Makefile,v 1.27 2009/08/23 19:49:27 hasso Exp $
 #
 
-DISTNAME=		prelude-lml-0.9.14
+DISTNAME=		prelude-lml-0.9.15
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/prelude-lml/ 
 
@@ -22,8 +22,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
-CONFIGURE_ARGS+=	--disable-fam
+CONFIGURE_ARGS+=	--html=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 RCD_SCRIPTS=		preludelml
 PRELUDE_USER?=		_prelude
@@ -38,8 +37,8 @@ PKG_GROUPS=		${PRELUDE_GROUP}
 PKG_USERS=		${PRELUDE_USER}:${PRELUDE_GROUP}
 
 EGDIR=			${PREFIX}/share/examples/prelude-lml
-REQD_DIRS=		${EGDIR}
-MAKE_DIRS+=		${VARBASE}/prelude-lml PKG_SYSCONFDIR
+REQD_DIRS=		${EGDIR} ${PKG_SYSCONFDIR}/ruleset
+MAKE_DIRS+=		${VARBASE}/prelude-lml
 MAKE_DIRS_PERMS+=	${VARBASE}/prelude-lml	${PRELUDE_USER} ${PRELUDE_GROUP} 0700
 
 PKG_GECOS.${PRELUDE_USER}=	Prelude IDS
@@ -71,6 +70,7 @@ ruleset_DATA = \
 	apc-emu.rules           \
 	arbor.rules             \
 	arpwatch.rules          \
+	asterisk.rules		\
 	bonding.rules           \
 	cacti-thold.rules       \
 	checkpoint.rules        \
@@ -85,9 +85,11 @@ ruleset_DATA = \
 	f5-bigip.rules          \
 	grsecurity.rules        \
 	honeyd.rules            \
+	honeytrap.rules		\
 	httpd.rules             \
 	ipchains.rules          \
 	ipfw.rules              \
+	kojoney.rules		\
 	modsecurity.rules       \
 	ms-cluster.rules        \
 	ms-sql.rules            \
@@ -103,8 +105,10 @@ ruleset_DATA = \
 	pcre.rules              \
 	portsentry.rules        \
 	postfix.rules           \
+	ppp.rules		\
 	proftpd.rules           \
 	qpopper.rules           \
+	rishi.rules		\
 	selinux.rules           \
 	sendmail.rules          \
 	shadow-utils.rules      \
@@ -112,8 +116,10 @@ ruleset_DATA = \
 	sonicwall.rules         \
 	spamassassin.rules      \
 	squid.rules             \
+	su.rules		\
 	ssh.rules               \
 	sudo.rules              \
+	suhosin.rules		\
 	tripwire.rules          \
 	vigor.rules             \
 	vpopmail.rules          \
@@ -124,8 +130,30 @@ ruleset_DATA = \
 CONF_FILES+=	${EGDIR}/ruleset/${f:Q} ${PKG_SYSCONFDIR}/ruleset/${f:Q}
 .endfor
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.prelude-lml
+PKG_SUPPORTED_OPTIONS=	unsupported-rulesets
+
+.include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		unsupported
+.if !empty(PKG_OPTIONS:Munsupported-rulesets)
+CONFIGURE_ARGS+=	--enable-unsupported-rulesets
+PLIST.unsupported=	yes
+unsupported_ruleset_DATA = \
+	exim.rules		\
+	ipso.rules		\
+	zywall.rules		\
+	zyxel.rules
+.  for f in ${unsupported_ruleset_DATA}
+CONF_FILES+=	${EGDIR}/ruleset/${f:Q} ${PKG_SYSCONFDIR}/ruleset/${f:Q}
+.  endfor
+.endif
+
 pre-patch:
 	${CP} ${FILESDIR}/run-prelude-lml.c ${WRKSRC}
+
+pre-configure:
+	${LN} -s ${BUILDLINK_DIR}/lib/libltdl.so ${BUILDLINK_DIR}/lib/libltdlc.so
 
 post-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${CC} ${CFLAGS} -o run-prelude-lml run-prelude-lml.c
@@ -136,4 +164,5 @@ post-install:
 
 .include "../../security/libprelude/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
