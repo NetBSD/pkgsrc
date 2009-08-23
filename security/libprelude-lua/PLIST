@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/23 19:03:34 hasso Exp $
+lib/PreludeEasy.la
