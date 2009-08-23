@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/07 11:08:52 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/23 09:23:28 obache Exp $
 #
 
 DISTNAME=	xz-4.999.8beta
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	src/liblzma/liblzma.pc.in
 
-CONFLICTS=	lzma-[0-9]* lzma-utils-[0-9]*
+CONFLICTS=	lzma-[0-9]* lzma-utils-[0-9]* lzmalib-[0-9]*
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
