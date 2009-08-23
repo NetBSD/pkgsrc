@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/06 19:07:13 chuck Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/23 09:24:37 sno Exp $
 
 DISTNAME=	GDGraph-boxplot-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/GDGraph-boxplot/
 COMMENT=	Boxplot - Box and Whisker Graph Module for Perl 5.
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+= p5-GDGraph>=1.30:../../graphics/p5-GDGraph
 DEPENDS+= p5-Statistics-Descriptive>=2.4:../../math/p5-Statistics-Descriptive
