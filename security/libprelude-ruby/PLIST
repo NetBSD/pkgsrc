@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/23 19:07:19 hasso Exp $
+${RUBY_SITEARCHLIB}/PreludeEasy.la
