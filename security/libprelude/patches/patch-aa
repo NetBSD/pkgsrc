@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.7 2009/02/10 21:11:13 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2009/08/23 18:56:34 hasso Exp $
 
---- Makefile.in.orig	2008-04-24 04:50:26.000000000 -0600
-+++ Makefile.in
-@@ -559,7 +559,7 @@ infodir = @infodir@
+--- Makefile.in.orig	2009-07-08 16:37:14 +0200
++++ Makefile.in	2009-07-20 00:38:41 +0200
+@@ -865,7 +865,7 @@
  install_sh = @install_sh@
  libdir = @libdir@
  libexecdir = @libexecdir@
 -localedir = @localedir@
 +localedir = @prefix@/share/locale
  localstatedir = @localstatedir@
- mandir = @mandir@
- mkdir_p = @mkdir_p@
-@@ -1099,71 +1099,14 @@ prelude-config.h: $(top_builddir)/config
+ lt_ECHO = @lt_ECHO@
+ ltdl_LIBOBJS = @ltdl_LIBOBJS@
+@@ -1525,71 +1525,13 @@
  # Spool directory for report saving is mode 
  
  install-data-local:
@@ -85,7 +85,6 @@ $NetBSD: patch-aa,v 1.7 2009/02/10 21:11:13 joerg Exp $
 -	rm -f $(DESTDIR)$(PRELUDE_CONFIG_DIR)/default/global.conf
 -	rm -f $(DESTDIR)$(PRELUDE_CONFIG_DIR)/default/idmef-client.conf
 -	rm -f $(DESTDIR)$(PRELUDE_CONFIG_DIR)/default/tls.conf
-+
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+ 
+ dist-hook:
+ 	@if test -d "$(srcdir)/.git"; then	\
