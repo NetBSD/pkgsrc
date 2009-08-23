@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3331 2009/08/23 09:22:42 jnemeth Exp $
+$NetBSD: CHANGES-2009,v 1.3332 2009/08/23 13:15:56 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4370,3 +4370,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/subversion to 1.6.5 [gdt 2009-08-22]
 	Updated audio/flac2mp3 to 20041223nb2 [snj 2009-08-23]
 	Updated comms/asterisk to 1.2.34 [jnemeth 2009-08-23]
+	Updated multimedia/libtheora-docs to 1.0nb2 [hasso 2009-08-23]
