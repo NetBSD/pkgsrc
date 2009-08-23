@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2009/08/23 15:26:48 hasso Exp $
+
+--- agent/interfaces.c.orig	2009-08-23 18:17:31 +0300
++++ agent/interfaces.c	2009-08-23 18:18:07 +0300
+@@ -47,6 +47,7 @@
+ #include <net/if.h>
+ #include <net/if_arp.h>
+ #include <arpa/inet.h>
++#include <netinet/in.h>
+ 
+ #ifdef HAVE_GETIFADDRS
+ 
