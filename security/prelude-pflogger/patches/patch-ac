@@ -1,0 +1,19 @@
+--- src/process_packet.c.orig	2005-09-18 16:29:54 +0200
++++ src/process_packet.c
+@@ -40,8 +40,14 @@
+ #include <netinet/tcp.h>
+ #include <netinet/udp.h>
+ #include <net/if.h>
+-#include <net/if_pflog.h>
+-#include <net/pfvar.h>
++#ifdef __DragonFly__
++#	include <net/if_var.h>
++#	include <net/pf/if_pflog.h>
++#	include <net/pf/pfvar.h>
++#else
++#	include <net/if_pflog.h>
++#	include <net/pfvar.h>
++#endif
+ #include <netdb.h>
+ #include <pcap.h>
+ #include <sys/ioctl.h>
