@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:13:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/08/24 13:57:33 hasso Exp $
 ${PYSITELIB}/prewikka/Auth.py
 ${PYSITELIB}/prewikka/Auth.pyc
 ${PYSITELIB}/prewikka/Auth.pyo
@@ -92,6 +92,8 @@ ${PYSITELIB}/prewikka/templates/HeartbeatAnalyze.pyo
 ${PYSITELIB}/prewikka/templates/HeartbeatListing.py
 ${PYSITELIB}/prewikka/templates/HeartbeatListing.pyc
 ${PYSITELIB}/prewikka/templates/HeartbeatListing.pyo
+${PYSITELIB}/prewikka/templates/IDMEFBrowser.pyc
+${PYSITELIB}/prewikka/templates/IDMEFBrowser.pyo
 ${PYSITELIB}/prewikka/templates/LoginPasswordForm.py
 ${PYSITELIB}/prewikka/templates/LoginPasswordForm.pyc
 ${PYSITELIB}/prewikka/templates/LoginPasswordForm.pyo
