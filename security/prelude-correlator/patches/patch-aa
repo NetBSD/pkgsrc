@@ -1,13 +1,32 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/07/21 12:16:46 shannonjr Exp $
+$NetBSD: patch-aa,v 1.2 2009/08/24 12:30:09 hasso Exp $
 
---- configure.orig	2008-06-29 05:41:00.000000000 -0600
-+++ configure
-@@ -25519,7 +25519,7 @@ fi
- PRELUDE_CORRELATOR_CONF=$SYSCONFDIR/prelude-correlator/prelude-correlator.conf
+--- setup.py.orig	2009-07-21 22:44:16 +0200
++++ setup.py	2009-07-21 22:49:52 +0200
+@@ -48,7 +48,8 @@
+ 
+                 root = self.root or ""
+                 for dir, files in data_files:
+-                        dir = os.path.abspath(os.path.join(root, prefix, dir))
++                        if dir != "@PRELUDE_HOME@":
++                                dir = os.path.abspath(os.path.join(root, prefix, dir))
+ 
+                         self.mkpath(dir)
+                         for f in files:
+@@ -71,7 +72,7 @@
+         def init_siteconfig(self, prefix):
+                 config = open("PreludeCorrelator/siteconfig.py", "w")
+                 print >> config, "conf_dir = '%s'" % os.path.abspath(prefix + "/etc/prelude-correlator")
+-                print >> config, "lib_dir = '%s'" % os.path.abspath(prefix + "/var/lib/prelude-correlator")
++                print >> config, "lib_dir = '%s'" % os.path.abspath("@PRELUDE_HOME@")
+                 config.close()
  
  
--PRELUDE_CORRELATOR_CONTEXT_DIR=$LOCALSTATEDIR/lib/prelude-correlator
-+PRELUDE_CORRELATOR_CONTEXT_DIR=$LOCALSTATEDIR/prelude-correlator
+@@ -85,7 +86,7 @@
+ else:
+         package_data = {}
+         data_files = [ ("etc/prelude-correlator", ["prelude-correlator.conf"]),
+-                       ("var/lib/prelude-correlator", ["PreludeCorrelator/plugins/dshield.dat"]) ]
++                       ("@PRELUDE_HOME@", ["PreludeCorrelator/plugins/dshield.dat"]) ]
  
- 
- PRELUDE_CORRELATOR_CONFDIR=$SYSCONFDIR/prelude-correlator
+ setup(
+         name="prelude-correlator",
