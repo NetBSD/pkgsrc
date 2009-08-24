@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8370 2009/08/24 08:50:54 wiz Exp $
+$NetBSD: TODO,v 1.8371 2009/08/24 09:22:39 adam Exp $
 
 Suggested new packages
 ======================
@@ -426,7 +426,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avrdude-5.8 [pkg/41750]
 	o awesome-3.3.2
 	o baci-20040415
-	o bacula-3.0.2
 	o balance-3.42
 	o bbdb-2.35
 	o bbkeys-0.9.0
