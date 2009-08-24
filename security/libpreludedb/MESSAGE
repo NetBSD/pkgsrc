@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2006/06/06 12:30:02 shannonjr Exp $
+$NetBSD: MESSAGE,v 1.2 2009/08/24 13:50:03 hasso Exp $
 Instructions for setting database creation may be found in the prelude
 handbook:
 
-https://trac.prelude-ids.org/wiki/InstallingLibpreludedb
+https://trac.prelude-ids.org/wiki/InstallingPreludeDbLibrary
 
 Deletion of database entries can be quite slow unless some additional
 indices are created. The additional indices can be created by entering:

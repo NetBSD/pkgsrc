@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2009/03/05 18:51:31 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/08/24 13:50:03 hasso Exp $
 #
 
-DISTNAME=		libpreludedb-0.9.15
-PKGREVISION=		2
+DISTNAME=		libpreludedb-0.9.15.3
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/libpreludedb/
 
@@ -10,27 +9,24 @@ MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		http://www.prelude-ids.org/download/releases/
 COMMENT=		Provides an interface to the database used to store IDMEF alerts
 
-.include "../../mk/mysql.buildlink3.mk"
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		make perl:run
-CONFIGURE_ARGS+=	-enable-mysql
+USE_TOOLS+=		make
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--enable-python
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
-CONFIGURE_ARGS+=	--with-pgsql=no
-LDFLAGS+=		${BUILDLINK_LDFLAGS.mysql-client}
-PY_PATCHPLIST=		yes
+USE_LANGUAGES=		c c++
+
+.include "options.mk"
+
+pre-configure:
+	${LN} -s ${BUILDLINK_DIR}/lib/libltdl.la ${BUILDLINK_DIR}/lib/libltdlc.la
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/addIndices.sql ${PREFIX}/share/libpreludedb/classic
+	${INSTALL_DATA} ${FILESDIR}/addIndices.sql ${DESTDIR}${PREFIX}/share/libpreludedb/classic
 
 .include "../../security/libprelude/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
-.include "../../lang/perl5/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
