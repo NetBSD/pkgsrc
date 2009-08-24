@@ -1,16 +1,15 @@
-$NetBSD: patch-ab,v 1.2 2008/07/21 12:12:15 shannonjr Exp $
+$NetBSD: patch-ab,v 1.3 2009/08/24 18:32:22 hasso Exp $
 
---- Makefile.in.orig	2008-06-27 01:52:38.000000000 -0600
-+++ Makefile.in
-@@ -936,21 +936,12 @@ uninstall-info: uninstall-info-recursive
+--- Makefile.in.orig	2009-07-20 23:35:10 +0200
++++ Makefile.in	2009-07-20 23:41:18 +0200
+@@ -1208,21 +1208,8 @@
  
  
  install-data-local:
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)/share/examples/prelude-manager;
- 	$(INSTALL) -d -m 700 $(DESTDIR)$(configdir);
- 	$(INSTALL) -d -m 700 $(DESTDIR)$(manager_run_dir);
- 	$(INSTALL) -d -m 700 $(DESTDIR)$(manager_scheduler_dir);
- 	$(INSTALL) -d -m 700 $(DESTDIR)$(manager_failover_dir);
+-	$(INSTALL) -d -m 700 $(DESTDIR)$(configdir);
+-	$(INSTALL) -d -m 700 $(DESTDIR)$(manager_run_dir);
+-	$(INSTALL) -d -m 700 $(DESTDIR)$(manager_scheduler_dir);
+-	$(INSTALL) -d -m 700 $(DESTDIR)$(manager_failover_dir);
 -	@if test -f $(DESTDIR)$(configdir)/prelude-manager.conf; then                                                    \
 -		$(INSTALL) -m 600 $(top_builddir)/prelude-manager.conf $(DESTDIR)$(configdir)/prelude-manager.conf-dist; \
 -		echo "********************************************************************************";     		 \
@@ -22,7 +21,8 @@ $NetBSD: patch-ab,v 1.2 2008/07/21 12:12:15 shannonjr Exp $
 -	else                                                                                                 		 \
 -		$(INSTALL) -m 600 $(top_builddir)/prelude-manager.conf $(DESTDIR)$(configdir)/;                          \
 -	fi                                                                                                   
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)/share/examples/prelude-manager;
 +	$(INSTALL) -m 600 $(top_builddir)/prelude-manager.conf $(DESTDIR)$(prefix)/share/examples/prelude-manager/;
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+ 
+ dist-hook:
+ 	@if test -d "$(srcdir)/.git"; then      \
