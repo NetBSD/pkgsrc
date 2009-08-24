@@ -1,18 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2009/05/15 10:29:05 adam Exp $
+$NetBSD: patch-ad,v 1.2 2009/08/24 08:23:41 adam Exp $
 
---- src/lib/jcr.c.orig	2009-04-10 13:12:50.000000000 +0200
-+++ src/lib/jcr.c
-@@ -1059,13 +1059,8 @@ void _dbg_print_jcr(FILE *fp)
-       
-       fprintf(fp, "JCR=%p JobId=%i name=%s JobStatus=%c\n", 
-               jcr, jcr->JobId, jcr->Job, jcr->JobStatus);
--#ifdef HAVE_WIN32
-       fprintf(fp, "\tuse_count=%i\n",
-               jcr->use_count());
--#else
--      fprintf(fp, "\tuse_count=%i threadid=0x%x\n",
--              jcr->use_count(), (int)jcr->my_thread_id);
--#endif
-       fprintf(fp, "\tJobType=%c JobLevel=%c\n",
-               jcr->get_JobType(), jcr->get_JobLevel());
-       bstrftime(buf1, sizeof(buf1), jcr->sched_time);
+--- src/lib/tls.c.orig	2008-11-22 19:36:12.000000000 +0100
++++ src/lib/tls.c
+@@ -315,7 +315,11 @@ bool tls_postconnect_verify_host(JCR *jc
+          extname = OBJ_nid2sn(OBJ_obj2nid(X509_EXTENSION_get_object(ext)));
+ 
+          if (strcmp(extname, "subjectAltName") == 0) {
++#if OPENSSL_VERSION_NUMBER >= 0x10100000L
++            const X509V3_EXT_METHOD *method;
++#else
+             X509V3_EXT_METHOD *method;
++#endif
+             STACK_OF(CONF_VALUE) *val;
+             CONF_VALUE *nval;
+             void *extstr = NULL;
