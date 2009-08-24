@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8369 2009/08/23 22:22:33 wiz Exp $
+$NetBSD: TODO,v 1.8370 2009/08/24 08:50:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1217,7 +1217,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o thin-1.0.0
 	o thoth-0.2.1
 	o thunderbird-2.0.0.23
-	o tiff-3.9.0
 	o tig-0.14.1
 	o tile-0.7.4
 	o tinyproxy-1.7.0

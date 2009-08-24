@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3347 2009/08/24 06:00:27 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3348 2009/08/24 08:50:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4390,3 +4390,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-common-sense to 1.0 [seb 2009-08-23]
 	Updated devel/p5-Devel-Cover to 0.65 [seb 2009-08-23]
 	Updated devel/cppunit to 1.10.2nb10 [hasso 2009-08-24]
+	Updated graphics/tiff to 3.9.0 [wiz 2009-08-24]
