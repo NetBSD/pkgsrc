@@ -1,17 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2008/07/27 20:14:14 dholland Exp $
+$NetBSD: patch-ad,v 1.2 2009/08/24 11:39:21 obache Exp $
 
---- mouse.h.orig	2003-08-31 13:32:24.000000000 -0400
-+++ mouse.h	2008-07-27 13:58:11.000000000 -0400
-@@ -33,7 +33,11 @@
- class Mouse
- {
- protected:
--	Shape_file pointers;		// Pointers from 'pointers.shp'.
-+	Shape_file pointers;
-+#if __GNUC__ == 4 && __GNUC_MINOR__ == 1
-+	/* I have no idea why this is needed. */
-+	class
-+#endif
- 	Game_window *gwin;		// Where to draw.
- 	Image_window8 *iwin;		// From gwin.
- 	Image_buffer *backup;		// Stores image below mouse shape.
+--- mouse.h.orig	2003-08-31 17:32:24.000000000 +0000
++++ mouse.h
+@@ -27,6 +27,8 @@
+ #include "vgafile.h"
+ #include "glshape.h"
+ 
++class Game_window;
++
+ /*
+  *	Handle custom mouse pointers.
+  */
