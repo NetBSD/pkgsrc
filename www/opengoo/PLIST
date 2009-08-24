@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/08/05 15:55:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/24 12:42:54 taca Exp $
 ${OG_DIR}/application/application.php
 ${OG_DIR}/application/controllers/AccessController.class.php
 ${OG_DIR}/application/controllers/AccountController.class.php
@@ -493,6 +493,7 @@ ${OG_DIR}/application/views/object/send_reminders.php
 ${OG_DIR}/application/views/object/share.php
 ${OG_DIR}/application/views/object/view_history.php
 ${OG_DIR}/application/views/project/add_project.php
+${OG_DIR}/application/views/project/add_ws_permissions.php
 ${OG_DIR}/application/views/project/get_subws.php
 ${OG_DIR}/application/views/project/people.php
 ${OG_DIR}/application/views/project/permissions.php
@@ -939,16 +940,22 @@ ${OG_DIR}/language/ru_ru/calendar.php
 ${OG_DIR}/language/ru_ru/countries.php
 ${OG_DIR}/language/ru_ru/emails.php
 ${OG_DIR}/language/ru_ru/errors.php
+${OG_DIR}/language/ru_ru/fields.php
 ${OG_DIR}/language/ru_ru/general.php
 ${OG_DIR}/language/ru_ru/help/dummy.txt
+${OG_DIR}/language/ru_ru/help.php
 ${OG_DIR}/language/ru_ru/lang.js
 ${OG_DIR}/language/ru_ru/messages.php
 ${OG_DIR}/language/ru_ru/objects.php
 ${OG_DIR}/language/ru_ru/plugins/dummy.txt
 ${OG_DIR}/language/ru_ru/project_interface.php
+${OG_DIR}/language/ru_ru/readme_rus.txt
+${OG_DIR}/language/ru_ru/reporting.php
 ${OG_DIR}/language/ru_ru/site_interface.php
+${OG_DIR}/language/ru_ru/slimey.js
 ${OG_DIR}/language/ru_ru/timezones.php
 ${OG_DIR}/language/ru_ru/unknown-words.txt
+${OG_DIR}/language/ru_ru/upgrade.php
 ${OG_DIR}/language/zh_cn.php
 ${OG_DIR}/language/zh_cn/README
 ${OG_DIR}/language/zh_cn/actions.php
