@@ -1,18 +1,14 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:13:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/08/24 18:32:22 hasso Exp $
 bin/prelude-manager
 include/prelude-manager/prelude-manager.h
 lib/prelude-manager/decodes/normalize.la
 lib/prelude-manager/filters/idmef-criteria.la
-lib/prelude-manager/filters/thresholding.a
 lib/prelude-manager/filters/thresholding.la
-lib/prelude-manager/filters/thresholding.so
 lib/prelude-manager/reports/db.la
 lib/prelude-manager/reports/debug.la
 lib/prelude-manager/reports/relaying.la
 lib/prelude-manager/reports/textmod.la
-lib/prelude-manager/reports/smtp.a
 lib/prelude-manager/reports/smtp.la
-lib/prelude-manager/reports/smtp.so
 sbin/run-prelude-manager
 share/examples/prelude-manager/prelude-manager.conf
 share/examples/rc.d/preludemanager
