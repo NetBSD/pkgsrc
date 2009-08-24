@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2009/05/20 01:09:12 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/08/24 09:20:29 adam Exp $
 
-DISTNAME=		bacula-docs-3.0.1
+DISTNAME=		bacula-docs-3.0.2
 PKGNAME=		${DISTNAME:S/docs/doc/}
-PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 EXTRACT_SUFX=		.tar.bz2
