@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3348 2009/08/24 08:50:54 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3349 2009/08/24 09:22:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4391,3 +4391,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-Cover to 0.65 [seb 2009-08-23]
 	Updated devel/cppunit to 1.10.2nb10 [hasso 2009-08-24]
 	Updated graphics/tiff to 3.9.0 [wiz 2009-08-24]
+	Updated sysutils/bacula to 3.0.2 [adam 2009-08-24]
+	Updated sysutils/bacula-clientonly to 3.0.2 [adam 2009-08-24]
+	Updated sysutils/bacula-doc to 3.0.2 [adam 2009-08-24]
+	Updated sysutils/bacula-gnome-console to 3.0.2 [adam 2009-08-24]
+	Updated sysutils/bacula-tray-monitor to 3.0.2 [adam 2009-08-24]
+	Updated sysutils/bacula-wx-console to 3.0.2 [adam 2009-08-24]
+	Updated sysutils/bacula-qt-console to 3.0.2 [adam 2009-08-24]
