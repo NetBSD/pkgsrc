@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2005/11/03 16:53:34 tv Exp $
+$NetBSD: patch-aa,v 1.2 2009/08/24 08:06:41 wiz Exp $
 
---- snprintf.c.orig	2002-05-13 12:51:22.000000000 -0400
+--- snprintf.c.orig	2002-05-13 16:51:22.000000000 +0000
 +++ snprintf.c
 @@ -64,7 +64,7 @@
  
