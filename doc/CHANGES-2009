@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3345 2009/08/23 23:12:52 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3346 2009/08/24 00:09:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4388,3 +4388,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-Jifty-DBI to 0.58 [seb 2009-08-23]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.5200 [seb 2009-08-23]
 	Updated devel/p5-common-sense to 1.0 [seb 2009-08-23]
+	Updated devel/p5-Devel-Cover to 0.65 [seb 2009-08-23]
