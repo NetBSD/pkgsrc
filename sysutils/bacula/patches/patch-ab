@@ -1,8 +1,20 @@
-$NetBSD: patch-ab,v 1.4 2009/07/10 19:21:28 hasso Exp $
+$NetBSD: patch-ab,v 1.5 2009/08/24 08:23:41 adam Exp $
 
---- ./src/lib/crypto.c.orig	2008-11-06 21:10:08 +0200
-+++ ./src/lib/crypto.c	2009-07-10 13:27:39 +0300
-@@ -1099,7 +1099,11 @@ CRYPTO_SESSION *crypto_session_new (cryp
+--- src/lib/crypto.c.orig	2008-11-06 20:10:08.000000000 +0100
++++ src/lib/crypto.c
+@@ -309,7 +309,11 @@ typedef struct PEM_CB_Context {
+  */
+ static ASN1_OCTET_STRING *openssl_cert_keyid(X509 *cert) {
+    X509_EXTENSION *ext;
++#if OPENSSL_VERSION_NUMBER >= 0x10000000L
++   const X509V3_EXT_METHOD *method;
++#else
+    X509V3_EXT_METHOD *method;
++#endif
+    ASN1_OCTET_STRING *keyid;
+    int i;
+ #if (OPENSSL_VERSION_NUMBER >= 0x0090800FL)
+@@ -1099,7 +1103,11 @@ CRYPTO_SESSION *crypto_session_new (cryp
        /* Encrypt the session key */
        ekey = (unsigned char *)malloc(EVP_PKEY_size(keypair->pubkey));
  
@@ -14,7 +26,7 @@ $NetBSD: patch-ab,v 1.4 2009/07/10 19:21:28 hasso Exp $
           /* OpenSSL failure */
           RecipientInfo_free(ri);
           crypto_session_free(cs);
-@@ -1222,8 +1226,13 @@ crypto_error_t crypto_session_decode(con
+@@ -1222,8 +1230,13 @@ crypto_error_t crypto_session_decode(con
              /* Decrypt the session key */
              /* Allocate sufficient space for the largest possible decrypted data */
              cs->session_key = (unsigned char *)malloc(EVP_PKEY_size(keypair->privkey));

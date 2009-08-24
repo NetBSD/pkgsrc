@@ -1,9 +1,9 @@
-$NetBSD: patch-ao,v 1.1 2009/05/15 10:29:05 adam Exp $
+$NetBSD: patch-ao,v 1.2 2009/08/24 08:23:41 adam Exp $
 
---- configure.orig	2009-05-15 10:52:32.000000000 +0200
+--- configure.orig	2009-07-10 16:12:39.000000000 +0200
 +++ configure
-@@ -45609,7 +45609,7 @@ if test "${support_bat}" = "yes" ; then
-       exit 1
+@@ -45726,7 +45726,7 @@ echo "$as_me: error: Could not find qmak
+    { (exit 1); exit 1; }; }
     fi
  
 -   QMAKEBIN="qmake"
