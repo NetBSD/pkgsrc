@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2009/07/19 11:45:09 tron Exp $
+# $NetBSD: Makefile,v 1.89 2009/08/24 08:50:33 wiz Exp $
 
-DISTNAME=	tiff-3.8.2
-PKGREVISION=	6
+DISTNAME=	tiff-3.9.0
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
 		http://libtiff.maptools.org/dl/
@@ -25,6 +24,12 @@ CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
 CONFIGURE_ARGS+=	--without-x # just in case detects gl to build tiffgt
 
 TEST_TARGET=		check
+
+post-install:
+	cd ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man3 && for file in *.3tiff; do\
+		target=`echo $$file | sed "s/3tiff/3/"`; \
+		${MV} $$file $$target; \
+	done
 
 .include "options.mk"
 
