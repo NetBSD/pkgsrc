@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:13:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/08/24 13:50:03 hasso Exp $
 bin/libpreludedb-config
 bin/preludedb-admin
 include/libpreludedb/preludedb-error.h
@@ -11,14 +11,12 @@ include/libpreludedb/preludedb-version.h
 include/libpreludedb/preludedb.h
 lib/libpreludedb.la
 lib/libpreludedb/plugins/formats/classic.la
-lib/libpreludedb/plugins/sql/mysql.la
-lib/perl5/site_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB/.packlist
-lib/perl5/site_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB/PreludeDB.bs
-lib/perl5/site_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB/PreludeDB.so
-lib/perl5/site_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/PreludeDB.pm
-${PYSITELIB}/_preludedb.so
-${PYSITELIB}/preludedb.py
-${PYSITELIB}/preludedb.pyc
+${PLIST.mysql}lib/libpreludedb/plugins/sql/mysql.la
+${PLIST.pgsql}lib/libpreludedb/plugins/sql/pgsql.la
+${PLIST.sqlite3}lib/libpreludedb/plugins/sql/sqlite3.la
+${PLIST.python}${PYSITELIB}/_preludedb.so
+${PLIST.python}${PYSITELIB}/preludedb.py
+${PLIST.python}${PYSITELIB}/preludedb.pyc
 share/aclocal/libpreludedb.m4
 share/gtk-doc/html/libpreludedb/ch01.html
 share/gtk-doc/html/libpreludedb/libpreludedb.devhelp2
@@ -59,7 +57,7 @@ share/libpreludedb/classic/addIndices.sql
 share/libpreludedb/classic/pgsql.sql
 share/libpreludedb/classic/sqlite.sql
 share/libpreludedb/classic/sqlite-update-14-4.sql
-man/man1/preludedb-admin.1
 share/libpreludedb/classic/mysql-update-14-6.sql
 share/libpreludedb/classic/pgsql-update-14-6.sql
 share/libpreludedb/classic/sqlite-update-14-6.sql
+man/man1/preludedb-admin.1
