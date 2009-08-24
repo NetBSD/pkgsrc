@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2009/08/18 15:23:59 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/24 09:20:29 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-qt-console-/}
-PKGREVISION=	2
 COMMENT=	Qt-based console for Bacula - The Network Backup Solution
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -20,7 +19,7 @@ INSTALLATION_DIRS=	bin share/examples/bacula
 CONF_FILES+=		${EXAMPLESDIR}/bat.conf ${PKG_SYSCONFDIR}/bat.conf
 
 post-install:
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/src/qt-console/bat ${DESTDIR}${PREFIX}/bin
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/src/qt-console/bat ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/src/qt-console/bat.conf ${DESTDIR}${EXAMPLESDIR}
 
 .include "../../sysutils/bacula/Makefile.common"
