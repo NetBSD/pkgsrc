@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8371 2009/08/24 09:22:39 adam Exp $
+$NetBSD: TODO,v 1.8372 2009/08/24 18:40:51 hasso Exp $
 
 Suggested new packages
 ======================
@@ -785,8 +785,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libnasl-2.3.1
 	o libntlm-1.1
 	o libole2-2.2.8
-	o libprelude-0.9.24 [pkg/41763]
-	o libpreludedb-0.9.15.3 [pkg/41763]
 	o libproxy-0.3.0
 	o libssh-0.3.3
 	o libssh2-1.1
@@ -1006,9 +1004,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o postal-0.70
 	o powermanga-0.90
 	o pptp-1.7.1 [pkg/38038]
-	o prelude-correlator-0.9.0beta6 [pkg/41763]
-	o prelude-lm-0.9.15 [pkg/41763]
-	o prelude-manager-0.9.15 [pkg/41763]
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
