@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3349 2009/08/24 09:22:39 adam Exp $
+$NetBSD: CHANGES-2009,v 1.3350 2009/08/24 12:31:31 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4398,3 +4398,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/bacula-tray-monitor to 3.0.2 [adam 2009-08-24]
 	Updated sysutils/bacula-wx-console to 3.0.2 [adam 2009-08-24]
 	Updated sysutils/bacula-qt-console to 3.0.2 [adam 2009-08-24]
+	Updated security/prelude-correlator to 0.9.0beta6 [hasso 2009-08-24]
