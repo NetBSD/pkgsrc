@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:16:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/08/24 09:20:29 adam Exp $
 share/doc/bacula/catalog/About_this_document.html
 share/doc/bacula/catalog/Bacula-tray-monitor.png
 share/doc/bacula/catalog/Bacula_Catalo_Databa_Guide.html
@@ -10,8 +10,6 @@ share/doc/bacula/catalog/General_Index.html
 share/doc/bacula/catalog/Installi_Configur_PostgreS.html
 share/doc/bacula/catalog/Installin_Configuri_SQLite.html
 share/doc/bacula/catalog/Installing_Configurin_MySQL.html
-share/doc/bacula/catalog/List_Figures.html
-share/doc/bacula/catalog/List_Tables.html
 share/doc/bacula/catalog/access-is-denied.png
 share/doc/bacula/catalog/back.png
 share/doc/bacula/catalog/bacula-applications.png
@@ -100,10 +98,9 @@ share/doc/bacula/concepts/Disast_Recove_Using_Bacula.html
 share/doc/bacula/concepts/File_Daemon_Index.html
 share/doc/bacula/concepts/GNU_Free_Documentat_License.html
 share/doc/bacula/concepts/General_Index.html
-share/doc/bacula/concepts/List_Figures.html
-share/doc/bacula/concepts/List_Tables.html
 share/doc/bacula/concepts/Migration_Copy.html
-share/doc/bacula/concepts/New_Features.html
+share/doc/bacula/concepts/New_Features_in_3_0_0.html
+share/doc/bacula/concepts/New_Features_in_3_0_2.html
 share/doc/bacula/concepts/Python_Scripting.html
 share/doc/bacula/concepts/Restore_Command.html
 share/doc/bacula/concepts/Storage_Daemon_Index.html
@@ -144,6 +141,8 @@ share/doc/bacula/concepts/images.idx
 share/doc/bacula/concepts/images.pl
 share/doc/bacula/concepts/images.tex
 share/doc/bacula/concepts/img1.png
+share/doc/bacula/concepts/img7.png
+share/doc/bacula/concepts/img8.png
 share/doc/bacula/concepts/index.html
 share/doc/bacula/concepts/index.png
 share/doc/bacula/concepts/internals.pl
@@ -187,8 +186,6 @@ share/doc/bacula/console/Contents.html
 share/doc/bacula/console/GNU_Free_Documentat_License.html
 share/doc/bacula/console/GUI_Programs.html
 share/doc/bacula/console/General_Index.html
-share/doc/bacula/console/List_Figures.html
-share/doc/bacula/console/List_Tables.html
 share/doc/bacula/console/access-is-denied.png
 share/doc/bacula/console/back.png
 share/doc/bacula/console/bacula-applications.png
@@ -273,6 +270,7 @@ share/doc/bacula/developers/Definitions.html
 share/doc/bacula/developers/Developers_Guide.html
 share/doc/bacula/developers/Developing_Bacula.html
 share/doc/bacula/developers/Development_Cycle.html
+share/doc/bacula/developers/Director_Index.html
 share/doc/bacula/developers/Director_Services_Daemon.html
 share/doc/bacula/developers/Downlo_md5_zi_Zippe_archiv.html
 share/doc/bacula/developers/Downlo_smarta_Zippe_archiv.html
@@ -287,12 +285,9 @@ share/doc/bacula/developers/General5.html
 share/doc/bacula/developers/General6.html
 share/doc/bacula/developers/General7.html
 share/doc/bacula/developers/General_Daemon_Protocol.html
-share/doc/bacula/developers/General_Index.html
 share/doc/bacula/developers/Higher_Level_Conventions.html
 share/doc/bacula/developers/Implementing_GUI_Interface.html
 share/doc/bacula/developers/Introduction_TLS.html
-share/doc/bacula/developers/List_Figures.html
-share/doc/bacula/developers/List_Tables.html
 share/doc/bacula/developers/Low_Level_Network_Protocol.html
 share/doc/bacula/developers/New_Configuratio_Directives.html
 share/doc/bacula/developers/Old_Depreciated_Tape_Format.html
@@ -361,6 +356,7 @@ share/doc/bacula/developers/flow.png
 share/doc/bacula/developers/home.png
 share/doc/bacula/developers/imagename_translations
 share/doc/bacula/developers/images.tex
+share/doc/bacula/developers/img1.png
 share/doc/bacula/developers/index.html
 share/doc/bacula/developers/index.png
 share/doc/bacula/developers/md5.png
@@ -397,8 +393,6 @@ share/doc/bacula/install/File_Daemon_Index.html
 share/doc/bacula/install/General_Index.html
 share/doc/bacula/install/Getting_Started_with_Bacula.html
 share/doc/bacula/install/Installing_Bacula.html
-share/doc/bacula/install/List_Figures.html
-share/doc/bacula/install/List_Tables.html
 share/doc/bacula/install/Messages_Resource.html
 share/doc/bacula/install/Monitor_Configuration.html
 share/doc/bacula/install/Storage_Daemon_Configuratio.html
@@ -473,8 +467,6 @@ share/doc/bacula/problems/Contents.html
 share/doc/bacula/problems/Dealing_with_Firewalls.html
 share/doc/bacula/problems/GNU_Free_Documentat_License.html
 share/doc/bacula/problems/General_Index.html
-share/doc/bacula/problems/List_Figures.html
-share/doc/bacula/problems/List_Tables.html
 share/doc/bacula/problems/Testing_Your_Tape_Drive.html
 share/doc/bacula/problems/Tips_Suggestions.html
 share/doc/bacula/problems/What_Do_When_Bacula.html
@@ -545,8 +537,6 @@ share/doc/bacula/utility/Conf-Diagram.png
 share/doc/bacula/utility/Contents.html
 share/doc/bacula/utility/GNU_Free_Documentat_License.html
 share/doc/bacula/utility/General_Index.html
-share/doc/bacula/utility/List_Figures.html
-share/doc/bacula/utility/List_Tables.html
 share/doc/bacula/utility/Volume_Utility_Tools.html
 share/doc/bacula/utility/access-is-denied.png
 share/doc/bacula/utility/back.png
