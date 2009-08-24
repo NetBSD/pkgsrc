@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2007/06/19 21:46:40 jlam Exp $
+$NetBSD: distinfo,v 1.10 2009/08/24 08:14:36 wiz Exp $
 
 SHA1 (minicom-2.1.tar.gz) = 720273f6ee8db5fb2da4379ac610a520a31aba70
 RMD160 (minicom-2.1.tar.gz) = 58121cf29991a92914acee855d6e86486c6d370d
@@ -12,3 +12,4 @@ SHA1 (patch-af) = 38905432b60a796742d43be1aed84ee2774bb222
 SHA1 (patch-ag) = c8947fb6693d2508d7caa79916142af346e27cdd
 SHA1 (patch-ah) = da65045ad1d02a7c005aba863a106472d05f5c1c
 SHA1 (patch-ai) = 5a1ecdea3287dc4d0b1c71bb88656fb729522081
+SHA1 (patch-aj) = 56c537b245aa32f9b71c96d527bc83c88ec66005
