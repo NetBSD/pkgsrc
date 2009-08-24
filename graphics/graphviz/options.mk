@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2009/07/22 19:38:34 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2009/08/24 11:53:42 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd x11 pangocairo gtk rsvg swig guile lua ocaml tcl perl
@@ -9,11 +9,11 @@ PKG_SUGGESTED_OPTIONS=	gd x11 pangocairo gtk rsvg swig lua tcl perl
 #   ocaml lua tcl perl: extension language support
 #   x11: Omits all linking with x11.  Silently forces off pangocairo, gtk
 #     and rsvg.
-#   pangocairo: TODO.  Silently forces off gtk.
-#   gtk: TODO
+#   pangocairo: [need explanation].  Silently forces off gtk.
+#   gtk: [need explanation]
 #   rsvg: Omitting loses svg support.  librsvg has large dependencies
 #     including some Gnome libs.
-#   gd: TODO (seems small)
+#   gd: [need explanation] (seems small)
 
 .include "../../mk/bsd.options.mk"
 
