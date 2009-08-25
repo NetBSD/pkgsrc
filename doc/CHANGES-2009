@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3356 2009/08/25 12:23:14 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3357 2009/08/25 16:40:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4405,3 +4405,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/cvs2svn to 2.3.0 [epg 2009-08-25]
 	Removed devel/gobo-eiffel [wiz 2009-08-25]
 	Added net/libasyncns version 0.7 [wiz 2009-08-25]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.077 [sno 2009-08-25]
