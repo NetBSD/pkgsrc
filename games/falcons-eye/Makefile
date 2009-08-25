@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/06/30 00:07:15 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2009/08/25 11:57:45 wiz Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -14,7 +14,6 @@ COMMENT=		Falcon's Eye NetHack
 
 MAKE_JOBS_SAFE=		no
 
-EXTRACT_OPTS_ZIP=	-aq
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 DIST_SUBDIR=		${PKGNAME_NOREV}-20050216-2

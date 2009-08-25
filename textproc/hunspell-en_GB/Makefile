@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/07 21:59:34 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/25 11:57:46 wiz Exp $
 #
 
 VERSION=	20061130
@@ -15,8 +15,6 @@ COMMENT=	British English dictionary for hunspell
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	hunspell-dictionaries/en_GB-${VERSION}
-# don't want -L
-EXTRACT_OPTS_ZIP=	-aqo
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

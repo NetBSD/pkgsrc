@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/05/19 08:59:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/08/25 11:57:44 wiz Exp $
 #
 
 DISTNAME=		wide
@@ -17,7 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/WIDE
-EXTRACT_OPTS_ZIP=	-aqo
 
 PKG_JVMS_ACCEPTED=	sun-jdk14 sun-jdk15
 

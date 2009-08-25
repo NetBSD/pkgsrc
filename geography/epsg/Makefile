@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/05/19 08:59:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/25 11:57:45 wiz Exp $
 #
 
 DISTNAME=		epsg-v${VERS}sql-PostgreSQL
@@ -18,9 +18,6 @@ COMMENT=		EPSG geodetic parameters database
 LICENSE=		epsg-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Don't make filenames lowercase.
-EXTRACT_OPTS_ZIP=	-aqo
 
 WRKSRC=			${WRKDIR}
 
