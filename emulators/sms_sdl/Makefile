@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2009/08/25 11:57:45 wiz Exp $
 #
 
 DISTNAME=		sms_sdl-0.9.4a-r7.1-src
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/sms_sdl-0.9.4a-r7.1
 BUILD_DIRS=		sdl
-EXTRACT_OPTS_ZIP=	-aqo
 
 INSTALLATION_DIRS=	bin
 

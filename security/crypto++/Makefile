@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/05/21 21:13:15 zafer Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/25 11:57:45 wiz Exp $
 #
 
 DISTNAME=		cryptopp552
@@ -19,7 +19,6 @@ WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c++
 CPPFLAGS+=		-DCRYPTOPP_DISABLE_ASM
 BUILDLINK_TRANSFORM+=	rm:-pipe rm:-msse2
-EXTRACT_OPTS_ZIP=	-aqo
 
 AUTO_MKDIRS=			yes
 

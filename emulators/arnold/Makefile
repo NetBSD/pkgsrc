@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/06/15 11:09:58 obache Exp $
+# $NetBSD: Makefile,v 1.22 2009/08/25 11:57:45 wiz Exp $
 #
 
 DISTNAME=		arnsrc27012002
@@ -13,9 +13,6 @@ HOMEPAGE=		http://arnold.emuunlim.com/
 COMMENT=		Amstrad CPC, Amstrad CPC+ and KC Compact emulator
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# we want case sensitive file names.
-EXTRACT_OPTS_ZIP=	-aqo
 
 WRKSRC=			${WRKDIR}/arnold
 GNU_CONFIGURE=		yes
