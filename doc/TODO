@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8372 2009/08/24 18:40:51 hasso Exp $
+$NetBSD: TODO,v 1.8373 2009/08/25 11:41:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -643,7 +643,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.12
 	o gnustep-base-1.19.1
-	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
 	o golem-0.0.6
 	o gossip-0.31

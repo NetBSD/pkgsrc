@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3354 2009/08/25 04:18:46 epg Exp $
+$NetBSD: CHANGES-2009,v 1.3355 2009/08/25 11:41:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4403,3 +4403,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/filezilla to 3.2.7.1 [zafer 2009-08-24]
 	Updated security/prelude-manager to 0.9.15 [hasso 2009-08-24]
 	Updated devel/cvs2svn to 2.3.0 [epg 2009-08-25]
+	Removed devel/gobo-eiffel [wiz 2009-08-25]
