@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/08/21 23:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/25 20:09:18 hasso Exp $
 
 DISTNAME=	cflow-1.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=cflow/}
 
@@ -12,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		yacc lex
+USE_TOOLS+=		yacc lex msgfmt
 INFO_FILES=		yes
 
 SUBST_CLASSES+=		emacs
