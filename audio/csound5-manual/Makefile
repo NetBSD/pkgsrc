@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 02:13:15 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/25 11:57:44 wiz Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_manual_html
@@ -18,7 +18,6 @@ CSOUND_VERSION=		5.01
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/html
 DIST_SUBDIR=		${PKGNAME_NOREV}
-EXTRACT_OPTS_ZIP=	-aqo
 USE_TOOLS+=		pax
 
 INSTALLATION_DIRS+=	share/doc/csound5
