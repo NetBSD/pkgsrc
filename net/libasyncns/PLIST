@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/25 12:18:09 wiz Exp $
+include/asyncns.h
+lib/libasyncns.la
+lib/pkgconfig/libasyncns.pc
+share/doc/libasyncns/README
+share/doc/libasyncns/README.html
+share/doc/libasyncns/style.css
