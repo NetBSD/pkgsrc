@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.18 2009/07/20 15:04:27 wiz Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.19 2009/08/25 13:19:50 wiz Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -261,6 +261,7 @@ ${PLIST.foo}@dirrm share/bar
     <programlisting>
 @pkgdir path/to/empty/directory
     </programlisting>
+    </para>
   </sect1>
 
 </chapter>
