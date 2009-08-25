@@ -1,11 +1,11 @@
-# $NetBSD: default,v 1.3 2009/06/05 11:10:35 wiz Exp $
+# $NetBSD: default,v 1.4 2009/08/25 05:27:57 hasso Exp $
 
 CONFIG_NAME = default
 
 # Version info
 MESA_MAJOR=	7
 MESA_MINOR=	4
-MESA_TINY=	2
+MESA_TINY=	4
 
 GLU_CFLAGS=	# defined
 
@@ -56,6 +56,9 @@ APP_LIB_DEPS=\
 	 -lm
 
 INSTALL_DIR?= $(PREFIX)
+INSTALL_LIB_DIR = $(INSTALL_DIR)/$(LIB_DIR)
+INSTALL_INC_DIR = $(INSTALL_DIR)/include
+
 DRI_DRIVER_INSTALL_DIR?= $(PREFIX)/lib/dri
 
 DRI_DRIVER_SEARCH_DIR?=  $(LOCALBASE)/lib/dri
