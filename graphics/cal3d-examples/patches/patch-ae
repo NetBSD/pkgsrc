@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/08/25 11:56:35 wiz Exp $
+
+--- ../TheCallyDemo-0.9.1b/data/skeleton.cfg.orig	2003-11-29 17:11:54.000000000 +0000
++++ ../TheCallyDemo-0.9.1b/data/skeleton.cfg
+@@ -4,7 +4,7 @@
+ # model: skeleton
+ #
+ 
+-path=data/skeleton/
++path=@@DATADIR@@/skeleton/
+ 
+ scale=1.0
+ 

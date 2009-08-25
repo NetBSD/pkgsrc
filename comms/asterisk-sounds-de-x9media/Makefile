@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/03/03 05:33:32 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/25 11:56:34 wiz Exp $
 #
 
 PKGNAME=		asterisk-sounds-de-x9media-20060714
+PKGREVISION=		1
 DISTNAME=		asterisk-x9rita-soundfiles-ger-v4
 CATEGORIES=		comms
 MASTER_SITES=		http://www.x9media.com/downloads/

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:31:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/25 11:56:34 wiz Exp $
 libdata/asterisk/sounds/de/agent-alreadyon.gsm
 libdata/asterisk/sounds/de/agent-incorrect.gsm
 libdata/asterisk/sounds/de/agent-loggedoff.gsm
@@ -90,32 +90,34 @@ libdata/asterisk/sounds/de/tt-allbusy.gsm
 libdata/asterisk/sounds/de/tt-monkeysintro.gsm
 libdata/asterisk/sounds/de/tt-somethingwrong.gsm
 libdata/asterisk/sounds/de/tt-weasels.gsm
+libdata/asterisk/sounds/de/vm-Cust1.gsm
+libdata/asterisk/sounds/de/vm-Cust2.gsm
+libdata/asterisk/sounds/de/vm-Cust3.gsm
+libdata/asterisk/sounds/de/vm-Cust4.gsm
+libdata/asterisk/sounds/de/vm-Cust5.gsm
+libdata/asterisk/sounds/de/vm-Family.gsm
+libdata/asterisk/sounds/de/vm-Friends.gsm
+libdata/asterisk/sounds/de/vm-INBOX.gsm
+libdata/asterisk/sounds/de/vm-Old.gsm
+libdata/asterisk/sounds/de/vm-Work.gsm
 libdata/asterisk/sounds/de/vm-advopts.gsm
 libdata/asterisk/sounds/de/vm-and.gsm
 libdata/asterisk/sounds/de/vm-calldiffnum.gsm
 libdata/asterisk/sounds/de/vm-changeto.gsm
-libdata/asterisk/sounds/de/vm-cust1.gsm
-libdata/asterisk/sounds/de/vm-cust2.gsm
-libdata/asterisk/sounds/de/vm-cust3.gsm
-libdata/asterisk/sounds/de/vm-cust4.gsm
-libdata/asterisk/sounds/de/vm-cust5.gsm
 libdata/asterisk/sounds/de/vm-delete.gsm
 libdata/asterisk/sounds/de/vm-deleted.gsm
 libdata/asterisk/sounds/de/vm-dialout.gsm
 libdata/asterisk/sounds/de/vm-enter-num-to-call.gsm
 libdata/asterisk/sounds/de/vm-extension.gsm
-libdata/asterisk/sounds/de/vm-family.gsm
 libdata/asterisk/sounds/de/vm-first.gsm
 libdata/asterisk/sounds/de/vm-for.gsm
 libdata/asterisk/sounds/de/vm-forward.gsm
 libdata/asterisk/sounds/de/vm-forwardoptions.gsm
-libdata/asterisk/sounds/de/vm-friends.gsm
 libdata/asterisk/sounds/de/vm-from-extension.gsm
 libdata/asterisk/sounds/de/vm-from-phonenumber.gsm
 libdata/asterisk/sounds/de/vm-from.gsm
 libdata/asterisk/sounds/de/vm-goodbye.gsm
 libdata/asterisk/sounds/de/vm-helpexit.gsm
-libdata/asterisk/sounds/de/vm-inbox.gsm
 libdata/asterisk/sounds/de/vm-incorrect-mailbox.gsm
 libdata/asterisk/sounds/de/vm-incorrect.gsm
 libdata/asterisk/sounds/de/vm-instructions.gsm
@@ -141,7 +143,6 @@ libdata/asterisk/sounds/de/vm-nobox.gsm
 libdata/asterisk/sounds/de/vm-nomore.gsm
 libdata/asterisk/sounds/de/vm-nonumber.gsm
 libdata/asterisk/sounds/de/vm-num-i-have.gsm
-libdata/asterisk/sounds/de/vm-old.gsm
 libdata/asterisk/sounds/de/vm-onefor.gsm
 libdata/asterisk/sounds/de/vm-options.gsm
 libdata/asterisk/sounds/de/vm-opts.gsm
@@ -187,7 +188,6 @@ libdata/asterisk/sounds/de/vm-undelete.gsm
 libdata/asterisk/sounds/de/vm-undeleted.gsm
 libdata/asterisk/sounds/de/vm-unknown-caller.gsm
 libdata/asterisk/sounds/de/vm-whichbox.gsm
-libdata/asterisk/sounds/de/vm-work.gsm
 libdata/asterisk/sounds/de/vm-youhave.gsm
 libdata/asterisk/sounds/de/x9-enter-phrase-num-play.gsm
 libdata/asterisk/sounds/de/x9-enter-phrase-num-record.gsm
@@ -214,7 +214,7 @@ libdata/asterisk/sounds/digits/de/16.gsm
 libdata/asterisk/sounds/digits/de/17.gsm
 libdata/asterisk/sounds/digits/de/18.gsm
 libdata/asterisk/sounds/digits/de/19.gsm
-libdata/asterisk/sounds/digits/de/1f.gsm
+libdata/asterisk/sounds/digits/de/1F.gsm
 libdata/asterisk/sounds/digits/de/1n.gsm
 libdata/asterisk/sounds/digits/de/2.gsm
 libdata/asterisk/sounds/digits/de/20.gsm

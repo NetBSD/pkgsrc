@@ -1,20 +1,19 @@
-$NetBSD: patch-aa,v 1.4 2007/11/28 19:06:01 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2009/08/25 11:56:34 wiz Exp $
 
---- makefile.orig	2000-02-11 12:02:10.000000000 +1100
-+++ makefile
+--- Makefile.orig	2000-02-11 12:02:10.000000000 +0000
++++ Makefile
 @@ -1,14 +1,19 @@
  # "Artistic Style" Makefile
  
 -CPPFLAGS = -Wall -Wno-sign-compare -O2
--OBJS = ASResource.o ASBeautifier.o ASFormatter.o astyle_main.o
 +#CPPFLAGS = -Wall -Wno-sign-compare -O2
-+OBJS = asresource.o asbeautifier.o asformatter.o astyle_main.o
-+
+ OBJS = ASResource.o ASBeautifier.o ASFormatter.o astyle_main.o
+ 
 +all: astyle
 +
 +install:
 +	install -s -c astyle ${DESTDIR}${PREFIX}/bin
- 
++
  astyle: $(OBJS)
 -	g++ $(CPPFLAGS) -o astyle  $(OBJS)
 +	$(CXX) $(CPPFLAGS) $(LDFLAGS) -o astyle  $(OBJS)

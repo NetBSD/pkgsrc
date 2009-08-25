@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:15 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/08/25 11:56:36 wiz Exp $
 
 DISTNAME=	quake106
 PKGNAME=	quakedata-1.0
@@ -23,7 +23,6 @@ BUILD_DEPENDS+=	lha-[0-9]*:../../archivers/lha
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ELEMENTS=	resource.*
-EXTRACT_OPTS_ZIP=	-qo
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
