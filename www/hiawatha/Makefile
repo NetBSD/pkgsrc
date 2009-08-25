@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/08/20 15:25:01 jwise Exp $
+# $NetBSD: Makefile,v 1.26 2009/08/25 11:57:46 wiz Exp $
 #
 
 DISTNAME=	hiawatha
@@ -27,7 +27,6 @@ USE_TOOLS+=	pax
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-EXTRACT_OPTS_ZIP=	-aq
 
 RCD_SCRIPTS=	hiawatha
 
