@@ -1597,7 +1597,7 @@ As mentioned above, packages for which vulnerabilities get known are not stored
 in the All subdirectory. They don't get deleted since that could be very
 frustrating if many other packages depend on it. Instead, they are moved to the
 vulnerable subdirectory. So you may need to add this directory to the PKG_PATH
-variable. However, you should run audit-packages regularly, especially after
+variable. However, you should run pkg_admin audit regularly, especially after
 installing new packages, and verify that the vulnerabilities are acceptable for
 your configuration.
 
@@ -1634,21 +1634,34 @@ security vulnerabilities to packages which are (or have been) included in
 pkgsrc. The list is available from the NetBSD FTP site at ftp://ftp.NetBSD.org/
 pub/pkgsrc/distfiles/vulnerabilities.
 
-Through security/audit-packages, this list can be downloaded automatically, and
-a security audit of all packages installed on a system can take place.
+Through pkg_admin fetch-pkg-vulnerabilities, this list can be downloaded
+automatically, and a security audit of all packages installed on a system can
+take place.
 
-There are two components to security/audit-packages. The first component,
-"download-vulnerability-list", is for downloading the list of vulnerabilities
-from the NetBSD FTP site. The second component, "audit-packages", checks to see
-if any of your installed packages are vulnerable. If a package is vulnerable,
-you will see output similar to the following:
+There are two components to auditing. The first step, pkg_admin
+fetch-pkg-vulnerabilities, is for downloading the list of vulnerabilities from
+the NetBSD FTP site. The second step, pkg_admin audit, checks to see if any of
+your installed packages are vulnerable. If a package is vulnerable, you will
+see output similar to the following:
 
 Package samba-2.0.9 has a local-root-shell vulnerability, see
     http://www.samba.org/samba/whatsnew/macroexploit.html
 
-One can set up security/audit-packages to download the vulnerabilities file
-daily, and include a package audit in the daily security script. Details on
-this are located in the MESSAGE file for security/audit-packages.
+You may wish to have the vulnerabilities file downloaded daily so that it
+remains current. This may be done by adding an appropriate entry to the root
+users crontab(5) entry. For example the entry
+
+# download vulnerabilities file
+0 3 * * * /usr/sbin/pkg_admin fetch-pkg-vulnerabilities >/dev/null 2>&1
+
+
+will update the vulnerability list every day at 3AM. You may wish to do this
+more often than once a day. In addition, you may wish to run the package audit
+from the daily security script. This may be accomplished by adding the
+following line to /etc/security.local:
+
+/usr/sbin/pkg_admin audit
+
 
 4.1.6. Finding if newer versions of your installed packages are in pkgsrc
 
@@ -1913,9 +1926,11 @@ each variable's intent.
   * BINPKG_SITES: List of sites carrying binary pkgs. rel and arch are replaced
     with OS release ("2.0", etc.) and architecture ("mipsel", etc.).
 
-  * ACCEPTABLE_LICENSES: List of acceptable licenses. Whenever you try to build
-    a package whose license is not in this list, you will get an error message
-    that includes instructions on how to change this variable.
+  * ACCEPTABLE_LICENSES: List of acceptable licenses. License names are
+    case-sensitive. Whenever you try to build a package whose license is not in
+    this list, you will get an error message. If the license condition is
+    simple enough, the error message will include specific instructions on how
+    to change this variable.
 
 5.2. Variables affecting the build process
 
@@ -2270,7 +2285,7 @@ that file.
 You may want to set variables in mk.conf. Look at pkgsrc/mk/defaults/mk.conf
 for details of the default settings. You will want to ensure that
 ACCEPTABLE_LICENSES meet your local policy. As used in this example,
-_ACCEPTABLE=yes completely bypasses the license check.
+SKIP_LICENSE_CHECK=yes completely bypasses the license check.
 
 PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
 WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
@@ -2279,7 +2294,7 @@ BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
 OBJHOSTNAME?=   yes               # use work.`hostname`
 FAILOVER_FETCH= yes               # insist on the correct checksum
 PKG_DEVELOPER?= yes
-_ACCEPTABLE=    yes
+SKIP_LICENSE_CHECK=    yes
 
 Some options that are especially useful for bulk builds can be found at the top
 lines of the file mk/bulk/bsd.bulk-pkg.mk. The most useful options of these are
@@ -2637,8 +2652,7 @@ might set now are:
   * ACCEPTABLE_LICENSES+=..., to select some licenses additional to the usual
     Free/Open Source licenses that are acceptable to you,
 
-  * _ACCEPTABLE=yes, to accept all licenses, no matter how restrictive they
-    are.
+  * SKIP_LICENSE_CHECK=yes, to bypass the license checks.
 
 Now you are ready to build the rest of the pbulk infrastructure.
 
@@ -4629,52 +4643,19 @@ following files:
 13.8. Sharing directories between packages
 
 A "shared directory" is a directory where multiple (and unrelated) packages
-install files. These directories are problematic because you have to add
+install files. These directories were problematic because you had to add
 special tricks in the PLIST to conditionally remove them, or have some
 centralized package handle them.
 
-Within pkgsrc, you'll find both approaches. If a directory is shared by a few
-unrelated packages, it's often not worth to add an extra package to remove it.
-Therefore, one simply does:
+In pkgsrc, it is now easy: Each package should create directories and install
+files as needed; pkg_delete will remove any directories left empty after
+uninstalling a package.
 
-@unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
+If a package needs an empty directory to work, create the directory during
+installation as usual, and also add an entry to the PLIST:
 
+@pkgdir path/to/empty/directory
 
-in the PLISTs of all affected packages, instead of the regular "@dirrm" line.
-
-However, if the directory is shared across many packages, two different
-solutions are available:
-
- 1. If the packages have a common dependency, the directory can be removed in
-    that. For example, see textproc/scrollkeeper, which removes the shared
-    directory share/omf.
-
- 2. If the packages using the directory are not related at all (they have no
-    common dependencies), a *-dirs package is used.
-
-From now on, we'll discuss the second solution. To get an idea of the *-dirs
-packages available, issue:
-
-% cd .../pkgsrc
-% ls -d */*-dirs
-
-
-Their use from other packages is very simple. The USE_DIRS variable takes a
-list of package names (without the "-dirs" part) together with the required
-version number (always pick the latest one when writing new packages).
-
-For example, if a package installs files under share/applications, it should
-have the following line in it:
-
-USE_DIRS+=      xdg-1.1
-
-
-After regenerating the PLIST using make print-PLIST, you should get the right
-(commented out) lines.
-
-Note that even if your package is using $X11BASE, it must not depend on the
-*-x11-dirs packages. Just specify the name without that part and pkgsrc (in
-particular, mk/dirs.mk) will take care of it.
 
 Chapter 14. Buildlink methodology
 
@@ -5779,6 +5760,9 @@ that gets the name of the distfile as a parameter. In this case, the definition
 would look like:
 
 MASTER_SITES=   http://www.example.com/download.cgi?file=
+
+The exception to this rule are URLs starting with a dash. In that case the URL
+is taken as is, fetched and the result stored under the name of the distfile.
 
 There are some predefined values for MASTER_SITES, which can be used in
 packages. The names of the variables should speak for themselves.
@@ -7756,21 +7740,21 @@ the tree needs to be updated.
 
 Note
 
-Except the main TeX packages such as teTeX-texmf, packages should install files
-into PKG_LOCALTEXMFPREFIX, not PKG_TEXMFPREFIX.
+Except the main TeX packages such as kpathsea, packages should install files
+into ${PREFIX}/share/texmf-dist, not ${PREFIX}/share/texmf.
 
- 1. Include ../../print/teTeX/module.mk instead of ../../mk/tex.buildlink3.mk.
-    This takes care of rebuilding the ls-R database at installation and
-    deinstallation time.
+ 1. Include ../../print/kpathsea/texmf.mk. This takes care of rebuilding the
+    ls-R database at installation and deinstallation time.
 
- 2. If your package installs files into a texmf tree other than the one at
-    PKG_LOCALTEXMFPREFIX, set TEXMFDIRS to the list of all texmf trees that
-    need database update.
+ 2. If your package installs files into a texmf tree other than the one at $
+    {PREFIX}/share/texmf-dist, set TEX_TEXMF_DIRS to the list of all texmf
+    trees that need database update.
 
     If your package also installs font map files that need to be registered
-    using updmap, set TEX_FONTMAPS to the list of all such font map files. Then
-    updmap will be run automatically at installation/deinstallation to enable/
-    disable font map files for TeX output drivers.
+    using updmap, include ../../print/texlive-tetex/map.mk and set
+    TEX_MAP_FILES and/or TEX_MIXEDMAP_FILES to the list of all such font map
+    files. Then updmap will be run automatically at installation/deinstallation
+    to enable/disable font map files for TeX output drivers.
 
  3. Make sure that none of ls-R databases are included in PLIST, as they will
     be removed only by the teTeX-bin package.
@@ -7822,23 +7806,13 @@ is to regenerate it using make print-PLIST.
 
 19.7. Marking packages as having problems
 
-In some cases one does not have the time to solve a problem immediately. There
-are currently two ways to declare that one knows that a package has problems.
+In some cases one does not have the time to solve a problem immediately. In
+this case, one can plainly mark a package as broken. For this, one just sets
+the variable BROKEN to the reason why the package is broken (similar to the
+RESTRICTED variable). A user trying to build the package will immediately be
+shown this message, and the build will not be even tried.
 
-  * The first way is to plainly mark it as broken. For this, one just sets the
-    variable BROKEN to the reason why the package is broken (similar to the
-    RESTRICTED variable). A user trying to build the package will immediately
-    be shown this message, and the build will not be even tried.
-
-  * After each pkgsrc freeze period (a time when the tree is stabilized and a
-    new pkgsrc branch is cut), the packages that were not building in the
-    official branch build on the latest NetBSD release will be marked as broken
-    on that branch. This is done by setting the BROKEN_IN variable to the
-    branch name (or appending the branch name to it). If a user tries to build
-    such a package and the build fails, the user gets a message that says that
-    the package was broken on the respective branch(es).
-
-Both types of packages are removed from pkgsrc in irregular intervals.
+BROKEN packages are removed from pkgsrc in irregular intervals.
 
 Chapter 20. Debugging
 
@@ -7988,8 +7962,12 @@ general usage is to first make sure that your CHANGES-YYYY file is up-to-date
 directory. For package updates, make changes-entry is enough. For new packages,
 or package moves or removals, set the CTYPE variable on the command line to
 "Added", "Moved", or "Removed". You can set NETBSD_LOGIN_NAME in mk.conf if
-your local login name is not the same as your NetBSD login name. Don't forget
-to commit the changes to pkgsrc/doc/CHANGES-YYYY!
+your local login name is not the same as your NetBSD login name. The target
+also automatically removes possibly existing entries for the package in the
+TODO file. Don't forget to commit the changes, e.g. by using make
+changes-entry-commit! If you are not using a checkout directly from
+cvs.netbsd.org, but e.g. a local copy of the repository, you can set
+USE_NETBSD_REPO=yes. This makes the cvs commands use the main repository.
 
 21.4. Committing: Importing a package into CVS
 
