@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2005/11/28 06:41:20 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2009/08/25 13:19:57 wiz Exp $
 #
 # This is included by doc/guide and meta-pkgs/pkgsrc-guide-tools.
 #
@@ -29,6 +29,7 @@ _GUIDE_DEPENDS+=	w3m>=0.4:../../www/w3m
 
 .if !empty(_GUIDE_OUTPUTS:Mps) || !empty(_GUIDE_OUTPUTS:Mpdf)
 _GUIDE_DEPENDS+=	openjade>=1.3.2:../../textproc/openjade
+_GUIDE_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 _GUIDE_DEPENDS+=	tex-jadetex>=3.13:../../print/tex-jadetex
 GHOSTSCRIPT_REQD=	7.05
 .  if ${_GUIDE_DEPTYPE} == "run"
