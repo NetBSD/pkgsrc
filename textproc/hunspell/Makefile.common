@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2008/07/19 15:06:36 ahoka Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/08/25 11:57:46 wiz Exp $
 # used by textproc/hunspell-af_ZA/Makefile
 # used by textproc/hunspell-bg_BG/Makefile
 # used by textproc/hunspell-ca_ES/Makefile
@@ -32,7 +32,6 @@ NO_BUILD=	yes
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
-EXTRACT_OPTS_ZIP=	-aqo # We don't want -L
 DIST_SUBDIR=		hunspell-dictionaries/${DISTNAME}-${VERSION}
 
 PLIST_SRC=		../../textproc/hunspell/PLIST.common
