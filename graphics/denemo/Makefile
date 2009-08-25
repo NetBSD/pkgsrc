@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/07/22 09:01:30 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/08/25 12:32:55 wiz Exp $
 #
 
 DISTNAME=	denemo-0.7.6
@@ -12,8 +12,6 @@ COMMENT=	GUI musical score editor written in C/GTK+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
-
-BROKEN_IN=		pkgsrc-2006Q4
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config

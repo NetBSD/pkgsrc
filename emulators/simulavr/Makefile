@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/03/07 17:31:22 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/08/25 12:32:55 wiz Exp $
 #
 
 DISTNAME=		simulavr-0.1.2.1
@@ -14,8 +14,6 @@ COMMENT=		Simulator for Atmel AVR microcontrollers
 BUILD_DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
 BUILD_DEPENDS+=		avr-gcc-[0-9]*:../../cross/avr-gcc
 BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
-
-BROKEN_IN=		pkgsrc-2006Q4
 
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ENV+=		ac_cv_prog_has_texi2dvi=yes ac_cv_prog_has_texi2html=yes
