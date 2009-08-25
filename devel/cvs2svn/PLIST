@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2009/07/07 17:16:47 sno Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/08/25 04:17:35 epg Exp $
+bin/cvs2bzr
+bin/cvs2git
 bin/cvs2svn
 ${PYSITELIB}/cvs2svn_lib/__init__.py
 ${PYSITELIB}/cvs2svn_lib/__init__.pyc
@@ -12,6 +14,9 @@ ${PYSITELIB}/cvs2svn_lib/artifact.pyo
 ${PYSITELIB}/cvs2svn_lib/artifact_manager.py
 ${PYSITELIB}/cvs2svn_lib/artifact_manager.pyc
 ${PYSITELIB}/cvs2svn_lib/artifact_manager.pyo
+${PYSITELIB}/cvs2svn_lib/bzr_run_options.py
+${PYSITELIB}/cvs2svn_lib/bzr_run_options.pyc
+${PYSITELIB}/cvs2svn_lib/bzr_run_options.pyo
 ${PYSITELIB}/cvs2svn_lib/changeset.py
 ${PYSITELIB}/cvs2svn_lib/changeset.pyc
 ${PYSITELIB}/cvs2svn_lib/changeset.pyo
@@ -81,6 +86,9 @@ ${PYSITELIB}/cvs2svn_lib/git_output_option.pyo
 ${PYSITELIB}/cvs2svn_lib/git_revision_recorder.py
 ${PYSITELIB}/cvs2svn_lib/git_revision_recorder.pyc
 ${PYSITELIB}/cvs2svn_lib/git_revision_recorder.pyo
+${PYSITELIB}/cvs2svn_lib/git_run_options.py
+${PYSITELIB}/cvs2svn_lib/git_run_options.pyc
+${PYSITELIB}/cvs2svn_lib/git_run_options.pyo
 ${PYSITELIB}/cvs2svn_lib/key_generator.py
 ${PYSITELIB}/cvs2svn_lib/key_generator.pyc
 ${PYSITELIB}/cvs2svn_lib/key_generator.pyo
@@ -90,6 +98,9 @@ ${PYSITELIB}/cvs2svn_lib/log.pyo
 ${PYSITELIB}/cvs2svn_lib/main.py
 ${PYSITELIB}/cvs2svn_lib/main.pyc
 ${PYSITELIB}/cvs2svn_lib/main.pyo
+${PYSITELIB}/cvs2svn_lib/man_writer.py
+${PYSITELIB}/cvs2svn_lib/man_writer.pyc
+${PYSITELIB}/cvs2svn_lib/man_writer.pyo
 ${PYSITELIB}/cvs2svn_lib/metadata.py
 ${PYSITELIB}/cvs2svn_lib/metadata.pyc
 ${PYSITELIB}/cvs2svn_lib/metadata.pyo
@@ -168,6 +179,9 @@ ${PYSITELIB}/cvs2svn_lib/svn_repository_delegate.pyo
 ${PYSITELIB}/cvs2svn_lib/svn_revision_range.py
 ${PYSITELIB}/cvs2svn_lib/svn_revision_range.pyc
 ${PYSITELIB}/cvs2svn_lib/svn_revision_range.pyo
+${PYSITELIB}/cvs2svn_lib/svn_run_options.py
+${PYSITELIB}/cvs2svn_lib/svn_run_options.pyc
+${PYSITELIB}/cvs2svn_lib/svn_run_options.pyo
 ${PYSITELIB}/cvs2svn_lib/symbol.py
 ${PYSITELIB}/cvs2svn_lib/symbol.pyc
 ${PYSITELIB}/cvs2svn_lib/symbol.pyo
@@ -210,6 +224,7 @@ ${PYSITELIB}/cvs2svn_rcsparse/run-tests.pyo
 ${PYSITELIB}/cvs2svn_rcsparse/texttools.py
 ${PYSITELIB}/cvs2svn_rcsparse/texttools.pyc
 ${PYSITELIB}/cvs2svn_rcsparse/texttools.pyo
+share/doc/cvs2svn/cvs2bzr.html
 share/doc/cvs2svn/cvs2git.html
 share/doc/cvs2svn/cvs2svn.html
 share/doc/cvs2svn/faq.html
