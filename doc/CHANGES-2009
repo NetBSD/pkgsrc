@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3357 2009/08/25 16:40:24 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3358 2009/08/25 20:12:22 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4406,3 +4406,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed devel/gobo-eiffel [wiz 2009-08-25]
 	Added net/libasyncns version 0.7 [wiz 2009-08-25]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.077 [sno 2009-08-25]
+	Updated devel/cflow to 1.3nb1 [hasso 2009-08-25]
+	Updated devel/qof to 0.7.5nb3 [hasso 2009-08-25]
