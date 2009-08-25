@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.100 2009/07/11 05:46:38 minskim Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.101 2009/08/25 12:32:55 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1909,27 +1909,13 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
   <title>Marking packages as having problems</title>
 
   <para>In some cases one does not have the time to solve a problem
-  immediately.  There are currently two ways to declare that one knows
-  that a package has problems.</para>
-  <itemizedlist>
-    <listitem><para>The first way is to plainly mark it as broken.  For
-    this, one just sets the variable <varname>BROKEN</varname> to the
-    reason why the package is broken (similar to the
-    <varname>RESTRICTED</varname> variable).  A user trying to build
-    the package will immediately be shown this message, and the build
-    will not be even tried.</para></listitem>
-
-    <listitem><para>After each pkgsrc freeze period (a time when the
-    tree is stabilized and a new pkgsrc branch is cut), the packages
-    that were not building in the official branch build on the latest
-    NetBSD release will be marked as broken on that branch.  This is
-    done by setting the <varname>BROKEN_IN</varname> variable to the
-    branch name (or appending the branch name to it).  If a user tries
-    to build such a package and the build fails, the user gets a
-    message that says that the package was broken on the respective
-    branch(es).</para></listitem>
-  </itemizedlist>
-  <para>Both types of packages are removed from pkgsrc in irregular
+  immediately. In this case, one can plainly mark a package as broken.  For
+  this, one just sets the variable <varname>BROKEN</varname> to the
+  reason why the package is broken (similar to the
+  <varname>RESTRICTED</varname> variable).  A user trying to build
+  the package will immediately be shown this message, and the build
+  will not be even tried.</para>
+  <para><varname>BROKEN</varname> packages are removed from pkgsrc in irregular
   intervals.</para>
 </sect1>
 
