@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3355 2009/08/25 11:41:13 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3356 2009/08/25 12:23:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4404,3 +4404,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/prelude-manager to 0.9.15 [hasso 2009-08-24]
 	Updated devel/cvs2svn to 2.3.0 [epg 2009-08-25]
 	Removed devel/gobo-eiffel [wiz 2009-08-25]
+	Added net/libasyncns version 0.7 [wiz 2009-08-25]
