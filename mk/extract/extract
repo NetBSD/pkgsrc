@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.9 2009/07/08 13:27:52 minskim Exp $
+# $NetBSD: extract,v 1.10 2009/08/25 11:56:35 wiz Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -298,7 +298,7 @@ shar)
 	;;
 
 zip)
-	: ${EXTRACT_OPTS_ZIP=-Laqo}
+	: ${EXTRACT_OPTS_ZIP=-aqo}
 	${TEST} "$exclude" = "no" || exclude_flag="-x"
 	if ${TEST} -n "$exclude_file"; then
 		set -- dummy `${CAT} "$exclude_file"`; shift
