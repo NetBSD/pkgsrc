@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2009/08/08 15:03:18 drochner Exp $
+# $NetBSD: options.mk,v 1.15 2009/08/25 05:27:57 hasso Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=
@@ -30,6 +30,10 @@ PKG_SUPPORTED_OPTIONS+=		dri
 ###	Mesa 6.5.3 (a development release).
 ###
 .if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*-*86*) && ${X11_TYPE} == "modular"
+PKG_SUGGESTED_OPTIONS+=		dri
+.endif
+
+.if ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
 
