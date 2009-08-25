@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/08/20 03:55:55 hasso Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/08/25 20:11:01 hasso Exp $
 include/qof/deprecated.h
 include/qof/guid.h
 include/qof/kvpframe.h
@@ -263,22 +263,43 @@ share/doc/qof/html/doxy/qsf-xml_8h_source.html
 share/doc/qof/html/doxy/qsf-xml_8h.html
 share/doc/qof/html/doxy/qsfmaps.html
 share/doc/qof/html/doxy/reference.html
+share/doc/qof/html/doxy/structGHashTableKVPair.html
+share/doc/qof/html/doxy/structHandlerInfo.html
 share/doc/qof/html/doxy/structQofBackendOption__s.html
+share/doc/qof/html/doxy/structQofBackend__s.html
 share/doc/qof/html/doxy/structQofBackendProvider__s.html
 share/doc/qof/html/doxy/structQofBookMergeData.html
 share/doc/qof/html/doxy/structQofBookMergeRule.html
 share/doc/qof/html/doxy/structQofDate__s.html
 share/doc/qof/html/doxy/structQofEntity__s.html
+share/doc/qof/html/doxy/structQofInstance__s.html
+share/doc/qof/html/doxy/structQofInt128.html
+share/doc/qof/html/doxy/structQofUndo__s.html
 share/doc/qof/html/doxy/structQsfMetadata__s.html
 share/doc/qof/html/doxy/structQsfNodeIterate.html
 share/doc/qof/html/doxy/structQsfObject__s.html
 share/doc/qof/html/doxy/structQsfValidates__s.html
 share/doc/qof/html/doxy/struct__QofBook.html
+share/doc/qof/html/doxy/struct__QofNumeric.html
 share/doc/qof/html/doxy/struct__QofObject.html
 share/doc/qof/html/doxy/struct__QofParam.html
 share/doc/qof/html/doxy/struct__QofQueryPredData.html
+share/doc/qof/html/doxy/struct__QofSession.html
+share/doc/qof/html/doxy/structbin__data.html
 share/doc/qof/html/doxy/structqof__entity__reference.html
+share/doc/qof/html/doxy/structquery__boolean__def.html
+share/doc/qof/html/doxy/structquery__char__def.html
+share/doc/qof/html/doxy/structquery__choice__def.html
+share/doc/qof/html/doxy/structquery__coll__def.html
 share/doc/qof/html/doxy/structquery__date__def.html
+share/doc/qof/html/doxy/structquery__double__def.html
+share/doc/qof/html/doxy/structquery__guid__def.html
+share/doc/qof/html/doxy/structquery__int32__def.html
+share/doc/qof/html/doxy/structquery__int64__def.html
+share/doc/qof/html/doxy/structquery__kvp__def.html
+share/doc/qof/html/doxy/structquery__numeric__def.html
+share/doc/qof/html/doxy/structquery__string__def.html
+share/doc/qof/html/doxy/structquery__time__def.html
 share/doc/qof/html/doxy/structtimespec64.html
 share/doc/qof/html/doxy/tab_b.gif
 share/doc/qof/html/doxy/tab_l.gif
@@ -301,6 +322,7 @@ share/doc/qof/html/doxy/test-stuff_8h_source.html
 share/doc/qof/html/doxy/tipshints.html
 share/doc/qof/html/doxy/todo.html
 share/doc/qof/html/doxy/tree.html
+share/doc/qof/html/doxy/union__GUID.html
 share/locale/id/LC_MESSAGES/qof.mo
 share/locale/pt_BR/LC_MESSAGES/qof.mo
 share/locale/ro/LC_MESSAGES/qof.mo
