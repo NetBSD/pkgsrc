@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.126 2009/08/04 05:53:03 martti Exp $
+# $NetBSD: Makefile.common,v 1.127 2009/08/25 08:17:36 hasso Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -57,6 +57,7 @@ CONFIGURE_ARGS+=	--with-modified-by="${MAINTAINER}"
 # files (and PLIST might not include all files) so use at your own risk!
 CONFIGURE_ARGS+=	${VIM_EXTRA_OPTS}
 CONFIGURE_ARGS+=	--enable-multibyte
+CONFIGURE_ARGS+=	--enable-cscope
 
 PATCH_ARGS=		-d ${WRKDIR}/${VIM_SUBDIR} --forward --quiet \
 				-E ${PATCH_STRIP:Q}
@@ -75,15 +76,10 @@ ALTERNATIVES_SRC=	${.CURDIR}/../../editors/vim-share/ALTERNATIVES
 ALTERNATIVES_SRC=
 .endif
 
-PKG_SUPPORTED_OPTIONS+=	cscope ruby
+PKG_SUPPORTED_OPTIONS+=	ruby
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vim
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mcscope)
-DEPENDS+=		cscope-[0-9]*:../../devel/cscope
-CONFIGURE_ARGS+=	--enable-cscope
-.endif
 
 .if !empty(PKG_OPTIONS:Mruby)
 .include "../../lang/ruby/buildlink3.mk"
