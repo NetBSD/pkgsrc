@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/08/25 11:56:35 wiz Exp $
 bin/newspipe
+share/doc/newspipe/README
 share/doc/newspipe/manual.html
-share/doc/newspipe/readme
 share/examples/newspipe/newspipe.ini
 share/examples/newspipe/test.opml
 share/newspipe/cache.py
