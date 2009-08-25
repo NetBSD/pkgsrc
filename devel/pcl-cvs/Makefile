@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/10/11 09:31:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.22 2009/08/25 12:32:55 wiz Exp $
 #
 
 DISTNAME=	pcl-cvs-2.9.9
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Front-end to CVS for emacs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-BROKEN_IN=	pkgsrc-2006Q1
 
 DEPENDS+=	emacs20-elib>=1.0:../../devel/emacs20-elib
 

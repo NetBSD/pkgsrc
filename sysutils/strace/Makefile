@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/12/20 18:06:39 christos Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/25 12:32:56 wiz Exp $
 #
 
 DISTNAME=		strace-4.5.15
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		christos@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/strace/
 COMMENT=		Trace system calls
-
-BROKEN_IN=		pkgsrc-2006Q4
 
 #			NetBSD < 3.99.16
 NOT_FOR_PLATFORM=	NetBSD-[012]*-* NetBSD-3.[0-9][._]*-* \
