@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/06/30 00:07:14 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/08/25 11:56:34 wiz Exp $
 
 DISTNAME=		rdp1_5
 PKGNAME=		rdp-1.5
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
+EXTRACT_OPTS_ZIP=	-Laqo
 WRKSRC=			${WRKDIR}/rdp
 MAKE_FILE=		makefile
 

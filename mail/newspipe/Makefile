@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/02/09 22:56:25 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/25 11:56:35 wiz Exp $
 #
 
 DISTNAME=		newspipe.1.1.9
 PKGNAME=		${DISTNAME:S/./-/}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=newspipe/}
 EXTRACT_SUFX=		.zip
@@ -39,7 +39,7 @@ do-install:
 	for f in cache.py newspipe.py opml.py; do			\
 	${INSTALL_SCRIPT} $${f} ${DESTDIR}${PREFIX}/share/newspipe;	\
 	done;								\
-	for f in manual.html readme; do					\
+	for f in manual.html README; do					\
 	${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/doc/newspipe;	\
 	done;								\
 	for f in newspipe.ini test.opml; do				\

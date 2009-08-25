@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2009/05/19 08:59:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.22 2009/08/25 11:56:36 wiz Exp $
 #
 
 DISTNAME=	# empty
@@ -23,7 +23,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DIST_SUBDIR=	cyberbit-ttf
 
 EXTRACT_ONLY=		${FONT_FILE}
-EXTRACT_OPTS_ZIP=	-Laq
+#EXTRACT_OPTS_ZIP=	-Laq
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
