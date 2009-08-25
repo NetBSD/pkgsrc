@@ -567,14 +567,14 @@ pkgsrc provides the following key features:
 <p>The following principles are basic to pkgsrc:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>&#8220;<span class="quote">It should only work if it's right.</span>&#8221;
-&mdash; That means, if a package contains bugs, it's better to find
+&#8212; That means, if a package contains bugs, it's better to find
 them and to complain about them rather than to just install the package
 and hope that it works. There are numerous checks in pkgsrc that try to
 find such bugs: Static analysis tools (<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>), build-time checks (portability
 of shell scripts), and post-installation checks (installed files,
 references to shared libraries, script interpreters).</p></li>
 <li><p>&#8220;<span class="quote">If it works, it should work everywhere</span>&#8221;
-&mdash; Like NetBSD has been ported to many hardware architectures,
+&#8212; Like NetBSD has been ported to many hardware architectures,
 pkgsrc has been ported to many operating systems. Care is taken that
 packages behave the same on all platforms.</p></li>
 </ul></div>
@@ -1759,7 +1759,7 @@ and you can still use binary packages from someone else.</p>
     other packages depend on it. Instead, they are moved to the
     <code class="filename">vulnerable</code> subdirectory. So you may need to add
     this directory to the <code class="varname">PKG_PATH</code> variable. 
-    However, you should run <span class="command"><strong>audit-packages</strong></span>
+    However, you should run <span class="command"><strong>pkg_admin audit</strong></span>
     regularly, especially after installing new packages, and verify
     that the vulnerabilities are acceptable for your configuration.</p>
 <p>After you've installed packages, be sure to have
@@ -1809,28 +1809,45 @@ and you can still use binary packages from someone else.</p>
       FTP site at <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities</a>.
     </p>
 <p>
-      Through <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>,
+      Through <span class="command"><strong>pkg_admin fetch-pkg-vulnerabilities</strong></span>,
       this list can be downloaded
       automatically, and a security audit of all packages installed on a system
       can take place.
     </p>
 <p>
-      There are two components to
-      <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.  The first
-      component, &#8220;<span class="quote">download-vulnerability-list</span>&#8221;, is for downloading
+      There are two components to auditing.  The first
+      step, <span class="command"><strong>pkg_admin fetch-pkg-vulnerabilities</strong></span>,
+      is for downloading
       the list of vulnerabilities from the NetBSD FTP site.  The second
-      component, &#8220;<span class="quote">audit-packages</span>&#8221;, checks to see if any of your
+      step, <span class="command"><strong>pkg_admin audit</strong></span>, checks to see if any of your
       installed packages are vulnerable.  If a package is vulnerable, you
       will see output similar to the following:
     </p>
 <pre class="screen">Package samba-2.0.9 has a local-root-shell vulnerability, see
     http://www.samba.org/samba/whatsnew/macroexploit.html</pre>
 <p>
-      One can set up <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> to download the
+      You may wish to have the
       <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">vulnerabilities</a>
-      file daily, and include a package audit in the daily security script.
-      Details on this are located in the <a class="ulink" href="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/security/audit-packages/MESSAGE?rev=HEAD&amp;content-type=text/x-cvsweb-markup" target="_top">MESSAGE</a>
-      file for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>.
+      file downloaded daily so that
+      it remains current.  This may be done by adding an appropriate entry
+      to the root users <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?crontab+5+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">crontab</span>(5)</span></a> entry.  For example the entry
+      </p>
+<pre class="screen">
+# download vulnerabilities file
+0 3 * * * /usr/sbin/pkg_admin fetch-pkg-vulnerabilities &gt;/dev/null 2&gt;&amp;1
+      </pre>
+<p>
+      will update the vulnerability list every day at 3AM. You may wish to do
+      this more often than once a day.
+
+      In addition, you may wish to run the package audit from the daily
+      security script.  This may be accomplished by adding the following
+      line to <code class="filename">/etc/security.local</code>:
+      </p>
+<pre class="screen">
+/usr/sbin/pkg_admin audit
+      </pre>
+<p>
     </p>
 </div>
 <div class="sect2" lang="en">
@@ -2162,9 +2179,11 @@ works.</p>
 	    release (&#8220;<span class="quote">2.0</span>&#8221;, etc.) and architecture
 	    (&#8220;<span class="quote">mipsel</span>&#8221;, etc.).</p></li>
 <li><p><code class="varname">ACCEPTABLE_LICENSES</code>:
-	    List of acceptable licenses. Whenever you try to build a package
-	    whose license is not in this list, you will get an error message
-	    that includes instructions on how to change this variable.</p></li>
+	    List of acceptable licenses. License names are case-sensitive.
+	    Whenever you try to build a package whose license is not in this
+	    list, you will get an error message. If the license condition is
+	    simple enough, the error message will include specific
+	    instructions on how to change this variable.</p></li>
 </ul></div>
 </div>
 <div class="sect1" lang="en">
@@ -2185,7 +2204,7 @@ works.</p>
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &mdash; it is an internal definition which refers to the
+	    &#8212; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -2628,7 +2647,7 @@ way.</p>
 	Look at <code class="filename">pkgsrc/mk/defaults/mk.conf</code> for
 	details of the default settings. You will want to ensure that
 	<code class="varname">ACCEPTABLE_LICENSES</code> meet your local policy.
-	As used in this example, <code class="varname">_ACCEPTABLE=yes</code>
+	As used in this example, <code class="varname">SKIP_LICENSE_CHECK=yes</code>
 	completely bypasses the license check.</p>
 <pre class="programlisting">
 PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
@@ -2638,7 +2657,7 @@ BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
 OBJHOSTNAME?=   yes               # use work.`hostname`
 FAILOVER_FETCH= yes               # insist on the correct checksum
 PKG_DEVELOPER?= yes
-_ACCEPTABLE=    yes
+SKIP_LICENSE_CHECK=    yes
 </pre>
 <p>Some options that are especially useful for bulk builds
 	can be found at the top lines of the file
@@ -2856,7 +2875,7 @@ fi
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 	  <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -3019,7 +3038,7 @@ $ <strong class="userinput"><code>rm -rf /tmp/pbulk-bootstrap</code></strong>
 <li><p><code class="literal"><code class="varname">WRKOBJDIR</code>=/tmp/pbulk-outer</code>, to keep <code class="filename">/usr/pkgsrc</code> free from any modifications,</p></li>
 <li><p><code class="literal"><code class="varname">DISTDIR</code>=/distfiles</code>, to have only one directory in which all distfiles (for the infrastructure and for the actual packages) are downloaded,</p></li>
 <li><p><code class="literal"><code class="varname">ACCEPTABLE_LICENSES</code>+=...</code>, to select some licenses additional to the usual Free/Open Source licenses that are acceptable to you,</p></li>
-<li><p><code class="literal"><code class="varname">_ACCEPTABLE</code>=yes</code>, to accept all licenses, no matter how restrictive they are.</p></li>
+<li><p><code class="literal"><code class="varname">SKIP_LICENSE_CHECK</code>=yes</code>, to bypass the license checks.</p></li>
 </ul></div>
 <p>Now you are ready to build the rest of the pbulk infrastructure.</p>
 <pre class="screen">
@@ -4584,7 +4603,7 @@ PATCHDIR= ${.CURDIR}/../xemacs/patches
       specific <span class="emphasis"><em>features</em></span> you need.  For example,
       instead of assuming that kqueue is available under NetBSD and
       using the <code class="varname">__NetBSD__</code> macro to conditionalize
-      kqueue support, add a check that detects kqueue itself &mdash;
+      kqueue support, add a check that detects kqueue itself &#8212;
       yes, this generally involves patching the
       <span class="command"><strong>configure</strong></span> script.  There is absolutely nothing
       that prevents some OSes from adopting interfaces from other OSes
@@ -4955,7 +4974,7 @@ correct:
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&mdash;the <span class="command"><strong>.for</strong></span>
+<p>No rule without exception&#8212;the <span class="command"><strong>.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -5377,54 +5396,22 @@ ${PLIST.foo}@dirrm share/bar
 <a name="faq.common-dirs"></a>13.8. Sharing directories between packages</h2></div></div></div>
 <p>A &#8220;<span class="quote">shared directory</span>&#8221; is a directory where
     multiple (and unrelated) packages install files.  These
-    directories are problematic because you have to add special tricks
-    in the PLIST to conditionally remove them, or have some
+    directories were problematic because you had to add special
+    tricks in the PLIST to conditionally remove them, or have some
     centralized package handle them.</p>
-<p>Within pkgsrc, you'll find both approaches.  If a directory
-    is shared by a few unrelated packages, it's often not worth to add
-    an extra package to remove it.  Therefore, one simply does:</p>
+<p>In pkgsrc, it is now easy: Each package should create
+    directories and install files as needed; <span class="command"><strong>pkg_delete</strong></span>
+    will remove any directories left empty after uninstalling a
+    package.</p>
+<p>If a package needs an empty directory to work, create
+    the directory during installation as usual, and also add an
+    entry to the PLIST:
+    </p>
 <pre class="programlisting">
-@unexec ${RMDIR} %D/path/to/shared/directory 2&gt;/dev/null || ${TRUE}
+@pkgdir path/to/empty/directory
     </pre>
-<p>in the PLISTs of all affected packages, instead of the
-    regular "@dirrm" line.</p>
-<p>However, if the directory is shared across many packages, two
-    different solutions are available:</p>
-<div class="orderedlist"><ol type="1">
-<li><p>If the packages have a common dependency, the directory
-	can be removed in that.  For example, see
-	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/textproc/scrollkeeper/README.html" target="_top"><code class="filename">textproc/scrollkeeper</code></a>, which
-	removes the shared directory
-	<code class="filename">share/omf</code>.</p></li>
-<li><p>If the packages using the directory are not related at
-	all (they have no common dependencies), a *-dirs package is
-	used.</p></li>
-</ol></div>
-<p>From now on, we'll discuss the second solution.  To get an
-    idea of the *-dirs packages available, issue:</p>
-<pre class="programlisting">
-<code class="prompt">%</code> cd .../pkgsrc
-<code class="prompt">%</code> ls -d */*-dirs
-    </pre>
-<p>Their use from other packages is very simple.  The
-    <code class="varname">USE_DIRS</code> variable takes a list of package names
-    (without the &#8220;<span class="quote">-dirs</span>&#8221; part) together with the required
-    version number (always pick the latest one when writing new
-    packages).</p>
-<p>For example, if a package installs files under
-    <code class="filename">share/applications</code>, it should have the
-    following line in it:</p>
-<pre class="programlisting">
-USE_DIRS+=      xdg-1.1
-    </pre>
-<p>After regenerating the PLIST using <span class="command"><strong>make
-    print-PLIST</strong></span>, you should get the right (commented out)
-    lines.</p>
-<p>Note that even if your package is using
-    <code class="filename">$X11BASE</code>, it must not depend on the
-    *-x11-dirs packages.  Just specify the name without that part and
-    pkgsrc (in particular, <code class="filename">mk/dirs.mk</code>) will take
-    care of it.</p>
+<p>
+    </p>
 </div>
 </div>
 <div class="chapter" lang="en">
@@ -6783,6 +6770,9 @@ http://www.somewhereelse.com/mirror/somehow/
 <pre class="programlisting">
 MASTER_SITES=   http://www.example.com/download.cgi?file=
 </pre>
+<p> The exception to this rule are URLs starting with a dash.
+      In that case the URL is taken as is, fetched and the result stored
+      under the name of the distfile.</p>
 <p>There are some predefined values for
       <code class="varname">MASTER_SITES</code>, which can be used in
       packages.  The names of the variables should speak for
@@ -7637,7 +7627,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168230299569"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168230298940"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7647,7 +7637,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168230299577"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168230298949"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7658,7 +7648,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168230299587"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168230298957"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9258,26 +9248,27 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
     updated.</p>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
-<p>Except the main TeX packages such as teTeX-texmf,
+<p>Except the main TeX packages such as kpathsea,
     packages should install files
-    into <code class="varname">PKG_LOCALTEXMFPREFIX</code>,
-    not <code class="varname">PKG_TEXMFPREFIX</code>.</p>
+    into <code class="filename">${PREFIX}/share/texmf-dist</code>,
+    not <code class="filename">${PREFIX}/share/texmf</code>.</p>
 </div>
 <div class="orderedlist"><ol type="1">
 <li><p>Include
-      <code class="filename">../../print/teTeX/module.mk</code> instead
-      of <code class="filename">../../mk/tex.buildlink3.mk</code>.  This
+      <code class="filename">../../print/kpathsea/texmf.mk</code>.  This
       takes care of rebuilding the <code class="filename">ls-R</code>
       database at installation and deinstallation time.</p></li>
 <li>
 <p>If your package installs files into a texmf
       tree other than the one
-      at <code class="varname">PKG_LOCALTEXMFPREFIX</code>,
-      set <code class="varname">TEXMFDIRS</code> to the list of all texmf
+      at <code class="filename">${PREFIX}/share/texmf-dist</code>,
+      set <code class="varname">TEX_TEXMF_DIRS</code> to the list of all texmf
       trees that need database update.</p>
 <p>If your package also installs font map files that need
       to be registered using <span class="command"><strong>updmap</strong></span>,
-      set <code class="varname">TEX_FONTMAPS</code> to the list of all
+      include <code class="filename">../../print/texlive-tetex/map.mk</code> and
+      set <code class="varname">TEX_MAP_FILES</code> and/or
+      <code class="varname">TEX_MIXEDMAP_FILES</code> to the list of all
       such font map files.  Then <span class="command"><strong>updmap</strong></span> will
       be run automatically at installation/deinstallation to
       enable/disable font map files for TeX output
@@ -9350,26 +9341,13 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="punting"></a>19.7. Marking packages as having problems</h2></div></div></div>
 <p>In some cases one does not have the time to solve a problem
-  immediately.  There are currently two ways to declare that one knows
-  that a package has problems.</p>
-<div class="itemizedlist"><ul type="disc">
-<li><p>The first way is to plainly mark it as broken.  For
-    this, one just sets the variable <code class="varname">BROKEN</code> to the
-    reason why the package is broken (similar to the
-    <code class="varname">RESTRICTED</code> variable).  A user trying to build
-    the package will immediately be shown this message, and the build
-    will not be even tried.</p></li>
-<li><p>After each pkgsrc freeze period (a time when the
-    tree is stabilized and a new pkgsrc branch is cut), the packages
-    that were not building in the official branch build on the latest
-    NetBSD release will be marked as broken on that branch.  This is
-    done by setting the <code class="varname">BROKEN_IN</code> variable to the
-    branch name (or appending the branch name to it).  If a user tries
-    to build such a package and the build fails, the user gets a
-    message that says that the package was broken on the respective
-    branch(es).</p></li>
-</ul></div>
-<p>Both types of packages are removed from pkgsrc in irregular
+  immediately. In this case, one can plainly mark a package as broken.  For
+  this, one just sets the variable <code class="varname">BROKEN</code> to the
+  reason why the package is broken (similar to the
+  <code class="varname">RESTRICTED</code> variable).  A user trying to build
+  the package will immediately be shown this message, and the build
+  will not be even tried.</p>
+<p><code class="varname">BROKEN</code> packages are removed from pkgsrc in irregular
   intervals.</p>
 </div>
 </div>
@@ -9541,8 +9519,14 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
   <code class="varname">CTYPE</code> variable on the command line to "Added",
   "Moved", or "Removed".  You can set <code class="varname">NETBSD_LOGIN_NAME</code>
   in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> if your local login name is
-  not the same as your NetBSD login name. Don't forget to commit
-  the changes to <code class="filename">pkgsrc/doc/CHANGES-<em class="replaceable"><code>YYYY</code></em></code>!</p>
+  not the same as your NetBSD login name. The target also automatically
+  removes possibly existing entries for the package in the
+  <code class="filename">TODO</code> file. Don't forget to commit
+  the changes, e.g. by using <span class="command"><strong>make changes-entry-commit</strong></span>!
+  If you are not using a checkout directly from cvs.netbsd.org, but e.g.
+  a local copy of the repository, you can set USE_NETBSD_REPO=yes. This
+  makes the cvs commands use the main repository.
+  </p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -9711,7 +9695,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168230286914"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168230286524"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9727,7 +9711,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168230286947"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168230286557"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9745,7 +9729,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168230286984"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168230286595"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9763,7 +9747,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168230287019"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168230286629"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9776,7 +9760,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168230287037"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168230286648"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9792,7 +9776,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168230287063"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168230286674"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9816,7 +9800,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168230287198"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168230286741"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9841,7 +9825,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168230287230"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168230286772"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9889,7 +9873,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168230287284"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168230286826"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9905,7 +9889,7 @@ anyway.</p>
     will tell you about newer versions of installed packages that are
     available, but not yet updated in pkgsrc.</p></li>
 <li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
-    &mdash; it contains a list of suggested new packages and a list of
+    &#8212; it contains a list of suggested new packages and a list of
     cleanups and enhancements for pkgsrc that would be nice to
     have.</p></li>
 <li><p>Review packages for which review was requested on
@@ -10423,8 +10407,8 @@ CFLAGS+=                -Wall
 <a name="infr.design.intf.proc"></a>24.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&mdash;after
-	inclusion&mdash;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&#8212;after
+	inclusion&#8212;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
