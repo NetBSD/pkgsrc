@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/02 11:24:06 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/26 19:58:10 sno Exp $
 #
 
 DISTNAME=	gssdp-0.6.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.gupnp.org/sources/gssdp/
 

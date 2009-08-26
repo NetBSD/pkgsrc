@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2008/01/18 05:08:37 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2009/08/26 19:58:03 sno Exp $
 
 DISTNAME=		root_v5.10.00.source
 PKGNAME=		root-5.10
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		ftp://root.cern.ch/root/
 

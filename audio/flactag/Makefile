@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/08/03 13:39:45 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/26 19:57:09 sno Exp $
 #
 
 DISTNAME=	flactag-1.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://software.gently.org.uk/flactag-1.1/
 

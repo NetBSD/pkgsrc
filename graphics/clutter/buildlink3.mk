@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/06/14 22:58:01 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/08/26 19:57:00 sno Exp $
 #
 
 BUILDLINK_TREE+=	clutter
@@ -7,6 +7,7 @@ BUILDLINK_TREE+=	clutter
 CLUTTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clutter+=	clutter>=0.8.0
+BUILDLINK_ABI_DEPENDS.clutter?=	clutter>=0.8.8
 BUILDLINK_PKGSRCDIR.clutter?=	../../graphics/clutter
 
 pkgbase := clutter

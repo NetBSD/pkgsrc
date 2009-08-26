@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2007/12/05 13:37:22 obache Exp $
+# $NetBSD: Makefile,v 1.30 2009/08/26 19:57:46 sno Exp $
 #
 
 DISTNAME=	mgl2-alpha-020
 PKGNAME=	mgl-0.2.0a
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://at.sakura.ne.jp/~suz/arc/
 

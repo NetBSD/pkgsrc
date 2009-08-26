@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2009/08/06 11:07:09 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2009/08/26 19:56:45 sno Exp $
 #
 # This Makefile fragment is included by packages that use epiphany.
 #
@@ -11,7 +11,7 @@ BUILDLINK_TREE+=	epiphany
 EPIPHANY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.epiphany+=		epiphany>=1.8.2
-BUILDLINK_ABI_DEPENDS.epiphany?=		epiphany>=2.20.3nb2
+BUILDLINK_ABI_DEPENDS.epiphany?=		epiphany>=2.26.3nb2
 BUILDLINK_PKGSRCDIR.epiphany?=		../../www/epiphany
 
 .include "../../mk/bsd.fast.prefs.mk"

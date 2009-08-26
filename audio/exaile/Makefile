@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2009/07/22 09:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2009/08/26 19:57:09 sno Exp $
 #
 
 DISTNAME=	exaile_0.2.14
 PKGNAME=	exaile-0.2.14
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	http://www.exaile.org/files/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:24:16 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/08/26 19:56:45 sno Exp $
 
 BUILDLINK_TREE+=	libast
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libast
 LIBAST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libast+=	libast>=0.5nb5
-BUILDLINK_ABI_DEPENDS.libast+=	libast>=0.6.1nb3
+BUILDLINK_ABI_DEPENDS.libast+=	libast>=0.6.1nb4
 BUILDLINK_PKGSRCDIR.libast?=	../../devel/libast
 
 .include "../../devel/pcre/buildlink3.mk"

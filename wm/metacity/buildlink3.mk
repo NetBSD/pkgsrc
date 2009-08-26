@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2009/03/20 19:25:35 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2009/08/26 19:57:01 sno Exp $
 
 BUILDLINK_TREE+=	metacity
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	metacity
 METACITY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.metacity+=	metacity>=2.8.5
-BUILDLINK_ABI_DEPENDS.metacity+=	metacity>=2.14.1nb1
+BUILDLINK_ABI_DEPENDS.metacity+=	metacity>=2.26.0nb1
 BUILDLINK_PKGSRCDIR.metacity?=	../../wm/metacity
 
 .include "../../devel/gettext-lib/buildlink3.mk"

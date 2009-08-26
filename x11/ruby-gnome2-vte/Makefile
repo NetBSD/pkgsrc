@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/08/12 12:43:11 obache Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/26 19:58:41 sno Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-vte-${VERSION}
 COMMENT=		Ruby binding of vte
+PKGREVISION=		1
 CATEGORIES=		x11
 
 PKG_DESTDIR_SUPPORT=	user-destdir

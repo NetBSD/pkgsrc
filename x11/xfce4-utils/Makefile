@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/12/18 14:09:26 hira Exp $
+# $NetBSD: Makefile,v 1.33 2009/08/26 19:57:03 sno Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTNAME=	xfce-utils-${XFCE4_VERSION}
 PKGNAME=	xfce4-utils-${XFCE4_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Xfce utilities
 

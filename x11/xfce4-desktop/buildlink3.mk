@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2009/03/20 19:25:53 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2009/08/26 19:57:03 sno Exp $
 
 BUILDLINK_TREE+=	xfce4-desktop
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	xfce4-desktop
 XFCE4_DESKTOP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-desktop+=	xfce4-desktop>=4.4.3nb1
+BUILDLINK_ABI_DEPENDS.xfce4-desktop?=	xfce4-desktop>=4.4.3nb2
 BUILDLINK_PKGSRCDIR.xfce4-desktop?=	../../x11/xfce4-desktop
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

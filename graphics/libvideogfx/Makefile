@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:05 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/08/26 19:56:41 sno Exp $
 #
 
 DISTNAME=	libvideogfx-1.0.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://rachmaninoff.informatik.uni-mannheim.de/libvideogfx/data/
 

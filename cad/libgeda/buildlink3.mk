@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2009/05/20 00:58:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2009/08/26 19:56:51 sno Exp $
 
 BUILDLINK_TREE+=	libgeda
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libgeda
 LIBGEDA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgeda+=	libgeda-1.4.3{,nb[0-9]*}
+BUILDLINK_ABI_DEPENDS.libgeda?=	libgeda>=1.4.3nb1
 BUILDLINK_PKGSRCDIR.libgeda?=	../../cad/libgeda
 
 .include "../../graphics/gd/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/26 19:57:33 sno Exp $
 #
 
 DISTNAME=	qonk-0.3.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qonk/}
 

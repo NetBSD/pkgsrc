@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/06/07 21:12:11 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/26 19:57:39 sno Exp $
 
 PKGNAME=	${DISTNAME:S/evas/evas-eet/}
+PKGREVISION=	1
 
 COMMENT=	Evas EET image loader
 

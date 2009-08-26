@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2009/07/22 09:01:34 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2009/08/26 19:58:45 sno Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
 
+PKGREVISION=		1
 COMMENT=		Multilingual input method library
 
 PKG_DESTDIR_SUPPORT=	user-destdir

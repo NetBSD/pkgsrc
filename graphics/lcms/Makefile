@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2009/05/19 08:59:17 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2009/08/26 19:57:45 sno Exp $
 
 DISTNAME=	lcms-1.18a
 # 1.18a is a bugfix semi-release after 1.18, and it's just 1.18 with a
 # security patch
 PKGNAME=	lcms-1.18.0.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.littlecms.com/
 

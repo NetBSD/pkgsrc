@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2009/07/22 09:01:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2009/08/26 19:57:57 sno Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	claws-mail-${CLAWS_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	X based e-mail and netnews client

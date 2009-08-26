@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2009/03/20 19:25:29 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2009/08/26 19:56:46 sno Exp $
 
 BUILDLINK_TREE+=	gnome-spell
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-spell
 GNOME_SPELL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-spell+=		gnome-spell>=1.0.5
-BUILDLINK_ABI_DEPENDS.gnome-spell+=	gnome-spell>=1.0.7nb4
+BUILDLINK_ABI_DEPENDS.gnome-spell+=	gnome-spell>=1.0.8nb2
 BUILDLINK_PKGSRCDIR.gnome-spell?=	../../textproc/gnome-spell
 
 .include "../../devel/libbonobo/buildlink3.mk"

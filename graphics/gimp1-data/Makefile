@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:22 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/08/26 19:57:42 sno Exp $
 #
 
 DISTNAME=	gimp-data-extras-1.2.0
 PKGNAME=	gimp-data-1.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.5/ \
 		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.5/

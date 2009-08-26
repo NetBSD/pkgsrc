@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:24:33 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/08/26 19:57:00 sno Exp $
 
 BUILDLINK_TREE+=	gpsim
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gpsim
 GPSIM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gpsim+=	gpsim>=20050905
-BUILDLINK_ABI_DEPENDS.gpsim+=	gpsim>=20050905nb3
+BUILDLINK_ABI_DEPENDS.gpsim+=	gpsim>=20050905nb5
 BUILDLINK_PKGSRCDIR.gpsim?=	../../emulators/gpsim-devel
 
 .include "../../x11/gtk2/buildlink3.mk"

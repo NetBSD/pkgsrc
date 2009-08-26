@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2008/07/14 12:55:59 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2009/08/26 19:57:16 sno Exp $
 #
 
 DISTNAME=	licq-1.3.5
 PKGNAME=	${DISTNAME:C/-/-gui-qt-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=licq/}
 EXTRACT_SUFX=	.tar.bz2

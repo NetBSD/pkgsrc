@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/03/18 00:16:46 jmcneill Exp $
+# $NetBSD: Makefile,v 1.31 2009/08/26 19:58:13 sno Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,6 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../print/evince/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/evince/evince-nautilus/}
+PKGREVISION=		1
 COMMENT=		File properties plugin for evince files
 
 .include "options.mk"

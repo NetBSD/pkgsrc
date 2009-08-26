@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2009/08/26 19:57:26 sno Exp $
 #
 
 DISTNAME=		gcube-0.4-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.liquidx.org/distfiles/
 EXTRACT_SUFX=		.tar.bz2

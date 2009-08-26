@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/08/17 21:13:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/08/26 19:57:05 sno Exp $
 
 BUILDLINK_TREE+=	farsight2
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	farsight2
 FARSIGHT2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.farsight2+=	farsight2>=0.0.14
+BUILDLINK_ABI_DEPENDS.farsight2?=	farsight2>=0.0.14nb1
 BUILDLINK_PKGSRCDIR.farsight2?=	../../multimedia/farsight2
 
 # unsure which are needed exactly

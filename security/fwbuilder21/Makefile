@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/07/15 09:17:28 adam Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/26 19:58:15 sno Exp $
 
 DISTNAME=	fwbuilder-2.1.19
 PKGNAME=	fwbuilder21-2.1.19
+PKGREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fwbuilder/}
 

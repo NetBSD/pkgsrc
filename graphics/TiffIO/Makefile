@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:31 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/26 19:57:51 sno Exp $
 #
 
 DISTNAME=		TiffIO-120e
 PKGNAME=		TiffIO-1.2.0e
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		http://artis.imag.fr/Software/TiffIO/SOURCES/
 EXTRACT_SUFX=		.tgz
