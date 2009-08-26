@@ -1,23 +1,35 @@
-# $NetBSD: Makefile,v 1.18 2007/01/07 09:14:11 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2009/08/26 15:55:14 snj Exp $
 
-DISTNAME=	grun-0.9.2
-PKGREVISION=	5
+DISTNAME=	grun-0.9.3
 CATEGORIES=	misc
-MASTER_SITES=	http://www.geocities.com/ResearchTriangle/Facility/1468/sg/
+MASTER_SITES=	http://grun.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://code.google.com/p/grun/
 HOMEPAGE=	${MASTER_SITES}/grun.html
 COMMENT=	GTK+ based Run dialog
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake
-PTHREAD_OPTS+=		require
+USE_TOOLS+=		gmake pkg-config
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+PKG_SYSCONFSUBDIR=	grun
+EGDIR=			${PREFIX}/share/examples/grun
+CONF_FILES=		${EGDIR}/gassoc ${PKG_SYSCONFDIR}/gassoc
+CONF_FILES+=		${EGDIR}/consfile ${PKG_SYSCONFDIR}/consfile
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/grun
 
 post-install:
-	${MV} ${PREFIX}/${PKGMANDIR}/man1/grun.1x ${PREFIX}/${PKGMANDIR}/man1/grun.1
+	${INSTALL_MAN} ${WRKSRC}/grun.1x \
+		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/grun.1
+	${INSTALL_DATA} ${WRKSRC}/gassoc ${DESTDIR}/${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/consfile ${DESTDIR}/${EGDIR}
 
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
