@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/05/29 09:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/26 12:17:28 wiz Exp $
 #
 
-DISTNAME=	xcb-util-0.3.5
+DISTNAME=	xcb-util-0.3.6
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
