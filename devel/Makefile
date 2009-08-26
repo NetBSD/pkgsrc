@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1222 2009/08/26 18:10:52 seb Exp $
+# $NetBSD: Makefile,v 1.1223 2009/08/26 19:53:10 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -832,6 +832,7 @@ SUBDIR+=	p5-TAP-Harness-Archive
 SUBDIR+=	p5-Task-Weaken
 SUBDIR+=	p5-Tee
 SUBDIR+=	p5-Template-Plugin-Handy
+SUBDIR+=	p5-Template-Plugin-ListUtil
 SUBDIR+=	p5-Template-Plugin-VMethods
 SUBDIR+=	p5-Term-ANSIColor
 SUBDIR+=	p5-Term-Cap
