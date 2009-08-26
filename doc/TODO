@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8376 2009/08/26 11:54:57 wiz Exp $
+$NetBSD: TODO,v 1.8377 2009/08/26 12:06:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1070,7 +1070,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o resize_image-0.7
-	o resourceproto-1.1.0
 	o rhythmbox-0.12.4
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
