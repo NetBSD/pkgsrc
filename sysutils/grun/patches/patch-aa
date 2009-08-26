@@ -1,27 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/11/18 22:41:41 agc Exp $
+$NetBSD: patch-aa,v 1.2 2009/08/26 15:55:14 snj Exp $
 
-Use correct header file for locale information
-
---- grun.c	2001/11/13 14:57:16	1.1
-+++ grun.c	2001/11/13 14:57:44
-@@ -50,6 +50,10 @@
- #define ARG_BASE	1
- #endif
+--- Makefile.in.orig	2008-01-13 22:18:12.000000000 -0800
++++ Makefile.in	2009-08-26 08:30:31.000000000 -0700
+@@ -718,7 +718,7 @@ install-data: install-data-recursive
+ uninstall: uninstall-recursive
  
-+#ifdef HAVE_LOCALE_H
-+#include <locale.h>
-+#endif
-+
- #include <sys/stat.h>
+ install-am: all-am
+-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
++	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am
  
- #define MAX_BUFF	1024
-@@ -894,7 +898,9 @@
+ installcheck: installcheck-recursive
+ install-strip:
+@@ -760,7 +760,7 @@ install-data-am: install-man
  
- 	gtk_init(&argc, &argv);
- #ifndef WIN32
-+#ifdef HAVE_SETLOCALE
- 	setlocale (LC_ALL, "");
-+#endif
- 	bindtextdomain (PACKAGE, LOCALEDIR);
- 	textdomain (PACKAGE);
- #endif /* WIN32 */
+ install-dvi: install-dvi-recursive
+ 
+-install-exec-am: install-binPROGRAMS install-dist_sysconfDATA
++install-exec-am: install-binPROGRAMS
+ 
+ install-html: install-html-recursive
+ 
