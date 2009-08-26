@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3381 2009/08/26 19:53:10 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3382 2009/08/26 20:05:43 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4432,3 +4432,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Class-XSAccessor version 1.03 [seb 2009-08-26]
 	Updated devel/p5-Template-Plugin-VMethods to 0.03nb1 [sno 2009-08-26]
 	Added devel/p5-Template-Plugin-ListUtil version 0.02 [sno 2009-08-26]
+	Updated devel/p5-Class-Accessor-Grouped to 0.09000 [seb 2009-08-26]
