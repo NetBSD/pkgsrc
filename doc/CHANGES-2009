@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3368 2009/08/26 12:06:11 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3369 2009/08/26 12:17:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4419,3 +4419,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/scrnsaverproto to 1.2.0 [wiz 2009-08-26]
 	Updated x11/libXScrnSaver to 1.2.0 [wiz 2009-08-26]
 	Updated x11/resourceproto to 1.1.0 [wiz 2009-08-26]
+	Updated x11/xcb-util to 0.3.6 [wiz 2009-08-26]
