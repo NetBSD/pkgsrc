@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3359 2009/08/26 00:55:15 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3360 2009/08/26 01:14:39 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4409,3 +4409,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/cflow to 1.3nb1 [hasso 2009-08-25]
 	Updated devel/qof to 0.7.5nb3 [hasso 2009-08-25]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.5400 [seb 2009-08-26]
+	Updated devel/p5-Class-InsideOut to 1.10 [seb 2009-08-26]
