@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/08/26 19:58:19 sno Exp $
+# $NetBSD: Makefile,v 1.21 2009/08/26 20:22:49 wiz Exp $
 
 DISTNAME=	grun-0.9.3
 PKGREVISION=	1
@@ -7,7 +7,6 @@ MASTER_SITES=	http://grun.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/grun/
-HOMEPAGE=	${MASTER_SITES}/grun.html
 COMMENT=	GTK+ based Run dialog
 
 GNU_CONFIGURE=		YES
