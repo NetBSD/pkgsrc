@@ -1,0 +1,4 @@
+The Perl 5 module MooseX::Attributes::Curried lets you define curried
+versions of "has" in Moose. If many of your attributes share the
+same options, especially across multiple classes, then you can
+refactor those options away into a curried has.
