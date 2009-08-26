@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/06/02 10:23:58 hasso Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/26 22:09:48 wiz Exp $
 #
 
 .include "Makefile.common"
 
 COMMENT=	Command line utility and library to work with mobile phones
-PKGREVISION=	1
 
 # cmake tests for it; unclear for what it would be used
 #BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
@@ -24,6 +23,7 @@ CMAKE_ARGS+=	-DWITH_Postgres:BOOL=OFF
 CMAKE_ARGS+=	-DWITH_LibDBI:BOOL=OFF
 # avoid installing bash completion scripts
 CMAKE_ARGS+=	-DBASH_BIN:FILEPATH=
+#CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run msgfmt
