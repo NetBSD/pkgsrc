@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2009/08/26 19:56:44 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2009/08/26 21:20:13 sno Exp $
 
 BUILDLINK_TREE+=	koffice
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	koffice
 KOFFICE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.koffice?=	koffice>=1.4.2nb5
-BUILDLINK_ABI_DEPENDS.koffice?=	koffice>=1.6.3nb11
+BUILDLINK_ABI_DEPENDS.koffice?=	koffice>=1.6.3nb12
 BUILDLINK_PKGSRCDIR.koffice?=	../../misc/koffice
 
 .include "../../converters/wv2/buildlink3.mk"
