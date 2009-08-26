@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2009/06/29 17:10:27 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/08/26 19:57:48 sno Exp $
 #
 
 DISTNAME=	qce-ga-0.40d
 PKGNAME=	qcamview-0.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qce-ga/}
 

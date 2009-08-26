@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2009/06/12 17:24:54 ahoka Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/08/26 19:56:50 sno Exp $
 
 BUILDLINK_TREE+=	nucleo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nucleo
 NUCLEO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nucleo+=	nucleo>=0.6
-BUILDLINK_ABI_DEPENDS.nucleo?=	nucleo>=0.7.1nb4
+BUILDLINK_ABI_DEPENDS.nucleo?=	nucleo>=0.7.5nb1
 BUILDLINK_PKGSRCDIR.nucleo?=	../../x11/nucleo
 pkgbase:=nucleo
 .  include "../../mk/pkg-build-options.mk"

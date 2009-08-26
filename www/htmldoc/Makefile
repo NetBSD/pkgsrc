@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/01/08 11:57:24 obache Exp $
+# $NetBSD: Makefile,v 1.26 2009/08/26 19:58:26 sno Exp $
 
 # This section contains variables that might be overridden.
 PKGNAME?=	${PKGNAME_BASE}
@@ -7,6 +7,7 @@ COMMENT?=	Converts HTML to indexed HTML, PDF and/or PostScript
 # Normal package Makefile contents follow.
 DISTNAME=	htmldoc-1.8.27-source
 PKGNAME_BASE=	${DISTNAME:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.easysw.com/pub/htmldoc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

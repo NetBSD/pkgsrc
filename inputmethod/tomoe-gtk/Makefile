@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/10/27 14:38:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/26 19:56:57 sno Exp $
 #
 
 DISTNAME=	tomoe-gtk-0.6.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tomoe/}
 

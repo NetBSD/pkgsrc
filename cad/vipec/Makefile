@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2008/06/12 02:14:16 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2009/08/26 19:57:15 sno Exp $
 #
 
 DISTNAME=	ViPEC-3.2.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vipec/}
 

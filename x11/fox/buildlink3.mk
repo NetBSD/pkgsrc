@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2009/03/20 19:25:40 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2009/08/26 19:56:41 sno Exp $
 
 BUILDLINK_TREE+=	fox
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	fox
 FOX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fox+=	fox>=1.6.25
+BUILDLINK_ABI_DEPENDS.fox?=	fox>=1.6.33nb1
 BUILDLINK_PKGSRCDIR.fox?=	../../x11/fox
 BUILDLINK_INCDIRS.fox?=		include/fox-1.6
 
