@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3377 2009/08/26 17:37:55 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3378 2009/08/26 17:39:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4428,3 +4428,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/jpeg to 7 [sno 2009-08-26]
 	Added devel/p5-AutoXS-Header version 1.02 [seb 2009-08-26]
 	Updated games/warzone2100 to 2.2.2 [hasso 2009-08-26]
+	Updated www/p5-Template-Toolkit to 2.22nb1 [sno 2009-08-26]
