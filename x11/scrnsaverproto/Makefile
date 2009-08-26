@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 21:45:16 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/26 11:53:59 wiz Exp $
 #
 
-DISTNAME=		scrnsaverproto-1.1.0
+DISTNAME=		scrnsaverproto-1.2.0
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
