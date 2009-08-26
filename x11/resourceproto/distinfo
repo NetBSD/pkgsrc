@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/03 22:03:23 joerg Exp $
+$NetBSD: distinfo,v 1.2 2009/08/26 12:06:01 wiz Exp $
 
-SHA1 (resourceproto-1.0.2.tar.bz2) = ac22c2e439067185ea169d20677f74321da7b34b
-RMD160 (resourceproto-1.0.2.tar.bz2) = 8b665848d4ec2ccacb243bc058268a41b96124c9
-Size (resourceproto-1.0.2.tar.bz2) = 36859 bytes
+SHA1 (resourceproto-1.1.0.tar.bz2) = 36b86840005c15e393c86d7075688d430ab2a11d
+RMD160 (resourceproto-1.1.0.tar.bz2) = 1beb5bd6f5a34e1fa4b8cc7327cef6d04f8d10eb
+Size (resourceproto-1.1.0.tar.bz2) = 48580 bytes
