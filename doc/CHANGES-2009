@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3361 2009/08/26 01:30:14 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3362 2009/08/26 01:40:53 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4411,3 +4411,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Spreadsheet-ParseExcel to 0.5400 [seb 2009-08-26]
 	Updated devel/p5-Class-InsideOut to 1.10 [seb 2009-08-26]
 	Updated devel/p5-Devel-Cycle to 1.11 [seb 2009-08-26]
+	Updated devel/p5-local-lib to 1.4.5 [seb 2009-08-26]
