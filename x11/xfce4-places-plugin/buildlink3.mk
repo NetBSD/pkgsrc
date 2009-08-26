@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/08/26 19:57:02 sno Exp $
 
 BUILDLINK_TREE+=	xfce4-places-plugin
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	xfce4-places-plugin
 XFCE4_PLACES_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-places-plugin+=	xfce4-places-plugin>=1.0.0
+BUILDLINK_ABI_DEPENDS.xfce4-places-plugin?=	xfce4-places-plugin>=1.0.0nb1
 BUILDLINK_PKGSRCDIR.xfce4-places-plugin?=	../../x11/xfce4-places-plugin
 
 .include "../../sysutils/xfce4-thunar/buildlink3.mk"

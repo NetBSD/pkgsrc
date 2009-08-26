@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2009/05/20 00:58:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/26 19:58:03 sno Exp $
 #
 
 DISTNAME=	taskjuggler-2.4.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://www.taskjuggler.org/download/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2008/07/14 12:56:01 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2009/08/26 19:56:45 sno Exp $
 
 DISTNAME=	libast-0.6.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.eterm.org/download/
 

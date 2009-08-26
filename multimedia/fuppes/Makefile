@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2009/08/11 13:15:36 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/26 19:58:05 sno Exp $
 #
 
 SVNREV=		629
 DISTNAME=	fuppes-r${SVNREV}
 PKGNAME=	${DISTNAME:S/r/0./}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.invisible.ca/~jmcneill/distfiles/
 

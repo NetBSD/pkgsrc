@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2009/08/16 20:14:39 zafer Exp $
+# $NetBSD: Makefile,v 1.32 2009/08/26 19:57:37 sno Exp $
 #
 
 DISTNAME=		cqcam-0.91
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics x11
 MASTER_SITES=		http://piki.org/patrick/cqcam/
 

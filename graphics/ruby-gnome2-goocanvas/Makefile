@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2008/10/22 10:42:03 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/26 19:57:49 sno Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-goocanvas-${VERSION}
 COMMENT=		Ruby binding of GooCanvas
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 
 PKG_DESTDIR_SUPPORT=	user-destdir

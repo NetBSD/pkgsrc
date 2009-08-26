@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2008/09/15 15:28:58 taca Exp $
+# $NetBSD: Makefile,v 1.25 2009/08/26 19:57:49 sno Exp $
 
 DISTNAME=	ruby-gd-0.8.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

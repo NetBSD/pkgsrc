@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:27 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/08/26 19:58:03 sno Exp $
 
 DISTNAME=	qbrew-0.3.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	http://www.usermode.org/code/
 

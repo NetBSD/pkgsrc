@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/06/30 00:07:20 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/26 19:58:05 sno Exp $
 #
 
 DISTNAME=	gpac-0.4.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpac/}
 

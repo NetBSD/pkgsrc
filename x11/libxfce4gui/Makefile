@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/12/18 13:46:51 hira Exp $
+# $NetBSD: Makefile,v 1.27 2009/08/26 19:56:58 sno Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTNAME=	libxfcegui4-${XFCE4_VERSION}
 PKGNAME=	libxfce4gui-${XFCE4_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Xfce widget library
 

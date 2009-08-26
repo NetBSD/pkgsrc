@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2009/07/10 16:10:23 hasso Exp $
+# $NetBSD: Makefile,v 1.25 2009/08/26 19:58:40 sno Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt3-libs/Makefile.common"
 
 PKGNAME=		qt3-mysql-${QTVERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		QT mysql driver
 
 CONFIGURE_ARGS+=	-I${QTDIR}/include \

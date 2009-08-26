@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2009/02/14 18:45:12 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2009/08/26 19:58:23 sno Exp $
 #
 
 DISTNAME=		3ddesktop-0.2.9
+PKGREVISION=		1
 CATEGORIES=		wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=desk3d/}
 

@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/27 19:27:17 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/26 19:58:06 sno Exp $
+
+PKGREVISION=			1
 
 BROWSER=		seamonkey-gtk1
 

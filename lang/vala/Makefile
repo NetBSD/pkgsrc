@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/08/12 11:43:57 ahoka Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/26 19:57:55 sno Exp $
 #
 
 DISTNAME=	vala-0.7.5
+PKGREVISION=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	http://download.gnome.org/sources/vala/0.7/
 EXTRACT_SUFX=	.tar.bz2

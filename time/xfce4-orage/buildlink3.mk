@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:34 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/08/26 19:57:05 sno Exp $
 
 BUILDLINK_TREE+=	xfce4-orage
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	xfce4-orage
 XFCE4_ORAGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-orage+=	xfce4-orage>=4.4.3nb1
+BUILDLINK_ABI_DEPENDS.xfce4-orage?=	xfce4-orage>=4.4.3nb2
 BUILDLINK_PKGSRCDIR.xfce4-orage?=	../../time/xfce4-orage
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

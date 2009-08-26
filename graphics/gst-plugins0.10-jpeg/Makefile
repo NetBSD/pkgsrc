@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/14 13:17:39 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/26 19:57:43 sno Exp $
 #
+
+PKGREVISION=	1
 
 GST_PLUGINS0.10_NAME=	jpeg
 GST_PLUGINS0.10_DIRS=	ext/jpeg

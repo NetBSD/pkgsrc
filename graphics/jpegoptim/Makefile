@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/02/22 19:26:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/26 19:57:44 sno Exp $
 
 DISTNAME=	jpegoptim-1.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://people.cc.jyu.fi/~tjko/rpms/jpegoptim/
 

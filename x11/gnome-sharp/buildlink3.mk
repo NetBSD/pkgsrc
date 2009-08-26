@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2009/08/12 02:31:20 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/08/26 19:56:47 sno Exp $
 
 BUILDLINK_TREE+=	gnome-sharp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-sharp
 GNOME_SHARP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-sharp+=	gnome-sharp>=2.24.0
-BUILDLINK_ABI_DEPENDS.gnome-sharp?=	gnome-sharp>=2.24.1nb2
+BUILDLINK_ABI_DEPENDS.gnome-sharp?=	gnome-sharp>=2.24.1nb3
 BUILDLINK_PKGSRCDIR.gnome-sharp?=	../../x11/gnome-sharp
 
 .include "../../devel/libgnomeui/buildlink3.mk"

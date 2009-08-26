@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:24:45 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/08/26 19:56:43 sno Exp $
 
 BUILDLINK_TREE+=	sane-backends
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sane-backends
 SANE_BACKENDS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sane-backends+=	sane-backends>=1.0.3
-BUILDLINK_ABI_DEPENDS.sane-backends+=	sane-backends>=1.0.17nb1
+BUILDLINK_ABI_DEPENDS.sane-backends+=	sane-backends>=1.0.20nb2
 BUILDLINK_PKGSRCDIR.sane-backends?=	../../graphics/sane-backends
 
 .include "../../mk/bsd.fast.prefs.mk"
