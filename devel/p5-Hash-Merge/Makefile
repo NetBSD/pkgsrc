@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/12 20:32:39 sno Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/26 13:21:46 sno Exp $
 #
 
 DISTNAME=	Hash-Merge-0.11
@@ -9,14 +9,15 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Hash/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Hash-Merge/
 COMMENT=	Perl 5 module to merges arbitrarily deep hashes
-LICENSE=	artistic-2.0
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Hash/Merge/.packlist
 
-DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
+# Merge.pm proves this version, even if it's not named in META.yml
+DEPENDS+=	p5-Clone>=0.09:../../devel/p5-Clone
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
