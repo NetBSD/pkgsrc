@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2007/06/05 06:02:46 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2009/08/26 22:33:15 wiz Exp $
 
-DISTNAME=	zip232
-PKGNAME=	zip-2.32
+DISTNAME=	zip30
+PKGNAME=	zip-3.0
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	unix/Makefile
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,4 +47,5 @@ do-install:
 	${LN} -f -s zip.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zipnote.1
 	${LN} -f -s zip.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zipsplit.1
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

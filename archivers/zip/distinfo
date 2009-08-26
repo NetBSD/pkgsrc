@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2007/06/05 06:02:46 wiz Exp $
+$NetBSD: distinfo,v 1.10 2009/08/26 22:33:15 wiz Exp $
 
-SHA1 (zip232.tgz) = 5bc562bf95d9aee0cb6625e6038898e1f191a4aa
-RMD160 (zip232.tgz) = 6b9326c8a60bc6bf08825e416140fd0ca8a6a7f1
-Size (zip232.tgz) = 807180 bytes
-SHA1 (patch-ah) = 1591f12b9b8593b7a51e0dde865c05f92fed61b0
+SHA1 (zip30.tgz) = c9f4099ecf2772b53c2dd4a8e508064ce015d182
+RMD160 (zip30.tgz) = 1fc99daf3e36494ba392c7514a714fe3d258d232
+Size (zip30.tgz) = 1118845 bytes
