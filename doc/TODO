@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8377 2009/08/26 12:06:11 wiz Exp $
+$NetBSD: TODO,v 1.8378 2009/08/26 12:17:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1298,7 +1298,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
-	o xcb-util-0.3.6
 	o xcircuit-3.6.85
 	o xdaliclock-2.25
 	o xdelta-3.0v2
