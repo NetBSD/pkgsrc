@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2009/04/21 16:58:18 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/26 19:58:06 sno Exp $
 #
+
+PKGREVISION=	1
 
 BROWSER=	firefox3
 

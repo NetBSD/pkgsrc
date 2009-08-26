@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2009/07/07 22:50:08 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2009/08/26 19:56:55 sno Exp $
 #
 
 DISTNAME=	compiz-0.6.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 

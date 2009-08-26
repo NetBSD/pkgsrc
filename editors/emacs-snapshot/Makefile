@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/07/22 09:01:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/26 19:58:43 sno Exp $
 
 DISTNAME=	emacs-snapshot_20090710.orig
 PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://emacs.orebokech.com/pool/main/e/emacs-snapshot/
 

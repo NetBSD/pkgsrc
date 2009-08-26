@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/07/14 12:56:07 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/26 19:57:54 sno Exp $
 
 DISTNAME=	kasumi-1.0.1
+PKGREVISION=	1
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kasumi/20685/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/07/14 12:56:15 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/26 19:56:57 sno Exp $
 #
 
 DISTNAME=	gtk+extra-2.1.1
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
