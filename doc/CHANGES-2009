@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3378 2009/08/26 17:39:15 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3379 2009/08/26 18:11:12 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4429,3 +4429,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-AutoXS-Header version 1.02 [seb 2009-08-26]
 	Updated games/warzone2100 to 2.2.2 [hasso 2009-08-26]
 	Updated www/p5-Template-Toolkit to 2.22nb1 [sno 2009-08-26]
+	Added devel/p5-Class-XSAccessor version 1.03 [seb 2009-08-26]
