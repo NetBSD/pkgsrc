@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/26 15:55:14 snj Exp $
 bin/grun
 man/man1/grun.1
-share/grun/consfile
-share/grun/gassoc
+share/examples/grun/consfile
+share/examples/grun/gassoc
 share/locale/de/LC_MESSAGES/grun.mo
+share/locale/en@boldquot/LC_MESSAGES/grun.mo
+share/locale/en@quot/LC_MESSAGES/grun.mo
 share/locale/es/LC_MESSAGES/grun.mo
 share/locale/fr/LC_MESSAGES/grun.mo
 share/locale/pt/LC_MESSAGES/grun.mo
