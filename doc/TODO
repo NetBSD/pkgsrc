@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8379 2009/08/26 16:51:00 sno Exp $
+$NetBSD: TODO,v 1.8380 2009/08/26 21:07:02 sno Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o GutenMark-20090216
-	o ImageMagick-6.5.4
 	o MAMEDiff-2.30
 	o Mesa-7.5
 	o MesaLib-7.5
