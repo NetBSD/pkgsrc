@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2008/10/15 16:22:03 smb Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/26 20:22:52 sno Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLUGIN_NAME=	trayicon
 .include "../../mail/claws-mail/plugins.mk"
+
+PKGREVISION=	1
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Places an icon in the system tray for new mail
