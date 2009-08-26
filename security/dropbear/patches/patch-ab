@@ -1,17 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2007/09/05 21:08:06 drochner Exp $
+$NetBSD: patch-ab,v 1.7 2009/08/26 21:10:11 snj Exp $
 
---- options.h.orig	2007-08-08 17:39:37.000000000 +0200
-+++ options.h
-@@ -132,8 +132,11 @@ etc) slower (perhaps by 50%). Recommende
-  * but there's an interface via a PAM module - don't bother using it otherwise.
-  * You can't enable both PASSWORD and PAM. */
+--- options.h.orig	2009-08-26 13:15:07.000000000 -0700
++++ options.h	2009-08-26 13:15:14.000000000 -0700
+@@ -232,7 +232,7 @@ etc) slower (perhaps by 50%). Recommende
  
-+#ifdef DISABLE_PAM
- #define ENABLE_SVR_PASSWORD_AUTH
--/*#define ENABLE_SVR_PAM_AUTH */ /* requires ./configure --enable-pam */
-+#else
-+#define ENABLE_SVR_PAM_AUTH /* requires ./configure --enable-pam */
-+#endif
- #define ENABLE_SVR_PUBKEY_AUTH
+ /* This is used by the scp binary when used as a client binary. If you're
+  * not using the Dropbear client, you'll need to change it */
+-#define _PATH_SSH_PROGRAM "/usr/bin/dbclient"
++/*#define _PATH_SSH_PROGRAM "/usr/bin/dbclient"*/
  
- #define ENABLE_CLI_PASSWORD_AUTH
+ /* Whether to log commands executed by a client. This only logs the 
+  * (single) command sent to the server, not what a user did in a 
