@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2007/02/22 19:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2009/08/26 19:58:15 sno Exp $
 
 .include "../../print/pdflib/Makefile.common"
 
 PKGNAME=		tcl-pdflib-${PDFLIB_BASE_VERS}
-PKGREVISION=		6
+PKGREVISION=		8
 COMMENT=		Tcl interface to PDFlib for generating PDF files
 
 BUILDLINK_API_DEPENDS.pdflib+=	pdflib>=${PDFLIB_BASE_VERS}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2008/02/02 16:43:34 heinz Exp $
+# $NetBSD: Makefile,v 1.103 2009/08/26 19:56:39 sno Exp $
 
 DISTNAME=	imlib-1.9.15
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/imlib/1.9/}
 EXTRACT_SUFX=	.tar.bz2

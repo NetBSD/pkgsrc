@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:24:35 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/08/26 19:56:41 sno Exp $
 
 BUILDLINK_TREE+=	simgear
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	simgear
 SIMGEAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.simgear+=	simgear>=1.0.0
+BUILDLINK_ABI_DEPENDS.simgear?=	simgear>=1.0.0nb1
 BUILDLINK_PKGSRCDIR.simgear?=	../../games/simgear
 BUILDLINK_DEPMETHOD.simgear?=	build
 

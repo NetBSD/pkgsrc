@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:01:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/26 19:58:20 sno Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,6 +8,7 @@ XFCE4_VERSION=	0.2.0
 
 DISTNAME=	thunar-volman-${XFCE4_VERSION}
 PKGNAME=	${DISTNAME:S/thunar/xfce4/}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/thunar-volman/
 COMMENT=	Thunar volume manager
