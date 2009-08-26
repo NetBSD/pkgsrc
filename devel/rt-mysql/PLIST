@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/26 11:23:46 hasso Exp $
 rt/WebRT/html/Admin/Elements/CreateQueueCalled
 rt/WebRT/html/Admin/Elements/CreateUserCalled
 rt/WebRT/html/Admin/Elements/EditUserComments
@@ -249,12 +249,17 @@ rt/lib/auto/RT/.packlist
 rt/man/man3/RT.3
 rt/man/man3/RT::ACE.3
 rt/man/man3/RT::ACL.3
+rt/man/man3/RT::Action::Autoreply.3
 rt/man/man3/RT::Action::Generic.3
+rt/man/man3/RT::Action::Notify.3
+rt/man/man3/RT::Action::NotifyAsComment.3
 rt/man/man3/RT::Action::SendEmail.3
 rt/man/man3/RT::Action::SendPasswordEmail.3
 rt/man/man3/RT::Attachment.3
 rt/man/man3/RT::Attachments.3
+rt/man/man3/RT::Condition::AnyTransaction.3
 rt/man/man3/RT::Condition::Generic.3
+rt/man/man3/RT::Condition::StatusChange.3
 rt/man/man3/RT::CurrentUser.3
 rt/man/man3/RT::Date.3
 rt/man/man3/RT::EasySearch.3
@@ -265,8 +270,10 @@ rt/man/man3/RT::Groups.3
 rt/man/man3/RT::Handle.3
 rt/man/man3/RT::Interface::CLI.3
 rt/man/man3/RT::Interface::Email.3
+rt/man/man3/RT::Interface::Web.3
 rt/man/man3/RT::Keyword.3
 rt/man/man3/RT::KeywordSelect.3
+rt/man/man3/RT::KeywordSelects.3
 rt/man/man3/RT::Keywords.3
 rt/man/man3/RT::Link.3
 rt/man/man3/RT::Links.3
