@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3363 2009/08/26 01:48:03 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3364 2009/08/26 11:25:21 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4413,3 +4413,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-Cycle to 1.11 [seb 2009-08-26]
 	Updated devel/p5-local-lib to 1.4.5 [seb 2009-08-26]
 	Updated devel/p5-Module-CoreList to 2.18 [seb 2009-08-26]
+	Updated devel/rt-mysql to 2.0.15nb7 [hasso 2009-08-26]
+	Updated devel/rt-pgsql to 2.0.15nb7 [hasso 2009-08-26]
