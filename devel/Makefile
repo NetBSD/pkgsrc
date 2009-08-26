@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1220 2009/08/26 15:29:56 seb Exp $
+# $NetBSD: Makefile,v 1.1221 2009/08/26 17:23:51 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -432,6 +432,7 @@ SUBDIR+=	p5-Async-Interrupt
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Handlers
 SUBDIR+=	p5-AutoLoader
+SUBDIR+=	p5-AutoXS-Header
 SUBDIR+=	p5-B-Compiling
 SUBDIR+=	p5-B-Hooks-EndOfScope
 SUBDIR+=	p5-B-Hooks-OP-Check
