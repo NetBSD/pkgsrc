@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8382 2009/08/26 21:10:56 snj Exp $
+$NetBSD: TODO,v 1.8383 2009/08/26 22:10:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -592,7 +592,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fuse-archivemount-0.6.0
 	o fuse-ntfs-3g-2009.4.4
 	o fvwm2-themes-0.7.0
-	o gammu-1.25.0
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.14
