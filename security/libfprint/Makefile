@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:58:16 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/26 21:20:14 sno Exp $
 
 DISTNAME=	libfprint-0.0.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fprint/}
 EXTRACT_SUFX=	.tar.bz2
