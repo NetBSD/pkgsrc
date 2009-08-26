@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8381 2009/08/26 21:09:24 wiz Exp $
+$NetBSD: TODO,v 1.8382 2009/08/26 21:10:56 snj Exp $
 
 Suggested new packages
 ======================
@@ -516,7 +516,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dnstracer-1.9
 	o dovecot-1.2.2
 	o drivel-2.0.4
-	o dropbear-0.52
 	o drscheme-4.0.2
 	o dspam-3.9.0
 	o dvipng-1.12
