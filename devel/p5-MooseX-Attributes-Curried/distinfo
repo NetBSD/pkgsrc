@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/08/26 15:29:32 seb Exp $
+
+SHA1 (MooseX-Attributes-Curried-0.03.tar.gz) = c9c7348c146c093e0cd4216f5382d893fdbc4ace
+RMD160 (MooseX-Attributes-Curried-0.03.tar.gz) = 6d0380fa83ec158148b191bdf59e9bbb4c7be549
+Size (MooseX-Attributes-Curried-0.03.tar.gz) = 18079 bytes
