@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.23 2007/09/06 19:15:10 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2009/08/26 21:10:11 snj Exp $
 
-DISTNAME=	dropbear-0.50
-PKGREVISION=	2
+DISTNAME=	dropbear-0.52
 CATEGORIES=	security
 MASTER_SITES=	http://matt.ucc.asn.au/dropbear/releases/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	http://matt.ucc.asn.au/dropbear/dropbear.html
-COMMENT=	SSH2 server, aimed at embedded market
+COMMENT=	Small SSH2 server and client, aimed at embedded market
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
@@ -21,9 +22,16 @@ PKG_SUPPORTED_OPTIONS=	pam
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-pam
+SUBST_CLASSES+=		pam
+SUBST_MESSAGE.pam=	Enabling PAM in options.h
+SUBST_STAGE.pam=	post-patch
+SUBST_FILES.pam=	options.h
+SUBST_SED.pam=		-e "s/ENABLE_SVR_PASSWORD_AUTH/ENABLE_SVR_PAM_AUTH/"
 .endif
 
 MAKEFLAGS+=	ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP:Q}
+
+OWN_DIRS+=		${PKG_SYSCONFDIR}/dropbear
 
 SUBST_CLASSES+=		config
 SUBST_MESSAGE.config=	Fixing path to config directory.
@@ -31,14 +39,30 @@ SUBST_STAGE.config=	post-build
 SUBST_FILES.config=	dropbear.8 dropbearkey.8
 SUBST_SED.config=	-e "s,/etc/dropbear/,"${PKG_SYSCONFDIR:Q}"/dropbear/,g"
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man8
+# used by dbscp
+CPPFLAGS+=		-D_PATH_SSH_PROGRAM="\"${PREFIX}/bin/dbclient\""
+
+# XXX use base xauth if present, otherwise _ass_ume pkgsrc. better than nothing
+.if exists(${X11BASE}/bin/xauth)
+CPPFLAGS+=-DXAUTH_COMMAND="\"${X11BASE}/bin/xauth\""
+.else
+CPPFLAGS+=-DXAUTH_COMMAND="\"${X11PREFIX}/bin/xauth\""
+.endif
+
+INSTALLATION_DIRS=	share/doc/dropbear ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
+
+BUILD_TARGET=		all scp
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/dbclient.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/dropbear.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/dropbearkey.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dropbear
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dropbear
+	${INSTALL_MAN} ${WRKSRC}/dbclient.1 \
+		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/dropbear.8 \
+		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/dropbearkey.8 \
+		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}/${PREFIX}/share/doc/dropbear
+	${INSTALL_PROGRAM} ${WRKSRC}/scp ${DESTDIR}/${PREFIX}/bin/dbscp
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
