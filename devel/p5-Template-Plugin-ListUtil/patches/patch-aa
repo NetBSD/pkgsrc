@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/26 19:51:32 sno Exp $
+
+# Fix one of warnings reported in RT #48991 'Confusing warnings when
+#     doing "make test"'
+
+--- t/01basic.t.orig	2009-08-25 10:54:13.908232000 +0200
++++ t/01basic.t	2009-08-25 12:47:42.351172000 +0200
+@@ -89,6 +89,7 @@
+ ##########################################################################
+ 
+ use File::Spec::Functions;
++use FindBin;
+ 
+ sub tt
+ {
