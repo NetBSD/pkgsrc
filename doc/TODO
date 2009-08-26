@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8375 2009/08/26 11:54:12 wiz Exp $
+$NetBSD: TODO,v 1.8376 2009/08/26 11:54:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -759,7 +759,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o leafpad-0.8.15
 	o less-436
 	o lft-2.5 [at http://pwhois.org/]
-	o libXScrnSaver-1.2.0
 	o libarchive-2.7.0
 	o libast-0.7
 	o libcanberra-0.15
