@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3375 2009/08/26 16:51:00 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3376 2009/08/26 17:24:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4426,3 +4426,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/grun to 0.9.3 [snj 2009-08-26]
 	Updated devel/p5-Bit-Vector to 7.0 [seb 2009-08-26]
 	Updated graphics/jpeg to 7 [sno 2009-08-26]
+	Added devel/p5-AutoXS-Header version 1.02 [seb 2009-08-26]
