@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/02/21 21:16:54 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2009/08/26 20:22:53 sno Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,6 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../multimedia/totem/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-xine-/}
+PKGREVISION=	1
 
 COMMENT+=	(using Xine)
 

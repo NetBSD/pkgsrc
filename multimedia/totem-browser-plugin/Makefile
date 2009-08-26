@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/19 20:18:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/26 20:22:52 sno Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,6 +6,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../multimedia/totem/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/totem/totem-browser-plugin/}
+PKGREVISION=	1
+
 # override Makefile.common
 PLIST_SRC=      ${.CURDIR}/PLIST
 GCONF_SCHEMAS=	# none
