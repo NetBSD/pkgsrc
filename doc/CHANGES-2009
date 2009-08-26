@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3371 2009/08/26 12:47:53 tron Exp $
+$NetBSD: CHANGES-2009,v 1.3372 2009/08/26 15:30:35 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4422,3 +4422,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xcb-util to 0.3.6 [wiz 2009-08-26]
 	Updated textproc/libxml2 to 2.7.3nb1 [tron 2009-08-26]
 	Updated mail/squirrelmail to 1.4.20rc2 [tron 2009-08-26]
+	Added devel/p5-MooseX-Attributes-Curried version 0.03 [seb 2009-08-26]
