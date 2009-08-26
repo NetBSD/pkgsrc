@@ -1,0 +1,4 @@
+This module provides a selection of handy functions for dealing with lists in
+the Template Toolkit. Most of the functions are adapted from those provided
+by or documented in List::Util, though note these have been altered in name
+and function to work better with the template toolkit.
