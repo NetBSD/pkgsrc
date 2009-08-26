@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2009/02/11 22:35:49 markd Exp $
+# $NetBSD: Makefile,v 1.55 2009/08/26 19:58:38 sno Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGNAME=	kdelibdocs-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11 devel
 
 COMMENT=	KDE library documentation

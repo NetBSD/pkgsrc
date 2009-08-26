@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2009/07/29 17:40:53 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/26 19:57:12 sno Exp $
 #
 
 DISTNAME=	sonata-1.6.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://download.berlios.de/sonata/
 EXTRACT_SUFX=	.tar.bz2

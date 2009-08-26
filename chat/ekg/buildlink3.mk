@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2009/03/20 19:24:00 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2009/08/26 19:56:39 sno Exp $
 
 BUILDLINK_TREE+=	ekg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ekg
 EKG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ekg+=	ekg>=1.6
-BUILDLINK_ABI_DEPENDS.ekg+=	ekg>=1.7nb1
+BUILDLINK_ABI_DEPENDS.ekg+=	ekg>=1.7nb3
 BUILDLINK_PKGSRCDIR.ekg?=	../../chat/ekg
 
 .include "../../devel/zlib/buildlink3.mk"
