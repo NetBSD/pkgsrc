@@ -1,0 +1,3 @@
+This module provides an Template::Toolkit interface to Tassilo von Parseval's
+List::MoreUtils. It extends the built-in functions dealing with lists as well
+as Template::Plugin::ListUtil.
