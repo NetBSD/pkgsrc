@@ -1,0 +1,6 @@
+Template::Toolkit plugin HashMerge provides the Hash::Merge functions merge
+and set_behaviour to be used within templates.
+
+This can be useful in all cases a template works directly on data - e.g. when
+processing results from a query using Template::DBI and join the result with
+results from derived queries.
