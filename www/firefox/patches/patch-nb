@@ -1,6 +1,7 @@
-$NetBSD: patch-nb,v 1.1 2009/08/26 21:07:32 martin Exp $
+$NetBSD: patch-nb,v 1.2 2009/08/26 21:42:25 martin Exp $
 
-# not reported upstream yet
+# reported upstream as:
+#    https://bugzilla.mozilla.org/show_bug.cgi?id=512792
 
 --- media/liboggz/src/liboggz/oggz_byteorder.h.orig	2009-08-26 22:28:18.000000000 +0200
 +++ media/liboggz/src/liboggz/oggz_byteorder.h	2009-08-26 22:41:39.000000000 +0200

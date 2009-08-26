@@ -1,6 +1,7 @@
-$NetBSD: patch-nc,v 1.1 2009/08/26 21:07:32 martin Exp $
+$NetBSD: patch-nc,v 1.2 2009/08/26 21:42:25 martin Exp $
 
-# not reported upstream yet
+# reported upstream as:
+#    https://bugzilla.mozilla.org/show_bug.cgi?id=512792
 
 --- media/liboggz/src/liboggz/oggz_auto.c.orig	2009-08-26 22:20:35.000000000 +0200
 +++ media/liboggz/src/liboggz/oggz_auto.c	2009-08-26 22:40:51.000000000 +0200
