@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2007/08/01 11:47:15 obache Exp $
+# $NetBSD: Makefile,v 1.38 2009/08/26 16:50:46 sno Exp $
 #
 
-DISTNAME=		jpegsrc.v6b
-PKGNAME=		jpeg-6b
-PKGREVISION=		4
+DISTNAME=		jpegsrc.v7
+PKGNAME=		jpeg-7
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/graphics/jpeg/ \
-			ftp://ftp.uu.net/graphics/jpeg/
+MASTER_SITES=		http://www.ijg.org/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ijg.org/
@@ -19,13 +17,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	--enable-static
-
-INSTALL_TARGET=		install install-lib
 INSTALLATION_DIRS=	bin lib include ${PKGMANDIR}/man1
-
-INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 post-extract:
 	${CP} ${FILESDIR}/jpegexiforient.c ${WRKSRC}
@@ -33,7 +25,7 @@ post-extract:
 post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/exifautotran ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/jpeg
-	${INSTALL_DATA} ${WRKSRC}/*.doc ${DESTDIR}${PREFIX}/share/doc/jpeg
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${DESTDIR}${PREFIX}/share/doc/jpeg
 	${INSTALL_DATA} ${WRKSRC}/jpegint.h ${DESTDIR}${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"
