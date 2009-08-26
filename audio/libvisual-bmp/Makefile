@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2009/01/04 22:32:04 shattered Exp $
+# $NetBSD: Makefile,v 1.19 2009/08/26 19:57:10 sno Exp $
 #
 
 DISTNAME=		libvisual-bmp-0.2.0
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 
