@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3384 2009/08/26 20:17:09 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3385 2009/08/26 21:07:02 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4435,3 +4435,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-Accessor-Grouped to 0.09000 [seb 2009-08-26]
 	Added devel/p5-Template-Plugin-ListMoreUtils version 0.01 [sno 2009-08-26]
 	Added devel/p5-Template-Plugin-HashMerge version 0.01 [sno 2009-08-26]
+	Updated graphics/ImageMagick to 6.5.5.3 [sno 2009-08-26]
