@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3387 2009/08/26 21:45:36 he Exp $
+$NetBSD: CHANGES-2009,v 1.3388 2009/08/26 22:10:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4438,3 +4438,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/ImageMagick to 6.5.5.3 [sno 2009-08-26]
 	Updated security/dropbear to 0.52 [snj 2009-08-26]
 	Updated lang/parrot to 1.5.0 [he 2009-08-26]
+	Updated comms/gammu to 1.25.0 [wiz 2009-08-26]
