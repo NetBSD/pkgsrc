@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/08/26 19:42:56 sno Exp $
+
+# Fixes RT #48990
+
+--- lib/Template/Plugin/VMethods.pm.orig	2003-09-03 19:12:56.000000000 +0200
++++ lib/Template/Plugin/VMethods.pm	2009-08-25 13:05:24.915827000 +0200
+@@ -196,7 +196,7 @@
+ 
+     # work out if we've got any ops declared
+     my $varname = $class.'::'.$op;
+-    next unless @{$varname};
++    next unless ( defined( *{$varname} ) && defined( *{$varname}{ARRAY} ) );
+ 
+     # work out where we're going to stick them
+     my $hashref = ${'Template::Stash::'.$op};
