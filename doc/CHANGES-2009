@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3400 2009/08/27 21:55:52 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3401 2009/08/27 22:15:32 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4457,3 +4457,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Date-Calc to 5.7 [seb 2009-08-27]
 	Updated devel/p5-local-lib to 1.4.6 [seb 2009-08-27]
 	Updated devel/p5-MooseX-Getopt to 0.21 [seb 2009-08-27]
+	Updated devel/p5-MooseX-Traits to 0.07 [seb 2009-08-27]
