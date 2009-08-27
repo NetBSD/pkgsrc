@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3395 2009/08/27 17:53:12 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3396 2009/08/27 17:54:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4452,3 +4452,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated cross/avrdude to 5.8 [hasso 2009-08-27]
 	Updated shells/dash to 0.5.5.1nb1 [wiz 2009-08-27]
 	Updated graphics/ImageMagick to 6.5.5.3nb1 [sno 2009-08-27]
+	Updated graphics/p5-PerlMagick to 6.5.5.3nb1 [sno 2009-08-27]
