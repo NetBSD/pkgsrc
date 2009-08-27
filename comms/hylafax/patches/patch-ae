@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.13 2006/05/15 19:02:47 joerg Exp $
+$NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
 
 --- configure.orig	2005-12-16 22:40:30.000000000 +0000
 +++ configure
@@ -81,7 +81,7 @@ $NetBSD: patch-ae,v 1.13 2006/05/15 19:02:47 joerg Exp $
  	    case ${lib_ver} in
  		3.4)		tiff_runlen_t="uint16" ;;
 -		3.[567])	tiff_runlen_t="uint32" ;;
-+		3.[5678])	tiff_runlen_t="uint32" ;;
++		3.[56789])	tiff_runlen_t="uint32" ;;
  	    esac
  	fi
      else
