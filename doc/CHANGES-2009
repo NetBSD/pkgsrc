@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3393 2009/08/27 15:38:40 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3394 2009/08/27 17:04:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4450,3 +4450,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated cross/avr-gcc to 4.4.1 [hasso 2009-08-27]
 	Updated cross/avr-libc to 1.6.7 [hasso 2009-08-27]
 	Updated cross/avrdude to 5.8 [hasso 2009-08-27]
+	Updated shells/dash to 0.5.5.1nb1 [wiz 2009-08-27]
