@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8383 2009/08/26 22:10:03 wiz Exp $
+$NetBSD: TODO,v 1.8384 2009/08/27 15:38:40 hasso Exp $
 
 Suggested new packages
 ======================
@@ -420,9 +420,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o autogen-5.9.7
 	o avcheck-0.91
 	o avl-2.0.2a
-	o avr-binutils-2.17
-	o avr-libc-1.4.5
-	o avrdude-5.8 [pkg/41750]
 	o awesome-3.3.2
 	o baci-20040415
 	o balance-3.42
