@@ -1,0 +1,23 @@
+This Action handles doing automatic method dispatching for REST
+requests. It takes a normal Catalyst action, and changes the dispatch
+to append an underscore and method name.
+
+For example, in the synopsis above, calling GET on "/foo" would
+result in the foo_GET method being dispatched.
+
+If a method is requested that is not implemented, this action will
+return a status 405 (Method Not Found). It will populate the "Allow"
+header with the list of implemented request methods. You can override
+this behavior by implementing a custom 405 handler like so:
+
+   sub foo_not_implemented {
+      ... handle not implemented methods ...
+   }
+
+If you do not provide an _OPTIONS subroutine, we will automatically
+respond with a 200 OK. The "Allow" header will be populated with
+the list of implemented request methods.
+
+It is likely that you really want to look at Catalyst::Controller::REST,
+which brings this class together with automatic Serialization of
+requests and responses.
