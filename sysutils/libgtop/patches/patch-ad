@@ -1,0 +1,36 @@
+$NetBSD: patch-ad,v 1.9 2009/08/27 20:03:17 ahoka Exp $
+
+--- sysdeps/bsd/sysinfo.c.orig	2009-08-27 14:29:56.000000000 +0200
++++ sysdeps/bsd/sysinfo.c
+@@ -36,6 +36,7 @@ static void
+ init_sysinfo (glibtop *server)
+ {
+ 	char *model;
++	char *brand;
+ 	guint64 ncpus = 1;
+ 	int mhz = 0;
+ 	size_t len;
+@@ -51,6 +52,12 @@ init_sysinfo (glibtop *server)
+ 	sysctlbyname ("hw.model", NULL, &len, NULL, 0);
+ 	model = g_malloc (len);
+ 	sysctlbyname ("hw.model", model, &len, NULL, 0);
++	if (sysctlbyname ("machdep.cpu_brand", NULL, &len, NULL, 0) != -1) {
++		brand = g_malloc (len);
++		sysctlbyname ("machdep.cpu_brand", brand, &len, NULL, 0);
++	} else {
++		brand = model;
++	}
+ 	len = sizeof (mhz);
+ 	sysctlbyname ("hw.clockrate", &mhz, &len, NULL, 0);
+ 
+@@ -73,6 +80,10 @@ init_sysinfo (glibtop *server)
+ 		g_hash_table_insert (cpuinfo->values, "vendor_id",
+ 				     g_strdup(model));
+ 
++		g_ptr_array_add (cpuinfo->labels, "model name");
++		g_hash_table_insert (cpuinfo->values, "model name",
++				     g_strdup(brand));
++
+ 		g_ptr_array_add (cpuinfo->labels, "cpu MHz");
+ 		g_hash_table_insert (cpuinfo->values, "cpu MHz",
+ 				     g_strdup_printf("%d", mhz));
