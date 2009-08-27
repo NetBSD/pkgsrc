@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/07/23 19:24:52 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2009/08/27 13:21:53 schmonz Exp $
 
-SHA1 (xapian-core-1.0.14.tar.gz) = 1a2f07f1e04207dfa5e4e92e838d77193de3b338
-RMD160 (xapian-core-1.0.14.tar.gz) = bffaef5b20ece9f82f811939a9535fd8deee833d
-Size (xapian-core-1.0.14.tar.gz) = 2997725 bytes
+SHA1 (xapian-core-1.0.15.tar.gz) = 1427c0cba5e6973781c6ea08d55f082cb9f5829b
+RMD160 (xapian-core-1.0.15.tar.gz) = a2c6b3c3cc7f310d02db91a36e5d6800587ebe98
+Size (xapian-core-1.0.15.tar.gz) = 2974703 bytes

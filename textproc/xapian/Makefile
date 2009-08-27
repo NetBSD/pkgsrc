@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2009/07/23 19:24:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2009/08/27 13:21:53 schmonz Exp $
 #
 
-DISTNAME=	xapian-core-1.0.14
+DISTNAME=	xapian-core-1.0.15
 PKGNAME=	${DISTNAME:S/-core//}
 CATEGORIES=	textproc
-MASTER_SITES=	http://oligarchy.co.uk/xapian/1.0.14/
+MASTER_SITES=	http://oligarchy.co.uk/xapian/1.0.15/
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://xapian.org/
