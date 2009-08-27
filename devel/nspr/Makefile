@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2009/08/19 15:00:09 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2009/08/27 11:59:38 tnn Exp $
 
 DISTNAME=		nspr-4.6.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v4.6.7/src/}
 
