@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/21 23:02:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/27 13:08:54 hasso Exp $
 #
 
 DISTNAME=	asymptote-1.84
@@ -30,6 +30,13 @@ CFLAGS+=		-DGC_NO_THREAD_REDIRECTS
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xasy.1x \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xasy.1
+
+.include "../../mk/bsd.prefs.mk"
+
+# DragonFly has stripped makeinfo in the base - without texi2dvi.
+.if ${OPSYS} == "DragonFly"
+BUILD_DEPENDS+=         gtexinfo-[0-9]*:../../devel/gtexinfo
+.endif
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
