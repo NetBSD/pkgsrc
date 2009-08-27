@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/08/27 22:50:16 ahoka Exp $
+
+SHA1 (milkytracker-0.90.80.tar.bz2) = e6adedee56a6a1bf096b5311c319954ea54977dc
+RMD160 (milkytracker-0.90.80.tar.bz2) = cb535a50c29b8d722617007054921065e71c1615
+Size (milkytracker-0.90.80.tar.bz2) = 1799270 bytes
+SHA1 (patch-aa) = 8e0a8d58c54995483f639b7f2d936b0b1ffd1a8f
