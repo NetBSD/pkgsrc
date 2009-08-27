@@ -1,22 +1,22 @@
-$NetBSD: patch-ag,v 1.2 2003/09/19 12:58:14 wiz Exp $
+$NetBSD: patch-ag,v 1.3 2009/08/27 15:26:41 hasso Exp $
 
---- ld/Makefile.in.orig	Thu Jan  2 01:56:31 2003
+--- ld/Makefile.in.orig	2008-12-23 14:54:52 +0100
 +++ ld/Makefile.in
-@@ -111,7 +111,7 @@ INTLLIBS = @INTLLIBS@
- 
- AUTOMAKE_OPTIONS = cygnus dejagnu
- 
--SUBDIRS = po
-+SUBDIRS =
- 
- tooldir = $(exec_prefix)/$(target_alias)
- 
-@@ -512,7 +512,7 @@ CCLD = $(CC)
- LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
- TEXI2DVI = `if test -f $(top_srcdir)/../texinfo/util/texi2dvi; then echo $(top_srcdir)/../texinfo/util/texi2dvi; else echo texi2dvi; fi`
- TEXINFO_TEX = $(top_srcdir)/../texinfo/texinfo.tex
+@@ -102,7 +102,7 @@ LTYACCCOMPILE = $(LIBTOOL) --mode=compil
+ 	$(AM_YFLAGS)
+ YLWRAP = $(top_srcdir)/../ylwrap
+ SOURCES = $(ld_new_SOURCES) $(EXTRA_ld_new_SOURCES)
 -INFO_DEPS = ld.info
 +INFO_DEPS =
+ TEXINFO_TEX = $(top_srcdir)/../texinfo/texinfo.tex
+ am__TEXINFO_TEX_DIR = $(top_srcdir)/../texinfo
  DVIS = ld.dvi
- TEXINFOS = ld.texinfo
- man1dir = $(mandir)/man1
+@@ -283,7 +283,7 @@ target_vendor = @target_vendor@
+ use_sysroot = @use_sysroot@
+ AUTOMAKE_OPTIONS = cygnus dejagnu
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
+-SUBDIRS = po
++SUBDIRS =
+ tooldir = $(exec_prefix)/$(target_alias)
+ YFLAGS = -d
+ AM_CFLAGS = $(WARN_CFLAGS)
