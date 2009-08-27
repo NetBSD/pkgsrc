@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/07/15 21:46:26 wennmach Exp $
+$NetBSD: patch-ad,v 1.2 2009/08/27 15:26:41 hasso Exp $
 
---- etc/Makefile.in.orig	Sat Jan 26 22:35:45 2002
-+++ etc/Makefile.in	Tue Jun  4 16:50:05 2002
-@@ -52,7 +52,8 @@
- all:
+--- etc/Makefile.in.orig	2007-03-27 20:09:32 +0200
++++ etc/Makefile.in
+@@ -64,7 +64,8 @@ PDFFILES = standards.pdf configure.pdf
+ HTMLFILES = standards.html configure.html
  
- # We want install to imply install-info as per GNU standards.
+ all: info
 -install: install-info
 +#install: install-info
 +install:
