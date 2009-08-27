@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3390 2009/08/26 22:33:29 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3391 2009/08/27 10:45:39 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4441,3 +4441,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated comms/gammu to 1.25.0 [wiz 2009-08-26]
 	Updated comms/py-gammu to 1.25.0 [wiz 2009-08-26]
 	Updated archivers/zip to 3.0 [wiz 2009-08-26]
+	Added www/p5-URI-FromHash version 0.03 [abs 2009-08-27]
+	Added www/p5-Catalyst-Action-REST version 0.76 [abs 2009-08-27]
+	Added devel/p5-MooseX-Types-URI version 0.02 [abs 2009-08-27]
