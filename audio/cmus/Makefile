@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/08/17 14:21:42 ahoka Exp $
+# $NetBSD: Makefile,v 1.20 2009/08/27 19:44:49 wiz Exp $
 #
 
 DISTNAME=		cmus-2.2.0
@@ -14,4 +14,4 @@ COMMENT=		Cmus is a curses based music player with a lot of features
 CONFLICTS+=		cmus-unofficial-[0-9]*
 
 .include "options.mk"
-.include "../cmus/Makefile.common"
+.include "../../audio/cmus/Makefile.common"
