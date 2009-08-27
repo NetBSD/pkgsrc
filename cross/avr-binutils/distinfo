@@ -1,14 +1,15 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 10:16:52 agc Exp $
+$NetBSD: distinfo,v 1.5 2009/08/27 15:26:41 hasso Exp $
 
-SHA1 (binutils-2.13.2.1.tar.gz) = d13624807c6b47fec870096a65d47cce4cf82370
-RMD160 (binutils-2.13.2.1.tar.gz) = 7100913d4c9a98d76eced1d84bd771a3374ea9e2
-Size (binutils-2.13.2.1.tar.gz) = 12980018 bytes
-SHA1 (patch-aa) = 1e5af4a428314b46fa9c5b5c00e63406d692a0e2
-SHA1 (patch-ab) = abc8b9f823b27d756e1588af45af266efa038d03
-SHA1 (patch-ac) = 9261e61c68d50ba771ff74d3dba0670796a256af
-SHA1 (patch-ad) = 306fa82019efec11ae8ed18bf6853934a0f6c16f
-SHA1 (patch-ae) = 8d1f64fa51ed4fb7bbed49f3cedb20c1e08bce0d
-SHA1 (patch-af) = 92f0a4156ed6ea1027dcdffbbf41f05732b6dba9
-SHA1 (patch-ag) = ab2bd066584a8c54663547c78afb4eaac4515446
-SHA1 (patch-ah) = 0559821757c0b112b118bd966430f9d1c3894a83
-SHA1 (patch-ai) = 559e4d685369ca37ecb0168573e7a77e657fd1bf
+SHA1 (binutils-2.19.1.tar.gz) = 7e930435c47991c4070b1c74b010350e4669011f
+RMD160 (binutils-2.19.1.tar.gz) = 98916f371f647864997bb00084a5e7a0fd46d982
+Size (binutils-2.19.1.tar.gz) = 21601735 bytes
+SHA1 (patch-aa) = a298657340e6db5a77b45a09d98f84c2220d45bb
+SHA1 (patch-ab) = 0e71dc9932c42c1dcc6df2890cb0358e0aec1e55
+SHA1 (patch-ac) = f05dec7809fc38ebed5873b21981f62dcd8a1636
+SHA1 (patch-ad) = b933a733e355127c197e80e1c49a105469913280
+SHA1 (patch-ae) = 4b1505364d4176e8e374b576d62e1ca8e3d20e27
+SHA1 (patch-af) = 1bea903e88ad254339486e0de80112275966092a
+SHA1 (patch-ag) = 05501ffcafcda086b2e3d234e558c625f137b122
+SHA1 (patch-ah) = 2e7fbb530a915accd0ad3ee3626faed1b494c241
+SHA1 (patch-ai) = 6646c38cbd86d0dd3e3fbdc1c8e265d49e258ebc
+SHA1 (patch-aj) = 94d1ef1b49c7b0bd64ee9dba6139ee86cb50f8fc

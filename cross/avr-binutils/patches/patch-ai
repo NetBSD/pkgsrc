@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.1 2003/09/19 12:58:15 wiz Exp $
+$NetBSD: patch-ai,v 1.2 2009/08/27 15:26:41 hasso Exp $
 
---- gas/Makefile.in.orig	Sun Jul 14 03:14:18 2002
+--- gas/Makefile.in.orig	2009-01-14 09:50:17 +0100
 +++ gas/Makefile.in
-@@ -116,7 +116,7 @@ INTLLIBS = @INTLLIBS@
- 
- AUTOMAKE_OPTIONS = cygnus dejagnu
- 
+@@ -262,7 +262,7 @@ target_vendor = @target_vendor@
+ te_file = @te_file@
+ AUTOMAKE_OPTIONS = 1.8 cygnus dejagnu
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
 -SUBDIRS = doc po
 +SUBDIRS = doc
- 
- tooldir = $(exec_prefix)/$(target_alias)
- 
+ # Automake should figure this out on its own.  It doesn't, because
+ # of the "cygnus" option.  But distclean still wants it.
+ DIST_SUBDIRS = $(SUBDIRS)
