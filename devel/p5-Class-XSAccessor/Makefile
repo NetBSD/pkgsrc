@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/26 18:10:17 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/27 16:01:40 joerg Exp $
 #
 
 DISTNAME=	Class-XSAccessor-1.03
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=	p5-AutoXS-Header:../../devel/p5-AutoXS-Header
+BUILD_DEPENDS+=	p5-AutoXS-Header-[0-9]*:../../devel/p5-AutoXS-Header
 
 PERL5_PACKLIST=	auto/Class/XSAccessor/.packlist
 
