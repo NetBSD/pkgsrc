@@ -1,13 +1,13 @@
-$NetBSD: patch-ah,v 1.1 2003/09/19 12:58:14 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2009/08/27 15:26:41 hasso Exp $
 
---- binutils/Makefile.in.orig	Tue Jul 16 04:04:30 2002
+--- binutils/Makefile.in.orig	2008-08-25 06:38:13 +0200
 +++ binutils/Makefile.in
-@@ -121,7 +121,7 @@ INTLLIBS = @INTLLIBS@
- 
+@@ -358,7 +358,7 @@ target_os = @target_os@
+ target_vendor = @target_vendor@
  AUTOMAKE_OPTIONS = cygnus dejagnu
- 
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
 -SUBDIRS = doc po
 +SUBDIRS = doc
- 
  tooldir = $(exec_prefix)/$(target_alias)
- 
+ YFLAGS = -d
+ AM_CFLAGS = $(WARN_CFLAGS)
