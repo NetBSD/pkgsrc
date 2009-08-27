@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.14 2009/08/27 10:38:19 wiz Exp $
+
+--- mutt_ssl.c.orig	2009-06-10 05:08:29.000000000 +0000
++++ mutt_ssl.c
+@@ -652,7 +652,7 @@ static int check_host (X509 *x509cert, c
+   char *buf = NULL;
+   int bufsize;
+   /* needed to get the DNS subjectAltNames: */
+-  STACK *subj_alt_names;
++  STACK_OF(GENERAL_NAME) *subj_alt_names;
+   int subj_alt_names_count;
+   GENERAL_NAME *subj_alt_name;
+   /* did we find a name matching hostname? */
+@@ -735,7 +735,7 @@ static int ssl_cache_trusted_cert (X509 
+ {
+   dprint (1, (debugfile, "trusted: %s\n", c->name));
+   if (!SslSessionCerts)
+-    SslSessionCerts = sk_new_null();
++    SslSessionCerts = sk_X509_new_null();
+   return (sk_X509_push (SslSessionCerts, X509_dup(c)));
+ }
+ 
