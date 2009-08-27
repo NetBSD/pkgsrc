@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.659 2009/08/23 22:22:33 wiz Exp $
+# $NetBSD: Makefile,v 1.660 2009/08/27 10:44:04 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -255,6 +255,7 @@ SUBDIR+=	p5-CSS-Squish
 SUBDIR+=	p5-CSS-Tiny
 SUBDIR+=	p5-Captcha-reCAPTCHA
 SUBDIR+=	p5-Captcha-reCAPTCHA-Mailhide
+SUBDIR+=	p5-Catalyst-Action-REST
 SUBDIR+=	p5-Catalyst-Action-RenderView
 SUBDIR+=	p5-Catalyst-Authentication-Store-DBIx-Class
 SUBDIR+=	p5-Catalyst-Component-ACCEPT_CONTEXT
@@ -405,6 +406,7 @@ SUBDIR+=	p5-URI
 SUBDIR+=	p5-URI-Escape-XS
 SUBDIR+=	p5-URI-Fetch
 SUBDIR+=	p5-URI-Find
+SUBDIR+=	p5-URI-FromHash
 SUBDIR+=	p5-VRML
 SUBDIR+=	p5-WWW-Amazon-Wishlist
 SUBDIR+=	p5-WWW-Curl
