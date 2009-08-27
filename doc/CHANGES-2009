@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3397 2009/08/27 20:13:34 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.3398 2009/08/27 20:43:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4454,3 +4454,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/ImageMagick to 6.5.5.3nb1 [sno 2009-08-27]
 	Updated graphics/p5-PerlMagick to 6.5.5.3nb1 [sno 2009-08-27]
 	Updated sysutils/libgtop to 2.26.1nb2 [ahoka 2009-08-27]
+	Updated devel/p5-Date-Calc to 5.7 [seb 2009-08-27]
