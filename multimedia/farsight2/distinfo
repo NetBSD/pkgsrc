@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/17 21:13:04 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/08/27 18:39:19 hasso Exp $
 
 SHA1 (farsight2-0.0.14.tar.gz) = 2f8b382747efb467cdb9acd833bb88fe9bf02dc8
 RMD160 (farsight2-0.0.14.tar.gz) = 5f8816831fb6790c3185479cca43713fd552d4cd
@@ -12,3 +12,5 @@ SHA1 (patch-af) = 213cba839532d09f15c73e09e622af5a8622e46e
 SHA1 (patch-ag) = 2b4c4c1f5c48fc2bcec2c283473c03cbb9a13efc
 SHA1 (patch-ah) = d9093fe379fd2a7a4422e88d466cbb2fb73679dd
 SHA1 (patch-ai) = 6459729f80f592a2a333d683b05a139b499f46c6
+SHA1 (patch-aj) = 816318707d1463df27b37734baedadb338452fb0
+SHA1 (patch-ak) = 591ab7b6afefc84443280b01c765492007686ff6
