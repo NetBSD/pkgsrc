@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3391 2009/08/27 10:45:39 abs Exp $
+$NetBSD: CHANGES-2009,v 1.3392 2009/08/27 13:23:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4444,3 +4444,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/p5-URI-FromHash version 0.03 [abs 2009-08-27]
 	Added www/p5-Catalyst-Action-REST version 0.76 [abs 2009-08-27]
 	Added devel/p5-MooseX-Types-URI version 0.02 [abs 2009-08-27]
+	Updated textproc/xapian to 1.0.15 [schmonz 2009-08-27]
+	Updated textproc/xapian-omega to 1.0.15 [schmonz 2009-08-27]
