@@ -1,9 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2007/09/28 21:11:50 dmcmahill Exp $
-
-- add missing checks for -lnsl and -lsocket needed by at least
-  SunOS-5.9 and possibly others.
-
-- Fix the SUBDIRS stuff to work correctly.
+$NetBSD: patch-ae,v 1.4 2009/08/27 15:34:48 hasso Exp $
 
 - add missing AM_PROG_CC_C_O that automake wants for the yacc
   sources.
@@ -13,40 +8,17 @@ $NetBSD: patch-ae,v 1.3 2007/09/28 21:11:50 dmcmahill Exp $
   platforms available and they're not the same for different
   MACHINE_ARCH's in NetBSD).
 
---- configure.ac.orig	2006-10-09 10:47:29.000000000 -0400
-+++ configure.ac	2007-09-28 12:55:21.429495000 -0400
-@@ -45,4 +45,6 @@
- AC_CHECK_LIB([ncurses], [tputs])
- AC_CHECK_LIB([readline], [readline])
-+AC_CHECK_LIB([nsl], [gethostbyname])
-+AC_CHECK_LIB([socket], [socket])
- AH_TEMPLATE([HAVE_LIBUSB],
-             [Define if USB support is enabled via libusb])
-@@ -67,4 +69,5 @@
+--- configure.ac.orig	2009-07-11 00:52:03 +0200
++++ configure.ac
+@@ -74,6 +74,7 @@ AC_CHECK_HEADERS([ddk/hidsdi.h],,,[#incl
+ 
  # Checks for typedefs, structures, and compiler characteristics.
  AC_C_CONST
 +AM_PROG_CC_C_O
  AC_HEADER_TIME
  
-@@ -119,48 +122,48 @@
- 
- if test "$enabled_doc" = "yes"; then
--
--SUBDIRS_AC='doc @WINDOWS_DIRS@'
--DIST_SUBDIRS_AC='doc windows'
-+	DOC_DIR="doc"
- else
--
--SUBDIRS_AC='@WINDOWS_DIRS@'
--DIST_SUBDIRS_AC='windows'
-+	DOC_DIR=""
- fi
- 
- AC_SUBST(DOC_INST_DIR, $DOC_INST_DIR)
--AC_SUBST(SUBDIRS_AC, $SUBDIRS_AC)
--AC_SUBST(DIST_SUBDIRS_AC, $DIST_SUBDIRS_AC)
--
-+AC_SUBST(DOC_DIR, $DOC_DIR)
+ # Checks for library functions.
+@@ -187,34 +188,44 @@ AC_SUBST(DIST_SUBDIRS_AC, $DIST_SUBDIRS_
  
  # Find the parallel serial device files based on target system
  # If a system doesn't have a PC style parallel, mark it as unknown.
@@ -77,6 +49,10 @@ $NetBSD: patch-ae,v 1.3 2007/09/28 21:11:50 dmcmahill Exp $
 +		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"unknown"}
 +		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuaa0"}
 +		;;
++	*-*-dragonfly*)
++		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"/dev/ppi0"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuaa0"}
++		;;
 +	*-*-netbsd*)
 +		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"unknown"}
 +		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/tty00"}
@@ -100,3 +76,4 @@ $NetBSD: patch-ae,v 1.3 2007/09/28 21:11:50 dmcmahill Exp $
 +		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"unknown"}
  		;;
  esac
+ 
