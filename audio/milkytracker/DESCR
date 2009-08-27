@@ -1,0 +1,22 @@
+MilkyTracker is an open source, multi-platform music application for creating
+.MOD and .XM module files. It attempts to recreate the module replay and user
+experience of the popular DOS program Fasttracker II, with special playback
+modes available for improved Amiga ProTracker 2/3 compatibility.
+
+Some of it's key features are:
+
+* Fasttracker II like, custom graphical user interface with context menus
+* Choose between a modern and a true-to-FT2 editing scheme / keyboard layout
+* Tabbed user interface for opening and playing up to 32 modules simultaneously
+  and for exchanging data between them
+* Playing and editing simultaneously
+* Live mode for seamless pattern changes
+* Rendering songs/patterns to disk (.WAV) or directly to sample
+* Powerful sample editor featuring waveform generators
+* In-depth instrument editor featuring envelope zooming and scaling and support
+  for copying and swapping instruments and samples across tabs
+* ProTracker 2/3 playback modes for playing and editing .MOD files
+* Various resampler options including emulated Amiga 500/1200 sound output
+* Module optimizer
+* Over 30 imported module formats
+* Basic archive support for loading zipped, powerpacked and UMX modules directly

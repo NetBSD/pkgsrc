@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/08/27 22:50:16 ahoka Exp $
+
+ Since SDL is utilizing X shared memory extensions, you
+ might need to raise the maximum limit of shared memory pages
+ for running milkytracker properly.
+
+
+ Documentation for MilkyTracker is installed in:
+    ${PREFIX}/share/doc/milkytracker
+
+===========================================================================

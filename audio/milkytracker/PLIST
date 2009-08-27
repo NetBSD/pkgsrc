@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/27 22:50:16 ahoka Exp $
+bin/milkytracker
+share/doc/milkytracker/ChangeLog.html
+share/doc/milkytracker/EqualizerDesign.doc
+share/doc/milkytracker/FAQ.html
+share/doc/milkytracker/MilkyTracker.html
+share/doc/milkytracker/TiTAN.nfo
+share/doc/milkytracker/readme_OSX.html
+share/doc/milkytracker/readme_PocketPC.html
+share/doc/milkytracker/readme_rtaudio
+share/doc/milkytracker/readme_unix

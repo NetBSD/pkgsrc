@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/27 22:50:16 ahoka Exp $
+
+--- src/milkyplay/drivers/jack/AudioDriver_JACK.cpp.orig	2008-02-17 22:12:31.000000000 +0200
++++ src/milkyplay/drivers/jack/AudioDriver_JACK.cpp
+@@ -64,6 +64,7 @@ int AudioDriver_JACK::jackProcess(jack_n
+ 		leftBuffer[in] = audioDriver->rawStream[out++] * (1.0/32768.0);
+ 		rightBuffer[in] = audioDriver->rawStream[out++] * (1.0/32768.0);
+ 	}
++	return 0;
+ }
+ 
+ AudioDriver_JACK::AudioDriver_JACK() :
