@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:39:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/08/27 15:34:48 hasso Exp $
 bin/avrdude
 info/avrdude.info
 man/man1/avrdude.1
 share/examples/avrdude/avrdude.conf
-share/doc/${DISTNAME}/avrdude.pdf
 share/doc/${DISTNAME}/avrdude-html/avrdude.html
-share/doc/${DISTNAME}/avrdude-html/avrdude_abt.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_1.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_10.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_11.html
@@ -15,7 +13,10 @@ share/doc/${DISTNAME}/avrdude-html/avrdude_14.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_15.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_16.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_17.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_18.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_19.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_2.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_20.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_3.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_4.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_5.html
@@ -23,5 +24,7 @@ share/doc/${DISTNAME}/avrdude-html/avrdude_6.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_7.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_8.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_9.html
+share/doc/${DISTNAME}/avrdude-html/avrdude_abt.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_toc.html
+share/doc/${DISTNAME}/avrdude.pdf
 share/doc/${DISTNAME}/avrdude.ps
