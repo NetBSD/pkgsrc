@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2009/05/20 00:58:09 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2009/08/27 15:34:48 hasso Exp $
 
-DISTNAME=		avrdude-5.2
-PKGREVISION=		2
+DISTNAME=		avrdude-5.8
 CATEGORIES=		cross
 MASTER_SITES=		http://download.savannah.gnu.org/releases/avrdude/
 
@@ -20,7 +19,7 @@ TEX_ACCEPTED=		teTeX3
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf automake makeinfo texi2html yacc lex
+USE_TOOLS+=		autoconf automake autoreconf makeinfo texi2html yacc lex
 INFO_FILES=		yes
 EGDIR=			${PREFIX}/share/examples/avrdude
 CONF_FILES=		${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf
@@ -35,9 +34,12 @@ PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
 # The autotools used by this pkg are older than what's in pkgsrc
 # currently.  This makes the diffs huge.
 pre-configure:
-	cd ${WRKSRC} && aclocal
-	cd ${WRKSRC} && automake --add-missing
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && autoreconf -vif
+
+# DragonFly has stripped makeinfo in the base - without texi2dvi.
+.if ${OPSYS} == "DragonFly"
+BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
+.endif
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
