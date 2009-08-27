@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 2009/08/27 15:26:41 hasso Exp $
+
+--- gprof/Makefile.in.orig	2008-08-25 06:38:45 +0200
++++ gprof/Makefile.in
+@@ -94,7 +94,7 @@ CCLD = $(CC)
+ LINK = $(LIBTOOL) --tag=CC --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ SOURCES = $(gprof_SOURCES)
+-INFO_DEPS = gprof.info
++INFO_DEPS =
+ TEXINFO_TEX = $(top_srcdir)/../texinfo/texinfo.tex
+ am__TEXINFO_TEX_DIR = $(top_srcdir)/../texinfo
+ DVIS = gprof.dvi
+@@ -244,7 +244,7 @@ target_vendor = @target_vendor@
+ AUTOMAKE_OPTIONS = cygnus
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
+ SUFFIXES = .m
+-SUBDIRS = po
++SUBDIRS =
+ BASEDIR = $(srcdir)/..
+ BFDDIR = $(BASEDIR)/bfd
+ INCDIR = $(BASEDIR)/include
