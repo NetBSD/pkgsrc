@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/08/19 08:30:16 sno Exp $
+$NetBSD: distinfo,v 1.3 2009/08/28 14:33:16 seb Exp $
 
-SHA1 (MooseX-Method-Signatures-0.21.tar.gz) = 4b26ae4915fc8fb0f7519b485612c77667bcb81c
-RMD160 (MooseX-Method-Signatures-0.21.tar.gz) = 986851b06678288fdae6b039b72a6e1c1b1cb4a3
-Size (MooseX-Method-Signatures-0.21.tar.gz) = 33127 bytes
+SHA1 (MooseX-Method-Signatures-0.23.tar.gz) = bd8ce3a901fd7917ccd8dc10be2a58b37927c9d8
+RMD160 (MooseX-Method-Signatures-0.23.tar.gz) = 1a6b22867e4621594dd20c2c4cc41941df032185
+Size (MooseX-Method-Signatures-0.23.tar.gz) = 33193 bytes
