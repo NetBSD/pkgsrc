@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3405 2009/08/28 05:38:55 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3406 2009/08/28 07:32:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4462,3 +4462,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added audio/milkytracker version 0.90.80 [ahoka 2009-08-27]
 	Updated devel/p5-MooseX-Types to 0.19 [seb 2009-08-27]
 	Updated textproc/xerces-c to 2.8.0nb1 [hasso 2009-08-28]
+	Updated devel/p5-Parse-RecDescent to 1.96.2.1 [sno 2009-08-28]
