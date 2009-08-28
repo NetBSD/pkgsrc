@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.4 2008/06/23 21:22:58 markd Exp $
+$NetBSD: patch-ad,v 1.5 2009/08/28 20:46:19 hasso Exp $
 
---- extern/bFTGL/src/FTVectoriser.cpp.orig	2007-12-05 02:15:19.000000000 +1300
-+++ extern/bFTGL/src/FTVectoriser.cpp
-@@ -7,7 +7,7 @@
- 
- #ifdef __APPLE_CC__    
-     typedef GLvoid (*GLUTesselatorFunction)(...);
+--- extern/bFTGL/src/FTVectoriser.cpp.orig	2007-11-05 15:05:58 +0200
++++ extern/bFTGL/src/FTVectoriser.cpp	2009-08-28 21:34:45 +0300
+@@ -11,7 +11,7 @@
+     #else
+         typedef GLvoid (*GLUTesselatorFunction)(...);
+     #endif
 -#elif defined( __mips ) || defined( __linux__ ) || defined( __FreeBSD__ ) || defined( __OpenBSD__ ) || defined( __sun ) || defined (__CYGWIN__)
 +#elif defined( __mips ) || defined( __linux__ ) || defined( __FreeBSD__ ) || defined( __OpenBSD__ ) || defined( __sun ) || defined (__CYGWIN__) || defined( __NetBSD__ ) || defined(__DragonFly__)
      typedef GLvoid (*GLUTesselatorFunction)();
