@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.40 2009/08/28 07:45:35 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.41 2009/08/28 12:09:32 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -149,3 +149,5 @@ Pullup ticket #2872 - requested by jnemeth
 asterisk: security update
 Pullup ticket #2873 - requested by tron
 libxml2: security patch
+Pullup ticket #2876 - requested by hasso
+xerces-c: security patch
