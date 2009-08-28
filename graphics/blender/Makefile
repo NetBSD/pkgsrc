@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2009/08/26 19:57:36 sno Exp $
+# $NetBSD: Makefile,v 1.67 2009/08/28 20:46:18 hasso Exp $
 
-DISTNAME=	blender-2.45
-PKGREVISION=	5
+DISTNAME=	blender-2.49a
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -51,12 +50,13 @@ do-install:
 		${DESTDIR}${PREFIX}/share/blender
 	${INSTALL_DATA} ${WRKSRCBIN}/.blender/.bfont.ttf \
 		${DESTDIR}${PREFIX}/share/blender
-	${INSTALL_DATA} ${WRKSRCBIN}/BlenderQuickStart.pdf \
+	${INSTALL_DATA} ${WRKSRC}/release/text/BlenderQuickStart.pdf \
 		${DESTDIR}${PREFIX}/share/blender
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
