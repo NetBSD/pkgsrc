@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3407 2009/08/28 07:44:14 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3408 2009/08/28 14:33:34 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4464,3 +4464,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/xerces-c to 2.8.0nb1 [hasso 2009-08-28]
 	Updated devel/p5-Parse-RecDescent to 1.96.2.1 [sno 2009-08-28]
 	Updated devel/p5-signatures to 0.06 [sno 2009-08-28]
+	Updated devel/p5-MooseX-Method-Signatures to 0.23 [seb 2009-08-28]
