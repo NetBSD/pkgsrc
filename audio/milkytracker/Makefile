@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/27 22:50:16 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/28 07:48:15 wiz Exp $
 #
 DISTNAME=	milkytracker-0.90.80
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.milkytracker.net/files/ \
 		${MASTER_SITE_FREEBSD}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	jkuittinen@users.sourceforge.net
 HOMEPAGE=	http://www.milkytracker.net/files/
 COMMENT=	Music tracker inspired by Fast Tracker 2
 
