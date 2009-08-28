@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2009/05/22 17:59:41 zafer Exp $
+# $NetBSD: Makefile,v 1.37.2.1 2009/08/28 12:07:16 tron Exp $
 #
 
 DISTNAME=	xerces-c-src_2_8_0
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-src_/-/:S/_/./g}
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.apache.org/dist/xerces/c/2/sources/ \
-				http://apache.speedbone.de/xerces/c/2/sources/ \
-				ftp://ftp.riken.jp/net/apache/xerces/c/2/sources/
-				
-				
+MASTER_SITES=	${MASTER_SITE_APACHE:=xerces/c/2/sources/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xerces.apache.org/xerces-c/
