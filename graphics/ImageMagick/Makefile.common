@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.82 2009/08/26 21:06:46 sno Exp $
+# $NetBSD: Makefile.common,v 1.83 2009/08/28 07:43:16 obache Exp $
 
 ###########################################################################
 #
@@ -21,6 +21,7 @@ DISTSUFFIX=	${IM_MAJOR_VER}
 
 DISTNAME=	ImageMagick-${DISTSUFFIX}
 DISTVERSION=	${DISTSUFFIX:S/-/./}
+DIST_SUBDIR=	${DISTNAME}-20090827
 
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.imagemagick.net/pub/ImageMagick/ \
