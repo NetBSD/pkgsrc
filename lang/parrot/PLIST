@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2009/07/27 08:23:10 he Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/08/28 16:48:41 he Exp $
 bin/parrot
 bin/parrot_config
 bin/parrot_debugger
 bin/pbc_disassemble
 bin/pbc_dump
-bin/pbc_info
 bin/pbc_merge
 bin/pbc_to_exe
 include/parrot/${PKGVERSION}/parrot/atomic.h
@@ -77,7 +76,6 @@ include/parrot/${PKGVERSION}/parrot/scheduler.h
 include/parrot/${PKGVERSION}/parrot/scheduler_private.h
 include/parrot/${PKGVERSION}/parrot/settings.h
 include/parrot/${PKGVERSION}/parrot/slice.h
-include/parrot/${PKGVERSION}/parrot/stacks.h
 include/parrot/${PKGVERSION}/parrot/stat.h
 include/parrot/${PKGVERSION}/parrot/string.h
 include/parrot/${PKGVERSION}/parrot/string_funcs.h
@@ -94,6 +92,8 @@ lib/libparrot.a
 lib/parrot/${PKGVERSION}/dynext/digest_group.so
 lib/parrot/${PKGVERSION}/dynext/dynlexpad.so
 lib/parrot/${PKGVERSION}/dynext/libnci_test.so
+lib/parrot/${PKGVERSION}/dynext/math_ops.so
+lib/parrot/${PKGVERSION}/dynext/obscure_ops.so
 lib/parrot/${PKGVERSION}/dynext/rational.so
 lib/parrot/${PKGVERSION}/dynext/subproxy.so
 lib/parrot/${PKGVERSION}/include/call_bits.pasm
@@ -113,7 +113,6 @@ lib/parrot/${PKGVERSION}/include/interpinfo.pasm
 lib/parrot/${PKGVERSION}/include/interptrace.pasm
 lib/parrot/${PKGVERSION}/include/iterator.pasm
 lib/parrot/${PKGVERSION}/include/longopt.pasm
-lib/parrot/${PKGVERSION}/include/mmd.pasm
 lib/parrot/${PKGVERSION}/include/parrotlib.pbc
 lib/parrot/${PKGVERSION}/include/pmctypes.pasm
 lib/parrot/${PKGVERSION}/include/signal.pasm
@@ -150,8 +149,6 @@ lib/parrot/${PKGVERSION}/library/Data/Dumper/Base.pbc
 lib/parrot/${PKGVERSION}/library/Data/Dumper/Base.pir
 lib/parrot/${PKGVERSION}/library/Data/Dumper/Default.pbc
 lib/parrot/${PKGVERSION}/library/Data/Dumper/Default.pir
-lib/parrot/${PKGVERSION}/library/Data/Replace.pbc
-lib/parrot/${PKGVERSION}/library/Data/Replace.pir
 lib/parrot/${PKGVERSION}/library/Digest/MD5.pbc
 lib/parrot/${PKGVERSION}/library/Digest/MD5.pir
 lib/parrot/${PKGVERSION}/library/Getopt/Obj.pbc
@@ -168,8 +165,6 @@ lib/parrot/${PKGVERSION}/library/Math/Rand.pir
 lib/parrot/${PKGVERSION}/library/Math/Random/mt19937ar.pbc
 lib/parrot/${PKGVERSION}/library/Math/Random/mt19937ar.pir
 lib/parrot/${PKGVERSION}/library/NCI/Utils.pir
-lib/parrot/${PKGVERSION}/library/NCI/call_toolkit_init.pbc
-lib/parrot/${PKGVERSION}/library/NCI/call_toolkit_init.pir
 lib/parrot/${PKGVERSION}/library/OpenGL.pir
 lib/parrot/${PKGVERSION}/library/OpenGL/Math.pir
 lib/parrot/${PKGVERSION}/library/P6object.pbc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/08/26 21:44:43 he Exp $
+# $NetBSD: Makefile,v 1.21 2009/08/28 16:48:41 he Exp $
 #
 
 VERSION=		1.5.0
@@ -40,11 +40,6 @@ SUBST_SED.pthread+=	-e '/^LDFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|'
 
 pre-install:
 	${CHMOD} -R g-w ${WRKSRC}
-
-post-install:
-	if [ -e ${PREFIX}/lib/libparrot.so.${VERSION} ]; then \
-		${LN} -s libparrot.so.${VERSION} ${PREFIX}/lib/libparrot.so ; \
-	fi
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
