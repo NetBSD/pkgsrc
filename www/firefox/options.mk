@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2009/08/29 10:34:37 tnn Exp $
+# $NetBSD: options.mk,v 1.4 2009/08/29 11:50:32 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	debug official-mozilla-branding mozilla-jemalloc gnome
 PKG_SUGGESTED_OPTIONS+=	gnome
 
-PLIST_VARS+=		branding
+PLIST_VARS+=		branding gnome
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
@@ -21,6 +21,7 @@ PKG_SUGGESTED_OPTIONS+= mozilla-jit
 .if !empty(PKG_OPTIONS:Mgnome)
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gnomevfs --enable-dbus
+PLIST.gnome=		yes
 .else
 CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus
 .endif
