@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3430 2009/08/29 15:41:43 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3431 2009/08/29 15:50:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4487,3 +4487,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/libXcursor to 1.1.10 [wiz 2009-08-29]
 	Updated x11/libdrm to 2.4.13 [wiz 2009-08-29]
 	Updated sysutils/libpciaccess to 0.10.7 [wiz 2009-08-29]
+	Updated x11/pixman to 0.16.0 [wiz 2009-08-29]
