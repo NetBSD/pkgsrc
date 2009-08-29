@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/26 19:57:40 sno Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/29 11:45:29 wiz Exp $
 #
 
 DISTNAME=	f-spot-0.5.0.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://f-spot.org/
 COMMENT=	Full-featured personal photo management application
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
