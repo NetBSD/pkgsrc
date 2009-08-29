@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 17:50:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/29 15:30:49 wiz Exp $
+include/X11/extensions/xcmiscproto.h
 include/X11/extensions/xcmiscstr.h
 lib/pkgconfig/xcmiscproto.pc
