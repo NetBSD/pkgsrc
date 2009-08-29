@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8386 2009/08/29 02:58:49 obache Exp $
+$NetBSD: TODO,v 1.8387 2009/08/29 05:42:51 hasso Exp $
 
 Suggested new packages
 ======================
@@ -41,10 +41,6 @@ Suggested new packages
 	joyce
 	http://www.seasip.demon.co.uk/Unix/Joyce/index.html
 	Amstrad PCW emulator
-
-	wxmozilla
-	http://wxmozilla.sourceforge.net/
-	Mozilla using the wxWidgets toolkit.
 
 	SlimServer
 	http://www.slimdevices.com/pi_features.html
@@ -162,10 +158,6 @@ Suggested new packages
 	http://www.pell.portland.or.us/~orc/Code/postoffice/index.html
 	Simple SMTP mail server and client.
 
-	oKle
-	http://okle.sourceforge.net/
-	KDE frontend to the Ogle DVD player.
-
 	LabelNation
 	http://www.red-bean.com/labelnation/
 	Command-line label, business card printing program.
@@ -187,7 +179,7 @@ Suggested new packages
 	Fast lightweight SNMPv1 daemon
 
 	BSNMP
-	http://oasis.frogfoot.net/code/tinysnmp/
+	http://people.freebsd.org/~harti/bsnmp/
 	Mini SNMP daemon
 
 	TrueCrypt
