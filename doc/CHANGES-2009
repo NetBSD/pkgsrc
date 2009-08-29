@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3433 2009/08/29 18:00:10 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3434 2009/08/29 18:41:12 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4490,3 +4490,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/pixman to 0.16.0 [wiz 2009-08-29]
 	Updated wm/awesome to 2.3.6 [wiz 2009-08-29]
 	Updated x11/gtk2 to 2.16.6nb2 [wiz 2009-08-29]
+	Updated misc/taskjuggler to 2.4.3 [hasso 2009-08-29]
