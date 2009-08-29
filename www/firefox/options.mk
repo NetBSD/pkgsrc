@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2009/08/09 21:13:39 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2009/08/29 10:34:37 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
-PKG_SUPPORTED_OPTIONS=	debug official-mozilla-branding mozilla-jemalloc
+PKG_SUPPORTED_OPTIONS=	debug official-mozilla-branding mozilla-jemalloc gnome
+PKG_SUGGESTED_OPTIONS+=	gnome
 
 PLIST_VARS+=		branding
 
@@ -16,6 +17,13 @@ PKG_SUGGESTED_OPTIONS+= mozilla-jit
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mgnome)
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-gnomevfs --enable-dbus
+.else
+CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus
+.endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
 CONFIGURE_ARGS+=	--enable-jemalloc
