@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.rpm,v 1.5 2009/02/22 11:54:23 ahoka Exp $
+# $NetBSD: Makefile.rpm,v 1.6 2009/08/29 13:15:54 obache Exp $
 
 # This package installs from an RPM directly into "/usr" on a Linux
 # system, which can't be managed by pkgsrc.
@@ -17,7 +17,7 @@ WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 
 EMUL_PKG_FMT=		rpm
-RPM2PKG_PREFIX=		${PREFIX}
+RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
 RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
 RPM2PKG_STAGE=		do-install
 
@@ -30,10 +30,10 @@ post-extract:
 	${CP} ${FILESDIR}/opera.sh ${WRKSRC}
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/opera.sh ${PREFIX}/bin/opera
+	${INSTALL_SCRIPT} ${WRKDIR}/opera.sh ${DESTDIR}${PREFIX}/bin/opera
 	${LN} -fs ${EMULDIR}/usr/share/man/man1/opera.1			\
-		${PREFIX}/${PKGMANDIR}/man1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${ECHO} "bin/opera" >> ${RPM2PKG_PLIST}
 	${ECHO} "${PKGMANDIR}/man1/opera.1" >> ${RPM2PKG_PLIST}
 	${ECHO} "${PREFIX}/lib/netscape/plugins=1" >> \
-		${PREFIX}/${EMULSUBDIR}/usr/share/opera/ini/pluginpath.ini
+		${DESTDIR}${PREFIX}/${EMULSUBDIR}/usr/share/opera/ini/pluginpath.ini
