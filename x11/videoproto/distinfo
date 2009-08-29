@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/03 20:18:23 joerg Exp $
+$NetBSD: distinfo,v 1.2 2009/08/29 15:29:47 wiz Exp $
 
-SHA1 (videoproto-2.2.2.tar.bz2) = 904eb59ae2451dea52370d927bf490b696f9033c
-RMD160 (videoproto-2.2.2.tar.bz2) = 93916cab8323f5c4a7f79b648535858be1096a82
-Size (videoproto-2.2.2.tar.bz2) = 42744 bytes
+SHA1 (videoproto-2.3.0.tar.bz2) = 4aef2b438d45b3ab75e640996ce1267d3468f48c
+RMD160 (videoproto-2.3.0.tar.bz2) = ff1338f96e4ba95e302a3a95b39dfe2f864ceca9
+Size (videoproto-2.3.0.tar.bz2) = 54499 bytes
