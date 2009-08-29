@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3417 2009/08/29 15:23:45 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3418 2009/08/29 15:24:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/vlc to 1.0.1 [hasso 2009-08-29]
 	Updated devel/glib2 to 2.20.5 [wiz 2009-08-29]
 	Updated x11/bigreqsproto to 1.1.0 [wiz 2009-08-29]
+	Updated x11/damageproto to 1.2.0 [wiz 2009-08-29]
