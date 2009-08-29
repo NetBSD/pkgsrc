@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2009/06/09 18:56:37 wiz Exp $
+# $NetBSD: Makefile,v 1.83.2.1 2009/08/29 09:49:13 spz Exp $
 
-DISTNAME=	gnutls-2.8.0
+DISTNAME=	gnutls-2.8.3
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/ \
 		ftp://ftp.gnupg.org/gcrypt/gnutls/ \
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	GNU Transport Layer Security library
-#LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
+LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -22,6 +22,9 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 INFO_FILES=		yes
+
+# this library duplicates (and conflicts with) openssl
+CONFIGURE_ARGS+=	--disable-openssl-compatibility
 
 PKGCONFIG_OVERRIDE=	lib/gnutls.pc.in
 PKGCONFIG_OVERRIDE+=	libextra/gnutls-extra.pc.in
