@@ -1,0 +1,3 @@
+The Perl 5 module Devel::FindRef helps to track down reference
+problems (e.g. you expect some object to be destroyed, but there are
+still references to it that keep it alive).
