@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.44 2009/08/24 08:50:33 wiz Exp $
+$NetBSD: distinfo,v 1.45 2009/08/29 12:32:08 wiz Exp $
 
-SHA1 (tiff-3.9.0.tar.gz) = e525879da8416e00ccd58617b2850341a429e23c
-RMD160 (tiff-3.9.0.tar.gz) = be5bdb33c30a23fd0969981bfda1fe8e79f8879f
-Size (tiff-3.9.0.tar.gz) = 1399851 bytes
+SHA1 (tiff-3.9.1.tar.gz) = 675ad1977023a89201b80cd5cd4abadea7ba0897
+RMD160 (tiff-3.9.1.tar.gz) = 3632021a7f5d082776529a1d4b0abc8ecd2869f3
+Size (tiff-3.9.1.tar.gz) = 1410331 bytes
