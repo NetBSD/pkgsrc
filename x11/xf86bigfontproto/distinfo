@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/03 17:53:21 joerg Exp $
+$NetBSD: distinfo,v 1.2 2009/08/29 15:31:55 wiz Exp $
 
-SHA1 (xf86bigfontproto-1.1.2.tar.bz2) = 4a2e84b3f529e4747dbc07bf4496bfe01f40aa85
-RMD160 (xf86bigfontproto-1.1.2.tar.bz2) = 48d7bbedfaf5061e76f8207570ca547ff53f44e0
-Size (xf86bigfontproto-1.1.2.tar.bz2) = 37450 bytes
+SHA1 (xf86bigfontproto-1.2.0.tar.bz2) = 312a2ea708b257520c1af4393b69d73a393a478f
+RMD160 (xf86bigfontproto-1.2.0.tar.bz2) = 847c3ecfe705ede5e9292586835d0fe2bc7ccf45
+Size (xf86bigfontproto-1.2.0.tar.bz2) = 49191 bytes
