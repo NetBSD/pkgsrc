@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3435 2009/08/29 22:24:56 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3436 2009/08/29 22:35:41 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4492,3 +4492,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gtk2 to 2.16.6nb2 [wiz 2009-08-29]
 	Updated misc/taskjuggler to 2.4.3 [hasso 2009-08-29]
 	Added devel/p5-Devel-FindRef version 1.421 [seb 2009-08-29]
+	Updated devel/p5-App-Cmd to 0.300 [seb 2009-08-29]
