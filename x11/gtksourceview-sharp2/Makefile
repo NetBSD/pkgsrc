@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/08/26 19:58:31 sno Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/29 13:08:42 wiz Exp $
 
 DISTNAME=	gtksourceview-sharp-2.0-0.12
 PKGNAME=	${DISTNAME:S/-2.0-/2-/}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/Gtk
 COMMENT=	C\# Bindings to the GtkSourceView widget
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PREV_PKGPATH=	x11/gtksourceview-sharp
 SUPERSEDES=	gtksourceview-sharp-2.0-[0-9]*
