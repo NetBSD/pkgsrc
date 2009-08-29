@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 17:38:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/29 15:23:32 wiz Exp $
+include/X11/extensions/bigreqsproto.h
 include/X11/extensions/bigreqstr.h
 lib/pkgconfig/bigreqsproto.pc
