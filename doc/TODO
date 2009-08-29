@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8385 2009/08/28 20:48:19 hasso Exp $
+$NetBSD: TODO,v 1.8386 2009/08/29 02:58:49 obache Exp $
 
 Suggested new packages
 ======================
@@ -468,7 +468,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o claws-mail-3.7.2
 	o climm-0.6.4
 	o clisp-2.48 [don't update until either openaxiom or clisp gets fixed]
-	o clutter-1.0.2
+	o clutter-1.0.2 [waiting for json-glib-0.8 release]
 	o clutter-gst-0.10.0
 	o clutter-gtk-0.10.2
 	o colorize-0.3.4
