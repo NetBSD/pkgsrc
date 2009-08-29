@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/06 11:37:13 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/29 13:06:34 wiz Exp $
 #
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME=	${XINE_PKGNAME:S/lib/xcb/}
 CATEGORIES=	multimedia
 COMMENT=	The XCB video output plugins for xine-lib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	xine-lib>=1rc3a:../../multimedia/xine-lib
 
