@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3438 2009/08/29 22:48:00 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.3439 2009/08/29 23:00:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4495,3 +4495,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-App-Cmd to 0.300 [seb 2009-08-29]
 	Updated chat/inspircd12 to 1.2.0 [adrianp 2009-08-29]
 	Updated chat/inspircd to 1.1.23 [adrianp 2009-08-29]
+	Updated devel/p5-MooseX-Declare to 0.28 [seb 2009-08-29]
