@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/03 17:14:03 joerg Exp $
+$NetBSD: distinfo,v 1.2 2009/08/29 15:27:29 wiz Exp $
 
-SHA1 (fontsproto-2.0.2.tar.bz2) = 1244f63bd90668c7ddc88febbf4a220fd83ea492
-RMD160 (fontsproto-2.0.2.tar.bz2) = ca0f656316425d4ed85a7486c7917defb2242910
-Size (fontsproto-2.0.2.tar.bz2) = 45202 bytes
+SHA1 (fontsproto-2.1.0.tar.bz2) = 395b300fd5120a7ff90cb8fea4e2356b9632dc3e
+RMD160 (fontsproto-2.1.0.tar.bz2) = 1e9981b3a801794ccdf22d26a724a25135c1459b
+Size (fontsproto-2.1.0.tar.bz2) = 56776 bytes
