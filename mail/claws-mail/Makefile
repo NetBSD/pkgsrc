@@ -1,4 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2009/08/26 19:57:57 sno Exp $
+# $NetBSD: Makefile,v 1.24 2009/08/29 13:24:14 wiz Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	share/claws-mail
 
 .include "Makefile.common"
 
@@ -15,7 +19,6 @@ PKGCONFIG_OVERRIDE+=	claws-mail.pc.in
 
 PKG_SYSCONFSUBDIR=	claws-mail
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,12 +60,12 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/mime.types ${EGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/claws-mail
-	${INSTALL_DATA} ${WRKSRC}/claws-mail*.png ${PREFIX}/share/claws-mail
+	${INSTALL_DATA} ${FILESDIR}/mime.types ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/claws-mail*.png \
+		${DESTDIR}${PREFIX}/share/claws-mail
 .if exists(files/shred.${OPSYS})
-	${INSTALL_SCRIPT} files/shred.${OPSYS} ${PREFIX}/bin/claws-mail-shred
+	${INSTALL_SCRIPT} files/shred.${OPSYS} \
+		${DESTDIR}${PREFIX}/bin/claws-mail-shred
 PLIST_SRC=	PLIST
 PLIST_SRC+=	PLIST.shred
 .endif
