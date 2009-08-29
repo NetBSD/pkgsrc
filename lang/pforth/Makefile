@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2009/08/25 11:56:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/08/29 18:53:57 wiz Exp $
 
 DISTNAME=		pfthpc21
 PKGNAME=		pforth-21
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		http://www.softsynth.com/pforth/
 EXTRACT_SUFX=		.zip
@@ -34,7 +34,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pforth
 	${INSTALL_DATA} ${WRKSRC}/pforth.dic ${DESTDIR}${PREFIX}/lib/pforth
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/pforth
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${WRKSRC}/docs/* 		\
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${WRKSRC}/docs/* 		\
 		${DESTDIR}${PREFIX}/share/doc/pforth/
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pforth
 	${INSTALL_DATA} ${WRKSRC}/*.fth ${DESTDIR}${PREFIX}/share/pforth/
