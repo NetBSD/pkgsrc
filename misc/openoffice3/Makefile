@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2009/08/26 19:58:03 sno Exp $
+# $NetBSD: Makefile,v 1.37 2009/08/29 09:48:54 hira Exp $
 #
 
-OO_VER=			3.1.0
-OO_TAG=			OOO310_m11
+OO_VER=			3.1.1
+OO_TAG=			OOO310_m19
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice3-${OO_VER}
-PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
@@ -19,6 +18,7 @@ DISTFILES+=		OOo_${OO_VER}_src_extensions.tar.bz2
 MAINTAINER=		hira@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (version 3)
+LICENSE=		gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
