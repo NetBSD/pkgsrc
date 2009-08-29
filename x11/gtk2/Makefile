@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.184 2009/08/29 09:03:28 wiz Exp $
+# $NetBSD: Makefile,v 1.185 2009/08/29 18:00:00 wiz Exp $
 
-DISTNAME=		gtk+-2.16.5
+DISTNAME=		gtk+-2.16.6
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 PKGREVISION=		2
 CATEGORIES=		x11
