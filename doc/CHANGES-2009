@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3423 2009/08/29 15:31:07 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3424 2009/08/29 15:32:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4480,3 +4480,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/libICE to 1.0.6 [wiz 2009-08-29]
 	Updated x11/videoproto to 2.3.0 [wiz 2009-08-29]
 	Updated x11/xcmiscproto to 1.2.0 [wiz 2009-08-29]
+	Updated x11/xf86bigfontproto to 1.2.0 [wiz 2009-08-29]
