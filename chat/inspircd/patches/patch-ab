@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/07/24 20:13:20 adrianp Exp $
+$NetBSD: patch-ab,v 1.2 2009/08/29 22:47:47 adrianp Exp $
 
---- .Makefile.inc.orig	2007-07-16 19:18:03.000000000 +0100
+--- .Makefile.inc.orig	2008-12-04 21:20:15.000000000 +0000
 +++ .Makefile.inc
 @@ -70,7 +70,6 @@ ircd:
  install: all@EXTRA_DIR@
@@ -9,8 +9,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/07/24 20:13:20 adrianp Exp $
 -	@-install -d -m $(INSTMODE) $(BINPATH)
  	@-install -d -m $(INSTMODE) $(CONPATH)
  	@-install -d -m $(INSTMODE) ${MODPATH}
- 	-install -m $(INSTMODE) src/libIRCDasyncdns.$(LIB_EXT) $(LIBPATH)
-@@ -153,16 +152,6 @@ install: all@EXTRA_DIR@
+ 	-install -m $(INSTMODE) src/inspircd $(BINPATH)
+@@ -131,16 +130,6 @@ install: all@EXTRA_DIR@
  	-install -m $(INSTMODE) src/cmd_zline.so $(LIBPATH)
  	-install -m $(INSTMODE) src/cmd_mode.so $(LIBPATH)
  	@-cp .gdbargs $(BASE)
