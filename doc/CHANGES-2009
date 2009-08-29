@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3411 2009/08/29 09:51:23 hira Exp $
+$NetBSD: CHANGES-2009,v 1.3412 2009/08/29 11:37:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4468,3 +4468,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/blender to 2.49a [hasso 2009-08-28]
 	Updated graphics/openexr to 1.6.1nb1 [hasso 2009-08-28]
 	Updated misc/openoffice3 to 3.1.1 [hira 2009-08-29]
+	Updated games/puzzles to 8634 [wiz 2009-08-29]
