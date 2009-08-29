@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3415 2009/08/29 13:53:07 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3416 2009/08/29 15:20:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4472,3 +4472,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/tiff to 3.9.1 [wiz 2009-08-29]
 	Updated emulators/snes9x-gtk to 1.51.75 [wiz 2009-08-29]
 	Updated multimedia/vlc to 1.0.1 [hasso 2009-08-29]
+	Updated devel/glib2 to 2.20.5 [wiz 2009-08-29]
