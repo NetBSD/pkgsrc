@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2009/08/04 22:17:36 adrianp Exp $
+$NetBSD: patch-ac,v 1.3 2009/08/29 22:42:46 adrianp Exp $
 
---- configure.orig	2009-07-03 20:28:07.000000000 +0100
+--- configure.orig	2009-08-21 17:33:04.000000000 +0100
 +++ configure
 @@ -320,8 +320,8 @@ $config{EXTRA_DIR}	  = "";						# Is emp
  if ($config{OSNAME} =~ /darwin/i)
@@ -13,12 +13,12 @@ $NetBSD: patch-ac,v 1.2 2009/08/04 22:17:36 adrianp Exp $
  	$config{EXTRA_DIR}	    = " launchd_dir";				# Is OSX specific path.
  }
  $config{CC} 		    = "g++";						# C++ compiler
-@@ -871,7 +871,7 @@ if (($config{USE_OPENSSL} eq "y") && ($c
+@@ -874,7 +874,7 @@ if (($config{USE_OPENSSL} eq "y") && ($c
  our $failed = 0;
  
  $config{CERTGEN} ||= 'y';
--yesno('CERTGEN',"Would you like generate SSL certificates now?") if $config{USE_GNUTLS} eq "y" || $config{USE_OPENSSL} eq "y";
-+#yesno('CERTGEN',"Would you like generate SSL certificates now?") if $config{USE_GNUTLS} eq "y" || $config{USE_OPENSSL} eq "y";
+-yesno('CERTGEN',"Would you like generate SSL certificates now?") if ($interactive && ($config{USE_GNUTLS} eq "y" || $config{USE_OPENSSL} eq "y"));
++#yesno('CERTGEN',"Would you like generate SSL certificates now?") if ($interactive && ($config{USE_GNUTLS} eq "y" || $config{USE_OPENSSL} eq "y"));
  
  if ($config{USE_GNUTLS} eq "y") {
  	unless (-r "src/modules/m_ssl_gnutls.cpp") {
