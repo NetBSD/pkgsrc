@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/08/29 18:53:57 wiz Exp $
 bin/pforth
 lib/pforth/pforth.dic
+share/doc/pforth/README.txt
 share/doc/pforth/pf_ref.htm
 share/doc/pforth/pf_todo.txt
 share/doc/pforth/pf_tut.htm
 share/doc/pforth/pfmanual.txt
-share/doc/pforth/readme.txt
 share/pforth/ansilocs.fth
 share/pforth/bench.fth
 share/pforth/bloop.fth
