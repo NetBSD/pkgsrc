@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/08/25 11:57:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/29 10:42:55 obache Exp $
 #
 
 DISTNAME=		cryptopp552
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.cryptopp.com/
 COMMENT=		Free C++ class library of Cryptographic Primitives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 MAKE_FILE=		GNUmakefile
@@ -23,10 +24,10 @@ BUILDLINK_TRANSFORM+=	rm:-pipe rm:-msse2
 AUTO_MKDIRS=			yes
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cryptest.exe ${PREFIX}/bin/cryptest
-	${INSTALL_DATA} ${WRKSRC}/libcryptopp.a ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/Readme.txt ${PREFIX}/share/doc/cryptopp/README
-	${INSTALL_DATA} ${WRKSRC}/License.txt ${PREFIX}/share/doc/cryptopp/License
-	cd ${WRKSRC} && ${INSTALL_DATA} *.h ${PREFIX}/include/cryptopp
+	${INSTALL_PROGRAM} ${WRKSRC}/cryptest.exe ${DESTDIR}${PREFIX}/bin/cryptest
+	${INSTALL_DATA} ${WRKSRC}/libcryptopp.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/Readme.txt ${DESTDIR}${PREFIX}/share/doc/cryptopp/README
+	${INSTALL_DATA} ${WRKSRC}/License.txt ${DESTDIR}${PREFIX}/share/doc/cryptopp/License
+	cd ${WRKSRC} && ${INSTALL_DATA} *.h ${DESTDIR}${PREFIX}/include/cryptopp
 
 .include "../../mk/bsd.pkg.mk"
