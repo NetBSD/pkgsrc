@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2009/08/26 19:56:50 sno Exp $
+# $NetBSD: Makefile,v 1.152 2009/08/29 23:03:34 wiz Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	5
@@ -32,7 +32,6 @@ FONTS_DIRS.x11+=	${PREFIX}/share/kde/fonts/override
 REQD_DIRS+=		${PREFIX}/share/kde/fonts
 REQD_DIRS+=		${PREFIX}/share/kde/fonts/override
 
-CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap-client}"
 CONFIGURE_ARGS+=	--without-java
 
@@ -69,6 +68,14 @@ RCD_SCRIPTS=		kdm
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "NetBSD" && (${OS_VERSION:M5.99.1[5-9]*} || ${OS_VERSION:M5.99[2-9]*} || ${OS_VERSION:M[6-9]*})
+# no openssl for us due to incompatible API changes (STACK, ...)
+CONFIGURE_ARGS+=	--without-ssl
+.else
+CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
+.include "../../security/openssl/buildlink3.mk"
+.endif
+
 LIBS.NetBSD+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 PLIST_SRC=		${WRKDIR}/PLIST.Xdpms
@@ -89,7 +96,6 @@ BUILDLINK_API_DEPENDS.Xrandr+=	Xrandr>=1.0
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=${_KDE_VERSION}
 
 DEPENDS+=		htdig>=3.2.0:../../www/htdig-devel
-
 
 # Solaris 10 has libusb only for 32 bit ABI (see PR 33727).
 .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "x86_64"
