@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/04 22:17:36 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/29 22:42:46 adrianp Exp $
 bin/inspircd
 lib/inspircd/cmd_admin.so
 lib/inspircd/cmd_away.so
@@ -114,7 +114,6 @@ share/inspircd/modules/m_denychans.so
 share/inspircd/modules/m_devoice.so
 share/inspircd/modules/m_dnsbl.so
 share/inspircd/modules/m_filter.so
-share/inspircd/modules/m_foobar.so
 share/inspircd/modules/m_globalload.so
 share/inspircd/modules/m_globops.so
 share/inspircd/modules/m_helpop.so
@@ -178,7 +177,6 @@ share/inspircd/modules/m_stripcolor.so
 share/inspircd/modules/m_svshold.so
 share/inspircd/modules/m_swhois.so
 share/inspircd/modules/m_taxonomy.so
-share/inspircd/modules/m_testcommand.so
 share/inspircd/modules/m_timedbans.so
 share/inspircd/modules/m_tline.so
 share/inspircd/modules/m_uhnames.so

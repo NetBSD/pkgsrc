@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/01/04 00:52:27 adrianp Exp $
+$NetBSD: patch-ad,v 1.2 2009/08/29 22:42:47 adrianp Exp $
 
---- make/configure.pm.orig	2008-09-08 00:40:00.000000000 +0100
+--- make/configure.pm.orig	2009-08-28 21:16:38.000000000 +0100
 +++ make/configure.pm
 @@ -22,7 +22,7 @@ use POSIX;
  use make::utilities;
- our @EXPORT = qw(promptnumeric dumphash is_dir getmodules getrevision getcompilerflags getlinkerflags getdependencies getmodversion nopedantic resolve_directory yesno showhelp promptstring_s);
+ our @EXPORT = qw(promptnumeric dumphash is_dir getmodules getrevision getcompilerflags getlinkerflags getdependencies nopedantic resolve_directory yesno showhelp promptstring_s);
  
 -my $no_svn = 0;
 +my $no_svn = 1;
