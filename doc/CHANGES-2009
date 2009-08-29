@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3428 2009/08/29 15:36:06 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3429 2009/08/29 15:37:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4485,3 +4485,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/libfontenc to 1.0.5 [wiz 2009-08-29]
 	Updated x11/libXau to 1.0.5 [wiz 2009-08-29]
 	Updated x11/libXcursor to 1.1.10 [wiz 2009-08-29]
+	Updated x11/libdrm to 2.4.13 [wiz 2009-08-29]
