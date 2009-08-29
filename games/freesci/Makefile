@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/07/22 09:01:28 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2009/08/29 11:39:14 wiz Exp $
 #
 
 DISTNAME=		freesci-0.3.5
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www-plan.cs.colorado.edu/reichenb/freesci/
 MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://freesci.linuxgames.com/
 COMMENT=		Interpreter for Sierra On-Line's SCI games
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -22,8 +24,8 @@ REPLACE.wish.new=	${PREFIX}/bin/wish
 REPLACE_FILES.wish=	conf/freesci-setup
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/freesci
-	${INSTALL_DATA} ${FILESDIR}/config ${PREFIX}/share/examples/freesci
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/freesci
+	${INSTALL_DATA} ${FILESDIR}/config ${DESTDIR}${PREFIX}/share/examples/freesci
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
