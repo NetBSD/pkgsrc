@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/08/26 19:56:51 sno Exp $
+# $NetBSD: Makefile,v 1.9 2009/08/29 13:43:39 wiz Exp $
 
 DISTNAME=	qca-2.0.2
 PKGNAME=	qca2-${DISTNAME:C/.*-//}
@@ -12,12 +12,15 @@ HOMEPAGE=	http://delta.affinix.com/qca/
 COMMENT=	Cross-platform crypto API for QT
 LICENSE=	gnu-lgpl-v2.1
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c++
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR:Q}
 
-INSTALLATION_DIRS=	qt4/include qt4/lib qt4/plugins/crypto
+INSTALLATION_DIRS=	qt4/include qt4/lib qt4/plugins/crypto lib/pkgconfig
 
 # install under qt4 prefix to not clash with qca 1.x
 CONFIGURE_ARGS+=	--prefix=${QTDIR}
@@ -25,7 +28,7 @@ CONFIGURE_ARGS+=	--qtdir=${QTDIR}
 CONFIGURE_ARGS+=	--disable-tests
 
 post-install:
-	${INSTALL_DATA} ${QTDIR}/lib/pkgconfig/qca2.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/qca2.pc
+	${INSTALL_DATA} ${DESTDIR}${QTDIR}/lib/pkgconfig/qca2.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/qca2.pc
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
