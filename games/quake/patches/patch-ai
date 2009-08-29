@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.7 2005/02/17 18:23:24 xtraeme Exp $
+$NetBSD: patch-ai,v 1.8 2009/08/29 19:26:01 wiz Exp $
 
---- winquake/makefile.linuxi386.orig	Tue Apr 27 17:51:18 1999
-+++ winquake/makefile.linuxi386
+--- WinQuake/Makefile.linuxi386.orig	Tue Apr 27 17:51:18 1999
++++ WinQuake/Makefile.linuxi386
 @@ -25,29 +25,31 @@
  endif
  NOARCH=noarch

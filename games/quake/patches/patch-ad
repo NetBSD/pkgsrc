@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.4 2006/05/12 12:40:10 joerg Exp $
+$NetBSD: patch-ad,v 1.5 2009/08/29 19:26:01 wiz Exp $
 
---- qw/client/snd_linux.c.orig	1997-07-07 20:08:00.000000000 +0000
-+++ qw/client/snd_linux.c
+--- QW/client/snd_linux.c.orig	1997-07-07 20:08:00.000000000 +0000
++++ QW/client/snd_linux.c
 @@ -6,15 +6,42 @@
  #include <sys/mman.h>
  #include <sys/shm.h>

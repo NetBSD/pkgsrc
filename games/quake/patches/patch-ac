@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2006/05/12 12:40:10 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2009/08/29 19:26:01 wiz Exp $
 
---- qw/client/gl_vidlinuxglx.c.orig	1999-12-21 18:45:54.000000000 +0000
-+++ qw/client/gl_vidlinuxglx.c
+--- QW/client/gl_vidlinuxglx.c.orig	1999-12-21 18:45:54.000000000 +0000
++++ QW/client/gl_vidlinuxglx.c
 @@ -20,7 +20,6 @@ Foundation, Inc., 59 Temple Place - Suit
  #include <termios.h>
  #include <sys/ioctl.h>

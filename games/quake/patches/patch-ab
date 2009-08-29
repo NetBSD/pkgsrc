@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2006/05/12 12:40:10 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2009/08/29 19:26:01 wiz Exp $
 
---- qw/client/gl_draw.c.orig	1999-12-21 15:46:06.000000000 +0000
-+++ qw/client/gl_draw.c
+--- QW/client/gl_draw.c.orig	1999-12-21 15:46:06.000000000 +0000
++++ QW/client/gl_draw.c
 @@ -1367,7 +1367,7 @@ void GL_SelectTexture (GLenum target) 
  {
  	if (!gl_mtexable)
