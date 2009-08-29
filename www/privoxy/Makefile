@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/04/07 14:02:06 mjl Exp $
+# $NetBSD: Makefile,v 1.40 2009/08/29 13:53:34 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ijbswa/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.privoxy.org/
 COMMENT=	Web proxy with advanced filtering capabilities
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -64,8 +66,8 @@ pre-configure:
 	cd ${WRKSRC} && autoheader && autoconf
 
 post-install:
-	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${EGDIR}
-	${CHMOD} -R a+r ${EGDIR}
+	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${DESTDIR}${EGDIR}
+	${CHMOD} -R a+r ${DESTDIR}${EGDIR}
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
