@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.2 2002/01/02 10:01:36 hubertf Exp $
+$NetBSD: patch-ah,v 1.3 2009/08/29 19:26:01 wiz Exp $
 
---- winquake/gl_vidlinuxglx.c	Tue Dec 21 18:39:36 1999
-+++ ../work/winquake/gl_vidlinuxglx.c	Thu Jan 13 22:29:03 2000
+--- WinQuake/gl_vidlinuxglx.c	Tue Dec 21 18:39:36 1999
++++ WinQuake/gl_vidlinuxglx.c	Thu Jan 13 22:29:03 2000
 @@ -20,7 +20,9 @@
  #include <termios.h>
  #include <sys/ioctl.h>

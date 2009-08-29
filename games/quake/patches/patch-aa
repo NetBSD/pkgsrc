@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2006/05/12 12:40:10 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2009/08/29 19:26:01 wiz Exp $
 
---- qw/client/cd_linux.c.orig	1999-12-21 18:58:58.000000000 +0000
-+++ qw/client/cd_linux.c
+--- QW/client/cd_linux.c.orig	1999-12-21 18:58:58.000000000 +0000
++++ QW/client/cd_linux.c
 @@ -31,7 +31,23 @@ Foundation, Inc., 59 Temple Place - Suit
  #include <time.h>
  #include <errno.h>
