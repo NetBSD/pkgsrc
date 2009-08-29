@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2009/08/29 11:50:32 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2009/08/29 15:47:58 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	debug official-mozilla-branding mozilla-jemalloc gnome
-PKG_SUGGESTED_OPTIONS+=	gnome
 
 PLIST_VARS+=		branding gnome
 
