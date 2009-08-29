@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2007/01/26 15:15:50 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2009/08/29 11:49:05 wiz Exp $
 
 --- Makefile.orig	2001-02-12 22:08:59.000000000 +0000
 +++ Makefile
@@ -84,3 +84,28 @@ $NetBSD: patch-aa,v 1.5 2007/01/26 15:15:50 joerg Exp $
                               -lSM -lICE -lXext -lX11 -lm
  ifeq ($(HAVE_XFREE86),YES)
    override LIBS           += -lXxf86dga -lXxf86vm
+@@ -116,15 +116,15 @@ $(VIDEOLIB_LIB) :
+ tv.o : tv.c app_rsrc.h
+ 
+ install : fxtv
+-	mkdir -p $(FXTV_LIBDIR)/bitmaps
+-	install -c -m 444 -o root $(PIXMAPS) $(FXTV_LIBDIR)/bitmaps
+-	install -c -m 444 -o root README $(FXTV_LIBDIR)
+-	mkdir -p $(X11BASEINST)/lib/X11/app-defaults
+-	install -c -m 444 -o root Fxtv $(X11BASEINST)/lib/X11/app-defaults
+-	mkdir -p $(X11BASEINST)/bin
+-	install -c -m 444 -o root fxtv.1 $(X11BASEINST)/man/man1/fxtv.1
+-	install -c -m 555 -o root fxtv $(X11BASEINST)/bin
+-	install -c -m 555 -o root fxtv_cnvt.sh $(FXTV_LIBDIR)
++	mkdir -p ${DESTDIR}$(FXTV_LIBDIR)/bitmaps
++	install -c -m 444 -o pbulk $(PIXMAPS) ${DESTDIR}$(FXTV_LIBDIR)/bitmaps
++	install -c -m 444 -o pbulk README ${DESTDIR}$(FXTV_LIBDIR)
++	mkdir -p ${DESTDIR}$(X11BASEINST)/lib/X11/app-defaults
++	install -c -m 444 -o pbulk Fxtv ${DESTDIR}$(X11BASEINST)/lib/X11/app-defaults
++	mkdir -p ${DESTDIR}$(X11BASEINST)/bin
++	install -c -m 444 -o pbulk fxtv.1 ${DESTDIR}$(X11BASEINST)/man/man1/fxtv.1
++	install -c -m 555 -o pbulk fxtv ${DESTDIR}$(X11BASEINST)/bin
++	install -c -m 555 -o pbulk fxtv_cnvt.sh ${DESTDIR}$(FXTV_LIBDIR)
+ 
+ clean:
+ 	rm -f *.o fxtv *.core *~
