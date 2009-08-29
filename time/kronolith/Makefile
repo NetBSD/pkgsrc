@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/07/17 18:00:25 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2009/08/29 12:30:30 wiz Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
@@ -14,6 +14,8 @@ DEPENDS+=	horde>=3.2:../../www/horde
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Date-[0-9]*:../../time/pear-Date
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
@@ -24,6 +26,11 @@ HORDEDIR=	${PREFIX}/share/horde
 KRONOLITHDIR=	${HORDEDIR}/kronolith
 KRONOLITHVER=	2.3
 PAXDIRS=	js lib locale po scripts templates themes
+
+INSTALLATION_DIRS+=	${DOCDIR}
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${KRONOLITHDIR}/config
+INSTALLATION_DIRS+=	${PAXDIRS}
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*/bin.php
@@ -59,6 +66,7 @@ CONF_FILES_PERMS+=	${KRONOLITHDIR}/config/menu.php.dist \
 CONF_FILES_PERMS+=	${KRONOLITHDIR}/config/prefs.php.dist \
 			${KRONOLITHDIR}/config/prefs.php \
 			${APACHE_USER} ${ROOT_GROUP} 0440
+SPECIAL_PERMS+=		${KRONOLITHDIR}/config ${APACHE_USER} ${SHAREGRP} 0750
 
 do-build:
 	${CP} ${FILESDIR}/kronolith.conf.dist ${WRKSRC}/kronolith.conf.dist
@@ -66,31 +74,21 @@ do-build:
 	${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${KRONOLITHDIR}
-	${INSTALL_DATA_DIR} ${KRONOLITHDIR}/config
-	${INSTALL_DATA} ${WRKSRC}/kronolith.conf.dist ${EGDIR}/kronolith.conf
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/RELEASE_NOTES ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/kronolith.conf.dist ${DESTDIR}${EGDIR}/kronolith.conf
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/RELEASE_NOTES ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DESTDIR}${DOCDIR}
 
 .	for d in ${PAXDIRS}
-		${INSTALL_DATA_DIR} ${KRONOLITHDIR}/${d}
+		cd ${WRKSRC}/${d} && pax -rwpma . ${DESTDIR}${KRONOLITHDIR}/${d}
 .	endfor
 
-.	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && pax -rwpma . ${KRONOLITHDIR}/${d}
-.	endfor
-
-	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${KRONOLITHDIR}/config
-	${INSTALL_DATA} ${WRKSRC}/*.php ${KRONOLITHDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${KRONOLITHDIR}
-	${FIND} ${KRONOLITHDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${KRONOLITHDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${KRONOLITHDIR}/config
-	${CHMOD} 0750 ${KRONOLITHDIR}/config
+	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${KRONOLITHDIR}/config
+	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${KRONOLITHDIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${KRONOLITHDIR}
+	${FIND} ${DESTDIR}${KRONOLITHDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${KRONOLITHDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
