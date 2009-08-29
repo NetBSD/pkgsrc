@@ -1,7 +1,7 @@
-$NetBSD: patch-cf,v 1.11 2009/08/09 16:00:53 drochner Exp $
+$NetBSD: patch-cf,v 1.12 2009/08/29 04:54:52 hasso Exp $
 
---- interface/scan_devices.c.orig	2008-08-26 11:55:22.000000000 +0200
-+++ interface/scan_devices.c
+--- interface/scan_devices.c.orig	2008-08-26 12:55:22 +0300
++++ interface/scan_devices.c	2009-08-26 09:50:54 +0300
 @@ -1,6 +1,8 @@
  /******************************************************************
   * CopyPolicy: GNU Lesser General Public License 2.1 applies
@@ -84,10 +84,10 @@ $NetBSD: patch-cf,v 1.11 2009/08/09 16:00:53 drochner Exp $
  
    /* an IDE device may have scsi-ide support, SG_IO support and cooked
       support.  Prefer the SCSI variants, they give the most control */
-+#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__DragonFly__)
    d=cdda_identify_scsi(NULL,device,messagedest,messages);
    if(!d)d=cdda_identify_cooked(device,messagedest,messages);
-+#elif defined(__FreeBSD__) || defined(__DragonFly__)
++#elif defined(__FreeBSD__)
 +  d = cdda_identify_scsi(device, NULL, messagedest, messages);
 +  if (d == NULL)
 +	d = cdda_identify_cooked(device, messagedest, messages);
@@ -219,7 +219,7 @@ $NetBSD: patch-cf,v 1.11 2009/08/09 16:00:53 drochner Exp $
  }
 +#endif
  
-+#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__DragonFly__)
  /* scanning is always done by specifying a device name in
     specialized_device; generic_device is only filled when the generic device
     force option is used, and in that case, use of SG (not SGIO) should indeed be
@@ -350,7 +350,7 @@ $NetBSD: patch-cf,v 1.11 2009/08/09 16:00:53 drochner Exp $
    }
    return(NULL);
  }
-+#elif defined(__FreeBSD__) || defined(__DragonFly__)
++#elif defined(__FreeBSD__)
 +cdrom_drive *cdda_identify_scsi(const char *device,
 +    const char *dummy,
 +    int messagedest,
@@ -404,7 +404,7 @@ $NetBSD: patch-cf,v 1.11 2009/08/09 16:00:53 drochner Exp $
 +	d->lun = d->dev->target_lun;
 +	d->interface = GENERIC_SCSI;
 +
-+	if ((d->sg_buffer = malloc(MAX_BIG_BUFF_SIZE)) == NULL) {
++	if ((d->private->sg_buffer = malloc(MAX_BIG_BUFF_SIZE)) == NULL) {
 +		idperror(messagedest, messages, "Could not allocate buffer memory", NULL);
 +		goto cdda_identify_scsi_fail;
 +	}
