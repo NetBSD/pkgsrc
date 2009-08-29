@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/10 22:20:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/29 11:49:56 wiz Exp $
 #
 
 DISTNAME=	ebook-tools-0.1.1
@@ -11,6 +11,8 @@ COMMENT=	Tools for accessing and converting various ebook file formats
 
 DEPENDS+=	convertlit-[0-9]*:../../textproc/convertlit
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
