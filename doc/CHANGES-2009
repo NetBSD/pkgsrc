@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3426 2009/08/29 15:34:10 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3427 2009/08/29 15:35:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4483,3 +4483,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86bigfontproto to 1.2.0 [wiz 2009-08-29]
 	Updated x11/xf86driproto to 2.1.0 [wiz 2009-08-29]
 	Updated fonts/libfontenc to 1.0.5 [wiz 2009-08-29]
+	Updated x11/libXau to 1.0.5 [wiz 2009-08-29]
