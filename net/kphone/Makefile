@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/08/26 19:58:10 sno Exp $
+# $NetBSD: Makefile,v 1.26 2009/08/29 13:32:57 wiz Exp $
 
 DISTNAME=		kphone-4.2
 PKGREVISION=		6
@@ -11,8 +11,8 @@ COMMENT=		Graphical Voice Over Internet (VoIP) phone
 
 WRKSRC=			${WRKDIR}/kphone
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
@@ -32,12 +32,12 @@ CONFIGURE_ARGS+=	--enable-alsa=yes
 CONFIGURE_ARGS+=	--enable-alsa=no
 .endif
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/kphone/icons
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/kphone/kphone ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kphone/icons
-	${INSTALL_DATA} ${WRKSRC}/icons/*.png ${PREFIX}/share/kphone/icons
+	${INSTALL_PROGRAM} ${WRKSRC}/kphone/kphone ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/icons/*.png \
+		${DESTDIR}${PREFIX}/share/kphone/icons
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
