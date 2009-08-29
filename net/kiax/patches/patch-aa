@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.4 2009/08/29 13:31:04 wiz Exp $
+
+--- bin/Makefile.orig	2009-08-29 13:25:19.000000000 +0000
++++ bin/Makefile
+@@ -2,6 +2,6 @@ DEST_PATH=/usr/pkg/bin/
+ all:
+ 	echo 'none'
+ install:
+-	cp -f "kiax" $(DEST_PATH)
++	cp -f "kiax" $(INSTALL_ROOT)$(DEST_PATH)
+ clean:
+ 	rm -f kiax
