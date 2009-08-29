@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2009/05/19 08:59:37 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2009/08/29 13:15:54 obache Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=		www
@@ -19,7 +19,7 @@ EMUL_PLATFORMS=		freebsd-i386
 EMUL_PLATFORMS+=	linux-i386
 EMUL_PLATFORMS+=	solaris-sparc
 
-#PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
