@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2009/08/29 11:49:05 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2009/08/30 16:07:20 joerg Exp $
 
 --- Makefile.orig	2001-02-12 22:08:59.000000000 +0000
 +++ Makefile
@@ -98,14 +98,14 @@ $NetBSD: patch-aa,v 1.6 2009/08/29 11:49:05 wiz Exp $
 -	install -c -m 555 -o root fxtv $(X11BASEINST)/bin
 -	install -c -m 555 -o root fxtv_cnvt.sh $(FXTV_LIBDIR)
 +	mkdir -p ${DESTDIR}$(FXTV_LIBDIR)/bitmaps
-+	install -c -m 444 -o pbulk $(PIXMAPS) ${DESTDIR}$(FXTV_LIBDIR)/bitmaps
-+	install -c -m 444 -o pbulk README ${DESTDIR}$(FXTV_LIBDIR)
-+	mkdir -p ${DESTDIR}$(X11BASEINST)/lib/X11/app-defaults
-+	install -c -m 444 -o pbulk Fxtv ${DESTDIR}$(X11BASEINST)/lib/X11/app-defaults
-+	mkdir -p ${DESTDIR}$(X11BASEINST)/bin
-+	install -c -m 444 -o pbulk fxtv.1 ${DESTDIR}$(X11BASEINST)/man/man1/fxtv.1
-+	install -c -m 555 -o pbulk fxtv ${DESTDIR}$(X11BASEINST)/bin
-+	install -c -m 555 -o pbulk fxtv_cnvt.sh ${DESTDIR}$(FXTV_LIBDIR)
++	${BSD_INSTALL_DATA} $(PIXMAPS) ${DESTDIR}$(FXTV_LIBDIR)/bitmaps
++	${BSD_INSTALL_DATA} README ${DESTDIR}$(FXTV_LIBDIR)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(X11BASEINST)/lib/X11/app-defaults
++	${BSD_INSTALL_DATA} Fxtv ${DESTDIR}$(X11BASEINST)/lib/X11/app-defaults
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}$(X11BASEINST)/bin
++	${BSD_INSTALL_MAN} fxtv.1 ${DESTDIR}$(X11BASEINST)/man/man1/fxtv.1
++	${BSD_INSTALL_PROGRAM} fxtv ${DESTDIR}$(X11BASEINST)/bin
++	${BSD_INSTALL_SCRIPT} fxtv_cnvt.sh ${DESTDIR}$(FXTV_LIBDIR)
  
  clean:
  	rm -f *.o fxtv *.core *~
