@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/01 15:25:02 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/30 00:35:15 seb Exp $
 #
 
-DISTNAME=	Spreadsheet-XLSX-0.09
-PKGNAME=	p5-${DISTNAME}
+DISTNAME=	Spreadsheet-XLSX-0.1
+PKGNAME=	p5-${DISTNAME}0
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Spreadsheet/}
 
