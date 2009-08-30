@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/30 21:57:07 tonnerre Exp $
 bin/puppet
 bin/puppetca
 bin/puppetd
@@ -6,6 +6,8 @@ bin/puppetdoc
 bin/puppetmasterd
 bin/puppetrun
 bin/ralsh
+${PLIST.sunos}lib/svc/method/svc-puppetd
+${PLIST.sunos}lib/svc/method/svc-puppetmasterd
 ${GEM_HOME}/cache/puppet-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
@@ -985,3 +987,5 @@ ${GEM_HOME}/specifications/puppet-${PKGVERSION}.gemspec
 share/examples/puppet/puppet.conf
 share/examples/rc.d/puppetd
 share/examples/rc.d/puppetmasterd
+${PLIST.sunos}share/examples/puppet/svc/puppetd.xml
+${PLIST.sunos}share/examples/puppet/svc/puppetmasterd.xml
