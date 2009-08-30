@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3449 2009/08/30 21:57:24 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.3450 2009/08/30 23:00:14 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4506,3 +4506,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/pngcrush to 1.7.1 [adam 2009-08-30]
 	Updated devel/cvsps to 2.1nb2 [schmonz 2009-08-30]
 	Updated sysutils/puppet to 0.24.7nb1 [tonnerre 2009-08-30]
+	Updated archivers/zip to 3.0nb1 [dsainty 2009-08-30]
