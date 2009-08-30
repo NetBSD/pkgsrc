@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3441 2009/08/30 00:35:30 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3442 2009/08/30 00:51:34 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4498,3 +4498,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Declare to 0.28 [seb 2009-08-29]
 	Updated devel/p5-Perl-Critic to 1.104 [seb 2009-08-29]
 	Updated math/p5-Spreadsheet-XLSX to 0.10 [seb 2009-08-30]
+	Updated math/p5-Spreadsheet-Read to 0.35 [seb 2009-08-30]
