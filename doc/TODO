@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8391 2009/08/30 03:10:27 obache Exp $
+$NetBSD: TODO,v 1.8392 2009/08/30 05:40:27 obache Exp $
 
 Suggested new packages
 ======================
@@ -1342,7 +1342,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsane-0.99.6
 	o xskat-4.0
 	o xsoldier-1.4
-	o xterm-246
 	o xtraceroute-0.9.1
 	o xtu-1.3
 	o xtux-20030306
