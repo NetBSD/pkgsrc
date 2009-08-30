@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.9 2009/08/30 16:17:13 tnn Exp $
+
+--- modules/access/file.c.orig	2009-07-28 00:24:17.000000000 +0200
++++ modules/access/file.c
+@@ -51,6 +51,9 @@
+ #   include <sys/vfs.h>
+ #   include <linux/magic.h>
+ #   define HAVE_FSTATFS 1
++#elif defined(__NetBSD__)
++#   include <sys/statvfs.h>
++#   define HAVE_FSTATVFS 1
+ #elif defined (HAVE_SYS_MOUNT_H)
+ #   include <sys/mount.h>
+ #   define HAVE_FSTATFS 1
+@@ -126,6 +129,13 @@ struct access_sys_t
+ 
+ static bool IsRemote (int fd)
+ {
++#ifdef HAVE_FSTATVFS
++    struct statvfs s;
++    if (fstatvfs(fd, &s))
++        return false;  
++    return !(s.f_flag & MNT_LOCAL);
++#endif
++
+ #ifdef HAVE_FSTATFS
+     struct statfs stf;
+ 
