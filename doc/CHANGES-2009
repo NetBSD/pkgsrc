@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3444 2009/08/30 03:09:47 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3445 2009/08/30 05:40:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4501,3 +4501,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Spreadsheet-Read to 0.35 [seb 2009-08-30]
 	Updated converters/skf to 1.96.1 [obata 2009-08-30]
 	Updated www/ap-python to 2.7.11 [obache 2009-08-30]
+	Updated x11/xterm to 246 [obache 2009-08-30]
