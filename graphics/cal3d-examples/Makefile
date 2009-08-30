@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/08/29 19:29:06 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2009/08/30 05:21:20 hasso Exp $
 #
 
 PKGNAME=		cal3d-examples-${CAL3D_VERSION}
@@ -10,6 +10,8 @@ DISTFILES=		TheCallyDemo-0.9.1b.zip \
 			cal3d-${CAL3D_VERSION}${EXTRACT_SUFX}
 
 COMMENT=	Tools and demos for cal3d library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		automake pax
 
@@ -25,7 +27,7 @@ BUILD_DIRS=		examples/cally \
 			examples/miniviewer_gl \
 			tools/converter
 
-DATADIR=		${PREFIX}/share/cal3d-examples/data
+DATADIR=		${DESTDIR}${PREFIX}/share/cal3d-examples/data
 WRKDATADIR=		${WRKDIR}/TheCallyDemo-0.9.1b/data
 PATCHDATA=		cally.cfg paladin.cfg skeleton.cfg
 
