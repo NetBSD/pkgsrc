@@ -1,0 +1,55 @@
+$NetBSD: patch-ac,v 1.1 2009/08/30 17:16:54 schmonz Exp $
+
+--- cache.c.orig	2005-05-25 23:39:40.000000000 -0400
++++ cache.c
+@@ -108,10 +108,19 @@ time_t read_cache()
+     int tag_flags = 0;
+     char branchbuff[LOG_STR_MAX] = "";
+     int branch_add = 0;
+-    char logbuff[LOG_STR_MAX] = "";
++    int logbufflen = LOG_STR_MAX + 1;
++    char * logbuff = malloc(logbufflen);
+     time_t cache_date = -1;
+     int read_version;
+ 
++    if (logbuff == NULL)
++    {
++	debug(DEBUG_SYSERROR, "could not malloc %d bytes for logbuff in read_cache", logbufflen);
++	exit(1);
++    }
++
++    logbuff[0] = 0;
++
+     if (!(fp = cache_open("r")))
+ 	goto out;
+ 
+@@ -299,8 +308,19 @@ time_t read_cache()
+ 	    else
+ 	    {
+ 		/* Make sure we have enough in the buffer */
+-		if (strlen(logbuff)+strlen(buff)<LOG_STR_MAX)
+-		    strcat(logbuff, buff);
++		int len = strlen(buff);
++		if (strlen(logbuff) + len >= LOG_STR_MAX)
++		{
++		    logbufflen += (len >= LOG_STR_MAX ? (len+1) : LOG_STR_MAX);
++		    char * newlogbuff = realloc(logbuff, logbufflen);
++		    if (newlogbuff == NULL)
++		    {
++			debug(DEBUG_SYSERROR, "could not realloc %d bytes for logbuff in read_cache", logbufflen);
++			exit(1);
++		    }
++		    logbuff = newlogbuff;
++		}
++		strcat(logbuff, buff);
+ 	    }
+ 	    break;
+ 	case CACHE_NEED_PS_MEMBERS:
+@@ -332,6 +352,7 @@ time_t read_cache()
+  out_close:
+     fclose(fp);
+  out:
++    free(logbuff);
+     return cache_date;
+ }
+ 

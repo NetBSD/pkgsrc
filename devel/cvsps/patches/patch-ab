@@ -1,15 +1,64 @@
-$NetBSD: patch-ab,v 1.1 2005/07/15 22:25:58 kristerw Exp $
+$NetBSD: patch-ab,v 1.2 2009/08/30 17:16:54 schmonz Exp $
 
---- cvsps.c.orig	Sat Jul 16 00:22:10 2005
-+++ cvsps.c	Sat Jul 16 00:22:40 2005
-@@ -2550,9 +2550,9 @@
+--- cvsps.c.orig	2009-08-30 13:07:32.000000000 -0400
++++ cvsps.c
+@@ -265,7 +265,8 @@ static void load_from_cvs()
+     PatchSetMember * psm = NULL;
+     char datebuff[20];
+     char authbuff[AUTH_STR_MAX];
+-    char logbuff[LOG_STR_MAX + 1];
++    int logbufflen = LOG_STR_MAX + 1;
++    char * logbuff = malloc(logbufflen);
+     int loglen = 0;
+     int have_log = 0;
+     char cmd[BUFSIZ];
+@@ -273,6 +274,12 @@ static void load_from_cvs()
+     char use_rep_buff[PATH_MAX];
+     char * ltype;
  
-     for (next = ps->members.next; next != &ps->members; next = next->next) 
++    if (logbuff == NULL)
++    {
++	debug(DEBUG_SYSERROR, "could not malloc %d bytes for logbuff in load_from_cvs", logbufflen);
++	exit(1);
++    }
++
+     if (!no_rlog && !test_log_file && cvs_check_cap(CAP_HAVE_RLOG))
      {
-+	int d1, d2;
- 	PatchSetMember * psm = list_entry(next, PatchSetMember, link);
- 	rev = psm->pre_rev;
--	int d1, d2;
+ 	ltype = "rlog";
+@@ -480,24 +487,22 @@ static void load_from_cvs()
+ 		 */
+ 		if (have_log || !is_revision_metadata(buff))
+ 		{
+-		    /* if the log buffer is full, that's it.  
+-		     * 
+-		     * Also, read lines (fgets) always have \n in them
+-		     * which we count on.  So if truncation happens,
+-		     * be careful to put a \n on.
+-		     * 
+-		     * Buffer has LOG_STR_MAX + 1 for room for \0 if
+-		     * necessary
+-		     */
+-		    if (loglen < LOG_STR_MAX)
++		    /* If the log buffer is full, try to reallocate more. */
++		    if (loglen < logbufflen)
+ 		    {
+ 			int len = strlen(buff);
+ 			
+-			if (len >= LOG_STR_MAX - loglen)
++			if (len >= logbufflen - loglen)
+ 			{
+-			    debug(DEBUG_APPMSG1, "WARNING: maximum log length exceeded, truncating log");
+-			    len = LOG_STR_MAX - loglen;
+-			    buff[len - 1] = '\n';
++			    debug(DEBUG_STATUS, "reallocating logbufflen to %d bytes for file %s", logbufflen, file->filename);
++			    logbufflen += (len >= LOG_STR_MAX ? (len+1) : LOG_STR_MAX);
++			    char * newlogbuff = realloc(logbuff, logbufflen);
++			    if (newlogbuff == NULL)
++			    {
++				debug(DEBUG_SYSERROR, "could not realloc %d bytes for logbuff in load_from_cvs", logbufflen);
++				exit(1);
++			    }
++			    logbuff = newlogbuff;
+ 			}
  
- 	/* the reason this is at all complicated has to do with a 
- 	 * branch off of a branch.  it is possible (and indeed 
+ 			debug(DEBUG_STATUS, "appending %s to log", buff);
