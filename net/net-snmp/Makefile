@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2009/03/10 18:30:44 apb Exp $
+# $NetBSD: Makefile,v 1.78 2009/08/30 02:21:58 obache Exp $
 
 DISTNAME=	net-snmp-5.4.2.1
 PKGREVISION=	2
@@ -11,6 +11,8 @@ COMMENT=	Extensible SNMP implementation
 
 CONFLICTS=	ucd-snmp-[0-9]*
 CONFLICTS+=	nocol-[0-9]*	# bin/snmpget bin/snmpwalk
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -58,6 +60,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}/lib
 CONFIGURE_ARGS+=	--with-sys-contact=${NET_SNMP_SYS_CONTACT:Q}
 CONFIGURE_ARGS+=	--with-sys-location=${NET_SNMP_SYS_LOCATION:Q}
+CONFIGURE_ARGS+=	--with-install-prefix=${DESTDIR:Q}
 #
 # NOTE:  if you specify a logfile then this file will be written to by
 # default and although it can be disabled on the command line, the
@@ -132,9 +135,9 @@ post-wrapper:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/EXAMPLE.conf	\
-		${PREFIX}/share/examples/net-snmp/EXAMPLE.conf
+		${DESTDIR}${PREFIX}/share/examples/net-snmp/EXAMPLE.conf
 	${INSTALL_SCRIPT} ${WRKSRC}/agent/snmp_perl.pl \
-		${PREFIX}/share/snmp/
+		${DESTDIR}${PREFIX}/share/snmp/
 
 .include "../../lang/perl5/module.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
