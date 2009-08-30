@@ -1,0 +1,8 @@
+This package contains two tools for maintaining pkgsrc/doc/TODO.
+
+add_todo adds lines for newly available updates for packages to
+the TODO file.
+
+obsolete_todo checks the contents of pkgsrc/doc/TODO against updates
+noted in the CHANGES-* files and removes entries for packages which
+were already updated to newer files.
