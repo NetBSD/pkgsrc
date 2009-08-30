@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3446 2009/08/30 10:41:29 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3447 2009/08/30 14:05:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4503,3 +4503,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ap-python to 2.7.11 [obache 2009-08-30]
 	Updated x11/xterm to 246 [obache 2009-08-30]
 	Added pkgtools/pkgsrc-todo version 1.0 [wiz 2009-08-30]
+	Updated graphics/pngcrush to 1.7.1 [adam 2009-08-30]
