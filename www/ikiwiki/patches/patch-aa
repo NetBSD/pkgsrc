@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2009/08/12 21:14:35 schmonz Exp $
+$NetBSD: patch-aa,v 1.11 2009/08/30 23:30:08 schmonz Exp $
 
---- Makefile.PL.orig	2009-07-23 09:25:36.000000000 -0400
+--- Makefile.PL.orig	2009-08-30 15:09:22.000000000 -0400
 +++ Makefile.PL
 @@ -25,6 +25,8 @@ PROBABLE_INST_LIB=$(shell \\
  
@@ -10,23 +10,8 @@ $NetBSD: patch-aa,v 1.10 2009/08/12 21:14:35 schmonz Exp $
 +MANDIR?=$(PREFIX)/share/man
  
  tflag=$(shell if [ -n "$$NOTAINT" ] && [ "$$NOTAINT" != 1 ]; then printf -- "-T"; fi)
- extramodules=$(shell if [ "$$PROFILE" = 1 ]; then printf -- "-d:Profile"; fi)
-@@ -42,7 +44,6 @@ extra_build: ikiwiki.out ikiwiki.setup d
- 	./mdwn2man ikiwiki-makerepo 1 doc/ikiwiki-makerepo.mdwn > ikiwiki-makerepo.man
- 	./mdwn2man ikiwiki-transition 1 doc/ikiwiki-transition.mdwn > ikiwiki-transition.man
- 	./mdwn2man ikiwiki-update-wikilist 1 doc/ikiwiki-update-wikilist.mdwn > ikiwiki-update-wikilist.man
--	$(MAKE) -C po
- 	
- docwiki: ikiwiki.out
- 	$(PERL) -Iblib/lib $(extramodules) $(tflag) ikiwiki.out -libdir . -setup docwiki.setup -refresh
-@@ -50,14 +51,13 @@ docwiki: ikiwiki.out
- extra_clean:
- 	rm -rf html doc/.ikiwiki
- 	rm -f *.man ikiwiki.out ikiwiki.setup plugins/*.pyc
--	$(MAKE) -C po clean
- 
- underlay_install:
- 	install -d $(DESTDIR)$(PREFIX)/share/ikiwiki
+ extramodules=$(shell if [ "$$PROFILE" = 1 ]; then printf -- "-d:NYTProf"; fi)
+@@ -57,7 +59,7 @@ underlay_install:
  	for dir in `cd underlays && find . -follow -type d ! -regex '.*\.svn.*'`; do \
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
  		for file in `find underlays/$$dir -follow -maxdepth 1 -type f`; do \
@@ -35,7 +20,7 @@ $NetBSD: patch-aa,v 1.10 2009/08/12 21:14:35 schmonz Exp $
  			install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
  		done; \
  	done
-@@ -76,7 +76,7 @@ extra_install: underlay_install
+@@ -76,7 +78,7 @@ extra_install: underlay_install
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$dir; \
  	done
  	for file in `cd doc/examples; find . -type f ! -regex '.*\.svn.*'`; do \
@@ -44,7 +29,7 @@ $NetBSD: patch-aa,v 1.10 2009/08/12 21:14:35 schmonz Exp $
  		install -m 644 doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file; \
  	done
  
-@@ -95,14 +95,14 @@ extra_install: underlay_install
+@@ -95,14 +97,14 @@ extra_install: underlay_install
  		install -m 755 $$file $(DESTDIR)$(PREFIX)/lib/ikiwiki/plugins; \
  	done
  
@@ -66,11 +51,7 @@ $NetBSD: patch-aa,v 1.10 2009/08/12 21:14:35 schmonz Exp $
  	
  	install -d $(DESTDIR)$(PREFIX)/sbin
  	install ikiwiki-mass-rebuild $(DESTDIR)$(PREFIX)/sbin
-@@ -114,14 +114,13 @@ extra_install: underlay_install
- 	install ikiwiki.out $(DESTDIR)$(PREFIX)/bin/ikiwiki
- 	install ikiwiki-makerepo ikiwiki-transition ikiwiki-update-wikilist $(DESTDIR)$(PREFIX)/bin/
- 
--	$(MAKE) -C po install DESTDIR=$(DESTDIR) PREFIX=$(PREFIX)
+@@ -118,10 +120,10 @@ extra_install: underlay_install
  	
  	# These might fail if a regular user is installing into a home
  	# directory.
