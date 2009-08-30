@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3447 2009/08/30 14:05:05 adam Exp $
+$NetBSD: CHANGES-2009,v 1.3448 2009/08/30 17:18:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4504,3 +4504,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xterm to 246 [obache 2009-08-30]
 	Added pkgtools/pkgsrc-todo version 1.0 [wiz 2009-08-30]
 	Updated graphics/pngcrush to 1.7.1 [adam 2009-08-30]
+	Updated devel/cvsps to 2.1nb2 [schmonz 2009-08-30]
