@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/30 21:57:07 tonnerre Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/30 22:03:53 tonnerre Exp $
 
 DISTNAME=		puppet-0.24.7
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 
 MAINTAINER=		tonnerre@NetBSD.org
 HOMEPAGE=		http://www.reductivelabs.com/projects/puppet/
-MASTER_SITE=		http://reductivelabs.com/downloads/gems/
+MASTER_SITES=		http://reductivelabs.com/downloads/gems/
 COMMENT=		Configuration management framework written in Ruby
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,7 +38,7 @@ PLIST_VARS+=		sunos
 
 .if ${OPSYS} == "SunOS"
 INSTALLATION_DIRS=	lib/svc/method ${EGDIR}/svc
-CONF_DIR+=		${VARBASE}/svc/manifest
+CONF_DIRS+=		${VARBASE}/svc/manifest
 CONF_FILES+=		${EGDIR}/svc/puppetd.xml ${VARBASE}/svc/manifest/puppetd.xml
 CONF_FILES+=		${EGDIR}/svc/puppetmasterd.xml ${VARBASE}/svc/manifest/puppetmasterd.xml
 PLIST.sunos=		yes
