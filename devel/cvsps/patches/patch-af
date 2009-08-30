@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/08/30 17:16:54 schmonz Exp $
+
+--- cvsps.1.orig	2005-05-25 23:39:40.000000000 -0400
++++ cvsps.1
+@@ -83,7 +83,7 @@ some hacks which are not generally appli
+ disable the use of rlog internally.  Note: rlog is
+ required for stable PatchSet numbering.  Use with care.
+ .TP
+-.B \-\-diffs\-opts <option string>
++.B \-\-diff\-opts <option string>
+ send a custom set of options to diff, for example to increase
+ the number of context lines, or change the diff format.
+ .TP
