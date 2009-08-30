@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/02/17 18:58:34 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/30 08:19:43 tonnerre Exp $
 #
 
 DISTNAME=	munin_${VER}
@@ -16,11 +16,21 @@ DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
 DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
 
+.include "../../mk/bsd.prefs.mk"
+
 USE_TOOLS+=	perl:run tar
 USE_TOOLS+=	gmake
 USE_PKGINSTALL=	YES
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S:_:-:}
+
+PLIST_VARS+=	sunos not-sunos
+
+.if ${OPSYS} == "SunOS"
+PLIST.sunos=	yes
+.else
+PLIST.not-sunos= yes
+.endif
 
 PKG_GROUPS_VARS+=	MUNIN_GROUP
 PKG_USERS_VARS+=	MUNIN_USER
@@ -56,6 +66,7 @@ INSTALL_TARGET=	install-node install-node-plugins
 BUILD_TARGET=	build
 
 #MAKE_ENV+=	PERL5_SITELIB=${PERL5_SITELIB}
+MAKE_ENV+=	PREFIX=${PREFIX}
 MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=	MUNIN_USER=${MUNIN_USER}
 MAKE_ENV+=	MUNIN_GROUP=${MUNIN_GROUP}
