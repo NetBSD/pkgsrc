@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3442 2009/08/30 00:51:34 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3443 2009/08/30 00:58:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4499,3 +4499,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Perl-Critic to 1.104 [seb 2009-08-29]
 	Updated math/p5-Spreadsheet-XLSX to 0.10 [seb 2009-08-30]
 	Updated math/p5-Spreadsheet-Read to 0.35 [seb 2009-08-30]
+	Updated converters/skf to 1.96.1 [obata 2009-08-30]
