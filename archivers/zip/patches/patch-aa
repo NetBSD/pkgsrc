@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.3 2009/08/30 22:52:58 dsainty Exp $
+
+Pass LDFLAGS at link time to include Pkgsrc's run time link path.  Required
+for finding non-builtin bzip2 library.
+
+--- unix/Makefile.orig	2009-08-31 10:36:31.754566116 +1200
++++ unix/Makefile	2009-08-31 10:34:26.602678228 +1200
+@@ -23,7 +23,7 @@
+ 
+ # (to use the GNU compiler, change cc to gcc in CC)
+ CC = cc
+-BIND = $(CC)
++BIND = $(CC) $(LDFLAGS)
+ AS = $(CC) -c
+ CPP = /lib/cpp
+ E =
