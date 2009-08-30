@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.8 2009/08/29 19:26:01 wiz Exp $
+$NetBSD: patch-ai,v 1.9 2009/08/30 05:17:44 hasso Exp $
 
 --- WinQuake/Makefile.linuxi386.orig	Tue Apr 27 17:51:18 1999
 +++ WinQuake/Makefile.linuxi386
@@ -7,7 +7,7 @@ $NetBSD: patch-ai,v 1.8 2009/08/29 19:26:01 wiz Exp $
  NOARCH=noarch
  
 -MOUNT_DIR=/grog/Projects/WinQuake
-+MOUNT_DIR=${WRKSRC}/winquake
++MOUNT_DIR=${WRKSRC}/WinQuake
  MASTER_DIR=/grog/Projects/QuakeMaster
 -MESA_DIR=/usr/local/src/Mesa-2.6
 +#MESA_DIR=/usr/local/src/Mesa-2.6
