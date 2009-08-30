@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8392 2009/08/30 05:40:27 obache Exp $
+$NetBSD: TODO,v 1.8393 2009/08/30 10:33:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -440,7 +440,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.0
+	o calibre-0.6.10
 	o capc-calc-2.12.4
 	o capistrano-2.5.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -1021,7 +1021,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
 	o py-clutter-1.0
-	o py-dns-2.3.3
+	o py-dns-1.7.1
 	o py-fpconst-0.7.3
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
@@ -1154,7 +1154,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o skampi-5.0.4
 	o skipstone-1.0.1
 	o skkinput-2.06.4
-	o skype-2.0.0.43
+	o skype-2.1.0.47
 	o slib-3b2
 	o smalleiffel-0.90
 	o smlnj-110.69 [pkgsrc-wip]
