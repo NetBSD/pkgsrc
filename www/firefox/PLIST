@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2009/08/29 11:50:32 tnn Exp $
+@comment $NetBSD: PLIST,v 1.37 2009/08/30 01:14:49 markd Exp $
 bin/firefox
 include/firefox/stable/base64.h
 include/firefox/stable/blapit.h
@@ -611,6 +611,7 @@ lib/firefox/components/libbrowsercomps.so
 lib/firefox/components/libbrowserdirprovider.so
 ${PLIST.gnome}lib/firefox/components/libdbusservice.so
 lib/firefox/components/libimgicon.so
+${PLIST.gnome}lib/firefox/components/libmozgnome.so
 ${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
 lib/firefox/components/nsAddonRepository.js
 lib/firefox/components/nsBadCertHandler.js
