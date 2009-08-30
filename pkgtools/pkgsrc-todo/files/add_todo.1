@@ -1,0 +1,66 @@
+.\"	$NetBSD: add_todo.1,v 1.1.1.1 2009/08/30 10:40:34 wiz Exp $
+.\"
+.Dd August 30, 2009
+.Dt ADD_TODO 1
+.Sh NAME
+.Nm add_todo
+.Nd add entries to pkgsrc/doc/TODO
+.Sh SYNOPSIS
+.Nm add_todo
+.Op Fl f
+.Ar package
+.Sh DESCRIPTION
+.Nm
+adds an entry for
+.Ar package
+to the
+.Pa pkgsrc/doc/TODO
+file.
+The
+.Ar package
+argument needs to of the form
+.Dq PKGNAME-PKGVERSION ,
+e.g.
+.Dq pkgsrc-todo-1.0 .
+.Nm
+checks if the package exists in pkgsrc by looking for an entry for it
+in the 
+.Pa CHANGES-*
+files (to catch typos).
+.Nm
+also checks if the update was already committed, i.e. if an entry for
+it or a newer version exists in any
+.Pa CHANGES-*
+files.
+This second check can be overridden by using the
+.Fl f
+flag.
+.Pp
+.Nm
+assumes that the contents of
+.Pa pkgsrc/doc
+are up-to-date.
+The
+.Pa TODO
+file needs to be committed manually afterwards.
+.Sh FILES
+.Bl -tag -width 20n
+.It Pa pkgsrc/doc/TODO
+.Nm
+adds entries to this file.
+.It Pa pkgsrc/doc/CHANGES-*
+.Nm
+checks these files before adding entries.
+.El
+.Sh AUTHORS
+.An Thomas Klausner Aq wiz@NetBSD.org
+.Sh BUGS
+.Nm
+currently can't add an entry at the end of the list.
+.Pp
+.Nm
+should check if a package was removed before adding an entry for it.
+.Pp
+.Nm
+should check if a package was downgraded; this information is
+currently disregarded.
