@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/21 15:02:32 adam Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/31 11:18:58 adam Exp $
 
 DISTNAME=	glew-1.5.0-src
 PKGNAME=	glew-1.5.0
@@ -20,12 +20,15 @@ USE_TOOLS+=	gmake
 MAKE_ENV+=	GLEW_DEST=${PREFIX} X11=${PREFIX} POPT=${CFLAGS:Q}
 MAKE_ENV+=	LDFLAGS.EXTRA=${X11_LDFLAGS:Q}
 
-post-extract:
+post-patch:
 	${LN} -s Makefile.netbsdelf ${WRKSRC}/config/Makefile.dragonfly
 	${LN} -s Makefile.netbsdelf ${WRKSRC}/config/Makefile.netbsd
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
