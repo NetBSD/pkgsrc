@@ -1,7 +1,16 @@
-$NetBSD: patch-dk,v 1.1 2009/08/31 10:18:49 hasso Exp $
+$NetBSD: patch-dk,v 1.2 2009/08/31 14:41:31 tnn Exp $
 
---- vl.c.orig	2009-08-30 08:33:14 +0300
-+++ vl.c	2009-08-30 16:02:53 +0300
+--- vl.c.orig	2009-07-17 02:56:26.000000000 +0200
++++ vl.c
+@@ -38,7 +38,7 @@
+ #include "qemu-char.h"
+ #include "cache-utils.h"
+ #include "block.h"
+-#include "audio/audio.h"
++#include "audio/qaudio.h"
+ #include "migration.h"
+ #include "kvm.h"
+ #include "balloon.h"
 @@ -74,7 +74,7 @@
  #include <sys/select.h>
  #ifdef _BSD
@@ -17,7 +26,7 @@ $NetBSD: patch-dk,v 1.1 2009/08/31 10:18:49 hasso Exp $
      use_rt_clock = 0;
 -#if defined(__linux__) || (defined(__FreeBSD__) && __FreeBSD_version >= 500000)
 +#if defined(__linux__) || (defined(__FreeBSD__) && __FreeBSD_version >= 500000) \
-+    || defined(__DragonFly__)
++    || defined(__DragonFly__) || defined(__NetBSD__)
      {
          struct timespec ts;
          if (clock_gettime(CLOCK_MONOTONIC, &ts) == 0) {
@@ -27,7 +36,7 @@ $NetBSD: patch-dk,v 1.1 2009/08/31 10:18:49 hasso Exp $
  {
 -#if defined(__linux__) || (defined(__FreeBSD__) && __FreeBSD_version >= 500000)
 +#if defined(__linux__) || (defined(__FreeBSD__) && __FreeBSD_version >= 500000) \
-+	|| defined(__DragonFly__)
++	|| defined(__DragonFly__) || defined(__NetBSD__)
      if (use_rt_clock) {
          struct timespec ts;
          clock_gettime(CLOCK_MONOTONIC, &ts);
