@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.31 2008/02/07 20:59:05 rillig Exp $
+# $NetBSD: ccache.mk,v 1.32 2009/08/31 08:38:50 tnn Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -70,7 +70,7 @@ CCACHE_DIR?=	${WRKDIR}/.ccache-cache
 
 _USE_CCACHE=	yes
 
-.if ${CCACHE_BASE} == ${LOCALBASE} && (${PKGPATH} == "devel/ccache" || ${PKGPATH} == "devel/patch")
+.if ${CCACHE_BASE} == ${LOCALBASE} && (${PKGPATH} == "devel/ccache" || ${PKGPATH} == "devel/patch" || ${PKGPATH} == "pkgtools/digest")
 _USE_CCACHE=	no
 MAKEFLAGS+=	_USE_CCACHE=${_USE_CCACHE}
 .endif
