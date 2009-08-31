@@ -1,13 +1,13 @@
-$NetBSD: patch-de,v 1.1 2009/08/31 10:18:49 hasso Exp $
+$NetBSD: patch-de,v 1.2 2009/08/31 14:30:50 tnn Exp $
 
---- exec.c.orig	2009-07-17 03:56:22 +0300
-+++ exec.c	2009-08-30 15:57:26 +0300
+--- exec.c.orig	2009-07-17 02:56:22.000000000 +0200
++++ exec.c
 @@ -454,7 +454,7 @@ static void code_gen_alloc(unsigned long
              exit(1);
          }
      }
 -#elif defined(__FreeBSD__)
-+#elif defined(__FreeBSD__) || defined(__DragonFly__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
      {
          int flags;
          void *addr = NULL;
