@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.144 2009/08/29 11:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.145 2009/08/31 20:54:26 wiz Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -19,6 +19,7 @@ CONF_FILES+=		${PREFIX}/share/examples/kdelibs3/applications.menu \
 			${PKG_SYSCONFDIR}/xdg/menus/applications.menu
 
 CONFIGURE_ARGS+=	--with-distribution="NetBSD pkgsrc"
+CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 
 SGML_CATALOGS=		${PREFIX}/share/kde/apps/ksgmltools2/customization/catalog
 SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.1.2/docbook.cat
@@ -92,14 +93,6 @@ post-install:
 GCC_REQD+=		2.95
 .endif
 
-.if ${OPSYS} == "NetBSD" && (${OS_VERSION:M5.99.1[5-9]*} || ${OS_VERSION:M5.99[2-9]*} || ${OS_VERSION:M[6-9]*})
-# no openssl for us due to incompatible API changes (STACK, ...)
-CONFIGURE_ARGS+=	--without-ssl
-.else
-CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
-.include "../../security/openssl/buildlink3.mk"
-.endif
-
 .include "../../meta-pkgs/kde3/kde3.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
@@ -113,6 +106,7 @@ CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
