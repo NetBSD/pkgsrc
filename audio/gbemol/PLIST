@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/31 12:19:38 joerg Exp $
+bin/gbemol
+share/applications/gbemol.desktop
+share/pixmaps/gbemol.png
