@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3461 2009/08/31 09:32:14 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3462 2009/08/31 09:38:23 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4518,3 +4518,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/etm to 294 [wiz 2009-08-31]
 	Removed archivers/lzma-utils successor archivers/xz [wiz 2009-08-31]
 	Updated mail/akonadi to 1.2.1 [wiz 2009-08-31]
+	Updated mail/postfix to 2.6.5 [martti 2009-08-31]
+	Updated mail/postfix-current to 2.7.20090828 [martti 2009-08-31]
