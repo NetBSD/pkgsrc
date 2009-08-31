@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2009/08/31 11:18:58 adam Exp $
+
+--- config/Makefile.darwin.orig	2009-08-31 11:41:51.000000000 +0200
++++ config/Makefile.darwin
+@@ -6,7 +6,7 @@ ifneq (undefined, $(origin GLEW_MX))
+ CFLAGS.EXTRA += -DGLEW_MX
+ endif
+ PICFLAG = -fPIC
+-LDFLAGS.SO = -dynamiclib -install_name $(GLEW_DEST)/lib/$(LIB.SHARED)
++LDFLAGS.SO = -dynamiclib -install_name $(LIB.SHARED)
+ LDFLAGS.EXTRA =
+ ifneq (undefined, $(origin GLEW_APPLE_GLX))
+ CFLAGS.EXTRA += -I/usr/X11R6/include -D'GLEW_APPLE_GLX'
+@@ -17,7 +17,7 @@ endif
+ LDFLAGS.STATIC =
+ LDFLAGS.DYNAMIC =
+ WARN = -Wall -W
+-POPT = -O2
++POPT ?= -O2
+ BIN.SUFFIX =
+ LIB.SONAME = lib$(NAME).$(SO_MAJOR).dylib
+ LIB.DEVLNK = lib$(NAME).dylib
