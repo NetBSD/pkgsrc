@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.3 2009/08/21 15:02:32 adam Exp $
+$NetBSD: patch-ac,v 1.4 2009/08/31 11:18:58 adam Exp $
 
---- Makefile.orig	2009-08-19 19:40:40.000000000 +0200
+--- Makefile.orig	2007-12-28 04:05:25.000000000 +0100
 +++ Makefile
 @@ -84,7 +84,7 @@ lib/$(LIB.STATIC): $(LIB.OBJS)
  	$(AR) cr $@ $^
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.3 2009/08/21 15:02:32 adam Exp $
  
  %.o: %.c
  	$(CC) -c $(CFLAGS) -o $@ $<
-@@ -108,31 +108,31 @@ src/glew.pic_o: src/glew.c include/GL/gl
+@@ -108,31 +108,29 @@ src/glew.pic_o: src/glew.c include/GL/gl
  
  install: all
  # directories
@@ -39,7 +39,7 @@ $NetBSD: patch-ac,v 1.3 2009/08/21 15:02:32 adam Exp $
  	$(STRIP) -x lib/$(LIB.SHARED)
  	$(INSTALL) -m 0644 lib/$(LIB.SHARED) $(BINDIR)/
  else
- 	$(STRIP) -x lib/$(LIB.SHARED)
+-	$(STRIP) -x lib/$(LIB.SHARED)
 -	$(INSTALL) -m 0644 lib/$(LIB.SHARED) $(LIBDIR)/
 -	$(LN) $(LIB.SHARED) $(LIBDIR)/$(LIB.SONAME)
 +	$(INSTALL) -m 0644 lib/$(LIB.SHARED) $(DESTDIR)$(LIBDIR)/
@@ -55,7 +55,7 @@ $NetBSD: patch-ac,v 1.3 2009/08/21 15:02:32 adam Exp $
  ifeq ($(patsubst mingw%,mingw,$(SYSTEM)), mingw)
  	$(INSTALL) -m 0644 lib/$(LIB.DEVLNK) $(LIBDIR)/
  else
- 	strip -x lib/$(LIB.STATIC)
+-	strip -x lib/$(LIB.STATIC)
 -	$(INSTALL) -m 0644 lib/$(LIB.STATIC) $(LIBDIR)/
 -	$(LN) $(LIB.SHARED) $(LIBDIR)/$(LIB.DEVLNK)
 +	$(INSTALL) -m 0644 lib/$(LIB.STATIC) $(DESTDIR)$(LIBDIR)/
