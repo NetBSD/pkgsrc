@@ -1,8 +1,18 @@
-$NetBSD: patch-be,v 1.6 2008/05/17 02:28:17 markd Exp $
+$NetBSD: patch-be,v 1.7 2009/08/31 20:54:27 wiz Exp $
 
 --- kio/kssl/kopenssl.h.orig	2006-07-22 20:16:39.000000000 +1200
 +++ kio/kssl/kopenssl.h
-@@ -447,10 +447,12 @@ public:
+@@ -47,6 +47,9 @@ class KOpenSSLProxyPrivate;
+ #include <openssl/evp.h>
+ #include <openssl/stack.h>
+ #include <openssl/bn.h>
++#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++typedef _STACK STACK;
++#endif
+ #undef crypt
+ #endif
+ 
+@@ -447,10 +450,12 @@ public:
     int PEM_write_bio_X509(BIO *bp, X509 *x);
  
  
@@ -15,3 +25,83 @@ $NetBSD: patch-be,v 1.6 2008/05/17 02:28:17 markd Exp $
  
  
     /*
+@@ -525,24 +530,52 @@ public:
+     */
+    char *sk_pop(STACK *s);
+ 
++#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++   /*
++    * Pop off the stack with OpenSSL 1.x
++    */
++   char *sk_pop(void *s) { return sk_pop(reinterpret_cast<STACK*>(s)); }
++#endif
++
+ 
+    /* 
+     *   Free the stack
+     */
+    void sk_free(STACK *s);
+ 
++#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++   /*
++    * Free the stack with OpenSSL 1.x
++    */
++   void sk_free(void *s) { return sk_free(reinterpret_cast<STACK*>(s)); }
++#endif
++
+ 
+    /* 
+     *  Number of elements in the stack
+     */
+    int sk_num(STACK *s);
+ 
++#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++   /*
++    * Number of elements in the stack with OpenSSL 1.x
++    */
++   int sk_num(void *s) { return sk_num(reinterpret_cast<STACK*>(s)); }
++#endif
++
+ 
+    /* 
+     *  Value of element n in the stack
+     */
+    char *sk_value(STACK *s, int n);
+ 
++#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++   /*
++    * Value of element n in the stack with OpenSSL 1.x
++    */
++   char *sk_value(void *s, int n) { return sk_value(reinterpret_cast<STACK*>(s), n); }
++#endif
++
+ 
+    /* 
+     *  Create a new stack
+@@ -555,12 +588,26 @@ public:
+     */
+    int sk_push(STACK *s, char *d);
+ 
++#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++   /*
++    * Add an element to the stack with OpenSSL 1.x
++    */
++   int sk_push(void *s, void *d) { return sk_push(reinterpret_cast<STACK*>(s), reinterpret_cast<char*>(d)); }
++#endif
++
+ 
+    /* 
+     *  Duplicate the stack
+     */
+    STACK *sk_dup(STACK *s);
+ 
++#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++   /*
++    * Duplicate the stack with OpenSSL 1.x
++    */
++   STACK *sk_dup(void *s) { return sk_dup(reinterpret_cast<STACK*>(s)); }
++#endif
++
+ 
+    /*
+     *  Convert an ASN1_INTEGER to it's text form
