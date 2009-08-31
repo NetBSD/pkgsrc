@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3463 2009/08/31 10:20:25 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3464 2009/08/31 11:42:16 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4521,3 +4521,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/postfix to 2.6.5 [martti 2009-08-31]
 	Updated mail/postfix-current to 2.7.20090828 [martti 2009-08-31]
 	Updated emulators/qemu to 0.10.6 [hasso 2009-08-31]
+	Updated math/maxima to 5.19.2 [asau 2009-08-31]
