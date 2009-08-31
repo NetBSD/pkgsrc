@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3451 2009/08/30 23:30:32 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.3452 2009/08/31 07:48:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4508,3 +4508,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/puppet to 0.24.7nb1 [tonnerre 2009-08-30]
 	Updated archivers/zip to 3.0nb1 [dsainty 2009-08-30]
 	Updated www/ikiwiki to 3.1415926 [schmonz 2009-08-30]
+	Updated sysutils/libpciaccess to 0.10.8 [wiz 2009-08-31]
