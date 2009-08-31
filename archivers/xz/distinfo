@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/07 11:08:52 minskim Exp $
+$NetBSD: distinfo,v 1.2 2009/08/31 08:59:11 wiz Exp $
 
-SHA1 (xz-4.999.8beta.tar.gz) = d282518518488c37ec268401e1b8247749279c44
-RMD160 (xz-4.999.8beta.tar.gz) = 41303aed49cfb976da54d7e3e88210b4eeaebbbd
-Size (xz-4.999.8beta.tar.gz) = 879382 bytes
+SHA1 (xz-4.999.9beta.tar.gz) = 9627de3997ddcdb02f8d327e84b2cf1941ecd230
+RMD160 (xz-4.999.9beta.tar.gz) = 1253ce01746c748c8549effa5041224044919c4e
+Size (xz-4.999.9beta.tar.gz) = 1037541 bytes
