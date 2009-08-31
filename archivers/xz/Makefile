@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2009/08/23 09:23:28 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/31 08:59:11 wiz Exp $
 #
 
-DISTNAME=	xz-4.999.8beta
+DISTNAME=	xz-4.999.9beta
 CATEGORIES=	archivers
 MASTER_SITES=	http://tukaani.org/xz/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tukaani.org/xz/
 COMMENT=	XZ utilities
-#LICENSE=	public-domain AND gnu-gpl-v2 AND gnu-lgpl-v2.1
+LICENSE=	public-domain AND gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
