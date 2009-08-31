@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3468 2009/08/31 14:08:03 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3469 2009/08/31 14:30:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4525,3 +4525,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Added audio/gbemol version 0.3.2 [joerg 2009-08-31]
 	Updated www/ap2-wsgi to 2.5 [gdt 2009-08-31]
 	Updated net/yaz to 3.0.48 [wiz 2009-08-31]
+	Updated audio/alsa-lib to 1.0.21 [wiz 2009-08-31]
+	Updated audio/alsa-plugins-oss to 1.0.21 [wiz 2009-08-31]
+	Updated audio/alsa-plugins-pulse to 1.0.21 [wiz 2009-08-31]
