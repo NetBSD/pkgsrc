@@ -1,0 +1,29 @@
+$NetBSD: patch-dd,v 1.1 2009/08/31 10:18:49 hasso Exp $
+
+--- configure.orig	2009-07-17 03:56:22 +0300
++++ configure	2009-08-30 19:37:40 +0300
+@@ -228,6 +228,15 @@ if [ "$cpu" = "i386" -o "$cpu" = "x86_64
+     kqemu="yes"
+ fi
+ ;;
++DragonFly)
++bsd="yes"
++audio_drv_list="oss"
++audio_possible_drivers="oss sdl esd pa"
++if [ "$cpu" = "i386" -o "$cpu" = "x86_64" ] ; then
++    kqemu="yes"
++fi
++aio="no"
++;;
+ NetBSD)
+ bsd="yes"
+ audio_drv_list="oss"
+@@ -1102,7 +1111,7 @@ else
+   if test -z "$prefix" ; then
+       prefix="/usr/local"
+   fi
+-  mansuffix="/share/man"
++  mansuffix="/man"
+   datasuffix="/share/qemu"
+   docsuffix="/share/doc/qemu"
+   binsuffix="/bin"

@@ -1,0 +1,29 @@
+$NetBSD: patch-dl,v 1.1 2009/08/31 10:18:49 hasso Exp $
+
+--- cpu-exec.c.orig	2009-08-31 11:06:51 +0300
++++ cpu-exec.c	2009-08-31 11:18:49 +0300
+@@ -1156,6 +1156,12 @@ static inline int handle_cpu_signal(unsi
+ # define EIP_sig(context)  (*((unsigned long*)&(context)->uc_mcontext->ss.eip))
+ # define TRAP_sig(context)    ((context)->uc_mcontext->es.trapno)
+ # define ERROR_sig(context)   ((context)->uc_mcontext->es.err)
++#elif defined (__FreeBSD__) || (__DragonFly__)
++# include <ucontext.h>
++
++# define EIP_sig(context)  (*((unsigned long*)&(context)->uc_mcontext.mc_eip))
++# define TRAP_sig(context)    ((context)->uc_mcontext.mc_trapno)
++# define ERROR_sig(context)   ((context)->uc_mcontext.mc_err)
+ #else
+ # define EIP_sig(context)     ((context)->uc_mcontext.gregs[REG_EIP])
+ # define TRAP_sig(context)    ((context)->uc_mcontext.gregs[REG_TRAPNO])
+@@ -1166,7 +1172,11 @@ int cpu_signal_handler(int host_signum, 
+                        void *puc)
+ {
+     siginfo_t *info = pinfo;
++#if defined (__FreeBSD__) || (__DragonFly__)
++    ucontext_t *uc = puc;
++#else
+     struct ucontext *uc = puc;
++#endif
+     unsigned long pc;
+     int trapno;
+ 
