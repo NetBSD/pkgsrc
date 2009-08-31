@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3455 2009/08/31 08:37:53 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3456 2009/08/31 08:52:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4512,3 +4512,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/gbrainy to 1.12 [wiz 2009-08-31]
 	Updated graphics/py-cairo to 1.8.8 [wiz 2009-08-31]
 	Updated chat/telepathy-glib to 0.7.35 [wiz 2009-08-31]
+	Updated chat/telepathy-farsight to 0.0.9 [wiz 2009-08-31]
