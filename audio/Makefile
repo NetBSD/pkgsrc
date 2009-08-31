@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.419 2009/08/27 22:51:39 ahoka Exp $
+# $NetBSD: Makefile,v 1.420 2009/08/31 12:21:37 joerg Exp $
 #
 
 COMMENT=	Audio tools
@@ -113,6 +113,7 @@ SUBDIR+=	fluidsynth
 SUBDIR+=	freealut
 SUBDIR+=	freepats
 SUBDIR+=	freezetag
+SUBDIR+=	gbemol
 SUBDIR+=	gimmix
 SUBDIR+=	gkrellm-volume
 SUBDIR+=	gkrellm-xmms
