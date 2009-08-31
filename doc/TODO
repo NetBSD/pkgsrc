@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8400 2009/08/31 09:06:11 wiz Exp $
+$NetBSD: TODO,v 1.8401 2009/08/31 09:32:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -358,7 +358,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.7.1
 	o aewm++-1.0.27
 	o afterstep-2.2.9
-	o akonadi-1.2.1
 	o album-4.06
 	o albumplayer-0.3
 	o alee-ttf-11.2
