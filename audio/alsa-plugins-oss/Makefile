@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/07/07 14:45:41 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/31 14:25:49 wiz Exp $
 #
 
-DISTNAME=	alsa-plugins-1.0.18
+DISTNAME=	alsa-plugins-1.0.21
 PKGNAME=	${DISTNAME:S/plugins/plugins-oss/}
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/plugins/
