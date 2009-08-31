@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3465 2009/08/31 12:20:20 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3466 2009/08/31 12:21:37 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4522,4 +4522,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/postfix-current to 2.7.20090828 [martti 2009-08-31]
 	Updated emulators/qemu to 0.10.6 [hasso 2009-08-31]
 	Updated math/maxima to 5.19.2 [asau 2009-08-31]
-	Updated audio/gbemol to 0.3.2 [joerg 2009-08-31]
+	Added audio/gbemol version 0.3.2 [joerg 2009-08-31]
