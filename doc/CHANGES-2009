@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3474 2009/08/31 20:56:40 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3475 2009/08/31 22:01:23 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4533,3 +4533,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/htmldoc to 1.8.27nb2 [tez 2009-08-31]
 	Updated print/ghostscript to 8.70 [wiz 2009-08-31]
 	Updated x11/kdelibs3 to 3.5.10nb4 [wiz 2009-08-31]
+	Updated net/hobbitclient to 4.2.0nb2 [he 2009-08-31]
