@@ -1,0 +1,8 @@
+gbemol allows you to use MPD with a userfriendly interface.
+Features include an easy-to-use, tag-oriented library browser,
+a two mode playlist, cover art support (APIC tag only, for now),
+system tray icon docking, song, album and artist information.
+
+Music Player Daemon is a server that allows remote access for playing
+audio files, streams and managing playlists. The daemon is controlled
+through a client which need not run on the same computer mpd runs on.
