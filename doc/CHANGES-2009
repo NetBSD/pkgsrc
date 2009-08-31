@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3470 2009/08/31 14:31:11 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3471 2009/08/31 14:53:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4529,3 +4529,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/alsa-plugins-oss to 1.0.21 [wiz 2009-08-31]
 	Updated audio/alsa-plugins-pulse to 1.0.21 [wiz 2009-08-31]
 	Updated audio/alsa-utils to 1.0.20 [wiz 2009-08-31]
+	Updated graphics/asymptote to 1.85 [wiz 2009-08-31]
