@@ -1,3 +1,0 @@
-LZMA Utils is a set of utilities for LZMA compression and decompression.
-They aim to have an interface very similar to the well known gzip and
-bzip2 utilities.
