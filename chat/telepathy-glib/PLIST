@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/16 17:59:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/31 08:37:42 wiz Exp $
 include/telepathy-1.0/telepathy-glib/_gen/error-str.h
 include/telepathy-1.0/telepathy-glib/_gen/gtypes.h
 include/telepathy-1.0/telepathy-glib/_gen/telepathy-enums.h
@@ -44,6 +44,7 @@ include/telepathy-1.0/telepathy-glib/connection-manager.h
 include/telepathy-1.0/telepathy-glib/connection.h
 include/telepathy-1.0/telepathy-glib/contact.h
 include/telepathy-1.0/telepathy-glib/contacts-mixin.h
+include/telepathy-1.0/telepathy-glib/dbus-daemon.h
 include/telepathy-1.0/telepathy-glib/dbus-properties-mixin.h
 include/telepathy-1.0/telepathy-glib/dbus.h
 include/telepathy-1.0/telepathy-glib/debug-ansi.h
@@ -82,6 +83,7 @@ include/telepathy-1.0/telepathy-glib/svc-media-interfaces.h
 include/telepathy-1.0/telepathy-glib/svc-properties-interface.h
 include/telepathy-1.0/telepathy-glib/text-mixin.h
 include/telepathy-1.0/telepathy-glib/util.h
+include/telepathy-1.0/telepathy-glib/verify.h
 lib/libtelepathy-glib.la
 lib/pkgconfig/telepathy-glib.pc
 share/gtk-doc/html/telepathy-glib/TpBaseConnection.html
