@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8405 2009/08/31 14:37:33 wiz Exp $
+$NetBSD: TODO,v 1.8406 2009/08/31 14:53:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -400,7 +400,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk16-1.6.1.5
 	o astyle-1.15.3
-	o asymptote-1.85
 	o atari800-2.1.0
 	o aterm-1.0.1
 	o auctex-11.85
