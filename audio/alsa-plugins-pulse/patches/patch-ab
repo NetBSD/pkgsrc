@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2009/08/31 14:25:49 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2009/08/31 20:07:32 wiz Exp $
 
 --- pulse/pulse.h.orig	2009-08-31 13:09:41.000000000 +0000
 +++ pulse/pulse.h
@@ -9,5 +9,5 @@ $NetBSD: patch-ab,v 1.1 2009/08/31 14:25:49 wiz Exp $
 +
 +#include <errno.h>
 +#ifndef EBADFD
-+#define EBADFD EIO
++#define EBADFD EBADF
 +#endif
