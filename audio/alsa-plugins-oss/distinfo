@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2009/07/07 14:45:41 joerg Exp $
+$NetBSD: distinfo,v 1.3 2009/08/31 14:25:49 wiz Exp $
 
-SHA1 (alsa-plugins-1.0.18.tar.bz2) = 33b5eca861de35a6eeb47862f24a8663af56cd0a
-RMD160 (alsa-plugins-1.0.18.tar.bz2) = 83b570d5346c7c79f5fe628e381ba1cf8e5a69db
-Size (alsa-plugins-1.0.18.tar.bz2) = 312656 bytes
+SHA1 (alsa-plugins-1.0.21.tar.bz2) = dae6f4dd4aa8638aded472cf503eb2c2e5f69730
+RMD160 (alsa-plugins-1.0.21.tar.bz2) = 853416f1c78c9c2b99ba5f2ed0c36df88f21a387
+Size (alsa-plugins-1.0.21.tar.bz2) = 325828 bytes
 SHA1 (patch-aa) = 77774e607905f3930ffec503c04d6dd1f70d9946
 SHA1 (patch-ab) = 9cf0bda9f1928f46d0d5eac9464b790710ea2fda
 SHA1 (patch-ac) = 13da103ce3daad29d3c715f8f7d58dcd7bb9a72c

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2009/08/31 14:25:49 wiz Exp $
+
+--- pulse/pulse.h.orig	2009-08-31 13:09:41.000000000 +0000
++++ pulse/pulse.h
+@@ -46,3 +46,8 @@ int pulse_connect(snd_pulse_t * p, const
+ 
+ void pulse_poll_activate(snd_pulse_t * p);
+ void pulse_poll_deactivate(snd_pulse_t * p);
++
++#include <errno.h>
++#ifndef EBADFD
++#define EBADFD EIO
++#endif

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2009/01/28 05:40:11 obache Exp $
+$NetBSD: distinfo,v 1.6 2009/08/31 14:25:49 wiz Exp $
 
-SHA1 (alsa-lib-1.0.18.tar.bz2) = 54e6916738e479a0eec7e9f4715c22efee4d8594
-RMD160 (alsa-lib-1.0.18.tar.bz2) = 88a7a5ce6133704d100f034b9e08e9ffdf0627d9
-Size (alsa-lib-1.0.18.tar.bz2) = 790052 bytes
+SHA1 (alsa-lib-1.0.21.tar.bz2) = cac69df85692ac407c4c80e7ca7a016ee8f35918
+RMD160 (alsa-lib-1.0.21.tar.bz2) = b92732e73d5d2934d3ab627d62a2439519446a61
+Size (alsa-lib-1.0.21.tar.bz2) = 808252 bytes
 SHA1 (patch-aa) = 5a8e9571ac6fb1f1f6cbd18d3859468a7b64076f
 SHA1 (patch-ab) = d6082e1291992699de86e6f78bf43f4cb476c0c8
 SHA1 (patch-ac) = 2ddf533a998f0c1ee8444e97e401bde1fad344ac
@@ -18,7 +18,7 @@ SHA1 (patch-al) = 76de42304d5ba90bf5e8def57f523c1ee910d9df
 SHA1 (patch-am) = e028c544894720fbe585b938715a4ac01fb5600e
 SHA1 (patch-an) = c7253acaaf2aeb96310d14c9e03853bc4cd4d0cd
 SHA1 (patch-ao) = 25ac431685e033b165a9abdcd44246772c1f99b5
-SHA1 (patch-ap) = 93fba4a9f739727c009bef1716b9138be1a03ca6
+SHA1 (patch-ap) = 7fcd495dc6f9a3974580a99523de4638c383a940
 SHA1 (patch-aq) = 0e700c7e544fb6245e738a3d2356921484c55242
 SHA1 (patch-ar) = b8ae2c11cc075e5e31766c87c7f805d8202aa9e4
 SHA1 (patch-as) = 946a179a675d6c5e03e0f7734ac97b0592806912

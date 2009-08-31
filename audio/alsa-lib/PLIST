@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/08/31 14:25:49 wiz Exp $
 bin/aserver
 include/alsa/alisp.h
 include/alsa/asoundef.h
@@ -81,6 +81,7 @@ share/alsa/cards/PMacToonie.conf
 share/alsa/cards/PS3.conf
 share/alsa/cards/RME9636.conf
 share/alsa/cards/RME9652.conf
+share/alsa/cards/SB-XFi.conf
 share/alsa/cards/SI7018.conf
 share/alsa/cards/SI7018/sndoc-mixer.alisp
 share/alsa/cards/SI7018/sndop-mixer.alisp
