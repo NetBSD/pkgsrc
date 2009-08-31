@@ -1,16 +1,7 @@
-$NetBSD: patch-dk,v 1.2 2009/08/31 14:41:31 tnn Exp $
+$NetBSD: patch-dk,v 1.3 2009/08/31 14:49:21 tnn Exp $
 
 --- vl.c.orig	2009-07-17 02:56:26.000000000 +0200
 +++ vl.c
-@@ -38,7 +38,7 @@
- #include "qemu-char.h"
- #include "cache-utils.h"
- #include "block.h"
--#include "audio/audio.h"
-+#include "audio/qaudio.h"
- #include "migration.h"
- #include "kvm.h"
- #include "balloon.h"
 @@ -74,7 +74,7 @@
  #include <sys/select.h>
  #ifdef _BSD
