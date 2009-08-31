@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/09/15 17:34:48 taca Exp $
+$NetBSD: distinfo,v 1.6 2009/08/31 08:55:31 adam Exp $
 
-SHA1 (squidGuard-1.3-patch-20080714.tar.gz) = 4345b0da96ca3470e55a4fe4df66217acbcf63cc
-RMD160 (squidGuard-1.3-patch-20080714.tar.gz) = 493a6a868f34d0b066c943f1969cf1e39debe6e2
-Size (squidGuard-1.3-patch-20080714.tar.gz) = 10502 bytes
-SHA1 (squidGuard-1.3.tar.gz) = 4a1e359679f328cff5970e92e93cc94236ead6c7
-RMD160 (squidGuard-1.3.tar.gz) = 4a6a9b5cf36d9e1d0994b3ec410f741a7b7955d3
-Size (squidGuard-1.3.tar.gz) = 1905252 bytes
-SHA1 (patch-aa) = 5e9f5e064e771419c62b0f66bc24fc99016a4620
-SHA1 (patch-ab) = 9fcecd93e3cc52ad1a9e14eb73d0be8fad054200
+SHA1 (squidGuard-1.4.tar.gz) = 0508ccb7db5c656b9952eacbcff2c956c01677d3
+RMD160 (squidGuard-1.4.tar.gz) = c44880ddbfd7d1ad63fcda1c6ed777f24feedbba
+Size (squidGuard-1.4.tar.gz) = 1968492 bytes
+SHA1 (patch-aa) = 49297a206953a6d0de58756d32ddec51ea50271d
