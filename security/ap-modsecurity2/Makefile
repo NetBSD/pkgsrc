@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/07/17 18:00:23 adrianp Exp $
+# $NetBSD: Makefile,v 1.15 2009/08/31 07:19:44 seb Exp $
 
 DISTNAME=	modsecurity-apache_2.5.9
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.modsecurity.org/
 COMMENT=	Intrusion detection and prevention engine for web applications
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
+USE_LANGUAGES+=		c++ c
 
 .include "../../mk/apache.mk"
 .include "options.mk"
@@ -18,7 +19,6 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		pax
 USE_LIBTOOL=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/apache2
-USE_LANGUAGES+=		c++ c
 
 CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs
 CONFIGURE_ARGS+=	--with-pcre=${PREFIX}
