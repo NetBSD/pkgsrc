@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.2 2009/05/13 12:56:47 obache Exp $
+$NetBSD: patch-ab,v 1.3 2009/08/31 08:04:32 wiz Exp $
 
---- cairo/pycairo-matrix.c.orig	2008-12-27 08:25:55.000000000 +0000
-+++ cairo/pycairo-matrix.c
-@@ -222,7 +222,7 @@ matrix_translate (PycairoMatrix *o, PyOb
+--- src/matrix.c.orig	2009-08-26 10:59:35.000000000 +0000
++++ src/matrix.c
+@@ -206,7 +206,7 @@ matrix_translate (PycairoMatrix *o, PyOb
  }
  
  static PyObject *
--matrix_item (PycairoMatrix *o, Py_ssize_t i)
-+matrix_item (PycairoMatrix *o, int i)
- {
-     switch (i) {
-     case 0:
-@@ -282,14 +282,13 @@ static PyNumberMethods matrix_as_number 
+-matrix_item (PycairoMatrix *o, Py_ssize_t i) {
++matrix_item (PycairoMatrix *o, int i) {
+   switch (i) {
+   case 0:
+     return Py_BuildValue("d", o->matrix.xx);
+@@ -265,14 +265,13 @@ static PyNumberMethods matrix_as_number 
    0,	           /* nb_true_divide */
    0,		   /* nb_inplace_floor_divide */
    0,		   /* nb_inplace_true_divide */
@@ -19,11 +19,11 @@ $NetBSD: patch-ab,v 1.2 2009/05/13 12:56:47 obache Exp $
  };
  
  static PySequenceMethods matrix_as_sequence = {
-     0,                  		/* sq_length */
-     0,                  		/* sq_concat */
-     0,                  		/* sq_repeat */
--    (ssizeargfunc)matrix_item,		/* sq_item */
-+    (intargfunc)matrix_item,		/* sq_item */
-     0,                     		/* sq_slice */
-     0,					/* sq_ass_item */
-     0,					/* sq_ass_slice */
+   0,                  		/* sq_length */
+   0,                  		/* sq_concat */
+   0,                  		/* sq_repeat */
+-  (ssizeargfunc)matrix_item,	/* sq_item */
++  (intargfunc)matrix_item,	/* sq_item */
+   0,                     	/* sq_slice */
+   0,				/* sq_ass_item */
+   0,				/* sq_ass_slice */
