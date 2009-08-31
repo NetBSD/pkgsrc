@@ -1,0 +1,32 @@
+$NetBSD: patch-db,v 1.1 2009/08/31 10:18:49 hasso Exp $
+
+--- block-raw-posix.c.orig	2009-07-17 03:56:22 +0300
++++ block-raw-posix.c	2009-08-30 15:51:48 +0300
+@@ -63,6 +63,11 @@
+ #include <sys/dkio.h>
+ #endif
+ 
++#ifdef __DragonFly__
++#include <sys/ioctl.h>
++#include <sys/diskslice.h>
++#endif
++
+ //#define DEBUG_FLOPPY
+ 
+ //#define DEBUG_BLOCK
+@@ -766,6 +771,15 @@ static int64_t  raw_getlength(BlockDrive
+     if (!fstat(fd, &sb) && (S_IFCHR & sb.st_mode)) {
+ #ifdef DIOCGMEDIASIZE
+ 	if (ioctl(fd, DIOCGMEDIASIZE, (off_t *)&size))
++#elif defined(DIOCGPART)
++        {
++                struct partinfo pi;
++                if (ioctl(fd, DIOCGPART, &pi) == 0)
++                        size = pi.media_size;
++                else
++                        size = 0;
++        }
++        if (size == 0)
+ #endif
+ #ifdef CONFIG_COCOA
+         size = LONG_LONG_MAX;

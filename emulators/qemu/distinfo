@@ -1,20 +1,22 @@
-$NetBSD: distinfo,v 1.42 2009/05/13 19:02:18 kefren Exp $
+$NetBSD: distinfo,v 1.43 2009/08/31 10:18:49 hasso Exp $
 
-SHA1 (qemu-0.9.1.tar.gz) = 630ea20b5989f0df00128de7f7be661c573ed041
-RMD160 (qemu-0.9.1.tar.gz) = ee7bdb55a4540df2082d4bde9ebfd2f4e6f201a5
-Size (qemu-0.9.1.tar.gz) = 2804104 bytes
-SHA1 (patch-aa) = 455575215bad8864da285e1979da9ff7d8476a24
-SHA1 (patch-ab) = ba77da578f528ca549c48336b40378dcbb2a2fbb
-SHA1 (patch-ac) = 3d73b46db4f824d16d40472cc3bd516599469966
-SHA1 (patch-ad) = ac69a03e4945e8c8fd5aadca070b876d0970910d
-SHA1 (patch-ae) = a82f6c1a02c6bc03f4da9bc2b52f817b260ced8a
-SHA1 (patch-ag) = 3469af1ec2a4f95c09a67c16b1071f0ec27dab74
-SHA1 (patch-ak) = ed5766e36d5a192cf4559142e6ef9e0287e61b43
-SHA1 (patch-am) = a22a3b23284c377afa8113768d68c8ef40c514f9
+SHA1 (qemu-0.10.6.tar.gz) = 9432738ba513e07c981097468945b2e3ad9cb81e
+RMD160 (qemu-0.10.6.tar.gz) = 1321a10777d2e0c6b53887d0525a28cc1b36ec9b
+Size (qemu-0.10.6.tar.gz) = 3664559 bytes
 SHA1 (patch-ao) = e515093b6ea99f9cba665de022fd62f3be911569
 SHA1 (patch-au) = 2892cae63796c76014288f4a700acbee5aadc529
 SHA1 (patch-av) = 715e9680d70c1aa1c83bda0270125144a26d6140
-SHA1 (patch-aw) = f3bc77cdec3a876fa69406c91590d02161e80753
-SHA1 (patch-ax) = 66b060005ecbf9fd0451f7960e81eccbabf959ca
-SHA1 (patch-ay) = f41e230bd0fef6437aa187b346fc06ef4f32a31c
 SHA1 (patch-ba) = 7c5043a39405f52b512e479a46fc76108580b7bc
+SHA1 (patch-da) = 994eb51de1e7398acf95189da182f755f2ca65e1
+SHA1 (patch-db) = 7e729851615598646aa3f2d7278147198d0a7a45
+SHA1 (patch-dc) = 508d40a99242ba025ade0d067e6d44d3a8a4f0cc
+SHA1 (patch-dd) = 98133e7526441ddea5647c006f146474fcd59826
+SHA1 (patch-de) = b06cb5d29069ebbbc7e78c35798332493c8c9143
+SHA1 (patch-df) = f21a7832e2cc94dbe76626b74455d33f5ca50ee5
+SHA1 (patch-dg) = f315471d1353504e8bb0032cdf019634c3ce88a5
+SHA1 (patch-dh) = c4c1882c81cdbe9d98fc50e8f60f8d233a7882c5
+SHA1 (patch-di) = 96552e11794deb726cc027c41e06a378510ef534
+SHA1 (patch-dj) = 78b2cc5ba2360a7237de2207365547b84867d070
+SHA1 (patch-dk) = e8fe4d8435ed8865ab74f231e9c1dc91dab629ce
+SHA1 (patch-dl) = 9141ded6d9440863ffa0772b639f2c76b3320e4a
+SHA1 (patch-dm) = 3786ee9dfa46648f773f06c683bccd574c5ee2cb
