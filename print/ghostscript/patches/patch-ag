@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.3 2009/02/12 19:51:08 drochner Exp $
+$NetBSD: patch-ag,v 1.4 2009/08/31 20:12:20 wiz Exp $
 
---- cups/cups.mak.orig	2009-02-06 18:58:54.000000000 +0100
+--- cups/cups.mak.orig	2009-03-07 21:46:16.000000000 +0000
 +++ cups/cups.mak
-@@ -49,7 +49,7 @@ pdftoraster: $(PDFTORASTER_XE)
- pdftoraster_=cups/pdftoraster.c
+@@ -51,7 +51,7 @@ pdftoraster_=cups/pdftoraster.c
  
  $(PDFTORASTER_XE): $(pdftoraster_)
--	$(GLCC) `cups-config --image --libs` -DBINDIR='"$(bindir)"' -DGS='"$(GS)"' -o $@ $(pdftoraster_)
-+	$(GLCC) `cups-config --ldflags --image --libs` -DBINDIR='"$(bindir)"' -DGS='"$(GS)"' -o $@ $(pdftoraster_)
+ 	if [ "$(CUPSPDFTORASTER)" = "1" ]; then \
+-	    $(GLCC) $(LDFLAGS) -DBINDIR='"$(bindir)"' -DGS='"$(GS)"' -o $@ $(pdftoraster_) `cups-config --image --libs`; \
++	    $(GLCC) $(LDFLAGS) -DBINDIR='"$(bindir)"' -DGS='"$(GS)"' -o $@ $(pdftoraster_) `cups-config --ldflags --image --libs`; \
+ 	fi
  
  install:	install-cups
- 
