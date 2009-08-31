@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2008/05/25 20:49:39 tron Exp $
+# $NetBSD: Makefile,v 1.159 2009/08/31 19:25:27 tron Exp $
 
 DISTNAME=		mutt-1.4.2.3
 PKGREVISION=		2
@@ -10,6 +10,7 @@ MASTER_SITES=		ftp://ftp.mutt.org/mutt/ \
 OWNER=			tron@NetBSD.org
 HOMEPAGE=		http://www.mutt.org/
 COMMENT=		Text-based MIME mail client with PGP support
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
