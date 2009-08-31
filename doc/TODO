@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8402 2009/08/31 10:20:26 hasso Exp $
+$NetBSD: TODO,v 1.8403 2009/08/31 14:08:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1357,7 +1357,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yabause-0.9.10
 	o yacas-1.2.0
 	o yafc-1.1
-	o yaz-3.0.48
 	o yodl-2.14.3
 	o youtube-dl-20090808
 	o ysm-2.9.9.1

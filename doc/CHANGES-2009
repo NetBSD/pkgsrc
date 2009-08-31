@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3467 2009/08/31 12:42:32 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.3468 2009/08/31 14:08:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4524,3 +4524,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/maxima to 5.19.2 [asau 2009-08-31]
 	Added audio/gbemol version 0.3.2 [joerg 2009-08-31]
 	Updated www/ap2-wsgi to 2.5 [gdt 2009-08-31]
+	Updated net/yaz to 3.0.48 [wiz 2009-08-31]
