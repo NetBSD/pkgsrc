@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/08 18:06:39 wiz Exp $
-
-SHA1 (lzma-4.32.7.tar.gz) = 1c90c2fd6d4d35f37589a03bcbc487e7c46ea389
-RMD160 (lzma-4.32.7.tar.gz) = 08f3e93bf23af4c90c8c06ecd7fa2fded5694d72
-Size (lzma-4.32.7.tar.gz) = 479270 bytes
