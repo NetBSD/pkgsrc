@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/17 21:15:59 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/08/31 08:52:30 wiz Exp $
 
-SHA1 (telepathy-farsight-0.0.8.tar.gz) = c776ce5920a5d5dd50f9f8087206600532e14baa
-RMD160 (telepathy-farsight-0.0.8.tar.gz) = 0165f044c3a3129cf076bd2b116b6341a38c683f
-Size (telepathy-farsight-0.0.8.tar.gz) = 577453 bytes
+SHA1 (telepathy-farsight-0.0.9.tar.gz) = a1656afc6d2c2992a3946edf0fb423de5fad836b
+RMD160 (telepathy-farsight-0.0.9.tar.gz) = 8fe1047a86e2f571be3bf2efdd9ea3862afba867
+Size (telepathy-farsight-0.0.9.tar.gz) = 578221 bytes
