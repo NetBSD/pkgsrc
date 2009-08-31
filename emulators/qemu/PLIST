@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.18 2009/06/14 17:51:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/08/31 10:18:49 hasso Exp $
 bin/qemu
 bin/qemu-img
+bin/qemu-sparc64
 bin/qemu-system-arm
 bin/qemu-system-cris
 bin/qemu-system-m68k
@@ -17,9 +18,11 @@ bin/qemu-system-sparc
 bin/qemu-system-x86_64
 man/man1/qemu-img.1
 man/man1/qemu.1
+man/man8/qemu-nbd.8
 share/doc/qemu/Makefile.multinode-NetBSD
 share/doc/qemu/qemu-doc.html
 share/doc/qemu/qemu-tech.html
+share/qemu/bamboo.dtb
 share/qemu/bios.bin
 share/qemu/keymaps/ar
 share/qemu/keymaps/common
@@ -56,8 +59,11 @@ share/qemu/keymaps/sl
 share/qemu/keymaps/sv
 share/qemu/keymaps/th
 share/qemu/keymaps/tr
+share/qemu/openbios-ppc
 share/qemu/openbios-sparc32
+share/qemu/openbios-sparc64
 share/qemu/ppc_rom.bin
+share/qemu/pxe-e1000.bin
 share/qemu/pxe-ne2k_pci.bin
 share/qemu/pxe-pcnet.bin
 share/qemu/pxe-rtl8139.bin
