@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2009/05/13 12:56:47 obache Exp $
+$NetBSD: patch-aa,v 1.5 2009/08/31 08:04:32 wiz Exp $
 
---- configure.orig	2009-03-19 08:46:52.000000000 +0000
+--- configure.orig	2009-08-26 11:04:28.000000000 +0000
 +++ configure
-@@ -19941,12 +19941,12 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
+@@ -11107,13 +11107,13 @@ CC="$lt_save_CC"
  
          if test -n "$PYTHON"; then
        # If the user set $PYTHON, use it and don't search something else.
@@ -10,11 +10,32 @@ $NetBSD: patch-aa,v 1.4 2009/05/13 12:56:47 obache Exp $
 -$as_echo_n "checking whether $PYTHON version >= 2.6... " >&6; }
 +      { $as_echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.4" >&5
 +$as_echo_n "checking whether $PYTHON version >= 2.4... " >&6; }
-       prog="import sys, string
+       prog="import sys
  # split strings by '.' and convert to numeric.  Append some zeros
  # because we need at least 4 digits for the hex conversion.
--minver = map(int, string.split('2.6', '.')) + [0, 0, 0]
-+minver = map(int, string.split('2.4', '.')) + [0, 0, 0]
+ # map returns an iterator in Python 3.0 and a list in 2.x
+-minver = list(map(int, '2.6'.split('.'))) + [0, 0, 0]
++minver = list(map(int, '2.4'.split('.'))) + [0, 0, 0]
  minverhex = 0
- for i in xrange(0, 4): minverhex = (minverhex << 8) + minver[i]
- sys.exit(sys.hexversion < minverhex)"
+ # xrange is not present in Python 3.0 and range returns an iterator
+ for i in list(range(0, 4)): minverhex = (minverhex << 8) + minver[i]
+@@ -11135,8 +11135,8 @@ fi
+     else
+       # Otherwise, try each interpreter until we find one that satisfies
+       # VERSION.
+-      { $as_echo "$as_me:$LINENO: checking for a Python interpreter with version >= 2.6" >&5
+-$as_echo_n "checking for a Python interpreter with version >= 2.6... " >&6; }
++      { $as_echo "$as_me:$LINENO: checking for a Python interpreter with version >= 2.4" >&5
++$as_echo_n "checking for a Python interpreter with version >= 2.4... " >&6; }
+ if test "${am_cv_pathless_PYTHON+set}" = set; then
+   $as_echo_n "(cached) " >&6
+ else
+@@ -11147,7 +11147,7 @@ else
+ # split strings by '.' and convert to numeric.  Append some zeros
+ # because we need at least 4 digits for the hex conversion.
+ # map returns an iterator in Python 3.0 and a list in 2.x
+-minver = list(map(int, '2.6'.split('.'))) + [0, 0, 0]
++minver = list(map(int, '2.4'.split('.'))) + [0, 0, 0]
+ minverhex = 0
+ # xrange is not present in Python 3.0 and range returns an iterator
+ for i in list(range(0, 4)): minverhex = (minverhex << 8) + minver[i]
