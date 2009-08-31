@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3459 2009/08/31 09:06:11 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3460 2009/08/31 09:29:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4516,3 +4516,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/squidGuard to 1.4 [adam 2009-08-31]
 	Updated archivers/xz to 4.999.9beta [wiz 2009-08-31]
 	Updated time/etm to 294 [wiz 2009-08-31]
+	Removed archivers/lzma-utils successor archivers/xz [wiz 2009-08-31]
