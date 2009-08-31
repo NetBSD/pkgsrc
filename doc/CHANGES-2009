@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3452 2009/08/31 07:48:41 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3453 2009/08/31 07:53:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4509,3 +4509,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/zip to 3.0nb1 [dsainty 2009-08-30]
 	Updated www/ikiwiki to 3.1415926 [schmonz 2009-08-30]
 	Updated sysutils/libpciaccess to 0.10.8 [wiz 2009-08-31]
+	Updated games/gbrainy to 1.12 [wiz 2009-08-31]
