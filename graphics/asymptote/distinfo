@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/21 23:02:29 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/08/31 14:53:10 wiz Exp $
 
-SHA1 (asymptote-1.84.src.tgz) = da168675fdb274b9f5c5720db5bf500c3ed09761
-RMD160 (asymptote-1.84.src.tgz) = a7387cfbd2e310e34f3d759d3e73b857a516d666
-Size (asymptote-1.84.src.tgz) = 1520672 bytes
-SHA1 (patch-aa) = ff9c4c957b3dd937dff1d25d72959d00af6d1885
+SHA1 (asymptote-1.85.src.tgz) = 7330403ad72de92e3791a977c50838675be1c061
+RMD160 (asymptote-1.85.src.tgz) = 4e801ca4d90a2d132a8553cfe3a5ddfef160d754
+Size (asymptote-1.85.src.tgz) = 1521242 bytes
