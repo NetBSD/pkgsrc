@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3458 2009/08/31 08:59:23 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3459 2009/08/31 09:06:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4515,3 +4515,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/telepathy-farsight to 0.0.9 [wiz 2009-08-31]
 	Updated www/squidGuard to 1.4 [adam 2009-08-31]
 	Updated archivers/xz to 4.999.9beta [wiz 2009-08-31]
+	Updated time/etm to 294 [wiz 2009-08-31]
