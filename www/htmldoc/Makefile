@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/01/08 11:57:24 obache Exp $
+# $NetBSD: Makefile,v 1.25.4.1 2009/09/01 11:54:26 tron Exp $
 
 # This section contains variables that might be overridden.
 PKGNAME?=	${PKGNAME_BASE}
@@ -7,6 +7,7 @@ COMMENT?=	Converts HTML to indexed HTML, PDF and/or PostScript
 # Normal package Makefile contents follow.
 DISTNAME=	htmldoc-1.8.27-source
 PKGNAME_BASE=	${DISTNAME:S/-source//}
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.easysw.com/pub/htmldoc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +17,7 @@ CONFLICTS+=	htmldoc-x11-[0-9]*
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.htmldoc.org/
+LICENSE=	gnu-gpl-v2
 
 # ps-pdf.cpp:3229: Internal compiler error. on 1.4 - 1.7 unknown
 NOT_FOR_PLATFORM=	NetBSD-1.[3-4]*-alpha
