@@ -1,8 +1,8 @@
 This is the old XML parsing library provided in the GNOME framework.
 XML is a standard to build tag based structured documents.  The
-internal document repesentation is as close as possible to the
+internal document representation is as close as possible to the
 DOM interfaces.  The interfaces of the XML library are by principle
-low level, there is nearly zero abstration.
+low level, there is nearly zero abstraction.
 
 Some features are:
 
