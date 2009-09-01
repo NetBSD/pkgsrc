@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2009/09/01 15:45:44 wiz Exp $
+
+--- src/emu/mamecore.h.orig	2009-07-20 12:03:21.000000000 +0000
++++ src/emu/mamecore.h
+@@ -333,6 +333,10 @@ DECL_NORETURN void CLIB_DECL fatalerror_
+     INLINE FUNCTIONS
+ ***************************************************************************/
+ 
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#endif
++#if !defined(__NetBSD__) || (__NetBSD_Version__ < 599001500)
+ /* population count */
+ INLINE int popcount(UINT32 val)
+ {
+@@ -342,6 +346,7 @@ INLINE int popcount(UINT32 val)
+ 		val &= val - 1;
+ 	return count;
+ }
++#endif
+ 
+ 
+ /* convert a series of 32 bits into a float */
