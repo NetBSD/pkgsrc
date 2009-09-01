@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2009/07/26 23:51:10 minskim Exp $
+# $NetBSD: Makefile,v 1.143 2009/09/01 21:05:11 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -189,6 +189,7 @@ SUBDIR+=	ttmkfdir2
 SUBDIR+=	type1inst
 SUBDIR+=	un-core-ttf
 SUBDIR+=	un-extra-ttf
+SUBDIR+=	uralic-ttf
 SUBDIR+=	vera-ttf
 SUBDIR+=	vfontcap-kochi
 SUBDIR+=	vlgothic-ttf
