@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.5 2009/09/01 18:19:15 tonio Exp $
+
+Check for getline
+
+--- configure.in.orig	2009-07-12 23:01:04.000000000 +0200
++++ configure.in
+@@ -146,7 +146,7 @@ AC_CHECK_HEADERS(unistd.h stdarg.h)
+ dnl Checks for typedefs, structures, and compiler characteristics.
+ 
+ dnl Checks for library functions.
+-AC_CHECK_FUNCS(getopt getopt_long setsid setpgid setpgrp putenv vsnprintf usleep)
++AC_CHECK_FUNCS(getopt getopt_long setsid setpgid setpgrp putenv vsnprintf usleep getline)
+ 
+ AC_TYPE_SIGNAL
+ 

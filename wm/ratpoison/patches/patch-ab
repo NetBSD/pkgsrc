@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2009/09/01 18:19:15 tonio Exp $
+
+Check for getline
+
+--- src/config.h.in.orig	2009-07-12 14:07:02.000000000 +0200
++++ src/config.h.in
+@@ -3,6 +3,9 @@
+ /* Define this to enable debugging messages */
+ #undef DEBUG
+ 
++/* Define to 1 if you have the `getline' function. */
++#undef HAVE_GETLINE
++
+ /* Define to 1 if you have the `getopt' function. */
+ #undef HAVE_GETOPT
+ 
