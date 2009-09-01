@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/01 14:39:28 adam Exp $
+bin/enblend
+bin/enfuse
+info/enblend.info
+info/enfuse-focus-stacking.info
+info/enfuse.info
+man/man1/enblend.1
+man/man1/enfuse.1
