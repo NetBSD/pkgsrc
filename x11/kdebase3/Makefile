@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.152 2009/08/29 23:03:34 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2009/09/01 09:51:02 wiz Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -33,6 +33,7 @@ REQD_DIRS+=		${PREFIX}/share/kde/fonts
 REQD_DIRS+=		${PREFIX}/share/kde/fonts/override
 
 CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap-client}"
+CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--without-java
 
 REPLACE_PERL+=		kcontrol/keys/convertShortcuts.pl \
@@ -67,14 +68,6 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/kdm
 RCD_SCRIPTS=		kdm
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD" && (${OS_VERSION:M5.99.1[5-9]*} || ${OS_VERSION:M5.99[2-9]*} || ${OS_VERSION:M[6-9]*})
-# no openssl for us due to incompatible API changes (STACK, ...)
-CONFIGURE_ARGS+=	--without-ssl
-.else
-CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
-.include "../../security/openssl/buildlink3.mk"
-.endif
 
 LIBS.NetBSD+=		${EXPORT_SYMBOLS_LDFLAGS}
 
@@ -214,6 +207,7 @@ CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"

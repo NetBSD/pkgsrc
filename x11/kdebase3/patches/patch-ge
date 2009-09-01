@@ -1,4 +1,4 @@
-$NetBSD: patch-ge,v 1.3 2008/05/18 12:19:01 markd Exp $
+$NetBSD: patch-ge,v 1.4 2009/09/01 09:51:02 wiz Exp $
 
 --- kcontrol/crypto/crypto.cpp.orig	2006-10-02 06:31:49.000000000 +1300
 +++ kcontrol/crypto/crypto.cpp
@@ -14,3 +14,29 @@ $NetBSD: patch-ge,v 1.3 2008/05/18 12:19:01 markd Exp $
  
    SSLv2Box->clear();
    SSLv3Box->clear();
+@@ -2337,8 +2341,10 @@ SSL_METHOD *meth;
+   CipherItem *item;
+   for (i=0; ; i++) {
+     int j, k;
+-    SSL_CIPHER *sc;
+-    sc = (meth->get_cipher)(i);
++#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++    const
++#endif
++    SSL_CIPHER *sc = (meth->get_cipher)(i);
+     if (!sc)
+       break;
+     // Leak of sc*?
+@@ -2365,8 +2371,10 @@ SSL_METHOD *meth;
+ 
+   for (i=0; ; i++) {
+     int j, k;
+-    SSL_CIPHER *sc;
+-    sc = (meth->get_cipher)(i);
++#if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++    const
++#endif
++    SSL_CIPHER *sc = (meth->get_cipher)(i);
+     if (!sc)
+       break;
+     // Leak of sc*?
