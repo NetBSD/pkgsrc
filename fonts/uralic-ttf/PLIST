@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/01 21:04:31 wiz Exp $
+lib/X11/fonts/TTF/BOOKUB__.TTF
+lib/X11/fonts/TTF/BOOKUI__.TTF
+lib/X11/fonts/TTF/BOOKU___.TTF
+lib/X11/fonts/TTF/CHANUI__.TTF
+lib/X11/fonts/TTF/GOTHUB__.TTF
+lib/X11/fonts/TTF/GOTHU___.TTF
+lib/X11/fonts/TTF/MONOU___.TTF
+lib/X11/fonts/TTF/PALLUB__.TTF
+lib/X11/fonts/TTF/PALLUI__.TTF
+lib/X11/fonts/TTF/PALLU___.TTF
+lib/X11/fonts/TTF/ROMAUB__.TTF
+lib/X11/fonts/TTF/ROMAUI__.TTF
+lib/X11/fonts/TTF/ROMAU___.TTF
+lib/X11/fonts/TTF/SANSCUB_.TTF
+lib/X11/fonts/TTF/SANSCU__.TTF
+lib/X11/fonts/TTF/SANSUBI_.TTF
+lib/X11/fonts/TTF/SANSUB__.TTF
+lib/X11/fonts/TTF/SANSUI__.TTF
+lib/X11/fonts/TTF/SANSU___.TTF
+lib/X11/fonts/TTF/SCHOUB__.TTF
+lib/X11/fonts/TTF/SCHOUI__.TTF
+lib/X11/fonts/TTF/SCHOU___.TTF
