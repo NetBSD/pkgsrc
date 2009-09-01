@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/01 21:07:37 wiz Exp $
+
+SHA1 (glpng-1.45.20081203.tar.gz) = c2515ab3395f84cbedf49a246c091ad4078ef43b
+RMD160 (glpng-1.45.20081203.tar.gz) = 14753b471d7b3192a06559a178807db30414cebd
+Size (glpng-1.45.20081203.tar.gz) = 40141 bytes
