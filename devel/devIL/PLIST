@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:40 joerg Exp $
-include/IL/config.h
-include/IL/devil_internal_exports.h
+@comment $NetBSD: PLIST,v 1.4 2009/09/01 16:44:26 hasso Exp $
+bin/ilur
+include/IL/devil_cpp_wrapper.hpp
 include/IL/il.h
-include/IL/il_wrap.h
 include/IL/ilu.h
 include/IL/ilu_region.h
 include/IL/ilut.h
 lib/libIL.la
 lib/libILU.la
 lib/libILUT.la
+lib/pkgconfig/IL.pc
+lib/pkgconfig/ILU.pc
+lib/pkgconfig/ILUT.pc
+info/DevIL_manual.info
