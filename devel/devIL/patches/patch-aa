@@ -1,20 +1,49 @@
-$NetBSD: patch-aa,v 1.1 2006/04/28 14:30:58 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2009/09/01 16:44:26 hasso Exp $
 
---- src-IL/src/il_tiff.c.orig	2006-04-28 12:38:43.000000000 +0000
-+++ src-IL/src/il_tiff.c
-@@ -168,13 +168,13 @@ ILboolean ilLoadTiffL(ILvoid *Lump, ILui
- void warningHandler(const char* mod, const char* fmt, va_list ap)
- {
- 	char buff[1024];
--	_vsnprintf(buff, 1024, fmt, ap);
-+	vsnprintf(buff, 1024, fmt, ap);
- }
+--- src-ILUT/src/ilut_opengl.c.orig	2009-08-30 23:51:10 +0300
++++ src-ILUT/src/ilut_opengl.c	2009-08-30 23:53:28 +0300
+@@ -58,7 +58,7 @@ void *aglGetProcAddress( const GLubyte *
+ //	#pragma comment(lib, "freeglut.lib")
+ #endif
  
- void errorHandler(const char* mod, const char* fmt, va_list ap)
- {
- 	char buff[1024];
--	_vsnprintf(buff, 1024, fmt, ap);
-+	vsnprintf(buff, 1024, fmt, ap);
- }
+-#ifdef linux
++#if defined(linux) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD) || defined(__OpenBSD__)
+ 	// fix for glXGetProcAddressARB
+ 	#define GLX_GLXEXT_PROTOTYPES
+ 	#include <GL/glx.h>
+@@ -84,7 +84,7 @@ void *aglGetProcAddress( const GLubyte *
  
- // Internal function used to load the Tiff.
+ static ILboolean HasCubemapHardware = IL_FALSE;
+ static ILboolean HasNonPowerOfTwoHardware = IL_FALSE;
+-#if defined(_WIN32) || defined(_WIN64) || defined(linux) || defined(__APPLE__)
++#if defined(_WIN32) || defined(_WIN64) || defined(linux) || defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD) || defined(__OpenBSD__)
+ 	ILGLTEXIMAGE3DARBPROC			ilGLTexImage3D = NULL;
+ 	ILGLTEXSUBIMAGE3DARBPROC		ilGLTexSubImage3D = NULL;
+ 	ILGLCOMPRESSEDTEXIMAGE2DARBPROC	ilGLCompressed2D = NULL;
+@@ -127,7 +127,7 @@ ILboolean ilutGLInit()
+ 			IsExtensionSupported("GL_EXT_texture3D")) {
+ 				ilGLCompressed3D = (ILGLCOMPRESSEDTEXIMAGE3DARBPROC)wglGetProcAddress("glCompressedTexImage3DARB");
+ 		}
+-	#elif linux
++	#elif defined(linux) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD) || defined(__OpenBSD__)
+ 		if (IsExtensionSupported("GL_ARB_texture_compression") &&
+ 			IsExtensionSupported("GL_EXT_texture_compression_s3tc")) {
+ 				ilGLCompressed2D = (ILGLCOMPRESSEDTEXIMAGE2DARBPROC)
+@@ -246,7 +246,7 @@ ILuint GLGetDXTCNum(ILenum DXTCFormat)
+ ILboolean ILAPIENTRY ilutGLTexImage_(GLuint Level, GLuint Target, ILimage *Image)
+ {
+ 	ILimage	*ImageCopy, *OldImage;
+-#if defined (_MSC_VER) || defined (linux) || defined(__APPLE__)
++#if defined (_MSC_VER) || defined (linux) || defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD) || defined(__OpenBSD__)
+ 	ILenum	DXTCFormat;
+ 	ILuint	Size;
+ 	ILubyte	*Buffer;
+@@ -259,7 +259,7 @@ ILboolean ILAPIENTRY ilutGLTexImage_(GLu
+ 
+ 	OldImage = ilGetCurImage();
+ 
+-#if defined (_MSC_VER) || defined (linux) || defined(__APPLE__)
++#if defined (_MSC_VER) || defined (linux) || defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD) || defined(__OpenBSD__)
+ 	if (ilutGetBoolean(ILUT_GL_USE_S3TC) && ilGLCompressed2D != NULL) {
+ 		if (Image->DxtcData != NULL && Image->DxtcSize != 0) {
+ 			DXTCFormat = GLGetDXTCNum(Image->DxtcFormat);
