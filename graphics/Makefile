@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.532 2009/08/21 23:02:55 wiz Exp $
+# $NetBSD: Makefile,v 1.533 2009/09/01 14:41:13 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -73,6 +73,7 @@ SUBDIR+=	djvulibre-tools
 SUBDIR+=	dvipng
 SUBDIR+=	dx
 SUBDIR+=	dxsamples
+SUBDIR+=	enblend-enfuse
 SUBDIR+=	eog
 SUBDIR+=	epeg
 SUBDIR+=	evas
@@ -236,6 +237,7 @@ SUBDIR+=	libungif
 SUBDIR+=	libv4l
 SUBDIR+=	libvideogfx
 SUBDIR+=	libwmf
+SUBDIR+=	libxmi
 SUBDIR+=	ljpeg
 SUBDIR+=	lprof
 SUBDIR+=	magicpoint
