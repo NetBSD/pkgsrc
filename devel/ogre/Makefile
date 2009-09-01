@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2009/08/26 19:56:44 sno Exp $
+# $NetBSD: Makefile,v 1.26 2009/09/01 16:53:40 hasso Exp $
 #
 
-DISTNAME=	ogre-v0-12-1
-PKGNAME=	ogre-0.12.1
-PKGREVISION=	9
+DISTNAME=	ogre-v1-6-3
+PKGNAME=	ogre-1.6.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ogre/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,19 +11,26 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ogre.sourceforge.net/
 COMMENT=	Object-Oriented Graphics Rendering Engine
 
-WRKSRC=			${WRKDIR}/ogrenew
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=			${WRKDIR}/ogre
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config xmkmf
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
-CONFIGURE_ARGS+=	--with-platform=SDL
+CONFIGURE_ARGS+=	--with-platform=GLX
+CONFIGURE_ARGS+=	--disable-freeimage
+CONFIGURE_ARGS+=	--disable-cg
 
 PKGCONFIG_OVERRIDE+=	OGRE.pc.in
 
+.include "../../archivers/zziplib/buildlink3.mk"
 .include "../../devel/devIL/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
