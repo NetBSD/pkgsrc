@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2009/07/14 18:20:46 tonio Exp $
+# $NetBSD: Makefile,v 1.30 2009/09/01 18:19:15 tonio Exp $
 #
 
 DISTNAME=	ratpoison-1.4.5
-PKGNAME=	${DISTNAME:S/-beta/beta/}
 CATEGORIES=	wm
 MASTER_SITES=	http://savannah.nongnu.org/download/ratpoison/
 
@@ -16,11 +15,14 @@ GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
 INFO_FILES=		yes
 
-USE_TOOLS+=	perl:run pkg-config
+USE_TOOLS+=	perl:run pkg-config autoconf
 REPLACE_PERL+=	contrib/rpws contrib/genrpbindings contrib/clickframe.pl
 REPLACE_SH=	contrib/allwindows.sh
 
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+pre-configure:
+	cd ${WRKSRC}; autoconf
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
