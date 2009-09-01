@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8408 2009/09/01 15:27:39 wiz Exp $
+$NetBSD: TODO,v 1.8409 2009/09/01 16:58:11 hasso Exp $
 
 Suggested new packages
 ======================
@@ -492,7 +492,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ddrescue-1.11
 	o defendguin-0.0.11
 	o delegate-9.9.4
-	o devIL-1.7.8
 	o dhid-5.3
 	o dia-0.97
 	o dinotrace-9.3e
@@ -908,7 +907,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ocsigen-1.1.0 [pkg/40761]
 	o odbc-postgresql-8.2.3
 	o offlineimap-6.0.3
-	o ogre-0.12.3
 	o olvwm-4.5
 	o oo2c-2.1.7
 	o openafs-1.4.10 [pkg/41262]
