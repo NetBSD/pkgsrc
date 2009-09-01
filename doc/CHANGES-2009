@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3478 2009/09/01 21:05:39 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3479 2009/09/01 21:08:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4539,3 +4539,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/devIL to 1.7.8 [hasso 2009-09-01]
 	Updated devel/ogre to 1.6.3 [hasso 2009-09-01]
 	Added fonts/uralic-ttf version 0.0.20040603 [wiz 2009-09-01]
+	Added graphics/glpng version 1.45.20081203 [wiz 2009-09-01]
