@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.20 2009/08/26 19:56:43 sno Exp $
+# $NetBSD: Makefile,v 1.21 2009/09/01 16:44:26 hasso Exp $
 #
 
-DISTNAME=	DevIL-1.6.6
+DISTNAME=	DevIL-${DEVIL_VERSION}
 PKGNAME=	${DISTNAME:S/D/d/}
-PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openil/}
+
+DEVIL_VERSION=	1.7.8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openil.sourceforge.net/
@@ -13,13 +14,19 @@ COMMENT=	Developer's Image Library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/DevIL
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+WRKSRC=			${WRKDIR}/devil-${DEVIL_VERSION}
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
 
-CONFIGURE_ARGS+=	--disable-lcms
+INFO_FILES=		yes
+
+CONFIGURE_ARGS+=	--enable-ILU
+CONFIGURE_ARGS+=	--enable-ILUT
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
