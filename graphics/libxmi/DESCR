@@ -1,0 +1,12 @@
+libxmi is a machine-independent vector graphics rasterization library.
+libxmi is based on the vector graphics code in the sample X server that is
+a part of the X Window System distribution. The code has been converted
+to ANSI C, extensively rearranged and commented, and somewhat extended.
+(In particular, by adding support for multicolored dashing.)
+
+The core API includes functions for creating, manipulating, and destroying
+miPaintSet objects. It also includes functions for creating, manipulating,
+and destroying miCanvas objects. The function miCopyPaintedSetToCanvas()
+moves the points in a miPaintedSet to the next stage of the graphics
+pipeline: it merges them onto a miCanvas. There is support in this second
+stage for sophisticated pixel-merging algorithms.
