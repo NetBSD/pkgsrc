@@ -1,4 +1,7 @@
-Enblend combines images that overlap like this into a single large image without
-seams. Enfuse combines images that overlap like this into a single image with
-good exposure and good focus. Both programs assume that your images are already
-lined up. To make panoramas with Enblend and/or Enfuse, use Hugin.
+Enblend combines images that partially overlap into a single large
+image without seams. Enfuse combines images that overlap but have
+different lighting or focusing into a single image with good exposure
+and good focus. Both programs assume that your images are already
+lined up.
+
+To make panoramas with Enblend and/or Enfuse, use Hugin.
