@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3476 2009/09/01 14:43:02 adam Exp $
+$NetBSD: CHANGES-2009,v 1.3477 2009/09/01 16:58:11 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4536,3 +4536,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/hobbitclient to 4.2.0nb2 [he 2009-08-31]
 	Added graphics/enblend-enfuse version 3.2 [adam 2009-09-01]
 	Added graphics/libxmi version 1.2 [adam 2009-09-01]
+	Updated devel/devIL to 1.7.8 [hasso 2009-09-01]
+	Updated devel/ogre to 1.6.3 [hasso 2009-09-01]
