@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3480 2009/09/01 21:14:42 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3481 2009/09/01 22:03:44 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4541,3 +4541,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/uralic-ttf version 0.0.20040603 [wiz 2009-09-01]
 	Added graphics/glpng version 1.45.20081203 [wiz 2009-09-01]
 	Added games/chromium-bsu version 0.9.14 [wiz 2009-09-01]
+	Updated mail/milter-greylist to 4.2.3 [tron 2009-09-01]
