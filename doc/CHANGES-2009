@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3475 2009/08/31 22:01:23 he Exp $
+$NetBSD: CHANGES-2009,v 1.3476 2009/09/01 14:43:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4534,3 +4534,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/ghostscript to 8.70 [wiz 2009-08-31]
 	Updated x11/kdelibs3 to 3.5.10nb4 [wiz 2009-08-31]
 	Updated net/hobbitclient to 4.2.0nb2 [he 2009-08-31]
+	Added graphics/enblend-enfuse version 3.2 [adam 2009-09-01]
+	Added graphics/libxmi version 1.2 [adam 2009-09-01]
