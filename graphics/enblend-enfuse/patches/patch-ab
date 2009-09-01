@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/09/01 14:39:28 adam Exp $
+
+--- src/enfuse.cc.orig	2009-08-31 18:38:09.000000000 +0200
++++ src/enfuse.cc
+@@ -62,8 +62,12 @@ extern "C" char *optarg;
+ extern "C" int optind;
+ 
+ #ifndef _MSC_VER
++#ifdef __NetBSD__
++//#include <ieeefp.h>
++#else
+ #include <fenv.h>
+ #endif
++#endif
+ 
+ #include <signal.h>
+ #include <stdlib.h>
+@@ -279,8 +283,12 @@ int main(int argc, char** argv) {
+     // See changes in vigra numerictraits.hxx
+     _controlfp( _RC_NEAR, _MCW_RC );
+ #else
++#ifdef __NetBSD__
++//    fpsetround(FE_TONEAREST);
++#else
+     fesetround(FE_TONEAREST);
+ #endif
++#endif
+     
+ #ifndef _WIN32
+     sigemptyset(&SigintMask);
