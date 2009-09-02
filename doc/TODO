@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8409 2009/09/01 16:58:11 hasso Exp $
+$NetBSD: TODO,v 1.8410 2009/09/02 10:06:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -727,7 +727,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kipi-plugins-0.4.0
 	o kmess-1.5.1
 	o kmp-0.5
-	o kmymoney2-1.0
 	o kodos-2.4.5
 	o koffice-2.0.0
 	o kphotobook-0.0.7

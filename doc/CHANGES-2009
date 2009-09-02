@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3482 2009/09/02 06:06:34 dsainty Exp $
+$NetBSD: CHANGES-2009,v 1.3483 2009/09/02 10:06:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4543,3 +4543,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added games/chromium-bsu version 0.9.14 [wiz 2009-09-01]
 	Updated mail/milter-greylist to 4.2.3 [tron 2009-09-01]
 	Updated print/kpathsea to 5.0.0nb1 [dsainty 2009-09-02]
+	Updated finance/kmymoney2 to 1.0.0 [wiz 2009-09-02]
