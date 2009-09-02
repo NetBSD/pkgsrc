@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.11 2002/11/01 00:31:18 wiz Exp $
+$NetBSD: patch-ab,v 1.12 2009/09/02 15:27:48 joerg Exp $
 
---- Makefile.in.orig	Tue Oct  8 18:09:12 2002
+--- Makefile.in.orig	2002-10-08 18:09:12.000000000 +0200
 +++ Makefile.in
 @@ -14,10 +14,6 @@ INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -13,11 +13,13 @@ $NetBSD: patch-ab,v 1.11 2002/11/01 00:31:18 wiz Exp $
  MAKEINFO = makeinfo
  TEXI2DVI = texi2dvi
  
-@@ -131,11 +127,11 @@ install: libgdbm.la gdbm.h gdbm.info
+@@ -130,22 +126,22 @@ install: libgdbm.la gdbm.h gdbm.info
+ 	$(srcdir)/mkinstalldirs $(INSTALL_ROOT)$(libdir) \
  		$(INSTALL_ROOT)$(includedir) $(INSTALL_ROOT)$(man3dir) \
  		$(INSTALL_ROOT)$(infodir)
- 	$(LIBTOOL) $(INSTALL) -c libgdbm.la $(INSTALL_ROOT)$(libdir)/libgdbm.la
+-	$(LIBTOOL) $(INSTALL) -c libgdbm.la $(INSTALL_ROOT)$(libdir)/libgdbm.la
 -	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) gdbm.h \
++	$(LIBTOOL) --mode=install $(INSTALL) -c libgdbm.la $(INSTALL_ROOT)$(libdir)/libgdbm.la
 +	$(INSTALL_DATA) gdbm.h \
  		$(INSTALL_ROOT)$(includedir)/gdbm.h
 -	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/gdbm.3 \
@@ -28,9 +30,10 @@ $NetBSD: patch-ab,v 1.11 2002/11/01 00:31:18 wiz Exp $
  		$(INSTALL_ROOT)$(infodir)/gdbm.info
  
  install-compat:
-@@ -143,9 +139,9 @@ install-compat:
+ 	$(srcdir)/mkinstalldirs $(INSTALL_ROOT)$(libdir) \
  		$(INSTALL_ROOT)$(includedir)
- 	$(LIBTOOL) $(INSTALL) -c libgdbm_compat.la \
+-	$(LIBTOOL) $(INSTALL) -c libgdbm_compat.la \
++	$(LIBTOOL) --mode=install $(INSTALL) -c libgdbm_compat.la \
  		$(INSTALL_ROOT)$(libdir)/libgdbm_compat.la
 -	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/dbm.h \
 +	$(INSTALL_DATA) $(srcdir)/dbm.h \
@@ -40,3 +43,34 @@ $NetBSD: patch-ab,v 1.11 2002/11/01 00:31:18 wiz Exp $
  		$(INSTALL_ROOT)$(includedir)/ndbm.h
  
  #libgdbm.a: $(OBJS) gdbm.h
+@@ -172,10 +168,10 @@ gdbm.h:	gdbm.proto gdbmerrno.h gdbm.prot
+ 	chmod -w gdbm.h
+ 
+ testgdbm: testgdbm.o libgdbm.la @LIBOBJS@
+-	$(LIBTOOL) $(CC) $(LDFLAGS) -o testgdbm testgdbm.o libgdbm.la @LIBOBJS@
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o testgdbm testgdbm.o libgdbm.la @LIBOBJS@
+ 
+ testdbm: testdbm.o libgdbm.la libgdbm_compat.la
+-	$(LIBTOOL) $(CC) $(LDFLAGS) -o testdbm testdbm.o libgdbm.la libgdbm_compat.la
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o testdbm testdbm.o libgdbm.la libgdbm_compat.la
+ 
+ tdbm: testdbm.o
+ 	$(CC) $(LDFLAGS) -o tdbm testdbm.o $(LIBS)
+@@ -184,7 +180,7 @@ testndbm.o: testndbm.c
+ 	$(CC) -c -I. -I$(srcdir) $(CFLAGS) $(DEFS) -DGNU $(srcdir)/testndbm.c
+ 
+ testndbm: testndbm.o libgdbm.la libgdbm_compat.la
+-	$(LIBTOOL) $(CC) $(LDFLAGS) -o testndbm testndbm.o libgdbm.la libgdbm_compat.la
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o testndbm testndbm.o libgdbm.la libgdbm_compat.la
+ 
+ tndbm.o: testndbm.c
+ 	cp $(srcdir)/testndbm.c ./tndbm.c
+@@ -195,7 +191,7 @@ tndbm: tndbm.o
+ 	$(CC) $(LDFLAGS) -o tndbm tndbm.o $(LIBS)
+ 
+ conv2gdbm: conv2gdbm.o libgdbm.la @LIBOBJS@
+-	$(LIBTOOL) $(CC) $(LDFLAGS) -o conv2gdbm conv2gdbm.o $(LIBS) libgdbm.la @LIBOBJS@
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o conv2gdbm conv2gdbm.o $(LIBS) libgdbm.la @LIBOBJS@
+ 
+ lintgdbm: 
+ 	lint $(DEFS) $(LFLAGS) $(DBM_CF) $(NDBM_CF) $(GDBM_CF) testgdbm.c
