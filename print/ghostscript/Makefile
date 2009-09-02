@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2009/08/31 20:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2009/09/02 15:55:08 wiz Exp $
 
 DISTNAME=	ghostscript-8.70
 CATEGORIES=	print
@@ -56,10 +56,6 @@ CFLAGS.NetBSD=		-fPIC
 CFLAGS.Linux=		-fPIC
 CFLAGS.SunOS=		-fPIC
 
-###.if ${OPSYS} == "Darwin"
-###MAKEFLAGS= "LDFLAGS_SO=-dynamiclib"
-###.endif
-
 # Interim IRIX build fix, the real problem is that fontconfig.pc doesn't
 # require linking against libiconv when it should do so.
 .if ${OPSYS} == "IRIX"
@@ -68,18 +64,12 @@ BUILDLINK_TRANSFORM+=	l:fontconfig:fontconfig:iconv
 
 CONFIGURE_ENV+=	LPLIBDIR=${LOCALBASE}/lib
 
-# XXX Sun Studio Compiler does not like DOS linebreaks
-# should be fixed in next ghostscript release
-DELDOSCR= ${WRKSRC}/jasper/src/libjasper/jpc/jpc_qmfb.c
-
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MKDIR} ${WRKSRC}/obj
 #	${MV} ${WRKSRC}/jasper ${WRKSRC}/jasper.dontuse
 	${MV} ${WRKSRC}/libpng ${WRKSRC}/libpng.dontuse
 #	${MV} ${WRKSRC}/zlib ${WRKSRC}/zlib.dontuse
-	${TR} -d '\015' <${DELDOSCR} >${DELDOSCR}.tmp \
-		&& ${MV} ${DELDOSCR}.tmp ${DELDOSCR}
 
 post-install:
 	${LN} -sf gsc ${DESTDIR}${PREFIX}/bin/gs
