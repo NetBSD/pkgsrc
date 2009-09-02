@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2009/07/16 23:57:57 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2009/09/02 08:34:15 wiz Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
@@ -7,7 +7,7 @@ PKGREVISION=	20
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
-MAINTAINER=	kei@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Machine-independent part of teTeX
 

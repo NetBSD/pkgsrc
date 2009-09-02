@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.54 2009/08/19 05:47:17 minskim Exp $
+# $NetBSD: Makefile.common,v 1.55 2009/09/02 08:34:16 wiz Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=w3m/}
 
-MAINTAINER=	kei@NetBSD.org, uebayasi@NetBSD.org
+MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://w3m.sourceforge.net/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

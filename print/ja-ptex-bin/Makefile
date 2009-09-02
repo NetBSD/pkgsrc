@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2009/04/10 20:07:28 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2009/09/02 08:34:14 wiz Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -10,7 +10,7 @@ DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} # XXX
 DISTFILES+=	${DF_DVIPSK_PATCH}
 DISTFILES+=	mendexk${MENDEXK_VERS}${EXTRACT_SUFX}
 
-MAINTAINER=	kei@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ascii.co.jp/pb/ptex/
 COMMENT=	Publishing TeX (pTeX)
 

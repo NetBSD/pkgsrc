@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/07/07 19:26:27 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2009/09/02 08:34:16 wiz Exp $
 #
 
 DISTNAME=	htmllint
@@ -8,7 +8,7 @@ CATEGORIES=	www japanese
 MASTER_SITES=	http://openlab.ring.gr.jp/k16/htmllint/archives/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	kei@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/k16/htmllint/
 COMMENT=	Another HTML-Lint program
 
