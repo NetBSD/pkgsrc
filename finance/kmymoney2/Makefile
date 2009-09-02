@@ -1,19 +1,29 @@
-# $NetBSD: Makefile,v 1.41 2009/08/26 19:57:28 sno Exp $
+# $NetBSD: Makefile,v 1.42 2009/09/02 10:05:52 wiz Exp $
 
-DISTNAME=	kmymoney2-0.8.6
-PKGREVISION=	5
+DISTNAME=	kmymoney2-1.0.0
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
+EXTRACT_SUFX=  .tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gary@duzan.org
 HOMEPAGE=	http://kmymoney2.sourceforge.net/
 COMMENT=	Personal finance manager for KDE
+LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake msgfmt perl
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		gmake msgfmt perl pkg-config bash
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+CONFIG_SHELL=		${BASH}
 SHLIBTOOL_OVERRIDE=	# empty
+
+USE_TOOLS+=		gsed
+USE_TOOLS+=		autoconf
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 .include "options.mk"
 
@@ -21,21 +31,14 @@ CONFIGURE_ARGS+=	--enable-mt
 
 REPLACE_PERL+=	admin/fixuifiles
 
-# a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
-SUBST_CLASSES+=		hints
-SUBST_STAGE.hints=	post-patch
-SUBST_MESSAGE.hints=	Fix includehints.
-SUBST_FILES.hints=	kmymoney2/dialogs/*.ui kmymoney2/views/*.ui
-SUBST_FILTER_CMD.hints=	${GREP} -v includehint
-
-BUILDLINK_DEPMETHOD.libXt?=	build
-
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.if (${OPSYS} == "NetBSD")
+BUILDLINK_ABI_DEPENDS.qt3-libs+=	qt3-libs>=3.3.8nb9
+.endif
+.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
