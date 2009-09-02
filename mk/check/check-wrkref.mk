@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.19 2009/01/12 13:11:22 uebayasi Exp $
+# $NetBSD: check-wrkref.mk,v 1.20 2009/09/02 14:43:06 joerg Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -16,9 +16,12 @@
 #	* "work" for WRKDIR
 #	* "wrkobjdir" for WRKOBJDIR
 #	* "pkgsrc" for PKGSRCDIR
+#	* "buildlink" for BUILDLINK_DIR and BUILDLINK_X11_DIR
 #	* "extra" for CHECK_WRKREF_EXTRA_DIRS
 #
-#	Default value: "tools" for PKG_DEVELOPERs, "no" otherwise.
+#	Default value: "tools home" for PKG_DEVELOPERs, "no" otherwise.
+#	The "buildlink" option works best in combination with
+#	STRIP_DEBUG=yes.
 #
 # CHECK_WRKREF_EXTRA_DIRS
 #	A list of additional directories (or other strings) that must
@@ -52,6 +55,10 @@ _CHECK_WRKREF_DIR.home=		${FAKEHOMEDIR}
 _CHECK_WRKREF_DIR.wrkobjdir=	${WRKOBJDIR}
 _CHECK_WRKREF_DIR.wrksrc=	${WRKSRC}
 _CHECK_WRKREF_DIR.pkgsrc=	${PKGSRCDIR}
+_CHECK_WRKREF_DIR.buildlink=	${BUILDLINK_DIR}
+.if defined(USE_X11) && ${X11_TYPE} != "modular"
+_CHECK_WRKREF_DIR.buildlink+=	${BUILDLINK_X11_DIR}
+.endif
 _CHECK_WRKREF_DIR.extra=	${CHECK_WRKREF_EXTRA_DIRS}
 
 _CHECK_WRKREF_DIRS=	# none
