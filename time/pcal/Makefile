@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:53 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/09/02 08:34:15 wiz Exp $
 #
 
 DISTNAME=	pcal-4.7
@@ -7,7 +7,7 @@ CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcal/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kei@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pcal.sourceforge.net/
 COMMENT=	PostScript calendar program
 
