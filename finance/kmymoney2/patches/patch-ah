@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.3 2009/09/02 10:05:52 wiz Exp $
+
+--- acinclude.m4.orig	2009-05-28 06:44:50.000000000 -0400
++++ acinclude.m4	2009-05-28 06:45:18.000000000 -0400
+@@ -612,7 +612,7 @@ AC_DEFUN([KDE_SUBST_PROGRAMS],
+         KDE_FIND_PATH(xmllint, XMLLINT, [${prefix}/bin ${exec_prefix}/bin], [XMLLINT=""])
+ 
+         if test -n "$MEINPROC" -a "$MEINPROC" != "compiled"; then
+- 	    kde_sharedirs="/usr/share/kde /usr/local/share /usr/share /opt/kde3/share /opt/kde/share $prefix/share `kde-config --prefix`/share"
++ 	    kde_sharedirs="/usr/share/kde /usr/local/share /usr/share /opt/kde3/share /opt/kde/share $prefix/share `kde-config --prefix`/share/kde"
+             test -n "$KDEDIR" && kde_sharedirs="$KDEDIR/share $kde_sharedirs"
+             AC_FIND_FILE(apps/ksgmltools2/customization/kde-chunk.xsl, $kde_sharedirs, KDE_XSL_STYLESHEET)
+ 	    if test "$KDE_XSL_STYLESHEET" = "NO"; then

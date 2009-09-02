@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2006/10/07 12:14:18 markd Exp $
+$NetBSD: patch-ad,v 1.5 2009/09/02 10:05:52 wiz Exp $
 
---- developer-doc/phb/Makefile.in.orig	2006-05-15 10:21:38.000000000 -0400
-+++ developer-doc/phb/Makefile.in	2006-07-04 23:28:49.000000000 -0400
-@@ -511,9 +511,9 @@ all:	$(TARGETS) $(PDF_TARGET)
+--- developer-doc/phb/Makefile.in.orig	2009-02-24 02:13:54.000000000 -0500
++++ developer-doc/phb/Makefile.in	2009-05-23 13:17:59.000000000 -0400
+@@ -499,9 +499,9 @@ all:	$(TARGETS) $(PDF_TARGET)
  
  phb.html:	$(DOCBOOK_FILES)
  	@if test -e $(MEINPROC); then \
@@ -13,4 +13,4 @@ $NetBSD: patch-ad,v 1.4 2006/10/07 12:14:18 markd Exp $
 +		$(MEINPROC) --stylesheet $(kde_libs_prefix)/share/kde/apps/ksgmltools2/customization/$(STYLESHEET) $(srcdir)/phb.docbook --stdout | sed "s/ISO-8859-1/UTF-8/g" > phb.html; \
  	fi
  
- # if we're in a VPATH environment, we need to copy all files over
+ preview: phb.html
