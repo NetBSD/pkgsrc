@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2009/08/26 19:56:48 sno Exp $
+# $NetBSD: Makefile,v 1.59 2009/09/02 13:32:56 joerg Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -31,16 +31,16 @@ USE_TOOLS+=		pax
 do-install:
 	for bin in assistant designer linguist lrelease lupdate qm2ts	\
 	    qmake qtconfig uic; do					\
-		${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/$$bin	\
+		${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/$$bin	\
 		    ${DESTDIR}${QTPREFIX}/bin;				\
 	done
 	for lib in libeditor.la libqassistantclient.la libqui.la; do	\
-		${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/lib/$$lib	\
+		${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/lib/$$lib	\
 		    ${DESTDIR}${QTPREFIX}/lib;				\
 	done
 	for plugin in libwizards.la libcppeditor.la libdlgplugin.la	\
 	    librcplugin.la libkdevdlgplugin.la; do			\
-		${LIBTOOL} ${INSTALL_PROGRAM}				\
+		${LIBTOOL} --mode=install ${INSTALL_PROGRAM}				\
 		    ${WRKSRC}/plugins/designer/$$plugin			\
 		    ${DESTDIR}${QTPREFIX}/plugins/designer;		\
 	done
