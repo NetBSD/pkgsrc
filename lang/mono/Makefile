@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2009/08/21 09:29:28 kefren Exp $
+# $NetBSD: Makefile,v 1.93 2009/09/02 12:09:01 wiz Exp $
 
 DISTNAME=	mono-${MONO_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
-PKGREVISION=	2
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -17,7 +15,7 @@ BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 CONFLICTS=	pnet-[0-9]*
 
-MONO_VERSION=		2.4.2.2
+MONO_VERSION=		2.4.2.3
 ALL_ENV+=		MONO_SHARED_DIR=${WRKDIR:Q}
 
 USE_TOOLS+=		bison gmake gtar perl:run pkg-config bash:run msgfmt
