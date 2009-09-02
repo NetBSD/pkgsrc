@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2008/12/29 10:13:12 markd Exp $
+$NetBSD: distinfo,v 1.8 2009/09/02 13:04:59 hasso Exp $
 
 SHA1 (cfitsio3100.tar.gz) = a0586a5411e2882165d55c46e66473f555142e07
 RMD160 (cfitsio3100.tar.gz) = cd2d944ad73c74053ecd4c78b7efe5195cc8d43b
 Size (cfitsio3100.tar.gz) = 3022189 bytes
 SHA1 (patch-aa) = 1df7c1f293a1d6b7b651afda943e7243f94c7469
-SHA1 (patch-ad) = c8b232580b40c3c2a8d5b4aace74026d7b561689
+SHA1 (patch-ad) = 72ab7f4ecc29a27354e80d0b86bcc4612113d002
