@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2009/09/02 15:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2009/09/02 15:56:03 wiz Exp $
 
 DISTNAME=	ghostscript-8.70
 CATEGORIES=	print
@@ -19,7 +19,6 @@ DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--enable-debug
 MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 
