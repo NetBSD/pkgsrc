@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.783 2009/08/25 12:23:03 wiz Exp $
+# $NetBSD: Makefile,v 1.784 2009/09/02 22:33:55 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -198,6 +198,7 @@ SUBDIR+=	kdenetwork3
 SUBDIR+=	kftpgrabber
 SUBDIR+=	kiax
 SUBDIR+=	kismet
+SUBDIR+=	kmldonkey
 SUBDIR+=	kphone
 SUBDIR+=	ktorrent
 SUBDIR+=	lambdamoo
