@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:52 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/02 12:37:10 asau Exp $
 #
 
 DISTNAME=	anacron-2.3
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anacron/}
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://anacron.sourceforge.net/
 COMMENT=	Periodic command scheduler
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
