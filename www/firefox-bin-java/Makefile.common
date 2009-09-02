@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.9 2009/04/09 00:48:18 joerg Exp $
+# $NetBSD: Makefile.common,v 1.10 2009/09/02 08:34:16 wiz Exp $
 
 DISTNAME=		${MOZ_BIN}-java-1.2
 CATEGORIES=		www lang
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		kei@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT?=		Java Run Time Environment (JRE) 1.5 plugin for firefox-bin
 
 DEPENDS+=		sun-jre15-[0-9]*:../../lang/sun-jre15
