@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8411 2009/09/02 11:38:13 wiz Exp $
+$NetBSD: TODO,v 1.8412 2009/09/02 12:09:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -842,7 +842,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
-	o mono-2.4.2.3
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
 	o mp3blaster-3.2.3

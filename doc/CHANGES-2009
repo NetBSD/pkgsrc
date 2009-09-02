@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3484 2009/09/02 11:38:13 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3485 2009/09/02 12:09:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4545,3 +4545,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/kpathsea to 5.0.0nb1 [dsainty 2009-09-02]
 	Updated finance/kmymoney2 to 1.0.0 [wiz 2009-09-02]
 	Updated games/powermanga to 0.90 [wiz 2009-09-02]
+	Updated lang/mono to 2.4.2.3 [wiz 2009-09-02]
