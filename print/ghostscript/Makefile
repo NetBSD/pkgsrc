@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2009/09/02 15:56:03 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2009/09/02 15:57:08 wiz Exp $
 
 DISTNAME=	ghostscript-8.70
 CATEGORIES=	print
@@ -9,13 +9,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ghostscript.sourceforge.net/
 COMMENT=	Postscript interpreter
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 CONFLICTS+=		ghostscript-afpl-[0-9]*
 CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
-DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
