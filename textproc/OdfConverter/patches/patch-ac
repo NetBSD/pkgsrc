@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2009/07/27 05:39:21 dsainty Exp $
+$NetBSD: patch-ac,v 1.2 2009/09/02 08:47:15 wiz Exp $
 
 Fix Mono-specific coding errors.
 
---- source/shell/odfconverter/OdfValidator.cs.orig	2009-02-11 10:50:02.000000000 +1300
-+++ source/shell/odfconverter/OdfValidator.cs	2009-07-16 17:23:31.469982005 +1200
+--- source/Shell/OdfConverter/OdfValidator.cs.orig	2009-02-11 10:50:02.000000000 +1300
++++ source/Shell/OdfConverter/OdfValidator.cs	2009-07-16 17:23:31.469982005 +1200
 @@ -49,9 +49,9 @@
  	
  #if MONO
