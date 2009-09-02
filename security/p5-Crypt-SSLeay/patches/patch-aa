@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.4 2009/09/02 11:43:31 plunky Exp $
+
+add a workaround for openssl versions that redefine the BLOCK type
+
+--- SSLeay.xs.orig	2009-09-02 12:23:55.000000000 +0100
++++ SSLeay.xs
+@@ -18,6 +18,7 @@ extern "C" {
+ #define PERL5 1
+ #endif
+ 
++#define BLOCK osslBLOCK
+ /* ssl.h or openssl/ssl.h is included from the crypt_ssleay_version
+  * file which is written when building with perl Makefile.PL
+  * #include "ssl.h"
