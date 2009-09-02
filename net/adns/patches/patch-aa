@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2001/11/19 19:39:05 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2009/09/02 11:01:50 joerg Exp $
 
 --- client/Makefile.in.orig	Sat Sep 16 20:43:10 2000
 +++ client/Makefile.in
@@ -16,14 +16,14 @@ $NetBSD: patch-aa,v 1.1 2001/11/19 19:39:05 jlam Exp $
  install:	$(TARG_INSTALL)
  		set -xe; for f in $(TARG_INSTALL); \
 -			do $(INSTALL_PROGRAM) $$f $(bin_dir)/$$f; done
-+			do ${LIBTOOL} $(INSTALL_PROGRAM) $$f $(bin_dir)/$$f; done
++			do ${LIBTOOL} --mode=install $(INSTALL_PROGRAM) $$f $(bin_dir)/$$f; done
  
  uninstall:
  		for f in $(TARGETS); do rm -f $(bin_dir)/$$f; done
  
  adnshost:	$(ADH_OBJS) $(DYNAMIC_DEP)
 -		$(CC) $(LDFLAGS) $(ADH_OBJS) $(DYNAMIC_LINK) -o $@ $(LDLIBS)
-+		$(LIBTOOL) $(CC) $(LDFLAGS) $(ADH_OBJS) $(DYNAMIC_LINK) -o $@ $(LDLIBS)
++		$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) $(ADH_OBJS) $(DYNAMIC_LINK) -o $@ $(LDLIBS)
  
  adnshost_s:	$(ADH_OBJS) $(STATIC_LIB)
  		$(CC) $(LDFLAGS) $(ADH_OBJS) $(STATIC_LIB) -o $@ $(LDLIBS)
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.1 2001/11/19 19:39:05 jlam Exp $
  
  %:		%.o $(DYNAMIC_DEP)
 -		$(CC) $(LDFLAGS) $< $(DYNAMIC_LINK) -o $@ $(LDLIBS)
-+		${LIBTOOL} $(CC) $(LDFLAGS) $< $(DYNAMIC_LINK) -o $@ $(LDLIBS)
++		${LIBTOOL} --mode=link $(CC) $(LDFLAGS) $< $(DYNAMIC_LINK) -o $@ $(LDLIBS)
  
  %_s:		%.o $(STATIC_LIB)
  		$(CC) $(LDFLAGS) $< $(STATIC_LIB) -o $@ $(LDLIBS)
