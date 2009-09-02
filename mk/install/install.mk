@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.52 2008/11/18 22:03:56 rillig Exp $
+# $NetBSD: install.mk,v 1.53 2009/09/02 14:40:41 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -26,6 +26,11 @@
 # INSTALL_UNSTRIPPED
 #	If "yes", all binaries and shared libraries are installed
 #	unstripped. Otherwise they are stripped while being installed.
+#	This option is not supported by all packages.
+#
+# STRIP_DEBUG
+#	If set to "yes", call ${STRI} -g to remove debug information
+#	from all files. The symbol tables are still preserved.
 #
 # Keywords: strip unstripped
 #
@@ -183,6 +188,9 @@ _INSTALL_ALL_TARGETS+=		pre-install
 _INSTALL_ALL_TARGETS+=		do-install
 _INSTALL_ALL_TARGETS+=		post-install
 _INSTALL_ALL_TARGETS+=		plist
+.if !empty(STRIP_DEBUG:M[Yy][Ee][Ss])
+_INSTALL_ALL_TARGETS+=		install-strip-debug
+.endif
 _INSTALL_ALL_TARGETS+=		install-doc-handling
 _INSTALL_ALL_TARGETS+=		install-script-data
 .if empty(CHECK_FILES:M[nN][oO]) && !empty(CHECK_FILES_SUPPORTED:M[Yy][Ee][Ss])
@@ -323,6 +331,19 @@ pre-install:
 post-install:
 	@${DO_NADA}
 .endif
+
+######################################################################
+### install-strip-debug (PRIVATE)
+######################################################################
+### install-strip-debug tries to strip debug information from
+### the files in PLIST.
+###
+.PHONY: install-strip-debug
+install-strip-debug: plist
+	@${STEP_MSG} "Automatic stripping of debug information"
+	${RUN}${CAT} ${PLIST} \
+	| ${SED} -e 's|^|${DESTDIR}${PREFIX}/|' \
+	| ${XARGS} ${STRIP} -g 2>/dev/null || ${TRUE}
 
 ######################################################################
 ### install-doc-handling (PRIVATE)
