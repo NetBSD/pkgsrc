@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.53 2009/09/02 14:40:41 joerg Exp $
+# $NetBSD: install.mk,v 1.54 2009/09/02 22:05:42 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -341,7 +341,7 @@ post-install:
 .PHONY: install-strip-debug
 install-strip-debug: plist
 	@${STEP_MSG} "Automatic stripping of debug information"
-	${RUN}${CAT} ${PLIST} \
+	${RUN}${CAT} ${_PLIST_NOKEYWORDS} \
 	| ${SED} -e 's|^|${DESTDIR}${PREFIX}/|' \
 	| ${XARGS} ${STRIP} -g 2>/dev/null || ${TRUE}
 
@@ -367,8 +367,7 @@ _DOC_COMPRESS=								\
 install-doc-handling: plist
 	@${STEP_MSG} "Automatic manual page handling"
 	${RUN} \
-	${CAT} ${PLIST} \
-	| ${GREP} -v "^@" \
+	${CAT} ${_PLIST_NOKEYWORDS} \
 	| ${EGREP} ${_PLIST_REGEXP.man:Q} \
 	| ${_DOC_COMPRESS}
 
