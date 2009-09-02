@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8412 2009/09/02 12:09:12 wiz Exp $
+$NetBSD: TODO,v 1.8413 2009/09/02 12:11:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1182,7 +1182,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.1 [needs polkit>=1.0?]
 	o systrace-1.6e
-	o t-prot-2.7.1
 	o tacacs-4.0.4.14
 	o tads-3.0.16
 	o tcl-8.5.5
