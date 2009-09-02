@@ -1,28 +1,19 @@
-$NetBSD: patch-ad,v 1.2 2005/01/30 23:48:32 salo Exp $
+$NetBSD: patch-ad,v 1.3 2009/09/02 11:38:01 wiz Exp $
 
---- src/Makefile.in.orig	2004-08-01 22:37:57.000000000 +0200
-+++ src/Makefile.in	2005-01-30 21:45:13.000000000 +0100
-@@ -133,8 +133,8 @@
+--- src/Makefile.in.orig	2007-09-04 08:41:04.000000000 +0000
++++ src/Makefile.in
+@@ -220,8 +220,8 @@ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
  target_vendor = @target_vendor@
- 
- NULL = 
 -gamesdir = $(prefix)/games
 -scoredir = /var/games
 +gamesdir = $(prefix)/bin
 +scoredir = $(localstatedir)/games
  score = powermanga.hi
- 
- games_PROGRAMS = powermanga
-@@ -321,7 +321,7 @@
- 	  $(AUTOMAKE) --gnu  src/Makefile
- Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
- 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
--gamesPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
-+gamesPROGRAMS_INSTALL = $(BSD_INSTALL_GAME)
- install-gamesPROGRAMS: $(games_PROGRAMS)
- 	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(gamesdir)
-@@ -1505,13 +1505,10 @@
+ powermanga_SOURCES = $(SOURCES_MAIN) $(SOURCES_EXTRA)
+ #powermanga_CXXFLAGS = -DPREFIX=\"$(prefix)\" -DSCOREFILE=\"$(scoredir)/$(score)\" @XLIB_CFLAGS@ @SDL_CFLAGS@
+@@ -1247,13 +1247,10 @@ uninstall-am: uninstall-gamesPROGRAMS un
  
  
  install-data-hook:

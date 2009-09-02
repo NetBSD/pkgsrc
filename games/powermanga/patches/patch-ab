@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/04/16 19:34:08 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2009/09/02 11:38:01 wiz Exp $
 
---- Makefile.in.orig	Mon Jan 26 09:15:26 2004
-+++ Makefile.in	Mon Jan 26 09:16:25 2004
-@@ -38,7 +38,7 @@
- host_triplet = @host@
- target_triplet = @target@
- 
+--- Makefile.in.orig	2007-09-04 08:41:05.000000000 +0000
++++ Makefile.in
+@@ -82,7 +82,7 @@ DIST_ARCHIVES = $(distdir).tar.gz
+ GZIP_ENV = --best
+ distuninstallcheck_listfiles = find . -type f -print
+ distcleancheck_listfiles = find . -type f -print
 -pkgdatadir = $(mandir)
 +pkgdatadir = $(mandir)/man6
  ACLOCAL = @ACLOCAL@
