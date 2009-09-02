@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3488 2009/09/02 12:27:08 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3489 2009/09/02 21:05:50 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4547,3 +4547,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/powermanga to 0.90 [wiz 2009-09-02]
 	Updated lang/mono to 2.4.2.3 [wiz 2009-09-02]
 	Updated mail/t-prot to 2.7.1 [wiz 2009-09-02]
+	Updated net/dhcpcd to 5.1.0 [roy 2009-09-02]
