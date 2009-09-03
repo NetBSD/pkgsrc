@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3494 2009/09/03 09:01:35 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3495 2009/09/03 09:59:54 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4554,3 +4554,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added graphics/ristretto version 0.22 [martin 2009-09-03]
 	Moved devel/boaconstructor to devel/boa-constructor [wiz 2009-09-03]
 	Updated devel/boa-constructor to 0.6.1 [wiz 2009-09-03]
+	Updated math/capc-calc to 2.12.4.0 [asau 2009-09-03]
