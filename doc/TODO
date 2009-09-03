@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8417 2009/09/03 12:06:22 wiz Exp $
+$NetBSD: TODO,v 1.8418 2009/09/03 13:17:35 asau Exp $
 
 Suggested new packages
 ======================
@@ -593,7 +593,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geany-0.18
 	o geda-1.5.2.20090328
 	o gedit-plugins-2.26.3 [GNOME 2.26]
-	o genius-1.0.7
 	o gentoo-0.15.6
 	o gettext-0.17
 	o gettext-m4-0.17
