@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8414 2009/09/02 12:27:35 wiz Exp $
+$NetBSD: TODO,v 1.8415 2009/09/03 01:37:30 obache Exp $
 
 Suggested new packages
 ======================
@@ -920,7 +920,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmsx-0.7.0
 	o openoffice3-bin-3.1.1
 	o openttd-0.7.1
-	o opera-10.00
+	o opera-10.00 [obache]
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
