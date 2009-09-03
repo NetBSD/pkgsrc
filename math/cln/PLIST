@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:05:42 joerg Exp $
-bin/cln-config
+@comment $NetBSD: PLIST,v 1.7 2009/09/03 10:48:18 asau Exp $
+bin/pi
 include/cln/GV.h
 include/cln/GV_complex.h
 include/cln/GV_integer.h
@@ -15,7 +15,6 @@ include/cln/SV_rational.h
 include/cln/SV_real.h
 include/cln/SV_ringelt.h
 include/cln/V.h
-include/cln/abort.h
 include/cln/cln.h
 include/cln/complex.h
 include/cln/complex_class.h
@@ -26,6 +25,7 @@ include/cln/config.h
 include/cln/dfloat.h
 include/cln/dfloat_class.h
 include/cln/dfloat_io.h
+include/cln/exception.h
 include/cln/ffloat.h
 include/cln/ffloat_class.h
 include/cln/ffloat_io.h
@@ -33,7 +33,7 @@ include/cln/float.h
 include/cln/float_class.h
 include/cln/float_io.h
 include/cln/floatformat.h
-include/cln/floatparam.h
+include/cln/host_cpu.h
 include/cln/input.h
 include/cln/integer.h
 include/cln/integer_class.h
@@ -81,24 +81,4 @@ include/cln/version.h
 info/cln.info
 lib/libcln.la
 lib/pkgconfig/cln.pc
-man/man1/cln-config.1
-share/aclocal/cln.m4
-share/doc/cln/html/cln_1.html
-share/doc/cln/html/cln_10.html
-share/doc/cln/html/cln_11.html
-share/doc/cln/html/cln_12.html
-share/doc/cln/html/cln_13.html
-share/doc/cln/html/cln_14.html
-share/doc/cln/html/cln_15.html
-share/doc/cln/html/cln_16.html
-share/doc/cln/html/cln_2.html
-share/doc/cln/html/cln_3.html
-share/doc/cln/html/cln_4.html
-share/doc/cln/html/cln_5.html
-share/doc/cln/html/cln_6.html
-share/doc/cln/html/cln_7.html
-share/doc/cln/html/cln_8.html
-share/doc/cln/html/cln_9.html
-share/doc/cln/html/cln_abt.html
-share/doc/cln/html/cln_ovr.html
-share/doc/cln/html/cln_toc.html
+man/man1/pi.1

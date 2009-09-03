@@ -1,36 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2007/01/04 21:20:57 adam Exp $
+$NetBSD: patch-ab,v 1.5 2009/09/03 10:48:19 asau Exp $
 
---- doc/Makefile.in.orig	2006-08-06 14:14:20.000000000 +0200
-+++ doc/Makefile.in
-@@ -13,7 +13,7 @@ datarootdir = @datarootdir@
- datadir = @datadir@
+--- doc/Makefile.in.orig	2009-06-14 02:14:09.000000000 +0400
++++ doc/Makefile.in	2009-09-03 14:03:04.000000000 +0400
+@@ -180,7 +180,7 @@
+ host_cpu = @host_cpu@
+ host_os = @host_os@
+ host_vendor = @host_vendor@
+-htmldir = @htmldir@
++htmldir = @htmldir@/doc/cln/html
+ includedir = @includedir@
  infodir = @infodir@
- mandir = @mandir@
--htmldir = $(datadir)/html
-+htmldir = $(datadir)/doc/cln/html
- dvidir = $(datadir)/dvi
- DESTDIR =
- 
-@@ -43,7 +43,7 @@ SHELL = /bin/sh
- 
- VPATH = $(srcdir)
- 
--all : info dvi ps html
-+all : info html
- 
- 
- info : $(srcdir)/$(PACKAGE).info
-@@ -88,13 +88,11 @@ install : all installdirs force
- 	  install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/$(PACKAGE).info || :;\
- 	else : ; fi
- 	$(INSTALL_DATA) $(srcdir)/$(PACKAGE)_*.html $(DESTDIR)$(htmldir)
--	$(INSTALL_DATA) $(srcdir)/$(PACKAGE).dvi $(DESTDIR)$(dvidir)/$(PACKAGE).dvi
- 
- installdirs : force
- 	$(MKDIR) $(DESTDIR)$(datadir)
- 	$(MKDIR) $(DESTDIR)$(infodir)
- 	$(MKDIR) $(DESTDIR)$(htmldir)
--	$(MKDIR) $(DESTDIR)$(dvidir)
- 
- uninstall : force
- 	@if (install-info --version && \
+ install_sh = @install_sh@
