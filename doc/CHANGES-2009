@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3498 2009/09/03 13:16:16 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3499 2009/09/03 17:30:39 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4558,3 +4558,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/cln to 1.3.0 [asau 2009-09-03]
 	Updated security/gnupg to 1.4.10 [wiz 2009-09-03]
 	Updated math/genius to 1.0.7 [asau 2009-09-03]
+	Updated lang/camlp5 to 5.12 [tonio 2009-09-03]
