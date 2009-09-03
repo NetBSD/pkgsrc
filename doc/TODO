@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8415 2009/09/03 01:37:30 obache Exp $
+$NetBSD: TODO,v 1.8416 2009/09/03 12:01:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -418,7 +418,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bdb-xml-2.0.9
 	o beacon-1.3
 	o benchfft-3.1
-	o bftpd-2.3
+	o bftpd-2.4
 	o biew-5.7.3.1
 	o binutils-2.19.1
 	o bioperl-1.5.0
@@ -565,7 +565,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o flpsed-0.4.4
 	o fmsx-3.0
 	o fondu-040927
-	o fotoxx-8.0
+	o fotoxx-8.3
 	o freeglut-2.4.0
 	o freenet-0.7
 	o freesci-0.6.4
@@ -625,6 +625,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnupg-1.4.10
 	o gnupg2-2.0.12
 	o gnustep-base-1.19.2
 	o gogo-3.11p1
@@ -772,7 +773,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libole2-2.2.8
 	o libproxy-0.3.0
 	o librep-0.90.2
-	o libsigc++-2.2.4.1
+	o libsigc++-2.2.4.2
 	o libssh-0.3.3
 	o libssh2-1.1
 	o libstree-0.4.2
@@ -848,7 +849,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o monotone-0.44
 	o moserial-2.26.3 [GNOME 2.26]
 	o mp3blaster-3.2.3
-	o mp3diags-0.99.05.032
+	o mp3diags-0.99.05.033
 	o mpc-0.17
 	o mpeg4ip-1.6.1
 	o mpg123-1.9.0
@@ -868,7 +869,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysqlcc-0.9.8
 	o nagios-3.2.0
 	o nap-1.5.3
-	o nautilus-sendto-1.1.6
+	o nautilus-sendto-1.1.7
 	o navi2ch-1.8.1
 	o nawk-20071023
 	o ncftp3-3.2.1 [pkg/37859]
@@ -1052,7 +1053,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o quagga-0.99.15
 	o qvplay-0.95
 	o radiance-3.7.2
-	o raine-0.51.3
+	o raine-0.51.6
 	o ramaze-2009.01
 	o randread-0.2
 	o rat-4.2.25
@@ -1271,7 +1272,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weewm-0.01
 	o whohas-0.23
 	o windowlab-1.34
-	o wine-devel-1.1.28
+	o wine-devel-1.1.29
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
