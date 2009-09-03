@@ -1,26 +1,17 @@
-$NetBSD: patch-ai,v 1.6 2009/08/15 17:04:52 wiz Exp $
+$NetBSD: patch-ai,v 1.7 2009/09/03 11:58:45 wiz Exp $
 
 --- vcs/clearcase/clearcasemanipulator.cpp.orig	2008-03-30 00:56:29.000000000 +0000
 +++ vcs/clearcase/clearcasemanipulator.cpp
-@@ -20,10 +20,10 @@
+@@ -19,8 +19,11 @@
+ #include <stdlib.h>
  #include <libgen.h>
  #include <errno.h>
++#ifdef __NetBSD__
++#include <sys/param.h>
++#endif
  
 -#if defined(Q_OS_MACX) || defined(MACOSX) || defined(Q_OS_SOLARIS) || defined(Q_OS_FREEBSD)
-+#if defined(Q_OS_MACX) || defined(MACOSX) || defined(Q_OS_SOLARIS) || defined(Q_OS_FREEBSD) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(Q_OS_MACX) || defined(MACOSX) || defined(Q_OS_SOLARIS) || defined(Q_OS_FREEBSD) || (defined(__NetBSD__) && (__NetBSD_Version__ < 599001500)) || defined(__DragonFly__)
  //this function is taken from GNU libc
  //it does not exist on macos
--int getline(char **lineptr, size_t *n, FILE *stream)
-+int get_line(char **lineptr, size_t *n, FILE *stream)
- {
-     static char line[256];
-     char *ptr;
-@@ -95,7 +95,7 @@ VCSFileInfoMap* ClearcaseManipulator::re
-   char* line = NULL;
-   size_t numRead;
-   while (!feof(outputFile)) {
--    getline(&line,&numRead,outputFile);
-+    get_line(&line,&numRead,outputFile);
- 
-     if (numRead > 0) {
-       int pos = 0;
+ int getline(char **lineptr, size_t *n, FILE *stream)
