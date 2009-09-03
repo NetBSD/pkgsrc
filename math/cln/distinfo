@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2007/01/04 21:20:57 adam Exp $
+$NetBSD: distinfo,v 1.7 2009/09/03 10:48:18 asau Exp $
 
-SHA1 (cln-1.1.13.tar.bz2) = 61c130cbb00ed95a19ee9dffc136b2823e452647
-RMD160 (cln-1.1.13.tar.bz2) = 798e8e2a8d4aa81b770b6606ae1fe617bcb0cbc3
-Size (cln-1.1.13.tar.bz2) = 1708927 bytes
-SHA1 (patch-ab) = d1fc5f290b8838af030f968fbba26e51be177100
-SHA1 (patch-ac) = d93e47d81cb010f0eb21b3a98d5ce9b9a6150623
+SHA1 (cln-1.3.0.tar.bz2) = 0b9df49c7c8d73aadc516b3574211718fe6a8dfc
+RMD160 (cln-1.3.0.tar.bz2) = b57c133276b856e0fffb64eb954662817bf2b370
+Size (cln-1.3.0.tar.bz2) = 1249521 bytes
+SHA1 (patch-ab) = 5dba2a7f4b6ff2d1459880d72de63fd5500a8d22
+SHA1 (patch-ac) = da39a3ee5e6b4b0d3255bfef95601890afd80709
