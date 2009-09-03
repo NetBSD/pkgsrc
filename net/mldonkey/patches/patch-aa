@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.17 2009/09/03 17:16:19 tonio Exp $
+
+Ensure mldonkey accepts ocaml 3.11.1
+
+--- config/configure.orig	2009-02-24 22:47:56.000000000 +0100
++++ config/configure
+@@ -4580,7 +4580,7 @@ if  test -z "$OCAMLC"  ||  test -z "$CAM
+ else
+   OCAMLVERSION=`$OCAMLC -v | sed -n -e 's|.*version* *\(.*\)$|\1|p' `
+   case "$OCAMLVERSION" in
+-    "$REQUIRED_OCAML"*|3.11.0*|3.10.*|3.09.*|3.08.4*|3.08.3*) ;;
++    "$REQUIRED_OCAML"*|3.11.1*|3.11.0*|3.10.*|3.09.*|3.08.4*|3.08.3*) ;;
+     *)
+         echo "Need build"
+         BUILD_OCAML=yes
