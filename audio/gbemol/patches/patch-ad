@@ -1,0 +1,81 @@
+$NetBSD: patch-ad,v 1.1 2009/09/03 01:29:34 joerg Exp $
+
+--- src/gbemol-mpd.c.orig	2009-04-25 04:38:51.000000000 +0200
++++ src/gbemol-mpd.c
+@@ -2,6 +2,7 @@
+ 
+ #include "gbemol-mpd.h"
+ #include "gbemol-marshal.h"
++#include "gbemol-utils.h"
+ 
+ /* Properties */
+ enum {
+@@ -454,51 +455,31 @@ gboolean gbemol_mpd_connect (GbemolMpd* 
+ 	obj->priv->conn = mpd_newConnection (obj->priv->host, obj->priv->port, obj->priv->timeout);
+ 	
+ 	if (gbemol_mpd_finish_and_handle (obj))
+-		obj->priv->connected = FALSE;
+-	else
+-	{
+-		gbemol_mpd_get_not_commands_list (obj);
+-		if (obj->status)
+-			mpd_freeStatus (obj->status);
+-		obj->status = gbemol_mpd_get_status (obj);
+-		obj->priv->connected = TRUE;
+-		/* Emit a song-changed signal */
+-		g_signal_emit (obj, gbemol_mpd_signals [SONG_CHANGED_SIGNAL], 0, NULL);
+-	}
+-
+-	return obj->priv->connected;
+-}
+-
+-/* Connect */
+-gboolean gbemol_mpd_connect_and_authenticate (GbemolMpd* obj)
+-{
+-	if (obj->priv->conn)
+-		mpd_closeConnection (obj->priv->conn);
+-
+-	obj->priv->conn = mpd_newConnection (obj->priv->host, obj->priv->port, obj->priv->timeout);
+-	
+-	if (gbemol_mpd_finish_and_handle (obj))
+ 	{
+ 		obj->priv->connected = FALSE;
+ 		return FALSE;
+ 	}
+-	else
+-		obj->priv->connected = TRUE;
+ 
+-	/* Not authenticated, yet connected, so return TRUE, but mark as disconnected */
+-	if (!gbemol_mpd_authenticate (obj))
+-		obj->priv->connected = FALSE;
+-	else
++	if (gbemol_cfg_get_bool("mpd", "use_auth"))
+ 	{
+-		gbemol_mpd_get_not_commands_list (obj);
+-		if (obj->status)
+-			mpd_freeStatus (obj->status);
+-		obj->status = gbemol_mpd_get_status (obj);
+-		/* Emit a song-changed signal */
+-		g_signal_emit (obj, gbemol_mpd_signals [SONG_CHANGED_SIGNAL], 0, NULL);
++		if (!obj->priv->pass)
++			obj->priv->pass = gbemol_cfg_get_string("mpd", "pass");
++		if (!obj->priv->pass || !gbemol_mpd_authenticate (obj))
++		{
++			obj->priv->connected = FALSE;
++			return FALSE;		
++		}
+ 	}
+ 
+-	return TRUE;
++	gbemol_mpd_get_not_commands_list (obj);
++	if (obj->status)
++		mpd_freeStatus (obj->status);
++	obj->status = gbemol_mpd_get_status (obj);
++	obj->priv->connected = TRUE;
++	/* Emit a song-changed signal */
++	g_signal_emit (obj, gbemol_mpd_signals [SONG_CHANGED_SIGNAL], 0, NULL);
++
++	return obj->priv->connected;
+ }
+ 
+ void gbemol_mpd_disconnect (GbemolMpd *obj)

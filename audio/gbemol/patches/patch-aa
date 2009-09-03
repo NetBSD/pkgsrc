@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1 2009/09/03 01:29:34 joerg Exp $
+
+--- src/gbemol-app.c.orig	2009-04-25 04:38:51.000000000 +0200
++++ src/gbemol-app.c
+@@ -449,7 +449,7 @@ gbemol_app_init (GbemolApp* app)
+ 	gbemol_app_build_gui (app);
+ 
+ 	/* Check if there is a config file */
+-	if (!(host = gbemol_cfg_get_string ("MPD", "host")))
++	if (!(host = gbemol_cfg_get_string ("mpd", "host")))
+ 	{
+ 		app->mpd = gbemol_mpd_new_with_defaults ();
+ 
+@@ -471,13 +471,13 @@ gbemol_app_init (GbemolApp* app)
+ 	else 
+ 	{
+ 		/* We need a password? */
+-		if (gbemol_cfg_get_int ("MPD", "use_auth"))
+-			pass = gbemol_cfg_get_string ("MPD", "pass");
++		if (gbemol_cfg_get_int ("mpd", "use_auth"))
++			pass = gbemol_cfg_get_string ("mpd", "pass");
+ 		else
+ 			pass = NULL;
+ 
+-		app->mpd = gbemol_mpd_new (host, pass, gbemol_cfg_get_int ("MPD", "port"), 
+-				gbemol_cfg_get_double ("MPD", "timeout"));
++		app->mpd = gbemol_mpd_new (host, pass, gbemol_cfg_get_int ("mpd", "port"), 
++				gbemol_cfg_get_double ("mpd", "timeout"));
+ 		g_free (host);
+ 		g_free (pass);
+ 	}
+@@ -564,10 +564,7 @@ void gbemol_app_connect_mpd (GbemolApp* 
+ 	if (!app->mpd)
+ 		return;
+ 
+-	if (gbemol_cfg_get_bool("MPD", "use_auth"))
+-		gbemol_mpd_connect_and_authenticate (app->mpd);
+-	else
+-		gbemol_mpd_connect (app->mpd);
++	gbemol_mpd_connect (app->mpd);
+ 
+ 	gbemol_app_set_connected (app, gbemol_mpd_is_connected (app->mpd));
+ 	if (gbemol_mpd_is_connected (app->mpd))
