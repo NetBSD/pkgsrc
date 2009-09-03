@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/03 08:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/03 08:59:15 wiz Exp $
 #
 
 VERSION=		0.6.1
@@ -15,6 +15,7 @@ COMMENT=		Python IDE
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+PREV_PKGPATH=		devel/boaconstructor
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 BOADIR=			${PREFIX}/share/boa-constructor-${VERSION}
