@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2009/09/03 01:29:34 joerg Exp $
+
+--- src/gbemol-utils.c.orig	2009-04-25 04:38:51.000000000 +0200
++++ src/gbemol-utils.c
+@@ -374,7 +374,7 @@ GdkPixbuf* gbemol_get_song_image_from_id
+ 	gulong size = 0;
+ 	guchar  *data = NULL;
+ 
+-	if (!(songs_path = gbemol_cfg_get_string ("MPD", "music_dir")))
++	if (!(songs_path = gbemol_cfg_get_string ("mpd", "music_dir")))
+ 		return NULL;
+ 
+ 	path = g_strdup_printf ("%s/%s", songs_path, song->file);
