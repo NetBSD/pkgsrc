@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1227 2009/08/29 22:24:30 seb Exp $
+# $NetBSD: Makefile,v 1.1228 2009/09/03 09:00:03 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -64,7 +64,7 @@ SUBDIR+=	bison
 SUBDIR+=	blame
 SUBDIR+=	blib
 SUBDIR+=	bmake
-SUBDIR+=	boaconstructor
+SUBDIR+=	boa-constructor
 SUBDIR+=	boehm-gc
 SUBDIR+=	boost-build
 SUBDIR+=	boost-docs
