@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/05/19 08:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2009/09/03 12:35:32 joerg Exp $
 #
 
 DISTNAME=		rsaref
@@ -20,22 +20,24 @@ WRKSRC=			${WRKDIR}/install
 CRYPTO=			yes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 MAKE_FILE=		unix/makefile
 BUILD_TARGET=		librsaref.la
 
+INSTALLATION_DIRS=	lib include/rsaref share/doc/rsaref
+
 do-configure:
 	@${RM} -f ${WRKDIR}/source/rsaref && ${LN} -sf . ${WRKDIR}/source/rsaref
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${PREFIX}/include/rsaref
-	cd ${WRKSRC} && ${LIBTOOL} ${INSTALL_DATA} librsaref.la ${PREFIX}/lib
+	cd ${WRKSRC} && ${LIBTOOL} --mode=install ${INSTALL_DATA} \
+	    librsaref.la ${DESTDIR}${PREFIX}/lib
 .for file in des.h global.h md2.h md5.h rsa.h rsaref.h
-	${INSTALL_DATA} ${WRKDIR}/source/${file} ${PREFIX}/include/rsaref/
+	${INSTALL_DATA} ${WRKDIR}/source/${file} ${DESTDIR}${PREFIX}/include/rsaref/
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rsaref
-	cd ${WRKDIR}/doc && ${INSTALL_DATA} info.txt rsaref.txt ${PREFIX}/share/doc/rsaref/
+	cd ${WRKDIR}/doc && ${INSTALL_DATA} info.txt rsaref.txt \
+	    ${DESTDIR}${PREFIX}/share/doc/rsaref/
 
 .include "../../mk/bsd.pkg.mk"
