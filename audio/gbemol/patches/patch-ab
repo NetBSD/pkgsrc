@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1 2009/09/03 01:29:34 joerg Exp $
+
+--- src/gbemol-library.c.orig	2009-04-25 04:38:51.000000000 +0200
++++ src/gbemol-library.c
+@@ -21,6 +21,7 @@
+ #include "gbemol-utils.h"
+ 
+ #include <gtk/gtk.h>
++#include <string.h>
+ 
+ static GObjectClass* parent_class = NULL;
+ 
+@@ -641,7 +642,6 @@ void gbemol_library_columns_dialog (Gbem
+ 	gtk_widget_destroy (dlg);
+ }
+ 
+-
+ /*
+  * Populates lst with the tags
+  */
+@@ -651,6 +651,8 @@ gbemol_library_populate_constraint (Gbem
+ 	GtkTreeIter iter_all, iter;	
+ 	GtkListStore* lst = lib->priv->lst_constraint[id];
+ 
++	tags = g_list_sort(tags, (GCompareFunc)strcmp);
++
+ 	gtk_list_store_clear (lst);
+ 	
+ 	gtk_list_store_append (lst, &iter_all);
+@@ -671,7 +673,6 @@ gbemol_library_populate_constraint (Gbem
+ 					-1);
+ 		} while ((tags = g_list_next (tags)));
+ 	}
+-
+ }
+ 
+ void 

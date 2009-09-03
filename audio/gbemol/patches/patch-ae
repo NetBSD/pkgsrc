@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2009/09/03 01:29:34 joerg Exp $
+
+--- src/gbemol-mpd.h.orig	2009-04-25 04:38:51.000000000 +0200
++++ src/gbemol-mpd.h
+@@ -47,7 +47,6 @@ GbemolMpd* gbemol_mpd_new (const gchar *
+ 
+ /* Connection Methods */
+ gboolean gbemol_mpd_connect (GbemolMpd *obj);
+-gboolean gbemol_mpd_connect_and_authenticate (GbemolMpd* obj);
+ void gbemol_mpd_disconnect (GbemolMpd *obj);
+ gboolean gbemol_mpd_is_connected (GbemolMpd *obj);
+ gchar* gbemol_mpd_get_version (GbemolMpd* obj);
