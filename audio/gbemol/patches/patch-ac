@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2009/09/03 01:29:34 joerg Exp $
+
+--- src/gbemol-main.c.orig	2009-09-03 03:20:21.000000000 +0200
++++ src/gbemol-main.c
+@@ -107,7 +107,7 @@ int main (int argc, char *argv[])	
+ 	}
+ 
+ 	/* Update library on start */
+-	if (gbemol_mpd_is_connected (app->mpd) && gbemol_cfg_get_int ("MPD", "update-library"))
++	if (gbemol_mpd_is_connected (app->mpd) && gbemol_cfg_get_int ("mpd", "update-library"))
+ 		gbemol_mpd_database_update (app->mpd, "/");
+ 
+ 	gtk_main();

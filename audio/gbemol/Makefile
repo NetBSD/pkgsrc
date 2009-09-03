@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/31 12:19:38 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/03 01:29:34 joerg Exp $
 #
 
 DISTNAME=	gbemol-0.3.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gbemol/}
 

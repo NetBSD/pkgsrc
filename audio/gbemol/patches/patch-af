@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2009/09/03 01:29:34 joerg Exp $
+
+--- src/gbemol-preferences.c.orig	2009-04-25 04:38:51.000000000 +0200
++++ src/gbemol-preferences.c
+@@ -522,6 +522,9 @@ gbemol_preferences_populate_outputs (Gbe
+ 		return;
+ 	l = gbemol_mpd_output_get_list (obj->app->mpd);
+ 
++	if (!l)
++		return;
++
+ 	do
+ 	{
+ 		out = l->data;

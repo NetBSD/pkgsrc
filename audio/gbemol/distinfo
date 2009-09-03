@@ -1,5 +1,12 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/31 12:19:38 joerg Exp $
+$NetBSD: distinfo,v 1.2 2009/09/03 01:29:34 joerg Exp $
 
 SHA1 (gbemol-0.3.2.tar.gz) = 5c3ceab9fc4a4213db001e1e0dc27b56d4868e54
 RMD160 (gbemol-0.3.2.tar.gz) = 4cf42f5a3029338924f5501d3a648284de8c7553
 Size (gbemol-0.3.2.tar.gz) = 401865 bytes
+SHA1 (patch-aa) = c324caa5b8ff127033b5134265b2c4f24fe20981
+SHA1 (patch-ab) = 77f31e6f1e9d919690e4ae1ccdf09afeeac761c7
+SHA1 (patch-ac) = 8181d9d09000df44801a2ee33a9e3ea5059abafb
+SHA1 (patch-ad) = ccbb00334138b915d91c6a1278548a259069ead3
+SHA1 (patch-ae) = 6ee82e980a92c51e6389ce84fbffef3ebdf50f3a
+SHA1 (patch-af) = 0b8f60bc1b27b2291dc3c119e9a5cfdbbb390178
+SHA1 (patch-ag) = bed815b9797922b32a0ba499005444edfae2898f
