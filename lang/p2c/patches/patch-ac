@@ -1,0 +1,85 @@
+$NetBSD: patch-ac,v 1.1 2009/09/03 13:14:10 joerg Exp $
+
+--- lex.c.orig	1991-04-24 22:30:40.000000000 +0200
++++ lex.c
+@@ -969,7 +969,7 @@ void progress()
+ 
+ 
+ 
+-void getline()
++void my_getline()
+ {
+     char *cp, *cp2;
+ 
+@@ -995,7 +995,7 @@ void getline()
+ 			infname = stralloc(cp);
+ 			infname[cp2 - cp] = 0;
+ 		    }
+-		    getline();
++		    my_getline();
+ 		    return;
+ 		}
+ 		if (copysource && *inbuf) {
+@@ -1012,7 +1012,7 @@ void getline()
+                     fprintf(stderr, "\n");
+                 if (inputkind == INP_INCFILE) {
+                     pop_input();
+-                    getline();
++                    my_getline();
+                 } else
+                     strcpy(inbuf, "\001");
+             }
+@@ -1103,7 +1103,7 @@ char *fname;
+         infname = fname;
+         inf_lnum = 0;
+     } else
+-        inf_lnum--;     /* adjust for extra getline() */
++        inf_lnum--;     /* adjust for extra my_getline() */
+     *inbuf = 0;
+     inbufptr = inbuf;
+     gettok();
+@@ -2206,7 +2206,7 @@ int starparen;    /* 0={ }, 1=(* *), 2=C
+ 		else
+ 		    commentline(CMT_POST);
+ 		trailing = 0;
+-                getline();
++                my_getline();
+ 		i = 0;
+ 		for (;;) {
+ 		    if (*inbufptr == ' ') {
+@@ -2258,7 +2258,7 @@ char *getinlinepart()
+         if (isspace(*inbufptr)) {
+             inbufptr++;
+         } else if (!*inbufptr) {
+-            getline();
++            my_getline();
+         } else if (*inbufptr == '{') {
+             inbufptr++;
+             comment(0);
+@@ -2352,7 +2352,7 @@ void leadingcomments()
+         switch (*inbufptr++) {
+ 
+             case 0:
+-                getline();
++                my_getline();
+                 break;
+ 
+             case ' ':
+@@ -2559,7 +2559,7 @@ void gettok()
+             case 0:
+ 	        if (commenting_flag)
+ 		    saveinputcomment(inbufptr-1);
+-                getline();
++                my_getline();
+ 		cp = curtokbuf;
+ 		for (;;) {
+ 		    inbufindent = 0;
+@@ -2576,7 +2576,7 @@ void gettok()
+ 		    }
+ 		    if (!*inbufptr && !commenting_flag) {   /* blank line */
+ 			*cp++ = '\001';
+-			getline();
++			my_getline();
+ 		    } else
+ 			break;
+ 		}

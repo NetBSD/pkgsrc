@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/09/03 13:14:10 joerg Exp $
+
+--- parse.c.orig	2009-09-03 14:57:44.000000000 +0200
++++ parse.c
+@@ -3769,7 +3769,7 @@ Token blkind;
+ 	out_include(fname, 1);
+     outsection(majorspace);
+     pop_input();
+-    getline();
++    my_getline();
+     gettok();
+ }
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2009/09/03 13:14:10 joerg Exp $
+
+--- p2c.hdrs.orig	2009-09-03 14:57:47.000000000 +0200
++++ p2c.hdrs
+@@ -163,7 +163,7 @@ extern Symbol  *findsymbol_opt     PP( (
+ extern Symbol  *findsymbol         PP( (char *name) );
+ extern void     clearprogress      PV();
+ extern void     progress           PV();
+-extern void     getline            PV();
++extern void     my_getline         PV();
+ extern void     push_input_file    PP( (FILE *fp, char *fname, int isinclude) );
+ extern void     include_as_import  PV();
+ extern void     push_input_strlist PP( (Strlist *sp, char *fname) );
