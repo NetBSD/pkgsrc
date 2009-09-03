@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:36 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/09/03 10:48:18 asau Exp $
 
-DISTNAME=	cln-1.1.13
+DISTNAME=	cln-1.3.0
 CATEGORIES=	math
 MASTER_SITES=	http://www.ginac.de/CLN/ \
 		ftp://ftpthep.physik.uni-mainz.de/pub/gnu/
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.ginac.de/CLN/
 COMMENT=	CLN Class Library for Numbers
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
