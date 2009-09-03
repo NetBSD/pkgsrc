@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/07/07 22:22:58 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/09/03 13:39:39 hasso Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -20,7 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		lib clit18
-MAKE_FILE=		makefile
+MAKE_FILE=		Makefile
 USE_TOOLS+=		gmake
 
 SUBST_CLASSES+=		d2u
