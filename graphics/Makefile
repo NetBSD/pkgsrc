@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.534 2009/09/01 21:08:19 wiz Exp $
+# $NetBSD: Makefile,v 1.535 2009/09/03 09:07:46 martin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -338,6 +338,7 @@ SUBDIR+=	radiance
 SUBDIR+=	rayshade
 SUBDIR+=	refocus-it
 SUBDIR+=	resize_image
+SUBDIR+=	ristretto
 SUBDIR+=	ruby-RMagick
 SUBDIR+=	ruby-clutter
 SUBDIR+=	ruby-clutter-cairo
