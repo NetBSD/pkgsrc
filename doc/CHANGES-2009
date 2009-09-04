@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3500 2009/09/04 21:41:39 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3501 2009/09/04 22:10:08 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4560,3 +4560,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/genius to 1.0.7 [asau 2009-09-03]
 	Updated lang/camlp5 to 5.12 [tonio 2009-09-03]
 	Updated math/pspp to 0.6.1 [asau 2009-09-04]
+	Updated pkgtools/pbulk to 0.41 [joerg 2009-09-04]
