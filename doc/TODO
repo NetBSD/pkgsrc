@@ -1,4 +1,6 @@
-$NetBSD: TODO,v 1.8418 2009/09/03 13:17:35 asau Exp $
+Warning: untrusted X11 forwarding setup failed: xauth key data not generated
+Warning: No xauth data; using fake authentication data for X11 forwarding.
+$NetBSD: TODO,v 1.8419 2009/09/04 07:33:43 asau Exp $
 
 Suggested new packages
 ======================
@@ -1064,7 +1066,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
 	o robodoc-4.99.6
-	o root-5.14.0
+	o root-5.24.00 [needs newer f2c]
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
 	o roundup-1.4.8
