@@ -1,31 +1,38 @@
-$NetBSD: patch-aa,v 1.2 1999/07/13 01:31:08 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2009/09/04 21:39:10 asau Exp $
 
---- Makefile.in.orig	Tue Mar  9 14:02:32 1999
-+++ Makefile.in	Thu Jul  8 15:06:23 1999
-@@ -97,7 +97,7 @@
+--- Makefile.in.orig	2008-10-10 08:12:11.000000000 +0400
++++ Makefile.in	2009-09-04 13:59:51.000000000 +0400
+@@ -1618,7 +1618,7 @@
+ dist_pkgsysconf_DATA = \
+ 	config/devices
  
- SUBDIRS = doc intl po lib src config tests
+-psfontsdir = $(pkgsysconfdir)/psfonts
++psfontsdir = $(datadir)/pspp/psfonts
+ dist_psfonts_DATA = \
+ 	config/psfonts/Helvetica-Bold.afm \
+ 	config/psfonts/Times-Bold.afm \
+@@ -2533,7 +2533,7 @@
+ $(top_srcdir)/configure:  $(am__configure_deps)
+ 	cd $(srcdir) && $(AUTOCONF)
+ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
+-	cd $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
++#	cd $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
  
--pkgdocdir = $(prefix)/doc/@PACKAGE@
-+pkgdocdir = $(prefix)/share/doc/@PACKAGE@
- pkgdoc_DATA = NEWS README TODO
- noinst_DATA = AUTHORS THANKS
+ config.h: stamp-h1
+ 	@if test ! -f $@; then \
+@@ -7140,12 +7140,12 @@
+ 	done
+ install-dist_pkgsysconfDATA: $(dist_pkgsysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(pkgsysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(pkgsysconfdir)"
++	test -z "$(datarootdir)/examples/pspp" || $(MKDIR_P) "$(DESTDIR)$(datarootdir)/examples/pspp"
+ 	@list='$(dist_pkgsysconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(dist_pkgsysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(pkgsysconfdir)/$$f'"; \
+-	  $(dist_pkgsysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(pkgsysconfdir)/$$f"; \
++	  echo " $(dist_pkgsysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(datarootdir)/examples/pspp/$$f'"; \
++	  $(dist_pkgsysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(datarootdir)/examples/pspp/$$f"; \
+ 	done
  
-@@ -132,7 +132,7 @@
- 	  && CONFIG_FILES=$@ CONFIG_HEADERS= $(SHELL) ./config.status
- 
- $(ACLOCAL_M4):  configure.in  acinclude.m4
--	cd $(srcdir) && $(ACLOCAL)
-+#	cd $(srcdir) && $(ACLOCAL)
- 
- config.status: $(srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
- 	$(SHELL) ./config.status --recheck
-@@ -155,7 +155,7 @@
- 		$(MAKE) $(srcdir)/stamp-h.in; \
- 	else :; fi
- $(srcdir)/stamp-h.in: $(top_srcdir)/configure.in $(ACLOCAL_M4) acconfig.h
--	cd $(top_srcdir) && $(AUTOHEADER)
-+#	cd $(top_srcdir) && $(AUTOHEADER)
- 	@echo timestamp > $(srcdir)/stamp-h.in 2> /dev/null
- 
- mostlyclean-hdr:
+ uninstall-dist_pkgsysconfDATA:
