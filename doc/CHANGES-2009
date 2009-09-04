@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3501 2009/09/04 22:10:08 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3502 2009/09/04 23:09:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4561,3 +4561,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/camlp5 to 5.12 [tonio 2009-09-03]
 	Updated math/pspp to 0.6.1 [asau 2009-09-04]
 	Updated pkgtools/pbulk to 0.41 [joerg 2009-09-04]
+	Updated graphics/sane-backends to 1.0.20nb3 [wiz 2009-09-04]
