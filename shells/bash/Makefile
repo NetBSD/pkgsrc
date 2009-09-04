@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2009/08/06 06:38:46 hasso Exp $
+# $NetBSD: Makefile,v 1.48 2009/09/04 15:35:10 wiz Exp $
 
 BASH_VERSION=		4.0
 BASH_PATCHLEVEL=	28
@@ -20,6 +20,7 @@ PATCHFILES+=	bash40-026 bash40-027 bash40-028
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 COMMENT=	The GNU Bourne Again Shell
+LICENSE=	gnu-gpl-v3
 
 CONFLICTS=	static-bash-[0-9]*
 
