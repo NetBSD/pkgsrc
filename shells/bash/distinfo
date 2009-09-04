@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2009/08/06 06:38:46 hasso Exp $
+$NetBSD: distinfo,v 1.18 2009/09/04 15:36:16 wiz Exp $
 
 SHA1 (bash-4.0.tar.gz) = 2bbed30879f9f424c091a846a48111c27d0b2370
 RMD160 (bash-4.0.tar.gz) = 82aba4b2cb475c2030904a9d22af6208dfa85eb3
@@ -87,5 +87,6 @@ Size (bash40-027) = 2010 bytes
 SHA1 (bash40-028) = bb3d83b79ed357c86bf75fc41eaf06e913e84c10
 RMD160 (bash40-028) = bc99e904e251a1f30a94359afc42ca2225fb4f29
 Size (bash40-028) = 5567 bytes
+SHA1 (patch-aa) = 4ad4070c742d01372bd65a4466050f3100037e8f
 SHA1 (patch-af) = 34833c0628a60b5200a9559581c617d878eb62a8
 SHA1 (patch-ag) = 4da0a43f6b890482affff46b18eef4be67770e48
