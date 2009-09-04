@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3504 2009/09/04 23:20:12 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3505 2009/09/04 23:46:16 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4564,3 +4564,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/sane-backends to 1.0.20nb3 [wiz 2009-09-04]
 	Updated devel/p5-App-Cmd to 0.301 [seb 2009-09-04]
 	Updated comms/gammu to 1.26.0 [wiz 2009-09-04]
+	Updated devel/p5-MooseX-Method-Signatures to 0.24 [seb 2009-09-04]
