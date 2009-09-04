@@ -1,6 +1,6 @@
 Warning: untrusted X11 forwarding setup failed: xauth key data not generated
 Warning: No xauth data; using fake authentication data for X11 forwarding.
-$NetBSD: TODO,v 1.8419 2009/09/04 07:33:43 asau Exp $
+$NetBSD: TODO,v 1.8420 2009/09/04 21:42:11 asau Exp $
 
 Suggested new packages
 ======================
@@ -1002,7 +1002,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o projclock-0.9
 	o proxsmtp-1.6
 	o psmisc-21.9
-	o pspp-0.6.1
 	o puf-0.93.3
 	o pulseaudio-0.9.15
 	o puppet-24.8
