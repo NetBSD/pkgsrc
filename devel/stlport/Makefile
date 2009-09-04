@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2009/09/04 13:31:37 joerg Exp $
 
 DISTNAME=	STLport-4.6
 PKGNAME=	stlport-4.6
@@ -50,7 +50,7 @@ do-install:
 		libstlport_gcc.la					\
 		libstlport_gcc_stldebug.la;				\
 	do								\
-		${LIBTOOL} ${INSTALL_LIB} ${WRKSRC:Q}/lib/"$$lib" ${DESTDIR}${LIBDIR:Q}; \
+		${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC:Q}/lib/"$$lib" ${DESTDIR}${LIBDIR:Q}; \
 	done
 	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR:Q}
 	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR:Q}/images

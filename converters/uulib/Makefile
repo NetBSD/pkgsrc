@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/06/01 21:46:37 dholland Exp $
+# $NetBSD: Makefile,v 1.43 2009/09/04 13:31:37 joerg Exp $
 #
 
 DISTNAME=	uudeview-0.5.20
@@ -26,16 +26,15 @@ DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 
 .include "../../mk/bsd.prefs.mk"
 
-INSTALLATION_DIRS=	include lib ${PKGMANDIR}/man3
+INSTALLATION_DIRS=	include lib ${PKGMANDIR}/man3 share/doc/uulib
 
 do-install:
-	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/uulib/libuu.la \
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/uulib/libuu.la \
 		${DESTDIR:Q}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/uulib/uudeview.h ${DESTDIR:Q}${PREFIX}/include
 	${SED} -e 's|FUNKYTOKENHERE|${PREFIX}|g' \
 		< ${FILESDIR}/uulib.3 > ${WRKSRC}/uulib.3
 	${INSTALL_MAN} ${WRKSRC}/uulib.3 ${DESTDIR:Q}${PREFIX}/${PKGMANDIR}/man3
-	@${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX}/share/doc/uulib
 .for docfile in ${DOCFILES}
 	@${INSTALL_MAN} ${WRKSRC}/${docfile} \
 		${DESTDIR:Q}${PREFIX}/share/doc/uulib
