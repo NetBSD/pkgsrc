@@ -1,8 +1,0 @@
-$NetBSD: patch-af,v 1.1.1.1 2009/05/25 12:50:01 wiz Exp $
-
-use "BSD" instead of "FreeBSD" for Bluetooth support.
-
---- /dev/null	1970-01-01 01:00:00.000000000 +0100
-+++ libgammu/device/bluetoth/blue_bsd.h	2009-05-22 09:43:12.000000000 +0100
-@@ -0,0 +1,1 @@
-+	/* empty file */
