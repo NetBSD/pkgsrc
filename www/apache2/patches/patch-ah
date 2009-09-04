@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.10 2009/09/04 18:55:34 wiz Exp $
+
+--- modules/ssl/ssl_engine_kernel.c.orig	2007-05-08 23:08:47.000000000 +0000
++++ modules/ssl/ssl_engine_kernel.c
+@@ -550,7 +550,7 @@ int ssl_hook_Access(request_rec *r)
+                  * sk_X509_shift-ed the peer cert out of the chain.
+                  * we put it back here for the purpose of quick_renegotiation.
+                  */
+-                cert_stack = sk_new_null();
++                cert_stack = sk_X509_new_null();
+                 sk_X509_push(cert_stack, MODSSL_PCHAR_CAST cert);
+             }
+ 
