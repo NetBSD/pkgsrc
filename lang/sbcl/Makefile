@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/08/19 13:03:30 asau Exp $
+# $NetBSD: Makefile,v 1.20 2009/09/05 12:38:56 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.30
@@ -9,15 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jonb@NetBSD.org
 HOMEPAGE=		http://www.sbcl.org/
 COMMENT=		SBCL, a Common Lisp implementation
-
-ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
-ONLY_FOR_PLATFORM+=	FreeBSD-[2-9]*-i386
-ONLY_FOR_PLATFORM+=	Linux-*-i386
-# It should be possible to have SBCL working on amd64, powerpc,
-# sparc, alpha, mips, and HPPA hardware also, but they probably
-# need a bit of porting work done in SBCL itself.
-# In addition, SBCL should also work on Darwin, Solaris, OpenBSD,
-# and possibly Win32, OSF/1, HP-UX, and Irix.
 
 # SBCL creates a new release with minor updates and fixes every
 # month.  The maintainer of this package does not have the time
