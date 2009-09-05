@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2009/08/15 21:03:25 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2009/09/05 10:05:19 joerg Exp $
 
 DISTNAME=	cdrtools-2.01.01a63
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/ \
 		http://ftp.berlios.de/pub/cdrecord/alpha/
@@ -22,10 +23,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
 WRKSRC=		${WRKDIR}/cdrtools-2.01.01
 USE_TOOLS+=	gm4 gmake tbl
-
-.if ${LOCALBASE} != "/opt/schily"
-BUILDLINK_TRANSFORM+=	rmdir:/opt/schily
-.endif
 
 # avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=	ARCH=""
@@ -78,6 +75,12 @@ SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	cdda2wav/local.cnf.in
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSSOUND},g"
 SUBST_MESSAGE.oss=	Fixing OSS sound device path.
+
+SUBST_CLASSES+=		ins_base
+SUBST_STAGE.ins_base=	pre-configure
+SUBST_FILES.ins_base=	DEFAULTS/Defaults.*
+SUBST_SED.ins_base=		-e "/^INS_BASE=/d"
+SUBST_MESSAGE.ins_base=	Fixing INS_BASE.
 
 do-configure:
 	cd ${WRKSRC}/RULES;						\
