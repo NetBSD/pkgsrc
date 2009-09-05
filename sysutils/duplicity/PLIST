@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:16:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/09/05 22:11:50 tnn Exp $
 bin/duplicity
 bin/rdiffdir
 ${PYSITELIB}/duplicity/GnuPGInterface.py
@@ -129,8 +129,11 @@ man/man1/duplicity.1
 man/man1/rdiffdir.1
 share/doc/${PKGNAME}/CHANGELOG
 share/doc/${PKGNAME}/COPYING
-share/doc/${PKGNAME}/CVS-README
 share/doc/${PKGNAME}/LOG-README
 share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/REPO-README
 share/doc/${PKGNAME}/tarfile-LICENSE
+share/locale/en_GB/LC_MESSAGES/duplicity.mo
+share/locale/eo/LC_MESSAGES/duplicity.mo
 share/locale/io/LC_MESSAGES/duplicity.mo
+share/locale/zh_CN/LC_MESSAGES/duplicity.mo
