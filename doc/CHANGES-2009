@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3507 2009/09/05 09:49:29 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3508 2009/09/05 13:09:33 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4567,3 +4567,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Method-Signatures to 0.24 [seb 2009-09-04]
 	Updated comms/asterisk to 1.2.35 [jnemeth 2009-09-05]
 	Updated www/opengoo to 1.5.3 [taca 2009-09-05]
+	Updated math/yacas to 1.2.2 [asau 2009-09-05]
