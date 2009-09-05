@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8421 2009/09/05 13:11:30 asau Exp $
+$NetBSD: TODO,v 1.8422 2009/09/05 13:46:02 asau Exp $
 
 Suggested new packages
 ======================
@@ -447,7 +447,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cfitsio-3181
 	o cgdb-0.6.4
 	o cgicc-3.2.7
-	o chemtool-1.6.11
 	o cherokee-0.99.24
 	o cinepaint-0.23
 	o cint-5.16
