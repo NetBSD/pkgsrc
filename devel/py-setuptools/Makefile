@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/07/08 13:55:59 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/05 21:53:51 tnn Exp $
 #
 
 EGG_VERSION=		0.6c9
@@ -33,7 +33,8 @@ TARGET_NAME=	${PREFIX}/${PYSITELIB}/${EGG_NAME}
 
 do-extract:
 	${MKDIR} ${WRKSRC}
-	${TOOLS_CMD.unzip} -d ${WRKSRC} ${DISTDIR}/${DISTNAME}
+	dd if=${DISTDIR}/${DISTNAME} of=${WRKDIR}/tmp.zip skip=376 bs=1
+	${TOOLS_CMD.unzip} -d ${WRKSRC} ${WRKDIR}/tmp.zip
 
 post-extract:
 	chmod -R go-w ${WRKSRC}
