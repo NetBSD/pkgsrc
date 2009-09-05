@@ -1,6 +1,4 @@
-Warning: untrusted X11 forwarding setup failed: xauth key data not generated
-Warning: No xauth data; using fake authentication data for X11 forwarding.
-$NetBSD: TODO,v 1.8420 2009/09/04 21:42:11 asau Exp $
+$NetBSD: TODO,v 1.8421 2009/09/05 13:11:30 asau Exp $
 
 Suggested new packages
 ======================
@@ -1351,7 +1349,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xwpe-1.5.30a
 	o xzip-182
 	o yabause-0.9.10
-	o yacas-1.2.0
 	o yafc-1.1
 	o yodl-2.14.3
 	o youtube-dl-20090808
