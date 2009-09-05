@@ -1,0 +1,24 @@
+aamath is a program that reads mathematical expressions in infix
+notation and renders them as ASCII art. It may be useful to send
+mathematics through text-only media, such as e-mail or newsgroups.
+
+As a simple example, the output for an expression such as
+
+     	    A_OPR = x*sqrt(x^2-1)/2 - int(sqrt(t^2-1), t = 1 .. x)
+
+will look like
+
+                        x
+            ______     /
+           / 2        |    ______
+       x \/ x  - 1    |   / 2
+A    = ----------- -  | \/ t  - 1 dt
+ OPR        2         |
+                      |
+                     /
+                      1
+
+Other than the usual operations (addition, subtraction,
+multiplication, division, and exponentiation), aamath can also handle
+functions, integrals, limits, sums, products, matrices and
+vectors.
