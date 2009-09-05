@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:34:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/09/05 13:43:26 asau Exp $
 bin/chemtool
+bin/chemtoolbg
 bin/cht
 man/man1/chemtool.1
 man/man1/cht.1
@@ -30,7 +31,6 @@ share/examples/chemtool/indigo.cht
 share/examples/chemtool/kdo.cht
 share/examples/chemtool/krebs.cht
 share/examples/chemtool/labeltest
-share/examples/chemtool/labeltest.svg
 share/examples/chemtool/pagodan.cht
 share/examples/chemtool/penicillin_v.cht
 share/examples/chemtool/pteridin.cht
@@ -40,12 +40,15 @@ share/examples/chemtool/sample.sdf
 share/examples/chemtool/tbutylazulene.cht
 share/examples/chemtool/tcdd.cht
 share/examples/chemtool/tetracyclin.cht
+share/examples/chemtool/textsizes.cht
 share/examples/chemtool/v3000.mol
 share/examples/chemtool/viagra.cht
+share/locale/bg/LC_MESSAGES/chemtool.mo
 share/locale/cs/LC_MESSAGES/chemtool.mo
 share/locale/de/LC_MESSAGES/chemtool.mo
 share/locale/fr/LC_MESSAGES/chemtool.mo
 share/locale/nl/LC_MESSAGES/chemtool.mo
 share/locale/pl/LC_MESSAGES/chemtool.mo
 share/locale/pt_BR/LC_MESSAGES/chemtool.mo
+share/locale/pt_PT/LC_MESSAGES/chemtool.mo
 share/locale/ru/LC_MESSAGES/chemtool.mo
