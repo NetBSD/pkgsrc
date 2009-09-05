@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2009/08/26 19:57:54 sno Exp $
+# $NetBSD: Makefile,v 1.23 2009/09/05 20:44:57 tonio Exp $
 #
 
-DISTNAME=	coq-8.1pl3
-PKGREVISION=	2
+DISTNAME=	coq-8.2pl1
 CATEGORIES=	lang math
-MASTER_SITES=	ftp://ftp.inria.fr/INRIA/coq/V8.1pl3/
+MASTER_SITES=	http://coq.inria.fr/distrib/V8.2pl1/files/
 
 MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://coq.inria.fr/
@@ -17,7 +16,7 @@ CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
 CONFIGURE_ARGS+=	-reals all
 BUILD_TARGET=		world
 
-BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.09
+BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,6 +32,10 @@ INSTALL_UNSTRIPPED=	yes
 _STRIPFLAG_CC=
 _STRIPFLAG_INSTALL=
 .endif
+
+REPLACE_SH=	configure install.sh
+CONFIGURE_ENV+=	SHELL=${SH:Q}
+MAKE_ENV+=	SHELL=${SH:Q}
 
 PLIST_VARS=		coqide
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq

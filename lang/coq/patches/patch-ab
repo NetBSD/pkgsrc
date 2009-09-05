@@ -1,13 +1,22 @@
-$NetBSD: patch-ab,v 1.1 2007/12/01 13:05:37 tonio Exp $
+$NetBSD: patch-ab,v 1.2 2009/09/05 20:44:58 tonio Exp $
 
---- configure.orig	Thu Oct 11 15:13:51 2007
+--- configure.orig	2009-07-01 11:58:00.000000000 +0200
 +++ configure
-@@ -326,7 +326,7 @@ esac
+@@ -331,7 +331,7 @@ if [ "$MAKE" != "" ]; then
+       OK="no"
+       if [ -x ./make ]; then
+ 	  MAKEVERSION=`./make -v | head -1`
+-	  if [ "$MAKEVERSION" == "GNU Make 3.81" ]; then OK="yes"; fi
++	  if [ "$MAKEVERSION" = "GNU Make 3.81" ]; then OK="yes"; fi
+       fi
+       if [ $OK = "no" ]; then
+ 	  echo "GNU Make >= 3.81 is needed"
+@@ -412,7 +412,7 @@ esac
  
  # this fixes a camlp4 bug under FreeBSD
  # ("native-code program cannot do a dynamic load")
 -if [ `uname -s` = "FreeBSD" ]; then camlp4oexec=$camlp4oexec.byte; fi
 +#if [ `uname -s` = "FreeBSD" ]; then camlp4oexec=$camlp4oexec.byte; fi
  
- CAMLVERSION=`"$bytecamlc" -v | sed -n -e 's|.*version* *\(.*\)$|\1|p' `
+ CAMLVERSION=`"$bytecamlc" -version`
  

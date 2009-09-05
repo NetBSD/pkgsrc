@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2009/09/05 20:44:58 tonio Exp $
+
+--- Makefile.stage1.orig	2009-04-08 17:38:39.000000000 +0200
++++ Makefile.stage1
+@@ -6,7 +6,6 @@
+ #         #       GNU Lesser General Public License Version 2.1       #
+ #######################################################################
+ 
+-export SHELL:=/bin/bash
+ include Makefile.build
+ 
+ # All includes must be declared secondary, otherwise make will delete
