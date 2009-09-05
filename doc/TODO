@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8422 2009/09/05 13:46:02 asau Exp $
+$NetBSD: TODO,v 1.8423 2009/09/05 21:16:40 roy Exp $
 
 Suggested new packages
 ======================
@@ -498,7 +498,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dircproxy-devel-1.2.0.2
-	o dnsmasq-2.50
 	o dnstracer-1.9
 	o dovecot-1.2.2
 	o drivel-2.0.4
