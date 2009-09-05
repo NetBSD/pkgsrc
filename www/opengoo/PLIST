@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/24 12:42:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/09/05 09:48:38 taca Exp $
 ${OG_DIR}/application/application.php
 ${OG_DIR}/application/controllers/AccessController.class.php
 ${OG_DIR}/application/controllers/AccountController.class.php
@@ -362,6 +362,7 @@ ${OG_DIR}/application/views/account/edit_profile.php
 ${OG_DIR}/application/views/account/index.php
 ${OG_DIR}/application/views/account/update_permissions.php
 ${OG_DIR}/application/views/account/user_permissions_control.php
+${OG_DIR}/application/views/administration/auto_upgrade.php
 ${OG_DIR}/application/views/administration/clients.php
 ${OG_DIR}/application/views/administration/configuration.php
 ${OG_DIR}/application/views/administration/cron_events.php
@@ -942,8 +943,8 @@ ${OG_DIR}/language/ru_ru/emails.php
 ${OG_DIR}/language/ru_ru/errors.php
 ${OG_DIR}/language/ru_ru/fields.php
 ${OG_DIR}/language/ru_ru/general.php
-${OG_DIR}/language/ru_ru/help/dummy.txt
 ${OG_DIR}/language/ru_ru/help.php
+${OG_DIR}/language/ru_ru/help/dummy.txt
 ${OG_DIR}/language/ru_ru/lang.js
 ${OG_DIR}/language/ru_ru/messages.php
 ${OG_DIR}/language/ru_ru/objects.php
