@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3511 2009/09/05 21:16:40 roy Exp $
+$NetBSD: CHANGES-2009,v 1.3512 2009/09/05 22:14:05 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4571,3 +4571,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated biology/chemtool to 1.6.12 [asau 2009-09-05]
 	Updated lang/coq to 8.2pl1 [tonio 2009-09-05]
 	Updated net/dnsmasq to 2.50 [roy 2009-09-05]
+	Updated sysutils/duplicity to 0.5.20 [tnn 2009-09-05]
