@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3505 2009/09/04 23:46:16 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3506 2009/09/05 01:44:42 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4565,3 +4565,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-App-Cmd to 0.301 [seb 2009-09-04]
 	Updated comms/gammu to 1.26.0 [wiz 2009-09-04]
 	Updated devel/p5-MooseX-Method-Signatures to 0.24 [seb 2009-09-04]
+	Updated comms/asterisk to 1.2.35 [jnemeth 2009-09-05]
