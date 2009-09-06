@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3515 2009/09/06 04:19:55 schnoebe Exp $
+$NetBSD: CHANGES-2009,v 1.3516 2009/09/06 08:36:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4134,7 +4134,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.19.1 [obache 2009-08-12]
 	Updated x11/ruby-gnome2-panelapplet to 0.19.1 [obache 2009-08-12]
 	Updated x11/ruby-gnome2-vte to 0.19.1 [obache 2009-08-12]
-	Updated databases/tokyocabinet to 1.4.31 [obata 2009-08-12]
+	Updated databases/tokyocabinet to 1.4.31 [obache 2009-08-12]
 	Updated devel/lua-stdlib to 11 [minskim 2009-08-12]
 	Updated devel/lua-stdlib-doc to 11 [minskim 2009-08-12]
 	Updated www/wordpress to 2.8.4 [adrianp 2009-08-12]
@@ -4235,7 +4235,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/libnice version 0.0.9 [wiz 2009-08-17]
 	Added multimedia/farsight2 version 0.0.14 [wiz 2009-08-17]
 	Added chat/telepathy-farsight version 0.0.8 [wiz 2009-08-17]
-	Updated net/tor to 0.2.1.19 [obata 2009-08-18]
+	Updated net/tor to 0.2.1.19 [obache 2009-08-18]
 	Updated devel/p5-Class-MOP to 0.92 [seb 2009-08-18]
 	Updated devel/p5-Moose to 0.89 [seb 2009-08-18]
 	Updated net/ldns to 1.6.1 [he 2009-08-18]
@@ -4310,8 +4310,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/cppunit to 1.10.2nb9 [hasso 2009-08-20]
 	Updated security/p5-IO-Socket-SSL to 1.30 [sno 2009-08-20]
 	Updated devel/p5-TAP-Harness-Archive to 0.14 [sno 2009-08-20]
-	Updated lang/sun-jre15 to 5.0.20 [obata 2009-08-20]
-	Updated lang/sun-jdk15 to 5.0.20 [obata 2009-08-20]
+	Updated lang/sun-jre15 to 5.0.20 [obache 2009-08-20]
+	Updated lang/sun-jdk15 to 5.0.20 [obache 2009-08-20]
 	Updated devel/diffuse to 0.4.0 [wiz 2009-08-20]
 	Updated sysutils/liboobs to 2.22.1 [wiz 2009-08-20]
 	Updated devel/p5-POE-Test-Loops to 1.021 [minskim 2009-08-20]
@@ -4361,8 +4361,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/diffstat to 1.48 [wiz 2009-08-21]
 	Updated graphics/lensfun to 0.2.3nb1 [wiz 2009-08-21]
 	Updated net/wpa_gui to 0.6.9 [dsainty 2009-08-22]
-	Updated databases/tokyocabinet to 1.4.32 [obata 2009-08-22]
-	Updated www/http_load to 20060312 [obata 2009-08-22]
+	Updated databases/tokyocabinet to 1.4.32 [obache 2009-08-22]
+	Updated www/http_load to 20060312 [obache 2009-08-22]
 	Added devel/p5-lib-abs version 0.90 [seb 2009-08-22]
 	Updated devel/p5-ex-lib to 0.90 [seb 2009-08-22]
 	Updated math/maxima to 5.19.1 [asau 2009-08-22]
@@ -4499,7 +4499,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Perl-Critic to 1.104 [seb 2009-08-29]
 	Updated math/p5-Spreadsheet-XLSX to 0.10 [seb 2009-08-30]
 	Updated math/p5-Spreadsheet-Read to 0.35 [seb 2009-08-30]
-	Updated converters/skf to 1.96.1 [obata 2009-08-30]
+	Updated converters/skf to 1.96.1 [obache 2009-08-30]
 	Updated www/ap-python to 2.7.11 [obache 2009-08-30]
 	Updated x11/xterm to 246 [obache 2009-08-30]
 	Added pkgtools/pkgsrc-todo version 1.0 [wiz 2009-08-30]
@@ -4572,6 +4572,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/coq to 8.2pl1 [tonio 2009-09-05]
 	Updated net/dnsmasq to 2.50 [roy 2009-09-05]
 	Updated sysutils/duplicity to 0.5.20 [tnn 2009-09-05]
-	Updated graphics/ruby-RMagick to 2.11.1 [obata 2009-09-06]
+	Updated graphics/ruby-RMagick to 2.11.1 [obache 2009-09-06]
 	Updated www/opengoo to 1.5.3nb1 [taca 2009-09-06]
 	Updated chat/jabberd2 to 2.2.9 [schnoebe 2009-09-06]
