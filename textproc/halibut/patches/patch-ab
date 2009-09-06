@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/09/06 18:42:41 ahoka Exp $
+
+--- doc/Makefile.orig	2006-12-11 20:43:10.000000000 +0100
++++ doc/Makefile
+@@ -17,7 +17,8 @@ halibut.1: manpage.but
+ 	$(HALIBUT) --man=halibut.1 manpage.but
+ 
+ install:
+-	$(INSTALL) -m 644 halibut.1 $(man1dir)/halibut.1
++	mkdir -p $(DESTDIR)$(man1dir)
++	$(INSTALL) -m 644 halibut.1 $(DESTDIR)$(man1dir)/halibut.1
+ 
+ clean:
+ 	rm -f *.html *.txt *.hlp *.cnt *.1 *.info* *.ps *.pdf *.hh* *.chm
