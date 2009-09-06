@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 20:05:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/09/06 21:10:32 tonio Exp $
 lib/ocaml/camlimages/Makefile.config
 lib/ocaml/camlimages/bitmap.cmi
 lib/ocaml/camlimages/bitmap.cmo
@@ -26,6 +26,7 @@ lib/ocaml/camlimages/ci_gif.cma
 lib/ocaml/camlimages/ci_graphics.cma
 lib/ocaml/camlimages/ci_jpeg.cma
 lib/ocaml/camlimages/ci_lablgtk.cma
+lib/ocaml/camlimages/ci_lablgtk2.cma
 lib/ocaml/camlimages/ci_png.cma
 lib/ocaml/camlimages/ci_ppm.cma
 lib/ocaml/camlimages/ci_ps.cma
@@ -155,7 +156,10 @@ lib/ocaml/camlimages/oGraphic.cmi
 lib/ocaml/camlimages/oGraphic.cmo
 lib/ocaml/camlimages/oGraphic.cmx
 lib/ocaml/camlimages/oGraphic.o
+lib/ocaml/camlimages/oImage.cmi
+lib/ocaml/camlimages/oImage.cmx
 lib/ocaml/camlimages/oImage.mli
+lib/ocaml/camlimages/oImage.o
 lib/ocaml/camlimages/oImages.cmi
 lib/ocaml/camlimages/oImages.cmo
 lib/ocaml/camlimages/oImages.cmx
@@ -186,6 +190,11 @@ lib/ocaml/camlimages/oXimage.cmo
 lib/ocaml/camlimages/oXimage.cmx
 lib/ocaml/camlimages/oXimage.mli
 lib/ocaml/camlimages/oXimage.o
+lib/ocaml/camlimages/oXimage2.cmi
+lib/ocaml/camlimages/oXimage2.cmo
+lib/ocaml/camlimages/oXimage2.cmx
+lib/ocaml/camlimages/oXimage2.mli
+lib/ocaml/camlimages/oXimage2.o
 lib/ocaml/camlimages/oXpm.cmi
 lib/ocaml/camlimages/oXpm.cmo
 lib/ocaml/camlimages/oXpm.cmx
@@ -249,6 +258,11 @@ lib/ocaml/camlimages/ximage.cmo
 lib/ocaml/camlimages/ximage.cmx
 lib/ocaml/camlimages/ximage.mli
 lib/ocaml/camlimages/ximage.o
+lib/ocaml/camlimages/ximage2.cmi
+lib/ocaml/camlimages/ximage2.cmo
+lib/ocaml/camlimages/ximage2.cmx
+lib/ocaml/camlimages/ximage2.mli
+lib/ocaml/camlimages/ximage2.o
 lib/ocaml/camlimages/xpm.cmi
 lib/ocaml/camlimages/xpm.cmo
 lib/ocaml/camlimages/xpm.cmx
