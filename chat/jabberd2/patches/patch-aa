@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.7 2009/08/21 02:28:12 schnoebe Exp $
+$NetBSD: patch-aa,v 1.8 2009/09/06 04:18:11 schnoebe Exp $
 
---- Makefile.in.orig	2009-04-27 04:05:40.000000000 -0500
+--- Makefile.in.orig	2009-07-05 16:54:47.000000000 -0500
 +++ Makefile.in
-@@ -200,7 +200,7 @@ top_build_prefix = @top_build_prefix@
+@@ -201,7 +201,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
- EXTRA_DIST = Doxyfile.in README.win32 README.protocol contrib UPGRADE
+ EXTRA_DIST = Doxyfile.in README.win32 README.protocol contrib UPGRADE tests/Makefile.in
 -SUBDIRS = etc man $(am__append_1) tools mio sx util c2s router s2s sm \
 +SUBDIRS = man $(am__append_1) tools mio sx util c2s router s2s sm \
  	storage

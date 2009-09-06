@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.22 2009/08/21 02:28:12 schnoebe Exp $
+# $NetBSD: options.mk,v 1.23 2009/09/06 04:18:11 schnoebe Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
-PKG_OPTIONS_REQUIRED_GROUPS=	auth storage sasl
+PKG_OPTIONS_REQUIRED_GROUPS=	auth storage sasl mio
 # Authentication backend
 PKG_OPTIONS_GROUP.auth=		auth-mysql auth-pgsql auth-sqlite
 PKG_OPTIONS_GROUP.auth+=	auth-db auth-ldap auth-pam
@@ -10,9 +10,13 @@ PKG_OPTIONS_GROUP.storage=	storage-mysql storage-pgsql
 PKG_OPTIONS_GROUP.storage+=	storage-sqlite storage-db
 # SASL implementation
 PKG_OPTIONS_GROUP.sasl=		sasl-cyrus sasl-gnu
+# mio implementations
+PKG_OPTIONS_GROUP.mio=		mio-kqueue mio-select mio-poll mio-epoll
 # debugging
 PKG_SUPPORTED_OPTIONS+=		debug
+
 PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite sasl-gnu
+PKG_SUGGESTED_OPTIONS+=		mio-select mio-poll
 
 .include "../../mk/bsd.options.mk"
 
@@ -82,4 +86,23 @@ CONFIGURE_ARGS+=	--disable-pam
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
 CONFIGURE_ARGS+=	--enable-developer
+# CONFIGURE_ARGS+=	--enable-nad-debug
+# CONFIGURE_ARGS+=	--enable-pool-debug
+# CONFIGURE_ARGS+=	--enable-mio-debug
+.endif
+
+.if !empty(PKG_OPTIONS:Mmio-kqueue)
+CONFIGURE_ARGS+=	--enable-mio=kqueue
+.endif
+
+.if !empty(PKG_OPTIONS:Mmio-epoll)
+CONFIGURE_ARGS+=	--enable-mio=epoll
+.endif
+
+.if !empty(PKG_OPTIONS:Mmio-poll)
+CONFIGURE_ARGS+=	--enable-mio=poll
+.endif
+
+.if !empty(PKG_OPTIONS:Mmio-select)
+CONFIGURE_ARGS+=	--enable-mio=select
 .endif
