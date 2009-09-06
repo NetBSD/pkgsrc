@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/02/09 18:36:11 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/09/06 21:06:45 abs Exp $
 #
 
 PKGNAME=		pidgin-silc-${PIDGIN_VERSION}
@@ -47,6 +47,7 @@ BUILDLINK_API_DEPENDS.libpurple+=	libpurple-${PIDGIN_VERSION}{,nb*}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 #.include "../../devel/silc-toolkit/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
