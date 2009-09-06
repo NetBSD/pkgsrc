@@ -1,4 +1,4 @@
-/* $NetBSD: event.c,v 1.5 2009/02/25 19:31:53 joerg Exp $ */
+/* $NetBSD: event.c,v 1.5.4.1 2009/09/06 13:47:20 tron Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -348,11 +348,11 @@ loop:
 		    iter < last_iter && ev && (next = LIST_NEXT(ev, ev_link), 1);
 		    ev = next, ++iter) {
 			if (iter->revents) {
-				(*ev->ev_handler)(ev->ev_fd, ev->ev_arg);
 				if (!ev->ev_persistent) {
 					--active_events;
 					LIST_REMOVE(ev, ev_link);
 				}
+				(*ev->ev_handler)(ev->ev_fd, ev->ev_arg);
 				--ret;
 			}
 		}
