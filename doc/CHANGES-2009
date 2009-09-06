@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3518 2009/09/06 10:26:01 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.3519 2009/09/06 12:14:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4577,3 +4577,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/jabberd2 to 2.2.9 [schnoebe 2009-09-06]
 	Updated audio/speex to 1.2rc1nb1 [obache 2009-09-06]
 	Updated net/ntp4 to 4.2.4p7 [tnn 2009-09-06]
+	Added games/rftg version 0.5.2 [wiz 2009-09-06]
