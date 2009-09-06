@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2006/06/22 18:52:01 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2009/09/06 15:46:38 asau Exp $
 
---- configure.in.orig	2006-04-18 03:13:12.000000000 -0400
-+++ configure.in
-@@ -55,6 +55,33 @@ fi
+--- configure.in.orig	2006-04-18 11:13:12.000000000 +0400
++++ configure.in	2009-09-06 19:44:37.000000000 +0400
+@@ -24,6 +24,7 @@
+ AC_HEADER_STDC
+ AC_PROG_INTLTOOL
+ AM_PROG_LIBTOOL
++PKG_PROG_PKG_CONFIG
+ 
+ dnl  ------------------------------------
+ dnl | check for compiler characteristics |-------------------------------------
+@@ -55,6 +56,33 @@
  changequote([,])dnl
  
  
@@ -36,7 +44,28 @@ $NetBSD: patch-ab,v 1.1 2006/06/22 18:52:01 jlam Exp $
  dnl  --------------------------------
  dnl | check for neccessary libraries |-----------------------------------------
  dnl  --------------------------------
-@@ -89,33 +116,6 @@ PKG_CHECK_MODULES(QALCULATE, [
+@@ -63,11 +91,16 @@
+ 
+ AC_LANG([C++])
+ 
+-AC_PATH_CLN(1.1.0, [
+-     	LIBS="$LIBS $CLN_LIBS"
+-     	CPPFLAGS="$CPPFLAGS $CLN_CPPFLAGS"
++if pkg-config --atleast-version=1.1.0 cln; then
++   CLN_CPPFLAGS="`pkg-config --cflags cln`"
++   CLN_LIBS="`pkg-config --libs cln`"
++   	LIBS="$LIBS `pkg-config --libs cln`"
++     	CPPFLAGS="$CPPFLAGS `pkg-config --cflags cln`"
+   	AC_DEFINE(HAVE_LIBCLN,1,[If CLN can be used])
+-], AC_MSG_ERROR([No suitable installed version of CLN could be found.]))
++else AC_MSG_ERROR([No suitable installed version of CLN could be found.])
++fi
++AC_SUBST(CLN_CPPFLAGS)
++AC_SUBST(CLN_LIBS)
+ 
+ PKG_CHECK_MODULES(GLIB, [
+ 	glib-2.0 >= 2.4
+@@ -89,33 +122,6 @@
  AC_SUBST(QALCULATE_CFLAGS)
  AC_SUBST(QALCULATE_LIBS)
  

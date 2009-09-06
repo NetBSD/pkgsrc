@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1 2009/09/06 15:40:49 asau Exp $
+
+--- configure.in.orig	2006-12-17 13:57:31.000000000 +0300
++++ configure.in	2009-09-06 19:35:24.000000000 +0400
+@@ -52,6 +52,7 @@
+ AC_ENABLE_SHARED(yes)
+ AC_ENABLE_STATIC(no)
+ KDE_PROG_LIBTOOL
++PKG_PROG_PKG_CONFIG
+ 
+ dnl for NLS support. Call them in this order!
+ dnl WITH_NLS is for the po files
+@@ -69,15 +70,20 @@
+ AC_C_BIGENDIAN
+ AC_CHECK_KDEMAXPATHLEN
+ 
+-AC_CHECK_LIB(pthread, pthread_create, [LIBS="$LIBS -lpthread"])
++AC_CHECK_LIB(pthread, pthread_create, [LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"])
+ 
+ AC_LANG([C++])
+ 
+-AC_PATH_CLN(1.1.0, [
+-     	LIBS="$LIBS $CLN_LIBS"
+-     	CPPFLAGS="$CPPFLAGS $CLN_CPPFLAGS"
++if pkg-config --atleast-version=1.1.0 cln; then
++   CLN_CPPFLAGS="`pkg-config --cflags cln`"
++   CLN_LIBS="`pkg-config --libs cln`"
++   	LIBS="$LIBS `pkg-config --libs cln`"
++     	CPPFLAGS="$CPPFLAGS `pkg-config --cflags cln`"
+   	AC_DEFINE(HAVE_LIBCLN,1,[If CLN can be used])
+-], AC_MSG_ERROR([No suitable installed version of CLN could be found.]))
++else AC_MSG_ERROR([No suitable installed version of CLN could be found.])
++fi
++AC_SUBST(CLN_CPPFLAGS)
++AC_SUBST(CLN_LIBS)
+ 
+ PKG_CHECK_MODULES(QALCULATE, [
+ 	libxml-2.0
