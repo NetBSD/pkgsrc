@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/06 18:42:41 ahoka Exp $
+
+SHA1 (halibut-1.0.tar.gz) = 1e4643faf2bb4e1843740b8c70635d3d33bb7989
+RMD160 (halibut-1.0.tar.gz) = ec0bd44216a8a0379520fc77aa6c828fb24557a3
+Size (halibut-1.0.tar.gz) = 940897 bytes
+SHA1 (patch-aa) = e036a33c7464d7bde449788e7a86a0357079061c
+SHA1 (patch-ab) = f3b9ea19d5dfd88d85a6d9092b454acd139f0f8b
