@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.46 2009/09/01 11:54:43 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.47 2009/09/06 14:31:52 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -163,3 +163,8 @@ Pullup ticket #2879 - requested by martti
 postfix: bug fix update
 Pullup ticket #2880 - requested by tez
 htmldoc: security patch
+Pullup ticket #2881 - requested by joerg
+pbulk-base: bug fix update
+pbulk: bug fix update
+Pullup ticket #2882 - requested by jnemeth
+asterisk: security update
