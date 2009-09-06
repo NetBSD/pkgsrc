@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2009/09/06 13:04:53 tonio Exp $
+
+Do not emit errors on warning, to build with ocaml 3.11
+
+--- tools/Makefile.inc.unix.orig	2009-09-06 12:58:26.000000000 +0000
++++ tools/Makefile.inc.unix	2009-09-06 12:58:42.000000000 +0000
+@@ -5,8 +5,8 @@
+ CAMLP5F=-DUNIX
+ CAMLP5D=+camlp5
+ LIBUNIX=-cclib -lunix
+-OCAMLC=ocamlc.opt -warn-error A
+-OCAMLOPT=ocamlopt.opt -warn-error A
++OCAMLC=ocamlc.opt
++OCAMLOPT=ocamlopt.opt
+ OCAMLI=
+ OCAMLD=
+ STRIP=strip
