@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3519 2009/09/06 12:14:16 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3520 2009/09/06 12:59:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4578,3 +4578,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/speex to 1.2rc1nb1 [obache 2009-09-06]
 	Updated net/ntp4 to 4.2.4p7 [tnn 2009-09-06]
 	Added games/rftg version 0.5.2 [wiz 2009-09-06]
+	Updated devel/opal to 3.6.4nb1 [obache 2009-09-06]
