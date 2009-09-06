@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.15.4.1 2009/08/21 12:17:35 tron Exp $
+@comment $NetBSD: PLIST.common,v 1.15.4.2 2009/09/06 14:31:35 tron Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -59,6 +59,7 @@ include/asterisk/res_odbc.h
 include/asterisk/rtp.h
 include/asterisk/say.h
 include/asterisk/sched.h
+include/asterisk/sha1.h
 include/asterisk/slinfactory.h
 include/asterisk/srv.h
 include/asterisk/strings.h
