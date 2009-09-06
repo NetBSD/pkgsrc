@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2009/01/26 20:06:15 kefren Exp $
+$NetBSD: distinfo,v 1.13 2009/09/06 10:20:21 tnn Exp $
 
-SHA1 (ntp-4.2.4p6.tar.gz) = ad4b068cc03ce346a6276ed6b31c026b6ffc3d92
-RMD160 (ntp-4.2.4p6.tar.gz) = d3853bdd593b49c435ec19b95066097ef5e71acc
-Size (ntp-4.2.4p6.tar.gz) = 3443787 bytes
+SHA1 (ntp-4.2.4p7.tar.gz) = 8476f75daffe9851cc6f33d170902bce77637499
+RMD160 (ntp-4.2.4p7.tar.gz) = 11d69176c8cb4b95f7e9f468c37ab8fc53a28876
+Size (ntp-4.2.4p7.tar.gz) = 3382146 bytes
