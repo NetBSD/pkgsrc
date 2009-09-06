@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.4 2009/06/14 20:05:40 joerg Exp $
+@comment $NetBSD: PLIST.opt,v 1.5 2009/09/06 21:10:32 tonio Exp $
 lib/ocaml/camlimages/ci_bmp.a
 lib/ocaml/camlimages/ci_bmp.cmxa
 lib/ocaml/camlimages/ci_core.a
@@ -13,6 +13,8 @@ lib/ocaml/camlimages/ci_jpeg.a
 lib/ocaml/camlimages/ci_jpeg.cmxa
 lib/ocaml/camlimages/ci_lablgtk.a
 lib/ocaml/camlimages/ci_lablgtk.cmxa
+lib/ocaml/camlimages/ci_lablgtk2.a
+lib/ocaml/camlimages/ci_lablgtk2.cmxa
 lib/ocaml/camlimages/ci_png.a
 lib/ocaml/camlimages/ci_png.cmxa
 lib/ocaml/camlimages/ci_ppm.a
