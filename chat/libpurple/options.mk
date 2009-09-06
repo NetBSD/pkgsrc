@@ -1,12 +1,13 @@
-# $NetBSD: options.mk,v 1.10 2008/12/21 14:08:39 ahoka Exp $
+# $NetBSD: options.mk,v 1.11 2009/09/06 21:06:44 abs Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		gnutls perl tcl debug dbus sasl avahi
-PKG_SUGGESTED_OPTIONS+=		gnutls dbus avahi
+PKG_SUPPORTED_OPTIONS+=		farsight gstreamer
+PKG_SUGGESTED_OPTIONS+=		gnutls dbus avahi farsight gstreamer
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dbus avahi
+PLIST_VARS+=		avahi dbus gnutls nss perl
 
 .if !empty(PKG_OPTIONS:Mavahi)
 PLIST.avahi=            yes
@@ -14,12 +15,14 @@ PLIST.avahi=            yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnutls)
+PLIST.gnutls=		yes
 CONFIGURE_ARGS+=	--enable-gnutls
 CONFIGURE_ARGS+= --with-gnutls-includes=${BUILDLINK_PREFIX.gnutls}/include
 CONFIGURE_ARGS+= --with-gnutls-libs=${BUILDLINK_PREFIX.gnutls}/lib
 
 .  include "../../security/gnutls/buildlink3.mk"
 .else
+PLIST.nss=		yes
 CONFIGURE_ARGS+=	--enable-nss
 CONFIGURE_ARGS+= --with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
 CONFIGURE_ARGS+= --with-nspr-libs=${BUILDLINK_PREFIX.nspr}/lib/nspr
@@ -30,6 +33,7 @@ CONFIGURE_ARGS+= --with-nss-libs=${BUILDLINK_PREFIX.nss}/lib/nss
 .endif
 
 .if !empty(PKG_OPTIONS:Mperl)
+PLIST.perl=		yes
 CONFIGURE_ARGS+=	--enable-perl
 USE_TOOLS+=		perl:run
 .  include "../../lang/perl5/buildlink3.mk"
@@ -61,4 +65,14 @@ CONFIGURE_ARGS+=	--enable-debug
 .if !empty(PKG_OPTIONS:Msasl)
 CONFIGURE_ARGS+=	--enable-cyrus-sasl
 .  include "../../security/cyrus-sasl/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mfarsight)
+CONFIGURE_ARGS+=	--enable-farsight
+.  include "../../multimedia/farsight2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mgstreamer)
+CONFIGURE_ARGS+=	--enable-gstreamer
+.  include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .endif
