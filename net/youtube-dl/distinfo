@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2009/07/19 11:35:41 zafer Exp $
+$NetBSD: distinfo,v 1.12 2009/09/06 16:48:44 snj Exp $
 
-SHA1 (youtube-dl-20090629/youtube-dl) = 52cc4128bfdc15c81f5d3206c1847570aec9896b
-RMD160 (youtube-dl-20090629/youtube-dl) = ed5bb02a750891a0d2f99cc3118b2b8234a1dc0a
-Size (youtube-dl-20090629/youtube-dl) = 41008 bytes
+SHA1 (youtube-dl-20090808/youtube-dl) = cf0e7ef6bf04ec8dc7033b86de11192263f062ae
+RMD160 (youtube-dl-20090808/youtube-dl) = c1a94ebeff9fcb9a8f3fe8ef1c13faac2d2dca16
+Size (youtube-dl-20090808/youtube-dl) = 41660 bytes
