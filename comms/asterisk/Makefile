@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63.2.2 2009/08/27 11:35:17 tron Exp $
+# $NetBSD: Makefile,v 1.63.2.3 2009/09/06 14:31:35 tron Exp $
 
-DISTNAME=	asterisk-1.2.34
+DISTNAME=	asterisk-1.2.35
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/releases/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
