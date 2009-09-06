@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3525 2009/09/06 19:10:21 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3526 2009/09/06 21:05:42 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4584,3 +4584,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Declare to 0.30 [seb 2009-09-06]
 	Added textproc/halibut version 1.0 [ahoka 2009-09-06]
 	Updated devel/p5-MooseX-Getopt to 0.22 [seb 2009-09-06]
+	Updated devel/p5-Test-WWW-Selenium to 1.18 [seb 2009-09-06]
