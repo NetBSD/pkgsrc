@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/09/05 21:53:51 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2009/09/06 23:35:59 abs Exp $
 #
 
 EGG_VERSION=		0.6c9
@@ -32,9 +32,12 @@ EGG_NAME=	${DISTNAME:S/2.4/${PYVERSSUFFIX}/}
 TARGET_NAME=	${PREFIX}/${PYSITELIB}/${EGG_NAME}
 
 do-extract:
+	# Ugly workaround for NetBSD-current's unzip(1) not appearing to look for a zip
+	# header anywhere but byte offset 0. Unfortunately the workaround then makes
+	# normal unzip report an error after extraction, hence the '|| true'
 	${MKDIR} ${WRKSRC}
 	dd if=${DISTDIR}/${DISTNAME} of=${WRKDIR}/tmp.zip skip=376 bs=1
-	${TOOLS_CMD.unzip} -d ${WRKSRC} ${WRKDIR}/tmp.zip
+	${TOOLS_CMD.unzip} -d ${WRKSRC} ${WRKDIR}/tmp.zip || true
 
 post-extract:
 	chmod -R go-w ${WRKSRC}
