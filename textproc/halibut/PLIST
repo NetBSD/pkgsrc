@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/06 18:42:41 ahoka Exp $
+bin/halibut
+man/man1/halibut.1
