@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.50 2008/04/01 16:30:19 jlam Exp $
+# $NetBSD: mksandbox,v 1.51 2009/09/06 19:43:18 wiz Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -45,7 +45,7 @@ xsrc=/usr/xsrc
 with_x=yes
 
 kernel=""
-sandboxMountDirs="/bin /sbin /lib /libexec /usr/X11R6 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
+sandboxMountDirs="/bin /sbin /lib /libexec /usr/X11R7 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
 sandboxEmptyDirs="/var/run /var/log /var/spool/lock /var/spool/mqueue"
 sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx /var/log/lastlog /var/log/lastlogx"
 
