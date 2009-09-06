@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3523 2009/09/06 18:26:31 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3524 2009/09/06 19:05:13 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4582,3 +4582,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/diffstat to 1.49 [snj 2009-09-06]
 	Updated net/youtube-dl to 20090808 [snj 2009-09-06]
 	Updated devel/p5-MooseX-Declare to 0.30 [seb 2009-09-06]
+	Added textproc/halibut version 1.0 [ahoka 2009-09-06]
