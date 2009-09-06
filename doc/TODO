@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8425 2009/09/06 15:22:55 wiz Exp $
+$NetBSD: TODO,v 1.8426 2009/09/06 16:20:55 snj Exp $
 
 Suggested new packages
 ======================
@@ -496,7 +496,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o denemo-0.8.8
 	o dhid-5.3
 	o dia-0.97
-	o diffstat-1.49
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dircproxy-devel-1.2.0.2
