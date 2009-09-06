@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/08/26 19:57:16 sno Exp $
+# $NetBSD: Makefile,v 1.19 2009/09/06 21:06:45 abs Exp $
 #
 # XXX appease pkglint
 #PKGNAME=		pidgin-${PIDGIN_VERSION}
@@ -7,8 +7,6 @@ COMMENT=		Multi-protocol Instant Messaging client GTK frontend
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include		"../../chat/libpurple/Makefile.common"
-
-PKGREVISION=		1
 
 USE_TOOLS+=		msgfmt intltool
 
@@ -19,6 +17,7 @@ PKGCONFIG_OVERRIDE+=	pidgin/pidgin.pc.in
 CONFIGURE_ARGS+=	--enable-gtkui
 
 BUILD_DIRS=		pidgin
+INSTALLATION_DIRS=	share/applications
 
 # includes "Arguments to configure" as string
 CHECK_WRKREF_SKIP=	bin/pidgin
@@ -32,7 +31,6 @@ pre-build:
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} pidgin.desktop
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/pidgin.desktop \
 	  ${DESTDIR}${PREFIX}/share/applications
 
@@ -42,6 +40,7 @@ BUILDLINK_API_DEPENDS.libpurple+=	libpurple-${PIDGIN_VERSION}{,nb*}
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
