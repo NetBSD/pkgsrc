@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2009/09/06 12:17:17 asau Exp $
+
+--- libqalculate/Number.cc.orig	2007-05-18 12:03:22.000000000 +0400
++++ libqalculate/Number.cc	2009-09-06 16:00:18.000000000 +0400
+@@ -28,7 +28,8 @@
+ 
+ using namespace cln;
+ 
+-void cln::cl_abort() {
++namespace cln {
++void cl_abort() {
+ 	CALCULATOR->error(true, "CLN Error: see terminal output (probably too large or small floating point number)", NULL);
+ 	if(CALCULATOR->busy()) {
+ 		CALCULATOR->abort_this();
+@@ -36,6 +37,7 @@
+ 		exit(0);
+ 	}
+ }
++}
+ 
+ string printCL_I(cl_I integ, int base = 10, bool display_sign = true, BaseDisplay base_display = BASE_DISPLAY_NORMAL, bool lower_case = false) {
+ 	if(base == BASE_ROMAN_NUMERALS) {
