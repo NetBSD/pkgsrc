@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2009/08/14 16:05:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/06 12:57:53 obache Exp $
 #
 
 DISTNAME=		opal-3.6.4
+PKGREVISION=		1
 CATEGORIES=		devel net comms
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/opal/3.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -26,6 +27,8 @@ CONFIGURE_ARGS+=	--enable-h264
 # not used and should be disabled in favour of the
 # h263+ plugin, so do so
 CONFIGURE_ARGS+=	--disable-ffmpeg-h263
+CONFIGURE_ARGS+=	--disable-localgsm
+CONFIGURE_ARGS+=	--disable-localspeex
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
@@ -44,6 +47,18 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/opal_inc.mak ${DESTDIR}${PREFIX}/share/opal
 	${INSTALL_DATA} ${WRKSRC}/version.h ${DESTDIR}${PREFIX}/share/opal
 
+# pkgsrc's gsm is shlib, need additional linker flags.
+GSM_LIBS=		${LINKER_RPATH_FLAG}${BUILDLINK_PREFIX.gsm}/lib
+GSM_LIBS+=		-L${BUILDLINK_PREFIX.gsm}/lib -lgsm
+SUBST_CLASSES+=		gsm
+SUBST_STAGE.gsm=	pre-configure
+SUBST_FILES.gsm=	plugins/configure
+SUBST_SED.gsm=		-e 's;GSM_LIBS="-lgsm";GSM_LIBS="${GSM_LIBS}";g'
+
+#for WAV49
+BUILDLINK_API_DEPENDS.gsm+=	gsm>=1.0.12
+.include "../../audio/gsm/buildlink3.mk"
+.include "../../audio/speex/buildlink3.mk"
 .include "../../devel/ptlib/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
