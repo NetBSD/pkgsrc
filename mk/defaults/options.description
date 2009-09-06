@@ -128,6 +128,7 @@ ezmlm-althash		Patch to hash subscriber list case-insensitively.
 faac			Enable AAC decoding support using faac.
 faad			Enable AAC decoding support using faad2.
 fam			Support using File Alteration Monitor (FAM).
+farsight		Enable farsight2 support.
 fastcgi			Use FastCGI as the CGI manager.
 fd-small		Build smaller misc/fd package.
 ffmpeg			Enable ffmpeg support.
@@ -435,6 +436,7 @@ svn			Enable subversion support
 syncdir			Force synchronous link() and related syscalls.
 syslog			Enable syslog support.
 syslogng-spoof		Spoof the original source address of forwarded packets
+tcl			Enable Tcl scripting support.
 tcpwrappers		Enable tcpwrappers support.
 theora			Use the theora codecs.
 threads			Enable threads support.
