@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2008/06/15 22:55:22 gdt Exp $
+$NetBSD: distinfo,v 1.15 2009/09/06 13:04:19 tonio Exp $
 
 SHA1 (geneweb-5.01.tgz) = 4443b12d88cc8a6fa04ae903ace3f7bdb384d40e
 RMD160 (geneweb-5.01.tgz) = 75507bb35df74b92becc8514c9ad82c8f4ef886e
 Size (geneweb-5.01.tgz) = 1388008 bytes
 SHA1 (patch-ac) = cf35956939ab1ce57cac2a4261f892b0a34cb053
+SHA1 (patch-ad) = 83bdd42cc3229257b9eca3433c2f09b315b5e53d
