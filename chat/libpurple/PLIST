@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/06/14 17:37:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/09/06 21:06:44 abs Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -21,6 +21,10 @@ include/libpurple/gaim-compat.h
 include/libpurple/idle.h
 include/libpurple/imgstore.h
 include/libpurple/log.h
+include/libpurple/marshallers.h
+include/libpurple/media-gst.h
+include/libpurple/media.h
+include/libpurple/mediamanager.h
 include/libpurple/mime.h
 include/libpurple/nat-pmp.h
 include/libpurple/network.h
@@ -40,13 +44,19 @@ include/libpurple/savedstatuses.h
 include/libpurple/server.h
 include/libpurple/signals.h
 include/libpurple/smiley.h
+include/libpurple/sound-theme-loader.h
+include/libpurple/sound-theme.h
 include/libpurple/sound.h
 include/libpurple/sslconn.h
 include/libpurple/status.h
 include/libpurple/stringref.h
 include/libpurple/stun.h
+include/libpurple/theme-loader.h
+include/libpurple/theme-manager.h
+include/libpurple/theme.h
 include/libpurple/upnp.h
 include/libpurple/util.h
+include/libpurple/valgrind.h
 include/libpurple/value.h
 include/libpurple/version.h
 include/libpurple/whiteboard.h
@@ -71,12 +81,15 @@ lib/purple-2/libqq.la
 lib/purple-2/libsimple.la
 lib/purple-2/libxmpp.la
 lib/purple-2/libyahoo.la
+lib/purple-2/libyahoojp.la
+lib/purple-2/libymsg.la
 lib/purple-2/libzephyr.la
 lib/purple-2/log_reader.la
 lib/purple-2/newline.la
 lib/purple-2/offlinemsg.la
 lib/purple-2/psychic.la
-lib/purple-2/ssl-gnutls.la
+${PLIST.gnutls}lib/purple-2/ssl-gnutls.la
+${PLIST.nss}lib/purple-2/ssl-nss.la
 lib/purple-2/ssl.la
 lib/purple-2/statenotify.la
 share/aclocal/purple.m4
@@ -112,6 +125,7 @@ share/locale/gu/LC_MESSAGES/pidgin.mo
 share/locale/he/LC_MESSAGES/pidgin.mo
 share/locale/hi/LC_MESSAGES/pidgin.mo
 share/locale/hu/LC_MESSAGES/pidgin.mo
+share/locale/hy/LC_MESSAGES/pidgin.mo
 share/locale/id/LC_MESSAGES/pidgin.mo
 share/locale/it/LC_MESSAGES/pidgin.mo
 share/locale/ja/LC_MESSAGES/pidgin.mo
@@ -144,6 +158,7 @@ share/locale/sq/LC_MESSAGES/pidgin.mo
 share/locale/sr/LC_MESSAGES/pidgin.mo
 share/locale/sr@latin/LC_MESSAGES/pidgin.mo
 share/locale/sv/LC_MESSAGES/pidgin.mo
+share/locale/sw/LC_MESSAGES/pidgin.mo
 share/locale/ta/LC_MESSAGES/pidgin.mo
 share/locale/te/LC_MESSAGES/pidgin.mo
 share/locale/th/LC_MESSAGES/pidgin.mo
@@ -160,13 +175,18 @@ share/purple/ca-certs/America_Online_Root_Certification_Authority_1.pem
 share/purple/ca-certs/CAcert_Class3.pem
 share/purple/ca-certs/CAcert_Root.pem
 share/purple/ca-certs/Equifax_Secure_CA.pem
+share/purple/ca-certs/Equifax_Secure_Global_eBusiness_CA-1.pem
 share/purple/ca-certs/GTE_CyberTrust_Global_Root.pem
 share/purple/ca-certs/Microsoft_Internet_Authority.pem
 share/purple/ca-certs/Microsoft_Secure_Server_Authority.pem
+share/purple/ca-certs/StartCom_Certification_Authority.pem
 share/purple/ca-certs/StartCom_Free_SSL_CA.pem
+share/purple/ca-certs/Thawte_Premium_Server_CA.pem
+share/purple/ca-certs/VeriSign_Class3_Extended_Validation_CA.pem
 share/purple/ca-certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
-share/purple/ca-certs/Verisign_Class3_Primary_CA.pem
+share/purple/ca-certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5_2.pem
 share/purple/ca-certs/VeriSign_International_Server_Class_3_CA.pem
+share/purple/ca-certs/Verisign_Class3_Primary_CA.pem
 share/purple/ca-certs/Verisign_RSA_Secure_Server_CA.pem
 share/sounds/purple/alert.wav
 share/sounds/purple/login.wav
@@ -186,3 +206,10 @@ ${PLIST.dbus}include/libpurple/dbus-types.h
 ${PLIST.dbus}include/libpurple/dbus-useful.h
 ${PLIST.dbus}lib/libpurple-client.la
 ${PLIST.dbus}lib/purple-2/dbus-example.la
+${PLIST.perl}lib/purple-2/perl.la
+${PLIST.perl}lib/purple-2/perl/Purple.pm
+${PLIST.perl}lib/purple-2/perl/auto/Purple/.packlist
+${PLIST.perl}lib/purple-2/perl/auto/Purple/Purple.bs
+${PLIST.perl}lib/purple-2/perl/auto/Purple/Purple.so
+${PLIST.perl}lib/purple-2/perl/auto/Purple/autosplit.ix
+${PLIST.perl}man/man3/Purple.3

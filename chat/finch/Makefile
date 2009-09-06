@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/02/04 16:16:41 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2009/09/06 21:06:44 abs Exp $
 #
 
 PKGNAME=	finch-${PIDGIN_VERSION}
@@ -49,6 +49,7 @@ BUILDLINK_API_DEPENDS.libpurple+=	libpurple-${PIDGIN_VERSION}{,nb*}
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
