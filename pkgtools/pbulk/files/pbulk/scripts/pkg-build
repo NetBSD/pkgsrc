@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.17 2008/09/16 18:21:30 joerg Exp $
+# $NetBSD: pkg-build,v 1.17.8.1 2009/09/06 13:47:20 tron Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -117,7 +117,7 @@ set -e
 mkdir -p ${bulklog}/${pkgname}
 rm -f ${bulklog}/${pkgname}/*
 
-if [ "$use_destdir" = "user-destdir" ]; then
+if [ "$use_destdir" = "destdir" -o "$use_destdir" = "user-destdir" ]; then
 	touch ${bulklog}/${pkgname}/work.log
 	@CHOWN@ ${unprivileged_user} ${bulklog}/${pkgname}/work.log
 fi
