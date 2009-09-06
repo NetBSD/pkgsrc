@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/09/06 10:20:21 tnn Exp $
+# $NetBSD: Makefile,v 1.61 2009/09/06 11:13:50 tnn Exp $
 #
 
 DISTNAME=	ntp-4.2.4p7
@@ -39,7 +39,7 @@ post-install:
 
 PLIST_VARS+=	ntptime tickadj timetrim
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux"
 PLIST.ntptime=		yes
 PLIST.tickadj=		yes
 .elif ${OPSYS} == "IRIX"
