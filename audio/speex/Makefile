@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2008/11/08 21:06:46 bjs Exp $
+# $NetBSD: Makefile,v 1.28 2009/09/06 08:15:04 obache Exp $
 #
 
 DISTNAME=	speex-1.2rc1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.us.xiph.org/releases/speex/
 
@@ -14,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	speex.pc.in
-PKGCONFIG_OVERRIDE=	speexdsp.pc.in
+PKGCONFIG_OVERRIDE+=	speexdsp.pc.in
 USE_TOOLS+=		pkg-config
 
 # previous versions of the package were called Speex
