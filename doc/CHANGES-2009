@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3514 2009/09/06 04:01:23 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3515 2009/09/06 04:19:55 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4574,3 +4574,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/duplicity to 0.5.20 [tnn 2009-09-05]
 	Updated graphics/ruby-RMagick to 2.11.1 [obata 2009-09-06]
 	Updated www/opengoo to 1.5.3nb1 [taca 2009-09-06]
+	Updated chat/jabberd2 to 2.2.9 [schnoebe 2009-09-06]
