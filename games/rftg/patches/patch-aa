@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/09/06 12:13:27 wiz Exp $
+
+--- do_train.orig	2009-08-27 16:18:04.000000000 +0000
++++ do_train
+@@ -2,7 +2,7 @@
+ 
+ advanced=''
+ 
+-if [ $1 == -a ]
++if [ $1 = -a ]
+ then
+ 	shift
+ 	advanced='a'
+@@ -17,7 +17,7 @@ rm -f rftg.$name.out
+ 
+ for i in `seq 1 1000`
+ do
+-	if [ "$advanced" == a ]
++	if [ "$advanced" = a ]
+ 	then
+ 		./learner -e $1 -p $2 -f 100 -a >> rftg.$name.out
+ 	else
