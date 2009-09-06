@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3516 2009/09/06 08:36:19 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3517 2009/09/06 08:37:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4575,3 +4575,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/ruby-RMagick to 2.11.1 [obache 2009-09-06]
 	Updated www/opengoo to 1.5.3nb1 [taca 2009-09-06]
 	Updated chat/jabberd2 to 2.2.9 [schnoebe 2009-09-06]
+	Updated audio/speex to 1.2rc1nb1 [obache 2009-09-06]
