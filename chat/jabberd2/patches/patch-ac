@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2009/08/21 02:28:13 schnoebe Exp $
+$NetBSD: patch-ac,v 1.6 2009/09/06 04:18:11 schnoebe Exp $
 
---- etc/sm.xml.in.orig	2009-04-27 04:05:14.000000000 -0500
+--- etc/sm.xml.in.orig	2009-07-05 16:54:18.000000000 -0500
 +++ etc/sm.xml.in
-@@ -7,7 +7,7 @@
+@@ -5,7 +5,7 @@
  
    <!-- The process ID file. Comment this out if you don't need to know
         the process ID from outside the process (eg for control scripts) -->
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.5 2009/08/21 02:28:13 schnoebe Exp $
  
    <!-- Router connection configuration -->
    <router>
-@@ -29,7 +29,7 @@
+@@ -27,7 +27,7 @@
           If this is commented out, or the file can't be read, no attempt
           will be made to establish an encrypted channel with the router. -->
      <!--
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.5 2009/08/21 02:28:13 schnoebe Exp $
      -->
  
      <!-- Router connection retry -->
-@@ -62,7 +62,7 @@
+@@ -60,7 +60,7 @@
  
      <!-- If logging to file, this is the filename of the logfile -->
      <!--
@@ -29,16 +29,7 @@ $NetBSD: patch-ac,v 1.5 2009/08/21 02:28:13 schnoebe Exp $
      -->
    </log>
  
-@@ -153,7 +153,7 @@
-          implementation does not implement the 'count' callback). -->
-     <db>
-       <!-- Directory to store database files under -->
--      <path>@localstatedir@/jabberd/db</path>
-+      <path>@DBDIR@</path>
- 
-       <!-- Synchronize the database to disk after each write. If you
-            disable this, database accesses may be faster, but data may
-@@ -178,7 +178,7 @@
+@@ -114,7 +114,7 @@
      <!-- SQLite driver configuration -->
      <sqlite>
        <!-- Database name -->
@@ -47,7 +38,16 @@ $NetBSD: patch-ac,v 1.5 2009/08/21 02:28:13 schnoebe Exp $
  
        <!-- Transacation support. If this is commented out, transactions
             will be disabled. This might make database accesses faster,
-@@ -192,7 +192,7 @@
+@@ -180,7 +180,7 @@
+          implementation does not implement the 'count' callback). -->
+     <db>
+       <!-- Directory to store database files under -->
+-      <path>@localstatedir@/jabberd/db</path>
++      <path>@DBDIR@</path>
+ 
+       <!-- Synchronize the database to disk after each write. If you
+            disable this, database accesses may be faster, but data may
+@@ -205,7 +205,7 @@
      <!-- Filesystem driver configuration -->
      <fs>
        <!-- Directory to store database files under. -->
@@ -56,7 +56,7 @@ $NetBSD: patch-ac,v 1.5 2009/08/21 02:28:13 schnoebe Exp $
      </fs>
  
      <!-- LDAPVCARD driver configuration -->
-@@ -654,7 +654,7 @@
+@@ -667,7 +667,7 @@
  
        <!-- If you defined publish, you should comment <roster> -->
        <!--
