@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/07/23 21:23:35 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2009/09/07 19:02:14 joerg Exp $
 #
 
 DISTNAME=	mercurial-1.3.1
@@ -17,7 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=			yes
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	23
 USE_TOOLS+=			gmake msgfmt
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5

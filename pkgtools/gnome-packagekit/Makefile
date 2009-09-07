@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/08/26 19:58:12 sno Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/07 19:02:14 joerg Exp $
 #
 
 DISTNAME=	gnome-packagekit-0.4.0
@@ -12,7 +12,7 @@ COMMENT=	GNOME frontend for PackageKit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	25 24 23
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

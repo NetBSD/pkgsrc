@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/05/24 10:51:06 tron Exp $
+# $NetBSD: Makefile,v 1.28 2009/09/07 19:02:13 joerg Exp $
 
 DISTNAME=	MySQL-python-${PKGVER}
 PKGNAME=	${PYPKGPREFIX}-mysqldb-${PKGVER}
@@ -19,7 +19,7 @@ PY_PATCHPLIST=	yes
 PYSETUPINSTALLARGS= --single-version-externally-managed --record plist.txt
 PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
 
-PYTHON_VERSIONS_ACCEPTED=	25 24 23
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 .include "../../mk/mysql.buildlink3.mk"
 
