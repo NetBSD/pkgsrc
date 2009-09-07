@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.476 2009/07/26 18:25:01 drochner Exp $
+# $NetBSD: Makefile,v 1.477 2009/09/07 18:21:23 joerg Exp $
 #
 
 COMMENT=	System utilities
@@ -374,11 +374,9 @@ SUBDIR+=	xbatt
 SUBDIR+=	xbattbar
 SUBDIR+=	xcdroast
 SUBDIR+=	xdu
-SUBDIR+=	xen12
 SUBDIR+=	xenkernel20
 SUBDIR+=	xenkernel3
 SUBDIR+=	xenkernel33
-SUBDIR+=	xentools12
 SUBDIR+=	xentools20
 SUBDIR+=	xentools3
 SUBDIR+=	xentools3-hvm
