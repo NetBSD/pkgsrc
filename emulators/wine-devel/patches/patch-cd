@@ -1,0 +1,16 @@
+$NetBSD: patch-cd,v 1.1 2009/09/07 20:27:25 reinoud Exp $
+
+--- dlls/wsock32/socket.c.orig	2009-02-27 23:21:46.000000000 +0100
++++ dlls/wsock32/socket.c
+@@ -23,10 +23,10 @@
+ #include "config.h"
+ #include <stdarg.h>
+ 
++#include "winsock2.h"
+ #include "windef.h"
+ #include "winbase.h"
+ #include "wine/debug.h"
+-#include "winsock2.h"
+ #include "winnt.h"
+ #include "wscontrol.h"
+ #include "iphlpapi.h"
