@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.1 2009/09/07 18:21:55 drochner Exp $
+
+--- src/plugins/youtube/youtube.py.orig	2009-09-07 20:11:03.000000000 +0200
++++ src/plugins/youtube/youtube.py
+@@ -203,8 +203,8 @@ class YouTube (totem.Plugin):
+ 
+ 	def resolve_t_param (self, youtube_id):
+ 		"""We have to get the t parameter from the actual video page, since Google changed how their URLs work"""
+-		stream = urllib.urlopen ("http://youtube.com/watch?v=" + urllib.quote (youtube_id))
+-		regexp1 = re.compile ("swfArgs.*\"t\": \"([^\"]+)\"")
++		stream = urllib.urlopen ("http://youtube.com/get_video_info?video_id=" + urllib.quote (youtube_id))
++		regexp1 = re.compile ("(?m)&token=([^&]+)(?:&|$)")
+ 		regexp2 = re.compile ("</head>")
+ 
+ 		contents = stream.read ()
+@@ -213,7 +213,7 @@ class YouTube (totem.Plugin):
+ 			matches = regexp1.search (contents)
+ 			if (matches != None):
+ 				stream.close ()
+-				return matches.group (1)
++				return urllib.unquote(matches.group (1))
+ 
+ 			"""Check to see if we've come to the end of the <head> tag; in which case, we should give up"""
+ 			if (regexp2.search (contents) != None):
