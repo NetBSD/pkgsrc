@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/07 18:01:43 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/07 18:08:54 ahoka Exp $
 #
 
 DISTNAME=	putty-0.60-2009-09-06
 PKGNAME=	putty-0.6.20090906
 CATEGORIES=	security
-MASTER_SITES=	http://the.earth.li/~sgtatham/putty/0.60/
+MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/ahoka/dist/
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/putty/
