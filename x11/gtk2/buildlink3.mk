@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2009/08/26 19:56:52 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2009/09/07 18:42:39 drochner Exp $
 
 BUILDLINK_TREE+=	gtk2
 
@@ -20,10 +20,6 @@ pkgbase := gtk2
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.gtk2:Mcups)
-.include "../../print/cups/buildlink3.mk"
 .endif
 
 .include "../../devel/atk/buildlink3.mk"
