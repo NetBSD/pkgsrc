@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3539 2009/09/07 18:28:46 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3540 2009/09/07 18:30:46 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4600,3 +4600,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed databases/py-IndexedCatalog [joerg 2009-09-07]
 	Removed databases/py-ZODB [joerg 2009-09-07]
 	Removed devel/py-TPG [joerg 2009-09-07]
+	Removed graphics/vtk-python [joerg 2009-09-07]
