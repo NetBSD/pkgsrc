@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3526 2009/09/06 21:05:42 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3527 2009/09/07 03:10:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4585,3 +4585,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/halibut version 1.0 [ahoka 2009-09-06]
 	Updated devel/p5-MooseX-Getopt to 0.22 [seb 2009-09-06]
 	Updated devel/p5-Test-WWW-Selenium to 1.18 [seb 2009-09-06]
+	Updated www/typolight27 to 2.7.3 [taca 2009-09-07]
+	Updated www/squid30 to 3.0.19 [taca 2009-09-07]
