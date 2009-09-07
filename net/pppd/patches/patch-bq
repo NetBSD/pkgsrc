@@ -1,0 +1,59 @@
+$NetBSD: patch-bq,v 1.1 2009/09/07 04:08:54 dsainty Exp $
+
+Linux doesn't support direction-specific filters.  Conform to the new
+set_filters() interface, but generate errors if the outbound filters are
+defined.
+
+--- pppd/sys-linux.c.orig	2009-09-07 15:42:24.000000000 +1200
++++ pppd/sys-linux.c	2009-09-07 15:50:01.000000000 +1200
+@@ -1293,23 +1293,38 @@
+ /*
+  * set_filters - set the active and pass filters in the kernel driver.
+  */
+-int set_filters(struct bpf_program *pass, struct bpf_program *active)
++int set_filters(struct bpf_program *pass_in, struct bpf_program *pass_out,
++                struct bpf_program *active_in, struct bpf_program *active_out)
+ {
+ 	struct sock_fprog fp;
+ 
+-	fp.len = pass->bf_len;
+-	fp.filter = (struct sock_filter *) pass->bf_insns;
+-	if (ioctl(ppp_dev_fd, PPPIOCSPASS, &fp) < 0) {
+-		if (errno == ENOTTY)
+-			warn("kernel does not support PPP filtering");
+-		else
+-			error("Couldn't set pass-filter in kernel: %m");
++	if (pass_in->bf_len > 0) {
++		fp.len = pass_in->bf_len;
++		fp.filter = (struct sock_filter *) pass_in->bf_insns;
++		if (ioctl(ppp_dev_fd, PPPIOCSPASS, &fp) < 0) {
++			if (errno == ENOTTY)
++				warn("kernel does not support PPP filtering");
++			else
++				error("Couldn't set pass-filter in kernel: %m");
++			return 0;
++		}
++	}
++	if (pass_out->bf_len > 0) {
++		error("Linux doesn't support pass-filter-out, "
++			"use pass-filter-in for both directions.");
+ 		return 0;
+ 	}
+-	fp.len = active->bf_len;
+-	fp.filter = (struct sock_filter *) active->bf_insns;
+-	if (ioctl(ppp_dev_fd, PPPIOCSACTIVE, &fp) < 0) {
+-		error("Couldn't set active-filter in kernel: %m");
++	if (active_in->bf_len > 0) {
++		fp.len = active_in->bf_len;
++		fp.filter = (struct sock_filter *) active_in->bf_insns;
++		if (ioctl(ppp_dev_fd, PPPIOCSACTIVE, &fp) < 0) {
++			error("Couldn't set active-filter in kernel: %m");
++			return 0;
++		}
++	}
++	if (active_out->bf_len > 0) {
++		error("Linux doesn't support active-filter-out, "
++			"use active-filter-in for both directions.");
+ 		return 0;
+ 	}
+ 	return 1;
