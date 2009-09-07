@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/08/26 19:58:17 sno Exp $
+# $NetBSD: Makefile,v 1.8 2009/09/07 11:04:40 drochner Exp $
 
 PKGNAME=	${DISTNAME:S/-/-qt-console-/}
 PKGREVISION=	1
@@ -20,7 +20,6 @@ INSTALLATION_DIRS=	bin share/examples/bacula
 CONF_FILES+=		${EXAMPLESDIR}/bat.conf ${PKG_SYSCONFDIR}/bat.conf
 
 post-install:
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/src/qt-console/bat ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/src/qt-console/bat.conf ${DESTDIR}${EXAMPLESDIR}
 
 .include "../../sysutils/bacula/Makefile.common"
