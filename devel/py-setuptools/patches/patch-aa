@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2009/09/07 14:22:39 joerg Exp $
+
+--- setup.py.orig	2009-09-06 22:37:49.000000000 +0200
++++ setup.py
+@@ -67,7 +67,6 @@ setup(
+         ],
+ 
+         "console_scripts": [
+-             "easy_install = setuptools.command.easy_install:main",
+              "easy_install-%s = setuptools.command.easy_install:main"
+                 % sys.version[:3]
+         ],
