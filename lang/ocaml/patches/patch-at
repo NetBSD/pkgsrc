@@ -1,17 +1,17 @@
-$NetBSD: patch-at,v 1.16 2008/01/29 01:05:13 rillig Exp $
+$NetBSD: patch-at,v 1.17 2009/09/07 21:48:13 tonio Exp $
 
---- configure.orig	2008-01-04 14:26:38.000000000 +0100
-+++ configure	2008-01-29 02:03:30.000000000 +0100
-@@ -488,7 +488,7 @@ mksharedlibrpath=''
- 
- if test $withsharedlibs = "yes"; then
-   case "$host" in
--    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-netbsd*|*-*-gnu*)
-+    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-netbsd*|*-*-gnu*|*-*-dragonfly*)
+--- configure.orig	2009-05-19 15:23:47.000000000 +0200
++++ configure	2009-05-21 10:54:30.000000000 +0200
+@@ -516,7 +516,7 @@
+       mksharedlib="$flexlink"
+       mkmaindll="$flexlink -maindll"
+       shared_libraries_supported=true;;
+-    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-openbsd*|*-*-netbsd*|*-*-gnu*)
++    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-openbsd*|*-*-netbsd*|*-*-gnu*|*-*-dragonfly)
+       cmxs="cmxs"
        sharedcccompopts="-fPIC"
-       mksharedlib="$bytecc -shared -o"
-       bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -572,16 +572,18 @@ case "$host" in
+       mksharedlib="$bytecc -shared"
+@@ -615,12 +615,13 @@
    alpha*-*-netbsd*)             arch=alpha; system=netbsd;;
    alpha*-*-openbsd*)            arch=alpha; system=openbsd;;
    sparc*-*-sunos4.*)            arch=sparc; system=sunos;;
@@ -24,22 +24,25 @@ $NetBSD: patch-at,v 1.16 2008/01/29 01:05:13 rillig Exp $
    i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
 +  i[3456]86-*-dragonfly*)       arch=i386; system=bsd_`sh ./runtest elf.c`;;
    i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
-   i[3456]86-*-solaris*)         arch=i386; system=solaris;;
+   i[3456]86-*-solaris*)         if $arch64; then
+                                   arch=amd64; system=solaris
+@@ -629,6 +630,7 @@
+                                 fi;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
 +  i[3456]86-*-interix3*)        arch=i386; system=interix3;;
-   i[3456]86-*-darwin*)          arch=i386; system=macosx;;
-   i[3456]86-*-gnu*)             arch=i386; system=gnu;;
-   mips-*-irix6*)                arch=mips; system=irix;;
-@@ -604,6 +606,7 @@ case "$host" in
+   i[3456]86-*-darwin*)          if $arch64; then
+                                   arch=amd64; system=macosx
+                                 else
+@@ -655,6 +657,7 @@
    x86_64-*-freebsd*)            arch=amd64; system=freebsd;;
    x86_64-*-netbsd*)             arch=amd64; system=netbsd;;
    x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
 +  x86_64-*-solaris*)            arch=amd64; system=solaris;;
+   x86_64-*-darwin9.5)           arch=amd64; system=macosx;;
  esac
  
- # Some platforms exist both in 32-bit and 64-bit variants, not distinguished
-@@ -691,6 +694,7 @@ case "$arch,$model,$system" in
+@@ -756,6 +759,7 @@
      case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
    amd64,*,linux) profiling='prof';;
    amd64,*,gnu) profiling='prof';;
@@ -47,7 +50,7 @@ $NetBSD: patch-at,v 1.16 2008/01/29 01:05:13 rillig Exp $
    *) profiling='noprof';;
  esac
  
-@@ -1081,6 +1085,8 @@ if test "$pthread_wanted" = "yes"; then
+@@ -1144,6 +1148,8 @@
                     pthread_caml_link="-cclib -lpthread -cclib -lposix4";;
      *-*-freebsd*)  pthread_link="-pthread"
                     pthread_caml_link="-cclib -pthread";;
@@ -56,7 +59,7 @@ $NetBSD: patch-at,v 1.16 2008/01/29 01:05:13 rillig Exp $
      *-*-openbsd*)  pthread_link="-pthread"
                     pthread_caml_link="-cclib -pthread";;
      *)             pthread_link="-lpthread"
-@@ -1132,6 +1138,7 @@ fi
+@@ -1195,6 +1201,7 @@
  x11_include="not found"
  x11_link="not found"
  
@@ -64,7 +67,7 @@ $NetBSD: patch-at,v 1.16 2008/01/29 01:05:13 rillig Exp $
  for dir in \
      $x11_include_dir          \
                                \
-@@ -1178,6 +1185,7 @@ do
+@@ -1241,6 +1248,7 @@
      break
    fi
  done
@@ -72,7 +75,7 @@ $NetBSD: patch-at,v 1.16 2008/01/29 01:05:13 rillig Exp $
  
  if test "$x11_include" = "not found"; then
    x11_try_lib_dir=''
-@@ -1269,31 +1277,8 @@ dbm_include="not found"
+@@ -1335,31 +1343,8 @@
  dbm_link="not found"
  use_gdbm_ndbm=no
  
@@ -106,7 +109,7 @@ $NetBSD: patch-at,v 1.16 2008/01/29 01:05:13 rillig Exp $
  if test "$dbm_include" = "not found" || test "$dbm_link" = "not found"; then
    echo "NDBM not found, the \"dbm\" library will not be supported."
  else
-@@ -1303,8 +1288,8 @@ else
+@@ -1369,8 +1354,8 @@
    else
      dbm_include="-I$dbm_include"
    fi

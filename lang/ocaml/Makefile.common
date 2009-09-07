@@ -1,16 +1,13 @@
-# $NetBSD: Makefile.common,v 1.22 2008/12/22 20:04:07 joerg Exp $
+# $NetBSD: Makefile.common,v 1.23 2009/09/07 21:48:13 tonio Exp $
 
-DISTNAME=	ocaml-3.10.2
+DISTNAME=	ocaml-3.11.1
 CATEGORIES=	lang
-MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-3.10/
+MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-3.11/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://caml.inria.fr/ocaml/
 COMMENT=	The latest implementation of the Caml dialect of ML
-
-DISTINFO_FILE=		${.CURDIR}/../../lang/ocaml/distinfo
-PATCHDIR=		${.CURDIR}/../../lang/ocaml/patches
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/14 20:34:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/09/07 21:48:13 tonio Exp $
 bin/camlp4
 bin/camlp4boot
 bin/camlp4o
@@ -64,6 +64,9 @@ lib/ocaml/caml/signals.h
 lib/ocaml/caml/unixsupport.h
 lib/ocaml/camlheader
 lib/ocaml/camlheader_ur
+lib/ocaml/camlinternalLazy.cmi
+lib/ocaml/camlinternalLazy.ml
+lib/ocaml/camlinternalLazy.mli
 lib/ocaml/camlinternalMod.cmi
 lib/ocaml/camlinternalMod.ml
 lib/ocaml/camlinternalMod.mli
@@ -95,9 +98,6 @@ lib/ocaml/camlp4/Camlp4Filters/Camlp4MetaGenerator.o
 lib/ocaml/camlp4/Camlp4Filters/Camlp4Profiler.cmi
 lib/ocaml/camlp4/Camlp4Filters/Camlp4Profiler.cmo
 lib/ocaml/camlp4/Camlp4Filters/Camlp4Profiler.o
-lib/ocaml/camlp4/Camlp4Filters/Camlp4Tracer.cmi
-lib/ocaml/camlp4/Camlp4Filters/Camlp4Tracer.cmo
-lib/ocaml/camlp4/Camlp4Filters/Camlp4Tracer.o
 lib/ocaml/camlp4/Camlp4Filters/Camlp4TrashRemover.cmi
 lib/ocaml/camlp4/Camlp4Filters/Camlp4TrashRemover.cmo
 lib/ocaml/camlp4/Camlp4Filters/Camlp4TrashRemover.o
@@ -448,6 +448,7 @@ man/man3/Bigarray.Array3.3o
 man/man3/Bigarray.Genarray.3o
 man/man3/Buffer.3o
 man/man3/Callback.3o
+man/man3/CamlinternalLazy.3o
 man/man3/CamlinternalMod.3o
 man/man3/CamlinternalOO.3o
 man/man3/Char.3o
