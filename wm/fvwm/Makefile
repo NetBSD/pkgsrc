@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/05/20 00:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2009/09/07 16:39:28 drochner Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	3
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 
-CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]*
+CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]* metisse-[0-9]*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 FVWM_VER=	2.4.20
 
