@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3544 2009/09/07 18:34:53 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3545 2009/09/07 18:35:24 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4605,3 +4605,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed graphics/mayavi [joerg 2009-09-07]
 	Removed security/py-gnutls [joerg 2009-09-07]
 	Removed textproc/py-Reverend [joerg 2009-09-07]
+	Removed textproc/py-SimpleParse [joerg 2009-09-07]
