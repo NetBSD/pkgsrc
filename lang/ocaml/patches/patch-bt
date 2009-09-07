@@ -1,19 +1,20 @@
-$NetBSD: patch-bt,v 1.3 2007/09/14 15:34:12 adam Exp $
+$NetBSD: patch-bt,v 1.4 2009/09/07 21:48:14 tonio Exp $
 
---- Makefile.orig	2007-04-16 18:01:59.000000000 +0200
-+++ Makefile
-@@ -234,24 +234,24 @@ opt.opt: checkstack runtime core ocaml o
+--- ./Makefile.orig	2008-10-23 17:29:11.000000000 +0200
++++ ./Makefile
+@@ -268,25 +268,25 @@ opt.opt: checkstack runtime core ocaml o
  
  # Installation
- install: FORCE
+ install:
 -	if test -d $(BINDIR); then : ; else $(MKDIR) $(BINDIR); fi
 -	if test -d $(LIBDIR); then : ; else $(MKDIR) $(LIBDIR); fi
 -	if test -d $(STUBLIBDIR); then : ; else $(MKDIR) $(STUBLIBDIR); fi
--	if test -d $(MANDIR)/man$(MANEXT); then : ; else $(MKDIR) $(MANDIR)/man$(MANEXT); fi
 +	if test -d $(BINDIR); then : ; else ${BSD_INSTALL_PROGRAM_DIR} $(BINDIR); fi
 +	if test -d $(LIBDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(LIBDIR); fi
 +	if test -d $(STUBLIBDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(STUBLIBDIR); fi
-+	if test -d $(MANDIR)/man$(MANEXT); then : ; else ${BSD_INSTALL_MAN_DIR} $(MANDIR)/man$(MANEXT); fi
+ 	if test -d $(MANDIR)/man$(MANEXT); then : ; \
+-	  else $(MKDIR) $(MANDIR)/man$(MANEXT); fi
++	  else ${BSD_INSTALL_MAN_DIR} $(MANDIR)/man$(MANEXT); fi
  	cd $(LIBDIR); rm -f dllbigarray.so dlllabltk.so dllnums.so \
            dllthreads.so dllunix.so dllgraphics.so dllmldbm.so dllstr.so \
            dlltkanim.so
@@ -29,18 +30,18 @@ $NetBSD: patch-bt,v 1.3 2007/09/14 15:34:12 adam Exp $
 -	cp expunge $(LIBDIR)/expunge$(EXE)
 -	cp typing/outcometree.cmi typing/outcometree.mli $(LIBDIR)
 -	cp toplevel/topstart.cmo $(LIBDIR)
--	cp toplevel/toploop.cmi toplevel/topdirs.cmi toplevel/topmain.cmi $(LIBDIR)
+-	cp toplevel/toploop.cmi toplevel/topdirs.cmi toplevel/topmain.cmi \
 +	${BSD_INSTALL_SCRIPT} lex/ocamllex $(BINDIR)/ocamllex$(EXE)
 +	${BSD_INSTALL_PROGRAM} yacc/ocamlyacc$(EXE) $(BINDIR)/ocamlyacc$(EXE)
 +	${BSD_INSTALL_DATA} toplevel/toplevellib.cma $(LIBDIR)/toplevellib.cma
 +	${BSD_INSTALL_DATA} expunge $(LIBDIR)/expunge$(EXE)
 +	${BSD_INSTALL_DATA} typing/outcometree.cmi typing/outcometree.mli $(LIBDIR)
 +	${BSD_INSTALL_DATA} toplevel/topstart.cmo $(LIBDIR)
-+	${BSD_INSTALL_DATA} toplevel/toploop.cmi toplevel/topdirs.cmi toplevel/topmain.cmi $(LIBDIR)
++	${BSD_INSTALL_DATA} toplevel/toploop.cmi toplevel/topdirs.cmi toplevel/topmain.cmi \
+ 	   $(LIBDIR)
  	cd tools; $(MAKE) install
- 	-cd man; $(MAKE) install
- 	for i in $(OTHERLIBRARIES); do \
-@@ -267,16 +267,16 @@ install: FORCE
+ 	-$(MAKE) -C man install
+@@ -304,17 +304,17 @@ install:
  # Installation of the native-code compiler
  installopt:
  	cd asmrun; $(MAKE) install
@@ -48,7 +49,8 @@ $NetBSD: patch-bt,v 1.3 2007/09/14 15:34:12 adam Exp $
 +	${BSD_INSTALL_SCRIPT} ocamlopt $(BINDIR)/ocamlopt$(EXE)
  	cd stdlib; $(MAKE) installopt
  	cd ocamldoc; $(MAKE) installopt
- 	for i in $(OTHERLIBRARIES); do (cd otherlibs/$$i; $(MAKE) installopt) || exit $$?; done
+ 	for i in $(OTHERLIBRARIES); \
+ 	  do (cd otherlibs/$$i; $(MAKE) installopt) || exit $$?; done
  	if test -f ocamlc.opt; \
 -	  then cp ocamlc.opt $(BINDIR)/ocamlc.opt$(EXE); else :; fi
 +	  then ${BSD_INSTALL_PROGRAM} ocamlc.opt $(BINDIR)/ocamlc.opt$(EXE); else :; fi

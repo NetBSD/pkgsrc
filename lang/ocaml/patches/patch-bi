@@ -1,20 +1,30 @@
-$NetBSD: patch-bi,v 1.2 2006/01/16 09:41:48 adam Exp $
+$NetBSD: patch-bi,v 1.3 2009/09/07 21:48:14 tonio Exp $
 
---- otherlibs/labltk/support/Makefile.orig	2004-10-18 09:01:42.000000000 +0200
-+++ otherlibs/labltk/support/Makefile
-@@ -24,12 +24,11 @@ PUBMLI=fileevent.mli protocol.mli textva
+--- otherlibs/labltk/support/Makefile.orig	2008-04-22 09:38:07.000000000 +0200
++++ otherlibs/labltk/support/Makefile	2009-05-21 11:21:02.000000000 +0200
+@@ -25,19 +25,17 @@
  PUB= $(PUBMLI) $(PUBMLI:.mli=.cmi) tkthread.mli tkthread.cmi tkthread.cmo
  
- install: lib$(LIBNAME).a $(PUB)
+ install:
 -	if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
--	cp $(PUB) lib$(LIBNAME).a $(INSTALLDIR)
+-	cp $(PUB) lib$(LIBNAME).$(A) $(INSTALLDIR)
 +	if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALLDIR); fi
-+	${BSD_INSTALL_DATA} $(PUB) lib$(LIBNAME).a $(INSTALLDIR)
- 	cd $(INSTALLDIR); $(RANLIB) lib$(LIBNAME).a
--	cd $(INSTALLDIR); chmod 644 $(PUB) lib$(LIBNAME).a
- 	if test -f dll$(LIBNAME).so; then \
--	   cp dll$(LIBNAME).so $(STUBLIBDIR)/dll$(LIBNAME).so; fi
-+	   ${BSD_INSTALL_DATA} dll$(LIBNAME).so $(STUBLIBDIR)/dll$(LIBNAME).so; fi
++	${BSD_INSTALL_DATA} $(PUB) lib$(LIBNAME).$(A) $(INSTALLDIR)
+ 	cd $(INSTALLDIR); $(RANLIB) lib$(LIBNAME).$(A)
+-	cd $(INSTALLDIR); chmod 644 $(PUB) lib$(LIBNAME).$(A)
+ 	if test -f dll$(LIBNAME)$(EXT_DLL); then \
+-	   cp dll$(LIBNAME)$(EXT_DLL) $(STUBLIBDIR)/; fi
++	   ${BSD_INSTALL_DATA} dll$(LIBNAME)$(EXT_DLL) $(STUBLIBDIR)/; fi
  
- installopt: opt
- 	@if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+ installopt:
+-	@if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+-	cp $(PUBMLI:.mli=.cmx) $(INSTALLDIR)
++	@if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALLDIR); fi
++	${BSD_INSTALL_DATA} $(PUBMLI:.mli=.cmx) $(INSTALLDIR)
+ 	if test -f tkthread.$(O); then \
+-	  cp tkthread.cmx tkthread.$(O) $(INSTALLDIR); \
+-	  chmod 644 $(INSTALLDIR)/tkthread.cmx $(INSTALLDIR)/tkthread.$(O); \
++	  ${BSD_INSTALL_DATA} tkthread.cmx tkthread.$(O) $(INSTALLDIR); \
+ 	fi
+ 
+ clean:

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.14 2008/01/23 20:42:25 adam Exp $
+@comment $NetBSD: PLIST.opt,v 1.15 2009/09/07 21:48:13 tonio Exp $
 bin/camlp4o.opt
 bin/camlp4of.opt
 bin/camlp4oof.opt
@@ -20,8 +20,10 @@ lib/ocaml/big_int.cmx
 lib/ocaml/bigarray.a
 lib/ocaml/bigarray.cmx
 lib/ocaml/bigarray.cmxa
+lib/ocaml/bigarray.cmxs
 lib/ocaml/buffer.cmx
 lib/ocaml/callback.cmx
+lib/ocaml/camlinternalLazy.cmx
 lib/ocaml/camlinternalMod.cmx
 lib/ocaml/camlinternalOO.cmx
 lib/ocaml/camlp4/Camlp4Bin.cmx
@@ -32,7 +34,6 @@ lib/ocaml/camlp4/Camlp4Filters/Camlp4LocationStripper.cmx
 lib/ocaml/camlp4/Camlp4Filters/Camlp4MapGenerator.cmx
 lib/ocaml/camlp4/Camlp4Filters/Camlp4MetaGenerator.cmx
 lib/ocaml/camlp4/Camlp4Filters/Camlp4Profiler.cmx
-lib/ocaml/camlp4/Camlp4Filters/Camlp4Tracer.cmx
 lib/ocaml/camlp4/Camlp4Filters/Camlp4TrashRemover.cmx
 lib/ocaml/camlp4/Camlp4Parsers/Camlp4AstLoader.cmx
 lib/ocaml/camlp4/Camlp4Parsers/Camlp4DebugParser.cmx
@@ -64,7 +65,11 @@ lib/ocaml/complex.cmx
 lib/ocaml/dbm.a
 lib/ocaml/dbm.cmx
 lib/ocaml/dbm.cmxa
+lib/ocaml/dbm.cmxs
 lib/ocaml/digest.cmx
+lib/ocaml/dynlink.a
+lib/ocaml/dynlink.cmx
+lib/ocaml/dynlink.cmxa
 lib/ocaml/filename.cmx
 lib/ocaml/format.cmx
 lib/ocaml/gc.cmx
@@ -77,6 +82,7 @@ lib/ocaml/lazy.cmx
 lib/ocaml/lexing.cmx
 lib/ocaml/libasmrun.a
 lib/ocaml/libasmrunp.a
+lib/ocaml/libcamlrun_shared.so
 lib/ocaml/libthreadsnat.a
 lib/ocaml/list.cmx
 lib/ocaml/listLabels.cmx
@@ -88,6 +94,7 @@ lib/ocaml/nativeint.cmx
 lib/ocaml/num.cmx
 lib/ocaml/nums.a
 lib/ocaml/nums.cmxa
+lib/ocaml/nums.cmxs
 lib/ocaml/obj.cmx
 lib/ocaml/ocamlbuild/ocamlbuild.cmx
 lib/ocaml/ocamlbuild/ocamlbuild_executor.cmx
@@ -95,7 +102,7 @@ lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmx
 lib/ocaml/ocamlbuild/ocamlbuildlib.cmxa
 lib/ocaml/ocamldoc/odoc_info.a
 lib/ocaml/ocamldoc/odoc_info.cmxa
-lib/ocaml/ocamldoc/odoc_opt.cmi
+@comment lib/ocaml/ocamldoc/odoc_opt.cmi
 lib/ocaml/oo.cmx
 lib/ocaml/parsing.cmx
 lib/ocaml/pervasives.cmx
@@ -120,6 +127,7 @@ lib/ocaml/stdlib.p.cmxa
 lib/ocaml/str.a
 lib/ocaml/str.cmx
 lib/ocaml/str.cmxa
+lib/ocaml/str.cmxs
 lib/ocaml/stream.cmx
 lib/ocaml/string.cmx
 lib/ocaml/stringLabels.cmx
@@ -134,5 +142,6 @@ lib/ocaml/threads/threads.cmxa
 lib/ocaml/unix.a
 lib/ocaml/unix.cmx
 lib/ocaml/unix.cmxa
+lib/ocaml/unix.cmxs
 lib/ocaml/unixLabels.cmx
 lib/ocaml/weak.cmx

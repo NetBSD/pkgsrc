@@ -1,32 +1,22 @@
-$NetBSD: patch-aj,v 1.6 2006/01/16 09:41:48 adam Exp $
+$NetBSD: patch-aj,v 1.7 2009/09/07 21:48:13 tonio Exp $
 
---- byterun/Makefile.orig	2005-11-29 12:57:49.000000000 +0100
-+++ byterun/Makefile
-@@ -16,7 +16,7 @@
- include ../config/Makefile
+--- byterun/Makefile.orig	2009-05-25 14:25:25.000000000 +0200
++++ byterun/Makefile	2009-06-09 10:51:23.000000000 +0200
+@@ -15,7 +15,7 @@
  
- CC=$(BYTECC)
--CFLAGS=-DCAML_NAME_SPACE -O $(BYTECCCOMPOPTS)
-+CFLAGS+=-DCAML_NAME_SPACE $(BYTECCCOMPOPTS)
+ include Makefile.common
+ 
+-CFLAGS=-DCAML_NAME_SPACE -O $(BYTECCCOMPOPTS) $(IFLEXDIR)
++CFLAGS+=-DCAML_NAME_SPACE $(BYTECCCOMPOPTS) $(IFLEXDIR)
  DFLAGS=-DCAML_NAME_SPACE -g -DDEBUG $(BYTECCCOMPOPTS)
  
- OBJS=interp.o misc.o stacks.o fix_code.o startup.o main.o \
-@@ -48,14 +48,14 @@ ocamlrund$(EXE): libcamlrund.a prims.o
- 	          prims.o libcamlrund.a $(BYTECCLIBS)
+ OBJS=$(COMMONOBJS) unix.o main.o
+@@ -48,7 +48,7 @@
  
- install:
--	cp ocamlrun$(EXE) $(BINDIR)/ocamlrun$(EXE)
--	cp libcamlrun.a $(LIBDIR)/libcamlrun.a
-+	${BSD_INSTALL_PROGRAM} ocamlrun$(EXE) $(BINDIR)/ocamlrun$(EXE)
-+	${BSD_INSTALL_DATA} libcamlrun.a $(LIBDIR)/libcamlrun.a
- 	cd $(LIBDIR); $(RANLIB) libcamlrun.a
--	if test -d $(LIBDIR)/caml; then : ; else mkdir $(LIBDIR)/caml; fi
-+	if test -d $(LIBDIR)/caml; then : ; else ${BSD_INSTALL_DATA_DIR} $(LIBDIR)/caml; fi
- 	for i in $(PUBLIC_INCLUDES); do \
-           sed -f ../tools/cleanup-header $$i > $(LIBDIR)/caml/$$i; \
-         done
--	cp ld.conf $(LIBDIR)/ld.conf
-+	${BSD_INSTALL_DATA} ld.conf $(LIBDIR)/ld.conf
+ install::
+ 	if test -f libcamlrun_shared.so; then \
+-	  cp libcamlrun_shared.so $(LIBDIR)/libcamlrun_shared.so; fi
++	${BSD_INSTALL_PROGRAM} libcamlrun_shared.so $(LIBDIR)/libcamlrun_shared.so; fi
  
- ld.conf: ../config/Makefile
- 	echo "$(STUBLIBDIR)" >ld.conf
+ clean::
+ 	rm -f libcamlrun_shared.so

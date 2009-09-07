@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST.prof,v 1.5 2006/04/04 14:33:27 jlam Exp $
+@comment $NetBSD: PLIST.prof,v 1.6 2009/09/07 21:48:13 tonio Exp $
 lib/ocaml/arg.p.cmx
 lib/ocaml/array.p.cmx
 lib/ocaml/arrayLabels.p.cmx
 lib/ocaml/buffer.p.cmx
 lib/ocaml/callback.p.cmx
+lib/ocaml/camlinternalLazy.p.cmx
 lib/ocaml/camlinternalMod.p.cmx
 lib/ocaml/camlinternalOO.p.cmx
 lib/ocaml/char.p.cmx

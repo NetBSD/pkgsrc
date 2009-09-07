@@ -1,17 +1,17 @@
-$NetBSD: patch-be,v 1.2 2005/02/04 21:35:51 adrianp Exp $
+$NetBSD: patch-be,v 1.3 2009/09/07 21:48:14 tonio Exp $
 
---- otherlibs/labltk/frx/Makefile.orig	2002-04-26 13:16:00.000000000 +0100
-+++ otherlibs/labltk/frx/Makefile	2004-10-12 22:25:37.000000000 +0100
+--- otherlibs/labltk/frx/Makefile.orig	2007-12-12 15:09:45.000000000 +0100
++++ otherlibs/labltk/frx/Makefile	2009-05-21 11:14:12.000000000 +0200
 @@ -20,10 +20,10 @@
  	$(CAMLOPTLIBR) -o frxlib.cmxa $(OBJSX)
  
- install: frxlib.cma
+ install:
 -	cp *.cmi *.mli frxlib.cma $(INSTALLDIR)
 +	${BSD_INSTALL_DATA} *.cmi *.mli frxlib.cma $(INSTALLDIR)
  
- installopt: frxlib.cmxa
--	cp frxlib.cmxa frxlib.a $(INSTALLDIR)
-+	${BSD_INSTALL_DATA} frxlib.cmxa frxlib.a $(INSTALLDIR)
+ installopt:
+-	cp frxlib.cmxa frxlib.$(A) $(INSTALLDIR)
++	${BSD_INSTALL_DATA} frxlib.cmxa frxlib.$(A) $(INSTALLDIR)
  
  clean:
- 	rm -f *.cm* *.o *.a
+ 	rm -f *.cm* *.$(O) *.$(A)
