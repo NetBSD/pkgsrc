@@ -1,5 +1,0 @@
-# $NetBSD: site.config.m4-ldap,v 1.1.1.1 2007/04/17 10:16:53 jnemeth Exp $
-
-# enable ldap
-APPENDDEF(`confMAPDEF', `-DLDAPMAP')
-APPENDDEF(`confLIBS', `-lldap -llber')
