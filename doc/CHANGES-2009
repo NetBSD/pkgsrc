@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3547 2009/09/07 21:49:25 tonio Exp $
+$NetBSD: CHANGES-2009,v 1.3548 2009/09/07 21:56:00 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4607,6 +4607,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed textproc/py-Reverend [joerg 2009-09-07]
 	Removed textproc/py-SimpleParse [joerg 2009-09-07]
 	Updated emulators/wine-devel to 1.1.16nb2 [reinoud 2009-09-07]
-
 	Updated lang/ocaml to 3.11.1 [tonio 2009-09-07]
 	Updated x11/ocaml-graphics to 3.11.1 [tonio 2009-09-07]
+	Updated lang/ocamlduce to 3.11.1.0 [tonio 2009-09-07]
