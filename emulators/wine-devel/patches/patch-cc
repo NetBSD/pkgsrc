@@ -1,0 +1,17 @@
+$NetBSD: patch-cc,v 1.1 2009/09/07 20:27:25 reinoud Exp $
+
+--- dlls/inetcomm/internettransport.c.orig	2009-02-27 23:21:46.000000000 +0100
++++ dlls/inetcomm/internettransport.c
+@@ -23,11 +23,11 @@
+ #include <stdarg.h>
+ #include <stdio.h>
+ 
++#include "winsock2.h"
+ #include "windef.h"
+ #include "winbase.h"
+ #include "winnt.h"
+ #include "winuser.h"
+-#include "winsock2.h"
+ #include "ws2tcpip.h"
+ #include "objbase.h"
+ #include "ole2.h"
