@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3534 2009/09/07 18:19:33 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3535 2009/09/07 18:20:36 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4595,3 +4595,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed lang/py23-html-docs [joerg 2009-09-07]
 	Removed lang/py22-html-docs [joerg 2009-09-07]
 	Removed sysutils/xentools12 [joerg 2009-09-07]
+	Removed sysutils/xen12 [joerg 2009-09-07]
