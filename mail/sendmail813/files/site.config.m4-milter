@@ -1,4 +1,0 @@
-# $NetBSD: site.config.m4-milter,v 1.1.1.1 2007/04/17 10:16:53 jnemeth Exp $
-
-# enable milter
-APPENDDEF(`conf_sendmail_ENVDEF', `-DMILTER')
