@@ -1,8 +1,8 @@
-$NetBSD: patch-bd,v 1.1 2004/04/22 09:18:42 tron Exp $
+$NetBSD: patch-bd,v 1.2 2009/09/07 21:48:14 tonio Exp $
 
---- otherlibs/labltk/compiler/Makefile.orig	Fri Apr 26 14:15:45 2002
-+++ otherlibs/labltk/compiler/Makefile	Thu Apr 22 10:34:37 2004
-@@ -45,8 +45,8 @@
+--- ./otherlibs/labltk/compiler/Makefile.orig	2002-04-26 14:15:45.000000000 +0200
++++ ./otherlibs/labltk/compiler/Makefile
+@@ -45,8 +45,8 @@ scratch :
  	rm -f *.cm*  pplex.ml ppyac.ml ppyac.mli pp$(EXE)
  
  install: 
