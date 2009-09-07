@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3536 2009/09/07 18:23:21 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3537 2009/09/07 18:24:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4597,3 +4597,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed sysutils/xentools12 [joerg 2009-09-07]
 	Removed sysutils/xen12 [joerg 2009-09-07]
 	Removed converters/py-cjkcodecs [joerg 2009-09-07]
+	Removed databases/py-IndexedCatalog [joerg 2009-09-07]
