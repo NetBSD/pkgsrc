@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2009/02/28 15:30:13 adam Exp $
+$NetBSD: distinfo,v 1.10 2009/09/07 20:27:25 reinoud Exp $
 
 SHA1 (wine-1.1.16.tar.bz2) = 02f3363de5a2476b513beca3da2bb42aeeff5218
 RMD160 (wine-1.1.16.tar.bz2) = 449baa620eea114d65a8a65d1f0e88d377b94615
@@ -17,3 +17,8 @@ SHA1 (patch-ba) = 1f15a31a23e869cceb3e4038bb02275f2c5dee8c
 SHA1 (patch-bb) = 77cad41a7e8e34f12243e53f6c1cec998bedefda
 SHA1 (patch-bc) = bf8b1f4aed78de9326824e227df7831e5c8b4dc3
 SHA1 (patch-ca) = 90df667407765c473f1331ec8113088fdddc58e5
+SHA1 (patch-cc) = c6fb13ca5625e9231719a0deabede3ec5239b50d
+SHA1 (patch-cd) = aec27ca5616625e80123e92b3db1abdd90d212a0
+SHA1 (patch-ce) = 23088aac01e74164ec6d4a42f96ab7fa34d002c3
+SHA1 (patch-cf) = 6a1c8ce2c77de0eebb9aad9cd5078cf18538d8d8
+SHA1 (patch-cg) = 3269054e3cee4af027ea3029c6d05ce2bf70408a
