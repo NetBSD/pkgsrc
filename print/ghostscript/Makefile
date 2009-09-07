@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2009/09/02 15:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2009/09/07 10:07:38 drochner Exp $
 
 DISTNAME=	ghostscript-8.70
 CATEGORIES=	print
@@ -28,6 +28,10 @@ CONFIGURE_ARGS+=	-with-omni=no	# otherwise pulls in libstdc++
 REPLACE_PERL+=		lib/fixmswrd.pl
 
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/${PKGVERSION}/Resource
+
+# XXX make sure the local jpeg headers are found before those pulled
+# in indirectly by cups bl3
+CPPFLAGS+=		-Ijpeg
 
 .include "../../mk/bsd.prefs.mk"
 
