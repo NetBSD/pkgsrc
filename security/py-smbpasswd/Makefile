@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/08/08 14:16:55 bouyer Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/07 19:02:14 joerg Exp $
 #
 
 DISTNAME=	py-smbpasswd-1.0.1
@@ -13,7 +13,7 @@ COMMENT=	Python SMB Password Hash Generator
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_ACCEPTED=	25 24 23 22
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
