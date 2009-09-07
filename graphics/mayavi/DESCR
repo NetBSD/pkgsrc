@@ -1,6 +1,0 @@
-MayaVi is a free, easy to use scientific data visualizer. It is written in
-Python and uses the amazing Visualization Toolkit (VTK) for the graphics. It
-provides a GUI written using Tkinter. MayaVi is free and distributed under
-the conditions of the BSD license. It is also cross platform and should run
-on any platform where both Python and VTK are available (which is almost any
-*nix, Mac OSX or Windows).
