@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3530 2009/09/07 18:10:24 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.3531 2009/09/07 18:14:41 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4591,3 +4591,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/glimpse to 4.18.5nb1 [ghen 2009-09-07]
 	Removed mail/sendmail813 [jnemeth 2009-09-07]
 	Added security/putty-devel version 0.6.20090906 [ahoka 2009-09-07]
+	Removed lang/python23 [joerg 2009-09-07]
