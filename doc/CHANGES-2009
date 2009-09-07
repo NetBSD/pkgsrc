@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3532 2009/09/07 18:15:48 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3533 2009/09/07 18:16:28 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4593,3 +4593,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/putty-devel version 0.6.20090906 [ahoka 2009-09-07]
 	Removed lang/python23 [joerg 2009-09-07]
 	Removed lang/py23-html-docs [joerg 2009-09-07]
+	Removed lang/py22-html-docs [joerg 2009-09-07]
