@@ -1,11 +1,11 @@
-$NetBSD: patch-bu,v 1.2 2005/03/24 11:32:50 adam Exp $
+$NetBSD: patch-bu,v 1.3 2009/09/07 21:48:14 tonio Exp $
 
---- asmrun/Makefile.orig	2004-05-09 15:19:16.000000000 +0000
+--- asmrun/Makefile.orig	2007-11-15 14:21:15.000000000 +0100
 +++ asmrun/Makefile
 @@ -18,7 +18,7 @@ include ../config/Makefile
  CC=$(NATIVECC)
  FLAGS=-I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE \
-       -DTARGET_$(ARCH) -DSYS_$(SYSTEM) 
+       -DTARGET_$(ARCH) -DSYS_$(SYSTEM) $(IFLEXDIR)
 -CFLAGS=$(FLAGS) -O $(NATIVECCCOMPOPTS)
 +CFLAGS+=$(FLAGS) $(NATIVECCCOMPOPTS)
  DFLAGS=$(FLAGS) -g -DDEBUG $(NATIVECCCOMPOPTS)
