@@ -1,13 +1,19 @@
-$NetBSD: patch-az,v 1.2 2007/09/14 15:34:12 adam Exp $
+$NetBSD: patch-az,v 1.3 2009/09/07 21:48:14 tonio Exp $
 
---- otherlibs/dynlink/Makefile.orig	2006-09-19 14:41:33.000000000 +0200
-+++ otherlibs/dynlink/Makefile
-@@ -53,7 +53,7 @@ extract_crc: dynlink.cma extract_crc.cmo
+--- otherlibs/dynlink/Makefile.orig	2008-04-16 08:50:31.000000000 +0200
++++ otherlibs/dynlink/Makefile	2009-05-21 11:09:19.000000000 +0200
+@@ -66,11 +66,11 @@
  	$(CAMLC) $(COMPFLAGS) -o extract_crc dynlink.cma extract_crc.cmo
  
  install:
--	cp dynlink.cmi dynlink.cma dynlink.mli extract_crc $(LIBDIR)
-+	${BSD_INSTALL_DATA} dynlink.cmi dynlink.cma dynlink.mli extract_crc $(LIBDIR)
+-	cp dynlink.cmi dynlink.cma dynlink.mli $(LIBDIR)
+-	cp extract_crc $(LIBDIR)/extract_crc$(EXE)
++	${BSD_INSTALL_DATA} dynlink.cmi dynlink.cma dynlink.mli $(LIBDIR)
++	${BSD_INSTALL_SCRIPT} extract_crc $(LIBDIR)/extract_crc$(EXE)
  
  installopt:
+-	cp $(NATOBJS) dynlink.cmxa dynlink.$(A) $(LIBDIR)
++	${BSD_INSTALL_DATA} $(NATOBJS) dynlink.cmxa dynlink.$(A) $(LIBDIR)
+ 	cd $(LIBDIR); $(RANLIB) dynlink.$(A)
  
+ partialclean:
