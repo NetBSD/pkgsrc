@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2009/08/17 20:58:26 agc Exp $
+# $NetBSD: Makefile,v 1.14 2009/09/07 11:18:49 ghen Exp $
 
 DISTNAME=	tre-0.7.6
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://laurikari.net/tre/
 
@@ -8,6 +9,9 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://laurikari.net/tre/
 COMMENT=	Lightweight and robust POSIX compliant regexp matching library
 LICENSE=	modified-bsd
+
+# both install bin/agrep (approx. grep)
+CONFLICTS+=	glimpse-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
