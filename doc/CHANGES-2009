@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3527 2009/09/07 03:10:47 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3528 2009/09/07 11:19:50 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4587,3 +4587,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-WWW-Selenium to 1.18 [seb 2009-09-06]
 	Updated www/typolight27 to 2.7.3 [taca 2009-09-07]
 	Updated www/squid30 to 3.0.19 [taca 2009-09-07]
+	Updated devel/tre to 0.7.6nb1 [ghen 2009-09-07]
+	Updated textproc/glimpse to 4.18.5nb1 [ghen 2009-09-07]
