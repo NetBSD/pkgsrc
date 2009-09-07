@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST.opt,v 1.1.1.1 2007/04/08 23:04:53 tonio Exp $
+@comment $NetBSD: PLIST.opt,v 1.2 2009/09/07 21:53:30 tonio Exp $
+bin/ocamlducec.opt
+bin/ocamlducedep.opt
+bin/ocamlducedoc.opt
 bin/ocamlduceopt
-lib/ocaml/site-lib/ocamlduce/cduce_types.o
+bin/ocamlduceopt.opt
 lib/ocaml/site-lib/ocamlduce/ocamlduce.a
 lib/ocaml/site-lib/ocamlduce/ocamlduce.cmxa
-lib/ocaml/site-lib/ocamlduce/ocamlduce.o
