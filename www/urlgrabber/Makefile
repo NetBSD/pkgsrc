@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/02/09 22:56:28 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/07 19:02:14 joerg Exp $
 #
 
 DISTNAME=	urlgrabber-3.1.0
@@ -13,7 +13,7 @@ COMMENT=	Python package that drastically simplifies the fetching of files
 PKG_DESTDIR_SUPPORT=		user-destdir
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED=	25 24 23
+PYTHON_VERSIONS_ACCEPTED=	25 24
 PYDISTUTILSPKG=			yes
 PY_PATCHPLIST=			yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/29 19:44:51 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/07 19:02:14 joerg Exp $
 #
 
 DISTNAME=	sip-4.8.2
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	${PYPKGPREFIX}-qt2-sip-* ${PYPKGPREFIX}-qt3-sip-*
 
-PYTHON_VERSIONS_ACCEPTED=	26 25 24 23
+PYTHON_VERSIONS_ACCEPTED=	26 25 24
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake

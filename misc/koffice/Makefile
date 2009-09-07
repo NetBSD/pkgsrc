@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2009/08/26 21:20:13 sno Exp $
+# $NetBSD: Makefile,v 1.111 2009/09/07 19:02:14 joerg Exp $
 
 DISTNAME=	koffice-1.6.3
 PKGREVISION=	12
@@ -26,7 +26,7 @@ USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
 
 GCC_REQD+=		2.95.3
-PYTHON_VERSIONS_ACCEPTED=	25 24 23
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 PTHREAD_OPTS+=		require
 

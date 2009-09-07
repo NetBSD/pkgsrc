@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/08/21 08:30:30 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/09/07 19:02:13 joerg Exp $
 #
 
 DISTNAME=		meld-1.3.1
@@ -22,7 +22,6 @@ MAKE_FLAGS+=			localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 MAKE_FLAGS+=			PYTHON=${PYTHONBIN}
 MAKE_FILE=			GNUmakefile
 PYTHON_PATCH_SCRIPTS=		meld
-PYTHON_VERSIONS_INCOMPATIBLE=	23
 
 # remove unnecessarily created empty dir
 post-install:
