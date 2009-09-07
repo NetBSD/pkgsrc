@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.535 2009/09/03 09:07:46 martin Exp $
+# $NetBSD: Makefile,v 1.536 2009/09/07 18:32:40 joerg Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -242,7 +242,6 @@ SUBDIR+=	libxmi
 SUBDIR+=	ljpeg
 SUBDIR+=	lprof
 SUBDIR+=	magicpoint
-SUBDIR+=	mayavi
 SUBDIR+=	metacam
 SUBDIR+=	mgl
 SUBDIR+=	mng
@@ -392,7 +391,6 @@ SUBDIR+=	vp
 SUBDIR+=	vtk
 SUBDIR+=	vtk-data
 SUBDIR+=	vtk-docs
-SUBDIR+=	vtk-python
 SUBDIR+=	wmphoto
 SUBDIR+=	wxsvg
 SUBDIR+=	x11rec
