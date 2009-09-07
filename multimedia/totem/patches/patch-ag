@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2009/09/07 10:02:13 drochner Exp $
+
+--- src/plugins/jamendo/jamendo.ui.orig	2009-04-27 01:56:26.000000000 +0200
++++ src/plugins/jamendo/jamendo.ui
+@@ -187,7 +187,7 @@
+ 				<property name="scrollable">False</property>
+ 				<property name="enable_popup">False</property>
+ 				<child>
+-					<object class="GtkVBox" id="vbox1">
++					<object class="GtkVBox" id="vbox11">
+ 						<property name="visible">True</property>
+ 						<property name="homogeneous">False</property>
+ 						<property name="spacing">0</property>

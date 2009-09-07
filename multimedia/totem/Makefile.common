@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2009/07/22 09:01:39 wiz Exp $
+# $NetBSD: Makefile.common,v 1.51 2009/09/07 10:02:13 drochner Exp $
 #
 # used by multimedia/totem-browser-plugin/Makefile
 # used by multimedia/totem-nautilus/Makefile
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2 # with an exception clause
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/totem/distinfo
 PATCHDIR=	${.CURDIR}/../../multimedia/totem/patches
-FILESDIR=	${.CURDIR}/../../multimedia/totem/files
 PLIST_SRC=	${.CURDIR}/../../multimedia/totem/PLIST
 
 GNU_CONFIGURE=		YES
