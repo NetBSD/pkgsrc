@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3541 2009/09/07 18:31:21 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3542 2009/09/07 18:31:54 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4602,3 +4602,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed devel/py-TPG [joerg 2009-09-07]
 	Removed graphics/vtk-python [joerg 2009-09-07]
 	Removed lang/py-funge [joerg 2009-09-07]
+	Removed graphics/mayavi [joerg 2009-09-07]
