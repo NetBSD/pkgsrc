@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/07/17 18:00:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/08 10:36:27 tron Exp $
 
 DISTNAME=	libspf2-1.2.9
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.libspf2.org/spf/
 
