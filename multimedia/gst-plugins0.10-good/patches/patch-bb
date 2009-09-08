@@ -1,0 +1,17 @@
+$NetBSD: patch-bb,v 1.1 2009/09/08 20:22:03 drochner Exp $
+
+--- sys/v4l2/v4l2_calls.h.orig	2009-09-07 12:46:03.000000000 +0200
++++ sys/v4l2/v4l2_calls.h
+@@ -30,8 +30,12 @@
+ #  include <libv4l2.h>
+ #else
+ #  include <sys/ioctl.h>
++#ifdef __NetBSD__
++#include <sys/videoio.h>
++#else
+ #  include <linux/videodev.h>
+ #  include <linux/videodev2.h>
++#endif
+ #  define v4l2_fd_open(fd, flags) (fd)
+ #  define v4l2_close    close
+ #  define v4l2_dup      dup
