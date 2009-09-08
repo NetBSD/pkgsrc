@@ -1,11 +1,17 @@
-@comment $NetBSD: PLIST,v 1.15 2009/07/09 18:15:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/09/08 20:27:11 drochner Exp $
 include/gstreamer-0.10/gst/interfaces/photography-enumtypes.h
 include/gstreamer-0.10/gst/interfaces/photography.h
+include/gstreamer-0.10/gst/video/gstbasevideocodec.h
+include/gstreamer-0.10/gst/video/gstbasevideodecoder.h
+include/gstreamer-0.10/gst/video/gstbasevideoencoder.h
+include/gstreamer-0.10/gst/video/gstbasevideoparse.h
+include/gstreamer-0.10/gst/video/gstbasevideoutils.h
 lib/gstreamer-0.10/libgstaacparse.la
 lib/gstreamer-0.10/libgstadpcmdec.la
 lib/gstreamer-0.10/libgstaiffparse.la
 lib/gstreamer-0.10/libgstamrparse.la
 lib/gstreamer-0.10/libgstapexsink.la
+lib/gstreamer-0.10/libgstasfmux.la
 lib/gstreamer-0.10/libgstautoconvert.la
 lib/gstreamer-0.10/libgstbayer.la
 lib/gstreamer-0.10/libgstbz2.la
@@ -17,6 +23,7 @@ lib/gstreamer-0.10/libgstdtmf.la
 lib/gstreamer-0.10/libgstdvdspu.la
 lib/gstreamer-0.10/libgstfestival.la
 lib/gstreamer-0.10/libgstfreeze.la
+lib/gstreamer-0.10/libgstfrei0r.la
 lib/gstreamer-0.10/libgsth264parse.la
 lib/gstreamer-0.10/libgsthdvparse.la
 lib/gstreamer-0.10/libgstid3tag.la
@@ -35,7 +42,6 @@ lib/gstreamer-0.10/libgstpcapparse.la
 lib/gstreamer-0.10/libgstqtmux.la
 lib/gstreamer-0.10/libgstrawparse.la
 lib/gstreamer-0.10/libgstrfbsrc.la
-lib/gstreamer-0.10/libgstrtpmanager.la
 lib/gstreamer-0.10/libgstrtpmux.la
 lib/gstreamer-0.10/libgstscaletempoplugin.la
 lib/gstreamer-0.10/libgstsdpelem.la
@@ -50,7 +56,9 @@ lib/gstreamer-0.10/libgstvalve.la
 lib/gstreamer-0.10/libgstvideosignal.la
 lib/gstreamer-0.10/libgstvmnc.la
 lib/gstreamer-0.10/libgstxdgmime.la
+lib/libgstbasevideo-0.10.la
 lib/libgstphotography-0.10.la
+lib/libgstsignalprocessor.la
 share/locale/af/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/az/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-bad-0.10.mo
@@ -68,6 +76,7 @@ share/locale/it/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/ja/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/ky/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/lt/LC_MESSAGES/gst-plugins-bad-0.10.mo
+share/locale/lv/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/mt/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/nb/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/nl/LC_MESSAGES/gst-plugins-bad-0.10.mo
