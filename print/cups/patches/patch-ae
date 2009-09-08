@@ -1,0 +1,55 @@
+$NetBSD: patch-ae,v 1.24 2009/09/08 19:02:11 joerg Exp $
+
+--- Makedefs.in.orig	2009-09-07 18:00:35.000000000 +0200
++++ Makedefs.in
+@@ -19,8 +19,10 @@
+ 
+ AR		=	@AR@
+ AWK		=	@AWK@
+-CC		=	@LIBTOOL@ @CC@
+-CXX		=	@LIBTOOL@ @CXX@
++CC_COMPILE	=	@LIBTOOL@ --mode=compile @CC@
++CXX_COMPILE	=	@LIBTOOL@ --mode=compile @CXX@
++CC		=	@LIBTOOL@ --mode=link @CC@
++CXX		=	@LIBTOOL@ --mode=link @CXX@
+ DSO		=	@DSO@
+ HTMLDOC		=	@HTMLDOC@
+ INSTALL		=	@INSTALL@
+@@ -40,11 +42,11 @@ STRIP		=	@STRIP@
+ # Installation programs...
+ #
+ 
+-INSTALL_BIN	=	$(LIBTOOL) $(INSTALL) -m 755
++INSTALL_BIN	=	$(LIBTOOL) --mode=install $(INSTALL) -m 755
+ INSTALL_CONFIG	=	$(INSTALL) -m @CUPS_CONFIG_FILE_PERM@
+ INSTALL_DATA	=	$(INSTALL) -m 644
+ INSTALL_DIR	=	$(INSTALL) -d
+-INSTALL_LIB	=	$(LIBTOOL) $(INSTALL) -m 755
++INSTALL_LIB	=	$(LIBTOOL) --mode=install $(INSTALL) -m 755
+ INSTALL_MAN	=	$(INSTALL) -m 644
+ INSTALL_SCRIPT	=	$(INSTALL) -m 755
+ 
+@@ -246,19 +248,19 @@ DBUSDIR		=	@DBUSDIR@
+ 
+ .c.o:
+ 	echo Compiling $<...
+-	$(CC) $(ARCHFLAGS) $(OPTIM) $(ALL_CFLAGS) -c $<
++	$(CC_COMPILE) $(ARCHFLAGS) $(OPTIM) $(ALL_CFLAGS) -c $<
+ 
+ .c.32.o:
+ 	echo Compiling 32-bit $<...
+-	$(CC) $(ARCH32FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
++	$(CC_COMPILE) $(ARCH32FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
+ 
+ .c.64.o:
+ 	echo Compiling 64-bit $<...
+-	$(CC) $(ARCH64FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
++	$(CC_COMPILE) $(ARCH64FLAGS) $(OPTIM) $(ALL_CFLAGS) -c -o $@ $<
+ 
+ .cxx.o:
+ 	echo Compiling $<...
+-	$(CXX) $(ARCHFLAGS) $(OPTIM) $(ALL_CXXFLAGS) -c $<
++	$(CXX_COMPILE) $(ARCHFLAGS) $(OPTIM) $(ALL_CXXFLAGS) -c $<
+ 
+ .man.1 .man.1m .man.5 .man.7 .man.8:
+ 	echo Linking $<...
