@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2009/09/08 10:06:50 tnn Exp $
+# $NetBSD: Makefile,v 1.64 2009/09/08 11:34:02 tnn Exp $
 #
 
 DISTNAME=	ntp-4.2.4p7
@@ -58,6 +58,8 @@ CONFIGURE_ARGS+=	--enable-linuxcaps
 .else
 # no chroot/privilege drop supported
 .endif
+
+CPPFLAGS.Linux+=	-D_GNU_SOURCE	# for struct in6_pktinfo
 
 .include "../../security/openssl/buildlink3.mk"
 
