@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/08/26 19:58:31 sno Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/08 14:39:27 ahoka Exp $
 
-DISTNAME=	murrine-0.90.2
+DISTNAME=	murrine-0.90.3
 PKGNAME=	${DISTNAME:S/^/gtk2-engines-/}
-PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/murrine/0.90/}
 EXTRACT_SUFX=	.tar.bz2
