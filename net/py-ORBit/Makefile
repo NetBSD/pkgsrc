@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/07/07 11:02:37 zafer Exp $
+# $NetBSD: Makefile,v 1.33 2009/09/08 16:37:34 drochner Exp $
 #
 
 DISTNAME=	pyorbit-2.24.0
@@ -21,6 +21,9 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 
 PYTHON_VERSIONS_ACCEPTED=	26 25 24
+BUILDLINK_API_DEPENDS.python26+= python26>=2.6.2nb4
+BUILDLINK_API_DEPENDS.python25+= python25>=2.5.4nb2
+BUILDLINK_API_DEPENDS.python24+= python24>=2.4.5nb4
 
 do-test:
 	(cd ${WRKSRC}/tests/c-inproc && ${PYTHONBIN} test-c-inproc.py)
