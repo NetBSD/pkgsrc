@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.4 2009/09/08 16:40:21 drochner Exp $
+
+--- GNUmakefile.in.orig	2009-09-08 15:54:15.000000000 +0200
++++ GNUmakefile.in
+@@ -8007,7 +8007,9 @@ libWebCoreJS_depfiles := $(patsubst \
+ webinspectordir = ${datadir}/webkit-1.0/webinspector
+ dist_webinspector_DATA = \
+ 	$(WebCore)/English.lproj/localizedStrings.js \
+-	$(shell ls $(WebCore)/inspector/front-end/*.{js,html,css})
++	$(shell ls $(WebCore)/inspector/front-end/*.js) \
++	$(shell ls $(WebCore)/inspector/front-end/*.html) \
++	$(shell ls $(WebCore)/inspector/front-end/*.css)
+ 
+ webinspectorimagesdir = ${datadir}/webkit-1.0/webinspector/Images
+ dist_webinspectorimages_DATA = \
