@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2009/09/06 11:13:50 tnn Exp $
+# $NetBSD: Makefile,v 1.62 2009/09/08 08:40:26 tnn Exp $
 #
 
 DISTNAME=	ntp-4.2.4p7
+PKGREVISION=	1
 CATEGORIES=	net time
 MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/	\
 		ftp://ftp.udel.edu/pub/ntp/ntp4/
@@ -36,6 +37,7 @@ post-install:
 	${FIND} ${ALL_NTP_DOCS} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 PLIST_VARS+=	ntptime tickadj timetrim
 
