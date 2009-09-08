@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3550 2009/09/08 14:41:56 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.3551 2009/09/08 18:36:34 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4612,3 +4612,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/ocamlduce to 3.11.1.0 [tonio 2009-09-07]
 	Updated mail/libspf2 to 1.2.9nb1 [tron 2009-09-08]
 	Updated x11/gtk2-engines-murrine to 0.90.3 [ahoka 2009-09-08]
+	Updated x11/labltk to 3.11.1 [tonio 2009-09-08]
