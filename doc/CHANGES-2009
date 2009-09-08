@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3548 2009/09/07 21:56:00 tonio Exp $
+$NetBSD: CHANGES-2009,v 1.3549 2009/09/08 10:36:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4610,3 +4610,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/ocaml to 3.11.1 [tonio 2009-09-07]
 	Updated x11/ocaml-graphics to 3.11.1 [tonio 2009-09-07]
 	Updated lang/ocamlduce to 3.11.1.0 [tonio 2009-09-07]
+	Updated mail/libspf2 to 1.2.9nb1 [tron 2009-09-08]
