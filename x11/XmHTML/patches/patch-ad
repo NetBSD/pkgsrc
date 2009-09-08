@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2001/03/05 13:52:42 skrll Exp $
+$NetBSD: patch-ad,v 1.5 2009/09/08 19:20:49 joerg Exp $
 
 --- lib/Makefile.orig	Thu Feb  4 00:43:26 1999
 +++ lib/Makefile
@@ -19,7 +19,7 @@ $NetBSD: patch-ad,v 1.4 2001/03/05 13:52:42 skrll Exp $
 -	$(AR) $@ common/*.o $(PLATFORM)/*.o
 -	$(RANLIB) $@
 +	$(RM) $@
-+	${LIBTOOL} $(CC) -o $@ common/*.lo $(PLATFORM)/*.lo \
++	${LIBTOOL} --mode=link $(CC) -o $@ common/*.lo $(PLATFORM)/*.lo \
 +		-rpath ${PREFIX}/lib -version-info 1:2
  	
  depend:: 

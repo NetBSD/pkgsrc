@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2001/03/05 13:52:42 skrll Exp $
+$NetBSD: patch-ac,v 1.5 2009/09/08 19:20:49 joerg Exp $
 
 --- http/Makefile.orig	Thu Feb  4 00:43:27 1999
 +++ http/Makefile
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.4 2001/03/05 13:52:42 skrll Exp $
  .c.o:
  	$(RM) $@
 -	$(CC) $(CFLAGS) $(CPPFLAGS) $(INCLUDES) -c $<
-+	${LIBTOOL} $(CC) $(CFLAGS) $(CPPFLAGS) $(INCLUDES) -c $<
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) $(INCLUDES) -c $<
  
  all: $(TARGET)
  
@@ -27,7 +27,7 @@ $NetBSD: patch-ac,v 1.4 2001/03/05 13:52:42 skrll Exp $
 -	$(AR) $@ $(OBJS)  
 -	$(RANLIB) $@
 +	$(RM) $@
-+	${LIBTOOL} $(CC) -o $@ $(OBJS:.o=.lo) -rpath ${PREFIX}/lib -version-info 0:2
++	${LIBTOOL} --mode=link $(CC) -o $@ $(OBJS:.o=.lo) -rpath ${PREFIX}/lib -version-info 0:2
  
  stamp-includes:
  	@if [ -d ../include ]; then set +x; \
