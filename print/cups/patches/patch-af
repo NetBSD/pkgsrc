@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.18 2009/09/08 19:02:11 joerg Exp $
+
+--- backend/Makefile.orig	2009-09-07 18:28:31.000000000 +0200
++++ backend/Makefile
+@@ -55,7 +55,7 @@ depend:
+ install:	all
+ 	$(INSTALL_DIR) -m 755 $(SERVERBIN)/backend
+ 	for file in $(RBACKENDS); do \
+-		$(LIBTOOL) $(INSTALL) -m 700 $$file $(SERVERBIN)/backend; \
++		$(LIBTOOL) --mode=install $(INSTALL) -m 700 $$file $(SERVERBIN)/backend; \
+ 	done
+ 	for file in $(UBACKENDS); do \
+ 		$(INSTALL_BIN) $$file $(SERVERBIN)/backend; \
