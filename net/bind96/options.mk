@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/07/26 09:07:58 obache Exp $
+# $NetBSD: options.mk,v 1.3 2009/09/08 08:42:45 tnn Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.bind96
 PKG_SUPPORTED_OPTIONS=  bind-dig-sigchase bind-xml-statistics-server
@@ -14,6 +14,10 @@ PKG_SUPPORTED_OPTIONS+=	inet6 threads mysql pgsql ldap dlz-filesystem
 # don't touch PKG_SUGGESTED_OPTIONS
 .else
 PKG_SUGGESTED_OPTIONS+=	threads
+.endif
+
+.if empty(MISSING_FEATURES:Minet6)
+PKG_SUGGESTED_OPTIONS+=	inet6
 .endif
 
 .include "../../mk/bsd.options.mk"
