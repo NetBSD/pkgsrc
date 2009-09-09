@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/09/09 05:44:03 epg Exp $
+# $NetBSD: Makefile,v 1.8 2009/09/09 05:51:01 epg Exp $
 
 DISTNAME=	bzr-gtk-${VER}
 #PKGREVISION=	1
@@ -30,4 +30,5 @@ PRIVILEGED_STAGES+=	clean
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
