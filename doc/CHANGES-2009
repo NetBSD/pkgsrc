@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3567 2009/09/09 20:46:52 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3568 2009/09/09 21:14:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4633,3 +4633,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Mouse to 0.28 [seb 2009-09-09]
 	Updated devel/p5-Test-Simple to 0.94 [seb 2009-09-09]
 	Updated devel/p5-MooseX-Method-Signatures to 0.26 [seb 2009-09-09]
+	Updated net/p5-Net-Jifty to 0.12 [seb 2009-09-09]
