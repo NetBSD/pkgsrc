@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3569 2009/09/09 22:56:25 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3570 2009/09/09 22:57:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4635,3 +4635,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Method-Signatures to 0.26 [seb 2009-09-09]
 	Updated net/p5-Net-Jifty to 0.12 [seb 2009-09-09]
 	Updated devel/slib to 3.2.2 [wiz 2009-09-09]
+	Updated devel/guile-slib to 3.2.2 [wiz 2009-09-09]
