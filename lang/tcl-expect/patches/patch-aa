@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/03/15 12:41:36 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2009/09/09 17:18:18 joerg Exp $
 
 --- Makefile.in.orig	2004-05-07 18:10:30.000000000 +0000
 +++ Makefile.in
@@ -144,7 +144,7 @@ $NetBSD: patch-aa,v 1.5 2008/03/15 12:41:36 joerg Exp $
  $(EXP_SHARED_LIB_FILE): $(OFILES)
  	-rm -f $(EXP_SHARED_LIB_FILE)
 -	@TCL_SHLIB_LD@ -o $(EXP_SHARED_LIB_FILE) $(SHARED_OFILES) @EXP_LD_SEARCH_FLAGS@ @EXP_SHLIB_LD_LIBS@
-+	${LIBTOOL} @CC@ --mode=link -rpath ${PREFIX}/lib -o $(EXP_SHARED_LIB_FILE) $(OFILES:.o=.lo) @EXP_LD_SEARCH_FLAGS@ @EXP_SHLIB_LD_LIBS@ -version-info 1:0
++	${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib -o $(EXP_SHARED_LIB_FILE) $(OFILES:.o=.lo) @EXP_LD_SEARCH_FLAGS@ @EXP_SHLIB_LD_LIBS@ -version-info 1:0
  
  .PHONY: install-info install info
  install-info:
