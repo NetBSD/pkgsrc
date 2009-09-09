@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.1,v 1.7 2006/04/17 13:40:17 wiz Exp $
+.\"	$NetBSD: revbump.1,v 1.8 2009/09/09 11:16:57 wiz Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005, 2006 The NetBSD Foundation, Inc.
 .\"
@@ -95,7 +95,7 @@ revbump \*[Lt] makebump \*[Gt] makebump.manual
 blbump \*[Lt] bl3bump \*[Gt] bl3bump.manual
 [handle the *ABI_DEPENDS* bumps in bl3bump.manual manually]
 cvs diff `cat allbump`
-[look for PYPKGPREFIX -\*[Gt] py22 or py23pth expansions
+[look for PYPKGPREFIX -\*[Gt] py25 expansions
  in buildlink files and any unrelated diffs you have in your
  local tree, and fix them]
 lintpkgsrc -d
