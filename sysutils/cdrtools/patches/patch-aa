@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.9 2009/09/09 20:30:57 wiz Exp $
+
+--- autoconf/configure.orig	2008-03-27 18:58:21.000000000 +0000
++++ autoconf/configure
+@@ -14702,6 +14702,7 @@ fi
+ 
+ if eval "test \"`echo '$ac_cv_func_'$ac_func`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
++    lib_rt="$librt"
+     ac_tr_func=HAVE_`echo $ac_func | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'`
+   cat >> confdefs.h <<EOF
+ #define $ac_tr_func 1
