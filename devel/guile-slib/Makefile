@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2009/05/20 00:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/09/09 22:56:50 wiz Exp $
 
-DISTNAME=	guile-slib-3.2.1
-PKGREVISION=	1
+DISTNAME=	guile-slib-3.2.2
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,7 +14,7 @@ COMMENT=	SLIB glue files for guile 1.8
 # place in the destdir.
 #PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	slib>=3.2.1:../../devel/slib
+DEPENDS+=	slib>=3.2.2:../../devel/slib
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
