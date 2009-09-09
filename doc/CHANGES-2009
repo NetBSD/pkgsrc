@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3559 2009/09/09 13:00:20 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3560 2009/09/09 13:35:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4627,3 +4627,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/gdb6 to 6.2.1nb5 [wiz 2009-09-09]
 	Added emulators/suse100_qt3 version 10.0 [obache 2009-09-09]
 	Added emulators/suse100_32_qt3 version 10.0 [obache 2009-09-09]
+	Updated comms/gammu to 1.26.1 [wiz 2009-09-09]
