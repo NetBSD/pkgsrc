@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3552 2009/09/09 05:46:42 epg Exp $
+$NetBSD: CHANGES-2009,v 1.3553 2009/09/09 06:24:49 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4619,3 +4619,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bzr-svn to 0.6.4 [epg 2009-09-09]
 	Updated devel/qbzr to 0.14 [epg 2009-09-09]
 	Updated www/loggerhead to 1.17 [epg 2009-09-09]
+	Updated lang/python24 to 2.4.5nb5 [dsainty 2009-09-09]
+	Updated lang/python25 to 2.5.4nb3 [dsainty 2009-09-09]
