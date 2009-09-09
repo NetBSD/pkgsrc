@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3558 2009/09/09 12:52:48 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3559 2009/09/09 13:00:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4626,3 +4626,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/telepathy-glib to 0.7.36 [wiz 2009-09-09]
 	Updated devel/gdb6 to 6.2.1nb5 [wiz 2009-09-09]
 	Added emulators/suse100_qt3 version 10.0 [obache 2009-09-09]
+	Added emulators/suse100_32_qt3 version 10.0 [obache 2009-09-09]
