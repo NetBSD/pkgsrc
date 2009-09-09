@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/09/04 23:19:58 wiz Exp $
+$NetBSD: distinfo,v 1.6 2009/09/09 13:34:54 wiz Exp $
 
-SHA1 (gammu-1.26.0.tar.bz2) = 884e9393473cb3020fde27b1bbef869b48e60ea9
-RMD160 (gammu-1.26.0.tar.bz2) = 618e6f8d23902f06303bb6bdd3ee8a2b435ca88d
-Size (gammu-1.26.0.tar.bz2) = 2114328 bytes
+SHA1 (gammu-1.26.1.tar.bz2) = 122886f29c566f72020e91da119e1e04f7bfbec6
+RMD160 (gammu-1.26.1.tar.bz2) = a913ac6c999f81ab4fda7c1656232484033ac540
+Size (gammu-1.26.1.tar.bz2) = 2113622 bytes
