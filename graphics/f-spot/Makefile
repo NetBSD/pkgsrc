@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/08/29 11:45:29 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/09 17:19:50 drochner Exp $
 #
 
-DISTNAME=	f-spot-0.5.0.3
-PKGREVISION=	4
+DISTNAME=	f-spot-0.6.1.1
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/f-spot/0.5/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/f-spot/0.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -43,4 +42,5 @@ REPLACE_BASH+=	tools/f-spot-import
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
