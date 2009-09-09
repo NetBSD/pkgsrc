@@ -1,4 +1,6 @@
-$NetBSD: patch-ch,v 1.3 2007/06/21 18:16:16 wiz Exp $
+$NetBSD: patch-ch,v 1.4 2009/09/09 13:57:52 wiz Exp $
+
+for getrawpartition in patch-ai
 
 --- RULES/i386-netbsd-cc.rul.orig	2007-05-09 12:25:30.000000000 +0000
 +++ RULES/i386-netbsd-cc.rul
