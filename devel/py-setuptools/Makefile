@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/09/07 14:22:39 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/09/09 16:49:18 joerg Exp $
 #
 
 EGG_VERSION=		0.6c9
@@ -28,6 +28,8 @@ CHECK_FILES_SKIP+=	${PREFIX}/${PYSITELIB}/easy-install.pth
 
 .include "../../mk/bsd.prefs.mk"
 
+.include "../../lang/python/extension.mk"
+
 PYSETUPINSTALLARGS=	--single-version-externally-managed
 .if ${_USE_DESTDIR} == "no"
 PYSETUPINSTALLARGS+=	--root=/
@@ -35,6 +37,14 @@ PYSETUPINSTALLARGS+=	--root=/
 
 FILES_SUBST+=	PYSITELIB=${PREFIX}/${PYSITELIB}
 FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
+PLIST_VARS+=	py24 py25
+
+.if ${PYPKGPREFIX} == "py24"
+PLIST.py24=		yes
+.else
+PLIST.py25=		yes
+.endif
 
 post-extract:
 	chmod -R go-w ${WRKSRC}
@@ -51,5 +61,4 @@ post-build:
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/manage-eggs.py ${DESTDIR}${PREFIX}/bin/${PYPKGPREFIX}-manage-eggs
 
-.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
