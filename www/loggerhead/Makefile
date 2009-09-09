@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2008/12/26 19:51:55 epg Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/09 05:45:23 epg Exp $
 
 DISTNAME=	loggerhead-${VER}
 CATEGORIES=	www scm
 MASTER_SITES=	http://launchpad.net/loggerhead/${VER}/${VER}/+download/
-VER=		1.10
+VER=		1.17
 
-# 1.10 distfile contains no top-level directory.
-EXTRACT_DIR=	${WRKSRC}
+WRKSRC=		${WRKDIR}/loggerhead
 
 MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	https://launchpad.net/loggerhead
@@ -14,7 +13,8 @@ COMMENT=	Web viewer for Bazaar branches
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	bzr>=1.6:../../devel/bzr
+DEPENDS+=	bzr>=1.13:../../devel/bzr
+DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-Paste>=1.2:../../www/py-paste
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c8:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-SimpleTAL>=4.1:../../www/py-simpletal
