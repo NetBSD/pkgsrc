@@ -1,0 +1,29 @@
+$NetBSD: patch-ad,v 1.1 2009/09/09 16:54:13 drochner Exp $
+
+--- main.c.orig	2009-09-08 22:05:17.000000000 +0200
++++ main.c
+@@ -55,6 +55,7 @@ GdkPixbuf *questionmark;
+ GdkPixbuf *coverlayer;
+ gchar *last_canteen = NULL;
+ int sched_seek = -1;
++int shutting_down;
+ 
+ GdkPixbuf* scale_width(GdkPixbuf* pb, float nw) {
+   double width = gdk_pixbuf_get_width(pb);
+@@ -601,6 +602,8 @@ void pause_cb(gpointer seekbar) {
+ }
+ 
+ gboolean progress_timeout_cb(gpointer seekbar) {
++  if (shutting_down) /* seekbar can be already invalid */
++    return false;
+   if(loaded) {
+     g_signal_handlers_block_by_func(seekbar, seek_cb, seekbar);
+ 
+@@ -860,6 +863,7 @@ main (int argc, char *argv[])
+     gst_element_set_state(pipeline, GST_STATE_NULL);
+     gst_object_unref(GST_OBJECT(pipeline));
+   }
++  shutting_down = 1;
+   g_object_unref (G_OBJECT (builder));
+   g_object_unref (G_OBJECT (gconf));
+ 
