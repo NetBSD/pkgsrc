@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2009/05/25 21:05:24 drochner Exp $
+$NetBSD: patch-ab,v 1.11 2009/09/09 19:57:05 drochner Exp $
 
---- utils/Makefile.in.orig	2009-05-16 17:40:51.000000000 +0200
+--- utils/Makefile.in.orig	2009-08-18 21:04:22.000000000 +0200
 +++ utils/Makefile.in
-@@ -51,7 +51,7 @@ mkinstalldirs = $(install_sh) -d
+@@ -52,7 +52,7 @@ mkinstalldirs = $(install_sh) -d
  CONFIG_HEADER = $(top_builddir)/config.h \
  	$(top_builddir)/poppler/poppler-config.h
  CONFIG_CLEAN_FILES =
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.10 2009/05/25 21:05:24 drochner Exp $
  @BUILD_ABIWORD_OUTPUT_TRUE@am__EXEEXT_2 = pdftoabw$(EXEEXT)
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
-@@ -61,19 +61,19 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
+@@ -62,25 +62,25 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
  pdffonts_OBJECTS = $(am_pdffonts_OBJECTS)
  pdffonts_LDADD = $(LDADD)
  am__DEPENDENCIES_1 =
@@ -34,7 +34,14 @@ $NetBSD: patch-ab,v 1.10 2009/05/25 21:05:24 drochner Exp $
  	$(am__DEPENDENCIES_1)
  am__pdftoabw_SOURCES_DIST = pdftoabw.cc parseargs.c parseargs.h
  @BUILD_ABIWORD_OUTPUT_TRUE@am_pdftoabw_OBJECTS = pdftoabw.$(OBJEXT) \
-@@ -88,25 +88,25 @@ am_pdftohtml_OBJECTS = pdftohtml.$(OBJEX
+ @BUILD_ABIWORD_OUTPUT_TRUE@	$(am__objects_1)
+ pdftoabw_OBJECTS = $(am_pdftoabw_OBJECTS)
+-am__DEPENDENCIES_2 = $(top_builddir)/poppler/libpoppler.la \
++am__DEPENDENCIES_2 = $(prefix)/lib/libpoppler.la \
+ 	$(am__DEPENDENCIES_1)
+ @BUILD_ABIWORD_OUTPUT_TRUE@pdftoabw_DEPENDENCIES =  \
+ @BUILD_ABIWORD_OUTPUT_TRUE@	$(am__DEPENDENCIES_2) \
+@@ -89,25 +89,25 @@ am_pdftohtml_OBJECTS = pdftohtml.$(OBJEX
  	HtmlLinks.$(OBJEXT) HtmlOutputDev.$(OBJEXT) $(am__objects_1)
  pdftohtml_OBJECTS = $(am_pdftohtml_OBJECTS)
  pdftohtml_LDADD = $(LDADD)
@@ -66,7 +73,7 @@ $NetBSD: patch-ab,v 1.10 2009/05/25 21:05:24 drochner Exp $
  	$(am__DEPENDENCIES_1)
  DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir) -I$(top_builddir)/poppler
  depcomp = $(SHELL) $(top_srcdir)/depcomp
-@@ -307,12 +307,12 @@ top_build_prefix = @top_build_prefix@
+@@ -319,12 +319,12 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  win32_libs = @win32_libs@
@@ -83,8 +90,8 @@ $NetBSD: patch-ab,v 1.10 2009/05/25 21:05:24 drochner Exp $
 +pdftoppm_manpage = pdftoppm.1
  INCLUDES = \
  	-I$(top_srcdir)				\
- 	-I$(top_srcdir)/utils			\
-@@ -322,9 +322,10 @@ INCLUDES = \
+ 	-I$(top_srcdir)/goo			\
+@@ -335,9 +335,10 @@ INCLUDES = \
  	$(ABIWORD_CFLAGS)
  
  LDADD = \
