@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2009/08/08 15:52:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2009/09/09 05:43:11 epg Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -1140,6 +1140,9 @@ ${PYSITELIB}/bzrlib/tests/per_repository/test_is_write_locked.pyo
 ${PYSITELIB}/bzrlib/tests/per_repository/test_iter_reverse_revision_history.py
 ${PYSITELIB}/bzrlib/tests/per_repository/test_iter_reverse_revision_history.pyc
 ${PYSITELIB}/bzrlib/tests/per_repository/test_iter_reverse_revision_history.pyo
+${PYSITELIB}/bzrlib/tests/per_repository/test_merge_directive.py
+${PYSITELIB}/bzrlib/tests/per_repository/test_merge_directive.pyc
+${PYSITELIB}/bzrlib/tests/per_repository/test_merge_directive.pyo
 ${PYSITELIB}/bzrlib/tests/per_repository/test_pack.py
 ${PYSITELIB}/bzrlib/tests/per_repository/test_pack.pyc
 ${PYSITELIB}/bzrlib/tests/per_repository/test_pack.pyo
@@ -1197,6 +1200,9 @@ ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_default_stacking.pyo
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_fetch.py
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_fetch.pyc
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_fetch.pyo
+${PYSITELIB}/bzrlib/tests/per_repository_reference/test_get_record_stream.py
+${PYSITELIB}/bzrlib/tests/per_repository_reference/test_get_record_stream.pyc
+${PYSITELIB}/bzrlib/tests/per_repository_reference/test_get_record_stream.pyo
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_get_rev_id_for_revno.py
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_get_rev_id_for_revno.pyc
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_get_rev_id_for_revno.pyo
@@ -1275,6 +1281,9 @@ ${PYSITELIB}/bzrlib/tests/per_workingtree/test_break_lock.pyo
 ${PYSITELIB}/bzrlib/tests/per_workingtree/test_changes_from.py
 ${PYSITELIB}/bzrlib/tests/per_workingtree/test_changes_from.pyc
 ${PYSITELIB}/bzrlib/tests/per_workingtree/test_changes_from.pyo
+${PYSITELIB}/bzrlib/tests/per_workingtree/test_check.py
+${PYSITELIB}/bzrlib/tests/per_workingtree/test_check.pyc
+${PYSITELIB}/bzrlib/tests/per_workingtree/test_check.pyo
 ${PYSITELIB}/bzrlib/tests/per_workingtree/test_commit.py
 ${PYSITELIB}/bzrlib/tests/per_workingtree/test_commit.pyc
 ${PYSITELIB}/bzrlib/tests/per_workingtree/test_commit.pyo
