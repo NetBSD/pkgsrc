@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2009/08/08 15:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/09 05:44:03 epg Exp $
 
 DISTNAME=	bzr-gtk-${VER}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://launchpad.net/bzr-gtk/0.95/${VER}/+download/
-VER=		0.95.0
+MASTER_SITES=	http://launchpad.net/bzr-gtk/trunk/${VER}/+download/
+VER=		0.97.0
 
 MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	http://bazaar-vcs.org/bzr-gtk
