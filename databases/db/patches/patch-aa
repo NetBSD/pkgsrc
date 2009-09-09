@@ -1,17 +1,20 @@
-$NetBSD: patch-aa,v 1.6 2008/02/21 19:32:23 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2009/09/09 16:58:52 joerg Exp $
 
---- ../dist/Makefile.in.orig	1998-12-07 14:05:59.000000000 -0500
+--- ../dist/Makefile.in.orig	1998-12-07 20:05:59.000000000 +0100
 +++ ../dist/Makefile.in
-@@ -3,7 +3,7 @@
+@@ -3,9 +3,9 @@
  srcdir=	@srcdir@/..
  CPPFLAGS=-I. -I$(srcdir)/include @CPPFLAGS@
  CFLAGS=	-c @CFLAGS@ $(CPPFLAGS)
 -CC=	@CC@
-+CC=	$(LIBTOOL) @CC@
++CC=	$(LIBTOOL) --mode=compile @CC@
  CXXFLAGS=-c @CXXFLAGS@ $(CPPFLAGS)
- CXX=	@CXX@
+-CXX=	@CXX@
++CXX=	$(LIBTOOL) --mode=compile @CXX@
  LDFLAGS=@LDFLAGS@
-@@ -43,13 +43,11 @@ PROGS=	@build_additional@ db_archive db_
+ LIBS=	@LIBS@
+ 
+@@ -43,85 +43,83 @@ PROGS=	@build_additional@ db_archive db_
  LOBJS=	@LIBOBJS@
  POBJS=	err.o getlong.o
  
@@ -27,6 +30,95 @@ $NetBSD: patch-aa,v 1.6 2008/02/21 19:32:23 jlam Exp $
  
  DBA=	db_archive.o $(POBJS)
  db_archive: $(DBA) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBA) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBA) $(libdb) $(LIBS)
+ 
+ DBB=	db_checkpoint.o $(POBJS)
+ db_checkpoint: $(DBB) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBB) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBB) $(libdb) $(LIBS)
+ 
+ DBC=	db_deadlock.o $(POBJS)
+ db_deadlock: $(DBC) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBC) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBC) $(libdb) $(LIBS)
+ 
+ DBD=	db_dump.o $(POBJS)
+ db_dump: $(DBD) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBD) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBD) $(libdb) $(LIBS)
+ 
+ DBE=	db_dump185.o $(POBJS)
+ db_dump185: $(DBE)
+-	$(CC) -o $@ $(LDFLAGS) $(DBE) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBE) $(LIBS)
+ 
+ DBF=	db_load.o $(POBJS)
+ db_load: $(DBF) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBF) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBF) $(libdb) $(LIBS)
+ 
+ DBG=	db_printlog.o $(POBJS)
+ db_printlog: $(DBG) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBG) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBG) $(libdb) $(LIBS)
+ 
+ DBH=	db_recover.o $(POBJS)
+ db_recover: $(DBH) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBH) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBH) $(libdb) $(LIBS)
+ 
+ DBI=	db_stat.o $(POBJS)
+ db_stat: $(DBI) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBI) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBI) $(libdb) $(LIBS)
+ 
+ EPROGS=	ex_access ex_appinit ex_btrec ex_lock ex_mpool ex_thread ex_tpcb
+ DBJ=	ex_access.o
+ ex_access: $(DBJ) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBJ) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBJ) $(libdb) $(LIBS)
+ 
+ DBK=	ex_appinit.o
+ ex_appinit: $(DBK) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBK) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBK) $(libdb) $(LIBS)
+ 
+ DBL=	ex_btrec.o
+ ex_btrec: $(DBL) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBL) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBL) $(libdb) $(LIBS)
+ 
+ DBM=	ex_lock.o $(POBJS)
+ ex_lock: $(DBM) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBM) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBM) $(libdb) $(LIBS)
+ 
+ DBN=	ex_mpool.o
+ ex_mpool: $(DBN) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBN) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBN) $(libdb) $(LIBS)
+ 
+ DBO=	ex_thread.o
+ ex_thread: $(DBO) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBO) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBO) $(libdb) $(LIBS)
+ 
+ DBP=	ex_tpcb.o $(POBJS)
+ ex_tpcb: $(DBP) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBP) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBP) $(libdb) $(LIBS)
+ 
+ DBT=	tclAppInit.o tcl_dbm.o tcl_hsearch.o tcl_lock.o tcl_log.o tcl_mpool.o \
+ 	tcl_mutex.o tcl_ndbm.o tcl_txn.o utils.o $(POBJS)
+ 
+ dbtest: .dbtestrc
+ dbtest: $(DBT) $(libdb)
+-	$(CC) -o $@ $(LDFLAGS) $(DBT) $(libdb) $(LIBS)
++	$(LIBTOOL) --mode=link @CC@ -o $@ $(LDFLAGS) $(DBT) $(libdb) $(LIBS)
+ 
+ AOBJS=	err.o getcwd.o getlong.o getopt.o memcmp.o memcpy.o memmove.o \
+ 	raise.o snprintf.o strerror.o strsep.o vsnprintf.o
 @@ -141,11 +139,11 @@ realclean distclean: clean
  	$(rm) -f confdefs.h db.h db_int.h db_185.h include.tcl
  
@@ -65,7 +157,7 @@ $NetBSD: patch-aa,v 1.6 2008/02/21 19:32:23 jlam Exp $
 -	@cd $(libdir) && $(chmod) $(fmode) $(libdb)
 +	@test -d $(DESTDIR)$(libdir) || \
 +	    ($(mkdir) -p $(DESTDIR)$(libdir) && $(chmod) $(dmode) $(DESTDIR)$(libdir))
-+	@$(LIBTOOL) $(BSD_INSTALL_DATA) $(libdb) $(DESTDIR)$(libdir)
++	@$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(libdb) $(DESTDIR)$(libdir)
  	@echo "Installing DB utilities: $(bindir) ..."
 -	@test -d $(bindir) || \
 -	    ($(mkdir) -p $(bindir) && $(chmod) $(dmode) $(bindir))
@@ -77,7 +169,7 @@ $NetBSD: patch-aa,v 1.6 2008/02/21 19:32:23 jlam Exp $
 +	    ($(mkdir) -p $(DESTDIR)$(bindir) && $(chmod) $(dmode) $(DESTDIR)$(bindir))
 +	@for prog in $(PROGS); do \
 +		db2prog=`echo $$prog | sed $(transform)`; \
-+		$(LIBTOOL) $(BSD_INSTALL_PROGRAM) $$prog $(DESTDIR)$(bindir)/$$db2prog; \
++		$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $$prog $(DESTDIR)$(bindir)/$$db2prog; \
 +	done
  	@echo "Installing documentation: $(mandir) ..."
 -	@test -d $(mandir) || \
