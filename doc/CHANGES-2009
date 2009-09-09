@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3551 2009/09/08 18:36:34 tonio Exp $
+$NetBSD: CHANGES-2009,v 1.3552 2009/09/09 05:46:42 epg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4613,3 +4613,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/libspf2 to 1.2.9nb1 [tron 2009-09-08]
 	Updated x11/gtk2-engines-murrine to 0.90.3 [ahoka 2009-09-08]
 	Updated x11/labltk to 3.11.1 [tonio 2009-09-08]
+	Updated devel/bzr to 1.18 [epg 2009-09-09]
+	Updated devel/bzrtools to 1.18.0 [epg 2009-09-09]
+	Updated devel/bzr-gtk to 0.97.0 [epg 2009-09-09]
+	Updated devel/bzr-svn to 0.6.4 [epg 2009-09-09]
+	Updated devel/qbzr to 0.14 [epg 2009-09-09]
+	Updated www/loggerhead to 1.17 [epg 2009-09-09]
