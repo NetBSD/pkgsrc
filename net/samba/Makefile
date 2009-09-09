@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.194 2009/08/26 19:58:46 sno Exp $
+# $NetBSD: Makefile,v 1.195 2009/09/09 15:15:17 wiz Exp $
 
 .include "Makefile.mirrors"
 
 DISTNAME=		samba-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
 
@@ -59,7 +59,6 @@ CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR:Q}
 
 CONFIGURE_ARGS+=	--with-mandir=${PREFIX:Q}/${PKGMANDIR:Q}
 CONFIGURE_ARGS+=	--with-swatdir=${PREFIX:Q}/share/samba/swat
-CONFIGURE_ARGS+=	--with-included-popt
 
 .include "../../converters/libiconv/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
@@ -171,4 +170,5 @@ post-install: install-samba-lib-symlinks
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/libmsrpc.h \
 		${DESTDIR}${PREFIX}/include/libsmbclient.h
 
+.include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
