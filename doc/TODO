@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8432 2009/09/09 09:18:50 wiz Exp $
+$NetBSD: TODO,v 1.8433 2009/09/09 10:20:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1202,7 +1202,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ted-2.17
 	o ted-en-us-2.17
 	o telepathy-gabble-0.8.2
-	o telepathy-glib-0.7.36
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.9.2
 	o tfmxplay-1.1.6
