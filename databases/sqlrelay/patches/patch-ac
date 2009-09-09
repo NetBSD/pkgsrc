@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2006/03/29 01:28:47 gavan Exp $
+$NetBSD: patch-ac,v 1.2 2009/09/09 14:38:58 joerg Exp $
 
 --- etc/Makefile.orig	2005-02-24 02:52:16.000000000 +0000
 +++ etc/Makefile
@@ -9,9 +9,9 @@ $NetBSD: patch-ac,v 1.1 2006/03/29 01:28:47 gavan Exp $
 -	$(MKINSTALLDIRS) $(sysconfdir)
 -	$(INSTALL) -m 644 sqlrelay.conf.example $(sysconfdir)
 -	$(INSTALL) -m 644 sqlrelay.dtd $(sysconfdir)
-+	$(MKINSTALLDIRS) $(EXAMPLESDIR)
-+	$(INSTALL) -m 644 sqlrelay.conf.example $(EXAMPLESDIR)
-+	$(INSTALL) -m 644 sqlrelay.dtd $(EXAMPLESDIR)
++	$(MKINSTALLDIRS) ${DESTDIR}$(EXAMPLESDIR)
++	$(INSTALL) -m 644 sqlrelay.conf.example ${DESTDIR}$(EXAMPLESDIR)
++	$(INSTALL) -m 644 sqlrelay.dtd ${DESTDIR}$(EXAMPLESDIR)
  
  uninstall:
 -	$(RM) $(sysconfdir)/sqlrelay.conf.example
