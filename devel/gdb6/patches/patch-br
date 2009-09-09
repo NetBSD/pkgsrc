@@ -1,0 +1,28 @@
+$NetBSD: patch-br,v 1.1 2009/09/09 12:50:58 wiz Exp $
+
+--- etc/Makefile.in.orig	2003-01-02 20:51:02.000000000 +0000
++++ etc/Makefile.in
+@@ -48,8 +48,8 @@ TEXIDIR = $(srcdir)/../texinfo
+ #### Host, target, and site specific Makefile fragments come in here.
+ ###
+ 
+-INFOFILES = standards.info configure.info
+-DVIFILES = standards.dvi configure.dvi
++INFOFILES = configure.info
++DVIFILES = configure.dvi
+ 
+ all:
+ 
+@@ -71,12 +71,6 @@ info:
+ 
+ install-info: info
+ 	$(SHELL) $(srcdir)/../mkinstalldirs $(DESTDIR)$(infodir)
+-	if test ! -f standards.info; then cd $(srcdir); fi; \
+-	if test -f standards.info; then \
+-	  for i in standards.info*; do \
+-	    $(INSTALL_DATA) $$i $(DESTDIR)$(infodir)/$$i; \
+-	  done; \
+-	fi
+ 	if test ! -f configure.info; then cd $(srcdir); fi; \
+ 	if test -f configure.info; then \
+ 	  for i in configure.info*; do \
