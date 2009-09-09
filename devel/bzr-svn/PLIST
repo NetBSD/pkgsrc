@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/07/02 06:10:30 epg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/09/09 05:45:08 epg Exp $
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.py
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyo
@@ -50,6 +50,9 @@ ${PYSITELIB}/bzrlib/plugins/svn/fileids.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/format.py
 ${PYSITELIB}/bzrlib/plugins/svn/format.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/format.pyo
+${PYSITELIB}/bzrlib/plugins/svn/info.py
+${PYSITELIB}/bzrlib/plugins/svn/info.pyc
+${PYSITELIB}/bzrlib/plugins/svn/info.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/keywords.py
 ${PYSITELIB}/bzrlib/plugins/svn/keywords.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/keywords.pyo
@@ -116,6 +119,9 @@ ${PYSITELIB}/bzrlib/plugins/svn/revmeta.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/revspec.py
 ${PYSITELIB}/bzrlib/plugins/svn/revspec.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/revspec.pyo
+${PYSITELIB}/bzrlib/plugins/svn/send.py
+${PYSITELIB}/bzrlib/plugins/svn/send.pyc
+${PYSITELIB}/bzrlib/plugins/svn/send.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/server.py
 ${PYSITELIB}/bzrlib/plugins/svn/server.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/server.pyo
