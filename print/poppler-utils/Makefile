@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2009/08/26 19:58:14 sno Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/09 19:57:06 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-utils-${POPPLER_VERS}
-PKGREVISION=		1
 
 COMMENT=		PDF utilities (from poppler)
 MAINTAINER=		reed@reedmedia.net
@@ -45,4 +44,5 @@ PTHREAD_STUBLIB=	# provided by libc
 .endif
 MAKE_ENV+=		PTHREAD_STUBLIB=${PTHREAD_STUBLIB}
 
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
