@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3555 2009/09/09 09:18:50 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3556 2009/09/09 10:20:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4623,3 +4623,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/python25 to 2.5.4nb3 [dsainty 2009-09-09]
 	Updated devel/ltsa to 2.2nb3 [hasso 2009-09-09]
 	Updated time/etm to 296 [wiz 2009-09-09]
+	Updated chat/telepathy-glib to 0.7.36 [wiz 2009-09-09]
