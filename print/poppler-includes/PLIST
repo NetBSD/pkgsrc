@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:11:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/09/09 19:57:06 drochner Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BuiltinFont.h
@@ -21,6 +21,7 @@ include/poppler/Function.h
 include/poppler/Gfx.h
 include/poppler/GfxFont.h
 include/poppler/GfxState.h
+include/poppler/GfxState_helpers.h
 include/poppler/GlobalParams.h
 include/poppler/JArithmeticDecoder.h
 include/poppler/JBIG2Stream.h
@@ -40,6 +41,7 @@ include/poppler/PSTokenizer.h
 include/poppler/Page.h
 include/poppler/PageTransition.h
 include/poppler/Parser.h
+include/poppler/PopplerCache.h
 include/poppler/PreScanOutputDev.h
 include/poppler/ProfileData.h
 include/poppler/SecurityHandler.h
@@ -64,8 +66,10 @@ include/poppler/goo/GooMutex.h
 include/poppler/goo/GooString.h
 include/poppler/goo/GooTimer.h
 include/poppler/goo/GooVector.h
+include/poppler/goo/PNGWriter.h
 include/poppler/goo/gfile.h
 include/poppler/goo/gmem.h
+include/poppler/goo/gstrtod.h
 include/poppler/goo/gtypes.h
 include/poppler/poppler-config.h
 include/poppler/splash/Splash.h
