@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.5 2008/02/22 13:36:19 obache Exp $
+# $NetBSD: emulator.mk,v 1.6 2009/09/09 13:03:38 obache Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -39,6 +39,7 @@ DEPENDS_suse-10.0.locale?=	suse_locale${_SUSE_VERSION_REQD}:../../emulators/suse
 DEPENDS_suse-10.0.motif?=	suse_openmotif${_SUSE_VERSION_REQD}:../../emulators/suse100_openmotif
 DEPENDS_suse-10.0.openssl?=	suse_openssl${_SUSE_VERSION_REQD}:../../emulators/suse100_openssl
 DEPENDS_suse-10.0.png?=	suse_libpng${_SUSE_VERSION_REQD}:../../emulators/suse100_libpng
+DEPENDS_suse-10.0.qt3?=		suse_qt3${_SUSE_VERSION_REQD}:../../emulators/suse100_qt3
 DEPENDS_suse-10.0.resmgr?=	suse_resmgr${_SUSE_VERSION_REQD}:../../emulators/suse100_resmgr
 DEPENDS_suse-10.0.slang?=	suse_slang${_SUSE_VERSION_REQD}:../../emulators/suse100_slang
 DEPENDS_suse-10.0.tiff?=	suse_libtiff${_SUSE_VERSION_REQD}:../../emulators/suse100_libtiff
