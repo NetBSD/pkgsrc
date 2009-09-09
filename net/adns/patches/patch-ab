@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2009/09/02 11:01:50 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2009/09/09 16:34:09 joerg Exp $
 
 --- src/Makefile.in.orig	Sat Sep 16 20:24:24 2000
 +++ src/Makefile.in
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.2 2009/09/02 11:01:50 joerg Exp $
 -		$(RANLIB) $@.new
 -		mv -f $@.new $@
 +libadns.la:	$(LIBOBJS)
-+		${LIBTOOL} $(CC) --mode=link $(LDFLAGS) -o $@ $(LIBOBJS:.o=.lo) -rpath ${PREFIX}/lib -version-info $(MAJOR):$(MINOR)
++		${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $@ $(LIBOBJS:.o=.lo) -rpath ${PREFIX}/lib -version-info $(MAJOR):$(MINOR)
  
  $(LIBOBJS):	adns.h internal.h config.h
 +
