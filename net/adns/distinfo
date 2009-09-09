@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2009/09/02 11:01:50 joerg Exp $
+$NetBSD: distinfo,v 1.14 2009/09/09 16:34:09 joerg Exp $
 
 SHA1 (adns-1.1.tar.gz) = cd47dfc819b147b3275eaf6316f17f15be7187e5
 RMD160 (adns-1.1.tar.gz) = c6198f864afc40657dd94b7a94cf59a483ab7581
 Size (adns-1.1.tar.gz) = 211455 bytes
 SHA1 (patch-aa) = 7ac1403a5f3d5a69de3976c0931f41bfd512c277
-SHA1 (patch-ab) = 354afdcbdbcf733b13de93eaa9e896b9ea21c819
+SHA1 (patch-ab) = a87f93cec91a04b875c98bd2fb586b346fb3e74f
 SHA1 (patch-ac) = 2928cd6ccd224bc6d355e52b2f8dc149beaaff84
 SHA1 (patch-ad) = 5ce6a933673c82b2058ff67223057bbf18f5d8bb
 SHA1 (patch-ae) = fdcc3815b880538ef2c124c7ff3c0ac74b25a14f
