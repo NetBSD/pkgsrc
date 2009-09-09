@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8431 2009/09/08 22:39:55 abs Exp $
+$NetBSD: TODO,v 1.8432 2009/09/09 09:18:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -536,7 +536,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-296
 	o evolution-mapi-0.26.2 [GNOME 2.26]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
