@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3556 2009/09/09 10:20:42 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3557 2009/09/09 12:51:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4624,3 +4624,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ltsa to 2.2nb3 [hasso 2009-09-09]
 	Updated time/etm to 296 [wiz 2009-09-09]
 	Updated chat/telepathy-glib to 0.7.36 [wiz 2009-09-09]
+	Updated devel/gdb6 to 6.2.1nb5 [wiz 2009-09-09]
