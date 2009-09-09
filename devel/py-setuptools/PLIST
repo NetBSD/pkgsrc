@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/09/07 14:22:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/09/09 16:49:18 joerg Exp $
 bin/easy_install-${PYVERSSUFFIX}
 bin/${PYPKGPREFIX}-manage-eggs
 ${PYSITELIB}/easy_install.py
@@ -12,7 +12,8 @@ ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PLIST.py24}${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PLIST.py25}${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
