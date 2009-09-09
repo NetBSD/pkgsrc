@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/04/01 16:20:41 roy Exp $
+# $NetBSD: Makefile,v 1.8 2009/09/09 11:16:56 wiz Exp $
 #
 
 DISTNAME=	telepathy-gabble-0.7.21
@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYPKGPREFIX} == "py24" || ${PYPKGPREFIX} == "py23"
+.if ${PYPKGPREFIX} == "py24"
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
 CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
