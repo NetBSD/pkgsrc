@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/07/14 09:02:41 wiz Exp $
+$NetBSD: distinfo,v 1.4 2009/09/09 14:10:58 wiz Exp $
 
-SHA1 (pykaraoke-0.6.zip) = e7154066808ebc5bb1cb72c6562cfdeba0b86395
-RMD160 (pykaraoke-0.6.zip) = be61d30054dfe038f2abcfc5156d4dd03718df22
-Size (pykaraoke-0.6.zip) = 845206 bytes
+SHA1 (pykaraoke-0.7.1.zip) = 4f6ea5a0884815207fe282018e489c7b9512715c
+RMD160 (pykaraoke-0.7.1.zip) = db3161d7b53045be6138d0f09cf271546dcade50
+Size (pykaraoke-0.7.1.zip) = 866153 bytes
