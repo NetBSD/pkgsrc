@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.4 2007/06/08 14:16:16 wiz Exp $
+$NetBSD: patch-am,v 1.5 2009/09/09 05:59:38 dsainty Exp $
 
 --- setup.py.orig	2006-10-08 17:41:25.000000000 +0000
 +++ setup.py
-@@ -15,7 +15,7 @@ from distutils.command.install import in
+@@ -15,7 +15,7 @@
  from distutils.command.install_lib import install_lib
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -11,7 +11,7 @@ $NetBSD: patch-am,v 1.4 2007/06/08 14:16:16 wiz Exp $
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -239,9 +239,15 @@ class PyBuildExt(build_ext):
+@@ -239,9 +239,15 @@
          return sys.platform
  
      def detect_modules(self):
@@ -30,7 +30,7 @@ $NetBSD: patch-am,v 1.4 2007/06/08 14:16:16 wiz Exp $
  
          # Add paths to popular package managers on OS X/darwin
          if sys.platform == "darwin":
-@@ -485,9 +491,7 @@ class PyBuildExt(build_ext):
+@@ -485,9 +491,7 @@
                                 depends = ['socketmodule.h']) )
          # Detect SSL support for the socket module (via _ssl)
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
@@ -41,7 +41,7 @@ $NetBSD: patch-am,v 1.4 2007/06/08 14:16:16 wiz Exp $
                               )
          if ssl_incs is not None:
              krb5_h = find_file('krb5.h', inc_dirs,
-@@ -495,9 +499,7 @@ class PyBuildExt(build_ext):
+@@ -495,9 +499,7 @@
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -52,7 +52,7 @@ $NetBSD: patch-am,v 1.4 2007/06/08 14:16:16 wiz Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -515,168 +517,51 @@ class PyBuildExt(build_ext):
+@@ -515,168 +517,51 @@
          # similar functionality (but slower of course) implemented in Python.
  
          # Sleepycat Berkeley DB interface.  http://www.sleepycat.com
@@ -261,21 +261,25 @@ $NetBSD: patch-am,v 1.4 2007/06/08 14:16:16 wiz Exp $
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -689,6 +574,13 @@ class PyBuildExt(build_ext):
+@@ -689,11 +574,13 @@
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
+-            elif (self.compiler.find_library_file(lib_dirs, 'gdbm')
+-                  and find_file("gdbm/ndbm.h", inc_dirs, []) is not None):
 +            elif find_file("ndbm.h", db_incs, []) is not None:
-+                exts.append( Extension('dbm', ['dbmmodule.c'],
+                 exts.append( Extension('dbm', ['dbmmodule.c'],
+-                                       define_macros=[('HAVE_GDBM_NDBM_H',None)],
+-                                       libraries = ['gdbm'] ) )
 +                                       library_dirs=dblib_dir,
 +                                       runtime_library_dirs=dblib_dir,
 +                                       include_dirs=db_incs,
 +                                       define_macros=[('HAVE_NDBM_H',None)],
 +                                       libraries=dblibs))
-             elif (self.compiler.find_library_file(lib_dirs, 'gdbm')
-                   and find_file("gdbm/ndbm.h", inc_dirs, []) is not None):
+             elif db_incs is not None:
                  exts.append( Extension('dbm', ['dbmmodule.c'],
-@@ -1224,8 +1116,8 @@ def main():
+                                        library_dirs=dblib_dir,
+@@ -1224,8 +1111,8 @@
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
            # Scripts to install
