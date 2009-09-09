@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.8 2009/03/21 18:25:35 tron Exp $
+$NetBSD: patch-ba,v 1.9 2009/09/09 11:22:22 sketch Exp $
 
---- Makefile.in.orig	2009-01-19 10:40:09.000000000 +0000
-+++ Makefile.in	2009-03-21 14:48:11.000000000 +0000
+--- Makefile.in.orig	Mon Jan 19 10:40:09 2009
++++ Makefile.in	Wed Sep  9 11:00:17 2009
 @@ -106,6 +106,9 @@
  # the directory where lock files go
  LOCKDIR = @lockdir@
@@ -91,13 +91,24 @@ $NetBSD: patch-ba,v 1.8 2009/03/21 18:25:35 tron Exp $
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(RPCLIBDIR) $(RPC_MODULES)
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(IDMAPLIBDIR) $(IDMAP_MODULES)
 -	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(NSSINFOLIBDIR) $(NSS_INFO_MODULES)
-+	@if [ ! -z "$(NSS_INFO_MODULES)" ]; then \
++	@if [ -n "$(NSS_INFO_MODULES)" ]; then \
 +		$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(NSSINFOLIBDIR) $(NSS_INFO_MODULES); \
 +	fi
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(CHARSETLIBDIR) $(CHARSET_MODULES)
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(AUTHLIBDIR) $(AUTH_MODULES)
  	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(PDBLIBDIR) ldapsam.@SHLIBEXT@ ldapsam_compat.@SHLIBEXT@
-@@ -1715,6 +1720,7 @@
+@@ -1617,7 +1622,9 @@
+ 	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(AUTHLIBDIR) sam.@SHLIBEXT@ sam_ignoredomain.@SHLIBEXT@
+ 	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(AUTHLIBDIR) domain.@SHLIBEXT@ trustdomain.@SHLIBEXT@ ntdomain.@SHLIBEXT@
+ 	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(AUTHLIBDIR) builtin.@SHLIBEXT@ guest.@SHLIBEXT@ fixed_challenge.@SHLIBEXT@ name_to_ntstatus.@SHLIBEXT@
+-	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(NSSINFOLIBDIR) ../idmap/ad.@SHLIBEXT@ rfc2307.@SHLIBEXT@ sfu.@SHLIBEXT@
++	@if [ -n "$(NSS_INFO_MODULES)" ]; then \
++		$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(NSSINFOLIBDIR) ../idmap/ad.@SHLIBEXT@ rfc2307.@SHLIBEXT@ sfu.@SHLIBEXT@; \
++	fi
+ 
+ installscripts: installdirs
+ 	@$(SHELL) $(srcdir)/script/installscripts.sh $(INSTALLPERMS) $(DESTDIR)$(BINDIR) $(SCRIPTS)
+@@ -1715,6 +1722,7 @@
  	@echo "  privatedir:  $(PRIVATE_DIR)"
  	@echo "  configdir:   $(CONFIGDIR)"
  	@echo "  lockdir:     $(LOCKDIR)"
