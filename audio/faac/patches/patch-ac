@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.2 2007/02/15 06:44:32 tron Exp $
+$NetBSD: patch-ac,v 1.3 2009/09/09 16:40:39 drochner Exp $
 
---- frontend/Makefile.am.orig	2004-07-28 09:18:21.000000000 +0100
-+++ frontend/Makefile.am	2007-02-12 09:03:04.000000000 +0000
-@@ -6,6 +6,11 @@
+--- frontend/Makefile.am.orig	2008-12-16 01:56:00.000000000 +0100
++++ frontend/Makefile.am
+@@ -7,6 +7,11 @@ if WITH_MP4V2
  INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/common/mp4v2
- LDADD = $(top_builddir)/libfaac/libfaac.la $(top_srcdir)/common/mp4v2/libmp4v2.la -lm -lstdc++
+ LDADD = $(top_builddir)/libfaac/libfaac.la $(top_srcdir)/common/mp4v2/libmp4v2.a -lm -lstdc++
  else
 +if WITH_EXTMP4V2
 +INCLUDES = -I$(top_srcdir)/include
@@ -12,5 +12,5 @@ $NetBSD: patch-ac,v 1.2 2007/02/15 06:44:32 tron Exp $
 +else
  INCLUDES = -I$(top_srcdir)/include 
  LDADD = $(top_builddir)/libfaac/libfaac.la -lm
-+endif
  endif
++endif
