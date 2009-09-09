@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/07/24 18:42:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/09/09 16:47:07 drochner Exp $
 bin/devhelp
 include/devhelp-1.0/devhelp/dh-assistant-view.h
 include/devhelp-1.0/devhelp/dh-assistant.h
@@ -41,6 +41,7 @@ share/locale/bg/LC_MESSAGES/devhelp.mo
 share/locale/bn/LC_MESSAGES/devhelp.mo
 share/locale/bn_IN/LC_MESSAGES/devhelp.mo
 share/locale/ca/LC_MESSAGES/devhelp.mo
+share/locale/ca@valencia/LC_MESSAGES/devhelp.mo
 share/locale/cs/LC_MESSAGES/devhelp.mo
 share/locale/da/LC_MESSAGES/devhelp.mo
 share/locale/de/LC_MESSAGES/devhelp.mo
@@ -79,6 +80,7 @@ share/locale/pl/LC_MESSAGES/devhelp.mo
 share/locale/ps/LC_MESSAGES/devhelp.mo
 share/locale/pt/LC_MESSAGES/devhelp.mo
 share/locale/pt_BR/LC_MESSAGES/devhelp.mo
+share/locale/ro/LC_MESSAGES/devhelp.mo
 share/locale/ru/LC_MESSAGES/devhelp.mo
 share/locale/rw/LC_MESSAGES/devhelp.mo
 share/locale/sk/LC_MESSAGES/devhelp.mo
