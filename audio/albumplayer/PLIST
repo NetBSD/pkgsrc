@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/27 13:40:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/09 16:54:13 drochner Exp $
 bin/albumplayer
 bin/ap_flac_embed
 man/man1/albumplayer.1
@@ -6,6 +6,8 @@ man/man1/ap_flac_embed.1
 share/albumplayer/albumplayer.xml
 share/albumplayer/coverlayer.png
 share/albumplayer/questionmark.png
+share/albumplayer/record.png
+share/albumplayer/record24.png
 share/applications/albumplayer.desktop
 share/locale/de/LC_MESSAGES/albumplayer.mo
 share/locale/en@boldquot/LC_MESSAGES/albumplayer.mo
