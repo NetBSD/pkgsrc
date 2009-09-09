@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3570 2009/09/09 22:57:01 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3571 2009/09/09 23:36:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4636,3 +4636,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-Net-Jifty to 0.12 [seb 2009-09-09]
 	Updated devel/slib to 3.2.2 [wiz 2009-09-09]
 	Updated devel/guile-slib to 3.2.2 [wiz 2009-09-09]
+	Updated emulators/snes9x-gtk to 1.51.76 [wiz 2009-09-09]

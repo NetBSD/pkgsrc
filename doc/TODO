@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8436 2009/09/09 23:21:57 wiz Exp $
+$NetBSD: TODO,v 1.8437 2009/09/09 23:36:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1166,7 +1166,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o smtpfeed-1.20
 	o snd-10.6
 	o snes9x-1.51
-	o snes9x-gtk-1.51.76
 	o snort-2.8.4
 	o solfege-3.14.6
 	o sope-4.6
