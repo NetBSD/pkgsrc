@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.40 2009/08/08 15:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2009/09/09 05:43:11 epg Exp $
 
 DISTNAME=		bzr-${VER}
 #PKGREVISION=		1
 CATEGORIES=		devel scm
-MASTER_SITES=		http://launchpad.net/bzr/1.17/${VER}/+download/
-VER=			1.17
+MASTER_SITES=		http://launchpad.net/bzr/1.18/${VER}/+download/
+VER=			1.18
 
 MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://bazaar-vcs.org/
 COMMENT=		Bazaar open source distributed version control system
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
