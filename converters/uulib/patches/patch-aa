@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2005/11/03 20:05:54 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2009/09/09 17:16:36 joerg Exp $
 
 --- uulib/Makefile.in.orig	2002-03-11 03:15:46.000000000 -0600
 +++ uulib/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.5 2005/11/03 20:05:54 rillig Exp $
  # If you don't have the GNU C compiler installed, set CC=cc here
  #
 -CC	=	@CC@
-+CC	=	$(LIBTOOL) @CC@
++CC	=	$(LIBTOOL) --mode=compile @CC@
  #
  # C Compiler Options
  #
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.5 2005/11/03 20:05:54 rillig Exp $
  	rm -f $@
 -	ar r $@ $(UULIB_OBJ)
 -	-$(RANLIB) $@
-+	$(CC) -o libuu.la $(UULIB_OBJ:.o=.lo) -rpath $(PREFIX)/lib \
++	$(LIBTOOL) --mode=link @CC@ -o libuu.la $(UULIB_OBJ:.o=.lo) -rpath $(PREFIX)/lib \
 +		-version-info 2:0
  
  .c.o:
