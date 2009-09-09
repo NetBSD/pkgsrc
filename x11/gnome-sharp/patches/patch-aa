@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1 2009/09/09 15:28:04 drochner Exp $
+
+--- gnomevfs/FileInfo.cs.orig	2008-03-07 03:32:15.000000000 +0100
++++ gnomevfs/FileInfo.cs
+@@ -38,9 +38,19 @@ namespace Gnome.Vfs {
+ 			public long size;
+ 			public long block_count;
+ 			public uint io_block_size;
++#if TIMET_IS_64BITS
++			public long atime;
++			public long mtime;
++			public long ctime;
++#elif TIMET_IS_32BITS
++			public int atime;
++			public int mtime;
++			public int ctime;
++#else
+ 			public IntPtr atime;
+ 			public IntPtr mtime;
+ 			public IntPtr ctime;
++#endif
+ 			public IntPtr symlink_name;
+ 			public IntPtr mime_type;
+ 			public uint refcount;
+@@ -216,7 +226,7 @@ namespace Gnome.Vfs {
+ 		public System.DateTime Atime {
+ 			get {
+ 				if ((ValidFields & FileInfoFields.Atime) != 0)
+-					return GLib.Marshaller.time_tToDateTime (Native.atime);
++					return GLib.Marshaller.time_tToDateTime ((IntPtr)Native.atime);
+ 				else
+ 					throw new ArgumentException ("Atime is not set");
+ 			}
+@@ -225,7 +235,7 @@ namespace Gnome.Vfs {
+ 		public System.DateTime Mtime {
+ 			get {
+ 				if ((ValidFields & FileInfoFields.Mtime) != 0)
+-					return GLib.Marshaller.time_tToDateTime (Native.mtime);
++					return GLib.Marshaller.time_tToDateTime ((IntPtr)Native.mtime);
+ 				else
+ 					throw new ArgumentException ("Mtime is not set");
+ 			}
+@@ -234,7 +244,7 @@ namespace Gnome.Vfs {
+ 		public System.DateTime Ctime  {
+ 			get {
+ 				if ((ValidFields & FileInfoFields.Ctime) != 0)
+-					return GLib.Marshaller.time_tToDateTime (Native.ctime);
++					return GLib.Marshaller.time_tToDateTime ((IntPtr)Native.ctime);
+ 				else
+ 					throw new ArgumentException ("Ctime is not set");
+ 			}
