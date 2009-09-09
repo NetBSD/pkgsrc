@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2009/07/24 18:42:18 drochner Exp $
+$NetBSD: distinfo,v 1.14 2009/09/09 16:47:07 drochner Exp $
 
-SHA1 (devhelp-0.23.tar.bz2) = a7ed9c56cd77bb46fb041df539285ce3012ad177
-RMD160 (devhelp-0.23.tar.bz2) = 324b74336570291c1a966e63c2d7450f3ae7b678
-Size (devhelp-0.23.tar.bz2) = 521287 bytes
-SHA1 (patch-ad) = 0710e669d381b72b0c3bfcda580b0ad2b3b29a91
+SHA1 (devhelp-0.23.1.tar.bz2) = 9ce37ef216adb2a7573a111a3181ae5e4ed7b7a6
+RMD160 (devhelp-0.23.1.tar.bz2) = c6521c8f48449ac73e6115187423ee9ce2f25506
+Size (devhelp-0.23.1.tar.bz2) = 475037 bytes
+SHA1 (patch-ad) = acd18af1eaf048db2bd0e3cbb432dc2674f5522c
