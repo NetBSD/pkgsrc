@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2009/09/05 10:05:19 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2009/09/09 13:45:13 wiz Exp $
 
-DISTNAME=	cdrtools-2.01.01a63
+DISTNAME=	cdrtools-2.01.01a64
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/ \
 		http://ftp.berlios.de/pub/cdrecord/alpha/
@@ -63,7 +62,7 @@ SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	post-patch
 SUBST_FILES.fix=	btcflash/btcflash.1
 SUBST_FILES.fix+=	cdrecord/cdrecord.1
-SUBST_FILES.fix+=	cdrecord/defaults.c
+SUBST_FILES.fix+=	libcdrdeflt/cdrdeflt.c
 SUBST_FILES.fix+=	mkisofs/diag/isoinfo.8
 SUBST_FILES.fix+=	readcd/readcd.1
 SUBST_FILES.fix+=	scgcheck/scgcheck.1
