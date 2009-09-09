@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.6 2009/09/09 13:45:13 wiz Exp $
+
+--- RULES/mk-gmake.id.orig	2009-08-29 12:17:45.000000000 +0000
++++ RULES/mk-gmake.id
+@@ -55,9 +55,9 @@ endif
+ _MACHCMD=	(mach || uname -p || true)	2> /dev/null
+ _ARCHCMD=	(arch || /usr/ucb/arch || true)	2> /dev/null
+ 
+-XP_ARCH:=	$(shell $(_MACHCMD) | sed 'y%ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"%abcdefghijklmnopqrstuvwxyz,------%')
+-XK_ARCH:=	$(shell uname -m    | sed 'y%ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"%abcdefghijklmnopqrstuvwxyz,------%')
+-XM_ARCH:=	$(shell $(_ARCHCMD) | sed 'y%ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"%abcdefghijklmnopqrstuvwxyz,------%')
++XP_ARCH:=	$(shell $(_MACHCMD) | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"' 'abcdefghijklmnopqrstuvwxyz,//////' | tr ',/' ',\-')
++XK_ARCH:=	$(shell uname -m    | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"' 'abcdefghijklmnopqrstuvwxyz,//////' | tr ',/' ',\-')
++XM_ARCH:=	$(shell $(_ARCHCMD) | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"' 'abcdefghijklmnopqrstuvwxyz,//////' | tr ',/' ',\-')
+ 
+ P_ARCH=		$(XP_ARCH)
+ K_ARCH=		$(XK_ARCH)
+@@ -73,9 +73,9 @@ _M_ARCH=	$(_UNIQ)$(XM_ARCH)
+ __M_ARCH=	$(_M_ARCH:$(_UNIQ)=$(K_ARCH))
+ M_ARCH=		$(__M_ARCH:$(_UNIQ)%=%)
+ 
+-OSNAME:=	$(shell uname -s | sed 'y%ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"%abcdefghijklmnopqrstuvwxyz,------%')
+-OSREL:=		$(shell uname -r | sed 'y%ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"%abcdefghijklmnopqrstuvwxyz,------%')
+-OSVERSION:=	$(shell uname -v | sed 'y%ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"%abcdefghijklmnopqrstuvwxyz,------%')
++OSNAME:=	$(shell uname -s | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"' 'abcdefghijklmnopqrstuvwxyz,//////' | tr ',/' ',\-')
++OSREL:=		$(shell uname -r | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"' 'abcdefghijklmnopqrstuvwxyz,//////' | tr ',/' ',\-')
++OSVERSION:=	$(shell uname -v | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ, /\\()"' 'abcdefghijklmnopqrstuvwxyz,//////' | tr ',/' ',\-')
+ 
+ ARCH_DONE=	TRUE
+ 
