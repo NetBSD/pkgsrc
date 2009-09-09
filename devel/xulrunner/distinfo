@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2009/09/09 17:01:07 tnn Exp $
+$NetBSD: distinfo,v 1.5 2009/09/09 18:15:37 tnn Exp $
 
 SHA1 (xulrunner-1.9.1.2-source.tar.bz2) = 6439923ff9d316297926ebe193bac3ac1a41b494
 RMD160 (xulrunner-1.9.1.2-source.tar.bz2) = d5e0b5f0e8b19b216394584ccabf37d776b89a39
@@ -43,7 +43,7 @@ SHA1 (patch-nb) = 6b1719219df7cdd7bf5335fcf7f48567a37ffa87
 SHA1 (patch-nc) = f2a3cc803a114702e856947c25fd79baa85b0e26
 SHA1 (patch-nd) = f5156ca4d1e61dd1b355bbaa5ebd9cc490d8d865
 SHA1 (patch-pa) = d03ef72ea7efceef5e2f12a245950b9a587ace82
-SHA1 (patch-pb) = 32da908450ab463971bea1aafc9d6e37b1e78c0f
+SHA1 (patch-pb) = 33c70e16d489c6e6e660096e49b5f12b7a265328
 SHA1 (patch-pc) = baa2c72df21c6ddda65bdb435561323f4ee008ff
 SHA1 (patch-pd) = b87adef8cfb53d4a1926f4bab5481dd1b9cf14ab
 SHA1 (patch-pe) = 3e4db1032a1e1f26f3a4e86653804b435aaf3ee8
