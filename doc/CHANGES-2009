@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3564 2009/09/09 20:07:57 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3565 2009/09/09 20:26:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4631,3 +4631,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/cdrtools to 2.01.01alpha64 [wiz 2009-09-09]
 	Updated audio/py-karaoke to 0.7.1 [wiz 2009-09-09]
 	Updated devel/p5-Mouse to 0.28 [seb 2009-09-09]
+	Updated devel/p5-Test-Simple to 0.94 [seb 2009-09-09]
+	Updated devel/p5-Test-Simple to 0.94 [seb 2009-09-09]
