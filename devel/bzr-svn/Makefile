@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2009/07/02 05:26:46 epg Exp $
+# $NetBSD: Makefile,v 1.14 2009/09/09 05:45:08 epg Exp $
 
 DISTNAME=	bzr-svn-${VER}
 #PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://launchpad.net/bzr-svn/0.6/${VER}/+download/
 MASTER_SITES+=	http://samba.org/~jelmer/bzr/
-VER=		0.6.2
+VER=		0.6.4
 
 MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	http://bazaar-vcs.org/BzrForeignBranches/Subversion
-COMMENT=	Foreign Subversion repositoriy support for Bazaar
+COMMENT=	Foreign Subversion repository support for Bazaar
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
