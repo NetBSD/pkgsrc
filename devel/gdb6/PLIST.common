@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.3 2009/06/14 17:48:44 joerg Exp $
+@comment $NetBSD: PLIST.common,v 1.4 2009/09/09 12:50:58 wiz Exp $
 bin/gdb
 ${PLIST.tui}bin/gdbtui
 include/gdb6/ansidecl.h
@@ -13,7 +13,6 @@ info/gdb.info
 info/gdbint.info
 info/mmalloc.info
 info/stabs.info
-info/standards.info
 lib/gdb6/libbfd.la
 lib/gdb6/libiberty.a
 lib/gdb6/libmmalloc.a
