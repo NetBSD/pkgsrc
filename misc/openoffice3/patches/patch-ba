@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
+$NetBSD: patch-ba,v 1.5 2009/09/10 00:14:55 tnn Exp $
 
---- configure.orig	2009-04-22 23:54:40.000000000 +0900
-+++ configure	2009-05-09 12:42:15.000000000 +0900
-@@ -4222,11 +4222,11 @@
+--- configure.orig	2009-04-22 16:54:40.000000000 +0200
++++ configure
+@@ -4222,11 +4222,11 @@ echo "${ECHO_T}$PTHREAD_LIBS" >&6; }
          test_randr=no
  		_os=OSF1
  		;;
@@ -16,7 +16,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
          test_randr=yes
  		test_freetype=yes
  		PTHREAD_CFLAGS="-pthread"
-@@ -11414,7 +11414,7 @@
+@@ -11414,7 +11414,7 @@ echo "$as_me: error: $_javadoc_path not 
  fi
  
  if test "$SOLAR_JAVA" != ""; then
@@ -25,7 +25,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
        if test "x$with_jdk_home" = "x" -a "$_gij_longver" -ge "50000"; then
          cat > findhome.java <<_ACEOF
  import java.io.File;
-@@ -11515,7 +11515,7 @@
+@@ -11515,7 +11515,7 @@ echo "$as_me: WARNING: in case JAVA_HOME
           echo "JAVA_HOME was not explicitly informed with --with-jdk-home. the configure script" >> warn
           echo "attempted to find JAVA_HOME automatically, but apparently it failed" >> warn
           echo "in case JAVA_HOME is incorrectly set, some projects with not be built correctly" >> warn
@@ -34,7 +34,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
  #             echo "e.g. install java-1.4.2-gcj-compat-devel and use --with-jdk-home=/usr/lib/jvm/java-1.4.2-gcj" >> warn
  #         fi
        fi
-@@ -14196,7 +14196,7 @@
+@@ -14196,7 +14196,7 @@ fi
  if test -n "$with_system_libxslt" -o -n "$with_system_libs" && \
     test "$with_system_libxslt" != "no"; then
      if test -z "$with_system_libxml" -a -z "$with_system_libs" || \
@@ -43,7 +43,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
        # somehow AC_MSG_WARN won't work...
         echo "to prevent incompatibilities between internal libxml2 and libxslt, the office will be build with system-libxml"
         echo "to prevent incompatibilities between internal libxml2 and libxslt, the office will be build with system-libxml" >> warn
-@@ -14206,7 +14206,7 @@
+@@ -14206,7 +14206,7 @@ fi
  if test -n "$with_system_libxml" -o -n "$with_system_libs" && \
     test "$with_system_libxml" != "no"; then
      if test -z "$with_system_libxslt" -a -z "$with_system_libs" || \
@@ -52,7 +52,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
        # somehow AC_MSG_WARN won't work...
         echo "to prevent incompatibilities between internal libxslt and libxml2, the office will be build with system-libxslt"
         echo "to prevent incompatibilities between internal libxslt and libxml2, the office will be build with system-libxslt" >> warn
-@@ -14728,13 +14728,14 @@
+@@ -14728,13 +14728,14 @@ echo "${ECHO_T}$am_cv_python_pyexecdir" 
  
  
     python_include=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_config_var('INCLUDEPY');"`
@@ -68,7 +68,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
     fi
  
        save_CPPFLAGS="$CPPFLAGS"
-@@ -14991,7 +14992,7 @@
+@@ -14991,7 +14992,7 @@ fi
  { echo "$as_me:$LINENO: result: $ac_cv_header_db_h" >&5
  echo "${ECHO_T}$ac_cv_header_db_h" >&6; }
  if test $ac_cv_header_db_h = yes; then
@@ -77,7 +77,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
  else
  
               CFLAGS=-I/usr/include/db4
-@@ -15122,13 +15123,13 @@
+@@ -15122,13 +15123,13 @@ echo "$as_me: error: no. you need at lea
      #AC_CHECK_LIB(db, db_create, [],
      #  [AC_MSG_ERROR([db library not installed or functional])], [])
  
@@ -94,7 +94,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -15182,7 +15183,7 @@
+@@ -15182,7 +15183,7 @@ if test $ac_cv_lib_db_main = yes; then
  #define HAVE_LIBDB 1
  _ACEOF
  
@@ -103,16 +103,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
  
  else
    { { echo "$as_me:$LINENO: error: db not installed or functional" >&5
-@@ -16734,6 +16735,8 @@
-       MOZ_FLAVOUR=seamonkey
-     elif test -n "$with_system_mozilla" && test "$with_system_mozilla" = "firefox"; then
-       MOZ_FLAVOUR=firefox
-+    elif test -n "$with_system_mozilla" && test "$with_system_mozilla" = "firefox3"; then
-+      MOZ_FLAVOUR=firefox3
-     elif test -n "$with_system_mozilla" && test "$with_system_mozilla" = "mozilla"; then
-       MOZ_FLAVOUR=mozilla
-     else
-@@ -17470,7 +17473,7 @@
+@@ -17470,7 +17471,7 @@ Please recompile $tmp with --enable-ldap
  
      #e.g. http://fedoraproject.org/wiki/Releases/FeatureXULRunnerAPIChanges
      #the plugin pkg-config etc. reverts to "mozilla-plugin" with libxul
@@ -121,7 +112,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
          MOZ_FLAVOUR="mozilla"
      fi
  
-@@ -21353,7 +21356,7 @@
+@@ -21353,7 +21354,7 @@ echo "${ECHO_T}internal" >&6; }
      NEON_CFLAGS=
      BUILD_TYPE="$BUILD_TYPE NEON"
  fi
@@ -130,7 +121,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
     with_system_openssl=yes
  fi
  { echo "$as_me:$LINENO: checking which libssl to use" >&5
-@@ -21364,7 +21367,7 @@
+@@ -21364,7 +21365,7 @@ if test -n "$with_system_openssl" -o -n 
  echo "${ECHO_T}external" >&6; }
      # Mac OS builds should get out without extra stuff is the Mac porters'
      # wish. And pkg-config is although Xcode ships a .pc for openssl
@@ -139,7 +130,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
          OPENSSL_CFLAGS=
          OPENSSL_LIBS="-lssl -lcrypto"
      else
-@@ -25460,7 +25463,7 @@
+@@ -25460,7 +25461,7 @@ echo "${ECHO_T}no" >&6; }
  fi
  
  
@@ -148,7 +139,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
    { echo "$as_me:$LINENO: checking which Servlet API Jar to use" >&5
  echo $ECHO_N "checking which Servlet API Jar to use... $ECHO_C" >&6; }
    if test -n "$with_system_servlet_api"; then
-@@ -25525,7 +25528,7 @@
+@@ -25525,7 +25526,7 @@ echo "$as_me: error: not existing. get i
    fi
    { echo "$as_me:$LINENO: checking which jfreereport libs to use" >&5
  echo $ECHO_N "checking which jfreereport libs to use... $ECHO_C" >&6; }
@@ -157,7 +148,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
     	SYSTEM_JFREEREPORT=YES
    	   { echo "$as_me:$LINENO: result: external" >&5
  echo "${ECHO_T}external" >&6; }
-@@ -26733,7 +26736,7 @@
+@@ -26733,7 +26734,7 @@ your KDE installation by exporting KDEDI
      fi
  
          KDE_CFLAGS="-I$qt_incdir -I$kde_incdir -DQT_CLEAN_NAMESPACE -DQT_THREAD_SUPPORT"
@@ -166,7 +157,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
  fi
  
  
-@@ -27269,7 +27272,7 @@
+@@ -27269,7 +27270,7 @@ if test "$_os" = "Darwin"; then
     XINERAMA_LINK=dynamic
     { echo "$as_me:$LINENO: result: yes" >&5
  echo "${ECHO_T}yes" >&6; }
@@ -175,7 +166,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
     if test -e "$XLIB/libXinerama.so" -a -e "$XLIB/libXinerama.a"; then
        # we have both versions, let the user decide but use the dynamic one
        # per default
-@@ -27754,9 +27757,13 @@
+@@ -27754,9 +27755,13 @@ echo $ECHO_N "checking Ant lib directory
                  if test -f $ANT_HOME/lib/ant/ant.jar; then
                      ANT_LIB="$ANT_HOME/lib/ant"
                  else
@@ -189,7 +180,7 @@ $NetBSD: patch-ba,v 1.4 2009/05/09 18:43:41 hira Exp $
                  fi
               fi
            fi
-@@ -27964,12 +27971,12 @@
+@@ -27964,12 +27969,12 @@ fi
  { echo "$as_me:$LINENO: checking build verbosity" >&5
  echo $ECHO_N "checking build verbosity... $ECHO_C" >&6; }
  if test -n "$enable_verbose"; then
