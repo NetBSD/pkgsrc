@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3573 2009/09/10 05:14:09 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3574 2009/09/10 10:15:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4640,3 +4640,25 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/firefox to 3.5.3 [tnn 2009-09-10]
 	Updated www/firefox3 to 3.0.14 [tnn 2009-09-10]
 	Updated mail/cyrus-imapd to 2.2.13p1 [obache 2009-09-10]
+	Updated databases/postgresql82 to 8.2.14 [adam 2009-09-10]
+	Updated databases/postgresql82-client to 8.2.14 [adam 2009-09-10]
+	Updated databases/postgresql82-server to 8.2.14 [adam 2009-09-10]
+	Updated databases/postgresql82-adminpack to 8.2.14 [adam 2009-09-10]
+	Updated databases/postgresql82-plperl to 8.2.14 [adam 2009-09-10]
+	Updated databases/postgresql82-plpython to 8.2.14 [adam 2009-09-10]
+	Updated databases/postgresql82-pltcl to 8.2.14 [adam 2009-09-10]
+	Updated databases/postgresql82-tsearch2 to 8.2.14 [adam 2009-09-10]
+	Updated databases/postgresql83 to 8.3.8 [adam 2009-09-10]
+	Updated databases/postgresql83-client to 8.3.8 [adam 2009-09-10]
+	Updated databases/postgresql83-server to 8.3.8 [adam 2009-09-10]
+	Updated databases/postgresql83-adminpack to 8.3.8 [adam 2009-09-10]
+	Updated databases/postgresql83-plperl to 8.3.8 [adam 2009-09-10]
+	Updated databases/postgresql83-plpython to 8.3.8 [adam 2009-09-10]
+	Updated databases/postgresql83-pltcl to 8.3.8 [adam 2009-09-10]
+	Updated databases/postgresql84 to 8.4.1 [adam 2009-09-10]
+	Updated databases/postgresql84-client to 8.4.1 [adam 2009-09-10]
+	Updated databases/postgresql84-server to 8.4.1 [adam 2009-09-10]
+	Updated databases/postgresql84-adminpack to 8.4.1 [adam 2009-09-10]
+	Updated databases/postgresql84-plperl to 8.4.1 [adam 2009-09-10]
+	Updated databases/postgresql84-plpython to 8.4.1 [adam 2009-09-10]
+	Updated databases/postgresql84-pltcl to 8.4.1 [adam 2009-09-10]
