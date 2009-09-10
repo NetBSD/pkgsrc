@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.2 2005/03/02 21:42:48 wiz Exp $
+$NetBSD: patch-am,v 1.3 2009/09/10 05:13:56 obache Exp $
 
---- configure.in.orig	Mon Nov 22 22:27:07 2004
-+++ configure.in	Sun Nov 28 14:36:32 2004
-@@ -944,7 +944,7 @@
+--- configure.in.orig	2005-10-13 19:56:14.000000000 +0000
++++ configure.in
+@@ -939,7 +939,7 @@ dnl and compile perl/cyradm
  dnl add perl cccdlflags when building libraries -- this ensures that the
  dnl libraries will be compiled as PIC if perl requires PIC objects
  dnl -- this is needed on NetBSD, but seems to cause problems on atleast Solaris --
