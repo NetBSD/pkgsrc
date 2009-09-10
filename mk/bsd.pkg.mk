@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1958 2009/07/26 21:36:38 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1959 2009/09/10 21:46:57 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -390,7 +390,7 @@ USE_TOOLS+=								\
 	[ awk basename cat chgrp chmod chown cmp cp cut dirname echo	\
 	egrep env false file find grep head hostname id install ln ls	\
 	mkdir mv printf pwd rm rmdir sed sh sort			\
-	tail test touch tr true	wc xargs
+	tail test touch tr true wc xargs
 
 # bsd.wrapper.mk
 USE_TOOLS+=	expr
