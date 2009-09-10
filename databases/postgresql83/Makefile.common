@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2009/03/20 16:02:41 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2009/09/10 10:07:17 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -25,6 +25,7 @@ CONFLICTS+=	postgresql74-*
 CONFLICTS+=	postgresql80-*
 CONFLICTS+=	postgresql81-*
 CONFLICTS+=	postgresql82-*
+CONFLICTS+=	postgresql84-*
 
 DISTINFO_FILE?=		${.CURDIR}/../postgresql83/distinfo
 COMMON_FILESDIR?=	${.CURDIR}/../postgresql83/files
@@ -37,7 +38,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql83/patches
 #
 # Note: Do not forget jdbc-postgresql83 when updating version
 #
-DIST_VERS?=		8.3.7
+DIST_VERS?=		8.3.8
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_API_DEPENDS.postgresql83-client+=	postgresql83-client>=${BASE_VERS}
