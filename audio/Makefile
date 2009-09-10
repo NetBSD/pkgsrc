@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.420 2009/08/31 12:21:37 joerg Exp $
+# $NetBSD: Makefile,v 1.421 2009/09/10 20:17:20 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -37,6 +37,7 @@ SUBDIR+=	audacity
 SUBDIR+=	aumix
 SUBDIR+=	aumix-gtk
 SUBDIR+=	bladeenc
+SUBDIR+=	bml
 SUBDIR+=	bmp
 SUBDIR+=	bmp-esound
 SUBDIR+=	bmp-mac
@@ -44,6 +45,8 @@ SUBDIR+=	bmp-musepack
 SUBDIR+=	bmp-pulse
 SUBDIR+=	bmp-scrobbler
 SUBDIR+=	bmpx
+SUBDIR+=	bsl
+SUBDIR+=	buzztard
 SUBDIR+=	cam
 SUBDIR+=	cd-discid
 SUBDIR+=	cdd
@@ -131,6 +134,7 @@ SUBDIR+=	gqmpeg-devel
 SUBDIR+=	gqmpeg-skins
 SUBDIR+=	gramofile
 SUBDIR+=	gsm
+SUBDIR+=	gst-buzztard
 SUBDIR+=	gst-plugins0.10-a52
 SUBDIR+=	gst-plugins0.10-alsa
 SUBDIR+=	gst-plugins0.10-cdparanoia
