@@ -1,10 +1,8 @@
-# $NetBSD: options.mk,v 1.16 2009/08/05 01:35:42 tnn Exp $
+# $NetBSD: options.mk,v 1.17 2009/09/10 00:14:55 tnn Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
-PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde ooo-external-libwpd
-PKG_OPTIONS_OPTIONAL_GROUPS=	browser
-PKG_OPTIONS_GROUP.browser=	firefox3 seamonkey
+PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde ooo-external-libwpd xulrunner
 # The list from completelangiso in solenv/inc/postset.mk.
 OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br brx bn bn-BD bn-IN bs \
 				by ca cs cy da de dgo dz el en-GB en-US en-ZA \
@@ -18,7 +16,7 @@ OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br brx bn bn-BD bn-IN bs \
 .for l in ${OO_SUPPORTED_LANGUAGES}
 PKG_SUPPORTED_OPTIONS+=		lang-${l}
 .endfor
-PKG_SUGGESTED_OPTIONS=		firefox3 gtk2 lang-en-US
+PKG_SUGGESTED_OPTIONS=		gtk2 lang-en-US xulrunner
 PKG_OPTIONS_LEGACY_OPTS+=	gnome-vfs:gnome
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
@@ -42,28 +40,29 @@ OO_LANGS?=	en-US
 OO_BASELANG?=	en-US
 OO_LANGPACKS?=	${OO_LANGS:S/${OO_BASELANG}//1}
 
-.if !empty(PKG_OPTIONS:Mfirefox3)
-MOZ_FLAVOUR=		firefox3
-CONFIGURE_ARGS+=	--with-system-mozilla=firefox3
-.include "../../www/firefox3/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mseamonkey)
-MOZ_FLAVOUR=		seamonkey
-CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
-.include "../../www/seamonkey/buildlink3.mk"
-# The following browsers do not install *.pc files.
-#.elif !empty(PKG_OPTIONS:Mseamonkey-gtk1)
-#CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
-#.include "../../www/seamonkey-gtk1/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mxulrunner)
+CONFIGURE_ARGS+=	--with-system-mozilla=mozilla
+.include "../../devel/xulrunner/buildlink3.mk"
+#
+# OOo ships headers that are too old and conflict with xulrunner headers.
+# Instead of patching everything to include external headers, we just
+# Update what they have in the tree to match our xulrunner package.
+#
+.PHONY: copy-mozilla-headers
+post-wrapper:	copy-mozilla-headers
+copy-mozilla-headers:
+	cp \
+	  ${BUILDLINK_DIR}/include/xulrunner/stable/npapi.h \
+	  ${BUILDLINK_DIR}/include/xulrunner/stable/nptypes.h \
+	  ${WRKSRC}/np_sdk/mozsrc
+	  echo "typedef int16_t int16;" >> ${WRKSRC}/np_sdk/mozsrc/nptypes.h
+	  echo "typedef uint16_t uint16;" >> ${WRKSRC}/np_sdk/mozsrc/nptypes.h
+	  echo "typedef int32_t int32;" >> ${WRKSRC}/np_sdk/mozsrc/nptypes.h
+	  echo "typedef uint32_t uint32;" >> ${WRKSRC}/np_sdk/mozsrc/nptypes.h
+
 .else
-MOZ_FLAVOUR=
 CONFIGURE_ARGS+=	--disable-mozilla
 .endif
-
-SUBST_CLASSES+=		browser
-SUBST_STAGE.browser=	post-patch
-SUBST_MESSAGE.browser=	Adding MOZ_FLAVOUR
-SUBST_FILES.browser=	shell/source/unix/misc/open-url.sh
-SUBST_SED.browser+=	-e 's,@MOZ_FLAVOUR@,${MOZ_FLAVOUR},g'
 
 .if !empty(PKG_OPTIONS:Mooo-external-libwpd)
 CONFIGURE_ARGS+=	--with-system-libwpd
