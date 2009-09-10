@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3571 2009/09/09 23:36:56 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3572 2009/09/10 00:37:40 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4637,3 +4637,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/slib to 3.2.2 [wiz 2009-09-09]
 	Updated devel/guile-slib to 3.2.2 [wiz 2009-09-09]
 	Updated emulators/snes9x-gtk to 1.51.76 [wiz 2009-09-09]
+	Updated www/firefox to 3.5.3 [tnn 2009-09-10]
+	Updated www/firefox3 to 3.0.14 [tnn 2009-09-10]
