@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3576 2009/09/10 19:01:58 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.3577 2009/09/10 19:03:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4665,3 +4665,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/png to 1.2.40 [wiz 2009-09-10]
 	Updated textproc/xapian to 1.0.16 [schmonz 2009-09-10]
 	Updated textproc/xapian-omega to 1.0.16 [schmonz 2009-09-10]
+	Updated math/py-numpy to 1.3.0nb1 [wiz 2009-09-10]
