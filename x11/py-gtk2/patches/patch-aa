@@ -1,27 +1,14 @@
-$NetBSD: patch-aa,v 1.2 2009/07/18 20:35:27 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2009/09/10 19:03:48 wiz Exp $
 
-Second chunk is from upstream
-http://git.gnome.org/cgit/pygtk/commit/?id=956592c614c567623510dccf5fc1edaee9c766c1
-
---- gtk/gtk.override.orig	2009-03-05 22:06:49.000000000 +0000
+--- gtk/gtk.override.orig	2009-08-12 22:55:36.000000000 +0000
 +++ gtk/gtk.override
-@@ -1184,7 +1184,9 @@ _wrap_gtk_main(PyObject *self)
-     main_watch = pygtk_main_watch_new();
+@@ -1238,7 +1238,9 @@ _wrap_gtk_main(PyObject *self)
      pyg_begin_allow_threads;
      g_source_attach(main_watch, NULL);
+     g_source_unref(main_watch);
 +    gdk_threads_enter();
      gtk_main();
 +    gdk_threads_leave();
      g_source_destroy(main_watch);
      pyg_end_allow_threads;
      if (PyErr_Occurred())
-@@ -7496,7 +7498,8 @@ _wrap_gtk_recent_info_get_application_in
-                                                &time_);
-     if (ret) {
-         py_ret = Py_BuildValue("(sii)", app_exec, count, time_);
--        g_free(app_exec);
-+	/* Note that we mustn't free 'app_exec' even though it's not
-+	 * 'const'. See bug #585458. */
-     } else {
-         py_ret = Py_None;
-     }
