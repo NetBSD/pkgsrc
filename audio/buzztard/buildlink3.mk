@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/09/10 20:16:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/09/10 20:19:18 wiz Exp $
 
 BUILDLINK_TREE+=	buzztard
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	buzztard
 BUZZTARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.buzztard+=	buzztard>=0.5.0
-BUILDLINK_PKGSRCDIR.buzztard?=	../../nih/buzztard
+BUILDLINK_PKGSRCDIR.buzztard?=	../../audio/buzztard
 
 .endif	# BUZZTARD_BUILDLINK3_MK
 
