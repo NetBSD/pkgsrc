@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2009/06/14 22:57:59 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/09/10 10:07:41 adam Exp $
 
 PKGNAME=	postgresql82-client-${BASE_VERS}
-PKGREVISION=	1
 COMMENT=	PostgreSQL database client programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
