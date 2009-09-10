@@ -1,9 +1,7 @@
-# $NetBSD: options.mk,v 1.25 2009/08/05 01:35:42 tnn Exp $
+# $NetBSD: options.mk,v 1.26 2009/09/10 00:27:08 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
-PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd
-PKG_OPTIONS_OPTIONAL_GROUPS=	browser
-PKG_OPTIONS_GROUP.browser=	firefox3 seamonkey
+PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd # xulrunner
 # The list from completelangiso in solenv/inc/postset.mk.
 OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br bn bn-BD bn-IN bs ca \
 				cs cy da de dz el en-GB en-US en-ZA eo es et \
@@ -16,7 +14,7 @@ OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br bn bn-BD bn-IN bs ca \
 .for l in ${OO_SUPPORTED_LANGUAGES}
 PKG_SUPPORTED_OPTIONS+=		lang-${l}
 .endfor
-PKG_SUGGESTED_OPTIONS=		firefox3 gtk2 lang-en-US
+PKG_SUGGESTED_OPTIONS=		gtk2 lang-en-US
 PKG_OPTIONS_LEGACY_OPTS+=	gnome-vfs:gnome
 
 .include "../../mk/bsd.options.mk"
@@ -36,25 +34,12 @@ OO_LANGS?=	en-US
 OO_BASELANG?=	en-US
 OO_LANGPACKS?=	${OO_LANGS:S/${OO_BASELANG}//1}
 
-.if !empty(PKG_OPTIONS:Mfirefox3)
-CONFIGURE_ARGS+=	--with-system-mozilla=firefox3
-.include "../../www/firefox3/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mseamonkey)
-CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
-.include "../../www/seamonkey/buildlink3.mk"
-# The following browsers do not install *.pc files.
-#.elif !empty(PKG_OPTIONS:Mseamonkey-gtk1)
-#CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
-#.include "../../www/seamonkey-gtk1/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mxulrunner)
+CONFIGURE_ARGS+=	--with-system-mozilla=mozilla
+.include "../../devel/xulrunner/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-mozilla
 .endif
-
-SUBST_CLASSES+=		browser
-SUBST_STAGE.browser=	post-patch
-SUBST_MESSAGE.browser=	Adding MOZ_FLAVOUR
-SUBST_FILES.browser=	shell/source/unix/misc/open-url.sh
-SUBST_SED.browser+=	-e 's,@MOZ_FLAVOUR@,${MOZ_FLAVOUR},g'
 
 .if !empty(PKG_OPTIONS:Mooo-external-libwpd)
 CONFIGURE_ARGS+=	--with-system-libwpd
