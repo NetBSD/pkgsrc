@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3575 2009/09/10 17:52:43 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3576 2009/09/10 19:01:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4663,3 +4663,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/postgresql84-plpython to 8.4.1 [adam 2009-09-10]
 	Updated databases/postgresql84-pltcl to 8.4.1 [adam 2009-09-10]
 	Updated graphics/png to 1.2.40 [wiz 2009-09-10]
+	Updated textproc/xapian to 1.0.16 [schmonz 2009-09-10]
+	Updated textproc/xapian-omega to 1.0.16 [schmonz 2009-09-10]
