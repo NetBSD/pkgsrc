@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/10 20:16:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/10 20:19:18 wiz Exp $
 #
 
 DISTNAME=	bsl-0.5.0
@@ -21,8 +21,8 @@ USE_PKGLOCALEDIR=	yes
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../nih/gst-buzztard/buildlink3.mk"
-.include "../../nih/buzztard/buildlink3.mk"
+.include "../../audio/gst-buzztard/buildlink3.mk"
+.include "../../audio/buzztard/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
