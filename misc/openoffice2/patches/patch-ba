@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
+$NetBSD: patch-ba,v 1.15 2009/09/10 00:27:08 tnn Exp $
 
---- config_office/configure.orig	2008-05-21 01:28:55.000000000 +0900
-+++ config_office/configure	2008-10-31 19:19:14.000000000 +0900
-@@ -3176,11 +3176,11 @@
+--- config_office/configure.orig	2008-05-20 18:28:55.000000000 +0200
++++ config_office/configure
+@@ -3176,11 +3176,11 @@ echo "${ECHO_T}$PTHREAD_LIBS" >&6
  		test_cups=no
  		_os=OSF1
  		;;
@@ -16,7 +16,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
  		PTHREAD_CFLAGS="-pthread"
  		PTHREAD_LIBS="-pthread -lpthread"
  		_os=NetBSD
-@@ -10304,7 +10304,7 @@
+@@ -10304,7 +10304,7 @@ echo "$as_me: error: $_javadoc_path not 
  fi
  
  if test "$SOLAR_JAVA" != ""; then
@@ -25,7 +25,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
        if test "x$with_jdk_home" = "x" -a "$_gij_longver" -ge "40200"; then
          cat > findhome.java <<_ACEOF
  import java.io.File;
-@@ -10404,7 +10404,7 @@
+@@ -10404,7 +10404,7 @@ echo "$as_me: WARNING: in case JAVA_HOME
           echo "JAVA_HOME was not explicitly informed with --with-jdk-home. the configure script" >> warn
           echo "attempted to find JAVA_HOME automatically, but apparently it failed" >> warn
           echo "in case JAVA_HOME is incorrectly set, some projects with not be built correctly" >> warn
@@ -34,7 +34,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
               echo "e.g. install java-1.4.2-gcj-compat-devel and use --with-jdk-home=/usr/lib/jvm/java-1.4.2-gcj" >> warn
           fi
        fi
-@@ -13098,7 +13098,7 @@
+@@ -13098,7 +13098,7 @@ fi
  if test -n "$with_system_libxslt" -o -n "$with_system_libs" && \
     test "$with_system_libxslt" != "no"; then
      if test -z "$with_system_libxml" -a -z "$with_system_libs" || \
@@ -43,7 +43,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
        # somehow AC_MSG_WARN won't work...
         echo "to prevent incompatibilities between internal libxml2 and libxslt, the office will be build with system-libxml"
         echo "to prevent incompatibilities between internal libxml2 and libxslt, the office will be build with system-libxml" >> warn
-@@ -13108,7 +13108,7 @@
+@@ -13108,7 +13108,7 @@ fi
  if test -n "$with_system_libxml" -o -n "$with_system_libs" && \
     test "$with_system_libxml" != "no"; then
      if test -z "$with_system_libxslt" -a -z "$with_system_libs" || \
@@ -52,7 +52,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
        # somehow AC_MSG_WARN won't work...
         echo "to prevent incompatibilities between internal libxslt and libxml2, the office will be build with system-libxslt"
         echo "to prevent incompatibilities between internal libxslt and libxml2, the office will be build with system-libxslt" >> warn
-@@ -13591,13 +13591,14 @@
+@@ -13591,13 +13591,14 @@ echo "${ECHO_T}$am_cv_python_pyexecdir" 
  
  
     python_include=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_config_var('INCLUDEPY');"`
@@ -68,7 +68,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
     fi
  
        save_CPPFLAGS="$CPPFLAGS"
-@@ -13868,7 +13869,7 @@
+@@ -13868,7 +13869,7 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_header_db_h" >&5
  echo "${ECHO_T}$ac_cv_header_db_h" >&6
  if test $ac_cv_header_db_h = yes; then
@@ -77,7 +77,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
  else
  
               CFLAGS=-I/usr/include/db4
-@@ -13991,13 +13992,13 @@
+@@ -13991,13 +13992,13 @@ echo "${ECHO_T}no. you need at least db 
      #AC_CHECK_LIB(db, db_create, [],
      #  [AC_MSG_ERROR([db library not installed or functional])], [])
  
@@ -94,7 +94,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -14054,7 +14055,7 @@
+@@ -14054,7 +14055,7 @@ if test $ac_cv_lib_db_main = yes; then
  #define HAVE_LIBDB 1
  _ACEOF
  
@@ -103,16 +103,36 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
  
  else
    { { echo "$as_me:$LINENO: error: db not installed or functional" >&5
-@@ -15695,6 +15696,8 @@
-       MOZ_FLAVOUR=seamonkey
-     elif test -n "$with_system_mozilla" && test "$with_system_mozilla" = "firefox"; then
-       MOZ_FLAVOUR=firefox
-+    elif test -n "$with_system_mozilla" && test "$with_system_mozilla" = "firefox3"; then
-+      MOZ_FLAVOUR=firefox3
-     elif test -n "$with_system_mozilla" && test "$with_system_mozilla" = "mozilla"; then
-       MOZ_FLAVOUR=mozilla
-     else
-@@ -19718,7 +19721,7 @@
+@@ -15758,23 +15759,23 @@ fi
+   else
+      PKG_CONFIG_MIN_VERSION=0.9.0
+      if $PKG_CONFIG --atleast-pkgconfig-version $PKG_CONFIG_MIN_VERSION; then
+-        echo "$as_me:$LINENO: checking for $MOZ_FLAVOUR-xpcom " >&5
+-echo $ECHO_N "checking for $MOZ_FLAVOUR-xpcom ... $ECHO_C" >&6
++        echo "$as_me:$LINENO: checking for libxul" >&5
++echo $ECHO_N "checking for libxul ... $ECHO_C" >&6
+ 
+-        if $PKG_CONFIG --exists "$MOZ_FLAVOUR-xpcom " ; then
++        if $PKG_CONFIG --exists libxul; then
+             echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+             succeeded=yes
+ 
+             echo "$as_me:$LINENO: checking MOZILLAXPCOM_CFLAGS" >&5
+ echo $ECHO_N "checking MOZILLAXPCOM_CFLAGS... $ECHO_C" >&6
+-            MOZILLAXPCOM_CFLAGS=`$PKG_CONFIG --cflags "$MOZ_FLAVOUR-xpcom "`
++            MOZILLAXPCOM_CFLAGS=`$PKG_CONFIG --cflags libxul`
+             echo "$as_me:$LINENO: result: $MOZILLAXPCOM_CFLAGS" >&5
+ echo "${ECHO_T}$MOZILLAXPCOM_CFLAGS" >&6
+ 
+             echo "$as_me:$LINENO: checking MOZILLAXPCOM_LIBS" >&5
+ echo $ECHO_N "checking MOZILLAXPCOM_LIBS... $ECHO_C" >&6
+-            MOZILLAXPCOM_LIBS=`$PKG_CONFIG --libs "$MOZ_FLAVOUR-xpcom "`
++            MOZILLAXPCOM_LIBS=`$PKG_CONFIG --libs libxul`
+             echo "$as_me:$LINENO: result: $MOZILLAXPCOM_LIBS" >&5
+ echo "${ECHO_T}$MOZILLAXPCOM_LIBS" >&6
+         else
+@@ -19718,7 +19719,7 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_header_audio_audiolib_h" >&5
  echo "${ECHO_T}$ac_cv_header_audio_audiolib_h" >&6
  if test $ac_cv_header_audio_audiolib_h = yes; then
@@ -121,7 +141,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
  else
  
               CFLAGS=-I/usr/X11R6/include
-@@ -20526,7 +20529,7 @@
+@@ -20526,7 +20527,7 @@ echo "${ECHO_T}internal" >&6
      NEON_CFLAGS=
      BUILD_TYPE="$BUILD_TYPE NEON"
  fi
@@ -130,7 +150,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
     with_system_openssl=yes
  fi
  echo "$as_me:$LINENO: checking which libssl to use" >&5
-@@ -20537,7 +20540,7 @@
+@@ -20537,7 +20538,7 @@ if test -n "$with_system_openssl" -o -n 
  echo "${ECHO_T}external" >&6
      # Mac OS builds should get out without extra stuff is the Mac porters'
      # wish. And pkg-config is although Xcode ships a .pc for openssl
@@ -139,7 +159,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
          OPENSSL_CFLAGS=
          OPENSSL_LIBS="-lssl -lcrypto"
      else
-@@ -23949,7 +23952,7 @@
+@@ -23949,7 +23950,7 @@ echo "${ECHO_T}yes" >&6
    ENABLE_REPORTDESIGN=YES
    echo "$as_me:$LINENO: checking which jfreereport libs to use" >&5
  echo $ECHO_N "checking which jfreereport libs to use... $ECHO_C" >&6
@@ -148,7 +168,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
     	SYSTEM_JFREEREPORT=YES
    	echo "$as_me:$LINENO: result: external" >&5
  echo "${ECHO_T}external" >&6
-@@ -24466,7 +24469,7 @@
+@@ -24466,7 +24467,7 @@ your KDE installation by exporting KDEDI
      fi
  
          KDE_CFLAGS="-I$qt_incdir -I$kde_incdir -DQT_CLEAN_NAMESPACE -DQT_THREAD_SUPPORT"
@@ -157,7 +177,7 @@ $NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
  fi
  
  
-@@ -25019,7 +25022,7 @@
+@@ -25019,7 +25020,7 @@ if test "$_os" = "Darwin"; then
     XINERAMA_LINK=dynamic
     echo "$as_me:$LINENO: result: yes" >&5
  echo "${ECHO_T}yes" >&6
