@@ -20,7 +20,7 @@ then
 fi
 
 TODO=$1
-PKGBASE=$2
+PKGBASE=$(echo $2 | sed "s/^py[0-9][0-9]-/py-/")
 PKGVERSION=$3
 TMPFILE="$TODO.$$"
 
