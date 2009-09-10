@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/10 20:16:44 wiz Exp $
+
+SHA1 (bml-0.5.0.tar.gz) = 3a0e4381904a56c2ce60035344c5387cda15f9a0
+RMD160 (bml-0.5.0.tar.gz) = edfe5cdd3a20a6e705dc846537fdf69d96f0aa2a
+Size (bml-0.5.0.tar.gz) = 767631 bytes

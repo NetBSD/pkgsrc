@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/10 20:16:44 wiz Exp $
+
+SHA1 (buzztard-0.5.0.tar.gz) = cc85a0ca01c336ba6ca592ca4f26985a08a8f7e0
+RMD160 (buzztard-0.5.0.tar.gz) = e1b43637f2850b03061f0dce93d1240e40529f90
+Size (buzztard-0.5.0.tar.gz) = 2247279 bytes
+SHA1 (patch-aa) = 7dafa7d47fa578f3ccbcb02f0ee02c0af20aab69
+SHA1 (patch-ac) = 5acdc7173dd17a3fa60cc5d03821ea4cf2b35fc9
+SHA1 (patch-ad) = 7e31fd612d6ed3ced50027753dd39bf2e3db2891
