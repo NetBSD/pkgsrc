@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/10 20:16:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/10 20:19:18 wiz Exp $
 #
 
 DISTNAME=	buzztard-0.5.0
@@ -26,6 +26,8 @@ PKGCONFIG_OVERRIDE+=	src/lib/core/libbuzztard-core.pc.in
 #PKG_CHECK_MODULES(HILDON_DEPS, hildon-libs libosso, [
 #PKG_CHECK_MODULES(GOBJECT_INTROSPECTION, [gobject-introspection-1.0],[
 
+.include "../../audio/bml/buildlink3.mk"
+.include "../../audio/gst-buzztard/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.0
@@ -50,6 +52,4 @@ BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.7
 .include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../nih/bml/buildlink3.mk"
-.include "../../nih/gst-buzztard/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
