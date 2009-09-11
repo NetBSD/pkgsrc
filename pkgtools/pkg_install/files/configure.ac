@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([pkg_install], [20090201], [joerg@NetBSD.org])
+AC_INIT([pkg_install], [20090911], [joerg@NetBSD.org])
 AC_CONFIG_SRCDIR([lib/plist.c])
 AC_CONFIG_HEADER(lib/config.h)
 
@@ -61,17 +61,14 @@ AC_CHECK_LIB(db, __db185_open, , AC_SEARCH_LIBS(dbopen, [db db1]))
 dnl Checks for header files.
 AC_HEADER_STDC
 AC_CHECK_HEADERS([assert.h ctype.h dirent.h err.h errno.h fnctl.h \
-	fnmatch.h glob.h grp.h inttypes.h limits.h netdb.h \
-	pwd.h regex.h signal.h stdarg.h stdio.h stdlib.h string.h \
-	termcap.h termios.h time.h unistd.h vis.h])
-AC_CHECK_HEADERS([db1/db.h db_185.h db.h])
+	fnmatch.h glob.h grp.h inttypes.h limits.h pwd.h signal.h \
+	stdarg.h stdio.h stdlib.h string.h time.h unistd.h vis.h])
 AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/ioctl.h sys/param.h \
-	sys/poll.h sys/queue.h sys/resource.h sys/signal.h sys/stat.h \
-	sys/statvfs.h sys/time.h sys/types.h sys/utsname.h sys/vfs.h \
+	sys/queue.h sys/stat.h sys/time.h sys/types.h sys/utsname.h \
 	sys/wait.h])
 
 # Checks for library functions.
-AC_CHECK_FUNCS([chflags dbopen __db185_open vfork])
+AC_CHECK_FUNCS([vfork])
 
 AC_SEARCH_LIBS([gethostbyname], [nsl])
 AC_SEARCH_LIBS([socket],
