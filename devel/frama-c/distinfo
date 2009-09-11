@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/11 15:09:35 tonio Exp $
+
+SHA1 (frama-c-Beryllium-20090901.tar.gz) = 17b1516e9807a9a34ab20a3413efc372549e6fed
+RMD160 (frama-c-Beryllium-20090901.tar.gz) = b29038e948b898196947cae636eef9adbea99ed6
+Size (frama-c-Beryllium-20090901.tar.gz) = 18162700 bytes
+SHA1 (patch-aa) = fbeccfdd1b90c1d72d954d4ea06309da5684f6a4
