@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2009/08/21 14:47:53 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/11 20:17:32 joerg Exp $
 
-DISTNAME=		mdocml-1.9.1
+DISTNAME=		mdocml-1.9.2
 CATEGORIES=		textproc devel
 MASTER_SITES=		http://mdocml.bsd.lv/snapshots/
 

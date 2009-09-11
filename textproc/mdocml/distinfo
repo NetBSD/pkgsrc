@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/08/21 14:47:53 joerg Exp $
+$NetBSD: distinfo,v 1.10 2009/09/11 20:17:32 joerg Exp $
 
-SHA1 (mdocml-1.9.1.tar.gz) = f4bfbb01765c467ac82f746e2fa969f8ff07788e
-RMD160 (mdocml-1.9.1.tar.gz) = 7a2b64250404985b60ea2d49ae52a094773b6ad2
-Size (mdocml-1.9.1.tar.gz) = 88630 bytes
+SHA1 (mdocml-1.9.2.tar.gz) = 65c5b43d55f7ac6107d53e069af0b03dcde93ca1
+RMD160 (mdocml-1.9.2.tar.gz) = 4796fca4f1adb4b4deb9b50d771995b8e5e51c7a
+Size (mdocml-1.9.2.tar.gz) = 88697 bytes
