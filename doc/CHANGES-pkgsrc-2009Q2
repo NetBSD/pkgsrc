@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.47 2009/09/06 14:31:52 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.48 2009/09/11 13:44:37 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -168,3 +168,5 @@ pbulk-base: bug fix update
 pbulk: bug fix update
 Pullup ticket #2882 - requested by jnemeth
 asterisk: security update
+Pullup ticket #2885 - requested by tnn
+firefox3: security update
