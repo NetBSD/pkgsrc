@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3581 2009/09/11 06:35:23 adam Exp $
+$NetBSD: CHANGES-2009,v 1.3582 2009/09/11 06:41:15 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4673,3 +4673,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added audio/buzztard version 0.5.0 [wiz 2009-09-10]
 	Added audio/bsl version 0.5.0 [wiz 2009-09-10]
 	Updated graphics/pngcrush to 1.7.2 [adam 2009-09-11]
+	Updated x11/xf86-video-ati to 6.12.3 [hasso 2009-09-11]
