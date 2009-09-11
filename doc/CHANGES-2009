@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3585 2009/09/11 11:55:28 gson Exp $
+$NetBSD: CHANGES-2009,v 1.3586 2009/09/11 15:12:45 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4676,3 +4676,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-ati to 6.12.4 [hasso 2009-09-11]
 	Updated games/wormux to 0.8.4 [adam 2009-09-11]
 	Added misc/py-anita version 1.5 [gson 2009-09-11]
+	Added devel/frama-c version 20090901 [tonio 2009-09-11]
