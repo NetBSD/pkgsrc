@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3586 2009/09/11 15:12:45 tonio Exp $
+$NetBSD: CHANGES-2009,v 1.3587 2009/09/11 20:20:02 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4677,3 +4677,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/wormux to 0.8.4 [adam 2009-09-11]
 	Added misc/py-anita version 1.5 [gson 2009-09-11]
 	Added devel/frama-c version 20090901 [tonio 2009-09-11]
+	Updated textproc/mdocml to 1.9.2 [joerg 2009-09-11]
