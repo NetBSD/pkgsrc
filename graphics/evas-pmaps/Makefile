@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/08/26 19:57:39 sno Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/11 22:31:00 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/evas/evas-pmaps/}
-PKGREVISION=	1
 
 COMMENT=	Evas PMAPS image loader
 

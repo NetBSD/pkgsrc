@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:57:40 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/11 22:31:01 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/evas/evas-xrender-x11/}
-PKGREVISION=	1
 
 COMMENT=	Evas Xrender X11 engine
 
