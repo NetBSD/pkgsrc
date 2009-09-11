@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3589 2009/09/11 21:02:08 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3590 2009/09/11 21:28:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4680,3 +4680,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/mdocml to 1.9.2 [joerg 2009-09-11]
 	Updated lang/embryo to 0.9.9.062 [joerg 2009-09-11]
 	Updated audio/musicpd to 0.15.3 [joerg 2009-09-11]
+	Updated databases/p5-BerkeleyDB to 0.39nb1 [wiz 2009-09-11]
