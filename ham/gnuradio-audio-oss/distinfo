@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2009/08/12 12:21:39 markd Exp $
-
-SHA1 (gnuradio-3.2.tar.gz) = 3d7e177a57f8c40ec5ac95161f06097872aef1ba
-RMD160 (gnuradio-3.2.tar.gz) = 9d36dc6427eaf59795c8d4853764d5a526cfbce8
-Size (gnuradio-3.2.tar.gz) = 6864952 bytes

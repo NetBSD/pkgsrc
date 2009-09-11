@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2009/08/12 12:21:41 markd Exp $
+$NetBSD: patch-ad,v 1.1 2009/09/11 16:24:31 joerg Exp $
 
 --- config/grc_usrp.m4.orig	2009-06-05 17:12:19.000000000 +1200
 +++ config/grc_usrp.m4

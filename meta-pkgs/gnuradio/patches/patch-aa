@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2009/08/12 12:21:40 markd Exp $
+$NetBSD: patch-aa,v 1.1 2009/09/11 16:24:31 joerg Exp $
 
 --- gnuradio-core/src/lib/runtime/gr_dispatcher.cc.orig	2008-05-09 18:35:10.000000000 +1200
 +++ gnuradio-core/src/lib/runtime/gr_dispatcher.cc

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2009/08/12 12:21:41 markd Exp $
+$NetBSD: patch-ac,v 1.1 2009/09/11 16:24:31 joerg Exp $
 
 --- usrp/doc/Makefile.am.orig	2009-03-16 07:44:27.000000000 +1300
 +++ usrp/doc/Makefile.am
