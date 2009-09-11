@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/08/26 19:57:26 sno Exp $
+# $NetBSD: Makefile,v 1.36 2009/09/11 12:55:44 joerg Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-2.16
@@ -34,6 +34,8 @@ CONFIGURE_ENV+=	ac_xpm_includes="${BUILDLINK_PREFIX.libXpm}/include"
 CONFIGURE_ENV+=	ac_xpm_libraries="${BUILDLINK_PREFIX.libXpm}/lib"
 CONFIGURE_ENV+=	ac_zlib_includes="${BUILDLINK_PREFIX.zlib}/include"
 CONFIGURE_ENV+=	ac_zlib_libraries="${BUILDLINK_PREFIX.zlib}/lib"
+
+MAKE_FLAGS+=	CONFIGURE_OPTIONS=--x-libraries=${X11BASE}/lib\ --with-motif
 
 MAKE_ENV+=	${CONFIGURE_ENV}
 MAKE_ENV+=	DEF_PKGDIR='-DPKGDIR=\"${PREFIX}\"' \
