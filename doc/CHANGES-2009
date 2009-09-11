@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3588 2009/09/11 20:27:44 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3589 2009/09/11 21:02:08 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4679,3 +4679,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/frama-c version 20090901 [tonio 2009-09-11]
 	Updated textproc/mdocml to 1.9.2 [joerg 2009-09-11]
 	Updated lang/embryo to 0.9.9.062 [joerg 2009-09-11]
+	Updated audio/musicpd to 0.15.3 [joerg 2009-09-11]
