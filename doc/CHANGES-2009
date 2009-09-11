@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3583 2009/09/11 07:31:12 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3584 2009/09/11 11:51:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4674,3 +4674,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added audio/bsl version 0.5.0 [wiz 2009-09-10]
 	Updated graphics/pngcrush to 1.7.2 [adam 2009-09-11]
 	Updated x11/xf86-video-ati to 6.12.4 [hasso 2009-09-11]
+	Updated games/wormux to 0.8.4 [adam 2009-09-11]
