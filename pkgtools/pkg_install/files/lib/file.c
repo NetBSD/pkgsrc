@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.28 2009/08/02 17:56:45 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.29 2009/09/11 18:00:13 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -13,7 +13,7 @@
 #if HAVE_SYS_QUEUE_H
 #include <sys/queue.h>
 #endif
-__RCSID("$NetBSD: file.c,v 1.28 2009/08/02 17:56:45 joerg Exp $");
+__RCSID("$NetBSD: file.c,v 1.29 2009/09/11 18:00:13 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -49,9 +49,6 @@ __RCSID("$NetBSD: file.c,v 1.28 2009/08/02 17:56:45 joerg Exp $");
 #endif
 #if HAVE_GLOB_H
 #include <glob.h>
-#endif
-#if HAVE_NETDB_H
-#include <netdb.h>
 #endif
 #if HAVE_PWD_H
 #include <pwd.h>
