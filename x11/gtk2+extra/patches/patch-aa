@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/09/11 14:09:54 joerg Exp $
+
+--- gtkextra/Makefile.in.orig	2009-09-11 15:58:20.000000000 +0200
++++ gtkextra/Makefile.in
+@@ -287,7 +287,7 @@ gtkextra_extra_sources = \
+ 	gtkextra-marshal.list 	
+ 
+ 
+-INCLUDES = -I$(top_buildir) -I$(top_srcdir) $(GTK_CFLAGS) 
++INCLUDES = -I$(top_builddir) -I$(top_srcdir) $(GTK_CFLAGS) 
+ 
+ # target platform:
+ lib_LTLIBRARIES = $(gtkextratargetlib)
