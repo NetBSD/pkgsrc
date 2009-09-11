@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2009/08/24 05:33:04 hasso Exp $
+$NetBSD: patch-ab,v 1.1 2009/09/11 16:24:31 joerg Exp $
 
 --- config/gr_python.m4.orig	2009-08-23 23:30:58 +0300
 +++ config/gr_python.m4	2009-08-23 23:32:15 +0300
