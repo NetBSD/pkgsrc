@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/01 21:07:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/09/11 06:19:20 dsainty Exp $
 
 SHA1 (glpng-1.45.20081203.tar.gz) = c2515ab3395f84cbedf49a246c091ad4078ef43b
 RMD160 (glpng-1.45.20081203.tar.gz) = 14753b471d7b3192a06559a178807db30414cebd
 Size (glpng-1.45.20081203.tar.gz) = 40141 bytes
+SHA1 (patch-aa) = d9c7353907ac15b305292e167107ed64d1c6f54c
