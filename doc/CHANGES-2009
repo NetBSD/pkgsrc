@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3627 2009/09/12 20:58:56 plunky Exp $
+$NetBSD: CHANGES-2009,v 1.3628 2009/09/12 21:02:44 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4734,3 +4734,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-DateTime-TimeZone to 0.98 [sno 2009-09-12]
 	Updated x11/tk-BWidget to 1.9.0 [plunky 2009-09-12]
 	Removed x11/bwidget [plunky 2009-09-12]
+	Updated time/p5-MooseX-Types-DateTime to 0.05 [sno 2009-09-12]
