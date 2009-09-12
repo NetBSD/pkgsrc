@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8456 2009/09/12 21:02:16 wiz Exp $
+$NetBSD: TODO,v 1.8457 2009/09/12 21:49:11 sno Exp $
 
 Suggested new packages
 ======================
@@ -928,7 +928,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
-	o p5-CGI-Session-4.42
 	o p5-Date-Calc-5.8
 	o p5-MIME-Lite-3.025
 	o p5-Mail-Mbox-MessageParser-1.5002
