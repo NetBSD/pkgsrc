@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/07/08 08:39:06 sno Exp $
+$NetBSD: distinfo,v 1.10 2009/09/12 21:21:58 sno Exp $
 
-SHA1 (Variable-Magic-0.36.tar.gz) = 70d514e51daaaff30418def2d9e40fb73f988a07
-RMD160 (Variable-Magic-0.36.tar.gz) = fdf90004bbc3290a070213a3d6c24e7133d32064
-Size (Variable-Magic-0.36.tar.gz) = 42567 bytes
+SHA1 (Variable-Magic-0.37.tar.gz) = e45377ae02db8d652f7a25ed56fe35c8d91a58cb
+RMD160 (Variable-Magic-0.37.tar.gz) = f777ea2b66bd0e6fd2662e18763923683faa3e62
+Size (Variable-Magic-0.37.tar.gz) = 42377 bytes
