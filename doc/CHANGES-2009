@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3596 2009/09/12 14:07:01 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3597 2009/09/12 14:46:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4702,3 +4702,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Template-Plugin-ListMoreUtils to 0.02 [sno 2009-09-12]
 	Updated print/p5-LaTeX-Table to v1.0.0 [sno 2009-09-12]
 	Updated emulators/yabause to 0.9.10 [wiz 2009-09-12]
+	Updated games/pysolfc to 1.1nb3 [wiz 2009-09-12]
