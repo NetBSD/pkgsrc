@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2009/08/19 09:19:41 sno Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/12 19:12:02 sno Exp $
 
-DISTNAME=	SQL-Translator-0.11001
+DISTNAME=	SQL-Translator-0.11002
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/J/JR/JROBINSON/}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Class-MakeMethods>=0:../../devel/p5-Class-MakeMethods
 DEPENDS+=	p5-Digest-SHA1>=2.0:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-File-ShareDir>=1.0:../../devel/p5-File-ShareDir
 DEPENDS+=	p5-IO-stringy>=2.110:../../devel/p5-IO-stringy
-DEPENDS+=	p5-Parse-RecDescent>=1.96:../../devel/p5-Parse-RecDescent
+DEPENDS+=	p5-Parse-RecDescent>=1.96.2.2:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-XML-Writer>=0.500:../../textproc/p5-XML-Writer
 
 # Recommended
@@ -31,7 +31,7 @@ DEPENDS+=	p5-Template-Toolkit>=2.10:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-RecordParser>=0.02:../../textproc/p5-Text-RecordParser
 DEPENDS+=	p5-XML-LibXML>=1.69:../../textproc/p5-XML-LibXML
 
-BUILD_DEPENDS+=	p5-PathTools>=0:../../devel/p5-PathTools
+BUILD_DEPENDS+=	{perl>=5.10,p5-PathTools>=0}:../../devel/p5-PathTools
 BUILD_DEPENDS+=	p5-Test-Differences>=0:../../devel/p5-Test-Differences
 BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-YAML>=0.66:../../textproc/p5-YAML
