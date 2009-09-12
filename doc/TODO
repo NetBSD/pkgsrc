@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8453 2009/09/12 19:46:23 sno Exp $
+$NetBSD: TODO,v 1.8454 2009/09/12 19:57:41 sno Exp $
 
 Suggested new packages
 ======================
@@ -932,7 +932,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-FileHandle-Unget-0.1623
 	o p5-MIME-Lite-3.025
 	o p5-Mail-Mbox-MessageParser-1.5002
-	o p5-Text-Markdown-1.0.25
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.56
