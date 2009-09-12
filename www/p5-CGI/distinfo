@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2009/08/18 14:23:26 sno Exp $
+$NetBSD: distinfo,v 1.22 2009/09/12 21:05:54 sno Exp $
 
-SHA1 (CGI.pm-3.45.tar.gz) = 50b9023efe13df0494e13fdb3b3b029d5c5afccf
-RMD160 (CGI.pm-3.45.tar.gz) = 64ddbe7103c719d269d1291d6cef62dd9b1a3db4
-Size (CGI.pm-3.45.tar.gz) = 244821 bytes
+SHA1 (CGI.pm-3.47.tar.gz) = 3ba09bb92bade3abb0acaca38a65fbe45c28aeeb
+RMD160 (CGI.pm-3.47.tar.gz) = 8d391f3c140889d6bdd9111a19fb206d8950a4b3
+Size (CGI.pm-3.47.tar.gz) = 237743 bytes
