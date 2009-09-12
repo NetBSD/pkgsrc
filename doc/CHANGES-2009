@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3614 2009/09/12 19:44:03 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3615 2009/09/12 19:46:00 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4720,3 +4720,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-DBIx-Class to 0.08111 [sno 2009-09-12]
 	Updated devel/p5-SUPER to 1.17 [sno 2009-09-12]
 	Updated devel/p5-ExtUtils-CBuilder to 0.26.03.01 [sno 2009-09-12]
+	Updated games/pysolfc to 1.1nb4 [snj 2009-09-12]
