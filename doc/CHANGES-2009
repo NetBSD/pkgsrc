@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3644 2009/09/12 22:22:59 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.3645 2009/09/12 22:31:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4756,3 +4756,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ruby-activeresource to 2.3.4 [minskim 2009-09-12]
 	Updated mail/ruby-actionmailer to 2.3.4 [minskim 2009-09-12]
 	Updated www/rails to 2.3.4 [minskim 2009-09-12]
+	Updated devel/p5-Date-Calc to 5.8 [sno 2009-09-12]
