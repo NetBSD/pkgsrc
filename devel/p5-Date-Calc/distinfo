@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/08/27 20:42:42 seb Exp $
+$NetBSD: distinfo,v 1.10 2009/09/12 22:31:21 sno Exp $
 
-SHA1 (Date-Calc-5.7.tar.gz) = 6047b85182e74262e1185a4ecb6d566e9f12609e
-RMD160 (Date-Calc-5.7.tar.gz) = fec587cb6f79d76e9eee8a470b8d6ed6cfd9148a
-Size (Date-Calc-5.7.tar.gz) = 205637 bytes
+SHA1 (Date-Calc-5.8.tar.gz) = 9a2d57db38775cae81c6cbe21c6469fe124bed5b
+RMD160 (Date-Calc-5.8.tar.gz) = 7fd1be620ded32cd33bec9b4e2f869a424a20db2
+Size (Date-Calc-5.8.tar.gz) = 209172 bytes
