@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3626 2009/09/12 20:54:58 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3627 2009/09/12 20:58:56 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4732,3 +4732,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Role-Parameterized to 0.13 [sno 2009-09-12]
 	Updated devel/p5-MooseX-Singleton to 0.21 [sno 2009-09-12]
 	Updated time/p5-DateTime-TimeZone to 0.98 [sno 2009-09-12]
+	Updated x11/tk-BWidget to 1.9.0 [plunky 2009-09-12]
+	Removed x11/bwidget [plunky 2009-09-12]
