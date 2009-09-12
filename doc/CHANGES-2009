@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3611 2009/09/12 19:25:06 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3612 2009/09/12 19:30:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4717,3 +4717,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-SQL-Translator to 0.11002 [sno 2009-09-12]
 	Updated devel/GConf to 2.26.2nb1 [wiz 2009-09-12]
 	Updated devel/p5-Module-Find to 0.08 [sno 2009-09-12]
+	Updated databases/p5-DBIx-Class to 0.08111 [sno 2009-09-12]
