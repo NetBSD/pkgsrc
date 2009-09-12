@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3597 2009/09/12 14:46:08 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3598 2009/09/12 15:35:09 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4703,3 +4703,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/p5-LaTeX-Table to v1.0.0 [sno 2009-09-12]
 	Updated emulators/yabause to 0.9.10 [wiz 2009-09-12]
 	Updated games/pysolfc to 1.1nb3 [wiz 2009-09-12]
+	Updated editors/vim-share to 7.2.254 [martti 2009-09-12]
