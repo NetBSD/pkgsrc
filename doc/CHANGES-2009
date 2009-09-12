@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3608 2009/09/12 19:05:23 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3609 2009/09/12 19:12:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4714,3 +4714,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Perl-Critic to 1.105 [sno 2009-09-12]
 	Updated databases/p5-DBD-ODBC to 1.23 [sno 2009-09-12]
 	Updated databases/p5-SQL-Abstract to 1.58 [sno 2009-09-12]
+	Updated databases/p5-SQL-Translator to 0.11002 [sno 2009-09-12]
