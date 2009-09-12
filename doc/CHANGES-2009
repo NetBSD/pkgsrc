@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3640 2009/09/12 21:45:17 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3641 2009/09/12 21:49:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4747,3 +4747,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Term-ANSIColor to 2.02 [sno 2009-09-12]
 	Updated textproc/p5-Encode to 2.37 [sno 2009-09-12]
 	Updated textproc/p5-Text-Diff-Parser to 0.1001 [sno 2009-09-12]
+	Updated www/p5-CGI-Session to 4.42 [sno 2009-09-12]
