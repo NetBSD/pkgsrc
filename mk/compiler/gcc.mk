@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.99 2009/07/28 06:55:24 rillig Exp $
+# $NetBSD: gcc.mk,v 1.100 2009/09/12 21:42:27 tron Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -450,6 +450,11 @@ IMAKEOPTS+=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 .endif
 
 .if ${OPSYS} == "SunOS"
+_COMPILER_ABI_FLAG.64=  -m64
+.endif
+
+.if ${OPSYS} == "Darwin"
+_COMPILER_ABI_FLAG.32=  -m32
 _COMPILER_ABI_FLAG.64=  -m64
 .endif
 
