@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/26 02:13:16 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/12 20:51:06 plunky Exp $
 #
 
 # TODO: gnupg support, ssl support, others
@@ -12,7 +12,6 @@ HOMEPAGE=	http://tkabber.jabber.ru/en/
 COMMENT=	Free and Open Source TCL/TK jabber client
 
 DEPENDS+=	tcllib-[0-9]*:../../devel/tcllib
-DEPENDS+=	bwidget>=1.8.0:../../x11/bwidget
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax wish:run
@@ -49,4 +48,5 @@ do-install:
 		> ${WRKSRC}/tkabber
 	${INSTALL_SCRIPT} ${WRKSRC}/tkabber ${PREFIX}/bin
 
+.include "../../x11/tk-BWidget/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
