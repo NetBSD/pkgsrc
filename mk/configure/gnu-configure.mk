@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.8 2008/11/29 12:29:35 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.9 2009/09/12 00:52:45 joerg Exp $
 
 _VARGROUPS+=			gnu-configure
 _USER_VARS.gnu-configure=	# none
@@ -28,6 +28,8 @@ USE_GNU_CONFIGURE_HOST?=	yes
 .if !empty(USE_GNU_CONFIGURE_HOST:M[yY][eE][sS])
 .  if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
+.  else
+CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
 .  endif
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 .endif
