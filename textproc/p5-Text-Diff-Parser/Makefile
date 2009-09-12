@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/09/12 21:45:03 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/12 21:54:15 sno Exp $
 
 DISTNAME=	Text-Diff-Parser-0.1001
-PKGNAME=	p5-${DISTNAME:S/0900/09.00/}
+PKGNAME=	p5-${DISTNAME:S/1001/10.01/}
 CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
