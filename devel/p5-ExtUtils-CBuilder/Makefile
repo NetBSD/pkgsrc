@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/07/28 06:23:29 sno Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/12 19:43:50 sno Exp $
 
-DISTNAME=	ExtUtils-CBuilder-0.2603
-PKGNAME=	p5-${DISTNAME:S/2603/26.03/}
+DISTNAME=	ExtUtils-CBuilder-0.260301
+PKGNAME=	p5-${DISTNAME:S/260301/26.03.01/}
 SVR4_PKGNAME=	p5ecb
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
