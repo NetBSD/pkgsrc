@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:49:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/09/12 22:14:16 minskim Exp $
 ${GEM_HOME}/cache/activesupport-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/lib/active_support.rb
+${GEM_LIBDIR}/lib/active_support/all.rb
 ${GEM_LIBDIR}/lib/active_support/backtrace_cleaner.rb
 ${GEM_LIBDIR}/lib/active_support/base64.rb
 ${GEM_LIBDIR}/lib/active_support/basic_object.rb
@@ -109,6 +110,7 @@ ${GEM_LIBDIR}/lib/active_support/core_ext/rexml.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string/access.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string/behavior.rb
+${GEM_LIBDIR}/lib/active_support/core_ext/string/bytesize.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string/conversions.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string/filters.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string/inflections.rb
@@ -131,6 +133,8 @@ ${GEM_LIBDIR}/lib/active_support/gzip.rb
 ${GEM_LIBDIR}/lib/active_support/inflections.rb
 ${GEM_LIBDIR}/lib/active_support/inflector.rb
 ${GEM_LIBDIR}/lib/active_support/json.rb
+${GEM_LIBDIR}/lib/active_support/json/backends/jsongem.rb
+${GEM_LIBDIR}/lib/active_support/json/backends/yaml.rb
 ${GEM_LIBDIR}/lib/active_support/json/decoding.rb
 ${GEM_LIBDIR}/lib/active_support/json/encoders/date.rb
 ${GEM_LIBDIR}/lib/active_support/json/encoders/date_time.rb
@@ -155,6 +159,7 @@ ${GEM_LIBDIR}/lib/active_support/multibyte.rb
 ${GEM_LIBDIR}/lib/active_support/multibyte/chars.rb
 ${GEM_LIBDIR}/lib/active_support/multibyte/exceptions.rb
 ${GEM_LIBDIR}/lib/active_support/multibyte/unicode_database.rb
+${GEM_LIBDIR}/lib/active_support/multibyte/utils.rb
 ${GEM_LIBDIR}/lib/active_support/option_merger.rb
 ${GEM_LIBDIR}/lib/active_support/ordered_hash.rb
 ${GEM_LIBDIR}/lib/active_support/ordered_options.rb
@@ -193,7 +198,7 @@ ${GEM_LIBDIR}/lib/active_support/vendor/i18n-0.1.3/test/i18n_test.rb
 ${GEM_LIBDIR}/lib/active_support/vendor/i18n-0.1.3/test/locale/en.rb
 ${GEM_LIBDIR}/lib/active_support/vendor/i18n-0.1.3/test/locale/en.yml
 ${GEM_LIBDIR}/lib/active_support/vendor/i18n-0.1.3/test/simple_backend_test.rb
-${GEM_LIBDIR}/lib/active_support/vendor/memcache-client-1.6.5/memcache.rb
+${GEM_LIBDIR}/lib/active_support/vendor/memcache-client-1.7.4/memcache.rb
 ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo.rb
 ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/data_timezone.rb
 ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/data_timezone_info.rb
@@ -335,6 +340,7 @@ ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/timezone_transition
 ${GEM_LIBDIR}/lib/active_support/version.rb
 ${GEM_LIBDIR}/lib/active_support/whiny_nil.rb
 ${GEM_LIBDIR}/lib/active_support/xml_mini.rb
+${GEM_LIBDIR}/lib/active_support/xml_mini/jdom.rb
 ${GEM_LIBDIR}/lib/active_support/xml_mini/libxml.rb
 ${GEM_LIBDIR}/lib/active_support/xml_mini/nokogiri.rb
 ${GEM_LIBDIR}/lib/active_support/xml_mini/rexml.rb
