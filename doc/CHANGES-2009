@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3594 2009/09/12 12:21:28 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3595 2009/09/12 12:31:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4700,3 +4700,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-Warn to 0.21 [sno 2009-09-12]
 	Updated devel/p5-Array-Compare to 2.01 [sno 2009-09-12]
 	Updated devel/p5-Template-Plugin-ListMoreUtils to 0.02 [sno 2009-09-12]
+	Updated print/p5-LaTeX-Table to v1.0.0 [sno 2009-09-12]
