@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3602 2009/09/12 18:19:56 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3603 2009/09/12 18:22:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4708,3 +4708,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Parse-RecDescent to 1.96.2.2 [sno 2009-09-12]
 	Updated devel/p5-B-Utils to 0.08 [sno 2009-09-12]
 	Updated devel/p5-Compress-Raw-Zlib to 2.021 [sno 2009-09-12]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.021 [sno 2009-09-12]
