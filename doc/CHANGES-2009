@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3617 2009/09/12 19:57:41 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3618 2009/09/12 20:03:07 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4723,3 +4723,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/pysolfc to 1.1nb4 [snj 2009-09-12]
 	Updated archivers/p5-Archive-Tar to 1.54 [sno 2009-09-12]
 	Updated textproc/p5-Text-Markdown to 1.0.25 [sno 2009-09-12]
+	Updated devel/p5-FileHandle-Unget to 0.1623 [sno 2009-09-12]
