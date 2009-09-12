@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/09/12 17:47:17 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2009/09/12 22:24:06 tron Exp $
 
 DISTNAME=	Python-2.5.4
 PKGNAME=	python25-2.5.4
@@ -103,6 +103,10 @@ PLIST.oss=	yes
 # Make sure python modules can link correctly
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
+
+.  if empty(OS_VERSION:M[1-9].*)
+CFLAGS+=		-D_DARWIN_C_SOURCE
+.  endif
 .endif
 
 PLIST_VARS+=	bsddb dll nis no-nis
