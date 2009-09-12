@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2009/09/12 19:21:00 wiz Exp $
+
+--- gconf/gconf-client.c.orig	2009-05-14 17:14:07.000000000 +0200
++++ gconf/gconf-client.c
+@@ -168,6 +168,7 @@ gconf_client_get_type (void)
+         (GInstanceInitFunc) gconf_client_init
+       };
+ 
++      g_type_init();
+       client_type = g_type_register_static (G_TYPE_OBJECT,
+                                             "GConfClient",
+                                             &client_info,
