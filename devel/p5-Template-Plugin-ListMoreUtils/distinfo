@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/26 20:02:55 sno Exp $
+$NetBSD: distinfo,v 1.2 2009/09/12 12:21:16 sno Exp $
 
-SHA1 (Template-Plugin-ListMoreUtils-0.01.tar.gz) = 6daa4bd4eef2a9701d485746e9f5a7ed5d396205
-RMD160 (Template-Plugin-ListMoreUtils-0.01.tar.gz) = 33b88ac4017856fe478dbc09127be53709377f3d
-Size (Template-Plugin-ListMoreUtils-0.01.tar.gz) = 17404 bytes
+SHA1 (Template-Plugin-ListMoreUtils-0.02.tar.gz) = 4aa6e59986719801b72434d1364b8149c24d7209
+RMD160 (Template-Plugin-ListMoreUtils-0.02.tar.gz) = 40eb1f383f86e2672f208670d1c810334094e300
+Size (Template-Plugin-ListMoreUtils-0.02.tar.gz) = 17454 bytes
