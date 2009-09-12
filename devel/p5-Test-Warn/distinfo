@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/07/27 16:53:38 he Exp $
+$NetBSD: distinfo,v 1.5 2009/09/12 12:07:06 sno Exp $
 
-SHA1 (Test-Warn-0.11.tar.gz) = 3cad88de96528d9c0154fbd3a23540d115f383d6
-RMD160 (Test-Warn-0.11.tar.gz) = 08fac10bed9152cbcf5ff5f4cd8f85f15d4555c8
-Size (Test-Warn-0.11.tar.gz) = 9661 bytes
+SHA1 (Test-Warn-0.21.zip) = 654a9eb272ddd83fd4d1e6600a05490ce65f77c0
+RMD160 (Test-Warn-0.21.zip) = 65dca4a13d5360bfe922df8e52bf1a89bdb601c0
+Size (Test-Warn-0.21.zip) = 19601 bytes
