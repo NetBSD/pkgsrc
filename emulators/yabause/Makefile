@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/09/12 14:06:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/12 14:07:26 wiz Exp $
 
 DISTNAME=	yabause-0.9.10
 CATEGORIES=	emulators
@@ -17,4 +17,5 @@ USE_TOOLS+=	pkg-config
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
