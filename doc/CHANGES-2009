@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3634 2009/09/12 21:22:10 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3635 2009/09/12 21:26:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4741,3 +4741,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Math-Random-MT-Perl to 1.06 [sno 2009-09-12]
 	Updated devel/p5-version to 0.7702 [sno 2009-09-12]
 	Updated devel/p5-Variable-Magic to 0.37 [sno 2009-09-12]
+	Updated devel/p5-IPC-Cmd to 0.50 [sno 2009-09-12]
