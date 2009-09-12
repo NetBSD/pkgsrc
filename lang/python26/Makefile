@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/09/08 10:06:35 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/12 17:47:17 drochner Exp $
 
 DISTNAME=	Python-2.6.2
 PKGNAME=	python26-2.6.2
@@ -121,7 +121,6 @@ PLIST.nis=	yes
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
 MAKE_ENV+=	PY_BDB_INCDIRS=${BUILDLINK_INCDIRS.${BDB_TYPE}:S,^,${BDBBASE}/,:Q}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
-LIBS+=		${BDB_LIBS}
 PLIST.bsddb=	yes
 PLIST.dll=	yes
 .  if ${OPSYS} != "NetBSD" || exists(/usr/bin/ypcat)
