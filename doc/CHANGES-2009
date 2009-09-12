@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3592 2009/09/12 12:07:27 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3593 2009/09/12 12:18:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4698,3 +4698,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/evas-xpm to 0.9.9.062 [joerg 2009-09-11]
 	Updated graphics/evas-xrender-x11 to 0.9.9.062 [joerg 2009-09-11]
 	Updated devel/p5-Test-Warn to 0.21 [sno 2009-09-12]
+	Updated devel/p5-Array-Compare to 2.01 [sno 2009-09-12]
