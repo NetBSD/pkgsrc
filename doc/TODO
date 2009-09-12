@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8444 2009/09/12 10:56:21 obache Exp $
+$NetBSD: TODO,v 1.8445 2009/09/12 11:29:30 obache Exp $
 
 Suggested new packages
 ======================
@@ -567,6 +567,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fotoxx-8.3
 	o freeglut-2.4.0
 	o freenet-0.7
+	o freeradius-1.1.8
 	o freesci-0.6.4
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
