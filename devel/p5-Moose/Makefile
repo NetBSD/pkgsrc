@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/08/18 12:13:23 seb Exp $
+# $NetBSD: Makefile,v 1.29 2009/09/12 12:12:48 sno Exp $
 #
 
 DISTNAME=	Moose-0.89
@@ -33,7 +33,6 @@ BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
 BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 BUILD_DEPENDS+=	p5-Test-Simple>=0.77:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 BUILD_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
