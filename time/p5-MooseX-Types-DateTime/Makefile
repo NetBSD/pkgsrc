@@ -1,31 +1,26 @@
-# $NetBSD: Makefile,v 1.2 2009/08/19 06:19:12 sno Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/12 21:02:30 sno Exp $
 #
 
-DISTNAME=	MooseX-Types-DateTime-0.04
+DISTNAME=	MooseX-Types-DateTime-0.05
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-# MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NU/NUFFIN/}
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/perldoc?MooseX::Types::DateTime
-COMMENT=	Organise your Moose types in libraries
+COMMENT=	DateTime related constraints and coercions for Moose
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-DateTime>=0.4302:../../time/p5-DateTime
-DEPENDS+=	p5-DateTime-Format-DateParse>=0.04:../../time/p5-DateTime-Format-DateParse
-DEPENDS+=	p5-DateTime-Format-Flexible>=0.05:../../time/p5-DateTime-Format-Flexible
-DEPENDS+=	p5-DateTime-Format-Natural>=0.71:../../time/p5-DateTime-Format-Natural
 DEPENDS+=	p5-DateTime-Locale>=0.42:../../time/p5-DateTime-Locale
 DEPENDS+=	p5-DateTime-TimeZone>=0.95:../../time/p5-DateTime-TimeZone
-DEPENDS+=	p5-DateTimeX-Easy>=0.082:../../time/p5-DateTimeX-Easy
 DEPENDS+=	p5-Moose>=0.41:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types>=0.04:../../devel/p5-MooseX-Types
-DEPENDS+=	p5-Test-use-ok>=0.02:../../devel/p5-Test-use-ok
-DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Time-Duration-Parse>=0.06:../../time/p5-Time-Duration-Parse
 DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
 
+BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	p5-Test-use-ok>=0.02:../../devel/p5-Test-use-ok
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
