@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3642 2009/09/12 21:56:56 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3643 2009/09/12 22:08:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4749,3 +4749,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-Diff-Parser to 0.1001 [sno 2009-09-12]
 	Updated www/p5-CGI-Session to 4.42 [sno 2009-09-12]
 	Updated www/p5-WWW-Amazon-Wishlist to 2.006 [sno 2009-09-12]
+	Updated mail/p5-MIME-Lite to 3.025 [sno 2009-09-12]
