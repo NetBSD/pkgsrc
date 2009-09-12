@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/07/19 10:39:54 sno Exp $
+# $NetBSD: Makefile,v 1.19 2009/09/12 21:56:42 sno Exp $
 #
 
-DISTNAME=	WWW-Amazon-Wishlist-2.001
+DISTNAME=	WWW-Amazon-Wishlist-2.006
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5waw
 CATEGORIES=	www perl5
