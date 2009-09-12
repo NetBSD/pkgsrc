@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/07/07 15:58:31 sno Exp $
+$NetBSD: distinfo,v 1.4 2009/09/12 21:36:14 sno Exp $
 
-SHA1 (ANSIColor-2.01.tar.gz) = 7ed974a97cbfb57a14213c29eca069390ddcacc3
-RMD160 (ANSIColor-2.01.tar.gz) = 7a4fa7562aafe3053606d1e30580ba724c78c47d
-Size (ANSIColor-2.01.tar.gz) = 17888 bytes
+SHA1 (ANSIColor-2.02.tar.gz) = 279591e17a2655fa0583824348935df042168984
+RMD160 (ANSIColor-2.02.tar.gz) = d8530869b4aee4abc5ba529211ad4f861444138d
+Size (ANSIColor-2.02.tar.gz) = 18378 bytes
