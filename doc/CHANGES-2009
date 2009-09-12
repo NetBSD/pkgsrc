@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3631 2009/09/12 21:09:37 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3632 2009/09/12 21:14:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4738,3 +4738,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CGI to 3.47 [sno 2009-09-12]
 	Updated news/lottanzb to 0.4.0nb3 [snj 2009-09-12]
 	Updated mail/p5-MIME-Types to 1.28 [sno 2009-09-12]
+	Updated math/p5-Math-Random-MT-Perl to 1.06 [sno 2009-09-12]
