@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/04/14 07:43:07 sno Exp $
+$NetBSD: distinfo,v 1.3 2009/09/12 21:45:03 sno Exp $
 
-SHA1 (Text-Diff-Parser-0.0900.tar.gz) = 9028b1280b5c95abc43d16eaa9ff8f2762081ad7
-RMD160 (Text-Diff-Parser-0.0900.tar.gz) = a614d37b764277b75979c0b5026a482d98fb55b9
-Size (Text-Diff-Parser-0.0900.tar.gz) = 19836 bytes
+SHA1 (Text-Diff-Parser-0.1001.tar.gz) = 626af46da09e0144f8044c77d0b6389f3328b98b
+RMD160 (Text-Diff-Parser-0.1001.tar.gz) = f4a4bfec03afa0f1cb694a39702fadda6ae7e7fc
+Size (Text-Diff-Parser-0.1001.tar.gz) = 20584 bytes
