@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8445 2009/09/12 11:29:30 obache Exp $
+$NetBSD: TODO,v 1.8446 2009/09/12 11:48:13 obache Exp $
 
 Suggested new packages
 ======================
@@ -1058,6 +1058,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qvplay-0.95
 	o radiance-3.7.2
 	o raine-0.51.6
+	o rails-2.3.4
 	o ramaze-2009.01
 	o randread-0.2
 	o rat-4.2.25
