@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2009/04/07 17:13:27 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2009/09/12 22:14:17 minskim Exp $
 
-DISTNAME=	rails-2.3.2
+DISTNAME=	rails-2.3.4
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
@@ -8,11 +8,12 @@ HOMEPAGE=	http://www.rubyonrails.org/
 COMMENT=	Framework for developing database-backed web applications
 
 DEPENDS+=	rake>=0.8.1:../../devel/rake
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=2.3.2:../../devel/ruby-activesupport
-DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=2.3.2:../../databases/ruby-activerecord
-DEPENDS+=	${RUBY_PKGPREFIX}-activeresource>=2.3.2:../../www/ruby-activeresource
-DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=2.3.2:../../www/ruby-actionpack
-DEPENDS+=	${RUBY_PKGPREFIX}-actionmailer>=2.3.2:../../mail/ruby-actionmailer
+DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=2.3.4:../../databases/ruby-activerecord
+DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=2.3.4:../../devel/ruby-activesupport
+DEPENDS+=	${RUBY_PKGPREFIX}-actionmailer>=2.3.4:../../mail/ruby-actionmailer
+DEPENDS+=	${RUBY_PKGPREFIX}-activeresource>=2.3.4:../../www/ruby-activeresource
+DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=2.3.4:../../www/ruby-actionpack
+DEPENDS+=	${RUBY_PKGPREFIX}-rack-[0-9]*:../../www/ruby-rack
 
 REPLACE_RUBY=	bin/about bin/console bin/dbconsole bin/destroy \
 		bin/generate bin/performance/benchmarker \
