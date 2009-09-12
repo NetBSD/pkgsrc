@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3643 2009/09/12 22:08:27 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3644 2009/09/12 22:22:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4750,3 +4750,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CGI-Session to 4.42 [sno 2009-09-12]
 	Updated www/p5-WWW-Amazon-Wishlist to 2.006 [sno 2009-09-12]
 	Updated mail/p5-MIME-Lite to 3.025 [sno 2009-09-12]
+	Updated devel/ruby-activesupport to 2.3.4 [minskim 2009-09-12]
+	Updated databases/ruby-activerecord to 2.3.4 [minskim 2009-09-12]
+	Updated www/ruby-actionpack to 2.3.4 [minskim 2009-09-12]
+	Updated www/ruby-activeresource to 2.3.4 [minskim 2009-09-12]
+	Updated mail/ruby-actionmailer to 2.3.4 [minskim 2009-09-12]
+	Updated www/rails to 2.3.4 [minskim 2009-09-12]
