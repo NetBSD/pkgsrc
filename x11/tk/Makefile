@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2009/08/20 15:25:01 jwise Exp $
+# $NetBSD: Makefile,v 1.64 2009/09/12 18:12:13 snj Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ENV+=		LIB_RUNTIME_DIR=${PREFIX}/lib
 MAKE_ENV+=		TOUCH=${TOUCH:Q}
 PTHREAD_OPTS+=		require
+
+PRIVILEGED_STAGES+=	clean
 
 TEST_TARGET=		test
 
