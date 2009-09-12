@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:10:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/09/12 21:07:01 snj Exp $
 bin/lottanzb
 ${PYSITELIB}/lottanzb/__init__.py
 ${PYSITELIB}/lottanzb/__init__.pyc
@@ -95,8 +95,6 @@ ${PYSITELIB}/lottanzb/util.pyc
 ${PYSITELIB}/lottanzb/util.pyo
 share/application-registry/lottanzb.applications
 share/applications/lottanzb.desktop
-share/doc/lottanzb/CHANGELOG
-share/doc/lottanzb/LICENSE
 share/gnome/help/lottanzb/C/figures/DownloadingMultiple.png
 share/gnome/help/lottanzb/C/figures/DragDropQueue.png
 share/gnome/help/lottanzb/C/figures/FileAddMenu.png
