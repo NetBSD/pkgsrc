@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3620 2009/09/12 20:27:52 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3621 2009/09/12 20:31:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4726,3 +4726,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-FileHandle-Unget to 0.1623 [sno 2009-09-12]
 	Updated devel/p5-Data-Visitor to 0.26 [sno 2009-09-12]
 	Updated devel/p5-MooseX-Types to 0.20 [sno 2009-09-12]
+	Updated devel/p5-MooseX-ClassAttribute to 0.10 [sno 2009-09-12]
