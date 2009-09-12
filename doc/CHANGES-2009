@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3606 2009/09/12 18:43:48 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3607 2009/09/12 18:55:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4712,3 +4712,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-IO-Compress to 2.021 [sno 2009-09-12]
 	Updated devel/p5-parent to 0.223 [sno 2009-09-12]
 	Updated devel/p5-Perl-Critic to 1.105 [sno 2009-09-12]
+	Updated databases/p5-DBD-ODBC to 1.23 [sno 2009-09-12]
