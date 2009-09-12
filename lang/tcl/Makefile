@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2009/08/20 15:24:58 jwise Exp $
+# $NetBSD: Makefile,v 1.65 2009/09/12 17:57:40 snj Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -23,6 +23,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 MAKE_ENV+=		TOUCH=${TOUCH:Q}
+
+PRIVILEGED_STAGES+=	clean
 
 INSTALL_TARGET=		install
 
