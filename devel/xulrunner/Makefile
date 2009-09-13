@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2009/09/13 13:39:41 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2009/09/13 19:10:10 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
 XULRUNNER_VER=	1.9.1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -48,8 +48,7 @@ CONFIGURE_ARGS+=	--enable-libxul
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
 CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--enable-optimize=-O2 --with-pthreads
-CONFIGURE_ARGS+=	--disable-gnomevfs --disable-gnomeui
-CONFIGURE_ARGS+=	--disable-dbus --disable-javaxpcom
+CONFIGURE_ARGS+=	--disable-javaxpcom
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 CONFIGURE_ARGS+=	--enable-svg --enable-mathml
 CONFIGURE_ARGS+=	--enable-system-cairo
