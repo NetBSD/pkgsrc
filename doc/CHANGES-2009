@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3669 2009/09/13 19:54:37 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3670 2009/09/13 19:58:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4780,3 +4780,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-Reform to 1.20 [sno 2009-09-13]
 	Updated www/p5-Catalyst-View-Mason to 0.18 [sno 2009-09-13]
 	Updated www/p5-Catalyst-View-TT to 0.30 [sno 2009-09-13]
+	Updated www/p5-Catalyst-View-JSON to 0.26 [sno 2009-09-13]
