@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3663 2009/09/13 14:43:14 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3664 2009/09/13 17:28:44 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4774,3 +4774,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/x11-links to 0.44 [tron 2009-09-13]
 	Updated www/apache22 to 2.2.13nb1 [tron 2009-09-13]
 	Updated databases/gramps3 to 3.1.2 [wiz 2009-09-13]
+	Updated www/jalbum to 8.4 [martti 2009-09-13]
