@@ -1,0 +1,15 @@
+PAM provides a way to develop programs that are independent of
+authentication scheme.  These programs need "authentication modules" to be
+attached to them at run-time in order to work.  Which authentication module
+is to be attached is dependent upon the local system setup and is at the
+discretion of the local system administrator.
+
+This package contains a PAM module that perform a crude
+check on a SAML authentication assertion. The assertion signature and date
+are verified, and access is granted on behalf ot the user taked for a
+onfigurable attribute.
+
+The only protection against replay attacks is the assertion validity dates
+checks, this authentication is therefore secure only if the SAML
+authentication assertion remains secret. The assertion has the same role
+as a web cookie used for authentication.
