@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.63 2009/08/27 10:38:19 wiz Exp $
+$NetBSD: distinfo,v 1.64 2009/09/13 22:47:30 wiz Exp $
 
 SHA1 (mutt-1.5.20.tar.gz) = d2bec7a33771f128ca49b1723b06b6d248a35d31
 RMD160 (mutt-1.5.20.tar.gz) = df582f79364b9fd70a0001e76a119d8f78275ebb
@@ -14,6 +14,7 @@ SHA1 (patch-ae) = 9523ec98ceeb410f5e9ab468e29727da3ac6bfb5
 SHA1 (patch-af) = 36ca7b54d42537b1d23d87e58d6e31dbad032c0e
 SHA1 (patch-ag) = 2b76839be18271a72cb9e407f54879736f2a7ad6
 SHA1 (patch-ah) = dfe747c30a44bb309cccaca1bd5174fccc3c2bed
+SHA1 (patch-ai) = 7ddb35fd4565d37b169c7a45a6a75c649d5beaf5
 SHA1 (patch-al) = 4de61597f439731e664599b8b0d9f3fe5da557cd
 SHA1 (patch-am) = f7f20860bccb63ed5464e3a1225719ffc3fa504f
 SHA1 (patch-an) = eae26290a7a03b3ba31d058cd154c4de8effcf98
