@@ -1,0 +1,16 @@
+$NetBSD: patch-ga,v 1.1.2.2 2009/09/13 22:32:50 tron Exp $
+
+Fix build with getline() in libc.
+From http://bugs.gentoo.org/show_bug.cgi?id=270263
+
+--- soltools/mkdepend/def.h.orig	2007-07-19 00:01:07.000000000 +0900
++++ soltools/mkdepend/def.h	2009-09-12 20:56:00.000000000 +0900
+@@ -151,7 +151,7 @@
+ 
+ char			*copy();
+ char			*base_name();
+-char			*getline();
++char			*ooo_getline();
+ struct symtab		*slookup();
+ struct symtab		*isdefined();
+ struct symtab		*fdefined();
