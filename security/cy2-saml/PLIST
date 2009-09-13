@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/13 19:57:36 manu Exp $
+lib/sasl2/libsaml.la
+man/man5/cy2_saml.5

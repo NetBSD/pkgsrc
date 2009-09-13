@@ -1,0 +1,31 @@
+SASL is a method for adding authentication support to connection-based
+protocols.  To use SASL, a protocol includes a command for identifying and
+authenticating a user to a server and for optionally negotiating protection
+of subsequent protocol interactions.  If its use is negotiated, a security
+layer is inserted between the protocol and the connection.
+
+PAM provides a way to develop programs that are independent of
+authentication scheme.  These programs need "authentication modules" to be
+attached to them at run-time in order to work.  Which authentication module
+is to be attached is dependent upon the local system setup and is at the
+discretion of the local system administrator.
+
+This package contains a SASL plugin and a PAM module that perform a crude 
+check on a SAML authentication assertion. The assertion signature and date
+are verified, and access is granted on behalf ot the user taked for a 
+onfigurable attribute.
+
+The only protection against replay attacks is the assertion validity dates
+checks, this authentication is therefore secure only if the SAML
+authentication assertion remains secret. The assertion has the same role
+as a web cookie used for authentication.
+
+Here is a PHP example of LDAP binding using www/ap2-auth-mellon and
+security/cy2-saml
+        $saml_msg = $_SERVER["MELLON_SAML_RESPONSE"];
+        $userid = $_SERVER["REMOTE_USER"];
+        if (ldap_sasl_bind($ds, NULL, $saml_msg, "SAML",
+                           NULL, $userid, NULL, "none") == FALSE) {
+                printf("ldap_sasl_bind() failed: %s", ldap_error($ds));
+                exit;
+        }
