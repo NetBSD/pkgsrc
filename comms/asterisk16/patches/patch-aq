@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.1.1.1 2009/06/12 09:04:57 jnemeth Exp $
+$NetBSD: patch-aq,v 1.1.1.1.2.1 2009/09/13 14:18:23 tron Exp $
 
---- configure.orig	2009-01-29 15:47:00.000000000 -0800
+--- configure.orig	2009-06-16 12:34:39.000000000 -0700
 +++ configure
-@@ -17890,6 +17890,144 @@ _ACEOF
+@@ -19080,7 +19080,145 @@ _ACEOF
  fi
  
  
@@ -143,7 +143,8 @@ $NetBSD: patch-aq,v 1.1.1.1 2009/06/12 09:04:57 jnemeth Exp $
 +_ACEOF
 +
 +fi
-+
  
- { echo "$as_me:$LINENO: checking for int" >&5
- echo $ECHO_N "checking for int... $ECHO_C" >&6; }
++ 
+ # The cast to long int works around a bug in the HP C Compiler
+ # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
+ # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
