@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3648 2009/09/13 01:16:10 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3649 2009/09/13 01:25:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4759,3 +4759,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Date-Calc to 5.8 [sno 2009-09-12]
 	Updated www/squid27 to 2.7.6nb2 [taca 2009-09-13]
 	Updated www/geeklog to 1.5.2.5 [taca 2009-09-13]
+	Updated www/typolight27-translations to 20090907 [taca 2009-09-13]
