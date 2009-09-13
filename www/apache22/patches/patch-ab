@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.10.4.2 2009/09/13 15:03:36 spz Exp $
+
+Fix for CVE-2009-3094 based on the description of the problem:
+
+http://www.intevydis.com/blog/?p=59
+
+--- modules/proxy/mod_proxy_ftp.c.orig	2008-11-11 20:04:34.000000000 +0000
++++ modules/proxy/mod_proxy_ftp.c	2009-09-13 14:23:13.000000000 +0100
+@@ -1274,7 +1274,9 @@
+             }
+             else {
+                 /* and try the regular way */
+-                apr_socket_close(data_sock);
++                if (data_sock != NULL) {
++                    apr_socket_close(data_sock);
++                }
+             }
+         }
+     }
