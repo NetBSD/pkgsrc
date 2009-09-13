@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/09/13 12:19:26 tnn Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/09/13 17:56:56 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -2335,7 +2335,10 @@ lib/xulrunner/components/layout_base.xpt
 lib/xulrunner/components/layout_printing.xpt
 lib/xulrunner/components/layout_xul.xpt
 lib/xulrunner/components/layout_xul_tree.xpt
+${PLIST.gnome}lib/xulrunner/components/libdbusservice.so
 lib/xulrunner/components/libimgicon.so
+${PLIST.gnome}lib/xulrunner/components/libmozgnome.so
+${PLIST.gnome}lib/xulrunner/components/libnkgnomevfs.so
 lib/xulrunner/components/locale.xpt
 lib/xulrunner/components/loginmgr.xpt
 lib/xulrunner/components/lwbrk.xpt
