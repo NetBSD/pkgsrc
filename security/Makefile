@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.357 2009/09/07 18:34:16 joerg Exp $
+# $NetBSD: Makefile,v 1.358 2009/09/13 19:58:14 manu Exp $
 #
 
 COMMENT=	Security tools
@@ -42,6 +42,7 @@ SUBDIR+=	cy2-login
 SUBDIR+=	cy2-ntlm
 SUBDIR+=	cy2-otp
 SUBDIR+=	cy2-plain
+SUBDIR+=	cy2-saml
 SUBDIR+=	cy2-sql
 SUBDIR+=	cyrus-sasl
 SUBDIR+=	cyrus-saslauthd
@@ -223,6 +224,7 @@ SUBDIR+=	pam-mkhomedir
 SUBDIR+=	pam-mysql
 SUBDIR+=	pam-pwauth_suid
 SUBDIR+=	pam-radius
+SUBDIR+=	pam-saml
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsc-tools
 SUBDIR+=	pgp2
