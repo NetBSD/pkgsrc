@@ -1,6 +1,0 @@
-The Portable Batch System (PBS) is a flexible batch queueing and
-workload management system originally developed for NASA.  It operates
-on networked, multi-platform UNIX environments, including
-heterogeneous clusters of workstations, supercomputers, and massively
-parallel systems.  Development of PBS is provided by Altair Grid
-Technologies.
