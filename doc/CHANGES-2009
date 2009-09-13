@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3665 2009/09/13 19:26:06 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3666 2009/09/13 19:31:39 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4776,3 +4776,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/gramps3 to 3.1.2 [wiz 2009-09-13]
 	Updated www/jalbum to 8.4 [martti 2009-09-13]
 	Updated net/p5-RPC-XML to 0.69 [sno 2009-09-13]
+	Updated textproc/p5-Text-Reform to 1.20 [sno 2009-09-13]
