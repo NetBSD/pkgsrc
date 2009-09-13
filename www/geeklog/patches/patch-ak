@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1.2.2 2009/09/13 14:57:36 tron Exp $
+
+* Send correct charset parameter.
+
+--- public_html/admin/install/configinfo.php.orig	2008-05-11 16:25:08.000000000 +0900
++++ public_html/admin/install/configinfo.php
+@@ -92,6 +92,7 @@ foreach ($_CONF as $option => $value) {
+ }
+ $display .= "</table>\n</body>\n</html>";
+ 
++header('Content-Type: text/html; charset=' . COM_getCharset());
+ echo $display;
+ 
+ ?>
