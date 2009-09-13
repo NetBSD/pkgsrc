@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8460 2009/09/12 22:31:33 sno Exp $
+$NetBSD: TODO,v 1.8461 2009/09/13 03:57:00 hira Exp $
 
 Suggested new packages
 ======================
@@ -919,7 +919,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmortal-0.7.1
 	o openmotif-2.3.2
 	o openmsx-0.7.0
-	o openoffice2-2.4.3
 	o openoffice2-bin-2.4.3
 	o openoffice3-bin-3.1.1
 	o openttd-0.7.1
