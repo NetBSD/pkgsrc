@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/09/13 10:53:40 tnn Exp $
-lib/mozilla/plugins/libtotem-cone-plugin.la
-lib/mozilla/plugins/libtotem-gmp-plugin.la
-lib/mozilla/plugins/libtotem-mully-plugin.la
-lib/mozilla/plugins/libtotem-narrowspace-plugin.la
+@comment $NetBSD: PLIST,v 1.4 2009/09/13 11:22:58 tnn Exp $
+lib/netscape/plugins/libtotem-cone-plugin.la
+lib/netscape/plugins/libtotem-gmp-plugin.la
+lib/netscape/plugins/libtotem-mully-plugin.la
+lib/netscape/plugins/libtotem-narrowspace-plugin.la
 libexec/totem-plugin-viewer
