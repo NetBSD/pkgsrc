@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3645 2009/09/12 22:31:33 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3646 2009/09/13 00:13:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4733,7 +4733,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Singleton to 0.21 [sno 2009-09-12]
 	Updated time/p5-DateTime-TimeZone to 0.98 [sno 2009-09-12]
 	Updated x11/tk-BWidget to 1.9.0 [plunky 2009-09-12]
-	Removed x11/bwidget [plunky 2009-09-12]
+	Removed x11/bwidget successor x11/tk-BWidget [plunky 2009-09-12]
 	Updated time/p5-MooseX-Types-DateTime to 0.05 [sno 2009-09-12]
 	Updated www/p5-CGI to 3.47 [sno 2009-09-12]
 	Updated news/lottanzb to 0.4.0nb3 [snj 2009-09-12]
