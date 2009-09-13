@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2009/02/05 13:43:06 taca Exp $
+$NetBSD: distinfo,v 1.4.4.1 2009/09/13 14:37:57 tron Exp $
 
 SHA1 (squid-2.7.STABLE6.tar.bz2) = b4b323be1ff3617a22070c243b2504f30d6b302d
 RMD160 (squid-2.7.STABLE6.tar.bz2) = d804175b95c6b026abed505b086eeaa2c479d2e2
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = bf6438e8fb577342c782d2b729add0698bf99e9c
 SHA1 (patch-aj) = f1d18a900d7ada0985499979398bb12dace3ee40
 SHA1 (patch-ak) = 6863cac0fe9100f4b8c3c05cb321324a4abf0a4c
 SHA1 (patch-al) = 43ff4508d964d273227263b7a623d67725e8b7bd
+SHA1 (patch-am) = 2d098a9da3ba83a340cd9552950cc02e3de47cf9
