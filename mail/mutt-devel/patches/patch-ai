@@ -1,0 +1,37 @@
+$NetBSD: patch-ai,v 1.5 2009/09/13 22:47:30 wiz Exp $
+
+Two patches from
+http://bugs.mutt.org/3308
+and
+http://bugs.mutt.org/3312
+fixing bugs in MH handling.
+
+--- mh.c.orig	2009-06-01 16:29:32.000000000 +0000
++++ mh.c
+@@ -146,7 +146,7 @@ static int mh_read_token (char *t, int *
+   if ((p = strchr (t, '-')))
+   {
+     *p++ = '\0';
+-    if (mutt_atoi (t, first) < 0 || mutt_atoi (t, last) < 0)
++    if (mutt_atoi (t, first) < 0 || mutt_atoi (p, last) < 0)
+       return -1;
+   }
+   else
+@@ -207,7 +207,7 @@ static int mh_read_sequences (struct mh_
+ out:
+   FREE (&buff);
+   safe_fclose (&fp);
+-  return 0;
++  return rc;
+ }
+ 
+ static inline mode_t mh_umask (CONTEXT* ctx)
+@@ -1155,7 +1155,7 @@ int mh_read_dir (CONTEXT * ctx, const ch
+ 
+   if (ctx->magic == M_MH)
+   {
+-    if (mh_read_sequences (&mhs, ctx->path) >= 0)
++    if (mh_read_sequences (&mhs, ctx->path) < 0)
+       return -1;
+     mh_update_maildir (md, &mhs);
+     mhs_free_sequences (&mhs);
