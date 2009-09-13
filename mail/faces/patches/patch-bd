@@ -1,0 +1,21 @@
+$NetBSD: patch-bd,v 1.1 2009/09/13 16:10:53 tron Exp $
+
+--- addr.h.orig	1991-07-01 02:25:44.000000000 +0100
++++ addr.h	2009-09-13 17:04:58.000000000 +0100
+@@ -52,15 +52,13 @@
+     char		**top;		/* toplevel domain		*/
+ } Dom;
+ 
++#include <string.h>
+ 
+ extern Addr	*newAddr();		/* Create a new address		*/
+ extern Dom	*newDom();		/* Create a new domain		*/
+ extern Addr	*adrlist;
+ extern Addr	*errlist;
+ static char	*Amalloc();
+-extern char	*strcpy();
+-extern char	*strncpy();
+-extern char	*strcat();
+ 
+ /* SHUT UP! */
+ #define Strcpy		(void)strcpy
