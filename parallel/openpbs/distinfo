@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:23:31 agc Exp $
-
-SHA1 (OpenPBS_2_3_16.tar.gz) = cd91d3732dc3a035ffbbd51ac045380575c79eae
-RMD160 (OpenPBS_2_3_16.tar.gz) = 3cc617a674e206bd979508c3fa9f540e5e6a359c
-Size (OpenPBS_2_3_16.tar.gz) = 1307483 bytes
-SHA1 (patch-aa) = 53bf36659c5c3e609e081ae243513b46a74c16da
-SHA1 (patch-ab) = 0f4acb035de98eaf50705a4b7b64beda008f10a8
-SHA1 (patch-ac) = 50c1183d3734a3a91944fbb262df49cc1855a071
-SHA1 (patch-ad) = 343360019f6ab6a491edad978b38759b99369bb4
