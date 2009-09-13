@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/08/15 05:03:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/09/13 08:01:04 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -2410,6 +2410,7 @@ lib/xulrunner/modules/XPCOMUtils.jsm
 lib/xulrunner/modules/debug.js
 lib/xulrunner/modules/utils.js
 lib/xulrunner/mozilla-xremote-client
+lib/xulrunner/nspr-config
 lib/xulrunner/platform.ini
 lib/xulrunner/plugins/libnullplugin.so
 lib/xulrunner/plugins/libunixprintplugin.so

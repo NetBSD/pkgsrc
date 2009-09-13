@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2009/09/09 18:15:37 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2009/09/13 08:01:04 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
-XULRUNNER_VER=	1.9.1.2
-PKGREVISION=	5
+XULRUNNER_VER=	1.9.1.3
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
