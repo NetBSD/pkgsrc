@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.49 2009/09/13 11:48:04 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.50 2009/09/13 14:51:48 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -174,3 +174,9 @@ Pullup ticket #2883 - requested by tron
 libspf2: security patch
 Pullup ticket #2886 - requested by drochner
 expat: security patch
+Pullup ticket #2887 - requested by jnemeth
+asterisk16: security update
+Pullup ticket #2887 - requested by roy
+dnsmasq: security update
+Pullup ticket #2888 - requested taca
+squid27: security patch
