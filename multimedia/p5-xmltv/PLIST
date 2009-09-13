@@ -1,16 +1,20 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:08:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/09/13 10:29:00 sno Exp $
 share/doc/${DISTNAME}/COPYING
 share/doc/${DISTNAME}/QuickStart
 share/doc/${DISTNAME}/README
 share/doc/${DISTNAME}/README.win32
-share/xmltv/tv_grab_be/channel_ids_fr
-share/xmltv/tv_grab_be/channel_ids_nl
-share/xmltv/tv_grab_ch_bluewin/channel_ids
-share/xmltv/tv_grab_de_tvtoday/channel_ids
+share/xmltv/tv_grab_ch_search/channel_ids
+share/xmltv/tv_grab_eu_epgdata/channel_ids
+share/xmltv/tv_grab_huro/catmap.cz
 share/xmltv/tv_grab_huro/catmap.hu
 share/xmltv/tv_grab_huro/catmap.ro
+share/xmltv/tv_grab_huro/catmap.sk
 share/xmltv/tv_grab_huro/jobmap
 share/xmltv/tv_grab_it/channel_ids
 share/xmltv/tv_grab_uk_bleb/icon_urls
 share/xmltv/tv_grab_uk_rt/channel_ids
+share/xmltv/tv_grab_uk_rt/channels_platforms
+share/xmltv/tv_grab_uk_rt/prog_titles_to_process
+share/xmltv/tv_grab_uk_rt/regional_channels_by_postcode
+share/xmltv/tv_grab_uk_rt/utf8_fixups
 share/xmltv/xmltv.dtd
