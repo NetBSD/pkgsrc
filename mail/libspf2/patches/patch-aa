@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.2.2 2009/09/13 11:46:01 spz Exp $
+
+Fix an abort() caused by miscalculating the size of an internal buffer.
+This can crash applications using "libspf2" (e.g. "milter-greylist")
+in an e-mail gets delivered via SMTP over IPv6 depending on the
+remote machine's IPv6 address.
+
+--- src/libspf2/spf_expand.c.orig	2008-11-03 21:29:00.000000000 +0000
++++ src/libspf2/spf_expand.c	2009-09-08 11:27:52.000000000 +0100
+@@ -245,7 +245,7 @@
+ 		case PARM_CLIENT_IP:		/* SMTP client IP				*/
+ #ifdef COMPUTE
+ 			if (compute_length) {
+-				len = sizeof(ip6_buf);
++				len = sizeof(ip6_rbuf);
+ 				if (d->dv.url_encode)
+ 					len *= 3;
+ 				buflen += len;
