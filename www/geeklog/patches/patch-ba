@@ -1,0 +1,26 @@
+$NetBSD: patch-ba,v 1.1.2.2 2009/09/13 14:57:36 tron Exp $
+
+* Documentation update for Geeklog 1.5.2sr5 which isn't contained in
+  geeklog-1.5.2sr4-upgrade.tar.gz.
+
+--- public_html/docs/changes.html.orig	2009-04-18 16:56:05.000000000 +0900
++++ public_html/docs/changes.html
+@@ -16,6 +16,18 @@ and / or obvious changes. For a detailed
+ <a href="history">ChangeLog</a>. The file <tt>docs/changed-files</tt> has a list
+ of files that have been changed since the last release.</p>
+ 
++<h2><a name="changes152sr5">Geeklog 1.5.2sr5</a></h2>
++
++<p>This release addresses the following security issues:</p>
++<ol>
++<li>Gerendi Sandor Attila reported an XSS in the forms to email a user and to
++    email a story to a friend.</li>
++<li>The "Mail Story to a Friend" function didn't check story permissions, so
++    that it was possible to email a story even if you didn't have the
++    permissions to view it on the site.</li>
++</ol>
++
++
+ <h2><a name="changes152sr4">Geeklog 1.5.2sr4</a></h2>
+ 
+ <p>Bookoo of the Nine Situations Group posted another SQL injection exploit, targetting an old bug in usersettings.php. As with the previous issues, this allowed an attacker to extract the password hash for any account and is fixed with this release.</p>

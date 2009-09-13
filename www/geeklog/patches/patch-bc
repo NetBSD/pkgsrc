@@ -1,0 +1,54 @@
+$NetBSD: patch-bc,v 1.1.2.2 2009/09/13 14:57:36 tron Exp $
+
+* An update to Geeklog 1.5.2sr5.
+
+--- public_html/profiles.php.orig	2009-01-19 02:27:58.000000000 +0900
++++ public_html/profiles.php
+@@ -231,7 +231,7 @@ function contactform ($uid, $subject = '
+             $mail_template->set_var ('lang_subject', $LANG08[13]);
+             $mail_template->set_var ('subject', $subject);
+             $mail_template->set_var ('lang_message', $LANG08[14]);
+-            $mail_template->set_var ('message', $message);
++            $mail_template->set_var ('message', htmlspecialchars($message));
+             $mail_template->set_var ('lang_nohtml', $LANG08[15]);
+             $mail_template->set_var ('lang_submit', $LANG08[16]);
+             $mail_template->set_var ('uid', $uid);
+@@ -300,9 +300,13 @@ function mailstory($sid, $to, $toemail, 
+         return $retval;
+     }
+ 
+-    $sql = "SELECT uid,title,introtext,bodytext,commentcode,UNIX_TIMESTAMP(date) AS day FROM {$_TABLES['stories']} WHERE sid = '$sid'";
+-    $result = DB_query ($sql);
+-    $A = DB_fetchArray ($result);
++    $sql = "SELECT uid,title,introtext,bodytext,commentcode,UNIX_TIMESTAMP(date) AS day FROM {$_TABLES['stories']} WHERE sid = '$sid'" . COM_getTopicSql('AND') . COM_getPermSql('AND');
++    $result = DB_query($sql);
++    if (DB_numRows($result) == 0) {
++        return COM_refresh($_CONF['site_url'] . '/index.php');
++    }
++    $A = DB_fetchArray($result);
++
+     $shortmsg = COM_stripslashes ($shortmsg);
+     $mailtext = sprintf ($LANG08[23], $from, $fromemail) . LB;
+     if (strlen ($shortmsg) > 0) {
+@@ -392,6 +396,12 @@ function mailstoryform ($sid, $to = '', 
+         return $retval;
+     }
+ 
++    $result = DB_query("SELECT COUNT(*) AS count FROM {$_TABLES['stories']} WHERE sid = '$sid'" . COM_getTopicSql('AND') . COM_getPermSql('AND'));
++    $A = DB_fetchArray($result);
++    if ($A['count'] == 0) {
++        return COM_refresh($_CONF['site_url'] . '/index.php');
++    }
++
+     if ($msg > 0) {
+         $retval .= COM_showMessage ($msg);
+     }
+@@ -421,7 +431,7 @@ function mailstoryform ($sid, $to = '', 
+     $mail_template->set_var('lang_toemailaddress', $LANG08[19]);
+     $mail_template->set_var('toemail', $toemail);
+     $mail_template->set_var('lang_shortmessage', $LANG08[27]);
+-    $mail_template->set_var('shortmsg', $shortmsg);
++    $mail_template->set_var('shortmsg', htmlspecialchars($shortmsg));
+     $mail_template->set_var('lang_warning', $LANG08[22]);
+     $mail_template->set_var('lang_sendmessage', $LANG08[16]);
+     $mail_template->set_var('story_id',$sid);

@@ -1,0 +1,17 @@
+$NetBSD: patch-bd,v 1.1.2.2 2009/09/13 14:57:36 tron Exp $
+
+* An update of Geeklog 1.5.2sr5 which isn't contained in
+  geeklog-1.5.2sr4-upgrade.tar.gz.  This is configuration file and
+  it will be updated during upgrade from 1.5.2sr4.
+
+--- public_html/siteconfig.php.orig	2009-04-18 16:54:50.000000000 +0900
++++ public_html/siteconfig.php
+@@ -38,7 +38,7 @@ if (!defined('LB')) {
+   define('LB',"\n");
+ }
+ if (!defined('VERSION')) {
+-  define('VERSION', '1.5.2sr4');
++  define('VERSION', '1.5.2sr5');
+ }
+ 
+ ?>

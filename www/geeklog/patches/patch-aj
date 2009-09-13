@@ -1,8 +1,52 @@
-$NetBSD: patch-aj,v 1.1 2009/05/26 14:19:29 taca Exp $
+$NetBSD: patch-aj,v 1.1.4.1 2009/09/13 14:57:36 tron Exp $
+
+* make it geeklog 1.5.2sr5.
+* Add missing charset parameter.
+* Add missing utf8 select button.
+* Send correct charset parameter.
 
 --- public_html/admin/install/index.php.orig	2009-04-18 16:55:00.000000000 +0900
 +++ public_html/admin/install/index.php
-@@ -1793,16 +1793,8 @@ function INST_setDefaultCharset($sitecon
+@@ -48,7 +48,7 @@ if (!defined("LB")) {
+     define("LB", "\n");
+ }
+ if (!defined('VERSION')) {
+-    define('VERSION', '1.5.2sr4');
++    define('VERSION', '1.5.2sr5');
+ }
+ if (!defined('XHTML')) {
+     define('XHTML', ' /');
+@@ -178,7 +178,8 @@ function get_SPX_Ver()
+  */
+ function INST_checkPost150Upgrade($dbconfig_path, $siteconfig_path)
+ {
+-    global $_CONF, $_TABLES, $_DB, $_DB_dbms, $_DB_host, $_DB_user, $_DB_pass;
++    global $_CONF, $_TABLES, $_DB, $_DB_dbms, $_DB_host, $_DB_user, $_DB_pass,
++        $language;
+ 
+     require $dbconfig_path;
+     require $siteconfig_path;
+@@ -227,6 +228,7 @@ function INST_checkPost150Upgrade($dbcon
+             // this is a 1.5.x version, so upgrade directly
+             $req_string = 'index.php?mode=upgrade&step=3'
+                         . '&dbconfig_path=' . $dbconfig_path
++                        . '&language=' . $language
+                         . '&version=' . $version;
+ 
+             header('Location: ' . $req_string);
+@@ -407,6 +409,11 @@ function INST_installEngine($install_typ
+             if ($install_type == 'install') {
+                 $display .= '
+                     <p><label class="' . $label_dir . '">' . $LANG_INSTALL[92] . ' ' . INST_helpLink('utf8') . '</label> <input type="checkbox" name="utf8"' . ($utf8 ? ' checked="checked"' : '') . XHTML . '></p>';
++            } else {
++                if ($utf8) {
++                    $display .= '
++                    <input type="hidden" name="utf8" value="on"'. XHTML .'>';
++                }
+             }
+ 
+             $display .= '
+@@ -1793,16 +1800,8 @@ function INST_setDefaultCharset($sitecon
  // | Main                                                                      |
  // +---------------------------------------------------------------------------+
  
@@ -21,3 +65,10 @@ $NetBSD: patch-aj,v 1.1 2009/05/26 14:19:29 taca Exp $
  
  $html_path          = str_replace('admin/install/index.php', '', str_replace('admin\install\index.php', '', str_replace('\\', '/', __FILE__)));
  $siteconfig_path    = '../../siteconfig.php';
+@@ -2228,5 +2227,6 @@ $display .= '
+ </body>
+ </html>' . LB;
+ 
++header('Content-Type: text/html; charset=' . $LANG_CHARSET);
+ echo $display;
+ ?>
