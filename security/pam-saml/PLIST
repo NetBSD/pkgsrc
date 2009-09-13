@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/13 19:57:51 manu Exp $
+lib/security/pam_saml.la
+man/man5/pam_saml.5
