@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/04/29 22:38:35 sno Exp $
+$NetBSD: distinfo,v 1.3 2009/09/13 19:46:55 sno Exp $
 
-SHA1 (Catalyst-View-Mason-0.17.tar.gz) = 260a485796d29a6f06a80a699db85e050982622d
-RMD160 (Catalyst-View-Mason-0.17.tar.gz) = bfa4fbe26b392f3825beb02adfa837cf3e1ebb29
-Size (Catalyst-View-Mason-0.17.tar.gz) = 25045 bytes
+SHA1 (Catalyst-View-Mason-0.18.tar.gz) = 7199ad1cc73942b799a9aa9e5adc3c9f65df6b2b
+RMD160 (Catalyst-View-Mason-0.18.tar.gz) = 6ffae62eb137266b0fa7a493a9e7f22f33cba097
+Size (Catalyst-View-Mason-0.18.tar.gz) = 25642 bytes
