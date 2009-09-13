@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3656 2009/09/13 10:16:46 gson Exp $
+$NetBSD: CHANGES-2009,v 1.3657 2009/09/13 10:29:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4767,3 +4767,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/openoffice2 to 2.4.3 [hira 2009-09-13]
 	Removed parallel/openpbs [asau 2009-09-13]
 	Updated misc/py-anita to 1.6 [gson 2009-09-13]
+	Updated multimedia/p5-xmltv to 0.5.56 [sno 2009-09-13]
