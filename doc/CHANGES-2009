@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3664 2009/09/13 17:28:44 martti Exp $
+$NetBSD: CHANGES-2009,v 1.3665 2009/09/13 19:26:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4775,3 +4775,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/apache22 to 2.2.13nb1 [tron 2009-09-13]
 	Updated databases/gramps3 to 3.1.2 [wiz 2009-09-13]
 	Updated www/jalbum to 8.4 [martti 2009-09-13]
+	Updated net/p5-RPC-XML to 0.69 [sno 2009-09-13]
