@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/09/13 08:01:04 tnn Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/09/13 12:19:26 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -461,9 +461,16 @@ ${PLIST.jit}include/xulrunner/unstable/Fragmento.h
 ${PLIST.jit}include/xulrunner/unstable/LIR.h
 ${PLIST.jit}include/xulrunner/unstable/Native.h
 ${PLIST.jit}include/xulrunner/unstable/Native${NANOJIT_ARCH}.h
+include/xulrunner/unstable/ImageErrors.h
+include/xulrunner/unstable/ImageLogging.h
+include/xulrunner/unstable/NSReg.h
+include/xulrunner/unstable/ImageErrors.h
+include/xulrunner/unstable/ImageLogging.h
+include/xulrunner/unstable/NSReg.h
 include/xulrunner/unstable/ProxyJNI.h
 ${PLIST.jit}include/xulrunner/unstable/RegAlloc.h
 ${PLIST.jit}include/xulrunner/unstable/TraceTreeDrawer.h
+include/xulrunner/unstable/VerReg.h
 include/xulrunner/unstable/XPCIDispatch.h
 ${PLIST.jit}include/xulrunner/unstable/avmplus.h
 include/xulrunner/unstable/base64.h
@@ -520,6 +527,16 @@ include/xulrunner/unstable/gtkmozembed.h
 include/xulrunner/unstable/gtkmozembed_glue.cpp
 include/xulrunner/unstable/gtkmozembed_internal.h
 include/xulrunner/unstable/hasht.h
+include/xulrunner/unstable/imgICache.h
+include/xulrunner/unstable/imgIContainer.h
+include/xulrunner/unstable/imgIContainerObserver.h
+include/xulrunner/unstable/imgIDecoder.h
+include/xulrunner/unstable/imgIDecoderObserver.h
+include/xulrunner/unstable/imgIEncoder.h
+include/xulrunner/unstable/imgILoad.h
+include/xulrunner/unstable/imgILoader.h
+include/xulrunner/unstable/imgIRequest.h
+include/xulrunner/unstable/imgITools.h
 include/xulrunner/unstable/interpreter.h
 include/xulrunner/unstable/jar-ds.h
 include/xulrunner/unstable/jar.h
@@ -753,6 +770,9 @@ include/xulrunner/unstable/nsHTMLMediaElement.h
 include/xulrunner/unstable/nsHTMLParts.h
 include/xulrunner/unstable/nsHTMLReflowMetrics.h
 include/xulrunner/unstable/nsHTMLReflowState.h
+include/xulrunner/unstable/nsHTMLTagList.h
+include/xulrunner/unstable/nsHTMLTags.h
+include/xulrunner/unstable/nsHTMLTokens.h
 include/xulrunner/unstable/nsHTMLVideoElement.h
 include/xulrunner/unstable/nsHashKeys.h
 include/xulrunner/unstable/nsHashPropertyBag.h
@@ -763,6 +783,7 @@ include/xulrunner/unstable/nsIASN1PrintableItem.h
 include/xulrunner/unstable/nsIASN1Sequence.h
 include/xulrunner/unstable/nsIAboutModule.h
 include/xulrunner/unstable/nsIAllocator.h
+include/xulrunner/unstable/nsIAnnotationService.h
 include/xulrunner/unstable/nsIAnonymousContentCreator.h
 include/xulrunner/unstable/nsIAppShell.h
 include/xulrunner/unstable/nsIAppStartupNotifier.h
@@ -796,6 +817,7 @@ include/xulrunner/unstable/nsIBlocklistService.h
 include/xulrunner/unstable/nsIBoxObject.h
 include/xulrunner/unstable/nsIBrowserBoxObject.h
 include/xulrunner/unstable/nsIBrowserDOMWindow.h
+include/xulrunner/unstable/nsIBrowserHistory.h
 include/xulrunner/unstable/nsIBufEntropyCollector.h
 include/xulrunner/unstable/nsIBufferedStreams.h
 include/xulrunner/unstable/nsIByteBuffer.h
@@ -884,6 +906,7 @@ include/xulrunner/unstable/nsIContentHandler.h
 include/xulrunner/unstable/nsIContentIterator.h
 include/xulrunner/unstable/nsIContentPolicy.h
 include/xulrunner/unstable/nsIContentSerializer.h
+include/xulrunner/unstable/nsIContentSink.h
 include/xulrunner/unstable/nsIContentSniffer.h
 include/xulrunner/unstable/nsIContentViewer.h
 include/xulrunner/unstable/nsIContentViewerContainer.h
@@ -1277,6 +1300,7 @@ include/xulrunner/unstable/nsIDOMXULSelectCntrlEl.h
 include/xulrunner/unstable/nsIDOMXULSelectCntrlItemEl.h
 include/xulrunner/unstable/nsIDOMXULTextboxElement.h
 include/xulrunner/unstable/nsIDOMXULTreeElement.h
+include/xulrunner/unstable/nsIDTD.h
 include/xulrunner/unstable/nsIDataSignatureVerifier.h
 include/xulrunner/unstable/nsIDateTimeFormat.h
 include/xulrunner/unstable/nsIDebug.h
@@ -1312,9 +1336,11 @@ include/xulrunner/unstable/nsIDragDropHandler.h
 include/xulrunner/unstable/nsIDragService.h
 include/xulrunner/unstable/nsIDragSession.h
 include/xulrunner/unstable/nsIDragSessionGTK.h
+include/xulrunner/unstable/nsIDynamicContainer.h
 include/xulrunner/unstable/nsIEditorBoxObject.h
 include/xulrunner/unstable/nsIEditorDocShell.h
 include/xulrunner/unstable/nsIEffectiveTLDService.h
+include/xulrunner/unstable/nsIElementObserver.h
 include/xulrunner/unstable/nsIEmbeddingSiteWindow.h
 include/xulrunner/unstable/nsIEmbeddingSiteWindow2.h
 include/xulrunner/unstable/nsIEncodedChannel.h
@@ -1328,6 +1354,8 @@ include/xulrunner/unstable/nsIEventStateManager.h
 include/xulrunner/unstable/nsIEventTarget.h
 include/xulrunner/unstable/nsIException.h
 include/xulrunner/unstable/nsIExceptionService.h
+include/xulrunner/unstable/nsIExpatSink.h
+include/xulrunner/unstable/nsIExtendedExpatSink.h
 include/xulrunner/unstable/nsIExternalHelperAppService.h
 include/xulrunner/unstable/nsIExternalProtocolHandler.h
 include/xulrunner/unstable/nsIExternalProtocolService.h
@@ -1336,6 +1364,7 @@ include/xulrunner/unstable/nsIFTPChannel.h
 include/xulrunner/unstable/nsIFactory.h
 include/xulrunner/unstable/nsIFastLoadFileControl.h
 include/xulrunner/unstable/nsIFastLoadService.h
+include/xulrunner/unstable/nsIFaviconService.h
 include/xulrunner/unstable/nsIFile.h
 include/xulrunner/unstable/nsIFileChannel.h
 include/xulrunner/unstable/nsIFileControlElement.h
@@ -1356,6 +1385,7 @@ include/xulrunner/unstable/nsIFormSigningDialog.h
 include/xulrunner/unstable/nsIFormSubmission.h
 include/xulrunner/unstable/nsIFormSubmitObserver.h
 include/xulrunner/unstable/nsIFormatConverter.h
+include/xulrunner/unstable/nsIFragmentContentSink.h
 include/xulrunner/unstable/nsIFrame.h
 include/xulrunner/unstable/nsIFrameDebug.h
 include/xulrunner/unstable/nsIFrameFrame.h
@@ -1375,6 +1405,7 @@ include/xulrunner/unstable/nsIGnomeVFSService.h
 include/xulrunner/unstable/nsIGridPart.h
 include/xulrunner/unstable/nsIHTMLCSSStyleSheet.h
 include/xulrunner/unstable/nsIHTMLCollection.h
+include/xulrunner/unstable/nsIHTMLContentSink.h
 include/xulrunner/unstable/nsIHTMLDocument.h
 include/xulrunner/unstable/nsIHTMLToTextSink.h
 include/xulrunner/unstable/nsIHandlerService.h
@@ -1440,10 +1471,12 @@ include/xulrunner/unstable/nsILinkHandler.h
 include/xulrunner/unstable/nsIListBoxObject.h
 include/xulrunner/unstable/nsIListControlFrame.h
 include/xulrunner/unstable/nsILiveConnectManager.h
+include/xulrunner/unstable/nsILivemarkService.h
 include/xulrunner/unstable/nsILoadContext.h
 include/xulrunner/unstable/nsILoadGroup.h
 include/xulrunner/unstable/nsILocalFile.h
 include/xulrunner/unstable/nsILocalFileWin.h
+include/xulrunner/unstable/nsILocalStore.h
 include/xulrunner/unstable/nsILocale.h
 include/xulrunner/unstable/nsILocaleService.h
 include/xulrunner/unstable/nsILoginInfo.h
@@ -1480,6 +1513,8 @@ include/xulrunner/unstable/nsINSSErrorsService.h
 include/xulrunner/unstable/nsINameSpaceManager.h
 include/xulrunner/unstable/nsINativeAppSupport.h
 include/xulrunner/unstable/nsINativeKeyBindings.h
+include/xulrunner/unstable/nsINavBookmarksService.h
+include/xulrunner/unstable/nsINavHistoryService.h
 include/xulrunner/unstable/nsINestedURI.h
 include/xulrunner/unstable/nsINetUtil.h
 include/xulrunner/unstable/nsINetworkLinkService.h
@@ -1504,6 +1539,10 @@ include/xulrunner/unstable/nsIPKCS11Module.h
 include/xulrunner/unstable/nsIPKCS11ModuleDB.h
 include/xulrunner/unstable/nsIPKCS11Slot.h
 include/xulrunner/unstable/nsIPageSequenceFrame.h
+include/xulrunner/unstable/nsIParser.h
+include/xulrunner/unstable/nsIParserFilter.h
+include/xulrunner/unstable/nsIParserNode.h
+include/xulrunner/unstable/nsIParserService.h
 include/xulrunner/unstable/nsIPasswordManager.h
 include/xulrunner/unstable/nsIPasswordManagerInternal.h
 include/xulrunner/unstable/nsIPercentHeightObserver.h
@@ -1563,6 +1602,26 @@ include/xulrunner/unstable/nsIProxiedProtocolHandler.h
 include/xulrunner/unstable/nsIProxyAutoConfig.h
 include/xulrunner/unstable/nsIProxyInfo.h
 include/xulrunner/unstable/nsIProxyObjectManager.h
+include/xulrunner/unstable/nsIRDFCompositeDataSource.h
+include/xulrunner/unstable/nsIRDFContainer.h
+include/xulrunner/unstable/nsIRDFContainerUtils.h
+include/xulrunner/unstable/nsIRDFContentSink.h
+include/xulrunner/unstable/nsIRDFDataSource.h
+include/xulrunner/unstable/nsIRDFDelegateFactory.h
+include/xulrunner/unstable/nsIRDFInMemoryDataSource.h
+include/xulrunner/unstable/nsIRDFInferDataSource.h
+include/xulrunner/unstable/nsIRDFLiteral.h
+include/xulrunner/unstable/nsIRDFNode.h
+include/xulrunner/unstable/nsIRDFObserver.h
+include/xulrunner/unstable/nsIRDFPropagatableDataSource.h
+include/xulrunner/unstable/nsIRDFPurgeableDataSource.h
+include/xulrunner/unstable/nsIRDFRemoteDataSource.h
+include/xulrunner/unstable/nsIRDFResource.h
+include/xulrunner/unstable/nsIRDFService.h
+include/xulrunner/unstable/nsIRDFXMLParser.h
+include/xulrunner/unstable/nsIRDFXMLSerializer.h
+include/xulrunner/unstable/nsIRDFXMLSink.h
+include/xulrunner/unstable/nsIRDFXMLSource.h
 include/xulrunner/unstable/nsIRadioControlElement.h
 include/xulrunner/unstable/nsIRadioControlFrame.h
 include/xulrunner/unstable/nsIRadioGroupContainer.h
@@ -1701,6 +1760,7 @@ include/xulrunner/unstable/nsISystemProxySettings.h
 include/xulrunner/unstable/nsITXTToHTMLConv.h
 include/xulrunner/unstable/nsITableCellLayout.h
 include/xulrunner/unstable/nsITableLayout.h
+include/xulrunner/unstable/nsITaggingService.h
 include/xulrunner/unstable/nsITextControlElement.h
 include/xulrunner/unstable/nsITextControlFrame.h
 include/xulrunner/unstable/nsITextScroll.h
@@ -1715,6 +1775,7 @@ include/xulrunner/unstable/nsITimelineService.h
 include/xulrunner/unstable/nsITimer.h
 include/xulrunner/unstable/nsITokenDialogs.h
 include/xulrunner/unstable/nsITokenPasswordDialogs.h
+include/xulrunner/unstable/nsITokenizer.h
 include/xulrunner/unstable/nsIToolkit.h
 include/xulrunner/unstable/nsIToolkitProfile.h
 include/xulrunner/unstable/nsIToolkitProfileService.h
@@ -1860,6 +1921,7 @@ include/xulrunner/unstable/nsPIDNSService.h
 include/xulrunner/unstable/nsPIDOMEventTarget.h
 include/xulrunner/unstable/nsPIDOMStorage.h
 include/xulrunner/unstable/nsPIDOMWindow.h
+include/xulrunner/unstable/nsPIPlacesDatabase.h
 include/xulrunner/unstable/nsPIPromptService.h
 include/xulrunner/unstable/nsPISocketTransportService.h
 include/xulrunner/unstable/nsPIWindowRoot.h
@@ -1867,6 +1929,8 @@ include/xulrunner/unstable/nsPIWindowWatcher.h
 include/xulrunner/unstable/nsPLDOMEvent.h
 include/xulrunner/unstable/nsPSPrinters.h
 include/xulrunner/unstable/nsPaperPS.h
+include/xulrunner/unstable/nsParserCIID.h
+include/xulrunner/unstable/nsParserDataListener.h
 include/xulrunner/unstable/nsPoint.h
 include/xulrunner/unstable/nsPrefsCID.h
 include/xulrunner/unstable/nsPresContext.h
@@ -1881,6 +1945,7 @@ include/xulrunner/unstable/nsPropertyTable.h
 include/xulrunner/unstable/nsProxiedService.h
 include/xulrunner/unstable/nsProxyRelease.h
 include/xulrunner/unstable/nsQuickSort.h
+include/xulrunner/unstable/nsRDFCID.h
 include/xulrunner/unstable/nsReadLine.h
 include/xulrunner/unstable/nsReadableUtils.h
 include/xulrunner/unstable/nsRect.h
@@ -1900,6 +1965,7 @@ include/xulrunner/unstable/nsSVGNumber.h
 include/xulrunner/unstable/nsSVGPoint.h
 include/xulrunner/unstable/nsSVGRect.h
 include/xulrunner/unstable/nsSVGUtils.h
+include/xulrunner/unstable/nsScannerString.h
 include/xulrunner/unstable/nsScriptLoader.h
 include/xulrunner/unstable/nsScriptableInputStream.h
 include/xulrunner/unstable/nsServiceManagerUtils.h
@@ -1954,6 +2020,7 @@ include/xulrunner/unstable/nsThreadUtils.h
 include/xulrunner/unstable/nsThreadUtilsInternal.h
 include/xulrunner/unstable/nsTime.h
 include/xulrunner/unstable/nsTimeStamp.h
+include/xulrunner/unstable/nsToken.h
 include/xulrunner/unstable/nsToolkitCompsCID.h
 include/xulrunner/unstable/nsTraceRefcnt.h
 include/xulrunner/unstable/nsTraceRefcntImpl.h
@@ -2092,6 +2159,10 @@ include/xulrunner/unstable/prtypes.h
 include/xulrunner/unstable/prvrsion.h
 include/xulrunner/unstable/prwin16.h
 include/xulrunner/unstable/psSharedCore.h
+include/xulrunner/unstable/rdf.h
+include/xulrunner/unstable/rdfIDataSource.h
+include/xulrunner/unstable/rdfISerializer.h
+include/xulrunner/unstable/rdfITripleVisitor.h
 include/xulrunner/unstable/secasn1.h
 include/xulrunner/unstable/secasn1t.h
 include/xulrunner/unstable/seccomon.h
@@ -2394,6 +2465,7 @@ lib/xulrunner/libsmime3.so
 lib/xulrunner/libsoftokn3.chk
 lib/xulrunner/libsoftokn3.so
 lib/xulrunner/libssl3.so
+lib/xulrunner/libunicharutil_external_s.a
 lib/xulrunner/libxpcom.so
 lib/xulrunner/libxpcomglue.a
 lib/xulrunner/libxpcomglue_s.a

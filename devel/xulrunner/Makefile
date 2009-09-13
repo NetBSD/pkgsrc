@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2009/09/13 08:01:04 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2009/09/13 12:19:26 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
 XULRUNNER_VER=	1.9.1.3
+PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -89,11 +90,13 @@ create-rm-wrapper:
 	chmod +x ${WRAPPER_DIR}/bin/rm
 
 INCLUDE_SUBDIRS=\
-	caps chardet cookie commandhandler content docshell dom exthandler fastfind find gfx gtkembedmoz \
-	java js layout locale mimetype necko nkcache nspr oji pipboot pipnss pref shistory \
-	string uconv uriloader webbrowserpersist webbrwsr webshell widget windowwatcher xpcom \
-	xpconnect xulapp profdirserviceprovider thebes embedcomponents intl loginmgr \
-	toolkitcomps downloads spellchecker
+	caps chardet commandhandler content cookie docshell dom		\
+	downloads embedcomponents exthandler fastfind find gfx		\
+	gtkembedmoz htmlparser imglib2 intl java js layout libreg	\
+	locale loginmgr mimetype necko nkcache nspr oji pipboot pipnss	\
+	places pref profdirserviceprovider rdf shistory spellchecker	\
+	string thebes toolkitcomps uconv uriloader webbrowserpersist	\
+	webbrwsr webshell widget windowwatcher xpcom xpconnect xulapp
 
 post-install:
 	# XXX fix the pkg-config files instead
@@ -103,6 +106,8 @@ post-install:
 	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue_s.a
 	ln -s ${PREFIX}/lib/xulrunner-sdk/sdk/lib/libxpcomglue_s.a \
 	  ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue_s.a
+	${INSTALL_LIB} ${WRKSRC}/dist/lib/libunicharutil_external_s.a \
+	  ${DESTDIR}${PREFIX}/lib/xulrunner
 	cd ${WRKSRC}/dist/include && \
 	  ${INSTALL_DATA} `find ${INCLUDE_SUBDIRS} -name "*.h" -print` \
 	  js/jsproto.tbl mozilla-config.h gtkembedmoz/gtkmozembed_glue.cpp \
