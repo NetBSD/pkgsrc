@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3653 2009/09/13 02:15:29 jun Exp $
+$NetBSD: CHANGES-2009,v 1.3654 2009/09/13 03:55:47 hira Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4764,3 +4764,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated converters/skf to 1.96.2 [obache 2009-09-13]
 	Updated devel/ruby-readline to 1.8.7.174nb1 [taca 2009-09-13]
 	Updated editors/emacs22 to 22.3nb4 [jun 2009-09-13]
+	Updated misc/openoffice2 to 2.4.3 [hira 2009-09-13]
