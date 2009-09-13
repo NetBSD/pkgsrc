@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2009/07/05 10:15:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.36 2009/09/13 11:17:30 sno Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -22,6 +22,7 @@ bin/lneato
 bin/mm2gv
 bin/neato
 bin/nop
+bin/osage
 bin/prune
 bin/sccmap
 bin/tred
@@ -34,6 +35,7 @@ include/graphviz/cgraph.h
 include/graphviz/color.h
 include/graphviz/geom.h
 include/graphviz/graph.h
+include/graphviz/graphviz_version.h
 include/graphviz/gv.cpp
 include/graphviz/gv.i
 include/graphviz/gvc.h
@@ -59,6 +61,7 @@ lib/graphviz/libgvplugin_dot_layout.la
 lib/graphviz/libgvplugin_gd.la
 ${PLIST.gtk}lib/graphviz/libgvplugin_gdk_pixbuf.la
 ${PLIST.gtk}lib/graphviz/libgvplugin_gtk.la
+${PLIST.ghostscript}lib/graphviz/libgvplugin_gs.la
 lib/graphviz/libgvplugin_neato_layout.la
 ${PLIST.pangocairo}lib/graphviz/libgvplugin_pango.la
 ${PLIST.rsvg}lib/graphviz/libgvplugin_rsvg.la
@@ -115,6 +118,7 @@ man/man1/lneato.1
 man/man1/mm2gv.1
 man/man1/neato.1
 man/man1/nop.1
+man/man1/osage.1
 man/man1/prune.1
 man/man1/sccmap.1
 man/man1/tred.1
@@ -253,7 +257,6 @@ share/graphviz/doc/html/info/ellipse.gif
 share/graphviz/doc/html/info/fill.gif
 share/graphviz/doc/html/info/folder.gif
 share/graphviz/doc/html/info/forward.gif
-share/graphviz/doc/html/info/grammar.html
 share/graphviz/doc/html/info/hexagon.gif
 share/graphviz/doc/html/info/house.gif
 share/graphviz/doc/html/info/html1.gif
@@ -335,6 +338,7 @@ share/graphviz/doc/pdf/mm2gv.1.pdf
 share/graphviz/doc/pdf/neato.1.pdf
 share/graphviz/doc/pdf/neatoguide.pdf
 share/graphviz/doc/pdf/nop.1.pdf
+share/graphviz/doc/pdf/osage.1.pdf
 share/graphviz/doc/pdf/pathplan.3.pdf
 share/graphviz/doc/pdf/prune.pdf
 share/graphviz/doc/pdf/sccmap.1.pdf
