@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2009/08/18 15:54:53 taca Exp $
+$NetBSD: distinfo,v 1.23 2009/09/13 01:24:09 taca Exp $
 
 SHA1 (TYPOlight-Afrikaans-v1.zip) = 4768afb2c105acbfe98c26cc579837d2d2a8620c
 RMD160 (TYPOlight-Afrikaans-v1.zip) = 7a2d4ad7c3dda26b3c48ef30b74de6c62f2abb03
@@ -36,9 +36,9 @@ Size (TYPOlight-Indonesian-v1.zip) = 72232 bytes
 SHA1 (TYPOlight-Italian-v16.zip) = 72d4c9223d0748ce35d398d46dc99e8fd7f41e80
 RMD160 (TYPOlight-Italian-v16.zip) = b0d8adaadff111849332f4ee2b0660502f90b520
 Size (TYPOlight-Italian-v16.zip) = 147323 bytes
-SHA1 (TYPOlight-Japanese-v22.zip) = e43a9b62890c50741411c9da3fc1157b6542da5c
-RMD160 (TYPOlight-Japanese-v22.zip) = 47e5aff4c34e8de8124c308884e76a010ed34437
-Size (TYPOlight-Japanese-v22.zip) = 156592 bytes
+SHA1 (TYPOlight-Japanese-v23.zip) = 51e043548796cb6b94f637a75b929dbb962391f5
+RMD160 (TYPOlight-Japanese-v23.zip) = 11f1f7120b1f2d5e9e4568be73afc35800b9e53a
+Size (TYPOlight-Japanese-v23.zip) = 156657 bytes
 SHA1 (TYPOlight-Latvian-v21.zip) = 07ed6004ebffa291b5060a924fcb7c703270c5f9
 RMD160 (TYPOlight-Latvian-v21.zip) = 3ba6a66e45f520604a97a7c877d3c083fb34d6b7
 Size (TYPOlight-Latvian-v21.zip) = 110053 bytes
