@@ -1,4 +1,4 @@
-$NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
+$NetBSD: ldap-ctrl-exop.patch,v 1.2 2009/09/13 19:45:42 manu Exp $
 /*
  * Copyright (c) 2007-2009 Pierangelo Masarati
  * Copyright (c) 2009 Emmanuel Dreyfus
@@ -24,8 +24,8 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
---- ext/ldap/ldap.c.orig	2009-06-15 17:18:48.000000000 +0200
-+++ ext/ldap/ldap.c	2009-07-22 17:25:36.000000000 +0200
+--- ext/ldap/ldap.c.orig	2009-06-15 15:18:48.000000000 +0000
++++ ext/ldap/ldap.c	2009-09-05 07:10:18.000000000 +0000
 @@ -81,8 +81,35 @@
  
  ZEND_DECLARE_MODULE_GLOBALS(ldap)
@@ -504,7 +504,30 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  typedef struct {
  	char *mech;
  	char *realm;
-@@ -619,8 +931,9 @@
+@@ -570,15 +882,21 @@
+ 				break;
+ 			case SASL_CB_PASS:
+ 				p = ctx->passwd;
+ 				break;
++			case SASL_CB_NOECHOPROMPT:
++				/* FALLTHROUGH */
++			case SASL_CB_ECHOPROMPT:
++				if (interact->challenge != NULL)
++					p = ctx->passwd;
++				break;
+ 		}
+ 		if (p) {
+ 			interact->result = p;
+ 			interact->len = strlen(interact->result);
+ 		}
+ 	}
+-	return LDAP_SUCCESS;
++	return SASL_OK;
+ }
+ /* }}} */
+ 
+ /* {{{ proto bool ldap_sasl_bind(resource link [, string binddn [, string password [, string sasl_mech [, string sasl_realm [, string sasl_authc_id [, string sasl_authz_id [, string props]]]]]]])
+@@ -619,8 +937,9 @@
  	_php_sasl_freedefs(ctx);
  }
  /* }}} */
@@ -514,7 +537,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  /* {{{ proto bool ldap_unbind(resource link)
     Unbind from LDAP directory */
  PHP_FUNCTION(ldap_unbind)
-@@ -638,8 +951,9 @@
+@@ -638,8 +957,9 @@
  	RETURN_TRUE;
  }
  /* }}} */
@@ -524,7 +547,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
   */
  static void php_set_opts(LDAP *ldap, int sizelimit, int timelimit, int deref, int *old_sizelimit, int *old_timelimit, int *old_deref)
  {
-@@ -676,8 +990,9 @@
+@@ -676,8 +996,9 @@
  #endif
  	}
  }
@@ -534,7 +557,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  /* {{{ php_ldap_do_search
   */
  static void php_ldap_do_search(INTERNAL_FUNCTION_PARAMETERS, int scope)
-@@ -1344,9 +1659,14 @@
+@@ -1344,9 +1665,14 @@
  	for (i = 0; i<count; i++) {
  		add_index_string(return_value, i, ldap_value[i], 1);
  	}
@@ -549,7 +572,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  /* }}} */
  
  /* {{{ proto string ldap_dn2ufn(string dn)
-@@ -1379,29 +1699,61 @@
+@@ -1379,29 +1705,61 @@
  /* added to fix use of ldap_modify_add for doing an ldap_add, gerrit thomson. */
  #define PHP_LD_FULL_ADD 0xff
  /* {{{ php_ldap_do_modify
@@ -617,7 +640,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  
  	convert_to_string_ex(dn);
  	ldap_dn = Z_STRVAL_PP(dn);
-@@ -1410,15 +1762,8 @@
+@@ -1410,15 +1768,8 @@
  	ldap_mods = safe_emalloc((num_attribs+1), sizeof(LDAPMod *), 0);
  	num_berval = safe_emalloc(num_attribs, sizeof(int), 0);
  	zend_hash_internal_pointer_reset(Z_ARRVAL_PP(entry));
@@ -633,7 +656,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  		ldap_mods[i] = emalloc(sizeof(LDAPMod));
  		ldap_mods[i]->mod_op = oper | LDAP_MOD_BVALUES;
  
-@@ -1471,19 +1816,78 @@
+@@ -1471,19 +1822,78 @@
  		zend_hash_move_forward(Z_ARRVAL_PP(entry));
  	}
  	ldap_mods[num_attribs] = NULL;
@@ -721,7 +744,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  
  errexit:
  	for (i = 0; i < num_attribs; i++) {
-@@ -1496,46 +1900,57 @@
+@@ -1496,46 +1906,57 @@
  	}
  	efree(num_berval);
  	efree(ldap_mods);	
@@ -785,7 +808,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  /* {{{ proto bool ldap_delete(resource link, string dn)
     Delete an entry from a directory */
  PHP_FUNCTION(ldap_delete)
-@@ -1553,9 +1968,14 @@
+@@ -1553,9 +1974,14 @@
  
  	convert_to_string_ex(dn);
  	ldap_dn = Z_STRVAL_PP(dn);
@@ -801,7 +824,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  		RETURN_FALSE;
  	}
  
-@@ -1614,19 +2034,27 @@
+@@ -1614,19 +2040,27 @@
  	RETURN_STRING(ldap_err2string(ld_errno), 1);
  }
  /* }}} */
@@ -837,7 +860,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  
  	ZEND_FETCH_RESOURCE(ld, ldap_linkdata *, link, -1, "ldap link", le_link);
  
-@@ -1635,25 +2063,91 @@
+@@ -1635,25 +2069,91 @@
  	convert_to_string_ex(value);
  
  	ldap_dn = Z_STRVAL_PP(dn);
@@ -855,12 +878,12 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
 +		switch (myargcount) {
 +			case 6:
 +				_php_parse_controls(cctrls, &lcctrls);
- 
--		case LDAP_COMPARE_FALSE:
++
 +			case 5:
 +				_php_parse_controls(sctrls, &lsctrls);
 +		}
-+
+ 
+-		case LDAP_COMPARE_FALSE:
 +		ldap_bvalue.bv_val = Z_STRVAL_PP(value);
 +		ldap_bvalue.bv_len = Z_STRLEN_PP(value);
 +		rc = ldap_compare_ext(ld->link, ldap_dn, ldap_attr, &ldap_bvalue, lsctrls, lcctrls, &msgid);
@@ -940,7 +963,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  /* }}} */
  
  /* {{{ proto bool ldap_sort(resource link, resource result, string sortfilter)
-@@ -1685,14 +2179,177 @@
+@@ -1685,12 +2185,175 @@
  	RETURN_TRUE;
  }
  /* }}} */
@@ -956,8 +979,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
 +/* {{{ proto result ldap_bind_ext(resource link [, string dn, string password])
 +   Bind to LDAP directory */
 +PHP_FUNCTION(ldap_bind_ext)
- {
--	zval **link, **option, **retval;
++{
 +	zval *link;
 +	char *ldap_bind_dn = NULL, *ldap_bind_pw = NULL;
 +	int ldap_bind_dnlen, ldap_bind_pwlen;
@@ -1117,13 +1139,11 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
 +/* {{{ proto bool ldap_get_option(resource link, int option, mixed retval)
 +   Get the current value of various session-wide parameters */
 +PHP_FUNCTION(ldap_get_option) 
-+{
-+	zval **link, **option, **retval;
+ {
+ 	zval **link, **option, **retval;
  	ldap_linkdata *ld;
  	int opt;
- 	
- 	if (ZEND_NUM_ARGS() != 3 || zend_get_parameters_ex(3, &link, &option, &retval) == FAILURE) {
-@@ -1910,20 +2567,21 @@
+@@ -1910,20 +2573,21 @@
  }
  /* }}} */
  
@@ -1149,7 +1169,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  	}
  
  	ZEND_FETCH_RESOURCE(ld, ldap_linkdata *, link, -1, "ldap link", le_link);
-@@ -1932,9 +2590,9 @@
+@@ -1932,9 +2596,9 @@
  	rc = ldap_parse_result(ld->link, ldap_result, &lerrcode,
  				myargcount > 3 ? &lmatcheddn : NULL,
  				myargcount > 4 ? &lerrmsg : NULL,
@@ -1160,7 +1180,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  	if (rc != LDAP_SUCCESS) {
  		php_error_docref(NULL TSRMLS_CC, E_WARNING, "Unable to parse result: %s", ldap_err2string(rc));
  		RETURN_FALSE;
-@@ -1944,19 +2602,17 @@
+@@ -1944,19 +2608,17 @@
  	ZVAL_LONG(*errcode, lerrcode);
  
  	/* Reverse -> fall through */
@@ -1186,7 +1206,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  			zval_dtor(*errmsg);
  			if (lerrmsg == NULL) {
  				ZVAL_EMPTY_STRING(*errmsg);
-@@ -1977,8 +2633,142 @@
+@@ -1977,8 +2639,142 @@
  }
  /* }}} */
  #endif
@@ -1329,7 +1349,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
     Return first reference */
  PHP_FUNCTION(ldap_first_reference)
  {
-@@ -2038,34 +2828,40 @@
+@@ -2038,34 +2834,40 @@
  /* {{{ proto bool ldap_parse_reference(resource link, resource reference_entry, array referrals)
     Extract information from reference entry */
  PHP_FUNCTION(ldap_parse_reference)
@@ -1383,7 +1403,7 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
  }
  /* }}} */
  #endif
-@@ -2281,8 +3077,699 @@
+@@ -2281,8 +3083,699 @@
  }
  /* }}} */
  #endif
@@ -2083,8 +2103,8 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
   * Local variables:
   * tab-width: 4
   * c-basic-offset: 4
---- ext/ldap/config.m4.orig	2007-08-08 13:37:44.000000000 +0200
-+++ ext/ldap/config.m4	2009-07-22 17:42:40.000000000 +0200
+--- ext/ldap/config.m4.orig	2007-08-08 11:37:44.000000000 +0000
++++ ext/ldap/config.m4	2009-09-05 07:07:43.000000000 +0000
 @@ -172,9 +172,11 @@
    fi
  
@@ -2098,8 +2118,8 @@ $NetBSD: ldap-ctrl-exop.patch,v 1.1 2009/07/22 15:59:50 manu Exp $
    dnl
    dnl SASL check
    dnl
---- ext/ldap/php_ldap.h.orig	2008-12-31 12:17:39.000000000 +0100
-+++ ext/ldap/php_ldap.h	2009-07-22 16:45:04.000000000 +0200
+--- ext/ldap/php_ldap.h.orig	2008-12-31 11:17:39.000000000 +0000
++++ ext/ldap/php_ldap.h	2009-09-05 07:07:43.000000000 +0000
 @@ -68,8 +68,16 @@
  PHP_FUNCTION(ldap_error);
  PHP_FUNCTION(ldap_compare);
