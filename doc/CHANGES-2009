@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3650 2009/09/13 01:29:44 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3651 2009/09/13 01:37:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4761,3 +4761,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/geeklog to 1.5.2.5 [taca 2009-09-13]
 	Updated www/typolight27-translations to 20090907 [taca 2009-09-13]
 	Updated mail/mew to 6.2nb2 [taca 2009-09-13]
+	Updated converters/skf to 1.96.2 [obache 2009-09-13]
