@@ -1,0 +1,25 @@
+$NetBSD: patch-gc,v 1.1.2.2 2009/09/13 22:32:50 tron Exp $
+
+Fix build with getline() in libc.
+From http://bugs.gentoo.org/show_bug.cgi?id=270263
+
+--- soltools/mkdepend/parse.c.orig	2006-09-22 17:57:33.000000000 +0900
++++ soltools/mkdepend/parse.c	2009-09-12 20:56:36.000000000 +0900
+@@ -45,7 +45,7 @@
+ 	register int	type;
+ 	boolean recfailOK;
+ 
+-	while ((line = getline(filep))) {
++	while ((line = ooo_getline(filep))) {
+ 		switch(type = deftype(line, filep, file_red, file, TRUE)) {
+ 		case IF:
+ 		doif:
+@@ -167,7 +167,7 @@
+ 	register char	*line;
+ 	register int	type;
+ 
+-	while ((line = getline(filep))) {
++	while ((line = ooo_getline(filep))) {
+ 		switch(type = deftype(line, filep, file_red, file, FALSE)) {
+ 		case IF:
+ 		case IFFALSE:
