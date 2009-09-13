@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3678 2009/09/13 20:46:03 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3679 2009/09/13 22:47:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4789,3 +4789,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CatalystX-Component-Traits to 0.10 [sno 2009-09-13]
 	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.29 [sno 2009-09-13]
 	Updated www/p5-CatalystX-LeakChecker to 0.04 [sno 2009-09-13]
+	Updated mail/mutt-devel to 1.5.20nb2 [wiz 2009-09-13]
