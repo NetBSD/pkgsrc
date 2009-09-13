@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2009/07/08 11:46:32 sno Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/13 19:59:50 sno Exp $
 
-DISTNAME=	Catalyst-Runtime-5.80007
+DISTNAME=	Catalyst-Runtime-5.80012
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -21,14 +21,14 @@ DEPENDS+=	p5-File-Modified>=0:../../devel/p5-File-Modified
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Body>=1.04:../../www/p5-HTTP-Body
 DEPENDS+=	p5-HTTP-Request-AsCGI>=0.8:../../www/p5-HTTP-Request-AsCGI
+DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
-DEPENDS+=	{perl>=5.10,p5-Module-Pluggable>=3.01}:../../devel/p5-Module-Pluggable
+DEPENDS+=	p5-Module-Pluggable>=3.9:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Moose>=0.78:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Emulate-Class-Accessor-Fast>=0.00801:../../devel/p5-MooseX-Emulate-Class-Accessor-Fast
-DEPENDS+=	p5-MooseX-MethodAttributes>=0.12:../../devel/p5-MooseX-MethodAttributes
+DEPENDS+=	p5-MooseX-MethodAttributes>=0.15:../../devel/p5-MooseX-MethodAttributes
 DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
 DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
-#DEPENDS+=	p5-Scope-Upper>=0.06:../../devel/p5-Scope-Upper
 DEPENDS+=	p5-String-RewritePrefix>=0.004:../../textproc/p5-String-RewritePrefix
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
@@ -51,7 +51,8 @@ BUILD_DEPENDS+=	p5-Test-Simple>=0.88:../../devel/p5-Test-Simple
 
 MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skipdeps
 PERL5_PACKLIST= auto/Catalyst/Runtime/.packlist
-PERL5_MODULE_TYPE=	Module::Install
+#PERL5_MODULE_TYPE=	Module::Install::Bundled
+MAKE_PARAMS+=	--skipdeps
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
