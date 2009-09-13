@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
+$NetBSD: patch-aa,v 1.1.1.1.2.1 2009/09/13 14:18:23 tron Exp $
 
---- Makefile.orig	2008-11-29 10:37:55.000000000 -0800
+--- Makefile.orig	2009-08-04 07:54:00.000000000 -0700
 +++ Makefile
-@@ -122,20 +122,6 @@ DEBUG=-g3
+@@ -116,20 +116,6 @@ DEBUG=-g3
  
  # Define standard directories for various platforms
  # These apply if they are not redefined in asterisk.conf 
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
    ASTETCDIR=$(sysconfdir)/asterisk
    ASTLIBDIR=$(libdir)/asterisk
    ASTHEADERDIR=$(includedir)/asterisk
-@@ -145,19 +131,12 @@ else
+@@ -139,19 +125,12 @@ else
    ASTLOGDIR=$(localstatedir)/log/asterisk
    ASTVARRUNDIR=$(localstatedir)/run
    ASTMANDIR=$(mandir)
@@ -44,28 +44,27 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
  
  # Asterisk.conf is located in ASTETCDIR or by using the -C flag
  # when starting Asterisk
-@@ -237,11 +216,6 @@ ifeq ($(AST_DEVMODE),yes)
-   ASTCFLAGS+=-Wformat=2
+@@ -237,10 +216,6 @@ ifeq ($(AST_DEVMODE),yes)
+   _ASTCFLAGS+=-Wformat=2
  endif
  
 -ifneq ($(findstring BSD,$(OSARCH)),)
--  ASTCFLAGS+=-I/usr/local/include
--  ASTLDFLAGS+=-L/usr/local/lib
+-  _ASTCFLAGS+=-isystem /usr/local/include
 -endif
 -
  ifneq ($(PROC),ultrasparc)
-   ASTCFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
+   _ASTCFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
  endif
-@@ -457,7 +431,7 @@ distclean: $(SUBDIRS_DIST_CLEAN) _clean
+@@ -454,7 +429,7 @@ distclean: $(SUBDIRS_DIST_CLEAN) _clean
  	rm -f build_tools/menuselect-deps
  
  datafiles: _all
--	if [ x`$(ID) -un` = xroot ]; then CFLAGS="$(ASTCFLAGS)" sh build_tools/mkpkgconfig $(DESTDIR)/usr/lib/pkgconfig; fi
-+	CFLAGS="$(ASTCFLAGS)" build_tools/mkpkgconfig $(DESTDIR)${PREFIX}/lib/pkgconfig
+-	if [ x`$(ID) -un` = xroot ]; then CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" bash build_tools/mkpkgconfig $(DESTDIR)/usr/lib/pkgconfig; fi
++	CFLAGS="$(ASTCFLAGS)" bash build_tools/mkpkgconfig $(DESTDIR)${PREFIX}/lib/pkgconfig
  # Should static HTTP be installed during make samples or even with its own target ala
  # webvoicemail?  There are portions here that *could* be customized but might also be
  # improved a lot.  I'll put it here for now.
-@@ -499,9 +473,10 @@ NEWHEADERS=$(notdir $(wildcard include/a
+@@ -496,9 +471,10 @@ NEWHEADERS=$(notdir $(wildcard include/a
  OLDHEADERS=$(filter-out $(NEWHEADERS),$(notdir $(wildcard $(DESTDIR)$(ASTHEADERDIR)/*.h)))
  
  installdirs:
@@ -77,7 +76,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
  	mkdir -p $(DESTDIR)$(ASTBINDIR)
  	mkdir -p $(DESTDIR)$(ASTVARRUNDIR)
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/voicemail
-@@ -510,6 +485,7 @@ installdirs:
+@@ -507,6 +483,7 @@ installdirs:
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/tmp
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/meetme
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/monitor
@@ -85,7 +84,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
  
  bininstall: _all installdirs $(SUBDIRS_INSTALL)
  	$(INSTALL) -m 755 main/asterisk $(DESTDIR)$(ASTSBINDIR)/
-@@ -605,22 +581,22 @@ upgrade: bininstall
+@@ -602,22 +579,22 @@ upgrade: bininstall
  # XXX why *.adsi is installed first ?
  adsi:
  	@echo Installing adsi config files...
@@ -113,7 +112,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
  		if [ -f $${dst} ]; then \
  			if [ "$(OVERWRITE)" = "y" ]; then \
  				if cmp -s $${dst} $$x ; then \
-@@ -636,10 +612,10 @@ samples: adsi
+@@ -633,10 +610,10 @@ samples: adsi
  		echo "Installing file $$x"; \
  		$(INSTALL) -m 644 $$x $${dst} ;\
  	done
@@ -126,7 +125,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
  		echo "astetcdir => $(ASTETCDIR)" ; \
  		echo "astmoddir => $(MODULES_DIR)" ; \
  		echo "astvarlibdir => $(ASTVARLIBDIR)" ; \
-@@ -692,7 +668,7 @@ samples: adsi
+@@ -689,7 +666,7 @@ samples: adsi
  		echo "pbx_realtime=1.6" ; \
  		echo "res_agi=1.6" ; \
  		echo "app_set=1.6" ; \
@@ -135,7 +134,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
  	else \
  		echo "Skipping asterisk.conf creation"; \
  	fi
-@@ -826,7 +802,7 @@ uninstall-all: _uninstall
+@@ -823,7 +800,7 @@ uninstall-all: _uninstall
  	rm -rf $(DESTDIR)$(ASTVARLIBDIR)
  	rm -rf $(DESTDIR)$(ASTDATADIR)
  	rm -rf $(DESTDIR)$(ASTSPOOLDIR)

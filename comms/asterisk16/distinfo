@@ -1,9 +1,15 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
+$NetBSD: distinfo,v 1.1.1.1.2.1 2009/09/13 14:18:23 tron Exp $
 
-SHA1 (asterisk-1.6.0.10/asterisk-1.6.0.10.tar.gz) = b1e3a5940add2c3e9a3db3d5a976e91aed2060bd
-RMD160 (asterisk-1.6.0.10/asterisk-1.6.0.10.tar.gz) = 0bfeab2b21bcdb1f53e7c8ea75df2befd2efd303
-Size (asterisk-1.6.0.10/asterisk-1.6.0.10.tar.gz) = 13201068 bytes
-SHA1 (patch-aa) = 7b4d9274385b4f1343311f83048de9593cca4f38
+SHA1 (asterisk-1.6.0.15/asterisk-1.6.0.15.tar.gz) = 31b2ad242d103cef7509e0fae4f31eb0b00a855e
+RMD160 (asterisk-1.6.0.15/asterisk-1.6.0.15.tar.gz) = 0fe6b71b6a9ff9e96b95b17b53be0473af933705
+Size (asterisk-1.6.0.15/asterisk-1.6.0.15.tar.gz) = 23070325 bytes
+SHA1 (asterisk-1.6.0.15/extract-cfile.awk) = c4f08eee1ab83c041bde1ab91672a4a3c43c28b8
+RMD160 (asterisk-1.6.0.15/extract-cfile.awk) = cd59f8e5807732023d5aec95187e2d5572f400a4
+Size (asterisk-1.6.0.15/extract-cfile.awk) = 667 bytes
+SHA1 (asterisk-1.6.0.15/rfc3951.txt) = 1a6c769be750fb02456d60db2470909254496017
+RMD160 (asterisk-1.6.0.15/rfc3951.txt) = 15f7ec61653ec9953172f8f2150e7d8f6f620926
+Size (asterisk-1.6.0.15/rfc3951.txt) = 373442 bytes
+SHA1 (patch-aa) = 162edcd4f451ab3571ab7db766ea60a466726f24
 SHA1 (patch-af) = 09860d714281cb4c65d1a087cf5b16647a16e2fa
 SHA1 (patch-ag) = c71c61350cefbbe53eefa99245ca7712753f22d5
 SHA1 (patch-ai) = e92edab5c1ff323478f41d0b0783102ed527fe39
@@ -13,14 +19,14 @@ SHA1 (patch-am) = 70488cd98c4349d330bfb510d0dfd7e0631c1d8b
 SHA1 (patch-an) = 93a5df66fd6459fb76e9191dc3bf37b9ee5483b5
 SHA1 (patch-ao) = 0663a698469550b22bb97ee1b18980bc2bc67495
 SHA1 (patch-ap) = d60274a44e10dc4e70235ac97b7ae21f37ce713e
-SHA1 (patch-aq) = 4be2a89a66578172f227c966833e666255cce14a
+SHA1 (patch-aq) = 99452989a8446495144f3f261573aa7c48602b0d
 SHA1 (patch-ar) = 44e46336c0b228ab291e025b8bb5ee505f75345a
 SHA1 (patch-as) = a887d37f0829c22d115ff08721893da49e4bfda4
 SHA1 (patch-at) = 7f366ea0075b16c81bb81ba78becc029b3265151
 SHA1 (patch-au) = 47330b597a484b5d29aeca466243369a121b2b3c
 SHA1 (patch-av) = d90ae8aac1d85471cbf22f3cb62315ebbd22a94a
 SHA1 (patch-aw) = 310153eed541d1a6a0c7859f6c032478cd2ff67a
-SHA1 (patch-ax) = 507f219a7edfb72ff30817b82442bac6dc97e762
+SHA1 (patch-ax) = 1cbacb2f46bf6cafc496ea132c0a3086bcc5f9b7
 SHA1 (patch-ay) = a19031a9ef394bff517083e5fff13b5ed6312e0a
 SHA1 (patch-az) = aeaca48bcf19c1592361de0c302ce7d004307081
 SHA1 (patch-ba) = 6ee00f323a3109d7c554aa0bfac13679a63846e1
