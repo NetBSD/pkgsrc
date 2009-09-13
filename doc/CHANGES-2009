@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3652 2009/09/13 01:51:53 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3653 2009/09/13 02:15:29 jun Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4763,3 +4763,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/mew to 6.2nb2 [taca 2009-09-13]
 	Updated converters/skf to 1.96.2 [obache 2009-09-13]
 	Updated devel/ruby-readline to 1.8.7.174nb1 [taca 2009-09-13]
+	Updated editors/emacs22 to 22.3nb4 [jun 2009-09-13]
