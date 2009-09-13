@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2009/07/07 19:07:35 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/09/13 17:28:03 martti Exp $
 
-DISTNAME=		JAlbum${VERSION}
+DISTNAME=		Jalbum${VERSION}
 PKGNAME=		jalbum-${VERSION}
 #PKGREVISION=		1
 CATEGORIES=		www
@@ -11,29 +11,34 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://jalbum.net/
 COMMENT=		Web photo album generator
+
 LICENSE=		gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-VERSION=		7.1
+VERSION=		8.4
 
 USE_JAVA=		run
-PKG_JVMS_ACCEPTED=	blackdown-jdk13 kaffe sun-jdk13 sun-jdk14 sun-jdk15
+PKG_JVMS_ACCEPTED=	sun-jdk15 sun-jdk6
 
-WRKSRC=			${WRKDIR}/JAlbum
+WRKSRC=			${WRKDIR}/Jalbum
 
-INSTALLATION_DIRS+=	${PREFIX:Q}/share/jalbum
+INSTALLATION_DIRS+=	${PREFIX}/share/jalbum
 
 USE_TOOLS+=		pax
 
+post-extract:
+	${ECHO} "===> Removing invalid skins"
+	(cd ${WRKSRC} && rm -rf skins/Chameleon/styles/Black*)
+
 do-build:
-	sed	-e s#@PKG_JAVA_HOME@#${PKG_JAVA_HOME:Q}#g	\
-		-e s#@PREFIX@#${PREFIX:Q}#g			\
-		< ${FILESDIR:Q}/jalbum > ${WRKDIR:Q}/jalbum
+	sed	-e s#@PKG_JAVA_HOME@#${PKG_JAVA_HOME}#g		\
+		-e s#@PREFIX@#${PREFIX}#g			\
+		< ${FILESDIR}/jalbum > ${WRKDIR}/jalbum
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR:Q}/jalbum ${DESTDIR}${PREFIX}/bin
-	(cd ${WRKDIR:Q}/JAlbum && pax -rw * ${DESTDIR}${PREFIX}/share/jalbum)
+	${INSTALL_SCRIPT} ${WRKDIR}/jalbum ${DESTDIR}${PREFIX}/bin
+	(cd ${WRKDIR}/Jalbum && pax -rw * ${DESTDIR}${PREFIX}/share/jalbum)
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
