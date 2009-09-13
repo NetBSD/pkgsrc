@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.104 2009/06/15 12:42:15 tron Exp $
+# $NetBSD: Makefile,v 1.105 2009/09/13 13:31:41 tron Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
 #	usually the most recent.
 
-DISTNAME=	x11-links-0.43
+DISTNAME=	x11-links-0.44
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -36,7 +36,8 @@ PKG_FAIL_REASON+=	"${PKGNAME} requires X headers to be installed"
 .  include "xdec.mk"
 .elif !empty(X11BASE:M*openwin)
 .  include "openwin.mk"
-.elif exists(${X11BASE}/lib/X11/config/xorgversion.def)
+.elif exists(${X11BASE}/lib/X11/config/xorgversion.def) || \
+      exists(${X11BASE}/lib/pkgconfig/xorg-server.pc)
 .  include "xorg.mk"
 .else
 .  include "xfree.mk"
