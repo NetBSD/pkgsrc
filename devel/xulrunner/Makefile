@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2009/09/13 12:19:26 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2009/09/13 13:39:41 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
 XULRUNNER_VER=	1.9.1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--disable-gnomevfs --disable-gnomeui
 CONFIGURE_ARGS+=	--disable-dbus --disable-javaxpcom
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 CONFIGURE_ARGS+=	--enable-svg --enable-mathml
-CONFIGURE_ARGS+=	--enable-system-cairo --enable-system-lcms
+CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
 CONFIGURE_ARGS+=	--enable-system-sqlite
@@ -122,7 +122,6 @@ post-install:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/lcms/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
