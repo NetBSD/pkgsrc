@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/09/13 10:53:40 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/13 11:22:58 tnn Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -18,13 +18,13 @@ CONFIGURE_ARGS+=	--enable-browser-plugins
 
 BROWSER_PLUGINS=	cone gmp mully narrowspace
 
-INSTALLATION_DIRS=	lib/mozilla/plugins
+INSTALLATION_DIRS=	lib/netscape/plugins
 INSTALLATION_DIRS+=	libexec
 
 do-install:
 .for plugin in ${BROWSER_PLUGINS}
 	cd ${WRKSRC}/browser-plugin && ${LIBTOOL} --mode=install ${INSTALL_DATA} \
-	 libtotem-${plugin}-plugin.la ${DESTDIR}${PREFIX}/lib/mozilla/plugins
+	 libtotem-${plugin}-plugin.la ${DESTDIR}${PREFIX}/lib/netscape/plugins
 .endfor
 	cd ${WRKSRC}/browser-plugin && ${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
 	 totem-plugin-viewer ${DESTDIR}${PREFIX}/libexec
