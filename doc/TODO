@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8463 2009/09/13 10:29:20 sno Exp $
+$NetBSD: TODO,v 1.8464 2009/09/13 11:17:49 sno Exp $
 
 Suggested new packages
 ======================
@@ -643,7 +643,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gpsdrive-2.09
 	o gramofile-1.6P
 	o granulate-0.2
-	o graphviz-2.24.0
 	o grep-2.5.4
 	o gsasl-1.2
 	o gsharutils-4.7
