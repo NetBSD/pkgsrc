@@ -1,0 +1,28 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2009/09/13 19:57:13 manu Exp $
+#
+
+# used by security/cy2-saml/Makefile
+# used by security/pam-saml/Makefile
+
+DISTNAME=	crudesaml-0.5
+CATEGORIES=	security
+MASTER_SITES=	http://ftp.espci.fr/pub/crudesaml
+
+MAINTAINER=	manu@NetBSD.org
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES+=	c
+
+DISTINFO_FILE=	${.CURDIR}/../../security/crudesaml/distinfo
+
+CONFIGURE_ARGS+=--with-sasl2=${PREFIX}
+
+.include "../../security/cyrus-sasl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../security/lasso/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
+
+# url2pkg-marker (please do not remove this line.)
+.include "../../mk/bsd.pkg.mk"
