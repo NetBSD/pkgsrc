@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.78 2009/08/14 17:21:20 minskim Exp $
+# $NetBSD: Makefile,v 1.79 2009/09/13 01:28:50 taca Exp $
 
 DISTNAME=	mew-6.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mew.org/Release/
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.mew.org/
 COMMENT=	Messaging in the Emacs World
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${MEW_CONTRIB_DIR:C|^${PREFIX}/||}
+
+DEPENDS+=	${RUBY_PKGPREFIX}-sqlite3>=1.1:../../databases/ruby-sqlite3
 
 CONFLICTS+=	mew-xemacs-[0-9]* incm-[0-9]*
 
@@ -39,6 +42,8 @@ SUBST_STAGE.local=	post-configure
 SUBST_FILES.local=	Makefile bin/configure info/Makefile
 SUBST_SED.local=	-e 's|/usr/local|${PREFIX}|g'
 
+REPLACE_RUBY=		bin/cmew bin/smew
+
 post-configure:
 	${MV} ${WRKSRC}/mew-key.el ${WRKSRC}/mew-key.el.1
 	${SED} -e 's|@ICONDIR@|${EMACS_ETCPREFIX}/mew|g' \
@@ -49,4 +54,5 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../editors/emacs/modules.mk"
+.include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
