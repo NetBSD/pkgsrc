@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3658 2009/09/13 11:17:49 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3659 2009/09/13 11:33:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4769,3 +4769,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/py-anita to 1.6 [gson 2009-09-13]
 	Updated multimedia/p5-xmltv to 0.5.56 [sno 2009-09-13]
 	Updated graphics/graphviz to 2.24.0 [sno 2009-09-13]
+	Updated time/p5-DateTime-Locale to 0.44 [sno 2009-09-13]
