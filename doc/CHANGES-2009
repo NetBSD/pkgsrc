@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3655 2009/09/13 08:26:48 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3656 2009/09/13 10:16:46 gson Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4766,3 +4766,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/emacs22 to 22.3nb4 [jun 2009-09-13]
 	Updated misc/openoffice2 to 2.4.3 [hira 2009-09-13]
 	Removed parallel/openpbs [asau 2009-09-13]
+	Updated misc/py-anita to 1.6 [gson 2009-09-13]
