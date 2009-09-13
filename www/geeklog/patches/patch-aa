@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2009/05/26 14:19:29 taca Exp $
+$NetBSD: patch-aa,v 1.3.2.1 2009/09/13 14:57:36 tron Exp $
+
+* Correct interpreter path.
 
 --- emailgeeklogstories.orig	2008-12-14 18:57:36.000000000 +0900
 +++ emailgeeklogstories
