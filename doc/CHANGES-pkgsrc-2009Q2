@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.52 2009/09/13 15:05:12 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.53 2009/09/13 22:35:55 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -184,3 +184,5 @@ Pullup ticket #2889 - requested by taca
 geeklog: security update
 Pullup ticket #2892 - requested by tron
 apache22: security patch
+Pullup ticket #2890 - requested by hira
+openoffice2: security update
