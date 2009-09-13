@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2009/09/13 17:56:56 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2009/09/13 19:10:10 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xulrunner
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome
@@ -21,12 +21,12 @@ NANOJIT_ARCH.sparc=	Sparc
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgnome)
-.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gnomevfs --enable-dbus
+CONFIGURE_ARGS+=	--enable-gnomevfs --enable-dbus --enable-gnomeui
 PLIST.gnome=		yes
 .else
-CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus
+CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus --disable-gnomeui
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
