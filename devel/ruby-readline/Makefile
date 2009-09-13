@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2009/06/10 12:48:07 taca Exp $
+# $NetBSD: Makefile,v 1.28 2009/09/13 01:51:05 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGPREFIX}-readline-${RUBY_VERSION_SUFFIX}
+PKGREVISION=		1
 CATEGORIES=		devel ruby
 MASTER_SITES=		${MASTER_SITE_RUBY}
 
@@ -26,6 +27,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/readline
 .endfor
 
+.include "options.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/ruby/Makefile.common"
