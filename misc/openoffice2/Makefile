@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2009/06/14 22:58:05 joerg Exp $
+# $NetBSD: Makefile,v 1.69.2.1 2009/09/13 22:32:50 tron Exp $
 #
 
-OO_VER=			2.4.2
+OO_VER=			2.4.3
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
-PKGREVISION=		9
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
@@ -30,7 +29,7 @@ DEPENDS+=		libpaper-[0-9]*:../../print/libpaper
 
 .include "../../mk/bsd.prefs.mk"
 
-WRKSRC=			${WRKDIR}/OOH680_m18
+WRKSRC=			${WRKDIR}/OOH680_m21
 CONFIGURE_DIRS=		config_office
 
 # Cannot compile with 3.3.x (GCC Bugzilla Bug 16879).
@@ -90,12 +89,12 @@ CONFIGURE_ENV+=		BLNK_PREFIX_nas=${BUILDLINK_PREFIX.nas}
 CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENBRK=${PREFIX}/bin/genbrk
 CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENCCODE=${PREFIX}/sbin/genccode
 CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENCMN=${PREFIX}/sbin/gencmn
-CONFIGURE_ENV+=		USE_BUILTIN_openssl=${USE_BUILTIN.openssl}
 
 CONFIGURE_ARGS+=	--with-use-shell=bash
 CONFIGURE_ARGS+=	--enable-binfilter
 CONFIGURE_ARGS+=	--enable-cairo
 CONFIGURE_ARGS+=	--disable-ldap
+CONFIGURE_ARGS+=	--disable-vba
 CONFIGURE_ARGS+=	--with-system-stdlibs
 CONFIGURE_ARGS+=	--with-system-curl
 CONFIGURE_ARGS+=	--with-system-db
@@ -105,8 +104,6 @@ CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-libxml2
 CONFIGURE_ARGS+=	--with-system-libxslt
-CONFIGURE_ARGS+=	--with-system-neon
-CONFIGURE_ARGS+=	--with-system-openssl
 CONFIGURE_ARGS+=	--with-system-python
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-dynamic-xinerama
@@ -196,13 +193,11 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../www/neon/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"

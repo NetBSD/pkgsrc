@@ -1,0 +1,16 @@
+$NetBSD: patch-gb,v 1.1.2.2 2009/09/13 22:32:50 tron Exp $
+
+Fix build with getline() in libc.
+From http://bugs.gentoo.org/show_bug.cgi?id=270263
+
+--- soltools/mkdepend/main.c.orig	2007-10-15 23:29:29.000000000 +0900
++++ soltools/mkdepend/main.c	2009-09-12 20:53:46.000000000 +0900
+@@ -543,7 +543,7 @@
+  * Get the next line.  We only return lines beginning with '#' since that
+  * is all this program is ever interested in.
+  */
+-char *getline(filep)
++char *ooo_getline(filep)
+ 	register struct filepointer	*filep;
+ {
+ 	register char	*p,	/* walking pointer */
