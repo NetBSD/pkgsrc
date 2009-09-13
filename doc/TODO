@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8461 2009/09/13 03:57:00 hira Exp $
+$NetBSD: TODO,v 1.8462 2009/09/13 08:30:02 asau Exp $
 
 Suggested new packages
 ======================
@@ -316,6 +316,11 @@ Suggested new packages
 	sage
 	http://www.sagemath.org/
 	Open-source alternative to Magma, Maple, Mathematica, Matlab.
+
+	Torque
+	http://www.clusterresources.com/products/torque-resource-manager.php
+	Open source batch jobs resource manager, successor to OpenPBS.
+
 
 Suggested package updates
 =========================
