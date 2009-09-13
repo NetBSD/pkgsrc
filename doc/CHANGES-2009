@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3651 2009/09/13 01:37:20 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3652 2009/09/13 01:51:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4762,3 +4762,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20090907 [taca 2009-09-13]
 	Updated mail/mew to 6.2nb2 [taca 2009-09-13]
 	Updated converters/skf to 1.96.2 [obache 2009-09-13]
+	Updated devel/ruby-readline to 1.8.7.174nb1 [taca 2009-09-13]
