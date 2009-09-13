@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/07/18 21:27:19 sno Exp $
+$NetBSD: distinfo,v 1.6 2009/09/13 19:25:53 sno Exp $
 
-SHA1 (RPC-XML-0.67.tar.gz) = c0b13093c16dad653dc49b9f0c6a17cdb53cf2d7
-RMD160 (RPC-XML-0.67.tar.gz) = 967907146df2d70269de5468258d0e3b82d59d69
-Size (RPC-XML-0.67.tar.gz) = 158785 bytes
+SHA1 (RPC-XML-0.69.tar.gz) = 839c44f1a00d4f3390e21c8b7d77863d8abbab56
+RMD160 (RPC-XML-0.69.tar.gz) = a04c8254ccd25503b7094912d2603af90180fd7b
+Size (RPC-XML-0.69.tar.gz) = 170607 bytes
