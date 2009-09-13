@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:31:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3.2.1 2009/09/13 14:18:23 tron Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -264,20 +264,23 @@ libdata/asterisk/images/asterisk-intro.jpg
 libdata/asterisk/images/kpad2.jpg
 libdata/asterisk/keys/freeworlddialup.pub
 libdata/asterisk/keys/iaxtel.pub
-libdata/asterisk/moh/.asterisk-moh-freeplay-wav
-libdata/asterisk/moh/CHANGES-asterisk-moh-freeplay-wav
-libdata/asterisk/moh/LICENSE-asterisk-moh-freeplay-wav
-libdata/asterisk/moh/fpm-calm-river.wav
-libdata/asterisk/moh/fpm-sunshine.wav
-libdata/asterisk/moh/fpm-world-mix.wav
+libdata/asterisk/moh/.asterisk-moh-opsound-wav
+libdata/asterisk/moh/CHANGES-asterisk-moh-opsound-2.01
+libdata/asterisk/moh/CREDITS-asterisk-moh-opsound-2.01
+libdata/asterisk/moh/LICENSE-asterisk-moh-opsound-2.01
+libdata/asterisk/moh/macroform-cold_day.wav
+libdata/asterisk/moh/macroform-robot_dity.wav
+libdata/asterisk/moh/macroform-the_simplicity.wav
+libdata/asterisk/moh/manolo_camp-morning_coffee.wav
+libdata/asterisk/moh/reno_project-system.wav
 libdata/asterisk/phoneprov/000000000000-directory.xml
 libdata/asterisk/phoneprov/000000000000-phone.cfg
 libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
-libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.14
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.14
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.14
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.14
+libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.15
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.15
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.15
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.15
 libdata/asterisk/sounds/en/agent-alreadyon.gsm
 libdata/asterisk/sounds/en/agent-incorrect.gsm
 libdata/asterisk/sounds/en/agent-loggedoff.gsm
@@ -928,6 +931,7 @@ libdata/asterisk/static-http/docs/node275.html
 libdata/asterisk/static-http/docs/node276.html
 libdata/asterisk/static-http/docs/node277.html
 libdata/asterisk/static-http/docs/node278.html
+libdata/asterisk/static-http/docs/node279.html
 libdata/asterisk/static-http/docs/node28.html
 libdata/asterisk/static-http/docs/node29.html
 libdata/asterisk/static-http/docs/node3.html
