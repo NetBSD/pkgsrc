@@ -1,0 +1,24 @@
+$NetBSD: patch-bb,v 1.1.2.2 2009/09/13 14:57:36 tron Exp $
+
+* Documentation update for Geeklog 1.5.2sr5 which isn't contained in
+  geeklog-1.5.2sr4-upgrade.tar.gz.
+
+--- public_html/docs/history.orig	2009-04-18 16:47:32.000000000 +0900
++++ public_html/docs/history
+@@ -1,5 +1,16 @@
+ Geeklog History/Changes:
+ 
++Jul 30, 2009 (1.5.2sr5)
++------------
++
++This release addresses the following security issues:
++- Gerendi Sandor Attila reported an XSS in the forms to email a user and to
++  email a story to a friend.
++- The "Mail Story to a Friend" function didn't check story permissions, so that
++  it was possible to email a story even if you didn't have the permissions to
++  view it on the site.
++
++
+ Apr 18, 2009 (1.5.2sr4)
+ ------------
+ 

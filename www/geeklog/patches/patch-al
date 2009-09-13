@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.1.2.2 2009/09/13 14:57:36 tron Exp $
+
+* Send correct charset parameter.
+
+--- public_html/admin/install/help.php.orig	2009-01-23 04:19:55.000000000 +0900
++++ public_html/admin/install/help.php
+@@ -141,6 +141,7 @@ $display .= '<head>
+ </body>
+ </html>' . LB;
+ 
++header('Content-Type: text/html; charset=' . $LANG_CHARSET);
+ echo $display;
+ 
+ ?>

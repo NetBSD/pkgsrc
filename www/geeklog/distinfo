@@ -1,7 +1,16 @@
-$NetBSD: distinfo,v 1.9 2009/05/26 14:19:29 taca Exp $
+$NetBSD: distinfo,v 1.9.2.1 2009/09/13 14:57:36 tron Exp $
 
+SHA1 (fckeditor-2.6.4.1-updated.tar.gz) = 60008ea4ee12a9951b7e05cb76922afe5d103fb6
+RMD160 (fckeditor-2.6.4.1-updated.tar.gz) = 75ee469a39508085e5360e6d53168f01d1faa65d
+Size (fckeditor-2.6.4.1-updated.tar.gz) = 832636 bytes
 SHA1 (geeklog-1.5.2sr4.tar.gz) = fa0e1e97a8d3fa7ccdff0835eb0bd0e963d5bc24
 RMD160 (geeklog-1.5.2sr4.tar.gz) = a218749173c0c4e1aba322759f7ee32d20ec166d
 Size (geeklog-1.5.2sr4.tar.gz) = 4499082 bytes
-SHA1 (patch-aa) = 56252ea1af7abe3aec8c99f11788f58de0015948
-SHA1 (patch-aj) = 846d860115d4108454799599ce41ead262efba92
+SHA1 (patch-aa) = 61cc381e4c3def555806ed4589446f466f6f8368
+SHA1 (patch-aj) = a7ff9d20a1313ace5f4ea4c46f5e8b087748e4e3
+SHA1 (patch-ak) = 5d49a7fd449b3905fe7a2177a636be3db7b45e33
+SHA1 (patch-al) = 6ebcfe407ad8b84a41130f6f7c2a26cf5b96f6c1
+SHA1 (patch-ba) = 74850e68510f37e4da762b247e5b68992acd7c18
+SHA1 (patch-bb) = cd6586fd10747231aa92efbdc59944f61d1cb7be
+SHA1 (patch-bc) = fab4ff8b9fa00b40d96bb580055b6773d0774abb
+SHA1 (patch-bd) = d09def0a09c9cbfc846e630acd1208beebfc2224
