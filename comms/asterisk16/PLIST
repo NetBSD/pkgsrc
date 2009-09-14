@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/20 20:37:06 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/09/14 08:44:51 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -272,9 +272,9 @@ libdata/asterisk/images/kpad2.jpg
 libdata/asterisk/keys/freeworlddialup.pub
 libdata/asterisk/keys/iaxtel.pub
 libdata/asterisk/moh/.asterisk-moh-opsound-wav
-libdata/asterisk/moh/CHANGES-asterisk-moh-opsound-wav
-libdata/asterisk/moh/CREDITS-asterisk-moh-opsound-wav
-libdata/asterisk/moh/LICENSE-asterisk-moh-opsound-wav
+libdata/asterisk/moh/CHANGES-asterisk-moh-opsound-2.01
+libdata/asterisk/moh/CREDITS-asterisk-moh-opsound-2.01
+libdata/asterisk/moh/LICENSE-asterisk-moh-opsound-2.01
 libdata/asterisk/moh/macroform-cold_day.wav
 libdata/asterisk/moh/macroform-robot_dity.wav
 libdata/asterisk/moh/macroform-the_simplicity.wav
@@ -943,6 +943,7 @@ libdata/asterisk/static-http/docs/node275.html
 libdata/asterisk/static-http/docs/node276.html
 libdata/asterisk/static-http/docs/node277.html
 libdata/asterisk/static-http/docs/node278.html
+libdata/asterisk/static-http/docs/node279.html
 libdata/asterisk/static-http/docs/node28.html
 libdata/asterisk/static-http/docs/node29.html
 libdata/asterisk/static-http/docs/node3.html
@@ -1122,3 +1123,5 @@ share/examples/asterisk/users.conf
 share/examples/asterisk/voicemail.conf
 share/examples/asterisk/vpb.conf
 share/examples/rc.d/asterisk
+@pkgdir libdata/asterisk/sounds/fr
+@pkgdir libdata/asterisk/sounds/es
