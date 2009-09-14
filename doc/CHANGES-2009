@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3679 2009/09/13 22:47:41 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3680 2009/09/14 06:11:40 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4790,3 +4790,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.29 [sno 2009-09-13]
 	Updated www/p5-CatalystX-LeakChecker to 0.04 [sno 2009-09-13]
 	Updated mail/mutt-devel to 1.5.20nb2 [wiz 2009-09-13]
+	Updated mail/dovecot to 1.1.19 [ghen 2009-09-14]
+	Updated mail/dovecot-sieve to 1.1.7 [ghen 2009-09-14]
