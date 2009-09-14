@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3681 2009/09/14 06:42:15 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3682 2009/09/14 06:48:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4793,3 +4793,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/dovecot to 1.1.19 [ghen 2009-09-14]
 	Updated mail/dovecot-sieve to 1.1.7 [ghen 2009-09-14]
 	Updated devel/p5-Parse-Method-Signatures to 1.003012 [sno 2009-09-14]
+	Updated devel/p5-TryCatch to 1.002000 [sno 2009-09-14]
