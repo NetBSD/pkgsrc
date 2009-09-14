@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8466 2009/09/14 08:46:15 jnemeth Exp $
+$NetBSD: TODO,v 1.8467 2009/09/14 08:47:52 taca Exp $
 
 Suggested new packages
 ======================
@@ -861,7 +861,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpop-1.0.18
 	o mserv-devel-0.41
 	o msf-2.7
-	o msmtp-1.4.18 [pkg/42054]
 	o mtools-4.0.11
 	o multitail-5.2.2
 	o munin-1.3.4
