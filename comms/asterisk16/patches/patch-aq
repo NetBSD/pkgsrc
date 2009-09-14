@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.2 2009/07/07 08:14:43 jnemeth Exp $
+$NetBSD: patch-aq,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
 
---- configure.orig	2009-03-19 11:14:55.000000000 -0700
+--- configure.orig	2009-06-16 12:28:00.000000000 -0700
 +++ configure
-@@ -18161,6 +18161,144 @@ _ACEOF
+@@ -19395,6 +19395,144 @@ _ACEOF
  fi
  
  
@@ -145,9 +145,9 @@ $NetBSD: patch-aq,v 1.2 2009/07/07 08:14:43 jnemeth Exp $
 +fi
 +
  
- { echo "$as_me:$LINENO: checking for int" >&5
- echo $ECHO_N "checking for int... $ECHO_C" >&6; }
-@@ -31464,6 +31602,8 @@ _ACEOF
+ # The cast to long int works around a bug in the HP C Compiler
+ # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
+@@ -33094,6 +33232,8 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
