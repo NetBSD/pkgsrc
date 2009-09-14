@@ -1,0 +1,31 @@
+$NetBSD: patch-af,v 1.1 2009/09/14 10:07:04 tnn Exp $
+
+--- plugin/npunix.c.orig	2008-12-07 20:35:14.000000000 +0100
++++ plugin/npunix.c
+@@ -241,6 +241,7 @@ NPN_ForceRedraw(NPP instance)
+     CallNPN_ForceRedrawProc(gNetscapeFuncs.forceredraw, instance);
+ }
+ 
++#if 0
+ void NPN_PushPopupsEnabledState(NPP instance, NPBool enabled)
+ {
+     CallNPN_PushPopupsEnabledStateProc(gNetscapeFuncs.pushpopupsenabledstate,
+@@ -252,6 +253,7 @@ void NPN_PopPopupsEnabledState(NPP insta
+     CallNPN_PopPopupsEnabledStateProc(gNetscapeFuncs.poppopupsenabledstate,
+         instance);
+ }
++#endif
+ 
+ 
+ 
+@@ -488,8 +490,10 @@ NP_Initialize(NPNetscapeFuncs* nsTable, 
+ #endif
+         gNetscapeFuncs.getvalue      = nsTable->getvalue;
+         gNetscapeFuncs.setvalue      = nsTable->setvalue;
++#if 0
+         gNetscapeFuncs.pushpopupsenabledstate = nsTable->pushpopupsenabledstate;
+         gNetscapeFuncs.poppopupsenabledstate  = nsTable->poppopupsenabledstate;
++#endif
+ 
+         /*
+          * Set up the plugin function table that Netscape will use to
