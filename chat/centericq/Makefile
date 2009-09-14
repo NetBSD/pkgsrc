@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.70 2008/05/13 15:20:35 obache Exp $
+# $NetBSD: Makefile,v 1.71 2009/09/14 22:18:56 zafer Exp $
 #
 
 DISTNAME=	centericq-4.21.0
 PKGREVISION=	6
 CATEGORIES=	chat
-MASTER_SITES=	http://thekonst.net/download/ \
-		http://centericq.de/archive/source/releases/
+MASTER_SITES=	http://thekonst.net/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
