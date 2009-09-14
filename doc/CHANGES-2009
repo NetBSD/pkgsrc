@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3685 2009/09/14 06:56:23 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3686 2009/09/14 08:45:11 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4797,3 +4797,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed multimedia/mplayer-plugin-seamonkey-gtk1 [tnn 2009-09-14]
 	Updated devel/p5-common-sense to 2.0 [sno 2009-09-14]
 	Updated devel/p5-Devel-FindRef to 1.422 [sno 2009-09-14]
+	Updated comms/asterisk16 to 1.6.1.6 [jnemeth 2009-09-14]
