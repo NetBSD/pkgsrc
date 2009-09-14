@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2009/09/13 14:43:01 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2009/09/14 10:35:18 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gramps3
 PKG_SUPPORTED_OPTIONS=	graphviz enchant freefont
-PKG_SUGGESTED_OPTIONS=	graphviz enchant freefont
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,5 +15,5 @@ DEPENDS+=	freefont-ttf-[0-9]*:../../fonts/freefont-ttf
 .endif
 
 .if !empty(PKG_OPTIONS:Mgraphviz)
-.include "../../graphics/graphviz/buildlink3.mk"
+DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 .endif
