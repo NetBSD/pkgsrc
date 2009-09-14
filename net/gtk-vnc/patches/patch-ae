@@ -1,0 +1,36 @@
+$NetBSD: patch-ae,v 1.1 2009/09/14 10:07:04 tnn Exp $
+
+--- configure.orig	2009-09-14 11:46:27.000000000 +0200
++++ configure
+@@ -33088,12 +33088,12 @@ if test -n "$NSPR_CFLAGS"; then
+     pkg_cv_NSPR_CFLAGS="$NSPR_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"nspr >= \$NSPR_REQUIRED\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "nspr >= $NSPR_REQUIRED") 2>&5
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"mozilla-nspr >= \$NSPR_REQUIRED\"") >&5
++  ($PKG_CONFIG --exists --print-errors "mozilla-nspr >= $NSPR_REQUIRED") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_NSPR_CFLAGS=`$PKG_CONFIG --cflags "nspr >= $NSPR_REQUIRED" 2>/dev/null`
++  pkg_cv_NSPR_CFLAGS=`$PKG_CONFIG --cflags "mozilla-nspr >= $NSPR_REQUIRED" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -33104,12 +33104,12 @@ if test -n "$NSPR_LIBS"; then
+     pkg_cv_NSPR_LIBS="$NSPR_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"nspr >= \$NSPR_REQUIRED\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "nspr >= $NSPR_REQUIRED") 2>&5
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"mozilla-nspr >= \$NSPR_REQUIRED\"") >&5
++  ($PKG_CONFIG --exists --print-errors "mozilla-nspr >= $NSPR_REQUIRED") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_NSPR_LIBS=`$PKG_CONFIG --libs "nspr >= $NSPR_REQUIRED" 2>/dev/null`
++  pkg_cv_NSPR_LIBS=`$PKG_CONFIG --libs "mozilla-nspr >= $NSPR_REQUIRED" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
