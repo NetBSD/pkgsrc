@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/14 08:56:08 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/14 08:59:44 tnn Exp $
 #
 
 DISTNAME=		mplayerplug-in-3.55
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mplayerplug-in/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mplayerplug-in.sourceforge.net/
-COMMENT=		Mplayer plug-in for ${BROWSER}
+COMMENT=		Mplayer plug-in for Gecko-based browsers
 
 DEPENDS+=		mplayer>=0.92:../../multimedia/mplayer
 
