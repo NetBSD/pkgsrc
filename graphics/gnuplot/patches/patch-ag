@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2009/09/14 18:52:03 asau Exp $
+
+NetBSD editline keeps header files in "readline", not "editline".
+Same applies to DragonFly.
+
+--- configure.orig	2009-09-14 17:37:45.000000000 +0400
++++ configure	2009-09-14 17:37:54.000000000 +0400
+@@ -9178,7 +9178,7 @@
+ _ACEOF
+ 
+ 
+-for ac_header in editline/readline.h
++for ac_header in readline/readline.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then

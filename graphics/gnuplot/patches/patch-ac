@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2009/09/14 18:52:03 asau Exp $
+
+NetBSD editline keeps header files in "readline", not "editline".
+Same applies to DragonFly.
+
+--- src/gp_hist.h.orig	2008-12-15 07:18:36.000000000 +0300
++++ src/gp_hist.h	2009-09-14 17:12:18.000000000 +0400
+@@ -70,7 +70,7 @@
+  * (almost) compatible readline relacement
+  */
+ #if defined(HAVE_LIBEDITLINE)
+-# include <editline/readline.h>
++# include <readline/history.h>
+ #endif
+ 
+ #if defined(READLINE) && !defined(HAVE_LIBREADLINE) && !defined(HAVE_LIBEDITLINE)
