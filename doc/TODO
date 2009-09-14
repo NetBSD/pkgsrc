@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8465 2009/09/13 11:52:14 sno Exp $
+$NetBSD: TODO,v 1.8466 2009/09/14 08:46:15 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -404,7 +404,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aspell-norwegian-2.0.10
 	o aspell-ukrainian-1.3.3
 	o ast-ksh-20080624 [pkg/37854]
-	o asterisk16-1.6.1.6
 	o astyle-1.15.3
 	o asymptote-1.86
 	o atari800-2.1.0
