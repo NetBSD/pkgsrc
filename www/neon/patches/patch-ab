@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2009/07/24 18:06:04 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2009/09/14 16:48:44 tron Exp $
 
---- src/ne_socket.c.orig	2009-06-09 15:34:34.000000000 +0200
-+++ src/ne_socket.c
-@@ -1192,6 +1192,9 @@ static int do_bind(int fd, int peer_fami
+--- src/ne_socket.c.orig	2009-08-18 14:16:07.000000000 +0100
++++ src/ne_socket.c	2009-09-14 13:40:37.000000000 +0100
+@@ -1192,6 +1192,9 @@
          in6.sin6_port = htons(port);
          /* fill in the _family field for AIX 4.3, which forgets to do so. */
          in6.sin6_family = AF_INET6;
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.1 2009/07/24 18:06:04 drochner Exp $
  
          return bind(fd, (struct sockaddr *)&in6, sizeof in6);
      } else
-@@ -1210,6 +1213,9 @@ static int do_bind(int fd, int peer_fami
+@@ -1210,6 +1213,9 @@
          }
          in.sin_port = htons(port);
          in.sin_family = AF_INET;
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.1 2009/07/24 18:06:04 drochner Exp $
  
          return bind(fd, (struct sockaddr *)&in, sizeof in);
      }
-@@ -1328,7 +1334,7 @@ ne_inet_addr *ne_sock_peer(ne_socket *so
+@@ -1329,7 +1335,7 @@
  
      ia = ne_calloc(sizeof *ia);
  #ifdef USE_GETADDRINFO
@@ -30,8 +30,8 @@ $NetBSD: patch-ab,v 1.1 2009/07/24 18:06:04 drochner Exp $
 +    ia->ai_addr = ne_malloc(len);
      ia->ai_addrlen = len;
      memcpy(ia->ai_addr, sad, len);
-     ia->ai_family = sad->sa_family;
-@@ -1364,6 +1370,9 @@ ne_inet_addr *ne_iaddr_make(ne_iaddr_typ
+     ia->ai_family = saun.sa.sa_family;
+@@ -1365,6 +1371,9 @@
  	ia->ai_addr = (struct sockaddr *)in4;
  	ia->ai_addrlen = sizeof *in4;
  	in4->sin_family = AF_INET;
@@ -41,7 +41,7 @@ $NetBSD: patch-ab,v 1.1 2009/07/24 18:06:04 drochner Exp $
  	memcpy(&in4->sin_addr.s_addr, raw, sizeof in4->sin_addr.s_addr);
      }
  #ifdef AF_INET6
-@@ -1373,6 +1382,9 @@ ne_inet_addr *ne_iaddr_make(ne_iaddr_typ
+@@ -1374,6 +1383,9 @@
  	ia->ai_addr = (struct sockaddr *)in6;
  	ia->ai_addrlen = sizeof *in6;
  	in6->sin6_family = AF_INET6;
