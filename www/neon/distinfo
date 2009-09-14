@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.20 2009/07/24 18:06:04 drochner Exp $
+$NetBSD: distinfo,v 1.21 2009/09/14 16:48:43 tron Exp $
 
-SHA1 (neon-0.28.5.tar.gz) = cc07c9d2967cf9b290514ad2fc756abe1f854eba
-RMD160 (neon-0.28.5.tar.gz) = 21abcf12dd813bc464f6579995ff8912a9e1996e
-Size (neon-0.28.5.tar.gz) = 777079 bytes
-SHA1 (patch-aa) = e6284e486fa5789a65827a4d6c1b4d0911523774
-SHA1 (patch-ab) = 0a507c119c703f11de9ed6728e9de43a61fac5a9
+SHA1 (neon-0.29.0.tar.gz) = 8d2e1609b2a3b13a6e68e58c26b1d708302e05ef
+RMD160 (neon-0.29.0.tar.gz) = 338f6ff1589a01dee66cd31a72c45f3a57914ab8
+Size (neon-0.29.0.tar.gz) = 879186 bytes
+SHA1 (patch-ab) = da95144b8c4ebc7cdd5ae0dfdb86d457c43ec58d
