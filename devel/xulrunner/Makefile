@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2009/09/13 20:02:35 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2009/09/14 15:12:12 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
 XULRUNNER_VER=	1.9.1.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -66,7 +66,9 @@ SUBST_FILES.fix-paths=		xpcom/build/nsXPCOMPrivate.h
 SUBST_FILES.fix-paths+=		xulrunner/app/nsRegisterGREUnix.cpp
 SUBST_FILES.fix-paths+=		xulrunner/installer/Makefile.in
 SUBST_FILES.fix-paths+=		extensions/java/xpcom/interfaces/org/mozilla/xpcom/Mozilla.java
+SUBST_FILES.fix-paths+=		xpcom/io/nsAppFileLocationProvider.cpp
 SUBST_SED.fix-paths=		-e 's,/etc/gre.d,${PREFIX}/lib/xulrunner/gre.d,g'
+SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
 
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
