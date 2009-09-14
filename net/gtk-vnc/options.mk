@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/04/06 10:17:32 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2009/09/14 10:07:03 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk-vnc
-PKG_SUPPORTED_OPTIONS=	python firefox
+PKG_SUPPORTED_OPTIONS=	python plugin
 
 .include "../../mk/bsd.options.mk"
 
@@ -15,10 +15,9 @@ PLIST.python=	yes
 CONFIGURE_ARGS+=	--with-python=no
 .endif
 
-PLIST_VARS+=	firefox
-.if !empty(PKG_OPTIONS:Mfirefox)
-.include "../../devel/nspr/buildlink3.mk"
-.include "../../www/firefox/buildlink3.mk"
+PLIST_VARS+=	plugin
+.if !empty(PKG_OPTIONS:Mplugin)
+.include "../../devel/xulrunner/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-plugin=yes
-PLIST.firefox=	yes
+PLIST.plugin=	yes
 .endif
