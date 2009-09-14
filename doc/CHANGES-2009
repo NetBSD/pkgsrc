@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3691 2009/09/14 16:50:10 tron Exp $
+$NetBSD: CHANGES-2009,v 1.3692 2009/09/14 18:54:50 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4804,3 +4804,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed multimedia/mplayer-plugin-seamonkey multimedia/mplayer-plugin [tnn 2009-09-14]
 	Updated net/wget to 1.11.4nb1 [tron 2009-09-14]
 	Updated www/neon to 0.29.0 [tron 2009-09-14]
+	Updated graphics/gnuplot to 4.2.5 [asau 2009-09-14]
+	Updated graphics/gnuplot-nox11 to 4.2.5 [asau 2009-09-14]
