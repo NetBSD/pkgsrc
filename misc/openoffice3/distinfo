@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.20 2009/05/10 01:58:20 hira Exp $
+$NetBSD: distinfo,v 1.20.2.1 2009/09/14 06:33:02 tron Exp $
 
-SHA1 (openoffice-3.1.0/OOo_3.1.0_src_binfilter.tar.bz2) = 7128a2f8af0b0f1163a2f03331057242ec254f34
-RMD160 (openoffice-3.1.0/OOo_3.1.0_src_binfilter.tar.bz2) = e7ff15bd78713dcdbfd0df0ca499727cd412b070
-Size (openoffice-3.1.0/OOo_3.1.0_src_binfilter.tar.bz2) = 6543459 bytes
-SHA1 (openoffice-3.1.0/OOo_3.1.0_src_core.tar.bz2) = 7a2812823376c028d81c4d3aeaac56e00f89636c
-RMD160 (openoffice-3.1.0/OOo_3.1.0_src_core.tar.bz2) = 3395799874fd376fa82827f4b1b2d7af193748f8
-Size (openoffice-3.1.0/OOo_3.1.0_src_core.tar.bz2) = 186059913 bytes
-SHA1 (openoffice-3.1.0/OOo_3.1.0_src_extensions.tar.bz2) = fd6dff089f722c9d647f2ee5dd0e818b1a7e6576
-RMD160 (openoffice-3.1.0/OOo_3.1.0_src_extensions.tar.bz2) = d66bc267f92291ec0cc1b1530d95c8d9cfac7f62
-Size (openoffice-3.1.0/OOo_3.1.0_src_extensions.tar.bz2) = 14867603 bytes
-SHA1 (openoffice-3.1.0/OOo_3.1.0_src_l10n.tar.bz2) = 3ba93e779492bc6cf4955394a211462529057f03
-RMD160 (openoffice-3.1.0/OOo_3.1.0_src_l10n.tar.bz2) = 35ea76f926342a8bfa8b6b30edd08f048bb06811
-Size (openoffice-3.1.0/OOo_3.1.0_src_l10n.tar.bz2) = 96360273 bytes
-SHA1 (openoffice-3.1.0/OOo_3.1.0_src_system.tar.bz2) = a73c6aa867b7686d33611694e33d6351110d2a0a
-RMD160 (openoffice-3.1.0/OOo_3.1.0_src_system.tar.bz2) = 9ffd6694d4cdd7d3f4f8fd6aaf1ffa6c64b39d27
-Size (openoffice-3.1.0/OOo_3.1.0_src_system.tar.bz2) = 53314585 bytes
+SHA1 (openoffice-3.1.1/OOo_3.1.1_src_binfilter.tar.bz2) = 3b4d0d312a1bed9bdb1bbdfb172fa7361533b498
+RMD160 (openoffice-3.1.1/OOo_3.1.1_src_binfilter.tar.bz2) = 8caa064f836e531035fd551cf2d7288ca5188da0
+Size (openoffice-3.1.1/OOo_3.1.1_src_binfilter.tar.bz2) = 6500967 bytes
+SHA1 (openoffice-3.1.1/OOo_3.1.1_src_core.tar.bz2) = e4e68570d488061e7e2e513e33916ce192dd1348
+RMD160 (openoffice-3.1.1/OOo_3.1.1_src_core.tar.bz2) = d1f2eef58fd9c3f436c82bd6347a40ae62e2a812
+Size (openoffice-3.1.1/OOo_3.1.1_src_core.tar.bz2) = 185952495 bytes
+SHA1 (openoffice-3.1.1/OOo_3.1.1_src_extensions.tar.bz2) = dba308a76a75320507c0d67a4cf5d2dac3dd01b0
+RMD160 (openoffice-3.1.1/OOo_3.1.1_src_extensions.tar.bz2) = 9dbe9e083f0e32446593a09bb0a64b5e2a396f0a
+Size (openoffice-3.1.1/OOo_3.1.1_src_extensions.tar.bz2) = 14820645 bytes
+SHA1 (openoffice-3.1.1/OOo_3.1.1_src_l10n.tar.bz2) = 24ceb884c9d97722a2359e5ffe6a24e118a3918d
+RMD160 (openoffice-3.1.1/OOo_3.1.1_src_l10n.tar.bz2) = ee2f7cb6d4aaf3a882c7c2ba3ba237158d106eed
+Size (openoffice-3.1.1/OOo_3.1.1_src_l10n.tar.bz2) = 96600878 bytes
+SHA1 (openoffice-3.1.1/OOo_3.1.1_src_system.tar.bz2) = c8a6348a2259ae8df30a0bc3a72d09280a57988c
+RMD160 (openoffice-3.1.1/OOo_3.1.1_src_system.tar.bz2) = db38175ad14bf5785f3d08631d6d2d66598eb82b
+Size (openoffice-3.1.1/OOo_3.1.1_src_system.tar.bz2) = 53316228 bytes
 SHA1 (patch-ac) = ed6d84d40c3543eed754d74a5e65caf137f31c3d
 SHA1 (patch-ad) = 8f7afec29d927db694bf511ffd615fe903cc46dc
 SHA1 (patch-ag) = 6c2f17424cfc85b5bc923a650167f14b7acabfd4
@@ -87,3 +87,6 @@ SHA1 (patch-eh) = 4f4b2cebe22e83ca6acd2b226281bf756fbc9083
 SHA1 (patch-ei) = 66a1280fec23204e3f919ab1d5280f87ff68161d
 SHA1 (patch-ej) = 54cf0ae5619aae6655a66cd4c03191109546de12
 SHA1 (patch-ek) = 8539878661657b9c5a84e7084ab7289cd26f859f
+SHA1 (patch-ga) = bc76285681afe91b48399e0886344925d9086b5d
+SHA1 (patch-gb) = 70c11692129ef17cf47afa8dbff25e5e41719599
+SHA1 (patch-gc) = 51c00c2fbb64c299d528c072fe68e1f9786a0fff
