@@ -1,9 +1,0 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/11/17 02:31:34 xtraeme Exp $
-
---- Source/plugin-list.cpp.orig	2004-11-17 02:32:12.000000000 +0100
-+++ Source/plugin-list.cpp	2004-11-17 02:32:32.000000000 +0100
-@@ -1,3 +1,4 @@
-+#include <string.h>
- #include "plugin.h"
- #include <errno.h>
- #ifndef _GNU_SOURCE
