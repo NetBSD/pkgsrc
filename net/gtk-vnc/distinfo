@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/06 10:17:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/09/14 10:07:03 tnn Exp $
 
 SHA1 (gtk-vnc-0.3.8.tar.gz) = 58b729504df8ce8a043bfbf6351d751e8c8b8a09
 RMD160 (gtk-vnc-0.3.8.tar.gz) = d0fe46cf6fba4e68165e91a54f9373eff3d77932
 Size (gtk-vnc-0.3.8.tar.gz) = 610526 bytes
 SHA1 (patch-aa) = e59cd2080d9d88d4d689f10ed15738aa3309dcf3
 SHA1 (patch-ab) = e4e34a1f664de13a1c27c3c53eeed5b62d9f988c
-SHA1 (patch-ac) = fe2e85bcbe8df464ab50cdb17afc80ba74ab999b
+SHA1 (patch-ac) = 83a7dde7c9f3833abd2b0a0bd177ac79d79974e1
+SHA1 (patch-ad) = a25d9b04656b6a4c98d399c6c201e7cb0b862195
+SHA1 (patch-ae) = 9afc06224aa6780e5acc282155d4cd752c7758a6
+SHA1 (patch-af) = 7f72b9e16fd82880ab61e74835a55f616fc1aacc
