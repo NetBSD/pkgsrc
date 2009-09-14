@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3680 2009/09/14 06:11:40 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.3681 2009/09/14 06:42:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4792,3 +4792,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/mutt-devel to 1.5.20nb2 [wiz 2009-09-13]
 	Updated mail/dovecot to 1.1.19 [ghen 2009-09-14]
 	Updated mail/dovecot-sieve to 1.1.7 [ghen 2009-09-14]
+	Updated devel/p5-Parse-Method-Signatures to 1.003012 [sno 2009-09-14]
