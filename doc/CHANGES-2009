@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3692 2009/09/14 18:54:50 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3693 2009/09/14 22:09:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4806,3 +4806,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/neon to 0.29.0 [tron 2009-09-14]
 	Updated graphics/gnuplot to 4.2.5 [asau 2009-09-14]
 	Updated graphics/gnuplot-nox11 to 4.2.5 [asau 2009-09-14]
+	Updated www/apache22 to 2.2.13nb2 [tron 2009-09-14]
