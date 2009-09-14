@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.3 2009/09/14 07:08:52 taca Exp $
+
+Make it portable to OpenSSL 1.0.
+
+--- src/tls.c.orig	2008-12-26 02:58:43.000000000 +0900
++++ src/tls.c
+@@ -813,7 +813,7 @@ int tls_check_cert(tls_t *tls, const cha
+     char *buf;
+     int bufsize;
+     /* needed to get the DNS subjectAltNames: */
+-    STACK *subj_alt_names;
++    STACK_OF(GENERAL_NAME) *subj_alt_names;
+     int subj_alt_names_count;
+     GENERAL_NAME *subj_alt_name;
+     /* did we find a name matching hostname? */
