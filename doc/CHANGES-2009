@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3687 2009/09/14 08:46:33 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3688 2009/09/14 09:01:15 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4799,3 +4799,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-FindRef to 1.422 [sno 2009-09-14]
 	Updated comms/asterisk16 to 1.6.1.6 [jnemeth 2009-09-14]
 	Updated mail/msmtp to 1.4.18 [taca 2009-09-13]
+	Added multimedia/mplayer-plugin version 3.55 [tnn 2009-09-14]
