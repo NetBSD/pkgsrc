@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/04/06 10:17:32 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2009/09/14 10:07:04 tnn Exp $
 
 --- plugin/Makefile.in.orig	2008-09-05 12:32:30.000000000 +0000
 +++ plugin/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2009/04/06 10:17:32 wiz Exp $
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
 -@ENABLE_PLUGIN_TRUE@plugindir = $(libdir)/mozilla/plugins
-+@ENABLE_PLUGIN_TRUE@plugindir = $(libdir)/firefox/plugins
++@ENABLE_PLUGIN_TRUE@plugindir = $(libdir)/netscape/plugins
  @ENABLE_PLUGIN_TRUE@plugin_LTLIBRARIES = gtk-vnc-plugin.la
  @ENABLE_PLUGIN_TRUE@gtk_vnc_plugin_la_SOURCES = \
  @ENABLE_PLUGIN_TRUE@	gtk-vnc-plugin.c gtk-vnc-plugin.h npshell.c npunix.c
