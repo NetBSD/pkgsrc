@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.10 2008/05/15 20:22:02 drochner Exp $
+$NetBSD: patch-ab,v 1.11 2009/09/14 18:52:03 asau Exp $
 
---- share/Makefile.in.orig	2008-03-08 21:06:28.000000000 +0100
-+++ share/Makefile.in
-@@ -189,7 +189,7 @@ sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+--- share/Makefile.in.orig	2009-03-29 00:24:51.000000000 +0300
++++ share/Makefile.in	2009-09-14 16:20:30.000000000 +0400
+@@ -193,7 +193,7 @@
+ top_srcdir = @top_srcdir@
  AUTOMAKE_OPTIONS = foreign 1.2h
  EXTRA_DIST = Gnuplot.app-defaults
 -SUBDIRS = LaTeX
@@ -11,11 +11,11 @@ $NetBSD: patch-ab,v 1.10 2008/05/15 20:22:02 drochner Exp $
  appdefaultdir = $(libdir)/X11/app-defaults
  APPDEFAULTFILES = Gnuplot
  appdefault_DATA = $(APPDEFAULTFILES)
-@@ -229,13 +229,15 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
- uninstall-info-am:
+@@ -232,13 +232,15 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  install-appdefaultDATA: $(appdefault_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(appdefaultdir)" || $(mkdir_p) "$(DESTDIR)$(appdefaultdir)"
+-	test -z "$(appdefaultdir)" || $(MKDIR_P) "$(DESTDIR)$(appdefaultdir)"
 -	@list='$(appdefault_DATA)'; for p in $$list; do \
 +	if test $${INSTALL_XRESOURCE_DATA:-yes} = yes; then \
 +	test -z "$(appdefaultdir)" || $(mkdir_p) "$(DESTDIR)$(appdefaultdir)"; \

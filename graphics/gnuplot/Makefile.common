@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.15 2008/12/01 11:56:18 obache Exp $
+# $NetBSD: Makefile.common,v 1.16 2009/09/14 18:52:03 asau Exp $
 
 # used by ../../graphics/gnuplot-nox11
 
-DISTNAME=		gnuplot-4.2.3
+DISTNAME=		gnuplot-4.2.5
 CATEGORIES+=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnuplot/}
 
@@ -14,10 +14,9 @@ PATCHDIR=		${.CURDIR}/../../graphics/gnuplot/patches
 DISTINFO_FILE=		${.CURDIR}/../../graphics/gnuplot/distinfo
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
-# because of missing rl_complete_with_tilde_expansion and rl_terminal_name
-USE_GNU_READLINE=	YES
 
 USE_TOOLS+=		makeinfo
 INFO_FILES=		# PLIST
@@ -25,10 +24,19 @@ INFO_FILES=		# PLIST
 CONFIGURE_ARGS+=	--with-pdf
 CONFIGURE_ARGS+=	--enable-history-file
 CONFIGURE_ARGS+=	--with-plot=${PREFIX:Q}
-CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 CONFIGURE_ARGS+=	--without-lisp-files
 CONFIGURE_ARGS+=	--without-tutorial
 
+# Use BSD editline wherever possible:
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--with-readline=bsd
+.include "../../mk/curses.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 .include "../../devel/readline/buildlink3.mk"
+.endif
+
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../print/pdflib/buildlink3.mk"
