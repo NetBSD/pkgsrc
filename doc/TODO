@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8467 2009/09/14 08:47:52 taca Exp $
+$NetBSD: TODO,v 1.8468 2009/09/14 11:45:22 obache Exp $
 
 Suggested new packages
 ======================
@@ -1143,7 +1143,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o shmux-1.0.2
 	o sign-1.0.7
 	o silc-server-1.1.17
-	o silc-toolkit-2.1.9
+	o silc-toolkit-1.1.10
 	o simulavr-0.1.2.2
 	o singularity-0.30
 	o sitecopy-0.16.5
