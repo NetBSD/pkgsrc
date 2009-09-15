@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1 2009/09/15 20:00:47 spz Exp $
+
+--- configure.ac.orig	2008-07-31 17:44:03.000000000 +0200
++++ configure.ac	2009-01-27 15:09:26.000000000 +0100
+@@ -281,10 +281,25 @@
+ 	AC_CHECK_LIB([pthread], [pthread_create])
+ fi
+ 
+-PKG_CHECK_MODULES([OPENSSL], [libcrypto >= 0.9.7], [have_openssl="yes"], [have_openssl="no"])
+-if test "${have_openssl}" = "no"; then
+-	PKG_CHECK_MODULES([OPENSSL], [openssl >= 0.9.7], [have_openssl="yes"], [have_openssl="no"])
+-fi
++PKG_CHECK_MODULES(
++        [OPENSSL],
++        [libcrypto >= 0.9.7],
++        [have_openssl="yes"],
++        [PKG_CHECK_MODULES(
++                [OPENSSL],
++                [openssl >= 0.9.7],
++                [have_openssl="yes"],
++                [AC_CHECK_LIB(
++                        [crypto],
++                        [RSA_version],
++                        [
++                                have_openssl="yes"
++                                OPENSSL_LIBS="-lcrypto"
++                        ],
++                        [have_openssl="no"]
++                )]
++        )]
++)
+ 
+ PKG_CHECK_MODULES([GNUTLS], [gnutls >= 1.4], [have_gnutls="yes"], [have_gnutls="no"])
+ PKG_CHECK_MODULES([NSS], [nss >= 3.11], [have_nss="yes"], [have_nss="no"])
