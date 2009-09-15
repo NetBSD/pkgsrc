@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2009/08/26 19:57:12 sno Exp $
+# $NetBSD: Makefile,v 1.70 2009/09/15 10:50:13 drochner Exp $
 #
 
-DISTNAME=	rhythmbox-0.12.3
-PKGREVISION=	2
+DISTNAME=	rhythmbox-0.12.4
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +21,7 @@ USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--disable-browser-plugin
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--disable-fm-radio
 
 GCONF_SCHEMAS=		rhythmbox.schemas
 
