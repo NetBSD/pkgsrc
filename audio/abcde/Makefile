@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2008/03/02 06:10:30 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2009/09/15 10:46:10 drochner Exp $
 
 DISTNAME=	abcde_2.3.3.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.hispalinux.es/~data/files/
 
