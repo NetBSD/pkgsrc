@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.33 2008/07/18 09:36:39 wiz Exp $
+$NetBSD: distinfo,v 1.33.10.1 2009/09/15 10:26:34 spz Exp $
 
 SHA1 (wget-1.11.4.tar.gz) = a78a3b71fd59504df3ff3dbc0a2195a1410e9eac
 RMD160 (wget-1.11.4.tar.gz) = 1cec99b073fcf64dd362977b0b88a55f8f47bbb8
 Size (wget-1.11.4.tar.gz) = 1475149 bytes
+SHA1 (patch-aa) = eb8852e90ba61f2672fb2eea16f6148e27a6ee2b
