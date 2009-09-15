@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/08/29 13:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2009/09/15 10:27:02 drochner Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EGDIR}
@@ -7,7 +7,6 @@ INSTALLATION_DIRS+=	share/claws-mail
 .include "Makefile.common"
 
 PKGNAME=	claws-mail-${CLAWS_VERSION}
-PKGREVISION=	2
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	X based e-mail and netnews client
@@ -76,5 +75,6 @@ PLIST_SRC+=	PLIST.shred
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"

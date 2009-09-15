@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:04:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/09/15 10:27:02 drochner Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -114,6 +114,7 @@ include/claws-mail/gtk/pluginwindow.h
 include/claws-mail/gtk/prefswindow.h
 include/claws-mail/gtk/progressdialog.h
 include/claws-mail/gtk/quicksearch.h
+include/claws-mail/gtk/spell_entry.h
 include/claws-mail/gtk/sslcertwindow.h
 include/claws-mail/headerview.h
 include/claws-mail/html.h
@@ -243,11 +244,15 @@ share/locale/es/LC_MESSAGES/claws-mail.mo
 share/locale/fi/LC_MESSAGES/claws-mail.mo
 share/locale/fr/LC_MESSAGES/claws-mail.mo
 share/locale/hu/LC_MESSAGES/claws-mail.mo
+share/locale/id/LC_MESSAGES/claws-mail.mo
 share/locale/it/LC_MESSAGES/claws-mail.mo
+share/locale/ja/LC_MESSAGES/claws-mail.mo
 share/locale/nl/LC_MESSAGES/claws-mail.mo
 share/locale/pl/LC_MESSAGES/claws-mail.mo
 share/locale/pt_BR/LC_MESSAGES/claws-mail.mo
+share/locale/pt_PT/LC_MESSAGES/claws-mail.mo
 share/locale/ru/LC_MESSAGES/claws-mail.mo
 share/locale/cs/LC_MESSAGES/claws-mail.mo
+share/locale/sk/LC_MESSAGES/claws-mail.mo
 share/locale/sv/LC_MESSAGES/claws-mail.mo
 share/locale/zh_CN/LC_MESSAGES/claws-mail.mo
