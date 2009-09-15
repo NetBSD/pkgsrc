@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/05/05 19:10:02 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2009/09/15 11:30:55 drochner Exp $
 
---- setup.py.orig	2008-02-17 09:47:35.000000000 +0100
+--- setup.py.orig	2009-04-05 07:44:58.000000000 +0200
 +++ setup.py
-@@ -273,10 +273,10 @@ setup(
+@@ -266,10 +266,10 @@ setup(
+       license = 'BSD',
        url = 'http://code.google.com/p/sympy',
-       packages = ['sympy'] + [ m[1] for m in modules ] + tests + \
-         pyglet_packages,
+       packages = ['sympy'] + modules + tests + pyglet_packages,
 -      scripts = ['bin/isympy'],
 +      scripts = ['bin/isympy' + sys.version[0:3]],
        ext_modules = [],
