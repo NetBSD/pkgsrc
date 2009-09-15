@@ -325,6 +325,7 @@ nls			Use native language support
 nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
 nspluginwrapper		Enable running non native netscape compatible plugins
+nss			Enable Network Security Services (NSS) support.
 ocamlduce		Enable OcamlDuce support.
 octave			Enable Octave support
 official-mozilla-branding	Use official Mozilla reg. trademarks and logos.
@@ -336,6 +337,7 @@ openexr			Use OpenEXR as imaging library
 opengl			Use OpenGL as display library.
 opengrok-build		Enable building of OpenGrok from source
 openldap		Enable OpenLDAP support.
+openssl			Enable OpenSSL support.
 oracle			Enable Oracle support.
 oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for the Mac OS X Address Book.
