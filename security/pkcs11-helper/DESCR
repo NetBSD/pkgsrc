@@ -1,0 +1,2 @@
+Library that simplifies the interaction with PKCS#11 providers for end-user
+applications using a simple API and optional OpenSSL engine.
