@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/02/11 14:23:32 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/15 11:30:55 drochner Exp $
 #
 
-DISTNAME=	sympy-0.5.15
-PKGNAME=	${PYPKGPREFIX}-sympy-0.5.15
+DISTNAME=	sympy-0.6.5
+PKGNAME=	${PYPKGPREFIX}-sympy-0.6.5
 CATEGORIES=	math
 MASTER_SITES=	http://sympy.googlecode.com/files/
 
@@ -21,6 +21,9 @@ post-extract:
 	${CP} ${WRKSRC}/bin/isympy ${WRKSRC}/bin/isympy${PYVERSSUFFIX}
 	${CP} ${WRKSRC}/doc/man/isympy.1 \
 		${WRKSRC}/doc/man/isympy${PYVERSSUFFIX}.1
+
+do-test:
+	(cd ${WRKSRC}/examples && ${PYTHONBIN} all.py)
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
