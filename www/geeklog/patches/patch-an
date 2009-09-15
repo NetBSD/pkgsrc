@@ -1,0 +1,14 @@
+$NetBSD: patch-an,v 1.1 2009/09/15 10:48:46 taca Exp $
+
+* Output Content-Type header explicitly.
+
+--- public_html/admin/install/install-plugins.php.orig	2009-07-29 20:41:47.000000000 +0900
++++ public_html/admin/install/install-plugins.php
+@@ -527,6 +527,7 @@ if (INST_phpOutOfDate()) {
+     } // End switch ($step)
+ } // end if (php_v())
+ 
++header('Content-Type: text/html; charset=' . COM_getCharset());
+ $display .= INST_getFooter();
+ 
+ echo $display;

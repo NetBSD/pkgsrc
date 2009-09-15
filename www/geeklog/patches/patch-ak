@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.1 2009/09/13 01:15:11 taca Exp $
+$NetBSD: patch-ak,v 1.2 2009/09/15 10:48:46 taca Exp $
 
-* Send correct charset parameter.
+* Output Content-Type header explicitly.
 
---- public_html/admin/install/configinfo.php.orig	2008-05-11 16:25:08.000000000 +0900
+--- public_html/admin/install/configinfo.php.orig	2009-07-29 20:41:47.000000000 +0900
 +++ public_html/admin/install/configinfo.php
-@@ -92,6 +92,7 @@ foreach ($_CONF as $option => $value) {
+@@ -90,6 +90,7 @@ foreach ($_CONF as $option => $value) {
  }
  $display .= "</table>\n</body>\n</html>";
  
