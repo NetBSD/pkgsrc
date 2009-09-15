@@ -1,0 +1,24 @@
+$NetBSD: patch-ao,v 1.1 2009/09/15 10:48:46 taca Exp $
+
+* Inherit proper language parameter.
+
+--- public_html/admin/install/lib-install.php.orig	2009-08-30 22:39:19.000000000 +0900
++++ public_html/admin/install/lib-install.php
+@@ -609,7 +609,8 @@ function INST_getAlertMsg($mMessage, $mT
+  */
+ function INST_checkPost150Upgrade($dbconfig_path, $siteconfig_path)
+ {
+-    global $_CONF, $_TABLES, $_DB, $_DB_dbms, $_DB_host, $_DB_user, $_DB_pass;
++    global $_CONF, $_TABLES, $_DB, $_DB_dbms, $_DB_host, $_DB_user, $_DB_pass,
++        $language;
+ 
+     require $dbconfig_path;
+     require $siteconfig_path;
+@@ -658,6 +659,7 @@ function INST_checkPost150Upgrade($dbcon
+             // current version is at least 1.5.0, so upgrade directly
+             $req_string = 'index.php?mode=upgrade&step=3'
+                         . '&dbconfig_path=' . $dbconfig_path
++                        . '&language=' . $language
+                         . '&version=' . $version;
+ 
+             header('Location: ' . $req_string);

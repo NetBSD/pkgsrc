@@ -1,0 +1,14 @@
+$NetBSD: patch-ap,v 1.1 2009/09/15 10:48:46 taca Exp $
+
+* Output Content-Type header explicitly.
+
+--- public_html/admin/install/migrate.php.orig	2009-07-29 20:41:47.000000000 +0900
++++ public_html/admin/install/migrate.php
+@@ -1011,6 +1011,7 @@ if (INST_phpOutOfDate()) {
+ 
+ $display .= INST_getFooter();
+ 
++header('Content-Type: text/html; charset=' . $LANG_CHARSET);
+ echo $display;
+ 
+ ?>
