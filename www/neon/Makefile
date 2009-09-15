@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.45 2009/04/06 12:54:06 markd Exp $
+# $NetBSD: Makefile,v 1.45.2.1 2009/09/15 13:32:04 spz Exp $
 
-DISTNAME=	neon-0.28.3
+DISTNAME=	neon-0.29.0
 CATEGORIES=	www
 MASTER_SITES=	http://www.webdav.org/neon/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webdav.org/neon/
 COMMENT=	HTTP and WebDAV client library
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -20,6 +21,8 @@ CONFIGURE_ARGS+=	--with-ssl=yes
 
 PKGCONFIG_OVERRIDE=	neon.pc.in
 TEST_TARGET=		check
+#selftest needs perl
+#USE_TOOLS+=		perl
 
 .include "options.mk"
 
