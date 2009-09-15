@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2009/09/13 01:15:10 taca Exp $
+# $NetBSD: Makefile,v 1.24 2009/09/15 10:48:46 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
-PKGNAME=	geeklog-${VER:C/(sr|-)4/.5/g}
+PKGNAME=	geeklog-${VER:C/(sr|-)/./g}
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
-DISTFILES=	${DEFAULT_DISTFILES} ${FCKEDITOR_UPDATE}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.geeklog.net/
@@ -14,15 +13,13 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PRIVILEGED_STAGES+=	clean
-EXTRACT_ONLY=		${DEFAULT_DISTFILES}
-FCKEDITOR_UPDATE=	fckeditor-2.6.4.1-updated.tar.gz
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
 
 USE_TOOLS+=	pax
 
-VER=		1.5.2sr4
+VER=		1.6.0sr2
 NO_BUILD=	YES
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
@@ -94,10 +91,6 @@ INSTALLATION_DIRS=	${GEEKLOG_BASE} ${GEEKLOG_PUB} ${GL_TMPL}/images \
 			share/examples/geeklog ${GL_DOC} ${GL_EG}
 
 post-extract:
-	${RUN} extract_file=${_DISTDIR:Q}/${FCKEDITOR_UPDATE:Q}; \
-	export extract_file; cd ${WRKSRC}/public_html && ${EXTRACT_CMD}
-	cd ${WRKSRC}/public_html && ${RM} -f README.txt \
-		fckeditor/editor/filemanager/browser/default/images/icons/default.icon.gif0000644
 	${CP} ${FILESDIR}/README ${FILESDIR}/geeklog.conf ${WRKDIR}
 
 pre-install:
