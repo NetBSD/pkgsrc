@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2008/07/03 10:22:39 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2009/09/15 11:43:02 drochner Exp $
 
---- src/options.cpp.orig	2008-01-13 00:37:12.000000000 +0100
+--- src/options.cpp.orig	2009-07-27 03:02:29.000000000 +0200
 +++ src/options.cpp
 @@ -21,6 +21,7 @@ Permission is granted to anyone to use t
  #include "options.h"
@@ -8,5 +8,5 @@ $NetBSD: patch-aa,v 1.1 2008/07/03 10:22:39 drochner Exp $
  
 +#include <unistd.h>
  
- #include <iostream>
- #include <fstream>
+ #include<iostream>
+ #include<fstream>
