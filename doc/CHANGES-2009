@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3698 2009/09/15 23:30:47 reed Exp $
+$NetBSD: CHANGES-2009,v 1.3699 2009/09/15 23:52:02 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4813,3 +4813,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/geeklog to 1.6.0.2 [taca 2009-09-15]
 	Added security/pkcs11-helper version 1.06 [spz 2009-09-15]
 	Added mail/re-alpine version 2.01 [reed 2009-09-15]
+	Added devel/p5-Try-Tiny version 0.02 [seb 2009-09-15]
