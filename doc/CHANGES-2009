@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3694 2009/09/15 09:27:24 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.3695 2009/09/15 10:49:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4810,3 +4810,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/seamonkey to 1.1.18 [ghen 2009-09-15]
 	Updated www/seamonkey-bin to 1.1.18 [ghen 2009-09-15]
 	Updated www/seamonkey-gtk1 to 1.1.18 [ghen 2009-09-15]
+	Updated www/geeklog to 1.6.0.2 [taca 2009-09-15]
