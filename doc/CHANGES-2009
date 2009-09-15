@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3696 2009/09/15 19:54:32 spz Exp $
+$NetBSD: CHANGES-2009,v 1.3697 2009/09/15 20:08:21 spz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4811,3 +4811,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/seamonkey-bin to 1.1.18 [ghen 2009-09-15]
 	Updated www/seamonkey-gtk1 to 1.1.18 [ghen 2009-09-15]
 	Updated www/geeklog to 1.6.0.2 [taca 2009-09-15]
+	Added security/pkcs11-helper version 1.06 [spz 2009-09-15]
