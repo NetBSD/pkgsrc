@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2009/08/26 20:24:11 sno Exp $
+# $NetBSD: Makefile,v 1.28 2009/09/15 09:26:07 ghen Exp $
 
 MOZILLA=		seamonkey
 COMMENT=		Full featured gecko-based browser
-PKGREVISION=		1
 
 MOZILLA_USE_GTK2=	# yes
 MOZILLA_USE_XFT=	YES
