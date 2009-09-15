@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/09/15 11:43:02 drochner Exp $
 bin/xye
 share/doc/xye/AUTHORS
 share/doc/xye/COPYING
@@ -6,17 +6,19 @@ share/doc/xye/GAMEINTRO.txt
 share/doc/xye/INSTALL
 share/doc/xye/NEWS
 share/doc/xye/README
-share/doc/xye/format.txt
-share/doc/xye/template.xye.xml
 share/doc/xye/xye.svg
 share/xye/levels/5levels.xye
 share/xye/levels/Mic4.xye
+share/xye/levels/cracked.xye
 share/xye/levels/kye.xye
 share/xye/levels/levels.xye
 share/xye/levels/logo.xye
 share/xye/levels/microban.xsb
+share/xye/levels/oldtutorials.xye
 share/xye/levels/pxlevels.xye
+share/xye/levels/sphinx.xye
 share/xye/levels/tutorials.xye
+share/xye/levels/xyester.xye
 share/xye/res/DejaVuSans-Bold.ttf
 share/xye/res/DejaVuSans.ttf
 share/xye/res/classic.xml
@@ -25,3 +27,4 @@ share/xye/res/fon.bmp
 share/xye/res/fon_bold.bmp
 share/xye/res/kye.png
 share/xye/res/xye.png
+share/xye/res/xye_luminosity.png
