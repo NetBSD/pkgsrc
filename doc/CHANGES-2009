@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3695 2009/09/15 10:49:51 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3696 2009/09/15 19:54:32 spz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4801,7 +4801,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/msmtp to 1.4.18 [taca 2009-09-13]
 	Added multimedia/mplayer-plugin version 3.55 [tnn 2009-09-14]
 	Removed multimedia/mplayer-plugin-firefox successor multimedia/mplayer-plugin [tnn 2009-09-14]
-	Removed multimedia/mplayer-plugin-seamonkey multimedia/mplayer-plugin [tnn 2009-09-14]
+	Removed multimedia/mplayer-plugin-seamonkey successor multimedia/mplayer-plugin [tnn 2009-09-14]
 	Updated net/wget to 1.11.4nb1 [tron 2009-09-14]
 	Updated www/neon to 0.29.0 [tron 2009-09-14]
 	Updated graphics/gnuplot to 4.2.5 [asau 2009-09-14]
