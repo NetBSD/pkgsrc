@@ -1,0 +1,14 @@
+$NetBSD: patch-am,v 1.1 2009/09/15 10:48:46 taca Exp $
+
+* Output Content-Type header explicitly.
+
+--- public_html/admin/install/bigdump.php.orig	2009-07-29 20:41:47.000000000 +0900
++++ public_html/admin/install/bigdump.php
+@@ -88,6 +88,7 @@ define ('TESTMODE',false);           // 
+ @ini_set('auto_detect_line_endings', true);
+ @set_time_limit(0);
+ 
++header('Content-Type: text/html; charset=' . $LANG_CHARSET);
+ echo INST_getHeader($LANG_MIGRATE[17]);
+ 
+ $error = false;
