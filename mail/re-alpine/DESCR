@@ -1,0 +1,9 @@
+Re-alpine is a fork of Alpine with a new development team.  (Alpine
+is the official replacement for the Pine email and news client.)
+
+Re-alpine is a screen-oriented message-handling tool (i.e. a mail
+client) with many configurations for the novice and power user.
+
+This package currently only installs the alpine binary, excluding
+the pilot and pico binaries which would cause it to conflict with
+the pine package.
