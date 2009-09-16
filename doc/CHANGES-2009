@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3727 2009/09/16 19:06:00 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3728 2009/09/16 19:22:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4864,3 +4864,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added sysutils/libdevkit-gobject version 003 [wiz 2009-09-16]
 	Updated mail/p5-Net-ManageSieve to 0.08 [sno 2009-09-16]
 	Added sysutils/devkitd version 003 [wiz 2009-09-16]
+	Added devel/p5-MooseX-MultiInitArg version 0.01 [sno 2009-09-16]
