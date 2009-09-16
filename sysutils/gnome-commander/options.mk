@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/07/23 15:29:23 drochner Exp $
+# $NetBSD: options.mk,v 1.2 2009/09/16 10:59:55 drochner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-commander
@@ -29,6 +29,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST.python
 .endif
 
 .if !empty(PKG_OPTIONS:Mpdf)
+# API change: getPDFVersion() -> getPDF{Major,Minor}Version()
+BUILDLINK_API_DEPENDS.poppler+= poppler>=0.12.0
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .endif

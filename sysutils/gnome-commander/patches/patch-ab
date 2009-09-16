@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2009/09/16 10:59:55 drochner Exp $
+
+--- src/tags/gnome-cmd-tags-poppler.cc.orig	2009-09-16 12:33:24.000000000 +0200
++++ src/tags/gnome-cmd-tags-poppler.cc
+@@ -320,7 +320,7 @@ void gcmd_tags_poppler_load_metadata(Gno
+ 
+     f->metadata->mark_as_accessed(TAG_DOC);
+ 
+-    f->metadata->addf(TAG_PDF_VERSION, "%.1f", doc.getPDFVersion());
++    f->metadata->addf(TAG_PDF_VERSION, "%u.%u", doc.getPDFMajorVersion(), doc.getPDFMinorVersion());
+     f->metadata->addf(TAG_DOC_PAGECOUNT, "%i", doc.getNumPages());
+     f->metadata->addf(TAG_PDF_OPTIMIZED, "%u", doc.isLinearized());
+ 
