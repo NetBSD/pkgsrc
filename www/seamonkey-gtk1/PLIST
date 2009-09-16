@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 22:00:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10.2.1 2009/09/16 12:56:33 tron Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2111,80 +2111,37 @@ include/${MOZILLA}/nkcache/nsICacheSession.h
 include/${MOZILLA}/nkcache/nsICacheVisitor.h
 include/${MOZILLA}/nsBuildID.h
 include/${MOZILLA}/nsStaticComponents.h
-include/${MOZILLA}/nspr/md/_aix.h
 include/${MOZILLA}/nspr/md/_aix32.cfg
 include/${MOZILLA}/nspr/md/_aix64.cfg
 include/${MOZILLA}/nspr/md/_beos.cfg
-include/${MOZILLA}/nspr/md/_beos.h
 include/${MOZILLA}/nspr/md/_bsdi.cfg
-include/${MOZILLA}/nspr/md/_bsdi.h
 include/${MOZILLA}/nspr/md/_darwin.cfg
-include/${MOZILLA}/nspr/md/_darwin.h
 include/${MOZILLA}/nspr/md/_dgux.cfg
-include/${MOZILLA}/nspr/md/_dgux.h
 include/${MOZILLA}/nspr/md/_freebsd.cfg
-include/${MOZILLA}/nspr/md/_freebsd.h
-include/${MOZILLA}/nspr/md/_hpux.h
 include/${MOZILLA}/nspr/md/_hpux32.cfg
 include/${MOZILLA}/nspr/md/_hpux64.cfg
-include/${MOZILLA}/nspr/md/_irix.h
 include/${MOZILLA}/nspr/md/_irix32.cfg
 include/${MOZILLA}/nspr/md/_irix64.cfg
 include/${MOZILLA}/nspr/md/_linux.cfg
-include/${MOZILLA}/nspr/md/_linux.h
-include/${MOZILLA}/nspr/md/_macos.h
 include/${MOZILLA}/nspr/md/_ncr.cfg
-include/${MOZILLA}/nspr/md/_ncr.h
 include/${MOZILLA}/nspr/md/_nec.cfg
-include/${MOZILLA}/nspr/md/_nec.h
 include/${MOZILLA}/nspr/md/_netbsd.cfg
-include/${MOZILLA}/nspr/md/_netbsd.h
 include/${MOZILLA}/nspr/md/_nextstep.cfg
-include/${MOZILLA}/nspr/md/_nextstep.h
-include/${MOZILLA}/nspr/md/_nspr_pthread.h
 include/${MOZILLA}/nspr/md/_nto.cfg
-include/${MOZILLA}/nspr/md/_nto.h
 include/${MOZILLA}/nspr/md/_openbsd.cfg
-include/${MOZILLA}/nspr/md/_openbsd.h
 include/${MOZILLA}/nspr/md/_openvms.cfg
-include/${MOZILLA}/nspr/md/_openvms.h
 include/${MOZILLA}/nspr/md/_os2.cfg
-include/${MOZILLA}/nspr/md/_os2.h
-include/${MOZILLA}/nspr/md/_os2_errors.h
 include/${MOZILLA}/nspr/md/_osf1.cfg
-include/${MOZILLA}/nspr/md/_osf1.h
-include/${MOZILLA}/nspr/md/_pcos.h
-include/${MOZILLA}/nspr/md/_pth.h
 include/${MOZILLA}/nspr/md/_qnx.cfg
-include/${MOZILLA}/nspr/md/_qnx.h
 include/${MOZILLA}/nspr/md/_reliantunix.cfg
-include/${MOZILLA}/nspr/md/_reliantunix.h
-include/${MOZILLA}/nspr/md/_rhapsody.cfg
-include/${MOZILLA}/nspr/md/_rhapsody.h
 include/${MOZILLA}/nspr/md/_riscos.cfg
-include/${MOZILLA}/nspr/md/_riscos.h
 include/${MOZILLA}/nspr/md/_scoos.cfg
-include/${MOZILLA}/nspr/md/_scoos.h
 include/${MOZILLA}/nspr/md/_solaris.cfg
-include/${MOZILLA}/nspr/md/_solaris.h
 include/${MOZILLA}/nspr/md/_sony.cfg
-include/${MOZILLA}/nspr/md/_sony.h
 include/${MOZILLA}/nspr/md/_sunos4.cfg
-include/${MOZILLA}/nspr/md/_sunos4.h
-include/${MOZILLA}/nspr/md/_unix_errors.h
-include/${MOZILLA}/nspr/md/_unixos.h
 include/${MOZILLA}/nspr/md/_unixware.cfg
-include/${MOZILLA}/nspr/md/_unixware.h
 include/${MOZILLA}/nspr/md/_unixware7.cfg
 include/${MOZILLA}/nspr/md/_win16.cfg
-include/${MOZILLA}/nspr/md/_win16.h
-include/${MOZILLA}/nspr/md/_win32_errors.h
-include/${MOZILLA}/nspr/md/_win95.cfg
-include/${MOZILLA}/nspr/md/_win95.h
-include/${MOZILLA}/nspr/md/_winnt.cfg
-include/${MOZILLA}/nspr/md/_winnt.h
-include/${MOZILLA}/nspr/md/prosdep.h
-include/${MOZILLA}/nspr/md/sunos4.h
 include/${MOZILLA}/nspr/nspr.h
 include/${MOZILLA}/nspr/obsolete/pralarm.h
 include/${MOZILLA}/nspr/obsolete/probslet.h
@@ -3030,7 +2987,6 @@ include/${MOZILLA}/nss/ssl.h
 include/${MOZILLA}/nss/sslerr.h
 include/${MOZILLA}/nss/sslproto.h
 include/${MOZILLA}/nss/sslt.h
-include/${MOZILLA}/nss/watcomfx.h
 @comment end INCLUDE-PUBLIC
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome

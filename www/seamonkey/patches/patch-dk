@@ -1,14 +1,13 @@
-$NetBSD: patch-dk,v 1.1 2006/06/28 21:23:29 joerg Exp $
+$NetBSD: patch-dk,v 1.1.30.1 2009/09/16 12:56:33 tron Exp $
 
-diff -ruN ../Orig/mozilla/security/coreconf/config.mk ./security/coreconf/config.mk
---- ../Orig/mozilla/security/coreconf/config.mk	2004-04-26 00:02:17.000000000 +0900
-+++ ./security/coreconf/config.mk	2005-12-04 19:44:47.000000000 +0900
-@@ -63,7 +63,7 @@
+--- security/coreconf/config.mk.orig	2009-02-13 18:14:05.000000000 +0100
++++ security/coreconf/config.mk
+@@ -63,7 +63,7 @@ endif
  #######################################################################
  
  TARGET_OSES = FreeBSD BSD_OS NetBSD OpenUNIX OS2 QNX Darwin BeOS OpenBSD \
--              OpenVMS AIX
-+              OpenVMS AIX DragonFly
+-              OpenVMS AIX RISCOS WINNT WIN95 WINCE
++              OpenVMS AIX DragonFly RISCOS WINNT WIN95 WINCE
  
  ifeq (,$(filter-out $(TARGET_OSES),$(OS_TARGET)))
  include $(CORE_DEPTH)/coreconf/$(OS_TARGET).mk
