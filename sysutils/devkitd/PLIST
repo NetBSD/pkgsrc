@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/16 19:03:48 wiz Exp $
+libexec/devkit-daemon
+share/dbus-1/interfaces/org.freedesktop.DeviceKit.xml
+share/dbus-1/system-services/org.freedesktop.DeviceKit.service
+share/devkitd-netbsd/devkitd-subsystem-map.plist
+share/examples/GConf/org.freedesktop.DeviceKit.conf
+@pkgdir var/run/devkit

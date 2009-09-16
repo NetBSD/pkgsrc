@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/16 19:03:48 wiz Exp $
+
+SHA1 (devkitd-jmcneill-003.tar.gz) = 56c94a626a89d56a99b232f01b0d42aaf80c16cf
+RMD160 (devkitd-jmcneill-003.tar.gz) = 88b166f04061579fa18a510d57593fd3eec453e0
+Size (devkitd-jmcneill-003.tar.gz) = 336408 bytes
+SHA1 (patch-aa) = be3c58564b3763cdb3a18b7a9c36180b35580641
