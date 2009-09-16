@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2009/09/16 01:15:33 reed Exp $
+# $NetBSD: Makefile.common,v 1.43 2009/09/16 02:25:34 reed Exp $
 
 # used by audio/xfce4-mixer/Makefile
 # used by devel/xfce4-dev-tools/Makefile
@@ -8,6 +8,7 @@
 # used by print/xfce4-print/Makefile
 # used by sysutils/xfce4-appfinder/Makefile
 # used by sysutils/xfce4-thunar/Makefile
+# used by time/xfce4-datetime-plugin/Makefile
 # used by time/xfce4-orage/Makefile
 # used by wm/xfce4-wm-themes/Makefile
 # used by wm/xfce4-wm/Makefile
