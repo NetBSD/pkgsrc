@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/09/13 17:56:56 tnn Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/09/16 18:42:31 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -1479,6 +1479,7 @@ include/xulrunner/unstable/nsILocalFileWin.h
 include/xulrunner/unstable/nsILocalStore.h
 include/xulrunner/unstable/nsILocale.h
 include/xulrunner/unstable/nsILocaleService.h
+${PLIST.debug}include/xulrunner/unstable/nsILoggingSink.h
 include/xulrunner/unstable/nsILoginInfo.h
 include/xulrunner/unstable/nsILoginManager.h
 include/xulrunner/unstable/nsILoginManagerIEMigrationHelper.h
