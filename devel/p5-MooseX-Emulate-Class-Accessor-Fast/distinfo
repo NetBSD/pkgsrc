@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/07/21 06:22:06 sno Exp $
+$NetBSD: distinfo,v 1.5 2009/09/16 18:46:36 sno Exp $
 
-SHA1 (MooseX-Emulate-Class-Accessor-Fast-0.00902.tar.gz) = 67baab328b6651eca748a6e2698b824281cf055f
-RMD160 (MooseX-Emulate-Class-Accessor-Fast-0.00902.tar.gz) = 910fd3ca8d9e0160d1ba979951e191ea3a5baf82
-Size (MooseX-Emulate-Class-Accessor-Fast-0.00902.tar.gz) = 21465 bytes
+SHA1 (MooseX-Emulate-Class-Accessor-Fast-0.00903.tar.gz) = ef19e4ac9af934321f9a34b67acf1d4d98e8bd84
+RMD160 (MooseX-Emulate-Class-Accessor-Fast-0.00903.tar.gz) = b49cf954f80b3743bee590a1cba65b4eb42ee682
+Size (MooseX-Emulate-Class-Accessor-Fast-0.00903.tar.gz) = 21548 bytes
