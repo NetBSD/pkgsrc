@@ -1,12 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/08/26 19:57:02 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/09/16 01:15:35 reed Exp $
 
 BUILDLINK_TREE+=	xfce4-exo
 
 .if !defined(XFCE4_EXO_BUILDLINK3_MK)
 XFCE4_EXO_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.xfce4-exo+=	xfce4-exo>=0.3.4
-BUILDLINK_ABI_DEPENDS.xfce4-exo?=	xfce4-exo>=0.3.4nb5
+BUILDLINK_API_DEPENDS.xfce4-exo+=	xfce4-exo>=0.3.100
 BUILDLINK_PKGSRCDIR.xfce4-exo?=	../../x11/xfce4-exo
 
 pkgbase := xfce4-exo
@@ -16,10 +15,9 @@ pkgbase := xfce4-exo
 .include "../../sysutils/hal/buildlink3.mk"
 .endif
 
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/xfce4-mcs-plugins/buildlink3.mk"
-.include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libxfce4util/buildlink3.mk"
 .endif # XFCE4_EXO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-xfce4-exo

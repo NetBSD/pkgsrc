@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.22 2009/08/26 19:56:53 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2009/09/16 01:15:33 reed Exp $
 
 BUILDLINK_TREE+=	xfce4
 
 .if !defined(XFCE4_BUILDLINK3_MK)
 XFCE4_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.xfce4+=	xfce4>=4.4.1
-BUILDLINK_ABI_DEPENDS.xfce4?=	xfce4>=4.4.3nb4
+BUILDLINK_API_DEPENDS.xfce4+=	xfce4>=4.6.0
+BUILDLINK_ABI_DEPENDS.xfce4+=	xfce4>=4.6.0
 BUILDLINK_PKGSRCDIR.xfce4?=	../../meta-pkgs/xfce4
 
 .include "../../audio/xfce4-mixer/buildlink3.mk"
@@ -24,7 +24,6 @@ BUILDLINK_PKGSRCDIR.xfce4?=	../../meta-pkgs/xfce4
 .include "../../x11/xfce4-session/buildlink3.mk"
 .include "../../x11/xfce4-terminal/buildlink3.mk"
 .include "../../x11/xfce4-utils/buildlink3.mk"
-.include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

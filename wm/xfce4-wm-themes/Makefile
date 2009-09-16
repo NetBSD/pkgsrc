@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.20 2009/08/26 19:57:03 sno Exp $
+# $NetBSD: Makefile,v 1.21 2009/09/16 01:15:34 reed Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
+XFCE4_VERSION=	4.6.0
 DISTNAME=	xfwm4-themes-${XFCE4_VERSION}
 PKGNAME=	xfce4-wm-themes-${XFCE4_VERSION}
-PKGREVISION=	2
 CATEGORIES=	wm
 COMMENT=	Xfce window manager themes
 
+USE_LANGUAGES=	#empty
 
-.include "../../wm/xfce4-wm/buildlink3.mk"
+MAKE_DIRS+=	${PREFIX}/share/themes/Xfce
+
 .include "../../mk/bsd.pkg.mk"

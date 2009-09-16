@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.37 2009/08/26 19:56:53 sno Exp $
+# $NetBSD: Makefile,v 1.38 2009/09/16 01:15:33 reed Exp $
 
 META_PACKAGE=	yes
 
 .include "Makefile.common"
 
 DISTNAME=	xfce4-${XFCE4_VERSION}
-PKGREVISION=	4
 CATEGORIES=	meta-pkgs
 COMMENT=	Xfce
 
 .include "../../audio/xfce4-mixer/buildlink3.mk"
 .include "../../editors/xfce4-mousepad/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/xfce4-icon-theme/buildlink3.mk"
 .include "../../print/xfce4-print/buildlink3.mk"
 .include "../../sysutils/xfce4-appfinder/buildlink3.mk"
@@ -22,6 +22,7 @@ COMMENT=	Xfce
 .include "../../x11/xfce4-gtk2-engine/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../x11/xfce4-session/buildlink3.mk"
+.include "../../x11/xfce4-settings/buildlink3.mk"
 .include "../../x11/xfce4-terminal/buildlink3.mk"
 .include "../../x11/xfce4-utils/buildlink3.mk"
 
