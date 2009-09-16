@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2008/06/22 17:41:23 ghen Exp $
+$NetBSD: patch-aa,v 1.2.14.1 2009/09/16 10:54:23 tron Exp $
 
---- src/libsieve/Makefile.in.orig	2007-09-23 16:59:48.000000000 +0200
+--- src/libsieve/Makefile.in.orig	2009-09-14 01:35:15.000000000 +0200
 +++ src/libsieve/Makefile.in
-@@ -38,8 +38,8 @@ PRE_UNINSTALL = :
+@@ -34,8 +34,8 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
  build_triplet = @build@
  host_triplet = @host@
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.2 2008/06/22 17:41:23 ghen Exp $
  subdir = src/libsieve
  DIST_COMMON = README $(noinst_HEADERS) $(srcdir)/Makefile.am \
  	$(srcdir)/Makefile.in AUTHORS COPYING ChangeLog NEWS \
-@@ -62,17 +62,21 @@ am__installdirs = "$(DESTDIR)$(pkglibexe
+@@ -58,17 +58,21 @@ am__installdirs = "$(DESTDIR)$(pkglibexe
  pkglibexecPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  PROGRAMS = $(pkglibexec_PROGRAMS)
  am__sievec_SOURCES_DIST = sievec.c ../map.c ../imparse.c
@@ -36,10 +36,10 @@ $NetBSD: patch-aa,v 1.2 2008/06/22 17:41:23 ghen Exp $
  @HAVE_DOVECOT_LIBS_TRUE@	$(dovecotdir)/src/lib/liblib.a
 +@HAVE_DOVECOT_LIBS_FALSE@sieved_DEPENDENCIES = libsieve.la \
 +@HAVE_DOVECOT_LIBS_FALSE@	$(dovecotdir)/liblib.a
- DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/depcomp
  am__depfiles_maybe = depfiles
-@@ -267,10 +271,16 @@ noinst_HEADERS = \
+@@ -271,10 +275,16 @@ noinst_HEADERS = \
  @HAVE_DOVECOT_LIBS_TRUE@sievec_LDADD = \
  @HAVE_DOVECOT_LIBS_TRUE@	libsieve.la \
  @HAVE_DOVECOT_LIBS_TRUE@	$(dovecotdir)/src/lib/liblib.a
