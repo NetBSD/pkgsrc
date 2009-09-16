@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/08/26 19:57:01 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/09/16 01:31:12 reed Exp $
 
 BUILDLINK_TREE+=	xfce4-genmon-plugin
 
@@ -10,7 +10,6 @@ BUILDLINK_ABI_DEPENDS.xfce4-genmon-plugin?=	xfce4-genmon-plugin>=3.1nb1
 BUILDLINK_PKGSRCDIR.xfce4-genmon-plugin?=	../../sysutils/xfce4-genmon-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"
-.include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
