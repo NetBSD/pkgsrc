@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2009/06/13 06:46:47 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/16 17:25:52 sno Exp $
 #
 
-DISTNAME=	Test-Script-1.03
+DISTNAME=	Test-Script-1.05
 PKGNAME=	p5-${DISTNAME}
-#SVR4_PKGNAME=	p5ts
-PKGREVISION=	1
 CATEGORIES=	perl5 devel
-#MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
 MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/
 COMMENT=	Test::Script - Cross-platform basic tests for scripts
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
