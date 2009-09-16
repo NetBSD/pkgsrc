@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2009/08/26 19:58:15 sno Exp $
+# $NetBSD: Makefile,v 1.62 2009/09/16 09:24:55 drochner Exp $
 
-DISTNAME=		scribus-1.3.3.12
-PKGREVISION=		3
+DISTNAME=		scribus-1.3.3.13
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scribus/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,7 +16,7 @@ USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake perl pkg-config
 PTHREAD_OPTS+=		require
 SHLIBTOOL_OVERRIDE=	# empty
-GNU_CONFIGURE=		yes
+USE_CMAKE=	yes
 CONFIGURE_ARGS+=	--enable-cairo
 CONFIGURE_ARGS+=	--with-extra-includes=${PREFIX}/include
 CONFIGURE_ARGS+=	--with-extra-libs=${PREFIX}/lib
@@ -29,6 +28,11 @@ CONFIGURE_ARGS+=	--with-pythondir=${PREFIX}
 # XXX make an option
 CONFIGURE_ARGS+=	--disable-cups
 
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/scribus/icons/scribus.png \
+		${DESTDIR}${PREFIX}/share/pixmaps
+
+.include "../../print/cups/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libart+= libart>=2.3.19nb1
