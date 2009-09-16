@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3712 2009/09/16 17:35:29 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3713 2009/09/16 17:40:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4850,3 +4850,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-AttributeHelpers to 0.22 [sno 2009-09-16]
 	Updated devel/p5-MooseX-MethodAttributes to 0.16 [sno 2009-09-16]
 	Updated devel/p5-namespace-autoclean to 0.09 [sno 2009-09-16]
+	Updated devel/p5-Test-Base to 0.59 [sno 2009-09-16]
