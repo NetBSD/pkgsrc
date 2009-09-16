@@ -1,48 +1,49 @@
-$NetBSD: patch-aa,v 1.5 2008/12/18 19:59:31 jmcneill Exp $
+$NetBSD: patch-aa,v 1.6 2009/09/16 10:16:58 abs Exp $
 
---- src/npw-config.c.orig	2008-10-12 15:02:08.000000000 -0400
+--- src/npw-config.c.orig	2009-09-16 11:05:23.000000000 +0100
 +++ src/npw-config.c
-@@ -128,16 +128,18 @@ static const char *get_system_mozilla_pl
- #elif defined(__DragonFly__)
+@@ -125,22 +125,15 @@ static const char *get_system_mozilla_pl
+ 	  };
+ 	  dirs = freebsd_dirs;
+ 	}
+-#elif defined(__DragonFly__)
++#elif defined(__NetBSD__) || defined(__DragonFly__)
  	{
  	  static const char *dragonfly_dirs[] = {
 -		"/usr/pkg/" LIB "/mozilla/plugins",
 -		"/usr/pkg/" LIB "/firefox/plugins",
-+		LIBDIR "/firefox3/plugins",
++		LIBDIR "/netscape/plugins",
 +		LIBDIR "/firefox/plugins",
 +		LIBDIR "/seamonkey/plugins",
  	  };
  	  dirs = dragonfly_dirs;
  	}
- #elif defined(__NetBSD__)
- 	{
- 	  static const char *netbsd_dirs[] = {
+-#elif defined(__NetBSD__)
+-	{
+-	  static const char *netbsd_dirs[] = {
 -		"/usr/pkg/" LIB "/mozilla/plugins",
 -		"/usr/pkg/" LIB "/firefox/plugins",
-+		LIBDIR "/firefox3/plugins",
-+		LIBDIR "/firefox/plugins",
-+		LIBDIR "/seamonkey/plugins",
- 	  };
- 	  dirs = netbsd_dirs;
- 	}
-@@ -224,15 +226,19 @@ static const char **get_mozilla_plugin_d
+-	  };
+-	  dirs = netbsd_dirs;
+-	}
+ #elif defined(__sun__)
+ 	{
+ 	  static const char *solaris_dirs[] = {
+@@ -223,16 +216,11 @@ static const char **get_mozilla_plugin_d
+ 	"/usr/local/lib/npapi/linux-flashplugin",
  	"/usr/X11R6/Adobe/Acrobat7.0/ENU/Browser/intellinux",
  #endif
- #if defined(__DragonFly__)
--	"/usr/pkg/lib/netscape/plugins",
-+	"/usr/pkg/lib/firefox3/plugins",
+-#if defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
+ 	"/usr/pkg/lib/netscape/plugins",
  	"/usr/pkg/lib/firefox/plugins",
-+	"/usr/pkg/lib/netscape/plugins",
-+	"/usr/pkg/lib/seamonkey/plugins",
- 	"/usr/pkg/lib/RealPlayer/mozilla",
- 	"/usr/pkg/Acrobat5/Browsers/intellinux",
- 	"/usr/pkg/Acrobat7/Browser/intellinux",
- #endif
- #if defined(__NetBSD__)
--	"/usr/pkg/lib/netscape/plugins",
-+	"/usr/pkg/lib/firefox3/plugins",
- 	"/usr/pkg/lib/firefox/plugins",
-+	"/usr/pkg/lib/netscape/plugins",
+-	"/usr/pkg/lib/RealPlayer/mozilla",
+-	"/usr/pkg/Acrobat5/Browsers/intellinux",
+-	"/usr/pkg/Acrobat7/Browser/intellinux",
+-#endif
+-#if defined(__NetBSD__)
+ 	"/usr/pkg/lib/netscape/plugins",
+-	"/usr/pkg/lib/firefox/plugins",
 +	"/usr/pkg/lib/seamonkey/plugins",
  	"/usr/pkg/lib/RealPlayer/mozilla",
  	"/usr/pkg/Acrobat5/Browsers/intellinux",
