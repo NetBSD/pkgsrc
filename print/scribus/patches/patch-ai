@@ -1,0 +1,36 @@
+$NetBSD: patch-ai,v 1.1 2009/09/16 09:24:55 drochner Exp $
+
+--- CMakeLists.txt.orig	2009-04-14 22:52:13.000000000 +0200
++++ CMakeLists.txt
+@@ -116,7 +116,7 @@ IF (WANT_VERSIONING AND NOT CACHED_VERSI
+ ENDIF (WANT_VERSIONING AND NOT CACHED_VERSIONING)
+ 
+ #MAN
+-SET(MANDIR "share/man/")
++SET(MANDIR "man/")
+ SET(SHAREDIR "share/${MAIN_DIR_NAME}${TAG_VERSION}/")
+ ADD_DEFINITIONS("-DSHAREDIR=\\\"${CMAKE_INSTALL_PREFIX}/${SHAREDIR}\\\"")
+ #SHARE
+@@ -496,15 +496,15 @@ scribus.xml
+ DESTINATION ${MIMEDIR}
+ )
+ #KDE workaround until it starts supporting freedesktop spec
+-INSTALL(FILES
+-  vnd.scribus.desktop
+-  DESTINATION ${MIMELNKDIR}
+-)
+-#Install the desktop file
+ #INSTALL(FILES
+-#scribus.desktop
+-#DESTINATION ${DESKTOPDIR}
++#  vnd.scribus.desktop
++#  DESTINATION ${MIMELNKDIR}
+ #)
++#Install the desktop file
++INSTALL(FILES
++scribus.desktop
++DESTINATION ${DESKTOPDIR}
++)
+ 
+ # If the cmake version includes cpack, use it
+ IF(EXISTS "${CMAKE_ROOT}/Modules/CPack.cmake")
