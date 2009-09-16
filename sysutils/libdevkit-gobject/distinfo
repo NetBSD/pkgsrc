@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/16 19:03:10 wiz Exp $
+
+SHA1 (DeviceKit-003.tar.gz) = 31874d013b8816a71d6a7a9200b7a74701b204e4
+RMD160 (DeviceKit-003.tar.gz) = c4966300273cb983a166b13f68c1c707575ce516
+Size (DeviceKit-003.tar.gz) = 384408 bytes
+SHA1 (patch-aa) = dd2f1973ad7df7b6950a63a69f9a49538970c312
+SHA1 (patch-ab) = 04f38467eba2fa93e1a2626dc2ba36f1766045d2

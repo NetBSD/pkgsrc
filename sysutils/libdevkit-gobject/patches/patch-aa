@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/09/16 19:03:10 wiz Exp $
+
+--- Makefile.am.orig	2008-12-19 01:12:03.000000000 +0000
++++ Makefile.am
+@@ -1,6 +1,7 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-SUBDIRS = src doc devkitd tools
++SUBDIRS = src doc @DEVKITD_SUBDIR@ tools
++DIST_SUBDIRS = src doc devkitd tools
+ 
+ # Creating ChangeLog from git log (taken from cairo/Makefile.am):
+ ChangeLog: $(srcdir)/ChangeLog

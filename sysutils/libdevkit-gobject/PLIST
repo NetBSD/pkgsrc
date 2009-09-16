@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/16 19:03:10 wiz Exp $
+bin/devkit
+include/DeviceKit/devkit-gobject/devkit-client.h
+include/DeviceKit/devkit-gobject/devkit-device.h
+include/DeviceKit/devkit-gobject/devkit-gobject.h
+include/DeviceKit/devkit-gobject/devkit-types.h
+lib/libdevkit-gobject.la
+lib/pkgconfig/devkit-gobject.pc
