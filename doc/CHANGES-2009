@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3718 2009/09/16 18:38:00 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3719 2009/09/16 18:43:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4856,3 +4856,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Rose-HTML-Objects to 0.604 [sno 2009-09-16]
 	Updated devel/p5-Event to 1.12 [sno 2009-09-16]
 	Updated devel/p5-Async-Interrupt to 1.02 [sno 2009-09-16]
+	Updated devel/p5-AnyEvent to 5.200 [sno 2009-09-16]
