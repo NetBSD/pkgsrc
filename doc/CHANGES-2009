@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3708 2009/09/16 17:21:36 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3709 2009/09/16 17:26:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4846,3 +4846,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/seamonkey-gtk1 to 1.1.18nb1 [ghen 2009-09-16]
 	Updated devel/p5-Class-Accessor to 0.34 [sno 2009-09-16]
 	Updated devel/p5-ExtUtils-ParseXS to 2.20.04.01 [sno 2009-09-16]
+	Updated devel/p5-Test-Script to 1.05 [sno 2009-09-16]
