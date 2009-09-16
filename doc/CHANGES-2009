@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3703 2009/09/16 02:25:34 reed Exp $
+$NetBSD: CHANGES-2009,v 1.3704 2009/09/16 02:53:56 reed Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4824,7 +4824,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed x11/xfce4-mcs-plugins [reed 2009-09-16]
 	Updated x11/xfce4-exo to 0.3.101 [reed 2009-09-16]
 	Updated audio/xfce4-mixer to 4.6.1 [reed 2009-09-16]
-	Updated audio/xfce4-dev-tools to 4.6.0 [reed 2009-09-16]
+	Updated devel/xfce4-dev-tools to 4.6.0 [reed 2009-09-16]
 	Updated editors/xfce4-mousepad to 0.2.16 [reed 2009-09-16]
 	Updated meta-pkgs/xfce4 to 4.6.1 [reed 2009-09-16]
 	Updated print/xfce4-print to 4.6.1 [reed 2009-09-16]
