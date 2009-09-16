@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/07/28 06:28:07 sno Exp $
+$NetBSD: distinfo,v 1.6 2009/09/16 17:21:24 sno Exp $
 
-SHA1 (ExtUtils-ParseXS-2.2002.tar.gz) = 136dc6a8c7279bc0459a9f497fa58abbc956ec25
-RMD160 (ExtUtils-ParseXS-2.2002.tar.gz) = dc98b8627eb40e8b645bd00c8c4df9b3588c76b1
-Size (ExtUtils-ParseXS-2.2002.tar.gz) = 32106 bytes
+SHA1 (ExtUtils-ParseXS-2.200401.tar.gz) = bdcdfce2c10b3fe246d9a51f00bd6544288a6414
+RMD160 (ExtUtils-ParseXS-2.200401.tar.gz) = 6e94f452502d6a97abdfed81530a240ac9a22627
+Size (ExtUtils-ParseXS-2.200401.tar.gz) = 35256 bytes
