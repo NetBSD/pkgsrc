@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3699 2009/09/15 23:52:02 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3700 2009/09/16 00:09:42 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4814,3 +4814,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/pkcs11-helper version 1.06 [spz 2009-09-15]
 	Added mail/re-alpine version 2.01 [reed 2009-09-15]
 	Added devel/p5-Try-Tiny version 0.02 [seb 2009-09-15]
+	Updated devel/p5-Class-MOP to 0.93 [seb 2009-09-16]
