@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/08/26 19:57:03 sno Exp $
+# $NetBSD: Makefile,v 1.34 2009/09/16 01:15:35 reed Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -6,33 +6,39 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTNAME=	xfdesktop-${XFCE4_VERSION}
 PKGNAME=	xfce4-desktop-${XFCE4_VERSION}
-PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Xfce desktop background manager
 
-PKG_SYSCONFSUBDIR=	xdg/xfce4/desktop
-EGDIR=			${XFCE4_EGBASE}/desktop
-CONF_FILES=		${EGDIR:Q}/menu.xml ${PKG_SYSCONFDIR:Q}/menu.xml
-.for l in ca cs da de el es et eu fi fr he hu ja ko nl pl pt_BR pt_PT ro ru sk \
-	sv uk vi zh_TW
-CONF_FILES+=		${EGDIR:Q}/menu.xml.${l:Q} \
-			${PKG_SYSCONFDIR:Q}/menu.xml.${l:Q}
-.endfor
-CONF_FILES+=		${EGDIR:Q}/xfce-registered-categories.xml \
-			${PKG_SYSCONFDIR:Q}/xfce-registered-categories.xml
-.for l in ca cs de el es eu fi he hu ja nl pl pt_BR ro ru sk sv zh_CN zh_TW
-CONF_FILES+=		${EGDIR:Q}/xfce-registered-categories.xml.${l:Q} \
-			${PKG_SYSCONFDIR:Q}/xfce-registered-categories.xml.${l:Q}
-.endfor
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
+BUILD_DEFS+=	PKG_SYSCONFBASE
 
-REQD_DIRS+=		${XFCE4_EGBASE:Q} ${EGDIR:Q}
-BUILD_DEFS+=		PKG_SYSCONFBASE
+PKG_SYSCONFSUBDIR=	xdg/menus
 
+OWN_DIRS+=	${PKG_SYSCONFDIR}
+MAKE_DIRS+=	${PREFIX}/lib/xfce4 ${PREFIX}/libexec/xfce4
+MAKE_DIRS+=	${PREFIX}/libexec/panel-plugins ${XFCE4_EGBASE:Q}
+MAKE_DIRS+=	${PREFIX}/share/xfce4 ${PREFIX}/share/xfce4/doc
+MAKE_DIRS+=	${PREFIX}/share/xfce4/doc/C ${PREFIX}/share/xfce4/doc/C/images
+MAKE_DIRS+=	${PREFIX}/share/xfce4/doc/da
+MAKE_DIRS+=	${PREFIX}/share/xfce4/doc/fr ${PREFIX}/share/xfce4/doc/fr/images
+MAKE_DIRS+=	${PREFIX}/share/xfce4/doc/ja ${PREFIX}/share/xfce4/doc/ja/images
+MAKE_DIRS+=	${PREFIX}/share/xfce4/panel-plugins
+
+CONF_FILES=	${XFCE4_EGBASE:Q}/menus/xfce-applications.menu \
+		${PKG_SYSCONFDIR}/xfce-applications.menu
+
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/libwnck/buildlink3.mk"
+.include "../../devel/xfconf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/xfce4-thunar/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/libxfce4gui/buildlink3.mk"
+.include "../../x11/libxfce4menu/buildlink3.mk"
+.include "../../x11/libxfce4util/buildlink3.mk"
+.include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
