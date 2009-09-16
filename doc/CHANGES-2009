@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3719 2009/09/16 18:43:25 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3720 2009/09/16 18:46:55 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4857,3 +4857,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Event to 1.12 [sno 2009-09-16]
 	Updated devel/p5-Async-Interrupt to 1.02 [sno 2009-09-16]
 	Updated devel/p5-AnyEvent to 5.200 [sno 2009-09-16]
+	Updated devel/p5-MooseX-Emulate-Class-Accessor-Fast to 0.00903 [sno 2009-09-16]
