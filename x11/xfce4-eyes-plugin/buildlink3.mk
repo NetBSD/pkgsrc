@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/08/26 19:56:56 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/09/16 01:31:13 reed Exp $
 
 BUILDLINK_TREE+=	xfce4-eyes-plugin
 
@@ -10,7 +10,6 @@ BUILDLINK_ABI_DEPENDS.xfce4-eyes-plugin?=	xfce4-eyes-plugin>=4.4.0nb1
 BUILDLINK_PKGSRCDIR.xfce4-eyes-plugin?=	../../x11/xfce4-eyes-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"
-.include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
