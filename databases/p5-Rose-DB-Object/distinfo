@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/08/20 18:55:57 sno Exp $
+$NetBSD: distinfo,v 1.6 2009/09/16 17:50:10 sno Exp $
 
-SHA1 (Rose-DB-Object-0.782.tar.gz) = 18736b8f424ba812347dbdd8a8316e9f3a0fa641
-RMD160 (Rose-DB-Object-0.782.tar.gz) = d3e1807928e47a060978915da8ef593d8e98be3d
-Size (Rose-DB-Object-0.782.tar.gz) = 535715 bytes
+SHA1 (Rose-DB-Object-0.783.tar.gz) = 5fe98bdc6ecc029c343fc2c8d0fc96dc3488c257
+RMD160 (Rose-DB-Object-0.783.tar.gz) = d35d2d2e1c942bee7c1a3811d33e45e8c2fdf476
+Size (Rose-DB-Object-0.783.tar.gz) = 539883 bytes
