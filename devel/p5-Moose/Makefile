@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2009/09/12 12:12:48 sno Exp $
+# $NetBSD: Makefile,v 1.30 2009/09/16 00:10:07 seb Exp $
 #
 
-DISTNAME=	Moose-0.89
+DISTNAME=	Moose-0.90
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -11,12 +11,13 @@ HOMEPAGE=	http://moose.perl.org/
 COMMENT=	Postmodern object system for Perl 5
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Class-MOP>=0.92:../../devel/p5-Class-MOP
+DEPENDS+=	p5-Class-MOP>=0.93:../../devel/p5-Class-MOP
 DEPENDS+=	p5-Data-OptList-[0-9]*:../../devel/p5-Data-OptList
 DEPENDS+=	p5-List-MoreUtils>=0.12:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Sub-Exporter>=0.980:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
+DEPENDS+=	p5-Try-Tiny>=0.02:../../devel/p5-Try-Tiny
 
 BUILD_DEPENDS+=	p5-DBM-Deep-[0-9]*:../../databases/p5-DBM-Deep
 BUILD_DEPENDS+=	p5-DateTime-Calendar-Mayan-[0-9]*:../../time/p5-DateTime-Calendar-Mayan
