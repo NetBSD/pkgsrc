@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/16 01:04:02 reed Exp $
+
+SHA1 (xfce4-settings-4.6.1.tar.bz2) = ab117c3923571e2437095fd165ac4bf392e658e0
+RMD160 (xfce4-settings-4.6.1.tar.bz2) = 6ecfa08d6ad528d43988c5fe128b2fcd6db6f0d3
+Size (xfce4-settings-4.6.1.tar.bz2) = 501587 bytes
+SHA1 (patch-aa) = 104e459ab5b7bd4ac821cacada43f2aa4da23f10
+SHA1 (patch-ab) = 4f23e05cacd765b5be2e101dec29d3c6f5cd839f
+SHA1 (patch-ac) = 13f09513dbcdc13c11ac92471c34896a3c16d17c

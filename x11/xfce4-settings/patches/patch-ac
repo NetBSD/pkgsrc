@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/09/16 01:04:02 reed Exp $
+
+Needed for newer libxlavier API change
+
+--- dialogs/keyboard-settings/xfce-keyboard-settings.c.orig	2009-09-15 19:42:23.000000000 -0500
++++ dialogs/keyboard-settings/xfce-keyboard-settings.c	2009-09-15 19:41:38.000000000 -0500
+@@ -378,7 +378,7 @@
+   xkl_config_rec_get_from_server (settings->priv->xkl_rec_config, settings->priv->xkl_engine);
+ 
+   settings->priv->xkl_registry = xkl_config_registry_get_instance (settings->priv->xkl_engine);
+-  xkl_config_registry_load (settings->priv->xkl_registry);
++  xkl_config_registry_load (settings->priv->xkl_registry, FALSE);
+ 
+   /* Tab */
+   xkb_tab_layout_vbox = glade_xml_get_widget (settings->priv->glade_xml, "xkb_tab_layout_vbox");
