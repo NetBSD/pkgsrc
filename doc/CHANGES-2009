@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3728 2009/09/16 19:22:57 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3729 2009/09/16 19:40:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4865,3 +4865,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/p5-Net-ManageSieve to 0.08 [sno 2009-09-16]
 	Added sysutils/devkitd version 003 [wiz 2009-09-16]
 	Added devel/p5-MooseX-MultiInitArg version 0.01 [sno 2009-09-16]
+	Added net/p5-Net-OAuth version 0.19 [sno 2009-09-16]
