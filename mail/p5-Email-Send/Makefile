@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2009/03/21 23:29:23 sno Exp $
+# $NetBSD: Makefile,v 1.11 2009/09/16 18:53:21 sno Exp $
 
-DISTNAME=	Email-Send-2.194
+DISTNAME=	Email-Send-2.198
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Email-Send/
 COMMENT=	Email::Send - Simply Sending Email
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
