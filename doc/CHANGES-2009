@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3715 2009/09/16 17:50:22 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3716 2009/09/16 17:55:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4853,3 +4853,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-Base to 0.59 [sno 2009-09-16]
 	Updated databases/p5-Rose-DB to 0.754 [sno 2009-09-16]
 	Updated databases/p5-Rose-DB-Object to 0.783 [sno 2009-09-16]
+	Updated www/p5-Rose-HTML-Objects to 0.604 [sno 2009-09-16]
