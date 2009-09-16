@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2008/12/19 23:58:18 hira Exp $
+$NetBSD: patch-ab,v 1.2 2009/09/16 01:15:33 reed Exp $
 
---- xfce4-tips/Makefile.in.orig	2008-12-20 08:38:59.000000000 +0900
-+++ xfce4-tips/Makefile.in	2008-12-20 08:39:31.000000000 +0900
-@@ -299,7 +299,7 @@
+--- xfce4-tips/Makefile.in.orig	2009-02-25 20:29:50.000000000 +0000
++++ xfce4-tips/Makefile.in
+@@ -309,7 +309,7 @@ xfce4_tips_CFLAGS = \
  xfce4_tips_LDADD = \
  	@LIBXFCEGUI4_LIBS@
  
 -desktopdir = $(sysconfdir)/xdg/autostart
-+desktopdir = $(datadir)/xdg/autostart
++desktopdir = $(datadir)/examples/xfce4/autostart
  desktop_in_files = xfce4-tips-autostart.desktop.in
  desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
  EXTRA_DIST = \
