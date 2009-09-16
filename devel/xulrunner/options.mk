@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2009/09/13 19:10:10 tnn Exp $
+# $NetBSD: options.mk,v 1.6 2009/09/16 18:42:31 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xulrunner
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome
 
-PLIST_VARS+=	jit gnome
+PLIST_VARS+=	jit gnome debug
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
+PLIST.debug=		yes
 .else
 CONFIGURE_ARGS+=	--disable-debug
 .endif
