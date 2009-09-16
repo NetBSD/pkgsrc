@@ -1,0 +1,20 @@
+$NetBSD: patch-ed,v 1.1.2.2 2009/09/16 12:56:33 tron Exp $
+
+--- security/nss/tests/libpkix/libpkix.sh.orig	2008-11-11 10:06:52.000000000 +0100
++++ security/nss/tests/libpkix/libpkix.sh
+@@ -85,12 +85,12 @@ libpkix_cleanup()
+ ParseArgs ()
+ {
+     while [ $# -gt 0 ]; do
+-        if [ $1 == "-checkmem" ]; then
++        if [ $1 = "-checkmem" ]; then
+             checkMemArg=$1
+             memText="   (Memory Checking Enabled)"
+-        elif [ $1 == "-quiet" ]; then
++        elif [ $1 = "-quiet" ]; then
+             quietArg=$1
+-        elif [ $1 == "-arenas" ]; then
++        elif [ $1 = "-arenas" ]; then
+             arenasArg=$1
+         fi
+         shift
