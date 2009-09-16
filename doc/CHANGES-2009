@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3724 2009/09/16 18:59:46 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3725 2009/09/16 19:05:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4861,3 +4861,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/p5-Email-Valid to 0.182 [sno 2009-09-16]
 	Updated mail/p5-Email-Send to 2.198 [sno 2009-09-16]
 	Updated devel/p5-File-Which to 1.08 [sno 2009-09-16]
+	Added sysutils/libdevkit-gobject version 003 [wiz 2009-09-16]
