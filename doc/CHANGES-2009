@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3710 2009/09/16 17:29:21 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3711 2009/09/16 17:32:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4848,3 +4848,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-ExtUtils-ParseXS to 2.20.04.01 [sno 2009-09-16]
 	Updated devel/p5-Test-Script to 1.05 [sno 2009-09-16]
 	Updated devel/p5-MooseX-AttributeHelpers to 0.22 [sno 2009-09-16]
+	Updated devel/p5-MooseX-MethodAttributes to 0.16 [sno 2009-09-16]
