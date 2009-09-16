@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/17 19:03:36 sno Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/16 19:52:02 sno Exp $
 
 DISTNAME=	Template-Plugin-Subst-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,7 @@ DEPENDS+=	p5-Template-Toolkit>=2.0:../../www/p5-Template-Toolkit
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Template/Plugin/Subst/.packlist
+PERL5_MODULE_TYPE=	Module::Build
 
 PKG_DESTDIR_SUPPORT=    user-destdir
 
