@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2008/12/17 12:50:03 hira Exp $
+$NetBSD: patch-ac,v 1.2 2009/09/16 01:15:34 reed Exp $
 
 --- plugins/thunar-uca/Makefile.in.orig	2008-11-29 17:25:52.000000000 +0900
 +++ plugins/thunar-uca/Makefile.in	2008-11-29 17:27:26.000000000 +0900
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1 2008/12/17 12:50:03 hira Exp $
  	$(PLATFORM_LDFLAGS)
  
 -defaultsdir = $(sysconfdir)/xdg/Thunar
-+defaultsdir = $(datadir)/examples/Thunar
++defaultsdir = $(datadir)/examples/xfce4/Thunar
  defaults_in_files = uca.xml.in
  defaults_DATA = $(defaults_in_files:.xml.in=.xml)
  EXTRA_DIST = \
