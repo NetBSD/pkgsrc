@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/12/17 12:50:04 hira Exp $
+$NetBSD: distinfo,v 1.5 2009/09/16 01:15:36 reed Exp $
 
-SHA1 (Terminal-0.2.8.3.tar.bz2) = 69add6a7435855ab8bccb82774cacb6a148e7693
-RMD160 (Terminal-0.2.8.3.tar.bz2) = ccb5d5484b2164cac673cd5029d8bbc8793d19d4
-Size (Terminal-0.2.8.3.tar.bz2) = 1860706 bytes
+SHA1 (Terminal-0.2.12.tar.bz2) = f6d0fc380fff6ac6fba7842fd4cfc46e2e5c6e40
+RMD160 (Terminal-0.2.12.tar.bz2) = 0879cfbb69d33d63a1a816cf5a67b1c836a5bb65
+Size (Terminal-0.2.12.tar.bz2) = 2005311 bytes

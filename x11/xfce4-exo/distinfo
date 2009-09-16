@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2008/12/18 16:38:08 hira Exp $
+$NetBSD: distinfo,v 1.7 2009/09/16 01:15:35 reed Exp $
 
-SHA1 (exo-0.3.4.tar.bz2) = 4f7a3f46592fd0311be1f011f17431f211cc1fcb
-RMD160 (exo-0.3.4.tar.bz2) = e021f030a624c522c819ec0f3a8682a1007ae748
-Size (exo-0.3.4.tar.bz2) = 1300127 bytes
+SHA1 (exo-0.3.101.tar.bz2) = 74194f58278a2b9d963264806f142e5d6d05336c
+RMD160 (exo-0.3.101.tar.bz2) = 92dfc1e8f0bfa8ca74f151a2283f6988ce703649
+Size (exo-0.3.101.tar.bz2) = 1793815 bytes
 SHA1 (patch-ad) = af08127aad06a5e9d8e8055dff1f55982666d8d9
 SHA1 (patch-ae) = 18a95737a6eaef8697224d4c099625c18be7ddfb
-SHA1 (patch-af) = 3ee9049c676a03eadaaa92c69f5480e625a9cc9f
+SHA1 (patch-af) = 86aee9fdf075c2de36deeebbb7594193e92cde95

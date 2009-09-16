@@ -1,13 +1,36 @@
-# $NetBSD: Makefile.common,v 1.41 2009/05/19 08:59:23 wiz Exp $
+# $NetBSD: Makefile.common,v 1.42 2009/09/16 01:15:33 reed Exp $
 
-MASTER_SITES=		http://www.xfce.org/archive/xfce-4.4.3/src/
+# used by audio/xfce4-mixer/Makefile
+# used by devel/xfce4-dev-tools/Makefile
+# used by devel/xfconf/Makefile
+# used by editors/xfce4-mousepad/Makefile
+# used by graphics/xfce4-icon-theme/Makefile
+# used by print/xfce4-print/Makefile
+# used by sysutils/xfce4-appfinder/Makefile
+# used by sysutils/xfce4-thunar/Makefile
+# used by time/xfce4-orage/Makefile
+# used by wm/xfce4-wm-themes/Makefile
+# used by wm/xfce4-wm/Makefile
+# used by x11/xfce4-desktop/Makefile
+# used by x11/xfce4-exo/Makefile
+# used by x11/xfce4-gtk2-engine/Makefile
+# used by x11/xfce4-panel/Makefile
+# used by x11/libxfce4gui/Makefile
+# used by x11/libxfce4menu/Makefile
+# used by x11/libxfce4util/Makefile
+# used by x11/xfce4-session/Makefile
+# used by x11/xfce4-settings/Makefile
+# used by x11/xfce4-terminal/Makefile
+# used by x11/xfce4-utils/Makefile
+
+MASTER_SITES=		http://www.xfce.org/archive/xfce-4.6.1/src/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://www.xfce.org/
 LICENSE=		gnu-gpl-v2
 
-XFCE4_VERSION=		4.4.3
+XFCE4_VERSION=		4.6.1
 
 # Do NOT put a PKGREVISION statement in this file!
 
@@ -22,10 +45,9 @@ GCC_REQD+=		3.0
 
 XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 
-.include "../../devel/xfce4-dev-tools/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 
 ## # Use the latest GNU tar when the native tar is buggy
 ## .if !empty(MACHINE_PLATFORM:MNetBSD-1.6*)

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/12/18 14:09:26 hira Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/09/16 01:15:36 reed Exp $
 bin/startxfce4
 bin/xfbrowser4
 bin/xfce4-about
@@ -7,7 +7,10 @@ bin/xflock4
 bin/xfmountdev4
 bin/xfrun4
 bin/xfterm4
+libexec/xfce4/xfconf-migration/xfconf-migration-4.6.pl
+share/dbus-1/services/org.xfce.RunDialog.service
 share/examples/xfce4/Xft.xrdb
+share/examples/xfce4/autostart/xfconf-migration-4.6.desktop
 share/examples/xfce4/xinitrc
 share/icons/hicolor/48x48/apps/xfce4-logo.png
 share/locale/af/LC_MESSAGES/xfce-utils.mo
@@ -49,16 +52,17 @@ share/locale/lv/LC_MESSAGES/xfce-utils.mo
 share/locale/mk/LC_MESSAGES/xfce-utils.mo
 share/locale/mr/LC_MESSAGES/xfce-utils.mo
 share/locale/ms/LC_MESSAGES/xfce-utils.mo
-share/locale/nb_NO/LC_MESSAGES/xfce-utils.mo
+share/locale/nb/LC_MESSAGES/xfce-utils.mo
 share/locale/nl/LC_MESSAGES/xfce-utils.mo
 share/locale/pa/LC_MESSAGES/xfce-utils.mo
 share/locale/pl/LC_MESSAGES/xfce-utils.mo
+share/locale/pt/LC_MESSAGES/xfce-utils.mo
 share/locale/pt_BR/LC_MESSAGES/xfce-utils.mo
-share/locale/pt_PT/LC_MESSAGES/xfce-utils.mo
 share/locale/ro/LC_MESSAGES/xfce-utils.mo
 share/locale/ru/LC_MESSAGES/xfce-utils.mo
 share/locale/si/LC_MESSAGES/xfce-utils.mo
 share/locale/sk/LC_MESSAGES/xfce-utils.mo
+share/locale/sq/LC_MESSAGES/xfce-utils.mo
 share/locale/sv/LC_MESSAGES/xfce-utils.mo
 share/locale/ta/LC_MESSAGES/xfce-utils.mo
 share/locale/tr/LC_MESSAGES/xfce-utils.mo
@@ -73,6 +77,7 @@ share/xfce4/COPYING
 share/xfce4/GPL
 share/xfce4/INFO
 share/xfce4/INFO.ca
+share/xfce4/INFO.de
 share/xfce4/INFO.es
 share/xfce4/INFO.fi
 share/xfce4/INFO.fr
@@ -103,3 +108,4 @@ share/xfce4/doc/it/index.html
 share/xfce4/doc/xfce-chunk.css
 share/xfce4/doc/xfce-mouse.png
 share/xfce4/doc/xfce.css
+share/xsessions/xfce.desktop

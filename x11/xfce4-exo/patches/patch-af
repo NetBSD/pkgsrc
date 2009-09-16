@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2008/12/18 16:38:08 hira Exp $
+$NetBSD: patch-af,v 1.2 2009/09/16 01:15:35 reed Exp $
 
---- exo-helper/helpers/Makefile.in.orig	2008-11-29 17:14:28.000000000 +0900
-+++ exo-helper/helpers/Makefile.in	2008-11-29 17:15:31.000000000 +0900
-@@ -276,7 +276,7 @@
+--- exo-helper/helpers/Makefile.in.orig	2009-02-24 20:56:34.000000000 +0000
++++ exo-helper/helpers/Makefile.in
+@@ -273,7 +273,7 @@ target_os = @target_os@
  target_vendor = @target_vendor@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
