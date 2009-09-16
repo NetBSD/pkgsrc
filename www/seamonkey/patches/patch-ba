@@ -1,10 +1,10 @@
-$NetBSD: patch-ba,v 1.2 2008/05/19 10:43:02 tnn Exp $
+$NetBSD: patch-ba,v 1.2.14.1 2009/09/16 12:56:33 tron Exp $
 
---- nsprpub/pr/include/md/_netbsd.cfg.orig	2004-04-28 02:33:44.000000000 +0200
+--- nsprpub/pr/include/md/_netbsd.cfg.orig	2007-11-26 19:17:17.000000000 +0100
 +++ nsprpub/pr/include/md/_netbsd.cfg
-@@ -48,7 +48,8 @@
- 
- #define PR_AF_INET6 24  /* same as AF_INET6 */
+@@ -52,7 +52,8 @@
+ #define HAVE_LONG_LONG
+ #endif
  
 -#if defined(__i386__) || defined(__arm32__) || defined(__MIPSEL__)
 +#if defined(__i386__) || defined(__arm32__) || defined(__ARMEL__) || \
@@ -12,7 +12,7 @@ $NetBSD: patch-ba,v 1.2 2008/05/19 10:43:02 tnn Exp $
  
  #define IS_LITTLE_ENDIAN 1
  #undef  IS_BIG_ENDIAN
-@@ -94,7 +95,53 @@
+@@ -97,7 +98,53 @@
  #define PR_ALIGN_OF_DOUBLE  4
  #define PR_ALIGN_OF_POINTER 4
  
@@ -67,7 +67,7 @@ $NetBSD: patch-ba,v 1.2 2008/05/19 10:43:02 tnn Exp $
  
  #undef IS_LITTLE_ENDIAN
  #define  IS_BIG_ENDIAN 1
-@@ -187,6 +234,55 @@
+@@ -188,6 +235,55 @@
  #define PR_BYTES_PER_WORD_LOG2  3
  #define PR_BYTES_PER_DWORD_LOG2 3
  
