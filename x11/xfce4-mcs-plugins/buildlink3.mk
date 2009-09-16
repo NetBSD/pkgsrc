@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2009/08/26 19:57:02 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2009/09/16 01:31:13 reed Exp $
 
 BUILDLINK_TREE+=	xfce4-mcs-plugins
 
@@ -11,7 +11,6 @@ BUILDLINK_PKGSRCDIR.xfce4-mcs-plugins?=	../../x11/xfce4-mcs-plugins
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/xfce4-mcs-manager/buildlink3.mk"
-.include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .endif # XFCE4_MCS_PLUGINS_BUILDLINK3_MK
 
