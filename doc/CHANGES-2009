@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3705 2009/09/16 07:22:38 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3706 2009/09/16 16:45:33 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4843,3 +4843,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xfce4-utils to 4.6.1 [reed 2009-09-16]
 	Update time/xfce4-datetime-plugin to 0.6.1 [reed 2009-09-16]
 	Updated net/lftp to 4.0.0 [hasso 2009-09-16]
+	Updated www/seamonkey-gtk1 to 1.1.18nb1 [ghen 2009-09-16]
