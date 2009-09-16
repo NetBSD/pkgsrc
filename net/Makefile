@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.784 2009/09/02 22:33:55 wiz Exp $
+# $NetBSD: Makefile,v 1.785 2009/09/16 19:41:22 sno Exp $
 #
 
 COMMENT=	Networking tools
@@ -351,6 +351,7 @@ SUBDIR+=	p5-Net-LibIDN
 SUBDIR+=	p5-Net-Libdnet
 SUBDIR+=	p5-Net-MAC
 SUBDIR+=	p5-Net-NBName
+SUBDIR+=	p5-Net-OAuth
 SUBDIR+=	p5-Net-OpenID-Consumer
 SUBDIR+=	p5-Net-Packet
 SUBDIR+=	p5-Net-Pcap
