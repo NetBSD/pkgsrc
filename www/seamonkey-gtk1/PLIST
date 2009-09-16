@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10.2.1 2009/09/16 12:56:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.10.2.2 2009/09/16 18:01:32 tron Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -110,11 +110,14 @@ lib/${MOZILLA}/libmsgbaseutil.${SO_SUFFIX}
 lib/${MOZILLA}/libnspr4.${SO_SUFFIX}
 lib/${MOZILLA}/libnss3.${SO_SUFFIX}
 lib/${MOZILLA}/libnssckbi.${SO_SUFFIX}
+lib/${MOZILLA}/libnssdbm3.${SO_SUFFIX}
+lib/${MOZILLA}/libnssutil3.${SO_SUFFIX}
 lib/${MOZILLA}/libplc4.${SO_SUFFIX}
 lib/${MOZILLA}/libplds4.${SO_SUFFIX}
 lib/${MOZILLA}/libprldap50.${SO_SUFFIX}
 lib/${MOZILLA}/libsmime3.${SO_SUFFIX}
 lib/${MOZILLA}/libsoftokn3.${SO_SUFFIX}
+lib/${MOZILLA}/libsqlite3.${SO_SUFFIX}
 lib/${MOZILLA}/libssl3.${SO_SUFFIX}
 lib/${MOZILLA}/libxlibrgb.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom.${SO_SUFFIX}
@@ -390,6 +393,7 @@ lib/${MOZILLA}/defaults/wallet/SchemaStrings.tbl
 lib/${MOZILLA}/defaults/wallet/StateSchema.tbl
 lib/${MOZILLA}/defaults/wallet/VcardSchema.tbl
 lib/${MOZILLA}/dependentlibs.list
+lib/${MOZILLA}/dictionaries/en-US.aff
 lib/${MOZILLA}/dictionaries/en-US.dic
 lib/${MOZILLA}/dirver
 lib/${MOZILLA}/greprefs/all.js
@@ -2142,6 +2146,8 @@ include/${MOZILLA}/nspr/md/_sunos4.cfg
 include/${MOZILLA}/nspr/md/_unixware.cfg
 include/${MOZILLA}/nspr/md/_unixware7.cfg
 include/${MOZILLA}/nspr/md/_win16.cfg
+include/${MOZILLA}/nspr/md/_win95.cfg
+include/${MOZILLA}/nspr/md/_winnt.cfg
 include/${MOZILLA}/nspr/nspr.h
 include/${MOZILLA}/nspr/obsolete/pralarm.h
 include/${MOZILLA}/nspr/obsolete/probslet.h
@@ -2262,6 +2268,7 @@ include/${MOZILLA}/pipnss/nsITokenDialogs.h
 include/${MOZILLA}/pipnss/nsITokenPasswordDialogs.h
 include/${MOZILLA}/pipnss/nsIUserCertPicker.h
 include/${MOZILLA}/pipnss/nsIX509Cert.h
+include/${MOZILLA}/pipnss/nsIX509Cert18Branch.h
 include/${MOZILLA}/pipnss/nsIX509Cert3.h
 include/${MOZILLA}/pipnss/nsIX509CertDB.h
 include/${MOZILLA}/pipnss/nsIX509CertDB2.h
@@ -2942,6 +2949,7 @@ include/${MOZILLA}/nss/nssilock.h
 include/${MOZILLA}/nss/nsslocks.h
 include/${MOZILLA}/nss/nssrwlk.h
 include/${MOZILLA}/nss/nssrwlkt.h
+include/${MOZILLA}/nss/nssutil.h
 include/${MOZILLA}/nss/ocsp.h
 include/${MOZILLA}/nss/ocspt.h
 include/${MOZILLA}/nss/p12.h
@@ -2987,6 +2995,7 @@ include/${MOZILLA}/nss/ssl.h
 include/${MOZILLA}/nss/sslerr.h
 include/${MOZILLA}/nss/sslproto.h
 include/${MOZILLA}/nss/sslt.h
+include/${MOZILLA}/nss/utilrename.h
 @comment end INCLUDE-PUBLIC
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome
