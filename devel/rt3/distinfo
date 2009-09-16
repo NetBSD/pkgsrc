@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2009/06/21 15:31:39 spz Exp $
+$NetBSD: distinfo,v 1.12.2.1 2009/09/16 10:31:58 tron Exp $
 
-SHA1 (rt-3.8.4.tar.gz) = c786eb78dd6c8374da3bc0dd10414e040d69864f
-RMD160 (rt-3.8.4.tar.gz) = 4100d7ab94ffdbab17aa5e51587dbe02c8356944
-Size (rt-3.8.4.tar.gz) = 3320207 bytes
+SHA1 (rt-3.8.5.tar.gz) = 26854e1a34052a2a922dc0ff533056f782813ea7
+RMD160 (rt-3.8.5.tar.gz) = 132516bc5cd15a3a1f8fd0c46b3d95fafc1f53eb
+Size (rt-3.8.5.tar.gz) = 3323600 bytes
 SHA1 (patch-aa) = 23964ba8d686931e1f92be88fa3a5d5e06070fce

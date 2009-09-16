@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.12 2009/06/21 15:31:39 spz Exp $
+# $NetBSD: Makefile.install,v 1.12.2.1 2009/09/16 10:31:58 tron Exp $
 
 .include "dirs.mk"
 
@@ -32,6 +32,11 @@ SUBST_CLASSES+=		etcpath
 SUBST_FILES.etcpath=	sbin/rt-setup-database.in
 SUBST_SED.etcpath=	-e 's,\$$RT::EtcPath,"${RT_SHARE_DIR}/etc",'
 SUBST_STAGE.etcpath=	post-patch
+
+SUBST_CLASSES+=		path
+SUBST_FILES.path=	bin/webmux.pl.in lib/RT/Interface/CLI.pm
+SUBST_SED.path=		-e 's,/bin:/usr/bin,/bin:/usr/bin:${PREFIX}/bin,'
+SUBST_STAGE.path=	post-patch
 
 SUBST_CLASSES+=		hardwired
 SUBST_FILES.hardwired=	share/html/NoAuth/RichText/FCKeditor/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellchecker.pl

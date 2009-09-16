@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2009/06/21 15:31:39 spz Exp $
+# $NetBSD: Makefile,v 1.37.2.1 2009/09/16 10:31:58 tron Exp $
 
-DISTNAME=		rt-3.8.4
+DISTNAME=		rt-3.8.5
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
