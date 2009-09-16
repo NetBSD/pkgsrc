@@ -1,8 +1,8 @@
-$NetBSD: patch-br,v 1.2 2009/04/07 08:01:01 hasso Exp $
+$NetBSD: patch-br,v 1.2.2.1 2009/09/16 12:56:33 tron Exp $
 
---- nsprpub/pr/src/misc/prnetdb.c.orig	2006-11-14 19:41:59 +0200
-+++ nsprpub/pr/src/misc/prnetdb.c	2009-04-04 18:10:55 +0300
-@@ -113,6 +113,11 @@ PRLock *_pr_dnsLock = NULL;
+--- nsprpub/pr/src/misc/prnetdb.c.orig	2008-01-13 02:27:15.000000000 +0100
++++ nsprpub/pr/src/misc/prnetdb.c
+@@ -114,6 +114,11 @@ PRLock *_pr_dnsLock = NULL;
  #define _PR_HAVE_5_ARG_GETPROTO_R
  #endif
  
@@ -11,10 +11,10 @@ $NetBSD: patch-br,v 1.2 2009/04/07 08:01:01 hasso Exp $
 +#define _PR_HAVE_5_ARG_GETPROTO_R
 +#endif
 +
- #if (defined(LINUX) && defined(__GLIBC__) && __GLIBC__ >= 2)
+ /* BeOS has glibc but not the glibc-style getprotobyxxx_r functions. */
+ #if (defined(__GLIBC__) && __GLIBC__ >= 2 && !defined(XP_BEOS))
  #define _PR_HAVE_GETPROTO_R
- #define _PR_HAVE_5_ARG_GETPROTO_R
-@@ -329,7 +334,7 @@ _pr_QueryNetIfs(void)
+@@ -331,7 +336,7 @@ _pr_QueryNetIfs(void)
  }
  
  #elif (defined(DARWIN) && defined(HAVE_GETIFADDRS)) || defined(FREEBSD) \
@@ -23,7 +23,7 @@ $NetBSD: patch-br,v 1.2 2009/04/07 08:01:01 hasso Exp $
  
  /*
   * Use the BSD getifaddrs function.
-@@ -2115,7 +2120,17 @@ PR_IMPLEMENT(PRAddrInfo *) PR_GetAddrInf
+@@ -2039,7 +2044,17 @@ PR_IMPLEMENT(PRAddrInfo *) PR_GetAddrInf
           */
          hints.ai_socktype = SOCK_STREAM;
  
