@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:09:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/09/16 07:13:20 hasso Exp $
 bin/lftp
 bin/lftpget
 lib/lftp/${PKGVERSION}/cmd-mirror.so
 lib/lftp/${PKGVERSION}/cmd-sleep.so
+lib/lftp/${PKGVERSION}/cmd-torrent.so
 lib/lftp/${PKGVERSION}/liblftp-network.so
 lib/lftp/${PKGVERSION}/liblftp-pty.so
 lib/lftp/${PKGVERSION}/proto-file.so
@@ -17,6 +18,7 @@ man/man1/lftpget.1
 share/examples/lftp/lftp.conf.default
 share/lftp/import-ncftp
 share/lftp/import-netscape
+share/locale/cs/LC_MESSAGES/lftp.mo
 share/locale/de/LC_MESSAGES/lftp.mo
 share/locale/es/LC_MESSAGES/lftp.mo
 share/locale/fr/LC_MESSAGES/lftp.mo
