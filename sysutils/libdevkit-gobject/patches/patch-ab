@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/09/16 19:03:10 wiz Exp $
+
+--- configure.ac.orig	2008-12-19 01:12:03.000000000 +0000
++++ configure.ac
+@@ -30,6 +30,7 @@ AM_PROG_CC_C_O
+ # Taken from dbus
+ AC_ARG_ENABLE(ansi,             [  --enable-ansi           enable -ansi -pedantic gcc flags],enable_ansi=$enableval,enable_ansi=no)
+ AC_ARG_ENABLE(man-pages,        [  --enable-man-pages      build manual pages],enable_man_pages=$enableval,enable_man_pages=yes)
++AC_ARG_ENABLE(devkitd,		[  --enable-devkitd        build devkitd],enable_devkitd=$enableval,enable_devkitd=yes)
+ 
+ if test "${enable_man_page}" != no; then
+ dnl
+@@ -116,9 +117,15 @@ PKG_CHECK_MODULES(DBUS_GLIB, [dbus-glib-
+ AC_SUBST(DBUS_GLIB_CFLAGS)
+ AC_SUBST(DBUS_GLIB_LIBS)
+ 
+-PKG_CHECK_MODULES(LIBUDEV, [libudev >= 130])
++if test "x${enable_devkitd}" = "xyes"; then
++  DEVKITD_SUBDIR=devkitd
++  PKG_CHECK_MODULES(LIBUDEV, [libudev >= 130])
++else
++  DEVKITD_SUBDIR=
++fi
+ AC_SUBST(LIBUDEV_CFLAGS)
+ AC_SUBST(LIBUDEV_LIBS)
++AC_SUBST([DEVKITD_SUBDIR])
+ 
+ if test "x$GCC" = "xyes"; then
+   LDFLAGS="-Wl,--as-needed $LDFLAGS"
+@@ -161,4 +168,5 @@ echo "
+         Maintainer mode:            ${USE_MAINTAINER_MODE}
+         Building api docs:          ${enable_gtk_doc}
+         Building man pages:         ${enable_man_pages}
++	Building devkitd:           ${enable_devkitd}
+ "
