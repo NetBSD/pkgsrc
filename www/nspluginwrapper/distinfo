@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2009/01/05 19:11:24 jmcneill Exp $
+$NetBSD: distinfo,v 1.8 2009/09/16 10:16:58 abs Exp $
 
 SHA1 (nspluginwrapper-1.2.2.tar.bz2) = be581c39dcc1a8d9a5b3f81e4650f553a30cf249
 RMD160 (nspluginwrapper-1.2.2.tar.bz2) = d5aa265966f87c51bb9ea4f2a079a87b74fdcbf3
@@ -6,5 +6,5 @@ Size (nspluginwrapper-1.2.2.tar.bz2) = 327947 bytes
 SHA1 (nspluginwrapper-i386-1.2.2-1.x86_64.rpm) = 0d49757623c62da52292e48a0173024c14aa12cd
 RMD160 (nspluginwrapper-i386-1.2.2-1.x86_64.rpm) = 9cf3e6ac3e5171c2bbda71c082b6b9fc30d69a84
 Size (nspluginwrapper-i386-1.2.2-1.x86_64.rpm) = 69425 bytes
-SHA1 (patch-aa) = 5310798b88142b00141e7bef9978a1b29a7b965d
+SHA1 (patch-aa) = 28f9e18e519337852cb47d04ed0c1cea76b3416d
 SHA1 (patch-ab) = 20dc1b6ff4036a0946dd469860eb9b6c129fdb7a
