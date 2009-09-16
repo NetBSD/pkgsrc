@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/09/16 19:03:48 wiz Exp $
+
+--- Makefile.in.orig	2009-07-18 16:00:12.000000000 +0000
++++ Makefile.in
+@@ -259,7 +259,7 @@ service_in_files = org.freedesktop.Devic
+ service_DATA = $(service_in_files:.service.in=.service)
+ subsystemmapdir = $(datadir)/devkitd-netbsd
+ subsystemmap_DATA = devkitd-subsystem-map.plist
+-dbusconfdir = $(sysconfdir)/dbus-1/system.d
++dbusconfdir = $(PREFIX)/share/examples/GConf
+ dbusconf_in_files = org.freedesktop.DeviceKit.conf.in
+ dbusconf_DATA = $(dbusconf_in_files:.conf.in=.conf)
+ CLEANFILES = $(BUILT_SOURCES) $(service_DATA) $(dbusconf_DATA)
