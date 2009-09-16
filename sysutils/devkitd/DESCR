@@ -1,0 +1,7 @@
+DeviceKit is an abstraction for enumerating devices and listening
+to device events. Any application on the system can access the
+org.freedesktop.DeviceKit service via the system message bus. On
+GNU/Linux, DeviceKit can be considered a simple D-Bus frontend to
+udev(7).
+
+This is a modified version of the DeviceKit daemon for NetBSD.
