@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8471 2009/09/15 23:15:35 schmonz Exp $
+$NetBSD: TODO,v 1.8472 2009/09/16 02:34:12 reed Exp $
 
 Suggested new packages
 ======================
@@ -1311,8 +1311,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-vmware-10.16.8
 	o xf86-video-voodoo-1.2.2
 	o xf86-video-xgi-1.5.1 [unpackaged]
-	o xfce-4.6.0 [pkg/40984]
-	o xfce-4.6.1
 	o xfe-1.19.1
 	o xforms-1.0.91
 	o xfstt-1.7
