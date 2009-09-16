@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3701 2009/09/16 00:10:19 seb Exp $
+$NetBSD: CHANGES-2009,v 1.3702 2009/09/16 02:18:31 reed Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4816,3 +4816,28 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Try-Tiny version 0.02 [seb 2009-09-15]
 	Updated devel/p5-Class-MOP to 0.93 [seb 2009-09-16]
 	Updated devel/p5-Moose to 0.90 [seb 2009-09-16]
+	Added devel/xfconf version 4.6.1 [reed 2009-09-16]
+	Added x11/libxfce4menu version 4.6.1 [reed 2009-09-16]
+	Added x11/xfce4-settings version 4.6.1 [reed 2009-09-16]
+	Removed x11/libxfce4mcs [reed 2009-09-16]
+	Removed x11/xfce4-mcs-manager [reed 2009-09-16]
+	Removed x11/xfce4-mcs-plugins [reed 2009-09-16]
+	Updated x11/xfce4-exo to 0.3.101 [reed 2009-09-16]
+	Updated audio/xfce4-mixer to 4.6.1 [reed 2009-09-16]
+	Updated audio/xfce4-dev-tools to 4.6.0 [reed 2009-09-16]
+	Updated editors/xfce4-mousepad to 0.2.16 [reed 2009-09-16]
+	Updated meta-pkgs/xfce4 to 4.6.1 [reed 2009-09-16]
+	Updated print/xfce4-print to 4.6.1 [reed 2009-09-16]
+	Updated sysutils/xfce4-appfinder to 4.6.1 [reed 2009-09-16]
+	Updated sysutils/xfce4-thunar to 1.0.1 [reed 2009-09-16]
+	Updated time/xfce4-orage to 4.6.1 [reed 2009-09-16]
+	Updated wm/xfce4-wm to 4.6.1 [reed 2009-09-16]
+	Updated wm/xfce4-wm-themes to 4.6.0 [reed 2009-09-16]
+	Updated x11/xfce4-gtk2-engine to 2.6.0 [reed 2009-09-16]
+	Updated x11/xfce4-terminal to 0.2.12 [reed 2009-09-16]
+	Updated x11/libxfce4gui to 4.6.1 [reed 2009-09-16]
+	Updated x11/libxfce4util to 4.6.1 [reed 2009-09-16]
+	Updated x11/xfce4-desktop to 4.6.1 [reed 2009-09-16]
+	Updated x11/xfce4-panel to 4.6.1 [reed 2009-09-16]
+	Updated x11/xfce4-session to 4.6.1 [reed 2009-09-16]
+	Updated x11/xfce4-utils to 4.6.1 [reed 2009-09-16]
