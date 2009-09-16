@@ -1,0 +1,20 @@
+$NetBSD: patch-ai,v 1.1 2009/09/16 07:13:20 hasso Exp $
+
+--- src/buffer.cc.orig	2009-09-16 09:56:27 +0300
++++ src/buffer.cc	2009-09-16 09:57:15 +0300
+@@ -313,6 +313,7 @@ DataRecoder::~DataRecoder()
+ }
+ DataRecoder::DataRecoder(const char *from_code,const char *to_code,bool translit)
+ {
++#if !defined(__NetBSD__) && !defined(__DragonFly__)
+    if(translit)
+    {
+       const char *add="//TRANSLIT";
+@@ -320,6 +321,7 @@ DataRecoder::DataRecoder(const char *fro
+       strcat(tmp_enc,add);
+       to_code=tmp_enc;
+    }
++#endif
+    backend_translate=iconv_open(to_code,from_code);
+    if(backend_translate==(iconv_t)-1)
+    {
