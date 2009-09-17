@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.23 2009/08/23 18:12:12 joerg Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.24 2009/09/17 18:01:18 kano Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -88,7 +88,7 @@
   removes possibly existing entries for the package in the
   <filename>TODO</filename> file. Don't forget to commit
   the changes, e.g. by using <command>make changes-entry-commit</command>!
-  If you are not using a checkout directly from cvs.netbsd.org, but e.g.
+  If you are not using a checkout directly from cvs.NetBSD.org, but e.g.
   a local copy of the repository, you can set USE_NETBSD_REPO=yes. This
   makes the cvs commands use the main repository.
   </para>
