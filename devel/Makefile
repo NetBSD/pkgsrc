@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1232 2009/09/16 19:23:54 sno Exp $
+# $NetBSD: Makefile,v 1.1233 2009/09/17 18:47:46 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -177,6 +177,7 @@ SUBDIR+=	flex
 SUBDIR+=	flim
 SUBDIR+=	florist
 SUBDIR+=	fortran-utils
+SUBDIR+=	frama-c
 SUBDIR+=	fromcvs
 SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
