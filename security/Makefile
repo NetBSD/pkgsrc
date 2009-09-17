@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.359 2009/09/15 20:00:47 spz Exp $
+# $NetBSD: Makefile,v 1.360 2009/09/17 19:01:49 jnemeth Exp $
 #
 
 COMMENT=	Security tools
@@ -31,6 +31,7 @@ SUBDIR+=	cfs
 SUBDIR+=	chkrootkit
 SUBDIR+=	courier-authlib
 SUBDIR+=	crack
+SUBDIR+=	crudesaml
 SUBDIR+=	crypto++
 SUBDIR+=	cvm
 SUBDIR+=	cy2-anonymous
