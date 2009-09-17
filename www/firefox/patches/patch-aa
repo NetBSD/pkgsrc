@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2009/09/16 19:06:18 tnn Exp $
+$NetBSD: patch-aa,v 1.8 2009/09/17 09:41:50 tnn Exp $
 
 --- configure.in.orig	2009-08-24 17:52:36.000000000 +0200
 +++ configure.in
@@ -53,7 +53,7 @@ $NetBSD: patch-aa,v 1.7 2009/09/16 19:06:18 tnn Exp $
      else
 -        NSPR_CFLAGS='`$(LIBXUL_DIST)/bin/nspr-config --prefix='${LIBXUL_DIST}' --includedir='${LIBXUL_DIST}'/include/nspr --cflags`'
 -        NSPR_LIBS='`$(LIBXUL_DIST)/bin/nspr-config --prefix='${LIBXUL_DIST}' --libdir='${LIBXUL_DIST}'/lib --libs`'
-+        NSPR_CFLAGS="-I$prefix/include/xulrunner/unstable `pkg-config --cflags mozilla-nspr`"
++        NSPR_CFLAGS="-I${prefix}/include/xulrunner/unstable `pkg-config --cflags mozilla-nspr`"
 +        NSPR_LIBS="`pkg-config --libs mozilla-nspr`"
      fi
  fi
