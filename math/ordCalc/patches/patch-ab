@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/09/18 14:09:26 is Exp $
+
+--- Makefile.orig	2009-09-14 21:59:55.000000000 -0700
++++ Makefile
+@@ -4,7 +4,7 @@ TEST : 
+ 	cd src ; make TEST
+ 
+ EXE :
+-	cd src : make ord
++	cd src ; make ord
+ 
+ ALL :
+ 	cd src ; make ALL
