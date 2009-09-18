@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3734 2009/09/18 11:28:54 dmcmahill Exp $
+$NetBSD: CHANGES-2009,v 1.3735 2009/09/18 14:14:20 is Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4871,3 +4871,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-glib2 to 1.222 [obache 2009-09-18]
 	Updated sysutils/wbm-bind8 to 1.470nb1 [obache 2009-09-18]
 	Added lang/gcc44 version 4.4.1 [dmcmahill 2009-09-18]
+	Added math/ordCalc version 0.1 [is 2009-09-18]
