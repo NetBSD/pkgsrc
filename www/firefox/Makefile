@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2009/09/16 19:06:18 tnn Exp $
+# $NetBSD: Makefile,v 1.57 2009/09/18 08:03:49 ghen Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
@@ -90,7 +90,7 @@ post-install:
 .endif
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-bUILDLINK_API_DEPENDS.xulrunner+=	xulrunner>=1.9.1.3nb4
+BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner>=1.9.1.3nb4
 .include "../../devel/xulrunner/buildlink3.mk"
 PLIST_VARS+=	gnome
 .if !empty(PKG_BUILD_OPTIONS.xulrunner:Mgnome)
