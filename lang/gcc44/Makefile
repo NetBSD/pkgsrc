@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/18 11:24:50 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/18 12:29:14 tnn Exp $
 #
 
 DISTNAME=		gcc-${GCC_VERSION}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		blair.sadewitz@gmail.com
 HOMEPAGE=		http://gcc.gnu.org/
-COMMENT=		This is the GCC 4.4.0 compiler
+COMMENT=		GNU Compiler Collection 4.4
 
 PKG_DESTDIR_SUPPORT=	destdir
 
