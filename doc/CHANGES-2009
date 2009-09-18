@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3731 2009/09/18 02:02:12 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3732 2009/09/18 06:29:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4868,3 +4868,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/p5-Net-OAuth version 0.19 [sno 2009-09-16]
 	Updated net/p5-Net-Twitter to 3.05003 [sno 2009-09-16]
 	Updated www/squid27 to 2.7.7 [taca 2009-09-18]
+	Updated devel/p5-glib2 to 1.222 [obache 2009-09-18]
