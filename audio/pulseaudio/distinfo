@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2009/07/28 12:52:40 tnn Exp $
+$NetBSD: distinfo,v 1.16 2009/09/18 09:59:54 joerg Exp $
 
 SHA1 (pulseaudio-0.9.14.tar.gz) = a0fb7c21ee21178e102a1e5a11d8ac474e6f5da4
 RMD160 (pulseaudio-0.9.14.tar.gz) = c7722d0d0240555edf917391989ad2e1cd4eb6b1
@@ -16,6 +16,6 @@ SHA1 (patch-aj) = 50edf909d5d7cc35e925685cdf0831e73d06f6ec
 SHA1 (patch-ak) = 2a2f80a2ab4b30f2daaebdb1ad0bcb54345743cd
 SHA1 (patch-al) = 26999d41484421c0995282045783e3c9df36d4d4
 SHA1 (patch-am) = 402dfc10280ec2b6a45781ad6d7b0daa89e2ae34
-SHA1 (patch-ba) = da9742d49ecb409cd13bee4468e64f982c03cffe
+SHA1 (patch-ba) = 6b1ac267a317eed77efc2fbfc2fddebc3a8a69d2
 SHA1 (patch-bb) = ae0209dac352df7abfcf66c452f2ebb91e35e42a
 SHA1 (patch-ca) = 75eef8955fa368a144b9e55258389332a177ed6c
