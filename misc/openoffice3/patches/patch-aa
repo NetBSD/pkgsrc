@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2009/09/18 11:38:56 tnn Exp $
+
+--- extensions/source/plugin/inc/plugin/unx/plugcon.hxx.orig	2008-12-15 17:07:14.000000000 +0100
++++ extensions/source/plugin/inc/plugin/unx/plugcon.hxx
+@@ -79,7 +79,7 @@ extern "C" {
+ 
+ //http://qa.openoffice.org/issues/show_bug.cgi?id=82545
+ //https://bugzilla.mozilla.org/show_bug.cgi?id=241262
+-#ifdef UNIX
++#if 0 /* def UNIX */  /* types provided by nptypes.h */
+ #  ifndef _UINT32
+ #    if defined(__alpha) || defined(__LP64__)
+        typedef unsigned int uint32;
+@@ -99,6 +99,7 @@ extern "C" {
+ #endif
+ 
+ #ifndef _NPAPI_H_
++#include <nptypes.h>
+ extern "C" {
+ #include <npsdk/npupp.h>
+ }

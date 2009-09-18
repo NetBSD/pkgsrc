@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2009/09/10 00:22:34 tnn Exp $
+# $NetBSD: options.mk,v 1.19 2009/09/18 11:38:56 tnn Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
@@ -54,12 +54,7 @@ post-wrapper:	copy-mozilla-headers
 copy-mozilla-headers:
 	cp \
 	  ${BUILDLINK_DIR}/include/xulrunner/stable/npapi.h \
-	  ${BUILDLINK_DIR}/include/xulrunner/stable/nptypes.h \
 	  ${WRKSRC}/np_sdk/mozsrc
-	  echo "typedef int16_t int16;" >> ${WRKSRC}/np_sdk/mozsrc/nptypes.h
-	  echo "typedef uint16_t uint16;" >> ${WRKSRC}/np_sdk/mozsrc/nptypes.h
-	  echo "typedef int32_t int32;" >> ${WRKSRC}/np_sdk/mozsrc/nptypes.h
-	  echo "typedef uint32_t uint32;" >> ${WRKSRC}/np_sdk/mozsrc/nptypes.h
 .else
 CONFIGURE_ARGS+=	--disable-mozilla
 .endif
