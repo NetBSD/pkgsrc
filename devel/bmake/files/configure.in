@@ -1,6 +1,6 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.8 2008/11/11 19:47:38 joerg Exp $
+dnl	$Id: configure.in,v 1.9 2009/09/18 21:27:25 joerg Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
@@ -24,6 +24,10 @@ no)    ;;
 dnl
 dnl
 dnl Check for OS problems
+dnl Solaris's signal.h only privides sigset_t etc if one of
+dnl _EXTENSIONS_ _POSIX_C_SOURCE or _XOPEN_SOURCE are defined.
+dnl The later two seem to cause more problems than they solve so if we
+dnl see _EXTENSIONS_ we use it.
 AC_USE_SYSTEM_EXTENSIONS
 dnl Checks for programs.
 AC_PROG_CC
@@ -136,16 +140,6 @@ else
    diff_u=
    echo no >&6
 fi
-dnl
-dnl
-dnl Solaris's signal.h only privides sigset_t etc if one of
-dnl _EXTENSIONS_ _POSIX_C_SOURCE or _XOPEN_SOURCE are defined.
-dnl The later two seem to cause more problems than they solve so if we
-dnl see _EXTENSIONS_ we use it.
-dnl Note we _don't_ want AC_EGREP_HEADER as we don't want CPP involved.
-dnl
-AC_EGREP(__EXTENSIONS__, /usr/include/signal.h, 
-CPPFLAGS="$CPPFLAGS -D__EXTENSIONS__",)
 dnl
 dnl AC_* don't quite cut it.
 dnl 

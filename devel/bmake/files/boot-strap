@@ -21,11 +21,16 @@
 #		We look for '.bmake-boot-strap.rc' before processing
 #		options.
 #
-#	-m "mksrc"
+#	--share "share_dir"
+#		Where to put man pages and mk files.
+#		If $prefix ends in $HOST_TARGET, and $prefix/../share
+#		exits, the default will be that rather than $prefix/share.
+#
+#	--mksrc "mksrc"
 #		Indicate where the mk files can be found.
 #		Default is ./mk or ../mk, set to 'none' to force
 #		building without "mksrc" but in that case a sys.mk
-#		needs to exist in the default syspath ($prefix/share/mk)
+#		needs to exist in the default syspath ($share_dir/mk)
 #
 #	Possibly useful configure_args:
 #
@@ -51,7 +56,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: boot-strap,v 1.4 2008/11/11 14:37:05 joerg Exp $
+#	$Id: boot-strap,v 1.5 2009/09/18 21:27:25 joerg Exp $
 #
 #	@(#) Copyright (c) 2001 Simon J. Gerraty
 #
@@ -118,7 +123,9 @@ do
 	--prefix) prefix=$2; shift 2;;
 	--prefix=*) prefix=`IFS="="; set -- $1; echo $2`; shift;;
 	--src=*) srcdir=`IFS="="; set -- $1; echo $2`; shift;;
-	--with-mksrc=*) mksrc=`IFS="="; set -- $1; echo $2`; shift;;
+	--with-mksrc=*|--mksrc=*) mksrc=`IFS="="; set -- $1; echo $2`; shift;;
+	--share=*) share_dir=`IFS="="; set -- $1; echo $2`; shift;;
+	--share) share_dir=$2; shift 2;;
 	-s|--src) srcdir=$2; shift 2;;
 	-m|--mksrc) mksrc=$2; shift 2;;
 	-o|--objdir) objdir=$2; shift 2;;
@@ -155,7 +162,7 @@ GetDir() {
 		break
 	done
 }
-	
+
 srcdir=`GetDir /bmake $srcdir $2 $Mydir ./bmake* $Mydir/../bmake*`
 [ -d ${srcdir:-/dev/null} ] || Usage
 case "$mksrc" in
@@ -174,10 +181,24 @@ objdir=${objdir:-$OS}
 [ -d $objdir ] || mkdir $objdir
 cd $objdir || exit 1
 
+ShareDir() {
+	case "/$1" in
+	*/$HOST_TARGET)
+		if [ -d $1/../share ]; then
+			echo `dirname $1`/share
+			return
+		fi
+		;;
+	esac
+	echo $1/share
+}
+
+share_dir=${share_dir:-`ShareDir $prefix`}
+
 AddConfigure --prefix= $prefix
 case "$CONFIGURE_ARGS" in
 *--with-prefix-sys-path*) ;;	# skip
-*) AddConfigure --with-default-sys-path= $prefix/share/mk;;
+*) AddConfigure --with-default-sys-path= $share_dir/mk;;
 esac
 if [ "$mksrc" ]; then
         AddConfigure --with-mksrc= $mksrc
@@ -192,36 +213,54 @@ ${MAKE:-make} -f makefile.boot bootstrap || exit 1
 # If -q given, we don't want all the install instructions
 $quiet exit 0
 
-make_version=`./bmake -m ./mk -m $prefix/share/mk -m /usr/share/mk -f ./Makefile -V MAKE_VERSION | ( read one two; echo $one )`
+make_version=`./bmake -m ./mk -m $share_dir/mk -m /usr/share/mk -f ./Makefile -V MAKE_VERSION | ( read one two; echo $one )`
+bmake_version=bmake-$make_version
 
 install_prefix() {
-       bindir=$1/bin
-       mandir=$1/share/man
-       mkdir=${2:-$1}/share/mk
-       echo
-       echo Commands to install into $1/
-       echo
-       echo mkdir -p $bindir
-       echo cp $objdir/bmake $bindir/$make_version
-       echo rm -f $bindir/bmake
-       echo ln -s $make_version $bindir/bmake
-       if [ -s bmake.cat1 ]; then
-	       echo mkdir -p $mandir/man1
-	       echo cp $srcdir/bmake.1 $mandir/man1
-       else
-	       echo mkdir -p $mandir/cat1
-	       echo cp $srcdir/bmake.cat1 $mandir/cat1/bmake.1
-       fi
-       [ "$mksrc" ] && echo $mksrc/install-mk $mkdir
+    (
+	bin_dir=
+	share_dir=
+	man_dir=
+	mk_dir=
+	while :
+	do
+		case "$1" in
+		*=*) eval "$1"; shift;;
+		*) break;;
+		esac
+	done
+	bin_dir=${bin_dir:-$1/bin}
+	share_dir=${share_dir:-`ShareDir $1`}
+	man_dir=${man_dir:-$share_dir/man}
+	mk_dir=${mk_dir:-$share_dir/mk}
+	echo
+	echo Commands to install into $1/
+	echo
+	echo mkdir -p $bin_dir
+	echo cp $objdir/bmake $bin_dir/$bmake_version
+	echo rm -f $bin_dir/bmake
+	echo ln -s $bmake_version $bin_dir/bmake
+	if [ -s bmake.cat1 ]; then
+		echo mkdir -p $man_dir/man1
+		echo cp $srcdir/bmake.1 $man_dir/man1
+	else
+		echo mkdir -p $man_dir/cat1
+		echo cp $srcdir/bmake.cat1 $man_dir/cat1/bmake.1
+	fi
+	if [ "$mksrc" ]; then
+		ev=`env | grep '_MK='`
+		echo $ev sh $mksrc/install-mk $mk_dir
+	fi
+    )
 }
 
 case $prefix/ in
 $HOME/*) ;;
 *)	CONFIGS=${CONFIGS:-/configs}
 	[ -d $CONFIGS ] &&
-	install_prefix $CONFIGS/$OS/$OSMAJOR.X/$MACHINE_ARCH$prefix
+	install_prefix mksrc= $CONFIGS/$OS/$OSMAJOR.X/$MACHINE_ARCH$prefix
 	# I like to keep a copy here...
-	install_prefix $HOME/$HOST_TARGET
+	install_prefix share_dir=$HOME/share $HOME/$HOST_TARGET
 	;;
 esac
 

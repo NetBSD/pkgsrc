@@ -1,4 +1,4 @@
-/*	$NetBSD: arch.c,v 1.3 2008/11/11 14:37:05 joerg Exp $	*/
+/*	$NetBSD: arch.c,v 1.4 2009/09/18 21:27:25 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: arch.c,v 1.3 2008/11/11 14:37:05 joerg Exp $";
+static char rcsid[] = "$NetBSD: arch.c,v 1.4 2009/09/18 21:27:25 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)arch.c	8.2 (Berkeley) 1/2/94";
 #else
-__RCSID("$NetBSD: arch.c,v 1.3 2008/11/11 14:37:05 joerg Exp $");
+__RCSID("$NetBSD: arch.c,v 1.4 2009/09/18 21:27:25 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -173,9 +173,9 @@ typedef struct Arch {
     size_t	  fnamesize;  /* Size of the string table */
 } Arch;
 
-static int ArchFindArchive(ClientData, ClientData);
+static int ArchFindArchive(const void *, const void *);
 #ifdef CLEANUP
-static void ArchFree(ClientData);
+static void ArchFree(void *);
 #endif
 static struct ar_hdr *ArchStatMember(char *, char *, Boolean);
 static FILE *ArchFindMember(char *, char *, struct ar_hdr *, const char *);
@@ -222,7 +222,7 @@ static int ArchSVR4Entry(Arch *, char *, size_t, FILE *);
  *-----------------------------------------------------------------------
  */
 static void
-ArchFree(ClientData ap)
+ArchFree(void *ap)
 {
     Arch *a = (Arch *)ap;
     Hash_Search	  search;
@@ -405,7 +405,7 @@ Arch_ParseArchive(char **linePtr, Lst nodeLst, GNode *ctxt)
 		 */
 		gn = Targ_FindNode(buf, TARG_CREATE);
 
-		if (gn == NILGNODE) {
+		if (gn == NULL) {
 		    free(buf);
 		    return(FAILURE);
 		} else {
@@ -440,7 +440,7 @@ Arch_ParseArchive(char **linePtr, Lst nodeLst, GNode *ctxt)
 		snprintf(nameBuf, sz, "%s(%s)", libName, member);
 		free(member);
 		gn = Targ_FindNode(nameBuf, TARG_CREATE);
-		if (gn == NILGNODE) {
+		if (gn == NULL) {
 		    free(nameBuf);
 		    return (FAILURE);
 		} else {
@@ -455,7 +455,7 @@ Arch_ParseArchive(char **linePtr, Lst nodeLst, GNode *ctxt)
 		    (void)Lst_AtEnd(nodeLst, gn);
 		}
 	    }
-	    Lst_Destroy(members, NOFREE);
+	    Lst_Destroy(members, NULL);
 	    free(nameBuf);
 	} else {
 	    size_t	sz = strlen(libName) + strlen(memName) + 3;
@@ -463,7 +463,7 @@ Arch_ParseArchive(char **linePtr, Lst nodeLst, GNode *ctxt)
 	    snprintf(nameBuf, sz, "%s(%s)", libName, memName);
 	    gn = Targ_FindNode(nameBuf, TARG_CREATE);
 	    free(nameBuf);
-	    if (gn == NILGNODE) {
+	    if (gn == NULL) {
 		return (FAILURE);
 	    } else {
 		/*
@@ -523,9 +523,9 @@ Arch_ParseArchive(char **linePtr, Lst nodeLst, GNode *ctxt)
  *-----------------------------------------------------------------------
  */
 static int
-ArchFindArchive(ClientData ar, ClientData archName)
+ArchFindArchive(const void *ar, const void *archName)
 {
-    return (strcmp((char *)archName, ((Arch *)ar)->name));
+    return (strcmp(archName, ((const Arch *)ar)->name));
 }
 
 /*-
@@ -577,7 +577,7 @@ ArchStatMember(char *archive, char *member, Boolean hash)
     }
 
     ln = Lst_Find(archives, archive, ArchFindArchive);
-    if (ln != NILLNODE) {
+    if (ln != NULL) {
 	ar = (Arch *)Lst_Datum(ln);
 
 	he = Hash_FindEntry(&ar->members, member);
@@ -596,7 +596,7 @@ ArchStatMember(char *archive, char *member, Boolean hash)
 	    }
 	    if ((he = Hash_FindEntry(&ar->members, copy)) != NULL)
 		return ((struct ar_hdr *)Hash_GetValue(he));
-	    return (NULL);
+	    return NULL;
 	}
     }
 
@@ -613,7 +613,7 @@ ArchStatMember(char *archive, char *member, Boolean hash)
 	 arch = ArchFindMember(archive, member, &sarh, "r");
 
 	 if (arch == NULL) {
-	    return (NULL);
+	    return NULL;
 	} else {
 	    fclose(arch);
 	    return (&sarh);
@@ -626,7 +626,7 @@ ArchStatMember(char *archive, char *member, Boolean hash)
      */
     arch = fopen(archive, "r");
     if (arch == NULL) {
-	return (NULL);
+	return NULL;
     }
 
     /*
@@ -636,7 +636,7 @@ ArchStatMember(char *archive, char *member, Boolean hash)
     if ((fread(magic, SARMAG, 1, arch) != 1) ||
     	(strncmp(magic, ARMAG, SARMAG) != 0)) {
 	    fclose(arch);
-	    return (NULL);
+	    return NULL;
     }
 
     ar = bmake_malloc(sizeof(Arch));
@@ -734,7 +734,7 @@ ArchStatMember(char *archive, char *member, Boolean hash)
     if (he != NULL) {
 	return ((struct ar_hdr *)Hash_GetValue(he));
     } else {
-	return (NULL);
+	return NULL;
     }
 
 badarch:
@@ -743,7 +743,7 @@ badarch:
     if (ar->fnametab)
 	free(ar->fnametab);
     free(ar);
-    return (NULL);
+    return NULL;
 }
 
 #ifdef SVR4ARCHIVES
@@ -884,7 +884,7 @@ ArchFindMember(char *archive, char *member, struct ar_hdr *arhPtr,
 
     arch = fopen(archive, mode);
     if (arch == NULL) {
-	return (NULL);
+	return NULL;
     }
 
     /*
@@ -894,7 +894,7 @@ ArchFindMember(char *archive, char *member, struct ar_hdr *arhPtr,
     if ((fread(magic, SARMAG, 1, arch) != 1) ||
     	(strncmp(magic, ARMAG, SARMAG) != 0)) {
 	    fclose(arch);
-	    return (NULL);
+	    return NULL;
     }
 
     /*
@@ -919,7 +919,7 @@ ArchFindMember(char *archive, char *member, struct ar_hdr *arhPtr,
 	      * and there's no way we can recover...
 	      */
 	     fclose(arch);
-	     return (NULL);
+	     return NULL;
 	} else if (strncmp(member, arhPtr->AR_NAME, tlen) == 0) {
 	    /*
 	     * If the member's name doesn't take up the entire 'name' field,
@@ -995,7 +995,7 @@ skip:
      * archive and return NULL -- an error.
      */
     fclose(arch);
-    return (NULL);
+    return NULL;
 }
 
 /*-
@@ -1149,7 +1149,7 @@ Arch_MemMTime(GNode *gn)
 	gn->mtime = 0;
 	return (0);
     }
-    while ((ln = Lst_Next(gn->parents)) != NILLNODE) {
+    while ((ln = Lst_Next(gn->parents)) != NULL) {
 	pgn = (GNode *)Lst_Datum(ln);
 
 	if (pgn->type & OP_ARCHV) {

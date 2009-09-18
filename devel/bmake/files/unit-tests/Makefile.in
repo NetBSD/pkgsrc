@@ -1,6 +1,6 @@
-# $Id: Makefile.in,v 1.3 2008/11/11 14:37:06 joerg Exp $
+# $Id: Makefile.in,v 1.4 2009/09/18 21:27:26 joerg Exp $
 #
-# $NetBSD: Makefile.in,v 1.3 2008/11/11 14:37:06 joerg Exp $
+# $NetBSD: Makefile.in,v 1.4 2009/09/18 21:27:26 joerg Exp $
 #
 # Unit tests for make(1)
 # The main targets are:
@@ -54,6 +54,7 @@ clean:
 
 TEST_MAKE?= ${.MAKE}
 TOOL_SED ?= sed
+TOOL_TR ?= tr
 
 # The driver.
 # We always pretend .MAKE was called 'make' 
@@ -63,6 +64,7 @@ TOOL_SED ?= sed
 test:
 	@echo "${TEST_MAKE} -f ${MAKEFILE} > ${.TARGET}.out 2>&1"
 	@cd ${.OBJDIR} && ${TEST_MAKE} -f ${MAKEFILE} 2>&1 | \
+	${TOOL_TR} -d '\015' | \
 	${TOOL_SED} -e 's,^${TEST_MAKE:T:C/\./\\\./g}:,make:,' \
 	-e '/stopped/s, /.*, unit-tests,' \
 	-e 's,${.CURDIR:C/\./\\\./g}/,,g' \

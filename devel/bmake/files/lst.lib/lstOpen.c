@@ -1,4 +1,4 @@
-/*	$NetBSD: lstOpen.c,v 1.2 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: lstOpen.c,v 1.3 2009/09/18 21:27:26 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -33,14 +33,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: lstOpen.c,v 1.2 2008/03/09 19:54:29 joerg Exp $";
+static char rcsid[] = "$NetBSD: lstOpen.c,v 1.3 2009/09/18 21:27:26 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)lstOpen.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: lstOpen.c,v 1.2 2008/03/09 19:54:29 joerg Exp $");
+__RCSID("$NetBSD: lstOpen.c,v 1.3 2009/09/18 21:27:26 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -66,7 +66,7 @@ __RCSID("$NetBSD: lstOpen.c,v 1.2 2008/03/09 19:54:29 joerg Exp $");
  *	SUCCESS or FAILURE.
  *
  * Side Effects:
- *	isOpen is set TRUE and curPtr is set to NilListNode so the
+ *	isOpen is set TRUE and curPtr is set to NULL so the
  *	other sequential functions no it was just opened and can choose
  *	the first element accessed based on this.
  *
@@ -80,7 +80,7 @@ Lst_Open(Lst l)
 	}
 	(l)->isOpen = TRUE;
 	(l)->atEnd = LstIsEmpty (l) ? Head : Unknown;
-	(l)->curPtr = NilListNode;
+	(l)->curPtr = NULL;
 
 	return (SUCCESS);
 }

@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.3 2008/11/11 14:37:05 joerg Exp $	*/
+/*	$NetBSD: str.c,v 1.4 2009/09/18 21:27:25 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: str.c,v 1.3 2008/11/11 14:37:05 joerg Exp $";
+static char rcsid[] = "$NetBSD: str.c,v 1.4 2009/09/18 21:27:25 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char     sccsid[] = "@(#)str.c	5.8 (Berkeley) 6/1/90";
 #else
-__RCSID("$NetBSD: str.c,v 1.3 2008/11/11 14:37:05 joerg Exp $");
+__RCSID("$NetBSD: str.c,v 1.4 2009/09/18 21:27:25 joerg Exp $");
 #endif
 #endif				/* not lint */
 #endif
@@ -175,7 +175,11 @@ brk_string(const char *str, int *store_argc, Boolean expand, char **buffer)
 				inquote = (char) ch;
 				/* Don't miss "" or '' */
 				if (start == NULL && p[1] == inquote) {
-					start = t + 1;
+					if (!expand) {
+						start = t;
+						*t++ = ch;
+					} else
+						start = t + 1;
 					p++;
 					inquote = '\0';
 					break;
@@ -211,15 +215,22 @@ brk_string(const char *str, int *store_argc, Boolean expand, char **buffer)
 			}
 			argv[argc++] = start;
 			start = NULL;
-			if (ch == '\n' || ch == '\0')
+			if (ch == '\n' || ch == '\0') {
+				if (expand && inquote) {
+					free(argv);
+					free(*buffer);
+					*buffer = NULL;
+					return NULL;
+				}
 				goto done;
+			}
 			continue;
 		case '\\':
 			if (!expand) {
 				if (!start)
 					start = t;
 				*t++ = '\\';
-				if (*(p+1) == '\0') // catch '\' at end of line
+				if (*(p+1) == '\0') /* catch '\' at end of line */
 					continue;
 				ch = *++p;
 				break;
@@ -476,20 +487,20 @@ Str_SYSVMatch(const char *word, const char *pattern, int *len)
  *-----------------------------------------------------------------------
  */
 void
-Str_SYSVSubst(Buffer buf, char *pat, char *src, int len)
+Str_SYSVSubst(Buffer *buf, char *pat, char *src, int len)
 {
     char *m;
 
     if ((m = strchr(pat, '%')) != NULL) {
 	/* Copy the prefix */
-	Buf_AddBytes(buf, m - pat, (Byte *)pat);
+	Buf_AddBytes(buf, m - pat, pat);
 	/* skip the % */
 	pat = m + 1;
     }
 
     /* Copy the pattern */
-    Buf_AddBytes(buf, len, (Byte *)src);
+    Buf_AddBytes(buf, len, src);
 
     /* append the rest */
-    Buf_AddBytes(buf, strlen(pat), (Byte *)pat);
+    Buf_AddBytes(buf, strlen(pat), pat);
 }

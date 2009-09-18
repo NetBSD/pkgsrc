@@ -1,4 +1,4 @@
-/*	$NetBSD: hash.c,v 1.3 2008/11/11 14:37:05 joerg Exp $	*/
+/*	$NetBSD: hash.c,v 1.4 2009/09/18 21:27:25 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: hash.c,v 1.3 2008/11/11 14:37:05 joerg Exp $";
+static char rcsid[] = "$NetBSD: hash.c,v 1.4 2009/09/18 21:27:25 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)hash.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: hash.c,v 1.3 2008/11/11 14:37:05 joerg Exp $");
+__RCSID("$NetBSD: hash.c,v 1.4 2009/09/18 21:27:25 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -227,7 +227,7 @@ Hash_FindEntry(Hash_Table *t, const char *key)
 	for (e = t->bucketPtr[h & t->mask]; e != NULL; e = e->next)
 		if (e->namehash == h && strcmp(e->name, p) == 0)
 			return (e);
-	return (NULL);
+	return NULL;
 }
 
 /*
@@ -291,7 +291,7 @@ Hash_CreateEntry(Hash_Table *t, const char *key, Boolean *newPtr)
 	hp = &t->bucketPtr[h & t->mask];
 	e->next = *hp;
 	*hp = e;
-	e->clientData = NULL;
+	Hash_SetValue(e, NULL);
 	e->namehash = h;
 	(void)strcpy(e->name, p);
 	t->numEntries++;
@@ -411,7 +411,7 @@ Hash_EnumNext(Hash_Search *searchPtr)
 	 */
 	while (e == NULL) {
 		if (searchPtr->nextIndex >= t->size)
-			return (NULL);
+			return NULL;
 		e = t->bucketPtr[searchPtr->nextIndex++];
 	}
 	searchPtr->hashEntryPtr = e;

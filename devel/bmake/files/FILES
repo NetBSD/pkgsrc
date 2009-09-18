@@ -13,6 +13,8 @@ buf.h
 compat.c
 cond.c
 make-conf.h
+make_malloc.c
+make_malloc.h
 config.h.in
 configure
 aclocal.m4
@@ -28,6 +30,8 @@ hash.h
 install-sh
 job.c
 job.h
+strlist.c
+strlist.h
 trace.c
 trace.h
 lst.h
