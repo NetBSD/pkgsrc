@@ -1,12 +1,13 @@
-MAKE(1)                   BSD General Commands Manual                  MAKE(1)
+MAKE(1)                 NetBSD General Commands Manual                 MAKE(1)
 
 NNAAMMEE
      bbmmaakkee -- maintain program dependencies
 
 SSYYNNOOPPSSIISS
-     bbmmaakkee [--BBeeiikkNNnnqqrrssttWWXX] [--DD _v_a_r_i_a_b_l_e] [--dd _f_l_a_g_s] [--ff _m_a_k_e_f_i_l_e]
-           [--II _d_i_r_e_c_t_o_r_y] [--JJ _p_r_i_v_a_t_e] [--jj _m_a_x___j_o_b_s] [--mm _d_i_r_e_c_t_o_r_y] [--TT _f_i_l_e]
-           [--VV _v_a_r_i_a_b_l_e] [_v_a_r_i_a_b_l_e_=_v_a_l_u_e] [_t_a_r_g_e_t _._._.]
+     bbmmaakkee [--BBeeiikkNNnnqqrrssttWWXX] [--CC _d_i_r_e_c_t_o_r_y] [--DD _v_a_r_i_a_b_l_e] [--dd _f_l_a_g_s]
+           [--ff _m_a_k_e_f_i_l_e] [--II _d_i_r_e_c_t_o_r_y] [--JJ _p_r_i_v_a_t_e] [--jj _m_a_x___j_o_b_s]
+           [--mm _d_i_r_e_c_t_o_r_y] [--TT _f_i_l_e] [--VV _v_a_r_i_a_b_l_e] [_v_a_r_i_a_b_l_e_=_v_a_l_u_e]
+           [_t_a_r_g_e_t _._._.]
 
 DDEESSCCRRIIPPTTIIOONN
      bbmmaakkee is a program designed to simplify the maintenance of other pro-
@@ -29,6 +30,12 @@ DDEESSCCRRIIPPTTIIOONN
              command and by executing the commands to make the sources of a
              dependency line in sequence.
 
+     --CC _d_i_r_e_c_t_o_r_y
+             Change to _d_i_r_e_c_t_o_r_y before reading the makefiles or doing any-
+             thing else.  If multiple --CC options are specified, each is inter-
+             preted relative to the previous one: --CC _/ --CC _e_t_c is equivalent to
+             --CC _/_e_t_c.
+
      --DD _v_a_r_i_a_b_l_e
              Define _v_a_r_i_a_b_l_e to be 1, in the global context.
 
@@ -36,14 +43,21 @@ DDEESSCCRRIIPPTTIIOONN
              Turn on debugging, and specify which portions of bbmmaakkee are to
              print debugging information.  Unless the flags are preceded by
              `-' they are added to the _M_A_K_E_F_L_A_G_S environment variable and will
-             be processed by any child make processes.  _F_l_a_g_s is one or more
-             of the following:
+             be processed by any child make processes.  By default, debugging
+             information is printed to standard error, but this can be changed
+             using the _F debugging flag.  The debugging output is always
+             unbuffered; in addition, if debugging is enabled but debugging
+             output is not directed to standard output, then the standard out-
+             put is line buffered.  _F_l_a_g_s is one or more of the following:
 
              _A       Print all possible debugging information; equivalent to
                      specifying all of the debugging flags.
 
              _a       Print debugging information about archive searching and
                      caching.
+
+             _C       Print debugging information about current working direc-
+                     tory.
 
              _c       Print debugging information about conditional evaluation.
 
@@ -53,9 +67,18 @@ DDEESSCCRRIIPPTTIIOONN
              _e       Print debugging information about failed commands and
                      targets.
 
-             _F       Use the rest of `flags' as the name of the file to which
-                     the debug output is written.  If the filename ends `.%d'
-                     then the `%d' is replaced by the pid.
+             _F[++]_f_i_l_e_n_a_m_e
+                     Specify where debugging output is written.  This must be
+                     the last flag, because it consumes the remainder of the
+                     argument.  If the character immediately after the `F'
+                     flag is `+', then the file will be opened in append mode;
+                     otherwise the file will be overwritten.  If the file name
+                     is `stdout' or `stderr' then debugging output will be
+                     written to the standard output or standard error output
+                     file descriptors respectively (and the `+' option has no
+                     effect).  Otherwise, the output will be written to the
+                     named file.  If the file name ends `.%d' then the `%d' is
+                     replaced by the pid.
 
              _f       Print debugging information about loop evaluation.
 
@@ -76,10 +99,13 @@ DDEESSCCRRIIPPTTIIOONN
              _m       Print debugging information about making targets, includ-
                      ing modification dates.
 
-             _n       Don't delete the temporary command scripts created in
-                     _/_t_m_p when running commands.  These are created via
-                     mkstemp(3) and have names of the form _/_t_m_p_/_m_a_k_e_X_X_X_X_X.
-                     _N_O_T_E: This can create many file in _/_t_m_p so use with care.
+             _n       Don't delete the temporary command scripts created when
+                     running commands.  These temporary scripts are created in
+                     the directory referred to by the TMPDIR environment vari-
+                     able, or in _/_t_m_p if TMPDIR is unset or set to the empty
+                     string.  The temporary scripts are created by mkstemp(3),
+                     and have names of the form _m_a_k_e_X_X_X_X_X_X.  _N_O_T_E: This can
+                     create many files in TMPDIR or _/_t_m_p, so use with care.
 
              _p       Print debugging information about makefile parsing.
 
@@ -120,7 +146,13 @@ DDEESSCCRRIIPPTTIIOONN
      --jj _m_a_x___j_o_b_s
              Specify the maximum number of jobs that bbmmaakkee may have running at
              any one time.  Turns compatibility mode off, unless the _B flag is
-             also specified.
+             also specified.  When compatibility mode is off, all commands
+             associated with a target are executed in a single shell invoca-
+             tion as opposed to the traditional one shell invocation per line.
+             This can break traditional scripts which change directories on
+             each command invocation and then expect to start with a fresh
+             environment on the next line.  It is more efficient to correct
+             the scripts rather than turn backwards compatibility on.
 
      --kk      Continue processing after errors are encountered, but only on
              those targets that do not depend on the target whose creation
@@ -281,6 +313,14 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
      ing braces or parentheses are not required.  This shorter form is not
      recommended.
 
+     If the variable name contains a dollar, then the name itself is expanded
+     first.  This allows almost arbitrary variable names, however names con-
+     taining dollar, braces, parenthesis, or whitespace are really best
+     avoided!
+
+     If the result of expanding a variable contains a dollar sign (`$') the
+     string is expanded again.
+
      Variable substitution occurs at two distinct times, depending on where
      the variable is being used.  Variables in dependency lines are expanded
      as the line is read.  Variables in shell commands are expanded when the
@@ -308,9 +348,10 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
 
              _._A_R_C_H_I_V_E  The name of the archive file.
 
-             _._I_M_P_S_R_C   The name/path of the source from which the target is to
-                       be transformed (the ``implied'' source); also known as
-                       `_<'.
+             _._I_M_P_S_R_C   In suffix-transformation rules, the name/path of the
+                       source from which the target is to be transformed (the
+                       ``implied'' source); also known as `_<'.  It is not
+                       defined in explicit rules.
 
              _._M_E_M_B_E_R   The name of the archive member.
 
@@ -334,7 +375,7 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
              the line.  These variables are `_._T_A_R_G_E_T', `_._P_R_E_F_I_X', `_._A_R_C_H_I_V_E',
              and `_._M_E_M_B_E_R'.
 
-   AAddddiittiioonnaall iinnbbuuiilltt vvaarriiaabblleess
+   AAddddiittiioonnaall bbuuiilltt--iinn vvaarriiaabblleess
      In addition, bbmmaakkee sets or knows about the following variables:
 
      _$               A single dollar sign `$', i.e.  `$$' expands to a single
@@ -360,6 +401,13 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
                      The list of makefiles read by bbmmaakkee, which is useful for
                      tracking dependencies.  Each makefile is recorded only
                      once, regardless of the number of times read.
+
+     _._M_A_K_E_._L_E_V_E_L     The recursion depth of bbmmaakkee.  The initial instance of
+                     bbmmaakkee will be 0, and an incremented value is put into the
+                     environment to be seen by the next generation.  This
+                     allows tests like: .if ${.MAKE.LEVEL} == 0 to protect
+                     things which should only be evaluated in the initial
+                     instance of bbmmaakkee.
 
      _._M_A_K_E_._P_I_D       The process-id of bbmmaakkee.
 
@@ -454,6 +502,11 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
                      is disabled if `MAKEOBJDIRPREFIX' is set or `MAKEOBJDIR'
                      contains a variable transform.  `PWD' is set to the value
                      of `_._O_B_J_D_I_R' for all programs which bbmmaakkee executes.
+
+     VPATH           Colon-separated (``:'') lists of directories that bbmmaakkee
+                     will search for files.  The variable is supported for
+                     compatibility with old make programs only, use `_._P_A_T_H'
+                     instead.
 
    VVaarriiaabbllee mmooddiiffiieerrss
      Variable expansion may be modified to select or modify each word of the
@@ -575,9 +628,13 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
      ::uu   Remove adjacent duplicate words (like uniq(1)).
 
      ::??_t_r_u_e___s_t_r_i_n_g::_f_a_l_s_e___s_t_r_i_n_g
-          If the variable (actually an expression; see below) evaluates to
-          true, return as its value the _t_r_u_e___s_t_r_i_n_g, otherwise return the
-          _f_a_l_s_e___s_t_r_i_n_g.
+          If the variable name (not its value), when parsed as a .if condi-
+          tional expression, evaluates to true, return as its value the
+          _t_r_u_e___s_t_r_i_n_g, otherwise return the _f_a_l_s_e___s_t_r_i_n_g.  Since the variable
+          name is used as the expression, :? must be the first modifier after
+          the variable name itself - which will, of course, usually contain
+          variable expansions.  If the expression is a single token, it will
+          likely be treated as a check for the name being defined.
 
      _:_o_l_d___s_t_r_i_n_g_=_n_e_w___s_t_r_i_n_g
           This is the AT&T System V UNIX style variable substitution.  It must
@@ -627,17 +684,10 @@ VVAARRIIAABBLLEE AASSSSIIGGNNMMEENNTTSS
      ::::==_s_t_r
           The variable is assigned the value _s_t_r after substitution.  This
           modifier and its variations are useful in obscure situations such as
-          wanting to apply modifiers to ..ffoorr loop iteration variables which
-          won't work due to the way ..ffoorr loops are implemented.  These assign-
-          ment modifiers always expand to nothing, so if appearing in a rule
-          line by themselves should be preceded with something to keep bbmmaakkee
-          happy.  As in:
-
-          use_foo: .USE
-          .for i in ${.TARGET} ${.TARGET:R}.gz
-                  @: ${t::=$i}
-                  @echo t:R:T=${t:R:T}
-          .endfor
+          wanting to set a variable when shell commands are being parsed.
+          These assignment modifiers always expand to nothing, so if appearing
+          in a rule line by themselves should be preceded with something to
+          keep bbmmaakkee happy.
 
           The `::::' helps avoid false matches with the AT&T System V UNIX style
           ::== modifier and since substitution always occurs the ::::== form is
@@ -709,7 +759,7 @@ IINNCCLLUUDDEE SSTTAATTEEMMEENNTTSS,, CCOONNDDIITTIIOO
      ..eexxppoorrtt _v_a_r_i_a_b_l_e
              Export the specified global variable.  If no variable is pro-
              vided, all globals are exported except for internal variables
-             (those that start with `.' ).  This is not affected by the --XX
+             (those that start with `.').  This is not affected by the --XX
              flag, so should be used with caution.  Appending a variable name
              to _._M_A_K_E_._E_X_P_O_R_T_E_D is equivalent to exporting a variable.
 
@@ -798,12 +848,12 @@ IINNCCLLUUDDEE SSTTAATTEEMMEENNTTSS,, CCOONNDDIITTIIOO
      is assumed that the expanded variable is being compared against 0 or an
      empty string in the case of a string comparison.
 
-     When bbmmaakkee is evaluating one of these conditional expression, and it
-     encounters a word it doesn't recognize, either the ``make'' or
-     ``defined'' expression is applied to it, depending on the form of the
-     conditional.  If the form is `..iiffddeeff' or `..iiffnnddeeff', the ``defined''
-     expression is applied.  Similarly, if the form is `..iiffmmaakkee' or `..iiffnnmmaakkee,
-     tthhee ````mmaakkee''''' expression is applied.
+     When bbmmaakkee is evaluating one of these conditional expressions, and it
+     encounters a (white-space separated) word it doesn't recognize, either
+     the ``make'' or ``defined'' expression is applied to it, depending on the
+     form of the conditional.  If the form is `..iiffddeeff', `..iiffnnddeeff', or `..iiff'
+     the ``defined'' expression is applied.  Similarly, if the form is
+     `..iiffmmaakkee' or `..iiffnnmmaakkee, tthhee' ``make'' expression is applied.
 
      If the conditional evaluates to true the parsing of the makefile contin-
      ues as before.  If it evaluates to false, the following lines are
@@ -894,7 +944,7 @@ SSPPEECCIIAALL SSOOUURRCCEESS ((AATTTTRRIIBBUUTTEESS))
                b1:
                        echo b1
 
-               the output is always `b1', `b', `a', `x'.
+               the output is always `a', `b1', `b', `x'.
                The ordering imposed by ..WWAAIITT is only relevant for parallel
                makes.
 
@@ -946,7 +996,7 @@ SSPPEECCIIAALL TTAARRGGEETTSS
               be built, unless `a' is built by another part of the dependency
               graph, the following is a dependency loop:
 
-              .ORDER a b
+              .ORDER: a b
               b: a
 
               The ordering imposed by ..OORRDDEERR is only relevant for parallel
@@ -1008,12 +1058,19 @@ SSPPEECCIIAALL TTAARRGGEETTSS
 
      ..SSUUFFFFIIXXEESS
               Each source specifies a suffix to bbmmaakkee.  If no sources are
-              specified, any previously specified suffixes are deleted.
+              specified, any previously specified suffixes are deleted.  It
+              allows the creation of suffix-transformation rules.
+
+              Example:
+
+              .SUFFIXES: .o
+              .c.o:
+                      cc -o ${.TARGET} -c ${.IMPSRC}
 
 EENNVVIIRROONNMMEENNTT
      bbmmaakkee uses the following environment variables, if they exist: MACHINE,
      MACHINE_ARCH, MAKE, MAKEFLAGS, MAKEOBJDIR, MAKEOBJDIRPREFIX, MAKESYSPATH,
-     and PWD.
+     PWD, and TMPDIR.
 
      MAKEOBJDIRPREFIX and MAKEOBJDIR may only be set in the environment or on
      the command line to bbmmaakkee and not as makefile variables; see the descrip-
@@ -1035,6 +1092,11 @@ CCOOMMPPAATTIIBBIILLIITTYY
      .ORDER and .WAIT apply recursively to the dependant nodes.  The algo-
      rithms used may change again in the future.
 
+     The way that .for loop variables are substituted changed after NetBSD 5.0
+     so that they still appear to be variable expansions.  In particular this
+     stops them being treated as syntax, and removes some obscure problems
+     using them in .if statements.
+
 SSEEEE AALLSSOO
      mkdep(1)
 
@@ -1042,4 +1104,4 @@ HHIISSTTOORRYY
      bbmmaakkee is derived from NetBSD's make(1).  It uses autoconf to facilitate
      portability to other platforms.
 
-BSD                            November 19, 2006                           BSD
+NetBSD 5.0                     September 7, 2009                    NetBSD 5.0

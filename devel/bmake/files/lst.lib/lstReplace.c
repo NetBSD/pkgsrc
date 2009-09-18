@@ -1,4 +1,4 @@
-/*	$NetBSD: lstReplace.c,v 1.2 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: lstReplace.c,v 1.3 2009/09/18 21:27:26 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -33,14 +33,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: lstReplace.c,v 1.2 2008/03/09 19:54:29 joerg Exp $";
+static char rcsid[] = "$NetBSD: lstReplace.c,v 1.3 2009/09/18 21:27:26 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)lstReplace.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: lstReplace.c,v 1.2 2008/03/09 19:54:29 joerg Exp $");
+__RCSID("$NetBSD: lstReplace.c,v 1.3 2009/09/18 21:27:26 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -66,9 +66,9 @@ __RCSID("$NetBSD: lstReplace.c,v 1.2 2008/03/09 19:54:29 joerg Exp $");
  *-----------------------------------------------------------------------
  */
 ReturnStatus
-Lst_Replace(LstNode ln, ClientData d)
+Lst_Replace(LstNode ln, void *d)
 {
-    if (ln == NILLNODE) {
+    if (ln == NULL) {
 	return (FAILURE);
     } else {
 	(ln)->datum = d;
