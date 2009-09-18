@@ -1,0 +1,4 @@
+This is the gcc 4.4.0 compiler suite.
+
+This package has a test target. For testing (only), this
+package requires dejagnu.

@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/18 11:24:50 dmcmahill Exp $
+
+SHA1 (gcc-4.4.1.tar.bz2) = 9156ddb7e4cc72288ec31760d6ddc7981123a8a2
+RMD160 (gcc-4.4.1.tar.bz2) = 41cb4c76d1671b1d224d2a6e167ee183dd53d096
+Size (gcc-4.4.1.tar.bz2) = 62869928 bytes
+SHA1 (patch-aa) = b7180161a0c9eb63738ebf9586e52591ef43c636
+SHA1 (patch-ab) = e254456a6da7090f7ba37d3b55a17be2dd157f88
+SHA1 (patch-ac) = 0af9845a62f9a6f8ec27657d0ae0c16394e9fc12
+SHA1 (patch-ad) = 86dc05e6ea977ad869e5d63beb493750ab01a807
+SHA1 (patch-ae) = 831481496b5b5f246f51d9a4fe9314f07f81a842

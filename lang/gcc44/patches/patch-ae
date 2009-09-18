@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/09/18 11:24:50 dmcmahill Exp $
+
+--- gcc/Makefile.in.orig	2009-05-27 00:57:20 +0200
++++ gcc/Makefile.in
+@@ -310,7 +310,6 @@ USER_H = $(srcdir)/ginclude/float.h \
+ 	 $(srcdir)/ginclude/iso646.h \
+ 	 $(srcdir)/ginclude/stdarg.h \
+ 	 $(srcdir)/ginclude/stdbool.h \
+-	 $(srcdir)/ginclude/stddef.h \
+ 	 $(srcdir)/ginclude/varargs.h \
+ 	 $(srcdir)/ginclude/stdfix.h \
+ 	 $(EXTRA_HEADERS)
