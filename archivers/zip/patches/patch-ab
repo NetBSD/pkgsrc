@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.4 2009/09/18 14:01:32 sketch Exp $
+
+--- unix/configure.orig	Fri Sep 18 14:57:23 2009
++++ unix/configure	Fri Sep 18 14:58:24 2009
+@@ -235,6 +235,7 @@
+ echo Check if we can use asm code
+ OBJA=""
+ OCRCU8=""
++if [ -z "$DISABLE_ASM" ]; then
+ if eval "$CPP match.S > _match.s 2>/dev/null"; then
+   if test ! -s _match.s || grep error < _match.s > /dev/null; then
+     :
+@@ -257,6 +258,7 @@
+   fi
+ fi
+ rm -f _match.s _match.o _crc_i386.s _crc_i386.o
++fi
+ 
+ 
+ # ANSI options for compilers that don't have __STDC__ defined by default
