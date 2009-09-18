@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3730 2009/09/16 19:47:59 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3731 2009/09/18 02:02:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4867,3 +4867,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-MooseX-MultiInitArg version 0.01 [sno 2009-09-16]
 	Added net/p5-Net-OAuth version 0.19 [sno 2009-09-16]
 	Updated net/p5-Net-Twitter to 3.05003 [sno 2009-09-16]
+	Updated www/squid27 to 2.7.7 [taca 2009-09-18]
