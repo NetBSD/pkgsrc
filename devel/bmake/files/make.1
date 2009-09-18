@@ -1,4 +1,4 @@
-.\"	$NetBSD: make.1,v 1.3 2008/11/11 14:37:05 joerg Exp $
+.\"	$NetBSD: make.1,v 1.4 2009/09/18 21:27:25 joerg Exp $
 .\"
 .\" Copyright (c) 1990, 1993
 .\"	The Regents of the University of California.  All rights reserved.
@@ -29,7 +29,7 @@
 .\"
 .\"	from: @(#)make.1	8.4 (Berkeley) 3/19/94
 .\"
-.Dd October 29, 2008
+.Dd September 7, 2009
 .Dt MAKE 1
 .Os
 .Sh NAME
@@ -38,6 +38,9 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl BeikNnqrstWX
+.Bk -words
+.Op Fl C Ar directory
+.Ek
 .Bk -words
 .Op Fl D Ar variable
 .Ek
@@ -104,6 +107,16 @@ The options are as follows:
 .It Fl B
 Try to be backwards compatible by executing a single shell per command and
 by executing the commands to make the sources of a dependency line in sequence.
+.It Fl C Ar directory
+Change to
+.Ar directory
+before reading the makefiles or doing anything else.
+If multiple
+.Fl C
+options are specified, each is interpreted relative to the previous one:
+.Fl C Pa / Fl C Pa etc
+is equivalent to
+.Fl C Pa /etc .
 .It Fl D Ar variable
 Define
 .Ar variable
@@ -132,6 +145,8 @@ Print all possible debugging information;
 equivalent to specifying all of the debugging flags.
 .It Ar a
 Print debugging information about archive searching and caching.
+.It Ar C
+Print debugging information about current working directory.
 .It Ar c
 Print debugging information about conditional evaluation.
 .It Ar d
@@ -183,16 +198,24 @@ Also known as "loud" behavior.
 Print debugging information about making targets, including modification
 dates.
 .It Ar n
-Don't delete the temporary command scripts created in
+Don't delete the temporary command scripts created when running commands.
+These temporary scripts are created in the directory
+referred to by the
+.Ev TMPDIR
+environment variable, or in
 .Pa /tmp
-when running commands.
-These are created via
-.Xr mkstemp 3
+if
+.Ev TMPDIR
+is unset or set to the empty string.
+The temporary scripts are created by
+.Xr mkstemp 3 ,
 and have names of the form
-.Pa /tmp/makeXXXXX .
+.Pa makeXXXXXX .
 .Em NOTE :
-This can create many file in
-.Pa /tmp
+This can create many files in
+.Ev TMPDIR
+or
+.Pa /tmp ,
 so use with care.
 .It Ar p
 Print debugging information about makefile parsing.
@@ -246,6 +269,14 @@ may have running at any one time.
 Turns compatibility mode off, unless the
 .Ar B
 flag is also specified.
+When compatibility mode is off, all commands associated with a
+target are executed in a single shell invocation as opposed to the
+traditional one shell invocation per line.
+This can break traditional scripts which change directories on each
+command invocation and then expect to start with a fresh environment
+on the next line.
+It is more efficient to correct the scripts rather than turn backwards
+compatibility on.
 .It Fl k
 Continue processing after errors are encountered, but only on those targets
 that do not depend on the target whose creation caused the error.
@@ -497,6 +528,14 @@ If the variable name contains only a single letter, the surrounding
 braces or parentheses are not required.
 This shorter form is not recommended.
 .Pp
+If the variable name contains a dollar, then the name itself is expanded first.
+This allows almost arbitrary variable names, however names containing dollar,
+braces, parenthesis, or whitespace are really best avoided!
+.Pp
+If the result of expanding a variable contains a dollar sign
+.Pq Ql \&$
+the string is expanded again.
+.Pp
 Variable substitution occurs at two distinct times, depending on where
 the variable is being used.
 Variables in dependency lines are expanded as the line is read.
@@ -575,7 +614,7 @@ These variables are
 and
 .Ql Va .MEMBER .
 .El
-.Ss Additional inbuilt variables
+.Ss Additional built-in variables
 In addition,
 .Nm
 sets or knows about the following variables:
@@ -621,6 +660,17 @@ The list of makefiles read by
 .Nm ,
 which is useful for tracking dependencies.
 Each makefile is recorded only once, regardless of the number of times read.
+.It Va .MAKE.LEVEL
+The recursion depth of
+.Nm .
+The initial instance of 
+.Nm
+will be 0, and an incremented value is put into the environment
+to be seen by the next generation.  
+This allows tests like:
+.Li .if ${.MAKE.LEVEL} == 0
+to protect things which should only be evaluated in the initial instance of
+.Nm .
 .It Va .MAKE.PID
 The process-id of
 .Nm .
@@ -779,6 +829,16 @@ is set to the value of
 for all programs which
 .Nm
 executes.
+.It Ev VPATH
+Colon-separated
+.Pq Dq \&:
+lists of directories that
+.Nm
+will search for files.
+The variable is supported for compatibility with old make programs only,
+use
+.Ql Va .PATH
+instead.
 .El
 .Ss Variable modifiers
 Variable expansion may be modified to select or modify each word of the
@@ -993,45 +1053,16 @@ Remove adjacent duplicate words (like
 .Sm off
 .It Cm \&:\&? Ar true_string Cm \&: Ar false_string
 .Sm on
-If the variable (actually an expression; see below)
-evaluates to true, return as its value the
+If the variable name (not its value), when parsed as a .if conditional
+expression, evaluates to true, return as its value the
 .Ar true_string ,
 otherwise return the
 .Ar false_string .
-The expression parser needs careful feeding to avoid surprises.
-For example the following all do what one might expect,
-.Dl ${"${NUMBERS:M42}":?match:no}
-.Dl ${${NUMBER:U0} > 0:?set:zero}
-.Dl ${empty(NUMBER):?empty:set}
-The first case expands to
-.Ql match
-if
-.Dv NUMBERS
-contains the value 42 (the quotes are important).
-The second expands to
-.Ql zero
-unless
-.Dv NUMBER
-is set to a value greater than 0.
-The last case expands to
-.Ql empty
-or
-.Ql set
-depending on whether
-.Dv NUMBER
-is empty.
-In this example, use of
-.Ql {}
-rather than
-.Ql ()
-is important to avoid the parser getting confused.
-By contrast, the following examples will
-.Em not
-behave as expected.
-.Dl ${"1 < 0":?always:no}
-.Dl ${NUMBERS:M42:?always:no}
-in both cases the expansion will always be
-.Ql always .
+Since the variable name is used as the expression, \&:\&? must be the
+first modifier after the variable name itself - which will, of course,
+usually contain variable expansions.
+If the expression is a single token, it will likely be treated as a check
+for the name being defined.
 .It Ar :old_string=new_string
 This is the
 .At V
@@ -1116,25 +1147,14 @@ The variable is assigned the value
 .Ar str
 after substitution.
 This modifier and its variations are useful in
-obscure situations such as wanting to apply modifiers to
-.Cm \&.for
-loop iteration variables which won't work due to the way
-.Cm \&.for
-loops are implemented.
+obscure situations such as wanting to set a variable when shell commands
+are being parsed.
 These assignment modifiers always expand to
 nothing, so if appearing in a rule line by themselves should be
 preceded with something to keep
 .Nm
 happy.
-As in:
-.Bd -literal
-use_foo: \&.USE
-\&.for i in ${\&.TARGET} ${\&.TARGET:R}\&.gz
-	@: ${t::=$i}
-	@echo t:R:T=${t:R:T}
-\&.endfor
-
-.Ed
+.Pp
 The
 .Ql Cm \&::
 helps avoid false matches with the
@@ -1263,8 +1283,7 @@ The possible conditionals are as follows:
 Export the specified global variable.
 If no variable is provided, all globals are exported
 except for internal variables (those that start with
-.Ql \&.
-).
+.Ql \&. ) .
 This is not affected by the
 .Fl X
 flag, so should be used with caution.
@@ -1432,16 +1451,17 @@ of a string comparison.
 .Pp
 When
 .Nm
-is evaluating one of these conditional expression, and it encounters
-a word it doesn't recognize, either the
+is evaluating one of these conditional expressions, and it encounters
+a (white-space separated) word it doesn't recognize, either the
 .Dq make
 or
 .Dq defined
 expression is applied to it, depending on the form of the conditional.
 If the form is
-.Ql Ic .ifdef
-or
+.Ql Ic .ifdef ,
 .Ql Ic .ifndef ,
+or
+.Ql Ic .if
 the
 .Dq defined
 expression is applied.
@@ -1588,9 +1608,9 @@ b1:
 
 .Ed
 the output is always
+.Ql a ,
 .Ql b1 ,
 .Ql b ,
-.Ql a ,
 .Ql x .
 .br
 The ordering imposed by
@@ -1668,7 +1688,7 @@ could be built, unless
 is built by another part of the dependency graph,
 the following is a dependency loop:
 .Bd -literal
-\&.ORDER a b
+\&.ORDER: a b
 b: a
 .Ed
 .Pp
@@ -1780,8 +1800,9 @@ uses the following environment variables, if they exist:
 .Ev MAKEOBJDIR ,
 .Ev MAKEOBJDIRPREFIX ,
 .Ev MAKESYSPATH ,
+.Ev PWD ,
 and
-.Ev PWD .
+.Ev TMPDIR .
 .Pp
 .Ev MAKEOBJDIRPREFIX
 and
@@ -1813,6 +1834,12 @@ The way that parallel makes are scheduled changed in
 .Nx 4.0
 so that .ORDER and .WAIT apply recursively to the dependant nodes.
 The algorithms used may change again in the future.
+.Pp
+The way that .for loop variables are substituted changed after
+.Nx 5.0
+so that they still appear to be variable expansions.
+In particular this stops them being treated as syntax, and removes some
+obscure problems using them in .if statements.
 .Sh SEE ALSO
 .Xr mkdep 1
 .Sh HISTORY
@@ -1820,3 +1847,14 @@ A
 .Nm
 command appeared in
 .At v7 .
+.Sh BUGS
+The
+.Nm
+syntax is difficult to parse without actually acting of the data.
+For instance finding the end of a variable use should involve scanning each
+the modifiers using the correct terminator for each field.
+In many places
+.Nm
+just counts {} and () in order to find the end of a variable expansion.
+.Pp
+There is no way of escaping a space character in a filename.
