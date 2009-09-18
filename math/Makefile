@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2009/09/11 00:10:54 jnemeth Exp $
+# $NetBSD: Makefile,v 1.191 2009/09/18 14:15:30 is Exp $
 
 COMMENT=	Mathematics
 
@@ -106,6 +106,7 @@ SUBDIR+=	octave
 SUBDIR+=	octave-forge
 SUBDIR+=	odepack
 SUBDIR+=	openaxiom
+SUBDIR+=	ordCalc
 SUBDIR+=	orpie
 SUBDIR+=	otter
 SUBDIR+=	p5-Excel-Template
