@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.101 2009/09/18 11:27:41 dmcmahill Exp $
+# $NetBSD: gcc.mk,v 1.102 2009/09/18 11:38:23 dmcmahill Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -190,7 +190,7 @@ _NEED_GCC44=	yes
 .  endif
 .endfor
 .if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO]) && \
-    !empty(_NEED_GCC34:M[nN][oO]) && !empty(_NEED_GC44:M[nN][oO])
+    !empty(_NEED_GCC34:M[nN][oO]) && !empty(_NEED_GCC44:M[nN][oO])
 _NEED_GCC44=	yes
 .endif
 
