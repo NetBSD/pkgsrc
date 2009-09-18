@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:16:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/09/18 11:04:07 obache Exp $
 share/examples/webmin/bind8/config
 share/webmin/bind8/CHANGELOG
 share/webmin/bind8/acl_security.pl
@@ -122,6 +122,7 @@ share/webmin/bind8/edit_stub.cgi
 share/webmin/bind8/edit_text.cgi
 share/webmin/bind8/edit_view.cgi
 share/webmin/bind8/edit_zonekey.cgi
+share/webmin/bind8/enable_zonekey.cgi
 share/webmin/bind8/feedback_files.pl
 share/webmin/bind8/find_free.cgi
 share/webmin/bind8/find_zones.cgi
