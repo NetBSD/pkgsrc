@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2009/06/08 09:32:16 tron Exp $
+# $NetBSD: Makefile,v 1.54 2009/09/18 13:29:31 sketch Exp $
 
 DISTNAME=	libsndfile-1.0.20
 PKGREVISION=	1
@@ -36,6 +36,10 @@ CONFIGURE_ENV+=		ac_cv_c_struct_hack=yes
 
 .if ${OPSYS} == "Darwin"
 BUILDLINK_PASSTHRU_DIRS+=	/Developer
+.endif
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
+CXXFLAGS+=		-features=extensions
 .endif
 
 .include "../../audio/flac/buildlink3.mk"
