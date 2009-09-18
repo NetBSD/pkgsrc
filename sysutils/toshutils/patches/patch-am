@@ -1,8 +1,17 @@
-$NetBSD: patch-am,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+$NetBSD: patch-am,v 1.2 2009/09/18 09:37:01 obache Exp $
 
---- doc/Makefile.in.orig	Mon Dec 20 01:10:49 1999
-+++ doc/Makefile.in	Mon Dec 20 01:11:24 1999
-@@ -36,7 +36,7 @@
+--- doc/Makefile.in.orig	1999-12-17 13:07:03.000000000 +0000
++++ doc/Makefile.in
+@@ -26,7 +26,7 @@
+ INSTALL = @INSTALL@
+ MANINSTALL = @INSTALL_DATA@
+ prefix = @prefix@
+-MANDESTDIR = @mandir@
++MANDESTDIR = $(DESTDIR)@mandir@
+ 
+ PDF = /usr/bin/pdflatex
+ 
+@@ -36,7 +36,7 @@ PDF = /usr/bin/pdflatex
  .tex.pdf:
  	$(PDF) $<
  
@@ -11,7 +20,7 @@ $NetBSD: patch-am,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
  
  hci: hci.pdf
  
-@@ -48,7 +48,7 @@
+@@ -48,7 +48,7 @@ toshiba: toshiba.pdf
  install:
  	$(MANINSTALL) fan.1 $(MANDESTDIR)/man1/fan.1
  	$(MANINSTALL) svpw.1 $(MANDESTDIR)/man1/svpw.1

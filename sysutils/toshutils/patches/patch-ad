@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.2 2000/09/02 19:24:34 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2009/09/18 09:37:01 obache Exp $
 
---- src/Makefile.in.orig	Fri Dec 17 14:07:03 1999
+--- src/Makefile.in.orig	1999-12-17 13:07:03.000000000 +0000
 +++ src/Makefile.in
-@@ -62,8 +62,8 @@
+@@ -29,7 +29,7 @@ INSTALL = @INSTALL@
+ BININSTALL = @INSTALL_PROGRAM@
+ MANINSTALL = @INSTALL_DATA@
+ prefix = @prefix@
+-BINDESTDIR = @prefix@/bin
++BINDESTDIR = $(DESTDIR)@prefix@/bin
+ MANDESTDIR = @mandir@
+ YACC = @YACC@
+ LEX = @LEX@
+@@ -62,8 +62,8 @@ OBJS = sci.o hci.o fan.o svpw.o hotkey.o
  #
  # if your X11R6 libraries don't need X_LOCALE, remove -DX_LOCALE
  #
@@ -13,7 +22,7 @@ $NetBSD: patch-ad,v 1.2 2000/09/02 19:24:34 wiz Exp $
  GTKLIBS = @GTK_LIBS@
  GTKFLAGS = @GTK_CFLAGS@
  XMESSAGE = @XMESSAGE@
-@@ -88,37 +88,37 @@
+@@ -88,37 +88,37 @@ sci.o: sci.c
  	$(CC) -m486 -Wall -c sci.c
  
  fan: $(FANOBJS)
