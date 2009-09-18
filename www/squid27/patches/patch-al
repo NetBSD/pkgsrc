@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.1.1.1 2008/09/12 15:02:47 taca Exp $
+$NetBSD: patch-al,v 1.2 2009/09/18 02:01:35 taca Exp $
 
---- tools/Makefile.in.orig	2007-11-12 10:14:28.000000000 +0900
+--- tools/Makefile.in.orig	2009-05-01 10:24:45.000000000 +0900
 +++ tools/Makefile.in
-@@ -737,7 +737,7 @@ info: info-recursive
+@@ -698,7 +698,7 @@ info: info-recursive
  
  info-am:
  
 -install-data-am: install-data-local
 +install-data-am:
  
- install-exec-am: install-binPROGRAMS install-libexecPROGRAMS
+ install-dvi: install-dvi-recursive
  
