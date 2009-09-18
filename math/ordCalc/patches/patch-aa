@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/09/18 14:09:26 is Exp $
+
+--- src/Makefile.orig	2009-09-16 11:00:03.000000000 -0700
++++ src/Makefile
+@@ -21,7 +21,7 @@ SCRIPTS = update.sh srTest.sh cmdIntfcTe
+ ALL_FILES = ${SRC} ${HDRS} ${SCRIPTS} Makefile
+ 
+ ord : ${OBJS}
+-	g++ -g ${OBJS} -lgmp -lgmpxx -lreadline -lncurses \
++	${LIBTOOL} --mode=link ${CXX} -g ${OBJS} -lgmp -lgmpxx -lreadline -lncurses \
+ 		-o ord 
+ 
+ DOC : ord
