@@ -1,0 +1,9 @@
+                                OrdCalc
+        An interactive tool to understand the recursive ordinals
+
+'ord' is a program for understanding the recursive ordinals.
+It has a command line interpreter resembling command line calculators.
+
+See 'ordCalc.pdf' for a brief description of how to use the interpreter.
+See 'ordinal.pdf' for a description of the structure of the program and the
+theory on which it is based.
