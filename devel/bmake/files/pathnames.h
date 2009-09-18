@@ -1,4 +1,4 @@
-/*	$NetBSD: pathnames.h,v 1.3 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: pathnames.h,v 1.4 2009/09/18 21:27:25 joerg Exp $	*/
 
 /*
  * Copyright (c) 1990, 1993
@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)pathnames.h	5.2 (Berkeley) 6/1/90
- *	$Id: pathnames.h,v 1.3 2008/03/09 19:54:29 joerg Exp $
+ *	$Id: pathnames.h,v 1.4 2009/09/18 21:27:25 joerg Exp $
  */
 
 #if HAVE_CONFIG_H
@@ -56,4 +56,7 @@
 # else
 #   define  _PATH_DEFSYSPATH	_path_defsyspath
 # endif
+#endif
+#ifndef _PATH_TMP
+#define	_PATH_TMP		"/tmp/"		/* with trailing slash */
 #endif
