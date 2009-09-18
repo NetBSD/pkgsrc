@@ -1,4 +1,4 @@
-/*	$NetBSD: make.h,v 1.2 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: make.h,v 1.3 2009/09/18 21:27:25 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -121,6 +121,7 @@
 #include "hash.h"
 #include "make-conf.h"
 #include "buf.h"
+#include "make_malloc.h"
 
 /*
  * some vendors don't have this --sjg
@@ -230,11 +231,6 @@ typedef struct GNode {
 } GNode;
 
 /*
- * Manifest constants
- */
-#define NILGNODE	((GNode *) NIL)
-
-/*
  * The OP_ constants are used when parsing a dependency line as a way of
  * communicating to other parts of the program the way in which a target
  * should be made. These constants are bitwise-OR'ed together and
@@ -306,7 +302,7 @@ typedef struct GNode {
  * do if the desired node(s) is (are) not found. If the TARG_CREATE constant
  * is given, a new, empty node will be created for the target, placed in the
  * table of all targets and its address returned. If TARG_NOCREATE is given,
- * a NIL pointer will be returned.
+ * a NULL pointer will be returned.
  */
 #define TARG_NOCREATE	0x00	  /* don't create it */
 #define TARG_CREATE	0x01	  /* create node if not found */
@@ -418,6 +414,7 @@ extern char	*progname;	/* The program name */
 #define	MAKE_JOB_PREFIX	".MAKE.JOB.PREFIX" /* prefix for job target output */
 #define	MAKE_EXPORTED	".MAKE.EXPORTED"   /* variables we export */
 #define	MAKE_MAKEFILES	".MAKE.MAKEFILES"  /* all the makefiles we read */
+#define	MAKE_LEVEL	".MAKE.LEVEL"	   /* recursion level */
 
 /*
  * debug control:
@@ -426,32 +423,29 @@ extern char	*progname;	/* The program name */
  */
 FILE *debug_file;		/* Output written here - default stdout */
 extern int debug;
-#define	DEBUG_ARCH	0x0001
-#define	DEBUG_COND	0x0002
-#define	DEBUG_DIR	0x0004
-#define	DEBUG_GRAPH1	0x0008
-#define	DEBUG_GRAPH2	0x0010
-#define	DEBUG_JOB	0x0020
-#define	DEBUG_MAKE	0x0040
-#define	DEBUG_SUFF	0x0080
-#define	DEBUG_TARG	0x0100
-#define	DEBUG_VAR	0x0200
-#define DEBUG_FOR	0x0400
-#define DEBUG_SHELL	0x0800
-#define DEBUG_ERROR	0x1000
-#define DEBUG_LOUD	0x2000
+#define	DEBUG_ARCH	0x00001
+#define	DEBUG_COND	0x00002
+#define	DEBUG_DIR	0x00004
+#define	DEBUG_GRAPH1	0x00008
+#define	DEBUG_GRAPH2	0x00010
+#define	DEBUG_JOB	0x00020
+#define	DEBUG_MAKE	0x00040
+#define	DEBUG_SUFF	0x00080
+#define	DEBUG_TARG	0x00100
+#define	DEBUG_VAR	0x00200
+#define DEBUG_FOR	0x00400
+#define DEBUG_SHELL	0x00800
+#define DEBUG_ERROR	0x01000
+#define DEBUG_LOUD	0x02000
 #define DEBUG_GRAPH3	0x10000
 #define DEBUG_SCRIPT	0x20000
 #define DEBUG_PARSE	0x40000
+#define DEBUG_CWD	0x80000
 
 #define CONCAT(a,b)	a##b
 
 #define	DEBUG(module)	(debug & CONCAT(DEBUG_,module))
 
-/*
- * Since there are so many, all functions that return non-integer values are
- * extracted by means of a sed script or two and stuck in the file "nonints.h"
- */
 #include "nonints.h"
 
 int Make_TimeStamp(GNode *, GNode *);

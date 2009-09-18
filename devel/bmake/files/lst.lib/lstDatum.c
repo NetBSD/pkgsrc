@@ -1,4 +1,4 @@
-/*	$NetBSD: lstDatum.c,v 1.2 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: lstDatum.c,v 1.3 2009/09/18 21:27:26 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -33,14 +33,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: lstDatum.c,v 1.2 2008/03/09 19:54:29 joerg Exp $";
+static char rcsid[] = "$NetBSD: lstDatum.c,v 1.3 2009/09/18 21:27:26 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)lstDatum.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: lstDatum.c,v 1.2 2008/03/09 19:54:29 joerg Exp $");
+__RCSID("$NetBSD: lstDatum.c,v 1.3 2009/09/18 21:27:26 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -58,20 +58,20 @@ __RCSID("$NetBSD: lstDatum.c,v 1.2 2008/03/09 19:54:29 joerg Exp $");
  *	Return the datum stored in the given node.
  *
  * Results:
- *	The datum or (ick!) NIL if the node is invalid.
+ *	The datum or NULL if the node is invalid.
  *
  * Side Effects:
  *	None.
  *
  *-----------------------------------------------------------------------
  */
-ClientData
+void *
 Lst_Datum(LstNode ln)
 {
-    if (ln != NILLNODE) {
+    if (ln != NULL) {
 	return ((ln)->datum);
     } else {
-	return ((ClientData) NIL);
+	return NULL;
     }
 }
 

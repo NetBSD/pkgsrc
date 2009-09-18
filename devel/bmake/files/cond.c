@@ -1,4 +1,4 @@
-/*	$NetBSD: cond.c,v 1.4 2008/11/11 14:37:05 joerg Exp $	*/
+/*	$NetBSD: cond.c,v 1.5 2009/09/18 21:27:25 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: cond.c,v 1.4 2008/11/11 14:37:05 joerg Exp $";
+static char rcsid[] = "$NetBSD: cond.c,v 1.5 2009/09/18 21:27:25 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)cond.c	8.2 (Berkeley) 1/2/94";
 #else
-__RCSID("$NetBSD: cond.c,v 1.4 2008/11/11 14:37:05 joerg Exp $");
+__RCSID("$NetBSD: cond.c,v 1.5 2009/09/18 21:27:25 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -92,6 +92,7 @@ __RCSID("$NetBSD: cond.c,v 1.4 2008/11/11 14:37:05 joerg Exp $");
  */
 
 #include    <ctype.h>
+#include    <errno.h>    /* For strtoul() error checking */
 
 #include    "make.h"
 #include    "hash.h"
@@ -123,15 +124,16 @@ __RCSID("$NetBSD: cond.c,v 1.4 2008/11/11 14:37:05 joerg Exp $");
  * is applied.
  *
  * Tokens are scanned from the 'condExpr' string. The scanner (CondToken)
- * will return And for '&' and '&&', Or for '|' and '||', Not for '!',
- * LParen for '(', RParen for ')' and will evaluate the other terminal
+ * will return TOK_AND for '&' and '&&', TOK_OR for '|' and '||', TOK_NOT for '!',
+ * TOK_LPAREN for '(', TOK_RPAREN for ')' and will evaluate the other terminal
  * symbols, using either the default function or the function given in the
- * terminal, and return the result as either True or False.
+ * terminal, and return the result as either TOK_TRUE or TOK_FALSE.
  *
- * All Non-Terminal functions (CondE, CondF and CondT) return Err on error.
+ * All Non-Terminal functions (CondE, CondF and CondT) return TOK_ERROR on error.
  */
 typedef enum {
-    And, Or, Not, True, False, LParen, RParen, EndOfFile, None, Err
+    TOK_AND, TOK_OR, TOK_NOT, TOK_TRUE, TOK_FALSE, TOK_LPAREN, TOK_RPAREN,
+    TOK_EOF, TOK_NONE, TOK_ERROR
 } Token;
 
 /*-
@@ -139,24 +141,25 @@ typedef enum {
  * last two fields are stored in condInvert and condDefProc, respectively.
  */
 static void CondPushBack(Token);
-static int CondGetArg(char **, char **, const char *, Boolean);
-static Boolean CondDoDefined(int, char *);
-static int CondStrMatch(ClientData, ClientData);
-static Boolean CondDoMake(int, char *);
-static Boolean CondDoExists(int, char *);
-static Boolean CondDoTarget(int, char *);
-static Boolean CondDoCommands(int, char *);
-static char * CondCvtArg(char *, double *);
+static int CondGetArg(char **, char **, const char *);
+static Boolean CondDoDefined(int, const char *);
+static int CondStrMatch(const void *, const void *);
+static Boolean CondDoMake(int, const char *);
+static Boolean CondDoExists(int, const char *);
+static Boolean CondDoTarget(int, const char *);
+static Boolean CondDoCommands(int, const char *);
+static Boolean CondCvtArg(char *, double *);
 static Token CondToken(Boolean);
 static Token CondT(Boolean);
 static Token CondF(Boolean);
 static Token CondE(Boolean);
+static int do_Cond_EvalExpression(Boolean *);
 
 static const struct If {
     const char	*form;	      /* Form of if */
     int		formlen;      /* Length of form */
     Boolean	doNot;	      /* TRUE if default function should be negated */
-    Boolean	(*defProc)(int, char *); /* Default function to apply */
+    Boolean	(*defProc)(int, const char *); /* Default function to apply */
 } ifs[] = {
     { "def",	  3,	  FALSE,  CondDoDefined },
     { "ndef",	  4,	  TRUE,	  CondDoDefined },
@@ -166,10 +169,9 @@ static const struct If {
     { NULL,	  0,	  FALSE,  NULL }
 };
 
-static Boolean	  condInvert;	    	/* Invert the default function */
-static Boolean	  (*condDefProc)(int, char *);	/* Default function to apply */
+static const struct If *if_info;        /* Info for current statement */
 static char 	  *condExpr;	    	/* The expression to parse */
-static Token	  condPushBack=None;	/* Single push-back token used in
+static Token	  condPushBack=TOK_NONE;	/* Single push-back token used in
 					 * parsing */
 
 static unsigned int	cond_depth = 0;  	/* current .if nesting level */
@@ -222,21 +224,18 @@ CondPushBack(Token t)
  *-----------------------------------------------------------------------
  */
 static int
-CondGetArg(char **linePtr, char **argPtr, const char *func, Boolean parens)
+CondGetArg(char **linePtr, char **argPtr, const char *func)
 {
     char	  *cp;
     int	    	  argLen;
     Buffer	  buf;
+    int           paren_depth;
+    char          ch;
 
     cp = *linePtr;
-    if (parens) {
-	while (*cp != '(' && *cp != '\0') {
-	    cp++;
-	}
-	if (*cp == '(') {
-	    cp++;
-	}
-    }
+    if (func != NULL)
+	/* Skip opening '(' - verfied by caller */
+	cp++;
 
     if (*cp == '\0') {
 	/*
@@ -257,9 +256,15 @@ CondGetArg(char **linePtr, char **argPtr, const char *func, Boolean parens)
      * Create a buffer for the argument and start it out at 16 characters
      * long. Why 16? Why not?
      */
-    buf = Buf_Init(16);
+    Buf_Init(&buf, 16);
 
-    while ((strchr(" \t)&|", *cp) == NULL) && (*cp != '\0')) {
+    paren_depth = 0;
+    for (;;) {
+	ch = *cp;
+	if (ch == 0 || ch == ' ' || ch == '\t')
+	    break;
+	if ((ch == '&' || ch == '|') && paren_depth == 0)
+	    break;
 	if (*cp == '$') {
 	    /*
 	     * Parse the variable spec and install it as part of the argument
@@ -272,32 +277,32 @@ CondGetArg(char **linePtr, char **argPtr, const char *func, Boolean parens)
 	    void	*freeIt;
 
 	    cp2 = Var_Parse(cp, VAR_CMD, TRUE, &len, &freeIt);
-	    Buf_AddBytes(buf, strlen(cp2), (Byte *)cp2);
+	    Buf_AddBytes(&buf, strlen(cp2), cp2);
 	    if (freeIt)
 		free(freeIt);
 	    cp += len;
-	} else {
-	    Buf_AddByte(buf, (Byte)*cp);
-	    cp++;
+	    continue;
 	}
+	if (ch == '(')
+	    paren_depth++;
+	else
+	    if (ch == ')' && --paren_depth < 0)
+		break;
+	Buf_AddByte(&buf, *cp);
+	cp++;
     }
 
-    Buf_AddByte(buf, (Byte)'\0');
-    *argPtr = (char *)Buf_GetAll(buf, &argLen);
-    Buf_Destroy(buf, FALSE);
+    *argPtr = Buf_GetAll(&buf, &argLen);
+    Buf_Destroy(&buf, FALSE);
 
     while (*cp == ' ' || *cp == '\t') {
 	cp++;
     }
-    if (parens && *cp != ')') {
+
+    if (func != NULL && *cp++ != ')') {
 	Parse_Error(PARSE_WARNING, "Missing closing parenthesis for %s()",
 		     func);
 	return (0);
-    } else if (parens) {
-	/*
-	 * Advance pointer past close parenthesis.
-	 */
-	cp++;
     }
 
     *linePtr = cp;
@@ -318,13 +323,11 @@ CondGetArg(char **linePtr, char **argPtr, const char *func, Boolean parens)
  *-----------------------------------------------------------------------
  */
 static Boolean
-CondDoDefined(int argLen, char *arg)
+CondDoDefined(int argLen, const char *arg)
 {
-    char    savec = arg[argLen];
     char    *p1;
     Boolean result;
 
-    arg[argLen] = '\0';
     if (Var_Value(arg, VAR_CMD, &p1) != NULL) {
 	result = TRUE;
     } else {
@@ -332,7 +335,6 @@ CondDoDefined(int argLen, char *arg)
     }
     if (p1)
 	free(p1);
-    arg[argLen] = savec;
     return (result);
 }
 
@@ -351,9 +353,9 @@ CondDoDefined(int argLen, char *arg)
  *-----------------------------------------------------------------------
  */
 static int
-CondStrMatch(ClientData string, ClientData pattern)
+CondStrMatch(const void *string, const void *pattern)
 {
-    return(!Str_Match((char *)string,(char *)pattern));
+    return(!Str_Match(string, pattern));
 }
 
 /*-
@@ -370,19 +372,9 @@ CondStrMatch(ClientData string, ClientData pattern)
  *-----------------------------------------------------------------------
  */
 static Boolean
-CondDoMake(int argLen, char *arg)
+CondDoMake(int argLen, const char *arg)
 {
-    char    savec = arg[argLen];
-    Boolean result;
-
-    arg[argLen] = '\0';
-    if (Lst_Find(create, arg, CondStrMatch) == NILLNODE) {
-	result = FALSE;
-    } else {
-	result = TRUE;
-    }
-    arg[argLen] = savec;
-    return (result);
+    return Lst_Find(create, arg, CondStrMatch) != NULL;
 }
 
 /*-
@@ -399,13 +391,11 @@ CondDoMake(int argLen, char *arg)
  *-----------------------------------------------------------------------
  */
 static Boolean
-CondDoExists(int argLen, char *arg)
+CondDoExists(int argLen, const char *arg)
 {
-    char    savec = arg[argLen];
     Boolean result;
     char    *path;
 
-    arg[argLen] = '\0';
     path = Dir_FindFile(arg, dirSearchPath);
     if (path != NULL) {
 	result = TRUE;
@@ -413,7 +403,6 @@ CondDoExists(int argLen, char *arg)
     } else {
 	result = FALSE;
     }
-    arg[argLen] = savec;
     if (DEBUG(COND)) {
 	fprintf(debug_file, "exists(%s) result is \"%s\"\n",
 	       arg, path ? path : "");
@@ -435,21 +424,12 @@ CondDoExists(int argLen, char *arg)
  *-----------------------------------------------------------------------
  */
 static Boolean
-CondDoTarget(int argLen, char *arg)
+CondDoTarget(int argLen, const char *arg)
 {
-    char    savec = arg[argLen];
-    Boolean result;
     GNode   *gn;
 
-    arg[argLen] = '\0';
     gn = Targ_FindNode(arg, TARG_NOCREATE);
-    if ((gn != NILGNODE) && !OP_NOP(gn->type)) {
-	result = TRUE;
-    } else {
-	result = FALSE;
-    }
-    arg[argLen] = savec;
-    return (result);
+    return (gn != NULL) && !OP_NOP(gn->type);
 }
 
 /*-
@@ -468,67 +448,51 @@ CondDoTarget(int argLen, char *arg)
  *-----------------------------------------------------------------------
  */
 static Boolean
-CondDoCommands(int argLen, char *arg)
+CondDoCommands(int argLen, const char *arg)
 {
-    char    savec = arg[argLen];
-    Boolean result;
     GNode   *gn;
 
-    arg[argLen] = '\0';
     gn = Targ_FindNode(arg, TARG_NOCREATE);
-    if ((gn != NILGNODE) && !OP_NOP(gn->type) && !Lst_IsEmpty(gn->commands)) {
-	result = TRUE;
-    } else {
-	result = FALSE;
-    }
-    arg[argLen] = savec;
-    return (result);
+    return (gn != NULL) && !OP_NOP(gn->type) && !Lst_IsEmpty(gn->commands);
 }
 
 /*-
  *-----------------------------------------------------------------------
  * CondCvtArg --
- *	Convert the given number into a double. If the number begins
- *	with 0x, it is interpreted as a hexadecimal integer
- *	and converted to a double from there. All other strings just have
- *	strtod called on them.
+ *	Convert the given number into a double.
+ *	We try a base 10 or 16 integer conversion first, if that fails
+ *	then we try a floating point conversion instead.
  *
  * Results:
  *	Sets 'value' to double value of string.
- *	Returns NULL if string was fully consumed,
- *	else returns remaining input.
- *
- * Side Effects:
- *	Can change 'value' even if string is not a valid number.
- *
+ *	Returns 'true' if the convertion suceeded
  *
  *-----------------------------------------------------------------------
  */
-static char *
+static Boolean
 CondCvtArg(char *str, double *value)
 {
-    if ((*str == '0') && (str[1] == 'x')) {
-	long i;
+    char *eptr, ech;
+    unsigned long l_val;
+    double d_val;
 
-	for (str += 2, i = 0; *str; str++) {
-	    int x;
-	    if (isdigit((unsigned char) *str))
-		x  = *str - '0';
-	    else if (isxdigit((unsigned char) *str))
-		x = 10 + *str - isupper((unsigned char) *str) ? 'A' : 'a';
-	    else
-		break;
-	    i = (i << 4) + x;
-	}
-	*value = (double) i;
-	return *str ? str : NULL;
+    errno = 0;
+    l_val = strtoul(str, &eptr, str[1] == 'x' ? 16 : 10);
+    ech = *eptr;
+    if (ech == 0 && errno != ERANGE) {
+	d_val = str[0] == '-' ? -(double)-l_val : (double)l_val;
     } else {
-	char *eptr;
-	*value = strtod(str, &eptr);
-	return *eptr ? eptr : NULL;
+	if (ech != 0 && ech != '.' && ech != 'e' && ech != 'E')
+	    return FALSE;
+	d_val = strtod(str, &eptr);
+	if (*eptr)
+	    return FALSE;
     }
+
+    *value = d_val;
+    return TRUE;
 }
-
+
 /*-
  *-----------------------------------------------------------------------
  * CondGetString --
@@ -558,7 +522,7 @@ CondGetString(Boolean doEval, Boolean *quoted, void **freeIt)
     int qt;
     char *start;
 
-    buf = Buf_Init(0);
+    Buf_Init(&buf, 0);
     str = NULL;
     *freeIt = NULL;
     *quoted = qt = *condExpr == '"' ? 1 : 0;
@@ -569,7 +533,7 @@ CondGetString(Boolean doEval, Boolean *quoted, void **freeIt)
 	case '\\':
 	    if (condExpr[1] != '\0') {
 		condExpr++;
-		Buf_AddByte(buf, (Byte)*condExpr);
+		Buf_AddByte(&buf, *condExpr);
 	    }
 	    break;
 	case '"':
@@ -577,7 +541,7 @@ CondGetString(Boolean doEval, Boolean *quoted, void **freeIt)
 		condExpr++;		/* we don't want the quotes */
 		goto got_str;
 	    } else
-		Buf_AddByte(buf, (Byte)*condExpr); /* likely? */
+		Buf_AddByte(&buf, *condExpr); /* likely? */
 	    break;
 	case ')':
 	case '!':
@@ -589,7 +553,7 @@ CondGetString(Boolean doEval, Boolean *quoted, void **freeIt)
 	    if (!qt)
 		goto got_str;
 	    else
-		Buf_AddByte(buf, (Byte)*condExpr);
+		Buf_AddByte(&buf, *condExpr);
 	    break;
 	case '$':
 	    /* if we are in quotes, then an undefined variable is ok */
@@ -623,7 +587,7 @@ CondGetString(Boolean doEval, Boolean *quoted, void **freeIt)
 	     * Nope, we better copy str to buf
 	     */
 	    for (cp = str; *cp; cp++) {
-		Buf_AddByte(buf, (Byte)*cp);
+		Buf_AddByte(&buf, *cp);
 	    }
 	    if (*freeIt) {
 		free(*freeIt);
@@ -633,16 +597,15 @@ CondGetString(Boolean doEval, Boolean *quoted, void **freeIt)
 	    condExpr--;			/* don't skip over next char */
 	    break;
 	default:
-	    Buf_AddByte(buf, (Byte)*condExpr);
+	    Buf_AddByte(&buf, *condExpr);
 	    break;
 	}
     }
  got_str:
-    Buf_AddByte(buf, (Byte)'\0');
-    str = (char *)Buf_GetAll(buf, NULL);
+    str = Buf_GetAll(&buf, NULL);
     *freeIt = str;
  cleanup:
-    Buf_Destroy(buf, FALSE);
+    Buf_Destroy(&buf, FALSE);
     return str;
 }
 
@@ -655,381 +618,367 @@ CondGetString(Boolean doEval, Boolean *quoted, void **freeIt)
  *	A Token for the next lexical token in the stream.
  *
  * Side Effects:
- *	condPushback will be set back to None if it is used.
+ *	condPushback will be set back to TOK_NONE if it is used.
  *
  *-----------------------------------------------------------------------
  */
 static Token
-CondToken(Boolean doEval)
+compare_expression(Boolean doEval)
 {
-    Token	  t;
+    Token	t;
+    char	*lhs;
+    char	*rhs;
+    char	*op;
+    void	*lhsFree;
+    void	*rhsFree;
+    Boolean lhsQuoted;
+    Boolean rhsQuoted;
+    double  	left, right;
 
-    if (condPushBack == None) {
-	while (*condExpr == ' ' || *condExpr == '\t') {
-	    condExpr++;
-	}
-	switch (*condExpr) {
-	    case '(':
-		t = LParen;
-		condExpr++;
-		break;
-	    case ')':
-		t = RParen;
-		condExpr++;
-		break;
-	    case '|':
-		if (condExpr[1] == '|') {
-		    condExpr++;
-		}
-		condExpr++;
-		t = Or;
-		break;
-	    case '&':
-		if (condExpr[1] == '&') {
-		    condExpr++;
-		}
-		condExpr++;
-		t = And;
-		break;
-	    case '!':
-		t = Not;
-		condExpr++;
-		break;
-	    case '#':
-	    case '\n':
-	    case '\0':
-		t = EndOfFile;
-		break;
-	    case '"':
-	    case '$': {
-		char	*lhs;
-		char	*rhs;
-		char	*op;
-		void	*lhsFree;
-		void	*rhsFree;
-		Boolean lhsQuoted;
-		Boolean rhsQuoted;
+    t = TOK_ERROR;
+    rhs = NULL;
+    lhsFree = rhsFree = FALSE;
+    lhsQuoted = rhsQuoted = FALSE;
+    
+    /*
+     * Parse the variable spec and skip over it, saving its
+     * value in lhs.
+     */
+    lhs = CondGetString(doEval, &lhsQuoted, &lhsFree);
+    if (!lhs)
+	goto done;
 
-do_compare_setup:
+    /*
+     * Skip whitespace to get to the operator
+     */
+    while (isspace((unsigned char) *condExpr))
+	condExpr++;
 
-		rhs = NULL;
-		lhsFree = rhsFree = FALSE;
-		lhsQuoted = rhsQuoted = FALSE;
-		
-		/*
-		 * Parse the variable spec and skip over it, saving its
-		 * value in lhs.
-		 */
-		t = Err;
-		lhs = CondGetString(doEval, &lhsQuoted, &lhsFree);
-		if (!lhs) {
-		    if (lhsFree)
-			free(lhsFree);
-		    return Err;
-		}
-		/*
-		 * Skip whitespace to get to the operator
-		 */
-		while (isspace((unsigned char) *condExpr))
-		    condExpr++;
+    /*
+     * Make sure the operator is a valid one. If it isn't a
+     * known relational operator, pretend we got a
+     * != 0 comparison.
+     */
+    op = condExpr;
+    switch (*condExpr) {
+	case '!':
+	case '=':
+	case '<':
+	case '>':
+	    if (condExpr[1] == '=') {
+		condExpr += 2;
+	    } else {
+		condExpr += 1;
+	    }
+	    break;
+	default:
+	    if (!doEval) {
+		t = TOK_FALSE;
+		goto done;
+	    }
+	    /* For .ifxxx "..." check for non-empty string. */
+	    if (lhsQuoted) {
+		t = lhs[0] != 0 ? TOK_TRUE : TOK_FALSE;
+		goto done;
+	    }
+	    /* For .ifxxx <number> compare against zero */
+	    if (CondCvtArg(lhs, &left)) { 
+		t = left != 0.0 ? TOK_TRUE : TOK_FALSE;
+		goto done;
+	    }
+	    /* For .if ${...} check for non-empty string (defProc is ifdef). */
+	    if (if_info->form[0] == 0) {
+		t = lhs[0] != 0 ? TOK_TRUE : TOK_FALSE;
+		goto done;
+	    }
+	    /* Otherwise action default test ... */
+	    t = if_info->defProc(strlen(lhs), lhs) != if_info->doNot ? TOK_TRUE : TOK_FALSE;
+	    goto done;
+    }
 
-		/*
-		 * Make sure the operator is a valid one. If it isn't a
-		 * known relational operator, pretend we got a
-		 * != 0 comparison.
-		 */
-		op = condExpr;
-		switch (*condExpr) {
-		    case '!':
-		    case '=':
-		    case '<':
-		    case '>':
-			if (condExpr[1] == '=') {
-			    condExpr += 2;
-			} else {
-			    condExpr += 1;
-			}
-			break;
-		    default:
-			op = UNCONST("!=");
-			if (lhsQuoted)
-			    rhs = UNCONST("");
-			else
-			    rhs = UNCONST("0");
+    while (isspace((unsigned char)*condExpr))
+	condExpr++;
 
-			goto do_compare;
-		}
-		while (isspace((unsigned char) *condExpr)) {
-		    condExpr++;
-		}
-		if (*condExpr == '\0') {
-		    Parse_Error(PARSE_WARNING,
-				"Missing right-hand-side of operator");
-		    goto error;
-		}
-		rhs = CondGetString(doEval, &rhsQuoted, &rhsFree);
-		if (!rhs) {
-		    if (lhsFree)
-			free(lhsFree);
-		    if (rhsFree)
-			free(rhsFree);
-		    return Err;
-		}
-do_compare:
-		if (rhsQuoted || lhsQuoted) {
+    if (*condExpr == '\0') {
+	Parse_Error(PARSE_WARNING,
+		    "Missing right-hand-side of operator");
+	goto done;
+    }
+
+    rhs = CondGetString(doEval, &rhsQuoted, &rhsFree);
+    if (!rhs)
+	goto done;
+
+    if (rhsQuoted || lhsQuoted) {
 do_string_compare:
-		    if (((*op != '!') && (*op != '=')) || (op[1] != '=')) {
-			Parse_Error(PARSE_WARNING,
-		"String comparison operator should be either == or !=");
-			goto error;
-		    }
+	if (((*op != '!') && (*op != '=')) || (op[1] != '=')) {
+	    Parse_Error(PARSE_WARNING,
+    "String comparison operator should be either == or !=");
+	    goto done;
+	}
 
-		    if (DEBUG(COND)) {
-			fprintf(debug_file, "lhs = \"%s\", rhs = \"%s\", op = %.2s\n",
-			       lhs, rhs, op);
-		    }
-		    /*
-		     * Null-terminate rhs and perform the comparison.
-		     * t is set to the result.
-		     */
-		    if (*op == '=') {
-			t = strcmp(lhs, rhs) ? False : True;
-		    } else {
-			t = strcmp(lhs, rhs) ? True : False;
-		    }
-		} else {
-		    /*
-		     * rhs is either a float or an integer. Convert both the
-		     * lhs and the rhs to a double and compare the two.
-		     */
-		    double  	left, right;
-		    char	*cp;
-		
-		    if (CondCvtArg(lhs, &left))
-			goto do_string_compare;
-		    if ((cp = CondCvtArg(rhs, &right)) &&
-			    cp == rhs)
-			goto do_string_compare;
-
-		    if (DEBUG(COND)) {
-			fprintf(debug_file, "left = %f, right = %f, op = %.2s\n", left,
-			       right, op);
-		    }
-		    switch(op[0]) {
-		    case '!':
-			if (op[1] != '=') {
-			    Parse_Error(PARSE_WARNING,
-					"Unknown operator");
-			    goto error;
-			}
-			t = (left != right ? True : False);
-			break;
-		    case '=':
-			if (op[1] != '=') {
-			    Parse_Error(PARSE_WARNING,
-					"Unknown operator");
-			    goto error;
-			}
-			t = (left == right ? True : False);
-			break;
-		    case '<':
-			if (op[1] == '=') {
-			    t = (left <= right ? True : False);
-			} else {
-			    t = (left < right ? True : False);
-			}
-			break;
-		    case '>':
-			if (op[1] == '=') {
-			    t = (left >= right ? True : False);
-			} else {
-			    t = (left > right ? True : False);
-			}
-			break;
-		    }
-		}
-error:
-		if (lhsFree)
-		    free(lhsFree);
-		if (rhsFree)
-		    free(rhsFree);
-		break;
-	    }
-	    default: {
-		Boolean (*evalProc)(int, char *);
-		Boolean invert = FALSE;
-		char	*arg = NULL;
-		int	arglen = 0;
-
-		if (istoken(condExpr, "defined", 7)) {
-		    /*
-		     * Use CondDoDefined to evaluate the argument and
-		     * CondGetArg to extract the argument from the 'function
-		     * call'.
-		     */
-		    evalProc = CondDoDefined;
-		    condExpr += 7;
-		    arglen = CondGetArg(&condExpr, &arg, "defined", TRUE);
-		    if (arglen == 0) {
-			condExpr -= 7;
-			goto use_default;
-		    }
-		} else if (istoken(condExpr, "make", 4)) {
-		    /*
-		     * Use CondDoMake to evaluate the argument and
-		     * CondGetArg to extract the argument from the 'function
-		     * call'.
-		     */
-		    evalProc = CondDoMake;
-		    condExpr += 4;
-		    arglen = CondGetArg(&condExpr, &arg, "make", TRUE);
-		    if (arglen == 0) {
-			condExpr -= 4;
-			goto use_default;
-		    }
-		} else if (istoken(condExpr, "exists", 6)) {
-		    /*
-		     * Use CondDoExists to evaluate the argument and
-		     * CondGetArg to extract the argument from the
-		     * 'function call'.
-		     */
-		    evalProc = CondDoExists;
-		    condExpr += 6;
-		    arglen = CondGetArg(&condExpr, &arg, "exists", TRUE);
-		    if (arglen == 0) {
-			condExpr -= 6;
-			goto use_default;
-		    }
-		} else if (istoken(condExpr, "empty", 5)) {
-		    /*
-		     * Use Var_Parse to parse the spec in parens and return
-		     * True if the resulting string is empty.
-		     */
-		    int	    did_warn, length;
-		    void    *freeIt;
-		    char    *val;
-
-		    condExpr += 5;
-
-		    did_warn = 0;
-		    for (arglen = 0; condExpr[arglen] != '\0'; arglen += 1) {
-			if (condExpr[arglen] == '(')
-			    break;
-			if (!isspace((unsigned char)condExpr[arglen]) &&
-			    !did_warn) {
-
-			    Parse_Error(PARSE_WARNING,
-				"Extra characters after \"empty\"");
-			    did_warn = 1;
-			}
-		    }
-
-		    if (condExpr[arglen] != '\0') {
-			val = Var_Parse(&condExpr[arglen - 1], VAR_CMD,
-					FALSE, &length, &freeIt);
-			if (val == var_Error) {
-			    t = Err;
-			} else {
-			    /*
-			     * A variable is empty when it just contains
-			     * spaces... 4/15/92, christos
-			     */
-			    char *p;
-			    for (p = val; *p && isspace((unsigned char)*p); p++)
-				continue;
-			    t = (*p == '\0') ? True : False;
-			}
-			if (freeIt) {
-			    free(freeIt);
-			}
-			/*
-			 * Advance condExpr to beyond the closing ). Note that
-			 * we subtract one from arglen + length b/c length
-			 * is calculated from condExpr[arglen - 1].
-			 */
-			condExpr += arglen + length - 1;
-		    } else {
-			condExpr -= 5;
-			goto use_default;
-		    }
-		    break;
-		} else if (istoken(condExpr, "target", 6)) {
-		    /*
-		     * Use CondDoTarget to evaluate the argument and
-		     * CondGetArg to extract the argument from the
-		     * 'function call'.
-		     */
-		    evalProc = CondDoTarget;
-		    condExpr += 6;
-		    arglen = CondGetArg(&condExpr, &arg, "target", TRUE);
-		    if (arglen == 0) {
-			condExpr -= 6;
-			goto use_default;
-		    }
-		} else if (istoken(condExpr, "commands", 8)) {
-		    /*
-		     * Use CondDoCommands to evaluate the argument and
-		     * CondGetArg to extract the argument from the
-		     * 'function call'.
-		     */
-		    evalProc = CondDoCommands;
-		    condExpr += 8;
-		    arglen = CondGetArg(&condExpr, &arg, "commands", TRUE);
-		    if (arglen == 0) {
-			condExpr -= 8;
-			goto use_default;
-		    }
-		} else {
-		    /*
-		     * The symbol is itself the argument to the default
-		     * function. We advance condExpr to the end of the symbol
-		     * by hand (the next whitespace, closing paren or
-		     * binary operator) and set to invert the evaluation
-		     * function if condInvert is TRUE.
-		     */
-		    if (isdigit((unsigned char)condExpr[0])) {
-			/*
-			 * Variables may already be substituted
-			 * by the time we get here.
-			 */
-			goto do_compare_setup;
-		    }
-		use_default:
-		    invert = condInvert;
-		    evalProc = condDefProc;
-		    arglen = CondGetArg(&condExpr, &arg, "", FALSE);
-		}
-
-		/*
-		 * Evaluate the argument using the set function. If invert
-		 * is TRUE, we invert the sense of the function.
-		 */
-		t = (!doEval || (* evalProc) (arglen, arg) ?
-		     (invert ? False : True) :
-		     (invert ? True : False));
-		if (arg)
-		    free(arg);
-		break;
-	    }
+	if (DEBUG(COND)) {
+	    fprintf(debug_file, "lhs = \"%s\", rhs = \"%s\", op = %.2s\n",
+		   lhs, rhs, op);
+	}
+	/*
+	 * Null-terminate rhs and perform the comparison.
+	 * t is set to the result.
+	 */
+	if (*op == '=') {
+	    t = strcmp(lhs, rhs) ? TOK_FALSE : TOK_TRUE;
+	} else {
+	    t = strcmp(lhs, rhs) ? TOK_TRUE : TOK_FALSE;
 	}
     } else {
-	t = condPushBack;
-	condPushBack = None;
+	/*
+	 * rhs is either a float or an integer. Convert both the
+	 * lhs and the rhs to a double and compare the two.
+	 */
+    
+	if (!CondCvtArg(lhs, &left) || !CondCvtArg(rhs, &right))
+	    goto do_string_compare;
+
+	if (DEBUG(COND)) {
+	    fprintf(debug_file, "left = %f, right = %f, op = %.2s\n", left,
+		   right, op);
+	}
+	switch(op[0]) {
+	case '!':
+	    if (op[1] != '=') {
+		Parse_Error(PARSE_WARNING,
+			    "Unknown operator");
+		goto done;
+	    }
+	    t = (left != right ? TOK_TRUE : TOK_FALSE);
+	    break;
+	case '=':
+	    if (op[1] != '=') {
+		Parse_Error(PARSE_WARNING,
+			    "Unknown operator");
+		goto done;
+	    }
+	    t = (left == right ? TOK_TRUE : TOK_FALSE);
+	    break;
+	case '<':
+	    if (op[1] == '=') {
+		t = (left <= right ? TOK_TRUE : TOK_FALSE);
+	    } else {
+		t = (left < right ? TOK_TRUE : TOK_FALSE);
+	    }
+	    break;
+	case '>':
+	    if (op[1] == '=') {
+		t = (left >= right ? TOK_TRUE : TOK_FALSE);
+	    } else {
+		t = (left > right ? TOK_TRUE : TOK_FALSE);
+	    }
+	    break;
+	}
     }
-    return (t);
+
+done:
+    if (lhsFree)
+	free(lhsFree);
+    if (rhsFree)
+	free(rhsFree);
+    return t;
 }
-
+
+static int
+get_mpt_arg(char **linePtr, char **argPtr, const char *func)
+{
+    /*
+     * Use Var_Parse to parse the spec in parens and return
+     * TOK_TRUE if the resulting string is empty.
+     */
+    int	    length;
+    void    *freeIt;
+    char    *val;
+    char    *cp = *linePtr;
+
+    /* We do all the work here and return the result as the length */
+    *argPtr = NULL;
+
+    val = Var_Parse(cp - 1, VAR_CMD, FALSE, &length, &freeIt);
+    /*
+     * Advance *linePtr to beyond the closing ). Note that
+     * we subtract one because 'length' is calculated from 'cp - 1'.
+     */
+    *linePtr = cp - 1 + length;
+
+    if (val == var_Error) {
+	free(freeIt);
+	return -1;
+    }
+
+    /* A variable is empty when it just contains spaces... 4/15/92, christos */
+    while (isspace(*(unsigned char *)val))
+	val++;
+
+    /*
+     * For consistency with the other functions we can't generate the
+     * true/false here.
+     */
+    length = *val ? 2 : 1;
+    if (freeIt)
+	free(freeIt);
+    return length;
+}
+
+static Boolean
+CondDoEmpty(int arglen, const char *arg)
+{
+    return arglen == 1;
+}
+
+static Token
+compare_function(Boolean doEval)
+{
+    static const struct fn_def {
+	const char  *fn_name;
+	int         fn_name_len;
+        int         (*fn_getarg)(char **, char **, const char *);
+	Boolean     (*fn_proc)(int, const char *);
+    } fn_defs[] = {
+	{ "defined",   7, CondGetArg, CondDoDefined },
+	{ "make",      4, CondGetArg, CondDoMake },
+	{ "exists",    6, CondGetArg, CondDoExists },
+	{ "empty",     5, get_mpt_arg, CondDoEmpty },
+	{ "target",    6, CondGetArg, CondDoTarget },
+	{ "commands",  8, CondGetArg, CondDoCommands },
+	{ NULL,        0, NULL, NULL },
+    };
+    const struct fn_def *fn_def;
+    Token	t;
+    char	*arg = NULL;
+    int	arglen;
+    char *cp = condExpr;
+    char *cp1;
+
+    for (fn_def = fn_defs; fn_def->fn_name != NULL; fn_def++) {
+	if (!istoken(cp, fn_def->fn_name, fn_def->fn_name_len))
+	    continue;
+	cp += fn_def->fn_name_len;
+	/* There can only be whitespace before the '(' */
+	while (isspace(*(unsigned char *)cp))
+	    cp++;
+	if (*cp != '(')
+	    break;
+
+	arglen = fn_def->fn_getarg(&cp, &arg, fn_def->fn_name);
+	if (arglen <= 0) {
+	    condExpr = cp;
+	    return arglen < 0 ? TOK_ERROR : TOK_FALSE;
+	}
+	/* Evaluate the argument using the required function. */
+	t = !doEval || fn_def->fn_proc(arglen, arg) ? TOK_TRUE : TOK_FALSE;
+	if (arg)
+	    free(arg);
+	condExpr = cp;
+	return t;
+    }
+
+    /* Push anything numeric through the compare expression */
+    cp = condExpr;
+    if (isdigit((unsigned char)cp[0]) || strchr("+-", cp[0]))
+	return compare_expression(doEval);
+
+    /*
+     * Most likely we have a naked token to apply the default function to.
+     * However ".if a == b" gets here when the "a" is unquoted and doesn't
+     * start with a '$'. This surprises people.
+     * If what follows the function argument is a '=' or '!' then the syntax
+     * would be invalid if we did "defined(a)" - so instead treat as an
+     * expression.
+     */
+    arglen = CondGetArg(&cp, &arg, NULL);
+    for (cp1 = cp; isspace(*(unsigned char *)cp1); cp1++)
+	continue;
+    if (*cp1 == '=' || *cp1 == '!')
+	return compare_expression(doEval);
+    condExpr = cp;
+
+    /*
+     * Evaluate the argument using the default function.
+     * This path always treats .if as .ifdef. To get here the character
+     * after .if must have been taken literally, so the argument cannot
+     * be empty - even if it contained a variable expansion.
+     */
+    t = !doEval || if_info->defProc(arglen, arg) != if_info->doNot ? TOK_TRUE : TOK_FALSE;
+    if (arg)
+	free(arg);
+    return t;
+}
+
+static Token
+CondToken(Boolean doEval)
+{
+    Token t;
+
+    t = condPushBack;
+    if (t != TOK_NONE) {
+	condPushBack = TOK_NONE;
+	return t;
+    }
+
+    while (*condExpr == ' ' || *condExpr == '\t') {
+	condExpr++;
+    }
+
+    switch (*condExpr) {
+
+    case '(':
+	condExpr++;
+	return TOK_LPAREN;
+
+    case ')':
+	condExpr++;
+	return TOK_RPAREN;
+
+    case '|':
+	if (condExpr[1] == '|') {
+	    condExpr++;
+	}
+	condExpr++;
+	return TOK_OR;
+
+    case '&':
+	if (condExpr[1] == '&') {
+	    condExpr++;
+	}
+	condExpr++;
+	return TOK_AND;
+
+    case '!':
+	condExpr++;
+	return TOK_NOT;
+
+    case '#':
+    case '\n':
+    case '\0':
+	return TOK_EOF;
+
+    case '"':
+    case '$':
+	return compare_expression(doEval);
+
+    default:
+	return compare_function(doEval);
+    }
+}
+
 /*-
  *-----------------------------------------------------------------------
  * CondT --
  *	Parse a single term in the expression. This consists of a terminal
- *	symbol or Not and a terminal symbol (not including the binary
+ *	symbol or TOK_NOT and a terminal symbol (not including the binary
  *	operators):
  *	    T -> defined(variable) | make(target) | exists(file) | symbol
  *	    T -> ! T | ( E )
  *
  * Results:
- *	True, False or Err.
+ *	TOK_TRUE, TOK_FALSE or TOK_ERROR.
  *
  * Side Effects:
  *	Tokens are consumed.
@@ -1043,28 +992,28 @@ CondT(Boolean doEval)
 
     t = CondToken(doEval);
 
-    if (t == EndOfFile) {
+    if (t == TOK_EOF) {
 	/*
 	 * If we reached the end of the expression, the expression
 	 * is malformed...
 	 */
-	t = Err;
-    } else if (t == LParen) {
+	t = TOK_ERROR;
+    } else if (t == TOK_LPAREN) {
 	/*
 	 * T -> ( E )
 	 */
 	t = CondE(doEval);
-	if (t != Err) {
-	    if (CondToken(doEval) != RParen) {
-		t = Err;
+	if (t != TOK_ERROR) {
+	    if (CondToken(doEval) != TOK_RPAREN) {
+		t = TOK_ERROR;
 	    }
 	}
-    } else if (t == Not) {
+    } else if (t == TOK_NOT) {
 	t = CondT(doEval);
-	if (t == True) {
-	    t = False;
-	} else if (t == False) {
-	    t = True;
+	if (t == TOK_TRUE) {
+	    t = TOK_FALSE;
+	} else if (t == TOK_FALSE) {
+	    t = TOK_TRUE;
 	}
     }
     return (t);
@@ -1077,7 +1026,7 @@ CondT(Boolean doEval)
  *	    F -> T && F | T
  *
  * Results:
- *	True, False or Err
+ *	TOK_TRUE, TOK_FALSE or TOK_ERROR
  *
  * Side Effects:
  *	Tokens are consumed.
@@ -1090,18 +1039,18 @@ CondF(Boolean doEval)
     Token   l, o;
 
     l = CondT(doEval);
-    if (l != Err) {
+    if (l != TOK_ERROR) {
 	o = CondToken(doEval);
 
-	if (o == And) {
+	if (o == TOK_AND) {
 	    /*
 	     * F -> T && F
 	     *
-	     * If T is False, the whole thing will be False, but we have to
+	     * If T is TOK_FALSE, the whole thing will be TOK_FALSE, but we have to
 	     * parse the r.h.s. anyway (to throw it away).
-	     * If T is True, the result is the r.h.s., be it an Err or no.
+	     * If T is TOK_TRUE, the result is the r.h.s., be it an TOK_ERROR or no.
 	     */
-	    if (l == True) {
+	    if (l == TOK_TRUE) {
 		l = CondF(doEval);
 	    } else {
 		(void)CondF(FALSE);
@@ -1123,7 +1072,7 @@ CondF(Boolean doEval)
  *	    E -> F || E | F
  *
  * Results:
- *	True, False or Err.
+ *	TOK_TRUE, TOK_FALSE or TOK_ERROR.
  *
  * Side Effects:
  *	Tokens are, of course, consumed.
@@ -1136,19 +1085,19 @@ CondE(Boolean doEval)
     Token   l, o;
 
     l = CondF(doEval);
-    if (l != Err) {
+    if (l != TOK_ERROR) {
 	o = CondToken(doEval);
 
-	if (o == Or) {
+	if (o == TOK_OR) {
 	    /*
 	     * E -> F || E
 	     *
 	     * A similar thing occurs for ||, except that here we make sure
-	     * the l.h.s. is False before we bother to evaluate the r.h.s.
-	     * Once again, if l is False, the result is the r.h.s. and once
-	     * again if l is True, we parse the r.h.s. to throw it away.
+	     * the l.h.s. is TOK_FALSE before we bother to evaluate the r.h.s.
+	     * Once again, if l is TOK_FALSE, the result is the r.h.s. and once
+	     * again if l is TOK_TRUE, we parse the r.h.s. to throw it away.
 	     */
-	    if (l == False) {
+	    if (l == TOK_FALSE) {
 		l = CondE(doEval);
 	    } else {
 		(void)CondE(FALSE);
@@ -1182,44 +1131,64 @@ CondE(Boolean doEval)
  *-----------------------------------------------------------------------
  */
 int
-Cond_EvalExpression(int dosetup, char *line, Boolean *value, int eprint)
+Cond_EvalExpression(const struct If *info, char *line, Boolean *value, int eprint)
 {
-    if (dosetup) {
-	condDefProc = CondDoDefined;
-	condInvert = 0;
-    }
+    static const struct If *dflt_info;
+    const struct If *sv_if_info = if_info;
+    char *sv_condExpr = condExpr;
+    Token sv_condPushBack = condPushBack;
+    int rval;
 
     while (*line == ' ' || *line == '\t')
 	line++;
 
+    if (info == NULL && (info = dflt_info) == NULL) {
+	/* Scan for the entry for .if - it can't be first */
+	for (info = ifs; ; info++)
+	    if (info->form[0] == 0)
+		break;
+	dflt_info = info;
+    }
+
+    if_info = info != NULL ? info : ifs + 4;
     condExpr = line;
-    condPushBack = None;
+    condPushBack = TOK_NONE;
+
+    rval = do_Cond_EvalExpression(value);
+
+    if (rval == COND_INVALID && eprint)
+	Parse_Error(PARSE_FATAL, "Malformed conditional (%s)", line);
+
+    if_info = sv_if_info;
+    condExpr = sv_condExpr;
+    condPushBack = sv_condPushBack;
+
+    return rval;
+}
+
+static int
+do_Cond_EvalExpression(Boolean *value)
+{
 
     switch (CondE(TRUE)) {
-    case True:
-	if (CondToken(TRUE) == EndOfFile) {
+    case TOK_TRUE:
+	if (CondToken(TRUE) == TOK_EOF) {
 	    *value = TRUE;
-	    break;
+	    return COND_PARSE;
 	}
-	goto err;
-	/*FALLTHRU*/
-    case False:
-	if (CondToken(TRUE) == EndOfFile) {
+	break;
+    case TOK_FALSE:
+	if (CondToken(TRUE) == TOK_EOF) {
 	    *value = FALSE;
-	    break;
+	    return COND_PARSE;
 	}
-	/*FALLTHRU*/
-    case Err:
-err:
-	if (eprint)
-	    Parse_Error(PARSE_FATAL, "Malformed conditional (%s)",
-			 line);
-	return (COND_INVALID);
+	break;
     default:
+    case TOK_ERROR:
 	break;
     }
 
-    return COND_PARSE;
+    return COND_INVALID;
 }
 
 
@@ -1288,6 +1257,8 @@ Cond_Eval(char *line)
 	    }
 	    /* Return state for previous conditional */
 	    cond_depth--;
+	    if (cond_depth > MAXIF)
+		return COND_SKIP;
 	    return cond_state[cond_depth] <= ELSE_ACTIVE ? COND_PARSE : COND_SKIP;
 	}
 
@@ -1297,9 +1268,11 @@ Cond_Eval(char *line)
 	    /* It is else... */
 	    if (cond_depth == cond_min_depth) {
 		Parse_Error(level, "if-less else");
-		return COND_INVALID;
+		return COND_PARSE;
 	    }
 
+	    if (cond_depth > MAXIF)
+		return COND_SKIP;
 	    state = cond_state[cond_depth];
 	    switch (state) {
 	    case SEARCH_FOR_ELIF:
@@ -1342,25 +1315,34 @@ Cond_Eval(char *line)
     }
 
     /* Now we know what sort of 'if' it is... */
-    state = cond_state[cond_depth];
 
     if (isElif) {
 	if (cond_depth == cond_min_depth) {
 	    Parse_Error(level, "if-less elif");
-	    return COND_INVALID;
+	    return COND_PARSE;
 	}
-	if (state == SKIP_TO_ENDIF || state == ELSE_ACTIVE)
+	if (cond_depth > MAXIF)
+	    /* Error reported when we saw the .if ... */
+	    return COND_SKIP;
+	state = cond_state[cond_depth];
+	if (state == SKIP_TO_ENDIF || state == ELSE_ACTIVE) {
 	    Parse_Error(PARSE_WARNING, "extra elif");
+	    cond_state[cond_depth] = SKIP_TO_ENDIF;
+	    return COND_SKIP;
+	}
 	if (state != SEARCH_FOR_ELIF) {
 	    /* Either just finished the 'true' block, or already SKIP_TO_ELSE */
 	    cond_state[cond_depth] = SKIP_TO_ELSE;
 	    return COND_SKIP;
 	}
     } else {
+	/* Normal .if */
 	if (cond_depth >= MAXIF) {
+	    cond_depth++;
 	    Parse_Error(PARSE_FATAL, "Too many nested if's. %d max.", MAXIF);
-	    return COND_INVALID;
+	    return COND_SKIP;
 	}
+	state = cond_state[cond_depth];
 	cond_depth++;
 	if (state > ELSE_ACTIVE) {
 	    /* If we aren't parsing the data, treat as always false */
@@ -1369,15 +1351,12 @@ Cond_Eval(char *line)
 	}
     }
 
-    /* Initialize file-global variables for parsing the expression */
-    condDefProc = ifp->defProc;
-    condInvert = ifp->doNot;
-
     /* And evaluate the conditional expresssion */
-    if (Cond_EvalExpression(0, line, &value, 1) == COND_INVALID) {
-	/* Although we get make to reprocess the line, set a state */
-	cond_state[cond_depth] = SEARCH_FOR_ELIF;
-	return COND_INVALID;
+    if (Cond_EvalExpression(ifp, line, &value, 1) == COND_INVALID) {
+	/* Syntax error in conditional, error message already output. */
+	/* Skip everything to matching .endif */
+	cond_state[cond_depth] = SKIP_TO_ELSE;
+	return COND_SKIP;
     }
 
     if (!value) {

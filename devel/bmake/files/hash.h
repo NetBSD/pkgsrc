@@ -1,4 +1,4 @@
-/*	$NetBSD: hash.h,v 1.2 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: hash.h,v 1.3 2009/09/18 21:27:25 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -89,8 +89,10 @@ typedef struct Hash_Entry {
     struct Hash_Entry *next;		/* Used to link together all the
     					 * entries associated with the same
 					 * bucket. */
-    ClientData	      clientData;	/* Arbitrary piece of data associated
-    					 * with key. */
+    union {
+	void	      *clientPtr;	/* Arbitrary pointer */
+	time_t	      clientTime;	/* Arbitrary Time */
+    } clientInfo;
     unsigned	      namehash;		/* hash value of key */
     char	      name[1];		/* key string */
 } Hash_Entry;
@@ -119,11 +121,12 @@ typedef struct Hash_Search {
  */
 
 /*
- * ClientData Hash_GetValue(h)
+ * void * Hash_GetValue(h)
  *     Hash_Entry *h;
  */
 
-#define Hash_GetValue(h) ((h)->clientData)
+#define Hash_GetValue(h) ((h)->clientInfo.clientPtr)
+#define Hash_GetTimeValue(h) ((h)->clientInfo.clientTime)
 
 /*
  * Hash_SetValue(h, val);
@@ -131,7 +134,8 @@ typedef struct Hash_Search {
  *     char *val;
  */
 
-#define Hash_SetValue(h, val) ((h)->clientData = (ClientData) (val))
+#define Hash_SetValue(h, val) ((h)->clientInfo.clientPtr = (val))
+#define Hash_SetTimeValue(h, val) ((h)->clientInfo.clientTime = (val))
 
 /*
  * Hash_Size(n) returns the number of words in an object of n bytes

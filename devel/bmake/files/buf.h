@@ -1,4 +1,4 @@
-/*	$NetBSD: buf.h,v 1.2 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: buf.h,v 1.3 2009/09/18 21:27:25 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -80,32 +80,39 @@
 #ifndef _BUF_H
 #define _BUF_H
 
-#include    "sprite.h"
-
 typedef char Byte;
 
 typedef struct Buffer {
     int	    size; 	/* Current size of the buffer */
-    int     left;	/* Space left (== size - (inPtr - buffer)) */
-    Byte    *buffer;	/* The buffer itself */
-    Byte    *inPtr;	/* Place to write to */
-    Byte    *outPtr;	/* Place to read from */
-} *Buffer;
+    int     count;	/* Number of bytes in buffer */
+    Byte    *buffer;	/* The buffer itself (zero terminated) */
+} Buffer;
+
+/* If we aren't on netbsd, __predict_false() might not be defined. */
+#ifndef __predict_false
+#define __predict_false(x) (x)
+#endif
 
 /* Buf_AddByte adds a single byte to a buffer. */
-#define	Buf_AddByte(bp, byte) \
-	(void) (--(bp)->left <= 0 ? Buf_OvAddByte(bp, byte), 1 : \
-		(*(bp)->inPtr++ = (byte), *(bp)->inPtr = 0), 1)
+#define	Buf_AddByte(bp, byte) do { \
+	int _count = ++(bp)->count; \
+	char *_ptr; \
+	if (__predict_false(_count >= (bp)->size)) \
+		Buf_Expand_1(bp); \
+	_ptr = (bp)->buffer + _count; \
+	_ptr[-1] = (byte); \
+	_ptr[0] = 0; \
+    } while (0)
 
 #define BUF_ERROR 256
 
-void Buf_OvAddByte(Buffer, int);
-void Buf_AddBytes(Buffer, int, const Byte *);
-Byte *Buf_GetAll(Buffer, int *);
-void Buf_Discard(Buffer, int);
-int Buf_Size(Buffer);
-Buffer Buf_Init(int);
-void Buf_Destroy(Buffer, Boolean);
-void Buf_ReplaceLastByte(Buffer, int);
+#define Buf_Size(bp) ((bp)->count)
+
+void Buf_Expand_1(Buffer *);
+void Buf_AddBytes(Buffer *, int, const Byte *);
+Byte *Buf_GetAll(Buffer *, int *);
+void Buf_Empty(Buffer *);
+void Buf_Init(Buffer *, int);
+Byte *Buf_Destroy(Buffer *, Boolean);
 
 #endif /* _BUF_H */

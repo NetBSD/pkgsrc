@@ -1,3 +1,58 @@
+2009-09-09  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20090909
+	* Merge with NetBSD make, pick up:
+	  o fix for -C, .CURDIR and .OBJDIR
+	* boot-strap: 
+	  o allow share_dir to be set independent of prefix.
+	  o select default share_dir better when prefix ends in $HOST_TARGET
+	  o if FORCE_BSD_MK etc were set, include them in the suggested
+	    install-mk command.
+
+2009-09-08  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20090908
+	* Merge with NetBSD make, pick up:
+	  o .MAKE.LEVEL for recursion tracking
+	  o fix for :M scanning \:
+
+2009-09-03  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* configure.in: Don't -D__EXTENSIONS__ if
+	AC_USE_SYSTEM_EXTENSIONS says "no".
+
+2009-08-26  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20090826
+	Simplify MAKE_VERSION to just the bare date.
+	* Merge with NetBSD make, pick up:
+	  o -C directory support.
+	  o support for SIGINFO
+	  o use $TMPDIR for temp files.
+	  o child of vfork should be careful about modifying parent's state.
+	
+
+2009-03-26  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Appy some patches for MiNT from David Brownlee
+
+2009-02-26  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20090222
+	* Merge with NetBSD make, pick up:
+	  o Possible null pointer de-ref in Var_Set.
+
+2009-02-08  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20090204
+	* Merge with NetBSD make, pick up:
+	  o bmake_malloc et al moved to their own .c
+	  o Count both () and {} when looking for the end of a :M pattern
+	  o Change 'Buffer' so that it is the actual struct, not a pointer to it.
+	  o strlist.c - functions for processing extendable arrays of pointers to strings.
+	  o ClientData replaced with void *, so const void * can be used.
+	  o New debug flag C for DEBUG_CWD
+
 2008-11-11  Simon J. Gerraty  <sjg@void.crufty.net>
 
 	* Makefile.in (BMAKE_VERSION): bump version to 20081111
