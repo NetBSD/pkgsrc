@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3736 2009/09/18 16:24:10 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3737 2009/09/18 21:29:10 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4873,3 +4873,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added lang/gcc44 version 4.4.1 [dmcmahill 2009-09-18]
 	Added math/ordCalc version 0.1 [is 2009-09-18]
 	Updated net/lftp to 4.0.1 [hasso 2009-09-18]
+	Updated devel/bmake to 20090909 [joerg 2009-09-18]
