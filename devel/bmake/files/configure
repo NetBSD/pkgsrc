@@ -7941,11 +7941,6 @@ else
    diff_u=
    echo no >&6
 fi
-
-if egrep "__EXTENSIONS__" /usr/include/signal.h >/dev/null 2>&1; then
-  CPPFLAGS="$CPPFLAGS -D__EXTENSIONS__"
-fi
-
 echo "checking for MACHINE & MACHINE_ARCH..." >&6
 cat > conftest.$ac_ext <<EOF
 #include "confdefs.h"
