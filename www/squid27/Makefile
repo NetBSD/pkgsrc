@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2009/09/13 01:00:16 taca Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/18 02:01:35 taca Exp $
 
-DISTNAME=	squid-2.7.STABLE6
+DISTNAME=	squid-2.7.STABLE7
 PKGNAME=	${DISTNAME:S/STABLE//}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${SQUID_MASTER_SITES} \
 		http://www.squid-cache.org/Versions/v2/2.7/
@@ -11,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
