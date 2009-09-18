@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.48 2009/09/16 11:34:23 hasso Exp $
+$NetBSD: distinfo,v 1.49 2009/09/18 16:22:18 hasso Exp $
 
-SHA1 (lftp-4.0.0.tar.bz2) = 908397b581a68e6206ade4f798a68d8390aebf42
-RMD160 (lftp-4.0.0.tar.bz2) = 7ca6ee013733180bc3b45db13dda1b1eb2cd9acc
-Size (lftp-4.0.0.tar.bz2) = 1580362 bytes
+SHA1 (lftp-4.0.1.tar.bz2) = 01bcf6c053efab68c2e5ccf3ceb6c944db16aac3
+RMD160 (lftp-4.0.1.tar.bz2) = 7ca64c5544fc2dbcc0e7b9804f3eccb64316bb86
+Size (lftp-4.0.1.tar.bz2) = 1580251 bytes
 SHA1 (patch-aa) = 62af66bc66593164eb13fb25e63ff1b0e68f870b
 SHA1 (patch-ab) = 65c92b264873b45c69a0dfde2d2715dca0b6dc36
 SHA1 (patch-ac) = 32e1fba23d4d6bd0b06bacbe503cb9b39d2bf825
-SHA1 (patch-ad) = a8a335baf0c9a2a89c58c7395c879d2e8b0c4407
 SHA1 (patch-ae) = 3ee418b94cc1afb7b2db5bc550fd966d346368a4
 SHA1 (patch-af) = 69c414ab28cbdfb86e4981fb7eaa7985b8384838
 SHA1 (patch-ag) = 9eda126e106cee0cae6be691ad8bece921c9c0a9
-SHA1 (patch-ah) = 0fe8a0d179cca0d747d5b43e0db1617d22e0cc3a
-SHA1 (patch-ai) = cd6720e86c8809fe1606c534519ce2797afc84c9
