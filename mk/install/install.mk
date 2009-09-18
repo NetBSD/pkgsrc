@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.54 2009/09/02 22:05:42 joerg Exp $
+# $NetBSD: install.mk,v 1.55 2009/09/18 10:11:48 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -343,7 +343,15 @@ install-strip-debug: plist
 	@${STEP_MSG} "Automatic stripping of debug information"
 	${RUN}${CAT} ${_PLIST_NOKEYWORDS} \
 	| ${SED} -e 's|^|${DESTDIR}${PREFIX}/|' \
-	| ${XARGS} ${STRIP} -g 2>/dev/null || ${TRUE}
+	| while read f; do \
+		tmp_f="$${fname}.XXX"
+		if ${STRIP} -g -o "$${tmp_f}" "$${f}" 2> /dev/null; then \
+			[ ! -f "$${f}.tmpXXX" ] || \
+			    ${MV} "$${tmp_f}" "$${f}"; \
+		else \
+			${RM} -f $${tmp_f}; \
+		fi \
+	done
 
 ######################################################################
 ### install-doc-handling (PRIVATE)
