@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3733 2009/09/18 11:04:26 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3734 2009/09/18 11:28:54 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4870,3 +4870,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/squid27 to 2.7.7 [taca 2009-09-18]
 	Updated devel/p5-glib2 to 1.222 [obache 2009-09-18]
 	Updated sysutils/wbm-bind8 to 1.470nb1 [obache 2009-09-18]
+	Added lang/gcc44 version 4.4.1 [dmcmahill 2009-09-18]
