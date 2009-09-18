@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.100 2009/09/12 21:42:27 tron Exp $
+# $NetBSD: gcc.mk,v 1.101 2009/09/18 11:27:41 dmcmahill Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -54,7 +54,7 @@ _DEF_VARS.gcc=	\
 	_IS_BUILTIN_GCC \
 	_LANGUAGES.gcc \
 	_LINKER_RPATH_FLAG \
-	_NEED_GCC2 _NEED_GCC3 _NEED_GCC34 _NEED_NEWER_GCC \
+	_NEED_GCC2 _NEED_GCC3 _NEED_GCC34 _NEED_GCC44 _NEED_NEWER_GCC \
 	_PKGSRC_GCC_VERSION \
 	_USE_GCC_SHLIB _USE_PKGSRC_GCC \
 	_WRAP_EXTRA_ARGS.CC
@@ -73,7 +73,7 @@ GCC_REQD+=	3.0
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
 # without the PKGREVISIONs.
 #
-_GCC_DIST_VERSION=	3.4.6
+_GCC_DIST_VERSION=	4.4.1
 
 # _GCC2_PATTERNS matches N s.t. N <= 2.95.3.
 _GCC2_PATTERNS=	[0-1].* 2.[0-9] 2.[0-9].* 2.[1-8][0-9] 2.[1-8][0-9].*	\
@@ -83,8 +83,11 @@ _GCC2_PATTERNS=	[0-1].* 2.[0-9] 2.[0-9].* 2.[1-8][0-9] 2.[1-8][0-9].*	\
 _GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
 		2.[1-9][0-9][0-9]* 3.[0-3] 3.[0-3].*
 
-# _GCC34_PATTERNS matches N s.t. 3.4 <= N.
-_GCC34_PATTERNS= 3.[4-9] 3.[4-9].* 3.[1-9][0-9]* [4-9]*
+# _GCC34_PATTERNS matches N s.t. 3.4 <= N < 4.
+_GCC34_PATTERNS= 3.[4-9] 3.[4-9].* 3.[1-9][0-9]*
+
+# _GCC44_PATTERNS matches N s.t. 4.4 <= N.
+_GCC44_PATTERNS= 4.[4-9] 4.[4-9].* 4.[1-9][0-9]* [4-9]*
 
 # _CC is the full path to the compiler named by ${CC} if it can be found.
 .if !defined(_CC)
@@ -180,9 +183,15 @@ _NEED_GCC34?=	no
 _NEED_GCC34=	yes
 .  endif
 .endfor
+_NEED_GCC44?=	no
+.for _pattern_ in ${_GCC44_PATTERNS}
+.  if !empty(_GCC_REQD:M${_pattern_})
+_NEED_GCC44=	yes
+.  endif
+.endfor
 .if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO]) && \
-    !empty(_NEED_GCC34:M[nN][oO])
-_NEED_GCC3=	yes
+    !empty(_NEED_GCC34:M[nN][oO]) && !empty(_NEED_GC44:M[nN][oO])
+_NEED_GCC44=	yes
 .endif
 
 # Assume by default that GCC will only provide a C compiler.
@@ -193,6 +202,8 @@ LANGUAGES.gcc=	c c++ fortran objc
 LANGUAGES.gcc=	c c++ fortran java objc
 .elif !empty(_NEED_GCC34:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran objc
+.elif !empty(_NEED_GCC44:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ fortran java objc
 .endif
 _LANGUAGES.gcc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
@@ -256,6 +267,24 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc34
 _GCC_DEPENDENCY=	gcc34>=${_GCC_REQD}:../../lang/gcc34
+.    if !empty(_LANGUAGES.gcc:Mc++) || \
+        !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mobjc)
+_USE_GCC_SHLIB?=	yes
+.    endif
+.  endif
+.elif !empty(_NEED_GCC44:M[yY][eE][sS])
+#
+# We require gcc-4.4.x in the lang/gcc44 directory.
+#
+_GCC_PKGBASE=		gcc44
+.  if !empty(PKGPATH:Mlang/gcc44)
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  endif
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
+_GCC_PKGSRCDIR=		../../lang/gcc44
+_GCC_DEPENDENCY=	gcc44>=${_GCC_REQD}:../../lang/gcc44
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mobjc)
@@ -440,6 +469,14 @@ _GCC_FC=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}g77
 _ALIASES.FC=	f77 g77
 FCPATH=		${_GCCBINDIR}/${_GCC_BIN_PREFIX}g77
 F77PATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}g77
+PKG_FC:=	${_GCC_FC}
+.endif
+.if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}gfortran)
+_GCC_VARS+=	FC
+_GCC_FC=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gfortran
+_ALIASES.FC=	gfortran
+FCPATH=		${_GCCBINDIR}/${_GCC_BIN_PREFIX}gfortran
+F77PATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gfortran
 PKG_FC:=	${_GCC_FC}
 .endif
 _COMPILER_STRIP_VARS+=	${_GCC_VARS}
