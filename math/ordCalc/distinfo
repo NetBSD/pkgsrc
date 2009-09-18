@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/18 14:09:26 is Exp $
+
+SHA1 (ordCalc_0.1.tar.bz2) = a9a2978830b948b7f12ee247593ba94775a87672
+RMD160 (ordCalc_0.1.tar.bz2) = 556b6b94e98705fed9287d2c35a7e640b9c0274b
+Size (ordCalc_0.1.tar.bz2) = 516210 bytes
+SHA1 (patch-aa) = 903e1b6255f2247f407b7b16ff46d96470236dac
+SHA1 (patch-ab) = 0adfeaa3a1018d3197a26480e9a736e7d9da962d
