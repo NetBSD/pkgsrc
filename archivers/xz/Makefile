@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/31 08:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/18 13:18:54 sketch Exp $
 #
 
 DISTNAME=	xz-4.999.9beta
@@ -17,6 +17,12 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	src/liblzma/liblzma.pc.in
 
 CONFLICTS=	lzma-[0-9]* lzma-utils-[0-9]* lzmalib-[0-9]*
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
+CONFIGURE_ARGS+=	--disable-assembler
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
