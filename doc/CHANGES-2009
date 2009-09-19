@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3746 2009/09/19 15:37:51 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.3747 2009/09/19 15:45:39 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4883,3 +4883,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/texlive-tetex to 2008nb2 [minskim 2009-09-19]
 	Updated print/teTeX3-bin to 3.0nb35 [minskim 2009-09-19]
 	Updated print/teTeX to 3.0nb7 [minskim 2009-09-19]
+	Updated devel/p5-Mouse to 0.29 [sno 2009-09-19]
