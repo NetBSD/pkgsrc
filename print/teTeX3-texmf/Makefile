@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2009/09/02 08:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2009/09/19 15:45:43 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -23,6 +23,7 @@ DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
 DEPENDS+=	tex-caption-[0-9]*:../../print/tex-caption
 DEPENDS+=	tex-carlisle-[0-9]*:../../print/tex-carlisle
+DEPENDS+=	tex-cite-[0-9]*:../../print/tex-cite
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
 DEPENDS+=	tex-courier-[0-9]*:../../fonts/tex-courier
 DEPENDS+=	tex-dvips-[0-9]*:../../print/tex-dvips
@@ -30,6 +31,7 @@ DEPENDS+=	tex-enctex-[0-9]*:../../print/tex-enctex
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
+DEPENDS+=	tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
 DEPENDS+=	tex-float-[0-9]*:../../print/tex-float
 DEPENDS+=	tex-footmisc-[0-9]*:../../print/tex-footmisc
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
@@ -69,6 +71,7 @@ DEPENDS+=	tex-hyphen-ukrainian-[0-9]*:../../print/tex-hyphen-ukrainian
 DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
 DEPENDS+=	tex-lambda-[0-9]*:../../print/tex-lambda
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
+DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
 DEPENDS+=	tex-lm-[0-9]*:../../fonts/tex-lm
 DEPENDS+=	tex-ltxmisc-[0-9]*:../../print/tex-ltxmisc
 DEPENDS+=	tex-marvosym-[0-9]*:../../fonts/tex-marvosym
@@ -81,6 +84,7 @@ DEPENDS+=	tex-moreverb-[0-9]*:../../print/tex-moreverb
 DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
 DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
 DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
+DEPENDS+=	tex-nomencl-[0-9]*:../../print/tex-nomencl
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-paralist-[0-9]*:../../print/tex-paralist
 DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
@@ -185,18 +189,19 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/ca*
 	rm -rf ${WRKSRC}/doc/latex/enumitem
 	rm -rf ${WRKSRC}/doc/latex/exam
-	rm -rf ${WRKSRC}/doc/latex/fancyh*
+	rm -rf ${WRKSRC}/doc/latex/fancy[c-z]*
 	rm -rf ${WRKSRC}/doc/latex/float
 	rm -rf ${WRKSRC}/doc/latex/footmisc
 	rm -rf ${WRKSRC}/doc/latex/geo*
 	rm -rf ${WRKSRC}/doc/latex/hyperref
 	rm -rf ${WRKSRC}/doc/latex/k*
+	rm -rf ${WRKSRC}/doc/latex/lis*
 	rm -rf ${WRKSRC}/doc/latex/memoir
 	rm -rf ${WRKSRC}/doc/latex/mflogo
 	rm -rf ${WRKSRC}/doc/latex/microtype
 	rm -rf ${WRKSRC}/doc/latex/moreverb
 	rm -rf ${WRKSRC}/doc/latex/ms
-	rm -rf ${WRKSRC}/doc/latex/natbib
+	rm -rf ${WRKSRC}/doc/latex/n[a-s]*
 	rm -rf ${WRKSRC}/doc/latex/oberdiek
 	rm -rf ${WRKSRC}/doc/latex/paralist
 	rm -rf ${WRKSRC}/doc/latex/placeins
@@ -311,6 +316,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/ca[m-z]*
 	rm -rf ${WRKSRC}/tex/latex/carlisle
 	rm -rf ${WRKSRC}/tex/latex/chngpage
+	rm -rf ${WRKSRC}/tex/latex/cite
 	rm -rf ${WRKSRC}/tex/latex/concrete
 	rm -rf ${WRKSRC}/tex/latex/config
 	rm -f ${WRKSRC}/tex/latex/dvipdfm/dvipdfm.def
@@ -318,7 +324,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/enumitem
 	rm -rf ${WRKSRC}/tex/latex/etex
 	rm -rf ${WRKSRC}/tex/latex/exam
-	rm -rf ${WRKSRC}/tex/latex/fancyh*
+	rm -rf ${WRKSRC}/tex/latex/fancy[c-z]*
 	rm -rf ${WRKSRC}/tex/latex/float
 	rm -rf ${WRKSRC}/tex/latex/fnpara
 	rm -rf ${WRKSRC}/tex/latex/footmisc
@@ -329,6 +335,7 @@ post-extract:
 	rm -f ${WRKSRC}/tex/latex/graphics/t[cr]*
 	rm -rf ${WRKSRC}/tex/latex/hyperref
 	rm -rf ${WRKSRC}/tex/latex/k*
+	rm -rf ${WRKSRC}/tex/latex/lis*
 	rm -rf ${WRKSRC}/tex/latex/lm
 	rm -rf ${WRKSRC}/tex/latex/marvosym
 	rm -rf ${WRKSRC}/tex/latex/memoir
@@ -337,7 +344,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/moreverb
 	rm -rf ${WRKSRC}/tex/latex/ms
 	rm -rf ${WRKSRC}/tex/latex/multirow
-	rm -rf ${WRKSRC}/tex/latex/n[a-n]*
+	rm -rf ${WRKSRC}/tex/latex/n[a-s]*
 	rm -f ${WRKSRC}/tex/latex/oberdiek/[a-u]*
 	rm -rf ${WRKSRC}/tex/latex/optional
 	rm -rf ${WRKSRC}/tex/latex/par*
