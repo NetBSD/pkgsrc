@@ -1,20 +1,12 @@
-@comment $NetBSD: PLIST,v 1.16 2009/04/30 01:01:41 minskim Exp $
-bin/a2ping
-bin/e2pall
-bin/epstopdf
+@comment $NetBSD: PLIST,v 1.17 2009/09/19 15:34:51 minskim Exp $
 bin/fdf2tan
 bin/fdf2tex
-bin/gsftopk
 bin/lambda
 bin/lamed
-bin/mag
 bin/makempy
 bin/metafun
 bin/mptopdf
 bin/pdfcrop
-bin/pfb2pfa
-bin/pk2bm
-bin/ps2pk
 bin/texdoc
 bin/texdoctk
 bin/texexec
@@ -26,19 +18,13 @@ bin/thumbpdf
 bin/uniqleaf
 info/latex.info
 man/man1/fdf2tex.1
-man/man1/gsftopk.1
 man/man1/lambda.1
-man/man1/mag.1
-man/man1/pfb2pfa.1
-man/man1/pk2bm.1
-man/man1/ps2pk.1
 man/man1/texdoc.1
 man/man1/texshow.1
 share/texmf/doc/tetex/TETEXDOC.dvi
 share/texmf/doc/tetex/TETEXDOC.pdf
 share/texmf/doc/tetex/TETEXDOC.ps
 share/texmf/doc/tetex/teTeX-FAQ
-share/texmf/dvips/gsftopk/render.ps
 share/texmf/fmtutil/format.tetex.cnf
 share/texmf/release-tetex-src.txt
 share/texmf/web2c/pdfetex-pl.pool
