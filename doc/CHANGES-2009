@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3741 2009/09/19 06:36:32 tron Exp $
+$NetBSD: CHANGES-2009,v 1.3742 2009/09/19 13:38:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4878,3 +4878,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/awstats to 6.9nb1 [minskim 2009-09-19]
 	Updated net/p5-Geo-IPfree to 0.6 [minskim 2009-09-19]
 	Updated net/wireshark to 1.2.2 [tron 2009-09-19]
+	Updated audio/taglib to 1.6 [wiz 2009-09-19]
