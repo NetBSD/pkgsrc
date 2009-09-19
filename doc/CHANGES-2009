@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3740 2009/09/19 00:14:40 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.3741 2009/09/19 06:36:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4877,3 +4877,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/dejavu-ttf to 2.30 [jakllsch 2009-09-18]
 	Updated www/awstats to 6.9nb1 [minskim 2009-09-19]
 	Updated net/p5-Geo-IPfree to 0.6 [minskim 2009-09-19]
+	Updated net/wireshark to 1.2.2 [tron 2009-09-19]
