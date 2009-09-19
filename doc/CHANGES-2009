@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3765 2009/09/19 22:46:01 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3766 2009/09/19 22:51:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4902,3 +4902,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/p5-Authen-CAS-Client to 0.05 [sno 2009-09-19]
 	Updated graphics/p5-GD-SVG to 0.33 [sno 2009-09-19]
 	Updated www/p5-HTML-WikiConverter to 0.68 [sno 2009-09-19]
+	Updated time/p5-DateTime-Format-Natural to 0.79 [sno 2009-09-19]
