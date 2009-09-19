@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3739 2009/09/19 00:07:27 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.3740 2009/09/19 00:14:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4876,3 +4876,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bmake to 20090909 [joerg 2009-09-18]
 	Updated fonts/dejavu-ttf to 2.30 [jakllsch 2009-09-18]
 	Updated www/awstats to 6.9nb1 [minskim 2009-09-19]
+	Updated net/p5-Geo-IPfree to 0.6 [minskim 2009-09-19]
