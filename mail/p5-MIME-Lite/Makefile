@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2009/09/12 22:08:14 sno Exp $
+# $NetBSD: Makefile,v 1.18 2009/09/19 17:03:46 sno Exp $
 
-DISTNAME=	MIME-Lite-3.025
+DISTNAME=	MIME-Lite-3.026
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5mil
 CATEGORIES=	www perl5
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Email-Date-Format>=1.0:../../mail/p5-Email-Date-Format
 DEPENDS+=	p5-MailTools>=1.62:../../mail/p5-MailTools
 DEPENDS+=	p5-MIME-Base64>0:../../converters/p5-MIME-Base64
 # MIME::QuotedPrint is part of p5-MIME-Base64 package
-DEPENDS+=	p5-MIME-Types>=1.13:../../mail/p5-MIME-Types
+DEPENDS+=	p5-MIME-Types>=1.28:../../mail/p5-MIME-Types
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
