@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.62 2009/09/12 18:44:40 tonio Exp $
+# $NetBSD: Makefile,v 1.63 2009/09/19 22:37:03 sno Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
 CONFIGURE_ARGS+=	-no-tk
+CONFIGURE_ARGS+=	-cc ${CC}
 CONFIGURE_ENV+=		disable_x11=yes
 
 BUILD_TARGET=		world
