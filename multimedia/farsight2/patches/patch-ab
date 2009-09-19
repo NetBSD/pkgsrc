@@ -1,14 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/08/17 21:13:04 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2009/09/19 15:39:30 sno Exp $
 
 https://bugs.freedesktop.org/show_bug.cgi?id=23377
 
---- transmitters/rawudp/fs-rawudp-transmitter.c.orig	2009-08-03 20:20:07.000000000 +0000
-+++ transmitters/rawudp/fs-rawudp-transmitter.c
-@@ -53,6 +53,7 @@
+--- ./transmitters/rawudp/fs-rawudp-transmitter.c.orig	2009-08-03 22:20:07.000000000 +0200
++++ ./transmitters/rawudp/fs-rawudp-transmitter.c	2009-09-19 17:35:18.000000000 +0200
+@@ -53,7 +53,11 @@
  #else /*G_OS_WIN32*/
  # include <netdb.h>
  # include <sys/socket.h>
 +# include <netinet/in_systm.h>
  # include <netinet/ip.h>
++# if defined(__FreeBSD__)
++#  include <netinet/in.h>
++# endif
  # include <arpa/inet.h>
  #endif /*G_OS_WIN32*/
+ 
