@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3754 2009/09/19 17:03:59 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3755 2009/09/19 17:09:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4891,3 +4891,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/p5-MIME-Charset to 1.007.1 [sno 2009-09-19]
 	Updated mail/p5-MIME-EncWords to 1.011.1 [sno 2009-09-19]
 	Updated mail/p5-MIME-Lite to 3.026 [sno 2009-09-19]
+	Updated devel/p5-Test-Script to 1.06 [sno 2009-09-19]
