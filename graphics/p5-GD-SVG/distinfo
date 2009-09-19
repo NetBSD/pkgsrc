@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/10/13 19:52:54 heinz Exp $
+$NetBSD: distinfo,v 1.3 2009/09/19 22:35:47 sno Exp $
 
-SHA1 (GD-SVG-0.32.tar.gz) = b64758cefba3f5e865737ab45c6104df3f730e16
-RMD160 (GD-SVG-0.32.tar.gz) = bdbec7592873b1b7d9142355aa8b18760c68c79a
-Size (GD-SVG-0.32.tar.gz) = 45640 bytes
+SHA1 (GD-SVG-0.33.tar.gz) = 43d78966540cf300cac67ec251cd743f16018962
+RMD160 (GD-SVG-0.33.tar.gz) = b38cfec7b83f024f11cb3b1d41f2ddfad82fd588
+Size (GD-SVG-0.33.tar.gz) = 46347 bytes
