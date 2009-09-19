@@ -1,8 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/09 00:30:25 chris Exp $
+$NetBSD: patch-aa,v 1.2 2009/09/19 17:00:39 tnn Exp $
 
---- taglib/toolkit/taglib.h.orig	2004-02-08 16:24:42.000000000 +0000
-+++ taglib/toolkit/taglib.h	2004-02-08 16:26:01.000000000 +0000
-@@ -29,6 +29,13 @@
+--- taglib/toolkit/taglib.h.orig	2009-09-03 20:05:58.000000000 +0200
++++ taglib/toolkit/taglib.h
+@@ -37,9 +37,17 @@
+ #endif
+ 
+ #include <string>
++#include <string.h>
  
  //! A namespace for all TagLib related classes and functions
  
