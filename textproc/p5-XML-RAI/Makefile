@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.11 2008/10/19 19:18:59 he Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/19 22:09:00 sno Exp $
 
-DISTNAME=	XML-RAI-1.3022
+DISTNAME=	XML-RAI-1.3031
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	rhaen@NetBSD.org
 COMMENT=	Maps RSS tags to one common simplified interface
+HOMEPAGE=	http://search.cpan.org/dist/XML-RAI/
+LICENSE=	artistic
 
+DEPENDS+=	p5-Task-Weaken>=1.02:../../devel/p5-Task-Weaken
+DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
 DEPENDS+=	p5-XML-RSS-Parser>=4.0:../../textproc/p5-XML-RSS-Parser
-DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
+
+BUILD_DEPENDS+=	p5-Test-Weaken-[0-9]*:../../devel/p5-Test-Weaken
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
