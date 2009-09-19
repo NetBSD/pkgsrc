@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3758 2009/09/19 17:46:01 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3759 2009/09/19 22:00:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4895,3 +4895,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Runtime to 5.80013 [sno 2009-09-19]
 	Updated devel/p5-MooseX-Declare to 0.31 [seb 2009-09-19]
 	Updated net/p5-Net-Twitter to 3.06000 [sno 2009-09-19]
+	Added devel/p5-Test-Weaken version 3.002.000 [sno 2009-09-19]
