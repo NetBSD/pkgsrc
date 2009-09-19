@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3759 2009/09/19 22:00:46 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3760 2009/09/19 22:09:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4896,3 +4896,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Declare to 0.31 [seb 2009-09-19]
 	Updated net/p5-Net-Twitter to 3.06000 [sno 2009-09-19]
 	Added devel/p5-Test-Weaken version 3.002.000 [sno 2009-09-19]
+	Updated textproc/p5-XML-RAI to 1.3031 [sno 2009-09-19]
