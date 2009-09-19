@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2009/08/26 19:57:07 sno Exp $
+# $NetBSD: Makefile,v 1.97 2009/09/19 07:46:12 ahoka Exp $
 #
 
 DISTNAME=	file-roller-2.26.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.26/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,6 +29,15 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.12.0
 BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.10.0
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.4.0
+
+# Force to use unzip from pkgsrc as other installed versions in path
+# may be incompatible. (For example NetBSD 6.0's unzip)
+#
+SUBST_CLASSES+=		unzip
+SUBST_STAGE.unzip=	pre-build
+SUBST_MESSAGE.unzip=	Hardcoding unzip path
+SUBST_FILES.unzip=	src/fr-command-zip.c
+SUBST_SED.unzip=	-e 's|@@UNZIP_COMMAND@@|${LOCALBASE}/bin/unzip|'
 
 # XXX force regen, bundled one doesn't fit
 # see gnome bugzilla #587869
