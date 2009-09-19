@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/05/10 20:01:09 seb Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/19 22:28:52 sno Exp $
 #
 
-DISTNAME=	Authen-CAS-Client-0.04
+DISTNAME=	Authen-CAS-Client-0.05
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
@@ -9,11 +9,13 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Authen-CAS-Client/
 COMMENT=	Perl 5 module providing an interface for JA-SIG's CAS
+# LICENSE=	2-clause-bsd / isc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Authen/CAS/Client/.packlist
+PERL5_MODULE_TYPE=	Module::Install
 
 BUILD_DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
