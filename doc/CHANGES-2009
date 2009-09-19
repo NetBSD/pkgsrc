@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3743 2009/09/19 14:23:42 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3744 2009/09/19 15:31:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4880,3 +4880,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/wireshark to 1.2.2 [tron 2009-09-19]
 	Updated audio/taglib to 1.6 [wiz 2009-09-19]
 	Updated devel/p5-sapnwrfc to 0.31 [sno 2009-09-19]
+	Updated print/texlive-tetex to 2008nb2 [minskim 2009-09-19]
