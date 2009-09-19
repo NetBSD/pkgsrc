@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/09/19 11:06:53 tnn Exp $
+
+--- extensions/source/nsplugin/source/npshell.cxx.orig	2008-07-16 22:13:01.000000000 +0200
++++ extensions/source/nsplugin/source/npshell.cxx
+@@ -79,7 +79,7 @@
+ 
+ //http://qa.openoffice.org/issues/show_bug.cgi?id=82545
+ //https://bugzilla.mozilla.org/show_bug.cgi?id=241262
+-#ifdef UNIX
++#if 0 /* def UNIX */	/* types provided by nptypes.h */
+ #  ifndef _UINT32
+ #    if defined(__alpha) || defined(__LP64__)
+        typedef unsigned int uint32;
