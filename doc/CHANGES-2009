@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3751 2009/09/19 16:44:28 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3752 2009/09/19 16:51:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4888,3 +4888,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Module-ScanDeps to 0.95 [sno 2009-09-19]
 	Updated devel/p5-MooseX-App-Cmd to 0.06 [sno 2009-09-19]
 	Updated devel/p5-Log-Dispatch to 2.25 [sno 2009-09-19]
+	Updated mail/p5-MIME-Charset to 1.007.1 [sno 2009-09-19]
