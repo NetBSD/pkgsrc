@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2007/09/07 05:42:25 taca Exp $
+$NetBSD: patch-ac,v 1.2 2009/09/19 19:14:54 tnn Exp $
 
 Fix compile problem with gcc4.
 CXWindowsScreen.cpp: In member function 'void CXWindowsScreen::openIM()':
@@ -6,9 +6,17 @@ CXWindowsScreen.cpp:990: warning: missing sentinel in function call
 CXWindowsScreen.cpp:1013: warning: missing sentinel in function call
 CXWindowsScreen.cpp:1022: warning: missing sentinel in function call
 
---- lib/platform/CXWindowsScreen.cpp.orig	2006-04-02 19:16:39.000000000 +0000
+--- lib/platform/CXWindowsScreen.cpp.orig	2006-04-02 21:16:39.000000000 +0200
 +++ lib/platform/CXWindowsScreen.cpp
-@@ -987,7 +987,7 @@ CXWindowsScreen::openIM()
+@@ -26,6 +26,7 @@
+ #include "CStringUtil.h"
+ #include "IEventQueue.h"
+ #include "TMethodEventJob.h"
++#include <stdlib.h>
+ #include <cstring>
+ #if X_DISPLAY_MISSING
+ #	error X11 is required to build synergy
+@@ -987,7 +988,7 @@ CXWindowsScreen::openIM()
  	// find the appropriate style.  synergy supports XIMPreeditNothing
  	// only at the moment.
  	XIMStyles* styles;
@@ -17,7 +25,7 @@ CXWindowsScreen.cpp:1022: warning: missing sentinel in function call
  		styles == NULL) {
  		LOG((CLOG_WARN "cannot get IM styles"));
  		XCloseIM(im);
-@@ -1010,7 +1010,7 @@ CXWindowsScreen::openIM()
+@@ -1010,7 +1011,7 @@ CXWindowsScreen::openIM()
  	}
  
  	// create an input context for the style and tell it about our window
@@ -26,7 +34,7 @@ CXWindowsScreen.cpp:1022: warning: missing sentinel in function call
  	if (ic == NULL) {
  		LOG((CLOG_WARN "cannot create IC"));
  		XCloseIM(im);
-@@ -1019,7 +1019,7 @@ CXWindowsScreen::openIM()
+@@ -1019,7 +1020,7 @@ CXWindowsScreen::openIM()
  
  	// find out the events we must select for and do so
  	unsigned long mask;
