@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8475 2009/09/19 06:36:32 tron Exp $
+$NetBSD: TODO,v 1.8476 2009/09/19 14:01:45 taca Exp $
 
 Suggested new packages
 ======================
@@ -509,6 +509,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dovecot-1.2.2
 	o drivel-2.0.4
 	o drscheme-4.0.2
+	o drupal-5.20 [DRUPAL-SA-CORE-2009-008]
+	o drupal-6.14 [DRUPAL-SA-CORE-2009-008]
 	o dspam-3.9.0
 	o dvipng-1.12
 	o eagle-4.16
