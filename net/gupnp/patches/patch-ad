@@ -1,12 +1,12 @@
-$NetBSD: patch-ad,v 1.2 2009/08/18 18:31:18 hasso Exp $
+$NetBSD: patch-ad,v 1.3 2009/09/19 14:18:31 sno Exp $
 
 --- libgupnp/gupnp-service.c.orig	2009-06-02 14:10:25.000000000 +0200
-+++ libgupnp/gupnp-service.c
++++ libgupnp/gupnp-service.c	2009-09-19 16:08:38.000000000 +0200
 @@ -30,7 +30,11 @@
  #include <gobject/gvaluecollector.h>
  #include <gmodule.h>
  #include <libsoup/soup-date.h>
-+#if defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
 +#include <uuid.h>
 +#else
  #include <uuid/uuid.h>
@@ -14,16 +14,16 @@ $NetBSD: patch-ad,v 1.2 2009/08/18 18:31:18 hasso Exp $
  #include <string.h>
  #include "gupnp-service.h"
  #include "gupnp-root-device.h"
-@@ -843,9 +847,19 @@ generate_sid (void)
+@@ -843,9 +847,19 @@
  {
          uuid_t id;
          char out[39];
 -
-+#if defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
 +	char *myout;
 +#endif
 +
-+#if defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
 +	uuid_create(&id, 0);
 +	uuid_to_string(&id, &myout, 0);
 +	strncpy(out, myout, sizeof(out));
