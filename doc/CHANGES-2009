@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3748 2009/09/19 15:46:35 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.3749 2009/09/19 16:32:38 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4885,3 +4885,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX to 3.0nb7 [minskim 2009-09-19]
 	Updated devel/p5-Mouse to 0.29 [sno 2009-09-19]
 	Updated print/teTeX3-texmf to 3.0nb21 [minskim 2009-09-19]
+	Updated devel/p5-Module-ScanDeps to 0.95 [sno 2009-09-19]
