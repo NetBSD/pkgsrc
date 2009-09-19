@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2009/01/15 12:12:04 adam Exp $
+# $NetBSD: Makefile,v 1.41 2009/09/19 00:05:02 minskim Exp $
 
 DISTNAME=	awstats-6.9
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=awstats/}
 
@@ -62,6 +63,7 @@ post-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/*.pl ${DESTDIR}${PREFIX}/awstats/bin
+	${FIND} ${WRKSRC}/wwwroot/cgi-bin -name \*.orig -exec ${RM} {} \;
 	${INSTALL_SCRIPT} ${WRKSRC}/wwwroot/cgi-bin/*.pl		\
 	    ${DESTDIR}${PREFIX}/awstats/cgi-bin
 	${INSTALL_DATA} ${WRKSRC}/wwwroot/cgi-bin/awstats.model.conf	\
