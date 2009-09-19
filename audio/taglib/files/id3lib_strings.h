@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: id3lib_strings.h,v 1.4 2006/09/23 13:26:24 wiz Exp $
+// $Id: id3lib_strings.h,v 1.5 2009/09/19 17:14:21 tnn Exp $
 
 // id3lib: a software library for creating and manipulating id3v1/v2 tags
 // Copyright 1999, 2000  Scott Thomas Haug
@@ -30,6 +30,7 @@
 #define _ID3LIB_STRINGS_H_
 
 #include <string>
+#include <string.h>
 
 #if (defined(__GNUC__) && (__GNUC__ >= 3) || (defined(_MSC_VER) && _MSC_VER > 1000))
 namespace std
