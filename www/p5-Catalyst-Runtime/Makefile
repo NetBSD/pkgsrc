@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2009/09/13 19:59:50 sno Exp $
+# $NetBSD: Makefile,v 1.13 2009/09/19 17:25:15 sno Exp $
 
-DISTNAME=	Catalyst-Runtime-5.80012
+DISTNAME=	Catalyst-Runtime-5.80013
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -24,9 +24,9 @@ DEPENDS+=	p5-HTTP-Request-AsCGI>=0.8:../../www/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Module-Pluggable>=3.9:../../devel/p5-Module-Pluggable
-DEPENDS+=	p5-Moose>=0.78:../../devel/p5-Moose
-DEPENDS+=	p5-MooseX-Emulate-Class-Accessor-Fast>=0.00801:../../devel/p5-MooseX-Emulate-Class-Accessor-Fast
-DEPENDS+=	p5-MooseX-MethodAttributes>=0.15:../../devel/p5-MooseX-MethodAttributes
+DEPENDS+=	p5-Moose>=0.90:../../devel/p5-Moose
+DEPENDS+=	p5-MooseX-Emulate-Class-Accessor-Fast>=0.00903:../../devel/p5-MooseX-Emulate-Class-Accessor-Fast
+DEPENDS+=	p5-MooseX-MethodAttributes>=0.16:../../devel/p5-MooseX-MethodAttributes
 DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
 DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-String-RewritePrefix>=0.004:../../textproc/p5-String-RewritePrefix
@@ -38,7 +38,7 @@ DEPENDS+=	p5-Tree-Simple>=1.15:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../devel/p5-Tree-Simple-VisitorFactory
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
 DEPENDS+=	p5-libwww>=5.805:../../www/p5-libwww
-DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+DEPENDS+=	p5-namespace-autoclean>=0.09:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 # Recommends:
