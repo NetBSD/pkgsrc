@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/07/16 23:57:57 minskim Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/09/19 15:45:43 minskim Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bib/plbib/plbib.bib
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
@@ -3123,8 +3123,6 @@ share/texmf-dist/doc/latex/eulervm/eulervm.pdf
 share/texmf-dist/doc/latex/eulervm/manifest.txt
 share/texmf-dist/doc/latex/extsizes/readme.extsizes
 share/texmf-dist/doc/latex/fancybox/fancybox.dvi
-share/texmf-dist/doc/latex/fancyvrb/fancyvrb.ps
-share/texmf-dist/doc/latex/fancyvrb/fvrb-ex.dvi
 share/texmf-dist/doc/latex/filecontents/filecontents.dvi
 share/texmf-dist/doc/latex/floatflt/floatexm.dvi
 share/texmf-dist/doc/latex/floatflt/floatexm.tex
@@ -3179,8 +3177,6 @@ share/texmf-dist/doc/latex/lineno/COPYING.txt
 share/texmf-dist/doc/latex/lineno/README.txt
 share/texmf-dist/doc/latex/lineno/lineno.dvi
 share/texmf-dist/doc/latex/lineno/ulineno.dvi
-share/texmf-dist/doc/latex/listings/README
-share/texmf-dist/doc/latex/listings/listings.dvi
 share/texmf-dist/doc/latex/ltabptch/README
 share/texmf-dist/doc/latex/mathcomp/mathcomp.dvi
 share/texmf-dist/doc/latex/mathtime/0readme
@@ -3225,9 +3221,6 @@ share/texmf-dist/doc/latex/mwcls/CZYTAJ
 share/texmf-dist/doc/latex/mwcls/ChangeLog
 share/texmf-dist/doc/latex/mwcls/README
 share/texmf-dist/doc/latex/mwcls/mwclsdoc.pdf
-share/texmf-dist/doc/latex/nomencl/README
-share/texmf-dist/doc/latex/nomencl/license.txt
-share/texmf-dist/doc/latex/nomencl/nomencl.dvi
 share/texmf-dist/doc/latex/ntgclass/a4.dvi
 share/texmf-dist/doc/latex/ntgclass/artdoc.dvi
 share/texmf-dist/doc/latex/ntgclass/brief.tex
@@ -9666,10 +9659,6 @@ share/texmf-dist/tex/latex/ccfonts/t1ccr.fd
 share/texmf-dist/tex/latex/ccfonts/ts1ccr.fd
 share/texmf-dist/tex/latex/changebar/changebar.sty
 share/texmf-dist/tex/latex/chappg/chappg.sty
-share/texmf-dist/tex/latex/cite/chapterbib.sty
-share/texmf-dist/tex/latex/cite/cite.sty
-share/texmf-dist/tex/latex/cite/drftcite.sty
-share/texmf-dist/tex/latex/cite/overcite.sty
 share/texmf-dist/tex/latex/citesort/citesort.sty
 share/texmf-dist/tex/latex/cmap/cmap.sty
 share/texmf-dist/tex/latex/cmap/t1.cmap
@@ -9893,10 +9882,6 @@ share/texmf-dist/tex/latex/extsizes/size20.clo
 share/texmf-dist/tex/latex/extsizes/size8.clo
 share/texmf-dist/tex/latex/extsizes/size9.clo
 share/texmf-dist/tex/latex/fancybox/fancybox.sty
-share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-share/texmf-dist/tex/latex/fancyvrb/fvrb-ex.sty
-share/texmf-dist/tex/latex/fancyvrb/hbaw.sty
-share/texmf-dist/tex/latex/fancyvrb/hcolor.sty
 share/texmf-dist/tex/latex/fguill/fguill.sty
 share/texmf-dist/tex/latex/filecontents/filecontents.sty
 share/texmf-dist/tex/latex/floatflt/floatflt.sty
@@ -9964,14 +9949,6 @@ share/texmf-dist/tex/latex/lettrine/lettrine.sty
 share/texmf-dist/tex/latex/lineno/ednmath0.sty
 share/texmf-dist/tex/latex/lineno/edtable.sty
 share/texmf-dist/tex/latex/lineno/lineno.sty
-share/texmf-dist/tex/latex/listings/listings.cfg
-share/texmf-dist/tex/latex/listings/listings.sty
-share/texmf-dist/tex/latex/listings/lstdoc.sty
-share/texmf-dist/tex/latex/listings/lstlang1.sty
-share/texmf-dist/tex/latex/listings/lstlang2.sty
-share/texmf-dist/tex/latex/listings/lstlang3.sty
-share/texmf-dist/tex/latex/listings/lstmisc.sty
-share/texmf-dist/tex/latex/listings/lstpatch.sty
 share/texmf-dist/tex/latex/ltabptch/ltabptch.sty
 share/texmf-dist/tex/latex/lucida/ly1hlce.fd
 share/texmf-dist/tex/latex/lucida/ly1hlcf.fd
@@ -10149,7 +10126,6 @@ share/texmf-dist/tex/latex/mwcls/mwbk10.clo
 share/texmf-dist/tex/latex/mwcls/mwbk11.clo
 share/texmf-dist/tex/latex/mwcls/mwbk12.clo
 share/texmf-dist/tex/latex/mwcls/mwrep.cls
-share/texmf-dist/tex/latex/nomencl/nomencl.sty
 share/texmf-dist/tex/latex/ntgclass/a4.sty
 share/texmf-dist/tex/latex/ntgclass/artikel1.cls
 share/texmf-dist/tex/latex/ntgclass/artikel2.cls
