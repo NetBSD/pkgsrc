@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.5 2009/07/18 10:41:33 wiz Exp $
+$NetBSD: patch-am,v 1.6 2009/09/19 09:06:57 obache Exp $
 
 --- setup.py.orig	2009-03-31 18:20:48.000000000 +0000
 +++ setup.py
@@ -7,7 +7,7 @@ $NetBSD: patch-am,v 1.5 2009/07/18 10:41:33 wiz Exp $
  
  # This global variable is used to hold the list of modules to be disabled.
 -disabled_module_list = []
-+disabled_module_list = ["_bsddb", "_curses", "_curses_panel", "_elementtree", "_sqlite", "_tkinter", "bsddb", "cjkcodecs" "gdbm", "mpz", "expat", "readline"]
++disabled_module_list = ["_bsddb", "_curses", "_curses_panel", "_elementtree", "_sqlite3", "_tkinter", "gdbm", "expat", "readline"]
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
