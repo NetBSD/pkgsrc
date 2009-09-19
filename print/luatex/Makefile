@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/06/10 02:06:46 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/19 23:08:16 minskim Exp $
 
 DISTNAME=	luatex-beta-0.40.2
 PKGNAME=	${DISTNAME:S/-beta//}
@@ -16,6 +16,7 @@ CONFLICTS+=	web2c<=7.5.7nb3
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 
@@ -87,6 +88,7 @@ CONFIGURE_ARGS+=--with-system-libpng \
 CONFIGURE_ARGS+=--with-system-zlib \
 		--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include \
 		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
+CONFIGURE_DIRS+=. ./texk/web2c
 
 INSTALLATION_DIRS+=	bin
 
