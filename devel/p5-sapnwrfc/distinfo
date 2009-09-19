@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/07/07 21:28:52 sno Exp $
+$NetBSD: distinfo,v 1.3 2009/09/19 14:23:29 sno Exp $
 
-SHA1 (sapnwrfc-0.30.tar.gz) = 718723daf5d13e3c29049b2f8099c55c7b9bf05c
-RMD160 (sapnwrfc-0.30.tar.gz) = 5ca9252adbb092671d2d15d0812cdbd4304f9257
-Size (sapnwrfc-0.30.tar.gz) = 42280 bytes
+SHA1 (sapnwrfc-0.31.tar.gz) = e8a215a2ca378be1868a9191aedc60bd4d83bd98
+RMD160 (sapnwrfc-0.31.tar.gz) = 9d3eb988ac5a565b2d651afd32d1238228ba710e
+Size (sapnwrfc-0.31.tar.gz) = 42304 bytes
