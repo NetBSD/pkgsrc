@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3762 2009/09/19 22:22:45 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3763 2009/09/19 22:29:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4899,3 +4899,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-XML-RAI to 1.3031 [sno 2009-09-19]
 	Updated textproc/p5-Kwalify to 1.20 [sno 2009-09-19]
 	Updated security/p5-Crypt-DSA to 1.16 [sno 2009-09-19]
+	Updated security/p5-Authen-CAS-Client to 0.05 [sno 2009-09-19]
