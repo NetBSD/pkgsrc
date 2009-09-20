@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2009/08/01 15:33:46 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2009/09/20 12:04:01 sno Exp $
 #
 
 DISTNAME=	xorg-server-1.6.3
@@ -45,6 +45,9 @@ CONFIGURE_ARGS+=	--with-vendor-name-short="pkgsrc"
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-builder-addr="tech-x11@NetBSD.org"
 CONFIGURE_ARGS+=	--with-os-vendor="The NetBSD Foundation"
+.endif
+.if ${OPSYS} == "FreeBSD"
+CONFIGURE_ARGS+=	--without-dtrace
 .endif
 CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM:Q}
 CONFIGURE_ARGS+=	--with-vendor-web="http://www.pkgsrc.org/"
