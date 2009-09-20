@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
+$NetBSD: patch-aq,v 1.2 2009/09/20 15:30:54 sno Exp $
 
 --- media/liboggplay/src/liboggplay/std_semaphore.h.orig	2009-06-29 18:15:03.000000000 +0200
 +++ media/liboggplay/src/liboggplay/std_semaphore.h
@@ -7,7 +7,7 @@ $NetBSD: patch-aq,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
   */
  
 -#if defined(linux) || defined(SOLARIS)
-+#if defined(linux) || defined(SOLARIS) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(linux) || defined(SOLARIS) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
  #include <semaphore.h>
  #define SEM_CREATE(p,s) sem_init(&(p), 1, s)
  #define SEM_SIGNAL(p)   sem_post(&(p))
