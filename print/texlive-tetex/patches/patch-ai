@@ -1,0 +1,121 @@
+$NetBSD: patch-ai,v 1.1 2009/09/20 03:33:43 minskim Exp $
+
+--- texconfig.orig	2008-07-17 13:24:39.000000000 -0700
++++ texconfig
+@@ -91,7 +91,7 @@ echoShowKpseVariable()
+   for eskv
+   do
+     var=$eskv
+-    val=`kpsewhich -var-value="$eskv"`
++    val=`@KPSEWHICH@ -var-value="$eskv"`
+     echo "$var=$val"
+   done
+ }
+@@ -123,7 +123,7 @@ echoLocateCfgfile()
+   for elc
+   do
+     case $elc in
+-      texmf.cnf) elcLoc=`kpsewhich $elc`;;
++      texmf.cnf) elcLoc=`@KPSEWHICH@ $elc`;;
+       *) elcLoc=`tcfmgr --cmd find --file "$elc"`;;
+     esac
+     case $elcLoc in
+@@ -190,7 +190,7 @@ setupTmpDir()
+ setupTexmfmain()
+ {
+   case $MT_TEXMFMAIN in
+-    "") MT_TEXMFMAIN=`kpsewhich -var-value=TEXMFMAIN`;;
++    "") MT_TEXMFMAIN=`@KPSEWHICH@ -var-value=TEXMFMAIN`;;
+     *) return;;
+   esac
+ }
+@@ -201,7 +201,7 @@ setupTexmfmain()
+ setupTexmfdist()
+ {
+   case $MT_TEXMFDIST in
+-    "") MT_TEXMFDIST=`kpsewhich -var-value=TEXMFDIST`;;
++    "") MT_TEXMFDIST=`@KPSEWHICH@ -var-value=TEXMFDIST`;;
+     *) return;;
+   esac
+ }
+@@ -212,7 +212,7 @@ setupTexmfdist()
+ setupTexmfvar()
+ {
+   case $MT_TEXMVAR in
+-    "") MT_TEXMVAR=`kpsewhich -var-value=TEXMFVAR`;;
++    "") MT_TEXMVAR=`@KPSEWHICH@ -var-value=TEXMFVAR`;;
+     *) return;;
+   esac
+ }
+@@ -223,7 +223,7 @@ setupTexmfvar()
+ setupSystexmf()
+ {
+   case $MT_SYSTEXMF in
+-    "") MT_SYSTEXMF=`kpsewhich -var-value=SYSTEXMF`;;
++    "") MT_SYSTEXMF=`@KPSEWHICH@ -var-value=SYSTEXMF`;;
+     *) return;;
+   esac
+ }
+@@ -606,7 +606,7 @@ Report bugs to <tex-k@tug.org>."
+       echo
+       echo '============================= font map files ============================='
+       for m in psfonts.map pdftex.map ps2pk.map dvipdfm.map; do
+-        echo "$m: `kpsewhich $m`"
++        echo "$m: `@KPSEWHICH@ $m`"
+       done
+       echo
+       echo '=========================== kpathsea variables ==========================='
+@@ -702,7 +702,7 @@ Valid PAPER settings:
+             *)
+               otherPrinter=true
+               otherPrinterName=$2
+-              otherPrinterFile=`kpsewhich -format='dvips config' "config.$otherPrinterName"`
++              otherPrinterFile=`@KPSEWHICH@ -format='dvips config' "config.$otherPrinterName"`
+               case $otherPrinterFile in
+                 "")
+                   echo "$progname: configuration file \`config.$otherPrinterName' for printer \`$otherPrinterName' not found" >&2
+@@ -735,7 +735,7 @@ Valid PAPER settings:
+               ;;
+             *)
+               printerName=$2
+-              pFile=`kpsewhich -format='dvips config' "config.$printerName"`
++              pFile=`@KPSEWHICH@ -format='dvips config' "config.$printerName"`
+               case $pFile in
+                 "")
+                   setupTmpDir
+@@ -772,7 +772,7 @@ Valid PAPER settings:
+               ;;
+             *)
+               printerName=$2
+-              pFile=`kpsewhich -format='dvips config' "config.$printerName"`
++              pFile=`@KPSEWHICH@ -format='dvips config' "config.$printerName"`
+               case $pFile in
+                 "")
+                   echo "$progname: configuration file for printer \`$printerName' (config.$printerName) not found" >&2
+@@ -930,7 +930,7 @@ For more information about these \`featu
+               ;;
+             *)
+               tcBatchFontVardir=$3
+-              tfc=`kpsewhich texmf.cnf`
++              tfc=`@KPSEWHICH@ texmf.cnf`
+               if test -n "$tfc"; then
+                 if test -w "$tfc"; then
+                   configReplace "$tfc" '^VARTEXFONTS' "VARTEXFONTS  = $tcBatchFontVardir"
+@@ -946,7 +946,7 @@ For more information about these \`featu
+           esac
+           ;;
+         rw)
+-          MT_VARTEXFONTS=`kpsewhich -var-value VARTEXFONTS`
++          MT_VARTEXFONTS=`@KPSEWHICH@ -var-value VARTEXFONTS`
+           if test -z "$MT_VARTEXFONTS"; then
+             echo "$progname: failed to set \`font rw'; reason: could not determine VARTEXFONTS variable." >&2; rc=1
+             return
+@@ -972,7 +972,7 @@ For more information about these \`featu
+           fmgrConfigReplace mktex.cnf '^: ..MT_FEATURES=' ": \${MT_FEATURES=appendonlydir:varfonts}"
+           ;;
+         ro)
+-          MT_VARTEXFONTS=`kpsewhich -var-value VARTEXFONTS`
++          MT_VARTEXFONTS=`@KPSEWHICH@ -var-value VARTEXFONTS`
+           if test -z "$MT_VARTEXFONTS"; then
+             echo "$progname: failed to set \`font ro'; reason: could not determine VARTEXFONTS variable." >&2; rc=1
+             return
