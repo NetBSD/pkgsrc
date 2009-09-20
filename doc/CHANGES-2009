@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3782 2009/09/20 13:05:33 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3783 2009/09/20 18:50:32 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4919,3 +4919,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated converters/p5-Convert-UUlib to 1.32 [sno 2009-09-20]
 	Updated databases/p5-DBD-mysql to 4.013 [sno 2009-09-20]
 	Updated databases/p5-DBD-PgPP to 0.07 [sno 2009-09-20]
+	Updated print/kpathsea to 5.0.0nb2 [minskim 2009-09-20]
