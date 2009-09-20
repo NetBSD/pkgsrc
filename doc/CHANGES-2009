@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3781 2009/09/20 13:00:31 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3782 2009/09/20 13:05:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4918,3 +4918,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated comms/p5-Device-Gsm to 1.54 [sno 2009-09-20]
 	Updated converters/p5-Convert-UUlib to 1.32 [sno 2009-09-20]
 	Updated databases/p5-DBD-mysql to 4.013 [sno 2009-09-20]
+	Updated databases/p5-DBD-PgPP to 0.07 [sno 2009-09-20]
