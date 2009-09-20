@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.13 2009/01/08 16:25:45 wiz Exp $
+$NetBSD: patch-aa,v 1.14 2009/09/20 10:44:51 tnn Exp $
 
---- configure.orig	2008-11-10 16:23:17.000000000 +0100
+--- configure.orig	2009-07-22 22:11:25.000000000 +0200
 +++ configure
-@@ -31645,7 +31645,7 @@ echo "${ECHO_T}yes" >&6; }
+@@ -16858,7 +16858,7 @@ squeeze() {
+ 
+ 
+       #
+-  if test "$compiler_id" != "unknown"; then
++  if false; then
+     #
+     if test "$compiler_id" = "GNU_C"; then
+ 
+@@ -23439,7 +23439,7 @@ $as_echo "yes" >&6; }
          GSSAPI_LIBS=`$GSSAPI_ROOT/bin/krb5-config --libs gssapi`
       elif test "$GSSAPI_ROOT" != "yes"; then
          GSSAPI_INCS="-I$GSSAPI_ROOT/include"
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.13 2009/01/08 16:25:45 wiz Exp $
       fi
    fi
  
-@@ -32192,13 +32192,13 @@ _ACEOF
+@@ -23996,13 +23996,13 @@ _ACEOF
          LIBS="$LIBS $gss_libs"
       elif test "$GSSAPI_ROOT" != "yes"; then
          LDFLAGS="$LDFLAGS -L$GSSAPI_ROOT/lib$libsuff"
