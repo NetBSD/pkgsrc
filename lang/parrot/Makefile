@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2009/08/28 16:48:41 he Exp $
+# $NetBSD: Makefile,v 1.22 2009/09/20 10:57:04 he Exp $
 #
 
-VERSION=		1.5.0
+VERSION=		1.6.0
 RTYPE=			devel
 DISTNAME=		parrot-${VERSION}
 CATEGORIES=		lang
