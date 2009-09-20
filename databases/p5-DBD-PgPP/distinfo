@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/04/24 14:59:28 sno Exp $
+$NetBSD: distinfo,v 1.3 2009/09/20 13:05:21 sno Exp $
 
-SHA1 (DBD-PgPP-0.06.tar.gz) = 664c1830ab2af2262a61f82f57ae82937af2dd1b
-RMD160 (DBD-PgPP-0.06.tar.gz) = 0aafe44fd3fda67f73229967a60e33d5e203cba2
-Size (DBD-PgPP-0.06.tar.gz) = 25369 bytes
+SHA1 (DBD-PgPP-0.07.tar.gz) = e2cf585f81f2364ce2279156063ffedf70f9ab56
+RMD160 (DBD-PgPP-0.07.tar.gz) = 2721b044af04cb851b09b60e5e094a6a03440ae6
+Size (DBD-PgPP-0.07.tar.gz) = 25121 bytes
