@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/05/26 12:27:12 he Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/20 13:10:30 tnn Exp $
 #
 
 DISTNAME=	libffi-3.0.8
@@ -21,6 +21,13 @@ USE_LANGUAGES=	c c++
 INFO_FILES=	yes
 
 PKGCONFIG_OVERRIDE+=	libffi.pc.in
+
+.include "../../mk/compiler.mk"
+# The Compaq C frontend groks .s, but not .S. Assemble osf.S directly w/ as(1).
+pre-build:
+.if !empty(PKGSRC_COMPILER:Mccc)
+	cd ${WRKSRC} && ./libtool --mode=compile --tag=CC as -I. -Iinclude -o src/alpha/osf.o -c src/alpha/osf.S
+.endif
 
 # Since we don't have "TEST_DEPENDS", we implement it as a hack:
 .include "../../mk/bsd.prefs.mk"
