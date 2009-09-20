@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2009/01/19 20:15:49 abs Exp $
+$NetBSD: patch-aa,v 1.5 2009/09/20 02:59:32 schmonz Exp $
 
---- config/main.inc.php.dist.orig	2008-12-30 14:33:28.000000000 +0000
+--- config/main.inc.php.dist.orig	2009-08-07 12:13:35.000000000 -0400
 +++ config/main.inc.php.dist
-@@ -30,10 +30,10 @@ $rcmail_config['syslog_facility'] = LOG_
+@@ -33,10 +33,10 @@ $rcmail_config['syslog_facility'] = LOG_
  
  // use this folder to store log files (must be writeable for apache user)
  // This is used by the 'file' log driver.
@@ -13,10 +13,10 @@ $NetBSD: patch-aa,v 1.4 2009/01/19 20:15:49 abs Exp $
 -$rcmail_config['temp_dir'] = 'temp/';
 +$rcmail_config['temp_dir'] = '@VARBASE@/tmp/roundcube/';
  
- // enable caching of messages and mailbox data in the local database.
- // this is recommended if the IMAP server does not run on the same machine
-@@ -413,4 +413,7 @@ $rcmail_config['keep_alive'] = 60;
- $rcmail_config['check_all_folders'] = FALSE;
+ // List of active plugins (in plugins/ directory)
+ $rcmail_config['plugins'] = array();
+@@ -441,4 +441,7 @@ $rcmail_config['check_all_folders'] = FA
+ $rcmail_config['display_next'] = FALSE;
  
  // end of config file
 +
