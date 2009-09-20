@@ -1,8 +1,17 @@
-$NetBSD: patch-sa,v 1.2 2009/06/07 11:23:47 wiz Exp $
+$NetBSD: patch-sa,v 1.3 2009/09/20 12:04:01 sno Exp $
 
---- hw/xfree86/common/compiler.h.orig	2009-05-19 14:25:30 +0300
-+++ hw/xfree86/common/compiler.h	2009-05-19 14:26:04 +0300
-@@ -531,7 +531,7 @@ inl(unsigned short port)
+--- hw/xfree86/common/compiler.h.orig	2009-07-07 19:48:58.000000000 +0200
++++ hw/xfree86/common/compiler.h	2009-09-20 11:51:51.000000000 +0200
+@@ -465,7 +465,7 @@
+ extern unsigned int inw(unsigned long port);
+ extern unsigned int inl(unsigned long port);
+  
+-#   elif defined(linux) && defined(__amd64__)
++#   elif (defined(linux) || defined(__FreeBSD__)) && defined(__amd64__)
+  
+ #    include <inttypes.h>
+ 
+@@ -531,7 +531,7 @@
     return ret;
  }
  
