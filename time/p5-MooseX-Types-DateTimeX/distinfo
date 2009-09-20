@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/20 10:46:35 sno Exp $
+
+SHA1 (MooseX-Types-DateTimeX-0.06.tar.gz) = f210c328405442bf8c24078be9b1aa19a21570c4
+RMD160 (MooseX-Types-DateTimeX-0.06.tar.gz) = ac8d37fed0592aaa0c36286069ed92977fbaad52
+Size (MooseX-Types-DateTimeX-0.06.tar.gz) = 23880 bytes
