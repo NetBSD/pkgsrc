@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/08/28 16:48:41 he Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/09/20 10:57:04 he Exp $
 bin/parrot
 bin/parrot_config
 bin/parrot_debugger
@@ -17,6 +17,7 @@ include/parrot/${PKGVERSION}/parrot/cclass.h
 include/parrot/${PKGVERSION}/parrot/charset.h
 include/parrot/${PKGVERSION}/parrot/compiler.h
 include/parrot/${PKGVERSION}/parrot/config.h
+include/parrot/${PKGVERSION}/parrot/context.h
 include/parrot/${PKGVERSION}/parrot/core_pmcs.h
 include/parrot/${PKGVERSION}/parrot/core_types.h
 include/parrot/${PKGVERSION}/parrot/datatypes.h
@@ -69,8 +70,8 @@ include/parrot/${PKGVERSION}/parrot/platform_interface.h
 include/parrot/${PKGVERSION}/parrot/pmc.h
 include/parrot/${PKGVERSION}/parrot/pmc_freeze.h
 include/parrot/${PKGVERSION}/parrot/pobj.h
-include/parrot/${PKGVERSION}/parrot/register.h
 include/parrot/${PKGVERSION}/parrot/runcore_api.h
+include/parrot/${PKGVERSION}/parrot/runcore_profiling.h
 include/parrot/${PKGVERSION}/parrot/runcore_trace.h
 include/parrot/${PKGVERSION}/parrot/scheduler.h
 include/parrot/${PKGVERSION}/parrot/scheduler_private.h
@@ -181,6 +182,10 @@ lib/parrot/${PKGVERSION}/library/PGE/Text.pbc
 lib/parrot/${PKGVERSION}/library/PGE/Text.pir
 lib/parrot/${PKGVERSION}/library/PGE/Util.pbc
 lib/parrot/${PKGVERSION}/library/PGE/Util.pir
+lib/parrot/${PKGVERSION}/library/PCT.pbc
+lib/parrot/${PKGVERSION}/library/PCT/Grammar.pbc
+lib/parrot/${PKGVERSION}/library/PCT/HLLCompiler.pbc
+lib/parrot/${PKGVERSION}/library/PCT/PAST.pbc
 lib/parrot/${PKGVERSION}/library/Parrot/Coroutine.pbc
 lib/parrot/${PKGVERSION}/library/Parrot/Coroutine.pir
 lib/parrot/${PKGVERSION}/library/Parrot/Exception.pbc
@@ -205,6 +210,7 @@ lib/parrot/${PKGVERSION}/library/SDL/Rect.pir
 lib/parrot/${PKGVERSION}/library/SDL/Sprite.pir
 lib/parrot/${PKGVERSION}/library/SDL/StopWatch.pir
 lib/parrot/${PKGVERSION}/library/SDL/Surface.pir
+lib/parrot/${PKGVERSION}/library/SQLite3.pir
 lib/parrot/${PKGVERSION}/library/Stream/Base.pbc
 lib/parrot/${PKGVERSION}/library/Stream/Base.pir
 lib/parrot/${PKGVERSION}/library/Stream/Combiner.pbc
