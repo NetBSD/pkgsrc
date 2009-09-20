@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2008/09/20 19:55:01 adrianp Exp $
+$NetBSD: patch-ab,v 1.5 2009/09/20 21:15:44 sno Exp $
 
---- Makefile.config.in.orig	2006-09-28 03:15:55.000000000 +0100
-+++ Makefile.config.in
-@@ -168,6 +168,15 @@ ifeq ($(findstring solaris,$(HOST_OS)),F
+--- Makefile.config.in.orig	2006-09-28 04:15:55.000000000 +0200
++++ Makefile.config.in	2009-09-20 23:05:15.000000000 +0200
+@@ -168,6 +168,15 @@
    CFLAGS_SHLIB = -Kpic
  endif
  
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.4 2008/09/20 19:55:01 adrianp Exp $
  ifeq ($(HOST_OS),aix)
    SHARED_LIB_TYPE = unix
    SHLIB_SUFFIX = a
-@@ -204,12 +213,22 @@ ifeq ($(HOST_OS),osf)
+@@ -204,12 +213,31 @@
    LDFLAGS_SHLIB = -shared -expect_unresolved
  endif
  
@@ -34,6 +34,15 @@ $NetBSD: patch-ab,v 1.4 2008/09/20 19:55:01 adrianp Exp $
 +endif
 +
 +ifeq ($(HOST_OS),dragonfly)
++  SHARED_LIB_TYPE = unix
++  SHLIB_SUFFIX = so
++  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
++  shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
++  CFLAGS_SHLIB = -fPIC
++  LDFLAGS_SHLIB = -shared -Wl,-soname,$(SONAME) $(SHLIB_CLIB)
++endif
++
++ifeq ($(findstring freebsd,$(HOST_OS)),freebsd)
 +  SHARED_LIB_TYPE = unix
 +  SHLIB_SUFFIX = so
 +  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
