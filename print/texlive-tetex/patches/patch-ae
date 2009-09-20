@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2009/09/20 03:33:43 minskim Exp $
+$NetBSD: patch-ae,v 1.2 2009/09/20 19:16:49 minskim Exp $
 
 --- fmtutil.orig	2008-06-17 11:00:24.000000000 -0700
 +++ fmtutil
@@ -70,6 +70,15 @@ $NetBSD: patch-ae,v 1.1 2009/09/20 03:33:43 minskim Exp $
    if test -n "$poolfile" && test -f "$poolfile"; then
      verboseMsg "$progname: attempting to create localized format using pool=$pool and tcx=$tcx."
      cp "$poolfile" $engine.pool
+@@ -694,7 +694,7 @@ run_initex()
+   (
+     # If necessary, set TEXPOOL. Use absolute path, because of KPSE_DOT.
+     $localpool && { TEXPOOL="`pwd`:$TEXPOOL"; export TEXPOOL; }
+-    verbose $engine -ini $tcxflag $jobswitch $prgswitch $texargs
++    verbose @LOCALBASE@/bin/$engine -ini $tcxflag $jobswitch $prgswitch $texargs
+   ) </dev/null
+ 
+   if test $use_engine_dir; then
 @@ -790,7 +790,7 @@ recreate_by_fmt()
  create_missing()
  {
