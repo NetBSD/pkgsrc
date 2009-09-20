@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1 2009/09/20 13:10:30 tnn Exp $
+
+--- include/ffi.h.in.orig	2008-04-03 20:57:34.000000000 +0200
++++ include/ffi.h.in
+@@ -254,7 +254,11 @@ typedef struct {
+   ffi_cif   *cif;
+   void     (*fun)(ffi_cif*,void*,void**,void*);
+   void      *user_data;
++#if defined(__digital__) && !defined(__GNUC__)
++} ffi_closure;
++#else
+ } ffi_closure __attribute__((aligned (8)));
++#endif
+ 
+ void *ffi_closure_alloc (size_t size, void **code);
+ void ffi_closure_free (void *);
