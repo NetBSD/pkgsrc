@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3775 2009/09/20 10:47:19 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3776 2009/09/20 11:00:18 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4912,3 +4912,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added time/p5-Olson-Abbreviations version 0.02 [sno 2009-09-20]
 	Added time/p5-MooseX-Types-DateTime-ButMaintained version 0.09 [sno 2009-09-20]
 	Added time/p5-MooseX-Types-DateTimeX version 0.06 [sno 2009-09-20]
+	Updated lang/parrot to 1.6.0 [he 2009-09-20]
