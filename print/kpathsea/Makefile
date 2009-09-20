@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2009/09/02 06:02:25 dsainty Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/20 18:50:03 minskim Exp $
 
 DISTNAME=	luatex-beta-0.40.2
 PKGNAME=	kpathsea-5.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/341/1275/
 EXTRACT_SUFX=	.tar.bz2
@@ -46,6 +46,14 @@ SUBST_SED.texmfdir=	-e 's,@PREFIX@,${PREFIX:C;///*;/;g:C;/$;;},'
 SUBST_SED.texmfdir+=	-e 's,@TEXMFLOCAL@,${TEXMFLOCAL:C;///*;/;g:C;/$;;},'
 SUBST_SED.texmfdir+=	-e 's,@VARBASE@,${VARBASE:C;///*;/;g:C;/$;;},'
 SUBST_SED.texmfdir+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR:C;///*;/;g:C;/$;;},'
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Setting paths to commands.
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	mktex.opt mktexdir mktexlsr mktexmf \
+			mktexnam mktexnam.opt mktexpk mktextfm mktexupd
+SUBST_SED.paths=	-e 's,@KPSEWHICH@,${PREFIX}/bin/kpsewhich,g' \
+			-e 's,@MKTEXMF@,${PREFIX}/bin/mktexmf,g'
 
 PKG_SYSCONFSUBDIR=	texmf
 

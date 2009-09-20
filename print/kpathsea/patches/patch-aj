@@ -1,0 +1,42 @@
+$NetBSD: patch-aj,v 1.1 2009/09/20 18:50:03 minskim Exp $
+
+--- mktexpk.orig	2009-06-03 06:07:21.000000000 -0700
++++ mktexpk
+@@ -60,8 +60,8 @@ fi
+ mt_max_args=2
+ 
+ # Common code for all scripts.
+-: ${MT_TEXMFMAIN=`kpsewhich --expand-path='$TEXMFMAIN'`}
+-: ${MT_MKTEX_OPT=`kpsewhich --format='web2c files' mktex.opt`}
++: ${MT_TEXMFMAIN=`@KPSEWHICH@ --expand-path='$TEXMFMAIN'`}
++: ${MT_MKTEX_OPT=`@KPSEWHICH@ --format='web2c files' mktex.opt`}
+ test -n "$MT_MKTEX_OPT" || MT_MKTEX_OPT="$MT_TEXMFMAIN/web2c/mktex.opt"
+ if test ! -f "$MT_MKTEX_OPT"; then
+   echo "$progname: Cannot find mktex.opt; check your installation." >&2
+@@ -87,7 +87,7 @@ esac
+ 
+ NAME=$1
+ 
+-if kpsewhich $NAME.mf >/dev/null 2>&1 || mktexmf $NAME >/dev/null 2>&1; then
++if @KPSEWHICH@ $NAME.mf >/dev/null 2>&1 || @MKTEXMF@ $NAME >/dev/null 2>&1; then
+   # determine the progname of metafont to use; prefer mf-nowin.
+   if (mf-nowin --version) >/dev/null 2>&1; then
+     MF="mf-nowin -progname=mf"
+@@ -145,7 +145,7 @@ else
+     ps2pk)
+       # grep for the font in $PSMAPFILE.  These are base font names, such as
+       # rpplr (the original) or pplr0 (an interim step) or pplr8r (current).
+-      : ${PSMAPFILE=`kpsewhich --format=map psfonts.map ps2pk.map`}
++      : ${PSMAPFILE=`@KPSEWHICH@ --format=map psfonts.map ps2pk.map`}
+       pattern="^$NAME"'([ 	]|$)' 
+       psline=`egrep "$pattern" $PSMAPFILE | tail -1`
+       if test -n "$psline"; then
+@@ -165,7 +165,7 @@ else
+         # Guessing the name of the type1 font file as fallback:
+         ANAME=`echo $NAME | sed 's/8r$/8a/'`
+         for i in $NAME.pfa $NAME.pfb $ANAME.pfa $ANAME.pfb; do
+-          if kpsewhich $i >/dev/null 2>&1; then
++          if @KPSEWHICH@ $i >/dev/null 2>&1; then
+             psname=$i
+             break
+           fi

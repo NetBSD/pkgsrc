@@ -1,0 +1,51 @@
+$NetBSD: patch-ad,v 1.1 2009/09/20 18:50:03 minskim Exp $
+
+--- mktex.opt.orig	2009-06-03 06:07:19.000000000 -0700
++++ mktex.opt
+@@ -9,7 +9,7 @@ if test "x$1" = x--help || test "x$1" = 
+   exit 0
+ elif test "x$1" = x--version || test "x$1" = x-version; then
+   echo "`basename $0` $version"
+-  kpsewhich --version
++  @KPSEWHICH@ --version
+   exit 0
+ elif test $# -lt ${mt_min_args-1}; then
+   echo "$0: Missing argument(s)." >&2
+@@ -63,22 +63,22 @@ cd "$TEMPDIR" || exit 1
+ 
+ # The alternative location for fonts.  The directory need not exist,
+ # so we use --expand-var here.  We also perform a sanity check.
+-: ${MT_VARTEXFONTS=`kpsewhich --expand-var='$VARTEXFONTS' | sed 's%^!!%%'`}
++: ${MT_VARTEXFONTS=`@KPSEWHICH@ --expand-var='$VARTEXFONTS' | sed 's%^!!%%'`}
+ if test -z "$MT_VARTEXFONTS"; then
+   echo "$0: VARTEXFONTS is not defined.  Defaulting to \`$KPSE_DOT'." >&2
+   MT_VARTEXFONTS='$KPSE_DOT'
+ fi
+ 
+ # The supporting scripts:
+-: ${MT_MKTEXNAM=`kpsewhich --format='web2c files' mktexnam`}
++: ${MT_MKTEXNAM=`@KPSEWHICH@ --format='web2c files' mktexnam`}
+ test -n "$MT_MKTEXNAM" || MT_MKTEXNAM="$MT_TEXMFMAIN/web2c/mktexnam"
+-: ${MT_MKTEXNAM_OPT=`kpsewhich --format='web2c files' mktexnam.opt`}
++: ${MT_MKTEXNAM_OPT=`@KPSEWHICH@ --format='web2c files' mktexnam.opt`}
+ test -n "$MT_MKTEXNAM_OPT" || MT_MKTEXNAM_OPT="$MT_TEXMFMAIN/web2c/mktexnam.opt"
+-: ${MT_MKTEXDIR=`kpsewhich --format='web2c files' mktexdir`}
++: ${MT_MKTEXDIR=`@KPSEWHICH@ --format='web2c files' mktexdir`}
+ test -n "$MT_MKTEXDIR" || MT_MKTEXDIR="$MT_TEXMFMAIN/web2c/mktexdir"
+-: ${MT_MKTEXDIR_OPT=`kpsewhich --format='web2c files' mktexdir.opt`}
++: ${MT_MKTEXDIR_OPT=`@KPSEWHICH@ --format='web2c files' mktexdir.opt`}
+ test -n "$MT_MKTEXDIR_OPT" || MT_MKTEXDIR_OPT="$MT_TEXMFMAIN/web2c/mktexdir.opt"
+-: ${MT_MKTEXUPD=`kpsewhich --format='web2c files' mktexupd`}
++: ${MT_MKTEXUPD=`@KPSEWHICH@ --format='web2c files' mktexupd`}
+ test -n "$MT_MKTEXUPD" || MT_MKTEXUPD="$MT_TEXMFMAIN/web2c/mktexupd"
+ 
+ # mktexupd and mktexlsr make sure they're coordinated via this.  A copy of
+@@ -92,7 +92,7 @@ old_ls_R_magic='% ls-R -- maintained by 
+ # given here (e.g. ``: ${MODE=ljfour}'', not just ``MODE=ljfour'', as
+ # this can cause trouble (e.g. when the mode for mktexnam is
+ # already specified on the command line).
+-: ${MT_MKTEX_CNF=`kpsewhich --format='web2c files' mktex.cnf`}
++: ${MT_MKTEX_CNF=`@KPSEWHICH@ --format='web2c files' mktex.cnf`}
+ test -n "$MT_MKTEX_CNF" && test -r "$MT_MKTEX_CNF" && . "$MT_MKTEX_CNF"
+ 
+ # Possible features: appendonlydir dosnames fontmaps nomfdrivers nomode

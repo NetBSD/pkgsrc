@@ -1,0 +1,71 @@
+$NetBSD: patch-ae,v 1.1 2009/09/20 18:50:03 minskim Exp $
+
+--- mktexnam.orig	2009-06-03 06:07:23.000000000 -0700
++++ mktexnam
+@@ -9,8 +9,8 @@ usage="Usage: $0 NAME [DPI MODE] [DESTDI
+ mt_max_args=4
+ 
+ # Common code for all scripts.
+-: ${MT_TEXMFMAIN=`kpsewhich --expand-path='$TEXMFMAIN'`}
+-: ${MT_MKTEX_OPT=`kpsewhich --format='web2c files' mktex.opt`}
++: ${MT_TEXMFMAIN=`@KPSEWHICH@ --expand-path='$TEXMFMAIN'`}
++: ${MT_MKTEX_OPT=`@KPSEWHICH@ --format='web2c files' mktex.opt`}
+ test -n "$MT_MKTEX_OPT" || MT_MKTEX_OPT="$MT_TEXMFMAIN/web2c/mktex.opt"
+ if test ! -f "$MT_MKTEX_OPT"; then
+   echo "$0: Cannot find mktex.opt; check your installation." >&2
+@@ -41,23 +41,23 @@ esac
+ : ${MT_DEFAULT_DESTROOT=$KPSE_DOT}
+ 
+ # Find the font: test tfm first, then mf, then possible sauterized mf.
+-fullname=`kpsewhich "$NAME.tfm" 2>/dev/null`
+-test -z "$fullname" && fullname=`kpsewhich "$NAME.mf" 2>/dev/null`
++fullname=`@KPSEWHICH@ "$NAME.tfm" 2>/dev/null`
++test -z "$fullname" && fullname=`@KPSEWHICH@ "$NAME.mf" 2>/dev/null`
+ if test -z "$fullname"; then
+   rootname=`echo $NAME | sed 's/[0-9]*$//'`
+-  fullname=`kpsewhich "b-$rootname.mf" 2>/dev/null`
++  fullname=`@KPSEWHICH@ "b-$rootname.mf" 2>/dev/null`
+   # LH fonts get special treatment:
+   if test -z "$fullname"; then
+     case $rootname in
+       # Czech/Slovak fonts get special treatment:
+       cs*|lcsss*|icscsc*|icstt*|ilcsss*)
+-           fullname=`kpsewhich cscode.mf`
++           fullname=`@KPSEWHICH@ cscode.mf`
+            ;;
+       # LH fonts get special treatment:
+       wn[bcdfirstuv]*|rx[bcdfiorstuvx][bcfhilmostx]|l[abcdhl][bcdfiorstuvx]*)
+            lhprefix=`echo $NAME | sed 's/^\(..\).*/\1/'`
+-           fullname=`kpsewhich "${lhprefix}codes.mf" 2>/dev/null`;;
+-      *)   fullname=`kpsewhich "$rootname.mf" 2>/dev/null`
++           fullname=`@KPSEWHICH@ "${lhprefix}codes.mf" 2>/dev/null`;;
++      *)   fullname=`@KPSEWHICH@ "$rootname.mf" 2>/dev/null`
+            ;;
+     esac
+   fi
+@@ -71,7 +71,7 @@ else
+   fullname=`echo "$fullname" | sed 's%//*%/%g'`
+   # See if $fullname comes from a standard location.
+   OIFS=$IFS;IFS=$SEP
+-  set x `kpsewhich --expand-path='$TEXMF/fonts'"$SEP$MT_VARTEXFONTS"`
++  set x `@KPSEWHICH@ --expand-path='$TEXMF/fonts'"$SEP$MT_VARTEXFONTS"`
+   shift; IFS=$OIFS
+   for i
+   do
+@@ -138,14 +138,14 @@ test -n "$MT_MKTEXNAM_OPT" && . "$MT_MKT
+ # Adjust MT_DESTROOT, if necessary.
+ if test -n "${MT_DESTROOT}"; then
+   # We distinguish system trees from the rest.
+-  systexmf="`kpsewhich --expand-path='{$SYSTEXMF}/fonts'`$SEP$MT_VARTEXFONTS"
++  systexmf="`@KPSEWHICH@ --expand-path='{$SYSTEXMF}/fonts'`$SEP$MT_VARTEXFONTS"
+   case "$SEP$systexmf$SEP" in
+     *$SEP$MT_DESTROOT$SEP*) # A system tree.
+       # If the texmfvar option is set, use TEXMFVAR tree.
+       # Some additional uglyness handles the case where $TEXMFVAR exists
+       # but $TEXMFVAR/fonts doesn't (yet).
+       if test "x$USE_TEXMFVAR" = x1; then
+-        : ${MT_TEXMFVAR=`kpsewhich --var-value=TEXMFVAR`}
++        : ${MT_TEXMFVAR=`@KPSEWHICH@ --var-value=TEXMFVAR`}
+         MT_DESTROOT=$MT_TEXMFVAR/fonts
+         if test -z "$MT_TEXMFVAR"; then
+           # Path expansion of $TEXMFVAR was empty.

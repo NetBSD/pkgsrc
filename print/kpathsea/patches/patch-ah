@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2009/09/20 18:50:03 minskim Exp $
+
+--- mktextfm.orig	2009-06-03 06:07:27.000000000 -0700
++++ mktextfm
+@@ -27,8 +27,8 @@ while test $# -gt 0; do
+ done
+ 
+ # Common code for all scripts.
+-: ${MT_TEXMFMAIN=`kpsewhich --expand-path='$TEXMFMAIN'`}
+-: ${MT_MKTEX_OPT=`kpsewhich --format='web2c files' mktex.opt`}
++: ${MT_TEXMFMAIN=`@KPSEWHICH@ --expand-path='$TEXMFMAIN'`}
++: ${MT_MKTEX_OPT=`@KPSEWHICH@ --format='web2c files' mktex.opt`}
+ test -n "$MT_MKTEX_OPT" || MT_MKTEX_OPT="$MT_TEXMFMAIN/web2c/mktex.opt"
+ if test ! -f "$MT_MKTEX_OPT"; then
+   echo "$progname: Cannot find mktex.opt; check your installation." >&2
