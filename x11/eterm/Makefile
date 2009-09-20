@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2009/09/20 04:35:25 obache Exp $
+# $NetBSD: Makefile,v 1.58 2009/09/20 12:51:42 obache Exp $
 
 DISTNAME=	Eterm-0.9.4
 PKGNAME=	${DISTNAME:S/^E/e/}
@@ -20,7 +20,7 @@ SITES.Eterm-bg-tile.tar.gz=	${MASTER_SITE_BACKUP}
 PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 			Eterm-bg-tile.tar.gz
 
-USE_TOOLS+=		perl:run pax
+USE_TOOLS+=		perl:run
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
