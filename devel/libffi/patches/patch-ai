@@ -1,0 +1,29 @@
+$NetBSD: patch-ai,v 1.1 2009/09/20 13:10:30 tnn Exp $
+
+--- include/ffi_common.h.orig	2008-07-12 07:43:00.000000000 +0200
++++ include/ffi_common.h
+@@ -77,6 +77,16 @@ typedef struct
+ } extended_cif;
+ 
+ /* Terse sized type definitions.  */
++#if defined(__digital__) && !defined(__GNUC__) /* XXX tnn: check sunpro */
++typedef unsigned int UINT8;
++typedef signed int   SINT8;
++typedef unsigned int UINT16;
++typedef signed int   SINT16;
++typedef unsigned int UINT32;
++typedef signed int   SINT32;
++typedef unsigned int UINT64;
++typedef signed int   SINT64;
++#else
+ typedef unsigned int UINT8  __attribute__((__mode__(__QI__)));
+ typedef signed int   SINT8  __attribute__((__mode__(__QI__)));
+ typedef unsigned int UINT16 __attribute__((__mode__(__HI__)));
+@@ -85,6 +95,7 @@ typedef unsigned int UINT32 __attribute_
+ typedef signed int   SINT32 __attribute__((__mode__(__SI__)));
+ typedef unsigned int UINT64 __attribute__((__mode__(__DI__)));
+ typedef signed int   SINT64 __attribute__((__mode__(__DI__)));
++#endif
+ 
+ typedef float FLOAT32;
+ 
