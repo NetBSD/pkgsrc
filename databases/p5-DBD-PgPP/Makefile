@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/05/19 08:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/20 13:05:21 sno Exp $
 #
 
-DISTNAME=	DBD-PgPP-0.06
+DISTNAME=	DBD-PgPP-0.07
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AR/ARC/
@@ -9,7 +9,7 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AR/ARC/
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/A/AR/ARC/
 COMMENT=	DBD::PgPP - Pure Perl PostgreSQL driver for the DBI
-LICENSE=	artistic-2.0 # OR gnu-gpl-v2+
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
