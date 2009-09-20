@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.1 2009/09/20 06:44:36 tnn Exp $
+
+--- xpcom/base/nsStackWalk.cpp.orig	2009-08-24 17:53:27.000000000 +0200
++++ xpcom/base/nsStackWalk.cpp
+@@ -1394,6 +1394,8 @@ NS_FormatCodeAddressDetails(void *aPC, c
+ 
+ #else // not __sun-specific
+ 
++#include <dlfcn.h>
++
+ #if (defined(linux) && defined(__GNUC__) && (defined(__i386) || defined(PPC))) || (defined(XP_MACOSX) && (defined(__i386) || defined(__ppc__))) // i386 or PPC Linux or Mac stackwalking code
+ 
+ #if __GLIBC__ > 2 || __GLIBC_MINOR > 1
