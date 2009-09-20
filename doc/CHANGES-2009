@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3767 2009/09/19 23:26:01 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3768 2009/09/20 02:59:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4904,3 +4904,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-HTML-WikiConverter to 0.68 [sno 2009-09-19]
 	Updated time/p5-DateTime-Format-Natural to 0.79 [sno 2009-09-19]
 	Updated time/p5-TimeDate to 1.17 [sno 2009-09-19]
+	Updated mail/roundcube to 0.3 [schmonz 2009-09-20]
