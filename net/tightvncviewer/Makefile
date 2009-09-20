@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/08/26 19:58:11 sno Exp $
+# $NetBSD: Makefile,v 1.29 2009/09/20 14:20:18 tnn Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGNAME=		${DISTNAME:S/tightvnc/tightvncviewer/}
@@ -27,7 +27,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1				\
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer		\
 		${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.0			\
+	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man		\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncviewer.1
 	${INSTALL_DATA} ${WRKSRC}/vncviewer/Vncviewer			\
 		${DESTDIR}${PREFIX}/lib/X11/app-defaults
