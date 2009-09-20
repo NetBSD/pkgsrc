@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3769 2009/09/20 03:34:14 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.3770 2009/09/20 09:46:15 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4906,3 +4906,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-TimeDate to 1.17 [sno 2009-09-19]
 	Updated mail/roundcube to 0.3 [schmonz 2009-09-20]
 	Updated print/texlive-tetex to 2008nb3 [minskim 2009-09-20]
+	Updated print/teTeX3-bin to 3.0nb36 [tron 2009-09-20]
