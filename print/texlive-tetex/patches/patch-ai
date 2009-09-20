@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 2009/09/20 03:33:43 minskim Exp $
+$NetBSD: patch-ai,v 1.2 2009/09/20 19:16:49 minskim Exp $
 
 --- texconfig.orig	2008-07-17 13:24:39.000000000 -0700
 +++ texconfig
@@ -56,6 +56,15 @@ $NetBSD: patch-ai,v 1.1 2009/09/20 03:33:43 minskim Exp $
      *) return;;
    esac
  }
+@@ -478,7 +478,7 @@ listDvipsPapers()
+ #
+ getFormatsForHyphen()
+ {
+-  fmtutil --catcfg | awk '$3 != "-" {print $1}' | sort
++  @FMTUTIL@ --catcfg | awk '$3 != "-" {print $1}' | sort
+ }
+ 
+ ###############################################################################
 @@ -606,7 +606,7 @@ Report bugs to <tex-k@tug.org>."
        echo
        echo '============================= font map files ============================='
@@ -119,3 +128,97 @@ $NetBSD: patch-ai,v 1.1 2009/09/20 03:33:43 minskim Exp $
            if test -z "$MT_VARTEXFONTS"; then
              echo "$progname: failed to set \`font ro'; reason: could not determine VARTEXFONTS variable." >&2; rc=1
              return
+@@ -1023,10 +1023,10 @@ EOM
+ 
+       setupTmpDir
+       echo "$progname: analyzing old configuration..." >&2
+-      fmtutil --catcfg > $tmpdir/pre
+-      fmtutil --edit
++      @FMTUTIL@ --catcfg > $tmpdir/pre
++      @FMTUTIL@ --edit
+       echo "$progname: analyzing new configuration..." >&2
+-      fmtutil --catcfg > $tmpdir/post
++      @FMTUTIL@ --catcfg > $tmpdir/post
+ 
+       if cmp $tmpdir/pre $tmpdir/post >/dev/null 2>&1; then
+         echo "$progname: no new/updated formats available ..." >&2
+@@ -1034,9 +1034,9 @@ EOM
+       echo "$progname: updating formats ..." >&2
+         comm -13 $tmpdir/pre $tmpdir/post > $tmpdir/addOrChange
+         for i in `awk '{print $1}' $tmpdir/addOrChange`; do
+-          fmtutil --byfmt "$i" || rc=1
++          @FMTUTIL@ --byfmt "$i" || rc=1
+         done
+-        texlinks --multiplatform || rc=1
++        @TEXLINKS@ --multiplatform || rc=1
+       fi
+       ;;
+ 
+@@ -1076,7 +1076,7 @@ $formatsForHyphenFmt"
+         *)
+           if checkElemInList "$tcBatchHyphenFormat" $formatsForHyphen; then
+ 
+-            tcBatchHyphenFile=`fmtutil --showhyphen "$tcBatchHyphenFormat"`
++            tcBatchHyphenFile=`@FMTUTIL@ --showhyphen "$tcBatchHyphenFormat"`
+             case $tcBatchHyphenFile in
+               "")
+                 echo "$progname: could not find hyphen setup file for format \`$tcBatchHyphenFormat'" >&2
+@@ -1133,7 +1133,7 @@ $formatsForHyphenFmt"
+                   fi
+                   ;;
+               esac
+-              fmtutil --byhyphen "$tcBatchHFOut"
++              @FMTUTIL@ --byhyphen "$tcBatchHFOut"
+             fi
+           else
+             echo "$progname: invalid format \`$tcBatchHyphenFormat' specified as argument for \`$progname hyphen'" >&2
+@@ -1150,17 +1150,17 @@ $formatsForHyphenFmt"
+ 
+     init)
+       if test -n "$texconfig_sys"; then  # set by texconfig-sys
+-        fmtutil=fmtutil-sys
+-        updmap=updmap-sys
++        fmtutil=@FMTUTIL_SYS@
++        updmap=@UPDMAP_SYS@
+       else
+-        fmtutil=fmtutil
+-        updmap=updmap
++        fmtutil=@FMTUTIL@
++        updmap=@UPDMAP@
+       fi
+       
+       case $2 in
+         "")
+           if $fmtutil --all \
+-             && texlinks --multiplatform \
++             && @TEXLINKS@ --multiplatform \
+              && $updmap; then
+             :
+           else
+@@ -1273,7 +1273,7 @@ Valid PAPER settings:
+                 set x `getRes "$tcBatchPdftexMode"`; shift
+                 fmgrConfigReplace pdftexconfig.tex 'pdfpkresolution' "\\pdfpkresolution=$1"
+                 if $fmgrConfigReplaceChanged; then
+-                  fmtutil --refresh
++                  @FMTUTIL@ --refresh
+                 fi
+               else
+                 echo "$progname: unknown MODE \`$tcBatchPdftexMode' given as argument for \`$progname pdftex mode'" >&2
+@@ -1292,7 +1292,7 @@ Valid PAPER settings:
+               wChanged=$fmgrConfigReplaceChanged
+               fmgrConfigReplace pdftexconfig.tex pdfpageheight '\pdfpageheight='"$h"
+               if $wChanged || $fmgrConfigReplaceChanged; then
+-                fmtutil --refresh
++                @FMTUTIL@ --refresh
+               fi
+               ;;
+             a4)
+@@ -1301,7 +1301,7 @@ Valid PAPER settings:
+               wChanged=$fmgrConfigReplaceChanged
+               fmgrConfigReplace pdftexconfig.tex pdfpageheight '\pdfpageheight='"$h"
+               if $wChanged || $fmgrConfigReplaceChanged; then
+-                fmtutil --refresh
++                @FMTUTIL@ --refresh
+               fi
+               ;;
+             "") echo "$help" >&2; rc=1;;
