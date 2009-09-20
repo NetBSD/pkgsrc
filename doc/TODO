@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8477 2009/09/20 02:59:58 schmonz Exp $
+$NetBSD: TODO,v 1.8478 2009/09/20 09:06:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -336,6 +336,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
+	o GraphicsMagick-1.3.7
 	o GridSim-3.3
 	o GutenMark-20090216
 	o MAMEDiff-2.30
@@ -443,7 +444,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.10
+	o calibre-0.6.13
 	o capc-calc-2.12.4
 	o capistrano-2.5.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -551,6 +552,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o exiftool-7.67
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
+	o f-spot-0.6.1.2
 	o f2c-20090102
 	o faces-1.7.7
 	o fakeroot-1.6.5
@@ -598,7 +600,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdm-2.26.1 [GNOME 2.26]
 	o gdsreader-0.3.2
 	o geany-0.18
-	o geda-1.5.2.20090328
+	o geda-1.5.4.20090830
 	o gedit-plugins-2.26.3 [GNOME 2.26]
 	o gentoo-0.15.6
 	o gettext-0.17
@@ -634,6 +636,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.13
+	o gnutls-2.8.4
 	o gogo-3.11p1
 	o golem-0.0.6
 	o gossip-0.31
@@ -860,9 +863,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moc-2.4.4
 	o monodevelop-2.1.0
 	o monotone-0.45
-	o moserial-2.26.3 [GNOME 2.26]
+	o moserial-2.28.0 [GNOME 2.28]
 	o mp3blaster-3.2.3
-	o mp3diags-0.99.05.034
+	o mp3diags-0.99.05.037
 	o mpc-0.17
 	o mpeg4ip-1.6.1
 	o mpg123-1.9.0
@@ -1013,7 +1016,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-0.25.0
 	o pureftpd-1.0.22
 	o puzzle-5.2
-	o puzzles-8647
+	o puzzles-8655
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1066,6 +1069,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rdp-1.6
 	o rep-gtk-0.90.0
 	o resize_image-0.7
+	o rhythmbox-0.12.5
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
 	o robodoc-4.99.6
@@ -1168,6 +1172,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snd-10.6
 	o snes9x-1.51
 	o snort-2.8.4
+	o snownews-1.5.12
 	o solfege-3.14.6
 	o sope-4.6
 	o source-highlight-3.1
@@ -1299,7 +1304,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xdaliclock-2.25
 	o xdelta-3.0v2
 	o xdesktopwaves-1.3
-	o xdm-1.1.8
+	o xdm-1.1.9
 	o xemacs-21.4.22
 	o xemacs-current-21.5.28
 	o xerces-c-2.9.0
@@ -1378,7 +1383,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.3.11
+	o zile-2.3.12
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zope-3.4.0
