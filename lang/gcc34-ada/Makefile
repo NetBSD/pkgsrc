@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/06/14 22:58:02 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/09/20 14:41:52 schwarz Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	shannonjr@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
+HOMEPAGE=	http://gcc.gnu.org/
 COMMENT=	This is the gcc 3.4 Ada compiler
 
 GCC_VERSION=		3.4.6
