@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2009/09/20 18:50:03 minskim Exp $
+
+--- mktexnam.opt.orig	2009-06-03 06:07:23.000000000 -0700
++++ mktexnam.opt
+@@ -24,9 +24,9 @@ case "$MT_FEATURES" in
+     MT_PKDESTREL='pk/$MT_MODE/$MT_NAMEPART'
+     MT_TFMDESTREL='tfm/$MT_NAMEPART'
+     MT_MFDESTREL='source/$MT_NAMEPART'
+-    SPECIALMAP=`kpsewhich special.map`
+-    TYPEFACEMAP=`kpsewhich typeface.map`
+-    SUPPLIERMAP=`kpsewhich supplier.map`
++    SPECIALMAP=`@KPSEWHICH@ special.map`
++    TYPEFACEMAP=`@KPSEWHICH@ typeface.map`
++    SUPPLIERMAP=`@KPSEWHICH@ supplier.map`
+     if test -r "$SPECIALMAP"; then
+       set x `awk \
+     '{if ($1 == NAME || (substr (NAME, 1, length ($1)) == $1 \
