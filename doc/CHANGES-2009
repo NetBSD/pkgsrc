@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3780 2009/09/20 12:45:06 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3781 2009/09/20 13:00:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4917,3 +4917,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/GraphicsMagick to 1.3.7 [obache 2009-09-20]
 	Updated comms/p5-Device-Gsm to 1.54 [sno 2009-09-20]
 	Updated converters/p5-Convert-UUlib to 1.32 [sno 2009-09-20]
+	Updated databases/p5-DBD-mysql to 4.013 [sno 2009-09-20]
