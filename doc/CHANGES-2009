@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3771 2009/09/20 09:55:16 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3772 2009/09/20 10:04:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4908,3 +4908,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/texlive-tetex to 2008nb3 [minskim 2009-09-20]
 	Updated print/teTeX3-bin to 3.0nb36 [tron 2009-09-20]
 	Updated devel/p5-Moose to 0.91 [sno 2009-09-20]
+	Updated emulators/sdlmame to 0.134 [wiz 2009-09-20]
