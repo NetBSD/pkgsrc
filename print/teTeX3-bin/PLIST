@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.17 2009/09/19 15:34:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/09/20 09:45:28 tron Exp $
+bin/a2ping
+bin/e2pall
+bin/epstopdf
 bin/fdf2tan
 bin/fdf2tex
 bin/lambda
