@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3778 2009/09/20 11:31:14 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3779 2009/09/20 12:15:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4915,3 +4915,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/parrot to 1.6.0 [he 2009-09-20]
 	Updated devel/p5-List-MoreUtils to 0.25beta02 [sno 2009-09-20]
 	Updated graphics/GraphicsMagick to 1.3.7 [obache 2009-09-20]
+	Updated comms/p5-Device-Gsm to 1.54 [sno 2009-09-20]
