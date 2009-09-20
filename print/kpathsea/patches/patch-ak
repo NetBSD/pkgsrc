@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1 2009/09/20 18:50:03 minskim Exp $
+
+--- mktexlsr.orig	2009-06-03 06:07:21.000000000 -0700
++++ mktexlsr
+@@ -70,7 +70,7 @@ while test $# -gt 0; do
+     exit 0
+   elif test "x$1" = x--version || test "x$1" = x-version; then
+     echo "`basename $0` $version"
+-    kpsewhich --version
++    @KPSEWHICH@ --version
+     exit 0
+   elif test "x$1" = x--verbose || test "x$1" = x-verbose; then
+     verbose=true
+@@ -107,7 +107,7 @@ trap 'cd /; test -z "$db_dir_tmp" || rm 
+     OIFS=$IFS  # want just a newline
+     IFS='
+ '
+-    set x `kpsewhich --show-path=ls-R | tr : '
++    set x `@KPSEWHICH@ --show-path=ls-R | tr : '
+ ' | sort | uniq`
+     IFS=$OIFS
+   fi
