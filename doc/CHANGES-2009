@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3776 2009/09/20 11:00:18 he Exp $
+$NetBSD: CHANGES-2009,v 1.3777 2009/09/20 11:05:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4913,3 +4913,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added time/p5-MooseX-Types-DateTime-ButMaintained version 0.09 [sno 2009-09-20]
 	Added time/p5-MooseX-Types-DateTimeX version 0.06 [sno 2009-09-20]
 	Updated lang/parrot to 1.6.0 [he 2009-09-20]
+	Updated devel/p5-List-MoreUtils to 0.25beta02 [sno 2009-09-20]
