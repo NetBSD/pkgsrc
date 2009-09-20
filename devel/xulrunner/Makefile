@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/09/14 15:12:12 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2009/09/20 07:04:22 tnn Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
@@ -121,6 +121,7 @@ post-install:
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 .include "../../archivers/bzip2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.10
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
