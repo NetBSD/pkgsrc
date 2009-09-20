@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2009/07/25 01:19:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2009/09/20 02:59:32 schmonz Exp $
 #
 
-DISTNAME=	roundcubemail-${RCVERSION}-dep
-PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep/-${VERSION}/}
+DISTNAME=	roundcubemail-${RCVERSION}-stable-dep
+PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-stable-dep/-${VERSION}/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -14,12 +14,12 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-RCVERSION=	0.2.2
+RCVERSION=	0.3
 VERSION=	${RCVERSION:S/-//}
 
 PKG_DESTDIR_SUPPORT=  	user-destdir
-INSTALLATION_DIRS=	${RCDIR}/program ${RCDIR}/skins ${EGDIR}/SQL ${DOCDIR}
-INSTALLATION_DIRS+=	${RCDIR}/bin
+INSTALLATION_DIRS=	${RCDIR}/plugins ${RCDIR}/program ${RCDIR}/skins
+INSTALLATION_DIRS+=	${EGDIR}/SQL ${DOCDIR} ${RCDIR}/bin
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
@@ -47,7 +47,7 @@ BUILD_DEFS+=		VARBASE WWW_USER WWW_GROUP APACHE_USER APACHE_GROUP
 RCDIR=			${PREFIX}/share/roundcube
 EGDIR=			${PREFIX}/share/examples/roundcube
 DOCDIR=			${PREFIX}/share/doc/roundcube
-PAX_DIRS=		program skins installer bin
+PAX_DIRS=		plugins program skins installer bin
 
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q} PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 MESSAGE_SUBST+=		VARBASE=${VARBASE:Q} RCDIR=${RCDIR:Q}
@@ -84,7 +84,7 @@ REPLACE.php.old=	.*/bin/php
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	bin/*.sh
 
-EMPTY_DIRS=	plugins/cleanup plugins/emotions/images \
+EMPTY_DIRS=	plugins/emotions/images \
 		plugins/emotions/jscripts plugins/media/images \
 		plugins/media/jscripts plugins/nonbreaking/images \
 		plugins/nonbreaking/langs plugins/searchreplace/images \
