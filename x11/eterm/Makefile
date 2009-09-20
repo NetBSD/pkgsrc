@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.56 2009/09/20 04:21:44 obache Exp $
+# $NetBSD: Makefile,v 1.57 2009/09/20 04:35:25 obache Exp $
 
 DISTNAME=	Eterm-0.9.4
 PKGNAME=	${DISTNAME:S/^E/e/}
 PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eterm/}
-DISTFILES=	${ETERM_SRCS} ${PIXMAP_FILES}
+DISTFILES=	${DEFAULT_DISTFILES} ${PIXMAP_FILES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eterm.org/
@@ -17,8 +17,6 @@ SITES.Eterm-bg-scale-1.tar.gz=	${MASTER_SITE_BACKUP}
 SITES.Eterm-bg-scale-2.tar.gz=	${MASTER_SITE_BACKUP}
 SITES.Eterm-bg-tile.tar.gz=	${MASTER_SITE_BACKUP}
 
-EXTRACT_ONLY=		${ETERM_SRCS}
-ETERM_SRCS=		${DISTNAME}${EXTRACT_SUFX}
 PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 			Eterm-bg-tile.tar.gz
 
@@ -45,13 +43,8 @@ SPECIAL_PERMS=		${PREFIX}/bin/Eterm ${SETUID_ROOT_PERMS}
 
 .include "options.mk"
 
-post-extract:
+pre-extract:
 	${LN} -sf ${WRKSRC} ${WRKDIR}/Eterm
-	set -e; \
-	cd ${WRKDIR} && \
-	for f in ${PIXMAP_FILES}; do \
-		pax -O -zrf ${DISTDIR}/"$$f"; \
-	done
 
 .include "../../devel/libast/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
