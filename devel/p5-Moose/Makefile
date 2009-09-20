@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2009/09/16 00:10:07 seb Exp $
+# $NetBSD: Makefile,v 1.31 2009/09/20 09:55:04 sno Exp $
 #
 
-DISTNAME=	Moose-0.90
+DISTNAME=	Moose-0.91
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -33,7 +33,7 @@ BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
 BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-Simple>=0.77:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-Test-Simple>=0.88:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 BUILD_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
