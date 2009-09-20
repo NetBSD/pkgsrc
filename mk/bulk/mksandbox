@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.51 2009/09/06 19:43:18 wiz Exp $
+# $NetBSD: mksandbox,v 1.52 2009/09/20 10:24:00 wiz Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -360,7 +360,7 @@ case x\$1 in
 	x)	rootshell=/bin/ksh ;;
 	*)	rootshell="\$2" ;;
 	esac
-	script="$sandbox/tmp/script.\$\$"
+	script="\$sandbox/tmp/script.\$\$"
 	echo "#!/bin/sh" > \$script
 	echo "ENV=/etc/shrc \$rootshell" >> \$script
 	chmod +x \$script
