@@ -4,3 +4,6 @@ world to play with, and even if you do check it, producing a well-formatted
 error string takes a lot of work.
 
 IPC::System::Simple takes the hard work out of calling external commands.
+
+The IPC::System::Simple module also provides a simple replacement to Perl's
+backticks operator.
