@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8480 2009/09/20 11:31:14 obache Exp $
+$NetBSD: TODO,v 1.8481 2009/09/21 06:44:12 obache Exp $
 
 Suggested new packages
 ======================
@@ -756,7 +756,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
 	o libarchive-2.7.0
-	o libast-0.7
 	o libcanberra-0.17
 	o libcares-1.6.0
 	o libchewing-0.3.0
