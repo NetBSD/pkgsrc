@@ -1,15 +1,26 @@
-$NetBSD: README.MacOSX,v 1.6 2008/05/09 18:39:54 agc Exp $
+$NetBSD: README.MacOSX,v 1.7 2009/09/21 15:33:13 tron Exp $
 
 Please read "README.Darwin" as well, as everything there also applies
 to Mac OS X.
 
 
-File systems
+File systems:
 
 Previously, pkgsrc needed to be installed on a case-insensitive file
 system.  Starting in 2007, this restriction has been relaxed, and
 pkgsrc will work on case-insensitive as well as case sensitive file
 systems.
+
+
+Mac OS X Snow Leopard Binary ABI problem:
+
+Mac OS X Snow Leopard supports 64-Bit binaries on most Intel Macs
+and builds those by default on such machine. This causes problems
+with a lot of packages which get confused because "MACHINE_ARCH"
+is set to "i386" (on a 64-bit system!). There are also packages
+that don't support 64-bit under Mac OS X at all. It is therefore
+recommended that use the "--abi 32" option of "bootstrap"
+under Mac OS X Snow Leopard at the moment.
 
 
 Developer tools:
