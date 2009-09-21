@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/09/21 06:43:59 obache Exp $
 bin/libast-config
 include/libast.h
 include/libast/array.h
@@ -8,6 +8,7 @@ include/libast/iterator_if.h
 include/libast/linked_list.h
 include/libast/list_if.h
 include/libast/map_if.h
+include/libast/mbuff.h
 include/libast/obj.h
 include/libast/objpair.h
 include/libast/regexp.h
