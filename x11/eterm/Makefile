@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2009/09/20 12:51:42 obache Exp $
+# $NetBSD: Makefile,v 1.59 2009/09/21 07:29:30 obache Exp $
 
-DISTNAME=	Eterm-0.9.4
+DISTNAME=	Eterm-0.9.5
 PKGNAME=	${DISTNAME:S/^E/e/}
-PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eterm/}
-DISTFILES=	${DEFAULT_DISTFILES} ${PIXMAP_FILES}
+DISTFILES=	${DEFAULT_DISTFILES} ${DEFAULT_DISTFILES:S/Eterm-/Eterm-bg-/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eterm.org/
@@ -13,17 +12,13 @@ COMMENT=	Enlightened terminal emulator for the X Window System
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-SITES.Eterm-bg-scale-1.tar.gz=	${MASTER_SITE_BACKUP}
-SITES.Eterm-bg-scale-2.tar.gz=	${MASTER_SITE_BACKUP}
-SITES.Eterm-bg-tile.tar.gz=	${MASTER_SITE_BACKUP}
-
-PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
-			Eterm-bg-tile.tar.gz
-
 USE_TOOLS+=		perl:run
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--enable-multi-charset=unicode
+CONFIGURE_ARGS+=	--enable-auto-encoding
 
 PKG_SYSCONFSUBDIR=	Eterm
 OWN_DIRS=		${PKG_SYSCONFDIR}/themes
@@ -44,7 +39,7 @@ SPECIAL_PERMS=		${PREFIX}/bin/Eterm ${SETUID_ROOT_PERMS}
 .include "options.mk"
 
 pre-extract:
-	${LN} -sf ${WRKSRC} ${WRKDIR}/Eterm
+	${LN} -sf ${WRKSRC}/bg ${WRKDIR}/bg
 
 .include "../../devel/libast/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
