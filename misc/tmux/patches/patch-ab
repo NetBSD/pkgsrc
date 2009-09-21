@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2009/07/08 20:59:11 hasso Exp $
+$NetBSD: patch-ab,v 1.5 2009/09/21 10:55:35 hasso Exp $
 
---- configure.orig	2009-07-08 23:25:25 +0300
-+++ configure	2009-07-08 23:27:03 +0300
-@@ -157,7 +157,7 @@ SRCS+= osdep-darwin.c \
+--- configure.orig	2009-09-20 20:51:54 +0300
++++ configure	2009-09-21 09:18:07 +0300
+@@ -193,7 +193,7 @@ SRCS+= osdep-darwin.c \
  EOF
  	;;
  # ------------------------------------------------------------------------------
@@ -10,21 +10,21 @@ $NetBSD: patch-ab,v 1.4 2009/07/08 20:59:11 hasso Exp $
 +    FreeBSD)
  	cat <<EOF >>$CONFIG_H
  #define HAVE_ASPRINTF
- #define HAVE_DAEMON
-@@ -180,6 +180,32 @@ SRCS+= osdep-freebsd.c \
- LIBS+= -lcrypt -lutil
+ #define HAVE_BZERO
+@@ -225,6 +225,38 @@ SRCS+= osdep-freebsd.c \
  EOF
  	;;
-+
-+# ------------------------------------------------------------------------------
+ # ------------------------------------------------------------------------------
 +    DragonFly)
 +	cat <<EOF >>$CONFIG_H
 +#define HAVE_ASPRINTF
++#define HAVE_BZERO
 +#define HAVE_DAEMON
 +#define HAVE_FGETLN
 +#define HAVE_FORKPTY
 +#define HAVE_GETOPT
 +#define HAVE_LIBUTIL_H
++#define HAVE_LOGIN_CAP
 +#define HAVE_PATHS_H
 +#define HAVE_POLL
 +#define HAVE_PROGNAME
@@ -33,14 +33,20 @@ $NetBSD: patch-ab,v 1.4 2009/07/08 20:59:11 hasso Exp $
 +#define HAVE_STRLCAT
 +#define HAVE_STRLCPY
 +#define HAVE_STRTONUM
++#define HAVE_STRSEP
++#define HAVE_TREE_H
++#define HAVE_U_INT
 +EOF
 +	cat <<EOF >>$CONFIG_MK
++LIBS+= -lcurses -lcrypt -lutil
 +SRCS+= osdep-unknown.c \
-+	compat/vis.c
-+LIBS+= -lcrypt -lutil
++	compat/vis.c \
++	compat/unvis.c \
++	compat/imsg-buffer.c \
++	compat/imsg.c
 +EOF
 +	;;
-+
- # ------------------------------------------------------------------------------
++# ------------------------------------------------------------------------------
      NetBSD)
  	cat <<EOF >>$CONFIG_H
+ #define HAVE_ASPRINTF
