@@ -350,6 +350,7 @@ perl			Enable Perl support.
 pgsql			Enable PostgreSQL support.
 pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
+pkcs11			Use certificate-on-a-stick (or card) support.
 png			Enable PNG support.
 postfix-milter		Build the milter with support for the Postfix MTA.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
