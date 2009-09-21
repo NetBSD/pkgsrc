@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3785 2009/09/21 07:29:45 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3786 2009/09/21 10:56:52 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4923,3 +4923,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/texlive-tetex to 2008nb4 [minskim 2009-09-20]
 	Updated devel/libast to 0.7 [obache 2009-09-21]
 	Updated x11/eterm to 0.9.5 [obache 2009-09-21]
+	Updated misc/tmux to 1.0 [hasso 2009-09-21]
