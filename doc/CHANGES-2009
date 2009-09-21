@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3786 2009/09/21 10:56:52 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3787 2009/09/21 17:36:29 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4924,3 +4924,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libast to 0.7 [obache 2009-09-21]
 	Updated x11/eterm to 0.9.5 [obache 2009-09-21]
 	Updated misc/tmux to 1.0 [hasso 2009-09-21]
+	Updated editors/vim-share to 7.2.262 [martti 2009-09-21]
