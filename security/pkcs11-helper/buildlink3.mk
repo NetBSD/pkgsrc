@@ -1,11 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.1 2009/09/15 20:03:47 spz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/09/21 12:33:31 spz Exp $
 
 BUILDLINK_TREE+=	pkcs11-helper
 
 .if !defined(PKCS11_HELPER_BUILDLINK3_MK)
 PKCS11_HELPER_BUILDLINK3_MK:=
 
-BUILDLINK_DEPMETHOD.pkcs11-helper?=	build
 BUILDLINK_API_DEPENDS.pkcs11-helper+=	pkcs11-helper>=1.06
 BUILDLINK_PKGSRCDIR.pkcs11-helper?=	../../security/pkcs11-helper
 
