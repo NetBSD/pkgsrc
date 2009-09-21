@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.7 2009/09/21 17:26:46 sno Exp $
+
+FreeBSD doesn't define off64_t
+
+--- esddsp.c.orig	2009-09-19 19:15:30.000000000 +0200
++++ esddsp.c	2009-09-19 19:22:16.000000000 +0200
+@@ -70,6 +70,7 @@
+ 
+ #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__bsdi__)
+ typedef unsigned long request_t;
++typedef off_t off64_t;
+ #else
+ typedef int request_t;
+ #endif
