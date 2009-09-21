@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/03/07 02:30:41 joerg Exp $
+$NetBSD: distinfo,v 1.5 2009/09/21 06:43:59 obache Exp $
 
-SHA1 (libast-0.6.1.tar.gz) = 894b9dda8e6f971e0192b78d05dc4812839a01cb
-RMD160 (libast-0.6.1.tar.gz) = 85d6a6433fe12c81d120adf7e6567c0676d26b8c
-Size (libast-0.6.1.tar.gz) = 356881 bytes
-SHA1 (patch-aa) = ae46e2d08170f491d13f573ca075166c3f6e1a2a
+SHA1 (libast-0.7.tar.gz) = 8449049642c5a945336a326b8d512e4d261232d0
+RMD160 (libast-0.7.tar.gz) = 82dedafc23668f0bbecbf09433676d4b31e9e154
+Size (libast-0.7.tar.gz) = 508654 bytes
