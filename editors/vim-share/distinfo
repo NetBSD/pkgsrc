@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.115 2009/09/12 15:34:38 martti Exp $
+$NetBSD: distinfo,v 1.116 2009/09/21 17:35:55 martti Exp $
 
 SHA1 (vim7.2/7.2.001-100.gz) = 36c684cca2e78243bc7f0d3418eee8228fad8ec5
 RMD160 (vim7.2/7.2.001-100.gz) = 22df0a2380e486b83ef7406ef684e4ae2125fbba
@@ -168,6 +168,30 @@ Size (vim7.2/7.2.253) = 4223 bytes
 SHA1 (vim7.2/7.2.254) = 6a055d77fb5fce70f4878e5c3639fbe2a4c8b7a7
 RMD160 (vim7.2/7.2.254) = 82dcf6a8d9147f8a96c2dbcc84499adf0c1e8889
 Size (vim7.2/7.2.254) = 1654 bytes
+SHA1 (vim7.2/7.2.255) = 019c9e887db706760310da56da2ae2974ef77ded
+RMD160 (vim7.2/7.2.255) = 6469ee9c85e8b55188e9d5196c2f26665b6339cd
+Size (vim7.2/7.2.255) = 1870 bytes
+SHA1 (vim7.2/7.2.256) = 8329a8b42b486d9a70f61dbf145320665abe5719
+RMD160 (vim7.2/7.2.256) = 798ae68117427aa95ef440c430387b244957b754
+Size (vim7.2/7.2.256) = 1783 bytes
+SHA1 (vim7.2/7.2.257) = b54212f5d814638f78c56466f2898c9725b3fb8d
+RMD160 (vim7.2/7.2.257) = d2d096891aa4c750fd7f7b8a5c45b58b6cd92adb
+Size (vim7.2/7.2.257) = 2092 bytes
+SHA1 (vim7.2/7.2.258) = 93c8eaa0ca672d18a48390a446d276d955a10e49
+RMD160 (vim7.2/7.2.258) = 50e5a2f7322ba9580bf2e008d6269767a6225908
+Size (vim7.2/7.2.258) = 1989 bytes
+SHA1 (vim7.2/7.2.259) = 4276e3dc722f20c65141026fef1e0f8845c6d0be
+RMD160 (vim7.2/7.2.259) = c35c5d5852c5bd33d796665e17bb636b5688f4a3
+Size (vim7.2/7.2.259) = 5393 bytes
+SHA1 (vim7.2/7.2.260) = a17e2de7be82fa743b5fe434727d6cac236d9398
+RMD160 (vim7.2/7.2.260) = efb3cb4840ec3bbedd327cef46c8f5744036dc75
+Size (vim7.2/7.2.260) = 5431 bytes
+SHA1 (vim7.2/7.2.261) = ef2fdeacbe8dd4e3a0bbb0f2d468a8e1f81beb58
+RMD160 (vim7.2/7.2.261) = ba15501f98c7a3464b374074090782457547c08a
+Size (vim7.2/7.2.261) = 2515 bytes
+SHA1 (vim7.2/7.2.262) = 79e4af9dd2afca8622a1d8f6f458f6b750f2c339
+RMD160 (vim7.2/7.2.262) = e69c6d1db7c01725fe978232c318c1e8f0ea0d95
+Size (vim7.2/7.2.262) = 5652 bytes
 SHA1 (vim7.2/vim-7.2-extra.tar.gz) = 6a17629093e59958bff336b6c122dea1b8b1b649
 RMD160 (vim7.2/vim-7.2-extra.tar.gz) = 05976466c8a6c1bd2fb2b1d58eb4613947de07df
 Size (vim7.2/vim-7.2-extra.tar.gz) = 720290 bytes
