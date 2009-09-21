@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.295 2009/09/13 13:28:46 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.296 2009/09/21 10:56:08 tron Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -123,7 +123,25 @@ LOWER_OPSYS?=		bsdi
 
 .elif ${OPSYS} == "Darwin"
 LOWER_OPSYS?=		darwin
+.if empty(OS_VERSION:M[1-9].*.*)
+# Determine the ABI under Mac OS X Snow Leopard and adjust
+# the machine archicture accordingly.
+.  if !defined(ABI)
+_SYSCTL_HW_OPTIONAL_X86_64!=	/usr/sbin/sysctl -n hw.optional.x86_64
+.    if ${_SYSCTL_HW_OPTIONAL_X86_64} == "1"
+ABI=	64
+.else
+ABI=	32
+.    endif
+.  endif
+.if ${ABI} == "32"
+LOWER_ARCH=	i386
+.else
+LOWER_ARCH=	x86_64
+.endif
+.else
 LOWER_ARCH!=		${UNAME} -p
+.endif
 MACHINE_ARCH=		${LOWER_ARCH}
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 LOWER_OPSYS_VERSUFFIX=	${LOWER_OS_VERSION:C/([0-9]*).*/\1/}
