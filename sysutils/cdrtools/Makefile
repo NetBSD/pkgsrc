@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/09/09 13:45:13 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2009/09/22 19:04:44 hasso Exp $
 
 DISTNAME=	cdrtools-2.01.01a64
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
@@ -88,6 +88,8 @@ do-configure:
 			ln -sf i386-$$suffix ${MACHINE}-$$suffix;	\
 		fi;							\
 	done
+	ln -sf i386-freebsd-cc.rul amd64-dragonfly-cc.rul
+	ln -sf i386-freebsd-gcc.rul amd64-dragonfly-gcc.rul
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${MAKE_PROGRAM} config
 
 post-build:
