@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2009/03/16 10:15:23 tron Exp $
+# $NetBSD: options.mk,v 1.8 2009/09/22 14:02:56 tron Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.milter-greylist
 PKG_OPTIONS_REQUIRED_GROUPS=	mta
@@ -66,6 +66,7 @@ PKG_GECOS.postfix=	Postfix User
 PKG_HOME.postfix=	${POSTFIX_QUEUE_DIR}
 
 MILTER_USER=		postfix
+MILTER_GROUP=		postfix
 .endif
 
 ###
@@ -77,6 +78,7 @@ PKG_USERS=		smmsp:smmsp
 PKG_GECOS.smmsp=	Sendmail Message Submission Program
 
 MILTER_USER=		smmsp
+MILTER_GROUP=		smmsp
 .endif
 
 ###
