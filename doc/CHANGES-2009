@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3803 2009/09/22 17:48:14 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3804 2009/09/22 17:57:52 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4941,3 +4941,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-Events to 0.07 [sno 2009-09-22]
 	Updated devel/p5-ExtUtils-Manifest to 1.57 [sno 2009-09-22]
 	Updated devel/p5-Mouse to 0.32 [sno 2009-09-22]
+	Updated devel/p5-Test-Class to 0.33 [sno 2009-09-22]
