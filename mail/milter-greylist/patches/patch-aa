@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2009/03/16 10:15:23 tron Exp $
+$NetBSD: patch-aa,v 1.3 2009/09/22 14:02:56 tron Exp $
 
 --- Makefile.in.orig	2008-09-27 00:35:44.000000000 +0100
 +++ Makefile.in	2009-03-15 20:41:49.000000000 +0000
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.2 2009/03/16 10:15:23 tron Exp $
  	) || ${TRUE}
  
 -install: install-daemon-to-bin install-man install-conf install-db
-+install: install-daemon-to-bin install-man install-db
++install: install-daemon-to-bin install-man
  
  depend:
  	${MKDEP} ${CPPFLAGS} ${CFLAGS} ${SRC}
