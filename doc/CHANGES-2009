@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3809 2009/09/22 18:46:49 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3810 2009/09/22 19:30:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4950,3 +4950,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added mail/p5-App-Siesh version 0.20 [sno 2009-09-22]
 	Added devel/p5-MooseX-ConfigFromFile version 0.02 [sno 2009-09-22]
 	Added devel/p5-MooseX-SimpleConfig version 0.03 [sno 2009-09-22]
+	Added devel/p5-Test-UseAllModules version 0.12 [sno 2009-09-22]
