@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/22 19:30:03 sno Exp $
+
+SHA1 (Test-UseAllModules-0.12.tar.gz) = a02b4a25f7e5e4c0240bb0f92216ebf038e73040
+RMD160 (Test-UseAllModules-0.12.tar.gz) = 4460e2bd099399eca56bb1259b2bd4d4272b0d9e
+Size (Test-UseAllModules-0.12.tar.gz) = 4379 bytes
