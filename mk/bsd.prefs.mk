@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.297 2009/09/21 15:28:03 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.298 2009/09/22 09:17:50 tron Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -123,7 +123,19 @@ LOWER_OPSYS?=		bsdi
 
 .elif ${OPSYS} == "Darwin"
 LOWER_OPSYS?=		darwin
+.if empty(OS_VERSION:M[1-9].*.*)
+_SYSCTL_HW_OPTIONAL_X86_64!=	/usr/sbin/sysctl -n hw.optional.x86_64
+.  if ${_SYSCTL_HW_OPTIONAL_X86_64} == "1"
+ABI=			64
+.else
+ABI=			32
+.  endif
+LOWER_ARCH.32=		i386
+LOWER_ARCH.64=		x86_64
+LOWER_ARCH=		${LOWER_ARCH.${ABI}}
+.else
 LOWER_ARCH!=		${UNAME} -p
+.endif
 MACHINE_ARCH=		${LOWER_ARCH}
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 LOWER_OPSYS_VERSUFFIX=	${LOWER_OS_VERSION:C/([0-9]*).*/\1/}
