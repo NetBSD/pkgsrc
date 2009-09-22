@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.9 2006/03/31 17:58:40 tron Exp $
+$NetBSD: patch-ag,v 1.10 2009/09/22 13:17:00 spz Exp $
 
---- control/pgpverify.in.orig	2006-03-20 04:14:57.000000000 +0000
-+++ control/pgpverify.in	2006-03-31 17:17:00.000000000 +0100
-@@ -127,7 +127,7 @@
+--- control/pgpverify.in.orig	2009-05-21 20:08:33.000000000 +0000
++++ control/pgpverify.in
+@@ -131,7 +131,7 @@
  # Path to pgp binary; for PGP 5.0, set the path to the pgpv binary.  If
  # you have INN and the script is able to successfully include your
- # innshellvars.pl file, the value of $inn::pgp will override this.
+ # INN::Config module, the value of $INN::Config::pgp will override this.
 -$pgp = '/usr/local/bin/pgp';
 +$pgp = ''@_PATH_PGP@';
  
