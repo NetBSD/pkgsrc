@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/06/06 04:38:29 snj Exp $
+$NetBSD: patch-aa,v 1.5 2009/09/22 14:48:47 asau Exp $
 
---- config/targets.orig	Thu Oct 10 12:02:10 2002
-+++ config/targets
-@@ -41,7 +41,7 @@ request ml-lex
+--- config/targets.orig	2007-07-23 23:48:33.000000000 +0400
++++ config/targets	2009-03-18 12:36:35.000000000 +0300
+@@ -91,7 +91,7 @@
  
  # build ML-Burg
  #
@@ -11,42 +11,36 @@ $NetBSD: patch-aa,v 1.4 2004/06/06 04:38:29 snj Exp $
  
  # pre-compile and install the remaining components of the SML/NJ library
  # (everything except smlnj-lib.cm, aka Util, itself)
-@@ -50,7 +50,7 @@ request smlnj-lib
+@@ -100,7 +100,7 @@
  
  # pre-compile and install CM "portable graph" utility library
  #
 -#request pgraph-util
 +request pgraph-util
  
- # pre-compile and install Concurrent ML, which is a library for message-passing
- # concurrency.
-@@ -65,12 +65,12 @@ request cml-lib
+ # pre-compile and install "Trace-Debug-Profile" utility library
+ # (provides simple back-trace- and coverage facilities)
+@@ -120,7 +120,7 @@
  # pre-compile and install eXene, which is a library for X-Windows programming.
  # EXene requires CML.
  #
 -#request eXene
 +request eXene
  
- # pre-compile and install the C-Kit, which is a library for parsing and
- # type-checking C programs
- #
--#request ckit
-+request ckit
- 
- # pre-compile and install the ML-NLFFI Library, which is the core of
- # a new foreign function interface (where "foreign" functions are
-@@ -79,7 +79,7 @@ request cml-lib
- # the new FFI.
- # This preview release currently works only under X86/Linux.
+ # pre-compile (certain) parts of MLRISC that are not already part of the SML/NJ
+ # compiler itself
+@@ -140,7 +140,7 @@
+ # This preview release currently works under X86/Linux, Sparc/Solaris,
+ # PPC/MacOSX, and X86/Win32.
  #
 -#request ml-nlffi-lib
 +request ml-nlffi-lib
  
  # build ML-NLFFI-Gen, a program generator tool used in conjunction with
  # the new "NLFFI" foreign function interface.  The tool generates ML
-@@ -87,13 +87,13 @@ request cml-lib
- # (Requires ckit!)
- # This preview release currently works only under X86/Linux.
+@@ -149,13 +149,13 @@
+ # This preview release currently works under X86/Linux, Sparc/Solaris,
+ # PPC/MacOSX, and X86/Win32.
  #
 -#request ml-nlffigen
 +request ml-nlffigen
@@ -60,12 +54,12 @@ $NetBSD: patch-aa,v 1.4 2004/06/06 04:38:29 snj Exp $
  
  # Build and install the 'nowhere' program translator.
  # This tool translates programs with conditional patterns (where clauses) 
-@@ -101,7 +101,7 @@ request cml-lib
+@@ -163,7 +163,7 @@
  # (bad) documentation.
  # (Requires the mlrisc-tools library!)
  #
 -#request nowhere
 +request nowhere
  
- # Note: autoloading is always enabled.
- #   In order to customize what is being pre-registered for autoloading
+ # Build and install 'heap2asm' - an experimental component of
+ # a new facility for producing true stand-alone executables.
