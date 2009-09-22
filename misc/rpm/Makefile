@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2008/01/12 23:43:53 heinz Exp $
+# $NetBSD: Makefile,v 1.67 2009/09/22 08:37:15 sketch Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	6
@@ -33,6 +33,13 @@ MAKE_FLAGS+=		ROOT=${DESTDIR}
 RPMDIR=			${RPM_DB_PREFIX}/lib/rpm
 FILES_SUBST+=		RPMDIR=${RPMDIR:Q}
 
+.include "../../mk/bdb.buildlink3.mk"
+
+# Ugly hack, but easier than fixing our bdb handling / rpm configure for now
+.if defined(USE_DB185) && !empty(USE_DB185:M[yY][eE][sS])
+LDFLAGS+=		-ldb
+.endif
+
 .include "../../mk/bsd.prefs.mk"
 
 post-configure:
@@ -55,5 +62,4 @@ BROKEN_GETTEXT_DETECTION=	yes
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
