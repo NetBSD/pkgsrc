@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3796 2009/09/22 13:25:52 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3797 2009/09/22 14:49:23 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4934,3 +4934,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed www/firefox3 successor www/firefox [tnn 2009-09-22]
 	Updated news/inn to 2.5.0 [spz 2009-09-22]
 	Updated graphics/blender to 2.49b [hasso 2009-09-22]
+	Updated lang/smlnj to 110.71 [asau 2009-09-22]
