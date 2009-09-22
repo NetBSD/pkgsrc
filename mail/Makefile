@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.378 2009/09/17 17:09:37 reed Exp $
+# $NetBSD: Makefile,v 1.379 2009/09/22 18:23:18 sno Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -159,6 +159,7 @@ SUBDIR+=	nmh
 SUBDIR+=	nullmailer
 SUBDIR+=	oe2mbx
 SUBDIR+=	offlineimap
+SUBDIR+=	p5-App-Siesh
 SUBDIR+=	p5-Catalyst-View-Email
 SUBDIR+=	p5-Email-Abstract
 SUBDIR+=	p5-Email-Address
