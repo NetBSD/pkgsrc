@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3814 2009/09/22 20:05:34 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3815 2009/09/22 20:09:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4955,3 +4955,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-SQL-Abstract to 1.60 [sno 2009-09-22]
 	Updated devel/p5-Class-ISA to 0.34 [sno 2009-09-22]
 	Updated devel/p5-MooseX-Method-Signatures to 0.27 [sno 2009-09-22]
+	Updated games/rftg to 0.5.3 [wiz 2009-09-22]
