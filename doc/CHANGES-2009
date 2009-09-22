@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3788 2009/09/22 01:42:20 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3789 2009/09/22 02:06:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/tmux to 1.0 [hasso 2009-09-21]
 	Updated editors/vim-share to 7.2.262 [martti 2009-09-21]
 	Updated www/typolight27-translations to 20090920 [taca 2009-09-22]
+	Updated math/mathomatic to 14.5.5 [minskim 2009-09-22]
