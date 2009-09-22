@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2008/08/06 17:16:49 mjl Exp $
-${PYSITELIB}/MySQL_python-1.2.2-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/MySQL_python-1.2.2-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/MySQL_python-1.2.2-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/MySQL_python-1.2.2-py${PYVERSSUFFIX}.egg-info/native_libs.txt
-${PYSITELIB}/MySQL_python-1.2.2-py${PYVERSSUFFIX}.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.6 2009/09/22 13:09:30 tron Exp $
+${PYSITELIB}/MySQL_python-${DIST_VERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/MySQL_python-${DIST_VERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/MySQL_python-${DIST_VERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/MySQL_python-${DIST_VERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/MySQLdb/__init__.py
 ${PYSITELIB}/MySQLdb/__init__.pyc
 ${PYSITELIB}/MySQLdb/__init__.pyo
