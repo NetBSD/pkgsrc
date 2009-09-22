@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2009/08/28 20:46:18 hasso Exp $
+$NetBSD: distinfo,v 1.28 2009/09/22 13:23:25 hasso Exp $
 
-SHA1 (blender-2.49a.tar.gz) = 59f5be96eda874bb901390f55a70d58cf8e0b979
-RMD160 (blender-2.49a.tar.gz) = f37100c7a02c75b622b8e055f32f06e064a62de2
-Size (blender-2.49a.tar.gz) = 23039535 bytes
+SHA1 (blender-2.49b.tar.gz) = 43f71e7de4efe79c518d45f4b5a04e03c28d5fc5
+RMD160 (blender-2.49b.tar.gz) = 5b641de7b41af5e4186c9721b66eddc6870f9fbc
+Size (blender-2.49b.tar.gz) = 22918377 bytes
 SHA1 (patch-ab) = afc00773b4e00f1f63fce2bd2203dbab0b0bfc9f
 SHA1 (patch-ac) = dcfa14519404915a69bd626c8a5a6029d2535ca2
 SHA1 (patch-ad) = ee070c6e61585c5ee657f8aa0cd210c15f73bcc9
