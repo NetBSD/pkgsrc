@@ -1,6 +1,6 @@
-$NetBSD: CHANGES-2009,v 1.3821 2009/09/22 20:57:10 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3822 2009/09/22 21:28:36 agc Exp $
 
-Changes to the packages collection and infrastructure in 2009:
+Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
 	Updated databases/py-postgresql to 4.0 [darcy 2009-01-01]
 	Updated security/amavisd-new to 2.6.2 [obache 2009-01-01]
@@ -4962,3 +4962,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Math-GMP to 2.06 [sno 2009-09-22]
 	Updated geography/p5-Geo-Distance to 0.16 [sno 2009-09-22]
 	Updated devel/p5-Mac-Carbon to 0.80 [sno 2009-09-22]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2009Q3 branch [agc 2009-09-22]
