@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.6 2009/09/22 13:23:57 tnn Exp $
+
+--- libbase/utility.h.orig	2008-06-06 22:07:55.000000000 +0200
++++ libbase/utility.h
+@@ -29,6 +29,7 @@
+ #include <typeinfo>
+ #include <cmath>
+ #include <boost/cstdint.hpp>
++#include <stdlib.h>
+ 
+ #if defined(__GNUC__) && __GNUC__ > 2
+ #  include <cxxabi.h>
