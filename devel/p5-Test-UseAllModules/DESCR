@@ -1,0 +1,4 @@
+Sick of writing 00_load.t (or something like that) that do use_ok() for every
+written module? Even sicker of updating 00_load.t every time adding another file
+to the distro? This module reads MANIFEST to find modules to be tested and does
+use_ok() for each of them. Now all to do is keeping MANIFEST up to date.
