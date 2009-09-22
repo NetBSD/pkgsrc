@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.362 2009/09/22 17:45:05 taca Exp $
+# $NetBSD: Makefile,v 1.363 2009/09/22 19:38:08 sno Exp $
 #
 
 COMMENT=	Security tools
@@ -216,6 +216,7 @@ SUBDIR+=	p5-Net-SSLeay
 SUBDIR+=	p5-OpenSSL
 SUBDIR+=	p5-SHA
 SUBDIR+=	p5-String-Random
+SUBDIR+=	p5-Text-Password-Pronounceable
 SUBDIR+=	p5-Tie-EncryptedHash
 SUBDIR+=	p5-pcsc
 SUBDIR+=	pakchois
