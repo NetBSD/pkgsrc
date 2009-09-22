@@ -1,7 +1,7 @@
-$NetBSD: patch-dd,v 1.1 2009/08/31 10:18:49 hasso Exp $
+$NetBSD: patch-dd,v 1.2 2009/09/22 12:18:33 tnn Exp $
 
---- configure.orig	2009-07-17 03:56:22 +0300
-+++ configure	2009-08-30 19:37:40 +0300
+--- configure.orig	2009-07-17 02:56:22.000000000 +0200
++++ configure
 @@ -228,6 +228,15 @@ if [ "$cpu" = "i386" -o "$cpu" = "x86_64
      kqemu="yes"
  fi
@@ -23,7 +23,7 @@ $NetBSD: patch-dd,v 1.1 2009/08/31 10:18:49 hasso Exp $
        prefix="/usr/local"
    fi
 -  mansuffix="/share/man"
-+  mansuffix="/man"
++  #mansuffix="/share/man"
    datasuffix="/share/qemu"
    docsuffix="/share/doc/qemu"
    binsuffix="/bin"
