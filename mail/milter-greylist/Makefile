@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/09/01 22:03:30 tron Exp $
+# $NetBSD: Makefile,v 1.46 2009/09/22 14:02:56 tron Exp $
 
 DISTNAME=	milter-greylist-4.2.3
 CATEGORIES=	mail
@@ -24,10 +24,14 @@ RCD_SCRIPTS=		milter-greylist
 
 CONFIGURE_ARGS+=	--with-user=${MILTER_USER}
 BUILD_DEFS+=		MILTER_USER
+BUILD_DEFS+=		MILTER_GROUP
 FILES_SUBST+=		MILTER_USER=${MILTER_USER:Q}
+FILES_SUBST+=		MILTER_GROUP=${MILTER_GROUP:Q}
 
 INSTALLATION_DIRS+=	share/doc/milter-greylist
 INSTALLATION_DIRS+=	share/examples/milter-greylist
+
+OWN_DIRS_PERMS+=	${VARBASE}/milter-greylist ${MILTER_USER} ${MILTER_GROUP} 0755
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README \
