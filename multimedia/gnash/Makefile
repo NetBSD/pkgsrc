@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2009/08/26 19:58:05 sno Exp $
+# $NetBSD: Makefile,v 1.22 2009/09/22 13:23:57 tnn Exp $
 #
 
 DISTNAME=		gnash-${VER}
 VER=			0.8.3
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_GNU:=gnash/${VER}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,7 +19,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bash gmake msgfmt pkg-config
-CONFIGURE_ARGS+=	--with-npapi-plugindir=${PREFIX}/lib/firefox/plugins
 # for appending below
 INSTALL_TARGET=		install
 
