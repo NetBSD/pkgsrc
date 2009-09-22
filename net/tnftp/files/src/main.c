@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.8 2008/04/29 05:46:09 martin Exp $	*/
+/*	$NetBSD: main.c,v 1.9 2009/09/22 20:39:18 tnn Exp $	*/
 /*	from	NetBSD: main.c,v 1.105 2007/05/22 05:16:48 lukem Exp	*/
 
 /*-
@@ -668,7 +668,7 @@ cmdscanner(void)
 					fprintf(ttyout, "%s ", p);
 			}
 			(void)fflush(ttyout);
-			num = getline(stdin, line, sizeof(line), NULL);
+			num = get_line(stdin, line, sizeof(line), NULL);
 			switch (num) {
 			case -1:	/* EOF */
 			case -2:	/* error */

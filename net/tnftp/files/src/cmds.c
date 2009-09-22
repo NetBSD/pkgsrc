@@ -1,4 +1,4 @@
-/*	$NetBSD: cmds.c,v 1.8 2008/04/29 05:46:09 martin Exp $	*/
+/*	$NetBSD: cmds.c,v 1.9 2009/09/22 20:39:18 tnn Exp $	*/
 /*	from	NetBSD: cmds.c,v 1.123 2007/05/24 05:05:18 lukem Exp	*/
 
 /*-
@@ -179,7 +179,7 @@ confirm(const char *cmd, const char *file)
 	while (1) {
 		fprintf(ttyout, "%s %s [anpqy?]? ", promptleft, promptright);
 		(void)fflush(ttyout);
-		if (getline(stdin, line, sizeof(line), &errormsg) < 0) {
+		if (get_line(stdin, line, sizeof(line), &errormsg) < 0) {
 			mflag = 0;
 			fprintf(ttyout, "%s; %s aborted\n", errormsg, cmd);
 			return (0);
@@ -774,7 +774,7 @@ fget(int argc, char *argv[])
 	argv[0] = "get";
 	mode = restart_point ? "r+" : "w";
 
-	while (getline(fp, buf, sizeof(buf), NULL) >= 0) {
+	while (get_line(fp, buf, sizeof(buf), NULL) >= 0) {
 		if (buf[0] == '\0')
 			continue;
 		argv[1] = buf;
