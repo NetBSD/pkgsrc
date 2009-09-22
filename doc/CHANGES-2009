@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3817 2009/09/22 20:29:29 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3818 2009/09/22 20:34:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4958,3 +4958,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/rftg to 0.5.3 [wiz 2009-09-22]
 	Updated devel/p5-local-lib to 1.4.7 [sno 2009-09-22]
 	Updated net/p5-SNMP-Info to 2.01 [sno 2009-09-22]
+	Updated net/p5-Nmap-Parser to 1.19 [sno 2009-09-22]
