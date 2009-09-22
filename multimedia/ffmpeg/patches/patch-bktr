@@ -1,7 +1,5 @@
-$NetBSD: patch-bktr,v 1.2 2009/06/12 16:25:34 ahoka Exp $
-
---- libavdevice/bktr.c.orig	2009-01-19 16:46:40.000000000 +0100
-+++ libavdevice/bktr.c
+--- libavdevice/bktr.c.orig	2009-01-19 15:46:40 +0000
++++ libavdevice/bktr.c	2009-09-21 11:29:29 +0000
 @@ -24,7 +24,11 @@
   * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
   */
@@ -14,3 +12,12 @@ $NetBSD: patch-bktr,v 1.2 2009/06/12 16:25:34 ahoka Exp $
  #include "libavformat/avformat.h"
  #if HAVE_DEV_BKTR_IOCTL_METEOR_H && HAVE_DEV_BKTR_IOCTL_BT848_H
  # include <dev/bktr/ioctl_meteor.h>
+@@ -32,7 +36,7 @@
+ #elif HAVE_MACHINE_IOCTL_METEOR_H && HAVE_MACHINE_IOCTL_BT848_H
+ # include <machine/ioctl_meteor.h>
+ # include <machine/ioctl_bt848.h>
+-#elif HAVE_DEV_VIDEO_METEOR_IOCTL_METEOR_H && HAVE_DEV_VIDEO_METEOR_IOCTL_BT848_H
++#elif HAVE_DEV_VIDEO_METEOR_IOCTL_METEOR_H && HAVE_DEV_VIDEO_BKTR_IOCTL_BT848_H
+ # include <dev/video/meteor/ioctl_meteor.h>
+ # include <dev/video/bktr/ioctl_bt848.h>
+ #elif HAVE_DEV_IC_BT8XX_H
