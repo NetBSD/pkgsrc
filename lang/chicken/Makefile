@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2009/08/08 15:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2009/09/22 11:34:47 asau Exp $
 #
 
-DISTNAME=	chicken-4.1.0
+DISTNAME=	chicken-4.2.0
 CATEGORIES=	lang
 MASTER_SITES=	http://chicken.wiki.br/releases/${PKGVERSION_NOREV}/ \
 		http://galinha.ucpel.tche.br/releases/${PKGVERSION_NOREV}/ \
