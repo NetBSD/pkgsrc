@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/09/13 15:45:11 he Exp $
+$NetBSD: distinfo,v 1.5 2009/09/22 20:29:13 sno Exp $
 
-SHA1 (SNMP-Info-2.00.tar.gz) = 4a054ba7efd963e814165e7372f4c6ca42fc4d97
-RMD160 (SNMP-Info-2.00.tar.gz) = 37e54662e566934930d5d3186e8b1a2a686fb5bd
-Size (SNMP-Info-2.00.tar.gz) = 215550 bytes
+SHA1 (SNMP-Info-2.01.tar.gz) = b13c40a2417481f485a6e6f723ddd8c32a9fea99
+RMD160 (SNMP-Info-2.01.tar.gz) = ea382d425bf2ef5530c1f1829e9136374af7cf29
+Size (SNMP-Info-2.01.tar.gz) = 223580 bytes
