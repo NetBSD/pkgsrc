@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2007/10/04 05:19:16 adam Exp $
+$NetBSD: patch-ab,v 1.7 2009/09/22 20:19:30 tonio Exp $
 
 --- otherlibs/dbm/cldbm.c.orig	2003-07-08 15:50:31.000000000 +0200
 +++ otherlibs/dbm/cldbm.c
-@@ -21,10 +21,10 @@
+@@ -21,10 +21,11 @@
  #include <fail.h>
  #include <callback.h>
  
@@ -12,6 +12,7 @@ $NetBSD: patch-ab,v 1.6 2007/10/04 05:19:16 adam Exp $
 +#ifdef DBM_USES_DB
  #include <ndbm.h>
 +#else
++#define DB_DBM_HSEARCH 1
 +#include <db.h>
  #endif
  
