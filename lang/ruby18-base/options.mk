@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2009/01/31 16:07:23 taca Exp $
+# $NetBSD: options.mk,v 1.7 2009/09/22 13:32:35 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ruby
-PKG_SUPPORTED_OPTIONS=	ruby-build-ri-db
-PKG_SUGGESTED_OPTIONS=	ruby-build-ri-db
+PKG_SUPPORTED_OPTIONS=	readline ruby-build-ri-db
+PKG_SUGGESTED_OPTIONS=	readline ruby-build-ri-db
 
 .include "../../mk/bsd.options.mk"
 
