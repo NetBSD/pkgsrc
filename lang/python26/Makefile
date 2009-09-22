@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/09/21 13:06:43 tron Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/22 13:50:42 tron Exp $
 
 DISTNAME=	Python-2.6.2
 PKGNAME=	python26-2.6.2
@@ -109,7 +109,7 @@ PLIST.oss=	yes
 INSTALL_UNSTRIPPED=	yes
 
 PLIST_VARS+=	nav
-.  if !empty(MACHINE_PLATFORM:MDarwin-[0-9].*-*)
+.  if ${ABI} != "64"
 PLIST.nav=	yes
 .  endif
 .endif
