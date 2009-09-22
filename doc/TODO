@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8483 2009/09/22 02:06:23 minskim Exp $
+$NetBSD: TODO,v 1.8484 2009/09/22 06:51:44 taca Exp $
 
 Suggested new packages
 ======================
@@ -978,6 +978,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
+	o php5-5.2.11
 	o php5-5.3.0
 	o phpmyadmin-3.2.2
 	o phylip-3.68
