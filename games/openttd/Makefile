@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2009/07/22 09:01:29 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2009/09/22 12:02:36 ahoka Exp $
 
-DISTNAME=	openttd-0.6.3-source
+DISTNAME=	openttd-0.7.2-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openttd/}
@@ -43,5 +43,6 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
