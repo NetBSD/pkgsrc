@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.11 2008/06/23 09:10:53 spz Exp $
+$NetBSD: patch-aa,v 1.12 2009/09/22 13:17:00 spz Exp $
 
---- configure.orig	2004-01-08 09:47:19.000000000 +1100
+--- configure.orig	2009-05-21 20:08:33.000000000 +0000
 +++ configure
-@@ -6522,7 +6521,7 @@ else
-   echo "$ac_t""no" 1>&6
+@@ -13549,7 +13549,7 @@ else
+   RANLIB="$ac_cv_prog_RANLIB"
  fi
  
 -for ac_prog in 'bison -y' byacc
 +for ac_prog in 'bison -y' byacc yacc
  do
- # Extract the first word of "$ac_prog", so it can be a program name with args.
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
