@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3819 2009/09/22 20:40:57 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3820 2009/09/22 20:50:41 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4960,3 +4960,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-SNMP-Info to 2.01 [sno 2009-09-22]
 	Updated net/p5-Nmap-Parser to 1.19 [sno 2009-09-22]
 	Updated math/p5-Math-GMP to 2.06 [sno 2009-09-22]
+	Updated geography/p5-Geo-Distance to 0.16 [sno 2009-09-22]
