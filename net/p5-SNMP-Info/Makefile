@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/10/19 19:18:43 he Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/22 20:29:13 sno Exp $
 #
 
-DISTNAME=	SNMP-Info-2.00
+DISTNAME=	SNMP-Info-2.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5sni
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SNMP/}
@@ -12,6 +11,7 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/SNMP-Info/
 #HOMEPAGE=	http://snmp-info.sourceforge.net/
 COMMENT=	Perl5 object oriented interface to SNMP informations
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
