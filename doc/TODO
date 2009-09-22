@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8488 2009/09/22 15:09:19 asau Exp $
+$NetBSD: TODO,v 1.8489 2009/09/22 20:09:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1110,7 +1110,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rdp-1.6
 	o rep-gtk-0.90.0
 	o resize_image-0.7
-	o rftg-0.5.3
 	o rhythmbox-0.12.5
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
