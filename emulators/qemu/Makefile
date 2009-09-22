@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2009/08/31 14:30:50 tnn Exp $
+# $NetBSD: Makefile,v 1.59 2009/09/22 12:18:33 tnn Exp $
 #
 
 DISTNAME=		qemu-0.10.6
@@ -26,7 +26,7 @@ CFLAGS+=		-I${WRKSRC} -I${WRKSRC}/slirp
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ENV+=		PKGMANDIR=${PKGMANDIR}
+CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX:Q}/share/qemu
 
@@ -69,8 +69,6 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
 		${DESTDIR}${PREFIX}/share/doc/qemu/
-	${INSTALL_MAN} ${WRKSRC}/qemu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/qemu-img.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
