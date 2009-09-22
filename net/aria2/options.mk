@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.8 2009/07/03 10:31:30 drochner Exp $
+# $NetBSD: options.mk,v 1.9 2009/09/22 12:38:45 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.aria2
 
 PKG_OPTIONS_GROUP.ssl=		gnutls ssl
 PKG_OPTIONS_REQUIRED_GROUPS=	ssl
 
-PKG_SUPPORTED_OPTIONS=		sqlite firefox3
-PKG_SUGGESTED_OPTIONS=		ssl
+PKG_SUPPORTED_OPTIONS=		sqlite
+PKG_SUGGESTED_OPTIONS=		ssl sqlite
 ###
 ### XXX Remove this in the future [2008-04-15 bjs]
 ###
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--with-openssl=no
 ###
 ###	firefox3 cookie	support via sqlite3
 ###
-.if !empty(PKG_OPTIONS:Mfirefox3) || !empty(PKG_OPTIONS:Msqlite)
+.if !empty(PKG_OPTIONS:Msqlite)
 CONFIGURE_ARGS+=	--with-sqlite3
 CONFIGURE_ARGS+=	--with-sqlite3-prefix=${BUILDLINK_PREFIX.sqlite:Q}
 .  include "../../databases/sqlite3/buildlink3.mk"
