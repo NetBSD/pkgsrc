@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.5 2004/07/24 23:55:28 grant Exp $
+$NetBSD: patch-ai,v 1.6 2009/09/22 13:17:00 spz Exp $
 
---- include/dbz.h.orig	2004-01-08 09:47:19.000000000 +1100
+--- include/dbz.h.orig	2009-05-21 20:08:33.000000000 +0000
 +++ include/dbz.h
 @@ -38,7 +38,7 @@ typedef struct {
      bool             nonblock;

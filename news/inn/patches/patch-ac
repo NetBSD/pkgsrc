@@ -1,36 +1,13 @@
-$NetBSD: patch-ac,v 1.10 2008/06/23 09:10:53 spz Exp $
+$NetBSD: patch-ac,v 1.11 2009/09/22 13:17:00 spz Exp $
 
---- Makefile.global.in.orig	2008-06-22 19:21:59.000000000 +0000
+--- Makefile.global.in.orig	2009-05-21 20:08:33.000000000 +0000
 +++ Makefile.global.in
-@@ -258,19 +258,19 @@ INSTALL         = $(top)/support/install
+@@ -302,7 +302,7 @@ INSTALL		= $(top)/support/install-sh -c
  ##  files like active and newsgroups that should have the same permissions as
  ##  article files.
  
--LI_SPRI         = $(LIBTOOL) $(INSTALL) -o root -g $(NEWSGROUP) -m 4550 -B .OLD
--LI_XPRI         = $(LIBTOOL) $(INSTALL) $(OWNER) -m 0550 -B .OLD
--LI_XPUB         = $(LIBTOOL) $(INSTALL) $(OWNER) -m 0555 -B .OLD
--
--LI_INEWS        = $(LIBTOOL) $(INSTALL) $(OWNER) -m $(INEWSMODE) -B .OLD
--LI_RNEWS        = $(LIBTOOL) $(INSTALL) $(ROWNER) -m $(RNEWSMODE) -B .OLD
--
--CP_RPRI         = $(INSTALL) $(OWNER) -m 0640 -B .OLD
--CP_RPUB         = $(INSTALL) $(OWNER) -m 0644 -B .OLD
--CP_XPRI         = $(INSTALL) $(OWNER) -m 0550 -B .OLD
--CP_XPUB         = $(INSTALL) $(OWNER) -m 0555 -B .OLD
-+LI_SPRI         = $(LIBTOOL) $(INSTALL) -o root -g $(NEWSGROUP) -m 4550
-+LI_XPRI         = $(LIBTOOL) $(INSTALL) $(OWNER) -m 0550
-+LI_XPUB         = $(LIBTOOL) $(INSTALL) $(OWNER) -m 0555
-+
-+LI_INEWS        = $(LIBTOOL) $(INSTALL) $(OWNER) -m $(INEWSMODE)
-+LI_RNEWS        = $(LIBTOOL) $(INSTALL) $(ROWNER) -m $(RNEWSMODE)
-+
-+CP_RPRI         = $(INSTALL) $(OWNER) -m 0640
-+CP_RPUB         = $(INSTALL) $(OWNER) -m 0644
-+CP_XPRI         = $(INSTALL) $(OWNER) -m 0550
-+CP_XPUB         = $(INSTALL) $(OWNER) -m 0555
+-BACKUP_OPTION	= -B .OLD
++#BACKUP_OPTION	= -B .OLD
  
--CP_DATA	        = $(INSTALL) $(OWNER) -m $(FILEMODE) -B .OLD
-+CP_DATA	        = $(INSTALL) $(OWNER) -m $(FILEMODE)
- 
- ##  How to install man pages.  Pick one of SOURCE, BSD4.4, NROFF-PACK, or
- ##  NROFF-PACK-SCO.  Used by doc/man/putman.sh; read that script for more
+ LI_SPRI		= $(LIBTOOLINST) $(INSTALL) -o root -g $(RUNASGROUP) -m 4550 $(BACKUP_OPTION)
+ LI_XPRI		= $(LIBTOOLINST) $(INSTALL) $(OWNER) -m 0550 $(BACKUP_OPTION)

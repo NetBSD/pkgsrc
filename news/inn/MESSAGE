@@ -1,19 +1,15 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2008/09/03 06:34:32 spz Exp $
+$NetBSD: MESSAGE,v 1.6 2009/09/22 13:17:00 spz Exp $
 
-The following programs have been installed suid root on your machine:
+The following program has been installed suid root on your machine:
 
-	${PREFIX}/${INN_PATHBIN}/inndstart
-	${PREFIX}/${INN_PATHBIN}/startinnfeed
+	${PREFIX}/${INN_PATHBIN}/innbind
 
 ---------------------------------------------------------------------------
-UPDATE WARNING - UPDATE WARNING - UPDATE WARNING - UPDATE WARNING
+If you are upgrading from 2.4.6 or earlier: this is a major version bump.
+Config files have changed. Read ${PREFIX}/share/doc/inn/NEWS for details.
 
-The directory structure of the package has changed.
-
-INNs etc is now in ${PREFIX}/etc/inn
-the binaries are now in ${PREFIX}/${INN_PATHBIN}
-
-UPDATE WARNING - UPDATE WARNING - UPDATE WARNING - UPDATE WARNING
+If this is a first install: ${PREFIX}/share/doc/inn/INSTALL will help you
+getting set up.
 ---------------------------------------------------------------------------
 ===========================================================================
