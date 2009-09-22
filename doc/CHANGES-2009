@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3789 2009/09/22 02:06:23 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.3790 2009/09/22 07:23:53 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4927,3 +4927,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/vim-share to 7.2.262 [martti 2009-09-21]
 	Updated www/typolight27-translations to 20090920 [taca 2009-09-22]
 	Updated math/mathomatic to 14.5.5 [minskim 2009-09-22]
+	Updated net/dhcpcd to 5.1.1 [roy 2009-09-22]
