@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1235 2009/09/22 18:39:54 sno Exp $
+# $NetBSD: Makefile,v 1.1236 2009/09/22 18:47:32 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -727,6 +727,7 @@ SUBDIR+=	p5-MooseX-Param
 SUBDIR+=	p5-MooseX-Params-Validate
 SUBDIR+=	p5-MooseX-Role-Parameterized
 SUBDIR+=	p5-MooseX-SemiAffordanceAccessor
+SUBDIR+=	p5-MooseX-SimpleConfig
 SUBDIR+=	p5-MooseX-Singleton
 SUBDIR+=	p5-MooseX-StrictConstructor
 SUBDIR+=	p5-MooseX-Traits
