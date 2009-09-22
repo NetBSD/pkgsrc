@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.298 2009/09/22 09:17:50 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.299 2009/09/22 19:19:29 hasso Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -145,7 +145,11 @@ LOWER_VENDOR?=		apple
 OS_VERSION:=		${OS_VERSION:C/-.*$//}
 LOWER_OPSYS?=		dragonfly
 LOWER_ARCH!=		${UNAME} -p
+.  if ${LOWER_ARCH} == "amd64"
+MACHINE_ARCH=		x86_64
+.  else
 MACHINE_ARCH=		${LOWER_ARCH}
+.  endif
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 LOWER_VENDOR?=		pc
 
