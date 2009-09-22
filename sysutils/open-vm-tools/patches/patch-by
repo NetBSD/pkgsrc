@@ -1,0 +1,60 @@
+$NetBSD: patch-by,v 1.1 2009/09/22 07:08:05 taca Exp $
+
+--- lib/hgfs/hgfsUtil.c.orig	2008-08-08 16:01:54.000000000 +0900
++++ lib/hgfs/hgfsUtil.c
+@@ -95,24 +95,19 @@ int
+ HgfsConvertFromNtTimeNsec(struct timespec *unixTime, // OUT: Time in UNIX format
+ 			  uint64 ntTime) // IN: Time in Windows NT format
+ {
+-#ifndef VM_X86_64
+    uint32 sec;
+    uint32 nsec;
+ 
+    ASSERT(unixTime);
+-   /* We assume that time_t is 32bit */
+-   ASSERT_ON_COMPILE(sizeof (unixTime->tv_sec) == 4);
+ 
+-   /* Cap NT time values that are outside of Unix time's range */
+-
+-   if (ntTime >= UNIX_S32_MAX) {
+-      unixTime->tv_sec = 0x7FFFFFFF;
+-      unixTime->tv_nsec = 0;
+-      return 1;
+-   }
+-#else
+-   ASSERT(unixTime);
+-#endif
++   if (sizeof(unixTime->tv_sec) == 4) {
++	/* Cap NT time values that are outside of Unix time's range */
++       if (ntTime >= UNIX_S32_MAX) {
++	  unixTime->tv_sec = 0x7FFFFFFF;
++	  unixTime->tv_nsec = 0;
++	  return 1;
++       }
++    }
+ 
+    if (ntTime < UNIX_EPOCH) {
+       unixTime->tv_sec = 0;
+@@ -120,14 +115,14 @@ HgfsConvertFromNtTimeNsec(struct timespe
+       return -1;
+    }
+ 
+-#ifndef VM_X86_64
+-   Div643232(ntTime - UNIX_EPOCH, 10000000, &sec, &nsec);
+-   unixTime->tv_sec = sec;
+-   unixTime->tv_nsec = nsec * 100;
+-#else
+-   unixTime->tv_sec = (ntTime - UNIX_EPOCH) / 10000000;
+-   unixTime->tv_nsec = ((ntTime - UNIX_EPOCH) % 10000000) * 100;
+-#endif
++   if (sizeof(unixTime->tv_sec) == 4) {
++       Div643232(ntTime - UNIX_EPOCH, 10000000, &sec, &nsec);
++       unixTime->tv_sec = sec;
++       unixTime->tv_nsec = nsec * 100;
++   } else {
++       unixTime->tv_sec = (ntTime - UNIX_EPOCH) / 10000000;
++       unixTime->tv_nsec = ((ntTime - UNIX_EPOCH) % 10000000) * 100;
++   }
+ 
+    return 0;
+ }
