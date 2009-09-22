@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/02/27 16:00:01 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2009/09/22 19:34:05 tnn Exp $
 #
 
 DISTNAME=		libXext-1.0.5
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 .endif
 
 .include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mhp)
+.if empty(PKGSRC_COMPILER:Mgcc)
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
