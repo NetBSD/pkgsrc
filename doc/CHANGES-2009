@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3795 2009/09/22 13:22:18 spz Exp $
+$NetBSD: CHANGES-2009,v 1.3796 2009/09/22 13:25:52 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4933,3 +4933,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/py-mysqldb to 1.2.3rc1 [tron 2009-09-22]
 	Removed www/firefox3 successor www/firefox [tnn 2009-09-22]
 	Updated news/inn to 2.5.0 [spz 2009-09-22]
+	Updated graphics/blender to 2.49b [hasso 2009-09-22]
