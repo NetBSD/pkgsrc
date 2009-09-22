@@ -1,12 +1,12 @@
-$NetBSD: patch-ak,v 1.1 2003/03/21 22:54:41 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2009/09/22 14:48:47 asau Exp $
 
---- config/_run-sml.orig	Thu Oct 17 02:44:32 2002
-+++ config/_run-sml
-@@ -19,6 +19,7 @@ unset ENV
+--- config/_run-sml.orig	2004-12-17 21:12:23.000000000 +0000
++++ config/_run-sml	2005-12-24 22:50:18.000000000 +0000
+@@ -19,6 +19,7 @@
  #
  # SITE SPECIFIC CONFIGURATION INFO
  #
 +SMLNJ_HOME="${SMLNJ_HOME:-@SML_BASE@}"
  
- # the path of the directory in which executables (like this file) are kept.
- if [ x${SMLNJ_HOME} = x ] ; then
+ # On cygwin, make sure SMLNJ_HOME is given a POSIX-style pathname.
+ if [ x"$SMLNJ_HOME" != x ] ; then
