@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2009/09/22 09:16:51 sketch Exp $
+
+--- src/hunspell/replist.cxx.orig	Sat Nov  1 14:09:51 2008
++++ src/hunspell/replist.cxx	Tue Sep 22 10:12:37 2009
+@@ -14,6 +14,15 @@
+ #include "replist.hxx"
+ #include "csutil.hxx"
+ 
++#ifdef __SUNPRO_CC
++using std::free;
++using std::malloc;
++using std::strcmp;
++using std::strcpy;
++using std::strlen;
++using std::strncmp;
++#endif
++
+ RepList::RepList(int n) {
+     dat = (replentry **) malloc(sizeof(replentry *) * n);
+     if (dat == 0) size = 0; else size = n;
