@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3794 2009/09/22 13:18:27 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.3795 2009/09/22 13:22:18 spz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4932,3 +4932,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/chicken to 4.2.0 [asau 2009-09-22]
 	Updated databases/py-mysqldb to 1.2.3rc1 [tron 2009-09-22]
 	Removed www/firefox3 successor www/firefox [tnn 2009-09-22]
+	Updated news/inn to 2.5.0 [spz 2009-09-22]
