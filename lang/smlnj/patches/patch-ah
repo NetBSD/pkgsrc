@@ -1,12 +1,12 @@
-$NetBSD: patch-ah,v 1.1 2003/03/21 22:54:40 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2009/09/22 14:48:47 asau Exp $
 
---- config/_link-sml.orig	Thu Oct 17 02:44:32 2002
-+++ config/_link-sml
-@@ -17,6 +17,7 @@ unset ENV
+--- config/_link-sml.orig	2005-01-03 21:13:16.000000000 +0000
++++ config/_link-sml	2005-12-24 22:04:13.000000000 +0000
+@@ -17,6 +17,7 @@
  #
  # SITE SPECIFIC CONFIGURATION INFO
  #
 +SMLNJ_HOME="${SMLNJ_HOME:-@SML_BASE@}"
  
  # the path of the directory in which executables (like this file) are kept.
- if [ x${SMLNJ_HOME} = x ] ; then
+ if [ x"$SMLNJ_HOME" = x ] ; then
