@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3797 2009/09/22 14:49:23 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3798 2009/09/22 17:13:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4935,3 +4935,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated news/inn to 2.5.0 [spz 2009-09-22]
 	Updated graphics/blender to 2.49b [hasso 2009-09-22]
 	Updated lang/smlnj to 110.71 [asau 2009-09-22]
+	Updated databases/p5-DBIx-Class to 0.08112 [sno 2009-09-22]
