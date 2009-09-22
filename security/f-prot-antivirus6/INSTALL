@@ -1,0 +1,23 @@
+#!/bin/sh
+# $NetBSD: INSTALL,v 1.1.1.1 2009/09/22 17:38:33 taca Exp $
+#
+FP_DATADIR="${PREFIX}/@DATADIR@"
+FP_FPROTDIR="${PREFIX}/@FPROTDIR@"
+FP_EGDIR="${PREFIX}/@EGDIR@"
+FP_VARDIR="@VARDIR@"
+
+FP_DEF_FILE="@FP_DATA@"
+
+case ${STAGE} in
+POST-INSTALL)
+	if [ ! -f "${FP_FPROTDIR}/${FP_DEF_FILE}" ]; then
+		${ECHO} "Install default signature file from ${FP_DATADIR}/${FP_DEF_FILE}."
+		${RM} -f "${FP_FPROTDIR}/${FP_DEF_FILE}"
+		${CP} -p "${FP_DATADIR}/${FP_DEF_FILE}" "${FP_FPROTDIR}"
+	else
+		${ECHO} "Use existing signature file: ${FP_FPROTDIR}/${FP_DEF_FILE}"
+	fi
+	${ECHO}
+	${LN} -fs ${PKG_SYSCONFDIR}/f-prot.conf /etc
+	;;
+esac

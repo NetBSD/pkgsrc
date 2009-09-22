@@ -1,0 +1,33 @@
+#!/bin/sh
+# $NetBSD: DEINSTALL,v 1.1.1.1 2009/09/22 17:38:33 taca Exp $
+#
+FP_DATADIR="${PREFIX}/@DATADIR@"
+FP_EGDIR="${PREFIX}/@EGDIR@"
+FP_FPROTDIR="${PREFIX}/@FPROTDIR@"
+
+FP_DEF_FILE="@FP_DATA@"
+
+fp_deinstall_info() {
+	${ECHO} "==========================================================================="
+	${ECHO} "The following directories are no longer being used by"
+	${ECHO} "${PKGNAME}, and it can be removed if no other"
+	${ECHO} "packages are using it or you will not plan to install"
+	${ECHO} "newer version of this package:"
+	${ECHO} "	${FP_FPROTDIR}"
+}
+
+case ${STAGE} in
+DEINSTALL)
+	if [ -f ${FP_EGDIR}/license.key -a -f ${PKG_SYSCONFDIR}/license.key ] && ${CMP} -s ${FP_EGDIR}/license.key ${PKG_SYSCONFDIR}/license.key; then
+		${RM} -f ${PKG_SYSCONFDIR}/license.key
+	fi
+	if cmp -s "${FP_DATADIR}/${FP_DEF_FILE}" "${FP_FPROTDIR}/${FP_DEF_FILE}"; then
+		${RM} -f "${FP_FPROTDIR}/${FP_DEF_FILE}"
+	fi
+	;;
+POST-DEINSTALL)
+	if [ -d ${FP_FPROTDIR} ]; then
+		fp_deinstall_info
+	fi
+esac
+

@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/09/22 17:38:33 taca Exp $
+
+Put your license key into ${PKG_SYSCONFDIR}/license.key as following
+format:
+
+FPROT_LICENSE_KEY="your-license-key"
+
+===========================================================================
