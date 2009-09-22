@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/08/28 20:46:18 hasso Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/09/22 13:23:25 hasso Exp $
 bin/blender
 bin/blender-bin
 share/blender/.Blanguages
@@ -50,7 +50,6 @@ share/blender/scripts/bpydata/readme.txt
 share/blender/scripts/bpymodules/BPyAddMesh.py
 share/blender/scripts/bpymodules/BPyArmature.py
 share/blender/scripts/bpymodules/BPyBlender.py
-share/blender/scripts/bpymodules/BPyBlender.pyc
 share/blender/scripts/bpymodules/BPyCurve.py
 share/blender/scripts/bpymodules/BPyImage.py
 share/blender/scripts/bpymodules/BPyMathutils.py
@@ -60,7 +59,6 @@ share/blender/scripts/bpymodules/BPyMessages.py
 share/blender/scripts/bpymodules/BPyNMesh.py
 share/blender/scripts/bpymodules/BPyObject.py
 share/blender/scripts/bpymodules/BPyRegistry.py
-share/blender/scripts/bpymodules/BPyRegistry.pyc
 share/blender/scripts/bpymodules/BPyRender.py
 share/blender/scripts/bpymodules/BPySys.py
 share/blender/scripts/bpymodules/BPyTextPlugin.py
@@ -129,6 +127,7 @@ share/blender/scripts/image_auto_layout.py
 share/blender/scripts/image_billboard.py
 share/blender/scripts/image_edit.py
 share/blender/scripts/import_dxf.py
+share/blender/scripts/import_edl.py
 share/blender/scripts/import_lightwave_motion.py
 share/blender/scripts/import_mdd.py
 share/blender/scripts/import_obj.py
