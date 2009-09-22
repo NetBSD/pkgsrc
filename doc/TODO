@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8484 2009/09/22 06:51:44 taca Exp $
+$NetBSD: TODO,v 1.8485 2009/09/22 07:10:44 taca Exp $
 
 Suggested new packages
 ======================
@@ -932,6 +932,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openoffice2-bin-2.4.3
 	o openoffice3-bin-3.1.1
 	o openttd-0.7.1
+	o open-vm-tools-2009.09.18.193784
 	o opera-10.00
 	o oregano-0.60.0
 	o oroborus-2.0.18
