@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3806 2009/09/22 18:08:26 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3807 2009/09/22 18:22:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4947,3 +4947,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed security/fprot-workstation-bin successor security/f-prot-antivirus6-ws-bin [taca 2009-09-22]
 	Updated devel/p5-Test-Class to 0.33 [sno 2009-09-22]
 	Updated www/p5-libwww to 5.832 [sno 2009-09-22]
+	Added mail/p5-App-Siesh version 0.20 [sno 2009-09-22]
