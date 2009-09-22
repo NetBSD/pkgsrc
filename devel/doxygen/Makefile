@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2009/08/26 11:48:24 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2009/09/22 20:11:45 snj Exp $
 
 DISTNAME=	doxygen-1.6.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -42,6 +42,8 @@ SUBST_STAGE.perlbin=	pre-configure
 SUBST_MESSAGE.perlbin=	Fixing hardcoded path to the Perl interpreter
 SUBST_FILES.perlbin=	examples/tag.cfg
 SUBST_SED.perlbin=	-e 's,^PERL_PATH.*,PERL_PATH = ${PERL5},'
+
+PRIVILEGED_STAGES+=	clean
 
 INSTALL_TARGET=		install install_docs
 
