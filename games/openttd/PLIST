@@ -1,6 +1,20 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 19:10:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/09/22 12:02:36 ahoka Exp $
 bin/openttd
 man/man6/openttd.6
+share/applications/openttd.desktop
+share/doc/openttd/32bpp.txt
+share/doc/openttd/COPYING
+share/doc/openttd/changelog.txt
+share/doc/openttd/known-bugs.txt
+share/doc/openttd/multiplayer.txt
+share/doc/openttd/obg_format.txt
+share/doc/openttd/readme.txt
+share/icons/hicolor/128x128/apps/openttd.png
+share/icons/hicolor/16x16/apps/openttd.png
+share/icons/hicolor/256x256/apps/openttd.png
+share/icons/hicolor/32x32/apps/openttd.png
+share/icons/hicolor/48x48/apps/openttd.png
+share/icons/hicolor/64x64/apps/openttd.png
 share/openttd/data/openttdd.grf
 share/openttd/data/openttdw.grf
 share/openttd/data/opntitle.dat
@@ -32,7 +46,11 @@ ${PLIST.ttd-data}share/openttd/gm/gm_tt18.gm
 ${PLIST.ttd-data}share/openttd/gm/gm_tt19.gm
 ${PLIST.ttd-data}share/openttd/gm/gm_tt20.gm
 ${PLIST.ttd-data}share/openttd/gm/gm_tt21.gm
+share/openttd/data/orig_dos.obg
+share/openttd/data/orig_dos_de.obg
+share/openttd/data/orig_win.obg
 share/openttd/lang/afrikaans.lng
+share/openttd/lang/arabic_egypt.lng
 share/openttd/lang/brazilian_portuguese.lng
 share/openttd/lang/bulgarian.lng
 share/openttd/lang/catalan.lng
@@ -48,20 +66,24 @@ share/openttd/lang/finnish.lng
 share/openttd/lang/french.lng
 share/openttd/lang/galician.lng
 share/openttd/lang/german.lng
+share/openttd/lang/hebrew.lng
 share/openttd/lang/hungarian.lng
 share/openttd/lang/icelandic.lng
+share/openttd/lang/indonesian.lng
 share/openttd/lang/italian.lng
 share/openttd/lang/japanese.lng
 share/openttd/lang/korean.lng
+share/openttd/lang/latvian.lng
 share/openttd/lang/lithuanian.lng
+share/openttd/lang/luxembourgish.lng
 share/openttd/lang/norwegian_bokmal.lng
 share/openttd/lang/norwegian_nynorsk.lng
-share/openttd/lang/origveh.lng
 share/openttd/lang/piglatin.lng
 share/openttd/lang/polish.lng
 share/openttd/lang/portuguese.lng
 share/openttd/lang/romanian.lng
 share/openttd/lang/russian.lng
+share/openttd/lang/serbian.lng
 share/openttd/lang/simplified_chinese.lng
 share/openttd/lang/slovak.lng
 share/openttd/lang/slovenian.lng
@@ -70,21 +92,16 @@ share/openttd/lang/swedish.lng
 share/openttd/lang/traditional_chinese.lng
 share/openttd/lang/turkish.lng
 share/openttd/lang/ukrainian.lng
+share/openttd/lang/welsh.lng
+share/openttd/scripts/autoexec.scr.example
+share/openttd/scripts/game_start.scr.example
+share/openttd/scripts/on_client.scr.example
+share/openttd/scripts/on_dedicated.scr.example
+share/openttd/scripts/on_server.scr.example
+share/openttd/scripts/on_server_connect.scr.example
+share/openttd/scripts/pre_dedicated.scr.example
+share/openttd/scripts/pre_server.scr.example
+share/openttd/scripts/readme.txt
 share/pixmaps/openttd.32.xpm
-share/applications/openttd.desktop
-share/doc/openttd/32bpp.txt
-share/doc/openttd/multiplayer.txt
-share/icons/hicolor/128x128/apps/openttd.128.png
-share/icons/hicolor/16x16/apps/openttd.16.png
-share/icons/hicolor/256x256/apps/openttd.256.png
-share/icons/hicolor/32x32/apps/openttd.32.png
-share/icons/hicolor/48x48/apps/openttd.48.png
-share/icons/hicolor/64x64/apps/openttd.64.png
-share/openttd/data/generictrams_v0.4.grf
-share/openttd/scenario/Greenistan.scn
-share/openttd/scenario/Polopolis.scn
-share/openttd/scenario/Skadi Islands.scn
-share/openttd/scenario/Terra Incognita.scn
-share/openttd/scenario/Wales and West England.scn
 @pkgdir share/openttd/data
 @pkgdir share/openttd/gm
