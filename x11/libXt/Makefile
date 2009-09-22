@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/07/18 10:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/22 19:34:05 tnn Exp $
 #
 
 DISTNAME=		libXt-1.0.6
@@ -34,7 +34,7 @@ MAKE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q} CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
 CPPFLAGS.OSF1+=		-pthread # Required by compiler if including pthread.h
 
 .include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mhp)
+.if empty(PKGSRC_COMPILER:Mgcc)
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
