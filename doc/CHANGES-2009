@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3791 2009/09/22 07:54:01 martti Exp $
+$NetBSD: CHANGES-2009,v 1.3792 2009/09/22 11:35:15 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4929,3 +4929,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/mathomatic to 14.5.5 [minskim 2009-09-22]
 	Updated net/dhcpcd to 5.1.1 [roy 2009-09-22]
 	Updated wm/fvwm-devel to 2.5.28 [martti 2009-09-22]
+	Updated lang/chicken to 4.2.0 [asau 2009-09-22]
