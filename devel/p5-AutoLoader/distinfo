@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/08/09 11:17:21 sno Exp $
+$NetBSD: distinfo,v 1.5 2009/09/22 17:19:51 sno Exp $
 
-SHA1 (AutoLoader-5.69.tar.gz) = 1b5e3573d16441e497c14487802e12539b938f0e
-RMD160 (AutoLoader-5.69.tar.gz) = ee09c5db78efb501e8453b5d3e84ab0f83343fe6
-Size (AutoLoader-5.69.tar.gz) = 29263 bytes
+SHA1 (AutoLoader-5.70.tar.gz) = 99ac994782662f18423b88432bff0fb927f8c098
+RMD160 (AutoLoader-5.70.tar.gz) = a1850f4493bd6d190df4c216b8b471ed2baa90f7
+Size (AutoLoader-5.70.tar.gz) = 29320 bytes
