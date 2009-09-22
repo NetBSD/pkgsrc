@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3805 2009/09/22 18:02:35 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3806 2009/09/22 18:08:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4941,5 +4941,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-Events to 0.07 [sno 2009-09-22]
 	Updated devel/p5-ExtUtils-Manifest to 1.57 [sno 2009-09-22]
 	Updated devel/p5-Mouse to 0.32 [sno 2009-09-22]
+	Added security/f-prot-antivirus6-fs-bin version 6.0.1 [taca 2009-09-22]
+	Added security/f-prot-antivirus6-ms-bin version 6.0.1 [taca 2009-09-22]
+	Added security/f-prot-antivirus6-ws-bin version 6.0.1 [taca 2009-09-22]
+	Removed security/fprot-workstation-bin successor security/f-prot-antivirus6-ws-bin [taca 2009-09-22]
 	Updated devel/p5-Test-Class to 0.33 [sno 2009-09-22]
 	Updated www/p5-libwww to 5.832 [sno 2009-09-22]
