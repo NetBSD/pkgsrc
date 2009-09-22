@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/26 19:58:00 sno Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/22 01:08:03 wiz Exp $
 #
 
 DISTNAME=	calibre-0.4.128
@@ -19,8 +19,10 @@ DEPENDS+=	${PYPKGPREFIX}-ClientForm-[0-9]*:../../www/py-ClientForm
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.0.5:../../www/py-beautifulsoup
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.8:../../www/py-mechanize
 
+#PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=	c c++
-PYTHON_VERSIONS_ACCEPTED=	25
+PYTHON_VERSIONS_ACCEPTED=	26 25
 PYDISTUTILSPKG=	yes
 
 REPLACE_PYTHON=		src/calibre/ebooks/metadata/odt.py
