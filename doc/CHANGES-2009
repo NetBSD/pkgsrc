@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3812 2009/09/22 19:50:57 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3813 2009/09/22 19:57:41 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -4953,3 +4953,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Test-UseAllModules version 0.12 [sno 2009-09-22]
 	Added security/p5-Text-Password-Pronounceable version 0.28 [sno 2009-09-22]
 	Updated databases/p5-SQL-Abstract to 1.60 [sno 2009-09-22]
+	Updated devel/p5-Class-ISA to 0.34 [sno 2009-09-22]
