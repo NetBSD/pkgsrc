@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/22 18:38:43 sno Exp $
+
+SHA1 (MooseX-ConfigFromFile-0.02.tar.gz) = 4da080e6a4a5b44acabbaa71db018af105aeaf3b
+RMD160 (MooseX-ConfigFromFile-0.02.tar.gz) = 117aa4f81730f68e6221c62e6ff655c5c38c9e9d
+Size (MooseX-ConfigFromFile-0.02.tar.gz) = 20447 bytes
