@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2009/09/23 16:03:25 jmmv Exp $
+${AMD64_OR_IA32}include/botan/asm_macr.h
+${AMD64_OR_IA32}include/botan/eng_sse2.h
+${AMD64_OR_IA32}include/botan/sha1_sse2.h
