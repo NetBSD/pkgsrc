@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2008/06/20 01:09:21 joerg Exp $
+$NetBSD: patch-ab,v 1.9 2009/09/23 13:52:11 tnn Exp $
 
---- Makefile.orig	2005-08-23 08:22:44.000000000 -0700
+--- Makefile.orig	2005-08-23 17:22:44.000000000 +0200
 +++ Makefile
-@@ -8,11 +8,11 @@ ZIPVERSION = 360
+@@ -8,12 +8,12 @@ ZIPVERSION = 360
  # Change these to locations you need, also
  # remember to edit cdlabelgen and its @where_is_the_template as needed.
  
@@ -12,10 +12,12 @@ $NetBSD: patch-ab,v 1.8 2008/06/20 01:09:21 joerg Exp $
  # BASE_DIR   = /opt
  BIN_DIR   = $(BASE_DIR)/bin
 -LIB_DIR   = $(BASE_DIR)/lib/cdlabelgen
+-MAN_DIR   = $(BASE_DIR)/man
 +LIB_DIR   = $(BASE_DIR)/share/cdlabelgen
- MAN_DIR   = $(BASE_DIR)/man
++MAN_DIR   = $(BASE_DIR)/$(PKGMANDIR)
  SOURCES    = cdlabelgen ChangeLog INSTALL README Makefile ../cdinsert.pl INSTALL.WEB cdlabelgen.pod cdlabelgen.1 cdlabelgen.html spec.template
  POSTSCRIPT = template.ps *.eps
+ DISTFILES = $(SOURCES) $(POSTSCRIPT)
 @@ -31,6 +31,14 @@ INSTALL_FILE	:= install -m 0644
  # ---------------
  
