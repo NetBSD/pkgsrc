@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/26 19:57:05 sno Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/23 09:54:46 tron Exp $
 #
 
 DISTNAME=	farsight2-0.0.14
@@ -23,7 +23,6 @@ PKGCONFIG_OVERRIDE+=	farsight2.pc.in
 # gstreamer-check-0.10 >= 0.10.23 (GStreamer Check unittest Library)
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_ACCEPTED=	26 25 24
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.16

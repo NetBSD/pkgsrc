@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/09/06 16:48:44 snj Exp $
+# $NetBSD: Makefile,v 1.16 2009/09/23 09:54:46 tron Exp $
 
 DISTNAME=	youtube-dl
 PKGNAME=	youtube-dl-20090808 # master site needs to be updated in tandem
@@ -15,7 +15,6 @@ LICENSE=	public-domain
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_ACCEPTED=	26 25 24
 NO_BUILD=			yes
 WRKSRC=				${WRKDIR}
 
