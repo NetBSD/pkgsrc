@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2009/09/23 13:20:36 tnn Exp $
+
+--- src/TextureLoader.h.orig	2005-04-16 10:13:38.000000000 +0200
++++ src/TextureLoader.h
+@@ -28,6 +28,7 @@
+ #define TEXTURELOADER_H
+ 
+ #include <GL/glut.h>
++#include <string.h>
+ 
+ #include "glext.h"
+ #include "sstream.h"
