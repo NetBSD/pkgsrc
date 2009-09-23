@@ -1,16 +1,8 @@
-$NetBSD: distinfo,v 1.6 2009/03/23 13:16:13 jmmv Exp $
+$NetBSD: distinfo,v 1.7 2009/09/23 16:03:25 jmmv Exp $
 
-SHA1 (Botan-1.4.11.tgz) = 49b896fd90e7e80004f7596872238fb40e9748d9
-RMD160 (Botan-1.4.11.tgz) = c8aa827cf10151266b88e17c172999a6ccaab816
-Size (Botan-1.4.11.tgz) = 1802089 bytes
-SHA1 (patch-aa) = 3f5d8bf18c16d1d4dc7a81e821459ee2ee3379f1
-SHA1 (patch-ab) = 478d91bce78f484fb8ba2d23ceecb462728b29db
-SHA1 (patch-ac) = 0981448664141b3effaf3e88f5f2317d70ebc786
-SHA1 (patch-ad) = feff04fc7383bb86df12e187a5788a0b867c47d7
-SHA1 (patch-ae) = 658808ae00b2a35d649a62578e400e840ab9e0a8
-SHA1 (patch-af) = 5ed516dd5a746ed94447e880c2f07fc50d8230a8
-SHA1 (patch-ag) = 8e847a4159ef99d28ec57cf4643d7ecacb8ba353
-SHA1 (patch-ah) = ff07d2f7b921feb64430351192cc9315452d0687
-SHA1 (patch-ai) = f7f79ccf61ddbd868a317a63e1d8a377a13ce160
-SHA1 (patch-aj) = f842e4a39eddd517312a9f7ae57391e330c48a3f
-SHA1 (patch-ak) = 0944272902558985c4e7ca6f001090596a373b35
+SHA1 (Botan-1.8.7.tgz) = 69d985f66aa024f0d53c2d5597a4f1a0b9735959
+RMD160 (Botan-1.8.7.tgz) = 73a6417f1445282e4b2fbf45557f2644b2996563
+Size (Botan-1.8.7.tgz) = 3464535 bytes
+SHA1 (patch-ab) = a53a3e23722d8f478c5a6c5ecf1df08d74fd21c0
+SHA1 (patch-ac) = 4f98ff086983b27ed17d048486a8afced47e7970
+SHA1 (patch-ak) = 7bf66c1faa84971b490be96efefac0ef44f97b70
