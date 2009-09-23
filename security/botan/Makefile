@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/09/23 16:03:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2009/09/23 16:36:30 jmmv Exp $
 
 DISTNAME=	Botan-1.8.7
 PKGNAME=	botan-1.8.7
@@ -23,6 +23,8 @@ CONFIGURE_SCRIPT=	./configure.py
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "amd64"
 PLIST_SUBST+=		AMD64=
