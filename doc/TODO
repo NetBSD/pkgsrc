@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8489 2009/09/22 20:09:20 wiz Exp $
+$NetBSD: TODO,v 1.8490 2009/09/23 11:46:06 obache Exp $
 
 Suggested new packages
 ======================
@@ -518,6 +518,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dircproxy-devel-1.2.0.2
 	o dnstracer-1.9
 	o dovecot-1.2.2
+	o dpkg-1.14.25
 	o drivel-2.0.4
 	o drscheme-4.0.2
 	o drupal-5.20 [DRUPAL-SA-CORE-2009-008]
