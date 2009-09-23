@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/06/14 17:48:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/09/23 16:05:06 jmmv Exp $
 bin/mtn
 bin/mtnopt
 info/monotone.info
@@ -26,8 +26,11 @@ share/locale/de/LC_MESSAGES/monotone.mo
 share/locale/es/LC_MESSAGES/monotone.mo
 share/locale/it/LC_MESSAGES/monotone.mo
 share/locale/sv/LC_MESSAGES/monotone.mo
+share/monotone/contrib/ChangeLog.sh
 share/monotone/contrib/Monotone.pm
 share/monotone/contrib/README
+share/monotone/contrib/README.missing
+share/monotone/contrib/asciik.py
 share/monotone/contrib/ciabot_monotone.py
 share/monotone/contrib/ciabot_monotone_hookversion.lua
 share/monotone/contrib/ciabot_monotone_hookversion.py
@@ -36,15 +39,20 @@ share/monotone/contrib/color-logs.sh
 share/monotone/contrib/colorize
 share/monotone/contrib/command/README
 share/monotone/contrib/command/base.lua
-share/monotone/contrib/command/changed_files.lua
 share/monotone/contrib/command/conflicts.lua
 share/monotone/contrib/command/fuse.lua
 share/monotone/contrib/command/init.lua
 share/monotone/contrib/command/revision.lua
+share/monotone/contrib/display_branches.lua
+share/monotone/contrib/dtrace2calltree.py
+share/monotone/contrib/dump-test-logs.sh
 share/monotone/contrib/edit_comment_from_changelog.lua
+share/monotone/contrib/ext_hooks.lua.in
+share/monotone/contrib/ext_hooks_expand.pl
 share/monotone/contrib/extra-commands.lua
 share/monotone/contrib/get_passphrase_from_file.lua
 share/monotone/contrib/get_stdio.pl
+share/monotone/contrib/lua-mode.el
 share/monotone/contrib/monoprof.sh
 share/monotone/contrib/monotone-buildbot-notification.lua
 share/monotone/contrib/monotone-cluster-push.lua
@@ -52,7 +60,11 @@ share/monotone/contrib/monotone-cvs-ignore.lua
 share/monotone/contrib/monotone-inotify.lua
 share/monotone/contrib/monotone-log-of-pulled-revs-hook.lua
 share/monotone/contrib/monotone-mail-notify.lua
+share/monotone/contrib/monotone-mail-notify.sh
+share/monotone/contrib/monotone-mirror-postaction-push.sh
+share/monotone/contrib/monotone-mirror-postaction-update.sh
 share/monotone/contrib/monotone-mirror.lua
+share/monotone/contrib/monotone-mirror.sh
 share/monotone/contrib/monotone-nav.el
 share/monotone/contrib/monotone-notify-hookversion.lua
 share/monotone/contrib/monotone-notify.pl
@@ -61,3 +73,9 @@ share/monotone/contrib/monotone.bash_completion
 share/monotone/contrib/monotone.el
 share/monotone/contrib/monotone.zsh_completion
 share/monotone/contrib/mtbrowse.sh
+share/monotone/contrib/mtn_cheat_sheet.svg
+share/monotone/contrib/mtn_makepermissions
+share/monotone/contrib/op2calltree.py
+share/monotone/contrib/parse-accounting.pl
+share/monotone/contrib/perf-test.sh
+share/monotone/contrib/recreate-manifest-tables.sh
