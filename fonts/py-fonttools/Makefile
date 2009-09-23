@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/07/16 15:11:37 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/09/23 09:54:45 tron Exp $
 #
 
 DISTNAME=		fonttools-2.2
@@ -12,7 +12,6 @@ COMMENT=		Library for manipulating fonts
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	26 25 24
 PYDISTUTILSPKG=		yes
 
 .include "../../lang/python/extension.mk"

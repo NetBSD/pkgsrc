@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/25 12:16:45 markd Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/23 09:54:45 tron Exp $
 
 DISTNAME=	scipy-0.7.0
 PKGNAME=	${PYPKGPREFIX}-scipy-0.7.0
@@ -13,7 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=   PYPKGPREFIX=${PYPKGPREFIX}
-PYTHON_VERSIONS_ACCEPTED=   26 25 24
 USE_LANGUAGES+=	c c++ fortran
 MAKE_ENV+=	ATLAS=None
 
