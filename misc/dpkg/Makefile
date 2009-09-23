@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/07/01 08:34:37 agc Exp $
+# $NetBSD: Makefile,v 1.20 2009/09/23 11:42:05 obache Exp $
 #
 
 DISTNAME=	dpkg_1.13.25
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://packages.debian.org/dpkg
+HOMEPAGE=	http://wiki.debian.org/Teams/Dpkg
 COMMENT=	Package maintenance system for Debian
 
 PKG_DESTDIR_SUPPORT=	user-destdir
