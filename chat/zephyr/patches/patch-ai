@@ -1,7 +1,16 @@
-$NetBSD: patch-ai,v 1.1.1.1 2003/09/16 19:41:50 seb Exp $
+$NetBSD: patch-ai,v 1.2 2009/09/23 13:31:32 tnn Exp $
 
 --- Makefile.in.orig	1998-06-11 21:10:02.000000000 +0200
 +++ Makefile.in
+@@ -7,7 +7,7 @@ sysconfdir=@sysconfdir@
+ sbindir=@sbindir@
+ 
+ includedir=${prefix}/include
+-mandir=${prefix}/man
++mandir=${prefix}/${PKGMANDIR}
+ bindir=${exec_prefix}/bin
+ libdir=${exec_prefix}/lib
+ 
 @@ -31,8 +31,6 @@ install:
  	${ENSUREDIR} ${DESTDIR}${libdir} 755
  	${ENSUREDIR} ${DESTDIR}${datadir} 755
