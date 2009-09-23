@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22.2.1 2009/07/22 06:56:55 spz Exp $
+$NetBSD: distinfo,v 1.22.2.2 2009/09/23 12:47:13 spz Exp $
 
-SHA1 (wireshark-1.2.1.tar.bz2) = ff565edd4b8c7b8d131060145dd35873c0dd8fa9
-RMD160 (wireshark-1.2.1.tar.bz2) = 335814f79b56805b2dc5c130b2b91ed9b33d1591
-Size (wireshark-1.2.1.tar.bz2) = 15129422 bytes
+SHA1 (wireshark-1.2.2.tar.bz2) = ad73bf93096344341cd7c99614816555bebdbf45
+RMD160 (wireshark-1.2.2.tar.bz2) = 6adbd80e3027a63b456b971edba0185411d30546
+Size (wireshark-1.2.2.tar.bz2) = 15186702 bytes
 SHA1 (patch-aa) = d0744f069ac2d3a8a43b810e1f958360d99200a9
 SHA1 (patch-ab) = 5ae79916603f04c2d362c764d39f0c99728e716c
 SHA1 (patch-ac) = 4e985520ea4b118aea6fc001f256b5de96de7840
