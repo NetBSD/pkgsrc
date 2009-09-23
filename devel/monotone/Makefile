@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2009/04/03 19:40:22 joerg Exp $
+# $NetBSD: Makefile,v 1.59 2009/09/23 16:05:06 jmmv Exp $
 #
 
-DISTNAME=	monotone-0.42
+DISTNAME=	monotone-0.45
 CATEGORIES=	devel scm
-MASTER_SITES=	http://monotone.ca/downloads/0.42/
+MASTER_SITES=	http://monotone.ca/downloads/0.45/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
-USE_TOOLS+=		gmake makeinfo pax
+USE_TOOLS+=		gmake makeinfo pax pkg-config
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 
@@ -27,6 +27,9 @@ PKG_SUPPORTED_OPTIONS=	inet6
 
 CHECK_INTERPRETER_SKIP+=	share/monotone/contrib/*
 CHECK_PORTABILITY_SKIP+=	debian/*
+
+# Remove with the 0.46 update.
+BUILDLINK_TRANSFORM+=	l:sqlite:sqlite3
 
 REPLACE_SH=			mtnopt
 
@@ -49,8 +52,12 @@ post-install:
 BUILDLINK_API_DEPENDS.pcre+=	pcre>=7.6
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
+.include "../../security/botan/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
