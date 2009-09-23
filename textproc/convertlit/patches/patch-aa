@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2009/09/03 13:39:39 hasso Exp $
+$NetBSD: patch-aa,v 1.4 2009/09/23 15:22:36 wiz Exp $
 
---- clit18/Makefile.orig	2004-07-04 16:52:14.000000000 +0200
+--- clit18/Makefile.orig	2004-07-04 16:52:14.000000000 +0000
 +++ clit18/Makefile
 @@ -1,9 +1,9 @@
  all: clit
@@ -12,5 +12,5 @@ $NetBSD: patch-aa,v 1.3 2009/09/03 13:39:39 hasso Exp $
  
  clit: clit.o hexdump.o drm5.o explode.o transmute.o display.o utils.o manifest.o ../lib/openclit.a 
 -	gcc -o clit $^  ../libtommath-0.30/libtommath.a
-+	gcc ${LDFLAGS} -o clit $^  -ltommath
++	gcc ${LDFLAGS} -o clit $^ -ltommath
  
