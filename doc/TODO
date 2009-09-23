@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8490 2009/09/23 11:46:06 obache Exp $
+$NetBSD: TODO,v 1.8491 2009/09/23 16:09:18 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -442,7 +442,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bonnie++-1.96
 	o bos-2.5
 	o boson-0.13
-	o botan-1.8.7
 	o bouml-4.13.1
 	o brasero-2.28.0 [GNOME 2.28]
 	o bugzilla-3.4.2
@@ -899,7 +898,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mmg-2.0.2
 	o moc-2.4.4
 	o monodevelop-2.1.0
-	o monotone-0.45
 	o moserial-2.28.0 [GNOME 2.28]
 	o mousetweaks-2.28.0 [GNOME 2.28]
 	o mp3blaster-3.2.3

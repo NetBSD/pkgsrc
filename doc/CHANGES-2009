@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3822 2009/09/22 21:28:36 agc Exp $
+$NetBSD: CHANGES-2009,v 1.3823 2009/09/23 16:09:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4963,3 +4963,6 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated geography/p5-Geo-Distance to 0.16 [sno 2009-09-22]
 	Updated devel/p5-Mac-Carbon to 0.80 [sno 2009-09-22]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2009Q3 branch [agc 2009-09-22]
+	Updated security/botan to 1.8.7 [jmmv 2009-09-23]
+	Updated devel/monotone to 0.45 [jmmv 2009-09-23]
+	Updated devel/monotone-server to 0.45 [jmmv 2009-09-23]
