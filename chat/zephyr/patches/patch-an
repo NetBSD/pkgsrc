@@ -1,0 +1,67 @@
+$NetBSD: patch-an,v 1.1 2009/09/23 13:31:32 tnn Exp $
+
+--- clients/zmailnotify/zmailnotify.c.orig	1997-10-25 23:47:11.000000000 +0200
++++ clients/zmailnotify/zmailnotify.c
+@@ -144,7 +144,7 @@ main(argc, argv)
+ 	exit(1);
+     }
+ 
+-    if ((getline(response, sizeof response, sfi) != OK) ||
++    if ((get_line(response, sizeof response, sfi) != OK) ||
+ 	(*response != '+')) {
+ 	fprintf(stderr,"%s: %s\n",prog,response);
+ 	exit(1);
+@@ -498,7 +498,7 @@ pop_command(fmt, va_alist)
+ 
+     if (putline(buf, Errmsg, sfo) == NOTOK) return(NOTOK);
+ 
+-    if (getline(buf, sizeof buf, sfi) != OK) {
++    if (get_line(buf, sizeof buf, sfi) != OK) {
+ 	(void) strcpy(Errmsg, buf);
+ 	return(NOTOK);
+     }
+@@ -519,7 +519,7 @@ int *nmsgs, *nbytes;
+ 
+     if (putline("STAT", Errmsg, sfo) == NOTOK) return(NOTOK);
+ 
+-    if (getline(buf, sizeof buf, sfi) != OK) {
++    if (get_line(buf, sizeof buf, sfi) != OK) {
+ 	(void) strcpy(Errmsg, buf);
+ 	return(NOTOK);
+     }
+@@ -546,7 +546,7 @@ int (*action)();
+ #endif
+     if (putline(buf, Errmsg, sfo) == NOTOK) return(NOTOK);
+ 
+-    if (getline(buf, sizeof buf, sfi) != OK) {
++    if (get_line(buf, sizeof buf, sfi) != OK) {
+ 	(void) strcpy(Errmsg, buf);
+ 	return(NOTOK);
+     }
+@@ -565,7 +565,7 @@ int (*action)();
+     }
+ }
+ 
+-getline(buf, n, f)
++get_line(buf, n, f)
+ char *buf;
+ register int n;
+ FILE *f;
+@@ -595,7 +595,7 @@ char *buf;
+ register int n;
+ FILE *f;
+ {
+-    if (getline(buf, n, f) != OK) return (NOTOK);
++    if (get_line(buf, n, f) != OK) return (NOTOK);
+     if (*buf == '.') {
+ 	if (*(buf+1) == '\0') {
+ 	    return (DONE);
+@@ -605,7 +605,7 @@ FILE *f;
+     } else if (*buf == '\0') {
+       /* suck up all future lines, since this is after all only for headers */
+ 	while(! ((buf[0]=='.') && (buf[1] == '\0')) ) {
+-	    if (getline(buf, n, f) != OK) return (NOTOK);
++	    if (get_line(buf, n, f) != OK) return (NOTOK);
+ 	}
+ 	return DONE;
+     }
