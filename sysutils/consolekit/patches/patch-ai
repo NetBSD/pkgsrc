@@ -1,0 +1,27 @@
+$NetBSD: patch-ai,v 1.1 2009/09/23 09:35:48 sketch Exp $
+
+--- src/ck-log-event.h.orig	Wed Sep 23 10:29:34 2009
++++ src/ck-log-event.h	Wed Sep 23 10:33:19 2009
+@@ -45,18 +45,22 @@
+ 
+ typedef struct
+ {
++	int dummy;
+ } CkLogNoneEvent;
+ 
+ typedef struct
+ {
++	int dummy;
+ } CkLogSystemStopEvent;
+ 
+ typedef struct
+ {
++	int dummy;
+ } CkLogSystemRestartEvent;
+ 
+ typedef struct
+ {
++	int dummy;
+ } CkLogSystemStartEvent;
+ 
+ typedef struct
