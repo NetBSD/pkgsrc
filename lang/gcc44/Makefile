@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/09/18 12:29:14 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/24 11:50:56 dmcmahill Exp $
 #
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,8 +14,8 @@ COMMENT=		GNU Compiler Collection 4.4
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-USE_TOOLS+=		awk:run bash:build perl chmod \
-			gmake makeinfo msgfmt bison flex gm4 \
+USE_TOOLS+=		awk:run bash:run perl chmod \
+			gmake:run makeinfo msgfmt bison flex gm4 \
 			sed:run unzip
 
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
@@ -46,6 +47,18 @@ UNLIMIT_RESOURCES+=	datasize
 # 		gcc/opt-gather.awk					\
 # 		gcc/opth-gen.awk					\
 # 		gcc/opt-functions.awk
+
+REPLACE_BASH+= contrib/dg-cmp-results.sh
+REPLACE_BASH+= contrib/reghunt/bin/gcc-svn-patchlist
+REPLACE_BASH+= contrib/reghunt/bin/gcc-svn-update
+REPLACE_BASH+= contrib/reghunt/bin/gcc-svn-update-fix
+REPLACE_BASH+= contrib/reghunt/bin/reg-hunt
+REPLACE_BASH+= contrib/reghunt/bin/reg-test
+REPLACE_BASH+= contrib/reghunt/date_based/reg_periodic
+REPLACE_BASH+= contrib/reghunt/date_based/reg_search
+REPLACE_BASH+= gcc/dbgcnt.def
+REPLACE_BASH+= gcc/testsuite/gcc.test-framework/gen_directive_tests
+REPLACE_BASH+= libstdc++-v3/scripts/run_doxygen
 
 # Optional languages - change as required
 # Ada could be added although there is a bootstrapping issue.  See
@@ -91,6 +104,12 @@ CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL:Q}
+
+# ${WRKSRC}/gcc-4.4.1/libjava/contrib/aotcompile.py.in stores the path to
+# a 'make' program so we need to make sure we give it the installed 'make' and not
+# the tool wrapped one.
+CONFIGURE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake:Q}
+MAKE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake:Q}
 
 # fastjar-0.93 from pkgsrc/archivers/fastjar seems to trigger a build
 # failure (seen on NetBSD-5.0/i386) when building java.  So in case
