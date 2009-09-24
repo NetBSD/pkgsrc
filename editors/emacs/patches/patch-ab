@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.26 2008/10/11 09:56:38 uebayasi Exp $
+$NetBSD: patch-ab,v 1.26.6.1 2009/09/24 11:51:47 spz Exp $
 
---- configure.orig	2008-10-10 10:35:49.000000000 +0900
+--- configure.orig	2009-09-13 11:12:28.000000000 +0900
 +++ configure
 @@ -1809,7 +1809,7 @@ archlibdir='${libexecdir}/emacs/${versio
  docdir='${datadir}/emacs/${version}/etc'
@@ -11,6 +11,19 @@ $NetBSD: patch-ab,v 1.26 2008/10/11 09:56:38 uebayasi Exp $
  
  
  # Check whether --with-gcc was given.
+@@ -2243,9 +2243,9 @@ _ACEOF
+       m68k-*-netbsd*)
+ 			# This is somewhat bogus.
+ 			machine=hp9000s300 ;;
+-      mips-*-netbsd*)	machine=pmax ;;
+-      mipsel-*-netbsd*)	machine=pmax ;;
+-      mipseb-*-netbsd*)	machine=pmax ;;
++      mips-*-netbsd*)	machine=mips ;;
++      mipsel-*-netbsd*)	machine=mips ;;
++      mipseb-*-netbsd*)	machine=mips ;;
+       ns32k-*-netbsd*)	machine=ns32000 ;;
+       powerpc-*-netbsd*) machine=macppc ;;
+       sparc*-*-netbsd*)	machine=sparc ;;
 @@ -3142,6 +3142,7 @@ _ACEOF
        *-sysv5uw* )	  	opsys=unixware; NON_GNU_CPP=/lib/cpp ;;
        *-sysv5OpenUNIX* )  	opsys=unixware; NON_GNU_CPP=/lib/cpp ;;
