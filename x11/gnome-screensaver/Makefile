@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2009/08/26 19:58:30 sno Exp $
+# $NetBSD: Makefile,v 1.37 2009/09/24 19:05:36 ahoka Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.26.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-screensaver/2.26/}
 
@@ -37,11 +37,24 @@ CONF_FILES=		${EGDIR}/xdg/menus/gnome-screensavers.menu \
 
 INSTALLATION_DIRS=	${EGDIR}/pam.d
 
+SUBST_CLASSES+=		flavour
+SUBST_STAGE.flavour=	pre-install
+SUBST_FILES.flavour=	savers/netbsd-floaters.desktop.in
+SUBST_SED.flavour=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_MESSAGE.flavour=	Preparing NetBSD flavoured screensaver
+
+post-extract:
+	cp ${FILESDIR}/netbsd-floaters.desktop.in ${WRKSRC}/savers/
+
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/pam-gnome-screensaver-NetBSD \
 	    ${DESTDIR}${EGDIR}/pam.d/gnome-screensaver-NetBSD
 	${INSTALL_DATA} ${WRKSRC}/data/gnome-screensaver \
 	    ${DESTDIR}${EGDIR}/pam.d/gnome-screensaver-Linux
+	${INSTALL_DATA} ${FILESDIR}/NetBSD-screensaver.svg \
+	    ${DESTDIR}${PREFIX}/share/pixmaps/
+	${INSTALL_DATA} ${WRKSRC}/savers/netbsd-floaters.desktop.in \
+	    ${DESTDIR}${PREFIX}/share/applications/screensavers/netbsd-floaters.desktop
 
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.8.0

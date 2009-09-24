@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:24:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/09/24 19:05:36 ahoka Exp $
 bin/gnome-screensaver
 bin/gnome-screensaver-command
 bin/gnome-screensaver-preferences
@@ -14,6 +14,7 @@ man/man1/gnome-screensaver.1
 share/applications/gnome-screensaver-preferences.desktop
 share/applications/screensavers/cosmos-slideshow.desktop
 share/applications/screensavers/footlogo-floaters.desktop
+share/applications/screensavers/netbsd-floaters.desktop
 share/applications/screensavers/personal-slideshow.desktop
 share/applications/screensavers/popsquares.desktop
 share/desktop-directories/gnome-screensaver.directory
@@ -108,3 +109,4 @@ share/pixmaps/backgrounds/cosmos/jupiter.jpg
 share/pixmaps/backgrounds/cosmos/sombrero.jpg
 share/pixmaps/backgrounds/cosmos/whirlpool.jpg
 share/pixmaps/gnome-logo-white.svg
+share/pixmaps/NetBSD-screensaver.svg
