@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/03/14 15:04:39 taca Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/24 15:04:33 taca Exp $
 
-DISTNAME=	namazu-2.0.19
+DISTNAME=	namazu-2.0.20
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	http://www.namazu.org/test/ \
 		http://www.namazu.org/stable/ \
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.namazu.org/test/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.namazu.org/index.html.en
 COMMENT=	Full-text search system intended for easy use
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-File-MMagic>=1.25:../../misc/p5-File-MMagic
 DEPENDS+=	p5-nkf>=1.7:../../converters/p5-nkf
@@ -24,9 +25,9 @@ TEST_TARGET=		check
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
-CONFIGURE_ARGS+=	--localstatedir=${PREFIX}/${DATADIR:Q} \
+CONFIGURE_ARGS+=	--localstatedir=${PREFIX}/${DATADIR} \
 			--libexecdir=${PREFIX}/libexec/cgi-bin \
-			--sysconfdir=${PKG_SYSCONFBASE:Q}
+			--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ENV+=		KAKASI="module_kakasi"
 CONFIGURE_ENV+=		ac_cv_path_KAKASI="module_kakasi"
 CONFIGURE_ENV+=		CHASEN="module_chasen"
