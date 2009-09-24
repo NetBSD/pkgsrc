@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/09/24 12:23:44 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/24 12:56:27 wiz Exp $
 #
 
 DISTNAME=		gcc-${GCC_VERSION}
@@ -11,7 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		blair.sadewitz@gmail.com
 HOMEPAGE=		http://gcc.gnu.org/
 COMMENT=		GNU Compiler Collection 4.4
-
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	destdir
