@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/09/19 17:45:47 sno Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/24 06:50:17 sno Exp $
 #
 
 DISTNAME=	Net-Twitter-3.06000
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
