@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/09/24 11:50:56 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/24 11:58:35 dmcmahill Exp $
 #
 
 DISTNAME=		gcc-${GCC_VERSION}
@@ -137,6 +137,8 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include
 #CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
 #MAKE_ENV+=		AR=/usr/bin/ar
 #.endif # NetBSD
+
+LIBS.SunOS+=		-lgmp
 
 pre-configure:
 .if ${OPSYS} == "DragonFly"
