@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.6 2009/04/13 21:58:26 minskim Exp $
+$NetBSD: patch-as,v 1.7 2009/09/24 18:53:47 minskim Exp $
 
---- texk/tetex/Makefile.in.orig	2005-02-04 14:20:54.000000000 -0800
+--- texk/tetex/Makefile.in.orig	2005-02-04 22:20:54.000000000 +0000
 +++ texk/tetex/Makefile.in
-@@ -8,10 +8,7 @@ ac_include ../make/programs.mk
+@@ -8,26 +8,21 @@ ac_include ../make/programs.mk
  man5dir = $(mandir)/man5
  
  SCRIPTS = \
@@ -12,9 +12,10 @@ $NetBSD: patch-as,v 1.6 2009/04/13 21:58:26 minskim Exp $
 -  ps4pdf fmtutil-sys texconfig-sys updmap-sys
 +  texdoc texdoctk texexec
  
- PDFSCRIPTS = a2ping e2pall epstopdf
+-PDFSCRIPTS = a2ping e2pall epstopdf
++PDFSCRIPTS = ""
  
-@@ -19,11 +16,9 @@ PERLWRAPPED = fdf2tan fdf2tex makempy te
+ PERLWRAPPED = fdf2tan fdf2tex makempy texfind texfont texshow texutil \
    thumbpdf pdfcrop uniqleaf
  
  manpgs = \
@@ -29,6 +30,11 @@ $NetBSD: patch-as,v 1.6 2009/04/13 21:58:26 minskim Exp $
  
  INFOFILES= latex.info
  POOLFILES = pdfetex-pl.pool
+-all: $(SCRIPTS) $(PDFSCRIPTS)
++all: $(SCRIPTS)
+ default: all
+ 
+ install: install-data install-exec
 @@ -39,30 +34,9 @@ install-data:: $(INFOFILES)
  	for p in $(manpgs); do \
  	  $(INSTALL_DATA) $(srcdir)/$$p.man $(man1dir)/$$p.$(manext); \
