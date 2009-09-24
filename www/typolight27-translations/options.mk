@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2009/09/22 01:41:14 taca Exp $
+# $NetBSD: options.mk,v 1.25 2009/09/24 03:05:25 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.typolight-translations
 
@@ -48,6 +48,6 @@ TL_LANGUAGES+=	${l:S/^lang-//1}
 .for l in ${TL_LANGUAGES}
 TL_DISTFILES+=	${TL_TRANSLATIONS.${l}}
 SITES.${TL_TRANSLATIONS.${l}}= \
-	http://www.typolight.org/download-translations.html?iso=${l}&file=tl_files/languages/${l}/
+	http://www.typolight.org/download.html?iso=${l}&file=tl_files/languages/${l}/
 PLIST_SRC+=	PLIST.${l}
 .endfor
