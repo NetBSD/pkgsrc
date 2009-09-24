@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Floating Flag
+Comment=Bubbles the NetBSD flag around the screen
+Exec=@PREFIX@/libexec/gnome-screensaver/floaters @PREFIX@/share/pixmaps/NetBSD-screensaver.svg
+TryExec=@PREFIX@/libexec/gnome-screensaver/floaters
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=GNOME;Screensaver;
+OnlyShowIn=GNOME;
