@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2009/07/20 09:38:04 sno Exp $
+# $NetBSD: Makefile,v 1.10 2009/09/24 06:50:12 sno Exp $
 #
 
 DISTNAME=	Devel-REPL-1.003007
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
