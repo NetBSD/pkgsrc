@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2009/05/17 12:55:52 sno Exp $
+$NetBSD: patch-aa,v 1.12 2009/09/24 15:53:12 tnn Exp $
 
---- configure.ac.orig	2009-04-25 18:39:34.000000000 +0000
-+++ configure.ac	2009-04-25 18:55:19.000000000 +0000
-@@ -83,13 +83,24 @@
+--- configure.ac.orig	2009-06-17 01:24:18.000000000 +0200
++++ configure.ac
+@@ -83,13 +83,24 @@ AC_SUBST(GVPLUGIN_VERSION)
  GRAPHVIZ_VERSION_BUILD=0
  GRAPHVIZ_VERSION_REVISION=0
  case "${host_os}" in
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.11 2009/05/17 12:55:52 sno Exp $
  	fi
  	;;
  esac
-@@ -807,7 +818,7 @@
+@@ -811,7 +822,7 @@ else
  		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
                          LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
                          LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lua$l`
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.11 2009/05/17 12:55:52 sno Exp $
      
  		        pkgconfig_lualib_found=`$PKGCONFIG --exists lualib$l 2>/dev/null`
  		        if test  "x$?" = "x0"; then
-@@ -829,7 +840,7 @@
+@@ -833,7 +844,7 @@ else
                  LUA_INCLUDES=`$LUACONFIG --include`
                  LUA_LIBS=`$LUACONFIG --libs`
  	        LUA_VERSION="5.0.x"
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.11 2009/05/17 12:55:52 sno Exp $
              fi
          fi
      
-@@ -919,8 +930,8 @@
+@@ -923,8 +934,8 @@ else
          use_ocaml="No (ocaml not available)"
        else
          AC_CHECK_PROG(OCAML_OPT,ocamlopt,ocamlopt)
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.11 2009/05/17 12:55:52 sno Exp $
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $OCAML_INCLUDES"
          AC_CHECK_HEADER(caml/mlvalues.h,[
-@@ -1006,13 +1017,13 @@
+@@ -1010,13 +1021,13 @@ else
        if test "x$PHP" = "x"; then
          use_php="No (php not available)"
        else
@@ -79,7 +79,7 @@ $NetBSD: patch-aa,v 1.11 2009/05/17 12:55:52 sno Exp $
          PHP_LIBS=
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
-@@ -2232,7 +2243,7 @@
+@@ -2324,7 +2335,7 @@ dnl INCLUDES and LIBS for PLATFORMSDK
  
  AC_ARG_WITH(platformsdkincludedir,
    [AS_HELP_STRING([--with-platformsdkincludedir=DIR],[use Platform SDK (Windows) includes from DIR])],
@@ -88,3 +88,16 @@ $NetBSD: patch-aa,v 1.11 2009/05/17 12:55:52 sno Exp $
  
  AC_ARG_WITH(platformsdklibdir,
    [AS_HELP_STRING([--with-platformsdklibdir=DIR],[use Platform SDK (Windows) libraries from DIR])],
+@@ -2869,10 +2880,12 @@ AC_MSG_CHECKING(if have working sincos()
+ AC_RUN_IFELSE([AC_LANG_SOURCE([[
+ 	#include <stdio.h>
+ 	#include <assert.h>
++	#include <time.h>
+ 	#define PI 3.14159265358979323846
+ 	extern void sincos(double x, double *s, double *c);
+ 	int main () {
+ 		double sinx=0.0, cosx=1.0;
++		sincos(time(NULL)&1,&sinx,&cosx);
+ 		sincos(PI/2.0,&sinx,&cosx);
+ 		assert(sinx>0.9999999);
+ 		assert(sinx<1.0000001);
