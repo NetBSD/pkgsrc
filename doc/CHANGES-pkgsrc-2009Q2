@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.57 2009/09/23 13:28:08 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.58 2009/09/24 11:53:35 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -204,3 +204,5 @@ Pullup ticket #2898 - requested by spz
 rt3: security update
 Pullup ticket #2899 - requested by tron
 wireshark: security update
+Pullup ticket #2900 - requested by jun
+emacs: build fix for mips
