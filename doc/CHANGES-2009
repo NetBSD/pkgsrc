@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3824 2009/09/24 10:25:03 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3825 2009/09/24 15:06:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4967,3 +4967,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated devel/monotone to 0.45 [jmmv 2009-09-23]
 	Updated devel/monotone-server to 0.45 [jmmv 2009-09-23]
 	Updated audio/taglib to 1.6nb1 [wiz 2009-09-24]
+	Updated textproc/namazu to 2.0.20 [taca 2009-09-24]
