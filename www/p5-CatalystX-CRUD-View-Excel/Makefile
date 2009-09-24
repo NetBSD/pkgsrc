@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/20 23:20:24 he Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/24 06:50:21 sno Exp $
 
 DISTNAME=	CatalystX-CRUD-View-Excel-0.06
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
