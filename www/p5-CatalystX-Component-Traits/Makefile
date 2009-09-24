@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/09/13 20:37:58 sno Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/24 06:50:22 sno Exp $
 
 DISTNAME=	CatalystX-Component-Traits-0.10
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
