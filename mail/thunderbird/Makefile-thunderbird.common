@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.47 2009/07/22 09:01:35 wiz Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.48 2009/09/24 13:14:53 wiz Exp $
 # used by mail/thunderbird/Makefile
 # used by mail/thunderbird-gtk1/Makefile
 
@@ -42,4 +42,5 @@ install-desktop:
 INSTALLATION_DIRS+=	share/applications share/pixmaps
 PKG_DESTDIR_SUPPORT=    user-destdir
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/seamonkey/Makefile.common"
