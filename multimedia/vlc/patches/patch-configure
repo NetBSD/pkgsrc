@@ -1,8 +1,17 @@
-$NetBSD: patch-configure,v 1.3 2009/07/07 16:17:47 tnn Exp $
+$NetBSD: patch-configure,v 1.4 2009/09/24 22:14:57 ahoka Exp $
 
---- configure.ac.orig	2009-06-20 16:08:32.000000000 +0200
+--- configure.ac.orig	2009-09-19 21:30:21.000000000 +0200
 +++ configure.ac
-@@ -2490,7 +2490,7 @@ then
+@@ -572,7 +572,7 @@ AC_CHECK_FUNCS(fdatasync,,
+ ])
+ 
+ dnl Check for non-standard system calls
+-AC_CHECK_FUNCS([vmsplice eventfd fstatfs])
++AC_CHECK_FUNCS([vmsplice eventfd fstatvfs fstatfs])
+ 
+ AH_BOTTOM([#include <vlc_fixups.h>])
+ 
+@@ -2498,7 +2498,7 @@ then
    fi
  
    CPPFLAGS="${CPPFLAGS_save} ${CPPFLAGS_v4l2}"
