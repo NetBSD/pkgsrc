@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2009/07/07 19:23:48 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.32 2009/09/24 22:14:57 ahoka Exp $
 ${PLIST.altivec}lib/vlc/misc/libmemcpyaltivec_plugin.la
 ${PLIST.altivec}lib/vlc/video_chroma/libi420_yuy2_altivec_plugin.la
 ${PLIST.cdda}lib/vlc/access/libcdda_plugin.la
@@ -289,7 +289,6 @@ lib/vlc/stream_out/libstream_out_record_plugin.la
 lib/vlc/stream_out/libstream_out_rtp_plugin.la
 lib/vlc/stream_out/libstream_out_standard_plugin.la
 lib/vlc/stream_out/libstream_out_transcode_plugin.la
-lib/vlc/stream_out/libstream_out_transrate_plugin.la
 lib/vlc/video_chroma/libgrey_yuv_plugin.la
 lib/vlc/video_chroma/libi420_rgb_plugin.la
 lib/vlc/video_chroma/libi420_ymga_plugin.la
