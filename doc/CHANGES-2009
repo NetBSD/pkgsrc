@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3823 2009/09/23 16:09:18 jmmv Exp $
+$NetBSD: CHANGES-2009,v 1.3824 2009/09/24 10:25:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4966,3 +4966,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated security/botan to 1.8.7 [jmmv 2009-09-23]
 	Updated devel/monotone to 0.45 [jmmv 2009-09-23]
 	Updated devel/monotone-server to 0.45 [jmmv 2009-09-23]
+	Updated audio/taglib to 1.6nb1 [wiz 2009-09-24]
