@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/09/24 12:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/24 13:04:16 tnn Exp $
 #
 
 DISTNAME=		gcc-${GCC_VERSION}
@@ -34,8 +34,6 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 UNLIMIT_RESOURCES+=	datasize
-
-.undef PKG_DEVELOPER
 
 .include "../../mk/bsd.prefs.mk"
 
