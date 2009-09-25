@@ -1,29 +1,45 @@
-# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/25 12:29:26 wiz Exp $
 #
+# Note to packagers:
+# packages installing additional completion files should drop
+# them into ${DESTDIR}${PREFIX}/share/bash-completion.d
+# with the name of the package as file name.
 
-DISTNAME=	bash-completion-20060301
+DISTNAME=	bash-completion-1.0
 CATEGORIES=	shells
-MASTER_SITES=	http://www.caliban.org/files/bash/
+MASTER_SITES=	http://bash-completion.alioth.debian.org/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.caliban.org/bash/index.shtml
+HOMEPAGE=	http://bash-completion.alioth.debian.org/
 COMMENT=	Programmable completion specifications for bash
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	bash:run
 
-WRKSRC=		${WRKDIR}/bash_completion
 USE_LANGUAGES=	# none
 
-NO_BUILD=	yes
+INSTALLATION_DIRS=	bin share/bash-completion
+INSTALLATION_DIRS+=	share/bash-completion.d
+INSTALLATION_DIRS+=	share/doc/bash-completion
 
-INSTALLATION_DIRS=	share/bash-completion/contrib share/doc/bash-completion
+SUBST_CLASSES+=		path
+SUBST_SED.path+=	-e "s,/etc/bash_completion,${PREFIX}/share/bash-completion/bash_completion,g"
+SUBST_STAGE.path+=	pre-build
+SUBST_FILES.path+=	bash_completion* README
+SUBST_MESSAGE.path=	Fixing path to completion files.
+
+do-build:
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/bash-completion
-	${INSTALL_DATA} ${WRKSRC}/bash* ${DESTDIR}${PREFIX}/share/bash-completion
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/bash-completion
+	${INSTALL_DATA} ${WRKSRC}/bash_completion \
+		${DESTDIR}${PREFIX}/share/bash-completion
+	${INSTALL_DATA} ${WRKSRC}/bash_completion.sh \
+		${DESTDIR}${PREFIX}/share/bash-completion
 	${INSTALL_DATA} ${WRKSRC}/contrib/* \
-	    ${DESTDIR}${PREFIX}/share/bash-completion/contrib
+	    ${DESTDIR}${PREFIX}/share/bash-completion.d
 
 .include "../../mk/bsd.pkg.mk"
