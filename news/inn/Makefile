@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2009/09/22 13:17:00 spz Exp $
+# $NetBSD: Makefile,v 1.98 2009/09/25 11:06:00 spz Exp $
 
 DISTNAME=		inn-2.5.0
 CATEGORIES=		news
+PKGREVISION=		1
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
 
@@ -33,8 +34,8 @@ CONFIGURE_ARGS+=	--enable-setgid-inews 				\
 			--enable-largefiles				\
 			--bindir=${PREFIX}/${INN_PATHBIN}		\
 			--sbindir=${PREFIX}/${INN_PATHBIN}		\
+			--sysconfdir=${PREFIX}/etc/inn 			\
 			--with-openssl=${SSLBASE:Q}			\
-			--with-etc-dir=${PREFIX}/etc/inn 		\
 			--with-doc-dir=${PREFIX}/share/doc/inn	 	\
 			--with-control-dir=${PREFIX}/${INN_PATHBIN}/control \
 			--with-filter-dir=${PREFIX}/${INN_PATHBIN}/filter \
