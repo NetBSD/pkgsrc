@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/09/25 02:48:08 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/25 09:37:57 wiz Exp $
 #
 
 DISTNAME=		gcc-${GCC_VERSION}
@@ -13,7 +13,7 @@ HOMEPAGE=		http://gcc.gnu.org/
 COMMENT=		GNU Compiler Collection 4.4
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		awk:run bash:run perl chmod \
 			gmake:run makeinfo msgfmt bison flex gm4 \
