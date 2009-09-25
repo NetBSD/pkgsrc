@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2009/09/24 13:04:16 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2009/09/25 02:48:08 dmcmahill Exp $
 #
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,7 +24,7 @@ DEPENDS+=		zip-[0-9]*:../../archivers/zip
 GCC_VERSION=		4.4.1
 
 GCC_SUBPREFIX=		gcc44
-GCC_PREFIX=		${DESTDIR}${PREFIX}/${GCC_SUBPREFIX}
+GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 
@@ -162,12 +162,12 @@ do-test:
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
-	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install DESTDIR=${DESTDIR:Q} \
+	 && ${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc)
 
 GENERATE_PLIST+=                                                        \
-	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print           \
-	| ${SORT} | ${SED} -e "s,${PREFIX}/,,g";
+	cd ${DESTDIR}${PREFIX} && ${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print \
+	| ${SORT} ;
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
