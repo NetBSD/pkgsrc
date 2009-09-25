@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3828 2009/09/25 07:31:36 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.3829 2009/09/25 08:37:43 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4971,3 +4971,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated print/teTeX3-bin to 3.0nb37 [minskim 2009-09-24]
 	Updated multimedia/vlc to 1.0.2 [ahoka 2009-09-24]
 	Updated www/ikiwiki to 3.14159265 [schmonz 2009-09-25]
+	Updated security/openct to 0.6.18 [hasso 2009-09-25]
