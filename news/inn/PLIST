@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/09/22 13:17:00 spz Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/09/25 11:06:00 spz Exp $
 bin/inews
 bin/rnews
 include/inn/buffer.h
@@ -9,16 +9,21 @@ include/inn/hashtab.h
 include/inn/history.h
 include/inn/innconf.h
 include/inn/inndcomm.h
+include/inn/libinn.h
 include/inn/list.h
 include/inn/md5.h
 include/inn/messages.h
 include/inn/mmap.h
 include/inn/network.h
 include/inn/newsuser.h
+include/inn/nntp.h
 include/inn/options.h
+include/inn/ov.h
 include/inn/overview.h
+include/inn/paths.h
 include/inn/qio.h
 include/inn/sequence.h
+include/inn/storage.h
 include/inn/system.h
 include/inn/timer.h
 include/inn/tst.h
@@ -26,11 +31,6 @@ include/inn/utility.h
 include/inn/vector.h
 include/inn/version.h
 include/inn/wire.h
-include/inn/libinn.h
-include/inn/nntp.h
-include/inn/ov.h
-include/inn/paths.h
-include/inn/storage.h
 lib/innreport_inn.pm
 lib/innshellvars
 lib/innshellvars.pl
@@ -38,6 +38,7 @@ lib/innshellvars.tcl
 lib/libinn.a
 lib/libinnhist.a
 lib/libstorage.a
+lib/perl/INN/Config.pm
 ${INN_PATHBIN}/actmerge
 ${INN_PATHBIN}/actsync
 ${INN_PATHBIN}/actsyncd
@@ -48,6 +49,7 @@ ${INN_PATHBIN}/auth/resolv/domain
 ${INN_PATHBIN}/auth/resolv/ident
 ${INN_PATHBIN}/batcher
 ${INN_PATHBIN}/buffchan
+${INN_PATHBIN}/buffindexed_d
 ${INN_PATHBIN}/cnfsheadconf
 ${INN_PATHBIN}/cnfsstat
 ${INN_PATHBIN}/control/checkgroups.pl
@@ -84,6 +86,7 @@ ${INN_PATHBIN}/getlist
 ${INN_PATHBIN}/grephistory
 ${INN_PATHBIN}/imapfeed
 ${INN_PATHBIN}/inews
+${INN_PATHBIN}/innbind
 ${INN_PATHBIN}/inncheck
 ${INN_PATHBIN}/innconfval
 ${INN_PATHBIN}/innd
@@ -118,6 +121,7 @@ ${INN_PATHBIN}/prunehistory
 ${INN_PATHBIN}/pullnews
 ${INN_PATHBIN}/rc.news
 ${INN_PATHBIN}/rnews
+${INN_PATHBIN}/rnews.libexec/bunbatch
 ${INN_PATHBIN}/rnews.libexec/c7unbatch
 ${INN_PATHBIN}/rnews.libexec/decode
 ${INN_PATHBIN}/rnews.libexec/encode
@@ -136,6 +140,7 @@ ${INN_PATHBIN}/simpleftp
 ${INN_PATHBIN}/sm
 ${INN_PATHBIN}/tally.control
 ${INN_PATHBIN}/tdx-util
+${INN_PATHBIN}/tinyleaf
 ${INN_PATHBIN}/writelog
 man/man1/convdate.1
 man/man1/fastrm.1
@@ -211,8 +216,8 @@ man/man8/expireover.8
 man/man8/expirerm.8
 man/man8/filechan.8
 man/man8/ident.8
-man/man8/inncheck.8
 man/man8/innbind.8
+man/man8/inncheck.8
 man/man8/innd.8
 man/man8/inndf.8
 man/man8/innreport.8
@@ -249,6 +254,7 @@ man/man8/tinyleaf.8
 man/man8/writelog.8
 sbin/cnfsstat
 sbin/ctlinnd
+sbin/innbind
 sbin/makehistory
 share/doc/inn/CONTRIBUTORS
 share/doc/inn/GPL
@@ -291,8 +297,8 @@ share/examples/inn/motd.news
 share/examples/inn/news2mail.cf
 share/examples/inn/newsfeeds
 share/examples/inn/newsgroups.minimal
-share/examples/inn/nntpsend.ctl
 share/examples/inn/nnrpd.track
+share/examples/inn/nntpsend.ctl
 share/examples/inn/nocem.ctl
 share/examples/inn/ovdb.conf
 share/examples/inn/passwd.nntp
