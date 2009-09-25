@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3833 2009/09/25 12:29:39 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3834 2009/09/25 12:48:16 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4974,6 +4974,5 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated security/openct to 0.6.18 [hasso 2009-09-25]
 	Updated sysutils/nautilus to 2.26.4 [wiz 2009-09-25]
 	Updated devel/coccinelle to 0.1.8nb1 [wiz 2009-09-25]
-	Updated multimedia/ffmpeg
-PREV_multimedia/ffmpeg-devel to 20090611nb4 [tron 2009-09-25]
+	Updated multimedia/ffmpeg to 20090611nb4 [tron 2009-09-25]
 	Updated shells/bash-completion to 1.0 [wiz 2009-09-25]
