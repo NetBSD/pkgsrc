@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2009/09/25 12:29:26 wiz Exp $
+
+To use this, source the included bash fragment in your startup
+files, i.e. include something like:
+
+  if [ -r ${PREFIX}/share/bash-completion/bash_completion ]; then
+    . ${PREFIX}/share/bash-completion/bash_completion
+  fi
+
+in ~/.bashrc or ~/.bash_profile.
+
+===========================================================================
