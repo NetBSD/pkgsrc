@@ -1,10 +1,20 @@
-# $NetBSD: options.mk,v 1.5 2009/08/12 21:14:35 schmonz Exp $
+# $NetBSD: options.mk,v 1.6 2009/09/25 07:29:21 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
-PKG_SUPPORTED_OPTIONS=		ikiwiki-amazon-s3 ikiwiki-search
+PKG_SUPPORTED_OPTIONS=		cvs ikiwiki-amazon-s3 ikiwiki-search
 PKG_SUPPORTED_OPTIONS+=		imagemagick python svn w3m
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcvs)
+. if !exists(/usr/bin/cvs)
+DEPENDS+=	cvs-[0-9]*:../../devel/scmcvs
+. endif
+DEPENDS+=	cvsps-[0-9]*:../../devel/cvsps
+DEPENDS+=	cvsweb-[0-9]*:../../www/cvsweb
+DEPENDS+=	p5-File-chdir-[0-9]*:../../devel/p5-File-chdir
+DEPENDS+=	p5-File-ReadBackwards-[0-9]*:../../textproc/p5-File-ReadBackwards
+.endif
 
 .if !empty(PKG_OPTIONS:Mikiwiki-search)
 DEPENDS+=	p5-Search-Xapian-[0-9]*:../../textproc/p5-Search-Xapian
