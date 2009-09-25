@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3829 2009/09/25 08:37:43 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3830 2009/09/25 09:11:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4972,3 +4972,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated multimedia/vlc to 1.0.2 [ahoka 2009-09-24]
 	Updated www/ikiwiki to 3.14159265 [schmonz 2009-09-25]
 	Updated security/openct to 0.6.18 [hasso 2009-09-25]
+	Updated sysutils/nautilus to 2.26.4 [wiz 2009-09-25]
