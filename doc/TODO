@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8497 2009/09/25 07:31:36 schmonz Exp $
+$NetBSD: TODO,v 1.8498 2009/09/25 09:11:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -943,7 +943,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysqlcc-0.9.8
 	o nagios-3.2.0
 	o nap-1.5.3
-	o nautilus-2.26.4 [GNOME 2.28]
 	o nautilus-sendto-1.1.7
 	o navi2ch-1.8.1
 	o nawk-20071023
