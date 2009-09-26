@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2009/05/25 09:03:14 adam Exp $
+# $NetBSD: Makefile,v 1.54 2009/09/26 05:58:27 taca Exp $
 
 DISTNAME=	ntop-3.3.10
 CATEGORIES=	net
@@ -37,6 +37,10 @@ CONFIGURE_ARGS+=	--disable-mt
 INSTALL_UNSTRIPPED=	YES
 .endif
 
+.if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-4].*))
+USE_BUILTIN.libevent=	no
+.endif
+
 pre-configure:
 	set -e; cd ${WRKSRC}; \
 	cp ${PREFIX}/share/libtool/ltmain.sh .; \
@@ -48,5 +52,6 @@ pre-configure:
 .include "../../lang/lua/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
