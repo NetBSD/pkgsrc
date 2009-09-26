@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2009/07/12 16:31:59 dholland Exp $
+$NetBSD: distinfo,v 1.10 2009/09/26 19:55:47 dholland Exp $
 
-SHA1 (stella-2.8.4-src.tar.gz) = da0420a14e244aa1cdf3e63c257850c48041d198
-RMD160 (stella-2.8.4-src.tar.gz) = 6c26380e9410b581ea8a013dee9d80f5730c142a
-Size (stella-2.8.4-src.tar.gz) = 1443460 bytes
+SHA1 (stella-3.0-src.tar.gz) = 965b7ab8f51f60c09e8942f2636db627e689cae5
+RMD160 (stella-3.0-src.tar.gz) = 869cb786aea61704d83c211e4dc34eef1c804b01
+Size (stella-3.0-src.tar.gz) = 1506447 bytes
 SHA1 (patch-aa) = 76545aaaf3fa320b8b83396c0a90588cd7b404af
 SHA1 (patch-ab) = 84cd725e239a305ab6ff2eb5f4f4a7aa68536562
 SHA1 (patch-ac) = eca3460ebde79f7c3a765013283981df3974ace8
