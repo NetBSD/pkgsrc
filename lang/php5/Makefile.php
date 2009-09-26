@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.35 2009/07/07 21:57:28 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.36 2009/09/26 05:40:05 taca Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -50,7 +50,7 @@ SUBST_CLASSES+=		ini
 SUBST_STAGE.ini=	post-patch
 SUBST_FILES.ini=	php.ini-dist
 SUBST_FILES.ini+=	php.ini-recommended
-SUBST_SED.ini=		-e "s|\;include_path = \".:/php/includes\"|include_path = \".:${PREFIX}/lib/php\"|g"
+SUBST_SED.ini=		-e "s|\\;include_path = \".:/php/includes\"|include_path = \".:${PREFIX}/lib/php\"|g"
 SUBST_MESSAGE.ini=	Fixing default ini files.
 
 .include "../../mk/bsd.options.mk"
