@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3838 2009/09/26 19:56:23 dholland Exp $
+$NetBSD: CHANGES-2009,v 1.3839 2009/09/26 21:19:08 martin Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4980,3 +4980,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated lang/php5 to 5.2.11 [taca 2009-09-26]
 	Updated multimedia/vlc to 1.0.2nb1 [wiz 2009-09-26]
 	Updated emulators/stella to 3.0 [dholland 2009-09-26]
+	Updated audio/mserv to 0.35nb13 [martin 2009-09-26]
