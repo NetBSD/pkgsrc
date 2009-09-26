@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2009/05/19 06:54:51 abs Exp $
+# $NetBSD: Makefile,v 1.34 2009/09/26 21:16:57 martin Exp $
 #
 
 DISTNAME=	mserv-0.35
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mserv.org/download/
 
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/mserv
+CONFIGURE_ENV+=		COPTS="-g"
 CONFIGURE_ENV+=		MY_LIBS="-lvorbisfile -lvorbis"
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run
