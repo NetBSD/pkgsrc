@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2009/09/24 22:14:57 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.33 2009/09/26 07:54:13 wiz Exp $
 ${PLIST.altivec}lib/vlc/misc/libmemcpyaltivec_plugin.la
 ${PLIST.altivec}lib/vlc/video_chroma/libi420_yuy2_altivec_plugin.la
 ${PLIST.cdda}lib/vlc/access/libcdda_plugin.la
@@ -373,11 +373,13 @@ share/locale/fur/LC_MESSAGES/vlc.mo
 share/locale/gl/LC_MESSAGES/vlc.mo
 share/locale/he/LC_MESSAGES/vlc.mo
 share/locale/hi/LC_MESSAGES/vlc.mo
+share/locale/hr/LC_MESSAGES/vlc.mo
 share/locale/hu/LC_MESSAGES/vlc.mo
 share/locale/id/LC_MESSAGES/vlc.mo
 share/locale/it/LC_MESSAGES/vlc.mo
 share/locale/ja/LC_MESSAGES/vlc.mo
 share/locale/ka/LC_MESSAGES/vlc.mo
+share/locale/kk/LC_MESSAGES/vlc.mo
 share/locale/km/LC_MESSAGES/vlc.mo
 share/locale/ko/LC_MESSAGES/vlc.mo
 share/locale/lt/LC_MESSAGES/vlc.mo
