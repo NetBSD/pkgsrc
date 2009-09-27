@@ -1,25 +1,22 @@
-$NetBSD: patch-ae,v 1.4 2009/08/05 10:29:12 tron Exp $
+$NetBSD: patch-ae,v 1.5 2009/09/27 20:06:37 tron Exp $
 
---- errors/Makefile.in.orig	2009-08-04 14:32:30.000000000 +0100
-+++ errors/Makefile.in	2009-08-05 10:30:29.000000000 +0100
-@@ -418,13 +418,13 @@
+--- errors/Makefile.in.orig	2009-09-27 04:28:48.000000000 +0100
++++ errors/Makefile.in	2009-09-27 13:26:44.000000000 +0100
+@@ -432,7 +432,7 @@
+ 
+ install-dvi: install-dvi-am
+ 
+-install-exec-am: install-exec-local
++install-exec-am:
+ 
+ install-html: install-html-am
+ 
+@@ -540,7 +540,7 @@
  	done; \
  	$(INSTALL_DATA) $(srcdir)/TRANSLATORS $(DESTDIR)$(DEFAULT_ERROR_DIR)/TRANSLATORS; \
  	$(INSTALL_DATA) $(srcdir)/COPYRIGHT $(DESTDIR)$(DEFAULT_ERROR_DIR)/COPYRIGHT; \
 -	$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET).default; \
--	if test -f $(DESTDIR)$(DEFAULT_STYLESHEET) ; then \
--		echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_STYLESHEET)" ; \
--	else \
--		echo "$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET)"; \
--		$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET); \
--	fi ; \
 +#	$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET).default; \
-+#	if test -f $(DESTDIR)$(DEFAULT_STYLESHEET) ; then \
-+#		echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_STYLESHEET)" ; \
-+#	else \
-+#		echo "$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET)"; \
-+#		$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET); \
-+#	fi ; \
  	$(SHELL) $(srcdir)/alias-link.sh "$(LN)" "$(RM)" "$(DESTDIR)$(DEFAULT_ERROR_DIR)" "$(srcdir)/aliases" || exit 1 ;
  
  uninstall-local:
