@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.3 2008/11/11 00:44:12 wiz Exp $
+$NetBSD: patch-af,v 1.4 2009/09/27 01:30:38 minskim Exp $
 
---- doc/Makefile.in.orig	2008-01-01 10:39:53.000000000 +0000
+--- doc/Makefile.in.orig	2008-12-06 13:16:23.000000000 +0000
 +++ doc/Makefile.in
+@@ -23,7 +23,7 @@ all: language FORCE
+ 	@cp Makefile.latex ../latex/Makefile
+ 	@sed -e "s/\$$VERSION/$(VERSION)/g" doxygen_manual.tex >../latex/doxygen_manual.tex
+ 	@sed -e "s/\$$VERSION/$(VERSION)/g" doxygen.sty >../latex/doxygen.sty 
+-	@epstopdf doxygen_logo.eps --outfile=../latex/doxygen_logo.pdf
++	@@EPSTOPDF@ doxygen_logo.eps --outfile=../latex/doxygen_logo.pdf
+ 
+ clean: 
+ 	rm -rf ../html ../latex *.bak 
 @@ -31,6 +31,6 @@ clean: 
  language: language.doc 
  
