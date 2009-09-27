@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2009/09/20 07:04:22 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2009/09/27 17:52:22 tnn Exp $
 #
 
-DISTNAME=	xulrunner-${XULRUNNER_VER}-source
-PKGNAME=	${DISTNAME:S/-source//}
-XULRUNNER_VER=	1.9.1.3
+DISTNAME=	firefox-${FIREFOX_VER}.source
+PKGNAME=	${DISTNAME:S/firefox/xulrunner/:S/3.5/1.9.1/:S/.source//}
+FIREFOX_VER=	3.5.3
 PKGREVISION=	5
 CATEGORIES=	devel www
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
