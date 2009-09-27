@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3839 2009/09/26 21:19:08 martin Exp $
+$NetBSD: CHANGES-2009,v 1.3840 2009/09/27 01:31:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4981,3 +4981,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated multimedia/vlc to 1.0.2nb1 [wiz 2009-09-26]
 	Updated emulators/stella to 3.0 [dholland 2009-09-26]
 	Updated audio/mserv to 0.35nb13 [martin 2009-09-26]
+	Updated devel/doxygen to 1.6.1nb1 [minskim 2009-09-27]
