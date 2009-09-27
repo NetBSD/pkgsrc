@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2009/09/26 07:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2009/09/27 18:43:55 ahoka Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -111,12 +111,13 @@ SUBST_MESSAGE.fnt=	Fixing hardcoded paths.
 
 REPLACE_SH+=		vlc-config.in.in
 
-# VLC embeds the build environment info to help debuging
+# VLC embeds the build environment info to help debuging.
+# Change it if it's bumped after a VLC upgrade!
 #
 CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 			lib/libvlccore.so \
 			lib/libvlccore.so.2 \
-			lib/libvlccore.so.2.0.0
+			lib/libvlccore.so.2.1.0
 
 .include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
