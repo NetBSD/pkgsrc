@@ -1,0 +1,16 @@
+$NetBSD: patch-powerpc,v 1.1.2.2 2009/09/28 08:08:31 spz Exp $
+
+Fixes pkg/42000, not necessary aftert the next upgrade.
+
+--- libswscale/swscale.c.orig	2009-06-04 23:55:52.000000000 +0200
++++ libswscale/swscale.c
+@@ -1307,7 +1307,9 @@ static inline void monoblack2Y(uint8_t *
+ 
+ #if ARCH_PPC
+ #if (HAVE_ALTIVEC || CONFIG_RUNTIME_CPUDETECT) && CONFIG_GPL
++#if !CONFIG_RUNTIME_CPUDETECT
+ #undef COMPILE_C
++#endif
+ #define COMPILE_ALTIVEC
+ #endif
+ #endif //ARCH_PPC
