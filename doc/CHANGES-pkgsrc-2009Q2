@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.59 2009/09/28 08:09:34 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.60 2009/09/28 09:57:22 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -208,3 +208,5 @@ Pullup ticket #2900 - requested by jun
 emacs: build fix for mips
 Pullup ticket #2902 - requested by tron
 ffmpeg: security patch
+Pullup ticket #2901 - requested by ahoka
+vlc: security update
