@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/09/28 12:38:50 drochner Exp $
+
+--- src/sm_genid.c.orig	2009-09-28 14:06:35.000000000 +0200
++++ src/sm_genid.c
+@@ -98,7 +98,7 @@ SmsGenerateClientID(SmsConn smsConn)
+ 
+     if ((id = malloc (strlen (temp) + 2)) != NULL)
+     {
+-        id[1] = '2';
++        id[0] = '2';
+         strcpy (id+1, temp);
+     }
+ 
