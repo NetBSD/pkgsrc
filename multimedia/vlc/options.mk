@@ -1,20 +1,12 @@
-# $NetBSD: options.mk,v 1.13 2008/12/25 18:21:59 jmcneill Exp $
+# $NetBSD: options.mk,v 1.13.6.1 2009/09/28 09:57:01 tron Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		debug faad arts dbus hal skins sdl esound pulseaudio x11 gnome
-PKG_SUGGESTED_OPTIONS=		x11 esound pulseaudio
+PKG_SUPPORTED_OPTIONS=		debug faad dbus hal skins sdl pulseaudio x11 gnome
+PKG_SUGGESTED_OPTIONS=		x11 pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
-
-## ESOUND audio backend
-
-.if !empty(PKG_OPTIONS:Mesound)
-CONFIGURE_ARGS+=	--enable-esd
-.include "../../audio/esound/buildlink3.mk"
-PLIST.esound=		yes
-.endif
 
 ## PulseAudio support
 
@@ -37,7 +29,7 @@ CONFIGURE_ARGS+=	--disable-sdl
 CONFIGURE_ARGS+=	--disable-sdl-image
 .endif
 
-## gnome-vfs support
+## gnome integration
 
 .if !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--enable-gnomevfs
@@ -56,7 +48,17 @@ CONFIGURE_ARGS+=	--enable-dbus
 .include "../../sysutils/dbus/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-notify
 .include "../../sysutils/libnotify/buildlink3.mk"
+
+# telepathy needs dbus, but its also gnome-ish
+.if !empty(PKG_OPTIONS:Mgnome)
+.include "../../chat/libtelepathy/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-telepathy
+.else
+CONFIGURE_ARGS+=	--disable-telepathy
+.endif
+
 PLIST.dbus=		yes
+
 ## HAL support (requires dbus)
 .if !empty(PKG_OPTIONS:Mhal)
 CONFIGURE_ARGS+=	--enable-hal
@@ -123,14 +125,4 @@ PLIST.faad=		yes
 .include "../../audio/faad2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-faad
-.endif
-
-## ARTS audio system support
-
-.if !empty(PKG_OPTIONS:Marts)
-CONFIGURE_ARGS+=	--enable-arts
-PLIST.arts=		yes
-.include "../../audio/arts/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-arts
 .endif
