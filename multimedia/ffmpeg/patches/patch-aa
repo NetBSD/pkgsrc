@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.9.2.2 2009/09/28 08:08:31 spz Exp $
+
+--- libavcodec/x86/cpuid.c.orig	2009-08-10 22:17:29.000000000 +0200
++++ libavcodec/x86/cpuid.c
+@@ -80,6 +80,7 @@ int mm_support(void)
+             rval |= FF_MM_MMX2
+ #if HAVE_SSE
+                   | FF_MM_SSE;
++#if !defined(__GNUC__) || (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 2))
+         if (std_caps & (1<<26))
+             rval |= FF_MM_SSE2;
+         if (ecx & 1)
+@@ -90,6 +91,7 @@ int mm_support(void)
+             rval |= FF_MM_SSE4;
+         if (ecx & 0x00100000 )
+             rval |= FF_MM_SSE42;
++#endif /* gcc >= 4.2 */
+ #endif
+                   ;
+     }
