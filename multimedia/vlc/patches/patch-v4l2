@@ -1,8 +1,8 @@
-$NetBSD: patch-v4l2,v 1.1 2008/09/27 22:33:20 ahoka Exp $
+$NetBSD: patch-v4l2,v 1.1.8.1 2009/09/28 09:57:01 tron Exp $
 
---- modules/access/v4l2/v4l2.c.orig	2008-09-25 01:46:12.000000000 +0200
-+++ modules/access/v4l2/v4l2.c
-@@ -55,7 +55,13 @@
+--- modules/access/v4l2.c.orig	2009-05-22 01:06:04.000000000 +0200
++++ modules/access/v4l2.c
+@@ -48,7 +48,13 @@
  #include <sys/ioctl.h>
  #include <sys/mman.h>
  
@@ -15,5 +15,5 @@ $NetBSD: patch-v4l2,v 1.1 2008/09/27 22:33:20 ahoka Exp $
 +#   error "No Video4Linux2 headers found."
 +#endif
  
- #include <sys/soundcard.h>
+ #include <poll.h>
  

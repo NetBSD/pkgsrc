@@ -1,17 +1,17 @@
-$NetBSD: patch-configure,v 1.2 2008/10/13 18:42:12 ahoka Exp $
+$NetBSD: patch-configure,v 1.2.6.1 2009/09/28 09:57:01 tron Exp $
 
---- configure.ac.orig	2008-10-06 20:14:27.000000000 +0200
+--- configure.ac.orig	2009-09-19 21:30:21.000000000 +0200
 +++ configure.ac
-@@ -1592,7 +1592,7 @@ dnl Allow runing as root (usefull for pe
- dnl
- AC_ARG_ENABLE(run-as-root,
- [  --enable-run-as-root    allow runing VLC as root (default disabled)])
--AS_IF([test "${enable_run_as_root}" == "yes"],[
-+AS_IF([test "${enable_run_as_root}" = "yes"],[
-     AC_DEFINE(ALLOW_RUN_AS_ROOT, 1,
-               [Define to 1 to allow runing VLC as root (uid 0).])
+@@ -572,7 +572,7 @@ AC_CHECK_FUNCS(fdatasync,,
  ])
-@@ -2424,7 +2424,7 @@ then
+ 
+ dnl Check for non-standard system calls
+-AC_CHECK_FUNCS([vmsplice eventfd fstatfs])
++AC_CHECK_FUNCS([vmsplice eventfd fstatvfs fstatfs])
+ 
+ AH_BOTTOM([#include <vlc_fixups.h>])
+ 
+@@ -2498,7 +2498,7 @@ then
    fi
  
    CPPFLAGS="${CPPFLAGS_save} ${CPPFLAGS_v4l2}"
