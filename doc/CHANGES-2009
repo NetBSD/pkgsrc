@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3842 2009/09/27 20:06:52 tron Exp $
+$NetBSD: CHANGES-2009,v 1.3843 2009/09/28 01:37:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4984,3 +4984,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated devel/doxygen to 1.6.1nb1 [minskim 2009-09-27]
 	Updated games/prboom to 2.5.0nb1 [snj 2009-09-27]
 	Updated www/squid31 to 3.1.0.14 [tron 2009-09-27]
+	Updated www/typolight27 to 2.7.3nb1 [taca 2009-09-28]
