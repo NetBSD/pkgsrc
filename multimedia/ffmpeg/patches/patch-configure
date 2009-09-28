@@ -1,8 +1,19 @@
-$NetBSD: patch-configure,v 1.6 2009/06/14 11:27:01 ahoka Exp $
+$NetBSD: patch-configure,v 1.6.2.1 2009/09/28 08:08:31 spz Exp $
 
 --- configure.orig	2009-06-10 22:50:53.000000000 +0200
 +++ configure
-@@ -1632,6 +1632,8 @@ case $target_os in
+@@ -1619,6 +1619,10 @@ case $target_os in
+         add_cflags -D__EXTENSIONS__
+         ;;
+     netbsd)
++	if test $subarch != "x86_32"; then
++	    LIBOBJFLAGS='$(PIC)'
++	    SHFLAGS='-shared'
++	fi
+         oss_demuxer_extralibs="-lossaudio"
+         oss_muxer_extralibs="-lossaudio"
+         ;;
+@@ -1632,6 +1636,8 @@ case $target_os in
      freebsd)
          disable need_memalign
          ;;
@@ -11,7 +22,7 @@ $NetBSD: patch-configure,v 1.6 2009/06/14 11:27:01 ahoka Exp $
      bsd/os)
          osextralibs="-lpoll -lgnugetopt"
          strip="strip -d"
-@@ -1996,10 +1998,13 @@ enabled vis && add_cflags -mcpu=ultraspa
+@@ -1996,10 +2002,13 @@ enabled vis && add_cflags -mcpu=ultraspa
  
  # ---
  # big/little-endian test
