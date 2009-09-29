@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2009/08/20 15:25:00 jwise Exp $
+# $NetBSD: Makefile,v 1.21 2009/09/29 16:56:43 wiz Exp $
 #
 
 DISTNAME=	saxon
 PKGNAME=	saxon-6.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc www
 MASTER_SITES=	${HOMEPAGE}saxon6.0.2/
 EXTRACT_SUFX=	.zip
