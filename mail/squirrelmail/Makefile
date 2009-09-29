@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.108 2009/08/26 12:47:17 tron Exp $
+# $NetBSD: Makefile,v 1.109 2009/09/29 13:30:54 taca Exp $
 
 DISTNAME=	squirrelmail-1.4.20-RC2
 PKGNAME=	${DISTNAME:S/-RC2/rc2/}
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,7 +29,6 @@ PKG_USERS_VARS+=	APACHE_USER
 BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
-.include "options.mk"
 
 PKG_SYSCONFSUBDIR?=	httpd
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
