@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/09/25 12:29:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/29 17:19:11 wiz Exp $
 #
 # Note to packagers:
 # packages installing additional completion files should drop
@@ -6,6 +6,7 @@
 # with the name of the package as file name.
 
 DISTNAME=	bash-completion-1.0
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	http://bash-completion.alioth.debian.org/files/
 
@@ -25,6 +26,7 @@ INSTALLATION_DIRS+=	share/bash-completion.d
 INSTALLATION_DIRS+=	share/doc/bash-completion
 
 SUBST_CLASSES+=		path
+SUBST_SED.path+=	-e "s,/etc/bash_completion.d,${PREFIX}/share/bash-completion.d,g"
 SUBST_SED.path+=	-e "s,/etc/bash_completion,${PREFIX}/share/bash-completion/bash_completion,g"
 SUBST_STAGE.path+=	pre-build
 SUBST_FILES.path+=	bash_completion* README
