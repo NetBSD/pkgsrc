@@ -372,6 +372,7 @@ qmail-viruscan		Patch to SMTP-reject certain types of MIME attachments.
 qpopper-servermode	Enable server mode.
 qt			Enable support for QT.
 quartz			Enable Quartz support on Mac OS X.	
+readline		Enable use of GNU readline library.
 rsaref			Use RSAREF library.
 ruby			Enable Ruby support.
 ruby-build-ri-db	Build and install database for Ruby's ri utility.
@@ -427,8 +428,6 @@ squid-netfilter		Enable use of transparent proxy with Linux Net Filter.
 squid-pam-helper	Enable use of PAM helper support.
 squid-pf		Enable use of transparent proxy with Packet Filter.
 squid-unlinkd		Enable use of unlinkd.
-squirrelmail-japanese	Add experimental Japanese fix to squirrelmail.
-squirrelmail-lite	Add experimental none-frame support to squirrelmail.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
 streamtuner-local	Enable local metadata support
