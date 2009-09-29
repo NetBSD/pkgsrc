@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3847 2009/09/29 16:56:56 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3848 2009/09/29 17:00:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4992,3 +4992,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated www/drupal6 to 6.14 [taca 2009-09-29]
 	Updated www/drupal6-translations to 20090926 [taca 2009-09-29]
 	Updated textproc/saxon to 6.0.2nb3 [wiz 2009-09-29]
+	Updated chat/pircbot to 0.9.11nb2 [wiz 2009-09-29]
