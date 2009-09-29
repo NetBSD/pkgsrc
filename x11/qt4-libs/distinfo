@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2009/07/24 10:56:46 drochner Exp $
+$NetBSD: distinfo,v 1.33 2009/09/29 06:39:30 wiz Exp $
 
 SHA1 (qt-x11-opensource-src-4.5.2.tar.bz2) = bf2dd175cade15f3f505fe6aac1401bdbfeb4e5b
 RMD160 (qt-x11-opensource-src-4.5.2.tar.bz2) = 1af31d7fe66665e718f0c728b41becea9996fba7
@@ -22,6 +22,7 @@ SHA1 (patch-ap) = 99402ac9ef527e7fa9b1825c8e1b8a299bc4ffe7
 SHA1 (patch-aq) = f6d48cad9461fd40f4c54669cc275e99cdbb7a34
 SHA1 (patch-ar) = 5bc9a1d384c9a888f1295b87968a09236b48af65
 SHA1 (patch-as) = 818c3d6eecab7706dde7f47b077c3c676e69d67b
+SHA1 (patch-at) = f9b090ead20dd1b664484237ac5777fdd03ea1ed
 SHA1 (patch-av) = f716b571ef0f8b5c7684378a0e3772c1680c6dcf
 SHA1 (patch-ax) = 2c895f23a49be32d4605557a74ce5af34cdfc061
 SHA1 (patch-ba) = 669bd9b71edfe861b2945d696cf5fa151d0d48af
