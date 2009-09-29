@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2009/07/16 18:11:53 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2009/09/29 13:41:00 taca Exp $
 
-DISTNAME=	drupal-6.13
+DISTNAME=	drupal-6.14
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	drupal-5.*{,nb*}
 
