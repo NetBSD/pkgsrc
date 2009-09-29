@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/09/29 09:34:09 adam Exp $
 bin/radclient
 bin/radconf2xml
 bin/radeapclient
@@ -121,6 +121,8 @@ lib/rlm_pap-${RADVER}.la
 lib/rlm_pap.la
 lib/rlm_passwd-${RADVER}.la
 lib/rlm_passwd.la
+${PLIST.perl}lib/rlm_perl-${RADVER}.la
+${PLIST.perl}lib/rlm_perl.la
 ${PLIST.pgsql}lib/rlm_sql_postgresql-${RADVER}.la
 ${PLIST.pgsql}lib/rlm_sql_postgresql.la
 lib/rlm_policy-${RADVER}.la
