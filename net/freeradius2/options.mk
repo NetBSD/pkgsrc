@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2009/04/23 18:26:05 adam Exp $
+# $NetBSD: options.mk,v 1.3 2009/09/29 09:34:09 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
 PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql snmp kerberos pam freeradius-simul-use
+PKG_SUPPORTED_OPTIONS+=	perl
 PKG_SUGGESTED_OPTIONS=	gdbm freeradius-simul-use
 PKG_OPTIONS_OPTIONAL_GROUPS=	dbm odbc
 PKG_OPTIONS_GROUP.dbm=	bdb gdbm
@@ -9,7 +10,7 @@ PKG_OPTIONS_GROUP.odbc=	iodbc unixodbc
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	dbm gdbm iodbc ldap kerberos mysql pam pgsql unixodbc
+PLIST_VARS+=	dbm gdbm iodbc ldap kerberos mysql pam pgsql unixodbc perl
 
 ###
 ### GDBM or Berkeley DB 1.x support
@@ -26,6 +27,17 @@ CONFIGURE_ARGS+=	--with-rlm_dbm
 PLIST.dbm=		yes
 .else
 CONFIGURE_ARGS+=	--without-rlm_dbm
+.endif
+
+###
+### PERL support
+###
+.if !empty(PKG_OPTIONS:Mperl)
+.  include "../../lang/perl5/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-rlm_perl
+PLIST.perl=		yes
+.else
+CONFIGURE_ARGS+=	--without-rlm_perl
 .endif
 
 ###
