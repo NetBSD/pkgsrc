@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2009/07/18 06:04:33 tonio Exp $
+# $NetBSD: Makefile,v 1.24 2009/09/29 17:17:39 tonio Exp $
 #
 
 DISTNAME=	weechat-0.2.6.3
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://weechat.flashtux.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,8 +20,6 @@ USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-ruby --disable-aspell
 MAKE_ENV+=		INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
-
-INCOMPAT_CURSES+=	NetBSD-*-*
 
 .include "options.mk"
 
