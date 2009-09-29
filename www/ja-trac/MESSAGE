@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2008/08/01 08:46:55 obache Exp $
+$NetBSD: MESSAGE,v 1.3 2009/09/29 04:41:16 obache Exp $
 
 You must upgrade existing Trac environments before using a new
 version:
@@ -17,5 +17,4 @@ For more information:
 You can install following packages for feature improvements:
 	${PYPKGPREFIX}-subversion (devel/py-subversion)	Using with Subversion
 	${PYPKGPREFIX}-pygments (textproc/py-pygments)	Syntex hilighting
-	${PYPKGPREFIX}-docutils (textproc/py-docutils)	WikiRestructuredText
 ===========================================================================
