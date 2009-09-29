@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/08/20 15:25:00 jwise Exp $
+# $NetBSD: Makefile,v 1.24 2009/09/29 16:58:49 wiz Exp $
 #
 
 DISTNAME=	xp
@@ -23,7 +23,7 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	lib/java share/doc/java/xp
 
 post-extract:
-	cd ${WRKDIR} && unzip -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+	cd ${WRKDIR} && unzip ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 	${RM} -r ${WRKDIR}/docs/api/CVS ${WRKDIR}/docs/api/images/CVS
 
 do-install:
