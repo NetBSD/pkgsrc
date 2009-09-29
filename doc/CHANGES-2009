@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3850 2009/09/29 17:19:23 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3851 2009/09/29 20:07:52 is Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4995,3 +4995,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated chat/pircbot to 0.9.11nb2 [wiz 2009-09-29]
 	Updated www/paros to 3.2.13nb1 [wiz 2009-09-29]
 	Updated shells/bash-completion to 1.0nb1 [wiz 2009-09-29]
+	Updated graphics/jhead to 2.87 [is 2009-09-29]
