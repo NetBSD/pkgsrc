@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2009/08/26 19:57:06 sno Exp $
+# $NetBSD: Makefile,v 1.99 2009/09/30 09:22:47 sketch Exp $
 #
 
 DISTNAME=		gedit-2.26.3
@@ -22,6 +22,10 @@ GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 
 GCONF_SCHEMAS=		gedit.schemas gedit-file-browser.schemas
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=	gtkdoc-rebase
 
 .include "options.mk"
 
