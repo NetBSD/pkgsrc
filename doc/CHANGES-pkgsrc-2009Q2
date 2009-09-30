@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.60 2009/09/28 09:57:22 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.61 2009/09/30 12:20:06 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -210,3 +210,5 @@ Pullup ticket #2902 - requested by tron
 ffmpeg: security patch
 Pullup ticket #2901 - requested by ahoka
 vlc: security update
+Pullup ticket #2903 - requested by taca
+php5: security update
