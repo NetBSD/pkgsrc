@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/08/09 08:04:24 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2009/09/30 09:22:47 sketch Exp $
 #
 
 DISTNAME=	libxklavier-4.0
@@ -29,6 +29,10 @@ CONFIGURE_ARGS+=	--with-xkb-base=${X11BASE}/share/X11/xkb
 .else
 CONFIGURE_ARGS+=	--with-xkb-base=${X11BASE}/lib/X11/xkb
 .endif
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=	gtkdoc-rebase
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 

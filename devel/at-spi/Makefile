@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2009/08/26 19:56:54 sno Exp $
+# $NetBSD: Makefile,v 1.51 2009/09/30 09:22:48 sketch Exp $
 #
 
 DISTNAME=		at-spi-1.26.0
@@ -25,6 +25,10 @@ PKGCONFIG_OVERRIDE+=	libloginhelper-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	libspi-1.0.pc.in
 
 GCONF_SCHEMAS=		at-spi.schemas
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=	gtkdoc-rebase
 
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.atk+=	atk>=1.17.0

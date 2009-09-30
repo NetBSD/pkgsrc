@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:56:56 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/30 09:22:47 sketch Exp $
 #
 
 DISTNAME=	libunique-1.0.8
@@ -17,6 +17,10 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	unique.pc.in
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=	gtkdoc-rebase
 
 .include "options.mk"
 
