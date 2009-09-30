@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:57:00 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/30 09:22:47 sketch Exp $
 #
 
 DISTNAME=	clutter-0.8.8
@@ -22,6 +22,10 @@ CONFIGURE_ARGS+=	--with-json=check
 PKGCONFIG_OVERRIDE+=	clutter/x11/clutter-x11.pc.in
 PKGCONFIG_OVERRIDE+=	clutter/win32/clutter-win32.pc.in
 PKGCONFIG_OVERRIDE+=	clutter.pc.in
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=	gtkdoc-rebase
 
 .include "options.mk"
 
