@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.20 2008/10/06 22:40:12 hubertf Exp $
+$NetBSD: patch-ab,v 1.21 2009/09/30 14:59:06 tnn Exp $
 
 --- configure.orig	2008-08-29 01:55:43.000000000 +0200
 +++ configure
@@ -160,3 +160,25 @@ $NetBSD: patch-ab,v 1.20 2008/10/06 22:40:12 hubertf Exp $
      test "x$mesa_includes" = xNONE && mesa_includes=$ac_mesa_includes
      test "x$mesa_libraries" = xNONE && mesa_libraries=$ac_mesa_libraries
      case "${canonical}" in
+@@ -10533,8 +10400,8 @@ _ACEOF
+         dirname=`dirname $dirname`
+         dirname=`dirname $dirname`/lib
+ 	if test "$dirname" != "/lib"; then
+-  	    XLOCK_LDFLAGS="${XLOCK_LDFLAGS}:$dirname"
+-  	    XMLOCK_LDFLAGS="${XMLOCK_LDFLAGS}:$dirname"
++#  	    XLOCK_LDFLAGS="${XLOCK_LDFLAGS}:$dirname"
++#  	    XMLOCK_LDFLAGS="${XMLOCK_LDFLAGS}:$dirname"
+ 	fi
+     fi
+     XLOCKLDFLAGS="-Wl,-R${XLOCK_LDFLAGS}"
+@@ -10834,8 +10701,8 @@ _ACEOF
+         dirname=`dirname $dirname`
+         dirname=`dirname $dirname`/lib
+ 	if test "$dirname" != "/lib"; then
+-  	    XLOCK_LDFLAGS="${XLOCK_LDFLAGS}:$dirname"
+-  	    XMLOCK_LDFLAGS="${XMLOCK_LDFLAGS}:$dirname"
++#  	    XLOCK_LDFLAGS="${XLOCK_LDFLAGS}:$dirname"
++#  	    XMLOCK_LDFLAGS="${XMLOCK_LDFLAGS}:$dirname"
+ 	fi
+     fi
+     XLOCKLDFLAGS="-R${XLOCK_LDFLAGS}"
