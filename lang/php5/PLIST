@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/06/14 20:34:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.23.2.1 2009/09/30 12:19:49 tron Exp $
 bin/php
 bin/php-config
 bin/phpize
@@ -110,7 +110,6 @@ include/php/ext/standard/css.h
 include/php/ext/standard/cyr_convert.h
 include/php/ext/standard/datetime.h
 include/php/ext/standard/dl.h
-include/php/ext/standard/dns.h
 include/php/ext/standard/exec.h
 include/php/ext/standard/file.h
 include/php/ext/standard/flock_compat.h
@@ -127,6 +126,7 @@ include/php/ext/standard/php_assert.h
 include/php/ext/standard/php_browscap.h
 include/php/ext/standard/php_crypt.h
 include/php/ext/standard/php_dir.h
+include/php/ext/standard/php_dns.h
 include/php/ext/standard/php_ext_syslog.h
 include/php/ext/standard/php_filestat.h
 include/php/ext/standard/php_fopen_wrappers.h
@@ -157,7 +157,6 @@ include/php/ext/standard/sha1.h
 include/php/ext/standard/streamsfuncs.h
 include/php/ext/standard/uniqid.h
 include/php/ext/standard/url.h
-include/php/ext/standard/url_scanner.h
 include/php/ext/standard/url_scanner_ex.h
 include/php/ext/xml/expat_compat.h
 include/php/ext/xml/php_xml.h
