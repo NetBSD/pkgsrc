@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.34 2009/03/05 23:22:24 adrianp Exp $
+# $NetBSD: Makefile.php,v 1.34.4.1 2009/09/30 12:19:49 tron Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -20,6 +20,7 @@ PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR:Q}
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-config-file-scan-dir=${PKG_SYSCONFDIR:Q}/php.d
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
@@ -49,13 +50,13 @@ SUBST_CLASSES+=		ini
 SUBST_STAGE.ini=	post-patch
 SUBST_FILES.ini=	php.ini-dist
 SUBST_FILES.ini+=	php.ini-recommended
-SUBST_SED.ini=		-e "s|\;include_path = \".:/php/includes\"|include_path = \".:${PREFIX}/lib/php\"|g"
+SUBST_SED.ini=		-e "s|\\;include_path = \".:/php/includes\"|include_path = \".:${PREFIX}/lib/php\"|g"
 SUBST_MESSAGE.ini=	Fixing default ini files.
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msuhosin)
-SUHOSIN_PHPVER=		5.2.9
+SUHOSIN_PHPVER=		5.2.11
 . if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS}
 PKG_FAIL_REASON+=	"The suhosin patch is currently not available for"
 PKG_FAIL_REASON+=	"this version of PHP.  You may have to wait until"
