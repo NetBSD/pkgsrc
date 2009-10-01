@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8501 2009/09/29 14:59:08 taca Exp $
+$NetBSD: TODO,v 1.8502 2009/10/01 14:15:56 taca Exp $
 
 Suggested new packages
 ======================
@@ -1221,8 +1221,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rudiments-0.30
 	o sabayon-2.25.0 [GNOME 2.26]
 	o sablecc-3.2
-	o samba-3.2.14
-	o samba-3.4.1
+	o samba-3.0.37
+	o samba-3.2.15
+	o samba-3.4.2
 	o sarg-2.2.5
 	o sawfish-1.5.2
 	o sbcl-1.0.31
