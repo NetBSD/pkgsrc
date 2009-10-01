@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2009/05/17 05:06:02 obache Exp $
+# $NetBSD: options.mk,v 1.17 2009/10/01 12:30:32 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 #PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk kde m17nlib qt prime sj3 uim-fep wnn xim
@@ -82,7 +82,11 @@ PLIST.kde=		yes
 
 .if !empty(PKG_OPTIONS:Mm17nlib)
 .  include "../../devel/m17n-lib/buildlink3.mk"
+DEPENDS+=		m17n-contrib-[0-9]*:../../misc/m17n-contrib
 PLIST.m17nlib=		yes
+INSTALL_TEMPLATES+=	INSTALL.m17nlib
+DEINSTALL_TEMPLATES+=	DEINSTALL.m17nlib
+CHECK_FILES_SKIP+=	${PREFIX}/share/uim/pixmaps/m17n-.*\.png
 .else
 CONFIGURE_ARGS+=	--without-m17nlib
 .endif
