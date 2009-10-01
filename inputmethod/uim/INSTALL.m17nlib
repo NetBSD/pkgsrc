@@ -1,0 +1,8 @@
+# $NetBSD: INSTALL.m17nlib,v 1.1 2009/10/01 12:30:32 obache Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	${TEST} ! -x ${PREFIX}/bin/uim-m17nlib-relink-icons ||
+		${PREFIX}/bin/uim-m17nlib-relink-icons
+	;;
+esac
