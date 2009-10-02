@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.598 2009/10/02 19:55:05 markd Exp $
+# $NetBSD: Makefile,v 1.599 2009/10/02 22:28:29 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -166,6 +166,9 @@ SUBDIR+=	kde3-i18n-uz
 SUBDIR+=	kde3-i18n-vi
 SUBDIR+=	kde3-i18n-zh_CN
 SUBDIR+=	kde3-i18n-zh_TW
+SUBDIR+=	kde4-l10n-de
+SUBDIR+=	kde4-l10n-en_GB
+SUBDIR+=	kde4-l10n-nl
 SUBDIR+=	kdebase3
 SUBDIR+=	kdebase-runtime4
 SUBDIR+=	kdebase-workspace4
