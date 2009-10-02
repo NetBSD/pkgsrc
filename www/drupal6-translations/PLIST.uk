@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.uk,v 1.1 2009/07/01 01:36:45 taca Exp $
+@comment $NetBSD: PLIST.uk,v 1.1.2.1 2009/10/02 10:04:31 tron Exp $
 ${DRUPAL_BASE}/LICENSE.uk.txt
 ${DRUPAL_BASE}/STATUS.uk.txt
 ${DRUPAL_BASE}/modules/aggregator/translations/modules-aggregator.uk.po
@@ -29,6 +29,7 @@ ${DRUPAL_BASE}/modules/system/translations/general.uk.po
 ${DRUPAL_BASE}/modules/system/translations/includes.uk.po
 ${DRUPAL_BASE}/modules/system/translations/misc.uk.po
 ${DRUPAL_BASE}/modules/system/translations/modules-system.uk.po
+${DRUPAL_BASE}/modules/system/translations/uk.uk.po
 ${DRUPAL_BASE}/modules/taxonomy/translations/modules-taxonomy.uk.po
 ${DRUPAL_BASE}/modules/throttle/translations/modules-throttle.uk.po
 ${DRUPAL_BASE}/modules/tracker/translations/modules-tracker.uk.po
