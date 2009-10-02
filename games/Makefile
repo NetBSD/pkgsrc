@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.325 2009/09/06 12:14:01 wiz Exp $
+# $NetBSD: Makefile,v 1.326 2009/10/02 20:38:00 markd Exp $
 #
 
 COMMENT=	Games
@@ -137,7 +137,9 @@ SUBDIR+=	jools
 SUBDIR+=	kajaani-kombat
 SUBDIR+=	kapooka
 SUBDIR+=	kdegames3
+SUBDIR+=	kdegames4
 SUBDIR+=	kdetoys3
+SUBDIR+=	kdetoys4
 SUBDIR+=	ketm
 SUBDIR+=	knightcap
 SUBDIR+=	knightcap-brain
