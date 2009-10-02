@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:38:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/10/02 19:21:59 is Exp $
 bin/autopvf
 bin/basictopvf
 bin/faxq
@@ -53,6 +53,7 @@ man/man1/zplay.1
 man/man4/mgettydefs.4
 man/man5/faxqueue.5
 man/man8/callback.8
+man/man8/faxq-helper.8
 man/man8/faxrunqd.8
 man/man8/mgetty.8
 man/man8/sendfax.8

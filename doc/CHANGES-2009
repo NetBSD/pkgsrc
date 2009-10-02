@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3856 2009/10/02 18:52:23 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3857 2009/10/02 19:21:58 is Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5010,3 +5010,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated security/openct to 0.6.18nb1 [hasso 2009-10-02]
 	Updated www/typolight27 to 2.7.4 [taca 2009-10-02]
 	Updated security/opensc-signer to 0.11.9nb1 [hasso 2009-10-02]
+	Updated comms/mgetty+sendfax to 1.1.36nb1 [is 2009-10-02]
