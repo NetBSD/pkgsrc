@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2009/10/02 09:50:38 hasso Exp $
+
+--- plugins/sql/mysql/Makefile.in.orig	2009-09-26 16:39:48 +0200
++++ plugins/sql/mysql/Makefile.in	2009-09-26 16:40:18 +0200
+@@ -121,7 +121,7 @@
+ am__installdirs = "$(DESTDIR)$(mysqldir)"
+ LTLIBRARIES = $(mysql_LTLIBRARIES)
+ @HAVE_MYSQL_TRUE@mysql_la_DEPENDENCIES =  \
+-@HAVE_MYSQL_TRUE@	$(top_builddir)/src/libpreludedb.la
++@HAVE_MYSQL_TRUE@	$(top_builddir)/../.buildlink/lib/libpreludedb.la
+ am__mysql_la_SOURCES_DIST = mysql.c
+ @HAVE_MYSQL_TRUE@am_mysql_la_OBJECTS = mysql.lo
+ mysql_la_OBJECTS = $(am_mysql_la_OBJECTS)
+@@ -590,7 +590,7 @@
+ AM_CPPFLAGS = @PCFLAGS@ -I$(top_srcdir)/src/include -I$(top_srcdir)/libmissing -I$(top_builddir)/libmissing @LIBPRELUDE_CFLAGS@ @MYSQL_CFLAGS@
+ mysql_la_LDFLAGS = -module -avoid-version @LIBPRELUDE_LDFLAGS@
+ @HAVE_MYSQL_TRUE@mysql_la_SOURCES = mysql.c
+-@HAVE_MYSQL_TRUE@mysql_la_LIBADD = $(top_builddir)/src/libpreludedb.la @LIBPRELUDE_LIBS@ @MYSQL_LDFLAGS@
++@HAVE_MYSQL_TRUE@mysql_la_LIBADD = $(top_builddir)/../.buildlink/lib/libpreludedb.la @LIBPRELUDE_LIBS@ @MYSQL_LDFLAGS@
+ @HAVE_MYSQL_TRUE@mysqldir = $(sql_plugin_dir)
+ @HAVE_MYSQL_TRUE@mysql_LTLIBRARIES = mysql.la
+ all: all-am

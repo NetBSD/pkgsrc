@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2009/10/02 09:50:38 hasso Exp $
+
+--- plugins/sql/pgsql/Makefile.in.orig	2009-09-26 16:39:52 +0200
++++ plugins/sql/pgsql/Makefile.in	2009-09-26 16:40:32 +0200
+@@ -121,7 +121,7 @@
+ am__installdirs = "$(DESTDIR)$(pgsqldir)"
+ LTLIBRARIES = $(pgsql_LTLIBRARIES)
+ @HAVE_PGSQL_TRUE@pgsql_la_DEPENDENCIES =  \
+-@HAVE_PGSQL_TRUE@	$(top_builddir)/src/libpreludedb.la
++@HAVE_PGSQL_TRUE@	$(top_builddir)/../.buildlink/lib/libpreludedb.la
+ am__pgsql_la_SOURCES_DIST = pgsql.c
+ @HAVE_PGSQL_TRUE@am_pgsql_la_OBJECTS = pgsql.lo
+ pgsql_la_OBJECTS = $(am_pgsql_la_OBJECTS)
+@@ -590,7 +590,7 @@
+ AM_CPPFLAGS = @PCFLAGS@ -I$(top_srcdir)/src/include -I$(top_srcdir)/libmissing -I$(top_builddir)/libmissing @LIBPRELUDE_CFLAGS@ @POSTGRESQL_CFLAGS@
+ pgsql_la_LDFLAGS = -module -avoid-version @LIBPRELUDE_LDFLAGS@ 
+ @HAVE_PGSQL_TRUE@pgsql_la_SOURCES = pgsql.c
+-@HAVE_PGSQL_TRUE@pgsql_la_LIBADD = $(top_builddir)/src/libpreludedb.la @LIBPRELUDE_LIBS@ @POSTGRESQL_LDFLAGS@
++@HAVE_PGSQL_TRUE@pgsql_la_LIBADD = $(top_builddir)/../.buildlink/lib/libpreludedb.la @LIBPRELUDE_LIBS@ @POSTGRESQL_LDFLAGS@
+ @HAVE_PGSQL_TRUE@pgsqldir = $(sql_plugin_dir)
+ @HAVE_PGSQL_TRUE@pgsql_LTLIBRARIES = pgsql.la
+ all: all-am

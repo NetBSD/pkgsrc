@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2009/10/02 09:50:38 hasso Exp $
+
+--- plugins/sql/sqlite3/Makefile.in.orig	2009-09-26 16:38:21 +0200
++++ plugins/sql/sqlite3/Makefile.in	2009-09-26 16:39:12 +0200
+@@ -121,7 +121,7 @@
+ am__installdirs = "$(DESTDIR)$(sqlite3dir)"
+ LTLIBRARIES = $(sqlite3_LTLIBRARIES)
+ @HAVE_SQLITE3_TRUE@sqlite3_la_DEPENDENCIES =  \
+-@HAVE_SQLITE3_TRUE@	$(top_builddir)/src/libpreludedb.la
++@HAVE_SQLITE3_TRUE@	$(top_builddir)/../.buildlink/lib/libpreludedb.la
+ am__sqlite3_la_SOURCES_DIST = sqlite3.c
+ @HAVE_SQLITE3_TRUE@am_sqlite3_la_OBJECTS = sqlite3.lo
+ sqlite3_la_OBJECTS = $(am_sqlite3_la_OBJECTS)
+@@ -590,7 +590,7 @@
+ AM_CPPFLAGS = @PCFLAGS@ -I$(top_srcdir)/src/include -I$(top_srcdir)/libmissing -I$(top_builddir)/libmissing @LIBPRELUDE_CFLAGS@ @SQLITE3_CFLAGS@
+ sqlite3_la_LDFLAGS = -module -avoid-version @LIBPRELUDE_LDFLAGS@
+ @HAVE_SQLITE3_TRUE@sqlite3_la_SOURCES = sqlite3.c
+-@HAVE_SQLITE3_TRUE@sqlite3_la_LIBADD = $(top_builddir)/src/libpreludedb.la @LIBPRELUDE_LIBS@ @SQLITE3_LDFLAGS@
++@HAVE_SQLITE3_TRUE@sqlite3_la_LIBADD = $(top_builddir)/../.buildlink/lib/libpreludedb.la @LIBPRELUDE_LIBS@ @SQLITE3_LDFLAGS@
+ @HAVE_SQLITE3_TRUE@sqlite3dir = $(sql_plugin_dir)
+ @HAVE_SQLITE3_TRUE@sqlite3_LTLIBRARIES = sqlite3.la
+ all: all-am
