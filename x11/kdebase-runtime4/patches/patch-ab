@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/10/02 19:30:13 markd Exp $
+
+dont install hicolor/index.theme as hicolor-icon-theme pkg will
+
+--- pics/CMakeLists.txt.orig	2007-10-26 01:21:45.000000000 +1300
++++ pics/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ 
+-add_subdirectory( hicolor )
++#add_subdirectory( hicolor )
+ add_subdirectory( emoticons )
+ #add_subdirectory( oxygen )
+ 
