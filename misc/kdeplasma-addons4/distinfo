@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/02 21:30:03 markd Exp $
+
+SHA1 (kdeplasma-addons-4.3.1.tar.bz2) = 83421181dd3a80c4ac0ff5bab111b7f71f6a1192
+RMD160 (kdeplasma-addons-4.3.1.tar.bz2) = 6197ec2ef392fa2b836b04708dedcbbb49eaee22
+Size (kdeplasma-addons-4.3.1.tar.bz2) = 1448440 bytes
+SHA1 (patch-aa) = ea5181ba97e93c89ee331fec3737a639196733a0

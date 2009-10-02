@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/10/02 21:24:29 markd Exp $
+
+KDE svn 1022963
+
+--- kmail/cachedimapjob.cpp.orig	2009-05-28 07:54:17.000000000 +1200
++++ kmail/cachedimapjob.cpp
+@@ -510,7 +510,7 @@ void CachedImapJob::slotPutMessageResult
+         bool b = kmkernel->iCalIface().isResourceQuiet();
+         kmkernel->iCalIface().setResourceQuiet( true );
+ 
+-        mFolder->take( i );
++        mFolder->takeTemporarily( i );
+         mFolder->addMsgKeepUID( mMsg );
+         mMsg->setTransferInProgress( false );
+ 

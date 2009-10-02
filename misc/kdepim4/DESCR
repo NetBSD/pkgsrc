@@ -1,0 +1,39 @@
+Anything relating to the KDE-PIM project. See also http://pim.kde.org.
+
+The KDE-PIM project aims to bring together those who wish to help design,
+implement, test, etc. anything that's to do with personal information
+management.
+
+This rather broad scope encompasses mail clients, addressbooks, usenet news,
+scheduling and even sticky notes.
+
+What it is
+----------
+
+* kaddressbook: The KDE addressbook application.
+* kmail: the KDE mail client
+* kmailcvt: tool for importing mail related data from other programs
+* kmobiletools: an application specially designed to manage mobile phones
+* knode: news client
+* korganizer: a calendar-of-events and todo-list manager
+* kalarm: gui for setting up personal alarm messages, emails and commands
+* kalarmd: alarm monitoring daemon, shared by korganizer and kalarm.
+* kontact: Integrated PIM application
+* ktimetracker: Time tracker.
+* kfile-plugins: vCard KFIleItem plugin.
+* knotes: yellow notes application
+* konsolekalendar: Command line tool for accessing calendar files.
+* korn: mail checker
+* akregator: Feed reader
+* kjots: manager for several "books" with a subject and notes
+
+
+There is also quite an amount of infrastructure in this package:
+
+* libkdepim: Common code for different kdepim apps
+* mimelib: MIME messages library
+* kpgp: A library for pgp
+* libkpimexchange: connecting to Exchange2000 servers
+* kdgantt: alternative lib for Gantt diagrams, used by the free/busy view of
+           KOrganizer (yes, we should decide for one of the Gantt libs)
+* kontactinterfaces: The glue for embedding KParts into Kontact

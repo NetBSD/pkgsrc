@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/02 21:33:16 markd Exp $
+
+removing kscd profile as it is delivered by kscd.
+fixed in kde svn.
+
+--- kdelirc/profiles/CMakeLists.txt.orig	2009-08-27 20:17:24.000000000 +1200
++++ kdelirc/profiles/CMakeLists.txt
+@@ -11,7 +11,6 @@ install( FILES 
+     konqueror.profile.xml 
+     suspend.profile.xml
+     shutdown.profile.xml
+-    kscd.profile.xml
+     DESTINATION ${DATA_INSTALL_DIR}/profiles)
+ 
+ 

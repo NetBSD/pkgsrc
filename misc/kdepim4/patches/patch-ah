@@ -1,0 +1,30 @@
+$NetBSD: patch-ah,v 1.1.1.1 2009/10/02 21:24:29 markd Exp $
+
+KDE svn 1022963 and 1022964
+
+--- kmail/kmfoldercachedimap.cpp.orig	2009-05-28 07:54:17.000000000 +1200
++++ kmail/kmfoldercachedimap.cpp
+@@ -527,6 +527,11 @@ KMMessage *KMFolderCachedImap::take( int
+   return KMFolderMaildir::take( idx );
+ }
+ 
++void KMFolderCachedImap::takeTemporarily( int idx )
++{
++  KMFolderMaildir::take( idx );
++}
++
+ int KMFolderCachedImap::addMsgInternal( KMMessage *msg, bool newMail, int *index_return )
+ {
+   // Possible optimization: Only dirty if not filtered below
+@@ -1673,6 +1678,11 @@ bool KMFolderCachedImap::deleteMessages(
+     job->start();
+     return true;
+   } else {
++
++    // Nothing to delete on the server, make sure the map is clear again.
++    // Normally this wouldn't be necessary, but there can be stale maps because of
++    // https://issues.kolab.org/issue3833.
++    mDeletedUIDsSinceLastSync.clear();
+     return false;
+   }
+ }
