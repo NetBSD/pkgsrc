@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.536 2009/09/07 18:32:40 joerg Exp $
+# $NetBSD: Makefile,v 1.537 2009/10/02 20:12:54 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -202,6 +202,7 @@ SUBDIR+=	jpegoptim
 SUBDIR+=	jpegpixi
 SUBDIR+=	kbarcode
 SUBDIR+=	kdegraphics3
+SUBDIR+=	kdegraphics4
 SUBDIR+=	kipi-plugins
 SUBDIR+=	kipi-plugins-calendar
 SUBDIR+=	koverartist
@@ -256,6 +257,7 @@ SUBDIR+=	opencv
 SUBDIR+=	opendis
 SUBDIR+=	openexr
 SUBDIR+=	optipng
+SUBDIR+=	oxygen-icons
 SUBDIR+=	ov519view
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Chart-ThreeD
