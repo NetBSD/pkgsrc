@@ -1,0 +1,29 @@
+The kdebase-runtime package is the second mandatory package (besides kdelibs)
+for the K Desktop Environment. Here we have various applications and
+infrastructure files and libraries. Here is an overview of the directories:
+
+* drkonqi
+    If ever an app crashes (heaven forbid!) then Dr.Konqi will be so kind
+    and make a stack trace. This is a great help for the developers to fix
+    the bug.
+* kcontrol
+    The KDE Control Center allows you to tweak the KDE settings.
+* kdebugdialog
+    Allows you to specify which debug messages you want to see.
+* kdesktop
+    You guessed it: the desktop above the panel.
+* kdesu
+    A graphical front end to "su".
+* kfind
+    File find utility (standalone and in Konqueror's file manager).
+* khelpcenter
+    Used to to read all great documentation about KDE, unix man pages,
+    info pages etc.
+* kioslave
+    Infrastructure that helps make every application internet enabled
+    e.g. to directly save a file to ftp://place.org/dir/file.txt
+* kreadconfig
+    A tool for shell scripts to get info from KDE's config files.
+* kstart
+    Launches applications with special window properties such as iconified,
+    etc.
