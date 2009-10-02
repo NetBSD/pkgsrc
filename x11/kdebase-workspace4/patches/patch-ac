@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/10/02 19:37:22 markd Exp $
+
+--- kcontrol/kdm/main.cpp.orig	2008-07-03 17:05:24.000000000 +1200
++++ kcontrol/kdm/main.cpp
+@@ -188,7 +188,11 @@ KDModule::KDModule( QWidget *parent, con
+ 		kWarning() << "user(s) '" << tgmapci.value().join( "," )
+ 		<< "' have unknown GID " << tgmapci.key() << endl;
+ 
+-	config = new KConfig( QString::fromLatin1(KDE_CONFDIR "/kdm/kdmrc"), KConfig::SimpleConfig );
++	QFile confFile (QString::fromLatin1( "@PKG_SYSCONFDIR@" "/kdm/kdmrc" ));
++	if ( !confFile.exists() )
++		confFile.setFileName (QString::fromLatin1( KDE_CONFDIR "/kdm/kdmrc" ));
++
++	config = new KConfig( confFile.fileName(), KConfig::SimpleConfig );
+ 
+ 	QVBoxLayout *top = new QVBoxLayout( this );
+ 	top->setMargin( 0 );
