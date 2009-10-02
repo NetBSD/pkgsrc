@@ -1,0 +1,42 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/10/02 19:30:13 markd Exp $
+
+--- khelpcenter/searchhandlers/khc_docbookdig.pl.cmake.orig	2009-02-27 03:16:03.000000000 +1300
++++ khelpcenter/searchhandlers/khc_docbookdig.pl.cmake
+@@ -26,8 +26,8 @@ use strict;
+ 
+ use Getopt::Long;
+ 
+-my $htdigdata = "/srv/www/htdig/common/";
+-my $htdigbin = "/usr/bin";
++my $htdigdata = "@CMAKE_INSTALL_PREFIX@/share/htdig/common/";
++my $htdigbin = "@CMAKE_INSTALL_PREFIX@/bin";
+ my $kdeprefix = "@CMAKE_INSTALL_PREFIX@";
+ chomp $kdeprefix;
+ 
+@@ -126,20 +126,23 @@ if ( !open( PARSER, ">$parserfile" ) ) {
+ print PARSER << "EOT";
+ #! /bin/sh
+ 
++PATH=/bin:/usr/bin:\$PATH
++export PATH
++
+ file=\$1
+ shift
+ mime=\$1
+ shift
+ 
+ if test "\$#" -gt 0; then
+-  orig=\${1/file:\\//}
++  orig=`echo \$1 | sed -e 's=file:=/='`
+   shift
+ fi
+ 
+ case "\$orig" in
+   help:/*)
+-	orig=\${orig/help:\\//}
+-	orig=\${orig/\/index.docbook/}
++	orig=\${orig#help:}
++	orig=\${orig\%/index.docbook}
+ 	cd @HTML_INSTALL_DIR@/en/\$orig
+ 	file=index.docbook
+ 	;;
