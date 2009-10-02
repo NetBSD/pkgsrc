@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/02 20:47:46 markd Exp $
+
+--- cmake/modules/FindXscreensaver.cmake.orig	2009-03-08 22:15:30.000000000 +1300
++++ cmake/modules/FindXscreensaver.cmake
+@@ -24,6 +24,7 @@ if (NOT XSCREENSAVER_FOUND)
+         set(xscreensaver_alldirs ${xscreensaver_alldirs} ${xscreensaver_path}/${suffix})
+      endforeach(xscreensaver_path ${xscreensaver_checkdirs} )
+   endforeach(suffix lib${LIB_SUFFIX}/xscreensaver lib/xscreensaver lib64/xscreensaver libexec/xscreensaver bin/xscreensaver-hacks hacks)
++if (NOT XSCREENSAVER_DIR)
+   FIND_PATH(XSCREENSAVER_DIR deco ${xscreensaver_alldirs})
+ 
+   set(XSCREENSAVER_CONFIG_DIR)
+@@ -48,7 +49,7 @@ if (NOT XSCREENSAVER_FOUND)
+ 	set(XSCREENSAVER_CONFIG_DIR "${XSCREENSAVER_CONFIG_DECO}/config/")
+ 	#MESSAGE(STATUS "XSCREENSAVER_CONFIG_DIR <${XSCREENSAVER_CONFIG_DIR}>")
+   endif(XSCREENSAVER_CONFIG_DECO)
+-
++endif(NOT XSCREENSAVER_DIR)
+ 
+   # Try and locate XScreenSaver config when path doesn't include config
+   if(NOT XSCREENSAVER_CONFIG_DIR)
