@@ -1,8 +1,8 @@
-# $NetBSD: replace.mk,v 1.25 2009/06/09 08:40:27 joerg Exp $
+# $NetBSD: replace.mk,v 1.26 2009/10/02 12:35:54 obache Exp $
 #
 
 # _flavor-replace:
-#	Updates a package in-place on the system (USE_DESTDIR=yes).
+#	Updates a package in-place on the system (USE_DESTDIR=no).
 #
 # _flavor-destdir-replace:
 #	Updates a package in-place on the system (USE_DESTDIR=yes).
