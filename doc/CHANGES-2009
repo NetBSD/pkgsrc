@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3854 2009/10/02 12:40:01 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.3855 2009/10/02 14:35:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5008,3 +5008,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated security/py-prewikka to 0.9.17.1 [hasso 2009-10-02]
 	Updated security/pcsc-lite to 1.5.5nb1 [hasso 2009-10-02]
 	Updated security/openct to 0.6.18nb1 [hasso 2009-10-02]
+	Updated www/typolight27 to 2.7.4 [taca 2009-10-02]
