@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/07/22 13:10:22 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2009/10/02 22:45:13 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kchmviewer
 PKG_SUPPORTED_OPTIONS=	kde4
@@ -10,8 +10,8 @@ PLIST_VARS+=		kde4
 USE_CMAKE=		yes
 BUILD_DEPENDS+=		automoc4-[0-9]*:../../devel/automoc4
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../wip/kdelibs4/buildlink3.mk"
-.include "../../wip/kde4/kde4.mk"
+.include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
 PLIST.kde4=		yes
 .else
 
