@@ -1,0 +1,19 @@
+This is a compilation of various desktop utilities that are part of the
+standard KDE environment.
+
+* ark: Archiving tool
+* kcalc: scientific calculator
+* kcharselect: select special characters from any fonts and put them
+    into the clipboard
+* kdessh: front end to ssh
+* kdf: like 'df', a graphical free disk space viewer
+* kfloppy: format a floppy disks with this program
+* kgpg: graphical GPG frontend
+* kwallet: KDE wallet management tool
+* okteta: binary file editor
+* printer-applet:
+    a system tray utility that shows current print jobs, shows printer
+    warnings and errors and shows when printers that have been plugged
+    in for the first time are being auto-configured by hal-cups-utils.
+* superkaramba: version of Karamba with python scripting
+* sweeper: cleans unwanted traces the user leaves on the system

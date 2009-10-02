@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/10/02 21:24:29 markd Exp $
+
+--- ktimetracker/test/deleteparenttask.sh.orig	2008-07-22 12:04:32.000000000 +1200
++++ ktimetracker/test/deleteparenttask.sh
+@@ -22,7 +22,7 @@ qdbus org.kde.ktimetracker /KTimeTracker
+ 
+ RVAL=`qdbus org.kde.ktimetracker /KTimeTracker version`
+ 
+-if [ "$RVAL" == "" ]; then 
++if [ "$RVAL" = "" ]; then 
+   echo "FAIL $0: got no version."
+   exit 1;
+ else 
