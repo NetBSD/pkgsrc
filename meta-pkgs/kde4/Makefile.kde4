@@ -1,0 +1,28 @@
+# $NetBSD: Makefile.kde4,v 1.1.1.1 2009/10/02 21:43:12 markd Exp $
+#
+# This Makefile fragment is included at the top of package Makefiles for
+# KDE4-distributed packages (they all share common configure and build
+# settings).
+
+CATEGORIES+=	kde
+_KDE_VERSION=	4.3.1
+MASTER_SITE_KDE_I18N=	${MASTER_SITE_KDE:=4.3.1/src/kde-l10n/}
+MASTER_SITES?=	${MASTER_SITE_KDE:=4.3.1/src/}
+EXTRACT_SUFX?=	.tar.bz2
+PKGNAME?=	${DISTNAME:S/-4/4-4/}
+
+MAINTAINER?=	markd@NetBSD.org
+HOMEPAGE?=	http://www.kde.org/
+
+BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
+TOOLS_DEPENDS.cmake= cmake>=2.6.3:../../devel/cmake
+
+USE_TOOLS+=	pkg-config perl
+USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
+CMAKE_ARG_PATH=	..
+CONFIGURE_DIRS= _KDE_build
+
+pre-configure:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
+	${MKDIR} ${WRKSRC}/_KDE_build

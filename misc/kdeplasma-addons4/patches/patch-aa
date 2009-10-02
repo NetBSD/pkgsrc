@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/02 21:30:03 markd Exp $
+
+--- applets/lancelot/libs/lancelot/widgets/BasicWidget.cpp.orig	2009-05-07 12:05:53.000000000 +1200
++++ applets/lancelot/libs/lancelot/widgets/BasicWidget.cpp
+@@ -31,6 +31,10 @@
+ 
+ #define max(A, B) ((A) >= (B)) ? (A) : (B)
+ 
++#ifdef __NetBSD__
++#define fmaxf(A, B) ((A) >= (B)) ? (A) : (B)
++#endif
++
+ namespace Lancelot
+ {
+ 

@@ -1,0 +1,27 @@
+The kdepimlibs package includes libraries that are central to the development
+and execution of a KDE-PIM application.
+
+The KDE-PIM project aims to bring together those who wish to help design,
+implement, test, etc. anything that's to do with personal information
+management.
+
+This rather broad scope encompasses mail clients, addressbooks, usenet news,
+scheduling and even sticky notes.
+
+Here is an alphabetical list:
+
+* akonadi: client access library for using the Akonadi PIM data server.
+* kblog: C++ API for weblogging access
+* kcal: C++ API for the iCalendar and vCalendar formats
+* kcal/libical: a basic iCalendar protocol implementation, see RFCs 2245,2246
+* kimap: C++ API for IMAP support
+* kldap: C++ API for LDAP access
+* kmime: C++ API for MIME handling
+* kpimidentities: C++ API for shared identities for mail applications
+* kpimutils: A library for general purpose PIM utilities
+* ktnef: C++ API for the handling of TNEF data
+* kxmlrpclient: An XML-RPC client library
+* mailtransport: C++ API and support code for managing mail transport
+* syndication: An RSS/Atom feed parser library
+* qgpgme: A C++ wrapper for gpgme
+* kioslaves/sieve: Sieve kioslave
