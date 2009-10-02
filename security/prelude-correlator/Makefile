@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/08/24 12:30:09 hasso Exp $
+# $NetBSD: Makefile,v 1.4 2009/10/02 10:15:10 hasso Exp $
 #
 
 DISTNAME=	prelude-correlator-0.9.0-beta6
+PKGREVISION=	1
 PKGNAME=	prelude-correlator-${DISTNAME:S/-beta/beta/:C/.*-//}
 CATEGORIES=	security
 MASTER_SITES=	http://www.prelude-ids.com/download/releases/prelude-correlator/
@@ -20,6 +21,8 @@ PRELUDE_USER?=		_prelude
 PRELUDE_GROUP?=		_prelude
 PRELUDE_HOME?=		${VARBASE}/db/prelude-correlator
 INSTALLATION_DIRS=	sbin
+OWN_DIRS=		${PKG_SYSCONFDIR}/prelude-correlator
+EGDIR=			${PREFIX}/share/examples
 
 PKG_GROUPS_VARS+=	PRELUDE_GROUP
 PKG_USERS_VARS+=	PRELUDE_USER
@@ -30,9 +33,9 @@ PKG_USERS=		${PRELUDE_USER}:${PRELUDE_GROUP}
 PKG_GECOS.${PRELUDE_USER}=	Prelude IDS correlator
 PKG_HOME.${PRELUDE_USER}=	${PRELUDE_HOME}
 
-FILES_SUBST+=   PRELUDE_CORRELATOR_PID_DIR=${PRELUDE_CORRELATOR_PID_DIR:Q}
-FILES_SUBST+=   PRELUDE_USER=${PRELUDE_USER:Q}
-FILES_SUBST+=   PRELUDE_GROUP=${PRELUDE_USER:Q}
+FILES_SUBST+=		PRELUDE_CORRELATOR_PID_DIR=${PRELUDE_CORRELATOR_PID_DIR:Q}
+FILES_SUBST+=		PRELUDE_USER=${PRELUDE_USER:Q}
+FILES_SUBST+=		PRELUDE_GROUP=${PRELUDE_USER:Q}
 
 SUBST_CLASSES+=		code
 SUBST_STAGE.code=	post-patch
@@ -42,10 +45,14 @@ SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
 SUBST_SED.code+=        -e 's,@PRELUDE_HOME@,${PRELUDE_HOME},g'
 
+CONF_FILES=		${EGDIR}/prelude-correlator.conf ${PKG_SYSCONFDIR}/prelude-correlator/prelude-correlator.conf
+
 REQD_DIRS+=		${PRELUDE_HOME}
 REQD_DIRS_PERMS+=	${PRELUDE_HOME} ${PRELUDE_USER} ${PRELUDE_GROUP} 0700
 
 REPLACE_PYTHON=		${WRKSRC}/*.py
+
+EGG_NAME=		prelude_correlator-0.9.0_beta6
 
 pre-patch:
 	${CP} ${FILESDIR}/run-prelude-correlator.c ${WRKSRC}
@@ -55,6 +62,7 @@ post-build:
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/run-prelude-correlator ${DESTDIR}${PREFIX}/sbin/run-prelude-correlator
+	${INSTALL_DATA} ${WRKSRC}/prelude-correlator.conf ${DESTDIR}${EGDIR}
 
 .include "../../security/libprelude-python/buildlink3.mk"
 .include "../../lang/python/egg.mk"
