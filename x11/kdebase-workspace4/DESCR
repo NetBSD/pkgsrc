@@ -1,0 +1,6 @@
+The kdebase-workspace package consists of what is the desktop for KDE4.  The
+applications and libraries included aren't required to be portable and probably
+will only work with X11.  On other desktops such as OS X and Windows, users
+wouldn't run these applications, but use the native ones instead.  The typical
+application shouldn't have dependencies in workspace unless they are a component
+such as a screen-saver or panel applet.

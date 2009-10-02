@@ -1,0 +1,13 @@
+$NetBSD: patch-ca,v 1.1.1.1 2009/10/02 19:37:22 markd Exp $
+
+--- libs/ksysguard/processcore/CMakeLists.txt.orig	2008-02-20 19:15:55.000000000 +0100
++++ libs/ksysguard/processcore/CMakeLists.txt
+@@ -16,7 +16,7 @@ kde4_add_library(processcore SHARED ${ks
+ target_link_libraries(processcore ${KDE4_KDECORE_LIBS} )
+ if( ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD" )
+   message(STATUS "Adding kvm library on NetBSD")
+-  target_link_libraries(processcore kvm)
++  target_link_libraries(processcore kvm ${RT_LIB_SCHED})
+ endif( ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD" )
+ 
+ set_target_properties(processcore PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION} )

@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/10/02 19:43:39 markd Exp $
+
+--- apps/kinfocenter/base/info_netbsd.cpp.orig	2008-04-18 19:21:39.000000000 +1200
++++ apps/kinfocenter/base/info_netbsd.cpp
+@@ -210,7 +210,7 @@ bool GetInfo_Sound(QTreeWidget* tree) {
+ 
+ 		s = (*it)->text(0);
+ 		// The autoconf message is in form 'audio0 at auvia0: ...'
+-		if (s.find("audio") == 0 && (pos = s.find(" at ")) > 0) {
++		if (s.indexOf("audio") == 0 && (pos = s.indexOf(" at ")) > 0) {
+ 			s2 = s.mid(pos+4); // skip " at "
+ 			s2.remove(QRegExp("[:\n\t ].*"));
+ 			dev = strdup(s2.toAscii().data());
+@@ -244,7 +244,7 @@ bool GetInfo_SCSI(QTreeWidget* tree) {
+ 		QString s = (*it)->text(0);
+ 
+ 		if (s.contains("seconds for devices to settle")) {
+-			delete tree->takeItem( tree->indexOfTopLevelItem(*it) );
++			delete tree->takeTopLevelItem( tree->indexOfTopLevelItem(*it) );
+ 			break;
+ 		}
+ 
