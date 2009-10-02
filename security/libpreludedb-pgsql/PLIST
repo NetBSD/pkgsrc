@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 10:03:08 hasso Exp $
+lib/libpreludedb/plugins/sql/pgsql.la
