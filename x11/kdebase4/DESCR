@@ -1,0 +1,22 @@
+The kdebase package has base applications required in the K Desktop
+Environment.
+
+* dolphin
+    The file manager.
+* kappfinder
+    Searches for non-KDE applications, e.g. Acrobat Reader (tm) and installs
+    those apps under the K start button.
+* kcheckpass
+    Small program to enter and check passwords, to be used by other
+    programs.
+* kdialog
+    Allows to display menu boxes from shell scripts.
+* kfind
+    File find utility (standalone and in Konqueror's file manager).
+* konqueror
+    The file manager and web browser you get easily used to.
+* konsole
+    A shell program similar to xterm.
+* kdepasswd
+    A KDE frontend for passwd. Also contains the "Password & User
+    Information" KCM.
