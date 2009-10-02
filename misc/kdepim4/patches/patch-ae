@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/10/02 21:24:29 markd Exp $
+
+KDE svn 1019115
+
+--- libkdepim/addresseelineedit.cpp.orig	2009-08-27 20:18:28.000000000 +1200
++++ libkdepim/addresseelineedit.cpp
+@@ -800,7 +800,7 @@ void AddresseeLineEdit::startLoadingLDAP
+ 
+ void AddresseeLineEdit::slotLDAPSearchData( const KPIM::LdapResultList &adrs )
+ {
+-  if ( s_LDAPLineEdit != this ) {
++  if ( adrs.isEmpty() || s_LDAPLineEdit != this ) {
+     return;
+   }
+ 
