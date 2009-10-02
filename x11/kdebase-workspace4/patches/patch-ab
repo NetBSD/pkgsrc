@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/10/02 19:37:22 markd Exp $
+
+--- kdm/kfrontend/CMakeLists.txt.orig	2008-05-29 23:19:01.000000000 +1200
++++ kdm/kfrontend/CMakeLists.txt
+@@ -109,5 +109,5 @@ build_confci()
+ 
+ ## use 'GENKDMCONF_FLAGS=... make install' to add flags to the config generation (try genkdmconf -h)
+ install(CODE "
+-exec_program(\"${CMAKE_CURRENT_BINARY_DIR}/genkdmconf\" ARGS --in \\\"\\\$DESTDIR${CONFIG_INSTALL_DIR}/kdm\\\" --no-in-notice --face-src \\\"${CMAKE_CURRENT_SOURCE_DIR}/pics\\\" \\\$GENKDMCONF_FLAGS)
++exec_program(\"${CMAKE_CURRENT_BINARY_DIR}/genkdmconf\" ARGS --in \\\"\\\$DESTDIR${CONFIG_INSTALL_DIR}/kdm\\\" --no-in-notice --no-old --no-backup --face-src \\\"${CMAKE_CURRENT_SOURCE_DIR}/pics\\\" \\\$GENKDMCONF_FLAGS)
+ ")

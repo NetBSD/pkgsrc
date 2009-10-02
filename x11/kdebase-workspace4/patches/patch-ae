@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/10/02 19:37:22 markd Exp $
+
+--- mkpamserv.orig	2007-07-26 22:37:17.000000000 +1200
++++ mkpamserv
+@@ -1,5 +1,7 @@
+ #! /bin/sh
+ 
++exit 0
++
+ permit=false
+ if test "x$1" = x-P; then
+     permit=true
