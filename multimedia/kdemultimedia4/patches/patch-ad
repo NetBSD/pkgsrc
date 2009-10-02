@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/10/02 20:25:35 markd Exp $
+
+--- kmix/tests/CMakeLists.txt.orig	2008-12-22 09:21:07.000000000 +1300
++++ kmix/tests/CMakeLists.txt
+@@ -21,7 +21,7 @@ kde4_add_executable(profiletest ${profil
+     ${kmix_adaptor_SRCS}
+     )
+ 
+-target_link_libraries(profiletest  ${KDE4_KDECORE_LIBS} ${KDE4_SOLID_LIBS} ${QT_QTGUI_LIBRARY} ${QT_QTXML_LIBRARY} )
++target_link_libraries(profiletest  ${KDE4_KDECORE_LIBS} ${KDE4_SOLID_LIBS} ${QT_QTGUI_LIBRARY} ${QT_QTXML_LIBRARY} $ENV{LIBOSSAUDIO})
+ 
+ if (HAVE_LIBASOUND2)
+     target_link_libraries(profiletest ${ASOUND_LIBRARY})
