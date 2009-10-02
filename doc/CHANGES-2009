@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3852 2009/09/30 08:05:30 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3853 2009/10/02 10:36:39 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -4997,3 +4997,12 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated shells/bash-completion to 1.0nb1 [wiz 2009-09-29]
 	Updated graphics/jhead to 2.87 [is 2009-09-29]
 	Added print/poppler-data version 0.3.0 [wiz 2009-09-30]
+	Updated security/libprelude to 0.9.24.1 [hasso 2009-10-02]
+	Added security/libpreludedb-mysql version 0.9.15.3 [hasso 2009-10-02]
+	Added security/libpreludedb-perl version 0.9.15.3 [hasso 2009-10-02]
+	Added security/libpreludedb-pgsql version 0.9.15.3 [hasso 2009-10-02]
+	Added security/libpreludedb-python version 0.9.15.3 [hasso 2009-10-02]
+	Added security/libpreludedb-sqlite3 version 0.9.15.3 [hasso 2009-10-02]
+	Updated security/prelude-correlator to 0.9.0beta6nb1 [hasso 2009-10-02]
+	Updated security/prelude-manager to 0.9.15nb1 [hasso 2009-10-02]
+	Updated security/py-prewikka to 0.9.17.1 [hasso 2009-10-02]
