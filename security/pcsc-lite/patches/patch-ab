@@ -1,11 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2008/08/08 21:25:49 shannonjr Exp $
+$NetBSD: patch-ab,v 1.3 2009/10/02 12:36:13 hasso Exp $
 
---- src/Makefile.am.orig	2008-05-21 09:58:33 +0300
-+++ src/Makefile.am	2008-08-07 22:16:36 +0300
-@@ -152,3 +152,6 @@ tokenparser.c: tokenparser.l
- 
- EXTRA_DIST = README_INTERNALS.txt winscard_scf.c
- 
-+install-data-local:
-+	${INSTALL} -d ${DESTDIR}${includedir}/PCSC
-+
+--- etc/Makefile.in.orig	2009-10-02 14:30:34 +0300
++++ etc/Makefile.in	2009-10-02 14:31:11 +0300
+@@ -202,7 +202,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ usbdropdir = @usbdropdir@
+-conf_DATA = reader.conf
++conf_DATA =
+ sbin_SCRIPTS = update-reader.conf
+ EXTRA_DIST = StartupParameters.plist SmartcardServices
+ all: all-am
