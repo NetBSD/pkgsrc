@@ -1,0 +1,40 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/10/02 19:19:00 markd Exp $
+
+--- kde3support/kdeui/k3sconfig.cpp.orig	2007-10-08 20:41:19.000000000 +1300
++++ kde3support/kdeui/k3sconfig.cpp
+@@ -464,6 +464,8 @@ void K3SpellConfig::getAvailDictsIspell 
+   // dictionary path
+   QFileInfo dir ("/usr/lib/ispell");
+   if (!dir.exists() || !dir.isDir())
++    dir.setFile ("@LOCALBASE@/lib");
++  if (!dir.exists() || !dir.isDir())
+     dir.setFile ("/usr/local/lib/ispell");
+   if (!dir.exists() || !dir.isDir())
+     dir.setFile ("/usr/local/share/ispell");
+@@ -536,6 +538,8 @@ void K3SpellConfig::getAvailDictsAspell 
+   if (!dir.exists() || !dir.isDir())
+     dir.setFile ("/usr/lib" KDELIBSUFF "/aspell-0.60");
+   if (!dir.exists() || !dir.isDir())
++    dir.setFile ("@LOCALBASE@/lib");
++  if (!dir.exists() || !dir.isDir())
+     dir.setFile ("/usr/local/lib" KDELIBSUFF "/aspell");
+   if (!dir.exists() || !dir.isDir())
+     dir.setFile ("/usr/share/aspell");
+@@ -620,6 +624,8 @@ K3SpellConfig::fillDicts( QComboBox* box
+       // dictionary path
+       QFileInfo dir ("/usr/lib/ispell");
+       if (!dir.exists() || !dir.isDir())
++        dir.setFile ("@LOCALBASE@/lib");
++      if (!dir.exists() || !dir.isDir())
+         dir.setFile ("/usr/local/lib/ispell");
+       if (!dir.exists() || !dir.isDir())
+         dir.setFile ("/usr/local/share/ispell");
+@@ -698,6 +704,8 @@ K3SpellConfig::fillDicts( QComboBox* box
+       if (!dir.exists() || !dir.isDir())
+         dir.setFile ("/usr/lib" KDELIBSUFF "/aspell-0.60");
+       if (!dir.exists() || !dir.isDir())
++        dir.setFile ("@LOCALBASE@/lib");
++      if (!dir.exists() || !dir.isDir())
+         dir.setFile ("/usr/local/lib" KDELIBSUFF "/aspell");
+       if (!dir.exists() || !dir.isDir())
+         dir.setFile ("/usr/share/aspell");
