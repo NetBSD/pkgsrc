@@ -1,0 +1,14 @@
+The kdewebdev package is the web development package for the K Desktop Environment.
+
+It contains Quanta Plus and other applications, which are useful for web
+development. They are runtime dependencies of Quanta Plus, and it is
+highly recommended that you install them.
+
+The extra applications are:
+
+Kommander: a GUI script builder and executor tool. Needed for some Quanta
+   functionality.
+KFileReplace: powerful search and replace in multiple files
+KXSLDbg: XSL debugger
+KImageMapEditor: image map editor
+KLinkStatus: link checker
