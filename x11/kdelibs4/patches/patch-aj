@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2009/10/02 19:19:00 markd Exp $
+
+From https://bugs.kde.org/show_bug.cgi?id=193215
+
+--- kio/kssl/ksmimecrypto.cpp.orig	2008-05-21 23:08:14.000000000 +1200
++++ kio/kssl/ksmimecrypto.cpp
+@@ -86,7 +86,7 @@ KSMIMECryptoPrivate::KSMIMECryptoPrivate
+ 
+ 
+ STACK_OF(X509) *KSMIMECryptoPrivate::certsToX509(const QList<KSSLCertificate *> &certs) {
+-    STACK_OF(X509) *x509 = sk_new(NULL);
++    STACK_OF(X509) *x509 = reinterpret_cast<STACK_OF(X509)*>(sk_new(NULL));
+     foreach(KSSLCertificate *cert, certs) {
+ 	sk_X509_push(x509, cert->getCert());
+     }
