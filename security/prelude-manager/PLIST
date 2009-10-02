@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/08/24 18:32:22 hasso Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/10/02 10:19:51 hasso Exp $
 bin/prelude-manager
 include/prelude-manager/prelude-manager.h
 lib/prelude-manager/decodes/normalize.la
@@ -9,8 +9,10 @@ lib/prelude-manager/reports/debug.la
 lib/prelude-manager/reports/relaying.la
 lib/prelude-manager/reports/textmod.la
 lib/prelude-manager/reports/smtp.la
+lib/prelude-manager/reports/xmlmod.la
 sbin/run-prelude-manager
 share/examples/prelude-manager/prelude-manager.conf
 share/examples/rc.d/preludemanager
 share/doc/prelude-manager/smtp/template.example
+share/prelude-manager/xmlmod/idmef-message.dtd
 man/man1/prelude-manager.1
