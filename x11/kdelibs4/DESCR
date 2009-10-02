@@ -1,0 +1,64 @@
+kdelibs includes libraries that are central to the development and
+execution of a KDE program, as well as internationalization files for these
+libraries, misc HTML documentation, theme modules, and regression tests.
+Here is an alphabetical list:
+
+* dnssd
+    Interface to the DNS-SD (Zeroconf) support.
+* interfaces
+    kparts interface for text editors, mediaplayer and scripting.
+* kate
+    KPart for 'kate', the KDE advanced text editor.
+* kcmshell
+    KControl Module interface
+* kconf_update
+    Auto-Updater for config files.
+* kde3support
+    This contains libraries that were part of KDE3, but have been
+    replaced for KDE4
+* kdecore
+    This is the core collection of KDE stuff. Non GUI classes reside here.
+* kded
+    The KDE daemon checks for newly installed software, update files
+    or hostname changes and takes according actions.
+* kdesu
+    Library for password entering and handling
+* kdeui
+    The main collection of misc. user interface classes (widgets).
+* kdewidgets
+    For developers: KDE's custom widgets for Qt Designer.
+* kdoctools
+    Contains mostly stuff convert XML docbook files via XSLT into
+    human readable stuff.
+* khtml
+    The next generation HTML rendering widget designed for Konqueror.
+* kimgio
+    An all purpose extension to the qimgio class that supports various
+    image formats.
+* kinit
+    Process launcher (kdeinit), used for fast KDE startup and to launch
+    kioslaves.
+* kio
+    Classes that fetch and decode URLs are contained here. This library
+    also contains "ksycoca", the system configure cache containing
+    services, applications, servicetypes and mimetypes.
+* kioslave
+    I/O subprocesses to handle files, ftp, http, gzip and bzip2 streams.
+* kjs
+    Implementation of ECMAScript (aka JavaScript).
+* kjsembed
+    A binding of the ECMAScript language to interface with KDE code.
+* knewstuff
+    Allows applications to easily download data from the Internet to add
+    new information to the program. e.g. wallpapers, translation packs, etc.
+* knotify
+    Handles user notifications, including sounds, logging to files, etc.
+* kparts
+    KDE component model.
+* kwallet
+    Client and backend to store values in encrypted files.
+* mimetypes
+    Database of mime types.
+* sonnet
+    Tools for natural language processing, including spell and grammar
+    check. Includes gui widgets.
