@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/28 07:39:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/02 14:32:52 taca Exp $
 ${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
 ${TL_EGDIR}/print.css
@@ -1289,6 +1289,7 @@ ${TL_WEBDIR}/system/modules/news/templates/mod_newsarchive.tpl
 ${TL_WEBDIR}/system/modules/news/templates/mod_newsarchive_empty.tpl
 ${TL_WEBDIR}/system/modules/news/templates/mod_newslist.tpl
 ${TL_WEBDIR}/system/modules/news/templates/mod_newsmenu.tpl
+${TL_WEBDIR}/system/modules/news/templates/mod_newsmenu_year.tpl
 ${TL_WEBDIR}/system/modules/news/templates/mod_newsreader.tpl
 ${TL_WEBDIR}/system/modules/news/templates/news_full.tpl
 ${TL_WEBDIR}/system/modules/news/templates/news_latest.tpl
