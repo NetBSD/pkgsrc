@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.61 2009/09/30 12:20:06 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.62 2009/10/02 10:06:59 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -212,3 +212,9 @@ Pullup ticket #2901 - requested by ahoka
 vlc: security update
 Pullup ticket #2903 - requested by taca
 php5: security update
+Pullup ticket #2904 - requested by taca
+drupal: security update
+Pullup ticket #2905 - requested by taca
+drupal6: security update
+Pullup ticket #2906 - requested by taca
+drupal6-translations: match update of "drupal6" package
