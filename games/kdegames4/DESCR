@@ -1,0 +1,31 @@
+This is a compilation of more than 20 various casual desktop games that are
+part of the standard KDE distribution.
+
+* bovo: Five-in-a-row Board Game.
+* katomic: Build complex atoms with a minimal amount of moves.
+* kbackgammon: Play backgammon against a local human player, via a game
+    server or against GNU Backgammon (not included)
+* kbattleship: Sink battleship of your opponents, with built-in game server.
+* kblackbox: Find the balls hidden in the black box by shooting laser beams!
+* kbounce: Claim areas and don't get disturbed.
+* kgoldrunner: A game of action and puzzle-solving.
+* kiriki: Yahtzee-like Dice Game.
+* kjumpingcube: A tactical game for number-crunchers.
+* klines: Place 5 equal pieces together, but wait, there are 3 new ones.
+* kmahjongg: A tile laying patience.
+* kmines: The classical mine sweeper.
+* kolf: A mini golf game.
+* konquest: Conquer the planets of your enemy.
+* kpat: Several patience card games.
+* kreversi: The old reversi board game, also known as Othello.
+* ksame: Collect pieces of the same color.
+* kshisen: Patience game where you take away all pieces.
+* kspaceduel: Two player game with shooting spaceships flying around a sun.
+* ksquares: Connect the dots to create squares.
+* ksudoku: Sudoku game and more.
+* ktuberling: Kids game: make your own potato (NO french fries!)
+* kwin4: Place 4 pieces in a row.
+* libkdegames: KDE game library used by many of these programs, contains also
+    images of card decks.
+* libkmahjongg: Library used for loading and rendering of Mahjongg tilesets.
+* lskat: Lieutnant skat.
