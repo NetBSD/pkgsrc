@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.363 2009/09/22 19:38:08 sno Exp $
+# $NetBSD: Makefile,v 1.364 2009/10/02 10:08:53 hasso Exp $
 #
 
 COMMENT=	Security tools
@@ -118,6 +118,11 @@ SUBDIR+=	libprelude-perl
 SUBDIR+=	libprelude-python
 SUBDIR+=	libprelude-ruby
 SUBDIR+=	libpreludedb
+SUBDIR+=	libpreludedb-mysql
+SUBDIR+=	libpreludedb-perl
+SUBDIR+=	libpreludedb-pgsql
+SUBDIR+=	libpreludedb-python
+SUBDIR+=	libpreludedb-sqlite3
 SUBDIR+=	libssh
 SUBDIR+=	libssh2
 SUBDIR+=	libtasn1
