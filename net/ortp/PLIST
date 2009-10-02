@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 19:09:29 markd Exp $
+include/ortp/b64.h
+include/ortp/event.h
+include/ortp/ortp.h
+include/ortp/payloadtype.h
+include/ortp/port.h
+include/ortp/rtcp.h
+include/ortp/rtp.h
+include/ortp/rtpsession.h
+include/ortp/rtpsignaltable.h
+include/ortp/sessionset.h
+include/ortp/srtp.h
+include/ortp/str_utils.h
+include/ortp/stun.h
+include/ortp/stun_udp.h
+include/ortp/telephonyevents.h
+lib/libortp.la
+lib/pkgconfig/ortp.pc
