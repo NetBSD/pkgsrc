@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2009/08/23 18:56:34 hasso Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/10/02 09:46:42 hasso Exp $
 #
 # used by security/libprelude/Makefile
 # used by security/libprelude-lua/Makefile
@@ -7,7 +7,7 @@
 # used by security/libprelude-ruby/Makefile
 
 DISTNAME=		libprelude-${VERSION}
-VERSION=		0.9.24
+VERSION=		0.9.24.1
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/libprelude/
 
