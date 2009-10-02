@@ -1,0 +1,19 @@
+The kdegraphics module of KDE is a collection of graphic oriented applications:
+
+* gwenview
+    Image viewer.
+* kamera
+    Digital camera io_slave for Konqueror. Together gPhoto this allows you
+    to access your camera's picture with the URL kamera:/
+* kolourpaint
+    An easy-to-use paint program designed for everyday tasks like drawing
+    simple diagrams/logos/icons and editing screenshots.
+* kruler
+    A ruler in inch, centimeter and pixel to check distances on the screen.
+* ksnapshot
+    Make snapshots of the screen contents.
+* libkscan
+    Library to access scanners used by kooka (and koffice), needs SANE to be
+    used
+* okular
+    Document viewer; support different kinds of documents.
