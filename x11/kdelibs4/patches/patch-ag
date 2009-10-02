@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2009/10/02 19:19:00 markd Exp $
+
+--- security/crypto/crypto.cpp.orig	2008-05-01 22:16:43.000000000 +1200
++++ security/crypto/crypto.cpp
+@@ -2247,7 +2247,11 @@ bool KCryptoConfig::loadCiphers() {
+ unsigned int i;
+ SSL_CTX *ctx;
+ SSL *ssl;
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+ SSL_METHOD *meth;
++#else
++const SSL_METHOD *meth;
++#endif
+ 
+   SSLv3Box->clear();
+   meth = SSLv3_client_method();
