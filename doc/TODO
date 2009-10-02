@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8502 2009/10/01 14:15:56 taca Exp $
+$NetBSD: TODO,v 1.8503 2009/10/02 10:36:39 hasso Exp $
 
 Suggested new packages
 ======================
@@ -1132,7 +1132,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-logging-0.4.9.6 [pkg/41675]
 	o py-m2crypto-0.20.1
 	o py-moin-1.8.5
-	o py-prewikka-0.9.17 [pkg/41763]
 	o py-psycopg-2.0.12
 	o py-pytz-2009l
 	o py-qt4-4.6
