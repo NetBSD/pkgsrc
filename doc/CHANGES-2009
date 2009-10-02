@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3857 2009/10/02 19:21:58 is Exp $
+$NetBSD: CHANGES-2009,v 1.3858 2009/10/02 22:41:18 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5011,3 +5011,31 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated www/typolight27 to 2.7.4 [taca 2009-10-02]
 	Updated security/opensc-signer to 0.11.9nb1 [hasso 2009-10-02]
 	Updated comms/mgetty+sendfax to 1.1.36nb1 [is 2009-10-02]
+	Added net/ortp version 0.16.0 [markd 2009-10-02]
+	Added devel/kdesdk4 version 4.3.1 [markd 2009-10-02]
+	Added games/kdegames4 version 4.3.1 [markd 2009-10-02]
+	Added games/kdetoys4 version 4.3.1 [markd 2009-10-02]
+	Added graphics/kdegraphics4 version 4.3.1 [markd 2009-10-02]
+	Added graphics/oxygen-icons version 4.3.1 [markd 2009-10-02]
+	Added meta-pkgs/kde4 version 4.3.1 [markd 2009-10-02]
+	Added misc/kdeaccessibility4 version 4.3.1 [markd 2009-10-02]
+	Added misc/kdeadmin4 version 4.3.1 [markd 2009-10-02]
+	Added misc/kdeartwork4 version 4.3.1 [markd 2009-10-02]
+	Added misc/kdeedu4 version 4.3.1 [markd 2009-10-02]
+	Added misc/kdepim-runtime4 version 4.3.1 [markd 2009-10-02]
+	Added misc/kdepim4 version 4.3.1 [markd 2009-10-02]
+	Added misc/kdepimlibs4 version 4.3.1 [markd 2009-10-02]
+	Added misc/kdeplasma-addons4 version 4.3.1 [markd 2009-10-02]
+	Added misc/kdeutils4 version 4.3.1 [markd 2009-10-02]
+	Added multimedia/kdemultimedia4 version 4.3.1 [markd 2009-10-02]
+	Added net/kdenetwork4 version 4.3.1 [markd 2009-10-02]
+	Added www/kdewebdev4 version 4.3.1 [markd 2009-10-02]
+	Added x11/kde4-l10n-de version 4.3.1 [markd 2009-10-02]
+	Added x11/kde4-l10n-en_GB version 4.3.1 [markd 2009-10-02]
+	Added x11/kde4-l10n-nl version 4.3.1 [markd 2009-10-02]
+	Added x11/kdebase-runtime4 version 4.3.1 [markd 2009-10-02]
+	Added x11/kdebase-workspace4 version 4.3.1 [markd 2009-10-02]
+	Added x11/kdebase4 version 4.3.1 [markd 2009-10-02]
+	Added x11/kdebindings4-python version 4.3.1 [markd 2009-10-02]
+	Added x11/kdelibs-experimental4 version 4.3.1 [markd 2009-10-02]
+	Added x11/kdelibs4 version 4.3.1 [markd 2009-10-02]
