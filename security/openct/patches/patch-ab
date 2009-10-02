@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2009/10/02 12:38:44 hasso Exp $
+
+--- etc/reader.conf.in.orig	2009-10-02 15:25:50 +0300
++++ etc/reader.conf.in	2009-10-02 15:26:17 +0300
+@@ -1,9 +1,9 @@
+ # OpenCT configuration file for pcsc-lite
+ # http://www.opensc.org/openct/
+-
+-FRIENDLYNAME     "OpenCT"
+-DEVICENAME       /dev/null 
+-LIBPATH          @libdir@/openct-ifd.so
+-CHANNELID        0 
+-
++#
++# FRIENDLYNAME     "OpenCT"
++# DEVICENAME       /dev/null 
++# LIBPATH          @libdir@/openct-ifd.so
++# CHANNELID        0 
++#
+ # End of file
