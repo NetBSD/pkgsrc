@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/02 19:09:29 markd Exp $
+
+SHA1 (ortp-0.16.0.tar.gz) = 6ceae2decadc440fe5f87de5c996fb5eecf00325
+RMD160 (ortp-0.16.0.tar.gz) = b878ef6891176aa1254c45ec1368797be9d0e894
+Size (ortp-0.16.0.tar.gz) = 453568 bytes
