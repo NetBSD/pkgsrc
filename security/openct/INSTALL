@@ -1,0 +1,10 @@
+#!/bin/sh
+# $NetBSD: INSTALL,v 1.1 2009/10/02 12:38:44 hasso Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	if [ -x ${PREFIX}/sbin/update-reader.conf ]; then
+		${PREFIX}/sbin/update-reader.conf
+	fi
+	;;
+esac

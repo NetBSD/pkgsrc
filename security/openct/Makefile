@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/09/25 08:36:05 hasso Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/02 12:38:44 hasso Exp $
 
 DISTNAME=		openct-0.6.18
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/openct/
 
@@ -23,8 +24,10 @@ RCD_SCRIPTS=		openct
 MAKE_DIRS+=		${VARBASE}/openct
 MAKE_DIRS+=		${VARBASE}/openct/run
 MAKE_DIRS+=		${VARBASE}/openct/run/openct
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/reader.conf.d
 EGDIR=			${PREFIX}/share/examples/openct
 CONF_FILES+=		${EGDIR}/openct.conf ${PKG_SYSCONFDIR}/openct.conf
+CONF_FILES+=		${EGDIR}/reader.conf ${PKG_SYSCONFDIR}/reader.conf.d/openct-reader.conf
 
 BUILD_DEFS+=		VARBASE
 INSTALLATION_DIRS=	${EGDIR}
