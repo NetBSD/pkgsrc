@@ -1,0 +1,12 @@
+The kdemultimedia module of KDE provides various sound and movie
+format players:
+
+* dragonplayer: Video Player is a very simple Phonon-based media player.
+* kmix: the audio mixer as a standalone program and Kicker applet
+* kscd: A CD player with an interface to the internet CDDB database
+
+The following are libraries and plugins that are building the core
+infrastructure of above applications:
+
+* strigi-analyzer: provide meta information about sound files
+* libkcddb: a library for retrieving and sending cddb information
