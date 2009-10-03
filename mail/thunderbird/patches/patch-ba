@@ -1,11 +1,10 @@
-$NetBSD: patch-ba,v 1.5 2008/05/19 10:43:02 tnn Exp $
+$NetBSD: patch-ba,v 1.6 2009/10/03 13:18:23 ghen Exp $
 
-diff -ruN ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include/md/_netbsd.cfg
---- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg	2004-04-28 09:33:44.000000000 +0900
-+++ ./nsprpub/pr/include/md/_netbsd.cfg	2005-12-04 19:09:16.000000000 +0900
-@@ -48,7 +48,8 @@
- 
- #define PR_AF_INET6 24  /* same as AF_INET6 */
+--- nsprpub/pr/include/md/_netbsd.cfg.orig	2007-11-26 19:17:17.000000000 +0100
++++ nsprpub/pr/include/md/_netbsd.cfg
+@@ -52,7 +52,8 @@
+ #define HAVE_LONG_LONG
+ #endif
  
 -#if defined(__i386__) || defined(__arm32__) || defined(__MIPSEL__)
 +#if defined(__i386__) || defined(__arm32__) || defined(__ARMEL__) || \
@@ -13,7 +12,7 @@ diff -ruN ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include
  
  #define IS_LITTLE_ENDIAN 1
  #undef  IS_BIG_ENDIAN
-@@ -94,7 +95,53 @@
+@@ -97,7 +98,53 @@
  #define PR_ALIGN_OF_DOUBLE  4
  #define PR_ALIGN_OF_POINTER 4
  
@@ -68,7 +67,7 @@ diff -ruN ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include
  
  #undef IS_LITTLE_ENDIAN
  #define  IS_BIG_ENDIAN 1
-@@ -187,6 +234,55 @@
+@@ -188,6 +235,55 @@
  #define PR_BYTES_PER_WORD_LOG2  3
  #define PR_BYTES_PER_DWORD_LOG2 3
  
