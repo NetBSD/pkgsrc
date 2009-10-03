@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3858 2009/10/02 22:41:18 markd Exp $
+$NetBSD: CHANGES-2009,v 1.3859 2009/10/03 13:19:45 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5039,3 +5039,5 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Added x11/kdebindings4-python version 4.3.1 [markd 2009-10-02]
 	Added x11/kdelibs-experimental4 version 4.3.1 [markd 2009-10-02]
 	Added x11/kdelibs4 version 4.3.1 [markd 2009-10-02]
+	Updated mail/thunderbird to 2.0.0.23 [ghen 2009-10-03]
+	Updated mail/thunderbird-gtk1 to 2.0.0.23 [ghen 2009-10-03]
