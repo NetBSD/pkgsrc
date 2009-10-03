@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/09/23 16:36:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2009/10/03 18:02:32 jmmv Exp $
 
 DISTNAME=	Botan-1.8.7
 PKGNAME=	botan-1.8.7
@@ -32,6 +32,14 @@ PLIST_SUBST+=		AMD64_OR_IA32=
 .elif ${MACHINE_ARCH} == "i386"
 PLIST_SUBST+=		AMD64="@comment "
 PLIST_SUBST+=		AMD64_OR_IA32=
+.elif ${MACHINE_ARCH} == "powerpc"
+CONFIGURE_ARGS+=	--cpu=ppc
+PLIST_SUBST+=		AMD64="@comment "
+PLIST_SUBST+=		AMD64_OR_IA32="@comment "
+.elif ${MACHINE_ARCH} == "powerpc64"
+CONFIGURE_ARGS+=	--cpu=ppc64
+PLIST_SUBST+=		AMD64="@comment "
+PLIST_SUBST+=		AMD64_OR_IA32="@comment "
 .else
 PLIST_SUBST+=		AMD64="@comment "
 PLIST_SUBST+=		AMD64_OR_IA32="@comment "
