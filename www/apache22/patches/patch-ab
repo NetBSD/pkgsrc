@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.13 2009/09/14 22:09:33 tron Exp $
+$NetBSD: patch-ab,v 1.14 2009/10/04 12:21:35 tron Exp $
 
-Fix for CVE-2009-3094 taken from the Apache SVN repository:
+Fixes for CVE-2009-3094 and CVE-2009-3095 taken from the Apache SVN repository:
 
-http://svn.apache.org/viewvc?view=rev&revision=814652
+http://svn.apache.org/viewvc?view=rev&revision=814844
+http://svn.apache.org/viewvc?view=rev&revision=814847
 
---- modules/proxy/mod_proxy_ftp.c	2009/09/14 14:15:34	814651
-+++ modules/proxy/mod_proxy_ftp.c	2009/09/14 14:16:14	814652
-@@ -683,6 +683,31 @@
+--- modules/proxy/mod_proxy_ftp.c.orig	2008-11-11 20:04:34.000000000 +0000
++++ modules/proxy/mod_proxy_ftp.c	2009-10-04 12:49:43.000000000 +0100
+@@ -604,6 +604,31 @@
      return APR_SUCCESS;
  }
  
@@ -38,7 +39,19 @@ http://svn.apache.org/viewvc?view=rev&revision=814652
  /*
   * Generic "send FTP command to server" routine, using the control socket.
   * Returns the FTP returncode (3 digit code)
-@@ -1296,26 +1321,11 @@
+@@ -887,6 +912,11 @@
+     if ((password = apr_table_get(r->headers_in, "Authorization")) != NULL
+         && strcasecmp(ap_getword(r->pool, &password, ' '), "Basic") == 0
+         && (password = ap_pbase64decode(r->pool, password))[0] != ':') {
++        /* Check the decoded string for special characters. */
++        if (!ftp_check_string(password)) {
++            return ap_proxyerror(r, HTTP_BAD_REQUEST, 
++                                 "user credentials contained invalid character");
++        } 
+         /*
+          * Note that this allocation has to be made from r->connection->pool
+          * because it has the lifetime of the connection.  The other
+@@ -1210,26 +1240,11 @@
              return ftp_proxyerror(r, backend, HTTP_BAD_GATEWAY, ftpmessage);
          }
          else if (rc == 229) {
@@ -68,7 +81,7 @@ http://svn.apache.org/viewvc?view=rev&revision=814652
  
                  ap_log_error(APLOG_MARK, APLOG_DEBUG, 0, r->server,
                         "proxy: FTP: EPSV contacting remote host on port %d",
-@@ -1356,10 +1366,6 @@
+@@ -1272,10 +1287,6 @@
                      connect = 1;
                  }
              }
@@ -79,7 +92,7 @@ http://svn.apache.org/viewvc?view=rev&revision=814652
          }
      }
  
-@@ -1446,10 +1452,6 @@
+@@ -1364,10 +1375,6 @@
                      connect = 1;
                  }
              }
@@ -90,7 +103,7 @@ http://svn.apache.org/viewvc?view=rev&revision=814652
          }
      }
  /*bypass:*/
-@@ -1929,7 +1931,9 @@
+@@ -1851,7 +1858,9 @@
                   * for a slow client to eat these bytes
                   */
                  ap_flush_conn(data);
