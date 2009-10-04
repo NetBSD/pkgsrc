@@ -1,19 +1,116 @@
-$NetBSD: patch-ab,v 1.10.4.2 2009/09/13 15:03:36 spz Exp $
+$NetBSD: patch-ab,v 1.10.4.3 2009/10/04 13:26:13 spz Exp $
 
-Fix for CVE-2009-3094 based on the description of the problem:
+Fixes for CVE-2009-3094 and CVE-2009-3095 taken from the Apache SVN repository:
 
-http://www.intevydis.com/blog/?p=59
+http://svn.apache.org/viewvc?view=rev&revision=814844
+http://svn.apache.org/viewvc?view=rev&revision=814847
 
 --- modules/proxy/mod_proxy_ftp.c.orig	2008-11-11 20:04:34.000000000 +0000
-+++ modules/proxy/mod_proxy_ftp.c	2009-09-13 14:23:13.000000000 +0100
-@@ -1274,7 +1274,9 @@
++++ modules/proxy/mod_proxy_ftp.c	2009-10-04 12:49:43.000000000 +0100
+@@ -604,6 +604,31 @@
+     return APR_SUCCESS;
+ }
+ 
++/* Parse EPSV reply and return port, or zero on error.  Modifies
++ * 'reply'. */
++static apr_port_t parse_epsv_reply(char *reply)
++{
++    char *p, *ep;
++    long port;
++
++    /* Reply syntax per RFC 2428: "229 blah blah (|||port|)" where '|'
++     * can be any character in ASCII from 33-126, obscurely.  Verify
++     * the syntax. */
++    p = ap_strchr(reply, '(');
++    if (p == NULL || !p[0] || !p[1] || p[1] != p[2] || p[1] != p[3]
++        || p[4] == p[1]) {
++        return 0;
++    }
++
++    errno = 0;
++    port = strtol(p + 4, &ep, 10);
++    if (errno || port < 1 || port > 65535 || ep[0] != p[1] || ep[1] != ')') {
++        return 0;
++    }
++
++    return (apr_port_t)port;
++}
++
+ /*
+  * Generic "send FTP command to server" routine, using the control socket.
+  * Returns the FTP returncode (3 digit code)
+@@ -887,6 +912,11 @@
+     if ((password = apr_table_get(r->headers_in, "Authorization")) != NULL
+         && strcasecmp(ap_getword(r->pool, &password, ' '), "Basic") == 0
+         && (password = ap_pbase64decode(r->pool, password))[0] != ':') {
++        /* Check the decoded string for special characters. */
++        if (!ftp_check_string(password)) {
++            return ap_proxyerror(r, HTTP_BAD_REQUEST, 
++                                 "user credentials contained invalid character");
++        } 
+         /*
+          * Note that this allocation has to be made from r->connection->pool
+          * because it has the lifetime of the connection.  The other
+@@ -1210,26 +1240,11 @@
+             return ftp_proxyerror(r, backend, HTTP_BAD_GATEWAY, ftpmessage);
+         }
+         else if (rc == 229) {
+-            char *pstr;
+-            char *tok_cntx;
++            /* Parse the port out of the EPSV reply. */
++            data_port = parse_epsv_reply(ftpmessage);
+ 
+-            pstr = ftpmessage;
+-            pstr = apr_strtok(pstr, " ", &tok_cntx);    /* separate result code */
+-            if (pstr != NULL) {
+-                if (*(pstr + strlen(pstr) + 1) == '=') {
+-                    pstr += strlen(pstr) + 2;
+-                }
+-                else {
+-                    pstr = apr_strtok(NULL, "(", &tok_cntx);    /* separate address &
+-                                                                 * port params */
+-                    if (pstr != NULL)
+-                        pstr = apr_strtok(NULL, ")", &tok_cntx);
+-                }
+-            }
+-
+-            if (pstr) {
++            if (data_port) {
+                 apr_sockaddr_t *epsv_addr;
+-                data_port = atoi(pstr + 3);
+ 
+                 ap_log_error(APLOG_MARK, APLOG_DEBUG, 0, r->server,
+                        "proxy: FTP: EPSV contacting remote host on port %d",
+@@ -1272,10 +1287,6 @@
+                     connect = 1;
+                 }
              }
-             else {
-                 /* and try the regular way */
+-            else {
+-                /* and try the regular way */
 -                apr_socket_close(data_sock);
-+                if (data_sock != NULL) {
-+                    apr_socket_close(data_sock);
-+                }
-             }
+-            }
          }
      }
+ 
+@@ -1364,10 +1375,6 @@
+                     connect = 1;
+                 }
+             }
+-            else {
+-                /* and try the regular way */
+-                apr_socket_close(data_sock);
+-            }
+         }
+     }
+ /*bypass:*/
+@@ -1851,7 +1858,9 @@
+                  * for a slow client to eat these bytes
+                  */
+                 ap_flush_conn(data);
+-                apr_socket_close(data_sock);
++                if (data_sock) {
++                    apr_socket_close(data_sock);
++                }
+                 data_sock = NULL;
+                 ap_log_error(APLOG_MARK, APLOG_DEBUG, 0, r->server,
+                              "proxy: FTP: data connection closed");
