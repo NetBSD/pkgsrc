@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3860 2009/10/03 16:23:28 is Exp $
+$NetBSD: CHANGES-2009,v 1.3861 2009/10/04 01:28:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5042,3 +5042,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated mail/thunderbird to 2.0.0.23 [ghen 2009-10-03]
 	Updated mail/thunderbird-gtk1 to 2.0.0.23 [ghen 2009-10-03]
 	Updated comms/mgetty+sendfax to 1.1.36nb2 [is 2009-10-03]
+	Updated mail/squirrelmail to 1.4.20rc2nb2 [taca 2009-10-04]
