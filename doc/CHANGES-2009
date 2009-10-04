@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3863 2009/10/04 15:41:25 zafer Exp $
+$NetBSD: CHANGES-2009,v 1.3864 2009/10/04 17:00:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5045,3 +5045,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated mail/squirrelmail to 1.4.20rc2nb2 [taca 2009-10-04]
 	Updated www/apache22 to 2.2.13nb3 [tron 2009-10-04]
 	Updated net/filezilla to 3.2.8 [zafer 2009-10-04]
+	Updated net/samba to 3.0.37 [taca 2009-10-04]
