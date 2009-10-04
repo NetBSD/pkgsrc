@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3862 2009/10/04 12:23:55 tron Exp $
+$NetBSD: CHANGES-2009,v 1.3863 2009/10/04 15:41:25 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5044,3 +5044,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated comms/mgetty+sendfax to 1.1.36nb2 [is 2009-10-03]
 	Updated mail/squirrelmail to 1.4.20rc2nb2 [taca 2009-10-04]
 	Updated www/apache22 to 2.2.13nb3 [tron 2009-10-04]
+	Updated net/filezilla to 3.2.8 [zafer 2009-10-04]
