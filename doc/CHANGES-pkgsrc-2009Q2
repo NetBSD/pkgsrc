@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.62 2009/10/02 10:06:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q2,v 1.1.2.63 2009/10/04 13:27:51 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q2 branch:
@@ -218,3 +218,5 @@ Pullup ticket #2905 - requested by taca
 drupal6: security update
 Pullup ticket #2906 - requested by taca
 drupal6-translations: match update of "drupal6" package
+Pullup ticket #2908 - requested by tron
+apache22: security update
