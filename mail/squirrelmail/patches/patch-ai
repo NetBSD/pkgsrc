@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.1 2009/10/04 01:27:15 taca Exp $
+
+* Fix encoding problem of attached filenames; convert to Shift_JIS when
+  using Internet Explore in Japanese environment, sigh.
+
+--- functions/mime.php.orig	2009-07-31 19:12:46.000000000 +0900
++++ functions/mime.php
+@@ -2563,6 +2563,10 @@ function SendDownloadHeaders($type0, $ty
+     //set all the Cache Control Headers for IE
+     if ($isIE) {
+         $filename=rawurlencode($filename);
++        if ($squirrelmail_language == 'ja_JP') {
++            $filename = rawurldecode($filename);
++            $filename = mb_convert_encoding($filename, 'SJIS', 'AUTO');
++        }
+         header ("Pragma: public");
+         header ("Cache-Control: no-store, max-age=0, no-cache, must-revalidate"); // HTTP/1.1
+         header ("Cache-Control: post-check=0, pre-check=0", false);
