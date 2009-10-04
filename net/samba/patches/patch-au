@@ -1,7 +1,7 @@
-$NetBSD: patch-au,v 1.10 2009/03/03 17:50:49 sborrill Exp $
---- configure.in.orig	2008-08-25 22:09:21.000000000 +0100
-+++ configure.in	2009-03-03 17:11:54.000000000 +0000
-@@ -38,6 +38,7 @@
+$NetBSD: patch-au,v 1.11 2009/10/04 16:58:38 taca Exp $
+--- configure.in.orig	2009-09-30 21:21:56.000000000 +0900
++++ configure.in
+@@ -38,6 +38,7 @@ AC_PREFIX_DEFAULT(/usr/local/samba)
  
  rootsbindir="\${SBINDIR}"
  lockdir="\${VARDIR}/locks"
@@ -9,7 +9,7 @@ $NetBSD: patch-au,v 1.10 2009/03/03 17:50:49 sborrill Exp $
  piddir="\${VARDIR}/locks"
  test "${mandir}" || mandir="\${prefix}/man"
  logfilebase="\${VARDIR}"
-@@ -51,7 +52,8 @@
+@@ -51,7 +52,8 @@ AC_ARG_WITH(fhs,
  [  --with-fhs              Use FHS-compliant paths (default=no)],
  [ case "$withval" in
    yes)
@@ -19,7 +19,7 @@ $NetBSD: patch-au,v 1.10 2009/03/03 17:50:49 sborrill Exp $
      piddir="\${VARDIR}/run"
      mandir="\${prefix}/share/man"
      logfilebase="\${VARDIR}/log/samba"
-@@ -111,6 +113,22 @@
+@@ -111,6 +113,22 @@ AC_ARG_WITH(lockdir,
    esac])
  
  #################################################
@@ -42,7 +42,7 @@ $NetBSD: patch-au,v 1.10 2009/03/03 17:50:49 sborrill Exp $
  # set pid directory location
  AC_ARG_WITH(piddir,
  [  --with-piddir=DIR       Where to put pid files ($ac_default_prefix/var/locks)],
-@@ -257,6 +275,7 @@
+@@ -257,6 +275,7 @@ fi
  
  AC_SUBST(configdir)
  AC_SUBST(lockdir)
@@ -50,7 +50,7 @@ $NetBSD: patch-au,v 1.10 2009/03/03 17:50:49 sborrill Exp $
  AC_SUBST(piddir)
  AC_SUBST(logfilebase)
  AC_SUBST(privatedir)
-@@ -1242,7 +1261,7 @@
+@@ -1245,7 +1264,7 @@ AC_CHECK_FUNCS(lstat64 fopen64 atexit gr
  AC_CHECK_FUNCS(fseek64 fseeko64 ftell64 ftello64 setluid getpwanam setlinebuf)
  AC_CHECK_FUNCS(opendir64 readdir64 seekdir64 telldir64 rewinddir64 closedir64)
  AC_CHECK_FUNCS(getpwent_r)
@@ -59,7 +59,7 @@ $NetBSD: patch-au,v 1.10 2009/03/03 17:50:49 sborrill Exp $
  AC_CHECK_FUNCS(srandom random srand rand setenv usleep strcasecmp fcvt fcvtl symlink readlink)
  AC_CHECK_FUNCS(syslog vsyslog timegm)
  AC_CHECK_FUNCS(setlocale nl_langinfo)
-@@ -2821,6 +2840,20 @@
+@@ -2824,6 +2843,20 @@ AC_CHECK_FUNCS(getpagesize)
  ##################
  # look for a method of finding the list of network interfaces
  iface=no;
@@ -80,7 +80,7 @@ $NetBSD: patch-au,v 1.10 2009/03/03 17:50:49 sborrill Exp $
  AC_CACHE_CHECK([for iface AIX],samba_cv_HAVE_IFACE_AIX,[
  SAVE_CPPFLAGS="$CPPFLAGS"
  CPPFLAGS="$CPPFLAGS ${SAMBA_CONFIGURE_CPPFLAGS}"
-@@ -2834,6 +2867,7 @@
+@@ -2837,6 +2870,7 @@ CPPFLAGS="$SAVE_CPPFLAGS"
  if test x"$samba_cv_HAVE_IFACE_AIX" = x"yes"; then
      iface=yes;AC_DEFINE(HAVE_IFACE_AIX,1,[Whether iface AIX is available])
  fi
@@ -88,7 +88,7 @@ $NetBSD: patch-au,v 1.10 2009/03/03 17:50:49 sborrill Exp $
  
  if test $iface = no; then
  AC_CACHE_CHECK([for iface ifconf],samba_cv_HAVE_IFACE_IFCONF,[
-@@ -3526,7 +3560,7 @@
+@@ -3531,7 +3565,7 @@ if test x"$with_ads_support" != x"no"; t
    AC_CHECK_LIB_EXT(k5crypto, KRB5_LIBS, krb5_encrypt_data)
  
    # Heimdal checks.
@@ -97,7 +97,7 @@ $NetBSD: patch-au,v 1.10 2009/03/03 17:50:49 sborrill Exp $
    AC_CHECK_LIB_EXT(asn1, KRB5_LIBS, copy_Authenticator)
    AC_CHECK_LIB_EXT(roken, KRB5_LIBS, roken_getaddrinfo_hostspec)
  
-@@ -5771,31 +5805,39 @@
+@@ -5830,31 +5864,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
  		;;

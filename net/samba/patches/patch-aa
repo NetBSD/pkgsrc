@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.32 2008/04/03 20:19:42 jlam Exp $
+$NetBSD: patch-aa,v 1.33 2009/10/04 16:58:38 taca Exp $
 
---- nsswitch/pam_winbind.c.orig	2008-03-08 10:56:27.000000000 -0500
+--- nsswitch/pam_winbind.c.orig	2009-09-30 21:21:56.000000000 +0900
 +++ nsswitch/pam_winbind.c
-@@ -1291,6 +1291,8 @@ static char *_pam_delete(register char *
+@@ -1295,6 +1295,8 @@ static char *_pam_delete(register char *
  	return NULL;
  }
  
