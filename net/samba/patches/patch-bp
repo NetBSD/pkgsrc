@@ -1,8 +1,8 @@
-$NetBSD: patch-bp,v 1.4 2007/10/28 07:28:49 taca Exp $
+$NetBSD: patch-bp,v 1.5 2009/10/04 16:58:38 taca Exp $
 
---- smbd/server.c.orig	2007-09-11 23:17:48.000000000 +0900
+--- smbd/server.c.orig	2009-09-30 21:21:56.000000000 +0900
 +++ smbd/server.c
-@@ -1010,6 +1010,9 @@ extern void build_options(BOOL screen);
+@@ -1008,6 +1008,9 @@ extern void build_options(BOOL screen);
  	if (!directory_exist(lp_lockdir(), NULL))
  		mkdir(lp_lockdir(), 0755);
  
