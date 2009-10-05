@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2009/09/09 11:16:57 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2009/10/05 06:28:11 sketch Exp $
 
 DISTNAME=		gtk+-2.16.6
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -47,6 +47,13 @@ REQD_DIRS+=		${PREFIX}/libdata/gtk-2.0
 BUILD_DIRS=		. demos/gtk-demo
 
 .include "../../mk/bsd.prefs.mk"
+
+# gtk/Makefile.am hardcodes 'grep -o' so require GNU grep on platforms
+# which do not have it.
+.if ${OPSYS} == "SunOS"
+DEPENDS+=		grep:../../textproc/grep
+TOOLS_PLATFORM.grep=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
+.endif
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 
