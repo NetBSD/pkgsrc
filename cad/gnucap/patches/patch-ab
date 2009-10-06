@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.5 2009/10/06 00:54:19 dmcmahill Exp $
+
+needed for gcc44
+
+--- src/md.h.orig	2006-07-07 06:54:23.000000000 +0000
++++ src/md.h	2009-10-05 17:52:49.000000000 +0000
+@@ -29,4 +29,5 @@
+ #include <new>
+ #include <cstdarg>
++#include <cstring>
+ #include <cassert>
+ #include <cfloat>

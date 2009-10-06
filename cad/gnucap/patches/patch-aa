@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.4 2009/10/06 00:54:19 dmcmahill Exp $
+
+needed for gcc44
+
+--- modelgen/md.h.orig	2006-07-07 06:54:23.000000000 +0000
++++ modelgen/md.h	2009-10-05 17:52:16.000000000 +0000
+@@ -29,4 +29,5 @@
+ #include <new>
+ #include <cstdarg>
++#include <cstring>
+ #include <cassert>
+ #include <cfloat>
