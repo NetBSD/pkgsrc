@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2000/01/26 22:11:37 jlam Exp $
+$NetBSD: patch-al,v 1.2 2009/10/06 17:27:51 joerg Exp $
 
 --- rplayd/Makefile.in.orig	Wed Jun  9 02:27:43 1999
 +++ rplayd/Makefile.in	Wed Jan 26 17:03:44 2000
@@ -18,7 +18,7 @@ $NetBSD: patch-al,v 1.1 2000/01/26 22:11:37 jlam Exp $
  
  $(TARGET):	$(OBJS) ../librplay/$(LIBRPLAY_NAME) ../lib/librp.a ../adpcm/libadpcm.a
 -		$(CC) -o $@ $(OBJS) $(LDFLAGS)
-+		$(LIBTOOL) $(CC) -o $@ $(OBJS) $(LDFLAGS)
++		$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJS) $(LDFLAGS)
  
  ../librplay/$(LIBRPLAY_NAME):
  		(cd ../librplay; $(MAKE) $(MFLAGS))
@@ -28,15 +28,15 @@ $NetBSD: patch-al,v 1.1 2000/01/26 22:11:37 jlam Exp $
  		$(MKINSTALLDIRS) $(sbindir)
 -		$(INSTALL_PROGRAM) $(TARGET) $(sbindir)/$(TARGET)
 -		@test -x $(bindir)/$(TARGET) && echo "" && echo "    Note: Consider removing $(bindir)/$(TARGET)" && echo ""
-+		$(LIBTOOL) $(INSTALL_PROGRAM) $(TARGET) $(sbindir)/$(TARGET)
++		$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $(TARGET) $(sbindir)/$(TARGET)
  
  uninstall:
 -		$(RM) $(bindir)/$(TARGET)
-+		$(LIBTOOL) $(RM) $(bindir)/$(TARGET)
++		$(LIBTOOL) --mode=uninstall $(RM) $(bindir)/$(TARGET)
  
  clean:
 -		$(RM) $(OBJS) $(TARGET) a.out core *~ *.bak *.orig TAGS
-+		$(LIBTOOL) $(RM) $(OBJS) $(TARGET) a.out core *~ *.bak *.orig TAGS
++		$(LIBTOOL) --mode=clean $(RM) $(OBJS) $(TARGET) a.out core *~ *.bak *.orig TAGS
  		cd audio; $(RM) *~ *.bak *.orig
  
  distclean:	clean
