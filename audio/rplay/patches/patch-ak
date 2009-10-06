@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1 2000/01/26 22:11:37 jlam Exp $
+$NetBSD: patch-ak,v 1.2 2009/10/06 17:27:51 joerg Exp $
 
 --- rplay/Makefile.in.orig	Sat Mar 20 19:44:57 1999
 +++ rplay/Makefile.in	Tue Jan 18 16:15:33 2000
@@ -16,7 +16,7 @@ $NetBSD: patch-ak,v 1.1 2000/01/26 22:11:37 jlam Exp $
  
  $(TARGET):	$(OBJS) ../librplay/$(LIBRPLAY_NAME) ../lib/librp.a
 -		$(CC) -o $@ $(OBJS) $(LDFLAGS)
-+		$(LIBTOOL) $(CC) -o $@ $(OBJS) $(LDFLAGS)
++		$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJS) $(LDFLAGS)
  
  ../librplay/$(LIBRPLAY_NAME):
  		(cd ../librplay; $(MAKE) $(MFLAGS))
@@ -25,15 +25,15 @@ $NetBSD: patch-ak,v 1.1 2000/01/26 22:11:37 jlam Exp $
  install:	all
  		$(MKINSTALLDIRS) $(bindir)
 -		$(INSTALL_PROGRAM) $(TARGET) $(bindir)/$(TARGET)
-+		$(LIBTOOL) $(INSTALL_PROGRAM) $(TARGET) $(bindir)/$(TARGET)
++		$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $(TARGET) $(bindir)/$(TARGET)
  
  uninstall:
 -		$(RM) $(bindir)/$(TARGET)
-+		$(LIBTOOL) $(RM) $(bindir)/$(TARGET)
++		$(LIBTOOL) --mode=uninstall $(RM) $(bindir)/$(TARGET)
  
  clean:
 -		$(RM) $(OBJS) $(TARGET) a.out core *~ *.bak *.orig TAGS
-+		$(LIBTOOL) $(RM) $(OBJS) $(TARGET) a.out core *~ *.bak *.orig TAGS
++		$(LIBTOOL) --mode=clean $(RM) $(OBJS) $(TARGET) a.out core *~ *.bak *.orig TAGS
  
  distclean:	clean
  		$(RM) Makefile
