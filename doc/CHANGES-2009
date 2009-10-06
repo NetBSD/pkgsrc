@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3865 2009/10/06 01:01:52 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3866 2009/10/06 10:24:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5047,3 +5047,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated net/filezilla to 3.2.8 [zafer 2009-10-04]
 	Updated net/samba to 3.0.37 [taca 2009-10-04]
 	Updated www/typolight27 to 2.7.5 [taca 2009-10-06]
+	Updated www/elinks to 0.12rc2nb3 [obache 2009-10-06]
