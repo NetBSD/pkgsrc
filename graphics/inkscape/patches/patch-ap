@@ -1,0 +1,12 @@
+$NetBSD: patch-ap,v 1.1 2009/10/06 00:53:26 dmcmahill Exp $
+
+gcc44 fixes 
+
+--- src/io/uristream.cpp.orig	2008-03-11 04:20:06.000000000 +0000
++++ src/io/uristream.cpp	2009-10-05 21:09:22.000000000 +0000
+@@ -16,4 +16,5 @@
+ #include <string>
+ #include <cstring>
++#include <cstdio>
+ 
+ #ifdef WIN32
