@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/14 20:34:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/10/06 18:30:42 joerg Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -193,6 +193,7 @@ share/gauche/${PKGVERSION}/lib/rfc/mime.scm
 share/gauche/${PKGVERSION}/lib/rfc/quoted-printable.scm
 share/gauche/${PKGVERSION}/lib/rfc/sha1.scm
 share/gauche/${PKGVERSION}/lib/rfc/uri.scm
+share/gauche/${PKGVERSION}/lib/slibcat
 share/gauche/${PKGVERSION}/lib/slib.scm
 share/gauche/${PKGVERSION}/lib/srfi-0.scm
 share/gauche/${PKGVERSION}/lib/srfi-1.scm
@@ -259,4 +260,4 @@ share/gauche/${PKGVERSION}/template.extensionlib.stub
 share/gauche/${PKGVERSION}/template.module.scm
 share/gauche/${PKGVERSION}/template.test.scm
 @pkgdir lib/gauche/site/${PKGVERSION}/${MACHINE_GNU_PLATFORM}
-@pkgdir share/gauche/site/lib 2>/dev/null || ${TRUE}
+@pkgdir share/gauche/site/lib
