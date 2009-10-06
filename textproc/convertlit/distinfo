@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/09/23 15:22:36 wiz Exp $
+$NetBSD: distinfo,v 1.5 2009/10/06 17:16:47 joerg Exp $
 
 SHA1 (clit18src.zip) = 0fa9aead468bd8640c49374d46d78d2a3e79489f
 RMD160 (clit18src.zip) = 6104a7d951ed60ea73705e401be8b55633ea2d47
 Size (clit18src.zip) = 135120 bytes
-SHA1 (patch-aa) = 9a51057a1c91fcb97021d1a5c482f3d87960e5d3
+SHA1 (patch-aa) = ab1545705a84263b8a45a7e72f3d004788bf12c7
