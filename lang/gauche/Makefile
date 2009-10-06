@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2008/06/21 17:17:51 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2009/10/06 18:30:42 joerg Exp $
 #
 
 DISTNAME=	Gauche-0.8.13
 CATEGORIES=	lang
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
 EXTRACT_SUFX=	.tgz
 
@@ -13,7 +13,8 @@ COMMENT=	R5RS Scheme implementation aimed to be a handy tool for daily works
 
 DEPENDS+=		slib-[0-9]*:../../devel/slib
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+# XXX Wants to execute bin/gosh during installation
+#PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 .include "options.mk"
@@ -40,7 +41,7 @@ ALL_ENV+=		\
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gzip makeinfo
 TEST_TARGET=	check
-INFO_FILES=	yes	# PLIST
+INFO_FILES=	# PLIST
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
