@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2000/01/26 22:11:37 jlam Exp $
+$NetBSD: patch-aj,v 1.2 2009/10/06 17:27:51 joerg Exp $
 
 --- librplay/Makefile.in.orig	Mon Mar 22 21:38:38 1999
 +++ librplay/Makefile.in	Tue Jan 18 16:15:33 2000
@@ -15,7 +15,7 @@ $NetBSD: patch-aj,v 1.1 2000/01/26 22:11:37 jlam Exp $
  .SUFFIXES: .lo
  .c.lo:
 -		$(CC) -c -fPIC $(CPPFLAGS) $(CFLAGS) -o $@ $<
-+		$(LIBTOOL) $(CC) $(CPPFLAGS) $(CFLAGS) -c $<
++		$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) -c $<
  
  TARGET=		$(LIBRPLAY_NAME)
  SRCS=		rplay.c rptp.c async.c
@@ -32,7 +32,7 @@ $NetBSD: patch-aj,v 1.1 2000/01/26 22:11:37 jlam Exp $
 -		$(AR) rcv $@ $?
 -		$(RANLIB) $@
 +$(TARGET):	$(SHAREDOBJS)
-+		$(LIBTOOL) $(CC) $(LDFLAGS) -o $@ $? \
++		$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $? \
 +			-rpath $(libdir) -version-info 0:0
  
  librplay.so:	$(SHAREDOBJS)
@@ -43,16 +43,16 @@ $NetBSD: patch-aj,v 1.1 2000/01/26 22:11:37 jlam Exp $
  		$(MKINSTALLDIRS) $(libdir)
 -		$(INSTALL_DATA) $(TARGET) $(libdir)
 -		$(INSTALL_DATA) librplay.so $(libdir)
-+		$(LIBTOOL) $(INSTALL_DATA) $(TARGET) $(libdir)
++		$(LIBTOOL) --mode=install $(INSTALL_DATA) $(TARGET) $(libdir)
  
  uninstall:
 -		$(RM) $(libdir)/$(TARGET)
 -		$(RM) $(libdir)/librplay.so
-+		$(LIBTOOL) $(RM) $(libdir)/$(TARGET)
++		$(LIBTOOL) --mode=uninstall $(RM) $(libdir)/$(TARGET)
  
  clean:
 -		$(RM) $(OBJS) $(SHAREDOBJS) $(TARGET) librplay.so a.out core *~ *.bak *.orig TAGS
-+		$(LIBTOOL) $(RM) $(OBJS) $(SHAREDOBJS) $(TARGET) librplay.so a.out core *~ *.bak *.orig TAGS
++		$(LIBTOOL) --mode=clean $(RM) $(OBJS) $(SHAREDOBJS) $(TARGET) librplay.so a.out core *~ *.bak *.orig TAGS
  
  distclean:	clean
  		$(RM) Makefile
