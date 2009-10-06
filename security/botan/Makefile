@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/10/03 18:02:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2009/10/06 18:34:14 joerg Exp $
 
 DISTNAME=	Botan-1.8.7
 PKGNAME=	botan-1.8.7
@@ -26,23 +26,17 @@ MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "amd64"
-PLIST_SUBST+=		AMD64=
-PLIST_SUBST+=		AMD64_OR_IA32=
+PLIST_VARS+=	x86 x86_64
+
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST.x86_64=	yes
+PLIST.x86=	yes
 .elif ${MACHINE_ARCH} == "i386"
-PLIST_SUBST+=		AMD64="@comment "
-PLIST_SUBST+=		AMD64_OR_IA32=
+PLIST.x86=	yes
 .elif ${MACHINE_ARCH} == "powerpc"
 CONFIGURE_ARGS+=	--cpu=ppc
-PLIST_SUBST+=		AMD64="@comment "
-PLIST_SUBST+=		AMD64_OR_IA32="@comment "
 .elif ${MACHINE_ARCH} == "powerpc64"
 CONFIGURE_ARGS+=	--cpu=ppc64
-PLIST_SUBST+=		AMD64="@comment "
-PLIST_SUBST+=		AMD64_OR_IA32="@comment "
-.else
-PLIST_SUBST+=		AMD64="@comment "
-PLIST_SUBST+=		AMD64_OR_IA32="@comment "
 .endif
 
 .include "../../lang/python/application.mk"
