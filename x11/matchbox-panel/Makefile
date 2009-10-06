@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/07/22 09:01:54 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2009/10/06 18:47:10 joerg Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
@@ -24,7 +24,10 @@ CONFIGURE_ARGS+=	--enable-nls
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS=		apm
-.if ${OPSYS} != "DragonFly"
+.if ${OPSYS} == "DragonFly" || \
+    ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64"
+# Nada
+.else 
 PLIST.apm=		yes
 .endif
 
