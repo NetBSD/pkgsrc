@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2009/07/02 20:04:12 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2009/10/06 10:23:45 obache Exp $
 
 DISTNAME=		elinks-0.12pre2
 PKGNAME=		${DISTNAME:S/pre/rc/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		http://elinks.or.cz/download/ \
 			http://ftp.icm.edu.pl/packages/elinks/
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--enable-utf-8
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
