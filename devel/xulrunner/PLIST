@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/09/16 18:42:31 tnn Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/10/06 15:46:32 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -461,9 +461,6 @@ ${PLIST.jit}include/xulrunner/unstable/Fragmento.h
 ${PLIST.jit}include/xulrunner/unstable/LIR.h
 ${PLIST.jit}include/xulrunner/unstable/Native.h
 ${PLIST.jit}include/xulrunner/unstable/Native${NANOJIT_ARCH}.h
-include/xulrunner/unstable/ImageErrors.h
-include/xulrunner/unstable/ImageLogging.h
-include/xulrunner/unstable/NSReg.h
 include/xulrunner/unstable/ImageErrors.h
 include/xulrunner/unstable/ImageLogging.h
 include/xulrunner/unstable/NSReg.h
