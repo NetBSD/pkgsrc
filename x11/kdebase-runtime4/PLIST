@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 19:30:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/06 14:06:28 joerg Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -860,6 +860,7 @@ share/kde4/services/searchproviders/en2es.desktop
 share/kde4/services/searchproviders/en2fr.desktop
 share/kde4/services/searchproviders/en2it.desktop
 share/kde4/services/searchproviders/es2en.desktop
+share/kde4/services/searchproviders/ethicle.desktop
 share/kde4/services/searchproviders/excite.desktop
 share/kde4/services/searchproviders/feedster.desktop
 share/kde4/services/searchproviders/foldoc.desktop
