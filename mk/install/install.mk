@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.56 2009/09/20 10:44:33 joerg Exp $
+# $NetBSD: install.mk,v 1.57 2009/10/06 13:34:53 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -344,12 +344,12 @@ install-strip-debug: plist
 	${RUN}${CAT} ${_PLIST_NOKEYWORDS} \
 	| ${SED} -e 's|^|${DESTDIR}${PREFIX}/|' \
 	| while read f; do \
-		tmp_f="$${fname}.XXX"; \
+		tmp_f="$${f}.XXX"; \
 		if ${STRIP} -g -o "$${tmp_f}" "$${f}" 2> /dev/null; then \
-			[ ! -f "$${f}.tmpXXX" ] || \
+			[ ! -f "$${f}" ] || \
 			    ${MV} "$${tmp_f}" "$${f}"; \
 		else \
-			${RM} -f $${tmp_f}; \
+			${RM} -f "$${tmp_f}"; \
 		fi \
 	done
 
