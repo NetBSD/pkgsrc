@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2009/10/07 19:39:42 joerg Exp $
+# $NetBSD: Makefile.common,v 1.4 2009/10/07 19:40:41 joerg Exp $
 #
 # used by security/libprelude/Makefile
 # used by security/libprelude-lua/Makefile
@@ -16,8 +16,8 @@ HOMEPAGE=		http://www.prelude-ids.org/download/releases/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PATCHDIR=		${.CURDIR}/../security/libprelude/patches
-DISTINFO_FILE=		${.CURDIR}/../security/libprelude/distinfo
+PATCHDIR=		${.CURDIR}/../../security/libprelude/patches
+DISTINFO_FILE=		${.CURDIR}/../../security/libprelude/distinfo
 
 BUILD_DEFS+=		VARBASE
 
