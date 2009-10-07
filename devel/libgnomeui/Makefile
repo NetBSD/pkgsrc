@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2009/08/26 19:56:42 sno Exp $
+# $NetBSD: Makefile,v 1.85 2009/10/07 05:57:56 sketch Exp $
 #
 
 DISTNAME=	libgnomeui-2.24.1
@@ -22,6 +22,10 @@ USE_LIBTOOL=		yes
 
 PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
 PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=	gtkdoc-rebase
 
 BUILDLINK_API_DEPENDS.glib2=		glib2>=2.15.0
 BUILDLINK_API_DEPENDS.gtk2=		gtk2+>=2.14.0
