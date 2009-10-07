@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2009/10/07 10:50:59 obache Exp $
+
+--- src/m/alpha.h.orig	2008-01-08 13:04:36.000000000 +0900
++++ src/m/alpha.h
+@@ -106,7 +106,7 @@ NOTE-END
+ #ifdef __ELF__
+ #undef UNEXEC
+ #define UNEXEC unexelf.o
+-#ifndef LINUX
++#if !defined(LINUX) && !defined(__NetBSD__)
+ #define DATA_START    0x140000000
+ #endif
+ #endif
