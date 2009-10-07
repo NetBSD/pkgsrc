@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/13 10:57:20 sborrill Exp $
+# $NetBSD: Makefile,v 1.8 2009/10/07 05:00:59 taca Exp $
 
 MODNAME=		pdo_sqlite
 CATEGORIES+=		databases
@@ -12,8 +12,6 @@ USE_PHP_EXT_PATCHES=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../lang/php/ext.mk"
-# Remove the following line when PHP >= 5.2.10 is released
-.include "../../databases/php-pdo/module.mk"
 
 CONFIGURE_ARGS+=	--with-${MODNAME}
 CONFIGURE_ARGS+=	--with-${PKGMODNAME}=shared,${BUILDLINK_PREFIX.sqlite3}
