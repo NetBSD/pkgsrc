@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2009/07/08 15:09:19 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2009/10/07 15:31:10 joerg Exp $
 
 --- Makefile.orig	Sat Jan 20 06:18:28 2001
 +++ Makefile
@@ -34,10 +34,10 @@ $NetBSD: patch-aa,v 1.5 2009/07/08 15:09:19 joerg Exp $
 -.c.o:
 -	$(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
 +libdscope.la: $(OBJ)
-+	${LIBTOOL} $(CC) -o libdscope.la -module -avoid-version $(OBJ) $(LFLAGS) -rpath $(INSTALL-DIR)
++	${LIBTOOL} --mode=link $(CC) -o libdscope.la -module -avoid-version $(OBJ) $(LFLAGS) -rpath $(INSTALL-DIR)
 +
 +.c.lo:
-+	${LIBTOOL} $(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
  
  clean:
 -	rm -f *.o core *.so* 
@@ -51,6 +51,6 @@ $NetBSD: patch-aa,v 1.5 2009/07/08 15:09:19 joerg Exp $
 -	install libdscope.so $(INSTALL-DIR)
 -	mkdir -p $(XMMS_DATADIR)/$(THEME_SUBDIR)
 -	install bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
-+	${LIBTOOL} ${INSTALL} libdscope.la ${DESTDIR}$(INSTALL-DIR)
++	${LIBTOOL} --mode=install ${INSTALL} libdscope.la ${DESTDIR}$(INSTALL-DIR)
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(XMMS_DATADIR)/$(THEME_SUBDIR)
 +	${BSD_INSTALL_DATA} bg_*.xpm ${DESTDIR}$(XMMS_DATADIR)/$(THEME_SUBDIR)

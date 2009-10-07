@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/07/08 15:09:19 joerg Exp $
+$NetBSD: distinfo,v 1.7 2009/10/07 15:31:10 joerg Exp $
 
 SHA1 (dscope-1.2.tar.gz) = 5a4750c0a8170c1e2d263df1212262b3adad1210
 RMD160 (dscope-1.2.tar.gz) = c8a8fcfdfe37591b0d757cab84ff83898af924ae
 Size (dscope-1.2.tar.gz) = 34353 bytes
-SHA1 (patch-aa) = 768d7f989a222386f85f4e0efdfdb3d9186765b4
+SHA1 (patch-aa) = 9730cfa000cec4f6ba107d174ae11fb0bfdf7cdd
