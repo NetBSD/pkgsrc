@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/13 19:57:36 manu Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/07 17:39:41 joerg Exp $
 #
 
 PKGNAME=	${DISTNAME:S/crudesaml-/cy2-saml-/}
@@ -8,10 +8,11 @@ PLUGINDIR=	${PREFIX}/lib/sasl2
 
 PKG_DESTDIR_SUPPORT=    user-destdir
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PLUGINDIR}
+
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PLUGINDIR}
-	cd ${WRKSRC} && ${SHLIBTOOL} --mode=install \
-		${INSTALL_PROGRAM} libsaml.la ${DESTDIR}${PLUGINDIR}
+	${SHLIBTOOL} --mode=install \
+		${INSTALL_PROGRAM} ${WRKSRC}/libsaml.la ${DESTDIR}${PLUGINDIR}
 	${INSTALL_MAN} ${WRKSRC}/cy2_saml.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
