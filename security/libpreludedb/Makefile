@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2009/10/02 09:50:38 hasso Exp $
+# $NetBSD: Makefile,v 1.28 2009/10/07 19:39:43 joerg Exp $
 #
 
-.include "../../security/libpreludedb/Makefile.common"
-.include "../../mk/bsd.prefs.mk"
-
 COMMENT=		LibPreludeDB libraries
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+.include "../../security/libpreludedb/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-perl=no
 CONFIGURE_ARGS+=	--with-python=no
