@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/08/06 01:44:50 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2009/10/07 04:49:58 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -21,8 +21,6 @@ RUBY_NOVERSION=		yes
 NO_CONFIGURE=		yes
 SRCS=			ruby-mode.el rubydb3x.el ruby-electric.el \
 			inf-ruby.el ruby-style.el
-
-PLIST_SUBST+=	SITE_LISP=${SITE_LISP:Q}
 
 do-build:
 	for f in ${SRCS}; do \
