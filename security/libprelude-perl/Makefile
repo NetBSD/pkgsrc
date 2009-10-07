@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/23 19:05:00 hasso Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/07 19:39:42 joerg Exp $
+
+PKGNAME=		libprelude-perl-${VERSION}
+COMMENT=		Perl bindings to LibPrelude
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../security/libprelude/Makefile.common"
-.include "../../mk/bsd.prefs.mk"
-
-PATCHDIR=		${.CURDIR}/../libprelude/patches
-PKGNAME=		libprelude-perl-${VERSION}
-
-COMMENT=		Perl bindings to LibPrelude
 
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-perl-installdirs=vendor
