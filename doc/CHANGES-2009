@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3866 2009/10/06 10:24:01 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3867 2009/10/07 10:58:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5048,3 +5048,7 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated net/samba to 3.0.37 [taca 2009-10-04]
 	Updated www/typolight27 to 2.7.5 [taca 2009-10-06]
 	Updated www/elinks to 0.12rc2nb3 [obache 2009-10-06]
+	Updated editors/emacs22 to 22.3nb5 [obache 2009-10-06]
+	Updated editors/emacs22-nox11 to 22.3nb5 [obache 2009-10-06]
+	Updated editors/emacs to 23.1nb2 [obache 2009-10-06]
+	Updated editors/emacs-nox11 to 23.1nb1 [obache 2009-10-06]
