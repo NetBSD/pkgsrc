@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2009/07/08 14:25:32 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2009/10/07 15:04:29 joerg Exp $
 
 --- Makefile.orig	Fri Mar 23 14:36:18 2001
 +++ Makefile
@@ -33,10 +33,10 @@ $NetBSD: patch-aa,v 1.5 2009/07/08 14:25:32 joerg Exp $
 -.c.o:
 -	$(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
 +libvismsa.la: $(OBJ)
-+	${LIBTOOL} $(CC) -o libvismsa.la -module -avoid-version $(OBJ) $(LFLAGS) -rpath ${INSTALL-DIR}
++	${LIBTOOL} --mode=link $(CC) -o libvismsa.la -module -avoid-version $(OBJ) $(LFLAGS) -rpath ${INSTALL-DIR}
 +
 +.c.lo:
-+	${LIBTOOL} $(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
  
  clean:
 -	rm -f *.o core *.so* 
@@ -48,4 +48,4 @@ $NetBSD: patch-aa,v 1.5 2009/07/08 14:25:32 joerg Exp $
  
  install:
 -	install libvismsa.so $(INSTALL-DIR)
-+	${LIBTOOL} ${INSTALL} libvismsa.la ${DESTDIR}$(INSTALL-DIR)
++	${LIBTOOL} --mode=install ${INSTALL} libvismsa.la ${DESTDIR}$(INSTALL-DIR)
