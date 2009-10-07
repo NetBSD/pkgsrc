@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/09/14 06:20:50 martti Exp $
+# $NetBSD: Makefile,v 1.25 2009/10/07 18:03:13 joerg Exp $
 
 DISTNAME=		Jalbum${VERSION}
 PKGNAME=		jalbum-${VERSION}
@@ -23,7 +23,7 @@ PKG_JVMS_ACCEPTED=	sun-jdk15 sun-jdk6
 
 WRKSRC=			${WRKDIR}/Jalbum
 
-INSTALLATION_DIRS+=	${PREFIX}/share/jalbum
+INSTALLATION_DIRS+=	bin ${PREFIX}/share/jalbum
 
 USE_TOOLS+=		pax
 
@@ -38,7 +38,7 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/jalbum ${DESTDIR}${PREFIX}/bin
-	(cd ${WRKDIR}/Jalbum && pax -rw * ${DESTDIR}${PREFIX}/share/jalbum)
+	cd ${WRKDIR}/Jalbum && pax -rw . ${DESTDIR}${PREFIX}/share/jalbum
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
