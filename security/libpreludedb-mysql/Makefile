@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/02 10:02:08 hasso Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/07 19:39:43 joerg Exp $
 #
 
-.include "../../security/libpreludedb/Makefile.common"
-.include "../../mk/bsd.prefs.mk"
-
-PATCHDIR=		${.CURDIR}/../libpreludedb/patches
 PKGNAME=		libpreludedb-mysql-${VERSION}
 COMMENT=		MySQL plugin for LibPreludeDB
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+.include "../../security/libpreludedb/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-perl=no
 CONFIGURE_ARGS+=	--with-python=no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2009/10/02 09:50:38 hasso Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/10/07 19:39:43 joerg Exp $
 #
 # used by security/libpreludedb/Makefile
 # used by security/libpreludedb-mysql/Makefile
@@ -16,7 +16,8 @@ MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		http://www.prelude-ids.org/download/releases/
 COMMENT=		Provides an interface to the database used to store IDMEF alerts
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+PATCHDIR=		${.CURDIR}/../security/libpreludedb/patches
+DISTINFO_FILE=		${.CURDIR}/../security/libpreludedb/distinfo
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -27,6 +28,7 @@ USE_LANGUAGES=		c c++
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libpreludedb
 
-
 pre-configure:
 	${LN} -s ${BUILDLINK_DIR}/lib/libltdl.la ${BUILDLINK_DIR}/lib/libltdlc.la
+
+.include "../../mk/bsd.prefs.mk"
