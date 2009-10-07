@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2009/08/23 18:56:34 hasso Exp $
+# $NetBSD: Makefile,v 1.38 2009/10/07 19:39:42 joerg Exp $
 #
 
-.include "../../security/libprelude/Makefile.common"
-.include "../../mk/bsd.prefs.mk"
-
 COMMENT=	LibPrelude libraries and c++ easy bindings
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+.include "../../security/libprelude/Makefile.common"
 
 CONF_FILES+=	${PREFIX}/share/examples/libprelude/client.conf ${PKG_SYSCONFDIR}/default/client.conf
 CONF_FILES+=	${PREFIX}/share/examples/libprelude/global.conf ${PKG_SYSCONFDIR}/default/global.conf
