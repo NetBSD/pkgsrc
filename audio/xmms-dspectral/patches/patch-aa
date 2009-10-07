@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2009/07/08 15:05:52 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2009/10/07 15:14:47 joerg Exp $
 
 --- Makefile.orig	Sat Jan 20 06:19:26 2001
 +++ Makefile
@@ -34,10 +34,10 @@ $NetBSD: patch-aa,v 1.2 2009/07/08 15:05:52 joerg Exp $
 -.c.o:
 -	$(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
 +libdspectral.la: $(OBJ) 
-+	${LIBTOOL} $(CC) -o libdspectral.la $(OBJ) $(LFLAGS) -module -avoid-version -rpath $(INSTALL-DIR)
++	${LIBTOOL} --mode=link $(CC) -o libdspectral.la $(OBJ) $(LFLAGS) -module -avoid-version -rpath $(INSTALL-DIR)
 +
 +.c.lo:
-+	${LIBTOOL} $(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
  
  clean:
 -	rm -f *.o core *.so* 
@@ -51,6 +51,6 @@ $NetBSD: patch-aa,v 1.2 2009/07/08 15:05:52 joerg Exp $
 -	install libdspectral.so $(INSTALL-DIR) 
 -	mkdir -p $(XMMS_DATADIR)/$(THEME_SUBDIR)
 -	install bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
-+	${LIBTOOL} ${INSTALL} libdspectral.la ${DESTDIR}$(INSTALL-DIR) 
++	${LIBTOOL} --mode=install ${INSTALL} libdspectral.la ${DESTDIR}$(INSTALL-DIR) 
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(XMMS_DATADIR)/$(THEME_SUBDIR)
 +	${BSD_INSTALL_DATA} bg_*.xpm ${DESTDIR}$(XMMS_DATADIR)/$(THEME_SUBDIR)
