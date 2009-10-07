@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/07/22 09:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2009/10/07 17:34:53 joerg Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -19,7 +19,12 @@ TEX_ACCEPTED=	teTeX3
 WRKSRC=		${WRKDIR}/musixtex-T112
 NO_CONFIGURE=	yes
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 texmf-local/web2c \
+	${PKG_LOCALTEXMFPREFIX}/doc/musixtex \
+	${PKG_LOCALTEXMFPREFIX}/fonts/tfm/musixtex \
+	${PKG_LOCALTEXMFPREFIX}/fonts/source/musixtex \
+	${PKG_LOCALTEXMFPREFIX}/tex/latex/musixtex \
+	${PKG_LOCALTEXMFPREFIX}/web2c
 
 .include "../../print/teTeX/module.mk"
 
@@ -33,37 +38,21 @@ do-build:
 	cd ${WRKSRC}/system/c-source; ${CC} -o musixflx musixflx.c
 
 do-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/musixtex
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/musixtex
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/source/musixtex
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/musixtex
-
 	${INSTALL_DATA} ${WRKSRC}/doc/* \
-		${PKG_LOCALTEXMFPREFIX}/doc/musixtex
-
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/musixtex
 	${INSTALL_DATA} ${WRKSRC}/tex/musixtex.fmt \
-		${PKG_LOCALTEXMFPREFIX}/web2c
-
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/web2c
 	${INSTALL_DATA} ${WRKSRC}/tex/* \
-		${PKG_LOCALTEXMFPREFIX}/tex/latex/musixtex
-
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/musixtex
 	${INSTALL_DATA} ${WRKSRC}/mf/*.mf \
-		${PKG_LOCALTEXMFPREFIX}/fonts/source/musixtex
-
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/source/musixtex
 	${INSTALL_DATA} ${WRKSRC}/tfm/*.tfm \
-		${PKG_LOCALTEXMFPREFIX}/fonts/tfm/musixtex
-
+		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/tfm/musixtex
 	${INSTALL_PROGRAM} ${WRKSRC}/system/c-source/musixflx \
-		${PREFIX}/bin
-
+		${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/system/c-source/musixflx.1 \
-		${PREFIX}/${PKGMANDIR}/man1
-
-.if exists(${LOCALBASE}/bin/virtex)
-	cd ${PREFIX}/bin ; ${LN} -sf virtex musixtex	# teTeX2
-.else
-	cd ${PREFIX}/bin ; ${LN} -sf tex musixtex	# teTeX3
-.endif
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${LN} -s tex ${DESTDIR}${PREFIX}/bin/musixtex
 
 	${LOCALBASE}/bin/mktexlsr ${PKG_LOCALTEXMFPREFIX}
 
