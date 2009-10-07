@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/03/24 19:21:34 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/10/07 14:59:35 joerg Exp $
 
 DISTNAME=	xjman-0.5
 PKGREVISION=	2
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xjman.dsl.gr.jp/
 COMMENT=	Japanized X manual from "The X Japanese Documentation Project"
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	ja-man-[0-9]*:../../misc/ja-man
 
 WRKSRC=		${WRKDIR}/man/ja_JP.eucJP
@@ -17,6 +19,8 @@ USE_X11BASE=	yes
 PLIST_SRC=	${WRKDIR}/PLIST
 XJMANDIR=	man/ja_JP.EUC
 MAKE_ENV+=	XJMANDIR=${XJMANDIR:Q}
+
+USE_BSD_MAKEFILE=	yes
 
 NO_CONFIGURE=	yes
 
@@ -65,12 +69,14 @@ post-build:
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/ja_JP.EUC/cat1 ${PKGMANDIR}/ja_JP.EUC/man1 \
-			${PKGMANDIR}/ja_JP.EUC/cat3 ${PKGMANDIR}/ja_JP.EUC/man3 share/doc/xjman
+			${PKGMANDIR}/ja_JP.EUC/cat3 ${PKGMANDIR}/ja_JP.EUC/man3 \
+			${PKGMANDIR}/ja_JP.EUC/cat5 ${PKGMANDIR}/ja_JP.EUC/man5 \
+			share/doc/xjman
 
 post-install:
 .for i in COPYRIGHT COPYRIGHT.XJDP
-	@${INSTALL_DATA} ${FILESDIR}/${i} ${PREFIX}/share/doc/xjman
+	@${INSTALL_DATA} ${FILESDIR}/${i} ${DESTDIR}${PREFIX}/share/doc/xjman
 .endfor
-	@${INSTALL_DATA} ${WRKDIR}/man/README ${PREFIX}/share/doc/xjman
+	@${INSTALL_DATA} ${WRKDIR}/man/README ${DESTDIR}${PREFIX}/share/doc/xjman
 
 .include "../../mk/bsd.pkg.mk"
