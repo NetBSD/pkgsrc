@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/19 20:02:18 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/10/07 15:56:11 joerg Exp $
 #
 
 DISTNAME=	vista
@@ -10,6 +10,8 @@ MASTER_SITES=	http://forrest.psych.unc.edu/research/vista-frames/ftp/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://forrest.psych.unc.edu/research/
 COMMENT=	Visual statistics system
+
+MAKE_JOBS_SAFE=	no
 
 DEPENDS+=	xlispstat>=3.52.9:../../math/xlispstat
 
