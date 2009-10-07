@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2009/07/08 15:15:15 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2009/10/07 15:34:14 joerg Exp $
 
 --- Makefile.orig	Sat Jun  9 14:37:36 2001
 +++ Makefile
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.5 2009/07/08 15:15:15 joerg Exp $
 +	${LIBTOOL} --mode=link $(CC) -o libdflowers.la -module -avoid-version $(OBJ) $(LFLAGS) -rpath ${INSTALL-DIR}
 +
 +.c.lo:
-+	${LIBTOOL} $(CC) $(CFLAGS) $(CONF) $(XMMS_DATADIR_FLAGS) -c $< 
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) $(CONF) $(XMMS_DATADIR_FLAGS) -c $< 
  
 -.c.o:
 -	$(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.5 2009/07/08 15:15:15 joerg Exp $
 -install:
 -	install libdflowers.so $(INSTALL-DIR)
 +install: libdflowers.la
-+	${LIBTOOL} install libdflowers.la ${DESTDIR}$(INSTALL-DIR)
++	${LIBTOOL} --mode=install install libdflowers.la ${DESTDIR}$(INSTALL-DIR)
 -	mkdir -p $(XMMS_DATADIR)/$(THEME_SUBDIR)
 +	mkdir -p ${DESTDIR}$(XMMS_DATADIR)/$(THEME_SUBDIR)
 -	install bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
