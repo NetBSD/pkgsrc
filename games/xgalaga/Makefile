@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/01/19 09:16:23 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2009/10/07 15:38:03 joerg Exp $
 
 DISTNAME=		xgalaga-2.0.34
 PKGREVISION=		4
@@ -16,6 +16,13 @@ CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/bin
 SETGIDGAME=		yes
 MAKE_ENV+=		GAMEOWN=${GAMEOWN:Q} GAMEGRP=${GAMEGRP:Q} \
 			GAMEMODE=${GAMEMODE:Q} GAMEDATAMODE=${GAMEDATAMODE:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "modular"
+CONFIGURE_ARGS+=	--x-includes=${PREFIX}/include
+CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/lib
+.endif
 
 INSTALLATION_DIRS=	libexec
 
