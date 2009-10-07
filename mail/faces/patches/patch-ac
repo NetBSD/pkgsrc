@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.11 2001/11/30 16:29:28 jlam Exp $
+$NetBSD: patch-ac,v 1.12 2009/10/07 17:41:35 joerg Exp $
 
 --- compface/Makefile.orig	Wed Oct 23 22:28:06 1991
 +++ compface/Makefile
@@ -39,17 +39,17 @@ $NetBSD: patch-ac,v 1.11 2001/11/30 16:29:28 jlam Exp $
  
  $(NAME) :	cmain.o compface.o $(LIBNAME)
 -		$(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o $(LIBNAME)
-+		$(LIBTOOL) $(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o $(LIBNAME)
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o $(LIBNAME)
  
  $(UNNAME) :	uncmain.o $(LIBNAME)
 -		$(CC) $(CFLAGS) -o $(UNNAME) uncmain.o $(LIBNAME)
-+		$(LIBTOOL) $(CC) $(CFLAGS) -o $(UNNAME) uncmain.o $(LIBNAME)
++		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $(UNNAME) uncmain.o $(LIBNAME)
  
 -$(LIBNAME) :	$(OBJECTS)
 -		ar rc $(LIBNAME) $(OBJECTS)
 -		-ranlib $(LIBNAME)
 +$(LIBNAME) :	$(OBJECTS:.o=.lo)
-+		$(LIBTOOL) $(CC) -o $(LIBNAME) $(OBJECTS:.o=.lo) -rpath $(LIBDIR) -version-info 1:0
++		$(LIBTOOL) --mode=link $(CC) -o $(LIBNAME) $(OBJECTS:.o=.lo) -rpath $(LIBDIR) -version-info 1:0
  
  lint :
  		lint -abchx $(SOURCES)
@@ -68,9 +68,9 @@ $NetBSD: patch-ac,v 1.11 2001/11/30 16:29:28 jlam Exp $
 -		-cp $(NAME).3 $(MAN3DIR)
 -		rm -f $(MAN3DIR)/$(UNNAME).3
 -		-ln $(MAN3DIR)/$(NAME).3 $(MAN3DIR)/$(UNNAME).3
-+		$(LIBTOOL) ${BSD_INSTALL_DATA} $(LIBNAME) $(LIBDIR)
-+		$(LIBTOOL) ${BSD_INSTALL_PROGRAM} $(NAME) $(EXECUTABLE)
-+		$(LIBTOOL) ${BSD_INSTALL_PROGRAM} $(UNNAME) $(UNEXECUTABLE)
++		$(LIBTOOL) --mode=install ${BSD_INSTALL_DATA} $(LIBNAME) $(LIBDIR)
++		$(LIBTOOL) --mode=install ${BSD_INSTALL_PROGRAM} $(NAME) $(EXECUTABLE)
++		$(LIBTOOL) --mode=install ${BSD_INSTALL_PROGRAM} $(UNNAME) $(UNEXECUTABLE)
 +		${BSD_INSTALL_MAN} $(NAME).1 $(MAN1DIR)
 +		rm -f $(MAN1DIR)/$(UNNAME).1*
 +		-ln -fs $(MAN1DIR)/$(NAME).1 $(MAN1DIR)/$(UNNAME).1
@@ -86,7 +86,7 @@ $NetBSD: patch-ac,v 1.11 2001/11/30 16:29:28 jlam Exp $
 +.SUFFIXES:	.lo
 +
 +.c.lo:
-+		$(LIBTOOL) $(CC) $(CFLAGS) -c $<
++		$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $<
  
  arith.o:	arith.c compface.h data.h
  cmain.o:	cmain.c compface.h data.h

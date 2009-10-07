@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.13 2006/01/08 14:30:01 tron Exp $
+$NetBSD: patch-ab,v 1.14 2009/10/07 17:41:35 joerg Exp $
 
 --- Makefile.dist.orig	1991-11-24 23:55:28.000000000 +0000
 +++ Makefile.dist	2006-01-08 14:13:23.000000000 +0000
@@ -175,7 +175,7 @@ $NetBSD: patch-ab,v 1.13 2006/01/08 14:30:01 tron Exp $
  		(cd compface; $(MAKE) $(MAKEOPTS))
  		(cd filters; $(MAKE) $(MAKEOPTS))
 -		$(CC) -o xfaces $(CFLAGS) $(STDOBJS) x11.o \
-+		$(LIBTOOL) $(CC) -o faces $(CFLAGS) $(STDOBJS) x11.o \
++		$(LIBTOOL) --mode=link $(CC) -o faces $(CFLAGS) $(STDOBJS) x11.o \
  					$(STDLIBS) $(X11LIBS) $(SVR4LIBS)
 -		-cp xfaces faces
  
@@ -201,7 +201,7 @@ $NetBSD: patch-ab,v 1.13 2006/01/08 14:30:01 tron Exp $
 -		install -c -m 755 face_update $(BINDIR)
 -		install -c -m 755 faces.sendmail $(BINDIR)
 -		install -c -m 644 faces.man \
-+		$(LIBTOOL) ${BSD_INSTALL_PROGRAM} faces $(BINDIR)
++		$(LIBTOOL) --mode=install ${BSD_INSTALL_PROGRAM} faces $(BINDIR)
 +		${BSD_INSTALL_SCRIPT} face_update $(BINDIR)
 +		${BSD_INSTALL_SCRIPT} faces.sendmail $(BINDIR)
 +		${BSD_INSTALL_MAN} faces.man \
