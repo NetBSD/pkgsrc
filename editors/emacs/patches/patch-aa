@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.16 2009/10/07 10:56:40 obache Exp $
+
+--- configure.in.orig	2009-07-30 00:09:49.000000000 +0900
++++ configure.in
+@@ -329,9 +329,9 @@ dnl see the `changequote' comment above.
+     case "${canonical}" in
+       alpha*-*-netbsd*)	machine=alpha ;;
+       i[3456]86-*-netbsd*) machine=intel386 ;;
+-      mips-*-netbsd*)	machine=pmax ;;
+-      mipsel-*-netbsd*)	machine=pmax ;;
+-      mipseb-*-netbsd*)	machine=pmax ;;
++      mips-*-netbsd*)	machine=mips ;;
++      mipsel-*-netbsd*)	machine=mips ;;
++      mipseb-*-netbsd*)	machine=mips ;;
+       powerpc-*-netbsd*) machine=macppc ;;
+       sparc*-*-netbsd*)	machine=sparc ;;
+       vax-*-netbsd*)	machine=vax ;;
