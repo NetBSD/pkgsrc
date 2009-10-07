@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/07/08 15:05:57 joerg Exp $
+$NetBSD: distinfo,v 1.7 2009/10/07 15:18:03 joerg Exp $
 
 SHA1 (dspectogram-1.2.tar.gz) = defad396e898efdaa597312629afc1b46bd7e9c9
 RMD160 (dspectogram-1.2.tar.gz) = bf7d3004ba647d176b822791a9cf49f26a495057
 Size (dspectogram-1.2.tar.gz) = 40791 bytes
-SHA1 (patch-aa) = 8995ba932fec3159497523ed16e63c6fdae9928b
+SHA1 (patch-aa) = 1a98b410dd7819bf40cca99fc3eaf5ad4fcf90a6

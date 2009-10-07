@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/07/08 15:05:52 joerg Exp $
+$NetBSD: distinfo,v 1.4 2009/10/07 15:14:47 joerg Exp $
 
 SHA1 (dspectral-1.2.tar.gz) = da32adcdcfef1cc2e32e4d5013623be64922c430
 RMD160 (dspectral-1.2.tar.gz) = 7cdbdeadb8309d90ff1d42deb0704dc495b81728
 Size (dspectral-1.2.tar.gz) = 41866 bytes
-SHA1 (patch-aa) = 899b6e52c33b54df2d95c7c276a3b1c54fd44e31
+SHA1 (patch-aa) = 396884805bcdda5f57e6851afba7ad44036f0c50

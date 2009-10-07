@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2009/07/08 15:05:57 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2009/10/07 15:18:03 joerg Exp $
 
 --- Makefile.orig	Sat Jan 20 06:20:49 2001
 +++ Makefile
@@ -34,10 +34,10 @@ $NetBSD: patch-aa,v 1.5 2009/07/08 15:05:57 joerg Exp $
 -.c.o:
 -	$(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
 +libdspectogram.la: $(OBJ)
-+	${LIBTOOL} $(CC) -o libdspectogram.la $(OBJ) $(LFLAGS) -rpath ${INSTALL-DIR} -module -avoid-version
++	${LIBTOOL} --mode=link $(CC) -o libdspectogram.la $(OBJ) $(LFLAGS) -rpath ${INSTALL-DIR} -module -avoid-version
 +
 +.c.lo:
-+	${LIBTOOL} $(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) $(XMMS_DATADIR_FLAGS) -c $< 
  
  clean:
 -	rm -f *.o core *.so* 
@@ -51,6 +51,6 @@ $NetBSD: patch-aa,v 1.5 2009/07/08 15:05:57 joerg Exp $
 -	install libdspectogram.so $(INSTALL-DIR)
 -	mkdir -p $(XMMS_DATADIR)/$(THEME_SUBDIR)
 -	install bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
-+	${LIBTOOL} ${INSTALL} libdspectogram.la ${DESTDIR}$(INSTALL-DIR)
++	${LIBTOOL} --mode=install ${INSTALL} libdspectogram.la ${DESTDIR}$(INSTALL-DIR)
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(XMMS_DATADIR)/$(THEME_SUBDIR)
 +	${BSD_INSTALL_DATA} bg_*.xpm ${DESTDIR}$(XMMS_DATADIR)/$(THEME_SUBDIR)
