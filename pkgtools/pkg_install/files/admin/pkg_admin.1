@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_admin.1,v 1.27 2009/08/17 05:06:38 wiz Exp $
+.\"	$NetBSD: pkg_admin.1,v 1.28 2009/10/07 12:53:26 joerg Exp $
 .\"
 .\" Copyright (c) 1999-2009 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -289,10 +289,11 @@ to remove a variable.
 Packages that are not installed directly by the user but pulled in as
 dependencies are marked by setting
 .Dq automatic=YES .
-.It Cm gpg-sign-package pkg
+.It Cm gpg-sign-package pkg spkg
 Sign the binary package
 .Ar pkg
-using GPG.
+using GPG and write the result to
+.Ar spkg .
 .It Cm x509-sign-package pkg spkg key cert
 Sign the binary package
 .Ar pkg
