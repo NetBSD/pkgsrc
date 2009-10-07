@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.27 2009/08/06 04:46:04 minskim Exp $
+$NetBSD: patch-ab,v 1.28 2009/10/07 10:56:40 obache Exp $
 
---- configure.orig	2009-06-04 20:29:50 +0300
-+++ configure	2009-06-07 21:41:16 +0300
-@@ -1979,7 +1979,7 @@ archlibdir='${libexecdir}/emacs/${versio
+--- configure.orig	2009-07-30 00:12:00.000000000 +0900
++++ configure
+@@ -1856,7 +1856,7 @@ archlibdir='${libexecdir}/emacs/${versio
  docdir='${datadir}/emacs/${version}/etc'
  gamedir='${localstatedir}/games/emacs'
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.27 2009/08/06 04:46:04 minskim Exp $
  
  
  
-@@ -2529,6 +2529,15 @@ case "${canonical}" in
+@@ -2406,6 +2406,15 @@ case "${canonical}" in
      esac
    ;;
  
@@ -27,7 +27,20 @@ $NetBSD: patch-ab,v 1.27 2009/08/06 04:46:04 minskim Exp $
    ## FreeBSD kernel + glibc based userland
    *-*-kfreebsd*gnu* )
      opsys=gnu-kfreebsd
-@@ -9605,9 +9614,9 @@ if test "${HAVE_NS}" = yes; then
+@@ -2434,9 +2443,9 @@ _ACEOF
+     case "${canonical}" in
+       alpha*-*-netbsd*)	machine=alpha ;;
+       i[3456]86-*-netbsd*) machine=intel386 ;;
+-      mips-*-netbsd*)	machine=pmax ;;
+-      mipsel-*-netbsd*)	machine=pmax ;;
+-      mipseb-*-netbsd*)	machine=pmax ;;
++      mips-*-netbsd*)	machine=mips ;;
++      mipsel-*-netbsd*)	machine=mips ;;
++      mipseb-*-netbsd*)	machine=mips ;;
+       powerpc-*-netbsd*) machine=macppc ;;
+       sparc*-*-netbsd*)	machine=sparc ;;
+       vax-*-netbsd*)	machine=vax ;;
+@@ -9408,9 +9417,9 @@ if test "${HAVE_NS}" = yes; then
    window_system=nextstep
    with_xft=no
    # set up packaging dirs
