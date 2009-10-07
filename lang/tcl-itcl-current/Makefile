@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/19 19:50:27 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/10/07 23:58:50 dmcmahill Exp $
 
 DISTNAME=	tcl-itcl-20040920
 PKGNAME=	${DISTNAME:S/itcl/itcl-current/}
@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/tcl-itcl-${ITCL_VERS}
 ITCL_VERS=	3.3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	autoconf
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl:Q}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk:Q}/lib
 CONFIGURE_ARGS+=	--enable-shared
@@ -34,6 +35,11 @@ SUBST_SED.tcl-itcl+=	-e s\|${PREFIX:Q}/lib/itcl${ITCL_VERS:Q}\|${PREFIX:Q}/lib/t
 SUBST_SED.tcl-itcl+=	-e s\|${WRKDIR:Q}/${DISTNAME:C/-src//:Q}\|${PREFIX:Q}\|
 
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+# the version of configure in the distfile is from autoconf-2.13 and is not compatible
+# with some arguments which are passed down from above.
+post-patch:
+	cd ${WRKSRC}/iwidgets && autoconf
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
