@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.90 2009/08/16 14:26:46 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.91 2009/10/07 12:53:26 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.90 2009/08/16 14:26:46 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.91 2009/10/07 12:53:26 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1034,12 +1034,19 @@ check_dependencies(struct pkg_task *pkg)
 				continue;
 			}
 			if (pkg_do(p->name, 1, 0)) {
-				warnx("Can't install dependency %s", p->name);
-				status = -1;
-				break;
+				if (ForceDepends) {
+					warnx("Can't install dependency %s, "
+					    "continuing", p->name);
+					continue;
+				} else {
+					warnx("Can't install dependency %s",
+					    p->name);
+					status = -1;
+					break;
+				}
 			}
 			best_installed = find_best_matching_installed_pkg(p->name);
-			if (best_installed == NULL && Force) {
+			if (best_installed == NULL && ForceDepends) {
 				warnx("Missing dependency %s ignored", p->name);
 				continue;
 			} else if (best_installed == NULL) {

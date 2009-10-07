@@ -1,4 +1,4 @@
-/*	$NetBSD: parse-config.c,v 1.9 2009/08/16 21:10:53 joerg Exp $	*/
+/*	$NetBSD: parse-config.c,v 1.10 2009/10/07 12:53:27 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: parse-config.c,v 1.9 2009/08/16 21:10:53 joerg Exp $");
+__RCSID("$NetBSD: parse-config.c,v 1.10 2009/10/07 12:53:27 joerg Exp $");
 
 /*-
  * Copyright (c) 2008, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -70,7 +70,7 @@ const char *pkg_vulnerabilities_dir;
 const char *pkg_vulnerabilities_file;
 const char *pkg_vulnerabilities_url;
 const char *ignore_advisories = NULL;
-const char tnf_vulnerability_base[] = "ftp://ftp.NetBSD.org/pub/NetBSD/packages/vulns";
+const char tnf_vulnerability_base[] = "http://ftp.NetBSD.org/pub/NetBSD/packages/vulns";
 const char *acceptable_licenses = NULL;
 
 static struct config_variable {

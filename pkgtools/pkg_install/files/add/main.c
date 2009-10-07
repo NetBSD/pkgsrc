@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.21 2009/09/11 18:00:13 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.22 2009/10/07 12:53:26 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.21 2009/09/11 18:00:13 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.22 2009/10/07 12:53:26 joerg Exp $");
 
 /*
  *
@@ -51,6 +51,7 @@ Boolean NoView = FALSE;
 Boolean NoInstall = FALSE;
 Boolean NoRecord = FALSE;
 Boolean Automatic = FALSE;
+Boolean ForceDepends = FALSE;
 
 int	LicenseCheck = 0;
 int     Replace = 0;
@@ -89,6 +90,7 @@ main(int argc, char **argv)
 
 		case 'f':
 			Force = TRUE;
+			ForceDepends = TRUE;
 			break;
 
 		case 'I':
