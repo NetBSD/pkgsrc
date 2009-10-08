@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2009/10/06 14:57:28 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2009/10/08 12:49:27 joerg Exp $
 
 DISTNAME=	gnustep-make-2.0.8
 PKGREVISION=	3
@@ -21,8 +21,6 @@ CONFIGURE_ARGS+=	--disable-importing-config-file
 CONFIGURE_ARGS+=	--with-layout=fhs
 CONFIGURE_ARGS+=	--with-config-file=${PKG_SYSCONFDIR}/GNUstep.conf
 MAKE_FILE=		GNUmakefile
-
-GNUSTEP_USE_REAL_USER_ROOT=	# empty
 
 CONF_FILES+=		${PREFIX}/share/examples/GNUstep/GNUstep.conf \
 			${PKG_SYSCONFDIR}/GNUstep.conf
