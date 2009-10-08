@@ -1,0 +1,29 @@
+$NetBSD: patch-an,v 1.1 2009/10/08 16:43:13 dmcmahill Exp $
+
+
+--- configure.in.orig	2009-05-26 11:38:48.000000000 +0000
++++ configure.in	2009-10-08 11:40:07.000000000 +0000
+@@ -1212,5 +1212,5 @@
+ SCRIPTS_EXE_SUFFIX=
+ case "$canonical_host_type" in
+-  *-*-386bsd* | *-*-netbsd*)
++  *-*-386bsd*)
+     SH_LD=ld
+     SH_LDFLAGS=-Bshareable
+@@ -1597,6 +1597,6 @@
+ 
+ AC_LANG_PUSH(C++)
+-AC_CHECK_DECLS([exp2, round, tgamma], [], [], [[#include <cmath>]])
+-AC_CHECK_FUNCS([exp2 round tgamma])
++AC_CHECK_DECLS([exp2, round, tgamma, tgammaf], [], [], [[#include <cmath>]])
++AC_CHECK_FUNCS([exp2 round tgamma tgamma])
+ AH_VERBATIM([Z_FUNCS_AND_DECLS], [
+ #if defined (__cplusplus)
+@@ -1612,4 +1612,7 @@
+ double tgamma (double);
+ #endif
++#if HAVE_TGAMMAF && ! HAVE_DECL_TGAMMAF
++float tgammaf (float);
++#endif
+ #if defined (__cplusplus)
+ }
