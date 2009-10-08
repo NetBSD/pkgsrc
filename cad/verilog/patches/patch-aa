@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.11 2009/10/08 16:52:05 dmcmahill Exp $
+
+for auto_ptr.
+
+--- elab_net.cc.orig	2008-12-10 03:21:48.000000000 +0000
++++ elab_net.cc	2009-10-08 16:45:12.000000000 +0000
+@@ -30,4 +30,5 @@
+ # include  <iostream>
+ # include  <cstring>
++# include  <memory>
+ 
+ /*
