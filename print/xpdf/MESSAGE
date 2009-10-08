@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2009/08/23 15:11:57 wiz Exp $
-
-This package is obsolete.
-You probably want to install epdfview since this conflicts with poppler
-which is a more recent package that people use.
-
-===========================================================================
