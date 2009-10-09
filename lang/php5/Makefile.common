@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2009/09/26 05:40:05 taca Exp $
+# $NetBSD: Makefile.common,v 1.38 2009/10/09 03:53:06 taca Exp $
 # used by lang/php5/Makefile.php
 # used by lang/php/ext.mk
 
@@ -9,6 +9,26 @@
 # in the patch which can leave the option broken until an updated patch
 # is released.  When updating PHP please don't forget to update the
 # distnfo with the details of the suhosin patch as well.
+#
+# Check these packages when update to new release of PHP and consider to
+# reset PKG_REVISION:
+#
+#		databases/php-pdo
+#		databases/php-pdo_dblib
+#		databases/php-pdo_mysql
+#		databases/php-pdo_odbc
+#		databases/php-pdo_pgsql
+#		databases/php-pdo_sqlite
+#		databases/php-pgsql
+#		databases/php5-mysqli
+#		multimedia/php-ming
+#		net/php5-soap
+#		textproc/php5-dom
+#		textproc/php5-xsl
+#		www/php-apc
+#
+# Since other PHP extensions are shared between www/php4, we can't reset
+# PKGREVSION.
 #
 
 .if !defined(DISTNAME)
