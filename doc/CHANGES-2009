@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3869 2009/10/08 07:11:30 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.3870 2009/10/09 03:55:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5054,3 +5054,5 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated editors/emacs-nox11 to 23.1nb1 [obache 2009-10-06]
 	Updated www/typolight27-translations to 20091007 [taca 2009-10-07]
 	Updated mail/getmail to 4.12.0 [schmonz 2009-10-08]
+	Updated textproc/php5-xsl to 5.2.11nb1 [taca 2009-10-09]
+	Updated databases/php-sqlite to 5.2.11.1.0.3 [taca 2009-10-09]
