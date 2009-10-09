@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2009/09/23 16:46:31 tnn Exp $
+# $NetBSD: Makefile,v 1.59 2009/10/09 19:41:46 tnn Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
@@ -56,7 +56,7 @@ MOZILLA=firefox
 MOZILLA_NAME=	Firefox 3.5
 MOZILLA_ICON=	${WRKSRC}/other-licenses/branding/firefox/default48.png
 .else
-MOZILLA_NAME=	Shiretoko 3.5
+MOZILLA_NAME=	Browser 3.5
 MOZILLA_ICON=	${WRKSRC}/browser/branding/unofficial/default48.png
 .endif
 
