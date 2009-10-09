@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/10/07 05:00:58 taca Exp $
+# $NetBSD: Makefile,v 1.10 2009/10/09 03:49:43 taca Exp $
 
 MODNAME=		pdo
 CATEGORIES+=		databases
@@ -24,5 +24,5 @@ post-install:
 .for inc in ${PDO_INCLUDES}
 	${INSTALL_DATA} ${WRKSRC}/${inc} ${DESTDIR}${PREFIX}/include/php/ext/pdo/${inc}
 .endfor
-	
+
 .include "../../mk/bsd.pkg.mk"
