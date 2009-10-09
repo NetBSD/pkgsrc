@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2009/10/09 03:51:03 taca Exp $
+# $NetBSD: Makefile,v 1.12 2009/10/09 12:27:05 taca Exp $
 
 MODNAME=		sqlite
-PECL_VERSION=		1.0.3
+PKGNAME=		${PHP_PKG_PREFIX}-${MODNAME}-${PHP_BASE_VERS}.1.0.3
 CATEGORIES+=		databases
 COMMENT=		PHP extension for SQLite 2.x databases
 
 #
-# PECL_VERSION exists for temporary workaround and it should be removed
-# after next release of lang/php5.
+# Above PKGNAME definition should be removed after next release of lang/php5.
 #
 
 PHP_VERSIONS_ACCEPTED=	5
