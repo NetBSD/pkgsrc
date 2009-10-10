@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3871 2009/10/10 02:19:08 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3872 2009/10/10 17:58:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
 
@@ -5057,3 +5057,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated textproc/php5-xsl to 5.2.11nb1 [taca 2009-10-09]
 	Updated databases/php-sqlite to 5.2.11.1.0.3 [taca 2009-10-09]
 	Updated www/typolight27-translations to 20091009 [taca 2009-10-10]
+	Updated www/ikiwiki to 3.20091009 [schmonz 2009-10-10]
