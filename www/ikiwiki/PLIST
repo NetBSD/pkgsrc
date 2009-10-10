@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/09/25 07:29:21 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/10/10 17:58:41 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-makerepo
 bin/ikiwiki-transition
@@ -86,6 +86,7 @@ share/ikiwiki/directives/ikiwiki/directive/toggle.mdwn
 share/ikiwiki/directives/ikiwiki/directive/toggleable.mdwn
 share/ikiwiki/directives/ikiwiki/directive/version.mdwn
 share/ikiwiki/examples/blog.mdwn
+share/ikiwiki/examples/blog/comments.mdwn
 share/ikiwiki/examples/blog/index.mdwn
 share/ikiwiki/examples/blog/posts.mdwn
 share/ikiwiki/examples/blog/posts/first_post.mdwn
