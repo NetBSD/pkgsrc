@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.2 2006/03/19 22:10:38 joerg Exp $
+$NetBSD: patch-ap,v 1.3 2009/10/10 12:52:40 jmmv Exp $
 
---- src/client.c.orig	2005-05-24 04:28:22.000000000 +0000
+--- src/client.c.orig	2006-09-27 22:29:18.000000000 +0100
 +++ src/client.c
 @@ -24,6 +24,8 @@
  #include "gkrellm-private.h"
@@ -58,3 +58,30 @@ $NetBSD: patch-ap,v 1.2 2006/03/19 22:10:38 joerg Exp $
  			&mem.swap_total, &mem.swap_used,
  			&mem.swap_in, &mem.swap_out);
  	}
+@@ -1598,7 +1604,7 @@ KeyTable	update_table[] =
+ 
+ 
+ static gint
+-getline(gint fd, gchar *buf, gint len)
++xgetline(gint fd, gchar *buf, gint len)
+ 	{
+ 	fd_set			read_fds;
+ 	struct timeval	tv;
+@@ -1690,7 +1696,7 @@ read_server_setup(gint fd)
+ 
+ 	while (1)
+ 		{
+-		getline(fd, buf, sizeof(buf));
++		xgetline(fd, buf, sizeof(buf));
+ 		if (!strcmp(buf, "</gkrellmd_setup>"))
+ 			break;
+ 		process_server_line(&setup_table[0], table_size, buf);
+@@ -1706,7 +1712,7 @@ read_server_setup(gint fd)
+ 	table_size = sizeof(update_table) / sizeof(KeyTable);
+ 	while (1)
+ 		{
+-		getline(fd, buf, sizeof(buf));
++		xgetline(fd, buf, sizeof(buf));
+ 		if (!strcmp(buf, "</initial_update>"))
+ 			break;
+ 		process_server_line(&update_table[0], table_size, buf);
