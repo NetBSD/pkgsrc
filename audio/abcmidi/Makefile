@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/03/02 06:10:30 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2009/10/10 08:33:24 wiz Exp $
 #
 
 DISTNAME=	abcMIDI-${ABCMIDIVER}
-PKGNAME=	abcmidi-${ABCMIDIVER}
+PKGNAME=	abcmidi-${ABCMIDIVER:S/-//g}
 CATEGORIES=	audio
 MASTER_SITES=	http://ifdo.pugmarks.com/~seymour/runabc/
 EXTRACT_SUFX=	.zip
