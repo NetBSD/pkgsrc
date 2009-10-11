@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3890 2009/10/11 08:51:51 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3891 2009/10/11 09:03:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5104,3 +5104,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/py-usb to 0.4.2 [wiz 2009-10-11]
 	Updated editors/Sigil to 0.1.3 [wiz 2009-10-11]
 	Updated editors/Sigil to 0.1.4 [wiz 2009-10-11]
+	Updated devel/qbzr to 0.14.3 [wiz 2009-10-11]
