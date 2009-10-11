@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3908 2009/10/11 11:20:21 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.3909 2009/10/11 11:24:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5134,3 +5134,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/nullmailer to 1.04 [plunky 2009-10-11]
 	Updated lang/ecl to 9.10.2 [asau 2009-10-11]
 	Updated net/Transmission to 1.75 [tnn 2009-10-11]
+	Updated textproc/p5-XML-LibXML to 1.70 [sno 2009-10-11]
