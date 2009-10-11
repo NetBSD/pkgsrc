@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1 2007/11/22 18:51:25 drochner Exp $
+$NetBSD: patch-ap,v 1.2 2009/10/11 09:14:52 adam Exp $
 
---- config.tests/unix/iconv/iconv.cpp.orig	2007-11-21 18:28:36.000000000 +0100
+--- config.tests/unix/iconv/iconv.cpp.orig	2009-09-29 13:01:31.000000000 +0200
 +++ config.tests/unix/iconv/iconv.cpp
-@@ -7,7 +7,11 @@ int main(int, char **)
+@@ -48,7 +48,11 @@ int main(int, char **)
  {
      iconv_t x = iconv_open("", "");
  
