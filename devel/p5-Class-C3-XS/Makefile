@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/06/13 06:46:44 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/11 08:16:22 sno Exp $
 
-DISTNAME=	Class-C3-XS-0.11
+DISTNAME=	Class-C3-XS-0.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-C3-XS/
 COMMENT=	XS speedups for Class::C3
-LICENSE=	artistic-2.0
+LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/Class/C3/XS/.packlist
