@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.11 2007/10/24 09:14:42 rillig Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.12 2009/10/11 20:45:45 rillig Exp $ -->
 
 <appendix id="ftp-layout">
 <title>Directory layout of the pkgsrc FTP server</title>
@@ -13,17 +13,6 @@
 	are. This directory contains some subdirectories, which are
 	explained below.</para>
 
-<sect1 id="ftp-bootstrap">
-<title><filename>bootstrap-pkgsrc</filename>: Bootstrap kits</title>
-
-	<para>This directory used to contain binary packages of the
-	package management tools for various platforms. For those
-	package collections that need them, they are now stored near the
-	binary packages, so you should look <link
-	linkend="ftp-packages">in the <filename>packages</filename>
-	directory</link>.</para>
-
-</sect1>
 <sect1 id="ftp-distfiles">
 <title><filename>distfiles</filename>: The distributed source files</title>
 
@@ -33,12 +22,6 @@
 	and are used when the distributed files have names that don't
 	explicitly contain a version number or are otherwise too generic
 	(for example <filename>release.tar.gz</filename>).</para>
-
-</sect1>
-<sect1 id="ftp-iso">
-<title><filename>iso</filename>: Currently empty</title>
-
-	<para>This directory is currently not in use.</para>
 
 </sect1>
 <sect1 id="ftp-misc">
