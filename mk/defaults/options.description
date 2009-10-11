@@ -403,7 +403,7 @@ sndfile			Enable sndfile support.
 snmp			Enable SNMP support.
 snort-flexresp		Flexible Responses on hostile connection attempts
 snort-flexresp2		NEW Flexible Responses on hostile connection attempts
-snort-prelude		Enable prelude support.
+snort-prelude		Enable support for the Prelude Hybrid IDS system
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
 spamassassin		Enable SpamAssassin support.
