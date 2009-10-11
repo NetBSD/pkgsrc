@@ -1,0 +1,5 @@
+IMDB::Film is OO Perl interface to the database of films IMDB
+(www.imdb.com). It allows to retrieve information about movies by
+its IMDB code or title. Also, there is a possibility to get
+information about IMDB persons (actors, actresses, directors, etc.)
+by their name of code.
