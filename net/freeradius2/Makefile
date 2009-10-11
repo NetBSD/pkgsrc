@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/07/17 18:00:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2009/10/11 09:18:25 adam Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -12,6 +12,7 @@ COMMENT=	Free RADIUS server implementation
 
 .include "../../mk/bsd.prefs.mk"
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		radiusd-cistron-[0-9]*
 CONFLICTS+=		freeradius<2.0
 USE_TOOLS+=		gmake perl:run
@@ -43,7 +44,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.1.6
+RADVER=			2.1.7
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
