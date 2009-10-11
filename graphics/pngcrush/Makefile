@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2009/09/11 06:33:14 adam Exp $
+# $NetBSD: Makefile,v 1.38 2009/10/11 08:07:23 adam Exp $
 
-DISTNAME=	pngcrush-1.7.2-nolib
-PKGNAME=	pngcrush-1.7.2
+DISTNAME=	pngcrush-1.7.3-nolib
+PKGNAME=	pngcrush-1.7.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmt/}
 EXTRACT_SUFX=	.tar.bz2
