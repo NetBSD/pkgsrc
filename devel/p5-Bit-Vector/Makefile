@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2009/08/26 16:03:32 seb Exp $
+# $NetBSD: Makefile,v 1.27 2009/10/11 09:55:38 sno Exp $
 #
 
-DISTNAME=	Bit-Vector-7.0
+DISTNAME=	Bit-Vector-7.1
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5biv
 CATEGORIES=	devel perl5
