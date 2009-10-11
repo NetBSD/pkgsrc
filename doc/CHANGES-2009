@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3917 2009/10/11 13:18:32 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3918 2009/10/11 16:08:37 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5142,3 +5142,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-ISA to 0.36 [sno 2009-10-11]
 	Updated databases/p5-SQL-Translator to 0.11003 [sno 2009-10-11]
 	Updated lang/mzscheme to 4.2.2 [asau 2009-10-11]
+	Updated emulators/qemu to 0.11.0 [asau 2009-10-11]
