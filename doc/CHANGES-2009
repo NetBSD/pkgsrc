@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3895 2009/10/11 09:33:17 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3896 2009/10/11 09:34:05 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5121,3 +5121,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Mouse to 0.37 [sno 2009-10-11]
 	Updated textproc/p5-Text-CSV_XS to 0.68 [sno 2009-10-11]
 	Added devel/fossil version 20090921191920 [wiz 2009-10-11]
+	Updated textproc/p5-Text-CSV to 1.14 [sno 2009-10-11]
