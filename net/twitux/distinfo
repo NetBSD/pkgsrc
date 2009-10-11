@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/21 00:21:31 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2009/10/11 17:48:21 jmmv Exp $
 
-SHA1 (twitux-0.62.tar.bz2) = 5d4fe9db47ba9236ef5f1746ef3be80f2effc2ec
-RMD160 (twitux-0.62.tar.bz2) = 29a66998ef375bad9bf2dbfba66bfdef9f428125
-Size (twitux-0.62.tar.bz2) = 369539 bytes
+SHA1 (twitux-0.69.tar.bz2) = 8693115c0016aec33c859fbaaf2557e6c3102160
+RMD160 (twitux-0.69.tar.bz2) = 68ef7e357fa69618f80a1356f116aa3ad7cb08ea
+Size (twitux-0.69.tar.bz2) = 474366 bytes
+SHA1 (patch-aa) = 29fdb6fe216c4163290f9ce88a8a87b596bd56fc
