@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3900 2009/10/11 09:42:08 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3901 2009/10/11 09:45:52 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5126,3 +5126,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/epubcheck version 1.0.3 [wiz 2009-10-11]
 	Added devel/p5-IMDB-Film version 0.41 [wiz 2009-10-11]
 	Added print/podofo version 0.7.0 [wiz 2009-10-11]
+	Updated devel/p5-MooseX-Getopt to 0.23 [sno 2009-10-11]
