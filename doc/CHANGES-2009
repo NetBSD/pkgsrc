@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3883 2009/10/11 08:22:34 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3884 2009/10/11 08:24:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5071,3 +5071,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-C3-XS to 0.13 [sno 2009-10-11]
 	Updated devel/p5-Params-Validate to 0.92 [sno 2009-10-11]
 	Updated devel/p5-Moose to 0.92 [sno 2009-10-11]
+	Updated devel/p5-MooseX-MethodAttributes to 0.18 [sno 2009-10-11]
