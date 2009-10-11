@@ -1,0 +1,16 @@
+$NetBSD: patch-at,v 1.1 2009/10/11 07:51:49 sno Exp $
+
+Fix missing *.so.1 links on FreeBSD
+
+--- mozilla/security/coreconf/rules.mk.orig	2007-01-06 06:48:54.000000000 +0100
++++ mozilla/security/coreconf/rules.mk	2009-09-27 14:12:54.000000000 +0200
+@@ -114,6 +114,9 @@
+ endif
+ ifdef SHARED_LIBRARY
+ 	$(INSTALL) -m 775 $(SHARED_LIBRARY) $(SOURCE_LIB_DIR)
++ifeq ($(OS_TARGET),FreeBSD)
++	ln -sf $(notdir $(SHARED_LIBRARY)) $(SOURCE_LIB_DIR)/$(notdir $(SHARED_LIBRARY:.so.1=.so))
++endif
+ ifdef MOZ_DEBUG_SYMBOLS
+ ifeq (,$(filter-out _WIN%,$(NS_USE_GCC)_$(OS_TARGET)))
+ 	$(INSTALL) -m 644 $(SHARED_LIBRARY:$(DLL_SUFFIX)=pdb) $(SOURCE_LIB_DIR)
