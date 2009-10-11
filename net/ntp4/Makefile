@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.64 2009/09/08 11:34:02 tnn Exp $
+# $NetBSD: Makefile,v 1.65 2009/10/11 16:35:27 zafer Exp $
 #
 
 DISTNAME=	ntp-4.2.4p7
 PKGREVISION=	2
 CATEGORIES=	net time
-MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/	\
-		ftp://ftp.udel.edu/pub/ntp/ntp4/
+MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ntp.org/
