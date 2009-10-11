@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:58:11 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/11 17:48:21 jmmv Exp $
 #
 
-DISTNAME=		twitux-0.62
-PKGREVISION=		1
+DISTNAME=		twitux-0.69
 CATEGORIES=		net gnome
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=twitux/}
 EXTRACT_SUFX=		.tar.bz2
@@ -34,6 +33,7 @@ CONFIGURE_ARGS+=	--enable-aspell=yes
 CONFIGURE_ARGS+=	--enable-aspell=no
 .endif
 
+.include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -42,6 +42,7 @@ CONFIGURE_ARGS+=	--enable-aspell=no
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

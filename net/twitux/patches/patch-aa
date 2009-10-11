@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2009/10/11 17:48:21 jmmv Exp $
+
+--- src/twitux-parser.c.orig	2009-01-25 02:25:56.000000000 +0000
++++ src/twitux-parser.c
+@@ -27,6 +27,7 @@
+  * Just make sure we include the prototype for strptime as well
+  */
+ #define _XOPEN_SOURCE
++#include <locale.h>
+ #include <time.h>
+ #include <string.h> /* for g_memmove - memmove */
+ 
