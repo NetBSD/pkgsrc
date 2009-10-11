@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.6 2009/06/14 15:17:10 joerg Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.7 2009/10/11 20:50:48 rillig Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -529,21 +529,21 @@ fi
       set properly in your <filename>mk/bulk/build.conf</filename>
       file, i.e. adjust it to something like one of the following:</para>
 
-      <screen>RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch/upload </screen>
+      <screen>RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload </screen>
 
-      <para>Please use appropriate values for "packages-200xQy",
+      <para>Please use appropriate values for "packages-20xxQy",
       "NetBSD-a.b.c" and "arch" here. If your login on ftp.NetBSD.org
       is different from your local login, write your login directly
       into the variable, e.g. my local account is "feyrer", but for my
       login "hubertf", I use:</para>
 
-      <screen>RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch/upload</screen>
+      <screen>RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload</screen>
 
       <para>A separate <filename>upload</filename> directory is used
       here to allow "closing" the directory during upload. To do
       so, run the following command on ftp.NetBSD.org next:</para>
 
-      <screen>nbftp% <userinput>mkdir -p -m 750 /pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch/upload</userinput></screen>
+      <screen>nbftp% <userinput>mkdir -p -m 750 /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload</userinput></screen>
 
       <para>Please note that <filename>/pub/NetBSD/packages</filename> is
       only appropriate for packages for the NetBSD operating
@@ -599,7 +599,7 @@ chroot-&rprompt; <userinput>exit</userinput>
       to everyone:</para>
 
       <screen>
-nbftp% <userinput>cd /pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch</userinput>
+nbftp% <userinput>cd /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch</userinput>
 nbftp% <userinput>mv upload/* .</userinput>
 nbftp% <userinput>rmdir upload</userinput>
 nbftp% <userinput>chmod 755 .</userinput>

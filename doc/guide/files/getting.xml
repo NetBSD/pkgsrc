@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.24 2009/05/13 10:49:00 wiz Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.25 2009/10/11 20:50:48 rillig Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -47,9 +47,9 @@ and dashes.</para>
 	<para>To download a pkgsrc stable tarball, run:</para>
 
 <screen>
-&uprompt; <userinput>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/<replaceable>pkgsrc-200xQy</replaceable>/<replaceable>pkgsrc-200xQy</replaceable>.tar.gz</userinput></screen>
+&uprompt; <userinput>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/<replaceable>pkgsrc-20xxQy</replaceable>/<replaceable>pkgsrc-20xxQy</replaceable>.tar.gz</userinput></screen>
 
-	<para>Where <replaceable>pkgsrc-200xQy</replaceable> is the
+	<para>Where <replaceable>pkgsrc-20xxQy</replaceable> is the
 	stable branch to be downloaded, for example, 
 	<quote>pkgsrc-2009Q1</quote>.</para>
 <!--
@@ -60,7 +60,7 @@ and dashes.</para>
 -->
 	<para>Then, extract it with:</para>
 
-<screen>&uprompt; <userinput>tar -xzf <replaceable>pkgsrc-200xQy</replaceable>.tar.gz -C /usr</userinput></screen>
+<screen>&uprompt; <userinput>tar -xzf <replaceable>pkgsrc-20xxQy</replaceable>.tar.gz -C /usr</userinput></screen>
 
 	<para>This will create the directory <filename>pkgsrc/</filename>
 	in <filename>/usr/</filename> and all the package source will be 
@@ -130,9 +130,9 @@ rdiff -u
 <para>To fetch a specific pkgsrc stable branch from scratch, run:</para>
 
 <screen>&uprompt; <userinput>cd /usr</userinput>
-&uprompt; <userinput>cvs checkout -r <replaceable>pkgsrc-200xQy</replaceable> -P pkgsrc</userinput></screen>
+&uprompt; <userinput>cvs checkout -r <replaceable>pkgsrc-20xxQy</replaceable> -P pkgsrc</userinput></screen>
 
-	<para>Where <replaceable>pkgsrc-200xQy</replaceable> is the stable 
+	<para>Where <replaceable>pkgsrc-20xxQy</replaceable> is the stable 
 	branch to be checked out, for example, <quote>pkgsrc-2009Q1</quote></para>
 
 	<para>This will create the directory <filename>pkgsrc/</filename> 
@@ -198,7 +198,7 @@ rdiff -u
 	by adding the option <quote>-A</quote> after the
 	<quote>update</quote> keyword. To switch from the current branch
 	back to the stable branch, add the
-	<quote>-rpkgsrc-2009Q1</quote> option.</para>
+	<quote>-rpkgsrc-2009Q3</quote> option.</para>
 
 </sect3>
 <sect3 id="uptodate-cvs-changes">
