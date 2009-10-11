@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/02 21:30:03 markd Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/11 08:13:39 markd Exp $
 
 DISTNAME=	kdeplasma-addons-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -7,8 +7,6 @@ COMMENT=	Plasmoids
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 

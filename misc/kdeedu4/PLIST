@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 20:51:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 08:13:38 markd Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
@@ -2627,8 +2627,9 @@ share/kde/apps/ktouch/german.number.ktouch.xml
 share/kde/apps/ktouch/german2.ktouch.xml
 share/kde/apps/ktouch/german3.ktouch.xml
 share/kde/apps/ktouch/he.keyboard.xml
+share/kde/apps/ktouch/hu.keyboard.xml
 share/kde/apps/ktouch/hungarian.ktouch.xml
-share/kde/apps/ktouch/hungarian_expert.ktouch.xml
+share/kde/apps/ktouch/hungarian.expert.ktouch.xml
 share/kde/apps/ktouch/it.keyboard.xml
 share/kde/apps/ktouch/italian.ktouch.xml
 share/kde/apps/ktouch/ktouchui.rc

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/02 21:33:16 markd Exp $
+$NetBSD: distinfo,v 1.2 2009/10/11 08:13:39 markd Exp $
 
-SHA1 (kdeutils-4.3.1.tar.bz2) = 9743636306cfb137241b6c87f5944e6bf91870fe
-RMD160 (kdeutils-4.3.1.tar.bz2) = 72dcc9d0a5592b371873398604e1bf59acb9eb4e
-Size (kdeutils-4.3.1.tar.bz2) = 2524224 bytes
-SHA1 (patch-aa) = 275e579aa5b99b7e2e4e0af719d6fd629f6bfd8b
+SHA1 (kdeutils-4.3.2.tar.bz2) = 16a4193d847e67abce215056c6eab2cbb348a1c8
+RMD160 (kdeutils-4.3.2.tar.bz2) = c0ae9f74cad3e9167dcf976c955e514ba6c3888e
+Size (kdeutils-4.3.2.tar.bz2) = 2524369 bytes

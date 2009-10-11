@@ -1,0 +1,16 @@
+$NetBSD: patch-ba,v 1.1 2009/10/11 08:13:40 markd Exp $
+
+KDE svn 1032787
+
+--- khtml/khtml_part.cpp.orig	2009-10-02 21:18:12.000000000 +1300
++++ khtml/khtml_part.cpp
+@@ -609,8 +609,7 @@ KHTMLPart::~KHTMLPart()
+ 
+   if ( d->m_view )
+   {
+-    d->m_view->hide();
+-    d->m_view->viewport()->hide();
++    widget()->hide();
+     d->m_view->m_part = 0;
+   }
+ 
