@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.31 2006/12/15 13:22:14 martti Exp $
+# $NetBSD: HACKS,v 1.32 2009/10/11 16:14:39 asau Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -116,36 +116,6 @@ descr
 kcah
 
 hack	cc -O* bug
-mdate	29 Dec 2001
-who	abs
-port	arm32
-file	audio/libvorbis/Makefile : 1.12 : 20 : 28
-descr
-	floor1.c causes Internal compiler error with egcs-2.91.66 19990314
-	(shipped with 1.5.2)
-kcah
-
-hack	cc -O* bug
-mdate	10 Oct 2001
-who	abs
-port	arm32
-file	net/djbdns/Makefile : 1.14 :
-descr
-	various files go into infinite loop if optimisation enabled in
-	egcs-2.91.66 19990314 (shipped with 1.5.2)
-kcah
-
-hack	cc -O* bug
-mdate	03 Oct 2001
-who	abs
-port	arm32
-file	net/ucspi-tcp/Makefile	: 1.7 :
-descr
-	various files go into infinite loop if optimisation enabled in
-	egcs-2.91.66 19990314 (shipped with 1.5.2)
-kcah
-
-hack	cc -O* bug
 mdate	23 Aug 2001
 who	abs
 port	sparc64
@@ -174,33 +144,6 @@ file	x11/xscreensaver/distinfo		: 1.2 :
 file	x11/xscreensaver/patches/patch-ab	: 1.7 :
 descr
 	on distort.c -O[12] causes the compiler to abort
-kcah
-
-hack	c++ -O* bug
-mdate	02 Jun 2000
-who	dmcmahill
-file	audio/festival/patches/patch-ai		: 1.2 :
-file	audio/festival/patches/patch-aj		: 1.1 :
-file	audio/festival/patches/patch-ak		: 1.1 :
-file	audio/festival/patches/patch-al		: 1.1 :
-file	cad/verilog/patches/patch-ad		: 1.3 :
-file	cad/verilog-current/patches/patch-ad	: 1.3 :
-file	cad/vipec/patches/patch-ac		: 1.4 :
-file	emulators/stella/patches/patch-ac	: 1.3 : 36 : 43
-file	graphics/kdegraphics/patches/patch-af	: 1.5
-file	graphics/xpdf/Makefile			: 1.18: 27
-file	graphics/xpdf/patches/patch-aa		: 1.3
-file	math/yacas/patches/patch-ac		: 1.1.1.1 :
-file	x11/glclock/Makefile			: 1.3 : 18 : 20
-file	x11/windowmaker/Makefile			: 1.51 : 39 : 42
-pr	9453
-descr
-	on certain c++ files, using -O[1-3] will cause cc1plus to run
-	forever.  On other files, c++ -O[1-3] will cause the assembler to run
-	forever.  This problem is noted on pmax and sparc (NetBSD-1.4.*) with
-	gcc version egcs-2.91.60 19981201 (egcs-1.1.1 release)
-
-	evidently this problem also exists on arm32.
 kcah
 
 hack	mac68k-jade
