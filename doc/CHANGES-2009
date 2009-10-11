@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3897 2009/10/11 09:38:36 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3898 2009/10/11 09:38:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5123,3 +5123,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/fossil version 20090921191920 [wiz 2009-10-11]
 	Updated textproc/p5-Text-CSV to 1.14 [sno 2009-10-11]
 	Updated devel/p5-MooseX-Method-Signatures to 0.28 [sno 2009-10-11]
+	Added textproc/epubcheck version 1.0.3 [wiz 2009-10-11]
