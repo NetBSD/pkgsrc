@@ -1,0 +1,138 @@
+$NetBSD: patch-bb,v 1.1 2009/10/11 08:13:40 markd Exp $
+
+KDE svn 1032185
+
+--- kdecore/localization/klocale.cpp.orig	2009-10-02 21:18:08.000000000 +1300
++++ kdecore/localization/klocale.cpp
+@@ -22,6 +22,7 @@
+ */
+ 
+ #include "klocale.h"
++#include "klocale_p.h"
+ 
+ #include <config.h>
+ 
+@@ -242,7 +243,6 @@ public:
+   // Handling of translation catalogs
+   QStringList languageList;
+ 
+-  QMutex* mutex;
+   QList<KCatalogName> catalogNames; // list of all catalogs (regardless of language)
+   QList<KCatalog> catalogs; // list of all found catalogs, one instance per catalog name and language
+   int numberOfSysCatalogs; // number of catalogs that each app draws from
+@@ -276,7 +276,6 @@ public:
+ KLocalePrivate::KLocalePrivate(const QString& catalog, KConfig *config, const QString &language_, const QString &country_)
+     : language(language_),
+       country(country_),
+-      mutex(new QMutex(QMutex::Recursive)),
+       useTranscript(false),
+       codecForEncoding(0),
+       languages(0), calendar(0),
+@@ -311,7 +310,7 @@ KLocale::KLocale(const QString& catalog,
+ void KLocalePrivate::initMainCatalogs()
+ {
+   KLocaleStaticData *s = staticData;
+-  QMutexLocker lock(mutex);
++  QMutexLocker lock(kLocaleMutex());
+ 
+   if (!s->maincatalog.isEmpty()) {
+       // If setMainCatalog was called, then we use that (e.g. korgac calls setMainCatalog("korganizer") to use korganizer.po)
+@@ -541,7 +540,7 @@ bool KLocale::setLanguage(const QString 
+ 
+ bool KLocalePrivate::setLanguage(const QString & _language, KConfig *config)
+ {
+-  QMutexLocker lock(mutex);
++  QMutexLocker lock(kLocaleMutex());
+   languageList.removeAll( _language );
+   languageList.prepend( _language ); // let us consider this language to be the most important one
+ 
+@@ -563,7 +562,7 @@ bool KLocale::setLanguage(const QStringL
+ 
+ bool KLocalePrivate::setLanguage(const QStringList & languages)
+ {
+-  QMutexLocker lock(mutex);
++  QMutexLocker lock(kLocaleMutex());
+   // This list might contain
+   // 1) some empty strings that we have to eliminate
+   // 2) duplicate entries like in de:fr:de, where we have to keep the first occurrence of a language in order
+@@ -685,7 +684,7 @@ QString KLocale::country() const
+ 
+ void KLocale::insertCatalog( const QString & catalog )
+ {
+-  QMutexLocker lock(d->mutex);
++  QMutexLocker lock(kLocaleMutex());
+     int pos = d->catalogNames.indexOf(KCatalogName(catalog));
+     if (pos != -1) {
+         ++d->catalogNames[pos].loadCount;
+@@ -736,7 +735,7 @@ void KLocalePrivate::updateCatalogs( )
+ 
+ void KLocale::removeCatalog(const QString &catalog)
+ {
+-    QMutexLocker lock(d->mutex);
++    QMutexLocker lock(kLocaleMutex());
+     int pos = d->catalogNames.indexOf(KCatalogName(catalog));
+     if (pos == -1)
+         return;
+@@ -749,7 +748,7 @@ void KLocale::removeCatalog(const QStrin
+ 
+ void KLocale::setActiveCatalog(const QString &catalog)
+ {
+-    QMutexLocker lock(d->mutex);
++    QMutexLocker lock(kLocaleMutex());
+     int pos = d->catalogNames.indexOf(KCatalogName(catalog));
+     if (pos == -1)
+         return;
+@@ -759,7 +758,6 @@ void KLocale::setActiveCatalog(const QSt
+ 
+ KLocale::~KLocale()
+ {
+-    delete d->mutex;
+     delete d->calendar;
+     delete d->languages;
+     delete d;
+@@ -788,7 +786,7 @@ void KLocalePrivate::translate_priv(cons
+                 << "Fix the program" << endl;
+   }
+ 
+-  QMutexLocker locker(mutex);
++  QMutexLocker locker(kLocaleMutex());
+   // determine the fallback string
+   QString fallback;
+   if ( msgid_plural == NULL )
+@@ -1370,7 +1368,7 @@ QString KLocale::formatByteSize( double 
+     //Kibi-byte             KiB             2^10    1,024 bytes
+ 
+     if (d->byteSizeFmt.size() == 0) {
+-        QMutexLocker lock(d->mutex);
++        QMutexLocker lock(kLocaleMutex());
+         // Pretranslated format strings for byte sizes.
+         #define CACHEBYTEFMT(x) { \
+             QString s; \
+@@ -2568,7 +2566,6 @@ KLocale::KLocale(const KLocale & rhs) : 
+ {
+   d->languages = 0; // Don't copy languages
+   d->calendar = 0; // Don't copy the calendar
+-  d->mutex = 0; // Don't copy the mutex
+ }
+ 
+ KLocale & KLocale::operator=(const KLocale & rhs)
+@@ -2583,8 +2580,7 @@ KLocale & KLocale::operator=(const KLoca
+ 
+ void KLocale::copyCatalogsTo(KLocale *locale)
+ {
+-    QMutexLocker lock(d->mutex);
+-    QMutexLocker lockOther(locale->d->mutex);
++    QMutexLocker lock(kLocaleMutex());
+     locale->d->catalogNames = d->catalogNames;
+     locale->d->updateCatalogs();
+ }
+@@ -2656,3 +2652,9 @@ KLocale::DigitSet KLocale::dateTimeDigit
+ {
+     return d->dateTimeDigitSet;
+ }
++
++Q_GLOBAL_STATIC_WITH_ARGS(QMutex, s_kLocaleMutex, (QMutex::Recursive))
++QMutex* kLocaleMutex()
++{
++    return s_kLocaleMutex();
++}
