@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/10/11 08:33:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/11 08:51:39 wiz Exp $
 #
 
-DISTNAME=	Sigil_code_0.1.3
+DISTNAME=	Sigil_code_0.1.4
 PKGNAME=	${DISTNAME:S/_code_/-/}
 CATEGORIES=	editors
 MASTER_SITES=	http://sigil.googlecode.com/files/
@@ -13,7 +13,6 @@ COMMENT=	Multi-platform WYSIWYG ebook editor (for the ePub format)
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-INSTALLATION_DIRS=	bin libexec/Sigil/data
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
