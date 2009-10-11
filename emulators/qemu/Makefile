@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2009/09/22 12:18:33 tnn Exp $
+# $NetBSD: Makefile,v 1.60 2009/10/11 16:04:13 asau Exp $
 #
 
-DISTNAME=		qemu-0.10.6
-PKGREVISION=		1
+DISTNAME=		qemu-0.11.0
 CATEGORIES=		emulators
 MASTER_SITES=		http://download.savannah.gnu.org/releases/qemu/
 
@@ -50,12 +49,13 @@ SUBST_FILES.smbd=	vl.c
 SUBST_SED.smbd=		-e s,/usr/sbin/smbd,${PREFIX:Q}/sbin/smbd,g
 SUBST_MESSAGE.smbd=	Fixing hardcoded paths.
 
+# Avoid clash with system include file:
 pre-patch:
 	mv ${WRKSRC}/audio/audio.h ${WRKSRC}/audio/qaudio.h
 
 SUBST_CLASSES+=		qaudio
 SUBST_STAGE.qaudio=	pre-configure
-SUBST_FILES.qaudio=	*.c audio/*.c hw/*.c
+SUBST_FILES.qaudio=	*.c *.h audio/*.c hw/*.c
 SUBST_SED.qaudio=	-e s,audio.h\",qaudio.h\",g
 SUBST_MESSAGE.qaudio= 	Fixing audio.h confusion
 
