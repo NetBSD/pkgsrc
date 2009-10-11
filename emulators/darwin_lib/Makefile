@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2007/08/01 16:28:08 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2009/10/11 09:21:23 wiz Exp $
 
 DISTNAME=	darwin_lib-6.6.2
 PKGREVISION=	2
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.opendarwin.org/downloads/6.6.2/RPMS/ \
-		http://www.opendarwin.org/downloads/6.6.2/RPMS/${DARWIN_ARCH}/
+MASTER_SITES=	# http://www.opendarwin.org/downloads/6.6.2/RPMS/ \
+#		http://www.opendarwin.org/downloads/6.6.2/RPMS/${DARWIN_ARCH}/
 DISTFILES=	org.opendarwin.Libsystem-6.6.2-4.fat.rpm \
 		org.opendarwin.Libm-6.6.2-4.fat.rpm \
 		org.opendarwin.cctools-6.6.2-4.fat.rpm \
@@ -26,7 +26,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.6Z*-powerpc NetBSD-1.6Z*-i386		\
 			NetBSD-[2-9]*-powerpc NetBSD-[2-9]*-i386
 
 DARWIN_PKG=		yes
-DARWIN_ARCH=		${MACHINE_ARCH:C/powerpc/ppc/}
+DARWIN_ARCH=		${MACHINE_ARCH:C/powerpc/ppc/:C/x86_64/i386/}
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 
