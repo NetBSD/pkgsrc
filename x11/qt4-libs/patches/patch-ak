@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.4 2008/10/26 14:02:33 adam Exp $
+$NetBSD: patch-ak,v 1.5 2009/10/11 09:14:52 adam Exp $
 
---- src/gui/kernel/qcursor_x11.cpp.orig	2008-09-27 10:58:47.000000000 +0200
+--- src/gui/kernel/qcursor_x11.cpp.orig	2009-09-29 13:01:37.000000000 +0200
 +++ src/gui/kernel/qcursor_x11.cpp
-@@ -229,7 +229,7 @@ void QCursorData::update()
+@@ -244,7 +244,7 @@ void QCursorData::update()
          return;
      }
  

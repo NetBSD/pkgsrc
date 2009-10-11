@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.3 2008/10/26 14:02:33 adam Exp $
+$NetBSD: patch-ar,v 1.4 2009/10/11 09:14:52 adam Exp $
 
---- src/corelib/global/qglobal.h.orig	2008-10-26 08:15:12.000000000 +0100
+--- src/corelib/global/qglobal.h.orig	2009-10-05 09:36:44.000000000 +0200
 +++ src/corelib/global/qglobal.h
-@@ -167,7 +167,7 @@ namespace QT_NAMESPACE {}
+@@ -176,7 +176,7 @@ namespace QT_NAMESPACE {}
  */
  
  #if defined(__APPLE__) && (defined(__GNUC__) || defined(__xlC__) || defined(__xlc__))
