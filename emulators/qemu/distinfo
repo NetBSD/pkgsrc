@@ -1,22 +1,14 @@
-$NetBSD: distinfo,v 1.49 2009/09/22 12:18:33 tnn Exp $
+$NetBSD: distinfo,v 1.50 2009/10/11 16:04:13 asau Exp $
 
-SHA1 (qemu-0.10.6.tar.gz) = 9432738ba513e07c981097468945b2e3ad9cb81e
-RMD160 (qemu-0.10.6.tar.gz) = 1321a10777d2e0c6b53887d0525a28cc1b36ec9b
-Size (qemu-0.10.6.tar.gz) = 3664559 bytes
+SHA1 (qemu-0.11.0.tar.gz) = 95f59ce1293743d9f213d6908029aa2cadfc0d34
+RMD160 (qemu-0.11.0.tar.gz) = a9fc4c3fc814067bf042669b51d46c49e7879630
+Size (qemu-0.11.0.tar.gz) = 3925830 bytes
 SHA1 (patch-ao) = e515093b6ea99f9cba665de022fd62f3be911569
 SHA1 (patch-au) = 2892cae63796c76014288f4a700acbee5aadc529
-SHA1 (patch-av) = 715e9680d70c1aa1c83bda0270125144a26d6140
 SHA1 (patch-ba) = 7c5043a39405f52b512e479a46fc76108580b7bc
-SHA1 (patch-da) = 994eb51de1e7398acf95189da182f755f2ca65e1
-SHA1 (patch-db) = 7e729851615598646aa3f2d7278147198d0a7a45
-SHA1 (patch-dc) = 508d40a99242ba025ade0d067e6d44d3a8a4f0cc
-SHA1 (patch-dd) = b0646af492c3081fc5cf752fb73df0013eadad94
-SHA1 (patch-de) = 14f6598f5467c4dfbea729ca2f4adcf6fe1144be
-SHA1 (patch-df) = f21a7832e2cc94dbe76626b74455d33f5ca50ee5
-SHA1 (patch-dg) = 784fc32c7a93ec154b99f312db16aba9e950122a
-SHA1 (patch-dh) = c4c1882c81cdbe9d98fc50e8f60f8d233a7882c5
-SHA1 (patch-di) = 96552e11794deb726cc027c41e06a378510ef534
-SHA1 (patch-dj) = 78b2cc5ba2360a7237de2207365547b84867d070
-SHA1 (patch-dk) = 14ef343eae60263416e11422fbed3fec7750d224
-SHA1 (patch-dl) = 2ba65792e342876ea5b05a70dba8d1b349661cda
+SHA1 (patch-dd) = 32661203ba023bea67cd7cde1f4088f4d0e5c582
+SHA1 (patch-de) = ad6e0fd59f7edc4a2feecac53164ea8b00e309a1
+SHA1 (patch-dg) = caf1a9ff3e12af362245084f62f495290e498d5c
+SHA1 (patch-dk) = 089f83d1c870c639f7fd32f1288f970236386949
+SHA1 (patch-dl) = dc19993ead06f6de27d6ea0e1268661d007d4b13
 SHA1 (patch-dm) = 3786ee9dfa46648f773f06c683bccd574c5ee2cb
