@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8514 2009/10/11 08:20:05 sno Exp $
+$NetBSD: TODO,v 1.8515 2009/10/11 08:28:10 markd Exp $
 
 Suggested new packages
 ======================
@@ -819,7 +819,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kapooka-0.3
 	o kbibtex-0.2.2
 	o kdbg-2.2.0
-	o kde4-4.3.2
 	o kdrill-6.5
 	o kid3-1.2
 	o kinput2-3.1
