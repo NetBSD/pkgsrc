@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2009/10/11 09:14:14 adam Exp $
+# $NetBSD: Makefile.common,v 1.44 2009/10/11 16:06:21 tnn Exp $
 
 # used by databases/sqlite3-tcl/Makefile
 
@@ -21,10 +21,3 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
-
-# XXX remove in future releases, if fixed
-SUBST_CLASSES+=		fixver
-SUBST_STAGE.fixver=	post-patch
-SUBST_MESSAGE.fixver=	Fixing version in configure script.
-SUBST_FILES.fixver=	configure
-SUBST_SED.fixver=	-e 's,3.6.13,${PKGVERSION_NOREV},g'
