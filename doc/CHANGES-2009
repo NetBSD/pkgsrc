@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3903 2009/10/11 09:57:11 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3904 2009/10/11 10:04:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5129,3 +5129,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Getopt to 0.23 [sno 2009-10-11]
 	Updated devel/p5-Bit-Vector to 7.1 [sno 2009-10-11]
 	Updated devel/p5-Date-Calc to 6.0 [sno 2009-10-11]
+	Updated devel/p5-ExtUtils-ParseXS to 2.21 [sno 2009-10-11]
