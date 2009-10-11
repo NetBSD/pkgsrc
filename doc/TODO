@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8523 2009/10/11 13:29:06 wiz Exp $
+$NetBSD: TODO,v 1.8524 2009/10/11 18:42:54 epg Exp $
 
 Suggested new packages
 ======================
@@ -459,7 +459,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o brasero-2.28.1 [GNOME 2.28]
 	o bugzilla-3.4.2
 	o byacc-20080824
-	o bzr-2.0.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o caff-1.1.2
