@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3562 2009/01/02 00:44:03 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3563 2009/10/11 13:27:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3574,6 +3574,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/monotone-server to 0.41 [bjs 2008-09-05]
 	Added devel/p5-Test-Mock-LWP version 0.05 [seb 2008-09-05]
 	Updated x11/gnome-terminal to 2.22.3 [bjs 2008-09-05]
+	Added www/py-beautifulsoup version 3.0.7a [darcy 2008-09-05]
 	Updated devel/subversion to 1.5.2 [epg 2008-09-06]
 	Updated devel/bzr to 1.6.1 [epg 2008-09-06]
 	Updated x11/xterm to 236nb1 [wiz 2008-09-06]
