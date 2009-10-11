@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2009/10/08 01:24:03 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.79 2009/10/11 23:17:03 tnn Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -53,7 +53,7 @@ CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE:Q}
 #   scilab-4.1/routines/os_specific/getarg.c
 #
 .include "../../mk/compiler.mk"
-.  if !empty(FC:Mgfortran) || !empty(PKGSRC_FORTRAN:Mg95)
+.  if !empty(FC:Mgfortran) || (defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mg95))
 CFLAGS+=		-DG95_FORTRAN=1
 .endif
 
