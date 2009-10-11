@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3910 2009/10/11 11:25:31 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3911 2009/10/11 11:30:12 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5136,3 +5136,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/Transmission to 1.75 [tnn 2009-10-11]
 	Updated textproc/p5-XML-LibXML to 1.70 [sno 2009-10-11]
 	Removed textproc/p5-XML-LibXML-Common [sno 2009-10-11]
+	Updated textproc/p5-XML-LibXSLT to 1.70 [sno 2009-10-11]
