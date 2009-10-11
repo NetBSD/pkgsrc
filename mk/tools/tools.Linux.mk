@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.44 2008/05/17 18:34:50 tnn Exp $
+# $NetBSD: tools.Linux.mk,v 1.45 2009/10/11 07:36:11 tnn Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -105,7 +105,9 @@ TOOLS_PLATFORM.gunzip?=		/bin/gunzip -f
 .elif exists(/usr/bin/gunzip)
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 .endif
+.if exists(/bin/zcat)
 TOOLS_PLATFORM.gzcat?=		/bin/zcat
+.endif
 .if exists(/bin/gzip)
 TOOLS_PLATFORM.gzip?=		/bin/gzip -nf ${GZIP}
 .elif exists(/usr/bin/gzip)
