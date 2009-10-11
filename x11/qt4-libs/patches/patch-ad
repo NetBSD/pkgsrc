@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2008/10/26 14:02:33 adam Exp $
+$NetBSD: patch-ad,v 1.9 2009/10/11 09:14:52 adam Exp $
 
---- src/corelib/global/qglobal.h.orig	2008-09-27 10:58:46.000000000 +0200
+--- src/corelib/global/qglobal.h.orig	2009-09-29 13:01:37.000000000 +0200
 +++ src/corelib/global/qglobal.h
-@@ -149,6 +149,7 @@ namespace QT_NAMESPACE {}
+@@ -158,6 +158,7 @@ namespace QT_NAMESPACE {}
       NETBSD   - NetBSD
       OPENBSD  - OpenBSD
       BSDI     - BSD/OS
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.8 2008/10/26 14:02:33 adam Exp $
       IRIX     - SGI Irix
       OSF      - HP Tru64 UNIX
       SCO      - SCO OpenServer 5
-@@ -210,6 +211,9 @@ namespace QT_NAMESPACE {}
+@@ -219,6 +220,9 @@ namespace QT_NAMESPACE {}
  #elif defined(__NetBSD__)
  #  define Q_OS_NETBSD
  #  define Q_OS_BSD4
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.8 2008/10/26 14:02:33 adam Exp $
  #elif defined(__OpenBSD__)
  #  define Q_OS_OPENBSD
  #  define Q_OS_BSD4
-@@ -252,8 +256,6 @@ namespace QT_NAMESPACE {}
+@@ -261,8 +265,6 @@ namespace QT_NAMESPACE {}
  #endif
  
  #if defined(Q_OS_DARWIN)
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.8 2008/10/26 14:02:33 adam Exp $
  #  if defined(Q_OS_DARWIN64)
  #     define Q_OS_MAC64
  #  elif defined(Q_OS_DARWIN32)
-@@ -699,8 +701,6 @@ namespace QT_NAMESPACE {}
+@@ -756,8 +758,6 @@ namespace QT_NAMESPACE {}
  #  error "Qt does not work with OS/2 Presentation Manager or Workplace Shell"
  #elif defined(Q_OS_UNIX)
  #  if defined(Q_OS_MAC) && !defined(__USE_WS_X11__) && !defined(Q_WS_QWS)

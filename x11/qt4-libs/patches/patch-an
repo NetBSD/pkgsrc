@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.5 2009/02/28 11:38:02 schwarz Exp $
+$NetBSD: patch-an,v 1.6 2009/10/11 09:14:52 adam Exp $
 
---- src/corelib/concurrent/qtconcurrentiteratekernel.cpp.orig	2009-02-15 16:19:07.000000000 +0100
-+++ src/corelib/concurrent/qtconcurrentiteratekernel.cpp	2009-02-15 16:21:41.000000000 +0100
-@@ -37,7 +37,7 @@
+--- src/corelib/concurrent/qtconcurrentiteratekernel.cpp.orig	2009-09-29 13:01:37.000000000 +0200
++++ src/corelib/concurrent/qtconcurrentiteratekernel.cpp
+@@ -41,7 +41,7 @@
  
  #include "qtconcurrentiteratekernel.h"
  
@@ -11,7 +11,7 @@ $NetBSD: patch-an,v 1.5 2009/02/28 11:38:02 schwarz Exp $
  
  #include <mach/mach.h>
  #include <mach/mach_time.h>
-@@ -64,7 +64,7 @@
+@@ -68,7 +68,7 @@ enum {
      MedianSize = 7
  };
  
