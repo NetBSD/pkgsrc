@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2009/09/24 06:50:13 sno Exp $
+# $NetBSD: Makefile,v 1.33 2009/10/11 08:22:23 sno Exp $
 #
 
-DISTNAME=	Moose-0.91
+DISTNAME=	Moose-0.92
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -12,7 +11,7 @@ HOMEPAGE=	http://moose.perl.org/
 COMMENT=	Postmodern object system for Perl 5
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Class-MOP>=0.93:../../devel/p5-Class-MOP
+DEPENDS+=	p5-Class-MOP>=0.94:../../devel/p5-Class-MOP
 DEPENDS+=	p5-Data-OptList-[0-9]*:../../devel/p5-Data-OptList
 DEPENDS+=	p5-List-MoreUtils>=0.12:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Sub-Exporter>=0.980:../../devel/p5-Sub-Exporter
