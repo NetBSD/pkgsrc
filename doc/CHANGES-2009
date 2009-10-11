@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3885 2009/10/11 08:28:10 markd Exp $
+$NetBSD: CHANGES-2009,v 1.3886 2009/10/11 08:31:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5099,3 +5099,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/kdebindings4-python to 4.3.2 [markd 2009-10-11]
 	Updated x11/kdelibs-experimental4 to 4.3.2 [markd 2009-10-11]
 	Updated x11/kdelibs4 to 4.3.2 [markd 2009-10-11]
+	Updated games/rftg to 0.5.4 [wiz 2009-10-11]
