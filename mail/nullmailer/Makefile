@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2007/11/26 08:27:24 plunky Exp $
+# $NetBSD: Makefile,v 1.30 2009/10/11 10:25:24 plunky Exp $
 
-DISTNAME=		nullmailer-1.03
+DISTNAME=		nullmailer-1.04
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE:Q}
 
@@ -8,9 +8,13 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/nullmailer/
 COMMENT=		Simple relay-only mail transport agent
 
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/spool
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/libexec/nullmailer
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/nullmailer
@@ -23,15 +27,15 @@ NULLMAILER_GROUP?=	nullmail
 NULLMAILER_USER?=	nullmail
 PKG_GROUPS=		${NULLMAILER_GROUP}
 PKG_USERS=		${NULLMAILER_USER}:${NULLMAILER_GROUP}
-PKG_GROUPS_VARS+=	NULLMAILER_GROUP
-PKG_USERS_VARS+=	NULLMAILER_USER
+PKG_GROUPS_VARS=	NULLMAILER_GROUP
+PKG_USERS_VARS=		NULLMAILER_USER
 
-MAKE_ENV+=		NULLMAILER_GROUP=${NULLMAILER_GROUP:Q}
-MAKE_ENV+=		NULLMAILER_USER=${NULLMAILER_USER:Q}
+MAKE_ENV+=		NULLMAILER_GROUP=${NULLMAILER_GROUP}
+MAKE_ENV+=		NULLMAILER_USER=${NULLMAILER_USER}
 
-FILES_SUBST+=		VARBASE=${VARBASE:Q}				\
-			NULLMAILER_GROUP=${NULLMAILER_GROUP:Q}		\
-			NULLMAILER_USER=${NULLMAILER_USER:Q}
+FILES_SUBST+=		VARBASE=${VARBASE}				\
+			NULLMAILER_GROUP=${NULLMAILER_GROUP}		\
+			NULLMAILER_USER=${NULLMAILER_USER}
 
 RCD_SCRIPTS=		nullmailer
 
@@ -61,8 +65,8 @@ post-extract:
 
 post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS COPYING ChangeLog	\
-		HOWTO NEWS README TODO ${PREFIX}/share/doc/nullmailer
+		HOWTO NEWS README TODO ${DESTDIR}${PREFIX}/share/doc/nullmailer
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf				\
-		${PREFIX}/share/examples/nullmailer/
+		${DESTDIR}${PREFIX}/share/examples/nullmailer/
 
 .include "../../mk/bsd.pkg.mk"
