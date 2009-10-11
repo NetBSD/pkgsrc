@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.3 2009/06/13 11:55:51 hasso Exp $
+$NetBSD: patch-as,v 1.4 2009/10/11 09:14:52 adam Exp $
 
---- tools/assistant/lib/fulltextsearch/qclucene-config_p.h.orig	2009-02-25 22:09:25.000000000 +0100
+--- tools/assistant/lib/fulltextsearch/qclucene-config_p.h.orig	2009-09-29 13:01:39.000000000 +0200
 +++ tools/assistant/lib/fulltextsearch/qclucene-config_p.h
-@@ -87,7 +87,7 @@ configure.
+@@ -94,7 +94,7 @@ configure.
  #define _CL_HAVE_FCNTL_H  1
  #endif
  
@@ -11,7 +11,7 @@ $NetBSD: patch-as,v 1.3 2009/06/13 11:55:51 hasso Exp $
      !defined(__HP_aCC) && !defined(__SUNPRO_C) && !defined(__SUNPRO_CC) || \
      defined(__SUNPRO_CC) && (__SUNPRO_CC > 0x550) || (defined(__HP_aCC) && defined(__ia64))
      /* Define to 1 if the system has the type `float_t'. */
-@@ -425,7 +425,7 @@ configure.
+@@ -432,7 +432,7 @@ configure.
  #   endif
  #endif
  
