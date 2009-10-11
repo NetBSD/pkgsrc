@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3892 2009/10/11 09:22:00 adam Exp $
+$NetBSD: CHANGES-2009,v 1.3893 2009/10/11 09:23:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5118,3 +5118,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/qt4-tiff to 4.5.3 [adam 2009-10-11]
 	Updated x11/qt4-sqlite3 to 4.5.3 [adam 2009-10-11]
 	Updated x11/qt4-qdbus to 4.5.3 [adam 2009-10-11]
+	Updated devel/p5-Mouse to 0.37 [sno 2009-10-11]
