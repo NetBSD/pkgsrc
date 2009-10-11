@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8521 2009/10/11 09:22:00 adam Exp $
+$NetBSD: TODO,v 1.8522 2009/10/11 10:27:32 plunky Exp $
 
 Suggested new packages
 ======================
@@ -1068,7 +1068,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nspr-4.8
 	o nss-3.11.7
 	o nulib2-220
-	o nullmailer-1.04
 	o nut-15.0
 	o nxtvepg-2.8.1
 	o objc-3.2.8
