@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.19 2009/06/21 21:37:48 ahoka Exp $
+$NetBSD: patch-ab,v 1.20 2009/10/11 07:49:49 kefren Exp $
 
 --- configure.orig	2009-03-13 15:51:11.000000000 +0100
 +++ configure
@@ -69,12 +69,3 @@ $NetBSD: patch-ab,v 1.19 2009/06/21 21:37:48 ahoka Exp $
      	LIBC="libc.so"
  	INTL="libintl.so"
  	;;
-@@ -41778,6 +41785,8 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     echo "$ac_cs_version"; exit ;;
