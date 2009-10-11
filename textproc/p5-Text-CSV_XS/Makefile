@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2009/08/10 06:49:32 sno Exp $
+# $NetBSD: Makefile,v 1.27 2009/10/11 09:30:14 sno Exp $
 #
 
-DISTNAME=	Text-CSV_XS-0.67
+DISTNAME=	Text-CSV_XS-0.68
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5tcx
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-CSV_XS/
