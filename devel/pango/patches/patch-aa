@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.16 2009/10/11 07:39:26 tnn Exp $
+
+--- pango-view/Makefile.in.orig	2009-07-20 22:59:49.000000000 +0200
++++ pango-view/Makefile.in
+@@ -794,10 +794,8 @@ $(srcdir)/pango-view.1: ../configure.in 
+ 	      (test -f "$@" || echo help2man is required to generate this file. >> "$@"));
+ 
+ install-data-hook:
+-	@cd "$(DESTDIR)$(man1dir)" && gzip -c pango-view.1 > pango-view.1.gz && $(RM) pango-view.1
+ 
+ uninstall-hook:
+-	$(RM) "$(DESTDIR)$(man1dir)/pango-view.1.gz"
+ 
+ pangorc: $(srcdir)/../modules/pangorc
+ 	cp $(srcdir)/../modules/pangorc $@
