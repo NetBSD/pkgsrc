@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/02 21:33:16 markd Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/11 08:13:39 markd Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -11,8 +11,6 @@ PYTHON_VERSIONS_ACCEPTED= 26 25
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../meta-pkgs/kde4/kde4.mk"

@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 22:14:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 08:13:40 markd Exp $
 share/doc/kde/HTML/en_GB/cervisia/common
 share/doc/kde/HTML/en_GB/cervisia/index.cache.bz2
 share/doc/kde/HTML/en_GB/cervisia/index.docbook
+share/doc/kde/HTML/en_GB/common/fdl-translated.html
+share/doc/kde/HTML/en_GB/common/gpl-translated.html
+share/doc/kde/HTML/en_GB/common/kde-localised.css
+share/doc/kde/HTML/en_GB/common/lgpl-translated.html
 share/doc/kde/HTML/en_GB/kaddressbook/common
 share/doc/kde/HTML/en_GB/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/en_GB/kaddressbook/index.docbook
@@ -700,7 +704,6 @@ share/locale/en_GB/LC_MESSAGES/kdat.mo
 share/locale/en_GB/LC_MESSAGES/kde-menu.mo
 share/locale/en_GB/LC_MESSAGES/kdeasciiquarium.mo
 share/locale/en_GB/LC_MESSAGES/kdebugdialog.mo
-share/locale/en_GB/LC_MESSAGES/kded_phononserver.mo
 share/locale/en_GB/LC_MESSAGES/kdelibs4.mo
 share/locale/en_GB/LC_MESSAGES/kdelibs_colors4.mo
 share/locale/en_GB/LC_MESSAGES/kdelirc.mo
@@ -1000,6 +1003,7 @@ share/locale/en_GB/LC_MESSAGES/parley.mo
 share/locale/en_GB/LC_MESSAGES/phonon-xine.mo
 share/locale/en_GB/LC_MESSAGES/phonon_gstreamer.mo
 share/locale/en_GB/LC_MESSAGES/phonon_kde.mo
+share/locale/en_GB/LC_MESSAGES/phononserver.mo
 share/locale/en_GB/LC_MESSAGES/plasma-desktop.mo
 share/locale/en_GB/LC_MESSAGES/plasma-overlay.mo
 share/locale/en_GB/LC_MESSAGES/plasma-shells-common.mo
@@ -1063,8 +1067,8 @@ share/locale/en_GB/LC_MESSAGES/plasma_applet_webbrowser.mo
 share/locale/en_GB/LC_MESSAGES/plasma_appletscriptengine_dashboard.mo
 share/locale/en_GB/LC_MESSAGES/plasma_appletscriptengine_googlegadget.mo
 share/locale/en_GB/LC_MESSAGES/plasma_appletscriptengine_qedjescripts.mo
-share/locale/en_GB/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/en_GB/LC_MESSAGES/plasma_engine_kalzium.mo
+share/locale/en_GB/LC_MESSAGES/plasma_engine_kuiserver.mo
 share/locale/en_GB/LC_MESSAGES/plasma_engine_metadata.mo
 share/locale/en_GB/LC_MESSAGES/plasma_engine_network.mo
 share/locale/en_GB/LC_MESSAGES/plasma_engine_notifications.mo

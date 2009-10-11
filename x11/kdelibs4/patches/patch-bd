@@ -1,0 +1,17 @@
+$NetBSD: patch-bd,v 1.1 2009/10/11 08:13:40 markd Exp $
+
+KDE svn 1032185
+
+--- /dev/null	2009-10-11 17:43:10.000000000 +1300
++++ kdecore/localization/klocale_p.h
+@@ -0,0 +1,10 @@
++#ifndef KLOCALE_P_H
++#define KLOCALE_P_H
++
++class QMutex;
++
++// Used by both KLocale and KLocalizedString, since they call each other.
++QMutex* kLocaleMutex();
++
++#endif /* KLOCALE_P_H */
++

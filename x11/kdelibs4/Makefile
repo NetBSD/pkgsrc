@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/02 19:18:59 markd Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/11 08:13:40 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -11,7 +11,6 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
 CONFLICTS=	kdelibs-[0-9]*
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
