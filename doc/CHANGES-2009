@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3916 2009/10/11 13:12:08 asau Exp $
+$NetBSD: CHANGES-2009,v 1.3917 2009/10/11 13:18:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5135,7 +5135,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/ecl to 9.10.2 [asau 2009-10-11]
 	Updated net/Transmission to 1.75 [tnn 2009-10-11]
 	Updated textproc/p5-XML-LibXML to 1.70 [sno 2009-10-11]
-	Removed textproc/p5-XML-LibXML-Common [sno 2009-10-11]
+	Removed textproc/p5-XML-LibXML-Common successor textproc/p5-XML-LibXML [sno 2009-10-11]
 	Updated textproc/p5-XML-LibXSLT to 1.70 [sno 2009-10-11]
 	Updated textproc/hunspell-hu_HU to 1.5 [ahoka 2009-10-11]
 	Updated devel/p5-File-Path to 2.08 [sno 2009-10-11]
