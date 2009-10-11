@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8517 2009/10/11 08:32:18 wiz Exp $
+$NetBSD: TODO,v 1.8518 2009/10/11 08:33:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1193,7 +1193,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-urwid-0.9.8.4
-	o py-usb-0.4.2 [wiz]
 	o py-zconfig-2.3.1
 	o python-3.1.1
 	o python26-2.6.3
