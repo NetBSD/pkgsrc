@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/19 14:16:02 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:15:40 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
