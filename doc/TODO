@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8519 2009/10/11 08:33:52 wiz Exp $
+$NetBSD: TODO,v 1.8520 2009/10/11 08:34:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -323,7 +323,11 @@ Suggested new packages
 
 	Missing xorg packages
 	e.g.: mkcomposecache, xscope, windowswmproto, libWindowsWM,
-	libXfontcache, xf86-input-synaptics
+	libXfontcache, xf86-input-synaptics, font-arabic-misc,
+	font-bitstream-speedo, font-cronyx-cyrillic, font-micro-misc,
+	font-misc-cyrillic, font-misc-ethiopic, font-misc-meltho,
+	font-schumacher-misc, font-screen-cyrillic, font-sun-misc,
+	font-winitzki-cyrillic, font-xfree86-type1
 
 
 Suggested package updates
@@ -563,6 +567,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emech-2.8.5.1
 	o empathy-2.28.0.1 [GNOME 2.28]
 	o enca-1.11
+	o encodings-1.0.3
 	o enlightenment-1.0.0
 	o eog-2.28.0 [GNOME 2.28]
 	o eog-plugins-2.28.0 [GNOME 2.28]
@@ -613,6 +618,30 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o flpsed-0.4.4
 	o fmsx-3.0
 	o fondu-040927
+	o font-adobe-100dpi-1.0.1
+	o font-adobe-75dpi-1.0.1
+	o font-adobe-utopia-100dpi-1.0.2
+	o font-adobe-utopia-75dpi-1.0.2
+	o font-adobe-utopia-type1-1.0.2
+	o font-alias-1.0.2
+	o font-bh-100dpi-1.0.1
+	o font-bh-75dpi-1.0.1
+	o font-bh-lucidatypewriter-100dpi-1.0.1
+	o font-bh-lucidatypewriter-75dpi-1.0.1
+	o font-bh-ttf-1.0.1
+	o font-bh-type1-1.0.1
+	o font-bitstream-100dpi-1.0.1
+	o font-bitstream-75dpi-1.0.1
+	o font-bitstream-type1-1.0.1
+	o font-cursor-misc-1.0.1
+	o font-daewoo-misc-1.0.1
+	o font-dec-misc-1.0.1
+	o font-ibm-type1-1.0.1
+	o font-isas-misc-1.0.1
+	o font-jis-misc-1.0.1
+	o font-misc-misc-1.1.0
+	o font-mutt-misc-1.0.1
+	o font-sony-misc-1.0.1
 	o font-util-1.1.0
 	o fontcacheproto-0.1.3
 	o fotoxx-8.5
@@ -777,6 +806,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hylafax-5.2.9
 	o ical-2.3.2
 	o icdprog-0.5
+	o iceauth-1.0.3
 	o icsi-finger-1.0.29
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
@@ -934,6 +964,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mail-notification-5.3
 	o mailgraph-1.14
 	o mailscanner-4.74
+	o makedepend-1.0.2
 	o maketool-0.8.4
 	o makeztxt-1.60
 	o manedit-1.2.1
@@ -975,6 +1006,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o minivmac-3.0.4
 	o miredo-1.1.7
 	o mirmon-1.37
+	o mkfontdir-1.0.5
+	o mkfontscale-1.0.7
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-2.9.8
 	o mlterm-2.9.4
