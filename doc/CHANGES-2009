@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3919 2009/10/11 17:33:18 jmmv Exp $
+$NetBSD: CHANGES-2009,v 1.3920 2009/10/11 18:24:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5144,3 +5144,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/mzscheme to 4.2.2 [asau 2009-10-11]
 	Updated emulators/qemu to 0.11.0 [asau 2009-10-11]
 	Updated net/openvpn to 2.1rc20 [jmmv 2009-10-11]
+	Updated net/twitux to 0.69 [jmmv 2009-10-11]
