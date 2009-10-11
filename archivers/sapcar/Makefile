@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 08:59:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/10/11 15:33:41 sno Exp $
 
 PKGNAME=		sapcar-7.00
 CATEGORIES=		archivers
@@ -55,7 +55,7 @@ DISTNAME=		SAPCAR_0-10003695.exe
 BROKEN=		Architecture ${MACHINE_ARCH} on platform ${OPSYS} not supported
 .endif
 .else
-BROKEN=		Plattform ${OPSYS} not supported
+BROKEN=		Platform ${OPSYS} not supported
 .endif
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
