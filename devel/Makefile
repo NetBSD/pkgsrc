@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1238 2009/10/02 20:31:31 markd Exp $
+# $NetBSD: Makefile,v 1.1239 2009/10/11 09:38:24 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -177,6 +177,7 @@ SUBDIR+=	flex
 SUBDIR+=	flim
 SUBDIR+=	florist
 SUBDIR+=	fortran-utils
+SUBDIR+=	fossil
 SUBDIR+=	frama-c
 SUBDIR+=	fromcvs
 SUBDIR+=	ftnchek
@@ -639,6 +640,7 @@ SUBDIR+=	p5-Hash-MoreUtils
 SUBDIR+=	p5-Hash-Util-FieldHash-Compat
 SUBDIR+=	p5-Heap
 SUBDIR+=	p5-Hook-LexWrap
+SUBDIR+=	p5-IMDB-Film
 SUBDIR+=	p5-IO
 SUBDIR+=	p5-IO-All
 SUBDIR+=	p5-IO-Capture
