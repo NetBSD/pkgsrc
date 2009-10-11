@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3884 2009/10/11 08:24:31 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3885 2009/10/11 08:28:10 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5072,3 +5072,30 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Params-Validate to 0.92 [sno 2009-10-11]
 	Updated devel/p5-Moose to 0.92 [sno 2009-10-11]
 	Updated devel/p5-MooseX-MethodAttributes to 0.18 [sno 2009-10-11]
+	Updated devel/kdesdk4 to 4.3.2 [markd 2009-10-11]
+	Updated games/kdegames4 to 4.3.2 [markd 2009-10-11]
+	Updated games/kdetoys4 to 4.3.2 [markd 2009-10-11]
+	Updated graphics/kdegraphics4 to 4.3.2 [markd 2009-10-11]
+	Updated graphics/oxygen-icons to 4.3.2 [markd 2009-10-11]
+	Updated meta-pkgs/kde4 to 4.3.2 [markd 2009-10-11]
+	Updated misc/kdeaccessibility4 to 4.3.2 [markd 2009-10-11]
+	Updated misc/kdeadmin4 to 4.3.2 [markd 2009-10-11]
+	Updated misc/kdeartwork4 to 4.3.2 [markd 2009-10-11]
+	Updated misc/kdeedu4 to 4.3.2 [markd 2009-10-11]
+	Updated misc/kdepim-runtime4 to 4.3.2 [markd 2009-10-11]
+	Updated misc/kdepim4 to 4.3.2 [markd 2009-10-11]
+	Updated misc/kdepimlibs4 to 4.3.2 [markd 2009-10-11]
+	Updated misc/kdeplasma-addons4 to 4.3.2 [markd 2009-10-11]
+	Updated misc/kdeutils4 to 4.3.2 [markd 2009-10-11]
+	Updated multimedia/kdemultimedia4 to 4.3.2 [markd 2009-10-11]
+	Updated net/kdenetwork4 to 4.3.2 [markd 2009-10-11]
+	Updated www/kdewebdev4 to 4.3.2 [markd 2009-10-11]
+	Updated x11/kde4-l10n-de to 4.3.2 [markd 2009-10-11]
+	Updated x11/kde4-l10n-en_GB to 4.3.2 [markd 2009-10-11]
+	Updated x11/kde4-l10n-nl to 4.3.2 [markd 2009-10-11]
+	Updated x11/kdebase-runtime4 to 4.3.2 [markd 2009-10-11]
+	Updated x11/kdebase-workspace4 to 4.3.2 [markd 2009-10-11]
+	Updated x11/kdebase4 to 4.3.2 [markd 2009-10-11]
+	Updated x11/kdebindings4-python to 4.3.2 [markd 2009-10-11]
+	Updated x11/kdelibs-experimental4 to 4.3.2 [markd 2009-10-11]
+	Updated x11/kdelibs4 to 4.3.2 [markd 2009-10-11]
