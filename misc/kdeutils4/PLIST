@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 21:33:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 08:13:39 markd Exp $
 bin/ark
 bin/irkick
 bin/kcalc
@@ -26,7 +26,7 @@ lib/kde4/kerfuffle_libgz.so
 lib/kde4/libarkpart.so
 lib/kde4/libextracthere.so
 lib/kde4/libkbytearrayedit.so
-lib/kde4/liboktetapart.so
+lib/kde4/oktetapart.so
 lib/kde4/plasma_package_superkaramba.so
 lib/kde4/plasma_scriptengine_superkaramba.so
 lib/libkdeinit4_irkick.so

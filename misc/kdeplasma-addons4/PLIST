@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 21:30:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 08:13:39 markd Exp $
 bin/lancelot
 include/conversion/converter.h
 include/conversion/plasmaconversion_export.h
@@ -137,9 +137,9 @@ share/icons/hicolor/64x64/apps/bball.png
 share/icons/hicolor/64x64/apps/lancelot-part.png
 share/icons/hicolor/64x64/apps/lancelot.png
 share/icons/hicolor/64x64/apps/previewer.png
+share/icons/hicolor/scalable/apps/accessories-dictionary.svgz
 share/icons/hicolor/scalable/apps/bball.svgz
 share/icons/hicolor/scalable/apps/fifteenpuzzle.svgz
-share/icons/oxygen/scalable/apps/accessories-dictionary.svgz
 share/kde/apps/bball/bball.svgz
 share/kde/apps/bball/bounce.ogg
 share/kde/apps/bball/football.svgz
@@ -212,7 +212,6 @@ share/kde/apps/desktoptheme/default/widgets/eyes.svg
 share/kde/apps/desktoptheme/default/widgets/luna.svgz
 share/kde/apps/desktoptheme/default/widgets/microblog.svgz
 share/kde/apps/desktoptheme/default/widgets/notes.svgz
-share/kde/apps/desktoptheme/default/widgets/picture-frame-default.svgz
 share/kde/apps/desktoptheme/default/widgets/previewer-16.svgz
 share/kde/apps/desktoptheme/default/widgets/previewer-22.svgz
 share/kde/apps/desktoptheme/default/widgets/timer.svgz
@@ -274,6 +273,7 @@ share/kde/apps/desktoptheme/slim-glow/lancelot/system-buttons-extender.svgz
 share/kde/apps/desktoptheme/slim-glow/lancelot/system-buttons.svgz
 share/kde/apps/desktoptheme/slim-glow/lancelot/theme.config
 share/kde/apps/lancelot/lancelot.notifyrc
+share/kde/apps/plasma-applet-frame/picture-frame-default.jpg
 share/kde/apps/plasma-applet-opendesktop/user.css
 share/kde/apps/plasma/services/rtmauth.operations
 share/kde/apps/plasma/services/rtmtask.operations

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 19:37:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 08:13:40 markd Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -417,8 +417,10 @@ share/doc/kde/HTML/en/kcontrol/colors/common
 share/doc/kde/HTML/en/kcontrol/colors/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/colors/index.docbook
 share/doc/kde/HTML/en/kcontrol/desktopthemedetails/common
+share/doc/kde/HTML/en/kcontrol/desktopthemedetails/desktop-settings.png
 share/doc/kde/HTML/en/kcontrol/desktopthemedetails/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/desktopthemedetails/index.docbook
+share/doc/kde/HTML/en/kcontrol/desktopthemedetails/message.png
 share/doc/kde/HTML/en/kcontrol/energy/common
 share/doc/kde/HTML/en/kcontrol/energy/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/energy/index.docbook
