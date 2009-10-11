@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3920 2009/10/11 18:24:33 jmmv Exp $
+$NetBSD: CHANGES-2009,v 1.3921 2009/10/11 18:42:54 epg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5145,3 +5145,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/qemu to 0.11.0 [asau 2009-10-11]
 	Updated net/openvpn to 2.1rc20 [jmmv 2009-10-11]
 	Updated net/twitux to 0.69 [jmmv 2009-10-11]
+	Updated devel/bzr to 2.0.0 [epg 2009-10-11]
+	Updated devel/bzrtools to 2.0.0 [epg 2009-10-11]
+	Updated devel/bzr-svn to 1.0.0 [epg 2009-10-11]
+	Added devel/bzr-explorer version 0.8.2 [epg 2009-10-11]
