@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/11 09:37:45 wiz Exp $
+
+--- Makefile.PL.orig	2009-07-07 12:02:11.000000000 +0000
++++ Makefile.PL
+@@ -2,7 +2,7 @@ use ExtUtils::MakeMaker;
+ 
+ use strict;
+ 
+-my $online_tests = ExtUtils::MakeMaker::prompt('Do you want to perform online tests during "make test" phase?', 'no') =~ /^\s*(y)/i;
++my $online_tests = '';
+ my $tests = join ' ', glob ($online_tests ? 't/0*.t t/m*.t' : 't/0*.t');
+ 
+ if($online_tests) {
