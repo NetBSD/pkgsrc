@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8516 2009/10/11 08:31:19 wiz Exp $
+$NetBSD: TODO,v 1.8517 2009/10/11 08:32:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1185,7 +1185,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-libxml2-2.7.5
 	o py-logging-0.4.9.6 [pkg/41675]
 	o py-m2crypto-0.20.2
-	o py-mechanize-0.1.11 [wiz]
 	o py-moin-1.8.5
 	o py-psycopg-2.0.13
 	o py-pytz-2009n
