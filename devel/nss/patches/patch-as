@@ -1,0 +1,62 @@
+$NetBSD: patch-as,v 1.1 2009/10/11 07:51:48 sno Exp $
+
+Apply patches from FreeBSD ports
+
+--- mozilla/security/coreconf/FreeBSD.mk.orig	2009-09-27 13:47:48.000000000 +0200
++++ mozilla/security/coreconf/FreeBSD.mk	2009-09-27 14:01:51.000000000 +0200
+@@ -37,13 +37,25 @@
+ 
+ include $(CORE_DEPTH)/coreconf/UNIX.mk
+ 
+-DEFAULT_COMPILER	= gcc
+-CC			= gcc
+-CCC			= g++
++DEFAULT_COMPILER	= $(CC)
++CC			?= gcc
++CCC			= $(CXX)
+ RANLIB			= ranlib
+ 
+ ifeq ($(OS_TEST),alpha)
+ CPU_ARCH		= alpha
++ifeq ($(OS_TEST),powerpc)
++CPU_ARCH		= powerpc
++else
++ifeq ($(OS_TEST),sparc64)
++CPU_ARCH		= sparc64
++USE_64			= 1
++else
++ifeq ($(OS_TEST),amd64)
++USE_64			= 1
++endif
++endif
++endif
+ else
+ CPU_ARCH		= x86
+ endif
+@@ -65,15 +77,15 @@
+ 
+ ARCH			= freebsd
+ 
+-MOZ_OBJFORMAT		:= $(shell test -x /usr/bin/objformat && /usr/bin/objformat || echo aout)
++#MOZ_OBJFORMAT		:= $(shell test -x /usr/bin/objformat && /usr/bin/objformat || echo aout)
++DLL_SUFFIX		= so.1
+ 
+-ifeq ($(MOZ_OBJFORMAT),elf)
+-DLL_SUFFIX		= so
++ifneq (,$(filter alpha ia64,$(OS_TEST)))
++MKSHLIB			= $(CC) -Wl,-Bsymbolic -lc $(DSO_LDOPTS)
+ else
+-DLL_SUFFIX		= so.1.0
++MKSHLIB			= $(CC) -Wl,-Bsymbolic $(DSO_LDOPTS)
+ endif
+ 
+-MKSHLIB			= $(CC) $(DSO_LDOPTS)
+ ifdef MAPFILE
+ 	MKSHLIB += -Wl,--version-script,$(MAPFILE)
+ endif
+@@ -83,3 +95,5 @@
+ G++INCLUDES		= -I/usr/include/g++
+ 
+ INCLUDES		+= -I/usr/X11R6/include
++USE_SYSTEM_ZLIB		= 1
++ZLIB_LIBS		= -lz
