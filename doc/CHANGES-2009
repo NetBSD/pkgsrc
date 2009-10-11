@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3874 2009/10/11 08:01:46 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3875 2009/10/11 08:05:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5060,3 +5060,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ikiwiki to 3.20091009 [schmonz 2009-10-10]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2009Q3 branch [agc 2009-10-10]
 	Updated security/p5-IO-Socket-SSL to 1.31 [sno 2009-10-11]
+	Updated devel/p5-Class-MOP to 0.94 [sno 2009-10-11]
