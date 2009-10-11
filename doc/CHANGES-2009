@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3906 2009/10/11 10:27:32 plunky Exp $
+$NetBSD: CHANGES-2009,v 1.3907 2009/10/11 11:17:04 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5132,3 +5132,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-ExtUtils-ParseXS to 2.21 [sno 2009-10-11]
 	Updated devel/p5-Variable-Magic to 0.38 [sno 2009-10-11]
 	Updated mail/nullmailer to 1.04 [plunky 2009-10-11]
+	Updated lang/ecl to 9.10.2 [asau 2009-10-11]
