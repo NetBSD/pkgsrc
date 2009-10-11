@@ -1,6 +1,6 @@
-$NetBSD: CHANGES-2009,v 1.3872 2009/10/10 17:58:56 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.3873 2009/10/11 04:30:23 agc Exp $
 
-Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc-2009Q3]:
+Changes to the packages collection and infrastructure in 2009:
 
 	Updated databases/py-postgresql to 4.0 [darcy 2009-01-01]
 	Updated security/amavisd-new to 2.6.2 [obache 2009-01-01]
@@ -5058,3 +5058,4 @@ Changes to the packages collection and infrastructure in 2009 [FROZEN for pkgsrc
 	Updated databases/php-sqlite to 5.2.11.1.0.3 [taca 2009-10-09]
 	Updated www/typolight27-translations to 20091009 [taca 2009-10-10]
 	Updated www/ikiwiki to 3.20091009 [schmonz 2009-10-10]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2009Q3 branch [agc 2009-10-10]
