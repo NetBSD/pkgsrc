@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2009/08/23 17:04:24 asau Exp $
+# $NetBSD: Makefile,v 1.24 2009/10/11 13:10:43 asau Exp $
 
-PLT_VERSION=		4.2.1
+PLT_VERSION=		4.2.2
 MASTER_SITES_PLT=	http://download.plt-scheme.org/bundles/ \
 			http://www.eecs.northwestern.edu/plt-scheme/ \
 			http://www.cs.utah.edu/plt/download/ \
