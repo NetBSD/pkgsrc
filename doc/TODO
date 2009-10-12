@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8525 2009/10/12 03:13:35 obache Exp $
+$NetBSD: TODO,v 1.8526 2009/10/12 09:29:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -1073,7 +1073,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o objc-3.2.8
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
-	o octave-3.2.3
 	o odbc-postgresql-8.2.3
 	o offlineimap-6.0.3
 	o olvwm-4.5
