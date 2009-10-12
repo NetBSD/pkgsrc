@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/08/12 12:43:10 obache Exp $
-lib/pkgconfig/poppler-ruby.pc
+@comment $NetBSD: PLIST,v 1.4 2009/10/12 03:09:32 obache Exp $
+lib/pkgconfig/ruby-poppler.pc
 ${RUBY_VENDORLIB}/poppler.rb
 ${RUBY_VENDORARCHLIB}/poppler.${RUBY_DLEXT}
