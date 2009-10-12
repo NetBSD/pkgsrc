@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2009/08/13 18:56:32 snj Exp $
+# $NetBSD: Makefile,v 1.87 2009/10/12 15:25:14 reed Exp $
 
 DISTNAME=	gnutls-2.8.3
 CATEGORIES=	security devel
@@ -49,7 +49,7 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libcfg+/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.2.4
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.4
 .include "../../security/libgcrypt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
 .include "../../security/libtasn1/buildlink3.mk"
