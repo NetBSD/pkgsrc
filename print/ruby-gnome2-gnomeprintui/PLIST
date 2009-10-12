@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/12 12:43:10 obache Exp $
-lib/pkgconfig/libgnomeprintui-2.2-ruby.pc
+@comment $NetBSD: PLIST,v 1.3 2009/10/12 03:09:32 obache Exp $
+lib/pkgconfig/ruby-gnomeprintui2.pc
 ${RUBY_VENDORLIB}/gnomeprintui2.rb
 ${RUBY_VENDORARCHLIB}/gnomeprintui2.${RUBY_DLEXT}

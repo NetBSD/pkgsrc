@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2009/08/12 12:43:11 obache Exp $
-lib/pkgconfig/gtk+-2.0-ruby.pc
+@comment $NetBSD: PLIST,v 1.10 2009/10/12 03:09:33 obache Exp $
+lib/pkgconfig/ruby-gtk2.pc
 ${RUBY_VENDORLIB}/gtk2.rb
 ${RUBY_VENDORLIB}/gtk2/base.rb
 ${RUBY_VENDORARCHLIB}/gtk2.${RUBY_DLEXT}
