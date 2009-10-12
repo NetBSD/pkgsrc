@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3934 2009/10/12 12:09:00 rhaen Exp $
+$NetBSD: CHANGES-2009,v 1.3935 2009/10/12 12:20:57 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-Search-QueryParser to 0.94 [rhaen 2009-10-12]
 	Updated devel/p5-Class-Accessor-Grouped to 0.09001 [rhaen 2009-10-12]
 	Updated devel/p5-Class-Trigger to 0.14 [rhaen 2009-10-12]
+	Updated devel/p5-Devel-Events to 0.08 [rhaen 2009-10-12]
