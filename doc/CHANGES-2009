@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3922 2009/10/12 02:23:43 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3923 2009/10/12 02:25:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5150,3 +5150,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bzr-svn to 1.0.0 [epg 2009-10-11]
 	Added devel/bzr-explorer version 0.8.2 [epg 2009-10-11]
 	Updated graphics/ruby-RMagick to 2.12.2 [obache 2009-10-12]
+	Updated mail/dbmail to 2.2.12 [obache 2009-10-12]
