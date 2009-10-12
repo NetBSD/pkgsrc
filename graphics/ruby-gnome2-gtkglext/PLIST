@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/12 12:43:09 obache Exp $
-lib/pkgconfig/gtkglext-1.0-ruby.pc
+@comment $NetBSD: PLIST,v 1.3 2009/10/12 03:09:32 obache Exp $
+lib/pkgconfig/ruby-gtkglext.pc
 ${RUBY_VENDORLIB}/gtkglext.rb
 ${RUBY_VENDORARCHLIB}/gtkglext.${RUBY_DLEXT}

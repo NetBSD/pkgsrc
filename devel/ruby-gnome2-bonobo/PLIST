@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/12 12:43:09 obache Exp $
-lib/pkgconfig/libbonobo-2.0-ruby.pc
+@comment $NetBSD: PLIST,v 1.3 2009/10/12 03:09:31 obache Exp $
+lib/pkgconfig/ruby-bonobo2.pc
 ${RUBY_VENDORLIB}/bonobo2.rb
 ${RUBY_VENDORARCHLIB}/bonobo2.${RUBY_DLEXT}

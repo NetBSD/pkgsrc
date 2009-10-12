@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/08/26 19:57:50 sno Exp $
+# $NetBSD: Makefile,v 1.10 2009/10/12 03:09:32 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-libart-${VERSION}
 COMMENT=		Ruby binding of Libart_lgpl
-PKGREVISION=		1
 CATEGORIES=		graphics
 
 CONFLICTS+=		ruby-gnome2-libart-[0-9]*

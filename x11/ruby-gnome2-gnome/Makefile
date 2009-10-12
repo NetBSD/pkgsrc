@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2009/08/26 19:58:40 sno Exp $
+# $NetBSD: Makefile,v 1.18 2009/10/12 03:09:32 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnome-${VERSION}
-PKGREVISION=		1
 CATEGORIES=		gnome x11
 COMMENT=		Ruby binding of libgnome/libgnomeui-2.x
 
@@ -16,7 +15,7 @@ DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gnomecanvas>=${VERSION}:../../graphics/ruby-
 
 USE_TOOLS+=		pkg-config
 
-BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}
+BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib-${VERSION}{,nb*}
 BUILDLINK_DEPMETHOD.ruby-gnome2-glib=	build
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
