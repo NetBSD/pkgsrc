@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2009/05/19 08:59:17 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2009/10/12 05:33:05 drochner Exp $
 #
 
 DISTNAME=	jpeg2ps-1.9
 CATEGORIES=	graphics
-# 200809: broken
-MASTER_SITES=	http://www.pdflib.com/products/more/jpeg2ps/
+MASTER_SITES=	http://www.pdflib.com/fileadmin/pdflib/products/more/jpeg2ps/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-# 200809: broken
-HOMEPAGE=	http://www.pdflib.com/products/more/jpeg2ps.html
+HOMEPAGE=	http://www.pdflib.com/download/free-software/jpeg2ps/
 COMMENT=	Convert jpeg images to PostScript level 2 or 3
 LICENSE=		jpeg2ps-license
 
