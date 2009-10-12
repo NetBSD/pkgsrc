@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3936 2009/10/12 20:56:12 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.3937 2009/10/12 21:17:12 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5192,3 +5192,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-Trigger to 0.14 [rhaen 2009-10-12]
 	Updated devel/p5-Devel-Events to 0.08 [rhaen 2009-10-12]
 	Added textproc/hunspell-ar version 20080110 [ahoka 2009-10-12]
+	Added textproc/hunspell-sk_SK version 20090330 [ahoka 2009-10-12]
