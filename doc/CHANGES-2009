@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3928 2009/10/12 10:20:24 rhaen Exp $
+$NetBSD: CHANGES-2009,v 1.3929 2009/10/12 11:21:20 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5184,3 +5184,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Event to 1.13 [rhaen 2009-10-12]
 	Updated devel/p5-Log-Dispatch to 2.26 [rhaen 2009-10-12]
 	Updated devel/p5-Log-Log4perl to 1.25 [rhaen 2009-10-12]
+	Updated devel/p5-SVN-Notify to 2.79 [rhaen 2009-10-12]
