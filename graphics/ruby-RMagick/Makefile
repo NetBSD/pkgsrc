@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.67 2009/09/06 03:14:03 obache Exp $
+# $NetBSD: Makefile,v 1.68 2009/10/12 02:23:05 obache Exp $
 
-DISTNAME=	rmagick-2.11.1
+DISTNAME=	rmagick-2.12.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rmagick/RMagick/}
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rmagick.rubyforge.org/
 COMMENT=	Ruby binding to ImageMagick
+LICENSE=	mit
 
 GEM_BUILD=	gemspec
 
