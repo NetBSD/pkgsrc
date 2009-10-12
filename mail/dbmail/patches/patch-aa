@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/10/12 02:25:37 obache Exp $
+
+--- dbmail.h.in.orig	2009-10-07 19:44:07.000000000 +0000
++++ dbmail.h.in
+@@ -33,7 +33,7 @@
+ #ifdef __FreeBSD__
+ #define _XOPEN_SOURCE
+ #else
+-#define _XOPEN_SOURCE 	500
++#define _XOPEN_SOURCE 	520
+ #endif
+ 
+ #define __EXTENSIONS__ 		/* solaris */

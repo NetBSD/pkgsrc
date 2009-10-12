@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2008/05/06 01:49:20 obache Exp $
+# $NetBSD: Makefile,v 1.20 2009/10/12 02:25:36 obache Exp $
 #
 
-DISTNAME=		dbmail-2.2.10
+DISTNAME=		dbmail-2.2.12
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dbmail.org/download/2.2/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.dbmail.org/
 COMMENT=		Store and retrieve mail messages in a database
+LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
@@ -55,9 +56,9 @@ post-install:
 
 .include "options.mk"
 
-.include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
-.include "../../mail/gmime/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gmime+=	gmime>=2.1.19
+.include "../../mail/gmime/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
