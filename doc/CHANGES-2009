@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3925 2009/10/12 03:13:35 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3926 2009/10/12 08:15:23 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5179,3 +5179,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.19.3 [obache 2009-10-12]
 	Updated x11/ruby-gnome2-panelapplet to 0.19.3 [obache 2009-10-12]
 	Updated x11/ruby-gnome2-vte to 0.19.3 [obache 2009-10-12]
+	Removed www/firefox3-bin [ghen 2009-10-12]
