@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2008/05/06 01:49:20 obache Exp $
+$NetBSD: distinfo,v 1.10 2009/10/12 02:25:36 obache Exp $
 
-SHA1 (dbmail-2.2.10.tar.gz) = 421c39e49669677a4876f4faf57bbec14b4cd348
-RMD160 (dbmail-2.2.10.tar.gz) = 64eaa94824fe27f485de7bb8578c8656c4417e22
-Size (dbmail-2.2.10.tar.gz) = 900636 bytes
+SHA1 (dbmail-2.2.12.tar.gz) = bf661f4051196b4a0832b276531556f22d33d85f
+RMD160 (dbmail-2.2.12.tar.gz) = dbc48b8ff05507041377217dbb98731fa5ddabb3
+Size (dbmail-2.2.12.tar.gz) = 911091 bytes
+SHA1 (patch-aa) = 830c49b2fddd9d85912a227e1eda6520c7d95654
