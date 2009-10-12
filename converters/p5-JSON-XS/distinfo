@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/08/08 21:03:31 sno Exp $
+$NetBSD: distinfo,v 1.10 2009/10/12 11:38:36 rhaen Exp $
 
-SHA1 (JSON-XS-2.25.tar.gz) = a9b1fd20428a31861aeb622578c572a230fce88b
-RMD160 (JSON-XS-2.25.tar.gz) = 00de9fd67dd147e77055db310c093023754d81a4
-Size (JSON-XS-2.25.tar.gz) = 69565 bytes
+SHA1 (JSON-XS-2.26.tar.gz) = ec5920f265b960325f52f269011ce6930994e840
+RMD160 (JSON-XS-2.26.tar.gz) = c9a2c2dfce4c7a7647a47ec1c8ea82ca5dac04e4
+Size (JSON-XS-2.26.tar.gz) = 70090 bytes
