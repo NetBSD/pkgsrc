@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/07/09 17:47:07 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2009/10/12 15:29:30 reed Exp $
 
 DISTNAME=	libsoup-2.26.3
 PKGNAME=	${DISTNAME:S/libsoup/libsoup24/}
@@ -24,6 +24,7 @@ PKGCONFIG_OVERRIDE+=	libsoup-gnome-2.4.pc.in
 .include "../../devel/GConf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.3
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=2.1.7
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
