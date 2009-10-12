@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/23 00:07:23 rhaen Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/12 11:24:46 rhaen Exp $
 #
 
-DISTNAME=		TAP-Formatter-HTML-0.07
+DISTNAME=		TAP-Formatter-HTML-0.08
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SP/SPURKIS/}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SP/SPURKIS/}
 MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/S/SP/SPURKIS/
 COMMENT=	TAP Test Harness output delegate for html output
+LICENSE=  ${PERL5_LICENSE}
 
 DEPENDS+=	p5-Test-Harness>=3.10:../../devel/p5-Test-Harness
 DEPENDS+=	p5-Template-Toolkit>=2.14:../../www/p5-Template-Toolkit
