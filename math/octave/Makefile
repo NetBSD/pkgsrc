@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2009/07/23 13:43:25 asau Exp $
+# $NetBSD: Makefile,v 1.83 2009/10/12 09:28:02 adam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	bison>=1.875:../../devel/bison
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-OCTAVE_VER=	3.2.2
+OCTAVE_VER=	3.2.3
 CONFLICTS+=	octave-2.*
 
 .if (${MACHINE_ARCH} == "arm32")
@@ -24,7 +24,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_GNU_READLINE=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake makeinfo perl gsed pkg-config
+USE_TOOLS+=		autoconf gsed gmake makeinfo perl pkg-config
 GNU_CONFIGURE=		yes
 
 GCC_REQD+=		3.0
@@ -55,6 +55,9 @@ UNWRAP_FILES+=		mkoctfile octave-bug src/oct-conf.h
 
 # Doesn't work yet, needs to sort out libtool shared libraries handling:
 #TEST_TARGET=	check
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 post-extract:
 	find ${WRKSRC}/doc -type f -name '*.info*' -print | xargs rm -f
@@ -91,9 +94,8 @@ post-install:
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/curl/buildlink3.mk"
-
 .include "../../x11/libX11/buildlink3.mk"
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
