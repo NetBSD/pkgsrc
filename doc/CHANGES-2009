@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3947 2009/10/12 22:05:33 rhaen Exp $
+$NetBSD: CHANGES-2009,v 1.3948 2009/10/12 22:06:27 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5208,3 +5208,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-NonMoose to 0.07 [rhaen 2009-10-12]
 	Added textproc/hunspell-ms_MY version 20050117 [ahoka 2009-10-12]
 	Added textproc/hunspell-nl_NL version 20070607 [ahoka 2009-10-12]
+	Added textproc/hunspell-ny_MW version 20050108 [ahoka 2009-10-12]
