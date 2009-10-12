@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3941 2009/10/12 21:44:38 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.3942 2009/10/12 21:50:42 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5197,3 +5197,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/hunspell-ga_IE version 20071029 [ahoka 2009-10-12]
 	Added textproc/hunspell-he_IL version 20050112 [ahoka 2009-10-12]
 	Added textproc/hunspell-hr_HR version 20060607 [ahoka 2009-10-12]
+	Added textproc/hunspell-it_IT version 2.4 [ahoka 2009-10-12]
