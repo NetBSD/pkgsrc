@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3931 2009/10/12 11:39:55 rhaen Exp $
+$NetBSD: CHANGES-2009,v 1.3932 2009/10/12 11:49:58 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5187,3 +5187,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-SVN-Notify to 2.79 [rhaen 2009-10-12]
 	Updated devel/p5-TAP-Formatter-HTML to 0.08 [rhaen 2009-10-12]
 	Updated converters/p5-JSON-XS to 2.26 [rhaen 2009-10-12]
+	Updated databases/p5-Search-QueryParser to 0.94 [rhaen 2009-10-12]
