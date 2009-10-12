@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2009/08/26 20:05:29 seb Exp $
+# $NetBSD: Makefile,v 1.8 2009/10/12 12:01:22 rhaen Exp $
 
-DISTNAME=	Class-Accessor-Grouped-0.09000
+DISTNAME=	Class-Accessor-Grouped-0.09001
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RK/RKITOVER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-Accessor-Grouped/
