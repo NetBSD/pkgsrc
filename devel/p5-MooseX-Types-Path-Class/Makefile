@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/09/24 06:50:15 sno Exp $
+# $NetBSD: Makefile,v 1.4 2009/10/12 11:03:08 seb Exp $
 #
 
 DISTNAME=	MooseX-Types-Path-Class-0.05
@@ -15,8 +15,8 @@ DEPENDS+=	p5-Class-MOP>=0:../../devel/p5-Class-MOP
 DEPENDS+=	p5-Moose>=0.39:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types>=0.04:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-Path-Class>=0.16:../../devel/p5-Path-Class
-# For tests:
-BUILD_DEPENDS+=	p5-MooseX-Getopt>=0:../../devel/p5-MooseX-Getopt
+# For tests (but introduce a circular dependency for devel/p5-MooseX-Getopt)
+#BUILD_DEPENDS+=	p5-MooseX-Getopt>=0:../../devel/p5-MooseX-Getopt
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
