@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.501 2009/10/12 22:08:55 ahoka Exp $
+# $NetBSD: Makefile,v 1.502 2009/10/13 10:17:36 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -117,7 +117,7 @@ SUBDIR+=	hunspell-es_MX
 SUBDIR+=	hunspell-fo_FO
 SUBDIR+=	hunspell-fr_FR
 SUBDIR+=	hunspell-ga_IE
-SUBDIR+=	hunspell-he-IL
+SUBDIR+=	hunspell-he_IL
 SUBDIR+=	hunspell-hr_HR
 SUBDIR+=	hunspell-hu_HU
 SUBDIR+=	hunspell-id_ID
@@ -325,7 +325,6 @@ SUBDIR+=	p5-XML-Grove
 SUBDIR+=	p5-XML-Handler-Trees
 SUBDIR+=	p5-XML-Handler-YAWriter
 SUBDIR+=	p5-XML-LibXML
-SUBDIR+=	p5-XML-LibXML-Common
 SUBDIR+=	p5-XML-LibXML-Iterator
 SUBDIR+=	p5-XML-LibXML-Simple
 SUBDIR+=	p5-XML-LibXSLT
