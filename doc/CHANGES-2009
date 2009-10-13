@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3951 2009/10/13 18:24:47 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.3952 2009/10/13 20:09:00 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5212,3 +5212,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/py-anita to 1.8 [gson 2009-10-13]
 	Updated x11/qt4-libs to 4.5.2nb1 [hasso 2009-10-13]
 	Updated www/py-django to 1.0.4 [root 2009-10-13]
+	Updated net/filezilla to 3.2.8.1 [zafer 2009-10-13]
