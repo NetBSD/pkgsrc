@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3948 2009/10/12 22:06:27 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.3949 2009/10/13 08:16:40 gson Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5209,3 +5209,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/hunspell-ms_MY version 20050117 [ahoka 2009-10-12]
 	Added textproc/hunspell-nl_NL version 20070607 [ahoka 2009-10-12]
 	Added textproc/hunspell-ny_MW version 20050108 [ahoka 2009-10-12]
+	Updated misc/py-anita to 1.8 [gson 2009-10-13]
