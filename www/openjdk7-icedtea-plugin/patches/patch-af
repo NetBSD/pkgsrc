@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+
+--- plugin/icedteanp/IcedTeaNPPlugin.h.orig	2009-10-07 10:48:00.000000000 +0200
++++ plugin/icedteanp/IcedTeaNPPlugin.h
+@@ -43,7 +43,7 @@ exception statement from your version. *
+ #include <npapi.h>
+ #include <nsThreadUtils.h>
+ 
+-#if MOZILLA_VERSION_COLLAPSED < 1090200
++#if MOZILLA_VERSION_COLLAPSED < 1090100
+ #include <npupp.h>
+ #else
+ #include <npapi.h>

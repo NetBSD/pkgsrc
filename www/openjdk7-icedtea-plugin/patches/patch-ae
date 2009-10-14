@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+
+--- plugin/icedteanp/IcedTeaNPPlugin.cc.orig	2009-10-07 10:48:00.000000000 +0200
++++ plugin/icedteanp/IcedTeaNPPlugin.cc
+@@ -1916,7 +1920,7 @@ NP_Initialize (NPNetscapeFuncs* browserT
+   pluginTable->version = (NP_VERSION_MAJOR << 8) + NP_VERSION_MINOR;
+   pluginTable->size = sizeof (NPPluginFuncs);
+ 
+-#if MOZILLA_VERSION_COLLAPSED < 1090200
++#if MOZILLA_VERSION_COLLAPSED < 1090100
+   pluginTable->newp = NewNPP_NewProc (GCJ_New);
+   pluginTable->destroy = NewNPP_DestroyProc (GCJ_Destroy);
+   pluginTable->setwindow = NewNPP_SetWindowProc (GCJ_SetWindow);
