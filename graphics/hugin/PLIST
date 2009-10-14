@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/21 18:08:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/14 12:41:04 adam Exp $
 bin/PTBatcher
 bin/PTBatcherGUI
 bin/align_image_stack
 bin/autooptimiser
+bin/autopano-noop.sh
 bin/celeste_standalone
 bin/fulla
 bin/hugin
@@ -38,6 +39,7 @@ man/man1/vig_optimize.1
 share/applications/PTBatcherGUI.desktop
 share/applications/hugin.desktop
 share/hugin/Makefile.equirect.mk
+share/hugin/data/celeste.model
 share/hugin/xrc/about.xrc
 share/hugin/xrc/assistant_panel.xrc
 share/hugin/xrc/batch_frame.xrc
@@ -45,6 +47,7 @@ share/hugin/xrc/batch_menu.xrc
 share/hugin/xrc/batch_toolbar.xrc
 share/hugin/xrc/cp_editor_panel.xrc
 share/hugin/xrc/cp_list_frame.xrc
+share/hugin/xrc/cpdetector_dialog.xrc
 share/hugin/xrc/crop_panel.xrc
 share/hugin/xrc/data/1leftarrow.png
 share/hugin/xrc/data/1rightarrow.png
@@ -58,7 +61,6 @@ share/hugin/xrc/data/CPCursor6.png
 share/hugin/xrc/data/about.htm
 share/hugin/xrc/data/add_project.png
 share/hugin/xrc/data/add_projects.png
-share/hugin/xrc/data/celeste.model
 share/hugin/xrc/data/center_pano.png
 share/hugin/xrc/data/center_pano.xpm
 share/hugin/xrc/data/close.xpm
@@ -551,6 +553,7 @@ share/hugin/xrc/data/pause.png
 share/hugin/xrc/data/photometric.png
 share/hugin/xrc/data/preview.png
 share/hugin/xrc/data/preview_auto_update.png
+share/hugin/xrc/data/preview_control_point_tool.png
 share/hugin/xrc/data/preview_num_transform.png
 share/hugin/xrc/data/preview_show_all.png
 share/hugin/xrc/data/preview_show_none.png
