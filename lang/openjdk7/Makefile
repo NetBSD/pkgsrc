@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/14 13:44:26 tnn Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk7-1.7.0.72.20090924
@@ -94,7 +94,7 @@ do-build: ${WRKDIR}/stage3-done
 
 # stage 1 builds a native JDK using the bootstrap binaries
 ${WRKDIR}/stage1-done:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 	rm -rf ${WRKDIR}/bootstrap
 	cd ${BUILDDIR} && mv j2sdk-image ${WRKDIR}/bootstrap
 	rm -rf ${BUILDDIR}
@@ -102,7 +102,7 @@ ${WRKDIR}/stage1-done:
 
 # stage 2 rebuilds the JDK using native tools
 ${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 	touch ${BUILDDIR}/j2sdk-image/jre/lib/applet/.keep
 	touch ${WRKDIR}/stage2-done
 
