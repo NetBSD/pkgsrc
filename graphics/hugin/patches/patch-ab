@@ -1,12 +1,15 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/08/21 18:08:46 adam Exp $
+$NetBSD: patch-ab,v 1.2 2009/10/14 12:41:04 adam Exp $
 
---- doc/CMakeLists.txt.orig	2009-08-21 19:49:55.000000000 +0200
-+++ doc/CMakeLists.txt
-@@ -3,6 +3,6 @@ IF (WIN32)
- INSTALL(FILES fulla.html DESTINATION doc)
- INSTALL(FILES nona.txt DESTINATION doc)
- ELSE (WIN32)
--INSTALL(FILES align_image_stack.1 autooptimiser.1 celeste_standalone.1 fulla.1 hugin.1 hugin_hdrmerge.1 hugin_stitch_project.1 nona.1 nona_gui.1 PTBatcherGUI.1 pto2mk.1 tca_correct.1 vig_optimize.1 DESTINATION share/man/man1)
-+INSTALL(FILES align_image_stack.1 autooptimiser.1 celeste_standalone.1 fulla.1 hugin.1 hugin_hdrmerge.1 hugin_stitch_project.1 nona.1 nona_gui.1 PTBatcherGUI.1 pto2mk.1 tca_correct.1 vig_optimize.1 DESTINATION man/man1)
- ENDIF(WIN32)
+--- src/hugin_base/vigra_ext/ImageTransforms.h.orig	2009-10-01 11:13:30.000000000 +0200
++++ src/hugin_base/vigra_ext/ImageTransforms.h
+@@ -42,9 +42,7 @@
+ #include "MultiThreadOperations.h"
+ #include <boost/thread/thread.hpp>
+ #include <boost/bind.hpp>
+-#ifdef __APPLE__
+-    #include <boost/function.hpp>
+-#endif
++#include <boost/function.hpp>
  
+ 
+ namespace vigra_ext

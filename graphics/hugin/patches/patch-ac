@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2009/10/14 12:41:04 adam Exp $
+
+--- CMakeLists.txt.orig	2009-09-30 23:05:05.000000000 +0200
++++ CMakeLists.txt
+@@ -268,10 +268,8 @@ SET(BINDIR  bin)
+ 
+ IF("$ENV{MANDIR}")
+ 	SET (MANDIR "$ENV{MANDIR}")
+-ELSEIF(CMAKE_SYSTEM_NAME=="FreeBSD")
+-	SET (MANDIR "man")
+ ELSE("$ENV{MANDIR}")
+-	SET (MANDIR "share/man")
++	SET (MANDIR "man")
+ ENDIF("$ENV{MANDIR}")
+ 
+ SET(LOCALEDIR share/locale) 
