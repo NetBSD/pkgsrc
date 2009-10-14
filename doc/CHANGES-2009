@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3956 2009/10/14 08:24:53 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3957 2009/10/14 11:44:29 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5228,3 +5228,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/py-mecab to 0.98 [obache 2009-10-14]
 	Updated textproc/ruby-mecab to 0.98 [obache 2009-10-14]
 	Updated textproc/java-mecab to 0.98 [obache 2009-10-14]
+	Added lang/openjdk7 version 1.7.0.72.20090924 [tnn 2009-10-14]
+	Added www/openjdk7-icedtea-plugin version 1.11.0.20091005 [tnn 2009-10-14]
