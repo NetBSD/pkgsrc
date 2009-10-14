@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3954 2009/10/14 06:51:38 adam Exp $
+$NetBSD: CHANGES-2009,v 1.3955 2009/10/14 08:07:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5221,3 +5221,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/boost-build to 1.40.0 [adam 2009-10-14]
 	Updated devel/boost-python to 1.40.0 [adam 2009-10-14]
 	Updated meta-pkgs/boost to 1.40.0 [adam 2009-10-14]
+	Updated devel/p5-Mac-Carbon to 0.82 [obache 2009-10-14]
