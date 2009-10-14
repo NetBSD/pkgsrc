@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+
+--- plugin/icedteanp/IcedTeaScriptablePluginObject.h.orig	2009-10-07 10:48:00.000000000 +0200
++++ plugin/icedteanp/IcedTeaScriptablePluginObject.h
+@@ -39,7 +39,7 @@ exception statement from your version. *
+ #ifndef __ICEDTEASCRIPTABLEPLUGINOBJECT_H_
+ #define __ICEDTEASCRIPTABLEPLUGINOBJECT_H_
+ 
+-#if MOZILLA_VERSION_COLLAPSED < 1090200
++#if MOZILLA_VERSION_COLLAPSED < 1090100
+ #include "npupp.h"
+ #else
+ #include <npapi.h>
