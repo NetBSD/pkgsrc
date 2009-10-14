@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/04 04:58:52 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/10/14 08:22:35 obache Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -8,6 +8,7 @@ PKGNAME=	java-mecab-${MECAB_VERSION}
 CATEGORIES+=	java
 
 COMMENT=	MeCab java module
+LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,4 +24,10 @@ BUILDLINK_API_DEPENDS.mecab+=	mecab>=${MECAB_VERSION}
 
 .include "../../textproc/mecab/buildlink3.mk"
 .include "../../mk/java-vm.mk"
+CXXFLAGS+=	-I${PKG_JAVA_HOME}/include
+.for d in ${PKG_JAVA_HOME}/include/*
+.  if exists(${d}/jni_md.h)
+CXXFLAGS+=	-I${d}
+.  endif
+.endfor
 .include "../../mk/bsd.pkg.mk"
