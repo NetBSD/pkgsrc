@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- jdk/make/common/Defs.gmk.orig	2009-01-10 22:44:49.000000000 +0100
++++ jdk/make/common/Defs.gmk
+@@ -220,7 +220,7 @@ DEVTOOLS_FT_DIR_EXISTS = $(shell \
+   ifeq ($(PLATFORM), windows)
+     FREETYPE_LIB = $(FREETYPE_LIB_PATH)/freetype.lib
+   else
+-    FREETYPE_LIB = -L$(FREETYPE_LIB_PATH) -lfreetype
++    FREETYPE_LIB = -L$(FREETYPE_LIB_PATH) -Wl,-R$(FREETYPE_LIB_PATH) -lfreetype
+   endif
+ 
+   ifdef ALT_FREETYPE_HEADERS_PATH

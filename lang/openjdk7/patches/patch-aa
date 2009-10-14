@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2009-09-30 13:17:40.000000000 +0200
++++ hotspot/src/os/bsd/vm/os_bsd.cpp
+@@ -2013,6 +2013,9 @@ bool _print_ascii_file(const char* filen
+   return true;
+ }
+ 
++#if defined(__NetBSD__) && defined(RTLD_DI_LINKMAP)
++typedef struct link_map Link_map;
++#endif
+ void os::print_dll_info(outputStream *st) {
+    st->print_cr("Dynamic libraries:");
+ #ifdef _ALLBSD_SOURCE
