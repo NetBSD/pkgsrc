@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- jdk/make/Makefile.orig	2009-09-17 09:51:39.000000000 +0200
++++ jdk/make/Makefile
+@@ -240,6 +240,8 @@ import_product:
+ all build:: sanity-all post-sanity-all
+ 
+ SUBDIRS    = tools java javax org sun sunw com jpda mkdemo mksample launchers
++SUBDIRS   += net/sourceforge/jnlp
++
+ all build::
+ 	$(SUBDIRS-loop)
+ 

@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- jdk/make/common/shared/Platform.gmk.orig	2009-10-12 18:15:48.000000000 +0200
++++ jdk/make/common/shared/Platform.gmk
+@@ -288,9 +288,9 @@ ifeq ($(PLATFORM), bsd)
+   REQUIRED_FREE_SPACE=1500000
+   # How much RAM does this machine have:
+   ifeq ($(OS_VENDOR), OpenBSD)
+-    MB_OF_MEMORY=$(shell sysctl -n hw.physmem | awk '{print int($$NF / 1048576); }' )
++    MB_OF_MEMORY=$(shell /sbin/sysctl -n hw.physmem | awk '{print int($$NF / 1048576); }' )
+   else
+-    MB_OF_MEMORY=$(shell (sysctl -n hw.physmem64 2> /dev/null || sysctl -n hw.physmem) | awk '{print int($$NF / 1048576); }' )
++    MB_OF_MEMORY=$(shell (/sbin/sysctl -n hw.physmem64 2> /dev/null || sysctl -n hw.physmem) | awk '{print int($$NF / 1048576); }' )
+   endif
+ endif
+ 

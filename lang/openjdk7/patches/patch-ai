@@ -1,0 +1,21 @@
+$NetBSD: patch-ai,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- hotspot/src/os/bsd/vm/attachListener_bsd.cpp.orig	2009-10-12 18:15:48.000000000 +0200
++++ hotspot/src/os/bsd/vm/attachListener_bsd.cpp
+@@ -320,11 +320,16 @@ BsdAttachOperation* BsdAttachListener::d
+ #ifdef _ALLBSD_SOURCE
+     uid_t puid;
+     gid_t pgid;
++#if defined(__NetBSD__) && __NetBSD_Version__ < 500000000
++    /* no support for LOCAL_PEEREID here */
++    return NULL;
++#else
+     if (::getpeereid(s, &puid, &pgid) != 0) {
+       int res;
+       RESTARTABLE(::close(s), res);
+       continue;
+     }
++#endif
+ #else
+     struct ucred cred_info;
+     socklen_t optlen = sizeof(cred_info);
