@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2009/06/11 07:00:31 hasso Exp $
+# $NetBSD: Makefile,v 1.15 2009/10/14 18:50:20 hasso Exp $
 #
 
-DISTNAME=	xf86-video-radeonhd-1.2.5
-PKGREVISION=	2
+DISTNAME=	xf86-video-radeonhd-1.3.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
