@@ -1,4 +1,4 @@
-# $NetBSD: icedtea-extras.mk,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+# $NetBSD: icedtea-extras.mk,v 1.2 2009/10/14 16:50:29 tnn Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			gtar
@@ -45,6 +45,7 @@ CONFIGURE_ARGS+=	--with-jdk-home=${PREFIX}/java/openjdk7
 USE_LANGUAGES=		c c++
 USE_TOOLS+=	gawk pkg-config autoconf automake
 CONFIGURE_ENV+=	ac_cv_path_MD5SUM=/usr/bin/true
+CONFIGURE_ENV+=	ac_cv_path_WGET=/usr/bin/true
 
 pre-configure: icedtea-autoconf
 .PHONY: icedtea-autoconf
