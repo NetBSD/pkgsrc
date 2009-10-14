@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2008/07/14 12:56:06 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2009/10/14 20:06:41 zafer Exp $
 
 DISTNAME=	xpm-3.4k
 PKGREVISION=	7
 CATEGORIES=	graphics x11
-MASTER_SITES=	http://koala.ilog.fr/ftp/pub/xpm/ \
-		${MASTER_SITE_XCONTRIB:=libraries/}
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=libraries/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://koala.ilog.fr/lehors/xpm.html
