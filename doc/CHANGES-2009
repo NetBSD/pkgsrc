@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3955 2009/10/14 08:07:38 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3956 2009/10/14 08:24:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5222,3 +5222,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/boost-python to 1.40.0 [adam 2009-10-14]
 	Updated meta-pkgs/boost to 1.40.0 [adam 2009-10-14]
 	Updated devel/p5-Mac-Carbon to 0.82 [obache 2009-10-14]
+	Updated textproc/mecab to 0.98 [obache 2009-10-14]
+	Updated textproc/mecab-base to 0.98 [obache 2009-10-14]
+	Updated textproc/p5-mecab to 0.98 [obache 2009-10-14]
+	Updated textproc/py-mecab to 0.98 [obache 2009-10-14]
+	Updated textproc/ruby-mecab to 0.98 [obache 2009-10-14]
+	Updated textproc/java-mecab to 0.98 [obache 2009-10-14]
