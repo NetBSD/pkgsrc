@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3953 2009/10/14 01:32:09 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.3954 2009/10/14 06:51:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5214,3 +5214,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/py-django to 1.0.4 [root 2009-10-13]
 	Updated net/filezilla to 3.2.8.1 [zafer 2009-10-13]
 	Updated mail/getmail to 4.13.0 [schmonz 2009-10-14]
+	Updated devel/boost-jam to 1.40.0 [adam 2009-10-14]
+	Updated devel/boost-headers to 1.40.0 [adam 2009-10-14]
+	Updated devel/boost-libs to 1.40.0 [adam 2009-10-14]
+	Updated devel/boost-docs to 1.40.0 [adam 2009-10-14]
+	Updated devel/boost-build to 1.40.0 [adam 2009-10-14]
+	Updated devel/boost-python to 1.40.0 [adam 2009-10-14]
+	Updated meta-pkgs/boost to 1.40.0 [adam 2009-10-14]
