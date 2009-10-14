@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2009/10/13 13:55:28 plunky Exp $
+# $NetBSD: Makefile,v 1.32 2009/10/14 21:13:41 plunky Exp $
 
 DISTNAME=		nullmailer-1.04
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE:Q}
 
@@ -10,7 +11,7 @@ COMMENT=		Simple relay-only mail transport agent
 
 LICENSE=		gnu-gpl-v2
 
-# PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
@@ -18,8 +19,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/spool
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/libexec/nullmailer
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/nullmailer
-
-INSTALL_TARGET=		install install-data-local install-root
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,7 +49,7 @@ SPECIAL_PERMS+=		libexec/nullmailer/nullmailer-queue		\
 			${NULLMAILER_USER} ${NULLMAILER_GROUP} 4555
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR}/mailer.conf
+SUBST_FILES.paths=	${WRKDIR}/mailer.conf ${WRKDIR}/nullmailer-daemon
 SUBST_FILES.paths+=	doc/nullmailer-send.8 doc/nullmailer-queue.8
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
@@ -62,11 +61,14 @@ BUILD_DEFS+=		VARBASE
 
 post-extract:
 	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
+	${CP} ${FILESDIR}/nullmailer-daemon ${WRKDIR}/nullmailer-daemon
 
 post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS COPYING ChangeLog	\
 		HOWTO NEWS README TODO ${DESTDIR}${PREFIX}/share/doc/nullmailer
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf				\
 		${DESTDIR}${PREFIX}/share/examples/nullmailer/
+	${INSTALL_SCRIPT} ${WRKDIR}/nullmailer-daemon			\
+		${DESTDIR}${PREFIX}/libexec/nullmailer/
 
 .include "../../mk/bsd.pkg.mk"

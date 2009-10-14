@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# ensure that the trigger fifo exists and we own it, then start up
+# nullmailer-send with logging and detach
+
+trigger="@VARBASE@/spool/nullmailer/trigger"
+
+if [ ! -p ${trigger} -o ! -O ${trigger} -o ! -G ${trigger} ]; then
+	rm -f ${trigger}
+	mkfifo -m 0600 ${trigger}
+fi
+
+@PREFIX@/libexec/nullmailer/nullmailer-send 2>&1 | logger -t nullmailer -p mail.info &

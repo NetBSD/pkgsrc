@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: nullmailer.sh,v 1.3 2009/10/11 10:22:51 plunky Exp $
+# $NetBSD: nullmailer.sh,v 1.4 2009/10/14 21:13:41 plunky Exp $
 #
 # PROVIDE: mail
 # REQUIRE: LOGIN
@@ -12,19 +12,12 @@ fi
 name="nullmailer"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/nullmailer/remotes"
-required_files="${required_files} @VARBASE@/spool/nullmailer/trigger"
 required_dirs="@VARBASE@/spool/nullmailer/queue @VARBASE@/spool/nullmailer/tmp"
-command="@PREFIX@/libexec/nullmailer/nullmailer-send"
-start_cmd="nullmailer_start"
+command="@PREFIX@/libexec/nullmailer/nullmailer-daemon"
+procname="@PREFIX@/libexec/nullmailer/nullmailer-send"
 
 nullmailer_user="@NULLMAILER_USER@"
 nullmailer_group="@NULLMAILER_GROUP@"
-
-nullmailer_start()
-{
-
-	${command} 2>&1 | logger -t ${name} -p mail.info &
-}
 
 if [ -f /etc/rc.subr ]; then
 	load_rc_config $name
