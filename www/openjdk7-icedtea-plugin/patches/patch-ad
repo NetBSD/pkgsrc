@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+
+--- acinclude.m4.orig	2009-10-07 10:48:00.000000000 +0200
++++ acinclude.m4
+@@ -873,7 +873,7 @@ AC_DEFUN([ENABLE_HG],
+ [
+   AC_MSG_CHECKING(whether to retrieve the source code from Mercurial)
+   AC_ARG_ENABLE([hg],
+-                [AS_HELP_STRING(--enable-hg,download source code from Mercurial [[default=depends on project]])],
++                [AS_HELP_STRING(--enable-hg,download source code from Mercurial)],
+   [
+     case "${enableval}" in
+       no)

@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+
+XXX tnn investigate this.
+
+--- plugin/icedteanp/IcedTeaJavaRequestProcessor.cc.orig	2009-10-07 10:48:00.000000000 +0200
++++ plugin/icedteanp/IcedTeaJavaRequestProcessor.cc
+@@ -817,7 +817,7 @@ JavaRequestProcessor::createJavaObjectFr
+     	stringArg += NPVARIANT_TO_STRING(variant).UTF8Characters;
+ #endif
+     }
+-    else if (browser_functions.getproperty())
++    else if (0 /* browser_functions.getproperty() */)
+     {
+ 
+     }
