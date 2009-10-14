@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3959 2009/10/14 13:27:11 stacktic Exp $
+$NetBSD: CHANGES-2009,v 1.3960 2009/10/14 18:53:12 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5232,3 +5232,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/openjdk7-icedtea-plugin version 1.11.0.20091005 [tnn 2009-10-14]
 	Updated graphics/hugin to 2009.2.0 [adam 2009-10-14]
 	Added misc/rump version 20091014 [stacktic 2009-10-14]
+	Updated x11/modular-xorg-server to 1.6.5 [hasso 2009-10-14]
+	Updated x11/xf86-video-radeonhd to 1.3.0 [hasso 2009-10-14]
