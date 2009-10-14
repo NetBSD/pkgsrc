@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+
+SHA1 (openjdk7/175529fae103.tar.bz2) = 297f474423a18d727a87b922b1665ea4e5d54732
+RMD160 (openjdk7/175529fae103.tar.bz2) = 37bb512ccce29eb764a6bf9649c13715bf3eb2d6
+Size (openjdk7/175529fae103.tar.bz2) = 4599216 bytes
+SHA1 (openjdk7/apache-ant-1.7.1-bin.zip) = a7e8fa7bc2102a8d8df99c64db73c2eae3d8b483
+RMD160 (openjdk7/apache-ant-1.7.1-bin.zip) = a4e2c992ac7c81949b391d146baf9c411dbb2c2d
+Size (openjdk7/apache-ant-1.7.1-bin.zip) = 11657986 bytes
+SHA1 (openjdk7/rhino1_7R2.zip) = 3bb380cfb7f6febb87a64b2dee7fa308042f37e4
+RMD160 (openjdk7/rhino1_7R2.zip) = 58ae321829ac701e442bfbfed3d6f87b2bb6ba4c
+Size (openjdk7/rhino1_7R2.zip) = 2996867 bytes
+SHA1 (openjdk7/xalan-j_2_7_1-bin.zip) = 681f04e180de88264bd3df68946001efb0bc2ff1
+RMD160 (openjdk7/xalan-j_2_7_1-bin.zip) = d7174fcc9dd8b3876b5a9c8cde021953475b57f8
+Size (openjdk7/xalan-j_2_7_1-bin.zip) = 17336979 bytes
+SHA1 (patch-aa) = f7720f1730611a8331856da0a9593d8456b6c104
+SHA1 (patch-ab) = d8e8a3d6b2251f0d0f1857f7578405269efa94da
+SHA1 (patch-ac) = 87453db8e841960137d93c8c3f5e74299d9ad2b2
+SHA1 (patch-ad) = 19a423e2a6414ddb16866fe24f628ecd573ee4ab
+SHA1 (patch-ae) = cf073e70408d371ff436ea4b89efece2d27cf5bd
+SHA1 (patch-af) = 5bfeeaf535335a2728af46c8ef5f5e1b4c2a5a52
+SHA1 (patch-ag) = 2c0bf60a99e4160bed29434cf0f36f751f721cb9
+SHA1 (patch-ah) = 3b7094127fe66c0b0940765930d45cf220355b31
+SHA1 (patch-ai) = 5b04e8227dc32c3746b7940ebc260bfa55ee3480
