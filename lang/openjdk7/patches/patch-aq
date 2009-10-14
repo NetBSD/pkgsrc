@@ -1,0 +1,17 @@
+$NetBSD: patch-aq,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- jdk/src/share/classes/sun/font/FontManager.java.orig	2008-12-19 09:45:40.000000000 +0100
++++ jdk/src/share/classes/sun/font/FontManager.java
+@@ -3410,6 +3410,12 @@ public final class FontManager {
+             info[1] = info[1] + File.separator + "arial.ttf";
+         } else {
+             initFontConfigFonts(false);
++            if (fontConfigFonts == null) {
++                     info[0] = "nonexistent";
++                     info[1] = "/nonexistent.ttf";
++                     defaultPlatformFont = info;
++                     return defaultPlatformFont;
++            }
+             for (int i=0; i<fontConfigFonts.length; i++) {
+                 if ("sans".equals(fontConfigFonts[i].fcFamily) &&
+                     0 == fontConfigFonts[i].style) {

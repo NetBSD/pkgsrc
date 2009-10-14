@@ -1,0 +1,14 @@
+$NetBSD: patch-ao,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- jdk/make/common/Release.gmk.orig	2009-01-06 21:21:32.000000000 +0100
++++ jdk/make/common/Release.gmk
+@@ -1065,7 +1065,8 @@ initial-image-jdk:: initial-image-jdk-se
+ 	@#
+ 	@# Swing BeanInfo generation
+ 	@#
+-	$(CD) javax/swing/beaninfo && $(MAKE) swing-1.2-beans
++	@# XXX javadoc
++	@# $(CD) javax/swing/beaninfo && $(MAKE) swing-1.2-beans
+ ifneq ($(PLATFORM), windows)
+ 	$(call copy-man-pages,$(JDK_IMAGE_DIR),$(JDK_MAN_PAGES))
+ endif # !windows
