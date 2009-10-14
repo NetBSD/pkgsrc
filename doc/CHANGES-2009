@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3958 2009/10/14 12:42:42 adam Exp $
+$NetBSD: CHANGES-2009,v 1.3959 2009/10/14 13:27:11 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5231,3 +5231,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added lang/openjdk7 version 1.7.0.72.20090924 [tnn 2009-10-14]
 	Added www/openjdk7-icedtea-plugin version 1.11.0.20091005 [tnn 2009-10-14]
 	Updated graphics/hugin to 2009.2.0 [adam 2009-10-14]
+	Added misc/rump version 20091014 [stacktic 2009-10-14]
