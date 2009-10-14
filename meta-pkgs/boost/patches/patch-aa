@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2009/09/20 10:29:07 tnn Exp $
+$NetBSD: patch-aa,v 1.7 2009/10/14 06:40:08 adam Exp $
 
---- Jamroot.orig
+--- Jamroot.orig	2009-08-23 18:17:37.000000000 +0200
 +++ Jamroot
-@@ -253,6 +255,10 @@
+@@ -251,6 +251,10 @@ rule libraries-to-install ( existing-lib
         ECHO "error: both --with-<library> and --without-<library> specified" ;
         EXIT ;
     }
@@ -13,11 +13,11 @@ $NetBSD: patch-aa,v 1.6 2009/09/20 10:29:07 tnn Exp $
  
     local wrong = [ set.difference $(with-parameter) : $(existing-libraries) ] ;
     if $(wrong)
-@@ -398,6 +404,7 @@
-     :   <location>$(stage-locate)/lib
-         <install-dependencies>on <install-type>LIB 
-         <install-no-version-symlinks>on
-+	<dll-path>@PREFIX@/lib
+@@ -439,6 +443,7 @@ install stage-proper
+     : <location>$(stage-locate)/lib
+       <install-dependencies>on <install-type>LIB
+       <install-no-version-symlinks>on
++      <dll-path>@PREFIX@/lib
      ;
  explicit stage-proper ;
  
