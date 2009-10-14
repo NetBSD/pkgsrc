@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+
+--- configure.ac.orig	2009-10-07 10:48:00.000000000 +0200
++++ configure.ac
+@@ -421,7 +421,7 @@ dnl FIXME: use unstable
+ if test "x${enable_plugin}" = "xyes"
+ then
+   PKG_CHECK_MODULES(XULRUNNER, \
+-    nspr mozilla-js mozilla-plugin libxul-unstable >= 1.9)
++    mozilla-nspr mozilla-js mozilla-plugin libxul-unstable >= 1.9)
+   PKG_CHECK_MODULES(GTK, gtk+-2.0)
+   IT_XULRUNNER_VERSION
+ fi

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+
+--- Makefile.am.orig	2009-10-08 16:31:21.000000000 +0200
++++ Makefile.am
+@@ -1704,7 +1704,7 @@ IcedTeaNPPlugin.so: IcedTeaNPPlugin_obje
+ 	  $(GLIB_LIBS) \
+ 	  $(GTK_LIBS) \
+ 	  $(MOZILLA_LIBS)\
+-	  -shared -o $@ \
++	  -shared -o $@; \
+ 	cd ../
+ 
+ clean-IcedTeaNPPlugin:
