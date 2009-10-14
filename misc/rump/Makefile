@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/14 13:26:09 stacktic Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/14 22:30:06 pooka Exp $
 #
 
 DISTNAME=		rump_20091014
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/stacktic/
 
 MAINTAINER=		stacktic@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/docs/rump/
-COMMENT=		NetBSD Filesystems in Userspace Libraries
+COMMENT=		Virtualized NetBSD kernel components in userspace
 
 ONLY_FOR_PLATFORM=	Linux-*-* FreeBSD-*-*
 
