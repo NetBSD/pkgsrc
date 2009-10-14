@@ -1,16 +1,13 @@
-# $NetBSD: Makefile.common,v 1.18 2009/08/21 14:54:30 adam Exp $
-#
+# $NetBSD: Makefile.common,v 1.19 2009/10/14 06:40:08 adam Exp $
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
 
-BOOST_VERSION=		1.38.0
+BOOST_VERSION=		1.40.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
 CATEGORIES=		devel
-
-PKGREVISION=		2
 
 .if ${BOOST_PACKAGE} == "meta-pkg"
 
@@ -48,14 +45,14 @@ SUBST_VARS.fix-prefix=		PREFIX
 # Prevent using a pkgsrc libtool in OS X because the darwin toolset needs
 # the native libtool from /usr/bin.
 post-wrapper:
-	@ln -s /usr/bin/libtool ${WRAPPER_BINDIR}/libtool
+	ln -s /usr/bin/libtool ${WRAPPER_BINDIR}/libtool
 .endif
 
 # We can't do this at post-extract because the extract cookie will get a
 # future timestamp than the sources.  If this happens, print-PLIST does
 # not work.
 pre-configure:
-	@cd ${WRKSRC} && ${FIND} . -type f -print | ${XARGS} ${TOUCH}
+	cd ${WRKSRC} && ${FIND} . -type f -print | ${XARGS} ${TOUCH}
 
 # Generate a new user.hpp or use the installed one, depending on the
 # package we are building.
@@ -67,7 +64,7 @@ do-configure:
 	    ${WRKSRC}/boost/config/user.hpp
 .elif ${BOOST_CONFIG} == "generate"
 do-configure:
-	@cd ${WRKSRC}/libs/config && \
+	cd ${WRKSRC}/libs/config && \
 	    ${SETENV} ${CONFIGURE_ENV} ${SH} ./configure
 	${CP} -f ${WRKSRC}/libs/config/user.hpp ${WRKSRC}/boost/config/user.hpp
 .endif

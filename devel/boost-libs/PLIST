@@ -1,83 +1,42 @@
-@comment $NetBSD: PLIST,v 1.6 2009/03/03 08:57:58 jmmv Exp $
-lib/libboost_date_time-mt-d.a
-lib/libboost_date_time-mt-d.so
-lib/libboost_date_time-mt.a
-lib/libboost_date_time-mt.so
-lib/libboost_filesystem-mt-d.a
-lib/libboost_filesystem-mt-d.so
-lib/libboost_filesystem-mt.a
-lib/libboost_filesystem-mt.so
-lib/libboost_graph-mt-d.a
-lib/libboost_graph-mt-d.so
-lib/libboost_graph-mt.a
-lib/libboost_graph-mt.so
-lib/libboost_iostreams-mt-d.a
-lib/libboost_iostreams-mt-d.so
-lib/libboost_iostreams-mt.a
-lib/libboost_iostreams-mt.so
-lib/libboost_math_c99-mt-d.a
-lib/libboost_math_c99-mt-d.so
-lib/libboost_math_c99-mt.a
-lib/libboost_math_c99-mt.so
-lib/libboost_math_c99f-mt-d.a
-lib/libboost_math_c99f-mt-d.so
-lib/libboost_math_c99f-mt.a
-lib/libboost_math_c99f-mt.so
-@comment lib/libboost_math_c99l-mt-d.a
-@comment lib/libboost_math_c99l-mt-d.so
-@comment lib/libboost_math_c99l-mt.a
-@comment lib/libboost_math_c99l-mt.so
-lib/libboost_math_tr1-mt-d.a
-lib/libboost_math_tr1-mt-d.so
-lib/libboost_math_tr1-mt.a
-lib/libboost_math_tr1-mt.so
-lib/libboost_math_tr1f-mt-d.a
-lib/libboost_math_tr1f-mt-d.so
-lib/libboost_math_tr1f-mt.a
-lib/libboost_math_tr1f-mt.so
-@comment lib/libboost_math_tr1l-mt-d.a
-@comment lib/libboost_math_tr1l-mt-d.so
-@comment lib/libboost_math_tr1l-mt.a
-@comment lib/libboost_math_tr1l-mt.so
-lib/libboost_prg_exec_monitor-mt-d.a
-lib/libboost_prg_exec_monitor-mt-d.so
-lib/libboost_prg_exec_monitor-mt.a
-lib/libboost_prg_exec_monitor-mt.so
-lib/libboost_program_options-mt-d.a
-lib/libboost_program_options-mt-d.so
-lib/libboost_program_options-mt.a
-lib/libboost_program_options-mt.so
-lib/libboost_regex-mt-d.a
-lib/libboost_regex-mt-d.so
-lib/libboost_regex-mt.a
-lib/libboost_regex-mt.so
-lib/libboost_serialization-mt-d.a
-lib/libboost_serialization-mt-d.so
-lib/libboost_serialization-mt.a
-lib/libboost_serialization-mt.so
-lib/libboost_signals-mt-d.a
-lib/libboost_signals-mt-d.so
-lib/libboost_signals-mt.a
-lib/libboost_signals-mt.so
-lib/libboost_system-mt-d.a
-lib/libboost_system-mt-d.so
-lib/libboost_system-mt.a
-lib/libboost_system-mt.so
-lib/libboost_test_exec_monitor-mt-d.a
-lib/libboost_test_exec_monitor-mt.a
-lib/libboost_thread-mt-d.a
-lib/libboost_thread-mt-d.so
-lib/libboost_thread-mt.a
-lib/libboost_thread-mt.so
-lib/libboost_unit_test_framework-mt-d.a
-lib/libboost_unit_test_framework-mt-d.so
-lib/libboost_unit_test_framework-mt.a
-lib/libboost_unit_test_framework-mt.so
-lib/libboost_wave-mt-d.a
-lib/libboost_wave-mt-d.so
-lib/libboost_wave-mt.a
-lib/libboost_wave-mt.so
-lib/libboost_wserialization-mt-d.a
-lib/libboost_wserialization-mt-d.so
-lib/libboost_wserialization-mt.a
-lib/libboost_wserialization-mt.so
+@comment $NetBSD: PLIST,v 1.7 2009/10/14 06:40:08 adam Exp $
+lib/libboost_date_time.a
+lib/libboost_date_time.so
+lib/libboost_filesystem.a
+lib/libboost_filesystem.so
+lib/libboost_graph.a
+lib/libboost_graph.so
+lib/libboost_iostreams.a
+lib/libboost_iostreams.so
+lib/libboost_math_c99.a
+lib/libboost_math_c99.so
+lib/libboost_math_c99f.a
+lib/libboost_math_c99f.so
+@comment lib/libboost_math_c99l.a
+@comment lib/libboost_math_c99l.so
+lib/libboost_math_tr1.a
+lib/libboost_math_tr1.so
+lib/libboost_math_tr1f.a
+lib/libboost_math_tr1f.so
+@comment lib/libboost_math_tr1l.a
+@comment lib/libboost_math_tr1l.so
+lib/libboost_prg_exec_monitor.a
+lib/libboost_prg_exec_monitor.so
+lib/libboost_program_options.a
+lib/libboost_program_options.so
+lib/libboost_regex.a
+lib/libboost_regex.so
+lib/libboost_serialization.a
+lib/libboost_serialization.so
+lib/libboost_signals.a
+lib/libboost_signals.so
+lib/libboost_system.a
+lib/libboost_system.so
+lib/libboost_test_exec_monitor.a
+lib/libboost_thread.a
+lib/libboost_thread.so
+lib/libboost_unit_test_framework.a
+lib/libboost_unit_test_framework.so
+lib/libboost_wave.a
+lib/libboost_wave.so
+lib/libboost_wserialization.a
+lib/libboost_wserialization.so

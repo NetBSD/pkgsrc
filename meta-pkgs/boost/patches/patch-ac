@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2009/08/21 14:54:30 adam Exp $
+$NetBSD: patch-ac,v 1.5 2009/10/14 06:40:08 adam Exp $
 
---- boost/config/suffix.hpp.orig	2009-08-20 19:36:39.000000000 +0200
+--- boost/config/suffix.hpp.orig	2009-06-06 15:48:57.000000000 +0200
 +++ boost/config/suffix.hpp
-@@ -224,7 +224,7 @@
+@@ -226,7 +226,7 @@
  //
  #if (defined(__MT__) || defined(_MT) || defined(_REENTRANT) \
      || defined(_PTHREADS) || defined(__APPLE__) || defined(__DragonFly__)) \

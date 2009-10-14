@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/10/14 06:40:07 adam Exp $
 share/boost-build/boost-build.jam
 share/boost-build/boost.css
 share/boost-build/boost_build.png
@@ -51,6 +51,13 @@ share/boost-build/doc/src/userman.xml
 share/boost-build/doc/src/v1_vs_v2.xml
 share/boost-build/doc/tools.html
 share/boost-build/example/boost-build.jam
+share/boost-build/example/built_tool/Jamroot.jam
+share/boost-build/example/built_tool/core/Jamfile.jam
+share/boost-build/example/built_tool/core/a.td
+share/boost-build/example/built_tool/core/core.cpp
+share/boost-build/example/built_tool/readme.txt
+share/boost-build/example/built_tool/tblgen/Jamfile.jam
+share/boost-build/example/built_tool/tblgen/tblgen.cpp
 share/boost-build/example/customization/class.verbatim
 share/boost-build/example/customization/codegen.cpp
 share/boost-build/example/customization/inline_file.py
@@ -335,6 +342,7 @@ share/boost-build/test/qt4/qtgui.cpp
 share/boost-build/test/qt4/qthelp.cpp
 share/boost-build/test/qt4/qtnetwork.cpp
 share/boost-build/test/qt4/qtscript.cpp
+share/boost-build/test/qt4/qtscripttools.cpp
 share/boost-build/test/qt4/qtsql.cpp
 share/boost-build/test/qt4/qtsvg.cpp
 share/boost-build/test/qt4/qttest.cpp
@@ -438,6 +446,7 @@ share/boost-build/tools/common.jam
 share/boost-build/tools/como-linux.jam
 share/boost-build/tools/como-win.jam
 share/boost-build/tools/como.jam
+share/boost-build/tools/convert.jam
 share/boost-build/tools/cw-config.jam
 share/boost-build/tools/cw.jam
 share/boost-build/tools/darwin.jam
