@@ -1,0 +1,40 @@
+$NetBSD: patch-ap,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- jdk/src/solaris/native/sun/awt/fontpath.c.orig	2009-01-10 14:29:12.000000000 +0100
++++ jdk/src/solaris/native/sun/awt/fontpath.c
+@@ -164,6 +164,27 @@ static char *fullLinuxFontPath[] = {
+     NULL, /* terminates the list */
+ };
+ #endif
++static char *pkgsrcFontPath[] = {
++   "/usr/pkg/lib/X11/fonts/100dpi",
++   "/usr/pkg/lib/X11/fonts/75dpi",
++   "/usr/pkg/lib/X11/fonts/Type1",
++   "/usr/pkg/lib/X11/fonts/cyrillic",
++   "/usr/pkg/lib/X11/fonts/misc",
++   "/usr/pkg/lib/X11/fonts/TTF",
++   "/usr/X11R7/lib/X11/fonts/100dpi",
++   "/usr/X11R7/lib/X11/fonts/75dpi",
++   "/usr/X11R7/lib/X11/fonts/Type1",
++   "/usr/X11R7/lib/X11/fonts/cyrillic",
++   "/usr/X11R7/lib/X11/fonts/misc",
++   "/usr/X11R7/lib/X11/fonts/TTF",
++   "/usr/X11R6/lib/X11/fonts/100dpi",
++   "/usr/X11R6/lib/X11/fonts/75dpi",
++   "/usr/X11R6/lib/X11/fonts/Type1",
++   "/usr/X11R6/lib/X11/fonts/cyrillic",
++   "/usr/X11R6/lib/X11/fonts/misc",
++   "/usr/X11R6/lib/X11/fonts/TTF",
++   NULL
++};
+ 
+ static char **getFontConfigLocations();
+ 
+@@ -515,6 +536,7 @@ static char *getPlatformFontPathChars(JN
+ #else /* IF SOLARIS */
+     knowndirs = fullSolarisFontPath;
+ #endif
++    knowndirs = pkgsrcFontPath;
+ 
+     /* REMIND: this code requires to be executed when the GraphicsEnvironment
+      * is already initialised. That is always true, but if it were not so,

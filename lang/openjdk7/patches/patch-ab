@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- ./jdk/make/common/shared/Sanity.gmk.orig	2008-12-21 21:41:14.000000000 +0100
++++ ./jdk/make/common/shared/Sanity.gmk
+@@ -787,7 +787,8 @@ $(TEMPDIR)/freetypeinfo: FRC
+ 	@(($(CD) $(BUILDDIR)/tools/freetypecheck && $(MAKE)) || \
+ 	    $(ECHO) "Failed to build freetypecheck." ) > $@
+ 
+-sane-freetype: $(TEMPDIR)/freetypeinfo
++sane-freetype:
++sane-freetype_: $(TEMPDIR)/freetypeinfo
+ 	@if [ "`$(CAT) $< | $(GREP) Fail`" != "" ]; then \
+ 	  $(ECHO) "ERROR: FreeType version " $(REQUIRED_FREETYPE_VERSION) \
+ 	          " or higher is required. \n" \
