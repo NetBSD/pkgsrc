@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/10/13 10:47:57 hasso Exp $
-#
+# $NetBSD: Makefile,v 1.8 2009/10/14 07:22:46 tron Exp $
 
 DISTNAME=	dvipng-1.11
 PKGREVISION=	4
@@ -17,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 USE_TOOLS+=		makeinfo
+
+.include "../../mk/bsd.prefs.mk"
 
 # DragonFly has stripped makeinfo in the base - without texi2dvi.
 .if ${OPSYS} == "DragonFly"
