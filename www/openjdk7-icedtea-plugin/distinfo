@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/14 11:39:25 tnn Exp $
+$NetBSD: distinfo,v 1.2 2009/10/14 12:36:12 tnn Exp $
 
 SHA1 (openjdk7/175529fae103.tar.bz2) = 297f474423a18d727a87b922b1665ea4e5d54732
 RMD160 (openjdk7/175529fae103.tar.bz2) = 37bb512ccce29eb764a6bf9649c13715bf3eb2d6
@@ -14,7 +14,7 @@ RMD160 (openjdk7/xalan-j_2_7_1-bin.zip) = d7174fcc9dd8b3876b5a9c8cde021953475b57
 Size (openjdk7/xalan-j_2_7_1-bin.zip) = 17336979 bytes
 SHA1 (patch-aa) = f7720f1730611a8331856da0a9593d8456b6c104
 SHA1 (patch-ab) = d8e8a3d6b2251f0d0f1857f7578405269efa94da
-SHA1 (patch-ac) = 87453db8e841960137d93c8c3f5e74299d9ad2b2
+SHA1 (patch-ac) = 3fd60671e05767eaa2d682f6cbd7b028f4f68f6e
 SHA1 (patch-ad) = 19a423e2a6414ddb16866fe24f628ecd573ee4ab
 SHA1 (patch-ae) = cf073e70408d371ff436ea4b89efece2d27cf5bd
 SHA1 (patch-af) = 5bfeeaf535335a2728af46c8ef5f5e1b4c2a5a52
