@@ -1,0 +1,22 @@
+$NetBSD: patch-av,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- jdk/make/net/sourceforge/jnlp/Makefile.orig	2009-10-09 14:48:41.000000000 +0200
++++ jdk/make/net/sourceforge/jnlp/Makefile
+@@ -0,0 +1,17 @@
++BUILDDIR = ../../..
++PACKAGE = net.sourceforge.jnlp
++PRODUCT = jnlp
++
++include $(BUILDDIR)/common/Defs.gmk
++
++AUTO_FILES_JAVA_DIRS = net/sourceforge/jnlp net/sourceforge/nanoxml netscape
++LOCALE_SET_DEFINITION = jre
++
++OTHER_PROPERTIES += $(PKGDIR)/resources/Messages.properties
++
++build: $(CLASSDESTDIR)/$(PKGDIR)/resources/Messages.properties
++
++$(CLASSDESTDIR)/$(PKGDIR)/resources/Messages.properties: $(SHARE_SRC)/classes/$(PKGDIR)/resources/Messages.properties
++	 $(install-file)
++
++include $(BUILDDIR)/common/Classes.gmk

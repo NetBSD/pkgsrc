@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- jdk/make/launchers/Makefile.launcher.orig	2009-09-17 09:51:41.000000000 +0200
++++ jdk/make/launchers/Makefile.launcher
+@@ -157,7 +157,7 @@ endif
+ ifeq ($(GUI_TOOL),true)
+   ifneq ($(PLATFORM), windows)
+     # Anything with a GUI needs X11 to be linked in.
+-    OTHER_LDLIBS += -L$(OPENWIN_LIB) -lX11
++    OTHER_LDLIBS += -Wl,-R$(OPENWIN_LIB) -L$(OPENWIN_LIB) -lX11
+   endif
+ endif
+ 

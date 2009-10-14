@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+
+--- jdk/src/solaris/native/java/net/PlainSocketImpl.c.orig	2009-10-06 20:21:27.000000000 +0200
++++ jdk/src/solaris/native/java/net/PlainSocketImpl.c
+@@ -212,6 +212,16 @@ Java_java_net_PlainSocketImpl_socketCrea
+     } else {
+         (*env)->SetIntField(env, fdObj, IO_fd_fdID, fd);
+     }
++#if defined(__NetBSD__)
++    if (ipv6_available()) {
++        int rv, opt = 0;
++        rv = setsockopt(fd, IPPROTO_IPV6, IPV6_V6ONLY, (char *) &opt, sizeof(opt));
++        if (rv == -1) {
++            /* XXX if this happens I guess we leak the socket? */
++            NET_ThrowNew(env, errno, "setsockopt");
++        }
++    }
++#endif
+ 
+     /*
+      * If this is a server socket then enable SO_REUSEADDR
