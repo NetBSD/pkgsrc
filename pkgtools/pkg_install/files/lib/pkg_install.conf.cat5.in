@@ -21,6 +21,10 @@ DDEESSCCRRIIPPTTIIOONN
      ACTIVE_FTP
              Force the use of active FTP.
 
+     CACHE_INDEX
+             Cache directory listenings in memory.  This avoids retransfers of
+             the large directory index for HTTP and is enabled by default.
+
      CERTIFICATE_ANCHOR_PKGS
              Path to the file containing the certificates used for validating
              binary packages.  A package is trusted when a certificate chain
@@ -142,4 +146,4 @@ FFIILLEESS
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1)
 
-NetBSD 5.0                      August 6, 2009                      NetBSD 5.0
+NetBSD 5.0                     October 15, 2009                     NetBSD 5.0
