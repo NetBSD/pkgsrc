@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3963 2009/10/15 07:58:17 rhaen Exp $
+$NetBSD: CHANGES-2009,v 1.3964 2009/10/15 08:18:06 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5238,3 +5238,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/boost-libs to 1.40.0nb1 [adam 2009-10-15]
 	Updated devel/boost-python to 1.40.0nb1 [adam 2009-10-15]
 	Updated net/p5-Geo-IP to 1.38 [rhaen 2009-10-15]
+	Updated x11/xf86-video-openchrome to 0.2.904 [sborrill 2009-10-15]
