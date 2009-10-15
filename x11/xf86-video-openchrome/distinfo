@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/24 16:52:45 sborrill Exp $
+$NetBSD: distinfo,v 1.2 2009/10/15 08:16:03 sborrill Exp $
 
-SHA1 (xf86-video-openchrome-0.2.903.tar.bz2) = 7889ed015a0ec2447dfe729ed10fb9dd2fd9024d
-RMD160 (xf86-video-openchrome-0.2.903.tar.bz2) = 03e3b5036e1296d2d0a2d45153539797caf73896
-Size (xf86-video-openchrome-0.2.903.tar.bz2) = 420104 bytes
-SHA1 (patch-via_id.c) = 872417f4aa504e4ca5fe57f0b5665c4d97befa36
+SHA1 (xf86-video-openchrome-0.2.904.tar.bz2) = 23225057d5b75d6aac3e7a710cbc067b2eb29228
+RMD160 (xf86-video-openchrome-0.2.904.tar.bz2) = 8d000e210cb3c0443755f5567ed315e81eababf3
+Size (xf86-video-openchrome-0.2.904.tar.bz2) = 460051 bytes
