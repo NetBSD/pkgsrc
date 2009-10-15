@@ -1,4 +1,4 @@
-/* $NetBSD: devinfo_mass.c,v 1.2 2008/12/26 15:30:06 jmcneill Exp $ */
+/* $NetBSD: devinfo_mass.c,v 1.3 2009/10/15 00:30:39 jmcneill Exp $ */
 
 /*-
  * Copyright (c) 2008 Jared D. McNeill <jmcneill@invisible.ca>
@@ -160,7 +160,8 @@ devinfo_mass_add(HalDevice *parent, const char *devnode, char *devfs_path, char 
 		return NULL;
 	}
 
-	if (strcmp (driver, "wd") != 0 && strcmp (driver, "sd") != 0) {
+	if (strcmp (driver, "wd") != 0 && strcmp (driver, "sd") != 0 &&
+	    strcmp (driver, "ld") != 0) {
 		prop_object_release (dict);
 		return NULL;
 	}
