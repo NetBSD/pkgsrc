@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/10/14 13:44:26 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2009/10/15 08:47:32 tnn Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk7-1.7.0.72.20090924
@@ -112,7 +112,7 @@ ${WRKDIR}/stage3-done: ${WRKDIR}/stage2-done ${WRKDIR}/cacerts.out
 
 ${WRKDIR}/cacerts.out:
 	for cert in ${WRKDIR}/cacerts/*.crt; do			\
-		${ECHO} yes | ${BUILDDIR}/bin/keytool			\
+		${ECHO} yes | LC_ALL=C ${BUILDDIR}/bin/keytool		\
 		  -importcert						\
 		  -keystore ${.TARGET}					\
 		  -alias `${ECHO} $$cert | sed 's,.*/\\([^/]*\\)\\.crt,\\1,'` \
