@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2009/07/09 17:47:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/15 12:20:05 hasso Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
 include/libsoup-2.4/libsoup/soup-auth-domain.h
 include/libsoup-2.4/libsoup/soup-auth.h
+include/libsoup-2.4/libsoup/soup-content-sniffer.h
 include/libsoup-2.4/libsoup/soup-cookie-jar-text.h
 include/libsoup-2.4/libsoup/soup-cookie-jar.h
 include/libsoup-2.4/libsoup/soup-cookie.h
@@ -18,6 +19,7 @@ include/libsoup-2.4/libsoup/soup-message.h
 include/libsoup-2.4/libsoup/soup-method.h
 include/libsoup-2.4/libsoup/soup-misc.h
 include/libsoup-2.4/libsoup/soup-multipart.h
+include/libsoup-2.4/libsoup/soup-password-manager.h
 include/libsoup-2.4/libsoup/soup-portability.h
 include/libsoup-2.4/libsoup/soup-proxy-resolver.h
 include/libsoup-2.4/libsoup/soup-proxy-uri-resolver.h
@@ -50,7 +52,6 @@ share/gtk-doc/html/libsoup-2.4/SoupCookieJarSqlite.html
 share/gtk-doc/html/libsoup-2.4/SoupCookieJarText.html
 share/gtk-doc/html/libsoup-2.4/SoupLogger.html
 share/gtk-doc/html/libsoup-2.4/SoupMessage.html
-share/gtk-doc/html/libsoup-2.4/SoupProxyResolver.html
 share/gtk-doc/html/libsoup-2.4/SoupServer.html
 share/gtk-doc/html/libsoup-2.4/SoupSession.html
 share/gtk-doc/html/libsoup-2.4/SoupSessionAsync.html
@@ -62,6 +63,7 @@ share/gtk-doc/html/libsoup-2.4/ch02.html
 share/gtk-doc/html/libsoup-2.4/ch03.html
 share/gtk-doc/html/libsoup-2.4/ch04.html
 share/gtk-doc/html/libsoup-2.4/ch05.html
+share/gtk-doc/html/libsoup-2.4/ch06.html
 share/gtk-doc/html/libsoup-2.4/home.png
 share/gtk-doc/html/libsoup-2.4/index.html
 share/gtk-doc/html/libsoup-2.4/index.sgml
@@ -69,18 +71,20 @@ share/gtk-doc/html/libsoup-2.4/ix01.html
 share/gtk-doc/html/libsoup-2.4/left.png
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4.devhelp
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4.devhelp2
-share/gtk-doc/html/libsoup-2.4/libsoup-24-GValue-Support.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-HTML-Form-Support.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-Soup-Miscellaneous-Utilities.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-SoupCookie.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-SoupMessageBody.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-SoupMessageHeaders.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-SoupMultipart.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-SoupURI.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-XMLRPC-Support.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-soup-gnome-features.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-soup-method.html
-share/gtk-doc/html/libsoup-2.4/libsoup-24-soup-status.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-GValue-Support.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-HTML-Form-Support.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-Soup-Miscellaneous-Utilities.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupContentSniffer.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupCookie.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupMessageBody.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupMessageHeaders.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupMultipart.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupProxyURIResolver.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupURI.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-XMLRPC-Support.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-soup-gnome-features.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-soup-method.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-soup-status.html
 share/gtk-doc/html/libsoup-2.4/libsoup-build-howto.html
 share/gtk-doc/html/libsoup-2.4/libsoup-client-howto.html
 share/gtk-doc/html/libsoup-2.4/libsoup-porting-2.2-2.4.html
