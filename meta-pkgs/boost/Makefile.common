@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2009/10/14 06:40:08 adam Exp $
+# $NetBSD: Makefile.common,v 1.20 2009/10/15 07:29:02 adam Exp $
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
@@ -32,6 +32,8 @@ PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.2 # if using gcc; ignored otherwise
+
+PLIST_SUBST+=		BOOST_VERSION="${BOOST_VERSION}"
 
 SUBST_CLASSES+=			fix-prefix
 SUBST_STAGE.fix-prefix=		pre-configure

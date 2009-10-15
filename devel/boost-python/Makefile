@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2009/10/14 06:40:08 adam Exp $
-#
+# $NetBSD: Makefile,v 1.14 2009/10/15 07:29:02 adam Exp $
 
+PKGREVISION=		1
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
 BOOST_CONFIG=		installed
