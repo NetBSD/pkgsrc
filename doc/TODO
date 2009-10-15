@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8529 2009/10/15 11:48:00 hasso Exp $
+$NetBSD: TODO,v 1.8530 2009/10/15 12:28:47 hasso Exp $
 
 Suggested new packages
 ======================
@@ -1472,7 +1472,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webby-0.9.3
-	o webkit-gtk-1.1.11 [needs libsoup24>2.27.4]
 	o webmin-1.490
 	o weechat-0.3.0
 	o weewm-0.01
