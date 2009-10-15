@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.331 2009/10/08 06:17:24 jnemeth Exp $
+# $NetBSD: Makefile,v 1.332 2009/10/15 05:16:29 jnemeth Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -203,6 +203,7 @@ SUBDIR+=	ruby-launchy
 SUBDIR+=	ruby-progressbar
 SUBDIR+=	ruby-transaction-simple
 SUBDIR+=	rubygems
+SUBDIR+=	rump
 SUBDIR+=	sch
 SUBDIR+=	sci
 SUBDIR+=	screen
