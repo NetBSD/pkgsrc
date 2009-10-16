@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/16 12:36:20 reed Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/16 13:02:37 reed Exp $
 #
 
 DISTNAME=		lyx-1.6.4.1
@@ -16,6 +16,7 @@ HOMEPAGE=		http://www.lyx.org/
 COMMENT=		Document processor and graphical frontend for LaTeX
 
 CONFLICTS+=		lyx-xforms-[0-9]* lyx-qt-[0-9]*
+SUPERSEDES=		lyx-xforms-[0-9]* lyx-qt-[0-9]*
 
 UNLIMIT_RESOURCES+=	datasize
 
