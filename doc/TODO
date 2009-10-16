@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8531 2009/10/16 02:48:30 obache Exp $
+$NetBSD: TODO,v 1.8532 2009/10/16 10:46:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -694,7 +694,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.6.7 [GNOME 2.26]
 	o glchess-1.0.5
 	o gle-4.2.1
-	o glibmm-2.22.1 [GNOME 2.28]
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
