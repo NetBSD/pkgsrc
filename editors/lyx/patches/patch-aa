@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/16 12:36:20 reed Exp $
+
+--- configure.orig	2009-10-10 09:26:56.000000000 -0500
++++ configure	2009-10-10 09:27:11.000000000 -0500
+@@ -2352,7 +2352,7 @@
+ 
+ { $as_echo "$as_me:$LINENO: result: $build_type" >&5
+ $as_echo "$build_type" >&6; }
+-if test $lyx_devel_version == yes ; then
++if test $lyx_devel_version = yes ; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define DEVEL_VERSION 1
