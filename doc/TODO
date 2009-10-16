@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8530 2009/10/15 12:28:47 hasso Exp $
+$NetBSD: TODO,v 1.8531 2009/10/16 02:48:30 obache Exp $
 
 Suggested new packages
 ======================
@@ -1174,7 +1174,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
-	o pound-2.4.5 [pkg/42163]
 	o pptp-1.7.1 [pkg/38038]
 	o profit-2.5.3
 	o projclock-0.9
