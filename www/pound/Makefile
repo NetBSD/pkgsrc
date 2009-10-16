@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/07/07 19:05:20 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/10/16 02:48:06 obache Exp $
 
-DISTNAME=	Pound-2.3.2
+DISTNAME=	Pound-2.4.5
 PKGNAME=	${DISTNAME:S/Pound/pound/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.apsis.ch/pound/
 EXTRACT_SUFX=	.tgz
@@ -10,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.apsis.ch/pound/
 COMMENT=	Reverse proxy, load balancer and HTTPS front-end
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -27,5 +27,6 @@ SUBST_SED.config=	-e "s,/usr/local/etc/,"${PKG_SYSCONFDIR:Q}"/,g"
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2009/07/07 19:05:20 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2009/10/16 02:48:06 obache Exp $
 
---- Makefile.in.orig	2009-07-07 21:01:57.000000000 +0200
+--- Makefile.in.orig	2009-06-29 15:53:58.000000000 +0000
 +++ Makefile.in
-@@ -57,11 +57,11 @@ $(OBJS):	pound.h
+@@ -59,11 +59,11 @@ $(OBJS):	pound.h
  
  install:	all
  		@INSTALL@ -d ${DESTDIR}@sbindir@
