@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2009/08/06 06:23:43 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2009/10/16 12:59:08 reed Exp $
 #
 
 COMMENT=	Editors
@@ -54,9 +54,7 @@ SUBDIR+=	leafpad
 SUBDIR+=	leim20
 SUBDIR+=	leim21
 SUBDIR+=	lpe
-SUBDIR+=	lyx-qt
-SUBDIR+=	lyx-xforms
-SUBDIR+=	lyx15
+SUBDIR+=	lyx
 SUBDIR+=	manedit
 SUBDIR+=	matlab-mode
 SUBDIR+=	mflteco
