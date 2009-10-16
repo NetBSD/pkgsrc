@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/16 12:36:20 reed Exp $
+
+SHA1 (lyx-1.6.4.1.tar.bz2) = 85bf187841b85f8104816866a98230b1206e39f8
+RMD160 (lyx-1.6.4.1.tar.bz2) = 2ca725386ed26fbdfcf0d4ff768359cbd5449dd2
+Size (lyx-1.6.4.1.tar.bz2) = 11002258 bytes
+SHA1 (patch-aa) = 30152abcf9ee7531ba812bfe1ab918cfb41755f6
