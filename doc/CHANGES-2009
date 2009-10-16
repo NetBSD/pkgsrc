@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3971 2009/10/16 10:46:29 adam Exp $
+$NetBSD: CHANGES-2009,v 1.3972 2009/10/16 11:21:36 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5246,3 +5246,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/pound to 2.4.5 [obache 2009-10-16]
 	Updated converters/p5-JSON-Any to 1.22 [rhaen 2009-10-16]
 	Updated devel/glibmm to 2.22.1 [adam 2009-10-16]
+	Updated www/p5-Catalyst-Action-REST to 0.78 [rhaen 2009-10-16]
