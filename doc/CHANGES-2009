@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3973 2009/10/16 12:59:07 reed Exp $
+$NetBSD: CHANGES-2009,v 1.3974 2009/10/16 19:39:38 tez Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5250,3 +5250,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed editors/lyx-qt [reed 2009-10-16]
 	Removed editors/lyx-xforms [reed 2009-10-16]
 	Renamed editors/lyx15 to editors/lyx [reed 2009-10-16]
+	Updated print/xpdf to 3.02pl4 [tez 2009-10-16]
