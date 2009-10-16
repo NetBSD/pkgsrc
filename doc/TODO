@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8533 2009/10/16 12:59:08 reed Exp $
+$NetBSD: TODO,v 1.8534 2009/10/16 20:28:03 jakllsch Exp $
 
 Suggested new packages
 ======================
@@ -1496,7 +1496,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xboard-4.4.0
 	o xcircuit-3.6.85
 	o xclock-1.0.4
-	o xdaliclock-2.25
 	o xdelta-3.0v2
 	o xdesktopwaves-1.3
 	o xdm-1.1.9
