@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3975 2009/10/16 20:28:03 jakllsch Exp $
+$NetBSD: CHANGES-2009,v 1.3976 2009/10/16 22:00:00 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5252,3 +5252,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Renamed editors/lyx15 to editors/lyx [reed 2009-10-16]
 	Updated print/xpdf to 3.02pl4 [tez 2009-10-16]
 	Updated time/xdaliclock to 2.30 [jakllsch 2009-10-16]
+	Updated net/dhcpcd to 5.1.2 [roy 2009-10-16]
