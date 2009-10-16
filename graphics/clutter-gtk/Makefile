@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:56:57 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/16 07:15:27 obache Exp $
 #
 
 DISTNAME=	clutter-gtk-0.8.3
@@ -16,6 +16,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=		gtkdoc-rebase
 
 PKGCONFIG_OVERRIDE+=	clutter-gtk.pc.in
 
