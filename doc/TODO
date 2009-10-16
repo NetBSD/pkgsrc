@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8532 2009/10/16 10:46:30 adam Exp $
+$NetBSD: TODO,v 1.8533 2009/10/16 12:59:08 reed Exp $
 
 Suggested new packages
 ======================
@@ -954,7 +954,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o luit-1.0.4
 	o lucy-1.20
 	o luit-1.0.4
-	o lyx-1.6.4
 	o lzip-1.8
 	o mDNSResponder-212.1
 	o maelstrom-sdl-3.0.6
