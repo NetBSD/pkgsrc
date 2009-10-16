@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3969 2009/10/16 02:48:30 obache Exp $
+$NetBSD: CHANGES-2009,v 1.3970 2009/10/16 07:52:54 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5244,3 +5244,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/webkit-gtk to 1.1.15.2 [hasso 2009-10-15]
 	Updated net/libfetch to 2.26 [joerg 2009-10-15]
 	Updated www/pound to 2.4.5 [obache 2009-10-16]
+	Updated converters/p5-JSON-Any to 1.22 [rhaen 2009-10-16]
