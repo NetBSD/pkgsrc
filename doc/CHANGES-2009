@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3976 2009/10/16 22:00:00 roy Exp $
+$NetBSD: CHANGES-2009,v 1.3977 2009/10/17 01:46:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5253,3 +5253,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/xpdf to 3.02pl4 [tez 2009-10-16]
 	Updated time/xdaliclock to 2.30 [jakllsch 2009-10-16]
 	Updated net/dhcpcd to 5.1.2 [roy 2009-10-16]
+	Updated www/typolight27-translations to 20091015 [taca 2009-10-17]
