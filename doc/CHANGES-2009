@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3985 2009/10/17 14:14:59 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3986 2009/10/17 14:25:16 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5275,3 +5275,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/ruby-dbd-odbc version 0.2.5 [taca 2009-10-17]
 	Updated textproc/p5-Text-CSV_XS to 0.69 [sno 2009-10-17]
 	Updated textproc/p5-Text-CSV to 1.15 [sno 2009-10-17]
+	Updated databases/p5-SQL-Statement to 1.22 [sno 2009-10-17]
