@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/17 12:28:47 taca Exp $
+${RUBY_GEM_HOME}/cache/dbd-mysql-${PKGVERSION}.gem
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/ChangeLog
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/LICENSE
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/README
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/lib/dbd/Mysql.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/lib/dbd/mysql/database.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/lib/dbd/mysql/driver.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/lib/dbd/mysql/statement.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/DBD_TESTS
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/dbd/general/test_database.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/dbd/general/test_statement.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/dbd/general/test_types.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/dbd/mysql/base.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/dbd/mysql/down.sql
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/dbd/mysql/test_blob.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/dbd/mysql/test_new_methods.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/dbd/mysql/test_patches.rb
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/dbd/mysql/up.sql
+${RUBY_GEM_HOME}/gems/dbd-mysql-${PKGVERSION}/test/ts_dbd.rb
+${RUBY_GEM_HOME}/specifications/dbd-mysql-${PKGVERSION}.gemspec
