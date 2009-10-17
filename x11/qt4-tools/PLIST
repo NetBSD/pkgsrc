@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/10/11 09:14:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/10/17 23:32:52 wiz Exp $
 lib/pkgconfig/QtAssistantClient.pc
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
@@ -110,6 +110,18 @@ qt4/include/QtDesigner/qextensionmanager.h
 qt4/include/QtDesigner/sdk_global.h
 qt4/include/QtDesigner/taskmenu.h
 qt4/include/QtDesigner/uilib_global.h
+qt4/include/QtHelp/QHelpContentItem
+qt4/include/QtHelp/QHelpContentModel
+qt4/include/QtHelp/QHelpContentWidget
+qt4/include/QtHelp/QHelpEngine
+qt4/include/QtHelp/QHelpEngineCore
+qt4/include/QtHelp/QHelpGlobal
+qt4/include/QtHelp/QHelpIndexModel
+qt4/include/QtHelp/QHelpIndexWidget
+qt4/include/QtHelp/QHelpSearchEngine
+qt4/include/QtHelp/QHelpSearchQuery
+qt4/include/QtHelp/QHelpSearchQueryWidget
+qt4/include/QtHelp/QHelpSearchResultWidget
 qt4/include/QtHelp/QtHelp
 qt4/include/QtHelp/qhelp_global.h
 qt4/include/QtHelp/qhelpcontentwidget.h
