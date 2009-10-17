@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3992 2009/10/17 22:57:57 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.3993 2009/10/17 23:33:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5282,3 +5282,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Moose-Autobox to 0.10 [sno 2009-10-17]
 	Updated devel/p5-MooseX-Method-Signatures to 0.29 [sno 2009-10-17]
 	Updated x11/qt4-qdbus to 4.5.3nb1 [wiz 2009-10-17]
+	Updated x11/qt4-tools to 4.5.3nb1 [wiz 2009-10-17]
