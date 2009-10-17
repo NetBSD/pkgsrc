@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3982 2009/10/17 09:33:43 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3983 2009/10/17 12:43:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5261,3 +5261,15 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/ruby-mysql to 2.8.1 [taca 2009-10-17]
 	Updated databases/ruby-pg to 0.8.0 [taca 2009-10-17]
 	Updated databases/ruby-sqlite3 to 1.2.5 [taca 2009-10-17]
+	Added databases/ruby-sqlite version 2.2.3 [taca 2009-10-17]
+	Renamed databases/ruby-DBI to databases/ruby-dbi [taca 2009-10-17]
+	Renamed databases/ruby-DBD-mysql to databases/ruby-dbd-mysql [taca 2009-10-17]
+	Renamed databases/ruby-DBD-postgresql to databases/ruby-dbd-pg [taca 2009-10-17]
+	Renamed databases/ruby-DBD-sqlite to databases/ruby-dbd-sqlite [taca 2009-10-17]
+	Renamed databases/ruby-DBD-sqlite3 to databases/ruby-dbd-sqlite3 [taca 2009-10-17]
+	Updated databases/ruby-dbi to 0.4.3 [taca 2009-10-17]
+	Updated databases/ruby-dbd-mysql to 0.4.3 [taca 2009-10-17]
+	Updated databases/ruby-dbd-pg to 0.3.8 [taca 2009-10-17]
+	Updated databases/ruby-dbd-sqlite to 0.1.2 [taca 2009-10-17]
+	Updated databases/ruby-dbd-sqlite3 to 1.2.5 [taca 2009-10-17]
+	Added databases/ruby-dbd-odbc version 0.2.5 [taca 2009-10-17]
