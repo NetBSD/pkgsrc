@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2009/10/17 06:31:41 taca Exp $
+# $NetBSD: Makefile,v 1.30 2009/10/17 06:59:26 taca Exp $
 #
 
 DISTNAME=	mysql-ruby-2.8.1
@@ -10,7 +10,7 @@ MASTER_SITES=	http://rubyforge.org/frs/download.php/51087/ \
 MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=	http://www.tmtm.org/en/mysql/ruby/
 COMMENT=	Ruby extension for MySQL
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 RUBY_HAS_ARCHLIB=	yes
 RUBY_REQD=		1.8.2
