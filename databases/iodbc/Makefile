@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2008/04/14 21:46:57 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2009/10/17 02:01:50 taca Exp $
 
-DISTNAME=	libiodbc-3.52.6
+DISTNAME=	libiodbc-3.52.7
 PKGNAME=	${DISTNAME:S/^lib//}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.iodbc.org/downloads/iODBC/
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.iodbc.org/downloads/iODBC/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iodbc.org/
 COMMENT=	ODBC 3.x driver manager
+LICENSE=	gnu-lgpl-v2
 
 CONFLICTS+=	unixodbc-[0-9]*
 
@@ -23,11 +24,10 @@ MAKE_FLAGS+=		LIBADD_DL=${LIBADD_DL:Q}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EGDIR}/odbc.ini ${PKG_SYSCONFDIR}/odbc.ini
 
-.include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/odbc.ini.sample \
 		${DESTDIR}${EGDIR}/odbc.ini
 
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
