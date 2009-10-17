@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3983 2009/10/17 12:43:26 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3984 2009/10/17 14:11:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5273,3 +5273,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/ruby-dbd-sqlite to 0.1.2 [taca 2009-10-17]
 	Updated databases/ruby-dbd-sqlite3 to 1.2.5 [taca 2009-10-17]
 	Added databases/ruby-dbd-odbc version 0.2.5 [taca 2009-10-17]
+	Updated textproc/p5-Text-CSV_XS to 0.69 [sno 2009-10-17]
