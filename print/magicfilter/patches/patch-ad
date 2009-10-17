@@ -1,0 +1,28 @@
+--- loadconfig.c.orig	2009-10-17 07:41:28.000000000 -0700
++++ loadconfig.c	2009-10-17 07:41:45.000000000 -0700
+@@ -14,14 +14,14 @@
+ 		    fclose(f); return NULL; } while(0);
+ 
+ /*
+- * char *getline(FILE *f, char *file, int *lineno)
++ * char *my_getline(FILE *f, char *file, int *lineno)
+  *
+  * Get a logical line from file f; returning a pointer to the allocated
+  * storage.  Advance the line pointer by # of lines.  file used for
+  * error messages.
+  */
+ 
+-static char *getline(FILE *f, char *file, int *line)
++static char *my_getline(FILE *f, char *file, int *line)
+ {
+   char *buf, *p;
+   int buflen, spc, ch, bslash;
+@@ -118,7 +118,7 @@
+       return NULL;
+     }
+ 
+-  while ( (line = getline(f, file, &lineno)) != NULL )
++  while ( (line = my_getline(f, file, &lineno)) != NULL )
+     {
+       offset = getoffset(line, &p);
+       
