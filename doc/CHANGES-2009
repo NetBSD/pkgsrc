@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3979 2009/10/17 02:03:58 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3980 2009/10/17 05:46:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5257,3 +5257,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/squidGuard to 1.4nb1 [taca 2009-10-17]
 	Updated databases/unixodbc to 2.2.14 [taca 2009-10-17]
 	Updated databases/iodbc to 3.52.7 [taca 2009-10-17]
+	Updated databases/ruby-odbc to 0.9997 [taca 2009-10-17]
