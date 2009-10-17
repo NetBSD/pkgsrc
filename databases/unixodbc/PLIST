@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:43:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/10/17 01:59:14 taca Exp $
 bin/dltest
 bin/isql
 bin/iusql
@@ -28,7 +28,6 @@ ${UNIXODBC_DRIVERS_DIR}/libodbcmyS.la
 ${UNIXODBC_DRIVERS_DIR}/libodbcnnS.la
 ${UNIXODBC_DRIVERS_DIR}/libodbcpsql.la
 ${UNIXODBC_DRIVERS_DIR}/libodbcpsqlS.la
-${UNIXODBC_DRIVERS_DIR}/libodbctxt.la
 ${UNIXODBC_DRIVERS_DIR}/libodbctxtS.la
 ${UNIXODBC_DRIVERS_DIR}/liboplodbcS.la
 ${UNIXODBC_DRIVERS_DIR}/liboraodbcS.la
