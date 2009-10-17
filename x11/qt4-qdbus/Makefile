@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2009/10/11 09:14:52 adam Exp $
+# $NetBSD: Makefile,v 1.9 2009/10/17 22:57:45 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-qdbus-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	QT DBus support
 
 CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib
@@ -32,7 +33,7 @@ do-install:
 		${WRKSRC}/lib/pkgconfig/QtDBus.pc > ${WRKDIR}/QtDBus.pc
 	${INSTALL_DATA} ${WRKDIR}/QtDBus.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
 	cd ${WRKSRC}/src/dbus && env ${MAKE_ENV} INSTALL_ROOT=${DESTDIR} \
-                ${MAKE_PROGRAM} install_flat_headers install_targ_headers
+                ${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
 .for prog in qdbus qdbuscpp2xml qdbusviewer qdbusxml2cpp
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
 		${DESTDIR}${QTPREFIX}/bin
