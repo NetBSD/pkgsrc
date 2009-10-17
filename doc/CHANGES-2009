@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3981 2009/10/17 06:32:52 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3982 2009/10/17 09:33:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5259,3 +5259,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/iodbc to 3.52.7 [taca 2009-10-17]
 	Updated databases/ruby-odbc to 0.9997 [taca 2009-10-17]
 	Updated databases/ruby-mysql to 2.8.1 [taca 2009-10-17]
+	Updated databases/ruby-pg to 0.8.0 [taca 2009-10-17]
+	Updated databases/ruby-sqlite3 to 1.2.5 [taca 2009-10-17]
