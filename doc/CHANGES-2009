@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3978 2009/10/17 01:51:34 taca Exp $
+$NetBSD: CHANGES-2009,v 1.3979 2009/10/17 02:03:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5255,3 +5255,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/dhcpcd to 5.1.2 [roy 2009-10-16]
 	Updated www/typolight27-translations to 20091015 [taca 2009-10-17]
 	Updated www/squidGuard to 1.4nb1 [taca 2009-10-17]
+	Updated databases/unixodbc to 2.2.14 [taca 2009-10-17]
+	Updated databases/iodbc to 3.52.7 [taca 2009-10-17]
