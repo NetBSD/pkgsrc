@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/17 12:31:18 taca Exp $
+${GEM_HOME}/cache/dbd-sqlite-${PKGVERSION}.gem
+${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/lib/dbd/SQLite.rb
+${GEM_LIBDIR}/lib/dbd/sqlite/database.rb
+${GEM_LIBDIR}/lib/dbd/sqlite/statement.rb
+${GEM_LIBDIR}/test/DBD_TESTS
+${GEM_LIBDIR}/test/dbd/general/test_database.rb
+${GEM_LIBDIR}/test/dbd/general/test_statement.rb
+${GEM_LIBDIR}/test/dbd/general/test_types.rb
+${GEM_LIBDIR}/test/dbd/sqlite/base.rb
+${GEM_LIBDIR}/test/dbd/sqlite/test_database.rb
+${GEM_LIBDIR}/test/dbd/sqlite/test_driver.rb
+${GEM_LIBDIR}/test/dbd/sqlite/test_statement.rb
+${GEM_LIBDIR}/test/dbd/sqlite/up.sql
+${GEM_LIBDIR}/test/ts_dbd.rb
+${GEM_HOME}/specifications/dbd-sqlite-${PKGVERSION}.gemspec
