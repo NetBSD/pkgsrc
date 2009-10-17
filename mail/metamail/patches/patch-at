@@ -1,0 +1,29 @@
+--- uue.c.orig	2009-10-16 15:17:32.000000000 -0700
++++ uue.c	2009-10-16 15:14:38.000000000 -0700
+@@ -30,7 +30,7 @@
+ }
+ 
+ 
+-getline (buf, size, fp)
++uue_getline (buf, size, fp)
+ char *buf;
+ int size;
+ FILE *fp;
+@@ -70,7 +70,7 @@
+     char buf[63];
+ 
+     while (1) {
+-	if (getline (buf, sizeof buf, infp) < 0) {
++	if (uue_getline (buf, sizeof buf, infp) < 0) {
+ 	    fprintf (stderr, "Premature EOF!\n");
+ 	    return;
+ 	}
+@@ -82,7 +82,7 @@
+ 	}
+     }	
+     while (1) {
+-	if (getline (buf, sizeof buf, infp) < 0) {
++	if (uue_getline (buf, sizeof buf, infp) < 0) {
+ 	    fprintf (stderr, "Premature EOF!\n");
+ 	    return;
+ 	}
