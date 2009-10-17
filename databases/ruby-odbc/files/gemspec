@@ -1,7 +1,7 @@
 require "rubygems"
 
 NAME     = "odbc"
-VERSION  = "0.9995"
+VERSION  = "0.9997"
 AUTHOR   = "Christian Werner"
 EMAIL    = "chw@ch-werner.de"
 HOMEPAGE = "http://www.ch-werner.de/rubyodbc"
