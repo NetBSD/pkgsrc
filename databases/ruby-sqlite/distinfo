@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/17 12:24:46 taca Exp $
+
+SHA1 (sqlite-ruby-2.2.3.gem) = 6f672af52910c4206697fb5cffc83407b97d4b63
+RMD160 (sqlite-ruby-2.2.3.gem) = d83bfae2535f116faef6216ec94dcc1aba4f71bf
+Size (sqlite-ruby-2.2.3.gem) = 41472 bytes
