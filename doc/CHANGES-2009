@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3988 2009/10/17 14:33:49 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3989 2009/10/17 14:45:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5278,3 +5278,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-SQL-Statement to 1.22 [sno 2009-10-17]
 	Updated databases/p5-DBD-CSV to 0.25 [sno 2009-10-17]
 	Updated time/p5-DateTime-TimeZone to 0.99 [sno 2009-10-17]
+	Updated textproc/p5-XML-RSS to 1.46 [sno 2009-10-17]
