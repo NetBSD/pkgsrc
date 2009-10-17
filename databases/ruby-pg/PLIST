@@ -1,15 +1,33 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/17 09:24:13 taca Exp $
 ${GEM_HOME}/cache/pg-${PKGVERSION}.gem
-${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/BSD
 ${GEM_LIBDIR}/COPYING.txt
+${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Contributors
 ${GEM_LIBDIR}/GPL
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
-${GEM_LIBDIR}/ext/extconf.rb
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/doc/postgres.html
+${GEM_LIBDIR}/doc/postgres.jp.html
 ${GEM_LIBDIR}/ext/compat.c
 ${GEM_LIBDIR}/ext/compat.h
+${GEM_LIBDIR}/ext/extconf.rb
+${GEM_LIBDIR}/ext/mingw/Rakefile
+${GEM_LIBDIR}/ext/mingw/build.rake
+${GEM_LIBDIR}/ext/mkrf_config.rb
 ${GEM_LIBDIR}/ext/pg.c
 ${GEM_LIBDIR}/ext/pg.h
+${GEM_LIBDIR}/ext/vc/pg.sln
 ${GEM_LIBDIR}/lib/pg.${RUBY_DLEXT}
+${GEM_LIBDIR}/sample/losample.rb
+${GEM_LIBDIR}/sample/psql.rb
+${GEM_LIBDIR}/sample/psqlHelp.rb
+${GEM_LIBDIR}/sample/test1.rb
+${GEM_LIBDIR}/sample/test2.rb
+${GEM_LIBDIR}/sample/test4.rb
+${GEM_LIBDIR}/spec/data/expected_trace.out
+${GEM_LIBDIR}/spec/data/random_binary_data
+${GEM_LIBDIR}/spec/pgconn_spec.rb
+${GEM_LIBDIR}/spec/pgresult_spec.rb
 ${GEM_HOME}/specifications/pg-${PKGVERSION}.gemspec
