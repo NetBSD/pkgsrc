@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/18 11:24:24 sno Exp $
+
+SHA1 (Test-MinimumVersion-0.011.tar.gz) = 198573c64abaabaa6b66d37ed720c190d69d12bb
+RMD160 (Test-MinimumVersion-0.011.tar.gz) = 28ac4030cc38bf8b8eec18b4703b0e65b284e868
+Size (Test-MinimumVersion-0.011.tar.gz) = 28212 bytes
