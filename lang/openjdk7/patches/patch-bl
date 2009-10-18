@@ -1,0 +1,13 @@
+$NetBSD: patch-bl,v 1.1 2009/10/18 10:21:01 tnn Exp $
+
+--- jdk/make/java/instrument/Makefile.orig	2009-10-17 16:49:37.000000000 +0200
++++ jdk/make/java/instrument/Makefile
+@@ -111,7 +111,7 @@ ifeq ($(PLATFORM), bsd)
+     LDFLAGS += -Wl,--whole-archive
+     LDFLAGS += $(OUTPUTDIR)/tmp/java/jli/$(OBJDIRNAME)/static/libjli.a
+     LDFLAGS += -Wl,--no-whole-archive
+-    ifneq ($(OS_NAME), netbsd)
++    ifeq ($(OS_NAME), freebsd)
+ # Use CPPFLAGS instead of OTHER_INCLUDES to force this last
+       CPPFLAGS += -I$(PACKAGE_PATH)/include
+       OTHER_LDLIBS += -L$(PACKAGE_PATH)/lib -liconv
