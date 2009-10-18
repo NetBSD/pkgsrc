@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4002 2009/10/18 22:26:14 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.4003 2009/10/18 22:27:31 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5293,3 +5293,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/xentools33 to 3.3.2nb1 [bouyer 2009-10-18]
 	Updated multimedia/mplayer-share to 1.0rc20091017 [ahoka 2009-10-18]
 	Updated multimedia/mplayer to 1.0rc20091017 [ahoka 2009-10-18]
+	Updated multimedia/gmplayer to 1.0rc20091017 [ahoka 2009-10-18]
