@@ -1,0 +1,6 @@
+This pragma allows constants to be declared at compile-time.
+
+When a constant is used in an expression, Perl replaces it with its value at
+compile time, and may then optimize the expression further. In particular,
+any code in an if (CONSTANT) block will be optimized away if the constant
+is false.
