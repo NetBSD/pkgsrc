@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2009/05/19 08:59:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/18 20:07:54 zafer Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.5-Source
 PKGNAME=	DarwinStreamingServer-5.5.5
 PKGREVISION=	1
 CATEGORIES=	net multimedia
-MASTER_SITES=	http://www.opensource.apple.com/projects/streaming/release/
+MASTER_SITES=	http://static.macosforge.org/dss/downloads/
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://developer.apple.com/opensource/server/streaming/
+HOMEPAGE=	http://dss.macosforge.org/
 COMMENT=	Open source version of Apple QuickTime Streaming Server
 LICENSE=	apple-public-source-license
 
