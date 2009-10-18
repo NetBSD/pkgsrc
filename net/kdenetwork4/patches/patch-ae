@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/10/18 23:53:37 wiz Exp $
+
+--- kopete/protocols/winpopup/winpopup-install.orig	2009-10-18 22:56:13.000000000 +0000
++++ kopete/protocols/winpopup/winpopup-install
+@@ -11,7 +11,7 @@ else
+ fi
+ 
+ # Check if winpopup-send exist
+-if [ "$WPSEND" == "" ] || [ ! -f "$WPSEND" ]; then
++if [ "$WPSEND" = "" ] || [ ! -f "$WPSEND" ]; then
+ 	echo "Cant find script winpopup-send"
+ 	echo "Run: $0 <script winpopup-send with path>"
+ 	exit 1
