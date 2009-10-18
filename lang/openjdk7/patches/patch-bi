@@ -1,0 +1,13 @@
+$NetBSD: patch-bi,v 1.1 2009/10/18 10:21:01 tnn Exp $
+
+--- hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp.orig	2009-10-17 16:49:37.000000000 +0200
++++ hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp
+@@ -60,7 +60,7 @@
+ #define SPELL_REG_FP "ebp"
+ #endif // AMD64
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ # define context_trapno uc_mcontext.mc_trapno
+ # ifdef AMD64
+ #  define context_pc uc_mcontext.mc_rip
