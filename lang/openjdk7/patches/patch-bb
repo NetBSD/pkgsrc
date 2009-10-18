@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2009/10/18 10:21:01 tnn Exp $
+
+--- langtools/src/share/classes/com/sun/tools/javah/Util.java.orig	2009-10-17 16:49:37.000000000 +0200
++++ langtools/src/share/classes/com/sun/tools/javah/Util.java
+@@ -186,6 +186,8 @@ public class Util {
+ 	    os = "Darwin";
+ 	} else if (os.indexOf("NetBSD") >= 0) {
+ 	    os = "NetBSD";
++	} else if (os.indexOf("DragonFly") >= 0) {
++	    os = "DragonFly";
+ 	} else if (os.indexOf("OpenBSD") >= 0) {
+ 	    os = "OpenBSD";
+         }

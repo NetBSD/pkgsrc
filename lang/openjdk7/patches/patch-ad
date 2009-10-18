@@ -1,8 +1,22 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+$NetBSD: patch-ad,v 1.2 2009/10/18 10:21:01 tnn Exp $
 
---- corba/make/common/shared/Platform.gmk.orig	2009-10-12 18:15:48.000000000 +0200
+--- corba/make/common/shared/Platform.gmk.orig	2009-10-17 16:49:37.000000000 +0200
 +++ corba/make/common/shared/Platform.gmk
-@@ -339,9 +339,9 @@ ifeq ($(PLATFORM), bsd)
+@@ -269,6 +269,13 @@ ifeq ($(SYSTEM_UNAME), FreeBSD)
+  REQUIRED_OS_VERSION = 6.0
+ endif
+ 
++ifeq ($(SYSTEM_UNAME), DragonFly)
++  PLATFORM = bsd
++  OS_NAME = dragonfly
++  OS_VENDOR = DragonFlyBSD
++ REQUIRED_OS_VERSION = 2.4
++endif
++
+ ifeq ($(SYSTEM_UNAME), Darwin)
+   PLATFORM = bsd
+   OS_NAME = darwin
+@@ -339,9 +346,9 @@ ifeq ($(PLATFORM), bsd)
    REQUIRED_FREE_SPACE=1500000
    # How much RAM does this machine have:
    ifeq ($(OS_VENDOR), OpenBSD)
