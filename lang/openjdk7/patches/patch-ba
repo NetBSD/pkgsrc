@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2009/10/18 10:21:01 tnn Exp $
+
+--- hotspot/src/share/vm/utilities/macros.hpp.orig	2009-10-17 16:49:37.000000000 +0200
++++ hotspot/src/share/vm/utilities/macros.hpp
+@@ -148,7 +148,7 @@
+ #define NOT_WINDOWS(code) code
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__) || defined(__DragonFly__)
+ #define BSD_ONLY(code) code
+ #define NOT_BSD(code)
+ #else
