@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.4 2007/12/21 11:31:16 tron Exp $
+$NetBSD: patch-ag,v 1.5 2009/10/18 22:22:10 ahoka Exp $
 
---- libvo/osd.c.orig	2007-10-07 20:49:28.000000000 +0100
-+++ libvo/osd.c	2007-12-20 21:37:45.000000000 +0000
-@@ -12,7 +12,7 @@
- #include "cpudetect.h"
- #include "mangle.h"
- 
--#ifdef ARCH_X86
-+#if defined(ARCH_X86) && !defined(__APPLE__)
- #define CAN_COMPILE_X86_ASM
+--- libvo/osd.c.orig	2009-04-08 22:21:21.000000000 +0200
++++ libvo/osd.c
+@@ -41,7 +41,7 @@ static const unsigned long long mask24hl
+ #define COMPILE_C
  #endif
  
+-#if ARCH_X86
++#if defined(ARCH_X86) && !defined(__APPLE__)
+ 
+ #if (HAVE_MMX && !HAVE_AMD3DNOW && !HAVE_MMX2) || CONFIG_RUNTIME_CPUDETECT
+ #define COMPILE_MMX

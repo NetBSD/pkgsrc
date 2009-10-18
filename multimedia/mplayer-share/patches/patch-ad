@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.8 2006/11/30 14:03:13 abs Exp $
+$NetBSD: patch-ad,v 1.9 2009/10/18 22:22:10 ahoka Exp $
 
---- stream/cdd.h.orig	2006-11-21 10:26:56.000000000 +0000
+--- stream/cdd.h.orig	2009-05-13 04:58:57.000000000 +0200
 +++ stream/cdd.h
 @@ -3,8 +3,8 @@
  
  #include "config.h"
- #ifndef HAVE_LIBCDIO
+ #ifndef CONFIG_LIBCDIO
 -#include <cdda_interface.h>
 -#include <cdda_paranoia.h>
 +#include <cdparanoia/cdda_interface.h>
