@@ -1,7 +1,7 @@
-$NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
+$NetBSD: patch-ar,v 1.2 2009/10/18 21:28:10 bouyer Exp $
 
---- ioemu/vl.c.orig	2007-05-18 16:45:21.000000000 +0200
-+++ ioemu/vl.c	2007-06-12 23:59:27.000000000 +0200
+--- ioemu/vl.c.orig	2008-04-25 15:03:12.000000000 +0200
++++ ioemu/vl.c	2009-10-18 22:22:56.000000000 +0200
 @@ -37,14 +37,17 @@
  #include <sys/poll.h>
  #include <sys/mman.h>
@@ -32,7 +32,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
  
  //#define DEBUG_UNUSED_IOPORT
  //#define DEBUG_IOPORT
-@@ -1663,7 +1666,7 @@
+@@ -1683,7 +1686,7 @@
      return 0;
  }
  
@@ -41,7 +41,20 @@ $NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
  CharDriverState *qemu_chr_open_pty(void)
  {
      struct termios tty;
-@@ -1814,7 +1817,7 @@
+@@ -1696,7 +1699,12 @@
+     
+     /* Set raw attributes on the pty. */
+     cfmakeraw(&tty);
++#if defined(__NetBSD__)
++    tcsetattr(master_fd, TCSAFLUSH, &tty);
++    close(slave_fd);
++#else
+     tcsetattr(slave_fd, TCSAFLUSH, &tty);
++#endif
+     
+     fprintf(stderr, "char device redirected to %s\n", ptsname(master_fd));
+ 
+@@ -1834,7 +1842,7 @@
      chr->chr_ioctl = tty_serial_ioctl;
      return chr;
  }
@@ -50,7 +63,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
  static int pp_ioctl(CharDriverState *chr, int cmd, void *arg)
  {
      int fd = (int)chr->opaque;
-@@ -1877,13 +1880,14 @@
+@@ -1897,13 +1905,14 @@
      chr->chr_ioctl = pp_ioctl;
      return chr;
  }
@@ -66,7 +79,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
  
  #endif /* !defined(_WIN32) */
  
-@@ -3126,7 +3130,7 @@
+@@ -3146,7 +3155,7 @@
      fclose(f);
      atexit(smb_exit);
  
@@ -75,7 +88,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
               smb_conf);
      
      slirp_add_exec(0, smb_cmdline, 4, 139);
-@@ -3190,16 +3194,26 @@
+@@ -3210,16 +3219,26 @@
      int fd;
      char *dev;
      struct stat s;
@@ -103,7 +116,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
  
      fcntl(fd, F_SETFL, O_NONBLOCK);
      return fd;
-@@ -5934,7 +5948,6 @@
+@@ -5972,7 +5991,6 @@
      nr_buckets = (((MAX_MCACHE_SIZE >> PAGE_SHIFT) +
                     (1UL << (MCACHE_BUCKET_SHIFT - PAGE_SHIFT)) - 1) >>
                    (MCACHE_BUCKET_SHIFT - PAGE_SHIFT));
@@ -111,7 +124,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
  
      /*
       * Use mmap() directly: lets us allocate a big hash table with no up-front
-@@ -5943,8 +5956,9 @@
+@@ -5981,8 +5999,9 @@
       */
      size = nr_buckets * sizeof(struct map_cache);
      size = (size + PAGE_SIZE - 1) & ~(PAGE_SIZE - 1);
@@ -122,7 +135,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
      if (mapcache_entry == MAP_FAILED) {
          errno = ENOMEM;
          return -1;
-@@ -6081,6 +6095,7 @@
+@@ -6119,6 +6138,7 @@
      unsigned long ioreq_pfn;
      extern void *shared_page;
      extern void *buffered_io_page;
@@ -130,7 +143,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
  #ifdef __ia64__
      unsigned long nr_pages;
      xen_pfn_t *page_array;
-@@ -6089,6 +6104,32 @@
+@@ -6127,6 +6147,32 @@
  
      char qemu_dm_logfilename[64];
  
