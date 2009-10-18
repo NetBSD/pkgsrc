@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.18 2009/10/10 17:58:41 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/10/18 04:43:16 schmonz Exp $
 bin/ikiwiki
+bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
 bin/ikiwiki-transition
 bin/ikiwiki-update-wikilist
 lib/ikiwiki/plugins/proxy.py
 lib/ikiwiki/plugins/rst
 ${PLIST.w3m}libexec/w3m/cgi-bin/ikiwiki-w3m.cgi
+man/man1/ikiwiki-calendar.1
 man/man1/ikiwiki-makerepo.1
 man/man1/ikiwiki-transition.1
 man/man1/ikiwiki-update-wikilist.1
@@ -26,6 +28,7 @@ share/ikiwiki/basewiki/ikiwiki/openid.mdwn
 share/ikiwiki/basewiki/ikiwiki/pagespec.mdwn
 share/ikiwiki/basewiki/ikiwiki/pagespec/attachment.mdwn
 share/ikiwiki/basewiki/ikiwiki/pagespec/po.mdwn
+share/ikiwiki/basewiki/ikiwiki/pagespec/sorting.mdwn
 share/ikiwiki/basewiki/ikiwiki/searching.mdwn
 share/ikiwiki/basewiki/ikiwiki/subpage.mdwn
 share/ikiwiki/basewiki/ikiwiki/subpage/linkingrules.mdwn
@@ -292,6 +295,8 @@ share/ikiwiki/templates/atomitem.tmpl
 share/ikiwiki/templates/atompage.tmpl
 share/ikiwiki/templates/autoindex.tmpl
 share/ikiwiki/templates/blogpost.tmpl
+share/ikiwiki/templates/calendarmonth.tmpl
+share/ikiwiki/templates/calendaryear.tmpl
 share/ikiwiki/templates/change.tmpl
 share/ikiwiki/templates/comment.tmpl
 share/ikiwiki/templates/commentmoderation.tmpl
