@@ -1,0 +1,2 @@
+Test::MinimumVersion proves whether a module requires newer perl than expected
+or not.
