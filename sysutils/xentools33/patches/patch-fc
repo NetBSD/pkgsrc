@@ -1,7 +1,7 @@
-$NetBSD: patch-fc,v 1.2 2008/08/15 14:06:54 cegger Exp $
+$NetBSD: patch-fc,v 1.3 2009/10/18 21:28:10 bouyer Exp $
 
---- ioemu/vl.c.orig	2008-08-14 15:26:06.000000000 +0000
-+++ ioemu/vl.c
+--- ioemu/vl.c.orig	2009-01-05 12:26:59.000000000 +0100
++++ ioemu/vl.c	2009-10-18 23:08:55.000000000 +0200
 @@ -108,7 +108,7 @@
  
  #include "exec-all.h"
@@ -20,3 +20,16 @@ $NetBSD: patch-fc,v 1.2 2008/08/15 14:06:54 cegger Exp $
  #endif
  
  //#define DEBUG_UNUSED_IOPORT
+@@ -1914,8 +1914,11 @@
+     }
+     
+     /* Set raw attributes on the pty. */
++    if (tcgetattr(master_fd, &tty) < 0)
++	perror("tcgetattr");
+     cfmakeraw(&tty);
+-    tcsetattr(slave_fd, TCSAFLUSH, &tty);
++    if (tcsetattr(slave_fd, TCSAFLUSH, &tty) < 0)
++	perror("tcsetattr");
+ 
+     fprintf(stderr, "char device redirected to %s\n", ptsname(master_fd));
+ 
