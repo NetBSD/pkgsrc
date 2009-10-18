@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+$NetBSD: patch-ab,v 1.2 2009/10/18 10:21:01 tnn Exp $
 
---- ./jdk/make/common/shared/Sanity.gmk.orig	2008-12-21 21:41:14.000000000 +0100
-+++ ./jdk/make/common/shared/Sanity.gmk
+--- jdk/make/common/shared/Sanity.gmk.orig	2008-12-21 21:41:14.000000000 +0100
++++ jdk/make/common/shared/Sanity.gmk
 @@ -787,7 +787,8 @@ $(TEMPDIR)/freetypeinfo: FRC
  	@(($(CD) $(BUILDDIR)/tools/freetypecheck && $(MAKE)) || \
  	    $(ECHO) "Failed to build freetypecheck." ) > $@
