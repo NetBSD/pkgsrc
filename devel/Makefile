@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1242 2009/10/18 11:11:56 sno Exp $
+# $NetBSD: Makefile,v 1.1243 2009/10/18 11:30:25 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -878,6 +878,7 @@ SUBDIR+=	p5-Test-Log4perl
 SUBDIR+=	p5-Test-LongString
 SUBDIR+=	p5-Test-Manifest
 SUBDIR+=	p5-Test-Memory-Cycle
+SUBDIR+=	p5-Test-MinimumVersion
 SUBDIR+=	p5-Test-Mock-LWP
 SUBDIR+=	p5-Test-MockModule
 SUBDIR+=	p5-Test-MockObject
