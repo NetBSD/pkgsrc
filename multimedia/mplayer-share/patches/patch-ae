@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.8 2007/12/21 11:31:15 tron Exp $
+$NetBSD: patch-ae,v 1.9 2009/10/18 22:22:10 ahoka Exp $
 
---- libvo/aclib.c.orig	2007-10-07 20:49:28.000000000 +0100
-+++ libvo/aclib.c	2007-12-20 21:37:53.000000000 +0000
-@@ -18,7 +18,7 @@
- //Feel free to fine-tune the above 2, it might be possible to get some speedup with them :)
+--- libvo/aclib.c.orig	2009-04-08 22:21:21.000000000 +0200
++++ libvo/aclib.c
+@@ -40,7 +40,7 @@
+ //#define COMPILE_C
+ //#endif
  
- //#define STATISTICS
--#ifdef ARCH_X86
+-#if ARCH_X86
 +#if defined(ARCH_X86) && !defined(__APPLE__)
- #define CAN_COMPILE_X86_ASM
- #endif
  
+ #if (HAVE_MMX && !HAVE_AMD3DNOW && !HAVE_MMX2) || CONFIG_RUNTIME_CPUDETECT
+ #define COMPILE_MMX
