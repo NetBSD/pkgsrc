@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.3998 2009/10/18 11:29:41 sno Exp $
+$NetBSD: CHANGES-2009,v 1.3999 2009/10/18 12:17:35 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5288,3 +5288,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-SOAP-Lite to 0.710.10 [sno 2009-10-18]
 	Added devel/p5-Perl-MinimumVersion version 1.20 [sno 2009-10-18]
 	Added devel/p5-Test-MinimumVersion version 0.011 [sno 2009-10-18]
+	Updated wm/dwm to 5.7.2 [tnn 2009-10-18]
