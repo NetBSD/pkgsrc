@@ -1,41 +1,41 @@
-$NetBSD: patch-ao,v 1.1 2008/12/18 16:44:27 bjs Exp $
+$NetBSD: patch-ao,v 1.2 2009/10/18 22:22:10 ahoka Exp $
 
 NOTE:	When updating this, make sure it harmonizes with
 	multimedia/ffmpeg/patches/patch-oldx264.
 
---- libavcodec/libx264.c.orig	2007-10-07 15:49:37.000000000 -0400
+--- libavcodec/libx264.c.orig	2009-09-29 20:03:30.000000000 +0200
 +++ libavcodec/libx264.c
-@@ -162,7 +162,11 @@ X264_init(AVCodecContext *avctx)
+@@ -179,7 +179,11 @@ static av_cold int X264_init(AVCodecCont
  
-     x4->params.i_bframe = avctx->max_b_frames;
-     x4->params.b_cabac = avctx->coder_type == FF_CODER_TYPE_AC;
+     x4->params.i_bframe          = avctx->max_b_frames;
+     x4->params.b_cabac           = avctx->coder_type == FF_CODER_TYPE_AC;
 +#if X264_BUILD > 62
-+    x4->params.i_bframe_adaptive = avctx->b_frame_strategy;
+     x4->params.i_bframe_adaptive = avctx->b_frame_strategy;
 +#else
-     x4->params.b_bframe_adaptive = avctx->b_frame_strategy;
++    x4->params.b_bframe_adaptive = avctx->b_frame_strategy;
 +#endif
-     x4->params.i_bframe_bias = avctx->bframebias;
-     x4->params.b_bframe_pyramid = (avctx->flags2 & CODEC_FLAG2_BPYRAMID);
-     avctx->has_b_frames= (avctx->flags2 & CODEC_FLAG2_BPYRAMID) ? 2 : !!avctx->max_b_frames;
-@@ -224,9 +228,10 @@ X264_init(AVCodecContext *avctx)
+     x4->params.i_bframe_bias     = avctx->bframebias;
+     x4->params.b_bframe_pyramid  = avctx->flags2 & CODEC_FLAG2_BPYRAMID;
+     avctx->has_b_frames          = avctx->flags2 & CODEC_FLAG2_BPYRAMID ? 2 : !!avctx->max_b_frames;
+@@ -244,6 +248,10 @@ static av_cold int X264_init(AVCodecCont
+     x4->params.analyse.i_me_range         = avctx->me_range;
+     x4->params.analyse.i_subpel_refine    = avctx->me_subpel_quality;
  
-     x4->params.analyse.i_me_range = avctx->me_range;
-     x4->params.analyse.i_subpel_refine = avctx->me_subpel_quality;
--
 +#if X264_BUILD < 65
-     x4->params.analyse.b_bidir_me = (avctx->bidir_refine > 0);
-     x4->params.analyse.b_bframe_rdo = (avctx->flags2 & CODEC_FLAG2_BRDO);
++    x4->params.analyse.b_bidir_me = (avctx->bidir_refine > 0);
++    x4->params.analyse.b_bframe_rdo = (avctx->flags2 & CODEC_FLAG2_BRDO);
 +#endif
-     x4->params.analyse.b_mixed_references =
-         (avctx->flags2 & CODEC_FLAG2_MIXED_REFS);
-     x4->params.analyse.b_chroma_me = (avctx->me_cmp & FF_CMP_CHROMA);
-@@ -251,7 +256,9 @@ X264_init(AVCodecContext *avctx)
-     x4->params.rc.f_ip_factor = 1/fabs(avctx->i_quant_factor);
-     x4->params.rc.f_pb_factor = avctx->b_quant_factor;
+     x4->params.analyse.b_mixed_references = avctx->flags2 & CODEC_FLAG2_MIXED_REFS;
+     x4->params.analyse.b_chroma_me        = avctx->me_cmp & FF_CMP_CHROMA;
+     x4->params.analyse.b_transform_8x8    = avctx->flags2 & CODEC_FLAG2_8X8DCT;
+@@ -269,6 +277,10 @@ static av_cold int X264_init(AVCodecCont
+     x4->params.rc.f_pb_factor             = avctx->b_quant_factor;
      x4->params.analyse.i_chroma_qp_offset = avctx->chromaoffset;
-+#if X264_BUILD < 61
-     x4->params.rc.psz_rc_eq = avctx->rc_eq;
-+#endif
  
-     x4->params.analyse.b_psnr = (avctx->flags & CODEC_FLAG_PSNR);
-     x4->params.i_log_level = X264_LOG_DEBUG;
++#if X264_BUILD < 61
++    x4->params.rc.psz_rc_eq = avctx->rc_eq;
++#endif
++
+     x4->params.analyse.b_psnr = avctx->flags & CODEC_FLAG_PSNR;
+     x4->params.i_log_level    = X264_LOG_DEBUG;
+ 
