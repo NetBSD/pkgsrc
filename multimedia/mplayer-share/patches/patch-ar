@@ -2,16 +2,14 @@ $NetBSD$
 
 Fix for SA26157.
 
---- stream/realrtsp/real.c.orig	2009-08-09 15:48:11.000000000 +0300
-+++ stream/realrtsp/real.c	2009-08-09 15:51:10.000000000 +0300
-@@ -376,7 +376,10 @@
-           ts, size, flags1, unknown1, header[4], header[5]);
+--- stream/realrtsp/real.c.orig	2009-09-02 12:55:36.000000000 +0200
++++ stream/realrtsp/real.c
+@@ -369,6 +369,9 @@ int real_get_rdt_chunk(rtsp_t *rtsp_sess
  #endif
    size+=2;
--  
-+ 
+ 
 +  if (size < 12)
-+	return 0;
++	  return 0;
 +
    ph.object_version=0;
    ph.length=size;

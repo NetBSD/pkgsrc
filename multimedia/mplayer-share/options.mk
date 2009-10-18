@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2009/05/11 08:24:58 wiz Exp $
+# $NetBSD: options.mk,v 1.37 2009/10/18 22:22:10 ahoka Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -257,11 +257,11 @@ CONFIGURE_ARGS+=	--disable-png
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
-CONFIGURE_ARGS+=	--enable-polyp
+CONFIGURE_ARGS+=	--enable-pulse
 .  include "../../devel/glib2/buildlink3.mk"
 .  include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-polyp
+CONFIGURE_ARGS+=	--disable-pulse
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl)
@@ -286,8 +286,7 @@ CONFIGURE_ARGS+=	--disable-tv-v4l2
 
 # disable vidix if not in options
 .if empty(PKG_OPTIONS:Mvidix)
-CONFIGURE_ARGS+=	--disable-vidix-internal
-CONFIGURE_ARGS+=	--disable-vidix-external
+CONFIGURE_ARGS+=	--disable-vidix
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
