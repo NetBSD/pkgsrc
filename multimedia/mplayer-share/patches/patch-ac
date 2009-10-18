@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2006/06/13 17:25:00 drochner Exp $
+$NetBSD: patch-ac,v 1.6 2009/10/18 22:22:10 ahoka Exp $
 
---- libfaad2/common.h.orig	2006-06-11 20:35:42.000000000 +0200
+--- libfaad2/common.h.orig	2009-07-26 21:53:00.000000000 +0200
 +++ libfaad2/common.h
-@@ -334,7 +334,7 @@ char *strchr(), *strrchr();
-   #elif (defined(__i386__) && defined(__GNUC__)) && !defined(HAVE_LRINTF)
+@@ -320,7 +320,7 @@ char *strchr(), *strrchr();
+   #elif (defined(__i386__) && defined(__GNUC__)) && !HAVE_LRINTF
      #define HAS_LRINTF
      // from http://www.stereopsis.com/FPU.html
 -    static INLINE int lrintf(float f)

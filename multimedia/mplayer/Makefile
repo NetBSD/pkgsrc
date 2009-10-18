@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.67 2009/08/09 12:56:11 kefren Exp $
+# $NetBSD: Makefile,v 1.68 2009/10/18 22:22:11 ahoka Exp $
 
-PKGNAME=	mplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	14
+PKGNAME=	mplayer-${MPLAYER_VERSION}
+#PKGREVISION=	0
 
-COMMENT=	Software-only MPEG-1/2/4 video decoder
+COMMENT=	Fast, cross-platform movie player
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/mplayer-share/Makefile.common"
 
 USE_TOOLS+=	pkg-config
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
+.endif
 
 CONFIGURE_ARGS+=	--disable-mencoder
 CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer

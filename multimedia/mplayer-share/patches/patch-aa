@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.23 2009/03/06 01:33:12 jmcneill Exp $
+$NetBSD: patch-aa,v 1.24 2009/10/18 22:22:10 ahoka Exp $
 
---- configure.orig	2007-10-07 15:49:33.000000000 -0400
-+++ configure	2009-03-05 20:17:42.000000000 -0500
-@@ -718,7 +718,7 @@ for ac_option do
-     _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
-     ;;
-   --with-extralibdir=*)
--    _ld_extra=-L`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -L,g'`
-+    _ld_extra="${_ld_extra} -Wl,-R"`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -Wl\,-R,g'`" -L"`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -L,g'`
-     ;;
- 
-   --with-install=*)
-@@ -1238,6 +1238,9 @@ if test -z "$_target" ; then
+--- configure.orig	2009-10-06 08:43:00.000000000 +0200
++++ configure
+@@ -1388,6 +1388,9 @@ if test -z "$_target" ; then
     powerpc) # Darwin returns 'powerpc'
       host_arch=ppc
       ;;
@@ -21,92 +12,65 @@ $NetBSD: patch-aa,v 1.23 2009/03/06 01:33:12 jmcneill Exp $
     *) # uname -p on Linux returns 'unknown' for the processor type,
        # OpenBSD returns 'Intel Pentium/MMX ("Genuine Intel" 586-class)'
  
-@@ -1411,11 +1414,11 @@ if test "$_gcc_check" = yes ; then
-   esac
-   echores "$cc_version"
-  else
-- for _cc in "$_cc" gcc gcc-3.4 gcc-3.3 gcc-3.2 gcc-3.1 gcc3 gcc-3.0 cc ; do
-+ for _cc in "$_cc" gcc cc ; do
-   echocheck "$_cc version"
-   cc_vendor=gnu
-   cc_name=`$_cc -v 2>&1 | _tail 1 | cut -d ' ' -f 1`
--  cc_version=`$_cc -dumpversion 2>&1`
-+  cc_version=`( $_cc -dumpversion | sed -e 's/-nb[0-9]//' ) 2>&1`
-   if test "$?" -gt 0; then
-     cc_version="not found"
-   fi
-@@ -1548,7 +1551,7 @@ if x86 ; then
+@@ -1569,7 +1572,7 @@ else
+     cc_name=$cc_name_tmp
+     echocheck "$_cc version"
+     cc_vendor=gnu
+-    cc_version=$($_cc -dumpversion 2>&1)
++    cc_version=$( ( $_cc -dumpversion | sed -e 's/-nb[0-9]//' ) 2>&1 )
+     case $cc_version in
+       2.96*)
+         cc_fail=yes
+@@ -1652,7 +1655,7 @@ if x86 ; then
    # gather more CPU information
-   pname=`$_cpuinfo | grep 'model name' | cut -d ':' -f 2 | _head 1`
-   pvendor=`$_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | _head 1`
--  pfamily=`$_cpuinfo | grep 'cpu family' | cut -d ':' -f 2 | cut -d ' ' -f 2 | _head 1`
-+  pfamily=`$_cpuinfo | grep -i 'cpu family' | cut -d ':' -f 2 | cut -d ' ' -f 2 | _head 1`
-   pmodel=`$_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | _head 1`
-   pstepping=`$_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | _head 1`
+   pname=$($_cpuinfo | grep 'model name' | cut -d ':' -f 2 | head -n 1)
+   pvendor=$($_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | head -n 1)
+-  pfamily=$($_cpuinfo | grep 'cpu family' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
++  pfamily=$($_cpuinfo | grep -i 'cpu family' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
+   pmodel=$($_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
+   pstepping=$($_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
  
-@@ -3098,7 +3101,6 @@ test "$_w32threads" = yes && _def_thread
+@@ -3433,7 +3436,6 @@ test "$_w32threads" = yes && def_threads
  echores "$_w32threads"
  
  echocheck "rpath"
 -netbsd &&_rpath=yes
  if test "$_rpath" = yes ; then
-   for I in `echo $_ld_extra | sed 's/-L//g'` ; do
-     tmp="$tmp ` echo $I | sed 's/.*/ -L& -Wl,-R&/'`"
-@@ -3884,7 +3886,11 @@ EOF
-   for I in "" -L/usr/X11R6/lib -L/usr/lib/X11R6 -L/usr/X11/lib \
-            -L/usr/lib32 -L/usr/openwin/lib -L/usr/X11R6/lib64 -L/usr/lib ; do
+   for I in $(echo $extra_ldflags | sed 's/-L//g') ; do
+     tmp="$tmp $(echo $I | sed 's/.*/ -L& -Wl,-R&/')"
+@@ -4205,7 +4207,11 @@ EOF
+            -L/usr/X11/lib -L/usr/lib32 -L/usr/openwin/lib -L/usr/X11R6/lib64 \
+            -L/usr/lib ; do
      if netbsd; then
--      _ld_tmp="$I -lXext -lX11 $_ld_pthread -Wl,-R`echo $I | sed s/^-L//`"
+-      _ld_tmp="$I -lXext -lX11 $_ld_pthread -Wl,-R$(echo $I | sed s/^-L//)"
 +      if test -n "$I" ; then
-+        _ld_tmp="$I -lXext -lX11 $_ld_pthread -Wl,-R`echo $I | sed s/^-L//`"
++        _ld_tmp="$I -lXext -lX11 $_ld_pthread -Wl,-R$(echo $I | sed s/^-L//)"
 +      else
 +        _ld_tmp="-lXext -lX11 $_ld_pthread"
 +      fi
      else
        _ld_tmp="$I -lXext -lX11 $_ld_pthread"
      fi
-@@ -4368,7 +4374,7 @@ fi
+@@ -4656,7 +4662,7 @@ fi
  if test "$_aa" = yes ; then
-   _def_aa='#define HAVE_AA 1'
+   def_aa='#define CONFIG_AA 1'
    if cygwin ; then
--    _libs_mplayer="$_libs_mplayer `aalib-config --libs | cut -d " " -f 2,5,6`"
-+    _libs_mplayer="$_libs_mplayer `${AALIB_CONFIG} --libs | cut -d " " -f 2,5,6`"
+-    libs_mplayer="$libs_mplayer $(aalib-config --libs | cut -d " " -f 2,5,6)"
++    libs_mplayer="$libs_mplayer $(${AALIB_CONFIG} --libs | cut -d " " -f 2,5,6)"
    fi
-   _vosrc="$_vosrc vo_aa.c"
    _vomodules="aa $_vomodules"
-@@ -5100,15 +5106,15 @@ fi
- echocheck "Polyp"
- if test "$_polyp" = auto ; then
-   _polyp=no
--  if $_pkg_config --exists 'polyplib >= 0.6 polyplib-error >= 0.6 polyplib-mainloop >= 0.6' ; then
-+  if $_pkg_config --exists 'libpulse >= 0.9 libpulse-simple >= 0.9 libpulse-mainloop-glib >= 0.9' ; then
- 
- cat > $TMPC << EOF
--#include <polyp/polyplib.h>
--#include <polyp/mainloop.h>
--#include <polyp/polyplib-error.h>
-+#include <pulse/pulseaudio.h>
-+#include <pulse/mainloop.h>
-+#include <pulse/error.h>
- int main(void) { return 0; }
- EOF
--cc_check `$_pkg_config --libs --cflags polyplib polyplib-error polyplib-mainloop` && tmp_run && _polyp=yes
-+cc_check `$_pkg_config --libs --cflags libpulse libpulse-simple libpulse-mainloop-glib` && tmp_run && _polyp=yes
- 
-   fi
- fi
-@@ -5118,8 +5124,8 @@ if test "$_polyp" = yes ; then
-   _def_polyp='#define USE_POLYP 1'
-   _aosrc="$_aosrc ao_polyp.c"
-   _aomodules="polyp $_aomodules"
--  _libs_mplayer="$_libs_mplayer `$_pkg_config --libs polyplib polyplib-error polyplib-mainloop`"
--  _inc_extra="$_inc_extra `$_pkg_config --cflags polyplib polyplib-error polyplib-mainloop`"
-+  _libs_mplayer="$_libs_mplayer `$_pkg_config --libs libpulse libpulse-simple libpulse-mainloop-glib`"
-+  _inc_extra="$_inc_extra `$_pkg_config --cflags libpulse libpulse-simple libpulse-mainloop-glib`"
  else
-   _def_polyp='#undef USE_POLYP'
-   _noaomodules="polyp $_noaomodules"
-@@ -6837,11 +6843,16 @@ echores "$_tv_v4l1"
+@@ -7221,9 +7227,6 @@ if test "$_x264" = auto ; then
+   cat > $TMPC << EOF
+ #include <inttypes.h>
+ #include <x264.h>
+-#if X264_BUILD < 76
+-#error We do not support old versions of x264. Get the latest from git.
+-#endif
+ int main(void) { x264_encoder_open((void*)0); return 0; }
+ EOF
+   _x264=no
+@@ -7593,11 +7596,16 @@ echores "$_tv_v4l1"
  echocheck "Video 4 Linux 2 TV interface"
  if test "$_tv_v4l2" = auto ; then
    _tv_v4l2=no

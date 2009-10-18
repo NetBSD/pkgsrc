@@ -1,32 +1,16 @@
-$NetBSD: distinfo,v 1.62 2009/08/09 19:20:49 wiz Exp $
+$NetBSD: distinfo,v 1.63 2009/10/18 22:22:10 ahoka Exp $
 
-SHA1 (mplayer-1.0rc10/MPlayer-1.0rc2.tar.bz2) = e9b496f3527c552004ec6d01d6b43f196b43ce2d
-RMD160 (mplayer-1.0rc10/MPlayer-1.0rc2.tar.bz2) = 3b5cba1529856a177a5191e22f8dcc00b5a83c52
-Size (mplayer-1.0rc10/MPlayer-1.0rc2.tar.bz2) = 9338201 bytes
-SHA1 (patch-aa) = ebcbff0b8d0914aaaf89d8388bc9e04229680658
-SHA1 (patch-ab) = 29bf59ecb3d283708ae1c5002d1fa71cac627cc9
-SHA1 (patch-ac) = 6d0de4bd41d9842ea1bf46e9fbe60bf6a943b913
-SHA1 (patch-ad) = d0b72eaa5e63d2cfd7828ea1a9973f1728c607b5
-SHA1 (patch-ae) = 24ac251b3f8d7a94cf61dbe4c960ac76884649f9
-SHA1 (patch-af) = e8b6f2b914f9b8e9f12d92cb49b91b4381a46ce5
-SHA1 (patch-ag) = b46d902d88e05d6f61a017e8a1be79fad5a1fa00
+SHA1 (mplayer/mplayer-20091017.tar.bz2) = 8ee97842812b9867f192f521b96bb1b6e1742a23
+RMD160 (mplayer/mplayer-20091017.tar.bz2) = 015d3847b05f4d674d4740e55f117ce6085d5cc3
+Size (mplayer/mplayer-20091017.tar.bz2) = 8525942 bytes
+SHA1 (patch-aa) = 24007024e4b6bfa212817681e8d07cc079aee13b
+SHA1 (patch-ac) = 13ea17bcdde5ebc7e04eeb5eb833dca0cd623ba2
+SHA1 (patch-ad) = 0a43a47538f0f18f8b6aa230367821b8bb51e932
+SHA1 (patch-ae) = 448ae3c17fd96248b7360958c9640f74ed4891a5
+SHA1 (patch-ag) = e3aea6e1144e97d1dc9f240275568108df25ab00
 SHA1 (patch-ah) = 7aeb9f04d622fcad8c40dc9edbb0a58277fc622b
-SHA1 (patch-ai) = ec79d6a1b0c2790ca826a91a48040c64632ac988
-SHA1 (patch-aj) = 772d083dfa5eac789abfd5e925eeeba400bbc527
-SHA1 (patch-ak) = 072b4391e5fde58f6b01bd43133f1d017fc14d58
-SHA1 (patch-al) = 9538b10cf5b3802381d7aabc798676b3cb9ef00d
-SHA1 (patch-am) = bae1e03f7265cb6b07947f052f0774d1c17da88e
-SHA1 (patch-an) = a967a47b0d0846fe89f91f9d3faa6055975a5a73
-SHA1 (patch-ao) = ddd85a9bfda237ea923faf0c3677b5e14cff4e0d
-SHA1 (patch-ap) = 83777bac06190f71078435721ad2f7055689f64f
-SHA1 (patch-aq) = 8d77f3fbe5796707f591e0890b54b9f34f649709
-SHA1 (patch-ar) = 1f1b661b3395453200bc313da4df5af8d9e09009
-SHA1 (patch-ba) = 2683c414fed3a4a6d3b4d47287f43d822339bd4e
-SHA1 (patch-bb) = 26d000bcbc94b9139e6dbc79237fdb3a109c6057
-SHA1 (patch-bc) = fd46ce3cd6d5f7525e210cf6d475b89573ca988d
-SHA1 (patch-bd) = 9132118a143758b6c9e9dffb713f7dadd29ce3c3
-SHA1 (patch-be) = d9b0573c9ea9767bed7d9b3f29cd07cc31c37519
-SHA1 (patch-ca) = 68603a92b3dd8c7a33e6bc982f8ced1219fa419d
-SHA1 (patch-tc) = 89f802ff0ebfc14d6f2a4b17177915f66c9f9038
-SHA1 (patch-va) = db69c373e78048924c536055c68c7de0feabc623
-SHA1 (patch-vb) = 28b1dd82fb61a4fc0be4a4f4599f75823cae5f11
+SHA1 (patch-an) = 3e72fb86abe7ab572f12a4fef002edb623ab6fae
+SHA1 (patch-ao) = 8588d0215e973045b7f1abd7fbc9813409876b99
+SHA1 (patch-ar) = df7e7cdc6fb8187bbcf0b285afc14d275a51e17a
+SHA1 (patch-vb) = d836d96c849de866cb4177b20eb1c6dec4b7a0ba
+SHA1 (patch-ve_x264) = 1946a2b2a7643bbc1d3f6a8963e21c4f6cbd2c89
