@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/07/17 18:00:20 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2009/10/18 19:46:36 zafer Exp $
 
 #
 # Please do not update or modify this package as it has been imported only
@@ -9,10 +9,10 @@
 DISTNAME=	c-ares-1.4.0
 PKGNAME=	libcares-1.4.0
 CATEGORIES=	net
-MASTER_SITES=	http://daniel.haxx.se/projects/c-ares/
+MASTER_SITES=	http://c-ares.haxx.se/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://daniel.haxx.se/projects/c-ares/
+HOMEPAGE=	http://c-ares.haxx.se/
 COMMENT=	Asynchronous resolver library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
