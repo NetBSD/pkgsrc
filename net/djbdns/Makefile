@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2009/04/22 05:23:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.59 2009/10/18 19:34:54 zafer Exp $
 
 DISTNAME=		djbdns-1.05
-PKGREVISION=		9
+PKGREVISION=	9
 CATEGORIES=		net
-MASTER_SITES=		http://cr.yp.to/djbdns/	ftp://cr.yp.to/djbdns/
+MASTER_SITES=	http://cr.yp.to/djbdns/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -20,12 +20,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 # provide compatibility symlinks. We also patch to honor PKG_SYSCONFDIR
 # and to set reasonable permissions on standard pkgsrc directories.
 # This no longer affects distributability, as djbdns is public domain.
-DJB_RESTRICTED=		no
+DJB_RESTRICTED=	no
 
 EGDIR=			${PREFIX}/share/examples/djbdns
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 MAKE_DIRS+=		${PKG_SYSCONFDIR}
-CONF_FILES+=		${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global
+CONF_FILES+=	${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global
 PLIST_SRC=		${PKGDIR}/PLIST
 
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 share/examples/djbdns
