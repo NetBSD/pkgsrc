@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/06/30 00:42:01 joerg Exp $
+# $NetBSD: Makefile,v 1.61 2009/10/19 21:47:22 tez Exp $
 
 PKGVER=		2.3.1
 DISTNAME=	openmotif-${PKGVER}
@@ -55,6 +55,8 @@ SUBST_SED.man_rename+=		-e 's: Shell.3: XShell.3:g'
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ENV+=		ac_cv_func_setpgrp_void=no
 .endif
+CONFIGURE_ARGS+=	--enable-xft
+CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 MAKE_FLAGS+=	CROSS_COMPILING=yes CC_FOR_BUILD=${NATIVE_CC:Q} \
