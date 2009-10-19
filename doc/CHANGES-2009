@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4011 2009/10/19 11:21:12 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4012 2009/10/19 11:22:36 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5302,3 +5302,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/py-flup to 1.0.2 [joerg 2009-10-19]
 	Updated print/py-pisa to 3.0.32 [joerg 2009-10-19]
 	Updated print/py-reportlab to 2.3 [joerg 2009-10-19]
+	Updated textproc/py-textile to 2.1.3 [joerg 2009-10-19]
