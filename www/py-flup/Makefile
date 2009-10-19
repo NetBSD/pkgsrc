@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2009/07/14 11:14:33 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/10/19 11:12:08 joerg Exp $
 #
 
-DISTNAME=	flup-r2311
-PKGNAME=	${PYPKGPREFIX}-flup-2311
-EGG_NAME=	flup-0.5
+DISTNAME=	flup-1.0.2
+PKGNAME=	${PYPKGPREFIX}-flup-1.0.2
 CATEGORIES=	www python
 MASTER_SITES=	http://www.saddi.com/software/flup/dist/
 
