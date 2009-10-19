@@ -1,68 +1,15 @@
-$NetBSD: patch-ad,v 1.2 2009/07/14 15:53:20 hasso Exp $
+$NetBSD: patch-ad,v 1.3 2009/10/19 01:53:21 ahoka Exp $
 
---- pokerth_server.pro.orig	2009-06-26 02:29:46 +0300
-+++ pokerth_server.pro	2009-07-12 23:13:58 +0300
-@@ -185,69 +185,13 @@ unix : !mac {
+--- pokerth_server.pro.orig	2009-06-26 01:29:46.000000000 +0200
++++ pokerth_server.pro
+@@ -236,18 +236,10 @@ unix : !mac {
+             error("Unable to find boost libraries in PREFIX=$${PREFIX}")
+         }
  
-         LIBPATH += lib
- 
--        LIB_DIRS = $${PREFIX}/lib $${PREFIX}/lib64
--        BOOST_FS = boost_filesystem boost_filesystem-mt
--        BOOST_THREAD = boost_thread boost_thread-mt
--        BOOST_PROGRAM_OPTIONS = boost_program_options boost_program_options-mt
--        BOOST_IOSTREAMS = boost_iostreams boost_iostreams-mt
--	BOOST_REGEX = boost_regex boost_regex-mt
--
--        #
--        # searching in $PREFIX/lib and $PREFIX/lib64
--        # to override the default '/usr' pass PREFIX
--        # variable to qmake.
--        #
--        for(dir, LIB_DIRS){
--            exists($$dir){
--                for(lib, BOOST_THREAD){
--                    exists($${dir}/lib$${lib}.so*){
--                        message("Found $$lib")
--                        BOOST_THREAD = -l$$lib
--                    }
--                }
--                for(lib, BOOST_FS){
--                    exists($${dir}/lib$${lib}.so*){
--                        message("Found $$lib")
--                        BOOST_FS = -l$$lib
--                    }
--                }
--                for(lib, BOOST_PROGRAM_OPTIONS){
--                    exists($${dir}/lib$${lib}.so*){
--                        message("Found $$lib")
--                        BOOST_PROGRAM_OPTIONS = -l$$lib
--                    }
--                }
--                for(lib, BOOST_IOSTREAMS){
--                    exists($${dir}/lib$${lib}.so*){
--                        message("Found $$lib")
--                        BOOST_IOSTREAMS = -l$$lib
--                    }
--                }
--		for(lib, BOOST_REGEX){
--                    exists($${dir}/lib$${lib}.so*){
--                        message("Found $$lib")
--                        BOOST_REGEX = -l$$lib
--                    }
--                }
--            }
--        }
--        BOOST_LIBS = $$BOOST_THREAD $$BOOST_FS $$BOOST_PROGRAM_OPTIONS $$BOOST_IOSTREAMS $$BOOST_REGEX
--        !count(BOOST_LIBS, 5){
--            error("Unable to find boost libraries in PREFIX=$${PREFIX}")
--        }
--
 -        UNAME = $$system(uname -s)
 -        BSD = $$find(UNAME, "BSD")
 -        kFreeBSD = $$find(UNAME, "kFreeBSD")
-+	LIBS += -lboost_filesystem-mt -lboost_thread-mt
-+	LIBS += -lboost_program_options-mt -lboost_iostreams-mt -lboost_regex-mt
- 
+-
          LIBS += -lpokerth_lib
          LIBS += $$BOOST_LIBS
          LIBS += -lcurl
