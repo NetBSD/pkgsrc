@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4004 2009/10/18 22:28:53 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.4005 2009/10/19 08:38:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5295,3 +5295,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/mplayer to 1.0rc20091017 [ahoka 2009-10-18]
 	Updated multimedia/gmplayer to 1.0rc20091017 [ahoka 2009-10-18]
 	Updated multimedia/mencoder to 1.0rc20091017 [ahoka 2009-10-18]
+	Updated databases/unixodbc to 2.2.14nb1 [taca 2009-10-19]
