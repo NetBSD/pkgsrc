@@ -1,13 +1,16 @@
-$NetBSD: patch-ae,v 1.9 2009/10/18 22:22:10 ahoka Exp $
+$NetBSD: patch-ae,v 1.10 2009/10/19 00:13:07 ahoka Exp $
 
 --- libvo/aclib.c.orig	2009-04-08 22:21:21.000000000 +0200
 +++ libvo/aclib.c
-@@ -40,7 +40,7 @@
- //#define COMPILE_C
- //#endif
+@@ -28,6 +28,11 @@
+ #include "fastmemcpy.h"
+ #undef memcpy
  
--#if ARCH_X86
-+#if defined(ARCH_X86) && !defined(__APPLE__)
- 
- #if (HAVE_MMX && !HAVE_AMD3DNOW && !HAVE_MMX2) || CONFIG_RUNTIME_CPUDETECT
- #define COMPILE_MMX
++#if ARCH_X86 && defined(__APPLE__)
++#undef ARCH_X86
++#define ARCH_X86 0
++#endif
++
+ #define BLOCK_SIZE 4096
+ #define CONFUSION_FACTOR 0
+ //Feel free to fine-tune the above 2, it might be possible to get some speedup with them :)
