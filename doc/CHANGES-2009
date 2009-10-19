@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4005 2009/10/19 08:38:26 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4006 2009/10/19 10:58:18 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5296,3 +5296,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/gmplayer to 1.0rc20091017 [ahoka 2009-10-18]
 	Updated multimedia/mencoder to 1.0rc20091017 [ahoka 2009-10-18]
 	Updated databases/unixodbc to 2.2.14nb1 [taca 2009-10-19]
+	Updated textproc/py-html5lib to 0.11.1 [joerg 2009-10-19]
