@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2008/12/19 12:12:53 darcy Exp $
+$NetBSD: patch-aa,v 1.10 2009/10/19 18:30:32 joerg Exp $
 
---- Makefile.orig	2008-11-17 16:12:39.000000000 -0500
+--- Makefile.orig	2008-11-17 22:12:39.000000000 +0100
 +++ Makefile
 @@ -9,7 +9,7 @@ VERSION_MAJOR =	2
  VERSION_MINOR = 6
@@ -11,3 +11,16 @@ $NetBSD: patch-aa,v 1.9 2008/12/19 12:12:53 darcy Exp $
  			-Wwrite-strings -Wstrict-prototypes \
  			-Wformat -Wmissing-prototypes -funsigned-char \
  			-I/usr/local/include -L/usr/local/lib \
+@@ -48,10 +48,8 @@ clean:
+ 	rm -rf build
+ 
+ install:	all
+-	chmod 644 generate.1
+-	cp generate.1 /${MANDIR}/man1
+-	chmod 755 ${BINS}
+-	cp ${BINS} ${BINDIR}
++	${BSD_INSTALL_MAN} generate.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++	${BSD_INSTALL_PROGRAM} ${BINS} ${DESTDIR}${PREFIX}/bin
+ 
+ python:
+ 	gmake clean
