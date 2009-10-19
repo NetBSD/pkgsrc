@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.2 2009/10/14 09:28:22 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.3 2009/10/19 21:17:31 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -9,3 +9,7 @@ Pullup ticket #2911 - requested by joerg
 py-django: bug-fix update
 Pullup ticket #2912 - requested by hasso
 perl5: portability patch
+Pullup ticket #2913 - requested by tez
+xpdf: security patch
+Pullup ticket #2914 - requested by joerg
+unbound: security update
