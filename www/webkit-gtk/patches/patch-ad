@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2009/03/18 03:13:12 snj Exp $
+$NetBSD: patch-ad,v 1.5 2009/10/19 14:18:08 wiz Exp $
 
---- JavaScriptCore/wtf/Platform.h.orig	2009-03-15 10:41:39.000000000 -0700
-+++ JavaScriptCore/wtf/Platform.h	2009-03-17 16:33:41.000000000 -0700
-@@ -70,7 +70,7 @@
+--- JavaScriptCore/wtf/Platform.h.orig	2009-10-01 22:06:02 +0300
++++ JavaScriptCore/wtf/Platform.h	2009-10-19 11:39:58 +0300
+@@ -75,7 +75,7 @@
  /* PLATFORM(FREEBSD) */
  /* Operating system level dependencies for FreeBSD-like systems that */
  /* should be used regardless of operating environment */
@@ -11,3 +11,12 @@ $NetBSD: patch-ad,v 1.4 2009/03/18 03:13:12 snj Exp $
  #define WTF_PLATFORM_FREEBSD 1
  #endif
  
+@@ -630,7 +630,7 @@
+ #endif
+ 
+ #if !defined(WTF_USE_JSVALUE64) && !defined(WTF_USE_JSVALUE32) && !defined(WTF_USE_JSVALUE32_64)
+-#if PLATFORM(X86_64) && (PLATFORM(DARWIN) || PLATFORM(LINUX))
++#if PLATFORM(X86_64) && (PLATFORM(DARWIN) || PLATFORM(LINUX) || PLATFORM(FREEBSD) || PLATFORM(NETBSD))
+ #define WTF_USE_JSVALUE64 1
+ #elif PLATFORM(ARM) || PLATFORM(PPC64)
+ #define WTF_USE_JSVALUE32 1
