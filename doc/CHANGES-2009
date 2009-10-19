@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4015 2009/10/19 17:04:37 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4016 2009/10/19 19:34:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5306,3 +5306,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/diffuse to 0.4.1 [wiz 2009-10-19]
 	Updated audio/mp3diags to 0.99.06.041 [adam 2009-10-19]
 	Updated net/unbound to 1.3.4 [joerg 2009-10-19]
+	Updated audio/bmpx to 0.40.14nb2 [adam 2009-10-19]
