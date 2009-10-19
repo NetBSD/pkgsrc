@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8539 2009/10/18 12:17:35 tnn Exp $
+$NetBSD: TODO,v 1.8540 2009/10/19 11:08:28 joerg Exp $
 
 Suggested new packages
 ======================
@@ -1202,7 +1202,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ZODB-3.2.10
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
-	o py-beautifulsoup-3.1.0.1
 	o py-bsddb3-4.8.0
 	o py-checker-0.8.17
 	o py-clutter-1.0
