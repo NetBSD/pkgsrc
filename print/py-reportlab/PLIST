@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:11:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/10/19 11:17:16 joerg Exp $
 ${PYSITELIB}/_renderPM.so
 ${PYSITELIB}/_rl_accel.so
 ${PYSITELIB}/pyHnj.so
 ${PYSITELIB}/reportlab/__init__.py
 ${PYSITELIB}/reportlab/__init__.pyc
 ${PYSITELIB}/reportlab/__init__.pyo
-${PYSITELIB}/reportlab/extensions/README
-${PYSITELIB}/reportlab/extensions/__init__.py
-${PYSITELIB}/reportlab/extensions/__init__.pyc
-${PYSITELIB}/reportlab/extensions/__init__.pyo
 ${PYSITELIB}/reportlab/fonts/00readme.txt
 ${PYSITELIB}/reportlab/fonts/DarkGarden-copying-gpl.txt
 ${PYSITELIB}/reportlab/fonts/DarkGarden-copying.txt
@@ -213,6 +209,9 @@ ${PYSITELIB}/reportlab/lib/__init__.pyo
 ${PYSITELIB}/reportlab/lib/abag.py
 ${PYSITELIB}/reportlab/lib/abag.pyc
 ${PYSITELIB}/reportlab/lib/abag.pyo
+${PYSITELIB}/reportlab/lib/arciv.py
+${PYSITELIB}/reportlab/lib/arciv.pyc
+${PYSITELIB}/reportlab/lib/arciv.pyo
 ${PYSITELIB}/reportlab/lib/attrmap.py
 ${PYSITELIB}/reportlab/lib/attrmap.pyc
 ${PYSITELIB}/reportlab/lib/attrmap.pyo
@@ -243,6 +242,9 @@ ${PYSITELIB}/reportlab/lib/fonts.pyo
 ${PYSITELIB}/reportlab/lib/formatters.py
 ${PYSITELIB}/reportlab/lib/formatters.pyc
 ${PYSITELIB}/reportlab/lib/formatters.pyo
+${PYSITELIB}/reportlab/lib/geomutils.py
+${PYSITELIB}/reportlab/lib/geomutils.pyc
+${PYSITELIB}/reportlab/lib/geomutils.pyo
 ${PYSITELIB}/reportlab/lib/hyphen.mashed
 ${PYSITELIB}/reportlab/lib/logger.py
 ${PYSITELIB}/reportlab/lib/logger.pyc
@@ -253,6 +255,9 @@ ${PYSITELIB}/reportlab/lib/normalDate.pyo
 ${PYSITELIB}/reportlab/lib/pagesizes.py
 ${PYSITELIB}/reportlab/lib/pagesizes.pyc
 ${PYSITELIB}/reportlab/lib/pagesizes.pyo
+${PYSITELIB}/reportlab/lib/pdfencrypt.py
+${PYSITELIB}/reportlab/lib/pdfencrypt.pyc
+${PYSITELIB}/reportlab/lib/pdfencrypt.pyo
 ${PYSITELIB}/reportlab/lib/randomtext.py
 ${PYSITELIB}/reportlab/lib/randomtext.pyc
 ${PYSITELIB}/reportlab/lib/randomtext.pyo
@@ -271,12 +276,12 @@ ${PYSITELIB}/reportlab/lib/set_ops.pyo
 ${PYSITELIB}/reportlab/lib/styles.py
 ${PYSITELIB}/reportlab/lib/styles.pyc
 ${PYSITELIB}/reportlab/lib/styles.pyo
+${PYSITELIB}/reportlab/lib/testutils.py
+${PYSITELIB}/reportlab/lib/testutils.pyc
+${PYSITELIB}/reportlab/lib/testutils.pyo
 ${PYSITELIB}/reportlab/lib/textsplit.py
 ${PYSITELIB}/reportlab/lib/textsplit.pyc
 ${PYSITELIB}/reportlab/lib/textsplit.pyo
-${PYSITELIB}/reportlab/lib/tocindex.py
-${PYSITELIB}/reportlab/lib/tocindex.pyc
-${PYSITELIB}/reportlab/lib/tocindex.pyo
 ${PYSITELIB}/reportlab/lib/units.py
 ${PYSITELIB}/reportlab/lib/units.pyc
 ${PYSITELIB}/reportlab/lib/units.pyo

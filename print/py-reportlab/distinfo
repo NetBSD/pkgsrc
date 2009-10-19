@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2009/01/28 14:42:28 joerg Exp $
+$NetBSD: distinfo,v 1.12 2009/10/19 11:17:16 joerg Exp $
 
-SHA1 (ReportLab_2_2.tgz) = 6cd751111950a97859b901824e83bf4836b6b6a5
-RMD160 (ReportLab_2_2.tgz) = 585de3724d71a5c2251980c7125e7a2ca81f544a
-Size (ReportLab_2_2.tgz) = 1960714 bytes
+SHA1 (ReportLab_2_3.tar.gz) = cb5e27fef02eceaab79236d5a074cdfb92bff179
+RMD160 (ReportLab_2_3.tar.gz) = ebb347765d516e74b965ec89c7909ec7592e3f54
+Size (ReportLab_2_3.tar.gz) = 1857239 bytes
 SHA1 (patch-aa) = 67d9d7f3198bff2c47cf734b40e29ce8619e170a

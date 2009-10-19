@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.36 2009/08/26 19:58:14 sno Exp $
+# $NetBSD: Makefile,v 1.37 2009/10/19 11:17:16 joerg Exp $
 #
 
-DISTNAME=	ReportLab_2_2
-PKGNAME=	${PYPKGPREFIX}-reportlab-2.2
-PKGREVISION=	1
+DISTNAME=	ReportLab_2_3
+PKGNAME=	${PYPKGPREFIX}-reportlab-2.3
 CATEGORIES=	print python
 MASTER_SITES=	http://www.reportlab.com/ftp/
-EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tsarna@NetBSD.org
+MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.reportlab.com/
 COMMENT=	Powerful PDF-generating toolkit for Python
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED=	25 24
 
 PYDISTUTILSPKG=	yes
 
