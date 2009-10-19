@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/01/15 00:13:59 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/10/19 11:05:52 joerg Exp $
 #
 
-DISTNAME=	BeautifulSoup-3.0.7a
-PKGNAME=	${PYPKGPREFIX}-beautifulsoup-3.0.7a
+DISTNAME=	BeautifulSoup-3.1.0.1
+PKGNAME=	${PYPKGPREFIX}-beautifulsoup-3.1.0.1
 CATEGORIES=	www python
 MASTER_SITES=	http://www.crummy.com/software/BeautifulSoup/download/
 
