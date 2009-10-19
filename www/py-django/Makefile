@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2009/10/13 18:19:23 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/10/19 11:31:05 joerg Exp $
 
-DJANGOVERS=	1.0.4
+DJANGOVERS=	1.1.1
 DISTNAME=	Django-${DJANGOVERS}
 PKGNAME=	${PYPKGPREFIX}-django-${DJANGOVERS}
 CATEGORIES=	www python
@@ -10,10 +10,11 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.djangoproject.com/
 COMMENT=	Django, a high-level Python Web framework
 
+LICENSE=	modified-bsd
+
 PREV_PKGPATH=	www/py-django-devel
 
 PYDISTUTILSPKG=	# yes
-PYTHON_VERSIONS_ACCEPTED=	25 24
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
