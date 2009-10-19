@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:57:33 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/19 01:53:20 ahoka Exp $
 #
 
 DISTNAME=	PokerTH-0.7.1-src
@@ -21,7 +21,7 @@ INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1 share/pokerth \
 			share/pixmaps share/applications
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake pokerth.pro
+	cd ${WRKSRC} && ${QTDIR}/bin/qmake pokerth.pro ${MAKE_ENV}
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/lib/* ${DESTDIR}${PREFIX}/lib
