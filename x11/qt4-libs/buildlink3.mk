@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/08/26 19:56:38 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/10/19 11:07:32 ahoka Exp $
 
 BUILDLINK_TREE+=	qt4-libs
 
@@ -34,6 +34,13 @@ PTHREAD_OPTS+=	require
 .include "../../x11/libXinerama/buildlink3.mk"
 .endif
 .include "../../mk/pthread.buildlink3.mk"
+
+pkgbase := qt4-libs
+.include "../../mk/pkg-build-options.mk"
+.if !empty(PKG_BUILD_OPTIONS.qt4-libs:Mgtk2)
+.  include "../../devel/glib2/buildlink3.mk"
+#.  include "../../x11/gtk2/buildlink3.mk"
+.endif
 
 .if !defined(BUILD_QT4)
 CONFIGURE_ENV+=		QTDIR=${QTDIR:Q}
