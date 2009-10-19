@@ -1,13 +1,16 @@
-$NetBSD: patch-ag,v 1.5 2009/10/18 22:22:10 ahoka Exp $
+$NetBSD: patch-ag,v 1.6 2009/10/19 00:13:07 ahoka Exp $
 
 --- libvo/osd.c.orig	2009-04-08 22:21:21.000000000 +0200
 +++ libvo/osd.c
-@@ -41,7 +41,7 @@ static const unsigned long long mask24hl
- #define COMPILE_C
- #endif
+@@ -29,6 +29,11 @@
+ #include <inttypes.h>
+ #include "cpudetect.h"
  
--#if ARCH_X86
-+#if defined(ARCH_X86) && !defined(__APPLE__)
- 
- #if (HAVE_MMX && !HAVE_AMD3DNOW && !HAVE_MMX2) || CONFIG_RUNTIME_CPUDETECT
- #define COMPILE_MMX
++#if ARCH_X86 && defined(__APPLE__)
++#undef ARCH_X86
++#define ARCH_X86 0
++#endif
++
+ #if ARCH_X86
+ static const uint64_t bFF __attribute__((aligned(8))) = 0xFFFFFFFFFFFFFFFFULL;
+ static const unsigned long long mask24lh  __attribute__((aligned(8))) = 0xFFFF000000000000ULL;
