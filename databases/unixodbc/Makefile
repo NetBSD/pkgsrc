@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2009/10/17 01:59:14 taca Exp $
+# $NetBSD: Makefile,v 1.25 2009/10/19 08:37:39 taca Exp $
 
 DISTNAME=	unixODBC-2.2.14
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.unixodbc.org/
 
