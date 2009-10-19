@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8540 2009/10/19 11:08:28 joerg Exp $
+$NetBSD: TODO,v 1.8541 2009/10/19 11:22:36 joerg Exp $
 
 Suggested new packages
 ======================
@@ -1227,7 +1227,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-qt4-4.6
 	o py-sip-4.9
 	o py-sybase-0.37
-	o py-textile-2.0.11
 	o py-urwid-0.9.8.4
 	o py-zconfig-2.3.1
 	o python-3.1.1
