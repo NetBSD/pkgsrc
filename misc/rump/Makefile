@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/10/19 08:46:30 stacktic Exp $
+# $NetBSD: Makefile,v 1.4 2009/10/19 16:31:38 stacktic Exp $
 #
 
 DISTNAME=		rump_20091014
 PKGNAME=		${DISTNAME:S/_/-/}
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/stacktic/
 
@@ -20,9 +21,6 @@ USE_BSD_MAKEFILE=	yes
 
 WRKSRC=			${WRKDIR}/rump
 MAKEFLAGS+=		-m ${WRKSRC}/share/mk
-MAKEFLAGS+=		MACHINE_ARCH=${MACHINE_ARCH}
-MAKEFLAGS+=		MACHINE_CPU=${MACHINE_ARCH}
-MAKEFLAGS+=		MACHINE=${MACHINE_ARCH}
 MAKEFLAGS+=		MKMAN=no
 
 SUBST_CLASSES+=		inc_path
@@ -39,6 +37,13 @@ SUBST_FILES.path=	share/mk/bsd.own.mk
 SUBST_SED.path=		-e "s|/usr/src|${WRKSRC}|g"
 SUBST_SED.path+=	-e "s|NM.*lorder|${WRKSRC}/bin/lorder|g"
 SUBST_SED.path+=	-e "s|^INSTALL=.*|INSTALL= ${WRKSRC}/tools/binstall/xinstall|g"
+
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	pre-configure
+SUBST_MESSAGE.install=	Using NetBSD install
+SUBST_FILES.install=	share/mk/sys.mk
+SUBST_SED.install=	-e "s|^INSTALL?=.*|INSTALL=${WRKSRC}/tools/binstall/xinstall|g"
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
@@ -54,14 +59,14 @@ SUBST_STAGE.strlc=	pre-configure
 SUBST_MESSAGE.strlc=	Fixing strlcat/strlcpy definition.
 SUBST_FILES.strlc=	lib/libukfs/Makefile
 SUBST_SED.strlc=	-e "s|\#LIB.*|LDADD+= -L${WRKSRC}/tools/compat -lnbcompat|g"
-.endif
 
-.if ${OPSYS} != "NetBSD"
-SUBST_CLASSES+=		install
-SUBST_STAGE.install=	pre-configure
-SUBST_MESSAGE.install=	Using NetBSD install
-SUBST_FILES.install=	share/mk/sys.mk
-SUBST_SED.install=	-e "s|^INSTALL?=.*|INSTALL=${WRKSRC}/tools/binstall/xinstall|g"
+MAKEFLAGS+=		MACHINE=${MACHINE_ARCH:C/x86_64/amd64/}
+MAKEFLAGS+=		MACHINE_ARCH=${MACHINE_ARCH}
+CRT_PATH!=		gcc --print-file-name=crtbegin.o
+MAKEFLAGS+=		_GCC_CRTBEGIN=${CRT_PATH}
+MAKEFLAGS+=		_GCC_CRTBEGINS=${CRT_PATH:C/begin/beginS/}
+MAKEFLAGS+=		_GCC_CRTEND=${CRT_PATH:C/begin/end/}
+MAKEFLAGS+=		_GCC_CRTENDS=${CRT_PATH:C/begin/endS/}
 .endif
 
 post-install:
