@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.63 2009/10/18 22:22:10 ahoka Exp $
+$NetBSD: distinfo,v 1.64 2009/10/19 00:13:07 ahoka Exp $
 
 SHA1 (mplayer/mplayer-20091017.tar.bz2) = 8ee97842812b9867f192f521b96bb1b6e1742a23
 RMD160 (mplayer/mplayer-20091017.tar.bz2) = 015d3847b05f4d674d4740e55f117ce6085d5cc3
@@ -6,8 +6,8 @@ Size (mplayer/mplayer-20091017.tar.bz2) = 8525942 bytes
 SHA1 (patch-aa) = 24007024e4b6bfa212817681e8d07cc079aee13b
 SHA1 (patch-ac) = 13ea17bcdde5ebc7e04eeb5eb833dca0cd623ba2
 SHA1 (patch-ad) = 0a43a47538f0f18f8b6aa230367821b8bb51e932
-SHA1 (patch-ae) = 448ae3c17fd96248b7360958c9640f74ed4891a5
-SHA1 (patch-ag) = e3aea6e1144e97d1dc9f240275568108df25ab00
+SHA1 (patch-ae) = 5a1f1d9f6480fb67a2a12d9088990ed546e1b1e4
+SHA1 (patch-ag) = bef25568c913dcb8535afa51976ce7c94a6af5a2
 SHA1 (patch-ah) = 7aeb9f04d622fcad8c40dc9edbb0a58277fc622b
 SHA1 (patch-an) = 3e72fb86abe7ab572f12a4fef002edb623ab6fae
 SHA1 (patch-ao) = 8588d0215e973045b7f1abd7fbc9813409876b99
