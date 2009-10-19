@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/27 17:27:07 joerg Exp $
+$NetBSD: distinfo,v 1.2 2009/10/19 10:57:40 joerg Exp $
 
-SHA1 (html5lib-0.11.zip) = cfacf8feed09bd0d53bc713965d70c8e9a416e92
-RMD160 (html5lib-0.11.zip) = fd6e377fa4af43d008147ee3fa50a18533eaa19d
-Size (html5lib-0.11.zip) = 187505 bytes
+SHA1 (html5lib-0.11.1.zip) = 157506319e40f5d973c128e5e2b826cd1bee471e
+RMD160 (html5lib-0.11.1.zip) = ac00975e5ea8b20606531e631274c1a8985110c9
+Size (html5lib-0.11.1.zip) = 375892 bytes

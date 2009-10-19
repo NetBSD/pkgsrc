@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/27 17:27:07 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/19 10:57:40 joerg Exp $
 #
 
-DISTNAME=	html5lib-0.11
+DISTNAME=	html5lib-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc www python
 MASTER_SITES=	http://html5lib.googlecode.com/files/
