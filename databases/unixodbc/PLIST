@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/10/17 01:59:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/10/19 08:37:39 taca Exp $
 bin/dltest
 bin/isql
 bin/iusql
@@ -11,6 +11,7 @@ include/sql.h
 include/sqlext.h
 include/sqltypes.h
 include/sqlucode.h
+include/unixodbc_conf.h
 include/uodbc_extras.h
 include/uodbc_stats.h
 lib/libboundparam.la
