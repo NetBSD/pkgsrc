@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/10/14 22:30:06 pooka Exp $
+# $NetBSD: Makefile,v 1.3 2009/10/19 08:46:30 stacktic Exp $
 #
 
 DISTNAME=		rump_20091014
@@ -48,6 +48,12 @@ SUBST_MESSAGE.linux=	Adjusting tsort option.
 SUBST_FILES.linux=	share/mk/sys.mk
 SUBST_SED.linux=	-e "s|tsort -q|tsort|g"
 SUBST_SED.linux+=	-e "s|lorder|${WRKSRC}/bin/lorder|g"
+
+SUBST_CLASSES+=		strlc
+SUBST_STAGE.strlc=	pre-configure
+SUBST_MESSAGE.strlc=	Fixing strlcat/strlcpy definition.
+SUBST_FILES.strlc=	lib/libukfs/Makefile
+SUBST_SED.strlc=	-e "s|\#LIB.*|LDADD+= -L${WRKSRC}/tools/compat -lnbcompat|g"
 .endif
 
 .if ${OPSYS} != "NetBSD"
