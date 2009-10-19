@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/08/20 09:06:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/19 14:33:28 wiz Exp $
 bin/diffuse
 man/man1/diffuse.1
 share/applications/diffuse.desktop
@@ -33,5 +33,7 @@ share/diffuse/syntax/xml.syntax
 share/examples/diffuse/diffuserc
 share/gnome/help/diffuse/C/diffuse.xml
 share/locale/de/LC_MESSAGES/diffuse.mo
+share/locale/ja/LC_MESSAGES/diffuse.mo
+share/locale/zh_CN/LC_MESSAGES/diffuse.mo
 share/omf/diffuse/diffuse-C.omf
 share/pixmaps/diffuse.png
