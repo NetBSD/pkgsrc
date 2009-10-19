@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2009/09/23 09:54:45 tron Exp $
+# $NetBSD: Makefile,v 1.17 2009/10/19 14:33:28 wiz Exp $
 #
 
-DISTNAME=	diffuse-0.4.0
-PKGREVISION=	1
+DISTNAME=	diffuse-0.4.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=diffuse/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +18,6 @@ USE_LANGUAGES=	# none
 
 CONF_FILES+=	${PREFIX}/share/examples/diffuse/diffuserc \
 		${PKG_SYSCONFDIR}/diffuserc
-
 
 do-build:
 	# nothing
