@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4009 2009/10/19 11:12:44 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4010 2009/10/19 11:20:16 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5300,3 +5300,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/py-psycopg to 1.1.21nb3 [joerg 2009-10-19]
 	Updated www/py-beautifulsoup to 3.1.0.1 [joerg 2009-10-19]
 	Updated www/py-flup to 1.0.2 [joerg 2009-10-19]
+	Updated print/py-pisa to 3.0.32 [joerg 2009-10-19]
