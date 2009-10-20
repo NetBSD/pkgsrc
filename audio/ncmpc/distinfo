@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2009/08/09 23:12:54 wiz Exp $
+$NetBSD: distinfo,v 1.10 2009/10/20 20:32:46 jakllsch Exp $
 
-SHA1 (ncmpc-0.14.tar.bz2) = 0a2ea890129cf9cc2929ab93554d4892f7f19e7f
-RMD160 (ncmpc-0.14.tar.bz2) = cf687b30bfe8c36c597289c359a8b0ce14923575
-Size (ncmpc-0.14.tar.bz2) = 247783 bytes
+SHA1 (ncmpc-0.15.tar.bz2) = 710e6028c3630cf92a21c98f35598c81b4753638
+RMD160 (ncmpc-0.15.tar.bz2) = 2a58726b7ff77ff4520ee43adfccec3d5fe2e0e1
+Size (ncmpc-0.15.tar.bz2) = 260080 bytes
 SHA1 (patch-ad) = 792edb732f84b82c30ef9375d45bb036727a00b4
