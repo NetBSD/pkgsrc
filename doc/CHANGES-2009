@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4022 2009/10/20 02:59:55 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4023 2009/10/20 08:07:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3913,7 +3913,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/diffuse to 0.3.4 [wiz 2009-08-06]
 	Updated devel/subversion to 1.6.4 [gdt 2009-08-06]
 	Updated x11/py-wxWidgets to 2.8.10.1 [joerg 2009-08-07]
-	Updated devel/rapidsvn to 1 [joerg 2009-08-07]
+	Updated devel/rapidsvn to 0.10.0 [joerg 2009-08-07]
 	Updated devel/scmgit-base to 1.6.4 [minskim 2009-08-07]
 	Updated devel/scmgit-docs to 1.6.4 [minskim 2009-08-07]
 	Updated devel/scmgit to 1.6.4 [minskim 2009-08-07]
