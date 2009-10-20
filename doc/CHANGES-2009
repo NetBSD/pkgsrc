@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4029 2009/10/20 15:57:02 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4030 2009/10/20 20:27:36 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5325,3 +5325,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/libtheora to 1.1.1 [wiz 2009-10-20]
 	Updated multimedia/libtheora-docs to 1.1.1 [wiz 2009-10-20]
 	Updated lang/python26 to 2.6.3 [wiz 2009-10-20]
+	Updated audio/gmpc to 0.19.1 [joerg 2009-10-20]
