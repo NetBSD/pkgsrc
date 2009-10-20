@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4023 2009/10/20 08:07:02 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4024 2009/10/20 11:05:18 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5317,3 +5317,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/ruby-dbd-sqlite3 to 1.2.5nb1 [taca 2009-10-20]
 	Added devel/ruby-deprecated version 2.0.1 [taca 2009-10-20]
 	Updated databases/ruby-dbi to 0.4.3nb1 [taca 2009-10-20]
+	Added databases/jdbc-postgresql84 version 701 [abs 2009-10-20]
+	Updated databases/jdbc-postgresql83 to 605 [abs 2009-10-20]
+	Updated databases/jdbc-postgresql82 to 510 [abs 2009-10-20]
