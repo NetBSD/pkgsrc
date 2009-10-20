@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.37 2009/10/18 22:22:10 ahoka Exp $
+# $NetBSD: options.mk,v 1.38 2009/10/20 09:53:28 tnn Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -120,7 +120,10 @@ CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 .if !empty(PKG_OPTIONS:Mdts)
-CONFIGURE_ARGS+=	--enable-libdca
+# The configure handling for --enable-libdca is broken.
+# However, it works if you omit the argument and let
+# configure autodetect support.
+#CONFIGURE_ARGS+=       --enable-libdca
 .  include "../../audio/libdca/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libdca
