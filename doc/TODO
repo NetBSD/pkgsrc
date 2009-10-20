@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8552 2009/10/20 20:28:32 joerg Exp $
+$NetBSD: TODO,v 1.8553 2009/10/20 20:34:26 jakllsch Exp $
 
 Suggested new packages
 ======================
@@ -1058,7 +1058,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nawk-20071023
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncftp3-3.2.2
-	o ncmpc-0.15
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
