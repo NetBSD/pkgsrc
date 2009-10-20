@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2009/07/18 10:41:33 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2009/10/20 15:56:49 wiz Exp $
 bin/2to3
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2368,6 +2368,7 @@ lib/python${PY_VER_SUFFIX}/tempfile.pyc
 lib/python${PY_VER_SUFFIX}/tempfile.pyo
 lib/python${PY_VER_SUFFIX}/test/185test.db
 lib/python${PY_VER_SUFFIX}/test/README
+lib/python${PY_VER_SUFFIX}/test/Sine-1000Hz-300ms.aif
 lib/python${PY_VER_SUFFIX}/test/__init__.py
 lib/python${PY_VER_SUFFIX}/test/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/__init__.pyo
@@ -2658,6 +2659,9 @@ lib/python${PY_VER_SUFFIX}/test/test_abstract_numbers.pyo
 lib/python${PY_VER_SUFFIX}/test/test_aepack.py
 lib/python${PY_VER_SUFFIX}/test/test_aepack.pyc
 lib/python${PY_VER_SUFFIX}/test/test_aepack.pyo
+lib/python${PY_VER_SUFFIX}/test/test_aifc.py
+lib/python${PY_VER_SUFFIX}/test/test_aifc.pyc
+lib/python${PY_VER_SUFFIX}/test/test_aifc.pyo
 lib/python${PY_VER_SUFFIX}/test/test_al.py
 lib/python${PY_VER_SUFFIX}/test/test_al.pyc
 lib/python${PY_VER_SUFFIX}/test/test_al.pyo
@@ -3179,6 +3183,9 @@ lib/python${PY_VER_SUFFIX}/test/test_largefile.pyo
 lib/python${PY_VER_SUFFIX}/test/test_lib2to3.py
 lib/python${PY_VER_SUFFIX}/test/test_lib2to3.pyc
 lib/python${PY_VER_SUFFIX}/test/test_lib2to3.pyo
+lib/python${PY_VER_SUFFIX}/test/test_linecache.py
+lib/python${PY_VER_SUFFIX}/test/test_linecache.pyc
+lib/python${PY_VER_SUFFIX}/test/test_linecache.pyo
 lib/python${PY_VER_SUFFIX}/test/test_linuxaudiodev.py
 lib/python${PY_VER_SUFFIX}/test/test_linuxaudiodev.pyc
 lib/python${PY_VER_SUFFIX}/test/test_linuxaudiodev.pyo
@@ -3476,6 +3483,9 @@ lib/python${PY_VER_SUFFIX}/test/test_slice.pyo
 lib/python${PY_VER_SUFFIX}/test/test_smtplib.py
 lib/python${PY_VER_SUFFIX}/test/test_smtplib.pyc
 lib/python${PY_VER_SUFFIX}/test/test_smtplib.pyo
+lib/python${PY_VER_SUFFIX}/test/test_smtpnet.py
+lib/python${PY_VER_SUFFIX}/test/test_smtpnet.pyc
+lib/python${PY_VER_SUFFIX}/test/test_smtpnet.pyo
 lib/python${PY_VER_SUFFIX}/test/test_socket.py
 lib/python${PY_VER_SUFFIX}/test/test_socket.pyc
 lib/python${PY_VER_SUFFIX}/test/test_socket.pyo
