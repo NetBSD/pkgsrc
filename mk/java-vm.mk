@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.70 2009/10/14 13:20:05 wiz Exp $
+# $NetBSD: java-vm.mk,v 1.71 2009/10/20 02:33:01 obache Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -16,10 +16,12 @@
 # Package-settable variables:
 #
 # USE_JAVA
-#	When set to "yes", a build-time dependency on the JDK is added.
+#	When set to "yes", a build-time dependency on the JDK and
+#	                   a run-time dependency on the JRE are added.
 #	When set to "run", a run-time dependency on the JRE is added.
+#	When set to "build", a build-time dependency on the JRE is added.
 #
-#	Possible values: yes run
+#	Possible values: yes run build
 #	Default value: yes
 #
 # USE_JAVA2
@@ -317,9 +319,13 @@ _JAVA_HOME=		${_JAVA_HOME_DEFAULT}
 EVAL_PREFIX+=		_JAVA_HOME=${_JAVA_PKGBASE.${_PKG_JVM}}
 .endif
 
-# We always need a run-time dependency on the JRE.
+# If we are not using Java for building, then we need a run-time dependency on
+# the JRE, otherwise, build-time dependency on the JRE.
 .if defined(_JRE_PKGSRCDIR)
 .  if exists(${_JRE_PKGSRCDIR}/buildlink3.mk)
+.    if !empty(USE_JAVA:M[bB][uU][iI][lL][dD])
+BUILDLINK_DEPMETHOD.${_JRE.${_PKG_JVM}}=	build
+.    endif
 .    include "${_JRE_PKGSRCDIR}/buildlink3.mk"
 .  endif
 .endif
@@ -327,7 +333,7 @@ EVAL_PREFIX+=		_JAVA_HOME=${_JAVA_PKGBASE.${_PKG_JVM}}
 # If we are building Java software, then we need a build-time dependency on
 # the JDK.
 #
-.if empty(USE_JAVA:M[rR][uU][nN])
+.if !empty(USE_JAVA:M[yE][eE][sS])
 .  if defined(_JDK_PKGSRCDIR)
 .    if exists(${_JDK_PKGSRCDIR}/buildlink3.mk)
 .      include "${_JDK_PKGSRCDIR}/buildlink3.mk"
