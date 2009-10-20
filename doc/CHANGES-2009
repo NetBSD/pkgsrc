@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4025 2009/10/20 15:35:06 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4026 2009/10/20 15:38:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5321,3 +5321,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/jdbc-postgresql83 to 605 [abs 2009-10-20]
 	Updated databases/jdbc-postgresql82 to 510 [abs 2009-10-20]
 	Updated emulators/snes9x-gtk to 1.51.78 [wiz 2009-10-20]
+	Updated net/clive to 2.2.7 [wiz 2009-10-20]
