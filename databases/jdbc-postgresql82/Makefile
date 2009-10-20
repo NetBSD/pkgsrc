@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/02/18 10:56:09 abs Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/20 11:03:18 abs Exp $
 #
 
 DISTNAME=		postgresql-jdbc-8.2-${PGBUILD}.src
@@ -11,7 +11,7 @@ MAINTAINER=		abs@NetBSD.org
 HOMEPAGE=		http://jdbc.postgresql.org/
 COMMENT=		PostgreSQL 8.2 JDBC3 driver
 
-PGBUILD=		508
+PGBUILD=		510
 JARDIST=		postgresql-8.2-${PGBUILD}.jdbc3.jar
 JARFILE=		postgresql82.jar
 EXTRACT_ONLY=           ${DISTFILES:N*.jar}
