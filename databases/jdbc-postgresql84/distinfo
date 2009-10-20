@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/20 10:59:18 abs Exp $
+
+SHA1 (postgresql-8.4-701.jdbc3.jar) = 0ec717c6a5fac71de1706d497fcab15ff57582a9
+RMD160 (postgresql-8.4-701.jdbc3.jar) = 976ddb8bc03b1c172371b5a3215d3835019d65fe
+Size (postgresql-8.4-701.jdbc3.jar) = 472831 bytes
+SHA1 (postgresql-jdbc-8.4-701.src.tar.gz) = 719004934271a9238d16877b380eb37614077362
+RMD160 (postgresql-jdbc-8.4-701.src.tar.gz) = 26ce9d3b03aa9f6735dd94d378a6b573841bfb62
+Size (postgresql-jdbc-8.4-701.src.tar.gz) = 551752 bytes
