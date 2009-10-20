@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4031 2009/10/20 20:28:32 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4032 2009/10/20 20:34:26 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5327,3 +5327,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/python26 to 2.6.3 [wiz 2009-10-20]
 	Updated audio/gmpc to 0.19.1 [joerg 2009-10-20]
 	Updated audio/libmpd to 0.19.0 [joerg 2009-10-20]
+	Updated audio/ncmpc to 0.15 [jakllsch 2009-10-20]
