@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4020 2009/10/20 01:51:22 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4021 2009/10/20 02:52:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5315,3 +5315,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/ruby-dbd-pg to 0.3.8nb1 [taca 2009-10-20]
 	Updated databases/ruby-dbd-sqlite to 0.1.2nb1 [taca 2009-10-20]
 	Updated databases/ruby-dbd-sqlite3 to 1.2.5nb1 [taca 2009-10-20]
+	Added devel/ruby-deprecated version 2.0.1 [taca 2009-10-20]
