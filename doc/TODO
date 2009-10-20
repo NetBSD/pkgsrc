@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8551 2009/10/20 20:27:36 joerg Exp $
+$NetBSD: TODO,v 1.8552 2009/10/20 20:28:32 joerg Exp $
 
 Suggested new packages
 ======================
@@ -938,7 +938,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
-	o libmpd-0.19.0
 	o libnasl-2.3.1
 	o libntlm-1.1
 	o libole2-2.2.8
