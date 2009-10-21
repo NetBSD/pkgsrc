@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2009/08/26 19:57:00 sno Exp $
+# $NetBSD: Makefile,v 1.56 2009/10/21 17:28:02 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../print/evince/Makefile.common"
-PKGREVISION=		1
 
 COMMENT=		Document viewer
 
@@ -15,6 +14,7 @@ GCONF_SCHEMAS+=	evince-thumbnailer-ps.schemas
 .include "options.mk"
 
 CONFIGURE_ARGS+=	--enable-comics
+CONFIGURE_ARGS+=	--disable-nautilus
 GCONF_SCHEMAS+=		evince-thumbnailer-comics.schemas
 
 BUILDLINK_DEPMETHOD.libXt?=	build

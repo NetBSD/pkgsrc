@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2009/03/18 00:16:46 jmcneill Exp $
+# $NetBSD: options.mk,v 1.5 2009/10/21 17:28:02 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evince
-PKG_SUPPORTED_OPTIONS=	dvi djvu gnome
-PKG_SUGGESTED_OPTIONS=	gnome
+PKG_SUPPORTED_OPTIONS=	dvi djvu
 
 .include "../../mk/bsd.options.mk"
 
@@ -21,11 +20,3 @@ PLIST.djvu=		yes
 GCONF_SCHEMAS+=	evince-thumbnailer-djvu.schemas
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .endif
-
-.if !empty(PKG_OPTIONS:Mgnome)
-COMMENT+=		for the GNOME Desktop
-.else
-COMMENT+=		(GTK version)
-CONFIGURE_ARGS+=	--disable-nautilus
-.endif
-
