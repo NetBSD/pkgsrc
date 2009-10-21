@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.73 2009/03/17 15:56:04 jmcneill Exp $
+# $NetBSD: Makefile,v 1.74 2009/10/21 15:57:25 drochner Exp $
 #
 
-DISTNAME=	libgnome-2.26.0
+DISTNAME=	libgnome-2.28.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
