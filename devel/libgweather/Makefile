@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2009/08/26 19:56:57 sno Exp $
+# $NetBSD: Makefile,v 1.16 2009/10/21 15:53:23 drochner Exp $
 #
 
-DISTNAME=	libgweather-2.26.2.1
-PKGREVISION=	1
+DISTNAME=	libgweather-2.28.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgweather/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgweather/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,6 +23,5 @@ CONFLICTS+=	gnome-applets<2.22.0
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
