@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.1 2009/10/21 04:21:27 taca Exp $
+
+* Call function_return() with IGNORE_THREAD after calling thread_release().
+
+--- DriverManager/SQLTransact.c.orig	2007-08-30 21:54:17.000000000 +0900
++++ DriverManager/SQLTransact.c
+@@ -439,7 +439,7 @@ SQLRETURN SQLTransact( SQLHENV environme
+ 
+             thread_release( SQL_HANDLE_ENV, environment );
+ 
+-            return function_return( SQL_HANDLE_ENV, environment, SQL_ERROR );
++            return function_return( IGNORE_THREAD, environment, SQL_ERROR );
+         }
+ 
+         /*
+@@ -474,7 +474,7 @@ SQLRETURN SQLTransact( SQLHENV environme
+ 
+                         thread_release( SQL_HANDLE_ENV, environment );
+ 
+-                        return function_return( SQL_HANDLE_ENV, environment, SQL_ERROR );
++                        return function_return( IGNORE_THREAD, environment, SQL_ERROR );
+                     }
+                 }
+                 else if ( CHECK_SQLENDTRAN( connection ))

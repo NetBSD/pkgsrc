@@ -1,0 +1,42 @@
+$NetBSD: patch-af,v 1.1 2009/10/21 04:21:27 taca Exp $
+
+* Call function_return() with IGNORE_THREAD after calling thread_release().
+
+--- DriverManager/SQLFreeHandle.c.orig	2007-12-17 22:13:03.000000000 +0900
++++ DriverManager/SQLFreeHandle.c
+@@ -234,7 +234,7 @@ SQLRETURN __SQLFreeHandle( SQLSMALLINT h
+ 
+             	thread_release( SQL_HANDLE_ENV, environment );
+ 
+-                return function_return( SQL_HANDLE_ENV, environment, SQL_ERROR );
++                return function_return( IGNORE_THREAD, environment, SQL_ERROR );
+             }
+ 
+             thread_release( SQL_HANDLE_ENV, environment );
+@@ -301,7 +301,7 @@ SQLRETURN __SQLFreeHandle( SQLSMALLINT h
+ 
+             	thread_release( SQL_HANDLE_ENV, environment );
+ 
+-                return function_return( SQL_HANDLE_ENV, environment, SQL_ERROR );
++                return function_return( IGNORE_THREAD, environment, SQL_ERROR );
+             }
+ 
+             environment -> connection_count --;
+@@ -404,7 +404,7 @@ SQLRETURN __SQLFreeHandle( SQLSMALLINT h
+ 
+                 thread_release( SQL_HANDLE_STMT, statement );
+ 				
+-                return function_return( SQL_HANDLE_STMT, statement, SQL_ERROR );
++                return function_return( IGNORE_THREAD, statement, SQL_ERROR );
+             }
+ 
+             if ( !CHECK_SQLFREEHANDLE( statement -> connection ))
+@@ -551,7 +551,7 @@ SQLRETURN __SQLFreeHandle( SQLSMALLINT h
+ 
+             	thread_release( SQL_HANDLE_DESC, descriptor );
+ 
+-                return function_return( SQL_HANDLE_DESC, descriptor, SQL_ERROR );
++                return function_return( IGNORE_THREAD, descriptor, SQL_ERROR );
+             }
+             else
+             {
