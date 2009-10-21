@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2009/06/14 22:06:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.67 2009/10/21 15:34:06 drochner Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-builder-convert
@@ -108,6 +108,7 @@ include/gtk-2.0/gtk/gtkdnd.h
 include/gtk-2.0/gtk/gtkdrawingarea.h
 include/gtk-2.0/gtk/gtkeditable.h
 include/gtk-2.0/gtk/gtkentry.h
+include/gtk-2.0/gtk/gtkentrybuffer.h
 include/gtk-2.0/gtk/gtkentrycompletion.h
 include/gtk-2.0/gtk/gtkenums.h
 include/gtk-2.0/gtk/gtkeventbox.h
@@ -142,6 +143,7 @@ include/gtk-2.0/gtk/gtkimcontext.h
 include/gtk-2.0/gtk/gtkimcontextsimple.h
 include/gtk-2.0/gtk/gtkimmodule.h
 include/gtk-2.0/gtk/gtkimmulticontext.h
+include/gtk-2.0/gtk/gtkinfobar.h
 include/gtk-2.0/gtk/gtkinputdialog.h
 include/gtk-2.0/gtk/gtkinvisible.h
 include/gtk-2.0/gtk/gtkitem.h
@@ -335,6 +337,7 @@ share/gtk-2.0/demo/demo.ui
 share/gtk-2.0/demo/dialog.c
 share/gtk-2.0/demo/drawingarea.c
 share/gtk-2.0/demo/editable_cells.c
+share/gtk-2.0/demo/entry_buffer.c
 share/gtk-2.0/demo/entry_completion.c
 share/gtk-2.0/demo/expander.c
 share/gtk-2.0/demo/floppybuddy.gif
@@ -352,8 +355,12 @@ share/gtk-2.0/demo/hypertext.c
 share/gtk-2.0/demo/iconview.c
 share/gtk-2.0/demo/iconview_edit.c
 share/gtk-2.0/demo/images.c
+share/gtk-2.0/demo/infobar.c
+share/gtk-2.0/demo/links.c
 share/gtk-2.0/demo/list_store.c
 share/gtk-2.0/demo/menus.c
+share/gtk-2.0/demo/offscreen_window.c
+share/gtk-2.0/demo/offscreen_window2.c
 share/gtk-2.0/demo/panes.c
 share/gtk-2.0/demo/pickers.c
 share/gtk-2.0/demo/pixbufs.c
@@ -431,6 +438,7 @@ share/gtk-doc/html/gdk/api-index-2-10.html
 share/gtk-doc/html/gdk/api-index-2-12.html
 share/gtk-doc/html/gdk/api-index-2-14.html
 share/gtk-doc/html/gdk/api-index-2-16.html
+share/gtk-doc/html/gdk/api-index-2-18.html
 share/gtk-doc/html/gdk/api-index-2-2.html
 share/gtk-doc/html/gdk/api-index-2-4.html
 share/gtk-doc/html/gdk/api-index-2-6.html
@@ -602,6 +610,7 @@ share/gtk-doc/html/gtk/GtkDialog.html
 share/gtk-doc/html/gtk/GtkDrawingArea.html
 share/gtk-doc/html/gtk/GtkEditable.html
 share/gtk-doc/html/gtk/GtkEntry.html
+share/gtk-doc/html/gtk/GtkEntryBuffer.html
 share/gtk-doc/html/gtk/GtkEntryCompletion.html
 share/gtk-doc/html/gtk/GtkEventBox.html
 share/gtk-doc/html/gtk/GtkExpander.html
@@ -632,6 +641,7 @@ share/gtk-doc/html/gtk/GtkIconTheme.html
 share/gtk-doc/html/gtk/GtkIconView.html
 share/gtk-doc/html/gtk/GtkImage.html
 share/gtk-doc/html/gtk/GtkImageMenuItem.html
+share/gtk-doc/html/gtk/GtkInfoBar.html
 share/gtk-doc/html/gtk/GtkInputDialog.html
 share/gtk-doc/html/gtk/GtkInvisible.html
 share/gtk-doc/html/gtk/GtkItem.html
@@ -756,6 +766,7 @@ share/gtk-doc/html/gtk/api-index-2-10.html
 share/gtk-doc/html/gtk/api-index-2-12.html
 share/gtk-doc/html/gtk/api-index-2-14.html
 share/gtk-doc/html/gtk/api-index-2-16.html
+share/gtk-doc/html/gtk/api-index-2-18.html
 share/gtk-doc/html/gtk/api-index-2-2.html
 share/gtk-doc/html/gtk/api-index-2-4.html
 share/gtk-doc/html/gtk/api-index-2-6.html
@@ -887,6 +898,7 @@ share/gtk-doc/html/gtk/gtk-media-record.png
 share/gtk-doc/html/gtk/gtk-media-rewind-ltr.png
 share/gtk-doc/html/gtk/gtk-media-rewind-rtl.png
 share/gtk-doc/html/gtk/gtk-media-stop.png
+share/gtk-doc/html/gtk/gtk-migrating-ClientSideWindows.html
 share/gtk-doc/html/gtk/gtk-migrating-GtkAboutDialog.html
 share/gtk-doc/html/gtk/gtk-migrating-GtkAction.html
 share/gtk-doc/html/gtk/gtk-migrating-GtkAssistant.html
@@ -899,6 +911,7 @@ share/gtk-doc/html/gtk/gtk-migrating-GtkLinkButton.html
 share/gtk-doc/html/gtk/gtk-migrating-GtkRecentChooser.html
 share/gtk-doc/html/gtk/gtk-migrating-checklist.html
 share/gtk-doc/html/gtk/gtk-migrating-entry-icons.html
+share/gtk-doc/html/gtk/gtk-migrating-label-links.html
 share/gtk-doc/html/gtk/gtk-migrating-tooltips.html
 share/gtk-doc/html/gtk/gtk-missing-image.png
 share/gtk-doc/html/gtk/gtk-network.png
@@ -1218,6 +1231,5 @@ share/locale/zh_TW/LC_MESSAGES/gtk20.mo
 share/themes/Default/gtk-2.0-key/gtkrc
 share/themes/Emacs/gtk-2.0-key/gtkrc
 share/themes/Raleigh/gtk-2.0/gtkrc
-@pkgdir lib/gtk-2.0/modules
 @pkgdir lib/gtk-2.0/immodules
 @pkgdir lib/gtk-2.0/2.10.0/filesystems

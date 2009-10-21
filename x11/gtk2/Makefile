@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.188 2009/10/05 08:39:06 sketch Exp $
+# $NetBSD: Makefile,v 1.189 2009/10/21 15:34:06 drochner Exp $
 
-DISTNAME=		gtk+-2.16.6
+DISTNAME=		gtk+-2.18.3
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=		2
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.16/ \
-			${MASTER_SITE_GNOME:=sources/gtk+/2.16/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.18/ \
+			${MASTER_SITE_GNOME:=sources/gtk+/2.18/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
