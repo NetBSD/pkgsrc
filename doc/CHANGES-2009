@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4035 2009/10/21 08:24:26 tron Exp $
+$NetBSD: CHANGES-2009,v 1.4036 2009/10/21 10:35:57 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5331,3 +5331,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/unixodbc to 2.2.14nb2 [taca 2009-10-21]
 	Updated lang/python26 to 2.6.3nb1 [wiz 2009-10-21]
 	Updated lang/python26 to 2.6.3nb2 [tron 2009-10-21]
+	Updated lang/openjdk7 to 1.7.0.72.20090924nb1 [ghen 2009-10-21]
