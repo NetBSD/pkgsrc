@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2009/04/16 12:31:18 tron Exp $
+# $NetBSD: Makefile.common,v 1.54.4.1 2009/10/21 12:44:36 tron Exp $
 #
 # This Makefile.common is included by:
 #
@@ -57,6 +57,7 @@ CONFIGURE_ARGS+=	--without-dtsaver
 CONFIGURE_ARGS+=	--without-rplay
 CONFIGURE_ARGS+=	--without-nas
 CONFIGURE_ARGS+=	--without-gtk
+CONFIGURE_ARGS+=	--enable-appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .if ${OPSYS} == "NetBSD"
 XLOCK_AUDIOPLAY?=	/usr/bin/audioplay
