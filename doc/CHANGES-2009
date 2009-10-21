@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4041 2009/10/21 17:32:50 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4042 2009/10/21 21:03:43 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5337,3 +5337,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20091020 [taca 2009-10-21]
 	Updated devel/nbpatch to 20091021 [joerg 2009-10-21]
 	Updated textproc/mdocml to 1.9.9 [joerg 2009-10-21]
+	Updated sysutils/ruby-facter to 1.5.7 [tonnerre 2009-10-21]
