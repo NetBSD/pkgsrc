@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.97 2009/09/19 07:46:12 ahoka Exp $
+# $NetBSD: Makefile,v 1.98 2009/10/21 18:03:19 drochner Exp $
 #
 
-DISTNAME=	file-roller-2.26.3
-PKGREVISION=	2
+DISTNAME=	file-roller-2.28.1
 CATEGORIES=	archivers gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -39,22 +38,14 @@ SUBST_MESSAGE.unzip=	Hardcoding unzip path
 SUBST_FILES.unzip=	src/fr-command-zip.c
 SUBST_SED.unzip=	-e 's|@@UNZIP_COMMAND@@|${LOCALBASE}/bin/unzip|'
 
-# XXX force regen, bundled one doesn't fit
-# see gnome bugzilla #587869
-post-extract:
-	${RM} ${WRKSRC}/src/fr-enum-types.c
-
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 #.include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
