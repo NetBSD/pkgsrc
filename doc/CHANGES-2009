@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4038 2009/10/21 15:06:56 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.4039 2009/10/21 15:23:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5334,3 +5334,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/openjdk7 to 1.7.0.72.20090924nb1 [ghen 2009-10-21]
 	Updated lang/parrot to 1.6.0nb1 [he 2009-10-21]
 	Updated mail/nullmailer to 1.05 [schmonz 2009-10-21]
+	Updated www/typolight27-translations to 20091020 [taca 2009-10-21]
