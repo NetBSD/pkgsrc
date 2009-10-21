@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.29 2009/07/22 09:01:42 wiz Exp $
+# $NetBSD: Makefile.common,v 1.30 2009/10/21 17:28:02 drochner Exp $
 #
 # used by print/evince/Makefile
 # used by print/evince-nautilus/Makefile
 
-DISTNAME=		evince-2.26.2
+DISTNAME=		evince-2.28.1
 CATEGORIES=		print
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/2.26/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/2.28/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -31,7 +31,6 @@ pre-configure:
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.15.6
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.17.1
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
