@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/08/16 13:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/21 16:35:07 drochner Exp $
 #
 
-DISTNAME=	gmime-2.4.8
+DISTNAME=	gmime-2.4.10
 PKGNAME=	${DISTNAME:S/gmime/gmime24/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/2.4/}
