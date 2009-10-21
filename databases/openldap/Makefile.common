@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2009/07/21 10:37:11 tnn Exp $
+# $NetBSD: Makefile.common,v 1.23 2009/10/21 16:25:01 tnn Exp $
 
 # please stick to the "stable" releases as much as possible!
 DISTNAME=		openldap-2.4.16
@@ -29,6 +29,7 @@ PATCHDIR=		${.CURDIR}/../../databases/openldap/patches
 FILESDIR=		${.CURDIR}/../../databases/openldap/files
 
 USE_LIBTOOL=		yes
+USE_TOOLS+=		soelim
 GNU_CONFIGURE=		yes
 
 MAKE_ENV+=		LIBMODE=${LIBMODE:Q}
