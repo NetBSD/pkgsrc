@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.7 2009/10/21 18:04:55 drochner Exp $
+
+--- gedit/gedit-metadata-manager.c.orig	2009-09-20 19:43:50.000000000 +0200
++++ gedit/gedit-metadata-manager.c
+@@ -452,7 +452,7 @@ save_item (const gchar *key, const gpoin
+ 	gedit_debug_message (DEBUG_METADATA, "uri: %s", key);
+ #endif	
+ 
+-	atime = g_strdup_printf ("%ld", item->atime);
++	atime = g_strdup_printf ("%lld", (long long)(item->atime));
+ 	xmlSetProp (xml_node, (const xmlChar *)"atime", (const xmlChar *)atime);	
+ 
+ #ifdef GEDIT_METADATA_VERBOSE_DEBUG
