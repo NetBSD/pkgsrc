@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.15 2006/01/14 07:50:52 recht Exp $
+$NetBSD: patch-ab,v 1.16 2009/10/21 14:55:32 drochner Exp $
 
---- configure.orig	2006-01-05 16:20:34.000000000 +0100
-+++ configure	2006-01-12 11:25:52.000000000 +0100
-@@ -27339,7 +27339,7 @@
+--- configure.orig	2009-10-06 18:31:12.000000000 +0200
++++ configure
+@@ -12149,7 +12149,7 @@ CC="$lt_save_CC"
+ VERSION_SCRIPT_FLAGS=
+ $(/usr/bin/ld --help 2>&1 | grep -- --version-script >/dev/null) && \
+     VERSION_SCRIPT_FLAGS=-Wl,--version-script=
+-test "`uname`" == "SunOS" && \
++test "`uname`" = "SunOS" && \
+     VERSION_SCRIPT_FLAGS="-Wl,-M -Wl,"
+ 
+  if test -n "$VERSION_SCRIPT_FLAGS"; then
+@@ -19725,7 +19725,7 @@ fi
  fi
  
  
