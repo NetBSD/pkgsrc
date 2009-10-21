@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+$NetBSD: patch-ap,v 1.2 2009/10/21 10:35:09 ghen Exp $
 
 --- jdk/src/solaris/native/sun/awt/fontpath.c.orig	2009-01-10 14:29:12.000000000 +0100
 +++ jdk/src/solaris/native/sun/awt/fontpath.c
@@ -7,12 +7,12 @@ $NetBSD: patch-ap,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
  };
  #endif
 +static char *pkgsrcFontPath[] = {
-+   "/usr/pkg/lib/X11/fonts/100dpi",
-+   "/usr/pkg/lib/X11/fonts/75dpi",
-+   "/usr/pkg/lib/X11/fonts/Type1",
-+   "/usr/pkg/lib/X11/fonts/cyrillic",
-+   "/usr/pkg/lib/X11/fonts/misc",
-+   "/usr/pkg/lib/X11/fonts/TTF",
++   "%%PREFIX%%/lib/X11/fonts/100dpi",
++   "%%PREFIX%%/lib/X11/fonts/75dpi",
++   "%%PREFIX%%/lib/X11/fonts/Type1",
++   "%%PREFIX%%/lib/X11/fonts/cyrillic",
++   "%%PREFIX%%/lib/X11/fonts/misc",
++   "%%PREFIX%%/lib/X11/fonts/TTF",
 +   "/usr/X11R7/lib/X11/fonts/100dpi",
 +   "/usr/X11R7/lib/X11/fonts/75dpi",
 +   "/usr/X11R7/lib/X11/fonts/Type1",

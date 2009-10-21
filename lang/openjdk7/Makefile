@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/10/21 10:31:46 ghen Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/21 10:35:09 ghen Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk7-1.7.0.72.20090924
@@ -87,6 +87,7 @@ SUBST_CLASSES+=			fontpaths
 SUBST_STAGE.fontpaths=		pre-build
 SUBST_MESSAGE.fontpaths=	fixing font paths
 SUBST_FILES.fontpaths=		jdk/src/solaris/classes/sun/awt/fontconfigs/bsd.fontconfig.properties
+SUBST_FILES.fontpaths+=		jdk/src/solaris/native/sun/awt/fontpath.c
 SUBST_SED.fontpaths=		-e 's|%%PREFIX%%|${PREFIX}|'
 
 PLIST_VARS+=	i386
