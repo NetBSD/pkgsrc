@@ -1,24 +1,26 @@
-$NetBSD: patch-ab,v 1.11 2009/09/09 19:57:05 drochner Exp $
+$NetBSD: patch-ab,v 1.12 2009/10/21 10:18:57 drochner Exp $
 
---- utils/Makefile.in.orig	2009-08-18 21:04:22.000000000 +0200
+--- utils/Makefile.in.orig	2009-10-18 01:28:49.000000000 +0200
 +++ utils/Makefile.in
-@@ -52,7 +52,7 @@ mkinstalldirs = $(install_sh) -d
- CONFIG_HEADER = $(top_builddir)/config.h \
+@@ -55,7 +55,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  	$(top_builddir)/poppler/poppler-config.h
  CONFIG_CLEAN_FILES =
+ CONFIG_CLEAN_VPATH_FILES =
 -@BUILD_SPLASH_OUTPUT_TRUE@am__EXEEXT_1 = pdftoppm$(EXEEXT)
 +am__EXEEXT_1 = pdftoppm$(EXEEXT)
  @BUILD_ABIWORD_OUTPUT_TRUE@am__EXEEXT_2 = pdftoabw$(EXEEXT)
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
- binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
-@@ -62,25 +62,25 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+@@ -64,7 +64,7 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
  pdffonts_OBJECTS = $(am_pdffonts_OBJECTS)
  pdffonts_LDADD = $(LDADD)
  am__DEPENDENCIES_1 =
 -pdffonts_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
 +pdffonts_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
  	$(am__DEPENDENCIES_1)
- am_pdfimages_OBJECTS = pdfimages.$(OBJEXT) ImageOutputDev.$(OBJEXT) \
+ AM_V_lt = $(am__v_lt_$(V))
+ am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
+@@ -73,19 +73,19 @@ am_pdfimages_OBJECTS = pdfimages.$(OBJEX
  	$(am__objects_1)
  pdfimages_OBJECTS = $(am_pdfimages_OBJECTS)
  pdfimages_LDADD = $(LDADD)
@@ -41,7 +43,7 @@ $NetBSD: patch-ab,v 1.11 2009/09/09 19:57:05 drochner Exp $
  	$(am__DEPENDENCIES_1)
  @BUILD_ABIWORD_OUTPUT_TRUE@pdftoabw_DEPENDENCIES =  \
  @BUILD_ABIWORD_OUTPUT_TRUE@	$(am__DEPENDENCIES_2) \
-@@ -89,25 +89,25 @@ am_pdftohtml_OBJECTS = pdftohtml.$(OBJEX
+@@ -94,25 +94,25 @@ am_pdftohtml_OBJECTS = pdftohtml.$(OBJEX
  	HtmlLinks.$(OBJEXT) HtmlOutputDev.$(OBJEXT) $(am__objects_1)
  pdftohtml_OBJECTS = $(am_pdftohtml_OBJECTS)
  pdftohtml_LDADD = $(LDADD)
@@ -73,7 +75,7 @@ $NetBSD: patch-ab,v 1.11 2009/09/09 19:57:05 drochner Exp $
  	$(am__DEPENDENCIES_1)
  DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir) -I$(top_builddir)/poppler
  depcomp = $(SHELL) $(top_srcdir)/depcomp
-@@ -319,12 +319,12 @@ top_build_prefix = @top_build_prefix@
+@@ -366,12 +366,12 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  win32_libs = @win32_libs@
@@ -91,7 +93,7 @@ $NetBSD: patch-ab,v 1.11 2009/09/09 19:57:05 drochner Exp $
  INCLUDES = \
  	-I$(top_srcdir)				\
  	-I$(top_srcdir)/goo			\
-@@ -335,9 +335,10 @@ INCLUDES = \
+@@ -382,9 +382,10 @@ INCLUDES = \
  	$(ABIWORD_CFLAGS)
  
  LDADD = \
