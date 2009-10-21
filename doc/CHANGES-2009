@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4040 2009/10/21 17:17:37 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4041 2009/10/21 17:32:50 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5336,3 +5336,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/nullmailer to 1.05 [schmonz 2009-10-21]
 	Updated www/typolight27-translations to 20091020 [taca 2009-10-21]
 	Updated devel/nbpatch to 20091021 [joerg 2009-10-21]
+	Updated textproc/mdocml to 1.9.9 [joerg 2009-10-21]
