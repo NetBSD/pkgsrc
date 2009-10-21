@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/10/25 00:11:13 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2009/10/21 17:48:24 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evince
 PKG_SUPPORTED_OPTIONS=	dvi djvu
@@ -9,9 +9,7 @@ PKG_SUGGESTED_OPTIONS=	# none
 .if !empty(PKG_OPTIONS:Mdvi)
 CONFIGURE_ARGS+=	--enable-dvi
 #BUILD_DIRS=		pdf dvi backend lib properties
-# need shared libkpathsea
-BUILDLINK_API_DEPENDS.teTeX-bin+=	teTeX-bin>=3.0nb13
-.include "../../print/teTeX3-bin/buildlink3.mk"
+.include "../../print/kpathsea/buildlink3.mk"
 #.else
 #BUILD_DIRS=		pdf backend lib properties
 .endif
