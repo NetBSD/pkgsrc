@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2009/07/10 12:12:25 tron Exp $
+# $NetBSD: Makefile,v 1.70 2009/10/21 15:37:24 drochner Exp $
 #
 
-DISTNAME=		atk-1.26.0
+DISTNAME=		atk-1.28.0
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.26/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.28/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
