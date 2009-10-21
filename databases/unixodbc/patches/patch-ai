@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.1 2009/10/21 04:21:27 taca Exp $
+
+* Release connection->mutex before destroy it when
+  connection->protection_level isn't TS_LEVEL3 since it causes destroying
+  locked mutex when explicitly specifies "Threading" parameter in
+  odbcinst.ini.  I don't know the case using LIBTHREAD.
+
+--- DriverManager/__handles.c.orig	2009-10-20 16:47:04.000000000 +0900
++++ DriverManager/__handles.c
+@@ -737,6 +737,8 @@ void __release_dbc( DMHDBC connection )
+ 
+ #ifdef HAVE_LIBPTH
+ #elif HAVE_LIBPTHREAD
++    if ( connection -> protection_level != TS_LEVEL3)
++  	mutex_exit( &connection -> mutex );
+     pthread_mutex_destroy( &connection -> mutex );
+ #elif HAVE_LIBTHREAD
+     mutex_destroy( &connection -> mutex );

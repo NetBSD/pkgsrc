@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2009/10/21 04:21:27 taca Exp $
+
+* Call function_return() with IGNORE_THREAD since __SQLGetInfo() is already
+  called and __SQLGetInfo() calls function_return().
+
+--- DriverManager/SQLGetInfo.c.orig	2008-09-29 23:02:45.000000000 +0900
++++ DriverManager/SQLGetInfo.c
+@@ -611,5 +611,5 @@ SQLRETURN SQLGetInfo( SQLHDBC connection
+                 connection -> msg );
+     }
+ 
+-    return function_return( SQL_HANDLE_DBC, connection, ret );
++    return function_return( IGNORE_THREAD, connection, ret );
+ }
