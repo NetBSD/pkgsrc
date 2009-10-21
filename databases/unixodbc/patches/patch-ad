@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1 2009/10/21 04:21:27 taca Exp $
+
+* Call function_return with IGNORE_THREAD to prevent calling
+  thread_release() since thread_protect() isn't called this "default:"
+  case .
+
+--- DriverManager/SQLAllocHandle.c.orig	2007-12-17 22:13:03.000000000 +0900
++++ DriverManager/SQLAllocHandle.c
+@@ -1244,7 +1244,7 @@ SQLRETURN __SQLAllocHandle( SQLSMALLINT 
+ 						ERROR_HY092, NULL,
+ 						environment -> requested_version );
+ 
+-			return function_return( SQL_HANDLE_ENV, environment, SQL_ERROR );
++			return function_return( IGNORE_THREAD, environment, SQL_ERROR );
+ 		}
+ 		else if ( __validate_dbc( (DMHDBC) input_handle ))
+ 		{
+@@ -1253,7 +1253,7 @@ SQLRETURN __SQLAllocHandle( SQLSMALLINT 
+ 					ERROR_HY092, NULL,
+ 					connection -> environment -> requested_version );
+ 	
+-			return function_return( SQL_HANDLE_DBC, connection, SQL_ERROR );
++			return function_return( IGNORE_THREAD, connection, SQL_ERROR );
+ 		}
+ 		else
+ 		{
