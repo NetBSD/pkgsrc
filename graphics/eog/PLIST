@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:59:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/10/21 17:56:37 drochner Exp $
 bin/eog
 include/eog-2.20/eog/eog-application.h
 include/eog-2.20/eog/eog-debug.h
@@ -68,6 +68,10 @@ share/gnome/help/eog/ca/eog.xml
 share/gnome/help/eog/ca/figures/eog_save_as_window.png
 share/gnome/help/eog/ca/figures/eog_start_window.png
 share/gnome/help/eog/ca/figures/eog_toolbar_editor_window.png
+share/gnome/help/eog/cs/eog.xml
+share/gnome/help/eog/cs/figures/eog_save_as_window.png
+share/gnome/help/eog/cs/figures/eog_start_window.png
+share/gnome/help/eog/cs/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/da/eog.xml
 share/gnome/help/eog/da/figures/eog_save_as_window.png
 share/gnome/help/eog/da/figures/eog_start_window.png
@@ -159,7 +163,6 @@ share/gtk-doc/html/eog/EogListStore.html
 share/gtk-doc/html/eog/EogMessageArea.html
 share/gtk-doc/html/eog/EogMetadataReaderJpg.html
 share/gtk-doc/html/eog/EogMetadataReaderPng.html
-share/gtk-doc/html/eog/EogPixbufCellRenderer.html
 share/gtk-doc/html/eog/EogPlugin.html
 share/gtk-doc/html/eog/EogPluginManager.html
 share/gtk-doc/html/eog/EogPreferencesDialog.html
@@ -214,14 +217,17 @@ share/locale/af/LC_MESSAGES/eog.mo
 share/locale/am/LC_MESSAGES/eog.mo
 share/locale/ar/LC_MESSAGES/eog.mo
 share/locale/as/LC_MESSAGES/eog.mo
+share/locale/ast/LC_MESSAGES/eog.mo
 share/locale/az/LC_MESSAGES/eog.mo
 share/locale/be/LC_MESSAGES/eog.mo
 share/locale/be@latin/LC_MESSAGES/eog.mo
 share/locale/bg/LC_MESSAGES/eog.mo
 share/locale/bn/LC_MESSAGES/eog.mo
 share/locale/bn_IN/LC_MESSAGES/eog.mo
+share/locale/br/LC_MESSAGES/eog.mo
 share/locale/bs/LC_MESSAGES/eog.mo
 share/locale/ca/LC_MESSAGES/eog.mo
+share/locale/ca@valencia/LC_MESSAGES/eog.mo
 share/locale/cs/LC_MESSAGES/eog.mo
 share/locale/cy/LC_MESSAGES/eog.mo
 share/locale/da/LC_MESSAGES/eog.mo
@@ -303,6 +309,7 @@ share/locale/zu/LC_MESSAGES/eog.mo
 share/omf/eog/eog-C.omf
 share/omf/eog/eog-ar.omf
 share/omf/eog/eog-ca.omf
+share/omf/eog/eog-cs.omf
 share/omf/eog/eog-da.omf
 share/omf/eog/eog-de.omf
 share/omf/eog/eog-el.omf
