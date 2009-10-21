@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.5 2009/10/21 16:51:46 tnn Exp $
+
+--- lib/Makefile.in.orig	2009-07-08 16:10:42.000000000 +0200
++++ lib/Makefile.in
+@@ -1221,6 +1221,7 @@ install-exec-local: all-local
+ 	else \
+ 	  need_charset_alias=false ; \
+ 	fi ; \
++	need_charset_alias=false`# provided by pkgsrc/converters/libiconv`; \
+ 	if $$need_charset_alias; then \
+ 	  $(mkinstalldirs) $(DESTDIR)$(libdir) ; \
+ 	fi ; \

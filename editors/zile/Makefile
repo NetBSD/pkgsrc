@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2009/07/19 11:49:10 zafer Exp $
+# $NetBSD: Makefile,v 1.25 2009/10/21 16:51:46 tnn Exp $
 
 DISTNAME=	zile-2.3.9
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://ftp.gnu.org/gnu/zile/
 
@@ -17,6 +18,8 @@ GNU_CONFIGURE=	yes
 
 INFO_FILES=	# PLIST
 
+# we only want the charset.alias file, so no buildlinkery for libiconv
+DEPENDS+=       libiconv-[0-9]*:../../converters/libiconv
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
