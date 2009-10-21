@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8554 2009/10/21 04:34:04 taca Exp $
+$NetBSD: TODO,v 1.8555 2009/10/21 20:52:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -322,13 +322,21 @@ Suggested new packages
 	Open source batch jobs resource manager, successor to OpenPBS.
 
 	Missing xorg packages
-	e.g.: mkcomposecache, xscope, windowswmproto, libWindowsWM,
-	libXfontcache, xf86-input-synaptics, font-arabic-misc,
-	font-bitstream-speedo, font-cronyx-cyrillic, font-micro-misc,
-	font-misc-cyrillic, font-misc-ethiopic, font-misc-meltho,
-	font-schumacher-misc, font-screen-cyrillic, font-sun-misc,
-	font-winitzki-cyrillic, font-xfree86-type1, xlsatoms, xcmsdb,
-	xkbevd, xkbutils, xpr, xf86-input-evdev
+	font-arabic-misc, font-bitstream-speedo, font-cronyx-cyrillic,
+	font-micro-misc, font-misc-cyrillic, font-misc-ethiopic,
+	font-misc-meltho, font-schumacher-misc, font-screen-cyrillic,
+	font-sun-misc, font-winitzki-cyrillic, font-xfree86-type1,
+	libWindowsWM, libXfontcache, util-macros, windowswmproto,
+	xcmsdb, xf86-input-acecad, xf86-input-aiptek, xf86-input-evdev,
+	xf86-input-joystick, xf86-input-synaptics,
+	xf86-video-dummy, xf86-video-fbdev, xf86-video-glide,
+	xf86-video-impact, xf86-video-newport, xf86-video-sisusb,
+	xf86-video-sunbw2, xf86-video-suncg14, xf86-video-suncg3,
+	xf86-video-suncg6, xf86-video-sunffb, xf86-video-sunleo,
+	xf86-video-suntcx, xf86-video-v4l, xf86-video-vermilion,
+	xf86-video-voodoo, xf86-video-xgi, xf86-video-xgixp, xf86dga,
+	xkbevd, xkbutils, xlsatoms, xorg-sgml-doctools, xpr,
+	mkcomposecache, xscope
 
 
 Suggested package updates
@@ -342,7 +350,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Coin-2.4.5
 	o DatLib-2.35
 	o DatUtil-2.45
-	o GConf-2.28.0 [GNOME 2.28]
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
@@ -357,7 +364,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.13
 	o RTx-Shredder-0.05
 	o RealPlayer-11
+	o SDL-1.2.14
 	o SDL_gfx-2.0.20
+	o SDL_image-1.2.8
+	o SDL_mixer-1.2.9
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7.2
 	o TiffIO-130e
@@ -424,17 +434,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o astyle-1.15.3
 	o asymptote-1.88
-	o at-spi-1.28.1 [GNOME 2.28]
 	o atari800-2.1.0
 	o aterm-1.0.1
-	o atk-1.28.0 [GNOME 2.28]
 	o auctex-11.85
 	o audacious-plugins-2.1
 	o autoconvert-0.3.16
 	o autogen-5.9.7
 	o avcheck-0.91
 	o avl-2.0.2a
-	o awesome-3.3.4
+	o awesome-3.4.0
 	o baci-20040415
 	o balance-3.42
 	o bash-completion-1.1
@@ -470,7 +478,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cairomm-1.8.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.18
+	o calibre-0.6.19
 	o capc-calc-2.12.4
 	o capistrano-2.5.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -492,7 +500,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o climm-0.6.4
 	o clisp-2.48 [don't update until either openaxiom or clisp gets fixed]
 	o cln-1.3.1
-	o clutter-1.0.6
+	o clutter-1.0.8
 	o clutter-gst-0.10.0
 	o clutter-gtk-0.10.2
 	o colorize-0.3.4
@@ -574,8 +582,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o enca-1.11
 	o encodings-1.0.3
 	o enlightenment-1.0.0
-	o eog-2.28.0 [GNOME 2.28]
-	o eog-plugins-2.28.0 [GNOME 2.28]
+	o eog-plugins-2.28.1 [GNOME 2.28]
 	o epic4-2.6
 	o epiphany-2.28.1 [GNOME 2.28]
 	o epiphany-extensions-2.28.1 [GNOME 2.28]
@@ -590,9 +597,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o etm-297
-	o evince-2.28.1 [GNOME 2.28]
 	o evolution-2.28.1 [GNOME 2.28]
-	o evolution-data-server-2.28.1 [GNOME 2.28]
 	o evolution-exchange-2.28.1 [GNOME 2.28]
 	o evolution-mapi-0.28.1 [GNOME 2.28]
 	o evolution-webcal-2.28.0 [GNOME 2.28]
@@ -607,14 +612,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o faces-1.7.7
 	o fakeroot-1.6.5
 	o farsight2-0.0.16
-	o fbreader-0.11.1
+	o fbreader-0.11.2
 	o fd-3.00d
 	o fdgw-20040609
 	o festival-1.96
 	o felt-3.07
 	o fetchmail-6.3.12
 	o fetchyahoo-2.13.0
-	o file-roller-2.28.0 [GNOME 2.28]
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
@@ -680,11 +684,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdb-7.0
 	o gdeskcal-1.01
 	o gdl-2.28.1 [GNOME 2.28]
-	o gdm-2.28.0 [GNOME 2.28]
+	o gdm-2.28.1 [GNOME 2.28]
 	o gdsreader-0.3.2
 	o geany-0.18
 	o geda-1.5.4.20090830
-	o gedit-2.28.0 [GNOME 2.28]
 	o gedit-plugins-2.28.0 [GNOME 2.28]
 	o gentoo-0.15.6
 	o gettext-0.17
@@ -707,21 +710,18 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
 	o glpk-4.39
-	o gmime24-2.4.10
 	o gnash-0.8.6
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.28.0 [GNOME 2.28]
 	o gnome-backgrounds-2.28.0 [GNOME 2.28]
-	o gnome-bluetooth-2.28.1 [GNOME 2.28]
+	o gnome-bluetooth-2.28.3 [GNOME 2.28]
 	o gnome-commander-1.2.8.2
 	o gnome-common-2.28.0 [GNOME 2.28]
 	o gnome-control-center-2.28.1 [GNOME 2.28]
 	o gnome-desktop-2.28.0 [GNOME 2.28]
 	o gnome-devel-docs-2.28.0 [GNOME 2.28]
-	o gnome-games-2.28.0 [GNOME 2.28]
-	o gnome-icon-theme-2.28.0 [GNOME 2.28]
-	o gnome-keyring-2.28.1 [GNOME 2.28]
+	o gnome-games-2.28.1 [GNOME 2.28]
 	o gnome-mag-0.15.9 [GNOME 2.28]
 	o gnome-media-2.28.1 [GNOME 2.28]
 	o gnome-menus-2.28.0.1 [GNOME 2.28]
@@ -734,6 +734,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-settings-daemon-2.28.1 [GNOME 2.28]
 	o gnome-subtitles-0.9.1
 	o gnome-system-tools-2.28.1 [GNOME 2.28]
+	o gnome-terminal-2.28.1 [GNOME 2.28]
 	o gnome-themes-2.28.1 [GNOME 2.28]
 	o gnome-user-docs-2.28.0 [GNOME 2.28]
 	o gnome-user-share-2.26.0 [GNOME 2.26]
@@ -764,31 +765,29 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsm-1.0.13
 	o gss-0.1.0
 	o gssdp-0.7.0
-	o gst-plugins0.10-base-0.10.25
 	o gst-plugins0.10-ffmpeg-0.10.7
-	o gstreamer0.10-0.10.25
 	o gtick-0.4.2
 	o gtk-systrace-20030623
-	o gtk2-2.18.3 [GNOME 2.28]
+	o gtk-vnc-0.3.10
 	o gtk2-engines-2.18.4 [GNOME 2.28]
 	o gtkglarea-2.0.1
 	o gtkhtml324-3.28.1 [GNOME 2.28]
 	o gtkimageview-1.6.4
 	o gtkmm-2.18.2 [GNOME 2.28]
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtksourceview2-2.8.1 [GNOME 2.28]
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
 	o gtranslator-1.9.6
+	o gucharmap-2.28.1 [GNOME 2.28]
 	o guile-gtk-2.0
 	o gupnp-0.13.1
 	o gv-3.6.7
 	o gwaei-1.1
 	o hackbot-2.21
 	o hal-0.5.13
-	o hamster-applet-2.28.0 [GNOME 2.28]
+	o hamster-applet-2.28.1 [GNOME 2.28]
 	o hanzim-3.0
 	o haskell-mode-1.45
 	o hatari-1.3.1
@@ -888,6 +887,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libX11-1.3.1
 	o libXaw-1.0.7
 	o libXcomposite-0.4.1
+	o libXdamage-1.1.2
 	o libXdmcp-1.0.3
 	o libXext-1.1
 	o libXfixes-4.0.4
@@ -907,8 +907,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXxf86misc-1.0.2
 	o libXxf86vm-1.1.0
 	o libarchive-2.7.0
-	o libbonobo-2.24.2 [GNOME 2.28]
-	o libbonoboui-2.24.2 [GNOME 2.28]
 	o libcanberra-0.21
 	o libcares-1.6.0
 	o libchewing-0.3.0
@@ -926,10 +924,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libggiwmh-0.3.2
 	o libgii-1.0.2
 	o libgiigic-1.1.2
-	o libgnome-2.28.0 [GNOME 2.28]
 	o libgnomedb-3.1.2
 	o libgnomekbd-2.28.0 [GNOME 2.28]
-	o libgnomeui-2.24.2 [GNOME 2.28]
 	o libgsf-1.14.16
 	o libhydrogen-0.9.2
 	o libiconv-1.13.1
@@ -957,7 +953,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libv4l-0.6.2
 	o libwnck-2.28.0 [GNOME 2.28]
 	o libxkbfile-1.0.6
-	o libxml2-2.7.6
 	o licq-1.3.6
 	o lighttpd-1.4.23
 	o lincvs-2.1.3 [now called CrossVC]
@@ -969,6 +964,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lsh-2.0.3
 	o lsof-4.81
 	o ltris-1.0.12
+	o lua-alt-getopt-0.7.0 [pkg/42195]
 	o luit-1.0.4
 	o lucy-1.20
 	o luit-1.0.4
@@ -1034,6 +1030,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.28.0 [GNOME 2.28]
 	o mousetweaks-2.28.1 [GNOME 2.28]
 	o mp3blaster-3.2.3
+	o mp3diags-0.99.06.042
 	o mpc-0.18
 	o mpeg4ip-1.6.1
 	o mpg123-1.9.1
@@ -1053,6 +1050,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysqlcc-0.9.8
 	o nagios-3.2.0
 	o nap-1.5.3
+	o nautilus-2.28.1 [GNOME 2.28]
 	o nautilus-sendto-1.1.7
 	o navi2ch-1.8.1
 	o nawk-20071023
@@ -1125,7 +1123,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-sybperl-2.18
 	o packagekit-0.5.1
 	o pam-smbpass-3.0.13
-	o pango-1.26.0 [GNOME 2.28]
 	o paprefs-0.9.8
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
@@ -1188,7 +1185,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poedit-1.4.3
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.12.1
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1224,11 +1220,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-docutils-0.6
 	o py-fpconst-0.7.3
 	o py-game-1.9.1
-	o py-gnome2-2.28.0 [GNOME 2.28]
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-gobject-2.20.0 [GNOME 2.28]
 	o py-gstreamer0.10-0.10.17
 	o py-gtksourceview-2.8.0 [GNOME 2.28]
 	o py-html2text-2.37
@@ -1342,7 +1336,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scmgit-base-1.6.5.1
 	o scmgit-docs-1.6.5.1
 	o scrollz-1.9.99
-	o scrotwm-0.9.14
+	o scrotwm-0.9.18
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o sdlmess-0.134
@@ -1436,8 +1430,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tob-0.26
 	o tomboy-1.0.0 [GNOME 2.28]
 	o top-3.8beta1
-	o totem-2.28.1 [GNOME 2.28]
-	o totem-pl-parser-2.28.1 [GNOME 2.28]
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trang-20081028
@@ -1596,6 +1588,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-cf-files-1.0.3
+	o xorg-docs-1.4
 	o xorg-server-1.6.4
 	o xorg-server-1.7.0
 	o xorg-util-macros-1.3.0
