@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.32 2009/06/14 17:28:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.33 2009/10/21 18:03:19 drochner Exp $
 bin/file-roller
 libexec/file-roller/isoinfo.sh
+libexec/file-roller/rpm2cpio
 share/applications/file-roller.desktop
 share/file-roller/icons/hicolor/16x16/actions/add-files-to-archive.png
 share/file-roller/icons/hicolor/16x16/actions/add-folder-to-archive.png
@@ -37,6 +38,12 @@ share/gnome/help/file-roller/ca/figures/file-roller_main_window.png
 share/gnome/help/file-roller/ca/figures/file-roller_rightarrow.png
 share/gnome/help/file-roller/ca/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/ca/file-roller.xml
+share/gnome/help/file-roller/cs/figures/file-roller_home.png
+share/gnome/help/file-roller/cs/figures/file-roller_leftarrow.png
+share/gnome/help/file-roller/cs/figures/file-roller_main_window.png
+share/gnome/help/file-roller/cs/figures/file-roller_rightarrow.png
+share/gnome/help/file-roller/cs/figures/file-roller_uparrow.png
+share/gnome/help/file-roller/cs/file-roller.xml
 share/gnome/help/file-roller/de/figures/file-roller_home.png
 share/gnome/help/file-roller/de/figures/file-roller_leftarrow.png
 share/gnome/help/file-roller/de/figures/file-roller_main_window.png
@@ -134,6 +141,7 @@ share/locale/bn_IN/LC_MESSAGES/file-roller.mo
 share/locale/br/LC_MESSAGES/file-roller.mo
 share/locale/bs/LC_MESSAGES/file-roller.mo
 share/locale/ca/LC_MESSAGES/file-roller.mo
+share/locale/ca@valencia/LC_MESSAGES/file-roller.mo
 share/locale/cs/LC_MESSAGES/file-roller.mo
 share/locale/cy/LC_MESSAGES/file-roller.mo
 share/locale/da/LC_MESSAGES/file-roller.mo
@@ -162,6 +170,7 @@ share/locale/is/LC_MESSAGES/file-roller.mo
 share/locale/it/LC_MESSAGES/file-roller.mo
 share/locale/ja/LC_MESSAGES/file-roller.mo
 share/locale/ka/LC_MESSAGES/file-roller.mo
+share/locale/kk/LC_MESSAGES/file-roller.mo
 share/locale/kn/LC_MESSAGES/file-roller.mo
 share/locale/ko/LC_MESSAGES/file-roller.mo
 share/locale/ku/LC_MESSAGES/file-roller.mo
@@ -212,6 +221,7 @@ share/locale/zh_TW/LC_MESSAGES/file-roller.mo
 share/omf/file-roller/file-roller-C.omf
 share/omf/file-roller/file-roller-bg.omf
 share/omf/file-roller/file-roller-ca.omf
+share/omf/file-roller/file-roller-cs.omf
 share/omf/file-roller/file-roller-de.omf
 share/omf/file-roller/file-roller-el.omf
 share/omf/file-roller/file-roller-en_GB.omf
