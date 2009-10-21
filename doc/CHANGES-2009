@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4034 2009/10/21 06:39:31 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4035 2009/10/21 08:24:26 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5330,3 +5330,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/ncmpc to 0.15 [jakllsch 2009-10-20]
 	Updated databases/unixodbc to 2.2.14nb2 [taca 2009-10-21]
 	Updated lang/python26 to 2.6.3nb1 [wiz 2009-10-21]
+	Updated lang/python26 to 2.6.3nb2 [tron 2009-10-21]
