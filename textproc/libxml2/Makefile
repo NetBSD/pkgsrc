@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2009/08/26 10:20:57 tron Exp $
+# $NetBSD: Makefile,v 1.102 2009/10/21 14:55:32 drochner Exp $
 
-DISTNAME=	libxml2-2.7.3
-PKGREVISION=	1
+DISTNAME=	libxml2-2.7.6
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/ \
 		http://xmlsoft.org/sources/
@@ -34,10 +33,7 @@ MAKE_ENV+=	PAX=${PAX:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
-USE_TOOLS+=	perl
 TEST_TARGET=	check
-.endif
 
 SUBST_CLASSES+=		cat
 SUBST_STAGE.cat=	pre-configure
