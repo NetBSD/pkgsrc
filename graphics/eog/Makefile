@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2009/08/26 19:57:38 sno Exp $
+# $NetBSD: Makefile,v 1.52 2009/10/21 17:56:37 drochner Exp $
 #
 
-DISTNAME=	eog-2.26.3
-PKGREVISION=	1
+DISTNAME=	eog-2.28.1
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -30,16 +29,12 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.3
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/eel/buildlink3.mk"
 .include "../../devel/exempi/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-icon-theme+= gnome-icon-theme>=2.20.0
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libart+=	libart>=2.3.16
-.include "../../graphics/libart/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libexif+=	libexif>=0.6.12
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
