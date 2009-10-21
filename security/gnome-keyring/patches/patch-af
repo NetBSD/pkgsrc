@@ -1,16 +1,16 @@
-$NetBSD: patch-af,v 1.1 2009/03/17 13:52:08 tnn Exp $
+$NetBSD: patch-af,v 1.2 2009/10/21 16:37:19 drochner Exp $
 
---- egg/egg-asn1.h.orig	2009-03-02 16:43:19.000000000 +0100
+--- egg/egg-asn1.h.orig	2009-08-15 02:01:31.000000000 +0200
 +++ egg/egg-asn1.h
 @@ -75,9 +75,9 @@ gchar*             egg_asn1_read_dn     
  gchar*             egg_asn1_read_dn_part                  (ASN1_TYPE asn, const gchar *part, const gchar *match);
  
  
--glong              egg_asn1_time_parse_utc                (const gchar* value);
-+time_t             egg_asn1_time_parse_utc                (const gchar* value);
+-glong              egg_asn1_time_parse_utc                (const gchar* value, gssize n_value);
++time_t              egg_asn1_time_parse_utc                (const gchar* value, gssize n_value);
  
--glong              egg_asn1_time_parse_general            (const gchar* value);
-+time_t             egg_asn1_time_parse_general            (const gchar* value);
+-glong              egg_asn1_time_parse_general            (const gchar* value, gssize n_value);
++time_t              egg_asn1_time_parse_general            (const gchar* value, gssize n_value);
  
  
  typedef void       (*EggAsn1DnCallback)                   (guint index, GQuark oid, const guchar *value,
