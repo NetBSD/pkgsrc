@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.787 2009/10/02 20:20:03 markd Exp $
+# $NetBSD: Makefile,v 1.788 2009/10/21 18:51:12 drochner Exp $
 #
 
 COMMENT=	Networking tools
@@ -215,6 +215,7 @@ SUBDIR+=	libasyncns
 SUBDIR+=	libcares
 SUBDIR+=	libdnet
 SUBDIR+=	libfetch
+SUBDIR+=	libgdata
 SUBDIR+=	liblive
 SUBDIR+=	libmms
 SUBDIR+=	libnice
