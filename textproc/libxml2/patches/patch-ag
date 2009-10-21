@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.7 2009/10/21 14:55:32 drochner Exp $
+
+--- encoding.c.orig	2009-09-24 17:31:59.000000000 +0200
++++ encoding.c
+@@ -1376,6 +1376,9 @@ xmlInitCharEncodingHandlers(void) {
+     xmlRegisterCharEncodingHandlersISO8859x ();
+ #endif
+ #endif
++#ifdef __NetBSD__ /* XXX needed by selftest */
++    xmlAddEncodingAlias("IBM273", "IBM-1141");
++#endif
+ 
+ }
+ 
+@@ -1454,6 +1457,8 @@ xmlGetCharEncodingHandler(xmlCharEncodin
+         case XML_CHAR_ENCODING_UTF16BE:
+ 	    return(xmlUTF16BEHandler);
+         case XML_CHAR_ENCODING_EBCDIC:
++	    handler = xmlFindCharEncodingHandler("IBM500");
++	    if (handler != NULL) return(handler);
+             handler = xmlFindCharEncodingHandler("EBCDIC");
+             if (handler != NULL) return(handler);
+             handler = xmlFindCharEncodingHandler("ebcdic");
