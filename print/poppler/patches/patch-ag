@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2009/09/09 19:57:05 drochner Exp $
+$NetBSD: patch-ag,v 1.6 2009/10/21 10:18:57 drochner Exp $
 
---- qt4/src/Makefile.in.orig	2009-09-09 19:22:37.000000000 +0200
+--- qt4/src/Makefile.in.orig	2009-10-18 01:28:48.000000000 +0200
 +++ qt4/src/Makefile.in
-@@ -65,7 +65,7 @@ libLTLIBRARIES_INSTALL = $(INSTALL)
+@@ -82,7 +82,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  LTLIBRARIES = $(lib_LTLIBRARIES)
  am__DEPENDENCIES_1 =
  libpoppler_qt4_la_DEPENDENCIES =  \
@@ -11,12 +11,12 @@ $NetBSD: patch-ag,v 1.5 2009/09/09 19:57:05 drochner Exp $
  	$(am__DEPENDENCIES_1) $(am__append_1)
  am_libpoppler_qt4_la_OBJECTS = poppler-document.lo poppler-page.lo \
  	poppler-fontinfo.lo poppler-embeddedfile.lo poppler-textbox.lo \
-@@ -332,7 +332,7 @@ libpoppler_qt4_la_SOURCES = \
+@@ -373,7 +373,7 @@ libpoppler_qt4_la_SOURCES = \
  	poppler-export.h			\
  	poppler-private.h
  
 -libpoppler_qt4_la_LIBADD = $(top_builddir)/poppler/libpoppler.la \
 +libpoppler_qt4_la_LIBADD = $(prefix)/lib/libpoppler.la \
  	$(FONTCONFIG_LIBS) $(POPPLER_QT4_LIBS) $(am__append_1)
- libpoppler_qt4_la_LDFLAGS = -version-info 5:0:2
+ libpoppler_qt4_la_LDFLAGS = -version-info 5:0:2 @create_shared_lib@
  all: all-am
