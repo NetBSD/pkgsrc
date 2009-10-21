@@ -1,17 +1,31 @@
-@comment $NetBSD: PLIST,v 1.22 2009/07/09 18:20:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/10/21 18:56:15 drochner Exp $
 bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
 bin/totem-video-thumbnailer
-lib/libbaconvideowidget.la
 lib/totem/plugins/brasero-disc-recorder/brasero-disc-recorder.totem-plugin
 lib/totem/plugins/brasero-disc-recorder/libbrasero-disc-recorder.la
 lib/totem/plugins/coherence_upnp/coherence_upnp.py
 lib/totem/plugins/coherence_upnp/coherence_upnp.pyc
 lib/totem/plugins/coherence_upnp/coherence_upnp.pyo
 lib/totem/plugins/coherence_upnp/coherence_upnp.totem-plugin
+lib/totem/plugins/dbus/dbus-service.py
+lib/totem/plugins/dbus/dbus-service.pyc
+lib/totem/plugins/dbus/dbus-service.pyo
+lib/totem/plugins/dbus/dbus-service.totem-plugin
 lib/totem/plugins/gromit/gromit.totem-plugin
 lib/totem/plugins/gromit/libgromit.la
+lib/totem/plugins/iplayer/iplayer.py
+lib/totem/plugins/iplayer/iplayer.pyc
+lib/totem/plugins/iplayer/iplayer.pyo
+lib/totem/plugins/iplayer/iplayer.totem-plugin
+lib/totem/plugins/iplayer/iplayer.ui
+lib/totem/plugins/iplayer/iplayer2.py
+lib/totem/plugins/iplayer/iplayer2.pyc
+lib/totem/plugins/iplayer/iplayer2.pyo
+lib/totem/plugins/iplayer/listparser.py
+lib/totem/plugins/iplayer/listparser.pyc
+lib/totem/plugins/iplayer/listparser.pyo
 lib/totem/plugins/jamendo/jamendo.py
 lib/totem/plugins/jamendo/jamendo.pyc
 lib/totem/plugins/jamendo/jamendo.pyo
@@ -41,6 +55,7 @@ lib/totem/plugins/pythonconsole/pythonconsole.totem-plugin
 lib/totem/plugins/screensaver/libscreensaver.la
 lib/totem/plugins/screensaver/screensaver.totem-plugin
 lib/totem/plugins/screenshot/gallery.ui
+lib/totem/plugins/screenshot/gnome-screenshot.ui
 lib/totem/plugins/screenshot/libscreenshot.la
 lib/totem/plugins/screenshot/screenshot.totem-plugin
 lib/totem/plugins/skipto/libskipto.la
@@ -51,9 +66,7 @@ lib/totem/plugins/thumbnail/thumbnail.totem-plugin
 lib/totem/plugins/totem/__init__.py
 lib/totem/plugins/totem/__init__.pyc
 lib/totem/plugins/totem/__init__.pyo
-lib/totem/plugins/youtube/youtube.py
-lib/totem/plugins/youtube/youtube.pyc
-lib/totem/plugins/youtube/youtube.pyo
+lib/totem/plugins/youtube/libyoutube.la
 lib/totem/plugins/youtube/youtube.totem-plugin
 lib/totem/plugins/youtube/youtube.ui
 man/man1/totem-video-thumbnailer.1
@@ -237,6 +250,15 @@ share/gnome/help/totem/uk/figures/totem_start_window.png
 share/gnome/help/totem/uk/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/uk/figures/totem_volume_mute_button.png
 share/gnome/help/totem/uk/totem.xml
+share/gnome/help/totem/zh_CN/figures/totem_next_button.png
+share/gnome/help/totem/zh_CN/figures/totem_pause_button.png
+share/gnome/help/totem/zh_CN/figures/totem_play_button.png
+share/gnome/help/totem/zh_CN/figures/totem_previous_button.png
+share/gnome/help/totem/zh_CN/figures/totem_show_playlist_button.png
+share/gnome/help/totem/zh_CN/figures/totem_start_window.png
+share/gnome/help/totem/zh_CN/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/zh_CN/figures/totem_volume_mute_button.png
+share/gnome/help/totem/zh_CN/totem.xml
 share/gnome/help/totem/zh_HK/figures/totem_next_button.png
 share/gnome/help/totem/zh_HK/figures/totem_pause_button.png
 share/gnome/help/totem/zh_HK/figures/totem_play_button.png
@@ -298,6 +320,7 @@ share/locale/bn/LC_MESSAGES/totem.mo
 share/locale/bn_IN/LC_MESSAGES/totem.mo
 share/locale/br/LC_MESSAGES/totem.mo
 share/locale/ca/LC_MESSAGES/totem.mo
+share/locale/ca@valencia/LC_MESSAGES/totem.mo
 share/locale/crh/LC_MESSAGES/totem.mo
 share/locale/cs/LC_MESSAGES/totem.mo
 share/locale/cy/LC_MESSAGES/totem.mo
@@ -344,7 +367,6 @@ share/locale/oc/LC_MESSAGES/totem.mo
 share/locale/or/LC_MESSAGES/totem.mo
 share/locale/pa/LC_MESSAGES/totem.mo
 share/locale/pl/LC_MESSAGES/totem.mo
-share/locale/ps/LC_MESSAGES/totem.mo
 share/locale/pt/LC_MESSAGES/totem.mo
 share/locale/pt_BR/LC_MESSAGES/totem.mo
 share/locale/ro/LC_MESSAGES/totem.mo
@@ -389,6 +411,7 @@ share/omf/totem/totem-pt_BR.omf
 share/omf/totem/totem-ru.omf
 share/omf/totem/totem-sv.omf
 share/omf/totem/totem-uk.omf
+share/omf/totem/totem-zh_CN.omf
 share/omf/totem/totem-zh_HK.omf
 share/omf/totem/totem-zh_TW.omf
 share/totem/filmholes-big-left.png
@@ -400,6 +423,5 @@ share/totem/playlist.ui
 share/totem/plugins.ui
 share/totem/properties.ui
 share/totem/totem.ui
-share/totem/totem_logo.png
 share/totem/uri.ui
 share/totem/video-list.ui

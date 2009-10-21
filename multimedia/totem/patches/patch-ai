@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1 2009/10/21 18:56:15 drochner Exp $
+
+--- help/totem-docs.h.orig	2009-09-29 13:40:56.000000000 +0200
++++ help/totem-docs.h
+@@ -1,7 +1,9 @@
+ const gchar* documentation_credits[] = {
++#if 0
+ 	"Baptiste Mille-Mathias <baptiste.millemathias@gmail.org>",
+ 	"Chee Bin HOH <cbhoh@gnome.org>",
+ 	"Philip Withnall <philip@tecnocode.co.uk>",
++#endif
+ 	NULL
+ };
+ 
