@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/01/03 19:12:52 schmonz Exp $
+$NetBSD: patch-aa,v 1.5 2009/10/21 15:06:46 schmonz Exp $
 
---- Makefile.in.orig	2005-11-02 12:41:35.000000000 -0500
+--- Makefile.in.orig	2009-10-19 13:00:48.000000000 -0400
 +++ Makefile.in
-@@ -596,10 +596,10 @@ install-data-local:
+@@ -617,10 +617,10 @@ install-data-local:
  	chmod 600 $(DESTDIR)$(localstatedir)/trigger
  
  install-root:
