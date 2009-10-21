@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/10/18 12:30:54 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/21 10:31:46 ghen Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk7-1.7.0.72.20090924
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -34,6 +35,10 @@ BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 MAKE_ENV+=		PKGSRC_ZIPEXE=${PREFIX}/bin/zip
 MAKE_ENV+=		PKGSRC_UNZIP=${PREFIX}/bin/unzip
 MAKE_ENV+=		PKGSRC_UNZIPSFX=${PREFIX}/bin/unzipsfv
+
+DEPENDS+=		dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
+#DEPENDS+=		ja-sazanami-ttf-[0-9]*:../../fonts/ja-sazanami-ttf
+#DEPENDS+=		baekmuk-ttf-[0-9]*:../../fonts/baekmuk-ttf
 
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -77,6 +82,12 @@ SUBST_FILES.add-rpaths=		jdk/make/sun/awt/Makefile		\
 				jdk/make/sun/splashscreen/Makefile	\
 				jdk/make/sun/xawt/Makefile
 SUBST_SED.add-rpaths=		-e 's|-L$$(OPENWIN_LIB)|-L$$(OPENWIN_LIB) -Wl,-R$$(OPENWIN_LIB)|g'
+
+SUBST_CLASSES+=			fontpaths
+SUBST_STAGE.fontpaths=		pre-build
+SUBST_MESSAGE.fontpaths=	fixing font paths
+SUBST_FILES.fontpaths=		jdk/src/solaris/classes/sun/awt/fontconfigs/bsd.fontconfig.properties
+SUBST_SED.fontpaths=		-e 's|%%PREFIX%%|${PREFIX}|'
 
 PLIST_VARS+=	i386
 .if ${MACHINE_ARCH} == "i386"
