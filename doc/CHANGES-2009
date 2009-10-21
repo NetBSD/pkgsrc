@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4036 2009/10/21 10:35:57 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.4037 2009/10/21 14:40:52 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5332,3 +5332,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/python26 to 2.6.3nb1 [wiz 2009-10-21]
 	Updated lang/python26 to 2.6.3nb2 [tron 2009-10-21]
 	Updated lang/openjdk7 to 1.7.0.72.20090924nb1 [ghen 2009-10-21]
+	Updated lang/parrot to 1.6.0nb1 [he 2009-10-21]
