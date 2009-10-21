@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.51 2009/09/07 10:02:13 drochner Exp $
+# $NetBSD: Makefile.common,v 1.52 2009/10/21 18:56:15 drochner Exp $
 #
 # used by multimedia/totem-browser-plugin/Makefile
 # used by multimedia/totem-nautilus/Makefile
 # used by multimedia/totem-xine/Makefile
 
-DISTNAME=	totem-2.26.3
+DISTNAME=	totem-2.28.1
 CATEGORIES=	multimedia gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.28/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/totem/
@@ -35,14 +35,10 @@ GCONF_SCHEMAS+=	totem-video-thumbnail.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-BUILDLINK_API_DEPENDS.gnome-vfs+=		gnome-vfs>=2.8.2
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
