@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4047 2009/10/22 18:14:55 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4048 2009/10/22 18:35:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5377,3 +5377,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/gconfmm to 2.28.0 [adam 2009-10-22]
 	Updated devel/libgnomemm to 2.28.0 [adam 2009-10-22]
 	Updated devel/libgnomeuimm to 2.28.0 [adam 2009-10-22]
+	Updated graphics/autopano-sift-C to 2.5.1 [adam 2009-10-22]
