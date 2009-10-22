@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/07/09 17:53:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/10/22 17:19:08 drochner Exp $
 include/gnome-menus/gmenu-tree.h
 lib/libgnome-menu.la
 lib/pkgconfig/libgnome-menu.pc
@@ -86,6 +86,7 @@ share/locale/mn/LC_MESSAGES/gnome-menus.mo
 share/locale/mr/LC_MESSAGES/gnome-menus.mo
 share/locale/ms/LC_MESSAGES/gnome-menus.mo
 share/locale/nb/LC_MESSAGES/gnome-menus.mo
+share/locale/nds/LC_MESSAGES/gnome-menus.mo
 share/locale/ne/LC_MESSAGES/gnome-menus.mo
 share/locale/nl/LC_MESSAGES/gnome-menus.mo
 share/locale/nn/LC_MESSAGES/gnome-menus.mo
