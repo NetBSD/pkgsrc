@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2009/07/09 17:50:16 drochner Exp $
+@comment $NetBSD: PLIST,v 1.39 2009/10/22 17:15:35 drochner Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnome/gnome-desktop-utils.h
@@ -36,6 +36,7 @@ share/gnome/help/fdl/fr/fdl.xml
 share/gnome/help/fdl/hu/fdl.xml
 share/gnome/help/fdl/ko/fdl.xml
 share/gnome/help/fdl/oc/fdl.xml
+share/gnome/help/fdl/pl/fdl.xml
 share/gnome/help/fdl/sv/fdl.xml
 share/gnome/help/fdl/uk/fdl.xml
 share/gnome/help/fdl/vi/fdl.xml
@@ -79,6 +80,7 @@ share/gtk-doc/html/gnome-desktop/GnomeRRLabeler.html
 share/gtk-doc/html/gnome-desktop/background.html
 share/gtk-doc/html/gnome-desktop/gnome-desktop-GnomeDesktopItem.html
 share/gtk-doc/html/gnome-desktop/gnome-desktop-Miscellaneous-Functions.html
+share/gtk-doc/html/gnome-desktop/gnome-desktop-Miscellaneous-Thumbnail-Functions.html
 share/gtk-doc/html/gnome-desktop/gnome-desktop-gnome-rr-config.html
 share/gtk-doc/html/gnome-desktop/gnome-desktop-gnome-rr-crtc.html
 share/gtk-doc/html/gnome-desktop/gnome-desktop-gnome-rr-mode.html
@@ -97,6 +99,7 @@ share/gtk-doc/html/gnome-desktop/right.png
 share/gtk-doc/html/gnome-desktop/style.css
 share/gtk-doc/html/gnome-desktop/thumbnail.html
 share/gtk-doc/html/gnome-desktop/up.png
+share/libgnome-desktop/pnp.ids
 share/locale/af/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -161,6 +164,7 @@ share/locale/mn/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/mr/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ms/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/nb/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/nds/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ne/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -212,6 +216,7 @@ share/omf/fdl/fdl-fr.omf
 share/omf/fdl/fdl-hu.omf
 share/omf/fdl/fdl-ko.omf
 share/omf/fdl/fdl-oc.omf
+share/omf/fdl/fdl-pl.omf
 share/omf/fdl/fdl-sv.omf
 share/omf/fdl/fdl-uk.omf
 share/omf/fdl/fdl-vi.omf
