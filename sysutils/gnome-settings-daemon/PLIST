@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/22 17:16:35 drochner Exp $
 include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-client.h
 include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-plugin.h
 lib/gnome-settings-daemon-2.0/a11y-keyboard.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/background.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/clipboard.gnome-settings-plugin
-lib/gnome-settings-daemon-2.0/dummy.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/font.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/housekeeping.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/keybindings.gnome-settings-plugin
@@ -12,22 +11,17 @@ lib/gnome-settings-daemon-2.0/keyboard.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/liba11y-keyboard.la
 lib/gnome-settings-daemon-2.0/libbackground.la
 lib/gnome-settings-daemon-2.0/libclipboard.la
-lib/gnome-settings-daemon-2.0/libdummy.la
 lib/gnome-settings-daemon-2.0/libfont.la
 lib/gnome-settings-daemon-2.0/libhousekeeping.la
 lib/gnome-settings-daemon-2.0/libkeybindings.la
 lib/gnome-settings-daemon-2.0/libkeyboard.la
-lib/gnome-settings-daemon-2.0/libmedia-keys.la
 lib/gnome-settings-daemon-2.0/libmouse.la
-lib/gnome-settings-daemon-2.0/libscreensaver.la
 lib/gnome-settings-daemon-2.0/libsound.la
 lib/gnome-settings-daemon-2.0/libtyping-break.la
 lib/gnome-settings-daemon-2.0/libxrandr.la
 lib/gnome-settings-daemon-2.0/libxrdb.la
 lib/gnome-settings-daemon-2.0/libxsettings.la
-lib/gnome-settings-daemon-2.0/media-keys.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/mouse.gnome-settings-plugin
-lib/gnome-settings-daemon-2.0/screensaver.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/sound.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/typing-break.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/xrandr.gnome-settings-plugin
@@ -35,18 +29,19 @@ lib/gnome-settings-daemon-2.0/xrdb.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/xsettings.gnome-settings-plugin
 lib/pkgconfig/gnome-settings-daemon.pc
 libexec/gnome-settings-daemon
+libexec/gsd-locate-pointer
 share/dbus-1/services/org.gnome.SettingsDaemon.service
+share/gconf/schemas/apps_gnome_settings_daemon_housekeeping.schemas
 share/gconf/schemas/apps_gnome_settings_daemon_keybindings.schemas
-share/gconf/schemas/apps_gnome_settings_daemon_screensaver.schemas
 share/gconf/schemas/apps_gnome_settings_daemon_xrandr.schemas
 share/gconf/schemas/desktop_gnome_font_rendering.schemas
 share/gconf/schemas/desktop_gnome_keybindings.schemas
+share/gconf/schemas/desktop_gnome_peripherals_touchpad.schemas
 share/gconf/schemas/gnome-settings-daemon.schemas
 share/gnome-control-center/keybindings/50-accessibility.xml
-share/gnome-settings-daemon/acme-eject.png
-share/gnome-settings-daemon/acme.glade
-share/gnome-settings-daemon/gsd-a11y-preferences-dialog.glade
-share/gnome-settings-daemon/modmap-dialog.glade
+share/gnome-settings-daemon/acme.ui
+share/gnome-settings-daemon/gsd-a11y-preferences-dialog.ui
+share/gnome-settings-daemon/modmap-dialog.ui
 share/gnome-settings-daemon/xrdb/Editres.ad
 share/gnome-settings-daemon/xrdb/Emacs.ad
 share/gnome-settings-daemon/xrdb/General.ad
@@ -73,6 +68,7 @@ share/locale/bn_IN/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/br/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/bs/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/ca/LC_MESSAGES/gnome-settings-daemon.mo
+share/locale/ca@valencia/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/cs/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/cy/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/da/LC_MESSAGES/gnome-settings-daemon.mo
@@ -104,6 +100,7 @@ share/locale/ko/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/ku/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/lt/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/lv/LC_MESSAGES/gnome-settings-daemon.mo
+share/locale/mai/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/mg/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/mk/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/ml/LC_MESSAGES/gnome-settings-daemon.mo

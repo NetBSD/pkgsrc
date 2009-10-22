@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2009/10/22 17:15:35 drochner Exp $
+
+--- configure.orig	2009-10-22 16:05:04.000000000 +0200
++++ configure
+@@ -12385,7 +12385,7 @@ fi
+ 
+ GNOME_PLATFORM=2
+ GNOME_MINOR=28
+-GNOME_MICRO=0
++GNOME_MICRO=1
+ GNOME_DISTRIBUTOR="GNOME.Org"
+ GNOME_DATE=`date +"%Y-%m-%d"`
+ 
