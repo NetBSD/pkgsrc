@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2009/08/26 19:58:42 sno Exp $
+# $NetBSD: Makefile,v 1.58 2009/10/22 17:21:34 drochner Exp $
 #
 
-DISTNAME=	zenity-2.26.0
-PKGREVISION=	1
+DISTNAME=	zenity-2.28.0
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,9 +21,9 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
+#.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/libgnomecanvas/buildlink3.mk"
+#.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
