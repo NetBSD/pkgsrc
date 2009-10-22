@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.600 2009/10/08 06:20:07 jnemeth Exp $
+# $NetBSD: Makefile,v 1.601 2009/10/22 22:31:04 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -74,6 +74,7 @@ SUBDIR+=	gnustep-gui
 SUBDIR+=	gnustep-preferences
 SUBDIR+=	grandr_applet
 SUBDIR+=	gromit
+SUBDIR+=	gselt
 SUBDIR+=	gst-plugins0.10-x11
 SUBDIR+=	gtk
 SUBDIR+=	gtk+extra
