@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4045 2009/10/22 14:54:30 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4046 2009/10/22 16:57:25 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5342,3 +5342,32 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/gd to 2.0.35nb3 [taca 2009-10-22]
 	Updated lang/php5 to 5.2.11nb1 [taca 2009-10-22]
 	Updated www/typo3 to 4.2.10 [taca 2009-10-22]
+	Updated print/poppler to 0.12.1 [drochner 2009-10-22]
+	Updated textproc/libxml2 to 2.7.6 [drochner 2009-10-22]
+	Updated x11/gtk2 to 2.18.3 [drochner 2009-10-22]
+	Updated devel/atk to 1.28.0 [drochner 2009-10-22]
+	Updated devel/at-spi to 1.28.1 [drochner 2009-10-22]
+	Updated devel/pango to 1.26.0 [drochner 2009-10-22]
+	Updated devel/GConf to 2.28.0 [drochner 2009-10-22]
+	Updated net/libsoup24 to 2.28.1 [drochner 2009-10-22]
+	Updated devel/libgweather to 2.28.0 [drochner 2009-10-22]
+	Updated devel/libbonobo to 2.24.2 [drochner 2009-10-22]
+	Updated devel/libgnome to 2.28.0 [drochner 2009-10-22]
+	Updated devel/libbonoboui to 2.24.2 [drochner 2009-10-22]
+	Updated devel/libgnomeui to 2.24.2 [drochner 2009-10-22]
+	Updated devel/py-gobject to 2.20.0 [drochner 2009-10-22]
+	Updated graphics/gnome-icon-theme to 2.28.0 [drochner 2009-10-22]
+	Updated multimedia/totem-pl-parser to 2.28.1 [drochner 2009-10-22]
+	Updated mail/gmime24 to 2.4.10 [drochner 2009-10-22]
+	Updated security/gnome-keyring to 2.28.1 [drochner 2009-10-22]
+	Updated multimedia/gstreamer0.10 to 0.10.25 [drochner 2009-10-22]
+	Updated multimedia/gst-plugins0.10-base to 0.10.25 [drochner 2009-10-22]
+	Updated x11/gtksourceview2 to 2.8.1 [drochner 2009-10-22]
+	Updated x11/py-gnome2 to 2.28.0 [drochner 2009-10-22]
+	Updated mail/evolution-data-server to 2.28.1 [drochner 2009-10-22]
+	Updated print/evince to 2.28.1 [drochner 2009-10-22]
+	Updated graphics/eog to 2.28.1 [drochner 2009-10-22]
+	Updated archivers/file-roller to 2.28.1 [drochner 2009-10-22]
+	Updated editors/gedit to 2.28.0 [drochner 2009-10-22]
+	Added net/libgdata version 0.5.0 [drochner 2009-10-22]
+	Updated multimedia/totem to 2.28.1 [drochner 2009-10-22]
