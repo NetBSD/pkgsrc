@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4050 2009/10/22 22:01:41 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4051 2009/10/22 22:27:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5380,3 +5380,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/autopano-sift-C to 2.5.1 [adam 2009-10-22]
 	Updated devel/pango to 1.26.0nb1 [tron 2009-10-22]
 	Updated news/tin to 1.9.4nb1 [wiz 2009-10-22]
+	Updated misc/gwaei to 1.0.1 [wiz 2009-10-22]
