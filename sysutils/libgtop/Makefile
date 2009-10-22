@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2009/08/27 20:03:17 ahoka Exp $
+# $NetBSD: Makefile,v 1.29 2009/10/22 17:11:44 drochner Exp $
 
-DISTNAME=		libgtop-2.26.1
-PKGREVISION=		2
+DISTNAME=		libgtop-2.28.0
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.26/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.28/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -64,7 +63,7 @@ post-install:
 .endif
 
 PLIST_VARS+=    glibtop_private.h
-.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PLIST.glibtop_private.h= yes
 .endif
 
