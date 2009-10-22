@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2009/09/20 10:57:04 he Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2009/10/22 14:51:26 tron Exp $
 #
 
 VERSION=		1.6.0
+PKGREVISION=		1
 RTYPE=			devel
 DISTNAME=		parrot-${VERSION}
 CATEGORIES=		lang
@@ -37,6 +38,15 @@ SUBST_SED.pthread+=	-e 's|-lc_r||g'
 SUBST_SED.pthread+=	-e '/^CFLAGS /s|$$|${PTHREAD_CFLAGS:Q}|'
 SUBST_SED.pthread+=	-e '/^LINKFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|'
 SUBST_SED.pthread+=	-e '/^LDFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|'
+
+PLIST_SUBST+=		VERSION=${VERSION:Q}
+PLIST_SRC+=		${PLIST_SRC_DFLT}
+# Default this to ELF shared libs with .so,
+# Darwin has PLIST.Darwin which gets included automatically.
+.if (${OPSYS} != "Darwin")
+PLIST_SRC+=		PLIST.shared
+.endif
+
 
 pre-install:
 	${CHMOD} -R g-w ${WRKSRC}

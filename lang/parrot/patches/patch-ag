@@ -1,0 +1,26 @@
+$NetBSD: patch-ag,v 1.3.2.2 2009/10/22 14:51:26 tron Exp $
+
+This test now works in NetBSD, after we properly selected the libm
+variant in the platform startup code.
+
+--- t/op/trans.t	(revision 41959)
++++ t/op/trans.t	(working copy)
+@@ -387,9 +387,6 @@
+ ok 16
+ OUTPUT
+ 
+-TODO: {
+-local $TODO = 'fails on netbsd' if $^O =~ /netbsd/;
+-
+ pasm_output_is( <<"CODE", <<'OUTPUT', 'atan, part 2' );
+         .include 'fp_equality.pasm'
+         atan N4, -0.0, -0.0
+@@ -402,8 +399,6 @@
+ ok 1
+ OUTPUT
+ 
+-}
+-
+ pasm_output_is( <<"CODE", <<OUTPUT, "log2" );
+         .include 'fp_equality.pasm'
+         set N1, 10.0
