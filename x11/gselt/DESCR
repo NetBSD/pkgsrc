@@ -1,0 +1,3 @@
+This tool shows a borderless GTK window with various buttons in
+depending on the current X11 selection. It's configured by a ".gselt"
+file in your $HOME directory.
