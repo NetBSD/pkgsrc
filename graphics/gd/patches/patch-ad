@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1.2.2 2009/10/22 21:28:32 tron Exp $
+
+* Fix for http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3546,
+  similar chagne from PHP's SVN repositry r289557.
+
+--- gd_gd.c.orig	2006-04-06 00:52:22.000000000 +0900
++++ gd_gd.c
+@@ -44,6 +44,10 @@ _gdGetColors (gdIOCtx * in, gdImagePtr i
+ 	    {
+ 	      goto fail1;
+ 	    }
++	  if (im->colorsTotal > gdMaxColors)
++	    {
++	        goto fail1;
++	    }
+ 	}
+       /* Int to accommodate truecolor single-color transparency */
+       if (!gdGetInt (&im->transparent, in))
