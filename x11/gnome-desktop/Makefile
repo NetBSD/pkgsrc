@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.96 2009/08/26 19:56:57 sno Exp $
+# $NetBSD: Makefile,v 1.97 2009/10/22 17:15:35 drochner Exp $
 #
 
-DISTNAME=		gnome-desktop-2.26.3
-PKGREVISION=		1
+DISTNAME=		gnome-desktop-2.28.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.26/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.28/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -16,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
-USE_TOOLS+=		automake autoconf aclocal autoreconf m4
 USE_LIBTOOL=		yes
 
 AUTOCONF_REQD=		2.62
@@ -24,10 +22,6 @@ AUTOCONF_REQD=		2.62
 CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
 
 BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
-
-pre-configure:
-	cd ${WRKSRC} && autoconf -f
-	cd ${WRKSRC} && autoheader -f
 
 post-install:
 .for f in netbsd-logo-icon.png netbsd-logo-icon-transparent.png
