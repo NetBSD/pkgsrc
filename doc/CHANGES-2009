@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4042 2009/10/21 21:03:43 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.4043 2009/10/22 14:41:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5338,3 +5338,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/nbpatch to 20091021 [joerg 2009-10-21]
 	Updated textproc/mdocml to 1.9.9 [joerg 2009-10-21]
 	Updated sysutils/ruby-facter to 1.5.7 [tonnerre 2009-10-21]
+	Updated graphics/php-gd to 5.2.11nb2 [taca 2009-10-22]
+	Updated graphics/gd to 2.0.35nb3 [taca 2009-10-22]
