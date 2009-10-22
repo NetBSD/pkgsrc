@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/07/11 13:14:13 hasso Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/10/22 17:11:44 drochner Exp $
 ${PLIST.server}bin/libgtop_daemon2
 ${PLIST.server}bin/libgtop_server2
 include/libgtop-2.0/glibtop.h
@@ -104,6 +104,7 @@ share/locale/bn/LC_MESSAGES/libgtop-2.0.mo
 share/locale/bn_IN/LC_MESSAGES/libgtop-2.0.mo
 share/locale/bs/LC_MESSAGES/libgtop-2.0.mo
 share/locale/ca/LC_MESSAGES/libgtop-2.0.mo
+share/locale/ca@valencia/LC_MESSAGES/libgtop-2.0.mo
 share/locale/cs/LC_MESSAGES/libgtop-2.0.mo
 share/locale/cy/LC_MESSAGES/libgtop-2.0.mo
 share/locale/da/LC_MESSAGES/libgtop-2.0.mo
@@ -137,6 +138,7 @@ share/locale/ky/LC_MESSAGES/libgtop-2.0.mo
 share/locale/la/LC_MESSAGES/libgtop-2.0.mo
 share/locale/lt/LC_MESSAGES/libgtop-2.0.mo
 share/locale/lv/LC_MESSAGES/libgtop-2.0.mo
+share/locale/mai/LC_MESSAGES/libgtop-2.0.mo
 share/locale/mg/LC_MESSAGES/libgtop-2.0.mo
 share/locale/mi/LC_MESSAGES/libgtop-2.0.mo
 share/locale/mk/LC_MESSAGES/libgtop-2.0.mo

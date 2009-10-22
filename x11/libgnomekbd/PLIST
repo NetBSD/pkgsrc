@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:24:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/10/22 17:09:35 drochner Exp $
 bin/gkbd-indicator-plugins-capplet
 include/libgnomekbd/gkbd-desktop-config.h
 include/libgnomekbd/gkbd-indicator-config.h
@@ -13,12 +13,16 @@ lib/pkgconfig/libgnomekbd.pc
 lib/pkgconfig/libgnomekbdui.pc
 share/applications/gkbd-indicator-plugins-capplet.desktop
 share/gconf/schemas/desktop_gnome_peripherals_keyboard_xkb.schemas
-share/libgnomekbd/glade/gkbd-indicator-plugins.glade
+share/libgnomekbd/ui/gkbd-indicator-plugins.ui
+share/libgnomekbd/ui/gkbd-indicator-plugins_add.ui
 share/locale/ar/LC_MESSAGES/libgnomekbd.mo
+share/locale/as/LC_MESSAGES/libgnomekbd.mo
 share/locale/be@latin/LC_MESSAGES/libgnomekbd.mo
 share/locale/bg/LC_MESSAGES/libgnomekbd.mo
+share/locale/bn/LC_MESSAGES/libgnomekbd.mo
 share/locale/bn_IN/LC_MESSAGES/libgnomekbd.mo
 share/locale/ca/LC_MESSAGES/libgnomekbd.mo
+share/locale/ca@valencia/LC_MESSAGES/libgnomekbd.mo
 share/locale/cs/LC_MESSAGES/libgnomekbd.mo
 share/locale/da/LC_MESSAGES/libgnomekbd.mo
 share/locale/de/LC_MESSAGES/libgnomekbd.mo
@@ -30,6 +34,7 @@ share/locale/et/LC_MESSAGES/libgnomekbd.mo
 share/locale/eu/LC_MESSAGES/libgnomekbd.mo
 share/locale/fi/LC_MESSAGES/libgnomekbd.mo
 share/locale/fr/LC_MESSAGES/libgnomekbd.mo
+share/locale/ga/LC_MESSAGES/libgnomekbd.mo
 share/locale/gl/LC_MESSAGES/libgnomekbd.mo
 share/locale/gu/LC_MESSAGES/libgnomekbd.mo
 share/locale/he/LC_MESSAGES/libgnomekbd.mo
@@ -38,9 +43,11 @@ share/locale/hu/LC_MESSAGES/libgnomekbd.mo
 share/locale/it/LC_MESSAGES/libgnomekbd.mo
 share/locale/ja/LC_MESSAGES/libgnomekbd.mo
 share/locale/ka/LC_MESSAGES/libgnomekbd.mo
+share/locale/kn/LC_MESSAGES/libgnomekbd.mo
 share/locale/ko/LC_MESSAGES/libgnomekbd.mo
 share/locale/lt/LC_MESSAGES/libgnomekbd.mo
 share/locale/lv/LC_MESSAGES/libgnomekbd.mo
+share/locale/mai/LC_MESSAGES/libgnomekbd.mo
 share/locale/mk/LC_MESSAGES/libgnomekbd.mo
 share/locale/ml/LC_MESSAGES/libgnomekbd.mo
 share/locale/mr/LC_MESSAGES/libgnomekbd.mo

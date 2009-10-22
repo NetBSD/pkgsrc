@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2008/06/02 16:42:21 drochner Exp $
+$NetBSD: patch-af,v 1.2 2009/10/22 17:09:35 drochner Exp $
 
---- capplet/gkbd-indicator-plugins-add.c.orig	2008-05-31 14:46:50.000000000 +0200
+--- capplet/gkbd-indicator-plugins-add.c.orig	2009-05-13 00:17:30.000000000 +0200
 +++ capplet/gkbd-indicator-plugins-add.c
 @@ -104,7 +104,7 @@ CappletAvailablePluginsSelectionChanged 
    gtk_label_set_text (GTK_LABEL (lblDescription),
@@ -20,7 +20,7 @@ $NetBSD: patch-af,v 1.1 2008/06/02 16:42:21 drochner Exp $
        gtk_label_set_use_markup (GTK_LABEL (lblDescription), TRUE);
      }
    gtk_widget_set_sensitive (GTK_WIDGET
-@@ -142,7 +142,7 @@ CappletEnablePlugin (GtkWidget * btnAdd,
+@@ -141,7 +141,7 @@ CappletEnablePlugin (GtkWidget * btnAdd,
  									renderer,
  									"text",
  									0,
@@ -28,4 +28,4 @@ $NetBSD: patch-af,v 1.1 2008/06/02 16:42:21 drochner Exp $
 +									VPNULL);
    GtkTreeSelection *selection;
    gint response;
-   availablePluginsList = glade_xml_get_widget (data, "allPlugins");
+ 
