@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2009/06/14 22:58:04 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2009/10/22 15:49:45 drochner Exp $
 
 BUILDLINK_TREE+=	evolution-data-server
 
@@ -11,7 +11,6 @@ BUILDLINK_PKGSRCDIR.evolution-data-server?=	../../mail/evolution-data-server
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
