@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.5 2009/10/22 17:15:35 drochner Exp $
+
+--- libgnome-desktop/gnome-desktop-thumbnail.c.orig	2009-07-27 13:38:54.000000000 +0200
++++ libgnome-desktop/gnome-desktop-thumbnail.c
+@@ -1049,7 +1049,7 @@ gnome_desktop_thumbnail_factory_save_thu
+     }
+   close (tmp_fd);
+   
+-  g_snprintf (mtime_str, 21, "%ld",  original_mtime);
++  g_snprintf (mtime_str, 21, "%lld",  (long long)original_mtime);
+   width = gdk_pixbuf_get_option (thumbnail, "tEXt::Thumb::Image::Width");
+   height = gdk_pixbuf_get_option (thumbnail, "tEXt::Thumb::Image::Height");
+ 
+@@ -1151,7 +1151,7 @@ gnome_desktop_thumbnail_factory_create_f
+     }
+   close (tmp_fd);
+   
+-  g_snprintf (mtime_str, 21, "%ld",  mtime);
++  g_snprintf (mtime_str, 21, "%lld",  (long long)mtime);
+   pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, 1, 1);
+   saved_ok  = gdk_pixbuf_save (pixbuf,
+ 			       tmp_path,
+@@ -1281,7 +1281,7 @@ gnome_desktop_thumbnail_is_valid (GdkPix
+   thumb_mtime_str = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::MTime");
+   if (!thumb_mtime_str)
+     return FALSE;
+-  thumb_mtime = atol (thumb_mtime_str);
++  thumb_mtime = atoll (thumb_mtime_str);
+   if (mtime != thumb_mtime)
+     return FALSE;
+   
