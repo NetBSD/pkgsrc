@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8555 2009/10/21 20:52:03 wiz Exp $
+$NetBSD: TODO,v 1.8556 2009/10/22 18:14:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -773,7 +773,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtkglarea-2.0.1
 	o gtkhtml324-3.28.1 [GNOME 2.28]
 	o gtkimageview-1.6.4
-	o gtkmm-2.18.2 [GNOME 2.28]
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
