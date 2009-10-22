@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2009/05/20 00:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/22 15:21:19 drochner Exp $
 #
-
-PKGREVISION=		2
 
 GNOME_VFS_NAME=		smb
 GNOME_VFS_FLAG=		samba
