@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/10/22 18:34:30 adam Exp $
+
+--- CMakeLists.txt.orig	2009-10-22 20:10:38.000000000 +0200
++++ CMakeLists.txt
+@@ -155,8 +155,8 @@ endif (WIN32)
+ # documentation
+ FILE(GLOB MAN_PAGES_1 doc/*.1)
+ FILE(GLOB MAN_PAGES_7 doc/*.7)
+-install(FILES ${MAN_PAGES_1} DESTINATION share/man/man1) 
+-install(FILES ${MAN_PAGES_7} DESTINATION share/man/man7) 
++install(FILES ${MAN_PAGES_1} DESTINATION man/man1) 
++install(FILES ${MAN_PAGES_7} DESTINATION man/man7) 
+ 
+ ## Test exectuables.
+ 
