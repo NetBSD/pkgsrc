@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2009/06/14 21:28:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.32 2009/10/22 17:31:50 drochner Exp $
 bin/nautilus
 bin/nautilus-autorun-software
 bin/nautilus-connect-server
@@ -16,6 +16,7 @@ include/nautilus/libnautilus-extension/nautilus-property-page-provider.h
 include/nautilus/libnautilus-extension/nautilus-property-page.h
 lib/libnautilus-extension.la
 lib/pkgconfig/libnautilus-extension.pc
+libexec/nautilus-convert-metadata
 man/man1/nautilus-connect-server.1
 man/man1/nautilus-file-management-properties.1
 man/man1/nautilus.1
@@ -64,7 +65,6 @@ share/locale/az/LC_MESSAGES/nautilus.mo
 share/locale/be/LC_MESSAGES/nautilus.mo
 share/locale/be@latin/LC_MESSAGES/nautilus.mo
 share/locale/bg/LC_MESSAGES/nautilus.mo
-share/locale/bn/LC_MESSAGES/nautilus.mo
 share/locale/bn_IN/LC_MESSAGES/nautilus.mo
 share/locale/br/LC_MESSAGES/nautilus.mo
 share/locale/bs/LC_MESSAGES/nautilus.mo
