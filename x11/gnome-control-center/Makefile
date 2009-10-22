@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2009/08/26 19:56:46 sno Exp $
+# $NetBSD: Makefile,v 1.27 2009/10/22 17:25:44 drochner Exp $
 #
 
-DISTNAME=	gnome-control-center-2.26.0
-PKGREVISION=	2
+DISTNAME=	gnome-control-center-2.28.1
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -35,6 +34,7 @@ INSTALLATION_DIRS=	${EGDIR}
 
 GCONF_SCHEMAS+=	control-center.schemas
 GCONF_SCHEMAS+=	fontilus.schemas
+GCONF_SCHEMAS+=	gnome-control-center.schemas
 
 EGDIR=			${PREFIX}/share/examples/gnome-control-center
 CONF_FILES+=		${EGDIR}/gnomecc.menu \
@@ -49,11 +49,6 @@ _TOOLS_USE_MSGFMT_SH=	yes
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gstreamer0.10=		gstreamer0.10>=0.10.1.2
@@ -86,7 +81,9 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 .include "../../x11/libXxf86misc/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxklavier=	libxklavier>=4.0
 .include "../../x11/libxklavier/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgnomekbd+= libgnomekbd>=2.28.0
 .include "../../x11/libgnomekbd/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
 
