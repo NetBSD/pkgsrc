@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/22 17:50:53 drochner Exp $
 bin/gtkhtml-editor-test
 include/libgtkhtml-3.14/editor/gtkhtml-editor-actions.h
 include/libgtkhtml-3.14/editor/gtkhtml-editor-common.h
@@ -20,8 +20,8 @@ lib/libgtkhtml-3.14.la
 lib/libgtkhtml-editor.la
 lib/pkgconfig/gtkhtml-editor.pc
 lib/pkgconfig/libgtkhtml-3.14.pc
-share/gtkhtml-3.14/gtkhtml-editor.glade
-share/gtkhtml-3.14/gtkhtml-editor.ui
+share/gtkhtml-3.14/gtkhtml-editor-builder.ui
+share/gtkhtml-3.14/gtkhtml-editor-manager.ui
 share/gtkhtml-3.14/icons/bulb.png
 share/gtkhtml-3.14/icons/confidential-stamp.jpg
 share/gtkhtml-3.14/icons/draft-paper.png
@@ -52,6 +52,7 @@ share/locale/bg/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/bn/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/bn_IN/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/ca/LC_MESSAGES/gtkhtml-3.14.mo
+share/locale/ca@valencia/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/cs/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/cy/LC_MESSAGES/gtkhtml-3.14.mo
 share/locale/da/LC_MESSAGES/gtkhtml-3.14.mo
