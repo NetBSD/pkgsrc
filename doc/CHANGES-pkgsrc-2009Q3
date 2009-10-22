@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.4 2009/10/21 12:44:50 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.5 2009/10/22 11:03:37 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -16,3 +16,5 @@ unbound: security update
 Pullup ticket #2915 - requested by sborrill
 xlockmore: build fix
 xlockmore-lite: build fix
+Pullup ticket #2917 - requested by joerg
+nbpatch: portability fix
