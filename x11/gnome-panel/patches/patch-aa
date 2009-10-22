@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2008/11/23 17:32:12 jmcneill Exp $
+$NetBSD: patch-aa,v 1.10 2009/10/22 17:29:42 drochner Exp $
 
---- applets/clock/Makefile.in.orig	2008-11-23 11:58:54.000000000 -0500
+--- applets/clock/Makefile.in.orig	2009-09-21 18:36:46.000000000 +0200
 +++ applets/clock/Makefile.in
-@@ -511,7 +511,7 @@ schemasdir = $(GCONF_SCHEMA_FILE_DIR)
+@@ -571,7 +571,7 @@ schemasdir = $(GCONF_SCHEMA_FILE_DIR)
  schemas_in_files = clock.schemas.in
  schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
  dbus_servicesdir = $(datadir)/dbus-1/system-services
 -dbus_confdir = $(sysconfdir)/dbus-1/system.d
 +dbus_confdir = $(datadir)/examples/gnome-panel
- polkitdir = $(datadir)/PolicyKit/policy
+ polkitdir = $(datadir)/polkit-1/actions
  dbus_services_in_files = org.gnome.ClockApplet.Mechanism.service.in
  polkit_in_files = org.gnome.clockapplet.mechanism.policy.in

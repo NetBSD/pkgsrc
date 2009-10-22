@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2009/07/09 18:07:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.27 2009/10/22 17:30:39 drochner Exp $
 bin/invest-chart
 lib/bonobo/servers/GNOME_AccessxStatusApplet.server
 ${PLIST.battstat}lib/bonobo/servers/GNOME_BattstatApplet.server
@@ -336,6 +336,18 @@ ${PLIST.battstat}share/gnome/help/battstat/bg/figures/battstat-applet.png
 ${PLIST.battstat}share/gnome/help/battstat/bg/figures/battstat-credits-hal.png
 ${PLIST.battstat}share/gnome/help/battstat/bg/figures/battstat-preferences.png
 ${PLIST.battstat}share/gnome/help/battstat/bg/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/ca/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/ca/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/ca/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/ca/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/ca/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/ca/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/cs/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/cs/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/cs/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/cs/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/cs/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/cs/figures/context-menu.png
 ${PLIST.battstat}share/gnome/help/battstat/de/battstat.xml
 ${PLIST.battstat}share/gnome/help/battstat/de/figures/battstat-applet-expanded.png
 ${PLIST.battstat}share/gnome/help/battstat/de/figures/battstat-applet.png
@@ -414,6 +426,12 @@ ${PLIST.battstat}share/gnome/help/battstat/uk/figures/battstat-applet.png
 ${PLIST.battstat}share/gnome/help/battstat/uk/figures/battstat-credits-hal.png
 ${PLIST.battstat}share/gnome/help/battstat/uk/figures/battstat-preferences.png
 ${PLIST.battstat}share/gnome/help/battstat/uk/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/zh_CN/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/zh_CN/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/zh_CN/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/zh_CN/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/zh_CN/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/zh_CN/figures/context-menu.png
 share/gnome/help/char-palette/C/char-palette.xml
 share/gnome/help/char-palette/C/figures/charpalette_applet.png
 share/gnome/help/char-palette/C/figures/charpalette_chargroup.png
@@ -522,6 +540,12 @@ share/gnome/help/drivemount/C/figures/drivemount-applet_mount.png
 share/gnome/help/drivemount/C/figures/drivemount-applet_open.png
 share/gnome/help/drivemount/C/figures/drivemount-applet_status.png
 share/gnome/help/drivemount/C/legal.xml
+share/gnome/help/drivemount/ca/drivemount.xml
+share/gnome/help/drivemount/ca/figures/drivemount-applet_eject.png
+share/gnome/help/drivemount/ca/figures/drivemount-applet_example.png
+share/gnome/help/drivemount/ca/figures/drivemount-applet_mount.png
+share/gnome/help/drivemount/ca/figures/drivemount-applet_open.png
+share/gnome/help/drivemount/ca/figures/drivemount-applet_status.png
 share/gnome/help/drivemount/cs/drivemount.xml
 share/gnome/help/drivemount/cs/figures/drivemount-applet_eject.png
 share/gnome/help/drivemount/cs/figures/drivemount-applet_example.png
@@ -689,6 +713,21 @@ share/gnome/help/gweather/C/figures/stock_weather-storm.png
 share/gnome/help/gweather/C/figures/stock_weather-sunny.png
 share/gnome/help/gweather/C/gweather.xml
 share/gnome/help/gweather/C/legal.xml
+share/gnome/help/gweather/ar/figures/gweather-details.png
+share/gnome/help/gweather/ar/figures/gweather-menu-prefs.png
+share/gnome/help/gweather/ar/figures/gweather-prefs-general.png
+share/gnome/help/gweather/ar/figures/gweather-prefs-locations.png
+share/gnome/help/gweather/ar/figures/gweather_applet.png
+share/gnome/help/gweather/ar/figures/stock_weather-cloudy.png
+share/gnome/help/gweather/ar/figures/stock_weather-few-clouds.png
+share/gnome/help/gweather/ar/figures/stock_weather-fog.png
+share/gnome/help/gweather/ar/figures/stock_weather-night-clear.png
+share/gnome/help/gweather/ar/figures/stock_weather-night-few-clouds.png
+share/gnome/help/gweather/ar/figures/stock_weather-showers.png
+share/gnome/help/gweather/ar/figures/stock_weather-snow.png
+share/gnome/help/gweather/ar/figures/stock_weather-storm.png
+share/gnome/help/gweather/ar/figures/stock_weather-sunny.png
+share/gnome/help/gweather/ar/gweather.xml
 share/gnome/help/gweather/ca/figures/gweather-details.png
 share/gnome/help/gweather/ca/figures/gweather-menu-prefs.png
 share/gnome/help/gweather/ca/figures/gweather-prefs-general.png
@@ -961,6 +1000,7 @@ share/gnome/help/gweather/zh_CN/figures/stock_weather-sunny.png
 share/gnome/help/gweather/zh_CN/gweather.xml
 share/gnome/help/invest-applet/C/invest-applet.xml
 share/gnome/help/invest-applet/C/legal.xml
+share/gnome/help/invest-applet/ca/invest-applet.xml
 share/gnome/help/invest-applet/de/invest-applet.xml
 share/gnome/help/invest-applet/el/invest-applet.xml
 share/gnome/help/invest-applet/en_GB/invest-applet.xml
@@ -1019,6 +1059,10 @@ share/gnome/help/multiload/ca/figures/multiload-preferences.png
 share/gnome/help/multiload/ca/figures/system-monitor-applet_window.png
 share/gnome/help/multiload/ca/figures/system_monitor.png
 share/gnome/help/multiload/ca/multiload.xml
+share/gnome/help/multiload/cs/figures/multiload-preferences.png
+share/gnome/help/multiload/cs/figures/system-monitor-applet_window.png
+share/gnome/help/multiload/cs/figures/system_monitor.png
+share/gnome/help/multiload/cs/multiload.xml
 share/gnome/help/multiload/de/figures/multiload-preferences.png
 share/gnome/help/multiload/de/figures/system-monitor-applet_window.png
 share/gnome/help/multiload/de/figures/system_monitor.png
@@ -1182,6 +1226,12 @@ share/gnome/help/stickynotes_applet/uk/figures/stickynotes-note-prefs.png
 share/gnome/help/stickynotes_applet/uk/figures/stickynotes-prefs.png
 share/gnome/help/stickynotes_applet/uk/figures/stickynotes_applet.png
 share/gnome/help/stickynotes_applet/uk/stickynotes_applet.xml
+share/gnome/help/stickynotes_applet/zh_CN/figures/stickynote-right-menu-lock.png
+share/gnome/help/stickynotes_applet/zh_CN/figures/stickynote-right-menu-new.png
+share/gnome/help/stickynotes_applet/zh_CN/figures/stickynotes-note-prefs.png
+share/gnome/help/stickynotes_applet/zh_CN/figures/stickynotes-prefs.png
+share/gnome/help/stickynotes_applet/zh_CN/figures/stickynotes_applet.png
+share/gnome/help/stickynotes_applet/zh_CN/stickynotes_applet.xml
 share/gnome/help/trashapplet/C/figures/trash-applet.png
 share/gnome/help/trashapplet/C/legal.xml
 share/gnome/help/trashapplet/C/trashapplet.xml
@@ -1225,6 +1275,10 @@ share/gnome/help/trashapplet/uk/figures/trash-applet.png
 share/gnome/help/trashapplet/uk/trashapplet.xml
 share/gnome/help/trashapplet/zh_CN/figures/trash-applet.png
 share/gnome/help/trashapplet/zh_CN/trashapplet.xml
+share/gnome/help/trashapplet/zh_HK/figures/trash-applet.png
+share/gnome/help/trashapplet/zh_HK/trashapplet.xml
+share/gnome/help/trashapplet/zh_TW/figures/trash-applet.png
+share/gnome/help/trashapplet/zh_TW/trashapplet.xml
 share/icons/hicolor/16x16/apps/gnome-eyes-applet.png
 share/icons/hicolor/16x16/apps/gnome-sticky-notes-applet.png
 share/icons/hicolor/16x16/apps/invest-applet.png
@@ -1251,8 +1305,10 @@ share/locale/be@latin/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/br/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/ca@valencia/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/crh/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/cy/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1363,6 +1419,8 @@ share/omf/accessx-status/accessx-status-uk.omf
 share/omf/accessx-status/accessx-status-zh_CN.omf
 ${PLIST.battstat}share/omf/battstat/battstat-C.omf
 ${PLIST.battstat}share/omf/battstat/battstat-bg.omf
+${PLIST.battstat}share/omf/battstat/battstat-ca.omf
+${PLIST.battstat}share/omf/battstat/battstat-cs.omf
 ${PLIST.battstat}share/omf/battstat/battstat-de.omf
 ${PLIST.battstat}share/omf/battstat/battstat-el.omf
 ${PLIST.battstat}share/omf/battstat/battstat-en_GB.omf
@@ -1376,6 +1434,7 @@ ${PLIST.battstat}share/omf/battstat/battstat-pa.omf
 ${PLIST.battstat}share/omf/battstat/battstat-pt_BR.omf
 ${PLIST.battstat}share/omf/battstat/battstat-sv.omf
 ${PLIST.battstat}share/omf/battstat/battstat-uk.omf
+${PLIST.battstat}share/omf/battstat/battstat-zh_CN.omf
 share/omf/char-palette/char-palette-C.omf
 share/omf/char-palette/char-palette-bg.omf
 share/omf/char-palette/char-palette-ca.omf
@@ -1397,6 +1456,7 @@ share/omf/char-palette/char-palette-sv.omf
 share/omf/char-palette/char-palette-uk.omf
 share/omf/char-palette/char-palette-zh_CN.omf
 share/omf/drivemount/drivemount-C.omf
+share/omf/drivemount/drivemount-ca.omf
 share/omf/drivemount/drivemount-cs.omf
 share/omf/drivemount/drivemount-de.omf
 share/omf/drivemount/drivemount-el.omf
@@ -1448,6 +1508,7 @@ share/omf/gswitchit/gswitchit-sv.omf
 share/omf/gswitchit/gswitchit-uk.omf
 share/omf/gswitchit/gswitchit-zh_CN.omf
 share/omf/gweather/gweather-C.omf
+share/omf/gweather/gweather-ar.omf
 share/omf/gweather/gweather-ca.omf
 share/omf/gweather/gweather-cs.omf
 share/omf/gweather/gweather-de.omf
@@ -1467,6 +1528,7 @@ share/omf/gweather/gweather-sv.omf
 share/omf/gweather/gweather-uk.omf
 share/omf/gweather/gweather-zh_CN.omf
 share/omf/invest-applet/invest-applet-C.omf
+share/omf/invest-applet/invest-applet-ca.omf
 share/omf/invest-applet/invest-applet-de.omf
 share/omf/invest-applet/invest-applet-el.omf
 share/omf/invest-applet/invest-applet-en_GB.omf
@@ -1497,6 +1559,7 @@ share/omf/mixer_applet2/mixer_applet2-uk.omf
 share/omf/mixer_applet2/mixer_applet2-zh_CN.omf
 share/omf/multiload/multiload-C.omf
 share/omf/multiload/multiload-ca.omf
+share/omf/multiload/multiload-cs.omf
 share/omf/multiload/multiload-de.omf
 share/omf/multiload/multiload-el.omf
 share/omf/multiload/multiload-en_GB.omf
@@ -1529,6 +1592,7 @@ share/omf/stickynotes_applet/stickynotes_applet-pt_BR.omf
 share/omf/stickynotes_applet/stickynotes_applet-ru.omf
 share/omf/stickynotes_applet/stickynotes_applet-sv.omf
 share/omf/stickynotes_applet/stickynotes_applet-uk.omf
+share/omf/stickynotes_applet/stickynotes_applet-zh_CN.omf
 share/omf/trashapplet/trashapplet-C.omf
 share/omf/trashapplet/trashapplet-ca.omf
 share/omf/trashapplet/trashapplet-cs.omf
@@ -1550,6 +1614,8 @@ share/omf/trashapplet/trashapplet-ru.omf
 share/omf/trashapplet/trashapplet-sv.omf
 share/omf/trashapplet/trashapplet-uk.omf
 share/omf/trashapplet/trashapplet-zh_CN.omf
+share/omf/trashapplet/trashapplet-zh_HK.omf
+share/omf/trashapplet/trashapplet-zh_TW.omf
 share/pixmaps/accessx-status-applet/ax-applet.png
 share/pixmaps/accessx-status-applet/ax-bouncekeys.png
 share/pixmaps/accessx-status-applet/ax-key-base.png

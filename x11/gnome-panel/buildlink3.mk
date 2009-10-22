@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2009/08/26 19:56:47 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2009/10/22 17:29:42 drochner Exp $
 
 BUILDLINK_TREE+=	gnome-panel
 
@@ -20,7 +20,6 @@ pkgbase:= gnome-panel
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"

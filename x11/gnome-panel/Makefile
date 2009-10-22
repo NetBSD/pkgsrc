@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.114 2009/08/26 19:56:47 sno Exp $
+# $NetBSD: Makefile,v 1.115 2009/10/22 17:29:42 drochner Exp $
 #
 
-DISTNAME=		gnome-panel-2.26.3
-PKGREVISION=		1
+DISTNAME=		gnome-panel-2.28.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.26/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.28/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		drochner@NetBSD.org
@@ -13,8 +12,8 @@ COMMENT=		GNOME2 panel application
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-EGDIR=		${PREFIX}/share/examples/gnome-panel
-CONF_FILES+=	${PREFIX}/share/examples/gnome-panel/org.gnome.ClockApplet.Mechanism.conf \
+#EGDIR=		${PREFIX}/share/examples/gnome-panel
+#CONF_FILES+=	${PREFIX}/share/examples/gnome-panel/org.gnome.ClockApplet.Mechanism.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.gnome.ClockApplet.Mechanism.conf
 
 GNU_CONFIGURE=		YES
@@ -50,7 +49,7 @@ PKG_SUGGESTED_OPTIONS=	evolution
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
+#.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
@@ -67,6 +66,7 @@ BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=2.24.1
 .include "../../security/policykit/buildlink3.mk"
 .include "../../security/policykit-gnome/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-menus+= gnome-menus>=2.28.0
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
