@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2009/06/07 11:23:46 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2009/10/22 20:12:25 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
-PKG_SUPPORTED_OPTIONS=	dri inet6
+PKG_SUPPORTED_OPTIONS=	dri inet6 debug
 PKG_SUGGESTED_OPTIONS=	dri
 
 .include "../../mk/bsd.options.mk"
@@ -25,4 +25,9 @@ CONFIGURE_ARGS+=	--disable-glx
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug
+CFLAGS+=		-ggdb
 .endif
