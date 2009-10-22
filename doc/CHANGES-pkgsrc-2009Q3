@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.6 2009/10/22 14:51:55 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.7 2009/10/22 21:29:49 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -20,3 +20,7 @@ Pullup ticket #2917 - requested by joerg
 nbpatch: portability fix
 Pullup ticket #2916 - requested by he
 parrot: build fix
+Pullup ticket #2918 - requested by taca:
+php-gd: security patch
+Pullup ticket #2919 - requested by taca
+gd: security patch
