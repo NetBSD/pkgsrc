@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4052 2009/10/22 22:31:26 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4053 2009/10/23 06:07:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5382,3 +5382,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated news/tin to 1.9.4nb1 [wiz 2009-10-22]
 	Updated misc/gwaei to 1.0.1 [wiz 2009-10-22]
 	Added x11/gselt version 1.2 [wiz 2009-10-22]
+	Updated devel/SDL to 1.2.14 [adam 2009-10-23]

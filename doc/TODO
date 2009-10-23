@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8557 2009/10/22 21:54:15 wiz Exp $
+$NetBSD: TODO,v 1.8558 2009/10/23 06:07:06 adam Exp $
 
 Suggested new packages
 ======================
@@ -364,7 +364,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.13
 	o RTx-Shredder-0.05
 	o RealPlayer-11
-	o SDL-1.2.14
 	o SDL_gfx-2.0.20
 	o SDL_image-1.2.8
 	o SDL_mixer-1.2.9
