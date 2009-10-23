@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2009/10/11 09:14:52 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2009/10/23 15:47:09 tnn Exp $
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-docs/Makefile
 
@@ -79,6 +79,8 @@ QMAKE_RANLIB=		${RANLIB}
 .  if exists(/usr/lib/libresolv.dylib)
 LDFLAGS+=		-lresolv
 .  endif
+.elif ${OPSYS} == "Linux"
+LDFLAGS+=		-ldl
 .endif
 
 QMAKE_RANLIB?=		${TRUE}
