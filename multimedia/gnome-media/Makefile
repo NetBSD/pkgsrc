@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/10/22 17:48:39 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2009/10/23 17:09:25 drochner Exp $
 
 DISTNAME=		gnome-media-2.28.1
 CATEGORIES=		multimedia gnome
@@ -21,7 +21,8 @@ GCONF_SCHEMAS+=	gnome-sound-recorder.schemas
 GCONF_SCHEMAS+=	gnome-volume-control.schemas
 
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
+# pkgsrc pulseaudio is too old
+#.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/GConf-ui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
