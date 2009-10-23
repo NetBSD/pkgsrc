@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2009/10/21 15:06:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.34 2009/10/23 02:43:52 schmonz Exp $
 
 DISTNAME=		nullmailer-1.05
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE:Q}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/nullmailer/
