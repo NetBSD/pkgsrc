@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8558 2009/10/23 06:07:06 adam Exp $
+$NetBSD: TODO,v 1.8559 2009/10/23 22:31:01 asau Exp $
 
 Suggested new packages
 ======================
@@ -1020,7 +1020,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpc-0.18
 	o mpeg4ip-1.6.1
 	o mpg123-1.9.1
-	o mpich-1.4
 	o mpop-1.0.18
 	o mserv-devel-0.41
 	o msf-2.7
