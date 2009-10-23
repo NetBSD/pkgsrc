@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2009/06/11 10:35:07 sno Exp $
+# $NetBSD: Makefile,v 1.154 2009/10/23 18:41:02 tnn Exp $
 
 .include "license.mk"
 
@@ -75,7 +75,6 @@ CONFIGURE_ARGS+=	-Doptimize=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
 MAKE_ENV+=		LC_ALL="C"
-MAKE_JOBS_SAFE=		no
 
 TEST_TARGET=		test
 
