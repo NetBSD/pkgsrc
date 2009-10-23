@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2009/09/02 21:19:53 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2009/10/23 06:05:07 adam Exp $
 
-DISTNAME=	SDL-1.2.13
-PKGREVISION=	5
+DISTNAME=	SDL-1.2.14
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -37,7 +36,6 @@ CONFIGURE_ARGS+=	--disable-nasm
 CONFIGURE_ARGS+=	--disable-video-wscons
 .endif
 
-CONFIGURE_ARGS+=	--enable-dlopen
 CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS_${OBJECT_FMT}}"
 MAKE_ENV+=		NASMFLAGS="${NASMFLAGS_${OBJECT_FMT}}"
 
@@ -68,6 +66,11 @@ MAKE_ENV+=		AM_CFLAGS=${AM_CFLAGS:M*:Q}
 .if ${OPSYS} != "IRIX" && ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .endif
 .include "../../mk/pthread.buildlink3.mk"
 
@@ -78,9 +81,4 @@ CONFIGURE_ARGS+=	--enable-pth
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
