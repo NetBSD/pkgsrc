@@ -1,0 +1,3 @@
+OpenPA is open source, highly-portable library that provides
+atomic primitives (and related constructs) for high performance,
+concurrent software.

@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/23 21:57:20 asau Exp $
+include/opa_config.h
+include/opa_primitives.h
+include/opa_queue.h
+include/opa_util.h
+include/primitives/opa_by_lock.h
+include/primitives/opa_emulated.h
+include/primitives/opa_gcc_ia64.h
+include/primitives/opa_gcc_intel_32_64.h
+include/primitives/opa_gcc_intel_32_64_barrier.h
+include/primitives/opa_gcc_intel_32_64_ops.h
+include/primitives/opa_gcc_intel_32_64_p3.h
+include/primitives/opa_gcc_intel_32_64_p3barrier.h
+include/primitives/opa_gcc_intrinsics.h
+include/primitives/opa_gcc_ppc.h
+include/primitives/opa_gcc_sicortex.h
+include/primitives/opa_nt_intrinsics.h
+include/primitives/opa_sun_atomic_ops.h
+lib/libopa.a
+share/doc/openpa/README
