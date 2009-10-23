@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4054 2009/10/23 13:17:32 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.4055 2009/10/23 14:40:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5384,3 +5384,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added x11/gselt version 1.2 [wiz 2009-10-22]
 	Updated devel/SDL to 1.2.14 [adam 2009-10-23]
 	Updated www/ikiwiki to 3.20091022 [schmonz 2009-10-23]
+	Updated www/typolight27-translations to 20091023 [taca 2009-10-23]
