@@ -1,0 +1,24 @@
+$NetBSD: patch-al,v 1.1 2009/10/23 10:55:06 plunky Exp $
+
+avoid conflicts with GSocket in glib >= 2.21 in a similar way to
+
+	http://trac.wxwidgets.org/ticket/10883
+
+--- src/gtk/gsockgtk.c.orig	2009-10-23 11:09:19.000000000 +0100
++++ src/gtk/gsockgtk.c	2009-10-23 11:09:36.000000000 +0100
+@@ -13,8 +13,15 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ 
++// newer versions of glib define its own GSocket but we unfortunately use this
++// name in our own (semi-)public header and so can't change it -- rename glib
++// one instead
++#define GSocket GlibGSocket
++#define _GSocket _GlibGSocket
+ #include <gdk/gdk.h>
+ #include <glib.h>
++#undef GSocket
++#undef _GSocket
+ 
+ #include "wx/gsocket.h"
+ #include "wx/unix/gsockunx.h"
