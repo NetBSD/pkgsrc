@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/07/06 15:15:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.7.4.1 2009/10/23 10:17:07 tron Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2050,6 +2050,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/imgs/pdf_from_imagemagick.pdf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/imgs/typo3logotype.ai
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/class.tx_install.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/class.tx_install_eid.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/class.tx_install_session.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/clear.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/conf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/install.gif
