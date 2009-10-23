@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2009/03/20 19:24:08 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2009/10/23 06:05:07 adam Exp $
 
 BUILDLINK_TREE+=	SDL
 
@@ -16,6 +16,9 @@ PTHREAD_OPTS+=	require
 .if ${OPSYS} != "IRIX" && ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
@@ -32,9 +35,6 @@ pkgbase := SDL
 .include "../../audio/nas/buildlink3.mk"
 .endif
 
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
 .endif # SDL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-SDL
