@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/10/21 15:39:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/10/23 13:06:22 drochner Exp $
 include/at-spi-1.0/cspi/spi-impl.h
 include/at-spi-1.0/cspi/spi-listener.h
 include/at-spi-1.0/cspi/spi-roletypes.h
@@ -191,6 +191,7 @@ share/doc/${PKGNAME}/reference/html/structAccessibility_1_1LoginHelper_1_1Window
 share/doc/${PKGNAME}/reference/html/structAccessibility_1_1Text_1_1Range.html
 share/doc/${PKGNAME}/reference/html/tabs.css
 share/gconf/schemas/at-spi.schemas
+share/gnome/autostart/at-spi-registryd.desktop
 share/gtk-doc/html/at-spi-cspi/at-spi-cspi-Accessible-Objects.html
 share/gtk-doc/html/at-spi-cspi/at-spi-cspi-AccessibleAction-Interface.html
 share/gtk-doc/html/at-spi-cspi/at-spi-cspi-AccessibleApplication-API.html
