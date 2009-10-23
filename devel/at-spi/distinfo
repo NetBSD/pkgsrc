@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.26 2009/10/21 15:39:11 drochner Exp $
+$NetBSD: distinfo,v 1.27 2009/10/23 13:06:22 drochner Exp $
 
 SHA1 (at-spi-1.28.1.tar.bz2) = a730e8726a5db9f08dd698262c526772112a7572
 RMD160 (at-spi-1.28.1.tar.bz2) = d48cecc1d4d56c2196fc08db42cefb42dc0c7b09
 Size (at-spi-1.28.1.tar.bz2) = 843057 bytes
 SHA1 (patch-aa) = c265276efb53a22cfacd103cf27f60faa5531763
+SHA1 (patch-ab) = e1252773dc4cb97b03d0e55f468521f6b8391dc9
