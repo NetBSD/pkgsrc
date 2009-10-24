@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4076 2009/10/24 16:36:11 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4077 2009/10/24 16:37:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5406,3 +5406,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Carp-Clan to 6.03 [sno 2009-10-24]
 	Updated devel/p5-Devel-Leak-Object to 1.00 [sno 2009-10-24]
 	Updated devel/p5-Class-Accessor-Grouped to 0.09002 [sno 2009-10-24]
+	Updated devel/p5-Class-Method-Modifiers to 1.05 [sno 2009-10-24]
