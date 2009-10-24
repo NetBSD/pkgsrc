@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2009/09/24 06:50:20 sno Exp $
+# $NetBSD: Makefile,v 1.9 2009/10/24 15:05:35 sno Exp $
 
-DISTNAME=	Catalyst-Plugin-Session-Store-FastMmap-0.11
+DISTNAME=	Catalyst-Plugin-Session-Store-FastMmap-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Session-Store-FastMmap/
 COMMENT=	FastMmap session storage backend
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=       p5-Cache-FastMmap>=1.29:../../devel/p5-Cache-FastMmap
-DEPENDS+=	p5-Catalyst-Plugin-Session>=0.22:../../www/p5-Catalyst-Plugin-Session
+DEPENDS+=	p5-Catalyst-Plugin-Session>=0.27:../../www/p5-Catalyst-Plugin-Session
 DEPENDS+=       {perl>=5.10,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=       p5-Path-Class>=0:../../devel/p5-Path-Class
