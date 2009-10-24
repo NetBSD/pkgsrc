@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4065 2009/10/24 15:05:48 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4066 2009/10/24 15:08:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5395,3 +5395,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Plugin-Session-Store-Delegate to 0.05 [sno 2009-10-24]
 	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.11 [sno 2009-10-24]
 	Updated www/p5-Catalyst-Plugin-Session-Store-FastMmap to 0.13 [sno 2009-10-24]
+	Updated www/p5-Catalyst-Plugin-Session-Store-File to 0.18 [sno 2009-10-24]
