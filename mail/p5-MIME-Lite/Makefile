@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2009/09/19 17:03:46 sno Exp $
+# $NetBSD: Makefile,v 1.19 2009/10/24 17:05:00 sno Exp $
 
-DISTNAME=	MIME-Lite-3.026
+DISTNAME=	MIME-Lite-3.027
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5mil
 CATEGORIES=	www perl5
