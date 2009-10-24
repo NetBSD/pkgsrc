@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/10/11 08:14:23 sno Exp $
+# $NetBSD: Makefile,v 1.8 2009/10/24 16:13:08 sno Exp $
 #
 
-DISTNAME=	Cache-Memcached-1.27
+DISTNAME=	Cache-Memcached-1.28
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Cache/}
