@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4079 2009/10/24 16:54:44 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4080 2009/10/24 17:01:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5409,3 +5409,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-Method-Modifiers to 1.05 [sno 2009-10-24]
 	Updated devel/p5-Date-Calc to 6.2 [sno 2009-10-24]
 	Added devel/p5-Date-Calc-XS version 6.2 [sno 2009-10-24]
+	Updated devel/p5-version to 0.7800 [sno 2009-10-24]
