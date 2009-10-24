@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8559 2009/10/23 22:31:01 asau Exp $
+$NetBSD: TODO,v 1.8560 2009/10/24 16:08:59 sno Exp $
 
 Suggested new packages
 ======================
@@ -1103,7 +1103,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Module-CoreList-2.20
 	o p5-Text-Markdown-1.0.26
 	o p5-ispman-1.2
-	o p5-libwww-5.833
 	o p5-sybperl-2.18
 	o packagekit-0.5.1
 	o pam-smbpass-3.0.13
