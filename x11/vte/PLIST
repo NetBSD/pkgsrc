@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:25:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/10/24 12:49:59 drochner Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -39,6 +39,7 @@ share/locale/bn/LC_MESSAGES/vte.mo
 share/locale/bn_IN/LC_MESSAGES/vte.mo
 share/locale/bs/LC_MESSAGES/vte.mo
 share/locale/ca/LC_MESSAGES/vte.mo
+share/locale/ca@valencia/LC_MESSAGES/vte.mo
 share/locale/cs/LC_MESSAGES/vte.mo
 share/locale/cy/LC_MESSAGES/vte.mo
 share/locale/da/LC_MESSAGES/vte.mo
@@ -72,6 +73,7 @@ share/locale/ky/LC_MESSAGES/vte.mo
 share/locale/li/LC_MESSAGES/vte.mo
 share/locale/lt/LC_MESSAGES/vte.mo
 share/locale/lv/LC_MESSAGES/vte.mo
+share/locale/mai/LC_MESSAGES/vte.mo
 share/locale/mi/LC_MESSAGES/vte.mo
 share/locale/mk/LC_MESSAGES/vte.mo
 share/locale/ml/LC_MESSAGES/vte.mo
@@ -79,6 +81,7 @@ share/locale/mn/LC_MESSAGES/vte.mo
 share/locale/mr/LC_MESSAGES/vte.mo
 share/locale/ms/LC_MESSAGES/vte.mo
 share/locale/nb/LC_MESSAGES/vte.mo
+share/locale/nds/LC_MESSAGES/vte.mo
 share/locale/ne/LC_MESSAGES/vte.mo
 share/locale/nl/LC_MESSAGES/vte.mo
 share/locale/nn/LC_MESSAGES/vte.mo
