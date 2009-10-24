@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4056 2009/10/23 22:27:30 asau Exp $
+$NetBSD: CHANGES-2009,v 1.4057 2009/10/24 08:38:39 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5386,3 +5386,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ikiwiki to 3.20091022 [schmonz 2009-10-23]
 	Updated www/typolight27-translations to 20091023 [taca 2009-10-23]
 	Added parallel/openpa version 1.0.1 [asau 2009-10-23]
+	Added devel/p5-Data-Peek version 0.27 [sno 2009-10-24]
