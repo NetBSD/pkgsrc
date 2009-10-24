@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4069 2009/10/24 15:58:07 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4070 2009/10/24 16:06:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5399,3 +5399,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ikiwiki to 3.20091023 [schmonz 2009-10-24]
 	Updated www/p5-Catalyst-Plugin-StackTrace to 0.11 [sno 2009-10-24]
 	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.25 [sno 2009-10-24]
+	Updated www/p5-URI-Escape-XS to 0.06 [sno 2009-10-24]
