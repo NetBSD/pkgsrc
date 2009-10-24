@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2009/08/26 19:56:58 sno Exp $
+# $NetBSD: Makefile,v 1.85 2009/10/24 12:53:55 drochner Exp $
 
-DISTNAME=	seahorse-2.26.2
-PKGREVISION=	1
+DISTNAME=	seahorse-2.28.1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -43,7 +42,7 @@ GCONF_SCHEMAS= 	seahorse.schemas
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf/schemas.mk"
-.include "../../devel/libglade/buildlink3.mk"
+#.include "../../devel/libglade/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
