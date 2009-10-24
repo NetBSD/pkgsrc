@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2009/10/19 11:44:04 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2009/10/24 13:41:05 he Exp $
 
 DISTNAME=		scribus-1.3.3.13
 CATEGORIES=		print
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
 CONFIGURE_ARGS+=	--with-pythondir=${PREFIX}
 # XXX make an option
 CONFIGURE_ARGS+=	--disable-cups
+
+INSTALLATION_DIRS+=	share/pixmaps
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/scribus/icons/scribus.png \
