@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/09/10 19:03:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/24 14:22:49 ahoka Exp $
 #
 
 DISTNAME=	numpy-1.3.0
@@ -23,6 +23,13 @@ REPLACE_PYTHON+=	numpy/distutils/from_template.py
 REPLACE_PYTHON+=	numpy/distutils/system_info.py
 REPLACE_PYTHON+=	numpy/ma/bench.py
 REPLACE_PYTHON+=	numpy/distutils/conv_template.py
+
+# XXX Avoid picking up other compilers when installed
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mgcc)
+PYSETUPBUILDARGS+= --fcompiler=gnu
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
