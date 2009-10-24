@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/10/11 08:14:23 sno Exp $
+$NetBSD: distinfo,v 1.5 2009/10/24 16:13:08 sno Exp $
 
-SHA1 (Cache-Memcached-1.27.tar.gz) = bec9edf428fd6e7409a830ceda4c23fdf3b91abc
-RMD160 (Cache-Memcached-1.27.tar.gz) = 1816ca71f0346299276de70caf437122e5989e72
-Size (Cache-Memcached-1.27.tar.gz) = 18924 bytes
+SHA1 (Cache-Memcached-1.28.tar.gz) = 544d3d7333d92031756514530c05ed36f1275af1
+RMD160 (Cache-Memcached-1.28.tar.gz) = b433fb946ec606d95243a40291f581b7faa76c53
+Size (Cache-Memcached-1.28.tar.gz) = 19201 bytes
