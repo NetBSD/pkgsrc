@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4074 2009/10/24 16:21:31 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4075 2009/10/24 16:25:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5404,3 +5404,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-libwww to 5.833 [sno 2009-10-24]
 	Updated devel/p5-Cache-Memcached to 1.28 [sno 2009-10-24]
 	Updated devel/p5-Carp-Clan to 6.03 [sno 2009-10-24]
+	Updated devel/p5-Devel-Leak-Object to 1.00 [sno 2009-10-24]
