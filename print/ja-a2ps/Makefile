@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/01/17 02:35:43 obache Exp $
+# $NetBSD: Makefile,v 1.11 2009/10/24 14:51:59 zafer Exp $
 
 DISTNAME=	a2ps.pl-1.45
 PKGNAME=	ja-a2ps-1.45
 CATEGORIES=	japanese print
-MASTER_SITES=	http://www.srekcah.org/~utashiro/perl/scripts/a2ps_pl/ \
-		ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
+MASTER_SITES=	ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
 EXTRACT_SUFX=	# None
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
