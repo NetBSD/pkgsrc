@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.70 2009/07/09 18:44:20 drochner Exp $
+$NetBSD: distinfo,v 1.71 2009/10/24 12:57:56 drochner Exp $
 
-SHA1 (evolution-2.26.3.tar.bz2) = d0e247ccb903a57a5e6fe23cfb04535ea141e9fb
-RMD160 (evolution-2.26.3.tar.bz2) = f2b3aa2275095feb2af406022c0a6bc8a381e8d5
-Size (evolution-2.26.3.tar.bz2) = 36427464 bytes
-SHA1 (patch-aa) = d490839edcbb4893086750e052ca41bfff487bfa
+SHA1 (evolution-2.28.1.tar.bz2) = 05168ed277283a80046d6bb4649f5ecdefc9606f
+RMD160 (evolution-2.28.1.tar.bz2) = b277ae49277e19942998d3a0049ef5379683ee68
+Size (evolution-2.28.1.tar.bz2) = 29728219 bytes
 SHA1 (patch-ab) = b56533feb1bf7d3c3eabf905a50a54e7f27f5b1c
-SHA1 (patch-ya) = d1ab90d374ca475c4b4b54bb7ad535434d3bdfeb
-SHA1 (patch-yb) = babd94b7d4dde36a0dfbaa392556d54c6e8868e6
-SHA1 (patch-yc) = 3ab94e66a4fe70088f1e86b035050540e1849558
-SHA1 (patch-yd) = 3b3f37a04803971a1a91b25c3b5fc5a914ae655d
+SHA1 (patch-ya) = f21a92e93394ad76166f2da09ee21cbddb043576
+SHA1 (patch-yb) = 6d09dceb5405b29cde657eea6fa0fbd004a8bd1f
+SHA1 (patch-yc) = dc97fda0d5fc05df37274192466702e7fe9da4e0
+SHA1 (patch-yd) = 09bb3fcd4223add3880253fb43cfd036b8294d1c
 SHA1 (patch-ye) = 042586d68127bf4c70b2bfecd8e44df03c924792
