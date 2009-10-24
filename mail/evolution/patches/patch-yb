@@ -1,19 +1,19 @@
-$NetBSD: patch-yb,v 1.1 2009/01/25 17:07:36 drochner Exp $
+$NetBSD: patch-yb,v 1.2 2009/10/24 12:57:56 drochner Exp $
 
---- calendar/gui/e-cal-model.c.orig	2009-01-25 16:32:16.000000000 +0100
+--- calendar/gui/e-cal-model.c.orig	2009-10-18 02:54:18.000000000 +0200
 +++ calendar/gui/e-cal-model.c
-@@ -149,8 +149,8 @@ e_cal_model_class_init (ECalModelClass *
+@@ -163,8 +163,8 @@ e_cal_model_class_init (ECalModelClass *
  			      G_SIGNAL_RUN_LAST,
  			      G_STRUCT_OFFSET (ECalModelClass, time_range_changed),
  			      NULL, NULL,
--			      e_calendar_marshal_VOID__LONG_LONG,
+-			      e_marshal_VOID__LONG_LONG,
 -			      G_TYPE_NONE, 2, G_TYPE_LONG, G_TYPE_LONG);
-+			      e_calendar_marshal_VOID__INT64_INT64,
++			      e_marshal_VOID__INT64_INT64,
 +			      G_TYPE_NONE, 2, G_TYPE_INT64, G_TYPE_INT64);
  
  	signals[ROW_APPENDED] =
  		g_signal_new ("row_appended",
-@@ -1970,7 +1970,8 @@ e_cal_model_set_time_range (ECalModel *m
+@@ -2185,7 +2185,8 @@ e_cal_model_set_time_range (ECalModel *m
  	priv->start = start;
  	priv->end = end;
  
