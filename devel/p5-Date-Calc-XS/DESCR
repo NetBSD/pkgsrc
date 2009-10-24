@@ -1,0 +1,2 @@
+XS wrapper and C library plug-in for Date::Calc.
+You never use this module directly. Use Date::Calc(3) instead!
