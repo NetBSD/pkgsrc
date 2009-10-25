@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4082 2009/10/25 11:06:49 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4083 2009/10/25 11:36:44 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5412,3 +5412,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-version to 0.7800 [sno 2009-10-24]
 	Updated mail/p5-MIME-Lite to 3.027 [sno 2009-10-24]
 	Updated www/p5-Catalyst-Action-RenderView to 0.13 [sno 2009-10-25]
+	Updated devel/p5-Test-Aggregate to 0.36.1 [sno 2009-10-25]
