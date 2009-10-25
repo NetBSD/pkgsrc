@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/25 23:39:01 joerg Exp $
+
+SHA1 (python/python-2.6.3-docs-html.tar.bz2) = 15e69ddead7f2c2b786f92c0f2a8d39407ba65e8
+RMD160 (python/python-2.6.3-docs-html.tar.bz2) = 42a547c3cdc24010acb462500b5739b1db432ffa
+Size (python/python-2.6.3-docs-html.tar.bz2) = 3696612 bytes
