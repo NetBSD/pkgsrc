@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4089 2009/10/25 13:16:35 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4090 2009/10/25 22:58:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5419,3 +5419,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-IO-Compress to 2.022 [sno 2009-10-25]
 	Updated graphics/p5-Image-Size to 3.2.1 [sno 2009-10-25]
 	Updated www/p5-CGI to 3.48 [sno 2009-10-25]
+	Updated x11/xlockmore to 5.29.1 [tron 2009-10-25]
+	Updated x11/xlockmore-lite to 5.29.1 [tron 2009-10-25]
