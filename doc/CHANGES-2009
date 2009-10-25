@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4084 2009/10/25 11:44:25 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4085 2009/10/25 12:18:16 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5414,3 +5414,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Action-RenderView to 0.13 [sno 2009-10-25]
 	Updated devel/p5-Test-Aggregate to 0.36.1 [sno 2009-10-25]
 	Updated devel/p5-Test-Differences to 0.5000 [sno 2009-10-25]
+	Updated devel/p5-Test-Perl-Critic to 1.02 [sno 2009-10-25]
