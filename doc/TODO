@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8564 2009/10/25 13:01:04 sno Exp $
+$NetBSD: TODO,v 1.8565 2009/10/25 14:59:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -443,6 +443,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avl-2.0.2a
 	o awesome-3.4.0
 	o baci-20040415
+	o bakefile-0.2.8
 	o balance-3.42
 	o bash-completion-1.1
 	o bbdb-2.35
@@ -486,7 +487,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdlabelgen-4.1.0
 	o cdrdao-1.2.3
 	o cdrtools-2.01.01alpha66
-	o cfitsio-3200
+	o cfitsio-3210
 	o cgdb-0.6.4
 	o cgicc-3.2.7
 	o cheese-2.28.1 [GNOME 2.28]
@@ -513,7 +514,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o coreutils-7.5
 	o courier-0.62.0
 	o courier-imap-4.5.0
-	o covered-0.7.6
+	o covered-0.7.7
 	o covered-current-20090802
 	o cpio-2.9
 	o cpmtools-2.6
@@ -596,7 +597,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o etm-297
-	o evolution-2.28.1 [GNOME 2.28]
 	o evolution-exchange-2.28.1 [GNOME 2.28]
 	o evolution-mapi-0.28.1 [GNOME 2.28]
 	o evolution-webcal-2.28.0 [GNOME 2.28]
@@ -606,7 +606,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o exiftool-7.67
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
-	o f-spot-0.6.1.3
 	o f2c-20090102
 	o faces-1.7.7
 	o fakeroot-1.6.5
@@ -678,7 +677,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcdmaster-1.2.3
 	o gcin-1.4.1
 	o gcombust-0.1.55
-	o gconf-editor-2.28.0 [GNOME 2.28]
 	o gcpio-2.10
 	o gdb-7.0
 	o gdeskcal-1.01
@@ -727,11 +725,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-session-2.28.0 [GNOME 2.28]
 	o gnome-subtitles-0.9.1
 	o gnome-system-tools-2.28.1 [GNOME 2.28]
-	o gnome-terminal-2.28.1 [GNOME 2.28]
-	o gnome-themes-2.28.1 [GNOME 2.28]
 	o gnome-user-docs-2.28.0 [GNOME 2.28]
 	o gnome-user-share-2.26.0 [GNOME 2.26]
-	o gnome-utils-2.28.0 [GNOME 2.28]
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
@@ -757,11 +752,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsm-1.0.13
 	o gss-0.1.0
 	o gssdp-0.7.0
+	o gst-plugins0.10-bad-0.10.16
 	o gst-plugins0.10-ffmpeg-0.10.7
+	o gst-plugins0.10-ugly-0.10.13
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtk-vnc-0.3.10
-	o gtk2-engines-2.18.4 [GNOME 2.28]
 	o gtkglarea-2.0.1
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
@@ -832,6 +828,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jabberd-1.6.1.1
 	o java-db3-3.87
 	o java-lang-spec-3.0
+	o java-subversion-1.6.6
 	o javacc-5.0
 	o jcabc2ps-20070110
 	o jdb-1.14
@@ -848,6 +845,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kapooka-0.3
 	o kbibtex-0.2.2
 	o kbproto-1.0.4
+	o kchmviewer-4.2
 	o kdbg-2.2.0
 	o kdrill-6.5
 	o kid3-1.2
@@ -873,7 +871,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o less-436
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
-	o libX11-1.3.1
+	o libX11-1.3.2
 	o libXaw-1.0.7
 	o libXcomposite-0.4.1
 	o libXdamage-1.1.2
@@ -896,13 +894,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXxf86misc-1.0.2
 	o libXxf86vm-1.1.0
 	o libarchive-2.7.0
-	o libcanberra-0.21
+	o libcanberra-0.22
 	o libcares-1.6.0
 	o libchewing-0.3.0
 	o libdaemon-0.14
 	o libdockapp-0.6.1
 	o libdrm-2.4.15
-	o libexif-0.6.18
 	o libextractor-0.5.23
 	o libflash-0.4.13
 	o libgda-4.0.5 [GNOME 2.28]
@@ -940,7 +937,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libusb-1.0
 	o libv4l-0.6.2
 	o libxkbfile-1.0.6
-	o licq-1.3.6
+	o licq-1.3.7
 	o lighttpd-1.4.23
 	o lincvs-2.1.3 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -1008,10 +1005,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mkfontscale-1.0.7
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-2.9.8
+	o mldonkey-3.0.1
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
-	o modular-xorg-server-1.7.0
+	o modular-xorg-server-1.7.1
 	o monodevelop-2.1.1
 	o moserial-2.28.0 [GNOME 2.28]
 	o mousetweaks-2.28.1 [GNOME 2.28]
@@ -1020,9 +1018,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpc-0.18
 	o mpeg4ip-1.6.1
 	o mpg123-1.9.1
-	o mpop-1.0.18
+	o mpop-1.0.19
 	o mserv-devel-0.41
 	o msf-2.7
+	o msmtp-1.4.19
 	o mtools-4.0.11
 	o multitail-5.2.2
 	o munin-1.3.4
@@ -1095,8 +1094,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ortp-0.16.1
 	o oto-0.5
 	o otpCalc-0.97
+	o p5-DateTime-TimeZone-1.01
+	o p5-Finance-Quote-1.17
 	o p5-GnuPG-Interface-0.42
-	o p5-Module-CoreList-2.20
+	o p5-HTML-Parser-3.64
+	o p5-Module-CoreList-2.22
 	o p5-Text-Markdown-1.0.26
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1177,7 +1179,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puf-0.93.3
 	o pulseaudio-0.9.19
 	o puppet-0.25.0
-	o pureftpd-1.0.22
+	o pure-ftpd-1.0.24
 	o puzzle-5.2
 	o puzzles-8692
 	o pv-1.1.4
@@ -1213,8 +1215,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-moin-1.8.5
 	o py-psycopg-2.0.13
 	o py-pytz-2009n
-	o py-qt4-4.6
-	o py-sip-4.9
+	o py-qt4-4.6.1
+	o py-setuptools-0.6c11
+	o py-sip-4.9.1
+	o py-subversion-1.6.6
 	o py-sybase-0.37
 	o py-urwid-0.9.8.4
 	o py-zconfig-2.3.1
@@ -1316,11 +1320,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scmgit-base-1.6.5.1
 	o scmgit-docs-1.6.5.1
 	o scrollz-1.9.99
-	o scrotwm-0.9.18
+	o scrotwm-0.9.19
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o sdlmess-0.134
-	o seahorse-2.28.1 [GNOME 2.28]
 	o seahorse-plugins-2.28.1 [GNOME 2.28]
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1367,6 +1370,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
 	o subversion-1.6.6
+	o subversion-base-1.6.6
 	o suse_base-11.0
 	o swfdec-gnome-2.28.0
 	o swi-prolog-5.6.31
@@ -1453,7 +1457,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vobcopy-1.2.0
 	o vp-1.6
 	o vsftpd-2.2.1
-	o vte-0.22.2 [GNOME 2.28]
 	o vttest-20071216
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1478,7 +1481,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4
 	o x11perf-1.5.1
-	o x264-devel-20091017
+	o x264-devel-20091024
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xauth-1.0.4
