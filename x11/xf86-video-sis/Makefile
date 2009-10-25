@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/08/09 22:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2009/10/25 12:15:55 tnn Exp $
 #
 
 DISTNAME=	xf86-video-sis-0.10.2
@@ -17,6 +17,11 @@ CONFIGURE_ARGS+=	--enable-dri
 USE_LIBTOOL=    yes
 GNU_CONFIGURE=  yes
 USE_TOOLS+=     pkg-config
+
+.include "../../mk/compiler.mk"
+.if empty(PKGSRC_COMPILER:Mgcc)
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
+.endif
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
