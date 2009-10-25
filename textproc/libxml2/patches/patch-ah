@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.5 2009/10/25 17:19:44 sno Exp $
+
+Fixes compiler error "operands have incompatible types"
+
+--- relaxng.c.orig	2009-10-25 19:02:59.621179988 +0100
++++ relaxng.c	2009-10-25 19:03:31.920058072 +0100
+@@ -5369,7 +5369,7 @@
+     } else {
+         xmlRngPErr(ctxt, node, XML_RNGP_CHOICE_CONTENT,
+                    "expecting name, anyName, nsName or choice : got %s\n",
+-                   (node == NULL ? "nothing" : node->name), NULL);
++                   (node == NULL ? (const xmlChar *)"nothing" : node->name), NULL);
+         return (NULL);
+     }
+     if (ret != def) {
+@@ -9459,7 +9459,7 @@
+             ctxt->states = NULL;
+             if (found == 0) {
+                 if (cur == NULL) {
+-                    VALID_ERR2(XML_RELAXNG_ERR_INTEREXTRA, "noname");
++                    VALID_ERR2(XML_RELAXNG_ERR_INTEREXTRA, (const xmlChar *)"noname");
+                 } else {
+                     VALID_ERR2(XML_RELAXNG_ERR_INTEREXTRA, cur->name);
+                 }
