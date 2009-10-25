@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2009/08/26 19:56:54 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2009/10/25 10:48:09 ahoka Exp $
 
 BUILDLINK_TREE+=	at-spi
 
@@ -14,6 +14,7 @@ BUILDLINK_PKGSRCDIR.at-spi?=	../../devel/at-spi
 .include "../../devel/popt/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .endif # AT_SPI_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-at-spi
