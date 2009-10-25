@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/10/25 12:30:36 ahoka Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/25 12:49:04 ahoka Exp $
 #
 
 DISTNAME=	see-3.0.1376
@@ -21,10 +21,8 @@ CONFIGURE_ARGS+=	--with-readline
 
 PKGCONFIG_OVERRIDE+=	libsee/see.pc.in
 
-# As of 20091025:
-# ./configure.lineno: 20846: Syntax error: ";" unexpected
-#pre-configure:
-#	cd ${WRKSRC} && autoreconf -vif
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/USAGE.html ${DESTDIR}${PREFIX}/share/doc/see/
