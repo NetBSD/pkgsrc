@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.45 2009/05/12 05:44:02 rillig Exp $
+# $NetBSD: sunpro.mk,v 1.46 2009/10/25 17:15:44 sno Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -85,7 +85,7 @@ CC_VERSION?=		cc: Sun C
 .endif
 
 # SunPro compiler must be passed certain flags to compile/link 64-bit code.
-.if !empty(CC_VERSION:M5.9) 
+.if !empty(CC_VERSION:M5.9) || !empty(CC_VERSION:M5.1[0-9])
 _COMPILER_ABI_FLAG.64= -m64
 .elif ${MACHINE_ARCH} == "sparc"
 _COMPILER_ABI_FLAG.64=	-xtarget=ultra -xarch=v9
