@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-up-to-date,v 1.7 2009/06/08 16:02:53 joerg Exp $
+# $NetBSD: pkg-up-to-date,v 1.8 2009/10/25 23:08:02 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -45,6 +45,7 @@ pkg="${packages}/All/$1.tgz"
 
 ${pkg_info} -qb ${pkg} | sed 's/:/ /' | while read file file_id; do
 	[ -z "$file" ] && continue
+	[ -e "${pkgsrc}/${file}" ]
 
 	id=`@SED@ -e '/[$]NetBSD/!d' -e 's/^.*\([$]NetBSD[^$]*[$]\).*$/\1/;q' ${pkgsrc}/${file}`
 	[ "$id" = "$file_id" ]
