@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4090 2009/10/25 22:58:24 tron Exp $
+$NetBSD: CHANGES-2009,v 1.4091 2009/10/25 23:36:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5421,3 +5421,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CGI to 3.48 [sno 2009-10-25]
 	Updated x11/xlockmore to 5.29.1 [tron 2009-10-25]
 	Updated x11/xlockmore-lite to 5.29.1 [tron 2009-10-25]
+	Updated pkgtools/pbulk to 0.42 [joerg 2009-10-25]
