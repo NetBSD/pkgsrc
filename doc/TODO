@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8569 2009/10/26 08:53:01 obache Exp $
+$NetBSD: TODO,v 1.8570 2009/10/26 08:59:40 obache Exp $
 
 Suggested new packages
 ======================
@@ -1193,7 +1193,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-4.8.0
 	o py-checker-0.8.17
-	o py-clutter-1.0
 	o py-dns-1.7.1
 	o py-docutils-0.6
 	o py-fpconst-0.7.3
