@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/10/22 17:25:44 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2009/10/26 10:57:21 drochner Exp $
 #
 
 DISTNAME=	gnome-control-center-2.28.1
@@ -22,7 +22,6 @@ CONFLICTS+=		gnome2-control-center-[0-9]* control-center-[0-9]*
 
 CPPFLAGS+=		-DDBUS_API_SUBJECT_TO_CHANGE
 
-#PKGCONFIG_OVERRIDE+=	gnome-settings-daemon/gnome-settings-daemon.pc.in
 PKGCONFIG_OVERRIDE+=	libwindow-settings/gnome-window-settings-2.0.pc.in
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
@@ -55,16 +54,12 @@ BUILDLINK_API_DEPENDS.gstreamer0.10=		gstreamer0.10>=0.10.1.2
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base=	gst-plugins0.10-base>=0.10.1.2
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-DEPENDS+=	gst-plugins0.10-hal>=0.10.11:../../multimedia/gst-plugins0.10-hal
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../security/policykit/buildlink3.mk"
-.include "../../security/policykit-gnome/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../sysutils/hal/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
