@@ -1,0 +1,64 @@
+$NetBSD: patch-ab,v 1.1 2009/10/26 08:48:05 obache Exp $
+
+regen with patch-aa
+
+--- clutter-box2d/Makefile.in.orig	2009-07-29 15:17:36.000000000 +0000
++++ clutter-box2d/Makefile.in
+@@ -269,14 +269,14 @@ DISTCLEANFILES = $(MARSHALFILES)
+ EXTRA_DIST = \
+ 	clutter-box2d-marshal.list
+ 
+-BUILT_GIRSOURCES = ClutterBox2D-@CLUTTER_BOX2D_API_VERSION@.gir
++@HAVE_INTROSPECTION_TRUE@BUILT_GIRSOURCES = ClutterBox2D-@CLUTTER_BOX2D_API_VERSION@.gir
+ 
+ # INTROSPECTION_GIRDIR/INTROSPECTION_TYPELIBDIR aren't the right place to
+ # install anything - we need to install inside our prefix.
+-girdir = $(datadir)/gir-1.0
+-gir_DATA = $(BUILT_GIRSOURCES)
+-typelibsdir = $(libdir)/girepository-1.0/
+-typelibs_DATA = $(BUILT_GIRSOURCES:.gir=.typelib)
++@HAVE_INTROSPECTION_TRUE@girdir = $(datadir)/gir-1.0
++@HAVE_INTROSPECTION_TRUE@gir_DATA = $(BUILT_GIRSOURCES)
++@HAVE_INTROSPECTION_TRUE@typelibsdir = $(libdir)/girepository-1.0/
++@HAVE_INTROSPECTION_TRUE@typelibs_DATA = $(BUILT_GIRSOURCES:.gir=.typelib)
+ CLEANFILES = $(BUILT_GIRSOURCES) $(typelibs_DATA)
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-am
+@@ -651,22 +651,22 @@ clutter-box2d-marshal.c: clutter-box2d-m
+ clutter-box2d-marshal.h: clutter-box2d-marshal.list Makefile
+ 	glib-genmarshal --prefix=clutter_box2d_marshal --header $< > $@
+ 
+-ClutterBox2D-@CLUTTER_BOX2D_API_VERSION@.gir: $(INTROSPECTION_SCANNER) libclutter-box2d-@CLUTTER_BOX2D_API_VERSION@.la
+-	$(QUIET_GEN)$(INTROSPECTION_SCANNER) -v \
+-		--namespace ClutterBox2D --nsversion=@CLUTTER_BOX2D_API_VERSION@ \
+-		--add-include-path=$(srcdir) --add-include=path=. \
+-		--include=Clutter-1.0 \
+-		--library=clutter-box2d-@CLUTTER_BOX2D_API_VERSION@ \
+-		--libtool="$(top_builddir)/libtool" \
+-		--output $@ \
+-		--pkg gobject-2.0 \
+-		--pkg clutter-1.0 \
+-		$(top_srcdir)/clutter-box2d/clutter-box2d.h \
+-		$(top_srcdir)/clutter-box2d/clutter-box2d-joint.h \
+-		$(top_srcdir)/clutter-box2d/clutter-box2d-util.h
++@HAVE_INTROSPECTION_TRUE@ClutterBox2D-@CLUTTER_BOX2D_API_VERSION@.gir: $(INTROSPECTION_SCANNER) libclutter-box2d-@CLUTTER_BOX2D_API_VERSION@.la
++@HAVE_INTROSPECTION_TRUE@	$(QUIET_GEN)$(INTROSPECTION_SCANNER) -v \
++@HAVE_INTROSPECTION_TRUE@		--namespace ClutterBox2D --nsversion=@CLUTTER_BOX2D_API_VERSION@ \
++@HAVE_INTROSPECTION_TRUE@		--add-include-path=$(srcdir) --add-include=path=. \
++@HAVE_INTROSPECTION_TRUE@		--include=Clutter-1.0 \
++@HAVE_INTROSPECTION_TRUE@		--library=clutter-box2d-@CLUTTER_BOX2D_API_VERSION@ \
++@HAVE_INTROSPECTION_TRUE@		--libtool="$(top_builddir)/libtool" \
++@HAVE_INTROSPECTION_TRUE@		--output $@ \
++@HAVE_INTROSPECTION_TRUE@		--pkg gobject-2.0 \
++@HAVE_INTROSPECTION_TRUE@		--pkg clutter-1.0 \
++@HAVE_INTROSPECTION_TRUE@		$(top_srcdir)/clutter-box2d/clutter-box2d.h \
++@HAVE_INTROSPECTION_TRUE@		$(top_srcdir)/clutter-box2d/clutter-box2d-joint.h \
++@HAVE_INTROSPECTION_TRUE@		$(top_srcdir)/clutter-box2d/clutter-box2d-util.h
+ 
+-%.typelib: %.gir $(INTROSPECTION_COMPILER)
+-	$(QUIET_GEN)$(DEBUG) $(INTROSPECTION_COMPILER) --includedir=$(srcdir) --includedir=. $(INTROSPECTION_COMPILER_OPTS) $< -o $(builddir)/$(@F)
++@HAVE_INTROSPECTION_TRUE@%.typelib: %.gir $(INTROSPECTION_COMPILER)
++@HAVE_INTROSPECTION_TRUE@	$(QUIET_GEN)$(DEBUG) $(INTROSPECTION_COMPILER) --includedir=$(srcdir) --includedir=. $(INTROSPECTION_COMPILER_OPTS) $< -o $(builddir)/$(@F)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
