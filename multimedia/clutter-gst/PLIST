@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:02 joerg Exp $
-include/clutter-0.8/clutter-gst/clutter-gst-audio.h
-include/clutter-0.8/clutter-gst/clutter-gst-shaders.h
-include/clutter-0.8/clutter-gst/clutter-gst-util.h
-include/clutter-0.8/clutter-gst/clutter-gst-version.h
-include/clutter-0.8/clutter-gst/clutter-gst-video-sink.h
-include/clutter-0.8/clutter-gst/clutter-gst-video-texture.h
-include/clutter-0.8/clutter-gst/clutter-gst.h
-lib/libclutter-gst-0.8.la
-lib/pkgconfig/clutter-gst-0.8.pc
+@comment $NetBSD: PLIST,v 1.3 2009/10/26 08:52:43 obache Exp $
+include/clutter-1.0/clutter-gst/clutter-gst-audio.h
+include/clutter-1.0/clutter-gst/clutter-gst-util.h
+include/clutter-1.0/clutter-gst/clutter-gst-version.h
+include/clutter-1.0/clutter-gst/clutter-gst-video-sink.h
+include/clutter-1.0/clutter-gst/clutter-gst-video-texture.h
+include/clutter-1.0/clutter-gst/clutter-gst.h
+lib/libclutter-gst-0.10.la
+lib/pkgconfig/clutter-gst-0.10.pc
 share/gtk-doc/html/clutter-gst/ClutterGstAudio.html
 share/gtk-doc/html/clutter-gst/ClutterGstVideoSink.html
 share/gtk-doc/html/clutter-gst/ClutterGstVideoTexture.html
