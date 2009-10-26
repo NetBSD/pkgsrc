@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/26 08:35:18 obache Exp $
+
+SHA1 (clutter-gst-0.8.0.tar.gz) = bcf485769a11f453a73a3c8b2499c5cf91fdc2d4
+RMD160 (clutter-gst-0.8.0.tar.gz) = ab872ff32d0b4f360fcc50a22a1d3e754fa3b8bf
+Size (clutter-gst-0.8.0.tar.gz) = 496402 bytes
+SHA1 (patch-aa) = 66babe3f1177fb5f8cc4d4d939f65e5797f6e2e7
