@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/05/08 11:06:33 obache Exp $
+$NetBSD: distinfo,v 1.3 2009/10/26 08:48:05 obache Exp $
 
-SHA1 (clutter-box2d-0.8.2.tar.gz) = 4abf2820d9156aa2263357daa646a6101ca1867a
-RMD160 (clutter-box2d-0.8.2.tar.gz) = 242f7cd59a8968c60a27a25b8b3c25d2cd9cdd7f
-Size (clutter-box2d-0.8.2.tar.gz) = 491985 bytes
+SHA1 (clutter-box2d-0.10.0.tar.gz) = 284c8d20f6d04bbdf54599af7a42547fe22fae08
+RMD160 (clutter-box2d-0.10.0.tar.gz) = a43b4378246bd43cb8ab8c342185229bf5f584e5
+Size (clutter-box2d-0.10.0.tar.gz) = 491980 bytes
+SHA1 (patch-aa) = 873b3f2277727ca6f9093b58994d3ef137310718
+SHA1 (patch-ab) = 8a596ad7aac00e68733131be0e907befef64b2ea
