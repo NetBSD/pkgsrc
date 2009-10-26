@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/08 11:09:33 obache Exp $
+$NetBSD: distinfo,v 1.3 2009/10/26 08:51:01 obache Exp $
 
-SHA1 (clutter-gtk-0.8.3.tar.gz) = dcc53c9051bf3c0e54a2d06d88fa56aaeb6c6054
-RMD160 (clutter-gtk-0.8.3.tar.gz) = c25801af9dd560a70953dc85d5fe7f00be131f43
-Size (clutter-gtk-0.8.3.tar.gz) = 390360 bytes
+SHA1 (clutter-gtk-0.10.2.tar.gz) = 55db953a4059ee611f1915018da0862e5036f242
+RMD160 (clutter-gtk-0.10.2.tar.gz) = d3ccd9460f0083a12d03aa401d5526f75b2eb3c1
+Size (clutter-gtk-0.10.2.tar.gz) = 389054 bytes
