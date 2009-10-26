@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/08/26 19:58:11 sno Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/26 11:04:28 drochner Exp $
 #
 
-DISTNAME=	vinagre-2.26.2
-PKGREVISION=	1
+DISTNAME=	vinagre-2.28.1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/2.28/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projects.gnome.org/vinagre/
@@ -24,8 +23,6 @@ BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.16.0
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.17.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.6.0
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk-vnc+=	gtk-vnc>=0.3.8nb1
