@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:30 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/10/26 08:27:17 obache Exp $
 #
 
 BUILDLINK_TREE+=	json-glib

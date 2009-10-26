@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/05 13:07:14 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/26 08:27:17 obache Exp $
 #
 
-DISTNAME=	json-glib-0.6.2
+DISTNAME=	json-glib-0.8.0
 CATEGORIES=	textproc
-MASTER_SITES=	http://folks.o-hand.com/~ebassi/sources/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/json-glib/0.8/}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/JsonGlib
@@ -16,6 +16,10 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	json-glib.pc.in
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=	gtkdoc-rebase
 
 TEST_TARGET=	check
 
