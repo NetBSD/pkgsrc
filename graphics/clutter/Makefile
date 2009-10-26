@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/09/30 09:22:47 sketch Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/26 08:45:51 obache Exp $
 #
 
-DISTNAME=	clutter-0.8.8
-PKGREVISION=	1
+DISTNAME=	clutter-1.0.8
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.clutter-project.org/sources/clutter/0.8/
+MASTER_SITES=	http://www.clutter-project.org/sources/clutter/1.0/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://clutter-project.org/
@@ -31,9 +30,10 @@ TOOLS_NOOP+=	gtkdoc-rebase
 
 TEST_TARGET=	check
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.18.0
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.20.0
 .include "../../devel/pango/buildlink3.mk"
+BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.7.4
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
