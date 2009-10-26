@@ -1,17 +1,18 @@
-$NetBSD: patch-aa,v 1.10 2009/09/24 22:14:57 ahoka Exp $
+$NetBSD: patch-aa,v 1.11 2009/10/26 07:38:21 hasso Exp $
 
---- modules/access/file.c.orig	2009-09-18 18:37:45.000000000 +0200
-+++ modules/access/file.c
-@@ -50,6 +50,8 @@
+--- modules/access/file.c.orig	2009-09-18 19:37:45 +0300
++++ modules/access/file.c	2009-09-26 07:18:35 +0300
+@@ -50,6 +50,9 @@
  #if defined (__linux__)
  #   include <sys/vfs.h>
  #   include <linux/magic.h>
 +#elif defined (HAVE_FSTATVFS)
 +#   include <sys/statvfs.h>
++#   include <sys/mount.h>
  #elif defined (HAVE_SYS_MOUNT_H)
  #   include <sys/param.h>
  #   include <sys/mount.h>
-@@ -126,7 +128,12 @@ struct access_sys_t
+@@ -126,7 +129,12 @@ struct access_sys_t
  
  static bool IsRemote (int fd)
  {
