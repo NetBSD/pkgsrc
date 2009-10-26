@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/26 11:29:45 drochner Exp $
+
+SHA1 (libview-0.6.4.tar.gz) = a664e5c86453d839d4540189215be94f4ced88d1
+RMD160 (libview-0.6.4.tar.gz) = d867272ca05d411c1c5c3dc4f2d76491670382f2
+Size (libview-0.6.4.tar.gz) = 382850 bytes
+SHA1 (patch-aa) = 65204cd9d27c8b73a3d0ace16ddd36d7f4ad1bc9
