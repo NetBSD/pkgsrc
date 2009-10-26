@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2009/10/26 08:48:05 obache Exp $
+
+http://git.clutter-project.org/cgit.cgi?url=clutter-box2d/diff/&id=dae84a82efe22b284cba8ca1985ce14bb4e86c99
+
+--- clutter-box2d/Makefile.am.orig	2009-07-29 15:12:34.000000000 +0000
++++ clutter-box2d/Makefile.am
+@@ -39,6 +39,8 @@ DISTCLEANFILES = $(MARSHALFILES)
+ EXTRA_DIST = \
+ 	clutter-box2d-marshal.list
+ 
++if HAVE_INTROSPECTION
++
+ BUILT_GIRSOURCES =
+ 
+ ClutterBox2D-@CLUTTER_BOX2D_API_VERSION@.gir: $(INTROSPECTION_SCANNER) libclutter-box2d-@CLUTTER_BOX2D_API_VERSION@.la
+@@ -68,5 +70,7 @@ typelibs_DATA = $(BUILT_GIRSOURCES:.gir=
+ %.typelib: %.gir $(INTROSPECTION_COMPILER)
+ 	$(QUIET_GEN)$(DEBUG) $(INTROSPECTION_COMPILER) --includedir=$(srcdir) --includedir=. $(INTROSPECTION_COMPILER_OPTS) $< -o $(builddir)/$(@F)
+ 
++endif # HAVE_INTROSPECTION
++
+ CLEANFILES=
+ CLEANFILES += $(BUILT_GIRSOURCES) $(typelibs_DATA)
