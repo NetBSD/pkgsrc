@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4106 2009/10/26 08:51:19 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4107 2009/10/26 08:53:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/clutter to 1.0.8 [obache 2009-10-26]
 	Updated graphics/clutter-box2d to 0.10.0 [obache 2009-10-26]
 	Updated graphics/clutter-gtk to 0.10.2 [obache 2009-10-26]
+	Updated multimedia/clutter-gst to 0.10.0 [obache 2009-10-26]
