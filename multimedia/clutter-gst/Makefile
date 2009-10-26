@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:57:06 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/26 08:52:43 obache Exp $
 #
 
-DISTNAME=	clutter-gst-0.8.0
-PKGREVISION=	1
+DISTNAME=	clutter-gst-0.10.0
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.clutter-project.org/sources/clutter-gst/0.8/
+MASTER_SITES=	http://www.clutter-project.org/sources/clutter-gst/0.10/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.clutter-project.org/
