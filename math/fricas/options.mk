@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/02/19 20:31:44 asau Exp $
+# $NetBSD: options.mk,v 1.4 2009/10/26 07:53:39 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fricas
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -36,10 +36,25 @@ PRINT_PLIST_AWK+=	{gsub(/\.${FASL}$$/, ".$${FASL}");}
 # Handle CLISP-specific files
 PRINT_PLIST_AWK+=	{if ($$0 ~ /\.lib$$/) {$$0 = "$${clisp}" $$0;}}
 .endif
+.if !empty(PKG_OPTIONS:Mecl)
+# Handle ECL-specific files
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\.o$$/) {$$0 = "$${ecl}" $$0;}}
+.endif
 
 # X11-only files:
 .if !empty(PKG_OPTIONS:Mx11)
-PRINT_PLIST_AWK+=	{if ($$0 ~ /\/share\/viewports\// || $$0 ~ /\.(bitmap|xbm|xbm.tiny|bm|bakmap|xpm|ht|pht|ps)$$/) {$$0 = "$${x11}" $$0;}}
+PRINT_PLIST_AWK+=	{if ($$0 !~ /^\$${x11}/ && $$0 ~ /\/share\/viewports\// || $$0 ~ /\.(bitmap|xbm|xbm.tiny|bm|bakmap|xpm|ht|pht|ps)$$/) {$$0 = "$${x11}" $$0;}}
+# ...where "util.ht" is false positive.
+# files in lib/.../bin
+.for _file_ in htadd hypertex viewAlone
+PRINT_PLIST_AWK+=	{if ($$0 !~ /^\$${x11}/ && $$0 ~ /\/bin\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
+.endfor
+# files in lib/.../lib
+.for _file_ in ex2ht hthits htsearch presea spadbuf view2D view3D viewman
+PRINT_PLIST_AWK+=	{if ($$0 !~ /^\$${x11}/ && $$0 ~ /\/lib\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
+.endfor
+# Postscript files in lib/.../lib/graph:
+PRINT_PLIST_AWK+=	{if ($$0 !~ /^\$${x11}/ && $$0 ~ /\/lib\/graph\/.*\.ps$$/) {$$0 = "$${x11}" $$0;}}
 .endif
 
 # X11
