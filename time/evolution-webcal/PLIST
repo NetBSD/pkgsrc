@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:17:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/10/26 09:58:51 drochner Exp $
 libexec/evolution-webcal
 share/gconf/schemas/evolution-webcal.schemas
 share/locale/af/LC_MESSAGES/evolution-webcal.mo
@@ -11,6 +11,7 @@ share/locale/bn/LC_MESSAGES/evolution-webcal.mo
 share/locale/bn_IN/LC_MESSAGES/evolution-webcal.mo
 share/locale/bs/LC_MESSAGES/evolution-webcal.mo
 share/locale/ca/LC_MESSAGES/evolution-webcal.mo
+share/locale/ca@valencia/LC_MESSAGES/evolution-webcal.mo
 share/locale/cs/LC_MESSAGES/evolution-webcal.mo
 share/locale/cy/LC_MESSAGES/evolution-webcal.mo
 share/locale/da/LC_MESSAGES/evolution-webcal.mo
@@ -41,6 +42,7 @@ share/locale/ku/LC_MESSAGES/evolution-webcal.mo
 share/locale/ky/LC_MESSAGES/evolution-webcal.mo
 share/locale/lt/LC_MESSAGES/evolution-webcal.mo
 share/locale/lv/LC_MESSAGES/evolution-webcal.mo
+share/locale/mai/LC_MESSAGES/evolution-webcal.mo
 share/locale/mk/LC_MESSAGES/evolution-webcal.mo
 share/locale/ml/LC_MESSAGES/evolution-webcal.mo
 share/locale/mr/LC_MESSAGES/evolution-webcal.mo
