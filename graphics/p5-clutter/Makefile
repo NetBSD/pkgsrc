@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:57:46 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/26 08:54:52 obache Exp $
 #
 
-DISTNAME=	clutter-perl-0.8.2.0
+DISTNAME=	clutter-perl-1.0.1
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
-PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.clutter-project.org/sources/clutter-perl/0.8/
+MASTER_SITES=	http://www.clutter-project.org/sources/clutter-perl/1.0/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.clutter-project.org/
@@ -16,8 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.2:../../devel/p5-ExtUtils-Depends
 BUILD_DEPENDS+=	p5-ExtUtils-PkgConfig>=1.03:../../devel/p5-ExtUtils-PkgConfig
-
-WRKSRC=		${WRKDIR}/Clutter-0.820
+# for META_MERGE
+BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.46:../../devel/p5-ExtUtils-MakeMaker
 
 MAKE_JOBS_SAFE=	no
 
@@ -28,10 +27,8 @@ PERL5_PACKLIST=	auto/Clutter/.packlist
 
 BUILDLINK_API_DEPENDS.p5-glib2+=	p5-glib2>=1.180
 .include "../../devel/p5-glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.clutter+=		clutter>=0.8.2
 .include "../../graphics/clutter/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
-.include "../../graphics/clutter-cairo/buildlink3.mk"
 .include "../../graphics/p5-cairo/buildlink3.mk"
 .include "../../multimedia/clutter-gst/buildlink3.mk"
 .include "../../multimedia/p5-GStreamer/buildlink3.mk"
