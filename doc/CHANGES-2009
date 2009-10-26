@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4095 2009/10/26 08:30:37 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4096 2009/10/26 08:32:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5427,3 +5427,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/msdl to 1.2.6 [obache 2009-10-26]
 	Updated textproc/json-glib to 0.8.0 [obache 2009-10-26]
 	Added graphics/clutter08 version 0.8.8 [obache 2009-10-26]
+	Added graphics/clutter08-gtk version 0.8.3 [obache 2009-10-26]
