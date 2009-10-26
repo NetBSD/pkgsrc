@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/10/16 07:15:27 obache Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/26 08:51:01 obache Exp $
 #
 
-DISTNAME=	clutter-gtk-0.8.3
-PKGREVISION=	1
+DISTNAME=	clutter-gtk-0.10.2
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.clutter-project.org/sources/clutter-gtk/0.8/
+MASTER_SITES=	http://www.clutter-project.org/sources/clutter-gtk/0.10/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.clutter-project.org/
@@ -23,8 +22,8 @@ TOOLS_NOOP+=		gtkdoc-rebase
 
 PKGCONFIG_OVERRIDE+=	clutter-gtk.pc.in
 
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.clutter+=	clutter>=0.8.7
 .include "../../graphics/clutter/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.clutter:Mx11)
 CONFIGURE_ARGS+=	--with-flavour=x11
