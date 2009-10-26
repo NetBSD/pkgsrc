@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2009/10/22 17:29:42 drochner Exp $
+# $NetBSD: Makefile,v 1.116 2009/10/26 10:57:21 drochner Exp $
 #
 
 DISTNAME=		gnome-panel-2.28.0
@@ -12,17 +12,16 @@ COMMENT=		GNOME2 panel application
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+# depends on policykit
 #EGDIR=		${PREFIX}/share/examples/gnome-panel
 #CONF_FILES+=	${PREFIX}/share/examples/gnome-panel/org.gnome.ClockApplet.Mechanism.conf \
-		${PKG_SYSCONFDIR}/dbus-1/system.d/org.gnome.ClockApplet.Mechanism.conf
+#		${PKG_SYSCONFDIR}/dbus-1/system.d/org.gnome.ClockApplet.Mechanism.conf
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
-
-#CPPFLAGS+=	-DPANEL_GNOME_LOGO_ICON="\"netbsd-logo-icon-transparent\""
 
 GCONF_SCHEMAS=	clock.schemas
 GCONF_SCHEMAS+=	fish.schemas
@@ -36,7 +35,6 @@ GCONF_SCHEMAS+=	window-list.schemas
 GCONF_ENTRIES=		panel-default-setup.entries
 
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.15.1
-BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.5.0
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.0
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-panel
@@ -49,7 +47,6 @@ PKG_SUGGESTED_OPTIONS=	evolution
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-#.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
@@ -63,12 +60,12 @@ BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=2.24.1
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .endif
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../security/policykit/buildlink3.mk"
-.include "../../security/policykit-gnome/buildlink3.mk"
+# pkgsrc policykit is too old
+#.include "../../security/policykit/buildlink3.mk"
+#.include "../../security/policykit-gnome/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-menus+= gnome-menus>=2.28.0
 .include "../../sysutils/gnome-menus/buildlink3.mk"
-.include "../../sysutils/hal/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
