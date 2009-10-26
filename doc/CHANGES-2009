@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4102 2009/10/26 08:40:49 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4103 2009/10/26 08:41:34 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5434,3 +5434,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/ruby-clutter-gtk to 0.8.0nb2 [obache 2009-10-26]
 	Updated graphics/ruby-clutter-cairo to 0.8.0nb2 [obache 2009-10-26]
 	Updated multimedia/ruby-clutter-gst to 0.8.0nb2 [obache 2009-10-26]
+	Updated math/fricas to 1.0.8 [asau 2009-10-26]
