@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2009/08/26 19:57:57 sno Exp $
+# $NetBSD: Makefile,v 1.40 2009/10/26 09:48:41 drochner Exp $
 #
 
-DISTNAME=	evolution-exchange-2.26.2
-EE_VER=		2.26
-PKGREVISION=	1
+DISTNAME=	evolution-exchange-2.28.1
+EE_VER=		2.28
 CATEGORIES=	mail gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-exchange/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-exchange/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

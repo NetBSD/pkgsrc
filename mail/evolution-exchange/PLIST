@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:04:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/10/26 09:48:41 drochner Exp $
 bin/exchange-connector-setup-${EE_VER}
 lib/bonobo/servers/GNOME_Evolution_Exchange_Storage_${EE_VER}.server
 lib/evolution-data-server-1.2/camel-providers/libcamelexchange.la
@@ -81,6 +81,7 @@ share/locale/bg/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/bn/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/bn_IN/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/ca/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
+share/locale/ca@valencia/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/cs/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/cy/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/da/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
@@ -109,6 +110,7 @@ share/locale/ko/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/ku/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/lt/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/lv/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
+share/locale/mai/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/mk/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/ml/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
 share/locale/mn/LC_MESSAGES/evolution-exchange-${EE_VER}.mo
