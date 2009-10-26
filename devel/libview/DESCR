@@ -1,0 +1,6 @@
+libview is VMware's Incredibly Exciting Widgets, a useful collection of
+GTK+ widgets used within VMware products, free for everybody's use.
+This library consists of several widgets we use in Workstation and other
+products. We have benefitted so much from open source that we decided to
+give back. These widgets are under the MIT license and are largely
+written in C++ for GTKMM.
