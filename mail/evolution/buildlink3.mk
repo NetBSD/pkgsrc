@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2009/08/26 19:56:45 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2009/10/26 09:46:22 drochner Exp $
 
 BUILDLINK_TREE+=	evolution
 
@@ -16,6 +16,7 @@ BUILDLINK_PKGSRCDIR.evolution?=	../../mail/evolution
 .include "../../devel/nss/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../www/gtkhtml314/buildlink3.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
 .endif # EVOLUTION_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-evolution
