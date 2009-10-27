@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/10/27 19:41:11 drochner Exp $
+
+--- src/chat.cpp.orig	2009-06-18 15:23:44.000000000 +0200
++++ src/chat.cpp
+@@ -43,7 +43,7 @@ obby::chat::message::message(const std::
+ obby::chat::message::message(const serialise::object& obj,
+                              const user_table& user_table):
+ 	m_text(obj.get_required_attribute("text").get_value() ),
+-	m_timestamp(obj.get_required_attribute("timestamp").as<std::time_t>() )
++	m_timestamp(obj.get_required_attribute("timestamp").as<int>() )
+ {
+ }
+ 
