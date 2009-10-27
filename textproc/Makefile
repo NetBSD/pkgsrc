@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.503 2009/10/27 14:40:11 drochner Exp $
+# $NetBSD: Makefile,v 1.504 2009/10/27 20:21:29 ahoka Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -108,14 +108,20 @@ SUBDIR+=	hunspell-ar
 SUBDIR+=	hunspell-bg_BG
 SUBDIR+=	hunspell-ca_ES
 SUBDIR+=	hunspell-cs_CZ
+SUBDIR+=	hunspell-cy_GB
 SUBDIR+=	hunspell-da_DK
 SUBDIR+=	hunspell-de
+SUBDIR+=	hunspell-el_GR
+SUBDIR+=	hunspell-en_CA
 SUBDIR+=	hunspell-en_GB
+SUBDIR+=	hunspell-en_NZ
 SUBDIR+=	hunspell-en_US
+SUBDIR+=	hunspell-en_ZA
 SUBDIR+=	hunspell-es_ES
 SUBDIR+=	hunspell-es_MX
 SUBDIR+=	hunspell-fo_FO
 SUBDIR+=	hunspell-fr_FR
+SUBDIR+=	hunspell-fy_NL
 SUBDIR+=	hunspell-ga_IE
 SUBDIR+=	hunspell-he_IL
 SUBDIR+=	hunspell-hr_HR
@@ -123,10 +129,12 @@ SUBDIR+=	hunspell-hu_HU
 SUBDIR+=	hunspell-id_ID
 SUBDIR+=	hunspell-it_IT
 SUBDIR+=	hunspell-lt_LT
+SUBDIR+=	hunspell-lv_LV
 SUBDIR+=	hunspell-mg_MG
 SUBDIR+=	hunspell-ms_MY
 SUBDIR+=	hunspell-nl_NL
 SUBDIR+=	hunspell-ny_MW
+SUBDIR+=	hunspell-pl_PL
 SUBDIR+=	hunspell-ru_RU
 SUBDIR+=	hunspell-sk_SK
 SUBDIR+=	hunspell-sv_SE
