@@ -1,18 +1,13 @@
-$NetBSD: patch-af,v 1.1 2007/02/26 14:56:31 joerg Exp $
+$NetBSD: patch-af,v 1.2 2009/10/27 18:50:39 drochner Exp $
 
---- lib/expat/xmlparse/Makefile.orig	2007-02-26 14:16:29.000000000 +0000
+--- lib/expat/xmlparse/Makefile.orig	2006-06-18 19:34:34.000000000 +0200
 +++ lib/expat/xmlparse/Makefile
-@@ -20,11 +20,11 @@ LIBXMLRPC_XMLPARSE_OBJS = xmlparse.lo
+@@ -27,7 +27,7 @@ LDFLAGS = $(LADD)
+ LIBLDFLAGS = $(LDFLAGS_VERSINFO) -rpath $(LIBINST_DIR) $(LADD)
  
- INCLUDES = -I$(BLDDIR) -I$(UTILDIR)/include -I$(XMLTOKDIR)
- 
--LIBLDFLAGS = $(LDFLAGS_VERSINFO) -L../xmltok/.libs $(RPATH) $(LADD)
-+LIBLDFLAGS = $(LDFLAGS_VERSINFO) $(RPATH) $(LADD)
- 
- libxmlrpc_xmlparse.la: $(LIBXMLRPC_XMLPARSE_OBJS) $(LIBXMLRPC_XMLTOK)
- 	$(LIBTOOL) --mode=link $(CCLD) -o $@ $(LIBLDFLAGS) \
--	  $(LIBXMLRPC_XMLPARSE_OBJS) -lxmlrpc_xmltok
-+	  $(LIBXMLRPC_XMLPARSE_OBJS) ../xmltok/libxmlrpc_xmltok.la
+ libxmlrpc_xmlparse.la: $(LIBXMLRPC_XMLPARSE_OBJS)
+-	$(LIBTOOL) --mode=link $(CCLD) -o $@ $(LIBLDFLAGS) $^
++	$(LIBTOOL) --mode=link $(CCLD) -o $@ $(LIBLDFLAGS) $^ ../xmltok/libxmlrpc_xmltok.la
  
  CFLAGS = $(CFLAGS_COMMON) $(CFLAGS_PERSONAL) $(CADD)
  
