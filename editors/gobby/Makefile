@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/08/26 19:57:24 sno Exp $
+# $NetBSD: Makefile,v 1.10 2009/10/27 19:47:54 drochner Exp $
 #
 
-DISTNAME=	gobby-0.4.5
-PKGREVISION=	4
+DISTNAME=	gobby-0.4.11
 CATEGORIES=	editors
 MASTER_SITES=	http://releases.0x539.de/gobby/
 
@@ -15,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS=		gmake msgfmt pkg-config
+USE_TOOLS=		gmake msgfmt pkg-config intltool
 
 .include "options.mk"
 
@@ -23,11 +22,10 @@ USE_TOOLS=		gmake msgfmt pkg-config
 .include "../../devel/glibmm/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../editors/obby/buildlink3.mk"
-.include "../../net/howl/buildlink3.mk"
 .include "../../net/net6/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
-.include "../../x11/gtksourceview/buildlink3.mk"
+.include "../../x11/gtksourceview2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
