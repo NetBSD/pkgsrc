@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4111 2009/10/26 10:39:19 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4112 2009/10/27 03:04:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5443,3 +5443,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/py-clutter to 1.0.0 [obache 2009-10-26]
 	Updated graphics/ImageMagick to 6.5.5.3nb2 [tron 2009-10-26]
 	Updated www/curl to 7.19.6nb1 [wiz 2009-10-26]
+	Added graphics/clutter-qt version 1.0.0 [obache 2009-10-27]
