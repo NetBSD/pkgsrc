@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8570 2009/10/26 08:59:40 obache Exp $
+$NetBSD: TODO,v 1.8571 2009/10/27 15:31:28 taca Exp $
 
 Suggested new packages
 ======================
@@ -1346,7 +1346,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o smtpfeed-1.20
 	o snd-10.6
 	o snes9x-1.51
-	o snort-2.8.5
+	o snort-2.8.5.1
 	o snownews-1.5.12
 	o solfege-3.14.9
 	o sope-4.6
@@ -1511,7 +1511,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-dummy-0.3.2
 	o xf86-video-geode-2.11.6 [wip]
 	o xf86-video-glide-1.0.3
-	o xf86-video-intel-2.9.0
+	o xf86-video-intel-2.9.1
 	o xf86-video-newport-0.2.3 [unpackaged]
 	o xf86-video-nv-2.1.15
 	o xf86-video-rendition-4.2.3
