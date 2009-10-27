@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2009/10/26 10:57:21 drochner Exp $
+# $NetBSD: Makefile,v 1.117 2009/10/27 16:19:14 drochner Exp $
 #
 
 DISTNAME=		gnome-panel-2.28.0
@@ -22,6 +22,7 @@ USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 
 GCONF_SCHEMAS=	clock.schemas
 GCONF_SCHEMAS+=	fish.schemas
@@ -69,6 +70,7 @@ BUILDLINK_API_DEPENDS.gnome-menus+= gnome-menus>=2.28.0
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
