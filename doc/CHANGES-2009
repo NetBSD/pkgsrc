@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4117 2009/10/27 22:13:59 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.4118 2009/10/27 22:17:33 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5450,3 +5450,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/gnuplot to 4.2.6 [asau 2009-10-27]
 	Updated graphics/gnuplot-nox11 to 4.2.6 [asau 2009-10-27]
 	Added textproc/hunspell-en_CA version 20020315 [ahoka 2009-10-27]
+	Added textproc/hunspell-en_NZ version 20020518 [ahoka 2009-10-27]
