@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4115 2009/10/27 20:26:21 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.4116 2009/10/27 20:50:18 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5447,3 +5447,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/ruby-quota to 0.5.1nb7 [taca 2009-10-27]
 	Added textproc/hunspell-cy_GB version 20040425 [ahoka 2009-10-27]
 	Added textproc/hunspell-el_GR version 20041220 [ahoka 2009-10-27]
+	Updated graphics/gnuplot to 4.2.6 [asau 2009-10-27]
+	Updated graphics/gnuplot-nox11 to 4.2.6 [asau 2009-10-27]
