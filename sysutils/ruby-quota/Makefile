@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2009/02/15 03:37:35 taca Exp $
+# $NetBSD: Makefile,v 1.16 2009/10/27 15:29:32 taca Exp $
 #
 
 DISTNAME=	ruby-quota-0.5.1
 PKGNAME=	${RUBY_PKGPREFIX}-quota-0.5.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ruby-quota/}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/ruby-quota/
 COMMENT=	Quota interface for Ruby
+LICENSE=	modified-bsd
 
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
