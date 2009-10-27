@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/07/03 15:59:49 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2009/10/27 19:08:30 drochner Exp $
 #
 
-DISTNAME=	net6-1.3.9
-PKGREVISION=	1
+DISTNAME=	net6-1.3.10
 CATEGORIES=	net
 MASTER_SITES=	http://releases.0x539.de/net6/
 
@@ -14,16 +13,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf pkg-config
+USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE+=	net6-1.3.pc.in
 
-pre-configure:
-	cd ${WRKSRC} && autoconf
-
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../security/gnutls/libgnutls-config.mk"
 .include "../../mk/bsd.pkg.mk"
