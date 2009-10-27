@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2009/10/27 18:50:39 drochner Exp $
+
+--- src/Makefile.orig	2009-01-09 21:33:17.000000000 +0100
++++ src/Makefile
+@@ -51,6 +51,7 @@ ifeq ($(ENABLE_LIBXML2_BACKEND),yes)
+   LIBXML_LIBS = $(shell xml2-config --libs)
+ else
+   LIBXML_INCLUDES = -I$(SRCDIR)/lib/expat/xmlparse
++  LIBXML_LIBS = ../lib/expat/xmlparse/libxmlrpc_xmlparse.la
+ endif
+ 
+ ABYSS_INCLUDES = -I$(SRCDIR)/lib/abyss/src
