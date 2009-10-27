@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/09/30 15:24:20 wiz Exp $
+$NetBSD: distinfo,v 1.6 2009/10/27 12:23:37 drochner Exp $
 
 SHA1 (docbook-xml-4.2.zip) = 5e3a35663cd028c5c5fbb959c3858fec2d7f8b9e
 RMD160 (docbook-xml-4.2.zip) = 3ba17bf96ab2ab8fe6dc9ff82da8e22aaf9ce5e0
@@ -9,3 +9,6 @@ Size (docbook-xml-4.3.zip) = 83865 bytes
 SHA1 (docbook-xml-4.4.zip) = 7c4d91c82ad3747e1b5600c91782758e5d91c22b
 RMD160 (docbook-xml-4.4.zip) = 691a9230442be14d019af9d07e94f269824d85cc
 Size (docbook-xml-4.4.zip) = 96107 bytes
+SHA1 (docbook-xml-4.5.zip) = b9124233b50668fb508773aa2b3ebc631d7c1620
+RMD160 (docbook-xml-4.5.zip) = 723347ef17950c5c8e81a7c9d44812261dcadc5d
+Size (docbook-xml-4.5.zip) = 98497 bytes
