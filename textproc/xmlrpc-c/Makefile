@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/10/02 17:57:39 ahoka Exp $
+# $NetBSD: Makefile,v 1.9 2009/10/27 18:50:38 drochner Exp $
 #
 
-DISTNAME=	xmlrpc-c-1.09.00
-PKGREVISION=	3
+DISTNAME=	xmlrpc-c-1.06.38
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlrpc-c/}
 EXTRACT_SUFX=	.tgz
@@ -21,6 +20,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c99 c++
 USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
+TEST_TARGET=	check
 
 SUBST_CLASSES+=	pthread
 SUBST_FILES.pthread=	xmlrpc-c-config.in xmlrpc-c-config.test.in
