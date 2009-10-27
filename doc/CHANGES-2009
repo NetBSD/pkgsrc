@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4114 2009/10/27 20:24:20 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.4115 2009/10/27 20:26:21 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5446,3 +5446,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added graphics/clutter-qt version 1.0.0 [obache 2009-10-27]
 	Updated sysutils/ruby-quota to 0.5.1nb7 [taca 2009-10-27]
 	Added textproc/hunspell-cy_GB version 20040425 [ahoka 2009-10-27]
+	Added textproc/hunspell-el_GR version 20041220 [ahoka 2009-10-27]
