@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2009/09/20 21:15:44 sno Exp $
+$NetBSD: patch-ab,v 1.6 2009/10/27 18:50:39 drochner Exp $
 
---- Makefile.config.in.orig	2006-09-28 04:15:55.000000000 +0200
-+++ Makefile.config.in	2009-09-20 23:05:15.000000000 +0200
-@@ -168,6 +168,15 @@
+--- Makefile.config.in.orig	2008-03-25 15:24:58.000000000 +0100
++++ Makefile.config.in
+@@ -155,6 +155,15 @@ ifeq ($(findstring solaris,$(HOST_OS)),s
    CFLAGS_SHLIB = -Kpic
  endif
  
@@ -16,17 +16,17 @@ $NetBSD: patch-ab,v 1.5 2009/09/20 21:15:44 sno Exp $
 +endif
 +
  ifeq ($(HOST_OS),aix)
-   SHARED_LIB_TYPE = unix
-   SHLIB_SUFFIX = a
-@@ -204,12 +213,31 @@
-   LDFLAGS_SHLIB = -shared -expect_unresolved
+   # This code is not finished; that's why we don't set SHARED_LIB_TYPE.
+   # If you can finish it and make it work on AIX, please do.
+@@ -188,11 +197,30 @@ ifeq ($(HOST_OS),osf)
  endif
  
--ifeq ($(findstring netbsd,$(HOST_OS)),FIND)
-+ifeq ($(findstring netbsd,$(HOST_OS)),netbsd)
-   SHARED_LIB_TYPE = unix
-   SHLIB_SUFFIX = so
--  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ))
+ ifeq ($(findstring netbsd,$(HOST_OS)),netbsd)
+-  # This code is not finished; that's why we don't set SHARED_LIB_TYPE.
+-  # If you can finish it and make it work on AIX, please do.
+-  # SHARED_LIB_TYPE = unix
++  SHARED_LIB_TYPE = unix
++  SHLIB_SUFFIX = so
 +  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
 +  shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
 +  CFLAGS_SHLIB = -fPIC
@@ -44,10 +44,10 @@ $NetBSD: patch-ab,v 1.5 2009/09/20 21:15:44 sno Exp $
 +
 +ifeq ($(findstring freebsd,$(HOST_OS)),freebsd)
 +  SHARED_LIB_TYPE = unix
-+  SHLIB_SUFFIX = so
-+  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
-   shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
+   SHLIB_SUFFIX = so
 -  CFLAGS_SHLIB = -fpic
++  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
++  shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
 +  CFLAGS_SHLIB = -fPIC
 +  LDFLAGS_SHLIB = -shared -Wl,-soname,$(SONAME) $(SHLIB_CLIB)
  endif
