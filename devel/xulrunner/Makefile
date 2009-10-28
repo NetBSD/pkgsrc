@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2009/10/11 10:49:56 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2009/10/28 11:36:36 tnn Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/firefox/xulrunner/:S/3.5/1.9.1/:S/.source//}
-FIREFOX_VER=	3.5.3
-PKGREVISION=	6
+FIREFOX_VER=	3.5.4
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -32,7 +31,6 @@ CONFIGURE_ARGS+=	--enable-libxul
 
 ALL_ENV+=		MOZILLA_PKG_NAME=xulrunner
 
-.include "../../mk/bsd.prefs.mk"
 .include "mozilla-common.mk"
 .include "options.mk"
 
