@@ -1,11 +1,11 @@
-$NetBSD: patch-pd,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
+$NetBSD: patch-pd,v 1.1.1.1.2.1 2009/10/28 18:13:23 tron Exp $
 
---- xulrunner/installer/mozilla-nss.pc.in.orig	2009-06-29 18:15:36.000000000 +0200
+--- xulrunner/installer/mozilla-nss.pc.in.orig	2009-10-16 17:14:30.000000000 +0200
 +++ xulrunner/installer/mozilla-nss.pc.in
 @@ -6,5 +6,5 @@ Name: NSS
  Description: Mozilla Network Security Services
  Version: %MOZILLA_VERSION%
  Requires: %NSPR_NAME% >= %NSPR_VERSION%
--Libs: -L${sdkdir}/lib -lnss3 -lnssutil3 -lsmime3 -lssl3 -lsoftokn3
-+Libs: -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner -lnss3 -lnssutil3 -lsmime3 -lssl3 -lsoftokn3
+-Libs: -L${sdkdir}/lib -lsmime3 -lssl3 -lnss3 -lnssutil3
++Libs: -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner -lsmime3 -lssl3 -lnss3 -lnssutil3
  Cflags: -I${includedir}/stable

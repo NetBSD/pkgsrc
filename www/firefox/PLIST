@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2009/09/16 19:06:18 tnn Exp $
+@comment $NetBSD: PLIST,v 1.38.2.1 2009/10/28 18:13:24 tron Exp $
 bin/firefox
 lib/firefox/.autoreg
 lib/firefox/README.txt
@@ -57,6 +57,7 @@ lib/firefox/icons/mozicon128.png
 lib/firefox/icons/mozicon16.xpm
 lib/firefox/icons/mozicon50.xpm
 lib/firefox/modules/distribution.js
+lib/firefox/modules/openLocationLastURL.jsm
 ${PLIST.branding}lib/firefox/old-homepage-default.properties
 lib/firefox/removed-files
 lib/firefox/run-mozilla.sh
