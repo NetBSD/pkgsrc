@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/28 18:46:20 drochner Exp $
+
+--- Makefile.orig	2009-10-21 23:59:54.000000000 +0200
++++ Makefile
+@@ -30,18 +30,18 @@ INCLUDEDIR = /usr/include
+ MANDIR = /usr/share/man
+ DESTDIR =
+ 
+-CC = gcc
+-LD = $(CC)
++#CC = gcc
++#LD = $(CC)
+ LD_lib = $(LD)
+ RM = rm -f
+ LN_s = ln -s
+ MKDIR = umask 022 && mkdir -p
+ INSTALL = install -c
+-CFLAGS = -Wall -O2
++#CFLAGS = -Wall -O2
+ CFLAGS_lib = $(CFLAGS) -fPIC
+ CFLAGS_bin = $(CFLAGS) -fomit-frame-pointer
+ 
+-LDFLAGS =
++#LDFLAGS =
+ LDFLAGS_shared = --shared
+ LDFLAGS_shared_LINUX = --shared
+ LDFLAGS_shared_SUN = -G
+@@ -119,7 +119,7 @@ $(DEVEL_LIB): $(SHARED_LIB)
+ 	$(LN_s) $(SHARED_LIB) $(DEVEL_LIB)
+ 
+ $(SHARED_PAM): $(OBJS_PAM) $(MAP_PAM) $(DEVEL_LIB)
+-	$(LD_lib) $(LDFLAGS_pam) $(OBJS_PAM) $(LDLIBS_pam) -L. -lpasswdqc -o $(SHARED_PAM)
++	$(LD_lib) $(LDFLAGS_pam) $(OBJS_PAM) $(LDLIBS_pam) -L. -Wl,-R${PREFIX}/lib -lpasswdqc -o $(SHARED_PAM)
+ 
+ pwqgen: $(OBJS_GEN) $(DEVEL_LIB)
+ 	$(LD) $(LDFLAGS) $(OBJS_GEN) -L. -lpasswdqc -o $@

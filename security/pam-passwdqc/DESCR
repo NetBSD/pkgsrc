@@ -1,0 +1,5 @@
+pam_passwdqc is a simple password strength checking module for
+PAM-aware password changing programs, such as passwd(1).  In addition
+to checking regular passwords, it offers support for passphrases and
+can provide randomly generated ones.  All features are optional and
+can be (re-)configured without rebuilding.
