@@ -1,0 +1,152 @@
+$NetBSD: patch-yc,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+Fix integer types for modern ocaml.
+
+--- Pict/codegen.ml.orig	2009-10-27 20:47:23.000000000 -0400
++++ Pict/codegen.ml	2009-10-27 21:14:34.000000000 -0400
+@@ -49,29 +49,29 @@ let storeDecl d = decls := d :: !decls
+ let rec heapProc accum = function
+   Inter.PRL(p,q) -> heapProc (heapProc accum p) q
+ | Inter.VAL(l,p) -> heapProc (List.fold_left heapVal accum l) p
+-| Inter.CCODE(_,ci,_,_,p) -> heapProc (accum + ci.alloc) p
+-| Inter.CCALL(_,ci,_,_,p) -> heapProc (accum + ci.alloc) p
++| Inter.CCODE(_,ci,_,_,p) -> heapProc (Int32.add accum ci.alloc) p
++| Inter.CCALL(_,ci,_,_,p) -> heapProc (Int32.add accum ci.alloc) p
+ | Inter.ATOM(_,_,p) -> heapProc accum p
+ | Inter.IF(_,p,q) -> max (heapProc accum p) (heapProc accum q)
+-| Inter.NEW(_,_,p) -> heapProc (accum + 2) p
+-| Inter.INPUT(_,_,_) -> accum + 9
+-| Inter.OUTPUT(_,_,_) -> accum + 9
+-| Inter.SEND(_,l) -> accum + 1 + List.length l
++| Inter.NEW(_,_,p) -> heapProc (Int32.add accum (Int32.of_int 2)) p
++| Inter.INPUT(_,_,_) -> Int32.add accum (Int32.of_int 9)
++| Inter.OUTPUT(_,_,_) -> Int32.add accum (Int32.of_int 9)
++| Inter.SEND(_,l) -> Int32.add accum (Int32.of_int (1 + List.length l))
+ | Inter.STRUCT(_) -> Error.bug "Codegen.heapProc"
+ | Inter.SKIP -> accum
+ 
+ and heapVal accum = function
+-  Inter.TUPLE(_,l) -> accum + 1 + List.length l
++  Inter.TUPLE(_,l) -> Int32.add accum (Int32.of_int (1 + List.length l))
+ | Inter.DEF(_) | Inter.STRING(_) -> Error.bug "Codegen.heapDef"
+ 
+ (*
+  * These tag values MUST agree with those in Runtime/pict.tmpl!!
+  *)
+ 
+-let emptyTag = INT 0
+-let oneReaderTag = INT 1
+-let oneWriterTag = INT 2
+-let tupleTag x = INT(x*8+7)
++let emptyTag = INT Int32.zero
++let oneReaderTag = INT Int32.one
++let oneWriterTag = INT (Int32.of_int 2)
++let tupleTag x = INT(Int32.of_int (x*8+7))
+ let status x = OFFSET(true,x,0)
+ let sizeOf x = Ccode.sizeOf (OFFSET(false,x,0))
+ let value x = OFFSET(true,x,1)
+@@ -113,13 +113,13 @@ let flushFp env =
+   match env.free with
+     UNKNOWN -> NULL
+   | CLEAN _ -> env.free <- UNKNOWN; NULL
+-  | DIRTY(fp,i) -> env.free <- UNKNOWN; ASSIGN(Ccode.free,INDEX(fp,INT i))
++  | DIRTY(fp,i) -> env.free <- UNKNOWN; ASSIGN(Ccode.free,INDEX(fp,INT (Int32.of_int i)))
+ 
+ let flushEndq env =
+   match env.endq with
+     UNKNOWN -> NULL
+   | CLEAN _ -> env.endq <- UNKNOWN; NULL
+-  | DIRTY(endq,i) -> env.endq <- UNKNOWN; ASSIGN(Ccode.endq,INDEX(endq,INT i))
++  | DIRTY(endq,i) -> env.endq <- UNKNOWN; ASSIGN(Ccode.endq,INDEX(endq,INT (Int32.of_int i)))
+ 
+ let flushIfLast env =
+   if env.last then (flushFp env %% flushEndq env) else NULL
+@@ -135,7 +135,7 @@ let subEnv env =
+ let initDef env fp (i,c) = function
+   Inter.TUPLE(x,[]) ->
+     env.locals := (x,INTEGER) :: !(env.locals);
+-    (i,ASSIGN(VAR x,INT 0) %% c)
++    (i,ASSIGN(VAR x,INT Int32.zero) %% c)
+ | Inter.TUPLE(x,l) ->
+     env.locals := (x,INTEGER) :: !(env.locals);
+     (i + List.length l + 1,ASSIGN(VAR x,TAG(fp,i)) %% c)
+@@ -152,34 +152,34 @@ let rec transProc env = function
+     let code = List.fold_left (transDef env) NULL l in
+     load %% c %% code %% transProc env p
+ | Inter.CCODE(None,ci,sl,l,p) ->
+-    if ci.alloc > 0 then
++    if (Int32.to_int ci.alloc) > 0 then
+       let store = flushFp env in
+-      profx "cc.ccode++; cc.ccodeAlloc += %d;\n" ci.alloc %%
++      profx "cc.ccode++; cc.ccodeAlloc += %d;\n" (Int32.to_int ci.alloc) %%
+       store %% CODE(ci,sl,List.map transAtom l) %% transProc env p
+     else
+       (CODE(ci,sl,List.map transAtom l) %% transProc env p)
+ | Inter.CCODE(Some x,ci,sl,l,p) ->
+-    if ci.alloc > 0 then
++    if (Int32.to_int ci.alloc) > 0 then
+       let store = flushFp env in
+       env.locals := (x,INTEGER) :: !(env.locals);
+-      profx "cc.ccode++; cc.ccodeAlloc += %d;\n" ci.alloc %%
++      profx "cc.ccode++; cc.ccodeAlloc += %d;\n" (Int32.to_int ci.alloc) %%
+       store %% ASSIGN(VAR x,CCODE(ci,sl,List.map transAtom l)) %%
+       transProc env p
+     else
+       (env.locals := (x,INTEGER) :: !(env.locals);
+        ASSIGN(VAR x,CCODE(ci,sl,List.map transAtom l)) %% transProc env p)
+ | Inter.CCALL(None,ci,s,l,p) ->
+-    if ci.alloc > 0 then
++    if (Int32.to_int ci.alloc) > 0 then
+       let store = flushFp env in
+-      profx "cc.ccode++; cc.ccodeAlloc += %d;\n" ci.alloc %%
++      profx "cc.ccode++; cc.ccodeAlloc += %d;\n" (Int32.to_int ci.alloc) %%
+       store %% CALL(ci,s,List.map transAtom l) %% transProc env p
+     else
+       (CALL(ci,s,List.map transAtom l) %% transProc env p)
+ | Inter.CCALL(Some x,ci,s,l,p) ->
+-    if ci.alloc > 0 then
++    if (Int32.to_int ci.alloc) > 0 then
+       let store = flushFp env in
+       env.locals := (x,INTEGER) :: !(env.locals);
+-      profx "cc.ccode++; cc.ccodeAlloc += %d;\n" ci.alloc %%
++      profx "cc.ccode++; cc.ccodeAlloc += %d;\n" (Int32.to_int ci.alloc) %%
+       store %% ASSIGN(VAR x,CCALL(ci,s,List.map transAtom l)) %%
+       transProc env p
+     else
+@@ -242,14 +242,14 @@ let rec transProc env = function
+     Error.bug "Codegen.transProc"
+ 
+ and transAtom = function
+-  Inter.CHAR(c) -> let i = Char.code c in INT(i+i)
++  Inter.CHAR(c) -> let i = Char.code c in INT(Int32.of_int (i+i))
+ | Inter.PROJECT(a,i) -> OFFSET(false,transAtom a,1+i)
+ | Inter.ADDR(x) -> ADDR x
+ | Inter.STATIC(x) -> TAGS x
+ | Inter.DYNAMIC(x) -> VAR x
+-| Inter.BOOL(true) -> INT 1
+-| Inter.BOOL(false) -> INT 0
+-| Inter.INT(i) -> INT(i+i)
++| Inter.BOOL(true) -> INT Int32.one
++| Inter.BOOL(false) -> INT Int32.zero
++| Inter.INT(i) -> INT(Int32.add i i)
+ | Inter.COERCION(c,a) -> COERCION(c,transAtom a)
+ | Inter.CCONST(ci,s) -> CCODE(ci,[s],[])
+ 
+@@ -270,7 +270,7 @@ let transConst = function
+     (*
+      * Work out the maximum amount of space required by the process.
+      *)
+-    let words = heapProc 0 p in
++    let words = heapProc Int32.zero p in
+     (*
+      * Initial environment.
+      *)
+@@ -294,7 +294,7 @@ let transConst = function
+ 	    env.locals := (s,POINTER) :: !(env.locals);
+ 	    ASSIGN(VAR s,Ccode.startq) %%
+ 	    Misc.itFold loadArg NULL args %%
+-	    ASSIGN(Ccode.startq,INDEX(s,INT(-l))) %%
++	    ASSIGN(Ccode.startq,INDEX(s,INT(Int32.of_int(-l)))) %%
+ 	    transProc env p
+ 	end
+       else

@@ -1,0 +1,48 @@
+$NetBSD: patch-yj,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+Fix integer types for modern ocaml.
+
+--- Pict/simplify.ml.orig	2009-10-27 20:36:37.000000000 -0400
++++ Pict/simplify.ml	2009-10-27 20:42:36.000000000 -0400
+@@ -46,7 +46,7 @@ and value =
+ | VARv of Inter.atom
+ | BOOLv of bool
+ | CHARv of char
+-| INTv of int
++| INTv of int32
+ | LETv of dec * value
+ | IFv of value * value * value
+ | ABSv of pat * proc
+@@ -114,7 +114,7 @@ and simplifyVal v cont = match v with
+          Ccode.EXP ->
+ 	   (match sl with
+ 	     [s] when
+-	       not(ci.Ccode.reader or ci.Ccode.writer or ci.Ccode.alloc > 0)
++	       not(ci.Ccode.reader or ci.Ccode.writer or (Int32.compare ci.Ccode.alloc Int32.zero) > 0)
+ 	     ->
+ 	       throw (Inter.CCONST(ci,s)) cont
+             | _ ->
+@@ -122,7 +122,7 @@ and simplifyVal v cont = match v with
+ 	       Inter.CCODE(Some res,ci,sl,List.rev l,
+ 			   throw (Inter.DYNAMIC res) cont))
+        | Ccode.STATEMENT ->
+-	   Inter.CCODE(None,ci,sl,List.rev l,throw (Inter.INT 0) cont))
++	   Inter.CCODE(None,ci,sl,List.rev l,throw (Inter.INT Int32.zero) cont))
+     )
+ | CCALLv(ci,s,l) ->
+     simplifyFieldVal l [] (fun l ->
+@@ -131,12 +131,12 @@ and simplifyVal v cont = match v with
+ 	   let res = Var.fresh() in
+ 	   Inter.CCALL(Some res,ci,s,List.rev l,throw (Inter.DYNAMIC res) cont)
+        | Ccode.STATEMENT ->
+-	   Inter.CCALL(None,ci,s,List.rev l,throw (Inter.INT 0) cont))
++	   Inter.CCALL(None,ci,s,List.rev l,throw (Inter.INT Int32.zero) cont))
+     )
+ | COERCIONv(c,v) ->
+     simplifyVal v (CONT (fun v -> throw (Inter.COERCION(c,v)) cont))
+ | RECORDv([]) ->
+-    throw (Inter.INT 0) cont
++    throw (Inter.INT Int32.zero) cont
+ | RECORDv(l) ->
+     simplifyFieldVal l [] (fun l ->
+       let var = Var.fresh() in

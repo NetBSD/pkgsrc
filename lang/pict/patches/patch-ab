@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+DESTDIR support.
+
+--- Makefile.orig	2009-10-23 23:31:41.000000000 -0400
++++ Makefile	2009-10-23 23:32:35.000000000 -0400
+@@ -38,7 +38,7 @@ all::
+ 	@$(MAKE) -C Runtime all
+ 	@$(MAKE) -C Lib all
+ 
+-install:: $(INSTALLDIR) $(INSTALLLIB)
++install:: $(DESTDIR)$(INSTALLDIR) $(DESTDIR)$(INSTALLLIB)
+ 	@$(MAKE) -C Config all
+ 	@$(MAKE) -C Tools install
+ 	@$(MAKE) -C Pict install
+@@ -50,6 +50,7 @@ test:: all
+ 
+ show:
+ 	@echo "SRCDIR     " = $(SRCDIR)
++	@echo "DESTDIR    " = $(DESTDIR)
+ 	@echo "INSTALLDIR " = $(INSTALLDIR)
+ 	@echo "INSTALLLIB " = $(INSTALLLIB)
+ 	@echo "GCC        " = $(GCC)
+@@ -103,11 +104,11 @@ clean::
+ 	@$(MAKE) -C Html clean
+         endif
+ 
+-$(INSTALLDIR):
+-	mkdir -p $(INSTALLDIR)
++$(DESTDIR)$(INSTALLDIR):
++	mkdir -p $(DESTDIR)$(INSTALLDIR)
+ 
+-$(INSTALLLIB):
+-	mkdir -p $(INSTALLLIB)
++$(DESTDIR)$(INSTALLLIB):
++	mkdir -p $(DESTDIR)$(INSTALLLIB)
+ 
+ ifeq ($(PICTDEVEL),yes)
+ all:: ANNOUNCE
