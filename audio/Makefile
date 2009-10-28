@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.421 2009/09/10 20:17:20 wiz Exp $
+# $NetBSD: Makefile,v 1.422 2009/10/28 18:37:37 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -145,6 +145,7 @@ SUBDIR+=	gst-plugins0.10-faad
 SUBDIR+=	gst-plugins0.10-flac
 SUBDIR+=	gst-plugins0.10-fluendo-mp3
 SUBDIR+=	gst-plugins0.10-jack
+SUBDIR+=	gst-plugins0.10-lame
 SUBDIR+=	gst-plugins0.10-libvisual
 SUBDIR+=	gst-plugins0.10-mad
 SUBDIR+=	gst-plugins0.10-musepack
@@ -153,6 +154,7 @@ SUBDIR+=	gst-plugins0.10-pulse
 SUBDIR+=	gst-plugins0.10-sid
 SUBDIR+=	gst-plugins0.10-spc
 SUBDIR+=	gst-plugins0.10-speex
+SUBDIR+=	gst-plugins0.10-twolame
 SUBDIR+=	gst-plugins0.10-vorbis
 SUBDIR+=	gst-plugins0.10-wavpack
 SUBDIR+=	gtick
