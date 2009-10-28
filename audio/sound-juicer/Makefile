@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2009/09/09 17:02:00 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2009/10/28 18:40:32 drochner Exp $
 #
 
-DISTNAME=		sound-juicer-2.26.1
-PKGREVISION=		5
+DISTNAME=		sound-juicer-2.28.0
 CATEGORIES=		audio
 MASTER_SITES=		http://www.burtonini.com/computing/ \
-			${MASTER_SITE_GNOME:=sources/sound-juicer/2.26/}
+			${MASTER_SITE_GNOME:=sources/sound-juicer/2.28/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.burtonini.com/computing/
@@ -35,7 +34,7 @@ DEPENDS+=	gst-plugins0.10-gio>=0.10.21:../../sysutils/gst-plugins0.10-gio
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
+#.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libcdio+=		libcdio>=0.70
 .include "../../misc/libcdio/buildlink3.mk"

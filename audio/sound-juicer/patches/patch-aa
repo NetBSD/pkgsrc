@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2008/12/02 20:32:58 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2009/10/28 18:40:32 drochner Exp $
 
---- configure.orig	2008-12-02 20:04:59.000000000 +0000
+--- configure.orig	2009-09-22 21:21:31.000000000 +0200
 +++ configure
-@@ -23471,7 +23471,7 @@ fi
+@@ -16899,7 +16899,7 @@ fi
  
  # Find the GStreamer elements we use, and warn if they are not present.
  
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.2 2008/12/02 20:32:58 wiz Exp $
 +  if test "x$GST_INSPECT" = "x"; then
      # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
  set dummy gst-inspect-0.10; ac_word=$2
- { echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -23527,7 +23527,7 @@ echo "$as_me: WARNING: The 'vorbisenc' e
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+@@ -16955,7 +16955,7 @@ $as_echo "$as_me: WARNING: The 'vorbisen
    fi
  
  
@@ -19,8 +19,8 @@ $NetBSD: patch-aa,v 1.2 2008/12/02 20:32:58 wiz Exp $
 +  if test "x$GST_INSPECT" = "x"; then
      # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
  set dummy gst-inspect-0.10; ac_word=$2
- { echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -23583,7 +23583,7 @@ echo "$as_me: WARNING: The 'flacenc' ele
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+@@ -17011,7 +17011,7 @@ $as_echo "$as_me: WARNING: The 'flacenc'
    fi
  
  
@@ -28,8 +28,8 @@ $NetBSD: patch-aa,v 1.2 2008/12/02 20:32:58 wiz Exp $
 +  if test "x$GST_INSPECT" = "x"; then
      # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
  set dummy gst-inspect-0.10; ac_word=$2
- { echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -23639,7 +23639,7 @@ echo "$as_me: WARNING: The 'wavenc' elem
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+@@ -17067,7 +17067,7 @@ $as_echo "$as_me: WARNING: The 'wavenc' 
    fi
  
  
@@ -37,4 +37,4 @@ $NetBSD: patch-aa,v 1.2 2008/12/02 20:32:58 wiz Exp $
 +  if test "x$GST_INSPECT" = "x"; then
      # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
  set dummy gst-inspect-0.10; ac_word=$2
- { echo "$as_me:$LINENO: checking for $ac_word" >&5
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
