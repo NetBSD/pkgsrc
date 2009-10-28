@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.44 2009/10/11 16:06:21 tnn Exp $
+# $NetBSD: Makefile.common,v 1.45 2009/10/28 06:42:37 adam Exp $
 
 # used by databases/sqlite3-tcl/Makefile
 
-DISTNAME=	sqlite-3.6.18
+DISTNAME=	sqlite-3.6.19
 PKGNAME=	${DISTNAME:S/-/3-/}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
