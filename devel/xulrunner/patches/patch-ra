@@ -1,4 +1,4 @@
-$NetBSD: patch-ra,v 1.1 2009/09/23 16:46:32 tnn Exp $
+$NetBSD: patch-ra,v 1.1.2.2 2009/10/28 18:13:24 tron Exp $
 
 --- browser/branding/unofficial/locales/browserconfig.properties.orig	2009-08-24 17:52:36.000000000 +0200
 +++ browser/branding/unofficial/locales/browserconfig.properties

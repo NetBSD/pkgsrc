@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2009/10/10 20:01:31 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.1.2.1 2009/10/28 18:13:23 tron Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 1.9.1.
 
@@ -53,6 +53,8 @@ create-rm-wrapper:
 	printf '#!/bin/sh\n[ "$$*" = "-f" ] && exit 0\nexec /bin/rm $$@\n' > \
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
 .include "../../audio/alsa-lib/buildlink3.mk"
