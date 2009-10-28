@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4123 2009/10/28 06:16:40 dholland Exp $
+$NetBSD: CHANGES-2009,v 1.4124 2009/10/28 09:34:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5456,3 +5456,11 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/hunspell-fy_NL version 0.12 [ahoka 2009-10-27]
 	Added textproc/hunspell-pl_PL version 20061202 [ahoka 2009-10-27]
 	Added lang/pict version 4.1 [dholland 2009-10-28]
+	Updated databases/sqlite3 to 3.6.19 [adam 2009-10-28]
+	Updated sysutils/bacula to 3.0.3 [adam 2009-10-28]
+	Updated sysutils/bacula-clientonly to 3.0.3 [adam 2009-10-28]
+	Updated sysutils/bacula-doc to 3.0.3 [adam 2009-10-28]
+	Updated sysutils/bacula-gnome-console to 3.0.3 [adam 2009-10-28]
+	Updated sysutils/bacula-qt-console to 3.0.3 [adam 2009-10-28]
+	Updated sysutils/bacula-tray-monitor to 3.0.3 [adam 2009-10-28]
+	Updated sysutils/bacula-wx-console to 3.0.3 [adam 2009-10-28]
