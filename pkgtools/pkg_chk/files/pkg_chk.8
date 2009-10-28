@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.27 2009/05/04 20:45:41 wiz Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.28 2009/10/28 21:29:00 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -145,7 +145,7 @@ to
 .Fl U
 will result in all default tags being unset
 .It Fl u
-Automatically update any missing packages.
+Automatically update any installed but out of date packages.
 If a binary package exists in
 .Ev PACKAGES
 it will be used in preference to building from source, unless the
