@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/28 18:40:32 drochner Exp $
 bin/sound-juicer
 man/man1/sound-juicer.1
 share/applications/sound-juicer.desktop
@@ -15,6 +15,10 @@ share/gnome/help/sound-juicer/ca/figures/prefs.png
 share/gnome/help/sound-juicer/ca/figures/startup.png
 share/gnome/help/sound-juicer/ca/legal.xml
 share/gnome/help/sound-juicer/ca/sound-juicer.xml
+share/gnome/help/sound-juicer/cs/figures/prefs.png
+share/gnome/help/sound-juicer/cs/figures/startup.png
+share/gnome/help/sound-juicer/cs/legal.xml
+share/gnome/help/sound-juicer/cs/sound-juicer.xml
 share/gnome/help/sound-juicer/de/figures/prefs.png
 share/gnome/help/sound-juicer/de/figures/startup.png
 share/gnome/help/sound-juicer/de/legal.xml
@@ -83,6 +87,7 @@ share/locale/bn/LC_MESSAGES/sound-juicer.mo
 share/locale/bn_IN/LC_MESSAGES/sound-juicer.mo
 share/locale/br/LC_MESSAGES/sound-juicer.mo
 share/locale/ca/LC_MESSAGES/sound-juicer.mo
+share/locale/ca@valencia/LC_MESSAGES/sound-juicer.mo
 share/locale/cs/LC_MESSAGES/sound-juicer.mo
 share/locale/cy/LC_MESSAGES/sound-juicer.mo
 share/locale/da/LC_MESSAGES/sound-juicer.mo
@@ -97,6 +102,7 @@ share/locale/eu/LC_MESSAGES/sound-juicer.mo
 share/locale/fa/LC_MESSAGES/sound-juicer.mo
 share/locale/fi/LC_MESSAGES/sound-juicer.mo
 share/locale/fr/LC_MESSAGES/sound-juicer.mo
+share/locale/ga/LC_MESSAGES/sound-juicer.mo
 share/locale/gl/LC_MESSAGES/sound-juicer.mo
 share/locale/gu/LC_MESSAGES/sound-juicer.mo
 share/locale/he/LC_MESSAGES/sound-juicer.mo
@@ -112,6 +118,7 @@ share/locale/ko/LC_MESSAGES/sound-juicer.mo
 share/locale/ku/LC_MESSAGES/sound-juicer.mo
 share/locale/lt/LC_MESSAGES/sound-juicer.mo
 share/locale/lv/LC_MESSAGES/sound-juicer.mo
+share/locale/mai/LC_MESSAGES/sound-juicer.mo
 share/locale/mk/LC_MESSAGES/sound-juicer.mo
 share/locale/ml/LC_MESSAGES/sound-juicer.mo
 share/locale/mn/LC_MESSAGES/sound-juicer.mo
@@ -151,6 +158,7 @@ share/locale/zh_TW/LC_MESSAGES/sound-juicer.mo
 share/omf/sound-juicer/sound-juicer-C.omf
 share/omf/sound-juicer/sound-juicer-ar.omf
 share/omf/sound-juicer/sound-juicer-ca.omf
+share/omf/sound-juicer/sound-juicer-cs.omf
 share/omf/sound-juicer/sound-juicer-de.omf
 share/omf/sound-juicer/sound-juicer-el.omf
 share/omf/sound-juicer/sound-juicer-en_GB.omf
