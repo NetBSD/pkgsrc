@@ -1,16 +1,9 @@
-# $NetBSD: Makefile.common,v 1.83 2009/08/28 07:43:16 obache Exp $
+# $NetBSD: Makefile.common,v 1.84 2009/10/28 11:07:59 adam Exp $
+#
+# used by graphics/p5-PerlMagick/Makefile
 
-###########################################################################
-#
-# HEADS UP!  NOTE THE FOLLOWING WHEN UPDATING THIS PACKAGE:
-#
-# graphics/p5-PerlMagick also depends on this fragment.  Make sure to
-# remove its PKGREVISION upon update of ImageMagick!
-#
-###########################################################################
-
-IM_MAJOR_VER=		6.5.5
-IM_MINOR_VER=		3
+IM_MAJOR_VER=		6.5.7
+IM_MINOR_VER=		2
 IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
 
 .if (${IM_MINOR_VER} != NONE)
@@ -21,7 +14,6 @@ DISTSUFFIX=	${IM_MAJOR_VER}
 
 DISTNAME=	ImageMagick-${DISTSUFFIX}
 DISTVERSION=	${DISTSUFFIX:S/-/./}
-DIST_SUBDIR=	${DISTNAME}-20090827
 
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.imagemagick.net/pub/ImageMagick/ \
