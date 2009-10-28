@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4124 2009/10/28 09:34:33 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4125 2009/10/28 11:09:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5464,3 +5464,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/bacula-qt-console to 3.0.3 [adam 2009-10-28]
 	Updated sysutils/bacula-tray-monitor to 3.0.3 [adam 2009-10-28]
 	Updated sysutils/bacula-wx-console to 3.0.3 [adam 2009-10-28]
+	Updated graphics/ImageMagick to 6.5.7.2 [adam 2009-10-28]
+	Updated graphics/p5-PerlMagick to 6.5.7.2 [adam 2009-10-28]
