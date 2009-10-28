@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/10/24 12:49:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/10/28 18:53:21 drochner Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -7,7 +7,6 @@ include/vte/vteaccess.h
 include/vte/vtetypebuiltins.h
 include/vte/vteversion.h
 lib/libvte.la
-lib/pkgconfig/pyvte.pc
 lib/pkgconfig/vte.pc
 lib/vte/decset
 lib/vte/interpret
@@ -113,5 +112,4 @@ share/locale/xh/LC_MESSAGES/vte.mo
 share/locale/zh_CN/LC_MESSAGES/vte.mo
 share/locale/zh_HK/LC_MESSAGES/vte.mo
 share/locale/zh_TW/LC_MESSAGES/vte.mo
-share/pygtk/2.0/defs/vte.defs
 share/vte/termcap/xterm
