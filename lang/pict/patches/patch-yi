@@ -1,0 +1,24 @@
+$NetBSD: patch-yi,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+Fix integer types for modern ocaml.
+
+--- Pict/parser.src.orig	2009-10-27 20:26:05.000000000 -0400
++++ Pict/parser.src	2009-10-27 20:27:06.000000000 -0400
+@@ -89,7 +89,7 @@ let ccall fi alloc purity code l =
+ %token <Error.info> GT
+ %token <Error.info> HASH
+ %token <Error.info> INT
+-%token <int Error.withinfo> INTV
++%token <int32 Error.withinfo> INTV
+ %token <string Error.withinfo> ID
+ %token <Error.info> IF
+ %token <Error.info> IMPORT
+@@ -211,7 +211,7 @@ DefList :
+ ;
+ StringSeq :
+   ID StringSeq      {                  $1.v :: $2 }
+-| INTV StringSeq    {    string_of_int $1.v :: $2 }
++| INTV StringSeq    {  Int32.to_string $1.v :: $2 }
+ | STRINGV StringSeq {                  $1.v :: $2 }
+ |                   {                          [] }
+ ;

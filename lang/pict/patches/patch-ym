@@ -1,0 +1,15 @@
+$NetBSD: patch-ym,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+Fix integer types for modern ocaml.
+
+--- Pict/syntax.mli.orig	2009-10-27 20:27:39.000000000 -0400
++++ Pict/syntax.mli	2009-10-27 20:27:51.000000000 -0400
+@@ -74,7 +74,7 @@ and value =
+ | VARv of info * string
+ | BOOLv of info * bool
+ | CHARv of info * char
+-| INTv of info * int
++| INTv of info * int32
+ | LETv of info * dec * value
+ | RECv of info * value * ty option
+ | CONv of info * ty option * value

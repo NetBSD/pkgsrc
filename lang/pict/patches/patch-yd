@@ -1,0 +1,49 @@
+$NetBSD: patch-yd,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+Fix integer types for modern ocaml.
+
+--- Pict/copt.ml.orig	2009-10-27 20:46:49.000000000 -0400
++++ Pict/copt.ml	2009-10-27 21:17:12.000000000 -0400
+@@ -23,10 +23,10 @@ let rec impureExp = function
+   OFFSET(m,e,_) -> m or impureExp e
+ | DEREF(_,_) -> true
+ | CCODE(ci,_,l) ->
+-    ci.Ccode.reader || ci.Ccode.writer || ci.Ccode.alloc > 0 ||
++    ci.Ccode.reader || ci.Ccode.writer || Int32.to_int(ci.Ccode.alloc) > 0 ||
+     List.exists impureExp l
+ | CCALL(ci,_,l) ->
+-    ci.Ccode.reader || ci.Ccode.writer || ci.Ccode.alloc > 0 ||
++    ci.Ccode.reader || ci.Ccode.writer || Int32.to_int(ci.Ccode.alloc) > 0 ||
+     List.exists impureExp l
+ | _ -> false
+ 
+@@ -99,17 +99,17 @@ and inlineExp = function
+ | TAG(x,i) as e ->
+     (match lookupInfo x with
+        VAR v -> TAG(v,i)
+-     | INDEX(v,INT j) -> TAG(v,i+j)
++     | INDEX(v,INT j) -> TAG(v,i+(Int32.to_int j)) (* ? *)
+      | _ -> e)
+ | INDEX(x,INT i) as e ->
+     (match lookupInfo x with
+        VAR v -> INDEX(v,INT i)
+-     | INDEX(v,INT j) -> INDEX(v,INT(i+j))
++     | INDEX(v,INT j) -> INDEX(v,INT(Int32.add i j))
+      | _ -> e)
+ | DEREF(x,i) as e ->
+     (match lookupInfo x with
+        VAR v -> DEREF(v,i)
+-     | INDEX(v,INT j) -> DEREF(v,i+j)
++     | INDEX(v,INT j) -> DEREF(v,i+(Int32.to_int j)) (* ? *)
+      | _ -> e)
+ | OFFSET(m,e,i) ->
+     (match inlineExp e with
+@@ -144,7 +144,7 @@ let optimiseDecl d l = match d with
+ | EXTERN(x) -> if !(Hashtbl.find externUses x) > 0 then d :: l else l
+ | BLOCK(x,v,free,endq,i,c) ->
+   Hashtbl.clear uses; scan c;
+-  if i > 0 then (addUsage free; addUsage endq);
++  if (Int32.compare i Int32.zero) > 0 then (addUsage free; addUsage endq);
+   BLOCK(x,List.fold_left optimiseVar [] v,free,endq,i,optimise c) :: l
+ 
+ let next = ref 0
