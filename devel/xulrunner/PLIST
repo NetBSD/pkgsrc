@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/10/06 15:46:32 tnn Exp $
+@comment $NetBSD: PLIST,v 1.16.2.1 2009/10/28 18:13:23 tron Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -572,6 +572,7 @@ include/xulrunner/unstable/jsgc.h
 include/xulrunner/unstable/jshash.h
 include/xulrunner/unstable/jsinterp.h
 include/xulrunner/unstable/jsiter.h
+include/xulrunner/unstable/jsjava.h
 include/xulrunner/unstable/jslock.h
 include/xulrunner/unstable/jslong.h
 include/xulrunner/unstable/jsmath.h
@@ -619,6 +620,12 @@ include/xulrunner/unstable/mozilla-config.h
 ${PLIST.jit}include/xulrunner/unstable/nanojit.h
 include/xulrunner/unstable/necko-config.h
 include/xulrunner/unstable/netCore.h
+include/xulrunner/unstable/netscape_javascript_JSException.h
+include/xulrunner/unstable/netscape_javascript_JSObject.h
+include/xulrunner/unstable/npapi.h
+include/xulrunner/unstable/npfunctions.h
+include/xulrunner/unstable/npruntime.h
+include/xulrunner/unstable/nptypes.h
 include/xulrunner/unstable/nsASocketHandler.h
 include/xulrunner/unstable/nsAString.h
 include/xulrunner/unstable/nsAXPCNativeCallContext.h
@@ -717,6 +724,7 @@ include/xulrunner/unstable/nsDataHashtable.h
 include/xulrunner/unstable/nsDateTimeFormatCID.h
 include/xulrunner/unstable/nsDebug.h
 include/xulrunner/unstable/nsDebugImpl.h
+include/xulrunner/unstable/nsDefaultPlugin.h
 include/xulrunner/unstable/nsDependentString.h
 include/xulrunner/unstable/nsDependentSubstring.h
 include/xulrunner/unstable/nsDeque.h
@@ -872,6 +880,7 @@ include/xulrunner/unstable/nsIChromeRegistry.h
 include/xulrunner/unstable/nsICipherInfo.h
 include/xulrunner/unstable/nsIClassInfo.h
 include/xulrunner/unstable/nsIClassInfoImpl.h
+include/xulrunner/unstable/nsIClassicPluginFactory.h
 include/xulrunner/unstable/nsIClientAuthDialogs.h
 include/xulrunner/unstable/nsIClipboard.h
 include/xulrunner/unstable/nsIClipboardCommands.h
@@ -924,6 +933,7 @@ include/xulrunner/unstable/nsICookieManager2.h
 include/xulrunner/unstable/nsICookiePermission.h
 include/xulrunner/unstable/nsICookiePromptService.h
 include/xulrunner/unstable/nsICookieService.h
+include/xulrunner/unstable/nsICookieStorage.h
 include/xulrunner/unstable/nsICryptoFIPSInfo.h
 include/xulrunner/unstable/nsICryptoHMAC.h
 include/xulrunner/unstable/nsICryptoHash.h
@@ -1345,6 +1355,7 @@ include/xulrunner/unstable/nsIEntropyCollector.h
 include/xulrunner/unstable/nsIEnumerator.h
 include/xulrunner/unstable/nsIEnvironment.h
 include/xulrunner/unstable/nsIErrorService.h
+include/xulrunner/unstable/nsIEventHandler.h
 include/xulrunner/unstable/nsIEventListener.h
 include/xulrunner/unstable/nsIEventListenerManager.h
 include/xulrunner/unstable/nsIEventStateManager.h
@@ -1369,6 +1380,7 @@ include/xulrunner/unstable/nsIFilePicker.h
 include/xulrunner/unstable/nsIFileProtocolHandler.h
 include/xulrunner/unstable/nsIFileStreams.h
 include/xulrunner/unstable/nsIFileURL.h
+include/xulrunner/unstable/nsIFileUtilities.h
 include/xulrunner/unstable/nsIFind.h
 include/xulrunner/unstable/nsIFocusController.h
 include/xulrunner/unstable/nsIFocusEventSuppressor.h
@@ -1405,6 +1417,7 @@ include/xulrunner/unstable/nsIHTMLCollection.h
 include/xulrunner/unstable/nsIHTMLContentSink.h
 include/xulrunner/unstable/nsIHTMLDocument.h
 include/xulrunner/unstable/nsIHTMLToTextSink.h
+include/xulrunner/unstable/nsIHTTPHeaderListener.h
 include/xulrunner/unstable/nsIHandlerService.h
 include/xulrunner/unstable/nsIHashable.h
 include/xulrunner/unstable/nsIHelperAppLauncherDialog.h
@@ -1441,12 +1454,15 @@ include/xulrunner/unstable/nsIInterfaceInfo.h
 include/xulrunner/unstable/nsIInterfaceInfoManager.h
 include/xulrunner/unstable/nsIInterfaceRequestor.h
 include/xulrunner/unstable/nsIInterfaceRequestorUtils.h
+include/xulrunner/unstable/nsIJRILiveConnectPIPeer.h
+include/xulrunner/unstable/nsIJRILiveConnectPlugin.h
 include/xulrunner/unstable/nsIJRIPlugin.h
 include/xulrunner/unstable/nsIJSContextStack.h
 include/xulrunner/unstable/nsIJSEventListener.h
 include/xulrunner/unstable/nsIJSNativeInitializer.h
 include/xulrunner/unstable/nsIJSON.h
 include/xulrunner/unstable/nsIJSRuntimeService.h
+include/xulrunner/unstable/nsIJVMAuthTools.h
 include/xulrunner/unstable/nsIJVMConfigManager.h
 include/xulrunner/unstable/nsIJVMConsole.h
 include/xulrunner/unstable/nsIJVMManager.h
@@ -1468,6 +1484,7 @@ include/xulrunner/unstable/nsILinkHandler.h
 include/xulrunner/unstable/nsIListBoxObject.h
 include/xulrunner/unstable/nsIListControlFrame.h
 include/xulrunner/unstable/nsILiveConnectManager.h
+include/xulrunner/unstable/nsILiveconnect.h
 include/xulrunner/unstable/nsILivemarkService.h
 include/xulrunner/unstable/nsILoadContext.h
 include/xulrunner/unstable/nsILoadGroup.h
@@ -1550,6 +1567,22 @@ include/xulrunner/unstable/nsIPersistentProperties2.h
 include/xulrunner/unstable/nsIPhonetic.h
 include/xulrunner/unstable/nsIPipe.h
 include/xulrunner/unstable/nsIPlatformCharset.h
+include/xulrunner/unstable/nsIPlugin.h
+include/xulrunner/unstable/nsIPluginDocument.h
+include/xulrunner/unstable/nsIPluginHost.h
+include/xulrunner/unstable/nsIPluginInputStream.h
+include/xulrunner/unstable/nsIPluginInstance.h
+include/xulrunner/unstable/nsIPluginInstanceInternal.h
+include/xulrunner/unstable/nsIPluginInstanceOwner.h
+include/xulrunner/unstable/nsIPluginInstancePeer.h
+include/xulrunner/unstable/nsIPluginInstancePeer2.h
+include/xulrunner/unstable/nsIPluginManager.h
+include/xulrunner/unstable/nsIPluginManager2.h
+include/xulrunner/unstable/nsIPluginStreamInfo.h
+include/xulrunner/unstable/nsIPluginStreamListener.h
+include/xulrunner/unstable/nsIPluginTag.h
+include/xulrunner/unstable/nsIPluginTagInfo.h
+include/xulrunner/unstable/nsIPluginTagInfo2.h
 include/xulrunner/unstable/nsIPluginWidget.h
 include/xulrunner/unstable/nsIPopupBoxObject.h
 include/xulrunner/unstable/nsIPosixLocale.h
@@ -1681,6 +1714,7 @@ include/xulrunner/unstable/nsIScriptTimeoutHandler.h
 include/xulrunner/unstable/nsIScriptableDateFormat.h
 include/xulrunner/unstable/nsIScriptableInputStream.h
 include/xulrunner/unstable/nsIScriptableInterfaces.h
+include/xulrunner/unstable/nsIScriptablePlugin.h
 include/xulrunner/unstable/nsIScriptableRegion.h
 include/xulrunner/unstable/nsIScriptableUConv.h
 include/xulrunner/unstable/nsIScrollBoxObject.h
@@ -1691,7 +1725,9 @@ include/xulrunner/unstable/nsIScrollbarMediator.h
 include/xulrunner/unstable/nsISecretDecoderRing.h
 include/xulrunner/unstable/nsISecureBrowserUI.h
 include/xulrunner/unstable/nsISecureEnv.h
+include/xulrunner/unstable/nsISecureLiveconnect.h
 include/xulrunner/unstable/nsISecurityCheckedComponent.h
+include/xulrunner/unstable/nsISecurityContext.h
 include/xulrunner/unstable/nsISecurityEventSink.h
 include/xulrunner/unstable/nsISecurityInfoProvider.h
 include/xulrunner/unstable/nsISecurityPref.h
@@ -1837,6 +1873,7 @@ include/xulrunner/unstable/nsIWebShellServices.h
 include/xulrunner/unstable/nsIWidget.h
 include/xulrunner/unstable/nsIWin32Locale.h
 include/xulrunner/unstable/nsIWindowWatcher.h
+include/xulrunner/unstable/nsIWindowlessPlugInstPeer.h
 include/xulrunner/unstable/nsIWritablePropertyBag.h
 include/xulrunner/unstable/nsIWritablePropertyBag2.h
 include/xulrunner/unstable/nsIWyciwygChannel.h
@@ -1920,6 +1957,8 @@ include/xulrunner/unstable/nsPIDOMEventTarget.h
 include/xulrunner/unstable/nsPIDOMStorage.h
 include/xulrunner/unstable/nsPIDOMWindow.h
 include/xulrunner/unstable/nsPIPlacesDatabase.h
+include/xulrunner/unstable/nsPIPluginHost.h
+include/xulrunner/unstable/nsPIPluginInstancePeer.h
 include/xulrunner/unstable/nsPIPromptService.h
 include/xulrunner/unstable/nsPISocketTransportService.h
 include/xulrunner/unstable/nsPIWindowRoot.h
@@ -1929,6 +1968,10 @@ include/xulrunner/unstable/nsPSPrinters.h
 include/xulrunner/unstable/nsPaperPS.h
 include/xulrunner/unstable/nsParserCIID.h
 include/xulrunner/unstable/nsParserDataListener.h
+include/xulrunner/unstable/nsPluginError.h
+include/xulrunner/unstable/nsPluginLogging.h
+include/xulrunner/unstable/nsPluginNativeWindow.h
+include/xulrunner/unstable/nsPluginsCID.h
 include/xulrunner/unstable/nsPoint.h
 include/xulrunner/unstable/nsPrefsCID.h
 include/xulrunner/unstable/nsPresContext.h
@@ -2053,6 +2096,9 @@ include/xulrunner/unstable/nsXULAppAPI.h
 include/xulrunner/unstable/nsXULPopupManager.h
 include/xulrunner/unstable/nscore.h
 include/xulrunner/unstable/nsjvm.h
+include/xulrunner/unstable/nsplugin.h
+include/xulrunner/unstable/nsplugindefs.h
+include/xulrunner/unstable/nspluginroot.h
 include/xulrunner/unstable/nspr.h
 include/xulrunner/unstable/nspr_md.h
 include/xulrunner/unstable/nsrootidl.h
@@ -2241,7 +2287,6 @@ lib/xulrunner-sdk/sdk/lib/libnssutil.a
 lib/xulrunner-sdk/sdk/lib/libplc4.so
 lib/xulrunner-sdk/sdk/lib/libplds4.so
 lib/xulrunner-sdk/sdk/lib/libsmime.a
-lib/xulrunner-sdk/sdk/lib/libsoftokn.a
 lib/xulrunner-sdk/sdk/lib/libssl.a
 lib/xulrunner-sdk/sdk/lib/libunicharutil_external_s.a
 lib/xulrunner-sdk/sdk/lib/libxpcom.so
@@ -2458,6 +2503,7 @@ lib/xulrunner/libmozjs.so
 lib/xulrunner/libnspr4.so
 lib/xulrunner/libnss3.so
 lib/xulrunner/libnssckbi.so
+lib/xulrunner/libnssdbm3.chk
 lib/xulrunner/libnssdbm3.so
 lib/xulrunner/libnssutil3.so
 lib/xulrunner/libplc4.so
