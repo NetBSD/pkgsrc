@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.15 2008/08/11 12:14:10 martti Exp $
+$NetBSD: patch-aa,v 1.16 2009/10/28 01:20:33 joerg Exp $
 
 Buildlink takes care of include files.
 
@@ -9,7 +9,7 @@ Buildlink takes care of include files.
  
  if test -z "$SKIP_MOTIF"; then
 -  gui_XXX="/usr/XXX/Motif* /usr/Motif*/XXX /usr/XXX /usr/shlib /usr/X11*/XXX /usr/XXX/X11* /usr/dt/XXX /local/Motif*/XXX /local/XXX/Motif* /usr/local/Motif*/XXX /usr/local/XXX/Motif* /usr/local/XXX /usr/local/X11*/XXX /usr/local/LessTif/Motif*/XXX $MOTIFHOME/XXX"
-+  gui_XXX="${BUILDLINK_DIR}/include"
++  gui_XXX="${MOTIFBASE}/include"
      GUI_INC_LOC="`echo $GUI_INC_LOC|sed 's%-I%%g'`"
  
    { $as_echo "$as_me:$LINENO: checking for location of Motif GUI includes" >&5
