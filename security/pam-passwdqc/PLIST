@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/28 18:46:20 drochner Exp $
+lib/libpasswdqc.so
+lib/security/pam_passwdqc.so
+man/man5/passwdqc.conf.5
+man/man8/pam_passwdqc.8
