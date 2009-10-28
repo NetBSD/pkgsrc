@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2009/10/28 09:25:23 adam Exp $
+
+--- src/cpp/Makefile.orig	2009-08-30 17:43:48.000000000 +0200
++++ src/cpp/Makefile
+@@ -139,7 +139,7 @@ libxmlrpc_client++.a: $(LIBXMLRPC_CLIENT
+ #  RULES TO COMPILE OBJECT MODULES FOR LIBRARIES
+ #-----------------------------------------------------------------------------
+ 
+-CXXFLAGS = $(CXXFLAGS_COMMON) $(CFLAGS_PERSONAL) $(CADD)
++CXXFLAGS = $(CXXFLAGS_COMMON) $(CFLAGS_SHLIB) $(CFLAGS_PERSONAL) $(CADD)
+ 
+ XmlRpcCpp.o:%.o:%.cpp
+ 	$(CXX) -c $(BASIC_INCLUDES) $(CXXFLAGS) $<
