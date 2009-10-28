@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2009/10/27 18:50:39 drochner Exp $
+$NetBSD: patch-ab,v 1.7 2009/10/28 09:25:23 adam Exp $
 
 --- Makefile.config.in.orig	2008-03-25 15:24:58.000000000 +0100
 +++ Makefile.config.in
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.6 2009/10/27 18:50:39 drochner Exp $
  ifeq ($(HOST_OS),aix)
    # This code is not finished; that's why we don't set SHARED_LIB_TYPE.
    # If you can finish it and make it work on AIX, please do.
-@@ -188,11 +197,30 @@ ifeq ($(HOST_OS),osf)
+@@ -188,17 +197,36 @@ ifeq ($(HOST_OS),osf)
  endif
  
  ifeq ($(findstring netbsd,$(HOST_OS)),netbsd)
@@ -53,3 +53,10 @@ $NetBSD: patch-ab,v 1.6 2009/10/27 18:50:39 drochner Exp $
  endif
  
  ifeq ($(HOST_OS),darwin)
+   # This code is not finished; that's why we don't set SHARED_LIB_TYPE.
+   # If you can finish it and make it work on AIX, please do.
+-  # SHARED_LIB_TYPE = dylib
++  SHARED_LIB_TYPE = dylib
+   SHLIB_SUFFIX = dylib
+ endif
+ 
