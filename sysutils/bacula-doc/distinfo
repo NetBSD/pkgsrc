@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2009/08/24 09:20:29 adam Exp $
+$NetBSD: distinfo,v 1.19 2009/10/28 09:30:22 adam Exp $
 
-SHA1 (bacula-docs-3.0.2.tar.bz2) = 67d5e863525d2f3c0ef34108925f0fdf0ed007f2
-RMD160 (bacula-docs-3.0.2.tar.bz2) = 7a5a1edaa1e4705948758a9f3454af474645e11b
-Size (bacula-docs-3.0.2.tar.bz2) = 45942710 bytes
+SHA1 (bacula-docs-3.0.3.tar.bz2) = 3730926386374ba1fa2cc16b25ed173b1ee19024
+RMD160 (bacula-docs-3.0.3.tar.bz2) = bd6ae9f8160641048d7282308ef6fd1313d086dc
+Size (bacula-docs-3.0.3.tar.bz2) = 49935136 bytes
