@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2009/08/26 21:06:46 sno Exp $
+@comment $NetBSD: PLIST,v 1.65 2009/10/28 11:07:59 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -35,6 +35,7 @@ include/ImageMagick/magick/animate.h
 include/ImageMagick/magick/annotate.h
 include/ImageMagick/magick/api.h
 include/ImageMagick/magick/artifact.h
+include/ImageMagick/magick/attribute.h
 include/ImageMagick/magick/blob.h
 include/ImageMagick/magick/cache-view.h
 include/ImageMagick/magick/cache.h
@@ -42,6 +43,7 @@ include/ImageMagick/magick/cipher.h
 include/ImageMagick/magick/client.h
 include/ImageMagick/magick/coder.h
 include/ImageMagick/magick/color.h
+include/ImageMagick/magick/colormap.h
 include/ImageMagick/magick/colorspace.h
 include/ImageMagick/magick/compare.h
 include/ImageMagick/magick/composite.h
@@ -976,11 +978,13 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/MagickWand/wand_8h.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/MagickWand/wandtest_8c.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/animate.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/annotate.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/attribute.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/blob.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/cache-view.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/cache.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/cipher.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/color.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/colormap.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/colorspace.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/compare.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/composite.html
