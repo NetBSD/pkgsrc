@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/10/28 00:11:59 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2009/10/28 00:12:36 joerg Exp $
 
 DISTNAME=	xtide-2.8.3
 PKGREVISION=	2
@@ -38,8 +38,8 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} == "modular"
-CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE:Q}/lib${LIBABISUFFIX:Q}
+CONFIGURE_ARGS+=	--x-includes=${PREFIX}/include
+CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/lib
 .endif
 
 .include "../../graphics/png/buildlink3.mk"
