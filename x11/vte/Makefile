@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2009/10/24 12:49:59 drochner Exp $
+# $NetBSD: Makefile,v 1.71 2009/10/28 18:53:21 drochner Exp $
 #
 
-DISTNAME=	vte-0.22.2
+DISTNAME=	vte-0.22.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.22/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +21,6 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--with-ft-exec-prefix=${BUILDLINK_PREFIX.freetype2}
 
-PKGCONFIG_OVERRIDE+=	pyvte.pc.in
 PKGCONFIG_OVERRIDE+=	vte.pc.in
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.10.0
@@ -36,7 +35,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
