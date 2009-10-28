@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2009/09/08 20:27:11 drochner Exp $
+# $NetBSD: Makefile.common,v 1.16 2009/10/28 18:26:20 drochner Exp $
 #
 # used by audio/gst-plugins0.10-dts/Makefile
 # used by audio/gst-plugins0.10-faad/Makefile
@@ -9,7 +9,7 @@
 # used by multimedia/gst-plugins0.10-xvid/Makefile
 
 GST_PLUGINS0.10_TYPE=	bad
-GST_PLUGINS0.10_VER=	0.10.14
+GST_PLUGINS0.10_VER=	0.10.16
 
 # Disable all drivers and features by default.
 .for driver in	amrwb \
