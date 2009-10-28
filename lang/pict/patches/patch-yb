@@ -1,0 +1,33 @@
+$NetBSD: patch-yb,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+Fix integer types for modern ocaml.
+
+--- Pict/ccode.mli.orig	2009-10-27 20:32:28.000000000 -0400
++++ Pict/ccode.mli	2009-10-27 21:15:44.000000000 -0400
+@@ -8,7 +8,7 @@ type var =
+ type kind = EXP | STATEMENT
+ 
+ type info = {
+-  alloc: int;        (* Number of words allocated by the C code *)
++  alloc: int32;      (* Number of words allocated by the C code *)
+   const: bool;       (* True if the C code is a constant *)
+   reader: bool;      (* True if the C code reads from updatable storage *)
+   writer: bool;      (* True if the C code writes to updatable storage *)
+@@ -26,7 +26,7 @@ type ty =
+ | POINTER
+ 
+ type decl =
+-  BLOCK of var * (var * ty) list * var * var * int * code
++  BLOCK of var * (var * ty) list * var * var * int32 * code
+ | CONST of var * exp list
+ | BYTES of var * string
+ | TOPLEVEL of string
+@@ -43,7 +43,7 @@ and code =
+ | NULL
+ 
+ and exp =
+-  INT of int
++  INT of int32
+ | VAR of var
+ | ADDR of var
+ | OFFSET of bool * exp * int
