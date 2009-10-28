@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:31 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/10/28 01:02:03 joerg Exp $
 #
 
 DISTNAME=	agg-2.5
@@ -21,6 +21,13 @@ PKGCONFIG_OVERRIDE+=	libagg.pc.in
 
 pre-configure:
 	cd ${WRKSRC}; chmod +x autogen.sh; ./autogen.sh
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "modular"
+CONFIGURE_ARGS+=	--x-includes=${PREFIX}/include
+CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/lib
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
