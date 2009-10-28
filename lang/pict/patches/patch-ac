@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+DESTDIR support.
+
+--- Lib/Makefile~	1998-03-22 18:27:04.000000000 -0500
++++ Lib/Makefile	2009-10-23 23:35:22.000000000 -0400
+@@ -9,15 +9,15 @@ include $(SRCDIR)/PiRules
+ PIFLAGS += -reset lib 
+ 
+ install:: $(TARGETS)
+-	mkdir -p $(INSTALLLIB)/Contrib $(INSTALLLIB)/Posix
+-	mkdir -p $(INSTALLLIB)/Picture $(INSTALLLIB)/Std
+-	mkdir -p $(INSTALLLIB)/X11
+-	cp *.px *.px.o $(INSTALLLIB)
+-	cp Contrib/*.px Contrib/*.px.o $(INSTALLLIB)/Contrib
+-	cp Posix/*.px Posix/*.px.o $(INSTALLLIB)/Posix
+-	cp Picture/*.px Picture/*.px.o $(INSTALLLIB)/Picture
+-	cp Std/*.px Std/*.px.o $(INSTALLLIB)/Std
+-	cp X11/*.px X11/*.px.o $(INSTALLLIB)/X11
++	mkdir -p $(DESTDIR)$(INSTALLLIB)/Contrib $(DESTDIR)$(INSTALLLIB)/Posix
++	mkdir -p $(DESTDIR)$(INSTALLLIB)/Picture $(DESTDIR)$(INSTALLLIB)/Std
++	mkdir -p $(DESTDIR)$(INSTALLLIB)/X11
++	cp *.px *.px.o $(DESTDIR)$(INSTALLLIB)
++	cp Contrib/*.px Contrib/*.px.o $(DESTDIR)$(INSTALLLIB)/Contrib
++	cp Posix/*.px Posix/*.px.o $(DESTDIR)$(INSTALLLIB)/Posix
++	cp Picture/*.px Picture/*.px.o $(DESTDIR)$(INSTALLLIB)/Picture
++	cp Std/*.px Std/*.px.o $(DESTDIR)$(INSTALLLIB)/Std
++	cp X11/*.px X11/*.px.o $(DESTDIR)$(INSTALLLIB)/X11
+ 
+ ifneq ($(wildcard *.src),)
+ 

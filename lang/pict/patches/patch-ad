@@ -1,0 +1,28 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+DESTDIR support.
+
+--- Pict/Makefile~	1998-03-22 18:27:14.000000000 -0500
++++ Pict/Makefile	2009-10-23 23:36:18.000000000 -0400
+@@ -6,7 +6,7 @@ PIFLAGS += -reset lib
+ 
+ all:: pict
+ 
+-$(INSTALLDIR)/% : % Makefile ../SiteSpecific
++$(DESTDIR)$(INSTALLDIR)/% : % Makefile ../SiteSpecific
+ 	@echo Generating $@
+ 	@rm -f $@
+ 	@echo '#!/bin/sh'                 >$@
+@@ -27,9 +27,9 @@ $(INSTALLDIR)/% : % Makefile ../SiteSpec
+ 	@echo exec $(INSTALLLIB)/$< $$'*' >>$@
+ 	@chmod 755 $@
+ 
+-install:: all $(INSTALLDIR)/pict
+-	cp -f pict $(INSTALLLIB)
+-	chmod 755 $(INSTALLLIB)/pict
++install:: all $(DESTDIR)$(INSTALLDIR)/pict
++	cp -f pict $(DESTDIR)$(INSTALLLIB)
++	chmod 755 $(DESTDIR)$(INSTALLLIB)/pict
+ 
+ ifneq ($(wildcard *.ml),)
+ 

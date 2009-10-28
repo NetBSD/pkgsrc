@@ -1,0 +1,109 @@
+$NetBSD: patch-ya,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+Fix integer types for modern ocaml.
+
+--- Pict/ccode.ml.orig	2009-10-27 20:32:42.000000000 -0400
++++ Pict/ccode.ml	2009-10-27 21:16:27.000000000 -0400
+@@ -12,7 +12,7 @@ type var =
+ type kind = EXP | STATEMENT
+ 
+ type info = {
+-  alloc: int;        (* Number of words allocated by the C code *)
++  alloc: int32;      (* Number of words allocated by the C code *)
+   const: bool;       (* True if the C code is a constant *)
+   reader: bool;      (* True if the C code reads from updatable storage *)
+   writer: bool;      (* True if the C code writes to updatable storage *)
+@@ -26,7 +26,7 @@ type ty =
+ | POINTER
+ 
+ type decl =
+-  BLOCK of var * (var * ty) list * var * var * int * code
++  BLOCK of var * (var * ty) list * var * var * int32 * code
+ | CONST of var * exp list
+ | BYTES of var * string
+ | TOPLEVEL of string
+@@ -43,7 +43,7 @@ and code =
+ | NULL
+ 
+ and exp =
+-  INT of int
++  INT of int32
+ | VAR of var
+ | ADDR of var
+ | OFFSET of bool * exp * int
+@@ -79,6 +79,14 @@ let printDecls os l =
+     |  i -> output_string os (string_of_int i)
+   in
+ 
++  let printInt32 i =
++    if ((Int32.compare i (Int32.of_int (-2))) >= 0) &&
++       ((Int32.compare i (Int32.of_int 9)) <= 0) then
++      printInt (Int32.to_int i)
++    else
++      output_string os (Int32.to_string i)
++  in
++
+   let rec printString os s x =
+     if x = String.length s then output_string os "\\000" else
+     let c = String.get s x in
+@@ -125,16 +133,16 @@ let printDecls os l =
+ 
+   and printExp os = function
+     INT(i) ->
+-      printInt i
++      printInt32 i
+   | VAR(var) ->
+       Var.print os var
+   | ADDR(v) ->
+       output_string os "(Val)&"; Var.print os v
+   | INDEX(v,INT i) ->
+-      if i > 0 then
+-	(Var.print os v; output_char os '+'; printInt i)
+-      else if i < 0 then
+-	(Var.print os v; output_char os '-'; printInt (-i))
++      if (Int32.compare i Int32.zero) > 0 then
++	(Var.print os v; output_char os '+'; printInt32 i)
++      else if (Int32.compare i Int32.zero) < 0 then
++	(Var.print os v; output_char os '-'; printInt32 (Int32.neg i))
+       else
+ 	Var.print os v
+   | INDEX(v,e) ->
+@@ -173,13 +181,13 @@ let printDecls os l =
+       output_string os "void "; Var.print os var;
+       (match l with [] -> output_string os "(void){\n" | _ ->
+        Misc.printList "(void){\nVal " ";\n" "," printLocals os l);
+-      if i > 0 then
++      if (Int32.compare i Int32.zero) > 0 then
+         (Var.print os free; output_string os "=Free;";
+          Var.print os endq; output_string os "=EndQ;\n";
+ 	 output_string os "if("; Var.print os free;
+-	 output_string os "+"; printInt i;
++	 output_string os "+"; printInt32 i;
+ 	 output_string os ">"; Var.print os endq;
+-	 output_string os "){Gc("; printInt i;
++	 output_string os "){Gc("; printInt32 i;
+ 	 output_string os ");";
+ 	 Var.print os free; output_string os "=Free;";
+ 	 Var.print os endq; output_string os "=EndQ;}\n");
+@@ -208,18 +216,18 @@ let formatDecls l = Format.print_flush()
+ 
+ let complexOutput ch v =
+   CODE(
+-    {alloc=9; const=false; reader=false; writer=true; kind=STATEMENT},
++    {alloc=Int32.of_int(9); const=false; reader=false; writer=true; kind=STATEMENT},
+     ["ComplexOutput("; ","; ");"], [ch; v]
+   )
+ 
+ let complexInput ch v =
+   CODE(
+-    {alloc=9; const=false; reader=false; writer=true; kind=STATEMENT},
++    {alloc=Int32.of_int(9); const=false; reader=false; writer=true; kind=STATEMENT},
+     ["ComplexInput("; ","; ");"], [ch; v]
+   )
+ 
+ let pureExp sl l =
+-  CCODE({alloc=0; const=false; reader=false; writer=false; kind=EXP},sl,l)
++  CCODE({alloc=Int32.zero; const=false; reader=false; writer=false; kind=EXP},sl,l)
+ 
+ let sizeOf v = pureExp ["SIZE("; ")"] [v]
+ 

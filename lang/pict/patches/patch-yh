@@ -1,0 +1,58 @@
+$NetBSD: patch-yh,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+Fix integer types for modern ocaml.
+
+--- Pict/optimise.ml.orig	2009-10-27 20:43:05.000000000 -0400
++++ Pict/optimise.ml	2009-10-27 20:46:37.000000000 -0400
+@@ -166,7 +166,7 @@ let scanConst = function
+ 
+ let optTuple rest v =
+   match v with
+-    TUPLE(x,[]) -> Hashtbl.add atomTable x (INT 0); rest
++    TUPLE(x,[]) -> Hashtbl.add atomTable x (INT Int32.zero); rest
+   | TUPLE(x,l) ->
+       (match (Occur.oper x,Occur.proj x,Occur.arg x) with
+          (0,0,0) -> rest
+@@ -262,30 +262,30 @@ and optProc env = function
+ 	match List.map optAtom l with
+ 	  [INT x1; INT x2] as l ->
+ 	    (match sl with
+-	       ["("; " + "; ")"] -> optATOM env x (INT(x1 + x2)) p
+-	     | ["("; " - "; ")"] -> optATOM env x (INT(x1 - x2)) p
+-	     | ["("; " * I("; "))"] -> optATOM env x (INT(x1 * x2)) p
+-	     | ["("; " == "; ")"] -> optATOM env x (BOOL(x1 = x2)) p
+-	     | ["("; " != "; ")"] -> optATOM env x (BOOL(x1 != x2)) p
+-	     | ["("; " > "; ")"] -> optATOM env x (BOOL(x1 > x2)) p
+-	     | ["("; " < "; ")"] -> optATOM env x (BOOL(x1 < x2)) p
+-	     | ["("; " >= "; ")"] -> optATOM env x (BOOL(x1 >= x2)) p
+-	     | ["("; " <= "; ")"] -> optATOM env x (BOOL(x1 <= x2)) p
++	       ["("; " + "; ")"] -> optATOM env x (INT(Int32.add x1 x2)) p
++	     | ["("; " - "; ")"] -> optATOM env x (INT(Int32.sub x1 x2)) p
++	     | ["("; " * I("; "))"] -> optATOM env x (INT(Int32.mul x1 x2)) p
++	     | ["("; " == "; ")"] -> optATOM env x (BOOL((Int32.compare x1 x2) == 0)) p
++	     | ["("; " != "; ")"] -> optATOM env x (BOOL((Int32.compare x1 x2) != 0)) p
++	     | ["("; " > "; ")"] -> optATOM env x (BOOL((Int32.compare x1 x2) > 0)) p
++	     | ["("; " < "; ")"] -> optATOM env x (BOOL((Int32.compare x1 x2) < 0)) p
++	     | ["("; " >= "; ")"] -> optATOM env x (BOOL((Int32.compare x1 x2) >= 0)) p
++	     | ["("; " <= "; ")"] -> optATOM env x (BOOL((Int32.compare x1 x2) <= 0)) p
+ 	     | _ -> CCODE(Some x,ci,sl,l,optProc env p))
+ 	| [INT i; a] as l ->
+ 	    (match sl with
+ 	       ["("; " + "; ")"] ->
+-		 if i = 0 then optATOM env x a p
++		 if i = Int32.zero then optATOM env x a p
+ 		 else CCODE(Some x,ci,sl,l,optProc env p)
+ 	     | ["("; " * I("; ")"] -> CCODE(Some x,ci,sl,[a; INT i],optProc env p)
+ 	     | _ -> CCODE(Some x,ci,sl,l,optProc env p))
+ 	| [a; INT i] as l ->
+ 	    (match sl with
+ 	       ["("; " + "; ")"] ->
+-		 if i = 0 then optATOM env x a p
++		 if i = Int32.zero then optATOM env x a p
+ 		 else CCODE(Some x,ci,sl,l,optProc env p)
+ 	     | ["("; " - "; ")"] ->
+-		 if i = 0 then optATOM env x a p
++		 if i = Int32.zero then optATOM env x a p
+ 		 else CCODE(Some x,ci,sl,l,optProc env p)
+ 	     | _ -> CCODE(Some x,ci,sl,l,optProc env p))
+ 	| [BOOL b; a] as l ->
