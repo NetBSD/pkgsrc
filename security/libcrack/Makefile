@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2006/10/04 21:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/10/28 18:50:53 drochner Exp $
 #
 
 DISTNAME=	cracklib,2.7
 PKGNAME=	libcrack-2.7
 PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	http://www.crypticide.com/users/alecm/security/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	http://www.crypticide.com/alecm/security/cracklib/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.crypticide.com/users/alecm/security/cracklib,2.7.txt
+HOMEPAGE= http://www.crypticide.com/alecm/security/cracklib/cracklib,2.7.txt
 COMMENT=	Password checking library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
