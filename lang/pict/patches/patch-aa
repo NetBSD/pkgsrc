@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+Configure installation dirs for pkgsrc.
+
+--- SiteSpecific.orig	2009-10-23 23:11:58.000000000 -0400
++++ SiteSpecific	2009-10-23 23:28:27.000000000 -0400
+@@ -13,12 +13,12 @@
+ # values for *both* INSTALLDIR and INSTALLLIB.
+ #
+ # Use these settings to install Pict in your own home directory
+-INSTALLDIR = $(HOME)/bin
+-INSTALLLIB = $(HOME)/lib/pict
++#INSTALLDIR = $(HOME)/bin
++#INSTALLLIB = $(HOME)/lib/pict
+ #
+ # Use these settings (as root) to install Pict for system-wide use
+-# INSTALLDIR = /usr/local/bin
+-# INSTALLLIB = /usr/local/lib/pict
++INSTALLDIR = $(PREFIX)/bin
++INSTALLLIB = $(PREFIX)/lib/pict
+ 
+ # The name of the Gnu C compiler.
+ GCC = gcc
+@@ -84,7 +84,7 @@ safelib::
+ # Default values
+ 
+ # Miscellaneous settings
+-SHELL = /bin/sh
++SHELL ?= /bin/sh
+ MAKEFLAGS += --no-builtin-rules
+ CWD = $(shell pwd)
+ 
