@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/10/11 10:49:56 tnn Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/10/28 11:36:36 tnn Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -2287,7 +2287,6 @@ lib/xulrunner-sdk/sdk/lib/libnssutil.a
 lib/xulrunner-sdk/sdk/lib/libplc4.so
 lib/xulrunner-sdk/sdk/lib/libplds4.so
 lib/xulrunner-sdk/sdk/lib/libsmime.a
-lib/xulrunner-sdk/sdk/lib/libsoftokn.a
 lib/xulrunner-sdk/sdk/lib/libssl.a
 lib/xulrunner-sdk/sdk/lib/libunicharutil_external_s.a
 lib/xulrunner-sdk/sdk/lib/libxpcom.so
@@ -2504,6 +2503,7 @@ lib/xulrunner/libmozjs.so
 lib/xulrunner/libnspr4.so
 lib/xulrunner/libnss3.so
 lib/xulrunner/libnssckbi.so
+lib/xulrunner/libnssdbm3.chk
 lib/xulrunner/libnssdbm3.so
 lib/xulrunner/libnssutil3.so
 lib/xulrunner/libplc4.so

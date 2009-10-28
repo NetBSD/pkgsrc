@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2009/10/11 10:49:56 tnn Exp $
+# $NetBSD: Makefile,v 1.61 2009/10/28 11:36:36 tnn Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	firefox-${FIREFOX_VER}
-FIREFOX_VER=	3.5.3
-PKGREVISION=	3
+FIREFOX_VER=	3.5.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,7 +24,6 @@ ALL_ENV+=		MOZILLA_PKG_NAME=firefox
 DISTINFO_FILE=		${.CURDIR}/../../devel/xulrunner/distinfo
 PATCHDIR=		${.CURDIR}/../../devel/xulrunner/patches
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../devel/xulrunner/mozilla-common.mk"
 .include "options.mk"
 
@@ -58,7 +56,7 @@ post-install:
 	  > ${WRKDIR}/firefox
 	${INSTALL_SCRIPT} ${WRKDIR}/firefox ${DESTDIR}${PREFIX}/bin
 
-BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner>=1.9.1.3nb4
+BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner-1.9.1.4{,nb*}
 .include "../../devel/xulrunner/buildlink3.mk"
 PLIST_VARS+=	gnome
 .if !empty(PKG_BUILD_OPTIONS.xulrunner:Mgnome)
