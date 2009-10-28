@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+
+SHA1 (pict-4.1.tar.gz) = e3d3341d4dc54ed015b0d89eab6760ee7f14c5cd
+RMD160 (pict-4.1.tar.gz) = aea1df3530387c592a1c5eb9e8f464e242109f86
+Size (pict-4.1.tar.gz) = 1062078 bytes
+SHA1 (patch-aa) = 3b7a643d157414683018448a20d9dea8b22ec8f8
+SHA1 (patch-ab) = 95faebd4a9f85d308844f16f0e589a827e8a0fae
+SHA1 (patch-ac) = e6e93f42efc49d6d3a37335b4a40ec5694b2e0d4
+SHA1 (patch-ad) = 5867631186c5973b76d81704306fb142e479b72d
+SHA1 (patch-ae) = 5eaf7be65894e22a7200e8075dfb988722220765
+SHA1 (patch-af) = 38a20d8bf945b3a3662d4c4ebc0d7158eac607ec
+SHA1 (patch-ya) = d7513a4431ede203217bb39feb42b62c2f9784b0
+SHA1 (patch-yb) = 19c3a5d892f253a450f10ce468b8238653543ee5
+SHA1 (patch-yc) = abc0298eedeb0d459ce067567f96c759df025eb1
+SHA1 (patch-yd) = 4fac383dc8c8fd862f9f3a3ee49585cf51ce87d5
+SHA1 (patch-ye) = e247389fcf286b7121b20f51a4e5d75c3ab7cd47
+SHA1 (patch-yf) = 46c5e4471e647dfa980b6ae11d92f4a6ae7cb163
+SHA1 (patch-yg) = 9874fcadf01644e18667ef048d7045d9b5be9c59
+SHA1 (patch-yh) = dbf12f2a43d740e8f429065bb098654be992c4cc
+SHA1 (patch-yi) = 4cb6d8232c2b9d33478bf4a26bc3b8a705fb15ce
+SHA1 (patch-yj) = ebc56cc20e194238ee18c7b7f35957214d4b7282
+SHA1 (patch-yk) = fd95429fc9670913adce03d23c39a043c40fad3c
+SHA1 (patch-yl) = 65e69f2e8c0e10ab7618532dec14248cb45f85b5
+SHA1 (patch-ym) = f43515051bf75358006e64022b51e7b3eb146ab2
