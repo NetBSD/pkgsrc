@@ -1,7 +1,9 @@
-# $NetBSD: Makefile.common,v 1.45 2009/10/28 06:42:37 adam Exp $
+# $NetBSD: Makefile.common,v 1.46 2009/10/28 16:46:51 tnn Exp $
 
 # used by databases/sqlite3-tcl/Makefile
 
+# When updating this package, you must regenerate patch-ab!
+# It's required to avoid a build dependency on tcl.
 DISTNAME=	sqlite-3.6.19
 PKGNAME=	${DISTNAME:S/-/3-/}
 CATEGORIES=	databases
