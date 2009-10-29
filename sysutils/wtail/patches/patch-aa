@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/02/16 00:25:30 salo Exp $
+$NetBSD: patch-aa,v 1.2 2009/10/29 21:58:38 tnn Exp $
 
---- Makefile.orig	Tue Jan 14 00:12:57 2003
-+++ Makefile	Sun Feb 16 01:09:18 2003
+--- Makefile.orig	2003-01-14 00:12:57.000000000 +0100
++++ Makefile
 @@ -5,7 +5,7 @@
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/02/16 00:25:30 salo Exp $
  TMPDIR  = ~/tmp
  
  # Variables that you probably don't want to modify
-@@ -22,12 +22,12 @@
+@@ -22,12 +22,14 @@ clean:
  	rm -f $(OBJ) wtail
  
  install:
@@ -21,16 +21,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/02/16 00:25:30 salo Exp $
 -	mkdir -p "$(MAN)"/man1
 -	sed 's/@{VERSION}/'$(VERSION)'/g' wtail.1 >"$(MAN)"/man1/wtail.1
 -	touch -r wtail.1 "$(MAN)"/man1/wtail.1
-+	${BSD_INSTALL_PROGRAM} wtail $(PREFIX)/bin/
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(PREFIX)/bin
++	${BSD_INSTALL_PROGRAM} wtail $(DESTDIR)$(PREFIX)/bin
 +	${SED} 's/@{VERSION}/'$(VERSION)'/g' wtail.1 > wtail.1.fixed
-+	${BSD_INSTALL_MAN} wtail.1.fixed $(PREFIX)/man/man1/wtail.1
-+	${BSD_INSTALL_DATA_DIR} $(PREFIX)/share/doc/wtail
++	${BSD_INSTALL_MAN_DIR} $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1
++	${BSD_INSTALL_MAN} wtail.1.fixed $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1/wtail.1
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(PREFIX)/share/doc/wtail
 +	${BSD_INSTALL_DATA} README CHANGES COPYING FAQ VERSION		\
-+		$(PREFIX)/share/doc/wtail/
++		$(DESTDIR)$(PREFIX)/share/doc/wtail/
  
  test: chatter
  	./chatter /tmp/wtail.a /tmp/wtail.b /tmp/wtail.c		\
-@@ -51,7 +51,7 @@
+@@ -51,7 +53,7 @@ dist:
  	arc=$(ARC); cd $(TMPDIR) && tar -cf - $$arc | gzip >$$arc.tar.gz
  
  wtail: $(OBJ)
