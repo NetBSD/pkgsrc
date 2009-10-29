@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2009/10/21 15:57:25 drochner Exp $
+# $NetBSD: Makefile,v 1.75 2009/10/29 23:05:00 drochner Exp $
 #
 
 DISTNAME=	libgnome-2.28.0
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.28/}
 EXTRACT_SUFX=	.tar.bz2
@@ -54,12 +55,20 @@ GCONF_SCHEMAS+=	desktop_gnome_applications_at_mobility.schemas
 GCONF_SCHEMAS+=	desktop_gnome_applications_at_visual.schemas
 GCONF_SCHEMAS+=	desktop_gnome_applications_office.schemas
 
+PKG_OPTIONS_VAR= PKG_OPTIONS.libgnome
+PKG_SUPPORTED_OPTIONS= esound
+.include "../../mk/bsd.options.mk"
+.if !empty(PKG_OPTIONS:Mesound)
+.include "../../audio/esound/buildlink3.mk"
 BUILDLINK_API_DEPENDS.audiofile+=	libaudiofile>=0.2.3
+.include "../../audio/libaudiofile/buildlink3.mk"
+.else
+CONFIGURE_ARGS+= --disable-esd
+.endif
+
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.8.0
 BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.13.0
 
-.include "../../audio/esound/buildlink3.mk"
-.include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
@@ -67,6 +76,4 @@ BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.13.0
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
