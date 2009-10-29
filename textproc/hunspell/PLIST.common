@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.3 2009/06/14 21:36:31 joerg Exp $
-share/doc/hunspell-${DISTNAME}/README_${DISTNAME}.txt
+@comment $NetBSD: PLIST.common,v 1.4 2009/10/29 22:57:10 ahoka Exp $
+${PLIST.readme}share/doc/hunspell-${DISTNAME}/README_${DISTNAME}.txt
 share/hunspell/${DISTNAME}.aff
 share/hunspell/${DISTNAME}.dic

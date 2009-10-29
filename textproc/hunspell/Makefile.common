@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2009/08/25 11:57:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2009/10/29 22:57:10 ahoka Exp $
 # used by textproc/hunspell-af_ZA/Makefile
 # used by textproc/hunspell-bg_BG/Makefile
 # used by textproc/hunspell-ca_ES/Makefile
@@ -25,6 +25,10 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://ftp.services.openoffice.org/pub/OpenOffice.org/contrib/dictionaries/
 HOMEPAGE=	http://wiki.services.openoffice.org/wiki/Dictionaries
 
+# Whether to install readme files for dict
+HUNDICT_INSTALL_README?=	yes
+PLIST_VARS=	readme
+
 EXTRACT_SUFX=	.zip
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
@@ -37,10 +41,16 @@ DIST_SUBDIR=		hunspell-dictionaries/${DISTNAME}-${VERSION}
 PLIST_SRC=		../../textproc/hunspell/PLIST.common
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
+.if ${HUNDICT_INSTALL_README} == "yes"
+PLIST.readme=		yes
+.endif
+
 INSTALLATION_DIRS=	share/hunspell share/doc/hunspell-${DISTNAME}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.aff ${DESTDIR}${PREFIX}/share/hunspell
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.dic ${DESTDIR}${PREFIX}/share/hunspell
+.if ${HUNDICT_INSTALL_README} == "yes"
 	${INSTALL_DATA} ${WRKSRC}/README_${DISTNAME}.txt \
 	${DESTDIR}${PREFIX}/share/doc/hunspell-${DISTNAME}
+.endif
