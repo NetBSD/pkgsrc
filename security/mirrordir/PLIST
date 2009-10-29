@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:13:32 joerg Exp $
-bin/mirrordir
-bin/forward
+@comment $NetBSD: PLIST,v 1.4 2009/10/29 22:24:51 tnn Exp $
 bin/copydir
-bin/recursdir
+bin/forward
+bin/mirrordir
 bin/pslogin
+bin/recursdir
 bin/secure-mcserv
-etc/pam.d/secure-mcserv
-etc/ssocket/accept.cs
-etc/ssocket/connect.cs
-etc/ssocket/arcencrypt.cs
-etc/ssocket/arcinit.cs
-lib/libmirrordirz.la
 lib/libdiffie.la
-man/man1/mirrordir.1
+lib/libmirrordirz.la
 man/man1/copydir.1
-man/man1/recursdir.1
-man/man1/pslogin.1
-man/man1/secure-mcserv.1
 man/man1/forward.1
+man/man1/mirrordir.1
+man/man1/pslogin.1
+man/man1/recursdir.1
+man/man1/secure-mcserv.1
+share/examples/mirrordir/pam.d/secure-mcserv
 share/examples/mirrordir/secure-mcservusers
+share/examples/mirrordir/ssocket/accept.cs
+share/examples/mirrordir/ssocket/arcencrypt.cs
+share/examples/mirrordir/ssocket/arcinit.cs
+share/examples/mirrordir/ssocket/connect.cs
