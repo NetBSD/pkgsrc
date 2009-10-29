@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 20:34:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/29 08:29:03 seb Exp $
 bin/pear
 bin/peardev
 bin/pecl
 lib/php/.channels/.alias/pear.txt
 lib/php/.channels/.alias/pecl.txt
+lib/php/.channels/.alias/phpdocs.txt
 lib/php/.channels/__uri.reg
+lib/php/.channels/doc.php.net.reg
 lib/php/.channels/pear.php.net.reg
 lib/php/.channels/pecl.php.net.reg
 lib/php/.depdb
@@ -49,17 +51,19 @@ lib/php/PEAR/Command/Test.php
 lib/php/PEAR/Command/Test.xml
 lib/php/PEAR/Common.php
 lib/php/PEAR/Config.php
-lib/php/PEAR/Dependency.php
 lib/php/PEAR/Dependency2.php
 lib/php/PEAR/DependencyDB.php
 lib/php/PEAR/Downloader.php
 lib/php/PEAR/Downloader/Package.php
 lib/php/PEAR/ErrorStack.php
 lib/php/PEAR/Exception.php
+lib/php/PEAR/FixPHP5PEARWarnings.php
 lib/php/PEAR/Frontend.php
 lib/php/PEAR/Frontend/CLI.php
 lib/php/PEAR/Installer.php
 lib/php/PEAR/Installer/Role.php
+lib/php/PEAR/Installer/Role/Cfg.php
+lib/php/PEAR/Installer/Role/Cfg.xml
 lib/php/PEAR/Installer/Role/Common.php
 lib/php/PEAR/Installer/Role/Data.php
 lib/php/PEAR/Installer/Role/Data.xml
@@ -75,6 +79,8 @@ lib/php/PEAR/Installer/Role/Src.php
 lib/php/PEAR/Installer/Role/Src.xml
 lib/php/PEAR/Installer/Role/Test.php
 lib/php/PEAR/Installer/Role/Test.xml
+lib/php/PEAR/Installer/Role/Www.php
+lib/php/PEAR/Installer/Role/Www.xml
 lib/php/PEAR/PackageFile.php
 lib/php/PEAR/PackageFile/Generator/v1.php
 lib/php/PEAR/PackageFile/Generator/v2.php
@@ -88,8 +94,8 @@ lib/php/PEAR/Packager.php
 lib/php/PEAR/REST.php
 lib/php/PEAR/REST/10.php
 lib/php/PEAR/REST/11.php
+lib/php/PEAR/REST/13.php
 lib/php/PEAR/Registry.php
-lib/php/PEAR/Remote.php
 lib/php/PEAR/RunTest.php
 lib/php/PEAR/Task/Common.php
 lib/php/PEAR/Task/Postinstallscript.php
@@ -103,6 +109,7 @@ lib/php/PEAR/Task/Windowseol/rw.php
 lib/php/PEAR/Validate.php
 lib/php/PEAR/Validator/PECL.php
 lib/php/PEAR/XMLParser.php
+lib/php/PEAR5.php
 lib/php/Structures/Graph.php
 lib/php/Structures/Graph/Manipulator/AcyclicTest.php
 lib/php/Structures/Graph/Manipulator/TopologicalSorter.php
@@ -111,11 +118,9 @@ lib/php/System.php
 lib/php/data/PEAR/package.dtd
 lib/php/data/PEAR/template.spec
 lib/php/data/Structures_Graph/LICENSE
-lib/php/data/Structures_Graph/genpackage.xml.pl
-lib/php/data/Structures_Graph/package.sh
-lib/php/data/Structures_Graph/publish.sh
 lib/php/doc/Archive_Tar/docs/Archive_Tar.txt
 lib/php/doc/PEAR/INSTALL
+lib/php/doc/PEAR/LICENSE
 lib/php/doc/PEAR/README
 lib/php/doc/Structures_Graph/docs/generate.sh
 lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph.html
@@ -140,9 +145,9 @@ lib/php/doc/Structures_Graph/docs/html/todolist.html
 lib/php/doc/Structures_Graph/docs/tutorials/Structures_Graph/Structures_Graph.pkg
 lib/php/pearcmd.php
 lib/php/peclcmd.php
-lib/php/test/Structures_Graph/tests/README
-lib/php/test/Structures_Graph/tests/all-tests.php
+lib/php/test/Structures_Graph/tests/AllTests.php
 lib/php/test/Structures_Graph/tests/testCase/BasicGraph.php
 share/examples/pear/pear.conf
-@pkgdir lib/php/.registry/.channel.__uri
 @pkgdir lib/php/.registry/.channel.pecl.php.net
+@pkgdir lib/php/.registry/.channel.doc.php.net
+@pkgdir lib/php/.registry/.channel.__uri
