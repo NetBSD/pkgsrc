@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2009/10/29 17:58:50 joerg Exp $
+
+--- cmz80/z80stb.h.orig	2009-10-29 18:37:09.000000000 +0100
++++ cmz80/z80stb.h
+@@ -128,8 +128,6 @@ void CallbackMemWriteWord(WORD wAddr, WO
+ /* inline */ BYTE Srl(BYTE b);
+ /* inline */ BYTE Sla(BYTE b);
+ /* inline */ BYTE Sra(BYTE b);
+-/* inline */ BYTE Inc(BYTE b);
+-/* inline */ BYTE Dec(BYTE b);
+ 
+ /* inline */ WORD Add_2(WORD wArg1, WORD wArg2);
+ /* inline */ WORD Adc_2(WORD wArg1, WORD wArg2);
