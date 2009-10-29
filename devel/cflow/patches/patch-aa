@@ -1,0 +1,71 @@
+$NetBSD: patch-aa,v 1.1 2009/10/29 16:25:57 joerg Exp $
+
+--- configure.orig	2009-07-11 21:36:00.000000000 +0200
++++ configure
+@@ -23533,23 +23533,7 @@ _ACEOF
+ 
+     if test "$USE_NLS" = "yes"; then
+     gt_use_preinstalled_gnugettext=no
+-
+-
+-        if test $gt_api_version -ge 3; then
+-          gt_revision_test_code='
+-#ifndef __GNU_GETTEXT_SUPPORTED_REVISION
+-#define __GNU_GETTEXT_SUPPORTED_REVISION(major) ((major) == 0 ? 0 : -1)
+-#endif
+-typedef int array [2 * (__GNU_GETTEXT_SUPPORTED_REVISION(0) >= 1) - 1];
+-'
+-        else
+           gt_revision_test_code=
+-        fi
+-        if test $gt_api_version -ge 2; then
+-          gt_expression_test_code=' + * ngettext ("", "", 0)'
+-        else
+-          gt_expression_test_code=
+-        fi
+ 
+         { $as_echo "$as_me:$LINENO: checking for GNU gettext in libc" >&5
+ $as_echo_n "checking for GNU gettext in libc... " >&6; }
+@@ -24366,15 +24350,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ $gt_revision_test_code
+ extern int _nl_msg_cat_cntr;
+ extern
+-#ifdef __cplusplus
+-"C"
+-#endif
+-const char *_nl_expand_alias (const char *);
+ int
+ main ()
+ {
+ bindtextdomain ("", "");
+-return * gettext ("")$gt_expression_test_code + _nl_msg_cat_cntr + *_nl_expand_alias ("")
++return * gettext ("")$gt_expression_test_code + _nl_msg_cat_cntr
+   ;
+   return 0;
+ }
+@@ -24423,15 +24403,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ $gt_revision_test_code
+ extern int _nl_msg_cat_cntr;
+ extern
+-#ifdef __cplusplus
+-"C"
+-#endif
+-const char *_nl_expand_alias (const char *);
+ int
+ main ()
+ {
+ bindtextdomain ("", "");
+-return * gettext ("")$gt_expression_test_code + _nl_msg_cat_cntr + *_nl_expand_alias ("")
++return * gettext ("")$gt_expression_test_code + _nl_msg_cat_cntr
+   ;
+   return 0;
+ }
+@@ -25208,6 +25184,8 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
