@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.9 2009/10/28 18:13:42 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.10 2009/10/29 22:15:05 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -31,3 +31,5 @@ pkg_install: bug fix
 Pullup ticket #2923 - requested by tnn
 xulrunner: security update
 firefox: security update
+Pullup ticket #2926 - requested by joerg
+mk/pkginstall/usergroup: portability fix
