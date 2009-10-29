@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $Id: pear.sh,v 1.2 2008/12/20 14:42:50 adrianp Exp $
+# $Id: pear.sh,v 1.3 2009/10/29 08:29:03 seb Exp $
 
 # first find which PHP binary to use
 if test "x$PHP_PEAR_PHP_BIN" != "x"; then
@@ -27,4 +27,4 @@ else
   fi
 fi
 
-exec $PHP -C -q $INCARG -d output_buffering=1 -d open_basedir="" -d safe_mode=0 -d register_argc_argv="On" -d auto_prepend_file="" -d auto_append_file="" $INCDIR/pearcmd.php "$@"
+exec $PHP -C -q $INCARG -d output_buffering=1 -d variables_order=EGPCS -d open_basedir="" -d safe_mode=0 -d register_argc_argv="On" -d auto_prepend_file="" -d auto_append_file="" $INCDIR/pearcmd.php "$@"
