@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2009/10/22 17:30:39 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2009/10/29 22:55:00 drochner Exp $
 #
 
 DISTNAME=		gnome-applets-2.28.0
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.28/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,9 +12,6 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 panel applets
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-BUILD_DEPENDS+=		gst-plugins0.10-esound>=0.10.0:../../audio/gst-plugins0.10-esound
-BUILD_DEPENDS+=		gst-plugins0.10-oss>=0.10.0:../../audio/gst-plugins0.10-oss
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
