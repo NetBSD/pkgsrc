@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2009/06/11 04:39:07 martti Exp $
+# $NetBSD: Makefile,v 1.97 2009/10/29 07:06:09 martti Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CLAMAV_VERSION=		0.95.2
+CLAMAV_VERSION=		0.95.3
 
 USE_LIBTOOL=		yes
 
