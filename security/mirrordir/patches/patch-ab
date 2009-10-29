@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/12/19 14:44:07 agc Exp $
+$NetBSD: patch-ab,v 1.2 2009/10/29 22:24:51 tnn Exp $
 
---- pam/Makefile.in	2001/12/19 13:54:20	1.1
-+++ pam/Makefile.in	2001/12/19 13:54:39
-@@ -75,9 +75,9 @@
+--- pam/Makefile.in.orig	2000-01-16 22:19:31.000000000 +0100
++++ pam/Makefile.in
+@@ -75,9 +75,9 @@ WRAPLIB = @WRAPLIB@
  system = @system@
  
  pkgdata_DATA = secure-mcserv
 -pkgdatadir = /etc/pam.d
-+pkgdatadir = ${PKG_SYSCONFDIR}/pam.d
++pkgdatadir = ${prefix}/share/examples/mirrordir/pam.d
  sysconf_DATA = secure-mcservusers
 -sysconfdir = /etc
 +sysconfdir = ${prefix}/share/examples/mirrordir
