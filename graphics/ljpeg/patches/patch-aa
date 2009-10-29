@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/21 21:30:14 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/10/29 22:34:33 tnn Exp $
 
---- Makefile.orig	Wed Jun 22 18:48:40 1994
+--- Makefile.orig	1994-06-22 18:48:40.000000000 +0200
 +++ Makefile
 @@ -1,19 +1,19 @@
  #
  # Set BINDIR to where you want the binaries to go.
  #
 -BINDIR= /usr/public/sun4/bin
-+BINDIR= ${PREFIX}/bin
++BINDIR= ${DESTDIR}${PREFIX}/bin
  
  #
  # Set MANDIR to where you want the man pages to go.
  #
 -MANDIR= /usr/public/share/man/man1
-+MANDIR= ${PREFIX}/man/man1
++MANDIR= ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
  
  #
  # Select your favorite compiler and compilation flags here.
