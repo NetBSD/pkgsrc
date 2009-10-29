@@ -1,10 +1,10 @@
-$NetBSD: patch-al,v 1.15 2009/05/22 09:27:22 martti Exp $
+$NetBSD: patch-al,v 1.16 2009/10/29 12:43:49 martti Exp $
 
 Correct examples directory.
 
---- examples/Makefile.in.orig	2009-05-19 16:45:20.000000000 +0300
-+++ examples/Makefile.in	2009-05-22 12:22:34.000000000 +0300
-@@ -251,7 +251,7 @@
+--- examples/Makefile.in.orig	2009-10-24 13:47:13.000000000 +0300
++++ examples/Makefile.in	2009-10-29 14:35:23.000000000 +0200
+@@ -303,7 +303,7 @@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  EXTRA_DIST = cgi-demo.cgi.in
