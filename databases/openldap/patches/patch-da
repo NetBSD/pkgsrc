@@ -1,7 +1,9 @@
-$NetBSD: patch-da,v 1.1 2009/01/31 15:59:04 manu Exp $
---- contrib/slapd-modules/smbk5pwd/Makefile.orig	2004-04-02 11:06:38.000000000 +0000
-+++ contrib/slapd-modules/smbk5pwd/Makefile	2009-01-18 18:06:11.000000000 +0000
-@@ -11,6 +11,6 @@
+$NetBSD: patch-da,v 1.2 2009/10/29 06:56:11 ghen Exp $
+
+--- contrib/slapd-modules/smbk5pwd/Makefile.orig	2009-09-02 00:53:30.000000000 +0200
++++ contrib/slapd-modules/smbk5pwd/Makefile
+@@ -13,8 +13,8 @@
+ # <http://www.OpenLDAP.org/license.html>.
  
  LIBTOOL=../../../libtool
 -OPT=-g -O2
@@ -10,8 +12,13 @@ $NetBSD: patch-da,v 1.1 2009/01/31 15:59:04 manu Exp $
 +#CC=gcc
  
  # Omit DO_KRB5 or DO_SAMBA if you don't want to support it.
-@@ -35,3 +35,3 @@
+ DEFS=-DDO_KRB5 -DDO_SAMBA
+@@ -45,7 +45,7 @@ smbk5pwd.lo:	smbk5pwd.c
+ 
  smbk5pwd.la:	smbk5pwd.lo
  	$(LIBTOOL) --mode=link $(CC) $(OPT) -version-info 0:0:0 \
--	-rpath /usr/local/libexec/openldap -module -o $@ $? $(LIBS)
-+	-rpath $(PREFIX)/lib -module -o $@ $? -ldes $(LIBS)
+-	-rpath $(libdir) -module -o $@ $? $(LIBS)
++	-rpath $(libdir) -module -o $@ $? -ldes $(LIBS)
+ 
+ clean:
+ 	rm -f smbk5pwd.lo smbk5pwd.la

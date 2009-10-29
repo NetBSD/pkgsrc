@@ -1,20 +1,21 @@
-$NetBSD: patch-dd,v 1.1 2009/03/16 21:08:44 manu Exp $
---- contrib/slapd-modules/nops/nops.c.orig	2009-03-16 10:28:41.000000000 +0100
-+++ contrib/slapd-modules/nops/nops.c	2009-03-16 10:28:11.000000000 +0100
-@@ -136,11 +136,15 @@
- 		op->o_bd = be;
- 	}
- 
+$NetBSD: patch-dd,v 1.2 2009/10/29 06:56:11 ghen Exp $
+
+--- contrib/slapd-modules/nops/nops.c.orig	2009-04-28 02:51:12.000000000 +0200
++++ contrib/slapd-modules/nops/nops.c
+@@ -63,10 +63,15 @@ nops_modify( Operation *op, SlapReply *r
+ 	int rc;
+ 	
  	if ((m = op->orm_modlist) == NULL) {
 +		slap_callback *cb = op->o_callback;
 +
  		op->o_bd->bd_info = (BackendInfo *)(on->on_info);
 +		op->o_callback = NULL;
- 		send_ldap_error(op, rs, LDAP_SUCCESS, "");
+ 		send_ldap_error(op, rs, LDAP_INVALID_SYNTAX,
+ 				"nops() got null orm_modlist");
 -		return(rs->sr_err);
 +		op->o_callback = cb;
 +
- 		return (rs->sr_err);
++		return (rs->sr_err);
  	}
  
- 	return SLAP_CB_CONTINUE;
+ 	op->o_bd = on->on_info->oi_origdb;
