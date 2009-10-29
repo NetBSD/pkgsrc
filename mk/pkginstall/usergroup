@@ -1,4 +1,4 @@
-# $NetBSD: usergroup,v 1.2 2006/07/19 22:26:26 jlam Exp $
+# $NetBSD: usergroup,v 1.2.32.1 2009/10/29 22:14:34 tron Exp $
 #
 # Generate a +USERGROUP script that reference-counts users and groups
 # that are required for the proper functioning of the package.
@@ -53,6 +53,7 @@ ECHO="@ECHO@"
 GREP="@GREP@"
 LS="@LS@"
 MKDIR="@MKDIR@"
+MV="@MV@"
 PWD_CMD="@PWD_CMD@"
 RM="@RM@"
 RMDIR="@RMDIR@"
