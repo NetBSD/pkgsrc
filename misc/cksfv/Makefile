@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:23 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/10/29 22:41:42 tnn Exp $
 #
 
 DISTNAME=	cksfv-1.3.14
@@ -18,7 +18,7 @@ INSTALLATION_DIRS=	share/doc/cksfv
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--package-prefix=${DESTDIR:Q}
-CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/man
+CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--compiler=${CC:Q}
 TEST_TARGET=		check
 
