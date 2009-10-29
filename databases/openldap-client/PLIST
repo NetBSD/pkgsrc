@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/29 06:56:11 ghen Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -245,6 +245,7 @@ man/man5/slapo-ppolicy.5
 man/man5/slapo-refint.5
 man/man5/slapo-retcode.5
 man/man5/slapo-rwm.5
+man/man5/slapo-sssvlv.5
 man/man5/slapo-syncprov.5
 man/man5/slapo-translucent.5
 man/man5/slapo-unique.5
@@ -257,5 +258,6 @@ man/man8/slapd.8
 man/man8/slapdn.8
 man/man8/slapindex.8
 man/man8/slappasswd.8
+man/man8/slapschema.8
 man/man8/slaptest.8
 share/examples/openldap/ldap.conf
