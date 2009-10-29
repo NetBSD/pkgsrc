@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/29 10:10:57 asau Exp $
 
 DISTNAME=	pict-4.1
 CATEGORIES=	lang
@@ -17,6 +17,8 @@ INSTALLATION_DIRS+=	bin lib/pict share/doc/pict
 
 MAKE_ENV+=		X11INCLUDE=${X11BASE}/include \
 			X11LIB=${X11BASE}/lib
+
+TEST_TARGET=	test
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Doc/*.ps ${DESTDIR}${PREFIX}/share/doc/pict/
