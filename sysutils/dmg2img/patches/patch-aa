@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/29 04:24:27 agc Exp $
+
+--- Makefile	2009/10/29 04:05:47	1.1
++++ Makefile	2009/10/29 04:06:22
+@@ -1,12 +1,12 @@
+ #CC = gcc
+ ##CFLAGS = -O3
+ CFLAGS = -O2 -Wall
+-BIN_DIR = ${DESTDIR}/usr/bin
++BIN_DIR = ${DESTDIR}${PREFIX}/bin
+ 
+ all: dmg2img vfdecrypt 
+ 
+ dmg2img: dmg2img.c dmg2img.h mntcmd.h gpt.h dmg2img.o base64.o adc.o 
+-	$(CC) -s -o dmg2img dmg2img.o base64.o adc.o -L. -lz -lbz2
++	$(CC) -o dmg2img dmg2img.o base64.o adc.o -L. -lz -lbz2
+ 
+ dmg2img.o: dmg2img.c dmg2img.h
+ 	$(CC) $(CFLAGS) -c dmg2img.c
+@@ -18,11 +18,12 @@
+ 	$(CC) $(CFLAGS) -c adc.c
+ 
+ vfdecrypt: vfdecrypt.c
+-	$(CC) $(CFLAGS) -s -o vfdecrypt vfdecrypt.c -lcrypto
++	$(CC) $(CFLAGS) -o vfdecrypt vfdecrypt.c -lcrypto
+ 
+ install: dmg2img vfdecrypt
+ 	mkdir -p ${BIN_DIR}
+-	install -c -s -m 755 -o root -g root dmg2img vfdecrypt $(BIN_DIR)
++	${BSD_INSTALL_PROGRAM} -c dmg2img $(BIN_DIR)
++	${BSD_INSTALL_PROGRAM} -c vfdecrypt $(BIN_DIR)
+ 
+ clean:
+ 	rm -f dmg2img vfdecrypt *~ *.o core
