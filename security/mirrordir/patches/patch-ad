@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2009/10/29 22:24:51 tnn Exp $
+
+--- scripts/Makefile.in.orig	2000-01-16 22:19:32.000000000 +0100
++++ scripts/Makefile.in
+@@ -77,7 +77,7 @@ WRAPLIB = @WRAPLIB@
+ system = @system@
+ 
+ sysconf_DATA = accept.cs connect.cs arcencrypt.cs arcinit.cs
+-sysconfdir = ${prefix}/etc/ssocket
++sysconfdir = ${prefix}/share/examples/mirrordir/ssocket
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
