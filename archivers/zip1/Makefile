@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2009/09/14 22:08:21 zafer Exp $
+# $NetBSD: Makefile,v 1.47 2009/10/29 20:45:23 tnn Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -33,6 +33,11 @@ CFLAGS+=	-DSYSV -DMODERN -DTERMIOS
 .else
 CFLAGS+=	-DDIRENT
 MAKE_FLAGS+=	LFLAGS2=-lcompat
+.endif
+.if ${OPSYS} == "NetBSD"
+# NetBSD's unzip doesn't understand "imploded" compression, so force pkgsrc.
+BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
+TOOLS_PLATFORM.unzip=	${PREFIX}/bin/unzip
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
