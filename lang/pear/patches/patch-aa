@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2008/09/15 11:54:21 adrianp Exp $
+$NetBSD: patch-aa,v 1.4 2009/10/29 08:29:03 seb Exp $
 
---- install/go-pear.php.orig	2008-09-15 12:40:50.000000000 +0100
+--- install/go-pear.php.orig	2009-10-17 09:56:43.000000000 +0000
 +++ install/go-pear.php
-@@ -311,6 +311,8 @@ if (WEBINSTALLER) {
-     $install_pfc = $_SESSION['go-pear']['install_pfc'];
+@@ -252,6 +252,8 @@ if (WEBINSTALLER) {
+     // Anything past this step has something to do with the installation    
  }
  
 +/*
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2008/09/15 11:54:21 adrianp Exp $
  if (!WEBINSTALLER) {
      $tty = WINDOWS ? @fopen('\con', 'r') : @fopen('/dev/tty', 'r');
  
-@@ -355,6 +357,8 @@ If you wish to abort, press Control-C no
+@@ -296,6 +298,8 @@ If you wish to abort, press Control-C no
      }
  }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2008/09/15 11:54:21 adrianp Exp $
  $origpwd = getcwd();
  
  $config_vars = array_keys($config_desc);
-@@ -426,6 +430,8 @@ we strongly recommand to use it.
+@@ -347,6 +351,8 @@ we strongly recommand to use it.
      }
  }
  
@@ -29,34 +29,34 @@ $NetBSD: patch-aa,v 1.3 2008/09/15 11:54:21 adrianp Exp $
  while (!WEBINSTALLER) {
      print "
  Below is a suggested file layout for your new PEAR installation.  To
-@@ -509,6 +515,8 @@ If you have a CLI (or CGI) php.exe avail
+@@ -430,6 +436,8 @@ If you have a CLI (or CGI) php.exe avail
      }
  }
  
 +*/
 +
- foreach ($config_vars as $n => $var) {
-     for ($m = 1; $m <= count($config_vars); $m++) {
-         $var2 = $config_vars[$m];
-@@ -576,6 +584,8 @@ Run this script as $root or pick another
-     }
+ ####
+ # Installation stuff
+ ####
+@@ -564,13 +572,17 @@ if (WEBINSTALLER) {
  }
  
-+/*
-+
  if (!WEBINSTALLER) {
++/*
      $msg = "The following PEAR packages are bundled with PHP: " .
-         implode(', ', $pfc_packages);
-@@ -585,6 +595,8 @@ if (!WEBINSTALLER) {
+         implode(', ', array_keys($pfc_packages));
+     print "\n" . wordwrap($msg, 75) . ".\n";
+     print "Would you like to install these as well? [Y/n] : ";
+     $install_pfc = !stristr(fgets($tty, 1024), "n");
++*/
+     $install_optional_packages = array();
++/*
      print "\n";
++*/
  }
  
-+*/
-+
  ####
- # Download
- ####
-@@ -595,6 +607,8 @@ if (function_exists('set_include_path'))
+@@ -583,6 +595,8 @@ if (function_exists('set_include_path'))
     ini_set('include_path', $ptmp);
  }
  
@@ -65,16 +65,16 @@ $NetBSD: patch-aa,v 1.3 2008/09/15 11:54:21 adrianp Exp $
  if (!extension_loaded('zlib') && !WEBINSTALLER) { // In Web context we could be in multithread env which makes dl() end up with a fatal error.
      if (WINDOWS) {
          @dl('php_zlib.dll');
-@@ -620,6 +634,8 @@ if (!$have_gzip) {
+@@ -608,6 +622,8 @@ if (!$have_gzip) {
      print "Downloading uncompressed packages\n";
  };
  
 +*/
 +
  if ($install_pfc) {
-     $to_install = array_merge($installer_packages, $pfc_packages);
+     $to_install = array_merge($installer_packages, array_keys($pfc_packages));
  } else {
-@@ -776,7 +792,7 @@ include_once "PEAR/Command.php";
+@@ -749,7 +765,7 @@ include_once "PEAR/Command.php";
  include_once "PEAR/Registry.php";
  
  if (WEBINSTALLER || isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] == 'local') {
@@ -83,16 +83,37 @@ $NetBSD: patch-aa,v 1.3 2008/09/15 11:54:21 adrianp Exp $
  } else {
      $config = &PEAR_Config::singleton();
  }
-@@ -810,10 +826,17 @@ foreach ($tarball as $pkg => $src) {
-     displayHTMLProgress($progress += round(29 / count($tarball)));
- }
+@@ -781,7 +797,11 @@ displayHTMLProgress($progress = 45);
  
+ $install = &PEAR_Command::factory('install', $config);
+ foreach ($to_install as $pkg) {
+-    $pkg_basename = substr($pkg, 0, strpos($pkg, '-'));
++    if (strpos($pkg, '-')) {
++        $pkg_basename = substr($pkg, 0, strpos($pkg, '-'));
++    } else {
++        $pkg_basename = $pkg;
++    }
+ 
+     if (in_array($pkg, $installer_packages)) {
+         $options = array('nodeps' => true);
+@@ -794,7 +814,6 @@ foreach ($to_install as $pkg) {
+         continue;
+     }
+     
+-    $pkg_basename = substr($pkg, 0, strpos($pkg, '-'));
+     if (in_array($pkg_basename, $bootstrap_pkgs)) {
+         print(str_pad("Installing bootstrap package: $pkg_basename", max(50,30+strlen($pkg_basename)+4), '.')."...");
+         displayHTMLProgress($progress += round(25 / count($to_install)));
+@@ -817,12 +836,17 @@ print "\n".'Making sure every package is
+ $install->run('upgrade-all', array('soft' => true), array());
+ print "ok\n";
+ */
 +$config->set('download_dir', '/tmp' . '/download');
 +$config->set('temp_dir', '/tmp');
 +$config->store();
-+$install = &PEAR_Command::factory('install', $config);
-+
+ unset($config, $registry, $install);
  displayHTMLProgress($progress = 99);
+ 
  
  // Base installation finished
  
@@ -101,7 +122,7 @@ $NetBSD: patch-aa,v 1.3 2008/09/15 11:54:21 adrianp Exp $
  ini_restore("include_path");
  
  if (!WEBINSTALLER) {
-@@ -971,6 +994,9 @@ if ( WINDOWS ) {
+@@ -981,6 +1005,9 @@ if ( WINDOWS ) {
  if (WINDOWS && !WEBINSTALLER) {
      win32CreateRegEnv();
  }
@@ -109,19 +130,20 @@ $NetBSD: patch-aa,v 1.3 2008/09/15 11:54:21 adrianp Exp $
 +*/
 +
  // Set of functions following
- 
- // {{{ download_url()
-@@ -1367,16 +1393,18 @@ function detect_install_dirs($_prefix = 
-         }
+ /**
+  * Parse the given dirname
+@@ -1420,17 +1447,19 @@ function detect_install_dirs($_prefix = 
      } else {
          if ($_prefix === null) {
--            $prefix    = dirname(PHP_BINDIR);
+             #$prefix    = dirname(PHP_BINDIR);
+-            $prefix    = dirname(__FILE__);
 +            $prefix    = "@PREFIX@";
          } else {
              $prefix = $_prefix;
          }
          $bin_dir   = '$prefix/bin';
--        $php_dir   = '$prefix/share/pear';
+         #$php_dir   = '$prefix/share/pear';
+-        $php_dir   = '$prefix/PEAR';
 -        $doc_dir   = '$php_dir/docs';
 +        $php_dir   = '$prefix/lib/php';
 +        $doc_dir   = '$php_dir/doc';
@@ -129,24 +151,18 @@ $NetBSD: patch-aa,v 1.3 2008/09/15 11:54:21 adrianp Exp $
 -        $test_dir  = '$php_dir/tests';
 -        $temp_dir   = '$prefix/temp';
 +        $test_dir  = '$php_dir/test';
-+        $temp_dir  = '@WRKSRC@/tmp';
++        $temp_dir   = '@WRKSRC@/tmp';
 +
 +/*
  
          // check if the user has installed PHP with PHP or GNU layout
          if (@is_dir("$prefix/lib/php/.registry")) {
-@@ -1389,6 +1417,9 @@ function detect_install_dirs($_prefix = 
+@@ -1443,6 +1472,8 @@ function detect_install_dirs($_prefix = 
          } elseif (@is_dir("$prefix/share/php/.registry")) {
              $php_dir = '$prefix/share/php';
          }
-+
 +*/
 +
      }
  }
  
-@@ -2494,3 +2525,4 @@ php.ini <$pathIni> include_path updated.
-     }
-     return true;
- }
-+?>

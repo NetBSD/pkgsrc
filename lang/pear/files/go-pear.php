@@ -1,103 +1,41 @@
-<?php //; echo; echo "YOU NEED TO RUN THIS SCRIPT WITH PHP NOW!"; echo; echo "Try this: lynx -source http://pear.php.net/go-pear | php -q"; echo; exit # -*- PHP -*-
-# +----------------------------------------------------------------------+
-# | PHP Version 5                                                        |
-# +----------------------------------------------------------------------+
-# | Copyright (c) 1997-2005 The PHP Group                                |
-# +----------------------------------------------------------------------+
-# | This source file is subject to version 2.02 of the PHP license,      |
-# | that is bundled with this package in the file LICENSE, and is        |
-# | available at through the world-wide-web at                           |
-# | http://www.php.net/license/2_02.txt.                                 |
-# | If you did not receive a copy of the PHP license and are unable to   |
-# | obtain it through the world-wide-web, please send a note to          |
-# | license@php.net so we can mail you a copy immediately.               |
-# +----------------------------------------------------------------------+
-# | Authors: Tomas V.V.Cox <cox@idecnet.com>                             |
-# |          Stig Bakken <ssb@php.net>                                   |
-# |          Christian Dickmann <dickmann@php.net>                       |
-# |          Pierre-Alain Joye <pierre@php.net>                          |
-# |          Greg Beaver <cellog@php.net>                                |
-# +----------------------------------------------------------------------+
+<?php //; echo; echo "YOU NEED TO RUN THIS SCRIPT WITH PHP!"; echo; echo "Point your webbrowser to it or run: php -q go-pear.php"; echo; exit # -*- PHP -*-
 #
-# $Id: go-pear.php,v 1.1.1.1 2007/05/05 21:21:47 adrianp Exp $
+# The PEAR installation wizard, both webbased or command line.
 #
-# Id: go-pear,v 1.104 2007/03/17 21:43:08 cellog Exp
+# Webbased installation:
+# 1) Download this file and save it as go-pear.php
+# 2) Put go-pear.php on your webserver, where you would put your website
+# 3) Open http://yourdomain.example.org/go-pear.php in your browser
+# 4) Follow the instructions, done!
 #
-# Automatically download all the files needed to run the "pear" command
-# (the PEAR package installer).  Requires PHP 4.1.0 or newer.
+# Command-line installation (for advanced users):
+# 1) Download this file and save it as go-pear.php
+# 2) Open a terminal/command prompt and type: php -q go-pear.php
+# 3) Follow the instructions, done!
 #
-# Installation: Linux
-#
-# This script can either be directly launched or passed via lynx like this.
-#
-#  $ lynx -source http://pear.php.net/go-pear | php
-#
-# The above assumes your php binary is named php and that it's
-# executable through your PATH:
-#
-# Installation: Windows
-#
-# On Windows, go-pear uses stdin for user input, so you must download
-# go-pear first and then run it:
-#
-# Note: In PHP 4.2.0-4.2.3, the PHP CLI binary is named php-cli.exe while since
-# PHP 4.3.0, it's simply named php.exe in the cli/ folder of your PHP directory.
-# The CGI is also named php.exe but it sits directly in your PHP directory.
-#
-#  > cli/php -r "readfile('http://pear.php.net/go-pear');" > go-pear
-#  > cli/php go-pear
-#
-# In PHP 5.0.0+, the PHP CLI binary is php.exe
-#
-#  > php -r "readfile('http://pear.php.net/go-pear');" > go-pear
-#  > php go-pear
-#
-# Installation: Notes
-#
-# - If using the CGI version of PHP, append the -q option to suppress
-#   headers in the output.
-# - By default, go-pear will install a system-wide configuration file.  For
-#   a local install use:
-#   > php go-pear local
-#
-# - Once the go-pear script is initiated, you will see instructions on
-#   how to continue installing PEAR.  The first thing you should see is:
-#
-#   Welcome to go-pear!
-#
-# Installation: Web browser
-#
-# You can now use go-pear via a webbrowser, thanks to Christian Dickmann. It is
-# still beta codes, but feel free to test it:
-# 1.: Download the go-pear script by using the "Save target as ..." function
-# of your browser here.
-#
-# 2.: Place the go-pear file somewhere under the document root of your webserver.
-# The easiest way is to create a new directory for pear and to put the file in there.
-# Be sure your web server is setup to recognize PHP, and that you use an appropriate
-# extension.  For example, you might name this file gopear.php
-#
-# 3.: Access go-pear through your webserver and follow the instructions. Please
-# make sure that PHP has write access to the dir you want to install PEAR into.
-# For example: http://localhost/pear/gopear.php
-#
-# 4.: After running go-pear you get a link to the Web Frontend of the PEAR installer.
-# I suggest bookmarking this link.
-#
-# 5.: Protect the Web Frontend directory and the go-pear script with a password.
-# Use .htaccess on Apache webservers for example.
-#
-#
-function dump($var) {
-    if (defined('WEBINSTALLER') && WEBINSTALLER == 'cgi') {
-        echo '<pre>';
-        print_r($var);
-        echo '</pre>';
-    } else {
-        print_r($var);
-        echo "\n";
-    }
-}
+# Notes:
+# * Get the latest go-pear version from http://pear.php.net/go-pear
+# * This installer requires PHP 4.3.0 or newer.
+# * On windows, the PHP CLI binary is php.exe, don't forget the -q option if using the CGI binary.
+# * The default for the command-line installation is a system-wide configuration file,  For a local install use: php -q go-pear.php local
+
+/**
+ * go-pear is the online PEAR installer: just download it and run it
+ * (through a browser or command line), it will set up a minimal PEAR
+ * installation that will be ready for immediate use.
+ *
+ * @license    http://www.php.net/license/2_02.txt  PHP License 2.02
+ * @version    CVS: Id: go-pear 281637 2009-06-04 08:51:45Z clockwerx
+ * @link       http://pear.php.net/package/pearweb_gopear
+ * @author     Tomas V.V.Cox <cox@idecnet.com>
+ * @author     Stig Bakken <ssb@php.net>
+ * @author     Christian Dickmann <dickmann@php.net>
+ * @author     Pierre-Alain Joye <pierre@php.net>
+ * @author     Greg Beaver <cellog@php.net>
+ * @author     Tias Guns <tias@ulyssis.org>
+ */
+
+/* $NetBSD: go-pear.php,v 1.2 2009/10/29 08:29:03 seb Exp $ */
 
 $sapi_name = php_sapi_name();
 
@@ -105,8 +43,6 @@ $safe_mode = (bool)ini_get('safe_mode');
 if (!$safe_mode) {
     set_time_limit(0);
 }
-
-
 
 @ob_end_clean();
 ob_implicit_flush(true);
@@ -118,19 +54,7 @@ ini_set('magic_quotes_runtime', false);
 error_reporting( E_ALL & ~E_NOTICE);
 
 define('WINDOWS', (substr(PHP_OS, 0, 3) == 'WIN'));
-define('GO_PEAR_VER', '0.6.0');
-
-if (!function_exists('file_get_contents')) {
-    function file_get_contents($filename)
-    {
-        $fp = fopen($filename, 'rb');
-        $ret = '';
-        while (!feof($fp)) {
-            $ret .= fread($fp, 8092);;
-        }
-        return $ret;
-    }
-}
+define('GO_PEAR_VER', '1.1.2');
 
 define('WIN32GUI', !WEBINSTALLER && WINDOWS && $sapi_name=='cli' && which('cscript'));
 
@@ -141,9 +65,10 @@ if ( WEBINSTALLER && WINDOWS ) {
     $php_sapi_name = win32DetectPHPSAPI();
     if($php_sapi_name=='cgi'){
     $msg = nl2br("
-Sorry! The PEAR installer actually does not work on Windows platform using CGI and Apache.
-Please install the module SAPI (see http://www.php.net/manual/en/install.apache.php for the
-instructions) or use the CLI (cli\php.exe) in the console.
+Sorry! The PEAR installer actually does not work on Windows platform
+using CGI and Apache. Please install the module SAPI (see
+http://www.php.net/manual/en/install.apache.php for the instructions) or
+use the CLI (cli\php.exe) in the console.
 ");
         displayHTML('error', $msg);
     }
@@ -163,17 +88,13 @@ if (WEBINSTALLER && isset($_GET['action']) && $_GET['action'] == 'img' && isset(
 }
 
 // Check if PHP version is sufficient
-if (function_exists("version_compare") && version_compare(phpversion(), "4.2.0",'<')) {
+if (function_exists("version_compare") && version_compare(phpversion(), "4.3.0",'<')) {
     die("Sorry!  Your PHP version is too old.  PEAR and this script requires at
-least PHP 4.2.0 for stable operation.
+least PHP 4.3.0 for stable operation.
 
 It may be that you have a newer version of PHP installed in your web
 server, but an older version installed as the 'php' command.  In this
 case, you need to rebuilt PHP from source.
-
-If your source is 4.2.x, you need to run 'configure' with the
---enable-cli option, rebuild and copy sapi/cli/php somewhere.
-
 If your source is 4.3.x or newer, just make sure you don't run
 'configure' with --disable-cli, rebuilt and copy sapi/cli/php.
 
@@ -182,31 +103,40 @@ Please upgrade PHP to a newer version, and try again.  See you then.
 ");
 }
 
-$installer_packages = array(
-    'PEAR-stable',
-    'Archive_Tar-stable',
-    'Console_Getopt-stable',
-    'Structures_Graph-stable',
+$gopear_bundle_dir = dirname(__FILE__).'/go-pear-bundle';
+
+$bootstrap_files = array(
+    'PEAR.php'             => 'http://cvs.php.net/viewvc.cgi/pear-core/PEAR.php?view=co&pathrev=PEAR_1_4',
+    'Archive/Tar.php'      => 'http://cvs.php.net/viewvc.cgi/pear/Archive_Tar/Archive/Tar.php?view=co&pathrev=RELEASE_1_3_2',
+    'Console/Getopt.php'   => 'http://cvs.php.net/viewvc.cgi/pear-core/Console/Getopt.php?view=co&pathrev=PEAR_1_4',
     );
 
-if (WEBINSTALLER) {
-    $installer_packages[] = 'HTML_Template_IT-stable';
-    $installer_packages[] = 'Net_UserAgent_Detect-stable';
-    $installer_packages[] = 'PEAR_Frontend_Web-alpha';
-}
+$bootstrap_pkgs = array( // uses URL like http://pear.php.net/get/%s
+    'PEAR',
+    'Structures_Graph'
+);
+
+$installer_packages = array(
+    'PEAR',
+    'Structures_Graph-stable',
+    'Archive_Tar-stable',
+    'Console_Getopt-stable',
+);
 
 $pfc_packages = array(
-    'MDB2',
+    'PEAR_Frontend_Web-beta' => 'Webbased PEAR Installer',
+    'PEAR_Frontend_Gtk2' => 'Graphical PEAR installer based on PHP-Gtk2',
+    'MDB2' => 'database abstraction layer.',
 );
 
 $config_desc = array(
-    'prefix' => 'Installation prefix',
+    'prefix' => 'Installation prefix ($prefix)',
+    'temp_dir' => 'Temporary files directory',
     'bin_dir' => 'Binaries directory',
     'php_dir' => 'PHP code directory ($php_dir)',
     'doc_dir' => 'Documentation base directory',
     'data_dir' => 'Data base directory',
     'test_dir' => 'Tests base directory',
-    'temp_dir' => 'Temporary files directory'
 );
 
 if(!WEBINSTALLER && WINDOWS){
@@ -235,20 +165,15 @@ detect_install_dirs();
 if (WEBINSTALLER) {
     @session_start();
 
-    /*
-        See bug #23069
-    */
-    if ( WINDOWS ) {
-        $php_sapi_name = win32DetectPHPSAPI();
-        if($php_sapi_name=='cgi'){
-            $msg = "
-    Sorry! The PEAR installer actually does not work on Windows platform using CGI and Apache.
-    Please install the module SAPI (see http://www.php.net/manual/en/install.apache.php for the
-    instructions) or use the CLI (cli\php.exe) in the console.
-    ";
-            displayHTML('error', $msg);
-            exit();
-        }
+    // If welcome, just welcome
+    if (!isset($_GET['step'])) {
+        $_GET['step'] = 'Welcome';
+        /* clean up old sessions datas */
+        session_destroy();
+    }
+    if ($_GET['step'] == 'Welcome') {
+        displayHTML('Welcome');
+        exit();
     }
 
     if (!isset($_SESSION['go-pear']) || isset($_GET['restart'])) {
@@ -268,47 +193,63 @@ if (WEBINSTALLER) {
                 'webfrontend_file' => '$prefix/index.php',
                 ),
             'install_pfc' => true,
+            'install_optional_packages' => array(),
             'DHTML' => true,
             );
     }
 
-    if (!isset($_GET['step'])) {
-        $_GET['step'] = 'Welcome';
-        /* clean up old sessions datas */
-        session_destroy();
-    }
+    // save submited values
     if ($_GET['step'] == 'install') {
         $_SESSION['go-pear']['http_proxy'] = strip_magic_quotes($_POST['proxy']['host']).':'.strip_magic_quotes($_POST['proxy']['port']);
         if ($_SESSION['go-pear']['http_proxy'] == ':') {
             $_SESSION['go-pear']['http_proxy'] = '';
         };
 
-        $www_errors = array();
+        $config_errors = array();
         foreach($_POST['config'] as $key => $value) {
             $_POST['config'][$key] = strip_magic_quotes($value);
-            if($key!='cache_ttl'){
+            if ($key != 'cache_ttl' && $key != 'php_bin') {
                 if ( empty($_POST['config'][$key]) ) {
-                    if (WEBINSTALLER && $key!='php_bin' ) {
-                        $www_errors[$key] = 'Please fill this path, you can use $prefix, $php_dir or a full path.';
-                    }
+                    $config_errors[$key] = 'Please fill this path, you can use $prefix, $php_dir or a full path.';
                 }
             }
         }
 
-        if( sizeof($www_errors)>0){
+        if( sizeof($config_errors)>0){
             $_GET['step'] = 'config';
         }
 
         $_SESSION['go-pear']['config'] = $_POST['config'];
         $_SESSION['go-pear']['install_pfc'] = (isset($_POST['install_pfc']) && $_POST['install_pfc'] == 'on');
+        // webinstaller allows to choose pfc packages individually
+        foreach ($pfc_packages as $key => $value) {
+            $pos = array_search($key, $_SESSION['go-pear']['install_optional_packages']);
+            if (isset($_POST[$key]) && $_POST[$key] == 'on' && $pos === false) {
+                $_SESSION['go-pear']['install_optional_packages'][] = $key;
+            }
+            if (!isset($_POST[$key]) && $pos !== false) {
+                unset($_SESSION['go-pear']['install_optional_packages'][$pos]);
+            }
+        }
         $_SESSION['go-pear']['DHTML'] = isset($_POST['BCmode']) ? false : true;
     }
 
+    // export session values
     $http_proxy = $_SESSION['go-pear']['http_proxy'];
+    $GLOBALS['config_vars'] = array_keys($config_desc);
+    array_unshift($GLOBALS['config_vars'], '');
+    unset($GLOBALS['config_vars'][0]); // make indices run from 1...
     foreach($_SESSION['go-pear']['config'] as $var => $value) {
         $$var = $value;
     }
     $install_pfc = $_SESSION['go-pear']['install_pfc'];
+    $install_optional_packages = $_SESSION['go-pear']['install_optional_packages'];
+
+    if ($_GET['step'] == 'config') {
+        displayHTML('config');
+        exit();
+    }
+    // Anything past this step has something to do with the installation    
 }
 
 if (!WEBINSTALLER) {
@@ -333,8 +274,8 @@ Use 'php " . $_SERVER['argv'][0] . " local' to install a local copy of PEAR.
 Go-pear will install the 'pear' command and all the files needed by
 it.  This command is your tool for PEAR installation and maintenance.
 $local
-Go-pear also lets you download and install the PEAR packages bundled
-with PHP: " . implode(', ', $pfc_packages) . ".
+Go-pear also lets you download and install the following optional PEAR
+packages: " . implode(', ', array_keys($pfc_packages)) . ".
 
 
 If you wish to abort, press Control-C now, or press Enter to continue: ";
@@ -368,26 +309,6 @@ $descfmt = "%-{$desclen}s";
 $first = key($config_vars);
 end($config_vars);
 $last = key($config_vars);
-
-if (WEBINSTALLER) {
-    if ( isset($www_errors) && sizeof($www_errors) ) {
-        displayHTML('config');
-        exit();
-    } else {
-        if (isset($_SESSION['go-pear']['DHTML']) && $_SESSION['go-pear']['DHTML'] == true && $_GET['step'] == 'install') {
-            $_GET['step'] = 'preinstall';
-        }
-        if ($_GET['step'] != 'install' && $_GET['step'] != 'install-progress') {
-            displayHTML($_GET['step']);
-            exit;
-        }
-        if ($_GET['step'] == 'install-progress') {
-            displayHTMLHeader();
-            echo "Starting installation ...<br/>";
-        }
-        ob_start();
-    }
-}
 
 $progress = 0;
 
@@ -494,7 +415,7 @@ If you have a CLI (or CGI) php.exe available, we strongly recommand to use it.
         }
 
         if (!empty($tmp) ) {
-            $$var = $tmp;
+            $$var = parse_dirname($tmp);
         }
     } elseif ($tmp == 'all') {
         foreach ($config_vars as $n => $var) {
@@ -509,24 +430,27 @@ If you have a CLI (or CGI) php.exe available, we strongly recommand to use it.
     }
 }
 
+####
+# Installation stuff
+####
+
+// expand all subvars in the config vars
 foreach ($config_vars as $n => $var) {
     for ($m = 1; $m <= count($config_vars); $m++) {
         $var2 = $config_vars[$m];
         $$var = str_replace('$'.$var2, $$var2, $$var);
     }
+    $$var = parse_dirname($$var);
 }
 
-
-####
-# Temp stuff
-####
-if (!empty($temp_dir)) {
-    $_found = temp_dir($temp_dir);
-} else {
-    $_found = temp_dir();
-}
-
-if (!$_found) {
+    // temp dir stuff (separate for windows bugs)
+    if (!empty($temp_dir)) {
+        $_found = temp_dir($temp_dir);
+    } else {
+        $_found = temp_dir();
+    }
+    if (!$_found) {
+        if (!WEBINSTALLER) {
             print "
 
 ******************************************************************************
@@ -534,54 +458,118 @@ FATAL ERROR! We cannot initialize the temp directory. Please be sure to give
 full write access to this directory and the install directory.
 
 ";
+            if (!empty($temp_dir)) {
+                print "'$temp_dir' was given.";
+            }
+            exit();
 
-    if (!empty($temp_dir)) {
-        print "'$temp_dir' was given.";
-    }
-    exit();
-}
-
-$foo = $ptmp;
-
-$ptmp = tempnam($ptmp, 'gope');
-
-if (WINDOWS) {
-    $ptmp = str_replace($foo,'',$ptmp);
-    $foo = str_replace("\\\\",'/',$foo);
-    $s = substr($ptmp,0,1);
-    if($s == "\\" || $s == '/' ){
-        $ptmp = $foo . '/' . substr($ptmp,1);
-    } else {
-        $ptmp = $foo . '/' . $ptmp;
-    }
-}
-
-rm_rf($ptmp);
-mkdir_p($ptmp, 0700);
-$ok = @chdir($ptmp);
-
-foreach ($config_vars as $var) {
-    $dir = $$var;
-
-    if (!preg_match('/_dir$/', $var)) {
-        continue;
-    }
-
-    if (!@is_dir($dir)) {
-        if (!mkdir_p($dir)) {
-            $root = WINDOWS ? 'administrator' : 'root';
-            bail("Unable to create {$config_desc[$var]} $dir.
-Run this script as $root or pick another location.\n");
+        } else { // WEBINSTALLER
+            if (!is_dir($temp_dir)) {
+                $config_errors['temp_dir'] = 'FATAL ERROR! This directory does not exist and we can not create it. Create the directory manually or make sure we have full permission in its parent directory.';
+                if (!WINDOWS) {
+                    $config_errors['temp_dir'] .= '<p>You can grant this permission by logging on to the server and issuing the following command:<br />
+<tt>mkdir '.dirname($temp_dir).' && chmod 0777 '.dirname($temp_dir).'</tt></p>';
+                }
+            } else { // is_dir(temp_dir)
+                $config_errors['temp_dir'] = 'FATAL ERROR! This directory exists, but we have no write permission in it.';
+                if (!WINDOWS) {
+                    $config_errors['temp_dir'] .= '<p>You can grant this permission by logging on to the server and issuing the following command:<br />
+<tt>chmod 0777 '.$temp_dir.'</tt></p>';
+                }
+            }
         }
+    }
+    if (@is_dir($ptmp)) {
+        chdir($ptmp);
+    }
+
+    // check every dir, existence and permissions
+    foreach ($config_vars as $var) {
+        if (!preg_match('/_dir$/', $var) || $var == 'temp_dir') {
+            continue;
+        }
+
+        $dir = $$var;
+        if (!@is_dir($dir)) {
+            if (!mkdir_p($dir)) {
+                if (!WEBINSTALLER) {
+                    $root = WINDOWS ? 'administrator' : 'root';
+                    bail("Unable to create {$config_desc[$var]} $dir.
+Run this script as $root or pick another location.\n");
+                } else { // WEBINSTALLER
+                    $config_errors[$var] = 'ERROR! This directory does not exist and we can not create it. Create the directory manually or make sure we have full permission in its parent directory.';
+                    if (!WINDOWS) {
+                        $config_errors[$var] .= '<p>You can grant this permission by logging on to the server and issuing the following command:<br />
+<tt>mkdir '.dirname($dir).' && chmod 0777 '.dirname($dir).'</tt></p>';
+                    }
+                }
+            }
+        }
+        if (WEBINSTALLER && @is_dir($dir) && !is_writable($dir)) {
+            $config_errors[$var] = 'ERROR! This directory exists, but we have no write permission in it.';
+            if (!WINDOWS) {
+                $config_errors[$var] .= '<p>You can grant this permission by logging on to the server and issuing the following command:<br />
+<tt>chmod 0777 '.$dir.'</tt></p>';
+            }
+        }
+    }
+
+    // check every file, existence and permissions
+    foreach ($config_vars as $var) {
+        if (!preg_match('/_file$/', $var)) {
+            continue;
+        }
+
+        $file = $$var;
+        $dir = dirname($file);
+        if (!file_exists($file) && !is_writable($dir)) {
+            if (!WEBINSTALLER) {
+                $root = WINDOWS ? 'administrator' : 'root';
+                bail("Unable to create {$config_desc[$var]} $file.
+Run this script as $root or pick another location.\n");
+            } else { // WEBINSTALLER
+                $config_errors[$var] = 'ERROR! This file does not exist and we can not create it. Make sure we have full permission in its parent directory.';
+                if (!WINDOWS) {
+                    $config_errors[$var] .= '<p>You can grant this permission by logging on to the server and issuing the following command:<br />
+<tt>chmod 0777 '.$dir.'</tt></p>';
+                }
+            }
+        } elseif (WEBINSTALLER && file_exists($file) && !is_writable($file)) {
+            $config_errors[$var] = 'ERROR! This file exists, but we have no write permission on it.';
+            if (!WINDOWS) {
+                $config_errors[$var] .= '<p>You can grant this permission by logging on to the server and issuing the following command:<br />
+<tt>chmod 0777 '.$file.'</tt></p>';
+            }
+        }
+    }
+
+if (WEBINSTALLER) {
+    if ( isset($config_errors) && sizeof($config_errors) ) {
+        displayHTML('config');
+        exit();
+    } else {
+        if (isset($_SESSION['go-pear']['DHTML']) && $_SESSION['go-pear']['DHTML'] == true && $_GET['step'] == 'install') {
+            $_GET['step'] = 'preinstall';
+        }
+        if ($_GET['step'] != 'install' && $_GET['step'] != 'install-progress') {
+            displayHTML($_GET['step']);
+            exit;
+        }
+        if ($_GET['step'] == 'install-progress') {
+            displayHTMLHeader();
+            echo "Starting installation ...<br/>";
+        }
+        ob_start();
     }
 }
 
 if (!WEBINSTALLER) {
     $msg = "The following PEAR packages are bundled with PHP: " .
-        implode(', ', $pfc_packages);
+        implode(', ', array_keys($pfc_packages));
     print "\n" . wordwrap($msg, 75) . ".\n";
     print "Would you like to install these as well? [Y/n] : ";
     $install_pfc = !stristr(fgets($tty, 1024), "n");
+    $install_optional_packages = array();
     print "\n";
 }
 
@@ -621,23 +609,25 @@ if (!$have_gzip) {
 };
 
 if ($install_pfc) {
-    $to_install = array_merge($installer_packages, $pfc_packages);
+    $to_install = array_merge($installer_packages, array_keys($pfc_packages));
 } else {
     $to_install = $installer_packages;
+
+    // webinstaller allows to choose pfc packages individually
+    foreach ($pfc_packages as $pkg => $desc) {
+        if (in_array($pkg, $install_optional_packages)) {
+            array_push($to_install, $pkg);
+        }
+    }
 }
 
-displayHTMLProgress($progress = 5);
-
-if (file_exists(dirname(__FILE__).'/go-pear-bundle') || is_dir(dirname(__FILE__).'/go-pear-bundle')) {
-    $dh = @opendir(dirname(__FILE__).'/go-pear-bundle');
-} else {
-    $dh = false;
-}
-
+// gopear_bundle usage
 $local_dir = array();
-if ($dh) {
+if (file_exists($gopear_bundle_dir) || is_dir($gopear_bundle_dir)) {
+    $dh = @opendir($gopear_bundle_dir);
+
     while($file = @readdir($dh)) {
-        if ($file == '.' || $file == '..' || !is_file(dirname(__FILE__).'/go-pear-bundle/'.$file)) {
+        if ($file == '.' || $file == '..' || !is_file($gopear_bundle_dir.'/'.$file)) {
             continue;
         }
         $_pos = strpos($file, '-');
@@ -647,121 +637,105 @@ if ($dh) {
           $local_dir[substr($file, 0, $_pos)] = $file;
         }
     }
+    closedir($dh);
+    unset($dh, $file, $_pos);
 }
 
-foreach ($installer_packages as $pkg) {
-    $pkg_basename = substr($pkg, 0, strpos($pkg, '-'));
-    if (isset($local_dir[$pkg_basename])) {
-        echo str_pad("Using local package: $pkg", max(38,21+strlen($pkg)+4), '.');
-        copy(dirname(__FILE__) . '/go-pear-bundle/' . $local_dir[$pkg_basename], $local_dir[$pkg_basename]);
-        $tarball[$pkg_basename] = $local_dir[$pkg_basename];
-        echo "ok\n";
-        displayHTMLProgress($progress += round(65 / count($to_install)));
-        continue;
+print "\n".'Bootstrapping Installer...................'."\n";
+displayHTMLProgress($progress = 5);
+
+// Bootstrap needed ?
+$nobootstrap = false;
+if (is_dir($php_dir)) {
+    $nobootstrap = true;
+    foreach ($bootstrap_files as $file => $url) {
+        $nobootstrap &= is_file($php_dir.'/'.$file);
     }
+}
 
-    $msg = str_pad("Downloading package: $pkg", max(38,21+strlen($pkg)+4), '.');
-    print $msg;
-    $url = sprintf($urltemplate, $pkg);
-
-    $pkg = str_replace('-stable', '', $pkg);
-
-    $tarball[$pkg] = download_url($url, null, $http_proxy);
+if ($nobootstrap) {
+    print('Using previously install ... ');
+    if (function_exists('set_include_path')) {
+        set_include_path($php_dir);
+    } else {
+        ini_set('include_path', $php_dir);
+    }
+    include_once 'PEAR.php';
     print "ok\n";
-    displayHTMLProgress($progress += round(65 / count($to_install)));
-}
-
-print 'Bootstrapping: PEAR...................';
-if (in_array('PEAR.php', $local_dir)) {
-    copy(dirname(__FILE__).'/go-pear-bundle/PEAR.php', 'PEAR.php');
-    echo "(local) ";
 } else {
-    $url = 'http://cvs.php.net/viewcvs.cgi/pear-core/PEAR.php?view=co&pathrev=PEAR_1_4';
-    echo "(remote) ";
-    download_url($url, 'PEAR.php', $http_proxy);
-}
+    foreach($bootstrap_files as $name => $url) {
+        $file = basename($name);
+        $dir = dirname($name);
 
-include_once 'PEAR.php';
-print "ok\n";
+        print 'Bootstrapping '.$name.'............';
+        displayHTMLProgress($progress += round(14 / count($bootstrap_files)));
+        if ($dir != '' && $dir != '.') {
+            mkdir($dir, 0700);
+        }
 
-print 'Bootstrapping: Archive_Tar............';
-$r = 'RELEASE_' . ereg_replace('[^A-Za-z0-9]', '_', substr(substr($tarball['Archive_Tar'], 12), 0, -4));
-
-/* force to a known revision */
-$url = "http://cvs.php.net/viewcvs.cgi/pear/Archive_Tar/Archive/Tar.php?view=co&pathrev=RELEASE_1_3_2";
-mkdir('Archive', 0700);
-
-if (in_array('Tar.php', $local_dir)) {
-    copy(dirname(__FILE__).'/go-pear-bundle/Tar.php', 'Archive/Tar.php');
-    echo "(local) ";
-} else {
-    download_url($url, 'Archive/Tar.php', $http_proxy);
-    echo "(remote) ";
-}
-print "ok\n";
-
-print 'Bootstrapping: Console_Getopt.........';
-$r = 'RELEASE_' . ereg_replace('[^A-Za-z0-9]', '_', substr(substr($tarball['Console_Getopt'], 15), 0, -4));
-$url = "http://cvs.php.net/viewcvs.cgi/pear-core/Console/Getopt.php?view=co&pathrev=PEAR_1_4";
-mkdir('Console', 0700);
-if (in_array('Getopt.php', $local_dir)) {
-    copy(dirname(__FILE__).'/go-pear-bundle/Getopt.php', 'Console/Getopt.php');
-    echo "(local) ";
-} else {
-    download_url($url, 'Console/Getopt.php', $http_proxy);
-    echo "(remote) ";
-}
-print "ok\n";
-
-if ($install_pfc) {
-    foreach ($pfc_packages as $pkg) {
-        foreach($local_dir as $file) {
-            if (substr($file, 0, strlen($pkg)) == $pkg) {
-                echo str_pad("Using local package: $pkg", max(38,21+strlen($pkg)+4), '.');
-                copy(dirname(__FILE__).'/go-pear-bundle/'.$file, $file);
-                $tarball[$pkg] = $file;
-                echo "ok\n";
-                displayHTMLProgress($progress += round(65 / count($to_install)));
-                continue 2;
-            };
-        };
-
-        $msg = str_pad("Downloading package: $pkg", max(38,21+strlen($pkg)+4), '.');
-        print $msg;
-        $url = sprintf($urltemplate, $pkg);
-        $tarball[$pkg] = download_url($url, null, $http_proxy);
+        if (in_array($file, $local_dir)) {
+            copy($gopear_bundle_dir.'/'.$file, $name);
+            echo '(local) ';
+        } else {
+            download_url($url, $name, $http_proxy);
+            echo '(remote) ';
+        }
+        include_once $name;
         print "ok\n";
-        displayHTMLProgress($progress += round(65 / count($to_install)));
     }
 }
-
-displayHTMLProgress($progress = 70);
+unset($nobootstrap, $file, $url, $name, $dir);
 
 PEAR::setErrorHandling(PEAR_ERROR_DIE, "\n%s\n");
-print 'Extracting installer..................';
+print "\n".'Extracting installer..................'."\n";
+displayHTMLProgress($progress = 20);
 
-$dot = strrpos($tarball['Structures_Graph'], '.');
-$pkg = substr($tarball['Structures_Graph'], 0, $dot);
-$ext = substr($tarball['Structures_Graph'], $dot + 1);
-
-include_once 'Archive/Tar.php';
-
-$tar = &new Archive_Tar($tarball['Structures_Graph'], $have_gzip);
-if (!$tar->extractModify($ptmp, $pkg)) {
-    bail("failed!\n");
+// Extract needed ?
+$noextract = false;
+if (is_dir($php_dir)) {
+    $noextract = @include_once 'PEAR/Registry.php';
+    
+    if ($noextract) {
+        $registry = new PEAR_Registry($php_dir);
+        foreach ($bootstrap_pkgs as $pkg) {
+            $noextract &= $registry->packageExists($pkg);
+        }
+    }
 }
 
-$dot = strrpos($tarball['PEAR'], '.');
-$pkg = substr($tarball['PEAR'], 0, $dot);
-$ext = substr($tarball['PEAR'], $dot + 1);
+if ($noextract) {
+    print('Using previously installed installer ... ');
+    print "ok\n";
+} else {
+    $bootstrap_pkgs_tarballs = array();
+    foreach ($bootstrap_pkgs as $pkg) {
+        $tarball = null;
+        if (isset($local_dir[$pkg])) {
+            echo str_pad("Using local package: $pkg", max(38,21+strlen($pkg)+4), '.');
+            copy($gopear_bundle_dir.'/'.$local_dir[$pkg], $local_dir[$pkg]);
+            $tarball = $local_dir[$pkg];
+        } else {
+            print str_pad("Downloading package: $pkg", max(38,21+strlen($pkg)+4), '.');
+            $url = sprintf($urltemplate, $pkg);
+            $pkg = str_replace('-stable', '', $pkg);
+            $tarball = download_url($url, null, $http_proxy);
+        }
+        displayHTMLProgress($progress += round(19 / count($bootstrap_pkgs)));
 
-$tar = &new Archive_Tar($tarball['PEAR'], $have_gzip);
-if (!$tar->extractModify($ptmp, $pkg)) {
-    bail("failed!\n");
+        $fullpkg = substr($tarball, 0, strrpos($tarball, '.'));
+        $tar = &new Archive_Tar($tarball, $have_gzip);
+        if (!$tar->extractModify($ptmp, $fullpkg)) {
+            bail("Extraction for $fullpkg failed!\n");
+        }
+        $bootstrap_pkgs_tarballs[$pkg] = $tarball;
+        print "ok\n";
+    }
 }
-print "ok\n";
+unset($noextract, $registry, $pkg, $tarball, $url, $fullpkg, $tar);
 
-$tarball['PEAR'] = 'package.xml'; // :-)
+
+print "\n".'Preparing installer..................'."\n";
+displayHTMLProgress($progress = 40);
 
 // Default for sig_bin
 putenv('PHP_PEAR_SIG_BIN=""');
@@ -770,7 +744,6 @@ putenv('PHP_PEAR_SIG_KEYDIR=""');
 putenv('PHP_PEAR_DOWNLOAD_DIR=' . $temp_dir . '/download');
 putenv('PHP_PEAR_TEMP_DIR=' . $temp_dir);
 
-include_once "PEAR.php";
 include_once "PEAR/Config.php";
 include_once "PEAR/Command.php";
 include_once "PEAR/Registry.php";
@@ -784,33 +757,69 @@ if (WEBINSTALLER || isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] == 'local'
 
 $config->set('preferred_state', 'stable');
 foreach ($config_vars as $var) {
-    $config->set($var, $$var);
+    if (isset($$var) && $$var != '') {
+        $config->set($var, $$var);
+    }
 }
 $config->set('download_dir', $temp_dir . '/download');
 $config->set('temp_dir', $temp_dir);
+$config->set('http_proxy', $http_proxy);
 $config->store();
 
 $registry = new PEAR_Registry($php_dir);
 PEAR_Command::setFrontendType('CLI');
+
+PEAR::staticPushErrorHandling(PEAR_ERROR_DIE); //fail silently
+$ch_cmd = &PEAR_Command::factory('update-channels', $config);
+$ch_cmd->run('update-channels', $options, array());
+PEAR::staticPopErrorHandling(); // reset error handling
+unset($ch_cmd);
+
+
+print "\n".'Installing selected packages..................'."\n";
+displayHTMLProgress($progress = 45);
+
 $install = &PEAR_Command::factory('install', $config);
+foreach ($to_install as $pkg) {
+    $pkg_basename = substr($pkg, 0, strpos($pkg, '-'));
 
-$install_options = array(
-    'nodeps' => true,
-    'force' => true,
-);
-
-foreach ($tarball as $pkg => $src) {
-    $options = $install_options;
-    if ($registry->packageExists($pkg)) {
-        $options['upgrade'] = true;
+    if (in_array($pkg, $installer_packages)) {
+        $options = array('nodeps' => true);
+    } else {
+        $options = array('onlyreqdeps' => true);
     }
-
-    $install->run('install', $options, array($src));
-
-    displayHTMLProgress($progress += round(29 / count($tarball)));
+    if ($registry->packageExists($pkg) || $registry->packageExists($pkg_basename)) {
+        print(str_pad("Package: $pkg", max(50,9+strlen($pkg)+4), '.').' already installed ... ok'."\n");
+        displayHTMLProgress($progress += round(50 / count($to_install)));
+        continue;
+    }
+    
+    $pkg_basename = substr($pkg, 0, strpos($pkg, '-'));
+    if (in_array($pkg_basename, $bootstrap_pkgs)) {
+        print(str_pad("Installing bootstrap package: $pkg_basename", max(50,30+strlen($pkg_basename)+4), '.')."...");
+        displayHTMLProgress($progress += round(25 / count($to_install)));
+        $install->run('install', $options, array($bootstrap_pkgs_tarballs[$pkg_basename]));
+    } elseif (isset($local_dir[$pkg_basename])) {
+        print(str_pad("Installing local package: $pkg", max(50,26+strlen($pkg)+4), '.')."...");
+        displayHTMLProgress($progress += round(25 / count($to_install)));
+        $install->run('install', $options, array($gopear_bundle_dir.'/'.$local_dir[$pkg_basename]));
+    } else { // no local copy
+        print(str_pad("Downloading and installing package: $pkg", max(50,36+strlen($pkg)+4), '.')."...");
+        displayHTMLProgress($progress += round(25 / count($to_install)));
+        $install->run('install', $options, array($pkg));
+    }
+    displayHTMLProgress($progress += round(25 / count($to_install)));
 }
+unset($pkg, $pkg_basename, $options, $bootstrap_pkgs_tarballs);
 
+/* TODO: Memory exhaustion in webinstaller : / (8Mb)
+print "\n".'Making sure every package is at the latest version........';
+$install->run('upgrade-all', array('soft' => true), array());
+print "ok\n";
+*/
+unset($config, $registry, $install);
 displayHTMLProgress($progress = 99);
+
 
 // Base installation finished
 
@@ -910,7 +919,6 @@ to see what packages are installed, or 'pear help' for help.
 For more information about PEAR, see:
 
   http://pear.php.net/faq.php
-  http://cvs.php.net/co.php/pearweb/doc/pear_package_manager.txt?p=1
   http://pear.php.net/manual/
 
 Thanks for using go-pear!
@@ -920,14 +928,16 @@ Thanks for using go-pear!
 }
 
 if (WEBINSTALLER) {
-    print "Writing WebFrontend file ... ";
+    print "\n".'Writing WebFrontend file ... ';
     @unlink($webfrontend_file); //Delete old one
     copy ( $doc_dir.DIRECTORY_SEPARATOR.
             'PEAR_Frontend_Web'.DIRECTORY_SEPARATOR.
             'docs'.DIRECTORY_SEPARATOR.
-            'example.php',
+            'index.php.txt',
             $webfrontend_file
         );
+    print "ok\n";
+    
     if ($_GET['step'] == 'install-progress') {
         displayHTMLProgress($progress = 100);
         ob_end_clean();
@@ -972,6 +982,44 @@ if (WINDOWS && !WEBINSTALLER) {
     win32CreateRegEnv();
 }
 // Set of functions following
+/**
+ * Parse the given dirname
+ * eg. expands '~' etc
+ *
+ * @param string $dir directory, from input
+ * @return string parsed directory
+ */
+function parse_dirname($dir)
+{
+    if (!isset($_ENV['HOME'])) {
+        if (strpos($dir, '~') === 0) {
+            if (WEBINSTALLER) {
+                die('<p><em>Can\'t use the \'~\' symbol for homedir substitution, write the directory out in full.</em></p>');
+            } else {
+                die('Can\'t use the \'~\' symbol for homedir substitution, write the directory out in full.');
+            }
+        }
+        return $dir;
+    }
+
+    $home_root = $_ENV['HOME'];
+    // first strip last slash, if available
+    if (substr($home_root, -1) == DIRECTORY_SEPARATOR) {
+        $home_root = substr($home_root, 0, -1);
+    }
+    if (strpos($dir, '~/') === 0) {
+        // eg ~/ = /home/tias/
+        $dir = substr_replace($dir, $home_root, 0, 1);
+    } elseif (strpos($dir, '~') === 0) {
+        // eg ~tias/ = /home/tias/
+        // then delete user-dir
+        $home_root = dirname($home_root) . DIRECTORY_SEPARATOR;
+        $dir = substr_replace($dir, $home_root, 0, 1);
+    }
+
+    return $dir;
+}
+
 
 // {{{ download_url()
 
@@ -997,6 +1045,7 @@ function download_url($url, $destfile = null, $proxy = null)
     }
     if (!$fp) {
         bail("download of $url failed: $errstr ($errno)\n");
+        // If valid URL but error, no CURL extentions installed
     }
     if (empty($proxy)) {
         $path = $tmp['path'];
@@ -1035,9 +1084,7 @@ function download_url($url, $destfile = null, $proxy = null)
         }
     }
 
-    if ($content_length) {
-        displayHTMLSetDownload($destfile);
-    };
+    displayHTMLSetDownload($destfile);
     $wp = fopen($destfile, "wb");
     if (!$wp) {
         bail("could not open $destfile for writing\n");
@@ -1052,8 +1099,11 @@ function download_url($url, $destfile = null, $proxy = null)
             displayHTMLDownloadProgress($progress * 10);
         };
     }
+    displayHTMLDownloadProgress(100);
     fclose($fp);
     fclose($wp);
+    
+    displayHTMLSetDownload('');
     return $destfile;
 }
 
@@ -1155,9 +1205,10 @@ function mkdir_p($dir, $mode = 0777)
     }
     if ($ok) {
         $ok = @mkdir($dir, $mode);
-        if (!$ok) {
-            print "mkdir failed: <$dir>\n";
-        }
+        // This is handled in the caller function (eg. webfrontend or not)
+        //if (!$ok) {
+        //    print "mkdir failed: <$dir>\n";
+        //}
     }
     return $ok;
 }
@@ -1207,12 +1258,13 @@ function temp_dir($default=false)
         }
 
         /* try it really, is_writable is buggy with openbasedir */
-        $fh = fopen(realpath($default) . "/test","wb");
+        $fh = @fopen(realpath($default) . "/test","wb");
         if ($fh) {
-            $ptmp = $default;
+            // desparately try to set temp dir any possible way, see bug #13167
+            $ptmp = $_temp = $temp_dir = $default;
+            putenv('TMPDIR='.$default);
             return true;
         } else {
-            $ptmp = "failed";
             return false;
         }
     }
@@ -1260,7 +1312,7 @@ function temp_dir($default=false)
     // If for some reason the user has no rights to access to
     // the standard tempdir, we assume that he has the right
     // to access his prefix and choose $prefix/tmp as tempdir
-    if (!$_temp) {
+    if (!$_temp || !is_writable($_temp)) {
         print "System's Tempdir failed, trying to use \$prefix/tmp ...";
         $res = mkdir_p($prefix.'/tmp');
         if (!$res) {
@@ -1367,12 +1419,14 @@ function detect_install_dirs($_prefix = null) {
         }
     } else {
         if ($_prefix === null) {
-            $prefix    = dirname(PHP_BINDIR);
+            #$prefix    = dirname(PHP_BINDIR);
+            $prefix    = dirname(__FILE__);
         } else {
             $prefix = $_prefix;
         }
         $bin_dir   = '$prefix/bin';
-        $php_dir   = '$prefix/share/pear';
+        #$php_dir   = '$prefix/share/pear';
+        $php_dir   = '$prefix/PEAR';
         $doc_dir   = '$php_dir/docs';
         $data_dir  = '$php_dir/data';
         $test_dir  = '$php_dir/tests';
@@ -1472,7 +1526,10 @@ function displayHTMLHeader()
         color: #006600;
     }
     .red {
-        color: #006600;
+        color: #ff0000;
+    }
+    .grey {
+        color: #a9a9a9;
     }
 
     span.headline {
@@ -1594,6 +1651,10 @@ function displayHTMLHeader()
     form {
         margin-bottom : 0;
     }
+    hr {
+        text-align: left;
+        width: 80%;
+    }
  -->
  </style>
  <meta name="description" content="This is the Web Interface of the PEAR Installer" />
@@ -1630,7 +1691,7 @@ function displayHTML($page = 'Welcome', $data = array())
       &nbsp;
     </td>
     <td align="left" valign="middle">
-      <span class="Headline">Go-PEAR</span>
+      <span class="Headline">Go-PEAR Installer</span>
     </td>
   </tr>
 
@@ -1652,21 +1713,41 @@ function displayHTML($page = 'Welcome', $data = array())
    <table width="200" border="0" cellpadding="4" cellspacing="0">
     <tr valign="top">
      <td style="font-size: 90%" align="left" width="200">
-       <br><br>
-       <img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=smallpear" border="0">
-       <a href="<?php echo basename(__FILE__); ?>?step=Welcome&restart=1" <?php if ($page == 'Welcome') echo ' class="green"'; ?>>
-         Welcome to Go-PEAR
-       </a><br/>
+       <p><br />
+       <?php
+        $menus = array('Welcome' => 'Welcome to Go-PEAR',
+                       'config' => 'Configuration',
+                       'preinstall' => 'Installation',
+                       'install' => 'Completed');
+        $after_current = false;
 
-       <img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=smallpear" border="0">
-       <a href="<?php echo basename(__FILE__); ?>?step=config" <?php if ($page == 'config') echo ' class="green"'; ?>>
-         Configuration
-       </a><br/>
+        // Menu robustness (a bit low, but better then never)
+        if ($page == 'error') {
+            $_GET['last'] = $_GET['step'];
+            $after_current = true;
+        } elseif (!array_key_exists($page, $menus)) {
+            $page = 'Welcome';
+        }
+        
+        foreach ($menus as $menu => $descr) {
+            print('<img src="'.basename(__FILE__).'?action=img&amp;img=smallpear" alt="" />');
 
-       <img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=smallpear" border="0">
-<?php if ($page == 'install') echo '<span class="green">'; ?>
-         Complete installation<br/>
-<?php if ($page == 'install') echo '</span>'; ?>
+            if (!$after_current) {
+                $class = '';
+                if ($page == $menu) {
+                    $class = 'green';
+                }
+                if (!isSet($_GET['last'])) { $_GET['last'] = $page; }
+                print('<a href="'.basename(__FILE__).'?step='.$menu.'&last='.$_GET['last'].'" class="'.$class.'">'.$descr.'</a><br />');
+
+                if ($_GET['last'] == $menu) {
+                    $after_current = true;
+                }
+            } else {
+                print('<span class="grey">'.$descr.'</span><br />');
+            }
+        }
+       ?>
 
      </td>
     </tr>
@@ -1694,7 +1775,7 @@ function displayHTML($page = 'Welcome', $data = array())
             $value = preg_replace('/(ok)$/', '<span class="green">\1</span>', $value);
         }
         if (preg_match('/failed$/', $value)) {
-            $value = preg_replace('/(failed)$/', '<span style="color: #ff0000">\1</span>', $value);
+            $value = preg_replace('/(failed)$/', '<span class="red">\1</span>', $value);
         }
         if (preg_match('/^install ok:/', $value)) {
             $value = preg_replace('/^(install ok:)/', '<span class="green">\1</span>', $value);
@@ -1707,89 +1788,138 @@ function displayHTML($page = 'Welcome', $data = array())
     } elseif ($page == 'Welcome') {
 ?>
             <span class="title">Welcome to go-pear <?php echo GO_PEAR_VER; ?>!</span><br/>
-            <br/>
-            Go-pear will install the Web Frontend of the PEAR Installer and all the needed <br/>
-            files. This frontend is your tool for PEAR installation and maintenance.<br/>
-            <br/>
-            Go-pear also lets you download and install the PEAR packages bundled<br/>
-            with PHP: <?php echo implode(', ', $GLOBALS['pfc_packages']); ?>.<br/>
-            <br/>
-            <a href="<?php echo basename(__FILE__); ?>?step=config" class="green">Next &gt;&gt;</a>
+            <p>
+            Go-pear will install Pear, its Web Frontend and all the needed files. This<br/>
+            frontend is your tool for PEAR installation and maintenance.
+            </p>
+            <p>
+            Go-pear also lets you download and install the following optional PEAR<br/>
+            packages: <?php echo implode(', ', array_keys($GLOBALS['pfc_packages'])); ?>.
+            </p>
+
+            <a href="<?php echo basename(__FILE__); ?>?step=config&restart=1" class="green">Next &gt;&gt;</a>
 <?php
     } elseif ($page == 'config') {
         if (!empty($GLOBALS['http_proxy'])) {
-            list($proxy_host, $proxy_port) = explode(':', $GLOBALS['http_proxy']);
+            $tmp_proxy = parse_url($GLOBALS['http_proxy']);
+
+            $proxy_host = $tmp_proxy['scheme'] . '://';
+            if ($tmp_proxy['user'] != '') {
+                $proxy_host .= $tmp_proxy['user'];
+                if ($tmp_proxy['pass'] != '') {
+                    $proxy_host .= ':' . $tmp_proxy['pass'];
+                }
+                $proxy_host .= '@';
+            }
+            $proxy_host .= $tmp_proxy['host'];
+            $proxy_port = $tmp_proxy['port'];
         } else {
             $proxy_host = $proxy_port = '';
         }
 ?>
             <form action="<?php echo basename(__FILE__);?>?step=install" method="post">
-            <span class="title">Configuration</span><br/>
-            <br/>
-            HTTP proxy (host:port):
-            <input type="text" name="proxy[host]" value="<?php echo $proxy_host;?>">
-            <input type="text" name="proxy[port]" value="<?php echo $proxy_port;?>" size="6">
-            <br/><br/><hr/><br/>
-            Below is a suggested file layout for your new PEAR installation. <br/>
-            <br/>
-            <table border="0">
-              <TR>
-                <TD valign="top"><img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=note" border="0"></TD>
-                <TD>
+        <!-- Packages stuff -->
+        <span class="title">Packages</span>
+	    <p>
+        The following PEAR packages will be installed. You can select some optional<br />
+        packages to be installed by go-pear too:<br />
+        </p>
+	    <table border="0">
+        <tr>
+        <th>&nbsp;</th><th>Package</th><th width="65%">Description</th>
+        </tr><tr>
+        <td>(required)</td><td>PEAR core</td><td>PEAR Base System</td>
+        </tr>
+
+        <?php
+        // automatically install frontend
+        $frontend = 'PEAR_Frontend_Web-beta';
+        print('<tr><td>(required)<input type="hidden" name="'.$frontend.'" value="on" /></td><td>'.$frontend.'</td><td>'.$GLOBALS['pfc_packages'][$frontend].'</td></tr>');
+        unset($GLOBALS['pfc_packages'][$frontend]);
+
+        foreach ($GLOBALS['pfc_packages'] as $var => $descr) {
+            $checked = '';
+            if (in_array($var, $GLOBALS['install_optional_packages'])) { $checked = ' checked'; }
+            printf('<tr><td align="center"><input type="checkbox" name="%s"%s></td><td>%s</td><td>%s</td></tr>',
+            $var,
+            $checked,
+            $var,
+            $descr);
+        }
+        ?>
+        </table>
+        <hr />
+
+        <!-- Configuration stuff -->
+        <span class="title">Configuration</span>
+	    <p>
+            Below is a suggested file layout for your new PEAR installation.
+        </p>
+
+        <!--
+	    <p>
+	    <table border="0">
+              <tr>
+                <td valign="top"><img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=note" /></td>
+                <td>
                   <span class="green">
                     <b>Note:</b> Make sure that PHP has the permission to access the specified<br/>
-                    directories.<br/><br/>
+                    directories.
                   </span>
-                </TD>
-              </TR>
+                </td>
+              </tr>
             </table>
-            <TABLE border="0">
-<?php
-    // Display error messages
-        if (isset($GLOBALS['www_errors']) && sizeof($GLOBALS['www_errors']) ) {
-            $www_errors = $GLOBALS['www_errors'];
-            echo "<tr><td>";
-            echo '<span class="red">ERROR(S):</span>';
-            echo "</td></tr>";
-            foreach ($www_errors as $n => $var) {
-                echo "<tr><td>";
-                echo '<span class="red">'.$GLOBALS['config_desc'][$n].': </span>';
-                echo "</td><td>";
-                echo '<span class="red">'.$www_errors[$n].'</span>';
-                echo "<br>\n";
-                echo "</td></tr>\n";
-            }
-        }
+	    </p>
+        -->
 
+            <table border="0" width="80%">
+<?php
         foreach ($GLOBALS['config_vars'] as $n => $var) {
-            printf('<tr><td>%d. %s</td><td><input type="text" name="config[%s]" value="%s"></td></tr>',
+            $error_class = '';
+            if (is_array($GLOBALS['config_errors']) && array_key_exists($var, $GLOBALS['config_errors'])) {
+                // www_error for this var
+                $error_class = ' class="red"';
+            }
+
+            printf('<tr><td>%d. %s</td><td><input type="text" name="config[%s]" value="%s"%s></td></tr>',
             $n,
             $GLOBALS['config_desc'][$var],
             $var,
-            $GLOBALS[$var]);
+            $_SESSION['go-pear']['config'][$var],
+            $error_class);
+            
+            // prefix dir, check perm (uses GLOBALS: resolved subvars)
+            if ($n == 1 && is_dir($GLOBALS[$var]) && !is_writable($GLOBALS[$var])) {
+                $error = '<em>WARNING!</em> No permission to create subdirectories in this prefix dir. Unless you fix this, the default configuration will not work.';
+                if (!WINDOWS) {
+                    $error .= '<p>You can grant this permission by logging on to the server and issuing the following command:<br />
+<tt>chmod 0777 '.$GLOBALS[$var].'</tt></p>';
+                }
+                print('<tr><td colspan="2" class="green">'.$error.'</td></tr>');
+            }
+                    
+
+            if (is_array($GLOBALS['config_errors']) && array_key_exists($var, $GLOBALS['config_errors'])) {
+                // www_error for this var
+                print('<tr><td colspan="2" class="red">'.$GLOBALS['config_errors'][$var].'</td></tr>');
+            }
         }
 ?>
-            </TABLE>
-            <br/><hr/><br/>
-            The following PEAR packages are common ones, and can be installed<br/>
-            by go-pear too: <br/>
-<?php echo implode(', ', $GLOBALS['pfc_packages']);?>.<br/>
-            <input type="checkbox" name="install_pfc" <?php if($GLOBALS['install_pfc']) ?>> Install those too<br/>
-            <br/><br/>
-            <table border="0">
-              <TR>
-                <TD valign="top"><img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=note" border="0"></TD>
-                <TD>
-                  <span class="green">
-                      <b>Note:</b> Installation might take some time, because go-pear has to download<br/>
-                      all needed files from pear.php.net. Just be patient and wait for the next<br/>
-                      page to load.<br/>
-                  </span>
-                </TD>
-              </TR>
             </table>
-            <br>
-            <input type="checkbox" name="BCmode" id="BCmode" checked> Compatibility-Mode for old non-DOM Browsers<br/>
+	    </p>
+	    <hr />
+            
+	    <!-- Optional stuff -->
+        <span class="title">Optional:</span>
+
+        <ul>
+            <p>
+            <li />HTTP proxy (host:port)
+            <input type="text" name="proxy[host]" value="<?php echo $proxy_host;?>"> : <input type="text" name="proxy[port]" value="<?php echo $proxy_port;?>" size="6">
+            </p>
+
+	        <p>
+            <li />Compatibility-Mode for old non-DOM Browsers <input type="checkbox" name="BCmode" id="BCmode" checked>
             <script type="text/javascript">
             <!--
                 if (document.getElementById('BCmode')) {
@@ -1797,27 +1927,48 @@ function displayHTML($page = 'Welcome', $data = array())
                 };
             // -->
             </script>
+	        </p>
+        </ul>
 
 <?php
         if (WINDOWS && phpversion() == '4.1.1') {
 ?>
+		    <p>
                     <table border="0">
-                      <TR>
-                        <TD valign="top"><img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=note" border="0"></TD>
-                        <TD>
+                      <tr>
+                        <td valign="top"><img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=note" alt="" /></td>
+                        <td>
                           <span style="color: #ff0000">
                               <b>Warning:</b> Your PHP version (4.1.1) might be imcompatible with go-pear due to a bug<br/>
                               in your PHP binary. If the installation crashes you might want to update your PHP version.</br>
                           </span>
-                        </TD>
-                      </TR>
+                        </td>
+                      </tr>
                     </table>
+		    </p>
 <?php
         }
 ?>
-            <br/>
+        <hr />
+	    <!-- Closing note -->
+	    <p>
+            <table border="0">
+              <tr>
+                <td valign="top"><img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=note" alt="" /></td>
+                <td>
+                  <span class="green">
+                      <b>Note:</b> Installation might take some time, because go-pear has to<br/>
+                      download all needed files from pear.php.net. Just be patient and wait for<br/>
+                      the next page to load.<br/>
+                  </span>
+                </td>
+              </tr>
+            </table>
+	    </p>
+
             <input type="submit" value="Install" onClick="javascript: submitButton.value='Downloading and installing ... please wait ...'" name="submitButton">
             </form>
+
 <?php
     } elseif ($page == 'install') {
 ?>
@@ -1826,9 +1977,10 @@ function displayHTML($page = 'Welcome', $data = array())
         displayHTMLInstallationSummary($data);
     } elseif ($page == 'preinstall') {
 ?>
-            <span class="title">Installation in progress ...</span><br/>
-            <br/>
-            <script language="javascript">
+            <p>
+            <span class="title">Installation in progress ...</span></br >
+            <i>(If the page stops loading before the end of the installation, then just reload it)</i></p>
+            <script type="text/javascript">
             <!--
 
                 var progress;
@@ -1883,6 +2035,14 @@ function displayHTML($page = 'Welcome', $data = array())
 
                     prog = document.getElementById('download_file');
                     prog.innerHTML = 'Downloading '+value+' ...';
+                };
+
+                function unsetdownloadfile()
+                {
+                    setdownloadprogress(0);
+
+                    prog = document.getElementById('download_file');
+                    prog.innerHTML = '';
                 };
 
                 function setdownloadprogress(value)
@@ -1941,7 +2101,7 @@ function displayHTML($page = 'Welcome', $data = array())
                     <td bgcolor="#ffffff" height="20" id="installation_progress" class="green">0 %</td>
                   </tr>
                 </table>
-                <br>
+                <br />
                 <table border="0">
                   <tr>
                     <td bgcolor="#cccccc" width="10" height="20" id="download_progress_cell_0">&nbsp;</td>
@@ -1960,7 +2120,7 @@ function displayHTML($page = 'Welcome', $data = array())
                     <td bgcolor="#ffffff" height="20" id="download_file" class="green"></td>
                   </tr>
                 </table>
-                <br>
+                <br />
                 <iframe src="<?php echo basename(__FILE__); ?>?step=install-progress&amp;<?php echo SID;?>" width="700" height="700" frameborder="0" marginheight="0" marginwidth="0"></iframe>
               </td>
             </tr>
@@ -2001,7 +2161,7 @@ function displayHTMLFooter()
 function displayHTMLInstallationSummary($data = '')
 {
     $next     = NULL;
-    $file   = $GLOBALS['webfrontend_file'];
+    $file     = $GLOBALS['webfrontend_file'];
     $doc_root = strip_magic_quotes($_SERVER['DOCUMENT_ROOT']);
     $file_dir = dirname(__FILE__);
     if ( WINDOWS ) {
@@ -2012,29 +2172,40 @@ function displayHTMLInstallationSummary($data = '')
 
     if ($doc_root && substr($file, 0, strlen($doc_root)) == $doc_root) {
         $next = substr($file, strlen($doc_root));
-    } elseif ($file_dir && substr($file, 0, strlen($file_dir)) == $file_dir) {
+        // need leading / (file - docroot = path from docroot)
+        if (substr($next, 0, 1) != '/') {
+            $next = '/'.$next;
+        }
+    } else if ($file_dir && substr($file, 0, strlen($file_dir)) == $file_dir) {
         $next = substr($file, strlen($file_dir));
+        // strip leading / (file - file_dir = path from go-pear file)
+        if (substr($next, 0, 1) == '/') {
+            $next = substr($next, 1, strlen($next));
+        }
     }
 
     if ($data) {
         echo "<br/>".$data;
     }
 ?>
-            <br/>
+            <p>
+            <span class="title">Installation Completed !</span>
+            </p>
+
             <table border="0">
-              <TR>
-                <TD valign="top"><img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=note" border="0"></TD>
-                <TD>
+              <tr>
+                <td valign="top"><img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=note" alt="" /></td>
+                <td>
                   <span class="green">
                   <b>Note:</b> To use PEAR without any problems you need to add your<br/>
-                  PEAR Installation path (<?php echo $GLOBALS['php_dir']; ?>)<br>
+                  PEAR Installation path (<?php echo $GLOBALS['php_dir']; ?>)<br />
                   to your <a href="http://www.php.net/manual/en/configuration.directives.php#ini.include_path">include_path</a>.<br/>
                       <br/>
                   Using a .htaccess file or directly edit httpd.conf would be working solutions<br/>
                   for Apache running servers, too.<br/>
                   </span>
-                </TD>
-              </TR>
+                </td>
+              </tr>
             </table>
             <br/>
             For more information about PEAR, see:<br/>
@@ -2047,16 +2218,16 @@ function displayHTMLInstallationSummary($data = '')
     if ($next === NULL) {
 ?>
                     <table border="0">
-                      <TR>
-                        <TD valign="top"><img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=note" border="0"></TD>
-                        <TD>
+                      <tr>
+                        <td valign="top"><img src="<?php echo basename(__FILE__); ?>?action=img&amp;img=note" alt="" /></td>
+                        <td>
                           <span style="color: #ff0000">
-                            <b>Warning:</b> Go-PEAR was not able to determine the URL to the newly<br/>
-                            installed Web Frontend of the PEAR Installer. Please access it manually.<br/>
-                            Since you specified the prefix, you should know how to do so.<br/>
+                            <b>Warning:</b> Can not determine the URL of the freshly installed Web Frontend<br />
+                            (file: <?php echo $file ?>).<br />
+                            Please access it manually !
                           </span>
-                        </TD>
-                      </TR>
+                        </td>
+                      </tr>
                     </table>
 <?php
     } else {
@@ -2127,14 +2298,17 @@ function displayHTMLProgress($progress)
             $value = preg_replace('/(failed)$/', '<span style="color: #ff0000">\1</span>', $value);
         };
         if (preg_match('/^install ok:/', $value)) {
-            $value = preg_replace('/^(install ok:)/', '<span class="green">\1</span>', $value);
+            //$value = preg_replace('/^(install ok:)/', '<span class="green">\1</span>', $value).'<br />';
+            //$msg = array($value); // if install succeeded: don't show the irritatingly verbose pear installer
+            $msg = array('<span class="green">ok</span><br />');
+            break;
         };
         if (preg_match('/^Warning:/', $value)) {
             $value = '<span style="color: #ff0000">'.$value.'</span>';
         };
         $msg[$key] = $value;
     };
-    $msg = implode('<br>', $msg);
+    $msg = implode('<br />', $msg);
 
     $msg.='<script type="text/javascript"> parent.setprogress('.((int) $progress).');  </script>';
 
@@ -2170,7 +2344,11 @@ function displayHTMLSetDownload($file)
     $msg = ob_get_contents();
     ob_end_clean();
 
-    echo '<script type="text/javascript"> parent.setdownloadfile("'.$file.'");  </script>';
+    if ($file != null && $file != '') {
+        echo '<script type="text/javascript"> parent.setdownloadfile("'.$file.'");  </script>';
+    } else {
+        echo '<script type="text/javascript"> parent.unsetdownloadfile();  </script>';
+    }
 
     ob_start();
     echo $msg;
@@ -2494,3 +2672,5 @@ php.ini <$pathIni> include_path updated.
     }
     return true;
 }
+
+?>
