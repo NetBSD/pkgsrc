@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4131 2009/10/29 07:14:46 martti Exp $
+$NetBSD: CHANGES-2009,v 1.4132 2009/10/29 08:29:33 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5473,3 +5473,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/openldap* to 2.4.19 [ghen 2009-10-29]
 	Updated mail/clamav to 0.95.3 [martti 2009-10-29]
 	Updated editors/vim-share to 7.2.267 [martti 2009-10-29]
+	Updated lang/pear to 1.9.0 [seb 2009-10-29]
