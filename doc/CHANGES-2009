@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4133 2009/10/29 11:43:49 tron Exp $
+$NetBSD: CHANGES-2009,v 1.4134 2009/10/29 12:44:16 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5476,3 +5476,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/pear to 1.9.0 [seb 2009-10-29]
 	Updated net/libtorrent to 0.12.5 [tron 2009-10-29]
 	Updated net/rtorrent to 0.8.5 [tron 2009-10-29]
+	Updated databases/rrdtool to 1.3.9 [martti 2009-10-29]
