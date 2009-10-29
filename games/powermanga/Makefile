@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/09/02 11:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/10/29 20:21:43 joerg Exp $
 #
 
 DISTNAME=	powermanga-0.90
@@ -17,6 +17,13 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 MAKE_ENV+=		TOUCH=${TOUCH:Q} WRKSRC=${WRKSRC:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "modular"
+CONFIGURE_ARGS+=	--x-includes=${PREFIX}/include
+CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/lib
+.endif
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
