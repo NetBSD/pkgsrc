@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/05/20 00:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2009/10/29 21:53:10 tnn Exp $
 #
 
 DISTNAME=	zephyr-20010518
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://athena-dist.mit.edu/pub/ATHENA/zephyr/
 MAINTAINER=	sommerfeld@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/olh/Zephyr/index.html
 COMMENT=	Project Athena's original Instant Messaging system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/zephyr
 GNU_CONFIGURE=	YES
@@ -33,11 +35,17 @@ CONF_FILES=		${EGDIR}/default.subscriptions \
 
 RCD_SCRIPTS=		zhm
 
+SUBST_CLASSES+=		mandir
+SUBST_STAGE.mandir=	pre-configure
+SUBST_MESSAGE.mandir=	Fixing mandir in Makefile.in
+SUBST_FILES.mandir=	*/*/Makefile.in */Makefile.in Makefile.in
+SUBST_SED.mandir=	-e 's,$${prefix}/man,@mandir@,g'
+
 pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${ZEPHYR_DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${ZEPHYR_DOCDIR}
 .for f in ${ZEPHYR_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${ZEPHYR_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${ZEPHYR_DOCDIR}
 .endfor
 
 .include "../../devel/readline/buildlink3.mk"
