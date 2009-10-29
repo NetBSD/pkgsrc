@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2009/08/26 19:56:56 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2009/10/29 23:08:33 drochner Exp $
 
 BUILDLINK_TREE+=	libbonoboui
 
@@ -14,7 +14,6 @@ BUILDLINK_PKGSRCDIR.libbonoboui?=	../../devel/libbonoboui
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
-.include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
