@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/16 09:20:32 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2009/10/29 20:36:10 tnn Exp $
 
 DISTNAME=	logcheck-1.1.1
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/sentrytools/
 COMMENT=	Auditing tool for system logs on Unix boxes
 
-
+NOT_FOR_UNPRIVILEGED=	yes
 OWN_DIRS=	/var/adm/tmp /var/adm
 
 PKG_SYSCONFSUBDIR=	logcheck
