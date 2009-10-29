@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2009/07/08 14:19:46 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2009/10/29 18:20:36 joerg Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -14,6 +14,7 @@ DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/hbench-OS
 OSVERSION_SPECIFIC=	YES
