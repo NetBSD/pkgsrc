@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.102 2009/08/26 19:57:30 sno Exp $
+# $NetBSD: Makefile,v 1.103 2009/10/29 20:40:10 drochner Exp $
 
-DISTNAME=		gnome-games-2.26.3
-PKGREVISION=		2
+DISTNAME=		gnome-games-2.28.1
 CATEGORIES=		games gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.26/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.28/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -48,26 +47,32 @@ GCONF_SCHEMAS+=	gtali.schemas
 GCONF_SCHEMAS+=	iagno.schemas
 GCONF_SCHEMAS+=	mahjongg.schemas
 GCONF_SCHEMAS+=	same-gnome.schemas
+GCONF_SCHEMAS+=	gnome-sudoku.schemas
 
 PYTHON_PATCH_SCRIPTS+=	glchess/src/glchess.in.in
 PYTHON_PATCH_SCRIPTS+=	gnome-sudoku/src/gnome-sudoku.in.in
 PY_PATCHPLIST=		yes
 
+.include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/GConf-ui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.10.0
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
+#.include "../../devel/libglade/buildlink3.mk"
+#BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.10.0
+#.include "../../devel/libgnome/buildlink3.mk"
+#.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../games/ggz-client-libs/buildlink3.mk"
 .include "../../games/ggz-client-libs/ggz-client.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
 .include "../../graphics/librsvg/buildlink3.mk"
+BUILDLINK_API_DEPENDS.clutter+= clutter>=1.0
+.include "../../graphics/clutter/buildlink3.mk"
+BUILDLINK_API_DEPENDS.clutter-gtk+= clutter-gtk>=0.10
+.include "../../graphics/clutter-gtk/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/omf-scrollkeeper.mk"
@@ -77,5 +82,6 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gnome2-desktop/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
