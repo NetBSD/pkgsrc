@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/29 21:23:19 tnn Exp $
 bin/traceanon
 bin/traceconvert
 bin/tracefilter
-bin/traceflow
 bin/tracemerge
 bin/tracepktdump
 bin/tracereport
@@ -13,6 +12,7 @@ bin/tracestats
 bin/tracesummary
 include/dagformat.h
 include/daglegacy.h
+include/erftypes.h
 include/libpacketdump.h
 include/libtrace.h
 include/libtraceio.h
@@ -21,7 +21,7 @@ include/rt_protocol.h
 lib/libpacketdump.la
 lib/libpacketdump/eth_2048.la
 lib/libpacketdump/eth_2054.la
-lib/libpacketdump/eth_33024.protocol
+lib/libpacketdump/eth_33024.la
 lib/libpacketdump/eth_34525.protocol
 lib/libpacketdump/eth_34887.la
 lib/libpacketdump/eth_34916.la
@@ -49,7 +49,6 @@ lib/libtrace.la
 man/man1/traceanon.1
 man/man1/traceconvert.1
 man/man1/tracefilter.1
-man/man1/traceflow.1
 man/man1/tracemerge.1
 man/man1/tracepktdump.1
 man/man1/tracereport.1
