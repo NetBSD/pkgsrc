@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/10/29 06:56:11 ghen Exp $
+# $NetBSD: Makefile,v 1.22 2009/10/29 15:50:17 ghen Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 COMMENT=		Lightweight Directory Access Protocol server suite
@@ -50,7 +50,7 @@ CNFS_SCHEMAS_cmd=	${SED} -ne "/\.ldif$$/p;/\.schema$$/p" ${PKGDIR}/PLIST | ${SED
 
 CNFS_PERMS=		slapd.conf
 
-DB_CONFIG=		DB_CONFIG.example
+DB_CONFIG=		DB_CONFIG
 
 RCD_SCRIPTS=		slapd
 
@@ -68,6 +68,6 @@ MESSAGE_SUBST+=		CHMOD=${CHMOD}
 
 .include "../../databases/openldap/Makefile.common"
 
-CONF_FILES_PERMS+=	${EGDIR}/DB_CONFIG.example ${OPENLDAP_VARDIR}/openldap-data/DB_CONFIG ${OPENLDAP_FILEPERMS}
+CONF_FILES_PERMS+=	${EGDIR}/DB_CONFIG ${OPENLDAP_VARDIR}/openldap-data/DB_CONFIG ${OPENLDAP_FILEPERMS}
 
 .include "../../mk/bsd.pkg.mk"
