@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/08/26 19:56:55 sno Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/29 17:51:09 drochner Exp $
 #
 
-DISTNAME=	libcanberra-0.11
-PKGREVISION=	2
+DISTNAME=	libcanberra-0.22
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/libcanberra/
 
@@ -26,7 +25,10 @@ SUBST_FILES.ltdlc=	configure
 SUBST_MESSAGE.ltdlc=	Fixing libtool convenience library name.
 SUBST_STAGE.ltdlc=	pre-configure
 
-.include "../../devel/libltdl/convenience.mk"
+CONFIGURE_ENV+=	ac_cv_lib_ltdl_lt_dladvise_init=yes
+
+#.include "../../devel/libltdl/convenience.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
