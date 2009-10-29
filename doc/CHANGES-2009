@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4135 2009/10/29 15:33:04 darcy Exp $
+$NetBSD: CHANGES-2009,v 1.4136 2009/10/29 15:53:09 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5471,6 +5471,12 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/firefox to 3.5.4 [tnn 2009-10-28]
 	Added sysutils/dmg2img version 1.6.1 [agc 2009-10-28]
 	Updated databases/openldap to 2.4.19 [ghen 2009-10-29]
+	Updated databases/openldap-client to 2.4.19 [ghen 2009-10-29]
+	Updated databases/openldap-cloak to 2.4.19 [ghen 2009-10-29]
+	Updated databases/openldap-doc to 2.4.19 [ghen 2009-10-29]
+	Updated databases/openldap-nops to 2.4.19 [ghen 2009-10-29]
+	Updated databases/openldap-server to 2.4.19 [ghen 2009-10-29]
+	Updated databases/openldap-smbk5pwd to 2.4.19 [ghen 2009-10-29]
 	Updated mail/clamav to 0.95.3 [martti 2009-10-29]
 	Updated editors/vim-share to 7.2.267 [martti 2009-10-29]
 	Updated lang/pear to 1.9.0 [seb 2009-10-29]
