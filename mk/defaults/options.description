@@ -168,6 +168,7 @@ gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
 gtkspell		Enable gtkspell support.	
 gzip			Enable compression using gzip
+guile			Enable support for GUILE
 hal			Support for the freedesktop.org Hardware Abstraction Layer
 halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hping-suid		Install hping executable setuid root.
