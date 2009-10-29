@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2009/10/29 17:51:09 drochner Exp $
+
+--- src/Makefile.in.orig	2009-10-20 02:29:59.000000000 +0200
++++ src/Makefile.in
+@@ -649,10 +649,10 @@ plugin_LTLIBRARIES = $(am__append_7) $(a
+ @BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	 -Ddriver_change_props=oss_driver_change_props \
+ @BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	 -Ddriver_play=oss_driver_play \
+ @BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	 -Ddriver_cancel=oss_driver_cancel \
+-@BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	 -Ddriver_cache=oss_driver_cache
++@BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	 -Ddriver_cache=oss_driver_cache -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
+ 
+ @BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@libcanberra_oss_la_LIBADD = \
+-@BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	libcanberra.la
++@BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	libcanberra.la ${LIBOSSAUDIO}
+ 
+ @BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@libcanberra_oss_la_LDFLAGS = \
+ @BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	-avoid-version -module -export-dynamic
