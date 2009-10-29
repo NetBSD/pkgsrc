@@ -1,4 +1,4 @@
-/* $NetBSD: proto.h,v 1.1 2006/07/14 14:23:06 jlam Exp $ */
+/* $NetBSD: proto.h,v 1.2 2009/10/29 20:21:53 tnn Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -151,7 +151,7 @@ extern	Cell	*call(Node **, int);
 extern	Cell	*copycell(Cell *);
 extern	Cell	*arg(Node **, int);
 extern	Cell	*jump(Node **, int);
-extern	Cell	*getline(Node **, int);
+extern	Cell	*get_line(Node **, int);
 extern	Cell	*getnf(Node **, int);
 extern	Cell	*array(Node **, int);
 extern	Cell	*awkdelete(Node **, int);
