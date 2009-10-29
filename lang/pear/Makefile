@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2009/07/17 18:00:16 adrianp Exp $
+# $NetBSD: Makefile,v 1.11 2009/10/29 08:29:03 seb Exp $
 #
 
-DISTNAME=	PEAR-1.5.4
-PKGREVISION=	3
+DISTNAME=	PEAR-1.9.0
+#PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
@@ -31,21 +31,21 @@ BUNDLE=		${WRKSRC}/install/go-pear-bundle
 
 # everything else that forms a part of the "base" PEAR install
 #
-PEAR_SRCS=		PEAR-1.5.4${EXTRACT_SUFX}
+PEAR_SRCS=		PEAR-1.9.0${EXTRACT_SUFX}
 DISTFILES+=		${PEAR_SRCS}
 EXTRACT_ONLY+=		${PEAR_SRCS}
 
-ARCHIVE_SRCS=		Archive_Tar-1.3.2${EXTRACT_SUFX}
+ARCHIVE_SRCS=		Archive_Tar-1.3.3${EXTRACT_SUFX}
 ARCHIVE_WRKSRC=		${WRKDIR}/${ARCHIVE_SRCS:S/${EXTRACT_SUFX}//}
 DISTFILES+=		${ARCHIVE_SRCS}
 EXTRACT_ONLY+=		${ARCHIVE_SRCS}
 
-CONSOLE_SRCS=		Console_Getopt-1.2.2${EXTRACT_SUFX}
+CONSOLE_SRCS=		Console_Getopt-1.2.3${EXTRACT_SUFX}
 CONSOLE_WRKSRC=		${WRKDIR}/${CONSOLE_SRCS:S/${EXTRACT_SUFX}//}
 DISTFILES+=		${CONSOLE_SRCS}
 EXTRACT_ONLY+=		${CONSOLE_SRCS}
 
-STRUCTURES_SRCS=	Structures_Graph-1.0.2${EXTRACT_SUFX}
+STRUCTURES_SRCS=	Structures_Graph-1.0.3${EXTRACT_SUFX}
 DISTFILES+=		${STRUCTURES_SRCS}
 #
 # end of base components
@@ -65,12 +65,15 @@ SUBST_SED.pear+=	-e "s|@php_dir@|${PREFIX}/lib/php|g"
 SUBST_SED.pear+=	-e "s|@SH@|${SH}|g"
 SUBST_MESSAGE.pear=	Fixing pear installation script.
 
+INSTALLATION_DIRS+=	share/examples/pear
+
 post-extract:
 	${RM} ${WRKSRC}/INSTALL
 	${MKDIR} ${WRKSRC}/install
 	${MKDIR} ${BUNDLE}
 	${CP} ${FILESDIR}/go-pear.php ${WRKSRC}/install
 	${CP} ${FILESDIR}/pear.sh ${WRKSRC}
+	${CP} ${FILESDIR}/PEAR.php ${BUNDLE}
 
 do-build:
 	${GZCAT} ${DISTDIR}/${ARCHIVE_SRCS} > \
@@ -84,10 +87,8 @@ do-build:
 
 	${CP} ${ARCHIVE_WRKSRC}/Archive/Tar.php ${BUNDLE}
 	${CP} ${CONSOLE_WRKSRC}/Console/Getopt.php ${BUNDLE}
-	${CP} ${WRKSRC}/PEAR.php ${BUNDLE}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/pear
 	${PREFIX}/bin/php ${DESTDIR}${WRKSRC}/install/go-pear.php local
 	${INSTALL_SCRIPT} ${WRKSRC}/pear.sh ${DESTDIR}${PREFIX}/bin/pear
 	${INSTALL_DATA} ${WRKSRC}/pear.conf \
