@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4128 2009/10/29 04:26:44 agc Exp $
+$NetBSD: CHANGES-2009,v 1.4129 2009/10/29 06:57:07 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5470,3 +5470,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/xulrunner to 1.9.1.4 [tnn 2009-10-28]
 	Updated www/firefox to 3.5.4 [tnn 2009-10-28]
 	Added sysutils/dmg2img version 1.6.1 [agc 2009-10-28]
+	Updated databases/openldap* to 2.4.19 [ghen 2009-10-29]
