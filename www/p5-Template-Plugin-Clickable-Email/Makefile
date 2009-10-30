@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/17 18:55:47 sno Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/30 16:25:34 heinz Exp $
 
 DISTNAME=	Template-Plugin-Clickable-Email-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Template-Plugin-Clickable-Email/
 COMMENT=	TT2 plugin to transform email addresses in to HTML links
-#LICENSE=	isc / 2-clause-bsd
+LICENSE=	2-clause-bsd
 
 DEPENDS+=	p5-Template-Toolkit>=2.0:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Email-Find-[0-9]*:../../mail/p5-Email-Find
