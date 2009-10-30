@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2009/08/26 19:58:26 sno Exp $
+# $NetBSD: Makefile,v 1.31 2009/10/30 20:34:43 tnn Exp $
 #
 
-DISTNAME=	kazehakase-0.5.4
-PKGREVISION=	3
+
+DISTNAME=	kazehakase-0.5.8
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kazehakase/30219/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kazehakase/43802/}
 
 MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://kazehakase.sourceforge.jp/
@@ -13,6 +13,7 @@ COMMENT=	Web browser with multiple layout engines support
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -37,6 +38,7 @@ CONF_FILES+=	${EGDIR}/mozilla/encodings.xml ${PKG_SYSCONFDIR}/mozilla/encodings.
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/xulrunner/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

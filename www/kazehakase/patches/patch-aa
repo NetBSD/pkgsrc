@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.3 2007/12/30 17:55:11 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2009/10/30 20:34:43 tnn Exp $
 
---- configure.orig	2007-12-30 15:35:54.000000000 +0000
+--- configure.orig	2009-09-29 05:44:00.000000000 +0200
 +++ configure
-@@ -31084,7 +31084,6 @@ done
+@@ -21427,7 +21427,7 @@ KAZEHAKASE_CFLAGS="$KAZEHAKASE_CFLAGS -D
+ KAZEHAKASE_CFLAGS="$KAZEHAKASE_CFLAGS -DSYSDATADIR=\\\"\"\$(datadir)\"\\\""
+ KAZEHAKASE_CFLAGS="$KAZEHAKASE_CFLAGS -DLOCALEDIR=\\\"\"\$(localedir)\"\\\""
+ KAZEHAKASE_CFLAGS="$KAZEHAKASE_CFLAGS -DKZ_DATADIR=\\\"\"\$(datadir)/\$(PACKAGE)\"\\\""
+-KAZEHAKASE_CFLAGS="$KAZEHAKASE_CFLAGS -DKZ_SYSCONFDIR=\\\"\"\$(sysconfdir)/\$(PACKAGE)\"\\\""
++KAZEHAKASE_CFLAGS="$KAZEHAKASE_CFLAGS -DKZ_SYSCONFDIR=\\\"\"\$(sysconfdir)\"\\\""
+ KAZEHAKASE_CFLAGS="$KAZEHAKASE_CFLAGS -DKZ_LIBDIR=\\\"\"\$(kzlibdir)\"\\\""
+ KAZEHAKASE_CFLAGS="$KAZEHAKASE_CFLAGS -DKZ_EXTDIR=\\\"\"\$(extdir)\"\\\""
+ KAZEHAKASE_CFLAGS="$KAZEHAKASE_CFLAGS -DKZ_RUBY_EXTDIR=\\\"\"\$(extrubydir)\"\\\""
+@@ -24225,7 +24227,6 @@ _LT_EOF
  sed \
    -i'' \
    -e "s/EXTRA_DISTFILES = /EXTRA_DISTFILES = rgettext.mk.in /
