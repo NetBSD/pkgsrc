@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/10/15 12:27:44 hasso Exp $
+# $NetBSD: Makefile,v 1.17 2009/10/30 16:53:02 drochner Exp $
 
 DISTNAME=	webkit-1.1.15.2
 PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
@@ -43,6 +43,7 @@ REPLACE_PERL+=	JavaScriptCore/pcre/dftables \
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsoup24+= libsoup24>=2.28.0
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
