@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2009/08/26 19:56:41 sno Exp $
+# $NetBSD: Makefile,v 1.33 2009/10/30 23:58:03 wiz Exp $
 
-DISTNAME=	SDL_image-1.2.7
-PKGREVISION=	1
+DISTNAME=	SDL_image-1.2.8
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_image/release/
 
@@ -19,6 +18,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-tif
 
 INSTALLATION_DIRS=	bin
+PKGCONFIG_OVERRIDE=	SDL_image.pc.in
 
 post-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/showimage \
