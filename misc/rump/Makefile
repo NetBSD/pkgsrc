@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/10/24 14:35:21 stacktic Exp $
+# $NetBSD: Makefile,v 1.7 2009/10/30 13:47:05 stacktic Exp $
 #
 
-DISTNAME=		rump_20091024
+DISTNAME=		rump_20091030
 PKGNAME=		${DISTNAME:S/_/-/}
 
 CATEGORIES=		misc
@@ -29,7 +29,7 @@ MAKEFLAGS+=		BSDSRCDIR=${WRKSRC}
 
 MAKEFLAGS+=		INSTALL=${WRKSRC}/tools/binstall/xinstall
 MAKEFLAGS+=		TSORT="${WRKSRC}/tools/tsort/tsort -q"
-MAKEFLAGS+=		LORDER=${WRKSRC}/bin/lorder
+MAKEFLAGS+=		LORDER=${WRKSRC}/tools/lorder/lorder
 
 SUBST_CLASSES+=		inc_path
 SUBST_STAGE.inc_path=	pre-configure
