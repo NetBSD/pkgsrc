@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8574 2009/10/30 18:48:54 tnn Exp $
+$NetBSD: TODO,v 1.8575 2009/10/30 19:34:55 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1550,7 +1550,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xman-1.1.0
 	o xmbdfed-4.6
 	o xmcd-3.3.2
-	o xmlsec1-1.2.12
 	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1

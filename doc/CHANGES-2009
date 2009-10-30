@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4141 2009/10/30 19:15:47 manu Exp $
+$NetBSD: CHANGES-2009,v 1.4142 2009/10/30 19:34:55 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5484,7 +5484,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/rtorrent to 0.8.5 [tron 2009-10-29]
 	Updated databases/rrdtool to 1.3.9 [martti 2009-10-29]
 	Updated x11/modular-xorg-server to 1.6.5nb1 [jakllsch 2009-10-29]
-        Updated misc/rump to 20091030 [stacktic 2009-10-30]
+	Updated net/libtrace to 3.0.6 [tnn 2009-10-29]
+	Updated misc/rump to 20091030 [stacktic 2009-10-30]
 	Updated misc/esniper to 2.20.0 [heinz 2009-10-30]
 	Updated misc/yelp to 2.28.0 [drochner 2009-10-30]
 	Updated devel/devhelp to 2.28.1 [drochner 2009-10-30]
@@ -5511,4 +5512,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/gtk-vnc to 0.3.10 [drochner 2009-10-30]
 	Updated time/evolution-webcal to 2.28.0 [drochner 2009-10-30]
 	Updated mail/evolution-exchange to 2.28.1 [drochner 2009-10-30]
+	Updated security/xmlsec1 to 1.2.13 [tnn 2009-10-30]
 	Updated net/openvpn to 2.1_rc20nb3 [manu 2009-10-31]
