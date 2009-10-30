@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4140 2009/10/30 17:54:35 drochner Exp $
+$NetBSD: CHANGES-2009,v 1.4141 2009/10/30 19:15:47 manu Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5511,3 +5511,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/gtk-vnc to 0.3.10 [drochner 2009-10-30]
 	Updated time/evolution-webcal to 2.28.0 [drochner 2009-10-30]
 	Updated mail/evolution-exchange to 2.28.1 [drochner 2009-10-30]
+	Updated net/openvpn to 2.1_rc20nb3 [manu 2009-10-31]
