@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.10 2007/07/02 13:36:38 joerg Exp $
+$NetBSD: patch-ab,v 1.11 2009/10/30 18:34:56 ahoka Exp $
 
---- src/Makefile.orig	2007-03-25 16:49:23.000000000 +0200
+--- src/Makefile.orig	2008-01-19 20:37:58.000000000 +0100
 +++ src/Makefile
-@@ -8,7 +8,7 @@
+@@ -7,8 +7,8 @@
+ # Your platform. See PLATS for possible values.
  PLAT= none
  
- CC= gcc
+-CC= gcc
 -CFLAGS= -O2 -Wall $(MYCFLAGS)
++CC?= gcc
 +CFLAGS+= -Wall $(MYCFLAGS)
  AR= ar rcu
  RANLIB= ranlib
