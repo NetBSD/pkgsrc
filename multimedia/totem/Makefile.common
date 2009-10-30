@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.52 2009/10/21 18:56:15 drochner Exp $
+# $NetBSD: Makefile.common,v 1.53 2009/10/30 11:44:45 drochner Exp $
 #
 # used by multimedia/totem-browser-plugin/Makefile
 # used by multimedia/totem-nautilus/Makefile
 # used by multimedia/totem-xine/Makefile
 
-DISTNAME=	totem-2.28.1
+DISTNAME=	totem-2.28.2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.28/}
 
