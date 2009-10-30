@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/10/21 18:56:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/10/30 11:44:45 drochner Exp $
 bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
@@ -292,8 +292,10 @@ share/gtk-doc/html/totem/left.png
 share/gtk-doc/html/totem/right.png
 share/gtk-doc/html/totem/style.css
 share/gtk-doc/html/totem/totem-Interface.html
+share/gtk-doc/html/totem/totem-plugins.html
 share/gtk-doc/html/totem/totem.devhelp
 share/gtk-doc/html/totem/totem.devhelp2
+share/gtk-doc/html/totem/tutorials.html
 share/gtk-doc/html/totem/up.png
 share/gtk-doc/html/totem/widget-api.html
 share/icons/hicolor/16x16/apps/totem.png
