@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4142 2009/10/30 19:34:55 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.4143 2009/10/30 20:06:14 jym Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5514,3 +5514,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/evolution-exchange to 2.28.1 [drochner 2009-10-30]
 	Updated security/xmlsec1 to 1.2.13 [tnn 2009-10-30]
 	Updated net/openvpn to 2.1_rc20nb3 [manu 2009-10-31]
+	Added net/cntlm version 0.35.1 [jym 2009-10-30]
