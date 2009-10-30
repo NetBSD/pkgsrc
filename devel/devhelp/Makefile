@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2009/09/09 16:47:07 drochner Exp $
+# $NetBSD: Makefile,v 1.56 2009/10/30 16:57:53 drochner Exp $
 
-DISTNAME=		devhelp-0.23.1
+DISTNAME=		devhelp-2.28.1
 CATEGORIES=		devel x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/0.23/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/2.28/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -23,13 +23,13 @@ GCONF_SCHEMAS=		devhelp.schemas
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/devhelp
