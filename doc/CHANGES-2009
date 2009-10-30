@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4139 2009/10/30 16:05:47 heinz Exp $
+$NetBSD: CHANGES-2009,v 1.4140 2009/10/30 17:54:35 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5486,3 +5486,28 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/modular-xorg-server to 1.6.5nb1 [jakllsch 2009-10-29]
         Updated misc/rump to 20091030 [stacktic 2009-10-30]
 	Updated misc/esniper to 2.20.0 [heinz 2009-10-30]
+	Updated misc/yelp to 2.28.0 [drochner 2009-10-30]
+	Updated devel/devhelp to 2.28.1 [drochner 2009-10-30]
+	Updated audio/rhythmbox to 0.12.5 [drochner 2009-10-30]
+	Updated multimedia/totem to 2.28.2 [drochner 2009-10-30]
+	Updated graphics/f-spot to 0.6.1.4 [drochner 2009-10-30]
+	Updated devel/libgsf to 1.14.16 [drochner 2009-10-30]
+	Updated games/gnome-games to 2.28.1 [drochner 2009-10-30]
+	Updated audio/libcanberra to 0.22 [drochner 2009-10-30]
+	Updated x11/vte to 0.22.3 [drochner 2009-10-30]
+	Added security/pam-passwdqc version 1.1.3 [drochner 2009-10-30]
+	Updated audio/sound-juicer to 2.28.0 [drochner 2009-10-30]
+	Updated multimedia/gst-plugins0.10-ugly to 0.10.13 [drochner 2009-10-30]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.16 [drochner 2009-10-30]
+	Updated editors/gobby to 0.4.11 [drochner 2009-10-30]
+	Updated editors/obby to 0.4.7 [drochner 2009-10-30]
+	Updated net/net6 to 1.3.10 [drochner 2009-10-30]
+	Updated textproc/xmlrpc-c to 1.06.38 [drochner 2009-10-30]
+	Updated textproc/gnome-doc-utils to 0.18.0 [drochner 2009-10-30]
+	Added textproc/scrollkeeper-dtd version 1.0 [drochner 2009-10-30]
+	Updated textproc/docbook-xml to 4.5 [drochner 2009-10-30]
+	Added devel/libview version 0.6.4 [drochner 2009-10-30]
+	Updated net/vinagre to 2.28.1 [drochner 2009-10-30]
+	Updated net/gtk-vnc to 0.3.10 [drochner 2009-10-30]
+	Updated time/evolution-webcal to 2.28.0 [drochner 2009-10-30]
+	Updated mail/evolution-exchange to 2.28.1 [drochner 2009-10-30]
