@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.7 2009/10/30 18:31:41 tnn Exp $
+$NetBSD: patch-ae,v 1.8 2009/10/30 21:41:20 wiz Exp $
+
+https://bugzilla.gnome.org/show_bug.cgi?id=600172
 
 --- sysdeps/bsd/swap.c.orig	2008-05-24 00:13:21.000000000 +0200
 +++ sysdeps/bsd/swap.c
