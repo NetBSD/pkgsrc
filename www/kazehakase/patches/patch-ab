@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2007/10/27 13:03:51 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2009/10/30 20:34:43 tnn Exp $
 
---- etc/Makefile.in.orig	2007-09-29 04:59:15.000000000 +0000
+--- etc/Makefile.in.orig	2009-10-30 21:13:42.000000000 +0100
 +++ etc/Makefile.in
-@@ -279,7 +279,7 @@ target_alias = @target_alias@
+@@ -350,7 +350,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  SUBDIRS = mozilla
