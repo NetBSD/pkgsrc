@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2006/10/14 02:26:39 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2009/10/30 19:32:11 tnn Exp $
 
---- configure.orig	2004-08-26 08:00:34.000000000 +0200
-+++ configure	2006-10-14 04:22:49.000000000 +0200
-@@ -25371,7 +25371,7 @@ fi
+--- configure.orig	2009-09-12 22:09:00.000000000 +0200
++++ configure
+@@ -23233,7 +23233,7 @@ else
+ fi
+ 
+ 
+-if test "z$shrext" == "z" ; then
++if test "z$shrext" = "z" ; then
+     shrext=$shrext_cmds
+ fi
+ 
+@@ -24720,7 +24720,7 @@ fi
  
  
  
