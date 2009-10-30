@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:09:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/10/30 19:06:06 manu Exp $
 man/man8/openvpn.8
 sbin/openvpn
 share/examples/openvpn/config/README
@@ -55,3 +55,4 @@ share/openvpn/easy-rsa/revoke-full
 share/openvpn/easy-rsa/sign-req
 share/openvpn/easy-rsa/vars
 share/openvpn/easy-rsa/whichopensslcnf
+${PLIST.pam}lib/openvpn/openvpn-auth-pam.so
