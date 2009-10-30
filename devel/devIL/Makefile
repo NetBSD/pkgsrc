@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/10/30 19:42:55 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2009/10/30 20:02:54 joerg Exp $
 #
 
 DISTNAME=	DevIL-${DEVIL_VERSION}
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/devil-${DEVIL_VERSION}
 GNU_CONFIGURE=		yes
-EXTRACT_USING=		gtar
+EXTRACT_USING=		bsdtar
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 
