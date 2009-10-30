@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/30 19:55:30 jym Exp $
+
+SHA1 (cntlm-0.35.1.tar.gz) = 4bf9f75b0f5fdb4469b5e81013c40ac166c9d235
+RMD160 (cntlm-0.35.1.tar.gz) = 65a2b97a6ec8340b41acbd0f29dc1096148a02ac
+Size (cntlm-0.35.1.tar.gz) = 74188 bytes
