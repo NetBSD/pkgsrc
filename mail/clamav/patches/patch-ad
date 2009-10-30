@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.18 2009/04/09 08:00:10 martti Exp $
+$NetBSD: patch-ad,v 1.18.4.1 2009/10/30 11:19:30 tron Exp $
 
---- docs/Makefile.in.orig	2009-04-07 20:56:26.000000000 +0300
-+++ docs/Makefile.in	2009-04-09 09:06:09.000000000 +0300
-@@ -236,6 +236,8 @@
+--- docs/Makefile.in.orig	2009-10-28 17:54:51.000000000 +0200
++++ docs/Makefile.in	2009-10-29 08:42:26.000000000 +0200
+@@ -261,6 +261,8 @@
  man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/freshclam.conf.5 man/clamconf.1 man/clamdtop.1
  all: all-am
  
