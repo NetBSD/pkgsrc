@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4138 2009/10/30 13:49:06 stacktic Exp $
+$NetBSD: CHANGES-2009,v 1.4139 2009/10/30 16:05:47 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5485,3 +5485,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/rrdtool to 1.3.9 [martti 2009-10-29]
 	Updated x11/modular-xorg-server to 1.6.5nb1 [jakllsch 2009-10-29]
         Updated misc/rump to 20091030 [stacktic 2009-10-30]
+	Updated misc/esniper to 2.20.0 [heinz 2009-10-30]
