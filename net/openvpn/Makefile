@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2009/10/11 17:32:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2009/10/30 19:06:06 manu Exp $
 #
 
 DISTNAME=	openvpn-2.1_rc20
 PKGNAME=	${DISTNAME:S/_//}
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://openvpn.net/release/ \
 		http://openvpn.net/release/old/
@@ -61,7 +62,7 @@ SUBST_FILES.pkitool=	easy-rsa/2.0/pkitool
 SUBST_SED.pkitool=	-e "s|\\(GREP\\)=.*|\\1=\""${GREP:Q}"\"|"
 SUBST_SED.pkitool+=  -e "s|\\(OPENSSL\\)=.*|\\1=\""${SSLBASE:Q}/bin/openssl"\"|"
 
-post-install:
+post-install: post-install-pam
 	cd ${WRKSRC:Q}/easy-rsa/2.0; for file in [a-zR]*; do		\
 		case $$file in						\
 		*.orig)	;;						\
