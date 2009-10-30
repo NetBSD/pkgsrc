@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.6 2008/10/17 07:31:58 adam Exp $
+# $NetBSD: options.mk,v 1.7 2009/10/30 23:54:52 jym Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.stunnel
-PKG_SUPPORTED_OPTIONS=	inet6 pthread libwrap
-PKG_SUGGESTED_OPTIONS=	libwrap
+PKG_SUPPORTED_OPTIONS=	inet6 threads tcpwrappers
+PKG_SUGGESTED_OPTIONS=	tcpwrappers
 CHECK_BUILTIN.pthread:=		yes
 .include "../../mk/pthread.builtin.mk"
 CHECK_BUILTIN.pthread:=		no
 
 .if !empty(BUILTIN_LIB_FOUND.pthread:M[yY][eE][sS])
-PKG_SUGGESTED_OPTIONS+=	pthread
+PKG_SUGGESTED_OPTIONS+=	threads
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 ###
 ### Support pthreads
 ###
-.if !empty(PKG_OPTIONS:Mpthread)
+.if !empty(PKG_OPTIONS:Mthreads)
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-threads=pthread
@@ -34,9 +34,9 @@ CONFIGURE_ARGS+=	--with-threads=fork
 .endif
 
 ###
-### Support libwrap
+### Support tcp_wrappers
 ###
-.if !empty(PKG_OPTIONS:Mlibwrap)
+.if !empty(PKG_OPTIONS:Mtcpwrappers)
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libwrap
