@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:25:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/10/30 15:47:26 drochner Exp $
 lib/pkgconfig/gnome-python-extras-2.0.pc
 ${PYSITELIB}/gtk-2.0/egg/__init__.py
 ${PYSITELIB}/gtk-2.0/egg/__init__.pyc
 ${PYSITELIB}/gtk-2.0/egg/__init__.pyo
 ${PYSITELIB}/gtk-2.0/egg/recent.la
 ${PYSITELIB}/gtk-2.0/egg/trayicon.la
-${PYSITELIB}/gtk-2.0/gdl.la
 ${PYSITELIB}/gtk-2.0/gtkhtml2.la
 ${PYSITELIB}/gtk-2.0/gtkmozembed.la
 ${PYSITELIB}/gtk-2.0/gtkspell.la
