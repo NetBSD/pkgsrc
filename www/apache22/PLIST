@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/10/30 21:08:55 christos Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/10/30 21:10:57 christos Exp $
 ${PLIST.suexec}sbin/suexec
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -1184,4 +1184,3 @@ share/httpd/manual/vhosts/name-based.html.tr.utf8
 @pkgdir share/httpd/manual/style/xsl/util
 @pkgdir share/httpd/manual/style/xsl
 @pkgdir share/httpd/manual/style/lang
-
