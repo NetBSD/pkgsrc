@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/08/06 07:07:23 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/10/30 21:08:55 christos Exp $
 ${PLIST.suexec}sbin/suexec
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -517,6 +517,7 @@ share/httpd/manual/howto/auth.html
 share/httpd/manual/howto/auth.html.en
 share/httpd/manual/howto/auth.html.ja.utf8
 share/httpd/manual/howto/auth.html.ko.euc-kr
+share/httpd/manual/howto/auth.html.tr.utf8
 share/httpd/manual/howto/cgi.html
 share/httpd/manual/howto/cgi.html.en
 share/httpd/manual/howto/cgi.html.ja.utf8
@@ -866,6 +867,8 @@ share/httpd/manual/mod/mod_proxy_ftp.html
 share/httpd/manual/mod/mod_proxy_ftp.html.en
 share/httpd/manual/mod/mod_proxy_http.html
 share/httpd/manual/mod/mod_proxy_http.html.en
+share/httpd/manual/mod/mod_proxy_scgi.html
+share/httpd/manual/mod/mod_proxy_scgi.html.en
 share/httpd/manual/mod/mod_rewrite.html
 share/httpd/manual/mod/mod_rewrite.html.en
 share/httpd/manual/mod/mod_setenvif.html
@@ -1181,3 +1184,4 @@ share/httpd/manual/vhosts/name-based.html.tr.utf8
 @pkgdir share/httpd/manual/style/xsl/util
 @pkgdir share/httpd/manual/style/xsl
 @pkgdir share/httpd/manual/style/lang
+
