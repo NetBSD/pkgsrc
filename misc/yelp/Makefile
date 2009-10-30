@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.84 2009/10/29 23:14:14 drochner Exp $
+# $NetBSD: Makefile,v 1.85 2009/10/30 17:00:31 drochner Exp $
 #
 
-DISTNAME=		yelp-2.26.0
-PKGREVISION=		3
+DISTNAME=		yelp-2.28.0
 CATEGORIES=		misc gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.26/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.28/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -27,8 +26,6 @@ CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 GCONF_SCHEMAS=		yelp.schemas
 
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.10.0
-BUILDLINK_API_DEPENDS.libgnome+=		libgnome>=2.14.0
-BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.14.0
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 BUILDLINK_API_DEPENDS.libxml2+=			libxml2>=2.6.5
 
@@ -39,16 +36,12 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/xulrunner/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
@@ -58,5 +51,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"
