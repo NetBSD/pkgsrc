@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2009/07/10 11:23:10 tron Exp $
+# $NetBSD: Makefile,v 1.67 2009/10/30 23:54:52 jym Exp $
 
 DISTNAME=		stunnel-4.27
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/security/stunnel/ \
 			ftp://stunnel.mirt.net/stunnel/ \
@@ -13,6 +14,7 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+BUILD_DEFS+=		VARBASE
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
@@ -21,11 +23,37 @@ CONFIGURE_ARGS+=	--with-cert-dir=${SSLCERTS:Q}
 CONFIGURE_ARGS+=	--with-pem-dir=${SSLCERTS:Q}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 
+STUNNEL_USER?=		stunnel
+STUNNEL_GROUP?=		stunnel
+PKG_HOME?=		${VARBASE}/chroot/stunnel
+PKG_USERS=		${STUNNEL_USER}:${STUNNEL_GROUP}::Stunnel:${PKG_HOME}
+PKG_GROUPS=		${STUNNEL_GROUP}
+USER_GROUP=		${STUNNEL_USER} ${STUNNEL_GROUP}
+
 PKG_SYSCONFSUBDIR=	stunnel
+PKG_SYSCONFDIR_PERMS=	${USER_GROUP} 0700
+
+OWN_DIRS_PERMS=		${PKG_HOME} ${USER_GROUP} 0700
+CONF_FILES_PERMS+=	${PREFIX}/share/examples/stunnel/stunnel.conf-sample \
+			    ${PKG_SYSCONFDIR}/stunnel.conf ${USER_GROUP} 0644
 
 RCD_SCRIPTS=		stunnel
+
 REPLACE_PERL+=		src/stunnel3.in
 USE_TOOLS+=		perl:run
+
+SUBST_CLASSES+=		chroot
+SUBST_MESSAGE.chroot=	Fix chroot path
+SUBST_STAGE.chroot=	pre-configure
+SUBST_FILES.chroot=	tools/stunnel.conf-sample.in
+SUBST_SED.chroot+=	-e 's|@prefix@/var/lib|@localstatedir@/chroot|'
+
+SUBST_CLASSES+=		stunnel
+SUBST_MESSAGE.stunnel=	Fix user and group
+SUBST_STAGE.stunnel=	post-configure
+SUBST_FILES.stunnel=	tools/stunnel.conf-sample
+SUBST_SED.stunnel=	-e 's|setuid = nobody|setuid = ${STUNNEL_USER}|'
+SUBST_SED.stunnel+=	-e 's|setgid = nogroup|setgid = ${STUNNEL_GROUP}|'
 
 .include "options.mk"
 
