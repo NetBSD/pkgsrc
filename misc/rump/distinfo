@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/10/24 14:35:21 stacktic Exp $
+$NetBSD: distinfo,v 1.3 2009/10/30 13:47:05 stacktic Exp $
 
-SHA1 (rump_20091024.tar.gz) = 8611ee9adb217c936fbfd72b933a777031e49e29
-RMD160 (rump_20091024.tar.gz) = 02913d424b6fede3aba56e96734c2f6f792d1d3a
-Size (rump_20091024.tar.gz) = 72573783 bytes
+SHA1 (rump_20091030.tar.gz) = d34d0b2ddfc4a9fdf759585cca173111863e3695
+RMD160 (rump_20091030.tar.gz) = d5140849d8321236f86fdc51fff87aa3373acfdc
+Size (rump_20091030.tar.gz) = 8753634 bytes
