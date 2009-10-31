@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4148 2009/10/31 00:18:31 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4149 2009/10/31 00:20:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5520,3 +5520,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/SDL_gfx to 2.0.20 [wiz 2009-10-31]
 	Updated audio/SDL_mixer to 1.2.9 [wiz 2009-10-31]
 	Updated time/etm to 297 [wiz 2009-10-31]
+	Updated security/caff to 1.1.2 [wiz 2009-10-31]
