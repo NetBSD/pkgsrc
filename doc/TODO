@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8600 2009/10/31 02:23:42 wiz Exp $
+$NetBSD: TODO,v 1.8601 2009/10/31 02:29:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1432,7 +1432,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webmin-1.490
 	o weechat-0.3.0
 	o weewm-0.01
-	o wget-1.12
 	o whohas-0.23
 	o windowlab-1.37
 	o wine-devel-1.1.32
