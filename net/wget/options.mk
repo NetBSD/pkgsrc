@@ -1,10 +1,18 @@
-# $NetBSD: options.mk,v 1.4 2005/12/05 23:55:15 rillig Exp $
+# $NetBSD: options.mk,v 1.5 2009/10/31 02:29:14 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wget
-PKG_SUPPORTED_OPTIONS=	inet6 ssl
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_SUPPORTED_OPTIONS=	idn inet6 ssl
+PKG_SUGGESTED_OPTIONS=	idn ssl
 
 .include "../../mk/bsd.options.mk"
+
+###
+### Support IDN
+###
+.if !empty(PKG_OPTIONS:Midn)
+.include "../../devel/libidn/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.endif
 
 ###
 ### Support IPv6
