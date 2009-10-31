@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1 2009/10/31 14:26:31 tnn Exp $
+
+--- src/ps_afm.c.orig	2004-07-22 08:01:26.000000000 +0200
++++ src/ps_afm.c
+@@ -136,7 +136,7 @@ static int transform(int x, int y) {
+ 	return (int)(acc>=0? floor(acc+0.5) : ceil(acc-0.5) ) ;
+ }
+ 
+-static int getline(FILE *afmin) {
++static int get_line(FILE *afmin) {
+ 	char *p ;
+ 	int c ;
+ 
+@@ -566,7 +566,7 @@ int readprotusion(PSDoc *psdoc, PSFont *
+ 		return(-1);
+ 	}
+ 
+-	while (getline(fp)) {
++	while (get_line(fp)) {
+ 		switch(interest(paramstring())) {
+ 			case N:
+ 				handleprotusion(psdoc, metrics) ;
+@@ -614,7 +614,7 @@ ADOBEFONTMETRIC *readadobe(PSDoc *psdoc,
+ 	/*
+ 	 * Read file line by line.
+ 	 */
+-	while (getline(metric->afmin)) {
++	while (get_line(metric->afmin)) {
+ 		switch(interest(paramstring())) {
+ case FontName:
+ 			metric->fontname = paramnewstring(psdoc) ;
+@@ -972,7 +972,7 @@ static char *gettoken(PSDoc *psdoc, ADOB
+ 
+ 	while (1) {
+ 		while (param == NULL || *param == '\0') {
+-			if (getline(metrics->afmin) == 0)
++			if (get_line(metrics->afmin) == 0)
+ 				ps_error(psdoc, PS_RuntimeError, _("Premature end of encoding file."));
+ 			for (p=buffer; *p != '\0'; p++)
+ 				if (*p == '%') {
+@@ -1093,7 +1093,7 @@ int readencoding(PSDoc *psdoc, ADOBEFONT
+ 			psdoc->free(psdoc, e);
+ 			return -1;
+ 		}
+-		while (getline(metrics->afmin)) {
++		while (get_line(metrics->afmin)) {
+ 			for (p=buffer; *p != '\0'; p++)
+ 				if (*p == '%') {
+ 					if (ignoreligkern == 0)
