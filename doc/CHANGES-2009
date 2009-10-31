@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4182 2009/10/31 03:07:21 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4183 2009/10/31 03:10:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5554,3 +5554,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/py-gstreamer0.10 to 0.10.17 [wiz 2009-10-31]
 	Updated textproc/py-libxml2 to 2.7.6 [wiz 2009-10-31]
 	Updated time/py-pytz to 2009n [wiz 2009-10-31]
+	Updated x11/alacarte to 0.12.3 [wiz 2009-10-31]

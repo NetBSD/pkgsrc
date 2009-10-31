@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8613 2009/10/31 03:07:21 wiz Exp $
+$NetBSD: TODO,v 1.8614 2009/10/31 03:10:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.7.1
 	o aewm++-1.0.27
 	o afterstep-2.2.9
-	o alacarte-0.12.3 [needs libgnome-menu >= 2.27.92]
 	o album-4.06
 	o alee-ttf-11.2
 	o aliados-0.2.0
