@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2009/08/30 16:07:20 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2009/10/31 19:40:33 tnn Exp $
 
---- Makefile.orig	2001-02-12 22:08:59.000000000 +0000
+--- Makefile.orig	2001-02-12 23:08:59.000000000 +0100
 +++ Makefile
 @@ -4,13 +4,10 @@
  
@@ -103,7 +103,7 @@ $NetBSD: patch-aa,v 1.7 2009/08/30 16:07:20 joerg Exp $
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(X11BASEINST)/lib/X11/app-defaults
 +	${BSD_INSTALL_DATA} Fxtv ${DESTDIR}$(X11BASEINST)/lib/X11/app-defaults
 +	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}$(X11BASEINST)/bin
-+	${BSD_INSTALL_MAN} fxtv.1 ${DESTDIR}$(X11BASEINST)/man/man1/fxtv.1
++	${BSD_INSTALL_MAN} fxtv.1 ${DESTDIR}$(X11BASEINST)/$(PKGMANDIR)/man1/fxtv.1
 +	${BSD_INSTALL_PROGRAM} fxtv ${DESTDIR}$(X11BASEINST)/bin
 +	${BSD_INSTALL_SCRIPT} fxtv_cnvt.sh ${DESTDIR}$(FXTV_LIBDIR)
  
