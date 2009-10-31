@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2009/05/13 10:08:27 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2009/10/31 02:01:56 wiz Exp $
 
-DISTNAME=	pcre-7.9
+DISTNAME=	pcre-8.00
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/ \
 		${MASTER_SITE_SOURCEFORGE:=pcre/}
@@ -25,7 +25,7 @@ SUBST_MESSAGE.rpath=	Fixing rpath output in pcre-config
 SUBST_FILES.rpath=	pcre-config.in
 SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
-PKGCONFIG_OVERRIDE=	libpcre.pc.in libpcrecpp.pc.in
+PKGCONFIG_OVERRIDE=	libpcre.pc.in libpcrecpp.pc.in libpcreposix.pc.in
 
 # needs a stacksize of 5.5mb, default is 2mb
 TEST_TARGET=		test
