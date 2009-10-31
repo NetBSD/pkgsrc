@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4174 2009/10/31 02:47:43 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4175 2009/10/31 02:49:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5546,3 +5546,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/yaz to 3.0.49 [wiz 2009-10-31]
 	Updated audio/alsa-lib to 1.0.21a [wiz 2009-10-31]
 	Updated multimedia/farsight2 to 0.0.16 [wiz 2009-10-31]
+	Updated misc/libcdio to 0.82 [wiz 2009-10-31]
