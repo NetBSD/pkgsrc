@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/02/25 13:16:47 wiz Exp $
+$NetBSD: distinfo,v 1.8 2009/10/31 01:56:36 wiz Exp $
 
-SHA1 (mednafen-0.8.B.tar.bz2) = b19907df4620d1087d75a3f91382d0ea8dc6997d
-RMD160 (mednafen-0.8.B.tar.bz2) = ae4cff9bed326e71b288cf3f86163379a54607db
-Size (mednafen-0.8.B.tar.bz2) = 2414246 bytes
+SHA1 (mednafen-0.8.C.tar.bz2) = 1ac99a1845e4d339c07072a78de287102db24c72
+RMD160 (mednafen-0.8.C.tar.bz2) = 0d37d11937f05b9633483139a817d72496a1ba43
+Size (mednafen-0.8.C.tar.bz2) = 2479077 bytes
 SHA1 (patch-aa) = 1708aa37f9b871af36ed2731d1386502eecb8c51
