@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8596 2009/10/31 02:02:08 wiz Exp $
+$NetBSD: TODO,v 1.8597 2009/10/31 02:08:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1152,7 +1152,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-0.25.0
 	o pure-ftpd-1.0.24
 	o puzzle-5.2
-	o puzzles-8692
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
