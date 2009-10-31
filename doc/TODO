@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8604 2009/10/31 02:47:44 wiz Exp $
+$NetBSD: TODO,v 1.8605 2009/10/31 02:49:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -872,7 +872,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXxf86vm-1.1.0
 	o libarchive-2.7.0
 	o libcares-1.6.0
-	o libcdio-0.82
 	o libchewing-0.3.0
 	o libdaemon-0.14
 	o libdockapp-0.6.1
