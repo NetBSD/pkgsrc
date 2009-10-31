@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:25:00 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/10/31 14:46:51 wiz Exp $
 
 BUILDLINK_TREE+=	libcdio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libcdio
 LIBCDIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcdio+=	libcdio>=0.65
-BUILDLINK_ABI_DEPENDS.libcdio+=	libcdio>=0.76nb1
+BUILDLINK_ABI_DEPENDS.libcdio+=	libcdio>=0.82
 BUILDLINK_PKGSRCDIR.libcdio?=	../../misc/libcdio
 .endif # LIBCDIO_BUILDLINK3_MK
 
