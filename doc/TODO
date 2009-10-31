@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8588 2009/10/31 01:31:20 wiz Exp $
+$NetBSD: TODO,v 1.8589 2009/10/31 01:32:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -796,7 +796,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ircservices-5.1.20
 	o irrd-2.3.4 [pkg/36813|38002]
 	o iselect-1.4.0
-	o iso-codes-3.11
 	o ispell-gaeilge-4.1
 	o ispell-german-20090107
 	o ispell-slovak-0.3.2
