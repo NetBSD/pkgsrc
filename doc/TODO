@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8603 2009/10/31 02:36:26 wiz Exp $
+$NetBSD: TODO,v 1.8604 2009/10/31 02:47:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -598,7 +598,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o f2c-20090102
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o farsight2-0.0.16
 	o fbreader-0.11.2
 	o fd-3.00d
 	o fdgw-20040609
