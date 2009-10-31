@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2009/10/31 00:55:03 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2009/10/31 00:58:42 wiz Exp $
 
 DISTNAME=	cdrtools-2.01.01a66
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
@@ -129,23 +129,6 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/cdrtools/mkisofs
 	${INSTALL_DATA} ${WRKSRC}/cdrecord/cdrecord.dfl \
 		${DESTDIR}${PREFIX}/share/examples/cdrtools/cdrecord
-
-CONFIGURE_ENV+= librt=${NETBSDLIB.rt:U:Q}
-
-.if ${OPSYS} == "NetBSD"
-netbsd-posix-sched-check-cookie: netbsd-posix-sched-check
-###
-### Check for POSIX priority scheduling in NetBSD
-###
-
-.PHONY: netbsd-posix-sched-check
-netbsd-posix-sched-check:
-NETBSDLIB.rt!=\
-	if ( /sbin/sysctl -n kern.posix_sched >/dev/null 2>&1 ); then \
-	    lib=-lrt; \
-	fi || ${TRUE}; \
-	echo "$$lib"
-.endif
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
