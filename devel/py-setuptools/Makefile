@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2009/09/23 09:54:45 tron Exp $
+# $NetBSD: Makefile,v 1.17 2009/10/31 02:10:34 wiz Exp $
 #
 
-EGG_VERSION=		0.6c9
+EGG_VERSION=		0.6c11
 DISTNAME=		setuptools-${EGG_VERSION}
 EGG_NAME=		setuptools-${EGG_VERSION}
 PKGNAME=		${PYPKGPREFIX}-setuptools-${EGG_VERSION}
-PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		http://pypi.python.org/packages/source/s/setuptools/
 
