@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8610 2009/10/31 03:02:15 wiz Exp $
+$NetBSD: TODO,v 1.8611 2009/10/31 03:04:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1166,7 +1166,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-gstreamer0.10-0.10.17
 	o py-gtksourceview-2.8.0 [GNOME 2.28]
 	o py-html2text-2.37
 	o py-karaoke-0.7.2

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4179 2009/10/31 03:00:38 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4180 2009/10/31 03:04:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5551,3 +5551,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libdaemon to 0.14 [wiz 2009-10-31]
 	Updated net/py-dns to 1.7.1 [wiz 2009-10-31]
 	Updated textproc/py-docutils to 0.6 [wiz 2009-10-31]
+	Updated multimedia/py-gstreamer0.10 to 0.10.17 [wiz 2009-10-31]
