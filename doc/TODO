@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8582 2009/10/31 00:55:14 wiz Exp $
+$NetBSD: TODO,v 1.8583 2009/10/31 01:14:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -705,7 +705,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-commander-1.2.8.3
 	o gnome-common-2.28.0 [GNOME 2.28]
 	o gnome-devel-docs-2.28.0 [GNOME 2.28]
-	o gnome-mag-0.15.9 [GNOME 2.28]
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
 	o gnome-nettool-2.28.0 [GNOME 2.28]
 	o gnome-packagekit-2.28.1 [GNOME 2.28]
