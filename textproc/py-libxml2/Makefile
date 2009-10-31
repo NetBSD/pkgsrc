@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2009/03/05 18:51:32 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2009/10/31 03:05:47 wiz Exp $
 
-DISTNAME=	libxml2-2.7.3
+DISTNAME=	libxml2-2.7.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://xmlsoft.org/libxml2/
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/
 COMMENT=	Python wrapper for libxml2
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
