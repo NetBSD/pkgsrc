@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8597 2009/10/31 02:08:01 wiz Exp $
+$NetBSD: TODO,v 1.8598 2009/10/31 02:10:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1186,7 +1186,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-psycopg-2.0.13
 	o py-pytz-2009n
 	o py-qt4-4.6.1
-	o py-setuptools-0.6c11
 	o py-sip-4.9.1
 	o py-subversion-1.6.6
 	o py-sybase-0.37
