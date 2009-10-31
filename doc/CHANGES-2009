@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4161 2009/10/31 01:50:58 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4162 2009/10/31 01:52:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5533,3 +5533,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/kchmviewer to 4.2 [wiz 2009-10-31]
 	Updated devel/libsigc++ to 2.2.4.2 [wiz 2009-10-31]
 	Updated print/libspectre to 0.2.3 [wiz 2009-10-31]
+	Updated devel/makedepend to 1.0.2 [wiz 2009-10-31]
