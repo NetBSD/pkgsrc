@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4177 2009/10/31 02:54:44 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4178 2009/10/31 02:57:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5549,3 +5549,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/libcdio to 0.82 [wiz 2009-10-31]
 	Updated sysutils/liboobs to 2.22.2 [wiz 2009-10-31]
 	Updated devel/libdaemon to 0.14 [wiz 2009-10-31]
+	Updated net/py-dns to 1.7.1 [wiz 2009-10-31]
