@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:17:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/10/31 03:00:27 wiz Exp $
 bin/rst2html.py
 bin/rst2latex.py
+bin/rst2man.py
 bin/rst2newlatex.py
+bin/rst2odt.py
+bin/rst2odt_prepstyles.py
 bin/rst2pseudoxml.py
 bin/rst2s5.py
 bin/rst2xml.py
@@ -9,6 +12,12 @@ bin/rstpep2html.py
 ${PYSITELIB}/docutils/__init__.py
 ${PYSITELIB}/docutils/__init__.pyc
 ${PYSITELIB}/docutils/__init__.pyo
+${PYSITELIB}/docutils/_compat.py
+${PYSITELIB}/docutils/_compat.pyc
+${PYSITELIB}/docutils/_compat.pyo
+${PYSITELIB}/docutils/_string_template_compat.py
+${PYSITELIB}/docutils/_string_template_compat.pyc
+${PYSITELIB}/docutils/_string_template_compat.pyo
 ${PYSITELIB}/docutils/core.py
 ${PYSITELIB}/docutils/core.pyc
 ${PYSITELIB}/docutils/core.pyo
@@ -51,6 +60,9 @@ ${PYSITELIB}/docutils/languages/fi.pyo
 ${PYSITELIB}/docutils/languages/fr.py
 ${PYSITELIB}/docutils/languages/fr.pyc
 ${PYSITELIB}/docutils/languages/fr.pyo
+${PYSITELIB}/docutils/languages/gl.py
+${PYSITELIB}/docutils/languages/gl.pyc
+${PYSITELIB}/docutils/languages/gl.pyo
 ${PYSITELIB}/docutils/languages/he.py
 ${PYSITELIB}/docutils/languages/he.pyc
 ${PYSITELIB}/docutils/languages/he.pyo
@@ -63,6 +75,9 @@ ${PYSITELIB}/docutils/languages/ja.pyo
 ${PYSITELIB}/docutils/languages/nl.py
 ${PYSITELIB}/docutils/languages/nl.pyc
 ${PYSITELIB}/docutils/languages/nl.pyo
+${PYSITELIB}/docutils/languages/pl.py
+${PYSITELIB}/docutils/languages/pl.pyc
+${PYSITELIB}/docutils/languages/pl.pyo
 ${PYSITELIB}/docutils/languages/pt_br.py
 ${PYSITELIB}/docutils/languages/pt_br.pyc
 ${PYSITELIB}/docutils/languages/pt_br.pyo
@@ -184,6 +199,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/fi.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/fr.py
 ${PYSITELIB}/docutils/parsers/rst/languages/fr.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/fr.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/gl.py
+${PYSITELIB}/docutils/parsers/rst/languages/gl.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/gl.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/he.py
 ${PYSITELIB}/docutils/parsers/rst/languages/he.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/he.pyo
@@ -196,6 +214,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/ja.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/nl.py
 ${PYSITELIB}/docutils/parsers/rst/languages/nl.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/nl.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/pl.py
+${PYSITELIB}/docutils/parsers/rst/languages/pl.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/pl.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/pt_br.py
 ${PYSITELIB}/docutils/parsers/rst/languages/pt_br.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/pt_br.pyo
@@ -294,7 +315,11 @@ ${PYSITELIB}/docutils/writers/html4css1/template.txt
 ${PYSITELIB}/docutils/writers/latex2e/__init__.py
 ${PYSITELIB}/docutils/writers/latex2e/__init__.pyc
 ${PYSITELIB}/docutils/writers/latex2e/__init__.pyo
-${PYSITELIB}/docutils/writers/latex2e/latex2e.tex
+${PYSITELIB}/docutils/writers/latex2e/default.tex
+${PYSITELIB}/docutils/writers/latex2e/titlepage.tex
+${PYSITELIB}/docutils/writers/manpage.py
+${PYSITELIB}/docutils/writers/manpage.pyc
+${PYSITELIB}/docutils/writers/manpage.pyo
 ${PYSITELIB}/docutils/writers/newlatex2e/__init__.py
 ${PYSITELIB}/docutils/writers/newlatex2e/__init__.pyc
 ${PYSITELIB}/docutils/writers/newlatex2e/__init__.pyo
@@ -305,6 +330,13 @@ ${PYSITELIB}/docutils/writers/newlatex2e/unicode_map.pyo
 ${PYSITELIB}/docutils/writers/null.py
 ${PYSITELIB}/docutils/writers/null.pyc
 ${PYSITELIB}/docutils/writers/null.pyo
+${PYSITELIB}/docutils/writers/odf_odt/__init__.py
+${PYSITELIB}/docutils/writers/odf_odt/__init__.pyc
+${PYSITELIB}/docutils/writers/odf_odt/__init__.pyo
+${PYSITELIB}/docutils/writers/odf_odt/pygmentsformatter.py
+${PYSITELIB}/docutils/writers/odf_odt/pygmentsformatter.pyc
+${PYSITELIB}/docutils/writers/odf_odt/pygmentsformatter.pyo
+${PYSITELIB}/docutils/writers/odf_odt/styles.odt
 ${PYSITELIB}/docutils/writers/pep_html/__init__.py
 ${PYSITELIB}/docutils/writers/pep_html/__init__.pyc
 ${PYSITELIB}/docutils/writers/pep_html/__init__.pyo
@@ -340,12 +372,6 @@ ${PYSITELIB}/docutils/writers/s5_html/themes/small-black/__base__
 ${PYSITELIB}/docutils/writers/s5_html/themes/small-black/pretty.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/small-white/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/small-white/pretty.css
-${PLIST.std}${PYSITELIB}/optparse.py
-${PLIST.std}${PYSITELIB}/optparse.pyc
-${PLIST.std}${PYSITELIB}/optparse.pyo
 ${PYSITELIB}/roman.py
 ${PYSITELIB}/roman.pyc
 ${PYSITELIB}/roman.pyo
-${PLIST.std}${PYSITELIB}/textwrap.py
-${PLIST.std}${PYSITELIB}/textwrap.pyc
-${PLIST.std}${PYSITELIB}/textwrap.pyo
