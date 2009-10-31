@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2008/03/08 13:02:40 tnn Exp $
+$NetBSD: patch-aa,v 1.4 2009/10/31 19:48:09 tnn Exp $
 
 --- src/Makefile.orig	2006-06-12 22:14:20.000000000 +0200
 +++ src/Makefile
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.3 2008/03/08 13:02:40 tnn Exp $
 -MAN=/usr/local/noweb/man
 +BIN=${PREFIX}/bin
 +LIB=${PREFIX}/share/noweb
-+MAN=${PREFIX}/man
++MAN=${PREFIX}/${PKGMANDIR}
  MANEXT=1
  MAN7EXT=7
 -TEXINPUTS=/usr/local/tex/inputs
