@@ -1,0 +1,5 @@
+Compass is a Sass-based Stylesheet Framework that streamlines the
+creation and maintainance of CSS. It allows you to mix and match
+any of the following CSS frameworks:  Compass Core, Blueprint, YUI,
+960. Other frameworks can be added relatively easily. It integrates
+simply with technologies like Rails, Merb, etc.
