@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/31 02:57:30 wiz Exp $
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -8,6 +8,12 @@ ${PYSITELIB}/dns/dnssec.pyo
 ${PYSITELIB}/dns/e164.py
 ${PYSITELIB}/dns/e164.pyc
 ${PYSITELIB}/dns/e164.pyo
+${PYSITELIB}/dns/edns.py
+${PYSITELIB}/dns/edns.pyc
+${PYSITELIB}/dns/edns.pyo
+${PYSITELIB}/dns/entropy.py
+${PYSITELIB}/dns/entropy.pyc
+${PYSITELIB}/dns/entropy.pyo
 ${PYSITELIB}/dns/exception.py
 ${PYSITELIB}/dns/exception.pyc
 ${PYSITELIB}/dns/exception.pyo
@@ -65,6 +71,9 @@ ${PYSITELIB}/dns/rdtypes/ANY/CERT.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/CNAME.py
 ${PYSITELIB}/dns/rdtypes/ANY/CNAME.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/CNAME.pyo
+${PYSITELIB}/dns/rdtypes/ANY/DLV.py
+${PYSITELIB}/dns/rdtypes/ANY/DLV.pyc
+${PYSITELIB}/dns/rdtypes/ANY/DLV.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/DNAME.py
 ${PYSITELIB}/dns/rdtypes/ANY/DNAME.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/DNAME.pyo
@@ -80,6 +89,9 @@ ${PYSITELIB}/dns/rdtypes/ANY/GPOS.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/HINFO.py
 ${PYSITELIB}/dns/rdtypes/ANY/HINFO.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/HINFO.pyo
+${PYSITELIB}/dns/rdtypes/ANY/HIP.py
+${PYSITELIB}/dns/rdtypes/ANY/HIP.pyc
+${PYSITELIB}/dns/rdtypes/ANY/HIP.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/ISDN.py
 ${PYSITELIB}/dns/rdtypes/ANY/ISDN.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/ISDN.pyo
@@ -98,6 +110,12 @@ ${PYSITELIB}/dns/rdtypes/ANY/NS.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/NSEC.py
 ${PYSITELIB}/dns/rdtypes/ANY/NSEC.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/NSEC.pyo
+${PYSITELIB}/dns/rdtypes/ANY/NSEC3.py
+${PYSITELIB}/dns/rdtypes/ANY/NSEC3.pyc
+${PYSITELIB}/dns/rdtypes/ANY/NSEC3.pyo
+${PYSITELIB}/dns/rdtypes/ANY/NSEC3PARAM.py
+${PYSITELIB}/dns/rdtypes/ANY/NSEC3PARAM.pyc
+${PYSITELIB}/dns/rdtypes/ANY/NSEC3PARAM.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/NXT.py
 ${PYSITELIB}/dns/rdtypes/ANY/NXT.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/NXT.pyo
@@ -176,6 +194,9 @@ ${PYSITELIB}/dns/rdtypes/IN/__init__.pyo
 ${PYSITELIB}/dns/rdtypes/__init__.py
 ${PYSITELIB}/dns/rdtypes/__init__.pyc
 ${PYSITELIB}/dns/rdtypes/__init__.pyo
+${PYSITELIB}/dns/rdtypes/dsbase.py
+${PYSITELIB}/dns/rdtypes/dsbase.pyc
+${PYSITELIB}/dns/rdtypes/dsbase.pyo
 ${PYSITELIB}/dns/rdtypes/keybase.py
 ${PYSITELIB}/dns/rdtypes/keybase.pyc
 ${PYSITELIB}/dns/rdtypes/keybase.pyo
