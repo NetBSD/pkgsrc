@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.17 2007/08/16 00:31:22 joerg Exp $
+$NetBSD: patch-aa,v 1.18 2009/10/31 19:15:44 asau Exp $
 
 --- Makefile.orig	Tue Sep 14 16:47:52 2004
 +++ Makefile
-@@ -0,0 +1,47 @@
+@@ -0,0 +1,39 @@
 +# Top level Makefile for f2c, libF77, and libI77
 +
-+all: f2c libF77/libF77.la libI77/libI77.la  f2c-f77 man
++all: f2c libF77/libF77.la libI77/libI77.la man
 +
 +
 +f2c:
@@ -32,7 +32,6 @@ $NetBSD: patch-aa,v 1.17 2007/08/16 00:31:22 joerg Exp $
 +install::
 +	-@mkdir -p ${DESTDIR}${PREFIX}/bin
 +	${BSD_INSTALL_PROGRAM} ./src/f2c ${DESTDIR}${PREFIX}/bin
-+	${BSD_INSTALL_SCRIPT} ./f2c-f77 ${DESTDIR}${PREFIX}/bin
 +	-@mkdir -p ${DESTDIR}${PREFIX}/lib
 +	@cd libI77 && ${MAKE} install LIBDIR=${DESTDIR}${PREFIX}/lib
 +	@cd libF77 && ${MAKE} install LIBDIR=${DESTDIR}${PREFIX}/lib
@@ -43,10 +42,3 @@ $NetBSD: patch-aa,v 1.17 2007/08/16 00:31:22 joerg Exp $
 +	${BSD_INSTALL_DATA} ./changes ${DESTDIR}${PREFIX}/share/doc/f2c
 +	${BSD_INSTALL_MAN} ./f2c.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 +	${BSD_INSTALL_MAN} ./f2c.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
-+
-+f2c-f77: ${F2C_F77_IN}  f2c hello.f
-+	./src/f2c -Aw8 -Nn802 -Nx400 hello.f
-+	$(CC) $(CFLAGS) -c hello.c
-+	main=`$(NM) hello.o | ${AWK} 'BEGIN{x=""} {gsub(/\|/,""); for(i=1; i<=NF; i=i+1){if($$i ~ /MAIN/){x="-u " $$i}}} END{print x}'` ; \
-+	${ECHO} "Adding $$main to f2c-f77 script" ; \
-+	sed -e 's;@PREFIX@;${PREFIX};g' -e 's;@CC@;${CC};g' -e 's;@CPP@;${CPP};g' -e "s;@MAIN@;$$main;g" -e "s;@SHELL@;${SCRIPT_SHELL};g" ${F2C_F77_IN} > f2c-f77

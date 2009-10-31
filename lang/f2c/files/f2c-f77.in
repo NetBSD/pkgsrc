@@ -459,7 +459,7 @@ done
 
 case $cOPT 
 in 
-  2) eval "\$CC $CFLAGS -o \$OUTF @MAIN@ $OFILES $LIBS $FLIBS"
+  2) eval "\$CC $CFLAGS -o \$OUTF $OFILES $LIBS $FLIBS"
      ;; 
 esac
 
