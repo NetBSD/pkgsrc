@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8615 2009/10/31 03:21:34 wiz Exp $
+$NetBSD: TODO,v 1.8616 2009/10/31 04:07:53 minskim Exp $
 
 Suggested new packages
 ======================
@@ -916,7 +916,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lsh-2.0.3
 	o lsof-4.81
 	o ltris-1.0.12
-	o lua-alt-getopt-0.7.0 [pkg/42195]
 	o luit-1.0.4
 	o lucy-1.20
 	o luit-1.0.4
