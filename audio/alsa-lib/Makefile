@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/09/06 05:15:22 hasso Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/31 02:36:10 wiz Exp $
 #
 
-DISTNAME=	alsa-lib-1.0.21
+DISTNAME=	alsa-lib-1.0.21a
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/lib/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.alsa-project.org/
 COMMENT=	Advanced Linux Sound Architecture (ALSA)
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
