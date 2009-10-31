@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8587 2009/10/31 01:29:39 wiz Exp $
+$NetBSD: TODO,v 1.8588 2009/10/31 01:31:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -765,7 +765,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hesiod-3.1.0
 	o heyu-2.8.0
 	o hiawatha-6.17.1
-	o hicolor-icon-theme-0.11
 	o highlight-2.13
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hoe-1.8.3

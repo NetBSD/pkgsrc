@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4156 2009/10/31 01:29:38 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4157 2009/10/31 01:31:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5528,3 +5528,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/mldonkey-gui to 3.0.1 [wiz 2009-10-31]
 	Updated math/gsl to 1.13 [wiz 2009-10-31]
 	Updated audio/gsm to 1.0.13 [wiz 2009-10-31]
+	Updated graphics/hicolor-icon-theme to 0.11 [wiz 2009-10-31]
