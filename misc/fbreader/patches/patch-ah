@@ -1,15 +1,15 @@
-$NetBSD: patch-ah,v 1.1.1.1 2009/01/18 17:39:37 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2009/10/31 03:20:35 wiz Exp $
 
---- makefiles/config.mk.orig	2009-01-11 01:44:33.000000000 +0100
+--- makefiles/config.mk.orig	2009-10-20 11:48:35.000000000 +0000
 +++ makefiles/config.mk
-@@ -33,8 +33,8 @@ ZINCLUDE = -I $(ROOTDIR)/zlibrary/core/i
+@@ -38,8 +38,8 @@ ZINCLUDE = -I $(ROOTDIR)/zlibrary/core/i
  ZLSHARED ?= yes
  
  ifeq "$(ZLSHARED)" "yes"
--  CORE_LIBS = -lm -L$(ROOTDIR)/zlibrary/core -lzlcore $(XML_LIB) $(ARCHIVER_LIB) -ldl
+-  CORE_LIBS = -lm -L$(ROOTDIR)/zlibrary/core -lzlcore -ldl
 -	TEXT_LIBS = -lzltext
-+  CORE_LIBS = -lm -L$(ROOTDIR)/zlibrary/core -lzlcore $(XML_LIB) $(ARCHIVER_LIB)
++  CORE_LIBS = -lm -L$(ROOTDIR)/zlibrary/core -lzlcore
 +	TEXT_LIBS = -lzltext -llinebreak
  else
-   CORE_LIBS = -lm -L$(ROOTDIR)/zlibrary/ui -L$(ROOTDIR)/zlibrary/core -lzlcore -lzlui-$(UI_TYPE) -lzlcore $(UILIBS) $(XML_LIB) $(ARCHIVER_LIB)
- 	TEXT_LIBS = -lzltext -llinebreak -lfribidi
+   CORE_LIBS = -lm -L$(ROOTDIR)/zlibrary/ui -L$(ROOTDIR)/zlibrary/core -lzlcore -lzlui-$(UI_TYPE) -lzlcore $(UILIBS) $(XML_LIBS) $(ARCHIVER_LIBS) $(NETWORK_LIBS)
+ 	TEXT_LIBS = -lzltext $(EXTERNAL_LIBS) -llinebreak -lfribidi
