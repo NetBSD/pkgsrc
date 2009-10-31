@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4184 2009/10/31 03:20:47 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4185 2009/10/31 03:58:38 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5556,3 +5556,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/py-pytz to 2009n [wiz 2009-10-31]
 	Updated x11/alacarte to 0.12.3 [wiz 2009-10-31]
 	Updated misc/fbreader to 0.10.7 [wiz 2009-10-31]
+	Added devel/p5-Package-Constants version 0.02 [heinz 2009-10-31]
+	Updated archivers/p5-Archive-Tar to 1.54nb1 [heinz 2009-10-31]
