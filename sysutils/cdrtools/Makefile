@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2009/09/24 08:07:36 hasso Exp $
+# $NetBSD: Makefile,v 1.63 2009/10/31 00:55:03 wiz Exp $
 
-DISTNAME=	cdrtools-2.01.01a64
+DISTNAME=	cdrtools-2.01.01a66
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/ \
@@ -88,8 +88,6 @@ do-configure:
 			ln -sf i386-$$suffix ${MACHINE}-$$suffix;	\
 		fi;							\
 	done;								\
-	ln -sf i386-freebsd-cc.rul amd64-dragonfly-cc.rul;		\
-	ln -sf i386-freebsd-gcc.rul amd64-dragonfly-gcc.rul
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${MAKE_PROGRAM} config
 
 post-build:
@@ -131,7 +129,6 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/cdrtools/mkisofs
 	${INSTALL_DATA} ${WRKSRC}/cdrecord/cdrecord.dfl \
 		${DESTDIR}${PREFIX}/share/examples/cdrtools/cdrecord
-
 
 CONFIGURE_ENV+= librt=${NETBSDLIB.rt:U:Q}
 
