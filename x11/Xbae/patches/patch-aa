@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.5 2004/11/23 17:04:15 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2009/10/31 15:02:40 tnn Exp $
 
---- src/Makefile.in.orig	2004-10-29 22:08:37.000000000 +0200
+--- src/Makefile.in.orig	2004-12-08 21:48:30.000000000 +0100
 +++ src/Makefile.in
+@@ -221,7 +221,7 @@ libexecdir = @libexecdir@
+ link_motif = @link_motif@
+ localstatedir = @localstatedir@
+ man2html_cmd = @man2html_cmd@
+-mandir = $(prefix)/man
++mandir = @mandir@
+ mkdir_p = @mkdir_p@
+ oldincludedir = @oldincludedir@
+ prefix = @prefix@
 @@ -540,7 +540,7 @@ info: info-am
  
  info-am:
