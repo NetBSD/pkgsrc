@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.7 2009/10/31 14:17:23 tnn Exp $
+
+--- Source/NSNetServices.m.orig	2008-06-12 12:44:00.000000000 +0200
++++ Source/NSNetServices.m
+@@ -40,6 +40,7 @@
+ 
+ #import <sys/types.h>
+ #import <sys/socket.h>		// AF_INET / AF_INET6
++#import <time.h>		// struct timeval
+ 
+ #import <netinet/in.h>		// struct sockaddr_in / sockaddr_in6
+ #import <arpa/inet.h>		// inet_pton(3)
