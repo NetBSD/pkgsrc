@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4187 2009/10/31 06:21:48 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4188 2009/10/31 19:41:10 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5560,3 +5560,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/p5-Archive-Tar to 1.54nb1 [heinz 2009-10-31]
 	Updated devel/lua-alt-getopt to 0.7.0 [minskim 2009-10-31]
 	Updated textproc/ruby-haml to 2.2.10 [seb 2009-10-31]
+	Added www/ruby-compass version 0.8.17 [seb 2009-10-31]
