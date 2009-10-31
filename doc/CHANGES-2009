@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4186 2009/10/31 04:07:53 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.4187 2009/10/31 06:21:48 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5559,3 +5559,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Package-Constants version 0.02 [heinz 2009-10-31]
 	Updated archivers/p5-Archive-Tar to 1.54nb1 [heinz 2009-10-31]
 	Updated devel/lua-alt-getopt to 0.7.0 [minskim 2009-10-31]
+	Updated textproc/ruby-haml to 2.2.10 [seb 2009-10-31]
