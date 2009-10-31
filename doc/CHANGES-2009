@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4167 2009/10/31 02:10:45 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4168 2009/10/31 02:13:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5539,3 +5539,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/pcre to 8.00 [wiz 2009-10-31]
 	Updated games/puzzles to 8692 [wiz 2009-10-31]
 	Updated devel/py-setuptools to 0.6c11 [wiz 2009-10-31]
+	Updated databases/shared-mime-info to 0.70 [wiz 2009-10-31]
