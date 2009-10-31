@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2009/02/03 06:09:09 obache Exp $
+$NetBSD: distinfo,v 1.9 2009/10/31 01:29:27 wiz Exp $
 
-SHA1 (gsm-1.0.12.tar.gz) = 69c22bdda35871d223affdac09115b6abb0932b1
-RMD160 (gsm-1.0.12.tar.gz) = c780aa1405f5029aaacf96183577c6720691dd31
-Size (gsm-1.0.12.tar.gz) = 62156 bytes
+SHA1 (gsm-1.0.13.tar.gz) = 668b0a180039a50d379b3d5a22e78da4b1d90afc
+RMD160 (gsm-1.0.13.tar.gz) = e44f70d481328038b3b16a25cc99b7855113db61
+Size (gsm-1.0.13.tar.gz) = 65318 bytes
 SHA1 (patch-aa) = e50ac3bba1c8a6ccd54d6d035232eca739d3f9fa
 SHA1 (patch-ab) = b9af8e40884aeac19e7e5b11df27819408465b65
 SHA1 (patch-ac) = 60d0f6cb6b119fdaf8dd23fbadf7cb6a64c95a4e
