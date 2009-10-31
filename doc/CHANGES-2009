@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4159 2009/10/31 01:38:42 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4160 2009/10/31 01:49:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5531,3 +5531,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/hicolor-icon-theme to 0.11 [wiz 2009-10-31]
 	Updated textproc/iso-codes to 3.11 [wiz 2009-10-31]
 	Updated misc/kchmviewer to 4.2 [wiz 2009-10-31]
+	Updated devel/libsigc++ to 2.2.4.2 [wiz 2009-10-31]
