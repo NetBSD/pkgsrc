@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4145 2009/10/30 23:58:14 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4146 2009/10/31 00:04:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5517,3 +5517,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/cntlm version 0.35.1 [jym 2009-10-30]
 	Updated www/apache22 to 2.2.14 [christos 2009-10-30]
 	Updated graphics/SDL_image to 1.2.8 [wiz 2009-10-30]
+	Updated devel/SDL_gfx to 2.0.20 [wiz 2009-10-31]
