@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4154 2009/10/31 01:20:28 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4155 2009/10/31 01:27:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5526,3 +5526,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/gnutls to 2.8.4 [wiz 2009-10-31]
 	Updated net/mldonkey to 3.0.1 [wiz 2009-10-31]
 	Updated net/mldonkey-gui to 3.0.1 [wiz 2009-10-31]
+	Updated math/gsl to 1.13 [wiz 2009-10-31]
