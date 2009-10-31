@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.37 2009/06/14 22:58:06 joerg Exp $
+# $NetBSD: Makefile.common,v 1.38 2009/10/31 01:19:59 wiz Exp $
 #
 # used by net/mldonkey/Makefile
 # used by net/mldonkey-gui/Makefile
 
-DISTNAME=	mldonkey-3.0.0
+DISTNAME=	mldonkey-3.0.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mldonkey/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/mldonkey/
 COMMENT=	Free peer-to-peer client with eDonkey support and more
+LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../net/mldonkey/distinfo
 PATCHDIR=	${.CURDIR}/../../net/mldonkey/patches
