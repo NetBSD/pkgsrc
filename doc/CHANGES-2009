@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4150 2009/10/31 00:55:14 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4151 2009/10/31 01:14:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5522,3 +5522,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/etm to 297 [wiz 2009-10-31]
 	Updated security/caff to 1.1.2 [wiz 2009-10-31]
 	Updated sysutils/cdrtools to 2.01.01alpha66 [wiz 2009-10-31]
+	Updated x11/gnome-mag to 0.15.9 [wiz 2009-10-31]
