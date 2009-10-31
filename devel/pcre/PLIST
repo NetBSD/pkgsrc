@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:49:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/10/31 02:01:56 wiz Exp $
 bin/pcre-config
 bin/pcregrep
 bin/pcretest
@@ -13,6 +13,7 @@ lib/libpcrecpp.la
 lib/libpcreposix.la
 lib/pkgconfig/libpcre.pc
 lib/pkgconfig/libpcrecpp.pc
+lib/pkgconfig/libpcreposix.pc
 man/man1/pcre-config.1
 man/man1/pcregrep.1
 man/man1/pcretest.1
@@ -85,6 +86,7 @@ share/doc/pcre/html/pcrebuild.html
 share/doc/pcre/html/pcrecallout.html
 share/doc/pcre/html/pcrecompat.html
 share/doc/pcre/html/pcrecpp.html
+share/doc/pcre/html/pcredemo.html
 share/doc/pcre/html/pcregrep.html
 share/doc/pcre/html/pcrematching.html
 share/doc/pcre/html/pcrepartial.html
