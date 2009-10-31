@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.7 2009/02/23 09:05:02 wiz Exp $
+$NetBSD: patch-ac,v 1.8 2009/10/31 02:13:08 wiz Exp $
 
---- Makefile.in.orig	2009-02-21 14:50:21.000000000 +0000
+--- Makefile.in.orig	2009-10-06 14:17:51.000000000 +0000
 +++ Makefile.in
-@@ -955,7 +955,7 @@ uninstall-hook:
+@@ -1050,7 +1050,7 @@ uninstall-hook:
  	rm -f "$(DESTDIR)$(datadir)/mime/treemagic"
  	rm -f "$(DESTDIR)$(datadir)/mime/types"
  
 -all: check
 +all:
- 	make -C po shared-mime-info.pot
+ 	$(MAKE) -C po shared-mime-info.pot
  
- check: freedesktop.org.xml
+ check: freedesktop.org.xml check-translations
