@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2009/07/12 10:33:12 hasso Exp $
+$NetBSD: patch-aa,v 1.3 2009/10/31 02:52:46 wiz Exp $
 
---- oobs/oobs-group.c.orig	2008-01-02 16:07:38 +0200
-+++ oobs/oobs-group.c	2009-07-12 10:43:25 +0300
+--- oobs/oobs-group.c.orig	2009-09-05 14:07:20.000000000 +0000
++++ oobs/oobs-group.c
 @@ -18,6 +18,10 @@
   * Authors: Carlos Garnacho Parro  <carlosg@gnome.org>
   */
@@ -23,5 +23,5 @@ $NetBSD: patch-aa,v 1.2 2009/07/12 10:33:12 hasso Exp $
 +#include <unistd.h>
 +#endif
  
- #define OOBS_GROUP_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), OOBS_TYPE_GROUP, OobsGroupPrivate))
- 
+ /**
+  * SECTION:oobs-group
