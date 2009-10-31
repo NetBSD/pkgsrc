@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8609 2009/10/31 03:00:38 wiz Exp $
+$NetBSD: TODO,v 1.8610 2009/10/31 03:02:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -471,7 +471,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bzr-2.0.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
-	o cairomm-1.8.4
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calibre-0.6.19
@@ -831,7 +830,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kmess-1.5.1
 	o kmp-0.5
 	o kodos-2.4.5
-	o koffice-2.0.82
+	o koffice-2.0.91
 	o koffice-l10n-de-2.0.2
 	o konversation-1.2
 	o kphotobook-0.0.7
