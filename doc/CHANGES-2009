@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4163 2009/10/31 01:56:48 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4164 2009/10/31 01:59:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5535,3 +5535,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/libspectre to 0.2.3 [wiz 2009-10-31]
 	Updated devel/makedepend to 1.0.2 [wiz 2009-10-31]
 	Updated emulators/mednafen to 0.8.12 [wiz 2009-10-31]
+	Updated finance/p5-Finance-Quote to 1.17 [wiz 2009-10-31]
