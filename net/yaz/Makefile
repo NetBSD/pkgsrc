@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.24 2009/08/31 14:07:51 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2009/10/31 02:32:30 wiz Exp $
 #
 
-DISTNAME=	yaz-3.0.48
+DISTNAME=	yaz-3.0.49
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yaz/
 
 MAINTAINER=	phil@NetBSD.org
 HOMEPAGE=	http://indexdata.dk/yaz/
 COMMENT=	C/C++ toolkit for the development of Z39.50v3/SRW clients and servers
+LICENSE=	modified-bsd
 
 # needed during installation
 BUILD_DEPENDS+=	tcl-[0-9]*:../../lang/tcl
