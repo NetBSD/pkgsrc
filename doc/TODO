@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8584 2009/10/31 01:16:53 wiz Exp $
+$NetBSD: TODO,v 1.8585 2009/10/31 01:20:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -989,7 +989,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mkfontscale-1.0.7
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-2.9.8
-	o mldonkey-3.0.1
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
