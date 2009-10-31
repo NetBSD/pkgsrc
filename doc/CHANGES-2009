@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4176 2009/10/31 02:52:56 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4177 2009/10/31 02:54:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5548,3 +5548,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/farsight2 to 0.0.16 [wiz 2009-10-31]
 	Updated misc/libcdio to 0.82 [wiz 2009-10-31]
 	Updated sysutils/liboobs to 2.22.2 [wiz 2009-10-31]
+	Updated devel/libdaemon to 0.14 [wiz 2009-10-31]
