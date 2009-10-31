@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2009/10/29 16:25:57 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2009/10/31 21:42:27 joerg Exp $
 
 --- configure.orig	2009-07-11 21:36:00.000000000 +0200
 +++ configure
@@ -60,12 +60,3 @@ $NetBSD: patch-aa,v 1.1 2009/10/29 16:25:57 joerg Exp $
    ;
    return 0;
  }
-@@ -25208,6 +25184,8 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
