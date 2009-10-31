@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/31 03:20:35 wiz Exp $
 bin/FBReader
 lib/libzlcore.so.0.10
-lib/libzlcore.so.0.10.1
+lib/libzlcore.so.0.10.7
 lib/libzltext.so.0.10
-lib/libzltext.so.0.10.1
+lib/libzltext.so.0.10.7
 lib/zlibrary/ui/zlui-gtk.so
 share/FBReader/default/config.xml
 share/FBReader/default/external.xml
