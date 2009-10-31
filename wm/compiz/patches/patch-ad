@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2009/10/31 13:47:52 tnn Exp $
+
+--- gtk/gnome/Makefile.in.orig	2009-10-31 14:45:16.000000000 +0100
++++ gtk/gnome/Makefile.in
+@@ -292,7 +292,7 @@ moduledir = $(DESTDIR)$(windowsettingsli
+ @USE_GNOME_KEYBINDINGS_TRUE@@USE_GNOME_TRUE@xmldir = $(DESTDIR)$(keybindingsdir)
+ @USE_GNOME_KEYBINDINGS_TRUE@@USE_GNOME_TRUE@xml_in_files = 50-compiz-desktop-key.xml.in 50-compiz-key.xml.in
+ @USE_GNOME_KEYBINDINGS_TRUE@@USE_GNOME_TRUE@xml_files = $(xml_in_files:.xml.in=.xml)
+-INCLUDES = @GNOME_WINDOW_SETTINGS_CFLAGS@			   \
++INCLUDES = @GNOME_WINDOW_SETTINGS_CFLAGS@ @GCONF_CFLAGS@	   \
+ 	-DMETACITY_THEME_DIR=\""$(windowsettingsdatadir)/themes"\"
+ 
+ noinst_LTLIBRARIES = \
