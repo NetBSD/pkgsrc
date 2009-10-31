@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.664 2009/10/14 11:44:30 tnn Exp $
+# $NetBSD: Makefile,v 1.665 2009/10/31 19:40:43 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -463,6 +463,7 @@ SUBDIR+=	ruby-actionpack
 SUBDIR+=	ruby-activeresource
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-clearsilver
+SUBDIR+=	ruby-compass
 SUBDIR+=	ruby-cssmin
 SUBDIR+=	ruby-fcgi
 SUBDIR+=	ruby-gnome2-gtkhtml2
