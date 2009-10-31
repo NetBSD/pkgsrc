@@ -1,0 +1,67 @@
+$NetBSD: patch-ah,v 1.9 2009/10/31 20:08:05 tnn Exp $
+
+--- popper/popper.c.orig	2006-03-09 23:32:38.000000000 +0100
++++ popper/popper.c
+@@ -150,7 +150,7 @@ char        **  argv;
+     char                message [ MAXLINELEN ];
+     pop_result          rslt = POP_FAILURE;
+     char            *   tgetline();
+-    char            *   getline();
++    char            *   get_line();
+     
+     /*
+      * seed random with the current time to nearest second 
+@@ -425,7 +425,7 @@ jmp_buf env;
+  */
+ 
+ char
+-*getline ( char *str, int size, POP *pPOP )
++*get_line ( char *str, int size, POP *pPOP )
+ {
+     char *p       = NULL;
+     int   nRead   = 0;
+@@ -433,7 +433,7 @@ char
+     int   nBufSz  = sizeof ( pPOP->pcInBuf );
+ 
+ 
+-    _DEBUG_LOG2 ( pPOP, "getline(%p,%d)", str, size );
++    _DEBUG_LOG2 ( pPOP, "get_line(%p,%d)", str, size );
+ 
+     /*
+      * See if there's a line in our input buffer
+@@ -472,7 +472,7 @@ char
+                               pPOP->pcInStart - pPOP->pcInBuf );
+                 pPOP->pcInStart = pPOP->pcInEnd = pPOP->pcInBuf;
+             }
+-            _DEBUG_LOG3 ( pPOP, "getline() returning %d: '%.*s'",
++            _DEBUG_LOG3 ( pPOP, "get_line() returning %d: '%.*s'",
+                           strlen(str), MIN(25, (int) strlen(str)), str );
+             return ( str );
+         } /* got a line */
+@@ -560,7 +560,7 @@ char
+                 } /* found a '\n' */
+             } /* loop and discard until we see a '\n' */
+ 
+-            _DEBUG_LOG2 ( pPOP, "getline() returning %d ('%c')",
++            _DEBUG_LOG2 ( pPOP, "get_line() returning %d ('%c')",
+                           strlen(str), *str );
+             return ( str );
+         } /* nRoom == 0 */
+@@ -583,7 +583,7 @@ char
+             break;
+     } /* main loop */
+ 
+-    _DEBUG_LOG0 ( pPOP, "getline() returning NULL" );
++    _DEBUG_LOG0 ( pPOP, "get_line() returning NULL" );
+     return ( NULL );
+ }
+ 
+@@ -614,7 +614,7 @@ tgetline ( char *str, int size, POP *p, 
+                   VERSION, timeout, p->user, p->client, p->ipaddr );
+     }
+     else
+-        str = getline ( str, size, p );
++        str = get_line ( str, size, p );
+ 
+     alarm  ( 0 );
+     signal ( SIGALRM, SIG_DFL );
