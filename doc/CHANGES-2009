@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4175 2009/10/31 02:49:20 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4176 2009/10/31 02:52:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5547,3 +5547,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/alsa-lib to 1.0.21a [wiz 2009-10-31]
 	Updated multimedia/farsight2 to 0.0.16 [wiz 2009-10-31]
 	Updated misc/libcdio to 0.82 [wiz 2009-10-31]
+	Updated sysutils/liboobs to 2.22.2 [wiz 2009-10-31]
