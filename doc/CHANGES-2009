@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4183 2009/10/31 03:10:46 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4184 2009/10/31 03:20:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5555,3 +5555,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/py-libxml2 to 2.7.6 [wiz 2009-10-31]
 	Updated time/py-pytz to 2009n [wiz 2009-10-31]
 	Updated x11/alacarte to 0.12.3 [wiz 2009-10-31]
+	Updated misc/fbreader to 0.10.7 [wiz 2009-10-31]
