@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4172 2009/10/31 02:32:41 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4173 2009/10/31 02:36:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5544,3 +5544,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/trang to 20090818 [wiz 2009-10-31]
 	Updated net/wget to 1.12 [wiz 2009-10-31]
 	Updated net/yaz to 3.0.49 [wiz 2009-10-31]
+	Updated audio/alsa-lib to 1.0.21a [wiz 2009-10-31]
