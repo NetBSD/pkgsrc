@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2006/09/17 15:59:44 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2009/10/31 00:16:40 wiz Exp $
 
---- Makefile.in.orig	2006-09-17 17:53:06.000000000 +0000
+--- Makefile.in.orig	2009-10-12 23:06:53.000000000 +0000
 +++ Makefile.in
-@@ -57,10 +57,10 @@ $(objects):
- 	$(SHELL) $(auxdir)/mkinstalldirs $@
+@@ -75,10 +75,10 @@ $(objects)/$(TARGET): $(OBJECTS) $(VERSI
+ 	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJECTS) $(VERSION_OBJECTS) $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS)
  
  $(objects)/playwave$(EXE): $(objects)/playwave.lo $(objects)/$(TARGET)
 -	$(LIBTOOL) --mode=link $(CC) -o $@ $(objects)/playwave.lo $(SDL_CFLAGS) $(SDL_LIBS) $(objects)/$(TARGET)
@@ -13,5 +13,5 @@ $NetBSD: patch-ab,v 1.3 2006/09/17 15:59:44 joerg Exp $
 -	$(LIBTOOL) --mode=link $(CC) -o $@ $(objects)/playmus.lo $(SDL_CFLAGS) $(SDL_LIBS) $(objects)/$(TARGET)
 +	$(LIBTOOL) --mode=link $(CC) -o $@ $(LDFLAGS) $(objects)/playmus.lo $(SDL_CFLAGS) $(SDL_LIBS) $(objects)/$(TARGET)
  
- .PHONY: all depend install install-hdrs install-lib install-bin uninstall uninstall-hdrs uninstall-lib uninstall-bin clean distclean dist
- depend:
+ install: all install-hdrs install-lib #install-bin
+ install-hdrs:
