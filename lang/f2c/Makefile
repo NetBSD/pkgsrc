@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2009/01/05 03:45:17 dbj Exp $
+# $NetBSD: Makefile,v 1.46 2009/10/31 19:15:44 asau Exp $
 
 DISTNAME=	f2c-20001205
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -35,8 +35,6 @@ MAKE_ENV+=	F2CMAJOR=${F2CMAJOR:Q} F2CMINOR=${F2CMINOR:Q}
 MAKE_ENV+=	LIBOWN=${LIBOWN:Q} LIBGRP=${LIBGRP:Q}
 MAKE_ENV+=	AWK=${AWK:Q}
 MAKE_ENV+=	ECHO=${ECHO:Q}
-MAKE_ENV+=	F2C_F77_IN=${FILESDIR:Q}/f2c-f77.in
-MAKE_ENV+=	SCRIPT_SHELL=${TOOLS_PLATFORM.sh:Q}
 WRKSRC=		${WRKDIR}/f2c
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gunzip
@@ -67,6 +65,16 @@ do-configure:
 	@${CP} -f ${WRKSRC}/libF77/signal1.h0 ${WRKSRC}/libF77/signal1.h
 	@${CP} -f ${WRKSRC}/f2c.h ${WRKSRC}/libF77/f2c.h
 	@${CP} -f ${WRKSRC}/f2c.h ${WRKSRC}/libI77/f2c.h
+
+# Handle f2c-f77 script:
+post-build:
+	${SED} -e 's;@PREFIX@;${PREFIX};g' \
+	  -e 's;@CC@;${CC};g' -e 's;@CPP@;${CPP};g' \
+	  -e "s;@SHELL@;${TOOLS_PLATFORM.sh:Q};g" \
+	 ${FILESDIR}/f2c-f77.in > ${WRKSRC}/f2c-f77
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/f2c-f77 ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.prefs.mk"
 MAKE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH:Q}
