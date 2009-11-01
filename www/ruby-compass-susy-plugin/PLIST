@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/01 23:44:45 seb Exp $
+${GEM_HOME}/cache/compass-susy-plugin-${PKGVERSION}.gem
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/Manifest
+${GEM_LIBDIR}/README.mkdn
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/compass-susy-plugin.gemspec
+${GEM_LIBDIR}/docs/tutorial/figures/susy_element.png
+${GEM_LIBDIR}/docs/tutorial/figures/susy_grid.png
+${GEM_LIBDIR}/docs/tutorial/index.mkdn
+${GEM_LIBDIR}/lib/susy.rb
+${GEM_LIBDIR}/lib/susy/compass_plugin.rb
+${GEM_LIBDIR}/lib/susy/sass_extensions.rb
+${GEM_LIBDIR}/sass/susy/_grid.sass
+${GEM_LIBDIR}/sass/susy/_susy.sass
+${GEM_LIBDIR}/sass/susy/_text.sass
+${GEM_LIBDIR}/sass/susy/_utils.sass
+${GEM_LIBDIR}/templates/project/_base.sass
+${GEM_LIBDIR}/templates/project/ie.sass
+${GEM_LIBDIR}/templates/project/manifest.rb
+${GEM_LIBDIR}/templates/project/print.sass
+${GEM_LIBDIR}/templates/project/screen.sass
+${GEM_HOME}/specifications/compass-susy-plugin-${PKGVERSION}.gemspec
