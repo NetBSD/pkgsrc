@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/08/25 20:11:01 hasso Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/11/01 15:41:13 tnn Exp $
 include/qof/deprecated.h
 include/qof/guid.h
 include/qof/kvpframe.h
@@ -286,6 +286,7 @@ share/doc/qof/html/doxy/struct__QofParam.html
 share/doc/qof/html/doxy/struct__QofQueryPredData.html
 share/doc/qof/html/doxy/struct__QofSession.html
 share/doc/qof/html/doxy/structbin__data.html
+share/doc/qof/html/doxy/structmd5__ctx.html
 share/doc/qof/html/doxy/structqof__entity__reference.html
 share/doc/qof/html/doxy/structquery__boolean__def.html
 share/doc/qof/html/doxy/structquery__char__def.html
