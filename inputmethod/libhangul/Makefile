@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/08/10 13:17:34 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2009/11/01 08:47:23 obache Exp $
 
-DISTNAME=	libhangul-0.0.9
+DISTNAME=	libhangul-0.0.10
 CATEGORIES=	inputmethod korean
-MASTER_SITES=	http://kldp.net/frs/download.php/4943/
+MASTER_SITES=	http://kldp.net/frs/download.php/5417/
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://kldp.net/projects/hangul/
