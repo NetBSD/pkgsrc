@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2009/08/01 05:24:08 hasso Exp $
+$NetBSD: distinfo,v 1.6 2009/11/01 16:07:10 tnn Exp $
 
 SHA1 (xlispstat-3-52-20.tar.gz) = a62c353ce136ba7111536457272fa20f82ae23e0
 RMD160 (xlispstat-3-52-20.tar.gz) = 834442693df99692c80efd6149315639329379c4
 Size (xlispstat-3-52-20.tar.gz) = 1527951 bytes
-SHA1 (patch-aa) = 90400468523e559e2405913e51dc9d46653a70e9
+SHA1 (patch-aa) = 86c12bc585c7144a4816fce378f0feee98ca0f64
 SHA1 (patch-ac) = 0d7a966ad49e0c4b0173792f2c26262bec65312b
 SHA1 (patch-ad) = 832133137b104facbd90189e5dd163bb35ff9174
