@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8617 2009/11/01 08:11:58 obache Exp $
+$NetBSD: TODO,v 1.8618 2009/11/01 08:47:35 obache Exp $
 
 Suggested new packages
 ======================
@@ -883,7 +883,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgii-1.0.2
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
-	o libhangul-0.0.10
 	o libhydrogen-0.9.2
 	o libiconv-1.13.1
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
