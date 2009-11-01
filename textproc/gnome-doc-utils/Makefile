@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2009/10/27 14:50:07 drochner Exp $
+# $NetBSD: Makefile,v 1.45 2009/11/01 17:18:01 tnn Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.18.0
@@ -19,6 +19,7 @@ DEPENDS+=	scrollkeeper-dtd-[0-9]*:../../textproc/scrollkeeper-dtd
 
 USE_TOOLS+=		intltool pkg-config gmake gawk msgfmt
 GNU_CONFIGURE=		YES
+MAKE_JOBS_SAFE=		no
 TEST_TARGET=		check
 USE_PKGLOCALEDIR=	YES
 
