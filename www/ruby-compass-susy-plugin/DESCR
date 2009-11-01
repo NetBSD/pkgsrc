@@ -1,0 +1,12 @@
+Susy is a semantic CSS framework creator entirely native to Compass.
+Susy is an expert at fluid grids in an elastic (or fluid, or fixed)
+shell that will never activate that bloody side-scroll bar. Susy
+sets your width on the outer element (`container`), adds a `max-width`
+of `100%` and builds the rest of your grid in percentages. The
+philosophy and technique are based on Natalie Downe's "CSS Systems"
+- which introduces difficult math in the service of beautiful
+structure. With the power of Compass/Sass, Susy will do that math
+for you.
+
+Using simple mixins, columns can be created, suffixed, prefixed,
+and nested easily - and always in flexible percentages.
