@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2004/11/23 02:42:10 tv Exp $
-bin/zip1
-bin/zipcloak1
-man/man1/zip1.1
-man/man1/zipcloak1.1
