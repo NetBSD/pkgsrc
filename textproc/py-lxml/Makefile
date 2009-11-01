@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/08/09 21:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/11/01 21:12:37 joerg Exp $
 #
 
-DISTNAME=	lxml-2.2.2
+DISTNAME=	lxml-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://codespeak.net/lxml/
@@ -14,6 +14,8 @@ COMMENT=	Python binding for libxml2 and libxslt
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=			yes
+
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c11:../../devel/py-setuptools
 
 .include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.28
