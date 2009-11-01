@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:01:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/11/01 08:47:23 obache Exp $
 include/hangul-1.0/hangul.h
 lib/libhangul.la
-lib/libhangul/hanja/hanja.txt
 lib/pkgconfig/libhangul.pc
+share/libhangul/hanja/hanja.txt
