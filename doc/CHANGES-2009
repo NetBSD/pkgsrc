@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4193 2009/11/01 18:55:23 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4194 2009/11/01 21:14:26 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5569,3 +5569,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed archivers/zip1 [joerg 2009-11-01]
 	Updated audio/taglib to 1.6.1 [wiz 2009-11-01]
 	Updated archivers/zip to 3.0nb2 [wiz 2009-11-01]
+	Updated textproc/py-lxml to 2.2.3 [joerg 2009-11-01]
