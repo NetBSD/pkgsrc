@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2009/11/01 10:49:14 obache Exp $
+
+add DESTDIR installation support.
+
+--- Makefile.in.orig	2006-06-13 08:27:28.000000000 +0000
++++ Makefile.in
+@@ -97,10 +97,10 @@ realclean: clean
+ 	rm -f lexer.c find_dep.[ch] .depend configure tags config.cache config.log config.status 
+ 
+ install: $(PROG)  makedepf90.1
+-	$(INSTALL) -d $(bindir)
+-	$(INSTALL_PROGRAM) $(PROG) $(bindir)
+-	$(INSTALL) -d $(mandir)/man1
+-	$(INSTALL_DATA) makedepf90.1 $(mandir)/man1
++	$(INSTALL) -d $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) $(PROG) $(DESTDIR)$(bindir)
++	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
++	$(INSTALL_DATA) makedepf90.1 $(DESTDIR)$(mandir)/man1
+ install-strip: $(PROG) makedepf90.1
+ 	$(INSTALL) -d $(bindir)
+ 	$(INSTALL_PROGRAM) -s $(PROG) $(bindir)

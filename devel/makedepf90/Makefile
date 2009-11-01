@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/16 12:01:49 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/01 10:49:14 obache Exp $
 #
 
 DISTNAME=		makedepf90-2.8.8
@@ -8,14 +8,12 @@ MASTER_SITES=		http://www.helsinki.fi/~eedelman/makedepf90/
 MAINTAINER=		emil@math.su.se
 HOMEPAGE=		http://www.helsinki.fi/~eedelman/makedepf90/
 COMMENT=		Creates Makefile dependencies for Fortran code
+LICENSE=		gnu-gpl-v2
 
-USE_TOOLS+=		lex yacc
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-do-build:
-	cd ${WRKSRC:Q} && make
-
+BUILD_TARGET=		# empty
 
 .include "../../mk/bsd.pkg.mk"
