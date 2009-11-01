@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4189 2009/11/01 03:17:57 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4190 2009/11/01 13:32:21 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5562,3 +5562,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/ruby-haml to 2.2.10 [seb 2009-10-31]
 	Added www/ruby-compass version 0.8.17 [seb 2009-10-31]
 	Added www/ruby-staticmatic version 0.10.6 [seb 2009-11-01]
+	Removed www/communicator [tnn 2009-11-01]
+	Removed www/navigator [tnn 2009-11-01]
+	Removed www/ns-plugger-communicator [tnn 2009-11-01]
+	Removed www/ns-plugger-navigator [tnn 2009-11-01]
