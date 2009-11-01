@@ -1,0 +1,4 @@
+StaticMatic is a framework to develop or prototype static websites.
+It provides concise and terse templating with the help of Haml and
+helpers build on top of it, Sass support, "partials", a live preview
+server for development.
