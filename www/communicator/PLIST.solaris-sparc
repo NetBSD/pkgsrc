@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.solaris-sparc,v 1.2 2009/06/14 22:00:20 joerg Exp $
-lib/netscape/${BINNAME}-${NS_VERS}/dynfonts/libTrueDoc.so
-lib/netscape/${BINNAME}-${NS_VERS}/libjsd.so
-lib/netscape/${BINNAME}-${NS_VERS}/plugins/libnullplugin.so
-lib/netscape/${BINNAME}-${NS_VERS}/talkback/master.ini
