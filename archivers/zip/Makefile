@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2009/09/18 14:01:32 sketch Exp $
+# $NetBSD: Makefile,v 1.57 2009/11/01 18:55:12 wiz Exp $
 
 DISTNAME=	zip30
 PKGNAME=	zip-3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 EXTRACT_SUFX=	.tgz
@@ -20,6 +20,7 @@ MAKE_FILE=	unix/Makefile
 
 MAKE_FLAGS+=	LOCAL_ZIP=${CFLAGS:M*:Q}
 MAKE_FLAGS+=	LFLAGS1=${_STRIPFLAG_CC:Q}
+MAKE_FLAGS+=	-DUNICODE_SUPPORT
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
 CFLAGS+=	-O0
 .endif
