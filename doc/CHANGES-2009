@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4197 2009/11/02 04:24:43 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.4198 2009/11/02 11:35:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5573,3 +5573,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/ruby-compass-susy-plugin version 0.6.3 [seb 2009-11-01]
 	Added wm/echinus version 0.3.8 [obache 2009-11-02]
 	Updated www/ikiwiki to 3.20091031 [schmonz 2009-11-02]
+	Removed devel/py-logging [obache 2009-11-02]
