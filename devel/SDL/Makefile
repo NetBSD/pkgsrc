@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2009/10/23 06:05:07 adam Exp $
+# $NetBSD: Makefile,v 1.88 2009/11/02 08:52:51 adam Exp $
 
 DISTNAME=	SDL-1.2.14
 CATEGORIES=	devel games
@@ -64,6 +64,7 @@ MAKE_ENV+=		AM_CFLAGS=${AM_CFLAGS:M*:Q}
 
 # Irix comes with GL, which works fine for SDL
 .if ${OPSYS} != "IRIX" && ${OPSYS} != "Darwin"
+CONFIGURE_ARGS+=	--disable-x11-shared
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
