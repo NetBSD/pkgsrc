@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2009/10/25 22:54:03 tron Exp $
+# $NetBSD: Makefile.common,v 1.57 2009/11/02 11:51:43 asau Exp $
 #
 # This Makefile.common is included by:
 #
@@ -89,6 +89,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 
