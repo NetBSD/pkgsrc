@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:31 agc Exp $
-
-SHA1 (logging-0.4.9.2.tar.gz) = db3ce2808ed1e6522cbbdb1ed9a1fee403be4b97
-RMD160 (logging-0.4.9.2.tar.gz) = 8a1703f8e0dbe95973112480d69445f4c4e75c14
-Size (logging-0.4.9.2.tar.gz) = 87854 bytes
