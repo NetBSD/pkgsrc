@@ -1,0 +1,10 @@
+echinus is a dynamic window manager for X11 supporting managing window
+s in floating, tiled and maximized layouts based on dwm. All the
+configuration is made via config file in Xresources format, so it is
+not necessary to recompile echinus every time you change something.
+
+echinus supports a small subset of EWMH to be compatible with external
+panels and pagers. It draws a border around windows and also an
+optional title bar. The goal of development is a small, fast
+window manager without features not strictly related to window
+management (menus, panels, etc.)

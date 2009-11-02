@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/02 04:15:51 obache Exp $
+bin/echinus
+man/man1/echinus.1
+share/doc/echinus/README
+share/examples/echinus/close.xbm
+share/examples/echinus/echinusrc
+share/examples/echinus/iconify.xbm
+share/examples/echinus/max.xbm
