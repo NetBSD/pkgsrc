@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4199 2009/11/02 14:59:08 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4200 2009/11/02 15:46:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5575,3 +5575,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ikiwiki to 3.20091031 [schmonz 2009-11-02]
 	Removed devel/py-logging [obache 2009-11-02]
 	Updated www/typolight27-translations to 20091101 [taca 2009-11-02]
+	Updated www/squid30 to 3.0.20 [taca 2009-11-02]
+	Updated www/squid27 to 2.7.7nb1 [taca 2009-11-02]
