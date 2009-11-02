@@ -1,9 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2009/10/18 04:43:16 schmonz Exp $
+$NetBSD: MESSAGE,v 1.6 2009/11/02 04:23:37 schmonz Exp $
 
 If you use custom templates, make sure they are correct when
 upgrading.
-
 
 To take advantage of significant performance improvements, all wikis
 need to be rebuilt on upgrade to 3.20091017. If you listed your
