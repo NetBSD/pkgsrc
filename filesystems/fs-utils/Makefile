@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/11/02 18:58:10 stacktic Exp $
+# $NetBSD: Makefile,v 1.8 2009/11/02 19:54:44 stacktic Exp $
 #
 
 DISTNAME=		fs-utils_20091102
@@ -22,6 +22,7 @@ SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Adjusting path.
 SUBST_FILES.path=	Makefile.inc
 SUBST_SED.path=		-e "s|/usr/pkg|${LOCALBASE}|g"
+SUBST_SED.path+=	-e "s|^LDADD.*|LDADD+= -ldl -L../../../libnbcompat -lnbcompat|"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/libfsu_utils/fsu_fts.h \
