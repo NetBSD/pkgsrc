@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/10/30 13:47:05 stacktic Exp $
+# $NetBSD: Makefile,v 1.8 2009/11/02 18:54:28 stacktic Exp $
 #
 
-DISTNAME=		rump_20091030
+DISTNAME=		rump_20091102
 PKGNAME=		${DISTNAME:S/_/-/}
 
 CATEGORIES=		misc
