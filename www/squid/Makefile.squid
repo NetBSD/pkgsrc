@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.squid,v 1.14 2009/07/27 11:29:08 taca Exp $
+# $NetBSD: Makefile.squid,v 1.15 2009/11/02 15:43:20 taca Exp $
 #
 # used by www/squid27/Makefile
 # used by www/squid30/Makefile
@@ -33,7 +33,7 @@ CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
 #
 PLIST_SRC=	${WRKDIR}/PLIST
 
-MESSAGE_SRC=		../squid/MESSAGE
+MESSAGE_SRC?=		../squid/MESSAGE
 RCD_SCRIPTS=		squid
 RCD_SCRIPT_SRC.squid?=	../squid/files/squid.sh
 
