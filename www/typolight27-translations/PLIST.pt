@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pt,v 1.3 2009/06/14 22:00:39 joerg Exp $
+@comment $NetBSD: PLIST.pt,v 1.4 2009/11/02 14:58:01 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/pt/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/pt/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/pt/default.php
@@ -56,7 +56,6 @@ ${TL_WEBDIR}/system/modules/glossary/languages/pt/tl_glossary.php
 ${TL_WEBDIR}/system/modules/glossary/languages/pt/tl_glossary_term.php
 ${TL_WEBDIR}/system/modules/glossary/languages/pt/tl_module.php
 ${TL_WEBDIR}/system/modules/listing/languages/pt/.htaccess
-${TL_WEBDIR}/system/modules/listing/languages/pt/default.php
 ${TL_WEBDIR}/system/modules/listing/languages/pt/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/pt/tl_module.php
 ${TL_WEBDIR}/system/modules/memberlist/languages/pt/.htaccess
