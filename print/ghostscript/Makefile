@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2009/11/01 23:57:29 gdt Exp $
+# $NetBSD: Makefile,v 1.71 2009/11/02 00:00:31 gdt Exp $
 
 DISTNAME=	ghostscript-8.70
 PKGREVISION=	1
@@ -9,6 +9,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ghostscript.sourceforge.net/
 COMMENT=	Postscript interpreter
+
+# Plus adobe verbatim for Resources/CMap.
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
