@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.1.1.1 2007/09/20 20:02:53 jlam Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.2 2009/11/03 02:43:56 wiz Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -126,13 +126,6 @@ extract)
 	# "mozilla-rootcert-<n>.pem" in the current working directory.
 	#
 	cat "$certfile" | ${AWK} -v OPENSSL=${OPENSSL} '
-	function join(array, start, end, separator,	result, i) {
-		result = array[start]
-		for (i = start + 1; i <= end; i++)
-			result = result separator array[i]
-		return result
-	}
-
 	function base8to10(o,	octal, decimal, power, i, n) {
 		decimal = 0
 		n = split(o, octal, "")
@@ -149,7 +142,6 @@ extract)
 	BEGIN {
 		filenum = 0
 		while (getline) {
-			D = 0
 			if ($0 !~ /^CKA_VALUE MULTILINE_OCTAL/) continue
 
 			filename = "mozilla-rootcert-" filenum ".pem"
@@ -160,10 +152,9 @@ extract)
 				if ($0 ~ /^END/) break
 				n = split($0, line, "\\")
 				for (i = 2; i <= n; i++) {
-					der[D++] = sprintf("%c", base8to10(line[i]))
+					printf("%c",  base8to10(line[i])) | cmd
 				}
 			}
-			printf("%s", join(der, 0, D, "")) | cmd
 			close(cmd)
 		}
 	}'
