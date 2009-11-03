@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.2 2009/10/28 11:36:36 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.3 2009/11/03 22:31:58 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 1.9.1.
 
@@ -60,7 +60,7 @@ create-rm-wrapper:
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 .include "../../archivers/bzip2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.10
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.16
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
