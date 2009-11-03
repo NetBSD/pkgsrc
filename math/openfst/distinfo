@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/03 17:53:44 wiz Exp $
+
+SHA1 (openfst-1.1.tar.gz) = b070f84a981dfadc4c049f505bd3406a43dfa55d
+RMD160 (openfst-1.1.tar.gz) = 45657bb11f91ffdce5261ff6f4c103c164cc161b
+Size (openfst-1.1.tar.gz) = 513404 bytes
