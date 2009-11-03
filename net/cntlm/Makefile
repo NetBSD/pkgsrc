@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/30 19:55:30 jym Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/03 21:13:24 jym Exp $
 #
 
 DISTNAME=	cntlm-0.35.1
@@ -32,7 +32,7 @@ RCD_SCRIPTS+=	cntlm
 
 CONF_FILES_PERMS+=	${EGDIR}/cntlm.conf ${PKG_SYSCONFDIR}/cntlm.conf \
 				${CNTLM_USER} ${CNTLM_GROUP} 0600
-INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR} ${PKGMANDIR}/man1 bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cntlm \
@@ -42,6 +42,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/cntlm.conf \
 				${DESTDIR}${EGDIR}/cntlm.conf
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
