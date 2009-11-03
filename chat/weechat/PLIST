@@ -1,25 +1,21 @@
-@comment $NetBSD: PLIST,v 1.11 2009/07/18 06:04:33 tonio Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/11/03 22:22:31 tonio Exp $
 bin/weechat-curses
+include/weechat/weechat-plugin.h
+lib/pkgconfig/weechat.pc
 ${PLIST.lua}lib/weechat/plugins/lua.la
 ${PLIST.perl}lib/weechat/plugins/perl.la
 ${PLIST.python}lib/weechat/plugins/python.la
 ${PLIST.ruby}lib/weechat/plugins/ruby.la
 ${PLIST.charset}lib/weechat/plugins/charset.la
-man/man1/weechat-curses.1
-share/doc/weechat/html/de/weechat-doc.css
-share/doc/weechat/html/en/weechat-doc.css
-share/doc/weechat/html/fr/weechat-doc.css
-share/doc/weechat/weechat_quickstart.cs.txt
-share/doc/weechat/weechat_quickstart.de.txt
-share/doc/weechat/weechat_quickstart.en.txt
-share/doc/weechat/weechat_quickstart.fr.txt
-share/doc/weechat/weechat_quickstart.pl.txt
-share/doc/weechat/weechat_quickstart.ru.txt
-share/doc/weechat/weechat_quickstart.sco.txt
-share/doc/weechat/weechat_quickstart.sv.txt
+lib/weechat/plugins/alias.la
+lib/weechat/plugins/fifo.la
+lib/weechat/plugins/irc.la
+lib/weechat/plugins/logger.la
+lib/weechat/plugins/xfer.la
 share/locale/cs/LC_MESSAGES/weechat.mo
 share/locale/de/LC_MESSAGES/weechat.mo
 share/locale/es/LC_MESSAGES/weechat.mo
 share/locale/fr/LC_MESSAGES/weechat.mo
 share/locale/hu/LC_MESSAGES/weechat.mo
+share/locale/pl/LC_MESSAGES/weechat.mo
 share/locale/ru/LC_MESSAGES/weechat.mo

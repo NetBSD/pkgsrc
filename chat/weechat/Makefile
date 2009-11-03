@@ -1,25 +1,25 @@
-# $NetBSD: Makefile,v 1.24 2009/09/29 17:17:39 tonio Exp $
+# $NetBSD: Makefile,v 1.25 2009/11/03 22:22:31 tonio Exp $
 #
 
-DISTNAME=	weechat-0.2.6.3
-PKGREVISION=	1
+DISTNAME=	weechat-0.3.0
 CATEGORIES=	chat
-MASTER_SITES=	http://weechat.flashtux.org/download/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://www.weechat.org/files/src/
 
 MAINTAINER=	tonio@NetBSD.org
-HOMEPAGE=	http://weechat.flashtux.org/
+HOMEPAGE=	http://www.weechat.org/
 COMMENT=	Lightweight and user friendly curses based IRC client
-#LICENSE=		gplv3
+LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-ruby --disable-aspell
 MAKE_ENV+=		INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
+MAKE_ENV+=		PREFIX=${DESTDIR:Q}${PREFIX:Q}
 
 .include "options.mk"
 
