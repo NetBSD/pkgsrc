@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4202 2009/11/03 00:12:23 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4203 2009/11/03 00:15:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5580,3 +5580,4 @@ Changes to the packages collection and infrastructure in 2009:
         Updated misc/rump to 20091102 [stacktic 2009-11-02]
         Updated filesystems/fs-utils to 20091102 [stacktic 2009-11-02]
 	Updated graphics/gnome-backgrounds to 2.28.0 [wiz 2009-11-03]
+	Updated security/gnutls to 2.8.5 [wiz 2009-11-03]
