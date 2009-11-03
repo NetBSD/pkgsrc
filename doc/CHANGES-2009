@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4205 2009/11/03 02:21:07 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4206 2009/11/03 02:44:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5583,3 +5583,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/gnutls to 2.8.5 [wiz 2009-11-03]
 	Updated textproc/iso-codes to 3.11.1 [wiz 2009-11-03]
 	Updated lang/python26 to 2.6.4 [wiz 2009-11-03]
+	Updated security/mozilla-rootcerts to 1.0.20090831 [wiz 2009-11-03]
