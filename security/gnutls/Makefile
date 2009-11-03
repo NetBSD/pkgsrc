@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2009/10/31 01:16:42 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2009/11/03 00:15:41 wiz Exp $
 
-DISTNAME=	gnutls-2.8.4
+DISTNAME=	gnutls-2.8.5
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/ \
 		ftp://ftp.gnupg.org/gcrypt/gnutls/ \
