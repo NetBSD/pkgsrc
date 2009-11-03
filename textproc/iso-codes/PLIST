@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/08/11 06:07:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/11/03 01:03:13 wiz Exp $
 share/doc/iso-codes/README
 share/doc/iso-codes/TODO
 share/locale/af/LC_MESSAGES/iso_3166.mo
@@ -241,6 +241,7 @@ share/locale/oc/LC_MESSAGES/iso_639.mo
 share/locale/oc/LC_MESSAGES/iso_639_3.mo
 share/locale/pa/LC_MESSAGES/iso_3166.mo
 share/locale/pa/LC_MESSAGES/iso_639.mo
+share/locale/pa/LC_MESSAGES/iso_639_3.mo
 share/locale/pl/LC_MESSAGES/iso_15924.mo
 share/locale/pl/LC_MESSAGES/iso_3166.mo
 share/locale/pl/LC_MESSAGES/iso_3166_2.mo
