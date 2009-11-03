@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2009/10/20 15:56:49 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2009/11/03 02:20:54 wiz Exp $
 bin/2to3
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -751,6 +751,12 @@ lib/python${PY_VER_SUFFIX}/distutils/sysconfig.pyo
 lib/python${PY_VER_SUFFIX}/distutils/tests/__init__.py
 lib/python${PY_VER_SUFFIX}/distutils/tests/__init__.pyc
 lib/python${PY_VER_SUFFIX}/distutils/tests/__init__.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/setuptools_build_ext.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/setuptools_build_ext.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/setuptools_build_ext.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/setuptools_extension.py
+lib/python${PY_VER_SUFFIX}/distutils/tests/setuptools_extension.pyc
+lib/python${PY_VER_SUFFIX}/distutils/tests/setuptools_extension.pyo
 lib/python${PY_VER_SUFFIX}/distutils/tests/support.py
 lib/python${PY_VER_SUFFIX}/distutils/tests/support.pyc
 lib/python${PY_VER_SUFFIX}/distutils/tests/support.pyo
