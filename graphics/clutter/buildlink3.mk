@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/10/26 08:45:51 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/11/03 06:01:54 obache Exp $
 #
 
 BUILDLINK_TREE+=	clutter
@@ -13,6 +13,7 @@ pkgbase := clutter
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.clutter:Mx11)
+BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=7.0
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
