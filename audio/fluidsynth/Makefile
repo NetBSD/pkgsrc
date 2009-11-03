@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/05/20 00:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/11/03 12:58:24 wiz Exp $
 
 DISTNAME=	fluidsynth-1.0.9
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://savannah.nongnu.org/download/fluid/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/fluid/
+HOMEPAGE=	http://fluidsynth.resonance.org/trac
 COMMENT=	Software synthesizer based on SoundFont2
 LICENSE=	gnu-lgpl-v2
 
