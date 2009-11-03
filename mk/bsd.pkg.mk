@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1959 2009/09/10 21:46:57 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1960 2009/11/03 02:14:32 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -563,7 +563,8 @@ ${WRKDIR}:
 	${RUN} ${TEST} -f ${_WRKDIR_LOCKFILE} || ${RM} -fr ${WRKDIR}
 .  endif
 .endif
-	${RUN} ${MKDIR} ${WRKDIR}
+	${RUN} ${MKDIR} ${WRKDIR:H}
+	${RUN} umask 077 && ${MKDIR} ${WRKDIR}
 
 # Create a symlink from ${WRKDIR} to the package directory if
 # CREATE_WRKDIR_SYMLINK is "yes".
