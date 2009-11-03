@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8623 2009/11/03 01:03:24 wiz Exp $
+$NetBSD: TODO,v 1.8624 2009/11/03 02:21:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1182,7 +1182,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-urwid-0.9.8.4
 	o py-zconfig-2.3.1
 	o python-3.1.1
-	o python26-2.6.4
 	o qbrew-0.3.9
 	o qemu-0.11.0
 	o qnetwalk-1.3
