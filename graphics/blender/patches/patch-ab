@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2009/08/28 20:46:19 hasso Exp $
+$NetBSD: patch-ab,v 1.8 2009/11/03 19:06:51 markd Exp $
 
 --- source/blender/blenlib/intern/storage.c.orig	2009-05-25 19:46:22 +0300
 +++ source/blender/blenlib/intern/storage.c	2009-08-28 21:32:31 +0300
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.7 2009/08/28 20:46:19 hasso Exp $
  #include <sys/stat.h>
  
 -#if defined (__sun__) || defined (__sun) || defined (__sgi)
-+#if defined (__sun__) || defined (__sun) || defined (__sgi) || defined(__DragonFly__)
++#if defined (__sun__) || defined (__sun) || defined (__sgi) || defined(__DragonFly__) || defined (__NetBSD__)
  #include <sys/statvfs.h> /* Other modern unix os's should probably use this also */
  #elif !defined(__FreeBSD__) && !defined(linux) && (defined(__sparc) || defined(__sparc__))
  #include <sys/statfs.h>
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.7 2009/08/28 20:46:19 hasso Exp $
  #else
  
 -#if defined (__sun__) || defined (__sun) || defined (__sgi)
-+#if defined (__sun__) || defined (__sun) || defined (__sgi) || defined(__DragonFly__)
++#if defined (__sun__) || defined (__sun) || defined (__sgi) || defined(__DragonFly__) || defined (__NetBSD__)
  	struct statvfs disk;
  #else
  	struct statfs disk;
