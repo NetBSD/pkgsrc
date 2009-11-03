@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8621 2009/11/01 21:14:27 joerg Exp $
+$NetBSD: TODO,v 1.8622 2009/11/03 00:12:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -695,7 +695,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.6
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-backgrounds-2.28.0 [GNOME 2.28]
 	o gnome-bluetooth-2.28.3 [GNOME 2.28]
 	o gnome-commander-1.2.8.3
 	o gnome-common-2.28.0 [GNOME 2.28]
