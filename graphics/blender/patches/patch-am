@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2009/11/03 19:06:51 markd Exp $
+
+--- source/blender/blenloader/BLO_sys_types.h.orig	2009-09-02 03:21:51.000000000 +1200
++++ source/blender/blenloader/BLO_sys_types.h
+@@ -102,7 +102,7 @@ typedef unsigned long uintptr_t;
+ #ifdef _WIN32
+ #define htonl(x) correctByteOrder(x)
+ #define ntohl(x) correctByteOrder(x)
+-#elif defined (__FreeBSD__) || defined (__OpenBSD__) 
++#elif defined (__FreeBSD__) || defined (__OpenBSD__) || defined (__NetBSD__)
+ #include <sys/param.h>
+ #elif defined (__APPLE__)
+ #include <sys/types.h>
