@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2008/05/06 23:50:42 markd Exp $
+$NetBSD: patch-ab,v 1.9 2009/11/03 19:02:26 markd Exp $
 
 --- configure.orig	2007-05-31 09:56:35.000000000 +1200
 +++ configure
@@ -29,6 +29,17 @@ $NetBSD: patch-ab,v 1.8 2008/05/06 23:50:42 markd Exp $
  cat >>confdefs.h <<\_ACEOF
  #define KEXI_MACROS_SUPPORT 1
 @@ -38928,6 +38929,10 @@ else
+   version=""2.5""
+ fi
+ 
++if test -n "${PYVERSSUFFIX}"; then
++  version="${PYVERSSUFFIX}"
++fi
++
+ { echo "$as_me:$LINENO: checking for Python$version" >&5
+ echo $ECHO_N "checking for Python$version... $ECHO_C" >&6; }
+ 
+@@ -51132,6 +51137,10 @@ else
    version=""2.5""
  fi
  
