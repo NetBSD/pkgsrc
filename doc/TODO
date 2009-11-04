@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8626 2009/11/04 02:44:49 obache Exp $
+$NetBSD: TODO,v 1.8627 2009/11/04 11:45:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
 	o ap2-wsgi-2.5
-	o apache-2.2.14
 	o apache-maven-3.0
 	o apache-tomcat55-6.0.14
 	o appres-1.0.2
@@ -428,7 +427,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o astyle-1.15.3
 	o asymptote-1.88
-	o atari800-2.1.0
 	o aterm-1.0.1
 	o auctex-11.85
 	o audacious-plugins-2.1
