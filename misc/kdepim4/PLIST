@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 08:13:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/04 11:05:51 markd Exp $
 bin/akregator
 bin/akregatorstorageexporter
 bin/egroupwarewizard
@@ -801,6 +801,7 @@ share/kde/apps/kaddressbook/vcard_xxportui.rc
 share/kde/apps/kaddressbook/zone.tab
 share/kde/apps/kalarm/kalarmui.rc
 share/kde/apps/kalarm/icons/oxygen/16x16/actions/document-new-from-template.png
+share/kde/apps/kalarm/icons/oxygen/16x16/actions/new-command-alarm.png
 share/kde/apps/kalarm/icons/oxygen/22x22/actions/document-new-from-template.png
 share/kde/apps/kalarm/icons/oxygen/22x22/actions/kalarm.png
 share/kde/apps/kalarm/icons/oxygen/22x22/actions/new-command-alarm.png
