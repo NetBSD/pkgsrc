@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/10/17 17:43:17 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2009/11/04 00:08:17 gdt Exp $
 #
 
 DISTNAME=	quagga-0.99.15
@@ -12,7 +12,7 @@ COMMENT=	Free multithreaded routing daemon software (fork of zebra)
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gawk gmake perl
 USE_LIBTOOL=		YES
 
 PKG_SYSCONFSUBDIR?=	zebra
