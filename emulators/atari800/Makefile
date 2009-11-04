@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2008/06/20 01:09:18 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2009/11/04 11:44:15 adam Exp $
 
-DISTNAME=	atari800-2.0.3
+DISTNAME=	atari800-2.1.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atari800/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xf25.zip
@@ -8,6 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xf25.zip
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://atari800.sourceforge.net/
 COMMENT=	Atari 800, 800XL, 130XE and 5200 emulator
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -26,7 +27,7 @@ INSTALLATION_DIRS+=	${PREFIX}/share/atari800
 .include "options.mk"
 
 # override HOME to avoid picking up a bad ${HOME}/.atari800 during the build
-MAKE_FLAGS+=	HOME=${WRKSRC:Q}
+MAKE_FLAGS+=	HOME=${WRKSRC}
 
 post-extract:
 	cd ${WRKDIR} && unzip -Lqo ${DISTDIR}/xf25.zip
