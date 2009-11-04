@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2009/08/18 14:28:00 sno Exp $
+$NetBSD: distinfo,v 1.21.2.1 2009/11/04 21:43:21 spz Exp $
 
-SHA1 (HTML-Parser-3.62.tar.gz) = b8d6f98cec39a42e188af241c705fc2f49b3090e
-RMD160 (HTML-Parser-3.62.tar.gz) = b09ad13ac94e109a8504b18bac1a959cf0240381
-Size (HTML-Parser-3.62.tar.gz) = 88412 bytes
+SHA1 (HTML-Parser-3.63.tar.gz) = 5acfde21d3479692735992c1c1f8cc9535c71a3d
+RMD160 (HTML-Parser-3.63.tar.gz) = 5481d61d560c35663f1664da0b36dbce90c8160a
+Size (HTML-Parser-3.63.tar.gz) = 88721 bytes
