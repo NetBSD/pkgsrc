@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.5 2009/11/04 11:44:15 adam Exp $
+
+--- configure.orig	2009-03-27 10:13:51.000000000 +0100
++++ configure
+@@ -3507,7 +3507,6 @@ case "$a8_target" in
+         if [ "$sdlcheck" != "X_" ]; then
+             CFLAGS="$CFLAGS `sdl-config --cflags`"
+             if [ "$a8_host" = "win" ]; then
+-                CFLAGS=${CFLAGS/-Dmain=SDL_main/}
+             fi
+         else
+             { { echo "$as_me:$LINENO: error: \"No output from sdl-config!  Is sdl-config installed?\"" >&5
+@@ -6558,10 +6557,8 @@ _ACEOF
+         OBJS="atari_sdl.o"
+         CFLAGS="$CFLAGS -ansi -pedantic -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wstrict-prototypes -Winline"
+         if [ "$a8_host" = "win" ]; then
+-            LIBS=${LIBS/-lSDLmain/}
+             OBJS="$OBJS SDL_win32_main.o"
+             CFLAGS="$CFLAGS -DNO_STDIO_REDIRECT"
+-            LIBS=${LIBS/-mwindows/}
+         fi
+ 
+ cat >>confdefs.h <<\_ACEOF
