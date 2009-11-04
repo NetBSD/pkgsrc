@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 08:13:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/04 11:05:53 markd Exp $
 man/de/man1/adddebug.1
 man/de/man1/ark.1
 man/de/man1/cheatmake.1
@@ -2152,6 +2152,7 @@ share/locale/de/LC_MESSAGES/libphonon.mo
 share/locale/de/LC_MESSAGES/libplasma.mo
 share/locale/de/LC_MESSAGES/libplasmaclock.mo
 share/locale/de/LC_MESSAGES/libplasmaweather.mo
+share/locale/de/LC_MESSAGES/librtm.mo
 share/locale/de/LC_MESSAGES/libtaskmanager.mo
 share/locale/de/LC_MESSAGES/lokalize.mo
 share/locale/de/LC_MESSAGES/lskat.mo
