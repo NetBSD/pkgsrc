@@ -1,0 +1,3 @@
+Dulwich is a Python implement of the Git file formats and protocols.
+It provides a standalone implementation that doesn't depend on the
+presence of Git itself.
