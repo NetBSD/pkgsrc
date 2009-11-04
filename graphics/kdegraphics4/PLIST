@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 20:11:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/04 11:05:51 markd Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -277,6 +277,8 @@ share/kde/apps/kgamma/pics/greyscale.png
 share/kde/apps/kgamma/pics/lightgrey.png
 share/kde/apps/kgamma/pics/midgrey.png
 share/kde/apps/kgamma/pics/rgbscale.png
+share/kde/apps/kipi/data/kipi-icon.svg
+share/kde/apps/kipi/data/kipi-logo.svg
 share/kde/apps/kipi/data/kipi-plugins_logo.png
 share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_brush.png
 share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_color_eraser.png
