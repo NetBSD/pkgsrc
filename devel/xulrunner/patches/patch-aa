@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2009/11/04 09:13:06 tnn Exp $
+$NetBSD: patch-aa,v 1.4 2009/11/04 09:44:09 tnn Exp $
 
 --- configure.in.orig	2009-10-16 17:13:35.000000000 +0200
 +++ configure.in
@@ -21,23 +21,7 @@ $NetBSD: patch-aa,v 1.3 2009/11/04 09:13:06 tnn Exp $
      ;; 
  
  *-hpux*)
-@@ -2349,8 +2352,15 @@ case "$target" in
-     if test "$LIBRUNPATH"; then
- 	DSO_LDOPTS="-R$LIBRUNPATH $DSO_LDOPTS"
-     fi
-+    case "${target_cpu}" in
-+    alpha*)
-+       CFLAGS="$CFLAGS -mieee"
-+       CXXFLAGS="$CXXFLAGS -mieee"
-+    ;;
-+    esac
-     ;;
- 
-+
- *-openvms*) 
-     AC_DEFINE(NO_PW_GECOS)
-     AC_DEFINE(NO_UDSOCK)
-@@ -3043,6 +3053,9 @@ dnl ====================================
+@@ -3043,6 +3046,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -47,7 +31,7 @@ $NetBSD: patch-aa,v 1.3 2009/11/04 09:13:06 tnn Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4158,6 +4171,14 @@ else
+@@ -4158,6 +4164,14 @@ else
     fi
  fi
  
@@ -62,7 +46,7 @@ $NetBSD: patch-aa,v 1.3 2009/11/04 09:13:06 tnn Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -8375,7 +8396,8 @@ rm -f confdefs.h.save
+@@ -8375,7 +8389,8 @@ rm -f confdefs.h.save
  mv confdefs.h confdefs.h.save
  egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
  AC_OUTPUT_MAKE_DEFS()
@@ -72,7 +56,7 @@ $NetBSD: patch-aa,v 1.3 2009/11/04 09:13:06 tnn Exp $
  AC_SUBST(MOZ_DEFINES)
  rm -f confdefs.h
  mv confdefs.h.save confdefs.h
-@@ -8466,6 +8488,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -8466,6 +8481,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT" && test "$OS_ARCH" != "WINCE"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
