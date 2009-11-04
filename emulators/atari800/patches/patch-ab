@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2006/01/20 07:38:13 adam Exp $
+$NetBSD: patch-ab,v 1.7 2009/11/04 11:44:15 adam Exp $
 
---- atari.c.orig	2005-11-26 21:11:19.000000000 +0100
-+++ atari.c
-@@ -635,7 +635,7 @@ void Atari800_FindROMImages(const char *
+--- cfg.c.orig	2008-12-27 23:04:53.000000000 +0100
++++ cfg.c
+@@ -92,7 +92,7 @@ void CFG_FindROMImages(const char *direc
  #endif
  
  #ifndef SYSTEM_WIDE_CFG_FILE
