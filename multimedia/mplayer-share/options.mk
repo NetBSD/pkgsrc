@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.38 2009/10/20 09:53:28 tnn Exp $
+# $NetBSD: options.mk,v 1.39 2009/11/04 16:00:54 pooka Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -157,10 +157,9 @@ CONFIGURE_ARGS+=	--disable-faac
 .endif
 
 .if empty(PKG_OPTIONS:Mfaad) && empty(PKG_OPTIONS:Mmplayer-internal-faad)
-CONFIGURE_ARGS+=	--disable-faad-external
 CONFIGURE_ARGS+=	--disable-faad-internal
 .elif !empty(PKG_OPTIONS:Mfaad)
-CONFIGURE_ARGS+=	--enable-faad-external
+CONFIGURE_ARGS+=	--enable-faad
 .  include "../../audio/faad2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--enable-faad-internal
