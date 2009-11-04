@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4213 2009/11/04 19:51:11 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4214 2009/11/04 20:09:05 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5617,3 +5617,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/atari800 to 2.1.0 [adam 2009-11-04]
 	Updated meta-pkgs/kde4 to 4.3.3 [wiz 2009-11-04]
 	Added devel/py-dulwich version 0.4.0 [joerg 2009-11-04]
+	Added devel/hg-git version 0.1.0pre416 [joerg 2009-11-04]
