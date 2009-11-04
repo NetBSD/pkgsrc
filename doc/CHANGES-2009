@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4209 2009/11/04 10:08:47 martti Exp $
+$NetBSD: CHANGES-2009,v 1.4210 2009/11/04 11:11:12 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5587,3 +5587,30 @@ Changes to the packages collection and infrastructure in 2009:
 	Added math/openfst version 1.1 [wiz 2009-11-03]
 	Updated chat/weechat to 0.3.0 [tonio 2009-11-03]
 	Updated editors/vim-share to 7.2.284 [martti 2009-11-04]
+	Updated devel/kdesdk4 to 4.3.3 [markd 2009-11-04]
+	Updated games/kdegames4 to 4.3.3 [markd 2009-11-04]
+	Updated games/kdetoys4 to 4.3.3 [markd 2009-11-04]
+	Updated graphics/kdegraphics4 to 4.3.3 [markd 2009-11-04]
+	Updated graphics/oxygen-icons to 4.3.3 [markd 2009-11-04]
+	Updated meta-pkgs/kde4 to 4.3.3 [markd 2009-11-04]
+	Updated misc/kdeaccessibility4 to 4.3.3 [markd 2009-11-04]
+	Updated misc/kdeadmin4 to 4.3.3 [markd 2009-11-04]
+	Updated misc/kdeartwork4 to 4.3.3 [markd 2009-11-04]
+	Updated misc/kdeedu4 to 4.3.3 [markd 2009-11-04]
+	Updated misc/kdepim-runtime4 to 4.3.3 [markd 2009-11-04]
+	Updated misc/kdepim4 to 4.3.3 [markd 2009-11-04]
+	Updated misc/kdepimlibs4 to 4.3.3 [markd 2009-11-04]
+	Updated misc/kdeplasma-addons4 to 4.3.3 [markd 2009-11-04]
+	Updated misc/kdeutils4 to 4.3.3 [markd 2009-11-04]
+	Updated multimedia/kdemultimedia4 to 4.3.3 [markd 2009-11-04]
+	Updated net/kdenetwork4 to 4.3.3 [markd 2009-11-04]
+	Updated www/kdewebdev4 to 4.3.3 [markd 2009-11-04]
+	Updated x11/kde4-l10n-de to 4.3.3 [markd 2009-11-04]
+	Updated x11/kde4-l10n-en_GB to 4.3.3 [markd 2009-11-04]
+	Updated x11/kde4-l10n-nl to 4.3.3 [markd 2009-11-04]
+	Updated x11/kdebase-runtime4 to 4.3.3 [markd 2009-11-04]
+	Updated x11/kdebase-workspace4 to 4.3.3 [markd 2009-11-04]
+	Updated x11/kdebase4 to 4.3.3 [markd 2009-11-04]
+	Updated x11/kdebindings4-python to 4.3.3 [markd 2009-11-04]
+	Updated x11/kdelibs-experimental4 to 4.3.3 [markd 2009-11-04]
+	Updated x11/kdelibs4 to 4.3.3 [markd 2009-11-04]
