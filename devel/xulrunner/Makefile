@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/11/03 22:31:58 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2009/11/04 09:13:05 tnn Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
@@ -49,6 +49,10 @@ INCLUDE_SUBDIRS=\
 	string thebes toolkitcomps uconv uriloader webbrowserpersist	\
 	webbrwsr webshell widget windowwatcher xpcom xpconnect xulapp	\
 	plugin liveconnect
+
+# xxxtnn seamonkey stuff. Don't commit
+# txmgr appcomps appshell alerts rdfutil	\
+#	unicharutil lwbrk editor zipwriter mork
 
 post-install:
 	# XXX fix the pkg-config files instead
