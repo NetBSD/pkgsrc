@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2009/08/06 19:14:52 zafer Exp $
+$NetBSD: patch-aa,v 1.7 2009/11/05 19:16:47 tez Exp $
 
---- src/Makefile.orig	2009-08-06 20:58:11.000000000 +0200
-+++ src/Makefile
-@@ -15,11 +15,11 @@ SED = sed
+--- src/Makefile.orig	2008-07-17 20:28:55.000000000 -0500
++++ src/Makefile	2009-11-05 13:04:49.538488300 -0600
+@@ -15,11 +15,11 @@
  PERL = perl
  NULL = /dev/null
  CPPFLAGS = -E
@@ -18,3 +18,15 @@ $NetBSD: patch-aa,v 1.6 2009/08/06 19:14:52 zafer Exp $
  
  JOHN_OBJS_MINIMAL = \
  	DES_fmt.o DES_std.o DES_bs.o \
+@@ -396,7 +396,10 @@
+ 	$(MAKE) solaris-sparc-any HAMMER=use-solaris-sparcv8-cc
+ 
+ solaris-sparc-gcc:
+-	$(MAKE) solaris-sparc-any HAMMER=use-solaris-sparc-gcc
++	$(LN) sparc32.h arch.h
++	$(MAKE) $(PROJ) \
++		CFLAGS="$(CFLAGS) -m32" \
++		LDFLAGS="$(LDFLAGS) -m32 -lrt"
+ 
+ use-solaris-sparcv9-cc:
+ 	$(MAKE) $(NAIL) \
