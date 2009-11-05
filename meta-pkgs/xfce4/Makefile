@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/09/16 01:15:33 reed Exp $
+# $NetBSD: Makefile,v 1.39 2009/11/05 20:15:40 reinoud Exp $
 
 META_PACKAGE=	yes
 
@@ -14,6 +14,8 @@ COMMENT=	Xfce
 .include "../../graphics/xfce4-icon-theme/buildlink3.mk"
 .include "../../print/xfce4-print/buildlink3.mk"
 .include "../../sysutils/xfce4-appfinder/buildlink3.mk"
+.include "../../sysutils/xfce4-thunar/buildlink3.mk"
+.include "../../sysutils/xfce4-volman/buildlink3.mk"
 .include "../../sysutils/xfce4-xarchiver/buildlink3.mk"
 .include "../../time/xfce4-orage/buildlink3.mk"
 .include "../../wm/xfce4-wm-themes/buildlink3.mk"
