@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4214 2009/11/04 20:09:05 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4215 2009/11/05 08:37:28 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5618,3 +5618,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated meta-pkgs/kde4 to 4.3.3 [wiz 2009-11-04]
 	Added devel/py-dulwich version 0.4.0 [joerg 2009-11-04]
 	Added devel/hg-git version 0.1.0pre416 [joerg 2009-11-04]
+	Updated misc/rump to 20091103 [stacktic 2009-11-05]
