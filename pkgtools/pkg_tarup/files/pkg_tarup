@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.22 2008/02/12 15:03:29 rillig Exp $
+# $Id: pkg_tarup,v 1.23 2009/11/05 16:22:47 joerg Exp $
 #
 # Tar up installed package
 #
@@ -129,7 +129,6 @@ create_package()
 	PKG_ARGS="${PKG_ARGS} -f \"${PLIST}\""
 	PKG_ARGS="${PKG_ARGS} -l"
 	PKG_ARGS="${PKG_ARGS} -p \"${PKG_PREFIX}\""
-	PKG_ARGS="${PKG_ARGS} -L \"${PKG_PREFIX}\""
 	PKG_ARGS="${PKG_ARGS} -I \"${PKG_PREFIX}\""
 	PKG_ARGS="${PKG_ARGS} \"${PKGREPOSITORY}/${PKG}${PKG_SUFX}\""
 	if [ -f "${PKG_DBDIR}/${PKG}/+VIEWS" ]
