@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2009/11/02 18:54:28 stacktic Exp $
+# $NetBSD: Makefile,v 1.9 2009/11/05 08:36:00 stacktic Exp $
 #
 
-DISTNAME=		rump_20091102
+DISTNAME=		rump_20091103
 PKGNAME=		${DISTNAME:S/_/-/}
 
 CATEGORIES=		misc
@@ -13,30 +13,15 @@ COMMENT=		Virtualized NetBSD kernel components in userspace
 
 ONLY_FOR_PLATFORM=	Linux-*-* FreeBSD-*-*
 
-INSTALLATION_DIRS=	lib include/rump
+INSTALLATION_DIRS=	lib include/rump ${PKGMANDIR}/man3
 
-CHECK_PORTABILITY=	no
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_BSD_MAKEFILE=	yes
 
 WRKSRC=			${WRKDIR}/rump
 
-MAKEFLAGS+=		MKMAN=no
-
-MAKEFLAGS+=		TOOLDIR=${WRKSRC}/tooldir
 MAKEFLAGS+=		MACHINE_ARCH=${MACHINE_ARCH}
 MAKEFLAGS+=		BSDSRCDIR=${WRKSRC}
-
-MAKEFLAGS+=		INSTALL=${WRKSRC}/tools/binstall/xinstall
-MAKEFLAGS+=		TSORT="${WRKSRC}/tools/tsort/tsort -q"
-MAKEFLAGS+=		LORDER=${WRKSRC}/tools/lorder/lorder
-
-SUBST_CLASSES+=		inc_path
-SUBST_STAGE.inc_path=	pre-configure
-SUBST_MESSAGE.inc_path=	Adjusting include path.
-SUBST_FILES.inc_path=	lib/libukfs/Makefile
-SUBST_FILES.inc_path+=	sys/rump/include/rump/Makefile
-SUBST_SED.inc_path=	-e "s|/usr/include|${PREFIX}/include|g"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,8 +35,9 @@ MAKEFLAGS+=		_GCC_CRTEND=${CRT_PATH:C/begin/end/}
 MAKEFLAGS+=		_GCC_CRTENDS=${CRT_PATH:C/begin/endS/}
 .endif
 
-RUMP_INCS=		rump.h rump_compat.h rump_namei.h rump_syscalls.h 
+RUMP_INCS=		rump.h rump_compat.h rump_namei.h rump_syscalls.h
 RUMP_INCS+=		rumpdefs.h rumpuser.h rumpvnode_if.h
+RUMP_INCS+=		rumpkern_if_pub.h rumpvfs_if_pub.h
 
 post-install:
 .for i in ${RUMP_INCS}
