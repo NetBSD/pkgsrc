@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1251 2009/11/04 20:08:25 joerg Exp $
+# $NetBSD: Makefile,v 1.1252 2009/11/05 08:21:40 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -232,8 +232,8 @@ SUBDIR+=	guile16-gtk
 SUBDIR+=	haskell-mode
 SUBDIR+=	hdf
 SUBDIR+=	hdf5
-SUBDIR+=	hoe
 SUBDIR+=	hg-git
+SUBDIR+=	hoe
 SUBDIR+=	hptools
 SUBDIR+=	ht
 SUBDIR+=	hugs-HUnit
