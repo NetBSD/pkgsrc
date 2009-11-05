@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4220 2009/11/05 19:51:52 reinoud Exp $
+$NetBSD: CHANGES-2009,v 1.4221 2009/11/05 20:17:11 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5624,4 +5624,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/nsd to 3.2.3 [joerg 2009-11-05]
 	Updated textproc/mdocml to 1.9.13 [joerg 2009-11-05]
 	Updated sysutils/rox to 2.10 [reinoud 2009-11-05]
+	Updated sysutils/xfce4-volman to 0.2.0nb2 [reinoud 2009-11-05]
 
