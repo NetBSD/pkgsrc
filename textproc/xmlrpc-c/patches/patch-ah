@@ -1,12 +1,24 @@
-$NetBSD: patch-ah,v 1.1 2009/10/27 18:50:39 drochner Exp $
+$NetBSD: patch-ah,v 1.2 2009/11/05 21:04:54 joerg Exp $
 
---- src/Makefile.orig	2009-01-09 21:33:17.000000000 +0100
+--- src/Makefile.orig	2009-11-02 13:47:29.000000000 +0100
 +++ src/Makefile
-@@ -51,6 +51,7 @@ ifeq ($(ENABLE_LIBXML2_BACKEND),yes)
-   LIBXML_LIBS = $(shell xml2-config --libs)
- else
-   LIBXML_INCLUDES = -I$(SRCDIR)/lib/expat/xmlparse
-+  LIBXML_LIBS = ../lib/expat/xmlparse/libxmlrpc_xmlparse.la
- endif
+@@ -7,8 +7,8 @@ VPATH = .:$(SRCDIR)
  
- ABYSS_INCLUDES = -I$(SRCDIR)/lib/abyss/src
+ include $(BUILDDIR)/Makefile.config
+ 
+-ABYSS_LIBDIR = $(BUILDDIR)/lib/abyss/src/.libs
+-LIBUTIL_LIBDIR = $(BUILDDIR)/lib/libutil/.libs
++ABYSS_LIBDIR = $(BUILDDIR)/lib/abyss/src
++LIBUTIL_LIBDIR = $(BUILDDIR)/lib/libutil
+ 
+ default: all
+ 
+@@ -134,7 +134,7 @@ all: $(TARGET_LTLIBRARIES) $(SUBDIRS:%=%
+ 
+ LDFLAGS = $(LADD)
+ 
+-LIBPATHS = -L.libs -L$(LIBUTIL_LIBDIR)
++LIBPATHS = -L$(LIBUTIL_LIBDIR)
+ 
+ LIBLDFLAGS = $(LDFLAGS_VERSINFO) -rpath $(LIBINST_DIR) $(LIBPATHS) $(LADD)
+ 
