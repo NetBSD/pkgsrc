@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/08/26 19:57:15 sno Exp $
+# $NetBSD: Makefile,v 1.35 2009/11/05 21:36:49 joerg Exp $
 #
 
 DISTNAME=	kmess-1.4.3
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+
+MAKE_FLAGS+=		KPHONEDIR=${PREFIX}/include
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
