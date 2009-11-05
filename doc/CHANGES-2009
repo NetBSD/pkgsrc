@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4221 2009/11/05 20:17:11 reinoud Exp $
+$NetBSD: CHANGES-2009,v 1.4222 2009/11/05 20:37:23 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5585,6 +5585,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/python26 to 2.6.4 [wiz 2009-11-03]
 	Updated security/mozilla-rootcerts to 1.0.20090831 [wiz 2009-11-03]
 	Added math/openfst version 1.1 [wiz 2009-11-03]
+	Updated misc/esniper to 2.21.0 [heinz 2009-11-03]
 	Updated chat/weechat to 0.3.0 [tonio 2009-11-03]
 	Updated editors/vim-share to 7.2.284 [martti 2009-11-04]
 	Updated devel/kdesdk4 to 4.3.3 [markd 2009-11-04]
@@ -5623,6 +5624,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/pkg_tarup to 1.8 [joerg 2009-11-05]
 	Updated net/nsd to 3.2.3 [joerg 2009-11-05]
 	Updated textproc/mdocml to 1.9.13 [joerg 2009-11-05]
+	Updated textproc/p5-Pod-Simple to 3.09 [heinz 2009-11-05]
 	Updated sysutils/rox to 2.10 [reinoud 2009-11-05]
+	Updated mail/p5-razor-agents to 2.85 [heinz 2009-11-05]
 	Updated sysutils/xfce4-volman to 0.2.0nb2 [reinoud 2009-11-05]
-
