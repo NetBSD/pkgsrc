@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/21 14:40:07 stacktic Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/05 08:36:00 stacktic Exp $
 include/rump/rump.h
 include/rump/rump_compat.h
 include/rump/rump_namei.h
 include/rump/rump_syscalls.h
 include/rump/rumpdefs.h
+include/rump/rumpkern_if_pub.h
 include/rump/rumpuser.h
+include/rump/rumpvfs_if_pub.h
 include/rump/rumpvnode_if.h
 include/rump/ukfs.h
 lib/librump.a
@@ -127,3 +129,4 @@ lib/libukfs.so.1
 lib/libukfs.so.1.0
 lib/libukfs_p.a
 lib/libukfs_pic.a
+man/man3/ukfs.3
