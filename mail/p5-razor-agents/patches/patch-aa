@@ -1,12 +1,16 @@
-$NetBSD: patch-aa,v 1.7 2007/04/12 20:23:30 heinz Exp $
+$NetBSD: patch-aa,v 1.8 2009/11/05 20:03:53 heinz Exp $
 
---- Makefile.PL.orig	2006-02-27 23:16:08.000000000 +0100
+  Do not hardcode share/man as the subdirectory for man pages.
+  Submitted upstream as
+    http://sourceforge.net/tracker/index.php?func=detail&aid=2026068&group_id=3978&atid=103978
+
+--- Makefile.PL.orig	2007-05-09 00:47:53.000000000 +0200
 +++ Makefile.PL
-@@ -53,13 +53,14 @@ sub constants {
+@@ -54,13 +54,14 @@ sub constants {
      my $man5 = sprintf <<'MAKE', $prefix;
  
  # begin razor-agents
-+MANSUBDIR ?= share/man
++MANSUBDIR = share/man
  MAN5PODS = docs/razor-agent.conf.pod \
  	   docs/razor-whitelist.pod  \
  	   docs/razor-agents.pod
