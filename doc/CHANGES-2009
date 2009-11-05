@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4218 2009/11/05 18:18:10 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4219 2009/11/05 18:29:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5622,3 +5622,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/acroread8 to 8.1.7 [tez 2009-11-05]
 	Updated pkgtools/pkg_tarup to 1.8 [joerg 2009-11-05]
 	Updated net/nsd to 3.2.3 [joerg 2009-11-05]
+	Updated textproc/mdocml to 1.9.13 [joerg 2009-11-05]
