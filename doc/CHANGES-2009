@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4219 2009/11/05 18:29:35 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4220 2009/11/05 19:51:52 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5623,3 +5623,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/pkg_tarup to 1.8 [joerg 2009-11-05]
 	Updated net/nsd to 3.2.3 [joerg 2009-11-05]
 	Updated textproc/mdocml to 1.9.13 [joerg 2009-11-05]
+	Updated sysutils/rox to 2.10 [reinoud 2009-11-05]
+

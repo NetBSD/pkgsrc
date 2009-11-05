@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.5 2009/11/05 19:50:54 reinoud Exp $
+
+--- ROX-Filer/src/pixmaps.c.orig	2009-07-18 16:23:18.000000000 +0200
++++ ROX-Filer/src/pixmaps.c
+@@ -432,7 +432,7 @@ static void save_thumbnail(const char *p
+ 
+ 	swidth = g_strdup_printf("%d", original_width);
+ 	sheight = g_strdup_printf("%d", original_height);
+-	ssize = g_strdup_printf("%" SIZE_FMT, info.st_size);
++	ssize = g_strdup_printf("%" SIZE_FMT, (intmax_t) info.st_size);
+ 	smtime = g_strdup_printf("%ld", (long) info.st_mtime);
+ 
+ 	path = pathdup(pathname);
