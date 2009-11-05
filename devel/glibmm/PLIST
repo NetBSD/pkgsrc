@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/10/16 10:45:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/11/05 13:01:37 tnn Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/appinfo.h
 include/giomm-2.4/giomm/asyncresult.h
@@ -355,9 +355,11 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1Checksum-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Checksum.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Cond-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Cond.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Container__Helpers_1_1ArrayHandleIterator-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Container__Helpers_1_1ArrayHandleIterator.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Container__Helpers_1_1ListHandleIterator-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Container__Helpers_1_1ListHandleIterator.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Container__Helpers_1_1SListHandleIterator-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Container__Helpers_1_1SListHandleIterator.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ConvertError-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ConvertError.html
@@ -628,6 +630,7 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01unsigned_01long_01_4.
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01unsigned_01long_01_4__coll__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01unsigned_01long_01long_01_4-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01unsigned_01long_01long_01_4.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01unsigned_01long_01long_01_4__coll__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01void_01_5_01_4-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01void_01_5_01_4.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value_3_01void_01_5_01_4__coll__graph.png
@@ -876,6 +879,12 @@ share/doc/glibmm-2.4/reference/html/since_2_22.html
 share/doc/glibmm-2.4/reference/html/since_2_6.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits-members.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits.html
+share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Drive_01_4_01_4-members.html
+share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Drive_01_4_01_4.html
+share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Mount_01_4_01_4-members.html
+share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Mount_01_4_01_4.html
+share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Volume_01_4_01_4-members.html
+share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Volume_01_4_01_4.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1StaticMutex-members.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1StaticMutex.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1StaticPrivate-members.html
