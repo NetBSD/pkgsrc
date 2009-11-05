@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4216 2009/11/05 15:01:14 tez Exp $
+$NetBSD: CHANGES-2009,v 1.4217 2009/11/05 18:17:31 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5620,3 +5620,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/hg-git version 0.1.0pre416 [joerg 2009-11-04]
 	Updated misc/rump to 20091103 [stacktic 2009-11-05]
 	Updated print/acroread8 to 8.1.7 [tez 2009-11-05]
+	Updated pkgtools/pkg_tarup to 1.8 [joerg 2009-11-05]
