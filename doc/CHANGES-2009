@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4222 2009/11/05 20:37:23 heinz Exp $
+$NetBSD: CHANGES-2009,v 1.4223 2009/11/05 22:40:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5628,3 +5628,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/rox to 2.10 [reinoud 2009-11-05]
 	Updated mail/p5-razor-agents to 2.85 [heinz 2009-11-05]
 	Updated sysutils/xfce4-volman to 0.2.0nb2 [reinoud 2009-11-05]
+	Added textproc/p5-XML-Parser-Lite-Tree version 0.12 [wiz 2009-11-05]
