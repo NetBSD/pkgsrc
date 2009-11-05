@@ -1,0 +1,5 @@
+"Image::BMP" objects can parse and even ASCII view bitmaps of the
+.BMP format.  It can read most of the common forms of this format.
+
+It can be used to get image info, view images, read images and get
+pixel info.
