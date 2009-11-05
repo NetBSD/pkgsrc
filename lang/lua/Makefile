@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/07/10 20:30:21 minskim Exp $
+# $NetBSD: Makefile,v 1.44 2009/11/05 18:03:49 joerg Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGREVISION=	2
@@ -30,6 +30,8 @@ USE_TOOLS+=	gmake
 MAKE_ENV+=	DLLIB=${BUILDLINK_LDADD.dl:Q}
 MAKE_ENV+=	INSTALL_DATA=${INSTALL_DATA:Q}
 CFLAGS+=	-DLUA_ROOT=\"${PREFIX}/\"
+
+MAKE_FLAGS+=	CC=cc
 
 DOCDIR=		${PREFIX}/share/doc/lua
 EGDIR=		${PREFIX}/share/examples/lua
