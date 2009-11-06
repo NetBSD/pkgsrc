@@ -1,19 +1,14 @@
-# $NetBSD: Makefile,v 1.28 2009/11/04 09:48:10 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2009/11/06 15:44:34 tnn Exp $
 #
 
-DISTNAME=	firefox-${FIREFOX_VER}.source
+.include "dist.mk"
 PKGNAME=	${DISTNAME:S/firefox/xulrunner/:S/3.5/1.9.1/:S/.source//}
-PKGREVISION=	1
-FIREFOX_VER=	3.5.4
 CATEGORIES=	devel www
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://developer.mozilla.org/en/docs/XULRunner
 COMMENT=	XML User Interface Language runtime environment
 
-WRKSRC=		${WRKDIR}/mozilla-1.9.1
 MOZILLA_DIR=	# empty
 
 PKGCONFIG_OVERRIDE+=	xulrunner/installer/libxul-embedding-unstable.pc.in
