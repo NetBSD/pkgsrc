@@ -1,5 +1,5 @@
-  gEDA is a meta package comprising a collection of tools which are
+geda is a suite of Electronic Design Automation (EDA) tools
 used to make electrical circuit design, simulation and prototyping/
-production easier/doable.  gEDA is a project, which was started
-because of the lack of free EDA tools for UNIX.  All of the tools
-in gEDA are released under the GNU Public License version 2 (GPL).
+production easier/doable.  The suite includes the gschem schematic
+capture program, the gnetlist netlister, the gattrib attribute editor
+along with several other utility programs.
