@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2009/11/05 08:36:00 stacktic Exp $
+# $NetBSD: Makefile,v 1.10 2009/11/06 13:50:53 stacktic Exp $
 #
 
 DISTNAME=		rump_20091103
 PKGNAME=		${DISTNAME:S/_/-/}
+PKGREVISION=		1
 
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/stacktic/
@@ -22,6 +23,12 @@ WRKSRC=			${WRKDIR}/rump
 
 MAKEFLAGS+=		MACHINE_ARCH=${MACHINE_ARCH}
 MAKEFLAGS+=		BSDSRCDIR=${WRKSRC}
+
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_MESSAGE.path=	Adjusting path.
+SUBST_FILES.path=	sys/rump/include/rump/rump.h
+SUBST_SED.path=		-e 's|\#include.*\<rump/rumpnet_if_pub.h\>||g'
 
 .include "../../mk/bsd.prefs.mk"
 
