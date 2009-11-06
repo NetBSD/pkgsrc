@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4227 2009/11/06 16:00:38 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.4228 2009/11/06 22:38:04 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5634,3 +5634,13 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Declare to 0.32 [seb 2009-11-06]
 	Updated devel/xulrunner to 1.9.1.5 [tnn 2009-11-06]
 	Updated www/firefox to 3.5.5 [tnn 2009-11-06]
+	Removed cad/libgeda [dmcmahill 2009-11-06]
+	Removed cad/gattrib [dmcmahill 2009-11-06]
+	Removed cad/gschem [dmcmahill 2009-11-06]
+	Removed cad/gnetlist [dmcmahill 2009-11-06]
+	Removed cad/gsymcheck [dmcmahill 2009-11-06]
+	Removed cad/geda-utils [dmcmahill 2009-11-06]
+	Removed cad/geda-symbols [dmcmahill 2009-11-06]
+	Removed cad/geda-docs [dmcmahill 2009-11-06]
+	Removed cad/geda-examples [dmcmahill 2009-11-06]
+	Updated cad/geda to 1.6.0 [dmcmahill 2009-11-06]
