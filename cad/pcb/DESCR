@@ -1,4 +1,3 @@
-Pcb - X11 interactive printed circuit board layout system.
-
-Pcb is a handy tool for	the X Window System to design printed
-circuit	boards.  All coordinate units are 1/1000 inch.
+pcb is a printed circuit board layout too.  It includes connectivity driven
+layout (rat lines), a layout versus netlist check, design rule checker as well
+as industry standard RS274-X (Gerber) photoplot export.

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2009/08/26 19:57:14 sno Exp $
+# $NetBSD: Makefile,v 1.47 2009/11/06 02:29:59 dmcmahill Exp $
 #
 
-DISTNAME=	pcb-20081128
-PKGREVISION=	2
+DISTNAME=	pcb-20091103
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 
@@ -46,7 +45,6 @@ PKG_SUGGESTED_OPTIONS=		gtk png
 .include "../../mk/motif.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gui=lesstif
 .elif !empty(PKG_OPTIONS:Mgtk)
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gui=gtk
 .elif !empty(PKG_OPTIONS:Mbatch)
@@ -72,6 +70,8 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/share/pcb/tools/PCB2HPGL
 	${RM} ${DESTDIR}${PREFIX}/share/pcb/tools/tgo2pcb.tcl
 
+# NOTE:  glib is needed by the core of pcb and not just the GTK gui.
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
