@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.5 2009/11/06 07:54:07 spz Exp $
+
+--- khashmir/test_krpc.py.orig	2006-01-31 20:16:51.000000000 +0000
++++ khashmir/test_krpc.py
+@@ -44,20 +44,20 @@ class KRPCTests(TestCase):
+         self.r = RawServer(Event(), d)
+ 
+         addr = ('127.0.0.1', 1180)
+-        self.as = self.r.create_udpsocket(addr[1], addr[0], True)
++        self.asock = self.r.create_udpsocket(addr[1], addr[0], True)
+         self.af = Receiver(addr)
+-        self.a = hostbroker(self.af, addr, self.as, self.r.add_task)
+-        self.r.start_listening_udp(self.as, self.a)
++        self.a = hostbroker(self.af, addr, self.asock, self.r.add_task)
++        self.r.start_listening_udp(self.asock, self.a)
+ 
+         addr = ('127.0.0.1', 1181)
+-        self.bs = self.r.create_udpsocket(addr[1], addr[0], True)
++        self.bsock = self.r.create_udpsocket(addr[1], addr[0], True)
+         self.bf = Receiver(addr)
+-        self.b = hostbroker(self.bf, addr, self.bs, self.r.add_task)
+-        self.r.start_listening_udp(self.bs, self.b)
++        self.b = hostbroker(self.bf, addr, self.bsock, self.r.add_task)
++        self.r.start_listening_udp(self.bsock, self.b)
+         
+     def tearDown(self):
+-        self.as.close()
+-        self.bs.close()
++        self.asock.close()
++        self.bsock.close()
+ 
+     def testSimpleMessage(self):
+         self.noisy = 0
