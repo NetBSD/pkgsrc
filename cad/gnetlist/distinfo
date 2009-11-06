@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.26 2009/02/01 05:20:01 dmcmahill Exp $
-
-SHA1 (geda/geda-gnetlist-1.4.3.tar.gz) = 8d44d7af1875e1d1a07b6e6f7b7fb8f3dc061283
-RMD160 (geda/geda-gnetlist-1.4.3.tar.gz) = e447bec38d1bcbdda5035510ad181f261bc55a44
-Size (geda/geda-gnetlist-1.4.3.tar.gz) = 408292 bytes
