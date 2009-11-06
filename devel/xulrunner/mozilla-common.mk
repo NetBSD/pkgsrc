@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.3 2009/11/03 22:31:58 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.4 2009/11/06 15:44:34 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 1.9.1.
 
@@ -55,6 +55,12 @@ create-rm-wrapper:
 	chmod +x ${WRAPPER_DIR}/bin/rm
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# The configure test for __thread succeeds, but later we end up with:
+# dist/bin/libxul.so: undefined reference to `__tls_get_addr'
+CONFIGURE_ENV+=	ac_cv_thread_keyword=no
+.endif
 
 .if ${OPSYS} == "Linux"
 .include "../../audio/alsa-lib/buildlink3.mk"
