@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2006/12/07 11:24:28 markd Exp $
+# $NetBSD: Makefile,v 1.20 2009/11/07 18:03:55 asau Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-f77-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - F77 compiler
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INFO_FILES=	# PLIST
 
@@ -24,15 +26,16 @@ post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${GCC_ARCHDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/gcc/f771 ${GCC_ARCHDIR}
-	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} \
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${GCC_ARCHDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/gcc/f771 ${DESTDIR}${GCC_ARCHDIR}
+	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} DESTDIR=${DESTDIR} \
 		f77.install-common f77.install-info f77.install-man
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} DESTDIR=${DESTDIR} \
 		install-target-libf2c
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${GCC_PREFIX}/mk/f77.mk
+	${INSTALL_DATA_DIR} ${DESTDIR}${GCC_PREFIX}/mk
+	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${DESTDIR}${GCC_PREFIX}/mk/f77.mk
 #	${LN} -f ${GCC_PREFIX}/bin/g77 ${GCC_PREFIX}/bin/f77
 
 .include "../../mk/bsd.pkg.mk"
