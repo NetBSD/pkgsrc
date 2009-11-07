@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/07 14:48:49 tnn Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -365,7 +365,7 @@ java/openjdk7/jre/lib/${ARCH}/libnpt.so
 java/openjdk7/jre/lib/${ARCH}/librmi.so
 java/openjdk7/jre/lib/${ARCH}/libsaproc.so
 java/openjdk7/jre/lib/${ARCH}/libsplashscreen.so
-java/openjdk7/jre/lib/${ARCH}/libsunecc.so
+java/openjdk7/jre/lib/${ARCH}/libsunec.so
 java/openjdk7/jre/lib/${ARCH}/libunpack.so
 java/openjdk7/jre/lib/${ARCH}/libverify.so
 java/openjdk7/jre/lib/${ARCH}/libzip.so
