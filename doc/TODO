@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8632 2009/11/07 15:34:19 wiz Exp $
+$NetBSD: TODO,v 1.8633 2009/11/07 17:27:25 hasso Exp $
 
 Suggested new packages
 ======================
@@ -1377,7 +1377,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tkgate-1.8.7
 	o tkhylafax-3.2
 	o tkpasman-2.2b
-	o tmux-1.1
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.0.0 [GNOME 2.28]

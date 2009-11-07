@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4233 2009/11/07 14:50:38 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.4234 2009/11/07 17:27:25 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5650,3 +5650,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/epubcheck to 1.0.4 [wiz 2009-11-07]
 	Updated lang/openjdk7 to 1.7.0.75.20091106 [tnn 2009-11-07]
 	Updated www/openjdk7-icedtea-plugin to 1.11.0.20091106 [tnn 2009-11-07]
+	Updated misc/tmux to 1.1 [hasso 2009-11-07]
