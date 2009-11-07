@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/07 08:49:37 wiz Exp $
+bin/html2mobi
+bin/lit2mobi
+bin/mobi2html
+bin/mobi2mobi
+bin/mobils
+bin/opf2mobi
+${PERL5_SUB_INSTALLVENDORLIB}/MobiPerl/Config.pm
+${PERL5_SUB_INSTALLVENDORLIB}/MobiPerl/EXTH.pm
+${PERL5_SUB_INSTALLVENDORLIB}/MobiPerl/LinksInfo.pm
+${PERL5_SUB_INSTALLVENDORLIB}/MobiPerl/MobiFile.pm
+${PERL5_SUB_INSTALLVENDORLIB}/MobiPerl/MobiHeader.pm
+${PERL5_SUB_INSTALLVENDORLIB}/MobiPerl/Opf.pm
+${PERL5_SUB_INSTALLVENDORLIB}/MobiPerl/Util.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Palm/Doc.pm
+man/man1/html2mobi.1
+man/man1/lit2mobi.1
+man/man1/mobi2html.1
+man/man1/mobi2mobi.1
+man/man1/mobils.1
+man/man1/opf2mobi.1
