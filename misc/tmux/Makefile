@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/09/21 10:55:35 hasso Exp $
+# $NetBSD: Makefile,v 1.7 2009/11/07 17:25:08 hasso Exp $
 
-DISTNAME=	tmux-1.0
+DISTNAME=	tmux-1.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tmux/}
 
