@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4230 2009/11/07 08:50:11 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4231 2009/11/07 09:05:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5646,3 +5646,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated cad/geda to 1.6.0 [dmcmahill 2009-11-06]
 	Updated devel/apache-maven to 2.2.1 [yyamano 2009-11-06]
 	Added textproc/p5-mobiperl version 0.0.43 [wiz 2009-11-07]
+	Added textproc/epubpreflight version 0.1.0 [wiz 2009-11-07]
