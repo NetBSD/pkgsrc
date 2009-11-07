@@ -1,12 +1,12 @@
-# $NetBSD: icedtea-extras.mk,v 1.2 2009/10/14 16:50:29 tnn Exp $
+# $NetBSD: icedtea-extras.mk,v 1.3 2009/11/07 14:48:49 tnn Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			gtar
 
 DIST_SUBDIR=			openjdk7
 
-ICEDTEA=			icedtea-175529fae103
-ICEDTEA_TGZ=			175529fae103.tar.bz2
+ICEDTEA=			icedtea-9eb43c172d5b
+ICEDTEA_TGZ=			9eb43c172d5b.tar.bz2
 SITES.${ICEDTEA_TGZ}=		http://icedtea.classpath.org/hg/icedtea/archive/
 DISTFILES+=			${ICEDTEA_TGZ}
 EXTRACT_ONLY+=			${ICEDTEA_TGZ}
@@ -44,6 +44,7 @@ CONFIGURE_ARGS+=	--with-jdk-home=${PREFIX}/java/openjdk7
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=	gawk pkg-config autoconf automake
+BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 CONFIGURE_ENV+=	ac_cv_path_MD5SUM=/usr/bin/true
 CONFIGURE_ENV+=	ac_cv_path_WGET=/usr/bin/true
 

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-aa,v 1.3 2009/11/07 14:48:50 tnn Exp $
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2009-10-17 16:49:37.000000000 +0200
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2009-11-07 14:25:33.000000000 +0100
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
 @@ -63,7 +63,7 @@
  # include <link.h>
@@ -11,17 +11,17 @@ $NetBSD: patch-aa,v 1.2 2009/10/18 10:21:01 tnn Exp $
  # include <elf.h>
  #endif
  
-@@ -2013,6 +2013,9 @@ bool _print_ascii_file(const char* filen
-   return true;
- }
- 
-+#if defined(__NetBSD__) && defined(RTLD_DI_LINKMAP)
-+typedef struct link_map Link_map;
+@@ -1921,7 +1921,9 @@ void * os::dll_load(const char *filename
+     {EM_PPC,         EM_PPC,     ELFCLASS32, ELFDATA2MSB, (char*)"Power PC 32"},
+     {EM_PPC64,       EM_PPC64,   ELFCLASS64, ELFDATA2MSB, (char*)"Power PC 64"},
+     {EM_ARM,         EM_ARM,     ELFCLASS32,   ELFDATA2LSB, (char*)"ARM"},
++#if 0
+     {EM_S390,        EM_S390,    ELFCLASSNONE, ELFDATA2MSB, (char*)"IBM System/390"},
 +#endif
- void os::print_dll_info(outputStream *st) {
-    st->print_cr("Dynamic libraries:");
- #ifdef _ALLBSD_SOURCE
-@@ -3251,7 +3254,7 @@ OSReturn os::set_native_priority(Thread*
+     {EM_ALPHA,       EM_ALPHA,   ELFCLASS64, ELFDATA2LSB, (char*)"Alpha"},
+     {EM_MIPS_RS3_LE, EM_MIPS_RS3_LE, ELFCLASS32, ELFDATA2LSB, (char*)"MIPSel"},
+     {EM_MIPS,        EM_MIPS,    ELFCLASS32, ELFDATA2MSB, (char*)"MIPS"},
+@@ -3278,7 +3280,7 @@ OSReturn os::set_native_priority(Thread*
  #ifdef __OpenBSD__
    // OpenBSD pthread_setprio starves low priority threads
    return OS_OK;
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.2 2009/10/18 10:21:01 tnn Exp $
    int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
  #elif defined(__APPLE__) || defined(__NetBSD__)
    struct sched_param sp;
-@@ -3279,7 +3282,7 @@ OSReturn os::get_native_priority(const T
+@@ -3306,7 +3308,7 @@ OSReturn os::get_native_priority(const T
    }
  
    errno = 0;
