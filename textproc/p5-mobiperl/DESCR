@@ -1,0 +1,17 @@
+MobiPerl is a collection of tools for generating and manipulating
+MobiPocket files written in Perl.
+
+MobiPerl currently consists of the following Perl programs:
+
+* html2mobi - Convert HTML file to a MobiPocket file.
+* opf2mobi - Convert an opf file structure to a MobiPocket file.
+* lit2mobi - Convert a lit file to a MobiPocket file.
+* mobi2html - Explode a DRM free MobiPocket file.
+* mobi2mobi - Manipulate meta data for a MobiPocket file.
+* mobils - An "ls" program for MobiPocket files.
+
+Since no official documentation for the MobiPocket is available
+there might be some mistakes in the generation of the MobiPocket
+files. It seems to work but there might be remaining bugs. So always
+keep your original files so you can repeat the conversion if
+necessary.
