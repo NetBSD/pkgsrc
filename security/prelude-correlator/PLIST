@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/02 10:15:10 hasso Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/11/07 18:30:29 hasso Exp $
 bin/prelude-correlator
 sbin/run-prelude-correlator
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -49,6 +49,9 @@ ${PYSITELIB}/PreludeCorrelator/plugins/opensshauth.pyo
 ${PYSITELIB}/PreludeCorrelator/plugins/scan.py
 ${PYSITELIB}/PreludeCorrelator/plugins/scan.pyc
 ${PYSITELIB}/PreludeCorrelator/plugins/scan.pyo
+${PYSITELIB}/PreludeCorrelator/plugins/spamhausdrop.py
+${PYSITELIB}/PreludeCorrelator/plugins/spamhausdrop.pyc
+${PYSITELIB}/PreludeCorrelator/plugins/spamhausdrop.pyo
 ${PYSITELIB}/PreludeCorrelator/plugins/worm.py
 ${PYSITELIB}/PreludeCorrelator/plugins/worm.pyc
 ${PYSITELIB}/PreludeCorrelator/plugins/worm.pyo
