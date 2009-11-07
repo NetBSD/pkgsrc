@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/10/24 13:11:01 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2009/11/07 14:48:49 tnn Exp $
 
-DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
-PKGNAME=	openjdk7-1.7.0.72.20090924
-PKGREVISION=	1
+DISTNAME=	openjdk-7-ea-src-b75-30_oct_2009
+PKGNAME=	openjdk7-1.7.0.75.20091106
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +17,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 # diff between distfile and bsd-port branch. To check out, use:
 # "hg fclone http://hg.openjdk.java.net/bsd-port/bsd-port/"
-PATCHFILES+=	jdk-7-bsd-port-72.20090924.diff.bz2
+PATCHFILES+=	jdk-7-bsd-port-75.20091106.diff.bz2
 PATCH_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}
 
 CACERTS=	cacerts-20091013.tar.bz2
