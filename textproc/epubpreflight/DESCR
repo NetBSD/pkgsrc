@@ -1,0 +1,12 @@
+epubpreflight is a tool for checking ePub files. It does not do
+validation, that is the role of the epubcheck tool. The epubpreflight
+tool is intended to check the things that are not mentioned in the
+EPUB spec, but that could be issues in one environment or another.
+
+The things that epubpreflight currently gives errors for are:
+* Content files that are empty.
+* Content files that are over 300KB.
+* Image files that are empty.
+* Image files that are over 10MB.
+
+It doesn't yet check the stylesheets.

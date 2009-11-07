@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/07 09:04:19 wiz Exp $
+bin/epubpreflight
+libexec/epubpreflight/${PKGNAME}.jar
+libexec/epubpreflight/lib/saxon.jar
+share/doc/epubpreflight/COPYING.txt
+share/doc/epubpreflight/README.txt
+share/doc/epubpreflight/jing_license.txt
