@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4246 2009/11/08 22:09:45 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4247 2009/11/08 22:40:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5662,3 +5662,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/startup-notification to 0.10 [jakllsch 2009-11-08]
 	Updated misc/rump to 20091108 [stacktic 2009-11-08]
 	Updated devel/p5-MooseX-SimpleConfig to 0.04 [seb 2009-11-08]
+	Updated devel/p5-Devel-PartialDump to 0.12 [seb 2009-11-08]
