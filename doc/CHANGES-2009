@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4238 2009/11/08 15:14:39 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4239 2009/11/08 16:37:45 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5655,3 +5655,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added misc/JBidwatcher version 2.1pre4 [wiz 2009-11-08]
 	Updated www/libwww to 5.4.0nb7 [obache 2009-11-08]
 	Updated devel/p5-Module-CoreList to 2.22 [seb 2009-11-08]
+	Updated devel/p5-MooseX-Getopt to 0.24 [seb 2009-11-08]
