@@ -1,0 +1,16 @@
+$NetBSD: patch-ak,v 1.1 2009/11/08 00:22:07 tnn Exp $
+
+--- jdk/src/solaris/classes/sun/awt/X11FontManager.java.orig	2009-11-08 01:12:18.000000000 +0100
++++ jdk/src/solaris/classes/sun/awt/X11FontManager.java
+@@ -790,6 +790,11 @@ public class X11FontManager extends SunF
+         getFontConfigManager().initFontConfigFonts(false);
+         FontConfigManager.FcCompFont[] fontConfigFonts =
+             getFontConfigManager().getFontConfigFonts();
++	if (fontConfigFonts == null) {
++            info[0] = "nonexistent";
++            info[1] = "/nonexistent.ttf";
++            return info;
++	}
+         for (int i=0; i<fontConfigFonts.length; i++) {
+             if ("sans".equals(fontConfigFonts[i].fcFamily) &&
+                 0 == fontConfigFonts[i].style) {
