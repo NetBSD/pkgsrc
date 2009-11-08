@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2009/11/08 00:22:07 tnn Exp $
+$NetBSD: distinfo,v 1.7 2009/11/08 17:57:46 tnn Exp $
 
 SHA1 (openjdk7/9eb43c172d5b.tar.bz2) = 148136f77c5f565c27cfb2b1346363469becc5ab
 RMD160 (openjdk7/9eb43c172d5b.tar.bz2) = 7c79d15754eae87c543a131a36e26b52fb30e7e7
@@ -49,11 +49,10 @@ SHA1 (patch-ag) = 6287960055a79d05dc193e31d29ffc0158b33cdd
 SHA1 (patch-ah) = 2632580f92b27506c33df8714ed163ef3ed9844f
 SHA1 (patch-ai) = 6d6c394c3de7578754b901686b88142cbc524ef7
 SHA1 (patch-aj) = e370b618f4417d5ca19164c8eb59075123179b5a
-SHA1 (patch-ak) = 20ee0527aa3e6cbaf7e0419cc09feed0465379ea
 SHA1 (patch-am) = 7e0ffa317a83d5b1e34c3f3e76b7a3de26980df6
 SHA1 (patch-an) = b0636c22521d9727ad79df6914c9ce8c7c70b362
 SHA1 (patch-ao) = 87ee9dd450d0b4e7cbd2302466a2e9f586fa6df1
-SHA1 (patch-ap) = 4219c2eb348603ee7ebcfad0b3e6dca81b942c91
+SHA1 (patch-ap) = 1cdd568c89e0525ed17e55300a51af15e9f19e08
 SHA1 (patch-aq) = 17be1ad20f0930ad53e0de197fd01f10284cbb5d
 SHA1 (patch-ar) = 19abc4c858c730fb337d68d1d524db82c73ffa36
 SHA1 (patch-as) = d78c44af2e412da65239a8339e00d79eca881e2f
@@ -72,4 +71,4 @@ SHA1 (patch-bj) = 4198e1aa8e3c65434fbb947a00eed49e73106291
 SHA1 (patch-bk) = 66bccfdf42fcc6f6995f3f18fc2515d55cab46c6
 SHA1 (patch-bl) = a3b3bd6007c83664538baf401447fd0df9f4143b
 SHA1 (patch-bm) = 40c83ad219f529c3ca130547560681ab57b44bf8
-SHA1 (patch-bn) = 571d98951cc2a53dd1512e7f7d4495381e1c4004
+SHA1 (patch-bn) = 5b34da35e39e08c935c805b5ef7b2c8cc8d285da
