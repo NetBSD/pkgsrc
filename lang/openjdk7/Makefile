@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/11/08 00:22:07 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2009/11/08 17:57:46 tnn Exp $
 
 DISTNAME=	openjdk-7-ea-src-b75-30_oct_2009
 PKGNAME=	openjdk7-1.7.0.75.20091106
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -89,7 +89,8 @@ SUBST_STAGE.fontpaths=		pre-build
 SUBST_MESSAGE.fontpaths=	fixing font paths
 SUBST_FILES.fontpaths=		jdk/src/solaris/classes/sun/awt/fontconfigs/bsd.fontconfig.properties
 SUBST_FILES.fontpaths+=		jdk/src/solaris/native/sun/awt/fontpath.c
-SUBST_SED.fontpaths=		-e 's|%%PREFIX%%|${PREFIX}|'
+SUBST_SED.fontpaths=		-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_SED.fontpaths+=		-e 's|@BUILDLINK_PREFIX.fontconfig@|${BUILDLINK_PREFIX.fontconfig}|g'
 
 PLIST_VARS+=	i386
 .if ${MACHINE_ARCH} == "i386"
@@ -140,6 +141,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/cacerts.out				\
 	  ${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
 
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cups?=	build
 .include "../../print/cups/buildlink3.mk"
