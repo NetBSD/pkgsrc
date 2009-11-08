@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2007/04/21 11:17:47 obache Exp $
+$NetBSD: distinfo,v 1.24 2009/11/08 08:38:54 obache Exp $
 
 SHA1 (libwww-configure-5.4.0nb2.gz) = de3292e2ec4034485b300845e7a0c0ef4ceb0199
 RMD160 (libwww-configure-5.4.0nb2.gz) = bead5840a43b85e7de79e1bf5e26fa997cf827e3
@@ -21,3 +21,4 @@ SHA1 (patch-an) = e7195c25ce08e13e0c8b64b05b737e9a5f5157a8
 SHA1 (patch-ao) = fa5c98f6c4e873f816e5a5bc48481d1462c946dc
 SHA1 (patch-ap) = 506ee8ddd2e627aa6ba84b933ca39a6934b95689
 SHA1 (patch-aq) = f44086c50dfe3d5af714b6defcb40ac7a1ed36f1
+SHA1 (patch-ar) = ddbe9f7e7add849dcbdf215d0087bb3e314100c3
