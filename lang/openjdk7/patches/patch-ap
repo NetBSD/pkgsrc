@@ -1,18 +1,29 @@
-$NetBSD: patch-ap,v 1.2 2009/10/21 10:35:09 ghen Exp $
+$NetBSD: patch-ap,v 1.3 2009/11/08 17:57:46 tnn Exp $
 
---- jdk/src/solaris/native/sun/awt/fontpath.c.orig	2009-01-10 14:29:12.000000000 +0100
+--- jdk/src/solaris/native/sun/awt/fontpath.c.orig	2009-11-08 11:51:19.000000000 +0100
 +++ jdk/src/solaris/native/sun/awt/fontpath.c
-@@ -164,6 +164,27 @@ static char *fullLinuxFontPath[] = {
+@@ -70,8 +70,8 @@ extern Display *awt_display;
+ #define FONTCONFIG_DLL_VERSIONED X11_PATH "/lib/" VERSIONED_JNI_LIB_NAME("fontconfig", "1")
+ #define FONTCONFIG_DLL X11_PATH "/lib/" JNI_LIB_NAME("fontconfig")
+ #else
+-#define FONTCONFIG_DLL_VERSIONED VERSIONED_JNI_LIB_NAME("fontconfig", "1")
+-#define FONTCONFIG_DLL JNI_LIB_NAME("fontconfig")
++#define FONTCONFIG_DLL_VERSIONED "@BUILDLINK_PREFIX.fontconfig@/lib/" JNI_LIB_NAME("fontconfig")
++#define FONTCONFIG_DLL "@BUILDLINK_PREFIX.fontconfig@/lib/" JNI_LIB_NAME("fontconfig")
+ #endif
+ 
+ #define MAXFDIRS 512    /* Max number of directories that contain fonts */
+@@ -163,6 +163,27 @@ static char *fullLinuxFontPath[] = {
      NULL, /* terminates the list */
  };
  #endif
 +static char *pkgsrcFontPath[] = {
-+   "%%PREFIX%%/lib/X11/fonts/100dpi",
-+   "%%PREFIX%%/lib/X11/fonts/75dpi",
-+   "%%PREFIX%%/lib/X11/fonts/Type1",
-+   "%%PREFIX%%/lib/X11/fonts/cyrillic",
-+   "%%PREFIX%%/lib/X11/fonts/misc",
-+   "%%PREFIX%%/lib/X11/fonts/TTF",
++   "@PREFIX@/lib/X11/fonts/100dpi",
++   "@PREFIX@/lib/X11/fonts/75dpi",
++   "@PREFIX@/lib/X11/fonts/Type1",
++   "@PREFIX@/lib/X11/fonts/cyrillic",
++   "@PREFIX@/lib/X11/fonts/misc",
++   "@PREFIX@/lib/X11/fonts/TTF",
 +   "/usr/X11R7/lib/X11/fonts/100dpi",
 +   "/usr/X11R7/lib/X11/fonts/75dpi",
 +   "/usr/X11R7/lib/X11/fonts/Type1",
@@ -30,7 +41,7 @@ $NetBSD: patch-ap,v 1.2 2009/10/21 10:35:09 ghen Exp $
  
  static char **getFontConfigLocations();
  
-@@ -515,6 +536,7 @@ static char *getPlatformFontPathChars(JN
+@@ -525,6 +546,7 @@ static char *getPlatformFontPathChars(JN
  #else /* IF SOLARIS */
      knowndirs = fullSolarisFontPath;
  #endif
