@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4241 2009/11/08 16:53:54 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4242 2009/11/08 18:29:28 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5658,3 +5658,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Getopt to 0.24 [seb 2009-11-08]
 	Updated devel/p5-Mouse to 0.40 [seb 2009-11-08]
 	Updated devel/p5-MouseX-Types to 0.02 [seb 2009-11-08]
+	Added x11/libxdg-basedir to 1.0.2 [jakllsch 2009-11-08]
