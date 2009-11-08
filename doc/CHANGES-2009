@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4243 2009/11/08 19:00:30 jakllsch Exp $
+$NetBSD: CHANGES-2009,v 1.4244 2009/11/08 20:14:50 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5660,3 +5660,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MouseX-Types to 0.02 [seb 2009-11-08]
 	Added x11/libxdg-basedir to 1.0.2 [jakllsch 2009-11-08]
 	Updated x11/startup-notification to 0.10 [jakllsch 2009-11-08]
+	Updated misc/rump to 20091108 [stacktic 2009-11-08]
