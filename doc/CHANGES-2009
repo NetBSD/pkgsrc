@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4240 2009/11/08 16:51:05 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4241 2009/11/08 16:53:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5657,3 +5657,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Module-CoreList to 2.22 [seb 2009-11-08]
 	Updated devel/p5-MooseX-Getopt to 0.24 [seb 2009-11-08]
 	Updated devel/p5-Mouse to 0.40 [seb 2009-11-08]
+	Updated devel/p5-MouseX-Types to 0.02 [seb 2009-11-08]
