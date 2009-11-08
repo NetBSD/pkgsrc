@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/08 18:26:15 jakllsch Exp $
+include/basedir.h
+include/basedir_fs.h
+lib/libxdg-basedir.la
+lib/pkgconfig/libxdg-basedir.pc
