@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2009/10/12 20:44:44 rhaen Exp $
+$NetBSD: distinfo,v 1.15 2009/11/08 15:14:17 seb Exp $
 
-SHA1 (Module-CoreList-2.20.tar.gz) = 71d2416d09475432dfc8a7d5cdad3162d9f7b479
-RMD160 (Module-CoreList-2.20.tar.gz) = a6e073839a129578fc866f83deca88b261801e8b
-Size (Module-CoreList-2.20.tar.gz) = 49284 bytes
+SHA1 (Module-CoreList-2.22.tar.gz) = b28fd719c63805e1a035eb11698586c612da4f4d
+RMD160 (Module-CoreList-2.22.tar.gz) = 4db84c9a31a9abb7c5a8a6519f6c1dc2b8a28669
+Size (Module-CoreList-2.22.tar.gz) = 50867 bytes
