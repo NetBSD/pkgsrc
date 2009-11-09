@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4248 2009/11/09 19:50:04 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.4249 2009/11/09 21:18:07 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5701,4 +5701,3 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/editres to 1.0.4 [tnn 2009-11-09]
 	Updated x11/bitmap to 1.0.4 [tnn 2009-11-09]
 	Updated x11/appres to 1.0.2 [tnn 2009-11-09]
-	Updated wip/xcursor-themes to 1.0.2 [tnn 2009-11-09]
