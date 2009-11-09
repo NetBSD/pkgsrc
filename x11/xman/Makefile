@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/11/10 17:21:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2009/11/09 18:42:22 tnn Exp $
 #
 
-DISTNAME=		xman-1.0.3
-PKGREVISION=		2
+DISTNAME=		xman-1.1.0
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,7 +20,7 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	MANCONF=/etc/man.conf
+CONFIGURE_ARGS+=	--with-manconfig=/etc/man.conf
 .endif
 
 .include "../../x11/libXaw/buildlink3.mk"
