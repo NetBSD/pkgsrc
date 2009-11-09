@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/10/28 00:12:36 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/11/09 12:46:54 joerg Exp $
 
 DISTNAME=	xtide-2.8.3
 PKGREVISION=	2
@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 
 HARMONICS_FILE=	harmonics-dwf-20060708.tcd
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q} X11BASE=${X11BASE:Q}
 EGDIR=		${PREFIX}/share/examples/xtide
 CONF_FILES=	${EGDIR}/xtide.conf ${PKG_SYSCONFDIR}/xtide.conf
 
@@ -34,13 +34,6 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/xtide.conf ${EGDIR}/xtide.conf
 	${INSTALL_DATA} ${WRKDIR}/${HARMONICS_FILE} ${PREFIX}/share/xtide
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${X11_TYPE} == "modular"
-CONFIGURE_ARGS+=	--x-includes=${PREFIX}/include
-CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/lib
-.endif
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
