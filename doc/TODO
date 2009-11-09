@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8634 2009/11/08 15:14:39 seb Exp $
+$NetBSD: TODO,v 1.8635 2009/11/09 19:50:04 tnn Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-wsgi-2.5
 	o apache-maven-3.0
 	o apache-tomcat55-6.0.14
-	o appres-1.0.2
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o aranym-0.9.9
@@ -446,7 +445,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bbsload-0.2.8
 	o bbweather-0.6.3
 	o bdb-xml-2.0.9
-	o bdftopcf-1.0.2
 	o beacon-1.3
 	o benchfft-3.1
 	o bftpd-2.6
@@ -455,7 +453,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o binutils-2.20
 	o bioperl-1.5.0
 	o bitlbee-1.2.4
-	o bitmap-1.0.4
 	o bluefish-1.3.7
 	o blur6ex-0.3.462
 	o bmon-2.1.0
@@ -557,7 +554,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eclipse-3.2.0
 	o ed-1.4
 	o ede-2.0
-	o editres-1.0.4
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6.2
 	o ekiga-3.2.6 [GNOME 2.28]
@@ -572,7 +568,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emech-2.8.5.1
 	o empathy-2.28.1.1 [GNOME 2.28]
 	o enca-1.12
-	o encodings-1.0.3
 	o enlightenment-1.0.0
 	o eog-plugins-2.28.1 [GNOME 2.28]
 	o epic4-2.6
@@ -778,7 +773,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hylafax-5.3.0
 	o ical-2.3.2
 	o icdprog-0.5
-	o iceauth-1.0.3
 	o icsi-finger-1.0.29
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
@@ -841,7 +835,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o latd-1.21
 	o latex2rtf-1.9.19
 	o lbreakout2-2.6
-	o lbxproxy-1.0.2
 	o lcc-4.2
 	o ldapsdk-6.0.2
 	o leafpad-0.8.15
@@ -922,9 +915,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lsh-2.0.3
 	o lsof-4.81
 	o ltris-1.0.13
-	o luit-1.0.4
 	o lucy-1.20
-	o luit-1.0.4
 	o lzip-1.8
 	o mDNSResponder-212.1
 	o maelstrom-sdl-3.0.6
@@ -972,8 +963,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o minivmac-3.0.4
 	o miredo-1.1.7
 	o mirmon-1.37
-	o mkfontdir-1.0.5
-	o mkfontscale-1.0.7
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-2.9.8
 	o mlterm-2.9.4
@@ -1443,33 +1432,23 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wwwoffle-2.9e
 	o wxRemind-101
 	o wyrd-1.4.4
-	o x11perf-1.5.1
 	o x264-devel-20091031
 	o xanalyser-1.30
 	o xaric-0.13.2
-	o xauth-1.0.4
-	o xbacklight-1.1.1
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
-	o xbitmaps-1.1.0
 	o xboard-4.4.1
 	o xcircuit-3.6.85
-	o xclipboard-1.1.0 [unpackaged]
-	o xclock-1.0.4
 	o xcmsdb-1.0.2 [unpackaged]
-	o xcompmgr-1.1.5
 	o xcursorgen-1.0.3
 	o xdelta-3.0v2
 	o xdesktopwaves-1.3
 	o xdm-1.1.9
-	o xdpyinfo-1.1.0
-	o xdriinfo-1.0.3
 	o xemacs-21.4.22
 	o xemacs-current-21.5.28
 	o xerces-c-2.9.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
-	o xev-1.0.4
 	o xextproto-7.1.1
 	o xf86-input-keyboard-1.4.0
 	o xf86-input-mouse-1.5.0
@@ -1498,11 +1477,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xfe-1.19.1
 	o xforms-1.0.92
 	o xfstt-1.7
-	o xgamma-1.0.3
 	o xhippo-3.5
-	o xhost-1.0.3
 	o xineramaproto-1.2
-	o xinput-1.5.0
 	o xisp-2.7p4
 	o xjman-0.7
 	o xkbcomp-1.1.1
@@ -1510,14 +1486,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
 	o xkeyboard-config-1.7
-	o xkill-1.0.2
 	o xli-2006.11.10
 	o xlog-2.0.3
 	o xlsatoms-1.0.2 [unpackaged]
-	o xlsclients-1.0.2
 	o xm7-1020s
-	o xmag-1.0.3
-	o xman-1.1.0
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xmms-crossfade-0.3.14
@@ -1529,7 +1501,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmms-iris-0.12
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmmsctrl-1.8
-	o xmodmap-1.0.4
 	o xmon-1.5.6
 	o xmp-2.7.1
 	o xmule-1.12.2
@@ -1541,20 +1512,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xorg-util-macros-1.3.0
 	o xpad-2.13
 	o xpr-1.0.3 [unpackaged]
-	o xprop-1.1.0
 	o xproto-7.0.16
 	o xproxymanagementprotocol-1.0.3
 	o xpuyopuyo-0.9.8
-	o xrandr-1.3.2
-	o xrdb-1.0.6
-	o xrefresh-1.0.3
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33.1
 	o xrn-9.02
 	o xsane-0.99.6
 	o xscope-1.2 [unpackaged]
-	o xset-1.1.0
-	o xsetroot-1.0.3
 	o xskat-4.0
 	o xsoldier-1.4
 	o xterm-250
@@ -1564,11 +1529,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xtux-20030306
 	o xvidcap-1.1.7
 	o xview-3.2.1.4.21.8
-	o xvinfo-1.1.0
-	o xwd-1.0.3
-	o xwininfo-1.0.5
 	o xwpe-1.5.30a
-	o xwud-1.0.2
 	o xzip-182
 	o yafc-1.1
 	o yodl-2.14.3
