@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/04/24 15:32:15 jlam Exp $
+# $NetBSD: options.mk,v 1.9 2009/11/09 14:09:41 joerg Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS=		ldap xface canna x11
@@ -74,30 +74,18 @@ CONFIGURE_ARGS+=	--with-jpeg
 CONFIGURE_ARGS+=	--with-png
 CONFIGURE_ARGS+=	--with-tiff
 CONFIGURE_ARGS+=	--with-xpm
-CONFIGURE_ARGS+=	--site-includes=${SITE_INCLUDES:Q}
-CONFIGURE_ARGS+=	--site-libraries=${SITE_LIBRARIES:Q}
-CONFIGURE_ARGS+=	--site-runtime-libraries=${SITE_RUNTIME_LIBRARIES:Q}
-.  if ${X11_TYPE} != "modular"
-SITE_INCLUDES=		${BUILDLINK_DIR}/include:${BUILDLINK_X11_DIR}/include
-SITE_LIBRARIES=		${BUILDLINK_DIR}/lib:${BUILDLINK_X11_DIR}/lib
-SITE_RUNTIME_LIBRARIES=	${PREFIX}/lib:${X11BASE}/lib
-.  else
-SITE_INCLUDES=		${BUILDLINK_DIR}/include
-SITE_LIBRARIES=		${BUILDLINK_DIR}/lib
-SITE_RUNTIME_LIBRARIES=	${PREFIX}/lib
-.  endif
+CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${X11BASE}/include
+CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib:${X11BASE}/lib
+CONFIGURE_ARGS+=	--site-runtime-libraries=${PREFIX}/lib:${X11BASE}/lib
 .else
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-jpeg
 CONFIGURE_ARGS+=	--without-png
 CONFIGURE_ARGS+=	--without-tiff
 CONFIGURE_ARGS+=	--without-xpm
-CONFIGURE_ARGS+=	--site-includes=${SITE_INCLUDES:Q}
-CONFIGURE_ARGS+=	--site-libraries=${SITE_LIBRARIES:Q}
-CONFIGURE_ARGS+=	--site-runtime-libraries=${SITE_RUNTIME_LIBRARIES:Q}
-SITE_INCLUDES=		${BUILDLINK_DIR}/include
-SITE_LIBRARIES=		${BUILDLINK_DIR}/lib
-SITE_RUNTIME_LIBRARIES=	${PREFIX}/lib
+CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include
+CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
+CONFIGURE_ARGS+=	--site-runtime-libraries=${PREFIX}/lib
 .endif
 
 ###
