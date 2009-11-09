@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/07/18 15:00:16 wiz Exp $
+$NetBSD: distinfo,v 1.6 2009/11/09 18:50:16 tnn Exp $
 
-SHA1 (xkbcomp-1.1.0.tar.bz2) = 78d710d64e64df1894dd2b49ff9b0113b3af4746
-RMD160 (xkbcomp-1.1.0.tar.bz2) = eed82db28ffb36ebef91d3b79b966349037ba51d
-Size (xkbcomp-1.1.0.tar.bz2) = 218419 bytes
+SHA1 (xkbcomp-1.1.1.tar.bz2) = aeb733c495d7afd42136bf8ae5c6e792c63f0b4b
+RMD160 (xkbcomp-1.1.1.tar.bz2) = 6fcf2d4838ed8b006511d4cd7fcdcbac61c0cdbf
+Size (xkbcomp-1.1.1.tar.bz2) = 219481 bytes
