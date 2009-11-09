@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/11/04 23:37:53 tez Exp $
+# $NetBSD: Makefile,v 1.10 2009/11/09 19:14:53 tez Exp $
 
 DISTNAME=	acroread8	# overridden below
 PKGNAME=	acroread8-8.1.7
@@ -37,6 +37,7 @@ EMUL_REQD=		suse>=10.0
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=	AdobeReader_enu-8.1.7-1.i486
 PLATFORM=	intellinux
+PLIST_SRC=	PLIST PLIST.Linux
 .elif ${EMUL_PLATFORM} == "solaris-sparc"
 DISTNAME=	AdobeReader_enu-8.1.7-1.sparc
 PLATFORM=	sparcsolaris
