@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/04/22 19:40:28 wiz Exp $
+$NetBSD: distinfo,v 1.9 2009/11/09 19:08:42 tnn Exp $
 
-SHA1 (xcompmgr-1.1.4.tar.bz2) = f9b0a46a719c69309208f4f970c598528aad9814
-RMD160 (xcompmgr-1.1.4.tar.bz2) = f99d8e0b6995300849c7670b4ccc44b427f480c2
-Size (xcompmgr-1.1.4.tar.bz2) = 78389 bytes
+SHA1 (xcompmgr-1.1.5.tar.bz2) = 9b4d7c3c64b3d980ea317b5206fee17adefd1d65
+RMD160 (xcompmgr-1.1.5.tar.bz2) = 472dd00eed4144e94ccc75122b817c6835ce8785
+Size (xcompmgr-1.1.5.tar.bz2) = 111538 bytes

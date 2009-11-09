@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2008/08/09 10:12:06 bjs Exp $
+# $NetBSD: Makefile,v 1.26 2009/11/09 19:08:42 tnn Exp $
 #
 
-DISTNAME=	xcompmgr-1.1.4
-PKGREVISION=	1
+DISTNAME=	xcompmgr-1.1.5
 CATEGORIES=	x11
 MASTER_SITES =	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
