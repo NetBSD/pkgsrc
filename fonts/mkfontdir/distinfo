@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/04/17 21:13:11 wiz Exp $
+$NetBSD: distinfo,v 1.4 2009/11/09 19:29:30 tnn Exp $
 
-SHA1 (mkfontdir-1.0.4.tar.bz2) = 1e52e7c42c783435ea72e69bd4adb976e62a9d96
-RMD160 (mkfontdir-1.0.4.tar.bz2) = 4f7f93f34195b16b0cc250d527df91b300449dd1
-Size (mkfontdir-1.0.4.tar.bz2) = 70506 bytes
+SHA1 (mkfontdir-1.0.5.tar.bz2) = 971728b0f453ea5df028aa5d54fe3fbdb8e99a7d
+RMD160 (mkfontdir-1.0.5.tar.bz2) = 35db47d62769081bb713ebb68f8a14fc3b36a4e3
+Size (mkfontdir-1.0.5.tar.bz2) = 87198 bytes
