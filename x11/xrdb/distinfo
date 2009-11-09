@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/08/09 20:07:34 bjs Exp $
+$NetBSD: distinfo,v 1.5 2009/11/09 18:25:38 tnn Exp $
 
-SHA1 (xrdb-1.0.5.tar.bz2) = 31251ce7a835aa5c0a4860ee735c7facb99ef958
-RMD160 (xrdb-1.0.5.tar.bz2) = 834424afa17cbaa56b71a1dfa627f12dc5e251d6
-Size (xrdb-1.0.5.tar.bz2) = 101484 bytes
+SHA1 (xrdb-1.0.6.tar.bz2) = e4faff5e02b3027298dc589e318a6dc7eb30a6d5
+RMD160 (xrdb-1.0.6.tar.bz2) = aa34320f99de121e31a90d0df3a66b816d048082
+Size (xrdb-1.0.6.tar.bz2) = 108542 bytes
