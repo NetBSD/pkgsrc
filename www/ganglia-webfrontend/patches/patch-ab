@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:39:29 jschauma Exp $
+$NetBSD: patch-ab,v 1.2 2009/11/10 14:56:35 brook Exp $
 
---- templates/default/footer.tpl.orig	2005-02-06 13:29:17.000000000 -0500
-+++ templates/default/footer.tpl	2005-02-06 13:34:17.000000000 -0500
+--- templates/default/footer.tpl.orig	2009-01-28 16:23:20.000000000 -0700
++++ templates/default/footer.tpl
 @@ -1,5 +1,12 @@
  <HR>
  <CENTER>
@@ -13,16 +13,14 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:39:29 jschauma Exp $
 +    </td>
 +    <td>
  <FONT SIZE="-1" class=footer>
- Gmetad Web Frontend version {webfrontend-version}
+ Ganglia Web Frontend version {webfrontend-version}
  <A HREF="http://ganglia.sourceforge.net/downloads.php?component=ganglia-webfrontend&amp;
-@@ -11,7 +18,10 @@
+@@ -11,6 +18,8 @@ version={webbackend-version}">Check for 
  
  Downloading and parsing ganglia's XML tree took {parsetime}.<BR>
- Images created with <A HREF="http://www.rrdtool.com/">RRDTool</A>.<BR>
-+<br>
+ Images created with <A HREF="http://www.rrdtool.org/">RRDTool</A> version {rrdtool-version}.<BR>
 +Brought to you by <a href="http://www.pkgsrc.org/">pkgsrc - The NetBSD
 +Packages collection</a>.<br>
+ Pages generated using <A HREF="http://templatepower.codocad.com/">TemplatePower</A> version {templatepower-version}.<BR>
  </FONT>
  </CENTER>
- 
- </FORM>
