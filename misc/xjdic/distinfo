@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.6 2006/01/03 16:00:57 joerg Exp $
+$NetBSD: distinfo,v 1.7 2009/11/10 10:23:15 dogcow Exp $
 
+SHA1 (xjdic-24.locale.patch) = fdd9a6d12a9c2098c315364ad79fe77527f8b43e
+RMD160 (xjdic-24.locale.patch) = 3a7bd300f44e17f668213dd66dcb2fe3b377ff21
+Size (xjdic-24.locale.patch) = 15750 bytes
 SHA1 (xjdic24.tgz) = 732b2922c3e7229baedfb8be958dc3b92a8a06b8
 RMD160 (xjdic24.tgz) = 25662aa7bd9538d00656983394e329a888ecfdf3
 Size (xjdic24.tgz) = 140091 bytes
