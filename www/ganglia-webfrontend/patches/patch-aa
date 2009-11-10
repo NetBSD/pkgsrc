@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/07 14:39:28 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2009/11/10 14:56:35 brook Exp $
 
---- conf.php.orig	2005-02-05 14:32:59.000000000 -0500
-+++ conf.php	2005-02-05 14:33:23.000000000 -0500
-@@ -22,12 +22,12 @@
+--- conf.php.orig	2009-01-28 16:23:20.000000000 -0700
++++ conf.php
+@@ -18,12 +18,12 @@ $template_name = "default";
  #
  
  # Where gmetad stores the rrd archives.
@@ -15,5 +15,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/07 14:39:28 jschauma Exp $
 -define("RRDTOOL", "/usr/bin/rrdtool");
 +define("RRDTOOL", "@PREFIX@/bin/rrdtool");
  
- #
- # If you want to grab data from a different ganglia source specify it here.
+ # Location for modular-graph files.
+ $graphdir='./graph.d';

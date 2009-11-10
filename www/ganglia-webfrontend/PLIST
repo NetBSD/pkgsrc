@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:22 joerg Exp $
-share/httpd/htdocs/ganglia/AUTHORS
-share/httpd/htdocs/ganglia/COPYING
-share/httpd/htdocs/ganglia/ChangeLog
-share/httpd/htdocs/ganglia/Makefile.am
+@comment $NetBSD: PLIST,v 1.4 2009/11/10 14:56:35 brook Exp $
 share/httpd/htdocs/ganglia/auth.php
 share/httpd/htdocs/ganglia/class.TemplatePower.inc.php
 share/httpd/htdocs/ganglia/cluster_legend.html
@@ -13,10 +9,16 @@ share/httpd/htdocs/ganglia/functions.php
 share/httpd/htdocs/ganglia/ganglia.php
 share/httpd/htdocs/ganglia/get_context.php
 share/httpd/htdocs/ganglia/get_ganglia.php
+share/httpd/htdocs/ganglia/graph.d/cpu_report.php
+share/httpd/htdocs/ganglia/graph.d/load_report.php
+share/httpd/htdocs/ganglia/graph.d/mem_report.php
+share/httpd/htdocs/ganglia/graph.d/metric.php
+share/httpd/htdocs/ganglia/graph.d/network_report.php
+share/httpd/htdocs/ganglia/graph.d/packet_report.php
+share/httpd/htdocs/ganglia/graph.d/sample_report.php
 share/httpd/htdocs/ganglia/graph.php
 share/httpd/htdocs/ganglia/grid_tree.php
 share/httpd/htdocs/ganglia/header.php
-share/httpd/htdocs/ganglia/host_gmetrics.php
 share/httpd/htdocs/ganglia/host_view.php
 share/httpd/htdocs/ganglia/index.php
 share/httpd/htdocs/ganglia/meta_view.php
@@ -26,12 +28,6 @@ share/httpd/htdocs/ganglia/pie.php
 share/httpd/htdocs/ganglia/private_clusters
 share/httpd/htdocs/ganglia/show_node.php
 share/httpd/htdocs/ganglia/styles.css
-share/httpd/htdocs/ganglia/templates/Rocks/cluster_extra.tpl
-share/httpd/htdocs/ganglia/templates/Rocks/header.tpl
-share/httpd/htdocs/ganglia/templates/Rocks/host_extra.tpl
-share/httpd/htdocs/ganglia/templates/Rocks/images/ganglia.jpg
-share/httpd/htdocs/ganglia/templates/Rocks/images/hardhat.png
-share/httpd/htdocs/ganglia/templates/Rocks/images/rocks.jpg
 share/httpd/htdocs/ganglia/templates/default/cluster_extra.tpl
 share/httpd/htdocs/ganglia/templates/default/cluster_view.tpl
 share/httpd/htdocs/ganglia/templates/default/footer.tpl
@@ -39,7 +35,6 @@ share/httpd/htdocs/ganglia/templates/default/grid_tree.tpl
 share/httpd/htdocs/ganglia/templates/default/header-nobanner.tpl
 share/httpd/htdocs/ganglia/templates/default/header.tpl
 share/httpd/htdocs/ganglia/templates/default/host_extra.tpl
-share/httpd/htdocs/ganglia/templates/default/host_gmetrics.tpl
 share/httpd/htdocs/ganglia/templates/default/host_view.tpl
 share/httpd/htdocs/ganglia/templates/default/images/cluster_0-24.jpg
 share/httpd/htdocs/ganglia/templates/default/images/cluster_25-49.jpg
@@ -65,4 +60,3 @@ share/httpd/htdocs/ganglia/templates/default/node_extra.tpl
 share/httpd/htdocs/ganglia/templates/default/physical_view.tpl
 share/httpd/htdocs/ganglia/templates/default/show_node.tpl
 share/httpd/htdocs/ganglia/version.php
-share/httpd/htdocs/ganglia/version.php.in
