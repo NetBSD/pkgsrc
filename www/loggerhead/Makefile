@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/09/09 05:45:23 epg Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/10 17:20:38 epg Exp $
 
 DISTNAME=	loggerhead-${VER}
+PKGREVISION=	1
 CATEGORIES=	www scm
 MASTER_SITES=	http://launchpad.net/loggerhead/${VER}/${VER}/+download/
 VER=		1.17
@@ -16,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	bzr>=1.13:../../devel/bzr
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-Paste>=1.2:../../www/py-paste
+DEPENDS+=	${PYPKGPREFIX}-PasteDeploy>=1.3:../../www/py-PasteDeploy
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c8:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-SimpleTAL>=4.1:../../www/py-simpletal
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
