@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4255 2009/11/10 13:21:25 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4256 2009/11/10 13:34:25 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5707,3 +5707,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Spreadsheet-ParseExcel to 0.5500 [seb 2009-11-10]
 	Updated math/p5-Spreadsheet-XLSX to 0.12 [seb 2009-11-10]
 	Updated math/p5-Spreadsheet-Read to 0.37 [seb 2009-11-10]
+	Updated net/p5-DNS-ZoneParse to 0.99 [seb 2009-11-10]
