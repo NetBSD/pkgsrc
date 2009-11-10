@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/08/26 19:56:51 sno Exp $
+# $NetBSD: Makefile,v 1.8 2009/11/10 20:11:44 markd Exp $
 
 DISTNAME=	soprano-2.3.0
 PKGREVISION=	2
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+
+CMAKE_ARGS+=	-DSOPRANO_DISABLE_SESAME2_BACKEND:BOOL=ON
 
 PKGCONFIG_OVERRIDE+=	soprano.pc.cmake
 
