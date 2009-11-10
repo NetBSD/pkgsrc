@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4253 2009/11/10 12:08:05 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4254 2009/11/10 12:15:06 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5705,3 +5705,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ptlib to 2.6.5 [wiz 2009-11-10]
 	Updated devel/p5-MooseX-Types-Structured to 0.19 [seb 2009-11-10]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.5500 [seb 2009-11-10]
+	Updated math/p5-Spreadsheet-XLSX to 0.12 [seb 2009-11-10]
