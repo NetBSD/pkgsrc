@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/11 18:40:08 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/10 19:36:00 epg Exp $
 ${PYSITELIB}/bzrlib/plugins/explorer/COPYING.txt
 ${PYSITELIB}/bzrlib/plugins/explorer/NEWS
 ${PYSITELIB}/bzrlib/plugins/explorer/README.txt
@@ -96,17 +96,27 @@ ${PYSITELIB}/bzrlib/plugins/explorer/lib/workspace_models.pyo
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/wt_browser.py
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/wt_browser.pyc
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/wt_browser.pyo
+${PYSITELIB}/bzrlib/plugins/explorer/locale/ar/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/cs/LC_MESSAGES/explorer.mo
+${PYSITELIB}/bzrlib/plugins/explorer/locale/da/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/de/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/en/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/en_AU/LC_MESSAGES/explorer.mo
+${PYSITELIB}/bzrlib/plugins/explorer/locale/en_GB/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/es/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/fr/LC_MESSAGES/explorer.mo
+${PYSITELIB}/bzrlib/plugins/explorer/locale/gl/LC_MESSAGES/explorer.mo
+${PYSITELIB}/bzrlib/plugins/explorer/locale/id/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/it/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/ja/LC_MESSAGES/explorer.mo
+${PYSITELIB}/bzrlib/plugins/explorer/locale/lt/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/nl/LC_MESSAGES/explorer.mo
+${PYSITELIB}/bzrlib/plugins/explorer/locale/pl/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/ru/LC_MESSAGES/explorer.mo
+${PYSITELIB}/bzrlib/plugins/explorer/locale/sr/LC_MESSAGES/explorer.mo
+${PYSITELIB}/bzrlib/plugins/explorer/locale/sv/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/locale/tr/LC_MESSAGES/explorer.mo
+${PYSITELIB}/bzrlib/plugins/explorer/locale/uk/LC_MESSAGES/explorer.mo
 ${PYSITELIB}/bzrlib/plugins/explorer/menus-for-ides.xml
 ${PYSITELIB}/bzrlib/plugins/explorer/tests/__init__.py
 ${PYSITELIB}/bzrlib/plugins/explorer/tests/__init__.pyc
