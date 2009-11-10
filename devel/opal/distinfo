@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/08/26 05:04:15 dsainty Exp $
+$NetBSD: distinfo,v 1.8 2009/11/10 16:23:23 wiz Exp $
 
-SHA1 (opal-3.6.4.tar.bz2) = 65c7462a0aa58720f1c0b6a2f3347527bd9aea8d
-RMD160 (opal-3.6.4.tar.bz2) = c0c6aa17aef0051d0b9fb2e794c163fbabe4bac9
-Size (opal-3.6.4.tar.bz2) = 7059671 bytes
+SHA1 (opal-3.6.6.tar.bz2) = bd5e3907faf96db884a64dacdedb2259aca30cd3
+RMD160 (opal-3.6.6.tar.bz2) = b639709f7e28ce607478bddc41d171e0e54bee9f
+Size (opal-3.6.6.tar.bz2) = 7062422 bytes
