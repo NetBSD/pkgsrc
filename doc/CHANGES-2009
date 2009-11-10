@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4268 2009/11/10 18:35:38 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4269 2009/11/10 19:37:06 epg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5721,3 +5721,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/gcalctool to 5.28.1 [wiz 2009-11-10]
 	Updated math/genius to 1.0.8 [wiz 2009-11-10]
 	Updated devel/boehm-gc to 7.1nb2 [wiz 2009-11-10]
+	Updated devel/bzr to 2.0.1 [epg 2009-11-10]
+	Updated devel/qbzr to 0.16 [epg 2009-11-10]
+	Updated devel/bzr-explorer to 0.9.0 [epg 2009-11-10]
