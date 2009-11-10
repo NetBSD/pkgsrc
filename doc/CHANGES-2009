@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4260 2009/11/10 16:14:30 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4261 2009/11/10 16:20:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5712,3 +5712,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated parallel/ganglia-monitor-core to 3.1.2 [brook 2009-11-10]
 	Updated www/ganglia-webfrontend to 3.0.1 [brook 2009-11-10]
 	Updated devel/ptlib to 2.6.5nb1 [wiz 2009-11-10]
+	Added emulators/kegs version 0.91 [wiz 2009-11-10]
