@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.669 2009/11/10 10:52:51 sborrill Exp $
+# $NetBSD: Makefile,v 1.670 2009/11/10 17:18:44 epg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -435,6 +435,7 @@ SUBDIR+=	pound
 SUBDIR+=	privoxy
 SUBDIR+=	py-ClientForm
 SUBDIR+=	py-HTMLgen
+SUBDIR+=	py-PasteDeploy
 SUBDIR+=	py-beautifulsoup
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-curl
