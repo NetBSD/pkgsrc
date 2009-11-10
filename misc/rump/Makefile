@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/11/08 20:13:26 stacktic Exp $
+# $NetBSD: Makefile,v 1.12 2009/11/10 16:10:47 stacktic Exp $
 #
 
 DISTNAME=		rump_20091108
 PKGNAME=		${DISTNAME:S/_/-/}
+PKGREVISION=		1
 
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/stacktic/
@@ -22,6 +23,14 @@ WRKSRC=			${WRKDIR}/rump
 
 MAKEFLAGS+=		MACHINE_ARCH=${MACHINE_ARCH}
 MAKEFLAGS+=		BSDSRCDIR=${WRKSRC}
+MAKEFLAGS+=		NOGCCERROR=1
+
+SUBST_CLASSES+=		alloc
+SUBST_STAGE.alloc=	pre-configure
+SUBST_MESSAGE.alloc=	Using malloc.
+SUBST_FILES.alloc=	sys/rump/librump/rumpkern/Makefile.rumpkern
+SUBST_SED.alloc=	-e "s|CPPFLAGS.*USE_REAL_ALLOCATORS.*|\# &|"
+SUBST_SED.alloc+=	-e "s|SRCS.*subr_pool.*|\# &|"
 
 .include "../../mk/bsd.prefs.mk"
 
