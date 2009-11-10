@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8638 2009/11/10 16:49:13 wiz Exp $
+$NetBSD: TODO,v 1.8639 2009/11/10 18:07:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -654,7 +654,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.14
-	o gcalctool-5.28.1 [GNOME 2.28]
 	o gcc-4.3.2
 	o gcc-ssp-3.4.4
 	o gcdmaster-1.2.3
