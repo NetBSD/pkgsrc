@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/10 10:44:57 sborrill Exp $
+lib/httpd/mod_cband.so
+share/doc/mod_cband/documentation.txt
+share/doc/mod_cband/faq.txt
