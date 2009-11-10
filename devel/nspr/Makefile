@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/11/10 16:44:06 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2009/11/10 16:48:20 tnn Exp $
 #
 
 .include "../../devel/xulrunner/dist.mk"
@@ -80,7 +80,7 @@ post-build:
 	set -e; ( \
 	  ${ECHO} "Name: NSPR"; \
 	  ${ECHO} "Description: The Netscape Portable Runtime";	\
-	  ${ECHO} "Version: ${PKGVERSION_NOREV}";		\
+	  ${ECHO} "Version: ${NSPR_RELEASE}";			\
 	  ${ECHO} "Cflags: -I${PREFIX}/include/nspr";		\
 	  ${ECHO} "Libs: -L${PREFIX}/lib/nspr"			\
 	    "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr"		\
