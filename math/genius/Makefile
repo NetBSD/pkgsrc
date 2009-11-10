@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2009/09/03 13:15:19 asau Exp $
+# $NetBSD: Makefile,v 1.27 2009/11/10 18:20:05 wiz Exp $
 #
 
-DISTNAME=		genius-1.0.7
+DISTNAME=		genius-1.0.8
 CATEGORIES=		math
 MASTER_SITES=		http://ftp.5z.com/pub/genius/
 
@@ -29,4 +29,6 @@ do-test:
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.gtk2+=	gtk2+>=2.12.0
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
