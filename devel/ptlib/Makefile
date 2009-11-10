@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2009/11/10 11:15:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2009/11/10 16:14:17 wiz Exp $
 
 DISTNAME=	ptlib-2.6.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ptlib/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +21,13 @@ BUILD_TARGET=		optshared
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-httpforms
+CONFIGURE_ARGS+=	--enable-httpsvc
 CONFIGURE_ARGS+=	--enable-plugins
+CONFIGURE_ARGS+=	--enable-jabber
+CONFIGURE_ARGS+=	--enable-vxml
+CONFIGURE_ARGS+=	--enable-xmlrpc
+CONFIGURE_ARGS+=	--enable-soap
 CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--enable-v4l2
 CONFIGURE_ARGS+=	--enable-opal
