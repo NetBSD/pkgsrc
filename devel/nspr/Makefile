@@ -1,32 +1,36 @@
-# $NetBSD: Makefile,v 1.30 2009/08/27 11:59:38 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2009/11/10 16:44:06 tnn Exp $
+#
 
-DISTNAME=		nspr-4.6.7
-PKGREVISION=		2
-CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v4.6.7/src/}
+.include "../../devel/xulrunner/dist.mk"
+PKGNAME=	${DISTNAME:S/firefox/nspr/:S/3.5/${NSPR_RELEASE}/:S/.source//}
+NSPR_RELEASE=	4.8.2
+CATEGORIES=	devel
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.mozilla.org/projects/nspr/index.html
-COMMENT=		Platform-neutral API for system level and libc like functions
+MAINTAINER=	tnn@NetBSD.org
+HOMEPAGE=	http://www.mozilla.org/projects/nspr/index.html
+COMMENT=	Platform-neutral API for system level and libc like functions
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/nsprpub
-CONFIGURE_DIRS=		build
+GNU_CONFIGURE=		yes
+CONFIGURE_DIRS=		nsprpub
 
-USE_TOOLS+=		autoconf213 gmake pax
-USE_LANGUAGES=		c c++
-GNU_CONFIGURE=		YES
+USE_TOOLS+=		autoconf213 gmake perl
+REPLACE_PERL+=		nsprpub/pr/src/misc/compile-et.pl
 
 CONFIGURE_ARGS+=	--disable-debug
-
-MAKE_ENV+=		DIST=${WRKSRC:Q}/dist
-CONFIGURE_SCRIPT=	../configure
+CONFIGURE_ARGS+=	--with-pthreads
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/nspr
 CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX:Q}/lib/nspr
 
-.include		"../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
-CFLAGS+=		-D_DONT_CAST_PTHREAD_T	# XXX pthread_t can be 64-bit
+SUBST_CLASSES+=			nspr-config
+SUBST_STAGE.nspr-config=	pre-configure
+SUBST_MESSAGE.nspr-config=	Fixing nspr-config run path
+SUBST_FILES.nspr-config=	nsprpub/config/nspr-config.in
+SUBST_SED.nspr-config=		-e 's|-L$$libdir|"${COMPILER_RPATH_FLAG}$$libdir -L$$libdir"|g'
 
 .if ${OBJECT_FMT} == "ELF"
 SO_SUFFIX=		so
@@ -37,10 +41,8 @@ SO_SUFFIX=		so.1.0
 .endif
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
-INSTALLATION_DIRS=	bin
 PLIST_VARS+=		sun4u_32
-
-# see ${WRKSRC}/nspr-4.6.1/mozilla/nsprpub/pr/src/md/unix/Makefile.in
+# see nsprpub/pr/src/md/unix/Makefile.in
 # for the bit about 32-bit sun4u machines installing an extra file.
 # That is why we have this specific test and modify the PLIST
 .if ${OPSYS} == "SunOS"
@@ -49,7 +51,7 @@ CONFIGURE_ARGS+=	--enable-64bit
 .  else
 HW_CLASS!=	${UNAME} -m
 .    if ${HW_CLASS} == "sun4u"
-PLIST.sun4u_32=		yes
+PLIST.sun4u_32=                yes
 .    endif
 .  endif
 .endif
@@ -61,45 +63,34 @@ CONFIGURE_ARGS+=	--enable-64bit
 .endif
 
 .if ${OPSYS} == "Darwin" && exists(/Developer/Headers/FlatCarbon)
-BUILDLINK_PASSTHRU_DIRS+=	/Developer/Headers/FlatCarbon
-
-SUBST_CLASSES+=		libpath
-SUBST_STAGE.libpath=	post-configure
-SUBST_FILES.libpath=	build/config/autoconf.mk
-SUBST_SED.libpath=	-e 's,@executable_path/$$@,${PREFIX}/lib/nspr/$$(notdir $$@),'
+BUILDLINK_PASSTHRU_DIRS+=	Developer/Headers/FlatCarbon
 .endif
-
-INSTALLATION_DIRS=	bin include/nspr lib/nspr lib/pkgconfig
-
-post-extract:
-	${CHMOD} -R g-w ${WRKSRC}
-	${CHMOD} -x ${WRKSRC}/pr/include/prvrsion.h
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+# sanity check: make sure the nspr release is what we think it is.
+	@set -e; if [ '"${NSPR_RELEASE}"' !=			\
+	  "`${AWK} '/PR_VERSION/ {print $$3}' <			\
+	    ${WRKSRC}/nsprpub/pr/include/prinit.h`" ]; then	\
+	  ${ECHO} "package is out of date";			\
+	  exit 1;						\
+	fi
+	cd ${WRKSRC}/nsprpub && autoconf
 
-do-install:
-	(cd ${WRKSRC}/build/dist/include && pax -Lrwpe . ${DESTDIR}${PREFIX}/include/ )
-	(cd ${WRKSRC}/build/dist/lib && pax -Lrwpe . ${DESTDIR}${PREFIX}/lib/nspr/ )
-	${INSTALL_SCRIPT} ${WRKSRC}/build/config/nspr-config ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
-	set -e; \
-	{ ${ECHO} "Name: NSPR"; \
-	  ${ECHO} "Description: The Netscape Portable Runtime"; \
-	  ${ECHO} "Version: ${PKGVERSION}"; \
-	  ${ECHO} "Cflags: -I${PREFIX}/include/nspr"; \
-	  ${ECHO} "Libs: -L${PREFIX}/lib/nspr" \
-	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr" \
-	      "-lplds4 -lplc4 -lnspr4 "${BUILDLINK_LIBS.pthread:Q}; \
-	} >${DESTDIR}${PREFIX}/lib/pkgconfig/nspr.pc
+post-build:
+	set -e; ( \
+	  ${ECHO} "Name: NSPR"; \
+	  ${ECHO} "Description: The Netscape Portable Runtime";	\
+	  ${ECHO} "Version: ${PKGVERSION_NOREV}";		\
+	  ${ECHO} "Cflags: -I${PREFIX}/include/nspr";		\
+	  ${ECHO} "Libs: -L${PREFIX}/lib/nspr"			\
+	    "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr"		\
+	    "-lplds4 -lplc4 -lnspr4 -pthread"			\
+	) > ${WRKDIR}/nspr.pc
 
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-CONFIGURE_ARGS+=	--without-pthreads
-.else
-CONFIGURE_ARGS+=	--with-pthreads
+INSTALLATION_DIRS+=	lib/pkgconfig
+
+post-install:
+	${INSTALL_DATA} ${WRKDIR}/nspr.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
+
 .include "../../mk/pthread.buildlink3.mk"
-# XXX TODO
-#.include "../../mk/resolv.buildlink3.mk"
-.endif
-
 .include "../../mk/bsd.pkg.mk"
