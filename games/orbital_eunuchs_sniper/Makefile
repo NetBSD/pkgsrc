@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/08/26 19:57:33 sno Exp $
+# $NetBSD: Makefile,v 1.16 2009/11/10 19:03:32 wiz Exp $
 #
 
 DISTNAME=		orbital_eunuchs_sniper-1.30
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://icculus.org/oes/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://icculus.org/oes/
 COMMENT=		Overhead shooting game
 
