@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4259 2009/11/10 15:37:11 brook Exp $
+$NetBSD: CHANGES-2009,v 1.4260 2009/11/10 16:14:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5711,3 +5711,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Template-Declare to 0.42 [seb 2009-11-10]
 	Updated parallel/ganglia-monitor-core to 3.1.2 [brook 2009-11-10]
 	Updated www/ganglia-webfrontend to 3.0.1 [brook 2009-11-10]
+	Updated devel/ptlib to 2.6.5nb1 [wiz 2009-11-10]
