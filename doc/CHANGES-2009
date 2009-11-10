@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4257 2009/11/10 13:46:48 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4258 2009/11/10 15:34:50 brook Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5709,3 +5709,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Spreadsheet-Read to 0.37 [seb 2009-11-10]
 	Updated net/p5-DNS-ZoneParse to 0.99 [seb 2009-11-10]
 	Updated textproc/p5-Template-Declare to 0.42 [seb 2009-11-10]
+	Updated parallel/ganglia-monitor-core to 3.1.2 [brook 2009-11-10]
