@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8636 2009/11/10 11:15:25 wiz Exp $
+$NetBSD: TODO,v 1.8637 2009/11/10 16:23:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1033,7 +1033,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o offlineimap-6.2.0
 	o olvwm-4.5
 	o oo2c-2.1.7
-	o opal-3.6.6 [GNOME 2.28]
 	o openafs-1.4.10 [pkg/41262]
 	o openafs-1.4.11
 	o opencobol-1.0
