@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/10 16:19:57 wiz Exp $
+
+SHA1 (kegs.0.91.tar.gz) = 7af9f75b07f9346c8179ec929ddb66dbac90567a
+RMD160 (kegs.0.91.tar.gz) = fe9f730e0397ce64cd510c90b07277e3a79dceb1
+Size (kegs.0.91.tar.gz) = 805431 bytes
+SHA1 (patch-aa) = c84dad2b3c4f165391090cafb217904bfc089cea
+SHA1 (patch-ab) = b8f4f183935b8b8a10e3b300fc2d6f107512616d
+SHA1 (patch-ac) = 29e407adc69c987b4fd5cb6a045158dfe23e5182
+SHA1 (patch-ad) = 7611606133c7293506e15098f18f000c8f8f13db
+SHA1 (patch-ae) = ea631b8202a7ed627fa6140f815b2b899054a621
+SHA1 (patch-af) = 965b0162d3a57a6621ed4a5133785ae51ac63615
+SHA1 (patch-ag) = b242c0d9c817a26fcbbc2e482a6f6a15f6b43adc
+SHA1 (patch-ah) = a46251824fae140615965a63f770dcab08947371

@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/11/10 16:19:57 wiz Exp $
+--- src/Makefile.orig	Mon Dec  6 18:42:47 2004
++++ src/Makefile	Mon May  4 11:37:22 2009
+@@ -11,7 +11,7 @@
+ 
+ AS = $(CC)
+ 
+-XLIBS = -L/usr/X11R6/lib
++XLIBS = -L${X11BASE}/lib
+ PERL = perl
+ 
+ all: $(TARGET)
