@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2009/03/08 06:15:31 hasso Exp $
+# $NetBSD: Makefile,v 1.24 2009/11/10 14:55:17 brook Exp $
 #
 
-DISTNAME=		ganglia-3.0.1
-PKGNAME=		ganglia-monitor-core-3.0.1
-PKGREVISION=		9
+DISTNAME=		ganglia-3.1.2
+PKGNAME=		ganglia-monitor-core-3.1.2
 CATEGORIES=		net parallel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ganglia/}
-EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ganglia.sourceforge.net/
@@ -14,55 +12,65 @@ COMMENT=		Ganglia cluster monitor, monitoring daemon
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-gmetad
 USE_LIBTOOL=		yes
-CONFIG_GUESS_OVERRIDE?=		\
-	config.guess */config.guess */*/config.guess */*/*/config.guess
-CONFIG_SUB_OVERRIDE?=		\
-	config.sub */config.sub */*/config.sub */*/*/config.sub
+USE_LANGUAGES+=		c c++ fortran
 
-PATCH_ETC=		mans/gmetad.1 mans/gmond.1			\
-			gmetad/cmdline.c gmetad/conf.c 			\
-			gmond/cmdline.c gmond/g25_config.h		\
-			ganglia.html
+PLIST_VARS+=		python
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.ganglia
+PKG_SUPPORTED_OPTIONS=	python		# Gmond support for python modules
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mpython)
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
+PLIST.python=		yes
+.include "../../lang/python/application.mk"
+.else
+CONFIGURE_ARGS+=	--disable-python
+.endif
+
+SUBST_CLASSES+=		pkg_sysconfdir
+SUBST_STAGE.pkg_sysconfdir=	pre-configure
+SUBST_MESSAGE.pkg_sysconfdir=	Fixing PKG_SYSCONFDIR
+SUBST_FILES.pkg_sysconfdir=	ganglia.html				\
+				gmetad/cmdline.c gmetad/cmdline.h	\
+				gmetric/cmdline.c gmetric/cmdline.h	\
+				gmond/cmdline.c gmond/cmdline.h		\
+				gmond/g25_config.h gmond/gmond.conf.5	\
+				gmond/modules/conf.d/modpython.conf	\
+				gmond/modules/conf.d/modpython.conf.in	\
+				gmond/modules/python/README.in		\
+				mans/gmetad.1 mans/gmetric.1 mans/gmond.1
+SUBST_SED.pkg_sysconfdir+=	-e 's,/etc/ganglia,${PKG_SYSCONFDIR},g'
+SUBST_SED.pkg_sysconfdir+=	-e 's,/usr/lib/ganglia,${PREFIX}/lib/ganglia,g'
+
+DOCDIR=			${PREFIX}/share/doc/ganglia
 EGDIR=			${PREFIX}/share/examples/ganglia
 CONF_FILES=		${EGDIR}/gmond.conf ${PKG_SYSCONFDIR}/gmond.conf
 CONF_FILES+=		${EGDIR}/gmetad.conf ${PKG_SYSCONFDIR}/gmetad.conf
 
 RCD_SCRIPTS=		gmond gmetad
 
-INSTALLATION_DIRS=	${EGDIR} ${PKGMANDIR}/man1
-
-pre-patch:
-	${MKDIR} ${WRKSRC}/srclib/libmetrics/netbsd
-	${MKDIR} ${WRKSRC}/srclib/libmetrics/dragonfly
-	${CP} ${FILESDIR}/dfly-metrics.c ${WRKSRC}/srclib/libmetrics/dragonfly/metrics.c
-	${CP} ${FILESDIR}/dfly-Makefile.am ${WRKSRC}/srclib/libmetrics/dragonfly/Makefile.am
-	${CP} ${FILESDIR}/dfly-Makefile.in ${WRKSRC}/srclib/libmetrics/dragonfly/Makefile.in
-
-post-patch:
-.for pfile in ${PATCH_ETC}
-	${SED} -e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g' 		\
-		${WRKSRC}/${pfile} > ${WRKSRC}/${pfile}.tmp &&		\
-		${MV}  ${WRKSRC}/${pfile}.tmp ${WRKSRC}/${pfile}
-.endfor
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/mans/gmetad.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/mans/gmetric.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/mans/gmond.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/mans/gstat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/gmond/gmond.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/
 	${INSTALL_DATA} ${WRKSRC}/gmetad/gmetad.conf ${DESTDIR}${EGDIR}/
-	${DESTDIR}${PREFIX}/sbin/gmond -t > ${DESTDIR}${EGDIR}/gmond.conf
+	${WRKSRC}/gmond/gmond -t > ${DESTDIR}${EGDIR}/gmond.conf
+	${INSTALL_DATA} ${WRKSRC}/gmond/modules/python/README ${DESTDIR}${DOCDIR}/
 
-BUILDLINK_DEPENDS.apr+=	apr>=0.9.7.2.0.55nb3
-
-.include "../../devel/apr0/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/confuse/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
