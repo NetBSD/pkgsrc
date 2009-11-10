@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4251 2009/11/10 11:15:25 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4252 2009/11/10 11:52:21 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5703,3 +5703,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/appres to 1.0.2 [tnn 2009-11-09]
 	Added www/ap2-cband version 0.9.7.5 [sborrill 2009-11-10]
 	Updated devel/ptlib to 2.6.5 [wiz 2009-11-10]
+	Updated devel/p5-MooseX-Types-Structured to 0.19 [seb 2009-11-10]
