@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8640 2009/11/10 19:36:40 epg Exp $
+$NetBSD: TODO,v 1.8641 2009/11/10 20:35:32 markd Exp $
 
 Suggested new packages
 ======================
@@ -917,7 +917,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mDNSResponder-212.1
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
-	o mail-notification-5.3
 	o mailgraph-1.14
 	o mailscanner-4.74
 	o maketool-0.8.4
