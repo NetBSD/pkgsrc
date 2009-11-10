@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/09/09 05:44:12 epg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/11/10 19:34:45 epg Exp $
 ${PYSITELIB}/bzrlib/plugins/qbzr/AUTHORS.txt
 ${PYSITELIB}/bzrlib/plugins/qbzr/COPYING.txt
 ${PYSITELIB}/bzrlib/plugins/qbzr/NEWS.txt
@@ -133,6 +133,9 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/lib/revisionview.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/revtreeview.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/revtreeview.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/revtreeview.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/run.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/run.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/run.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/send.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/send.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/send.pyo
@@ -208,6 +211,12 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_qbzr.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_spellcheck.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_spellcheck.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_spellcheck.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_subprocess.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_subprocess.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_subprocess.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_tree_branch.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_tree_branch.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_tree_branch.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_treewidget.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_treewidget.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_treewidget.pyo
@@ -217,6 +226,9 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/test_util.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/trace.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/trace.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/trace.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tree_branch.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tree_branch.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tree_branch.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/treewidget.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/treewidget.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/treewidget.pyo
@@ -244,6 +256,9 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_pull.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_push.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_push.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_push.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_run.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_run.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_run.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_sysinfo.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_sysinfo.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_sysinfo.pyo
