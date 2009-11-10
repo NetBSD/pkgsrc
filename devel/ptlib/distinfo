@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/07/26 09:19:06 wiz Exp $
+$NetBSD: distinfo,v 1.10 2009/11/10 11:15:12 wiz Exp $
 
-SHA1 (ptlib-2.6.4.tar.bz2) = 2808a7546c354c1b6c140667a91da6f79a98f5c9
-RMD160 (ptlib-2.6.4.tar.bz2) = 53d0ea4b67438f61f86fd0d8b68959ef0aa18342
-Size (ptlib-2.6.4.tar.bz2) = 3302374 bytes
-SHA1 (patch-aa) = f262a3d6c9e88c8f009bb459e4e423e155f6cb21
-SHA1 (patch-ad) = 092d0758e9b6e46a0b481659c8d7988806f2f39a
+SHA1 (ptlib-2.6.5.tar.bz2) = 919487aee09d5a1ea5c4f0abdc01bc49d9dcb596
+RMD160 (ptlib-2.6.5.tar.bz2) = ab2f8897b64ab7b1eb9fecc35470ce09af42bcf2
+Size (ptlib-2.6.5.tar.bz2) = 3302864 bytes
