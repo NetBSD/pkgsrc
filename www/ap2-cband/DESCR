@@ -1,0 +1,8 @@
+mod_cband - A per-user, per-virtualhost and per-destination bandwidth
+limiter for the Apache HTTP Server Version 2
+
+mod_cband is an Apache 2 module provided to solve the problem of limiting
+users' and virtualhosts' bandwidth usage. The current versions can set
+virtualhosts' and users' bandwidth quotas, maximal download speed (like in
+mod_bandwidth), requests-per-second speed and the maximal number of
+simultanous IP connections (like in mod_limitipconn).
