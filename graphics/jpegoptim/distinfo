@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/10/11 08:04:53 adam Exp $
+$NetBSD: distinfo,v 1.4 2009/11/10 07:30:19 adam Exp $
 
 SHA1 (jpegoptim-1.2.3.tar.gz) = ced7442282306345da077b7c7647ea53476000c3
 RMD160 (jpegoptim-1.2.3.tar.gz) = 508df7347cb99a355939b35c01cfb4a4fbd1dced
 Size (jpegoptim-1.2.3.tar.gz) = 60062 bytes
-SHA1 (patch-aa) = 8c49e3e6b4c928283c7fd4136f1691741359d4d9
