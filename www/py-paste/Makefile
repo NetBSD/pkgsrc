@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/09/12 05:32:38 epg Exp $
+# $NetBSD: Makefile,v 1.6 2009/11/10 17:08:24 epg Exp $
 
-DISTNAME=	Paste-1.7.1
+DISTNAME=	Paste-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/P/Paste/
