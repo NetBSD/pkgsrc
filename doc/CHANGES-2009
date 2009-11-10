@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4262 2009/11/10 16:23:38 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4263 2009/11/10 16:49:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5714,3 +5714,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ptlib to 2.6.5nb1 [wiz 2009-11-10]
 	Added emulators/kegs version 0.91 [wiz 2009-11-10]
 	Updated devel/opal to 3.6.6 [wiz 2009-11-10]
+	Updated sysutils/cdrtools to 2.01.01alpha67 [wiz 2009-11-10]
