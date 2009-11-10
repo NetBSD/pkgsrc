@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/02/07 14:39:28 jschauma Exp $
+$NetBSD: MESSAGE,v 1.2 2009/11/10 14:56:35 brook Exp $
 
 The Ganglia Web Frontend has been installed in the directory
 ${PREFIX}/share/httpd/htdocs/ganglia
@@ -15,5 +15,8 @@ A typical configuration would be:
         AllowOverride None
         Order allow,deny
         Allow from all
+        <IfModule dir_module>
+            DirectoryIndex index.php
+        </IfModule>
     </Directory>
 ===========================================================================
