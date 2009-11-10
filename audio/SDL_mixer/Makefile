@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/10/31 00:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2009/11/10 19:04:28 wiz Exp $
 
 DISTNAME=	SDL_mixer-1.2.9
 CATEGORIES=	audio
@@ -10,7 +10,6 @@ COMMENT=	Multi-channel audio mixer library
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-MAKE_JOBS_SAFE=		no
 
 CONFLICTS=		SDL-mixer-[0-9]*
 
