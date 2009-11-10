@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/11/10 14:56:35 brook Exp $
+# $NetBSD: Makefile,v 1.11 2009/11/10 15:45:19 brook Exp $
 #
 
 DISTNAME=	ganglia-3.1.2
@@ -37,7 +37,7 @@ do-build:
 	${MKDIR} ${WRKDIR}/ganglia
 	cd ${WRKSRC} && ${PAX} -rw . ${WRKDIR}/ganglia/
 .for f in ${JUNKFILES}
-	${RM} ${WRKDIR}/ganglia/$f
+	${RM} ${WRKDIR}/ganglia/${f}
 .endfor
 
 do-install:
