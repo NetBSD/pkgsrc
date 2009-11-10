@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4269 2009/11/10 19:37:06 epg Exp $
+$NetBSD: CHANGES-2009,v 1.4270 2009/11/10 20:35:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5724,3 +5724,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bzr to 2.0.1 [epg 2009-11-10]
 	Updated devel/qbzr to 0.16 [epg 2009-11-10]
 	Updated devel/bzr-explorer to 0.9.0 [epg 2009-11-10]
+	Updated mail/mail-notification to 5.4 [markd 2009-11-10]
