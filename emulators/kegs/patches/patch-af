@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/11/10 16:19:57 wiz Exp $
+--- src/vars_solaris.orig	2004-12-06 18:42:47.000000000 -0600
++++ src/vars_solaris	2009-11-05 10:31:04.000000000 -0600
+@@ -2,7 +2,7 @@
+ TARGET = xkegs
+ OBJECTS = $(OBJECTS1) xdriver.o
+ CC = cc
+-CCOPTS = -O
++CCOPTS = ${CFLAGS}
+ OPTS =  -DNDEBUG -DSOLARIS
+ SUFFIX =
+ NAME = xkegs
+@@ -15,6 +15,6 @@
+ AS = cc
+ PERL = perl
+ 
+-XOPTS = -I/usr/X/include
+-XLIBS = -L/usr/X/lib
++XOPTS = -I${X11BASE}/include
++XLIBS = -L${X11BASE}/lib
+ 

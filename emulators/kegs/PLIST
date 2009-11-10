@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/10 16:19:57 wiz Exp $
+bin/xkegs
+share/doc/kegs/CHANGES.txt
+share/doc/kegs/COPYING.txt
+share/doc/kegs/README.a2.compatibility.txt
+share/doc/kegs/README.compile.txt
+share/doc/kegs/README.kegs.txt
+share/doc/kegs/README.linux.partitions.txt
+share/doc/kegs/README.mac.txt
+share/doc/kegs/README.win32.txt
+share/kegs/config.kegs

@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/11/10 16:19:57 wiz Exp $
+--- src/vars_mac.orig	2004-12-06 18:42:47.000000000 -0600
++++ src/vars_mac	2009-11-05 10:30:51.000000000 -0600
+@@ -1,7 +1,7 @@
+ 
+ TARGET = kegsmac
+ OBJECTS = $(OBJECTS1) macsnd_driver.o macdriver.o
+-CCOPTS = -O2 -DMAC
++CCOPTS = ${CFLAGS} -DMAC
+ SUFFIX =
+ NAME = kegsmac
+ 
