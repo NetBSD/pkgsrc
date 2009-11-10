@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/11 18:40:08 epg Exp $
+$NetBSD: distinfo,v 1.2 2009/11/10 19:36:00 epg Exp $
 
-SHA1 (bzr-explorer-0.8.2.tar.gz) = 503ab90ec2c8a1cc8e0124b1bd17efaccf827222
-RMD160 (bzr-explorer-0.8.2.tar.gz) = ce95cb7dfb0d3c873c089fb10df0c307832511e5
-Size (bzr-explorer-0.8.2.tar.gz) = 1024764 bytes
+SHA1 (bzr-explorer-0.9.0.tar.gz) = e58a9c6921ee7aca773df5740f601d56b07b7981
+RMD160 (bzr-explorer-0.9.0.tar.gz) = 27f25ba178698b0b2160703417fedb95ea89c797
+Size (bzr-explorer-0.9.0.tar.gz) = 1121618 bytes
