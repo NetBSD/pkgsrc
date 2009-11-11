@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/08/30 21:57:07 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/11/11 12:21:52 tonnerre Exp $
 bin/puppet
 bin/puppetca
 bin/puppetd
@@ -13,6 +13,7 @@ ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.rst
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/filebucket
 ${GEM_LIBDIR}/bin/puppet
@@ -98,6 +99,7 @@ ${GEM_LIBDIR}/ext/autotest/Rakefile
 ${GEM_LIBDIR}/ext/autotest/config
 ${GEM_LIBDIR}/ext/autotest/readme.rst
 ${GEM_LIBDIR}/ext/bin/sleeper
+${GEM_LIBDIR}/ext/dbfix.sql
 ${GEM_LIBDIR}/ext/emacs/puppet-mode-init.el
 ${GEM_LIBDIR}/ext/emacs/puppet-mode.el
 ${GEM_LIBDIR}/ext/ldap/puppet.schema
@@ -134,6 +136,8 @@ ${GEM_LIBDIR}/lib/puppet/external/nagios/base.rb
 ${GEM_LIBDIR}/lib/puppet/external/nagios/parser.rb
 ${GEM_LIBDIR}/lib/puppet/feature/base.rb
 ${GEM_LIBDIR}/lib/puppet/feature/rails.rb
+${GEM_LIBDIR}/lib/puppet/file_collection.rb
+${GEM_LIBDIR}/lib/puppet/file_collection/lookup.rb
 ${GEM_LIBDIR}/lib/puppet/file_serving.rb
 ${GEM_LIBDIR}/lib/puppet/file_serving/configuration.rb
 ${GEM_LIBDIR}/lib/puppet/file_serving/configuration/parser.rb
@@ -273,11 +277,14 @@ ${GEM_LIBDIR}/lib/puppet/parser/functions/generate.rb
 ${GEM_LIBDIR}/lib/puppet/parser/functions/include.rb
 ${GEM_LIBDIR}/lib/puppet/parser/functions/inline_template.rb
 ${GEM_LIBDIR}/lib/puppet/parser/functions/realize.rb
+${GEM_LIBDIR}/lib/puppet/parser/functions/regsubst.rb
 ${GEM_LIBDIR}/lib/puppet/parser/functions/search.rb
 ${GEM_LIBDIR}/lib/puppet/parser/functions/sha1.rb
+${GEM_LIBDIR}/lib/puppet/parser/functions/sprintf.rb
 ${GEM_LIBDIR}/lib/puppet/parser/functions/tag.rb
 ${GEM_LIBDIR}/lib/puppet/parser/functions/tagged.rb
 ${GEM_LIBDIR}/lib/puppet/parser/functions/template.rb
+${GEM_LIBDIR}/lib/puppet/parser/functions/versioncmp.rb
 ${GEM_LIBDIR}/lib/puppet/parser/interpreter.rb
 ${GEM_LIBDIR}/lib/puppet/parser/lexer.rb
 ${GEM_LIBDIR}/lib/puppet/parser/parser.rb
@@ -507,6 +514,7 @@ ${GEM_LIBDIR}/lib/puppet/util/pidlock.rb
 ${GEM_LIBDIR}/lib/puppet/util/posix.rb
 ${GEM_LIBDIR}/lib/puppet/util/provider_features.rb
 ${GEM_LIBDIR}/lib/puppet/util/rails/collection_merger.rb
+${GEM_LIBDIR}/lib/puppet/util/rails/reference_serializer.rb
 ${GEM_LIBDIR}/lib/puppet/util/rdoc.rb
 ${GEM_LIBDIR}/lib/puppet/util/rdoc/code_objects.rb
 ${GEM_LIBDIR}/lib/puppet/util/rdoc/generators/puppet_generator.rb
@@ -523,16 +531,16 @@ ${GEM_LIBDIR}/lib/puppet/util/tagging.rb
 ${GEM_LIBDIR}/lib/puppet/util/uri_helper.rb
 ${GEM_LIBDIR}/lib/puppet/util/user_attr.rb
 ${GEM_LIBDIR}/lib/puppet/util/warnings.rb
-${GEM_LIBDIR}/man/man8/filebucket.8
-${GEM_LIBDIR}/man/man8/pi.8
-${GEM_LIBDIR}/man/man8/puppet.8
-${GEM_LIBDIR}/man/man8/puppet.conf.8
-${GEM_LIBDIR}/man/man8/puppetca.8
-${GEM_LIBDIR}/man/man8/puppetd.8
-${GEM_LIBDIR}/man/man8/puppetdoc.8
-${GEM_LIBDIR}/man/man8/puppetmasterd.8
-${GEM_LIBDIR}/man/man8/puppetrun.8
-${GEM_LIBDIR}/man/man8/ralsh.8
+${GEM_LIBDIR}/man/man8/filebucket.8.gz
+${GEM_LIBDIR}/man/man8/pi.8.gz
+${GEM_LIBDIR}/man/man8/puppet.8.gz
+${GEM_LIBDIR}/man/man8/puppet.conf.8.gz
+${GEM_LIBDIR}/man/man8/puppetca.8.gz
+${GEM_LIBDIR}/man/man8/puppetd.8.gz
+${GEM_LIBDIR}/man/man8/puppetdoc.8.gz
+${GEM_LIBDIR}/man/man8/puppetmasterd.8.gz
+${GEM_LIBDIR}/man/man8/puppetrun.8.gz
+${GEM_LIBDIR}/man/man8/ralsh.8.gz
 ${GEM_LIBDIR}/spec/Rakefile
 ${GEM_LIBDIR}/spec/integration/checksum.rb
 ${GEM_LIBDIR}/spec/integration/defaults.rb
@@ -565,6 +573,8 @@ ${GEM_LIBDIR}/spec/shared_behaviours/memory_terminus.rb
 ${GEM_LIBDIR}/spec/spec.opts
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/unit/executables/client/certhandler.rb
+${GEM_LIBDIR}/spec/unit/file_collection.rb
+${GEM_LIBDIR}/spec/unit/file_collection/lookup.rb
 ${GEM_LIBDIR}/spec/unit/file_serving/configuration.rb
 ${GEM_LIBDIR}/spec/unit/file_serving/configuration/parser.rb
 ${GEM_LIBDIR}/spec/unit/file_serving/content.rb
@@ -631,7 +641,6 @@ ${GEM_LIBDIR}/spec/unit/node/environment.rb
 ${GEM_LIBDIR}/spec/unit/node/facts.rb
 ${GEM_LIBDIR}/spec/unit/other/checksum.rb
 ${GEM_LIBDIR}/spec/unit/other/pgraph.rb
-${GEM_LIBDIR}/spec/unit/other/transaction.rb
 ${GEM_LIBDIR}/spec/unit/other/transbucket.rb
 ${GEM_LIBDIR}/spec/unit/other/transobject.rb
 ${GEM_LIBDIR}/spec/unit/parameter.rb
@@ -648,6 +657,7 @@ ${GEM_LIBDIR}/spec/unit/parser/ast/minus.rb
 ${GEM_LIBDIR}/spec/unit/parser/ast/node.rb
 ${GEM_LIBDIR}/spec/unit/parser/ast/nop.rb
 ${GEM_LIBDIR}/spec/unit/parser/ast/not.rb
+${GEM_LIBDIR}/spec/unit/parser/ast/resource.rb
 ${GEM_LIBDIR}/spec/unit/parser/ast/resource_override.rb
 ${GEM_LIBDIR}/spec/unit/parser/ast/resource_reference.rb
 ${GEM_LIBDIR}/spec/unit/parser/ast/vardef.rb
@@ -655,7 +665,11 @@ ${GEM_LIBDIR}/spec/unit/parser/collector.rb
 ${GEM_LIBDIR}/spec/unit/parser/compiler.rb
 ${GEM_LIBDIR}/spec/unit/parser/functions.rb
 ${GEM_LIBDIR}/spec/unit/parser/functions/inline_template.rb
+${GEM_LIBDIR}/spec/unit/parser/functions/realize.rb
+${GEM_LIBDIR}/spec/unit/parser/functions/regsubst.rb
+${GEM_LIBDIR}/spec/unit/parser/functions/sprintf.rb
 ${GEM_LIBDIR}/spec/unit/parser/functions/template.rb
+${GEM_LIBDIR}/spec/unit/parser/functions/versioncmp.rb
 ${GEM_LIBDIR}/spec/unit/parser/interpreter.rb
 ${GEM_LIBDIR}/spec/unit/parser/lexer.rb
 ${GEM_LIBDIR}/spec/unit/parser/parser.rb
@@ -683,10 +697,12 @@ ${GEM_LIBDIR}/spec/unit/provider/macauthorization.rb
 ${GEM_LIBDIR}/spec/unit/provider/mcx/mcxcontent.rb
 ${GEM_LIBDIR}/spec/unit/provider/mount.rb
 ${GEM_LIBDIR}/spec/unit/provider/mount/parsed.rb
+${GEM_LIBDIR}/spec/unit/provider/naginator.rb
 ${GEM_LIBDIR}/spec/unit/provider/package/apt.rb
 ${GEM_LIBDIR}/spec/unit/provider/package/dpkg.rb
 ${GEM_LIBDIR}/spec/unit/provider/package/gem.rb
 ${GEM_LIBDIR}/spec/unit/provider/package/hpux.rb
+${GEM_LIBDIR}/spec/unit/provider/parsedfile.rb
 ${GEM_LIBDIR}/spec/unit/provider/selboolean.rb
 ${GEM_LIBDIR}/spec/unit/provider/selmodule-example.pp
 ${GEM_LIBDIR}/spec/unit/provider/selmodule.rb
@@ -706,6 +722,7 @@ ${GEM_LIBDIR}/spec/unit/relationship.rb
 ${GEM_LIBDIR}/spec/unit/reports.rb
 ${GEM_LIBDIR}/spec/unit/resource_reference.rb
 ${GEM_LIBDIR}/spec/unit/simple_graph.rb
+${GEM_LIBDIR}/spec/unit/transaction.rb
 ${GEM_LIBDIR}/spec/unit/transaction/change.rb
 ${GEM_LIBDIR}/spec/unit/transaction/event.rb
 ${GEM_LIBDIR}/spec/unit/transaction/report.rb
@@ -714,6 +731,7 @@ ${GEM_LIBDIR}/spec/unit/type/augeas.rb
 ${GEM_LIBDIR}/spec/unit/type/computer.rb
 ${GEM_LIBDIR}/spec/unit/type/exec.rb
 ${GEM_LIBDIR}/spec/unit/type/file.rb
+${GEM_LIBDIR}/spec/unit/type/file/content.rb
 ${GEM_LIBDIR}/spec/unit/type/file/ensure.rb
 ${GEM_LIBDIR}/spec/unit/type/file/group.rb
 ${GEM_LIBDIR}/spec/unit/type/file/owner.rb
@@ -736,9 +754,11 @@ ${GEM_LIBDIR}/spec/unit/type/user.rb
 ${GEM_LIBDIR}/spec/unit/type/zfs.rb
 ${GEM_LIBDIR}/spec/unit/type/zone.rb
 ${GEM_LIBDIR}/spec/unit/type/zpool.rb
+${GEM_LIBDIR}/spec/unit/util/autoload.rb
 ${GEM_LIBDIR}/spec/unit/util/checksums.rb
 ${GEM_LIBDIR}/spec/unit/util/constant_inflector.rb
 ${GEM_LIBDIR}/spec/unit/util/file_locking.rb
+${GEM_LIBDIR}/spec/unit/util/filetype.rb
 ${GEM_LIBDIR}/spec/unit/util/ldap/connection.rb
 ${GEM_LIBDIR}/spec/unit/util/ldap/generator.rb
 ${GEM_LIBDIR}/spec/unit/util/ldap/manager.rb
@@ -746,6 +766,7 @@ ${GEM_LIBDIR}/spec/unit/util/loadedfile.rb
 ${GEM_LIBDIR}/spec/unit/util/log.rb
 ${GEM_LIBDIR}/spec/unit/util/metric.rb
 ${GEM_LIBDIR}/spec/unit/util/nagios_maker.rb
+${GEM_LIBDIR}/spec/unit/util/package.rb
 ${GEM_LIBDIR}/spec/unit/util/posix.rb
 ${GEM_LIBDIR}/spec/unit/util/resource_template.rb
 ${GEM_LIBDIR}/spec/unit/util/selinux.rb
@@ -972,7 +993,6 @@ ${GEM_LIBDIR}/test/util/classgen.rb
 ${GEM_LIBDIR}/test/util/execution.rb
 ${GEM_LIBDIR}/test/util/features.rb
 ${GEM_LIBDIR}/test/util/fileparsing.rb
-${GEM_LIBDIR}/test/util/filetype.rb
 ${GEM_LIBDIR}/test/util/inifile.rb
 ${GEM_LIBDIR}/test/util/instance_loader.rb
 ${GEM_LIBDIR}/test/util/log.rb
@@ -984,6 +1004,7 @@ ${GEM_LIBDIR}/test/util/storage.rb
 ${GEM_LIBDIR}/test/util/subclass_loader.rb
 ${GEM_LIBDIR}/test/util/utiltest.rb
 ${GEM_HOME}/specifications/puppet-${PKGVERSION}.gemspec
+pgsql/data/global/pgstat.stat
 share/examples/puppet/puppet.conf
 share/examples/rc.d/puppetd
 share/examples/rc.d/puppetmasterd
