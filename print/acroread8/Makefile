@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2009/06/17 04:42:48 obache Exp $
+# $NetBSD: Makefile,v 1.8.4.1 2009/11/11 22:15:21 tron Exp $
 
 DISTNAME=	acroread8	# overridden below
-PKGNAME=	acroread8-8.1.6
+PKGNAME=	acroread8-8.1.7
 CATEGORIES=	print
-MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.6/enu/
+MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/enu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
@@ -28,14 +28,20 @@ WRKSRC=			${WRKDIR}/AdobeReader
 BUILD_DIRS=		# empty
 
 EMUL_PLATFORMS=		linux-i386
+EMUL_PLATFORMS+=	solaris-sparc
 EMUL_MODULES.linux=	compat cups gtk2 locale
 EMUL_REQD=		suse>=10.0
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${EMUL_PLATFORM} == "linux-i386"
-DISTNAME=	AdobeReader_enu-8.1.6-1.i486
+DISTNAME=	AdobeReader_enu-8.1.7-1.i486
 PLATFORM=	intellinux
+PLIST_SRC=	PLIST PLIST.Linux
+.elif ${EMUL_PLATFORM} == "solaris-sparc"
+DISTNAME=	AdobeReader_enu-8.1.7-1.sparc
+PLATFORM=	sparcsolaris
+CHECK_SHLIBS=	no
 .else
 PLATFORM=	unknown
 .endif
