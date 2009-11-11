@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.13 2009/11/04 21:44:31 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.14 2009/11/11 22:15:48 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -39,3 +39,5 @@ Pullup ticket #2924 - requested by tron
 wireshark: security update
 Pullup ticket #2927 - requested by obache
 p5-HTML-Parser: security update
+Pullup ticket #2928 - requested by tez
+acroread8: security update
