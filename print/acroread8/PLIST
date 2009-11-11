@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2.4.1 2009/11/11 22:15:21 tron Exp $
 Acrobat8/Adobe/Reader8/bin/UNINSTALL
 Acrobat8/Adobe/Reader8/bin/acroread
 Acrobat8/Adobe/Reader8/Reader/help/ENU/ReadMe.htm
@@ -136,103 +136,18 @@ Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/WSF19D4446-A439-4adc-B9ED-E11325487E28.h
 Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/WSF30BC11C-BCEF-4e2b-8934-059526ED0229.html
 Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/WSF3FF17C0-8293-4cf7-B1B6-C362AC31072E.html
 Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/WSF6F81C64-BD08-40dc-A737-A0A62AAFC7D3.html
+Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/LRHelpContentReleaseNotes.txt
+Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/Reader_en-us_report-conref.html
+Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/Reader_en-us_report-content.html
+Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/Reader_en-us_report-duplicate.html
+Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/Reader_en-us_report-image.html
+Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/Reader_en-us_report-indexes.html
+Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/Reader_en-us_report-summary.html
+Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/Reader_en-us_report-xref.html
+Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/WS974BA363-E830-43a0-8A0D-54C90F13FE43.html
 Acrobat8/Adobe/Reader8/Reader/Legal/en_US/License.txt
 Acrobat8/Adobe/Reader8/Reader/Legal/en_US/LGPL.html
 Acrobat8/Adobe/Reader8/Reader/Legal/en_US/LGPL.txt
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/AcroForm/PMP/libdatamatrixpmp.pmp
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/AcroForm/PMP/libpdf417pmp.pmp
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/AcroForm/PMP/libqrcodepmp.pmp
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/AcroForm/adobepdf.xdc
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Accessibility.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/AcroForm.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/MakeAccessible.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Annots.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/checkers.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/DigSig.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/EFS.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/EScript.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/ewh.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/HLS.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/PDDom.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/DVA.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/ReadOutLoud.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/PPKLite.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Annotations/Stamps/ENU/Dynamic.pdf
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Annotations/Stamps/ENU/SignHere.pdf
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Annotations/Stamps/ENU/StandardBusiness.pdf
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Annotations/Stamps/Words.pdf
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/SearchFind.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/SaveAsRTF.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/SendMail.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Spelling.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/wwwlink.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Multimedia/MPP/Real.mpp
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Multimedia.api
-Acrobat8/Adobe/Reader8/Reader/intellinux/bin/SynchronizerApp
-Acrobat8/Adobe/Reader8/Reader/intellinux/bin/acroread
-Acrobat8/Adobe/Reader8/Reader/intellinux/bin/SynchronizerApp-binary
-Acrobat8/Adobe/Reader8/Reader/intellinux/bin/xdg-email
-Acrobat8/Adobe/Reader8/Reader/intellinux/bin/xdg-desktop-icon
-Acrobat8/Adobe/Reader8/Reader/intellinux/bin/xdg-icon-resource
-Acrobat8/Adobe/Reader8/Reader/intellinux/bin/xdg-screensaver
-Acrobat8/Adobe/Reader8/Reader/intellinux/bin/xdg-open
-Acrobat8/Adobe/Reader8/Reader/intellinux/bin/xdg-desktop-menu
-Acrobat8/Adobe/Reader8/Reader/intellinux/bin/xdg-mime
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libicui18n.so.34.0
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libicuuc.so.34.0
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libAXSLE.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libAXE8SharedExpat.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libicudata.so.34.0
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libWRServices.so.2.1
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libAdobeXMP.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libsccore.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libadobelinguistic.so.3.0.0
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libextendscript.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/librt3d.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libahclient.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libResAccess.so.0.1
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libACE.so.2.10
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libAGM.so.4.16
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libBIB.so.1.2
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libJP2K.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libBIBUtils.so.1.1
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libCoolType.so.5.03
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libcurl.so.3.0.0
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libssl.so.0.9.7
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libgcc_s.so.1
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libcrypto.so.0.9.7
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libstdc++.so.6.0.7
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libACE.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libAGM.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libBIB.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libCoolType.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libBIBUtils.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libResAccess.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libWRServices.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libcurl.so.3
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libcurl.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libssl.so.0
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libssl.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libcrypto.so.0
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libcrypto.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libgcc_s.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libstdc++.so.6
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libadobelinguistic.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libicuuc.so.34
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libicuuc.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libicudata.so.34
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libicudata.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libicui18n.so.34
-Acrobat8/Adobe/Reader8/Reader/intellinux/lib/libicui18n.so
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins3d/3difr.x3d
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins3d/2d.x3d
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins3d/prc/MyriadCAD.otf
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins3d/tesselate.x3d
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins3d/drvSOFT.x3d
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins3d/drvOpenGL.x3d
-Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins3d/prcr.x3d
-Acrobat8/Adobe/Reader8/Reader/intellinux/SPPlugins/ADMPlugin.apl
-Acrobat8/Adobe/Reader8/Reader/intellinux/mozilla/prefs.js
 Acrobat8/Adobe/Reader8/Reader/AcroVersion
 Acrobat8/Adobe/Reader8/Reader/GlobalPrefs/reader_prefs
 Acrobat8/Adobe/Reader8/Reader/pmd.cer
@@ -272,8 +187,6 @@ Acrobat8/Adobe/Reader8/Reader/Tracker/server_ok.gif
 Acrobat8/Adobe/Reader8/Reader/Tracker/trash.gif
 Acrobat8/Adobe/Reader8/Reader/Cert/curl-ca-bundle.crt
 Acrobat8/Adobe/Reader8/Reader/PDFSigQFormalRep.pdf
-Acrobat8/Adobe/Reader8/Reader/JavaScripts/JSByteCodeLin.bin
-Acrobat8/Adobe/Reader8/Reader/Patch/selinux_patch
 Acrobat8/Adobe/Reader8/Resource/Font/CourierStd-Bold.otf
 Acrobat8/Adobe/Reader8/Resource/Font/CourierStd.otf
 Acrobat8/Adobe/Reader8/Resource/Font/AdobePiStd.otf
@@ -340,78 +253,29 @@ Acrobat8/Adobe/Reader8/Resource/unicode/mappings/win/CP932.TXT
 Acrobat8/Adobe/Reader8/Resource/unicode/mappings/win/CP936.TXT
 Acrobat8/Adobe/Reader8/Resource/unicode/mappings/win/CP949.TXT
 Acrobat8/Adobe/Reader8/Resource/unicode/mappings/win/CP950.TXT
-Acrobat8/Adobe/Reader8/Resource/Icons/16x16/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/16x16/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/16x16/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/16x16/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/16x16/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/16x16/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Icons/20x20/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/20x20/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/20x20/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/20x20/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/20x20/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/20x20/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Icons/22x22/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/22x22/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/22x22/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/22x22/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/22x22/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/22x22/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Icons/24x24/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/24x24/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/24x24/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/24x24/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/24x24/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/24x24/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Icons/32x32/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/32x32/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/32x32/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/32x32/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/32x32/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/32x32/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Icons/36x36/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/36x36/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/36x36/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/36x36/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/36x36/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/36x36/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Icons/48x48/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/48x48/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/48x48/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/48x48/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/48x48/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/48x48/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Icons/64x64/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/64x64/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/64x64/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/64x64/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/64x64/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/64x64/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Icons/96x96/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/96x96/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/96x96/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/96x96/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/96x96/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/96x96/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Icons/128x128/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/128x128/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/128x128/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/128x128/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/128x128/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/128x128/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Icons/192x192/vnd.adobe.pdx.png
 Acrobat8/Adobe/Reader8/Resource/Icons/192x192/AdobeReader8.png
 Acrobat8/Adobe/Reader8/Resource/Icons/192x192/adobe.pdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/192x192/vnd.adobe.xfdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/192x192/vnd.fdf.png
-Acrobat8/Adobe/Reader8/Resource/Icons/192x192/vnd.adobe.xdp+xml.png
-Acrobat8/Adobe/Reader8/Resource/Support/vnd.adobe.pdx.desktop
 Acrobat8/Adobe/Reader8/Resource/Support/AdobeReader.desktop
-Acrobat8/Adobe/Reader8/Resource/Support/AdobeReader.xml
-Acrobat8/Adobe/Reader8/Resource/Support/vnd.fdf.desktop
-Acrobat8/Adobe/Reader8/Resource/Support/vnd.adobe.xdp+xml.desktop
-Acrobat8/Adobe/Reader8/Resource/Support/vnd.adobe.xfdf.desktop
 Acrobat8/Adobe/Reader8/Resource/Linguistics/Providers/Proximity/brt04.lex
 Acrobat8/Adobe/Reader8/Resource/Linguistics/Providers/Proximity/brt0401.lex
 Acrobat8/Adobe/Reader8/Resource/Linguistics/Providers/Proximity/brt0402.lex
@@ -429,7 +293,6 @@ Acrobat8/Adobe/Reader8/Resource/Linguistics/Providers/Proximity/usa8602.lex
 Acrobat8/Adobe/Reader8/Resource/Linguistics/Providers/Proximity/usa8603.lex
 Acrobat8/Adobe/Reader8/Resource/Linguistics/Providers/Proximity/usa8604.lex
 Acrobat8/Adobe/Reader8/Resource/Linguistics/LanguageNames/DisplayLanguageNames.en_US.txt
-Acrobat8/Adobe/Reader8/Browser/intellinux/nppdf.so
 Acrobat8/Adobe/Reader8/Browser/HowTo/ENU/Browser_Plugin_HowTo.txt
 Acrobat8/Adobe/Reader8/Browser/install_browser_plugin
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/Review01.html
@@ -578,6 +441,8 @@ Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/images/up.gif
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/images/wa17_popup.png
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/images/wa14.png
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/images/wa17.png
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/images/A_ArticleTool_Sm_N.png
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/images/endarticle.png
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WS4BA7C7D5-4075-4781-8101-1C8EE0E870F7.html
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WS4D1BC5C0-B92F-44ea-810D-9ECD657E1892.html
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WS506932BA-8229-4522-B786-3C2221C6D405.html
@@ -779,8 +644,15 @@ Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/srch_fset.html
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/srch_top.html
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/utilities.js
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/version.html
-Acrobat8/Adobe/HelpViewer/1.0/intellinux/bin/ahv-binary
-Acrobat8/Adobe/HelpViewer/1.0/intellinux/bin/ahv
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WS07491C31-1E52-4406-8191-D51251588B61.html
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WS2101F5BE-8188-4562-9DEC-C244234E8E65.html
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WS481860DF-6C1E-49ce-A303-B3EFF2E864EB.html
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WS58a04a822e3e50102bd615109794195ff-7ccd.html
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WS7C14ED36-58F4-4680-AF2F-1C32F4444872.html
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WS9C80C2F9-BF08-468b-ABA8-BAD073B1CEB8.html
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WSA63CB66C-7285-477d-A055-7FDE5A5C8965.html
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WSDB9A75C3-9D33-4717-AF04-761385A64358.html
+Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/YAHOO.js
 Acrobat8/Adobe/HelpViewer/1.0/resources/help.html
 Acrobat8/Adobe/HelpViewer/1.0/resources/help.jpg
 bin/acroread
