@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4277 2009/11/11 15:27:46 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4278 2009/11/11 16:32:11 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5731,3 +5731,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/puppet to 0.24.8 [tonnerre 2009-11-11]
 	Updated time/p5-MooseX-Types-DateTime-ButMaintained to 0.11 [seb 2009-11-11]
 	Updated www/p5-App-Nopaste to 0.17 [seb 2009-11-11]
+	Updated devel/p5-Data-Peek to 0.29 [seb 2009-11-11]
