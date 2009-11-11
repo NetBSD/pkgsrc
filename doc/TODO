@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8642 2009/11/11 06:34:42 seb Exp $
+$NetBSD: TODO,v 1.8643 2009/11/11 08:58:42 seb Exp $
 
 Suggested new packages
 ======================
@@ -1050,7 +1050,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Date-Calc-6.3
-	o p5-DateTime-TimeZone-1.01
 	o p5-GnuPG-Interface-0.42
 	o p5-HTML-Parser-3.64
 	o p5-Image-Info-1.30
