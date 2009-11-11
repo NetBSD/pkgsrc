@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8641 2009/11/10 20:35:32 markd Exp $
+$NetBSD: TODO,v 1.8642 2009/11/11 06:34:42 seb Exp $
 
 Suggested new packages
 ======================
@@ -1054,7 +1054,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-GnuPG-Interface-0.42
 	o p5-HTML-Parser-3.64
 	o p5-Image-Info-1.30
-	o p5-Text-Markdown-1.0.26
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o packagekit-0.5.1
