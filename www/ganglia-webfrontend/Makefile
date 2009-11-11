@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2009/11/10 15:45:19 brook Exp $
+# $NetBSD: Makefile,v 1.12 2009/11/11 07:59:26 wiz Exp $
 #
 
 DISTNAME=	ganglia-3.1.2
-PKGNAME=	ganglia-webfrontend-3.0.1
+PKGNAME=	ganglia-webfrontend-3.1.2
 CATEGORIES=	www parallel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ganglia/}
 
@@ -13,7 +13,7 @@ COMMENT=	PHP based frontend for the Ganglia Cluster Monitor
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.1:../../www/ap-php
-DEPENDS+=	ganglia-monitor-core>=3.0.1:../../parallel/ganglia-monitor-core
+DEPENDS+=	ganglia-monitor-core>=3.1.2:../../parallel/ganglia-monitor-core
 
 USE_TOOLS+=	pax
 
