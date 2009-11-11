@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/08/30 22:03:53 tonnerre Exp $
+# $NetBSD: Makefile,v 1.7 2009/11/11 12:21:52 tonnerre Exp $
 
-DISTNAME=		puppet-0.24.7
-PKGREVISION=		1
+DISTNAME=		puppet-0.24.8
 CATEGORIES=		sysutils
 
 MAINTAINER=		tonnerre@NetBSD.org
