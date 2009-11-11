@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2009/07/07 21:01:29 sno Exp $
+# $NetBSD: Makefile,v 1.19 2009/11/11 16:44:13 seb Exp $
 
 PNAME=		Data-UUID
-DISTNAME=	${PNAME}-1.202
-PKGNAME=	p5-${PNAME}-1.20.2
+DISTNAME=	${PNAME}-1.203
+PKGNAME=	p5-${PNAME}-1.20.3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
@@ -18,8 +18,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c
 
 PERL5_PACKLIST=		auto/Data/UUID/.packlist
-
-MAKE_ENV+=		PERL_MM_USE_DEFAULT=1
 
 .include "../../mk/bsd.prefs.mk"
 
