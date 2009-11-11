@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4270 2009/11/10 20:35:32 markd Exp $
+$NetBSD: CHANGES-2009,v 1.4271 2009/11/11 06:34:42 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5725,3 +5725,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/qbzr to 0.16 [epg 2009-11-10]
 	Updated devel/bzr-explorer to 0.9.0 [epg 2009-11-10]
 	Updated mail/mail-notification to 5.4 [markd 2009-11-10]
+	Updated textproc/p5-Text-Markdown to 1.0.29 [seb 2009-11-11]
