@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4274 2009/11/11 09:13:08 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4275 2009/11/11 12:48:12 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5728,3 +5728,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-Markdown to 1.0.29 [seb 2009-11-11]
 	Updated time/p5-DateTime-TimeZone to 1.04 [seb 2009-11-11]
 	Updated time/p5-DateTime to 0.5100 [seb 2009-11-11]
+	Updated sysutils/puppet to 0.24.8 [tonnerre 2009-11-11]
