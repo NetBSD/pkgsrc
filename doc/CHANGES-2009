@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4281 2009/11/11 17:50:18 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4282 2009/11/11 18:32:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5735,3 +5735,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Data-UUID to 1.20.3 [seb 2009-11-11]
 	Updated devel/p5-Date-Calc to 6.3 [seb 2009-11-11]
 	Updated devel/p5-ExtUtils-CBuilder to 0.27 [seb 2009-11-11]
+	Updated devel/p5-Object-InsideOut to 3.57 [seb 2009-11-11]
