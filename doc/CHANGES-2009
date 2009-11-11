@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4279 2009/11/11 16:44:24 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4280 2009/11/11 17:40:46 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5733,3 +5733,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-App-Nopaste to 0.17 [seb 2009-11-11]
 	Updated devel/p5-Data-Peek to 0.29 [seb 2009-11-11]
 	Updated devel/p5-Data-UUID to 1.20.3 [seb 2009-11-11]
+	Updated devel/p5-Date-Calc to 6.3 [seb 2009-11-11]
