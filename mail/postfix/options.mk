@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.34 2008/10/16 09:49:13 martti Exp $
+# $NetBSD: options.mk,v 1.35 2009/11/12 15:52:26 ghen Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
-PKG_SUPPORTED_OPTIONS=	bdb ldap mysql mysql4 pcre pgsql sasl sqlite tls
+PKG_SUPPORTED_OPTIONS=	bdb ldap mysql mysql4 pcre pgsql sasl sqlite tls cdb
 PKG_SUGGESTED_OPTIONS=	tls
 
 .include "../../mk/bsd.options.mk"
