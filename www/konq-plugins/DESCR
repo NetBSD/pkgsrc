@@ -1,0 +1,32 @@
+This module contains plugins that interact with Konqueror.
+
+babelfish - It uses AltaVista's BabelFish site to
+translate the current page to whatever language you want
+
+dirfilter - This allows you to filter the current
+directory in a variety of ways.
+
+domtreeviewer - Displays the document object modelin a dialog box.
+
+htmlvalidator - It uses the w3c HTML validator to validate
+the current page.
+
+cssvalidator - It uses the w3c HTML validator to validate
+the current page.
+
+khtmlsettingsplugin - This allows you to enable or disable a bunch
+of HTML settings without going through the settings dialog.
+
+kimgalleryplugin - It creates an HTML page with thumbnails of
+all the images in the current directory.
+
+uachanger - It allows you to change the user agent
+without going through the settings dialog.
+
+autorefresh - It lets you tell konqueror to refresh a page
+automatically after a specific period.
+
+fsview - Graphical Disk Usage as konqueror plugin for
+inode/directory, for local files.
+
+akregator - add feeds to Akregator directly from Konqueror.
