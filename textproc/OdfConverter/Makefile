@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/09/02 08:47:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/11/12 01:15:31 dsainty Exp $
 #
 
 DISTNAME=	OdfAddinForOffice-src-3.0
@@ -46,7 +46,8 @@ FILE_CASE_FIXES+=	source/Shell/OdfConverter/OdfValidator.cs
 post-extract:
 	cd ${WRKDIR} && mv "odf-converter-r5224/trunk" ${DISTNAME:Q}
 	set -e; \
-	find "${WRKSRC}" -name '[Mm][Aa][Kk][Ee][Ff][Ii][Ll][Ee]' -print | \
+	find "${WRKSRC}" -name Makefile -o \
+	    -name '[Mm][Aa][Kk][Ee][Ff][Ii][Ll][Ee]' -print | \
 	  while read file; do \
 	    dir=`dirname "$$file"`; mv "$$file" "$$dir/Makefile"; done
 	set -e; files=""; \
