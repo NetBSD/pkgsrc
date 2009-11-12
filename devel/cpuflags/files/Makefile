@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.13 2008/06/12 13:37:19 abs Exp $
+# $Id: Makefile,v 1.14 2009/11/12 05:40:36 obache Exp $
 
 VERSION=1.14
 
@@ -26,15 +26,15 @@ clean:
 	rm -rf *.out DIST
 
 install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${BINDIR}
-	${INSTALL_MAN_DIR} ${DESTDIR}/${MANDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}/${SHAREMKDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}/${SUBRDIR}
-	${INSTALL_SCRIPT} cpuflags.sh.out	${DESTDIR}/${BINDIR}/cpuflags
-	${INSTALL_MAN} cpuflags.1.out	${DESTDIR}/${MANDIR}/cpuflags.1
-	${INSTALL_DATA} optimize_gcc.mk	${DESTDIR}/${SHAREMKDIR}/optimize_gcc.mk
-	${INSTALL_DATA} cpuflags.mk.out	${DESTDIR}/${SHAREMKDIR}/cpuflags.mk
-	${INSTALL_DATA} subr_*		${DESTDIR}/${SUBRDIR}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${BINDIR}
+	${INSTALL_MAN_DIR} ${DESTDIR}${MANDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREMKDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SUBRDIR}
+	${INSTALL_SCRIPT} cpuflags.sh.out	${DESTDIR}${BINDIR}/cpuflags
+	${INSTALL_MAN} cpuflags.1.out	${DESTDIR}${MANDIR}/cpuflags.1
+	${INSTALL_DATA} optimize_gcc.mk	${DESTDIR}${SHAREMKDIR}/optimize_gcc.mk
+	${INSTALL_DATA} cpuflags.mk.out	${DESTDIR}${SHAREMKDIR}/cpuflags.mk
+	${INSTALL_DATA} subr_*		${DESTDIR}${SUBRDIR}
 
 dist:
 	mkdir -p DIST/cpuflags-${VERSION}
