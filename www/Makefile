@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.670 2009/11/10 17:18:44 epg Exp $
+# $NetBSD: Makefile,v 1.671 2009/11/12 11:08:40 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -154,6 +154,7 @@ SUBDIR+=	kannel
 SUBDIR+=	kazehakase
 SUBDIR+=	kdewebdev3
 SUBDIR+=	kdewebdev4
+SUBDIR+=	konq-plugins
 SUBDIR+=	lhs
 SUBDIR+=	libghttp
 SUBDIR+=	libgtkhtml
