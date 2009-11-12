@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4284 2009/11/11 20:55:48 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4285 2009/11/12 11:10:38 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5738,3 +5738,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Object-InsideOut to 3.57 [seb 2009-11-11]
 	Updated net/filezilla to 3.3.0 [zafer 2009-11-11]
 	Updated devel/p5-PathTools to 3.31 [seb 2009-11-11]
+	Added www/konq-plugins version 4.3.1 [markd 2009-11-12]
