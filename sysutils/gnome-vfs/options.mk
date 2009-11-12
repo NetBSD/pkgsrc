@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2009/04/12 20:08:04 abs Exp $
+# $NetBSD: options.mk,v 1.4 2009/11/12 00:13:26 drochner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-vfs
-PKG_SUPPORTED_OPTIONS=	fam gssapi hal inet6
+PKG_SUPPORTED_OPTIONS=	fam gssapi hal inet6 avahi
 PKG_SUGGESTED_OPTIONS=	fam hal
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,4 +40,11 @@ CONFIGURE_ARGS+=	--disable-hal
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mavahi)
+CONFIGURE_ARGS+=	--enable-avahi
+.include "../../net/avahi/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-avahi
 .endif
