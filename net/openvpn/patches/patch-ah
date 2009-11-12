@@ -1,0 +1,23 @@
+--- tun.c.orig	2009-11-12 09:22:19.000000000 +0100
++++ tun.c	2009-11-12 09:23:00.000000000 +0100
+@@ -789,17 +789,17 @@
+       /*
+        * NetBSD has distinct tun and tap devices
+        * so we don't need the "link0" extra parameter to specify we want to do 
+        * tunneling at the ethernet level
++       * NB: The tun driver has no broadcast capability.
+        */
+ 		argv_printf (&argv,
+-			  "%s %s %s netmask %s mtu %d broadcast %s",
++			  "%s %s %s netmask %s mtu %d",
+ 			  IFCONFIG_PATH,
+ 			  actual,
+ 			  ifconfig_local,
+ 			  ifconfig_remote_netmask,
+-			  tun_mtu,
+-			  ifconfig_broadcast
++			  tun_mtu
+ 			  );
+       argv_msg (M_INFO, &argv);
+       openvpn_execve_check (&argv, es, S_FATAL, "NetBSD ifconfig failed");
+       tt->did_ifconfig = true;
