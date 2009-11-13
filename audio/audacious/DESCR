@@ -1,4 +1,8 @@
-Audacious is a fork of beep-media-player 0.9.7.1.
+Audacious is a media player used to play audio and other kinds of
+media files. It is a fork of beep-media-player 0.9.7.1. The primary
+goals of this fork are keeping the ideology of the original BMP
+and merging miscellaneous plugins into Audacious.
 
-The primary goals of this fork are keeping the ideology of the
-original BMP and merging miscellaneous plugins into Audacious.
+Audacious can be extended through plugins to play a number of other
+audio and video formats. (The audio/audacious-plugins package
+provides the standard plugins needed to actually play music.)
