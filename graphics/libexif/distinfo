@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2009/10/24 13:09:05 drochner Exp $
+$NetBSD: distinfo,v 1.26 2009/11/13 12:58:18 adam Exp $
 
-SHA1 (libexif-0.6.18.tar.bz2) = b0b2b9ec9fcbe5aee235a98f8269545ca36490ac
-RMD160 (libexif-0.6.18.tar.bz2) = a1dc8aa1695bcb4cf9bd6e00a258bfa63f9ae13f
-Size (libexif-0.6.18.tar.bz2) = 1004974 bytes
+SHA1 (libexif-0.6.19.tar.bz2) = 820f07ff12a8cc720a6597d46277f01498c8aba4
+RMD160 (libexif-0.6.19.tar.bz2) = c17549ffbcef7d416c17a60cbd6877317e0c5442
+Size (libexif-0.6.19.tar.bz2) = 1142963 bytes
 SHA1 (patch-aa) = 5a32622fac1860ecaac9e3ed9b5cea9bf1640027
