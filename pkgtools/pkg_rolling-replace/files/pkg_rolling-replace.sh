@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.21 2009/06/17 08:12:18 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.22 2009/11/13 19:40:55 sno Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -102,11 +102,14 @@ usage()
 {
     echo "Usage: pkg_rolling-replace [opts]
         -h         This help
+        -F         Fetch sources (including depends) only, don't build
+        -k         Keep running, even on error
         -n         Don't actually do make replace
         -r         Just replace, don't create binary packages
         -s         Replace even if the ABIs are still compatible ("strict")
         -u         Update outdated packages
         -v         Verbose
+        -L <path>  Log to path (<path>/pkgdir/pkg)
         -X <pkg>   exclude <pkg> from being rebuilt
         -x <pkg>   exclude <pkg> from outdated check
 
@@ -261,12 +264,44 @@ vsleep()
     fi
 }
 
+report()
+{
+    for a in $SUCCESSED; do
+        verbose "+ $a"
+    done
+
+    for a in $FAILED; do
+        verbose "- $a"
+    done
+}
+
 abort()
 {
 	echo "*** $1"
 	echo "*** Please read the errors listed above, fix the problem,"
 	echo "*** then re-run pkg_rolling-replace to continue."
+        report
 	exit 1
+}
+
+todo()
+{
+    if [ -z "$opt_F" ]; then
+        verbose "${OPI} Packages to rebuild:"
+        verbose "${OPC} MISMATCH_TODO=[$(echo $MISMATCH_TODO)]"  #strip newlines
+        verbose "${OPC} REBUILD_TODO=[$(echo $REBUILD_TODO)]"
+        verbose "${OPC} UNSAFE_TODO=[$(echo $UNSAFE_TODO)]"
+        REPLACE_TODO=$(uniqify $MISMATCH_TODO $REBUILD_TODO $UNSAFE_TODO)
+    else
+        REPLACE_TODO=$(uniqify $MISMATCH_TODO)
+        verbose "${OPI} Packages to fetch:"
+        verbose "${OPC} MISMATCH_TODO=[$(echo $MISMATCH_TODO)]"  #strip newlines
+    fi
+    REPLACE_TODO=$(exclude $REALLYEXCLUDE --from $REPLACE_TODO)
+    if [ -n "$FAILED" ]; then
+        REPLACE_TODO=$(exclude $FAILED --from $REPLACE_TODO)
+    fi
+    vsleep 2
 }
 
 ######################################################################
@@ -276,14 +311,16 @@ abort()
 
 EXCLUDE=
 
-args=$(getopt hnursvx:X: $*)
+args=$(getopt Fhknursvx:X:L: $*)
 if [ $? -ne 0 ]; then
     opt_h=1
 fi
 set -- $args
 while [ $# -gt 0 ]; do
     case "$1" in
+        -F) opt_F=1 ;;
         -h) opt_h=1 ;;
+        -k) opt_k=1 ;;
         -n) opt_n=1 ;;
         -r) opt_r=1 ;;
         -s) opt_s=1 ;;
@@ -291,6 +328,7 @@ while [ $# -gt 0 ]; do
         -v) opt_v=1 ;;
         -x) EXCLUDE="$EXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
         -X) REALLYEXCLUDE="$REALLYEXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
+        -L) LOGPATH="$2"; shift ;;
         --) shift; break ;;
     esac
     shift
@@ -306,8 +344,13 @@ else
     UNSAFE_VAR=unsafe_depends
 fi
 
+SUCCESSED=""
+SUCCESSEDSEP=""
+FAILED=""
+FAILEDSEP=""
+
 MISMATCH_TODO=
-if [ -n "$opt_u" ]; then
+if [ -n "$opt_u" -o -n "$opt_F" ]; then
     echo "${OPI} Checking for mismatched installed packages using pkg_chk"
     MISMATCH_TODO=$(check_packages_mismatched)
     echo "${OPI} Excluding the following mismatched packages:"
@@ -315,11 +358,13 @@ if [ -n "$opt_u" ]; then
     MISMATCH_TODO=$(exclude $EXCLUDE --from $MISMATCH_TODO)
 fi
 
-echo "${OPI} Checking for rebuild-requested installed packages (rebuild=YES)"
-REBUILD_TODO=$(check_packages_w_flag 'rebuild')
+if [ -z "$opt_F" ]; then
+    echo "${OPI} Checking for rebuild-requested installed packages (rebuild=YES)"
+    REBUILD_TODO=$(check_packages_w_flag 'rebuild')
 
-echo "${OPI} Checking for unsafe installed packages (${UNSAFE_VAR}=YES)"
-UNSAFE_TODO=$(check_packages_w_flag ${UNSAFE_VAR})
+    echo "${OPI} Checking for unsafe installed packages (${UNSAFE_VAR}=YES)"
+    UNSAFE_TODO=$(check_packages_w_flag ${UNSAFE_VAR})
+fi
 
 # DEPGRAPH_INSTALLED is rebuilt each round.  DEPGRAPH_SRC will collect
 # edges that we discover using 'make show-depends', but that weren't
@@ -330,17 +375,13 @@ DEPGRAPH_INSTALLED=
 DEPGRAPH_SRC=
 DEPENDS_CHECKED=
 
-verbose "${OPI} Packages to rebuild:"
-verbose "${OPC} MISMATCH_TODO=[$(echo $MISMATCH_TODO)]"  #strip newlines
-verbose "${OPC} REBUILD_TODO=[$(echo $REBUILD_TODO)]"
-verbose "${OPC} UNSAFE_TODO=[$(echo $UNSAFE_TODO)]"
-vsleep 2
+todo
 
-REPLACE_TODO=$(uniqify $MISMATCH_TODO $REBUILD_TODO $UNSAFE_TODO)
-REPLACE_TODO=$(exclude $REALLYEXCLUDE --from $REPLACE_TODO)
 depgraph_built=0
 
 while [ -n "$REPLACE_TODO" ]; do
+    fail=
+
     # don't rebuild depgraph if we continued from new-depends step below
     if [ "$depgraph_built" -eq 0 ]; then
         echo "${OPI} Building dependency graph for installed packages"
@@ -404,17 +445,56 @@ while [ -n "$REPLACE_TODO" ]; do
 	fi
     fi
 
-    # Do make replace, with clean before, and package and clean afterwards.
-    echo "${OPI} Replacing $(${PKG_INFO} -e $pkg)"
-    fail=
-    cmd="cd \"$PKGSRCDIR/$pkgdir\" && ${MAKE} clean && ${MAKE} replace || fail=1"
-    if [ -n "$opt_n" ]; then
-	echo "${OPI} Would run: $cmd"
-    else
-	eval "$cmd"
-    	[ -z "$fail" ] || abort "'make replace' failed for package $pkg."
+    pkgname=$(${PKG_INFO} -e $pkg)
+    if [ -n "$LOGPATH" ]; then
+        logdir="$LOGPATH/`dirname $pkgdir`"
+        logfile="$logdir/$pkgname"
+        @MKDIR@ "$logdir" || abort "mkdir -p '$logdir' failed"
+        exec 3>"$logfile"
+        tail -f "$logfile" &
+        TAILPID=$!
     fi
-    if [ -z "$opt_n" ]; then
+
+    # Do make replace, with clean before, and package and clean afterwards.
+    fail=
+    cd "$PKGSRCDIR/$pkgdir";
+    if [ -z "$opt_F" ]; then
+        echo "${OPI} Replacing $pkgname"
+        cmd="${MAKE} clean || fail=1"
+        if [ -n "$opt_n" ]; then
+            echo "${OPI} Would run: $cmd"
+        else
+            if [ -n "$logfile" ]; then
+                eval "$cmd" >&3 2>&3
+            else
+                eval "$cmd"
+            fi
+            if [ -n "$fail" ]; then
+                FAILED="$FAILED$FAILEDSEP$pkg"
+                FAILEDSEP=" "
+                [ -n "$opt_k" ] || abort "'make clean' failed for package $pkg."
+            fi
+        fi
+        cmd="${MAKE} replace || fail=1" # XXX OLDNAME= support? xmlrpc-c -> xmlrpc-c-ss
+    else
+        echo "${OPI} Fetching $pkgname"
+        cmd="${MAKE} fetch depends-fetch || fail=1"
+    fi
+    if [ -n "$opt_n" -a -z "$fail" ]; then
+	echo "${OPI} Would run: $cmd"
+    elif [ -z "$fail" ]; then
+        if [ -n "$logfile" ]; then
+            eval "$cmd" >&3 2>&3
+        else
+            eval "$cmd"
+        fi
+    	if [ -n "$fail" ]; then
+            FAILED="$FAILED$FAILEDSEP$pkg"
+            FAILEDSEP=" "
+            [ -n "$opt_k" ] || abort "'make replace' failed for package $pkg."
+        fi
+    fi
+    if [ -z "$opt_n" -a -z "$opt_k" -a -z "$opt_F" ]; then
 	[ -z "$(${PKG_INFO} -Q unsafe_depends_strict $pkg)" ] || \
 	    abort "package $pkg still has unsafe_depends_strict."
 	[ -z "$(${PKG_INFO} -Q unsafe_depends $pkg)" ] || \
@@ -423,19 +503,42 @@ while [ -n "$REPLACE_TODO" ]; do
 	    abort "package $pkg is still requested to be rebuilt."
     fi
     # If -r not given, make a binary package.
-    if [ -z "$opt_r" ]; then
+    if [ -z "$opt_r" -a -z "$fail" -a -z "$opt_F" ]; then
 	echo "${OPI} Packaging $(${PKG_INFO} -e $pkg)"
-	    cmd="${MAKE} package || fail=1"
-	if [ -n "$opt_n" ]; then
+        cmd="${MAKE} package || fail=1"
+	if [ -n "$opt_n" -a -z "$fail" ]; then
 	    echo "${OPI} Would run: $cmd"
-	else
-	    eval "$cmd"
-    	    [ -z "$fail" ] || abort "'make package' failed for package $pkg."
+	elif [ -z "$fail" ]; then
+            if [ -n "$logfile" ]; then
+                eval "$cmd" >&3 2>&3
+            else
+                eval "$cmd"
+            fi
+            if [ -n "$fail" ]; then
+                FAILED="$FAILED$FAILEDSEP$pkg"
+                FAILEDSEP=" "
+                [ -n "$opt_k" ] || abort "'make package' failed for package $pkg."
+            fi
 	fi
     fi
     # Clean
-    if [ -z "$opt_n" ]; then
-	${MAKE} clean || abort "'make clean' failed for package $pkg."
+    if [ -z "$opt_n" -a -z "$fail" -a -z "$opt_F" ]; then
+        cmd="${MAKE} clean || fail=1"
+        if [ -n "$logfile" ]; then
+            eval "$cmd" >&3 2>&3
+        else
+            eval "$cmd"
+        fi
+    	if [ -n "$fail" ]; then
+            FAILED="$FAILED$FAILEDSEP$pkg"
+            FAILEDSEP=" "
+            [ -n "$opt_k" ] || abort "'make clean' failed for package $pkg."
+        fi
+    fi
+
+    if [ -z "$fail" ]; then
+        SUCCESSED="$SUCCESSED$SUCCESSEDSEP$pkg"
+        SUCCESSEDSEP=" "
     fi
 
     sleep 1
@@ -458,15 +561,17 @@ while [ -n "$REPLACE_TODO" ]; do
         UNSAFE_TODO=$(check_packages_w_flag ${UNSAFE_VAR})
     fi
 
-    verbose "${OPI} Packages to rebuild:"
-    verbose "${OPC} MISMATCH_TODO=[$(echo $MISMATCH_TODO)]"  #strips newlines
-    verbose "${OPC} REBUILD_TODO=[$(echo $REBUILD_TODO)]"
-    verbose "${OPC} UNSAFE_TODO=[$(echo $UNSAFE_TODO)]"
-    vsleep 4
-
-    REPLACE_TODO=$(uniqify $MISMATCH_TODO $REBUILD_TODO $UNSAFE_TODO)
-    REPLACE_TODO=$(exclude $REALLYEXCLUDE --from $REPLACE_TODO)
     depgraph_built=0
+
+    todo
+    vsleep 2
+
+    if [ -n "$logfile" ]; then
+        exec 3>&-
+        kill $TAILPID
+    fi
 done
 
 echo "${OPI} No more packages to replace; done."
+
+report
