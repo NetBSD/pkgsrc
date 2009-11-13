@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4288 2009/11/13 14:45:46 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4289 2009/11/13 18:30:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5742,3 +5742,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/wordpress to 2.8.6 [adrianp 2009-11-12]
 	Updated graphics/libexif to 0.6.19 [adam 2009-11-13]
 	Updated emulators/sdlmame to 0.135 [wiz 2009-11-13]
+	Updated databases/sqlite3 to 3.6.20 [adam 2009-11-13]
