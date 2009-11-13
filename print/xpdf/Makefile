@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2009/10/16 19:36:29 tez Exp $
+# $NetBSD: Makefile,v 1.69 2009/11/13 23:12:02 christos Exp $
 
 DISTNAME=	xpdf-3.02
 PKGNAME=	xpdf-3.02pl4
@@ -20,9 +20,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
 
 DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
+DEPENDS+=	poppler-utils-[0-9]*:../poppler-utils
 
 CONFLICTS=	xpdf-crypto-[0-9]*
-CONFLICTS+=	poppler-utils-[0-9]*
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
@@ -42,8 +42,8 @@ EGDIR=			${PREFIX}/share/examples/xpdf
 CONF_FILES=		${EGDIR}/xpdfrc ${PKG_SYSCONFDIR}/xpdfrc
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	doc/pdffonts.1 doc/pdfimages.1 doc/pdfinfo.1
-SUBST_FILES.paths+=	doc/pdftoppm.1 doc/pdftops.1 doc/pdftotext.1
+#SUBST_FILES.paths=	doc/pdffonts.1 doc/pdfimages.1 doc/pdfinfo.1
+#SUBST_FILES.paths+=	doc/pdftoppm.1 doc/pdftops.1 doc/pdftotext.1
 SUBST_FILES.paths+=	doc/sample-xpdfrc doc/xpdf.1 doc/xpdfrc.5
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
