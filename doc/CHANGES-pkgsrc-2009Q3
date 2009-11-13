@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.15 2009/11/12 09:49:38 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.16 2009/11/13 11:12:28 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -43,3 +43,7 @@ Pullup ticket #2928 - requested by tez
 acroread8: security update
 Pullup ticket #2931 - requested by tron
 apache22: MASTER_SITES list update
+Pullup ticket #2932 - requested by obache
+selectwm: portability fix
+Pullup ticket #2933 - requested by adrianp
+wordpress: security update
