@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4287 2009/11/13 12:59:28 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4288 2009/11/13 14:45:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5741,3 +5741,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/konq-plugins version 4.3.1 [markd 2009-11-12]
 	Updated www/wordpress to 2.8.6 [adrianp 2009-11-12]
 	Updated graphics/libexif to 0.6.19 [adam 2009-11-13]
+	Updated emulators/sdlmame to 0.135 [wiz 2009-11-13]
