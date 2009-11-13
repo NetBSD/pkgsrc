@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.14 2009/05/13 10:47:02 wiz Exp $
+.\" $NetBSD: pkg_rolling-replace.8,v 1.15 2009/11/13 19:40:55 sno Exp $
 .Dd May 22, 2008
 .Dt PKG_ROLLING-REPLACE 8
 .Os
@@ -7,7 +7,8 @@
 .Nd rebuild or update packages using 'make replace' in tsorted order
 .Sh SYNOPSIS
 .Nm
-.Op Fl hnrsuv
+.Op Fl hFknrsuv
+.Op Fl L Ar path
 .Op Fl X Ar pkgs
 .Op Fl x Ar pkgs
 .Sh DESCRIPTION
@@ -65,6 +66,14 @@ packages.)
 .Bl -tag -width xxxxxxxx
 .It Fl h
 Brief help.
+.It Fl F
+Just fetches the sources of all mismatched packages required to be updated
+(and it's dependencies).
+.It Fl k
+Keep on going, even on error during handling current package.
+Warning: This could (potential will) rebuild package depending
+on the failed package, anyway. This may cause a broken tree.
+Use with caution!
 .It Fl n
 Display actions that would be taken, but don't actually run
 .Dq make replace
@@ -91,6 +100,15 @@ Use
 to check for outdated packages, and replace those too.
 .It Fl v
 Verbose output.
+.It Fl L Ar path
+Logs each build (each command output from the commands which are run for
+packages) to given path. The full log file name is composed from the path
+given by this argument, the category name of the package and the package
+name:
+.Dq given-path/category/pkgname .
+The specified path must exists and being user writable of the invoking
+user or any parent directory must be writable by the invoking user.
+Potentially existing log in the same file name will be overwritten.
 .It Fl X Ar pkgs
 Exclude the comma-separated list of package base names
 from being rebuilt for any reason.
@@ -150,10 +168,24 @@ and also produce binary packages:
 pkg_rolling-replace -uv
 .Ed
 .Pp
+To fetch all distfiles for the packages requiring an update on the system
+(packages with different version numbers than installed), and exit after it:
+.Bd -literal -offset indent
+pkg_rolling-replace -F
+.Ed
+.Pp
 To update gtk2+ and all packages that depend on it, except openoffice2:
 .Bd -literal -offset indent
 pkg_admin set rebuild=YES gtk2+
 pkg_rolling-replace -rsv -X openoffice2
+.Ed
+.Pp
+To force rebuild of gtk2+ and all packages that depend on it, keep
+going on even if one package fails, except openoffice2 - log to
+.Dq /var/log/pkg_rr :
+.Bd -literal -offset indent
+pkg_admin set rebuild=YES gtk2+
+pkg_rolling-replace -krsv -L /var/log/pkg_rr -X openoffice2
 .Ed
 .Pp
 To mark all packages that compiled against X11 as needing rebuild
@@ -176,7 +208,19 @@ and
 were added by
 .An Tobias Nygren
 .Aq tnn@NetBSD.org .
+The options
+.Fl k ,
+.Fl F
+and
+.Fl L
+were added by
+.An Jens Rehsack
+.Aq sno@NetBSD.org .
 .Sh BUGS
 .Nm
 does not run fully automatically when any significant number of
 packages need to be replaced.
+.Pp
+.Nm
+does not run fully automatically when the PKGNAME of a package
+changes.
