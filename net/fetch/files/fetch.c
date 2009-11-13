@@ -36,7 +36,9 @@
 #if HAVE_SYS_PARAM_H
 #include <sys/param.h>
 #endif
+#if HAVE_SYS_IOCTL_H
 #include <sys/ioctl.h>
+#endif
 #if HAVE_SYS_SOCKET_H
 #include <sys/socket.h>
 #endif
@@ -233,12 +235,16 @@ stat_display(struct xferstat *xs, int force)
 
 	fprintf(stderr, "\r%-46.46s", xs->name);
 	if (xs->size <= 0) {
+#if HAVE_SETPROCTITLE
 		setproctitle("%s [%s]", xs->name, stat_bytes(xs->rcvd));
+#endif
 		fprintf(stderr, "        %s", stat_bytes(xs->rcvd));
 	} else {
+#if HAVE_SETPROCTITLE
 		setproctitle("%s [%d%% of %s]", xs->name,
 		    (int)((100.0 * xs->rcvd) / xs->size),
 		    stat_bytes(xs->size));
+#endif
 		fprintf(stderr, "%3d%% of %s",
 		    (int)((100.0 * xs->rcvd) / xs->size),
 		    stat_bytes(xs->size));
@@ -294,14 +300,60 @@ stat_end(struct xferstat *xs)
 	}
 }
 
+#if HAVE_TERMIOS_H && !defined(PREFER_GETPASS)
+static int
+read_password(const char *prompt, char *buf, size_t buf_len)
+{
+	struct termios tios;
+	tcflag_t saved_flags;
+	int nopwd;
+
+	fprintf(stderr, prompt);
+	if (tcgetattr(STDIN_FILENO, &tios) != 0)
+		return (fgets(buf, buf_len, stdin) == NULL);
+
+	saved_flags = tios.c_lflag;
+	tios.c_lflag &= ~ECHO;
+	tios.c_lflag |= ECHONL|ICANON;
+	tcsetattr(STDIN_FILENO, TCSAFLUSH|TCSASOFT, &tios);
+	nopwd = (fgets(buf, buf_len, stdin) == NULL);
+	tios.c_lflag = saved_flags;
+	tcsetattr(STDIN_FILENO, TCSANOW|TCSASOFT, &tios);
+
+	return nopwd;
+}
+#elif HAVE_GETPASSPHRASE || HAVE_GETPASS
+static int
+read_password(const char *prompt, char *buf, size_t buf_len)
+{
+	char *pass;
+
+#if HAVE_GETPASSPHRASE && !defined(PREFER_GETPASS)
+	pass = getpassphrase(prompt);
+#else
+	pass = getpass(prompt);
+#endif
+	if (pass == NULL || strlen(pass) >= buf_len)
+		return 1;
+	strcpy(buf, pass);
+	return 0;
+}
+#else
+static int
+read_password(const char *prompt, char *buf, size_t buf_len)
+{
+
+	fprintf(stderr, prompt);
+	return (fgets(buf, buf_len, stdin) == NULL);
+}
+#endif
+
 /*
  * Ask the user for authentication details
  */
 static int
 query_auth(struct url *URL)
 {
-	struct termios tios;
-	tcflag_t saved_flags;
 	int i, nopwd;
 
 	fprintf(stderr, "Authentication required for <%s://%s:%d/>!\n",
@@ -314,18 +366,8 @@ query_auth(struct url *URL)
 		if (URL->user[i] == '\r' || URL->user[i] == '\n')
 			URL->user[i] = '\0';
 
-	fprintf(stderr, "Password: ");
-	if (tcgetattr(STDIN_FILENO, &tios) == 0) {
-		saved_flags = tios.c_lflag;
-		tios.c_lflag &= ~ECHO;
-		tios.c_lflag |= ECHONL|ICANON;
-		tcsetattr(STDIN_FILENO, TCSAFLUSH|TCSASOFT, &tios);
-		nopwd = (fgets(URL->pwd, sizeof URL->pwd, stdin) == NULL);
-		tios.c_lflag = saved_flags;
-		tcsetattr(STDIN_FILENO, TCSANOW|TCSASOFT, &tios);
-	} else {
-		nopwd = (fgets(URL->pwd, sizeof URL->pwd, stdin) == NULL);
-	}
+	nopwd = read_password("Password: ",  URL->pwd, sizeof(URL->pwd));
+
 	if (nopwd)
 		return (-1);
 	for (i = strlen(URL->pwd); i >= 0; --i)
