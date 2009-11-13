@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2005/09/07 15:19:08 adam Exp $
+$NetBSD: patch-aa,v 1.7 2009/11/13 23:12:02 christos Exp $
 
 --- Makefile.in.orig	2005-08-17 05:34:30.000000000 +0000
 +++ Makefile.in
-@@ -13,6 +13,7 @@ DESTDIR =
+@@ -13,6 +13,7 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
  srcdir = @srcdir@
@@ -10,8 +10,112 @@ $NetBSD: patch-aa,v 1.6 2005/09/07 15:19:08 adam Exp $
  
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
-@@ -94,12 +95,12 @@ install: dummy
- 	$(INSTALL_DATA) $(srcdir)/doc/pdfimages.1 $(DESTDIR)@mandir@/man1/pdfimages.1
+@@ -37,69 +38,69 @@
+ 	cd @UP_DIR@splash; $(MAKE)
+ 	cd @UP_DIR@xpdf; $(MAKE) xpdf$(EXE)
+ 
+-pdftops: dummy
+-	cd goo; $(MAKE)
+-	cd @UP_DIR@fofi; $(MAKE)
+-	cd @UP_DIR@splash; $(MAKE)
+-	cd @UP_DIR@xpdf; $(MAKE) pdftops$(EXE)
+-
+-pdftotext: dummy
+-	cd goo; $(MAKE)
+-	cd @UP_DIR@fofi; $(MAKE)
+-	cd @UP_DIR@splash; $(MAKE)
+-	cd @UP_DIR@xpdf; $(MAKE) pdftotext$(EXE)
+-
+-pdfinfo:
+-	cd goo; $(MAKE)
+-	cd @UP_DIR@fofi; $(MAKE)
+-	cd @UP_DIR@splash; $(MAKE)
+-	cd @UP_DIR@xpdf; $(MAKE) pdfinfo$(EXE)
+-
+-pdffonts:
+-	cd goo; $(MAKE)
+-	cd @UP_DIR@fofi; $(MAKE)
+-	cd @UP_DIR@splash; $(MAKE)
+-	cd @UP_DIR@xpdf; $(MAKE) pdffonts$(EXE)
+-
+-pdftoppm:
+-	cd goo; $(MAKE)
+-	cd @UP_DIR@fofi; $(MAKE)
+-	cd @UP_DIR@splash; $(MAKE)
+-	cd @UP_DIR@xpdf; $(MAKE) pdftoppm$(EXE)
+-
+-pdfimages:
+-	cd goo; $(MAKE)
+-	cd @UP_DIR@fofi; $(MAKE)
+-	cd @UP_DIR@splash; $(MAKE)
+-	cd @UP_DIR@xpdf; $(MAKE) pdfimages$(EXE)
++#pdftops: dummy
++#	cd goo; $(MAKE)
++#	cd @UP_DIR@fofi; $(MAKE)
++#	cd @UP_DIR@splash; $(MAKE)
++#	cd @UP_DIR@xpdf; $(MAKE) pdftops$(EXE)
++#
++#pdftotext: dummy
++#	cd goo; $(MAKE)
++#	cd @UP_DIR@fofi; $(MAKE)
++#	cd @UP_DIR@splash; $(MAKE)
++#	cd @UP_DIR@xpdf; $(MAKE) pdftotext$(EXE)
++#
++#pdfinfo:
++#	cd goo; $(MAKE)
++#	cd @UP_DIR@fofi; $(MAKE)
++#	cd @UP_DIR@splash; $(MAKE)
++#	cd @UP_DIR@xpdf; $(MAKE) pdfinfo$(EXE)
++#
++#pdffonts:
++#	cd goo; $(MAKE)
++#	cd @UP_DIR@fofi; $(MAKE)
++#	cd @UP_DIR@splash; $(MAKE)
++#	cd @UP_DIR@xpdf; $(MAKE) pdffonts$(EXE)
++#
++#pdftoppm:
++#	cd goo; $(MAKE)
++#	cd @UP_DIR@fofi; $(MAKE)
++#	cd @UP_DIR@splash; $(MAKE)
++#	cd @UP_DIR@xpdf; $(MAKE) pdftoppm$(EXE)
++#
++#pdfimages:
++#	cd goo; $(MAKE)
++#	cd @UP_DIR@fofi; $(MAKE)
++#	cd @UP_DIR@splash; $(MAKE)
++#	cd @UP_DIR@xpdf; $(MAKE) pdfimages$(EXE)
+ 
+ dummy:
+ 
+ install: dummy
+ 	-mkdir -p $(DESTDIR)@bindir@
+ @X@	$(INSTALL_PROGRAM) xpdf/xpdf$(EXE) $(DESTDIR)@bindir@/xpdf$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdftops$(EXE) $(DESTDIR)@bindir@/pdftops$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdftotext$(EXE) $(DESTDIR)@bindir@/pdftotext$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdfinfo$(EXE) $(DESTDIR)@bindir@/pdfinfo$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdffonts$(EXE) $(DESTDIR)@bindir@/pdffonts$(EXE)
+-@X@	$(INSTALL_PROGRAM) xpdf/pdftoppm$(EXE) $(DESTDIR)@bindir@/pdftoppm$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdfimages$(EXE) $(DESTDIR)@bindir@/pdfimages$(EXE)
++#	$(INSTALL_PROGRAM) xpdf/pdftops$(EXE) $(DESTDIR)@bindir@/pdftops$(EXE)
++#	$(INSTALL_PROGRAM) xpdf/pdftotext$(EXE) $(DESTDIR)@bindir@/pdftotext$(EXE)
++#	$(INSTALL_PROGRAM) xpdf/pdfinfo$(EXE) $(DESTDIR)@bindir@/pdfinfo$(EXE)
++#	$(INSTALL_PROGRAM) xpdf/pdffonts$(EXE) $(DESTDIR)@bindir@/pdffonts$(EXE)
++#@X@	$(INSTALL_PROGRAM) xpdf/pdftoppm$(EXE) $(DESTDIR)@bindir@/pdftoppm$(EXE)
++#	$(INSTALL_PROGRAM) xpdf/pdfimages$(EXE) $(DESTDIR)@bindir@/pdfimages$(EXE)
+ 	-mkdir -p $(DESTDIR)@mandir@/man1
+ @X@	$(INSTALL_DATA) $(srcdir)/doc/xpdf.1 $(DESTDIR)@mandir@/man1/xpdf.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdftops.1 $(DESTDIR)@mandir@/man1/pdftops.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdftotext.1 $(DESTDIR)@mandir@/man1/pdftotext.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdfinfo.1 $(DESTDIR)@mandir@/man1/pdfinfo.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdffonts.1 $(DESTDIR)@mandir@/man1/pdffonts.1
+-@X@	$(INSTALL_DATA) $(srcdir)/doc/pdftoppm.1 $(DESTDIR)@mandir@/man1/pdftoppm.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdfimages.1 $(DESTDIR)@mandir@/man1/pdfimages.1
++#	$(INSTALL_DATA) $(srcdir)/doc/pdftops.1 $(DESTDIR)@mandir@/man1/pdftops.1
++#	$(INSTALL_DATA) $(srcdir)/doc/pdftotext.1 $(DESTDIR)@mandir@/man1/pdftotext.1
++#	$(INSTALL_DATA) $(srcdir)/doc/pdfinfo.1 $(DESTDIR)@mandir@/man1/pdfinfo.1
++#	$(INSTALL_DATA) $(srcdir)/doc/pdffonts.1 $(DESTDIR)@mandir@/man1/pdffonts.1
++#@X@	$(INSTALL_DATA) $(srcdir)/doc/pdftoppm.1 $(DESTDIR)@mandir@/man1/pdftoppm.1
++#	$(INSTALL_DATA) $(srcdir)/doc/pdfimages.1 $(DESTDIR)@mandir@/man1/pdfimages.1
  	-mkdir -p $(DESTDIR)@mandir@/man5
  	$(INSTALL_DATA) $(srcdir)/doc/xpdfrc.5 $(DESTDIR)@mandir@/man5/xpdfrc.5
 -	-mkdir -p $(DESTDIR)@sysconfdir@
