@@ -109,7 +109,9 @@ long	 w_secs;	/*    -w: retry delay */
 int	 family = PF_UNSPEC;	/* -[46]: address family to use */
 
 volatile int	 sigalrm;	/* SIGALRM received */
+#ifdef SIGINFO
 volatile int	 siginfo;	/* SIGINFO received */
+#endif
 volatile int	 sigint;	/* SIGINT received */
 
 long	 ftp_timeout;	/* default timeout for FTP transfers */
@@ -128,9 +130,11 @@ sig_handler(int sig)
 		fetchRestartCalls = 0;
 		sigalrm = 1;
 		break;
+#ifdef SIGINFO
 	case SIGINFO:
 		siginfo = 1;
 		break;
+#endif
 	case SIGINT:
 		fetchRestartCalls = 0;
 		sigint = 1;
@@ -643,20 +647,25 @@ fetch(char *URL, const char *path)
 	/* start the counter */
 	stat_start(&xs, path, us.size, count);
 
-	sigalrm = siginfo = sigint = 0;
+	sigalrm = sigint = 0;
 
 	/* suck in the data */
+#ifdef SIGINFO
+	siginfo = 0;
 	signal(SIGINFO, sig_handler);
+#endif
 	while (!sigint) {
 		if (us.size != -1 && us.size - count < B_size &&
 		    us.size - count >= 0)
 			size = us.size - count;
 		else
 			size = B_size;
+#ifdef SIGINFO
 		if (siginfo) {
 			stat_display(&xs, 1);
 			siginfo = 0;
 		}
+#endif
 		if ((ssize = fetchIO_read(f, buf, B_size)) == 0)
 			break;
 		if (ssize == -1 && errno == EINTR)
@@ -678,7 +687,9 @@ fetch(char *URL, const char *path)
 	}
 	if (!sigalrm)
 		sigalrm = 0;
+#ifdef SIGINFO
 	signal(SIGINFO, SIG_DFL);
+#endif
 
 	stat_end(&xs);
 
