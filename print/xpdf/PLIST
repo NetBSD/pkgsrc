@@ -1,17 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:12:03 joerg Exp $
-bin/pdffonts
-bin/pdfimages
-bin/pdfinfo
-bin/pdftoppm
-bin/pdftops
-bin/pdftotext
+@comment $NetBSD: PLIST,v 1.10 2009/11/13 23:12:02 christos Exp $
 bin/xpdf
-man/man1/pdffonts.1
-man/man1/pdfimages.1
-man/man1/pdfinfo.1
-man/man1/pdftoppm.1
-man/man1/pdftops.1
-man/man1/pdftotext.1
 man/man1/xpdf.1
 man/man5/xpdfrc.5
 share/examples/xpdf/xpdfrc
