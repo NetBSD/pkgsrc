@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2009/10/27 21:02:26 drochner Exp $
+# $NetBSD: builtin.mk,v 1.10 2009/11/13 17:31:07 drochner Exp $
 
 BUILTIN_PKG:=	libevent
 
@@ -30,7 +30,11 @@ MAKEVARS+=	IS_BUILTIN.libevent
 .if empty(H_LIBEVENTCONFIG:M__nonexistent__)
 _BLTN_EVENT_1_4_11!= \
 	${GREP} -c 1.4.11-stable ${H_LIBEVENTCONFIG} || ${TRUE}
-. if ${_BLTN_EVENT_1_4_11} == "1"
+_BLTN_EVENT_1_4_12!= \
+	${GREP} -c 1.4.12-stable ${H_LIBEVENTCONFIG} || ${TRUE}
+. if ${_BLTN_EVENT_1_4_12} == "1"
+BUILTIN_VERSION.libevent=	1.4.12
+. elif ${_BLTN_EVENT_1_4_11} == "1"
 BUILTIN_VERSION.libevent=       1.4.11
 . else
 BUILTIN_VERSION.libevent=	1.4.4
