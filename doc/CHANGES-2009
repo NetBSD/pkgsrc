@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4294 2009/11/14 12:35:44 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4295 2009/11/14 15:54:46 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5748,3 +5748,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-HTML-Parser to 3.64 [sno 2009-11-14]
 	Updated www/p5-HTML-StripScripts to 1.05 [sno 2009-11-14]
 	Updated www/p5-HTML-StripScripts-Parser to 1.03 [sno 2009-11-14]
+	Updated mail/dovecot to 1.1.20 [ghen 2009-11-14]
