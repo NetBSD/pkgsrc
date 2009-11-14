@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2009/11/14 22:07:07 yyamano Exp $
+
+--- build/config.solaris.orig	2006-11-26 14:19:18.000000000 -0800
++++ build/config.solaris
+@@ -23,16 +23,13 @@ export PICFLAG=""                     # 
+ if [ $DEFS == "-DDEBUG" ] ; then
+   export CFLAGS="${CFLAGS:--Wall -g -pipe }"
+ 	export CXXFLAGS="${CXXFLAGS:--Wall -g -pipe}"
+-	export LDFLAGS=""
+ elif [ $DEFS == "-DNDEBUG" ] ; then
+ 	export CFLAGS="${CFLAGS:--Wall -O3 -pipe}"
+ 	export CXXFLAGS="${CXXFLAGS:--Wall -O3 -pipe}"
+-	export LDFLAGS="-s"
+ else
+ 	export CFLAGS="${CFLAGS:--Wall -pipe}"
+ 	export CXXFLAGS="${CXXFLAGS:--Wall -pipe}"
+-	export LDFLAGS=""
+-	fi
++fi
+ 
+ export CPPFLAGS="-I./include ${CPPFLAGS}"
+ export LIBS=""
