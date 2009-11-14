@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4290 2009/11/13 19:56:57 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4291 2009/11/14 12:14:35 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5744,3 +5744,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/sdlmame to 0.135 [wiz 2009-11-13]
 	Updated databases/sqlite3 to 3.6.20 [adam 2009-11-13]
 	Updated pkgtools/pkg_rolling-replace to 0.18 [sno 2009-11-13]
+	Updated net/dnsmasq to 2.51 [roy 2009-11-14]
