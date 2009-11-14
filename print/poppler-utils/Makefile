@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/11/13 23:12:02 christos Exp $
+# $NetBSD: Makefile,v 1.11 2009/11/14 07:11:04 wiz Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -9,6 +9,7 @@ COMMENT=		PDF utilities (from poppler)
 MAINTAINER=		reed@reedmedia.net
 
 CONFLICTS+=		poppler-0.5.1 poppler-0.5.1nb1 poppler-0.5.1nb2
+CONFLICTS+=		xpdf<3.02pl4nb1
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
