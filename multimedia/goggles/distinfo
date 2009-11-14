@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/12 20:52:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/11/14 22:07:07 yyamano Exp $
 
 SHA1 (goggles-0.9.1.tar.bz2) = 2e464e1bcf699a18f6190f5571877356388c778a
 RMD160 (goggles-0.9.1.tar.bz2) = 6a15a365b1b4bfaba1b6d294d2e7379b4f0fb560
 Size (goggles-0.9.1.tar.bz2) = 486290 bytes
 SHA1 (patch-aa) = 8c03ccd0f8d9e8b72753b16b2c0cbd7e66833dd1
+SHA1 (patch-ab) = fa92fa5d3d1430f77b32b28e8911d25bdc85a8d2
+SHA1 (patch-ac) = de988af6dc662358ed3571095035dbf95160d9b8
+SHA1 (patch-ad) = b32a9dd9590318171473488142c873a819e99c7c
+SHA1 (patch-ae) = 1a45cee64e5bff7dd0c3ebc9c3b7ac201104a221
+SHA1 (patch-af) = f64d26c857b09db2fe56aa10a974ca6f5af31213
