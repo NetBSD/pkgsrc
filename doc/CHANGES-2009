@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4301 2009/11/15 15:53:18 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4302 2009/11/15 20:37:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5755,3 +5755,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added lang/pfe version 0.33.71 [asau 2009-11-15]
 	Updated devel/p5-Compress-Raw-Zlib to 2.023 [sno 2009-11-15]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.023 [sno 2009-11-15]
+	Updated games/gbrainy to 1.20 [wiz 2009-11-15]
