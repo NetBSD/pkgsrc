@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4295 2009/11/14 15:54:46 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.4296 2009/11/15 03:11:44 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5749,3 +5749,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-HTML-StripScripts to 1.05 [sno 2009-11-14]
 	Updated www/p5-HTML-StripScripts-Parser to 1.03 [sno 2009-11-14]
 	Updated mail/dovecot to 1.1.20 [ghen 2009-11-14]
+	Updated wm/openbox to 3.4.7.2nb2 [snj 2009-11-15]
