@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4309 2009/11/15 21:24:48 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4310 2009/11/15 21:27:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5763,3 +5763,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/gedit to 2.28.2 [wiz 2009-11-15]
 	Updated net/yaz to 3.0.50 [wiz 2009-11-15]
 	Updated multimedia/swfdec-gnome to 2.28.0 [wiz 2009-11-15]
+	Updated devel/libelf to 0.8.13 [wiz 2009-11-15]
