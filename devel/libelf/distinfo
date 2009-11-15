@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2009/08/16 14:27:30 wiz Exp $
+$NetBSD: distinfo,v 1.5 2009/11/15 21:26:51 wiz Exp $
 
-SHA1 (libelf-0.8.12.tar.gz) = b6ff5c0262418fbca8ce281f9f927e25181f4237
-RMD160 (libelf-0.8.12.tar.gz) = 29ca31074134a2bc99b207adaddd10924e46d899
-Size (libelf-0.8.12.tar.gz) = 148090 bytes
+SHA1 (libelf-0.8.13.tar.gz) = c1d6ac5f182d19dd685c4dfd74eedbfe3992425d
+RMD160 (libelf-0.8.13.tar.gz) = 06962fbbcd91da25f02b964ad9513b9536f67baa
+Size (libelf-0.8.13.tar.gz) = 148529 bytes
 SHA1 (patch-aa) = bb70182806c0541e46af884e324d6ae2b8831665
 SHA1 (patch-ab) = d04cb8da2a84478b15d4ff71cc45e30fc35d1a23
