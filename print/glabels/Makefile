@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2009/10/29 23:32:22 drochner Exp $
+# $NetBSD: Makefile,v 1.36 2009/11/15 20:13:42 drochner Exp $
 #
 
-DISTNAME=		glabels-2.2.5
-PKGREVISION=		2
+DISTNAME=		glabels-2.2.6
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=glabels/}
 
@@ -32,4 +31,5 @@ PKG_SUGGESTED_OPTIONS=  evolution
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
