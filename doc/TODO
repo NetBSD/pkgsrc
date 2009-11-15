@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8656 2009/11/15 21:15:10 wiz Exp $
+$NetBSD: TODO,v 1.8657 2009/11/15 21:18:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -665,7 +665,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdm-2.28.1 [GNOME 2.28]
 	o gdsreader-0.3.2
 	o geany-0.18
-	o gedit-2.28.2
 	o gedit-plugins-2.28.0 [GNOME 2.28]
 	o gentoo-0.15.6
 	o gettext-0.17
