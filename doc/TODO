@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8658 2009/11/15 21:22:43 wiz Exp $
+$NetBSD: TODO,v 1.8659 2009/11/15 21:24:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1328,7 +1328,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sun-jdk6-6u17
 	o sun-jre6-6u17
 	o suse_base-11.0
-	o swfdec-gnome-2.28.0
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.2 [needs polkit>=1.0?|GNOME 2.28]
