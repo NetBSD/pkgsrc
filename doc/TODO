@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8660 2009/11/15 21:27:16 wiz Exp $
+$NetBSD: TODO,v 1.8661 2009/11/15 21:30:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1410,7 +1410,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vobcopy-1.2.0
 	o vp-1.6
 	o vsftpd-2.2.1
-	o vte-0.22.4
 	o vttest-20071216
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
