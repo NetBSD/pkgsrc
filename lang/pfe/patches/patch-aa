@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/11/15 14:17:46 asau Exp $
+
+Pass Python interpreter in variable.
+Remove flag unknown to tar.
+Search for pfe.1 among prerequisites instead of current directory only,
+correctly use pfe.1 from source directory.
+
+--- doc/Makefile.in.orig	2009-10-17 22:19:02.000000000 +0400
++++ doc/Makefile.in	2009-11-14 23:01:44.000000000 +0300
+@@ -213,7 +213,7 @@
+ # --------------------------------------------------------- NEW DBK STYLE
+ SORRY = "Sorry, the doc build system had been missing xmlg from xmlg.sf.net"
+ pfe_words_OPT = 
+-PYRUN = $(PYTHONFLAGS) python $(PYTHONOPTIONS)
++PYRUN = $(PYTHONFLAGS) $(PYTHON) $(PYTHONOPTIONS)
+ datehead = <hr><table border="0" width="100%"><tr><td> \
+     <a href="mailto:guidod@gmx.de?subject=$(PACKAGE):">guidod@gmx.de</a> \
+     </td><td align="right">
+@@ -406,8 +406,8 @@
+ install-mans : install-man1 install-man3
+ install-man1 : pfe.1 
+ 	$(mkinstalldirs) $(DESTDIR)$(mandir)/man1
+-	for i in pfe.1 ; do \
+-	$(INSTALL_DATA) $$i $(DESTDIR)$(mandir)/man1/`echo $$i \
++	for i in $(.ALLSRC) $^ ; do \
++	$(INSTALL_DATA) $$i $(DESTDIR)$(mandir)/man1/`basename $$i \
+         | sed -e 's/.1$$//' -e '$(transform)' -e 's/$$/.1/'` \
+         ; done
+ install-man3 : pfe-man3.ar
+@@ -458,7 +458,7 @@
+ 	||  $(mkinstalldirs) $(DESTDIR)$(pkgdocdir)/$(VERSION)
+ 	@ echo un-tar '>>' :$(pkgdocdir)/$(VERSION)
+ 	@ p=`pwd` ; cd $(DESTDIR)$(pkgdocdir)/$(VERSION) \
+-	; tar x$vf $$p/$(DOCS).tar ; cd $$p ; true
++	; tar xf $$p/$(DOCS).tar ; cd $$p ; true
+ 	-cp $(top_srcdir)/ChangeLog $(DESTDIR)$(pkgdocdir)/$(VERSION)
+ 	-cp $(top_srcdir)/COPYING.LIB $(DESTDIR)$(pkgdocdir)/$(VERSION)
+ 	@ echo ':::' ln -s $(pkgdocdir)/$(VERSION)/'*' $(pkgdocdir)/$(PACKAGE)/
+@@ -551,8 +551,9 @@
+ pfe-manual.docbook : pfe-wordsets.docbook $(DBK) $(DBK_EXTRA)
+ 	sed -e "s|../doc/|$(srcdir)/|" $(srcdir)/doc-index.dbk   \
+ 	> doc-index.docbook
+-	sed -e "s|../doc/|$(srcdir)/|" $(srcdir)/pfe-manual.dbk  \
++	sed -e "s|../doc/|$(srcdir)/|" \
+ 	-e 's|"[^"]*/doc-index.dbk"|"doc-index.docbook"|' \
++	$(srcdir)/pfe-manual.dbk  \
+ 	> pfe-manual.docbook
+ pfe-manual/index.html : pfe-manual.docbook
+ 	- test ! -d pfe-manual  || mkdir pfe-manual; rm pfe-manual/*
