@@ -1,15 +1,15 @@
-$NetBSD: patch-be,v 1.1 2007/09/18 18:58:13 drochner Exp $
+$NetBSD: patch-be,v 1.2 2009/11/15 15:50:50 drochner Exp $
 
---- c++/config/conclude.in.orig	2007-09-18 17:01:22.000000000 +0200
+--- c++/config/conclude.in.orig	2009-11-10 19:02:00.000000000 +0100
 +++ c++/config/conclude.in
-@@ -130,6 +130,11 @@ install: $(PUB_LIB) $(PUB_HDR) $(PUB_PRO
+@@ -215,6 +215,11 @@ install: $(PUB_LIB) $(PUB_HDR) $(PUB_PRO
  	     ($(LT_INSTALL_PROG) $$f $(bindir)/. || exit 1);		      \
  	   fi;							              \
  	done
-+	@for f in X $(PUB_SCRIPTS); do \
-+		if test $$f != X; then \
-+			(${INSTALL_SCRIPT} $$f $(bindir)/. || exit 1); \
-+		fi; \
++	@for f in X $(PUB_SCRIPTS); do					      \
++	   if test $$f != X; then					      \
++	     ($(INSTALL_SCRIPT) $$f $(bindir)/. || exit 1);		      \
++	   fi;							              \
 +	done
  
  install-examples: $(EXAMPLE_PROGS) $(EXAMPLEDIR)
