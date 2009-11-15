@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4305 2009/11/15 21:13:30 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4306 2009/11/15 21:15:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5759,3 +5759,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/SDL_mixer to 1.2.11 [wiz 2009-11-15]
 	Updated graphics/SDL_image to 1.2.10 [wiz 2009-11-15]
 	Updated time/etm to 365 [wiz 2009-11-15]
+	Updated mail/gmime24 to 2.4.11 [wiz 2009-11-15]
