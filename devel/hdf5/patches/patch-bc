@@ -1,8 +1,8 @@
-$NetBSD: patch-bc,v 1.1 2007/09/18 18:58:12 drochner Exp $
+$NetBSD: patch-bc,v 1.2 2009/11/15 15:50:50 drochner Exp $
 
---- config/conclude.in.orig	2007-09-18 16:20:36.000000000 +0200
+--- config/conclude.in.orig	2009-11-10 19:01:51.000000000 +0100
 +++ config/conclude.in
-@@ -201,6 +201,11 @@ install: $(AUX_LIB) $(PUB_LIB) $(PUB_HDR
+@@ -253,6 +253,11 @@ install: $(AUX_LIB) $(PUB_LIB) $(PUB_HDR
  	     fi;							      \
  	   fi;							              \
  	done
