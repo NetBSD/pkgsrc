@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4300 2009/11/15 15:51:08 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4301 2009/11/15 15:53:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5754,3 +5754,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/nagios-plugins to 1.4.13nb2 [snj 2009-11-15]
 	Added lang/pfe version 0.33.71 [asau 2009-11-15]
 	Updated devel/p5-Compress-Raw-Zlib to 2.023 [sno 2009-11-15]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.023 [sno 2009-11-15]
