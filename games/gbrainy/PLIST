@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/11/15 20:37:27 wiz Exp $
 bin/gbrainy
 lib/gbrainy/gbrainy.exe
 lib/gbrainy/gbrainy.exe.config
@@ -8,6 +8,8 @@ share/games/gbrainy/background.svg
 share/games/gbrainy/logic-games.svg
 share/games/gbrainy/math-games.svg
 share/games/gbrainy/memory-games.svg
+share/games/gbrainy/verbal-games.svg
+share/games/gbrainy/verbal_analogies.xml
 share/icons/hicolor/16x16/apps/gbrainy.png
 share/icons/hicolor/32x32/apps/gbrainy.png
 share/icons/hicolor/48x48/apps/gbrainy.png
