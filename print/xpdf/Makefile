@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2009/11/14 07:10:17 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2009/11/15 22:31:51 wiz Exp $
 
 DISTNAME=	xpdf-3.02
 PKGNAME=	xpdf-3.02pl4
@@ -21,7 +21,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
 
 DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
-DEPENDS+=	poppler-utils-[0-9]*:../poppler-utils
+DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 
 CONFLICTS=	xpdf-crypto-[0-9]*
 
