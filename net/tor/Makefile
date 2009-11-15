@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2009/08/18 05:48:08 obache Exp $
+# $NetBSD: Makefile,v 1.67 2009/11/15 04:24:51 snj Exp $
 #
 
-DISTNAME=		tor-0.2.1.19
+DISTNAME=		tor-0.2.1.20
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
