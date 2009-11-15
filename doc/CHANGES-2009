@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4298 2009/11/15 04:48:27 snj Exp $
+$NetBSD: CHANGES-2009,v 1.4299 2009/11/15 14:24:23 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5752,3 +5752,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated wm/openbox to 3.4.7.2nb2 [snj 2009-11-15]
 	Updated net/tor to 0.2.1.20 [snj 2009-11-15]
 	Updated net/nagios-plugins to 1.4.13nb2 [snj 2009-11-15]
+	Added lang/pfe version 0.33.71 [asau 2009-11-15]
