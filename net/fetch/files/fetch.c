@@ -223,10 +223,12 @@ stat_display(struct xferstat *xs, int force)
 	struct timeval now;
 	int ctty_pgrp;
 
+#ifdef TIOCGPGRP
 	/* check if we're the foreground process */
 	if (ioctl(STDERR_FILENO, TIOCGPGRP, &ctty_pgrp) == -1 ||
 	    (pid_t)ctty_pgrp != pgrp)
 		return;
+#endif
 
 	gettimeofday(&now, NULL);
 	if (!force && now.tv_sec <= xs->last.tv_sec)
