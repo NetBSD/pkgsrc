@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2006/10/17 14:32:32 drochner Exp $
+$NetBSD: distinfo,v 1.7 2009/11/15 15:56:55 drochner Exp $
 
-SHA1 (pytables-1.3.3.tar.gz) = 1cc49d342eb0bb7dbe239be07812a2a8d325b7b4
-RMD160 (pytables-1.3.3.tar.gz) = 032e0414df575ed81392e7e8e87979ea1d7dd100
-Size (pytables-1.3.3.tar.gz) = 3841630 bytes
-SHA1 (patch-aa) = 6d8aebeb3c7608c5b69e5259dc8f1491889a6cf1
+SHA1 (tables-2.1.2.tar.gz) = 545cc16491d37e2f6b8ce10bc8bdfa559b174e2e
+RMD160 (tables-2.1.2.tar.gz) = 09bfb73e9252baa34aa40274a0b07f6c6cc60d70
+Size (tables-2.1.2.tar.gz) = 4677233 bytes
+SHA1 (patch-aa) = 3cf2812635aaa12e445398243ca765d209fb9cdf
