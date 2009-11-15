@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2009/08/16 14:27:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/11/15 21:26:51 wiz Exp $
 #
 
-DISTNAME=		libelf-0.8.12
+DISTNAME=		libelf-0.8.13
 CATEGORIES=		devel
 MASTER_SITES=		http://www.mr511.de/software/
 
