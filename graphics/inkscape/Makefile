@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/08/26 19:57:44 sno Exp $
+# $NetBSD: Makefile,v 1.44 2009/11/15 15:40:01 drochner Exp $
 
 DISTNAME=	inkscape-0.46
 PKGREVISION=	5
@@ -33,6 +33,18 @@ BUILDLINK_API_DEPENDS.poppler+=		poppler>=0.5.9
 
 UNLIMIT_RESOURCES=	datasize
 
+PKG_OPTIONS_VAR= PKG_OPTIONS.inkscape
+PKG_SUPPORTED_OPTIONS= gnome
+PKG_SUGGESTED_OPTIONS= gnome
+
+.include "../../mk/bsd.options.mk"
+
+# gnome-vfs support for the inkscape file open window.
+.if !empty(PKG_OPTIONS:Mgnome)
+CONFIGURE_ARGS+= --with-gnome-vfs
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
+.endif
+
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
@@ -43,7 +55,6 @@ UNLIMIT_RESOURCES=	datasize
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
