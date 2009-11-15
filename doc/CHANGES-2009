@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4303 2009/11/15 21:05:58 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4304 2009/11/15 21:10:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5757,3 +5757,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.023 [sno 2009-11-15]
 	Updated games/gbrainy to 1.20 [wiz 2009-11-15]
 	Updated audio/SDL_mixer to 1.2.11 [wiz 2009-11-15]
+	Updated graphics/SDL_image to 1.2.10 [wiz 2009-11-15]
