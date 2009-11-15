@@ -1,7 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2006/01/13 02:02:50 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2009/11/15 01:29:34 dholland Exp $
 
---- Makefile.in.orig	1998-05-11 06:52:59.000000000 +0000
-+++ Makefile.in
+Patch installation paths. DESTDIR support.
+
+--- Makefile.in.orig	1998-05-11 02:52:59.000000000 -0400
++++ Makefile.in	2009-11-14 20:26:16.000000000 -0500
 @@ -20,12 +20,12 @@ SOUNDSRV = @SOUNDSERVER@
  SOUNDOBJS = @SOUNDSERVER@.o
  SOUNDSRCS = @SOUNDSERVER@.c
@@ -25,21 +27,29 @@ $NetBSD: patch-aa,v 1.6 2006/01/13 02:02:50 joerg Exp $
 +	$(CC) $(LDFLAGS) -o $(SOUNDSRV) $(SOUNDOBJS) $(SOUNDLIBS) $(LIBOSSAUDIO)
  
  install: all
- 	./mkinstalldirs $(bindir)
- 	./mkinstalldirs $(prefix)
- 	$(INSTALL) $(TARGET) $(bindir)/$(TARGET)
+-	./mkinstalldirs $(bindir)
+-	./mkinstalldirs $(prefix)
+-	$(INSTALL) $(TARGET) $(bindir)/$(TARGET)
 -	$(INSTALL) $(SOUNDSRV) $(prefix)/$(SOUNDSRV)
-+	$(INSTALL) $(SOUNDSRV) ${PREFIX}/libexec/xgalaga.sndsrv
- 	./mkinstalldirs $(prefix)/sounds
- 	./mkinstalldirs $(prefix)/levels
- 	for i in levels/*.xgl; do $(INSTALL) $$i $(prefix)/$$i ; done
- 	for i in sounds/*.raw; do $(INSTALL) $$i $(prefix)/$$i ; done
- 	touch $(prefix)/scores
+-	./mkinstalldirs $(prefix)/sounds
+-	./mkinstalldirs $(prefix)/levels
+-	for i in levels/*.xgl; do $(INSTALL) $$i $(prefix)/$$i ; done
+-	for i in sounds/*.raw; do $(INSTALL) $$i $(prefix)/$$i ; done
+-	touch $(prefix)/scores
 -	chmod 666 $(prefix)/scores
-+	chown ${GAMEOWN}:${GAMEGRP} $(prefix)/scores
-+	chown ${GAMEOWN}:${GAMEGRP} $(bindir)/$(TARGET)
-+	chmod ${GAMEMODE} $(bindir)/$(TARGET)
-+	chmod ${GAMEDATAMODE} $(prefix)/scores
++	./mkinstalldirs $(DESTDIR)$(bindir)
++	./mkinstalldirs $(DESTDIR)$(prefix)
++	$(INSTALL) $(TARGET) $(DESTDIR)$(bindir)/$(TARGET)
++	$(INSTALL) $(SOUNDSRV) $(DESTDIR)${PREFIX}/libexec/xgalaga.sndsrv
++	./mkinstalldirs $(DESTDIR)$(prefix)/sounds
++	./mkinstalldirs $(DESTDIR)$(prefix)/levels
++	for i in levels/*.xgl; do $(INSTALL) $$i $(DESTDIR)$(prefix)/$$i ; done
++	for i in sounds/*.raw; do $(INSTALL) $$i $(DESTDIR)$(prefix)/$$i ; done
++	touch $(DESTDIR)$(prefix)/scores
++	chown ${GAMEOWN}:${GAMEGRP} $(DESTDIR)$(prefix)/scores
++	chown ${GAMEOWN}:${GAMEGRP} $(DESTDIR)$(bindir)/$(TARGET)
++	chmod ${GAMEMODE} $(DESTDIR)$(bindir)/$(TARGET)
++	chmod ${GAMEDATAMODE} $(DESTDIR)$(prefix)/scores
  
  subdirs:
  	for i in $(SUBDIRS); do cd $$i ; make ; done
