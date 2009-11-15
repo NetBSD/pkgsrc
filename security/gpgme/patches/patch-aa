@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2007/03/23 20:04:13 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2009/11/15 18:41:55 drochner Exp $
 
---- gpgme/gpgme-config.in.orig	2007-01-26 06:28:37.000000000 +0100
-+++ gpgme/gpgme-config.in
+--- src/gpgme-config.in.orig	2007-01-26 06:28:37.000000000 +0100
++++ src/gpgme-config.in
 @@ -29,8 +29,8 @@ libs_pth="@PTH_LDFLAGS@ @PTH_LIBS@"
  cflags_pth="@PTH_CFLAGS@"
  
