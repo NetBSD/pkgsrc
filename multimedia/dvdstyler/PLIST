@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/08/17 17:32:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/11/15 18:24:40 drochner Exp $
 bin/dvdstyler
 man/man1/dvdstyler.1
 share/applications/dvdstyler.desktop
@@ -46,14 +46,18 @@ share/dvdstyler/buttons/ellipse.xml
 share/dvdstyler/buttons/frame.xml
 share/dvdstyler/buttons/ok.xml
 share/dvdstyler/buttons/pill.xml
+share/dvdstyler/buttons/text-circle.xml
 share/dvdstyler/buttons/text-shadow.xml
+share/dvdstyler/buttons/text-square.xml
+share/dvdstyler/buttons/text-underlined.xml
 share/dvdstyler/buttons/text-v2.xml
 share/dvdstyler/data/empty_ntsc_ac3.mpg
 share/dvdstyler/data/empty_ntsc_mp2.mpg
 share/dvdstyler/data/empty_pal_ac3.mpg
 share/dvdstyler/data/empty_pal_mp2.mpg
 share/dvdstyler/data/subtitles.rgb
-share/dvdstyler/docs/help.zip
+share/dvdstyler/docs/help_de.zip
+share/dvdstyler/docs/help_en.zip
 share/dvdstyler/objects/ellipse.xml
 share/dvdstyler/objects/frame.xml
 share/dvdstyler/objects/image.xml
