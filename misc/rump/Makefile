@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2009/11/10 16:10:47 stacktic Exp $
+# $NetBSD: Makefile,v 1.13 2009/11/15 15:09:46 stacktic Exp $
 #
 
 DISTNAME=		rump_20091108
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		1
+PKGREVISION=		2
 
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/stacktic/
@@ -35,6 +35,14 @@ SUBST_SED.alloc+=	-e "s|SRCS.*subr_pool.*|\# &|"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
+
+SUBST_CLASSES+=		crt
+SUBST_STAGE.crt=	pre-configure
+SUBST_MESSAGE.crt=	Fix crt path.
+SUBST_FILES.crt=	share/mk/bsd.lib.mk share/mk/bsd.prog.mk
+SUBST_SED.crt=		-e "s|lib/crt|lib$$\{LIBABISUFFIX\}/crt|"
+MAKEFLAGS+=		LIBABISUFFIX=${LIBABISUFFIX}
+
 MAKEFLAGS+=		MACHINE=${MACHINE_ARCH:C/x86_64/amd64/}
 
 CRT_PATH!=		gcc --print-file-name=crtbegin.o
