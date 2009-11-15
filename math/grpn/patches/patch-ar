@@ -1,0 +1,12 @@
+$NetBSD: patch-ar,v 1.1 2009/11/15 13:32:17 drochner Exp $
+
+--- real.h.orig	2009-11-14 01:25:54.000000000 +0100
++++ real.h
+@@ -90,6 +90,7 @@ Real * mulReal(Real *, Real *);
+ Real * mulEqReal(Real *, Real *);
+ Real * divReal(Real *, Real *);
+ Real * divEqReal(Real *, Real *);
++Real * modReal(Real *, Real *);
+ Real * addReal(Real *, Real *);
+ Real * addEqReal(Real *, Real *);
+ Real * subReal(Real *, Real *);

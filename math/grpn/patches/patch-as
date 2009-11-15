@@ -1,0 +1,12 @@
+$NetBSD: patch-as,v 1.1 2009/11/15 13:32:17 drochner Exp $
+
+--- number.h.orig	2009-11-14 01:25:54.000000000 +0100
++++ number.h
+@@ -77,6 +77,7 @@ Number * atanNumber(Number *);
+ 
+ Number * mulNumber(Number *, Number *);
+ Number * divNumber(Number *, Number *);
++Number * modNumber(Number *, Number *);
+ Number * addNumber(Number *, Number *);
+ Number * subNumber(Number *, Number *);
+ 
