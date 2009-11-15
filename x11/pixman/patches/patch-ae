@@ -1,8 +1,17 @@
-$NetBSD: patch-ae,v 1.9 2009/06/06 22:28:41 wiz Exp $
+$NetBSD: patch-ae,v 1.10 2009/11/15 13:00:01 drochner Exp $
 
---- configure.orig	2009-05-31 02:06:44.000000000 +0000
+--- configure.orig	2009-09-28 15:10:12.000000000 +0200
 +++ configure
-@@ -11833,6 +11833,7 @@ fi
+@@ -11763,7 +11763,7 @@ fi
+ # if we're using Sun Studio and neither the user nor a config.site
+ # has set CFLAGS.
+ if test $SUNCC = yes &&			\
+-   test "$test_CFLAGS" == "" &&		\
++   test "$test_CFLAGS" = "" &&		\
+    test "$CFLAGS" = "-g"
+ then
+   CFLAGS="-O -g"
+@@ -11856,6 +11856,7 @@ fi
  
  
  have_gcc4=no
@@ -10,7 +19,7 @@ $NetBSD: patch-ae,v 1.9 2009/06/06 22:28:41 wiz Exp $
  { $as_echo "$as_me:$LINENO: checking for -fvisibility" >&5
  $as_echo_n "checking for -fvisibility... " >&6; }
  cat >conftest.$ac_ext <<_ACEOF
-@@ -11871,7 +11872,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -11894,7 +11895,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  fi
  
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
