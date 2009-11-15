@@ -1,12 +1,9 @@
-$NetBSD: patch-al,v 1.1 2005/10/07 12:31:25 rillig Exp $
+$NetBSD: patch-al,v 1.2 2009/11/15 13:32:17 drochner Exp $
 
-The patches patch-al upto patch-aq add the physical constants k, q, e0,
-mu0, and c.
-
---- button_def.c.orig	Thu Apr  4 05:46:10 2002
-+++ button_def.c	Fri Oct  7 14:24:25 2005
-@@ -34,6 +34,16 @@ Foundation, Inc., 59 Temple Place - Suit
- extern void baseCmdCB(GtkWidget *, gpointer);
+--- button_def.c.orig	2009-11-14 01:25:54.000000000 +0100
++++ button_def.c
+@@ -38,6 +38,16 @@ extern void radixCmdCB(GtkWidget *, gpoi
+ 
  
  FuncInfo invisible1[] = {
 +   { "k", "k", "Boltzmann's constant (Joules/Kelvin).",
@@ -19,15 +16,15 @@ mu0, and c.
 +      genericButtonCB, (void *)Mu0Stack },
 +   { "c", "c", "Free space speed of light (meters/second).",
 +      genericButtonCB, (void *)LightSpeedStack },
+    { "Modulo", "mod", "Remainder of division.",
+       genericButtonCB, (void *)ModStack },
     { "Hex", "hex", "Hexidecimal display mode.",
-       baseCmdCB, (void *)HEXIDECIMAL },
-    { "Dec", "dec", "Decimal display mode.",
-@@ -137,7 +147,7 @@ struct RowInfo rowinf[] = {
+@@ -159,7 +169,7 @@ struct RowInfo rowinf[] = {
     { 8, 8, num456 },
     { 8, 8, num123 },
     { 8, 8, num0 },
--   { 14, 0, invisible1 }
-+   { 19, 0, invisible1 }
+-   { 20, 0, invisible1 }
++   { 25, 0, invisible1 }
  };
  
  
