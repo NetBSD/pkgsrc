@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/10/28 18:53:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/11/15 21:30:20 wiz Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -45,6 +45,7 @@ share/locale/da/LC_MESSAGES/vte.mo
 share/locale/de/LC_MESSAGES/vte.mo
 share/locale/dz/LC_MESSAGES/vte.mo
 share/locale/el/LC_MESSAGES/vte.mo
+share/locale/en@shaw/LC_MESSAGES/vte.mo
 share/locale/en_CA/LC_MESSAGES/vte.mo
 share/locale/en_GB/LC_MESSAGES/vte.mo
 share/locale/es/LC_MESSAGES/vte.mo
