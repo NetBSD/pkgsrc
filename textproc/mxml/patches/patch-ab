@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2009/11/15 13:58:20 drochner Exp $
+
+--- mxmldoc.c.orig	2009-11-09 21:48:45.000000000 +0100
++++ mxmldoc.c
+@@ -57,7 +57,6 @@
+ #ifndef WIN32
+ #  include <dirent.h>
+ #  include <unistd.h>
+-#  include <spawn.h>
+ #  include <sys/wait.h>
+ extern char **environ;
+ #endif /* !WIN32 */
