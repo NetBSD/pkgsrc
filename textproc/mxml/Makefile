@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/07/07 21:07:47 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/15 13:58:20 drochner Exp $
 #
 
-DISTNAME=	mxml-2.3
+DISTNAME=	mxml-2.6
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.easysw.com/pub/mxml/2.3/
+MASTER_SITES=	ftp://ftp.easysw.com/pub/mxml/2.6/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.minixml.org/
