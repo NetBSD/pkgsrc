@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.6 2009/07/07 16:38:29 drochner Exp $
+# $NetBSD: options.mk,v 1.7 2009/11/15 18:09:35 drochner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.transcode
 PKG_SUPPORTED_OPTIONS=	a52 freetype2 mjpegtools lzo libxml2
-PKG_SUPPORTED_OPTIONS+=	dv imagemagick
+PKG_SUPPORTED_OPTIONS+=	dv imagemagick x264
 
 PKG_SUGGESTED_OPTIONS=	a52 freetype2 mjpegtools libxml2
-PKG_SUGGESTED_OPTIONS+=	imagemagick
+PKG_SUGGESTED_OPTIONS+=	imagemagick x264
 
 .include "../../mk/bsd.options.mk"
 
@@ -68,4 +68,13 @@ PLIST.imagemagick=	yes
 CONFIGURE_ARGS+=	--enable-imagemagick
 .else
 CONFIGURE_ARGS+=	--disable-imagemagick
+.endif
+
+.if !empty(PKG_OPTIONS:Mx264)
+.  include "../../multimedia/x264-devel/buildlink3.mk"
+PLIST.x264=		yes
+CONFIGURE_ARGS+=	--enable-x264
+.else
+CONFIGURE_ARGS+=
+CONFIGURE_ARGS+=	--disable-x264
 .endif
