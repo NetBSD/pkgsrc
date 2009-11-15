@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/10/12 17:30:04 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2009/11/15 13:58:20 drochner Exp $
 
---- Makefile.in.orig	2007-04-27 02:49:03.000000000 +0200
+--- Makefile.in.orig	2008-12-06 05:20:38.000000000 +0100
 +++ Makefile.in
-@@ -29,7 +29,7 @@ DSO		=	@DSO@
+@@ -30,7 +30,7 @@ DSO		=	@DSO@
  DSOFLAGS	=	@DSOFLAGS@
- LDFLAGS		=	$(OPTIM) @LDFLAGS@
+ LDFLAGS		=	$(OPTIM) $(ARCHFLAGS) @LDFLAGS@
  INSTALL		=	@INSTALL@
 -LIBMXML		=	@LIBMXML@
 +LIBMXML		=	libmxml.la
+ LIBS		=	@LIBS@ @PTHREAD_LIBS@
  LN		=	@LN@ -s
  MKDIR		=	@MKDIR@
- OPTIM		=	@OPTIM@
-@@ -119,7 +119,7 @@ distclean:	clean
+@@ -133,7 +133,7 @@ clang:
  # Install everything...
  #
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/10/12 17:30:04 drochner Exp $
  	$(INSTALL_DIR) $(BUILDROOT)$(bindir)
  	$(INSTALL_BIN) mxmldoc $(BUILDROOT)$(bindir) 
  	$(INSTALL_DIR) $(BUILDROOT)$(docdir)
-@@ -135,10 +135,9 @@ install:	$(TARGETS) install-$(LIBMXML) i
+@@ -149,10 +149,9 @@ install:	$(TARGETS) install-$(LIBMXML) i
  	$(INSTALL_DIR) $(BUILDROOT)$(mandir)/man3
  	$(INSTALL_MAN) doc/mxml.man $(BUILDROOT)$(mandir)/man3/mxml.3
  
@@ -31,9 +31,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/10/12 17:30:04 drochner Exp $
 -	$(RANLIB) $(BUILDROOT)$(libdir)/libmxml.a
 +	$(INSTALL_LIB) libmxml.la $(BUILDROOT)$(libdir)
  
- install-libmxml.so.1.3:
+ install-libmxml.so.1.4:
  	$(INSTALL_DIR) $(BUILDROOT)$(libdir)
-@@ -228,10 +227,13 @@ config.h:	configure config.h.in
+@@ -242,10 +241,13 @@ config.h:	configure config.h.in
  # libmxml.a
  #
  
@@ -43,47 +43,47 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/10/12 17:30:04 drochner Exp $
 -	$(RANLIB) $@
 +libmxml.la:	$(LIBOBJS:.o=.lo)
 +	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} ${LIBOBJS:.o=.lo} \
-+	  -o libmxml.la -rpath ${PREFIX}/lib -version-info 1:3
++	  -o libmxml.la -rpath ${PREFIX}/lib -version-info 1:4
 +
 +.SUFFIXES: .lo
 +.c.lo:
 +	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c ${.IMPSRC} -o ${.TARGET}
  
  $(LIBOBJS):	mxml.h
- 
-@@ -276,7 +278,7 @@ libmxml.1.dylib:	$(LIBOBJS)
+ mxml-entity.o mxml-file.o mxml-private.o: mxml-private.h
+@@ -291,7 +293,7 @@ libmxml.1.dylib:	$(LIBOBJS)
  #
  
  mxmldoc:	$(LIBMXML) mxmldoc.o
--	$(CC) -L. $(LDFLAGS) -o $@ mxmldoc.o -lmxml
-+	${LIBTOOL} --mode=link $(CC) -L. $(LDFLAGS) -o $@ mxmldoc.o libmxml.la
+-	$(CC) -L. $(LDFLAGS) -o $@ mxmldoc.o -lmxml $(LIBS)
++	${LIBTOOL} --mode=link $(CC) -L. $(LDFLAGS) -o $@ mxmldoc.o libmxml.la $(LIBS)
  
  mxmldoc-static:	libmxml.a mxmldoc.o
- 	$(CC) $(LDFLAGS) -o $@ mxmldoc.o libmxml.a
-@@ -288,8 +290,8 @@ mxmldoc.o:	mxml.h
+ 	$(CC) $(LDFLAGS) -o $@ mxmldoc.o libmxml.a $(LIBS)
+@@ -303,8 +305,8 @@ mxmldoc.o:	mxml.h
  # testmxml
  #
  
 -testmxml:	libmxml.a testmxml.o
--	$(CC) $(LDFLAGS) -o $@ testmxml.o libmxml.a
+-	$(CC) $(LDFLAGS) -o $@ testmxml.o libmxml.a $(LIBS)
 +testmxml:	libmxml.la testmxml.o
-+	${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $@ testmxml.o libmxml.la
++	${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $@ testmxml.o libmxml.la $(LIBS)
  	@echo Testing library...
  	./testmxml test.xml >temp1.xml 2>temp1s.xml
  	./testmxml temp1.xml >temp2.xml 2>temp2s.xml
-@@ -319,9 +321,9 @@ testmxml.o:	mxml.h
+@@ -334,9 +336,9 @@ testmxml.o:	mxml.h
  # mxml.xml
  #
  
 -mxml.xml:	mxmldoc-static mxml.h $(PUBLIBOBJS:.o=.c)
 +mxml.xml:	mxmldoc mxml.h $(PUBLIBOBJS:.o=.c)
  	$(RM) mxml.xml
--	./mxmldoc-static mxml.xml mxml.h $(PUBLIBOBJS:.o=.c) >doc/reference.html
-+	./mxmldoc mxml.xml mxml.h $(PUBLIBOBJS:.o=.c) >doc/reference.html
- 
- valgrind:	mxmldoc-static
- 	$(RM) valgrind.xml
-@@ -334,9 +336,9 @@ valgrind:	mxmldoc-static
+-	./mxmldoc-static --header doc/reference.heading mxml.xml mxml.h $(PUBLIBOBJS:.o=.c) >doc/reference.html
++	./mxmldoc --header doc/reference.heading mxml.xml mxml.h $(PUBLIBOBJS:.o=.c) >doc/reference.html
+ 	if test "x`uname`" = xDarwin; then \
+ 		./mxmldoc-static --docset org.minixml.docset \
+ 			--docversion @VERSION@ --feedname minixml.org \
+@@ -361,9 +363,9 @@ valgrind:	mxmldoc-static
  # doc/mxml.man
  #
  
@@ -92,6 +92,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/10/12 17:30:04 drochner Exp $
  	$(RM) doc/mxml.man
 -	./mxmldoc-static --man mxml --title "Mini-XML API" \
 +	./mxmldoc --man mxml --title "Mini-XML API" \
- 		--intro doc/intro.man mxml.xml >doc/mxml.man
- 
+ 		--intro doc/intro.man --footer doc/footer.man \
+ 		mxml.xml >doc/mxml.man
  
