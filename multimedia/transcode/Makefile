@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2009/09/09 17:41:54 drochner Exp $
+# $NetBSD: Makefile,v 1.60 2009/11/15 18:09:35 drochner Exp $
 
-DISTNAME=	transcode-1.1.4
+DISTNAME=	transcode-1.1.5
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.berlios.de/tcforge/
 EXTRACT_SUFX=	.tar.bz2
