@@ -1,0 +1,54 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/11/16 23:24:37 drochner Exp $
+
+--- Makefile.rules.orig	2009-09-30 15:03:21.000000000 +0200
++++ Makefile.rules
+@@ -549,11 +549,11 @@ ifdef LOADABLE_MODULE
+   LD.Flags += -module
+ endif
+ 
+-ifdef SHARED_LIBRARY
+-ifneq ($(DARWIN_MAJVERS),4)
+-  LD.Flags += $(RPATH) -Wl,$(LibDir)
+-endif
+-endif
++#ifdef SHARED_LIBRARY
++#ifneq ($(DARWIN_MAJVERS),4)
++#  LD.Flags += $(RPATH) -Wl,$(LibDir)
++#endif
++#endif
+ 
+ ifdef TOOL_VERBOSE
+   C.Flags += -v
+@@ -583,9 +583,9 @@ ifneq ($(HOST_OS),Darwin)
+ ifneq ($(DARWIN_MAJVERS),4)
+ ifdef TOOLNAME
+ ifdef EXAMPLE_TOOL
+-  LD.Flags += $(RPATH) -Wl,$(ExmplDir) $(RDYNAMIC)
++  LD.Flags += $(RDYNAMIC)
+ else
+-  LD.Flags += $(RPATH) -Wl,$(ToolDir) $(RDYNAMIC)
++  LD.Flags += $(RDYNAMIC)
+ endif
+ endif
+ endif
+@@ -735,9 +735,6 @@ ObjectsBC := $(BaseNameSources:%=$(ObjDi
+ # in the file so they get built before dependencies
+ #---------------------------------------------------------
+ 
+-$(PROJ_bindir) $(PROJ_libdir) $(PROJ_includedir) $(PROJ_etcdir)::
+-	$(Verb) $(MKDIR) $@
+-
+ # To create other directories, as needed, and timestamp their creation
+ %/.dir:
+ 	$(Verb) $(MKDIR) $* > /dev/null
+@@ -858,7 +855,9 @@ install-local::
+ uninstall-local::
+ 	$(Echo) UnInstall circumvented with NO_INSTALL
+ else
+-install-local:: $(PROJ_etcdir) $(CONFIG_FILES)
++PROJ_etcdir=${PREFIX}/share/examples/llvm
++install-local:: $(CONFIG_FILES)
++	$(MKDIR) ${PROJ_etcdir}
+ 	$(Echo) Installing Configuration Files To $(PROJ_etcdir)
+ 	$(Verb)for file in $(CONFIG_FILES); do \
+           if test -f $(PROJ_OBJ_DIR)/$${file} ; then \
