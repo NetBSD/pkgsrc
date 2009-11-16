@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2009/11/15 15:09:46 stacktic Exp $
+# $NetBSD: Makefile,v 1.14 2009/11/16 15:29:57 stacktic Exp $
 #
 
 DISTNAME=		rump_20091108
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		2
+PKGREVISION=		3
 
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/stacktic/
@@ -42,6 +42,12 @@ SUBST_MESSAGE.crt=	Fix crt path.
 SUBST_FILES.crt=	share/mk/bsd.lib.mk share/mk/bsd.prog.mk
 SUBST_SED.crt=		-e "s|lib/crt|lib$$\{LIBABISUFFIX\}/crt|"
 MAKEFLAGS+=		LIBABISUFFIX=${LIBABISUFFIX}
+
+SUBST_CLASSES+=		dl
+SUBST_STAGE.dl=		pre-configure
+SUBST_MESSAGE.dl=	Fix dlopen.
+SUBST_FILES.dl=		lib/libukfs/ukfs.c
+SUBST_SED.dl=		-e "s|RTLD_GLOBAL|&\|RTLD_LAZY|"
 
 MAKEFLAGS+=		MACHINE=${MACHINE_ARCH:C/x86_64/amd64/}
 
