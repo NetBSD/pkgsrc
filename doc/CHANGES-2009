@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4317 2009/11/16 22:51:38 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.4318 2009/11/16 23:04:27 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5630,6 +5630,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/xfce4-volman to 0.2.0nb2 [reinoud 2009-11-05]
 	Added textproc/p5-XML-Parser-Lite-Tree version 0.12 [wiz 2009-11-05]
 	Added graphics/p5-Image-BMP version 1.16 [wiz 2009-11-05]
+	Updated mail/p5-Mail-DKIM to 0.37 [heinz 2009-11-05]
 	Updated cad/pcb to 20091103 [dmcmahill 2009-11-05]
 	Updated devel/p5-MooseX-Declare to 0.32 [seb 2009-11-06]
 	Updated devel/xulrunner to 1.9.1.5 [tnn 2009-11-06]
