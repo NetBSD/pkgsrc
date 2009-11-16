@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4319 2009/11/16 23:06:10 heinz Exp $
+$NetBSD: CHANGES-2009,v 1.4320 2009/11/16 23:31:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5772,3 +5772,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/filezilla to 3.3.0.1 [zafer 2009-11-16]
 	Updated lang/python26 to 2.6.4nb2 [jakllsch 2009-11-16]
 	Updated www/ikiwiki to 3.20091113 [schmonz 2009-11-16]
+	Updated textproc/ruby-haml to 2.2.13 [seb 2009-11-16]
