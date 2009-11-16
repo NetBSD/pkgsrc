@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2009/11/03 02:20:54 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/11/16 10:40:21 joerg Exp $
 
 DISTNAME=	Python-2.6.4
 PKGNAME=	${DISTNAME:S/Python/python26/}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/2.6.4/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +20,7 @@ CONFLICTS+=	python-[0-9]*
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-threads
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	OPT=${CFLAGS:M*:Q}
+CONFIGURE_ARGS+=	OPT=${CFLAGS:Q}
 CONFIGURE_ARGS+=	--with-system-ffi
 
 LDFLAGS+=		-L${WRKSRC}
@@ -125,6 +126,10 @@ PLIST.nis=	yes
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
 MAKE_ENV+=	PY_BDB_INCDIRS=${BUILDLINK_INCDIRS.${BDB_TYPE}:S,^,${BDBBASE}/,:Q}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
+.if empty(BDB_LIBS)
+BUILDLINK_TRANSFORM+=	rm:-ldb
+.endif
+CFLAGS+=	-DHAVE_DB_185_H
 PLIST.bsddb=	yes
 PLIST.dll=	yes
 .  if ${OPSYS} != "NetBSD" || exists(/usr/bin/ypcat)
