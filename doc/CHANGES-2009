@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4315 2009/11/16 19:26:36 zafer Exp $
+$NetBSD: CHANGES-2009,v 1.4316 2009/11/16 21:14:17 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5769,3 +5769,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/scummvm to 1.0.0 [adam 2009-11-16]
 	Updated filesystems/fs-utils to 20091116 [stacktic 2009-11-16]
 	Updated net/filezilla to 3.3.0.1 [zafer 2009-11-16]
+	Updated lang/python26 to 2.6.4nb2 [jakllsch 2009-11-16]
