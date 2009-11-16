@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2009/09/25 07:29:21 schmonz Exp $
+# $NetBSD: options.mk,v 1.7 2009/11/16 22:51:14 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cvs ikiwiki-amazon-s3 ikiwiki-search
@@ -59,7 +59,7 @@ post-install:
 		${PREFIX}/share/doc/${PKGBASE}/w3mmode/ikiwiki.setup
 .else
 SUBST_CLASSES+=		w3m
-SUBST_STAGE.w3m=	post-patch
+SUBST_STAGE.w3m=	pre-configure
 SUBST_FILES.w3m=	Makefile.PL
 SUBST_SED.w3m+=		-e 's,^\(.*install .*W3M_CGI_BIN\),\#\1,'
 .endif
