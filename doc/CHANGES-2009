@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4313 2009/11/16 12:35:12 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4314 2009/11/16 15:40:41 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5767,3 +5767,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/vte to 0.22.4 [wiz 2009-11-15]
 	Updated ap2-auth-mellon to 0.2.5 [manu 2009-11-16]
 	Updated games/scummvm to 1.0.0 [adam 2009-11-16]
+	Updated filesystems/fs-utils to 20091116 [stacktic 2009-11-16]
