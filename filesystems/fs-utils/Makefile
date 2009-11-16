@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2009/11/02 19:54:44 stacktic Exp $
+# $NetBSD: Makefile,v 1.9 2009/11/16 15:39:07 stacktic Exp $
 #
 
-DISTNAME=		fs-utils_20091102
+DISTNAME=		fs-utils_20091116
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		filesystems
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/stacktic/
@@ -20,9 +20,8 @@ INSTALLATION_DIRS=	bin lib include ${PKGMANDIR}/man1 ${PKGMANDIR}/man3
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Adjusting path.
-SUBST_FILES.path=	Makefile.inc
-SUBST_SED.path=		-e "s|/usr/pkg|${LOCALBASE}|g"
-SUBST_SED.path+=	-e "s|^LDADD.*|LDADD+= -ldl -L../../../libnbcompat -lnbcompat|"
+SUBST_FILES.path=	Makefile.gen
+SUBST_SED.path=		-e "s|/usr/pkg|${PREFIX}|g"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/libfsu_utils/fsu_fts.h \
@@ -38,7 +37,9 @@ OSNAME!=		uname -s
 .if ${OSNAME} != "NetBSD"
 MAKEFLAGS+=			NOGCCERROR=1
 USE_FEATURES=			nbcompat
-NBCOMPAT_CONFIGURE_ARGS+=	CFLAGS='-D_FILE_OFFSET_BITS=64'
+NBCOMPAT_CONFIGURE_ARGS+=	CFLAGS='-D_FILE_OFFSET_BITS=64 -fPIC'
+NBCOMPAT_CONFIGURE_ARGS+=	CPPFLAGS='-DPIC'
+NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt
 
 .include "../../misc/rump/buildlink3.mk"
 .endif # !NetBSD
