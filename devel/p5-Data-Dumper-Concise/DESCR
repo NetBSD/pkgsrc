@@ -1,0 +1,4 @@
+The Perl 5 module Data::Dumper::Concise exists, fundamentally, as
+a convenient way to reproduce a set of Dumper options that we've
+found ourselves using across large numbers of applications, primarily
+for debugging output.
