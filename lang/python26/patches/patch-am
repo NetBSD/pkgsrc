@@ -1,6 +1,18 @@
-$NetBSD: patch-am,v 1.6 2009/09/19 09:06:57 obache Exp $
+$NetBSD: patch-am,v 1.7 2009/11/16 10:40:21 joerg Exp $
 
---- setup.py.orig	2009-03-31 18:20:48.000000000 +0000
+Disabled modules for normal build:
+bsdddb
+curses
+curses_panel
+elementtree
+Those have separate packages. 
+
+Only check the BUILDLINK_DIR for libraries etc, do not pick up random
+headers and libraries from the system.
+
+Build the 1.85 compat module all the time against the BDB version of choice.
+
+--- setup.py.orig	2009-09-20 12:37:33.000000000 +0200
 +++ setup.py
 @@ -17,7 +17,7 @@ from distutils.command.install import in
  from distutils.command.install_lib import install_lib
@@ -41,7 +53,190 @@ $NetBSD: patch-am,v 1.6 2009/09/19 09:06:57 obache Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -1300,6 +1304,14 @@ class PyBuildExt(build_ext):
+@@ -738,151 +742,6 @@ class PyBuildExt(build_ext):
+             else:
+                 raise ValueError("unknown major BerkeleyDB version", major)
+ 
+-        # construct a list of paths to look for the header file in on
+-        # top of the normal inc_dirs.
+-        db_inc_paths = [
+-            '/usr/include/db4',
+-            '/usr/local/include/db4',
+-            '/opt/sfw/include/db4',
+-            '/usr/include/db3',
+-            '/usr/local/include/db3',
+-            '/opt/sfw/include/db3',
+-            # Fink defaults (http://fink.sourceforge.net/)
+-            '/sw/include/db4',
+-            '/sw/include/db3',
+-        ]
+-        # 4.x minor number specific paths
+-        for x in gen_db_minor_ver_nums(4):
+-            db_inc_paths.append('/usr/include/db4%d' % x)
+-            db_inc_paths.append('/usr/include/db4.%d' % x)
+-            db_inc_paths.append('/usr/local/BerkeleyDB.4.%d/include' % x)
+-            db_inc_paths.append('/usr/local/include/db4%d' % x)
+-            db_inc_paths.append('/pkg/db-4.%d/include' % x)
+-            db_inc_paths.append('/opt/db-4.%d/include' % x)
+-            # MacPorts default (http://www.macports.org/)
+-            db_inc_paths.append('/opt/local/include/db4%d' % x)
+-        # 3.x minor number specific paths
+-        for x in gen_db_minor_ver_nums(3):
+-            db_inc_paths.append('/usr/include/db3%d' % x)
+-            db_inc_paths.append('/usr/local/BerkeleyDB.3.%d/include' % x)
+-            db_inc_paths.append('/usr/local/include/db3%d' % x)
+-            db_inc_paths.append('/pkg/db-3.%d/include' % x)
+-            db_inc_paths.append('/opt/db-3.%d/include' % x)
+-
+-        # Add some common subdirectories for Sleepycat DB to the list,
+-        # based on the standard include directories. This way DB3/4 gets
+-        # picked up when it is installed in a non-standard prefix and
+-        # the user has added that prefix into inc_dirs.
+-        std_variants = []
+-        for dn in inc_dirs:
+-            std_variants.append(os.path.join(dn, 'db3'))
+-            std_variants.append(os.path.join(dn, 'db4'))
+-            for x in gen_db_minor_ver_nums(4):
+-                std_variants.append(os.path.join(dn, "db4%d"%x))
+-                std_variants.append(os.path.join(dn, "db4.%d"%x))
+-            for x in gen_db_minor_ver_nums(3):
+-                std_variants.append(os.path.join(dn, "db3%d"%x))
+-                std_variants.append(os.path.join(dn, "db3.%d"%x))
+-
+-        db_inc_paths = std_variants + db_inc_paths
+-        db_inc_paths = [p for p in db_inc_paths if os.path.exists(p)]
+-
+-        db_ver_inc_map = {}
+-
+-        class db_found(Exception): pass
+-        try:
+-            # See whether there is a Sleepycat header in the standard
+-            # search path.
+-            for d in inc_dirs + db_inc_paths:
+-                f = os.path.join(d, "db.h")
+-                if db_setup_debug: print "db: looking for db.h in", f
+-                if os.path.exists(f):
+-                    f = open(f).read()
+-                    m = re.search(r"#define\WDB_VERSION_MAJOR\W(\d+)", f)
+-                    if m:
+-                        db_major = int(m.group(1))
+-                        m = re.search(r"#define\WDB_VERSION_MINOR\W(\d+)", f)
+-                        db_minor = int(m.group(1))
+-                        db_ver = (db_major, db_minor)
+-
+-                        # Avoid 4.6 prior to 4.6.21 due to a BerkeleyDB bug
+-                        if db_ver == (4, 6):
+-                            m = re.search(r"#define\WDB_VERSION_PATCH\W(\d+)", f)
+-                            db_patch = int(m.group(1))
+-                            if db_patch < 21:
+-                                print "db.h:", db_ver, "patch", db_patch,
+-                                print "being ignored (4.6.x must be >= 4.6.21)"
+-                                continue
+-
+-                        if ( (not db_ver_inc_map.has_key(db_ver)) and
+-                            allow_db_ver(db_ver) ):
+-                            # save the include directory with the db.h version
+-                            # (first occurrence only)
+-                            db_ver_inc_map[db_ver] = d
+-                            if db_setup_debug:
+-                                print "db.h: found", db_ver, "in", d
+-                        else:
+-                            # we already found a header for this library version
+-                            if db_setup_debug: print "db.h: ignoring", d
+-                    else:
+-                        # ignore this header, it didn't contain a version number
+-                        if db_setup_debug:
+-                            print "db.h: no version number version in", d
+-
+-            db_found_vers = db_ver_inc_map.keys()
+-            db_found_vers.sort()
+-
+-            while db_found_vers:
+-                db_ver = db_found_vers.pop()
+-                db_incdir = db_ver_inc_map[db_ver]
+-
+-                # check lib directories parallel to the location of the header
+-                db_dirs_to_check = [
+-                    db_incdir.replace("include", 'lib64'),
+-                    db_incdir.replace("include", 'lib'),
+-                ]
+-                db_dirs_to_check = filter(os.path.isdir, db_dirs_to_check)
+-
+-                # Look for a version specific db-X.Y before an ambiguoius dbX
+-                # XXX should we -ever- look for a dbX name?  Do any
+-                # systems really not name their library by version and
+-                # symlink to more general names?
+-                for dblib in (('db-%d.%d' % db_ver),
+-                              ('db%d%d' % db_ver),
+-                              ('db%d' % db_ver[0])):
+-                    dblib_file = self.compiler.find_library_file(
+-                                    db_dirs_to_check + lib_dirs, dblib )
+-                    if dblib_file:
+-                        dblib_dir = [ os.path.abspath(os.path.dirname(dblib_file)) ]
+-                        raise db_found
+-                    else:
+-                        if db_setup_debug: print "db lib: ", dblib, "not found"
+-
+-        except db_found:
+-            if db_setup_debug:
+-                print "bsddb using BerkeleyDB lib:", db_ver, dblib
+-                print "bsddb lib dir:", dblib_dir, " inc dir:", db_incdir
+-            db_incs = [db_incdir]
+-            dblibs = [dblib]
+-            # We add the runtime_library_dirs argument because the
+-            # BerkeleyDB lib we're linking against often isn't in the
+-            # system dynamic library search path.  This is usually
+-            # correct and most trouble free, but may cause problems in
+-            # some unusual system configurations (e.g. the directory
+-            # is on an NFS server that goes away).
+-            exts.append(Extension('_bsddb', ['_bsddb.c'],
+-                                  depends = ['bsddb.h'],
+-                                  library_dirs=dblib_dir,
+-                                  runtime_library_dirs=dblib_dir,
+-                                  include_dirs=db_incs,
+-                                  libraries=dblibs))
+-        else:
+-            if db_setup_debug: print "db: no appropriate library found"
+-            db_incs = None
+-            dblibs = []
+-            dblib_dir = None
+-            missing.append('_bsddb')
+-
+         # The sqlite interface
+         sqlite_setup_debug = False   # verbose debug prints from this script?
+ 
+@@ -989,25 +848,12 @@ class PyBuildExt(build_ext):
+         # we do not build this one.  Otherwise this build will pick up
+         # the more recent berkeleydb's db.h file first in the include path
+         # when attempting to compile and it will fail.
+-        f = "/usr/include/db.h"
+-        if os.path.exists(f) and not db_incs:
+-            data = open(f).read()
+-            m = re.search(r"#s*define\s+HASHVERSION\s+2\s*", data)
+-            if m is not None:
+-                # bingo - old version used hash file format version 2
+-                ### XXX this should be fixed to not be platform-dependent
+-                ### but I don't have direct access to an osf1 platform and
+-                ### seemed to be muffing the search somehow
+-                libraries = platform == "osf1" and ['db'] or None
+-                if libraries is not None:
+-                    exts.append(Extension('bsddb185', ['bsddbmodule.c'],
+-                                          libraries=libraries))
+-                else:
+-                    exts.append(Extension('bsddb185', ['bsddbmodule.c']))
+-            else:
+-                missing.append('bsddb185')
++	libraries = os.getenv("PY_BDB_TYPE", "")
++        if libraries:
++            exts.append(Extension('bsddb185', ['bsddbmodule.c'],
++                                  libraries=["db"]))
+         else:
+-            missing.append('bsddb185')
++            exts.append(Extension('bsddb185', ['bsddbmodule.c']))
+ 
+         # The standard Unix dbm module:
+         if platform not in ['cygwin']:
+@@ -1300,6 +1146,14 @@ class PyBuildExt(build_ext):
                  )
              libraries = []
  
@@ -56,7 +251,7 @@ $NetBSD: patch-am,v 1.6 2009/09/19 09:06:57 obache Exp $
          else:                                   # Linux and other unices
              macros = dict(
                  HAVE_SEM_OPEN=1,
-@@ -1891,9 +1903,9 @@ def main():
+@@ -1900,9 +1754,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
