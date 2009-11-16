@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/11/16 23:24:37 drochner Exp $
+
+--- Makefile.config.in.orig	2007-07-03 23:04:11.000000000 +0000
++++ Makefile.config.in
+@@ -79,11 +79,11 @@ LLVMMAKE := $(LLVM_SRC_ROOT)/make
+ PROJ_bindir     := $(DESTDIR)$(PROJ_prefix)/bin
+ PROJ_libdir     := $(DESTDIR)$(PROJ_prefix)/lib
+ PROJ_datadir    := $(DESTDIR)$(PROJ_prefix)/share
+-PROJ_docsdir    := $(DESTDIR)$(PROJ_prefix)/docs/llvm
++PROJ_docsdir    := $(DESTDIR)$(PROJ_prefix)/share/doc/llvm
+ PROJ_etcdir     := $(DESTDIR)$(PROJ_prefix)/etc/llvm
+ PROJ_includedir := $(DESTDIR)$(PROJ_prefix)/include
+ PROJ_infodir    := $(DESTDIR)$(PROJ_prefix)/info
+-PROJ_mandir     := $(DESTDIR)$(PROJ_prefix)/share/man
++PROJ_mandir     := $(DESTDIR)$(PROJ_prefix)/man
+ 
+ # Determine if we're on a unix type operating system
+ LLVM_ON_UNIX:=@LLVM_ON_UNIX@
