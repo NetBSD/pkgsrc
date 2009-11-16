@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/11/16 23:24:37 drochner Exp $
+
+--- lib/System/Unix/Path.inc.orig	2009-08-05 22:16:55.000000000 +0200
++++ lib/System/Unix/Path.inc
+@@ -279,7 +279,7 @@ Path::GetCurrentDirectory() {
+   return Path(pathname);
+ }
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ static int
+ test_dir(char buf[PATH_MAX], char ret[PATH_MAX],
+     const char *dir, const char *bin)
+@@ -336,7 +336,7 @@ getprogpath(char ret[PATH_MAX], const ch
+ /// GetMainExecutable - Return the path to the main executable, given the
+ /// value of argv[0] from program startup.
+ Path Path::GetMainExecutable(const char *argv0, void *MainAddr) {
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+   char exe_path[PATH_MAX];
+ 
+   if (getprogpath(exe_path, argv0) != NULL)
