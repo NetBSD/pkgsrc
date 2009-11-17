@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/07/11 05:52:17 obache Exp $
+# $NetBSD: Makefile,v 1.6 2009/11/17 14:29:32 wiz Exp $
 
-DISTNAME=	chardet-1.0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	python2-chardet-2.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python2-//}
 CATEGORIES=	converters python
 MASTER_SITES=	http://chardet.feedparser.org/download/
 EXTRACT_SUFX=	.tgz
