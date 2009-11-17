@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/11/17 16:05:54 wiz Exp $
 bin/seahorse-agent
 bin/seahorse-preferences
 bin/seahorse-tool
@@ -48,7 +48,9 @@ share/locale/be@latin/LC_MESSAGES/seahorse-plugins.mo
 share/locale/bg/LC_MESSAGES/seahorse-plugins.mo
 share/locale/bn/LC_MESSAGES/seahorse-plugins.mo
 share/locale/bn_IN/LC_MESSAGES/seahorse-plugins.mo
+share/locale/br/LC_MESSAGES/seahorse-plugins.mo
 share/locale/ca/LC_MESSAGES/seahorse-plugins.mo
+share/locale/ca@valencia/LC_MESSAGES/seahorse-plugins.mo
 share/locale/cs/LC_MESSAGES/seahorse-plugins.mo
 share/locale/da/LC_MESSAGES/seahorse-plugins.mo
 share/locale/de/LC_MESSAGES/seahorse-plugins.mo
@@ -75,6 +77,7 @@ share/locale/ko/LC_MESSAGES/seahorse-plugins.mo
 share/locale/ku/LC_MESSAGES/seahorse-plugins.mo
 share/locale/lt/LC_MESSAGES/seahorse-plugins.mo
 share/locale/lv/LC_MESSAGES/seahorse-plugins.mo
+share/locale/mai/LC_MESSAGES/seahorse-plugins.mo
 share/locale/mk/LC_MESSAGES/seahorse-plugins.mo
 share/locale/ml/LC_MESSAGES/seahorse-plugins.mo
 share/locale/mr/LC_MESSAGES/seahorse-plugins.mo
