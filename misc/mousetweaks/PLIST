@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/11/17 17:41:07 wiz Exp $
 bin/dwell-click-applet
 bin/mousetweaks
 bin/pointer-capture-applet
@@ -25,6 +25,36 @@ share/gnome/help/mousetweaks/C/figures/mouse-a11y-ssc-delay-slider.png
 share/gnome/help/mousetweaks/C/figures/mouse-a11y-tab.png
 share/gnome/help/mousetweaks/C/legal.xml
 share/gnome/help/mousetweaks/C/mousetweaks.xml
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-dwell-checkbox.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-dwell-click-type-applet.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-dwell-click-type-window.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-dwell-ctw-checkbox.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-dwell-delay-slider.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-dwell-gesture-mapping.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-dwell-mode-choice.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-dwell-motion-treshold.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-pointer-capture-context-menu.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-pointer-capture-locked.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-pointer-capture-preferences.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-ssc-checkbox.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-ssc-delay-slider.png
+share/gnome/help/mousetweaks/ca/figures/mouse-a11y-tab.png
+share/gnome/help/mousetweaks/ca/mousetweaks.xml
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-dwell-checkbox.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-dwell-click-type-applet.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-dwell-click-type-window.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-dwell-ctw-checkbox.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-dwell-delay-slider.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-dwell-gesture-mapping.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-dwell-mode-choice.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-dwell-motion-treshold.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-pointer-capture-context-menu.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-pointer-capture-locked.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-pointer-capture-preferences.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-ssc-checkbox.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-ssc-delay-slider.png
+share/gnome/help/mousetweaks/cs/figures/mouse-a11y-tab.png
+share/gnome/help/mousetweaks/cs/mousetweaks.xml
 share/gnome/help/mousetweaks/de/figures/mouse-a11y-dwell-checkbox.png
 share/gnome/help/mousetweaks/de/figures/mouse-a11y-dwell-click-type-applet.png
 share/gnome/help/mousetweaks/de/figures/mouse-a11y-dwell-click-type-window.png
@@ -148,8 +178,10 @@ share/gnome/help/mousetweaks/sv/mousetweaks.xml
 share/locale/ar/LC_MESSAGES/mousetweaks.mo
 share/locale/as/LC_MESSAGES/mousetweaks.mo
 share/locale/bg/LC_MESSAGES/mousetweaks.mo
+share/locale/bn/LC_MESSAGES/mousetweaks.mo
 share/locale/bn_IN/LC_MESSAGES/mousetweaks.mo
 share/locale/ca/LC_MESSAGES/mousetweaks.mo
+share/locale/ca@valencia/LC_MESSAGES/mousetweaks.mo
 share/locale/cs/LC_MESSAGES/mousetweaks.mo
 share/locale/da/LC_MESSAGES/mousetweaks.mo
 share/locale/de/LC_MESSAGES/mousetweaks.mo
@@ -170,6 +202,7 @@ share/locale/ja/LC_MESSAGES/mousetweaks.mo
 share/locale/kn/LC_MESSAGES/mousetweaks.mo
 share/locale/ko/LC_MESSAGES/mousetweaks.mo
 share/locale/lt/LC_MESSAGES/mousetweaks.mo
+share/locale/mai/LC_MESSAGES/mousetweaks.mo
 share/locale/mk/LC_MESSAGES/mousetweaks.mo
 share/locale/ml/LC_MESSAGES/mousetweaks.mo
 share/locale/mr/LC_MESSAGES/mousetweaks.mo
@@ -186,6 +219,8 @@ share/locale/ro/LC_MESSAGES/mousetweaks.mo
 share/locale/ru/LC_MESSAGES/mousetweaks.mo
 share/locale/sl/LC_MESSAGES/mousetweaks.mo
 share/locale/sq/LC_MESSAGES/mousetweaks.mo
+share/locale/sr/LC_MESSAGES/mousetweaks.mo
+share/locale/sr@latin/LC_MESSAGES/mousetweaks.mo
 share/locale/sv/LC_MESSAGES/mousetweaks.mo
 share/locale/ta/LC_MESSAGES/mousetweaks.mo
 share/locale/te/LC_MESSAGES/mousetweaks.mo
@@ -206,6 +241,8 @@ share/mousetweaks/pointer-capture-applet.ui
 share/mousetweaks/right-click.png
 share/mousetweaks/single-click.png
 share/omf/mousetweaks/mousetweaks-C.omf
+share/omf/mousetweaks/mousetweaks-ca.omf
+share/omf/mousetweaks/mousetweaks-cs.omf
 share/omf/mousetweaks/mousetweaks-de.omf
 share/omf/mousetweaks/mousetweaks-el.omf
 share/omf/mousetweaks/mousetweaks-en_GB.omf
