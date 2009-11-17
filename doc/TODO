@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8662 2009/11/17 03:18:00 snj Exp $
+$NetBSD: TODO,v 1.8663 2009/11/17 03:56:06 snj Exp $
 
 Suggested new packages
 ======================
@@ -836,7 +836,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lbreakout2-2.6
 	o lcc-4.2
 	o ldapsdk-6.0.2
-	o leafpad-0.8.17
 	o lensfun-0.2.4
 	o less-436
 	o level9-4.1
