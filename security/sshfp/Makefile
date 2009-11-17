@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/09 22:56:26 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/17 09:01:43 tron Exp $
 
 DISTNAME=	sshfp-1.1.3
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Print ssh host key fingerprint resource records
 DEPENDS+=	 ${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
 
 NO_BUILD=			yes
-PYTHON_VERSIONS_ACCEPTED=	25 24
 PYTHON_PATCH_SCRIPTS=		sshfp
 
 .include "../../lang/python/application.mk"
