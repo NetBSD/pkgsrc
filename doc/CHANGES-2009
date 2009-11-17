@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4325 2009/11/17 06:59:32 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4326 2009/11/17 10:50:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5778,3 +5778,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/leafpad to 0.8.17 [snj 2009-11-17]
 	Added security/p5-Crypt-ECB version 1.45 [dsainty 2009-11-17]
 	Updated mail/exim to 4.70 [adam 2009-11-17]
+	Updated devel/mercurial to 1.4 [wiz 2009-11-17]
