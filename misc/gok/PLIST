@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/06/14 18:07:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/11/17 16:54:31 wiz Exp $
 bin/create-branching-keyboard
 bin/gok
 lib/bonobo/servers/GNOME_Gok.server
@@ -127,6 +127,16 @@ share/gok/ca/numberpad.kbd
 share/gok/ca/quit.kbd
 share/gok/ca/text-operations.kbd
 share/gok/ca/valuator.kbd
+share/gok/ca@valencia/gok-controls.kbd
+share/gok/ca@valencia/hide.kbd
+share/gok/ca@valencia/launcher.kbd
+share/gok/ca@valencia/main.kbd
+share/gok/ca@valencia/mouse.kbd
+share/gok/ca@valencia/move-resize.kbd
+share/gok/ca@valencia/numberpad.kbd
+share/gok/ca@valencia/quit.kbd
+share/gok/ca@valencia/text-operations.kbd
+share/gok/ca@valencia/valuator.kbd
 share/gok/cs/gok-controls.kbd
 share/gok/cs/hide.kbd
 share/gok/cs/launcher.kbd
@@ -295,8 +305,6 @@ share/gok/gl/valuator.kbd
 share/gok/glade/gok.glade2
 share/gok/gok.rc
 share/gok/goklogo.png
-share/gok/goksound1.wav
-share/gok/goksound2.wav
 share/gok/gu/gok-controls.kbd
 share/gok/gu/hide.kbd
 share/gok/gu/launcher.kbd
@@ -805,6 +813,7 @@ share/gtk-doc/html/gok/ch01.html
 share/gtk-doc/html/gok/ch02.html
 share/gtk-doc/html/gok/ch03.html
 share/gtk-doc/html/gok/ch04.html
+share/gtk-doc/html/gok/gok-GokButton.html
 share/gtk-doc/html/gok/gok-arraylist.html
 share/gtk-doc/html/gok/gok-callbacks.html
 share/gtk-doc/html/gok/gok-command-common.html
@@ -822,6 +831,7 @@ share/gtk-doc/html/gok/gok-gok-control.html
 share/gtk-doc/html/gok/gok-gok-data.html
 share/gtk-doc/html/gok/gok-gok-editor.html
 share/gtk-doc/html/gok/gok-gok-feedback.html
+share/gtk-doc/html/gok/gok-gok-gconf-keys.html
 share/gtk-doc/html/gok/gok-gok-gconf.html
 share/gtk-doc/html/gok/gok-gok-key.html
 share/gtk-doc/html/gok/gok-gok-keyboard.html
@@ -870,6 +880,7 @@ share/locale/bg/LC_MESSAGES/gok.mo
 share/locale/bn/LC_MESSAGES/gok.mo
 share/locale/bn_IN/LC_MESSAGES/gok.mo
 share/locale/ca/LC_MESSAGES/gok.mo
+share/locale/ca@valencia/LC_MESSAGES/gok.mo
 share/locale/cs/LC_MESSAGES/gok.mo
 share/locale/cy/LC_MESSAGES/gok.mo
 share/locale/da/LC_MESSAGES/gok.mo
@@ -937,3 +948,5 @@ share/locale/zh_HK/LC_MESSAGES/gok.mo
 share/locale/zh_TW/LC_MESSAGES/gok.mo
 share/omf/gok/gok-C.omf
 share/pixmaps/gok.png
+share/sounds/freedesktop/stereo/goksound1.wav
+share/sounds/freedesktop/stereo/goksound2.wav
