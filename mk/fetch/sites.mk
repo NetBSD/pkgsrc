@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.72 2009/11/17 20:06:38 zafer Exp $
+# $NetBSD: sites.mk,v 1.73 2009/11/17 20:08:29 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -404,7 +404,7 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://komo.vlsm.org/openoffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
 	ftp://ftp.t.ring.gr.jp/pub/misc/openoffice/ \
-	ftp://ftp.kr.freebsd.org/pub/openoffice/ \
+	ftp://ftp.kr.freebsd.org/pub/openoffice/
 
 MASTER_SITE_CYGWIN+= \
 	http://mirrors.kernel.org/sources.redhat.com/cygwin/ \
