@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/08 09:38:46 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/11/17 14:29:32 wiz Exp $
 
-SHA1 (chardet-1.0.1.tgz) = cff3db70eef4d580951c083dd9bbe2685fd773a5
-RMD160 (chardet-1.0.1.tgz) = 0dcf3de5722f37693d20bf20020778b31a3f818c
-Size (chardet-1.0.1.tgz) = 179218 bytes
+SHA1 (python2-chardet-2.0.1.tgz) = d3240c8b7d04bd15d21feda76158223fa7f5f2bc
+RMD160 (python2-chardet-2.0.1.tgz) = 054d940a152344f170758e928a484ac0f98df78f
+Size (python2-chardet-2.0.1.tgz) = 177793 bytes
