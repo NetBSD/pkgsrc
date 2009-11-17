@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.1 2009/11/17 12:23:01 tron Exp $
+
+Fix deprecation warnings under Python 2.6.
+
+--- sshfp.orig	2007-05-15 22:10:26.000000000 +0100
++++ sshfp	2009-11-17 11:54:50.000000000 +0000
+@@ -8,9 +8,17 @@
+ import sys
+ import getopt
+ import base64
+-import sha
++
++try:
++    import hashlib
++    SHA1_CLASS = hashlib.sha1
++except ImportError:
++    import sha
++    SHA1_CLASS = sha.sha
++
+ import commands
+ import time
++import subprocess
+ # www.dnspython.org
+ try:
+ 	import dns.resolver
+@@ -58,7 +66,9 @@
+ 	except TypeError:
+ 		print "FAILED on hostname "+hostname+" with keyblob "+keyblob
+ 		return "ERROR"
+-	fpsha1 = sha.new(rawkey).hexdigest()
++        sha1 = SHA1_CLASS()
++        sha1.update(rawkey)
++        fpsha1 = sha1.hexdigest()
+ 	# check for Reverse entries
+ 	reverse = 1
+ 	parts = hostname.split(".",3)
+@@ -183,7 +193,11 @@
+ 	cmd = "ssh-keyscan -p %s -T %s -t %s %s" % (port, timeout, algo, hosts)
+ 	if quiet:
+ 		cmd = cmd + " 2>/dev/null"
+-	tochild, fromchild, childerror = os.popen3(cmd, 'r')
++        cmd_pipe = subprocess.Popen(cmd, shell = True, stdin = subprocess.PIPE,
++          stdout = subprocess.PIPE, stderr = subprocess.PIPE, close_fds = True)
++        tochild = cmd_pipe.stdin
++        fromchild = cmd_pipe.stdout
++        childerror = cmd_pipe.stderr
+         err = childerror.readlines()
+         khdns = "\n".join(fromchild.readlines())
+         for e in err:
