@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4323 2009/11/17 03:56:06 snj Exp $
+$NetBSD: CHANGES-2009,v 1.4324 2009/11/17 04:33:02 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5776,3 +5776,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Data-Dumper-Concise version 1.001 [seb 2009-11-17]
 	Updated textproc/diffstat to 1.51 [snj 2009-11-17]
 	Updated editors/leafpad to 0.8.17 [snj 2009-11-17]
+	Added security/p5-Crypt-ECB version 1.45 [dsainty 2009-11-17]
