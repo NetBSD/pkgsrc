@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:39:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/17 14:29:32 wiz Exp $
+${PYSITELIB}/chardet/__init__.py
+${PYSITELIB}/chardet/__init__.pyc
+${PYSITELIB}/chardet/__init__.pyo
 ${PYSITELIB}/chardet/big5freq.py
 ${PYSITELIB}/chardet/big5freq.pyc
 ${PYSITELIB}/chardet/big5freq.pyo
@@ -50,9 +53,6 @@ ${PYSITELIB}/chardet/gb2312prober.pyo
 ${PYSITELIB}/chardet/hebrewprober.py
 ${PYSITELIB}/chardet/hebrewprober.pyc
 ${PYSITELIB}/chardet/hebrewprober.pyo
-${PYSITELIB}/chardet/__init__.py
-${PYSITELIB}/chardet/__init__.pyc
-${PYSITELIB}/chardet/__init__.pyo
 ${PYSITELIB}/chardet/jisfreq.py
 ${PYSITELIB}/chardet/jisfreq.pyc
 ${PYSITELIB}/chardet/jisfreq.pyo
@@ -98,6 +98,9 @@ ${PYSITELIB}/chardet/sbcsgroupprober.pyo
 ${PYSITELIB}/chardet/sjisprober.py
 ${PYSITELIB}/chardet/sjisprober.pyc
 ${PYSITELIB}/chardet/sjisprober.pyo
+${PYSITELIB}/chardet/test.py
+${PYSITELIB}/chardet/test.pyc
+${PYSITELIB}/chardet/test.pyo
 ${PYSITELIB}/chardet/universaldetector.py
 ${PYSITELIB}/chardet/universaldetector.pyc
 ${PYSITELIB}/chardet/universaldetector.pyo
