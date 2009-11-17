@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/07/31 10:21:21 agc Exp $
+$NetBSD: patch-aa,v 1.2 2009/11/17 12:23:01 tron Exp $
 
 --- Makefile	2008/07/31 09:38:52	1.1
 +++ Makefile	2008/07/31 09:37:43
@@ -13,11 +13,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/07/31 10:21:21 agc Exp $
  
  all: man-page
  	
-@@ -14,7 +14,6 @@
- 	install -m 0755 sshfp $(BIN)
- 	install -d 0755 $(MAN)
- 	install -m 0644 sshfp.1 $(MAN)
--	gzip $(MAN)/sshfp.1
- 
- man-page:
- 	nroff -man sshfp.1 > sshfp.1.txt
