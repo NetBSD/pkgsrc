@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4324 2009/11/17 04:33:02 dsainty Exp $
+$NetBSD: CHANGES-2009,v 1.4325 2009/11/17 06:59:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5777,3 +5777,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/diffstat to 1.51 [snj 2009-11-17]
 	Updated editors/leafpad to 0.8.17 [snj 2009-11-17]
 	Added security/p5-Crypt-ECB version 1.45 [dsainty 2009-11-17]
+	Updated mail/exim to 4.70 [adam 2009-11-17]
