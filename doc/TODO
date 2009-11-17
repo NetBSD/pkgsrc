@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8661 2009/11/15 21:30:36 wiz Exp $
+$NetBSD: TODO,v 1.8662 2009/11/17 03:18:00 snj Exp $
 
 Suggested new packages
 ======================
@@ -534,7 +534,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o deskbar-applet-2.28.0 [GNOME 2.28]
 	o dhid-5.3
 	o dia-0.97 [font problems when printing to PDF/PS]
-	o diffstat-1.51
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dircproxy-devel-1.2.0.2
