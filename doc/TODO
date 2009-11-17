@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8676 2009/11/17 17:11:18 wiz Exp $
+$NetBSD: TODO,v 1.8677 2009/11/17 17:20:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -531,7 +531,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o defendguin-0.0.11
 	o delegate-9.9.5
 	o denemo-0.8.10
-	o deskbar-applet-2.28.0 [GNOME 2.28]
 	o dhid-5.3
 	o dia-0.97 [font problems when printing to PDF/PS]
 	o dinotrace-9.3e
