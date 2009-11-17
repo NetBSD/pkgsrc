@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2009/09/23 09:54:46 tron Exp $
+# $NetBSD: Makefile,v 1.23 2009/11/17 15:47:26 wiz Exp $
 #
 
-DISTNAME=	orca-2.26.3
-PKGREVISION=	1
+DISTNAME=	orca-2.28.1
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/orca/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/orca/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -35,6 +34,7 @@ BUILDLINK_API_DEPENDS.gnome-speech+=	gnome-speech>=0.3.10
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../net/py-ORBit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/py-dbus/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-mag+=	gnome-mag>=0.12.5
 .include "../../x11/gnome-mag/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.16
