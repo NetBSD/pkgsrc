@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2009/09/23 09:54:45 tron Exp $
+# $NetBSD: Makefile,v 1.43 2009/11/17 17:19:58 wiz Exp $
 #
 
-DISTNAME=	deskbar-applet-2.26.2
-PKGREVISION=	1
+DISTNAME=	deskbar-applet-2.28.0
 CATEGORIES=	misc gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskbar-applet/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskbar-applet/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	drochner@NetBSD.org
@@ -19,7 +18,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
-PKGCONFIG_OVERRIDE=	data/deskbar-applet.pc
+PKGCONFIG_OVERRIDE=	data/deskbar-applet.pc.in
 
 GCONF_SCHEMAS=		deskbar-applet.schemas
 
