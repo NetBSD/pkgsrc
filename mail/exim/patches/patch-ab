@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.13 2006/08/08 15:24:01 abs Exp $
+$NetBSD: patch-ab,v 1.14 2009/11/17 06:39:32 adam Exp $
 
---- OS/Makefile-Default.orig	2006-04-28 11:32:21.000000000 +0100
+--- OS/Makefile-Default.orig	2009-10-16 09:30:54.000000000 +0200
 +++ OS/Makefile-Default
-@@ -71,7 +71,7 @@ PERL_COMMAND=/usr/bin/perl
+@@ -73,7 +73,7 @@ PERL_COMMAND=/usr/bin/perl
  
  # CC contains the name of the C compiler to be used.
  
