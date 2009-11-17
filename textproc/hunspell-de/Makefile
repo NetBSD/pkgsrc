@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/07/07 22:00:41 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/11/17 15:24:58 wiz Exp $
 #
 
-DISTNAME=	igerman98-20090107
+DISTNAME=	igerman98-20091006
 PKGNAME=	${DISTNAME:S/igerman98/hunspell-de/}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.j3e.de/ispell/igerman98/dict/
