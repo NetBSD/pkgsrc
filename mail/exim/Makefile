@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2009/02/13 15:28:03 abs Exp $
+# $NetBSD: Makefile,v 1.96 2009/11/17 06:39:32 adam Exp $
 
-DISTNAME=	exim-4.69
-PKGREVISION=	4
+DISTNAME=	exim-4.70
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -59,10 +58,6 @@ CFLAGS+=		${CPPFLAGS}
 
 .include "options.mk"
 
-# BDB_TYPE gets set to "db1" if USE_DB185=="yes"
-USE_DB185?=		no
-BDB_ACCEPTED?=		db1 db2 db3 db4
-
 post-extract:
 	mkdir ${WRKSRC}/Local
 	cp ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.pkgsrc
@@ -81,8 +76,10 @@ pre-configure:
 		-e 's:@LOOKUP_LIBS@:${LOOKUP_LIBS}:' \
 		-e 's:@CHOWN@:${CHOWN}:' \
 		-e 's:@CHGRP@:${CHGRP}:' \
+		-e 's:@CHMOD@:${CHMOD}:' \
 		-e 's:@MV@:${MV}:' \
 		-e 's:@RM@:${RM}:' \
+		-e 's:@TOUCH@:${TOUCH}:' \
 		-e 's:@PERL5@:${PERL5}:' \
 		-e 's:@VARBASE@:${VARBASE}:' \
 	    < ${WRKSRC}/Local/Makefile.pkgsrc \
@@ -115,4 +112,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/exim.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/exim.8
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
