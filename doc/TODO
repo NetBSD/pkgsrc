@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8665 2009/11/17 06:59:32 adam Exp $
+$NetBSD: TODO,v 1.8666 2009/11/17 14:29:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1150,7 +1150,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-4.8.1
-	o py-chardet-2.0.1
 	o py-checker-0.8.17
 	o py-fpconst-0.7.3
 	o py-game-1.9.1
