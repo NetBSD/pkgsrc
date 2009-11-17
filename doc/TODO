@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8666 2009/11/17 14:29:44 wiz Exp $
+$NetBSD: TODO,v 1.8667 2009/11/17 14:43:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1161,7 +1161,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-karaoke-0.7.2
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6 [pkg/41675]
-	o py-lxml-2.2.4
 	o py-m2crypto-0.20.2
 	o py-moin-1.8.5
 	o py-psycopg-2.0.13
