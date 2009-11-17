@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4326 2009/11/17 10:50:01 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4327 2009/11/17 12:23:14 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5779,3 +5779,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/p5-Crypt-ECB version 1.45 [dsainty 2009-11-17]
 	Updated mail/exim to 4.70 [adam 2009-11-17]
 	Updated devel/mercurial to 1.4 [wiz 2009-11-17]
+	Updated security/sshfp to 1.1.3nb2 [tron 2009-11-17]
