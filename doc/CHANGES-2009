@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4330 2009/11/17 14:44:25 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4331 2009/11/17 15:21:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5783,3 +5783,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated converters/py-chardet to 2.0.1 [wiz 2009-11-17]
 	Updated textproc/py-lxml to 2.2.4 [wiz 2009-11-17]
 	Updated time/py-pytz to 2009r [wiz 2009-11-17]
+	Updated x11/py-sip to 4.9.1 [wiz 2009-11-17]
