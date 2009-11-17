@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/17 04:27:59 dsainty Exp $
+
+SHA1 (Crypt-ECB-1.45.tar.gz) = d37d0dc34bc14f8a07d36b58beda85a89ec910c0
+RMD160 (Crypt-ECB-1.45.tar.gz) = 81b7829c1e99f3ebb02dd7636877b4689f61ce17
+Size (Crypt-ECB-1.45.tar.gz) = 14570 bytes
