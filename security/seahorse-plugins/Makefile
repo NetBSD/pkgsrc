@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2009/08/26 19:58:16 sno Exp $
+# $NetBSD: Makefile,v 1.10 2009/11/17 16:05:54 wiz Exp $
 
-DISTNAME=	seahorse-plugins-2.26.2
-PKGREVISION=	1
+DISTNAME=	seahorse-plugins-2.28.1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse-plugins/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse-plugins/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/seahorse/
 COMMENT=	Plugins for the GnuPG front end and bonobo component for GNOME
-#LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1
 
 DEPENDS+=	gnupg>=1.2.1:../../security/gnupg
 
@@ -37,11 +36,9 @@ GCONF_SCHEMAS+=		seahorse-plugins.schemas
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-# XXX: fails detection with:
-# checking which gecko to use...
-# test: : bad number
-#.include "../../www/epiphany/buildlink3.mk"
-#.include "../../www/firefox/buildlink3.mk"
+# doesn't suffice, configure says:
+# checking whether we have a gtk 2 gecko build... configure: error: This program needs a gtk 2 gecko build
+#.include "../../devel/xulrunner/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
