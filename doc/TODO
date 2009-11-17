@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8670 2009/11/17 15:25:09 wiz Exp $
+$NetBSD: TODO,v 1.8671 2009/11/17 15:47:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1043,7 +1043,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openttd-0.7.3
 	o open-vm-tools-2009.10.15.201664
 	o opera-10.01
-	o orca-2.28.1 [GNOME 2.28]
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o ortp-0.16.1

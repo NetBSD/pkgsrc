@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4332 2009/11/17 15:25:09 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4333 2009/11/17 15:47:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5785,3 +5785,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/py-pytz to 2009r [wiz 2009-11-17]
 	Updated x11/py-sip to 4.9.1 [wiz 2009-11-17]
 	Updated textproc/hunspell-de to 20091006 [wiz 2009-11-17]
+	Updated misc/orca to 2.28.1 [wiz 2009-11-17]
