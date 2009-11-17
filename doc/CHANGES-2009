@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4337 2009/11/17 17:08:13 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4338 2009/11/17 17:11:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5790,3 +5790,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/gok to 2.28.1 [wiz 2009-11-17]
 	Updated editors/tomboy to 1.0.0 [wiz 2009-11-17]
 	Updated x11/py-gtksourceview to 2.8.0 [wiz 2009-11-17]
+	Updated devel/gnome-common to 2.28.0 [wiz 2009-11-17]
