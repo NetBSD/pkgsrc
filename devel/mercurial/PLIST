@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/07/17 20:35:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/11/17 10:49:50 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -120,6 +120,9 @@ ${PYSITELIB}/hgext/rebase.pyo
 ${PYSITELIB}/hgext/record.py
 ${PYSITELIB}/hgext/record.pyc
 ${PYSITELIB}/hgext/record.pyo
+${PYSITELIB}/hgext/relink.py
+${PYSITELIB}/hgext/relink.pyc
+${PYSITELIB}/hgext/relink.pyo
 ${PYSITELIB}/hgext/share.py
 ${PYSITELIB}/hgext/share.pyc
 ${PYSITELIB}/hgext/share.pyo
@@ -216,6 +219,16 @@ ${PYSITELIB}/mercurial/hbisect.pyo
 ${PYSITELIB}/mercurial/help.py
 ${PYSITELIB}/mercurial/help.pyc
 ${PYSITELIB}/mercurial/help.pyo
+${PYSITELIB}/mercurial/help/config.txt
+${PYSITELIB}/mercurial/help/dates.txt
+${PYSITELIB}/mercurial/help/diffs.txt
+${PYSITELIB}/mercurial/help/environment.txt
+${PYSITELIB}/mercurial/help/extensions.txt
+${PYSITELIB}/mercurial/help/multirevs.txt
+${PYSITELIB}/mercurial/help/patterns.txt
+${PYSITELIB}/mercurial/help/revisions.txt
+${PYSITELIB}/mercurial/help/templates.txt
+${PYSITELIB}/mercurial/help/urls.txt
 ${PYSITELIB}/mercurial/hg.py
 ${PYSITELIB}/mercurial/hg.pyc
 ${PYSITELIB}/mercurial/hg.pyo
@@ -266,6 +279,7 @@ ${PYSITELIB}/mercurial/i18n/hggettext
 ${PYSITELIB}/mercurial/i18n/it.po
 ${PYSITELIB}/mercurial/i18n/ja.po
 ${PYSITELIB}/mercurial/i18n/pt_BR.po
+${PYSITELIB}/mercurial/i18n/sv.po
 ${PYSITELIB}/mercurial/i18n/zh_CN.po
 ${PYSITELIB}/mercurial/i18n/zh_TW.po
 ${PYSITELIB}/mercurial/ignore.py
@@ -281,6 +295,7 @@ ${PYSITELIB}/mercurial/locale/fr/LC_MESSAGES/hg.mo
 ${PYSITELIB}/mercurial/locale/it/LC_MESSAGES/hg.mo
 ${PYSITELIB}/mercurial/locale/ja/LC_MESSAGES/hg.mo
 ${PYSITELIB}/mercurial/locale/pt_BR/LC_MESSAGES/hg.mo
+${PYSITELIB}/mercurial/locale/sv/LC_MESSAGES/hg.mo
 ${PYSITELIB}/mercurial/locale/zh_CN/LC_MESSAGES/hg.mo
 ${PYSITELIB}/mercurial/locale/zh_TW/LC_MESSAGES/hg.mo
 ${PYSITELIB}/mercurial/localrepo.py
@@ -310,6 +325,9 @@ ${PYSITELIB}/mercurial/mdiff.pyo
 ${PYSITELIB}/mercurial/merge.py
 ${PYSITELIB}/mercurial/merge.pyc
 ${PYSITELIB}/mercurial/merge.pyo
+${PYSITELIB}/mercurial/minirst.py
+${PYSITELIB}/mercurial/minirst.pyc
+${PYSITELIB}/mercurial/minirst.pyo
 ${PYSITELIB}/mercurial/mpatch.so
 ${PYSITELIB}/mercurial/node.py
 ${PYSITELIB}/mercurial/node.pyc
@@ -355,6 +373,9 @@ ${PYSITELIB}/mercurial/strutil.pyo
 ${PYSITELIB}/mercurial/subrepo.py
 ${PYSITELIB}/mercurial/subrepo.pyc
 ${PYSITELIB}/mercurial/subrepo.pyo
+${PYSITELIB}/mercurial/tags.py
+${PYSITELIB}/mercurial/tags.pyc
+${PYSITELIB}/mercurial/tags.pyo
 ${PYSITELIB}/mercurial/templatefilters.py
 ${PYSITELIB}/mercurial/templatefilters.pyc
 ${PYSITELIB}/mercurial/templatefilters.pyo
