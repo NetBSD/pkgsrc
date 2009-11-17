@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8672 2009/11/17 16:06:07 wiz Exp $
+$NetBSD: TODO,v 1.8673 2009/11/17 16:54:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -709,7 +709,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.13
 	o gogo-3.11p1
-	o gok-2.28.1 [GNOME 2.28]
 	o golem-0.0.6
 	o gossip-0.31
 	o gourmet-0.13.3
