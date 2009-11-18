@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/10/28 18:46:20 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2009/11/18 16:59:30 drochner Exp $
 
---- Makefile.orig	2009-10-21 23:59:54.000000000 +0200
+--- Makefile.orig	2009-10-27 02:45:50.000000000 +0100
 +++ Makefile
 @@ -30,18 +30,18 @@ INCLUDEDIR = /usr/include
  MANDIR = /usr/share/man
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/10/28 18:46:20 drochner Exp $
 +#LD = $(CC)
  LD_lib = $(LD)
  RM = rm -f
- LN_s = ln -s
+ LN_s = ln -s -f
  MKDIR = umask 022 && mkdir -p
  INSTALL = install -c
 -CFLAGS = -Wall -O2
