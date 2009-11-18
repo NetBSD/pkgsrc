@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8682 2009/11/17 19:51:11 wiz Exp $
+$NetBSD: TODO,v 1.8683 2009/11/18 16:39:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -874,6 +874,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libiconv-1.13.1
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
+	o libkexiv2-0.1.9
+	o libkipi-0.1.6
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
@@ -1154,7 +1156,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-m2crypto-0.20.2
 	o py-moin-1.8.5
 	o py-psycopg-2.0.13
-	o py-qt4-4.6.1
 	o py-subversion-1.6.6
 	o py-sybase-0.37
 	o py-urwid-0.9.9
