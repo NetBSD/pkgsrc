@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4351 2009/11/18 21:03:49 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4352 2009/11/18 21:32:04 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5803,3 +5803,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/py-qt4 to 4.6.1 [wiz 2009-11-18]
 	Updated misc/calibre to 0.6.24 [wiz 2009-11-18]
 	Updated misc/calibre to 0.6.24nb1 [wiz 2009-11-18]
+	Updated databases/p5-DBIx-Class to 0.08114 [seb 2009-11-18]
