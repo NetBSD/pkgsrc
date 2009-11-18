@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.16 2009/11/13 11:12:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.17 2009/11/18 13:12:24 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -47,3 +47,5 @@ Pullup ticket #2932 - requested by obache
 selectwm: portability fix
 Pullup ticket #2933 - requested by adrianp
 wordpress: security update
+Pullup ticket #2934 - requested by obache
+gnats: build fix
