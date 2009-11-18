@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.308 2009/10/20 10:59:43 abs Exp $
+# $NetBSD: Makefile,v 1.309 2009/11/18 14:58:34 he Exp $
 #
 
 COMMENT=	Databases
@@ -216,6 +216,7 @@ SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-bdb-xml
 SUBDIR+=	py-bsddb3
+SUBDIR+=	py-elixir
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
 SUBDIR+=	py-metakit
