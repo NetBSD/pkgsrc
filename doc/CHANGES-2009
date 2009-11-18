@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4350 2009/11/18 17:41:33 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4351 2009/11/18 21:03:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5802,3 +5802,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/py-elixir version 0.7.0 [he 2009-11-18]
 	Updated x11/py-qt4 to 4.6.1 [wiz 2009-11-18]
 	Updated misc/calibre to 0.6.24 [wiz 2009-11-18]
+	Updated misc/calibre to 0.6.24nb1 [wiz 2009-11-18]
