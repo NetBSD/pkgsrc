@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/06/08 05:54:51 adam Exp $
+# $NetBSD: Makefile,v 1.46 2009/11/18 19:32:05 heinz Exp $
 
 DISTNAME=	p7zip_9.04_src_all
 PKGNAME=	p7zip-9.04
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://p7zip.sourceforge.net/
 COMMENT=	File archiver with high compression
+LICENSE=	gnu-lgpl-v2.1 AND unrar-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
