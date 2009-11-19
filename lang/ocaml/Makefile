@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2009/09/19 22:37:03 sno Exp $
+# $NetBSD: Makefile,v 1.64 2009/11/19 03:18:58 minskim Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,6 +18,7 @@ MAKE_JOBS_SAFE=		no
 # Stub libraries for functions missing from base system.
 .if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || \
     !empty(MACHINE_PLATFORM:MDarwin-9.*-i386) || \
+    !empty(MACHINE_PLATFORM:MDarwin-10.*-x86_64) || \
     ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD" || \
     ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS" || \
     ${OPSYS} == "Linux"
