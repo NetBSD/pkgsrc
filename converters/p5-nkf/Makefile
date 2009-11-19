@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.17 2009/01/22 08:50:12 obache Exp $
+# $NetBSD: Makefile,v 1.18 2009/11/19 05:42:02 obache Exp $
 #
 
 .include "../../converters/nkf/Makefile.common"
 
-PKGNAME=	p5-nkf-2.09
+PKGNAME=	p5-nkf-2.10
 SVR4_PKGNAME=	p5nkf
 CATEGORIES=	japanese converters perl5
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Perl library for Network Kanji code conversion Filter
+#LICENSE=	zlib-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
