@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4360 2009/11/19 21:21:43 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4361 2009/11/19 21:22:13 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5812,3 +5812,4 @@ Changes to the packages collection and infrastructure in 2009:
 	updated devel/cvsd to 1.0.16 [schnoebe 2009-11-19]
 	Updated www/p5-Catalyst-View-TT to 0.31 [seb 2009-11-19]
 	Updated devel/p5-Class-MOP to 0.95 [seb 2009-11-19]
+	Updated devel/p5-Moose to 0.93 [seb 2009-11-19]
