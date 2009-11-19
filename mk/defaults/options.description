@@ -141,6 +141,7 @@ flac			Enable FLAC support.
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
 ftp			Enable File Transfer Protocol (FTP) support.
+gd			Use GD to render graphical output
 gdal			Use the GDAL library.
 gdb6-tui		Build the tui application.
 gdbm			Use the GNU gdbm database library.
