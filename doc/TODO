@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8684 2009/11/18 17:41:33 wiz Exp $
+$NetBSD: TODO,v 1.8685 2009/11/19 14:13:02 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1169,7 +1169,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qvplay-0.95
 	o radiance-3.7.2
 	o raine-0.51.6
-	o ramaze-2009.01
 	o randread-0.2
 	o randrproto-1.3.1
 	o rapidsvn-0.12
