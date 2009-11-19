@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4355 2009/11/19 05:42:35 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4356 2009/11/19 07:39:59 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5807,3 +5807,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libmaa to 1.2.0 [reed 2009-11-18]
 	Updated converters/nkf to 2.10 [obache 2009-11-19]
 	Updated converters/p5-nkf to 2.10 [obache 2009-11-19]
+	Updated editors/vim-share to 7.2.303 [martti 2009-11-19]
