@@ -1,0 +1,8 @@
+# $FreeBSD$
+
+.include <bsd.own.mk>
+
+PROG=		fetch
+LDADD+=		-lfetch @LIBS@
+
+.include <bsd.prog.mk>
