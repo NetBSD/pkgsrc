@@ -1,0 +1,5 @@
+vnStat is a network traffic monitor that keeps a log of daily network traffic
+for the selected interface(s). vnStat isn't a packet sniffer. vnStat can be
+used even without root permissions.
+
+vnStat is focused on being small, simple and stable.
