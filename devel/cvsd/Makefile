@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2007/07/04 20:54:37 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2009/11/19 17:13:24 schnoebe Exp $
 
-DISTNAME=		cvsd-1.0.13
+DISTNAME=		cvsd-1.0.16
 CATEGORIES=		devel scm
-MASTER_SITES=		http://ch.tudelft.nl/~arthur/cvsd/
+MASTER_SITES=		http://arthurdejong.org/cvsd/
 
 MAINTAINER=		eric@cirr.com
-HOMEPAGE=		http://ch.tudelft.nl/~arthur/cvsd/
+HOMEPAGE=		http://arthurdejong.org/cvsd/
 COMMENT=		Run CVS pserver in a chroot-ed environment
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		YES
@@ -27,8 +30,10 @@ PKG_GROUPS=		${CVSD_GROUP}
 PKG_GROUPS_VARS+=	CVSD_GROUP
 PKG_USERS_VARS+=	CVSD_USER
 
+INSTALLATION_DIRS=	${EGDIR}
+
 pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR}
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
