@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.671 2009/11/12 11:08:40 markd Exp $
+# $NetBSD: Makefile,v 1.672 2009/11/19 14:13:02 fhajny Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -469,6 +469,7 @@ SUBDIR+=	ruby-fcgi
 SUBDIR+=	ruby-gnome2-gtkhtml2
 SUBDIR+=	ruby-gnome2-gtkmozembed
 SUBDIR+=	ruby-htmlsplit
+SUBDIR+=	ruby-innate
 SUBDIR+=	ruby-jsmin
 SUBDIR+=	ruby-mechanize
 SUBDIR+=	ruby-net-flickr
