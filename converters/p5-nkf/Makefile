@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/11/19 05:42:02 obache Exp $
+# $NetBSD: Makefile,v 1.19 2009/11/19 05:45:45 obache Exp $
 #
 
 .include "../../converters/nkf/Makefile.common"
@@ -18,11 +18,6 @@ USE_LANGUAGES=	c
 PERL5_CONFIGURE_DIRS=	NKF.mod
 BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
 PERL5_PACKLIST=		auto/NKF/.packlist
-
-SUBST_CLASSES+=		sp
-SUBST_STAGE.sp=		pre-configure
-SUBST_FILES.sp=		nkf.c
-SUBST_SED.sp=		-e 's/SP/SPSP/g'
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
