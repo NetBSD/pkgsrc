@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8685 2009/11/19 14:13:02 fhajny Exp $
+$NetBSD: TODO,v 1.8686 2009/11/19 17:15:55 schnoebe Exp $
 
 Suggested new packages
 ======================
@@ -510,7 +510,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cssc-1.2.0
 	o cups-1.4.2
 	o cvs2p4-2.5.5 [schmonz]
-	o cvsd-1.0.16
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-2.3.13
 	o dansguardian-2.10.0.3
