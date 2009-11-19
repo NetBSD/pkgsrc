@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2009/10/18 12:47:53 tonio Exp $
+$NetBSD: distinfo,v 1.49 2009/11/19 03:05:57 minskim Exp $
 
 SHA1 (ocaml-3.11.1.tar.bz2) = 570feab47b34b29f866ecadcc16153d5a4a4f6a1
 RMD160 (ocaml-3.11.1.tar.bz2) = 991147354a85b975a86ce2dffafce669c9338db5
@@ -11,7 +11,7 @@ SHA1 (patch-ag) = f1b751098d3693b92feb26cda87970426bffcaf1
 SHA1 (patch-ah) = 3165bbcdb98d09f5161912e51a3131486aa0b488
 SHA1 (patch-aj) = f25a82ce98080c1b5514d7a9f026aea0da54821f
 SHA1 (patch-an) = 7a56338a19015b407cbfa8a328655e2bd035f8bf
-SHA1 (patch-at) = 8dd2e86e4ea3fb4e7269a7f47e39d313f4f7ecba
+SHA1 (patch-at) = 010de581e8a153fc322c4966cb9db1b2706b62c6
 SHA1 (patch-au) = 1e36bcdf39d40e781273ea51df213db05ff46c89
 SHA1 (patch-av) = f56c8924b81a620602bc5a67b0c4459b721701d2
 SHA1 (patch-aw) = 5838ca13ba0f5d9328b9bb2135604f72e7d8b87b
