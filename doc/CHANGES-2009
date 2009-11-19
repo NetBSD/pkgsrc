@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4356 2009/11/19 07:39:59 martti Exp $
+$NetBSD: CHANGES-2009,v 1.4357 2009/11/19 15:51:18 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5808,3 +5808,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated converters/nkf to 2.10 [obache 2009-11-19]
 	Updated converters/p5-nkf to 2.10 [obache 2009-11-19]
 	Updated editors/vim-share to 7.2.303 [martti 2009-11-19]
+	Added net/vnstat version 1.9 [sborrill 2009-11-19]
