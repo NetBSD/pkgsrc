@@ -1,0 +1,10 @@
+Innate is the core of Ramaze, but useful on its own. The philosophy behind
+Innate is to provide a simple web-framework that:
+
+* Stays below 2000 easily readable lines of code
+* Has Rack as the only dependency
+* Provides the default helpers
+* Is easy to encapsulate and reuse in other contexts as a simple rack app
+* Has a rock-solid and fast implementation
+* Scores at least 95% in rcov
+* Is fully documented using YARD
