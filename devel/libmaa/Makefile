@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/03/21 16:07:02 darcy Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/19 01:19:23 reed Exp $
 
-DISTNAME=		libmaa-1.1.0
+DISTNAME=		libmaa-1.2.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dict/} \
                         ftp://ftp.dict.org/pub/dict/
@@ -15,7 +15,6 @@ BUILD_TARGET=		lib
 TEST_TARGET=		test
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 PKGDOCDIR=		${PREFIX}/share/doc/libmaa
