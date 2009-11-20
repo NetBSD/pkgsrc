@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4364 2009/11/20 20:21:48 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4365 2009/11/20 21:13:49 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5816,3 +5816,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/url2pkg to 2.12 [rillig 2009-11-20]
 	Updated net/unison to 2.32.52 [wiz 2009-11-20]
 	Removed net/unison-devel successor net/unison [wiz 2009-11-20]
+	Updated devel/p5-Module-CoreList to 2.23 [seb 2009-11-20]
