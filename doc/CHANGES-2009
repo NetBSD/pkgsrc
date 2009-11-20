@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4361 2009/11/19 21:22:13 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4362 2009/11/20 11:50:24 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5813,3 +5813,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-View-TT to 0.31 [seb 2009-11-19]
 	Updated devel/p5-Class-MOP to 0.95 [seb 2009-11-19]
 	Updated devel/p5-Moose to 0.93 [seb 2009-11-19]
+	Updated pkgtools/url2pkg to 2.12 [rillig 2009-11-20]
