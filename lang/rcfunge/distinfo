@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/20 12:06:48 drochner Exp $
+
+SHA1 (rcfunge-2.02/rcfunge2.tgz) = 058adc7f28096386a41073be959db5b8de081d76
+RMD160 (rcfunge-2.02/rcfunge2.tgz) = 27b0a8e84e0d5fb47fa285c1278ae9965b738c21
+Size (rcfunge-2.02/rcfunge2.tgz) = 93849 bytes
+SHA1 (patch-aa) = 1b6d39c0dc020c8bb8b51e60b8572bcba0d6e7cb
+SHA1 (patch-ab) = 6cca02f3c5392127d17e36cb8111b89bc1bb13ce
+SHA1 (patch-ac) = e9841926fc5a22d6ea852406acd8cf97bfe0830b
+SHA1 (patch-ad) = 09b12690a99f61e37e00eb58c16e0c28a16d8d6e
