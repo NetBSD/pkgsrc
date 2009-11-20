@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.14 2009/07/31 22:27:04 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.15 2009/11/20 11:49:18 rillig Exp $
 #
 
 use strict;
@@ -298,16 +298,13 @@ sub generate_initial_package($) {
 	print PLIST ("\@comment \$NetBSD\$\n");
 	close(PLIST) or die;
 
-	open(DI, ">", "distinfo") or die;
-	close(DI) or die;
-
 	open(DESCR, ">", "DESCR") or die;
 	close(DESCR) or die;
 
 	run_editor("Makefile", 5);
 
-	print ("url2pkg> Running \"make makesum\" ...\n");
-	(system { $make } ($make, "makesum")) == 0 or die;
+	print ("url2pkg> Running \"make distinfo\" ...\n");
+	(system { $make } ($make, "distinfo")) == 0 or die;
 	
 	print ("url2pkg> Running \"make extract\" ...\n");
 	(system { $make } ($make, "extract")) == 0 or die;
