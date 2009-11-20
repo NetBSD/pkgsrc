@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2009/07/31 22:27:49 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2009/11/20 11:49:18 rillig Exp $
 #
 
-DISTNAME=	url2pkg-2.11
+DISTNAME=	url2pkg-2.12
 CATEGORIES=	pkgtools
 MASTER_SITES=	# none
 DISTFILES=	# none
