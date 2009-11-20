@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/09/16 10:59:55 drochner Exp $
+$NetBSD: distinfo,v 1.3 2009/11/20 16:41:55 drochner Exp $
 
-SHA1 (gnome-commander-1.2.8.1.tar.bz2) = d17abf0e49fa99c6bb1ce9a1b88564715dfef343
-RMD160 (gnome-commander-1.2.8.1.tar.bz2) = 7cf2763b6f2083f9e0e73c2af5817b58c57a1efa
-Size (gnome-commander-1.2.8.1.tar.bz2) = 3436627 bytes
+SHA1 (gnome-commander-1.2.8.3.tar.bz2) = 28c4079e43eee3da7aad029edd8c3b761b5f8159
+RMD160 (gnome-commander-1.2.8.3.tar.bz2) = d9c60df05d82eb4342358e21c018492b7764b7be
+Size (gnome-commander-1.2.8.3.tar.bz2) = 3441593 bytes
 SHA1 (patch-aa) = c0e8aa8c3b71d5fcd92253115d3beca4e9ab573b
-SHA1 (patch-ab) = a6f08a67258d5e27add373bcae30d4596526c75b
