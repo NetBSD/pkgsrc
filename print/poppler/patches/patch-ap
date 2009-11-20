@@ -1,32 +1,43 @@
-$NetBSD: patch-ap,v 1.1 2009/11/19 17:58:41 drochner Exp $
+$NetBSD: patch-ap,v 1.2 2009/11/20 15:59:59 drochner Exp $
 
---- poppler/Gfx.cc.orig	2009-09-09 23:25:11.000000000 +0200
+https://bugs.freedesktop.org/show_bug.cgi?id=25189
+
+--- poppler/Gfx.cc.orig	2009-10-23 21:44:04.000000000 +0200
 +++ poppler/Gfx.cc
-@@ -2462,7 +2462,10 @@ void Gfx::doAxialShFill(GfxAxialShading 
-   if (out->useFillColorStop()) {
-     // make sure we add stop color when t = tMin
-     state->setFillColor(&color0);
--    out->updateFillColorStop(state, (tt - tMin)/(tMax - tMin));
-+    if (tMax == tMin)
-+	out->updateFillColorStop(state, tMin);
-+    else
-+    	out->updateFillColorStop(state, (tt - tMin)/(tMax - tMin));
-   }
- 
-   // compute the coordinates of the point on the t axis at t = tMin;
-@@ -2602,9 +2605,12 @@ void Gfx::doAxialShFill(GfxAxialShading 
- 
-     // set the color
-     state->setFillColor(&color0);
--    if (out->useFillColorStop())
--      out->updateFillColorStop(state, (ta[j] - tMin)/(tMax - tMin));
--    else
-+    if (out->useFillColorStop()) {
-+      if (tMax == tMin)
-+	out->updateFillColorStop(state, tMin);
-+      else
-+        out->updateFillColorStop(state, (ta[j] - tMin)/(tMax - tMin));
-+    } else
-       out->updateFillColor(state);
- 
-     if (needExtend) {
+@@ -2367,7 +2367,7 @@ static void bubbleSort(double array[])
+ void Gfx::doAxialShFill(GfxAxialShading *shading) {
+   double xMin, yMin, xMax, yMax;
+   double x0, y0, x1, y1;
+-  double dx, dy, mul;
++  double dx, dy, len2;
+   GBool dxZero, dyZero;
+   double bboxIntersections[4];
+   double tMin, tMax, tx, ty;
+@@ -2389,16 +2389,18 @@ void Gfx::doAxialShFill(GfxAxialShading 
+   shading->getCoords(&x0, &y0, &x1, &y1);
+   dx = x1 - x0;
+   dy = y1 - y0;
+-  dxZero = fabs(dx) < 0.01;
+-  dyZero = fabs(dy) < 0.01;
+-  if (dxZero && dyZero) {
+-    tMin = tMax = 0;
++  dxZero = (dx == 0.0);
++  dyZero = (dy == 0.0);
++  len2 = dx * dx + dy * dy;
++  if (len2 == 0.0) {
++    /* invalid? */
++    tMin = 0;
++    tMax = 1;
+   } else {
+-    mul = 1 / (dx * dx + dy * dy);
+-    bboxIntersections[0] = ((xMin - x0) * dx + (yMin - y0) * dy) * mul;
+-    bboxIntersections[1] = ((xMin - x0) * dx + (yMax - y0) * dy) * mul;
+-    bboxIntersections[2] = ((xMax - x0) * dx + (yMin - y0) * dy) * mul;
+-    bboxIntersections[3] = ((xMax - x0) * dx + (yMax - y0) * dy) * mul;
++    bboxIntersections[0] = ((xMin - x0) * dx + (yMin - y0) * dy) / len2;
++    bboxIntersections[1] = ((xMin - x0) * dx + (yMax - y0) * dy) / len2;
++    bboxIntersections[2] = ((xMax - x0) * dx + (yMin - y0) * dy) / len2;
++    bboxIntersections[3] = ((xMax - x0) * dx + (yMax - y0) * dy) / len2;
+     bubbleSort(bboxIntersections);
+     tMin = bboxIntersections[0];
+     tMax = bboxIntersections[3];
