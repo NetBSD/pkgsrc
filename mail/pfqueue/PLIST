@@ -1,3 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/28 15:51:16 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/20 13:14:13 fhajny Exp $
 bin/pfqueue
+bin/spfqueue
+${PLIST.exim}lib/libpfq_exim.la
+${PLIST.postfix}lib/libpfq_postfix2.la
+${PLIST.socket}lib/libpfq_socket.la
+lib/libpfqueue.la
 man/man1/pfqueue.1
+man/man5/pfqueue.conf.5
