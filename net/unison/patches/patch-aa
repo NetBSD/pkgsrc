@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2008/07/25 20:03:03 tonio Exp $
+$NetBSD: patch-aa,v 1.8 2009/11/20 20:18:47 wiz Exp $
 
---- Makefile.orig	2008-01-18 16:46:16.000000000 +0100
+--- Makefile.orig	2009-05-02 02:31:27.000000000 +0000
 +++ Makefile
 @@ -39,7 +39,7 @@ all:: INSTALL
  
@@ -16,12 +16,12 @@ $NetBSD: patch-aa,v 1.7 2008/07/25 20:03:03 tonio Exp $
  # Installation
  
 -INSTALLDIR = $(HOME)/bin/
-+INSTALLDIR = $(DESTDIR)$(PREFIX)/bin/
++INSTALLDIR = ${DESTDIR}$(PREFIX)/bin/
  
  # This has two names because on OSX the file INSTALL shadows the target 'install'!
  install: doinstall
 @@ -80,10 +80,7 @@ text: 
- 	make -C .. text
+ 	$(MAKE) -C .. text
  
  doinstall: $(NAME)$(EXEC_EXT)
 -	-mv $(INSTALLDIR)/$(NAME)$(EXEC_EXT) /tmp/$(NAME)-$(shell echo $$$$)
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.7 2008/07/25 20:03:03 tonio Exp $
  
  ######################################################################
  # Demo
-@@ -332,7 +329,7 @@ testmerge:
+@@ -336,7 +333,7 @@ testmerge:
  tags:
  	-$(ETAGS) *.mli */*.mli *.ml */*.ml */*.m *.c */*.c *.txt
  
