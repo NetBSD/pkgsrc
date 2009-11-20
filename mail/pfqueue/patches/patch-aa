@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/11/20 13:14:13 fhajny Exp $
+
+Only install backends requested via options
+
+--- backends/Makefile.in.orig	2007-02-03 17:49:29.000000000 +0000
++++ backends/Makefile.in
+@@ -183,7 +183,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-lib_LTLIBRARIES = libpfq_postfix1.la libpfq_postfix2.la libpfq_exim.la libpfq_socket.la
++lib_LTLIBRARIES = @PFQ_BACKENDS@
+ libpfq_postfix1_la_SOURCES = pfq_postfix1.c pfq_backend.h pfq_service.c pfq_service.h
+ libpfq_postfix1_la_LDFLAGS = -module
+ libpfq_postfix2_la_SOURCES = pfq_postfix2.c pfq_backend.h pfq_service.c pfq_service.h
