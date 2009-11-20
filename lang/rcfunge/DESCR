@@ -1,0 +1,6 @@
+  RC/Funge-98 is a funge interpreter based upon the Funge-98 specification
+by Cats-Eye Technologies.  The full language specification (including the
+'i', 'o', '=', and 't' commands) are supported.  Unefunge, befunge, and trefunge
+all supported by RC/Funge-98, with befunge being the default mode.  Several
+extensions are also provided, including minimal windows support (currently
+only on unix version).
