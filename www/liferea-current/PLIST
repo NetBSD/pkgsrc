@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/07/09 19:11:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/11/20 11:25:27 drochner Exp $
 bin/liferea
 bin/liferea-add-feed
 lib/liferea/liblinotiflibnotify.la
@@ -103,6 +103,7 @@ share/liferea/pixmaps/fl_google.png
 share/liferea/pixmaps/fl_opml.png
 share/liferea/pixmaps/flag.png
 share/liferea/pixmaps/folder_empty.png
+share/liferea/pixmaps/grayflag.png
 share/liferea/pixmaps/newsbin.png
 share/liferea/pixmaps/read.xpm
 share/liferea/pixmaps/tag.png
