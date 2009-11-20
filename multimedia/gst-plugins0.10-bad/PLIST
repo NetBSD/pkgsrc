@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/10/29 15:03:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/11/20 11:53:28 drochner Exp $
 include/gstreamer-0.10/gst/interfaces/photography-enumtypes.h
 include/gstreamer-0.10/gst/interfaces/photography.h
 include/gstreamer-0.10/gst/signalprocessor/gstsignalprocessor.h
@@ -9,7 +9,7 @@ include/gstreamer-0.10/gst/video/gstbasevideoparse.h
 include/gstreamer-0.10/gst/video/gstbasevideoutils.h
 lib/gstreamer-0.10/libgstaacparse.la
 lib/gstreamer-0.10/libgstadpcmdec.la
-lib/gstreamer-0.10/libgstaiffparse.la
+lib/gstreamer-0.10/libgstaiff.la
 lib/gstreamer-0.10/libgstamrparse.la
 lib/gstreamer-0.10/libgstapexsink.la
 lib/gstreamer-0.10/libgstasfmux.la
