@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/11/20 20:50:43 drochner Exp $
+
+--- postscript.c.orig	2009-02-12 16:42:20.000000000 +0100
++++ postscript.c
+@@ -171,6 +171,8 @@ int print_ps(FILE *file, const char *alr
+         _log("Could not dup %s to stdin.\n", filename);
+         return 0;
+     }
++    if (file != stdin)
++	rewind(stdin);
+ 
+     stream.pos = 0;
+     stream.file = stdin;
