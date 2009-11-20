@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/09/14 08:44:51 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/11/20 04:30:08 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -272,9 +272,9 @@ libdata/asterisk/images/kpad2.jpg
 libdata/asterisk/keys/freeworlddialup.pub
 libdata/asterisk/keys/iaxtel.pub
 libdata/asterisk/moh/.asterisk-moh-opsound-wav
-libdata/asterisk/moh/CHANGES-asterisk-moh-opsound-2.01
-libdata/asterisk/moh/CREDITS-asterisk-moh-opsound-2.01
-libdata/asterisk/moh/LICENSE-asterisk-moh-opsound-2.01
+libdata/asterisk/moh/CHANGES-asterisk-moh-opsound-wav
+libdata/asterisk/moh/CREDITS-asterisk-moh-opsound-wav
+libdata/asterisk/moh/LICENSE-asterisk-moh-opsound-wav
 libdata/asterisk/moh/macroform-cold_day.wav
 libdata/asterisk/moh/macroform-robot_dity.wav
 libdata/asterisk/moh/macroform-the_simplicity.wav
