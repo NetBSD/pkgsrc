@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2009/11/20 17:02:23 drochner Exp $
+
+--- configure.orig	2009-08-17 11:47:39.000000000 +0200
++++ configure
+@@ -22623,7 +22623,7 @@ if test "x${utilsdir}" = "x"; then utils
+ if test "x${udevscriptdir}" = "x"; then	udevscriptdir="\${libdir}/udev"; fi
+ 
+ 
+- if if echo "$host"|grep -i linux >/dev/null ; then true; fi ; then
++ if if echo "$host"|grep -i linux >/dev/null ; then true; else false; fi ; then
+   HAVE_UDEV_TRUE=
+   HAVE_UDEV_FALSE='#'
+ else
