@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/20 12:06:48 drochner Exp $
+bin/funge
