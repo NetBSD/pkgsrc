@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/09/30 09:22:47 sketch Exp $
+# $NetBSD: Makefile,v 1.6 2009/11/20 11:32:38 drochner Exp $
 #
 
-DISTNAME=	libunique-1.0.8
-PKGREVISION=	1
+DISTNAME=	libunique-1.1.6
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libunique/1.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libunique/1.1/}
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/LibUnique
