@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/11/20 12:06:48 drochner Exp $
+
+--- Makefile.orig	2008-12-19 19:52:46.000000000 +0100
++++ Makefile
+@@ -1,5 +1,5 @@
+ PROJECT=funge
+-CC=gcc
++#CC=gcc
+ PLATFORM=UNIX
+ DEFINES=-DBASE -DCPLI -DDIRF -DEVAR -DFILS -DFNGR -DFPDP -DFPSP -DFRTH -DFNUL\
+         -DFIXP -DHRTI -DIMAP -DIIPC -DINDV -DMODE -DMODU -DORTH -DPERL -DREFC\
+@@ -8,7 +8,7 @@ DEFINES=-DBASE -DCPLI -DDIRF -DEVAR -DFI
+         -DREXP -DMSGQ -DSMEM -DSMPH -DPNTR -DDATE -DMVRS -DARRY -DRAND -DFPRT \
+ 	-DNCRS -DFOBJ -DSORT -DICAL -DSCKE -DIMTH -DBOOL -DSGNL -DFORK -DSGNE\
+ 	-DIPMD -DUNIX\
+-		-D$(PLATFORM) -Wall
++		-D$(PLATFORM) $(CFLAGS)
+ INCPATH=-I /usr/openwin/include
+ # solaris
+ #LIBS=-lm -lX11 -lsocket -lnsl
+@@ -87,7 +87,7 @@ OBJECTS=./bin/main.o\
+ 	./bin/mvrs.o
+ 
+ $(PROJECT):$(OBJECTS)
+-	$(CC) -L /usr/X11/lib $(LIBS) $(OBJECTS) -o $(PROJECT)
++	$(CC) $(LDFLAGS) $(LIBS) $(OBJECTS) -o $(PROJECT)
+ 
+ ./bin/main.o:	main.c funge.h
+ 	$(CC) $(DEFINES) -c main.c -o ./bin/main.o

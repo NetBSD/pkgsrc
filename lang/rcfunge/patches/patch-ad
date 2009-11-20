@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/11/20 12:06:48 drochner Exp $
+
+--- main.c.orig	2008-12-19 19:52:46.000000000 +0100
++++ main.c
+@@ -262,7 +262,7 @@ int main(INT argc,char *argv[],char *env
+   f = 0;
+   ArgC = 0;
+   for (i=1;i<argc;i++) {
+-    if (strcmp(argv[i],vms[0].ProgName) == 0) f = 1;
++    if (vms[0].ProgName && strcmp(argv[i],vms[0].ProgName) == 0) f = 1;
+     if (f==1) {
+       strcpy(ArgV[ArgC],argv[i]);
+       ArgC++;

@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/11/20 12:06:48 drochner Exp $
+
+--- ext/rexp.c.orig	2008-12-19 19:52:46.000000000 +0100
++++ ext/rexp.c
+@@ -64,11 +64,15 @@ void Do_REXP(VM* vm,int Cmd)
+                       case REG_EBRACK:Push(vm,5); break;
+                       case REG_ECOLLATE:Push(vm,6); break;
+                       case REG_ECTYPE:Push(vm,7); break;
++#if 0
+                       case REG_EEND:Push(vm,8); break;
++#endif
+                       case REG_EESCAPE:Push(vm,9); break;
+                       case REG_EPAREN:Push(vm,10); break;
+                       case REG_ERANGE:Push(vm,11); break;
++#if 0
+                       case REG_ESIZE:Push(vm,12); break;
++#endif
+                       case REG_ESPACE:Push(vm,13); break;
+                       case REG_ESUBREG:Push(vm,14); break;
+                       default:Push(vm,n+100); break;
