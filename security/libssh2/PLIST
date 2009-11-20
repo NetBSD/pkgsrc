@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/11/15 20:07:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/20 16:45:30 drochner Exp $
 include/libssh2.h
 include/libssh2_publickey.h
 include/libssh2_sftp.h
@@ -39,6 +39,7 @@ man/man3/libssh2_hostkey_hash.3
 man/man3/libssh2_knownhost_add.3
 man/man3/libssh2_knownhost_check.3
 man/man3/libssh2_knownhost_del.3
+man/man3/libssh2_knownhost_free.3
 man/man3/libssh2_knownhost_get.3
 man/man3/libssh2_knownhost_init.3
 man/man3/libssh2_knownhost_readfile.3
