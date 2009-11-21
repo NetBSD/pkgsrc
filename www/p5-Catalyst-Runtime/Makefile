@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/11/21 14:11:46 sno Exp $
+# $NetBSD: Makefile,v 1.16 2009/11/21 14:13:19 sno Exp $
 
 DISTNAME=	Catalyst-Runtime-5.80014
 PKGNAME=	p5-${DISTNAME}
@@ -38,7 +38,7 @@ DEPENDS+=	{perl>=5.10,p5-Time-HiRes>=0}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Tree-Simple>=1.15:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../devel/p5-Tree-Simple-VisitorFactory
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
-DEPENDS+=	p5-libwww>=5.805:../../www/p5-libwww
+DEPENDS+=	p5-libwww>=5.814:../../www/p5-libwww
 DEPENDS+=	p5-namespace-autoclean>=0.09:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
