@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4371 2009/11/21 14:11:59 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4372 2009/11/21 14:19:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5854,3 +5854,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-POE-Component-Pluggable to 1.24 [seb 2009-11-21]
 	Updated devel/p5-MooseX-Role-WithOverloading to 0.03 [sno 2009-11-21]
 	Updated www/p5-Catalyst-Runtime to 5.80014 [sno 2009-11-21]
+	Updated www/p5-Catalyst-Plugin-Authorization-Roles to 0.08 [sno 2009-11-21]
