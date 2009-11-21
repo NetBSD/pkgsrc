@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4368 2009/11/21 02:28:32 roy Exp $
+$NetBSD: CHANGES-2009,v 1.4369 2009/11/21 10:52:26 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5851,3 +5851,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/f-spot to 0.6.1.5 [drochner 2009-11-20]
 	Updated www/webkit-gtk to 1.1.15.3 [snj 2009-11-21]
 	Updated net/openresolv to 3.3.3 [roy 2009-11-21]
+	Updated devel/p5-POE-Component-Pluggable to 1.24 [seb 2009-11-21]
