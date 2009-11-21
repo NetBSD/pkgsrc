@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4373 2009/11/21 14:23:01 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4374 2009/11/21 14:29:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5856,3 +5856,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Runtime to 5.80014 [sno 2009-11-21]
 	Updated www/p5-Catalyst-Plugin-Authorization-Roles to 0.08 [sno 2009-11-21]
 	Updated www/p5-Catalyst-Plugin-Session to 0.29 [sno 2009-11-21]
+	Updated www/p5-CatalystX-Component-Traits to 0.14 [sno 2009-11-21]
