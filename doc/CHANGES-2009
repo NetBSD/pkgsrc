@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4382 2009/11/21 15:23:26 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4383 2009/11/21 15:28:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5865,3 +5865,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-LWP-Authen-Negotiate to 0.08 [sno 2009-11-21]
 	Updated textproc/p5-Encode to 2.38 [sno 2009-11-21]
 	Updated net/p5-Net-OAuth to 0.20 [sno 2009-11-21]
+	Updated net/p5-Net-Twitter to 3.09000 [sno 2009-11-21]
