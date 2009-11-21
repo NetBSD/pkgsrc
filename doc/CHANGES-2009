@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4388 2009/11/21 20:10:42 markd Exp $
+$NetBSD: CHANGES-2009,v 1.4389 2009/11/21 20:28:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5871,3 +5871,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/p5-POE-Filter-IRCD to 2.40 [seb 2009-11-21]
 	Updated net/bittorrent to 4.4.0nb2 [tron 2009-11-21]
 	Added security/polkit-qt version 0.9.2 [markd 2009-11-21]
+	Updated devel/p5-POE-Test-Loops to 1.030 [seb 2009-11-21]
