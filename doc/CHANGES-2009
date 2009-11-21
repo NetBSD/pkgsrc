@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4384 2009/11/21 15:33:17 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4385 2009/11/21 15:34:02 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5867,3 +5867,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-Net-OAuth to 0.20 [sno 2009-11-21]
 	Updated net/p5-Net-Twitter to 3.09000 [sno 2009-11-21]
 	Updated devel/p5-Scalar-List-Utils to 1.22 [sno 2009-11-21]
+	Updated chat/p5-POE-Component-IRC to 6.16 [seb 2009-11-21]
