@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 19:47:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/21 20:13:27 markd Exp $
 bin/pykdeuic4
 lib/kde4/kpythonpluginfactory.so
 lib/kde4/krosspython.so
@@ -17,6 +17,7 @@ ${PYSITELIB}/PyKDE4/kutils.so
 ${PYSITELIB}/PyKDE4/nepomuk.so
 ${PYSITELIB}/PyKDE4/phonon.so
 ${PYSITELIB}/PyKDE4/plasma.so
+${PYSITELIB}/PyKDE4/polkitqt.so
 ${PYSITELIB}/PyKDE4/pykdeconfig.py
 ${PYSITELIB}/PyKDE4/pykdeconfig.pyc
 ${PYSITELIB}/PyKDE4/solid.so
