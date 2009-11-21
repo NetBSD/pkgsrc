@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/10/11 08:13:40 markd Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/21 20:15:49 markd Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	base workspace for the KDE 4 integrated X11 desktop
 
@@ -90,6 +91,7 @@ PYTHON_VERSIONS_ACCEPTED= 26 25 # because kdebindings4-python
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
+.include "../../security/polkit-qt/buildlink3.mk"
 # not yet - causes kdm logins to fail, presumably because
 #  I don't know how consolekit works
 #.include "../../sysutils/consolekit/buildlink3.mk"
