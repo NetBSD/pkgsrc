@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4380 2009/11/21 15:03:17 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4381 2009/11/21 15:06:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5863,3 +5863,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed print/ghostscript6 [joerg 2009-11-21]
 	Updated www/p5-Test-HTTP-Server-Simple to 0.11 [sno 2009-11-21]
 	Updated www/p5-LWP-Authen-Negotiate to 0.08 [sno 2009-11-21]
+	Updated textproc/p5-Encode to 2.38 [sno 2009-11-21]
