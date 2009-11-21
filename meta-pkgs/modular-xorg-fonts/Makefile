@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/06/15 09:51:59 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/11/21 02:21:07 obache Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-fonts-1.0
+PKGNAME=	modular-xorg-fonts-1.1
 CATEGORIES=	meta-pkgs fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG:=font/}
 DISTFILES=	# empty
@@ -35,6 +35,7 @@ DEPENDS+=	font-isas-misc-[0-9]*:../../fonts/font-isas-misc
 DEPENDS+=	font-jis-misc-[0-9]*:../../fonts/font-jis-misc
 DEPENDS+=	font-misc-misc-[0-9]*:../../fonts/font-misc-misc
 DEPENDS+=	font-mutt-misc-[0-9]*:../../fonts/font-mutt-misc
+DEPENDS+=	font-sony-misc-[0-9]*:../../fonts/font-sony-misc
 DEPENDS+=	vera-ttf-[0-9]*:../../fonts/vera-ttf
 
 .include "../../mk/bsd.pkg.mk"
