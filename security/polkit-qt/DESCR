@@ -1,0 +1,16 @@
+Polkit-qt aims to make it easy for Qt developers to take advantage of
+PolicyKit API. It is a convenience wrapper around QAction and QAbstractButton
+that lets you integrate those two components easily with PolicyKit.
+
+Polkit-qt is splitted in two libraries: polkit-qt-core and polkit-qt-gui.
+
+polkit-qt-core lets you control actions and authentication without a GUI,
+with some very simple functions. It also lets you retrieve and control useful
+informations on the PolicyKit context. It includes the classes Auth and
+Context.
+
+polkit-qt-gui lets you easily associate GUI items with PolicyKit actions.
+By some simple wrapper classes you are able to associate QAction and
+QAbstractButton to a PolicyKit action, and get their properties changed
+accordingly to PolicyKit result. It includes the classes Action, ActionButton
+and ActionButtons
