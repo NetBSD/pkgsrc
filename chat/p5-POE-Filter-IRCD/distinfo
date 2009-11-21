@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/09/10 18:46:32 he Exp $
+$NetBSD: distinfo,v 1.3 2009/11/21 16:22:46 seb Exp $
 
-SHA1 (POE-Filter-IRCD-2.38.tar.gz) = da784b481829b61ec3209aad71ef6312587f27a9
-RMD160 (POE-Filter-IRCD-2.38.tar.gz) = c3d06acc972cba58991fe87117a5adecf278d91a
-Size (POE-Filter-IRCD-2.38.tar.gz) = 22339 bytes
+SHA1 (POE-Filter-IRCD-2.40.tar.gz) = a16b94c5e892e46273dd0a2471d4546b1751f54b
+RMD160 (POE-Filter-IRCD-2.40.tar.gz) = ac77d3a08638d4adabaf6c778e280bb07060816c
+Size (POE-Filter-IRCD-2.40.tar.gz) = 25384 bytes
