@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/08/20 09:20:31 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2009/11/21 20:27:27 seb Exp $
 
-DISTNAME=	POE-Test-Loops-1.021
+DISTNAME=	POE-Test-Loops-1.030
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
@@ -15,10 +15,13 @@ PERL5_PACKLIST=		auto/POE/Test/Loops/.packlist
 
 TESTS_TO_FIX= comp_tcp_concurrent.pm all_errors.pm comp_tcp.pm \
 	connect_errors.pm k_alarms.pm k_aliases.pm k_detach.pm \
-	k_selects.pm k_sig_child.pm k_signals.pm sbk_signal_init.pm \
+	k_run_returns.pm k_selects.pm k_sig_child.pm k_signals.pm \
+	sbk_signal_init.pm \
 	ses_nfa.pm ses_session.pm wheel_accept.pm wheel_curses.pm \
 	wheel_readline.pm wheel_readwrite.pm wheel_run.pm wheel_sf_ipv6.pm \
-	wheel_sf_tcp.pm wheel_sf_udp.pm wheel_sf_unix.pm wheel_tail.pm
+	wheel_sf_tcp.pm wheel_sf_udp.pm wheel_sf_unix.pm wheel_tail.pm \
+	z_leolo_wheel_run.pm z_merijn_sigchld_system.pm z_rt39872_sigchld.pm \
+	z_rt39872_sigchld_stop.pm z_steinert_signal_integrity.pm
 
 .for t in ${TESTS_TO_FIX}
 REPLACE_PERL+= lib/POE/Test/Loops/${t}
