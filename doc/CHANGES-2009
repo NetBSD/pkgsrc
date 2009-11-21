@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4386 2009/11/21 16:23:05 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4387 2009/11/21 19:30:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5869,3 +5869,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Scalar-List-Utils to 1.22 [sno 2009-11-21]
 	Updated chat/p5-POE-Component-IRC to 6.16 [seb 2009-11-21]
 	Updated chat/p5-POE-Filter-IRCD to 2.40 [seb 2009-11-21]
+	Updated net/bittorrent to 4.4.0nb2 [tron 2009-11-21]
