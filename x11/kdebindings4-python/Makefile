@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/10/11 08:13:40 markd Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/21 20:13:27 markd Exp $
 
 PKGNAME=	kdebindings4-python-${_KDE_VERSION}
+PKGREVISION=	1
 DISTNAME=	kdebindings-${_KDE_VERSION}
 CATEGORIES=	misc
 COMMENT=	Python bindings for the KDE integrated X11 desktop
@@ -24,8 +25,9 @@ PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
+.include "../../security/polkit-qt/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-sip+=  ${PYPKGPREFIX}-sip>=4.7.9
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
