@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4366 2009/11/20 21:35:09 drochner Exp $
+$NetBSD: CHANGES-2009,v 1.4367 2009/11/21 00:15:04 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5849,3 +5849,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/picard to 0.12.1 [drochner 2009-11-20]
 	Updated x11/pixman to 0.16.2 [drochner 2009-11-20]
 	Updated graphics/f-spot to 0.6.1.5 [drochner 2009-11-20]
+	Updated www/webkit-gtk to 1.1.15.3 [snj 2009-11-21]
