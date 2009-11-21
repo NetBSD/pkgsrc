@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4381 2009/11/21 15:06:04 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4382 2009/11/21 15:23:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5864,3 +5864,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Test-HTTP-Server-Simple to 0.11 [sno 2009-11-21]
 	Updated www/p5-LWP-Authen-Negotiate to 0.08 [sno 2009-11-21]
 	Updated textproc/p5-Encode to 2.38 [sno 2009-11-21]
+	Updated net/p5-Net-OAuth to 0.20 [sno 2009-11-21]
