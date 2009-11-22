@@ -1,0 +1,15 @@
+$NetBSD: patch-bc,v 1.1 2009/11/22 20:35:25 sno Exp $
+
+replacing explicit --export-dynamic by ${EXPORT_SYMBOLS_LDFLAGS}
+
+--- aclocal.m4.orig	2009-05-30 17:09:55.000000000 +0200
++++ aclocal.m4	2009-05-30 17:13:08.000000000 +0200
+@@ -3856,7 +3856,7 @@
+   if test "$ld_shlibs" = yes; then
+     runpath_var=LD_RUN_PATH
+     hardcode_libdir_flag_spec='${wl}--rpath ${wl}$libdir'
+-    export_dynamic_flag_spec='${wl}--export-dynamic'
++    export_dynamic_flag_spec='${EXPORT_SYMBOLS_LDFLAGS}'
+     case $host_os in
+     cygwin* | mingw* | pw32*)
+       # dlltool doesn't understand --whole-archive et. al.
