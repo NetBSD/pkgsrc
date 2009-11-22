@@ -1,0 +1,15 @@
+$NetBSD: patch-bb,v 1.1 2009/11/22 20:35:25 sno Exp $
+
+replacing explicit --export-dynamic by ${EXPORT_SYMBOLS_LDFLAGS}
+
+--- configure.ac.orig	2009-05-30 17:09:44.000000000 +0200
++++ configure.ac	2009-05-30 17:12:40.000000000 +0200
+@@ -288,7 +288,7 @@
+     RESOLVES=' '
+   ;;
+   *)
+-    ZZIPLIB_LDFLAGS="--export-dynamic"
++    ZZIPLIB_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+     RESOLVES=' # '
+   ;;
+ esac
