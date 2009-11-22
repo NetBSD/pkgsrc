@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2007/02/22 19:27:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2009/11/22 21:05:17 drochner Exp $
 
 DISTNAME=		cdrdao-${CDRDAO_VER}
 CATEGORIES=		sysutils
@@ -10,13 +10,12 @@ HOMEPAGE=		http://cdrdao.sourceforge.net/
 COMMENT=		Records audio or data CD-Rs in disk-at-once (DAO) mode
 
 CDRDAODIR=		${.CURDIR}/../../sysutils/cdrdao
-FILESDIR=		${CDRDAODIR}/files
 PATCHDIR=		${CDRDAODIR}/patches
 DISTINFO_FILE=		${CDRDAODIR}/distinfo
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-CDRDAO_VER=		1.2.2
+CDRDAO_VER=		1.2.3
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
