@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4391 2009/11/22 08:01:14 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4392 2009/11/22 10:53:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5874,3 +5874,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-POE-Test-Loops to 1.030 [seb 2009-11-21]
 	Added benchmarks/libmicro version 0.4.0 [jym 2009-11-22]
 	Updated www/typolight27-translations to 20091116 [taca 2009-11-22]
+	Updated devel/libgcroots to 0.2.2 [obache 2009-11-22]
