@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2009/08/01 18:33:08 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2009/11/22 19:51:43 abs Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}
 PKGNAME=	eclipse-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel java
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jschauma/
 EXTRACT_SUFX=	.zip
@@ -17,7 +17,7 @@ DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PKG_JVMS_ACCEPTED= sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14
 
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME:Q}
 MAKE_ENV+=	ANT_HOME=${PREFIX:Q}
@@ -25,7 +25,7 @@ MAKE_ENV+=	ANT_HOME=${PREFIX:Q}
 VERSION=	3.0.1
 
 # XXX: Others might work but might need significant tweaking
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64 Linux-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
