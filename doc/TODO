@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8687 2009/11/20 13:15:00 fhajny Exp $
+$NetBSD: TODO,v 1.8688 2009/11/22 07:59:45 taca Exp $
 
 Suggested new packages
 ======================
@@ -408,6 +408,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
 	o ap2-wsgi-2.5
+	o ap22-authn-sasl-1.1
+	o ap22-authnz-external-3.2.5
 	o apache-maven-3.0
 	o apache-tomcat55-6.0.14
 	o apsfilter-7.2.8
@@ -1033,7 +1035,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssh-5.3.1
 	o openssl-0.9.8l
 	o openttd-0.7.3
-	o open-vm-tools-2009.10.15.201664
+	o open-vm-tools-2009.11.16.210370
 	o opera-10.01
 	o oregano-0.60.0
 	o oroborus-2.0.18
@@ -1482,6 +1484,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmp-2.7.1
 	o xmule-1.12.2
 	o xnap-2.5r3
+	o xcompmgr-1.1.5
 	o xorg-cf-files-1.0.3
 	o xorg-docs-1.5
 	o xorg-server-1.6.4
