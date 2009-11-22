@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2009/11/22 00:45:54 jym Exp $
+
+--- longjmp.c.orig	2007-07-02 23:17:45.000000000 +0200
++++ longjmp.c
+@@ -51,7 +51,7 @@ benchmark_init()
+ int
+ benchmark(void *tsd, result_t *res)
+ {
+-	int			i = 0;
++	volatile int		i = 0;
+ 	jmp_buf			env;
+ 
+ 	(void) setjmp(env);

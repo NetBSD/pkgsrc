@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/22 00:45:54 jym Exp $
+
+SHA1 (libmicro-0.4.0.tar.gz) = bf73af51610f08c9fb50025beb3ee86718a11596
+RMD160 (libmicro-0.4.0.tar.gz) = 5d844892cbe9fcc77fd3479c54d7135b196a0097
+Size (libmicro-0.4.0.tar.gz) = 48858 bytes
+SHA1 (patch-aa) = e322da8461bfcc94834593725ffd58672972eb97
+SHA1 (patch-ab) = 73d29b9b236b91debdb5300bc2e2d3ddaa118106
+SHA1 (patch-ac) = 9122460e392d57be14257ee379ce79e680c88434
+SHA1 (patch-ad) = 1fb254250a40ec35c05c3653145c8bb4d5d78d77
+SHA1 (patch-ae) = be1c805cf631912e76fbeced5b42fe0b92054b96
+SHA1 (patch-af) = 78cbd223f462ce5854539b08fd26184cf97d8282
+SHA1 (patch-ag) = fdec73e5d55ea0c594e77c920f985a5c3a3f5768
+SHA1 (patch-ah) = 7507bded72b5db04dc7c61cd3498b0cbf793f69c
+SHA1 (patch-ai) = af43c6061b1dd4b36cbe25887414580ca648b8e2
+SHA1 (patch-aj) = 6142d17c1d1a461bf114319e0ebcc5a516dab486
+SHA1 (patch-ak) = f44b5e9c8d2182873978af9396ffc3e513ce6af8

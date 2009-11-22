@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/11/22 00:45:54 jym Exp $
+
+--- Makefile.com.orig	2009-11-15 00:05:16.000000000 +0100
++++ Makefile.com
+@@ -107,7 +107,7 @@ tattle:		../tattle.c	libmicro.a
+ 	echo "char * compiler_version = \""`$(COMPILER_VERSION_CMD)`"\";" > tattle.h
+ 	echo "char * CC = \""$(CC)"\";" >> tattle.h
+ 	echo "char * extra_compiler_flags = \""$(extra_CFLAGS)"\";" >> tattle.h
+-	$(CC) -o tattle $(CFLAGS) -I. ../tattle.c libmicro.a -lrt -lm
++	$(CC) -o tattle $(CFLAGS) -I. ../tattle.c libmicro.a -lpthread -lrt -lm
+ 
+ $(ELIDED_BENCHMARKS):	../elided.c
+ 	$(CC) -o $(@) ../elided.c

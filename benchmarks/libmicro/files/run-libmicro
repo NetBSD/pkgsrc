@@ -1,0 +1,4 @@
+#! /bin/sh
+
+cd @@DESTDIR@@/@@PREFIX@@/libexec/@@PKGBASE@@
+./bench

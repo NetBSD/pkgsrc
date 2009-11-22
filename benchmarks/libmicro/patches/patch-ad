@@ -1,0 +1,38 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/11/22 00:45:54 jym Exp $
+
+--- mutex.c.orig	2007-07-02 23:17:45.000000000 +0200
++++ mutex.c
+@@ -59,7 +59,9 @@ benchmark_init()
+ 
+ 	(void) sprintf(lm_usage,
+ 	    "       [-t] (create dummy thread so we are multithreaded)\n"
++#if !defined(__NetBSD__)
+ 	    "       [-p] (use inter-process mutex (not support everywhere))\n"
++#endif
+ 	    "       [-h usecs] (specify mutex hold time (default 0)\n"
+ 	    "notes: measures uncontended pthread_mutex_[un,]lock\n");
+ 
+@@ -75,9 +77,11 @@ int
+ benchmark_optswitch(int opt, char *optarg)
+ {
+ 	switch (opt) {
++#if !defined(__NetBSD__)
+ 	case 'p':
+ 		optp = 1;
+ 		break;
++#endif
+ 
+ 	case 't':
+ 		optt = 1;
+@@ -121,9 +125,11 @@ benchmark_initrun()
+ 		errors++;
+ 	} else {
+ 		(void) pthread_mutexattr_init(&attr);
++#if !defined(__NetBSD__)
+ 		if (optp)
+ 			(void) pthread_mutexattr_setpshared(&attr,
+ 			    PTHREAD_PROCESS_SHARED);
++#endif
+ 
+ 		if (pthread_mutex_init(lock, &attr) != 0)
+ 			errors++;
