@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8692 2009/11/22 19:52:51 abs Exp $
+$NetBSD: TODO,v 1.8693 2009/11/22 22:34:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o album-4.06
 	o alee-ttf-11.2
 	o aliados-0.2.0
-	o amanda-2.6.1
+	o amanda-2.6.1p2
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.6.4
 	o amaya-11.1
@@ -458,11 +458,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bmon-2.1.0
 	o bochs-2.4.1
 	o bonnie++-1.96
+	o boost-libs-1.41.0
 	o bos-2.5
 	o boson-0.13
 	o bouml-4.13.1
 	o brasero-2.28.2 [GNOME 2.28]
-	o bugzilla-3.5.1
+	o bugzilla-3.4.4
 	o byacc-20080824
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
@@ -474,12 +475,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cddbd-1.5.2
 	o cdif-1.19
 	o cdlabelgen-4.1.0
-	o cdrdao-1.2.3
+	o cdrtools-2.01.01alpha68
 	o cfitsio-3210
 	o cgdb-0.6.4
 	o cgicc-3.2.9
 	o cheese-2.28.1 [GNOME 2.28]
-	o cherokee-0.99.28
+	o cherokee-0.99.29
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
@@ -558,7 +559,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elscreen-1.4.6
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o empathy-2.28.1.1 [GNOME 2.28]
+	o empathy-2.28.1.2 [GNOME 2.28]
 	o enca-1.12
 	o enlightenment-1.0.0
 	o eog-plugins-2.28.1 [GNOME 2.28]
@@ -683,8 +684,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-bluetooth-2.28.3 [GNOME 2.28]
-	o gnome-commander-1.2.8.3
-	o gnome-devel-docs-2.28.0 [GNOME 2.28]
+	o gnome-devel-docs-2.28.1 [GNOME 2.28]
+	o gnome-doc-utils-0.18.1
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
 	o gnome-nettool-2.28.0 [GNOME 2.28]
 	o gnome-packagekit-2.28.1 [GNOME 2.28]
@@ -692,7 +693,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-session-2.28.0 [GNOME 2.28, wants DeviceKit-power]
 	o gnome-subtitles-0.9.1
 	o gnome-system-tools-2.28.1 [GNOME 2.28]
-	o gnome-user-docs-2.28.0 [GNOME 2.28]
+	o gnome-user-docs-2.28.1 [GNOME 2.28]
 	o gnome-user-share-2.28.1 [GNOME 2.28]
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
@@ -711,7 +712,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gramofile-1.6P
 	o granulate-0.2
 	o grep-2.5.4
-	o gsasl-1.3
+	o gsasl-1.4.0
 	o gsharutils-4.7
 	o gss-0.1.0
 	o gssdp-0.7.0
@@ -884,7 +885,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libproxy-0.3.0
 	o librep-0.90.3
 	o libssh-0.3.4
-	o libssh2-1.2.2
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.6b
@@ -893,7 +893,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libv4l-0.6.3
 	o libxkbfile-1.0.6
 	o licq-1.3.7
-	o lighttpd-1.4.24
+	o lighttpd-1.4.25
 	o lincvs-2.1.3 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.4.5
@@ -963,7 +963,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mp3splt-2.2.7
 	o mpc-0.18
 	o mpeg4ip-1.6.1
-	o mpg123-1.9.1
+	o mpg123-1.9.2
 	o mpop-1.0.19
 	o mserv-devel-0.41
 	o msf-2.7
@@ -972,7 +972,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o multitail-5.2.2
 	o munin-1.3.4
 	o muse-0.9.2
-	o musicpd-0.15.5
+	o musicpd-0.15.6
 	o mysql-5.1.34
 	o mysql-5.2.3
 	o mysql5-client-5.0.85
@@ -980,7 +980,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysqlcc-0.9.8
 	o nagios-3.2.0
 	o nap-1.5.3
-	o nautilus-sendto-1.1.7
+	o nautilus-sendto-2.28.2
 	o navi2ch-1.8.1
 	o nawk-20071023
 	o ncftp3-3.2.1 [pkg/37859]
@@ -1176,6 +1176,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rep-gtk-0.90.0
 	o recordproto-1.14
 	o resize_image-0.7
+	o rhythmbox-0.12.6
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
 	o robodoc-4.99.6
@@ -1307,7 +1308,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o systrace-1.6e
 	o tacacs-4.0.4.14
 	o tads-3.0.16
-	o tcl-8.5.5
+	o tcl-8.5.8
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1324,16 +1325,17 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o telepathy-gabble-0.9.2
 	o telepathy-glib-0.9.1
 	o telepathy-idle-0.1.5
+	o tellico-2.1.1
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.9.2
 	o tfmxplay-1.1.6
-	o tgif-4.2.1
+	o tgif-4.2.2
 	o thin-1.0.0
 	o thoth-0.2.1
-	o tig-0.14.1
+	o tig-0.15
 	o tile-0.7.4
 	o tinyproxy-1.7.0
-	o tk-8.5.5
+	o tk-8.5.8
 	o tk83-8.3.5
 	o tkcvs-8.2
 	o tkgate-1.8.7
@@ -1341,7 +1343,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
+	o tomboy-1.0.1
 	o top-3.8beta1
+	o totem-2.28.4
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.12
@@ -1358,6 +1362,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucblogo-5.5
 	o udunits-1.12.9
 	o uim-1.5.6
+	o unison-2.32.52
 	o unrealircd-3.2.8.1
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
@@ -1381,7 +1386,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-1.2.0
 	o vp-1.6
-	o vsftpd-2.2.1
+	o vsftpd-2.2.2
 	o vttest-20071216
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1406,6 +1411,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4
 	o x264-devel-20091114
 	o xanalyser-1.30
+	o xapian-1.0.17
+	o xapian-omega-1.0.17
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
@@ -1506,6 +1513,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xwpe-1.5.30a
 	o xzip-182
 	o yafc-1.1
+	o yelp-2.28.1
 	o yodl-2.14.3
 	o youtube-dl-20090913
 	o ysm-2.9.9.1
