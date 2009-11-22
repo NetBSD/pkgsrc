@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4399 2009/11/22 14:17:10 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.4400 2009/11/22 14:20:09 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5882,3 +5882,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Config-Std to 0.007 [seb 2009-11-22]
 	Updated lang/f2c to 20090411 [asau 2009-11-22]
 	Updated graphics/gimp-ufraw to 0.16 [gdt 2009-11-22]
+	Updated devel/p5-local-lib to 1.4.9 [seb 2009-11-22]
