@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.9 2009/11/22 19:14:42 sno Exp $
+
+See https://bugzilla.gnome.org/show_bug.cgi?id=602408
+
+--- pango/opentype/hb-ot-layout-common-private.hh.orig
++++ pango/opentype/hb-ot-layout-common-private.hh
+@@ -320,7 +320,7 @@ struct CoverageFormat1
+     if (HB_UNLIKELY (glyph_id > 0xFFFF))
+       return NOT_COVERED;
+     GlyphID gid;
+-    gid = glyph_id;
++    gid.set (glyph_id);
+     // TODO: bsearch
+     unsigned int num_glyphs = glyphArray.len;
+     for (unsigned int i = 0; i < num_glyphs; i++)
