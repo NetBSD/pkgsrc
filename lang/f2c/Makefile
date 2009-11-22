@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2009/10/31 19:15:44 asau Exp $
+# $NetBSD: Makefile,v 1.47 2009/11/22 12:52:53 asau Exp $
 
-DISTNAME=	f2c-20001205
-PKGREVISION=	12
+DISTNAME=	f2c-20090411
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -24,47 +23,37 @@ COMMENT=	Fortran to C compiler including a script to emulate f77
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# Many failures - this is *very* far from safe.
-MAKE_JOBS_SAFE=		no
-
 CONFLICTS=	egcs-current-19980608
 
-F2CMAJOR=	0
-F2CMINOR=	0
-MAKE_ENV+=	F2CMAJOR=${F2CMAJOR:Q} F2CMINOR=${F2CMINOR:Q}
-MAKE_ENV+=	LIBOWN=${LIBOWN:Q} LIBGRP=${LIBGRP:Q}
-MAKE_ENV+=	AWK=${AWK:Q}
-MAKE_ENV+=	ECHO=${ECHO:Q}
 WRKSRC=		${WRKDIR}/f2c
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gunzip
+USE_TOOLS+=	unzip
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
+USE_BSD_MAKEFILE=	yes
+MAKE_FLAGS=	LIBF2CSRCDIR='$$(.CURDIR)/libf2c' MKLTARCHIVE=yes
 
-# work around a problem gunzipping 00lastchange.gz with
-# some versions of zlib found on NetBSD and also Gentoo
+INSTALLATION_DIRS=	bin lib include share/doc/f2c ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
+INSTALL_MAKE_FLAGS=	BINDIR=$(PREFIX)/bin LIBDIR=$(PREFIX)/lib
+
 post-extract:
 	@${RM} ${WRKSRC}/index.html
-	@for f in ${WRKSRC}/*.gz ; do \
-		if ${TEST} "$$f" = "${WRKSRC}/00lastchange.gz" ; then \
-			${ECHO} "Skipping $$f" ; \
-		else \
-			${GUNZIP_CMD} $$f ; \
-		fi ; \
-	done
-	@mv ${WRKSRC}/libf77 ${WRKSRC}/libf77.sh
-	@mv ${WRKSRC}/libi77 ${WRKSRC}/libi77.sh
-	@cd ${WRKSRC} ; ${SH} libf77.sh ; ${SH} libi77.sh
+	@cd ${WRKSRC}; ${RM} -f libf77 libi77		# subsumed by libf2c...
+	@cd ${WRKSRC}; unzip -d libf2c libf2c.zip
+	@cd ${WRKSRC}; ${MKDIR} libF77 libI77		# ...but we recreate them for compatibility
+	@${CP} ${FILESDIR:Q}/libf77.mk ${WRKSRC}/libF77/Makefile
+	@${CP} ${FILESDIR:Q}/libi77.mk ${WRKSRC}/libI77/Makefile
+	@${CP} ${FILESDIR:Q}/f2c.mk ${WRKSRC}/src/Makefile
+	@${CP} ${FILESDIR:Q}/libtool.mk ${WRKSRC}/libtool.mk
+	@${CP} ${FILESDIR:Q}/main.mk ${WRKSRC}/Makefile
+	@${CP} ${FILESDIR:Q}/f2c-f77.in ${WRKSRC}/src
+	@${CP} ${FILESDIR:Q}/chktypes.c ${WRKSRC}
 	@${RM} ${WRKSRC}/src/index.html
 	@mv ${WRKSRC}/src/.depend  ${WRKSRC}/src/depend.orig
-	@${GUNZIP_CMD} ${WRKSRC}/src/*.gz
+	@mv ${WRKSRC}/src/f2c.1 ${WRKSRC}/src/f2c.1.orig
 
 do-configure:
 	@cd ${WRKSRC} && ${CC} -o chktypes chktypes.c
 	${WRKSRC}/chktypes -v
-	@${CP} -f ${WRKSRC}/libF77/signal1.h0 ${WRKSRC}/libF77/signal1.h
-	@${CP} -f ${WRKSRC}/f2c.h ${WRKSRC}/libF77/f2c.h
-	@${CP} -f ${WRKSRC}/f2c.h ${WRKSRC}/libI77/f2c.h
 
 # Handle f2c-f77 script:
 post-build:
@@ -75,6 +64,11 @@ post-build:
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/f2c-f77 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/f2c.1t ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/f2c.1
+	${INSTALL_DATA} ${WRKSRC}/f2c.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/f2c.0
+.for f in changes f2c.ps f2c.pdf
+	${INSTALL_DATA} ${WRKSRC}/$f ${DESTDIR}${PREFIX}/share/doc/f2c/$f
+.endfor
 
 .include "../../mk/bsd.prefs.mk"
 MAKE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH:Q}
