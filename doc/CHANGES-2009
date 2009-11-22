@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4393 2009/11/22 11:50:59 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4394 2009/11/22 11:58:56 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5876,3 +5876,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20091116 [taca 2009-11-22]
 	Updated devel/libgcroots to 0.2.2 [obache 2009-11-22]
 	Updated devel/p5-Class-XSAccessor to 1.05 [seb 2009-11-22]
+	Updated devel/p5-common-sense to 2.02 [seb 2009-11-22]
