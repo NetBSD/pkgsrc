@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4400 2009/11/22 14:20:09 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4401 2009/11/22 19:52:51 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5883,3 +5883,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/f2c to 20090411 [asau 2009-11-22]
 	Updated graphics/gimp-ufraw to 0.16 [gdt 2009-11-22]
 	Updated devel/p5-local-lib to 1.4.9 [seb 2009-11-22]
+	Updated lang/sun-jre6 to 6.0.17 [abs 2009-11-22]
+	Updated lang/sun-jdk6 to 6.0.17 [abs 2009-11-22]
+	Updated lang/sun-jre15 to 5.0.22 [abs 2009-11-22]
+	Updated lang/sun-jdk15 to 5.0.22 [abs 2009-11-22]
