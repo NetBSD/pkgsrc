@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:03:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/11/22 13:12:53 asau Exp $
 bin/f2c
 bin/f2c-f77
 include/f2c.h
 lib/libF77.la
 lib/libI77.la
-man/man1/f2c.1
 man/cat1/f2c.0
-share/doc/f2c/f2c.ps
+man/man1/f2c.1
 share/doc/f2c/changes
+share/doc/f2c/f2c.pdf
+share/doc/f2c/f2c.ps
