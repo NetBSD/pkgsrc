@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2009/11/02 14:58:01 taca Exp $
+# $NetBSD: options.mk,v 1.32 2009/11/22 07:58:43 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.typolight-translations
 
@@ -14,13 +14,13 @@ TL_TRANSLATIONS.es=	TYPOlight-Spanish-v12.zip	# 2009/07/01
 TL_TRANSLATIONS.fa=	TYPOlight-Persian-v2.zip	# 2008/06/05
 TL_TRANSLATIONS.fr=	TYPOlight-French-v45.zip	# 2009/06/02
 TL_TRANSLATIONS.id=	TYPOlight-Indonesian-v1.zip	# 2009/01/13
-TL_TRANSLATIONS.is=	TYPOlight-Icelandic-v2.zip	# 2008/01/31
+TL_TRANSLATIONS.is=	TYPOlight-Icelandic-v3.zip	# 2009/11/03
 TL_TRANSLATIONS.it=	TYPOlight-Italian-v18.zip	# 2009/10/20
 TL_TRANSLATIONS.ja=	TYPOlight-Japanese-v24.zip	# 2009/10/23
 TL_TRANSLATIONS.lt=	TYPOlight-Lithuanian-v2.zip	# 2008/04/25
 TL_TRANSLATIONS.lv=	TYPOlight-Latvian-v22.zip	# 2009/10/15
 TL_TRANSLATIONS.nl=	TYPOlight-Dutch-v35.zip		# 2009/10/15
-TL_TRANSLATIONS.no=	TYPOlight-Norwegian-v9.zip	# 2009/10/09
+TL_TRANSLATIONS.no=	TYPOlight-Norwegian-v11.zip	# 2009/11/16
 TL_TRANSLATIONS.pl=	TYPOlight-Polish-v23.zip	# 2009/11/01
 TL_TRANSLATIONS.pt=	TYPOlight-Portuguese-v7.zip	# 2009/11/01
 TL_TRANSLATIONS.ro=	TYPOlight-Romanian-v8.zip	# 2009/03/17
@@ -31,7 +31,7 @@ TL_TRANSLATIONS.sr=	TYPOlight-Serbian-v6.zip	# 2009/06/09
 TL_TRANSLATIONS.sv=	TYPOlight-Swedish-v35.zip	# 2009/10/06
 TL_TRANSLATIONS.th=	TYPOlight-Thai-v2.zip		# 2008/11/23
 TL_TRANSLATIONS.tr=	TYPOlight-Turkish-v4.zip	# 2009/11/01
-TL_TRANSLATIONS.uk=	TYPOlight-Ukrainian-v11.zip	# 2009/10/07
+TL_TRANSLATIONS.uk=	TYPOlight-Ukrainian-v12.zip	# 2009/11/02
 TL_TRANSLATIONS.zh=	TYPOlight-Chinese-v19.zip	# 2008/12/02
 
 .for l in ${TL_SUPPORTED_LANGUAGES}
