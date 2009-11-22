@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4401 2009/11/22 19:52:51 abs Exp $
+$NetBSD: CHANGES-2009,v 1.4402 2009/11/22 21:55:59 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5887,3 +5887,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/sun-jdk6 to 6.0.17 [abs 2009-11-22]
 	Updated lang/sun-jre15 to 5.0.22 [abs 2009-11-22]
 	Updated lang/sun-jdk15 to 5.0.22 [abs 2009-11-22]
+	Updated databases/p5-Jifty-DBI to 0.59 [seb 2009-11-22]
