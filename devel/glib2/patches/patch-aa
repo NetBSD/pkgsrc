@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.46 2009/09/22 15:50:46 joerg Exp $
+$NetBSD: patch-aa,v 1.47 2009/11/22 16:51:17 sno Exp $
 
---- configure.orig	2009-08-29 01:17:41.000000000 +0200
-+++ configure
-@@ -837,6 +837,7 @@ GIO
+--- configure.orig	2009-10-07 15:56:34.000000000 +0200
++++ configure	2009-11-22 15:17:13.373473285 +0100
+@@ -837,6 +837,7 @@
  GSPAWN
  GLIB_DEBUG_FLAGS
  G_MODULE_NEED_USCORE
@@ -10,7 +10,126 @@ $NetBSD: patch-aa,v 1.46 2009/09/22 15:50:46 joerg Exp $
  G_MODULE_BROKEN_RTLD_GLOBAL
  G_MODULE_HAVE_DLERROR
  G_MODULE_LDFLAGS
-@@ -34078,10 +34079,11 @@ if test x"$glib_native_win32" = xyes; th
+@@ -27923,14 +27924,12 @@
+   HAVE_GNUC_VISIBILITY_FALSE=
+ fi
+ 
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $SUNC" >&5
++$as_echo "$SUNC" >&6; }
+ 
+-{ $as_echo "$as_me:$LINENO: checking whether using Sun Studio C compiler" >&5
+-$as_echo_n "checking whether using Sun Studio C compiler... " >&6; }
+-cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether using Sun Studio C compiler visibilily" >&5
++$as_echo_n "checking whether using Sun Studio C compiler visibilily... " >&6; }
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #if defined(__SUNPRO_C) || (__SUNPRO_C >= 0x550)
+ #else
+@@ -27945,7 +27944,6 @@
+   return 0;
+ }
+ _ACEOF
+-rm -f conftest.$ac_objext
+ if { (ac_try="$ac_compile"
+ case "(($ac_try" in
+   *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
+@@ -27965,14 +27963,10 @@
+        } && test -s conftest.$ac_objext; then
+    g_have_sunstudio_visibility=yes
+ else
+-  $as_echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-	 g_have_sunstudio_visibility=no
++   g_have_sunstudio_visibility=no
+ fi
+-
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-{ $as_echo "$as_me:$LINENO: result: $g_have_sunstudio_visibility" >&5
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $g_have_sunstudio_visibility" >&5
+ $as_echo "$g_have_sunstudio_visibility" >&6; }
+  if test x$g_have_sunstudio_visibility = xyes; then
+   HAVE_SUNSTUDIO_VISIBILITY_TRUE=
+@@ -35159,22 +35153,64 @@
+ 
+ case $host in
+   *-*-solaris* )
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether using Sun Studio C compiler with C99" >&5
++$as_echo_n "checking whether using Sun Studio C compiler with C99... " >&6; }
++    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++#if defined(__STDC_VERSION__) || (__STDC_VERSION__ - 0 >= 199901L)
++#else
++# include "error: this is STD C99."
++#endif
+ 
+-cat >>confdefs.h <<\_ACEOF
+-#define _XOPEN_SOURCE_EXTENDED 1
++int
++main ()
++{
++
++  ;
++  return 0;
++}
+ _ACEOF
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval ac_try_echo="\"\$as_me:$LINENO: $ac_try_echo\""
++$as_echo "$ac_try_echo") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++   g_have_sunstudio_c99=yes
++else
++   g_have_sunstudio_c99=no
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++    { $as_echo "$as_me:${as_lineno-$LINENO}: result: $g_have_sunstudio_c99" >&5
++$as_echo "$g_have_sunstudio_c99" >&6; }
++    if test $g_have_sunstudio_c99 = yes; then
+ 
++$as_echo "#define _XOPEN_SOURCE 600" >>confdefs.h
+ 
+-cat >>confdefs.h <<\_ACEOF
+-#define _XOPEN_SOURCE 2
+-_ACEOF
++    else
+ 
++$as_echo "#define _XOPEN_SOURCE_EXTENDED 1" >>confdefs.h
+ 
+-cat >>confdefs.h <<\_ACEOF
+-#define __EXTENSIONS__ 1
+-_ACEOF
+ 
+-     ;;
++$as_echo "#define _XOPEN_SOURCE 2" >>confdefs.h
++
++    fi
++
++
++$as_echo "#define __EXTENSIONS__ 1" >>confdefs.h
++
++    ;;
+ esac
+ 
+ if test "$ac_cv_func_statfs" = yes ; then
+@@ -37110,10 +37146,11 @@
      G_MODULE_LDFLAGS=
  else
    export SED
@@ -23,7 +142,7 @@ $NetBSD: patch-aa,v 1.46 2009/09/22 15:50:46 joerg Exp $
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -34656,7 +34658,7 @@ if test "$G_MODULE_IMPL" = "G_MODULE_IMP
+@@ -37688,7 +37725,7 @@
  	LIBS="$G_MODULE_LIBS $LIBS"
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  	echo "void glib_plugin_test(void) { }" > plugin.c
@@ -32,7 +151,7 @@ $NetBSD: patch-aa,v 1.46 2009/09/22 15:50:46 joerg Exp $
  		-export-dynamic -o plugin.o plugin.c 2>&1 >/dev/null
  	{ $as_echo "$as_me:$LINENO: checking for RTLD_GLOBAL brokenness" >&5
  $as_echo_n "checking for RTLD_GLOBAL brokenness... " >&6; }
-@@ -34917,6 +34919,87 @@ fi
+@@ -37949,6 +37986,87 @@
  
  	LIBS="$LIBS_orig"
  fi
@@ -120,7 +239,7 @@ $NetBSD: patch-aa,v 1.46 2009/09/22 15:50:46 joerg Exp $
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
          G_MODULE_SUPPORTED=false
-@@ -34927,7 +35010,7 @@ fi
+@@ -37959,7 +38077,7 @@
  { $as_echo "$as_me:$LINENO: checking for the suffix of module shared libraries" >&5
  $as_echo_n "checking for the suffix of module shared libraries... " >&6; }
  export SED
@@ -129,7 +248,7 @@ $NetBSD: patch-aa,v 1.46 2009/09/22 15:50:46 joerg Exp $
  eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
-@@ -34953,6 +35036,8 @@ fi
+@@ -37985,6 +38103,8 @@
  
  
  
@@ -138,7 +257,7 @@ $NetBSD: patch-aa,v 1.46 2009/09/22 15:50:46 joerg Exp $
  { $as_echo "$as_me:$LINENO: checking for gspawn implementation" >&5
  $as_echo_n "checking for gspawn implementation... " >&6; }
  case "$host" in
-@@ -36800,117 +36885,8 @@ if test x"$have_threads" != xno; then
+@@ -39832,117 +39952,8 @@
          G_THREAD_LIBS="-lpthread -lthread"
          ;;
        *)
@@ -258,7 +377,7 @@ $NetBSD: patch-aa,v 1.46 2009/09/22 15:50:46 joerg Exp $
           ;;
      esac
    fi
-@@ -39104,6 +39080,10 @@ case $host in
+@@ -42136,6 +42147,10 @@
    *)
      G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
      ;;
