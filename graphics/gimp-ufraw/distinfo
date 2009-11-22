@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2009/01/04 01:12:38 gdt Exp $
+$NetBSD: distinfo,v 1.21 2009/11/22 14:16:47 gdt Exp $
 
-SHA1 (ufraw-0.15.tar.gz) = e8c7fa95bfb84e18ee538495861e52516ca8b3b8
-RMD160 (ufraw-0.15.tar.gz) = d24e9076114c909e3b2bbf87a128c70f62885299
-Size (ufraw-0.15.tar.gz) = 976297 bytes
+SHA1 (ufraw-0.16.tar.gz) = ff91ec619d143bbb4698b1003d53c507aca010e5
+RMD160 (ufraw-0.16.tar.gz) = fac67a4d88c006f701b0cce7cc2287d5db90bd72
+Size (ufraw-0.16.tar.gz) = 1075577 bytes
