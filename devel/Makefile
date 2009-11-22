@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1254 2009/11/21 13:58:49 sno Exp $
+# $NetBSD: Makefile,v 1.1255 2009/11/22 22:29:48 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -511,6 +511,7 @@ SUBDIR+=	p5-Config-Any
 SUBDIR+=	p5-Config-Auto
 SUBDIR+=	p5-Config-Find
 SUBDIR+=	p5-Config-General
+SUBDIR+=	p5-Config-GitLike
 SUBDIR+=	p5-Config-INI
 SUBDIR+=	p5-Config-IniFiles
 SUBDIR+=	p5-Config-Std
