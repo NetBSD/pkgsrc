@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.3 2009/11/22 14:05:26 sno Exp $
+
+--- configure.in.orig	Mon Nov 16 17:18:38 2009
++++ configure.in	Mon Nov 16 17:20:27 2009
+@@ -74,8 +74,6 @@
+ VERSION_SCRIPT_FLAGS=
+ $(/usr/bin/ld --help 2>&1 | grep -- --version-script >/dev/null) && \
+     VERSION_SCRIPT_FLAGS=-Wl,--version-script=
+-test "`uname`" == "SunOS" && \
+-    VERSION_SCRIPT_FLAGS="-Wl,-M -Wl,"
+ AC_SUBST(VERSION_SCRIPT_FLAGS)
+ AM_CONDITIONAL([USE_VERSION_SCRIPT], [test -n "$VERSION_SCRIPT_FLAGS"])
+ 
