@@ -1,0 +1,4 @@
+The Perl 5 module Config::GitLike handles interaction with configuration
+files of the style used by the version control system Git. It can
+both parse and modify these files, as well as create entirely new
+ones.
