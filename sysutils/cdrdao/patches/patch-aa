@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2006/12/11 12:28:36 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2009/11/22 21:05:17 drochner Exp $
 
---- dao/ScsiIf-lib.cc.orig	2006-09-19 11:07:11.000000000 +0200
+--- dao/ScsiIf-lib.cc.orig	2009-02-22 11:40:11.000000000 +0100
 +++ dao/ScsiIf-lib.cc
-@@ -289,6 +289,12 @@ int ScsiIf::inquiry()
+@@ -288,6 +288,12 @@ int ScsiIf::inquiry()
      revision_[i] = 0;
    }
  
@@ -15,18 +15,3 @@ $NetBSD: patch-aa,v 1.7 2006/12/11 12:28:36 drochner Exp $
    return 0;
  }
  
-@@ -430,6 +436,7 @@ const int ScsiIf::lun ()
- #include "ScsiIf-common.cc"
- //<<<<<<< ScsiIf-lib.cc
- 
-+#if 0
- #ifndef linux
- 
- /* Function for mapping any SCSI device to the corresponding SG device.
-@@ -576,5 +583,6 @@ const char *ScsiIfImpl::openScsiDevAsSg(
- }
- 
- #endif /* linux */
-+#endif
- //=======
- //>>>>>>> 1.6
