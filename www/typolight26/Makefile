@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/30 13:12:40 taca Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/22 16:17:59 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.typolight.org/
 COMMENT=	Powerful web content management system (CMS)
+LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.1.0:../../misc/php-mbstring
