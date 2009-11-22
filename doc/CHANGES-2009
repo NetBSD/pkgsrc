@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4394 2009/11/22 11:58:56 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4395 2009/11/22 12:11:06 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5877,3 +5877,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libgcroots to 0.2.2 [obache 2009-11-22]
 	Updated devel/p5-Class-XSAccessor to 1.05 [seb 2009-11-22]
 	Updated devel/p5-common-sense to 2.02 [seb 2009-11-22]
+	Updated devel/p5-Config-Any to 0.18 [seb 2009-11-22]
