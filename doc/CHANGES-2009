@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4397 2009/11/22 12:32:23 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4398 2009/11/22 12:54:29 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5880,3 +5880,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Config-Any to 0.18 [seb 2009-11-22]
 	Updated devel/p5-Config-IniFiles to 2.54 [seb 2009-11-22]
 	Updated devel/p5-Config-Std to 0.007 [seb 2009-11-22]
+	Updated lang/f2c to 20090411 [asau 2009-11-22]
