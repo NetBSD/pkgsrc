@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2009/08/20 08:46:40 obache Exp $
+# $NetBSD: Makefile,v 1.60 2009/11/22 19:46:11 abs Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
-DISTNAME=	jre-1_5_0_20-linux-${DIST_ARCH}
-PKGNAME=	sun-jre15-5.0.20
+DISTNAME=	jre-1_5_0_22-linux-${DIST_ARCH}
+PKGNAME=	sun-jre15-5.0.22
 MASTER_SITES=	# empty
 
 LICENSE=	sun-jre6-license
