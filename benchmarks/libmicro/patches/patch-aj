@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1.1.1 2009/11/22 00:45:54 jym Exp $
+
+--- wrapper.sh.orig	2007-07-02 23:17:45.000000000 +0200
++++ wrapper.sh
+@@ -32,6 +32,6 @@
+ 
+ BASENAME=`basename $0`
+ DIRNAME=`dirname $0`
+-ARCH=`uname -m`
++ARCH=@@MACHINE_ARCH@@
+ 
+ exec $DIRNAME/../bin-$ARCH/$BASENAME "$@"

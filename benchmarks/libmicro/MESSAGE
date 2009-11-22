@@ -1,0 +1,24 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/11/22 00:45:54 jym Exp $
+
+Execute "run-libmicro" to run the benchmark.
+
+You can pipe the output of "run-libmicro" to a file, and process it later
+via "multiview" when you need to generate an HTML report.
+
+For example, suppose you want to compare two runs. You can do:
+
+$ run-libmicro > output.1
+$ run-libmicro > output.2
+$ multiview output.1 output.2 > comparison.html
+
+Then read 'comparison.html' in your favorite web browser.
+
+WARNING: libMicro's results are strongly dependant of compile time options
+and compiler's optimizations. You must ensure that the compiler does
+not arbitrarily chose optimizations that do not fit the benchmark, or
+which may return irrelevant results. For example: over-simplification of
+the call-graph, load/store variables from register instead of memory,
+function vs builtin macro expansion, ...
+
+===========================================================================
