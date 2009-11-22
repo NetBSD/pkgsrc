@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:59:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/11/22 14:16:47 gdt Exp $
 bin/ufraw
 bin/ufraw-batch
 lib/gimp/2.0/plug-ins/ufraw-gimp
@@ -8,6 +8,7 @@ share/gconf/schemas/ufraw.schemas
 share/locale/ca/LC_MESSAGES/ufraw.mo
 share/locale/cs/LC_MESSAGES/ufraw.mo
 share/locale/da/LC_MESSAGES/ufraw.mo
+share/locale/de/LC_MESSAGES/ufraw.mo
 share/locale/es/LC_MESSAGES/ufraw.mo
 share/locale/fr/LC_MESSAGES/ufraw.mo
 share/locale/it/LC_MESSAGES/ufraw.mo
@@ -21,4 +22,5 @@ share/locale/ru/LC_MESSAGES/ufraw.mo
 share/locale/sr/LC_MESSAGES/ufraw.mo
 share/locale/sr@latin/LC_MESSAGES/ufraw.mo
 share/locale/sv/LC_MESSAGES/ufraw.mo
+share/locale/zh_CN/LC_MESSAGES/ufraw.mo
 share/pixmaps/ufraw.png
