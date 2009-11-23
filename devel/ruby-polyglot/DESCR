@@ -1,0 +1,5 @@
+Polyglot provides a registry of file types that can be loaded by calling
+its improved version of 'require'. Each file extension that can be handled
+by a custom loader is registered by callingPolyglot.register("ext", <class>),
+and then you can simply require "somefile", which will find and load
+"somefile.ext" using your custom loader.
