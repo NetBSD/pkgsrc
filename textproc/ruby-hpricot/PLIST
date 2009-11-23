@@ -1,18 +1,25 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/11/23 14:40:02 fhajny Exp $
 ${GEM_HOME}/cache/hpricot-${PKGVERSION}.gem
-${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ext/fast_xs/FastXsService.java
+${GEM_LIBDIR}/ext/fast_xs/extconf.rb
+${GEM_LIBDIR}/ext/fast_xs/fast_xs.c
+${GEM_LIBDIR}/ext/hpricot_scan/HpricotCss.java
 ${GEM_LIBDIR}/ext/hpricot_scan/HpricotScanService.java
 ${GEM_LIBDIR}/ext/hpricot_scan/extconf.rb
 ${GEM_LIBDIR}/ext/hpricot_scan/hpricot_common.rl
+${GEM_LIBDIR}/ext/hpricot_scan/hpricot_css.c
+${GEM_LIBDIR}/ext/hpricot_scan/hpricot_css.java.rl
+${GEM_LIBDIR}/ext/hpricot_scan/hpricot_css.rl
 ${GEM_LIBDIR}/ext/hpricot_scan/hpricot_scan.c
 ${GEM_LIBDIR}/ext/hpricot_scan/hpricot_scan.h
 ${GEM_LIBDIR}/ext/hpricot_scan/hpricot_scan.java.rl
 ${GEM_LIBDIR}/ext/hpricot_scan/hpricot_scan.rl
 ${GEM_LIBDIR}/extras/mingw-rbconfig.rb
+${GEM_LIBDIR}/lib/fast_xs.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/hpricot.rb
 ${GEM_LIBDIR}/lib/hpricot/blankslate.rb
 ${GEM_LIBDIR}/lib/hpricot/builder.rb
@@ -25,7 +32,7 @@ ${GEM_LIBDIR}/lib/hpricot/tag.rb
 ${GEM_LIBDIR}/lib/hpricot/tags.rb
 ${GEM_LIBDIR}/lib/hpricot/traverse.rb
 ${GEM_LIBDIR}/lib/hpricot/xchar.rb
-${GEM_LIBDIR}/lib/${RUBY_ARCH}/hpricot_scan.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/hpricot_scan.${RUBY_DLEXT}
 ${GEM_LIBDIR}/test/files/basic.xhtml
 ${GEM_LIBDIR}/test/files/boingboing.html
 ${GEM_LIBDIR}/test/files/cy0.html
@@ -37,6 +44,7 @@ ${GEM_LIBDIR}/test/files/utf8.html
 ${GEM_LIBDIR}/test/files/week9.html
 ${GEM_LIBDIR}/test/files/why.xml
 ${GEM_LIBDIR}/test/load_files.rb
+${GEM_LIBDIR}/test/nokogiri-bench.rb
 ${GEM_LIBDIR}/test/test_alter.rb
 ${GEM_LIBDIR}/test/test_builder.rb
 ${GEM_LIBDIR}/test/test_parser.rb
