@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/20 20:57:52 drochner Exp $
+$NetBSD: distinfo,v 1.2 2009/11/23 14:49:29 drochner Exp $
 
-SHA1 (foomatic-db-4.0-20091118.tar.gz) = 4f63102dd2efca263aa6bc90afb2902bc5faa22e
-RMD160 (foomatic-db-4.0-20091118.tar.gz) = 24eef1e91098ce40b280f09830a6a9f366084e95
-Size (foomatic-db-4.0-20091118.tar.gz) = 24005607 bytes
+SHA1 (foomatic-db-4.0-20091123.tar.gz) = c11b18a7bbfb93c494df22fca36ec99662f5429b
+RMD160 (foomatic-db-4.0-20091123.tar.gz) = 5b927965417c4d9a5809c8acba9b7ec256973d18
+Size (foomatic-db-4.0-20091123.tar.gz) = 24486730 bytes
