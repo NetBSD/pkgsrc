@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2008/10/16 11:10:06 drochner Exp $
+# $NetBSD: options.mk,v 1.10 2009/11/23 11:47:34 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk2
 PKG_SUPPORTED_OPTIONS=	cups debug jasper
@@ -53,9 +53,11 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
 .endif
 
+PLIST_VARS+=	jasper
 .if !empty(PKG_OPTIONS:Mjasper)
 CONFIGURE_ARGS+=	--with-libjasper
 .include "../../graphics/jasper/buildlink3.mk"
+PLIST.jasper=	yes
 .else
 CONFIGURE_ARGS+=	--without-libjasper
 .endif
