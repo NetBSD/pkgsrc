@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.69 2009/09/09 12:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2009/11/23 11:09:36 wiz Exp $
 
-DISTNAME=		autoconf-2.64
+DISTNAME=		autoconf-2.65
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/autoconf/autoconf.html
 COMMENT=		Generates automatic source code configuration scripts
-LICENSE=		gnu-gpl-v2 AND gnu-fdl-v1.3 # AND gnu-gpl-v3 for building
+LICENSE=		gnu-gpl-v3 AND gnu-fdl-v1.3
 
 # XXX: needs m4>1.4.6; wants m4>1.4.13
 USE_TOOLS+=		gm4:run perl:run
