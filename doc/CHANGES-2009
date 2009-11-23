@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4406 2009/11/23 11:09:49 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4407 2009/11/23 14:01:31 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5813,6 +5813,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-View-TT to 0.31 [seb 2009-11-19]
 	Updated devel/p5-Class-MOP to 0.95 [seb 2009-11-19]
 	Updated devel/p5-Moose to 0.93 [seb 2009-11-19]
+	Added www/ruby-innate version 2009.10 [fhajny 2009-11-19]
 	Updated pkgtools/url2pkg to 2.12 [rillig 2009-11-20]
 	Updated net/unison to 2.32.52 [wiz 2009-11-20]
 	Removed net/unison-devel successor net/unison [wiz 2009-11-20]
@@ -5892,3 +5893,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/roundcube to 0.3.1 [ghen 2009-11-23]
 	Added net/ktorrent3 version 3.3 [abs 2009-11-23]
 	Updated devel/autoconf to 2.65 [wiz 2009-11-23]
+	Added devel/ruby-sexp-processor version 3.0.3 [fhajny 2009-11-23]
