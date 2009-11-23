@@ -10,7 +10,8 @@ __initialized__:
 .endif
 .include <bsd.own.mk>
 .include <bsd.obj.mk>
-.include <bsd.depall.mk>
+.include <bsd.dep.mk>
+.-include <bsd.depall.mk>
 .MAIN:		all
 .endif
 # .include <bsd.init.mk>
