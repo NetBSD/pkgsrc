@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2009/09/20 02:59:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2009/11/23 09:37:45 ghen Exp $
 #
 
-DISTNAME=	roundcubemail-${RCVERSION}-stable-dep
-PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-stable-dep/-${VERSION}/}
+DISTNAME=	roundcubemail-${RCVERSION}-dep
+PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep/-${VERSION}/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-RCVERSION=	0.3
+RCVERSION=	0.3.1
 VERSION=	${RCVERSION:S/-//}
 
 PKG_DESTDIR_SUPPORT=  	user-destdir
@@ -84,18 +84,6 @@ REPLACE.php.old=	.*/bin/php
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	bin/*.sh
 
-EMPTY_DIRS=	plugins/emotions/images \
-		plugins/emotions/jscripts plugins/media/images \
-		plugins/media/jscripts plugins/nonbreaking/images \
-		plugins/nonbreaking/langs plugins/searchreplace/images \
-		plugins/searchreplace/jscripts plugins/spellchecker/images \
-		plugins/spellchecker/langs plugins/table/images \
-		plugins/table/jscripts plugins/visualchars/images \
-		plugins/visualchars/langs themes/advanced/css \
-		themes/advanced/docs/en/images themes/advanced/images/xp \
-		themes/advanced/jscripts themes/advanced/docs/en \
-		themes/advanced/images themes/advanced/docs
-
 .include "../../mk/apache.mk"
 .include "options.mk"
 
@@ -104,10 +92,6 @@ post-extract:
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
-
-.	for d in ${EMPTY_DIRS}
-		cd ${WRKSRC}/program/js/tiny_mce && rmdir ${d}
-.	endfor
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/roundcube.conf \
