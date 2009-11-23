@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4413 2009/11/23 22:25:16 jakllsch Exp $
+$NetBSD: CHANGES-2009,v 1.4414 2009/11/23 23:38:55 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5901,3 +5901,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Proc-InvokeEditor version 1.02 [seb 2009-11-23]
 	Removed multimedia/mmg [jakllsch 2009-11-23]
 	Updated multimedia/mkvtoolnix to 2.9.8 [jakllsch 2009-11-23]
+	Added devel/p5-UUID-Tiny version 1.02 [seb 2009-11-23]
