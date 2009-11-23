@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/23 14:04:10 fhajny Exp $
+bin/ruby_parse
+${GEM_HOME}/cache/ruby_parser-${PKGVERSION}.gem
+${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/ruby_parse
+${GEM_LIBDIR}/lib/gauntlet_rubyparser.rb
+${GEM_LIBDIR}/lib/ruby_lexer.rb
+${GEM_LIBDIR}/lib/ruby_parser.rb
+${GEM_LIBDIR}/lib/ruby_parser.y
+${GEM_LIBDIR}/lib/ruby_parser_extras.rb
+${GEM_LIBDIR}/test/test_ruby_lexer.rb
+${GEM_LIBDIR}/test/test_ruby_parser.rb
+${GEM_LIBDIR}/test/test_ruby_parser_extras.rb
+${GEM_HOME}/specifications/ruby_parser-${PKGVERSION}.gemspec
