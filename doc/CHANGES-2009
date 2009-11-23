@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4411 2009/11/23 17:19:46 tron Exp $
+$NetBSD: CHANGES-2009,v 1.4412 2009/11/23 22:21:49 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5898,3 +5898,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/ruby-polyglot version 0.2.9 [fhajny 2009-11-23]
 	Updated x11/py-qt4 to 4.6.2 [wiz 2009-11-23]
 	Updated devel/pango to 1.26.1nb1 [tron 2009-11-23]
+	Added devel/p5-Proc-InvokeEditor version 1.02 [seb 2009-11-23]
