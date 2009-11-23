@@ -1,0 +1,3 @@
+The Perl 5 module Proc::InvokeEditor provides the ability to supply
+some text to an external text editor, have it edited by the user,
+and retrieve the results.
