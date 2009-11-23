@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4404 2009/11/23 09:38:26 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.4405 2009/11/23 10:11:24 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5890,3 +5890,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-Jifty-DBI to 0.59 [seb 2009-11-22]
 	Added devel/p5-Config-GitLike version 1.02 [seb 2009-11-22]
 	Updated mail/roundcube to 0.3.1 [ghen 2009-11-23]
+	Added net/ktorrent3 version 3.3 [abs 2009-11-23]
