@@ -1,31 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/04/04 15:21:43 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2009/11/23 13:33:47 fhajny Exp $
 
---- Rakefile.orig	1969-12-31 19:00:00.000000000 -0500
-+++ Rakefile
-@@ -12,7 +12,7 @@ include Config
- ON_WINDOWS        = RUBY_PLATFORM =~ /mswin32/i 
- PKG_NAME          = 'json'
- PKG_VERSION       = File.read('VERSION').chomp
--PKG_FILES         = FileList["**/*"].exclude(/CVS|pkg|coverage|Makefile/).exclude(/\.(so|bundle|o|#{CONFIG['DLEXT']})$/)
-+PKG_FILES         = FileList["**/*"].exclude(/CVS|pkg|coverage|Makefile/).exclude(/\.(so|bundle|o|orig|#{CONFIG['DLEXT']})$/)
- EXT_ROOT_DIR      = 'ext/json/ext'
- EXT_PARSER_DIR    = "#{EXT_ROOT_DIR}/parser"
- EXT_PARSER_DL     = "#{EXT_ROOT_DIR}/parser.#{CONFIG['DLEXT']}"
-@@ -219,8 +219,6 @@ if defined? Gem
-     s.require_paths << 'lib'
+Do not install executables, those are part of ruby-json-pure
+
+--- ../json-1.2.0.gemspec.orig	2009-11-22 15:25:00.909294000 +0000
++++ ../json-1.2.0.gemspec
+@@ -10,14 +10,12 @@ bindir: bin
+ cert_chain: []
  
-     s.bindir = "bin"
--    s.executables = ["edit_json.rb"]
--    s.default_executable = "edit_json.rb"
+ date: 2009-11-07 23:00:00 +00:00
+-default_executable: edit_json.rb
++default_executable: []
+ dependencies: []
  
-     s.has_rdoc = true
-     s.rdoc_options <<
-@@ -243,7 +241,7 @@ if defined? Gem
-     mkdir_p 'pkg'
-     spec_win_ext = Gem::Specification.new do |s|
-       s.name = 'json'
--      s.platform = Gem::Platform::WIN32
-+      s.platform = Gem::Platform::CURRENT
-       s.version = PKG_VERSION
-       s.summary = "A JSON implementation as a Ruby extension"
-       s.description = ""
+ description: This is a JSON implementation as a Ruby extension in C.
+ email: flori@ping.de
+-executables: 
+-- edit_json.rb
+-- prettify_json.rb
++executables: []
+ extensions: 
+ - ext/json/ext/generator/extconf.rb
+ - ext/json/ext/parser/extconf.rb
