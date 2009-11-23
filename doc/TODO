@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8697 2009/11/23 13:46:33 fhajny Exp $
+$NetBSD: TODO,v 1.8698 2009/11/23 14:13:46 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1243,7 +1243,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-sequel-core-2.2.0
 	o ruby-sqlite3-1.2.5
 	o ruby-will-paginate-2.2.3
-	o ruby2ruby-1.2.2
 	o rudiments-0.30
 	o sabayon-2.28.1 [GNOME 2.28]
 	o sablecc-3.2
