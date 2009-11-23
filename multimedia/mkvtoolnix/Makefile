@@ -1,20 +1,41 @@
-# $NetBSD: Makefile,v 1.15 2007/09/08 20:35:08 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/11/23 22:25:16 jakllsch Exp $
 #
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+DISTNAME=	mkvtoolnix-2.9.8
+CATEGORIES=	multimedia
+MASTER_SITES=	http://www.bunkus.org/videotools/mkvtoolnix/sources/
+EXTRACT_SUFX=	.tar.bz2
 
-.include "../../multimedia/mkvtoolnix/Makefile.dist"
-PKGREVISION=	2
-
-MAINTAINER=	salo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bunkus.org/videotools/mkvtoolnix/
 COMMENT=	Set of tools to create, alter and inspect Matroska files
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS+=	--disable-gui
+CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}
+CONFIGURE_ARGS+=	--with-boost_regex=boost_regex
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.mkvtoolnix
+PKG_SUPPORTED_OPTIONS=	mkvtoolnix-gui
+PKG_SUGGESTED_OPTIONS=
+
+.include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	gui
+
+.if !empty(PKG_OPTIONS:Mmkvtoolnix-gui)
+PLIST.gui=	yes
+CONFIGURE_ARGS+= --enable-gui --enable-wxwidgets 
+.   include "../../x11/wxGTK28/buildlink3.mk"
+.else
+PLIST.gui=      no
+CONFIGURE_ARGS+= --disable-gui --disable-wxwidgets
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/liblzo/buildlink3.mk"
@@ -23,6 +44,8 @@ CONFIGURE_ARGS+=	--disable-gui
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libebml/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
