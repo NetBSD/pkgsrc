@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8698 2009/11/23 14:13:46 fhajny Exp $
+$NetBSD: TODO,v 1.8699 2009/11/23 22:25:16 jakllsch Exp $
 
 Suggested new packages
 ======================
@@ -955,9 +955,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o miredo-1.1.7
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-2.9.8
 	o mlterm-2.9.4
-	o mmg-2.0.2
 	o moc-2.4.4
 	o modular-xorg-server-1.7.1
 	o monodevelop-2.1.1
