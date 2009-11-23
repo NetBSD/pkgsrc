@@ -1,6 +1,9 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2009/11/06 15:44:34 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2009/11/23 14:16:22 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 1.9.1.
+# 
+# used by devel/xulrunner/Makefile
+# used by www/firefox/Makefile
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config perl gmake autoconf213
