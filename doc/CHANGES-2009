@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4412 2009/11/23 22:21:49 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4413 2009/11/23 22:25:16 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5899,3 +5899,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/py-qt4 to 4.6.2 [wiz 2009-11-23]
 	Updated devel/pango to 1.26.1nb1 [tron 2009-11-23]
 	Added devel/p5-Proc-InvokeEditor version 1.02 [seb 2009-11-23]
+	Removed multimedia/mmg [jakllsch 2009-11-23]
+	Updated multimedia/mkvtoolnix to 2.9.8 [jakllsch 2009-11-23]
