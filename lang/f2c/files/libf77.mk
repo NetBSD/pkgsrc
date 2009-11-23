@@ -2,7 +2,18 @@ LIB=	F77
 SHLIB_MAJOR=	0
 SHLIB_MINOR=	0
 
-.include "bsd.init.mk"
+# Simulate "bsd.init.mk" because pkgsrc doesn't provide it for some reason:
+.if !target(__initialized__)
+__initialized__:
+.if exists(${.CURDIR}/../Makefile.inc)
+.include "${.CURDIR}/../Makefile.inc"
+.endif
+.include <bsd.own.mk>
+.include <bsd.obj.mk>
+.include <bsd.depall.mk>
+.MAIN:		all
+.endif
+# .include <bsd.init.mk>
 .PATH:	$(LIBF2CSRCDIR)
 
 SRCS=	$(MISC) $(POW) $(CX) $(DCX) $(REAL) $(DBL) $(INT) \
