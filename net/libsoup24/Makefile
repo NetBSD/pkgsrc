@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/10/21 15:52:03 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2009/11/23 19:15:01 drochner Exp $
 
 DISTNAME=	libsoup-2.28.1
 PKGNAME=	${DISTNAME:S/libsoup/libsoup24/}
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libsoup-2.4.pc.in
 PKGCONFIG_OVERRIDE+=	libsoup-gnome-2.4.pc.in
+
+TEST_TARGET=	check
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
