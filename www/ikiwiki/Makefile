@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/11/16 22:51:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.40 2009/11/23 02:36:39 schmonz Exp $
 #
 
 DISTNAME=	ikiwiki_3.20091113
@@ -47,12 +47,12 @@ REPLACE_PERL+=	plugins/externaldemo	# XXX not installed
 REPLACE_PYTHON+=plugins/proxy.py plugins/pythondemo plugins/rst
 
 SUBST_CLASSES+=		sysconfdir
-SUBST_STAGE.sysconfdir=	pre-configure
+SUBST_STAGE.sysconfdir=	post-patch
 SUBST_FILES.sysconfdir=	ikiwiki-mass-rebuild ikiwiki-update-wikilist
 SUBST_SED.sysconfdir+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 
 SUBST_CLASSES+=		perlpath
-SUBST_STAGE.perlpath=	pre-configure
+SUBST_STAGE.perlpath=	post-patch
 SUBST_FILES.perlpath=	IkiWiki/Setup/Standard.pm
 SUBST_SED.perlpath+=	-e 's,@PERL5@,${PERL5},g'
 
