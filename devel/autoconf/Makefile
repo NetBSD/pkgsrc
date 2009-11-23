@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2009/11/23 13:56:33 tnn Exp $
+# $NetBSD: Makefile,v 1.72 2009/11/23 14:53:27 tnn Exp $
 
 DISTNAME=		autoconf-2.65
 PKGREVISION=		1
@@ -26,6 +26,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# empty
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-lispdir
+CONFIGURE_ENV+=		ac_cv_prog_TEST_EMACS=no
 
 TEXINFO_REQD=		4.0
 INFO_FILES=		YES
