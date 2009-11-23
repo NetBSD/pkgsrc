@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.20 2009/11/23 15:30:29 tnn Exp $
+
+--- src/gram.expr.orig	2003-02-11 13:53:48.000000000 +0100
++++ src/gram.expr
+@@ -99,9 +99,9 @@ simple:	  name
+ simple_const:   STRUE	{ $$ = mklogcon(1); }
+ 	| SFALSE	{ $$ = mklogcon(0); }
+ 	| SHOLLERITH  { $$ = mkstrcon(toklen, token); }
+-	| SICON	= { $$ = mkintqcon(toklen, token); }
+-	| SRCON	= { $$ = mkrealcon(tyreal, token); }
+-	| SDCON	= { $$ = mkrealcon(TYDREAL, token); }
++	| SICON	 { $$ = mkintqcon(toklen, token); }
++	| SRCON	 { $$ = mkrealcon(tyreal, token); }
++	| SDCON	 { $$ = mkrealcon(TYDREAL, token); }
+ 	| bit_const
+ 	;
+ 
