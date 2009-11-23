@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8695 2009/11/23 11:54:38 obache Exp $
+$NetBSD: TODO,v 1.8696 2009/11/23 13:43:12 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -751,7 +751,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hiawatha-6.18
 	o highlight-2.13
 	o hobbitmon-4.0.4 [pkg/30484]
-	o hoe-1.8.3
 	o honeyd-1.5c
 	o horde-3.3.5
 	o host-20070128
