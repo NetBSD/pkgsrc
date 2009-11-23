@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/11/23 13:42:52 fhajny Exp $
 bin/sow
 ${GEM_HOME}/cache/hoe-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
@@ -7,5 +7,25 @@ ${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/sow
 ${GEM_LIBDIR}/lib/hoe.rb
+${GEM_LIBDIR}/lib/hoe/clean.rb
+${GEM_LIBDIR}/lib/hoe/debug.rb
+${GEM_LIBDIR}/lib/hoe/deps.rb
+${GEM_LIBDIR}/lib/hoe/flay.rb
+${GEM_LIBDIR}/lib/hoe/flog.rb
+${GEM_LIBDIR}/lib/hoe/inline.rb
+${GEM_LIBDIR}/lib/hoe/package.rb
+${GEM_LIBDIR}/lib/hoe/publish.rb
+${GEM_LIBDIR}/lib/hoe/rake.rb
+${GEM_LIBDIR}/lib/hoe/rcov.rb
+${GEM_LIBDIR}/lib/hoe/signing.rb
+${GEM_LIBDIR}/lib/hoe/test.rb
+${GEM_LIBDIR}/template/.autotest.erb
+${GEM_LIBDIR}/template/History.txt.erb
+${GEM_LIBDIR}/template/Manifest.txt.erb
+${GEM_LIBDIR}/template/README.txt.erb
+${GEM_LIBDIR}/template/Rakefile.erb
+${GEM_LIBDIR}/template/bin/file_name.erb
+${GEM_LIBDIR}/template/lib/file_name.rb.erb
+${GEM_LIBDIR}/template/test/test_file_name.rb.erb
 ${GEM_LIBDIR}/test/test_hoe.rb
 ${GEM_HOME}/specifications/hoe-${PKGVERSION}.gemspec
