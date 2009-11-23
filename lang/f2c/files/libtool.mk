@@ -28,7 +28,7 @@ $(LTOBJS):	$(DPSRCS)
 all:		lib$(LIB).la
 
 install:	lib$(LIB).la
-	$(LIBTOOL) --mode=install $(INSTALL_FILE) -o $(LIBOWN) -g $(LIBGRP) -m $(LIBMODE) \
+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) -o $(LIBOWN) -g $(LIBGRP) -m $(LIBMODE) \
 		lib$(LIB).la $(DESTDIR)$(LIBDIR)
 
 clean cleandir:
