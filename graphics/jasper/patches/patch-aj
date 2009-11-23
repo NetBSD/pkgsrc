@@ -1,0 +1,21 @@
+$NetBSD: patch-aj,v 1.1 2009/11/23 11:53:20 drochner Exp $
+
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=469786
+
+--- src/libjasper/jpc/jpc_dec.c.orig	2009-11-23 12:48:33.000000000 +0100
++++ src/libjasper/jpc/jpc_dec.c
+@@ -1069,12 +1069,12 @@ static int jpc_dec_tiledecode(jpc_dec_t 
+ 	/* Apply an inverse intercomponent transform if necessary. */
+ 	switch (tile->cp->mctid) {
+ 	case JPC_MCT_RCT:
+-		assert(dec->numcomps == 3);
++		assert(dec->numcomps >= 3);
+ 		jpc_irct(tile->tcomps[0].data, tile->tcomps[1].data,
+ 		  tile->tcomps[2].data);
+ 		break;
+ 	case JPC_MCT_ICT:
+-		assert(dec->numcomps == 3);
++		assert(dec->numcomps >= 3);
+ 		jpc_iict(tile->tcomps[0].data, tile->tcomps[1].data,
+ 		  tile->tcomps[2].data);
+ 		break;
