@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.14 2009/11/16 22:51:14 schmonz Exp $
+$NetBSD: patch-aa,v 1.15 2009/11/23 02:36:39 schmonz Exp $
 
 --- Makefile.PL.orig	2009-11-13 15:06:57.000000000 -0500
 +++ Makefile.PL
@@ -11,6 +11,15 @@ $NetBSD: patch-aa,v 1.14 2009/11/16 22:51:14 schmonz Exp $
  
  tflag=$(shell if [ -n "$$NOTAINT" ] && [ "$$NOTAINT" != 1 ]; then printf -- "-T"; fi)
  extramodules=$(shell if [ "$$PROFILE" = 1 ]; then printf -- "-d:NYTProf"; fi)
+@@ -44,7 +46,7 @@ extra_build: ikiwiki.out ikiwiki.setup d
+ 	./mdwn2man ikiwiki-update-wikilist 1 doc/ikiwiki-update-wikilist.mdwn > ikiwiki-update-wikilist.man
+ 	./mdwn2man ikiwiki-calendar 1 doc/ikiwiki-calendar.mdwn > ikiwiki-calendar.man
+ 	$(MAKE) -C po
+-	sed -i.bkp "s/Version:.*/Version: $$(perl -e '$$_=<>;print m/\((.*?)\)/'<debian/changelog)/" ikiwiki.spec
++	#sed -i.bkp "s/Version:.*/Version: $$(perl -e '$$_=<>;print m/\((.*?)\)/'<debian/changelog)/" ikiwiki.spec
+ 	rm -f ikiwiki.spec.bkp
+ 	
+ docwiki: ikiwiki.out
 @@ -60,7 +62,7 @@ underlay_install:
  	for dir in `cd underlays && find . -follow -type d ! -regex '.*\.svn.*'`; do \
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
