@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4408 2009/11/23 14:05:38 fhajny Exp $
+$NetBSD: CHANGES-2009,v 1.4409 2009/11/23 14:26:40 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5895,3 +5895,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/autoconf to 2.65 [wiz 2009-11-23]
 	Added devel/ruby-sexp-processor version 3.0.3 [fhajny 2009-11-23]
 	Added devel/ruby-parser version 2.0.4 [fhajny 2009-11-23]
+	Added devel/ruby-polyglot version 0.2.9 [fhajny 2009-11-23]
