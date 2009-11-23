@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4405 2009/11/23 10:11:24 abs Exp $
+$NetBSD: CHANGES-2009,v 1.4406 2009/11/23 11:09:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5891,3 +5891,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Config-GitLike version 1.02 [seb 2009-11-22]
 	Updated mail/roundcube to 0.3.1 [ghen 2009-11-23]
 	Added net/ktorrent3 version 3.3 [abs 2009-11-23]
+	Updated devel/autoconf to 2.65 [wiz 2009-11-23]
