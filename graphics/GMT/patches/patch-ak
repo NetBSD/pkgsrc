@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.5 2008/06/12 02:14:31 joerg Exp $
+$NetBSD: patch-ak,v 1.6 2009/11/23 16:00:34 joerg Exp $
 
 Libtoolize.
 
@@ -9,7 +9,7 @@ Libtoolize.
  include ../gmtalldeps.macros
  
 -CDF		= -L$(NETCDF)/lib -lnetcdf
-+CDF		= -Wl,-R$(NETCDFLIB) -L$(NETCDF)/lib -lnetcdf
++CDF		= -Wl,-R$(NETCDF)/lib -L$(NETCDF)/lib -lnetcdf
  CFLAGS		= $(CC_OPT) $(WIN32) $(SWAP) -I$(srcdir) -I$(NETCDF)/include
  
  all:		grdraster
