@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8696 2009/11/23 13:43:12 fhajny Exp $
+$NetBSD: TODO,v 1.8697 2009/11/23 13:46:33 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o TeXmacs-1.0.7.2
 	o TiffIO-130e
 	o YoSucker-81
-	o ZenTest-3.11.1
 	o ZIPIdent-2.9
 	o abcm2ps-5.9.6
 	o abcmidi-20090923
