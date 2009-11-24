@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/24 12:13:02 obache Exp $
+
+SHA1 (novel-pinyin-0.2.5.tar.gz) = d973b122aed8b844806948e5081f342945df75ff
+RMD160 (novel-pinyin-0.2.5.tar.gz) = 61107040664ddf76a26191401a750ae60397fa4e
+Size (novel-pinyin-0.2.5.tar.gz) = 6006453 bytes
+SHA1 (patch-aa) = bacaf491f7e7a9085fff5eb1ea15a73e0638c00c
+SHA1 (patch-ab) = 7e50761959a6b17480d524b22cb265cacca44332
+SHA1 (patch-ac) = a88eab51d41129afdfb2efab0ea6eb1c60ce369f
+SHA1 (patch-ad) = 16648a1a547982eac40676d40ed1c9b978476df5

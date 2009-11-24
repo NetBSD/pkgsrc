@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/11/24 12:13:02 obache Exp $
+
+Use C++ way for getline(3) less platforms.
+
+--- tests/storage/test_pinyin_index.cpp.orig	2008-07-21 12:39:27.000000000 +0000
++++ tests/storage/test_pinyin_index.cpp
+@@ -1,3 +1,4 @@
++#include <iostream>
+ #include <string.h>
+ #include <stdio.h>
+ #include <sys/time.h>
+@@ -75,7 +76,8 @@ int main( int argc, char * argv[]){
+     
+     char* linebuf = (char *)malloc ( 1024 * sizeof (char) );
+     size_t size = 1024;
+-    while( getline(&linebuf, &size, stdin) ){
++    while( !std::cin.eof() ){
++	std::cin.getline(linebuf, size);
+         linebuf[strlen(linebuf)-1] = '\0';
+ 	if ( strcmp ( linebuf, "quit" ) == 0)
+ 	    break;
