@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/24 11:54:35 obache Exp $
+
+SHA1 (scim-hangul-0.3.2.tar.gz) = d1f4a2114d284c926d64fbfe8ea83307b8d8e2ec
+RMD160 (scim-hangul-0.3.2.tar.gz) = 52fd93c3f6fdd3d4c407a7b0069fc3a4d4ac9bc0
+Size (scim-hangul-0.3.2.tar.gz) = 1176577 bytes
