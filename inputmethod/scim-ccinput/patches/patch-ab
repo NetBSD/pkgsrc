@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/11/24 11:51:49 obache Exp $
+
+--- scim/IMEngine/scim_ccin_imengine.cpp.orig	2005-06-09 16:36:30.000000000 +0000
++++ scim/IMEngine/scim_ccin_imengine.cpp
+@@ -72,6 +72,7 @@ using namespace std;
+   #define INPUT_METHOD_NAME "ccinput"
+ #endif
+ 
++#include <libintl.h>
+ #define _(String) dgettext(INPUT_METHOD_NAME,String)
+ #define N_(String) (String)
+ 
