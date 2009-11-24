@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4441 2009/11/24 12:13:20 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4442 2009/11/24 17:21:07 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5936,3 +5936,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added inputmethod/scim-uim version 0.2.0 [obache 2009-11-24]
 	Added inputmethod/scim-unikey version 0.3.1 [obache 2009-11-24]
 	Added inputmethod/novel-pinyin version 0.2.5 [obache 2009-11-24]
+	Updated sysutils/memtestplus to 4.00 [jakllsch 2009-11-24]
