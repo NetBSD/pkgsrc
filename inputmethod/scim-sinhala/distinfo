@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/24 12:05:45 obache Exp $
+
+SHA1 (scim-sinhala-0.1.0.tar.gz) = 2a4699c6cd26d6c7b6ed54ba3acda5c200e53e9c
+RMD160 (scim-sinhala-0.1.0.tar.gz) = bbb4df83ee7a25bfea2d79ebbbb56956e8a8c734
+Size (scim-sinhala-0.1.0.tar.gz) = 488409 bytes
+SHA1 (patch-aa) = 213bf2d512ec25c71b82fbd433195037ba80e1bc
