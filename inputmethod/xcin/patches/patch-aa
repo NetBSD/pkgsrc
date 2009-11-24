@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/01/28 03:03:11 rxg Exp $
+$NetBSD: patch-aa,v 1.3 2009/11/24 11:23:34 obache Exp $
 
 --- etc/Makefile.in.orig	2001-11-28 22:39:03.000000000 +0800
 +++ etc/Makefile.in
@@ -9,8 +9,8 @@ $NetBSD: patch-aa,v 1.2 2006/01/28 03:03:11 rxg Exp $
 -	if [ ! -d "$(xcin_rcp)" ];  then $(INSTALL) -d $(xcin_rcp);  fi
 -	if [ -f $(xcin_rcp)/xcinrc ]; then mv $(xcin_rcp)/xcinrc $(xcin_rcp)/xcinrc.old; fi
 -	$(INSTALL_DATA) xcinrc $(xcin_rcp)
-+	if [ ! -d "$(prefix)/share/examples/xcin" ];  then $(INSTALL) -d $(prefix)/share/examples/xcin;  fi
-+	$(INSTALL_DATA) xcinrc $(prefix)/share/examples/xcin
++	if [ ! -d "$(program_prefix)$(prefix)/share/examples/xcin" ];  then $(INSTALL) -d $(program_prefix)$(prefix)/share/examples/xcin;  fi
++	$(INSTALL_DATA) xcinrc $(program_prefix)$(prefix)/share/examples/xcin
  
  clean:
  	rm -f xcinrc
