@@ -1,0 +1,3 @@
+scim-unikey is a scim input method engine.
+It use ukengine for progress key event.
+(a mod version of ukengine)
