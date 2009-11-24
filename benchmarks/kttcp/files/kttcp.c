@@ -1,4 +1,4 @@
-/*	$NetBSD: kttcp.c,v 1.6 2007/08/30 09:23:31 rillig Exp $	*/
+/*	$NetBSD: kttcp.c,v 1.7 2009/11/24 17:46:45 jakllsch Exp $	*/
 
 /*
  * Copyright (c) 2002 Wasabi Systems, Inc.
@@ -265,15 +265,18 @@ main(int argc, char *argv[])
 
 	bytespersec = kio.kio_bytesdone * 1000000LL / usecs;
 	bitspersec = bytespersec * NBBY;
-	printf("kttcp: %llu bytes in %ld.%03ld real seconds ==> %llu bytes/sec\n",
-	    kio.kio_bytesdone, kio.kio_elapsed.tv_sec,
-	    kio.kio_elapsed.tv_usec / 1000, bytespersec);
+	printf("kttcp: %llu bytes in %jd.%03jd real seconds "
+	    "==> %llu bytes/sec\n", kio.kio_bytesdone,
+	    (intmax_t)kio.kio_elapsed.tv_sec,
+	    (intmax_t)kio.kio_elapsed.tv_usec / 1000, bytespersec);
 	if (verbose > 1) {
 		timersub(&ruend.ru_stime, &rustart.ru_stime, &tvtmp);
 		bytespersec = kio.kio_bytesdone * 1000000LL /
 		    (tvtmp.tv_sec * 1000000ULL + tvtmp.tv_usec);
-		printf("kttcp: %llu bytes in %ld.%03ld CPU seconds ==> %llu bytes/CPU sec\n",
-		    kio.kio_bytesdone, tvtmp.tv_sec, tvtmp.tv_usec / 1000, bytespersec);
+		printf("kttcp: %llu bytes in %jd.%03jd CPU seconds "
+		    "==> %llu bytes/CPU sec\n", kio.kio_bytesdone,
+		    (intmax_t)tvtmp.tv_sec,
+		    (intmax_t)tvtmp.tv_usec / 1000, bytespersec);
 	}
 	printf("       %g (%g) Megabits/sec\n",
 	    ((double) bitspersec / 1024.0) / 1024.0,
@@ -285,11 +288,13 @@ main(int argc, char *argv[])
 	 */
 	if (tvtmp.tv_sec < 0)
 		tvtmp.tv_sec = tvtmp.tv_usec = 0;
-	printf("  %ld.%02lduser", tvtmp.tv_sec, tvtmp.tv_usec / 10000);
+	printf("  %jd.%02jduser", (intmax_t)tvtmp.tv_sec,
+	    (intmax_t)tvtmp.tv_usec / 10000);
 	ull = tvtmp.tv_sec * 1000000ULL + tvtmp.tv_usec;
 
 	timersub(&ruend.ru_stime, &rustart.ru_stime, &tvtmp);
-	printf(" %ld.%02ldsys", tvtmp.tv_sec, tvtmp.tv_usec / 10000);
+	printf(" %jd.%02jdsys", (intmax_t)tvtmp.tv_sec,
+	    (intmax_t)tvtmp.tv_usec / 10000);
 	ull += tvtmp.tv_sec * 1000000ULL + tvtmp.tv_usec;
 
 	printf(" %lld.%lldreal", usecs / 1000000, (usecs % 1000000) / 10000);
