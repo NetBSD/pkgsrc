@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2007/01/06 22:26:55 smb Exp $
+$NetBSD: patch-ad,v 1.2 2009/11/24 17:20:40 jakllsch Exp $
 
---- README.orig	2007-01-06 13:34:46.000000000 -0500
-+++ README	2007-01-06 13:35:15.000000000 -0500
-@@ -180,7 +180,7 @@
+--- README.orig	2009-09-22 00:35:46.000000000 +0000
++++ README
+@@ -174,7 +174,7 @@ individual errors.  In BadRAM Patterns m
  use with the Linux BadRAM feature.  This slick feature allows Linux to
  avoid bad memory pages.  Details about the BadRAM feature can be found at:
  
