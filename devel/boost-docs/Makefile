@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/10/14 06:40:07 adam Exp $
-#
+# $NetBSD: Makefile,v 1.9 2009/11/24 10:13:21 adam Exp $
 
 BOOST_PACKAGE=		docs
 BOOST_COMMENT=		(documentation)
