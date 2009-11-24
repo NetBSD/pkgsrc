@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 11:59:49 obache Exp $
+bin/scim-input-pad
+lib/libscim-input-pad.la
+lib/scim-1.0/1.4.0/Helper/input-pad.la
+share/locale/de/LC_MESSAGES/scim-input-pad.mo
+share/locale/fr/LC_MESSAGES/scim-input-pad.mo
+share/locale/it/LC_MESSAGES/scim-input-pad.mo
+share/locale/ja/LC_MESSAGES/scim-input-pad.mo
+share/locale/pa/LC_MESSAGES/scim-input-pad.mo
+share/locale/zh_CN/LC_MESSAGES/scim-input-pad.mo
+share/locale/zh_TW/LC_MESSAGES/scim-input-pad.mo
+share/scim/icons/input-pad.png
+share/scim/input-pad/base.pad
+share/scim/input-pad/chinese.pad
+share/scim/input-pad/japanese.pad
+share/scim/input-pad/keyboard.pad
