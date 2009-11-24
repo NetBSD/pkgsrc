@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/11/24 12:13:02 obache Exp $
+
+Use C++ way for getline(3) less platforms.
+
+--- src/segment/mmseg.cpp.orig	2009-11-24 08:50:16.000000000 +0000
++++ src/segment/mmseg.cpp
+@@ -20,6 +20,7 @@
+  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+  */
+ 
++#include <iostream>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <assert.h>
+@@ -192,9 +193,8 @@ int main(int argc, char * argv[]){
+     
+     char* linebuf = (char *)malloc ( 1024 * sizeof (char) );
+     size_t size = 1024;
+-    while( getline(&linebuf, &size, stdin) ){
+-	if ( feof(stdin) )
+-	    break;
++    while( !std::cin.eof()) {
++	std::cin.getline(linebuf, size);
+         linebuf[strlen(linebuf)-1] = '\0';
+ 
+ 	GArray * phrases = g_array_new(TRUE, TRUE, sizeof( char *));
