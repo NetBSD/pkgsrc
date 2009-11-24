@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2009/11/22 07:58:43 taca Exp $
+# $NetBSD: options.mk,v 1.33 2009/11/24 22:46:09 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.typolight-translations
 
@@ -9,7 +9,7 @@ TL_TRANSLATIONS.af=	TYPOlight-Afrikaans-v1.zip	# 2008/01/15
 TL_TRANSLATIONS.bg=	TYPOlight-Bulgarian-v17.zip	# 2009/06/22
 TL_TRANSLATIONS.ca=	TYPOlight-Catalan-v4.zip	# 2008/09/24
 TL_TRANSLATIONS.cs=	TYPOlight-Czech-v3.zip		# 2009/02/26
-TL_TRANSLATIONS.da=	TYPOlight-Danish-v6.zip		# 2009/01/25
+TL_TRANSLATIONS.da=	TYPOlight-Danish-v7.zip		# 2009/11/24
 TL_TRANSLATIONS.es=	TYPOlight-Spanish-v12.zip	# 2009/07/01
 TL_TRANSLATIONS.fa=	TYPOlight-Persian-v2.zip	# 2008/06/05
 TL_TRANSLATIONS.fr=	TYPOlight-French-v45.zip	# 2009/06/02
