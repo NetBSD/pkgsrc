@@ -1,0 +1,15 @@
+This is SCIM IMEngine module for Thai, based on libthai library.
+
+Currently, it supports 3 keyboard layouts:
+  - Ketmanee
+  - TIS-820.2538
+  - Pattachote
+
+In addition to keyboard layout suuports, it also validate input sequences
+in 3 levels of strictness:
+  - Passthrough (no check)
+  - Basic Check
+  - Srict Check
+
+For applications that support surrounding text retrieval/deleting,
+it also corrects the invalid input sequences.
