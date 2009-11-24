@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4416 2009/11/24 04:24:17 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4417 2009/11/24 06:09:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5904,3 +5904,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-UUID-Tiny version 1.02 [seb 2009-11-23]
 	Updated mail/getmail to 4.14.0 [schmonz 2009-11-24]
 	Updated www/typolight27-translations to 20091116nb1 [taca 2009-11-24]
+	Updated graphics/xfig to 3.2.5bnb3 [obache 2009-11-24]
