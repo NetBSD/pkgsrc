@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1 2009/11/24 21:57:53 agc Exp $
+
+provide a stringise function for systems with 64-bit time_t's.
+
+--- common/utils.cc	2009/11/24 21:19:54	1.1
++++ common/utils.cc	2009/11/24 21:20:41
+@@ -73,16 +73,11 @@
+     CONVERT_TO_STRING("%lu")
+ }
+ 
+-#ifdef __WIN32__
+ string
+-om_tostring(__int64 val)
++om_tostring(long long val)
+ {
+-    // Avoid a format string warning from GCC - mingw uses the MS C runtime DLL
+-    // which does understand "%I64d", but GCC doesn't know that.
+-    static const char fmt[] = { '%', 'I', '6', '4', 'd', 0 };
+-    CONVERT_TO_STRING(fmt)
++    CONVERT_TO_STRING("%lld")
+ }
+-#endif
+ 
+ string
+ om_tostring(double val)
