@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/11/24 12:13:02 obache Exp $
+
+Use C++ way for getline(3) less platforms.
+
+--- src/training/gen_ngram.cpp.orig	2008-07-21 12:39:27.000000000 +0000
++++ src/training/gen_ngram.cpp
+@@ -20,6 +20,7 @@
+  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+  */
+ 
++#include <iostream>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -116,9 +117,8 @@ int main(int argc, char * argv[]){
+     char* linebuf = (char *)malloc ( 1024 * sizeof (char) );
+     size_t size = 1024;
+     phrase_token_t last_token, cur_token = last_token = 0;
+-    while( getline(&linebuf, &size, stdin) ){
+-	if ( feof(stdin) )
+-	    break;
++    while( !std::cin.eof() ) {
++	std::cin.getline(linebuf, size);
+         linebuf[strlen(linebuf)-1] = '\0';
+ 	
+ 	phrase_token_t token;

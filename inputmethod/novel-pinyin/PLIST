@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 12:13:02 obache Exp $
+lib/scim-1.0/1.4.0/IMEngine/novel_pinyin.la
+lib/scim-1.0/1.4.0/SetupUI/novel-pinyin-imengine-setup.la
+share/scim/icons/novel-pinyin.png
+share/scim/novel-pinyin/bigram.db
+share/scim/novel-pinyin/gb_char.bin
+share/scim/novel-pinyin/gbk_char.bin
+share/scim/novel-pinyin/pinyin_index.bin
+share/scim/novel-pinyin/special_table
