@@ -1,0 +1,7 @@
+A HMM-based(Hidden Markov Model) sentence pinyin input method for Chinese.
+
+This Project starts from my graduate life in BUPT. Evolved from a research
+prototype to a real project. This input method is based on scim-pinyin, a
+popular Linux input method.
+
+Hopefully this project will help you speed up inputing Chinese characters.
