@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4418 2009/11/24 10:16:17 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4419 2009/11/24 11:23:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5912,3 +5912,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/boost-build to 1.41.0 [adam 2009-11-24]
 	Updated devel/boost-python to 1.41.0 [adam 2009-11-24]
 	Updated meta-pkgs/boost to 1.41.0 [adam 2009-11-24]
+	Updated inputmethod/libtabe to 0.2.6 [obache 2009-11-24]
+	Updated inputmethod/xcin to 2.5.3rc2nb7 [obache 2009-11-24]
