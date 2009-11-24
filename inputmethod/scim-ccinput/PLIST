@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 11:51:49 obache Exp $
+lib/scim-1.0/1.4.0/IMEngine/ccin.la
+lib/scim-1.0/1.4.0/SetupUI/ccin-imengine-setup.la
+share/locale/zh_CN/LC_MESSAGES/ccinput.mo
+share/scim/ccinput/ccinput.cfg
+share/scim/ccinput/sysfreq.tbl
+share/scim/ccinput/sysgloss.tbl
+share/scim/icons/ccinput.png
+share/scim/icons/sp_ls.png
+share/scim/icons/sp_ms.png
+share/scim/icons/sp_st.png
+share/scim/icons/sp_zg.png
+share/scim/icons/sp_zn.png
+share/scim/icons/sp_zr.png

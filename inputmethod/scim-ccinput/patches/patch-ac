@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/11/24 11:51:49 obache Exp $
+
+--- scim/SetupUI/scim_ccin_imengine_setup.cpp.orig	2005-06-03 04:22:17.000000000 +0000
++++ scim/SetupUI/scim_ccin_imengine_setup.cpp
+@@ -41,6 +41,7 @@
+     #define SCIM_ICONDIR "/usr/share/scim/icons"
+ #endif
+ 
++#include <libintl.h>
+ #define _(String) dgettext(INPUT_METHOD_NAME,String)
+ #define N_(String) (String)
+ 
