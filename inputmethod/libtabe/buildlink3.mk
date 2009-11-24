@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:47 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/11/24 11:15:14 obache Exp $
 
 BUILDLINK_TREE+=	libtabe
 
@@ -6,10 +6,10 @@ BUILDLINK_TREE+=	libtabe
 LIBTABE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libtabe+=	libtabe>=0.2.5
-BUILDLINK_ABI_DEPENDS.libtabe+=	libtabe>=0.2.5nb2
+BUILDLINK_ABI_DEPENDS.libtabe+=	libtabe>=0.2.6
 BUILDLINK_PKGSRCDIR.libtabe?=	../../inputmethod/libtabe
 
-.include "../../databases/db3/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .endif # LIBTABE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libtabe
