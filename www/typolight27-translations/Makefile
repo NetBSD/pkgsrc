@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2009/11/22 16:18:00 taca Exp $
+# $NetBSD: Makefile,v 1.34 2009/11/24 04:23:19 taca Exp $
 #
 
 DISTNAME=	typolight${TL_VER}-translations-${VERS}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	# defined for each distfiles
 DISTFILES=	${TL_DISTFILES}
@@ -22,12 +23,15 @@ NO_CONFIGURE=	yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+SEPARATED_MODULES=	development pun_bridge
+
 .include "options.mk"
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
-	cd ${WRKSRC}; \
-		${RM} -fr system/modules/development system/modules/pun_bridge
+.for d in ${SEPARATED_MODULES}
+	${RM} -fr ${WRKSRC}/system/modules/${d}
+.endfor
 
 do-install:
 	cd ${WRKSRC}; pax -rw . ${DESTDIR}${PREFIX}/${TL_WEBDIR}
