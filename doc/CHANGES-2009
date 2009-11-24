@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4422 2009/11/24 11:47:57 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4423 2009/11/24 11:49:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5917,3 +5917,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated inputmethod/libchewing to 0.3.2 [obache 2009-11-24]
 	Added inputmethod/scim version 1.4.9 [obache 2009-11-24]
 	Added inputmethod/scim-anthy version 1.2.7 [obache 2009-11-24]
+	Added inputmethod/scim-array version 1.0.1 [obache 2009-11-24]
