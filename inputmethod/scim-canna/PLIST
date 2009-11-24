@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 11:50:45 obache Exp $
+lib/scim-1.0/1.4.0/IMEngine/canna.la
+lib/scim-1.0/1.4.0/SetupUI/canna-imengine-setup.la
+share/locale/ja/LC_MESSAGES/scim-canna.mo
+share/scim/icons/scim-canna.png
