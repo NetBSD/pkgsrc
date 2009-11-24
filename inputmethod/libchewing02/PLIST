@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 11:18:53 obache Exp $
+include/chewing/char.h
+include/chewing/chewing.h
+include/chewing/chewingio.h
+include/chewing/chewingutil.h
+include/chewing/dict.h
+include/chewing/global.h
+include/chewing/hanyupinying.h
+include/chewing/hash.h
+include/chewing/userphrase.h
+include/chewing/zuin.h
+lib/libchewing.la
+lib/pkgconfig/chewing.pc
+share/chewing/ch_index.dat
+share/chewing/dict.dat
+share/chewing/fonetree.dat
+share/chewing/ph_index.dat
+share/chewing/us_freq.dat
