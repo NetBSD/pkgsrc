@@ -1,2 +1,4 @@
-libchewing is derived from Chewing input method, a xcin module focusing on
-intelligent phonetic processing by lckung and kpchen.
+This is an intelligent Chinese phonetic input method library, which abstracts
+the behavior of popular Taiwanese/Chinese intelligent phonetic input method
+usage into several APIs ready for integration.  The known examples are
+xcin-chewing, scim-chewing, iiimf-le-chewing, etc.
