@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4439 2009/11/24 12:10:39 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4440 2009/11/24 12:11:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5934,3 +5934,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added inputmethod/scim-thai version 0.1.1 [obache 2009-11-24]
 	Added inputmethod/scim-tomoe version 0.6.0 [obache 2009-11-24]
 	Added inputmethod/scim-uim version 0.2.0 [obache 2009-11-24]
+	Added inputmethod/scim-unikey version 0.3.1 [obache 2009-11-24]
