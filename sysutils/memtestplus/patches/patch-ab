@@ -1,13 +1,14 @@
-$NetBSD: patch-ab,v 1.3 2008/11/24 04:06:00 smb Exp $
+$NetBSD: patch-ab,v 1.4 2009/11/24 17:20:40 jakllsch Exp $
 
---- test.c.orig	2008-11-23 21:19:09.000000000 -0500
-+++ test.c	2008-11-23 21:22:18.000000000 -0500
-@@ -11,9 +11,31 @@
+--- test.c.orig	2009-09-22 00:35:46.000000000 +0000
++++ test.c
+@@ -11,10 +11,32 @@
  
  #include "test.h"
  #include "config.h"
 -#include <sys/io.h>
  #include "dmi.h"
+ #include <inttypes.h>
  
 +static __inline void
 +pkg_outb (unsigned char value, unsigned short int port)
@@ -35,7 +36,7 @@ $NetBSD: patch-ab,v 1.3 2008/11/24 04:06:00 smb Exp $
  extern int segs, bail;
  extern volatile ulong *p;
  extern ulong p1, p2;
-@@ -1407,18 +1429,18 @@
+@@ -1414,18 +1436,18 @@ void beep(unsigned int frequency)
  	unsigned int count = 1193180 / frequency;
  
  	// Switch on the speaker

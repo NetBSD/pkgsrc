@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2007/01/06 22:26:55 smb Exp $
+$NetBSD: patch-ac,v 1.3 2009/11/24 17:20:40 jakllsch Exp $
 
---- memtest.lds.orig	2005-09-11 20:17:15.000000000 +0200
+--- memtest.lds.orig	2009-09-22 00:35:46.000000000 +0000
 +++ memtest.lds
 @@ -3,7 +3,7 @@ OUTPUT_ARCH(i386);
  
