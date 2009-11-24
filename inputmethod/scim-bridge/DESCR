@@ -1,0 +1,4 @@
+Scim-bridge is wrapper library for SCIM, written in C. It is firstly written to
+solve problems occured by the ABI transition of GNU libstdc++ between 3.* branch
+and 4.* branch. That's not the problem in the most of cases because you usually
+used the same compiler for SCIM and GUI apps.
