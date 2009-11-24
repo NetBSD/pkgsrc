@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 12:03:45 obache Exp $
+lib/scim-1.0/1.4.0/IMEngine/pinyin.la
+lib/scim-1.0/1.4.0/SetupUI/pinyin-imengine-setup.la
+share/locale/de/LC_MESSAGES/scim-pinyin.mo
+share/locale/fr/LC_MESSAGES/scim-pinyin.mo
+share/locale/it/LC_MESSAGES/scim-pinyin.mo
+share/locale/ja/LC_MESSAGES/scim-pinyin.mo
+share/locale/ko/LC_MESSAGES/scim-pinyin.mo
+share/locale/zh_CN/LC_MESSAGES/scim-pinyin.mo
+share/locale/zh_TW/LC_MESSAGES/scim-pinyin.mo
+share/scim/icons/smart-pinyin.png
+share/scim/pinyin/phrase_lib
+share/scim/pinyin/pinyin_phrase_index
+share/scim/pinyin/pinyin_phrase_lib
+share/scim/pinyin/pinyin_table
+share/scim/pinyin/special_table
