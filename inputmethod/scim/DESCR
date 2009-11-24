@@ -1,0 +1,6 @@
+Currently the SCIM project has a wide range of input methods (some may need
+other libraries), covering more than 30 languages, including
+(Simplified/Traditional) Chinese, Japanese, Korean and many European languages.
+What's more, Composing/Dead key support is one of the built-in features.
+In addition, several projects have been established to design IMEngines for
+SCIM and others supply their own SCIM plugins.

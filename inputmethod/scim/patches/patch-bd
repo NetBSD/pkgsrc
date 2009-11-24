@@ -1,0 +1,12 @@
+$NetBSD: patch-bd,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
+
+--- utils/scimstringview.c.orig	2008-11-02 06:42:49.000000000 +0000
++++ utils/scimstringview.c
+@@ -134,6 +134,7 @@ scim_string_view_register_type (GTypeMod
+     sizeof (ScimStringView),
+     0,
+     (GInstanceInitFunc) scim_string_view_init,
++    0
+   };
+ 
+   if (!string_view_type)

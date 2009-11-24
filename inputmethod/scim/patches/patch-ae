@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
+
+--- modules/FrontEnd/scim_x11_frontend.cpp.orig	2008-11-02 06:42:11.000000000 +0000
++++ modules/FrontEnd/scim_x11_frontend.cpp
+@@ -71,7 +71,7 @@
+ using namespace scim;
+ 
+ //Local static data
+-static Pointer <X11FrontEnd> _scim_frontend (0);
++static Pointer <X11FrontEnd> _scim_frontend = Pointer<X11FrontEnd>(0);
+ 
+ //Module Interface
+ extern "C" {
