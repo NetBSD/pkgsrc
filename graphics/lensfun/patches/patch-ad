@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2009/11/24 11:19:03 drochner Exp $
+
+--- libs/lensfun/auxfun.cpp.orig	2009-10-14 23:26:18.000000000 +0200
++++ libs/lensfun/auxfun.cpp
+@@ -127,7 +127,7 @@ LF_EXPORT lfMLstr lf_mlstr_dup (const lf
+     {
+         str_len = strlen (str) + 1;
+         while (str [str_len])
+-            str_len += 1 + strlen (str + str_len + 1);
++            str_len += 2 + strlen (str + str_len + 1);
+     }
+ 
+     gchar *ret = (char *)g_malloc (str_len);
