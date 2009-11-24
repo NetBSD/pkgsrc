@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4433 2009/11/24 12:05:03 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4434 2009/11/24 12:06:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5928,3 +5928,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added inputmethod/scim-input-pad version 0.1.2 [obache 2009-11-24]
 	Added inputmethod/scim-pinyin version 0.5.91 [obache 2009-11-24]
 	Added inputmethod/scim-prime version 1.0.1 [obache 2009-11-24]
+	Added inputmethod/scim-sinhala version 0.1.0 [obache 2009-11-24]
