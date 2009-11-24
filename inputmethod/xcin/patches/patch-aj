@@ -1,0 +1,21 @@
+$NetBSD: patch-aj,v 1.1 2009/11/24 11:23:34 obache Exp $
+
+for process jyutping.cin.
+
+--- src/util/cin2tab/cin2tab.c.orig	2001-10-04 16:39:49.000000000 +0000
++++ src/util/cin2tab/cin2tab.c
+@@ -74,12 +74,12 @@ static struct cin cinfunc[] = {
+ int
+ cmd_arg(char *cmd, int cmdlen, ...)
+ {
+-    char line[256], *s=line, *arg;
++    char line[512], *s=line, *arg;
+     int arglen, n_read=1;
+     va_list list;
+ 
+     va_start(list, cmdlen);
+-    if (! get_line(line, 256, cintab.fr, &(cintab.lineno), "#\n"))
++    if (! get_line(line, 512, cintab.fr, &(cintab.lineno), "#\n"))
+ 	return 0;
+ 
+     cmd[0] = '\0';

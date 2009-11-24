@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.25 2009/08/18 15:51:17 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/11/24 11:23:34 obache Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
 PKGNAME=	xcin-2.5.3rc2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	chinese x11
 MASTER_SITES=	ftp://xcin.linux.org.tw/pub/xcin/xcin/devel/
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://xcin.linux.org.tw/
 COMMENT=	Chinese XIM server
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 
@@ -21,8 +24,8 @@ USE_TOOLS+=		msgfmt pax perl:run
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_PREFIX.db3}/lib
-CONFIGURE_ARGS+=	--with-db-inc=${BUILDLINK_PREFIX.db3}/include/db3
+CONFIGURE_ARGS+=	--with-db-lib=${BDBBASE}/lib
+CONFIGURE_ARGS+=	--with-db-inc=${BDBBASE}/include/{BDB_TYPE}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,17 +48,22 @@ post-extract:
 post-install:
 	cd ${WRKSRC}/doc && pax -rw	\
 		-s ',^\./man$$,,' -s ',^\./man/.*,,'	\
-		. ${PREFIX}/share/doc/xcin
+		. ${DESTDIR}${PREFIX}/share/doc/xcin
+
+INSTALL_MAKE_FLAGS+=	program_prefix=${DESTDIR}
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+BDB_ACCEPTED=	db2 db3 db4
+
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../databases/db3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../inputmethod/libchewing/buildlink3.mk"
+.include "../../inputmethod/libchewing02/buildlink3.mk"
 .include "../../inputmethod/libtabe/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 .include "../../mk/bsd.pkg.mk"
