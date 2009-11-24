@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4443 2009/11/24 17:50:07 jakllsch Exp $
+$NetBSD: CHANGES-2009,v 1.4444 2009/11/24 22:46:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5938,3 +5938,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added inputmethod/novel-pinyin version 0.2.5 [obache 2009-11-24]
 	Updated sysutils/memtestplus to 4.00 [jakllsch 2009-11-24]
 	Updated benchmarks/kttcp to 20020711nb2 [jakllsch 2009-11-24]
+	Updated www/typolight27-translations to 20091124 [taca 2009-11-24]
