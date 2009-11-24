@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4436 2009/11/24 12:07:51 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4437 2009/11/24 12:08:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5931,3 +5931,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added inputmethod/scim-sinhala version 0.1.0 [obache 2009-11-24]
 	Added inputmethod/scim-skk version 0.5.2 [obache 2009-11-24]
 	Added inputmethod/scim-tables version 0.5.9 [obache 2009-11-24]
+	Added inputmethod/scim-thai version 0.1.1 [obache 2009-11-24]
