@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4420 2009/11/24 11:31:20 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4421 2009/11/24 11:46:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5915,3 +5915,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated inputmethod/libtabe to 0.2.6 [obache 2009-11-24]
 	Updated inputmethod/xcin to 2.5.3rc2nb7 [obache 2009-11-24]
 	Updated inputmethod/libchewing to 0.3.2 [obache 2009-11-24]
+	Added inputmethod/scim version 1.4.9 [obache 2009-11-24]
