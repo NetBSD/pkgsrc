@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 12:02:08 obache Exp $
+lib/scim-1.0/1.4.0/IMEngine/m17n.la
+share/scim/icons/scim-m17n.png
