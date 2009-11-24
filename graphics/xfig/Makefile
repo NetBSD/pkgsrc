@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.57 2009/08/26 19:57:52 sno Exp $
+# $NetBSD: Makefile,v 1.58 2009/11/24 06:08:48 obache Exp $
 
 DISTNAME=	xfig.3.2.5b.full
 PKGNAME=	xfig-3.2.5b
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xfig.org/
 COMMENT=	CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	transfig>=3.2.4:../../print/transfig
 # if we're using Xaw3d, then we need 1.5E or newer since using that
@@ -29,6 +31,8 @@ post-extract:
 	cd ${WRKSRC} && ${RM} -f Doc/*.orig Doc/*/*.orig Doc/*/*/*.orig
 	find ${WRKSRC}/Libraries -type d -exec ${CHMOD} 0755 {} \;
 	find ${WRKSRC}/Libraries -type f -exec ${CHMOD} 0644 {} \;
+	find ${WRKSRC}/Doc -type d -exec ${CHMOD} 0755 {} \;
+	find ${WRKSRC}/Doc -type f -exec ${CHMOD} 0644 {} \;
 
 SUBST_CLASSES+=		xaw
 SUBST_STAGE.xaw=	post-patch
@@ -50,7 +54,7 @@ SUBST_SED.xaw+=		-e 's/.*\(\#define.XAW3D\)/XCOMM \1/'
 XFIGDOCDIR=		${PREFIX}/share/doc/xfig
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/Doc/FORMAT?.? ${XFIGDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/Doc/FORMAT?.? ${DESTDIR}${XFIGDOCDIR}
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
