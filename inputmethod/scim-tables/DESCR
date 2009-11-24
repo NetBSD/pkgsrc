@@ -1,0 +1,5 @@
+This package includes many data files for SCIM Generic Table Input Method
+module (table). They support  Chinese (Simplified and Traditional), Japanese,
+Korean and some other languages, such as Russian etc. The data files will be
+converted to binary format and installed to ${prefix}/share/scim/tables/.
+SCIM table im module will load them automatically.
