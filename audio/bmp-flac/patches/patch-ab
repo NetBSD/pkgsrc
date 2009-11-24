@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/11/24 16:04:50 kefren Exp $
+--- src/plugin_xmms/configure.c.orig	2009-11-24 17:52:10.000000000 +0200
++++ src/plugin_xmms/configure.c	2009-11-24 17:52:27.000000000 +0200
+@@ -397,7 +397,7 @@
+ 		gdk_window_raise(flac_configurewin->window);
+ 		return;
+ 	}
+-	flac_configurewin = gtk_window_new(GTK_WINDOW_DIALOG);
++	flac_configurewin = gtk_window_new(GTK_WINDOW_POPUP);
+ 	gtk_signal_connect(GTK_OBJECT(flac_configurewin), "destroy", GTK_SIGNAL_FUNC(gtk_widget_destroyed), &flac_configurewin);
+ 	gtk_signal_connect(GTK_OBJECT(flac_configurewin), "destroy", GTK_SIGNAL_FUNC(configure_destroy), &flac_configurewin);
+ 	gtk_window_set_title(GTK_WINDOW(flac_configurewin), _("Flac Configuration"));
