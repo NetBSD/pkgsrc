@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 12:11:39 obache Exp $
+lib/libunikey-scim.la
+lib/scim-1.0/1.4.0/Helper/unikey-helper.la
+lib/scim-1.0/1.4.0/IMEngine/unikey.la
+libexec/scim-setup-unikey
+share/locale/vi/LC_MESSAGES/scim-unikey.mo
+share/scim-unikey/setup/setup-macro.glade
+share/scim-unikey/setup/setup-main.glade
+share/scim/icons/scim-unikey-check.png
+share/scim/icons/scim-unikey-configure.png
+share/scim/icons/scim-unikey.png
