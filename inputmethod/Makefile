@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/11/24 11:19:27 obache Exp $
+# $NetBSD: Makefile,v 1.31 2009/11/24 12:16:27 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -30,9 +30,30 @@ SUBDIR+=	libhangul
 SUBDIR+=	libtabe
 SUBDIR+=	m17n-im-config
 SUBDIR+=	nabi
+SUBDIR+=	novel-pinyin
 SUBDIR+=	prime
 SUBDIR+=	prime-dict
 SUBDIR+=	prime-el
+SUBDIR+=	scim
+SUBDIR+=	scim-anthy
+SUBDIR+=	scim-array
+SUBDIR+=	scim-bridge
+SUBDIR+=	scim-canna
+SUBDIR+=	scim-ccinput
+SUBDIR+=	scim-chewing
+SUBDIR+=	scim-fcitx
+SUBDIR+=	scim-hangul
+SUBDIR+=	scim-input-pad
+SUBDIR+=	scim-m17n
+SUBDIR+=	scim-pinyin
+SUBDIR+=	scim-prime
+SUBDIR+=	scim-sinhala
+SUBDIR+=	scim-skk
+SUBDIR+=	scim-tables
+SUBDIR+=	scim-thai
+SUBDIR+=	scim-tomoe
+SUBDIR+=	scim-uim
+SUBDIR+=	scim-unikey
 SUBDIR+=	sj3-dict
 SUBDIR+=	sj3-lib
 SUBDIR+=	sj3-server
