@@ -1,0 +1,20 @@
+$NetBSD: patch-bc,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
+
+--- utils/scimkeyselection.cpp.orig	2008-11-02 06:42:49.000000000 +0000
++++ utils/scimkeyselection.cpp
+@@ -79,6 +79,7 @@ scim_key_selection_register_type (GTypeM
+         sizeof (ScimKeySelection),
+         0,
+         (GInstanceInitFunc) scim_key_selection_init,
++        0
+     };
+ 
+     if (!key_selection_type) {
+@@ -608,6 +609,7 @@ scim_key_selection_dialog_register_type 
+         sizeof (ScimKeySelectionDialog),
+         0,
+         (GInstanceInitFunc) scim_key_selection_dialog_init,
++        0
+     };
+ 
+     if (!key_selection_dialog_type) {
