@@ -1,0 +1,23 @@
+$NetBSD: patch-pri,v 1.1.1.1 2009/11/24 19:22:33 drochner Exp $
+
+--- qwtconfig.pri.orig	2009-03-22 16:41:05.000000000 +0100
++++ qwtconfig.pri
+@@ -8,7 +8,7 @@ VER_PAT      = 0
+ VERSION      = $${VER_MAJ}.$${VER_MIN}.$${VER_PAT}
+ 
+ unix {
+-    INSTALLBASE    = /usr/local/qwt-5.2.0
++    INSTALLBASE    = $$(PREFIX)
+ }
+ 
+ win32 {
+@@ -17,7 +17,8 @@ win32 {
+ 
+ target.path    = $$INSTALLBASE/lib
+ headers.path   = $$INSTALLBASE/include
+-doc.path       = $$INSTALLBASE/doc
++doc.path       = $$INSTALLBASE/share/doc/qwt
++man.path       = $$INSTALLBASE/${PKGMANDIR}
+ 
+ ######################################################################
+ # qmake internal options
