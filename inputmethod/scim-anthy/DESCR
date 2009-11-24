@@ -1,0 +1,10 @@
+scim-anthy is a SCIM IMEngine module for anthy.
+
+SCIM is Smart Common Input Method platform, it provides user friendly/full
+featured user interface and development platform to make input method
+developer's life easier.
+
+Anthy is a system for Japanese input method.
+It converts Hiragana text to Kana Kanji mixed text.
+
+scim-anthy provides some usefull user interfaces for Anthy using SCIM.
