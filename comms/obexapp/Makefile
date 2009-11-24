@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2009/08/21 07:16:18 plunky Exp $
+# $NetBSD: Makefile,v 1.23 2009/11/24 16:43:16 plunky Exp $
 #
 
 DISTNAME=	obexapp-1.4.12
 CATEGORIES=	comms
-MASTER_SITES=	http://www.geocities.com/m_evmenkin/
+MASTER_SITES=	http://people.freebsd.org/~emax/obexapp/
 
 MAINTAINER=	plunky@rya-online.net
-HOMEPAGE=	http://www.geocities.com/m_evmenkin/
+HOMEPAGE=	http://people.freebsd.org/~emax/obexapp/
 COMMENT=	Obex application to transfer objects to mobile equipment
 LICENSE=	modified-bsd
 
