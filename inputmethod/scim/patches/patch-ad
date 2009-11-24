@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
+
+--- modules/FrontEnd/scim_socket_frontend.cpp.orig	2008-11-02 06:42:11.000000000 +0000
++++ modules/FrontEnd/scim_socket_frontend.cpp
+@@ -51,7 +51,7 @@
+ 
+ using namespace scim;
+ 
+-static Pointer <SocketFrontEnd> _scim_frontend (0);
++static Pointer <SocketFrontEnd> _scim_frontend = Pointer<SocketFrontEnd>(0);
+ 
+ static int _argc;
+ static char **_argv;
