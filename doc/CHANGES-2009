@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4426 2009/11/24 11:52:05 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4427 2009/11/24 11:52:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5921,3 +5921,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added inputmethod/scim-bridge version 0.4.16 [obache 2009-11-24]
 	Added inputmethod/scim-canna version 1.0.1 [obache 2009-11-24]
 	Added inputmethod/scim-ccinput version 0.3.1 [obache 2009-11-24]
+	Added inputmethod/scim-chewing version 0.3.3 [obache 2009-11-24]
