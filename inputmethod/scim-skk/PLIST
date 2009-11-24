@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 12:06:33 obache Exp $
+lib/scim-1.0/1.4.0/IMEngine/skk.la
+lib/scim-1.0/1.4.0/SetupUI/skk-imengine-setup.la
+share/locale/ja/LC_MESSAGES/scim-skk.mo
+share/scim/icons/scim-skk.png
