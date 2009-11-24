@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
+
+--- src/scim_config_base.cpp.orig	2008-11-02 06:42:34.000000000 +0000
++++ src/scim_config_base.cpp
+@@ -30,7 +30,7 @@
+ 
+ namespace scim {
+ 
+-ConfigPointer _scim_default_config (0);
++ConfigPointer _scim_default_config = ConfigPointer(0);
+ ConfigModule _scim_default_config_module;
+ 
+ static ConfigPointer

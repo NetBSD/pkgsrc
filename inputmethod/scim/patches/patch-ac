@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
+
+--- extras/panel/scim_panel_gtk.cpp.orig	2008-11-02 06:43:13.000000000 +0000
++++ extras/panel/scim_panel_gtk.cpp
+@@ -464,7 +464,7 @@ static GdkColor           _active_bg;
+ static GdkColor           _active_text;
+ 
+ static ConfigModule      *_config_module               = 0;
+-static ConfigPointer      _config;
++static ConfigPointer      _config = ConfigPointer(0);
+ 
+ static guint              _check_exit_timeout          = 0;
+ 
