@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/11/24 16:04:50 kefren Exp $
+--- src/plugin_xmms/fileinfo.c.orig	2009-11-24 17:52:18.000000000 +0200
++++ src/plugin_xmms/fileinfo.c	2009-11-24 17:52:37.000000000 +0200
+@@ -286,7 +286,7 @@
+ 		GtkWidget *label, *filename_hbox;
+ 		GtkWidget *bbox, *save, *remove, *cancel;
+ 
+-		window = gtk_window_new(GTK_WINDOW_DIALOG);
++		window = gtk_window_new(GTK_WINDOW_POPUP);
+ 		gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, FALSE);
+ 		gtk_signal_connect(GTK_OBJECT(window), "destroy", GTK_SIGNAL_FUNC(gtk_widget_destroyed), &window);
+ 		gtk_container_set_border_width(GTK_CONTAINER(window), 10);
