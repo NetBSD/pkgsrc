@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/11/24 12:06:33 obache Exp $
+
+--- configure.orig	2006-02-26 20:28:38.000000000 +0800
++++ configure
+@@ -31350,6 +31350,7 @@ s,@PACKAGE_TARNAME@,$PACKAGE_TARNAME,;t 
+ s,@PACKAGE_VERSION@,$PACKAGE_VERSION,;t t
+ s,@PACKAGE_STRING@,$PACKAGE_STRING,;t t
+ s,@PACKAGE_BUGREPORT@,$PACKAGE_BUGREPORT,;t t
++s,@LIBTOOL_EXPORT_OPTIONS@,$LIBTOOL_EXPORT_OPTIONS,;t t
+ s,@exec_prefix@,$exec_prefix,;t t
+ s,@prefix@,$prefix,;t t
+ s,@program_transform_name@,$program_transform_name,;t t
