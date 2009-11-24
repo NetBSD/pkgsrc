@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8701 2009/11/24 11:31:20 obache Exp $
+$NetBSD: TODO,v 1.8702 2009/11/24 17:21:08 jakllsch Exp $
 
 Suggested new packages
 ======================
@@ -922,7 +922,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mc-4.6.2
 	o memcached-1.4.0
 	o memconf-2.9 [pkg/40201]
-	o memtestplus-4.0
 	o merb-1.0.8.1
 	o merb-action-args-1.0.8.1
 	o merb-activerecord-1.0.0.1
