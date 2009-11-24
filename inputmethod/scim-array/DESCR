@@ -1,0 +1,4 @@
+This input method engine is developed to support the Array 30 input method in
+SCIM framework.  SCIM Array 30 Input Method Engine provides with all the
+functions of Array 30, including 1st and 2nd level short codes, special codes,
+and symbol input.

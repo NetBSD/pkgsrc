@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 11:48:43 obache Exp $
+lib/scim-1.0/1.4.0/IMEngine/array.la
+lib/scim-1.0/1.4.0/SetupUI/array-imengine-setup.la
+share/locale/ko/LC_MESSAGES/scim-array.mo
+share/locale/nl/LC_MESSAGES/scim-array.mo
+share/locale/zh_TW/LC_MESSAGES/scim-array.mo
+share/scim/Array/array-phrases.cin
+share/scim/Array/array-shortcode.cin
+share/scim/Array/array-special.cin
+share/scim/Array/array30.cin
+share/scim/icons/scim-array.png
