@@ -1,16 +1,15 @@
-$NetBSD: patch-ae,v 1.1 2005/09/28 17:09:43 rillig Exp $
+$NetBSD: patch-ae,v 1.2 2009/11/24 11:15:14 obache Exp $
 
---- src/tabe_tsidbint.c.orig	Sun Nov 11 19:15:46 2001
-+++ src/tabe_tsidbint.c	Fri Dec  7 23:13:15 2001
-@@ -265,7 +265,11 @@
+--- src/tabe_tsidbint.c.orig	2004-01-24 20:14:55.000000000 +0000
++++ src/tabe_tsidbint.c
+@@ -272,7 +272,9 @@ tabeTsiDBRecordNumber(struct TsiDB *tsid
    switch(tsidb->type) {
    case DB_TYPE_DB:
      dbp = (DB *)tsidb->dbp;
-+#ifdef HAVE_DB3_STAT3
-+    errno = dbp->stat(dbp, &sp, 0);
-+#else
+-#if DB_VERSION >= 303011
++#if DB_VERSION >= 403000
++    errno = dbp->stat(dbp, NULL, &sp, 0);
++#elif DB_VERSION >= 303011
+     errno = dbp->stat(dbp, &sp, 0);
+ #else
      errno = dbp->stat(dbp, &sp, NULL, 0);
-+#endif
-     if (!errno) {
- #ifndef HAVE_DB3
-       return(sp->bt_nrecs);
