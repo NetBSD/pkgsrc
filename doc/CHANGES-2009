@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4450 2009/11/25 12:34:49 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.4451 2009/11/25 19:11:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5945,3 +5945,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/pango to 1.26.1nb2 [tron 2009-11-25]
 	Updated editors/Sigil to 0.1.5 [wiz 2009-11-25]
 	Updated lang/clang to 2.6nb2 [hasso 2009-11-25]
+	Updated devel/cmake to 2.8.0 [adam 2009-11-25]
