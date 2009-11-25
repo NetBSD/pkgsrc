@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/25 22:42:35 dmcmahill Exp $
+bin/datadraw
+include/ddutil.h
+include/utdatabase.h
+include/utdatabasep.h
+include/utdatabaseu.h
+include/utdatabaseup.h
+include/utmem.h
+include/utpersist.h
+include/uttypes.h
+lib/libddutil-dbg.a
+lib/libddutil.a
+lib/libddutilp-dbg.a
+lib/libddutilp.a
+lib/libddutilu-dbg.a
+lib/libddutilu.a
+lib/libddutilup-dbg.a
+lib/libddutilup.a
