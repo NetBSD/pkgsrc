@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2009/11/25 20:56:04 joerg Exp $
+
+--- bindings/c++/Makefile.am.orig	2009-11-25 21:47:30.000000000 +0100
++++ bindings/c++/Makefile.am
+@@ -20,7 +20,7 @@ libpreludecpp_la_SOURCES = \
+ 	prelude-log.cxx
+ 
+ libpreludecpp_la_LDFLAGS = -no-undefined -version-info @LIBPRELUDECPP_SONAME@
+-libpreludecpp_la_LIBADD  = $(top_builddir)/src/.libs/libprelude.la
++libpreludecpp_la_LIBADD  = $(top_builddir)/src/libprelude.la
+ libpreludecpp_la_CPPFLAGS = -I$(top_builddir) -I$(top_builddir)/src/include -I$(top_srcdir)/src/include -I$(top_builddir)/src/libprelude-error -I$(top_builddir)/bindings/c++/include -I$(top_srcdir)/bindings/c++/include 
+ 
+ endif
