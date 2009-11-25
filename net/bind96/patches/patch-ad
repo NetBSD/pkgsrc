@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2009/07/26 09:07:58 obache Exp $
+$NetBSD: patch-ad,v 1.3 2009/11/25 22:15:25 joerg Exp $
 
---- configure.orig	2009-03-13 05:35:43.000000000 +0000
+--- configure.orig	2009-03-13 06:35:43.000000000 +0100
 +++ configure
 @@ -23751,6 +23751,8 @@ case $host in
  	use_threads=false ;;
@@ -51,6 +51,18 @@ $NetBSD: patch-ad,v 1.2 2009/07/26 09:07:58 obache Exp $
  				fi
  			fi
  		fi
+@@ -26386,9 +26397,9 @@ case $use_libtool in
+ 		O=lo
+ 		A=la
+ 		LIBTOOL_MKDEP_SED='s;\.o;\.lo;'
+-		LIBTOOL_MODE_COMPILE='--mode=compile'
++		LIBTOOL_MODE_COMPILE='--mode=compile --tag=CC'
+ 		LIBTOOL_MODE_INSTALL='--mode=install'
+-		LIBTOOL_MODE_LINK='--mode=link'
++		LIBTOOL_MODE_LINK='--mode=link --tag=CC'
+ 		case "$host" in
+ 		*) LIBTOOL_ALLOW_UNDEFINED= ;;
+ 		esac
 @@ -32836,7 +32847,7 @@ $as_echo "no" >&6; }
  	fi
  	if test -n "-L$use_dlz_postgres_lib -lpq"
