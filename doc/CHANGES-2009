@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4448 2009/11/25 09:58:52 tron Exp $
+$NetBSD: CHANGES-2009,v 1.4449 2009/11/25 10:12:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5943,3 +5943,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/m17n-lib to 1.5.5 [obache 2009-11-25]
 	Updated net/bind96 to 9.6.1pl2 [taca 2009-11-25]
 	Updated devel/pango to 1.26.1nb2 [tron 2009-11-25]
+	Updated editors/Sigil to 0.1.5 [wiz 2009-11-25]
