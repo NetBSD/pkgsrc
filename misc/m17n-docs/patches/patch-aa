@@ -1,27 +1,31 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/02/27 13:50:43 obache Exp $
+$NetBSD: patch-aa,v 1.2 2009/11/25 06:31:55 obache Exp $
 
---- Makefile.am.orig	2007-10-24 11:21:06.000000000 +0000
+--- Makefile.am.orig	2009-09-03 01:25:18.000000000 +0000
 +++ Makefile.am
-@@ -32,27 +32,27 @@ pkgdata_DATA = \
+@@ -27,31 +27,31 @@ SUBDIRS = utils
+ 
+ pkgdata_DATA = \
+ 	usr/html/index.html \
+-	usr/latex/m17n-lib.ps \
++	usr/latex/m17n-lib.pdf \
+ 	man/man1/m17n-config.1 \
  	man/man3/m17nIntro.3m17n \
  	man/man5/mdbGeneral.5
  
 -pkgdatadir = $(datadir)/m17n/docs
 +pkgdatadir = $(datadir)/doc/m17n
  
- EXTRA_DIST = usr/html usr/latex/m17n-lib.dvi usr/latex/m17n-lib.ps \
- 	man/man1 man/man3 man/man5 \
- 	ja/html ja/latex/m17n-lib-ja.dvi ja/latex/m17n-lib-ja.ps
+ EXTRA_DIST = usr/html ja/html \
+ 	usr/latex ja/latex \
+ 	man/man1 man/man3 man/man5
  
  install-pkgdataDATA: $(pkgdata_DATA)
 -	$(mkinstalldirs) $(pkgdatadir)/html
 -	$(mkinstalldirs) $(mandir)/man1 $(mandir)/man3 $(mandir)/man5
--	$(INSTALL_DATA) usr/latex/m17n-lib.dvi $(pkgdatadir)/m17n-lib.dvi
--	$(INSTALL_DATA) usr/latex/m17n-lib.ps $(pkgdatadir)/m17n-lib.ps
+-	$(INSTALL_DATA) usr/latex/m17n-lib.pdf $(pkgdatadir)/m17n-lib.pdf
 +	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/html
 +	$(mkinstalldirs) $(DESTDIR)$(mandir)/man1 $(DESTDIR)$(mandir)/man3 $(DESTDIR)$(mandir)/man5
-+	$(INSTALL_DATA) usr/latex/m17n-lib.dvi $(DESTDIR)$(pkgdatadir)/m17n-lib.dvi
-+	$(INSTALL_DATA) usr/latex/m17n-lib.ps $(DESTDIR)$(pkgdatadir)/m17n-lib.ps
++	$(INSTALL_DATA) usr/latex/m17n-lib.pdf $(DESTDIR)$(pkgdatadir)/m17n-lib.pdf
  	cd usr/html; \
  	  for f in *.html *.png; do \
 -	    $(INSTALL_DATA) $$f $(pkgdatadir)/html/$$f; \
