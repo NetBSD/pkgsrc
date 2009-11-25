@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2009/11/23 17:18:52 tron Exp $
+# $NetBSD: Makefile,v 1.138 2009/11/25 09:58:39 tron Exp $
 
 DISTNAME=		pango-1.26.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel fonts
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pango/1.26/}
 EXTRACT_SUFX=		.tar.bz2
