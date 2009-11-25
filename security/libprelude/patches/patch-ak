@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1 2009/11/25 20:56:04 joerg Exp $
+
+--- bindings/c++/Makefile.in.orig	2009-11-25 21:47:32.000000000 +0100
++++ bindings/c++/Makefile.in
+@@ -194,7 +194,7 @@ am__base_list = \
+   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+ am__installdirs = "$(DESTDIR)$(libdir)"
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+-@HAVE_EASY_BINDINGS_TRUE@libpreludecpp_la_DEPENDENCIES = $(top_builddir)/src/.libs/libprelude.la
++@HAVE_EASY_BINDINGS_TRUE@libpreludecpp_la_DEPENDENCIES = $(top_builddir)/src/libprelude.la
+ am__libpreludecpp_la_SOURCES_DIST = prelude-error.cxx idmef.cxx \
+ 	idmef-criteria.cxx idmef-path.cxx idmef-time.cxx \
+ 	idmef-value.cxx prelude.cxx prelude-client.cxx \
+@@ -929,7 +929,7 @@ top_srcdir = @top_srcdir@
+ @HAVE_EASY_BINDINGS_TRUE@	prelude-log.cxx
+ 
+ @HAVE_EASY_BINDINGS_TRUE@libpreludecpp_la_LDFLAGS = -no-undefined -version-info @LIBPRELUDECPP_SONAME@
+-@HAVE_EASY_BINDINGS_TRUE@libpreludecpp_la_LIBADD = $(top_builddir)/src/.libs/libprelude.la
++@HAVE_EASY_BINDINGS_TRUE@libpreludecpp_la_LIBADD = $(top_builddir)/src/libprelude.la
+ @HAVE_EASY_BINDINGS_TRUE@libpreludecpp_la_CPPFLAGS = -I$(top_builddir) -I$(top_builddir)/src/include -I$(top_srcdir)/src/include -I$(top_builddir)/src/libprelude-error -I$(top_builddir)/bindings/c++/include -I$(top_srcdir)/bindings/c++/include 
+ all: all-recursive
+ 
