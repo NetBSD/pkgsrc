@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/11/17 11:54:10 asau Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/25 12:32:30 hasso Exp $
 #
 
 DISTNAME=	clang-2.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 DISTFILES=	llvm-2.6.tar.gz clang-2.6.tar.gz
