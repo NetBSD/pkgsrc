@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/07/07 20:22:42 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/11/25 23:03:20 joerg Exp $
 #
 
 DISTNAME=		gcal-3.01
@@ -22,9 +22,9 @@ BROKEN_GETTEXT_DETECTION=	yes
 REPLACE_PERL+=		misc/gcalltx/gcalltxp.in
 USE_TOOLS+=		perl:run
 
-INSTALL_MAKE_FLAGS+=	gnulocaledir=${DESTDIR}${PREFIX}/${PKGLOCALEDIR}/locale \
-			bindir=${DESTDIR}${PREFIX}/bin \
-			packagedatadir=${DESTDIR}${PREFIX}/share/gcal \
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			localedir=${DESTDIR}${PREFIX}/${PKGLOCALEDIR}/locale \
+			gnulocaledir=${DESTDIR}${PREFIX}/${PKGLOCALEDIR}/locale \
 			infodir=${DESTDIR}${PREFIX}/${PKGINFODIR} \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
