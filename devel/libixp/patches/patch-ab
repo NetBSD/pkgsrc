@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1 2009/11/25 21:27:25 joerg Exp $
+
+--- mk/hdr.mk.orig	2009-11-25 22:22:28.000000000 +0100
++++ mk/hdr.mk
+@@ -81,5 +81,5 @@ LINK= LD="${LD}" LDFLAGS="${LDFLAGS}" ${
+ CLEANNAME=${ROOT}/util/cleanname
+ 
+ include ${ROOT}/config.mk
+-CFLAGS += -I$$(echo ${INCPATH}|sed 's/:/ -I/g')
++CFLAGS += $$(echo ${INCPATH}|sed 's/:/ -I/g')
+ 
