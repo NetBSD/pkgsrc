@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2009/08/26 19:56:50 sno Exp $
+# $NetBSD: Makefile,v 1.24 2009/11/25 21:20:59 joerg Exp $
 
 DISTNAME=	libkexif-0.2.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,8 +17,6 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
