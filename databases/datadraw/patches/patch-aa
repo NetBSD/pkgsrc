@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/11/25 22:42:35 dmcmahill Exp $
+
+--- util/configure.orig	2008-03-30 14:42:53.000000000 +0000
++++ util/configure
+@@ -131,7 +131,7 @@ makeMakefileBottom () {
+ " >> Makefile
+     done
+ 
+-    if [ "$SUFFIX" == "$NONDBG_SUFFIX" ]; then
++    if [ "$SUFFIX" = "$NONDBG_SUFFIX" ]; then
+         echo "utdatabase$SUFFIX.c utdatabase$SUFFIX.h: DatadrawUtil.dd
+ 	datadraw $DATADRAW_FLAGS -s utdatabase$SUFFIX.c -h utdatabase$SUFFIX.h DatadrawUtil.dd
+ 
