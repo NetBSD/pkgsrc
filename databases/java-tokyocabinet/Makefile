@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/20 02:59:05 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/11/25 11:33:55 obache Exp $
 #
 
 DISTNAME=	tokyocabinet-java-1.22
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://tokyocabinet.sourceforge.net/javadoc/
+HOMEPAGE=	http://1978th.net/tokyocabinet/javadoc/
 COMMENT=	Java binding of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
 
