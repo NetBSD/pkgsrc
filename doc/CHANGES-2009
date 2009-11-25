@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4447 2009/11/25 09:53:14 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4448 2009/11/25 09:58:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5942,3 +5942,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/m17n-docs to 1.5.5 [obache 2009-11-25]
 	Updated devel/m17n-lib to 1.5.5 [obache 2009-11-25]
 	Updated net/bind96 to 9.6.1pl2 [taca 2009-11-25]
+	Updated devel/pango to 1.26.1nb2 [tron 2009-11-25]
