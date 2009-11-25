@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/25 22:42:35 dmcmahill Exp $
+
+SHA1 (datadraw3.1.1.tar.gz) = 571c01418556dab427ba95f7c5e7a23a0acb24d1
+RMD160 (datadraw3.1.1.tar.gz) = 03d4ea06ad47d545f1182b1d268a1860e0304d27
+Size (datadraw3.1.1.tar.gz) = 607914 bytes
+SHA1 (patch-aa) = 70e52e7e0724ce3627485d07652e400d73187e8d
