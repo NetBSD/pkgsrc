@@ -1,28 +1,35 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/02/27 13:50:43 obache Exp $
+$NetBSD: patch-ab,v 1.2 2009/11/25 06:31:55 obache Exp $
 
---- Makefile.in.orig	2007-12-28 01:15:49.000000000 +0000
+--- Makefile.in.orig	2009-09-03 01:26:49.000000000 +0000
 +++ Makefile.in
-@@ -99,7 +99,7 @@ DIST_ARCHIVES = $(distdir).tar.gz
+@@ -98,7 +98,7 @@ DIST_ARCHIVES = $(distdir).tar.gz
  GZIP_ENV = --best
  distuninstallcheck_listfiles = find . -type f -print
  distcleancheck_listfiles = find . -type f -print
 -pkgdatadir = $(datadir)/m17n/docs
 +pkgdatadir = $(datadir)/doc/m17n
  ACLOCAL = @ACLOCAL@
- AMDEP_FALSE = @AMDEP_FALSE@
- AMDEP_TRUE = @AMDEP_TRUE@
-@@ -676,20 +676,20 @@ uninstall-info: uninstall-info-recursive
+ AMTAR = @AMTAR@
+ AUTOCONF = @AUTOCONF@
+@@ -193,7 +193,7 @@ top_srcdir = @top_srcdir@
+ SUBDIRS = utils
+ pkgdata_DATA = \
+ 	usr/html/index.html \
+-	usr/latex/m17n-lib.ps \
++	usr/latex/m17n-lib.pdf \
+ 	man/man1/m17n-config.1 \
+ 	man/man3/m17nIntro.3m17n \
+ 	man/man5/mdbGeneral.5
+@@ -692,19 +692,19 @@ uninstall-am: uninstall-pkgdataDATA
  
  
  install-pkgdataDATA: $(pkgdata_DATA)
 -	$(mkinstalldirs) $(pkgdatadir)/html
 -	$(mkinstalldirs) $(mandir)/man1 $(mandir)/man3 $(mandir)/man5
--	$(INSTALL_DATA) usr/latex/m17n-lib.dvi $(pkgdatadir)/m17n-lib.dvi
--	$(INSTALL_DATA) usr/latex/m17n-lib.ps $(pkgdatadir)/m17n-lib.ps
+-	$(INSTALL_DATA) usr/latex/m17n-lib.pdf $(pkgdatadir)/m17n-lib.pdf
 +	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/html
 +	$(mkinstalldirs) $(DESTDIR)$(mandir)/man1 $(DESTDIR)$(mandir)/man3 $(DESTDIR)$(mandir)/man5
-+	$(INSTALL_DATA) usr/latex/m17n-lib.dvi $(DESTDIR)$(pkgdatadir)/m17n-lib.dvi
-+	$(INSTALL_DATA) usr/latex/m17n-lib.ps $(DESTDIR)$(pkgdatadir)/m17n-lib.ps
++	$(INSTALL_DATA) usr/latex/m17n-lib.pdf $(DESTDIR)$(pkgdatadir)/m17n-lib.pdf
  	cd usr/html; \
  	  for f in *.html *.png; do \
 -	    $(INSTALL_DATA) $$f $(pkgdatadir)/html/$$f; \
