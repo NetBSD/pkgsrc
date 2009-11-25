@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/07/29 00:24:03 reed Exp $
+# $NetBSD: Makefile,v 1.12 2009/11/25 23:25:44 joerg Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -14,6 +14,7 @@ CONFLICTS+=	bind<9.5.0
 CONFLICTS+=	bind>=9.6.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=	no
 
 BIND_VERSION=	9.5.1-P3
 
