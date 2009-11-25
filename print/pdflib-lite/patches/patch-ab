@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2009/11/25 23:58:01 joerg Exp $
+
+--- config/mkmainlib.inc.in.orig	2009-11-26 00:52:45.000000000 +0100
++++ config/mkmainlib.inc.in
+@@ -29,7 +29,7 @@ install:: $(MAINLIBNAME)
+ 	@-if test "$(WITH_SHARED)" = "no"; then	\
+ 	    cp .libs/$(MAINLIBNAME) .libs/$(MAINLIBNAME)i;\
+ 	fi
+-	$(LIBTOOL) $(INSTALL_DATA) $(MAINLIBNAME) $(DESTDIR)$(libdir);
++	$(LIBTOOL) --mode=install $(INSTALL_DATA) $(MAINLIBNAME) $(DESTDIR)$(libdir);
+ 	@-if test "$(WITH_SHARED)" = "yes"; then	\
+ 	    $(LIBTOOL) -n --finish $(DESTDIR)$(libdir);\
+ 	else\
