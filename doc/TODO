@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8703 2009/11/25 19:11:14 adam Exp $
+$NetBSD: TODO,v 1.8704 2009/11/25 22:30:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -655,7 +655,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcpio-2.10
 	o gdb-7.0
 	o gdeskcal-1.01
-	o gdl-2.28.1 [GNOME 2.28]
+	o gdl-2.28.2 [GNOME 2.28]
 	o gdm-2.28.1 [GNOME 2.28]
 	o gdsreader-0.3.2
 	o geany-0.18
@@ -827,7 +827,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lcc-4.2
 	o ldapsdk-6.0.2
 	o ldns-1.6.2 [pkg/42333]
-	o lensfun-0.2.4
 	o less-436
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
@@ -905,6 +904,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lsof-4.81
 	o ltris-1.0.13
 	o lucy-1.20
+	o lwm-1.2.2
 	o lzip-1.8
 	o mDNSResponder-214
 	o maelstrom-sdl-3.0.6
@@ -917,7 +917,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
-	o mathomatic-14.6.1
+	o mathomatic-14.6.3
 	o mc-4.6.2
 	o memcached-1.4.0
 	o memconf-2.9 [pkg/40201]
@@ -1030,7 +1030,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-0.9.8l
 	o openttd-0.7.3
 	o open-vm-tools-2009.11.16.210370
-	o opera-10.01
+	o opera-10.10
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o ortp-0.16.1
@@ -1045,7 +1045,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Module-ScanDeps-0.96
 	o p5-Module-Signature-0.61
 	o p5-Pod-Simple-3.10
-	o p5-Spreadsheet-WriteExcel-2.26
+	o p5-Spreadsheet-WriteExcel-2.28
 	o p5-URI-1.50
 	o p5-ispman-1.2
 	o p5-libwww-5.834
@@ -1122,7 +1122,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o proxsmtp-1.6
 	o psmisc-21.9
 	o puf-0.93.3
-	o pulseaudio-0.9.20
+	o pulseaudio-0.9.21
 	o puppet-0.25.0
 	o pure-ftpd-1.0.24
 	o pureftpd-1.0.26
@@ -1289,6 +1289,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snownews-1.5.12
 	o solfege-3.14.9
 	o sope-4.6
+	o sound-juicer-2.28.1
 	o source-highlight-3.1.1
 	o sox-14.2.0
 	o spcaview-20060501
