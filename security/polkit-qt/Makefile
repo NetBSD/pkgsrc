@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/21 20:04:06 markd Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/25 09:47:10 markd Exp $
 
 DISTNAME=	polkit-qt-0.9.2
 CATEGORIES=	security
@@ -22,6 +22,7 @@ PKGCONFIG_OVERRIDE+=	polkit-qt-core.pc.cmake polkit-qt-gui.pc.cmake polkit-qt.pc
 
 .include "../../security/policykit/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
