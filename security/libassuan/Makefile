@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/09/07 02:40:53 bjs Exp $
+# $NetBSD: Makefile,v 1.17 2009/11/25 21:43:55 joerg Exp $
 #
 
 DISTNAME=		libassuan-1.0.5
@@ -27,9 +27,9 @@ TEST_TARGET=		check
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 
 pre-configure:
+	cd ${WRKSRC} && libtoolize
 	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} autogen.sh && \
-		${TOUCH} ${TOUCH_FLAGS} libtool
+		${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} autogen.sh
 
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
