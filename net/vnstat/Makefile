@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/19 15:48:19 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/26 14:11:44 joerg Exp $
 
 DISTNAME=	vnstat-1.9
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://humdi.net/vnstat/
 #DISTFILES=${DISTNAME}.tar.gz
@@ -39,6 +40,9 @@ RCD_SCRIPTS=	vnstatd
 
 BUILD_DEFS+=	VARBASE
 
+INSTALLATION_DIRS=	bin ${VNSTAT_EGDIR} ${PKGMANDIR}/man1 \
+			${PKGMANDIR}/man5
+
 .include "options.mk"
 
 do-install:
@@ -49,16 +53,16 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/cfg/vnstat.conf 			\
 		${DESTDIR}${VNSTAT_EGDIR}/vnstat.conf
 	${INSTALL_MAN} ${WRKSRC}/man/vnstat.1 				\
-		${DESTDIR}${PREFIX}/${PKGMANDIR:Q}/man1/vnstat.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vnstat.1
 	${INSTALL_MAN} ${WRKSRC}/man/vnstatd.1 				\
-		${DESTDIR}${PREFIX}/${PKGMANDIR:Q}/man1/vnstatd.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vnstatd.1
 	${INSTALL_MAN} ${WRKSRC}/man/vnstat.conf.5 			\
-		${DESTDIR}${PREFIX}/${PKGMANDIR:Q}/man5/vnstat.conf.5
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/vnstat.conf.5
 	if [ "${PLIST.gd}" = "yes" ]; then				\
 		${INSTALL_PROGRAM} ${WRKSRC}/src/vnstati		\
 		    ${DESTDIR}${PREFIX}/bin/vnstati;			\
 		${INSTALL_MAN} ${WRKSRC}/man/vnstati.1 			\
-		    ${DESTDIR}${PREFIX}/${PKGMANDIR:Q}/man1/vnstati.1;	\
+		    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vnstati.1;	\
 	fi		
 
 .include "../../mk/bsd.pkg.mk"
