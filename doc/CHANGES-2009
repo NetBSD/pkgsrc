@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4457 2009/11/26 17:02:26 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4458 2009/11/26 20:24:51 imil Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5953,3 +5953,11 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/mysql5-client to 5.0.88 [tron 2009-11-26]
 	Updated databases/mysql5-server to 5.0.88 [tron 2009-11-26]
 	Removed parallel/glunix [joerg 2009-11-26]
+	Updated wm/compiz to 0.8.4 [imil 2009-11-26]
+	Updated wm/compiz-fusion-plugins-main to 0.8.4 [imil 2009-11-26]
+	Updated wm/compiz-fusion-plugins-extra to 0.8.4 [imil 2009-11-26]
+	Updated devel/compiz-bcop to 0.8.4 [imil 2009-11-26]
+	Updated devel/libcompizconfig to 0.8.4 [imil 2009-11-26]
+	Updated devel/compizconfig-backend-gconf to 0.8.4 [imil 2009-11-26]
+	Updated devel/py-compizconfig to 0.8.4 [imil 2009-11-26]
+	Updated wm/ccsm to 0.8.4 [imil 2009-11-26]
