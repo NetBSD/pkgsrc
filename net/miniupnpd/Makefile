@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/29 12:34:42 sborrill Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/26 00:35:00 joerg Exp $
 #
 
 DISTNAME=	miniupnpd-20081009
@@ -12,6 +12,7 @@ HOMEPAGE=	http://miniupnp.free.fr/
 COMMENT=	UPnP IGD service with NAT-PMP support
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=	no
 
 EGDIR=		${PREFIX}/share/examples/miniupnpd
 CONF_FILES=	${EGDIR}/miniupnpd.conf ${PKG_SYSCONFDIR}/miniupnpd.conf
