@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.2 2008/10/09 09:45:43 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2009/11/26 15:22:55 wiz Exp $
 
---- Makefile.in.orig	2008-09-14 12:37:57.000000000 +0000
+--- Makefile.in.orig	2009-11-20 04:38:11.000000000 +0000
 +++ Makefile.in
-@@ -757,7 +757,6 @@ install-data-hook: links
+@@ -861,14 +861,13 @@ links: links.IN
+ 
+ install-data-hook: links surfraw.conf
+ 	chmod -x surfraw.conf elvi.1sr surfraw.1
+-	mkdir -p $(DESTDIR)@sysconfdir@/xdg/surfraw
+-	cp surfraw.conf $(DESTDIR)@sysconfdir@/xdg/surfraw/conf
+-	cp $(top_srcdir)/surfraw.bookmarks $(DESTDIR)@sysconfdir@/xdg/surfraw/bookmarks
++	mkdir -p $(DESTDIR)${sysconfdir}/xdg/surfraw
++	cp surfraw.conf $(DESTDIR)${sysconfdir}/xdg/surfraw/conf
++	cp $(top_srcdir)/surfraw.bookmarks $(DESTDIR)${sysconfdir}/xdg/surfraw/bookmarks
+ 	while read target link ;\
  	do \
  		ln -sf $$target  $(DESTDIR)/$$link ;\
  	done < links
