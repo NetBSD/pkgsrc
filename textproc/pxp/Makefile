@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/08/11 15:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/26 18:21:28 joerg Exp $
 #
 
 DISTNAME=		pxp-1.1.6
@@ -16,6 +16,8 @@ USE_TOOLS+=		gmake
 BUILD_TARGET=		all opt
 HAS_CONFIGURE=		yes
 PLIST_SRC=		PLIST.opt PLIST
+
+MAKE_JOBS_SAFE=		no
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
