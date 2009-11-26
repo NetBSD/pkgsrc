@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/05/12 10:38:01 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2009/11/26 19:51:14 imil Exp $
 
---- src/main.c.orig	2008-05-12 06:16:43.000000000 -0400
-+++ src/main.c
-@@ -38,6 +38,10 @@
- #include "ccs-private.h"
- #include "iniparser.h"
+--- config/Makefile.in.orig	2009-11-26 11:26:00.000000000 +0000
++++ config/Makefile.in
+@@ -204,7 +204,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-globalconfigdir = $(sysconfdir)/compizconfig
++globalconfigdir = ${prefix}/share/examples/compizconfig
+ globalconfig_DATA = \
+ 	config
  
-+#ifndef RTLD_NODELETE
-+#define RTLD_NODELETE 0
-+#endif
-+
- Bool basicMetadata = FALSE;
- 
- void
