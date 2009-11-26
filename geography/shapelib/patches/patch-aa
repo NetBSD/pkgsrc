@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/05/11 10:58:52 rillig Exp $
+$NetBSD: patch-aa,v 1.3 2009/11/26 00:42:19 joerg Exp $
 
 --- Makefile.orig	2003-04-07 15:03:22.000000000 +0200
 +++ Makefile
@@ -40,10 +40,10 @@ $NetBSD: patch-aa,v 1.2 2006/05/11 10:58:52 rillig Exp $
 -	ranlib .libs/libshp.a
 -	rm -fr .libs/libshp.lax
 -	(cd .libs && rm -f libshp.la && ln -s ../libshp.la libshp.la)
-+	${LIBTOOL} --mode=compile gcc -DPACKAGE=\"libshp\" -DVERSION=\"$(SHPLIB_VERSION)\" -DSTDC_HEADERS=1  -I. -I. -I/usr/local/include    -g -O2 -c shpopen.c
-+	${LIBTOOL} --mode=compile gcc -DPACKAGE=\"libshp\" -DVERSION=\"$(SHPLIB_VERSION)\" -DSTDC_HEADERS=1  -I. -I. -I/usr/local/include    -g -O2 -c shptree.c
-+	${LIBTOOL} --mode=compile gcc -DPACKAGE=\"libshp\" -DVERSION=\"$(SHPLIB_VERSION)\" -DSTDC_HEADERS=1  -I. -I. -I/usr/local/include    -g -O2 -c dbfopen.c
-+	${LIBTOOL} --mode=link gcc  -g -O2  -o libshp.la -rpath ${PREFIX}/lib -version-info 1:1:0 shpopen.lo shptree.lo dbfopen.lo
++	${LIBTOOL} --mode=compile ${CC} -DPACKAGE=\"libshp\" -DVERSION=\"$(SHPLIB_VERSION)\" -DSTDC_HEADERS=1  -I. -I. -I/usr/local/include ${CFLAGS} -c shpopen.c
++	${LIBTOOL} --mode=compile ${CC} -DPACKAGE=\"libshp\" -DVERSION=\"$(SHPLIB_VERSION)\" -DSTDC_HEADERS=1  -I. -I. -I/usr/local/include ${CFLAGS} -c shptree.c
++	${LIBTOOL} --mode=compile ${CC} -DPACKAGE=\"libshp\" -DVERSION=\"$(SHPLIB_VERSION)\" -DSTDC_HEADERS=1  -I. -I. -I/usr/local/include ${CFLAGS} -c dbfopen.c
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS}  -o libshp.la -rpath ${PREFIX}/lib -version-info 1:1:0 shpopen.lo shptree.lo dbfopen.lo
  
  lib_install:
 -	cp .libs/libshp.la .libs/libshp.lai
@@ -59,6 +59,6 @@ $NetBSD: patch-aa,v 1.2 2006/05/11 10:58:52 rillig Exp $
 -	chmod 644 /usr/local/lib/libshp.a
 -	/bin/sh ./mkinstalldirs /usr/local/include/libshp
 -	/usr/bin/install -c -m 644 shapefil.h /usr/local/include/libshp/shapefil.h
-+	${LIBTOOL}  --mode=install ${BSD_INSTALL_LIB} -c libshp.la ${PREFIX}/lib/libshp.la
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/include/libshp
-+	${BSD_INSTALL_DATA} -c -m 644 shapefil.h ${PREFIX}/include/libshp/shapefil.h
++	${LIBTOOL}  --mode=install ${BSD_INSTALL_LIB} -c libshp.la ${DESTDIR}${PREFIX}/lib/libshp.la
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/libshp
++	${BSD_INSTALL_DATA} -c -m 644 shapefil.h ${DESTDIR}${PREFIX}/include/libshp/shapefil.h
