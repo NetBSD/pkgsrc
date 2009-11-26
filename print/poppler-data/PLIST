@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/30 08:04:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/26 14:25:11 wiz Exp $
 share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-0
 share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-1
 share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-2
 share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-3
 share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-4
 share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-5
+share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-6
 share/poppler/cMap/Adobe-CNS1/B5-H
 share/poppler/cMap/Adobe-CNS1/B5-V
 share/poppler/cMap/Adobe-CNS1/B5pc-H
