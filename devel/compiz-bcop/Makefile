@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2008/11/21 14:56:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/11/26 20:07:12 imil Exp $
 #
 
-DISTNAME=	compiz-bcop-0.6.0
+PKGVER=		0.8.4
+DISTNAME=	compiz-bcop-${PKGVER}
 CATEGORIES=	devel wm x11
-MASTER_SITES=	http://releases.compiz-fusion.org/0.6.0/
+MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.compiz-fusion.org/
 COMMENT=	Option code generator for compiz
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

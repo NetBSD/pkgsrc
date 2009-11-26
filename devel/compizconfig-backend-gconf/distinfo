@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/12 12:06:59 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2009/11/26 20:08:53 imil Exp $
 
-SHA1 (compizconfig-backend-gconf-0.6.0.tar.gz) = f9a4e505760694f6c5b51f7fcaf212c3ec2c5b26
-RMD160 (compizconfig-backend-gconf-0.6.0.tar.gz) = 6678a56171e9b6f6c4370673dcf26b68c99eaa53
-Size (compizconfig-backend-gconf-0.6.0.tar.gz) = 331161 bytes
+SHA1 (compizconfig-backend-gconf-0.8.4.tar.gz) = 6d9bc4b14a7d94ecb1805d6238e6c2a81d2eb00a
+RMD160 (compizconfig-backend-gconf-0.8.4.tar.gz) = 5f96696a71bed35819897608b4d9222191997810
+Size (compizconfig-backend-gconf-0.8.4.tar.gz) = 292642 bytes
