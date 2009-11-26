@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4454 2009/11/26 14:25:28 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4455 2009/11/26 15:23:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5949,3 +5949,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/datadraw version 3.1.1 [dmcmahill 2009-11-25]
 	Updated inputmethod/scim-bridge to 0.4.16nb1 [obache 2009-11-26]
 	Updated print/poppler-data to 0.3.1 [wiz 2009-11-26]
+	Updated www/surfraw to 2.2.6 [wiz 2009-11-26]
