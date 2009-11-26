@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2009/11/26 15:04:03 joerg Exp $
+
+--- cpi/v4l2cpi/Makefile.in.orig	2009-11-26 15:25:07.000000000 +0100
++++ cpi/v4l2cpi/Makefile.in
+@@ -312,7 +312,7 @@ libcpidir = $(libdir)/unicap$(pkg_versio
+ 
+ # need to rename v4l2 plugin to avoid name clash with libv4l2
+ libv4l2cpi_la_LDFLAGS = 
+-libv4l2cpi_la_LIBADD = @PTHREAD_LIBS@  @LIBV4L_LIBS@ -L../../libunicap/.libs/ -lunicap
++libv4l2cpi_la_LIBADD = @PTHREAD_LIBS@  @LIBV4L_LIBS@ ../../libunicap/libunicap.la
+ libv4l2cpi_la_CFLAGS = @LIBV4L_CFLAGS@
+ libv4l2cpi_la_SOURCES = \
+ 	queue.c \
