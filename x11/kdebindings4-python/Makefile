@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/11/21 20:13:27 markd Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/26 20:00:20 markd Exp $
 
 PKGNAME=	kdebindings4-python-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	kdebindings-${_KDE_VERSION}
 CATEGORIES=	misc
 COMMENT=	Python bindings for the KDE integrated X11 desktop
@@ -20,6 +20,9 @@ CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 PYTHON_VERSIONS_ACCEPTED=	26 25
 PY_PATCHPLIST=			yes
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+
+post-extract:
+	${CP} ${FILESDIR}/FindPolkitQt.cmake ${WRKSRC}/cmake/modules
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
