@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.27 2008/04/12 22:43:13 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2009/11/26 17:16:47 joerg Exp $
 #
 
 DISTNAME=	golem-0.0.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=golem/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://golem.sourceforge.net/
 COMMENT=	Fast and lightweight yet customizable window manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake yacc lex
 GNU_CONFIGURE=	YES
@@ -44,10 +46,13 @@ SUBST_FILES.paths=	sample.golem/golemrc
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
+INSTALLATION_DIRS=	${EGDIR}
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
 post-install:
-	${RM} -f ${PREFIX}/share/golem/golemrc*
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/sample.golem/golemrc ${EGDIR}/golemrc.default
+	${RM} -f ${DESTDIR}${PREFIX}/share/golem/golemrc*
+	${INSTALL_DATA} ${WRKSRC}/sample.golem/golemrc ${DESTDIR}${EGDIR}/golemrc.default
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
