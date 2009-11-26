@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4456 2009/11/26 16:34:32 tron Exp $
+$NetBSD: CHANGES-2009,v 1.4457 2009/11/26 17:02:26 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5952,3 +5952,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/surfraw to 2.2.6 [wiz 2009-11-26]
 	Updated databases/mysql5-client to 5.0.88 [tron 2009-11-26]
 	Updated databases/mysql5-server to 5.0.88 [tron 2009-11-26]
+	Removed parallel/glunix [joerg 2009-11-26]
