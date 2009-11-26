@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.25 2009/10/30 19:24:01 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2009/11/26 19:46:35 imil Exp $
 #
 
-DISTNAME=	compiz-0.6.2
-PKGREVISION=	6
+PKGVER=		0.8.4
+DISTNAME=	compiz-${PKGVER}
 CATEGORIES=	wm x11
-MASTER_SITES=	${MASTER_SITE_XORG:=app/}
+MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compiz.org/
 COMMENT=	Compositing window manager
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		intltool pkg-config msgfmt
+USE_TOOLS+=		intltool pkg-config msgfmt gmake
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -21,6 +22,7 @@ USE_LIBTOOL=		yes
 COMPIZ_GCONF_SCHEMAS+=		compiz-annotate.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-blur.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-clone.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-commands.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-core.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-cube.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-dbus.schemas
@@ -29,12 +31,14 @@ COMPIZ_GCONF_SCHEMAS+=		compiz-fade.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-fs.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-gconf.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-glib.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-gnomecompat.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-ini.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-inotify.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-kconfig.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-minimize.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-move.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-obs.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-place.schemas
-COMPIZ_GCONF_SCHEMAS+=		compiz-plane.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-png.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-regex.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-resize.schemas
@@ -47,7 +51,6 @@ COMPIZ_GCONF_SCHEMAS+=		compiz-video.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-water.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-wobbly.schemas
 COMPIZ_GCONF_SCHEMAS+=		compiz-zoom.schemas
-
 GCONF_SCHEMAS+=		gwd.schemas
 GCONF_SCHEMAS+=		${COMPIZ_GCONF_SCHEMAS}
 
@@ -61,7 +64,7 @@ PKG_SUGGESTED_OPTIONS=	gnome
 PKG_OPTIONS_VAR=	PKG_OPTIONS.compiz
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	metadata/compiz-decoration.schemas
+SUBST_FILES.paths=	metadata/decoration.xml.in
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
