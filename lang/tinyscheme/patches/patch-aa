@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2009/07/07 20:35:53 agc Exp $
+$NetBSD: patch-aa,v 1.6 2009/11/26 00:48:58 joerg Exp $
 
 --- makefile	2003-01-07 19:01:04.000000000 +0000
 +++ makefile	2005-03-24 16:19:11.000000000 +0000
@@ -107,7 +107,7 @@ $NetBSD: patch-aa,v 1.5 2009/07/07 20:35:53 agc Exp $
 +#AR= echo
 +
 +# Unix, generally 
-+CC = gcc
++#CC = gcc
 +DEBUG=-g -Wall -Wno-char-subscripts -O 
 +Osuf=o 
 +SOsuf=so 
