@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2006/01/12 21:00:52 adam Exp $
+$NetBSD: patch-ah,v 1.5 2009/11/26 00:10:42 joerg Exp $
 
 --- pico/makefile.sgi.orig	Mon Jan 17 22:03:01 2005
 +++ pico/makefile.sgi	Mon Jan 17 22:04:34 2005
@@ -28,17 +28,17 @@ $NetBSD: patch-ah,v 1.4 2006/01/12 21:00:52 adam Exp $
  
  pico:		main.o
 -		$(CC) $(CFLAGS) main.o libpico.a $(LIBS) -o pico
-+		$(CC) $(CFLAGS) main.o libpico.la $(LIBS) -o pico
++		$(LDCC) $(CFLAGS) main.o libpico.la $(LIBS) -o pico
  
  pilot:		pilot.o
 -		$(CC) $(CFLAGS) pilot.o libpico.a $(LIBS) -o pilot
-+		$(CC) $(CFLAGS) pilot.o libpico.la $(LIBS) -o pilot
++		$(LDCC) $(CFLAGS) pilot.o libpico.la $(LIBS) -o pilot
  
 -libpico.a:	$(OFILES)
 -		$(LIBCMD) $(LIBARGS) libpico.a $(OFILES)
 -		$(RANLIB) libpico.a
 +libpico.la:	$(OFILES)
-+		$(CC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
++		$(LDCC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
 +			-version-info 6:0
  
  clean:
