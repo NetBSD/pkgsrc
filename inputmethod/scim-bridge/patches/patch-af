@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/11/26 12:30:12 obache Exp $
+
+--- agent/scim-bridge-agent-application.cpp.orig	2009-01-18 02:04:20.000000000 +0900
++++ agent/scim-bridge-agent-application.cpp
+@@ -60,7 +60,7 @@ int main (int argc, char *argv[])
+         {0, 0, NULL, 0}
+     };
+ 
+-    char short_options[] = "vhqdls:b:";
++    char short_options[] = "vhql:sn";
+ 
+     unsigned int tmp_uint;
+ 
