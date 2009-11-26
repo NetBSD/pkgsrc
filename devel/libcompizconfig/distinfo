@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/12 10:38:01 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2009/11/26 19:51:14 imil Exp $
 
-SHA1 (libcompizconfig-0.6.0.tar.gz) = c7b1e9c113de5efcea6d4d24fa2c18dd2b5b69ab
-RMD160 (libcompizconfig-0.6.0.tar.gz) = 415ce28c18fdd8f85ca3e6b3aa68ec485ea98cca
-Size (libcompizconfig-0.6.0.tar.gz) = 430209 bytes
-SHA1 (patch-aa) = 04ce01b4ca33a1358998bd11a0b56e3f44870192
-SHA1 (patch-ab) = d23fe219edb631cd3d959a2b23a706b5829e643e
+SHA1 (libcompizconfig-0.8.4.tar.gz) = d0c1c7e233dfec6da069e6a9eed6a9a1c56498f4
+RMD160 (libcompizconfig-0.8.4.tar.gz) = 210393bde3b44a8427040c43e12a009f80cede59
+Size (libcompizconfig-0.8.4.tar.gz) = 403652 bytes
+SHA1 (patch-aa) = c12936ee46eddf4418fd5d7ccf720ffc9a423f50
+SHA1 (patch-ab) = b69b60e3c77262526bb01192b1a5f4d719368003
