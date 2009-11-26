@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:57:22 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/11/26 20:09:43 imil Exp $
 #
 
-DISTNAME=		compizconfig-python-0.6.0
-PKGNAME=		${PYPKGPREFIX}-compizconfig-0.6.0
-PKGREVISION=		1
+PKGVER=			0.8.4
+DISTNAME=		compizconfig-python-${PKGVER}
+PKGNAME=		${PYPKGPREFIX}-compizconfig-${PKGVER}
 CATEGORIES=		devel gnome
-MASTER_SITES=		http://releases.compiz-fusion.org/0.6.0/
+MASTER_SITES=		http://releases.compiz.org/${PKGVER}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.compiz-fusion.org/
+HOMEPAGE=		http://compiz.org/
 COMMENT=		Python bindings for libcompizconfig
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

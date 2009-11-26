@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2009/08/26 19:57:20 sno Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/26 20:08:53 imil Exp $
 #
 
-DISTNAME=	compizconfig-backend-gconf-0.6.0
-PKGREVISION=	1
+PKGVER=		0.8.4
+DISTNAME=	compizconfig-backend-gconf-${PKGVER}
 CATEGORIES=	devel gnome
-MASTER_SITES=	http://releases.compiz-fusion.org/0.6.0/
+MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.compiz-fusion.org/
+HOMEPAGE=	http://compiz.org/
 COMMENT=	Plugin (gconf) for the compiz configuration backend
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
