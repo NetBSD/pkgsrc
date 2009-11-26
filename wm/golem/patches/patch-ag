@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2009/11/26 17:16:47 joerg Exp $
+
+--- plugins/Makefile.plugin.in.orig	2009-11-26 18:10:10.000000000 +0100
++++ plugins/Makefile.plugin.in
+@@ -1,6 +1,6 @@
+ # plugin makefiles include this
+ CC=		@CC@
+-CFLAGS=		@CFLAGS@ -I../../src/ -I../include/ @X_CFLAGS@
++CFLAGS=		@CFLAGS@ -fPIC -I../../src/ -I../include/ @X_CFLAGS@
+ CFLAGS+=	@DEFS@
+ LDFLAGS=	@SHARED_FLAG@
+ 
