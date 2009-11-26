@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.7 2009/07/22 09:01:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2009/11/26 20:11:13 imil Exp $
 #
 
-DISTNAME=		ccsm-0.6.0
-PKGREVISION=		1
+PKGVER=			0.8.4
+DISTNAME=		ccsm-${PKGVER}
 CATEGORIES=		wm gnome
-MASTER_SITES=		http://releases.compiz-fusion.org/0.6.0/
+MASTER_SITES=		http://releases.compiz.org/${PKGVER}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.compiz-fusion.org/
+HOMEPAGE=		http://compiz.org/
 COMMENT=		CompizConfig Settings Manager
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		pkg-config gmake msgfmt
+USE_TOOLS+=		pkg-config gmake msgfmt intltool
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_PATCH_SCRIPTS=	setup.py
-PYTHON_PATCH_SCRIPTS+=	ccm/*.py
+REPLACE_PYTHON=		${WRKSRC}/setup.py ${WRKSRC}/ccm/*.py
 
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
 
