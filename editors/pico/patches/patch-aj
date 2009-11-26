@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2009/11/26 00:10:42 joerg Exp $
+
+--- pico/osdep/makefile.orig	2009-11-26 01:05:39.000000000 +0100
++++ pico/osdep/makefile
+@@ -21,7 +21,7 @@ ALL=	os-a32.c os-a41.c os-aix.c \
+ all:		includer $(ALL)
+ 
+ includer:	includer.c
+-		$(CC) -o includer includer.c
++		$(LDCC) -o includer includer.c
+ 
+ clean:
+ 		$(RM) $(ALL) includer
