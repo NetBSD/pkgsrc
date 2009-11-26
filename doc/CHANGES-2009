@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4452 2009/11/25 22:44:31 dmcmahill Exp $
+$NetBSD: CHANGES-2009,v 1.4453 2009/11/26 12:30:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5947,3 +5947,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/clang to 2.6nb2 [hasso 2009-11-25]
 	Updated devel/cmake to 2.8.0 [adam 2009-11-25]
 	Added databases/datadraw version 3.1.1 [dmcmahill 2009-11-25]
+	Updated inputmethod/scim-bridge to 0.4.16nb1 [obache 2009-11-26]
