@@ -1,0 +1,11 @@
+$NetBSD: patch-ah,v 1.1 2009/11/26 00:05:07 dmcmahill Exp $
+
+--- isakmp-pkt.c.orig	2008-11-19 20:36:12.000000000 +0000
++++ isakmp-pkt.c	2009-11-25 23:25:00.000000000 +0000
+@@ -821,5 +821,5 @@
+ 
+ 	DEBUG(3, printf("BEGIN_PARSE\n"));
+-	DEBUG(3, printf("Recieved Packet Len: %d\n", data_len));
++	DEBUG(3, printf("Recieved Packet Len: %ld\n", (long) data_len));
+ 	fetchn(r->i_cookie, ISAKMP_COOKIE_LENGTH);
+ 	hex_dump("i_cookie", r->i_cookie, ISAKMP_COOKIE_LENGTH, NULL);

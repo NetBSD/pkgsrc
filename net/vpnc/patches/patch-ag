@@ -1,13 +1,27 @@
-$NetBSD: patch-ag,v 1.1 2009/02/04 21:51:27 drochner Exp $
+$NetBSD: patch-ag,v 1.2 2009/11/26 00:05:07 dmcmahill Exp $
 
---- tunip.c.orig	2009-02-04 16:07:34.000000000 +0100
-+++ tunip.c
-@@ -881,7 +881,7 @@ static void vpnc_main_loop(struct sa_blo
- 				}
+--- tunip.c.orig	2008-11-19 20:55:51.000000000 +0000
++++ tunip.c	2009-11-25 23:23:47.000000000 +0000
+@@ -178,5 +178,5 @@
+ 	}
+ 	if (r < (p->ip_hl << 2) + s->ipsec.em->fixed_header_size) {
+-		syslog(LOG_ALERT, "packet too short. got %d, expected %d", r, (p->ip_hl << 2) + s->ipsec.em->fixed_header_size);
++		syslog(LOG_ALERT, "packet too short. got %ld, expected %ld", (long) r, (long) ((p->ip_hl << 2) + s->ipsec.em->fixed_header_size));
+ 		return -1;
+ 	}
+@@ -217,6 +217,6 @@
+ 	}
+ 	if (r < s->ipsec.em->fixed_header_size) {
+-		syslog(LOG_ALERT, "packet too short from %s. got %d, expected %d",
+-			inet_ntoa(s->dst), r, s->ipsec.em->fixed_header_size);
++		syslog(LOG_ALERT, "packet too short from %s. got %ld, expected %ld",
++			inet_ntoa(s->dst), (long) r, (long) (s->ipsec.em->fixed_header_size));
+ 		return -1;
+ 	}
+@@ -882,5 +882,5 @@
  			}
  			DEBUG(2,printf("lifetime status: %ld of %u seconds used, %u|%u of %u kbytes used\n",
 -				time(NULL) - s->ipsec.life.start,
 +				(long)(time(NULL) - s->ipsec.life.start),
  				s->ipsec.life.seconds,
  				s->ipsec.life.rx/1024,
- 				s->ipsec.life.tx/1024,
