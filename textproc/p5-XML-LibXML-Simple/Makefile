@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/08 12:51:06 sno Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/26 18:15:35 joerg Exp $
 #
 
 DISTNAME=	XML-LibXML-Simple-0.13
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
-DEPENDS+=	p5-XML-LibXML>=1.64:../../textproc/p5-XML-LibXML-Common
+DEPENDS+=	p5-XML-LibXML>=1.64:../../textproc/p5-XML-LibXML
 
 PERL5_PACKLIST=		auto/XML/LibXML/Simple/.packlist
 
