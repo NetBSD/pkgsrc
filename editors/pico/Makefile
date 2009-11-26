@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2009/05/19 08:59:12 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2009/11/26 00:10:42 joerg Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -57,7 +57,8 @@ post-extract:
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./build ${BUILDNAME} \
-		CC="${LIBTOOL} ${CC}" \
+		CC="${LIBTOOL} --mode=compile ${CC}" \
+		LDCC="${LIBTOOL} --mode=link ${CC}" \
 		PREFIX=${PREFIX} OPTIMIZE="${CFLAGS}" \
 		EXTRALDFLAGS="${LIBS}"
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2006/01/12 21:00:52 adam Exp $
+$NetBSD: patch-aa,v 1.17 2009/11/26 00:10:42 joerg Exp $
 
 --- pico/makefile.neb.orig	2001-10-24 00:19:07.000000000 +0200
 +++ pico/makefile.neb	2003-07-28 14:04:16.000000000 +0200
@@ -29,17 +29,17 @@ $NetBSD: patch-aa,v 1.16 2006/01/12 21:00:52 adam Exp $
  
  pico:		main.o
 -		$(CC) $(CFLAGS) main.o libpico.a $(LIBS) -o pico
-+		$(CC) $(CFLAGS) main.o libpico.la $(LIBS) -o pico
++		$(LDCC) $(CFLAGS) main.o libpico.la $(LIBS) -o pico
  
  pilot:		pilot.o
 -		$(CC) $(CFLAGS) pilot.o libpico.a $(LIBS) -o pilot
-+		$(CC) $(CFLAGS) pilot.o libpico.la $(LIBS) -o pilot
++		$(LDCC) $(CFLAGS) pilot.o libpico.la $(LIBS) -o pilot
  
 -libpico.a:	$(OFILES)
 -		$(LIBCMD) $(LIBARGS) libpico.a $(OFILES)
 -		$(RANLIB) libpico.a
 +libpico.la:	$(OFILES)
-+		$(CC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
++		$(LDCC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
 +			-version-info 6:0
  
  clean:
