@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
+$NetBSD: patch-ac,v 1.2 2009/11/26 16:48:26 joerg Exp $
 
 --- im-srv/Makefile.orig	2006-01-14 23:40:15.000000000 +0800
 +++ im-srv/Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
  OBJS = im-srv.o im-addr.o im-dispatch.o ../im-client/gcin-crypt.o
  
 +.c.o:
-+	$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) -o $@ $<
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) -c $(CFLAGS) -o $@ $<
 +
  im-srv.a:	$(OBJS)
  	ar cr $@ $(OBJS)
