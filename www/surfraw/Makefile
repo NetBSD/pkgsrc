@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2009/06/06 22:07:43 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2009/11/26 15:22:55 wiz Exp $
 #
 
-DISTNAME=	surfraw-2.2.5
+DISTNAME=	surfraw-2.2.6
 CATEGORIES=	www
 MASTER_SITES=	http://surfraw.alioth.debian.org/dist/
 
@@ -25,9 +25,9 @@ DOCDIR=			${PREFIX}/share/doc/surfraw
 EGDIR=			${PREFIX}/share/examples/surfraw
 INSTALLATION_DIRS=	${DOCDIR}
 INSTALL_MAKE_FLAGS=	sysconfdir=${EGDIR}
-
-CONF_FILES=		${EGDIR}/surfraw.conf ${PKG_SYSCONFDIR}/surfraw.conf
-CONF_FILES+=		${EGDIR}/surfraw.bookmarks ${PKG_SYSCONFDIR}/surfraw.bookmarks
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/surfraw
+CONF_FILES=		${EGDIR}/xdg/surfraw/conf ${PKG_SYSCONFDIR}/xdg/surfraw/conf
+CONF_FILES+=		${EGDIR}/xdg/surfraw/bookmarks ${PKG_SYSCONFDIR}/xdg/surfraw/bookmarks
 
 # avoid installing useless manpage links
 post-patch:
