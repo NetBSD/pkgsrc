@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4459 2009/11/27 08:39:30 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4460 2009/11/27 09:26:43 enami Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5962,3 +5962,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/py-compizconfig to 0.8.4 [imil 2009-11-26]
 	Updated wm/ccsm to 0.8.4 [imil 2009-11-26]
 	Added multimedia/ccxstream version 1.0.15 [wiz 2009-11-27]
+	Updated lang/gauche to 0.9 [enami 2009-11-27]

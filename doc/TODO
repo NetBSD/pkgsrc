@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8707 2009/11/26 16:34:32 tron Exp $
+$NetBSD: TODO,v 1.8708 2009/11/27 09:26:43 enami Exp $
 
 Suggested new packages
 ======================
@@ -646,7 +646,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fvwm2-themes-0.7.0
 	o gap-4r4p9
 	o gated-3.6
-	o gauche-0.8.14
 	o gcc-4.3.2
 	o gcc-ssp-3.4.4
 	o gcdmaster-1.2.3
