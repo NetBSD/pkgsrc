@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/08/23 00:48:12 epg Exp $
+# $NetBSD: Makefile,v 1.45 2009/11/27 13:34:25 joerg Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
@@ -34,6 +34,8 @@ CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2HTML=no
 CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2LATEX=no
 CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2PS=no
 CONFIGURE_ENV+=		ac_cv_prog_HAVE_PS2PDF=no
+
+MAKE_FLAGS+=		CC=cc
 
 PAM_MODULEDIR=		${VIEWBASE}/lib/security
 MAKE_ENV+=		PAM_MODULEDIR=${PAM_MODULEDIR:Q}
