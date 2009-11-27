@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2009/11/23 22:25:16 jakllsch Exp $
+# $NetBSD: Makefile,v 1.159 2009/11/27 08:39:08 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -9,6 +9,7 @@ SUBDIR+=	adobe-flash-plugin
 SUBDIR+=	alevt
 SUBDIR+=	avidemux
 SUBDIR+=	bsdav
+SUBDIR+=	ccxstream
 SUBDIR+=	cfourcc
 SUBDIR+=	clutter-gst
 SUBDIR+=	clutter08-gst
