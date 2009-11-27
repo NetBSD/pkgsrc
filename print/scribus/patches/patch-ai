@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2009/09/16 09:24:55 drochner Exp $
+$NetBSD: patch-ai,v 1.1.2.1 2009/11/27 21:30:47 tron Exp $
 
---- CMakeLists.txt.orig	2009-04-14 22:52:13.000000000 +0200
+--- CMakeLists.txt.orig	2009-10-28 01:31:30.000000000 +0100
 +++ CMakeLists.txt
 @@ -116,7 +116,7 @@ IF (WANT_VERSIONING AND NOT CACHED_VERSI
  ENDIF (WANT_VERSIONING AND NOT CACHED_VERSIONING)
@@ -11,7 +11,39 @@ $NetBSD: patch-ai,v 1.1 2009/09/16 09:24:55 drochner Exp $
  SET(SHAREDIR "share/${MAIN_DIR_NAME}${TAG_VERSION}/")
  ADD_DEFINITIONS("-DSHAREDIR=\\\"${CMAKE_INSTALL_PREFIX}/${SHAREDIR}\\\"")
  #SHARE
-@@ -496,15 +496,15 @@ scribus.xml
+@@ -144,30 +144,7 @@ ADD_DEFINITIONS("-DDESKTOPDIR=\\\"${CMAK
+ 
+ #LIB LOCATION - lib or lib64 normally
+ #LIB
+-IF(WANT_LIB64)
+-  IF(NOT ARCH64BIT)
+-    MESSAGE(STATUS "WARNING: BUILDING 64 Bit build on non 64 bit architecture")
+-  ENDIF(NOT ARCH64BIT)
+-  SET(LIB_SUFFIX "64" CACHE TYPE STRING)
+-ENDIF(WANT_LIB64)
+-#OVERRIDE WANT_LIB64 with WANT_LIB32 if both exist
+-IF(WANT_LIB32)
+-  IF(ARCH64BIT)
+-    MESSAGE(STATUS "WARNING: FORCING 32 Bit build on 64 bit architecture")
+-  ENDIF(ARCH64BIT)
+-  SET(LIB_SUFFIX "" CACHE TYPE STRING)
+-  SET(WANT_LIB64 "")
+-ENDIF(WANT_LIB32)
+-#Auto build 64 bit if user doesnt force 32 bit and we detect 64 bit
+-IF(ARCH64BIT AND NOT LIB_SUFFIX)
+-  IF(NOT WANT_LIB32)
+-    IF(NOT WANT_LIB64)
+-      MESSAGE(STATUS "Autodetected 64 bit architecture, building for 64 Bit")
+-      SET(LIB_SUFFIX "64" CACHE TYPE STRING)
+-    ENDIF(NOT WANT_LIB64)
+-  ENDIF(NOT WANT_LIB32)
+-ENDIF(ARCH64BIT AND NOT LIB_SUFFIX)
+-
++SET(LIB_SUFFIX "" CACHE TYPE STRING)
+ 
+ SET(LIB_DIR_NAME "lib${LIB_SUFFIX}")
+ SET(LIBDIR "${LIB_DIR_NAME}/${MAIN_DIR_NAME}${TAG_VERSION}/")
+@@ -496,15 +473,15 @@ scribus.xml
  DESTINATION ${MIMEDIR}
  )
  #KDE workaround until it starts supporting freedesktop spec
