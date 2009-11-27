@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/11/27 08:38:49 wiz Exp $
+
+--- xbmsp-rc.orig	2003-03-17 14:29:15.000000000 +0000
++++ xbmsp-rc
+@@ -26,7 +26,7 @@ fi
+ 
+ PARAMS="-f -F $PIDFILE -r $DIR -u $RUNASUSER"
+ 
+-if test "$FOLLOWSYMLINKS" == "YES" ; then
++if test "$FOLLOWSYMLINKS" = "YES" ; then
+     PARAMS="$PARAMS -L"
+ fi
+ 
