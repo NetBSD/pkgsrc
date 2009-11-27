@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62.2.2 2009/10/28 19:04:45 tron Exp $
+# $NetBSD: Makefile,v 1.62.2.3 2009/11/27 21:30:47 tron Exp $
 
 DISTNAME=		scribus-1.3.3.13
 CATEGORIES=		print
@@ -27,6 +27,8 @@ PYTHON_VERSIONS_ACCEPTED=	25 24
 CONFIGURE_ARGS+=	--with-pythondir=${PREFIX}
 # XXX make an option
 CONFIGURE_ARGS+=	--disable-cups
+
+INSTALLATION_DIRS+=	share/pixmaps
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/scribus/icons/scribus.png \
