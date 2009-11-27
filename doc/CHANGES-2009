@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4458 2009/11/26 20:24:51 imil Exp $
+$NetBSD: CHANGES-2009,v 1.4459 2009/11/27 08:39:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5961,3 +5961,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/compizconfig-backend-gconf to 0.8.4 [imil 2009-11-26]
 	Updated devel/py-compizconfig to 0.8.4 [imil 2009-11-26]
 	Updated wm/ccsm to 0.8.4 [imil 2009-11-26]
+	Added multimedia/ccxstream version 1.0.15 [wiz 2009-11-27]
