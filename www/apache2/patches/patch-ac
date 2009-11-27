@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.6 2005/10/17 10:37:11 tron Exp $
+$NetBSD: patch-ac,v 1.7 2009/11/27 13:28:11 joerg Exp $
 
---- configure.orig	2005-10-09 18:34:38.000000000 -0700
+--- configure.orig	2008-01-10 17:49:36.000000000 +0100
 +++ configure
-@@ -17086,7 +17086,6 @@ cat >>confdefs.h <<_ACEOF
+@@ -5253,7 +5253,7 @@ case $host in
+               LTCFLAGS="-prefer-non-pic -static"
+               ;;
+           *)
+-              SH_LIBTOOL='$(SHELL) $(top_builddir)/shlibtool $(LTFLAGS)'
++              SH_LIBTOOL='shlibtool'
+               SHLTCFLAGS=""
+               LTCFLAGS=""
+               ;;
+@@ -18939,7 +18939,6 @@ cat >>confdefs.h <<_ACEOF
  _ACEOF
  
  
