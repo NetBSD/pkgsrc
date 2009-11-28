@@ -1,0 +1,46 @@
+# $NetBSD: Makefile-thunderbird.common,v 1.1.1.1 2009/11/28 21:59:54 tnn Exp $
+# used by mail/thunderbird2/Makefile
+# used by mail/thunderbird2-gtk1/Makefile
+
+MOZILLA_BIN=		thunderbird-bin
+MOZ_VER=		2.0.0.23
+EXTRACT_SUFX=		.tar.bz2
+DISTNAME=		thunderbird-${MOZ_VER}-source
+CATEGORIES=		mail
+MASTER_SITES=		${MASTER_SITE_MOZILLA:=thunderbird/releases/${MOZ_VER}/source/}
+
+HOMEPAGE=		http://www.mozilla.com/en-US/thunderbird/
+
+CONFIGURE_ENV+=		MOZ_THUNDERBIRD=1
+MAKE_ENV+=		MOZ_THUNDERBIRD=1
+
+DISTINFO_FILE=		${.CURDIR}/../../mail/thunderbird2/distinfo
+PATCHDIR=		${.CURDIR}/../../mail/thunderbird2/patches
+
+CONFIGURE_ARGS+=	--enable-application=mail
+CONFIGURE_ARGS+=	--enable-debug=-g
+
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/chrome/app-chrome.manifest
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/compreg.dat
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/xpti.dat
+
+
+.PHONY: install-desktop
+post-install: install-desktop
+install-desktop:
+	${SED}		\
+		-e 's|@MOZILLA@|${MOZILLA}|g' \
+		-e 's|@MOZILLA_NAME@|Thunderbird|g' \
+		-e 's|@MOZILLA_ICON@|${MOZILLA}.xpm|g' \
+		< ${.CURDIR}/../../mail/thunderbird2/files/thunderbird.desktop.in \
+		> ${WRKDIR}/${MOZILLA}.desktop
+	${INSTALL_DATA} ${WRKDIR}/${MOZILLA}.desktop \
+	    ${DESTDIR:Q}${PREFIX:Q}/share/applications/${MOZILLA}.desktop
+	${LN} -sf ${DESTDIR:Q}${PREFIX:Q}/lib/${MOZILLA}/chrome/icons/default/default.xpm \
+	    ${DESTDIR:Q}${PREFIX:Q}/share/pixmaps/${MOZILLA}.xpm
+
+INSTALLATION_DIRS+=	share/applications share/pixmaps
+PKG_DESTDIR_SUPPORT=    user-destdir
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../www/seamonkey/legacy-Makefile.common"
