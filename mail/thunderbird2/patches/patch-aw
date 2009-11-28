@@ -1,0 +1,12 @@
+$NetBSD: patch-aw,v 1.1.1.1 2009/11/28 21:59:55 tnn Exp $
+
+--- widget/src/gtksuperwin/Makefile.in.orig	2006-02-02 13:31:00.000000000 +0100
++++ widget/src/gtksuperwin/Makefile.in
+@@ -46,6 +46,7 @@ MODULE		= widget
+ LIBRARY_NAME	= gtksuperwin
+ EXPORT_LIBRARY = 1
+ LIBXUL_LIBRARY = 1
++MKSHLIB		= $(MKCSHLIB)
+ 
+ PACKAGE_FILE = gtksuperwin.pkg
+ 

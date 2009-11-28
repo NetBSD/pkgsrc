@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/11/28 21:59:55 tnn Exp $
+
+--- security/nss/lib/freebl/unix_rand.c.orig	2007-07-26 01:18:55.000000000 +0200
++++ security/nss/lib/freebl/unix_rand.c
+@@ -35,6 +35,7 @@
+  * ***** END LICENSE BLOCK ***** */
+ 
+ #include <stdio.h>
++#include <fcntl.h>
+ #include <string.h>
+ #include <signal.h>
+ #include <unistd.h>

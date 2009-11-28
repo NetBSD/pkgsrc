@@ -1,0 +1,47 @@
+$NetBSD: patch-ea,v 1.1.1.1 2009/11/28 21:59:56 tnn Exp $
+
+For the benefit of 64-bit strict alignment archs using gcc, such
+as NetBSD/sparc64, ensure that the specially crafted double values
+are properly aligned.
+
+--- extensions/transformiix/source/base/Double.cpp.orig	2006-06-22 21:13:00.000000000 +0200
++++ extensions/transformiix/source/base/Double.cpp
+@@ -95,8 +95,12 @@ typedef union txdpun {
+ #define TX_DOUBLE_HI32(x) (__extension__ ({ txdpun u; u.d = (x); u.s.hi; }))
+ #define TX_DOUBLE_LO32(x) (__extension__ ({ txdpun u; u.d = (x); u.s.lo; }))
+ 
++#define __d_align	__attribute__ ((aligned (__alignof__(double))))
++
+ #else // __GNUC__
+ 
++#define __d_align	/* Empty */
++
+ /* We don't know of any non-gcc compilers that perform alias optimization,
+  * so this code should work.
+  */
+@@ -117,17 +121,19 @@ typedef union txdpun {
+ 
+ //-- Initialize Double related constants
+ #ifdef IS_BIG_ENDIAN
+-const PRUint32 nanMask[2] =    {TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_MANTMASK,
++const PRUint32 nanMask[2] __d_align =    {TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_MANTMASK,
+                                 0xffffffff};
+-const PRUint32 infMask[2] =    {TX_DOUBLE_HI32_EXPMASK, 0};
+-const PRUint32 negInfMask[2] = {TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT, 0};
++const PRUint32 infMask[2] __d_align =    {TX_DOUBLE_HI32_EXPMASK, 0};
++const PRUint32 negInfMask[2] __d_align = {TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT, 0};
+ #else
+-const PRUint32 nanMask[2] =    {0xffffffff,
++const PRUint32 nanMask[2] __d_align =    {0xffffffff,
+                                 TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_MANTMASK};
+-const PRUint32 infMask[2] =    {0, TX_DOUBLE_HI32_EXPMASK};
+-const PRUint32 negInfMask[2] = {0, TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT};
++const PRUint32 infMask[2] __d_align =    {0, TX_DOUBLE_HI32_EXPMASK};
++const PRUint32 negInfMask[2] __d_align = {0, TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT};
+ #endif
+ 
++#undef __d_align
++
+ const double Double::NaN = *((double*)nanMask);
+ const double Double::POSITIVE_INFINITY = *((double*)infMask);
+ const double Double::NEGATIVE_INFINITY = *((double*)negInfMask);
