@@ -1,37 +1,13 @@
-$NetBSD: patch-an,v 1.5 2008/09/18 11:51:37 taca Exp $
+$NetBSD: patch-an,v 1.5.10.1 2009/11/28 17:47:00 spz Exp $
 
---- mysql-test/Makefile.in.orig	2008-08-04 15:22:09.000000000 +0300
-+++ mysql-test/Makefile.in	2008-09-16 13:52:20.000000000 +0300
-@@ -371,7 +371,7 @@
+--- mysql-test/Makefile.in.orig	2009-11-09 18:37:53.000000000 +0000
++++ mysql-test/Makefile.in	2009-11-26 15:16:50.000000000 +0000
+@@ -368,7 +368,7 @@
  @HAVE_NDBCLUSTER_DB_FALSE@USE_NDBCLUSTER = \"\"
  @HAVE_NDBCLUSTER_DB_TRUE@USE_NDBCLUSTER = \"--ndbcluster\"
  benchdir_root = $(prefix)
 -testdir = $(benchdir_root)/mysql-test
 +testdir = $(benchdir_root)/share/mysql-test
  EXTRA_SCRIPTS = mysql-test-run-shell.sh install_test_db.sh valgrind.supp $(PRESCRIPTS)
- EXTRA_DIST = $(EXTRA_SCRIPTS) suite
+ EXTRA_DIST = $(EXTRA_SCRIPTS) suite collections
  GENSCRIPTS = mysql-test-run-shell mysql-test-run install_test_db mtr
-@@ -749,15 +749,14 @@
- 	-rm -rf `find $(distdir)/suite -type d -name SCCS`
- 
- install-data-local:
--	$(mkinstalldirs) \
--		$(DESTDIR)$(testdir)/t \
--		$(DESTDIR)$(testdir)/r \
--		$(DESTDIR)$(testdir)/include \
--		$(DESTDIR)$(testdir)/std_data \
--		$(DESTDIR)$(testdir)/std_data/ndb_backup50_data_be \
--		$(DESTDIR)$(testdir)/std_data/ndb_backup50_data_le \
--		$(DESTDIR)$(testdir)/lib \
--		$(DESTDIR)$(testdir)/std_data/funcs_1
-+	$(mkinstalldirs) $(DESTDIR)$(testdir)/t
-+	$(mkinstalldirs) $(DESTDIR)$(testdir)/r
-+	$(mkinstalldirs) $(DESTDIR)$(testdir)/include
-+	$(mkinstalldirs) $(DESTDIR)$(testdir)/std_data
-+	$(mkinstalldirs) $(DESTDIR)$(testdir)/std_data/ndb_backup50_data_be
-+	$(mkinstalldirs) $(DESTDIR)$(testdir)/std_data/ndb_backup50_data_le
-+	$(mkinstalldirs) $(DESTDIR)$(testdir)/lib
-+	$(mkinstalldirs) $(DESTDIR)$(testdir)/std_data/funcs_1
- 	$(INSTALL_DATA) $(srcdir)/README $(DESTDIR)$(testdir)
- 	-$(INSTALL_DATA) $(srcdir)/t/*.def $(DESTDIR)$(testdir)/t
- 	$(INSTALL_DATA) $(srcdir)/t/*.test $(DESTDIR)$(testdir)/t
