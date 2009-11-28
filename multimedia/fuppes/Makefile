@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2009/11/28 18:37:22 kefren Exp $
+# $NetBSD: Makefile,v 1.9 2009/11/28 19:31:29 kefren Exp $
 #
 
 DISTNAME=	fuppes-0.640
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuppes/}
 
@@ -21,11 +22,7 @@ CONFIGURE_ARGS+=	--enable-video-transcoding
 CONFIGURE_ARGS+=	--enable-faad
 CONFIGURE_ARGS+=	--enable-mad
 
-SUBST_CLASSES+=		version
-SUBST_STAGE.version=	pre-patch
-SUBST_SED.version=	-e "s,UNKNOWN,${SVNREV},g"
-SUBST_FILES.version=	version.sh
-SUBST_MESSAGE.version=	Patching version script for non-SVN checkout builds.
+.include "options.mk"
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
@@ -48,5 +45,4 @@ BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
 .include "../../graphics/simage/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/mpeg4ip/buildlink3.mk"
-.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
