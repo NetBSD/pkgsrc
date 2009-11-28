@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/11/11 12:21:52 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/11/28 23:39:18 dholland Exp $
 bin/puppet
 bin/puppetca
 bin/puppetd
@@ -1004,7 +1004,6 @@ ${GEM_LIBDIR}/test/util/storage.rb
 ${GEM_LIBDIR}/test/util/subclass_loader.rb
 ${GEM_LIBDIR}/test/util/utiltest.rb
 ${GEM_HOME}/specifications/puppet-${PKGVERSION}.gemspec
-pgsql/data/global/pgstat.stat
 share/examples/puppet/puppet.conf
 share/examples/rc.d/puppetd
 share/examples/rc.d/puppetmasterd
