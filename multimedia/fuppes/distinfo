@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/27 01:13:41 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2009/11/28 18:37:22 kefren Exp $
 
-SHA1 (fuppes-r629.tar.gz) = c567b5574aed7df287993279b8bf64d038624589
-RMD160 (fuppes-r629.tar.gz) = 770e82702a58573807c0af23482dbebe47aa9cae
-Size (fuppes-r629.tar.gz) = 373174 bytes
+SHA1 (fuppes-0.640.tar.gz) = 51d7a3491a36969d8cd3d373a20f237600ab60fd
+RMD160 (fuppes-0.640.tar.gz) = 65e76c607056c9e6c975c960cc2aeaec4d37446c
+Size (fuppes-0.640.tar.gz) = 641228 bytes
 SHA1 (patch-aa) = 5042b1dd24117e44effc9bc14af9ba89902a6634
+SHA1 (patch-ab) = 884a4130fc15f31a495db69100e1769e2c5c2787
+SHA1 (patch-ac) = 8359d390b4a3d9963240bb6bb3c467382cef6272
+SHA1 (patch-ad) = 108dfcb87739c4fb5d603a1e2c1cd4152d06b35e
