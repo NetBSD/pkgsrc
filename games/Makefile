@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.326 2009/10/02 20:38:00 markd Exp $
+# $NetBSD: Makefile,v 1.327 2009/11/28 20:30:13 pgoyette Exp $
 #
 
 COMMENT=	Games
@@ -64,6 +64,7 @@ SUBDIR+=	digger
 SUBDIR+=	dipmap
 SUBDIR+=	dopewars
 SUBDIR+=	duckmaze
+SUBDIR+=	dungeon
 SUBDIR+=	eboard
 SUBDIR+=	enigma
 SUBDIR+=	et
