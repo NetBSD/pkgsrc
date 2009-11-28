@@ -1,0 +1,20 @@
+# $NetBSD: legacy-INSTALL,v 1.1 2009/11/28 22:01:23 tnn Exp $
+
+MOZILLA="@MOZILLA@"
+MOZILLA_BIN="@MOZILLA_BIN@"
+MOZILLA_FIVE_HOME="${PKG_PREFIX}/lib/${MOZILLA}"
+export MOZILLA_FIVE_HOME
+
+case ${STAGE} in
+POST-INSTALL)
+	${MKDIR} -p "./tmpdir-${PKGNAME}"
+	LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}:${PKG_PREFIX}/lib" HOME="./tmpdir-${PKGNAME}" \
+		${MOZILLA_FIVE_HOME}/regxpcom
+	if ${TEST} -x ${MOZILLA_FIVE_HOME}/regchrome; then
+		LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}" \
+			HOME="./tmpdir-${PKGNAME}" \
+			${MOZILLA_FIVE_HOME}/regchrome
+	fi
+	${RM} -fr "./tmpdir-${PKGNAME}"
+	;;
+esac
