@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.3 2007/03/11 18:42:50 adam Exp $
+$NetBSD: patch-al,v 1.3.26.1 2009/11/28 17:47:00 spz Exp $
 
---- myisam/Makefile.in.orig	2007-03-05 20:22:55.000000000 +0100
-+++ myisam/Makefile.in
-@@ -156,7 +156,7 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUD
- LTCOMPILE = $(LIBTOOL) --tag=CC --mode=compile $(CC) $(DEFS) \
- 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
- 	$(AM_CFLAGS) $(CFLAGS)
+--- myisam/Makefile.in.orig	2009-11-09 18:37:52.000000000 +0000
++++ myisam/Makefile.in	2009-11-26 14:26:06.000000000 +0000
+@@ -152,7 +152,7 @@
+ LTCOMPILE = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 -CCLD = $(CC)
 +CCLD = $(CXX)
- LINK = $(LIBTOOL) --tag=CC --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
- 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- SOURCES = $(libmyisam_a_SOURCES) mi_test1.c mi_test2.c mi_test3.c \
+ LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+ 	$(LDFLAGS) -o $@
