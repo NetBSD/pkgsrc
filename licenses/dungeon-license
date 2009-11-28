@@ -1,0 +1,13 @@
+There's no real "license" for this software, but the Copyright statement
+below implies that non-commercial use is acceptable.
+
+/* COPYRIGHT 1980, 1990, INFOCOM COMPUTERS AND COMMUNICATIONS, CAMBRIDGE MA. */
+/* ALL RIGHTS RESERVED, COMMERCIAL USAGE STRICTLY PROHIBITED */
+/* WRITTEN BY R. M. SUPNIK */
+/* Translated from Fortran to C by Andrew Plotkin <erkyrath@netcom.com>
+   on 10/4/98. */
+
+/* 16-Aug-94     RMS     Version 3.2. */
+/* 30-Jun-92     RMS     Changed file names to lower case. */
+/* 29-Jun-92     RMS     Changed OUTCH to 6 for VAX, UNIX compatibility. */
+
