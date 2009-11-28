@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2009/11/28 20:25:40 pgoyette Exp $
+
+Remove an obsolete check that pointers fit into 32-bit data types.  I
+was unable to find any code remaining that depends on this, and at
+least one program (dungeon!) works just fine without having had to do
+any hashtable coding!
+
+--- ../glkterm/main.c.orig	2009-11-20 14:08:33.000000000 -0800
++++ ../glkterm/main.c	2009-11-20 13:14:24.000000000 -0800
+@@ -52,10 +52,12 @@
+         printf("Compile-time error: glui32 is not unsigned. Please fix glk.h.\n");
+         return 1;
+     }
++/*
+     if (sizeof(window_t *) > 4) {
+         printf("Compile-time error: Pointers cannot fit in a glui32. Start writing hashtable code.\n");
+         return 1;
+     }
++*/
+     
+     /* Now some argument-parsing. This is probably going to hurt. */
+     startdata.argc = 0;
