@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2009/05/20 00:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.21.4.1 2009/11/28 17:47:00 spz Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
-PKGREVISION=		3
 SVR4_PKGNAME=		mysqc
 COMMENT=		MySQL 5, a free SQL database (client)
 
@@ -21,7 +20,12 @@ AUTO_MKDIRS=	yes
 
 REPLACE_PERL=	scripts/mysql_convert_table_format.sh \
 		scripts/mysql_explain_log.sh \
+		scripts/mysql_find_rows.sh \
+		scripts/mysql_fix_extensions.sh \
+		scripts/mysql_setpermission.sh \
 		scripts/mysql_tableinfo.sh \
+		scripts/mysql_zap.sh \
+		scripts/mysqlaccess.sh \
 		scripts/mysqldumpslow.sh \
 		scripts/mysqlhotcopy.sh
 
@@ -34,8 +38,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/support-files/my-${f}.cnf.sh \
 		${DESTDIR}${PREFIX}/share/examples/mysql/my-${f}.cnf
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/Docs/manual.chm \
-		${DESTDIR}${PREFIX}/share/doc/mysql/
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
