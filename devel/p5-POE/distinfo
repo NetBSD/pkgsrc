@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/04/23 07:25:50 sno Exp $
+$NetBSD: distinfo,v 1.8 2009/11/28 06:33:38 seb Exp $
 
-SHA1 (POE-1.005.tar.gz) = aae1983781f6e3b5ddc153819d81266e8c0c543f
-RMD160 (POE-1.005.tar.gz) = 639f2fd0573bab7eae08b93180a9c8779b935020
-Size (POE-1.005.tar.gz) = 353833 bytes
+SHA1 (POE-1.280.tar.gz) = a6712d74fe272fc9609b98ba94b6a60668b5d769
+RMD160 (POE-1.280.tar.gz) = 089eba1b946327e4a81e025039385233e3ea51a7
+Size (POE-1.280.tar.gz) = 361597 bytes
