@@ -1,0 +1,3 @@
+The Perl 5 module POE::Component::Schedule is a POE add-on.
+It encapsulates a session that sends events to client sessions on a
+schedule as defined by a DateTime::Set iterator
