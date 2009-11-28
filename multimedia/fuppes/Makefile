@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2009/08/26 21:20:14 sno Exp $
+# $NetBSD: Makefile,v 1.8 2009/11/28 18:37:22 kefren Exp $
 #
 
-SVNREV=		629
-DISTNAME=	fuppes-r${SVNREV}
-PKGNAME=	${DISTNAME:S/r/0./}
-PKGREVISION=	4
+DISTNAME=	fuppes-0.640
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.invisible.ca/~jmcneill/distfiles/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuppes/}
 
 MAINTAINER=	tech-multimedia@NetBSD.org
 HOMEPAGE=	http://fuppes.ulrich-voelkel.de/
@@ -21,6 +18,8 @@ USE_TOOLS+=	autoconf automake aclocal m4 autoreconf
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--enable-video-transcoding
+CONFIGURE_ARGS+=	--enable-faad
+CONFIGURE_ARGS+=	--enable-mad
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-patch
@@ -49,4 +48,5 @@ BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
 .include "../../graphics/simage/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/mpeg4ip/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
