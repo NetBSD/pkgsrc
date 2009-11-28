@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.35 2009/07/19 13:14:21 tron Exp $
+# $NetBSD: Makefile.common,v 1.35.2.1 2009/11/28 17:47:00 spz Exp $
 #
 # used by databases/mysql5-client/Makefile
 # used by databases/mysql5-server/Makefile
 #
 
-DISTNAME=		mysql-5.0.67
+DISTNAME=		mysql-5.0.88
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQL-5.0/}
 
@@ -40,6 +40,7 @@ MYSQL_EXTRA_CHARSET?=	all
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR:Q}
 CONFIGURE_ARGS+=	--with-named-z-libs=z
 CONFIGURE_ARGS+=	--without-libwrap
+CONFIG_SHELL=		${TOOLS_PATH.bash}
 
 .if ${OPSYS} == "IRIX"
 CFLAGS+=		-DIRIX5 -DNEEDS_BSTRING_H
@@ -98,7 +99,7 @@ CONFIGURE_ENV+=		ac_cv_func_pthread_attr_setschedparam=no
 .endif
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		autoconf autoheader gmake perl:run
+USE_TOOLS+=		autoconf bash autoheader gmake perl:run
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 SUBST_CLASSES=		mk
