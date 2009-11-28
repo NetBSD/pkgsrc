@@ -1,0 +1,53 @@
+# $NetBSD: Makefile,v 1.1 2009/11/28 20:25:40 pgoyette Exp $
+#
+
+DISTNAME=	dungeon-3.2b
+DISTFILES=	dungeon-gdt-glk.tar.gz \
+		glkterm-080.tar.gz
+CATEGORIES=	games
+MASTER_SITES=	http://eblong.com/zarf/glk/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://eblong.com/zarf/glk/
+COMMENT=	Classic game of Dungeon
+
+# There really isn't any license in any of the source code or in the
+# accompanying documentation, but the sources of many versions have
+# been freely made available for many years with the assumption that
+# the "No commercial use" comment following the copyright statement
+# implies a license to use in non-commercial applications.  We'll adopt
+# that implication here.
+
+LICENSE=		dungeon-license
+RESTRICTED=		No license to redistribute
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+
+WRKSRC=		${WRKDIR}/dungeon-gdt
+DATADIR=	${PREFIX}/share/dungeon
+
+MAKE_FLAGS+=	DATADIR=${DATADIR}
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.dungeon
+PKG_SUPPORTED_OPTIONS=	dungeon-gdt
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdungeon-gdt)
+MAKE_ENV+=	GDT_FLAG=-DHAVE_GDT
+.endif
+
+# Before we build the game itself, we need to build the glkterm library
+
+pre-build:
+	cd ${WRKDIR}/glkterm && env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/dungeon ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/dundat ${DESTDIR}${DATADIR}/
+
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

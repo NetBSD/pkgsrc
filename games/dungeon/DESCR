@@ -1,0 +1,11 @@
+Dungeon is a development prototype of the game ZORK(tm), which is
+available commercially from Infocom, Inc, on most personal computers.
+Copyright on the Dungeon sources is retained by Infocom, and commercial
+use is strictly prohibited.  ZORK(tm) is a trademark of Infocom, Inc.
+
+This version is translated from the original dungeon-3.2b Fortran sources
+to C by Andrew Plotkin <erkyrath@eblong.com>, and modified to use his
+Glk API.  (The dungeon debugger code was translated from Fortran to C by
+Paul Goyette <pgoyette@whooppee.com> and included in this package as a
+patch file.)  The Fortran sources were themselves were translated from the
+original MDL.  Version 3.2B is the latest known version.

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2009/11/28 20:25:40 pgoyette Exp $
+bin/dungeon
+share/dungeon/dundat
