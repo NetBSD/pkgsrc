@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4462 2009/11/28 06:33:51 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4463 2009/11/28 07:32:25 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5965,3 +5965,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/gauche to 0.9 [enami 2009-11-27]
 	Updated devel/p5-Data-Dumper-Concise to 1.002 [seb 2009-11-27]
 	Updated devel/p5-POE to 1.280 [seb 2009-11-28]
+	Added devel/p5-POE-Component-Schedule version 0.92 [seb 2009-11-28]
