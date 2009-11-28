@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4464 2009/11/28 10:01:07 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4465 2009/11/28 21:29:19 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5967,3 +5967,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-POE to 1.280 [seb 2009-11-28]
 	Added devel/p5-POE-Component-Schedule version 0.92 [seb 2009-11-28]
 	Updated converters/p5-Convert-UUlib to 1.33 [seb 2009-11-28]
+	Removed www/seamonkey-gtk1 [tnn 2009-11-28]
