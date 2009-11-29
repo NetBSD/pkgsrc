@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:43 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.13 2009/11/29 04:37:58 snj Exp $
 
-DISTNAME=	screentest-1.0
-PKGREVISION=	4
+DISTNAME=	screentest-2.0
 CATEGORIES=	sysutils x11
-MASTER_SITES=	ftp://ftp.linux.cz/pub/linux/people/jan_kasprzak/screentest/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=screentest/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fi.muni.cz/~kas/screentest/
-COMMENT=	CRT screen testing utility using GTK+
+HOMEPAGE=	http://screentest.sourceforge.net/
+COMMENT=	CRT/LCD screen testing utility using GTK+
 
 GNU_CONFIGURE=	yes
 
+INSTALLATION_DIRS+=	share/doc/screentest
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/screentest
 .for f in AUTHORS ChangeLog NEWS README
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/screentest
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/screentest
 .endfor
 
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
