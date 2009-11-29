@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/11/25 15:55:49 abs Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/29 21:11:21 abs Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
+PKGREVISION=	1
 CATEGORIES=	net kde
 MASTER_SITES=	http://ktorrent.org/downloads/${KTORRENT_VER}/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,6 +30,7 @@ USE_TOOLS+=		awk msgfmt pkg-config perl
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kdebase-runtime4/buildlink3.mk"
+.include "../../x11/kdebase-workspace4/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
