@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/09/16 01:15:35 reed Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/11/29 22:17:31 snj Exp $
 bin/xfce4-panel
 bin/xfce4-popup-windowlist
 include/xfce4/libxfce4panel/libxfce4panel-enum-types.h
@@ -75,6 +75,7 @@ share/icons/hicolor/48x48/apps/xfce4-systray.png
 share/icons/hicolor/48x48/apps/xfce4-taskbar.png
 share/locale/am/LC_MESSAGES/xfce4-panel.mo
 share/locale/ar/LC_MESSAGES/xfce4-panel.mo
+share/locale/ast/LC_MESSAGES/xfce4-panel.mo
 share/locale/az/LC_MESSAGES/xfce4-panel.mo
 share/locale/be/LC_MESSAGES/xfce4-panel.mo
 share/locale/bg/LC_MESSAGES/xfce4-panel.mo
@@ -104,6 +105,7 @@ share/locale/id/LC_MESSAGES/xfce4-panel.mo
 share/locale/it/LC_MESSAGES/xfce4-panel.mo
 share/locale/ja/LC_MESSAGES/xfce4-panel.mo
 share/locale/ka/LC_MESSAGES/xfce4-panel.mo
+share/locale/kk/LC_MESSAGES/xfce4-panel.mo
 share/locale/ko/LC_MESSAGES/xfce4-panel.mo
 share/locale/ku/LC_MESSAGES/xfce4-panel.mo
 share/locale/lt/LC_MESSAGES/xfce4-panel.mo
@@ -127,6 +129,7 @@ share/locale/ta/LC_MESSAGES/xfce4-panel.mo
 share/locale/tr/LC_MESSAGES/xfce4-panel.mo
 share/locale/uk/LC_MESSAGES/xfce4-panel.mo
 share/locale/ur/LC_MESSAGES/xfce4-panel.mo
+share/locale/ur_PK/LC_MESSAGES/xfce4-panel.mo
 share/locale/vi/LC_MESSAGES/xfce4-panel.mo
 share/locale/zh_CN/LC_MESSAGES/xfce4-panel.mo
 share/locale/zh_TW/LC_MESSAGES/xfce4-panel.mo

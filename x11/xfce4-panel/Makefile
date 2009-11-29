@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.35 2009/09/16 01:15:35 reed Exp $
+# $NetBSD: Makefile,v 1.36 2009/11/29 22:17:31 snj Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
+XFCE4_VERSION=		4.6.2
+
 DISTNAME=		xfce4-panel-${XFCE4_VERSION}
 CATEGORIES=		x11
 COMMENT=		Xfce panel
+
+MASTER_SITES+=		http://archive.xfce.org/src/xfce/xfce4-panel/4.6/
 
 PKGCONFIG_OVERRIDE=	libxfce4panel/libxfce4panel-1.0.pc.in
 PTHREAD_AUTO_VARS=	yes
