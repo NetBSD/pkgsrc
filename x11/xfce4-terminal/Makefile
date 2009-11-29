@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.11 2009/09/16 01:15:36 reed Exp $
+# $NetBSD: Makefile,v 1.12 2009/11/29 22:16:34 snj Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.2.12
+XFCE4_VERSION=	0.4.2
 
 DISTNAME=	Terminal-${XFCE4_VERSION}
 PKGNAME=	xfce4-terminal-${XFCE4_VERSION}
 CATEGORIES=	x11
 COMMENT=	Xfce terminal emulator
+
+MASTER_SITES=	http://www.xfce.org/archive/src/apps/terminal/0.4/
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
