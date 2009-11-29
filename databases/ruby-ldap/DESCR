@@ -1,0 +1,2 @@
+'Ruby/LDAP' is a Ruby extension library that provides an interface to the LDAP
+API as described in RFC1823.
