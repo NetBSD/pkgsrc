@@ -1,15 +1,16 @@
-$NetBSD: patch-bb,v 1.1 2009/11/22 20:35:25 sno Exp $
+$NetBSD: patch-bb,v 1.2 2009/11/29 20:40:08 sno Exp $
 
 replacing explicit --export-dynamic by ${EXPORT_SYMBOLS_LDFLAGS}
+for non-gnu-ld
 
---- configure.ac.orig	2009-05-30 17:09:44.000000000 +0200
-+++ configure.ac	2009-05-30 17:12:40.000000000 +0200
+--- configure.ac.orig	2009-06-27 18:28:16.000000000 +0000
++++ configure.ac	2009-11-29 20:30:35.000000000 +0000
 @@ -288,7 +288,7 @@
-     RESOLVES=' '
-   ;;
-   *)
--    ZZIPLIB_LDFLAGS="--export-dynamic"
-+    ZZIPLIB_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+ 
+     if ".$can_build_shared" = .no
+     then ZZIPLIB_LDFLAGS=""
+-    else ZZIPLIB_LDFLAGS="--export-dynamic"
++    else ZZIPLIB_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+     fi
      RESOLVES=' # '
    ;;
- esac

@@ -1,24 +1,16 @@
-$NetBSD: patch-ba,v 1.1 2009/11/22 20:35:25 sno Exp $
+$NetBSD: patch-ba,v 1.2 2009/11/29 20:40:08 sno Exp $
 
 replacing explicit --export-dynamic by ${EXPORT_SYMBOLS_LDFLAGS}
+for non-gnu-ld
 
---- configure.orig	2009-05-30 17:09:35.000000000 +0200
-+++ configure	2009-05-30 17:12:17.000000000 +0200
-@@ -5501,7 +5501,7 @@
-   if test "$ld_shlibs" = yes; then
-     runpath_var=LD_RUN_PATH
-     hardcode_libdir_flag_spec='${wl}--rpath ${wl}$libdir'
--    export_dynamic_flag_spec='${wl}--export-dynamic'
-+    export_dynamic_flag_spec='${EXPORT_SYMBOLS_LDFLAGS}'
-     case $host_os in
-     cygwin* | mingw* | pw32*)
-       # dlltool doesn't understand --whole-archive et. al.
-@@ -9601,7 +9601,7 @@
-     RESOLVES=' '
-   ;;
-   *)
--    ZZIPLIB_LDFLAGS="--export-dynamic"
-+    ZZIPLIB_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+--- configure.orig	2009-06-27 18:32:33.000000000 +0000
++++ configure	2009-11-29 20:29:57.000000000 +0000
+@@ -16179,7 +16179,7 @@
+ 
+     if ".$can_build_shared" = .no
+     then ZZIPLIB_LDFLAGS=""
+-    else ZZIPLIB_LDFLAGS="--export-dynamic"
++    else ZZIPLIB_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+     fi
      RESOLVES=' # '
    ;;
- esac
