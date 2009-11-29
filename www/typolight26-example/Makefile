@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/11/22 16:17:59 taca Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/29 06:45:01 taca Exp $
 #
 
 LICENSE=	gnu-lgpl-v2.1
+WWW_FILE=	templates/example_website.sql
 
 .include "../../www/typolight26/Makefile.version"
 .include "../../www/typolight/Makefile.example"
