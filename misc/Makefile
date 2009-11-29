@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.333 2009/11/08 07:48:12 wiz Exp $
+# $NetBSD: Makefile,v 1.334 2009/11/29 07:33:51 obache Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -218,6 +218,7 @@ SUBDIR+=	team
 SUBDIR+=	tellico
 SUBDIR+=	teseq
 SUBDIR+=	tmux
+SUBDIR+=	topless
 SUBDIR+=	ttyrec
 SUBDIR+=	udfclient
 SUBDIR+=	ukpostcodes
