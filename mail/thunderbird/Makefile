@@ -1,13 +1,64 @@
-# $NetBSD: Makefile,v 1.39 2009/10/03 13:18:23 ghen Exp $
+# $NetBSD: Makefile,v 1.40 2009/11/29 03:06:42 tnn Exp $
+#
 
-MOZILLA=		thunderbird
-COMMENT=		Mozilla mail client
+DISTNAME=	thunderbird-${TB_VER}.source
+PKGNAME=	thunderbird-${TB_VER}
+TB_VER=		3.0rc1
+CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
+EXTRACT_SUFX=	.tar.bz2
 
-MOZILLA_USE_GTK2=	# yes
-MOZILLA_USE_XFT=	YES
+MAINTAINER=	tnn@NetBSD.org
+HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
+COMMENT=	Organize, secure and customize your mail
 
-# thunderbird passes LD_LIBRARY_PATH to mime handlers, making them fail:
-# https://bugzilla.mozilla.org/show_bug.cgi?id=392327
+WRKSRC=		${WRKDIR}/comm-1.9.1
+MOZILLA_DIR=	mozilla/
 
-.include "../../mail/thunderbird/Makefile-thunderbird.common"
+CONFIG_GUESS_OVERRIDE+=	directory/c-sdk/config/autoconf/config.guess
+CONFIG_SUB_OVERRIDE+=	directory/c-sdk/config/autoconf/config.sub
+
+CONFIGURE_ARGS+=	--enable-application=mail
+CONFIGURE_ARGS+=	--enable-static
+
+ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird
+
+MOZILLA_PATCHES=	${.CURDIR}/../../devel/xulrunner/patches/patch-*
+pre-patch:
+	@${STEP_MSG} "Applying common mozilla patches from devel/xulrunner"
+.for i in ${MOZILLA_PATCHES}
+	${RUN} ${CAT} ${i} | ${PATCH} -s -p0 -d ${WRKSRC}/${MOZILLA_DIR} || \
+	  { ${ERROR_MSG} "Patch ${i} failed"; ${_PKGSRC_PATCH_FAIL}; }
+.endfor
+
+pre-configure:
+	cd ${WRKSRC}/directory/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/mozilla && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/mozilla/nsprpub && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/directory/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
+
+do-build:
+# XXX for some reason it doesn't work unless -j is explicitly specified
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
+
+MOZILLA=thunderbird
+MOZILLA_NAME=Thunderbird
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pixmaps
+	${SED}  -e 's|@MOZILLA@|${MOZILLA}|g'				\
+	  -e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|g'			\
+	  -e 's|@MOZILLA_ICON@|${MOZILLA}.png|g'			\
+	  < ${FILESDIR}/desktop.in					\
+	  > ${WRKDIR}/desktop
+	${INSTALL_DATA} ${WRKDIR}/desktop				\
+	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
+	${INSTALL_DATA} ${WRKSRC}/mail/branding/nightly/mailicon48.png	\
+	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
+
+.include "../../devel/xulrunner/mozilla-common.mk"
+.include "options.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
