@@ -1,15 +1,16 @@
-$NetBSD: patch-bc,v 1.1 2009/11/22 20:35:25 sno Exp $
+$NetBSD: patch-bc,v 1.2 2009/11/29 20:40:08 sno Exp $
 
 replacing explicit --export-dynamic by ${EXPORT_SYMBOLS_LDFLAGS}
+for xlc
 
---- aclocal.m4.orig	2009-05-30 17:09:55.000000000 +0200
-+++ aclocal.m4	2009-05-30 17:13:08.000000000 +0200
-@@ -3856,7 +3856,7 @@
-   if test "$ld_shlibs" = yes; then
-     runpath_var=LD_RUN_PATH
-     hardcode_libdir_flag_spec='${wl}--rpath ${wl}$libdir'
--    export_dynamic_flag_spec='${wl}--export-dynamic'
-+    export_dynamic_flag_spec='${EXPORT_SYMBOLS_LDFLAGS}'
-     case $host_os in
-     cygwin* | mingw* | pw32*)
-       # dlltool doesn't understand --whole-archive et. al.
+--- m4/libtool.m4.orig	2009-11-29 20:26:36.000000000 +0000
++++ m4/libtool.m4	2009-11-29 20:29:09.000000000 +0000
+@@ -5947,7 +5947,7 @@
+ 	  xl*)
+ 	    # IBM XL 8.0 on PPC, with GNU ld
+ 	    _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath ${wl}$libdir'
+-	    _LT_TAGVAR(export_dynamic_flag_spec, $1)='${wl}--export-dynamic'
++	    _LT_TAGVAR(export_dynamic_flag_spec, $1)='${EXPORT_SYMBOLS_LDFLAGS}'
+ 	    _LT_TAGVAR(archive_cmds, $1)='$CC -qmkshrobj $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
+ 	    if test "x$supports_anon_versioning" = xyes; then
+ 	      _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $output_objdir/$libname.ver~
