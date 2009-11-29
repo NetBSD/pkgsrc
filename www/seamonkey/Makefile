@@ -1,10 +1,49 @@
-# $NetBSD: Makefile,v 1.28 2009/09/15 09:26:07 ghen Exp $
+# $NetBSD: Makefile,v 1.29 2009/11/29 00:40:42 tnn Exp $
+#
 
-MOZILLA=		seamonkey
-COMMENT=		Full featured gecko-based browser
+DISTNAME=	seamonkey-${SM_VER}.source
+PKGNAME=	seamonkey-${SM_VER}
+SM_VER=		2.0
+CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
+EXTRACT_SUFX=	.tar.bz2
 
-MOZILLA_USE_GTK2=	# yes
-MOZILLA_USE_XFT=	YES
+MAINTAINER=	tnn@NetBSD.org
+HOMEPAGE=	http://www.mozilla.org/projects/seamonkey/
+COMMENT=	Full featured gecko-based browser
 
-.include "../../www/seamonkey/Makefile-seamonkey.common"
+WRKSRC=		${WRKDIR}/comm-1.9.1
+MOZILLA_DIR=	mozilla/
+
+CONFIG_GUESS_OVERRIDE+=	directory/c-sdk/config/autoconf/config.guess
+CONFIG_SUB_OVERRIDE+=	directory/c-sdk/config/autoconf/config.sub
+
+CONFIGURE_ARGS+=	--enable-application=suite
+CONFIGURE_ARGS+=	--enable-static
+
+ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
+
+MOZILLA_PATCHES=	${.CURDIR}/../../devel/xulrunner/patches/patch-*
+pre-patch:
+	@${STEP_MSG} "Applying common mozilla patches from devel/xulrunner"
+.for i in ${MOZILLA_PATCHES}
+	${RUN} ${CAT} ${i} | ${PATCH} -s -p0 -d ${WRKSRC}/${MOZILLA_DIR} || \
+	  { ${ERROR_MSG} "Patch ${i} failed"; ${_PKGSRC_PATCH_FAIL}; }
+.endfor
+
+pre-configure:
+	cd ${WRKSRC}/directory/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/mozilla && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/mozilla/nsprpub && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/directory/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
+
+do-build:
+# XXX for some reason it doesn't work unless -j is explicitly specified
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
+
+
+.include "../../devel/xulrunner/mozilla-common.mk"
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
