@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4476 2009/11/29 21:49:59 snj Exp $
+$NetBSD: CHANGES-2009,v 1.4477 2009/11/29 22:20:45 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5982,3 +5982,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-Sort-SQL to 0.07 [seb 2009-11-29]
 	Updated graphics/inkscape to 0.47 [tnn 2009-11-29]
 	Added graphics/tango-icon-theme version 0.8.90 [snj 2009-11-29]
+	Updated x11/xfce4-terminal to 0.4.2 [snj 2009-11-29]
+	Updated x11/xfce4-panel to 4.6.2 [snj 2009-11-29]
+	Updated x11/xfce4-settings to 4.6.3 [snj 2009-11-29]
