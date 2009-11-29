@@ -1,4 +1,4 @@
-# $NetBSD: legacy-Makefile.common,v 1.1 2009/11/28 22:01:23 tnn Exp $
+# $NetBSD: legacy-Makefile.common,v 1.2 2009/11/29 00:42:36 tnn Exp $
 # used by mail/thunderbird2/Makefile-thunderbird.common
 # used by time/sunbird/Makefile-sunbird.common
 #
@@ -23,7 +23,7 @@ GNU_CONFIGURE=		yes
 # Mozilla applications require the frame-pointer
 BUILDLINK_TRANSFORM+=	rm:-fomit-frame-pointer
 
-INSTALL_TEMPLATES+=	${.CURDIR}/../../www/seamonkey/INSTALL
+INSTALL_TEMPLATES+=	${.CURDIR}/../../www/seamonkey/legacy-INSTALL
 
 CONFIG_GUESS_OVERRIDE+=	*/*/config.guess */*/*/config.guess */*/*/*/config.guess
 CONFIG_SUB_OVERRIDE+=	*/*/config.sub */*/*/config.sub */*/*/*/config.sub
