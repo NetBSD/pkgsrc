@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.16 2009/11/29 00:40:42 tnn Exp $
+# $NetBSD: options.mk,v 1.17 2009/11/29 02:22:35 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome
 
-PLIST_VARS+=	gnome debug
+PLIST_VARS+=	gnome
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
@@ -13,9 +13,6 @@ PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
 	!empty(MACHINE_ARCH:Marm)
 PKG_SUPPORTED_OPTIONS+=	mozilla-jit
 PKG_SUGGESTED_OPTIONS+=	mozilla-jit
-NANOJIT_ARCH.i386=	i386
-NANOJIT_ARCH.arm=	ARM
-NANOJIT_ARCH.sparc=	Sparc
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -37,7 +34,6 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
-PLIST.debug=		yes
 .else
 CONFIGURE_ARGS+=	--disable-debug
 .endif
