@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4470 2009/11/29 04:39:04 snj Exp $
+$NetBSD: CHANGES-2009,v 1.4471 2009/11/29 06:48:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5973,3 +5973,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed x11/xfce3 successor meta-pkgs/xfce4 [snj 2009-11-29]
 	Updated mail/thunderbird to 3.0rc1 [tnn 2009-11-29]
 	Updated sysutils/screentest to 2.0 [snj 2009-11-29]
+	Updated www/typolight27-translations to 20091127 [taca 2009-11-29]
+	Updated www/typolight26 to 2.6.7nb2 [taca 2009-11-29]
+	Updated www/typolight27 to 2.7.5nb1 [taca 2009-11-29]
