@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4471 2009/11/29 06:48:57 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4472 2009/11/29 08:11:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5976,3 +5976,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20091127 [taca 2009-11-29]
 	Updated www/typolight26 to 2.6.7nb2 [taca 2009-11-29]
 	Updated www/typolight27 to 2.7.5nb1 [taca 2009-11-29]
+	Added misc/topless version 1.52 [obache 2009-11-29]
+	Added databases/ruby-ldap version 0.9.8 [obache 2009-11-29]
