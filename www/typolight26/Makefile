@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/11/22 16:17:59 taca Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/29 06:46:21 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
 PKGNAME=	typolight${TL_VER}-${TL_PKGVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -76,6 +76,7 @@ INSTALLATION_DIRS+=	${TL_DOCDIR} ${TL_EGDIR} ${TL_WEBDIR}/system/config
 OWN_DIRS_PERMS+= \
 		${TL_WEBDIR} ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/plugins ${BINOWN} ${APACHE_GROUP} 0775 \
+		${TL_WEBDIR}/plugins/tcpdf/cache ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system/drivers ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system/html ${BINOWN} ${APACHE_GROUP} 0770 \
