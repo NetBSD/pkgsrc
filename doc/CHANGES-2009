@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4469 2009/11/29 03:10:50 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.4470 2009/11/29 04:39:04 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5972,3 +5972,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/seamonkey to 2.0 [tnn 2009-11-29]
 	Removed x11/xfce3 successor meta-pkgs/xfce4 [snj 2009-11-29]
 	Updated mail/thunderbird to 3.0rc1 [tnn 2009-11-29]
+	Updated sysutils/screentest to 2.0 [snj 2009-11-29]
