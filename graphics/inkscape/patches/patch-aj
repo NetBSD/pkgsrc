@@ -1,22 +1,15 @@
-$NetBSD: patch-aj,v 1.1 2009/05/20 12:00:17 tnn Exp $
+$NetBSD: patch-aj,v 1.2 2009/11/29 20:51:51 tnn Exp $
 
---- src/dialogs/stroke-style.cpp.orig	2008-03-11 05:19:51.000000000 +0100
-+++ src/dialogs/stroke-style.cpp
-@@ -1098,7 +1098,7 @@ sp_stroke_style_line_widget_new(void)
- // with it, the two remaining calls of stroke_average_width, allowing us to get rid of that
- // function in desktop-style.
+--- src/live_effects/lpe-dynastroke.cpp.orig	2009-11-16 18:29:33.000000000 +0100
++++ src/live_effects/lpe-dynastroke.cpp
+@@ -25,6 +25,10 @@
+ #include <2geom/sbasis-math.h>
+ #include <2geom/piecewise.h>
  
--    a = gtk_adjustment_new(1.0, 0.0, 1000.0, 0.1, 10.0, 10.0);
-+    a = gtk_adjustment_new(1.0, 0.0, 1000.0, 0.1, 10.0, 0.0);
-     gtk_object_set_data(GTK_OBJECT(spw), "width", a);
-     sb = gtk_spin_button_new(GTK_ADJUSTMENT(a), 0.1, 3);
-     gtk_tooltips_set_tip(tt, sb, _("Stroke width"), NULL);
-@@ -1167,7 +1167,7 @@ sp_stroke_style_line_widget_new(void)
++/* xxx should test if this is needed  */
++#define fmin(a,b) ((a)<(b)?(a):(b))
++#define fmax(a,b) ((a)>(b)?(a):(b))
++
+ namespace Inkscape {
+ namespace LivePathEffect {
  
-     hb = spw_hbox(t, 3, 1, i);
- 
--    a = gtk_adjustment_new(4.0, 0.0, 100.0, 0.1, 10.0, 10.0);
-+    a = gtk_adjustment_new(4.0, 0.0, 100.0, 0.1, 10.0, 0.0);
-     gtk_object_set_data(GTK_OBJECT(spw), "miterlimit", a);
- 
-     sb = gtk_spin_button_new(GTK_ADJUSTMENT(a), 0.1, 2);
