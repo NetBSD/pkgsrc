@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2009/11/29 23:29:29 dholland Exp $
+
+Patch out some bogus code that directly inspects addresses of heap
+variables.
+
+--- intel2gas.cc~	2009-11-29 18:24:52.000000000 -0500
++++ intel2gas.cc	2009-11-29 18:31:22.000000000 -0500
+@@ -57,10 +57,12 @@ syntaxlist_t *findSyntax(char const *nam
+   int counter = 0;
+   char* prev = 0;
+   while (l) {
++#if 0
+     if (int(l->name) > 0x10000000) {
+       printf("Error %d, prev=%s\n", counter, prev);
+       break;
+     }
++#endif
+     if (!strcasecmp(name,l->name))
+       return l;
+     counter++;
