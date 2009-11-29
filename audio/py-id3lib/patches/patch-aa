@@ -1,0 +1,108 @@
+$NetBSD: patch-aa,v 1.1 2009/11/29 23:04:15 dholland Exp $
+
+Fix for LP64 on python > 2.4.
+
+--- pyid3lib.cc.orig	2003-02-16 18:50:20.000000000 -0500
++++ pyid3lib.cc	2009-11-29 18:02:46.000000000 -0500
+@@ -10,6 +10,14 @@
+ #include <id3/id3lib_frame.h>
+ #include <id3/tag.h>
+ 
++#if defined(PY_MAJOR_VERSION) && PY_MAJOR_VERSION == 2 && PY_MINOR_VERSION < 5
++typedef int Py_ssize_t;
++typedef intargfunc ssizeargfunc;
++typedef intintargfunc ssizessizeargfunc;
++typedef intobjargproc ssizeobjargproc;
++typedef intintobjargproc ssizessizeobjargproc;
++#endif
++
+ typedef struct
+ {
+     PyObject_HEAD
+@@ -61,11 +69,11 @@ static PyObject* dict_from_frame( ID3_Fr
+ static ID3_Frame* frame_from_dict( PyObject* dict );
+ static ID3_Frame* frame_from_dict( ID3_FrameID fid, PyObject* dict );
+ 
+-static int id3_length( ID3Object* self );
+-static PyObject* id3_item( ID3Object* self, int index );
+-static PyObject* id3_slice( ID3Object* self, int start, int end );
+-static int id3_ass_item( ID3Object* self, int index, PyObject* dict );
+-static int id3_ass_slice( ID3Object* self, int start, int end, PyObject* dict );
++static Py_ssize_t id3_length( ID3Object* self );
++static PyObject* id3_item( ID3Object* self, Py_ssize_t index );
++static PyObject* id3_slice( ID3Object* self, Py_ssize_t start, Py_ssize_t end );
++static int id3_ass_item( ID3Object* self, Py_ssize_t index, PyObject* dict );
++static int id3_ass_slice( ID3Object* self, Py_ssize_t start, Py_ssize_t end, PyObject* dict );
+ static int id3_contains( ID3Object* self, PyObject* other );
+ 
+ static PyObject* id3_append( ID3Object* self, PyObject* args );
+@@ -80,13 +88,13 @@ static PyObject* frameid_lookup = NULL;
+ 
+ 
+ static PySequenceMethods tag_as_sequence = {
+-    (inquiry)id3_length,
++    (lenfunc)id3_length,
+     NULL,
+     NULL,
+-    (intargfunc)id3_item,
+-    (intintargfunc)id3_slice,
+-    (intobjargproc)id3_ass_item,
+-    (intintobjargproc)id3_ass_slice,
++    (ssizeargfunc)id3_item,
++    (ssizessizeargfunc)id3_slice,
++    (ssizeobjargproc)id3_ass_item,
++    (ssizessizeobjargproc)id3_ass_slice,
+     (objobjproc)id3_contains,
+     NULL,
+     NULL,
+@@ -236,12 +244,12 @@ static PyObject* id3iter_iternext( ID3It
+ //
+ /////////////////
+ 
+-static int id3_length( ID3Object* self )
++static Py_ssize_t id3_length( ID3Object* self )
+ {
+     return self->size;
+ }
+ 
+-static PyObject* id3_item( ID3Object* self, int index )
++static PyObject* id3_item( ID3Object* self, Py_ssize_t index )
+ {
+     if ( index < 0 )
+ 	index += self->size;
+@@ -255,7 +263,7 @@ static PyObject* id3_item( ID3Object* se
+     return dict_from_frame( self->frames[index] );
+ }
+ 
+-static PyObject* id3_slice( ID3Object* self, int start, int end )
++static PyObject* id3_slice( ID3Object* self, Py_ssize_t start, Py_ssize_t end )
+ {
+     PyObject* result;
+     int i;
+@@ -284,7 +292,7 @@ static PyObject* id3_slice( ID3Object* s
+ }
+ 
+ 
+-static int id3_ass_item( ID3Object* self, int index, PyObject* dict )
++static int id3_ass_item( ID3Object* self, Py_ssize_t index, PyObject* dict )
+ {
+     ID3_Frame* newframe;
+ 
+@@ -382,7 +390,7 @@ static ID3_Frame** frames_from_dictseq( 
+     return NULL;
+ }
+ 
+-static int id3_ass_slice( ID3Object* self, int start, int end, PyObject* dictseq )
++static int id3_ass_slice( ID3Object* self, Py_ssize_t start, Py_ssize_t end, PyObject* dictseq )
+ {
+     int i, n;
+     int newsize;
+@@ -824,7 +832,7 @@ static ID3_Frame* frame_from_dict( PyObj
+ static ID3_Frame* frame_from_dict( ID3_FrameID fid, PyObject* dict )
+ {
+     char* data;
+-    int size;
++    Py_ssize_t size;
+     
+     ID3_Field* field;
+     ID3_FieldID flid;
