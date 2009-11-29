@@ -1,28 +1,13 @@
-$NetBSD: patch-ah,v 1.3 2009/05/20 12:00:17 tnn Exp $
+$NetBSD: patch-ah,v 1.4 2009/11/29 20:51:51 tnn Exp $
 
---- src/widgets/sp-color-slider.cpp.orig	2009-05-20 13:21:10.000000000 +0200
-+++ src/widgets/sp-color-slider.cpp
-@@ -12,6 +12,7 @@
-  * This code is in public domain
-  */
- 
-+#include <gtk/gtkversion.h>
- #include <gtk/gtksignal.h>
- #include "sp-color-scales.h"
- 
-@@ -330,8 +331,14 @@ sp_color_slider_set_adjustment (SPColorS
- 	g_return_if_fail (SP_IS_COLOR_SLIDER (slider));
- 
- 	if (!adjustment) {
--		adjustment = (GtkAdjustment *) gtk_adjustment_new (0.0, 0.0, 1.0, 0.01, 0.1, 0.1);
-+		adjustment = (GtkAdjustment *) gtk_adjustment_new (0.0, 0.0, 1.0, 0.01, 0.0, 0.0);
- 	}
-+#if GTK_CHECK_VERSION (2,14,0)
-+    else {
-+        gtk_adjustment_set_page_increment(adjustment, 0.0);
-+        gtk_adjustment_set_page_size(adjustment, 0.0);
-+    }
-+#endif
- 
- 	if (slider->adjustment != adjustment) {
- 		if (slider->adjustment) {
+--- packaging/macosx/Resources/bin/inkscape.orig	2009-11-16 18:29:06.000000000 +0100
++++ packaging/macosx/Resources/bin/inkscape
+@@ -104,7 +104,7 @@ fi
+ # If the AppleCollationOrder preference doesn't exist, we fall back to using
+ # the AppleLocale preference.
+ LANGSTR=`defaults read .GlobalPreferences AppleCollationOrder 2>/dev/null`
+-if [ "x$LANGSTR" == "x" ]
++if [ "x$LANGSTR" = "x" ]
+ then
+     echo "Warning: AppleCollationOrder setting not found, using AppleLocale." 1>&2
+     LANGSTR=`defaults read .GlobalPreferences AppleLocale 2>/dev/null | \

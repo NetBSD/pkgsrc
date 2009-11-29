@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2009/11/22 16:08:46 drochner Exp $
+# $NetBSD: Makefile,v 1.46 2009/11/29 20:51:51 tnn Exp $
 
-DISTNAME=	inkscape-0.46
-PKGREVISION=	6
+DISTNAME=	inkscape-0.47
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 .endif
 
+EXTRACT_USING=		bsdtar
 GCC_REQD+=		3.0
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -53,6 +53,7 @@ BUILDLINK_API_DEPENDS.poppler-includes+= poppler-includes>=0.12.2
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
