@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/01/30 08:18:45 obache Exp $
+# $NetBSD: Makefile,v 1.61 2009/11/29 23:42:35 dholland Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -9,7 +9,10 @@ EXTRACT_SUFX=	-tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/openh323/
-COMMENT=	Portable Windows Libary
+COMMENT=	Portable Windows Library
+# note: obsoleted by devel/ptlib
+
+NOT_FOR_PLATFORM+=	*-*-alpha *-*-sparc64 *-*-x86_64
 
 WRKSRC=			${WRKDIR}/pwlib
 USE_TOOLS+=		bison gmake
