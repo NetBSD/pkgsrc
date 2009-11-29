@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/11/23 11:57:36 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2009/11/29 18:51:06 joerg Exp $
 #
 
 DISTNAME=	sound-theme-freedesktop-0.7
@@ -15,7 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake intltool msgfmt autoconf automake
 
+BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+
 pre-configure:
 	(cd ${WRKSRC} && autoreconf -i)
 
+BUILDLINK_DEPMETHOD.glib2=	build
+
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
