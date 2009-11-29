@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.16.2.2 2009/11/29 15:33:19 tron Exp $
+
+--- configure.orig	2009-10-17 03:53:05.000000000 +0200
++++ configure
+@@ -28849,7 +28849,7 @@ $as_echo "$ac_try_echo") >&5
+        }; then
+   { $as_echo "$as_me:$LINENO: result: no" >&5
+ $as_echo "no" >&6; }
+-       X_LIBS="$X_LIBS -R$x_libraries"
++       X_LIBS="$X_LIBS ${COMPILER_RPATH_FLAG}$x_libraries"
+ else
+   $as_echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
