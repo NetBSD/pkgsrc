@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4475 2009/11/29 20:52:55 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.4476 2009/11/29 21:49:59 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5981,3 +5981,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.31 [seb 2009-11-29]
 	Updated databases/p5-Sort-SQL to 0.07 [seb 2009-11-29]
 	Updated graphics/inkscape to 0.47 [tnn 2009-11-29]
+	Added graphics/tango-icon-theme version 0.8.90 [snj 2009-11-29]
