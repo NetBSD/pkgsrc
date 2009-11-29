@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2009/01/25 20:12:14 shattered Exp $
+# $NetBSD: Makefile.common,v 1.6 2009/11/29 20:16:20 joerg Exp $
 #
 
 DISTNAME=		wxGTK-2.4.2
@@ -23,11 +23,13 @@ CONFIGURE_ARGS+=	--with-libjpeg=sys
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-libpng=sys
 CONFIGURE_ARGS+=	--with-libtiff=sys
-CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 
 CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
 
 DOCDIR=			${PREFIX}/share/doc/wx/gtk
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
