@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4474 2009/11/29 14:49:55 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4475 2009/11/29 20:52:55 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5980,3 +5980,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/ruby-ldap version 0.9.8 [obache 2009-11-29]
 	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.31 [seb 2009-11-29]
 	Updated databases/p5-Sort-SQL to 0.07 [seb 2009-11-29]
+	Updated graphics/inkscape to 0.47 [tnn 2009-11-29]
