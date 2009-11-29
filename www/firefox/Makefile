@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2009/11/27 16:59:18 tnn Exp $
+# $NetBSD: Makefile,v 1.64 2009/11/29 03:28:04 tnn Exp $
 #
 
 .include "../../devel/xulrunner/dist.mk"
@@ -34,21 +34,22 @@ MOZILLA_ICON=	${WRKSRC}/browser/branding/unofficial/default48.png
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pixmaps
-	${SED}	-e 's|@MOZILLA@|${MOZILLA}|g'				\
+post-build:
+	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
 	  -e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|g'			\
 	  -e 's|@FIREFOX_ICON@|${MOZILLA}.png|g'			\
 	  < ${FILESDIR}/desktop.in					\
 	  > ${WRKDIR}/desktop
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${FILESDIR}/firefox.sh.in	\
+	  > ${WRKDIR}/firefox
+
+INSTALLATION_DIRS+=	share/applications share/pixmaps
+post-install:
 	${INSTALL_DATA} ${WRKDIR}/desktop				\
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
 	${INSTALL_DATA} ${MOZILLA_ICON}					\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
 	rm -f ${DESTDIR}${PREFIX}/bin/firefox
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${FILESDIR}/firefox.sh.in	\
-	  > ${WRKDIR}/firefox
 	${INSTALL_SCRIPT} ${WRKDIR}/firefox ${DESTDIR}${PREFIX}/bin
 
 BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner-1.9.1.5{,nb*}

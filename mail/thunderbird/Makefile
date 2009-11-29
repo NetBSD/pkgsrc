@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/11/29 03:06:42 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2009/11/29 03:28:35 tnn Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
@@ -45,14 +45,15 @@ do-build:
 
 MOZILLA=thunderbird
 MOZILLA_NAME=Thunderbird
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pixmaps
-	${SED}  -e 's|@MOZILLA@|${MOZILLA}|g'				\
+post-build:
+	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
 	  -e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|g'			\
 	  -e 's|@MOZILLA_ICON@|${MOZILLA}.png|g'			\
 	  < ${FILESDIR}/desktop.in					\
 	  > ${WRKDIR}/desktop
+
+INSTALLATION_DIRS+=	share/applications share/pixmaps
+post-install:
 	${INSTALL_DATA} ${WRKDIR}/desktop				\
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
 	${INSTALL_DATA} ${WRKSRC}/mail/branding/nightly/mailicon48.png	\
