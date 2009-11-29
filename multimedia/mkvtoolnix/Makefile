@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/11/23 22:25:16 jakllsch Exp $
+# $NetBSD: Makefile,v 1.17 2009/11/29 19:14:41 joerg Exp $
 #
 
 DISTNAME=	mkvtoolnix-2.9.8
@@ -33,7 +33,6 @@ PLIST.gui=	yes
 CONFIGURE_ARGS+= --enable-gui --enable-wxwidgets 
 .   include "../../x11/wxGTK28/buildlink3.mk"
 .else
-PLIST.gui=      no
 CONFIGURE_ARGS+= --disable-gui --disable-wxwidgets
 .endif
 
