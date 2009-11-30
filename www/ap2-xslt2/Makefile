@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/07/27 18:53:40 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/11/30 18:52:33 joerg Exp $
 #
 
 DISTNAME=	modxslt-${DIST_VER}
@@ -22,7 +22,10 @@ PKG_APACHE_ACCEPTED=	apache2
 
 CONFIGURE_ARGS+=	--enable-fallback-wraparound
 CONFIGURE_ARGS+=	--enable-libxslt-hack
-CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs
+CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs \
+			--with-xml2-config=${BUILDLINK_PREFIX.libxml2}/bin/xml2-config \
+			--with-apr-config=${BUILDLINK_PREFIX.apr}/bin/apr-config \
+			--with-apu-config=${BUILDLINK_PREFIX.apr}/bin/apu-config 
 
 REPLACE_BASH=	utils/modxslt-config.pre.in
 
