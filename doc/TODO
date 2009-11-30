@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8711 2009/11/30 11:15:25 wiz Exp $
+$NetBSD: TODO,v 1.8712 2009/11/30 12:01:01 tron Exp $
 
 Suggested new packages
 ======================
@@ -448,7 +448,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o benchfft-3.1
 	o bftpd-2.6
 	o biew-6.0.2
-	o bind-9.5.2
 	o binutils-2.20
 	o bioperl-1.5.0
 	o bitlbee-1.2.4
