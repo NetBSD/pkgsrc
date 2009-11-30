@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/06/12 02:14:27 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2009/11/30 18:32:53 heinz Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -16,6 +16,7 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/patch/patch.html
 COMMENT=	Patch files using diff output
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
