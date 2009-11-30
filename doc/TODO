@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8710 2009/11/30 06:19:33 taca Exp $
+$NetBSD: TODO,v 1.8711 2009/11/30 11:15:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -365,7 +365,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7.2
+	o TeXmacs-1.0.7.3
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
@@ -429,12 +429,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asymptote-1.89
 	o aterm-1.0.1
 	o auctex-11.85
-	o audacious-plugins-2.1
+	o audacious-plugins-2.2
 	o autoconvert-0.3.16
 	o autogen-5.10
 	o avcheck-0.91
 	o avl-2.0.2a
-	o awesome-3.4.1
+	o awesome-3.4.2
 	o baci-20040415
 	o bakefile-0.2.8
 	o balance-3.42
@@ -459,7 +459,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bonnie++-1.96
 	o bos-2.5
 	o boson-0.13
-	o bouml-4.13.1
+	o bouml-4.16.3
 	o brasero-2.28.2 [GNOME 2.28]
 	o bugzilla-3.4.4
 	o byacc-20080824
@@ -573,7 +573,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-388
+	o etm-397
 	o evolution-mapi-0.28.1 [GNOME 2.28]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
@@ -583,7 +583,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ezxml-0.8.6
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o fbreader-0.11.2
 	o fcitx-3.6.2
 	o fd-3.00d
 	o fdgw-20040609
@@ -642,7 +641,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fugu-1.2.3
 	o fuse-archivemount-0.6.0
 	o fuse-encfs-1.5.2
-	o fuse-ntfs-3g-2009.4.4
+	o fuse-ntfs-3g-2009.11.14
 	o fvwm2-themes-0.7.0
 	o gap-4r4p9
 	o gated-3.6
@@ -775,7 +774,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o irrd-2.3.4 [pkg/36813|38002]
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
-	o ispell-german-20090107
+	o ispell-german-20091006
 	o ispell-slovak-0.3.2
 	o ispman-1.2
 	o ivtools-1.2.8
@@ -812,7 +811,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kmess-1.5.1
 	o kmp-0.5
 	o kodos-2.4.5
-	o koffice-2.0.91
 	o koffice-l10n-de-2.0.2
 	o konversation-1.2.1
 	o kphotobook-0.0.7
@@ -942,6 +940,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
+	o mew-6.3 [pkg/42387]
 	o mftrace-1.2.15
 	o mgetty+sendfax-1.1.35
 	o mimedefang-2.67
@@ -952,11 +951,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mknmz-wwwoffle-0.7.2
 	o mlterm-2.9.4
 	o moc-2.4.4
-	o modular-xorg-server-1.7.1
+	o modular-xorg-server-1.7.2
 	o monodevelop-2.1.1
 	o moserial-2.28.0 [GNOME 2.28]
 	o mp3blaster-3.2.3
-	o mp3diags-0.99.06.044
+	o mp3diags-1.0.00
 	o mp3splt-2.2.7
 	o mpc-0.18
 	o mpeg4ip-1.6.1
@@ -967,7 +966,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o msmtp-1.4.19
 	o mtools-4.0.11
 	o multitail-5.2.2
-	o munin-1.3.4
+	o munin-1.4.0
 	o muse-0.9.2
 	o musicpd-0.15.6
 	o mysql-5.1.34
@@ -1018,6 +1017,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openafs-1.4.11
 	o opencobol-1.0
 	o openh323-1.19.1
+	o openldap-2.4.20
 	o openmortal-0.7.1
 	o openmotif-2.3.2
 	o openmsx-0.7.0
@@ -1034,16 +1034,21 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Class-Data-Inheritable-1.00
+	o p5-DBD-SQLite-1.27
+	o p5-Date-Manip-6.04
+	o p5-DateTime-Event-ICal-0.10
 	o p5-DateTime-Format-W3CDTF-0.05
 	o p5-DateTime-TimeZone-1.05
 	o p5-Error-1.02
+	o p5-FCGI-1.3.0
 	o p5-GnuPG-Interface-0.42
+	o p5-IO-Socket-INET6-2.57
 	o p5-Image-Info-1.30
 	o p5-Module-ScanDeps-0.96
 	o p5-Module-Signature-0.61
 	o p5-Pod-Simple-3.10
-	o p5-Spreadsheet-WriteExcel-2.28
-	o p5-URI-1.50
+	o p5-Spreadsheet-WriteExcel-2.29
+	o p5-URI-1.51
 	o p5-ispman-1.2
 	o p5-libwww-5.834
 	o p5-sybperl-2.18
@@ -1169,6 +1174,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o randread-0.2
 	o randrproto-1.3.1
 	o rapidsvn-0.12
+	o raptor-1.4.20
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
@@ -1251,7 +1257,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scmgit-base-1.6.5.3
 	o scmgit-docs-1.6.5.3
 	o scrollz-1.9.99
-	o scrotwm-0.9.19
+	o scrotwm-0.9.20
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o sdlmess-0.135
@@ -1326,7 +1332,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o telepathy-gabble-0.9.2
 	o telepathy-glib-0.9.1
 	o telepathy-idle-0.1.5
-	o tellico-2.1.1
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.9.2
 	o tfmxplay-1.1.6
@@ -1363,7 +1368,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucblogo-5.5
 	o udunits-1.12.9
 	o uim-1.5.7
-	o unison-2.32.52
 	o unrealircd-3.2.8.1
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
@@ -1410,7 +1414,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wwwoffle-2.9e
 	o wxRemind-101
 	o wyrd-1.4.4
-	o x264-devel-20091121
+	o x264-devel-20091129
 	o xanalyser-1.30
 	o xapian-1.0.17
 	o xapian-omega-1.0.17
@@ -1473,6 +1477,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xm7-1020s
 	o xmbdfed-4.6
 	o xmcd-3.3.2
+	o xmlstarlet-1.0.1.2
 	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
