@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 2009/11/30 01:28:45 dholland Exp $
+
+Fix LP64 build.
+
+--- htdig/SGMLEntities.cc~	2002-01-31 18:47:17.000000000 -0500
++++ htdig/SGMLEntities.cc	2009-11-29 20:30:47.000000000 -0500
+@@ -154,7 +154,7 @@ SGMLEntities::translate(char *entity)
+ 	return ' ';
+     if (junk.trans->Exists(entity))
+     {
+-	return (unsigned char) ((int) (*junk.trans)[entity]);
++	return (unsigned char) ((int)(intptr_t) (*junk.trans)[entity]);
+     }
+     else if (*entity == '#' && isdigit(entity[1]))
+     {
