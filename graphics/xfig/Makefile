@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2009/11/24 06:08:48 obache Exp $
+# $NetBSD: Makefile,v 1.59 2009/11/30 13:50:38 itohy Exp $
 
 DISTNAME=	xfig.3.2.5b.full
 PKGNAME=	xfig-3.2.5b
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 
@@ -28,7 +28,7 @@ CFLAGS+=		-I${X11PREFIX}/include/X11
 .include "../../mk/bsd.prefs.mk"
 
 post-extract:
-	cd ${WRKSRC} && ${RM} -f Doc/*.orig Doc/*/*.orig Doc/*/*/*.orig
+	cd ${WRKSRC} && ${RM} -f Doc/*.orig Doc/*/*.orig Doc/*/*.save Doc/*/*/*.orig
 	find ${WRKSRC}/Libraries -type d -exec ${CHMOD} 0755 {} \;
 	find ${WRKSRC}/Libraries -type f -exec ${CHMOD} 0644 {} \;
 	find ${WRKSRC}/Doc -type d -exec ${CHMOD} 0755 {} \;
@@ -50,6 +50,12 @@ SUBST_SED.xaw+=		-e 's/.*\(\#define.XAW3D\)/\1/'
 # undef XAW3D and XAW3D1_5E
 SUBST_SED.xaw+=		-e 's/.*\(\#define.XAW3D\)/XCOMM \1/'
 .endif
+
+SUBST_CLASSES+=		i18n
+SUBST_STAGE.i18n=	post-patch
+SUBST_MESSAGE.i18n=	Enabling I18N
+SUBST_FILES.i18n=	Imakefile
+SUBST_SED.i18n+=	-e 's/XCOMM \(\#define I18N\)/\1/'
 
 XFIGDOCDIR=		${PREFIX}/share/doc/xfig
 
