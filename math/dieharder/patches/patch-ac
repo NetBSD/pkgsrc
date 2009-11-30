@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/09/13 10:07:36 gson Exp $
+$NetBSD: patch-ac,v 1.2 2009/11/30 17:25:08 joerg Exp $
 
---- dieharder/Makefile.am.orig	2007-05-22 03:34:27.000000000 +0300
+--- dieharder/Makefile.am.orig	2007-05-22 02:34:27.000000000 +0200
 +++ dieharder/Makefile.am
 @@ -46,7 +46,6 @@ SRCINCLUDES = $(shell ls *.h  2>&1 | sed
  # see how to force a consistent build when working on the UI
@@ -10,20 +10,27 @@ $NetBSD: patch-ac,v 1.1.1.1 2007/09/13 10:07:36 gson Exp $
  
  SOURCES = $(LIBSOURCES) $(SRCSOURCES)
  INCLUDES = $(LIBINCLUDES) $(SRCINCLUDES)
-@@ -63,11 +62,8 @@ CC = gcc
+@@ -57,17 +56,11 @@ DEFINES = -DVERSION=$(VERSION)
+ #========================================================================
+ # Define parameters and directives needed in compile/link steps.
+ #========================================================================
+-# C Compiler
+-CC = gcc
+-
  # Compile flags (use fairly standard -O3 as default)
- CFLAGS = -O3 -I ../include $(DEFINES) 
- 
+-CFLAGS = -O3 -I ../include $(DEFINES) 
+-
 -# Linker flags.
 -LDFLAGS =
--
++CFLAGS += -I ../include $(DEFINES) 
+ 
  # Libraries
 -LIBS = -L ../libdieharder -ldieharder -lgsl -lgslcblas -lm
 +LIBS = ../libdieharder/libdieharder.la -lgsl -lgslcblas -lm
  
  #========================================================================
  # List of variants one can make.  all is the default.  We always
-@@ -76,18 +72,8 @@ LIBS = -L ../libdieharder -ldieharder -l
+@@ -76,18 +69,8 @@ LIBS = -L ../libdieharder -ldieharder -l
  #========================================================================
  all: $(PROGRAM)
  
@@ -44,7 +51,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2007/09/13 10:07:36 gson Exp $
  
  #========================================================================
  # The only safe place to do commits is in the toplevel directory
-@@ -123,10 +109,10 @@ clean : 
+@@ -123,15 +106,15 @@ clean : 
  install : $(PROGRAM)
  	(strip $(PROGRAM);\
  	install -d $(prefix)/bin; \
@@ -58,3 +65,9 @@ $NetBSD: patch-ac,v 1.1.1.1 2007/09/13 10:07:36 gson Exp $
  
  #========================================================================
  # We give all generic rules below.  Currently we only need a rule for 
+ # objects.
+ #========================================================================
+ %.o:%.c
+-	$(CC) -c $(CFLAGS) $<
++	$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<
+ 
