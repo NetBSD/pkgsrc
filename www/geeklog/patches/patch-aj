@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.3 2009/09/15 10:48:46 taca Exp $
+$NetBSD: patch-aj,v 1.4 2009/11/30 15:44:45 taca Exp $
 
 * Change for pkgsrc.
 * Output Content-Type header explicitly.
@@ -24,11 +24,3 @@ $NetBSD: patch-aj,v 1.3 2009/09/15 10:48:46 taca Exp $
  
  $html_path          = INST_getHtmlPath();
  $siteconfig_path    = '../../siteconfig.php';
-@@ -1242,6 +1234,7 @@ $display .= '<br' . XHTML . '><br' . XHT
-     . '</body>' . LB 
-     . '</html>';
- 
-+header('Content-Type: text/html; charset=' . $LANG_CHARSET);
- echo $display;
- 
- ?>
