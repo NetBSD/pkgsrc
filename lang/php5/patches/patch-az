@@ -1,6 +1,11 @@
 $NetBSD$
 
-* Fix for htmlspecialchars(): r289411, r289554, r289565, r289567, r289605.
+* Fix for htmlspecialchars():
+	http://svn.php.net/viewvc?view=revision&revision=289411
+	http://svn.php.net/viewvc?view=revision&revision=289554
+	http://svn.php.net/viewvc?view=revision&revision=289565
+	http://svn.php.net/viewvc?view=revision&revision=289567
+	http://svn.php.net/viewvc?view=revision&revision=289605
 
 --- ext/standard/html.c.orig	2008-12-31 20:17:49.000000000 +0900
 +++ ext/standard/html.c
