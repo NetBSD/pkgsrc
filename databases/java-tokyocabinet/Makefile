@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/11/25 11:33:55 obache Exp $
+# $NetBSD: Makefile,v 1.6 2009/11/30 21:59:37 joerg Exp $
 #
 
 DISTNAME=	tokyocabinet-java-1.22
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
+
+MAKE_ENV+=	INCLUDEDIR=${BUILDLINK_PREFIX.tokyocabinet}/include
 
 TEST_TARGET=	check
 
