@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2009/10/22 14:49:06 taca Exp $
+# $NetBSD: Makefile,v 1.74 2009/11/30 06:14:08 taca Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 HOMEPAGE=		http://www.php.net/
 COMMENT=		PHP Hypertext Preprocessor version 5
@@ -37,19 +37,19 @@ MAKE_ENV+=		INSTALL_ROOT=${DESTDIR:Q}
 CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
 
-SUBST_CLASSES+=		cgi
-SUBST_MESSAGE.cgi=	Fixing CGI path.
-SUBST_STAGE.cgi=	pre-configure
-SUBST_FILES.cgi=	configure
-SUBST_SED.cgi=		-e 's,@CGIDIR@,${CGIDIR},g'
+SUBST_CLASSES+=		path
+SUBST_MESSAGE.path=	Fixing common paths.
+SUBST_STAGE.path=	pre-configure
+SUBST_FILES.path=	configure php.ini-dist php.ini-recommended
+SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
+SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
+
+INSTALLATION_DIRS+=	${CGIDIR}
 
 # Make sure modules can link correctly
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
 .endif
-
-pre-install:
-	${INSTALL_DATA_DIR} ${DESTDIR:Q}${CGIDIR:Q}
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php \
