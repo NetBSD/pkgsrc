@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4480 2009/11/30 06:18:43 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4481 2009/11/30 11:58:49 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5991,3 +5991,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/gentle to 97nb1 [dholland 2009-11-30]
 	Updated lang/php5 to 5.2.11nb2 [taca 2009-11-30]
 	Updated mail/pear-Mail to 1.1.14nb2 [taca 2009-11-30]
+	Updated net/bind95 to 9.5.2pl1 [tron 2009-11-30]
