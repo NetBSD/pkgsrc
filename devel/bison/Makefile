@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2009/05/30 14:47:07 joerg Exp $
+# $NetBSD: Makefile,v 1.71 2009/11/30 18:38:02 heinz Exp $
 
 DISTNAME=		bison-2.4.1
 PKGREVISION=		1
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		cjep@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/bison/bison.html
 COMMENT=		GNU yacc(1) replacement
+LICENSE=		gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
