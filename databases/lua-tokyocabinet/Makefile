@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/11/25 11:33:56 obache Exp $
+# $NetBSD: Makefile,v 1.10 2009/11/30 21:59:37 joerg Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.8
@@ -29,6 +29,8 @@ REPLACE.lua.new=	${LUADIR}/bin/lua
 REPLACE_FILES.lua=	*.lua
 
 INSTALLATION_DIRS+=	share/tokyocabinet/doc/lua
+
+MAKE_ENV+=	INCLUDEDIR=${BUILDLINK_PREFIX.tokyocabinet}/include
 
 post-extract:
 	${CHMOD} -R go-w ${WRKSRC}
