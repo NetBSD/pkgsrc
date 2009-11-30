@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/07/29 14:33:12 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2009/11/30 00:38:47 dholland Exp $
 
 DISTNAME=	nn-6.7.3
 CATEGORIES=	news
@@ -50,6 +50,7 @@ post-patch:
 	    <${WRKSRC}/config.h-dist >${WRKSRC}/config.h
 	@${CP} ${FILESDIR}/s-netbsd.h ${WRKSRC}/conf/s-netbsd.h
 	@${CP} ${FILESDIR}/m-powerpc.h ${WRKSRC}/conf/m-powerpc.h
+	@${CP} ${FILESDIR}/m-x86_64.h ${WRKSRC}/conf/m-x86_64.h
 	@${CP} ${WRKSRC}/conf/m-m680x0.h ${WRKSRC}/conf/m-m68k.h
 
 .include "../../mk/bsd.pkg.mk"
