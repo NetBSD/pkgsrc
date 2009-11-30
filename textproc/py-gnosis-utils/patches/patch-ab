@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2009/11/30 19:24:06 joerg Exp $
+
+--- gnosis/util/convert/pyfontify.py.orig	2009-11-30 20:12:42.000000000 +0100
++++ gnosis/util/convert/pyfontify.py
+@@ -31,8 +31,8 @@ import string, regex
+ 
+ # First a little helper, since I don't like to repeat things. (Tismer speaking)
+ import string
+-def replace(where, what, with):
+-    return string.join(string.split(where, what), with)
++def replace(where, what, with_):
++    return string.join(string.split(where, what), with_)
+ 
+ # This list of keywords is taken from ref/node13.html of the
+ # Python 1.3 HTML documentation. ("access" is intentionally omitted.)
