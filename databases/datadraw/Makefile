@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/25 22:42:35 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/30 18:26:48 joerg Exp $
 #
 
 DISTNAME=	datadraw3.1.1
@@ -23,5 +23,7 @@ USE_TOOLS+=		bash:build bison flex gmake
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 
 BUILD_TARGET=	datadraw
+
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
