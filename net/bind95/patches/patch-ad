@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2009/11/25 23:25:44 joerg Exp $
+$NetBSD: patch-ad,v 1.3 2009/11/30 11:58:30 tron Exp $
 
---- configure.orig	2008-10-29 23:05:42.000000000 +0100
-+++ configure
-@@ -6922,6 +6922,8 @@ case $host in
+--- configure.orig	2009-08-13 03:02:45.000000000 +0100
++++ configure	2009-11-30 11:10:18.000000000 +0000
+@@ -23072,6 +23072,8 @@
  	use_threads=false ;;
  *-freebsd*)
  	use_threads=false ;;
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.2 2009/11/25 23:25:44 joerg Exp $
  *-bsdi234*)
  	# Thread signals do not work reliably on some versions of BSD/OS.
  	use_threads=false ;;
-@@ -7010,7 +7012,7 @@ echo "$as_me: WARNING: linking with PTL2
+@@ -23160,7 +23162,7 @@
  echo "${ECHO_T}native" >&6; }
  				LIBS="-lpthread $LIBS"
  			else
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.2 2009/11/25 23:25:44 joerg Exp $
  				then
  					{ echo "$as_me:$LINENO: result: none" >&5
  echo "${ECHO_T}none" >&6; }
-@@ -7021,14 +7023,23 @@ echo "$as_me: error: \"could not find th
+@@ -23171,14 +23173,23 @@
  
  				if $use_threads
  				then
@@ -51,7 +51,7 @@ $NetBSD: patch-ad,v 1.2 2009/11/25 23:25:44 joerg Exp $
  				fi
  			fi
  		fi
-@@ -24822,9 +24833,9 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
+@@ -25596,9 +25607,9 @@
  		O=lo
  		A=la
  		LIBTOOL_MKDEP_SED='s;\.o;\.lo;'
