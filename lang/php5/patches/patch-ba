@@ -1,0 +1,17 @@
+$NetBSD: patch-ba,v 1.1.2.2 2009/11/30 23:10:20 tron Exp $
+
+Fix for http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3558:
+	http://svn.php.net/viewvc?view=revision&revision=288934
+
+--- ext/posix/posix.c.orig	2009-08-06 20:11:15.000000000 +0900
++++ ext/posix/posix.c
+@@ -679,7 +679,8 @@ PHP_FUNCTION(posix_mkfifo)
+ 		RETURN_FALSE;
+ 	}
+ 
+-	if (PG(safe_mode) && (!php_checkuid(path, NULL, CHECKUID_ALLOW_ONLY_DIR))) {
++	if (php_check_open_basedir_ex(path, 0 TSRMLS_CC) ||
++		(PG(safe_mode) && (!php_checkuid(path, NULL, CHECKUID_ALLOW_ONLY_DIR))) {
+ 		RETURN_FALSE;
+ 	}
+ 
