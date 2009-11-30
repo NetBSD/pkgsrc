@@ -1,8 +1,21 @@
-$NetBSD: patch-ag,v 1.2 2006/02/06 06:39:59 martti Exp $
+$NetBSD: patch-ag,v 1.2.34.1 2009/11/30 23:10:20 tron Exp $
 
---- php.ini-dist.orig	2005-12-30 19:15:55.000000000 +0200
-+++ php.ini-dist	2006-02-05 15:36:13.000000000 +0200
-@@ -457,8 +457,9 @@
+* Ajust for pkgsrc.
+* Fix for http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4017:
+	http://svn.php.net/viewvc?view=revision&revision=289990
+
+--- php.ini-dist.orig	2009-02-14 01:55:18.000000000 +0900
++++ php.ini-dist
+@@ -471,7 +471,7 @@ default_mimetype = "text/html"
+ ;;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+ ; UNIX: "/path1:/path2"
+-;include_path = ".:/php/includes"
++include_path = ".:@PREFIX@/lib/php"
+ ;
+ ; Windows: "\path1;\path2"
+ ;include_path = ".;c:\php\includes"
+@@ -487,8 +487,9 @@ doc_root =
  ; if nonempty.
  user_dir =
  
@@ -14,7 +27,7 @@ $NetBSD: patch-ag,v 1.2 2006/02/06 06:39:59 martti Exp $
  
  ; Whether or not to enable the dl() function.  The dl() function does NOT work
  ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
-@@ -508,7 +509,7 @@
+@@ -546,11 +547,13 @@ file_uploads = On
  
  ; Temporary directory for HTTP uploaded files (will use system default if not
  ; specified).
@@ -23,3 +36,9 @@ $NetBSD: patch-ag,v 1.2 2006/02/06 06:39:59 martti Exp $
  
  ; Maximum allowed size for uploaded files.
  upload_max_filesize = 2M
+ 
++; Maximum number of files that can be uploaded via a single request
++max_file_uploads = 100
+ 
+ ;;;;;;;;;;;;;;;;;;
+ ; Fopen wrappers ;
