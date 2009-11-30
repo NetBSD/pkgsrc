@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/17 18:00:26 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/30 15:00:50 joerg Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
@@ -18,7 +18,7 @@ USE_JAVA=	run
 USE_JAVA2=	1.5
 USE_TOOLS+=	pax
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
