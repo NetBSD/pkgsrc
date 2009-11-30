@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/09/15 10:48:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/11/30 15:44:45 taca Exp $
 ${GEEKLOG_BASE}/emailgeeklogstories
 ${GEEKLOG_BASE}/language/afrikaans.php
 ${GEEKLOG_BASE}/language/afrikaans_utf-8.php
@@ -106,7 +106,9 @@ ${GEEKLOG_BASE}/plugins/calendar/language/ukrainian.php
 ${GEEKLOG_BASE}/plugins/calendar/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/plugins/calendar/language/ukrainian_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/sql/mssql_install.php
+${GEEKLOG_BASE}/plugins/calendar/sql/mssql_updates.php
 ${GEEKLOG_BASE}/plugins/calendar/sql/mysql_install.php
+${GEEKLOG_BASE}/plugins/calendar/sql/mysql_updates.php
 ${GEEKLOG_BASE}/plugins/calendar/templates/addevent.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/addeventoption.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/addremoveevent.thtml
@@ -321,7 +323,9 @@ ${GEEKLOG_BASE}/plugins/staticpages/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/ukrainian_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/services.inc.php
 ${GEEKLOG_BASE}/plugins/staticpages/sql/mssql_install.php
+${GEEKLOG_BASE}/plugins/staticpages/sql/mssql_updates.php
 ${GEEKLOG_BASE}/plugins/staticpages/sql/mysql_install.php
+${GEEKLOG_BASE}/plugins/staticpages/sql/mysql_updates.php
 ${GEEKLOG_BASE}/plugins/staticpages/templates/admin/editor.thtml
 ${GEEKLOG_BASE}/plugins/staticpages/templates/admin/editor_advanced.thtml
 ${GEEKLOG_BASE}/plugins/staticpages/templates/centerblock.thtml
@@ -347,6 +351,7 @@ ${GEEKLOG_BASE}/sql/updates/mssql_1.4.1_to_1.5.0.php
 ${GEEKLOG_BASE}/sql/updates/mssql_1.5.0_to_1.5.1.php
 ${GEEKLOG_BASE}/sql/updates/mssql_1.5.1_to_1.5.2.php
 ${GEEKLOG_BASE}/sql/updates/mssql_1.5.2_to_1.6.0.php
+${GEEKLOG_BASE}/sql/updates/mssql_1.6.0_to_1.6.1.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.2.5-1_to_1.3.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.3.10_to_1.3.11.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.3.11_to_1.4.0.php
@@ -364,6 +369,7 @@ ${GEEKLOG_BASE}/sql/updates/mysql_1.4.1_to_1.5.0.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.5.0_to_1.5.1.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.5.1_to_1.5.2.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.5.2_to_1.6.0.php
+${GEEKLOG_BASE}/sql/updates/mysql_1.6.0_to_1.6.1.php
 ${GEEKLOG_BASE}/system/classes/authentication/LDAP.auth.class.php
 ${GEEKLOG_BASE}/system/classes/authentication/LiveJournal.auth.class.php
 ${GEEKLOG_BASE}/system/classes/authentication/ldap/config.php
@@ -396,6 +402,7 @@ ${GEEKLOG_BASE}/system/classes/syndication/rdf.feed.class.php
 ${GEEKLOG_BASE}/system/classes/syndication/rss.feed.class.php
 ${GEEKLOG_BASE}/system/classes/template.class.php
 ${GEEKLOG_BASE}/system/classes/timer.class.php
+${GEEKLOG_BASE}/system/classes/timezoneconfig.class.php
 ${GEEKLOG_BASE}/system/classes/unpacker.class.php
 ${GEEKLOG_BASE}/system/classes/upload.class.php
 ${GEEKLOG_BASE}/system/classes/url.class.php
@@ -422,6 +429,7 @@ ${GEEKLOG_BASE}/system/pear/Auth/SASL/Anonymous.php
 ${GEEKLOG_BASE}/system/pear/Auth/SASL/Common.php
 ${GEEKLOG_BASE}/system/pear/Auth/SASL/CramMD5.php
 ${GEEKLOG_BASE}/system/pear/Auth/SASL/DigestMD5.php
+${GEEKLOG_BASE}/system/pear/Auth/SASL/External.php
 ${GEEKLOG_BASE}/system/pear/Auth/SASL/Login.php
 ${GEEKLOG_BASE}/system/pear/Auth/SASL/Plain.php
 ${GEEKLOG_BASE}/system/pear/Console/Getopt.php
@@ -811,7 +819,6 @@ ${GL_ADMIN}/install/lib-install.php
 ${GL_ADMIN}/install/lib-upgrade.php
 ${GL_ADMIN}/install/migrate.php
 ${GL_ADMIN}/install/success.php
-${GL_ADMIN}/install/toinnodb.php
 ${GL_ADMIN}/mail.php
 ${GL_ADMIN}/moderation.php
 ${GL_ADMIN}/plugins.php
@@ -1304,9 +1311,13 @@ ${GEEKLOG_PUB}/fckeditor/license.txt
 ${GEEKLOG_PUB}/fckeditor/myconfig.js
 ${GEEKLOG_PUB}/getimage.php
 ${GEEKLOG_PUB}/help/advancedsearch.html
+${GEEKLOG_PUB}/help/cccommentsubmission.html
+${GEEKLOG_PUB}/help/ccdraftsubmission.html
 ${GEEKLOG_PUB}/help/cceventsubmission.html
 ${GEEKLOG_PUB}/help/cclinksubmission.html
 ${GEEKLOG_PUB}/help/ccstorysubmission.html
+${GEEKLOG_PUB}/help/ccusersubmission.html
+${GEEKLOG_PUB}/help/index.html
 ${GEEKLOG_PUB}/help/submitevent.html
 ${GEEKLOG_PUB}/help/submitlink.html
 ${GEEKLOG_PUB}/help/submitstory.html
@@ -1495,6 +1506,7 @@ ${GEEKLOG_PUB}/layout/professional/images/print.png
 ${GEEKLOG_PUB}/layout/professional/images/sendping.png
 ${GEEKLOG_PUB}/layout/professional/images/smallcamera.png
 ${GEEKLOG_PUB}/layout/professional/images/sysmessage.png
+${GEEKLOG_PUB}/layout/professional/images/update.png
 ${GEEKLOG_PUB}/layout/professional/leftblocks.thtml
 ${GEEKLOG_PUB}/layout/professional/list.thtml
 ${GEEKLOG_PUB}/layout/professional/listitem.thtml
