@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/11/25 23:25:44 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/11/30 11:58:30 tron Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -16,7 +16,7 @@ CONFLICTS+=	bind>=9.6.0
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.5.1-P3
+BIND_VERSION=	9.5.2-P1
 
 # IPv6 ready, automatically detected
 .include "../../mk/bsd.prefs.mk"
