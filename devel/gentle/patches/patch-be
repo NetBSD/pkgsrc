@@ -1,0 +1,15 @@
+$NetBSD: patch-be,v 1.1 2009/11/30 00:03:08 dholland Exp $
+
+Add standard includes needed for LP64 build.
+
+--- gentle/grts.c~	1998-08-20 09:56:09.000000000 -0400
++++ gentle/grts.c	2009-11-29 19:00:04.000000000 -0500
+@@ -7,6 +7,8 @@
+ 
+ */
+ 
++#include <stdio.h>
++#include <stdlib.h>
+ 
+ /* Gentle Runtime System */
+ 
