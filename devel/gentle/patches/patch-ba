@@ -1,0 +1,14 @@
+$NetBSD: patch-ba,v 1.1 2009/11/30 00:03:08 dholland Exp $
+
+Add standard includes needed for LP64 build.
+
+--- gentle/cyfront.c~	1998-08-20 09:56:09.000000000 -0400
++++ gentle/cyfront.c	2009-11-29 18:57:45.000000000 -0500
+@@ -7,6 +7,7 @@
+ 
+ */
+ 
++#include <stdio.h>
+ 
+ typedef long * yy;
+ #define yyu (-2147483647L)
