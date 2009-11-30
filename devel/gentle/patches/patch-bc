@@ -1,0 +1,15 @@
+$NetBSD: patch-bc,v 1.1 2009/11/30 00:03:08 dholland Exp $
+
+Add standard includes needed for LP64 build.
+
+--- gentle/input.c~	1998-08-20 09:56:09.000000000 -0400
++++ gentle/input.c	2009-11-29 18:58:59.000000000 -0500
+@@ -7,6 +7,8 @@
+ 
+ */
+ 
++#include <stdlib.h>
++#include <string.h>
+ 
+ static long is_defined();
+ static open_next_file ();
