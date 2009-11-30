@@ -1,0 +1,46 @@
+$NetBSD: patch-bd,v 1.1.2.2 2009/11/30 23:10:20 tron Exp $
+
+Fix for http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4017:
+	http://svn.php.net/viewvc?view=revision&revision=289990
+	http://svn.php.net/viewvc?view=revision&revision=290820
+	http://svn.php.net/viewvc?view=revision&revision=290885
+
+--- main/rfc1867.c.orig	2008-12-31 20:17:49.000000000 +0900
++++ main/rfc1867.c
+@@ -32,6 +32,7 @@
+ #include "php_globals.h"
+ #include "php_variables.h"
+ #include "rfc1867.h"
++#include "php_ini.h"
+ 
+ #define DEBUG_FILE_UPLOAD ZEND_DEBUG
+ 
+@@ -794,8 +795,9 @@ SAPI_API SAPI_POST_HANDLER_FUNC(rfc1867_
+ 	zend_llist header;
+ 	void *event_extra_data = NULL;
+ 	int llen = 0;
++	int upload_cnt = INI_INT("max_file_uploads");
+ 
+-	if (SG(request_info).content_length > SG(post_max_size)) {
++	if (SG(post_max_size) > 0 && SG(request_info).content_length > SG(post_max_size)) {
+ 		sapi_module.sapi_error(E_WARNING, "POST Content-Length of %ld bytes exceeds the limit of %ld bytes", SG(request_info).content_length, SG(post_max_size));
+ 		return;
+ 	}
+@@ -972,6 +974,9 @@ SAPI_API SAPI_POST_HANDLER_FUNC(rfc1867_
+ 			/* If file_uploads=off, skip the file part */
+ 			if (!PG(file_uploads)) {
+ 				skip_upload = 1;
++			} else if (upload_cnt <= 0) {
++				skip_upload = 1;
++				sapi_module.sapi_error(E_WARNING, "Maximum number of allowable file uploads has been exceeded");
+ 			}
+ 
+ 			/* Return with an error if the posted data is garbled */
+@@ -1016,6 +1021,7 @@ SAPI_API SAPI_POST_HANDLER_FUNC(rfc1867_
+ 			if (!skip_upload) {
+ 				/* Handle file */
+ 				fd = php_open_temporary_fd_ex(PG(upload_tmp_dir), "php", &temp_filename, 1 TSRMLS_CC);
++				upload_cnt--;
+ 				if (fd==-1) {
+ 					sapi_module.sapi_error(E_WARNING, "File upload error - unable to create a temporary file");
+ 					cancel_upload = UPLOAD_ERROR_E;
