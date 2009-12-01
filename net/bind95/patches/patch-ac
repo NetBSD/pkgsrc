@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2009/02/21 14:43:03 adrianp Exp $
+$NetBSD: patch-ac,v 1.2.6.1 2009/12/01 06:39:03 spz Exp $
 
---- lib/lwres/getaddrinfo.c.orig	2007-09-12 21:45:18.000000000 -0700
-+++ lib/lwres/getaddrinfo.c
+--- lib/lwres/getaddrinfo.c.orig	2008-11-25 23:46:36.000000000 +0000
++++ lib/lwres/getaddrinfo.c	2009-11-30 10:48:37.000000000 +0000
 @@ -142,6 +142,10 @@
  #include <lwres/netdb.h>
  #include <lwres/stdlib.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.2 2009/02/21 14:43:03 adrianp Exp $
  #define SA(addr)	((struct sockaddr *)(addr))
  #define SIN(addr)	((struct sockaddr_in *)(addr))
  #define SIN6(addr)	((struct sockaddr_in6 *)(addr))
-@@ -366,14 +370,22 @@ lwres_getaddrinfo(const char *hostname, 
+@@ -366,14 +370,22 @@
  			p = strchr(ntmp, '%');
  			ep = NULL;
  
@@ -37,25 +37,3 @@ $NetBSD: patch-ac,v 1.2 2009/02/21 14:43:03 adrianp Exp $
  			if (p != NULL && ep != NULL && ep[0] == '\0')
  				*p = '\0';
  			else {
-@@ -709,17 +721,17 @@ lwres_freeaddrinfo(struct addrinfo *ai) 
- static int
- get_local(const char *name, int socktype, struct addrinfo **res) {
- 	struct addrinfo *ai;
--	struct sockaddr_un *sun;
-+	struct sockaddr_un *un;
- 
- 	if (socktype == 0)
- 		return (EAI_SOCKTYPE);
- 
--	ai = ai_alloc(AF_LOCAL, sizeof(*sun));
-+	ai = ai_alloc(AF_LOCAL, sizeof(*un));
- 	if (ai == NULL)
- 		return (EAI_MEMORY);
- 
--	sun = SUN(ai->ai_addr);
--	strncpy(sun->sun_path, name, sizeof(sun->sun_path));
-+	un = SUN(ai->ai_addr);
-+	strncpy(un->sun_path, name, sizeof(un->sun_path));
- 
- 	ai->ai_socktype = socktype;
- 	/*

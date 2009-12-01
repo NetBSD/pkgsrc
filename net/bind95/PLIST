@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3.4.1 2009/12/01 06:39:03 spz Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -198,6 +198,7 @@ lib/libisccfg.la
 lib/liblwres.la
 man/man1/dig.1
 man/man1/host.1
+man/man1/isc-config.sh.1
 man/man1/nslookup.1
 man/man1/nsupdate.1
 man/man3/lwres.3
