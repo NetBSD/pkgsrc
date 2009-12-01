@@ -1,27 +1,111 @@
-$NetBSD: patch-ad,v 1.1 2009/01/21 15:19:27 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2009/12/01 10:44:02 drochner Exp $
 
 --- libaudiofile/wave.c.orig	2004-03-06 07:39:23.000000000 +0100
 +++ libaudiofile/wave.c
-@@ -220,7 +220,8 @@ static status ParseFormat (AFfilehandle 
- 			extraByteCount = LENDIAN_TO_HOST_INT16(extraByteCount);
- 
- 			af_fread(&samplesPerBlock, 1, 2, fp);
--			samplesPerBlock = LENDIAN_TO_HOST_INT16(samplesPerBlock);
-+			samplesPerBlock = LENDIAN_TO_HOST_INT16(samplesPerBlock)
-+				* track->f.channelCount;
- 
- 			af_fread(&numCoefficients, 1, 2, fp);
- 			numCoefficients = LENDIAN_TO_HOST_INT16(numCoefficients);
-@@ -281,6 +282,12 @@ static status ParseFormat (AFfilehandle 
+@@ -199,11 +199,13 @@ static status ParseFormat (AFfilehandle 
+ 		case WAVE_FORMAT_ADPCM:
+ 		{
  			u_int16_t	bitsPerSample, extraByteCount,
- 					samplesPerBlock;
+-					samplesPerBlock, numCoefficients;
++					samplesPerBlock, numCoefficients,
++					framesPerBlock;
+ 			int		i;
+ 			AUpvlist	pv;
+ 			long		l;
+ 			void		*v;
++			int		minBlockLength;
  
-+			if (track->f.channelCount != 1) {
-+				_af_error(AF_BAD_CHANNELS,
-+					"WAVE file with IMA compression: "
-+					"can only handle 1 channel");
-+			}
-+
+ 			if (track->f.channelCount != 1 &&
+ 				track->f.channelCount != 2)
+@@ -216,11 +218,33 @@ static status ParseFormat (AFfilehandle 
  			af_fread(&bitsPerSample, 1, 2, fp);
  			bitsPerSample = LENDIAN_TO_HOST_INT16(bitsPerSample);
  
++			if (bitsPerSample != 4)
++			{
++				_af_error(AF_BAD_WIDTH,
++					"bad sample width of %hd bits",
++					bitsPerSample);
++				return AF_FAIL;
++			}
++
+ 			af_fread(&extraByteCount, 1, 2, fp);
+ 			extraByteCount = LENDIAN_TO_HOST_INT16(extraByteCount);
+ 
+-			af_fread(&samplesPerBlock, 1, 2, fp);
+-			samplesPerBlock = LENDIAN_TO_HOST_INT16(samplesPerBlock);
++			af_fread(&framesPerBlock, 1, 2, fp);
++			framesPerBlock = LENDIAN_TO_HOST_INT16(framesPerBlock);
++
++			minBlockLength = 7 * channelCount; /* header */
++			if (framesPerBlock > 2)
++				minBlockLength += ( ( framesPerBlock - 2 ) * channelCount + 1) / 2;
++
++			if (blockAlign < minBlockLength)
++			{
++				_af_error(AF_BAD_FRAMECNT,
++					"blockAlign %hd too small for %hd samplesPerBlock",
++					blockAlign, samplesPerBlock);
++				return AF_FAIL;
++			}
++
++			samplesPerBlock = framesPerBlock *channelCount;
+ 
+ 			af_fread(&numCoefficients, 1, 2, fp);
+ 			numCoefficients = LENDIAN_TO_HOST_INT16(numCoefficients);
+@@ -242,6 +266,7 @@ static status ParseFormat (AFfilehandle 
+ 				wave->msadpcmCoefficients[i][1] = a1;
+ 			}
+ 
++
+ 			track->f.sampleWidth = 16;
+ 			track->f.sampleFormat = AF_SAMPFMT_TWOSCOMP;
+ 			track->f.compressionType = AF_COMPRESSION_MS_ADPCM;
+@@ -277,18 +302,44 @@ static status ParseFormat (AFfilehandle 
+ 		{
+ 			AUpvlist	pv;
+ 			long		l;
++			int		minBlockLength;
+ 
+ 			u_int16_t	bitsPerSample, extraByteCount,
+-					samplesPerBlock;
++					samplesPerBlock, framesPerBlock;
+ 
+ 			af_fread(&bitsPerSample, 1, 2, fp);
+ 			bitsPerSample = LENDIAN_TO_HOST_INT16(bitsPerSample);
+ 
++			if (bitsPerSample != 4)
++			{
++				_af_error(AF_BAD_WIDTH,
++					"bad sample width of %hd bits",
++					bitsPerSample);
++				return AF_FAIL;
++			}
++
+ 			af_fread(&extraByteCount, 1, 2, fp);
+ 			extraByteCount = LENDIAN_TO_HOST_INT16(extraByteCount);
+ 
+-			af_fread(&samplesPerBlock, 1, 2, fp);
+-			samplesPerBlock = LENDIAN_TO_HOST_INT16(samplesPerBlock);
++			af_fread(&framesPerBlock, 1, 2, fp);
++			framesPerBlock = LENDIAN_TO_HOST_INT16(framesPerBlock);
++			samplesPerBlock = framesPerBlock * channelCount;
++
++			/* per channel, ima has blocks of len 4, the 1st has 1st sample, the others
++			 * up to 8 samples per block,
++			 * so number of later blocks is (nsamp-1 + 7)/8, total blocks/chan is
++			 * (nsamp-1+7)/8 + 1 = (nsamp+14)/8
++			 */
++
++			minBlockLength = ( framesPerBlock + 14 )/8 * 4 * channelCount;
++
++			if (blockAlign < minBlockLength)
++			{
++				_af_error(AF_BAD_FRAMECNT,
++					"blockAlign %hd too small for %hd samplesPerBlock",
++					blockAlign, samplesPerBlock);
++				return AF_FAIL;
++			}
+ 
+ 			track->f.sampleWidth = 16;
+ 			track->f.sampleFormat = AF_SAMPFMT_TWOSCOMP;
