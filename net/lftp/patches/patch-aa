@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.13 2009/06/08 10:16:22 hasso Exp $
+$NetBSD: patch-aa,v 1.14 2009/12/01 07:46:49 joerg Exp $
 
 Do not install by default Perl scripts; they are installed via
 ${INSTALL_SCRIPT} if the user set the "perl" option.
 
---- src/Makefile.in.orig	2009-05-15 09:25:52 +0300
-+++ src/Makefile.in	2009-06-08 12:21:53 +0300
-@@ -893,7 +893,7 @@ top_builddir = @top_builddir@
+Do not remove the *.la files.
+
+--- src/Makefile.in.orig	2009-09-16 11:31:08.000000000 +0200
++++ src/Makefile.in
+@@ -980,7 +980,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  pkgverlibdir = $(pkglibdir)/$(VERSION)
  bin_SCRIPTS = lftpget
@@ -14,7 +16,7 @@ ${INSTALL_SCRIPT} if the user set the "perl" option.
  noinst_SCRIPTS = ftpget
  EXTRA_DIST = $(pkgdata_SCRIPTS) $(bin_SCRIPTS) $(noinst_SCRIPTS)
  lftp_SOURCES = lftp.cc complete.h complete.cc lftp_rl.c lftp_rl.h
-@@ -1416,7 +1416,7 @@ all-am: Makefile $(LTLIBRARIES) $(PROGRA
+@@ -1513,7 +1513,7 @@ all-am: Makefile $(LTLIBRARIES) $(PROGRA
  install-binPROGRAMS: install-libLTLIBRARIES
  
  installdirs:
@@ -23,3 +25,17 @@ ${INSTALL_SCRIPT} if the user set the "perl" option.
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: install-am
+@@ -1629,13 +1629,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 	uninstall-pkgverlibLTLIBRARIES
+ 
+ 
+-# libtool does not strip modules, do it here.
+-install-data-hook:
+-@WITH_MODULES_TRUE@	rm -f $(DESTDIR)$(pkgverlibdir)/*.la; \
+-@WITH_MODULES_TRUE@	case " $(LDFLAGS) " in *" -s "*) \
+-@WITH_MODULES_TRUE@		$(STRIP) $(DESTDIR)$(pkgverlibdir)/*.so;; \
+-@WITH_MODULES_TRUE@	esac
+-@WITH_MODULES_FALSE@	-rmdir $(DESTDIR)$(pkgverlibdir) 2>/dev/null || :
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
