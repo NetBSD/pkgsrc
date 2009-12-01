@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
+$NetBSD: patch-ad,v 1.1.1.1.16.1 2009/12/01 06:39:03 spz Exp $
 
---- configure.orig	2008-05-06 02:33:33.000000000 +0100
-+++ configure
-@@ -6550,6 +6550,8 @@ case $host in
+--- configure.orig	2009-08-13 03:02:45.000000000 +0100
++++ configure	2009-11-30 11:10:18.000000000 +0000
+@@ -23072,6 +23072,8 @@
  	use_threads=false ;;
  *-freebsd*)
  	use_threads=false ;;
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
  *-bsdi234*)
  	# Thread signals do not work reliably on some versions of BSD/OS.
  	use_threads=false ;;
-@@ -6638,7 +6640,7 @@ echo "$as_me: WARNING: linking with PTL2
+@@ -23160,7 +23162,7 @@
  echo "${ECHO_T}native" >&6; }
  				LIBS="-lpthread $LIBS"
  			else
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
  				then
  					{ echo "$as_me:$LINENO: result: none" >&5
  echo "${ECHO_T}none" >&6; }
-@@ -6649,14 +6651,23 @@ echo "$as_me: error: \"could not find th
+@@ -23171,14 +23173,23 @@
  
  				if $use_threads
  				then
@@ -51,3 +51,15 @@ $NetBSD: patch-ad,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
  				fi
  			fi
  		fi
+@@ -25596,9 +25607,9 @@
+ 		O=lo
+ 		A=la
+ 		LIBTOOL_MKDEP_SED='s;\.o;\.lo;'
+-		LIBTOOL_MODE_COMPILE='--mode=compile'
++		LIBTOOL_MODE_COMPILE='--mode=compile --tag=CC'
+ 		LIBTOOL_MODE_INSTALL='--mode=install'
+-		LIBTOOL_MODE_LINK='--mode=link'
++		LIBTOOL_MODE_LINK='--mode=link --tag=CC'
+ 		case "$host" in
+ 		*) LIBTOOL_ALLOW_UNDEFINED= ;;
+ 		esac
