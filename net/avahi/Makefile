@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2009/08/26 19:56:58 sno Exp $
+# $NetBSD: Makefile,v 1.15 2009/12/01 18:53:54 tonio Exp $
 
 DISTNAME=		avahi-0.6.25
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://avahi.org/download/
 
@@ -67,6 +67,7 @@ CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER}
 CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP}
 CONFIGURE_ARGS+=	--with-avahi_priv_access_group=${REAL_ROOT_GROUP}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-dbus-system-socket=${VARBASE}/run/dbus/system_bus_socket
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--disable-qt3
 CONFIGURE_ARGS+=	--disable-qt4
