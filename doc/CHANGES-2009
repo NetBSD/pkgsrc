@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4483 2009/11/30 15:49:54 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4484 2009/12/01 23:29:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -5994,3 +5994,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/bind95 to 9.5.2pl1 [tron 2009-11-30]
 	Updated www/geeklog to 1.6.1 [taca 2009-11-30]
 	Updated time/ruby-tzinfo to 0.3.15 [taca 2009-11-30]
+	Updated devel/ruby-activesupport to 2.3.5 [minskim 2009-12-01]
+	Updated databases/ruby-activerecord to 2.3.5 [minskim 2009-12-01]
+	Updated www/ruby-actionpack to 2.3.5 [minskim 2009-12-01]
+	Updated mail/ruby-actionmailer to 2.3.5 [minskim 2009-12-01]
+	Updated www/ruby-activeresource to 2.3.5 [minskim 2009-12-01]
+	Updated www/rails to 2.3.5 [minskim 2009-12-01]
