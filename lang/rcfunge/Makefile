@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/20 12:06:48 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/01 10:36:58 drochner Exp $
 #
 
 DISTNAME=	rcfunge2
@@ -18,6 +18,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=	${WRKDIR}/rcfunge
 BUILD_TARGET=	funge
 INSTALLATION_DIRS=	bin
+
+# keypad(3) return value was fixed after -5 branch (might be pulled up)
+INCOMPAT_CURSES+=	NetBSD-[0-4]*-* NetBSD-5.[0-8]*-*
 
 pre-build:
 	${MKDIR} ${WRKSRC}/bin
