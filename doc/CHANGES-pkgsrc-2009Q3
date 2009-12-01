@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.22 2009/11/30 23:11:45 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.23 2009/12/01 06:42:19 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -60,3 +60,5 @@ Pullup ticket #2937 - requested by tnn
 gtk2: portability fix
 Pullup ticket #2939 - requested by taca
 php5: security patch
+Pullup ticket #2938 - requested by tron
+bind95: security update
