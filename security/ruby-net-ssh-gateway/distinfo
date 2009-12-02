@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/02 14:35:12 fhajny Exp $
+
+SHA1 (net-ssh-gateway-1.0.1.gem) = d45f7e0d26fc37cecc77243760b8e1a4d165d93b
+RMD160 (net-ssh-gateway-1.0.1.gem) = dce96b5eff1b94d44fb3f4b6594fff0c3540ae50
+Size (net-ssh-gateway-1.0.1.gem) = 18432 bytes

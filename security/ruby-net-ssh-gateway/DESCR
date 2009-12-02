@@ -1,0 +1,2 @@
+Net::SSH::Gateway provides a simple way to connect to servers
+behind a firewall or NAT.
