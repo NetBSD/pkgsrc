@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:20:28 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/02 14:30:43 fhajny Exp $
 
-DISTNAME=	net-sftp-1.1.1
+DISTNAME=	net-sftp-2.0.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://net-ssh.rubyforge.org/
+HOMEPAGE=	http://rubyforge.org/projects/net-ssh
 COMMENT=	Secure FTP for Ruby
+LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=1.1.0:../../security/ruby-net-ssh
+DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.0.9:../../security/ruby-net-ssh
 
 GEM_BUILD=	gemspec
 
