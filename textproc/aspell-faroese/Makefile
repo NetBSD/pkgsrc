@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:37 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.15 2009/12/02 17:56:26 snj Exp $
 
-DISTNAME=	aspell-fo-0.2.24
+DISTNAME=	aspell-fo-0.2.38
 PKGNAME=	${DISTNAME:C/-fo-/-faroese-/}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://fo.speling.org/filer/
 EXTRACT_SUFX=	.tar.bz2
