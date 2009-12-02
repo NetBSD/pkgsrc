@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/04/06 00:14:28 christos Exp $
+# $NetBSD: Makefile,v 1.24 2009/12/02 09:30:49 snj Exp $
 
 DISTNAME=       rc-1.7
 CATEGORIES=	shells plan9
@@ -12,5 +12,16 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-history
 
 PKG_SHELL=	bin/rc
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.rc
+PKG_SUPPORTED_OPTIONS=	readline
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mreadline)
+.include "../../devel/readline/buildlink3.mk"
+CONFIGURE_ARGS+=        --with-readline
+USE_GNU_READLINE=	YES
+.endif
 
 .include "../../mk/bsd.pkg.mk"
