@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/10/14 12:11:56 adrianp Exp $
+$NetBSD: distinfo,v 1.2.28.1 2009/12/02 23:17:10 tron Exp $
 
 SHA1 (pear/Mail-1.1.14.tgz) = 6c46636e0df3c0a813df3cbda1fd5afac987069d
 RMD160 (pear/Mail-1.1.14.tgz) = 72c0c7018b92ef97789f723a1970c41471bd165f
 Size (pear/Mail-1.1.14.tgz) = 17537 bytes
+SHA1 (patch-aa) = ef6b0afa4e45789bb82065413c7b1305f92daf72

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/09/12 22:14:16 minskim Exp $
+@comment $NetBSD: PLIST,v 1.15.2.1 2009/12/02 23:17:09 tron Exp $
 ${GEM_HOME}/cache/activesupport-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README
@@ -91,6 +91,7 @@ ${GEM_LIBDIR}/lib/active_support/core_ext/numeric/bytes.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/numeric/conversions.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/numeric/time.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/object.rb
+${GEM_LIBDIR}/lib/active_support/core_ext/object/blank.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/object/conversions.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/object/extending.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/object/instance_variables.rb
@@ -116,6 +117,7 @@ ${GEM_LIBDIR}/lib/active_support/core_ext/string/filters.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string/inflections.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string/iterators.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string/multibyte.rb
+${GEM_LIBDIR}/lib/active_support/core_ext/string/output_safety.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string/starts_ends_with.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string/xchar.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/symbol.rb

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/09/12 22:14:17 minskim Exp $
+@comment $NetBSD: PLIST,v 1.17.2.1 2009/12/02 23:17:10 tron Exp $
 ${GEM_HOME}/cache/actionpack-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -44,6 +44,7 @@ ${GEM_LIBDIR}/lib/action_controller/mime_types.rb
 ${GEM_LIBDIR}/lib/action_controller/params_parser.rb
 ${GEM_LIBDIR}/lib/action_controller/performance_test.rb
 ${GEM_LIBDIR}/lib/action_controller/polymorphic_routes.rb
+${GEM_LIBDIR}/lib/action_controller/rack_lint_patch.rb
 ${GEM_LIBDIR}/lib/action_controller/record_identifier.rb
 ${GEM_LIBDIR}/lib/action_controller/reloader.rb
 ${GEM_LIBDIR}/lib/action_controller/request.rb
@@ -65,6 +66,7 @@ ${GEM_LIBDIR}/lib/action_controller/session/mem_cache_store.rb
 ${GEM_LIBDIR}/lib/action_controller/session_management.rb
 ${GEM_LIBDIR}/lib/action_controller/status_codes.rb
 ${GEM_LIBDIR}/lib/action_controller/streaming.rb
+${GEM_LIBDIR}/lib/action_controller/string_coercion.rb
 ${GEM_LIBDIR}/lib/action_controller/templates/rescues/_request_and_response.erb
 ${GEM_LIBDIR}/lib/action_controller/templates/rescues/_trace.erb
 ${GEM_LIBDIR}/lib/action_controller/templates/rescues/diagnostics.erb
@@ -106,6 +108,7 @@ ${GEM_LIBDIR}/lib/action_view/helpers/form_tag_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/javascript_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/number_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/prototype_helper.rb
+${GEM_LIBDIR}/lib/action_view/helpers/raw_output_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/record_identification_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/record_tag_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/sanitize_helper.rb
@@ -121,6 +124,7 @@ ${GEM_LIBDIR}/lib/action_view/paths.rb
 ${GEM_LIBDIR}/lib/action_view/reloadable_template.rb
 ${GEM_LIBDIR}/lib/action_view/renderable.rb
 ${GEM_LIBDIR}/lib/action_view/renderable_partial.rb
+${GEM_LIBDIR}/lib/action_view/safe_buffer.rb
 ${GEM_LIBDIR}/lib/action_view/template.rb
 ${GEM_LIBDIR}/lib/action_view/template_error.rb
 ${GEM_LIBDIR}/lib/action_view/template_handler.rb
@@ -149,6 +153,7 @@ ${GEM_LIBDIR}/test/controller/controller_fixtures/vendor/plugins/bad_plugin/lib/
 ${GEM_LIBDIR}/test/controller/cookie_test.rb
 ${GEM_LIBDIR}/test/controller/deprecation/deprecated_base_methods_test.rb
 ${GEM_LIBDIR}/test/controller/dispatcher_test.rb
+${GEM_LIBDIR}/test/controller/dom_assertions_test.rb
 ${GEM_LIBDIR}/test/controller/failsafe_test.rb
 ${GEM_LIBDIR}/test/controller/fake_controllers.rb
 ${GEM_LIBDIR}/test/controller/fake_models.rb
@@ -233,6 +238,7 @@ ${GEM_LIBDIR}/test/fixtures/good_customers/_good_customer.html.erb
 ${GEM_LIBDIR}/test/fixtures/helpers/abc_helper.rb
 ${GEM_LIBDIR}/test/fixtures/helpers/fun/games_helper.rb
 ${GEM_LIBDIR}/test/fixtures/helpers/fun/pdf_helper.rb
+${GEM_LIBDIR}/test/fixtures/layout_tests/abs_path_layout.rhtml
 ${GEM_LIBDIR}/test/fixtures/layout_tests/alt/hello.rhtml
 ${GEM_LIBDIR}/test/fixtures/layout_tests/alt/layouts/alt.rhtml
 ${GEM_LIBDIR}/test/fixtures/layout_tests/layouts/controller_name_space/nested.rhtml
@@ -321,6 +327,7 @@ ${GEM_LIBDIR}/test/fixtures/test/_customer_counter.erb
 ${GEM_LIBDIR}/test/fixtures/test/_customer_greeting.erb
 ${GEM_LIBDIR}/test/fixtures/test/_customer_with_var.erb
 ${GEM_LIBDIR}/test/fixtures/test/_form.erb
+${GEM_LIBDIR}/test/fixtures/test/_from_helper.erb
 ${GEM_LIBDIR}/test/fixtures/test/_hash_greeting.erb
 ${GEM_LIBDIR}/test/fixtures/test/_hash_object.erb
 ${GEM_LIBDIR}/test/fixtures/test/_hello.builder
@@ -407,6 +414,7 @@ ${GEM_LIBDIR}/test/template/javascript_helper_test.rb
 ${GEM_LIBDIR}/test/template/number_helper_i18n_test.rb
 ${GEM_LIBDIR}/test/template/number_helper_test.rb
 ${GEM_LIBDIR}/test/template/prototype_helper_test.rb
+${GEM_LIBDIR}/test/template/raw_output_helper_test.rb
 ${GEM_LIBDIR}/test/template/record_tag_helper_test.rb
 ${GEM_LIBDIR}/test/template/render_test.rb
 ${GEM_LIBDIR}/test/template/sanitize_helper_test.rb
@@ -418,5 +426,6 @@ ${GEM_LIBDIR}/test/template/text_helper_test.rb
 ${GEM_LIBDIR}/test/template/translation_helper_test.rb
 ${GEM_LIBDIR}/test/template/url_helper_test.rb
 ${GEM_LIBDIR}/test/testing_sandbox.rb
+${GEM_LIBDIR}/test/view/safe_buffer_test.rb
 ${GEM_LIBDIR}/test/view/test_case_test.rb
 ${GEM_HOME}/specifications/actionpack-${PKGVERSION}.gemspec
