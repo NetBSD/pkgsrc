@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:37 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.15 2009/12/02 17:51:25 snj Exp $
 
-DISTNAME=	aspell-da-1.4.52
+DISTNAME=	aspell-da-1.7.30
 PKGNAME=	${DISTNAME:C/-da-/-danish-/}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://da.speling.org/filer/
 EXTRACT_SUFX=	.tar.bz2
