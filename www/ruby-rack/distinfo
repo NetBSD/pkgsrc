@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/06/14 17:58:55 minskim Exp $
+$NetBSD: distinfo,v 1.4 2009/12/02 12:44:43 fhajny Exp $
 
-SHA1 (rack-1.0.0.gem) = 571dc1d6a74a2a4cb0082a59612ff8b2f80f8752
-RMD160 (rack-1.0.0.gem) = 5fbb7259f4e9ba54b081dee3d3caf1c76558fe17
-Size (rack-1.0.0.gem) = 133632 bytes
+SHA1 (rack-1.0.1.gem) = 49ae682c029daa5007e7fe7f47096c8788743c8e
+RMD160 (rack-1.0.1.gem) = 8b4448492f2fb2288df7249cb9e96f57f71ac75f
+Size (rack-1.0.1.gem) = 134656 bytes
