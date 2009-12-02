@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4497 2009/12/02 16:16:30 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4498 2009/12/02 18:12:43 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6014,3 +6014,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/typolight28 version 2.8rc1 [taca 2009-12-02]
 	Added www/typolight28-example version 2.8rc1 [taca 2009-12-02]
 	Added www/typolight28-translations version 20091124 [taca 2009-12-02]
+	Updated textproc/aspell-danish to 1.7.30 [snj 2009-12-02]
+	Updated textproc/aspell-faroese to 0.2.38 [snj 2009-12-02]
+	Updated textproc/aspell-ukrainian to 1.4.0.0 [snj 2009-12-02]
