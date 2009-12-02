@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2008/06/20 01:09:37 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2009/12/02 17:56:26 snj Exp $
 
---- Makefile.orig	2005-12-22 14:56:50.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2009-11-04 12:38:50.000000000 -0800
++++ Makefile	2009-12-02 09:53:27.000000000 -0800
 @@ -9,16 +9,14 @@ landekode=FO
  lang = fo
- version = 0.2.24
+ version = 0.2.38
  
 -dictdir=`aspell dump config | grep '^\# dict-dir current: ' | cut -d' ' -f4`
 -datadir=`aspell dump config | grep '^\# data-dir current: ' | cut -d' ' -f4`
