@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8721 2009/12/02 18:12:43 snj Exp $
+$NetBSD: TODO,v 1.8722 2009/12/02 18:44:38 snj Exp $
 
 Suggested new packages
 ======================
@@ -688,7 +688,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-session-2.28.0 [GNOME 2.28, wants DeviceKit-power]
 	o gnome-subtitles-0.9.1
 	o gnome-system-tools-2.28.1 [GNOME 2.28]
-	o gnome-user-docs-2.28.1 [GNOME 2.28]
 	o gnome-user-share-2.28.1 [GNOME 2.28]
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
