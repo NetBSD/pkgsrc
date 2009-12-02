@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4493 2009/12/02 13:49:18 fhajny Exp $
+$NetBSD: CHANGES-2009,v 1.4494 2009/12/02 14:36:08 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6010,3 +6010,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/libvorbis to 1.2.3nb1 [wiz 2009-12-02]
 	Updated misc/yelp to 2.28.1 [wiz 2009-12-02]
 	Added textproc/ruby-nokogiri version 1.4.0 [fhajny 2009-12-02]
+	Added security/ruby-net-scp version 1.0.2 [fhajny 2009-12-02]
+	Added security/ruby-net-ssh-gateway version 1.0.1 [fhajny 2009-12-02]
