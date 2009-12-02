@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/11/17 10:49:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/12/02 12:08:57 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -123,6 +123,9 @@ ${PYSITELIB}/hgext/record.pyo
 ${PYSITELIB}/hgext/relink.py
 ${PYSITELIB}/hgext/relink.pyc
 ${PYSITELIB}/hgext/relink.pyo
+${PYSITELIB}/hgext/schemes.py
+${PYSITELIB}/hgext/schemes.pyc
+${PYSITELIB}/hgext/schemes.pyo
 ${PYSITELIB}/hgext/share.py
 ${PYSITELIB}/hgext/share.pyc
 ${PYSITELIB}/hgext/share.pyo
