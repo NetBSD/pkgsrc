@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8713 2009/11/30 14:25:25 wiz Exp $
+$NetBSD: TODO,v 1.8714 2009/12/02 08:45:22 snj Exp $
 
 Suggested new packages
 ======================
@@ -200,9 +200,9 @@ Suggested new packages
 	http://www.rhyolite.com/anti-spam/dcc/
 	Distributed Checksum Clearinghouse [pkg/29619]
 
-	Azureus [pkg/29976, pkg/30103, pkgsrc-wip]
-	http://azureus.sourceforge.net/
-	Bittorrent client written in java
+	Vuze
+	http://www.vuze.com/
+	BitTorrent client written in Java
 
 	Webfwlog Firewall Log Analyzer [pkg/30110]
 	http://www.webfwlog.net/
@@ -1444,6 +1444,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86dgaproto-2.1
 	o xf86miscproto-0.9.3
 	o xf86vidmodeproto-2.3
+	o xfce4-volman-0.3.80
 	o xfe-1.32.1
 	o xforms-1.0.92
 	o xfstt-1.7
