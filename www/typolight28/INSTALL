@@ -1,0 +1,13 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2009/12/02 16:06:31 taca Exp $
+
+TL_UPDATE="@TL_UPDATE@"
+TL_WEBDIR="@PREFIX@/@TL_WEBDIR@"
+TL_OWN="@WWWOWN@"
+
+case ${STAGE} in
+POST-INSTALL)
+	case "${TL_UPDATE}" in
+	[Yy][Ee][Ss])	${CHOWN} -R ${TL_OWN} ${TL_WEBDIR};;
+	esac
+	;;
+esac
