@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/31 22:05:53 bad Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/02 22:21:16 bad Exp $
 
 DISTNAME=		openoffice3-bin	# overridden below
 PKGNAME=		openoffice3-bin-${OO_RELEASE}
@@ -18,7 +18,8 @@ CONFLICTS+=		openoffice3-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
 OO_VER=			3
-OO_RELEASE=		3.0.1
+OO_BASEVER=		3.1
+OO_RELEASE=		3.1.1
 PLIST_SUBST+=		VER=${OO_VER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -44,23 +45,27 @@ RUN_LDCONFIG=		no
 
 USE_TOOLS+=	patch
 
+CHECK_FILES_SKIP+=	${PREFIX}/openoffice.org/basis${OO_BASEVER}/ure-link
+CHECK_FILES_SKIP+=	${PREFIX}/openoffice.org${OO_VER}/basis-link
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=		OOo_${OO_RELEASE}_LinuxIntel_install_en-US
-WRKSRC=			${WRKDIR}/OOO300_m15_native_packed-1_en-US.9379
+WRKSRC=			${WRKDIR}/OOO310_m19_native_packed-1_en-US.9420
 .elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=		OOo_${OO_RELEASE}_Solarisx86_install_en-US
-WRKSRC=			${WRKDIR}/OOO300_m15_native_packed-1_en-US.9379/packages
+WRKSRC=			${WRKDIR}/OOO310_m19_native_packed-1_en-US.9420/packages
 .elif ${EMUL_PLATFORM} == "solaris-sparc"
 DISTNAME=		OOo_${OO_RELEASE}_SolarisSparc_install_en-US
-WRKSRC=			${WRKDIR}/OOO300_m15_native_packed-1_en-US.9379/packages
+WRKSRC=			${WRKDIR}/OOO310_m19_native_packed-1_en-US.9420/packages
 .endif
 
 .include "options.mk"
 
 do-install:
 	${PATCH} -d ${PREFIX}/openoffice.org${OO_VER}/program < ${FILESDIR}/soffice-patch
+	${PATCH} -d ${PREFIX}/openoffice.org${OO_VER}/program < ${FILESDIR}/spadmin-patch
 	uniq ${RPM2PKG_PLIST} > ${WRKDIR}/PLIST
 .if defined(PKG_JVM) && !empty(PKG_JVM)
 	${RM} -f ${PREFIX}/bin/soffice
