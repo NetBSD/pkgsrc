@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4490 2009/12/02 12:24:08 fhajny Exp $
+$NetBSD: CHANGES-2009,v 1.4491 2009/12/02 12:41:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6007,3 +6007,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/mercurial to 1.4.1 [wiz 2009-12-02]
 	Added www/ruby-patron version 0.4.4 [fhajny 2009-12-02]
 	Added net/ruby-amqp version 0.6.5 [fhajny 2009-12-02]
+	Updated audio/libvorbis to 1.2.3nb1 [wiz 2009-12-02]
