@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/12/02 12:44:43 fhajny Exp $
 bin/rackup
 ${GEM_HOME}/cache/rack-${PKGVERSION}.gem
 ${GEM_LIBDIR}/COPYING
@@ -73,6 +73,7 @@ ${GEM_LIBDIR}/test/multipart/empty
 ${GEM_LIBDIR}/test/multipart/ie
 ${GEM_LIBDIR}/test/multipart/nested
 ${GEM_LIBDIR}/test/multipart/none
+${GEM_LIBDIR}/test/multipart/semicolon
 ${GEM_LIBDIR}/test/multipart/text
 ${GEM_LIBDIR}/test/spec_rack_auth_basic.rb
 ${GEM_LIBDIR}/test/spec_rack_auth_digest.rb
