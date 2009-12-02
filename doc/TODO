@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8719 2009/12/02 12:57:45 wiz Exp $
+$NetBSD: TODO,v 1.8720 2009/12/02 14:47:06 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -467,7 +467,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calibre-0.6.25
-	o capistrano-2.5.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
 	o cdif-1.19
