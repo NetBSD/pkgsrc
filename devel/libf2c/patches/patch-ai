@@ -1,0 +1,30 @@
+$NetBSD: patch-ai,v 1.1.1.1 2009/12/02 22:32:47 asau Exp $
+
+required to make 
+sizeof(integer) == sizeof(real)
+and
+sizeof(logical) == sizeof(real)
+(per f2c/readme)
+
+--- f2c.h0.orig	Tue Sep  7 13:46:24 1999
++++ f2c.h0	Tue Dec  7 18:08:26 1999
+@@ -8,5 +8,9 @@
+ #define F2C_INCLUDE
+ 
++#if defined(__alpha__) || defined(__sparc64__) || defined(__x86_64__) || defined(__sparcv8) || defined(__sparcv9)
++typedef int integer;
++#else
+ typedef long int integer;
++#endif
+ typedef unsigned long int uinteger;
+ typedef char *address;
+@@ -16,5 +20,9 @@
+ typedef struct { real r, i; } complex;
+ typedef struct { doublereal r, i; } doublecomplex;
++#if defined(__alpha__) || defined(__sparc64__) || defined(__x86_64__) || defined(__sparcv8) || defined(__sparcv9)
++typedef int logical;
++#else
+ typedef long int logical;
++#endif
+ typedef short int shortlogical;
+ typedef char logical1;
