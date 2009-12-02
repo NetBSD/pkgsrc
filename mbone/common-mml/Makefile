@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/03/04 18:15:08 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.18 2009/12/02 07:10:52 snj Exp $
 
 DISTNAME=	common-1.2.16
 PKGNAME=	common-mml-1.2.16
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mbone
 MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/common/
 
