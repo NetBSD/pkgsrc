@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/02 14:33:54 fhajny Exp $
+${GEM_HOME}/cache/net-scp-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGELOG.rdoc
+${GEM_LIBDIR}/Manifest
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/net/scp.rb
+${GEM_LIBDIR}/lib/net/scp/download.rb
+${GEM_LIBDIR}/lib/net/scp/errors.rb
+${GEM_LIBDIR}/lib/net/scp/upload.rb
+${GEM_LIBDIR}/lib/net/scp/version.rb
+${GEM_LIBDIR}/lib/uri/open-scp.rb
+${GEM_LIBDIR}/lib/uri/scp.rb
+${GEM_LIBDIR}/net-scp.gemspec
+${GEM_LIBDIR}/setup.rb
+${GEM_LIBDIR}/test/common.rb
+${GEM_LIBDIR}/test/test_all.rb
+${GEM_LIBDIR}/test/test_download.rb
+${GEM_LIBDIR}/test/test_scp.rb
+${GEM_LIBDIR}/test/test_upload.rb
+${GEM_HOME}/specifications/net-scp-${PKGVERSION}.gemspec
