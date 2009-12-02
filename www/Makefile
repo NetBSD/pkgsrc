@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.673 2009/11/28 21:28:35 tnn Exp $
+# $NetBSD: Makefile,v 1.674 2009/12/02 12:24:08 fhajny Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -473,6 +473,7 @@ SUBDIR+=	ruby-innate
 SUBDIR+=	ruby-jsmin
 SUBDIR+=	ruby-mechanize
 SUBDIR+=	ruby-net-flickr
+SUBDIR+=	ruby-patron
 SUBDIR+=	ruby-rack
 SUBDIR+=	ruby-staticmatic
 SUBDIR+=	ruby-tag
