@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4494 2009/12/02 14:36:08 fhajny Exp $
+$NetBSD: CHANGES-2009,v 1.4495 2009/12/02 15:45:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3587,7 +3587,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/wide-dhcpv6 to 20080615 [jakllsch 2009-07-17]
 	Updated databases/p5-DBD-Sybase to 1.09 [sno 2009-07-17]
 	Updated devel/bugzilla3 to 3.2.4 [adrianp 2009-07-17]
-	Updated devel/bugzilla3 to 3.2.4 [adrianp 2009-07-17]
 	Updated graphics/png to 1.2.38 [wiz 2009-07-17]
 	Updated sysutils/cdrtools to 2.01.01alpha61 [wiz 2009-07-17]
 	Updated x11/setxkbmap to 1.1.0 [wiz 2009-07-17]
@@ -5682,7 +5681,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xlsclients to 1.0.2 [tnn 2009-11-09]
 	Updated x11/xkill to 1.0.2 [tnn 2009-11-09]
 	Updated x11/xinput to 1.5.0 [tnn 2009-11-09]
-	Updated x11/xhost to 1.0.3 [tnn 2009-11-09]
 	Updated x11/xhost to 1.0.3 [tnn 2009-11-09]
 	Updated x11/xgamma to 1.0.3 [tnn 2009-11-09]
 	Updated x11/xev to 1.0.4 [tnn 2009-11-09]
