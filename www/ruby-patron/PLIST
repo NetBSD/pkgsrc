@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/02 12:13:28 fhajny Exp $
+${GEM_HOME}/cache/patron-${PKGVERSION}.gem
+${GEM_LIBDIR}/.require_paths
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ext/patron/extconf.rb
+${GEM_LIBDIR}/ext/patron/session_ext.c
+${GEM_LIBDIR}/lib/patron.rb
+${GEM_LIBDIR}/lib/patron/error.rb
+${GEM_LIBDIR}/lib/patron/request.rb
+${GEM_LIBDIR}/lib/patron/response.rb
+${GEM_LIBDIR}/lib/patron/session.rb
+${GEM_LIBDIR}/lib/patron/session_ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/spec/patron_spec.rb
+${GEM_LIBDIR}/spec/request_spec.rb
+${GEM_LIBDIR}/spec/response_spec.rb
+${GEM_LIBDIR}/spec/session_spec.rb
+${GEM_LIBDIR}/spec/spec.opts
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/patron-${PKGVERSION}.gemspec
