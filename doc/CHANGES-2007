@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2729 2008/12/03 08:53:55 spz Exp $
+$NetBSD: CHANGES-2007,v 1.2730 2009/12/02 15:45:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1405,7 +1405,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed shells/zsh3 [wiz 2007-04-01]
 	Updated security/lsh to 2.0.2 [wiz 2007-04-01]
 	Removed security/lsh2 [wiz 2007-04-01]
-	Removed audio/gkrellm1-volume [wiz 2007-04-01]
 	Removed audio/gkrellm1-volume [wiz 2007-04-01]
 	Removed audio/gkrellm1-xmms [wiz 2007-04-01]
 	Removed finance/gkrellm1-stock [wiz 2007-04-01]

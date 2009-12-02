@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.2084 2008/11/24 15:21:29 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.2085 2009/12/02 15:45:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3835,7 +3835,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gnopernicus to 1.1.1 [jmmv 2006-08-06]
 	Updated games/gnome2-games to 2.14.3 [jmmv 2006-08-06]
 	Updated sysutils/gnome2-system-monitor to 2.14.5 [jmmv 2006-08-06]
-	Updated mail/evolution to 2.6.3 [jmmv 2006-08-06]
 	Updated mail/evolution to 2.6.3 [jmmv 2006-08-06]
 	Updated misc/deskbar-applet to 2.14.2 [jmmv 2006-08-06]
 	Updated time/evolution-webcal to 2.6.0 [jmmv 2006-08-06]
