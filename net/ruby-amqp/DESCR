@@ -1,0 +1,3 @@
+AMQP client implementation in Ruby/EventMachine.
+This library was tested primarily with RabbitMQ, although it should
+be compatible with any server implementing the AMQP 0-8 spec.
