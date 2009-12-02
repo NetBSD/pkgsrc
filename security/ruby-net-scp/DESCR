@@ -1,0 +1,2 @@
+Library built on top of Net::SSH that implements the SCP "secure copy"
+protocol for transfering files.
