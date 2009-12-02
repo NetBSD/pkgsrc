@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:20:34 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/02 14:26:28 fhajny Exp $
 
-DISTNAME=	net-ssh-1.1.2
+DISTNAME=	net-ssh-2.0.16
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://net-ssh.rubyforge.org/
+HOMEPAGE=	http://rubyforge.org/projects/net-ssh/
 COMMENT=	Secure shell for Ruby
-
-DEPENDS+=	${RUBY_PKGPREFIX}-needle>=1.2.0:../../devel/ruby-needle
+LICENSE=	mit
 
 GEM_BUILD=	gemspec
 
