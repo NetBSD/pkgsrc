@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4496 2009/12/02 15:52:15 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4497 2009/12/02 16:16:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6011,3 +6011,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/ruby-net-scp version 1.0.2 [fhajny 2009-12-02]
 	Added security/ruby-net-ssh-gateway version 1.0.1 [fhajny 2009-12-02]
 	Updated www/typo3 to 4.3.0 [taca 2009-12-02]
+	Added www/typolight28 version 2.8rc1 [taca 2009-12-02]
+	Added www/typolight28-example version 2.8rc1 [taca 2009-12-02]
+	Added www/typolight28-translations version 20091124 [taca 2009-12-02]
