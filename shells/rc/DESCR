@@ -2,7 +2,7 @@ rc - a unix version of the Plan-9 Shell.
 
 FEEPING CREATURISM
 
-See the end of the man page, under "INCOMPATABILITIES" for (known?)
+See the end of the man page, under "INCOMPATIBILITIES" for (known?)
 differences from the "real" rc. Most of these changes were necessary
 to get rc to work in a reasonable fashion on a real (i.e., commercial,
 non-Labs) UNIX system; a few were changes motivated by concern
