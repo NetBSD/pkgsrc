@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4501 2009/12/02 21:39:05 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.4502 2009/12/02 22:49:53 bad Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6020,3 +6020,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/gnome-user-docs to 2.28.1 [snj 2009-12-02]
 	Updated mail/getmail to 4.15.0 [schmonz 2009-12-02]
 	Updated www/ikiwiki to 3.20091202 [schmonz 2009-12-02]
+	Updated misc/openoffice3-bin to 3.1.1 [bad 2009-12-02]
