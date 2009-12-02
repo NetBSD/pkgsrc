@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4485 2009/12/02 07:11:28 snj Exp $
+$NetBSD: CHANGES-2009,v 1.4486 2009/12/02 09:29:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6001,3 +6001,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ruby-activeresource to 2.3.5 [minskim 2009-12-01]
 	Updated www/rails to 2.3.5 [minskim 2009-12-01]
 	Updated mbone/common-mml to 1.2.16nb3 [snj 2009-12-02]
+	Updated editors/tomboy to 1.0.1 [wiz 2009-12-02]

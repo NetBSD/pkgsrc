@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8714 2009/12/02 08:45:22 snj Exp $
+$NetBSD: TODO,v 1.8715 2009/12/02 09:29:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1336,7 +1336,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
-	o tomboy-1.0.1
 	o top-3.8beta1
 	o totem-2.28.4
 	o tpasm-1.2
