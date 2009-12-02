@@ -1,0 +1,3 @@
+libf2c is Fortran support library distributed by Netlib with f2c
+(Fortran 77 to C translator).
+libf2c combines libF77 and libI77 in one library.
