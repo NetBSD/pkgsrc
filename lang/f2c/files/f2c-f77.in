@@ -161,7 +161,7 @@ ARGS=
 CPPFLAGS=
 CFLAGS=-I@PREFIX@/include 
 LIBS=
-FLIBS="-Wl,-R@PREFIX@/lib -L@PREFIX@/lib -lF77 -lI77 -lm"
+FLIBS="-Wl,-R@PREFIX@/lib -L@PREFIX@/lib -lf2c -lm"
 VERBOSE=no
 
 while
