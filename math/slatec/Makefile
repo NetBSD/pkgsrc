@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2009/02/22 14:15:28 asau Exp $
+# $NetBSD: Makefile,v 1.21 2009/12/03 13:06:55 asau Exp $
 #
 
 DISTNAME=	slatec_src
 PKGNAME=	slatec-4.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_NETLIB:=slatec/}
 EXTRACT_SUFX=	.tgz

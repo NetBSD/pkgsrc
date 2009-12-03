@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:36 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/12/03 13:06:54 asau Exp $
 
 DISTNAME=		fftw-2.1.5
 PKGNAME=		fftw2-2.1.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			http://www.fftw.org/
