@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2007/03/24 19:21:27 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/12/03 13:06:54 asau Exp $
 
 DISTNAME=	dcdflib.f-1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	ftp://odin.mdacc.tmc.edu/pub/source/
 
