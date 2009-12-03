@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2003/03/02 09:04:04 jtb Exp $
+$NetBSD: patch-aa,v 1.6 2009/12/03 17:48:58 joerg Exp $
 
 --- makefile.orig	Tue Dec 17 15:43:30 2002
 +++ makefile
@@ -158,13 +158,13 @@ $NetBSD: patch-aa,v 1.5 2003/03/02 09:04:04 jtb Exp $
  
 -COMPILE = $(CC) $(NTL_INCLUDE) $(CPPFLAGS) $(CFLAGS) -c
 -COMPILE_CXX = $(CXX) $(NTL_INCLUDE) $(CPPFLAGS) $(CXXFLAGS) -c
-+COMPILE = $(LIBTOOL) $(CC) $(NTL_INCLUDE) $(CPPFLAGS) $(CFLAGS) -c
-+COMPILE_CXX = $(LIBTOOL) $(CXX) $(NTL_INCLUDE) $(CPPFLAGS) $(CXXFLAGS) -c
++COMPILE = $(LIBTOOL) --mode=compile $(CC) $(NTL_INCLUDE) $(CPPFLAGS) $(CFLAGS) -c
++COMPILE_CXX = $(LIBTOOL) --mode=compile $(CXX) $(NTL_INCLUDE) $(CPPFLAGS) $(CXXFLAGS) -c
  
 -LINK = $(CC) $(NTL_INCLUDE) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
 -LINK_CXX = $(CXX) $(NTL_INCLUDE) $(CPPFLAGS) $(CXXFLAGS) $(LDFLAGS_CXX)
-+LINK = $(LIBTOOL) $(CC) $(NTL_INCLUDE) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
-+LINK_CXX = $(LIBTOOL) $(CXX) $(NTL_INCLUDE) $(CPPFLAGS) $(CXXFLAGS) $(LDFLAGS_CXX)
++LINK = $(LIBTOOL) --mode=link $(CC) $(NTL_INCLUDE) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
++LINK_CXX = $(LIBTOOL) --mode=link $(CXX) $(NTL_INCLUDE) $(CPPFLAGS) $(CXXFLAGS) $(LDFLAGS_CXX)
  
  
  
@@ -193,7 +193,7 @@ $NetBSD: patch-aa,v 1.5 2003/03/02 09:04:04 jtb Exp $
 -	$(AR) $(ARFLAGS) ntl.a $(OBJ)
 -	- $(RANLIB) ntl.a
 +libntl.la:	$(OBJ)
-+	$(LIBTOOL) $(CC) -o libntl.la $(OBJ:.o=.lo) \
++	$(LIBTOOL) --mode=link $(CC) -o libntl.la $(OBJ:.o=.lo) \
 +	$(GMP_LIBDIR) $(GMP_LIB) -rpath $(LIBDIR) \
 +	-version-info 0:1
  
@@ -243,12 +243,12 @@ $NetBSD: patch-aa,v 1.5 2003/03/02 09:04:04 jtb Exp $
 -	cp ../doc/*.txt $(DOCDIR)/NTL
 -	cp ../doc/*.html $(DOCDIR)/NTL
 -	cp ../doc/*.gif $(DOCDIR)/NTL
-+	$(LIBTOOL) $(BSD_INSTALL_DATA) libntl.la $(LIBDIR)
-+	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)/NTL
-+	$(BSD_INSTALL_DATA) ../include/NTL/*.h $(INCLUDEDIR)/NTL
-+	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)/NTL
-+	$(BSD_INSTALL_DATA) ../doc/*.txt $(DOCDIR)/NTL
-+	$(BSD_INSTALL_DATA) ../doc/*.html $(DOCDIR)/NTL
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) libntl.la ${DESTDIR}$(LIBDIR)
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(INCLUDEDIR)/NTL
++	$(BSD_INSTALL_DATA) ../include/NTL/*.h ${DESTDIR}$(INCLUDEDIR)/NTL
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(DOCDIR)/NTL
++	$(BSD_INSTALL_DATA) ../doc/*.txt ${DESTDIR}$(DOCDIR)/NTL
++	$(BSD_INSTALL_DATA) ../doc/*.html ${DESTDIR}$(DOCDIR)/NTL
 +
  
  
@@ -295,7 +295,7 @@ $NetBSD: patch-aa,v 1.5 2003/03/02 09:04:04 jtb Exp $
 -	$(AR) $(ARFLAGS) wntl.a $(WOBJ)
 -	- $(RANLIB) wntl.a
 +libwntl.la:	$(WOBJ)
-+	$(LIBTOOL) $(CC) -o libwntl.la $(WOBJ:.o=.lo) -rpath $(LIBDIR) \
++	$(LIBTOOL) --mode=link $(CC) -o libwntl.la $(WOBJ:.o=.lo) -rpath $(LIBDIR) \
 +	-version-info 0:0
  
  
