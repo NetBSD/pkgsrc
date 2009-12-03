@@ -7,7 +7,7 @@ SRCS=	main.c init.c gram.y lex.c proc.c equiv.c data.c format.c \
 	output.c p1output.c pread.c put.c putpcc.c vax.c formatdata.c \
 	parse_args.c niceprintf.c cds.c sysdep.c version.c $(MALLOC)
 
-F2CSRCDIR=	$(.CURDIR)/../distrib/src
+F2CSRCDIR=	.
 .PATH:	$(F2CSRCDIR)
 
 # To use the malloc whose source accompanies the f2c source,
