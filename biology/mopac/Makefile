@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/12/03 13:06:52 asau Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/03 19:01:05 asau Exp $
 #
 
 DISTNAME=		mopac7
@@ -41,5 +41,5 @@ do-install:
 
 # "g77" can not be used for external function
 
-.include "../../lang/f2c/buildlink3.mk"
+.include "../../devel/libf2c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
