@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2009/08/26 19:58:26 sno Exp $
+# $NetBSD: Makefile,v 1.87 2009/12/03 23:19:05 asau Exp $
 
 DISTNAME=		liferea-1.4.28
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 
@@ -30,11 +30,11 @@ CONFIGURE_ARGS+=	--disable-gecko
 PLIST.gtkhtml=	yes
 .endif
 .if !empty(PKG_OPTIONS:Mliferea-firefox)
-.include "../../www/firefox/buildlink3.mk"
+.include "../../devel/xulrunner/buildlink3.mk"
 PLIST.mozilla=	yes
 .endif
 .if !empty(PKG_OPTIONS:Mliferea-seamonkey)
-.include "../../www/firefox/buildlink3.mk"
+.include "../../devel/xulrunner/buildlink3.mk"
 PLIST.mozilla=	yes
 .endif
 .if !empty(PKG_OPTIONS:Mliferea-webkit)
