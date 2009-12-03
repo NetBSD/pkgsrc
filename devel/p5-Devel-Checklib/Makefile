@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/29 07:14:16 sno Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/03 18:41:50 joerg Exp $
 #
 
 DISTNAME=	Devel-CheckLib-0.6
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-IO-CaptureOutput>=1.08.01:../../devel/p5-IO-CaptureOutput
 
-PERL5_PACKLIST=	auto/Devel/Checklib/.packlist
+PERL5_PACKLIST=	auto/Devel/CheckLib/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
