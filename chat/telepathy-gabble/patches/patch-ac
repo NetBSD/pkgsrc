@@ -1,15 +1,12 @@
-$NetBSD: patch-ac,v 1.3 2009/08/16 18:46:27 wiz Exp $
+$NetBSD: patch-ac,v 1.4 2009/12/03 23:58:59 wiz Exp $
 
-http://bugs.freedesktop.org/show_bug.cgi?id=23349
-
---- lib/gibber/gibber-util.h.orig	2009-02-19 19:25:00 +0200
-+++ lib/gibber/gibber-util.h	2009-03-14 18:58:53 +0200
-@@ -21,6 +21,8 @@
- #define __GIBBER_UTIL_H__
- 
- #include <netdb.h>
-+#include <netinet/in.h>
-+#include <sys/socket.h>
- 
- #include <glib.h>
- 
+--- lib/gibber/asyncns.c.orig	2009-02-27 13:05:19.000000000 +0000
++++ lib/gibber/asyncns.c
+@@ -35,6 +35,7 @@
+ #include <errno.h>
+ #include <sys/wait.h>
+ #include <sys/types.h>
++#include <sys/resource.h>
+ #include <pwd.h>
+ #include <netinet/in.h>
+ #include <arpa/nameser.h>
