@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/02/17 13:02:20 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/03 13:06:52 asau Exp $
 #
 
 DISTNAME=		mopac7
 PKGNAME=		mopac-7.0
+PKGREVISION=		1
 CATEGORIES=		biology math
 MASTER_SITES=		http://server.ccl.net/cca/software/LINUX/mopac7/
 EXTRACT_SUFX=		.tar.Z

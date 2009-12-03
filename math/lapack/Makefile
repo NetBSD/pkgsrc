@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2009/10/20 14:00:23 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2009/12/03 13:06:54 asau Exp $
 
 DISTNAME=	lapack-lite-3.1.1
 PKGNAME=	lapack-3.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_NETLIB:=lapack/}
 EXTRACT_SUFX=	.tgz
