@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.24 2009/12/02 23:22:09 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.25 2009/12/03 10:19:49 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -71,3 +71,7 @@ www/ruby-actionpack: security update
 www/ruby-activeresource security update
 Pullup ticket #2492 - requested by fhajny
 apr: security update
+Pullup ticket #2940 - requested by taca
+pear-Mail: security update
+Pullup ticket #2943 - requested by wiz
+libvorbis: security patch
