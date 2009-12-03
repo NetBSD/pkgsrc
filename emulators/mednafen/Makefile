@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/10/31 14:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/12/03 17:07:31 joerg Exp $
 #
 
 DISTNAME=	mednafen-0.8.C
@@ -27,6 +27,13 @@ SUBST_STAGE.dsp=	pre-configure
 SUBST_MESSAGE.dsp=	Fixing path to audio device.
 SUBST_FILES.dsp=	src/sexyal/drivers/oss.cpp src/sexyal/sexyal.cpp
 SUBST_SED.dsp=		-e s,/dev/dsp,${DEVOSSAUDIO},
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "modular"
+CONFIGURE_ARGS+=	--x-includes=${PREFIX:Q}/include
+CONFIGURE_ARGS+=	--x-libraries=${PREFIX:Q}/lib
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Documentation/*.html \
