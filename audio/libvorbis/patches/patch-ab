@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.5.2.2 2009/12/03 10:16:10 tron Exp $
+
+SVN 16326.
+
+--- lib/backends.h.orig	2009-07-09 09:12:08.000000000 +0000
++++ lib/backends.h
+@@ -111,7 +111,7 @@ typedef struct vorbis_info_residue0{
+   int    partitions;       /* possible codebooks for a partition */
+   int    groupbook;        /* huffbook for partitioning */
+   int    secondstages[64]; /* expanded out to pointers in lookup */
+-  int    booklist[256];    /* list of second stage books */
++  int    booklist[512];    /* list of second stage books */
+ 
+   const float classmetric1[64];
+   const float classmetric2[64];
