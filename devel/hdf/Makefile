@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2009/08/26 19:57:21 sno Exp $
+# $NetBSD: Makefile,v 1.32 2009/12/03 13:06:52 asau Exp $
 
 DISTNAME=	HDF4.2r1
 PKGNAME=	hdf-4.2r1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF/prev-releases/HDF4.2r1/src/
 
