@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4503 2009/12/03 06:34:22 snj Exp $
+$NetBSD: CHANGES-2009,v 1.4504 2009/12/03 12:05:23 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6022,3 +6022,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ikiwiki to 3.20091202 [schmonz 2009-12-02]
 	Updated misc/openoffice3-bin to 3.1.1 [bad 2009-12-02]
 	Updated games/neverball to 1.5.4 [snj 2009-12-03]
+	Updated databases/phpmyadmin to 2.11.9.6 [tron 2009-12-03]
