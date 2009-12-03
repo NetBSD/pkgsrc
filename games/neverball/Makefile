@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2009/08/26 19:57:32 sno Exp $
-#
+# $NetBSD: Makefile,v 1.19 2009/12/03 06:33:46 snj Exp $
 
-DISTNAME=	neverball-1.4.0
-PKGREVISION=	4
+DISTNAME=	neverball-1.5.4
 CATEGORIES=	games
-MASTER_SITES=	http://www.icculus.org/neverball/
+MASTER_SITES=	http://neverball.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.icculus.org/neverball/
-COMMENT=	Part puzzle game, part action game and with SDL graphics
+HOMEPAGE=	http://neverball.org/
+COMMENT=	Puzzle/action game similar to Super Monkey Ball
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,25 +16,29 @@ USE_TOOLS+=	gmake pax
 BUILDLINK_FNAME_TRANSFORM.SDL+=	-e "s|/SDL/|/|g"
 BUILDLINK_FNAME_TRANSFORM.SDL_ttf+=	-e "s|/SDL/|/|g"
 
+MAKE_ENV+=	ENABLE_NLS=0
+
 SHAREDIR=	${PREFIX}/share/${PKGBASE}
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/${PKGBASE} share/${PKGBASE}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README \
+	${INSTALL_DATA} ${WRKSRC}/doc/MANUAL ${WRKSRC}/README \
 	    ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_PROGRAM} ${WRKSRC}/neverball ${WRKSRC}/neverputt \
-	    ${DESTDIR}${SHAREDIR}
-	cd ${WRKSRC} && pax -rwppm data ${DESTDIR}${SHAREDIR}
-	${SED} -e "s,@SHAREDIR@,${SHAREDIR},g" ${FILESDIR}/neverball.sh \
-	    > ${WRKSRC}/neverball.sh
-	${INSTALL_SCRIPT} ${WRKSRC}/neverball.sh \
-	    ${DESTDIR}${PREFIX}/bin/neverball
+	    ${DESTDIR}${PREFIX}/bin
+	for d in `${FIND} ${WRKSRC}/data -type d -print`; do \
+	    ${CHMOD} ${PKGDIRMODE} $${d}; \
+	done
+	for f in `${FIND} ${WRKSRC}/data -type f -print`; do \
+	    ${CHMOD} ${SHAREMODE} $${f}; \
+	done
+	cd ${WRKSRC} && ${PAX} -rwppm data ${DESTDIR}${SHAREDIR}
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../devel/physfs/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
