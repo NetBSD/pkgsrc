@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/07/07 19:53:00 sno Exp $
+# $NetBSD: Makefile,v 1.15 2009/12/03 16:19:24 joerg Exp $
 #
 
 DISTNAME=		arping-2.08
@@ -18,7 +18,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 CPPFLAGS+=		-I${LOCALBASE}/include/libnet11
 
 do-build:
-	cd ${WRKSRC} && cc ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} ${LIBS} -o arping arping-2/arping.c
+	${CC} -o ${WRKSRC}/arping ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} \
+	    ${WRKSRC}/arping-2/arping.c ${LIBS}    
 
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/arping.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
