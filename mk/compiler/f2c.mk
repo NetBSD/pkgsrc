@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.11 2008/05/24 07:27:11 obache Exp $
+# $NetBSD: f2c.mk,v 1.12 2009/12/03 12:44:10 asau Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -97,8 +97,9 @@ _WRAP_ENV.FC=	PATH="${WRAPPER_BINDIR}:${_WRAP_PATH}"; export PATH
 PREPEND_PATH+=	${_F2C_DIR}/bin
 .  endif
 
-# Add the dependency on f2c.
-.  include "../../lang/f2c/buildlink3.mk"
+# Dependencies:
+BUILD_DEPENDS+=	f2c>20090411:../../lang/f2c # translator
+.  include "../../devel/libf2c/buildlink3.mk" # library
 
 .  if defined(F2C_DIR) && !empty(F2C_DIR)
 PKGSRC_MAKE_ENV+=	F2C_DIR=${F2C_DIR:Q}
