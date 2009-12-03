@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2009/09/09 11:16:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2009/12/03 23:58:59 wiz Exp $
 #
 
-DISTNAME=	telepathy-gabble-0.7.21
+DISTNAME=	telepathy-gabble-0.9.2
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-gabble/
 
@@ -19,18 +19,23 @@ USE_TOOLS+=	gmake pkg-config
 .if ${PYPKGPREFIX} == "py24"
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
-CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
 
-BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.7.23
+pre-configure: wocky-pkg-config-hack
+wocky-pkg-config-hack:
+	${LN} -s ${WRKSRC}/lib/ext/wocky/wocky/wocky-uninstalled.pc \
+		${BUILDLINK_DIR}/lib/pkgconfig
+
+BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.7.37
 .include "../../chat/telepathy-glib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.loudmouth+=	loudmouth>=1.3.2
-.include "../../chat/loudmouth/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.16.0
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.21.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../net/libsoup24/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.78
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus+=		dbus>=1.1
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
