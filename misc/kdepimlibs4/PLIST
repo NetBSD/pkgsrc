@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 21:27:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/04 22:04:05 markd Exp $
 include/KDE/Akonadi/AgentBase
 include/KDE/Akonadi/AgentFilterProxyModel
 include/KDE/Akonadi/AgentInstance
@@ -763,6 +763,8 @@ share/kde/apps/libkholidays/holiday_it
 share/kde/apps/libkholidays/holiday_jm
 share/kde/apps/libkholidays/holiday_jp
 share/kde/apps/libkholidays/holiday_lt
+share/kde/apps/libkholidays/holiday_luFrench
+share/kde/apps/libkholidays/holiday_luLuxembourgish
 share/kde/apps/libkholidays/holiday_mx
 share/kde/apps/libkholidays/holiday_nl
 share/kde/apps/libkholidays/holiday_no

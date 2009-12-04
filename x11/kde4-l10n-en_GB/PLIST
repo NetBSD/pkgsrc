@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 08:13:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/12/04 22:04:06 markd Exp $
 share/doc/kde/HTML/en_GB/cervisia/common
 share/doc/kde/HTML/en_GB/cervisia/index.cache.bz2
 share/doc/kde/HTML/en_GB/cervisia/index.docbook
@@ -627,6 +627,7 @@ share/locale/en_GB/LC_MESSAGES/kbruch.mo
 share/locale/en_GB/LC_MESSAGES/kbugbuster.mo
 share/locale/en_GB/LC_MESSAGES/kcachegrind.mo
 share/locale/en_GB/LC_MESSAGES/kcachegrind_qt.mo
+share/locale/en_GB/LC_MESSAGES/kcal_akonadi.mo
 share/locale/en_GB/LC_MESSAGES/kcalc.mo
 share/locale/en_GB/LC_MESSAGES/kcertpart.mo
 share/locale/en_GB/LC_MESSAGES/kcharselect.mo
@@ -870,6 +871,7 @@ share/locale/en_GB/LC_MESSAGES/kres_remote.mo
 share/locale/en_GB/LC_MESSAGES/kres_scalix.mo
 share/locale/en_GB/LC_MESSAGES/kres_tvanytime.mo
 share/locale/en_GB/LC_MESSAGES/kres_xmlrpc.mo
+share/locale/en_GB/LC_MESSAGES/kresources_shared_akonadi.mo
 share/locale/en_GB/LC_MESSAGES/kreversi.mo
 share/locale/en_GB/LC_MESSAGES/krfb.mo
 share/locale/en_GB/LC_MESSAGES/kruler.mo
@@ -971,6 +973,7 @@ share/locale/en_GB/LC_MESSAGES/libphonon.mo
 share/locale/en_GB/LC_MESSAGES/libplasma.mo
 share/locale/en_GB/LC_MESSAGES/libplasmaclock.mo
 share/locale/en_GB/LC_MESSAGES/libplasmaweather.mo
+share/locale/en_GB/LC_MESSAGES/librtm.mo
 share/locale/en_GB/LC_MESSAGES/libtaskmanager.mo
 share/locale/en_GB/LC_MESSAGES/lokalize.mo
 share/locale/en_GB/LC_MESSAGES/lskat.mo
@@ -1068,6 +1071,7 @@ share/locale/en_GB/LC_MESSAGES/plasma_appletscriptengine_dashboard.mo
 share/locale/en_GB/LC_MESSAGES/plasma_appletscriptengine_googlegadget.mo
 share/locale/en_GB/LC_MESSAGES/plasma_appletscriptengine_qedjescripts.mo
 share/locale/en_GB/LC_MESSAGES/plasma_engine_kalzium.mo
+share/locale/en_GB/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/en_GB/LC_MESSAGES/plasma_engine_kuiserver.mo
 share/locale/en_GB/LC_MESSAGES/plasma_engine_metadata.mo
 share/locale/en_GB/LC_MESSAGES/plasma_engine_network.mo
