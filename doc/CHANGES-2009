@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4507 2009/12/04 00:04:18 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4508 2009/12/04 10:39:01 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6026,3 +6026,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/telepathy-gabble to 0.9.2 [wiz 2009-12-03]
 	Updated graphics/png to 1.2.41 [wiz 2009-12-04]
 	Updated chat/telepathy-farsight to 0.0.12 [wiz 2009-12-04]
+	Updated editors/vim-share to 7.2.315 [martti 2009-12-04]
