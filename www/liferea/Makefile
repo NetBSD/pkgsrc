@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2009/12/03 23:19:05 asau Exp $
+# $NetBSD: Makefile,v 1.88 2009/12/04 13:50:08 tnn Exp $
 
 DISTNAME=		liferea-1.4.28
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 
@@ -19,7 +19,8 @@ USE_LANGUAGES+=		c
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.liferea
 PKG_OPTIONS_REQUIRED_GROUPS=	renderer
-PKG_OPTIONS_GROUP.renderer=	liferea-gtkhtml liferea-seamonkey liferea-firefox liferea-webkit
+PKG_OPTIONS_GROUP.renderer=	liferea-gtkhtml liferea-mozilla liferea-webkit
+PKG_OPTIONS_LEGACY_OPTS=	liferea-firefox:liferea-mozilla liferea-seamonkey:liferea-mozilla
 PKG_SUGGESTED_OPTIONS=	liferea-gtkhtml
 .include "../../mk/bsd.options.mk"
 
@@ -29,11 +30,8 @@ CONFIGURE_ARGS+=	--disable-gecko
 .include "../../www/libgtkhtml/buildlink3.mk"
 PLIST.gtkhtml=	yes
 .endif
-.if !empty(PKG_OPTIONS:Mliferea-firefox)
-.include "../../devel/xulrunner/buildlink3.mk"
-PLIST.mozilla=	yes
-.endif
-.if !empty(PKG_OPTIONS:Mliferea-seamonkey)
+.if !empty(PKG_OPTIONS:Mliferea-mozilla)
+CONFIGURE_ARGS+=	--with-gecko=libxul
 .include "../../devel/xulrunner/buildlink3.mk"
 PLIST.mozilla=	yes
 .endif
