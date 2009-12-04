@@ -1,6 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/10/02 19:19:00 markd Exp $
-
-Includes patch from https://bugs.kde.org/show_bug.cgi?id=193215
+$NetBSD: patch-ac,v 1.2 2009/12/04 22:04:07 markd Exp $
 
 --- kio/kssl/kopenssl.cpp.ORIG	2008-10-23 12:05:00.000000000 +1300
 +++ kio/kssl/kopenssl.cpp
@@ -200,12 +198,3 @@ Includes patch from https://bugs.kde.org/show_bug.cgi?id=193215
  
     if (d->sslLib) {
  #ifdef KSSL_HAVE_SSL
-@@ -622,7 +613,7 @@ KOpenSSLProxy::KOpenSSLProxy()
-       K_SSL_set_session = (int (*)(SSL*,SSL_SESSION*)) d->sslLib->resolveFunction("SSL_set_session");
-       K_d2i_SSL_SESSION = (SSL_SESSION* (*)(SSL_SESSION**,unsigned char**, long)) d->sslLib->resolveFunction("d2i_SSL_SESSION");
-       K_i2d_SSL_SESSION = (int (*)(SSL_SESSION*,unsigned char**)) d->sslLib->resolveFunction("i2d_SSL_SESSION");
--      K_SSL_get_ciphers = (STACK *(*)(const SSL*)) d->sslLib->resolveFunction("SSL_get_ciphers");
-+      K_SSL_get_ciphers = (STACK_OF(SSL_CIPHER) *(*)(const SSL*)) d->sslLib->resolveFunction("SSL_get_ciphers");
- #endif
- 
- 
