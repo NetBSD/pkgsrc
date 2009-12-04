@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4510 2009/12/04 22:37:41 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4511 2009/12/04 22:55:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6055,3 +6055,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/kdelibs-experimental4 to 4.3.4 [markd 2009-12-04]
 	Updated x11/kdelibs4 to 4.3.4 [markd 2009-12-04]
 	Added textproc/p5-ack version 1.90 [seb 2009-12-04]
+	Updated devel/p5-Class-Adapter to 1.06 [seb 2009-12-04]
