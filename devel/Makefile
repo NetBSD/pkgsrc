@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1262 2009/12/03 22:38:11 asau Exp $
+# $NetBSD: Makefile,v 1.1263 2009/12/04 23:37:31 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -499,6 +499,7 @@ SUBDIR+=	p5-Class-ReturnValue
 SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Class-Std
 SUBDIR+=	p5-Class-Trigger
+SUBDIR+=	p5-Class-Unload
 SUBDIR+=	p5-Class-WhiteHole
 SUBDIR+=	p5-Class-XML
 SUBDIR+=	p5-Class-XPath
