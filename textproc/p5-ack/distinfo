@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/04 22:35:00 seb Exp $
+
+SHA1 (ack-1.90.tar.gz) = b329657754e34cc1aa51a2769ae081fca8183f53
+RMD160 (ack-1.90.tar.gz) = e180b3d3a50c04dcf296169f10076c3c0389d612
+Size (ack-1.90.tar.gz) = 101587 bytes
