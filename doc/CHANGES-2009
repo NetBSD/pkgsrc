@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4512 2009/12/04 23:38:59 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4513 2009/12/04 23:59:35 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6057,3 +6057,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/p5-ack version 1.90 [seb 2009-12-04]
 	Updated devel/p5-Class-Adapter to 1.06 [seb 2009-12-04]
 	Added devel/p5-Class-Unload version 0.05 [seb 2009-12-04]
+	Added devel/p5-Class-XSAccessor-Array version 1.04 [seb 2009-12-04]
