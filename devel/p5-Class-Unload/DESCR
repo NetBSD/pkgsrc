@@ -1,0 +1,3 @@
+The Perl 5 module Class::Unload provides a function to unload a
+given class by clearing out its symbol table and removing it from
+%INC.
