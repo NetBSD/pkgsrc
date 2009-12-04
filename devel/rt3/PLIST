@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/21 15:31:39 spz Exp $
+@comment $NetBSD: PLIST,v 1.15.4.1 2009/12/04 15:42:38 tron Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -247,8 +247,8 @@ lib/rt3/RT/User_Overlay.pm
 lib/rt3/RT/Users.pm
 lib/rt3/RT/Users_Overlay.pm
 lib/rt3/RT/Util.pm
-sbin/rt-dump-database
 sbin/rt-clean-sessions
+sbin/rt-dump-database
 sbin/rt-email-dashboards
 sbin/rt-email-digest
 sbin/rt-email-group-admin
@@ -309,6 +309,7 @@ share/rt3/etc/upgrade/3.8.2/content
 share/rt3/etc/upgrade/3.8.3/content
 share/rt3/etc/upgrade/3.8.3/schema.Pg
 share/rt3/etc/upgrade/3.8.4/content
+share/rt3/etc/upgrade/3.8.6/content
 share/rt3/html/Admin/CustomFields/GroupRights.html
 share/rt3/html/Admin/CustomFields/Modify.html
 share/rt3/html/Admin/CustomFields/Objects.html
@@ -338,6 +339,7 @@ share/rt3/html/Admin/Elements/PickCustomFields
 share/rt3/html/Admin/Elements/PickObjects
 share/rt3/html/Admin/Elements/QueueRightsForUser
 share/rt3/html/Admin/Elements/QueueTabs
+share/rt3/html/Admin/Elements/SelectCustomField
 share/rt3/html/Admin/Elements/SelectCustomFieldLookupType
 share/rt3/html/Admin/Elements/SelectCustomFieldType
 share/rt3/html/Admin/Elements/SelectGroups
@@ -423,7 +425,6 @@ share/rt3/html/Approvals/Elements/ShowDependency
 share/rt3/html/Approvals/Elements/Tabs
 share/rt3/html/Approvals/autohandler
 share/rt3/html/Approvals/index.html
-share/rt3/html/CalPopup.html
 share/rt3/html/Dashboards/Elements/DashboardsForObject
 share/rt3/html/Dashboards/Elements/DashboardsForObjects
 share/rt3/html/Dashboards/Elements/Deleted
