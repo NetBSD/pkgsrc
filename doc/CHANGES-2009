@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4505 2009/12/03 23:59:12 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4506 2009/12/04 00:02:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6024,3 +6024,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/neverball to 1.5.4 [snj 2009-12-03]
 	Updated databases/phpmyadmin to 2.11.9.6 [tron 2009-12-03]
 	Updated chat/telepathy-gabble to 0.9.2 [wiz 2009-12-03]
+	Updated graphics/png to 1.2.41 [wiz 2009-12-04]
