@@ -1,0 +1,3 @@
+Ack is designed as a replacement for 99% of the uses of grep.  Ack
+is intelligent about the files it searches and the directories trees
+it should not descend into.
