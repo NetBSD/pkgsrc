@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4519 2009/12/05 20:58:42 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4520 2009/12/05 21:38:33 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6066,3 +6066,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/cgoban-java to 3.3.26 [bad 2009-12-05]
 	Updated misc/openoffice2-bin to 2.4.3 [bad 2009-12-05]
 	Added devel/p5-Locale-Msgfmt version 0.14 [seb 2009-12-05]
+	Added devel/p5-Format-Human-Bytes version 0.04 [seb 2009-12-05]
