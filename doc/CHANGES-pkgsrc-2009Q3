@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.26 2009/12/04 15:46:16 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.27 2009/12/05 15:11:12 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -77,3 +77,5 @@ Pullup ticket #2943 - requested by wiz
 libvorbis: security patch
 Pullup ticket #2945 - requested by spz
 rt3: security update
+Pullup ticket #2944 - requested by tron
+phpmyadmin: security update
