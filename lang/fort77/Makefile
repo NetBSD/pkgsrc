@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/06/12 02:14:33 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2009/12/05 11:35:49 asau Exp $
 #
 
 DISTNAME=		fort77-1.18
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=devel/lang/fortran/}
 
@@ -23,5 +24,5 @@ SUBST_SED.perl=		-e 's,/usr/bin/perl,${PERL5},'
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 AUTO_MKDIRS=			yes
 
-.include "../../lang/f2c/buildlink3.mk"
+.include "../../devel/libf2c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
