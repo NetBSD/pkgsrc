@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4514 2009/12/05 00:32:50 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4515 2009/12/05 09:02:48 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6059,3 +6059,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Class-Unload version 0.05 [seb 2009-12-04]
 	Added devel/p5-Class-XSAccessor-Array version 1.04 [seb 2009-12-04]
 	Added devel/p5-Devel-Dumpvar version 1.05 [seb 2009-12-05]
+	Added devel/p5-Devel-Refactor version 0.05 [seb 2009-12-05]
