@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4516 2009/12/05 10:26:08 rillig Exp $
+$NetBSD: CHANGES-2009,v 1.4517 2009/12/05 13:32:48 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6061,3 +6061,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Devel-Dumpvar version 1.05 [seb 2009-12-05]
 	Added devel/p5-Devel-Refactor version 0.05 [seb 2009-12-05]
 	Updated sysutils/checkperms to 1.11 [rillig 2009-12-05]
+	Updated shells/mksh to 39 [ahoka 2009-12-05]
