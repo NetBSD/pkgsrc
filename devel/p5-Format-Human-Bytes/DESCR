@@ -1,0 +1,2 @@
+The Perl 5 module Format::Human::Bytes produces printable strings
+which are more readable by humans than simple bytecounts.
