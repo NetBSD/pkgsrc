@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1264 2009/12/04 23:58:19 seb Exp $
+# $NetBSD: Makefile,v 1.1265 2009/12/05 00:30:31 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -557,6 +557,7 @@ SUBDIR+=	p5-Devel-Checklib
 SUBDIR+=	p5-Devel-Cover
 SUBDIR+=	p5-Devel-Cycle
 SUBDIR+=	p5-Devel-Declare
+SUBDIR+=	p5-Devel-Dumpvar
 SUBDIR+=	p5-Devel-EvalContext
 SUBDIR+=	p5-Devel-Events
 SUBDIR+=	p5-Devel-Events-Objects
