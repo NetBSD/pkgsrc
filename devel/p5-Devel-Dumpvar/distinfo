@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/05 00:29:51 seb Exp $
+
+SHA1 (Devel-Dumpvar-1.05.tar.gz) = ab62212aa80ca9c4584f3a2d1964303b2d8e19b0
+RMD160 (Devel-Dumpvar-1.05.tar.gz) = 85bd0dacddc4a94e3c61b010aa80792ea7514e00
+Size (Devel-Dumpvar-1.05.tar.gz) = 28786 bytes

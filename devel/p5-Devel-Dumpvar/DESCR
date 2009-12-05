@@ -1,0 +1,6 @@
+The Perl 5 module Devel::Dumpvar is a pure object-orientated
+reimplementation of the perl-debugger's dumpvar.pl functionality.
+This makes it a much more versatile version than other dumping
+modules focused on serializing data, to use for dumping information
+to debug log files or other uses where you don't need to reassemble
+the data.
