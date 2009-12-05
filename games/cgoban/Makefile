@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2009/06/30 00:07:15 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/12/05 14:56:38 bad Exp $
 
-DISTNAME=	cgoban-1.9.12
-PKGREVISION=	1
-CATEGORIES=	games
-MASTER_SITES=	http://www.igoweb.org/~wms/comp/cgoban/
+DISTNAME=	cgoban-1.9.14
+CATEGORIES=	games x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cgoban1/}
 
 MAINTAINER=	bad@NetBSD.org
-HOMEPAGE=	http://www.igoweb.org/~wms/comp/cgoban/index.html
+HOMEPAGE=	http://cgoban1.sourceforge.net/
 COMMENT=	The complete goban.  A Go server client and sgf viewer/editor
 
 MAKE_JOBS_SAFE=		no
