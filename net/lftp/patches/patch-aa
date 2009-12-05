@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.14 2009/12/01 07:46:49 joerg Exp $
+$NetBSD: patch-aa,v 1.15 2009/12/05 16:25:01 tnn Exp $
 
 Do not install by default Perl scripts; they are installed via
 ${INSTALL_SCRIPT} if the user set the "perl" option.
@@ -25,17 +25,13 @@ Do not remove the *.la files.
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: install-am
-@@ -1629,13 +1629,6 @@ uninstall-am: uninstall-binPROGRAMS unin
- 	uninstall-pkgverlibLTLIBRARIES
+@@ -1631,6 +1631,9 @@ uninstall-am: uninstall-binPROGRAMS unin
  
- 
--# libtool does not strip modules, do it here.
--install-data-hook:
--@WITH_MODULES_TRUE@	rm -f $(DESTDIR)$(pkgverlibdir)/*.la; \
--@WITH_MODULES_TRUE@	case " $(LDFLAGS) " in *" -s "*) \
--@WITH_MODULES_TRUE@		$(STRIP) $(DESTDIR)$(pkgverlibdir)/*.so;; \
--@WITH_MODULES_TRUE@	esac
--@WITH_MODULES_FALSE@	-rmdir $(DESTDIR)$(pkgverlibdir) 2>/dev/null || :
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+ # libtool does not strip modules, do it here.
+ install-data-hook:
++	:
++
++install-data-hook-disabled:
+ @WITH_MODULES_TRUE@	rm -f $(DESTDIR)$(pkgverlibdir)/*.la; \
+ @WITH_MODULES_TRUE@	case " $(LDFLAGS) " in *" -s "*) \
+ @WITH_MODULES_TRUE@		$(STRIP) $(DESTDIR)$(pkgverlibdir)/*.so;; \
