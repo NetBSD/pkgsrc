@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8734 2009/12/06 15:49:53 tron Exp $
+$NetBSD: TODO,v 1.8735 2009/12/06 18:29:39 sno Exp $
 
 Suggested new packages
 ======================
@@ -455,7 +455,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bonnie++-1.96
 	o bos-2.5
 	o boson-0.13
-	o bouml-4.16.3
 	o brasero-2.28.2 [GNOME 2.28]
 	o bugzilla-3.4.4
 	o byacc-20080824
