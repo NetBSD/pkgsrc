@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/26 22:46:31 gdt Exp $
+$NetBSD: distinfo,v 1.2 2009/12/06 02:15:48 gdt Exp $
 
-SHA1 (proj-swig-0.01.tar.gz) = 3341b025332252fa25571bc2502b4bac2fb49615
-RMD160 (proj-swig-0.01.tar.gz) = d77e65026d1e9df22ebf69ed2918f437f4c1f788
-Size (proj-swig-0.01.tar.gz) = 328870 bytes
+SHA1 (proj-swig-0.02.tar.gz) = 991bf5d2d4150c446a065f52cb257ba768a850f3
+RMD160 (proj-swig-0.02.tar.gz) = 071579a0573ec53377b20882f14faeba5d5e4a7c
+Size (proj-swig-0.02.tar.gz) = 324428 bytes
