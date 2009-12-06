@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2009/09/06 21:10:32 tonio Exp $
+# $NetBSD: Makefile,v 1.24 2009/12/06 07:45:06 obache Exp $
 
 DISTNAME=		camlimages-2.2.0
 PKGREVISION=		7
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.inria.fr/INRIA/caml-light/bazar-ocaml/
+MASTER_SITES=		ftp://ftp.inria.fr/INRIA/Projects/cristal/caml-light/bazar-ocaml/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pauillac.inria.fr/camlimages/
+HOMEPAGE=		http://cristal.inria.fr/camlimages/
 COMMENT=		Image processing library for Objective Caml
 
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.0.6
