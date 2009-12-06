@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4521 2009/12/06 02:16:06 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.4522 2009/12/06 13:19:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6068,3 +6068,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Locale-Msgfmt version 0.14 [seb 2009-12-05]
 	Added devel/p5-Format-Human-Bytes version 0.04 [seb 2009-12-05]
 	Updated geography/proj-swig to 0.02 [gdt 2009-12-06]
+	Updated fonts/fontconfig to 2.8.0 [wiz 2009-12-06]
