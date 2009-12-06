@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4522 2009/12/06 13:19:28 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4523 2009/12/06 13:39:51 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6069,3 +6069,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Format-Human-Bytes version 0.04 [seb 2009-12-05]
 	Updated geography/proj-swig to 0.02 [gdt 2009-12-06]
 	Updated fonts/fontconfig to 2.8.0 [wiz 2009-12-06]
+	Updated databases/p5-Sort-SQL to 0.08 [seb 2009-12-06]
