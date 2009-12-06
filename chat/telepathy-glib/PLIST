@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/09/09 10:20:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/12/06 22:25:19 wiz Exp $
 include/telepathy-1.0/telepathy-glib/_gen/error-str.h
 include/telepathy-1.0/telepathy-glib/_gen/gtypes.h
 include/telepathy-1.0/telepathy-glib/_gen/telepathy-enums.h
@@ -84,6 +84,7 @@ include/telepathy-1.0/telepathy-glib/svc-debug.h
 include/telepathy-1.0/telepathy-glib/svc-generic.h
 include/telepathy-1.0/telepathy-glib/svc-media-interfaces.h
 include/telepathy-1.0/telepathy-glib/svc-properties-interface.h
+include/telepathy-1.0/telepathy-glib/telepathy-glib.h
 include/telepathy-1.0/telepathy-glib/text-mixin.h
 include/telepathy-1.0/telepathy-glib/util.h
 include/telepathy-1.0/telepathy-glib/verify.h
