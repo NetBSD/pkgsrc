@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4529 2009/12/06 18:29:39 sno Exp $
+$NetBSD: CHANGES-2009,v 1.4530 2009/12/06 22:25:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6076,3 +6076,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/p5-ORLite-Migrate version 1.05 [seb 2009-12-06]
 	Updated www/squid31 to 3.1.0.15 [tron 2009-12-06]
 	Updated devel/bouml to 4.16.4 [sno 2009-12-06]
+	Updated chat/telepathy-glib to 0.9.2 [wiz 2009-12-06]
