@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2008/09/01 12:24:54 tonnerre Exp $
+$NetBSD: patch-aa,v 1.3 2009/12/06 18:29:22 sno Exp $
 
---- Makefile.orig	2008-04-05 10:56:34.000000000 +0200
-+++ Makefile
+--- Makefile.orig	2009-10-21 16:57:57.000000000 +0200
++++ Makefile	2009-12-01 22:26:17.000000000 +0100
 @@ -1,24 +1,24 @@
  # The directory where all the bouml files will be installed, you
  # can change it for instance because you don't have root permission
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.2 2008/09/01 12:24:54 tonnerre Exp $
  
  # for packaging purpose, useless by default
  # DESTDIR = 
-@@ -26,8 +26,6 @@ BOUML_ICONS_PREFIX_DIR = /usr/share/icon
+@@ -26,8 +26,6 @@
  # uncomment if needed
  # MAKE = make
  
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.2 2008/09/01 12:24:54 tonnerre Exp $
  SRC_DIRS = src \
  	src/CppGenerator \
  	src/CppReverse \
-@@ -101,25 +99,25 @@ clean:
+@@ -103,26 +101,26 @@
  	for i in $(SRC_DIRS) $(PLUGOUT_DIRS); do if [ -d $$i ]; then (cd $$i ; $(MAKE) clean; rm -f Makefile; ) || exit 1 ; fi; done
  
  install:
@@ -69,19 +69,19 @@ $NetBSD: patch-aa,v 1.2 2008/09/01 12:24:54 tonnerre Exp $
  		cp -f projectControl.48.png "$(DESTDIR)$(BOUML_UNIX_PIXMAPS_DIR)/projectControl.png"; \
  		cp -f projectSynchro.48.png "$(DESTDIR)$(BOUML_UNIX_PIXMAPS_DIR)/projectSynchro.png"; \
  	fi
+ 	cp -p *.lang "$(DESTDIR)$(BOUML_LIB)"
 -	for i in $(PROGS); do cp -p $$i "$(DESTDIR)$(BOUML_LIB)" ; done
 -	cd plugouts ; tar cf - empty genpro html rose singleton cpp_utilities xmi xmi2 xmi2import sm_generator usecase_wizard sort uml_projection FileControl deploy GlobalChange | (cd $(DESTDIR)$(BOUML_LIB); tar xf -)
 +	for i in $(PROGS); do ${BSD_INSTALL_PROGRAM} $$i "$(DESTDIR)$(BOUML_LIB)" ; done
 +	cd plugouts ; pax -rw -pp -pm empty genpro html rose singleton cpp_utilities xmi xmi2 xmi2import sm_generator usecase_wizard sort uml_projection FileControl deploy GlobalChange $(DESTDIR)$(BOUML_LIB)
  	echo "#!/bin/sh" >$(DESTDIR)$(BOUML_DIR)/bouml
  	echo "PATH=$(BOUML_LIB):$$"PATH >>$(DESTDIR)$(BOUML_DIR)/bouml
- 	echo "export PATH" >>$(DESTDIR)$(BOUML_DIR)/bouml
-@@ -129,7 +127,8 @@ install:
+ 	echo "BOUML_LIB_DIR=$(BOUML_LIB)" >>$(DESTDIR)$(BOUML_DIR)/bouml
+@@ -134,7 +132,7 @@
  	cd $(DESTDIR)$(BOUML_DIR) ; rm -f projectSynchro ; ln -s $(BOUML_LIB)/projectSynchro
  	if test -n "$(BOUML_DESKTOP_DIR)" ; \
  	then \
 -		mkdir -p "$(DESTDIR)$(BOUML_DESKTOP_DIR)" ; \
-+		\
 +		${BSD_INSTALL_DATA_DIR} "$(DESTDIR)$(BOUML_DESKTOP_DIR)" ; \
  		echo "[Desktop Entry]" > "$(DESTDIR)$(BOUML_DESKTOP_DIR)/bouml.desktop" ; \
  		echo "Encoding=UTF-8" >> "$(DESTDIR)$(BOUML_DESKTOP_DIR)/bouml.desktop" ; \
