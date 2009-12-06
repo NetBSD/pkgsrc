@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8729 2009/12/06 07:46:40 obache Exp $
+$NetBSD: TODO,v 1.8730 2009/12/06 07:54:37 obache Exp $
 
 Suggested new packages
 ======================
@@ -379,7 +379,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o adobe-flash-10.0.32.18
 	o adocman-0.13
 	o adtool-1.3
-	o advi-1.7.1
+	o advi-1.8.0
 	o aewm++-1.0.27
 	o afterstep-2.2.9
 	o album-4.06
