@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.191 2009/11/27 16:54:29 tnn Exp $
+# $NetBSD: Makefile,v 1.192 2009/12/06 22:40:02 wiz Exp $
 
-DISTNAME=		gtk+-2.18.3
-PKGREVISION=		1
+DISTNAME=		gtk+-2.18.4
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.18/ \
@@ -42,6 +41,10 @@ PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 
+INSTALLATION_DIRS+=	lib/gtk-2.0/immodules
+INSTALLATION_DIRS+=	lib/gtk-2.0/modules
+INSTALLATION_DIRS+=	lib/gtk-2.0/2.10.0/filesystems
+
 REQD_DIRS+=		${PREFIX}/libdata/gtk-2.0
 
 BUILD_DIRS=		. demos/gtk-demo
@@ -78,9 +81,6 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 post-install:
 	${RM} -f ${DESTDIR}${GTK_IMMODULES_DB}
 	${RM} -f ${DESTDIR}${GDK_PIXBUF_LOADERS_DB}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/gtk-2.0/immodules
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/gtk-2.0/modules
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/gtk-2.0/2.10.0/filesystems
 
 EVAL_PREFIX+=		PREFIX.hicolor=hicolor-icon-theme
 FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX}/bin/gtk-update-icon-cache"

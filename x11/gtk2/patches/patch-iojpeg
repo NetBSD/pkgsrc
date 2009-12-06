@@ -1,15 +1,15 @@
-$NetBSD: patch-iojpeg,v 1.1 2009/08/29 05:47:41 dogcow Exp $
+$NetBSD: patch-iojpeg,v 1.2 2009/12/06 22:40:02 wiz Exp $
 
 Fix a scaling issue with jpeg7; see
 http://bugzilla.gnome.org/show_bug.cgi?id=588740 and 
 http://bbs.archlinux.org/viewtopic.php?pid=589488#p589488
 
---- gdk-pixbuf/io-jpeg.c.orig	2009-08-29 13:46:13.000000000 +0900
-+++ gdk-pixbuf/io-jpeg.c	2009-08-29 13:49:10.000000000 +0900
+--- gdk-pixbuf/io-jpeg.c.orig	2009-12-01 03:21:23.000000000 +0000
++++ gdk-pixbuf/io-jpeg.c
 @@ -922,13 +922,13 @@ gdk_pixbuf__jpeg_image_load_increment (g
- 				}
  			}
  			
+ 			cinfo->scale_num = 1;
 -			for (cinfo->scale_denom = 2; cinfo->scale_denom <= 8; cinfo->scale_denom *= 2) {
 +			for (cinfo->scale_denom = 2; cinfo->scale_denom <= 16; cinfo->scale_denom++) {
  				jpeg_calc_output_dimensions (cinfo);
