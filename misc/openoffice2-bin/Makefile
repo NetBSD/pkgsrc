@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/12/05 15:00:16 bad Exp $
+# $NetBSD: Makefile,v 1.42 2009/12/06 10:11:14 bad Exp $
 
 DISTNAME=		openoffice2-bin	# overridden below
 PKGNAME=		openoffice2-bin-${OO_RELEASE}
@@ -46,11 +46,7 @@ RUN_LDCONFIG=		no
 
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=		OOo_${OO_RELEASE}_LinuxIntel_install_en-US
-<<<<<<< Makefile
 WRKSRC=			${WRKDIR}/OOH680_m21_native_packed-2_en-US.9421
-=======
-WRKSRC=			${WRKDIR}/OOH680_m18_native_packed-1_en-US.9364
->>>>>>> 1.40
 .elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=		OOo_${OO_RELEASE}_Solarisx86_install_en-US
 WRKSRC=			${WRKDIR}/OOH680_m21_native_packed-1_en-US.9421/packages
