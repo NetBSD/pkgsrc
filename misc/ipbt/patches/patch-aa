@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/06/08 06:07:25 pooka Exp $
+$NetBSD: patch-aa,v 1.2 2009/12/06 23:32:56 dholland Exp $
+
+Adjust makefile variables per pkgsrc covnentions.
 
 --- Makefile.orig	2007-04-19 15:24:41.000000000 +0300
 +++ Makefile	2007-06-08 08:57:16.000000000 +0300
@@ -6,8 +8,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/08 06:07:25 pooka Exp $
         wcwidth.o xenc.o
  
  ipbt: $(IPBT)
--	$(CC) $(LFLAGS) -o ipbt $(IPBT) -lm -lncurses
-+	$(CC) $(LDFLAGS) -o ipbt $(IPBT) -lm -lncurses
+-	$(CC) $(LFLAGS) -o ipbt $(IPBT) -lm -lncursesw
++	$(CC) $(LDFLAGS) -o ipbt $(IPBT) -lm -lncursesw
  
  be_none.o: be_none.c putty.h puttyps.h unix.h charset.h network.h misc.h \
    puttymem.h
