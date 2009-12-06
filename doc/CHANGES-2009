@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4520 2009/12/05 21:38:33 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4521 2009/12/06 02:16:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6067,3 +6067,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/openoffice2-bin to 2.4.3 [bad 2009-12-05]
 	Added devel/p5-Locale-Msgfmt version 0.14 [seb 2009-12-05]
 	Added devel/p5-Format-Human-Bytes version 0.04 [seb 2009-12-05]
+	Updated geography/proj-swig to 0.02 [gdt 2009-12-06]
