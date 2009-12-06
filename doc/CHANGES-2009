@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4527 2009/12/06 15:40:20 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4528 2009/12/06 15:49:53 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6074,3 +6074,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-ORLite to 1.28nb1 [seb 2009-12-06]
 	Updated net/ldns to 1.6.3 [wiz 2009-12-06]
 	Added databases/p5-ORLite-Migrate version 1.05 [seb 2009-12-06]
+	Updated www/squid31 to 3.1.0.15 [tron 2009-12-06]

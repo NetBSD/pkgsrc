@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8733 2009/12/06 15:29:55 wiz Exp $
+$NetBSD: TODO,v 1.8734 2009/12/06 15:49:53 tron Exp $
 
 Suggested new packages
 ======================
@@ -1284,7 +1284,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sox-14.2.0
 	o spcaview-20060501
 	o spim-7.4
-	o squid-3.1.0.15
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
 	o star-1.5
