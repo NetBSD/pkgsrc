@@ -1,23 +1,23 @@
-$NetBSD: patch-aa,v 1.2 2008/04/15 18:56:59 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2009/12/06 22:45:50 wiz Exp $
 
---- python/Makefile.in.orig	2008-04-07 23:20:50.000000000 +0200
+--- python/Makefile.in.orig	2009-10-01 11:24:51.000000000 +0000
 +++ python/Makefile.in
-@@ -52,8 +52,7 @@ am__installdirs = "$(DESTDIR)$(gmenudir)
- gmenuLTLIBRARIES_INSTALL = $(INSTALL)
+@@ -72,8 +72,7 @@ am__base_list = \
+ am__installdirs = "$(DESTDIR)$(gmenudir)"
  LTLIBRARIES = $(gmenu_LTLIBRARIES)
  am__DEPENDENCIES_1 =
--gmenu_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+-gmenu_la_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 -	$(top_builddir)/libmenu/libgnome-menu.la
-+gmenu_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
++gmenu_la_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
  am_gmenu_la_OBJECTS = gmenu.lo
  gmenu_la_OBJECTS = $(am_gmenu_la_OBJECTS)
- gmenu_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
-@@ -261,7 +260,7 @@ INCLUDES = \
+ AM_V_lt = $(am__v_lt_$(V))
+@@ -308,7 +307,7 @@ INCLUDES = \
  gmenudir = $(pyexecdir)
  gmenu_LTLIBRARIES = gmenu.la
  gmenu_la_LDFLAGS = -module -avoid-version -fPIC -export-symbols-regex initgmenu
--gmenu_la_LIBADD = $(GLIB_LIBS) $(top_builddir)/libmenu/libgnome-menu.la
-+gmenu_la_LIBADD = $(GLIB_LIBS) $(prefix)/lib/libgnome-menu.la
+-gmenu_la_LIBADD = $(GLIB_LIBS) $(PYTHON_LIBS) $(top_builddir)/libmenu/libgnome-menu.la
++gmenu_la_LIBADD = $(GLIB_LIBS) $(PYTHON_LIBS) $(prefix)/lib/libgnome-menu.la
  gmenu_la_SOURCES = gmenu.c
  all: all-am
  
