@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/11 15:09:35 tonio Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/07 16:39:12 wiz Exp $
 bin/caduceus
 bin/frama-c
 bin/frama-c-gui
@@ -56,14 +56,10 @@ lib/frama-c/clexer.cmi
 lib/frama-c/clist.cmi
 lib/frama-c/cmdline.cmi
 lib/frama-c/computation.cmi
-lib/frama-c/concreteModel.cmi
 lib/frama-c/config.cmi
 lib/frama-c/cparser.cmi
 lib/frama-c/cprint.cmi
 lib/frama-c/cvalue_type.cmi
-lib/frama-c/dGraphModel.cmi
-lib/frama-c/dGraphView.cmi
-lib/frama-c/dGraphViewItem.cmi
 lib/frama-c/dataflow.cmi
 lib/frama-c/datatype.cmi
 lib/frama-c/db.cmi
@@ -185,16 +181,11 @@ lib/frama-c/unmarshal_nums.cmi
 lib/frama-c/unroll_loops.cmi
 lib/frama-c/usedef.cmi
 lib/frama-c/utf8_logic.cmi
-lib/frama-c/viewGraph.cmi
-lib/frama-c/viewGraph_select.cmi
-lib/frama-c/viewGraph_utils.cmi
 lib/frama-c/visitor.cmi
 lib/frama-c/warning_manager.cmi
 lib/frama-c/whitetrack.cmi
 lib/frama-c/widen.cmi
 lib/frama-c/widen_type.cmi
-lib/frama-c/xDot.cmi
-lib/frama-c/xDotDraw.cmi
 lib/frama-c/zrapp.cmi
 man/man1/frama-c-gui.1
 man/man1/frama-c.1
