@@ -1,0 +1,4 @@
+Ruby-Locale is the pure ruby library which provides basic APIs for
+localization. It aims to support all environments and all kind of
+i18n/l10n programs(GUI, WWW, library, etc), and becomes the hub
+of other i18n/l10n programs to handle major locale ID standards.
