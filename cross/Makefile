@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/10/08 19:54:24 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2009/12/07 10:07:43 wiz Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -23,7 +23,6 @@ SUBDIR+=	i386-mingw32
 SUBDIR+=	i386-msdosdjgpp
 SUBDIR+=	i386-netbsdpe
 SUBDIR+=	icdprog
-SUBDIR+=	mipsEEel-netbsd
 SUBDIR+=	uisp
 
 .include "../mk/misc/category.mk"
