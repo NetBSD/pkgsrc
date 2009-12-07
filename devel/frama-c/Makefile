@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/11 15:09:35 tonio Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/07 16:39:12 wiz Exp $
 #
 
 DISTNAME=	frama-c-Beryllium-20090901
@@ -16,8 +16,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 
+.include "options.mk"
+
 .include "../../x11/gtksourceview/buildlink3.mk"
-.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/lablgtk/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
