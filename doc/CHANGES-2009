@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4542 2009/12/07 14:30:15 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4543 2009/12/07 20:09:12 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6090,3 +6090,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/ruby-gettext-activerecord version 2.1.0 [fhajny 2009-12-07]
 	Added devel/ruby-gettext-rails version 2.1.0 [fhajny 2009-12-07]
 	Updated mail/exim to 4.71 [adam 2009-12-07]
+	Updated geography/gpsd to 2.90 [gdt 2009-12-07]
