@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4535 2009/12/06 23:34:45 dholland Exp $
+$NetBSD: CHANGES-2009,v 1.4536 2009/12/07 01:29:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6082,3 +6082,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/py-gnome-menus to 2.28.0.1 [wiz 2009-12-06]
 	Updated x11/alacarte to 0.12.3nb1 [wiz 2009-12-06]
 	Updated misc/ipbt to 8765 [dholland 2009-12-06]
+	Added time/rem2ics version 0.93 [wiz 2009-12-07]
