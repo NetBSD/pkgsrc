@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/11/26 18:13:18 martti Exp $
+$NetBSD: MESSAGE,v 1.2 2009/12/07 13:03:43 martti Exp $
 
 Add the following line to httpd.conf to make MediaWiki accessible
 through your HTTP server:
@@ -9,5 +9,10 @@ through your HTTP server:
 Your MediaWiki is then accessible through:
 
 	http://www.example.com/mediawiki/
+
+After upgrading from an older version, you should run:
+
+	cd ${PREFIX}/share/mediawiki/maintenance
+	php update.php --aconf ../AdminSettings.php
 
 ===========================================================================
