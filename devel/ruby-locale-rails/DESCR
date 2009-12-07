@@ -1,0 +1,11 @@
+Ruby-Locale for Ruby on Rails is the L10n library which works with
+Ruby on Rails 2.2.
+
+It supports Rails i18n and have the features below:
+
+  * Auto-Detect the client locale
+  * Detect candidate locales from supported locales by the application.
+  * Localized Routes
+  * Localized Action/Fragment cache
+  * Localized view template files
+  * I18n.t fallback to localized message candidates.
