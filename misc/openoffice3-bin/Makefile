@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/02 22:21:16 bad Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/07 22:07:23 bad Exp $
 
 DISTNAME=		openoffice3-bin	# overridden below
 PKGNAME=		openoffice3-bin-${OO_RELEASE}
@@ -65,7 +65,9 @@ WRKSRC=			${WRKDIR}/OOO310_m19_native_packed-1_en-US.9420/packages
 
 do-install:
 	${PATCH} -d ${PREFIX}/openoffice.org${OO_VER}/program < ${FILESDIR}/soffice-patch
+	${RM} -f ${PREFIX}/openoffice.org${OO_VER}/program/soffice.orig
 	${PATCH} -d ${PREFIX}/openoffice.org${OO_VER}/program < ${FILESDIR}/spadmin-patch
+	${RM} -f ${PREFIX}/openoffice.org${OO_VER}/program/spadmin.orig
 	uniq ${RPM2PKG_PLIST} > ${WRKDIR}/PLIST
 .if defined(PKG_JVM) && !empty(PKG_JVM)
 	${RM} -f ${PREFIX}/bin/soffice
