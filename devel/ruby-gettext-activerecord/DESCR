@@ -1,0 +1,6 @@
+gettext_activerecord provides the localization for ActiveRecord
+using Ruby-GetText-Package.
+
+  * Validation messages translation
+  * Model translation
+  * Extract messages from models with the rake task
