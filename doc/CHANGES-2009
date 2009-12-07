@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4536 2009/12/07 01:29:52 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4537 2009/12/07 07:12:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6083,3 +6083,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/alacarte to 0.12.3nb1 [wiz 2009-12-06]
 	Updated misc/ipbt to 8765 [dholland 2009-12-06]
 	Added time/rem2ics version 0.93 [wiz 2009-12-07]
+	Updated devel/p5-Data-OptList to 0.104nb1 [seb 2009-12-07]
