@@ -1,4 +1,4 @@
-# $NetBSD: rpcgen.mk,v 1.10 2005/07/17 23:19:04 jlam Exp $
+# $NetBSD: rpcgen.mk,v 1.11 2009/12/07 02:36:51 dholland Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -53,6 +53,8 @@ TOOLS_PATH.rpcgen?=	${FALSE}
 TOOLS_CMD.rpcgen=	${TOOLS_DIR}/bin/rpcgen
 .if ${OPSYS} == "NetBSD"
 TOOLS_ARGS.rpcgen?=	-b
+.elif ${OPSYS} == "Linux"
+TOOLS_ARGS.rpcgen?=	-Y ${WRAPPER_BINDIR:Q}
 .endif
 TOOLS_SCRIPT.rpcgen=	CPP=${WRAPPER_BINDIR:Q}/cpp ${TOOLS_SCRIPT_DFLT.rpcgen}
 
