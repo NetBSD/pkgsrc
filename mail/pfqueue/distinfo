@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2009/11/20 13:14:13 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2009/12/07 09:24:46 fhajny Exp $
 
 SHA1 (pfqueue-0.5.6.tar.gz) = 29fc58eab31b1a6225bda1205f155ed5cfb951b2
 RMD160 (pfqueue-0.5.6.tar.gz) = 6b2b539449fd9e0f127b23ba49de1761d769c27f
 Size (pfqueue-0.5.6.tar.gz) = 298870 bytes
 SHA1 (patch-aa) = 51c1ae7a438ef596a6b1c0d4821440822315e2e4
+SHA1 (patch-ab) = 3feee5012319cc3634217aacb95923f3ae550e7d
+SHA1 (patch-ac) = 26d19666b3dfd2bb71fb5140668ec58b292a046c

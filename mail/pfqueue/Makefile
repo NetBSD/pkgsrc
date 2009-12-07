@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/11/20 13:14:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2009/12/07 09:24:46 fhajny Exp $
 #
 
 DISTNAME=	pfqueue-0.5.6
@@ -18,7 +18,9 @@ INCOMPAT_CURSES=	NetBSD-1.*-*
 
 .include "options.mk"
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/pfqueue
+
+CONF_FILES=		share/examples/pfqueue/pfqueue.conf ${PKG_SYSCONFDIR}/pfqueue.conf
 
 CONFIGURE_ARGS+=	--enable-shared
 
@@ -28,6 +30,15 @@ SUBST_STAGE.make=	pre-configure
 SUBST_FILES.make=	backends/Makefile.in
 SUBST_FILES.make+=	libpfq/Makefile.in
 SUBST_SED.make+=	-e 's,-module,,'
+
+SUBST_CLASSES+=		conf
+SUBST_MESSAGE.conf=	Fixing path to config file
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	pfqconfig.c pfqueue.conf.5
+SUBST_SED.conf=		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
+
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/pfqueue.conf ${DESTDIR}${PREFIX}/share/examples/pfqueue
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

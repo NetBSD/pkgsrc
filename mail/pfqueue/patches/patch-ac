@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1 2009/12/07 09:24:46 fhajny Exp $
+
+Fix path to config file
+
+--- pfqueue.conf.5.orig	2007-01-19 16:37:19.000000000 +0000
++++ pfqueue.conf.5
+@@ -18,14 +18,14 @@
+ pfqueue.conf \- pfqueue configuration file
+ 
+ .SH FULL PATH
+-/etc/pfqueue.conf or ~/.pfqueue
++@PKG_SYSCONFDIR@/pfqueue.conf or ~/.pfqueue
+ 
+ .SH DESCRIPTION
+ \fBpfqueue\fP can be configured storing its option in configuration files.
+-At startup, if /etc/pfqueue.conf is present it is read and options
++At startup, if @PKG_SYSCONFDIR@/pfqueue.conf is present it is read and options
+ are set accordingly; then, if a .pfqueue file is present in user's home
+ directory, it is read and options are set accordingly, overriding those
+-stored in /etc/pfqueue.conf.
++stored in @PKG_SYSCONFDIR@/pfqueue.conf.
+ .br
+ Note that the resulting settings are overridden by command line options.
+ 
