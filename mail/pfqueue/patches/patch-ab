@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2009/12/07 09:24:46 fhajny Exp $
+
+Fix path to config file
+
+--- pfqconfig.c.orig	2007-01-19 16:31:42.000000000 +0000
++++ pfqconfig.c
+@@ -124,7 +124,7 @@ void pfq_read_file ( struct pfql_context
+ void pfq_read_config ( struct pfql_context_t *ctx ) {
+ 	char *b;
+ 	b = (char*)malloc(CFG_MAXLEN);
+-	pfq_read_file ( ctx, "/etc/pfqueue.conf" );
++	pfq_read_file ( ctx, "@PKG_SYSCONFDIR@/pfqueue.conf" );
+ 	sprintf ( b, "%s/.pfqueue", getenv("HOME") );
+ 	pfq_read_file ( ctx, b );
+ 	free ( b );
