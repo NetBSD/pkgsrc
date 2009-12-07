@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4537 2009/12/07 07:12:44 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4538 2009/12/07 10:08:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6084,3 +6084,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/ipbt to 8765 [dholland 2009-12-06]
 	Added time/rem2ics version 0.93 [wiz 2009-12-07]
 	Updated devel/p5-Data-OptList to 0.104nb1 [seb 2009-12-07]
+	Removed cross/mipsEEel-netbsd [wiz 2009-12-07]
