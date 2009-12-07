@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2009/12/06 22:45:50 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2009/12/07 13:21:49 wiz Exp $
 
 --- configure.orig	2009-12-06 22:43:13.000000000 +0000
 +++ configure
@@ -11,12 +11,3 @@ $NetBSD: patch-ab,v 1.1 2009/12/06 22:45:50 wiz Exp $
    if test x`uname -s` != xDarwin; then
        PYTHON_LDFLAGS="-no-undefined"
        link_pymodules_libpython=true;
-@@ -16315,6 +16315,8 @@ do
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
- 	: Avoid regenerating within pkgsrc
- 	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
