@@ -1,0 +1,9 @@
+gettext_rails provides the localization for Ruby on Rails
+using Ruby-GetText-Package.
+
+  * Autodetect client locale using locale/locale_rails.
+  * Easy maintainance of translations to use powerful tools for gettext family.
+  * Model translation using gettext_activerecord.
+  * Localization for some helpers.
+  * Works with other Rails I18n backend.
+  * Thread safe.
