@@ -1,0 +1,27 @@
+$NetBSD: patch-aj,v 1.1 2009/12/07 13:00:56 tnn Exp $
+
+--- signal_.c.orig	2000-07-05 04:04:56.000000000 +0200
++++ signal_.c
+@@ -1,10 +1,11 @@
++#include <stdint.h>
+ #include "f2c.h"
+ #include "signal1.h"
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
+ 
+- ftnint
++ftnint
+ #ifdef KR_headers
+ signal_(sigp, proc) integer *sigp; sig_pf proc;
+ #else
+@@ -14,7 +15,8 @@ signal_(integer *sigp, sig_pf proc)
+ 	int sig;
+ 	sig = (int)*sigp;
+ 
+-	return (ftnint)signal(sig, proc);
++	/* xxx amd64 can't hold the return value */
++	return (ftnint)(uintptr_t)signal(sig, proc);
+ 	}
+ #ifdef __cplusplus
+ }
