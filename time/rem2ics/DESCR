@@ -1,0 +1,2 @@
+Tool to convert the output of "remind -s" into RFC2445 iCalendar
+format.
