@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/07 01:29:21 wiz Exp $
+bin/rem2ics
+man/man1/rem2ics.1
