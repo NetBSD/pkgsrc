@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/04/22 16:23:36 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2009/12/07 23:53:09 tez Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.sqsh
 PKG_SUPPORTED_OPTIONS+=		sybase-openclient
@@ -32,6 +32,8 @@ BUILD_DEFS+=		SYBASE
 .  if defined(SYBASE) && exists(${SYBASE}/lib/libct.so)
 BUILDLINK_PASSTHRU_DIRS+=	${SYBASE}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${SYBASE:Q}/lib
+LIBS.SunOS+=		-lsocket
+CONFIGURE_ARGS+=	--with-static
 CONFIGURE_ENV+=		SYBASE=${SYBASE:Q}
 .  else
 PKG_FAIL_REASON+=	"You must define SYBASE to the base directory of Open Client."
