@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8736 2009/12/06 22:29:52 wiz Exp $
+$NetBSD: TODO,v 1.8737 2009/12/07 00:48:00 dholland Exp $
 
 Suggested new packages
 ======================
@@ -557,7 +557,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epic4-2.6
 	o epiphany-2.28.1 [GNOME 2.28]
 	o epiphany-extensions-2.28.1 [GNOME 2.28]
-	o epsg-6.14
+	o epsg-7.4 [portions in pkg/42419]
 	o epstool-3.08
 	o eric3-4.3.9 [now called eric4]
 	o erlang-13b
