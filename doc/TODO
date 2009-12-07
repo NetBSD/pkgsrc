@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8739 2009/12/07 12:01:19 obache Exp $
+$NetBSD: TODO,v 1.8740 2009/12/07 12:12:43 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1221,7 +1221,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-directory-watcher-1.1.2
 	o ruby-eventmachine-0.12.2
 	o ruby-fastercsv-1.4.0
-	o ruby-gettext-2.0.3
 	o ruby-itex2MML-1.3.5
 	o ruby-jsmin-1.0.1
 	o ruby-logging-0.9.5
