@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.12 2008/12/21 08:33:39 wiz Exp $
+$NetBSD: distinfo,v 1.13 2009/12/07 05:06:37 dholland Exp $
 
 SHA1 (strace-4.5.15.tar.bz2) = a6bd153eeb1a25a50bb5a1d92887a4911ec9ad48
 RMD160 (strace-4.5.15.tar.bz2) = 0c6aaa8820a0985d89b21a5da9578b27435c8906
 Size (strace-4.5.15.tar.bz2) = 455607 bytes
 SHA1 (patch-aa) = 16c7a70bccbebfcf24640cd4e632ff127586e6c9
-SHA1 (patch-ab) = b84215b6feb8bf967ca02554d45373c09c4e9433
+SHA1 (patch-ab) = 50367d9b603465148df29f468a29c8617b874edb
 SHA1 (patch-ac) = 8af13f7db2812538a4d34ddf6e15f679c92b4776
 SHA1 (patch-ad) = 091b7a2b555d3e5c8d2c4f338b929c7792ea5b0b
 SHA1 (patch-ae) = f10bdf45432bc9a09f33f4fd94009bf9ed097a7f
