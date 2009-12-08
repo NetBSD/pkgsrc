@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2008/05/18 00:06:46 tnn Exp $
+# $NetBSD: options.mk,v 1.4 2009/12/08 12:45:42 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.finch
 PKG_SUPPORTED_OPTIONS+=		gstreamer debug
-PKG_SUGGESTED_OPTIONS+=
+PKG_SUGGESTED_OPTIONS+=		gstreamer
 
 .include "../../mk/bsd.options.mk"
 

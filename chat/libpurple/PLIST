@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/09/06 21:06:44 abs Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/12/08 12:45:42 wiz Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -92,6 +92,7 @@ ${PLIST.gnutls}lib/purple-2/ssl-gnutls.la
 ${PLIST.nss}lib/purple-2/ssl-nss.la
 lib/purple-2/ssl.la
 lib/purple-2/statenotify.la
+${PLIST.tcl}lib/purple-2/tcl.la
 share/aclocal/purple.m4
 share/gconf/schemas/purple.schemas
 share/locale/af/LC_MESSAGES/pidgin.mo

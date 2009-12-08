@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/09/06 21:06:45 abs Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/12/08 12:45:42 wiz Exp $
 bin/pidgin
 include/pidgin/eggtrayicon.h
 include/pidgin/gtkaccount.h
@@ -74,6 +74,7 @@ lib/pidgin/themeedit.la
 lib/pidgin/ticker.la
 lib/pidgin/timestamp.la
 lib/pidgin/timestamp_format.la
+${PLIST.vv}lib/pidgin/vvconfig.la
 lib/pidgin/xmppconsole.la
 lib/pidgin/xmppdisco.la
 lib/pkgconfig/pidgin.pc
@@ -574,13 +575,13 @@ share/pixmaps/pidgin/toolbar/16/send-file.png
 share/pixmaps/pidgin/toolbar/16/transfer.png
 share/pixmaps/pidgin/toolbar/16/unblock.png
 share/pixmaps/pidgin/toolbar/16/video-call.png
+share/pixmaps/pidgin/toolbar/22/audio-call.png
 share/pixmaps/pidgin/toolbar/22/select-avatar.png
 share/pixmaps/pidgin/toolbar/22/video-call.png
-share/pixmaps/pidgin/toolbar/22/voice-call.png
+share/pixmaps/pidgin/toolbar/32/audio-call.png
 share/pixmaps/pidgin/toolbar/32/video-call.png
-share/pixmaps/pidgin/toolbar/32/voice-call.png
+share/pixmaps/pidgin/toolbar/48/audio-call.png
 share/pixmaps/pidgin/toolbar/48/video-call.png
-share/pixmaps/pidgin/toolbar/48/voice-call.png
 share/pixmaps/pidgin/tray/16/available_4bit.ico
 share/pixmaps/pidgin/tray/16/away_4bit.ico
 share/pixmaps/pidgin/tray/16/busy_4bit.ico
