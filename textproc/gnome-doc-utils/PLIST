@@ -1,16 +1,32 @@
-@comment $NetBSD: PLIST,v 1.15 2009/10/27 14:50:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/12/08 21:10:10 wiz Exp $
 bin/gnome-doc-prepare
 bin/gnome-doc-tool
 bin/xml2po
 lib/pkgconfig/xml2po.pc
 ${PYSITELIB}/xml2po/__init__.py
+${PYSITELIB}/xml2po/__init__.pyc
+${PYSITELIB}/xml2po/__init__.pyo
 ${PYSITELIB}/xml2po/modes/__init__.py
+${PYSITELIB}/xml2po/modes/__init__.pyc
+${PYSITELIB}/xml2po/modes/__init__.pyo
 ${PYSITELIB}/xml2po/modes/basic.py
+${PYSITELIB}/xml2po/modes/basic.pyc
+${PYSITELIB}/xml2po/modes/basic.pyo
 ${PYSITELIB}/xml2po/modes/docbook.py
+${PYSITELIB}/xml2po/modes/docbook.pyc
+${PYSITELIB}/xml2po/modes/docbook.pyo
 ${PYSITELIB}/xml2po/modes/gs.py
+${PYSITELIB}/xml2po/modes/gs.pyc
+${PYSITELIB}/xml2po/modes/gs.pyo
 ${PYSITELIB}/xml2po/modes/mallard.py
+${PYSITELIB}/xml2po/modes/mallard.pyc
+${PYSITELIB}/xml2po/modes/mallard.pyo
 ${PYSITELIB}/xml2po/modes/ubuntu.py
+${PYSITELIB}/xml2po/modes/ubuntu.pyc
+${PYSITELIB}/xml2po/modes/ubuntu.pyo
 ${PYSITELIB}/xml2po/modes/xhtml.py
+${PYSITELIB}/xml2po/modes/xhtml.pyc
+${PYSITELIB}/xml2po/modes/xhtml.pyo
 man/man1/xml2po.1
 share/aclocal/gnome-doc-utils.m4
 share/gnome-doc-utils/gnome-doc-utils.make
