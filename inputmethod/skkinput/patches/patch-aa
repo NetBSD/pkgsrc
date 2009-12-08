@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2003/05/31 13:09:00 uebayasi Exp $
+$NetBSD: patch-aa,v 1.3 2009/12/08 11:52:41 obache Exp $
 
---- Imakefile.orig	Sat Oct 26 12:11:13 2002
+--- Imakefile.orig	2003-10-07 15:06:53.000000000 +0000
 +++ Imakefile
-@@ -108,5 +108,5 @@
+@@ -108,5 +108,5 @@ DEFINES = $(SKKSERVER_DEFS) $(SKKPORT_DE
  	  $(SKKSERVER_USE_INET6)
  
  ComplexProgramTarget(skkinput)
--InstallManPageLong(skkinput.ja,$(MANPATH)/ja/man1,skkinput)
-+InstallManPageLong(skkinput.ja,$(MANPATH)/ja_JP.EUC/cat1,skkinput)
+-InstallManPageLong(skkinput.ja,`echo $(MANDIR) | sed -e 's|$(MANPATH)|$(MANPATH)/ja|'`,skkinput)
++InstallManPageLong(skkinput.ja,`echo $(MANDIR) | sed -e 's|$(MANPATH)|$(MANPATH)/ja_JP.EUC|'`,skkinput)
  InstallAppDefaults(Skkinput)
