@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8740 2009/12/07 12:12:43 fhajny Exp $
+$NetBSD: TODO,v 1.8741 2009/12/08 11:53:00 obache Exp $
 
 Suggested new packages
 ======================
@@ -1277,7 +1277,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sjeng-11.2
 	o skampi-5.0.4
 	o skipstone-1.0.1
-	o skkinput-2.06.4 [pkg/42416]
 	o skype-2.1.0.47
 	o smalleiffel-0.90
 	o smproxy-1.0.3
