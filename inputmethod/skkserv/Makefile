@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/09/07 22:12:12 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2009/12/08 11:48:55 obache Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
@@ -13,6 +13,8 @@ PATCH_DIST_ARGS= -d ${WRKSRC}/jisyo --forward --quiet
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://skk.kuis.kyoto-u.ac.jp/
 COMMENT=	Dictionary server for Simple Kana-Kanji conversion programs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/skk-9.6
 
@@ -42,6 +44,10 @@ TMPDIR?=	${WRKDIR}
 
 RCD_SCRIPTS=	skkserv
 
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+
+INSTALLATION_DIRS=	share/skk
+
 post-build:
 	:
 	: Merging dictionaries....
@@ -51,10 +57,9 @@ post-build:
 	    ${WRKSRC}/jisyo-tools/skkdic-sort >${WRKDIR}/SKK-JISYO.L
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/skk
-	${INSTALL_DATA} ${WRKDIR}/SKK-JISYO.L ${PREFIX}/share/skk/SKK-JISYO.L
-	${INSTALL_DATA} ${WRKSRC}/skkserv/README ${PREFIX}/share/skk/README.skkserv
-	${INSTALL_DATA} ${WRKSRC}/jisyo-tools/README.1st ${PREFIX}/share/skk/README.1st.jisyo-tools
-	${INSTALL_DATA} ${WRKSRC}/jisyo-tools/README ${PREFIX}/share/skk/README.jisyo-tools
+	${INSTALL_DATA} ${WRKDIR}/SKK-JISYO.L ${DESTDIR}${PREFIX}/share/skk/SKK-JISYO.L
+	${INSTALL_DATA} ${WRKSRC}/skkserv/README ${DESTDIR}${PREFIX}/share/skk/README.skkserv
+	${INSTALL_DATA} ${WRKSRC}/jisyo-tools/README.1st ${DESTDIR}${PREFIX}/share/skk/README.1st.jisyo-tools
+	${INSTALL_DATA} ${WRKSRC}/jisyo-tools/README ${DESTDIR}${PREFIX}/share/skk/README.jisyo-tools
 
 .include "../../mk/bsd.pkg.mk"
