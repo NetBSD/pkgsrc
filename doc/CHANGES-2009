@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4549 2009/12/08 20:26:09 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4550 2009/12/08 21:02:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6100,3 +6100,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/pidgin-silc to 2.6.2 [wiz 2009-12-08]
 	Updated x11/gtk2 to 2.18.5 [wiz 2009-12-08]
 	Updated x11/openmotif to 2.3.1nb2 [joerg 2009-12-08]
+	Updated sysutils/cdrtools to 2.01.01alpha69 [wiz 2009-12-08]
