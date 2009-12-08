@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/02 14:33:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/08 14:39:14 taca Exp $
 
 DISTNAME=	net-scp-1.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net security
+DIST_SUBDIR=	ruby-net-scp-20091203
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://rubyforge.org/projects/net-ssh/
