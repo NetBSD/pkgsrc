@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4547 2009/12/08 12:47:25 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4548 2009/12/08 18:54:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6098,3 +6098,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/finch to 2.6.2 [wiz 2009-12-08]
 	Updated chat/pidgin to 2.6.2 [wiz 2009-12-08]
 	Updated chat/pidgin-silc to 2.6.2 [wiz 2009-12-08]
+	Updated x11/gtk2 to 2.18.5 [wiz 2009-12-08]
