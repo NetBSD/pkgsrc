@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2009/09/06 21:06:44 abs Exp $
+# $NetBSD: Makefile.common,v 1.30 2009/12/08 12:45:42 wiz Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -6,7 +6,7 @@
 # used by chat/pidgin-sametime/Makefile
 # used by chat/pidgin-silc/Makefile
 
-PIDGIN_VERSION=	2.6.1
+PIDGIN_VERSION=	2.6.2
 DISTNAME=	pidgin-${PIDGIN_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
@@ -14,6 +14,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pidgin.im/
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -32,9 +33,11 @@ CONFIGURE_ARGS+=	--disable-gstreamer
 CONFIGURE_ARGS+=	--disable-avahi
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-tcl
+CONFIGURE_ARGS+=	--disable-tk
 CONFIGURE_ARGS+=	--disable-gnutls
 CONFIGURE_ARGS+=	--disable-nss
 CONFIGURE_ARGS+=	--disable-dbus
 CONFIGURE_ARGS+=	--disable-cyrus-sasl
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-nm
+CONFIGURE_ARGS+=	--disable-vv

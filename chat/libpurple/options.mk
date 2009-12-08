@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2009/09/06 21:06:44 abs Exp $
+# $NetBSD: options.mk,v 1.12 2009/12/08 12:45:42 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		gnutls perl tcl debug dbus sasl avahi
@@ -7,10 +7,11 @@ PKG_SUGGESTED_OPTIONS+=		gnutls dbus avahi farsight gstreamer
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		avahi dbus gnutls nss perl
+PLIST_VARS+=		avahi dbus gnutls nss perl tcl
 
 .if !empty(PKG_OPTIONS:Mavahi)
 PLIST.avahi=            yes
+CONFIGURE_ARGS+=	--enable-avahi
 .  include "../../net/avahi/buildlink3.mk"
 .endif
 
@@ -40,6 +41,8 @@ USE_TOOLS+=		perl:run
 .endif
 
 .if !empty(PKG_OPTIONS:Mtcl)
+PLIST.tcl=		yes
+CONFIGURE_ARGS+=	--enable-tcl
 CONFIGURE_ARGS+=	--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib
 .  include "../../lang/tcl/buildlink3.mk"
 .endif
@@ -67,6 +70,12 @@ CONFIGURE_ARGS+=	--enable-cyrus-sasl
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
+# voice/video support requires both farsight and gstreamer
+.if !empty(PKG_OPTIONS:Mfarsight) && !empty(PKG_OPTIONS:Mgstreamer)
+CONFIGURE_ARGS+=	--enable-vv
+PLIST.vv=		yes
+.endif
+
 .if !empty(PKG_OPTIONS:Mfarsight)
 CONFIGURE_ARGS+=	--enable-farsight
 .  include "../../multimedia/farsight2/buildlink3.mk"
@@ -75,4 +84,5 @@ CONFIGURE_ARGS+=	--enable-farsight
 .if !empty(PKG_OPTIONS:Mgstreamer)
 CONFIGURE_ARGS+=	--enable-gstreamer
 .  include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.  include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .endif
