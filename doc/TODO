@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8741 2009/12/08 11:53:00 obache Exp $
+$NetBSD: TODO,v 1.8742 2009/12/08 12:47:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1098,7 +1098,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phpmyadmin-3.2.4
 	o phylip-3.68
 	o picp-0.6.8
-	o pidgin-2.6.2 [pkg/42005]
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
