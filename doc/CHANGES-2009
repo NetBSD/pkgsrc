@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4545 2009/12/08 11:53:00 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4546 2009/12/08 12:39:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6093,3 +6093,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated geography/gpsd to 2.90 [gdt 2009-12-07]
 	Updated devel/p5-Module-Install to 0.91nb1 [seb 2009-12-07]
 	Updated inputmethod/skkinput to 2.06.4 [obache 2009-12-08]
+	Updated net/ktorrent3 to 3.3nb2 [wiz 2009-12-08]
