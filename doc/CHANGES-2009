@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4555 2009/12/09 09:24:37 he Exp $
+$NetBSD: CHANGES-2009,v 1.4556 2009/12/09 12:37:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6106,3 +6106,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/openvas-server to 2.0.0nb1 [obache 2009-12-09]
 	Updated security/openvas-plugins to 1.0.5nb1 [obache 2009-12-09]
 	Updated lang/parrot to 1.7.0 [he 2009-12-09]
+	Updated net/arping to 2.08nb1 [obache 2009-12-09]
+	Updated net/ettercap-NG to 0.7.3nb3 [obache 2009-12-09]
+	Updated net/firewalk to 5.0nb3 [obache 2009-12-09]
+	Updated net/packit to 1.0nb2 [obache 2009-12-09]
