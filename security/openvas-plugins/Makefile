@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/07/17 18:00:24 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/09 06:26:38 obache Exp $
 #
 
 DISTNAME=	openvas-plugins-1.0.5
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/539/
 
@@ -9,9 +10,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openvas.org/
 COMMENT=	Plugins for the Open Vulnerability Assessment System
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config bash
 USE_LIBTOOL=	yes
+
+CONFIGURE_ARGS+=	--enable-install=${BINOWN}
+
+REPLACE_BASH+=	openvas-nvt-sync.in
 
 NONFREE=	cisco_vpn_client_detect.nasl js.scob.trojan.nasl \
 		nav_installed.nasl patchlink_detection.nasl \
