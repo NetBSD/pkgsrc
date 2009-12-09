@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 21:21:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/12/09 06:26:38 obache Exp $
 lib/openvas/plugins/12planet_chat_server_xss.nasl
 lib/openvas/plugins/3com_nbx_voip_netset_detection.nasl
 lib/openvas/plugins/3com_switches.nasl
@@ -140,7 +140,7 @@ lib/openvas/plugins/apache_slash.nasl
 lib/openvas/plugins/apache_username.nasl
 lib/openvas/plugins/apache_win32_dir_trav.nasl
 lib/openvas/plugins/apcupsd_overflows.nasl
-lib/openvas/plugins/${LOWER_VENDOR}-sa-2004-08-09.nasl
+lib/openvas/plugins/apple-sa-2004-08-09.nasl
 lib/openvas/plugins/appsocket_DoS.nasl
 lib/openvas/plugins/argosoft_multiple_flaws2.nasl
 lib/openvas/plugins/argosoft_server_xcmd.nasl
@@ -2147,7 +2147,7 @@ lib/openvas/plugins/formmail_version_disclosure.nasl
 lib/openvas/plugins/fortigate_detect.nasl
 lib/openvas/plugins/foxweb_dll.nasl
 lib/openvas/plugins/free_articles_directory_file_includes.nasl
-lib/openvas/plugins/freebsd_${OPSYS}StreamingServer.nasl
+lib/openvas/plugins/freebsd_DarwinStreamingServer.nasl
 lib/openvas/plugins/freebsd_ImageMagick.nasl
 lib/openvas/plugins/freebsd_ImageMagick0.nasl
 lib/openvas/plugins/freebsd_ImageMagick1.nasl
@@ -2334,6 +2334,7 @@ lib/openvas/plugins/freebsd_e2fsprogs.nasl
 lib/openvas/plugins/freebsd_eGroupWare.nasl
 lib/openvas/plugins/freebsd_ecartis.nasl
 lib/openvas/plugins/freebsd_ecartis0.nasl
+lib/openvas/plugins/freebsd_egroupware.nasl
 lib/openvas/plugins/freebsd_elm.nasl
 lib/openvas/plugins/freebsd_emacs.nasl
 lib/openvas/plugins/freebsd_emil.nasl
@@ -2921,6 +2922,18 @@ lib/openvas/plugins/freebsd_phpbb9.nasl
 lib/openvas/plugins/freebsd_phpicalendar.nasl
 lib/openvas/plugins/freebsd_phpicalendar0.nasl
 lib/openvas/plugins/freebsd_phpldapadmin098.nasl
+lib/openvas/plugins/freebsd_phpmyadmin.nasl
+lib/openvas/plugins/freebsd_phpmyadmin0.nasl
+lib/openvas/plugins/freebsd_phpmyadmin1.nasl
+lib/openvas/plugins/freebsd_phpmyadmin10.nasl
+lib/openvas/plugins/freebsd_phpmyadmin2.nasl
+lib/openvas/plugins/freebsd_phpmyadmin3.nasl
+lib/openvas/plugins/freebsd_phpmyadmin4.nasl
+lib/openvas/plugins/freebsd_phpmyadmin5.nasl
+lib/openvas/plugins/freebsd_phpmyadmin6.nasl
+lib/openvas/plugins/freebsd_phpmyadmin7.nasl
+lib/openvas/plugins/freebsd_phpmyadmin8.nasl
+lib/openvas/plugins/freebsd_phpmyadmin9.nasl
 lib/openvas/plugins/freebsd_phpmyfaq.nasl
 lib/openvas/plugins/freebsd_phpnuke.nasl
 lib/openvas/plugins/freebsd_phpnuke0.nasl
@@ -3183,6 +3196,7 @@ lib/openvas/plugins/freebsd_vnc.nasl
 lib/openvas/plugins/freebsd_vorbis-tools.nasl
 lib/openvas/plugins/freebsd_vtiger.nasl
 lib/openvas/plugins/freebsd_w3m.nasl
+lib/openvas/plugins/freebsd_webcalendar.nasl
 lib/openvas/plugins/freebsd_webmin.nasl
 lib/openvas/plugins/freebsd_webmin0.nasl
 lib/openvas/plugins/freebsd_webmin1.nasl
@@ -3388,7 +3402,7 @@ lib/openvas/plugins/gb_adobe_prdts_mult_vuln_nov08_lin.nasl
 lib/openvas/plugins/gb_adobe_prdts_mult_vuln_nov08_win.nasl
 lib/openvas/plugins/gb_aflog_cookie_auth_bypass_vuln.nasl
 lib/openvas/plugins/gb_apache_tomcat_sec_bypass_vuln.nasl
-lib/openvas/plugins/gb_${LOWER_VENDOR}_quicktime_mult_vuln_win.nasl
+lib/openvas/plugins/gb_apple_quicktime_mult_vuln_win.nasl
 lib/openvas/plugins/gb_astrospace_sql_inj_vuln.nasl
 lib/openvas/plugins/gb_ca_etrust_scm_mult_vuln.nasl
 lib/openvas/plugins/gb_clamav_remote_dos_vuln.nasl
@@ -5446,12 +5460,12 @@ lib/openvas/plugins/secpod_adobe_presenter_xss_vuln_900110.nasl
 lib/openvas/plugins/secpod_anzio_web_print_obj_bof_vuln_900115.nasl
 lib/openvas/plugins/secpod_apache_mod_proxy_ftp_xss_vuln_900107.nasl
 lib/openvas/plugins/secpod_apache_tomcat_xss_n_bypass_vuln_900021.nasl
-lib/openvas/plugins/secpod_${LOWER_VENDOR}_itunes_detection_win_900123.nasl
-lib/openvas/plugins/secpod_${LOWER_VENDOR}_itunes_prv_esc_vuln_900122.nasl
-lib/openvas/plugins/secpod_${LOWER_VENDOR}_quicktime_detection_win_900124.nasl
-lib/openvas/plugins/secpod_${LOWER_VENDOR}_quicktime_mult_vuln_900121.nasl
-lib/openvas/plugins/secpod_${LOWER_VENDOR}_safari_detect_win_900003.nasl
-lib/openvas/plugins/secpod_${LOWER_VENDOR}_safari_mult_vuln_july08_900002.nasl
+lib/openvas/plugins/secpod_apple_itunes_detection_win_900123.nasl
+lib/openvas/plugins/secpod_apple_itunes_prv_esc_vuln_900122.nasl
+lib/openvas/plugins/secpod_apple_quicktime_detection_win_900124.nasl
+lib/openvas/plugins/secpod_apple_quicktime_mult_vuln_900121.nasl
+lib/openvas/plugins/secpod_apple_safari_detect_win_900003.nasl
+lib/openvas/plugins/secpod_apple_safari_mult_vuln_july08_900002.nasl
 lib/openvas/plugins/secpod_avg_antivirus_dos_vuln_900017.nasl
 lib/openvas/plugins/secpod_bitdefender_pdf_parsing_dos_vuln_900180.nasl
 lib/openvas/plugins/secpod_blue_coat_k9_web_prot_bof_vuln_900103.nasl
