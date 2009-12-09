@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.8 2006/08/06 10:36:50 wiz Exp $
+$NetBSD: patch-ak,v 1.9 2009/12/09 10:13:03 drochner Exp $
 
---- src/video_out/video_out_opengl.c.orig	2005-07-17 17:50:07.000000000 -0400
+--- src/video_out/video_out_opengl.c.orig	2009-11-30 21:55:52.000000000 +0100
 +++ src/video_out/video_out_opengl.c
-@@ -710,9 +710,7 @@ static void *getdladdr (const GLubyte *_
+@@ -706,9 +706,7 @@ static void *getdladdr (const GLubyte *_
  
  #elif defined (__sun) || defined (__sgi)
     static void *handle = NULL;
@@ -11,5 +11,5 @@ $NetBSD: patch-ak,v 1.8 2006/08/06 10:36:50 wiz Exp $
 -   }
 +   handle = dlopen (NULL, RTLD_LAZY);
     return dlsym (handle, funcName);
-     
+ 
  #else /* all other Un*xes */
