@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.7 2008/01/11 16:05:27 drochner Exp $
+$NetBSD: patch-ap,v 1.8 2009/12/09 10:13:03 drochner Exp $
 
---- src/dxr3/Makefile.am.orig	2008-01-01 18:07:56.000000000 +0100
+--- src/dxr3/Makefile.am.orig	2009-11-30 22:12:44.000000000 +0100
 +++ src/dxr3/Makefile.am
-@@ -16,6 +16,9 @@ endif
+@@ -17,6 +17,9 @@ endif
  if HAVE_LIBRTE
  link_rte = -lrte
  endif
@@ -10,11 +10,11 @@ $NetBSD: patch-ap,v 1.7 2008/01/11 16:05:27 drochner Exp $
 +link_xinerama = -lXinerama
 +endif
  
- xineplug_LTLIBRARIES = $(dxr3_modules) 
+ xineplug_LTLIBRARIES = $(dxr3_modules)
  
-@@ -42,7 +45,7 @@ xineplug_vo_out_dxr3_la_SOURCES = \
+@@ -43,7 +46,7 @@ xineplug_vo_out_dxr3_la_SOURCES = \
  	dxr3_scr.c \
- 	video_out_dxr3.c 
+ 	video_out_dxr3.c
  
 -xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_x_libs) $(LTLIBINTL) $(DYNAMIC_LD_LIBS) -lm
 +xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_xinerama) $(link_x_libs) $(LTLIBINTL) $(DYNAMIC_LD_LIBS) -lm

@@ -1,8 +1,8 @@
-$NetBSD: patch-fb,v 1.1 2008/05/26 12:35:10 drochner Exp $
+$NetBSD: patch-fb,v 1.2 2009/12/09 10:13:03 drochner Exp $
 
---- ./src/xine-engine/demux.c.orig	2008-05-22 17:14:15.000000000 +0200
+--- ./src/xine-engine/demux.c.orig	2009-11-30 21:55:52.000000000 +0100
 +++ ./src/xine-engine/demux.c
-@@ -291,6 +291,10 @@ static void *demux_loop (void *stream_ge
+@@ -349,6 +349,10 @@ static void *demux_loop (void *stream_ge
          gettimeofday(&tv, NULL);
          ts.tv_sec  = tv.tv_sec;
          ts.tv_nsec = (tv.tv_usec + 100000) * 1000;
@@ -10,6 +10,6 @@ $NetBSD: patch-fb,v 1.1 2008/05/26 12:35:10 drochner Exp $
 +		ts.tv_nsec -= 1000000000;
 +		ts.tv_sec += 1;
 +	}
-     
+ 
          pthread_cond_timedwait (&stream->demux_resume, &stream->demux_lock, &ts);
        }
