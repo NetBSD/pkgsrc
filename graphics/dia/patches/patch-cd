@@ -1,0 +1,13 @@
+$NetBSD: patch-cd,v 1.1 2009/12/09 10:22:04 drochner Exp $
+
+--- doc/fr/Makefile.in.orig	2009-05-03 20:12:41.000000000 +0200
++++ doc/fr/Makefile.in
+@@ -571,7 +571,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-man
++install-data-am: install-data-local
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ 
