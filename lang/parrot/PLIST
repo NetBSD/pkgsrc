@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/09/20 10:57:04 he Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/12/09 09:23:50 he Exp $
 bin/parrot
 bin/parrot_config
 bin/parrot_debugger
@@ -28,7 +28,6 @@ include/parrot/${PKGVERSION}/parrot/encoding.h
 include/parrot/${PKGVERSION}/parrot/enums.h
 include/parrot/${PKGVERSION}/parrot/events.h
 include/parrot/${PKGVERSION}/parrot/exceptions.h
-include/parrot/${PKGVERSION}/parrot/exec.h
 include/parrot/${PKGVERSION}/parrot/exit.h
 include/parrot/${PKGVERSION}/parrot/extend.h
 include/parrot/${PKGVERSION}/parrot/extend_vtable.h
@@ -64,7 +63,6 @@ include/parrot/${PKGVERSION}/parrot/oplib/core_ops_switch.h
 include/parrot/${PKGVERSION}/parrot/oplib/ops.h
 include/parrot/${PKGVERSION}/parrot/packfile.h
 include/parrot/${PKGVERSION}/parrot/parrot.h
-include/parrot/${PKGVERSION}/parrot/pic.h
 include/parrot/${PKGVERSION}/parrot/platform.h
 include/parrot/${PKGVERSION}/parrot/platform_interface.h
 include/parrot/${PKGVERSION}/parrot/pmc.h
@@ -293,7 +291,6 @@ share/doc/parrot/${PKGVERSION}/pod/ops/experimental.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/io.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/math.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/object.pod
-share/doc/parrot/${PKGVERSION}/pod/ops/pic.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/pmc.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/set.pod
 share/doc/parrot/${PKGVERSION}/pod/ops/string.pod
