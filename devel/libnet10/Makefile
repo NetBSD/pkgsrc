@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2007/03/02 09:26:10 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/09 11:22:27 obache Exp $
 #
 
 DISTNAME=	libnet-1.0.2a
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/libnet/libnet10/}
+PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	http://www.packetfactory.net/libnet/dist/deprecated/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.packetfactory.net/libnet/
 COMMENT=	C library for portable packet creation and injection
+LICENSE=	2-clause-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=	libnet-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/l/L/}
@@ -33,8 +35,8 @@ post-extract:
 	${CHMOD} -R a+r ${WRKSRC}/doc
 
 post-install:
-	${CHMOD} ${SHAREMODE} ${PREFIX}/include/libnet10/libnet.h
-	${CHMOD} ${SHAREMODE} ${PREFIX}/include/libnet10/libnet/*.h
-	${CHMOD} ${MANMODE} ${PREFIX}/${PKGMANDIR}/man3/libnet10.3
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/libnet10/libnet.h
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/libnet10/libnet/*.h
+	${CHMOD} ${MANMODE} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/libnet10.3
 
 .include "../../mk/bsd.pkg.mk"
