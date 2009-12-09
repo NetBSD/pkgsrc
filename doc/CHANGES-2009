@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4552 2009/12/08 21:17:57 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4553 2009/12/09 05:52:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6103,3 +6103,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/cdrtools to 2.01.01alpha69 [wiz 2009-12-08]
 	Updated textproc/gnome-doc-utils to 0.18.1 [wiz 2009-12-08]
 	Updated net/yaz to 3.0.52 [wiz 2009-12-08]
+	Updated security/openvas-server to 2.0.0nb1 [obache 2009-12-09]
