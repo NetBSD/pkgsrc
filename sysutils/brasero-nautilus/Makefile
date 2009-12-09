@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2009/08/26 19:58:17 sno Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/09 19:02:38 drochner Exp $
 #
 
-DISTNAME=	brasero-2.26.3
-PKGNAME=	brasero-nautilus-2.26.3
-PKGREVISION=	1
+DISTNAME=	brasero-2.28.2
+PKGNAME=	brasero-nautilus-2.28.2
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/brasero/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/brasero/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -31,10 +30,6 @@ CONFIGURE_ARGS+=	--disable-inotify
 BUILD_DIRS=		${WRKSRC}/nautilus
 INSTALL_DIRS=		${WRKSRC}/nautilus
 
-# sent upstream in http://bugzilla.gnome.org/show_bug.cgi?id=583332
-post-extract:
-	cp ${FILESDIR}/scsi-netbsd.c ${WRKSRC}/libbrasero-media/
-
 .include "../../sysutils/brasero/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
@@ -48,4 +43,5 @@ BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.15
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
