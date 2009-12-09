@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/17 18:00:20 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2009/12/09 08:04:32 obache Exp $
 
 DISTNAME=	ettercap-NG-0.7.3
 PKGREVISION=	2
@@ -8,7 +8,9 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ettercap/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ettercap.sourceforge.net/
 COMMENT=	Multipurpose sniffer/interceptor/logger for switched LAN
+LICENSE=	gnu-gpl-v2
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=	ettercap-[0-9]*
 
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8.1
@@ -16,7 +18,7 @@ BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8.1
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
 USE_LIBTOOL=		YES
-USE_NCURSES=		# ncurses.h menu.h panel.h form.h
+USE_NCURSES=		YES # ncurses.h menu.h panel.h form.h
 USE_OLD_DES_API=	YES
 CPPFLAGS+=		-L${BUILDLINK_PREFIX.libnet11}/lib/libnet11
 
@@ -44,6 +46,8 @@ INSTALL_UNSTRIPPED=	YES
 CONF_FILES=	${PREFIX}/share/examples/ettercap-NG/etter.conf \
 		${PKG_SYSCONFDIR}/etter.conf
 
+INSTALLATION_DIRS+=	 share/examples/ettercap-NG
+
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/libnet11/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
@@ -53,8 +57,7 @@ CONF_FILES=	${PREFIX}/share/examples/ettercap-NG/etter.conf \
 .include "../../mk/pthread.buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ettercap-NG
 	${INSTALL_DATA} ${WRKSRC}/share/etter.conf \
-		${PREFIX}/share/examples/ettercap-NG
+		${DESTDIR}${PREFIX}/share/examples/ettercap-NG
 
 .include "../../mk/bsd.pkg.mk"
