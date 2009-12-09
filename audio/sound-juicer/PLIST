@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/28 18:40:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/12/09 19:05:28 drochner Exp $
 bin/sound-juicer
 man/man1/sound-juicer.1
 share/applications/sound-juicer.desktop
@@ -96,6 +96,7 @@ share/locale/dz/LC_MESSAGES/sound-juicer.mo
 share/locale/el/LC_MESSAGES/sound-juicer.mo
 share/locale/en_CA/LC_MESSAGES/sound-juicer.mo
 share/locale/en_GB/LC_MESSAGES/sound-juicer.mo
+share/locale/en@shaw/LC_MESSAGES/sound-juicer.mo
 share/locale/es/LC_MESSAGES/sound-juicer.mo
 share/locale/et/LC_MESSAGES/sound-juicer.mo
 share/locale/eu/LC_MESSAGES/sound-juicer.mo
