@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2009/10/30 11:48:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.26 2009/12/09 10:30:00 drochner Exp $
 bin/rhythmbox
 bin/rhythmbox-client
 lib/librhythmbox-core.la
@@ -17,9 +17,9 @@ lib/rhythmbox/plugins/artdisplay/LocalCoverArtSearch.pyo
 lib/rhythmbox/plugins/artdisplay/LocalCoverArtSearchGIO.py
 lib/rhythmbox/plugins/artdisplay/LocalCoverArtSearchGIO.pyc
 lib/rhythmbox/plugins/artdisplay/LocalCoverArtSearchGIO.pyo
-lib/rhythmbox/plugins/artdisplay/DiscogsCoverArtSearch.py
-lib/rhythmbox/plugins/artdisplay/DiscogsCoverArtSearch.pyc
-lib/rhythmbox/plugins/artdisplay/DiscogsCoverArtSearch.pyo
+lib/rhythmbox/plugins/artdisplay/MusicBrainzCoverArtSearch.py
+lib/rhythmbox/plugins/artdisplay/MusicBrainzCoverArtSearch.pyc
+lib/rhythmbox/plugins/artdisplay/MusicBrainzCoverArtSearch.pyo
 lib/rhythmbox/plugins/artdisplay/PodcastCoverArtSearch.py
 lib/rhythmbox/plugins/artdisplay/PodcastCoverArtSearch.pyc
 lib/rhythmbox/plugins/artdisplay/PodcastCoverArtSearch.pyo
@@ -40,6 +40,32 @@ lib/rhythmbox/plugins/audioscrobbler/audioscrobbler.rb-plugin
 lib/rhythmbox/plugins/audioscrobbler/libaudioscrobbler.la
 lib/rhythmbox/plugins/cd-recorder/cd-recorder.rb-plugin
 lib/rhythmbox/plugins/cd-recorder/libcd-recorder.la
+lib/rhythmbox/plugins/context/AlbumTab.py
+lib/rhythmbox/plugins/context/AlbumTab.pyc
+lib/rhythmbox/plugins/context/AlbumTab.pyo
+lib/rhythmbox/plugins/context/ArtistTab.py
+lib/rhythmbox/plugins/context/ArtistTab.pyc
+lib/rhythmbox/plugins/context/ArtistTab.pyo
+lib/rhythmbox/plugins/context/ContextView.py
+lib/rhythmbox/plugins/context/ContextView.pyc
+lib/rhythmbox/plugins/context/ContextView.pyo
+lib/rhythmbox/plugins/context/LastFM.py
+lib/rhythmbox/plugins/context/LastFM.pyc
+lib/rhythmbox/plugins/context/LastFM.pyo
+lib/rhythmbox/plugins/context/LyricsTab.py
+lib/rhythmbox/plugins/context/LyricsTab.pyc
+lib/rhythmbox/plugins/context/LyricsTab.pyo
+lib/rhythmbox/plugins/context/__init__.py
+lib/rhythmbox/plugins/context/__init__.pyc
+lib/rhythmbox/plugins/context/__init__.pyo
+lib/rhythmbox/plugins/context/context.rb-plugin
+lib/rhythmbox/plugins/context/img/lastfm.png
+lib/rhythmbox/plugins/context/img/spinner.gif
+lib/rhythmbox/plugins/context/tmpl/album-tmpl.html
+lib/rhythmbox/plugins/context/tmpl/artist-tmpl.html
+lib/rhythmbox/plugins/context/tmpl/loading.html
+lib/rhythmbox/plugins/context/tmpl/lyrics-tmpl.html
+lib/rhythmbox/plugins/context/tmpl/main.css
 lib/rhythmbox/plugins/daap/daap-prefs.ui
 lib/rhythmbox/plugins/daap/daap-ui.xml
 lib/rhythmbox/plugins/daap/daap.rb-plugin
@@ -137,6 +163,9 @@ lib/rhythmbox/plugins/rb/Coroutine.pyo
 lib/rhythmbox/plugins/rb/Loader.py
 lib/rhythmbox/plugins/rb/Loader.pyc
 lib/rhythmbox/plugins/rb/Loader.pyo
+lib/rhythmbox/plugins/rb/URLCache.py
+lib/rhythmbox/plugins/rb/URLCache.pyc
+lib/rhythmbox/plugins/rb/URLCache.pyo
 lib/rhythmbox/plugins/rb/__init__.py
 lib/rhythmbox/plugins/rb/__init__.pyc
 lib/rhythmbox/plugins/rb/__init__.pyo
@@ -428,6 +457,7 @@ share/locale/az/LC_MESSAGES/rhythmbox.mo
 share/locale/be/LC_MESSAGES/rhythmbox.mo
 share/locale/be@latin/LC_MESSAGES/rhythmbox.mo
 share/locale/bg/LC_MESSAGES/rhythmbox.mo
+share/locale/bn_IN/LC_MESSAGES/rhythmbox.mo
 share/locale/br/LC_MESSAGES/rhythmbox.mo
 share/locale/ca/LC_MESSAGES/rhythmbox.mo
 share/locale/cs/LC_MESSAGES/rhythmbox.mo
@@ -464,6 +494,7 @@ share/locale/mn/LC_MESSAGES/rhythmbox.mo
 share/locale/mr/LC_MESSAGES/rhythmbox.mo
 share/locale/ms/LC_MESSAGES/rhythmbox.mo
 share/locale/nb/LC_MESSAGES/rhythmbox.mo
+share/locale/nds/LC_MESSAGES/rhythmbox.mo
 share/locale/ne/LC_MESSAGES/rhythmbox.mo
 share/locale/nl/LC_MESSAGES/rhythmbox.mo
 share/locale/oc/LC_MESSAGES/rhythmbox.mo
@@ -477,6 +508,7 @@ share/locale/ro/LC_MESSAGES/rhythmbox.mo
 share/locale/ru/LC_MESSAGES/rhythmbox.mo
 share/locale/rw/LC_MESSAGES/rhythmbox.mo
 share/locale/sk/LC_MESSAGES/rhythmbox.mo
+share/locale/sl/LC_MESSAGES/rhythmbox.mo
 share/locale/sr/LC_MESSAGES/rhythmbox.mo
 share/locale/sr@latin/LC_MESSAGES/rhythmbox.mo
 share/locale/sv/LC_MESSAGES/rhythmbox.mo
