@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/12/09 18:53:49 drochner Exp $
+
+--- daemon/gvfsftpdircache.c.orig	2009-10-22 12:12:01.000000000 +0200
++++ daemon/gvfsftpdircache.c
+@@ -586,7 +586,7 @@ g_vfs_ftp_dir_cache_funcs_process (GInpu
+                                        type == 'l' ? G_FILE_TYPE_SYMBOLIC_LINK :
+                                        G_FILE_TYPE_DIRECTORY);
+ 
+-      if (unix)
++      if (is_unix)
+         g_file_info_set_is_hidden (info, result.fe_fnlen > 0 &&
+                                          result.fe_fname[0] == '.');
+ 

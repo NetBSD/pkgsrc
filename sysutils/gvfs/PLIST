@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/12/09 15:08:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/12/09 18:53:49 drochner Exp $
 bin/gvfs-cat
 bin/gvfs-copy
 bin/gvfs-info
@@ -13,6 +13,7 @@ bin/gvfs-open
 bin/gvfs-rename
 bin/gvfs-rm
 bin/gvfs-save
+bin/gvfs-set-attribute
 bin/gvfs-trash
 bin/gvfs-tree
 include/gvfs-client/gvfs/gvfsurimapper.h
@@ -20,8 +21,8 @@ include/gvfs-client/gvfs/gvfsuriutils.h
 lib/gio/modules/libgiogconf.la
 lib/gio/modules/libgioremote-volume-monitor.la
 lib/gio/modules/libgvfsdbus.la
-lib/libgvfscommon.la
 ${PLIST.avahi}lib/libgvfscommon-dnssd.la
+lib/libgvfscommon.la
 ${PLIST.fuse}libexec/gvfs-fuse-daemon
 ${PLIST.hal}libexec/gvfs-hal-volume-monitor
 libexec/gvfsd
@@ -34,19 +35,21 @@ ${PLIST.avahi}libexec/gvfsd-dnssd
 libexec/gvfsd-ftp
 libexec/gvfsd-http
 libexec/gvfsd-localtest
+libexec/gvfsd-metadata
 libexec/gvfsd-network
 libexec/gvfsd-sftp
 ${PLIST.samba}libexec/gvfsd-smb
 ${PLIST.samba}libexec/gvfsd-smb-browse
 libexec/gvfsd-trash
 share/dbus-1/services/gvfs-daemon.service
+share/dbus-1/services/gvfs-metadata.service
 ${PLIST.hal}share/dbus-1/services/org.gtk.Private.HalVolumeMonitor.service
 share/gvfs/mounts/archive.mount
 share/gvfs/mounts/burn.mount
 ${PLIST.hal}share/gvfs/mounts/cdda.mount
 share/gvfs/mounts/computer.mount
-share/gvfs/mounts/dav.mount
 ${PLIST.avahi}share/gvfs/mounts/dav+sd.mount
+share/gvfs/mounts/dav.mount
 ${PLIST.avahi}share/gvfs/mounts/dns-sd.mount
 share/gvfs/mounts/ftp.mount
 share/gvfs/mounts/http.mount
@@ -61,8 +64,10 @@ share/locale/ar/LC_MESSAGES/gvfs.mo
 share/locale/as/LC_MESSAGES/gvfs.mo
 share/locale/be@latin/LC_MESSAGES/gvfs.mo
 share/locale/bg/LC_MESSAGES/gvfs.mo
+share/locale/bn/LC_MESSAGES/gvfs.mo
 share/locale/bn_IN/LC_MESSAGES/gvfs.mo
 share/locale/ca/LC_MESSAGES/gvfs.mo
+share/locale/ca@valencia/LC_MESSAGES/gvfs.mo
 share/locale/cs/LC_MESSAGES/gvfs.mo
 share/locale/da/LC_MESSAGES/gvfs.mo
 share/locale/de/LC_MESSAGES/gvfs.mo
@@ -86,6 +91,7 @@ share/locale/ko/LC_MESSAGES/gvfs.mo
 share/locale/ku/LC_MESSAGES/gvfs.mo
 share/locale/lt/LC_MESSAGES/gvfs.mo
 share/locale/lv/LC_MESSAGES/gvfs.mo
+share/locale/mai/LC_MESSAGES/gvfs.mo
 share/locale/mk/LC_MESSAGES/gvfs.mo
 share/locale/ml/LC_MESSAGES/gvfs.mo
 share/locale/mr/LC_MESSAGES/gvfs.mo
@@ -114,4 +120,3 @@ share/locale/vi/LC_MESSAGES/gvfs.mo
 share/locale/zh_CN/LC_MESSAGES/gvfs.mo
 share/locale/zh_HK/LC_MESSAGES/gvfs.mo
 share/locale/zh_TW/LC_MESSAGES/gvfs.mo
-@pkgdir share/gvfs/remote-volume-monitors

@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2009/12/09 18:53:49 drochner Exp $
+
+--- monitor/hal/ghalvolumemonitor.c.orig	2009-07-25 22:52:10.000000000 +0200
++++ monitor/hal/ghalvolumemonitor.c
+@@ -1323,7 +1323,11 @@ update_discs (GHalVolumeMonitor *monitor
+               GFile *foreign_mount_root;
+ 
+               /* the gvfsd-cdda backend uses URI's like these */
++#ifdef __NetBSD__
++	      device_basename = g_path_get_basename (hal_device_get_property_string (d, "block.netbsd.raw_device"));
++#else
+               device_basename = g_path_get_basename (hal_device_get_property_string (d, "block.device"));
++#endif
+               uri = g_strdup_printf ("cdda://%s", device_basename);
+               foreign_mount_root = g_file_new_for_uri (uri);
+               g_free (device_basename);
