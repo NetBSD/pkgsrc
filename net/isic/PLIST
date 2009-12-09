@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:49 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/09 10:38:59 obache Exp $
+bin/esic
+bin/icmpsic
 bin/isic
 bin/tcpsic
 bin/udpsic
-bin/icmpsic
-bin/esic
 share/doc/isic.README
