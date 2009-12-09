@@ -1,13 +1,13 @@
-$NetBSD: patch-ca,v 1.1 2006/06/11 16:55:35 drochner Exp $
+$NetBSD: patch-ca,v 1.2 2009/12/09 10:22:04 drochner Exp $
 
---- doc/en/Makefile.in.orig	2006-06-11 17:34:55.000000000 +0200
+--- doc/en/Makefile.in.orig	2009-05-03 20:12:41.000000000 +0200
 +++ doc/en/Makefile.in
-@@ -326,7 +326,7 @@ docname = dia
- lang = en
- omffile = 
- entities = 
--@HAVE_GNOME_FALSE@docdir = $(datadir)/help/$(docname)/$(lang)
-+@HAVE_GNOME_FALSE@docdir = $(datadir)/dia/help/$(lang)
+@@ -332,7 +332,7 @@ RESOLUTION = 600
+ ENCODING = utf8
+ UNICODE = 1
+ LATEX_CLASS_OPTIONS = -P 'latex.class.options=oneside'
+-@HAVE_GNOME_FALSE@helpdocdir = $(datadir)/$(docname)/help/$(lang)
++@HAVE_GNOME_FALSE@helpdocdir = $(datadir)/dia/help/$(lang)
  
  # **********  Begin of section some packagers may need to modify  **********
- # This variable (docdir) specifies where the documents should be installed.
+ # This variable (helpdocdir) specifies where the documents should be installed.
