@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/07/17 18:00:20 adrianp Exp $
+# $NetBSD: Makefile,v 1.42 2009/12/09 11:42:35 obache Exp $
 #
 
 DISTNAME=		snort-2.8.3.1
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.snort.org/dl/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.snort.org/
 COMMENT=		The Open Source Network Intrusion Detection System
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		snort-mysql-[0-9]*
 CONFLICTS+=		snort-pgsql-[0-9]*
@@ -88,28 +90,26 @@ CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_PREFIX.libpcap}/lib
 pre-build:
 	${CP} ${WRKSRC}/etc/snort.conf ${WRKSRC}/etc/snort.conf.default
 
-post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort/schemas
+INSTALLATION_DIRS+=	${EGDIR} share/doc/snort/schemas
 
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/*.config \
 			${WRKSRC}/etc/*.map \
 			${WRKSRC}/etc/threshold.conf \
-			${WRKSRC}/etc/snort.conf.default ${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/doc/generators ${EGDIR}
+			${WRKSRC}/etc/snort.conf.default ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/generators ${DESTDIR}${EGDIR}
 
 .	for i in ${DOC_FILES}
-		${INSTALL_DATA}	${WRKSRC}/doc/${i} ${PREFIX}/share/doc/snort/
+		${INSTALL_DATA}	${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/share/doc/snort/
 .	endfor
 
-	${INSTALL_DATA} ${WRKSRC}/doc/README.* ${PREFIX}/share/doc/snort/
-	${INSTALL_DATA} ${WRKSRC}/doc/*.tex ${PREFIX}/share/doc/snort/
-	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${PREFIX}/share/doc/snort/
-	${INSTALL_MAN} ${WRKSRC}/snort.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/doc/README.* ${DESTDIR}${PREFIX}/share/doc/snort/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.tex ${DESTDIR}${PREFIX}/share/doc/snort/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${DESTDIR}${PREFIX}/share/doc/snort/
+	${INSTALL_MAN} ${WRKSRC}/snort.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 	${INSTALL_DATA} ${WRKSRC}/schemas/create_* \
-		${PREFIX}/share/doc/snort/schemas
+		${DESTDIR}${PREFIX}/share/doc/snort/schemas
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
