@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/07/17 18:00:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.9 2009/12/09 11:12:21 obache Exp $
 
 DISTNAME=	syslog-ng-1.6.12
 CATEGORIES=	sysutils
@@ -7,6 +7,9 @@ MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/sources/1.6/src/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.balabit.com/network-security/syslog-ng/
 COMMENT=	Syslog-ng tries to fill the gaps original syslogd's were lacking
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax flex
 
@@ -56,21 +59,21 @@ pre-build:
 	cd ${WRKSRC}/doc/sgml && \
 		pax -O -zrf ${WRKSRC}/doc/sgml/syslog-ng.html.tar.gz
 
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	${DOCDIR}
+INSTALLATION_DIRS+=	share/doc/html/syslog-ng
+INSTALLATION_DIRS+=	${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/syslog-ng
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.spoof ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/syslog-ng.conf.doc ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.demo ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.sample ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.solaris ${DESTDIR}${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/syslog2ng ${DESTDIR}${PREFIX}/bin
 
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.spoof ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/contrib/syslog-ng.conf.doc ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.demo ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.sample ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.solaris ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/syslog2ng ${PREFIX}/bin
-
-	${INSTALL_DATA} ${WRKSRC}/doc/sgml/syslog-ng.html/*.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/sgml/syslog-ng.html/*.html ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
