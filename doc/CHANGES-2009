@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4556 2009/12/09 12:37:20 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4557 2009/12/09 12:37:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6110,3 +6110,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/ettercap-NG to 0.7.3nb3 [obache 2009-12-09]
 	Updated net/firewalk to 5.0nb3 [obache 2009-12-09]
 	Updated net/packit to 1.0nb2 [obache 2009-12-09]
+	Updated net/isic to 0.07 [obache 2009-12-09]
