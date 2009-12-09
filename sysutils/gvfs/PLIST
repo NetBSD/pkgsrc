@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 21:28:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/12/09 15:08:30 wiz Exp $
 bin/gvfs-cat
 bin/gvfs-copy
 bin/gvfs-info
@@ -36,8 +36,8 @@ libexec/gvfsd-http
 libexec/gvfsd-localtest
 libexec/gvfsd-network
 libexec/gvfsd-sftp
-libexec/gvfsd-smb
-libexec/gvfsd-smb-browse
+${PLIST.samba}libexec/gvfsd-smb
+${PLIST.samba}libexec/gvfsd-smb-browse
 libexec/gvfsd-trash
 share/dbus-1/services/gvfs-daemon.service
 ${PLIST.hal}share/dbus-1/services/org.gtk.Private.HalVolumeMonitor.service
@@ -53,8 +53,8 @@ share/gvfs/mounts/http.mount
 share/gvfs/mounts/localtest.mount
 share/gvfs/mounts/network.mount
 share/gvfs/mounts/sftp.mount
-share/gvfs/mounts/smb-browse.mount
-share/gvfs/mounts/smb.mount
+${PLIST.samba}share/gvfs/mounts/smb-browse.mount
+${PLIST.samba}share/gvfs/mounts/smb.mount
 share/gvfs/mounts/trash.mount
 ${PLIST.hal}share/gvfs/remote-volume-monitors/hal.monitor
 share/locale/ar/LC_MESSAGES/gvfs.mo
