@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2009/12/09 10:06:55 drochner Exp $
+
+--- tests/twisted/resolver-fake.c.orig	2009-02-27 14:05:19.000000000 +0100
++++ tests/twisted/resolver-fake.c
+@@ -24,6 +24,7 @@
+ #include <string.h>
+ #include <sys/socket.h>
+ #include <sys/types.h>
++#include <netinet/in.h>
+ 
+ #define DEBUG(format, ...) \
+   g_debug ("%s: " format, G_STRFUNC, ##__VA_ARGS__)
