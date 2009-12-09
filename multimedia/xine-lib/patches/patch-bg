@@ -1,8 +1,8 @@
-$NetBSD: patch-bg,v 1.4 2007/11/22 20:20:24 drochner Exp $
+$NetBSD: patch-bg,v 1.5 2009/12/09 10:13:03 drochner Exp $
 
---- include/Makefile.in.orig	2007-08-27 20:27:54.000000000 +0200
+--- include/Makefile.in.orig	2009-12-01 02:53:28.000000000 +0100
 +++ include/Makefile.in
-@@ -778,7 +778,8 @@ maintainer-clean-generic:
+@@ -696,7 +696,8 @@ maintainer-clean-generic:
  	-rm -f Makefile.in configure.h.in
  
  install-data-local: install-includeHEADERS
@@ -10,5 +10,5 @@ $NetBSD: patch-bg,v 1.4 2007/11/22 20:20:24 drochner Exp $
 +	sed -e '/^\/\*_x_/d' xine.h > installed-xine.h
 +	$(INSTALL_HEADER) installed-xine.h $(DESTDIR)$(includedir)/xine.h
  @GENERATED_INTTYPES_H_TRUE@	$(INSTALL) inttypes.h $(DESTDIR)$(includedir)
+ 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
