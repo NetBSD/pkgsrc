@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.6 2009/04/17 16:35:40 drochner Exp $
+$NetBSD: patch-ae,v 1.7 2009/12/09 10:13:03 drochner Exp $
 
---- src/input/input_vcd.c.orig	2009-02-17 03:55:21.000000000 +0100
+--- src/input/input_vcd.c.orig	2009-11-30 21:55:44.000000000 +0100
 +++ src/input/input_vcd.c
 @@ -29,6 +29,7 @@
  #include <errno.h>
@@ -43,7 +43,7 @@ $NetBSD: patch-ae,v 1.6 2009/04/17 16:35:40 drochner Exp $
  }
 -#elif defined (__FreeBSD_kernel__) || defined (__OpenBSD__)
 +#elif (defined(BSD) && BSD >= 199306)
- static off_t vcd_plugin_read (input_plugin_t *this_gen, 
+ static off_t vcd_plugin_read (input_plugin_t *this_gen,
  				char *buf, off_t nlen) {
    vcd_input_plugin_t *this = (vcd_input_plugin_t *) this_gen;
 @@ -531,7 +532,7 @@ static buf_element_t *vcd_plugin_read_bl
@@ -52,16 +52,16 @@ $NetBSD: patch-ae,v 1.6 2009/04/17 16:35:40 drochner Exp $
  }
 -#elif defined (__FreeBSD_kernel__) || defined (__OpenBSD__)
 +#elif (defined(BSD) && BSD >= 199306)
- static buf_element_t *vcd_plugin_read_block (input_plugin_t *this_gen, 
+ static buf_element_t *vcd_plugin_read_block (input_plugin_t *this_gen,
  					     fifo_buffer_t *fifo, off_t nlen) {
-   
+ 
 @@ -690,7 +691,7 @@ static off_t vcd_plugin_seek (input_plug
  
    return offset ; /* FIXME */
  }
 -#elif defined (__FreeBSD_kernel__) || defined (__OpenBSD__)
 +#elif (defined(BSD) && BSD >= 199306)
- static off_t vcd_plugin_seek (input_plugin_t *this_gen, 
+ static off_t vcd_plugin_seek (input_plugin_t *this_gen,
  				off_t offset, int origin) {
  
 @@ -764,7 +765,7 @@ static off_t vcd_plugin_get_length (inpu

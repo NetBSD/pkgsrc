@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.19 2009/01/20 18:30:49 drochner Exp $
+$NetBSD: patch-ag,v 1.20 2009/12/09 10:13:03 drochner Exp $
 
---- configure.ac.orig	2009-01-12 00:58:58.000000000 +0100
+--- configure.ac.orig	2009-12-01 02:52:45.000000000 +0100
 +++ configure.ac
 @@ -109,7 +109,7 @@ dnl ------------------------------------
  AC_CANONICAL_HOST
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.19 2009/01/20 18:30:49 drochner Exp $
  
  AC_CONFIG_HEADERS([include/configure.h])
  
-@@ -555,6 +555,9 @@ AC_CHECK_LIB(socket, socket, NET_LIBS="-
+@@ -580,6 +580,9 @@ AC_CHECK_LIB(socket, socket, NET_LIBS="-
  AC_CHECK_LIB(nsl, gethostbyname, NET_LIBS="-lnsl $NET_LIBS",)
  AC_SUBST(NET_LIBS)
  
@@ -21,7 +21,7 @@ $NetBSD: patch-ag,v 1.19 2009/01/20 18:30:49 drochner Exp $
  
  dnl ---------------------------------------------
  dnl socklen_t
-@@ -745,7 +748,7 @@ XXMC_LIBS="-L$xxmc_path -l$xxmc_stub"
+@@ -770,7 +773,7 @@ XXMC_LIBS="${xxmc_path:+-L}$xxmc_path -l
  AC_MSG_CHECKING(whether to enable the xxmc plugin with vld extensions)
  AC_MSG_RESULT()
  dnl Check if vld "extended" XvMC is available
@@ -30,7 +30,7 @@ $NetBSD: patch-ag,v 1.19 2009/01/20 18:30:49 drochner Exp $
  	AC_CHECK_LIB($xxmc_stub, XvMCPutSlice,
               	     ac_have_xxmc="yes",
  	             [ac_have_xxmc="no"
-@@ -775,7 +778,7 @@ if test "x$ac_have_xxmc" = "xyes"; then
+@@ -800,7 +803,7 @@ if test "x$ac_have_xxmc" = "xyes"; then
  fi
  dnl Try fallback to standard XvMC if vld failed
  if test "x$ac_have_xxmc" = "xno"; then
@@ -39,8 +39,8 @@ $NetBSD: patch-ag,v 1.19 2009/01/20 18:30:49 drochner Exp $
  	  AC_CHECK_LIB($xxmc_stub, XvMCCreateContext,
                 ac_have_xxmc="yes",
  	       [ac_have_xxmc="no"
-@@ -829,7 +832,7 @@ saved_libs="$LIBS"
- XVMC_LIBS="-L$xvmc_path -l$xvmc_stub"
+@@ -854,7 +857,7 @@ saved_libs="$LIBS"
+ XVMC_LIBS="${xvmc_path:+-L}$xvmc_path -l$xvmc_stub"
  AC_MSG_CHECKING(whether to enable the xvmc plugin)
  AC_MSG_RESULT()
 -if test "x$xvmc_stub" == "xXvMCW"; then
@@ -48,7 +48,7 @@ $NetBSD: patch-ag,v 1.19 2009/01/20 18:30:49 drochner Exp $
  	AC_CHECK_LIB($xvmc_stub, XvMCCreateContext,
               ac_have_xvmc="yes",
  	     [ac_have_xvmc="no"
-@@ -920,7 +923,6 @@ if test "x$enable_xinerama" != "xno"; th
+@@ -945,7 +948,6 @@ if test "x$enable_xinerama" != "xno"; th
     ])
     if test "x$ac_have_xinerama" = "xyes"; then
        AC_DEFINE(HAVE_XINERAMA,1,[Define this if you have libXinerama installed])
@@ -56,7 +56,7 @@ $NetBSD: patch-ag,v 1.19 2009/01/20 18:30:49 drochner Exp $
     fi
  else
    ac_have_xinerama=no
-@@ -1427,8 +1429,21 @@ AC_ARG_ENABLE([oss],
+@@ -1457,8 +1459,21 @@ AC_ARG_ENABLE([oss],
  	AS_HELP_STRING([--disable-oss], [Do not build OSS audio output support]))
  
  if test "x$enable_oss" != "xno"; then
@@ -78,7 +78,7 @@ $NetBSD: patch-ag,v 1.19 2009/01/20 18:30:49 drochner Exp $
       #ifdef HAVE_SYS_SOUNDCARD_H
       # include <sys/soundcard.h>
       #endif
-@@ -1446,6 +1461,7 @@ if test "x$enable_oss" != "xno"; then
+@@ -1476,6 +1491,7 @@ if test "x$enable_oss" != "xno"; then
  fi
  
  AM_CONDITIONAL(HAVE_OSS, test "x$have_ossaudio" = "xyes")
@@ -86,7 +86,7 @@ $NetBSD: patch-ag,v 1.19 2009/01/20 18:30:49 drochner Exp $
  
  
  dnl ---------------------------------------------
-@@ -1555,9 +1571,10 @@ AC_ARG_ENABLE([gnomevfs],
+@@ -1607,9 +1623,10 @@ AC_ARG_ENABLE([gnomevfs],
    [with_gnome_vfs=$enableval], [with_gnome_vfs=yes])
  
  if test "x$with_gnome_vfs" = "xyes"; then
@@ -100,7 +100,7 @@ $NetBSD: patch-ag,v 1.19 2009/01/20 18:30:49 drochner Exp $
    AC_SUBST(GNOME_VFS_CFLAGS)
    AC_SUBST(GNOME_VFS_LIBS)
    if test "x$no_gnome_vfs" != "xyes"; then
-@@ -1892,7 +1909,7 @@ int has_timeout=sizeof(test.timeout);]])
+@@ -1944,7 +1961,7 @@ int has_timeout=sizeof(test.timeout);]])
       	    AC_DEFINE([HAVE_WIN32_CDROM], [1], 
                        [Define 1 if you have MinGW CD-ROM support])
  	 ;;
