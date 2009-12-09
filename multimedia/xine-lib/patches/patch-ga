@@ -1,15 +1,15 @@
-$NetBSD: patch-ga,v 1.5 2009/02/19 12:58:03 drochner Exp $
+$NetBSD: patch-ga,v 1.6 2009/12/09 10:13:03 drochner Exp $
 
---- Makefile.in.orig	2009-02-17 15:37:58.000000000 +0100
+--- Makefile.in.orig	2009-12-01 02:53:42.000000000 +0100
 +++ Makefile.in
-@@ -951,8 +951,8 @@ maintainer-clean-generic:
- maintainer-clean-generic-hook: 
+@@ -1049,8 +1049,8 @@ maintainer-clean-generic:
+ maintainer-clean-generic-hook:
  	rm -f config.status
  
 -$(top_srcdir)/configure:  $(am__configure_deps)
 -	cd $(srcdir) && $(AUTOCONF) && $(SED) -i -e '/gnu_ld/,/;;/ s/--rpath \$${wl}/--rpath,/' $@
 +#$(top_srcdir)/configure:  $(am__configure_deps)
 +#	cd $(srcdir) && $(AUTOCONF) && $(SED) -i -e '/gnu_ld/,/;;/ s/--rpath \$${wl}/--rpath,/' $@
+ 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
