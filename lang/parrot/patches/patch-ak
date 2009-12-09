@@ -1,0 +1,109 @@
+$NetBSD: patch-ak,v 1.1 2009/12/09 09:23:51 he Exp $
+
+Prevent problem exposed by "library cloning", where the dlopen()-returned
+handle is copied, causing dlclose() to be called twice with the same handle,
+which in turn triggers a warning from ld.elf_so on NetBSD.  Ref.
+http://trac.parrot.org/parrot/ticket/1340.
+
+Index: config/gen/platform/generic/dl.c
+===================================================================
+--- config/gen/platform/generic/dl.c	(revision 42823)
++++ config/gen/platform/generic/dl.c	(working copy)
+@@ -22,11 +22,69 @@
+ */
+ 
+ #ifdef PARROT_HAS_HEADER_DLFCN
++#  include <stddef.h>
++#  include <stdlib.h>
+ #  include <dlfcn.h>
+ #endif
+ 
+ #define PARROT_DLOPEN_FLAGS RTLD_LAZY
+ 
++#ifdef PARROT_HAS_HEADER_DLFCN
++
++struct handle_entry {
++    void *handle;
++    struct handle_entry *next;
++};
++
++struct handle_entry *handle_list = NULL;
++
++static void
++push_handle_entry(void *handle)
++{
++    struct handle_entry *e;
++
++    e = malloc(sizeof(struct handle_entry));
++    if (!e) { return; }
++    e->handle = handle;
++    e->next = handle_list;
++    handle_list = e;
++}
++
++static void *
++find_handle_entry(void *handle)
++{
++    struct handle_entry *e;
++
++    for(e = handle_list; e; e = e->next) {
++	if (e->handle == handle)
++	    return handle;
++    }
++    return NULL;
++}
++
++static void
++remove_handle_entry(void *handle)
++{
++    struct handle_entry *cur, *prev, *p;
++
++    if (handle_list) {
++	if (handle_list->handle == handle) {
++	    p = handle_list;
++	    handle_list = p->next;
++	    free(p);
++	} else {
++	    for (cur = handle_list; cur; prev = cur, cur = cur->next) {
++		if (cur->handle == handle) {
++		    prev->next = cur->next;
++		    free(cur);
++		}
++	    }
++	}
++    }
++}
++#endif /* PARROT_HAS_HEADER_DLFCN */
++
++
+ /*
+ 
+ =item C<void * Parrot_dlopen(const char *filename)>
+@@ -39,7 +97,11 @@
+ Parrot_dlopen(const char *filename)
+ {
+ #ifdef PARROT_HAS_HEADER_DLFCN
+-    return dlopen(filename, PARROT_DLOPEN_FLAGS);
++    void *h;
++
++    h = dlopen(filename, PARROT_DLOPEN_FLAGS);
++    push_handle_entry(h);
++    return h;
+ #else
+     return 0;
+ #endif
+@@ -93,7 +155,13 @@
+ Parrot_dlclose(void *handle)
+ {
+ #ifdef PARROT_HAS_HEADER_DLFCN
+-    return dlclose(handle);
++    int rv;
++
++    if (find_handle_entry(handle)) {
++	remove_handle_entry(handle);
++	rv = dlclose(handle);
++	return rv;
++    }
+ #else
+     return -1;
+ #endif
