@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/17 18:00:24 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/09 05:28:13 obache Exp $
 #
 
 DISTNAME=	openvas-libnasl-2.0.0
@@ -9,12 +9,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openvas.org/
 COMMENT=	Libraries for the Open Vulnerability Assessment System
 
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 BUILD_DEFS+=	VARBASE
-USE_TOOLS=	pkg-config
+USE_TOOLS+=	bison pkg-config
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
