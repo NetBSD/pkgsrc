@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.28 2009/02/19 12:58:03 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.29 2009/12/09 10:13:03 drochner Exp $
 bin/xine-config
 bin/xine-list-1.1
 include/xine.h
@@ -101,6 +101,8 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_spucmml.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_spucmml.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_spudvb.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_spudvb.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_spuhdmv.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_spuhdmv.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_sputext.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_sputext.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_theora.a
