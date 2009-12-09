@@ -1,7 +1,43 @@
-$NetBSD: patch-aa,v 1.11 2007/01/13 11:02:12 joerg Exp $
+$NetBSD: patch-aa,v 1.12 2009/12/09 21:19:59 joerg Exp $
 
---- configure.orig	2003-02-01 20:18:09.000000000 +0000
+--- configure.orig	2003-02-01 21:18:09.000000000 +0100
 +++ configure
+@@ -5541,7 +5541,7 @@ fi
+ LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++LIBTOOL='libtool'
+ 
+ # Prevent multiple expansion
+ 
+@@ -6016,7 +6016,7 @@ else
+     my_libs_save="$LIBS"
+ 
+ 
+-    CXX="${SHELL-/bin/sh} ${srcdir}/libtool $CXX"
++    CXX="libtool --mode=link $CXX"
+     CXXFLAGS="$CXXFLAGS $my_sidplay2_cxxflags -DHAVE_UNIX"
+     LDFLAGS="$LDFLAGS $my_sidplay2_ldadd"
+ 
+@@ -6123,7 +6123,7 @@ rm -f conftest*
+     my_libs_save="$LIBS"
+ 
+ 
+-    CXX="${SHELL-/bin/sh} ${srcdir}/libtool $CXX"
++    CXX="libtool --mode=link $CXX"
+     CXXFLAGS="$CXXFLAGS $my_sidplay2_cxxflags -DHAVE_UNIX"
+     LDFLAGS="$LDFLAGS $my_sidplay2_ldadd"
+ 
+@@ -6251,7 +6251,7 @@ echo "configure:6247: checking for reSID
+     my_libs_save="$LIBS"
+ 
+     
+-    CXX="${SHELL-/bin/sh} ${srcdir}/libtool $CXX"
++    CXX="libtool --mode=link $CXX"
+     CXXFLAGS="$CXXFLAGS $BUILDERS_INCLUDES"
+     LDFLAGS="$LDFLAGS $BUILDERS_LDFLAGS"
+     LIBS="$LIBS -lresid-builder"
 @@ -6577,6 +6577,7 @@ else
  fi
   
@@ -73,8 +109,12 @@ $NetBSD: patch-aa,v 1.11 2007/01/13 11:02:12 joerg Exp $
                  break 2
              fi
          done
-@@ -7886,7 +7893,7 @@ echo "configure:7879: checking for Qt ve
-     CXX="${SHELL-/bin/sh} ${srcdir}/libtool $CXX"
+@@ -7883,10 +7890,10 @@ echo "configure:7879: checking for Qt ve
+     my_libs_save="$LIBS"
+ 
+     
+-    CXX="${SHELL-/bin/sh} ${srcdir}/libtool $CXX"
++    CXX="libtool --mode=link $CXX"
      CXXFLAGS="$CXXFLAGS $QT_INCLUDES"
      LDFLAGS="$LDFLAGS $QT_LDFLAGS"
 -    LIBS="$LIBS -lqt"
