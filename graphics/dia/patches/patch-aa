@@ -1,50 +1,67 @@
-$NetBSD: patch-aa,v 1.5 2007/04/19 20:14:59 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2009/12/09 10:22:04 drochner Exp $
 
---- configure.orig	2007-03-29 08:11:17.000000000 +0200
+--- configure.orig	2009-05-03 20:09:51.000000000 +0200
 +++ configure
-@@ -20515,7 +20515,7 @@ if test "${with_freetype+set}" = set; th
- else
+@@ -22005,7 +22005,7 @@ else
    with_freetype=yes
- fi;
+ fi
+ 
 -if test "x$with_freetype" == "xyes"; then
 +if test "x$with_freetype" = "xyes"; then
  
  pkg_failed=no
- echo "$as_me:$LINENO: checking for PANGOFT2" >&5
-@@ -20989,7 +20989,8 @@ if test "${with_gnomeprint+set}" = set; 
- else
-   with_gnomeprint=no
- fi;
--if test "x$with_gnomeprint" == "xyes"; then
-+if 
-+test "x$with_gnomeprint" = "xyes"; then
- 
- pkg_failed=no
- echo "$as_me:$LINENO: checking for GNOMEPRINT" >&5
-@@ -21927,7 +21928,7 @@ else
- echo "${ECHO_T}no" >&6
+ { $as_echo "$as_me:$LINENO: checking for PANGOFT2" >&5
+@@ -22692,7 +22692,7 @@ else
+ $as_echo "yes" >&6; }
+ 	pangocairo_ok=yes
  fi
+-if test "x$pangocairo_ok" == "xyes"; then
++if test "x$pangocairo_ok" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_PANGOCAIRO_H 1
+@@ -23393,7 +23393,7 @@ $as_echo "no" >&6; }
+ fi
+ 
  
 -if test "$XGETTEXT" == none ; then
 +if test "$XGETTEXT" = none ; then
-    { { echo "$as_me:$LINENO: error: xgettext program not found: $XGETTEXT." >&5
- echo "$as_me: error: xgettext program not found: $XGETTEXT." >&2;}
+    { { $as_echo "$as_me:$LINENO: error: xgettext program not found: $XGETTEXT." >&5
+ $as_echo "$as_me: error: xgettext program not found: $XGETTEXT." >&2;}
     { (exit 1); exit 1; }; }
-@@ -25023,7 +25024,7 @@ echo $ECHO_N "checking for $am_display_P
+@@ -26631,7 +26631,7 @@ $as_echo_n "checking for $am_display_PYT
  if test "${am_cv_python_pythondir+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+   $as_echo_n "(cached) " >&6
  else
 -  am_cv_python_pythondir=`$PYTHON -c "from distutils import sysconfig; print sysconfig.get_python_lib(0,0,prefix='$PYTHON_PREFIX')" 2>/dev/null ||
 +  am_cv_python_pythondir=`$PYTHON -c "from distutils import sysconfig; print sysconfig.get_python_lib(0,0)" 2>/dev/null ||
       echo "$PYTHON_PREFIX/lib/python$PYTHON_VERSION/site-packages"`
  fi
- echo "$as_me:$LINENO: result: $am_cv_python_pythondir" >&5
-@@ -25041,7 +25042,7 @@ echo $ECHO_N "checking for $am_display_P
+ { $as_echo "$as_me:$LINENO: result: $am_cv_python_pythondir" >&5
+@@ -26649,7 +26649,7 @@ $as_echo_n "checking for $am_display_PYT
  if test "${am_cv_python_pyexecdir+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+   $as_echo_n "(cached) " >&6
  else
 -  am_cv_python_pyexecdir=`$PYTHON -c "from distutils import sysconfig; print sysconfig.get_python_lib(1,0,prefix='$PYTHON_EXEC_PREFIX')" 2>/dev/null ||
 +  am_cv_python_pyexecdir=`$PYTHON -c "from distutils import sysconfig; print sysconfig.get_python_lib(1,0)" 2>/dev/null ||
       echo "${PYTHON_EXEC_PREFIX}/lib/python${PYTHON_VERSION}/site-packages"`
  fi
- echo "$as_me:$LINENO: result: $am_cv_python_pyexecdir" >&5
+ { $as_echo "$as_me:$LINENO: result: $am_cv_python_pyexecdir" >&5
+@@ -27022,7 +27022,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-if  test "x$dblatex" == "xno"; then
++if  test "x$dblatex" = "xno"; then
+   if test "x$jw" != "xno"; then
+   WITH_JW_TRUE=
+   WITH_JW_FALSE='#'
+@@ -27043,7 +27043,7 @@ fi
+ fi
+ hardbook_ok=no
+ xsltproc_ok=no
+-if test "x$with_hardbooks" == "xno"; then
++if test "x$with_hardbooks" = "xno"; then
+    if test "xno" != "xno"; then
+   WITH_JW_TRUE=
+   WITH_JW_FALSE='#'
