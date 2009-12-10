@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/12/10 17:10:14 drochner Exp $
 bin/gif2hdf
 bin/h4cc
 bin/h4fc
@@ -62,12 +62,16 @@ include/hdf/hkit.h
 include/hdf/hlimits.h
 include/hdf/hntdefs.h
 include/hdf/hproto.h
+include/hdf/hproto_fortran.h
 include/hdf/htags.h
 include/hdf/linklist.h
 include/hdf/local_nc.h
 include/hdf/mfan.h
+include/hdf/mffunc.f90
+include/hdf/mffunc.inc
 include/hdf/mfgr.h
 include/hdf/mfhdf.h
+include/hdf/mfhdfi.h
 include/hdf/mstdio.h
 include/hdf/netcdf.f90
 include/hdf/netcdf.h
@@ -75,8 +79,9 @@ include/hdf/netcdf.inc
 include/hdf/tbbt.h
 include/hdf/vattr.h
 include/hdf/vg.h
-lib/libdf.a
-lib/libmfhdf.a
+lib/libdf.la
+lib/libhdf4.settings
+lib/libmfhdf.la
 man/man1/hdf.1
 man/man1/hdfncdump.1
 man/man1/hdfncgen.1
