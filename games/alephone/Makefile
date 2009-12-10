@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2009/08/26 19:57:28 sno Exp $
+# $NetBSD: Makefile,v 1.9 2009/12/10 06:10:02 obache Exp $
 #
 
-DISTNAME=	AlephOne-20071103
+DISTNAME=	AlephOne-20091015
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=marathon/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,19 +10,23 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://marathon.sourceforge.net/
 COMMENT=	Classic 2.5D FPS game engine, updated to use SDL
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 INSTALLATION_DIRS=	share/doc/AlephOne
 
-CONFIGURE_ARGS=	--disable-speex
-
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/AlephOne/
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/AlephOne/
 
 .include "../../audio/SDL_sound/buildlink3.mk"
+BUILDLINK_API_DEPENDS.SDL+=	SDL>=1.2.6
 .include "../../devel/SDL/buildlink3.mk"
+BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers>=1.31
 .include "../../devel/boost-headers/buildlink3.mk"
+BUILDLINK_API_DEPENDS.SDL_image+=	SDL_image>=1.2.6
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
 
