@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2005/12/10 22:10:47 christos Exp $
+$NetBSD: patch-aa,v 1.9 2009/12/10 23:49:03 abs Exp $
 
---- Makefile.orig	1993-06-09 22:51:22.000000000 -0400
-+++ Makefile	2005-12-10 17:00:00.000000000 -0500
-@@ -15,17 +15,30 @@
+--- Makefile.orig	1993-06-10 02:51:22.000000000 +0000
++++ Makefile
+@@ -15,17 +15,30 @@ OBJ	= fep_main.o fep_edit.o fep_hist.o f
  DISTRIBUTION\
  	= Makefile fep.1 $(HEADER) $(SRC) feprc.sample README
  
@@ -37,12 +37,14 @@ $NetBSD: patch-aa,v 1.8 2005/12/10 22:10:47 christos Exp $
  
  all: $(TARGET)
  
-@@ -37,7 +50,7 @@
+@@ -36,8 +49,8 @@ argv: fep_com.c
+ 	$(CC) -o argv -DMKARGDEBUG fep_util.c
  
  install: $(TARGET)
- 	install -s $(TARGET) $(INSTDIR)
+-	install -s $(TARGET) $(INSTDIR)
 -	install -c fep.1 /usr/man/manl/fep.l
-+	gzip -9n -c fep.1 > ${PREFIX}/man/man1/fep.1.gz
++	install -s $(TARGET) $(DESTDIR)$(INSTDIR)
++	gzip -9n -c fep.1 > $(DESTDIR)${PREFIX}/man/man1/fep.1.gz
  
  fep.1: fep.jman
  	sed -e '/^\.EG/d' -e '/^\.JP/,/^\.EJ/d' -e '/^\.\\"KS/,/^\.\\"KE/d' \

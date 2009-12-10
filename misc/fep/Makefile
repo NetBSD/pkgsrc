@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/05/19 08:59:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/12/10 23:49:03 abs Exp $
 
 DISTNAME=	fep
 PKGNAME=	fep-1.0
@@ -13,9 +13,11 @@ LICENSE=	fep-license
 RESTRICTED=	Do not redistribute for a fee.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
+PKG_DESTDIR_SUPPORT=  user-destdir
 
 WRKSRC=		${WRKDIR}
 MANCOMPRESSED=	yes
+INSTALLATION_DIRS+= bin man/man1
 
 pre-build:
 	cd ${WRKSRC} && \
