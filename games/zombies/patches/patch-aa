@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2007/06/01 08:58:44 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2009/12/10 20:59:22 abs Exp $
 
 --- Makefile.orig	1999-06-26 14:37:17.000000000 +0000
 +++ Makefile
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.5 2007/06/01 08:58:44 rillig Exp $
 -MANOWN		= root
 -MANGRP		= wheel
 -MANMODE		= 444
-+SCOREFILE	= ${VARBASE}/games/zombies_score
++SCOREFILE	?= ${VARBASE}/games/zombies_score
 +#BINOWN		= games
 +#BINGRP		= games
 +#BINMODE		= 2555
@@ -49,11 +49,15 @@ $NetBSD: patch-aa,v 1.5 2007/06/01 08:58:44 rillig Exp $
  
  all:		$(PROG)
  
-@@ -77,6 +77,7 @@ ${OBJS}:	${HDRS}
+@@ -75,8 +75,9 @@ zombies:	${OBJS}
+ ${OBJS}:	${HDRS}
+ 
  install:	${PROG}
- 		${INSTALL_PROG} ${PROG} ${BINDIR}
- 		${INSTALL_MAN} ${MAN} ${MANDIR}
-+		${INSTALL_SCORE} /dev/null ${PREFIX}/share/games/zombies_score.dist
+-		${INSTALL_PROG} ${PROG} ${BINDIR}
+-		${INSTALL_MAN} ${MAN} ${MANDIR}
++		${INSTALL_PROG} ${PROG} ${DESTDIR}${BINDIR}
++		${INSTALL_MAN} ${MAN} ${DESTDIR}${MANDIR}
++		${INSTALL_SCORE} /dev/null ${DESTDIR}${PREFIX}/share/games/zombies_score.dist
  		if [ ! -f ${SCOREFILE} ]; then \
  			${INSTALL_SCORE} /dev/null ${SCOREFILE} ; \
  		fi
