@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4563 2009/12/10 17:32:38 abs Exp $
+$NetBSD: CHANGES-2009,v 1.4564 2009/12/10 19:03:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6117,3 +6117,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/rox to 2.10 [joerg 2009-12-10]
 	Updated geography/gpsd to 2.90nb1 [joerg 2009-12-10]
 	Added sysutils/neb-wipe version 1.0 [abs 2009-12-10]
+	Updated net/wireshark to 1.2.4 [tron 2009-12-10]
