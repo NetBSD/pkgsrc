@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.6 2005/10/15 22:16:05 tonio Exp $
+$NetBSD: patch-aa,v 1.7 2009/12/10 21:13:07 abs Exp $
 
---- Makefile.orig	2005-07-05 11:57:46.000000000 +0200
+--- Makefile.orig	2005-07-05 09:57:46.000000000 +0000
 +++ Makefile
-@@ -11,19 +11,19 @@
+@@ -4,26 +4,26 @@
+ # Copyright 1996, 1997, 1998, 1999, 2000, 2001 John Cowan
+ # Copyright 2002 Christiaan Keet
+ 
+-# Please make sure DESTDIR, MANDIR, DEFAULTFONTDIR and
++# Please make sure BINDIR, MANDIR, DEFAULTFONTDIR and
+ #   DEFAULTFONTFILE are defined to reflect the situation
+ #   on your computer.  See README for details.
+ 
  # Don't change this even if your shell is different. The only reason
  # for changing this is if sh is not in the same place.
  SHELL = /bin/sh
@@ -13,7 +21,7 @@ $NetBSD: patch-aa,v 1.6 2005/10/15 22:16:05 tonio Exp $
  
  # Where the executables should be put
 -DESTDIR = /usr/local/bin
-+DESTDIR = ${PREFIX}/bin
++BINDIR = ${PREFIX}/bin
  
  # Where the man page should be put
 -MANDIR = /usr/local/man/man6
@@ -40,11 +48,11 @@ $NetBSD: patch-aa,v 1.6 2005/10/15 22:16:05 tonio Exp $
 -	cp showfigfonts $(DESTDIR)
 -	cp fonts/*.flf $(DEFAULTFONTDIR)
 -	cp fonts/*.flc $(DEFAULTFONTDIR)
-+	${BSD_INSTALL_DATA_DIR} $(DEFAULTFONTDIR)
-+	${BSD_INSTALL_PROGRAM} figlet $(DESTDIR)
-+	${BSD_INSTALL_DATA} figlet.6 $(MANDIR)
-+	${BSD_INSTALL_PROGRAM} chkfont $(DESTDIR)
-+	${BSD_INSTALL_SCRIPT} figlist $(DESTDIR)
-+	${BSD_INSTALL_SCRIPT} showfigfonts $(DESTDIR)
-+	${BSD_INSTALL_DATA} fonts/*.flf $(DEFAULTFONTDIR)
-+	${BSD_INSTALL_DATA} fonts/*.flc $(DEFAULTFONTDIR)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(DEFAULTFONTDIR)
++	${BSD_INSTALL_PROGRAM} figlet $(DESTDIR)$(BINDIR)
++	${BSD_INSTALL_DATA} figlet.6 $(DESTDIR)$(MANDIR)
++	${BSD_INSTALL_PROGRAM} chkfont $(DESTDIR)$(BINDIR)
++	${BSD_INSTALL_SCRIPT} figlist $(DESTDIR)$(BINDIR)
++	${BSD_INSTALL_SCRIPT} showfigfonts $(DESTDIR)$(BINDIR)
++	${BSD_INSTALL_DATA} fonts/*.flf $(DESTDIR)$(DEFAULTFONTDIR)
++	${BSD_INSTALL_DATA} fonts/*.flc $(DESTDIR)$(DEFAULTFONTDIR)
