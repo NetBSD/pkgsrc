@@ -1,8 +1,8 @@
-$NetBSD: patch-bt,v 1.1 2001/12/20 09:20:00 tron Exp $
+$NetBSD: patch-bt,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/panel/item_set.c.orig	Tue Jun 29 07:16:50 1993
-+++ lib/libxview/panel/item_set.c	Thu Dec 20 10:09:16 2001
-@@ -28,6 +28,8 @@
+--- lib/libxview/panel/item_set.c.orig	1993-06-29 05:16:50.000000000 +0000
++++ lib/libxview/panel/item_set.c
+@@ -28,6 +28,8 @@ static void item_adjust_label_size();
  
  extern Notify_value panel_base_event_handler();
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-cl,v 1.1 2001/12/20 09:20:03 tron Exp $
+$NetBSD: patch-cl,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/ttysw/tty_ntfy.c.orig	Tue Jun 29 07:17:17 1993
-+++ lib/libxview/ttysw/tty_ntfy.c	Thu Dec 20 10:09:17 2001
-@@ -171,10 +171,14 @@
+--- lib/libxview/ttysw/tty_ntfy.c.orig	1993-06-29 05:17:17.000000000 +0000
++++ lib/libxview/ttysw/tty_ntfy.c
+@@ -171,10 +171,14 @@ ttysw_sigwinch(ttysw)
       * SIGWINCHes on resize.
       */
      /* Notify process group that terminal has changed. */
@@ -17,7 +17,7 @@ $NetBSD: patch-cl,v 1.1 2001/12/20 09:20:03 tron Exp $
      /*
       * Only killpg when pgrp is not tool's.  This is the case of haven't
       * completed ttysw_fork yet (or even tried to do it yet).
-@@ -204,7 +208,11 @@
+@@ -204,7 +208,11 @@ ttysw_sendsig(ttysw, textsw, sig)
  	return;
      }
      /* Send the signal to the process group of the controlling tty */
@@ -29,7 +29,7 @@ $NetBSD: patch-cl,v 1.1 2001/12/20 09:20:03 tron Exp $
  	/*
  	 * Flush our buffers of completed and partial commands. Be sure to do
  	 * this BEFORE killpg, or we'll flush the prompt coming back from the
-@@ -227,11 +235,11 @@
+@@ -227,11 +235,11 @@ ttysw_sendsig(ttysw, textsw, sig)
  	    termsw->cmd_started = 0;
  	    termsw->pty_owes_newline = 0;
  	}

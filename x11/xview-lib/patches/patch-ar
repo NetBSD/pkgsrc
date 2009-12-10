@@ -1,7 +1,7 @@
-$NetBSD: patch-ar,v 1.3 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-ar,v 1.4 2009/12/10 20:35:56 abs Exp $
 
---- lib/libxview/sel/seln_impl.h.orig	Tue Jun 29 07:15:25 1993
-+++ lib/libxview/sel/seln_impl.h	Thu Dec 20 10:09:17 2001
+--- lib/libxview/sel/seln_impl.h.orig	1993-06-29 05:15:25.000000000 +0000
++++ lib/libxview/sel/seln_impl.h
 @@ -9,12 +9,17 @@
   *	file for terms of the license.
   */

@@ -1,8 +1,8 @@
-$NetBSD: patch-cp,v 1.1 2001/12/20 09:20:03 tron Exp $
+$NetBSD: patch-cp,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/ttysw/cim_size.c.orig	Tue Jun 29 07:17:14 1993
-+++ lib/libxview/ttysw/cim_size.c	Thu Dec 20 10:09:19 2001
-@@ -156,19 +156,19 @@
+--- lib/libxview/ttysw/cim_size.c.orig	1993-06-29 05:17:14.000000000 +0000
++++ lib/libxview/ttysw/cim_size.c
+@@ -156,19 +156,19 @@ xv_tty_free_image_and_mode()
  {
  
      if (lines_ptr) {

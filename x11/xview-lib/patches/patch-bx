@@ -1,8 +1,8 @@
-$NetBSD: patch-bx,v 1.1 2001/12/20 09:20:01 tron Exp $
+$NetBSD: patch-bx,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/panel/p_gauge.c.orig	Tue Jun 29 07:17:04 1993
-+++ lib/libxview/panel/p_gauge.c	Thu Dec 20 10:09:16 2001
-@@ -47,6 +47,7 @@
+--- lib/libxview/panel/p_gauge.c.orig	1993-06-29 05:17:04.000000000 +0000
++++ lib/libxview/panel/p_gauge.c
+@@ -47,6 +47,7 @@ static void	gauge_layout();
  /* Local functions */
  static void     paint_gauge();
  static void     update_rects();

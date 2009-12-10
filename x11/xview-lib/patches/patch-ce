@@ -1,8 +1,8 @@
-$NetBSD: patch-ce,v 1.1 2001/12/20 09:20:02 tron Exp $
+$NetBSD: patch-ce,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/panel/p_list.c.orig	Tue Jun 29 07:16:48 1993
-+++ lib/libxview/panel/p_list.c	Thu Dec 20 10:10:33 2001
-@@ -1239,7 +1239,7 @@
+--- lib/libxview/panel/p_list.c.orig	1993-06-29 05:16:48.000000000 +0000
++++ lib/libxview/panel/p_list.c
+@@ -1239,7 +1239,7 @@ panel_list_get_attr(panel_list_public, s
  	return ((Xv_opaque) dp->choose_one);
  
        case PANEL_ITEM_NTH_WINDOW:
@@ -11,7 +11,7 @@ $NetBSD: patch-ce,v 1.1 2001/12/20 09:20:02 tron Exp $
  	    return (Xv_opaque) dp->list_sb;
  	else
  	    return (Xv_opaque) NULL;
-@@ -1266,7 +1266,7 @@
+@@ -1266,7 +1266,7 @@ panel_list_get_attr(panel_list_public, s
  	return (Xv_opaque) dp->list_sb;
  
        case PANEL_LIST_SELECTED:
@@ -20,7 +20,7 @@ $NetBSD: patch-ce,v 1.1 2001/12/20 09:20:02 tron Exp $
  	node = find_or_create_nth_row(dp, row, FALSE);
  	return (node ? (Xv_opaque) node->f.selected : (Xv_opaque) XV_ERROR);
  
-@@ -1278,7 +1278,7 @@
+@@ -1278,7 +1278,7 @@ panel_list_get_attr(panel_list_public, s
  	return -1;	/* no rows selected */
  	
        case PANEL_LIST_NEXT_SELECTED:
@@ -29,7 +29,7 @@ $NetBSD: patch-ce,v 1.1 2001/12/20 09:20:02 tron Exp $
  	node = find_or_create_nth_row(dp, row, FALSE);
  	if (!node)
  	    return -1;	/* specified row doesn't exist */
-@@ -1289,7 +1289,7 @@
+@@ -1289,7 +1289,7 @@ panel_list_get_attr(panel_list_public, s
  	return -1;	/* no subsequent row selected */
  
        case PANEL_LIST_CLIENT_DATA:
@@ -38,7 +38,7 @@ $NetBSD: patch-ce,v 1.1 2001/12/20 09:20:02 tron Exp $
  	node = find_or_create_nth_row(dp, row, FALSE);
  	return (node ? (Xv_opaque) node->client_data : (Xv_opaque) XV_ERROR);
  
-@@ -1297,7 +1297,7 @@
+@@ -1297,7 +1297,7 @@ panel_list_get_attr(panel_list_public, s
  #ifdef OW_I18N
        case PANEL_LIST_STRING_WCS:
  #endif
@@ -47,7 +47,7 @@ $NetBSD: patch-ce,v 1.1 2001/12/20 09:20:02 tron Exp $
  	node = find_or_create_nth_row(dp, row, FALSE);
  #ifdef OW_I18N
  	if (node != NULL)
-@@ -1312,7 +1312,7 @@
+@@ -1312,7 +1312,7 @@ panel_list_get_attr(panel_list_public, s
  #endif /* OW_I18N */
  
        case PANEL_LIST_GLYPH:
@@ -56,7 +56,7 @@ $NetBSD: patch-ce,v 1.1 2001/12/20 09:20:02 tron Exp $
  	node = find_or_create_nth_row(dp, row, FALSE);
  	return (node ? (Xv_opaque) node->glyph : (Xv_opaque) XV_ERROR);
  
-@@ -1328,7 +1328,7 @@
+@@ -1328,7 +1328,7 @@ panel_list_get_attr(panel_list_public, s
  #endif /* OW_I18N */
  
        case PANEL_LIST_FONT:
@@ -65,7 +65,7 @@ $NetBSD: patch-ce,v 1.1 2001/12/20 09:20:02 tron Exp $
  	node = find_or_create_nth_row(dp, row, FALSE);
  	return (node ? (Xv_opaque) node->font : (Xv_opaque) XV_ERROR);
  
-@@ -1352,7 +1352,7 @@
+@@ -1352,7 +1352,7 @@ panel_list_get_attr(panel_list_public, s
  
  
      case PANEL_LIST_INACTIVE:
@@ -74,7 +74,7 @@ $NetBSD: patch-ce,v 1.1 2001/12/20 09:20:02 tron Exp $
  	node = find_or_create_nth_row(dp, row, FALSE);
  	return (node ? (Xv_opaque) node->f.row_inactive : (Xv_opaque) XV_ERROR);
  
-@@ -1407,7 +1407,7 @@
+@@ -1407,7 +1407,7 @@ panel_list_get_attr(panel_list_public, s
      }
  
      case PANEL_LIST_EXTENSION_DATA:

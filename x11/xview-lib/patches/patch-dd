@@ -1,7 +1,7 @@
-$NetBSD: patch-dd,v 1.2 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-dd,v 1.3 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/textsw/txt_selsvc.c.orig	Sun Jun 26 03:05:23 1994
-+++ lib/libxview/textsw/txt_selsvc.c	Thu Dec 20 10:09:17 2001
+--- lib/libxview/textsw/txt_selsvc.c.orig	1994-06-26 01:05:23.000000000 +0000
++++ lib/libxview/textsw/txt_selsvc.c
 @@ -24,7 +24,7 @@ static char     sccsid[] = "@(#)txt_sels
  #include <stdlib.h>
  #endif /* SVR4 */

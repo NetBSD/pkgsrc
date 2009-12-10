@@ -1,7 +1,7 @@
-$NetBSD: patch-dy,v 1.1 2001/12/20 09:20:09 tron Exp $
+$NetBSD: patch-dy,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libolgx/ol_sb.c.orig	Tue Jun 29 07:18:29 1993
-+++ lib/libolgx/ol_sb.c	Thu Dec 20 10:09:16 2001
+--- lib/libolgx/ol_sb.c.orig	1993-06-29 05:18:29.000000000 +0000
++++ lib/libolgx/ol_sb.c
 @@ -11,7 +11,12 @@
   */
  

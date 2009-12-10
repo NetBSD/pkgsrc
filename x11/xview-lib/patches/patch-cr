@@ -1,8 +1,8 @@
-$NetBSD: patch-cr,v 1.1 2001/12/20 09:20:04 tron Exp $
+$NetBSD: patch-cr,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/wmgr/wmgr_menu.c.orig	Tue Jun 29 07:17:24 1993
-+++ lib/libxview/wmgr/wmgr_menu.c	Thu Dec 20 10:09:53 2001
-@@ -10,16 +10,22 @@
+--- lib/libxview/wmgr/wmgr_menu.c.orig	1993-06-29 05:17:24.000000000 +0000
++++ lib/libxview/wmgr/wmgr_menu.c
+@@ -10,16 +10,22 @@ static char     sccsid[] = "@(#)wmgr_men
   *	file for terms of the license.
   */
  

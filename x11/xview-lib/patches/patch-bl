@@ -1,8 +1,8 @@
-$NetBSD: patch-bl,v 1.1 2001/12/20 09:19:58 tron Exp $
+$NetBSD: patch-bl,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/misc/Imakefile.orig	Tue Jun 29 07:16:36 1993
-+++ lib/libxview/misc/Imakefile	Thu Dec 20 10:09:16 2001
-@@ -29,8 +29,8 @@
+--- lib/libxview/misc/Imakefile.orig	1993-06-29 05:16:36.000000000 +0000
++++ lib/libxview/misc/Imakefile
+@@ -29,8 +29,8 @@ CFILES.misc.4          = convdup.c     \
                            xv_i18n.c     \
                            xv_path.c
  
@@ -13,7 +13,7 @@ $NetBSD: patch-bl,v 1.1 2001/12/20 09:19:58 tron Exp $
  
  HFILES.misc.3          =
  HFILES.misc.4          =
-@@ -43,7 +43,7 @@
+@@ -43,7 +43,7 @@ GETTEXT.H		=
  GETTEXT.C		=
  #endif
  
@@ -22,7 +22,7 @@ $NetBSD: patch-bl,v 1.1 2001/12/20 09:19:58 tron Exp $
  
  HDRSPUBLIC=     cms_grays.h cms_mono.h cmsrainbow.h cms_rgb.h sun.h \
                  window_hs.h expandname.h xv_c_types.h attrol.h db.h \
-@@ -57,7 +57,7 @@
+@@ -57,7 +57,7 @@ TEXT_OBJS =\
  	demorandom.o\
  	getlogindr.o\
  	expandname.o\
@@ -31,7 +31,7 @@ $NetBSD: patch-bl,v 1.1 2001/12/20 09:19:58 tron Exp $
  	bitmask.o\
  	hashfn.o\
  	db_conv.o\
-@@ -76,7 +76,7 @@
+@@ -76,7 +76,7 @@ SRCS =\
  	demorandom.c\
  	getlogindr.c\
  	expandname.c\
@@ -40,7 +40,7 @@ $NetBSD: patch-bl,v 1.1 2001/12/20 09:19:58 tron Exp $
  	bitmask.c\
  	hashfn.c\
  	db_conv.c\
-@@ -95,7 +95,7 @@
+@@ -95,7 +95,7 @@ TEXT_OBJS =\
  	demorandom.o\
  	getlogindr.o\
  	expandname.o\
@@ -49,7 +49,7 @@ $NetBSD: patch-bl,v 1.1 2001/12/20 09:19:58 tron Exp $
  	bitmask.o\
  	hashfn.o\
  	db_conv.o\
-@@ -115,7 +115,7 @@
+@@ -115,7 +115,7 @@ SRCS =\
  	demorandom.c\
  	getlogindr.c\
  	expandname.c\

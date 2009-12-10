@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2001/12/20 09:19:54 tron Exp $
+$NetBSD: patch-ad,v 1.9 2009/12/10 20:35:56 abs Exp $
 
---- lib/libxview/attr/attr_copy.c.orig	Tue Jun 29 07:14:35 1993
-+++ lib/libxview/attr/attr_copy.c	Thu Dec 20 10:09:16 2001
-@@ -12,6 +12,11 @@
+--- lib/libxview/attr/attr_copy.c.orig	1993-06-29 05:14:35.000000000 +0000
++++ lib/libxview/attr/attr_copy.c
+@@ -12,6 +12,11 @@ static char     sccsid[] = "@(#)attr_cop
  
  #include <xview/attr.h>
  

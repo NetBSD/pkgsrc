@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.2 2001/12/20 09:19:56 tron Exp $
+$NetBSD: patch-ay,v 1.3 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/selection/sel_own.c.orig	Sun Jun 26 03:05:22 1994
-+++ lib/libxview/selection/sel_own.c	Thu Dec 20 10:09:17 2001
-@@ -35,6 +35,7 @@
+--- lib/libxview/selection/sel_own.c.orig	1994-06-26 01:05:22.000000000 +0000
++++ lib/libxview/selection/sel_own.c
+@@ -35,6 +35,7 @@ static int SelLoseOwnership();
  static int sel_set_ownership(/* sel_owner */);
  static int (*OldErrorHandler)();
  static int SelOwnerErrorHandler();

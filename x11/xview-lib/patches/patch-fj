@@ -1,6 +1,6 @@
-$NetBSD: patch-fj,v 1.1 2007/05/12 00:22:18 tnn Exp $
+$NetBSD: patch-fj,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/textsw/txt_menu.c.orig	1994-06-26 03:05:22.000000000 +0200
+--- lib/libxview/textsw/txt_menu.c.orig	1994-06-26 01:05:22.000000000 +0000
 +++ lib/libxview/textsw/txt_menu.c
 @@ -127,6 +127,9 @@ static Defaults_pairs line_break_pairs[]
  };

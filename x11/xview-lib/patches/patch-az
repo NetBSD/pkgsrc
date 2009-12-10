@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.2 2001/12/20 09:19:56 tron Exp $
+$NetBSD: patch-az,v 1.3 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/selection/sel_req.c.orig	Sun Jun 26 03:05:21 1994
-+++ lib/libxview/selection/sel_req.c	Thu Dec 20 10:09:17 2001
-@@ -55,7 +55,10 @@
+--- lib/libxview/selection/sel_req.c.orig	1994-06-26 01:05:21.000000000 +0000
++++ lib/libxview/selection/sel_req.c
+@@ -55,7 +55,10 @@ static int ProcessMultiple();
  static int GetSelection();
  static int ProcessReply();
  static Requestor *SelGetReq();
@@ -14,7 +14,7 @@ $NetBSD: patch-az,v 1.2 2001/12/20 09:19:56 tron Exp $
  
  /*ARGSUSED*/
  Pkg_private int
-@@ -1226,7 +1229,7 @@
+@@ -1226,7 +1229,7 @@ Selection_requestor  sel;
  }
  
  

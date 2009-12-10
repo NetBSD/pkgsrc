@@ -1,8 +1,8 @@
-$NetBSD: patch-bj,v 1.1 2001/12/20 09:19:58 tron Exp $
+$NetBSD: patch-bj,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/menu/om_render.c.orig	Tue Jun 29 07:16:26 1993
-+++ lib/libxview/menu/om_render.c	Thu Dec 20 10:09:16 2001
-@@ -470,9 +470,9 @@
+--- lib/libxview/menu/om_render.c.orig	1993-06-29 05:16:26.000000000 +0000
++++ lib/libxview/menu/om_render.c
+@@ -470,9 +470,9 @@ menu_render(menu, group, parent)
       * Define the menu and shadow window dimensions.  Note: shadow rect width &
       * height = menu rect width & height
       */

@@ -1,6 +1,6 @@
-$NetBSD: patch-ej,v 1.1 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-ej,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/textsw/txt_attr.c.orig	2006-01-04 11:45:39.000000000 +0000
+--- lib/libxview/textsw/txt_attr.c.orig	1993-06-29 05:17:49.000000000 +0000
 +++ lib/libxview/textsw/txt_attr.c
 @@ -14,6 +14,7 @@ static char     sccsid[] = "@(#)txt_attr
   * Attribute set/get routines for text subwindows.

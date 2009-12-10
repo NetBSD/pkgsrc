@@ -1,7 +1,7 @@
-$NetBSD: patch-ff,v 1.1 2007/05/12 00:22:17 tnn Exp $
+$NetBSD: patch-ff,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- ./lib/libxview/misc/quark.c.orig	1993-06-29 07:16:31.000000000 +0200
-+++ ./lib/libxview/misc/quark.c
+--- lib/libxview/misc/quark.c.orig	1993-06-29 05:16:31.000000000 +0000
++++ lib/libxview/misc/quark.c
 @@ -16,7 +16,7 @@ static char     sccsid[] = "@(#) quark.c
  #include  <xview/xview.h>
  #include  <xview/pkg.h>

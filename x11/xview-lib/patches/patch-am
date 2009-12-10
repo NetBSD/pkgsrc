@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.4 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-am,v 1.5 2009/12/10 20:35:56 abs Exp $
 
---- lib/libxview/io_stream/file_strms.c.orig	Tue Jun 29 07:15:07 1993
-+++ lib/libxview/io_stream/file_strms.c	Thu Dec 20 10:09:16 2001
-@@ -17,7 +17,11 @@
+--- lib/libxview/io_stream/file_strms.c.orig	1993-06-29 05:15:07.000000000 +0000
++++ lib/libxview/io_stream/file_strms.c
+@@ -17,7 +17,11 @@ static char     sccsid[] = "@(#)file_str
  
  #define GetFISData struct xv_file_input_stream_data *data = (struct xv_file_input_stream_data*) in->client_data
  
@@ -14,7 +14,7 @@ $NetBSD: patch-am,v 1.4 2006/01/05 18:25:57 joerg Exp $
      FILE           *fp;
      int             lineno;
  };
-@@ -156,7 +160,11 @@
+@@ -156,7 +160,11 @@ xv_file_input_stream(s, fp)
  
  #define GetFOSData struct xv_file_output_stream_data *data = (struct xv_file_output_stream_data*) out->client_data
  
