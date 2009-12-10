@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2009/06/30 00:07:26 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2009/12/10 20:35:56 abs Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-lib-3.2.1
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -11,16 +11,19 @@ COMMENT=		OpenLook Toolkit libs, includes, and man pages
 
 MAKE_JOBS_SAFE=		no
 
-DEPENDS+=		xview-config>=3.2.1nb2:../../x11/xview-config
+DEPENDS+=		xview-config>=3.2.1nb6:../../x11/xview-config
 
+LICENSE=		sun-openlook-license
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 # builds, but binaries in../xview-clients all crash
 NOT_FOR_PLATFORM=	*-*-alpha
 
 USE_IMAKE=		yes
 
+PKG_DESTDIR_SUPPORT=    user-destdir
+
 post-install:
-	cd ${PREFIX}/lib && ${LN} -fs libolgx.so.3.2 libolgx.so.3 && \
+	cd ${DESTDIR}${PREFIX}/lib && ${LN} -fs libolgx.so.3.2 libolgx.so.3 && \
 		${LN} -fs libxview.so.3.2 libxview.so.3
 
 .include "../../x11/libX11/buildlink3.mk"

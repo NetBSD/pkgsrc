@@ -1,6 +1,6 @@
-$NetBSD: patch-dj,v 1.3 2007/05/12 00:22:17 tnn Exp $
+$NetBSD: patch-dj,v 1.4 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/file_chooser/file_list.c.orig	1993-06-29 07:17:56.000000000 +0200
+--- lib/libxview/file_chooser/file_list.c.orig	1993-06-29 05:17:56.000000000 +0000
 +++ lib/libxview/file_chooser/file_list.c
 @@ -23,6 +23,9 @@ static char     sccsid[] = "@(#)file_lis
  #include <xview_private/flist_impl.h>

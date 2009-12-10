@@ -1,8 +1,8 @@
-$NetBSD: patch-bf,v 1.1 2001/12/20 09:19:57 tron Exp $
+$NetBSD: patch-bf,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/frame/frame_base.h.orig	Tue Jun 29 07:16:14 1993
-+++ lib/libxview/frame/frame_base.h	Thu Dec 20 10:09:16 2001
-@@ -17,11 +17,16 @@
+--- lib/libxview/frame/frame_base.h.orig	1993-06-29 05:16:14.000000000 +0000
++++ lib/libxview/frame/frame_base.h
+@@ -17,11 +17,16 @@ static char     sccsid[] = "@(#)frame_ba
  #define _frame_base_h_already_included
  
  /* standard includes */

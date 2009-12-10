@@ -1,8 +1,8 @@
-$NetBSD: patch-ca,v 1.1 2001/12/20 09:20:01 tron Exp $
+$NetBSD: patch-ca,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/panel/p_slider.c.orig	Tue Jun 29 07:17:02 1993
-+++ lib/libxview/panel/p_slider.c	Thu Dec 20 10:09:17 2001
-@@ -54,6 +54,8 @@
+--- lib/libxview/panel/p_slider.c.orig	1993-06-29 05:17:02.000000000 +0000
++++ lib/libxview/panel/p_slider.c
+@@ -54,6 +54,8 @@ static void	check_endbox_entered();
  static Panel_setting get_value();
  static void     paint_slider();
  static void     update_rects();
