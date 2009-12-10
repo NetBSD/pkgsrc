@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2009/11/05 19:50:54 reinoud Exp $
+# $NetBSD: Makefile,v 1.49 2009/12/10 16:28:44 joerg Exp $
 #
 
 DISTNAME=	rox-filer-2.10
-#PKGREVISION=	0
+PKGNAME=	rox-2.10
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +11,7 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	RISC OS-like filer for X
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=	rox-base-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
@@ -19,8 +20,9 @@ DIST_SUBDIR=	rox
 USE_TOOLS+=		pax pkg-config
 GNU_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	libexec/rox share/Choices share/rox/ROX-Filer \
-			  ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin libexec/rox ${PKGMANDIR}/man1 \
+			share/Choices share/mime/packages \
+			share/rox/ROX-Filer
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing hardcoded paths.
@@ -43,23 +45,23 @@ CONFIGURE_SCRIPT=	./configure.tmp
 LIBS.SunOS+=		-lm
 
 post-patch:
-	${MV} ${WRKSRC:Q}/ROX-Filer/src/configure ${WRKSRC:Q}/ROX-Filer/src/${CONFIGURE_SCRIPT:Q}
+	${MV} ${WRKSRC}/ROX-Filer/src/configure ${WRKSRC}/ROX-Filer/src/${CONFIGURE_SCRIPT}
 
 post-build:
-	@${ECHO} "#!/bin/sh" >> ${WRKDIR:Q}/rox
-	@${ECHO} ${PREFIX:Q}"/share/rox/ROX-Filer/AppRun \"\$$@\"" >> ${WRKDIR:Q}/rox
+	@${ECHO} "#!/bin/sh" >> ${WRKDIR}/rox
+	@${ECHO} ${PREFIX}"/share/rox/ROX-Filer/AppRun \"\$$@\"" >> ${WRKDIR}/rox
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/ROX-Filer/ROX-Filer ${PREFIX:Q}/libexec/rox
-	cd ${WRKSRC:Q}/Choices && pax -rw . ${PREFIX:Q}/share/Choices
-	cd ${WRKSRC:Q}/ROX-Filer && pax -rw	\
+	${INSTALL_PROGRAM} ${WRKSRC}/ROX-Filer/ROX-Filer ${DESTDIR}${PREFIX}/libexec/rox
+	cd ${WRKSRC}/Choices && pax -rw . ${DESTDIR}${PREFIX}/share/Choices
+	cd ${WRKSRC}/ROX-Filer && pax -rw	\
 		-s ',^\./ROX-Filer$$,,' -s ',^\./ROX-Filer/.*,,'	\
 		-s ',^\./ROX-Filer.dbg$$,,' -s ',^\./ROX-Filer.dbg/.*,,'\
 		-s ',^\./src$$,,' -s ',^\./src/.*,,'	\
-		. ${PREFIX:Q}/share/rox/ROX-Filer
-	${INSTALL_MAN} ${WRKSRC:Q}/rox.1 ${PREFIX:Q}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC:Q}/rox.xml ${PREFIX:Q}/share/mime/packages
-	${INSTALL_SCRIPT} ${WRKDIR:Q}/rox ${PREFIX:Q}/bin
+		. ${DESTDIR}${PREFIX}/share/rox/ROX-Filer
+	${INSTALL_MAN} ${WRKSRC}/rox.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/rox.xml ${DESTDIR}${PREFIX}/share/mime/packages
+	${INSTALL_SCRIPT} ${WRKDIR}/rox ${DESTDIR}${PREFIX}/bin
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
