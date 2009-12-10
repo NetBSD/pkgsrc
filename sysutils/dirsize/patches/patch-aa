@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/05/28 07:20:34 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2009/12/10 23:53:00 abs Exp $
 
---- Makefile.orig	2005-04-09 17:48:01.000000000 -0500
+--- Makefile.orig	2005-04-09 22:48:01.000000000 +0000
 +++ Makefile
 @@ -1,7 +1,7 @@
 -CFLAGS += -Wimplicit -Wall -pedantic-errors --std=gnu99 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64
@@ -19,5 +19,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/05/28 07:20:34 minskim Exp $
 -	strip      $(EXENAME)
 -	install -d              $(DESTDIR)/$(BINDIR)
 -	install -c $(EXENAME)   $(DESTDIR)/$(BINDIR)
-+	${BSD_INSTALL_PROGRAM_DIR} $(BINDIR)
-+	${BSD_INSTALL_PROGRAM} $(EXENAME) $(BINDIR)
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(BINDIR)
++	${BSD_INSTALL_PROGRAM} $(EXENAME) $(DESTDIR)$(BINDIR)
