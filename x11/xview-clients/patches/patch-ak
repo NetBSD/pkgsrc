@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1 2001/12/28 14:58:03 tron Exp $
+$NetBSD: patch-ak,v 1.2 2009/12/10 20:37:36 abs Exp $
 
---- olwm/defaults.c.orig	Tue Jun 29 07:11:43 1993
-+++ olwm/defaults.c	Fri Dec 28 15:55:43 2001
+--- olwm/defaults.c.orig	1993-06-29 05:11:43.000000000 +0000
++++ olwm/defaults.c
 @@ -1,4 +1,3 @@
 -#ident  "@(#)defaults.c	26.22    93/06/28 SMI"
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ak,v 1.1 2001/12/28 14:58:03 tron Exp $
  
  #include "i18n.h"
  #include "ollocale.h"
-@@ -80,7 +79,11 @@
+@@ -80,7 +79,11 @@ GetUserDefaults(dpy)
  	if (homedir != NULL) {
  	    (void) strcpy(filename, homedir);
  	    (void) strcat(filename, "/.Xdefaults-");

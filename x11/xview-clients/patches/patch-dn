@@ -1,6 +1,6 @@
-$NetBSD: patch-dn,v 1.1 2007/05/12 00:22:19 tnn Exp $
+$NetBSD: patch-dn,v 1.2 2009/12/10 20:37:38 abs Exp $
 
---- olwmslave/helprecv.c.orig	1993-06-29 07:12:11.000000000 +0200
+--- olwmslave/helprecv.c.orig	1993-06-29 05:12:11.000000000 +0000
 +++ olwmslave/helprecv.c
 @@ -15,7 +15,7 @@ static	char	sccsid[] = "@(#) helprecv.c 
  #include "helpcmd.h"

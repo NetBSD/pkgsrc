@@ -1,7 +1,7 @@
-$NetBSD: patch-de,v 1.2 2006/01/10 18:30:16 joerg Exp $
+$NetBSD: patch-de,v 1.3 2009/12/10 20:37:38 abs Exp $
 
---- olwm/Imakefile.orig	Tue Jun 29 07:11:41 1993
-+++ olwm/Imakefile	Fri Dec 28 15:55:43 2001
+--- olwm/Imakefile.orig	1993-06-29 05:11:41.000000000 +0000
++++ olwm/Imakefile
 @@ -9,6 +9,7 @@ INCLUDES = -I$(HEADER_DEST) -I$(TOP) $(X
  SYS_LIBRARIES = $(SYSV_CLIENT_LIB)
  DEPLIBS = 
@@ -19,3 +19,11 @@ $NetBSD: patch-de,v 1.2 2006/01/10 18:30:16 joerg Exp $
  
  
  SRCS	= atom.c client.c cmdstream.c \
+@@ -72,6 +73,6 @@ ALLFILES = \
+ 
+ ComplexProgramTarget(olwm)
+ 
+-InstallNonExecList($(MISC),$(LIBRARY_DEST))
++InstallNonExecList($(MISC),$(DESTDIR)$(LIBRARY_DEST))
+ 
+ #include <XView.prog>

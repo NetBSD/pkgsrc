@@ -1,6 +1,6 @@
-$NetBSD: patch-dq,v 1.1 2007/05/12 00:22:20 tnn Exp $
+$NetBSD: patch-dq,v 1.2 2009/12/10 20:37:38 abs Exp $
 
---- olwmslave/propswin.c.orig	1993-06-29 07:12:13.000000000 +0200
+--- olwmslave/propswin.c.orig	1993-06-29 05:12:13.000000000 +0000
 +++ olwmslave/propswin.c
 @@ -38,9 +38,9 @@ static WindowProps	*winPropsList = 0; 	/
   *      Local Forward Declarations
