@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/11/05 19:50:54 reinoud Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/12/10 16:28:44 joerg Exp $
 bin/rox
 libexec/rox/ROX-Filer
 man/man1/rox.1
@@ -26,6 +26,7 @@ share/rox/ROX-Filer/Messages/et_EE/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/eu/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/fi/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/fr/LC_MESSAGES/ROX-Filer.mo
+share/rox/ROX-Filer/Messages/gl/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/hu/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/it/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/ja/LC_MESSAGES/ROX-Filer.mo
@@ -37,9 +38,12 @@ share/rox/ROX-Filer/Messages/pt_PT/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/ro/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/ru/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/sv/LC_MESSAGES/ROX-Filer.mo
+share/rox/ROX-Filer/Messages/uk/LC_MESSAGES/ROX-Filer.mo
+share/rox/ROX-Filer/Messages/vi/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/zh_CN/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Messages/zh_TW/LC_MESSAGES/ROX-Filer.mo
 share/rox/ROX-Filer/Options.xml
+share/rox/ROX-Filer/ROX/MIME/application-msword.png
 share/rox/ROX-Filer/ROX/MIME/application-pdf.png
 share/rox/ROX-Filer/ROX/MIME/application-pgp.png
 share/rox/ROX-Filer/ROX/MIME/application-postscript.png
@@ -47,7 +51,6 @@ share/rox/ROX-Filer/ROX/MIME/application-vnd.ms-access.png
 share/rox/ROX-Filer/ROX/MIME/application-vnd.ms-excel.png
 share/rox/ROX-Filer/ROX/MIME/application-vnd.ms-office.png
 share/rox/ROX-Filer/ROX/MIME/application-vnd.ms-powerpoint.png
-share/rox/ROX-Filer/ROX/MIME/application-vnd.ms-office.png
 share/rox/ROX-Filer/ROX/MIME/application-vnd.rn-realmedia.png
 share/rox/ROX-Filer/ROX/MIME/application-vnd.stardivision.writer.png
 share/rox/ROX-Filer/ROX/MIME/application-vnd.sun.xml.calc.png
@@ -64,6 +67,7 @@ share/rox/ROX-Filer/ROX/MIME/application-x-abiword.png
 share/rox/ROX-Filer/ROX/MIME/application-x-bzip-compressed-tar.png
 share/rox/ROX-Filer/ROX/MIME/application-x-bzip.png
 share/rox/ROX-Filer/ROX/MIME/application-x-compressed-tar.png
+share/rox/ROX-Filer/ROX/MIME/application-x-core.png
 share/rox/ROX-Filer/ROX/MIME/application-x-deb.png
 share/rox/ROX-Filer/ROX/MIME/application-x-dia-diagram.png
 share/rox/ROX-Filer/ROX/MIME/application-x-dvi.png
@@ -74,11 +78,13 @@ share/rox/ROX-Filer/ROX/MIME/application-x-font-pcf.png
 share/rox/ROX-Filer/ROX/MIME/application-x-font-speedo.png
 share/rox/ROX-Filer/ROX/MIME/application-x-font-ttf.png
 share/rox/ROX-Filer/ROX/MIME/application-x-font.png
+share/rox/ROX-Filer/ROX/MIME/application-x-generic.png
 share/rox/ROX-Filer/ROX/MIME/application-x-glade.png
 share/rox/ROX-Filer/ROX/MIME/application-x-gnumeric.png
 share/rox/ROX-Filer/ROX/MIME/application-x-gzip.png
 share/rox/ROX-Filer/ROX/MIME/application-x-gzpostscript.png
 share/rox/ROX-Filer/ROX/MIME/application-x-jar.png
+share/rox/ROX-Filer/ROX/MIME/application-x-java-archive.png
 share/rox/ROX-Filer/ROX/MIME/application-x-java.png
 share/rox/ROX-Filer/ROX/MIME/application-x-lyx.png
 share/rox/ROX-Filer/ROX/MIME/application-x-object.png
@@ -93,15 +99,18 @@ share/rox/ROX-Filer/ROX/MIME/application-x-troff-man-compressed.png
 share/rox/ROX-Filer/ROX/MIME/application-x-troff-man.png
 share/rox/ROX-Filer/ROX/MIME/application-x-troff.png
 share/rox/ROX-Filer/ROX/MIME/application-xhtml+xml.png
+share/rox/ROX-Filer/ROX/MIME/application-xml.png
 share/rox/ROX-Filer/ROX/MIME/application-zip.png
 share/rox/ROX-Filer/ROX/MIME/audio-midi.png
 share/rox/ROX-Filer/ROX/MIME/audio-mpeg.png
+share/rox/ROX-Filer/ROX/MIME/audio-x-generic.png
 share/rox/ROX-Filer/ROX/MIME/audio-x-mod.png
 share/rox/ROX-Filer/ROX/MIME/audio-x-mp3.png
 share/rox/ROX-Filer/ROX/MIME/audio-x-pn-realaudio.png
 share/rox/ROX-Filer/ROX/MIME/audio-x-wav.png
 share/rox/ROX-Filer/ROX/MIME/image-gif.png
 share/rox/ROX-Filer/ROX/MIME/image-jpeg.png
+share/rox/ROX-Filer/ROX/MIME/image-x-generic.png
 share/rox/ROX-Filer/ROX/MIME/image-x-xpixmap.png
 share/rox/ROX-Filer/ROX/MIME/inode-blockdevice.png
 share/rox/ROX-Filer/ROX/MIME/inode-chardevice.png
@@ -110,11 +119,13 @@ share/rox/ROX-Filer/ROX/MIME/inode-directory.png
 share/rox/ROX-Filer/ROX/MIME/inode-fifo.png
 share/rox/ROX-Filer/ROX/MIME/inode-mount-point.png
 share/rox/ROX-Filer/ROX/MIME/inode-socket.png
+share/rox/ROX-Filer/ROX/MIME/message-x-generic.png
 share/rox/ROX-Filer/ROX/MIME/text-html.png
 share/rox/ROX-Filer/ROX/MIME/text-x-c++src.png
 share/rox/ROX-Filer/ROX/MIME/text-x-copying.png
 share/rox/ROX-Filer/ROX/MIME/text-x-csrc.png
 share/rox/ROX-Filer/ROX/MIME/text-x-diff.png
+share/rox/ROX-Filer/ROX/MIME/text-x-generic.png
 share/rox/ROX-Filer/ROX/MIME/text-x-java.png
 share/rox/ROX-Filer/ROX/MIME/text-x-makefile.png
 share/rox/ROX-Filer/ROX/MIME/text-x-python.png
@@ -123,7 +134,9 @@ share/rox/ROX-Filer/ROX/MIME/text-x-tex.png
 share/rox/ROX-Filer/ROX/MIME/text-xml.png
 share/rox/ROX-Filer/ROX/MIME/video-mpeg.png
 share/rox/ROX-Filer/ROX/MIME/video-quicktime.png
+share/rox/ROX-Filer/ROX/MIME/video-x-generic.png
 share/rox/ROX-Filer/ROX/index.theme
+share/rox/ROX-Filer/Templates.glade
 share/rox/ROX-Filer/images/application.png
 share/rox/ROX-Filer/images/dirs.png
 share/rox/ROX-Filer/images/iconified.png
@@ -132,6 +145,7 @@ share/rox/ROX-Filer/images/rox-mounted.png
 share/rox/ROX-Filer/images/rox-select.png
 share/rox/ROX-Filer/images/rox-show-details.png
 share/rox/ROX-Filer/images/rox-show-hidden.png
+share/rox/ROX-Filer/images/rox-symlink.png
 share/rox/ROX-Filer/images/rox-xattr.png
 share/rox/ROX-Filer/images/symlink.png
 share/rox/ROX-Filer/style.css

@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.5 2009/11/05 19:50:54 reinoud Exp $
+$NetBSD: patch-ac,v 1.6 2009/12/10 16:28:44 joerg Exp $
 
 --- ROX-Filer/src/pixmaps.c.orig	2009-07-18 16:23:18.000000000 +0200
 +++ ROX-Filer/src/pixmaps.c
-@@ -432,7 +432,7 @@ static void save_thumbnail(const char *p
+@@ -34,6 +34,7 @@
+ #include <stdio.h>
+ #include <errno.h>
+ #include <fcntl.h>
++#include <inttypes.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <string.h>
+@@ -432,7 +433,7 @@ static void save_thumbnail(const char *p
  
  	swidth = g_strdup_printf("%d", original_width);
  	sheight = g_strdup_printf("%d", original_height);
