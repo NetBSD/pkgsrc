@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2003/05/22 07:30:15 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2009/12/10 23:30:53 abs Exp $
 
---- Makefile.orig	Wed Dec 31 02:33:53 1997
-+++ Makefile	Tue Mar 25 15:14:02 2003
+--- Makefile.orig	1997-12-31 10:33:53.000000000 +0000
++++ Makefile
 @@ -9,12 +9,12 @@
  ###
  # set this to the absolute path (less extn) of compressed dict.
@@ -17,9 +17,9 @@ $NetBSD: patch-aa,v 1.2 2003/05/22 07:30:15 wiz Exp $
  
  ###
  # If you have installed the cracklib-dicts directory, use this
-@@ -24,15 +24,15 @@
+@@ -24,19 +24,19 @@ default:
  	@echo "you evidently don't know what you're doing. go read the README"
-
+ 
  all:
 -	( cd cracklib && make && exit $$? )
 -	( cd util && make DICTPATH=$(DICTPATH) && exit $$? )
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.2 2003/05/22 07:30:15 wiz Exp $
 +	( cd util && $(MAKE) DICTPATH=$(DICTPATH) && exit $$? )
 +###	( cd passwd && $(MAKE) DICTPATH=$(DICTPATH) passwd && exit $$? )
  ###	touch all
-
+ 
  clean:
 -	-( cd cracklib && make clean && exit $$? )
 -	-( cd util && make clean && exit $$? )
@@ -37,5 +37,10 @@ $NetBSD: patch-aa,v 1.2 2003/05/22 07:30:15 wiz Exp $
 +	-( cd util && $(MAKE) clean && exit $$? )
 +###	-( cd passwd && $(MAKE) clean && exit $$? )
  	-rm -f all installed Part* *.BAK *.bak *~
-
+ 
  install: all
+ 	@echo 'if "sort" dies from lack of space, see "util/mkdict"'
+-	util/mkdict $(SRCDICTS) | util/packer $(DICTPATH)
++	util/mkdict $(SRCDICTS) | util/packer $(DESTDIR)$(DICTPATH)
+ 	touch installed
+ ###	@echo 'now go install passwd/passwd where you want it'
