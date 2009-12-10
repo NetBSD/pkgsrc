@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkgdiff,v 1.16 2005/08/02 12:16:19 seb Exp $
+# $NetBSD: pkgdiff,v 1.17 2009/12/10 20:26:33 abs Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -12,6 +12,9 @@
 # Copyright (c) 2000 by Hubert Feyrer <hubertf@netbsd.org>
 # All Rights Reserved.  Absolutely no warranty.  
 #
+
+# Ensure we always use the same timezone to avoid spurious metadata diffs
+export TZ=UTC
 
 if [ $# -le 1 ]
 then
