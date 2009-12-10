@@ -1,0 +1,124 @@
+$NetBSD: patch-ai,v 1.1 2009/12/10 21:19:16 asau Exp $
+
+Staged installation (DESTDIR) support.
+
+--- SRC/Makefile.proto.orig	2000-12-11 06:02:19.000000000 +0300
++++ SRC/Makefile.proto	2009-12-10 04:08:35.000000000 +0300
+@@ -764,75 +764,75 @@
+ 		-rm -f $(BIN_DIR)/QMASTER_BIN   $(BIN_DIR)/DSH_BIN
+ 		-rm -f $(BIN_DIR)/PVM_CLEAN 
+ 
+-installbin::    $(BIN_DIR)/QMASTER_BIN $(BIN_DIR)/QSUB_BIN $(BIN_DIR)/QSTAT_BIN
++installbin::    $(DESTDIR)$(BIN_DIR)/QMASTER_BIN $(DESTDIR)$(BIN_DIR)/QSUB_BIN $(DESTDIR)$(BIN_DIR)/QSTAT_BIN
+ 
+-installbin::	$(BIN_DIR)/DQS_EXECD_BIN $(BIN_DIR)/QDEL_BIN $(BIN_DIR)/QCONF_BIN
++installbin::	$(DESTDIR)$(BIN_DIR)/DQS_EXECD_BIN $(DESTDIR)$(BIN_DIR)/QDEL_BIN $(DESTDIR)$(BIN_DIR)/QCONF_BIN
+ 
+-installbin::	$(BIN_DIR)/QMOD_BIN $(BIN_DIR)/DQS_OPTIONS_BIN $(BIN_DIR)/QALTER_BIN
++installbin::	$(DESTDIR)$(BIN_DIR)/QMOD_BIN $(DESTDIR)$(BIN_DIR)/DQS_OPTIONS_BIN $(DESTDIR)$(BIN_DIR)/QALTER_BIN
+ 
+-installbin::	$(BIN_DIR)/DSH_BIN $(BIN_DIR)/DQS_RANDOM_BIN $(BIN_DIR)/DQS_TIMES_BIN
++installbin::	$(DESTDIR)$(BIN_DIR)/DSH_BIN $(DESTDIR)$(BIN_DIR)/DQS_RANDOM_BIN $(DESTDIR)$(BIN_DIR)/DQS_TIMES_BIN
+ 
+-installbin::    $(BIN_DIR)/QHOLD_BIN $(BIN_DIR)/QRLS_BIN $(BIN_DIR)/QMOVE_BIN $(BIN_DIR)/PVM_CLEAN
++installbin::    $(DESTDIR)$(BIN_DIR)/QHOLD_BIN $(DESTDIR)$(BIN_DIR)/QRLS_BIN $(DESTDIR)$(BIN_DIR)/QMOVE_BIN $(DESTDIR)$(BIN_DIR)/PVM_CLEAN
+ 
+-installlib::	$(LIB_DIR)/dqs_ckpt.a
++installlib::	$(DESTDIR)$(LIB_DIR)/dqs_ckpt.a
+ 
+ wc :		
+ 		wc -l $(LSRC) $(MSRC) $(HDRS) Makefile Makefile.proto
+ 
+-$(BIN_DIR)/QACCT_BIN:		qacct
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 755 qacct $(BIN_DIR)/QACCT_BIN
++$(DESTDIR)$(BIN_DIR)/QACCT_BIN:		qacct
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 755 qacct $(DESTDIR)$(BIN_DIR)/QACCT_BIN
+ 
+-$(BIN_DIR)/QALTER_BIN:		qalter
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qalter $(BIN_DIR)/QALTER_BIN
++$(DESTDIR)$(BIN_DIR)/QALTER_BIN:		qalter
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qalter $(DESTDIR)$(BIN_DIR)/QALTER_BIN
+ 
+-$(BIN_DIR)/QMASTER_BIN:	qmaster
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 0700 qmaster $(BIN_DIR)/QMASTER_BIN
++$(DESTDIR)$(BIN_DIR)/QMASTER_BIN:	qmaster
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 0700 qmaster $(DESTDIR)$(BIN_DIR)/QMASTER_BIN
+ 	
+-$(BIN_DIR)/QHOLD_BIN: qhold
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qhold $(BIN_DIR)/QHOLD_BIN
++$(DESTDIR)$(BIN_DIR)/QHOLD_BIN: qhold
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qhold $(DESTDIR)$(BIN_DIR)/QHOLD_BIN
+ 
+-$(BIN_DIR)/QRLS_BIN: qrls
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qrls $(BIN_DIR)/QRLS_BIN
++$(DESTDIR)$(BIN_DIR)/QRLS_BIN: qrls
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qrls $(DESTDIR)$(BIN_DIR)/QRLS_BIN
+ 
+-$(BIN_DIR)/QSUB_BIN:		qsub
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qsub $(BIN_DIR)/QSUB_BIN
++$(DESTDIR)$(BIN_DIR)/QSUB_BIN:		qsub
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qsub $(DESTDIR)$(BIN_DIR)/QSUB_BIN
+ 
+-$(BIN_DIR)/QSTAT_BIN:		qstat
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qstat $(BIN_DIR)/QSTAT_BIN
++$(DESTDIR)$(BIN_DIR)/QSTAT_BIN:		qstat
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qstat $(DESTDIR)$(BIN_DIR)/QSTAT_BIN
+ 
+-$(BIN_DIR)/QCONF_BIN:		qconf
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qconf $(BIN_DIR)/QCONF_BIN
++$(DESTDIR)$(BIN_DIR)/QCONF_BIN:		qconf
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qconf $(DESTDIR)$(BIN_DIR)/QCONF_BIN
+ 
+-$(BIN_DIR)/DQS_EXECD_BIN:	dqs_execd
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 0755 dqs_execd $(BIN_DIR)/DQS_EXECD_BIN
++$(DESTDIR)$(BIN_DIR)/DQS_EXECD_BIN:	dqs_execd
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 0755 dqs_execd $(DESTDIR)$(BIN_DIR)/DQS_EXECD_BIN
+ 
+-$(BIN_DIR)/PVM_CLEAN:	../UTIL/pvmcleanup.sh
++$(DESTDIR)$(BIN_DIR)/PVM_CLEAN:	../UTIL/pvmcleanup.sh
+ 	cp ../UTIL/pvmcleanup.sh .
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 0755 pvmcleanup.sh $(BIN_DIR)/PVM_CLEAN
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 0755 pvmcleanup.sh $(DESTDIR)$(BIN_DIR)/PVM_CLEAN
+ 
+-$(BIN_DIR)/DSH_BIN:		dsh
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 dsh $(BIN_DIR)/DSH_BIN
++$(DESTDIR)$(BIN_DIR)/DSH_BIN:		dsh
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 dsh $(DESTDIR)$(BIN_DIR)/DSH_BIN
+ 
+-$(BIN_DIR)/QMOD_BIN:		qmod
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qmod $(BIN_DIR)/QMOD_BIN
++$(DESTDIR)$(BIN_DIR)/QMOD_BIN:		qmod
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qmod $(DESTDIR)$(BIN_DIR)/QMOD_BIN
+ 
+-$(BIN_DIR)/QDEL_BIN:		qdel
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qdel $(BIN_DIR)/QDEL_BIN
++$(DESTDIR)$(BIN_DIR)/QDEL_BIN:		qdel
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qdel $(DESTDIR)$(BIN_DIR)/QDEL_BIN
+ 
+-$(BIN_DIR)/QMOVE_BIN:		qmove
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qmove $(BIN_DIR)/QMOVE_BIN
++$(DESTDIR)$(BIN_DIR)/QMOVE_BIN:		qmove
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 qmove $(DESTDIR)$(BIN_DIR)/QMOVE_BIN
+ 
+-$(BIN_DIR)/DQS_OPTIONS_BIN:	dqs_options
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 dqs_options $(BIN_DIR)/DQS_OPTIONS_BIN
++$(DESTDIR)$(BIN_DIR)/DQS_OPTIONS_BIN:	dqs_options
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 4755 dqs_options $(DESTDIR)$(BIN_DIR)/DQS_OPTIONS_BIN
+ 
+-$(BIN_DIR)/DQS_RANDOM_BIN:	dqs_random
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 0755 dqs_random $(BIN_DIR)/DQS_RANDOM_BIN
++$(DESTDIR)$(BIN_DIR)/DQS_RANDOM_BIN:	dqs_random
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 0755 dqs_random $(DESTDIR)$(BIN_DIR)/DQS_RANDOM_BIN
+ 
+-$(BIN_DIR)/DQS_TIMES_BIN:
+-	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 0755 $(SDIR)/dqs_times $(BIN_DIR)/DQS_TIMES_BIN
++$(DESTDIR)$(BIN_DIR)/DQS_TIMES_BIN:
++	$(INSTALL) -o $(DQS_ROOT) -g $(DQS_SYSGRP) -m 0755 $(SDIR)/dqs_times $(DESTDIR)$(BIN_DIR)/DQS_TIMES_BIN
+ 
+-$(LIB_DIR)/dqs_ckpt.a: dqs_ckpt.a
+-	$(INSTALL) -o $(ROOT) -g $(SYSGRP) -m 644 dqs_ckpt.a $(LIB_DIR)/dqs_ckpt.a
++$(DESTDIR)$(LIB_DIR)/dqs_ckpt.a: dqs_ckpt.a
++	$(INSTALL) -o $(ROOT) -g $(SYSGRP) -m 644 dqs_ckpt.a $(DESTDIR)$(LIB_DIR)/dqs_ckpt.a
+ 
+ /*************************************************************************/
+ 
