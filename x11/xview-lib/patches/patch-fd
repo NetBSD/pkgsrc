@@ -1,7 +1,7 @@
-$NetBSD: patch-fd,v 1.1 2007/05/12 00:22:17 tnn Exp $
+$NetBSD: patch-fd,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- ./lib/libxview/dnd/dnd_dsdm.c.orig	1993-06-29 07:16:00.000000000 +0200
-+++ ./lib/libxview/dnd/dnd_dsdm.c
+--- lib/libxview/dnd/dnd_dsdm.c.orig	1993-06-29 05:16:00.000000000 +0000
++++ lib/libxview/dnd/dnd_dsdm.c
 @@ -26,6 +26,7 @@ static char     sccsid[] = "@(#)dnd_dsdm
  			(dnd->siteRects[i].screen_number == dnd->screenNumber)
  

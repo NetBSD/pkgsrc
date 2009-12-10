@@ -1,7 +1,7 @@
-$NetBSD: patch-fg,v 1.1 2007/05/12 00:22:18 tnn Exp $
+$NetBSD: patch-fg,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- ./lib/libxview/window/window_set.c.orig	1993-06-29 07:15:47.000000000 +0200
-+++ ./lib/libxview/window/window_set.c
+--- lib/libxview/window/window_set.c.orig	1993-06-29 05:15:47.000000000 +0000
++++ lib/libxview/window/window_set.c
 @@ -960,6 +960,8 @@ window_set_avlist_tier2(win_public, attr
      return(error);
  }

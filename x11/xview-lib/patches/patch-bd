@@ -1,7 +1,7 @@
-$NetBSD: patch-bd,v 1.1 2001/12/20 09:19:57 tron Exp $
+$NetBSD: patch-bd,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/frame/fm_props.h.orig	Tue Jun 29 07:16:14 1993
-+++ lib/libxview/frame/fm_props.h	Thu Dec 20 10:09:16 2001
+--- lib/libxview/frame/fm_props.h.orig	1993-06-29 05:16:14.000000000 +0000
++++ lib/libxview/frame/fm_props.h
 @@ -13,11 +13,16 @@
  #define _frame_props_h_already_included
  

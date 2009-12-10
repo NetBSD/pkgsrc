@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.2 2001/12/20 09:19:55 tron Exp $
+$NetBSD: patch-aq,v 1.3 2009/12/10 20:35:56 abs Exp $
 
---- lib/libxview/sel/sel_agent.c.orig	Sun Jun 26 20:46:20 1994
-+++ lib/libxview/sel/sel_agent.c	Thu Dec 20 10:09:17 2001
-@@ -63,7 +63,7 @@
+--- lib/libxview/sel/sel_agent.c.orig	1994-06-26 18:46:20.000000000 +0000
++++ lib/libxview/sel/sel_agent.c
+@@ -63,7 +63,7 @@ static Seln_result seln_do_request_from_
  static void     selection_agent_do_function();
  static Atom 	get_atom();
  static Seln_attribute save_atom();
@@ -11,7 +11,7 @@ $NetBSD: patch-aq,v 1.2 2001/12/20 09:19:55 tron Exp $
  
  Xv_private Seln_result seln_convert_request_to_property();
  /* called by seln_svc.c
-@@ -309,7 +309,11 @@
+@@ -309,7 +309,11 @@ seln_do_request_from_file(attr, context,
      struct stat     stat_buf;
      int             count, size;
      char           *destp;

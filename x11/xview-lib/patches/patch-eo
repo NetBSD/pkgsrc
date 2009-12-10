@@ -1,0 +1,13 @@
+$NetBSD: patch-eo,v 1.1 2009/12/10 20:35:58 abs Exp $
+
+--- doc/bugs/Imakefile.orig	1993-06-29 05:13:11.000000000 +0000
++++ doc/bugs/Imakefile
+@@ -11,7 +11,7 @@ ALLFILES = $(DOCFILES) 
+ all::
+ 
+ install::
+-	$(MKDIRHIER) $(DOC_DEST) 
++	$(MKDIRHIER) $(DESTDIR)$(DOC_DEST) 
+ 
+ InstallNonExecList($(DOCFILES),$(DOC_DEST))
+ DependTarget()

@@ -1,8 +1,8 @@
-$NetBSD: patch-cg,v 1.1 2001/12/20 09:20:02 tron Exp $
+$NetBSD: patch-cg,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/ttysw/cim_change.c.orig	Tue Jun 29 07:17:12 1993
-+++ lib/libxview/ttysw/cim_change.c	Thu Dec 20 10:09:17 2001
-@@ -17,10 +17,10 @@
+--- lib/libxview/ttysw/cim_change.c.orig	1993-06-29 05:17:12.000000000 +0000
++++ lib/libxview/ttysw/cim_change.c
+@@ -17,10 +17,10 @@ static char     sccsid[] = "@(#)cim_chan
  #include <xview_private/i18n_impl.h>
  #include <sys/types.h>
  #include <pixrect/pixrect.h>

@@ -1,7 +1,7 @@
-$NetBSD: patch-dl,v 1.1 2001/12/20 09:20:07 tron Exp $
+$NetBSD: patch-dl,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/notify/ndet.h.orig	Tue Jun 29 07:18:12 1993
-+++ lib/libxview/notify/ndet.h	Thu Dec 20 10:09:16 2001
+--- lib/libxview/notify/ndet.h.orig	1993-06-29 05:18:12.000000000 +0000
++++ lib/libxview/notify/ndet.h
 @@ -17,6 +17,11 @@
  #ifndef	NDET_DEFINED
  #define	NDET_DEFINED
