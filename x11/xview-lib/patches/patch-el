@@ -1,6 +1,6 @@
-$NetBSD: patch-el,v 1.1 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-el,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/notify/ndetselect.c.orig	2006-01-04 11:53:02.000000000 +0000
+--- lib/libxview/notify/ndetselect.c.orig	1993-06-29 05:18:00.000000000 +0000
 +++ lib/libxview/notify/ndetselect.c
 @@ -28,7 +28,6 @@ static int      ndet_select_nfds, ndet_s
  

@@ -1,6 +1,6 @@
-$NetBSD: patch-fc,v 1.1 2007/05/12 00:22:17 tnn Exp $
+$NetBSD: patch-fc,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/io_stream/input.c.orig	1993-06-29 07:15:05.000000000 +0200
+--- lib/libxview/io_stream/input.c.orig	1993-06-29 05:15:05.000000000 +0000
 +++ lib/libxview/io_stream/input.c
 @@ -22,7 +22,7 @@ static char     sccsid[] = "@(#)input.c 
  		XV_MSG("input stream not of type input"), 0); \

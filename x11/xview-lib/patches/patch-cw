@@ -1,7 +1,7 @@
-$NetBSD: patch-cw,v 1.3 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-cw,v 1.4 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/textsw/txt_again.c.orig	Tue Jun 29 07:17:32 1993
-+++ lib/libxview/textsw/txt_again.c	Thu Dec 20 10:11:57 2001
+--- lib/libxview/textsw/txt_again.c.orig	1993-06-29 05:17:32.000000000 +0000
++++ lib/libxview/textsw/txt_again.c
 @@ -28,6 +28,8 @@ Pkg_private CHAR    *STRNCPY();
  Pkg_private Es_index textsw_do_input();
  Pkg_private Es_index textsw_do_pending_delete();

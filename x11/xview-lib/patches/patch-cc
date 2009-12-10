@@ -1,8 +1,8 @@
-$NetBSD: patch-cc,v 1.1 2001/12/20 09:20:01 tron Exp $
+$NetBSD: patch-cc,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/panel/panel.c.orig	Tue Jun 29 07:16:57 1993
-+++ lib/libxview/panel/panel.c	Thu Dec 20 10:09:17 2001
-@@ -27,6 +27,7 @@
+--- lib/libxview/panel/panel.c.orig	1993-06-29 05:16:57.000000000 +0000
++++ lib/libxview/panel/panel.c
+@@ -27,6 +27,7 @@ Pkg_private int panel_view_init();
  Pkg_private int panel_destroy();
  
  static int      panel_layout();

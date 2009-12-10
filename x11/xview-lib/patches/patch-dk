@@ -1,6 +1,6 @@
-$NetBSD: patch-dk,v 1.2 2007/05/12 00:22:17 tnn Exp $
+$NetBSD: patch-dk,v 1.3 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/file_chooser/xv_path_util.h.orig	1994-06-26 03:05:20.000000000 +0200
+--- lib/libxview/file_chooser/xv_path_util.h.orig	1994-06-26 01:05:20.000000000 +0000
 +++ lib/libxview/file_chooser/xv_path_util.h
 @@ -41,6 +41,7 @@
  

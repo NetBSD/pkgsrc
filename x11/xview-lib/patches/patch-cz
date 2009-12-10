@@ -1,6 +1,6 @@
-$NetBSD: patch-cz,v 1.3 2007/05/12 00:22:17 tnn Exp $
+$NetBSD: patch-cz,v 1.4 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/textsw/txt_input.c.orig	1993-06-29 07:17:42.000000000 +0200
+--- lib/libxview/textsw/txt_input.c.orig	1993-06-29 05:17:42.000000000 +0000
 +++ lib/libxview/textsw/txt_input.c
 @@ -40,8 +40,6 @@ static char     sccsid[] = "@(#)txt_inpu
  #include <stdlib.h> 

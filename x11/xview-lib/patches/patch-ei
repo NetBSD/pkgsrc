@@ -1,6 +1,6 @@
-$NetBSD: patch-ei,v 1.1 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-ei,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/textsw/txt_getkey.c.orig	2006-01-04 11:41:31.000000000 +0000
+--- lib/libxview/textsw/txt_getkey.c.orig	1994-06-26 01:05:23.000000000 +0000
 +++ lib/libxview/textsw/txt_getkey.c
 @@ -21,8 +21,6 @@ static char     sccsid[] = "@(#)txt_getk
  #include <xview_private/ev_impl.h>	/* For declaration of ev_add_finder */

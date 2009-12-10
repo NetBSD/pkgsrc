@@ -1,7 +1,7 @@
-$NetBSD: patch-bo,v 1.1 2001/12/20 09:19:59 tron Exp $
+$NetBSD: patch-bo,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/misc/portable.h.orig	Tue Jun 29 07:16:34 1993
-+++ lib/libxview/misc/portable.h	Thu Dec 20 10:09:16 2001
+--- lib/libxview/misc/portable.h.orig	1993-06-29 05:16:34.000000000 +0000
++++ lib/libxview/misc/portable.h
 @@ -10,6 +10,7 @@
  #ifndef xview_portable_h_DEFINED
  #define xview_portable_h_DEFINED
@@ -10,7 +10,7 @@ $NetBSD: patch-bo,v 1.1 2001/12/20 09:19:59 tron Exp $
  #include <xview/attr.h>
  
  #if defined(__STDC__) || defined(__cplusplus) || defined(c_plusplus)
-@@ -70,7 +71,11 @@
+@@ -70,7 +71,11 @@ EXTERN_FUNCTION (Attr_avlist copy_va_to_
  #define	XV_USE_TERMIOS
  #define	XV_USE_SVR4_PTYS
  #else	/* SVR4 */

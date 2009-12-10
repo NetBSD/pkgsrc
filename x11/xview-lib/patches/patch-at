@@ -1,7 +1,7 @@
-$NetBSD: patch-at,v 1.4 2007/05/12 00:22:16 tnn Exp $
+$NetBSD: patch-at,v 1.5 2009/12/10 20:35:57 abs Exp $
 
---- ./lib/libxview/win/win_input.c.orig	1994-06-27 00:27:53.000000000 +0200
-+++ ./lib/libxview/win/win_input.c
+--- lib/libxview/win/win_input.c.orig	1994-06-26 22:27:53.000000000 +0000
++++ lib/libxview/win/win_input.c
 @@ -56,6 +56,7 @@ static int      BlockForEvent();
  static int      GetButtonEvent();
  static int      win_translate_KP_keysym();

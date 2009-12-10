@@ -1,8 +1,8 @@
-$NetBSD: patch-cb,v 1.1 2001/12/20 09:20:01 tron Exp $
+$NetBSD: patch-cb,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/panel/p_txt.c.orig	Tue Jun 29 07:16:55 1993
-+++ lib/libxview/panel/p_txt.c	Thu Dec 20 10:09:17 2001
-@@ -10,7 +10,12 @@
+--- lib/libxview/panel/p_txt.c.orig	1993-06-29 05:16:55.000000000 +0000
++++ lib/libxview/panel/p_txt.c
+@@ -10,7 +10,12 @@ static char     sccsid[] = "@(#)p_txt.c 
   *	file for terms of the license.
   */
  

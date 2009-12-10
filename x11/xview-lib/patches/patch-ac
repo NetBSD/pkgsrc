@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2001/12/20 09:19:54 tron Exp $
+$NetBSD: patch-ac,v 1.4 2009/12/10 20:35:56 abs Exp $
 
---- images/Imakefile.orig	Tue Jun 29 07:18:41 1993
-+++ images/Imakefile	Thu Dec 20 10:09:16 2001
-@@ -99,9 +99,9 @@
+--- images/Imakefile.orig	1993-06-29 05:18:41.000000000 +0000
++++ images/Imakefile
+@@ -99,12 +99,12 @@ SRCS =  \
  
  ALLFILES = $(BITMAPS) $(ICONS) $(PIXRECTS) $(CURSORS) $(IMAGES)
  
@@ -13,4 +13,8 @@ $NetBSD: patch-ac,v 1.3 2001/12/20 09:19:54 tron Exp $
 +BuildIncludes($(INCLUDES_SRCS),$(IMAGE_INCDIR),.)
  
  install:: $(SRCS)
- 	$(MKDIRHIER) $(HEADER_DEST)/$(IMAGEINC)
+-	$(MKDIRHIER) $(HEADER_DEST)/$(IMAGEINC)
++	$(MKDIRHIER) $(DESTDIR)$(HEADER_DEST)/$(IMAGEINC)
+ 	
+ InstallMultiple($(SRCS),$(HEADER_DEST)/$(IMAGEINC))
+ 

@@ -1,8 +1,8 @@
-$NetBSD: patch-dh,v 1.1 2001/12/20 09:20:06 tron Exp $
+$NetBSD: patch-dh,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/file_chooser/Imakefile.orig	Tue Jun 29 07:17:58 1993
-+++ lib/libxview/file_chooser/Imakefile	Thu Dec 20 10:09:16 2001
-@@ -27,35 +27,35 @@
+--- lib/libxview/file_chooser/Imakefile.orig	1993-06-29 05:17:58.000000000 +0000
++++ lib/libxview/file_chooser/Imakefile
+@@ -27,35 +27,35 @@ HDRSPRIVATE=	fchsr_impl.h flist_impl.h x
  		path_impl.h hist_impl.h
  
  DATA_OBJS = fchsr_data.o\

@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.4 2008/08/30 20:01:28 dholland Exp $
+$NetBSD: patch-af,v 1.5 2009/12/10 20:35:56 abs Exp $
 
---- lib/libxview/base/base.h.orig	1993-06-29 01:14:42.000000000 -0400
-+++ lib/libxview/base/base.h	2008-08-30 14:37:00.000000000 -0400
+--- lib/libxview/base/base.h.orig	1993-06-29 05:14:42.000000000 +0000
++++ lib/libxview/base/base.h
 @@ -6,10 +6,15 @@
   *	file for terms of the license.
   */

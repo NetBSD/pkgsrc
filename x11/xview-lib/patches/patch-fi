@@ -1,6 +1,6 @@
-$NetBSD: patch-fi,v 1.1 2007/05/12 00:22:18 tnn Exp $
+$NetBSD: patch-fi,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/textsw/ev_display.c.orig	1994-06-26 23:11:43.000000000 +0200
+--- lib/libxview/textsw/ev_display.c.orig	1994-06-26 21:11:43.000000000 +0000
 +++ lib/libxview/textsw/ev_display.c
 @@ -922,6 +922,8 @@ ev_swap_line_table(table1, table2)
  }

@@ -1,0 +1,13 @@
+$NetBSD: patch-en,v 1.1 2009/12/10 20:35:58 abs Exp $
+
+--- Imakefile.orig	1994-06-26 01:47:22.000000000 +0000
++++ Imakefile
+@@ -43,7 +43,7 @@ install::
+ 		echo "deleting temporary build directory $(BUILDINCDIR) ..."; \
+ 		$(RM) -r $(BUILDINCDIR); \
+ 	else exit 0; fi
+-	$(MKDIRHIER) $(XVDESTDIR)
++	$(MKDIRHIER) $(DESTDIR)$(XVDESTDIR)
+ #endif
+ 
+ InstallManPage(xview,$(MANDIR))

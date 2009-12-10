@@ -1,7 +1,7 @@
-$NetBSD: patch-dp,v 1.2 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-dp,v 1.3 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/notify/sys_select.c.orig	Tue Jun 29 07:18:11 1993
-+++ lib/libxview/notify/sys_select.c	Thu Dec 20 10:09:16 2001
+--- lib/libxview/notify/sys_select.c.orig	1993-06-29 05:18:11.000000000 +0000
++++ lib/libxview/notify/sys_select.c
 @@ -15,7 +15,11 @@ static char     sccsid[] = "@(#)sys_sele
   */
  
