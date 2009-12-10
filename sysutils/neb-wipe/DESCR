@@ -1,0 +1,5 @@
+Erase harddisk partitions in a very secure manner (35-pass pattern
+overwrite with patterns for all encoding schemes). Also supports
+overwrite with random data. Can erase whole disks or slices only.
+
+Homepage at http://neb-stoehr.sourceforge.net
