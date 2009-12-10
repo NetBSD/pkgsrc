@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/12/27 13:37:37 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/12/10 20:50:15 abs Exp $
 
 DISTNAME=	zoom-1.0.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://www.logicalshift.co.uk/unix/zoom/
 
@@ -19,15 +19,18 @@ GCC_REQD+=		3.0
 .endif
 UNLIMIT_RESOURCES+=	datasize
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DOCDIR=			${PREFIX}/share/doc/html/zoom
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	for f in colours.png configXwin.html configmac.html fonts.png \
 		game.png generalset.png idx index.html intro.html \
 		resources.png troubleshooting.html ui.png zicon.gif \
 		zoom-icon.png zoom.html ztitle.html; \
 	do \
-		${INSTALL_DATA} ${WRKSRC}/manual/$$f ${DOCDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/manual/$$f ${DESTDIR}${DOCDIR}; \
 	done
 
 BUILDLINK_DEPMETHOD.libXt=	build
