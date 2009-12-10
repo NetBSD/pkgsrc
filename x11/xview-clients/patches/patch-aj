@@ -1,20 +1,20 @@
-$NetBSD: patch-aj,v 1.1 2001/12/28 14:58:03 tron Exp $
+$NetBSD: patch-aj,v 1.2 2009/12/10 20:37:36 abs Exp $
 
---- olwm/winicon.c.orig	Tue Jun 29 07:12:04 1993
-+++ olwm/winicon.c	Fri Dec 28 15:55:43 2001
+--- olwm/winicon.c.orig	1993-06-29 05:12:04.000000000 +0000
++++ olwm/winicon.c
 @@ -1,4 +1,3 @@
 -#ident	"@(#)winicon.c	26.42	93/06/28 SMI"
  
  /*
   *      (c) Copyright 1989 Sun Microsystems, Inc.
-@@ -31,6 +30,10 @@
- 
+@@ -32,6 +31,10 @@
  extern 	Bool	PropGetWMName();
  extern 	Bool	PropGetWMIconName();
-+
+ 
 +static int heightTopIcon();
 +static int heightBottomIcon();
 +static int widthBothIcon();
- 
++
  /***************************************************************************
  * private data
+ ***************************************************************************/
