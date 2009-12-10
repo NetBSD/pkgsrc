@@ -1,6 +1,6 @@
-$NetBSD: patch-ee,v 1.1 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-ee,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/sel/seln.c.orig	2006-01-04 10:33:29.000000000 +0000
+--- lib/libxview/sel/seln.c.orig	1993-06-29 05:15:22.000000000 +0000
 +++ lib/libxview/sel/seln.c
 @@ -69,7 +69,6 @@ selection_get(sel_read, window)
      FILE           *file;

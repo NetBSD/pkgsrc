@@ -1,7 +1,7 @@
-$NetBSD: patch-ci,v 1.1 2001/12/20 09:20:02 tron Exp $
+$NetBSD: patch-ci,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/ttysw/tty_impl.h.orig	Tue Jun 29 07:17:18 1993
-+++ lib/libxview/ttysw/tty_impl.h	Thu Dec 20 10:09:17 2001
+--- lib/libxview/ttysw/tty_impl.h.orig	1993-06-29 05:17:18.000000000 +0000
++++ lib/libxview/ttysw/tty_impl.h
 @@ -14,6 +14,7 @@
   * terminal emulation for teletype based programs.
   */
@@ -10,7 +10,7 @@ $NetBSD: patch-ci,v 1.1 2001/12/20 09:20:02 tron Exp $
  #include <xview_private/portable.h>	/* tty and pty configuration info */
  
  #ifdef	XV_USE_TERMIOS
-@@ -210,7 +211,13 @@
+@@ -210,7 +211,13 @@ typedef Ttysw_view_object* 	Ttysw_view_h
   * Access functions for tty characteristics.
   */
  #ifdef	XV_USE_TERMIOS

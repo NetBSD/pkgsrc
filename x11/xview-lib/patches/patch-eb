@@ -1,8 +1,8 @@
-$NetBSD: patch-eb,v 1.1 2001/12/20 09:20:09 tron Exp $
+$NetBSD: patch-eb,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- util/Imakefile.orig	Tue Jun 29 07:14:22 1993
-+++ util/Imakefile	Thu Dec 20 10:10:14 2001
-@@ -16,7 +16,7 @@
+--- util/Imakefile.orig	1993-06-29 05:14:22.000000000 +0000
++++ util/Imakefile
+@@ -16,7 +16,7 @@ SOELIM_DIR = soelim
  
  CONV_DIR = conversion
  
@@ -11,3 +11,12 @@ $NetBSD: patch-eb,v 1.1 2001/12/20 09:20:09 tron Exp $
  
  SUBDIRS = $(CPP_DIR) $(SOELIM_DIR) $(CONV_DIR) $(MSG_UTIL)
  
+@@ -24,7 +24,7 @@ MakeSubdirs($(SUBDIRS))
+ DependSubdirs($(SUBDIRS))
+ 
+ install::
+-	$(MKDIRHIER) $(BINDIR)
++	$(MKDIRHIER) $(DESTDIR)$(BINDIR)
+ 
+ includes::
+ 	echo "no includes in $(CURRENT_DIR)"

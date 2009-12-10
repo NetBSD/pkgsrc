@@ -1,8 +1,8 @@
-$NetBSD: patch-bw,v 1.1 2001/12/20 09:20:01 tron Exp $
+$NetBSD: patch-bw,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/panel/p_drop.c.orig	Tue Jun 29 07:17:04 1993
-+++ lib/libxview/panel/p_drop.c	Thu Dec 20 10:09:16 2001
-@@ -10,7 +10,12 @@
+--- lib/libxview/panel/p_drop.c.orig	1993-06-29 05:17:04.000000000 +0000
++++ lib/libxview/panel/p_drop.c
+@@ -10,7 +10,12 @@ static char     sccsid[] = "@(#)p_drop.c
   *	file for terms of the license.
   */
  
