@@ -1,7 +1,7 @@
-$NetBSD: patch-dr,v 1.1 2008/08/30 20:03:03 dholland Exp $
+$NetBSD: patch-dr,v 1.2 2009/12/10 20:37:38 abs Exp $
 
---- clock/clock.c.orig	1993-06-29 01:11:39.000000000 -0400
-+++ clock/clock.c	2008-08-30 15:36:59.000000000 -0400
+--- clock/clock.c.orig	1993-06-29 05:11:39.000000000 +0000
++++ clock/clock.c
 @@ -206,6 +206,11 @@ typedef struct clckObject {
  	Menu			menu;
  	} ClockObject, *Clock;

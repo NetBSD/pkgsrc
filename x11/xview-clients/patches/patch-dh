@@ -1,8 +1,8 @@
-$NetBSD: patch-dh,v 1.1 2001/12/28 14:58:07 tron Exp $
+$NetBSD: patch-dh,v 1.2 2009/12/10 20:37:38 abs Exp $
 
---- olwmslave/cmdstream.c.orig	Tue Jun 29 07:12:10 1993
-+++ olwmslave/cmdstream.c	Fri Dec 28 15:55:42 2001
-@@ -50,10 +50,10 @@
+--- olwmslave/cmdstream.c.orig	1993-06-29 05:12:10.000000000 +0000
++++ olwmslave/cmdstream.c
+@@ -50,10 +50,10 @@ static	CmdInfo		cmdInfo = {
   *      Local Forward Declarations
   * ---------------------------------------------------------------------*/
  
