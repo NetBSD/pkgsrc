@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.479 2009/10/29 04:25:46 agc Exp $
+# $NetBSD: Makefile,v 1.480 2009/12/10 17:32:20 abs Exp $
 #
 
 COMMENT=	System utilities
@@ -203,6 +203,7 @@ SUBDIR+=	nautilus-cd-burner
 SUBDIR+=	nautilus-sendto
 SUBDIR+=	ndesk-dbus
 SUBDIR+=	ndesk-dbus-glib
+SUBDIR+=	neb-wipe
 SUBDIR+=	news
 SUBDIR+=	notification-daemon
 SUBDIR+=	nrg2iso
