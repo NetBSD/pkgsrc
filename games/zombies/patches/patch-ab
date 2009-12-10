@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2001/04/18 12:20:38 simonb Exp $
+$NetBSD: patch-ab,v 1.2 2009/12/10 20:59:22 abs Exp $
 
---- main.c.orig	Sat Jun 26 23:48:39 1999
-+++ main.c	Wed Apr 18 22:11:45 2001
-@@ -212,21 +212,11 @@
+--- main.c.orig	1999-06-26 13:48:39.000000000 +0000
++++ main.c
+@@ -212,21 +212,11 @@ quit(int ignored)
  #ifndef	_putchar
  	extern	int _putchar();
  #endif
