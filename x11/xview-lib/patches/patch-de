@@ -1,7 +1,7 @@
-$NetBSD: patch-de,v 1.4 2007/05/12 00:22:17 tnn Exp $
+$NetBSD: patch-de,v 1.5 2009/12/10 20:35:58 abs Exp $
 
---- ./lib/libxview/textsw/es_file.c.orig	1993-06-29 07:17:34.000000000 +0200
-+++ ./lib/libxview/textsw/es_file.c
+--- lib/libxview/textsw/es_file.c.orig	1993-06-29 05:17:34.000000000 +0000
++++ lib/libxview/textsw/es_file.c
 @@ -85,18 +85,15 @@ static char     sccsid[] = "@(#)es_file.
  
  #include <string.h>

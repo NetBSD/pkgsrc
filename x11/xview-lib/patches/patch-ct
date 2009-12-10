@@ -1,8 +1,8 @@
-$NetBSD: patch-ct,v 1.1 2001/12/20 09:20:04 tron Exp $
+$NetBSD: patch-ct,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/textsw/es_attr.c.orig	Tue Jun 29 07:17:31 1993
-+++ lib/libxview/textsw/es_attr.c	Thu Dec 20 10:09:17 2001
-@@ -22,7 +22,7 @@
+--- lib/libxview/textsw/es_attr.c.orig	1993-06-29 05:17:31.000000000 +0000
++++ lib/libxview/textsw/es_attr.c
+@@ -22,7 +22,7 @@ static char     sccsid[] = "@(#)es_attr.
  
  Pkg_private int
  #ifdef ANSI_FUNC_PROTO

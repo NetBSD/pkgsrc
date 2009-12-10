@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2001/12/20 09:19:54 tron Exp $
+$NetBSD: patch-ae,v 1.5 2009/12/10 20:35:56 abs Exp $
 
---- lib/libxview/base/Imakefile.orig	Tue Jun 29 07:14:40 1993
-+++ lib/libxview/base/Imakefile	Thu Dec 20 10:09:16 2001
-@@ -37,7 +37,7 @@
+--- lib/libxview/base/Imakefile.orig	1993-06-29 05:14:40.000000000 +0000
++++ lib/libxview/base/Imakefile
+@@ -37,7 +37,7 @@ TEXT_OBJS=\
  	drawable.o\
  	xv_debug.o\
  	xv_parse.o\

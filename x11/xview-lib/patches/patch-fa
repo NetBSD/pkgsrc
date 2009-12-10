@@ -1,6 +1,6 @@
-$NetBSD: patch-fa,v 1.1 2005/02/10 11:03:53 drochner Exp $
+$NetBSD: patch-fa,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/base/xv_parse.c.orig	2005-02-10 12:41:57.000000000 +0100
+--- lib/libxview/base/xv_parse.c.orig	1993-06-29 05:14:43.000000000 +0000
 +++ lib/libxview/base/xv_parse.c
 @@ -312,7 +312,7 @@ xv_parse_one(app_name, argc, argv)
      if (argc <= slot->num_args) {

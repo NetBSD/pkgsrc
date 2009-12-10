@@ -1,7 +1,7 @@
-$NetBSD: patch-dx,v 1.1 2001/12/20 09:20:09 tron Exp $
+$NetBSD: patch-dx,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libolgx/ol_init.c.orig	Tue Jun 29 07:18:28 1993
-+++ lib/libolgx/ol_init.c	Thu Dec 20 10:09:16 2001
+--- lib/libolgx/ol_init.c.orig	1993-06-29 05:18:28.000000000 +0000
++++ lib/libolgx/ol_init.c
 @@ -9,7 +9,10 @@
  
  #include <stdio.h>
