@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4560 2009/12/10 09:12:25 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4561 2009/12/10 16:30:06 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6114,3 +6114,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/automake to 1.11.1 [wiz 2009-12-09]
 	Updated emulators/qemu to 0.11.1 [asau 2009-12-09]
 	Updated sysutils/cdrtools to 2.01.01alpha69nb1 [wiz 2009-12-10]
+	Updated sysutils/rox to 2.10 [joerg 2009-12-10]
