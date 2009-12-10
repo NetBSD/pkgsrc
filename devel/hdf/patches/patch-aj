@@ -1,58 +1,82 @@
-$NetBSD: patch-aj,v 1.7 2005/02/24 16:25:38 adam Exp $
+$NetBSD: patch-aj,v 1.8 2009/12/10 17:10:14 drochner Exp $
 
---- mfhdf/ncgen/Makefile.in.orig	2004-12-06 23:20:34.000000000 +0000
+--- mfhdf/ncgen/Makefile.in.orig	2008-10-13 21:39:11.000000000 +0200
 +++ mfhdf/ncgen/Makefile.in
-@@ -169,7 +169,7 @@ ncgen_DEPENDENCIES = $(top_builddir)/hdf
+@@ -37,7 +37,7 @@ build_triplet = @build@
+ host_triplet = @host@
+ DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+ 	$(top_srcdir)/config/commence.am
+-bin_PROGRAMS = ncgen$(EXEEXT)
++bin_PROGRAMS = hdfncgen$(EXEEXT)
+ @HDF_BUILD_FORTRAN_FALSE@@HDF_BUILD_NETCDF_TRUE@noinst_PROGRAMS = ctest0$(EXEEXT)
+ @HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@noinst_PROGRAMS = ctest0$(EXEEXT) \
+ @HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@	ftest0$(EXEEXT)
+@@ -242,11 +242,11 @@ ftest0_SOURCES = 
  
  #############################################################################
  #############################################################################
 -man1_MANS = ncgen.1
 +man1_MANS = hdfncgen.1
  
+ #############################################################################
+ #############################################################################
+-NCDUMP = ../ncdump/ncdump
++NCDUMP = ../ncdump/hdfncdump
  
  #############################################################################
-@@ -188,7 +188,7 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/bin/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/hdf/src/h4config.h
- CONFIG_CLEAN_FILES =
--bin_PROGRAMS = ncgen$(EXEEXT)
-+bin_PROGRAMS = hdfncgen$(EXEEXT)
- @HDF_BUILD_FORTRAN_TRUE@noinst_PROGRAMS = ctest0$(EXEEXT) \
- @HDF_BUILD_FORTRAN_TRUE@	ftest0$(EXEEXT)
- @HDF_BUILD_FORTRAN_FALSE@noinst_PROGRAMS = ctest0$(EXEEXT)
-@@ -269,7 +269,7 @@ clean-noinstPROGRAMS:
- @HDF_BUILD_FORTRAN_FALSE@ftest0$(EXEEXT): $(ftest0_OBJECTS) $(ftest0_DEPENDENCIES) 
- @HDF_BUILD_FORTRAN_FALSE@	@rm -f ftest0$(EXEEXT)
- @HDF_BUILD_FORTRAN_FALSE@	$(LINK) $(ftest0_LDFLAGS) $(ftest0_OBJECTS) $(ftest0_LDADD) $(LIBS)
+ #############################################################################
+@@ -328,7 +328,7 @@ clean-noinstPROGRAMS:
+ @HDF_BUILD_NETCDF_FALSE@ftest0$(EXEEXT): $(ftest0_OBJECTS) $(ftest0_DEPENDENCIES) 
+ @HDF_BUILD_NETCDF_FALSE@	@rm -f ftest0$(EXEEXT)
+ @HDF_BUILD_NETCDF_FALSE@	$(LINK) $(ftest0_OBJECTS) $(ftest0_LDADD) $(LIBS)
 -ncgen$(EXEEXT): $(ncgen_OBJECTS) $(ncgen_DEPENDENCIES) 
 +hdfncgen$(EXEEXT): $(ncgen_OBJECTS) $(ncgen_DEPENDENCIES) 
  	@rm -f ncgen$(EXEEXT)
- 	$(LINK) $(ncgen_LDFLAGS) $(ncgen_OBJECTS) $(ncgen_LDADD) $(LIBS)
+ 	$(LINK) $(ncgen_OBJECTS) $(ncgen_LDADD) $(LIBS)
  
-@@ -581,8 +581,8 @@ c-check:	test2.cdl ctest0
- @HDF_BUILD_FORTRAN_TRUE@	  echo "*** ncgen -f test failed (but roundoff differences are OK) ***"; \
- @HDF_BUILD_FORTRAN_TRUE@	fi
+@@ -613,13 +613,13 @@ ncgenyy.c: ncgen.l
+ 	$(LEX) $(srcdir)/ncgen.l
+ 	mv lex.yy.c ncgenyy.c
  
--@HDF_BUILD_FORTRAN_TRUE@ftest0:		ncgen test0.cdl netcdf.inc
--@HDF_BUILD_FORTRAN_TRUE@	./ncgen -f -o ftest0.nc $(srcdir)/test0.cdl > test0.f
-+@HDF_BUILD_FORTRAN_TRUE@ftest0:		hdfncgen test0.cdl netcdf.inc
-+@HDF_BUILD_FORTRAN_TRUE@	./hdfncgen -f -o ftest0.nc $(srcdir)/test0.cdl > test0.f
- @HDF_BUILD_FORTRAN_TRUE@	$(F77) $(FFLAGS) -o $@ test0.f $(LDFLAGS) $(ncgen_LDADD) $(LIBS)
+-@HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@check: ncgen $(srcdir)/test0.cdl b-check c-check f-check
+-@HDF_BUILD_FORTRAN_FALSE@@HDF_BUILD_NETCDF_TRUE@check: ncgen $(srcdir)/test0.cdl b-check c-check
++@HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@check: hdfncgen $(srcdir)/test0.cdl b-check c-check f-check
++@HDF_BUILD_FORTRAN_FALSE@@HDF_BUILD_NETCDF_TRUE@check: hdfncgen $(srcdir)/test0.cdl b-check c-check
+ 
+-@HDF_BUILD_NETCDF_FALSE@check: ncgen $(srcdir)/test0.cdl b-check c-check
++@HDF_BUILD_NETCDF_FALSE@check: hdfncgen $(srcdir)/test0.cdl b-check c-check
+ 
+-b-check:	ncgen $(srcdir)/test0.cdl test1.cdl
+-	$(TESTS_ENVIRONMENT) ./ncgen -b test1.cdl
++b-check:	hdfncgen $(srcdir)/test0.cdl test1.cdl
++	$(TESTS_ENVIRONMENT) ./hdfncgen -b test1.cdl
+ 	$(TESTS_ENVIRONMENT) $(NCDUMP) test1.nc > test2.cdl
+ 	@if $(DIFF) test1.cdl test2.cdl; then                               \
+ 	  echo "*** ncgen -b test successful ***";                          \
+@@ -645,8 +645,8 @@ c-check:	test2.cdl ctest0
+ @HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@	  echo "*** ncgen -f test failed (but roundoff differences are OK) ***"; \
+ @HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@	fi
+ 
+-@HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@ftest0$(EXEEXT):		ncgen test0.cdl netcdf.inc
+-@HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@	$(TESTS_ENVIRONMENT) ./ncgen -f -o ftest0.nc $(srcdir)/test0.cdl > test0.f
++@HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@ftest0$(EXEEXT):		hdfncgen test0.cdl netcdf.inc
++@HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@	$(TESTS_ENVIRONMENT) ./hdfncgen -f -o ftest0.nc $(srcdir)/test0.cdl > test0.f
+ @HDF_BUILD_FORTRAN_TRUE@@HDF_BUILD_NETCDF_TRUE@	$(F77) $(FFLAGS) -o $@ test0.f $(LDFLAGS) $(SHLIBLOC) $(LIBS)
  
  netcdf.inc:
-@@ -591,11 +591,11 @@ netcdf.inc:
+@@ -655,11 +655,11 @@ netcdf.inc:
  test1.cdl:	test0.nc
- 	$(NCDUMP) -n test1 test0.nc > $@
+ 	$(TESTS_ENVIRONMENT) $(NCDUMP) -n test1 test0.nc > $@
  
 -test0.nc:	ncgen $(srcdir)/test0.cdl
--	./ncgen -b -o test0.nc $(srcdir)/test0.cdl
+-	$(TESTS_ENVIRONMENT) ./ncgen -b -o test0.nc $(srcdir)/test0.cdl
 +test0.nc:	hdfncgen $(srcdir)/test0.cdl
-+	./hdfncgen -b -o test0.nc $(srcdir)/test0.cdl
++	$(TESTS_ENVIRONMENT) ./hdfncgen -b -o test0.nc $(srcdir)/test0.cdl
  
--ctest0:		ncgen $(srcdir)/test0.cdl
--	./ncgen -c -o ctest0.nc $(srcdir)/test0.cdl > test0.c
-+ctest0:		hdfncgen $(srcdir)/test0.cdl
-+	./hdfncgen -c -o ctest0.nc $(srcdir)/test0.cdl > test0.c
- 	$(COMPILE) -o $@ test0.c $(LDFLAGS) $(ncgen_LDADD) $(LIBS)
+-ctest0$(EXEEXT):		ncgen $(srcdir)/test0.cdl
+-	$(TESTS_ENVIRONMENT) ./ncgen -c -o ctest0.nc $(srcdir)/test0.cdl > test0.c
++ctest0$(EXEEXT):		hdfncgen $(srcdir)/test0.cdl
++	$(TESTS_ENVIRONMENT) ./hdfncgen -c -o ctest0.nc $(srcdir)/test0.cdl > test0.c
+ 	$(COMPILE) -c -o ctest0$(EXEEXT).o test0.c
+ 	$(LINK) ctest0$(EXEEXT).o $(ctest0_LDADD) $(LDFLAGS) $(SHLIBLOC) $(LIBS)
  
- #############################################################################
