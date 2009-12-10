@@ -1,0 +1,52 @@
+$NetBSD: patch-ac,v 1.1 2009/12/10 22:00:25 pgoyette Exp $
+
+The f2c translation maintains Fortran's pass-everything-by-reference,
+and as a result we get lots of constant values defined.  Upstream
+took an earlier patch to provide a ftnlen typed version of the c__3
+constant, but that patch was wrong.  Correctly initialize the new
+constant.
+
+--- parser.c.orig	2009-11-23 18:27:42.000000000 -0800
++++ parser.c	2009-12-10 13:45:56.000000000 -0800
+@@ -663,7 +663,7 @@
+     /* System generated locals */
+     address a__1[3];
+     integer ret_val;
+-    ftnlen i__1[3], cc__3;
++    ftnlen i__1[3], cc__3 = c__3;
+     char ch__1[8];
+ 
+     /* Local variables */
+@@ -1318,7 +1318,6 @@
+         i__1[1] = 8, a__1[1] = ch__1;
+         i__1[2] = 1, a__1[2] = " ";
+         s_cat(lcwrd1, a__1, i__1, &cc__3, 10L);
+-	c__3 = cc__3;
+     }
+     if (obj < 0) {
+         goto L7200;
+@@ -1914,7 +1913,7 @@
+ {
+     /* System generated locals */
+     address a__1[3];
+-    ftnlen i__1[3], cc__3;
++    ftnlen i__1[3], cc__3 = c__3;
+     integer i__2, i__3, i__4;
+     logical ret_val;
+     char ch__1[8], ch__2[8];
+@@ -2061,7 +2060,6 @@
+     i__1[1] = 8, a__1[1] = ch__1;
+     i__1[2] = 1, a__1[2] = " ";
+     s_cat(lcprp1, a__1, i__1, &cc__3, 10L);
+-    c__3 = cc__3;
+ /* Writing concatenation */
+     i__1[0] = 1, a__1[0] = " ";
+     i__2 = prssta_1.iobj & 511;
+@@ -2070,7 +2068,6 @@
+     i__1[1] = 8, a__1[1] = ch__1;
+     i__1[2] = 1, a__1[2] = " ";
+     s_cat(lcprp2, a__1, i__1, &cc__3, 10L);
+-    c__3 = cc__3;
+ 
+ /* Try to fill direct object slot if that was the problem. */
+ 
