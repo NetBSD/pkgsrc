@@ -1,12 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/12/10 06:10:02 obache Exp $
 bin/alephone
+man/man6/alephone.6
 share/AlephOne/Fonts
 share/AlephOne/MML/Interface_Rects.mml
 share/AlephOne/MML/Transparent_Liquids.mml
 share/AlephOne/MML/Transparent_Sprites.mml
+share/AlephOne/Themes/Default/DejaVuLGCSansCondensed-Bold.ttf
+share/AlephOne/Themes/Default/DejaVuLGCSansCondensed-BoldOblique.ttf
+share/AlephOne/Themes/Default/bankgthd.ttf
 share/AlephOne/Themes/Default/button_c.bmp
+share/AlephOne/Themes/Default/button_c_p.bmp
 share/AlephOne/Themes/Default/button_l.bmp
+share/AlephOne/Themes/Default/button_l_p.bmp
 share/AlephOne/Themes/Default/button_r.bmp
+share/AlephOne/Themes/Default/button_r_p.bmp
 share/AlephOne/Themes/Default/frame_b.bmp
 share/AlephOne/Themes/Default/frame_bl.bmp
 share/AlephOne/Themes/Default/frame_br.bmp
@@ -28,10 +35,13 @@ share/AlephOne/Themes/Default/slider.bmp
 share/AlephOne/Themes/Default/slider_c.bmp
 share/AlephOne/Themes/Default/slider_l.bmp
 share/AlephOne/Themes/Default/slider_r.bmp
-share/AlephOne/Themes/Default/theme.mml
+share/AlephOne/Themes/Default/theme2.mml
 share/AlephOne/Themes/Default/thumb_b.bmp
 share/AlephOne/Themes/Default/thumb_bc.bmp
 share/AlephOne/Themes/Default/thumb_c.bmp
 share/AlephOne/Themes/Default/thumb_t.bmp
 share/AlephOne/Themes/Default/thumb_tc.bmp
+share/AlephOne/Themes/Default/tiny_button_c.bmp
+share/AlephOne/Themes/Default/tiny_button_l.bmp
+share/AlephOne/Themes/Default/tiny_button_r.bmp
 share/doc/AlephOne/README
