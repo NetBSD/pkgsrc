@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/12/07 20:08:59 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2009/12/10 16:56:59 joerg Exp $
 
 DISTNAME=	gpsd-2.90
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	http://download.berlios.de/gpsd/
 
@@ -11,8 +12,11 @@ COMMENT=	GPS information daemon
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+PY_PATCHPLIST=	yes
 
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
@@ -20,9 +24,7 @@ USE_NCURSES=	yes
 
 INSTALLATION_DIRS=	sbin
 
-# XXX This package should have an option for python to install gpsfake
-# and gpsctl.
-
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

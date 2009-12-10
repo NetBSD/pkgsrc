@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2009/12/07 20:08:59 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/12/10 16:56:59 joerg Exp $
 bin/cgps
+bin/gpscat
 bin/gpsctl
 bin/gpsdecode
+bin/gpsfake
 bin/gpsmon
 bin/gpspipe
+bin/gpsprof
 bin/gpxlogger
 bin/lcdgps
 include/gps.h
@@ -12,13 +15,27 @@ include/libgpsmm.h
 lib/libgps.la
 lib/pkgconfig/libgps.pc
 lib/pkgconfig/libgpsd.pc
+${PYSITELIB}/gps.py
+${PYSITELIB}/gps.pyc
+${PYSITELIB}/gps.pyo
+${PYSITELIB}/gpscap.py
+${PYSITELIB}/gpscap.pyc
+${PYSITELIB}/gpscap.pyo
+${PYSITELIB}/gpsfake.py
+${PYSITELIB}/gpsfake.pyc
+${PYSITELIB}/gpsfake.pyo
+${PYSITELIB}/gpslib.so
+${PYSITELIB}/gpspacket.so
 man/man1/cgps.1
 man/man1/cgpxlogger.1
 man/man1/gps.1
+man/man1/gpscat.1
 man/man1/gpsctl.1
 man/man1/gpsdecode.1
+man/man1/gpsfake.1
 man/man1/gpsmon.1
 man/man1/gpspipe.1
+man/man1/gpsprof.1
 man/man1/lcdgps.1
 man/man1/xgps.1
 man/man1/xgpsspeed.1
