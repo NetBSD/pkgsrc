@@ -1,12 +1,16 @@
-$NetBSD: patch-aa,v 1.6 2009/12/07 20:08:59 gdt Exp $
+$NetBSD: patch-aa,v 1.7 2009/12/10 16:56:59 joerg Exp $
 
-Not 100% sure about this, but it is not apparently fixed upstream.
-I think we should have a configure.ac patch as well for regeneration.)
-
-
---- configure.orig	2009-12-04 15:45:59.000000000 -0500
+--- configure.orig	2009-12-04 21:45:59.000000000 +0100
 +++ configure
-@@ -16571,13 +16571,13 @@ if test "x$ac_cv_lib_c_open" = x""yes; t
+@@ -4630,7 +4630,6 @@ sys.exit(sys.hexversion < minverhex)"
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ else
+-  as_fn_error "too old" "$LINENO" 5
+ fi
+       am_display_PYTHON=$PYTHON
+     else
+@@ -16571,13 +16570,13 @@ if test "x$ac_cv_lib_c_open" = x""yes; t
  fi
  
  
@@ -23,7 +27,7 @@ I think we should have a configure.ac patch as well for regeneration.)
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -16608,7 +16608,7 @@ fi
+@@ -16608,7 +16607,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_pthread_pthread_setcancelstate" >&5
  $as_echo "$ac_cv_lib_pthread_pthread_setcancelstate" >&6; }
  if test "x$ac_cv_lib_pthread_pthread_setcancelstate" = x""yes; then :
