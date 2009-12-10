@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2004/07/23 00:31:23 reed Exp $
+$NetBSD: patch-aa,v 1.4 2009/12/10 23:42:14 asau Exp $
 
---- makefile.in.orig	Wed Sep 11 15:02:00 2002
-+++ makefile.in
-@@ -3,8 +3,9 @@ CFLAGS	= @CFLAGS@ @CPPFLAGS@ @X_CFLAGS@ 
+--- makefile.in.orig	2002-09-12 02:02:00.000000000 +0400
++++ makefile.in	2009-12-11 02:37:33.000000000 +0300
+@@ -3,8 +3,9 @@
  LDFLAGS	= @LDFLAGS@
  LIBS  = @X_PRE_LIBS@ @X_LIBS@ @LIBS@ @X_EXTRA_LIBS@
  prefix = @prefix@
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.3 2004/07/23 00:31:23 reed Exp $
  
  # LIBLOC      = `pwd`
  
-@@ -18,7 +19,7 @@ SRCS	= coms.c error.c eval.c files.c gra
+@@ -18,7 +19,7 @@
  
  HDRS	= globals.h logo.h xgraphics.h
  
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.3 2004/07/23 00:31:23 reed Exp $
  
  mem.o:	mem.c
  	$(CC) $(CFLAGS) -O0 -c mem.c
-@@ -54,12 +55,12 @@ makehelp:	makehelp.c
+@@ -54,25 +55,25 @@
  
  clean:
  	rm -f *.o libloc.c
@@ -36,13 +36,18 @@ $NetBSD: patch-aa,v 1.3 2004/07/23 00:31:23 reed Exp $
 +	cd emacs; $(MAKE) ship
  
  install: all
- 	for d in $(BINDIR) $(LIBLOC) $(LIBLOC)/logolib $(LIBLOC)/helpfiles $(LIBLOC)/csls; do [ -d $$d ] || mkdir -p $$d || exit 1; done
-@@ -67,12 +68,12 @@ install: all
- 	cp -f logolib/* $(LIBLOC)/logolib/.
- 	cp -f helpfiles/* $(LIBLOC)/helpfiles/.
- 	cp -f csls/* $(LIBLOC)/csls/.
+-	for d in $(BINDIR) $(LIBLOC) $(LIBLOC)/logolib $(LIBLOC)/helpfiles $(LIBLOC)/csls; do [ -d $$d ] || mkdir -p $$d || exit 1; done
+-	cp logo $(BINDIR)/.
+-	cp -f logolib/* $(LIBLOC)/logolib/.
+-	cp -f helpfiles/* $(LIBLOC)/helpfiles/.
+-	cp -f csls/* $(LIBLOC)/csls/.
 -	(cd emacs; prefix=$(prefix) LIBLOC=$(LIBLOC) BINDIR=$(BINDIR) gmake install)
 -#	prefix=$(prefix); LIBLOC=$(LIBLOC); BINDIR=$(BINDIR); export prefix LIBLOC BINDIR; cd emacs; gmake install
++	for d in $(BINDIR) $(LIBLOC) $(LIBLOC)/logolib $(LIBLOC)/helpfiles $(LIBLOC)/csls; do [ -d $(DESTDIR)$$d ] || mkdir -p $(DESTDIR)$$d || exit 1; done
++	cp logo $(DESTDIR)$(BINDIR)/.
++	cp -f logolib/* $(DESTDIR)$(LIBLOC)/logolib/.
++	cp -f helpfiles/* $(DESTDIR)$(LIBLOC)/helpfiles/.
++	cp -f csls/* $(DESTDIR)$(LIBLOC)/csls/.
 +#	(cd emacs; prefix=$(prefix) LIBLOC=$(LIBLOC) BINDIR=$(BINDIR) $(MAKE) install)
 +#	prefix=$(prefix); LIBLOC=$(LIBLOC); BINDIR=$(BINDIR); export prefix LIBLOC BINDIR; cd emacs; $(MAKE) install
  
