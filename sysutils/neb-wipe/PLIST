@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/10 17:31:58 abs Exp $
+bin/neb-wipe
+man/man1/neb-wipe.1
