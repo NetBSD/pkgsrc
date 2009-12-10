@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:55 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/12/10 20:35:56 abs Exp $
 
 BUILDLINK_TREE+=	xview-lib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xview-lib
 XVIEW_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xview-lib+=	xview-lib>=3.2.1
-BUILDLINK_ABI_DEPENDS.xview-lib?=	xview-lib>=3.2.1nb7
+BUILDLINK_ABI_DEPENDS.xview-lib?=	xview-lib>=3.2.1nb8
 BUILDLINK_PKGSRCDIR.xview-lib?=	../../x11/xview-lib
 
 .include "../../x11/libX11/buildlink3.mk"

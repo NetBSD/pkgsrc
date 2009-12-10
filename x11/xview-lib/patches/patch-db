@@ -1,8 +1,8 @@
-$NetBSD: patch-db,v 1.1 2001/12/20 09:20:05 tron Exp $
+$NetBSD: patch-db,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/textsw/txt_popup.c.orig	Tue Jun 29 07:17:38 1993
-+++ lib/libxview/textsw/txt_popup.c	Thu Dec 20 10:09:17 2001
-@@ -95,6 +95,10 @@
+--- lib/libxview/textsw/txt_popup.c.orig	1993-06-29 05:17:38.000000000 +0000
++++ lib/libxview/textsw/txt_popup.c
+@@ -95,6 +95,10 @@ Pkg_private int      FC_PARENT_KEY;
  static int      TEXTSW_POPUP_KEY;  /* key data holding one of the above
  				      key names */
  
@@ -13,7 +13,7 @@ $NetBSD: patch-db,v 1.1 2001/12/20 09:20:05 tron Exp $
  Panel_item      store_panel_items[MAX_FILE_PANEL_ITEMS];
  Panel_item      load_panel_items[MAX_FILE_PANEL_ITEMS];
  Panel_item      include_panel_items[MAX_FILE_PANEL_ITEMS];
-@@ -135,7 +139,6 @@
+@@ -135,7 +139,6 @@ textsw_create_popup_frame(view, popup_ty
      Frame           popup_frame, base_frame;
      Panel           panel = NULL;
      char           *label;
@@ -21,7 +21,7 @@ $NetBSD: patch-db,v 1.1 2001/12/20 09:20:05 tron Exp $
  #ifdef OW_I18N
      int		    win_use_im = ((popup_type != TEXTSW_MENU_SEL_MARK_TEXT) &&
  				  (popup_type != TEXTSW_MENU_NORMALIZE_LINE));
-@@ -502,8 +505,6 @@
+@@ -502,8 +505,6 @@ add_exten_item( fc )
      int frame_width;
      int frame_height;
      Panel_item item;

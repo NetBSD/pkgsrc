@@ -1,8 +1,8 @@
-$NetBSD: patch-cq,v 1.1 2001/12/20 09:20:03 tron Exp $
+$NetBSD: patch-cq,v 1.2 2009/12/10 20:35:57 abs Exp $
 
---- lib/libxview/ttysw/termsw.c.orig	Tue Jun 29 07:17:15 1993
-+++ lib/libxview/ttysw/termsw.c	Thu Dec 20 10:10:10 2001
-@@ -252,8 +252,12 @@
+--- lib/libxview/ttysw/termsw.c.orig	1993-06-29 05:17:15.000000000 +0000
++++ lib/libxview/ttysw/termsw.c
+@@ -252,8 +252,12 @@ termsw_folio_init_internal(parent, terms
  
      /* Generate a new temporary file name and open the file up. */
      (void) strcpy(tmpfile_name, "/tmp/tty.txt.XXXXXX");

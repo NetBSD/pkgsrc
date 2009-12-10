@@ -1,8 +1,8 @@
-$NetBSD: patch-dt,v 1.1 2001/12/20 09:20:08 tron Exp $
+$NetBSD: patch-dt,v 1.2 2009/12/10 20:35:58 abs Exp $
 
---- lib/libxview/notify/ntfy_test.c.orig	Tue Jun 29 07:18:12 1993
-+++ lib/libxview/notify/ntfy_test.c	Thu Dec 20 10:09:16 2001
-@@ -989,7 +989,7 @@
+--- lib/libxview/notify/ntfy_test.c.orig	1993-06-29 05:18:12.000000000 +0000
++++ lib/libxview/notify/ntfy_test.c
+@@ -989,7 +989,7 @@ nt_try_send_event(client, cond)
  	    fprintf(stderr, "%s in unknown destroy status\n", arg1);
  	    goto Error;
  	}
@@ -11,7 +11,7 @@ $NetBSD: patch-dt,v 1.1 2001/12/20 09:20:08 tron Exp $
  	    if (!(status == DESTROY_CHECKING &&
  		  ne == NOTIFY_DESTROY_VETOED)) {
  		notify_perror("notify_destroy");
-@@ -1781,7 +1781,7 @@
+@@ -1781,7 +1781,7 @@ nt_prioritizer(nclient, nfd, ibits_ptr, 
      }
      /* Send only last client event */
      if (*event_count_ptr > 0) {
