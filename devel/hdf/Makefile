@@ -1,22 +1,25 @@
-# $NetBSD: Makefile,v 1.32 2009/12/03 13:06:52 asau Exp $
+# $NetBSD: Makefile,v 1.33 2009/12/10 17:10:14 drochner Exp $
 
-DISTNAME=	HDF4.2r1
-PKGNAME=	hdf-4.2r1
-PKGREVISION=	3
+DISTNAME=	HDF4.2r4
+PKGNAME=	hdf-4.2r4
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF/prev-releases/HDF4.2r1/src/
+MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF/HDF_Current/src/
+EXTRACT_USING=	gtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hdf.ncsa.uiuc.edu/hdf4.html
+HOMEPAGE=	http://www.hdfgroup.org/products/hdf4/
 COMMENT=	NCSA Hierarchical Data Format
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_LIBTOOL=		yes
 USE_TOOLS+=		lex gmake yacc
 USE_LANGUAGES=		c fortran
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/hdf
 CONFIGURE_ARGS+=	--with-szlib
+# pkgsrc libtool builds shared objects anyway
+#CONFIGURE_ARGS+=	--enable-shared
 
 post-patch:
 	${MV} -f ${WRKSRC}/mfhdf/ncdump/ncdump.1		\
