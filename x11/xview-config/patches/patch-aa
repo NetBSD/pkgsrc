@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2001/05/02 21:46:08 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.7 2009/12/10 20:34:44 abs Exp $
  
---- ./Imakefile.orig	Tue Jun 29 01:13:19 1993
-+++ ./Imakefile	Tue May  1 22:40:31 2001
-@@ -9,8 +9,8 @@
+--- Imakefile.orig	1993-06-29 05:13:19.000000000 +0000
++++ Imakefile
+@@ -8,10 +8,10 @@
+ /**/# config directory
  /**/# @(#)Imakefile	1.9 28 Jun 1993 SMI
  
 -XVFILES = XView.cf XView.lib XView.obj XView.rules XView.tmpl library.tmpl
@@ -13,3 +14,4 @@ $NetBSD: patch-aa,v 1.6 2001/05/02 21:46:08 dmcmahill Exp $
 +InstallMultipleDestFlags(install,$(CFFILES),$(PREFIX)/lib/X11/config,$(INSTDATFLAGS))
  
  depend::
+ 
