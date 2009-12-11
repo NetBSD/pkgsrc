@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/12/11 19:48:12 agc Exp $
+
+--- Makefile.in	2009/12/11 17:10:57	1.1
++++ Makefile.in	2009/12/11 17:11:56
+@@ -13,7 +13,7 @@
+ datadir=@datadir@
+ datarootdir=@datarootdir@
+ mandir=@mandir@
+-mansubdir=@mansubdir@
++mansubdir=man
+ sysconfdir=@sysconfdir@
+ piddir=@piddir@
+ srcdir=@srcdir@
+@@ -130,7 +130,7 @@
+ 
+ uninstall:
+ 	-rm -f $(DESTDIR)$(libexecdir)/pam_ssh_agent_auth.so
+-	-rm -f $(DESTDIR)$(mandir)/$(mansubdir)8/$(mansubdir)8/pam_ssh_agent_auth.8
++	-rm -f $(DESTDIR)$(mandir)/$(mansubdir)8/pam_ssh_agent_auth.8
+ 
+ compat-tests: $(LIBCOMPAT)
+ 	(cd openbsd-compat/regress && $(MAKE))
