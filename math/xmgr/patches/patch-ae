@@ -1,15 +1,15 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/02/10 12:54:27 frueauf Exp $
+$NetBSD: patch-ae,v 1.2 2009/12/11 02:11:52 asau Exp $
 
---- doc/Makefile.orig	Mon Dec  1 01:33:13 1997
-+++ doc/Makefile	Tue Feb  9 15:21:16 1999
+--- doc/Makefile.orig	1997-12-01 03:33:13.000000000 +0300
++++ doc/Makefile	2009-12-11 04:57:10.000000000 +0300
 @@ -25,8 +25,8 @@
  devclean : dummy
  
  install : $(DOCS)
 -	$(MKINSTALLDIRS) $(GR_HOME)/doc
 -	for i in $(DOCS); do $(INSTALL_DATA) $$i $(GR_HOME)/doc; done
-+	$(MKINSTALLDIRS) ${PREFIX}/share/doc/${ACEGR}
-+	for i in $(DOCS); do $(INSTALL_DATA) $$i ${PREFIX}/share/doc/${ACEGR}; done
++	$(MKINSTALLDIRS) $(DESTDIR)$(PREFIX)/share/doc/$(ACEGR)
++	for i in $(DOCS); do $(INSTALL_DATA) $$i $(DESTDIR)$(PREFIX)/share/doc/$(ACEGR); done
  
  links : dummy
  

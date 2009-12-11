@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/02/10 12:54:27 frueauf Exp $
+$NetBSD: patch-ac,v 1.2 2009/12/11 02:11:52 asau Exp $
 
---- examples/Makefile.orig	Fri Nov 28 01:00:16 1997
-+++ examples/Makefile	Tue Feb  9 15:23:34 1999
+--- examples/Makefile.orig	1997-11-28 03:00:16.000000000 +0300
++++ examples/Makefile	2009-12-11 05:02:39.000000000 +0300
 @@ -30,9 +30,9 @@
  devclean : dummy
  
@@ -9,9 +9,9 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/02/10 12:54:27 frueauf Exp $
 -	$(MKINSTALLDIRS) $(GR_HOME)/examples
 -	for i in $(EXAMPLES); do $(INSTALL_DATA) $$i $(GR_HOME)/examples; done
 -	$(INSTALL_PROGRAM) $(DOTEST) $(GR_HOME)/examples/$(DOTEST)
-+	${MKINSTALLDIRS} ${PREFIX}/share/examples/${ACEGR}
-+	for i in $(EXAMPLES); do $(INSTALL_DATA) $$i ${PREFIX}/share/examples/${ACEGR}; done
-+	${INSTALL_SCRIPT} ${DOTEST} ${PREFIX}/share/examples/${ACEGR}/${DOTEST}
++	$(MKINSTALLDIRS) $(DESTDIR)$(PREFIX)/share/examples/$(ACEGR)
++	for i in $(EXAMPLES); do $(INSTALL_DATA) $$i $(DESTDIR)$(PREFIX)/share/examples/$(ACEGR); done
++	$(INSTALL_SCRIPT) $(DOTEST) $(DESTDIR)$(PREFIX)/share/examples/$(ACEGR)/$(DOTEST)
  
  links : dummy
  

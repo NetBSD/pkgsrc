@@ -1,0 +1,29 @@
+$NetBSD: patch-ah,v 1.1 2009/12/11 02:11:52 asau Exp $
+
+--- acegr_np/Makefile.orig	1998-03-11 00:51:35.000000000 +0300
++++ acegr_np/Makefile	2009-12-11 04:51:03.000000000 +0300
+@@ -43,16 +43,16 @@
+ testf_np$(O) : $(LIB)
+ 
+ install : $(LIB)
+-	$(MKINSTALLDIRS) $(GR_HOME)/lib
+-	$(INSTALL_DATA) $(LIB) $(GR_HOME)/lib/$(LIB)
+-	$(MKINSTALLDIRS) $(GR_HOME)/include
+-	$(INSTALL_DATA) acegr_np.h $(GR_HOME)/include/acegr_np.h
++	$(MKINSTALLDIRS) $(DESTDIR)$(GR_HOME)/lib
++	$(INSTALL_DATA) $(LIB) $(DESTDIR)$(GR_HOME)/lib/$(LIB)
++	$(MKINSTALLDIRS) $(DESTDIR)$(GR_HOME)/include
++	$(INSTALL_DATA) acegr_np.h $(DESTDIR)$(GR_HOME)/include/acegr_np.h
+ 
+ links : $(LIB)
+-	$(MKINSTALLDIRS) $(PREFIX)/lib
+-	cd $(PREFIX)/lib; $(RM) $(LIB); $(LN_S) $(GR_HOME)/lib/$(LIB) $(LIB)
+-	$(MKINSTALLDIRS) $(PREFIX)/include
+-	cd $(PREFIX)/include; $(RM) acegr_np.h; $(LN_S) $(GR_HOME)/include/acegr_np.h acegr_np.h
++	$(MKINSTALLDIRS) $(DESTDIR)$(PREFIX)/lib
++	cd $(DESTDIR)$(PREFIX)/lib; $(RM) $(LIB); $(LN_S) $(GR_HOME)/lib/$(LIB) $(LIB)
++	$(MKINSTALLDIRS) $(DESTDIR)$(PREFIX)/include
++	cd $(DESTDIR)$(PREFIX)/include; $(RM) acegr_np.h; $(LN_S) $(GR_HOME)/include/acegr_np.h acegr_np.h
+ 	
+ clean :
+ 	$(RM) *.o sample.gr $(TESTS)
