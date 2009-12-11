@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/12/11 19:22:10 drochner Exp $
+
+--- qwtplot3d.pro.orig	2007-05-20 15:51:50.000000000 +0000
++++ qwtplot3d.pro
+@@ -10,6 +10,7 @@ INCLUDEPATH       = include
+ DEPENDPATH        = include src
+ DESTDIR      			= lib
+ #DESTDIR      			= ../../../lib
++target.path = $$(PREFIX)/lib
+ QT += opengl
+ 
+ win32:TEMPLATE    = vclib
