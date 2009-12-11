@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/02/15 15:48:46 gdt Exp $
+# $NetBSD: Makefile,v 1.28 2009/12/11 01:41:53 asau Exp $
 #
 
 DISTNAME=		rcs-5.7
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cs.purdue.edu/homes/trinkle/RCS/
 COMMENT=		GNU Revision Control System - version control software
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,9 +26,9 @@ CONFIGURE_ENV+=		PATH=${LOCALBASE}/bin:"$$PATH"
 CONFIGURE_HAS_MANDIR=	no
 
 post-install:
-	${RM} -f ${PREFIX}/bin/rcslog
-	${LN} -s ${PREFIX}/bin/rlog ${PREFIX}/bin/rcslog
-	${RM} -f ${PREFIX}/${PKGMANDIR}/man1/rcslog.1 ${PREFIX}/${PKGMANDIR}/man1/rcslog.1.gz
-	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/rlog.1 ${PREFIX}/${PKGMANDIR}/man1/rcslog.1
+	${RM} -f ${DESTDIR}${PREFIX}/bin/rcslog
+	${LN} -s ${DESTDIR}${PREFIX}/bin/rlog ${DESTDIR}${PREFIX}/bin/rcslog
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rcslog.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rcslog.1.gz
+	${LN} -s ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rlog.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rcslog.1
 
 .include "../../mk/bsd.pkg.mk"
