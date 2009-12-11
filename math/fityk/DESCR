@@ -1,0 +1,4 @@
+fityk is a program for nonlinear fitting of analytical functions
+(especially peak-shaped) to data (usually experimental data).
+There are also people using it to remove the baseline from data, or
+to display data only.
