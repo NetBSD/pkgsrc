@@ -1,0 +1,17 @@
+$NetBSD: patch-ar,v 1.1 2009/12/11 00:17:55 asau Exp $
+
+--- src/icon/Makefile.orig	2005-12-21 01:48:59.000000000 +0300
++++ src/icon/Makefile	2009-12-11 02:51:54.000000000 +0300
+@@ -32,9 +32,9 @@
+ 	touch $(SRCS)
+ 
+ install: $(EXECS)
+-	cp $(LIBEXECS) $(LIB)
+-	cp $(BINEXECS) $(BIN)
+-	cp $(LIBSPECIAL) $(LIB)/autodefs.c
++	cp $(LIBEXECS) $(DESTDIR)$(LIB)
++	cp $(BINEXECS) $(DESTDIR)$(BIN)
++	cp $(LIBSPECIAL) $(DESTDIR)$(LIB)/autodefs.c
+ 
+ clean:
+ 	/bin/rm -f *.tex *.dvi *.aux *.log *.blg *.bbl *~  *.toc *.html *.u1 *.u2 
