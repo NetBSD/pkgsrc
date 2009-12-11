@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/12 10:16:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/11 17:01:35 asau Exp $
 #
 
 DISTNAME=		cvsclone
@@ -12,6 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Clone a CVS repository using the :pserver: access method
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
+PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 WRKSRC=			${WRKDIR}
 USE_TOOLS+=		lex
@@ -23,8 +24,8 @@ do-build:
 	cd ${WRKSRC} && ${HEAD} -88 cvsclone.l > README.txt
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cvsclone ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cvsclone
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${PREFIX}/share/doc/cvsclone
+	${INSTALL_PROGRAM} ${WRKSRC}/cvsclone ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/cvsclone
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/doc/cvsclone
 
 .include "../../mk/bsd.pkg.mk"
