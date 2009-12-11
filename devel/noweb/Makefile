@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2009/05/28 21:20:45 zafer Exp $
+# $NetBSD: Makefile,v 1.38 2009/12/11 00:17:55 asau Exp $
 
 DISTNAME=		noweb-2.11b
 CATEGORIES=		devel
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.eecs.harvard.edu/~nr/noweb/
 COMMENT=		Simple, extensible literate-programming tool
 
 DEPENDS+=		icon>=9.3:../../lang/icon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=		src
 
@@ -32,7 +34,7 @@ do-configure:
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/noweb
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/noweb
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/noweb
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/share/examples/noweb
 
 .include "../../mk/bsd.pkg.mk"
