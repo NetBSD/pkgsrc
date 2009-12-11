@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/11 19:48:12 agc Exp $
+
+SHA1 (pam_ssh_agent_auth-0.9.1.tar.bz2) = 72707ab428a3d36bd64bb1b1a297a855e0f54705
+RMD160 (pam_ssh_agent_auth-0.9.1.tar.bz2) = 2157cc4e8c64c989d05478a1cb31822fc712ac0a
+Size (pam_ssh_agent_auth-0.9.1.tar.bz2) = 244188 bytes
+SHA1 (patch-aa) = a32866ae59734b94c55a3531094bbd6b6d9cdbfc
+SHA1 (patch-ab) = 9ef4711ea6a65a627e581d8905a3a9f8ef0cf202
+SHA1 (patch-ac) = ade7a45c5e42307ee0e9ffbdbd708a6fef64ada0
