@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lt,v 1.1.1.1 2009/12/02 16:10:55 taca Exp $
+@comment $NetBSD: PLIST.lt,v 1.2 2009/12/11 16:16:51 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/lt/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/lt/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/lt/default.php
@@ -45,9 +45,7 @@ ${TL_WEBDIR}/system/modules/faq/languages/lt/tl_module.php
 ${TL_WEBDIR}/system/modules/frontend/languages/lt/.htaccess
 ${TL_WEBDIR}/system/modules/frontend/languages/lt/default.php
 ${TL_WEBDIR}/system/modules/frontend/languages/lt/modules.php
-${TL_WEBDIR}/system/modules/frontend/languages/lt/stopwords.txt
 ${TL_WEBDIR}/system/modules/listing/languages/lt/.htaccess
-${TL_WEBDIR}/system/modules/listing/languages/lt/default.php
 ${TL_WEBDIR}/system/modules/listing/languages/lt/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/lt/tl_module.php
 ${TL_WEBDIR}/system/modules/news/languages/lt/.htaccess
@@ -73,6 +71,14 @@ ${TL_WEBDIR}/system/modules/registration/languages/lt/.htaccess
 ${TL_WEBDIR}/system/modules/registration/languages/lt/default.php
 ${TL_WEBDIR}/system/modules/registration/languages/lt/modules.php
 ${TL_WEBDIR}/system/modules/registration/languages/lt/tl_module.php
+${TL_WEBDIR}/system/modules/rep_base/languages/lt/.htaccess
+${TL_WEBDIR}/system/modules/rep_base/languages/lt/modules.php
+${TL_WEBDIR}/system/modules/rep_base/languages/lt/tl_repository.php
+${TL_WEBDIR}/system/modules/rep_base/languages/lt/tl_settings.php
+${TL_WEBDIR}/system/modules/rep_client/languages/lt/.htaccess
+${TL_WEBDIR}/system/modules/rep_client/languages/lt/modules.php
+${TL_WEBDIR}/system/modules/rep_client/languages/lt/tl_repository.php
+${TL_WEBDIR}/system/modules/rep_client/languages/lt/tl_settings.php
 ${TL_WEBDIR}/system/modules/rss_reader/languages/lt/.htaccess
 ${TL_WEBDIR}/system/modules/rss_reader/languages/lt/modules.php
 ${TL_WEBDIR}/system/modules/rss_reader/languages/lt/tl_module.php
