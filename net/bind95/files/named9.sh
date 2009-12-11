@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: named9.sh,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
+# $NetBSD: named9.sh,v 1.2 2009/12/11 16:22:08 taca Exp $
 #
 
 # PROVIDE: named
@@ -31,10 +31,15 @@ named_precmd()
 		return 0;
 	fi
 
-	if [ ! -c "${named_chrootdir}/dev/null" ]; then
-		@RM@ -f "${named_chrootdir}/dev/null"
-		( cd /dev ; @PAX@ -rw -pe null "${named_chrootdir}/dev" )
-	fi
+	for i in null random
+	do
+		if [ ! -c "${named_chrootdir}/dev/$i" ]; then
+			@RM@ -f "${named_chrootdir}/dev/$i"
+			(cd /dev &&
+				@PAX@ -rw -pe "$i" "${named_chrootdir}/dev")
+		fi
+	done
+
 	if [ -f /etc/localtime ]; then
 		@CMP@ -s /etc/localtime "${named_chrootdir}/etc/localtime" || \
 		    @CP@ -p /etc/localtime "${named_chrootdir}/etc/localtime"
