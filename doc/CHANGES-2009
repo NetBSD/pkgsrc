@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4570 2009/12/11 16:34:43 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4571 2009/12/11 19:44:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6127,3 +6127,30 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/bind95 to 9.5.2pl1nb1 [taca 2009-12-11]
 	Updated net/bind96 to 9.6.1pl2nb1 [taca 2009-12-11]
 	Updated www/opengoo to 1.6 [taca 2009-12-11]
+	Updated math/R to 2.10.0 [adam 2009-12-11]
+	Updated math/R-DAAG to 1.01 [adam 2009-12-11]
+	Added math/R-randomForest version 4.5.34 [adam 2009-12-11]
+	Added math/R-e1071 version 1.5.21 [adam 2009-12-11]
+	Added math/R-classInt version 0.1.13 [adam 2009-12-11]
+	Updated math/R-GRASS to 0.3.8 [adam 2009-12-11]
+	Updated math/R-ISwR to 2.0.4 [adam 2009-12-11]
+	Updated math/R-R2HTML to 1.59.1 [adam 2009-12-11]
+	Updated math/R-Rcmdr to 1.5.3 [adam 2009-12-11]
+	Updated math/R-akima to 0.5.4 [adam 2009-12-11]
+	Updated math/R-chron to 2.3.33 [adam 2009-12-11]
+	Updated math/R-clim.pact to 2.2.39 [adam 2009-12-11]
+	Updated math/R-combinat to 0.0.7 [adam 2009-12-11]
+	Updated math/R-date to 1.2.29 [adam 2009-12-11]
+	Updated math/R-gdata to 2.6.1 [adam 2009-12-11]
+	Updated math/R-geoR to 1.6.27 [adam 2009-12-11]
+	Updated math/R-gstat to 0.9.65 [adam 2009-12-11]
+	Updated math/R-gtools to 2.6.1 [adam 2009-12-11]
+	Updated math/R-httpRequest to 0.0.8 [adam 2009-12-11]
+	Updated math/R-hwde to 0.61 [adam 2009-12-11]
+	Updated math/R-mapproj to 1.1.8.2 [adam 2009-12-11]
+	Updated math/R-maps to 2.1.0 [adam 2009-12-11]
+	Updated math/R-mvtnorm to 0.9.8 [adam 2009-12-11]
+	Updated math/R-pixmap to 0.4.10 [adam 2009-12-11]
+	Updated math/R-sgeostat to 1.0.23 [adam 2009-12-11]
+	Updated math/R-sp to 0.9.51 [adam 2009-12-11]
+	Updated math/R-statmod to 1.4.1 [adam 2009-12-11]
