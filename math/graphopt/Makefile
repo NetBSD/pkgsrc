@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/07/22 09:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/12/11 17:52:01 asau Exp $
 #
 
 DISTNAME=	graphopt-0.4.1
@@ -11,12 +11,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/graphopt/
 COMMENT=	Optimize graph layouts
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/graphopt
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/graphopt
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/graphopt
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/graphopt
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
