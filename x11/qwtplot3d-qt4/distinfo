@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/11 19:22:10 drochner Exp $
+
+SHA1 (qwtplot3d-0.2.7.tgz) = 4463fafb8420a91825e165da7a296aaabd70abea
+RMD160 (qwtplot3d-0.2.7.tgz) = 0f28462cb95ef6091d73642c8b26ece60d50bfb8
+Size (qwtplot3d-0.2.7.tgz) = 183836 bytes
+SHA1 (patch-aa) = e46978e1d3b0b68ed5481861fc99703b8fa44ff3
