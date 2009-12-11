@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4567 2009/12/11 11:26:07 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.4568 2009/12/11 16:18:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6121,3 +6121,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/pkgdiff to 0.122 [abs 2009-12-10]
 	Updated parallel/openpa to 1.0.2 [asau 2009-12-11]
 	Updated mail/thunderbird to 3.0 [tnn 2009-12-11]
+	Updated www/typolight27-translations to 20091210 [taca 2009-12-11]
+	Updated www/typolight28-translations to 20091210 [taca 2009-12-11]
