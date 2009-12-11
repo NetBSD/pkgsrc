@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/10/14 08:00:31 markd Exp $
+$NetBSD: distinfo,v 1.4 2009/12/11 19:26:24 adam Exp $
 
-SHA1 (R/clim.pact_2.2-15.tar.gz) = ce2d89f40974a632ba1489d24f8d265a9ddcb533
-RMD160 (R/clim.pact_2.2-15.tar.gz) = b0e60548ec2d481b4b5f76a319d5bcd4368dac0e
-Size (R/clim.pact_2.2-15.tar.gz) = 5461915 bytes
+SHA1 (R/clim.pact_2.2-39.tar.gz) = d2348c41e7a99876afdf2e4676c8971b8e4a437c
+RMD160 (R/clim.pact_2.2-39.tar.gz) = e8781f408fbd56fe0ac993e26ef5da3cf5560504
+Size (R/clim.pact_2.2-39.tar.gz) = 5472028 bytes
