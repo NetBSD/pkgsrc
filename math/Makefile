@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2009/12/11 19:46:27 adam Exp $
+# $NetBSD: Makefile,v 1.194 2009/12/11 19:48:33 adam Exp $
 
 COMMENT=	Mathematics
 
@@ -7,7 +7,6 @@ SUBDIR+=	R-CGIwithR
 SUBDIR+=	R-DAAG
 SUBDIR+=	R-GRASS
 SUBDIR+=	R-ISwR
-SUBDIR+=	R-Matrix
 SUBDIR+=	R-PHYLOGR
 SUBDIR+=	R-R2HTML
 SUBDIR+=	R-RArcInfo
