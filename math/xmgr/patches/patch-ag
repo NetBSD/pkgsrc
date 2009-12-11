@@ -1,0 +1,27 @@
+$NetBSD: patch-ag,v 1.1 2009/12/11 02:11:52 asau Exp $
+
+--- src/Makefile.orig	1998-05-12 16:14:53.000000000 +0400
++++ src/Makefile	2009-12-11 04:45:59.000000000 +0300
+@@ -40,16 +40,16 @@
+ 	mv y.tab.c $@
+ 
+ install : $(ACEGR)
+-	$(MKINSTALLDIRS) $(GR_HOME)/bin
+-	$(INSTALL_PROGRAM) -s $(ACEGR) $(GR_HOME)/bin/$(ACEGR)
+-	cd $(GR_HOME)/bin; $(RM) $(GRBATCH); $(LN_S) $(ACEGR) $(GRBATCH)
++	$(MKINSTALLDIRS) $(DESTDIR)$(GR_HOME)/bin
++	$(INSTALL_PROGRAM) -s $(ACEGR) $(DESTDIR)$(GR_HOME)/bin/$(ACEGR)
++	cd $(DESTDIR)$(GR_HOME)/bin; $(RM) $(GRBATCH); $(LN_S) $(ACEGR) $(GRBATCH)
+ 
+ tests : dummy
+ 
+ links : $(ACEGR)
+-	$(MKINSTALLDIRS) $(PREFIX)/bin
+-	cd $(PREFIX)/bin; $(RM) $(ACEGR); $(LN_S) $(GR_HOME)/bin/$(ACEGR) $(ACEGR)
+-	cd $(PREFIX)/bin; $(RM) $(GRBATCH); $(LN_S) $(GR_HOME)/bin/$(ACEGR) $(GRBATCH)
++	$(MKINSTALLDIRS) $(DESTDIR)$(PREFIX)/bin
++	cd $(DESTDIR)$(PREFIX)/bin; $(RM) $(ACEGR); $(LN_S) $(DESTDIR)$(GR_HOME)/bin/$(ACEGR) $(ACEGR)
++	cd $(DESTDIR)$(PREFIX)/bin; $(RM) $(GRBATCH); $(LN_S) $(DESTDIR)$(GR_HOME)/bin/$(ACEGR) $(GRBATCH)
+ 
+ clean : 
+ 	$(RM) $(GROBJS) $(GUIOBJS)

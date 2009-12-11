@@ -1,0 +1,26 @@
+$NetBSD: patch-ai,v 1.1 2009/12/11 02:11:52 asau Exp $
+
+--- grconvert/Makefile.orig	1998-03-02 03:04:46.000000000 +0300
++++ grconvert/Makefile	2009-12-11 04:53:08.000000000 +0300
+@@ -30,8 +30,8 @@
+ tests : dummy
+ 
+ links : $(PROG)
+-	$(MKINSTALLDIRS) $(PREFIX)/bin
+-	cd $(PREFIX)/bin; $(RM) $(PROG); $(LN_S) $(GR_HOME)/bin/$(PROG) $(PROG)
++	$(MKINSTALLDIRS) $(DESTDIR)$(PREFIX)/bin
++	cd $(DESTDIR)$(PREFIX)/bin; $(RM) $(PROG); $(LN_S) $(DESTDIR)$(GR_HOME)/bin/$(PROG) $(PROG)
+ clean :
+ 	$(RM) $(OBJS) 
+ 
+@@ -42,8 +42,8 @@
+ 	$(RM) $(PROG) $(OBJS)
+ 
+ install : $(PROG)
+-	$(MKINSTALLDIRS) $(GR_HOME)/bin
+-	$(INSTALL_PROGRAM) -s $(PROG) $(GR_HOME)/bin/$(PROG)
++	$(MKINSTALLDIRS) $(DESTDIR)$(GR_HOME)/bin
++	$(INSTALL_PROGRAM) -s $(PROG) $(DESTDIR)$(GR_HOME)/bin/$(PROG)
+ 
+ dummy :
+ 
