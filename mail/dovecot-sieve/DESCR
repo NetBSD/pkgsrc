@@ -1,2 +1,0 @@
-This dovecot plugin provides Sieve (RFC 3028) filtering support (for server
-side e-mail filtering) to dovecot deliver, based on Cyrus' libsieve.
