@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4566 2009/12/11 03:58:56 asau Exp $
+$NetBSD: CHANGES-2009,v 1.4567 2009/12/11 11:26:07 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6120,3 +6120,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/wireshark to 1.2.4 [tron 2009-12-10]
 	Updated pkgtools/pkgdiff to 0.122 [abs 2009-12-10]
 	Updated parallel/openpa to 1.0.2 [asau 2009-12-11]
+	Updated mail/thunderbird to 3.0 [tnn 2009-12-11]
