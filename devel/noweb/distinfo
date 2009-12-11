@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2009/10/31 19:48:09 tnn Exp $
+$NetBSD: distinfo,v 1.9 2009/12/11 00:17:55 asau Exp $
 
 SHA1 (noweb-2.11b.tgz) = 3b391c42f46dcb8a002b863fb2e483560a7da51d
 RMD160 (noweb-2.11b.tgz) = 01e4fbb636dfd0f6d117caa045cf105e49d25fca
 Size (noweb-2.11b.tgz) = 738870 bytes
-SHA1 (patch-aa) = f0aaa0c930549acb6bf1ec259e6eb011e6c98db0
+SHA1 (patch-aa) = 62382e59f6fc22078e96484c42a28ba812d9f83a
 SHA1 (patch-ab) = 8b07b126d9b49c410ad7338ebef1991f631dde29
 SHA1 (patch-ac) = b953b18dfcb70f959b3fef4fff365e793c298563
 SHA1 (patch-ad) = 3dbadb8b512da3aee92330f15f1d66d8dc757b53
@@ -20,3 +20,5 @@ SHA1 (patch-an) = 3b3a5167920d49ca7b3432250357010eb781b880
 SHA1 (patch-ao) = b4a996f4c4c0fdc2168320e4f2c313ca35a19a18
 SHA1 (patch-ap) = efb4f16eba1ca49603e64ca2035c57cfb1fa93b5
 SHA1 (patch-aq) = 4186f2a159fbce550e65486387f96711cc2c5a07
+SHA1 (patch-ar) = b69f206c85214d5aaf021137a7a1f6bba06a1fad
+SHA1 (patch-as) = 21263712261d028ddea56bdd9af5de79c690cffb

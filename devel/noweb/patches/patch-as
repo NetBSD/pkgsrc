@@ -1,0 +1,17 @@
+$NetBSD: patch-as,v 1.1 2009/12/11 00:17:55 asau Exp $
+
+--- src/lib/Makefile.orig	2000-06-17 00:25:51.000000000 +0400
++++ src/lib/Makefile	2009-12-11 02:57:02.000000000 +0300
+@@ -11,9 +11,9 @@
+ 	chmod +x unmarkup emptydefn toascii nwmtime pipedocs h2a btdefn
+ 
+ install: all
+-	cp unmarkup emptydefn toascii nwmtime h2a btdefn $(LIB)
+-	sed 's@|LIBDIR|@$(LIB)@g' pipedocs > $(LIB)/pipedocs
+-	chmod +x $(LIB)/pipedocs
++	cp unmarkup emptydefn toascii nwmtime h2a btdefn $(DESTDIR)$(LIB)
++	sed 's@|LIBDIR|@$(LIB)@g' pipedocs > $(DESTDIR)$(LIB)/pipedocs
++	chmod +x $(DESTDIR)$(LIB)/pipedocs
+ 
+ checkin:
+ 	ci -l $(CINAME) $(CIMSG) $(RCSFILES)
