@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4568 2009/12/11 16:18:20 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4569 2009/12/11 16:23:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6123,3 +6123,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/thunderbird to 3.0 [tnn 2009-12-11]
 	Updated www/typolight27-translations to 20091210 [taca 2009-12-11]
 	Updated www/typolight28-translations to 20091210 [taca 2009-12-11]
+	Updated net/bind9 to 9.4.3pl3nb1 [taca 2009-12-11]
+	Updated net/bind95 to 9.5.2pl1nb1 [taca 2009-12-11]
+	Updated net/bind96 to 9.6.1pl2nb1 [taca 2009-12-11]
