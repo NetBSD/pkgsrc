@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/11 19:53:57 drochner Exp $
+include/muParser.h
+include/muParserBase.h
+include/muParserBytecode.h
+include/muParserCallback.h
+include/muParserDLL.h
+include/muParserDef.h
+include/muParserError.h
+include/muParserFixes.h
+include/muParserInt.h
+include/muParserStack.h
+include/muParserTest.h
+include/muParserToken.h
+include/muParserTokenReader.h
+lib/libmuparser.so
+lib/pkgconfig/muparser.pc
