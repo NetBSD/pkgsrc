@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:59:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/12/11 21:37:30 drochner Exp $
 ${PYINC}/PIL/ImPlatform.h
 ${PYINC}/PIL/Imaging.h
 ${PYSITELIB}/PIL.pth
@@ -77,6 +77,9 @@ ${PYSITELIB}/PIL/Image.pyo
 ${PYSITELIB}/PIL/ImageChops.py
 ${PYSITELIB}/PIL/ImageChops.pyc
 ${PYSITELIB}/PIL/ImageChops.pyo
+${PYSITELIB}/PIL/ImageCms.py
+${PYSITELIB}/PIL/ImageCms.pyc
+${PYSITELIB}/PIL/ImageCms.pyo
 ${PYSITELIB}/PIL/ImageColor.py
 ${PYSITELIB}/PIL/ImageColor.pyc
 ${PYSITELIB}/PIL/ImageColor.pyo
@@ -128,6 +131,9 @@ ${PYSITELIB}/PIL/ImageQt.pyo
 ${PYSITELIB}/PIL/ImageSequence.py
 ${PYSITELIB}/PIL/ImageSequence.pyc
 ${PYSITELIB}/PIL/ImageSequence.pyo
+${PYSITELIB}/PIL/ImageShow.py
+${PYSITELIB}/PIL/ImageShow.pyc
+${PYSITELIB}/PIL/ImageShow.pyo
 ${PYSITELIB}/PIL/ImageStat.py
 ${PYSITELIB}/PIL/ImageStat.pyc
 ${PYSITELIB}/PIL/ImageStat.pyo
@@ -237,5 +243,6 @@ ${PYSITELIB}/PIL/__init__.py
 ${PYSITELIB}/PIL/__init__.pyc
 ${PYSITELIB}/PIL/__init__.pyo
 ${PYSITELIB}/PIL/_imaging.so
+${PYSITELIB}/PIL/_imagingcms.so
 ${PYSITELIB}/PIL/_imagingft.so
 ${PYSITELIB}/PIL/_imagingmath.so
