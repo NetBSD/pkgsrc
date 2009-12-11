@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/11 19:06:17 adam Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/11 19:45:46 adam Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -10,5 +10,5 @@ COMMENT=	Classification and regression based on a forest of trees
 R_PKGNAME=	randomForest
 R_PKGVER=	4.5-34
 
-.include "../../adam/R/Makefile.extension"
+.include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
