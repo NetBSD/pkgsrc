@@ -1,7 +1,0 @@
-$NetBSD: patch-rb,v 1.1 2009/10/11 10:49:56 tnn Exp $
-
---- browser/branding/unofficial/configure.sh.orig	2009-08-24 17:52:35.000000000 +0200
-+++ browser/branding/unofficial/configure.sh
-@@ -1 +1 @@
--MOZ_APP_DISPLAYNAME="Shiretoko"
-+MOZ_APP_DISPLAYNAME="Browser"
