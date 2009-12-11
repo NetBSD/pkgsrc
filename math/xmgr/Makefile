@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/12/03 13:06:55 asau Exp $
+# $NetBSD: Makefile,v 1.33 2009/12/11 02:11:52 asau Exp $
 
 DISTNAME=		xmgr-4.1.2
 PKGREVISION=		5
@@ -11,6 +11,8 @@ HOMEPAGE=		http://plasma-gate.weizmann.ac.il/Xmgr/
 COMMENT=		Powerful XY plotting tool for workstations or X-terminals using X
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		YES
 USE_LANGUAGES=		c fortran
