@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/12/11 11:43:37 obache Exp $
+# $NetBSD: Makefile,v 1.9 2009/12/11 14:45:38 obache Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
@@ -20,9 +20,6 @@ PKG_APACHE_ACCEPTED=    apache2 apache22
 .include "../../mk/apache.mk"
 BUILDLINK_API_DEPENDS.apache+=  apache>=2.0.47
 
-CONFIGURE_ENV+=		PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
-CONFIGURE_ENV+=		OPENSSL_CFLAGS="${CPPFLAGS}"
-CONFIGURE_ENV+=		OPENSSL_LIBS="-L${PREFIX}/lib -lssl -lcrypto"
 CONFIGURE_ARGS+=        --with-apxs2=${APXS:Q}
 
 .include "../../security/lasso/buildlink3.mk"
