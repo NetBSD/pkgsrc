@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2009/05/20 08:07:38 ghen Exp $
+$NetBSD: patch-aa,v 1.10 2009/12/11 20:52:22 ghen Exp $
 
---- Makefile.in.orig	2009-05-18 03:39:56.000000000 +0200
+--- Makefile.in.orig	2009-06-01 06:30:25.000000000 +0200
 +++ Makefile.in
 @@ -244,7 +244,7 @@ SUBDIRS = \
  	$(DOCS)

@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2008/06/22 17:41:23 ghen Exp $
+$NetBSD: patch-ag,v 1.5 2009/12/11 20:52:22 ghen Exp $
 
---- src/deliver/deliver.c.orig	2008-01-20 13:54:08.000000000 +0100
+--- src/deliver/deliver.c.orig	2008-12-13 17:01:04.000000000 +0100
 +++ src/deliver/deliver.c
-@@ -41,7 +41,7 @@
+@@ -42,7 +42,7 @@
  #include <syslog.h>
  
  #define DEFAULT_CONFIG_FILE SYSCONFDIR"/dovecot.conf"

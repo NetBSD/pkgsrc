@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:24:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/12/11 20:52:22 ghen Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	dovecot
 .if !defined(DOVECOT_BUILDLINK3_MK)
 DOVECOT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.dovecot+=		dovecot>=1.1beta16
+BUILDLINK_API_DEPENDS.dovecot+=		dovecot>=1.2.0
 BUILDLINK_PKGSRCDIR.dovecot?=		../../mail/dovecot
 
 pkgbase := dovecot

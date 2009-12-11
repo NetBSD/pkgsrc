@@ -1,8 +1,17 @@
-# $NetBSD: Makefile,v 1.140 2009/11/14 15:53:52 ghen Exp $
+# $NetBSD: Makefile,v 1.141 2009/12/11 20:52:21 ghen Exp $
 
-DISTNAME=		dovecot-1.1.20
+DOVECOT_VERSION=	1.2
+DOVECOT_SUBVERSION=	.8
+SIEVE_VERSION=		0.1.12
+MANAGESIEVE_VERSION=	0.11.9
+DISTNAME=		dovecot-${DOVECOT_VERSION}${DOVECOT_SUBVERSION}
 CATEGORIES=		mail
-MASTER_SITES=		http://www.dovecot.org/releases/1.1/
+MASTER_SITES=		http://www.dovecot.org/releases/${DOVECOT_VERSION}/
+DOVECOT_SIEVE_SITES=	http://www.rename-it.nl/dovecot/${DOVECOT_VERSION}/
+
+MANAGESIEVE_PATCH=			dovecot-${DOVECOT_VERSION}${DOVECOT_SUBVERSION}-managesieve-${MANAGESIEVE_VERSION}.diff.gz
+SITES.${MANAGESIEVE_PATCH}=	${DOVECOT_SIEVE_SITES}
+PATCH_DIST_STRIP.${MANAGESIEVE_PATCH}=	-p1
 
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.dovecot.org/
@@ -17,9 +26,9 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 USE_TOOLS+=		rpcgen
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR}
 CONFIGURE_ARGS+=	--enable-header-install
 
 .include "../../mk/bsd.prefs.mk"
@@ -54,6 +63,20 @@ post-build:
 						> ${WRKDIR}/dovecot-example.conf
 	${SED} "s|/etc/ssl|${SSLDIR}|" ${WRKSRC}/doc/mkcert.sh \
 						> ${WRKDIR}/mkcert.sh
+.if !empty(PKG_OPTIONS:Mdovecot-sieve)
+# We need dovecot built in order to be able to configure sieve.
+	cd ${WRKSRC.sieve} \
+	&& env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} ${CONFIGURE_ARGS.sieve}
+	cd ${WRKSRC.sieve} \
+	&& env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKE_FILE} ${BUILD_TARGET}
+.endif
+.if !empty(PKG_OPTIONS:Mdovecot-managesieve)
+# Wee need sieve built in order to configure and build managesieve. Sigh.
+	cd ${WRKSRC.managesieve} \
+	&& env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} ${CONFIGURE_ARGS.managesieve}
+	cd ${WRKSRC.managesieve} \
+	&& env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKE_FILE} ${BUILD_TARGET}
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/dovecot-example.conf ${DESTDIR}${EGDIR}
