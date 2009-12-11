@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/10/13 11:34:21 markd Exp $
+$NetBSD: distinfo,v 1.3 2009/12/11 19:23:06 adam Exp $
 
-SHA1 (R/chron_2.3-24.tar.gz) = 6806b98e24db94b9defb31cc085b432d675eef63
-RMD160 (R/chron_2.3-24.tar.gz) = 3c222eaf482a5303ea3f80c568913e8d7dd6365d
-Size (R/chron_2.3-24.tar.gz) = 33262 bytes
+SHA1 (R/chron_2.3-33.tar.gz) = 83a5db5163491c226a4285a85b1081994f230094
+RMD160 (R/chron_2.3-33.tar.gz) = b3bc46ffba80530a4d0dc6b1e6aa24f15c9e25ff
+Size (R/chron_2.3-33.tar.gz) = 34234 bytes
