@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/12/11 10:46:58 drochner Exp $
 lib/dia/libpython_plugin.la
 share/dia/python-startup.py
 share/dia/python-startup.pyc
+share/dia/python/allprops.py
+share/dia/python/allprops.pyc
 share/dia/python/aobjects.py
 share/dia/python/aobjects.pyc
 share/dia/python/codegen.py
@@ -14,10 +16,10 @@ share/dia/python/dot.py
 share/dia/python/dot.pyc
 share/dia/python/doxrev.py
 share/dia/python/doxrev.pyc
-share/dia/python/group_props.py
-share/dia/python/group_props.pyc
 share/dia/python/gtkcons.py
 share/dia/python/gtkcons.pyc
+share/dia/python/imgmap.py
+share/dia/python/imgmap.pyc
 share/dia/python/otypes.py
 share/dia/python/otypes.pyc
 share/dia/python/pydiadoc.py
@@ -26,3 +28,5 @@ share/dia/python/scascale.py
 share/dia/python/scascale.pyc
 share/dia/python/select_by.py
 share/dia/python/select_by.pyc
+share/dia/python/select_empty.py
+share/dia/python/select_empty.pyc
