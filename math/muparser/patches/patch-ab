@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/12/11 19:53:57 drochner Exp $
+
+--- Makefile.in.orig	2009-12-11 15:24:06.000000000 +0000
++++ Makefile.in
+@@ -192,8 +192,8 @@ COND_USE_SOSYMLINKS_1___muParser_dll___s
+ all: $(__muParser_lib___depname) $(__muParser_dll___depname) $(__example1___depname)
+ 
+ install: all $(__install_muParser_lib___depname) $(__install_muParser_lib_headers___depname) $(__install_muParser_dll___depname) $(__install_muParser_dll_headers___depname)
+-	$(INSTALL_DIR) $(libdir)/pkgconfig
+-	$(INSTALL_DATA) build/autoconf/muparser.pc $(libdir)/pkgconfig
++	$(INSTALL_DIR) $(DESTDIR)$(libdir)/pkgconfig
++	$(INSTALL_DATA) build/autoconf/muparser.pc $(DESTDIR)$(libdir)/pkgconfig
+ 
+ uninstall: $(__uninstall_muParser_lib___depname) $(__uninstall_muParser_lib_headers___depname) $(__uninstall_muParser_dll___depname) $(__uninstall_muParser_dll_headers___depname)
+ 
