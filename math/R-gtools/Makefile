@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/14 06:51:09 markd Exp $
-#
+# $NetBSD: Makefile,v 1.4 2009/12/11 19:32:08 adam Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +8,7 @@ HOMEPAGE=	${R_HOMEPAGE_BASE}/gtools/
 COMMENT=	Various R programming tools
 
 R_PKGNAME=	gtools
-R_PKGVER=	2.5.0
+R_PKGVER=	2.6.1
 
 CHECK_WRKREF_SKIP+=	lib/R/library/gtools/libs/gtools.so
 
