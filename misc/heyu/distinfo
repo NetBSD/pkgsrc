@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.9 2005/11/10 18:00:09 joerg Exp $
+$NetBSD: distinfo,v 1.10 2009/12/11 00:11:11 abs Exp $
 
 SHA1 (heyu-1.35/x10_heyu.tgz) = c392bab9e7b2c7f911a8861c598af18d50519f1c
 RMD160 (heyu-1.35/x10_heyu.tgz) = 61c2ff2a2d513dad6e5fca0b4c1df015dd242d83
 Size (heyu-1.35/x10_heyu.tgz) = 84277 bytes
-SHA1 (patch-aa) = 26c4304ee18f0bb2d585eb1ff0338576aee88668
-SHA1 (patch-ab) = 091615c3e1c9d927294512cd557fc6a87b1e5f99
-SHA1 (patch-ac) = 345bf95e4ee0df554bbc635e0f8913ca0f66b987
-SHA1 (patch-ad) = 5f52f30820f5ed8da10fbc650980137a738c1c78
+SHA1 (patch-aa) = a9c1752f20bf8de52cb5c9607e1b439a00672d12
+SHA1 (patch-ab) = 2dd07ae21eb2e57a4adad79717ac700ab64a3cd7
+SHA1 (patch-ac) = feb09a639bb33574665341415289efabe3bbe2fb
+SHA1 (patch-ad) = 976436d32022f9eaa68b4661b6ee7025d9bb5f1c
 SHA1 (patch-ae) = 376c89f594b1ee1b06759b3f3b813a92f74ae1ee
-SHA1 (patch-af) = 3cf25e4abac4e0dd52398381a1c304e2d0ebfc94
-SHA1 (patch-ag) = f5f4783dc4914befd42ba827630568b88ad9b472
+SHA1 (patch-af) = 05586be9010ec36bbde847de13d2d112b5d1501e
+SHA1 (patch-ag) = a8e9d04fea0e1d79bc9ee7999d32e8df9cba1e71
+SHA1 (patch-ah) = 70a99172f97034860045843316229108e04dff89
