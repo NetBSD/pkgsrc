@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2003/11/11 10:17:39 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2009/12/11 00:11:11 abs Exp $
 
---- stop.c.orig	Sun Mar 30 22:05:53 2003
+--- stop.c.orig	2003-03-30 20:05:53.000000000 +0000
 +++ stop.c
 @@ -35,17 +35,21 @@ int argc;
  char *argv[];

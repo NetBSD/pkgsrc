@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/08 04:12:35 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2009/12/11 00:11:11 abs Exp $
 #
 
 DISTNAME=	heyu-1.35
@@ -22,7 +22,7 @@ MAKE_FLAGS+=	MAN5=${PREFIX}/${PKGMANDIR}/man5
 REPLACE_SH+=	makesched
 USE_TOOLS+=	sh:run
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/heyu
+INSTALLATION_DIRS+=	bin ${PREFIX}/share/examples/heyu
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.pkg.mk"
