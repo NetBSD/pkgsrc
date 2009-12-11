@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2009/12/03 13:06:53 asau Exp $
+# $NetBSD: Makefile,v 1.104 2009/12/11 18:53:40 adam Exp $
 
-DISTNAME=		R-2.7.2
-PKGREVISION=		3
+DISTNAME=		R-2.10.0
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -20,7 +19,7 @@ TEST_TARGET=		check
 USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed unzip:run xmkmf
 USE_GNU_READLINE=	yes		# uses callback interface
 USE_GNU_ICONV=		yes		# latin1 support, iconvlist
-USE_LANGUAGES=		c fortran
+USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
 TEXINFO_REQD=		4.7
 
@@ -35,14 +34,15 @@ CONFIGURE_ARGS+=	--without-gnome		# not yet stable
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bzlib
 CONFIGURE_ARGS+=	--with-system-pcre
+CONFIGURE_ARGS+=	--with-system-xz
 
 # Disable Mac OS specific support used by R.app
 CONFIGURE_ARGS+=	--disable-R-framework
 CONFIGURE_ARGS+=	--without-aqua
 
 # Use BLAS (math/blas)
-#
 CONFIGURE_ARGS+=	--without-atlas
+CONFIGURE_ARGS+=	--disable-BLAS-shlib
 CONFIGURE_ARGS+=	--with-blas
 CONFIGURE_ARGS+=	--without-blas_risc
 CONFIGURE_ARGS+=	--without-dxml
@@ -57,10 +57,10 @@ CONFIGURE_ENV+=		r_cv_complete_blas=yes
 # Broken test for bzlib >= 1.0.5 in R 2.7.0
 CONFIGURE_ENV+=		r_cv_have_bzlib=yes
 
-CONFIGURE_ENV+=		GETWD=${TOOLS_PWD_CMD:Q}
+CONFIGURE_ENV+=		GETWD=${TOOLS_PWD_CMD}
 CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
-CONFIGURE_ENV+=		lt_cv_path_SED=${TOOLS_SED:Q}
-CONFIGURE_ENV+=		ac_cv_path_R_GZIPCMD=${TOOLS_GZIP_CMD:Q}
+CONFIGURE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
+CONFIGURE_ENV+=		ac_cv_path_R_GZIPCMD=${TOOLS_GZIP_CMD}
 CONFIGURE_ENV+=		ac_cv_path_R_UNZIPCMD=${TOOLS_PATH.unzip}
 
 # Package assumes it can append to files (specifically DESCRIPTION) that have
@@ -70,7 +70,6 @@ SHAREMODE=		644
 .include "../../mk/bsd.prefs.mk"
 
 # R_PAPERSIZE can be: A4, Letter, Legal, Executive
-#
 .if defined(PAPERSIZE)
 R_PAPERSIZE?=		${PAPERSIZE}
 .else
@@ -82,7 +81,6 @@ R_PAPERSIZE=		Letter
 CONFIGURE_ENV+=		R_PAPERSIZE=${R_PAPERSIZE:Q}
 
 # These macros are used during the build, so strip off the -o,-g flags.
-#
 INSTALL_DATA=		${INSTALL} ${COPY} -m ${SHAREMODE}
 INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 
@@ -94,11 +92,13 @@ CONFIGURE_ARGS+=	--enable-mbcs=no
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
