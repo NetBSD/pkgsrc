@@ -1,0 +1,59 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/12/11 20:13:49 drochner Exp $
+
+--- scidavis/scidavis.pro.orig	2009-06-28 09:35:12.000000000 +0000
++++ scidavis/scidavis.pro
+@@ -25,15 +25,15 @@ exists(/usr/bin/lupdate-qt4) {
+ 	LRELEASE_BIN = lrelease-qt4
+ } else {
+ 	# anything else
+-	LUPDATE_BIN = lupdate
+-	LRELEASE_BIN = lrelease
++	LUPDATE_BIN = $$(QTDIR)/bin/lupdate
++	LRELEASE_BIN = $$(QTDIR)/bin/lrelease
+ }
+ 
+ ### 64 Linux only suffix
+ linux-g++-64: libsuff = 64 
+ 
+ ### where to install
+-unix: INSTALLBASE = /usr           # this is what is called "prefix" when using GNU autotools
++unix: INSTALLBASE = $$(PREFIX)           # this is what is called "prefix" when using GNU autotools
+ win32: INSTALLBASE = c:/scidavis
+ unix: target.path = "$$INSTALLBASE/bin"               # where to install the binary on Linux/MacOS X
+ win32: target.path = "$$INSTALLBASE"                  # where to install the exe on Windows
+@@ -60,7 +60,7 @@ win32: pythonutils.path = $$INSTALLBASE 
+ ### building without muParser does not work yet (but will in a future version)
+ include( muparser.pri )
+ ### comment out the following line to deactivate Python scripting support
+-include( python.pri )  
++#include( python.pri )  
+ 
+ ################### start of liborigin block 
+ ############ liborigin support has been discontinued due to the lack 
+@@ -82,18 +82,18 @@ include( python.pri )  
+ ### are compiled against Qt4), dynamically against everything else.
+ #############################################################################
+ 
+-unix:INCLUDEPATH  += ../3rdparty/qwtplot3d/include
+-unix:LIBS         += ../3rdparty/qwtplot3d/lib/libqwtplot3d.a
++#unix:INCLUDEPATH  += ../3rdparty/qwtplot3d/include
++unix:LIBS         += $$(LOCALBASE)/lib/libqwtplot3d.la
+ 
+-unix:INCLUDEPATH  += ../3rdparty/qwt/src
+-unix:LIBS         += ../3rdparty/qwt/lib/libqwt.a
++#unix:INCLUDEPATH  += ../3rdparty/qwt/src
++unix:LIBS         += $$(LOCALBASE)/lib/libqwt.la
+ 
+-unix:LIBS         += -L/usr/lib$${libsuff}
++#unix:LIBS         += -L/usr/lib$${libsuff}
+ unix:LIBS         += -lgsl -lgslcblas -lz
+ ### muparser 1.30 does not compile as a shared lib on Linux
+-unix:LIBS         += -L/usr/local/lib$${libsuff}
+-unix:LIBS         += /usr/local/lib/libmuparser.a
+-unix:INCLUDEPATH  += /usr/local/include
++#unix:LIBS         += -L/usr/local/lib$${libsuff}
++unix:LIBS         += -L$$(LOCALBASE)/lib -lmuparser
++#unix:INCLUDEPATH  += /usr/local/include
+ 
+ #############################################################################
+ ### Link everything dynamically
