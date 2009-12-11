@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
+$NetBSD: patch-ac,v 1.24 2009/12/11 18:53:40 adam Exp $
 
---- configure.orig	2008-04-15 14:06:13.000000000 +1200
+--- configure.orig	2009-10-15 04:06:36.000000000 +0200
 +++ configure
-@@ -2712,7 +2712,7 @@ fi
+@@ -2719,7 +2719,7 @@ fi
  
  
  if test "${want_R_shlib}" = yes; then
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
  else
    LIBR=
  fi
-@@ -28129,6 +28129,7 @@ cat > conftest.c <<EOF
+@@ -28544,6 +28544,7 @@ cat > conftest.c <<EOF
  #else
  # define F77_SYMBOL(x)   x
  #endif
@@ -19,7 +19,7 @@ $NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
  int main () {
    exit(0);
  }
-@@ -28206,6 +28207,9 @@ cat > conftest.c <<EOF
+@@ -28621,6 +28622,9 @@ cat > conftest.c <<EOF
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -28303,6 +28307,9 @@ typedef struct {
+@@ -28718,6 +28722,9 @@ typedef struct {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -39,7 +39,7 @@ $NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
  int main () {
      Rcomplex z[3];
  
-@@ -29385,151 +29392,6 @@ echo "${ECHO_T}no" >&6; }
+@@ -29802,151 +29809,6 @@ echo "${ECHO_T}no" >&6; }
  fi
  
      fi
@@ -191,7 +191,7 @@ $NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
      if test "${GXX}" = yes; then
        ac_safe=_mieee
  { echo "$as_me:$LINENO: checking whether ${CXX-c++} accepts -mieee" >&5
-@@ -31027,7 +30889,7 @@ echo "$as_me: WARNING: Use of flat names
+@@ -31453,7 +31315,7 @@ echo "$as_me: WARNING: Use of flat names
        SHLIB_LIBADD="-lcc_dynamic"
      fi
      ;;
@@ -200,7 +200,7 @@ $NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
      ## Only sure for FreeBSD 3 and above.
      main_ldflags="-export-dynamic"
      shlib_ldflags="-shared"
-@@ -31116,6 +30978,12 @@ echo "$as_me: WARNING: Use of flat names
+@@ -31542,6 +31404,12 @@ echo "$as_me: WARNING: Use of flat names
      fcpicflags=
      ;;
    netbsd*)
@@ -213,7 +213,7 @@ $NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
      if ${CPP} - -dM < /dev/null | grep __ELF__ >/dev/null ; then
        main_ldflags="-export-dynamic"
        shlib_ldflags="-shared"
-@@ -31215,7 +31083,7 @@ fi
+@@ -31641,7 +31509,7 @@ fi
  : ${FPICFLAGS="${fpicflags}"}
  if test -z "${FPICFLAGS}"; then
    case "${host_os}" in
@@ -222,7 +222,7 @@ $NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
        ;;
      *)
        { echo "$as_me:$LINENO: WARNING: I could not determine FPICFLAGS." >&5
-@@ -37567,6 +37435,15 @@ cat > conftest.c <<EOF
+@@ -38017,6 +37885,15 @@ cat > conftest.c <<EOF
  #endif
  extern void F77_SYMBOL(test1)(int *iflag);
  
@@ -238,7 +238,7 @@ $NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
  int main () {
    int iflag;
    F77_SYMBOL(test1)(&iflag);
-@@ -37631,6 +37508,14 @@ else
+@@ -38084,6 +37961,14 @@ else
  #else
  # define F77_SYMBOL(x)   x
  #endif
