@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/23 21:57:20 asau Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/11 03:58:37 asau Exp $
 
-DISTNAME=	openpa-1.0.1
+DISTNAME=	openpa-1.0.2
 CATEGORIES=	parallel
 MASTER_SITES=	http://trac.mcs.anl.gov/projects/openpa/raw-attachment/wiki/Downloads/
 
