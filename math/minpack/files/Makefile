@@ -16,7 +16,7 @@ lib$(LIB).a:	$(OBJ)
 	$(RANLIB) $@
 
 install:	lib$(LIB).a
-	$(BSD_INSTALL_DATA) $? $(LIBDIR)
+	$(BSD_INSTALL_DATA) $? $(DESTDIR)$(LIBDIR)
 
 clean:
 	rm -f *.o lib$(LIB).a
