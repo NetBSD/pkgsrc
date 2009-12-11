@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/04 11:02:25 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2009/12/11 17:47:28 asau Exp $
 #
 
 DISTNAME=		xfrac310
@@ -12,6 +12,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://spanky.triumf.ca/pub/fractals/programs/unix/
 COMMENT=		Fractint for X11
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}
 USE_LIBTOOL=		yes
 
@@ -21,7 +23,7 @@ MAKE_FLAGS+=		SRCDIR=${PREFIX}/share/xfractint
 BUILD_TARGET=		xfractint
 BUILDLINK_TRANSFORM+=	l:ncurses:curses
 
-INSTALLATION_DIRS=	share/xfractint
+INSTALLATION_DIRS=	bin $(PKGMANDIR)/man1 share/xfractint
 
 MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
 
