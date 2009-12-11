@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8749 2009/12/11 11:26:07 tnn Exp $
+$NetBSD: TODO,v 1.8750 2009/12/11 19:44:58 adam Exp $
 
 Suggested new packages
 ======================
@@ -359,7 +359,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Mesa-7.5
 	o MesaLib-7.6.0
 	o PAM-0.99.7.1
-	o R-2.9.2
 	o REminiscence-0.1.9
 	o ROMBuild-2.13
 	o RTx-Shredder-0.05
