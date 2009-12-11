@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/11 20:13:49 drochner Exp $
+bin/scidavis
+share/applications/scidavis.desktop
+share/doc/scidavis/CHANGES
+share/doc/scidavis/INSTALL.html
+share/doc/scidavis/README
+share/doc/scidavis/gpl.txt
+share/doc/scidavis/scidavis-logo.png
+share/doc/scidavis/scidavis.css
+share/icons/hicolor/128x128/apps/scidavis.png
+share/icons/hicolor/16x16/apps/scidavis.png
+share/icons/hicolor/22x22/apps/scidavis.png
+share/icons/hicolor/32x32/apps/scidavis.png
+share/icons/hicolor/48x48/apps/scidavis.png
+share/icons/hicolor/64x64/apps/scidavis.png
+share/icons/hicolor/scalable/apps/scidavis.svg
+share/icons/locolor/16x16/apps/scidavis.png
+share/icons/locolor/22x22/apps/scidavis.png
+share/icons/locolor/32x32/apps/scidavis.png
+share/mime/packages/scidavis.xml
+share/mimelnk/application/x-sciprj.desktop
