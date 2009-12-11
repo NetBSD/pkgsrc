@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.23 2009/12/09 10:22:04 drochner Exp $
+# $NetBSD: Makefile.common,v 1.24 2009/12/11 05:00:11 obache Exp $
 #
+# used by graphics/dia-python/Makefile
 
 DISTNAME=	dia-0.97
 PKGNAME=	${DISTNAME:S/dia-/dia${DIA_SUBPKG}-/}
