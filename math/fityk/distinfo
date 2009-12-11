@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/11 20:44:38 drochner Exp $
+
+SHA1 (fityk-0.8.9.tar.bz2) = 7815010529f374ed8bc7a7efe25278412a3f7708
+RMD160 (fityk-0.8.9.tar.bz2) = f3b3be9b285361cd202d6a932d7e1701704184d1
+Size (fityk-0.8.9.tar.bz2) = 1496932 bytes
+SHA1 (patch-aa) = 95ad72362d6038110bfb50c65ed72424ecc7a859
