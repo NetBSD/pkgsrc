@@ -1,17 +1,24 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/02/10 12:54:27 frueauf Exp $
+$NetBSD: patch-ad,v 1.2 2009/12/11 02:11:52 asau Exp $
 
---- auxiliary/Makefile.orig	Fri Nov 28 01:00:55 1997
-+++ auxiliary/Makefile	Tue Feb  9 15:43:21 1999
-@@ -20,9 +20,9 @@
+--- auxiliary/Makefile.orig	1997-11-28 03:00:55.000000000 +0300
++++ auxiliary/Makefile	2009-12-11 05:05:17.000000000 +0300
+@@ -20,14 +20,14 @@
  devclean : dummy
  
  install : $(AUXILIARIES) fdf2fit
 -	$(MKINSTALLDIRS) $(GR_HOME)/auxiliary
 -	for i in $(AUXILIARIES); do $(INSTALL_DATA) $$i $(GR_HOME)/auxiliary; done
 -	$(INSTALL_PROGRAM) fdf2fit $(GR_HOME)/auxiliary
-+	${MKINSTALLDIRS} ${PREFIX}/share/${ACEGR}
-+	for i in ${AUXILIARIES}; do ${INSTALL_DATA} $$i ${PREFIX}/share/${ACEGR}; done
-+	${INSTALL_SCRIPT} fdf2fit ${PREFIX}/bin
++	$(MKINSTALLDIRS) $(DESTDIR)$(PREFIX)/share/$(ACEGR)
++	for i in $(AUXILIARIES); do $(INSTALL_DATA) $$i $(DESTDIR)$(PREFIX)/share/$(ACEGR); done
++	$(INSTALL_SCRIPT) fdf2fit $(DESTDIR)$(PREFIX)/bin
  
  tests : dummy
  
+ links : fdf2fit
+-	$(MKINSTALLDIRS) $(PREFIX)/bin
+-	cd $(PREFIX)/bin; $(RM) fdf2fit; $(LN_S) $(GR_HOME)/auxiliary/fdf2fit fdf2fit
++	$(MKINSTALLDIRS) $(DESTDIR)$(PREFIX)/bin
++	cd $(DESTDIR)$(PREFIX)/bin; $(RM) fdf2fit; $(LN_S) $(DESTDIR)$(GR_HOME)/auxiliary/fdf2fit fdf2fit
+ 
+ dummy :
