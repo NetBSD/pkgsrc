@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/11 21:42:12 drochner Exp $
+
+SHA1 (uniconvertor-1.1.4.tar.gz) = 23afe06db9c34060418619d880c2eb70141e9abe
+RMD160 (uniconvertor-1.1.4.tar.gz) = 35613ec20b70db79dd82c7127d8e54ad49fec4fc
+Size (uniconvertor-1.1.4.tar.gz) = 536477 bytes
+SHA1 (patch-aa) = e04ce103e6b2fa6ba753b3c2a238e4e08d448107
+SHA1 (patch-ab) = caa6ee10e7b826116bfc3a1d8110c4dbbcc00e55

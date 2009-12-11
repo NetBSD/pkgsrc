@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/12/11 21:42:12 drochner Exp $
+
+--- setup.py.orig	2009-06-03 02:52:35.000000000 +0000
++++ setup.py
+@@ -49,7 +49,7 @@ if __name__ == "__main__":
+ 	if  os.name == 'nt':
+ 		script_name='src/uniconv.cmd'
+ 	else:
+-		script_name='src/uniconv'
++		script_name='src/uniconvertor'
+ 	
+ 	filter_src=src_path+'modules/filter/'	
+ 	filter_module = Extension('uniconvertor.app.modules.streamfilter',
