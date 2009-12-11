@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2009/09/06 03:59:49 taca Exp $
+# $NetBSD: Makefile,v 1.11 2009/12/11 16:32:31 taca Exp $
 #
 
-DISTNAME=	opengoo_1.5.3
-PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+DISTNAME=	opengoo_1.6
+PKGNAME=	${DISTNAME:S/_/-/:S/.rc/rc1/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
 EXTRACT_SUFX=	.zip
-DIST_SUBDIR=	${PKGBASE}-20090906
+DIST_SUBDIR=	${PKGBASE}-20091207
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.opengoo.org/
@@ -50,7 +49,7 @@ post-extract:
 	cd ${WRKSRC}; ${FIND} . -type f -exec ${CHMOD} -x {} \;
 
 pre-install:
-	cd ${WRKSRC}; ${RM} -f .buildpath .project \
+	cd ${WRKSRC}; ${RM} -f .htaccess .project \
 		application/views/files/.cvsignore \
 		environment/classes/.cvsignore \
 		config/empty.config.php
