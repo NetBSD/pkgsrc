@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/12/11 21:42:12 drochner Exp $
+
+--- src/uniconvertor.orig	2009-06-03 02:45:19.000000000 +0000
++++ src/uniconvertor
+@@ -20,4 +20,4 @@
+ #
+ 
+ 
+-python -c "from uniconvertor import uniconv; uniconv();" "$@"
+\ No newline at end of file
++@PYTHONBIN@ -c "from uniconvertor import uniconv; uniconv();" "$@"
