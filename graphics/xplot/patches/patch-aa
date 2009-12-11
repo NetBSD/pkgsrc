@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2003/09/27 12:03:50 tron Exp $
+$NetBSD: patch-aa,v 1.8 2009/12/11 16:57:12 asau Exp $
 
---- Makefile.in.orig	Thu May  4 23:04:20 2000
-+++ Makefile.in	Sat Sep 27 14:00:42 2003
+--- Makefile.in.orig	2000-05-05 01:04:20.000000000 +0400
++++ Makefile.in	2009-12-11 19:54:53.000000000 +0300
 @@ -62,7 +62,7 @@
  all:	${PROG}
  
@@ -10,4 +10,21 @@ $NetBSD: patch-aa,v 1.7 2003/09/27 12:03:50 tron Exp $
 +	${CC} ${CFLAGS} -o $@.new ${OFILES} ${LIBS} ${LDFLAGS}
  	-mv -f $@ $@.old
  	mv -f $@.new $@
+ 
+@@ -70,11 +70,11 @@
+ 	echo 'char *version_string = "'`cat version`'";' >version_string.c
+ 
+ install: all
+-	mkdir -p $(bindir)
+-	$(INSTALL_PROGRAM) xplot $(bindir)/xplot
+-	$(INSTALL) tcpdump2xplot.pl $(bindir)/tcpdump2xplot
+-	mkdir -p $(mandir)
+-	$(INSTALL_MAN) $(MANFILES) $(mandir)
++	mkdir -p $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) xplot $(DESTDIR)$(bindir)/xplot
++	$(INSTALL) tcpdump2xplot.pl $(DESTDIR)$(bindir)/tcpdump2xplot
++	mkdir -p $(DESTDIR)$(mandir)
++	$(INSTALL_MAN) $(MANFILES) $(DESTDIR)$(mandir)
+ clean:
+ 	rm -f ${PROG} ${PROG}.old *.o version_string.c
  
