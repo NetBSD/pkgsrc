@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.543 2009/11/29 21:48:40 snj Exp $
+# $NetBSD: Makefile,v 1.544 2009/12/11 20:25:22 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -101,6 +101,7 @@ SUBDIR+=	exifprobe
 SUBDIR+=	exiftags
 SUBDIR+=	exiv2
 SUBDIR+=	exiv2-organize
+SUBDIR+=	extrema
 SUBDIR+=	f-spot
 SUBDIR+=	f4l
 SUBDIR+=	fbm
@@ -366,6 +367,7 @@ SUBDIR+=	ruby-rcairo
 SUBDIR+=	s10sh
 SUBDIR+=	sane-backends
 SUBDIR+=	sane-frontends
+SUBDIR+=	scidavis
 SUBDIR+=	scigraphica
 SUBDIR+=	scrot
 SUBDIR+=	showimg
