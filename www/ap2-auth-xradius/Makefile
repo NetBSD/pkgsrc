@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/17 18:00:25 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/11 12:02:59 obache Exp $
 
 DISTNAME=	mod_auth_xradius-0.4.6
 PKGNAME=	${APACHE_PKG_PREFIX}-auth-xradius-0.4.6
@@ -19,6 +19,6 @@ PKG_APACHE_ACCEPTED=	apache2 apache22
 .include "../../mk/apache.mk"
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.42
 
-CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs
+CONFIGURE_ARGS+=	--with-apxs=${APXS}
 
 .include "../../mk/bsd.pkg.mk"
