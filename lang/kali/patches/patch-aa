@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2007/06/17 15:38:54 salo Exp $
+$NetBSD: patch-aa,v 1.2 2009/12/12 21:58:18 asau Exp $
 
---- Makefile.in.orig	1997-01-21 23:41:37.000000000 +0100
-+++ Makefile.in	2007-06-17 17:32:26.000000000 +0200
-@@ -98,7 +98,7 @@ CONFIG_FILES = scheme/interfaces.scm sch
+--- Makefile.in.orig	1997-01-22 01:41:37.000000000 +0300
++++ Makefile.in	2009-12-13 00:48:07.000000000 +0300
+@@ -98,7 +98,7 @@
  
  # The following is the first rule and therefore the "make" command's
  # default target.
@@ -11,3 +11,90 @@ $NetBSD: patch-aa,v 1.1 2007/06/17 15:38:54 salo Exp $
  
  # The developers are curious to know.  Don't be concerned if this fails.
  .notify: build/minor-version-number
+@@ -150,21 +150,21 @@
+ install: enough dirs inst-script inst-vm inst-misc inst-man inst-inc inst-image
+ 
+ inst-vm:
+-	$(INSTALL_PROGRAM) $(VM) $(LIB)
++	$(INSTALL_PROGRAM) $(VM) $(DESTDIR)$(LIB)
+ 
+ inst-image:
+ 	rm -f '/tmp/$(IMAGE)' &&					\
+ 	build/build-usual-image . '$(LIB)' '/tmp/$(IMAGE)' './$(VM)'	\
+ 		'$(INITIAL)' &&						\
+-	$(INSTALL_DATA) /tmp/$(IMAGE) $(LIB) &&				\
++	$(INSTALL_DATA) /tmp/$(IMAGE) $(DESTDIR)$(LIB) &&		\
+ 	rm /tmp/$(IMAGE)
+ 
+ inst-man:
+-	if [ -d $(mandir) -a -w $(mandir) ]; then			   \
++	if [ -d $(DESTDIR)$(mandir) -a -w $(DESTDIR)$(mandir) ]; then	   \
+ 		sed 's=LBIN=$(bindir)=g' doc/scheme48.man |		   \
+ 			sed 's=LLIB=$(LIB)=g' |				   \
+ 			sed 's=LS48=$(RUNNABLE)=g' >$(MANPAGE) &&	   \
+-		$(INSTALL_DATA) $(MANPAGE) $(mandir) &&			   \
++		$(INSTALL_DATA) $(MANPAGE) $(DESTDIR)$(mandir) &&	   \
+ 		rm $(MANPAGE);						   \
+ 	else								   \
+ 		echo "$(mandir) not writable dir, not installing man page" \
+@@ -172,29 +172,29 @@
+ 	fi
+ 
+ inst-inc:
+-	$(INSTALL_DATA) c/kali.h $(incdir)
++	$(INSTALL_DATA) c/kali.h $(DESTDIR)$(incdir)
+ 
+ inst-misc:
+ 	for stub in env big opt misc link; do				\
+ 		for f in scheme/$$stub/*.scm; do			\
+-			$(INSTALL_DATA) $$f $(LIB)/$$stub || exit 1;	\
++			$(INSTALL_DATA) $$f $(DESTDIR)$(LIB)/$$stub || exit 1;	\
+ 		done;							\
+ 	done &&								\
+ 	for f in scheme/rts/*num.scm scheme/rts/jar-defrecord.scm; do	\
+-		$(INSTALL_DATA) $$f $(LIB)/rts || exit 1;		\
++		$(INSTALL_DATA) $$f $(DESTDIR)$(LIB)/rts || exit 1;	\
+ 	done &&								\
+ 	sed 's;LBIN;$(bindir);g' <daemon |				\
+-		sed 's;LS48;$(RUNNABLE);g' >$(LIB)/daemon &&		\
+-	chmod 655 $(LIB)/daemon
++		sed 's;LS48;$(RUNNABLE);g' >$(DESTDIR)$(LIB)/daemon &&	\
++	chmod 655 $(DESTDIR)$(LIB)/daemon
+ 
+ inst-script:
+ 	script=$(bindir)/$(RUNNABLE) &&					\
+-	echo '#!/bin/sh'	>$$script &&				\
+-	echo			>>$$script &&				\
+-	echo 'lib=$(LIB)'	>>$$script &&				\
++	(echo '#!/bin/sh'	 &&					\
++	echo			 &&					\
++	echo 'lib=$(LIB)'	 &&					\
+ 	echo 'exec $$lib/$(VM) -o $$lib/$(VM) -i $$lib/$(IMAGE) "$$@"'	\
+-				>>$$script &&				\
+-	chmod +x $$script
++				)>$(DESTDIR)$$script &&			\
++	chmod +x $(DESTDIR)$$script
+ 
+ # Script to run kali in this directory.
+ go:
+@@ -207,17 +207,17 @@
+ 
+ dirs:
+ 	for dir in $(libdir) $(bindir) $(incdir); do			 \
+-		[ -d $$dir -a -w $$dir ] || {				 \
++		[ -d $(DESTDIR)$$dir -a -w $(DESTDIR)$$dir ] || {	 \
+ 			echo "$$dir not a writable directory" >&2;	 \
+ 			exit 1;						 \
+ 		};							 \
+ 	done
+-	{ mkdir -p $(LIB) && [ -w $(LIB) ]; } || {			 \
++	{ mkdir -p $(DESTDIR)$(LIB) && [ -w $(DESTDIR)$(LIB) ]; } || {	 \
+ 		echo "$(LIB) not a writable directory" >&2;		 \
+ 		exit 1;							 \
+ 	}
+ 	for dir in rts env big opt misc link; do			  \
+-		{ mkdir -p $(LIB)/$$dir && [ -w $(LIB)/$$dir ]; } || {	  \
++		{ mkdir -p $(DESTDIR)$(LIB)/$$dir && [ -w $(DESTDIR)$(LIB)/$$dir ]; } || {	  \
+ 			echo "$(LIB)/$$dir not a writable directory" >&2; \
+ 			exit 1;						  \
+ 		};							  \
