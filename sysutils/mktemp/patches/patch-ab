@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2009/12/12 23:20:52 asau Exp $
+
+--- Makefile.in.orig	2008-08-17 19:38:34.000000000 +0400
++++ Makefile.in	2009-12-13 02:16:34.000000000 +0300
+@@ -106,13 +106,13 @@
+ install: install-dirs install-binaries install-man
+ 
+ install-dirs:
+-	$(SHELL) $(srcdir)/mkinstalldirs $(bindir) $(mandir)/man1
++	$(SHELL) $(srcdir)/mkinstalldirs $(DESTDIR)$(bindir) $(DESTDIR)$(mandir)/man1
+ 
+ install-binaries: $(PROG)
+-	$(INSTALL) -m 0555 -s $(PROG) $(bindir)/$(PROG)
++	$(INSTALL) -m 0555 -s $(PROG) $(DESTDIR)$(bindir)/$(PROG)
+ 
+ install-man:
+-	$(INSTALL) -m 0444 $(srcdir)/mktemp.$(mantype) $(mandir)/man1/mktemp.1
++	$(INSTALL) -m 0444 $(srcdir)/mktemp.$(mantype) $(DESTDIR)$(mandir)/man1/mktemp.1
+ 
+ check:
+ 	@echo nothing to check
