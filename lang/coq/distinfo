@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2009/09/05 20:44:58 tonio Exp $
+$NetBSD: distinfo,v 1.10 2009/12/12 21:12:43 asau Exp $
 
 SHA1 (coq-8.2pl1.tar.gz) = 4aed3302adc2edbaa5d97984512c1c13014bd649
 RMD160 (coq-8.2pl1.tar.gz) = dd5758a94bb3de49967cec76baa33eb5169659ce
@@ -6,3 +6,4 @@ Size (coq-8.2pl1.tar.gz) = 3600620 bytes
 SHA1 (patch-aa) = 2725d9fb667f6a66bf9cb6dd0bdcdbd94d8c1fd6
 SHA1 (patch-ab) = 6573a11efab6ef7c026e8fd39b23e8596dee5a61
 SHA1 (patch-ac) = 30780c9f96ad16c814a5edc50bd1edbd030aa9b5
+SHA1 (patch-ad) = 9bb28ca4eeb77d53d3665fbc4575bea1f57c738c
