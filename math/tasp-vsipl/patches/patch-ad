@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2003/07/10 12:43:10 jtb Exp $
+$NetBSD: patch-ad,v 1.2 2009/12/12 20:39:57 asau Exp $
 
 --- /dev/null
 +++ libVUX/Makefile
@@ -25,6 +25,6 @@ $NetBSD: patch-ad,v 1.1 2003/07/10 12:43:10 jtb Exp $
 +.PATH:	${.CURDIR}/../../src_VU/graphics/X_f
 +
 +afterinstall:
-+	${BSD_INSTALL_DATA} ${.CURDIR}/../../include/VUX.h ${PREFIX}/include
++	${BSD_INSTALL_DATA} ${.CURDIR}/../../include/VUX.h ${DESTDIR}${PREFIX}/include
 +
 +.include <bsd.lib.mk>
