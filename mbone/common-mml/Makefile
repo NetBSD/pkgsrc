@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2009/12/02 07:10:52 snj Exp $
+# $NetBSD: Makefile,v 1.19 2009/12/12 18:11:07 snj Exp $
 
 DISTNAME=	common-1.2.16
 PKGNAME=	common-mml-1.2.16
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mbone
 MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/common/
 
@@ -25,6 +25,6 @@ do-install:
 	${LIBTOOL} --mode=install \
 		${INSTALL_LIB} ${WRKSRC}/src/*.la ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/src/*.h ${DESTDIR}${INCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html ${DESTDIR}${DOCDIR}
+#	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
