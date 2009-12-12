@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4576 2009/12/12 18:12:24 snj Exp $
+$NetBSD: CHANGES-2009,v 1.4577 2009/12/12 23:36:43 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6160,3 +6160,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed mail/dovecot-sieve [ghen 2009-12-11]
 	Updated inputmethod/scim-anthy to 1.2.7nb1 [obache 2009-12-12]
 	Updated mbone/common-mml to 1.2.16nb4 [snj 2009-12-12]
+	Added parallel/openmpi version 1.4 [asau 2009-12-13]
