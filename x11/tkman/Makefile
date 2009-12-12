@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/03/24 19:21:33 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2009/12/12 18:00:19 asau Exp $
 
 DISTNAME=		tkman-2.2
 PKGREVISION=		1
@@ -13,6 +13,8 @@ DEPENDS+=		glimpse>=4.1:../../textproc/glimpse
 DEPENDS+=		rman>=3.1:../../textproc/rman
 DEPENDS+=		tk>=8.4:../../x11/tk
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 INSTALLATION_DIRS=	bin libexec
 
 post-extract:
@@ -26,6 +28,6 @@ post-install:
 		-e 's|@@PREFIX@@|${PREFIX}|' \
 		-e 's|@@X11BASE@@|${X11BASE}|' \
 		${FILESDIR}/mkindex > ${WRKDIR}/mkindex
-	${INSTALL_SCRIPT} ${WRKDIR}/mkindex ${PREFIX}/libexec
+	${INSTALL_SCRIPT} ${WRKDIR}/mkindex ${DESTDIR}${PREFIX}/libexec
 
 .include "../../mk/bsd.pkg.mk"
