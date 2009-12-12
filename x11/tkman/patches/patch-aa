@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2006/03/03 04:03:28 minskim Exp $
+$NetBSD: patch-aa,v 1.9 2009/12/12 18:00:19 asau Exp $
 
---- Makefile.orig	2006-03-02 19:38:02.000000000 -0800
-+++ Makefile
-@@ -25,13 +25,13 @@ mintk = 8.4
+--- Makefile.orig	2009-12-12 20:50:01.000000000 +0300
++++ Makefile	2009-12-12 20:57:13.000000000 +0300
+@@ -25,13 +25,13 @@
  
  ### you need to localize the paths on these lines
  
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.8 2006/03/03 04:03:28 minskim Exp $
  #BINDIR = /private/share/bin
  
  
-@@ -80,11 +80,25 @@ rfcdir = ""
+@@ -80,11 +80,25 @@
  # will examine for matches if a search in the usual locations fails while searching
  # for a man pages and displaying its associated binaries (if any).
  # Use this feature carefully as a large number of directories can slow down startup.
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.8 2006/03/03 04:03:28 minskim Exp $
  
  # names of common printers, in addition to default printer (PRINTER or LPDEST)
  # (individual users can edit this list in the Preferences panel)
-@@ -113,7 +127,7 @@ dpis = "75 100"
+@@ -113,7 +127,7 @@
  # Lines are cached in .../man/cat<n>@<line-length>; 
  #   that is, the line length is appended to the usual cache directory names
  #manformat = {groff -te -Tascii -man /tmp/ll -}
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.8 2006/03/03 04:03:28 minskim Exp $
  # Ultrix users should uncomment the following line (you don't have eqn)
  #manformat = {tbl | nroff -man }
  # HP-UX uses a number of macros that groff doesn't define, so use the builtin nroff
-@@ -121,7 +135,7 @@ manformat = {groff -te -Tlatin1 -man /tm
+@@ -121,7 +135,7 @@
  #  space between the .de and the macro name, and groff doesn't like this.)
  #manformat = {tbl | neqn | nroff -man }
  # BSD macros (.Sh, .Ss, .PP, ...) need -mandoc
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.8 2006/03/03 04:03:28 minskim Exp $
  # BSDI
  #manformat = {tbl | eqn -Tascii | nroff -man }
  # It's actually legal to leave this empty if all the pages you'll ever
-@@ -349,8 +363,8 @@ tkman: $(srcs) $(libs) Makefile
+@@ -349,8 +363,8 @@
  	echo 'set manx(mintcl) $(mintcl)' >> tkman
  	echo 'set manx(mintk) $(mintk)' >> tkman
  	echo 'set manx(newuser) $(newuser)' >> tkman
@@ -76,7 +76,7 @@ $NetBSD: patch-aa,v 1.8 2006/03/03 04:03:28 minskim Exp $
  	echo 'set man(zcat) $(zcat)' >> tkman
  	echo 'set man(compress) $(compress)' >> tkman
  	echo 'set man(apropos) $(apropos)' >> tkman
-@@ -428,6 +442,9 @@ tkman: $(srcs) $(libs) Makefile
+@@ -428,6 +442,9 @@
  	echo 'image create bitmap texRebus -data {' >> tkman
  	cat xbm/tex.xbm >> tkman
  	echo '}' >> tkman
@@ -86,3 +86,16 @@ $NetBSD: patch-aa,v 1.8 2006/03/03 04:03:28 minskim Exp $
  	echo 'set manx(solaris-bindings) {' >> tkman
  	cat contrib/solaris_bindings.tcl >> tkman
  	echo '}' >> tkman
+@@ -456,10 +473,8 @@
+ 	chmod +x retkman
+ 
+ install: tkman retkman
+-	$(CP) tkman $(BINDIR)
+-	chmod +rx $(BINDIR)/tkman
+-	$(CP) retkman $(BINDIR)
+-	chmod +rx $(BINDIR)/retkman
++	$(BSD_INSTALL_SCRIPT) tkman $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_SCRIPT) retkman $(DESTDIR)$(BINDIR)
+ 	@echo 'You also need RosettaMan to run TkMan.'
+ 
+ test: dox tkman
