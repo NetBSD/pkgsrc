@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2009/12/12 23:30:01 asau Exp $
+
+Force our libltdl.
+
+--- test/support/components.c.orig	2008-11-04 23:56:21.000000000 +0300
++++ test/support/components.c	2009-02-15 04:08:30.000000000 +0300
+@@ -23,7 +23,7 @@
+ #include "ompi/constants.h"
+ #include "opal/constants.h"
+ #include "opal/mca/mca.h"
+-#include "opal/libltdl/ltdl.h"
++#include "ltdl.h"
+ 
+ #include "components.h"
+ 
