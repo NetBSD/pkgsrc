@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2009/12/11 21:56:29 drochner Exp $
+# $NetBSD: Makefile,v 1.196 2009/12/12 14:02:21 drochner Exp $
 
 COMMENT=	Mathematics
 
@@ -189,6 +189,7 @@ SUBDIR+=	xldlas
 SUBDIR+=	xlife
 SUBDIR+=	xlispstat
 SUBDIR+=	xmgr
+SUBDIR+=	xylib
 SUBDIR+=	yacas
 SUBDIR+=	yorick
 
