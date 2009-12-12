@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/09/06 22:37:04 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2009/12/12 21:58:18 asau Exp $
 
 DISTNAME=	kali-0.47
 CATEGORIES=	lang
@@ -8,9 +8,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.neci.nj.nec.com/PLS/Kali.html
 COMMENT=	Distributed implementation of Scheme
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	# empty
-INSTALLATION_DIRS=	bin include lib
+MAKE_ENV=	mandir=$(PREFIX)/$(PKGMANDIR)/man1
+INSTALLATION_DIRS=	bin include lib $(PKGMANDIR)/man1
 
 # Thoroughly broken on 64-bit architectures.
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64
