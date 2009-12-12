@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/08/26 19:57:59 sno Exp $
+# $NetBSD: Makefile,v 1.12 2009/12/12 20:49:21 asau Exp $
 
 DISTNAME=	gtklife-5.1
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://ironphoenix.org/tril/gtklife/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ironphoenix.org/tril/gtklife/
 COMMENT=	The game of life
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-gtk2

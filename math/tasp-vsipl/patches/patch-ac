@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2003/07/10 12:43:10 jtb Exp $
+$NetBSD: patch-ac,v 1.4 2009/12/12 20:39:57 asau Exp $
 
 --- /dev/null
 +++ libVU/Makefile
@@ -28,6 +28,6 @@ $NetBSD: patch-ac,v 1.3 2003/07/10 12:43:10 jtb Exp $
 +	${.CURDIR}/../../src_VU/utility/timer
 +
 +afterinstall:
-+	${BSD_INSTALL_DATA} ${.CURDIR}/../../include/VU.h ${PREFIX}/include
++	${BSD_INSTALL_DATA} ${.CURDIR}/../../include/VU.h ${DESTDIR}${PREFIX}/include
 +
 +.include <bsd.lib.mk>
