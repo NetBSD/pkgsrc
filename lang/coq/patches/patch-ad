@@ -1,0 +1,177 @@
+$NetBSD: patch-ad,v 1.1 2009/12/12 21:12:43 asau Exp $
+
+--- Makefile.build.orig	2009-06-07 01:43:23.000000000 +0400
++++ Makefile.build	2009-12-12 23:34:42.000000000 +0300
+@@ -435,22 +435,22 @@
+ install-ide-no:
+ 
+ install-ide-byte: 
+-	$(MKDIR) $(FULLBINDIR)
+-	$(INSTALLBIN) $(COQIDEBYTE) $(FULLBINDIR)
+-	cd $(FULLBINDIR); ln -sf coqide.byte$(EXE) coqide$(EXE)
++	$(MKDIR) $(DESTDIR)$(FULLBINDIR)
++	$(INSTALLBIN) $(COQIDEBYTE) $(DESTDIR)$(FULLBINDIR)
++	cd $(DESTDIR)$(FULLBINDIR); ln -sf coqide.byte$(EXE) coqide$(EXE)
+ 
+ install-ide-opt:
+-	$(MKDIR) $(FULLBINDIR)
+-	$(INSTALLBIN) $(COQIDEBYTE) $(COQIDEOPT) $(FULLBINDIR)
+-	cd $(FULLBINDIR); ln -sf coqide.opt$(EXE) coqide$(EXE)
++	$(MKDIR) $(DESTDIR)$(FULLBINDIR)
++	$(INSTALLBIN) $(COQIDEBYTE) $(COQIDEOPT) $(DESTDIR)$(FULLBINDIR)
++	cd $(DESTDIR)$(FULLBINDIR); ln -sf coqide.opt$(EXE) coqide$(EXE)
+ 
+ install-ide-files:
+-	$(MKDIR) $(FULLIDELIB)
+-	$(INSTALLLIB) $(IDEFILES) $(FULLIDELIB)
++	$(MKDIR) $(DESTDIR)$(FULLIDELIB)
++	$(INSTALLLIB) $(IDEFILES) $(DESTDIR)$(FULLIDELIB)
+ 
+ install-ide-info:
+-	$(MKDIR) $(FULLIDELIB)
+-	$(INSTALLLIB) ide/FAQ $(FULLIDELIB)
++	$(MKDIR) $(DESTDIR)$(FULLIDELIB)
++	$(INSTALLLIB) ide/FAQ $(DESTDIR)$(FULLIDELIB)
+ 
+ ###########################################################################
+ # Pcoq: special binaries for debugging (coq-interface, coq-parser)
+@@ -486,16 +486,16 @@
+ install-pcoq:: install-pcoq-binaries install-pcoq-files install-pcoq-manpages
+ 
+ install-pcoq-binaries::
+-	$(MKDIR) $(FULLBINDIR)
+-	$(INSTALLBIN) $(COQINTERFACE) $(FULLBINDIR)
++	$(MKDIR) $(DESTDIR)$(FULLBINDIR)
++	$(INSTALLBIN) $(COQINTERFACE) $(DESTDIR)$(FULLBINDIR)
+ 
+ install-pcoq-files::
+-	$(MKDIR) $(FULLCOQLIB)/contrib/interface
+-	$(INSTALLLIB) $(INTERFACERC) $(FULLCOQLIB)/contrib/interface
++	$(MKDIR) $(DESTDIR)$(FULLCOQLIB)/contrib/interface
++	$(INSTALLLIB) $(INTERFACERC) $(DESTDIR)$(FULLCOQLIB)/contrib/interface
+ 
+ install-pcoq-manpages:
+-	$(MKDIR) $(FULLMANDIR)/man1
+-	$(INSTALLLIB) $(PCOQMANPAGES) $(FULLMANDIR)/man1
++	$(MKDIR) $(DESTDIR)$(FULLMANDIR)/man1
++	$(INSTALLLIB) $(PCOQMANPAGES) $(DESTDIR)$(FULLMANDIR)/man1
+ 
+ ###########################################################################
+ # tests
+@@ -682,77 +682,77 @@
+ install-binaries:: install-$(BEST) install-tools
+ 
+ install-byte::
+-	$(MKDIR) $(FULLBINDIR)
+-	$(INSTALLBIN) $(COQMKTOP) $(COQC) $(COQTOPBYTE) $(CHICKEN) $(FULLBINDIR)
+-	cd $(FULLBINDIR); ln -sf coqtop.byte$(EXE) coqtop$(EXE); ln -sf coqchk.byte$(EXE) coqchk$(EXE)
++	$(MKDIR) $(DESTDIR)$(FULLBINDIR)
++	$(INSTALLBIN) $(COQMKTOP) $(COQC) $(COQTOPBYTE) $(CHICKEN) $(DESTDIR)$(FULLBINDIR)
++	cd $(DESTDIR)$(FULLBINDIR); ln -sf coqtop.byte$(EXE) coqtop$(EXE); ln -sf coqchk.byte$(EXE) coqchk$(EXE)
+ 
+ install-opt::
+-	$(MKDIR) $(FULLBINDIR)
+-	$(INSTALLBIN) $(COQMKTOP) $(COQC) $(COQTOPBYTE) $(COQTOPOPT) $(CHICKEN) $(CHICKENOPT) $(FULLBINDIR)
+-	cd $(FULLBINDIR); ln -sf coqtop.opt$(EXE) coqtop$(EXE); ln -sf coqchk.opt$(EXE) coqchk$(EXE)
++	$(MKDIR) $(DESTDIR)$(FULLBINDIR)
++	$(INSTALLBIN) $(COQMKTOP) $(COQC) $(COQTOPBYTE) $(COQTOPOPT) $(CHICKEN) $(CHICKENOPT) $(DESTDIR)$(FULLBINDIR)
++	cd $(DESTDIR)$(FULLBINDIR); ln -sf coqtop.opt$(EXE) coqtop$(EXE); ln -sf coqchk.opt$(EXE) coqchk$(EXE)
+ 
+ install-tools::
+-	$(MKDIR) $(FULLBINDIR)
++	$(MKDIR) $(DESTDIR)$(FULLBINDIR)
+ 	# recopie des fichiers de style pour coqide
+-	$(MKDIR) $(FULLCOQLIB)/tools/coqdoc
+-	touch $(FULLCOQLIB)/tools/coqdoc/coqdoc.sty $(FULLCOQLIB)/tools/coqdoc/coqdoc.css # to have the mode according to umask (bug #1715)
+-	$(INSTALLLIB) tools/coqdoc/coqdoc.css tools/coqdoc/coqdoc.sty $(FULLCOQLIB)/tools/coqdoc
+-	$(INSTALLBIN) $(TOOLS) $(FULLBINDIR)
++	$(MKDIR) $(DESTDIR)$(FULLCOQLIB)/tools/coqdoc
++	touch $(DESTDIR)$(FULLCOQLIB)/tools/coqdoc/coqdoc.sty $(DESTDIR)$(FULLCOQLIB)/tools/coqdoc/coqdoc.css # to have the mode according to umask (bug #1715)
++	$(INSTALLLIB) tools/coqdoc/coqdoc.css tools/coqdoc/coqdoc.sty $(DESTDIR)$(FULLCOQLIB)/tools/coqdoc
++	$(INSTALLBIN) $(TOOLS) $(DESTDIR)$(FULLBINDIR)
+ 
+ install-library:
+-	$(MKDIR) $(FULLCOQLIB)
++	$(MKDIR) $(DESTDIR)$(FULLCOQLIB)
+ 	for f in $(LIBFILES); do \
+-	  $(MKDIR) $(FULLCOQLIB)/`dirname $$f`; \
+-	  $(INSTALLLIB) $$f $(FULLCOQLIB)/`dirname $$f`; \
++	  $(MKDIR) $(DESTDIR)$(FULLCOQLIB)/`dirname $$f`; \
++	  $(INSTALLLIB) $$f $(DESTDIR)$(FULLCOQLIB)/`dirname $$f`; \
+         done
+-	$(MKDIR) $(FULLCOQLIB)/states
+-	$(INSTALLLIB) states/*.coq $(FULLCOQLIB)/states
+-	$(MKDIR) $(FULLCOQLIB)/user-contrib
+-	$(INSTALLLIB) $(DLLCOQRUN) $(FULLCOQLIB)
+-	$(INSTALLSH)  $(FULLCOQLIB) $(CONFIG) $(LINKCMO) $(GRAMMARCMA)
+-	$(INSTALLSH)  $(FULLCOQLIB) $(OBJSCMO:.cmo=.cmi)
++	$(MKDIR) $(DESTDIR)$(FULLCOQLIB)/states
++	$(INSTALLLIB) states/*.coq $(DESTDIR)$(FULLCOQLIB)/states
++	$(MKDIR) $(DESTDIR)$(FULLCOQLIB)/user-contrib
++	$(INSTALLLIB) $(DLLCOQRUN) $(DESTDIR)$(FULLCOQLIB)
++	$(INSTALLSH)  $(DESTDIR)$(FULLCOQLIB) $(CONFIG) $(LINKCMO) $(GRAMMARCMA)
++	$(INSTALLSH)  $(DESTDIR)$(FULLCOQLIB) $(OBJSCMO:.cmo=.cmi)
+ ifeq ($(BEST),opt)
+-	$(INSTALLLIB) $(LIBCOQRUN) $(FULLCOQLIB)
+-	$(INSTALLSH)  $(FULLCOQLIB) $(CONFIG:.cmo=.cmx) $(CONFIG:.cmo=.o) $(LINKCMO:.cma=.cmxa) $(LINKCMO:.cma=.a)
++	$(INSTALLLIB) $(LIBCOQRUN) $(DESTDIR)$(FULLCOQLIB)
++	$(INSTALLSH)  $(DESTDIR)$(FULLCOQLIB) $(CONFIG:.cmo=.cmx) $(CONFIG:.cmo=.o) $(LINKCMO:.cma=.cmxa) $(LINKCMO:.cma=.a)
+ endif
+ # csdpcert is not meant to be directly called by the user; we install
+ # it with libraries
+-	-$(MKDIR) $(FULLCOQLIB)/contrib/micromega
+-	$(INSTALLBIN) $(CSDPCERT) $(FULLCOQLIB)/contrib/micromega
+-	-$(INSTALLLIB) revision $(FULLCOQLIB)
++	-$(MKDIR) $(DESTDIR)$(FULLCOQLIB)/contrib/micromega
++	$(INSTALLBIN) $(CSDPCERT) $(DESTDIR)$(FULLCOQLIB)/contrib/micromega
++	-$(INSTALLLIB) revision $(DESTDIR)$(FULLCOQLIB)
+ 
+ install-library-light:
+-	$(MKDIR) $(FULLCOQLIB)
++	$(MKDIR) $(DESTDIR)$(FULLCOQLIB)
+ 	for f in $(LIBFILESLIGHT); do \
+-	  $(MKDIR) $(FULLCOQLIB)/`dirname $$f`; \
+-	  $(INSTALLLIB) $$f $(FULLCOQLIB)/`dirname $$f`; \
++	  $(MKDIR) $(DESTDIR)$(FULLCOQLIB)/`dirname $$f`; \
++	  $(INSTALLLIB) $$f $(DESTDIR)$(FULLCOQLIB)/`dirname $$f`; \
+         done
+-	$(MKDIR) $(FULLCOQLIB)/states
+-	$(INSTALLLIB) states/*.coq $(FULLCOQLIB)/states
+-	-$(INSTALLLIB) revision $(FULLCOQLIB)
++	$(MKDIR) $(DESTDIR)$(FULLCOQLIB)/states
++	$(INSTALLLIB) states/*.coq $(DESTDIR)$(FULLCOQLIB)/states
++	-$(INSTALLLIB) revision $(DESTDIR)$(FULLCOQLIB)
+ 
+ install-allreals::
+ 	for f in $(ALLREALS); do \
+-	  $(MKDIR) $(FULLCOQLIB)/`dirname $$f`; \
+-	  $(INSTALLLIB) $$f $(FULLCOQLIB)/`dirname $$f`; \
++	  $(MKDIR) $(DESTDIR)$(FULLCOQLIB)/`dirname $$f`; \
++	  $(INSTALLLIB) $$f $(DESTDIR)$(FULLCOQLIB)/`dirname $$f`; \
+         done
+ 
+ install-coq-info: install-coq-manpages install-emacs install-latex
+ 
+ install-coq-manpages:
+-	$(MKDIR) $(FULLMANDIR)/man1
+-	$(INSTALLLIB) $(MANPAGES) $(FULLMANDIR)/man1
++	$(MKDIR) $(DESTDIR)$(FULLMANDIR)/man1
++	$(INSTALLLIB) $(MANPAGES) $(DESTDIR)$(FULLMANDIR)/man1
+ 
+ install-emacs:
+-	$(MKDIR) $(FULLEMACSLIB)
+-	$(INSTALLLIB) tools/coq.el tools/coq-inferior.el $(FULLEMACSLIB)
++	$(MKDIR) $(DESTDIR)$(FULLEMACSLIB)
++	$(INSTALLLIB) tools/coq.el tools/coq-inferior.el $(DESTDIR)$(FULLEMACSLIB)
+ 
+ # command to update TeX' kpathsea database
+ #UPDATETEX = $(MKTEXLSR) /usr/share/texmf /var/spool/texmf $(BASETEXDIR) > /dev/null
+ 
+ install-latex:
+-	$(MKDIR) $(FULLCOQDOCDIR)
+-	$(INSTALLLIB) tools/coqdoc/coqdoc.sty $(FULLCOQDOCDIR)	
++	$(MKDIR) $(DESTDIR)$(FULLCOQDOCDIR)
++	$(INSTALLLIB) tools/coqdoc/coqdoc.sty $(DESTDIR)$(FULLCOQDOCDIR)	
+ #	-$(UPDATETEX)
+ 
+ ###########################################################################
