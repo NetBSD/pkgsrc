@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/12 13:58:58 drochner Exp $
+include/xylib/brucker_raw.h
+include/xylib/cache.h
+include/xylib/canberra_mca.h
+include/xylib/cpi.h
+include/xylib/dbws.h
+include/xylib/gsas.h
+include/xylib/pdcif.h
+include/xylib/philips_raw.h
+include/xylib/philips_udf.h
+include/xylib/riet7.h
+include/xylib/rigaku_dat.h
+include/xylib/text.h
+include/xylib/uxd.h
+include/xylib/vamas.h
+include/xylib/winspec_spe.h
+include/xylib/xfit_xdd.h
+include/xylib/xylib.h
+lib/libxy.la
