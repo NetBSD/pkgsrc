@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2003/07/10 12:43:10 jtb Exp $
+$NetBSD: patch-ab,v 1.3 2009/12/12 20:39:57 asau Exp $
 
 --- /dev/null
 +++ libvsip/Makefile
@@ -475,6 +475,6 @@ $NetBSD: patch-ab,v 1.2 2003/07/10 12:43:10 jtb Exp $
 +
 +afterinstall:
 +	${BSD_INSTALL_DATA} ${.CURDIR}/../../include/vsip*.h 			\
-+		${PREFIX}/include
++		${DESTDIR}${PREFIX}/include
 +
 +.include <bsd.lib.mk>

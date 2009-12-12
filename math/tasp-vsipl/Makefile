@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/07/09 09:19:03 tron Exp $
+# $NetBSD: Makefile,v 1.14 2009/12/12 20:39:56 asau Exp $
 
 DISTNAME=	tvcpp0p8
 PKGNAME=	tasp-vsipl-20030710
@@ -13,6 +13,9 @@ COMMENT=	Vector Signal Image Processing Library
 WRKSRC=		${WRKDIR}/${DISTNAME}/lib
 DIST_SUBDIR=	tasp-vsipl
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_BSD_MAKEFILE=	yes
 INSTALLATION_DIRS+=	include
 INSTALLATION_DIRS+=	lib
 INSTALLATION_DIRS+=	share/doc/tasp-vsipl
@@ -22,7 +25,7 @@ post-extract:
 
 post-install:
 	cd ${WRKDIR}/${DISTNAME} && ${INSTALL_DATA} Copyright	\
-		README_FIRST *.pdf ${PREFIX}/share/doc/tasp-vsipl
+		README_FIRST *.pdf ${DESTDIR}${PREFIX}/share/doc/tasp-vsipl
 
 do-test:
 	cd ${WRKDIR}/${DISTNAME}/testing && ${SETENV} ${MAKE_ENV} ${MAKE} all

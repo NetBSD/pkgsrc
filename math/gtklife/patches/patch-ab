@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1 2009/12/12 20:49:21 asau Exp $
+
+Staged installation support.
+
+--- Makefile.in.orig	2006-09-14 00:55:36.000000000 +0400
++++ Makefile.in	2009-12-12 23:38:05.000000000 +0300
+@@ -34,21 +34,21 @@
+ all: gtklife
+ 
+ install: all install-data
+-	$(INSTALL) -d $(bindir)
+-	$(INSTALL_PROGRAM) gtklife $(bindir)
++	$(INSTALL) -d $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) gtklife $(DESTDIR)$(bindir)
+ 
+ install-strip: all install-data
+-	$(INSTALL) -d $(bindir)
+-	$(INSTALL_STRIP) gtklife $(bindir)
++	$(INSTALL) -d $(DESTDIR)$(bindir)
++	$(INSTALL_STRIP) gtklife $(DESTDIR)$(bindir)
+ 
+ install-data:
+-	$(INSTALL) -d $(pkgdatadir)
+-	$(INSTALL) -d $(pkgdatadir)/graphics
+-	$(INSTALL_DATA) graphics/* $(pkgdatadir)/graphics
+-	rm -rf $(pkgdatadir)/patterns
+-	umask 022; cp -r patterns $(pkgdatadir)
+-	$(INSTALL) -d $(docdir)
+-	$(INSTALL_DATA) doc/* $(docdir)
++	$(INSTALL) -d $(DESTDIR)$(pkgdatadir)
++	$(INSTALL) -d $(DESTDIR)$(pkgdatadir)/graphics
++	$(INSTALL_DATA) graphics/* $(DESTDIR)$(pkgdatadir)/graphics
++	rm -rf $(DESTDIR)$(pkgdatadir)/patterns
++	umask 022; cp -r patterns $(DESTDIR)$(pkgdatadir)
++	$(INSTALL) -d $(DESTDIR)$(docdir)
++	$(INSTALL_DATA) doc/* $(DESTDIR)$(docdir)
+ 
+ gtklife: $(OBJS)
+ 	$(CC) -o gtklife $(OBJS) $(LDFLAGS)
