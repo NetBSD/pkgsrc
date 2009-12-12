@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2000/01/12 20:29:56 wiz Exp $
---- Makefile.orig	Mon May 11 11:43:33 1992
-+++ Makefile	Sun Jun 20 23:06:49 1999
+$NetBSD: patch-aa,v 1.4 2009/12/12 20:22:01 asau Exp $
+
+--- Makefile.orig	1992-05-11 22:43:33.000000000 +0400
++++ Makefile	2009-12-12 23:19:38.000000000 +0300
 @@ -18,18 +18,18 @@
  
  # This is where the install step puts it.
@@ -136,3 +137,70 @@ $NetBSD: patch-aa,v 1.3 2000/01/12 20:29:56 wiz Exp $
  
  # Use this for SunOS 4.X if you have the System V package installed.
  # This will link with the System V curses which is preferable to the
+@@ -440,36 +440,36 @@
+ p$(name).man:	p$(name).1
+ 	nroff -man p$(name).1 > p$(name).man
+ 
+-install: $(EXDIR)/$(name) $(EXDIR)/$(name)qref $(EXDIR)/p$(name) \
+-	 $(LIBDIR)/tutorial \
+-	 $(MANDIR)/$(name).$(MANEXT) $(MANDIR)/p$(name).$(MANEXT)
+-
+-$(EXDIR)/$(name): $(name)
+-	cp $(name) $(EXDIR)
+-	strip $(EXDIR)/$(name)
+-
+-$(EXDIR)/$(name)qref: $(name)qref
+-	cp $(name)qref $(EXDIR)
+-	strip $(EXDIR)/$(name)qref
+-
+-$(EXDIR)/p$(name): p$(name)
+-	cp p$(name) $(EXDIR)
+-	strip $(EXDIR)/p$(name)
+-
+-$(LIBDIR)/tutorial: tutorial.sc $(LIBDIR)
+-	cp tutorial.sc $(LIBDIR)/tutorial.$(name)
+-	chmod $(MANMODE) $(LIBDIR)/tutorial.$(name)
+-
+-$(LIBDIR):
+-	mkdir $(LIBDIR)
+-
+-$(MANDIR)/$(name).$(MANEXT): $(name).1
+-	cp $(name).1 $(MANDIR)/$(name).$(MANEXT)
+-	chmod $(MANMODE) $(MANDIR)/$(name).$(MANEXT)
+-
+-$(MANDIR)/p$(name).$(MANEXT): p$(name).1
+-	cp p$(name).1 $(MANDIR)/p$(name).$(MANEXT)
+-	chmod $(MANMODE) $(MANDIR)/p$(name).$(MANEXT)
++install: $(DESTDIR)$(EXDIR)/$(name) $(DESTDIR)$(EXDIR)/$(name)qref $(DESTDIR)$(EXDIR)/p$(name) \
++	 $(DESTDIR)$(LIBDIR)/tutorial \
++	 $(DESTDIR)$(MANDIR)/$(name).$(MANEXT) $(DESTDIR)$(MANDIR)/p$(name).$(MANEXT)
++
++$(DESTDIR)$(EXDIR)/$(name): $(name)
++	cp $(name) $(DESTDIR)$(EXDIR)
++	strip $(DESTDIR)$(EXDIR)/$(name)
++
++$(DESTDIR)$(EXDIR)/$(name)qref: $(name)qref
++	cp $(name)qref $(DESTDIR)$(EXDIR)
++	strip $(DESTDIR)$(EXDIR)/$(name)qref
++
++$(DESTDIR)$(EXDIR)/p$(name): p$(name)
++	cp p$(name) $(DESTDIR)$(EXDIR)
++	strip $(DESTDIR)$(EXDIR)/p$(name)
++
++$(DESTDIR)$(LIBDIR)/tutorial: tutorial.sc $(DESTDIR)$(LIBDIR)
++	cp tutorial.sc $(DESTDIR)$(LIBDIR)/tutorial.$(name)
++	chmod $(MANMODE) $(DESTDIR)$(LIBDIR)/tutorial.$(name)
++
++$(DESTDIR)$(LIBDIR):
++	mkdir $(DESTDIR)$(LIBDIR)
++
++$(DESTDIR)$(MANDIR)/$(name).$(MANEXT): $(name).1
++	cp $(name).1 $(DESTDIR)$(MANDIR)/$(name).$(MANEXT)
++	chmod $(MANMODE) $(DESTDIR)$(MANDIR)/$(name).$(MANEXT)
++
++$(DESTDIR)$(MANDIR)/p$(name).$(MANEXT): p$(name).1
++	cp p$(name).1 $(DESTDIR)$(MANDIR)/p$(name).$(MANEXT)
++	chmod $(MANMODE) $(DESTDIR)$(MANDIR)/p$(name).$(MANEXT)
+ 
+ diffs: ${SRC}
+ 	for i in ${DOCS} ${SRC}  ;\
