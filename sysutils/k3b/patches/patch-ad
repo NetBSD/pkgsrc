@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2007/08/04 23:21:11 markd Exp $
+$NetBSD: patch-ad,v 1.6 2009/12/12 19:39:24 markd Exp $
 
---- libk3bdevice/k3bdevicemanager.cpp.orig	2007-07-22 07:53:25.000000000 +1200
+--- libk3bdevice/k3bdevicemanager.cpp.orig	2008-05-27 20:23:39.000000000 +1200
 +++ libk3bdevice/k3bdevicemanager.cpp
 @@ -99,6 +99,7 @@ typedef unsigned char u8;
  
@@ -27,3 +27,12 @@ $NetBSD: patch-ad,v 1.5 2007/08/04 23:21:11 markd Exp $
  #endif
  
    char devicename[11]; // /dev/rcdXd + trailing zero
+@@ -831,7 +828,7 @@ bool K3bDevice::DeviceManager::determine
+     // XXX Re-map atapibus, so it doesn't conflict with "real" scsi
+     // busses
+ 
+-    bus = 15;
++    bus = 31;
+     id  = my_addr.addr.atapi.drive + 2 * my_addr.addr.atapi.atbus;
+     lun = 0;
+   }
