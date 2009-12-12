@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8750 2009/12/11 19:44:58 adam Exp $
+$NetBSD: TODO,v 1.8751 2009/12/12 05:25:00 obache Exp $
 
 Suggested new packages
 ======================
@@ -795,6 +795,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kaffe-1.1.9
 	o kaffeine-0.8.7
 	o kapooka-0.3
+	o kasumi-2.5
 	o kbibtex-0.2.2
 	o kbproto-1.0.4
 	o kdbg-2.2.0
