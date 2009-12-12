@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/05/22 17:23:06 zafer Exp $
+# $NetBSD: Makefile,v 1.22 2009/12/12 19:34:46 asau Exp $
 #
 
 DISTNAME=		memtest86-3.4
@@ -13,15 +13,17 @@ COMMENT=		Thorough, stand alone memory test for x86 arch
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake
 
 DIST_SUBDIR=		${PKGNAME}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/mdec
-	${INSTALL_DATA} ${WRKSRC}/memtest ${PREFIX}/mdec
-	${INSTALL_DATA} ${WRKSRC}/memtest.bin ${PREFIX}/mdec
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/memtest
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/memtest
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/mdec
+	${INSTALL_DATA} ${WRKSRC}/memtest ${DESTDIR}${PREFIX}/mdec
+	${INSTALL_DATA} ${WRKSRC}/memtest.bin ${DESTDIR}${PREFIX}/mdec
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/memtest
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/memtest
 
 .include "../../mk/bsd.pkg.mk"
