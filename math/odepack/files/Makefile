@@ -1,6 +1,6 @@
 LIB	= odepack
 
-LIBDIR	= ${PREFIX}/lib
+LIBDIR	= $(PREFIX)/lib
 
 all:	lib$(LIB).a
 
@@ -18,7 +18,7 @@ lib$(LIB).a:	$(OBJS)
 	$(RANLIB) $@
 
 install:	lib$(LIB).a
-	$(BSD_INSTALL_DATA) $? $(LIBDIR)
+	$(BSD_INSTALL_DATA) $? $(DESTDIR)$(LIBDIR)
 
 clean:
 	rm -f *.o lib$(LIB).a
