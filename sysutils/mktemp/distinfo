@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/10/09 12:00:59 sketch Exp $
+$NetBSD: distinfo,v 1.6 2009/12/12 23:20:52 asau Exp $
 
 SHA1 (mktemp-1.6.tar.gz) = 562ee9f2b7033a90196409961c2137917c125838
 RMD160 (mktemp-1.6.tar.gz) = f29953ed51fe0f593c7407467ec1b99f24b5813d
 Size (mktemp-1.6.tar.gz) = 79154 bytes
+SHA1 (patch-ab) = cc2499cad500853d76cfd8d7840930e6a1364c6e
