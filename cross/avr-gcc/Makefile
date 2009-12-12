@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/08/27 15:29:37 hasso Exp $
+# $NetBSD: Makefile,v 1.22 2009/12/12 05:02:19 obache Exp $
 
 DISTNAME=		gcc-4.4.1
 PKGNAME=		avr-gcc-4.4.1
@@ -11,19 +11,18 @@ DISTFILES=		${DISTNAME:S/-/-core-/}${EXTRACT_SUFX} \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU gcc-4.4 for Atmel AVR 8-bit RISC microcontrollers
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
 BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 GNU_CONFIGURE=		yes
-USE_BZIP2=		yes
 USE_TOOLS+=		bison gmake lex perl tar msgfmt
 USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
 
 CONFIGURE_ARGS+=	--target=avr --disable-nls
 
-MAKE_FLAGS+=		LANGUAGES="c c++"
 MAKE_ENV+=		MACHINE_ARCH=avr
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 CFLAGS_FOR_BUILD:=	${CFLAGS}
@@ -38,16 +37,13 @@ SUBST_FILES.sed=	fixincludes/fixincl.x
 SUBST_SED.sed=		-e 's|@SED@|${TOOLS_PATH.sed}|g'
 SUBST_STAGE.sed=	post-patch
 
-
-do-configure:
+pre-configure:
 	${MKDIR} ${WRKDIR}/obj
-	cd ${WRKDIR}/obj; ${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ${WRKSRC}/configure ${CONFIGURE_ARGS}
 
-do-build:
-	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1} )
+CONFIGURE_DIRS=		${WRKDIR}/obj
+CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
-do-install:
-	cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install
+INSTALLATION_DIRS+=	avr/bin
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
