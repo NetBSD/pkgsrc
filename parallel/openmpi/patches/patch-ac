@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/12/12 23:30:01 asau Exp $
+
+Force our libltdl.
+
+--- configure.orig	2009-01-19 20:23:17.000000000 +0300
++++ configure	2009-02-06 01:59:45.000000000 +0300
+@@ -163871,9 +163871,10 @@
+   "") enable_ltdl_convenience=yes
+       ac_configure_args="$ac_configure_args --enable-ltdl-convenience" ;;
+ esac
+-LIBLTDL='${top_build_prefix}'"${lt_ltdl_dir+$lt_ltdl_dir/}libltdlc.la"
++#LIBLTDL='${top_build_prefix}'"${lt_ltdl_dir+$lt_ltdl_dir/}libltdlc.la"
++#LIBLTDL=libltdl.la
+ LTDLDEPS=$LIBLTDL
+-LTDLINCL='-I${top_srcdir}'"${lt_ltdl_dir+/$lt_ltdl_dir}"
++#LTDLINCL='-I${top_srcdir}'"${lt_ltdl_dir+/$lt_ltdl_dir}"
+ 
+ 
+ 
+@@ -180176,7 +180177,7 @@
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <opal/libltdl/ltdl.h>
++#include <ltdl.h>
+ 
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |

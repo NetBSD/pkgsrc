@@ -1,0 +1,39 @@
+$NetBSD: patch-ak,v 1.1.1.1 2009/12/12 23:30:01 asau Exp $
+
+Install configuration files into example directory.
+
+--- ompi/etc/Makefile.in.orig	2009-12-04 04:54:39.000000000 +0300
++++ ompi/etc/Makefile.in	2009-12-04 05:02:08.000000000 +0300
+@@ -36,6 +36,7 @@
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
++exampledir = $(pkgdatadir)/examples
+ am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
+ install_sh_DATA = $(install_sh) -c -m 644
+ install_sh_PROGRAM = $(install_sh) -c
+@@ -1086,19 +1087,19 @@
+ # details why the mkdir is in install-data-local.
+ 
+ install-data-local:
+-	$(mkdir_p) $(DESTDIR)$(sysconfdir)
++	$(mkdir_p) $(DESTDIR)$(exampledir)
+ 	@ p="$(ompi_config_files)"; \
+ 	for file in $$p; do \
+-	  if test -f $(DESTDIR)$(sysconfdir)/$$file; then \
++	  if test -f $(DESTDIR)$(exampledir)/$$file; then \
+ 	    echo "******************************* WARNING ************************************"; \
+ 	    echo "*** Not installing new $$file over existing file in:"; \
+-	    echo "***   $(DESTDIR)$(sysconfdir)/$$file"; \
++	    echo "***   $(DESTDIR)$(exampledir)/$$file"; \
+ 	    echo "******************************* WARNING ************************************"; \
+ 	  else \
+ 	    if test -f "$$file"; then d=; else d="$(srcdir)/"; fi; \
+ 	    f="`echo $$file | sed -e 's|^.*/||'`"; \
+-	    echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfdir)/$$f"; \
+-	    $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfdir)/$$f; \
++	    echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(exampledir)/$$f"; \
++	    $(INSTALL_DATA) $$d$$file $(DESTDIR)$(exampledir)/$$f; \
+ 	  fi; \
+ 	done
+ 

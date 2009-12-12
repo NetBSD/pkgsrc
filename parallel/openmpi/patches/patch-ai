@@ -1,0 +1,39 @@
+$NetBSD: patch-ai,v 1.1.1.1 2009/12/12 23:30:01 asau Exp $
+
+Install configuration files into example directory.
+
+--- orte/etc/Makefile.in.orig	2009-11-11 17:04:47.000000000 +0300
++++ orte/etc/Makefile.in	2009-12-04 05:00:13.000000000 +0300
+@@ -899,6 +899,7 @@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
++exampledir = $(pkgdatadir)/examples
+ target_alias = @target_alias@
+ timer_aix_LIBS = @timer_aix_LIBS@
+ top_build_prefix = @top_build_prefix@
+@@ -1086,19 +1087,19 @@
+ # details why the mkdir is in install-data-local.
+ 
+ install-data-local:
+-	$(mkdir_p) $(DESTDIR)$(sysconfdir)
++	$(mkdir_p) $(DESTDIR)$(exampledir)
+ 	@ p="$(orte_config_files)"; \
+ 	for file in $$p; do \
+-	  if test -f $(DESTDIR)$(sysconfdir)/$$file; then \
++	  if test -f $(DESTDIR)$(exampledir)/$$file; then \
+ 	    echo "******************************* WARNING ************************************"; \
+ 	    echo "*** Not installing new $$file over existing file in:"; \
+-	    echo "***   $(DESTDIR)$(sysconfdir)/$$file"; \
++	    echo "***   $(DESTDIR)$(exampledir)/$$file"; \
+ 	    echo "******************************* WARNING ************************************"; \
+ 	  else \
+ 	    if test -f "$$file"; then d=; else d="$(srcdir)/"; fi; \
+ 	    f="`echo $$file | sed -e 's|^.*/||'`"; \
+-	    echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfdir)/$$f"; \
+-	    $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfdir)/$$f; \
++	    echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(exampledir)/$$f"; \
++	    $(INSTALL_DATA) $$d$$file $(DESTDIR)$(exampledir)/$$f; \
+ 	  fi; \
+ 	done
+ 
