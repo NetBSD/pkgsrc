@@ -1,19 +1,27 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/10/03 20:33:46 frueauf Exp $
+$NetBSD: patch-ab,v 1.2 2009/12/12 22:10:21 asau Exp $
 
---- Makefile.orig	Thu Jul 23 21:07:50 1998
-+++ Makefile	Sat Oct  3 10:43:40 1998
-@@ -23,11 +23,11 @@
- 	@mkdir -p $(PREFIX)/$(DEST)
- 	@mkdir -p $(PREFIX)/$(BINDEST)
+--- Makefile.orig	1998-07-23 23:07:50.000000000 +0400
++++ Makefile	2009-12-13 01:07:37.000000000 +0300
+@@ -20,14 +20,14 @@
+ 	done
+ 
+ install:: all
+-	@mkdir -p $(PREFIX)/$(DEST)
+-	@mkdir -p $(PREFIX)/$(BINDEST)
++	@mkdir -p $(DESTDIR)$(PREFIX)/$(DEST)
++	@mkdir -p $(DESTDIR)$(PREFIX)/$(BINDEST)
  	@cat vista.in | \
 -	  $(SED) s:DEST:$(DEST): | \
 +	  $(SED) s:DEST:$(PREFIX)/$(DEST): | \
  	  $(SED) s:XLISP:$(XLISP): > vista;
- 	@install -m 755 vista $(PREFIX)/$(BINDEST)/vista
- 	@install -d -m 755 $(PREFIX)/$(DEST)/vista
+-	@install -m 755 vista $(PREFIX)/$(BINDEST)/vista
+-	@install -d -m 755 $(PREFIX)/$(DEST)/vista
 -	@cat statinit.lsp.in | $(SED) s:DEST:$(DEST): > statinit.lsp
 -	@cp -rpd code data examples prefs readme statinit.lsp \
+-	  $(PREFIX)/$(DEST)/vista/
++	@install -m 755 vista $(DESTDIR)$(PREFIX)/$(BINDEST)/vista
++	@install -d -m 755 $(DESTDIR)$(PREFIX)/$(DEST)/vista
 +	@cat statinit.lsp.in | $(SED) s:DEST:$(PREFIX)/$(DEST): > statinit.lsp
 +	@cp -Rp code data examples prefs readme statinit.lsp \
- 	  $(PREFIX)/$(DEST)/vista/
++	  $(DESTDIR)$(PREFIX)/$(DEST)/vista/
  	
