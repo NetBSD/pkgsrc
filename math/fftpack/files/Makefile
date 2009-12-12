@@ -19,7 +19,7 @@ lib$(LIB).a:	$(OBJS)
 	$(RANLIB) $@
 
 install:	lib$(LIB).a
-	$(BSD_INSTALL_DATA) $? $(LIBDIR)
+	$(BSD_INSTALL_LIB) $? $(DESTDIR)$(LIBDIR)
 
 clean:
 	rm -f *.o lib$(LIB).a
