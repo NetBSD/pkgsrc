@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8753 2009/12/13 01:42:21 asau Exp $
+$NetBSD: TODO,v 1.8754 2009/12/13 13:30:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -363,6 +363,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.13
 	o RTx-Shredder-0.05
 	o RealPlayer-11
+	o Sigil-0.1.6 [needs qt-4.6]
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7.3
 	o TiffIO-130e
@@ -421,7 +422,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asp2php-0.77.3
 	o aspell-norwegian-2.0.10
 	o ast-ksh-20080624 [pkg/37854]
-	o asterisk16-1.6.1.10
+	o asterisk16-1.6.1.11
 	o astyle-1.15.3
 	o asymptote-1.89
 	o aterm-1.0.1
@@ -451,7 +452,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bluefish-1.3.8
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bochs-2.4.2
+	o bochs-2.4.2 [pkg/42443]
 	o bonnie++-1.96
 	o bos-2.5
 	o boson-0.13
@@ -461,7 +462,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.26
+	o calibre-0.6.27
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -471,7 +472,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.4
 	o cgicc-3.2.9
 	o cheese-2.28.1 [GNOME 2.28]
-	o cherokee-0.99.32
+	o cherokee-0.99.33
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
@@ -557,7 +558,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epiphany-extensions-2.28.1 [GNOME 2.28]
 	o epsg-7.4 [portions in pkg/42419]
 	o epstool-3.08
-	o eric3-4.3.9 [now called eric4]
+	o eric3-4.3.10 [now called eric4]
 	o erlang-13b
 	o erubis-2.6.2
 	o esh-0.8.5
@@ -849,6 +850,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdrm-2.4.16
 	o libextractor-0.5.23
 	o libflash-0.4.13
+	o libgcrypt-1.4.5
 	o libgda-4.0.5 [GNOME 2.28]
 	o libgee-0.5.0
 	o libggi-2.2.2
@@ -876,7 +878,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.10.9
 	o libproxy-0.3.0
 	o librep-0.90.3
-	o libssh-0.3.4
+	o libsigsegv-2.8
+	o libsndfile-1.0.21
+	o libssh-0.4.0
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.6b
@@ -950,9 +954,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mlterm-2.9.4
 	o moc-2.4.4
 	o modular-xorg-server-1.7.3
+	o mono-tools-2.4.3
 	o moserial-2.28.0 [GNOME 2.28]
 	o mp3blaster-3.2.3
-	o mp3diags-1.0.00
+	o mp3diags-1.0.01
 	o mp3splt-2.2.7
 	o mpc-0.19
 	o mpeg4ip-1.6.1
@@ -999,7 +1004,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ns-plugger-communicator-5.1.3
 	o ns-plugger-navigator-5.1.3
 	o nsca-1.2.0
-	o nss-3.12.4.4.8
+	o nss-3.12.5.4.8.2
 	o nulib2-220
 	o nut-15.2
 	o nxtvepg-2.8.1
@@ -1016,6 +1021,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opencobol-1.0
 	o openh323-1.19.1
 	o openldap-2.4.20
+	o openldap-client-2.4.20
 	o openmortal-0.7.1
 	o openmotif-2.3.2
 	o openmsx-0.7.0
@@ -1033,7 +1039,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o otpCalc-0.97
 	o p5-Class-Data-Inheritable-1.00
 	o p5-DBD-SQLite-1.27
-	o p5-Date-Manip-6.04
+	o p5-Date-Manip-6.05
 	o p5-DateTime-Event-ICal-0.10
 	o p5-DateTime-Format-W3CDTF-0.05
 	o p5-DateTime-TimeZone-1.05
@@ -1147,7 +1153,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
 	o py-html2text-2.37
-	o py-imaging-1.1.7
 	o py-karaoke-0.7.2
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6 [pkg/41675]
@@ -1246,8 +1251,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.1.1
 	o scm-5e5
-	o scmgit-base-1.6.5.5
-	o scmgit-docs-1.6.5.5
+	o scmgit-base-1.6.5.6
+	o scmgit-docs-1.6.5.6
 	o scrollz-1.9.99
 	o scrotwm-0.9.20
 	o scsh-1.3.0
@@ -1321,7 +1326,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tex-pdftex-1.40.10
 	o texmaker-1.9.2
 	o tfmxplay-1.1.6
-	o tgif-4.2.2
 	o thin-1.0.0
 	o thoth-0.2.1
 	o tig-0.15
@@ -1336,6 +1340,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.8beta1
+	o totem-pl-parser-2.28.2
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.11.6
@@ -1458,6 +1463,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkeyboard-config-1.7
 	o xli-2006.11.10
 	o xlog-2.0.3
+	o xlogo-1.0.2
 	o xlsatoms-1.0.2 [unpackaged]
 	o xm7-1020s
 	o xmbdfed-4.6
@@ -1474,7 +1480,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmmsctrl-1.8
 	o xmon-1.5.6
-	o xmp-2.7.1
+	o xmp-3.0.0
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-cf-files-1.0.3
@@ -1492,7 +1498,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xscope-1.2 [unpackaged]
 	o xskat-4.0
 	o xsoldier-1.4
-	o xterm-252
+	o xterm-253
 	o xtraceroute-0.9.1
 	o xtrans-1.2.5
 	o xtu-1.3
