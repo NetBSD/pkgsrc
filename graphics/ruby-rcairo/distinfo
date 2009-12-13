@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/10/19 13:42:29 obache Exp $
+$NetBSD: distinfo,v 1.9 2009/12/13 12:26:44 obache Exp $
 
-SHA1 (cairo-1.8.0.gem) = 1559c848fefb688ae53a1e5c1ed601de0663b138
-RMD160 (cairo-1.8.0.gem) = dfa41ac559314ebd0a917aaf5b78770d807ced58
-Size (cairo-1.8.0.gem) = 274944 bytes
+SHA1 (cairo-1.8.1.gem) = cc8d05785cc019a9416fd20d3382bec1010cc493
+RMD160 (cairo-1.8.1.gem) = 3040dff5306f365c035d8fe0863d180d41cb2c27
+Size (cairo-1.8.1.gem) = 274944 bytes
