@@ -1,46 +1,46 @@
-# $NetBSD: Makefile,v 1.4 2009/12/13 16:03:52 abs Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/13 17:29:19 abs Exp $
 #
 
 # TODO: gnupg support, ssl support, others
 
-DISTNAME=       tkabber-0.10.0
-CATEGORIES=     chat
-MASTER_SITES=   http://files.jabber.ru/tkabber/
+DISTNAME=	tkabber-0.10.0
+CATEGORIES=	chat
+MASTER_SITES=	http://files.jabber.ru/tkabber/
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://tkabber.jabber.ru/en/
-COMMENT=        Free and Open Source TCL/TK jabber client
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://tkabber.jabber.ru/en/
+COMMENT=	Free and Open Source TCL/TK jabber client
 
-DEPENDS+=       tcllib-[0-9]*:../../devel/tcllib
+DEPENDS+=	tcllib-[0-9]*:../../devel/tcllib
 
-USE_TOOLS+=     pax wish:run
+USE_TOOLS+=	pax wish:run
 
-EGDIR=          ${PREFIX}/share/examples/tkabber
-DATADIR=        ${PREFIX}/share/tkabber
-DOCDIR=         ${PREFIX}/share/doc/tkabber
+EGDIR=		${PREFIX}/share/examples/tkabber
+DATADIR=	${PREFIX}/share/tkabber
+DOCDIR=		${PREFIX}/share/doc/tkabber
 
-PKG_DESTDIR_SUPPORT=   user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-AUTO_MKDIRS=           yes
+AUTO_MKDIRS=		yes
 
 # XXX this is also in the tkabber's Makefile
-SUBDIRS=        emoticons \
-	            ifacetk           \
-	            jabberlib-tclxml  \
-	            mclistbox         \
-	            msgs              \
-	            pixmaps           \
-	            plugins           \
-	            sounds            \
-	            trans
+SUBDIRS=	emoticons \
+		    ifacetk	      \
+		    jabberlib-tclxml  \
+		    mclistbox	      \
+		    msgs	      \
+		    pixmaps	      \
+		    plugins	      \
+		    sounds	      \
+		    trans
 
-EXTRA_FILES=    AUTHORS README COPYING INSTALL ChangeLog
+EXTRA_FILES=	AUTHORS README COPYING INSTALL ChangeLog
 
 do-build:
 	    # TODO This must be a CLASS
 	    ${SED} -e "s,@WISH@,${WISH}," \
-	            -e "s,@DATADIR@,${DATADIR}," ${FILESDIR}/tkabber.sh \
-	            > ${WRKSRC}/tkabber
+		    -e "s,@DATADIR@,${DATADIR}," ${FILESDIR}/tkabber.sh \
+		    > ${WRKSRC}/tkabber
 
 do-install:
 	   ${INSTALL_DATA} ${WRKSRC}/*.tcl ${DESTDIR}${DATADIR} #${WRKSRC}/*.xrdb ${DATADIR}
