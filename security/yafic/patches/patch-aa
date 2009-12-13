@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2009/12/13 08:42:26 martti Exp $
+
+Added support for DESTDIR.
+
+--- Makefile.in.orig	2009-12-13 10:28:53.000000000 +0200
++++ Makefile.in	2009-12-13 10:31:19.000000000 +0200
+@@ -553,13 +553,13 @@
+ 
+ 
+ install-exec-hook:
+-	if test -f $(bindir)/yafic-sign; then \
+-	  ln -f $(bindir)/yafic-sign$(EXEEXT) $(bindir)/yafic-check$(EXEEXT); \
++	if test -f $(DESTDIR)$(bindir)/yafic-sign; then \
++	  ln -f $(DESTDIR)$(bindir)/yafic-sign$(EXEEXT) $(DESTDIR)$(bindir)/yafic-check$(EXEEXT); \
+ 	fi
+ 
+ install-data-hook:
+-	if test -f $(mandir)/man1/yafic-sign.1; then \
+-	  ln -f $(mandir)/man1/yafic-sign.1 $(mandir)/man1/yafic-check.1; \
++	if test -f $(DESTDIR)$(mandir)/man1/yafic-sign.1; then \
++	  ln -f $(DESTDIR)$(mandir)/man1/yafic-sign.1 $(DESTDIR)$(mandir)/man1/yafic-check.1; \
+ 	fi
+ 
+ uninstall-hook:
