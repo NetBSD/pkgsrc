@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/12/13 23:26:26 asau Exp $
+
+Use POSIX-portable make features.
+
+--- libpolyml/Makefile.in.orig	2009-10-06 12:14:17.000000000 +0400
++++ libpolyml/Makefile.in	2009-12-02 02:36:48.000000000 +0300
+@@ -744,7 +744,7 @@
+ 
+ # Special rule for x86 assembly code.
+ x86asmtemp.S: x86asm.asm
+-	sed -f $(srcdir)/masm2gas <  $< > $@ || { rm -f $@; false; }
++	sed -f $(srcdir)/masm2gas <  x86asm.asm > $@ || { rm -f $@; false; }
+ 
+ # Special rule for Power PC.  This is needed because of pecularities with MAC OS X.
+ ppcasmtemp.s: power_assembly.S
