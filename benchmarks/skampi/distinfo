@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/12/13 01:34:45 asau Exp $
+$NetBSD: distinfo,v 1.5 2009/12/13 01:49:18 asau Exp $
 
-SHA1 (skampi-5.0.4/skampi.tar.gz) = a1e55043505dc10a576d47e018206ae9c79f145f
-RMD160 (skampi-5.0.4/skampi.tar.gz) = bfc545eb065124fabd71e6aec7684887c3fb4974
-Size (skampi-5.0.4/skampi.tar.gz) = 386126 bytes
+SHA1 (skampi-5.0.4.355/skampi.tar.gz) = a1e55043505dc10a576d47e018206ae9c79f145f
+RMD160 (skampi-5.0.4.355/skampi.tar.gz) = bfc545eb065124fabd71e6aec7684887c3fb4974
+Size (skampi-5.0.4.355/skampi.tar.gz) = 386126 bytes
