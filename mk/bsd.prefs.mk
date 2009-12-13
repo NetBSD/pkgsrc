@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.300 2009/09/24 17:24:13 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.301 2009/12/13 08:19:45 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -176,14 +176,18 @@ LOWER_VENDOR?=		unknown
 
 .elif ${OPSYS} == "Interix"
 LOWER_OPSYS?=		interix
-LOWER_OPSYS_VERSUFFIX?=	3
 LOWER_VENDOR?=		pc
-.  if exists(/usr/lib/libc.so.3.5)
-OS_VERSION=		3.5
-.  elif exists(/usr/lib/libc.so.3.1)
-OS_VERSION=		3.1
+.  if exists(/usr/lib/libc.so.5.2) || exists(/usr/lib/x86/libc.so.5.2)
+LOWER_OPSYS_VERSUFFIX=	${LOWER_OS_VERSION:C/([0-9]*).*/\1/}
 .  else
+LOWER_OPSYS_VERSUFFIX?=	3
+.    if exists(/usr/lib/libc.so.3.5)
+OS_VERSION=		3.5
+.    elif exists(/usr/lib/libc.so.3.1)
+OS_VERSION=		3.1
+.    else
 OS_VERSION=		3.0
+.    endif
 .  endif
 
 .elif !empty(OPSYS:MIRIX*)
