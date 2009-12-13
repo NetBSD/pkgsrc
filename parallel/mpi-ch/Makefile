@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2009/12/03 13:06:56 asau Exp $
+# $NetBSD: Makefile,v 1.60 2009/12/13 18:38:10 asau Exp $
 
-DISTNAME=	mpich2-1.0.8
-PKGREVISION=	2
+DISTNAME=	mpich2-1.2.1
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.0.8/
+MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.2.1/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
@@ -27,7 +26,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 
-CONFIGURE_ARGS+=	--disable-f90
+CONFIGURE_ARGS+=	--disable-f90	# problems?
 
 USE_TOOLS+=		perl:run
 
@@ -37,16 +36,12 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpe_callstack_ldflags.conf \
 			${PKG_SYSCONFDIR}/mpe_callstack_ldflags.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_f77env.conf \
 			${PKG_SYSCONFDIR}/mpe_f77env.conf
-CONF_FILES+=		share/${PKGBASE}/examples/mpe_graphics.conf \
-			${PKG_SYSCONFDIR}/mpe_graphics.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_help.conf \
 			${PKG_SYSCONFDIR}/mpe_help.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_log.conf \
 			${PKG_SYSCONFDIR}/mpe_log.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_log_postlib.conf \
 			${PKG_SYSCONFDIR}/mpe_log_postlib.conf
-CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpianim.conf \
-			${PKG_SYSCONFDIR}/mpe_mpianim.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpicheck.conf \
 			${PKG_SYSCONFDIR}/mpe_mpicheck.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpilog.conf \
@@ -55,19 +50,27 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpitrace.conf \
 			${PKG_SYSCONFDIR}/mpe_mpitrace.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_nolog.conf \
 			${PKG_SYSCONFDIR}/mpe_nolog.conf
+
 CONF_FILES+=		share/${PKGBASE}/examples/mpicc.conf \
 			${PKG_SYSCONFDIR}/mpicc.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
 			${PKG_SYSCONFDIR}/mpicxx.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 			${PKG_SYSCONFDIR}/mpif77.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpixxx_opts.conf \
+			${PKG_SYSCONFDIR}/mpixxx_opts.conf
 
-SPECIAL_PERMS+=		bin/mpdroot ${SETUID_ROOT_PERMS}
+# disable bundled OpenPA:
+post-extract:
+	mv $(WRKSRC)/src/openpa $(WRKSRC)/src/openpa.off
+
+.include "../../mk/bsd.prefs.mk"
+
+# FreeBSD 6 hack:
+.if $(OPSYS) == "FreeBSD"
+BUILDLINK_TRANSFORM+=	rm:-lrt
+.endif
 
 .include "../../lang/python/application.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.if !defined(_X11_BUILDLINK3_MK)
-CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11}/include
-CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
-.endif
+.include "../../parallel/openpa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
