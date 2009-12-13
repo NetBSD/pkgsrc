@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.8 2009/12/13 19:43:51 markd Exp $
+
+fix array overrun (CVE-2009-0689)
+
+--- kjs/dtoa.cpp.orig	2005-09-10 20:27:24.000000000 +1200
++++ kjs/dtoa.cpp
+@@ -487,7 +487,7 @@ extern double rnd_prod(double, double), 
+ #define FREE_DTOA_LOCK(n)	/*nothing*/
+ #endif
+ 
+-#define Kmax 15
++#define Kmax (sizeof(size_t) << 3)
+ 
+  struct
+ Bigint {
