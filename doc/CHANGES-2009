@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4580 2009/12/13 13:16:06 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4581 2009/12/13 18:39:25 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6165,3 +6165,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/postfix-current to 2.7.20091209 [martti 2009-12-13]
 	Updated graphics/ruby-rcairo to 1.8.1 [obache 2009-12-13]
 	Updated graphics/libotf to 0.9.10 [obache 2009-12-13]
+	Updated parallel/mpi-ch to 1.2.1 [asau 2009-12-13]
