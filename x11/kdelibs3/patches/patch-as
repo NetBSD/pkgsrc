@@ -1,0 +1,46 @@
+$NetBSD: patch-as,v 1.8 2009/12/13 19:43:51 markd Exp $
+
+http://www.kde.org/info/security/advisory-20091027-1.txt
+
+--- khtml/ecma/xmlhttprequest.cpp.orig	2007-10-08 22:52:07.000000000 +1300
++++ khtml/ecma/xmlhttprequest.cpp
+@@ -342,16 +342,16 @@ void XMLHttpRequest::send(const QString&
+ {
+   aborted = false;
+ 
+-  if (method == "post") {
+-    QString protocol = url.protocol().lower();
++  const QString protocol = url.protocol().lower();
++  // Abandon the request when the protocol is other than "http",
++  // instead of blindly doing a KIO::get on other protocols like file:/.
++  if (!protocol.startsWith("http") && !protocol.startsWith("webdav"))
++  {
++    abort();
++    return;
++  }
+ 
+-    // Abondon the request when the protocol is other than "http",
+-    // instead of blindly changing it to a "get" request.
+-    if (!protocol.startsWith("http") && !protocol.startsWith("webdav"))
+-    {
+-      abort();
+-      return;
+-    }
++  if (method == "post") {
+ 
+     // FIXME: determine post encoding correctly by looking in headers
+     // for charset.
+@@ -763,11 +763,11 @@ Value XMLHttpRequestProtoFunc::tryCall(E
+         if (obj.isValid() && obj.inherits(&DOMDocument::info)) {
+           DOM::Node docNode = static_cast<KJS::DOMDocument *>(obj.imp())->toNode();
+           DOM::DocumentImpl *doc = static_cast<DOM::DocumentImpl *>(docNode.handle());
+-          
++
+           try {
+             body = doc->toString().string();
+             // FIXME: also need to set content type, including encoding!
+-  
++
+           } catch(DOM::DOMException& e) {
+             Object err = Error::create(exec, GeneralError, "Exception serializing document");
+             exec->setException(err);
