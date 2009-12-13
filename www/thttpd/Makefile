@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/09/07 22:12:26 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2009/12/13 17:42:36 asau Exp $
 
 DISTNAME=	thttpd-2.25b
 PKGREVISION=	5
@@ -30,7 +30,8 @@ EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/thttpd.conf ${PKG_SYSCONFDIR}/thttpd.conf
 RCD_SCRIPTS=	thttpd
 
-INSTALLATION_DIRS=	share/thttpd
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	$(PKGMANDIR)/man1 share/thttpd
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	thttpd.conf
@@ -55,8 +56,8 @@ pre-configure:
 			> ${WRKSRC}/config.h
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/thttpd.conf ${PREFIX}/share/examples
-	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/thttpd
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/sitedrivenby.gif ${PREFIX}/share/thttpd
+	${INSTALL_DATA} ${WRKSRC}/thttpd.conf ${DESTDIR}${PREFIX}/share/examples
+	${INSTALL_DATA} ${WRKSRC}/index.html ${DESTDIR}${PREFIX}/share/thttpd
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/sitedrivenby.gif ${DESTDIR}${PREFIX}/share/thttpd
 
 .include "../../mk/bsd.pkg.mk"
