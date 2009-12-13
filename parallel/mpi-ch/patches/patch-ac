@@ -1,39 +1,41 @@
-$NetBSD: patch-ac,v 1.6 2008/12/21 11:41:01 obache Exp $
+$NetBSD: patch-ac,v 1.7 2009/12/13 18:38:11 asau Exp $
 
 Install sample configuration files in example directory.
 
---- src/mpe2/sbin/mpeinstall.in.orig	2008-10-24 20:56:05.000000000 +0400
-+++ src/mpe2/sbin/mpeinstall.in	2008-12-20 18:17:51.000000000 +0300
-@@ -40,13 +40,15 @@
+--- src/mpe2/sbin/mpeinstall.in.orig	2009-10-16 03:50:22.000000000 +0400
++++ src/mpe2/sbin/mpeinstall.in	2009-12-11 12:55:38.000000000 +0300
+@@ -40,12 +40,8 @@
  mandir=@mandir@
- # Since autoconf < 2.60 does not set docdir and htmldir,
- # check if they are set.  If not, set them accordingly.
+ # Since autoconf < 2.60 does not set @docdir@ and @htmldir@,
+ # If not set, docdir=@docdir@ remains, set them accordingly.
 -if [ "$docdir" = "@docdir@" ] ; then
 -    docdir=${datadir}/doc/${PACKAGE}
-+if [ "$docdir" = "@docdir@" ] ; then # don't override what we set.
-+#    docdir=${datadir}/doc/${PACKAGE}
- fi
+-fi
 -if [ "$htmldir" = "@htmldir@" ] ; then
 -    htmldir=${docdir}
-+if [ "$htmldir" = "@htmldir@" ] ; then # don't override what we set.
-+#    htmldir=${docdir}
+-fi
++case "$docdir" in @docdir) docdir=${datadir}/doc/${PACKAGE} ;; esac
++case "$htmldir" in @htmldir) htmldir=${docdir} ;; esac
+ 
+ # Assume PROF_LIBNAME=MPE_LIBNAME.
+ PROF_LIBNAME=@MPE_LIBNAME@
+@@ -494,14 +490,16 @@
+     fi
  fi
  
 +exampledir=${datadir}/examples
 +
- # Assume PROF_LIBNAME=MPE_LIBNAME.
- PROF_LIBNAME=@MPE_LIBNAME@
- MPI_IMPL=@MPI_IMPL@
-@@ -493,10 +495,10 @@
+ # Install compiler configuration files
  if [ -n "$etcbuild_dir" ] ; then
      if [ -d $etcbuild_dir ] ; then
-          echo "Installing $pkgname configuration files to $DESTDIR$sysconfdir"
--         InstallDirRecur $etcbuild_dir $sysconfdir $MODE
-+         InstallDirRecur $etcbuild_dir $exampledir $MODE
-          cd $etcbuild_dir && \
-          for file in *.conf ; do \
--             FixInstallFile $file $sysconfdir/$file ; \
-+             FixInstallFile $file $exampledir/$file ; \
-          done
+-        echo "Installing $pkgname configuration files to $DESTDIR$sysconfdir"
+-        MkDir $sysconfdir
++        echo "Installing $pkgname configuration files to $DESTDIR$exampledir"
++        MkDir $exampledir
+         cd $etcbuild_dir && \
+         for file in *.conf ; do \
+-            FixInstallFile $file $sysconfdir/$file ; \
++            FixInstallFile $file $exampledir/$file ; \
+         done
      fi
  fi
