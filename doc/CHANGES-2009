@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4581 2009/12/13 18:39:25 asau Exp $
+$NetBSD: CHANGES-2009,v 1.4582 2009/12/13 23:27:37 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6166,3 +6166,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/ruby-rcairo to 1.8.1 [obache 2009-12-13]
 	Updated graphics/libotf to 0.9.10 [obache 2009-12-13]
 	Updated parallel/mpi-ch to 1.2.1 [asau 2009-12-13]
+	Updated lang/polyml to 5.3 [asau 2009-12-14]
