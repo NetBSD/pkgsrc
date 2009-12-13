@@ -1,60 +1,15 @@
-$NetBSD: patch-ae,v 1.5 2008/12/21 11:41:01 obache Exp $
+$NetBSD: patch-ae,v 1.6 2009/12/13 18:38:11 asau Exp $
 
 "test ==" portability fixes.
 
---- src/mpid/ch3/channels/nemesis/configure.orig	2008-12-20 17:29:37.000000000 +0300
-+++ src/mpid/ch3/channels/nemesis/configure	2008-12-20 17:41:34.000000000 +0300
-@@ -3790,7 +3790,7 @@
- fi
+--- src/mpid/ch3/channels/nemesis/configure.orig	2009-11-18 19:41:17.000000000 +0300
++++ src/mpid/ch3/channels/nemesis/configure	2009-12-11 06:15:44.000000000 +0300
+@@ -5947,7 +5947,7 @@
  
+     fi;
  
--if test "${nemesis_network}" == "gm" ; then
-+if test "${nemesis_network}" = "gm" ; then
-     ac_safe=`echo "gm.h" | sed 'y%./+-%__p_%'`
- { $as_echo "$as_me:$LINENO: checking for gm.h" >&5
- $as_echo_n "checking for gm.h... " >&6; }
-@@ -3989,7 +3989,7 @@
- fi
- 
- 
--if test "${nemesis_network}" == "ib" ; then
-+if test "${nemesis_network}" = "ib" ; then
-     ac_safe=`echo "verbs.h" | sed 'y%./+-%__p_%'`
- { $as_echo "$as_me:$LINENO: checking for verbs.h" >&5
- $as_echo_n "checking for verbs.h... " >&6; }
-@@ -4188,7 +4188,7 @@
- fi
- 
- 
--if test "${nemesis_network}" == "mx" ; then
-+if test "${nemesis_network}" = "mx" ; then
-     ac_safe=`echo "myriexpress.h" | sed 'y%./+-%__p_%'`
- { $as_echo "$as_me:$LINENO: checking for myriexpress.h" >&5
- $as_echo_n "checking for myriexpress.h... " >&6; }
-@@ -4397,7 +4397,7 @@
- fi
- 
- 
--if test "${nemesis_network}" == "elan" ; then
-+if test "${nemesis_network}" = "elan" ; then
- echo "=== You're about to use the experimental Nemesis/Elan network module."
- echo "=== This module has not been thoroughly tested and some performance issues remain."
- 
-@@ -4599,7 +4599,7 @@
- fi
- 
- 
--if test "${nemesis_network}" == "sctp" ; then
-+if test "${nemesis_network}" = "sctp" ; then
-     ac_safe=`echo "netinet/sctp.h" | sed 'y%./+-%__p_%'`
- { $as_echo "$as_me:$LINENO: checking for netinet/sctp.h" >&5
- $as_echo_n "checking for netinet/sctp.h... " >&6; }
-@@ -4798,7 +4798,7 @@
- fi
- 
- 
--if test "${nemesis_network}" == "psm" ; then
-+if test "${nemesis_network}" = "psm" ; then
-     ac_safe=`echo "psm.h" | sed 'y%./+-%__p_%'`
- { $as_echo "$as_me:$LINENO: checking for psm.h" >&5
- $as_echo_n "checking for psm.h... " >&6; }
+-    if test "${net}" == "newmad" ; then
++    if test "${net}" = "newmad" ; then
+        if test "${ac_cv_header_nm_public_h+set}" = set; then
+   { $as_echo "$as_me:$LINENO: checking for nm_public.h" >&5
+ $as_echo_n "checking for nm_public.h... " >&6; }
