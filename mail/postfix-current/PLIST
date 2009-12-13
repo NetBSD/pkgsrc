@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:04:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/12/13 08:55:57 martti Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
 libexec/postfix/bounce
 libexec/postfix/cleanup
 libexec/postfix/discard
+libexec/postfix/dnsblog
 libexec/postfix/error
 libexec/postfix/flush
 libexec/postfix/lmtp
@@ -21,6 +22,7 @@ libexec/postfix/postfix-files
 libexec/postfix/postfix-script
 libexec/postfix/postfix-wrapper
 libexec/postfix/postmulti-script
+libexec/postfix/postscreen
 libexec/postfix/proxymap
 libexec/postfix/qmgr
 libexec/postfix/qmqpd
@@ -75,6 +77,7 @@ man/man8/bounce.8
 man/man8/cleanup.8
 man/man8/defer.8
 man/man8/discard.8
+man/man8/dnsblog.8
 man/man8/error.8
 man/man8/flush.8
 man/man8/lmtp.8
@@ -83,6 +86,7 @@ man/man8/master.8
 man/man8/oqmgr.8
 man/man8/pickup.8
 man/man8/pipe.8
+man/man8/postscreen.8
 man/man8/proxymap.8
 man/man8/qmgr.8
 man/man8/qmqpd.8
