@@ -1,0 +1,77 @@
+$NetBSD: patch-af,v 1.3 2009/12/13 18:38:11 asau Exp $
+
+Disable bundled OpenPA.
+
+--- examples/Makefile.in.orig	2009-11-18 19:40:35.000000000 +0300
++++ examples/Makefile.in	2009-12-11 15:41:31.000000000 +0300
+@@ -33,6 +33,8 @@
+ INCLUDES = -I../src/include -I${top_srcdir}/src/include
+ LIBS   =
+ 
++LIBOPA =
++
+ EXTRA_PROGRAMS = pmandel pmandel_spawn pmandel_service pmandel_spaserv 	         pmandel_fence hellow icpi parent child srtest srvec sr 		 spawn_merge_parent spawn_merge_child1 spawn_merge_child2
+ 
+ .SUFFIXES:
+@@ -105,47 +107,47 @@
+ all-redirect: cpi
+ 
+ coverage: 
+-parent: parent.o   ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++parent: parent.o   ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o parent parent.o  ${LIBS}
+-hellow: hellow.o   ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++hellow: hellow.o   ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o hellow hellow.o  ${LIBS}
+ pmandel_spawn: pmandel_spawn.o  \
+-	 ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++	 ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o pmandel_spawn pmandel_spawn.o  -lm \
+ 	${LIBS} 
+-pmandel: pmandel.o   ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++pmandel: pmandel.o   ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o pmandel pmandel.o  -lm ${LIBS}
+-icpi: icpi.o   ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++icpi: icpi.o   ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o icpi icpi.o  -lm ${LIBS}
+-child: child.o   ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++child: child.o   ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o child child.o  ${LIBS}
+ spawn_merge_child2: spawn_merge_child2.o  \
+-	 ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++	 ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o spawn_merge_child2 \
+ 	spawn_merge_child2.o  ${LIBS} 
+-cpi: cpi.o   ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++cpi: cpi.o   ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o cpi cpi.o  -lm ${LIBS}
+ pmandel_fence: pmandel_fence.o  \
+-	 ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++	 ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o pmandel_fence pmandel_fence.o  -lm \
+ 	${LIBS} 
+ spawn_merge_parent: spawn_merge_parent.o  \
+-	 ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++	 ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o spawn_merge_parent \
+ 	spawn_merge_parent.o  ${LIBS} 
+ spawn_merge_child1: spawn_merge_child1.o  \
+-	 ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++	 ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o spawn_merge_child1 \
+ 	spawn_merge_child1.o  ${LIBS} 
+ pmandel_spaserv: pmandel_spaserv.o  \
+-	 ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++	 ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o pmandel_spaserv pmandel_spaserv.o  \
+ 	-lm ${LIBS} 
+ pmandel_service: pmandel_service.o  \
+-	 ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++	 ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o pmandel_service pmandel_service.o  \
+ 	-lm ${LIBS} 
+-srtest: srtest.o   ../lib/lib${MPILIBNAME}.a ../src/openpa/src/libopa.a
++srtest: srtest.o   ../lib/lib${MPILIBNAME}.a $(LIBOPA)
+ 	$(C_LINK) $(CFLAGS) $(LDFLAGS) -o srtest srtest.o  ${LIBS}
+ # --------------------------------------------------------------------------
+ htmldoc:
