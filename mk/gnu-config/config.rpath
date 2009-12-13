@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: config.rpath,v 1.2 2005/01/14 00:10:50 tv Exp $
+# $NetBSD: config.rpath,v 1.3 2009/12/13 08:13:07 obache Exp $
 #
 # Output a system dependent set of variables, describing how to set the
 # run time search path of shared libraries in an executable.
@@ -261,7 +261,7 @@ else
       hardcode_minus_L=yes # Not in the search PATH, but as the default
                            # location of the library.
       ;;
-    interix3*)
+    interix[3-9]*)
       hardcode_libdir_flag_spec='-R$libdir'
       hardcode_direct=yes
       ;;
@@ -408,7 +408,7 @@ case "$host_os" in
   hpux9* | hpux10* | hpux11*)
     shlibext=sl
     ;;
-  interix3*)
+  interix[3-9]*)
     shlibext=so
     ;;
   irix5* | irix6*)
