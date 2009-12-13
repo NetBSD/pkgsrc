@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4578 2009/12/13 01:35:53 asau Exp $
+$NetBSD: CHANGES-2009,v 1.4579 2009/12/13 08:56:18 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6162,3 +6162,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mbone/common-mml to 1.2.16nb4 [snj 2009-12-12]
 	Added parallel/openmpi version 1.4 [asau 2009-12-13]
 	Updated benchmarks/skampi to 5.0.4.355 [asau 2009-12-13]
+	Updated mail/postfix-current to 2.7.20091209 [martti 2009-12-13]
