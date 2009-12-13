@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2005/12/06 14:09:29 rillig Exp $
+$NetBSD: distinfo,v 1.15 2009/12/13 17:42:36 asau Exp $
 
 SHA1 (thttpd-2.25b/thttpd-2.25b.tar.gz) = cd0e823233ad73e34ee1c9b871b01050feb9db52
 RMD160 (thttpd-2.25b/thttpd-2.25b.tar.gz) = 2b67abe40dfec7a21ed338a9082594825a9fef0e
@@ -7,8 +7,9 @@ SHA1 (thttpd-2.25b/sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
 RMD160 (thttpd-2.25b/sitedrivenby.gif) = 2e350e6531a800da8796207509c12fb590d0affa
 Size (thttpd-2.25b/sitedrivenby.gif) = 8519 bytes
 SHA1 (patch-aa) = 0f739bebf1ade45a9b9819fc92d48eeb1004eb66
-SHA1 (patch-ab) = 3766ae48fabc1980483e482157d1267971e621df
-SHA1 (patch-ac) = 71b2926a9513bd25a124510ad5f234d029492eb2
+SHA1 (patch-ab) = c6d6a20a00b4ceaf409b849982b8e963debf9530
+SHA1 (patch-ac) = f7fe1fed88b4cb33c9456d6fdc13e2bbc175ced6
 SHA1 (patch-ad) = 234127aaf4a3b5e6536bd08cc80f823800240fac
 SHA1 (patch-af) = 5160b635cdf9b3c997e93e039ef2764f77857018
 SHA1 (patch-ag) = 01410f8d293e2d4033f2a1119b21c05e21dfefbe
+SHA1 (patch-ah) = 97c9ff3c4abc494b137e93f459f5b776f35879df
