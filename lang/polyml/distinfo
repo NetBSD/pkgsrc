@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/20 21:12:51 asau Exp $
+$NetBSD: distinfo,v 1.2 2009/12/13 23:26:25 asau Exp $
 
-SHA1 (polyml.5.2.1.tar.gz) = 39cc9451113d41ca9c491167cf3973dfd55b7446
-RMD160 (polyml.5.2.1.tar.gz) = 2e46e3fca7e642faed72c427c41e25e2b03fdbf5
-Size (polyml.5.2.1.tar.gz) = 4114551 bytes
+SHA1 (polyml.5.3.tar.gz) = a037cd8cf4ce4a43b685b0e0d80f3f1e20d7c9fa
+RMD160 (polyml.5.3.tar.gz) = d9a806945437c147cc41407bd596b2c435ecc21e
+Size (polyml.5.3.tar.gz) = 5289077 bytes
+SHA1 (patch-aa) = 90fc5b96f17080732343ffdefc4cad57cd0f8ff8
