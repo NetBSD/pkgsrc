@@ -1,9 +1,13 @@
-# $NetBSD: tools.Interix.mk,v 1.21 2006/11/06 19:18:42 tv Exp $
+# $NetBSD: tools.Interix.mk,v 1.22 2009/12/13 08:30:01 obache Exp $
 #
 # System-supplied tools for the Interix operating system.
 
 TOOLS_PLATFORM.[?=		/bin/[
+.if !empty(MACHINE_PLATFORM:MInterix-[0-5].*-*)
 TOOLS_PLATFORM.awk?=		/bin/awk -mr 16384
+.else
+TOOLS_PLATFORM.awk?=		/bin/awk
+.endif
 TOOLS_PLATFORM.basename?=	/bin/basename
 TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.chgrp?=		/bin/chgrp
@@ -24,6 +28,9 @@ TOOLS_PLATFORM.false?=		false			# shell builtin
 TOOLS_PLATFORM.fgrep?=		/bin/fgrep
 TOOLS_PLATFORM.file?=		/bin/file
 TOOLS_PLATFORM.find?=		/bin/find
+.if empty(MACHINE_PLATFORM:MInterix-[0-5].*-*)
+TOOOLS_PLATFORM.gawk?=		/usr/contrib/bin/gawk
+.endif
 TOOLS_PLATFORM.grep?=		/bin/grep
 TOOLS_PLATFORM.gunzip?=		/usr/contrib/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/contrib/bin/gunzip -c
@@ -31,8 +38,14 @@ TOOLS_PLATFORM.gzip?=		/usr/contrib/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/bin/id
+.if empty(MACHINE_PLATFORM:MInterix-[0-5].*-*)
+TOOLS_PLATFORM.install?=	/bin/install
+.endif
 .if exists(/bin/install-info)
 TOOLS_PLATFORM.install-info?=	/bin/install-info
+.endif
+.if empty(MACHINE_PLATFORM:MInterix-[0-5].*-*)
+TOOLS_PLATFORM.lex?=		/bin/lex
 .endif
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
@@ -48,6 +61,10 @@ TOOLS_PLATFORM.printf?=		/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
+.if empty(MACHINE_PLATFORM:MInterix-[0-5].*-*)
+TOOLS_PLATFORM.pax?=		/bin/pax
+TOOLS_PLATFORM.sed?=		/bin/sed
+.endif
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.sort?=		/bin/sort
@@ -60,4 +77,14 @@ TOOLS_PLATFORM.tr?=		/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/bin/tsort
 TOOLS_PLATFORM.wc?=		/bin/wc
+.if !empty(MACHINE_PLATFORM:MInterix-[0-5].*-*)
 TOOLS_PLATFORM.xargs?=		/bin/xargs
+.else
+TOOLS_PLATFORM.xargs?=		/bin/xargs -r
+.endif
+.if exists(/usr/contrib/unzip)
+TOOLS_PLATFORM.unzip?=		/usr/contrib/unzip
+.endif
+.if empty(MACHINE_PLATFORM:MInterix-[0-5].*-*)
+TOOLS_PLATFORM.yacc?=		/bin/yacc
+.endif
