@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4582 2009/12/13 23:27:37 asau Exp $
+$NetBSD: CHANGES-2009,v 1.4583 2009/12/14 00:50:59 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6167,3 +6167,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/libotf to 0.9.10 [obache 2009-12-13]
 	Updated parallel/mpi-ch to 1.2.1 [asau 2009-12-13]
 	Updated lang/polyml to 5.3 [asau 2009-12-14]
+	Added x11/tint2 version 0.7.1 [snj 2009-12-14]
