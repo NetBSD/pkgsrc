@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/12/14 08:00:05 agc Exp $
+
+--- Makefile	2009/12/07 22:32:10	1.1
++++ Makefile	2009/12/07 22:37:20
+@@ -1,6 +1,9 @@
+ CFLAGS = -O2 -Wall # -D NOBEEP
+ 
+-default: binaries # doc
++BINDIR=${DESTDIR}${PREFIX}/bin
++MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
++
++default all build: binaries # doc
+ 
+ binaries: seccure-key seccure-encrypt seccure-decrypt seccure-sign \
+ 	seccure-verify seccure-signcrypt seccure-veridec seccure-dh
+@@ -8,15 +11,13 @@
+ doc: seccure.1 seccure.1.html
+ 
+ install: default
+-	install -m0755 seccure-key $(DESTDIR)/usr/bin
+-	ln -f $(DESTDIR)/usr/bin/seccure-key $(DESTDIR)/usr/bin/seccure-encrypt
+-	ln -f $(DESTDIR)/usr/bin/seccure-key $(DESTDIR)/usr/bin/seccure-decrypt
+-	ln -f $(DESTDIR)/usr/bin/seccure-key $(DESTDIR)/usr/bin/seccure-sign
+-	ln -f $(DESTDIR)/usr/bin/seccure-key $(DESTDIR)/usr/bin/seccure-verify
+-	ln -f $(DESTDIR)/usr/bin/seccure-key $(DESTDIR)/usr/bin/seccure-signcrypt
+-	ln -f $(DESTDIR)/usr/bin/seccure-key $(DESTDIR)/usr/bin/seccure-veridec
+-	ln -f $(DESTDIR)/usr/bin/seccure-key $(DESTDIR)/usr/bin/seccure-dh
+-	install -m0644 seccure.1 $(DESTDIR)/usr/share/man/man1
++	${BSD_INSTALL_PROGRAM} seccure-key ${BINDIR}
++	for f in encrypt decrypt sign verify signcrypt veridec dh; do	\
++		rm -f ${BINDIR}/seccure-$$f;				\
++		ln ${BINDIR}/seccure-key ${BINDIR}/seccure-$$f;		\
++		ls -l ${BINDIR}/seccure-$$f;				\
++	done
++	${BSD_INSTALL_MAN} seccure.1 ${MANDIR}/man1
+ 
+ clean:
+ 	rm -f *.o *~ seccure-key seccure-encrypt seccure-decrypt seccure-sign \
