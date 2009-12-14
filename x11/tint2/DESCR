@@ -1,0 +1,16 @@
+Tint2 is a simple panel/taskbar intentionally made for openbox3, but which
+should also work with other window managers.
+
+The goal is to keep a clean and non-intrusive look with code that is
+lightweight and in compliance with freedesktop specifications.
+
+Tint2 taskbar features:
+
+    * color/transparency on font, icon, border and background
+    * customize mouse event
+    * drag and drop task between desktop and switch desktop
+
+Tint2 panel features:
+
+    * clock with font, color and transparency
+    * multi-monitor: panel position adjust to monitor, taskbar by monitor
