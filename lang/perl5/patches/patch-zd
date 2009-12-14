@@ -1,14 +1,15 @@
-$NetBSD: patch-zd,v 1.1 2008/10/10 21:58:44 he Exp $
+$NetBSD: patch-zd,v 1.2 2009/12/14 06:36:57 seb Exp $
 
---- lib/Module/Build/t/tilde.t.orig	2007-12-18 11:47:07.000000000 +0100
-+++ lib/Module/Build/t/tilde.t
-@@ -40,6 +40,9 @@ my $p = 'install_base';
- SKIP: {
-     my $home = $ENV{HOME} ? $ENV{HOME} : undef;
-     skip "Needs case and syntax tweaks for VMS", 14 if $^O eq 'VMS';
+--- lib/Module/Build/t/tilde.t.orig	2009-12-06 21:07:16.000000000 +0000
++++ lib/Module/Build/t/tilde.t	2009-12-06 21:07:18.000000000 +0000
+@@ -44,7 +44,9 @@
+         $home = VMS::Filespec::unixify($home);
+         $home =~ s#/$##;
+     }
+-
 +    if ($home =~ /work\/.home/) {
-+      skip "Skipping test in pkgsrc env to avoid FAKE_HOME trouble", 14;
++      skip "Skipping test in pkgsrc env to avoid FAKE_HOME trouble", 15;
 +    }
      unless (defined $home) {
        my @info = eval { getpwuid $> };
-       skip "No home directory for tilde-expansion tests", 14 if $@;
+       skip "No home directory for tilde-expansion tests", 15 if $@;
