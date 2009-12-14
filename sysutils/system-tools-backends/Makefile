@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/07/22 09:01:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/14 01:39:57 obache Exp $
 #
 
-DISTNAME=		system-tools-backends-2.6.0
-PKGREVISION=		2
+DISTNAME=		system-tools-backends-2.6.1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://system-tools-backends.freedesktop.org/downloads/2.6/
 
@@ -44,6 +43,11 @@ DEPENDS+=	p5-XML-Twig>=3.32:../../textproc/p5-XML-Twig
 DEPENDS+=	p5-Net-DBus>=0.33.6:../../net/p5-Net-DBus
 DEPENDS+=	p5-libwww>=5.820:../../www/p5-libwww
 DEPENDS+=	p5-URI>=1.37:../../www/p5-URI
+
+SUBST_CLASSES+= 		gettext-package
+SUBST_STAGE.gettext-package=	post-configure
+SUBST_FILES.gettext-package=	po/Makefile
+SUBST_SED.gettext-package=	-e 's|@GETTEXT_PACKAGE@|system-tools-backends|g'
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
