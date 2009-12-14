@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:03:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/12/14 18:32:08 joerg Exp $
 bin/kaffe-appletviewer
 bin/kaffe-jar
 bin/kaffe-java
@@ -60,6 +60,7 @@ java/kaffe/jre/lib/${MACHINE_ARCH}/libmath.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libsecurity.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libzip.la
 java/kaffe/jre/lib/logging.properties
+java/kaffe/jre/lib/rt.jar
 java/kaffe/jre/lib/security/Kaffe.security
 java/kaffe/lib/logging.properties
 java/kaffe/lib/security/classpath.security
