@@ -1,33 +1,22 @@
-$NetBSD: patch-aa,v 1.31 2008/10/10 21:58:43 he Exp $
+$NetBSD: patch-aa,v 1.32 2009/12/14 06:36:57 seb Exp $
 
---- lib/ExtUtils/MM_Unix.pm.orig	2007-12-18 11:47:07.000000000 +0100
-+++ lib/ExtUtils/MM_Unix.pm
-@@ -11,8 +11,8 @@ use DirHandle;
- 
- use vars qw($VERSION @ISA
-             $Is_OS2 $Is_VMS $Is_Win32 $Is_Dos
--            $Is_OSF $Is_IRIX  $Is_NetBSD $Is_BSD
--            $Is_SunOS4 $Is_Solaris $Is_SunOS $Is_Interix
-+            $Is_OSF $Is_IRIX  $Is_BSD
-+            $Is_SunOS4 $Is_Solaris $Is_SunOS
-             %Config_Override
-            );
- 
-@@ -30,8 +30,6 @@ BEGIN { 
-     $Is_VMS     = $^O eq 'VMS';
-     $Is_OSF     = $^O eq 'dec_osf';
-     $Is_IRIX    = $^O eq 'irix';
--    $Is_NetBSD  = $^O eq 'netbsd';
--    $Is_Interix = $^O eq 'interix';
-     $Is_SunOS4  = $^O eq 'sunos';
-     $Is_Solaris = $^O eq 'solaris';
-     $Is_SunOS   = $Is_SunOS4 || $Is_Solaris;
-@@ -932,7 +930,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
+--- lib/ExtUtils/MM_Unix.pm.orig	2009-12-06 17:10:46.000000000 +0000
++++ lib/ExtUtils/MM_Unix.pm	2009-12-06 17:12:37.000000000 +0000
+@@ -28,8 +28,6 @@
+     $Is{VMS}     = $^O eq 'VMS';
+     $Is{OSF}     = $^O eq 'dec_osf';
+     $Is{IRIX}    = $^O eq 'irix';
+-    $Is{NetBSD}  = $^O eq 'netbsd';
+-    $Is{Interix} = $^O eq 'interix';
+     $Is{SunOS4}  = $^O eq 'sunos';
+     $Is{Solaris} = $^O eq 'solaris';
+     $Is{SunOS}   = $Is{SunOS4} || $Is{Solaris};
+@@ -931,7 +929,7 @@
  
      my $libs = '$(LDLOADLIBS)';
  
--    if (($Is_NetBSD || $Is_Interix) && $Config{'useshrplib'} eq 'true') {
-+    if ($Is_BSD && $Config{'useshrplib'} eq 'true') {
+-    if (($Is{NetBSD} || $Is{Interix}) && $Config{'useshrplib'} eq 'true') {
++    if ($Is{BSD} && $Config{'useshrplib'} eq 'true') {
  	# Use nothing on static perl platforms, and to the flags needed
  	# to link against the shared libperl library on shared perl
  	# platforms.  We peek at lddlflags to see if we need -Wl,-R
