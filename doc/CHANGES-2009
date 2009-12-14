@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4584 2009/12/14 06:37:08 seb Exp $
+$NetBSD: CHANGES-2009,v 1.4585 2009/12/14 08:02:10 agc Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6169,3 +6169,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/polyml to 5.3 [asau 2009-12-14]
 	Added x11/tint2 version 0.7.1 [snj 2009-12-14]
 	Updated lang/perl5 to 5.10.1 [seb 2009-12-14]
+	Added security/seccure version 0.4 [agc 2009-12-14]
