@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/14 08:00:05 agc Exp $
+
+SHA1 (seccure-0.4.tar.gz) = 883e335f58cc36279c33493ab219f4940a46dab8
+RMD160 (seccure-0.4.tar.gz) = fc35fdf69372c39b20a67c5341b1e36ce6bf8e9f
+Size (seccure-0.4.tar.gz) = 31881 bytes
+SHA1 (patch-aa) = 1a83424f90b94e38ccbb4c1d0fa210032c4aab65
