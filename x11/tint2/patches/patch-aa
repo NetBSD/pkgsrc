@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/12/14 00:47:23 snj Exp $
+
+--- src/tint.c.orig	2009-12-12 19:33:03.000000000 -0200
++++ src/tint.c
+@@ -38,6 +38,9 @@
+ #include "systraybar.h"
+ #include "panel.h"
+ 
++#ifndef SIGCHLD
++# define SIGCHLD SIGCLD
++#endif
+ 
+ void signal_handler(int sig)
+ {
+@@ -53,7 +56,7 @@ void init ()
+ 	signal(SIGINT, signal_handler);
+ 	signal(SIGTERM, signal_handler);
+ 	signal(SIGHUP, signal_handler);
+-	signal(SIGCLD, SIG_IGN);		// don't have to wait() after fork()
++	signal(SIGCHLD, SIG_IGN);		// don't have to wait() after fork()
+ 
+    // set global data
+    memset(&server, 0, sizeof(Server_global));
