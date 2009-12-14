@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2009/10/19 06:03:16 dholland Exp $
+# $NetBSD: Makefile.common,v 1.20 2009/12/14 18:32:08 joerg Exp $
 
 DISTNAME=		kaffe-1.1.7
 CATEGORIES=		lang java
@@ -24,6 +24,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k 	\
 			*-*-mipsel *-*-sparc *-*-powerpc *-*-x86_64
+
+MAKE_FLAGS+=		LIBLTDL=-lltdl
 
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-Dunix
