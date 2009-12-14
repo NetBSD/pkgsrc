@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/15 18:28:56 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2009/12/14 01:39:57 obache Exp $
 
-SHA1 (system-tools-backends-2.6.0.tar.gz) = f688e6755edfa8353927202754d4e87940820893
-RMD160 (system-tools-backends-2.6.0.tar.gz) = 7f2c4674e54b7c7d3f03cf9b55ef12d34a520528
-Size (system-tools-backends-2.6.0.tar.gz) = 567711 bytes
+SHA1 (system-tools-backends-2.6.1.tar.gz) = 1e332ab27c752d8ea3b212f1bcdf18f09295976a
+RMD160 (system-tools-backends-2.6.1.tar.gz) = 266cbd4ae04ee97f5a55cb2d987691ebe41e94ac
+Size (system-tools-backends-2.6.1.tar.gz) = 551450 bytes
 SHA1 (patch-aa) = f523c20200fcce9655056bb0a2a9ccbef3497dff
 SHA1 (patch-ab) = 610dbd0608d93b74d02442b2ad081e5c78c326c1
 SHA1 (patch-ac) = 8cef6e86faf53b0269fb744adc3fa09c7034fd23
@@ -10,4 +10,3 @@ SHA1 (patch-ad) = fb12dcc969123ff0fe2f102bc923192c1b7c6a2f
 SHA1 (patch-ae) = 4946b7a89fb4a1b54e889c1eb5354b2ef5d11727
 SHA1 (patch-af) = 31a00a1287ff84ade4244c728945cce00a3fcf7f
 SHA1 (patch-ag) = 236c5286ebde33e739f19e2f54d8800f679b1178
-SHA1 (patch-ah) = 92927158f333f58f6e42364ff48817696271e641
