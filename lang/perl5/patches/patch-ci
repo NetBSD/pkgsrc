@@ -1,17 +1,8 @@
-$NetBSD: patch-ci,v 1.5 2009/01/18 11:10:50 tnn Exp $
+$NetBSD: patch-ci,v 1.6 2009/12/14 06:36:57 seb Exp $
 
---- pp_sys.c.orig	2007-12-18 11:47:08.000000000 +0100
-+++ pp_sys.c
-@@ -3002,7 +3002,7 @@ PP(pp_ftrread)
- 
-     case OP_FTEEXEC:
- #ifdef PERL_EFF_ACCESS
--	access_mode = W_OK;
-+	access_mode = X_OK;
- #else
- 	use_access = 0;
- #endif
-@@ -4452,12 +4452,15 @@ PP(pp_gmtime)
+--- pp_sys.c.orig	2009-12-06 17:53:56.000000000 +0000
++++ pp_sys.c	2009-12-06 17:55:04.000000000 +0000
+@@ -4463,12 +4463,15 @@
  	when = (Time_t)SvIVx(POPs);
  #endif
  
