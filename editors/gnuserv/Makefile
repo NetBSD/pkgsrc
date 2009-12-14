@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/08/06 01:44:51 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2009/12/14 23:42:10 joerg Exp $
 
 DISTNAME=	gnuserv-3.12.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -21,6 +21,11 @@ post-install:
 	cd ${WRKSRC} && for FILE in ${EL_FILES}; do				\
 		${INSTALL_DATA} $${FILE} $${FILE}c ${EMACS_LISPPREFIX};		\
 	done
+
+.if ${X11_TYPE} == "modular"
+CONFIGURE_ARGS+=	--x-includes=${PREFIX}/include
+CONFIGURE_ARGS+=	--x-libraries=${PREFIX}/lib
+.endif
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
