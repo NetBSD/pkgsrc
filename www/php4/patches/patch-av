@@ -1,0 +1,38 @@
+$NetBSD: patch-av,v 1.5 2009/12/14 19:50:41 joerg Exp $
+
+--- ext/mssql/configure.orig	2009-12-14 20:38:39.000000000 +0100
++++ ext/mssql/configure
+@@ -3842,32 +3842,7 @@ $as_echo "$ext_output" >&6; }
+ 
+ if test "$PHP_MSSQL" != "no"; then
+ 
+-  FREETDS_INSTALLATION_DIR=""
+-  if test "$PHP_MSSQL" = "yes"; then
+-
+-    for i in /usr/local /usr; do
+-      if test -f $i/include/tds.h; then
+-        FREETDS_INSTALLATION_DIR=$i
+-        break
+-      fi
+-    done
+-
+-    if test -z "$FREETDS_INSTALLATION_DIR"; then
+-      as_fn_error "Cannot find FreeTDS in known installation directories" "$LINENO" 5
+-    fi
+-
+-  elif test "$PHP_MSSQL" != "no"; then
+-
+-    if test -f $PHP_MSSQL/include/tds.h; then
+-      FREETDS_INSTALLATION_DIR=$PHP_MSSQL
+-    else
+-      as_fn_error "Directory $PHP_MSSQL is not a FreeTDS installation directory" "$LINENO" 5
+-    fi
+-  fi
+-
+-  if test ! -r "$FREETDS_INSTALLATION_DIR/lib/libtds.a" && test ! -r "$FREETDS_INSTALLATION_DIR/lib/libtds.so"; then
+-     as_fn_error "Could not find $FREETDS_INSTALLATION_DIR/lib/libtds.a|so" "$LINENO" 5
+-  fi
++  FREETDS_INSTALLATION_DIR=$PHP_MSSQL
+ 
+   MSSQL_INCDIR=$FREETDS_INSTALLATION_DIR/include
+   MSSQL_LIBDIR=$FREETDS_INSTALLATION_DIR/lib
