@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/12/14 01:39:57 obache Exp $
 bin/system-tools-backends
 lib/pkgconfig/system-tools-backends-2.0.pc
 ${PLIST.hal}share/PolicyKit/policy/system-tools-backends.policy
@@ -15,6 +15,23 @@ share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.UserConfig.serv
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.UsersConfig.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.service
 share/examples/system-tools-backends/system-tools-backends.conf
+share/locale/bg/LC_MESSAGES/system-tools-backends.mo
+share/locale/ca/LC_MESSAGES/system-tools-backends.mo
+share/locale/da/LC_MESSAGES/system-tools-backends.mo
+share/locale/de/LC_MESSAGES/system-tools-backends.mo
+share/locale/el/LC_MESSAGES/system-tools-backends.mo
+share/locale/es/LC_MESSAGES/system-tools-backends.mo
+share/locale/fi/LC_MESSAGES/system-tools-backends.mo
+share/locale/fr/LC_MESSAGES/system-tools-backends.mo
+share/locale/he/LC_MESSAGES/system-tools-backends.mo
+share/locale/hu/LC_MESSAGES/system-tools-backends.mo
+share/locale/it/LC_MESSAGES/system-tools-backends.mo
+share/locale/pl/LC_MESSAGES/system-tools-backends.mo
+share/locale/pt_BR/LC_MESSAGES/system-tools-backends.mo
+share/locale/ro/LC_MESSAGES/system-tools-backends.mo
+share/locale/sl/LC_MESSAGES/system-tools-backends.mo
+share/locale/sv/LC_MESSAGES/system-tools-backends.mo
+share/locale/zh_CN/LC_MESSAGES/system-tools-backends.mo
 share/system-tools-backends-2.0/files/general_gprs_chatscript
 share/system-tools-backends-2.0/files/general_isdn_ppp_options
 share/system-tools-backends-2.0/files/general_pppoe_ppp_options
