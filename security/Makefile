@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.369 2009/12/11 19:49:50 agc Exp $
+# $NetBSD: Makefile,v 1.370 2009/12/14 08:01:06 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -303,6 +303,7 @@ SUBDIR+=	sbd
 SUBDIR+=	scanssh
 SUBDIR+=	seahorse
 SUBDIR+=	seahorse-plugins
+SUBDIR+=	seccure
 SUBDIR+=	secpanel
 SUBDIR+=	sfs
 SUBDIR+=	sign
