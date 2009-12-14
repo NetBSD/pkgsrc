@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.154 2009/10/23 18:41:02 tnn Exp $
+# $NetBSD: Makefile,v 1.155 2009/12/14 06:36:56 seb Exp $
 
 .include "license.mk"
 
-DISTNAME=	perl-5.10.0
+DISTNAME=	perl-5.10.1
 CATEGORIES=	lang devel perl5
-PKGREVISION=	6
+#PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 

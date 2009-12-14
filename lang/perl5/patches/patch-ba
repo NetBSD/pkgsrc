@@ -1,17 +1,8 @@
-$NetBSD: patch-ba,v 1.5 2008/10/10 21:58:43 he Exp $
+$NetBSD: patch-ba,v 1.6 2009/12/14 06:36:57 seb Exp $
 
---- hints/netbsd.sh.orig	2007-12-18 11:47:07.000000000 +0100
-+++ hints/netbsd.sh
-@@ -79,7 +79,7 @@ case "$osvers" in
- 	;;
- esac
- case "$osvers" in
--0.9*|1.*|2.*|3.*|4.*)
-+0.9*|1.*|2.*|3.*|4.*|5.*)
- 	d_getprotoent_r="$undef"
- 	d_getprotobyname_r="$undef"
- 	d_getprotobynumber_r="$undef"
-@@ -175,23 +175,6 @@ $define|true|[yY]*)
+--- hints/netbsd.sh.orig	2009-12-06 17:21:43.000000000 +0000
++++ hints/netbsd.sh	2009-12-06 17:22:01.000000000 +0000
+@@ -175,23 +175,6 @@
  esac
  EOCBU
  
