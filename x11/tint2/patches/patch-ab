@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/12/14 00:47:23 snj Exp $
+
+--- Makefile.in.orig	2009-12-13 11:11:42.000000000 -0800
++++ Makefile.in	2009-12-13 11:12:53.000000000 -0800
+@@ -676,8 +676,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-dist_docDATA install-dist_examplesDATA \
+-	install-dist_rcDATA
++install-data-am: install-dist_docDATA install-dist_examplesDATA
+ 
+ install-dvi: install-dvi-recursive
+ 
