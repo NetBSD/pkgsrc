@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/11/07 14:48:49 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/12/15 15:16:15 tnn Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -315,6 +315,7 @@ java/openjdk7/include/classfile_constants.h
 java/openjdk7/include/jawt.h
 java/openjdk7/include/jdwpTransport.h
 java/openjdk7/include/jni.h
+java/openjdk7/include/jni_md.h
 java/openjdk7/include/jvmti.h
 java/openjdk7/include/${LOWER_OPSYS}/jawt_md.h
 java/openjdk7/include/${LOWER_OPSYS}/jni_md.h
