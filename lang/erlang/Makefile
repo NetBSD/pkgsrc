@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2009/03/23 18:30:44 tron Exp $
+# $NetBSD: Makefile,v 1.42 2009/12/15 12:07:57 asau Exp $
 
-DISTNAME=		otp_src_${DIST_VERSION_MAJOR}-${DIST_VERSION_MINOR}
+DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
-PKGREVISION=		3
+PKGREVISION=		2
 CATEGORIES=		lang
-MASTER_SITES=		http://erlang.mirror.su.se/download/ \
-			http://www.erlang.org/download/
+MASTER_SITES=		http://www.erlang.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.erlang.org/
@@ -17,10 +16,21 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
+USE_GNU_CONFIGURE_HOST=	${USE_CROSS_COMPILE}
 OVERRIDE_DIRDEPTH=	4
 USE_TOOLS+=		gmake perl:run
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+
+###
+### XXX Linking fails on amd64 due to invalid relocations without this.
+###
+CONFIGURE_ARGS+=	--enable-dynamic-ssl-lib
+
+PTHREAD_OPTS+=		require native
+CONFIGURE_ARGS+=	--enable-threads
+
+MAKE_ENV+=		DESTDIR=${DESTDIR}
 
 SUBST_CLASSES+=		target
 SUBST_STAGE.target=	post-patch
@@ -28,25 +38,46 @@ SUBST_FILES.target=	make/target.mk
 SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
 SUBST_MESSAGE.target=	Fixing target name.
 
-PLIST_SRC=		PLIST.common
+TEST_TARGET=		tests
+TEST_MAKE_FLAGS=	ERL_TOP=$(WRKSRC)
+REPLACE_PERL+=		make/make_emakefile
+
+PLIST_SRC=		PLIST
 
 .include "../../mk/bsd.prefs.mk"
+
+.if exists(${.CURDIR}/PLIST.${OPSYS})
+PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}
+.endif
 
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-sctp
 .endif
+###
+### XXX There may be others here.
+###
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+CONFIGURE_ARGS+=	--enable-kernel-poll
+.endif
 
 .include "options.mk"
 
-PLIST_SRC+=		PLIST.common_end
-
 .include "Makefile.versions"
 
+###
+### Ensure this gets rebuilt.
+###
+pre-build:
+	${RUN} ${RM} -f ${WRKSRC}/lib/stdlib/ebin/dets_v9.beam
+
 post-install:
-	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib/kernel-${VERSION.kernel}/examples
-	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib/ssl-${VERSION.ssl}/examples
-	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/observer-${VERSION.observer}/priv/bin/*.bat
-	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/*.bat
+	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib
+
+# Generate PLIST
+.for _pkg_ _version_ in $(_VERSIONS)
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/$(_pkg_)-$(_version_)\//) {sub(/\/$(_pkg_)-$(_version_)\//,"/$(_pkg_)-$${VERSION.$(_pkg_)}/", $$0);}}
+.endfor
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/releases\/${DIST_VERSION_MAJOR}\//) {sub(/\/releases\/${DIST_VERSION_MAJOR}\//,"/releases/$${VERSION}/", $$0);}}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
