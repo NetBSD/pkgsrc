@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4626 2009/12/15 14:47:03 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4627 2009/12/15 15:15:18 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6211,3 +6211,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/ortp to 0.16.1 [wiz 2009-12-15]
 	Updated wm/echinus to 0.3.9 [wiz 2009-12-15]
 	Updated misc/gwaei to 1.2.1 [wiz 2009-12-15]
+	Updated lang/ecl to 9.12.3 [asau 2009-12-15]
