@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/06/04 23:38:40 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2009/12/15 16:34:53 joerg Exp $
 
 --- libguile/guile.c.orig	2002-12-07 14:41:32.000000000 -0800
 +++ libguile/guile.c
-@@ -88,7 +88,7 @@ main (int argc, char **argv)
+@@ -60,6 +60,8 @@
+ #include <winsock2.h>
+ #endif
+ 
++#include <ltdl.h>
++
+ /* Debugger interface (don't change the order of the following lines) */
+ #define GDB_TYPE SCM
+ #include <libguile/gdb_interface.h>
+@@ -88,7 +90,7 @@ main (int argc, char **argv)
  {
  #ifdef DYNAMIC_LINKING
    /* libtool automagically inserts this variable into your executable... */
