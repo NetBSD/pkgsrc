@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4611 2009/12/15 13:34:06 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4612 2009/12/15 13:34:53 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6196,3 +6196,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-PAR-Dist to 0.47 [wiz 2009-12-15]
 	Updated devel/p5-Params-Validate to 0.94 [wiz 2009-12-15]
 	Updated textproc/p5-Pod-Simple to 3.11 [wiz 2009-12-15]
+	Updated lang/erlang to 13.2.3nb2 [asau 2009-12-15]
