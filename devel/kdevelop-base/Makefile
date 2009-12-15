@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2009/12/03 13:06:52 asau Exp $
+# $NetBSD: Makefile,v 1.81 2009/12/15 21:40:01 joerg Exp $
 
 DISTNAME=	kdevelop_3.5.5.orig
 PKGNAME=	kdevelop-base-3.5.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel kde
 MASTER_SITES=	http://download.opensuse.org/repositories/home:/amilcarlucas/xUbuntu_6.06/
 EXTRACT_SUFX=	.tar.gz
