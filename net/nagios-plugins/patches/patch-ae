@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2008/05/27 21:22:03 tonnerre Exp $
+$NetBSD: patch-ae,v 1.4 2009/12/15 18:59:54 bouyer Exp $
 
---- plugins/Makefile.am.orig	2007-12-12 02:27:48.000000000 +0100
-+++ plugins/Makefile.am
-@@ -162,7 +162,7 @@ install-exec-hook:
+--- plugins/Makefile.am.orig	2009-06-06 09:04:48.000000000 +0200
++++ plugins/Makefile.am	2009-12-15 17:30:29.000000000 +0100
+@@ -170,7 +170,7 @@
  	cd $(DESTDIR)$(libexecdir) && \
  	for i in $(check_tcp_programs) ; do rm -f $$i; ln -s check_tcp $$i ; done ;\
  	if [ -x check_ldap ] ; then rm -f check_ldaps ; ln -s check_ldap check_ldaps ; fi
@@ -10,4 +10,4 @@ $NetBSD: patch-ae,v 1.3 2008/05/27 21:22:03 tonnerre Exp $
 +
  clean-local:
  	rm -f $(check_tcp_programs)
- 
+ 	rm -f NP-VERSION-FILE
