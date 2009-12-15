@@ -1,0 +1,16 @@
+$NetBSD: patch-al,v 1.1 2009/12/15 12:09:20 asau Exp $
+
+--- erts/emulator/hipe/hipe_amd64.c.orig	2007-11-26 13:59:46.000000000 -0500
++++ erts/emulator/hipe/hipe_amd64.c
+@@ -141,9 +141,9 @@ static void morecore(unsigned int alloc_
+     map_start = mmap(map_hint, map_bytes,
+ 		     PROT_EXEC|PROT_READ|PROT_WRITE,
+ 		     MAP_PRIVATE|MAP_ANONYMOUS
+-#if defined(MAP_32BIT)
++#if defined(MAP_32BIT) && !defined(MMAP_MAP_FIXED)
+ 		     |MAP_32BIT
+-#elif defined(__FreeBSD__) || defined(__sun__)
++#elif defined(MMAP_MAP_FIXED)
+ 		     |MAP_FIXED
+ #endif
+ 		     ,
