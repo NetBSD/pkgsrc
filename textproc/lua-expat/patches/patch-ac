@@ -1,0 +1,41 @@
+$NetBSD: patch-ac,v 1.1 2009/12/15 12:43:04 fhajny Exp $
+
+Standard lua locations, compiler fixes
+
+--- config.orig	2006-06-08 20:41:48.000000000 +0000
++++ config
+@@ -1,12 +1,12 @@
+ # Installation directories
+ # System's libraries directory (where binary libraries are installed)
+-LUA_LIBDIR= /usr/local/lib/lua/5.0
++LUA_LIBDIR= $(PREFIX)
+ # System's lua directory (where Lua libraries are installed)
+-LUA_DIR= /usr/local/share/lua/5.0
++LUA_DIR?= $(PREFIX)
+ # Lua includes directory
+-LUA_INC= /usr/local/include
++LUA_INC?= $(PREFIX)/include
+ # Expat includes directory
+-EXPAT_INC= /usr/local/include
++EXPAT_INC?= $(PREFIX)/include
+ 
+ # OS dependent
+ LIB_OPTION= -shared #for Linux
+@@ -17,7 +17,7 @@ LIBNAME= $T.so.$V
+ # (according to Lua 5.1 definition:
+ # first version digit * 100 + second version digit
+ # e.g. Lua 5.0.2 => 500, Lua 5.1 => 501, Lua 5.1.1 => 501)
+-LUA_VERSION_NUM= 500
++LUA_VERSION_NUM?= 501
+ COMPAT_DIR= ../compat/src
+ 
+ # Compilation parameters
+@@ -31,6 +31,6 @@ CWARNS = -Wall -pedantic \
+         -Wshadow \
+         -Wwrite-strings
+ 
+-CFLAGS = $(CWARNS) -ansi -O2 -I$(LUA_INC) \
++CFLAGS += -O2 -I$(LUA_INC) \
+    -I$(COMPAT_DIR) -I$(EXPAT_INC)
+-CC = gcc
++CC? = gcc
