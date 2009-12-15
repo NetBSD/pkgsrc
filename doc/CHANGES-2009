@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4625 2009/12/15 14:28:38 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4626 2009/12/15 14:47:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6210,3 +6210,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/sdlmess to 0.135 [wiz 2009-12-15]
 	Updated net/ortp to 0.16.1 [wiz 2009-12-15]
 	Updated wm/echinus to 0.3.9 [wiz 2009-12-15]
+	Updated misc/gwaei to 1.2.1 [wiz 2009-12-15]
