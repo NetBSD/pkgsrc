@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8781 2009/12/15 13:38:48 wiz Exp $
+$NetBSD: TODO,v 1.8782 2009/12/15 13:39:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1041,7 +1041,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-FCGI-1.3.0
 	o p5-Image-Info-1.30
 	o p5-Spreadsheet-WriteExcel-2.30
-	o p5-YAML-Tiny-1.41
 	o p5-ack-1.92
 	o p5-ispman-1.2
 	o p5-libwww-5.834
