@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4591 2009/12/15 10:45:45 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4592 2009/12/15 10:55:03 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6176,3 +6176,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/libgcrypt to 1.4.5 [wiz 2009-12-15]
 	Updated graphics/libkexiv2 to 0.1.9 [wiz 2009-12-15]
 	Updated net/libnice to 0.0.10 [wiz 2009-12-15]
+	Updated net/ntp4 to 4.2.4p8 [tnn 2009-12-15]
