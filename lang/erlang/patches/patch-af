@@ -1,18 +1,18 @@
-$NetBSD: patch-af,v 1.2 2009/02/07 21:45:43 joerg Exp $
+$NetBSD: patch-af,v 1.3 2009/12/15 12:07:57 asau Exp $
 
-DESTDIR support
-
---- Makefile.in.orig	2007-11-26 19:57:49.000000000 +0100
+--- Makefile.in.orig	2008-02-05 08:37:34.000000000 -0500
 +++ Makefile.in
-@@ -51,6 +51,7 @@ exec_prefix = @exec_prefix@
+@@ -49,8 +49,7 @@ exec_prefix = @exec_prefix@
+ # useful e.g. when installing on a server that stores the files with a
+ # different path from where the clients access them. Or when building
  # rpms.
- #INSTALL_PREFIX =
- # Naah...override `prefix' instead.
-+INSTALL_PREFIX=${DESTDIR}
+-#INSTALL_PREFIX =
+-# Naah...override `prefix' instead.
++INSTALL_PREFIX = $(DESTDIR)
  
  # The directory in which user executables (ERL_BASE_PUB_FILES) are put
  BINDIR      = $(INSTALL_PREFIX)@bindir@
-@@ -707,7 +708,7 @@ else
+@@ -707,7 +706,7 @@ else
  endif
  
  install.Install:
@@ -21,12 +21,3 @@ DESTDIR support
  
  #
  # Install erlang base public files
-@@ -715,7 +716,7 @@ install.Install:
- install.bin:
- 	for file in $(ERL_BASE_PUB_FILES); do \
- 		rm -f $(BINDIR)/$$file; \
--		${LN_S} $(ERLANG_BINDIR)/$$file $(BINDIR)/$$file; \
-+		${LN_S} $(ERLANG_ILIBDIR)/bin/$$file $(BINDIR)/$$file; \
- 	done
- 
- #
