@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8778 2009/12/15 13:34:06 wiz Exp $
+$NetBSD: TODO,v 1.8779 2009/12/15 13:34:53 asau Exp $
 
 Suggested new packages
 ======================
@@ -559,7 +559,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epsg-7.4 [portions in pkg/42419]
 	o epstool-3.08
 	o eric3-4.3.10 [now called eric4]
-	o erlang-13b
 	o erubis-2.6.2
 	o esh-0.8.5
 	o esmtp-1.0
