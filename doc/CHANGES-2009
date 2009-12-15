@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4621 2009/12/15 14:04:55 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4622 2009/12/15 14:07:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6206,3 +6206,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/raptor to 1.4.20 [wiz 2009-12-15]
 	Updated time/etm to 420 [wiz 2009-12-15]
 	Updated mail/evolution-data-server to 2.28.2 [wiz 2009-12-15]
+	Updated security/gnome-keyring to 2.28.2 [wiz 2009-12-15]
