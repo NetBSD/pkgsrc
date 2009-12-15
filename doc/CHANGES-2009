@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4628 2009/12/15 16:19:26 abs Exp $
+$NetBSD: CHANGES-2009,v 1.4629 2009/12/15 16:42:31 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6213,3 +6213,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/gwaei to 1.2.1 [wiz 2009-12-15]
 	Updated lang/ecl to 9.12.3 [asau 2009-12-15]
 	Added www/mserv-php version 0.90 [abs 2009-12-15]
+	Updated graphics/py-gnuplot to 1.8 [joerg 2009-12-15]
