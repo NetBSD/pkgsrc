@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4609 2009/12/15 13:31:23 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4610 2009/12/15 13:33:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6194,3 +6194,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Module-ScanDeps to 0.96 [wiz 2009-12-15]
 	Updated security/p5-Module-Signature to 0.61 [wiz 2009-12-15]
 	Updated devel/p5-PAR-Dist to 0.47 [wiz 2009-12-15]
+	Updated devel/p5-Params-Validate to 0.94 [wiz 2009-12-15]
