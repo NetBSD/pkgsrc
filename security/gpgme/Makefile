@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2009/12/15 19:15:38 drochner Exp $
+# $NetBSD: Makefile,v 1.60 2009/12/15 20:17:33 drochner Exp $
 #
 
 DISTNAME=	gpgme-1.1.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gpgme
 PKG_SUPPORTED_OPTIONS=	gpgsm
+PKG_SUGGESTED_OPTIONS=	gpgsm
 .include "../../mk/bsd.options.mk"
 .if empty(PKG_OPTIONS:Mgpgsm)
 DEPENDS+=		gnupg>=1.4.2:../../security/gnupg
