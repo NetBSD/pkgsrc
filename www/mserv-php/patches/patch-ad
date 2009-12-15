@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/12/15 16:17:44 abs Exp $
+
+--- options.php.orig	2002-05-15 06:35:00.000000000 +0000
++++ options.php
+@@ -86,7 +86,7 @@ Volume: <SELECT NAME=vol onChange="windo
+   <?
+      for ($i=100; $i>=0; $i-=5) {
+          echo "<OPTION VALUE=\"options.php?volume=$i\"";
+-         if ($i == $volume["VOLUME"]) {
++         if ($i >= $volume["VOLUME"] && $i< $volume["VOLUME"]+5) {
+              echo " SELECTED ";
+          }
+          echo ">$i</OPTION>\n";

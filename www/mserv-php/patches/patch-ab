@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/12/15 16:17:44 abs Exp $
+
+--- config.php.orig	2002-05-27 08:32:52.000000000 +0000
++++ config.php
+@@ -1,10 +1,10 @@
+ <?PHP // config.php
+ 
+    // Your descriptive name for this server
+-   $sitename  = "Home Music Server";
++   $sitename  = "Mserv";
+ 
+    // Full path to "mservcmd" binary on your system
+-   $mservcmd = "/opt/bin/mservcmd";
++   $mservcmd = "@PREFIX@/bin/mservcmd";
+ 
+    // Interface colors
+    $bgcolor    = "#990000";
+@@ -14,14 +14,14 @@
+ 
+    // Filter Menu
+    $filters = array (
+-       "Martin's Unheard" => "!(martin=heard)",
+-       "Martin's Best" => "!(martin=awful|martin=bad|martin=neutral)",
+-       "Sarah's Best" => "sarah=good|sarah=superb",
+-       "Martin + Sarah" => "(sarah=superb|sarah=good)&(martin=superb|martin=good)",
+-       "Electronic" => "electronic=good|electronic=superb",
+-       "Smooth" => "smooth=good|smooth=superb",
+-       "Groovy" => "groovy=good|groovy=superb",
+-       "Quiet" => "quiet=good|quiet=superb"
++       # "Martin's Unheard" => "!(martin=heard)",
++       # "Martin's Best" => "!(martin=awful|martin=bad|martin=neutral)",
++       # "Sarah's Best" => "sarah=good|sarah=superb",
++       # "Martin + Sarah" => "(sarah=superb|sarah=good)&(martin=superb|martin=good)",
++       # "Electronic" => "electronic=good|electronic=superb",
++       # "Smooth" => "smooth=good|smooth=superb",
++       # "Groovy" => "groovy=good|groovy=superb",
++       # "Quiet" => "quiet=good|quiet=superb"
+        );
+ 
+ 

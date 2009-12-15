@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/12/15 16:17:44 abs Exp $
+
+--- functions.php.orig	2002-06-17 01:53:30.000000000 +0000
++++ functions.php
+@@ -29,7 +29,7 @@ function print_header($meta="") {
+ function print_rating ($current, $mode, $album, $track="") {
+    $common = "tracks.php?mode=$mode&album=$album&track=$track&rate=";
+ 
+-   $options = array ("SUPERB", "GOOD", "NEUTRAL", "BAD", "AWFUL", "UNHEARD");
++   $options = array ("SUPERB", "GOOD", "NEUTRAL", "BAD", "AWFUL", "heard", "unheard");
+ 
+    $name = "a".$album."t".$track;
+ 
+@@ -37,7 +37,7 @@ function print_rating ($current, $mode, 
+    echo "<SELECT NAME=popup TARGET=mp3tracks onChange=\"window.location=document.$name.popup.options[document.$name.popup.selectedIndex].value\">\n";
+    foreach ($options as $value) {
+       echo "   <OPTION VALUE=\"$common$value\"";
+-      if ($value == $current) {
++      if (strtoupper($value) == $current) {
+          echo " SELECTED";
+       }
+       echo ">$value</OPTION>\n";

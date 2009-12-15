@@ -1,0 +1,69 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/12/15 16:17:44 abs Exp $
+
+--- setup.php.orig	2002-04-07 08:04:39.000000000 +0000
++++ setup.php
+@@ -3,22 +3,55 @@
+ require_once("functions.php");
+ 
+ session_start();
+-session_register("USERNAME");
+-session_register("PASSWORD");
+-if (! isset($USERNAME)) $USERNAME = "";
+-if (! isset($PASSWORD)) $PASSWORD = "";
+-
+-
+-if ( isset($username) and isset($password) ) {
+-    $USERNAME = $username;
+-    $PASSWORD = $password;
++if ( isset($_SESSION["USERNAME"]))
++    $USERNAME = $_SESSION["USERNAME"];
++else
++    $USERNAME = "";
++
++if ( isset($_SESSION["PASSWORD"]))
++    $PASSWORD = $_SESSION["PASSWORD"];
++else
++    $PASSWORD = "";
++
++if ( isset($_REQUEST["username"]) and isset($_REQUEST["password"]) ) {
++    $USERNAME = $_REQUEST["username"];
++    $PASSWORD = $_REQUEST["password"];
+ }
+ 
++$_SESSION["USERNAME"] = $USERNAME;
++$_SESSION["PASSWORD"] = $PASSWORD;
++
+ if (! ($USERNAME and $PASSWORD)) {
+     require("login.html");
+     exit;
+ }
+ 
++if ( isset($_REQUEST["command"]))
++    $command = $_REQUEST["command"];
++else
++    $command = "";
++
++if ( isset($_REQUEST["track"]))
++    $track = $_REQUEST["track"];
++
++if ( isset($_REQUEST["volume"]))
++    $volume = $_REQUEST["volume"];
++
++if ( isset($_REQUEST["rate"]))
++    $rate = $_REQUEST["rate"];
++else
++    $rate = "";
++
++if ( isset($_REQUEST["mode"]))
++    $mode = $_REQUEST["mode"];
++
++if ( isset($_REQUEST["album"]))
++    $album = $_REQUEST["album"];
++else if ( isset($_SESSION["album"]))
++    $album = $_SESSION["album"];
++else
++    $album = "";
++
+ // Setup the mserv command for the current user.
+ $MSERVCMD = $mservcmd." -u ".escapeshellarg($USERNAME)." -p ".escapeshellarg($PASSWORD)." ";
+ 
