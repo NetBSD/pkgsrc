@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:19:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/12/15 12:42:04 wiz Exp $
 bin/gdm-control
 bin/gnome-panel-control
 bin/openbox
 bin/openbox-gnome-session
 bin/openbox-kde-session
 bin/openbox-session
+etc/xdg/openbox/autostart.sh
 include/openbox/3.4/openbox/color.h
 include/openbox/3.4/openbox/font.h
 include/openbox/3.4/openbox/geom.h
@@ -49,6 +50,7 @@ share/locale/ar/LC_MESSAGES/openbox.mo
 share/locale/bn_IN/LC_MESSAGES/openbox.mo
 share/locale/ca/LC_MESSAGES/openbox.mo
 share/locale/cs/LC_MESSAGES/openbox.mo
+share/locale/da/LC_MESSAGES/openbox.mo
 share/locale/de/LC_MESSAGES/openbox.mo
 share/locale/en@boldquot/LC_MESSAGES/openbox.mo
 share/locale/en@quot/LC_MESSAGES/openbox.mo
@@ -57,9 +59,12 @@ share/locale/et/LC_MESSAGES/openbox.mo
 share/locale/eu/LC_MESSAGES/openbox.mo
 share/locale/fi/LC_MESSAGES/openbox.mo
 share/locale/fr/LC_MESSAGES/openbox.mo
+share/locale/hr/LC_MESSAGES/openbox.mo
 share/locale/hu/LC_MESSAGES/openbox.mo
 share/locale/it/LC_MESSAGES/openbox.mo
 share/locale/ja/LC_MESSAGES/openbox.mo
+share/locale/lt/LC_MESSAGES/openbox.mo
+share/locale/lv/LC_MESSAGES/openbox.mo
 share/locale/nl/LC_MESSAGES/openbox.mo
 share/locale/no/LC_MESSAGES/openbox.mo
 share/locale/pl/LC_MESSAGES/openbox.mo
@@ -67,8 +72,11 @@ share/locale/pt/LC_MESSAGES/openbox.mo
 share/locale/pt_BR/LC_MESSAGES/openbox.mo
 share/locale/ru/LC_MESSAGES/openbox.mo
 share/locale/sk/LC_MESSAGES/openbox.mo
+share/locale/sr/LC_MESSAGES/openbox.mo
+share/locale/sr@latin/LC_MESSAGES/openbox.mo
 share/locale/sv/LC_MESSAGES/openbox.mo
-share/locale/ua/LC_MESSAGES/openbox.mo
+share/locale/tr/LC_MESSAGES/openbox.mo
+share/locale/uk/LC_MESSAGES/openbox.mo
 share/locale/vi/LC_MESSAGES/openbox.mo
 share/locale/zh_CN/LC_MESSAGES/openbox.mo
 share/locale/zh_TW/LC_MESSAGES/openbox.mo
