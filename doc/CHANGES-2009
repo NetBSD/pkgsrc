@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4599 2009/12/15 12:36:08 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4600 2009/12/15 12:38:56 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6184,3 +6184,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/libxcb to 1.5 [wiz 2009-12-15]
 	Updated misc/kchmviewer to 5.0 [wiz 2009-12-15]
 	Updated math/mpfr to 2.4.2 [wiz 2009-12-15]
+	Updated lang/chicken to 4.3.0 [asau 2009-12-15]
