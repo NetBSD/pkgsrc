@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8765 2009/12/15 12:24:35 wiz Exp $
+$NetBSD: TODO,v 1.8766 2009/12/15 12:24:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -884,7 +884,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtorrent-0.12.6
 	o libusb-1.0
 	o libv4l-0.6.3
-	o libxcb-1.5
 	o libxkbfile-1.0.6
 	o licq-1.3.7
 	o lighttpd-1.4.25
