@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/01/30 22:19:57 tv Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/15 17:07:43 joerg Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/tool-/ltdl-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	lltdl
 
 COMMENT=	Generic shared library support (libltdl abstraction library)
