@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/09/10 10:06:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/12/15 22:39:40 fhajny Exp $
 ${PG_SUBPREFIX}bin/clusterdb
 ${PG_SUBPREFIX}bin/createdb
 ${PG_SUBPREFIX}bin/createlang
@@ -496,6 +496,13 @@ ${PG_SUBPREFIX}lib/libecpg_compat.la
 ${PG_SUBPREFIX}lib/libpgport.a
 ${PG_SUBPREFIX}lib/libpgtypes.la
 ${PG_SUBPREFIX}lib/libpq.la
+${PG_SUBPREFIX}lib/postgresql/pgxs/config/install-sh
+${PG_SUBPREFIX}lib/postgresql/pgxs/config/mkinstalldirs
+${PG_SUBPREFIX}lib/postgresql/pgxs/src/Makefile.global
+${PG_SUBPREFIX}lib/postgresql/pgxs/src/Makefile.port
+${PG_SUBPREFIX}lib/postgresql/pgxs/src/Makefile.shlib
+${PG_SUBPREFIX}lib/postgresql/pgxs/src/makefiles/pgxs.mk
+${PG_SUBPREFIX}lib/postgresql/pgxs/src/nls-global.mk
 ${PG_SUBPREFIX}man/man1/clusterdb.1
 ${PG_SUBPREFIX}man/man1/createdb.1
 ${PG_SUBPREFIX}man/man1/createlang.1
