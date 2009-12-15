@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2009/03/19 11:54:53 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2009/12/15 12:35:57 wiz Exp $
 #
 
-DISTNAME=		mpfr-2.4.1
+DISTNAME=		mpfr-2.4.2
 CATEGORIES=		math
 MASTER_SITES=		http://www.mpfr.org/mpfr-current/
 
