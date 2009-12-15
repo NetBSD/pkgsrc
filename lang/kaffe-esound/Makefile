@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2009/06/14 22:58:02 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/12/15 23:41:46 joerg Exp $
 #
 
 .include "../../lang/kaffe/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/kaffe/kaffe-esound/}
+PKGREVISION=		1
 
 COMMENT+=		(sound support through esound)
 
