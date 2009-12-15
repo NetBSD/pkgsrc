@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2009/12/15 10:29:35 tnn Exp $
+
+--- src-IL/src/il_dicom.c.orig	2009-03-08 07:10:09.000000000 +0000
++++ src-IL/src/il_dicom.c
+@@ -427,9 +427,11 @@ ILboolean GetUID(ILubyte *UID)
+ 		return IL_FALSE;
+ 
+ 	ValLen = GetLittleUShort();
++	if (ValLen > 64)
++		return IL_FALSE;
+ 	if (iread(UID, ValLen, 1) != 1)
+ 		return IL_FALSE;
+-	UID[64] = 0;  // Just to make sure that our string is terminated.
++	UID[ValLen] = 0;  // Just to make sure that our string is terminated.
+ 
+ 	return IL_TRUE;
+ }
