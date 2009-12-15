@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.gnome,v 1.1 2009/10/22 22:27:23 wiz Exp $
-bin/gwaei
+@comment $NetBSD: PLIST.gnome,v 1.2 2009/12/15 14:46:44 wiz Exp $
+lib/gwaei/kpengine
+man/man1/gwaei.1
 share/applications/gwaei.desktop
 share/gconf/schemas/gwaei.schemas
 share/gnome/help/gwaei/C/glossary.xml
@@ -8,12 +9,11 @@ share/gwaei/character.png
 share/gwaei/character2.png
 share/gwaei/character3.png
 share/gwaei/jdata.dat
-share/gwaei/kanjipad.xml
-share/gwaei/kpengine
+share/gwaei/kanjipad.ui
 share/gwaei/logo.png
-share/gwaei/main.xml
-share/gwaei/radicals.xml
-share/gwaei/settings.xml
+share/gwaei/main.ui
+share/gwaei/radicals.ui
+share/gwaei/settings.ui
 share/icons/hicolor/16x16/actions/non-word-boundary.png
 share/icons/hicolor/16x16/actions/unknown-character.png
 share/icons/hicolor/16x16/actions/word-boundary.png
