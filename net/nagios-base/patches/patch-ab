@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.4 2008/07/21 00:35:42 tonnerre Exp $
+$NetBSD: patch-ab,v 1.5 2009/12/15 18:56:02 bouyer Exp $
 
---- cgi/Makefile.in.orig	2008-02-28 20:26:36.000000000 +0100
-+++ cgi/Makefile.in
-@@ -15,7 +15,7 @@ exec_prefix=@exec_prefix@
+--- cgi/Makefile.in.orig	2009-06-17 05:57:21.000000000 +0200
++++ cgi/Makefile.in	2009-12-15 16:54:45.000000000 +0100
+@@ -15,7 +15,7 @@
  LOGDIR=@localstatedir@
  CFGDIR=@sysconfdir@
  BINDIR=@bindir@
 -CGIDIR=@sbindir@
 +CGIDIR=@libexecdir@/cgi-bin
- HTMLDIR=@datadir@
+ HTMLDIR=@datarootdir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -196,9 +196,9 @@ install-unstripped:
+@@ -196,9 +196,9 @@
  	$(MAKE) install-basic
  
  install-basic:
