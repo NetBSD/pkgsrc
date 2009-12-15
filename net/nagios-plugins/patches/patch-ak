@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.2 2008/05/27 21:22:03 tonnerre Exp $
+$NetBSD: patch-ak,v 1.3 2009/12/15 18:59:54 bouyer Exp $
 
---- gl/mountlist.c.orig	2007-01-24 23:47:25.000000000 +0100
-+++ gl/mountlist.c
-@@ -57,7 +57,11 @@ char *strstr ();
+--- gl/mountlist.c.orig	2009-05-21 23:11:51.000000000 +0200
++++ gl/mountlist.c	2009-12-15 17:31:57.000000000 +0100
+@@ -52,7 +52,11 @@
  # if HAVE_STRUCT_FSSTAT_F_FSTYPENAME
  #  define FS_TYPE(Ent) ((Ent).f_fstypename)
  # else
@@ -15,7 +15,7 @@ $NetBSD: patch-ak,v 1.2 2008/05/27 21:22:03 tonnerre Exp $
  # endif
  #endif /* MOUNTED_GETFSSTAT */
  
-@@ -104,6 +108,10 @@ char *strstr ();
+@@ -99,6 +103,10 @@
  # include <sys/statfs.h>
  #endif
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ak,v 1.2 2008/05/27 21:22:03 tonnerre Exp $
  #ifdef MOUNTED_LISTMNTENT
  # include <mntent.h>
  #endif
-@@ -178,7 +186,7 @@ char *strstr ();
+@@ -169,7 +177,7 @@
  
  #if MOUNTED_GETMNTINFO
  
@@ -35,7 +35,7 @@ $NetBSD: patch-ak,v 1.2 2008/05/27 21:22:03 tonnerre Exp $
  static char *
  fstype_to_string (short int t)
  {
-@@ -275,9 +283,13 @@ fstype_to_string (short int t)
+@@ -266,9 +274,13 @@
  # endif
  
  static char *
@@ -50,7 +50,7 @@ $NetBSD: patch-ak,v 1.2 2008/05/27 21:22:03 tonnerre Exp $
    return (char *) (fsp->f_fstypename);
  # else
    return fstype_to_string (fsp->f_type);
-@@ -413,7 +425,11 @@ read_file_system_list (bool need_fs_type
+@@ -404,7 +416,11 @@
  
  #ifdef MOUNTED_GETMNTINFO	/* 4.4BSD.  */
    {
@@ -62,7 +62,7 @@ $NetBSD: patch-ak,v 1.2 2008/05/27 21:22:03 tonnerre Exp $
      int entries;
  
      entries = getmntinfo (&fsp, MNT_NOWAIT);
-@@ -601,9 +617,17 @@ read_file_system_list (bool need_fs_type
+@@ -592,9 +608,17 @@
    {
      int numsys, counter;
      size_t bufsize;
@@ -80,7 +80,7 @@ $NetBSD: patch-ak,v 1.2 2008/05/27 21:22:03 tonnerre Exp $
      if (numsys < 0)
        return (NULL);
      if (SIZE_MAX / sizeof *stats <= numsys)
-@@ -666,10 +690,18 @@ read_file_system_list (bool need_fs_type
+@@ -657,10 +681,18 @@
  # ifdef GETFSTYP			/* SVR3.  */
  	if (need_fs_type)
  	  {

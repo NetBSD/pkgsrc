@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.3 2008/05/27 21:22:03 tonnerre Exp $
+$NetBSD: patch-af,v 1.4 2009/12/15 18:59:54 bouyer Exp $
 
---- plugins/Makefile.in.orig	2007-12-13 23:42:36.000000000 +0100
-+++ plugins/Makefile.in
-@@ -34,7 +34,7 @@ PRE_UNINSTALL = :
+--- plugins/Makefile.in.orig	2009-09-16 10:38:00.000000000 +0200
++++ plugins/Makefile.in	2009-12-15 17:30:49.000000000 +0100
+@@ -31,7 +31,7 @@
  POST_UNINSTALL = :
  build_triplet = @build@
  host_triplet = @host@
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.3 2008/05/27 21:22:03 tonnerre Exp $
  	check_disk$(EXEEXT) check_dummy$(EXEEXT) check_http$(EXEEXT) \
  	check_load$(EXEEXT) check_mrtg$(EXEEXT) \
  	check_mrtgtraf$(EXEEXT) check_ntp$(EXEEXT) \
-@@ -1131,7 +1131,7 @@ $(check_tcp_programs): check_tcp
+@@ -1539,7 +1539,7 @@
  install-exec-hook:
  	cd $(DESTDIR)$(libexecdir) && \
  	for i in $(check_tcp_programs) ; do rm -f $$i; ln -s check_tcp $$i ; done ;\

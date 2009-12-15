@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
+$NetBSD: patch-ab,v 1.5 2009/12/15 18:59:54 bouyer Exp $
 
---- configure.orig	2008-09-25 10:33:24.000000000 +0200
-+++ configure	2009-03-23 12:39:57.000000000 +0100
-@@ -1268,7 +1268,7 @@
+--- configure.orig	2009-09-16 10:38:03.000000000 +0200
++++ configure	2009-12-15 17:29:32.000000000 +0100
+@@ -1443,7 +1443,7 @@
  pdfdir='${docdir}'
  psdir='${docdir}'
  libdir='${exec_prefix}/lib'
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
  mandir='${datarootdir}/man'
  
  ac_prev=
-@@ -22225,7 +22225,7 @@
+@@ -22562,7 +22562,7 @@
  
  fi
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
    EXTRAS="$EXTRAS check_radius"
  	RADIUSLIBS="-lradiusclient"
  
-@@ -22380,7 +22380,7 @@
+@@ -22717,7 +22717,7 @@
  
  fi
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
    LDAPLIBS="-lldap -llber"\
    LDAPINCLUDE="-I/usr/include/ldap"
  
-@@ -26397,7 +26397,7 @@
+@@ -26671,7 +26671,7 @@
  	then
  		{ echo "$as_me:$LINENO: checking for nslookup syntax" >&5
  echo $ECHO_N "checking for nslookup syntax... $ECHO_C" >&6; }
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
  		then
  			ac_cv_nslookup_command="$PATH_TO_NSLOOKUP"
  			{ echo "$as_me:$LINENO: result: $ac_cv_nslookup_command" >&5
-@@ -26620,7 +26620,7 @@
+@@ -26894,7 +26894,7 @@
  fi
  
  
@@ -47,7 +47,7 @@ $NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -26791,7 +26791,7 @@
+@@ -27065,7 +27065,7 @@
    withval=$with_snmpget_command; PATH_TO_SNMPGET=$withval
  fi
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -26850,7 +26850,7 @@
+@@ -27124,7 +27124,7 @@
    withval=$with_snmpgetnext_command; PATH_TO_SNMPGETNEXT=$withval
  fi
  
@@ -65,7 +65,7 @@ $NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -26859,7 +26859,7 @@
+@@ -27133,7 +27133,7 @@
  
  fi
  
@@ -74,7 +74,7 @@ $NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
  then
  	{ echo "$as_me:$LINENO: checking for Net::SNMP perl module" >&5
  echo $ECHO_N "checking for Net::SNMP perl module... $ECHO_C" >&6; }
-@@ -27026,7 +27026,7 @@
+@@ -27300,7 +27300,7 @@
    withval=$with_fping_command; PATH_TO_FPING=$withval
  fi
  
@@ -83,7 +83,7 @@ $NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
  then
  
  cat >>confdefs.h <<_ACEOF
-@@ -28242,7 +28242,7 @@
+@@ -28516,7 +28516,7 @@
  fi
  
  
@@ -92,7 +92,7 @@ $NetBSD: patch-ab,v 1.4 2009/03/24 19:54:54 bouyer Exp $
    EXTRAS="$EXTRAS check_nt"
  elif test -f ../plugins/check_nt.c ; then
    EXTRAS="$EXTRAS check_nt"
-@@ -47646,6 +47646,10 @@
+@@ -56260,6 +56260,10 @@
    case $ac_option in
    # Handling of the options.
    -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
