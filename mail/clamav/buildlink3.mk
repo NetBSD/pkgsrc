@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.21 2009/04/09 08:03:44 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2009/12/15 21:54:17 joerg Exp $
 
 BUILDLINK_TREE+=	clamav
 
 .if !defined(CLAMAV_BUILDLINK3_MK)
 CLAMAV_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.clamav+=	clamav>=0.95.1
+BUILDLINK_API_DEPENDS.clamav+=	clamav>=0.95.3nb1
 BUILDLINK_PKGSRCDIR.clamav?=	../../mail/clamav
 
 .include "../../archivers/bzip2/buildlink3.mk"

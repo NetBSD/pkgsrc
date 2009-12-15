@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2008/06/12 02:14:48 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2009/12/15 22:13:40 joerg Exp $
 
 DISTNAME=	dictd-1.9.15
 PKGNAME=	dict-client-1.9.15
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.dict.org/pub/dict/
 
