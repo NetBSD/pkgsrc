@@ -1,22 +1,16 @@
-$NetBSD: patch-ad,v 1.3 2009/03/22 10:39:44 martti Exp $
+$NetBSD: patch-ad,v 1.4 2009/12/15 13:30:54 fhajny Exp $
 
-Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
-
---- src/ejabberd.cfg.example.orig	2009-03-12 08:41:02.000000000 +0000
-+++ src/ejabberd.cfg.example	2009-03-22 10:27:16.000000000 +0000
-@@ -108,10 +108,9 @@
+--- src/ejabberd.cfg.example.orig	2009-11-06 19:53:19.000000000 +0000
++++ src/ejabberd.cfg.example
+@@ -109,7 +109,6 @@
   [
  
    {5222, ejabberd_c2s, [
 -
  			%%
  			%% If TLS is compiled and you installed a SSL
--			%% certificate, put the correct path to the 
-+			%% certificate, put the correct path to the
- 			%% file and uncomment this line:
- 			%%
- 			%%{certfile, "/path/to/ssl.pem"}, starttls,
-@@ -124,12 +123,12 @@
+ 			%% certificate, put the correct path to the
+@@ -125,12 +124,12 @@
    %%
    %% To enable the old SSL connection method in port 5223:
    %%
@@ -35,59 +29,25 @@ Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
  
    {5269, ejabberd_s2s_in, [
  			   {shaper, s2s_shaper},
-@@ -139,14 +138,14 @@
+@@ -140,10 +139,10 @@
    %%
    %% ejabberd_service: Interact with external components (transports...)
    %%
 -  %%{8888, ejabberd_service, [
--  %%			    {access, all}, 
--  %%			    {shaper_rule, fast},
--  %%			    {ip, {127, 0, 0, 1}},
--  %%			    {hosts, ["icq.example.org", "sms.example.org"],
--  %%			     [{password, "secret"}]
--  %%			    }
--  %%			   ]},
 +  %%{{8888, "127.0.0.1"},
 +  %% ejabberd_service, [
-+  %%		      {access, all}, 
-+  %%		      {shaper_rule, fast},
-+  %%		      {hosts, ["icq.example.org", "sms.example.org"],
-+  %%		       [{password, "secret"}]
-+  %%		      }
-+  %%		     ]},
- 
-   {5280, ejabberd_http, [
- 			 http_poll, 
-@@ -225,17 +224,26 @@
- %% List of LDAP servers:
- %%{ldap_servers, ["localhost"]}.    
+   %%			    {access, all},
+   %%			    {shaper_rule, fast},
+-  %%			    {ip, {127, 0, 0, 1}},
+   %%			    {hosts, ["icq.example.org", "sms.example.org"],
+   %%			     [{password, "secret"}]
+   %%			    }
+@@ -465,7 +464,7 @@
  %%
--%% LDAP attribute that holds user ID:
--%%{ldap_uids, [{"mail", "%u@mail.example.org"}]}. 
-+%% Encryption of connection to LDAP servers:
-+%%{ldap_encrypt, tls}.
+ %% Full path to a script that generates the image.
  %%
--%% Search base of LDAP directory:
--%%{ldap_base, "dc=example,dc=com"}. 
-+%% Port connect to LDAP server:
-+%%{ldap_port, 636}.
- %%
- %% LDAP manager:
--%%{ldap_rootdn, "dc=example,dc=com"}. 
-+%%{ldap_rootdn, "dc=example,dc=com"}.
- %%
- %% Password to LDAP manager:
--%%{ldap_password, "******"}. 
-+%%{ldap_password, "******"}.
-+%%
-+%% Search base of LDAP directory:
-+%%{ldap_base, "dc=example,dc=com"}.
-+%%
-+%% LDAP attribute that holds user ID:
-+%%{ldap_uids, [{"mail", "%u@mail.example.org"}]}.
-+%%
-+%% LDAP filter:
-+%%{ldap_filter, "(objectClass=shadowAccount)"}.
+-%%{captcha_cmd, "/lib/ejabberd/priv/bin/captcha.sh"}.
++%%{captcha_cmd, "@PREFIX@/lib/erlang/lib/@DISTNAME@/priv/bin/captcha.sh"}.
  
  %%
- %% Anonymous login support:
+ %% Host part of the URL sent to the user.
