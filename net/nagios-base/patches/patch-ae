@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.2 2007/11/26 22:14:14 seb Exp $
+$NetBSD: patch-ae,v 1.3 2009/12/15 18:56:02 bouyer Exp $
 
---- common/Makefile.in.orig	2003-04-10 03:46:01.000000000 +0000
-+++ common/Makefile.in
-@@ -17,7 +17,7 @@ exec_prefix=@exec_prefix@
+--- common/Makefile.in.orig	2009-06-17 05:57:21.000000000 +0200
++++ common/Makefile.in	2009-12-15 17:01:52.000000000 +0100
+@@ -17,7 +17,7 @@
  LOGDIR=@localstatedir@
  CFGDIR=@sysconfdir@
  BINDIR=@bindir@
 -CGIDIR=@sbindir@
 +CGIDIR=@libexecdir@
- HTMLDIR=@datadir@
+ HTMLDIR=@datarootdir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
