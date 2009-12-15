@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4603 2009/12/15 13:00:03 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4604 2009/12/15 13:12:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6188,3 +6188,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated wm/openbox to 3.4.8 [wiz 2009-12-15]
 	Updated time/p5-DateTime-Format-W3CDTF to 0.05 [wiz 2009-12-15]
 	Updated time/p5-DateTime-TimeZone to 1.05 [wiz 2009-12-15]
+	Updated textproc/p5-Encode to 2.39 [wiz 2009-12-15]
