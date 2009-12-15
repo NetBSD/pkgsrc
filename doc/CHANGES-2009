@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4630 2009/12/15 17:13:06 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4631 2009/12/15 17:36:39 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6215,3 +6215,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/mserv-php version 0.90 [abs 2009-12-15]
 	Updated graphics/py-gnuplot to 1.8 [joerg 2009-12-15]
 	Updated devel/libltdl to 1.5.26nb1 [joerg 2009-12-15]
+	Updated devel/libtool to 2.2.6b [joerg 2009-12-15]
