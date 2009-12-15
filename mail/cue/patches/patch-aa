@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2006/10/22 20:59:01 schwarz Exp $
+$NetBSD: patch-aa,v 1.6 2009/12/15 13:11:18 taca Exp $
 
---- configure.orig	2005-04-27 13:54:13.000000000 +0200
-+++ configure	2006-10-22 22:53:47.000000000 +0200
-@@ -675,7 +675,7 @@
+* Prevent extra -O from being added to optimizer flags.
+* Assume that DragonFly's getaddrinfo works.
+* Add "USE_" before cpp definition for CANNA, SSL and ZLIB.  It was generated
+  by fixed AC_PREFIX_PKG in configure.in.
+
+--- configure.orig	2005-04-27 20:54:13.000000000 +0900
++++ configure
+@@ -675,7 +675,7 @@ netbsd*)
  	;;
  esac
  
@@ -11,7 +16,7 @@ $NetBSD: patch-aa,v 1.5 2006/10/22 20:59:01 schwarz Exp $
  
  
  
-@@ -1127,7 +1127,7 @@
+@@ -1127,7 +1127,7 @@ fi
  rm -fr conftest*
  fi
  
@@ -20,7 +25,7 @@ $NetBSD: patch-aa,v 1.5 2006/10/22 20:59:01 schwarz Exp $
  if test "$buggygetaddrinfo" = "yes"; then
  	if test "$ipv6" = "yes"; then
  		echo 'Fatal: You must get working getaddrinfo() function.'
-@@ -1135,6 +1135,7 @@
+@@ -1135,6 +1135,7 @@ if test "$buggygetaddrinfo" = "yes"; the
  		exit 1
  	fi
  fi
@@ -28,3 +33,39 @@ $NetBSD: patch-aa,v 1.5 2006/10/22 20:59:01 schwarz Exp $
  
  echo $ac_n "checking if --enable-idea option is specified""... $ac_c" 1>&6
  echo "configure:1141: checking if --enable-idea option is specified" >&5
+@@ -1216,7 +1217,7 @@ echo "configure:1201: checking for zlib 
+ 		
+ 			zlib=$ac_cv_prefix_zlib
+ 			cat >> confdefs.h <<EOF
+-#define `echo zlib | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'` 1
++#define `echo use_zlib | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'` 1
+ EOF
+ 
+ 			if test -n "$ac_lib"; then
+@@ -1268,7 +1269,7 @@ echo "configure:1253: checking for canna
+ 		
+ 			canna=$ac_cv_prefix_canna
+ 			cat >> confdefs.h <<EOF
+-#define `echo canna | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'` 1
++#define `echo use_canna | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'` 1
+ EOF
+ 
+ 			if test -n "$ac_lib"; then
+@@ -1321,7 +1322,7 @@ echo "configure:1306: checking for ssl d
+ 		
+ 			ssl=$ac_cv_prefix_ssl
+ 			cat >> confdefs.h <<EOF
+-#define `echo ssl | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'` 1
++#define `echo use_ssl | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'` 1
+ EOF
+ 
+ 			if test -n "$ac_lib"; then
+@@ -1362,7 +1363,7 @@ echo "configure:1347: checking for ssl d
+ 		
+ 			ssl=$ac_cv_prefix_ssl
+ 			cat >> confdefs.h <<EOF
+-#define `echo ssl | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'` 1
++#define `echo use_ssl | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'` 1
+ EOF
+ 
+ 			if test -n "$ac_lib"; then
