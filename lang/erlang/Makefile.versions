@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.versions,v 1.8 2009/12/15 13:33:47 asau Exp $
+# $NetBSD: Makefile.versions,v 1.9 2009/12/15 13:53:24 asau Exp $
 
 ERLANG_VERSION=			13.2.3
 DIST_VERSION_MAJOR=		R13B03
@@ -67,3 +67,9 @@ PLIST_SUBST+=	VERSION=${DIST_VERSION_MAJOR}
 VERSION.${name}=${version}
 PLIST_SUBST+=	VERSION.${name}=${version}
 .endfor
+
+# Generate PLIST
+.for _pkg_ _version_ in $(_VERSIONS)
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/$(_pkg_)-$(_version_)\//) {sub(/\/$(_pkg_)-$(_version_)\//,"/$(_pkg_)-$${VERSION.$(_pkg_)}/", $$0);}}
+.endfor
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/releases\/${DIST_VERSION_MAJOR}\//) {sub(/\/releases\/${DIST_VERSION_MAJOR}\//,"/releases/$${VERSION}/", $$0);}}
