@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4605 2009/12/15 13:18:55 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4606 2009/12/15 13:22:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6190,3 +6190,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-DateTime-TimeZone to 1.05 [wiz 2009-12-15]
 	Updated textproc/p5-Encode to 2.39 [wiz 2009-12-15]
 	Updated security/p5-GnuPG-Interface to 0.42 [wiz 2009-12-15]
+	Updated net/p5-IO-Socket-INET6 to 2.57 [wiz 2009-12-15]
