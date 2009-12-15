@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8764 2009/12/15 12:24:20 wiz Exp $
+$NetBSD: TODO,v 1.8765 2009/12/15 12:24:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1168,7 +1168,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-sybase-0.37
 	o py-twisted-9.0.0
 	o py-urwid-0.9.9
-	o py-xcbgen-1.6
 	o py-zconfig-2.3.1
 	o python-3.1.1
 	o qbrew-0.3.9
