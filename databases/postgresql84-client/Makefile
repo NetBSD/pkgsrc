@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/29 06:27:56 adam Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/15 22:39:40 fhajny Exp $
 
 PKGNAME=	postgresql84-client-${BASE_VERS}
+PKGREVISION=	1
 COMMENT=	PostgreSQL database client programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -58,6 +59,25 @@ USE_GNU_READLINE=	yes
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
+SUBST_CLASSES+=		pgxs
+SUBST_STAGE.pgxs=	post-build
+SUBST_MESSAGE.pgxs=	Fixing workdir tools references in pgxs Makefile
+SUBST_FILES.pgxs=	src/Makefile.global
+SUBST_SED.pgxs=		-e 's,${WRKDIR}/.tools,${PREFIX},'
+SUBST_SED.pgxs+=	-e 's,${WRKDIR}/.wrapper,${PREFIX},'
+SUBST_SED.pgxs+=	-e 's,${WRKSRC},/dev/null,'
+
+INSTALLATION_DIRS+=	${PG_SUBPREFIX}lib/postgresql/pgxs
+INSTALLATION_DIRS+=	${PG_SUBPREFIX}lib/postgresql/pgxs/config
+INSTALLATION_DIRS+=	${PG_SUBPREFIX}lib/postgresql/pgxs/src
+INSTALLATION_DIRS+=	${PG_SUBPREFIX}lib/postgresql/pgxs/src/makefiles
+
+DEST_PG_PGXS=	${DESTDIR}${PG_PREFIX}/lib/postgresql/pgxs
+PG_PGXS_FILES=	config/install-sh config/mkinstalldirs
+PG_PGXS_FILES+=	src/makefiles/pgxs.mk src/Makefile.global
+PG_PGXS_FILES+=	src/Makefile.port src/Makefile.shlib
+PG_PGXS_FILES+=	src/nls-global.mk
+
 # On Solaris, avoid conflicts between "${SSLBASE}/include/openssl/des.h"
 # and "/usr/include/crypt.h" -- we want the definitions in the former.
 .if ${OPSYS} == "SunOS"
@@ -71,6 +91,9 @@ post-install:
 		bug.template;						\
 	do								\
 		${INSTALL_DATA} $$file ${DESTDIR}${PG_DOC_DIR}/$$file;	\
-        done
+        done;								\
+	for file in ${PG_PGXS_FILES}; do				\
+		${INSTALL_DATA} ${WRKSRC}/$$file ${DEST_PG_PGXS}/$$file;\
+	done
 
 .include "../../mk/bsd.pkg.mk"
