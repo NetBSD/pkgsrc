@@ -1,30 +1,30 @@
-$NetBSD: patch-aa,v 1.2 2008/05/13 15:15:51 obache Exp $
+$NetBSD: patch-aa,v 1.3 2009/12/15 08:29:35 jnemeth Exp $
 
---- src/icqconf.cc.orig	2008-04-08 17:51:09.000000000 +0000
+--- src/icqconf.cc.orig	2009-08-09 06:41:55.000000000 -0700
 +++ src/icqconf.cc
-@@ -27,7 +27,11 @@
- #include <dirent.h>
+@@ -28,7 +28,11 @@
  #include <fstream>
  
--#if defined(__sun__) || defined(__NetBSD__)
+ 
+-#if defined(__sun__) || defined(__NetBSD__) || defined(__sgi__)
 +#ifdef __NetBSD__
 +/* Find out about __NetBSD_Version__ */
 +#  include <sys/param.h>
 +#endif
-+#if defined(__sun) || (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
++#if defined(__sun) || defined(__sgi) || (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
  #include <sys/statvfs.h>
  #endif
  
-@@ -797,12 +801,12 @@ void icqconf::loadsounds() {
+@@ -920,12 +924,12 @@ void icqconf::loadsounds() {
  
  	    switch(rs) {
  		case rscard:
--		    fo << "*\tmsg\tplay " << SHARE_DIR << "/msg.wav" << endl;
--		    fo << "*\turl\tplay " << SHARE_DIR << "/url.wav" << endl;
--		    fo << "*\temail\tplay " << SHARE_DIR << "/email.wav" << endl;
--		    fo << "*\tonline\tplay " << SHARE_DIR << "/online.wav" << endl;
--		    fo << "*\toffline\tplay " << SHARE_DIR << "/offline.wav" << endl;
--		    fo << "*\tsms\tplay " << SHARE_DIR << "/sms.wav" << endl;
+-		    fo << "*\tmsg\taplay " << SHARE_DIR << "/msg.wav" << endl;
+-		    fo << "*\turl\taplay " << SHARE_DIR << "/url.wav" << endl;
+-		    fo << "*\temail\taplay " << SHARE_DIR << "/email.wav" << endl;
+-		    fo << "*\tonline\taplay " << SHARE_DIR << "/online.wav" << endl;
+-		    fo << "*\toffline\taplay " << SHARE_DIR << "/offline.wav" << endl;
+-		    fo << "*\tsms\taplay " << SHARE_DIR << "/sms.wav" << endl;
 +		    fo << "*\tmsg\t" AUDIO_PLAYER " " << SHARE_DIR << "/msg.wav" << endl;
 +		    fo << "*\turl\t" AUDIO_PLAYER " " << SHARE_DIR << "/url.wav" << endl;
 +		    fo << "*\temail\t" AUDIO_PLAYER " " << SHARE_DIR << "/email.wav" << endl;
@@ -34,12 +34,12 @@ $NetBSD: patch-aa,v 1.2 2008/05/13 15:15:51 obache Exp $
  		    break;
  
  		case rsspeaker:
-@@ -1735,7 +1739,7 @@ string icqconf::gethttpproxypasswd() con
+@@ -1870,7 +1874,7 @@ string icqconf::gethttpproxypasswd() con
  void icqconf::checkdiskspace() {
      fenoughdiskspace = true;
  
--#if !(defined(__sun__) || defined(__NetBSD__))
-+#if !(defined(__sun) || (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900)))
+-#if !(defined(__sun__) || defined(__NetBSD__) || defined(__sgi__))
++#if !(defined(__sun) || defined(__sgi) || (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900)))
      struct statfs st;
-     if(!statfs(conf.getdirname().c_str(), &st)) {
+     if(!statfs(conf->getdirname().c_str(), &st)) {
  #else
