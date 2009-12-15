@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/15 16:17:44 abs Exp $
+
+SHA1 (mserv-php-090.tgz) = 12f3cc4dc70c0c923bfcf3fb65cfd0195f112cef
+RMD160 (mserv-php-090.tgz) = 9e4dbc38943f3203beaa25418694dc104ad4808a
+Size (mserv-php-090.tgz) = 15374 bytes
+SHA1 (patch-aa) = 59c5dd63c7430cfca634e59111bc24e578730584
+SHA1 (patch-ab) = 4681305b964632acd82a51ad914ab2c4590eb26f
+SHA1 (patch-ac) = 459bb8accd5f6ff7084a1d6a7d325e9618d0e10b
+SHA1 (patch-ad) = ea66cb91e57346203e85043bd034916451ee9cc3
+SHA1 (patch-ae) = 7d35ad4287639aa4d4ca92b50d002e8637b37226
+SHA1 (patch-af) = 08ada6c2682cdd3db18e9c3040846a361e9e1d7f
