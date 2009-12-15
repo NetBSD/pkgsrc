@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/10/02 12:38:44 hasso Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/15 22:10:39 joerg Exp $
 
 DISTNAME=		openct-0.6.18
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/openct/
 
