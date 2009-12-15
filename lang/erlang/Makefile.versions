@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.versions,v 1.7 2009/12/15 12:07:57 asau Exp $
+# $NetBSD: Makefile.versions,v 1.8 2009/12/15 13:33:47 asau Exp $
 
 ERLANG_VERSION=			13.2.3
 DIST_VERSION_MAJOR=		R13B03
@@ -31,7 +31,7 @@ _VERSIONS=					\
 	ic			4.2.23		\
 	inets			5.2		\
 	inviso			0.6.1		\
-	jinterface		1.4		\
+	jinterface		1.5.2		\
 	kernel			2.13.4		\
 	megaco			3.13		\
 	mnesia			4.4.12		\
