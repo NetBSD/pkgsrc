@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2009/12/15 23:36:29 asau Exp $
+
+Reuse strcmp to simplify logic and fix build.
+Shared between FriCAS and OpenAxiom.
+
+--- src/hyper/addfile.c.orig	2009-07-10 00:50:28.000000000 +0400
++++ src/hyper/addfile.c	2009-12-15 22:32:55.000000000 +0300
+@@ -50,13 +50,7 @@
+ strpostfix(char *s, char *t)
+ {
+     int slen = strlen(s), tlen = strlen(t);
+-
+-    if (tlen > slen)
+-        return 0;
+-    while (tlen > 0)
+-        if (s[--slen] != t[--tlen])
+-            return 0;
+-    return 1;
++    return (tlen < slen) && !strcmp(s+slen-tlen, t);
+ }
+ 
+ /* extend_ht : just checks the name and adds a .ht if needed */
