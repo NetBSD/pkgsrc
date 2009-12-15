@@ -1,0 +1,30 @@
+$NetBSD: patch-an,v 1.1 2009/12/15 12:09:20 asau Exp $
+
+--- erts/emulator/hipe/hipe_ppc.c.orig	2007-11-26 13:59:47.000000000 -0500
++++ erts/emulator/hipe/hipe_ppc.c
+@@ -101,7 +101,11 @@ static void *new_code_mapping(void)
+ 	map_hint = (char*)(512*1024*1024); /* 0.5GB */
+     map_start = mmap(map_hint, SEGMENT_NRBYTES,
+ 		     PROT_EXEC|PROT_READ|PROT_WRITE,
+-		     MAP_PRIVATE|MAP_ANONYMOUS,
++		     MAP_PRIVATE|MAP_ANONYMOUS
++#ifdef MMAP_MAP_FIXED
++		     | MAP_FIXED
++#endif
++		     ,
+ 		     -1, 0);
+     if (map_start != MAP_FAILED &&
+ 	(((unsigned long)map_start + (SEGMENT_NRBYTES-1)) & ~0x7FFFFFFFUL)) {
+@@ -115,7 +119,11 @@ static void *new_code_mapping(void)
+ {
+     return mmap(0, SEGMENT_NRBYTES,
+ 		PROT_EXEC|PROT_READ|PROT_WRITE,
+-		MAP_PRIVATE|MAP_ANONYMOUS,
++		MAP_PRIVATE|MAP_ANONYMOUS
++#ifdef MMAP_MAP_FIXED
++		| MAP_FIXED
++#endif
++		,
+ 		-1, 0);
+ }
+ #endif

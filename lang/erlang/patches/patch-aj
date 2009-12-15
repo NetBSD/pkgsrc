@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2009/12/15 12:09:20 asau Exp $
+
+--- lib/odbc/c_src/odbcserver.c.orig	2008-06-10 16:57:40.000000000 +0400
++++ lib/odbc/c_src/odbcserver.c	2008-08-20 00:23:22.000000000 +0400
+@@ -114,6 +114,7 @@
+ #include <sys/socket.h>
+ #include <sys/uio.h>
+ #include <netdb.h>
++#include <netinet/in.h>
+ #endif
+ 
+ #include <limits.h>

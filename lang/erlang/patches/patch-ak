@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2009/12/15 12:09:20 asau Exp $
+
+--- lib/sasl/src/rb.erl.orig	2007-12-04 08:02:32.000000000 -0500
++++ lib/sasl/src/rb.erl
+@@ -414,7 +414,7 @@ read_report(Fd) ->
+ 		    Ref = make_ref(),
+ 		    case (catch {Ref,binary_to_term(Bin)}) of
+ 			{'EXIT',_} ->
+-			    {error, "Inclomplete erlang term in log"};
++			    {error, "Incomplete erlang term in log"};
+ 			{Ref,Term} ->
+ 			    {ok, Term}
+ 		    end
