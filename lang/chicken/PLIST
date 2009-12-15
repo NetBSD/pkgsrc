@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/08/08 15:12:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/12/15 12:38:04 asau Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-install
@@ -36,8 +36,10 @@ lib/chicken/4/tcp.import.so
 lib/chicken/4/utils.import.so
 lib/libchicken.a
 lib/libchicken.so
+lib/libchicken.so.4
 lib/libuchicken.a
 lib/libuchicken.so
+lib/libuchicken.so.4
 man/man1/chicken-bug.1
 man/man1/chicken-install.1
 man/man1/chicken-profile.1
@@ -63,6 +65,7 @@ share/doc/${PKGNAME}/html/Embedding.html
 share/doc/${PKGNAME}/html/Extensions to the standard.html
 share/doc/${PKGNAME}/html/Extensions.html
 share/doc/${PKGNAME}/html/Foreign type specifiers.html
+share/doc/${PKGNAME}/html/Getting started.html
 share/doc/${PKGNAME}/html/Interface to external functions and variables.html
 share/doc/${PKGNAME}/html/Locations.html
 share/doc/${PKGNAME}/html/Modules and macros.html
@@ -71,6 +74,7 @@ share/doc/${PKGNAME}/html/Non-standard read syntax.html
 share/doc/${PKGNAME}/html/Other support procedures.html
 share/doc/${PKGNAME}/html/Parameters.html
 share/doc/${PKGNAME}/html/Supported language.html
+share/doc/${PKGNAME}/html/The R5RS standard.html
 share/doc/${PKGNAME}/html/The User's Manual.html
 share/doc/${PKGNAME}/html/Unit data-structures.html
 share/doc/${PKGNAME}/html/Unit eval.html
