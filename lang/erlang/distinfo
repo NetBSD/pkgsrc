@@ -1,13 +1,25 @@
-$NetBSD: distinfo,v 1.19 2009/04/07 18:36:52 hasso Exp $
+$NetBSD: distinfo,v 1.20 2009/12/15 12:07:57 asau Exp $
 
-SHA1 (erlang/otp_src_R12B-0.tar.gz) = e2c6e18d22e34a799fc6bc25fa2d25eedb30bccc
-RMD160 (erlang/otp_src_R12B-0.tar.gz) = cb07ea37f2b56e1ea2fc07c9063b647df7635b2b
-Size (erlang/otp_src_R12B-0.tar.gz) = 41074760 bytes
-SHA1 (patch-aa) = 910d2635fdb5332837e2437c4ec88ef88bff6d65
+SHA1 (erlang/otp_src_R13B03.tar.gz) = 161f22d498da244d4b32181a78b04d97523857d1
+RMD160 (erlang/otp_src_R13B03.tar.gz) = 7cf3d1cf6cdf73ff19f5a416396c4024e641ec29
+Size (erlang/otp_src_R13B03.tar.gz) = 57524485 bytes
 SHA1 (patch-ab) = f0a148c893693a7877ff4d1678535a78179e32a2
 SHA1 (patch-ac) = ac9af68982593faa6736f70f5c196b6835748f58
-SHA1 (patch-ae) = 4b338469a00513835c774de001b1c938636df418
-SHA1 (patch-af) = 3ad903b5f9fab6ff57084ff1186a4b7a6dce777e
-SHA1 (patch-ag) = ca0ac13b64490fc387418192becf8e85fea427b5
-SHA1 (patch-ah) = 77780f9fcc82cedf6f06f02f9b19ca83cf1a8879
-SHA1 (patch-ai) = 6ce89f9170d26594c2fce2ec21ab95cef8b08980
+SHA1 (patch-ae) = 59075d269ac05bf029c41e8eab89e7669d80514f
+SHA1 (patch-af) = 357ec0b48484cb03f8ef03959cb59f369fbabe41
+SHA1 (patch-ag) = a0aba985d765050dadc0d8410c3a891954ffeaa7
+SHA1 (patch-ah) = ba9af73a5f21490b52578118394dd9dd3a8a46d1
+SHA1 (patch-ai) = 0def85522da0a5fcac87577f8c14077e3246ebc9
+SHA1 (patch-aj) = 23592345bbc06bf8e50ed40e0b802c2339ca44c2
+SHA1 (patch-ak) = 46e5a21f5627f896d3e22c0a48317b37be25ce7b
+SHA1 (patch-al) = 08bd0849d31b59347392369f10a2fb54a928e4f4
+SHA1 (patch-am) = 58b5837a85073cd5e896bf5817dae25b423478b8
+SHA1 (patch-an) = f3a11643e3eb73a3757bea65a1e053724b88c844
+SHA1 (patch-ao) = 48a41181b6dfbe42a163d8853d1c07faeafb9639
+SHA1 (patch-ap) = 81afc77c91712792c4ada381015f949a28f4baf2
+SHA1 (patch-aq) = b9917e5da127958933c4338493b907ef820add85
+SHA1 (patch-ar) = f602b05a46de98a95b2e2567a5ba04ecb3feec6f
+SHA1 (patch-as) = b989c04579c37e9370288edaf296172bb07be046
+SHA1 (patch-at) = f0b8733b9ce3ac6c15274e83464499779ae25399
+SHA1 (patch-au) = fe924a3306a278f51d10b1d2ad14432ec9f1428e
+SHA1 (patch-av) = 6f54c914d760145298036aeabf81735f91acdd06
