@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2009/05/19 08:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/12/15 13:30:54 fhajny Exp $
 
-DISTNAME=	ejabberd-2.0.5
-#PKGREVISION=	1
+DISTNAME=	ejabberd-2.1.0
 CATEGORIES=	chat
-MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.5/
+MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.1.0/
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.ejabberd.im/
@@ -26,7 +25,6 @@ CONFIGURE_ARGS+=	--enable-mod_muc
 CONFIGURE_ARGS+=	--enable-eldap
 CONFIGURE_ARGS+=	--enable-web
 CONFIGURE_ARGS+=	--enable-tls
-CONFIGURE_ARGS+=	--enable-odbc
 CONFIGURE_ARGS+=	--enable-ejabberd_zlib
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
@@ -75,6 +73,8 @@ PLIST_SUBST+=		EJABBERD_EXDIR=${EJABBERD_EXDIR}
 
 PKG_GROUPS+=		${EJABBERD_GROUP}
 PKG_USERS+=		${EJABBERD_USER}:${EJABBERD_GROUP}
+PKG_GECOS.${EJABBERD_USER}=	ejabberd user
+PKG_HOME.${EJABBERD_USER}=	${EJABBERD_DB}
 
 EGDIR=			${PREFIX}/${EJABBERD_EXDIR}
 
@@ -85,6 +85,8 @@ INSTALLATION_DIRS+=	${EGDIR}
 CONF_FILES=		${EGDIR}/ejabberd.cfg ${PKG_SYSCONFDIR}/ejabberd.cfg
 CONF_FILES+=		${EGDIR}/ejabberdctl.cfg ${PKG_SYSCONFDIR}/ejabberdctl.cfg
 CONF_FILES+=		${EGDIR}/inetrc ${PKG_SYSCONFDIR}/inetrc
+
+REPLACE_SH=		src/ejabberdctl.template tools/captcha.sh
 
 post-patch:
 	${RM} -f ${WRKSRC}/doc/guide.tex.orig
@@ -99,12 +101,14 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/Makefile.in
+SUBST_FILES.paths+=	src/ejabberd.cfg.example
 SUBST_FILES.paths+=	src/ejabberdctl.template
 SUBST_FILES.paths+=	doc/guide.tex
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@JABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_DB@,${EJABBERD_DB},g'
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@DISTNAME@,${DISTNAME},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_VARDIR@,${VARBASE},g'
 

@@ -1,38 +1,26 @@
-$NetBSD: patch-ae,v 1.3 2008/11/12 13:13:59 martti Exp $
+$NetBSD: patch-ae,v 1.4 2009/12/15 13:30:54 fhajny Exp $
 
-Modified for pkgsrc
-
---- src/ejabberdctl.template.orig	2008-08-27 12:37:52.000000000 +0300
+--- src/ejabberdctl.template.orig	2009-11-16 20:25:51.344260518 +0000
 +++ src/ejabberdctl.template
-@@ -14,8 +14,8 @@ ERLANG_NODE=$NODE@$HOST
- ERL=@erl@
- ROOTDIR=@rootdir@
- EJABBERD_CONFIG_PATH=$ROOTDIR/etc/ejabberd/ejabberd.cfg
--LOGS_DIR=$ROOTDIR/var/log/ejabberd/
--EJABBERD_DB=$ROOTDIR/var/lib/ejabberd/db/$NODE
-+LOGS_DIR=@EJABBERD_LOGDIR@
-+EJABBERD_DB=@EJABBERD_VARDIR@/spool/ejabberd/db/$NODE
- 
- # read custom configuration
- CONFIG=$ROOTDIR/etc/ejabberd/ejabberdctl.cfg
-@@ -43,16 +43,16 @@ NAME=-name
- ERLANG_OPTS="+K $POLL -smp $SMP +P $ERL_PROCESSES"
+@@ -43,10 +43,10 @@ if [ "$EJABBERDCTL_CONFIG_PATH" = "" ] ;
+ fi
+ [ -f "$EJABBERDCTL_CONFIG_PATH" ] && . "$EJABBERDCTL_CONFIG_PATH"
+ if [ "$LOGS_DIR" = "" ] ; then
+-    LOGS_DIR=@LOCALSTATEDIR@/log/ejabberd
++    LOGS_DIR=@EJABBERD_LOGDIR@
+ fi
+ if [ "$SPOOLDIR" = "" ] ; then
+-    SPOOLDIR=@LOCALSTATEDIR@/lib/ejabberd
++    SPOOLDIR=@EJABBERD_DB@
+ fi
+ if [ "$EJABBERD_DOC_PATH" = "" ] ; then
+     EJABBERD_DOC_PATH=@DOCDIR@
+@@ -83,7 +83,7 @@ ERLANG_OPTS="+K $POLL -smp $SMP +P $ERL_
  
  # define additional environment variables
--EJABBERD_EBIN=$ROOTDIR/var/lib/ejabberd/ebin
--EJABBERD_MSGS_PATH=$ROOTDIR/var/lib/ejabberd/priv/msgs
--EJABBERD_SO_PATH=$ROOTDIR/var/lib/ejabberd/priv/lib
-+EJABBERD_EBIN=$ROOTDIR/lib/erlang/lib/@DISTNAME@/ebin
-+EJABBERD_MSGS_PATH=$ROOTDIR/lib/erlang/lib/@DISTNAME@/priv/msgs
-+EJABBERD_SO_PATH=$ROOTDIR/lib/erlang/lib/@DISTNAME@/priv/lib
- EJABBERD_BIN_PATH=$ROOTDIR/var/lib/ejabberd/priv/bin
- EJABBERD_LOG_PATH=$LOGS_DIR/ejabberd.log
- SASL_LOG_PATH=$LOGS_DIR/sasl.log
- DATETIME=`date "+%Y%m%d-%H%M%S"`
- ERL_CRASH_DUMP=$LOGS_DIR/erl_crash_$DATETIME.dump
- ERL_INETRC=$ROOTDIR/etc/ejabberd/inetrc
--HOME=$ROOTDIR/var/lib/ejabberd
-+HOME=@EJABBERD_VARDIR@/spool/ejabberd/db/$NODE
- 
- # export global variables
- export EJABBERD_CONFIG_PATH
+ if [ "$EJABBERDDIR" = "" ]; then
+-    EJABBERDDIR=@LIBDIR@/ejabberd
++    EJABBERDDIR=@LIBDIR@/erlang/lib/@DISTNAME@
+ fi
+ if [ "$EJABBERD_EBIN_PATH" = "" ]; then
+     EJABBERD_EBIN_PATH=$EJABBERDDIR/ebin
