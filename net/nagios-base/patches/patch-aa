@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2008/07/21 00:35:42 tonnerre Exp $
+$NetBSD: patch-aa,v 1.7 2009/12/15 18:56:02 bouyer Exp $
 
---- Makefile.in.orig	2008-04-13 20:34:26.000000000 +0200
-+++ Makefile.in
-@@ -23,17 +23,16 @@ prefix=@prefix@
+--- Makefile.in.orig	2009-06-17 05:57:21.000000000 +0200
++++ Makefile.in	2009-12-15 16:53:59.000000000 +0100
+@@ -24,17 +24,16 @@
  exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CHECKRESULTDIR=@CHECKRESULTDIR@
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.6 2008/07/21 00:35:42 tonnerre Exp $
 -CGIDIR=@sbindir@
 +CGIDIR=@libexecdir@
  LIBEXECDIR=@libexecdir@
- HTMLDIR=@datadir@
+ HTMLDIR=@datarootdir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
  COMMAND_OPTS=@COMMAND_OPTS@
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.6 2008/07/21 00:35:42 tonnerre Exp $
  CGICFGDIR=$(CGIDIR)
  PERLDIR=@PERLDIR@
  
-@@ -62,66 +61,6 @@ all:
+@@ -64,66 +63,6 @@
  	cd $(SRC_BASE) && $(MAKE)
  	cd $(SRC_CGI) && $(MAKE)
  	cd $(SRC_HTM) && $(MAKE)
@@ -90,7 +90,7 @@ $NetBSD: patch-aa,v 1.6 2008/07/21 00:35:42 tonnerre Exp $
  
  nagios:
  	cd $(SRC_BASE) && $(MAKE)
-@@ -193,14 +132,10 @@ install-unstripped:
+@@ -214,14 +153,10 @@
  	$(MAKE) install-basic
  
  install-basic:
@@ -107,7 +107,7 @@ $NetBSD: patch-aa,v 1.6 2008/07/21 00:35:42 tonnerre Exp $
  	@echo ""
  	@echo "*** Main program, CGIs and HTML files installed ***"
  	@echo ""
-@@ -220,20 +155,20 @@ install-basic:
+@@ -241,20 +176,20 @@
  
  
  install-config:
@@ -142,7 +142,7 @@ $NetBSD: patch-aa,v 1.6 2008/07/21 00:35:42 tonnerre Exp $
  	@echo ""
  	@echo "*** Config files installed ***"
  	@echo ""
-@@ -261,7 +196,10 @@ install-daemoninit:
+@@ -282,7 +217,10 @@
  
  
  install-commandmode:
