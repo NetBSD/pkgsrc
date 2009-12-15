@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8786 2009/12/15 13:50:58 wiz Exp $
+$NetBSD: TODO,v 1.8787 2009/12/15 13:55:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -565,7 +565,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-420
 	o evolution-2.28.2
 	o evolution-data-server-2.28.2
 	o evolution-exchange-2.28.2
