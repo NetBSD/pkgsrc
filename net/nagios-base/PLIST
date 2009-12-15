@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 21:00:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/12/15 18:56:01 bouyer Exp $
 bin/nagios
 bin/nagiostats
 bin/p1.pl
@@ -190,6 +190,8 @@ share/nagios/docs/images/mrtg-servicestatechange.png
 share/nagios/docs/images/multiple-templates1.png
 share/nagios/docs/images/multiple-templates2.png
 share/nagios/docs/images/nagios.jpg
+share/nagios/docs/images/nagiosexchange.png
+share/nagios/docs/images/nagiossupport.png
 share/nagios/docs/images/ndoutils.png
 share/nagios/docs/images/network-outage1.png
 share/nagios/docs/images/network-outage2.png
