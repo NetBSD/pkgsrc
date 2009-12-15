@@ -1,18 +1,10 @@
-$NetBSD: distinfo,v 1.3 2008/05/13 15:15:51 obache Exp $
+$NetBSD: distinfo,v 1.4 2009/12/15 08:29:35 jnemeth Exp $
 
-SHA1 (centerim-4.22.5.tar.gz) = 422c368064f47886585720c1c639515acff21ae9
-RMD160 (centerim-4.22.5.tar.gz) = 94ade501f8ba46ff24bf4b3cc283533924c3e2f4
-Size (centerim-4.22.5.tar.gz) = 2803217 bytes
-SHA1 (patch-aa) = 6fb3a3dc309b32be177f3e21a1dc5dd43ddbf7e5
+SHA1 (centerim-4.22.9.tar.gz) = ebe9f4ee2064a2fa10f1084ce26083ccd295673e
+RMD160 (centerim-4.22.9.tar.gz) = 253007e466a211ec740f7843538e4f686ab95cad
+Size (centerim-4.22.9.tar.gz) = 2252262 bytes
+SHA1 (patch-aa) = 47ddb8568aa36255ad20b71d999284f023726980
 SHA1 (patch-ac) = 4ef992ed632a57e921661b1b0054beff0c0aa587
 SHA1 (patch-ad) = bfe19ca98facfbb23a87dd28a176980fb4e986de
-SHA1 (patch-al) = d0c627ffc4ec2a7d179367dd2ddbbfd5ba52a377
-SHA1 (patch-am) = 942bab1a28fd79a40ac824e58855af35fb139141
-SHA1 (patch-an) = ec94c04118e6395b7ef14c9231255f34092acb95
-SHA1 (patch-ao) = ce9585139b7390884fcbbb92bcd9d107fc5b8a8b
-SHA1 (patch-ap) = b2aa04db28b38332d00b1cdb22887e2985edea59
-SHA1 (patch-aq) = 03be56591d3c925a6ffa48a1b87eb61a582f25c6
-SHA1 (patch-ar) = c74e757e3ef6bf1f6bc9575955f5b8f73ac4b51d
-SHA1 (patch-as) = b74310eb515c425cc98528f2b0384652370cef18
 SHA1 (patch-av) = 05758183016fb1bb297c9c3d2c0606e6a66f9901
-SHA1 (patch-bb) = 9fa08e7313967f3cc8c1e2d9d05d124f62f4dd58
+SHA1 (patch-bb) = 7312d496cdde7f619eff6bfef6025fe9be14529d
