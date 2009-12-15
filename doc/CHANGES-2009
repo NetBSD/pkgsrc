@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4593 2009/12/15 11:00:25 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4594 2009/12/15 11:08:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6178,3 +6178,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/libnice to 0.0.10 [wiz 2009-12-15]
 	Updated net/ntp4 to 4.2.4p8 [tnn 2009-12-15]
 	Updated www/libproxy to 0.3.0 [wiz 2009-12-15]
+	Updated audio/libsndfile to 1.0.21 [wiz 2009-12-15]
