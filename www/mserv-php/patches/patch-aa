@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/12/15 16:17:44 abs Exp $
+
+--- albums.php.orig	2002-04-04 14:24:36.000000000 +0000
++++ albums.php
+@@ -7,20 +7,28 @@
+     $result = albums();
+ 
+     $prevchar = "";
++    $albums;
+     for ($i=1; $i<$result["ALBUMCOUNT"]; $i++) {
+-        $title = $result["$i"];
++	$albums[$i] = ucfirst($result[$i]);
++    }
++    asort($albums, SORT_STRING);
++    reset($albums);
++    while (list($alnum, $title) = each($albums)) {
+         $thischar = substr($title, 0, 1);
+         if ($thischar != $prevchar) {
+             if ($prevchar) {
+                 echo "</TABLE>";
+             }
+-            echo "<A NAME=\"$thischar\"></A>";
+-            echo "<TABLE WIDTH=100%>";
+-            $prevchar = $thischar;
++	    else
++		$prevchar = chr(ord($thischar)-1);
++	    for($linkchar = ord($prevchar) + 1; $linkchar <= ord($thischar) ; ++$linkchar)
++		echo "<A NAME=\"".chr($linkchar)."\"></A>";
++	    echo "<TABLE WIDTH=100%>";
++	    $prevchar = $thischar;
+         }
+         echo "<TR><TD>";
+-        echo "<B><A TARGET=\"mp3tracks\" HREF=\"tracks.php?album=$i\">$title</A></B></TD>";
+-        echo "<TD ALIGN=right><A TITLE=\"Queue this album\" TARGET=\"mp3queue\" HREF=\"queue.php?album=$i\"><IMG SRC=\"image/add.gif\" BORDER=0 HEIGHT=15 WIDTH=15></A></TD></TR>\n";
++        echo "<B><A TARGET=\"mp3tracks\" HREF=\"tracks.php?album=$alnum\">$title</A></B></TD>";
++        echo "<TD ALIGN=right><A TITLE=\"Queue this album\" TARGET=\"mp3queue\" HREF=\"queue.php?album=$alnum\"><IMG SRC=\"image/add.gif\" BORDER=0 HEIGHT=15 WIDTH=15></A></TD></TR>\n";
+     }
+     echo "</TABLE>";
+ 
