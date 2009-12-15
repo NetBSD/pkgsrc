@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2009/07/07 21:10:16 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/12/15 12:43:04 fhajny Exp $
 #
 
-DISTNAME=	luaexpat-1.0a
-PKGNAME=	${DISTNAME:S/lua/lua-/}
-PKGREVISION=	5
+DISTNAME=	luaexpat-1.1
+PKGNAME=	${DISTNAME:S/lua/lua-/}.0
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.keplerproject.org/luaexpat/
+MASTER_SITES=	http://luaforge.net/frs/download.php/2469/
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.keplerproject.org/luaexpat/
 COMMENT=	XML parser for LUA based on expat
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,12 +18,19 @@ MAKE_FILE=	makefile
 
 CFLAGS+=	-fPIC
 
-INSTALLATION_DIRS=	lib share/examples/lua
+MAKE_FLAGS+=	LUA_DIR=${BUILDLINK_PREFIX.lua}
+MAKE_FLAGS+=	LUA_INC=${BUILDLINK_PREFIX.lua}/include
+MAKE_FLAGS+=	EXPAT_INC=${BUILDLINK_PREFIX.expat}/include
+MAKE_FLAGS+=	LUA_VERSION_NUM=${LUA_VERSION_MAJOR}0${LUA_VERSION_MINOR}
+BUILD_TARGET=	lib
+
+INSTALLATION_DIRS=	${LUA_CDIR} ${LUA_LDIR} share/examples/lua
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/liblxp.so ${DESTDIR}${PREFIX}/lib/liblualxp.so
-	${INSTALL_DATA} ${WRKSRC}/test.lua ${DESTDIR}${PREFIX}/share/examples/lua/lxp.lua
+	${INSTALL_LIB} ${WRKSRC}/src/lxp.so.${PKGVERSION} ${DESTDIR}${PREFIX}/${LUA_CDIR}/lxp.so
+	${INSTALL_DATA} ${WRKSRC}/src/lxp/lom.lua ${DESTDIR}${PREFIX}/${LUA_LDIR}/lom.lua
+	${INSTALL_DATA} ${WRKSRC}/tests/test.lua ${DESTDIR}${PREFIX}/share/examples/lua/lxp.lua
 
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
+.include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
