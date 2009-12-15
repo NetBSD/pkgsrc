@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4633 2009/12/15 17:38:07 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4634 2009/12/15 17:38:48 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6218,3 +6218,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libtool to 2.2.6b [joerg 2009-12-15]
 	Updated devel/libtool-base to 2.2.6b [joerg 2009-12-15]
 	Updated devel/libtool-info to 2.2.6b [joerg 2009-12-15]
+	Updated devel/libltdl to 2.2.6b [joerg 2009-12-15]
