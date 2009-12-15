@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/08/16 15:42:28 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2009/12/15 12:24:47 wiz Exp $
 #
 
-DISTNAME=	libxcb-1.4
+DISTNAME=	libxcb-1.5
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://xcb.freedesktop.org/
 COMMENT=	X protocol C-language Binding
 
 BUILD_DEPENDS+=		libxslt>=1.1.0:../../textproc/libxslt
-BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen>=1.5:../../x11/py-xcbgen
+BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen>=1.6:../../x11/py-xcbgen
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -86,7 +86,7 @@ pre-configure:
 #.include "../../devel/gperf/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
-BUILDLINK_API_DEPENDS.xcb-proto?=	xcb-proto>=1.5
+BUILDLINK_API_DEPENDS.xcb-proto?=	xcb-proto>=1.6
 .include "../../x11/xcb-proto/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"

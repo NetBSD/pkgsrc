@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/12/15 12:24:47 wiz Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
 include/xcb/dpms.h
+include/xcb/dri2.h
 include/xcb/glx.h
 include/xcb/randr.h
 include/xcb/record.h
@@ -29,6 +30,7 @@ include/xcb/xvmc.h
 lib/libxcb-composite.la
 lib/libxcb-damage.la
 lib/libxcb-dpms.la
+lib/libxcb-dri2.la
 lib/libxcb-glx.la
 lib/libxcb-randr.la
 lib/libxcb-record.la
@@ -50,6 +52,7 @@ lib/libxcb.la
 lib/pkgconfig/xcb-composite.pc
 lib/pkgconfig/xcb-damage.pc
 lib/pkgconfig/xcb-dpms.pc
+lib/pkgconfig/xcb-dri2.pc
 lib/pkgconfig/xcb-glx.pc
 lib/pkgconfig/xcb-randr.pc
 lib/pkgconfig/xcb-record.pc
