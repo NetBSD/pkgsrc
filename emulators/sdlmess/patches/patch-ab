@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2009/08/15 17:24:00 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2009/12/15 14:17:30 wiz Exp $
 
---- src/osd/sdl/sdlsync.c.orig	2008-12-12 05:55:30 +0200
-+++ src/osd/sdl/sdlsync.c
-@@ -586,15 +586,28 @@ int osd_thread_adjust_priority(osd_threa
+--- src/osd/sdl/sdlsync_tc.c.orig	2009-10-25 05:54:58.000000000 +0000
++++ src/osd/sdl/sdlsync_tc.c
+@@ -341,15 +341,28 @@ int osd_thread_adjust_priority(osd_threa
  
  int osd_thread_cpu_affinity(osd_thread *thread, UINT32 mask)
  {
--#if !defined(NO_THREAD_COOPERATIVE) && !defined(NO_AFFINITY_NP)
-+#if !defined(NO_THREAD_COOPERATIVE) && !defined(NO_AFFINITY_NP) && !defined(__DragonFly__)
+-#if !defined(NO_AFFINITY_NP)
++#if !defined(NO_AFFINITY_NP) && !defined(__DragonFly__)
 +#if defined(__NetBSD__)
 +	cpuset_t *cmask;
 +#else
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.4 2009/08/15 17:24:00 wiz Exp $
  	
  	if (thread == NULL)
  		lthread = pthread_self();
-@@ -605,10 +618,15 @@ int osd_thread_cpu_affinity(osd_thread *
+@@ -360,10 +373,15 @@ int osd_thread_cpu_affinity(osd_thread *
  	{
  		/* Not available during link in all targets */
  		fprintf(stderr, "error %d setting cpu affinity to mask %08x", errno, mask);

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2009/08/15 17:24:00 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2009/12/15 14:17:30 wiz Exp $
 
---- makefile.orig	2009-06-20 02:00:06.000000000 +0000
+--- makefile.orig	2009-09-17 00:49:53.000000000 +0000
 +++ makefile
 @@ -125,10 +125,10 @@ endif
  # BIGENDIAN = 1
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.3 2009/08/15 17:24:00 wiz Exp $
  
  # add -g if we need symbols, and ensure we have frame pointers
  ifdef SYMBOLS
-@@ -331,15 +331,15 @@ CCOMFLAGS += -pg
+@@ -331,18 +331,18 @@ CCOMFLAGS += -pg
  endif
  
  # add the optimization flag
@@ -63,15 +63,18 @@ $NetBSD: patch-aa,v 1.3 2009/08/15 17:24:00 wiz Exp $
  # and make all errors into warnings
  ifneq ($(OPTIMIZE),0)
  ifneq ($(TARGETOS),os2)
+ ifndef IA64
 -CCOMFLAGS += -Werror -fno-strict-aliasing $(ARCHOPTS)
 +#CCOMFLAGS += -Werror -fno-strict-aliasing $(ARCHOPTS)
+ else
+ endif
  else
 -CCOMFLAGS += -fno-strict-aliasing $(ARCHOPTS)
 +#CCOMFLAGS += -fno-strict-aliasing $(ARCHOPTS)
  endif
  endif
  
-@@ -369,7 +369,7 @@ endif
+@@ -372,7 +372,7 @@ endif
  #-------------------------------------------------
  
  # add core include paths
@@ -80,7 +83,7 @@ $NetBSD: patch-aa,v 1.3 2009/08/15 17:24:00 wiz Exp $
  	-I$(SRC)/$(TARGET) \
  	-I$(SRC)/$(TARGET)/includes \
  	-I$(OBJ)/$(TARGET)/layout \
-@@ -379,7 +379,7 @@ CCOMFLAGS += \
+@@ -382,7 +382,7 @@ CCOMFLAGS += \
  	-I$(SRC)/lib/util \
  	-I$(SRC)/osd \
  	-I$(SRC)/osd/$(OSD) \
@@ -89,7 +92,7 @@ $NetBSD: patch-aa,v 1.3 2009/08/15 17:24:00 wiz Exp $
  
  
  #-------------------------------------------------
-@@ -388,11 +388,11 @@ CCOMFLAGS += \
+@@ -391,11 +391,11 @@ CCOMFLAGS += \
  
  # LDFLAGS are used generally; LDFLAGSEMULATOR are additional
  # flags only used when linking the core emulator
@@ -103,7 +106,7 @@ $NetBSD: patch-aa,v 1.3 2009/08/15 17:24:00 wiz Exp $
  endif
  endif
  endif
-@@ -407,7 +407,7 @@ endif
+@@ -410,7 +410,7 @@ endif
  ifndef SYMBOLS
  ifndef PROFILE
  ifneq ($(TARGETOS),macosx)
@@ -112,9 +115,9 @@ $NetBSD: patch-aa,v 1.3 2009/08/15 17:24:00 wiz Exp $
  endif
  endif
  endif
-@@ -557,7 +557,7 @@ $(VERSIONOBJ): $(DRVLIBS) $(LIBOSD) $(LI
+@@ -561,7 +561,7 @@ $(VERSIONOBJ): $(DRVLIBS) $(LIBOSD) $(LI
  
- $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(LIBOSD) $(LIBEMU) $(LIBCPU) $(LIBSOUND) $(LIBUTIL) $(EXPAT) $(ZLIB) $(LIBOCORE) $(RESFILE)
+ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(LIBOSD) $(LIBEMU) $(LIBCPU) $(LIBDASM) $(LIBSOUND) $(LIBUTIL) $(EXPAT) $(ZLIB) $(LIBOCORE) $(RESFILE)
  	@echo Linking $@...
 -	$(LD) $(LDFLAGS) $(LDFLAGSEMULATOR) $^ $(LIBS) -o $@
 +	$(CC) $(LDFLAGS) $(LDFLAGSEMULATOR) $^ $(LIBS) -o $@

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/12/15 14:17:30 wiz Exp $
 bin/castool
 bin/imgtool
 bin/mess
@@ -267,6 +267,7 @@ share/doc/mess/sysinfo/x68000.htm
 share/doc/mess/sysinfo/z88.htm
 share/doc/mess/sysinfo/zx80.htm
 share/doc/mess/sysinfo/zx81.htm
+share/mess/artwork/4004clk.zip
 share/mess/artwork/aim65.zip
 share/mess/artwork/amsterd.zip
 share/mess/artwork/avigo.zip
@@ -282,6 +283,7 @@ share/mess/artwork/hp48gp.zip
 share/mess/artwork/hp48gx.zip
 share/mess/artwork/hp48s.zip
 share/mess/artwork/hp48sx.zip
+share/mess/artwork/junior.zip
 share/mess/artwork/kim1.zip
 share/mess/artwork/ledoff.png
 share/mess/artwork/ledon.png

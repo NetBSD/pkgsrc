@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2009/09/01 15:45:44 wiz Exp $
+$NetBSD: distinfo,v 1.8 2009/12/15 14:17:30 wiz Exp $
 
-SHA1 (sdlmess0133.zip) = dad382e9fc79e1a654e239dadb23b1c06dae685b
-RMD160 (sdlmess0133.zip) = bf06910fc4fd9c4295d5722fcdb2cb1a16034edf
-Size (sdlmess0133.zip) = 32501988 bytes
-SHA1 (patch-aa) = 11e1ae9c7d184d34c90b9f05ecbe8fa2dfd6b181
-SHA1 (patch-ab) = a7471766661974f7f092bede9d37d18a48d8499c
+SHA1 (sdlmess0135.zip) = 51a5685fceb2a170243c67f9a2955d22ff0d5705
+RMD160 (sdlmess0135.zip) = f4c0954e51c3f5208722e0daba7df7287faf958e
+Size (sdlmess0135.zip) = 33723886 bytes
+SHA1 (patch-aa) = 05b17c0478921c0cf31e1581b96fdd5506f0ed98
+SHA1 (patch-ab) = 3cc161845baae6ebcdab42fbd19f74e2ee3d4cb1
 SHA1 (patch-ac) = 32503c6dcdeb9a0d082375a11f0e23bac53410db
-SHA1 (patch-ad) = b12160915cad1d0a8a0ee784553b1b9f207d069b
+SHA1 (patch-ad) = 8d6312b593343eb2e5b29f177376c8fa243d8293
 SHA1 (patch-ae) = d110f0338d224823d959c8a2b57026321a3f0a38
 SHA1 (patch-ah) = f2dbfc44e30857fd9b52ed5d107b5190d5e5f6da

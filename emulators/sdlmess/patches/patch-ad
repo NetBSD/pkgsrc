@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.1 2009/09/01 15:45:44 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2009/12/15 14:17:30 wiz Exp $
 
---- src/mame/machine/n64.c.orig	2009-07-20 12:03:20.000000000 +0000
+--- src/mame/machine/n64.c.orig	2009-11-01 00:44:54.000000000 +0000
 +++ src/mame/machine/n64.c
-@@ -1065,7 +1065,7 @@ static UINT8 pif_ram[0x40];
- static UINT8 pif_cmd[0x40];
- static UINT32 si_dram_addr = 0;
+@@ -1474,7 +1474,7 @@ static UINT32 si_dram_addr = 0;
  static UINT32 si_pif_addr = 0;
+ static UINT32 si_pif_addr_rd64b = 0;
+ static UINT32 si_pif_addr_wr64b = 0;
 -static UINT32 si_status = 0;
 +static UINT32 mame_si_status = 0;
  
  static UINT8 eeprom[512];
  static UINT8 mempack[0x8000];
-@@ -1475,7 +1475,7 @@ static void pif_dma(running_machine *mac
+@@ -1884,7 +1884,7 @@ static void pif_dma(running_machine *mac
  		}
  	}
  
@@ -20,8 +20,8 @@ $NetBSD: patch-ad,v 1.1 2009/09/01 15:45:44 wiz Exp $
  	signal_rcp_interrupt(machine, SI_INTERRUPT);
  }
  
-@@ -1487,7 +1487,7 @@ READ32_HANDLER( n64_si_reg_r )
- 			return si_dram_addr;
+@@ -1896,7 +1896,7 @@ READ32_HANDLER( n64_si_reg_r )
+ 			//return si_dram_addr;
  
  		case 0x18/4:		// SI_STATUS_REG
 -			return si_status;
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.1 2009/09/01 15:45:44 wiz Exp $
  	}
  	return 0;
  }
-@@ -1514,7 +1514,7 @@ WRITE32_HANDLER( n64_si_reg_w )
+@@ -1925,7 +1925,7 @@ WRITE32_HANDLER( n64_si_reg_w )
  			break;
  
  		case 0x18/4:		// SI_STATUS_REG
@@ -38,7 +38,7 @@ $NetBSD: patch-ad,v 1.1 2009/09/01 15:45:44 wiz Exp $
  			clear_rcp_interrupt(space->machine, SI_INTERRUPT);
  			break;
  
-@@ -1624,7 +1624,7 @@ MACHINE_RESET( n64 )
+@@ -2036,7 +2036,7 @@ MACHINE_RESET( n64 )
  	memset(pif_cmd, 0, sizeof(pif_cmd));
  	si_dram_addr = 0;
  	si_pif_addr = 0;
