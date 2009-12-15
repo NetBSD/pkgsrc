@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8759 2009/12/15 10:40:24 wiz Exp $
+$NetBSD: TODO,v 1.8760 2009/12/15 10:43:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -864,7 +864,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libiconv-1.13.1
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
-	o libkexiv2-0.1.9
 	o libkipi-0.1.6
 	o liblbxutil-1.1.0
 	o libltdl-2.2.6a
