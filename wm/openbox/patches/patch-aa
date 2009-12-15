@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2009/02/16 12:04:01 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2009/12/15 12:42:04 wiz Exp $
 
---- Makefile.in.orig	2008-04-23 15:18:43.000000000 +0000
+--- Makefile.in.orig	2009-12-08 20:57:45.000000000 +0000
 +++ Makefile.in
-@@ -471,7 +471,7 @@ target_alias = @target_alias@
+@@ -483,7 +483,7 @@ top_srcdir = @top_srcdir@
  SUBDIRS = m4 po
  docxbmdir = $(docdir)/xbm
  themedir = $(datadir)/themes
@@ -11,11 +11,11 @@ $NetBSD: patch-aa,v 1.7 2009/02/16 12:04:01 wiz Exp $
  rcdir = $(configdir)/openbox
  xsessionsdir = $(datadir)/xsessions
  gnomewmfilesdir = $(datadir)/gnome/wm-properties
-@@ -3101,12 +3101,12 @@ uninstall-dist_pixmapDATA:
+@@ -3095,12 +3095,12 @@ uninstall-dist_pixmapDATA:
  	done
  install-dist_rcDATA: $(dist_rc_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(rcdir)" || $(mkdir_p) "$(DESTDIR)$(rcdir)"
+-	test -z "$(rcdir)" || $(MKDIR_P) "$(DESTDIR)$(rcdir)"
 +	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/openbox
  	@list='$(dist_rc_DATA)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
