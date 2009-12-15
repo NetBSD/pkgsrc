@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8788 2009/12/15 14:04:55 wiz Exp $
+$NetBSD: TODO,v 1.8789 2009/12/15 14:07:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -680,7 +680,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-bluetooth-2.28.3 [GNOME 2.28]
 	o gnome-commander-1.2.8.4
 	o gnome-devel-docs-2.28.1 [GNOME 2.28]
-	o gnome-keyring-2.28.2
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
 	o gnome-nettool-2.28.0 [GNOME 2.28]
 	o gnome-packagekit-2.28.2 [GNOME 2.28]
