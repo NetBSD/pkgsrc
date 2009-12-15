@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2009/06/30 00:07:11 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2009/12/15 21:31:52 joerg Exp $
 #
 
 DISTNAME=	gwave-20060606
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/dist/ \
 		http://www.geda.seul.org/dist/
