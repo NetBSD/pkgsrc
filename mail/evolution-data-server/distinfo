@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.63 2009/10/21 17:24:28 drochner Exp $
+$NetBSD: distinfo,v 1.64 2009/12/15 14:04:42 wiz Exp $
 
-SHA1 (evolution-data-server-2.28.1.tar.bz2) = 41d5200dd15a046fd59146169c1ad5ce4878e7d0
-RMD160 (evolution-data-server-2.28.1.tar.bz2) = 786b11a75ce05c80adbdba3e8f057b0502d315db
-Size (evolution-data-server-2.28.1.tar.bz2) = 22309681 bytes
+SHA1 (evolution-data-server-2.28.2.tar.bz2) = dd2f35ed6765651c9daf0e709e0e9d65604d1eed
+RMD160 (evolution-data-server-2.28.2.tar.bz2) = 5041260ffa3430104c812ec5495bf6cba40c347f
+Size (evolution-data-server-2.28.2.tar.bz2) = 22319961 bytes
 SHA1 (patch-ab) = fff3e022aee934c463d7a66b681e020d3bebe1b0
 SHA1 (patch-ak) = 45cc217524d484aaad6700326d501db09b5c13a4
 SHA1 (patch-aq) = 375d592b72f59fa70160bf23aa260338d350c517
