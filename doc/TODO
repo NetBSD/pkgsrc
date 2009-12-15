@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8755 2009/12/13 16:11:52 wiz Exp $
+$NetBSD: TODO,v 1.8756 2009/12/15 04:27:33 obache Exp $
 
 Suggested new packages
 ======================
@@ -1079,7 +1079,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o patchutils-0.3.1
 	o pavucontrol-0.9.8
 	o pcal-4.8
-	o pcmanfm-0.5
+	o pcmanfm-0.5.2 [pkg/42451]
 	o pdmenu-1.2.87
 	o pear-Auth_SASL-1.0.3
 	o pear-Console_Table-1.1.3
