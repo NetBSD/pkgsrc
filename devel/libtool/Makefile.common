@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.76 2009/06/13 06:46:43 rillig Exp $
+# $NetBSD: Makefile.common,v 1.77 2009/12/15 17:35:36 joerg Exp $
 # used by devel/libltdl/Makefile
 # used by devel/libtool-base/Makefile
 # used by devel/libtool-info/Makefile
@@ -26,7 +26,8 @@
 ###########################################################################
 ###########################################################################
 
-DISTNAME=	libtool-1.5.26
+DISTNAME=	libtool-2.2.6b
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 CATEGORIES=	devel pkgtools
 MASTER_SITES=	${MASTER_SITE_GNU:=libtool/}
 
