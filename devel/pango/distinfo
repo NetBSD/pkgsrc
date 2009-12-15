@@ -1,17 +1,8 @@
-$NetBSD: distinfo,v 1.80 2009/11/25 09:58:39 tron Exp $
+$NetBSD: distinfo,v 1.81 2009/12/15 15:09:21 drochner Exp $
 
-SHA1 (pango-1.26.1.tar.bz2) = d4891a34a46ddc9a6e37bcdf0fef4cbab7391b7b
-RMD160 (pango-1.26.1.tar.bz2) = cc9e3bd5d4cdfcb9c2298b75c4b02fee31816184
-Size (pango-1.26.1.tar.bz2) = 1538050 bytes
+SHA1 (pango-1.26.2.tar.bz2) = 051b6f7b5f98a4c8083ef6a5178cb5255a992b98
+RMD160 (pango-1.26.2.tar.bz2) = 6613bddf643d5c912e6656d84c6671aa6ce88a9d
+Size (pango-1.26.2.tar.bz2) = 1536011 bytes
 SHA1 (patch-aa) = 1a87d055dc722eff28517a11d0832ae19df5eb59
 SHA1 (patch-ab) = 12c09b12ba31be19fa0d602f89909811e6221bd8
-SHA1 (patch-ac) = af7a64dbab62cdb5ebbed1519b64d97fd07eabf7
-SHA1 (patch-ad) = 7d44d444f8063d7a2a222ee03257704927e19f35
 SHA1 (patch-ae) = 2ebb8a0886a745fbfb0106dece91c5c990982ef8
-SHA1 (patch-af) = adfb861fe7f364ff8270fb589d0e004534579d0b
-SHA1 (patch-ag) = 8c35324b0436f3270cf51850a3059b7dd7dd6043
-SHA1 (patch-ah) = 5bfa3dbfd681e36b450179c5373416101ca63155
-SHA1 (patch-ai) = 130993e48f95a1540307af25e503a37670c6a867
-SHA1 (patch-aj) = ec5f198cd2fa18ea3d1536c5013efa6cc7cd8b5a
-SHA1 (patch-ak) = dae7044d4dc90f9c729746d88296ca2e7043239d
-SHA1 (patch-al) = 537f653b78e45a3019fb27a28d6d4d29d1657c1f
