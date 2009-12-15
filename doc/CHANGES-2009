@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4614 2009/12/15 13:36:59 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4615 2009/12/15 13:38:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6199,3 +6199,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-TimeDate to 1.20 [wiz 2009-12-15]
 	Updated lang/erlang to 13.2.3nb2 [asau 2009-12-15]
 	Updated www/p5-URI to 1.51 [wiz 2009-12-15]
+	Updated textproc/p5-XML-RSS to 1.47 [wiz 2009-12-15]
