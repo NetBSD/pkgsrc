@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4618 2009/12/15 13:41:55 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4619 2009/12/15 13:49:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6203,3 +6203,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-YAML-Tiny to 1.41 [wiz 2009-12-15]
 	Updated textproc/p5-ack to 1.92 [wiz 2009-12-15]
 	Updated www/p5-libwww to 5.834 [wiz 2009-12-15]
+	Updated textproc/raptor to 1.4.20 [wiz 2009-12-15]
