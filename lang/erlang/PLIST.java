@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.6 2009/06/14 18:03:30 joerg Exp $
+@comment $NetBSD: PLIST.java,v 1.7 2009/12/15 12:07:57 asau Exp $
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Any.java
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/AnyHelper.java
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/AnyHolder.java

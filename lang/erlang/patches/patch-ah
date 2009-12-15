@@ -1,24 +1,13 @@
-$NetBSD: patch-ah,v 1.2 2009/04/07 18:36:52 hasso Exp $
+$NetBSD: patch-ah,v 1.3 2009/12/15 12:07:57 asau Exp $
 
---- lib/erl_interface/src/connect/ei_resolve.c.orig	2007-11-26 20:57:25 +0200
-+++ lib/erl_interface/src/connect/ei_resolve.c	2009-04-07 21:11:49 +0300
-@@ -46,6 +46,10 @@
- #include <errno.h>
- #endif 
- 
-+#ifdef __DragonFly__
-+#include <sys/param.h> /* for __DragonFly_version */
-+#endif
-+
- /* common to all platforms */
- #include "eidef.h"
- #include "ei_resolve.h"
-@@ -614,7 +618,7 @@ struct hostent *ei_gethostbyname_r(const
- #ifndef HAVE_GETHOSTBYNAME_R
-   return my_gethostbyname_r(name,hostp,buffer,buflen,h_errnop);
- #else
--#ifdef __GLIBC__
-+#if defined(__GLIBC__) || defined(__FreeBSD__) || (defined(__DragonFly__) && (__DragonFly_version + 0 >= 200202))
-   struct hostent *result;
- 
-   gethostbyname_r(name, hostp, buffer, buflen, &result, h_errnop);
+--- lib/compiler/src/v3_codegen.erl.orig	2008-02-05 08:37:35.000000000 -0500
++++ lib/compiler/src/v3_codegen.erl
+@@ -1481,6 +1481,8 @@ cg_binary_size_1([], Bits, Acc) ->
+     Sizes = filter(fun({_,{integer,0}}) -> false;
+ 		      (_) -> true end, Sizes0),
+     case Sizes of
++       [] ->
++           {bs_init2,[{integer,0}]};
+ 	[{1,_}|_] ->
+ 	    {bs_init_bits,cg_binary_bytes_to_bits(Sizes, [])};
+ 	[{8,_}|_] ->

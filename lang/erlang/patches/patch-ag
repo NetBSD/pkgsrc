@@ -1,18 +1,18 @@
-$NetBSD: patch-ag,v 1.1 2008/06/21 22:13:09 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2009/12/15 12:07:57 asau Exp $
 
-Allow the system linker to use the shared library for dynamic modules.
-
---- lib/ssl/c_src/Makefile.in.orig	2008-06-20 19:33:40.000000000 +0200
-+++ lib/ssl/c_src/Makefile.in
-@@ -87,11 +87,7 @@ PORT_PROGRAM = $(BINDIR)/ssl_esock$(exe)
- SKIP_BUILDING_BINARIES := false
+--- erts/emulator/obsolete/driver.h.orig	2007-11-26 13:55:21.000000000 -0500
++++ erts/emulator/obsolete/driver.h
+@@ -67,10 +67,10 @@
+ #  define DRIVER_INIT(DRIVER_NAME)  driver_init
+ #endif
  
- # Try to be BC for R10
--ifeq ($(findstring @SSL_,@SSL_DYNAMIC_ONLY@),@SSL_)
- DYNAMIC_CRYPTO_LIB=yes
--else
--DYNAMIC_CRYPTO_LIB=@SSL_DYNAMIC_ONLY@
--endif
+-typedef int (*F_PTR)();    /* a function pointer */
+-typedef long (*L_PTR)();   /* pointer to a function returning long */
++typedef int (*F_PTR)(void);    /* a function pointer */
++typedef long (*L_PTR)(void);   /* pointer to a function returning long */
  
+-extern int null_func();
++extern int null_func(void);
  
- ifeq ($(DYNAMIC_CRYPTO_LIB),yes)
+ /* This structure MUST match Binary in global.h exactly!!! */
+ typedef struct driver_binary {
