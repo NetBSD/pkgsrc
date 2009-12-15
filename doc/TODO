@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8758 2009/12/15 10:37:21 wiz Exp $
+$NetBSD: TODO,v 1.8759 2009/12/15 10:40:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -851,7 +851,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdrm-2.4.16
 	o libextractor-0.5.23
 	o libflash-0.4.13
-	o libgcrypt-1.4.5
 	o libgda-4.0.5 [GNOME 2.28]
 	o libgee-0.5.0
 	o libggi-2.2.2
