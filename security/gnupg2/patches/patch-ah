@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.4 2008/04/28 14:54:27 shannonjr Exp $
+$NetBSD: patch-ah,v 1.5 2009/12/15 20:10:41 drochner Exp $
 
---- ./g10/encr-data.c.orig	2007-12-12 02:43:38.000000000 -0700
-+++ ./g10/encr-data.c
+--- g10/encr-data.c.orig	2009-06-05 13:58:27.000000000 +0000
++++ g10/encr-data.c
 @@ -37,35 +37,14 @@ static int mdc_decode_filter ( void *opa
  static int decode_filter ( void *opaque, int control, IOBUF a,
  					byte *buf, size_t *ret_len);
@@ -53,15 +53,7 @@ $NetBSD: patch-ah,v 1.4 2008/04/28 14:54:27 shannonjr Exp $
    if ( opt.verbose && !dek->algo_info_printed )
      {
        if (!openpgp_cipher_test_algo (dek->algo))
-@@ -100,20 +75,20 @@ decrypt_data( void *procctx, PKT_encrypt
-     goto leave;
-   blocksize = gcry_cipher_get_algo_blklen (dek->algo);
-   if ( !blocksize || blocksize > 16 )
--    log_fatal ("unsupported blocksize %u\n", blocksize );
-+    log_fatal("unsupported blocksize %u\n", blocksize );
-   nprefix = blocksize;
-   if ( ed->len && ed->len < (nprefix+2) )
-     BUG();
+@@ -107,13 +82,13 @@ decrypt_data( void *procctx, PKT_encrypt
  
    if ( ed->mdc_method ) 
      {
@@ -73,11 +65,11 @@ $NetBSD: patch-ah,v 1.4 2008/04/28 14:54:27 shannonjr Exp $
 +        gcry_md_start_debug (dfx.mdc_hash, "checkmdc");
      }
  
--  rc = gcry_cipher_open (&dfx->cipher_hd, dek->algo,
-+  rc = gcry_cipher_open (&dfx.cipher_hd, dek->algo,
-                          GCRY_CIPHER_MODE_CFB,
-                          (GCRY_CIPHER_SECURE
-                           | ((ed->mdc_method || dek->algo >= 100)?
+-  rc = openpgp_cipher_open (&dfx->cipher_hd, dek->algo,
++  rc = openpgp_cipher_open (&dfx.cipher_hd, dek->algo,
+ 			    GCRY_CIPHER_MODE_CFB,
+ 			    (GCRY_CIPHER_SECURE
+ 			     | ((ed->mdc_method || dek->algo >= 100)?
 @@ -127,7 +102,7 @@ decrypt_data( void *procctx, PKT_encrypt
  
  
