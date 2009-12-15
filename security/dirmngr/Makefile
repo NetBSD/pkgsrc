@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.33 2009/01/29 17:11:25 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2009/12/15 19:43:16 drochner Exp $
 #
 
-DISTNAME=		dirmngr-1.0.1
-PKGREVISION=		2
+DISTNAME=		dirmngr-1.0.3
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/dirmngr/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		pth-2.0.7.tar.gz
 SITES.pth-2.0.7.tar.gz=	${MASTER_SITE_GNU:=pth/}
-DISTFILES+=		libassuan-1.0.3.tar.bz2
-SITES.libassuan-1.0.3.tar.bz2=	ftp://ftp.gnupg.org/gcrypt/libassuan/
+DISTFILES+=		libassuan-1.0.5.tar.bz2
+SITES.libassuan-1.0.5.tar.bz2=	ftp://ftp.gnupg.org/gcrypt/libassuan/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		shannonjr@NetBSD.org
@@ -63,12 +62,13 @@ OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr ${DIRMNGR_PERMS}
 OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr/extra-certs ${DIRMNGR_PERMS}
 
 INSTALLATION_DIRS=	sbin
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # We are building a static pth library and linking against it
 # We are also building libassuan here to get libassuan-pth.
 pre-configure:
 	cd  ${WRKDIR}/pth-2.0.7 && ./configure --prefix=${WRKDIR}/pth --enable-pthread --enable-static --disable-shared && ${MAKE} install
-	cd  ${WRKDIR}/libassuan-1.0.3 && \
+	cd  ${WRKDIR}/libassuan-1.0.5 && \
 	${SETENV} ${CONFIGURE_ENV} ./autogen.sh && \
 	${SETENV} ${CONFIGURE_ENV} ./configure --enable-maintainer-mode --prefix=${WRKDIR}/libassuan --with-pth-prefix=${WRKDIR}/pth && \
 	${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE} install
