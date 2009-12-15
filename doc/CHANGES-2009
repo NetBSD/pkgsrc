@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4597 2009/12/15 12:24:59 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4598 2009/12/15 12:32:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6182,3 +6182,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xcb-proto to 1.6 [wiz 2009-12-15]
 	Updated x11/py-xcbgen to 1.6 [wiz 2009-12-15]
 	Updated x11/libxcb to 1.5 [wiz 2009-12-15]
+	Updated misc/kchmviewer to 5.0 [wiz 2009-12-15]
