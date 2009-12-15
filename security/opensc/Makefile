@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/06/08 19:11:30 hasso Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/15 22:10:39 joerg Exp $
 
 COMMENT=		Smart Card drivers and middleware
+PKGREVISION=		2
 LICENSE=		gnu-lgpl-v2.1
 
 .include "../../security/opensc/Makefile.common"
