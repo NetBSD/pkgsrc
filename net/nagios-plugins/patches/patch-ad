@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.2 2008/05/27 21:22:03 tonnerre Exp $
+$NetBSD: patch-ad,v 1.3 2009/12/15 18:59:54 bouyer Exp $
 
---- plugins-scripts/Makefile.in.orig	2007-12-13 23:42:35.000000000 +0100
-+++ plugins-scripts/Makefile.in
-@@ -330,15 +330,11 @@ sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+--- plugins-scripts/Makefile.in.orig	2009-09-16 10:38:00.000000000 +0200
++++ plugins-scripts/Makefile.in	2009-12-15 17:30:07.000000000 +0100
+@@ -724,15 +724,11 @@
  with_trusted_path = @with_trusted_path@
+ @RELEASE_PRESENT_TRUE@NP_VERSION = $(PACKAGE_VERSION)
  SUFFIXES = .pl .sh
 -libexec_SCRIPTS = check_breeze check_disk_smb check_flexlm check_ircd \
 -	check_log check_oracle check_rpc check_sensors check_wave \
