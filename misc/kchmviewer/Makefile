@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/10/31 01:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/12/15 12:31:50 wiz Exp $
 #
 
-DISTNAME=		kchmviewer-4.2
+DISTNAME=		kchmviewer-5.0
 CATEGORIES=		misc x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kchmviewer/}
 
@@ -12,6 +12,8 @@ LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+WRKSRC=			${WRKDIR}/build-5.0
+
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
@@ -20,6 +22,7 @@ USE_LIBTOOL=		YES
 .include "options.mk"
 
 .include "../../devel/chmlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.5.0
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
