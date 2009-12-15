@@ -1,0 +1,47 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/12/15 16:17:44 abs Exp $
+
+--- albumsnav.php.orig	2002-04-08 06:01:35.000000000 +0000
++++ albumsnav.php
+@@ -11,33 +11,16 @@
+     print_header();
+     print_heading("Albums - ($numtracks tracks in $numalbums albums)");
+ 
++    for ($i=1; $i<$albums["ALBUMCOUNT"]; $i++) {
++        $thischar = ucfirst(substr($albums["$i"], 0, 1));
++	$index[$thischar] = 1;
++    }
++    ksort($index, SORT_STRING);
++    reset($index);
+     echo "<TABLE WIDTH=100%><TR>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#A\">A</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#B\">B</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#C\">C</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#D\">D</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#E\">E</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#F\">F</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#G\">G</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#H\">H</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#I\">I</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#J\">J</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#K\">K</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#L\">L</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#M\">M</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#N\">N</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#O\">O</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#P\">P</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#Q\">Q</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#R\">R</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#S\">S</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#T\">T</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#U\">U</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#V\">V</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#W\">W</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#X\">X</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#Y\">Y</A>";
+-    echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#Z\">Z</A>";
++    while (list($char, $xj) = each($index)) {
++	echo "<TD><A TARGET=\"mp3albums\" HREF=\"albums.php#$char\">$char</A>";
++    }
+     echo "</TABLE>";
+ 
+ ?>

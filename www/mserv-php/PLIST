@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/15 16:17:44 abs Exp $
+share/doc/mserv-php/COPYRIGHT.GPL
+share/doc/mserv-php/README-0.90
+share/mserv-php/albums.php
+share/mserv-php/albumsnav.php
+share/mserv-php/config.php
+share/mserv-php/current.php
+share/mserv-php/functions.php
+share/mserv-php/image/add.gif
+share/mserv-php/image/refresh.gif
+share/mserv-php/image/sub.gif
+share/mserv-php/index.php
+share/mserv-php/login.html
+share/mserv-php/options.php
+share/mserv-php/queue.php
+share/mserv-php/setup.php
+share/mserv-php/styles.css
+share/mserv-php/tracks.php
