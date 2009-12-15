@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.12 2009/12/03 12:44:10 asau Exp $
+# $NetBSD: f2c.mk,v 1.13 2009/12/15 17:35:36 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,16 +39,6 @@
 COMPILER_F2C_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
-
-.if !empty(PKGPATH:Mlang/f2c) || !empty(PKGPATH:Mdevel/patch) || \
-    !empty(PKGPATH:Mdevel/libtool-base)
-IGNORE_F2C=	yes
-MAKEFLAGS+=	IGNORE_F2C=yes
-.endif
-
-.if defined(IGNORE_F2C)
-_USE_F2C=	NO
-.endif
 
 # LANGUAGES.<compiler> is the list of supported languages by the compiler.
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
@@ -99,11 +89,30 @@ PREPEND_PATH+=	${_F2C_DIR}/bin
 
 # Dependencies:
 BUILD_DEPENDS+=	f2c>20090411:../../lang/f2c # translator
+
+.if empty(PKGPATH:Mdevel/libtool-base) # See below
 .  include "../../devel/libf2c/buildlink3.mk" # library
+.endif
 
 .  if defined(F2C_DIR) && !empty(F2C_DIR)
 PKGSRC_MAKE_ENV+=	F2C_DIR=${F2C_DIR:Q}
 .  endif
+
+# libtool-base is special as it only needs f77 to extract linker flags etc.
+.if !empty(PKGPATH:Mdevel/libtool-base)
+pre-configure: fake-f2c-libs
+
+_WRAP_EXTRA_ARGS.FC+=	-L${WRKDIR}/.f2c/lib -I${WRKDIR}/.f2c/include
+
+fake-f2c-libs:
+	${MKDIR} ${WRKDIR}/.f2c/include
+	${MKDIR} ${WRKDIR}/.f2c/lib
+	${ECHO} 'int main(void) { return 0; }' > ${WRKDIR}/.f2c/lib/main.c
+	${CC} -c -o ${WRKDIR}/.f2c/lib/main.o ${WRKDIR}/.f2c/lib/main.c
+	${AR} cq ${WRKDIR}/.f2c/lib/libf2c.a ${WRKDIR}/.f2c/lib/main.o
+	${RANLIB} ${WRKDIR}/.f2c/lib/libf2c.a
+	${TOUCH} ${WRKDIR}/.f2c/include/f2c.h
+.endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
 .  for _var_ in ${_F2C_VARS}

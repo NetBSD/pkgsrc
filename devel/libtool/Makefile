@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2005/07/19 10:20:07 grant Exp $
+# $NetBSD: Makefile,v 1.45 2009/12/15 17:35:36 joerg Exp $
+
+META_PACKAGE=	# empty
 
 .include "Makefile.common"
 
@@ -11,13 +13,5 @@ DEPENDS+=	${DISTNAME:S/-/-info-/}{,nb[0-9]*}:../../devel/libtool-info
 # can be updated independently of the rest of libtool.
 
 COMMENT=	Generic shared library support script
-
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-
-do-patch:
-
-do-install:
-	@${ECHO_MSG} this is only a meta package.
 
 .include "../../mk/bsd.pkg.mk"

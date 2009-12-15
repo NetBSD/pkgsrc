@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/11/01 08:59:03 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/12/15 17:35:37 joerg Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -13,6 +13,14 @@ CONFLICTS+=	libtool<1.3.5nb11
 USE_TOOLS+=	makeinfo
 INFO_FILES=	# PLIST
 
-BUILD_DIRS=	doc
+NO_CONFIGURE=	yes
+
+INSTALLATION_DIRS=	${PKGINFODIR}
+
+do-build:
+	cd ${WRKSRC}/doc && ${MAKEINFO} --no-split libtool.texi
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/libtool.info ${DESTDIR}${PREFIX}/${PKGINFODIR}
 
 .include "../../mk/bsd.pkg.mk"

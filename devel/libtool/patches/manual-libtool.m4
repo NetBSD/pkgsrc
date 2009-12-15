@@ -1,45 +1,20 @@
-$NetBSD: manual-libtool.m4,v 1.26 2009/07/08 21:01:43 markd Exp $
+$NetBSD: manual-libtool.m4,v 1.27 2009/12/15 17:35:37 joerg Exp $
 
-Local pkgsrc changes:
-- override the basename to point to the actual backend compiler,
-  critical e.g. on Solaris
-- portability fixes for print on Interix
-- override for shlib naming policy on various platforms
-- QNX support
-- Interix3 support
-- disable static linkage on OS X by default
-- DragonFly support decoupled from FreeBSD
-- support g95 on NetBSD
-
---- libtool.m4.orig	2008-02-02 05:26:47.000000000 +1300
-+++ libtool.m4
-@@ -249,7 +249,10 @@ AC_DEFUN([_LT_CC_BASENAME],
+--- libltdl/m4/libtool.m4.orig	2008-09-05 13:54:41.000000000 +0200
++++ libltdl/m4/libtool.m4
+@@ -118,7 +118,10 @@ m4_defun([_LT_CC_BASENAME],
      *) break;;
    esac
  done
--cc_basename=`$echo "X$cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+-cc_basename=`$ECHO "X$cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
 +# Return the actual command name, not our pkgsrc wrapper name because several
 +# decisions are made only based on compiler names
-+new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null` || new_cc_temp="$cc_temp"
-+cc_basename=`$echo "X$new_cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
++if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
++cc_basename=`$ECHO "X$new_cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
  ])
  
  
-@@ -474,11 +477,11 @@ else
- 
-   if test "X$echo" = Xecho; then
-     # We didn't find a better echo, so look for alternatives.
--    if test "X`(print -r '\t') 2>/dev/null`" = 'X\t' &&
-+    if test "X`(print -r - '\t') 2>/dev/null`" = 'X\t' &&
-        echo_testing_string=`(print -r "$echo_test_string") 2>/dev/null` &&
-        test "X$echo_testing_string" = "X$echo_test_string"; then
-       # This shell has a builtin print -r that does the trick.
--      echo='print -r'
-+      echo='print -r -'
-     elif (test -f /bin/ksh || test -f /bin/ksh$ac_exeext) &&
- 	 test "X$CONFIG_SHELL" != X/bin/ksh; then
-       # If we have ksh, try running configure again with it.
-@@ -820,6 +823,13 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
+@@ -1527,6 +1530,13 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
@@ -53,7 +28,7 @@ Local pkgsrc changes:
    amigaos*)
      # On AmigaOS with pdksh, this test takes hours, literally.
      # So we just punt and use a minimum line length of 8192.
-@@ -1427,6 +1437,7 @@ beos*)
+@@ -2189,6 +2199,7 @@ beos*)
  bsdi[[45]]*)
    version_type=linux
    need_version=no
@@ -61,7 +36,7 @@ Local pkgsrc changes:
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -1525,9 +1536,7 @@ freebsd1*)
+@@ -2290,9 +2301,7 @@ freebsd1*)
    dynamic_linker=no
    ;;
  
@@ -72,7 +47,7 @@ Local pkgsrc changes:
    if test -x /usr/bin/objformat; then
      objformat=`/usr/bin/objformat`
    else
-@@ -1539,7 +1548,7 @@ freebsd* | dragonfly*)
+@@ -2304,7 +2313,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -81,7 +56,7 @@ Local pkgsrc changes:
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -1562,13 +1571,24 @@ freebsd* | dragonfly*)
+@@ -2327,13 +2336,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -107,22 +82,7 @@ Local pkgsrc changes:
  gnu*)
    version_type=linux
    need_lib_prefix=no
-@@ -1637,15 +1657,22 @@ interix[[3-9]]*)
-   hardcode_into_libs=yes
-   ;;
- 
-+interix3*)
-+  version_type=linux
-+  need_lib_prefix=no
-+  need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-+  soname_spec='${libname}${release}${shared_ext}$major'
-+  dynamic_linker='Interix 3.x ld.so'
-+  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=yes
-+  hardcode_into_libs=yes
-+  ;;
-+
+@@ -2405,12 +2425,7 @@ interix[[3-9]]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -136,7 +96,7 @@ Local pkgsrc changes:
    esac
    need_lib_prefix=no
    need_version=no
-@@ -1710,11 +1737,11 @@ linux* | k*bsd*-gnu)
+@@ -2486,15 +2501,14 @@ linux* | k*bsd*-gnu)
    ;;
  
  netbsd*)
@@ -144,20 +104,17 @@ Local pkgsrc changes:
 +  version_type=linux
    need_lib_prefix=no
    need_version=no
-   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
+   if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -1739,13 +1766,14 @@ nto-qnx*)
-   need_lib_prefix=no
-   need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-+  dynamic_linker='QNX libc.so'
-   soname_spec='${libname}${release}${shared_ext}$major'
-   shlibpath_var=LD_LIBRARY_PATH
-   shlibpath_overrides_runpath=yes
+-    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
+     soname_spec='${libname}${release}${shared_ext}$major'
+     dynamic_linker='NetBSD ld.elf_so'
+   fi
+@@ -2523,7 +2537,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -166,170 +123,33 @@ Local pkgsrc changes:
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -1753,7 +1781,7 @@ openbsd*)
-     openbsd3.3 | openbsd3.3.*) need_version=yes ;;
-     *)                         need_version=no  ;;
+@@ -2531,7 +2545,7 @@ openbsd*)
+     openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
+     *)				need_version=no  ;;
    esac
 -  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
 +  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
-   if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -1954,9 +1982,7 @@ if test -f "$ltmain" && test -n "$tagnam
- 
-       case $tagname in
-       CXX)
--	if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
--	    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) ||
--	    (test "X$CXX" != "Xg++"))) ; then
-+	if test -n "$CXX" && test "X$CXX" != "Xno" ; then
- 	  AC_LIBTOOL_LANG_CXX_CONFIG
- 	else
- 	  tagname=""
-@@ -2475,6 +2501,10 @@ interix[[3-9]]*)
-   lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so|\.a)$'
+   if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
+@@ -3091,7 +3105,7 @@ newos6*)
    ;;
  
-+interix3*)
-+  lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so|\.a)$'
-+  ;;
-+
- irix5* | irix6* | nonstopux*)
-   case $LD in
-   *-32|*"-32 ") libmagic=32-bit;;
-@@ -2505,7 +2535,7 @@ newos6*)
-   ;;
- 
- nto-qnx*)
--  lt_cv_deplibs_check_method=unknown
+ *nto* | *qnx*)
+-  lt_cv_deplibs_check_method=pass_all
 +  lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so|S\.a)$'
    ;;
  
  openbsd*)
-@@ -2712,21 +2742,10 @@ AC_DEFUN([AC_LIBTOOL_CXX],
- # ---------------
- AC_DEFUN([_LT_AC_LANG_CXX],
- [AC_REQUIRE([AC_PROG_CXX])
--AC_REQUIRE([_LT_AC_PROG_CXXCPP])
-+AC_REQUIRE([AC_PROG_CXXCPP])
- _LT_AC_SHELL_INIT([tagnames=${tagnames+${tagnames},}CXX])
- ])# _LT_AC_LANG_CXX
- 
--# _LT_AC_PROG_CXXCPP
--# ------------------
--AC_DEFUN([_LT_AC_PROG_CXXCPP],
--[
--AC_REQUIRE([AC_PROG_CXX])
--if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
--    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) ||
--    (test "X$CXX" != "Xg++"))) ; then
--  AC_PROG_CXXCPP
--fi
--])# _LT_AC_PROG_CXXCPP
- 
- # AC_LIBTOOL_F77
- # --------------
-@@ -2864,7 +2883,7 @@ AC_DEFUN([AC_LIBTOOL_LANG_CXX_CONFIG], [
- AC_DEFUN([_LT_AC_LANG_CXX_CONFIG],
- [AC_LANG_PUSH(C++)
- AC_REQUIRE([AC_PROG_CXX])
--AC_REQUIRE([_LT_AC_PROG_CXXCPP])
-+AC_REQUIRE([AC_PROG_CXXCPP])
- 
- _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
- _LT_AC_TAGVAR(allow_undefined_flag, $1)=
-@@ -3350,6 +3369,16 @@ case $host_os in
-     _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,`expr ${RANDOM-$$} % 4096 / 2 \* 262144 + 1342177280` -o $lib'
-     _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed "s,^,_," $export_symbols >$output_objdir/$soname.expsym~$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file,$output_objdir/$soname.expsym ${wl}--image-base,`expr ${RANDOM-$$} % 4096 / 2 \* 262144 + 1342177280` -o $lib'
-     ;;
-+  interix3*)
-+    # Oy, what a hack.
-+    # Because shlibs are not compiled -fPIC due to broken code, we must
-+    # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+    # all libraries, leading to runtime relocations -- slow and very
-+    # memory consuming.  To do this, we pick a random 256KB-aligned
-+    # start address between 0x50000000 and 0x6ffc0000 at link time.
-+    _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+    _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+    ;;
-   irix5* | irix6*)
-     case $cc_basename in
-       CC*)
-@@ -3503,14 +3532,29 @@ case $host_os in
-     ;;
-   netbsd*)
-     if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
-+      # a.out is quite broken and goes directly to ld
-       _LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
-       wlarc=
-+      # Determine if we need to override the c++rt0 that is
-+      # picked up by analysing output_verbose_link_cmds
-+      if test -f ${PREFIX}/lib/c++rt0/c++rt0.o.PIC; then
-+        cpprt0_file="${PREFIX}/lib/c++rt0/c++rt0.o.PIC"
-+      else
-+        cpprt0_file=
-+      fi
-       _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
-       _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-       _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
--    fi
--    # Workaround some broken pre-1.5 toolchains
-     output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | grep conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
-+    elif $CC -dumpspecs | grep -- '-lgcc -lc -lgcc' >/dev/null; then
-+      # Workaround some broken pre-1.5 ELF toolchains
-+      output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | grep conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
-+    else
-+      # Modern ELF works sanely as-is
-+      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
-+      output_verbose_link_cmd='echo'
-+    fi
-     ;;
-   openbsd2*)
-     # C++ shared libraries are fairly broken
-@@ -3823,6 +3867,11 @@ case $host_os in
-     # FIXME: insert proper C++ library support
-     _LT_AC_TAGVAR(ld_shlibs, $1)=no
-     ;;
-+  nto-qnx*)
-+    _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+    _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
-+    output_verbose_link_cmd='echo'
-+    ;;
-   *)
-     # FIXME: insert proper C++ library support
-     _LT_AC_TAGVAR(ld_shlibs, $1)=no
-@@ -3985,6 +4034,21 @@ if AC_TRY_EVAL(ac_compile); then
-     esac
-   done
- 
-+  case "$host_os" in
-+  netbsd*)
-+    if test -n "$cpprt0_file"; then
-+      predep_objects_CXX=`eval echo $predep_objects_CXX | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
-+    fi
-+    ;;
-+  interix3*)
-+    # Interix installs completely hosed .la files for C++, so rather than
-+    # hack all around it, let's just trust "g++" to DTRT.
-+    predep_objects_CXX=
-+    postdep_objects_CXX=
-+    postdeps_CXX=
-+    ;;
-+  esac
-+
-   # Clean up.
-   rm -f a.out a.exe
- else
-@@ -5033,9 +5097,15 @@ AC_MSG_CHECKING([for $compiler option to
- 	[_LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'])
+@@ -3580,9 +3594,15 @@ m4_if([$1], [CXX], [
+ 	[_LT_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'])
        ;;
      darwin* | rhapsody*)
 -      # PIC is the default on this platform
 +      # PIC is the default on this platform, and static linking of
 +      # binaries generally doesn't work
        # Common symbols not allowed in MH_DYLIB files
-       _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
+       _LT_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
 +      _LT_AC_TAGVAR(lt_prog_compiler_static, $1)=''
 +      ;;
 +    *mint*)
@@ -338,18 +158,7 @@ Local pkgsrc changes:
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -5061,6 +5131,10 @@ AC_MSG_CHECKING([for $compiler option to
- 	;;
-       esac
-       ;;
-+    interix3*)
-+      # Interix 3.0-3.5 -fPIC option generates borked code.
-+      # (Instead, shlibs are relocated at runtime.)
-+      ;;
-     *)
-       _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
-       ;;
-@@ -5107,6 +5181,9 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -3650,6 +3670,9 @@ m4_if([$1], [CXX], [
  	    ;;
  	esac
  	;;
@@ -359,25 +168,7 @@ Local pkgsrc changes:
        freebsd* | dragonfly*)
  	# FreeBSD uses GNU C++
  	;;
-@@ -5139,6 +5216,8 @@ AC_MSG_CHECKING([for $compiler option to
- 	# This is c89, which is MS Visual C++ (no shared libs)
- 	# Anyone wants to do a port?
- 	;;
-+      interix3*)
-+	;;
-       irix5* | irix6* | nonstopux*)
- 	case $cc_basename in
- 	  CC*)
-@@ -5278,6 +5357,8 @@ AC_MSG_CHECKING([for $compiler option to
- 	;;
-       vxworks*)
- 	;;
-+      nto-qnx*)
-+	;;
-       *)
- 	_LT_AC_TAGVAR(lt_prog_compiler_can_build_shared, $1)=no
- 	;;
-@@ -5319,9 +5400,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -3888,9 +3911,11 @@ m4_if([$1], [CXX], [
        ;;
  
      darwin* | rhapsody*)
@@ -385,12 +176,12 @@ Local pkgsrc changes:
 +      # PIC is the default on this platform, and static linking of
 +      # binaries generally doesn't work
        # Common symbols not allowed in MH_DYLIB files
-       _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
+       _LT_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
 +      _LT_AC_TAGVAR(lt_prog_compiler_static, $1)=''
        ;;
  
-     interix[[3-9]]*)
-@@ -5329,6 +5412,13 @@ AC_MSG_CHECKING([for $compiler option to
+     hpux*)
+@@ -3912,6 +3937,13 @@ m4_if([$1], [CXX], [
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -404,105 +195,96 @@ Local pkgsrc changes:
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -5355,6 +5445,11 @@ AC_MSG_CHECKING([for $compiler option to
-       esac
-       ;;
- 
-+    interix3*)
-+      # Interix 3.0-3.5 -fPIC option generates borked code.
-+      # (Instead, shlibs are relocated at runtime.)
-+      ;;
-+
-     *)
-       _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
-       ;;
-@@ -5510,6 +5605,10 @@ AC_MSG_CHECKING([for $compiler option to
-       _LT_AC_TAGVAR(lt_prog_compiler_static, $1)='-Bstatic'
-       ;;
- 
-+    nto-qnx*)
-+      _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
-+      ;;
-+
-     *)
-       _LT_AC_TAGVAR(lt_prog_compiler_can_build_shared, $1)=no
-       ;;
-@@ -5534,6 +5633,9 @@ if test -n "$_LT_AC_TAGVAR(lt_prog_compi
- fi
+@@ -4110,6 +4142,9 @@ m4_if([$1], [CXX], [
+ ])
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
 +  mint*)
 +    _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)=
 +    ;;
    *djgpp*)
-     _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)=
+     _LT_TAGVAR(lt_prog_compiler_pic, $1)=
      ;;
-@@ -5791,8 +5893,19 @@ EOF
-       fi
+@@ -4429,7 +4464,7 @@ _LT_EOF
        ;;
  
-+    interix3*)
-+      # Oy, what a hack.
-+      # Because shlibs are not compiled -fPIC due to broken code, we must
-+      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+      # all libraries, leading to runtime relocations -- slow and very
-+      # memory consuming.  To do this, we pick a random 256KB-aligned
-+      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      ;;
-+
      netbsd*)
--      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 +      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | grep __G95__ >/dev/null; then
- 	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+ 	_LT_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
        else
-@@ -5856,6 +5969,11 @@ _LT_EOF
-       _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
+@@ -4861,6 +4896,8 @@ _LT_EOF
        ;;
  
-+    nto-qnx*)
-+       _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+       _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
-+       ;;
-+
-     *)
-       if $LD --help 2>&1 | grep ': supported targets:.* elf' > /dev/null; then
- 	_LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-@@ -6210,6 +6328,21 @@ _LT_EOF
-       fi
+     *nto* | *qnx*)
++      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
        ;;
  
-+    interix3*)
-+      # Oy, what a hack.
-+      # Because shlibs are not compiled -fPIC due to broken code, we must
-+      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+      # all libraries, leading to runtime relocations -- slow and very
-+      # memory consuming.  To do this, we pick a random 256KB-aligned
-+      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
-+      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-+      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-h,$libdir'
-+      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-+      ;;
-+
-     irix5* | irix6* | nonstopux*)
-       if test "$GCC" = yes; then
- 	_LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -6435,6 +6568,13 @@ _LT_EOF
-       _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-       ;;
+     openbsd*)
+@@ -5318,9 +5355,7 @@ m4_defun([_LT_PROG_CXX],
+ [
+ pushdef([AC_MSG_ERROR], [_lt_caught_CXX_error=yes])
+ AC_PROG_CXX
+-if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
+-    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) ||
+-    (test "X$CXX" != "Xg++"))) ; then
++if test -n "$CXX" && test "X$CXX" != "Xno" ; then
+   AC_PROG_CXXCPP
+ else
+   _lt_caught_CXX_error=yes
+@@ -6008,18 +6043,37 @@ if test "$_lt_caught_CXX_error" != yes; 
  
-+    nto-qnx*)
-+      _LT_AC_TAGVAR(archive_cmds, $1)='$LD -shared -o $lib $libobjs $deplibs $linker_flags'
-+      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
-+      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-+      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-+      ;;
-+
-     *)
-       _LT_AC_TAGVAR(ld_shlibs, $1)=no
-       ;;
+       netbsd*)
+         if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
++          # a.out is quite broken and goes directly to ld
+ 	  _LT_TAGVAR(archive_cmds, $1)='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
+ 	  wlarc=
++          # Determine if we need to override the c++rt0 that is
++          # picked up by analysing output_verbose_link_cmds
++          if test -f ${PREFIX}/lib/c++rt0/c++rt0.o.PIC; then
++            cpprt0_file="${PREFIX}/lib/c++rt0/c++rt0.o.PIC"
++          else
++            cpprt0_file=
++          fi
+ 	  _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
+ 	  _LT_TAGVAR(hardcode_direct, $1)=yes
+ 	  _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
+-	fi
+-	# Workaround some broken pre-1.5 toolchains
+-	output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
++        elif $CC -dumpspecs | grep -- '-lgcc -lc -lgcc' >/dev/null; then
++          # Workaround some broken pre-1.5 ELF toolchains
++          output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | grep conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
++        else
++          # Modern ELF works sanely as-is
++          _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++          _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++          output_verbose_link_cmd='echo'
++        fi
+ 	;;
+ 
+       *nto* | *qnx*)
+-        _LT_TAGVAR(ld_shlibs, $1)=yes
++        _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++        _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++        _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
++        _LT_AC_TAGVAR(hardcode_direct, $1)=yes
++        _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
++        output_verbose_link_cmd='echo'
+ 	;;
+ 
+       openbsd2*)
+@@ -6481,6 +6535,11 @@ $RM -f confest.$objext
+ # PORTME: override above test on systems where it is broken
+ m4_if([$1], [CXX],
+ [case $host_os in
++netbsd*)
++  if test -n "$cpprt0_file"; then
++    _LT_TAGVAR(predep_objects,$1)=`eval echo $predep_objects_CXX | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
++  fi
++   ;;
+ interix[[3-9]]*)
+   # Interix 3.5 installs completely hosed .la files for C++, so rather than
+   # hack all around it, let's just trust "g++" to DTRT.

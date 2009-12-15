@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/14 19:03:45 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/15 17:35:36 joerg Exp $
+include/libltdl/lt_dlloader.h
+include/libltdl/lt_error.h
+include/libltdl/lt_system.h
 include/ltdl.h
 lib/libltdl.la
