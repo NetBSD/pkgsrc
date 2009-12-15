@@ -1,0 +1,15 @@
+$NetBSD: patch-au,v 1.1 2009/12/15 12:09:20 asau Exp $
+
+Don't strip scripts.
+
+--- lib/test_server/src/Makefile.orig	2009-06-05 17:02:52.000000000 +0400
++++ lib/test_server/src/Makefile	2009-12-15 13:15:00.000000000 +0300
+@@ -139,7 +139,7 @@
+ 		$(TARGET_FILES) $(TS_TARGET_FILES) \
+ 		$(AUTOCONF_FILES) $(C_FILES) $(COVER_FILES) $(CONFIG) \
+ 		$(RELEASE_PATH)/test_server
+-	$(INSTALL_PROGRAM) $(PROGRAMS) $(RELEASE_PATH)/test_server
++	$(INSTALL_SCRIPT) $(PROGRAMS) $(RELEASE_PATH)/test_server
+ 
+ release_docs_spec:
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-aq,v 1.1 2009/12/15 12:09:20 asau Exp $
+
+--- erts/etc/unix/Install.src.orig	2009-09-18 18:07:12.000000000 +0400
++++ erts/etc/unix/Install.src	2009-10-27 01:43:51.000000000 +0300
+@@ -27,14 +27,15 @@
+ 		-minimal) start_option=minimal ;;
+ 		-sasl)    start_option=sasl    ;;
+ 		-cross)   cross=yes            ;;
+-		*)        ERL_ROOT=$1          ;;
++		*)        ERL_ROOT=$DESTDIR/$1;
++		          ERL_IROOT=$1         ;;
+ 	esac
+ 	shift
+ done
+ 
+ if [ -z "$cross" ]
+ then
+-    TARGET_ERL_ROOT="$ERL_ROOT"
++    TARGET_ERL_ROOT="$ERL_IROOT"
+ else
+     TARGET_ERL_ROOT="$ERL_ROOT"
+     ERL_ROOT=`pwd`

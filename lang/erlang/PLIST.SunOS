@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2009/12/15 12:09:20 asau Exp $
+lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/cpu_sup
+lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/ferrule
+lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/mod_syslog
+lib/erlang/lib/os_mon-${VERSION.os_mon}/src/cpu_sup.c
+lib/erlang/lib/os_mon-${VERSION.os_mon}/src/ferrule.c
+lib/erlang/lib/os_mon-${VERSION.os_mon}/src/mod_syslog.c
