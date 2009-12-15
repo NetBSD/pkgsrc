@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/10/11 11:15:40 asau Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/15 15:14:54 asau Exp $
 #
 
-DISTNAME=		ecl-9.10.2
+DISTNAME=		ecl-9.12.3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
 EXTRACT_SUFX=		.tgz
