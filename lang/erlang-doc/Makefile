@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/12/15 13:32:10 asau Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/15 13:53:24 asau Exp $
 
 DISTNAME=		otp_doc_html_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-doc-${ERLANG_VERSION}
@@ -30,11 +30,5 @@ do-install:
 	cd ${WRKDIR} && pax ${DUPLICATE_FILES:=-s,%,,} -rw doc erts-${VERSION.erts} lib ${DESTDIR}${PREFIX}/lib/erlang/
 
 .include "../../lang/erlang/Makefile.versions"
-
-# Generate PLIST
-.for _pkg_ _version_ in $(_VERSIONS)
-PRINT_PLIST_AWK+=	{if ($$0 ~ /\/$(_pkg_)-$(_version_)\//) {sub(/\/$(_pkg_)-$(_version_)\//,"/$(_pkg_)-$${VERSION.$(_pkg_)}/", $$0);}}
-.endfor
-PRINT_PLIST_AWK+=	{if ($$0 ~ /\/releases\/${DIST_VERSION_MAJOR}\//) {sub(/\/releases\/${DIST_VERSION_MAJOR}\//,"/releases/$${VERSION}/", $$0);}}
 
 .include "../../mk/bsd.pkg.mk"
