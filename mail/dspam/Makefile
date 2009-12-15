@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2009/08/17 19:09:13 sno Exp $
+# $NetBSD: Makefile,v 1.64 2009/12/15 21:54:17 joerg Exp $
 
 DISTNAME=	dspam-3.8.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	http://dspam.nuclearelephant.com/sources/
 

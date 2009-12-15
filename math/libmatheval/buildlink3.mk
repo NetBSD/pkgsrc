@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2009/05/20 00:58:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/12/15 21:55:05 joerg Exp $
 
 BUILDLINK_TREE+=	libmatheval
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmatheval
 LIBMATHEVAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmatheval+=	libmatheval>=1.1.0
-BUILDLINK_ABI_DEPENDS.libmatheval+=	libmatheval>=1.1.4nb1
+BUILDLINK_ABI_DEPENDS.libmatheval+=	libmatheval>=1.1.4nb2
 BUILDLINK_PKGSRCDIR.libmatheval?=	../../math/libmatheval
 
 .include "../../devel/flex/buildlink3.mk"
