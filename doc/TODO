@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8763 2009/12/15 11:08:51 wiz Exp $
+$NetBSD: TODO,v 1.8764 2009/12/15 12:24:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1416,7 +1416,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
 	o xboard-4.4.2
-	o xcb-proto-1.6
 	o xcircuit-3.6.85
 	o xcmsdb-1.0.2 [unpackaged]
 	o xcursorgen-1.0.3
