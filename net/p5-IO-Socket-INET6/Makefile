@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/15 13:22:12 wiz Exp $
 #
 
-DISTNAME=		IO-Socket-INET6-2.56
+DISTNAME=		IO-Socket-INET6-2.57
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=IO/}
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=IO/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/IO-Socket-INET6/
 COMMENT=		Perl object interface for AF_INET|AF_INET6 domain sockets
+LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Socket6-[0-9]*:../../net/p5-Socket6
 
