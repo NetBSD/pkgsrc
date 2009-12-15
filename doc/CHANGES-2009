@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4601 2009/12/15 12:42:15 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4602 2009/12/15 12:51:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6186,3 +6186,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/mpfr to 2.4.2 [wiz 2009-12-15]
 	Updated lang/chicken to 4.3.0 [asau 2009-12-15]
 	Updated wm/openbox to 3.4.8 [wiz 2009-12-15]
+	Updated time/p5-DateTime-Format-W3CDTF to 0.05 [wiz 2009-12-15]
