@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2009/08/26 19:58:45 sno Exp $
+# $NetBSD: Makefile,v 1.75 2009/12/15 23:22:06 asau Exp $
 #
 
-DISTNAME=		clisp-2.47
-PKGREVISION=		2
+DISTNAME=		clisp-2.48
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 #EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://clisp.cons.org/
 COMMENT=		CLISP, a Common Lisp implementation
+LICENSE=		gnu-gpl-v2
 
 # Sparc64 has assembler code problems, see
 # http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
@@ -22,15 +22,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
+GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		.
-USE_GNU_CONFIGURE_HOST=	NO	# work around broken reasoning: "configure --host=..." => cross-building
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
 BUILD_DIRS=		src
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		dvipdf
 UNLIMIT_RESOURCES=	stacksize
 
+USE_GNU_CONFIGURE_HOST=	NO	# work around broken reasoning: "configure --host=..." => cross-building
 CONFIGURE_ARGS+=	--disable-maintainer-mode
 CONFIGURE_ARGS+=	--fsstnd=netbsd
 CONFIGURE_ARGS+=	--without-included-regex

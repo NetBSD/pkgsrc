@@ -1,19 +1,46 @@
-$NetBSD: patch-aa,v 1.16 2008/02/29 19:34:44 tnn Exp $
+$NetBSD: patch-aa,v 1.17 2009/12/15 23:22:06 asau Exp $
 
+Override library subdirectory name for consistency.
 Don't use cache file to avoid trailing space problem.
+Fix scripts installation.
 
---- src/makemake.in.orig	2008-01-03 20:28:49.000000000 +0100
-+++ src/makemake.in
-@@ -1881,6 +1881,7 @@ echol "psdir   = ${PSDIR}"
+--- src/makemake.in.orig	2009-07-28 17:58:03.000000000 +0400
++++ src/makemake.in	2009-12-15 22:06:10.000000000 +0300
+@@ -538,6 +538,7 @@
+ RANLIB='@RANLIB@'                   # either 'ranlib' or ':'
+ INSTALL='@INSTALL@'                 # either 'install -c' or 'cp'
+ INSTALL_PROGRAM='@INSTALL_PROGRAM@' # either 'install -c' or 'cp'
++INSTALL_SCRIPT='@INSTALL_SCRIPT@'   # as above only never strip
+ INSTALL_DATA='@INSTALL_DATA@'       # either 'install -c -m 644' or 'cp'
+ GROFF='@GROFF@'                     # either 'groff' or ''
+ DVIPDF='@DVIPDF@'                   # either 'dvipdf' or ''
+@@ -995,6 +996,7 @@
+ if [ -z "$INSTALL" ] ; then
+   INSTALL=$CP
+   INSTALL_PROGRAM='$(INSTALL)'
++  INSTALL_SCRIPT='$(INSTALL)'
+   INSTALL_DATA='$(INSTALL)'
+ fi
+ 
+@@ -1930,7 +1932,7 @@
+ echol "psdir   = ${PSDIR}"
  echol "pdfdir  = ${PDFDIR}"
  echol "libdir  = ${LIBDIR}"
- echol "lisplibdir = \$(libdir)${NEXT_}\$(TOPDIR)"
+-echol "lisplibdir = \$(libdir)${NEXT_}\$(TOPDIR)"
 +echol "lisplibdir = \$(libdir)${NEXT_}clisp"
  if [ -n "$USE_GETTEXT" ] ; then
    echol "localedir = ${LOCALEDIR}"
  fi
-@@ -3342,7 +3343,7 @@ echotab "      if test \"\$\${ac_cv_env_
- echotab "      if test \"\$\${ac_cv_env_CFLAGS_set}\" = set; then CFLAGS=\"\$\${ac_cv_env_CFLAGS_value}\"; export CFLAGS; fi; \\"
+@@ -2082,6 +2084,7 @@
+ echol '# Programs used by "make install":'
+ echol "INSTALL = ${INSTALL}"
+ echol "INSTALL_PROGRAM = ${INSTALL_PROGRAM}"
++echol "INSTALL_SCRIPT = ${INSTALL_SCRIPT}"
+ echol "INSTALL_DATA = ${INSTALL_DATA}"
+ echol
+ echol '# Programs used by "make distrib":'
+@@ -3348,7 +3351,7 @@
+ done
  # we must use $(SHELL) for sub-configures because when the top CONFIG_SHELL
  # is bash, config.cache may be unparsable with sh on Solaris
 -echotab "      \$(SHELL) ./configure --cache-file=\$\${cache} --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
@@ -21,3 +48,13 @@ Don't use cache file to avoid trailing space problem.
  echotab "    else \$(SHELL) ./configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS); \\"
  echotab "    fi ) ;\\"
  echotab "fi"
+@@ -3608,7 +3611,8 @@
+     echotab "(cd \$(DESTDIR)\$(lisplibdir) && \$(RMRF) base full)"
+     echotab "mkdir \$(DESTDIR)\$(lisplibdir)/base"
+     echotab "mkdir \$(DESTDIR)\$(lisplibdir)/full"
+-    echotab "for f in clisp-link linkkit/* base/* full/*; do \\"
++    echotab "\$(INSTALL_SCRIPT) clisp-link \$(DESTDIR)\$(lisplibdir)/clisp-link"
++    echotab "for f in linkkit/* base/* full/*; do \\"
+     echotab "  case \$\$f in \\"
+     echotab "    */lisp${LEXE}|clisp-link) \$(INSTALL_PROGRAM) \$\$f \$(DESTDIR)\$(lisplibdir)/\$\$f;; \\"
+     echotab "    *) \$(INSTALL_DATA) \$\$f \$(DESTDIR)\$(lisplibdir)/\$\$f;; \\"
