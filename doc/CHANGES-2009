@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4635 2009/12/15 17:54:07 asau Exp $
+$NetBSD: CHANGES-2009,v 1.4636 2009/12/15 19:02:00 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6220,3 +6220,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libtool-info to 2.2.6b [joerg 2009-12-15]
 	Updated devel/libltdl to 2.2.6b [joerg 2009-12-15]
 	Updated devel/libsigsegv to 2.8 [asau 2009-12-15]
+	Updated net/nagios-base to 3.1.2 [bouyer 2009-03-24]
+	Updated net/nagios-plugins to 1.4.14 [bouyer 2009-03-24]
+	Updated net/nagios-plugin-ldap to 1.4.14 [bouyer 2009-03-24]
+	Updated net/nagios-plugin-mysql to 1.4.14 [bouyer 2009-03-24]
+	Updated net/nagios-plugin-pgsql to 1.4.14 [bouyer 2009-03-24]
+	Updated net/nagios-plugin-radius to 1.4.14 [bouyer 2009-03-24]
+	Updated net/nagios-plugin-snmp to 1.4.14 [bouyer 2009-03-24]
