@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2009/08/26 19:57:15 sno Exp $
+# $NetBSD: Makefile,v 1.9 2009/12/15 08:29:35 jnemeth Exp $
 #
 
-DISTNAME=	centerim-4.22.5
-PKGREVISION=	1
+DISTNAME=	centerim-4.22.9
 CATEGORIES=	chat
 MASTER_SITES=	http://www.centerim.org/download/releases/ \
 		http://transacid.de/centerim/releases/
@@ -10,6 +9,7 @@ MASTER_SITES=	http://www.centerim.org/download/releases/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.centerim.org/
 COMMENT=	Instant Messenger interface supporting many protocols
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -60,7 +60,7 @@ CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv=yes
 .endif
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/centerim.1 ${DESTDIR:Q}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/centerim.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"
 
