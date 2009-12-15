@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2009/11/08 17:57:46 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2009/12/15 15:16:15 tnn Exp $
 
 DISTNAME=	openjdk-7-ea-src-b75-30_oct_2009
 PKGNAME=	openjdk7-1.7.0.75.20091106
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -140,6 +140,9 @@ do-install:
 	  ${DESTDIR}${JAVA_HOME}/.
 	${INSTALL_DATA} ${WRKDIR}/cacerts.out				\
 	  ${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
+	rm -f ${DESTDIR}${JAVA_HOME}/include/jni_md.h
+	ln -s ${LOWER_OPSYS}/jni_md.h					\
+	  ${DESTDIR}${JAVA_HOME}/include/jni_md.h
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
