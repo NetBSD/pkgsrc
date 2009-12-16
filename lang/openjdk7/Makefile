@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/12/15 15:16:15 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2009/12/16 21:54:27 tnn Exp $
 
 DISTNAME=	openjdk-7-ea-src-b75-30_oct_2009
 PKGNAME=	openjdk7-1.7.0.75.20091106
@@ -143,6 +143,10 @@ do-install:
 	rm -f ${DESTDIR}${JAVA_HOME}/include/jni_md.h
 	ln -s ${LOWER_OPSYS}/jni_md.h					\
 	  ${DESTDIR}${JAVA_HOME}/include/jni_md.h
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-4.*-*)
+MAKE_ENV+=	PTHREAD_STACKSIZE=1024
+.endif
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
