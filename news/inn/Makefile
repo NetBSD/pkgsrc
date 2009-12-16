@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2009/10/03 16:20:39 spz Exp $
+# $NetBSD: Makefile,v 1.100 2009/12/16 22:10:25 spz Exp $
 
-DISTNAME=		inn-2.5.0
+DISTNAME=		inn-2.5.1
 CATEGORIES=		news
-PKGREVISION=		2
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
 
@@ -56,14 +55,19 @@ CONFIGURE_ENV+=		_PATH_SORT=${TOOLS_SORT:Q}
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD:Q}
 USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
 
+LDFLAGS.SunOS+= -lsocket -lnsl
+
 DEPENDS+=		p5-MIME-tools>0:../../mail/p5-MIME-tools
 DEPENDS+=		p5-GD>0:../../graphics/p5-GD
 
-PKG_GROUPS_VARS+=	INN_GROUP
-PKG_USERS_VARS+=	INN_USER
+## Please note that USE_DESTDIR=yes only works for this package if the user
+## and group already exist
 
-PKG_GROUPS=		${INN_GROUP}
-PKG_USERS=		${INN_USER}:${INN_GROUP}
+PKG_USERS_VARS+=	INN_USER
+PKG_GROUPS_VARS+=	INN_GROUP
+
+PKG_GROUPS+=		${INN_GROUP}
+PKG_USERS+=		${INN_USER}:${INN_GROUP}
 PKG_GECOS.${INN_USER}=	Internet\ News
 PKG_HOME.${INN_USER}=	${INN_DATA_DIR}
 PKG_SHELL.${INN_USER}=	${SH}
@@ -161,11 +165,14 @@ pre-install:
 
 post-install:
 	for FILE in cnfsstat ctlinnd makehistory innbind; do		\
+		${RM} -f ${DESTDIR}${PREFIX}/sbin/$$FILE ;		\
 		${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/$$FILE	\
 				${DESTDIR}${PREFIX}/sbin ;		\
 	done
+	${RM} -f ${DESTDIR}${PREFIX}/sbin/inews ;
 	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/inews		\
 			${DESTDIR}${PREFIX}/bin
+	${RM} -f ${DESTDIR}${PREFIX}/sbin/rnews ;
 	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/rnews		\
 			${DESTDIR}${PREFIX}/bin
 	for FILE in libinn.a libstorage.a libinnhist.a ; do		\
