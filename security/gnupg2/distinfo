@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2009/12/16 09:09:06 wiz Exp $
+$NetBSD: distinfo,v 1.14 2009/12/16 18:52:49 drochner Exp $
 
 SHA1 (gnupg-2.0.13.tar.bz2) = 2ff42aff14cdddafc291d44ac1968af5f09a9d4d
 RMD160 (gnupg-2.0.13.tar.bz2) = a2291f4d5923b50bca980b726e2fe0c31c2589a9
@@ -16,3 +16,4 @@ SHA1 (patch-af) = 908fd76d67f837367121e493d239f8b377eb1c3f
 SHA1 (patch-ah) = 0c9e061611ebfe22441a161aca016436a70ccc60
 SHA1 (patch-ai) = 555b8768c30f470e98e5be62a4a4bea29eefdf78
 SHA1 (patch-aj) = 20be6b455167962ffa556979d8d0f167dd14131e
+SHA1 (patch-ak) = 74b26ce441ea99ff28a09a3f0c643456daf48f35
