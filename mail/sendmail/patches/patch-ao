@@ -1,0 +1,19 @@
+$NetBSD: patch-ao,v 1.1 2009/12/16 09:46:36 jnemeth Exp $
+
+Fix a possibly incorrect error message.
+Patch sent upstream, 2009/12/15 -- jnemeth
+
+--- libmilter/listener.c.orig	2007-04-23 22:22:50.000000000 +0000
++++ libmilter/listener.c
+@@ -777,8 +777,9 @@ mi_listener(conn, dbg, smfi, timeout, ba
+ 				continue;
+ 			scnt++;
+ 			smi_log(SMI_LOG_ERR,
+-				"%s: select() failed (%s), %s",
+-				smfi->xxfi_name, sm_errstring(save_errno),
++				"%s: %s() failed (%s), %s",
++				smfi->xxfi_name, MI_POLLSELECT,
++				sm_errstring(save_errno),
+ 				scnt >= MAX_FAILS_S ? "abort" : "try again");
+ 			MI_SLEEP(scnt);
+ 			if (scnt >= MAX_FAILS_S)
