@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4650 2009/12/16 20:02:22 martti Exp $
+$NetBSD: CHANGES-2009,v 1.4651 2009/12/16 20:06:44 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6255,3 +6255,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/pbulk to 0.43 [joerg 2009-12-16]
 	Updated devel/eina to 0.9.9.063 [joerg 2009-12-16]
 	Updated www/jalbum to 8.5.3 [martti 2009-12-16]
+	Removed graphics/xpm [joerg 2009-12-16]
