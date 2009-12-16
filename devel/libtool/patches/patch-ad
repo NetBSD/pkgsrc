@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.35 2009/12/15 17:35:37 joerg Exp $
+$NetBSD: patch-ad,v 1.36 2009/12/16 15:27:33 joerg Exp $
 
---- libltdl/configure.orig	2009-12-15 16:46:54.000000000 +0100
+--- libltdl/configure.orig	2009-12-16 15:15:21.000000000 +0000
 +++ libltdl/configure
 @@ -4542,6 +4542,13 @@ else
      lt_cv_sys_max_cmd_len=8192;
