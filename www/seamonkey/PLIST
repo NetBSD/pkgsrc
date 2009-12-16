@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/11/29 00:40:42 tnn Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/12/16 10:11:01 tnn Exp $
 bin/seamonkey
 lib/seamonkey/.autoreg
 lib/seamonkey/README
@@ -241,6 +241,7 @@ lib/seamonkey/modules/gloda/facet.js
 lib/seamonkey/modules/gloda/fundattr.js
 lib/seamonkey/modules/gloda/gloda.js
 lib/seamonkey/modules/gloda/index_ab.js
+lib/seamonkey/modules/gloda/index_msg.js
 lib/seamonkey/modules/gloda/indexer.js
 lib/seamonkey/modules/gloda/log4moz.js
 lib/seamonkey/modules/gloda/mimeTypeCategories.js
