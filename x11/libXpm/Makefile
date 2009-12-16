@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/24 21:45:15 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2009/12/16 19:57:47 joerg Exp $
 #
 
 DISTNAME=		libXpm-3.5.7
@@ -28,6 +28,21 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 #
 CONFIGURE_ENV+=		ac_cv_search_gettext=no
 MAKE_ENV+=		INTLLIBS=${BUILDLINK_LDADD.gettext:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "native"
+XPM_CFLAGS=	-I${X11BASE}/include
+XPM_LIBS=	-Wl,-rpath,${X11BASE}/lib -L${X11BASE}/lib -lX11
+
+SXPM_CFLAGS=	-I${X11BASE}/include
+SXPM_LIBS=	-Wl,-rpath,${X11BASE}/lib -L${X11BASE}/lib -lXt -lXext
+
+CONFIGURE_ARGS+=	XPM_CFLAGS=${XPM_CFLAGS:Q} \
+			XPM_LIBS=${XPM_LIBS:Q} \
+			SXPM_CFLAGS=${SXPM_CFLAGS:Q} \
+			SXPM_LIBS=${SXPM_LIBS:Q}
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
