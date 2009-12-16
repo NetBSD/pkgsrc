@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2009/12/15 14:46:44 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2009/12/16 22:52:42 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gwaei
 PKG_SUPPORTED_OPTIONS=	gnome
-# XXX: needed in 1.2.1, link failure if disabled
 PKG_SUGGESTED_OPTIONS=	gnome
 
 .include "../../mk/bsd.options.mk"
