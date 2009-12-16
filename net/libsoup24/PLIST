@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2009/10/21 15:52:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/12/16 19:02:26 drochner Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
 include/libsoup-2.4/libsoup/soup-auth-domain.h
 include/libsoup-2.4/libsoup/soup-auth.h
+include/libsoup-2.4/libsoup/soup-content-decoder.h
 include/libsoup-2.4/libsoup/soup-content-sniffer.h
 include/libsoup-2.4/libsoup/soup-cookie-jar-text.h
 include/libsoup-2.4/libsoup/soup-cookie-jar.h
