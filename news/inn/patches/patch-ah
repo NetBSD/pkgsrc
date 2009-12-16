@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.12 2009/09/22 13:17:00 spz Exp $
+$NetBSD: patch-ah,v 1.13 2009/12/16 22:10:25 spz Exp $
 
 --- site/Makefile.orig	2009-05-21 20:08:33.000000000 +0000
 +++ site/Makefile
-@@ -73,32 +73,17 @@ REST		= \
+@@ -73,32 +73,17 @@
  ALL		= $(MOST) $(REST)
  
  REST_INSTALLED	= \
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.12 2009/09/22 13:17:00 spz Exp $
 -	$D$(PATHETC)/nntpsend.ctl \
 -	$D$(PATHETC)/innreport.conf $D$(PATHHTTP)/innreport.css \
 -	$D$(PATHETC)/localgroups \
--	$D$(PATH_CTLWATCH) $D$(PATH_DISTPATS) \
+-	$D$(PATH_CTLWATCH) $D$(PATH_DISTPATS) $D$(PATH_DISTRIBUTIONS) \
 -	$D$(PATH_ACTSYNC_CFG) $D$(PATH_ACTSYNC_IGN) \
 -	$D$(PATH_MOTD) $D$(PATH_STORAGECONF) \
 -	$D$(PATH_CYCBUFFCONFIG) $D$(PATH_BUFFINDEXED) \
@@ -35,7 +35,7 @@ $NetBSD: patch-ah,v 1.12 2009/09/22 13:17:00 spz Exp $
  
 -SPECIAL		= $D$(PATH_ACTIVE) $D$(PATH_ACTIVE_TIMES) \
 -		$D$(PATH_NEWSGROUPS) $D$(PATH_HISTORY)
-+SPECIAL		= 
++SPECIAL		=
  
  ##  Get new versions of everything from samples directory.
  all:		$(ALL) config
