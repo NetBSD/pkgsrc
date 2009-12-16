@@ -1,10 +1,13 @@
-$NetBSD: patch-aa,v 1.18 2004/08/30 20:16:28 adrianp Exp $
+$NetBSD: patch-aa,v 1.19 2009/12/16 13:41:41 jnemeth Exp $
 
---- devtools/OS/NetBSD.orig	Sun Jun 27 00:19:35 2004
-+++ devtools/OS/NetBSD	Sun Jun 27 00:24:11 2004
-@@ -7,13 +7,14 @@
+--- devtools/OS/NetBSD.orig	2004-06-16 17:50:00.000000000 +0000
++++ devtools/OS/NetBSD
+@@ -5,15 +5,16 @@ dnl	Place personal settings in devtools/
+ 
+ define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX')
  define(`confLIBS', `-lutil')
- define(`confENVDEF', ` -DNETISO')
+-define(`confENVDEF', ` -DNETISO')
++define(`confENVDEF', ` -DNETISO -DSM_CONF_STDBOOL_H=1')
  define(`confDEPEND_TYPE', `CC-M')
 -define(`confSBINGRP', `wheel')
 -define(`confUBINOWN', `root')
