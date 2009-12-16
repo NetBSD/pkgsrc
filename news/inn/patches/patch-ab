@@ -1,17 +1,30 @@
-$NetBSD: patch-ab,v 1.8 2009/10/03 16:20:39 spz Exp $
+$NetBSD: patch-ab,v 1.9 2009/12/16 22:10:25 spz Exp $
 
 --- scripts/news.daily.in.orig	2009-05-21 22:08:33.000000000 +0200
 +++ scripts/news.daily.in
-@@ -233,7 +233,7 @@ then
+@@ -232,17 +232,17 @@ then
+     cd "${PATHSPOOL}/${INNFEEDSPOOL}"
+ 
+     # Find the PIDs of innfeed.
+-    LOCKS=`cat *.lock 2>/dev/null | ${SORT} -u`
++    INNFEEDLOCKS=`cat *.lock 2>/dev/null | ${SORT} -u`
  
      # Process files like "innfeed-dropped.A001703" where
-     # 1703 is not in $LOCKS.
--    for file in `find -name "innfeed-dropped*"`
-+    for file in `find . -name "innfeed-dropped*" -print`
+-    # 1703 is not in $LOCKS.
++    # 1703 is not in $INNFEEDLOCKS.
+     for file in `find . -name "innfeed-dropped*" -print`
      do
          PID=`echo "$file" | ${SED} 's/^.*[A-Z]0*//'`
          FOUND=false
-@@ -253,6 +253,10 @@ fi
+-        for LOCK in $LOCKS
++        for INNFEEDLOCK in $INNFEEDLOCKS
+         do
+-            if [ "$PID" = "$LOCK" ]
++            if [ "$PID" = "$INNFEEDLOCK" ]
+             then
+                 FOUND=true
+             fi
+@@ -256,6 +256,10 @@ fi
  
  cd ${PATHETC}
  
