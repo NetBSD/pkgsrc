@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/09/11 20:20:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/12/16 19:52:58 joerg Exp $
 include/eina-0/Eina.h
 include/eina-0/eina/eina_accessor.h
 include/eina-0/eina/eina_array.h
@@ -7,23 +7,31 @@ include/eina-0/eina/eina_convert.h
 include/eina-0/eina/eina_counter.h
 include/eina-0/eina/eina_cpu.h
 include/eina-0/eina/eina_error.h
-include/eina-0/eina/eina_f16p16.h
 include/eina-0/eina/eina_file.h
+include/eina-0/eina/eina_fp.h
+include/eina-0/eina/eina_hamster.h
 include/eina-0/eina/eina_hash.h
 include/eina-0/eina/eina_inline_array.x
+include/eina-0/eina/eina_inline_f16p16.x
+include/eina-0/eina/eina_inline_f32p32.x
+include/eina-0/eina/eina_inline_f8p24.x
+include/eina-0/eina/eina_inline_fp.x
 include/eina-0/eina/eina_inline_hash.x
 include/eina-0/eina/eina_inline_list.x
 include/eina-0/eina/eina_inline_mempool.x
 include/eina-0/eina/eina_inline_rbtree.x
 include/eina-0/eina/eina_inline_rectangle.x
 include/eina-0/eina/eina_inline_stringshare.x
+include/eina-0/eina/eina_inline_tiler.x
 include/eina-0/eina/eina_inline_trash.x
 include/eina-0/eina/eina_inlist.h
 include/eina-0/eina/eina_iterator.h
 include/eina-0/eina/eina_lalloc.h
 include/eina-0/eina/eina_list.h
+include/eina-0/eina/eina_log.h
 include/eina-0/eina/eina_magic.h
 include/eina-0/eina/eina_main.h
+include/eina-0/eina/eina_matrixsparse.h
 include/eina-0/eina/eina_mempool.h
 include/eina-0/eina/eina_module.h
 include/eina-0/eina/eina_rbtree.h
