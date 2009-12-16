@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pre-build,v 1.9 2008/09/16 18:21:30 joerg Exp $
+# $NetBSD: pre-build,v 1.10 2009/12/16 19:41:41 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -65,7 +65,7 @@ if [ -d "${bulklog}/meta" ]; then
 	sleep 5
 fi
 
-rm -rf "${bulklog}" || true
+rm -rf "${bulklog}"/* || true
 mkdir -p "${bulklog}" "${loc}"
 
 @PREFIX@/libexec/pbulk/client-clean
