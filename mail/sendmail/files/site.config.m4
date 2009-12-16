@@ -1,4 +1,4 @@
-# $NetBSD: site.config.m4,v 1.9 2008/03/14 03:02:45 jnemeth Exp $
+# $NetBSD: site.config.m4,v 1.10 2009/12/16 09:46:36 jnemeth Exp $
 
 # pathnames specific to pkgsrc
 #
@@ -29,3 +29,9 @@ define(`confLIBOWN', `${BINOWN}')
 define(`confLIBGRP', `${BINGRP}')
 define(`confINCOWN', `${SHAREOWN}')
 define(`confINCGRP', `${SHAREGRP}')
+
+# have libmilter use poll(2) instead of select(2)
+# XXX all supported systems should support poll(2), if one is discovered
+# that doesn't, we can revisit this
+APPENDDEF(`conf_libmilter_ENVDEF', `-DSM_CONF_POLL=1')
+
