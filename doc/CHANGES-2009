@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4656 2009/12/16 22:28:17 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4657 2009/12/16 23:45:38 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6267,3 +6267,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/eet to 1.2.3 [joerg 2009-12-16]
 	Updated graphics/enblend-enfuse to 4.0 [adam 2009-12-16]
 	Updated mail/libmilter to 8.14.3nb1 [jnemeth 2009-12-16]
+	Removed graphics/evas-software-16-x11 [joerg 2009-12-16]
