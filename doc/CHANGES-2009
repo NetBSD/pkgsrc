@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4651 2009/12/16 20:06:44 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4652 2009/12/16 21:22:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6256,3 +6256,11 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/eina to 0.9.9.063 [joerg 2009-12-16]
 	Updated www/jalbum to 8.5.3 [martti 2009-12-16]
 	Removed graphics/xpm [joerg 2009-12-16]
+	Updated databases/postgresql82 to 8.2.15 [adam 2009-12-16]
+	Updated databases/postgresql82-client to 8.2.15 [adam 2009-12-16]
+	Updated databases/postgresql82-server to 8.2.15 [adam 2009-12-16]
+	Updated databases/postgresql82-adminpack to 8.2.15 [adam 2009-12-16]
+	Updated databases/postgresql82-plperl to 8.2.15 [adam 2009-12-16]
+	Updated databases/postgresql82-plpython to 8.2.15 [adam 2009-12-16]
+	Updated databases/postgresql82-pltcl to 8.2.15 [adam 2009-12-16]
+	Updated databases/postgresql82-tsearch2 to 8.2.15 [adam 2009-12-16]
