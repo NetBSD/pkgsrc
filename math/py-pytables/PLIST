@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2009/11/15 15:56:55 drochner Exp $
-bin/nctoh52.5
-bin/ptdump2.5
-bin/ptrepack2.5
+@comment $NetBSD: PLIST,v 1.7 2009/12/16 16:59:48 drochner Exp $
+bin/nctoh5${PYVERSSUFFIX}
+bin/ptdump${PYVERSSUFFIX}
+bin/ptrepack${PYVERSSUFFIX}
 ${PYSITELIB}/tables/__init__.py
 ${PYSITELIB}/tables/__init__.pyc
 ${PYSITELIB}/tables/__init__.pyo
