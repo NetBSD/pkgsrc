@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/07 19:02:02 drochner Exp $
+$NetBSD: distinfo,v 1.2 2009/12/16 19:54:39 drochner Exp $
 
-SHA1 (libmtag-0.3.1.tar.gz) = a430ab6093d06f6d382016c9a0d086439139f81f
-RMD160 (libmtag-0.3.1.tar.gz) = 88495e885647bf7886fce5e11c34fe245844b4fc
-Size (libmtag-0.3.1.tar.gz) = 304527 bytes
+SHA1 (libmtag-0.3.2.tar.gz) = 340f35da95c4d6bb0f5e0ddbf1334703df816739
+RMD160 (libmtag-0.3.2.tar.gz) = 430a7e1da063924f11826dbfd2951427fd1d6b14
+Size (libmtag-0.3.2.tar.gz) = 304704 bytes
