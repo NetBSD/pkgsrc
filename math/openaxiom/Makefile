@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/12/16 01:54:13 asau Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/16 01:58:08 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.3.0
@@ -22,11 +22,5 @@ CONFIGURE_ENV=		HOST_AWK=${TOOLS_PLATFORM.awk:Q}
 BUILD_MAKE_FLAGS+=	TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 
 .include "options.mk"
-
-SUBST_CLASSES+=			dragonfly
-SUBST_STAGE.dragonfly=		post-patch
-SUBST_MESSAGE.dragonfly=	Fixing BSD Family pattern
-SUBST_FILES.dragonfly+=		configure
-SUBST_SED.dragonfly=		-e 's/\*bsd\*)/*bsd*|*dragonfly*)/'
 
 .include "../../mk/bsd.pkg.mk"
