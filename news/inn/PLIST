@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.20 2009/09/25 11:06:00 spz Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/12/16 22:10:25 spz Exp $
 bin/inews
 bin/rnews
 include/inn/buffer.h
 include/inn/confparse.h
+include/inn/dbz.h
 include/inn/defines.h
 include/inn/dispatch.h
 include/inn/hashtab.h
