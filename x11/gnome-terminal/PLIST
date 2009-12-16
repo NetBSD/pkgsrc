@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/10/24 12:50:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/12/16 17:20:31 drochner Exp $
 bin/gnome-terminal
 share/applications/gnome-terminal.desktop
 share/gconf/schemas/gnome-terminal.schemas
@@ -74,7 +74,6 @@ share/gnome/help/gnome-terminal/uk/gnome-terminal.xml
 share/gnome/help/gnome-terminal/zh_CN/figures/gnome-terminal-default.png
 share/gnome/help/gnome-terminal/zh_CN/figures/gnome-terminal-tabbed.png
 share/gnome/help/gnome-terminal/zh_CN/gnome-terminal.xml
-share/gnome/help/gnome-terminal/zh_CN/legal.xml
 share/gnome/help/gnome-terminal/zh_TW/figures/gnome-terminal-default.png
 share/gnome/help/gnome-terminal/zh_TW/figures/gnome-terminal-tabbed.png
 share/gnome/help/gnome-terminal/zh_TW/gnome-terminal.xml
@@ -132,6 +131,7 @@ share/locale/mn/LC_MESSAGES/gnome-terminal.mo
 share/locale/mr/LC_MESSAGES/gnome-terminal.mo
 share/locale/ms/LC_MESSAGES/gnome-terminal.mo
 share/locale/nb/LC_MESSAGES/gnome-terminal.mo
+share/locale/nds/LC_MESSAGES/gnome-terminal.mo
 share/locale/ne/LC_MESSAGES/gnome-terminal.mo
 share/locale/nl/LC_MESSAGES/gnome-terminal.mo
 share/locale/nn/LC_MESSAGES/gnome-terminal.mo
