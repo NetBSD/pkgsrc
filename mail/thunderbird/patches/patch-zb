@@ -1,0 +1,15 @@
+$NetBSD: patch-zb,v 1.1 2009/12/16 10:05:44 tnn Exp $
+
+--- mail/app/Makefile.in.orig	2009-12-05 02:53:47.000000000 +0100
++++ mail/app/Makefile.in
+@@ -119,6 +119,10 @@ TK_LIBS := -framework SystemConfiguratio
+ endif
+ endif
+ 
++ifeq ($(OS_ARCH),NetBSD)
++LIBS += -lossaudio
++endif
++
+ ifdef MOZ_ENABLE_LIBXUL
+ APP_XPCOM_LIBS = $(XPCOM_GLUE_LDOPTS)
+ else
