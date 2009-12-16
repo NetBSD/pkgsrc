@@ -1,10 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2009/11/29 23:04:15 dholland Exp $
+$NetBSD: patch-aa,v 1.2 2009/12/16 16:53:09 drochner Exp $
 
-Fix for LP64 on python > 2.4.
-
---- pyid3lib.cc.orig	2003-02-16 18:50:20.000000000 -0500
-+++ pyid3lib.cc	2009-11-29 18:02:46.000000000 -0500
-@@ -10,6 +10,14 @@
+--- pyid3lib.cc.orig	2003-02-16 23:50:20.000000000 +0000
++++ pyid3lib.cc
+@@ -10,6 +10,17 @@
  #include <id3/id3lib_frame.h>
  #include <id3/tag.h>
  
@@ -14,12 +12,15 @@ Fix for LP64 on python > 2.4.
 +typedef intintargfunc ssizessizeargfunc;
 +typedef intobjargproc ssizeobjargproc;
 +typedef intintobjargproc ssizessizeobjargproc;
++#define LENFUNC inquiry
++#else
++#define LENFUNC lenfunc
 +#endif
 +
  typedef struct
  {
      PyObject_HEAD
-@@ -61,11 +69,11 @@ static PyObject* dict_from_frame( ID3_Fr
+@@ -61,11 +72,11 @@ static PyObject* dict_from_frame( ID3_Fr
  static ID3_Frame* frame_from_dict( PyObject* dict );
  static ID3_Frame* frame_from_dict( ID3_FrameID fid, PyObject* dict );
  
@@ -36,12 +37,12 @@ Fix for LP64 on python > 2.4.
  static int id3_contains( ID3Object* self, PyObject* other );
  
  static PyObject* id3_append( ID3Object* self, PyObject* args );
-@@ -80,13 +88,13 @@ static PyObject* frameid_lookup = NULL;
+@@ -80,13 +91,13 @@ static PyObject* frameid_lookup = NULL;
  
  
  static PySequenceMethods tag_as_sequence = {
 -    (inquiry)id3_length,
-+    (lenfunc)id3_length,
++    (LENFUNC)id3_length,
      NULL,
      NULL,
 -    (intargfunc)id3_item,
@@ -55,7 +56,7 @@ Fix for LP64 on python > 2.4.
      (objobjproc)id3_contains,
      NULL,
      NULL,
-@@ -236,12 +244,12 @@ static PyObject* id3iter_iternext( ID3It
+@@ -236,12 +247,12 @@ static PyObject* id3iter_iternext( ID3It
  //
  /////////////////
  
@@ -70,7 +71,7 @@ Fix for LP64 on python > 2.4.
  {
      if ( index < 0 )
  	index += self->size;
-@@ -255,7 +263,7 @@ static PyObject* id3_item( ID3Object* se
+@@ -255,7 +266,7 @@ static PyObject* id3_item( ID3Object* se
      return dict_from_frame( self->frames[index] );
  }
  
@@ -79,7 +80,7 @@ Fix for LP64 on python > 2.4.
  {
      PyObject* result;
      int i;
-@@ -284,7 +292,7 @@ static PyObject* id3_slice( ID3Object* s
+@@ -284,7 +295,7 @@ static PyObject* id3_slice( ID3Object* s
  }
  
  
@@ -88,7 +89,7 @@ Fix for LP64 on python > 2.4.
  {
      ID3_Frame* newframe;
  
-@@ -382,7 +390,7 @@ static ID3_Frame** frames_from_dictseq( 
+@@ -382,7 +393,7 @@ static ID3_Frame** frames_from_dictseq( 
      return NULL;
  }
  
@@ -97,7 +98,7 @@ Fix for LP64 on python > 2.4.
  {
      int i, n;
      int newsize;
-@@ -824,7 +832,7 @@ static ID3_Frame* frame_from_dict( PyObj
+@@ -824,7 +835,7 @@ static ID3_Frame* frame_from_dict( PyObj
  static ID3_Frame* frame_from_dict( ID3_FrameID fid, PyObject* dict )
  {
      char* data;
