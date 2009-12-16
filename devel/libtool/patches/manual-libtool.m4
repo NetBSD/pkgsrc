@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.27 2009/12/15 17:35:37 joerg Exp $
+$NetBSD: manual-libtool.m4,v 1.28 2009/12/16 15:27:33 joerg Exp $
 
 --- libltdl/m4/libtool.m4.orig	2008-09-05 13:54:41.000000000 +0200
 +++ libltdl/m4/libtool.m4
@@ -259,19 +259,19 @@ $NetBSD: manual-libtool.m4,v 1.27 2009/12/15 17:35:37 joerg Exp $
 +          output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | grep conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
 +        else
 +          # Modern ELF works sanely as-is
-+          _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+          _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++          _LT_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++          _LT_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
 +          output_verbose_link_cmd='echo'
 +        fi
  	;;
  
        *nto* | *qnx*)
 -        _LT_TAGVAR(ld_shlibs, $1)=yes
-+        _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+        _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
-+        _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
-+        _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-+        _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
++        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++        _LT_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++        _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
++        _LT_TAGVAR(hardcode_direct, $1)=yes
++        _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
 +        output_verbose_link_cmd='echo'
  	;;
  
