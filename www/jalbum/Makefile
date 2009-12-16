@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/10/07 18:03:13 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/12/16 20:02:01 martti Exp $
 
 DISTNAME=		Jalbum${VERSION}
 PKGNAME=		jalbum-${VERSION}
@@ -16,7 +16,7 @@ LICENSE=		gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-VERSION=		8.4
+VERSION=		8.5.3
 
 USE_JAVA2=		1.5
 PKG_JVMS_ACCEPTED=	sun-jdk15 sun-jdk6
