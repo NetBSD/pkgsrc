@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/16 19:10:56 joerg Exp $
+
+SHA1 (winpdb-1.4.6.tar.gz) = ac525f3a396243b908f52a8174dee5e79ae5db3e
+RMD160 (winpdb-1.4.6.tar.gz) = cf61f452d595fa1d43bd20c5446e4fc0e4dd53b4
+Size (winpdb-1.4.6.tar.gz) = 143869 bytes
