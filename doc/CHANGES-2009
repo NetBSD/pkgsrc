@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4645 2009/12/16 19:21:56 zafer Exp $
+$NetBSD: CHANGES-2009,v 1.4646 2009/12/16 19:25:09 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6250,3 +6250,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/mdocml to 1.9.14 [joerg 2009-12-16]
 	Added devel/py-windbg version 1.4.6 [joerg 2009-12-16]
 	Updated devel/libslang2 to 2.2.2 [zafer 2009-12-16]
+	Updated editors/vim-share to 7.2.320 [martti 2009-12-16]
