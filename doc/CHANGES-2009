@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4652 2009/12/16 21:22:44 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4653 2009/12/16 21:28:42 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6264,3 +6264,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/postgresql82-plpython to 8.2.15 [adam 2009-12-16]
 	Updated databases/postgresql82-pltcl to 8.2.15 [adam 2009-12-16]
 	Updated databases/postgresql82-tsearch2 to 8.2.15 [adam 2009-12-16]
+	Updated devel/eet to 1.2.3 [joerg 2009-12-16]
