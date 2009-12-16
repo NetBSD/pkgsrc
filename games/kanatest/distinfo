@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/16 23:55:13 joerg Exp $
+
+SHA1 (kanatest-0.4.8.tar.gz) = 4f316b28898d37597230c918d6ec01b491d66a35
+RMD160 (kanatest-0.4.8.tar.gz) = 40862600bffe34e57a231003ab5597e6ac3436fb
+Size (kanatest-0.4.8.tar.gz) = 302154 bytes
