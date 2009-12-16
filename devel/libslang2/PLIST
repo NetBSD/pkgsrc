@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/16 19:16:58 zafer Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/12/16 23:07:39 zafer Exp $
 bin/slsh
 include/slang2/slang.h
 include/slang2/slcurses.h
@@ -7,6 +7,9 @@ lib/pkgconfig/slang.pc
 lib/slang/v2/modules/fcntl-module.la
 lib/slang/v2/modules/fork-module.la
 lib/slang/v2/modules/iconv-module.la
+${PLIST.oniguruma}lib/slang/v2/modules/onig-module.la
+${PLIST.pcre}lib/slang/v2/modules/pcre-module.la
+${PLIST.png}lib/slang/v2/modules/png-module.la
 lib/slang/v2/modules/rand-module.la
 lib/slang/v2/modules/select-module.la
 lib/slang/v2/modules/slsmg-module.la
