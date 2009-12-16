@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/09/11 20:20:18 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/16 19:52:58 joerg Exp $
 #
 
-DISTNAME=	eina-0.0.2.062
+DISTNAME=	eina-0.9.9.063
 CATEGORIES=	devel
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-07-29/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-12-02/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	yazzy@yazzy.org
