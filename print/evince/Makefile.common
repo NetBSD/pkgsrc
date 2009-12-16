@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.30 2009/10/21 17:28:02 drochner Exp $
+# $NetBSD: Makefile.common,v 1.31 2009/12/16 17:15:10 drochner Exp $
 #
 # used by print/evince/Makefile
 # used by print/evince-nautilus/Makefile
 
-DISTNAME=		evince-2.28.1
+DISTNAME=		evince-2.28.2
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/2.28/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,7 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/evince/
 LICENSE=		gnu-gpl-v2
 
-PATCHDIR=		${.CURDIR}/../evince/patches
+#PATCHDIR=		${.CURDIR}/../evince/patches
 DISTINFO_FILE=		${.CURDIR}/../evince/distinfo
 
 GNU_CONFIGURE=		yes
