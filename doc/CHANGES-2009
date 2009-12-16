@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4642 2009/12/16 14:26:48 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4643 2009/12/16 19:08:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6247,3 +6247,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/postgresql83-plperl to 8.3.9 [adam 2009-12-16]
 	Updated databases/postgresql83-plpython to 8.3.9 [adam 2009-12-16]
 	Updated databases/postgresql83-pltcl to 8.3.9 [adam 2009-12-16]
+	Updated textproc/mdocml to 1.9.14 [joerg 2009-12-16]
