@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/02/12 00:46:34 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/16 20:45:20 drochner Exp $
 #
 
-DISTNAME=	PyOpenGL-3.0.0a6
+DISTNAME=	PyOpenGL-3.0.1b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyopengl/}
 
@@ -13,12 +12,18 @@ COMMENT=	Pyhton bindings for OpenGL
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PY_PATCHPLIST=	YES
+PYDISTUTILSPKG=	yes
+#PY_PATCHPLIST=	YES
 
-.include "../../lang/python/egg.mk"
+# XXX devel/py-ctypes doesn't work, Python-2.5's builtin ctypes is OK
+PYTHON_VERSIONS_ACCEPTED= 25
+
+#.include "../../lang/python/egg.mk"
+.include "../../lang/python/extension.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
-.include "../../devel/py-ctypes/buildlink3.mk"
+# XXX see above
+#.include "../../devel/py-ctypes/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,27 +1,44 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/07/13 15:06:09 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2009/12/16 20:45:20 drochner Exp $
 
---- OpenGL/platform/glx.py.orig	2007-07-12 23:07:36.000000000 +0200
+--- OpenGL/platform/glx.py.orig	2009-08-30 02:26:10.000000000 +0000
 +++ OpenGL/platform/glx.py
-@@ -25,19 +25,19 @@ __all__ = (
- 
- GL = OpenGL = ctypesloader.loadLibrary(
- 	ctypes.cdll,
--	'GL', 
-+	'libGL.so', 
- 	mode=ctypes.RTLD_GLOBAL 
- )
- GLU = ctypesloader.loadLibrary(
- 	ctypes.cdll,
--	'GLU',
-+	'libGLU.so',
- 	mode=ctypes.RTLD_GLOBAL 
- )
- # glut shouldn't need to be global, but just in case a dependent library makes
- # the same assumption GLUT does...
- GLUT = ctypesloader.loadLibrary(
- 	ctypes.cdll,
--	'glut', 
-+	'libglut.so', 
- 	mode=ctypes.RTLD_GLOBAL 
- )
- # GLX doesn't seem to have its own loadable module?
+@@ -12,12 +12,12 @@ class GLXPlatform( baseplatform.BasePlat
+     # references to GL/GLU functions).
+     GL = OpenGL = ctypesloader.loadLibrary(
+         ctypes.cdll,
+-        'GL', 
++        'libGL.so', 
+         mode=ctypes.RTLD_GLOBAL 
+     )
+     GLU = ctypesloader.loadLibrary(
+         ctypes.cdll,
+-        'GLU',
++        'libGLU.so',
+         mode=ctypes.RTLD_GLOBAL 
+     )
+     # glut shouldn't need to be global, but just in case a dependent library makes
+@@ -25,7 +25,7 @@ class GLXPlatform( baseplatform.BasePlat
+     try:
+         GLUT = ctypesloader.loadLibrary(
+             ctypes.cdll,
+-            'glut', 
++            'libglut.so', 
+             mode=ctypes.RTLD_GLOBAL 
+         )
+     except OSError, err:
+@@ -38,7 +38,7 @@ class GLXPlatform( baseplatform.BasePlat
+     try:
+         GLE = ctypesloader.loadLibrary(
+             ctypes.cdll,
+-            'gle', 
++            'libgle.so', 
+             mode=ctypes.RTLD_GLOBAL 
+         )
+     except OSError, err:
+@@ -69,4 +69,4 @@ class GLXPlatform( baseplatform.BasePlat
+         pointer = ctypes.c_void_p.in_dll( self.GLUT, internal )
+         return ctypes.c_void_p(ctypes.addressof(pointer))
+     
+-    safeGetError = staticmethod( OpenGL.glGetError )
+\ No newline at end of file
++    safeGetError = staticmethod( OpenGL.glGetError )
