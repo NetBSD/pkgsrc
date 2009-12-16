@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4640 2009/12/16 10:12:17 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.4641 2009/12/16 13:46:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6233,3 +6233,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/xulrunner to 1.9.1.6 [tnn 2009-12-15]
 	Updated www/firefox to 3.5.6 [tnn 2009-12-15]
 	Updated www/seamonkey to 2.0.1 [tnn 2009-12-16]
+	Updated databases/postgresql84 to 8.4.2 [adam 2009-12-16]
+	Updated databases/postgresql84-client to 8.4.2 [adam 2009-12-16]
+	Updated databases/postgresql84-server to 8.4.2 [adam 2009-12-16]
+	Updated databases/postgresql84-adminpack to 8.4.2 [adam 2009-12-16]
+	Updated databases/postgresql84-plperl to 8.4.2 [adam 2009-12-16]
+	Updated databases/postgresql84-plpython to 8.4.2 [adam 2009-12-16]
+	Updated databases/postgresql84-pltcl to 8.4.2 [adam 2009-12-16]
