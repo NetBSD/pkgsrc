@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2008/12/03 11:10:34 is Exp $
+$NetBSD: distinfo,v 1.3 2009/12/16 19:16:58 zafer Exp $
 
-SHA1 (slang-2.1.3.tar.bz2) = 31fc6162684f69d9dd0377372dfdc336f0c4343a
-RMD160 (slang-2.1.3.tar.bz2) = b59424972e52c361a15b23874d1a0539683608e5
-Size (slang-2.1.3.tar.bz2) = 1191425 bytes
-SHA1 (patch-aa) = 6bccdf8d5caaadbc66c3f2b7eeab6da85efc5fef
-SHA1 (patch-ab) = eae92ea5fac608b1dd9e6106b452d67c79c19bcb
+SHA1 (slang-2.2.2.tar.bz2) = 13bb6344f71779cad8c05e1b6b1ef2d073888d58
+RMD160 (slang-2.2.2.tar.bz2) = d642c7d513aee198ad5d6d1b710c5c0f65dc381a
+Size (slang-2.2.2.tar.bz2) = 1366850 bytes
+SHA1 (patch-aa) = ce77fba22cd04aff3ddc3f30774d1de53dcb6465
+SHA1 (patch-ab) = 45d8e13a3672d30620e2cac458838d1c366f8013
 SHA1 (patch-ac) = 1181b6ce5de5c7c149aa8692dbcded981bda688e
-SHA1 (patch-ad) = 03f839d82cd3f18f526293ff8015bfa1e029ede0
-SHA1 (patch-ae) = 85ed2a5053bb908ab9f55161ef626ee9705acd5f
-SHA1 (patch-af) = 335d14eef480ff49bd7fb2ffc7a434a77ac9a2ec
+SHA1 (patch-ad) = 9ab953b8d850832f49f8af9bdb397f474af209eb
+SHA1 (patch-ae) = 8182ca4c317ec60650186bf4b4ee75b468baefa9
+SHA1 (patch-af) = 225817d482d438e46f39831fe3a193f2c469fc82
