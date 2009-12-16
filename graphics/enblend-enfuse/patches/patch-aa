@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/09/01 14:39:28 adam Exp $
+$NetBSD: patch-aa,v 1.2 2009/12/16 21:28:35 adam Exp $
 
---- configure.orig	2009-08-31 18:11:36.000000000 +0200
-+++ configure
-@@ -11378,7 +11378,7 @@ if test "x$enable_debug" = "xyes"; then
-   { echo "$as_me:$LINENO: result: yes" >&5
- echo "${ECHO_T}yes" >&6; }
- else
--  CXXFLAGS="$CXXFLAGS -O3 -ffast-math -DNDEBUG -Wall"
-+  CXXFLAGS="$CXXFLAGS -ffast-math -DNDEBUG -Wall"
-   { echo "$as_me:$LINENO: result: no" >&5
- echo "${ECHO_T}no" >&6; }
- fi
+--- src/error_message.cc.orig	2009-11-25 20:56:49.000000000 +0100
++++ src/error_message.cc
+@@ -58,7 +58,7 @@ errorMessage(int anErrorNumber)
+     return_code = 0;
+ #else
+     message = message_buffer.get();
+-    return_code = strerror_r(anErrorNumber, message, buffer_size);
++    return_code = strerror_r(anErrorNumber, (char *)message, buffer_size);
+ #endif // STRERROR_R_CHAR_P
+ #elif defined(HAVE_STRERROR)
+     message = strerror(anErrorNumber);

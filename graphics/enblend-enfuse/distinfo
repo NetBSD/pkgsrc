@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/01 14:39:28 adam Exp $
+$NetBSD: distinfo,v 1.2 2009/12/16 21:28:35 adam Exp $
 
-SHA1 (enblend-enfuse-3.2.tar.gz) = e44226ec6759dd3e6dcf46bb34848b64536ad495
-RMD160 (enblend-enfuse-3.2.tar.gz) = 7a9b0037b821ac287327477d52665372d0850dbb
-Size (enblend-enfuse-3.2.tar.gz) = 831504 bytes
-SHA1 (patch-aa) = 54429e564118e0c4e18b39d2ba27e30f09f375e7
-SHA1 (patch-ab) = 762f14337372df061619b856e328c61501ba431c
-SHA1 (patch-ac) = 1be5b32578934f540d53dec8eeaa4da2d4e2144a
+SHA1 (enblend-enfuse-4.0.tar.gz) = 07dad728a16624a8aa6e13fee6a68cec581f065b
+RMD160 (enblend-enfuse-4.0.tar.gz) = b59d43445435846f256a46801d535a29b5af9ae0
+Size (enblend-enfuse-4.0.tar.gz) = 1046540 bytes
+SHA1 (patch-aa) = b1809fe6ef6609658b697635c6cbf0c112a03fd1
+SHA1 (patch-ab) = afc074bb94e2a2b96c654c37540072514ba0bce0
+SHA1 (patch-ac) = 916f4655ff30013583014eb8deecc72bd19ae55d
