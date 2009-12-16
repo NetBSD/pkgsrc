@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2009/10/22 17:31:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.33 2009/12/16 17:17:04 drochner Exp $
 bin/nautilus
 bin/nautilus-autorun-software
 bin/nautilus-connect-server
@@ -119,6 +119,7 @@ share/locale/mn/LC_MESSAGES/nautilus.mo
 share/locale/mr/LC_MESSAGES/nautilus.mo
 share/locale/ms/LC_MESSAGES/nautilus.mo
 share/locale/nb/LC_MESSAGES/nautilus.mo
+share/locale/nds/LC_MESSAGES/nautilus.mo
 share/locale/ne/LC_MESSAGES/nautilus.mo
 share/locale/nl/LC_MESSAGES/nautilus.mo
 share/locale/nn/LC_MESSAGES/nautilus.mo
