@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2009/12/09 18:53:49 drochner Exp $
+$NetBSD: distinfo,v 1.14 2009/12/16 17:06:34 drochner Exp $
 
-SHA1 (gvfs-1.4.2.tar.bz2) = d2d93e3de6213b96f3a5102964ed6f61955ce6f9
-RMD160 (gvfs-1.4.2.tar.bz2) = a57f67d733f132f179ce5df295fc3d5988becf3b
-Size (gvfs-1.4.2.tar.bz2) = 1262592 bytes
+SHA1 (gvfs-1.4.3.tar.bz2) = 3c28516893d6829b3bbae1768fb44e8a405c44e7
+RMD160 (gvfs-1.4.3.tar.bz2) = da1458101257f5496b4469acb7bc7c646fd9c652
+Size (gvfs-1.4.3.tar.bz2) = 1263024 bytes
 SHA1 (patch-aa) = 12462b0c8e53e0d14666efab24eca09104e92fec
 SHA1 (patch-ac) = 2e5837362b63c05ca5748a7e8a610dc7d651a9fa
 SHA1 (patch-ad) = 8c8fe33189d182e769da5092fa309f01f56a1081
