@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4654 2009/12/16 21:32:25 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4655 2009/12/16 21:40:19 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6266,3 +6266,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/postgresql82-tsearch2 to 8.2.15 [adam 2009-12-16]
 	Updated devel/eet to 1.2.3 [joerg 2009-12-16]
 	Updated graphics/enblend-enfuse to 4.0 [adam 2009-12-16]
+	Updated mail/libmilter to 8.14.3nb1 [jnemeth 2009-12-16]
