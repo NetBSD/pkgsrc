@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: scan,v 1.4 2008/09/16 18:21:30 joerg Exp $
+# $NetBSD: scan,v 1.5 2009/12/16 19:41:41 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -44,10 +44,11 @@ if [ -z "${limited_list}" ]; then
 	echo "Scanning..."
 	case "${master_mode}" in
 	[nN][oO])
-		${pscan} -v -M ${make} ${pkgsrc} ${loc}/pscan
+		${pscan} -v -M ${make} ${pkgsrc} ${loc}/pscan 2>> ${loc}/pscan.stderr
 		;;
 	[yY][eE][sS])
 		${pscan} -v -I ${pscan_start_script} -m ${master_port_scan} -M ${make} ${pkgsrc} ${loc}/pscan
+		${pscan} -v -I ${pscan_start_script} -m ${master_port_scan} -M ${make} ${pkgsrc} ${loc}/pscan 2>> ${loc}/pscan.stderr
 		;;
 	*)
 		echo "master_mode must be either yes or no."
