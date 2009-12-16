@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/09/13 17:28:03 martti Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/12/16 20:02:01 martti Exp $
 bin/jalbum
 share/jalbum/JAlbum.jar
 share/jalbum/StartJAlbum.bat
@@ -8,6 +8,9 @@ share/jalbum/ext/JCameraInfo.jar
 share/jalbum/ext/JPrint.jar
 share/jalbum/ext/JTextPad.jar
 share/jalbum/ext/JalbumFilters.jar
+share/jalbum/ext/JalbumFilters/for-translators.txt
+share/jalbum/ext/JalbumFilters/net/jalbum/filters/texts/texts.properties
+share/jalbum/ext/JalbumFilters/net/jalbum/filters/texts/texts_nl.properties
 share/jalbum/icons/JalbumApp.ico
 share/jalbum/icons/JalbumDoc.ico
 share/jalbum/icons/JalbumInstaller.ico
@@ -57,6 +60,8 @@ share/jalbum/license/thirdparty-overview.html
 share/jalbum/plugins/BlurFilter.class
 share/jalbum/plugins/BlurFilter.java
 share/jalbum/plugins/Compile.bat
+share/jalbum/plugins/CropFilter.class
+share/jalbum/plugins/CropFilter.java
 share/jalbum/plugins/FixedShapeFilter.class
 share/jalbum/plugins/FixedShapeFilter.java
 share/jalbum/plugins/GrayscaleFilter.class
@@ -1358,6 +1363,46 @@ share/jalbum/skins/Chameleon/texts/texts_sr_latin.properties
 share/jalbum/skins/Chameleon/texts/texts_sv.properties
 share/jalbum/skins/Chameleon/texts/texts_uk.properties
 share/jalbum/skins/Chameleon/texts/texts_zh.properties
+share/jalbum/skins/Galleria/finally.bsh
+share/jalbum/skins/Galleria/headless-settings.jap
+share/jalbum/skins/Galleria/hints.jap
+share/jalbum/skins/Galleria/includes/additional_scripts.inc
+share/jalbum/skins/Galleria/includes/additional_styles.inc
+share/jalbum/skins/Galleria/includes/breadcrumbs.inc
+share/jalbum/skins/Galleria/includes/caption.inc
+share/jalbum/skins/Galleria/includes/footer.inc
+share/jalbum/skins/Galleria/includes/header.inc
+share/jalbum/skins/Galleria/includes/paging.inc
+share/jalbum/skins/Galleria/index.htt
+share/jalbum/skins/Galleria/init.bsh
+share/jalbum/skins/Galleria/onload.bsh
+share/jalbum/skins/Galleria/preview.jpg
+share/jalbum/skins/Galleria/res/folder.png
+share/jalbum/skins/Galleria/res/galleria/galleria.css
+share/jalbum/skins/Galleria/res/galleria/jquery.galleria.js
+share/jalbum/skins/Galleria/res/galleria/licence.txt
+share/jalbum/skins/Galleria/res/index.css
+share/jalbum/skins/Galleria/res/jquery.hotkeys.js
+share/jalbum/skins/Galleria/res/jquery.js
+share/jalbum/skins/Galleria/res/jquery.scrollimages.js
+share/jalbum/skins/Galleria/skin.properties
+share/jalbum/skins/Galleria/slide.htt
+share/jalbum/skins/Galleria/styles/Dark.css
+share/jalbum/skins/Galleria/styles/Dark.jpg
+share/jalbum/skins/Galleria/styles/Dark/left-fast.png
+share/jalbum/skins/Galleria/styles/Dark/left.png
+share/jalbum/skins/Galleria/styles/Dark/loader.gif
+share/jalbum/skins/Galleria/styles/Dark/right-fast.png
+share/jalbum/skins/Galleria/styles/Dark/right.png
+share/jalbum/skins/Galleria/styles/Light.css
+share/jalbum/skins/Galleria/styles/Light.jpg
+share/jalbum/skins/Galleria/styles/Light/left-fast.png
+share/jalbum/skins/Galleria/styles/Light/left.png
+share/jalbum/skins/Galleria/styles/Light/loader.gif
+share/jalbum/skins/Galleria/styles/Light/right-fast.png
+share/jalbum/skins/Galleria/styles/Light/right.png
+share/jalbum/skins/Galleria/texts/texts.properties
+share/jalbum/skins/Galleria/texts/texts_sv.properties
 share/jalbum/skins/Minimal/index.htt
 share/jalbum/skins/Minimal/onload.bsh
 share/jalbum/skins/Minimal/preview.jpg
@@ -1496,58 +1541,6 @@ share/jalbum/skins/Spartan/styles/silver.css
 share/jalbum/skins/Spartan/styles/silver.jpg
 share/jalbum/skins/Spartan/styles/silver/bg.jpg
 share/jalbum/skins/Spartan/texts/texts.properties
-share/jalbum/skins/TiltViewer/NOTES.media_server
-share/jalbum/skins/TiltViewer/README.txt
-share/jalbum/skins/TiltViewer/blank.htt
-share/jalbum/skins/TiltViewer/finally.bsh
-share/jalbum/skins/TiltViewer/header.htt
-share/jalbum/skins/TiltViewer/hier.htt
-share/jalbum/skins/TiltViewer/hints.jap
-share/jalbum/skins/TiltViewer/images.htt
-share/jalbum/skins/TiltViewer/index.css.htt
-share/jalbum/skins/TiltViewer/index.htt
-share/jalbum/skins/TiltViewer/init.bsh
-share/jalbum/skins/TiltViewer/menu.css.htt
-share/jalbum/skins/TiltViewer/menu.htt
-share/jalbum/skins/TiltViewer/menu.js.htt
-share/jalbum/skins/TiltViewer/onload.bsh
-share/jalbum/skins/TiltViewer/plugins/Constants.class
-share/jalbum/skins/TiltViewer/plugins/ConstantsAbstract.class
-share/jalbum/skins/TiltViewer/plugins/Macros.class
-share/jalbum/skins/TiltViewer/plugins/MainSkin.class
-share/jalbum/skins/TiltViewer/plugins/MySkin.class
-share/jalbum/skins/TiltViewer/plugins/MySkinAbstract.class
-share/jalbum/skins/TiltViewer/plugins/SkinControl.class
-share/jalbum/skins/TiltViewer/plugins/SkinControlAbstract$1.class
-share/jalbum/skins/TiltViewer/plugins/SkinControlAbstract$2.class
-share/jalbum/skins/TiltViewer/plugins/SkinControlAbstract$3.class
-share/jalbum/skins/TiltViewer/plugins/SkinControlAbstract$4.class
-share/jalbum/skins/TiltViewer/plugins/SkinControlAbstract.class
-share/jalbum/skins/TiltViewer/plugins/Version.class
-share/jalbum/skins/TiltViewer/preview.jpg
-share/jalbum/skins/TiltViewer/res/dtree.js
-share/jalbum/skins/TiltViewer/res/folder.gif
-share/jalbum/skins/TiltViewer/res/img/empty.gif
-share/jalbum/skins/TiltViewer/res/img/get_flash_player.gif
-share/jalbum/skins/TiltViewer/res/img/join.gif
-share/jalbum/skins/TiltViewer/res/img/joinbottom.gif
-share/jalbum/skins/TiltViewer/res/img/line.gif
-share/jalbum/skins/TiltViewer/res/img/minus.gif
-share/jalbum/skins/TiltViewer/res/img/minusbottom.gif
-share/jalbum/skins/TiltViewer/res/img/nolines_minus.gif
-share/jalbum/skins/TiltViewer/res/img/nolines_plus.gif
-share/jalbum/skins/TiltViewer/res/img/plus.gif
-share/jalbum/skins/TiltViewer/res/img/plusbottom.gif
-share/jalbum/skins/TiltViewer/res/mootools.js
-share/jalbum/skins/TiltViewer/res/mootools_tip.js
-share/jalbum/skins/TiltViewer/res/swfobject.js
-share/jalbum/skins/TiltViewer/res/viewer.swf
-share/jalbum/skins/TiltViewer/slide.css.htt
-share/jalbum/skins/TiltViewer/slide.htt
-share/jalbum/skins/TiltViewer/slideskin.htt
-share/jalbum/skins/TiltViewer/styles/style.css
-share/jalbum/skins/TiltViewer/texts/texts.base.properties
-share/jalbum/skins/TiltViewer/texts/texts.properties
 share/jalbum/startjalbum.sh
 share/jalbum/system/album.rss
 share/jalbum/system/cameras.properties
@@ -1591,7 +1584,6 @@ share/jalbum/texts/texts_zh_CN.properties
 share/jalbum/texts/texts_zh_TW.properties
 share/jalbum/tools/Add JPEG comments.bsh
 share/jalbum/tools/Batch rename files.bsh
-share/jalbum/tools/Calculate album size.bsh
 share/jalbum/tools/Convert upper case to lower case.bsh
 share/jalbum/tools/Extract comments.bsh
 share/jalbum/tools/Perform garbage collection.bsh
