@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4641 2009/12/16 13:46:50 adam Exp $
+$NetBSD: CHANGES-2009,v 1.4642 2009/12/16 14:26:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6240,3 +6240,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/postgresql84-plperl to 8.4.2 [adam 2009-12-16]
 	Updated databases/postgresql84-plpython to 8.4.2 [adam 2009-12-16]
 	Updated databases/postgresql84-pltcl to 8.4.2 [adam 2009-12-16]
+	Updated databases/postgresql83 to 8.3.9 [adam 2009-12-16]
+	Updated databases/postgresql83-client to 8.3.9 [adam 2009-12-16]
+	Updated databases/postgresql83-server to 8.3.9 [adam 2009-12-16]
+	Updated databases/postgresql83-adminpack to 8.3.9 [adam 2009-12-16]
+	Updated databases/postgresql83-plperl to 8.3.9 [adam 2009-12-16]
+	Updated databases/postgresql83-plpython to 8.3.9 [adam 2009-12-16]
+	Updated databases/postgresql83-pltcl to 8.3.9 [adam 2009-12-16]
