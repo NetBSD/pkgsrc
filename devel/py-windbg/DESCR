@@ -1,0 +1,3 @@
+Winpdb is a platform independent Python debugger.  It supports multiple
+threads, namespace modification, embedded debugging and encrypted
+communication.
