@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/16 19:10:56 joerg Exp $
+bin/rpdb2
+bin/winpdb
+${PYSITELIB}/rpdb2.py
+${PYSITELIB}/rpdb2.pyc
+${PYSITELIB}/rpdb2.pyo
+${PYSITELIB}/winpdb.py
+${PYSITELIB}/winpdb.pyc
+${PYSITELIB}/winpdb.pyo
