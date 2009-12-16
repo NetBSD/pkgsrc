@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/12/09 19:01:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/12/16 17:25:49 drochner Exp $
 bin/brasero
 include/brasero/brasero-blank-dialog.h
 include/brasero/brasero-burn-dialog.h
@@ -246,6 +246,7 @@ share/gnome/help/brasero/zh_HK/brasero.xml
 share/gnome/help/brasero/zh_HK/figures/brasero_main.png
 share/gnome/help/brasero/zh_TW/brasero.xml
 share/gnome/help/brasero/zh_TW/figures/brasero_main.png
+share/gtk-doc/html/libbrasero-burn/annotation-glossary.html
 share/gtk-doc/html/libbrasero-burn/api-index-full.html
 share/gtk-doc/html/libbrasero-burn/ch01.html
 share/gtk-doc/html/libbrasero-burn/home.png
@@ -281,6 +282,7 @@ share/gtk-doc/html/libbrasero-burn/object-tree.html
 share/gtk-doc/html/libbrasero-burn/right.png
 share/gtk-doc/html/libbrasero-burn/style.css
 share/gtk-doc/html/libbrasero-burn/up.png
+share/gtk-doc/html/libbrasero-media/annotation-glossary.html
 share/gtk-doc/html/libbrasero-media/api-index-full.html
 share/gtk-doc/html/libbrasero-media/ch01.html
 share/gtk-doc/html/libbrasero-media/home.png
@@ -346,6 +348,7 @@ share/locale/mk/LC_MESSAGES/brasero.mo
 share/locale/ml/LC_MESSAGES/brasero.mo
 share/locale/mr/LC_MESSAGES/brasero.mo
 share/locale/nb/LC_MESSAGES/brasero.mo
+share/locale/nds/LC_MESSAGES/brasero.mo
 share/locale/nl/LC_MESSAGES/brasero.mo
 share/locale/oc/LC_MESSAGES/brasero.mo
 share/locale/or/LC_MESSAGES/brasero.mo
