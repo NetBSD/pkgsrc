@@ -1,31 +1,34 @@
-$NetBSD: patch-ae,v 1.2 2008/12/03 11:10:34 is Exp $
+$NetBSD: patch-ae,v 1.3 2009/12/16 19:16:58 zafer Exp $
 
---- modules/Makefile.in.orig	2007-09-08 04:47:29.000000000 +0200
+--- modules/Makefile.in.orig	2009-12-05 20:03:51.000000000 +0100
 +++ modules/Makefile.in
 @@ -1,4 +1,5 @@
  # -*- sh -*-
 +MODULE_LIBTOOL_FLAGS=--tag=disable-static
  MODULES = slsmg-module.so termios-module.so select-module.so fcntl-module.so \
-   varray-module.so socket-module.so @PCRE_MODULE@ @PNG_MODULE@ \
-   @ICONV_MODULE@ @ONIG_MODULE@
-@@ -69,9 +70,10 @@ DEST_HELPDIR	= $(DESTDIR)$(HELP_DIR)
+   varray-module.so socket-module.so rand-module.so fork-module.so @PCRE_MODULE@ @PNG_MODULE@ \
+   @ICONV_MODULE@ @ONIG_MODULE@ @ZLIB_MODULE@ @SYSCONF_MODULE@
+@@ -75,9 +76,10 @@ DEST_HELPDIR	= $(DESTDIR)$(HELP_DIR)
  #---------------------------------------------------------------------------
  RPATH = @RPATH@
  
--LIBS = $(LDFLAGS) $(RPATH) $(SLANG_LIB) $(DL_LIB) -lm
-+LIBS = $(LDFLAGS) -module -avoid-version -rpath $(PREFIX)/lib $(SLANG_LIB) $(DL_LIB) -lm
- #LIBS = $(RPATH) $(DL_LIB) -lm
+-LIBS = $(LDFLAGS) $(RPATH) $(SLANG_LIB) $(DL_LIB) @M_LIB@
++LIBS = $(LDFLAGS) -module -avoid-version -rpath $(PREFIX)/lib $(SLANG_LIB) $(DL_LIB) @M_LIB@
+ #LIBS = $(RPATH) $(DL_LIB) @M_LIB@
  INCS = $(SLANG_INC)
 +CC_SHARED:=${LIBTOOL} --mode=link ${MODULE_LIBTOOL_FLAGS} ${CC} 
  
  all: $(MODULES)
  
-@@ -79,35 +81,35 @@ config.h: ../src/config.h
+@@ -85,43 +87,43 @@ config.h: ../src/config.h
  	cp ../src/config.h .
  
  slsmg-module.so: slsmg-module.c config.h
 -	$(CC_SHARED) $(INCS) slsmg-module.c -o slsmg-module.so $(LIBS)
 +	$(CC_SHARED) $(INCS) slsmg-module.c -o slsmg-module.la $(LIBS)
+ rand-module.so: rand-module.c config.h
+-	$(CC_SHARED) $(INCS) rand-module.c -o rand-module.so $(LIBS)
++	$(CC_SHARED) $(INCS) rand-module.c -o rand-module.la $(LIBS)
  newt-module.so: newt-module.c config.h
 -	$(CC_SHARED) $(INCS) newt-module.c -o newt-module.so -lnewt $(LIBS)
 +	$(CC_SHARED) $(INCS) newt-module.c -o newt-module.la -lnewt $(LIBS)
@@ -56,6 +59,15 @@ $NetBSD: patch-ae,v 1.2 2008/12/03 11:10:34 is Exp $
  iconv-module.so: iconv-module.c config.h
 -	$(CC_SHARED) $(INCS) $(ICONV_INC) iconv-module.c -o iconv-module.so $(ICONV_LIB) $(LIBS)
 +	$(CC_SHARED) $(INCS) $(ICONV_INC) iconv-module.c -o iconv-module.la $(ICONV_LIB) $(LIBS)
+ zlib-module.so: zlib-module.c config.h
+-	$(CC_SHARED) $(INCS) $(ZLIB_INC) zlib-module.c -o zlib-module.so $(ZLIB_LIB) $(LIBS)
++	$(CC_SHARED) $(INCS) $(ZLIB_INC) zlib-module.c -o zlib-module.la $(ZLIB_LIB) $(LIBS)
+ fork-module.so: fork-module.c config.h
+-	$(CC_SHARED) $(INCS) fork-module.c -o fork-module.so $(LIBS)
++	$(CC_SHARED) $(INCS) fork-module.c -o fork-module.la $(LIBS)
+ sysconf-module.so: sysconf-module.c config.h
+-	$(CC_SHARED) $(INCS) sysconf-module.c -o sysconf-module.so $(LIBS)
++	$(CC_SHARED) $(INCS) sysconf-module.c -o sysconf-module.la $(LIBS)
  
  # Note that Windows/Cygwin modules need execute permissions
  install: all
