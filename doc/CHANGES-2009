@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4647 2009/12/16 19:30:46 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4648 2009/12/16 19:42:18 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6252,3 +6252,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libslang2 to 2.2.2 [zafer 2009-12-16]
 	Updated editors/vim-share to 7.2.320 [martti 2009-12-16]
 	Updated lang/embryo to 0.9.9.063 [joerg 2009-12-16]
+	Updated pkgtools/pbulk to 0.43 [joerg 2009-12-16]
