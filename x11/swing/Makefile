@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/05/19 08:59:39 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2009/12/17 18:23:14 abs Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -37,24 +37,23 @@ SWINGDIR=	${PREFIX}/lib/java/swing
 EGDIR=		${PREFIX}/share/examples/swing
 HTMLDIR=	${PREFIX}/share/doc/swing
 
+PKG_DESTDIR_SUPPORT= user-destdir
+INSTALLATION_DIRS+=lib/java/swing share/examples/swing share/doc/swing
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA_DIR} ${SWINGDIR}
-	${INSTALL_DATA} ${WRKSRC}/swingall.jar ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/beaninfo.jar ${SWINGDIR}
-	${INSTALL_DATA} ${WRKSRC}/mac.jar ${SWINGDIR}
-	${INSTALL_DATA} ${WRKSRC}/motif.jar ${SWINGDIR}
-	${INSTALL_DATA} ${WRKSRC}/multi.jar ${SWINGDIR}
-	${INSTALL_DATA} ${WRKSRC}/swing.jar ${SWINGDIR}
-	${INSTALL_DATA} ${WRKSRC}/windows.jar ${SWINGDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/doc && pax -rw . ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/CHANGES.txt ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.html ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${HTMLDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/examples && pax -rw . ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/swingall.jar ${DESTDIR}${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/beaninfo.jar ${DESTDIR}${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/mac.jar ${DESTDIR}${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/motif.jar ${DESTDIR}${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/multi.jar ${DESTDIR}${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/swing.jar ${DESTDIR}${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/windows.jar ${DESTDIR}${SWINGDIR}
+	cd ${WRKSRC}/doc && pax -rw . ${DESTDIR}${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/CHANGES.txt ${DESTDIR}${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt ${DESTDIR}${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.html ${DESTDIR}${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${HTMLDIR}
+	cd ${WRKSRC}/examples && pax -rw . ${DESTDIR}${EGDIR}
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2009/05/15 12:12:28 sborrill Exp $
+$NetBSD: patch-af,v 1.2 2009/12/17 18:23:49 abs Exp $
 
 Tk uses X event numbers to index this array, as well as adding a few of its
 own, starting with "VirtualEvent" (Which is correctly set to LASTEvent,
@@ -9,9 +9,9 @@ A cleaner fix, but a much bigger patch, is listed in the Tk bug tracker:
 
 http://sourceforge.net/tracker/index.php?func=detail&aid=2010422&group_id=12997&atid=112997
 
---- generic/tkBind.c.orig	2009-05-15 14:14:34.000000000 +0100
-+++ generic/tkBind.c	2009-05-15 14:16:15.000000000 +0100
-@@ -575,6 +575,9 @@
+--- generic/tkBind.c.orig	2001-10-13 01:25:10.000000000 +0000
++++ generic/tkBind.c
+@@ -575,6 +575,9 @@ static int flagArray[TK_LASTEVENT] = {
     /* ColormapNotify */		COLORMAP,
     /* ClientMessage */		0,
     /* MappingNotify */		0,

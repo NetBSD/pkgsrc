@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/07/22 09:01:54 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2009/12/17 18:31:46 abs Exp $
 
 DISTNAME=		gtkstep-1.10
 PKGREVISION=		6
@@ -13,10 +13,12 @@ COMMENT=		GTK theme-engine to yield a NEXTSTEP(tm) look and feel
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
+PKG_DESTDIR_SUPPORT= user-destdir
+
 post-install:
-	${RM} -f ${PREFIX}/share/themes/Step/gtk/gtkrc.in
+	${RM} -f ${DESTDIR}${PREFIX}/share/themes/Step/gtk/gtkrc.in
 	${INSTALL_DATA} ${WRKSRC}/step/Theme/gtk/gtkrc \
-	  ${PREFIX}/share/themes/Step/gtk
+	  ${DESTDIR}${PREFIX}/share/themes/Step/gtk
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
