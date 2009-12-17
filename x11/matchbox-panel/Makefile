@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/10/06 18:47:10 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/12/17 18:29:05 abs Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
@@ -21,18 +21,21 @@ CONFIGURE_ARGS+=	--enable-small-icons
 CONFIGURE_ARGS+=	--enable-startup-notification
 CONFIGURE_ARGS+=	--enable-nls
 
+PKG_DESTDIR_SUPPORT=  	user-destdir
+
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS=		apm
 .if ${OPSYS} == "DragonFly" || \
     ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64"
 # Nada
-.else 
+.else
 PLIST.apm=		yes
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libmatchbox/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

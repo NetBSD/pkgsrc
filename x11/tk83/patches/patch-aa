@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.3 2005/11/05 03:27:56 rillig Exp $
+$NetBSD: patch-aa,v 1.4 2009/12/17 18:23:49 abs Exp $
 
---- unix/Makefile.in.orig	2001-10-20 01:24:40.000000000 +0100
-+++ unix/Makefile.in	2005-05-10 17:01:34.000000000 +0100
-@@ -76,7 +76,7 @@
+--- unix/Makefile.in.orig	2001-10-20 00:24:40.000000000 +0000
++++ unix/Makefile.in
+@@ -37,7 +37,7 @@ mandir			= @mandir@
+ # to be different than those used for actually reference files at
+ # run-time.  INSTALL_ROOT is prepended to $prefix and $exec_prefix
+ # when installing files.
+-INSTALL_ROOT		=
++INSTALL_ROOT		= $(DESTDIR)
+ 
+ # Directory from which applications will reference the library of Tcl
+ # scripts (note: you can set the TK_LIBRARY environment variable at
+@@ -76,7 +76,7 @@ MANN_INSTALL_DIR	= $(MAN_INSTALL_DIR)/ma
  # The directory containing the Tcl sources and headers appropriate
  # for this version of Tk ("srcdir" will be replaced or has already
  # been replaced by the configure script):
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2005/11/05 03:27:56 rillig Exp $
  
  # The directory containing the Tcl library archive file appropriate
  # for this version of Tk:
-@@ -100,7 +100,7 @@
+@@ -100,7 +100,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
  #CFLAGS			= $(CFLAGS_DEBUG)
  #CFLAGS			= $(CFLAGS_OPTIMIZE)
  #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
@@ -20,7 +29,7 @@ $NetBSD: patch-aa,v 1.3 2005/11/05 03:27:56 rillig Exp $
  
  # Flags to pass to the linker
  LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
-@@ -159,8 +159,8 @@
+@@ -159,8 +159,8 @@ SHELL			= /bin/sh
  # "install" around;  better to use the install-sh script that comes
  # with the distribution, which is slower but guaranteed to work.
  
@@ -31,7 +40,7 @@ $NetBSD: patch-aa,v 1.3 2005/11/05 03:27:56 rillig Exp $
  INSTALL_DATA		= ${INSTALL} -m 644
  
  # The following specifies which Tcl executable to use for make targets
-@@ -209,7 +209,7 @@
+@@ -209,7 +209,7 @@ WISH_LIBS = $(TCL_LIB_SPEC) @LIBS@ $(X11
  # The values of the symbolis normally set by the configure script.
  
  STLIB_LD		= @STLIB_LD@
@@ -40,7 +49,7 @@ $NetBSD: patch-aa,v 1.3 2005/11/05 03:27:56 rillig Exp $
  SHLIB_LD_LIBS		= @SHLIB_LD_LIBS@
  
  # Additional search flags needed to find the various shared libraries
-@@ -240,7 +240,8 @@
+@@ -240,7 +240,8 @@ TOOL_DIR		= @TCL_SRC_DIR@/tools
  # either.
  #----------------------------------------------------------------
  
@@ -50,7 +59,7 @@ $NetBSD: patch-aa,v 1.3 2005/11/05 03:27:56 rillig Exp $
  
  CC_SWITCHES_NO_STUBS = ${CFLAGS} ${CFLAGS_WARNING} ${SHLIB_CFLAGS} \
  -I${UNIX_DIR} -I${GENERIC_DIR} \
-@@ -373,6 +374,7 @@
+@@ -373,6 +374,7 @@ ${TK_LIB_FILE}: ${OBJS}
  	rm -f ${TK_LIB_FILE}
  	@MAKE_LIB@
  	$(RANLIB) ${TK_LIB_FILE}
@@ -58,7 +67,7 @@ $NetBSD: patch-aa,v 1.3 2005/11/05 03:27:56 rillig Exp $
  
  ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
  	rm -f ${STUB_LIB_FILE}
-@@ -391,9 +393,9 @@
+@@ -391,9 +393,9 @@ objs: ${OBJS}
  
  
  wish: $(WISH_OBJS) $(TK_LIB_FILE) $(TK_STUB_LIB_FILE)
@@ -70,7 +79,7 @@ $NetBSD: patch-aa,v 1.3 2005/11/05 03:27:56 rillig Exp $
  
  # This rule is executed if the user tried to run tktest without first
  # building tcltest in the Tcl bin directory. Just do it for them.
-@@ -402,12 +404,12 @@
+@@ -402,12 +404,12 @@ ${TCL_BIN_DIR}/tcltest:
  	make tcltest
  
  tktest: ${TCL_BIN_DIR}/tcltest $(TKTEST_OBJS) $(TK_LIB_FILE)
@@ -86,7 +95,7 @@ $NetBSD: patch-aa,v 1.3 2005/11/05 03:27:56 rillig Exp $
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(TK_LD_SEARCH_FLAGS) -lXt -o xttest
  
-@@ -462,7 +464,7 @@
+@@ -462,7 +464,7 @@ install-binaries: $(TK_LIB_FILE) $(TK_ST
  	    chmod +x $(UNIX_DIR)/mkLinks; \
  	    fi
  	@echo "Installing $(TK_LIB_FILE) to $(LIB_INSTALL_DIR)/"
