@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/10/03 18:31:19 bad Exp $
+# $NetBSD: Makefile,v 1.27 2009/12/17 22:36:00 abs Exp $
 
 DISTNAME=	ddclient-3.6.6
 PKGREVISION=	1
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		perl:run
 USE_LANGUAGES=		# empty
 
+BUILD_DEFS+=		VARBASE
 DOCDIR=			${PREFIX}/share/doc/ddclient
 EGDIR=			${PREFIX}/share/examples/ddclient
 RCD_SCRIPTS=		ddclient
@@ -22,7 +23,8 @@ CONF_FILES_PERMS=	${EGDIR}/sample-etc_ddclient.conf		\
 			${PKG_SYSCONFDIR}/ddclient.conf			\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 
-INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS=	sbin share/doc/ddclient share/examples/ddclient
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-configure:
 	cd ${WRKSRC}; for f in ddclient; do				\
@@ -39,13 +41,11 @@ do-configure:
 do-build:	# empty
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ddclient ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.cisco ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/sample-* ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/ddclient ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.cisco ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/sample-* ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

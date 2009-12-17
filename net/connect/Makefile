@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/25 14:45:17 tron Exp $
+# $NetBSD: Makefile,v 1.11 2009/12/17 22:34:37 abs Exp $
 
 DISTNAME=	connect
 PKGNAME=	${DISTNAME}-1.95
@@ -16,7 +16,8 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 LIBS.Darwin+=	-lresolv
 LIBS.SunOS+=	-lresolv -lsocket -lnsl
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/connect
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-build:
 	${MKDIR} ${WRKSRC}
@@ -25,8 +26,7 @@ do-build:
 	${CUT} -c 4- >${WRKSRC}/README
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/connect ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/connect
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/connect
+	${INSTALL_PROGRAM} ${WRKSRC}/connect ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/connect
 
 .include "../../mk/bsd.pkg.mk"
