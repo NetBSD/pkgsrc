@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/06 18:43:14 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/12/17 22:12:08 abs Exp $
 #
 
 DISTNAME=	arcem-1.00-src
@@ -29,13 +29,17 @@ USE_TOOLS+=	gmake
 
 MAKE_ENV+=	SYSTEM=X
 
+INSTALLATION_DIRS+=	share/arcem
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/arcem
-	${INSTALL_DATA} ${WRKDIR}/linux.rom ${PREFIX}/share/arcem/ROM
-	${INSTALL_DATA} ${WRKDIR}/HardImage1 ${PREFIX}/share/arcem/HardImage1
+	${INSTALL_DATA} ${WRKDIR}/linux.rom \
+		${DESTDIR}${PREFIX}/share/arcem/ROM
+	${INSTALL_DATA} ${WRKDIR}/HardImage1 \
+		${DESTDIR}${PREFIX}/share/arcem/HardImage1
 	${INSTALL_DATA} ${FILESDIR}/dot.arcemrc \
-		${PREFIX}/share/arcem/dot.arcemrc
-	${INSTALL_DATA} ${WRKSRC}/hexcmos ${PREFIX}/share/arcem/hexcmos
+		${DESTDIR}${PREFIX}/share/arcem/dot.arcemrc
+	${INSTALL_DATA} ${WRKSRC}/hexcmos \
+		${DESTDIR}${PREFIX}/share/arcem/hexcmos
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
