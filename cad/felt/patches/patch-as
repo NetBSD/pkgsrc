@@ -1,0 +1,16 @@
+$NetBSD: patch-as,v 1.1 2009/12/17 20:31:37 abs Exp $
+
+--- etc/Makefile.man.orig	2000-02-21 22:44:50.000000000 +0000
++++ etc/Makefile.man
+@@ -29,9 +29,9 @@ clean::;
+ 
+ clobber::;
+ 
+-install::;	@$(MKDIR) $(DESTMAN)/$(SECTION)
++install::;	@$(MKDIR) $(DESTDIR)$(DESTMAN)/$(SECTION)
+ 		@for f in $(MANS); do \
+-		$(INSTALL) -m 0644 $$f $(DESTMAN)/$(SECTION); done
++		$(INSTALL) -m 0644 $$f $(DESTDIR)$(DESTMAN)/$(SECTION); done
+ 
+ depend::;
+ 

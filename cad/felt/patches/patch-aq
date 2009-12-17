@@ -1,0 +1,16 @@
+$NetBSD: patch-aq,v 1.1 2009/12/17 20:31:37 abs Exp $
+
+--- etc/Makefile.orig	2000-03-05 01:43:26.000000000 +0000
++++ etc/Makefile
+@@ -29,9 +29,9 @@ clean::;
+ 
+ clobber::;
+ 
+-install::;	@$(MKDIR) $(DESTLIB)
++install::;	@$(MKDIR) $(DESTDIR)$(DESTLIB)
+ 		@for f in Defaults/*.defaults Translations/*.trn; do \
+-		$(INSTALL) -m 0644 $$f $(DESTLIB); done
++		$(INSTALL) -m 0644 $$f $(DESTDIR)$(DESTLIB); done
+ 
+ depend::;
+ 
