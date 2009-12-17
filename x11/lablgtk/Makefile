@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/09/11 14:22:07 tonio Exp $
+# $NetBSD: Makefile,v 1.37 2009/12/17 19:20:05 abs Exp $
 #
 
 DISTNAME=	lablgtk-2.12.0
@@ -20,6 +20,8 @@ BUILD_TARGET=		world
 BUILDLINK_DEPMETHOD.ocaml=	full
 
 CONFLICTS=	lablgtk2-2.*{,nb*}
+
+PKG_DESTDIR_SUPPORT= user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
