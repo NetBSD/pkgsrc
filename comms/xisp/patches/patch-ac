@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2006/10/06 22:14:44 reed Exp $
+$NetBSD: patch-ac,v 1.5 2009/12/17 21:49:22 abs Exp $
 
---- xispid.c.orig	2003-06-28 09:03:03.000000000 -0500
-+++ xispid.c	2006-10-05 17:22:58.000000000 -0500
+--- xispid.c.orig	2005-11-07 00:38:22.000000000 +0000
++++ xispid.c
 @@ -42,7 +42,7 @@
   #include <limits.h>
  #endif
