@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
+$NetBSD: patch-af,v 1.5 2009/12/17 18:35:27 abs Exp $
 
---- unix/tcl.m4.orig	2001-10-20 02:24:15.000000000 +0200
-+++ unix/tcl.m4	2007-10-27 16:53:32.000000000 +0200
-@@ -584,7 +584,7 @@
+--- unix/tcl.m4.orig	2001-10-20 00:24:15.000000000 +0000
++++ unix/tcl.m4
+@@ -584,7 +584,7 @@ AC_DEFUN(SC_CONFIG_CFLAGS, [
  	    # results, and the version is kept in special file).
  	
  	    if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
  	    fi
  	    if test "`uname -s`" = "AIX" ; then
  		system=AIX-`uname -v`.`uname -r`
-@@ -601,6 +601,7 @@
+@@ -601,6 +601,7 @@ AC_DEFUN(SC_CONFIG_CFLAGS, [
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
      EXTRA_CFLAGS=""
      TCL_EXPORT_FILE_SUFFIX=""
      UNSHARED_LIB_SUFFIX=""
-@@ -790,6 +791,9 @@
+@@ -790,6 +791,9 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  	    EXTRA_CFLAGS=""
  	    LDFLAGS=""
@@ -29,7 +29,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	IRIX-6.*|IRIX64-6.5*)
  	    SHLIB_CFLAGS=""
-@@ -814,6 +818,9 @@
+@@ -814,6 +818,9 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  		esac
  		LDFLAGS="-n32"
  	    fi
@@ -39,7 +39,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	IRIX64-6.*)
  	    SHLIB_CFLAGS=""
-@@ -824,6 +831,9 @@
+@@ -824,6 +831,9 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    DL_LIBS=""
  	    LDFLAGS=""
  	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
@@ -49,7 +49,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	Linux*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -865,6 +875,9 @@
+@@ -865,6 +875,9 @@ dnl AC_CHECK_TOOL(AR, ar, :)
                  EXTRA_CFLAGS="${EXTRA_CFLAGS} -fno-inline"
              fi
  
@@ -59,7 +59,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	GNU*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -910,28 +923,36 @@
+@@ -910,28 +923,36 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[[1-2]].*|OpenBSD-*)
@@ -101,7 +101,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
  	    ], [
  		SHLIB_CFLAGS=""
  		SHLIB_LD="echo tclLdAout $CC \{$SHLIB_CFLAGS\} | `pwd`/tclsh -r"
-@@ -949,7 +970,7 @@
+@@ -949,7 +970,7 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -110,7 +110,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="ld -Bshareable -x"
-@@ -1129,6 +1150,9 @@
+@@ -1129,6 +1150,9 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    DL_LIBS="-ldl"
  	    LDFLAGS=""
  	    LD_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
@@ -120,7 +120,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	SunOS-5*)
  
-@@ -1173,6 +1197,9 @@
+@@ -1173,6 +1197,9 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    else
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -130,7 +130,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -1328,7 +1355,7 @@
+@@ -1328,7 +1355,7 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  		    ;;
  		IRIX*)
  		    ;;
@@ -139,7 +139,7 @@ $NetBSD: patch-af,v 1.4 2007/10/27 15:16:52 hubertf Exp $
  		    ;;
  		Rhapsody-*|Darwin-*)
  		    ;;
-@@ -1707,7 +1734,7 @@
+@@ -1707,7 +1734,7 @@ AC_DEFUN(SC_BLOCKING_STYLE, [
  	    # results, and the version is kept in special file).
  	
  	    if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
