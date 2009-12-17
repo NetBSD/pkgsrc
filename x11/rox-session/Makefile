@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/08/26 19:58:40 sno Exp $
+# $NetBSD: Makefile,v 1.17 2009/12/17 17:39:55 abs Exp $
 #
 
 DISTNAME=	rox-session-0.28
@@ -18,7 +18,7 @@ DIST_SUBDIR=	rox
 
 NO_BUILD=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	26 25 24
 PYTHON_PATCH_SCRIPTS=	AppRun tests/testutils.py
 
 INSTALLATION_DIRS=	share/rox/ROX-Session
@@ -36,13 +36,14 @@ SUBST_FILES.lib=	findrox.py
 SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 
 USE_TOOLS+=	pax
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 pre-install:
 	${RM} -f ${WRKSRC}/wm.py.orig
 	${RM} -f ${WRKSRC}/setup.py.orig
 
 do-install:
-	cd ${WRKSRC} && pax -rw . ${PREFIX}/share/rox/ROX-Session
+	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/share/rox/ROX-Session
 
 .include "../../lang/python/application.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
