@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/06/30 00:07:25 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/12/17 17:55:22 abs Exp $
 
 DISTNAME=	wmfstatus-0.4
 PKGREVISION=	1
@@ -14,12 +14,13 @@ MAKE_JOBS_SAFE=		no
 WRKSRC=		${WRKDIR}/${DISTNAME}/wmfstatus
 
 INSTALLATION_DIRS=	bin
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+=	share/doc/wmfstatus
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wmfstatus ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmfstatus
+	${INSTALL_PROGRAM} ${WRKSRC}/wmfstatus ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/README \
-		${WRKDIR}/${DISTNAME}/HINTS ${PREFIX}/share/doc/wmfstatus
+	    ${WRKDIR}/${DISTNAME}/HINTS ${DESTDIR}${PREFIX}/share/doc/wmfstatus
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

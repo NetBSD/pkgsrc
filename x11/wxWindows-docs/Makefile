@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/12 21:54:35 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2009/12/17 17:58:16 abs Exp $
 
 DISTNAME=		wxHTML22
 PKGNAME=		wxWindows-docs-2.2
@@ -17,9 +17,11 @@ NO_BUILD=		yes
 
 HTMLDIR=		${PREFIX}/share/doc/wx
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+=	share/doc/wx
+
 do-install:
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/* ${HTMLDIR}
-	${LN} -sf wxwin.htm ${HTMLDIR}/index.html
+	${INSTALL_DATA} ${WRKSRC}/* ${DESTDIR}${HTMLDIR}
+	${LN} -sf wxwin.htm ${DESTDIR}${HTMLDIR}/index.html
 
 .include "../../mk/bsd.pkg.mk"
