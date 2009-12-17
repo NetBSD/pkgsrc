@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2009/05/20 00:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2009/12/17 20:58:25 abs Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -42,24 +42,31 @@ do-configure:
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} util/build NetBSD default
 
+INSTALLATION_DIRS+=share/examples/spice3
+
 do-install:
 	cd ${WRKSRC} && env ${MAKE_ENV} util/build NetBSD install
-	${CHMOD} a+rx ${PREFIX}/bin/spice3 ${PREFIX}/bin/nutmeg		\
-	  	${PREFIX}/bin/sconvert ${PREFIX}/bin/help		\
-		${PREFIX}/bin/proc2mod ${PREFIX}/bin/multidec
-	strip ${PREFIX}/bin/spice3 ${PREFIX}/bin/nutmeg			\
-		${PREFIX}/bin/sconvert ${PREFIX}/bin/help		\
-		${PREFIX}/bin/proc2mod ${PREFIX}/bin/multidec
-	${CHMOD} -R a+rX ${PREFIX}/share/spice3
-	${INSTALL_MAN} ${WRKSRC}/man/man5/mfbcap.5 ${PREFIX}/${PKGMANDIR}/man5/mfbcap.5
-	${INSTALL_MAN} ${WRKSRC}/man/man1/sconvert.1 ${PREFIX}/${PKGMANDIR}/man1/sconvert.1
-	${INSTALL_MAN} ${WRKSRC}/man/man1/nutmeg.1 ${PREFIX}/${PKGMANDIR}/man1/nutmeg.1
-	${INSTALL_MAN} ${WRKSRC}/man/man1/spice.1 ${PREFIX}/${PKGMANDIR}/man1/spice.1
-	${INSTALL_MAN} ${WRKSRC}/man/man3/mfb.3 ${PREFIX}/${PKGMANDIR}/man3/mfb.3
+	${CHMOD} a+rx ${PREFIX}/bin/spice3		\
+		${DESTDIR}${PREFIX}/bin/nutmeg		\
+	  	${DESTDIR}${PREFIX}/bin/sconvert	\
+		${DESTDIR}${PREFIX}/bin/help		\
+		${DESTDIR}${PREFIX}/bin/proc2mod	\
+		${DESTDIR}${PREFIX}/bin/multidec
+	strip ${DESTDIR}${PREFIX}/bin/spice3		\
+		${DESTDIR}${PREFIX}/bin/nutmeg		\
+		${DESTDIR}${PREFIX}/bin/sconvert	\
+		${DESTDIR}${PREFIX}/bin/help		\
+		${DESTDIR}${PREFIX}/bin/proc2mod	\
+		${DESTDIR}${PREFIX}/bin/multidec
+	${CHMOD} -R a+rX ${DESTDIR}${PREFIX}/share/spice3
+	${INSTALL_MAN} ${WRKSRC}/man/man5/mfbcap.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/mfbcap.5
+	${INSTALL_MAN} ${WRKSRC}/man/man1/sconvert.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/sconvert.1
+	${INSTALL_MAN} ${WRKSRC}/man/man1/nutmeg.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nutmeg.1
+	${INSTALL_MAN} ${WRKSRC}/man/man1/spice.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/spice.1
+	${INSTALL_MAN} ${WRKSRC}/man/man3/mfb.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/mfb.3
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/spice3
-	${INSTALL_DATA} ${WRKSRC}/examples/*.cir ${PREFIX}/share/examples/spice3
+	${INSTALL_DATA} ${WRKSRC}/examples/*.cir ${DESTDIR}${PREFIX}/share/examples/spice3
 
 #.include "../../devel/readline/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
