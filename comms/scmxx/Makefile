@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/07/13 10:16:30 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2009/12/17 21:58:33 abs Exp $
 #
 
 DISTNAME=		scmxx-0.9.0
@@ -14,21 +14,22 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
 
+INSTALLATION_DIRS+= share/doc/scmxx share/examples/scmxx
+PKG_DESTDIR_SUPPORT= user-destdir
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scmxx
 	${INSTALL_DATA} ${WRKSRC}/docs/doc_sources.txt			\
-	    ${PREFIX}/share/doc/scmxx
+	    ${DESTDIR}${PREFIX}/share/doc/scmxx
 	${INSTALL_DATA} ${WRKSRC}/docs/gsmcharset.txt			\
-	    ${PREFIX}/share/doc/scmxx
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/scmxx
+	    ${DESTDIR}${PREFIX}/share/doc/scmxx
 	${INSTALL_DATA} ${WRKSRC}/examples/debian_with_scmxx.bmp	\
-	    ${PREFIX}/share/examples/scmxx
+	    ${DESTDIR}${PREFIX}/share/examples/scmxx
 	${INSTALL_DATA} ${WRKSRC}/examples/sms.txt			\
-	    ${PREFIX}/share/examples/scmxx
+	    ${DESTDIR}${PREFIX}/share/examples/scmxx
 	${INSTALL_DATA} ${WRKSRC}/examples/vCalendar.vcs		\
-	    ${PREFIX}/share/examples/scmxx
+	    ${DESTDIR}${PREFIX}/share/examples/scmxx
 	${INSTALL_DATA} ${WRKSRC}/examples/vCard.vcf			\
-	    ${PREFIX}/share/examples/scmxx
+	    ${DESTDIR}${PREFIX}/share/examples/scmxx
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
