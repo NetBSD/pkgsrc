@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/12/02 12:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2009/12/17 19:35:03 abs Exp $
 
 DISTNAME=	htdig-3.1.6
 PKGREVISION=	5
@@ -20,7 +20,8 @@ CONFIGURE_ARGS+= --with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
 		--with-database-dir=${DBDIR:Q} \
 		--with-image-dir=${PREFIX}/share/examples/htdig \
 		--with-search-dir=${PREFIX}/share/examples/htdig
-CONFIGURE_ENV+=	PDF_PARSER="${LOCALBASE}/bin/acroread"
+MAKE_ENV+=	INSTALL_ROOT=${DESTDIR:Q}
+CONFIGURE_ENV+=	PDF_PARSER="${PREFIX}/bin/acroread"
 CXXFLAGS+=	-Wno-deprecated
 CPPFLAGS+=	${CXXFLAGS}
 
@@ -37,6 +38,8 @@ CONF_FILES+=	${PREFIX}/share/examples/htdig/htdig.conf \
 
 EXTRACT_OPTS+=		-x
 EXTRACT_ELEMENTS=	${DISTNAME}/db*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../databases/db/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
