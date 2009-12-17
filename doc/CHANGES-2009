@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4662 2009/12/17 12:04:14 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4663 2009/12/17 14:48:53 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6287,3 +6287,4 @@ Changes to the packages collection and infrastructure in 2009:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2009Q4 branch [agc 2009-12-16]
 	Updated multimedia/ruby-clutter-gst to 0.8.0nb3 [obache 2009-12-17]
 	Updated graphics/rabbit to 0.6.3 [obache 2009-12-17]
+	Updated lang/parrot to 1.8.0 [he 2009-12-17]
