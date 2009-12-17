@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2005/11/04 09:56:09 rillig Exp $
+$NetBSD: patch-aa,v 1.4 2009/12/17 18:35:26 abs Exp $
 
---- unix/Makefile.in.orig	2001-10-20 10:24:15.000000000 +1000
+--- unix/Makefile.in.orig	2001-10-20 00:24:15.000000000 +0000
 +++ unix/Makefile.in
+@@ -35,7 +35,7 @@ mandir			= @mandir@
+ # to be different than those used for actually reference files at
+ # run-time.  INSTALL_ROOT is prepended to $prefix and $exec_prefix
+ # when installing files.
+-INSTALL_ROOT		=
++INSTALL_ROOT		= $(DESTDIR)
+ 
+ # Path for the platform independent Tcl scripting libraries:
+ TCL_LIBRARY		= $(prefix)/lib/tcl$(VERSION)
 @@ -87,7 +87,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
  #CFLAGS			= $(CFLAGS_DEBUG)
  #CFLAGS			= $(CFLAGS_OPTIMIZE)

@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.3 2005/11/04 09:56:09 rillig Exp $
+$NetBSD: patch-ac,v 1.4 2009/12/17 18:35:27 abs Exp $
 
---- unix/tclUnixInit.c.orig	Fri Aug 24 19:13:22 2001
+--- unix/tclUnixInit.c.orig	2001-08-24 17:13:22.000000000 +0000
 +++ unix/tclUnixInit.c
 @@ -13,7 +13,7 @@
  #include "tclInt.h"
