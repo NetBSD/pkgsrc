@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/04 22:48:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/17 19:13:39 abs Exp $
 #
 
 DISTNAME=		wmd-1.0.1
@@ -15,17 +15,18 @@ USE_LANGUAGES=		# none
 NO_BUILD=		yes
 
 INSTALLATION_DIRS=	share/doc/wmd share/wmd/images
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
 	cd ${WRKSRC} &&							\
 	for f in *.txt *Example.html; do				\
-		${INSTALL_DATA} $${f} ${PREFIX}/share/doc/wmd;		\
+		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/doc/wmd; \
 	done;								\
 	for f in wmd/*.js; do						\
-		${INSTALL_DATA} $${f} ${PREFIX}/share/wmd;		\
+		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/wmd;	\
 	done;								\
 	for f in wmd/images/*.png; do					\
-		${INSTALL_DATA} $${f} ${PREFIX}/share/wmd/images;	\
+		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/wmd/images; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
