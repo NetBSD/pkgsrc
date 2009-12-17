@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/04 01:05:46 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/17 21:14:20 abs Exp $
 #
 
 DISTNAME=		ctrlproxy-3.0.8
@@ -20,19 +20,20 @@ CONF_FILES+=		${PREFIX}/share/examples/ctrlproxy/config.default \
 			${PKG_SYSCONFDIR}/config
 
 PKGCONFIG_OVERRIDE+=	ctrlproxy.pc.in
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+=	share/examples/ctrlproxy
 
 .include "options.mk"
 
 post-install:
-	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE} install
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ctrlproxy/README
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ctrlproxy
+	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} DESTDIR=${DESTDIR:Q} ${MAKE} install
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/ctrlproxy/README
 	${INSTALL_DATA} ${WRKSRC}/motd \
-		${PREFIX}/share/examples/ctrlproxy/motd
+		${DESTDIR}${PREFIX}/share/examples/ctrlproxy/motd
 	${INSTALL_DATA} ${WRKSRC}/config.default \
-		${PREFIX}/share/examples/ctrlproxy/config.default
+		${DESTDIR}${PREFIX}/share/examples/ctrlproxy/config.default
 	${INSTALL_DATA} ${WRKSRC}/config.example \
-		${PREFIX}/share/examples/ctrlproxy/config.example
+		${DESTDIR}${PREFIX}/share/examples/ctrlproxy/config.example
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
