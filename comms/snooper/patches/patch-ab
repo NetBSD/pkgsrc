@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/12/27 13:51:27 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2009/12/17 21:43:17 abs Exp $
 
---- src/uucplock.c.orig	2005-12-23 16:22:29.000000000 +0000
+--- src/uucplock.c.orig	1999-12-02 03:12:46.000000000 +0000
 +++ src/uucplock.c
 @@ -38,8 +38,9 @@ static char sccsid[] = "@(#)uucplock.c	5
  #include "config.h"
