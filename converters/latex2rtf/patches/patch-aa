@@ -1,39 +1,53 @@
-$NetBSD: patch-aa,v 1.5 2006/03/03 19:52:37 kristerw Exp $
+$NetBSD: patch-aa,v 1.6 2009/12/17 21:56:22 abs Exp $
 
---- Makefile.orig	2004-11-07 18:59:18.000000000 -0800
-+++ Makefile	2005-11-03 15:42:07.000000000 -0800
+--- Makefile.orig	2004-11-08 02:59:18.000000000 +0000
++++ Makefile
 @@ -2,3 +2,3 @@
  
 -CC=gcc
 +CC?=gcc
  MKDIR=mkdir -p
-@@ -18,14 +18,14 @@
- #CFLAGS:=$(CFLAGS) -Zwin32  
- 
+@@ -20,3 +20,3 @@ CFLAGS:=-DUNIX
  #Base directory - adapt as needed
 -PREFIX=$(PREFIX_DRIVE)/usr/local
 +PREFIX?=$(PREFIX_DRIVE)/usr/local
  
- #Name of executable binary --- beware of 8.3 restriction under DOS
- BINARY_NAME=latex2rtf$(EXE_SUFFIX)
- 
- # Location of binary, man, info, and support files - adapt as needed
+@@ -27,3 +27,3 @@ BINARY_NAME=latex2rtf$(EXE_SUFFIX)
  BIN_INSTALL=$(PREFIX)/bin
 -MAN_INSTALL=$(PREFIX)/man/man1
 +MAN_INSTALL=$(PREFIX)/$(PKGMANDIR)/man1
  INFO_INSTALL=$(PREFIX)/info
- SUPPORT_INSTALL=$(PREFIX)/share/latex2rtf
- CFG_INSTALL=$(PREFIX)/share/latex2rtf/cfg
-@@ -176,9 +176,9 @@
- 	cp doc/latex2rtf.1    $(MAN_INSTALL)
- 	cp doc/latex2png.1    $(MAN_INSTALL)
- 	cp $(CFGS)            $(CFG_INSTALL)
+@@ -170,13 +170,13 @@ doc: doc/latex2rtf.texi doc/Makefile
+ install: latex2rtf doc/latex2rtf.1 $(CFGS) scripts/latex2png
+-	$(MKDIR) $(BIN_INSTALL)
+-	$(MKDIR) $(MAN_INSTALL)
+-	$(MKDIR) $(CFG_INSTALL)
+-	cp $(BINARY_NAME)     $(BIN_INSTALL)
+-	cp scripts/latex2png  $(BIN_INSTALL)
+-	cp doc/latex2rtf.1    $(MAN_INSTALL)
+-	cp doc/latex2png.1    $(MAN_INSTALL)
+-	cp $(CFGS)            $(CFG_INSTALL)
 -	cp doc/latex2rtf.html $(SUPPORT_INSTALL)
 -	cp doc/latex2rtf.pdf  $(SUPPORT_INSTALL)
 -	cp doc/latex2rtf.txt  $(SUPPORT_INSTALL)
-+	cp doc/latex2rtf.html $(PREFIX)/share/doc/latex2rtf
-+	cp doc/latex2rtf.pdf  $(PREFIX)/share/doc/latex2rtf
-+#	cp doc/latex2rtf.txt  $(SUPPORT_INSTALL)
++	$(MKDIR) $(DESTDIR)$(BIN_INSTALL)
++	$(MKDIR) $(DESTDIR)$(MAN_INSTALL)
++	$(MKDIR) $(DESTDIR)$(CFG_INSTALL)
++	cp $(BINARY_NAME)     $(DESTDIR)$(BIN_INSTALL)
++	cp scripts/latex2png  $(DESTDIR)$(BIN_INSTALL)
++	cp doc/latex2rtf.1    $(DESTDIR)$(MAN_INSTALL)
++	cp doc/latex2png.1    $(DESTDIR)$(MAN_INSTALL)
++	cp $(CFGS)            $(DESTDIR)$(CFG_INSTALL)
++	cp doc/latex2rtf.html $(DESTDIR)$(PREFIX)/share/doc/latex2rtf
++	cp doc/latex2rtf.pdf  $(DESTDIR)$(PREFIX)/share/doc/latex2rtf
++#	cp doc/latex2rtf.txt  $(DESTDIR)$(SUPPORT_INSTALL)
  	@echo "******************************************************************"
- 	@echo "*** latex2rtf successfully installed as \"$(BINARY_NAME)\""
- 	@echo "*** in directory \"$(BIN_INSTALL)\""
+@@ -197,5 +197,5 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
+ install-info: doc/latex2rtf.info
+-	$(MKDIR) $(INFO_INSTALL)
+-	cp doc/latex2rtf.info $(INFO_INSTALL)
+-	install-info --info-dir=$(INFO_INSTALL) doc/latex2rtf.info
++	$(MKDIR) $(DESTDIR)$(INFO_INSTALL)
++	cp doc/latex2rtf.info $(DESTDIR)$(INFO_INSTALL)
++	install-info --info-dir=$(DESTDIR)$(INFO_INSTALL) doc/latex2rtf.info
+ 
