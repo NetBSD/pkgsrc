@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/08/26 19:58:25 sno Exp $
+# $NetBSD: Makefile,v 1.13 2009/12/17 19:50:27 abs Exp $
 #
 
 DISTNAME=		wmdrawer-0.10.5
@@ -11,23 +11,23 @@ HOMEPAGE=		http://people.easter-eggs.org/~valos/wmdrawer/
 COMMENT=		Drawer (retractable button bar) to launch applications
 
 USE_TOOLS+=		gmake gunzip
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/doc/wmdrawer share/examples/wmdrawer
+PKG_DESTDIR_SUPPORT=	user-destdir
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 post-build:
 	gunzip ${WRKSRC}/doc/wmdrawer.1x.gz
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wmdrawer ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmdrawer
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/wmdrawer
-	${INSTALL_MAN} ${WRKSRC}/doc/wmdrawer.1x ${PREFIX}/${PKGMANDIR}/man1/wmdrawer.1
-	${INSTALL_DATA} ${WRKSRC}/wmdrawerrc.example ${PREFIX}/share/examples/wmdrawer
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${PREFIX}/share/doc/wmdrawer
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/wmdrawer
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/wmdrawer
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wmdrawer
-	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/wmdrawer
+	${INSTALL_PROGRAM} ${WRKSRC}/wmdrawer ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/wmdrawer.1x ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/wmdrawer.1
+	${INSTALL_DATA} ${WRKSRC}/wmdrawerrc.example ${DESTDIR}${PREFIX}/share/examples/wmdrawer
+	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/share/doc/wmdrawer
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/share/doc/wmdrawer
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/wmdrawer
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/wmdrawer
+	${INSTALL_DATA} ${WRKSRC}/TODO ${DESTDIR}${PREFIX}/share/doc/wmdrawer
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
