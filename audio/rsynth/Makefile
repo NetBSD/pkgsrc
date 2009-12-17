@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/12/01 23:46:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2009/12/17 22:08:09 abs Exp $
 
 DISTNAME=	rsynth-2.0
 PKGREVISION=	2
@@ -17,17 +17,21 @@ DIST_SUBDIR=	rsynth
 GNU_CONFIGURE=	YES
 CONFIGURE_HAS_MANDIR=	NO
 
+USE_TOOLS+=	gzcat
+
 CONFIGURE_ARGS+=--with-aDict="${WRKDIR}/cmudict.0.4"
 CONFIGURE_ARGS+=--without-bDict
 CONFIGURE_ENV+=	ac_cv_lib_audio=yes XLIBS=-lXt
+
+INSTALLATION_DIRS+= bin share/rsynth
+PKG_DESTDIR_SUPPORT= user-destdir
 
 pre-configure:
 	${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/cmudict.0.4.Z > ${WRKDIR}/cmudict.0.4
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/rsynth/
 	cd ${DISTDIR}/${DIST_SUBDIR} && \
-		${INSTALL_DATA} ${DICT_FILES} ${PREFIX}/share/rsynth/
+		${INSTALL_DATA} ${DICT_FILES} ${DESTDIR}${PREFIX}/share/rsynth/
 
 .include "../../audio/nas/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
