@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/04 21:30:17 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2009/12/17 22:38:50 abs Exp $
 #
 
 DISTNAME=	dhid-5.2
@@ -12,17 +12,17 @@ COMMENT=	Dynamic Host Information System client daemon
 
 RCD_SCRIPTS=	dhid
 
-INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS=	sbin share/doc/dhid
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dhid ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/genkeys ${PREFIX}/sbin/dhid-genkeys
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dhid
-	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${PREFIX}/share/doc/dhid
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/dhid
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/dhid
-	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${PREFIX}/share/doc/dhid
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dhid
+	${INSTALL_PROGRAM} ${WRKSRC}/dhid ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/genkeys ${DESTDIR}${PREFIX}/sbin/dhid-genkeys
+	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DESTDIR}${PREFIX}/share/doc/dhid
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/share/doc/dhid
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/dhid
+	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${DESTDIR}${PREFIX}/share/doc/dhid
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/dhid
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
