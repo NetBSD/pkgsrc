@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/05/30 02:03:36 zafer Exp $
+# $NetBSD: Makefile,v 1.33 2009/12/17 17:53:31 abs Exp $
 #
 
 DISTNAME=	wmweather-2.4.2
@@ -14,6 +14,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake xmessage:run
+PKG_DESTDIR_SUPPORT= 	user-destdir
 
 CONFIGURE_ARGS+=	--with-sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-xmessage=${TOOLS_PATH.xmessage}
