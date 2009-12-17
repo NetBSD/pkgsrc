@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4661 2009/12/17 11:17:47 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4662 2009/12/17 12:04:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6286,3 +6286,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/evas-xrender-x11 to 0.9.9.063 [joerg 2009-12-17]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2009Q4 branch [agc 2009-12-16]
 	Updated multimedia/ruby-clutter-gst to 0.8.0nb3 [obache 2009-12-17]
+	Updated graphics/rabbit to 0.6.3 [obache 2009-12-17]
