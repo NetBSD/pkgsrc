@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/08/26 19:58:38 sno Exp $
+# $NetBSD: Makefile,v 1.17 2009/12/17 19:11:39 abs Exp $
 #
 
 DISTNAME=		kkbswitch-1.4.3
@@ -16,8 +16,7 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--disable-ru-ua-layout
-
-BUILDLINK_DEPMETHOD.libXt?=	build
+PKG_DESTDIR_SUPPORT= 	user-destdir
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
