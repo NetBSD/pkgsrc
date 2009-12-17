@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/08/26 19:58:41 sno Exp $
+# $NetBSD: Makefile,v 1.37 2009/12/17 17:59:09 abs Exp $
 
 DISTNAME=		wdm-1.28
 PKGREVISION=		1
@@ -26,6 +26,7 @@ CONFIGURE_ENV+=		SYSTEM_SHELL=${SH:Q}
 RCD_SCRIPTS=		wdm
 
 PKG_SYSCONFSUBDIR=	wdm
+PKG_DESTDIR_SUPPORT= user-destdir
 
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/authdir			\
 			${ROOT_USER} ${ROOT_GROUP} 700
@@ -47,13 +48,11 @@ CONF_FILES+=	${PREFIX}/share/examples/wdm/${f} ${PKG_SYSCONFDIR}/${f}
 # User may define WDM_MANAGERS option to specfy a window manager
 # different from WindowMaker. WDM_MANAGERS is a space-separated
 # list of window managers to support.
-.for WMANAGER in ${WDM_MANAGERS}
-CONFIGURE_ARGS+=	--with-winmgr=${WMANAGER:Q}
+.for wmanager in ${WDM_MANAGERS}
+CONFIGURE_ARGS+=	--with-winmgr=${wmanager:Q}
 .endfor
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps/wdm
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/wdm
+INSTALLATION_DIRS += share/pixmaps/wdm share/examples/wdm
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
