@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/06/14 22:12:45 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2009/12/17 19:15:37 abs Exp $
 
 DISTNAME=	xservers-3.3.6.5
 PKGREVISION=	2
@@ -29,7 +29,7 @@ do-configure:
 	${ECHO} "#define NetBSDThreads NO" >>${WRKSRC}/config/cf/host.def
 
 post-install:
-	cd ${PREFIX} && \
+	cd ${DESTDIR}${PREFIX} && \
 	${FIND} ${X11_SUBDIR} \! -type d -print | ${SORT} >${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
