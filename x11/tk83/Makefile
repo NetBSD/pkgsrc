@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/08/20 15:25:01 jwise Exp $
+# $NetBSD: Makefile,v 1.18 2009/12/17 18:23:49 abs Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.tcltk.com/
 COMMENT=	Graphical toolkit for TCL
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT= 	user-destdir
+INSTALLATION_DIRS+=	include/tk/generic include/tk/unix
 
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		unix
@@ -37,7 +39,7 @@ CONFIGURE_ARGS+=	--enable-64bit
 # linked to a longer filename.
 #
 post-patch:
-	@cd ${WRKSRC}/unix;						\
+	cd ${WRKSRC}/unix;						\
 	${MV} -f mkLinks mkLinks.tmp;					\
 	${GREP} -v "^exit 0" mkLinks.tmp > mkLinks;			\
 	${CAT} mkLinks.tmp						\
@@ -57,37 +59,33 @@ post-build:
 	done
 
 post-install:
-	${RM} -f ${PREFIX}/bin/wish
-	cd ${PREFIX}/bin && ${LN} -s wish8.3 wish
-	${INSTALL_DATA_DIR} ${PREFIX}/include/tk
-	${INSTALL_DATA_DIR} ${PREFIX}/include/tk/generic
-	${INSTALL_DATA_DIR} ${PREFIX}/include/tk/unix
-	${INSTALL_DATA} ${WRKSRC}/generic/default.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/ks_names.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tk.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tk3d.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkButton.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkCanvas.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkColor.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkDecls.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkFileFilter.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkFont.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkInitScript.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkInt.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkIntDecls.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkIntPlatDecls.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkIntXlibDecls.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkMenu.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkMenubutton.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkPlatDecls.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkPort.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkScale.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkScrollbar.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkSelect.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tkText.h ${PREFIX}/include/tk/generic
-	${INSTALL_DATA} ${WRKSRC}/unix/tkUnixDefault.h ${PREFIX}/include/tk/unix
-	${INSTALL_DATA} ${WRKSRC}/unix/tkUnixInt.h ${PREFIX}/include/tk/unix
-	${INSTALL_DATA} ${WRKSRC}/unix/tkUnixPort.h ${PREFIX}/include/tk/unix
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s wish8.3 wish
+	${INSTALL_DATA} ${WRKSRC}/generic/default.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/ks_names.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tk.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tk3d.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkButton.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkCanvas.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkColor.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkDecls.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkFileFilter.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkFont.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkInitScript.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkInt.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkIntDecls.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkIntPlatDecls.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkIntXlibDecls.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkMenu.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkMenubutton.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkPlatDecls.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkPort.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkScale.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkScrollbar.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkSelect.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tkText.h ${DESTDIR}${PREFIX}/include/tk/generic
+	${INSTALL_DATA} ${WRKSRC}/unix/tkUnixDefault.h ${DESTDIR}${PREFIX}/include/tk/unix
+	${INSTALL_DATA} ${WRKSRC}/unix/tkUnixInt.h ${DESTDIR}${PREFIX}/include/tk/unix
+	${INSTALL_DATA} ${WRKSRC}/unix/tkUnixPort.h ${DESTDIR}${PREFIX}/include/tk/unix
 
 .include "../../lang/tcl83/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
