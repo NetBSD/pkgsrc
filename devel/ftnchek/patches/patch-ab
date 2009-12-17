@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2003/06/29 22:24:33 jtb Exp $
+$NetBSD: patch-ab,v 1.5 2009/12/17 21:27:32 abs Exp $
 
---- Makefile.in.orig
+--- Makefile.in.orig	2003-03-20 22:07:55.000000000 +0000
 +++ Makefile.in
-@@ -461,31 +461,17 @@
+@@ -461,45 +461,31 @@ average.out: ftnchek.h
  install:	install-exe @INSTALL_MAN@ install-lisp
  
  install-exe:	ftnchek$(EXE) dcl2inc$(CMD)
@@ -17,10 +17,10 @@ $NetBSD: patch-ab,v 1.4 2003/06/29 22:24:33 jtb Exp $
 -	$(CP) dcl2inc$(CMD) $(bindir)/dcl2inc$(CMD)
 -	$(CHMOD) 755 $(bindir)/dcl2inc$(CMD)
 -	-$(RM) $(bindir)/fcl2vcg
-+	$(BSD_INSTALL_PROGRAM) ftnchek$(EXE) $(bindir)
-+	$(BSD_INSTALL_DATA_DIR) $(libdir)
-+	$(BSD_INSTALL_DATA) dcl2inc.awk $(libdir)
-+	$(BSD_INSTALL_SCRIPT) dcl2inc$(CMD) $(bindir)
++	$(BSD_INSTALL_PROGRAM) ftnchek$(EXE) $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(libdir)
++	$(BSD_INSTALL_DATA) dcl2inc.awk $(DESTDIR)$(libdir)
++	$(BSD_INSTALL_SCRIPT) dcl2inc$(CMD) $(DESTDIR)$(bindir)
  
  # Install man pages, taking care to remove old formatted ones, because
  # many man implentations fail to compare time stamps of raw and
@@ -35,12 +35,31 @@ $NetBSD: patch-ab,v 1.4 2003/06/29 22:24:33 jtb Exp $
 -	$(CHMOD) 644 $(mandir)/man1/ftnchek$(manext)
 -	-$(RM) $(mandir)/man1/fcl2vcg$(manext)
 -	-$(RM) $(mandir)/cat1/fcl2vcg$(manext)
-+	$(BSD_INSTALL_MAN) dcl2inc.man $(mandir)/man1/dcl2inc$(manext)
-+	$(BSD_INSTALL_MAN) ftnchek$(manext) $(mandir)/man1/ftnchek$(manext)
++	$(BSD_INSTALL_MAN) dcl2inc.man $(DESTDIR)$(mandir)/man1/dcl2inc$(manext)
++	$(BSD_INSTALL_MAN) ftnchek$(manext) $(DESTDIR)$(mandir)/man1/ftnchek$(manext)
  
  # IRIX uses pre-formatted, packed man pages and nroff is not bundled with it.
  install-man-sgi: catman
-@@ -528,23 +514,8 @@
+ 	if $(PACK) dcl2inc.cat ; \
+ 	then \
+-		$(MV) dcl2inc.cat.z $(mandir)$(sgimansubdir)/dcl2inc.z ; \
+-		$(CHMOD) 644 $(mandir)$(sgimansubdir)/dcl2inc.z ; \
++		$(MV) dcl2inc.cat.z $(DESTDIR)$(mandir)$(sgimansubdir)/dcl2inc.z ; \
++		$(CHMOD) 644 $(DESTDIR)$(mandir)$(sgimansubdir)/dcl2inc.z ; \
+ 	fi
+ 	if $(PACK) ftnchek.cat ; \
+ 	then \
+-		$(MV) ftnchek.cat.z $(mandir)$(sgimansubdir)/ftnchek.z ; \
+-		$(CHMOD) 644 $(mandir)$(sgimansubdir)/ftnchek.z ; \
++		$(MV) ftnchek.cat.z $(DESTDIR)$(mandir)$(sgimansubdir)/ftnchek.z ; \
++		$(CHMOD) 644 $(DESTDIR)$(mandir)$(sgimansubdir)/ftnchek.z ; \
+ 	fi
+-	-$(RM) $(mandir)/fcl2vcg.z
++	-$(RM) $(DESTDIR)$(mandir)/fcl2vcg.z
+ 
+ # The catman target makes formatted ("cat") versions of the manpages
+ # for use in install-man-sgi.  These files are not in the standard
+@@ -528,23 +514,8 @@ catman: dcl2inc.cat ftnchek.cat
  #  The emacs lisp file will be installed only if lispdir exists.  It will
  #  be byte-compiled if emacs is present.
  install-lisp:
@@ -61,8 +80,8 @@ $NetBSD: patch-ab,v 1.4 2003/06/29 22:24:33 jtb Exp $
 -	  echo "If you want to install ftnchek.el, create $(lispdir)" ; \
 -	  echo "or re-run make install with 'lispdir=path-to-site-lisp'" ; \
 -	fi
-+	$(BSD_INSTALL_DATA_DIR) $(lispdir)
-+	$(BSD_INSTALL_DATA) ftnchek.el $(lispdir)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(lispdir)
++	$(BSD_INSTALL_DATA) ftnchek.el $(DESTDIR)$(lispdir)
  
  # Remove everything that the install target installed.
  uninstall:
