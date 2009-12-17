@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.11 2009/10/30 18:34:56 ahoka Exp $
+$NetBSD: patch-ab,v 1.12 2009/12/17 16:42:46 jmmv Exp $
 
---- src/Makefile.orig	2008-01-19 20:37:58.000000000 +0100
-+++ src/Makefile
+--- src/Makefile.orig	2008-01-19 19:37:58.000000000 +0000
++++ src/Makefile	2009-12-17 16:36:51.000000000 +0000
 @@ -7,8 +7,8 @@
  # Your platform. See PLATS for possible values.
  PLAT= none
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.11 2009/10/30 18:34:56 ahoka Exp $
  
 +.SUFFIXES:	.lo
 +.c.lo:
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $<
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) -c $<
 +LV=	5:1
 +
  # == END OF USER SETTINGS. NO NEED TO CHANGE ANYTHING BELOW THIS LINE =========
@@ -57,15 +57,15 @@ $NetBSD: patch-ab,v 1.11 2009/10/30 18:34:56 ahoka Exp $
  $(LUA_A): $(CORE_O) $(LIB_O)
 -	$(AR) $@ $?
 -	$(RANLIB) $@
-+	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o $@ ${CORE_O} ${LIB_O} -rpath ${PREFIX}/lib -version-info ${LV} ${LIBS}
++	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} -o $@ ${CORE_O} ${LIB_O} -rpath ${PREFIX}/lib -version-info ${LV} ${LIBS}
  
  $(LUA_T): $(LUA_O) $(LUA_A)
 -	$(CC) -o $@ $(MYLDFLAGS) $(LUA_O) $(LUA_A) $(LIBS)
-+	${LIBTOOL} --mode=link $(CC) -o $@ $(MYLDFLAGS) $(LUA_O) $(LUA_A) $(LIBS)
++	${LIBTOOL} --tag=CC --mode=link $(CC) -o $@ $(MYLDFLAGS) $(LUA_O) $(LUA_A) $(LIBS)
  
  $(LUAC_T): $(LUAC_O) $(LUA_A)
 -	$(CC) -o $@ $(MYLDFLAGS) $(LUAC_O) $(LUA_A) $(LIBS)
-+	${LIBTOOL} --mode=link $(CC) -static -o $@ $(MYLDFLAGS) $(LUAC_O) $(LUA_A) $(LIBS)
++	${LIBTOOL} --tag=CC --mode=link $(CC) -static -o $@ $(MYLDFLAGS) $(LUAC_O) $(LUA_A) $(LIBS)
  
  clean:
  	$(RM) $(ALL_T) $(ALL_O)
