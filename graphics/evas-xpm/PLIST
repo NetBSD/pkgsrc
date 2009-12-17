@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:11 joerg Exp $
-lib/evas/modules/loaders/xpm/${MODULE_ARCH}/module.la
+@comment $NetBSD: PLIST,v 1.3 2009/12/17 00:48:45 joerg Exp $
+lib/evas/modules/loaders/xpm/${LOWER_OPSYS}-${MACHINE_ARCH}-ver-svn-05/module.la
