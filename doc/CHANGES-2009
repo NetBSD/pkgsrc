@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4659 2009/12/17 00:53:04 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4660 2009/12/17 00:58:36 agc Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6284,3 +6284,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/evas-tiff to 0.9.9.063 [joerg 2009-12-17]
 	Updated graphics/evas-xpm to 0.9.9.063 [joerg 2009-12-17]
 	Updated graphics/evas-xrender-x11 to 0.9.9.063 [joerg 2009-12-17]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2009Q4 branch [agc 2009-12-16]
