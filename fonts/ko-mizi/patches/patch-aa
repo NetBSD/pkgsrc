@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/12/17 17:23:36 abs Exp $
+
+--- Makefile.orig	2009-12-17 17:19:10.000000000 +0000
++++ Makefile
+@@ -17,8 +17,8 @@ prepare::
+ 
+ install::
+ 	for i in ${PCFALL}; do \
+-		${BSD_INSTALL_DATA} $$i ${FONTDIR}; \
+-		${GZIP_CMD} ${FONTDIR}/$$i; \
++		${BSD_INSTALL_DATA} $$i ${DESTDIR}${FONTDIR}; \
++		${GZIP_CMD} ${DESTDIR}${FONTDIR}/$$i; \
+ 	done
+ 
+ clean:

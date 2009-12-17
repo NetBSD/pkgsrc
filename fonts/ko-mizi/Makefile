@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/07/25 15:12:27 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2009/12/17 17:23:36 abs Exp $
 #
 
 DISTNAME=	xfntmizi-1.1-2.noarch
@@ -14,6 +14,7 @@ COMMENT=	X11 fonts for KSC 5601 standard
 BUILD_DEPENDS+=	rpm-[0-9]*:../../misc/rpm
 
 CONFLICTS+=	ksc5601fonts-[0-9]*
+PKG_DESTDIR_SUPPORT= user-destdir
 
 USE_X11BASE=		yes
 USE_TOOLS+=		gzip gunzip
@@ -26,6 +27,7 @@ MIZI_PCF=	mzgt16e.pcf mzgt16h1.pcf mzmj16h.pcf mzpg16h.pcf mzsm16h.pcf \
 
 FONTDIR=	${PREFIX}/lib/X11/fonts/local
 FONTS_DIRS.x11=	${FONTDIR}
+INSTALLATION_DIRS+= ${FONTDIR}
 
 do-extract:
 	${MKDIR} ${WRKSRC}
@@ -38,8 +40,5 @@ do-extract:
 
 do-configure:
 	cd ${WRKSRC}; ${MAKE} prepare
-
-pre-install:
-	[ -d ${FONTDIR} ] || ${INSTALL_DATA_DIR} ${FONTDIR}
 
 .include "../../mk/bsd.pkg.mk"
