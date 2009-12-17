@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2007/08/08 19:15:45 joerg Exp $
+$NetBSD: patch-ak,v 1.2 2009/12/17 20:31:37 abs Exp $
 
---- src/Burlap/allocate.h.orig	2007-08-08 18:55:52.000000000 +0000
+--- src/Burlap/allocate.h.orig	2000-02-21 22:44:29.000000000 +0000
 +++ src/Burlap/allocate.h
 @@ -28,7 +28,7 @@
  

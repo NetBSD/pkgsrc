@@ -1,9 +1,9 @@
-$NetBSD: patch-ao,v 1.1 2007/09/29 12:08:25 rillig Exp $
+$NetBSD: patch-ao,v 1.2 2009/12/17 20:31:37 abs Exp $
 
 Since gcc 4, type casts are no longer lvalues.
 
---- src/Burlap/descriptor.h.orig	2000-02-21 23:44:29.000000000 +0100
-+++ src/Burlap/descriptor.h	2007-09-29 14:04:42.000000000 +0200
+--- src/Burlap/descriptor.h.orig	2000-02-21 22:44:29.000000000 +0000
++++ src/Burlap/descriptor.h
 @@ -65,6 +65,7 @@
  
  # define D_NumTypes	(T_External + 1)

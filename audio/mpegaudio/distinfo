@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2006/06/09 15:08:08 minskim Exp $
+$NetBSD: distinfo,v 1.4 2009/12/17 20:00:48 abs Exp $
 
 SHA1 (mpegaudio.tar.Z) = 75a801c4aff290b4e0c7cdb2b07991c630955fbf
 RMD160 (mpegaudio.tar.Z) = 3e40fa6629e0bb88046ac882bbfcc263925f7006
 Size (mpegaudio.tar.Z) = 144707 bytes
-SHA1 (patch-aa) = 7b61fd9effe57086d2d2f669fd5b5235a8854e03
-SHA1 (patch-ab) = 67758b144d384aea66509e508e79112a052b8369
+SHA1 (patch-aa) = ce73eab14c962f143997b73e19a00e3d3e585ec7
+SHA1 (patch-ab) = c901c8b0b0af5232ed4759970b320988bcfe1266
 SHA1 (patch-ac) = 389d7973e317362d5927be96ab3222f011410b40
 SHA1 (patch-ad) = f81fb4c7557d9fe96d9164c0df4367389df6b2e4
 SHA1 (patch-ae) = 65bc956b1cc3a97ca3569c3943760d41b63f10e8

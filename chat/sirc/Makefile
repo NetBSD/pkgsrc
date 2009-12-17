@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/07/27 09:38:06 obache Exp $
+# $NetBSD: Makefile,v 1.21 2009/12/17 20:20:43 abs Exp $
 
 DISTNAME=	sirc-2.211
 PKGREVISION=	2
@@ -50,6 +50,8 @@ DIST_SUBDIR=	sirc
 
 REPLACE_PERL+=	dsirc
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 .include "../../mk/bsd.prefs.mk"
 .if defined(DEFAULT_IRC_SERVER)
 IRC_SERVER=	${DEFAULT_IRC_SERVER}
@@ -57,10 +59,9 @@ IRC_SERVER=	${DEFAULT_IRC_SERVER}
 IRC_SERVER=	us.undernet.org
 .endif
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 lib/sirc/scripts
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/sirc
 	cd ${WRKSRC} ; ( \
 		${ECHO} "y" ; \
 		${ECHO} "" ; \
@@ -69,18 +70,17 @@ do-install:
 		${ECHO} "-O3" ; \
 		${ECHO} "" ; \
 		${ECHO} "${PERL5}" ; \
-		${ECHO} "${PREFIX}/bin" ; \
+		${ECHO} "${DESTDIR}${PREFIX}/bin" ; \
 		${ECHO} "y" ; \
-		${ECHO} "${PREFIX}/lib/sirc" ; \
+		${ECHO} "${DESTDIR}${PREFIX}/lib/sirc" ; \
 		${ECHO} "y" ; \
 		${ECHO} "n" ; \
-		${ECHO} "${PREFIX}/${PKGMANDIR}/man1" ; \
+		${ECHO} "${DESTDIR}${PREFIX}/${PKGMANDIR}/man1" ; \
 		${ECHO} "${IRC_SERVER}" ; \
 		${ECHO} "" ; \
 	) | ./install
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/sirc/scripts
-	@for i in ${SIRC_SCRIPTS} ; do \
+	for i in ${SIRC_SCRIPTS} ; do \
 		${ECHO} installing $$i ; \
-		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$i ${PREFIX}/lib/sirc/scripts/$$i ; done
+		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$i ${DESTDIR}${PREFIX}/lib/sirc/scripts/$$i ; done
 
 .include "../../mk/bsd.pkg.mk"
