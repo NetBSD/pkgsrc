@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/03/24 19:21:19 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/12/17 22:04:17 abs Exp $
 
 DISTNAME=	wmmp3-0.12
 PKGREVISION=	2
@@ -13,15 +13,17 @@ DEPENDS+=	mpg123>=0.59.18:../../audio/mpg123
 
 GNU_CONFIGURE=	yes
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	share/examples
 
 post-patch:
 	${MV} ${WRKSRC}/sample.wmmp3 ${WRKSRC}/sample.wmmp3.orig
-	${SED} -e 's:/usr/local:'${LOCALBASE}':g' \
+	${SED} -e 's:/usr/local:'${PREFIX}':g' \
 		${WRKSRC}/sample.wmmp3.orig > ${WRKSRC}/sample.wmmp3
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/sample.wmmp3 ${PREFIX}/share/examples
+	${INSTALL_DATA} ${WRKSRC}/sample.wmmp3 \
+		${DESTDIR}${PREFIX}/share/examples
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
