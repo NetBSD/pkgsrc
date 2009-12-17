@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/20 19:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2009/12/17 21:27:32 abs Exp $
 
 DISTNAME=	ftnchek-3.2.2
 PKGREVISION=	1
@@ -20,15 +20,16 @@ USE_TOOLS+=	soelim
 CFLAGS+=	-O1
 .endif
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/emacs/site-lisp
+INSTALLATION_DIRS+=	share/doc/ftnchek share/doc/ftnchek/html
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ftnchek
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ftnchek/html
 	cd ${WRKSRC} && ${INSTALL_DATA} FAQ INSTALL LICENSE README 	\
 		ftnchek.man dcl2inc.man macro-doc.txt 			\
-		${PREFIX}/share/doc/ftnchek
-	${INSTALL_DATA} ${WRKSRC}/html/* ${PREFIX}/share/doc/ftnchek/html
+		${DESTDIR}${PREFIX}/share/doc/ftnchek
+	${INSTALL_DATA} ${WRKSRC}/html/* \
+		${DESTDIR}${PREFIX}/share/doc/ftnchek/html
 
 .include "../../mk/bsd.pkg.mk"
