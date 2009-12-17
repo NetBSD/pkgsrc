@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:10:23 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/12/17 22:22:05 abs Exp $
 
 DISTNAME=	cisco-mibs-20050210
 PKGREVISION=	1
@@ -25,18 +25,20 @@ USE_TOOLS+=	gtar
 
 MIBDIR=		${PREFIX}/share/cisco-mibs
 
+INSTALLATION_DIRS+=	share/cisco-mibs
+PKG_DESTDIR_SUPPORT=	user-destdir
 do-install:
-	${INSTALL_DATA_DIR} ${MIBDIR}
-.for DISTFILE in ${DISTFILES}
-	@${ECHO_MSG} -n "Extracting ${DISTFILE} ... "
-	@${GTAR} -xz \
+
+.for distfile in ${DISTFILES}
+	@${ECHO_MSG} -n "Extracting ${distfile} ... "
+	${GTAR} -xz \
 	    --exclude=v1-readme \
 	    --exclude=v2-readme \
-	    -C ${MIBDIR} -f ${DISTDIR}/${DIST_SUBDIR}/${DISTFILE}
+	    -C ${DESTDIR}${MIBDIR} -f ${DISTDIR}/${DIST_SUBDIR}/${distfile}
 	@${ECHO_MSG} "done"
 .endfor
 	@${ECHO_MSG} -n "Fixing file ownerships ... "
-	@${CHOWN} -R ${BINOWN}:${BINGRP} ${MIBDIR}
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${MIBDIR}
 	@${ECHO_MSG} "done"
 
 .include "../../mk/bsd.pkg.mk"
