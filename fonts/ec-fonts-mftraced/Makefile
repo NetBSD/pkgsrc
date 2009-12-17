@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/07/22 09:01:27 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/12/17 18:04:27 abs Exp $
 #
 
 DISTNAME=		ec-fonts-mftraced-1.0.8
@@ -11,6 +11,8 @@ HOMEPAGE=		http://lilypond.org/web/
 COMMENT=		EC PostScript Type1 fonts with TFMs for TeX
 
 MAKE_JOBS_SAFE=		no
+
+# DESTDIR appears to be difficult - build involves modifying files in PREFIX
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
