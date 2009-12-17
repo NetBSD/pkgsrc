@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
+$NetBSD: patch-ab,v 1.6 2009/12/17 18:35:27 abs Exp $
 
---- unix/configure.orig	2001-10-20 02:24:15.000000000 +0200
-+++ unix/configure	2007-10-27 16:52:15.000000000 +0200
-@@ -4719,7 +4719,7 @@
+--- unix/configure.orig	2001-10-20 00:24:15.000000000 +0000
++++ unix/configure
+@@ -4719,7 +4719,7 @@ echo "configure:4710: checking system ve
  	    # results, and the version is kept in special file).
  	
  	    if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    fi
  	    if test "`uname -s`" = "AIX" ; then
  		system=AIX-`uname -v`.`uname -r`
-@@ -4776,6 +4776,7 @@
+@@ -4776,6 +4776,7 @@ fi
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
      EXTRA_CFLAGS=""
      TCL_EXPORT_FILE_SUFFIX=""
      UNSHARED_LIB_SUFFIX=""
-@@ -5114,6 +5115,9 @@
+@@ -5114,6 +5115,9 @@ fi
  	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  	    EXTRA_CFLAGS=""
  	    LDFLAGS=""
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	IRIX-6.*|IRIX64-6.5*)
  	    SHLIB_CFLAGS=""
-@@ -5138,6 +5142,9 @@
+@@ -5138,6 +5142,9 @@ fi
  		esac
  		LDFLAGS="-n32"
  	    fi
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	IRIX64-6.*)
  	    SHLIB_CFLAGS=""
-@@ -5148,6 +5155,9 @@
+@@ -5148,6 +5155,9 @@ fi
  	    DL_LIBS=""
  	    LDFLAGS=""
  	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
@@ -49,7 +49,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	Linux*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -5221,6 +5231,9 @@
+@@ -5221,6 +5231,9 @@ fi
                  EXTRA_CFLAGS="${EXTRA_CFLAGS} -fno-inline"
              fi
  
@@ -59,7 +59,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	GNU*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -5298,6 +5311,9 @@
+@@ -5298,6 +5311,9 @@ fi
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[1-2].*|OpenBSD-*)
@@ -69,7 +69,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    # Not available on all versions:  check for include file.
  	    ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -5330,17 +5346,15 @@
+@@ -5330,17 +5346,15 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -89,7 +89,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  #include "confdefs.h"
  
  #ifdef __ELF__
-@@ -5351,11 +5365,20 @@
+@@ -5351,11 +5365,20 @@ EOF
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
    rm -rf conftest*
@@ -112,7 +112,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
  		
  fi
-@@ -5383,7 +5406,7 @@
+@@ -5383,7 +5406,7 @@ fi
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -121,7 +121,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="ld -Bshareable -x"
-@@ -5401,7 +5424,7 @@
+@@ -5401,7 +5424,7 @@ fi
  	Rhapsody-*|Darwin-*)
  	    SHLIB_CFLAGS="-fno-common"
  	    SHLIB_LD="cc -dynamiclib \${LDFLAGS}"
@@ -130,7 +130,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    SHLIB_LD_LIBS="${LIBS}"
  	    SHLIB_SUFFIX=".dylib"
  	    DL_OBJS="tclLoadDyld.o"
-@@ -5410,6 +5433,9 @@
+@@ -5410,6 +5433,9 @@ fi
  	    LD_SEARCH_FLAGS=""
  	    CFLAGS_OPTIMIZE="-O3"
  	    EXTRA_CFLAGS="-arch ppc -pipe"
@@ -140,7 +140,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	NEXTSTEP-*)
  	    SHLIB_CFLAGS=""
-@@ -5569,6 +5595,9 @@
+@@ -5569,6 +5595,9 @@ EOF
  	    DL_LIBS="-ldl"
  	    LDFLAGS=""
  	    LD_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
@@ -150,7 +150,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	SunOS-5*)
  
-@@ -5616,6 +5645,9 @@
+@@ -5616,6 +5645,9 @@ EOF
  	    else
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -160,7 +160,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -5858,7 +5890,7 @@
+@@ -5858,7 +5890,7 @@ fi
  		    ;;
  		IRIX*)
  		    ;;
@@ -169,7 +169,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  		    ;;
  		Rhapsody-*|Darwin-*)
  		    ;;
-@@ -6016,7 +6048,7 @@
+@@ -6016,7 +6048,7 @@ echo "configure:6008: checking FIONBIO v
  	    # results, and the version is kept in special file).
  	
  	    if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
@@ -178,7 +178,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  	    fi
  	    if test "`uname -s`" = "AIX" ; then
  		system=AIX-`uname -v`.`uname -r`
-@@ -6103,7 +6135,7 @@
+@@ -6103,7 +6135,7 @@ if test "${SHARED_BUILD}" = "1" -a "${SH
      if test "x$DL_OBJS" = "xtclLoadAout.o"; then
  	MAKE_LIB="\${STLIB_LD} \$@ \${OBJS}"
      else
@@ -187,7 +187,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
      fi
  else
      case $system in
-@@ -6141,7 +6173,7 @@
+@@ -6141,7 +6173,7 @@ if test "$SHARED_BUILD" = "0" -o $TCL_NE
          TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
      fi
      TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -196,7 +196,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  else
      TCL_BUILD_EXP_FILE="lib.exp"
      eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -6171,10 +6203,17 @@
+@@ -6171,10 +6203,17 @@ VERSION=${TCL_VERSION}
  #--------------------------------------------------------------------
  
  if test "$prefix" != "$exec_prefix"; then
@@ -216,7 +216,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  
  #--------------------------------------------------------------------
  #       The statements below define various symbols relating to Tcl
-@@ -6262,6 +6301,8 @@
+@@ -6262,6 +6301,8 @@ TCL_SHARED_BUILD=${SHARED_BUILD}
  
  
  
@@ -225,16 +225,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/27 15:16:52 hubertf Exp $
  trap '' 1 2 15
  cat > confcache <<\EOF
  # This file is a shell script that caches the results of configure
-@@ -6361,6 +6402,8 @@
- do
-   case "\$ac_option" in
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
-     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
-   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
-@@ -6437,12 +6480,12 @@
+@@ -6437,12 +6478,12 @@ s%@TCL_DBGX@%$TCL_DBGX%g
  s%@CFG_TCL_SHARED_LIB_SUFFIX@%$CFG_TCL_SHARED_LIB_SUFFIX%g
  s%@CFG_TCL_UNSHARED_LIB_SUFFIX@%$CFG_TCL_UNSHARED_LIB_SUFFIX%g
  s%@CFG_TCL_EXPORT_FILE_SUFFIX@%$CFG_TCL_EXPORT_FILE_SUFFIX%g
