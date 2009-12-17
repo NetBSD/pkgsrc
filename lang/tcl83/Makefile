@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2009/08/20 15:24:59 jwise Exp $
+# $NetBSD: Makefile,v 1.19 2009/12/17 18:35:26 abs Exp $
 #
 
 DISTNAME=		tcl8.3.4
 PKGNAME=		tcl-8.3.4
 PKGREVISION=		2
 CATEGORIES=		lang
-MASTER_SITES=	ftp://ftp.funet.fi/pub/languages/tcl/tcl/tcl8_3/ 
+MASTER_SITES=		ftp://ftp.funet.fi/pub/languages/tcl/tcl/tcl8_3/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.tcltk.com/
@@ -28,6 +28,9 @@ INSTALL_TARGET=		install
 # Add ${VIEWBASE}/lib/tcl to the list of locations for Tcl packages.
 CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 
+PKG_DESTDIR_SUPPORT=  user-destdir
+INSTALLATION_DIRS+= include/tcl/unix include/tcl/generic
+
 .include "../../mk/bsd.prefs.mk"
 
 # NetBSD-1.5.x-m68k platforms apparently have a compiler optimization bug
@@ -45,7 +48,7 @@ CONFIGURE_ARGS+=	--enable-64bit
 # linked to a longer filename.
 #
 post-patch:
-	@cd ${WRKSRC}/unix;						\
+	cd ${WRKSRC}/unix;						\
 	${MV} -f mkLinks mkLinks.tmp;					\
 	${GREP} -v "^exit 0" mkLinks.tmp > mkLinks;			\
 	${CAT} mkLinks.tmp						\
@@ -70,22 +73,19 @@ post-build:
 		${MV} ${WRKSRC}/tclConfig.sh.tmp ${WRKSRC}/unix/tclConfig.sh
 
 post-install:
-	cd ${PREFIX}/bin && ${LN} -s tclsh8.3 tclsh
-	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl
-	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/unix
-	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/unix/tclUnixPort.h ${PREFIX}/include/tcl/unix
-	${INSTALL_DATA} ${WRKSRC}/generic/tcl.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclCompile.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclIO.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclInitScript.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclInt.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclIntDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclIntPlatDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclMath.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclPlatDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclPort.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/generic/tclRegexp.h ${PREFIX}/include/tcl/generic
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s tclsh8.3 tclsh
+	${INSTALL_DATA} ${WRKSRC}/unix/tclUnixPort.h ${DESTDIR}${PREFIX}/include/tcl/unix
+	${INSTALL_DATA} ${WRKSRC}/generic/tcl.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclCompile.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclDecls.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclIO.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclInitScript.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclInt.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclIntDecls.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclIntPlatDecls.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclMath.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclPlatDecls.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclPort.h ${DESTDIR}${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclRegexp.h ${DESTDIR}${PREFIX}/include/tcl/generic
 
 .include "../../mk/bsd.pkg.mk"
