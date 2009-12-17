@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.28 2009/12/16 15:27:33 joerg Exp $
+$NetBSD: manual-libtool.m4,v 1.29 2009/12/17 00:53:52 joerg Exp $
 
 --- libltdl/m4/libtool.m4.orig	2008-09-05 13:54:41.000000000 +0200
 +++ libltdl/m4/libtool.m4
@@ -150,11 +150,11 @@ $NetBSD: manual-libtool.m4,v 1.28 2009/12/16 15:27:33 joerg Exp $
 +      # binaries generally doesn't work
        # Common symbols not allowed in MH_DYLIB files
        _LT_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
-+      _LT_AC_TAGVAR(lt_prog_compiler_static, $1)=''
++      _LT_TAGVAR(lt_prog_compiler_static, $1)=''
 +      ;;
 +    *mint*)
 +      # FreeMiNT does not support shared libraries at all
-+      _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)=
++      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
@@ -177,7 +177,7 @@ $NetBSD: manual-libtool.m4,v 1.28 2009/12/16 15:27:33 joerg Exp $
 +      # binaries generally doesn't work
        # Common symbols not allowed in MH_DYLIB files
        _LT_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
-+      _LT_AC_TAGVAR(lt_prog_compiler_static, $1)=''
++      _LT_TAGVAR(lt_prog_compiler_static, $1)=''
        ;;
  
      hpux*)
@@ -188,7 +188,7 @@ $NetBSD: manual-libtool.m4,v 1.28 2009/12/16 15:27:33 joerg Exp $
 +    mint*)
 +      # Just because we use GCC doesn't mean we suddenly get shared libraries
 +      # on systems that don't support them.
-+      _LT_AC_TAGVAR(lt_prog_compiler_can_build_shared, $1)=no
++      _LT_TAGVAR(lt_prog_compiler_can_build_shared, $1)=no
 +      enable_shared=no
 +      ;;
 +
@@ -200,7 +200,7 @@ $NetBSD: manual-libtool.m4,v 1.28 2009/12/16 15:27:33 joerg Exp $
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
 +  mint*)
-+    _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)=
++    _LT_TAGVAR(lt_prog_compiler_pic, $1)=
 +    ;;
    *djgpp*)
      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
@@ -218,8 +218,8 @@ $NetBSD: manual-libtool.m4,v 1.28 2009/12/16 15:27:33 joerg Exp $
        ;;
  
      *nto* | *qnx*)
-+      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      _LT_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      _LT_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
        ;;
  
      openbsd*)
