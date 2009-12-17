@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/12/11 16:32:31 taca Exp $
+# $NetBSD: Makefile,v 1.12 2009/12/17 00:20:20 taca Exp $
 #
 
 DISTNAME=	opengoo_1.6
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${PKGBASE}-20091207
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.opengoo.org/
+HOMEPAGE=	http://fengoffice.com/web/community/community_index.php
 COMMENT=	Easy to use Open Source Web Office
 LICENSE=	gnu-gpl-v3
 
