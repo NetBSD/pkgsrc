@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.546 2009/12/17 00:48:43 joerg Exp $
+# $NetBSD: Makefile,v 1.547 2009/12/17 11:33:01 jnemeth Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -389,6 +389,7 @@ SUBDIR+=	tuxpaint-config
 SUBDIR+=	tuxpaint-stamps
 SUBDIR+=	ucview
 SUBDIR+=	unicap
+SUBDIR+=	uniconvertor
 SUBDIR+=	urt
 SUBDIR+=	vcg
 SUBDIR+=	veusz
