@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2006/02/22 16:13:48 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2009/12/17 21:49:22 abs Exp $
 
---- network.c.orig	2006-02-22 16:05:33.000000000 +0000
+--- network.c.orig	2005-11-07 00:38:22.000000000 +0000
 +++ network.c
 @@ -89,7 +89,7 @@ char *IFAddr(char *IFName, int dest)
   #define AddrOpen   popen("/usr/ucb/netstat -nr", "r")
