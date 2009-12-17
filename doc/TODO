@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8802 2009/12/17 14:49:19 he Exp $
+$NetBSD: TODO,v 1.8803 2009/12/17 21:50:07 abs Exp $
 
 Suggested new packages
 ======================
@@ -1426,7 +1426,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xhippo-3.5
 	o xineramaproto-1.2
 	o xinit-1.2.0
-	o xisp-2.7p4
 	o xjman-0.7
 	o xkbcomp-1.1.1
 	o xkbevd-1.1.0 [unpackaged]
