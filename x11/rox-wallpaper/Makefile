@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/02/09 22:56:28 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/17 17:40:29 abs Exp $
 #
 
 DISTNAME=	wallpaper-2.0
@@ -22,6 +22,7 @@ NO_BUILD=	yes
 PYTHON_PATCH_SCRIPTS=	AppRun
 
 INSTALLATION_DIRS=	share/rox/Wallpaper
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		lib
 SUBST_MESSAGE.lib=	Fixing hardcoded paths for ROX-Lib.
@@ -32,10 +33,10 @@ SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 USE_TOOLS+=	pax
 
 post-patch:
-	@${FIND} ${WRKSRC} -name 'CVS' -print | ${XARGS} ${RM} -rf
+	${FIND} ${WRKSRC} -name 'CVS' -print | ${XARGS} ${RM} -rf
 
 do-install:
-	cd ${WRKSRC} && pax -rw . ${PREFIX}/share/rox/Wallpaper
+	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/share/rox/Wallpaper
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
