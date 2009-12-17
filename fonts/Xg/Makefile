@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:29:38 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2009/12/17 17:31:11 abs Exp $
 
 DISTNAME=	libXg.utf.fonts
 PKGNAME=	libXgFonts-1.0
@@ -12,6 +12,7 @@ COMMENT=	These are the UNICODE fonts for use with 9term and sam
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 USE_X11BASE=	yes
+PKG_DESTDIR_SUPPORT= user-destdir
 
 USE_TOOLS+=	bdftopcf
 FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/Xg
