@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1 2009/12/17 20:56:46 abs Exp $
+
+--- src/tools/Makefile.orig	2008-01-10 22:31:37.000000000 +0000
++++ src/tools/Makefile
+@@ -30,10 +30,10 @@ clean:
+ spotless: clean
+ 
+ install: anopesmtp db-merger epona2anope
+-	test -d ${BINDEST} || mkdir ${BINDEST}
+-	test -d $(BINDEST)/tools || mkdir $(BINDEST)/tools
+-	$(INSTALL) anopesmtp $(BINDEST)/tools/anopesmtp
+-	$(INSTALL) db-merger $(BINDEST)/tools/db-merger
+-	$(INSTALL) epona2anope $(BINDEST)/tools/epona2anope
++	test -d ${DESTDIR}/${BINDEST} || mkdir ${DESTDIR}/${BINDEST}
++	test -d ${DESTDIR}/$(BINDEST)/tools || mkdir ${DESTDIR}/$(BINDEST)/tools
++	$(INSTALL) anopesmtp ${DESTDIR}/$(BINDEST)/tools/anopesmtp
++	$(INSTALL) db-merger ${DESTDIR}/$(BINDEST)/tools/db-merger
++	$(INSTALL) epona2anope ${DESTDIR}/$(BINDEST)/tools/epona2anope
+ 
+ DUMMY:

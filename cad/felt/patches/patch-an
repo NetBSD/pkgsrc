@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.1 2007/08/08 19:15:46 joerg Exp $
+$NetBSD: patch-an,v 1.2 2009/12/17 20:31:37 abs Exp $
 
---- src/Velvet/error.c.orig	2007-08-08 18:52:21.000000000 +0000
+--- src/Velvet/error.c.orig	2000-02-21 22:44:26.000000000 +0000
 +++ src/Velvet/error.c
 @@ -25,7 +25,7 @@
  
