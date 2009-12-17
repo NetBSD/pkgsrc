@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2003/06/29 22:24:33 jtb Exp $
+$NetBSD: patch-aa,v 1.7 2009/12/17 21:27:32 abs Exp $
 
---- configure.orig
+--- configure.orig	2003-04-01 03:19:35.000000000 +0000
 +++ configure
-@@ -5816,6 +5806,7 @@
+@@ -5816,6 +5816,7 @@ case $host_os in
      if test -n "$GCC"; then
        OPT="-O2";
      fi;;
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.6 2003/06/29 22:24:33 jtb Exp $
    next*)
      OPT="-O2";;
  
-@@ -5931,7 +5922,7 @@
+@@ -5931,7 +5932,7 @@ else
  fi
  
  
