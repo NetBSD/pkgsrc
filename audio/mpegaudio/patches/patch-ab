@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/12 00:54:04 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2009/12/17 20:00:48 abs Exp $
 
---- common.h.orig	Wed Jan  5 02:42:00 1994
+--- common.h.orig	1994-01-05 01:42:00.000000000 +0000
 +++ common.h
-@@ -73,7 +73,7 @@
+@@ -73,7 +73,7 @@ common.h
  #endif
  
  #ifdef  UNIX
