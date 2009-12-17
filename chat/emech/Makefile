@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/22 04:53:38 manu Exp $
+# $NetBSD: Makefile,v 1.8 2009/12/17 21:34:19 abs Exp $
 #
 
 DISTNAME=	emech-3.0.2
@@ -14,11 +14,12 @@ HAS_CONFIGURE=			YES
 # when given no input.
 CONFIGURE_ARGS+=		< /dev/null
 BUILD_TARGET=			mech
-AUTO_MKDIRS=			yes
+
+PKG_DESTDIR_SUPPORT= user-destdir
+INSTALLATION_DIRS+= bin share/examples/emech
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/energymech ${PREFIX}/bin/mech
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/emech
-	${INSTALL_DATA} ${WRKSRC}/sample.conf ${PREFIX}/share/examples/emech/
+	${INSTALL_PROGRAM} ${WRKSRC}/energymech ${DESTDIR}${PREFIX}/bin/mech
+	${INSTALL_DATA} ${WRKSRC}/sample.conf ${DESTDIR}${PREFIX}/share/examples/emech/
 
 .include "../../mk/bsd.pkg.mk"
