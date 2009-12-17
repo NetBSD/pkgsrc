@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
+$NetBSD: patch-ab,v 1.66 2009/12/17 00:53:52 joerg Exp $
 
---- configure.orig	2009-12-16 15:15:21.000000000 +0000
+--- configure.orig	2009-12-17 01:29:54.000000000 +0100
 +++ configure
 @@ -5293,6 +5293,13 @@ else
      lt_cv_sys_max_cmd_len=8192;
@@ -46,7 +46,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
 +      # binaries generally doesn't work
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic='-fno-common'
-+      =''
++      lt_prog_compiler_static=''
        ;;
  
      hpux*)
@@ -57,7 +57,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
 +    mint*)
 +      # Just because we use GCC doesn't mean we suddenly get shared libraries
 +      # on systems that don't support them.
-+      =no
++      lt_prog_compiler_can_build_shared=no
 +      enable_shared=no
 +      ;;
 +
@@ -69,7 +69,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
 +  mint*)
-+    =
++    lt_prog_compiler_pic=
 +    ;;
    *djgpp*)
      lt_prog_compiler_pic=
@@ -87,8 +87,8 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
        ;;
  
      *nto* | *qnx*)
-+      ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+      ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
        ;;
  
      openbsd*)
@@ -282,11 +282,11 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
 +      # binaries generally doesn't work
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_CXX='-fno-common'
-+      =''
++      lt_prog_compiler_static_CXX=''
 +      ;;
 +    *mint*)
 +      # FreeMiNT does not support shared libraries at all
-+      =
++      lt_prog_compiler_pic_CXX=
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
@@ -305,7 +305,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
 +  mint*)
-+    =
++    lt_prog_compiler_pic_CXX=
 +    ;;
    *djgpp*)
      lt_prog_compiler_pic_CXX=
@@ -435,7 +435,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
 +      # binaries generally doesn't work
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_F77='-fno-common'
-+      =''
++      lt_prog_compiler_static_F77=''
        ;;
  
      hpux*)
@@ -446,7 +446,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
 +    mint*)
 +      # Just because we use GCC doesn't mean we suddenly get shared libraries
 +      # on systems that don't support them.
-+      =no
++      lt_prog_compiler_can_build_shared_F77=no
 +      enable_shared=no
 +      ;;
 +
@@ -458,7 +458,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
 +  mint*)
-+    =
++    lt_prog_compiler_pic_F77=
 +    ;;
    *djgpp*)
      lt_prog_compiler_pic_F77=
@@ -476,8 +476,8 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
        ;;
  
      *nto* | *qnx*)
-+      ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+      ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
        ;;
  
      openbsd*)
@@ -606,7 +606,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
 +      # binaries generally doesn't work
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_FC='-fno-common'
-+      =''
++      lt_prog_compiler_static_FC=''
        ;;
  
      hpux*)
@@ -617,7 +617,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
 +    mint*)
 +      # Just because we use GCC doesn't mean we suddenly get shared libraries
 +      # on systems that don't support them.
-+      =no
++      lt_prog_compiler_can_build_shared_FC=no
 +      enable_shared=no
 +      ;;
 +
@@ -629,7 +629,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
 +  mint*)
-+    =
++    lt_prog_compiler_pic_FC=
 +    ;;
    *djgpp*)
      lt_prog_compiler_pic_FC=
@@ -647,8 +647,8 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
        ;;
  
      *nto* | *qnx*)
-+      ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+      ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      archive_cmds_FC='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_FC='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
        ;;
  
      openbsd*)
@@ -777,7 +777,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
 +      # binaries generally doesn't work
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_GCJ='-fno-common'
-+      =''
++      lt_prog_compiler_static_GCJ=''
        ;;
  
      hpux*)
@@ -788,7 +788,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
 +    mint*)
 +      # Just because we use GCC doesn't mean we suddenly get shared libraries
 +      # on systems that don't support them.
-+      =no
++      lt_prog_compiler_can_build_shared_GCJ=no
 +      enable_shared=no
 +      ;;
 +
@@ -800,7 +800,7 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
 +  mint*)
-+    =
++    lt_prog_compiler_pic_GCJ=
 +    ;;
    *djgpp*)
      lt_prog_compiler_pic_GCJ=
@@ -818,8 +818,8 @@ $NetBSD: patch-ab,v 1.65 2009/12/16 15:27:33 joerg Exp $
        ;;
  
      *nto* | *qnx*)
-+      ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+      ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
        ;;
  
      openbsd*)
