@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/06/09 15:58:39 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2009/12/17 21:04:41 abs Exp $
 
 DISTNAME=		doc++-3.4.10
 PKGREVISION=	2
@@ -14,12 +14,14 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
+INSTALLATION_DIRS+= share/doc/doc++
+PKG_DESTDIR_SUPPORT= user-destdir
+
 #post-extract:
 #	${RM} ${WRKSRC}/src/getopt.h
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/doc++
-	${INSTALL_DATA} ${WRKSRC}/doc/manual/html/* ${PREFIX}/share/doc/doc++
+	${INSTALL_DATA} ${WRKSRC}/doc/manual/html/* ${DESTDIR}${PREFIX}/share/doc/doc++
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
