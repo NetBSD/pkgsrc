@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/06/30 00:07:20 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/12/17 22:39:56 abs Exp $
 
 DISTNAME=	dgd-1.2p4
 PKGNAME=	dgd-1.2.0.4
@@ -25,20 +25,18 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	mud.dgd
 SUBST_SED.paths=	-e 's,/home/dworkin/,${PREFIX}/libdata/,g'
 
-INSTALLATION_DIRS=	libexec
+INSTALLATION_DIRS=	libexec share/doc/dgd share/examples/dgd libdata/dgd/tmp
+PKG_DESTDIR_SUPPORT=	destdir
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/a.out ${PREFIX}/libexec/dgd
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dgd
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dgd
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/dgd/tmp
+	${INSTALL_PROGRAM} ${WRKSRC}/src/a.out ${DESTDIR}${PREFIX}/libexec/dgd
 	cd ${WRKDIR}/dgd && \
-	${INSTALL_DATA} Copyright Credits README ${PREFIX}/share/doc/dgd
+	${INSTALL_DATA} Copyright Credits README ${DESTDIR}${PREFIX}/share/doc/dgd
 	${GTAR} cCf ${WRKDIR}/dgd/doc - . | ${GTAR} xCf \
-		${PREFIX}/share/doc/dgd -
-	${GTAR} cCf ${WRKDIR}/dgd - mud | ${GTAR} xCf ${PREFIX}/libdata/dgd -
-	${CHOWN} -R ${BINOWN}:${BINGRP}  ${PREFIX}/libdata/dgd \
-		${PREFIX}/share/doc/dgd
-	${INSTALL_DATA} ${WRKSRC}/mud.dgd ${PREFIX}/share/examples/dgd
+		${DESTDIR}${PREFIX}/share/doc/dgd -
+	${GTAR} cCf ${WRKDIR}/dgd - mud | ${GTAR} xCf ${DESTDIR}${PREFIX}/libdata/dgd -
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/libdata/dgd \
+		${DESTDIR}${PREFIX}/share/doc/dgd
+	${INSTALL_DATA} ${WRKSRC}/mud.dgd ${DESTDIR}${PREFIX}/share/examples/dgd
 
 .include "../../mk/bsd.pkg.mk"
