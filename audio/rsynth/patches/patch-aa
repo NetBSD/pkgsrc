@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2001/12/22 04:11:40 fredb Exp $
+$NetBSD: patch-aa,v 1.4 2009/12/17 22:08:09 abs Exp $
 
---- Makefile.in.orig	Tue Nov  8 07:30:52 1994
+--- Makefile.in.orig	1994-11-08 13:30:52.000000000 +0000
 +++ Makefile.in
-@@ -5,7 +5,7 @@
+@@ -5,7 +5,7 @@ SRCDIR       = @srcdir@
  CC           = @CC@
  PREFIX       = @prefix@
  BIN_DIR      = $(PREFIX)/bin
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2001/12/22 04:11:40 fredb Exp $
  LDLIBS       = @LIBS@
  XLIBS        = @XLIBS@
  CFLAGS       = @CFLAGS@
-@@ -58,7 +58,7 @@
+@@ -58,18 +58,18 @@ distclean : clean
  hplay.o : hplay.c proto.h getargs.h hplay.h 
  
  aDict.db : $(ADICT) mkdictdb
@@ -20,3 +20,17 @@ $NetBSD: patch-aa,v 1.3 2001/12/22 04:11:40 fredb Exp $
  
  bDict.db : $(BDICT) mkdictdb
  	mkdictdb $(BDICT) bDict.db  
+ 
+ install  : $(PROGS) $(DICTS)
+ 	for f in $(PROGS); do \
+-	$(INSTALL_PROG) $$f $(BIN_DIR); \
++	$(INSTALL_PROG) $$f $(DESTDIR)$(BIN_DIR); \
+ 	done
+-	$(INSTALL) -d $(LIB_DIR)
++	$(INSTALL) -d $(DESTDIR)$(LIB_DIR)
+ 	for f in $(DICTS); do \
+-	$(INSTALL_DATA) $$f $(LIB_DIR); \
++	$(INSTALL_DATA) $$f $(DESTDIR)$(LIB_DIR); \
+ 	done
+ 
+ @make_dist@
