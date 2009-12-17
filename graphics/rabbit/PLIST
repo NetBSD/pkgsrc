@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:59:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/12/17 12:03:59 obache Exp $
 bin/rabbirc
 bin/rabbit
 bin/rabbit-command
@@ -272,6 +272,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/image/image.rb
 ${RUBY_VENDORLIB}/rabbit/theme/image/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/lightning-clear-blue/lightning-clear-blue.rb
 ${RUBY_VENDORLIB}/rabbit/theme/lightning-clear-blue/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/lightning-monochrome/lightning-monochrome.rb
+${RUBY_VENDORLIB}/rabbit/theme/lightning-monochrome/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/lightning-rabbit/lightning-rabbit.rb
 ${RUBY_VENDORLIB}/rabbit/theme/lightning-rabbit/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/lightning-simple/lightning-simple.rb
@@ -394,6 +396,7 @@ share/rabbit/image/rabbit-images/lavie-icon.png
 share/rabbit/image/rabbit-images/lavie-with-logo.png
 share/rabbit/image/rabbit-images/lavie.png
 share/rabbit/image/rabbit-images/mini-alice.png
+share/rabbit/image/rabbit-images/mini-butler-rabbit.png
 share/rabbit/image/rabbit-images/mini-horizontal-bar.png
 share/rabbit/image/rabbit-images/mini-kame-taro.png
 share/rabbit/image/rabbit-images/mini-tanu-kitaro.png
