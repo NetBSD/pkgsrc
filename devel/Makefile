@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1271 2009/12/07 12:12:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.1272 2009/12/17 11:29:38 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1044,6 +1044,7 @@ SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
 SUBDIR+=	py-urwid
 SUBDIR+=	py-usb
+SUBDIR+=	py-windbg
 SUBDIR+=	py-xdg
 SUBDIR+=	py-zconfig
 SUBDIR+=	python-mode
