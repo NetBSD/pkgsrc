@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/12/17 21:43:17 abs Exp $
+
+--- build/Makefile.in.orig	1998-08-12 14:31:56.000000000 +0000
++++ build/Makefile.in
+@@ -29,8 +29,8 @@ depend:
+ 	mkdep ${CFLAGS:M-[ID]*} $(srcdir)/src/*.c
+ 
+ install:
+-	[ -d $(bindir) ] || (mkdir $(bindir))
+-	$(INSTALL) -s -o uucp -g bin -m 4555 snooper $(bindir)
++	[ -d $(DESTDIR)$(bindir) ] || (mkdir $(DESTDIR)$(bindir))
++	$(INSTALL) -s -o uucp -g bin -m 4555 snooper $(DESTDIR)$(bindir)
+ 
+ clean:
+ 	-rm -f *.o *.core

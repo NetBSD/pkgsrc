@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/11/03 20:01:20 rillig Exp $
+$NetBSD: patch-aa,v 1.3 2009/12/17 21:43:17 abs Exp $
 
---- src/scrn.c.orig	1998-08-12 16:32:02.000000000 +0200
-+++ src/scrn.c	2004-06-30 01:38:04.000000000 +0200
-@@ -33,7 +33,7 @@
+--- src/scrn.c.orig	1998-08-12 14:32:02.000000000 +0000
++++ src/scrn.c
+@@ -33,7 +33,7 @@ hdl_sigwinch(sig)
  #ifdef TIOCGWINSZ
  			struct winsize win;
  
