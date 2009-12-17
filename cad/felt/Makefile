@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/05/20 00:58:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2009/12/17 20:31:37 abs Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
@@ -15,26 +15,27 @@ EXTRACT_ONLY=		felt-3.05.src.tar.gz
 
 WRKSRC=			${WRKDIR}/FElt-3.05
 USE_X11BASE=		yes
+USE_TOOLS+=		gzcat
 XAW_TYPE?=		3d
 
 MAKE_ENV+=		CCOPTS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LDOPTS=${LDFLAGS:M*:Q}
 MAKE_ENV+=		SH=${SH:Q}
 
-USE_GNU_READLINE=	# uses remove_history() and history_list()
+USE_GNU_READLINE=	YES # uses remove_history() and history_list()
 
-INSTALLATION_DIRS=	lib/X11/app-defaults share/doc/felt share/examples/felt
+INSTALLATION_DIRS+=	lib/X11/app-defaults share/doc/felt share/examples/felt
+INSTALLATION_DIRS+=	share/examples/felt share/doc/felt
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-extract:
-	@${GZCAT} ${DISTDIR}/felt-3.05.ps.gz > ${WRKSRC}/felt.ps
+	${GZCAT} ${DISTDIR}/felt-3.05.ps.gz > ${WRKSRC}/felt.ps
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/felt
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/felt
-	${INSTALL_DATA} ${WRKSRC}/felt.ps ${PREFIX}/share/doc/felt
+	${INSTALL_DATA} ${WRKSRC}/felt.ps ${DESTDIR}${PREFIX}/share/doc/felt
 	cd ${WRKSRC} && ${INSTALL_DATA} FAQ FAQ.html README README.old	\
-		COPYING CHANGELOG TODO ${PREFIX}/share/doc/felt
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/felt
+		COPYING CHANGELOG TODO ${DESTDIR}${PREFIX}/share/doc/felt
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/share/examples/felt
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"

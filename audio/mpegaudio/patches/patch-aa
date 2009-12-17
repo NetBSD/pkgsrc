@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/12 00:54:04 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/12/17 20:00:48 abs Exp $
 
---- Makefile.orig	Wed Jan  5 02:47:50 1994
+--- Makefile.orig	1994-01-05 01:47:50.000000000 +0000
 +++ Makefile
 @@ -1,10 +1,21 @@
  ALL : musicin musicout
@@ -23,8 +23,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/12 00:54:04 wiz Exp $
 +	rm -f *.core *.o musicin musicout
 +
 +install:
-+	${BSD_INSTALL_PROGRAM} musicin ${PREFIX}/bin/mpeg_musicin
-+	${BSD_INSTALL_PROGRAM} musicout ${PREFIX}/bin/mpeg_musicout
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/lib/mpegaudio/tables
-+	${BSD_INSTALL_DATA} tables/* ${PREFIX}/lib/mpegaudio/tables/
++	${BSD_INSTALL_PROGRAM} musicin ${DESTDIR}${PREFIX}/bin/mpeg_musicin
++	${BSD_INSTALL_PROGRAM} musicout ${DESTDIR}${PREFIX}/bin/mpeg_musicout
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/mpegaudio/tables
++	${BSD_INSTALL_DATA} tables/* ${DESTDIR}${PREFIX}/lib/mpegaudio/tables/
 +	

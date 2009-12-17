@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/17 18:00:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/17 20:56:46 abs Exp $
 
 DISTNAME=	anope-1.7.21
 CATEGORIES=	chat
@@ -19,6 +19,8 @@ FILES_SUBST+=	ANOPE_GROUP=${ANOPE_GROUP:Q}
 
 PKG_USERS_VARS+=	ANOPE_USER
 PKG_GROUPS_VARS+=	ANOPE_GROUP
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -60,19 +62,19 @@ SUBST_MESSAGE.utils=	Fixing hardcoded utilities.
 
 .include "../../mk/pthread.buildlink3.mk"
 
+INSTALLATION_DIRS+=	share/doc/anope share/examples/anope lib/anope/modules
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/anope
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/anope
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${PREFIX}/share/doc/anope
-	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/anoperc
-	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/listchans
-	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/listnicks
-	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/services
-	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/modules/*.so
-	${CHMOD} ${SHAREMODE} ${PREFIX}/lib/anope/languages/*
-	${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope
-	${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope/backups
-	${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope/logs
-	${INSTALL_DATA} ${WRKSRC}/data/* ${PREFIX}/share/examples/anope
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${PREFIX}/share/doc/anope
+	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/anope/anoperc
+	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/anope/listchans
+	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/anope/listnicks
+	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/anope/services
+	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/lib/anope/modules/*.so
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/lib/anope/languages/*
+	${CHOWN} ${ANOPE_USER} ${DESTDIR}${PREFIX}/lib/anope
+	${CHOWN} ${ANOPE_USER} ${DESTDIR}${PREFIX}/lib/anope/backups
+	${CHOWN} ${ANOPE_USER} ${DESTDIR}${PREFIX}/lib/anope/logs
+	${INSTALL_DATA} ${WRKSRC}/data/* ${DESTDIR}${PREFIX}/share/examples/anope
 
 .include "../../mk/bsd.pkg.mk"
