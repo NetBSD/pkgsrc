@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/10/18 20:07:54 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/17 22:33:35 abs Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.5-Source
 PKGNAME=	DarwinStreamingServer-5.5.5
@@ -137,36 +137,38 @@ SUBST_SED.conf+=	-e "s|/usr/sbin/QuickTime|${PREFIX}/sbin/Darwin|"
 post-extract:
 	rm -rf ${WRKSRC}/*PackageMetaData
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/DarwinStreamingServer ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/PlaylistBroadcaster.tproj/PlaylistBroadcaster ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/MP3Broadcaster/MP3Broadcaster ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/qtpasswd.tproj/qtpasswd ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/APIModules/QTSSHomeDirectoryModule/QTSSHomeDirectoryModule ${PREFIX}/libexec/StreamingServerModules
-	${INSTALL_PROGRAM} ${WRKSRC}/APIModules/QTSSRefMovieModule/QTSSRefMovieModule ${PREFIX}/libexec/StreamingServerModules
-	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTBroadcaster.tproj/QTBroadcaster ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTFileTest.tproj/QTFileTest ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTRTPFileTest.tproj/QTRTPFileTest ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTRTPGen.tproj/QTRTPGen ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTSampleLister.tproj/QTSampleLister ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTSDPGen.tproj/QTSDPGen ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTTrackInfo.tproj/QTTrackInfo ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/APIModules/QTSSHomeDirectoryModule/createuserstreamingdir ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/streamingserver.xml-POSIX ${PREFIX}/share/examples/streaming
-	${INSTALL_DATA} ${WRKSRC}/relayconfig.xml-Sample ${PREFIX}/share/examples/streaming
-	${INSTALL_DATA} ${WRKSRC}/qtusers ${PREFIX}/share/examples/streaming
-	${INSTALL_DATA} ${WRKSRC}/qtgroups ${PREFIX}/share/examples/streaming
-	${INSTALL_DATA}	${WRKSRC}/Documentation/readme.txt ${PREFIX}/share/streaming
-	${INSTALL_DATA}	${WRKSRC}/Documentation/3rdPartyAcknowledgements.rtf ${PREFIX}/share/streaming
-	${INSTALL_SCRIPT} ${WRKSRC}/WebAdmin/src/streamingadminserver.pl ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/*.pl ${PREFIX}/share/streaming/AdminHtml
-	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/*.cgi ${PREFIX}/share/streaming/AdminHtml
-	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/*.html ${PREFIX}/share/streaming/AdminHtml
-	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/images/*.gif ${PREFIX}/share/streaming/AdminHtml/images
-	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/includes/*.js ${PREFIX}/share/streaming/AdminHtml/includes
-	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/html_en/messages ${PREFIX}/share/streaming/AdminHtml/html_en
-	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/html_en/genres ${PREFIX}/share/streaming/AdminHtml/html_en
-	${INSTALL_DATA} ${WRKSRC}/sample* ${PREFIX}/share/streaming/movies
+	${INSTALL_PROGRAM} ${WRKSRC}/DarwinStreamingServer ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/PlaylistBroadcaster.tproj/PlaylistBroadcaster ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/MP3Broadcaster/MP3Broadcaster ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/qtpasswd.tproj/qtpasswd ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/APIModules/QTSSHomeDirectoryModule/QTSSHomeDirectoryModule ${DESTDIR}${PREFIX}/libexec/StreamingServerModules
+	${INSTALL_PROGRAM} ${WRKSRC}/APIModules/QTSSRefMovieModule/QTSSRefMovieModule ${DESTDIR}${PREFIX}/libexec/StreamingServerModules
+	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTBroadcaster.tproj/QTBroadcaster ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTFileTest.tproj/QTFileTest ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTRTPFileTest.tproj/QTRTPFileTest ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTRTPGen.tproj/QTRTPGen ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTSampleLister.tproj/QTSampleLister ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTSDPGen.tproj/QTSDPGen ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/QTFileTools/QTTrackInfo.tproj/QTTrackInfo ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/APIModules/QTSSHomeDirectoryModule/createuserstreamingdir ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/streamingserver.xml-POSIX ${DESTDIR}${PREFIX}/share/examples/streaming
+	${INSTALL_DATA} ${WRKSRC}/relayconfig.xml-Sample ${DESTDIR}${PREFIX}/share/examples/streaming
+	${INSTALL_DATA} ${WRKSRC}/qtusers ${DESTDIR}${PREFIX}/share/examples/streaming
+	${INSTALL_DATA} ${WRKSRC}/qtgroups ${DESTDIR}${PREFIX}/share/examples/streaming
+	${INSTALL_DATA}	${WRKSRC}/Documentation/readme.txt ${DESTDIR}${PREFIX}/share/streaming
+	${INSTALL_DATA}	${WRKSRC}/Documentation/3rdPartyAcknowledgements.rtf ${DESTDIR}${PREFIX}/share/streaming
+	${INSTALL_SCRIPT} ${WRKSRC}/WebAdmin/src/streamingadminserver.pl ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/*.pl ${DESTDIR}${PREFIX}/share/streaming/AdminHtml
+	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/*.cgi ${DESTDIR}${PREFIX}/share/streaming/AdminHtml
+	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/*.html ${DESTDIR}${PREFIX}/share/streaming/AdminHtml
+	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/images/*.gif ${DESTDIR}${PREFIX}/share/streaming/AdminHtml/images
+	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/includes/*.js ${DESTDIR}${PREFIX}/share/streaming/AdminHtml/includes
+	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/html_en/messages ${DESTDIR}${PREFIX}/share/streaming/AdminHtml/html_en
+	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/html_en/genres ${DESTDIR}${PREFIX}/share/streaming/AdminHtml/html_en
+	${INSTALL_DATA} ${WRKSRC}/sample* ${DESTDIR}${PREFIX}/share/streaming/movies
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
