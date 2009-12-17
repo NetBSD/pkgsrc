@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/10 10:33:38 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/12/17 22:14:27 abs Exp $
 #
 
 DISTNAME=		flodo-v4
@@ -16,6 +16,7 @@ BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libpcap}/include
 LDFLAGS+=		-L${BUILDLINK_PREFIX.libpcap}/lib
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 CONFLICTS+=		flodo-4-[0-9]*
@@ -24,8 +25,8 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o flodo flodo.c hash.c local_mac.c -lpcap
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/flodo ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/flodo.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/flodo ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/flodo.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
