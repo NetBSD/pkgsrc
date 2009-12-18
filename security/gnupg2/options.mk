@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2009/12/15 20:10:41 drochner Exp $
+# $NetBSD: options.mk,v 1.4 2009/12/18 17:49:51 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
-PKG_SUPPORTED_OPTIONS=	gpgsm idea
+PKG_SUPPORTED_OPTIONS=	gpgsm
 PKG_SUGGESTED_OPTIONS=	gpgsm
 
 .include "../../mk/bsd.prefs.mk"
@@ -23,17 +23,4 @@ CONFIGURE_ARGS+=	--enable-gpgsm
 CONFIGURE_ARGS+=	--with-dirmngr-pgm=${BUILDLINK_PREFIX.dirmngr}/bin/dirmngr
 PLIST_SRC+=     ${.CURDIR}/PLIST.gpgsm
 .  include "../../security/dirmngr/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Midea)
-LICENSE=        idea-license
-RESTRICTED=     Commercial distribution is claimed to require a license.
-NO_SRC_ON_CDROM=        ${RESTRICTED}
-NO_BIN_ON_CDROM=        ${RESTRICTED}
-
-PATCH_SITES=		http://www.kfwebs.com/
-PATCHFILES+=		gnupg-2.0.4-idea.patch
-PATCH_DIST_STRIP=	-p1
-
-PKGSRC_MAKE_ENV+=	PKG_OPTIONS.libgcrypt+=idea
 .endif
