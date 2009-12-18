@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.6 2002/07/06 20:15:52 tv Exp $
+$NetBSD: patch-ai,v 1.7 2009/12/18 01:09:23 abs Exp $
 
---- fidogate.conf.dist.orig	Thu Feb 22 09:58:02 2001
-+++ fidogate.conf.dist	Thu Feb 22 09:58:13 2001
+--- fidogate.conf.dist.orig	2009-12-17 21:51:33.000000000 +0000
++++ fidogate.conf.dist
 @@ -15,30 +15,30 @@
  ##############################################################################
  
@@ -55,4 +55,3 @@ $NetBSD: patch-ai,v 1.6 2002/07/06 20:15:52 tv Exp $
  
  # facility, level when using syslog support (LOGFILE = "syslog")
  # NOT YET SUPPORTED by FIDOGATE C programs (used by Perl scripts)
- 
