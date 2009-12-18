@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:18 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2009/12/18 00:39:50 abs Exp $
 #
 
 DISTNAME=	dhisd-5.1
@@ -9,33 +9,32 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dhis.org/
 COMMENT=	DynDNS server
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/examples/dhisd share/doc/dhisd
+PKG_DESTDIR_SUPPORT=	destdir
 
 do-install:
-		${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dhisd
 		${INSTALL_DATA} \
 			${WRKSRC}/*db.sample \
-			${PREFIX}/share/examples/dhisd
-		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dhisd
+			${DESTDIR}${PREFIX}/share/examples/dhisd
 		${INSTALL_DATA} \
 			${WRKSRC}/CONTRIBUTORS  \
 			${WRKSRC}/COPYRIGHT  \
 			${WRKSRC}/INSTALL  \
 			${WRKSRC}/MODULES  \
 			${WRKSRC}/README  \
-			${PREFIX}/share/doc/dhisd
+			${DESTDIR}${PREFIX}/share/doc/dhisd
 		${INSTALL_PROGRAM} \
 			${WRKSRC}/dhisd \
-			${PREFIX}/bin
+			${DESTDIR}${PREFIX}/bin
 		${INSTALL_PROGRAM} \
 			${WRKSRC}/genkeys \
-			${PREFIX}/bin/dhisd-genkeys
+			${DESTDIR}${PREFIX}/bin/dhisd-genkeys
 		${CHOWN} ${ROOT_USER} \
-			${PREFIX}/bin/dhisd-genkeys \
-			${PREFIX}/bin/dhisd
+			${DESTDIR}${PREFIX}/bin/dhisd-genkeys \
+			${DESTDIR}${PREFIX}/bin/dhisd
 		${CHMOD} 700 \
-			${PREFIX}/bin/dhisd-genkeys \
-			${PREFIX}/bin/dhisd
+			${DESTDIR}${PREFIX}/bin/dhisd-genkeys \
+			${DESTDIR}${PREFIX}/bin/dhisd
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
