@@ -1,0 +1,53 @@
+$NetBSD: idea-patch,v 1.1 2009/12/18 18:54:24 drochner Exp $
+
+--- idea.c.orig	2006-11-15 15:43:12.000000000 +0000
++++ idea.c
+@@ -49,8 +49,11 @@ typedef struct {
+     int have_dk;
+ } IDEA_context;
+ 
++static void expand_key(const byte *, u16 *);
++static void invert_key(u16 *, u16[IDEA_KEYLEN]);
++
+ static int
+-do_idea_setkey( IDEA_context *c, byte *key, unsigned int keylen )
++do_idea_setkey( IDEA_context *c, const byte *key, unsigned int keylen )
+ {
+     assert(keylen == 16);
+     c->have_dk = 0;
+@@ -98,7 +101,7 @@ mul_inv( u16 x )
+ 
+ 
+ static void
+-expand_key( byte *userkey, u16 *ek )
++expand_key( const byte *userkey, u16 *ek )
+ {
+     int i,j;
+ 
+@@ -161,7 +164,7 @@ invert_key( u16 *ek, u16 dk[IDEA_KEYLEN]
+ 
+ 
+ static void
+-cipher( byte *outbuf, byte *inbuf, u16 *key )
++cipher( byte *outbuf, const byte *inbuf, u16 *key )
+ {
+     u16 x1, x2, x3,x4, s2, s3;
+     u16 *in, *out;
+@@ -237,7 +240,7 @@ cipher( byte *outbuf, byte *inbuf, u16 *
+ }
+ 
+ static void
+-do_idea_encrypt( IDEA_context *c, byte *outbuf, byte *inbuf )
++do_idea_encrypt( IDEA_context *c, byte *outbuf, const byte *inbuf )
+ {
+     cipher( outbuf, inbuf, c->ek );
+ }
+@@ -251,7 +254,7 @@ idea_encrypt (void *context, byte *out, 
+ }
+ 
+ static void
+-do_idea_decrypt( IDEA_context *c, byte *outbuf, byte *inbuf )
++do_idea_decrypt( IDEA_context *c, byte *outbuf, const byte *inbuf )
+ {
+     if( !c->have_dk ) {
+        c->have_dk = 1;
