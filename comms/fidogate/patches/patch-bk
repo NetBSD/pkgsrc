@@ -1,0 +1,33 @@
+$NetBSD: patch-bk,v 1.1 2009/12/18 01:09:23 abs Exp $
+
+--- src/toss/Makefile.orig	1999-01-10 16:56:04.000000000 +0000
++++ src/toss/Makefile
+@@ -42,17 +42,17 @@ ftnexpire:	$(TOPDIR)/src/common/$(LIB) $
+ 
+ 
+ install:
+-	$(INSTALL_PROG) ftn2ftn$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftntoss$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnexpire$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnroute$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnpack$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) runtoss $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) rununpack $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) runin $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) runmail $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) runnews $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) runout $(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) ftn2ftn$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftntoss$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnexpire$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnroute$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnpack$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) runtoss $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) rununpack $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) runin $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) runmail $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) runnews $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) runout $(DESTDIR)$(PREFIX)$(BINDIR)
+ 
+ 
+ 

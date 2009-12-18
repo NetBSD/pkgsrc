@@ -1,0 +1,21 @@
+$NetBSD: patch-bq,v 1.1 2009/12/18 01:09:23 abs Exp $
+
+--- scripts/misc/Makefile.orig	2001-01-04 20:03:43.000000000 +0000
++++ scripts/misc/Makefile
+@@ -32,11 +32,11 @@ morannon:
+ 
+ 
+ install:
+-	$(INSTALL_PROG) areasbbssync $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) recvuu $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) senduu $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) senduumail $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) hosts2dns $(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) areasbbssync $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) recvuu $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) senduu $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) senduumail $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) hosts2dns $(DESTDIR)$(PREFIX)$(BINDIR)
+ 
+ 
+ clean:
