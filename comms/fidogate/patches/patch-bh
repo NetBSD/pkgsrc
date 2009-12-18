@@ -1,0 +1,25 @@
+$NetBSD: patch-bh,v 1.1 2009/12/18 01:09:23 abs Exp $
+
+--- src/ffx/Makefile.orig	2000-04-11 11:32:43.000000000 +0000
++++ src/ffx/Makefile
+@@ -30,13 +30,13 @@ $(SCRIPTS):	$(TOPDIR)/subst.pl $(TOPDIR)
+ 
+ 
+ install:
+-	$(INSTALL_SETUID) ffx$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ffxqt$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ffxmail $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ffxrmail $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ffxnews $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) runffx $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) send-ffx $(PREFIX)$(BINDIR)
++	$(INSTALL_SETUID) ffx$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ffxqt$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ffxmail $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ffxrmail $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ffxnews $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) runffx $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) send-ffx $(DESTDIR)$(PREFIX)$(BINDIR)
+ 
+ 
+ clean veryclean:

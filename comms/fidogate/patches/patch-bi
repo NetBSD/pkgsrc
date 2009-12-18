@@ -1,0 +1,27 @@
+$NetBSD: patch-bi,v 1.1 2009/12/18 01:09:23 abs Exp $
+
+--- src/gate/Makefile.orig	1999-10-04 08:18:22.000000000 +0000
++++ src/gate/Makefile
+@@ -31,14 +31,14 @@ ftnamil:	$(TOPDIR)/src/common/$(LIB)
+ 
+ 
+ install:
+-	$(INSTALL_SETUID) ftnmail$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) rfc2ftn$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftn2rfc$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnin$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftninpost $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftninrecomb $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) rungate $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) send-fidogate $(PREFIX)$(BINDIR)
++	$(INSTALL_SETUID) ftnmail$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) rfc2ftn$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftn2rfc$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnin$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftninpost $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftninrecomb $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) rungate $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) send-fidogate $(DESTDIR)$(PREFIX)$(BINDIR)
+ 
+ 
+ clean veryclean:

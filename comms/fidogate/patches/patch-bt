@@ -1,0 +1,21 @@
+$NetBSD: patch-bt,v 1.1 2009/12/18 01:09:23 abs Exp $
+
+--- scripts/nodelist/Makefile.orig	1999-05-15 20:54:36.000000000 +0000
++++ scripts/nodelist/Makefile
+@@ -27,11 +27,11 @@ $(PROGS):	$(TOPDIR)/config.make $(TOPDIR
+ 
+ 
+ install:
+-	$(INSTALL_PROG) latest $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) nl-autoupd $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) nl-del $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) nl-diff $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) nl-check $(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) latest $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) nl-autoupd $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) nl-del $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) nl-diff $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) nl-check $(DESTDIR)$(PREFIX)$(BINDIR)
+ 
+ 
+ clean:
