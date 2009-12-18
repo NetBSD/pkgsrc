@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2009/12/18 14:02:07 drochner Exp $
+
+--- ick.h.orig	1997-02-03 19:07:37.000000000 +0000
++++ ick.h
+@@ -1,7 +1,7 @@
+ /* ick.h -- compilation types for intercal parser */
+ 
+ /* Comment this out if your version of lex automatically supplies yylineno. */
+-#define YYLINENO_BY_HAND
++/*#define YYLINENO_BY_HAND*/
+ 
+ /* Comment this out if your version of lex doesn't use yyrestart(). */
+ #define USE_YYRESTART
