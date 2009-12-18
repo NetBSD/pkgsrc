@@ -1,6 +1,6 @@
-$NetBSD: patch-aw,v 1.1 2005/12/19 15:10:18 joerg Exp $
+$NetBSD: patch-aw,v 1.2 2009/12/18 01:09:23 abs Exp $
 
---- src/toss/dbz.c.orig	2005-12-19 15:00:58.000000000 +0000
+--- src/toss/dbz.c.orig	2000-10-18 21:53:57.000000000 +0000
 +++ src/toss/dbz.c
 @@ -46,6 +46,8 @@ if the incore facility is used.
   * NOBUFFER	do not buffer hash-table i/o, B News locking is defective
