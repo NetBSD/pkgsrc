@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4664 2009/12/17 21:50:07 abs Exp $
+$NetBSD: CHANGES-2009,v 1.4665 2009/12/18 14:39:42 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6289,3 +6289,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/rabbit to 0.6.3 [obache 2009-12-17]
 	Updated lang/parrot to 1.8.0 [he 2009-12-17]
 	Updated comms/xisp to 2.7p4 [abs 2009-12-17]
+	Updated comms/asterisk to 1.2.37 [jnemeth 2009-12-18]
