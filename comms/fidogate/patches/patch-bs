@@ -1,0 +1,25 @@
+$NetBSD: patch-bs,v 1.1 2009/12/18 01:09:23 abs Exp $
+
+--- scripts/maintenance/Makefile.orig	2004-08-20 21:21:38.000000000 +0000
++++ scripts/maintenance/Makefile
+@@ -27,13 +27,13 @@ $(PROGS):	$(TOPDIR)/config.make $(TOPDIR
+ 
+ 
+ install:
+-	$(INSTALL_PROG) logsendmail $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) logsendmail2 $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) logreport $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) logstat $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) logdaily $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) logcheck $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) runchklock $(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) logsendmail $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) logsendmail2 $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) logreport $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) logstat $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) logdaily $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) logcheck $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) runchklock $(DESTDIR)$(PREFIX)$(BINDIR)
+ 
+ 
+ clean:

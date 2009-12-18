@@ -1,9 +1,9 @@
-$NetBSD: patch-ax,v 1.1 2005/12/20 10:19:09 rillig Exp $
+$NetBSD: patch-ax,v 1.2 2009/12/18 01:09:23 abs Exp $
 
 Keywords: ctype
 
---- src/common/mime.c.orig	Sun Aug 22 22:19:11 2004
-+++ src/common/mime.c	Tue Dec 20 11:12:02 2005
+--- src/common/mime.c.orig	2004-08-22 20:19:11.000000000 +0000
++++ src/common/mime.c
 @@ -32,12 +32,13 @@
  
  #include "fidogate.h"

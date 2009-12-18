@@ -1,6 +1,6 @@
-$NetBSD: patch-bb,v 1.1 2005/12/29 23:31:36 joerg Exp $
+$NetBSD: patch-bb,v 1.2 2009/12/18 01:09:23 abs Exp $
 
---- src/charset/charsetc.c.orig	2005-12-30 00:21:07.000000000 +0100
+--- src/charset/charsetc.c.orig	2004-08-22 20:19:10.000000000 +0000
 +++ src/charset/charsetc.c
 @@ -79,7 +79,7 @@ int charset_parse_c(char *s)
  	    s++;

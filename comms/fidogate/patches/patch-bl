@@ -1,0 +1,33 @@
+$NetBSD: patch-bl,v 1.1 2009/12/18 01:09:23 abs Exp $
+
+--- src/util/Makefile.orig	1998-04-03 20:15:37.000000000 +0000
++++ src/util/Makefile
+@@ -35,17 +35,17 @@ ftnoutpkt:	$(TOPDIR)/src/common/$(LIB)
+ 
+ 
+ install:
+-	$(INSTALL_PROG) ftnbsy$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnconfig$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnseq$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnfattach$(EXE) $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) ftnflo$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) sumcrc$(EXE) $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) ftnlock$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnlog$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnoutpkt$(EXE) $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) pktdebug$(EXE) $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) pktmore $(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) ftnbsy$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnconfig$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnseq$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnfattach$(EXE) $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) ftnflo$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) sumcrc$(EXE) $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) ftnlock$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnlog$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnoutpkt$(EXE) $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) pktdebug$(EXE) $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) pktmore $(DESTDIR)$(PREFIX)$(BINDIR)
+ 
+ 
+ clean veryclean:

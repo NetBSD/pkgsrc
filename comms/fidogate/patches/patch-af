@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.4 2001/10/31 14:32:30 tv Exp $
+$NetBSD: patch-af,v 1.5 2009/12/18 01:09:23 abs Exp $
 
---- scripts/Makefile.orig	Wed Feb 21 20:20:36 2001
-+++ scripts/Makefile	Wed Feb 21 20:20:43 2001
-@@ -16,7 +16,7 @@
+--- scripts/Makefile.orig	2001-05-28 15:09:25.000000000 +0000
++++ scripts/Makefile
+@@ -16,7 +16,7 @@ include $(TOPDIR)/config.make
  include $(TOPDIR)/rules.make
  
  
 -SUBDIRS		= areas filebase maintenance misc nodelist outbound run www
 +SUBDIRS		= areas filebase maintenance misc nodelist outbound run
-
+ 
  
  all clean veryclean depend install::

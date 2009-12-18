@@ -1,0 +1,17 @@
+$NetBSD: patch-bj,v 1.1 2009/12/18 01:09:23 abs Exp $
+
+--- src/tick/Makefile.orig	1999-08-08 09:14:32.000000000 +0000
++++ src/tick/Makefile
+@@ -26,9 +26,9 @@ ftntick:	$(TOPDIR)/src/common/$(LIB)
+ 
+ 
+ install:
+-	$(INSTALL_PROG) ftntick$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftntickpost $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) ftnhatch$(EXE) $(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftntick$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftntickpost $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) ftnhatch$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
+ 
+ 
+ clean veryclean:
