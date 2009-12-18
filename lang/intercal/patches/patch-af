@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/12/18 14:02:07 drochner Exp $
+
+--- perpetrate.c.orig	2003-03-09 00:24:35.000000000 +0000
++++ perpetrate.c
+@@ -498,7 +498,7 @@ int main(int argc, char *argv[])
+ 	    if (!compile_only)
+ 	    {
+ 		(void) sprintf(buf2,
+-			       "%s %s -I%s -L%s -lick -o %s",
++			       "%s %s -I%s -L%s -L@PREFIX@/lib -lick -o %s",
+ 			       compiler, buf, includedir, libdir,
+ 			       argv[optind]);
+ 		(void) system(buf2);
