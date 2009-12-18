@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2009/12/18 14:02:07 drochner Exp $
+
+--- ick-wrap.c.orig	2003-03-09 00:24:26.000000000 +0000
++++ ick-wrap.c
+@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
+     parseargs(argc,argv);
+ 
+     /* set seed for random error generation */
+-#ifdef USG
+-    srand48(time((long *)0) + getpid());
++#if 1
++    srand48(time((time_t *)0) + getpid());
+ #else
+     srand(time((long *)0));
+ #endif /* UNIX */

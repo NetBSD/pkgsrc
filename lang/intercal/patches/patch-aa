@@ -1,18 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2003/01/19 07:05:16 salo Exp $
+$NetBSD: patch-aa,v 1.3 2009/12/18 14:02:07 drochner Exp $
 
---- Makefile.orig	Wed Sep 15 21:28:34 1999
-+++ Makefile	Wed Nov 22 16:54:08 2000
-@@ -3,6 +3,13 @@
- #
- VERSION=0.20
+--- Makefile.in.orig	2003-12-31 21:42:21.000000000 +0000
++++ Makefile.in
+@@ -28,7 +28,7 @@ INSTALL = @INSTALL@
+ DESTDIR=
  
-+all:
-+	cd src && ${MAKE}
-+install:
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/doc/intercal
-+	${BSD_INSTALL_DATA} NEWS READ.ME ${PREFIX}/share/doc/intercal
-+	cd src && ${MAKE} install
-+
- dist: intercal-$(VERSION).tar.gz
- 
- intercal-$(VERSION).tar.gz:
+ CC = @CC@
+-CFLAGS = @CFLAGS@ -DICKINCLUDEDIR=\"$(incdir)\" -DICKLIBDIR=\"$(datadir)\" -DYYDEBUG
++CFLAGS = @CFLAGS@ -DICKINCLUDEDIR=\"$(incdir)\" -DICKLIBDIR=\"$(datadir)\" -DYYDEBUG -D_POSIX_SOURCE -DUSG
+ LDFLAGS = @LDFLAGS@
+ LEX = @LEX@
+ LEXFLAGS=
