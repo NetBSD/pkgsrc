@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2009/12/18 18:54:24 drochner Exp $
+
+--- cipher/Makefile.in.orig	2009-12-11 15:43:29.000000000 +0000
++++ cipher/Makefile.in
+@@ -237,7 +237,7 @@ EXTRA_DIST = Manifest
+ AM_CPPFLAGS = -I../src -I$(top_srcdir)/src 
+ AM_CFLAGS = $(GPG_ERROR_CFLAGS)
+ noinst_LTLIBRARIES = libcipher.la
+-GCRYPT_MODULES = @GCRYPT_CIPHERS@ @GCRYPT_PUBKEY_CIPHERS@ @GCRYPT_DIGESTS@
++GCRYPT_MODULES = @GCRYPT_CIPHERS@ @GCRYPT_PUBKEY_CIPHERS@ @GCRYPT_DIGESTS@ ${IDEAOBJECT}
+ libcipher_la_DEPENDENCIES = $(GCRYPT_MODULES)
+ libcipher_la_LIBADD = $(GCRYPT_MODULES)
+ libcipher_la_SOURCES = \
