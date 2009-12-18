@@ -1,0 +1,23 @@
+$NetBSD: patch-bg,v 1.1 2009/12/18 01:09:23 abs Exp $
+
+--- src/areafix/Makefile.orig	2001-01-28 15:53:16.000000000 +0000
++++ src/areafix/Makefile
+@@ -44,12 +44,12 @@ ftnafutil:	$(TOPDIR)/src/common/$(LIB) $
+ 
+ 
+ install:
+-	$(INSTALL_PROG) ftnaf$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnafpkt$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnafutil$(EXE) $(PREFIX)$(BINDIR)
+-	$(INSTALL_SETUID) ftnafmail$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_DATA) areafix.help $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) runafutil $(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) ftnaf$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnafpkt$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftnafutil$(EXE) $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_SETUID) ftnafmail$(EXE) $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_DATA) areafix.help $(DESTDIR)$(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) runafutil $(DESTDIR)$(PREFIX)$(BINDIR)
+ 
+ 
+ clean veryclean:

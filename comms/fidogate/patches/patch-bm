@@ -1,0 +1,17 @@
+$NetBSD: patch-bm,v 1.1 2009/12/18 01:09:23 abs Exp $
+
+--- scripts/run/Makefile.orig	2000-04-19 17:07:28.000000000 +0000
++++ scripts/run/Makefile
+@@ -25,9 +25,9 @@ $(PROGS):	$(TOPDIR)/config.make $(TOPDIR
+ 
+ 
+ install:
+-	$(INSTALL_PROG) runpoll          $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) runpoll-orodruin $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) runpoll-binkd    $(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) runpoll          $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) runpoll-orodruin $(DESTDIR)$(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) runpoll-binkd    $(DESTDIR)$(PREFIX)$(BINDIR)
+ 
+ 
+ clean:

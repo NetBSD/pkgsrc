@@ -1,6 +1,6 @@
-$NetBSD: patch-av,v 1.1 2004/12/08 14:55:56 tv Exp $
+$NetBSD: patch-av,v 1.2 2009/12/18 01:09:23 abs Exp $
 
---- src/common/areas.c.orig	2004-12-08 09:53:06.000000000 -0500
+--- src/common/areas.c.orig	2004-08-22 20:19:11.000000000 +0000
 +++ src/common/areas.c
 @@ -369,7 +369,7 @@ static Area *area_build(Area *pa, char *
  	    if(areas_x_a[(unsigned char)*q])
