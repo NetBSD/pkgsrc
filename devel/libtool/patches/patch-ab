@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.66 2009/12/17 00:53:52 joerg Exp $
+$NetBSD: patch-ab,v 1.67 2009/12/18 22:11:10 joerg Exp $
+
+The last two chunks work around bugs in ksh on NetBSD.
+The problem manifests with wl and no_builtin_flag containing newlines.
 
 --- configure.orig	2009-12-17 01:29:54.000000000 +0100
 +++ configure
@@ -835,3 +838,23 @@ $NetBSD: patch-ab,v 1.66 2009/12/17 00:53:52 joerg Exp $
  
  lt_cv_prog_compiler_c_o_RC=yes
  
+@@ -24427,6 +24441,9 @@
+ LTCFLAGS='$LTCFLAGS'
+ compiler='$compiler_DEFAULT'
+ 
++printf "%s" "$lt_prog_compiler_wl" > /dev/null
++printf "%s" "$lt_prog_compiler_no_builtin_flag" > /dev/null
++
+ # Quote evaled strings.
+ for var in SED \
+ GREP \
+@@ -24711,6 +24729,9 @@
+   ;;
+ esac
+ 
++printf "%s" "$lt_prog_compiler_wl" > /dev/null
++printf "%s" "$lt_prog_compiler_no_builtin_flag" > /dev/null
++
+ ac_aux_dir='$ac_aux_dir'
+ xsi_shell='$xsi_shell'
+ lt_shell_append='$lt_shell_append'
