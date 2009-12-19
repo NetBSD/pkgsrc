@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4665 2009/12/18 14:39:42 jnemeth Exp $
+$NetBSD: CHANGES-2009,v 1.4666 2009/12/19 09:31:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6290,3 +6290,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/parrot to 1.8.0 [he 2009-12-17]
 	Updated comms/xisp to 2.7p4 [abs 2009-12-17]
 	Updated comms/asterisk to 1.2.37 [jnemeth 2009-12-18]
+	Updated www/drupal to 5.21 [taca 2009-12-19]
+	Updated www/drupal6 to 6.15 [taca 2009-12-19]
