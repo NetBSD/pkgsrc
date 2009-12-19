@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2009/11/25 11:33:56 obache Exp $
+# $NetBSD: Makefile,v 1.36 2009/12/19 12:56:45 obache Exp $
 #
 
 DISTNAME=	tokyocabinet-1.4.32
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
 
@@ -18,17 +19,10 @@ USE_LANGUAGES=	c99
 
 PKGCONFIG_OVERRIDE+=	tokyocabinet.pc.in
 
-CONFIGURE_ARGS+=	--enable-zlib
-CONFIGURE_ARGS+=	--enable-bzip
-CONFIGURE_ARGS+=	--enable-exlzma
-CONFIGURE_ARGS+=	--enable-exlzo
+.include "options.mk"
 
 TEST_TARGET=	check
 
-.include "../../archivers/bzip2/buildlink3.mk"
-.include "../../archivers/lzmalib/buildlink3.mk"
-.include "../../archivers/lzo/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 PTHREAD_AUTO_VARS=	yes
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
