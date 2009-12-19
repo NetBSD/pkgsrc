@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 22:00:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8.4.1 2009/12/19 21:14:14 spz Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/INSTALL.mysql.txt
 share/doc/drupal/INSTALL.pgsql.txt
@@ -7,7 +7,6 @@ share/doc/drupal/LICENSE.txt
 share/doc/drupal/MAINTAINERS.txt
 share/doc/drupal/UPGRADE.txt
 share/doc/drupal/robots.txt
-share/drupal/robots.txt
 share/drupal/cron.php
 share/drupal/includes/bootstrap.inc
 share/drupal/includes/cache.inc
@@ -176,6 +175,7 @@ share/drupal/modules/user/user.module
 share/drupal/modules/watchdog/watchdog.css
 share/drupal/modules/watchdog/watchdog.info
 share/drupal/modules/watchdog/watchdog.module
+share/drupal/robots.txt
 share/drupal/scripts/code-clean.sh
 share/drupal/scripts/code-style.pl
 share/drupal/scripts/cron-curl.sh
@@ -278,4 +278,6 @@ share/drupal/xmlrpc.php
 share/examples/drupal/default.profile
 share/examples/drupal/drupal.conf
 share/examples/drupal/settings.php
+@pkgdir share/drupal/sites/default
 @pkgdir share/drupal/profiles/default
+@pkgdir share/drupal/files
