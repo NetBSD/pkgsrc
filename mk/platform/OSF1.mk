@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.28 2009/07/26 05:32:43 agc Exp $
+# $NetBSD: OSF1.mk,v 1.29 2009/12/19 10:52:58 tnn Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -41,6 +41,11 @@ IMAKE_MANINSTALL?=	maninstall catinstall
 
 # Fix broken system headers by using pkgtools/posix_headers
 FIX_SYSTEM_HEADERS?=    yes
+
+# native X11 on HP-UX is rather old and breaks many packages.
+# The modular X.org userland works rather well, apart from the server which
+# is unlikely to ever be supported due to proprietary graphics hardware.
+X11_TYPE?=		modular
 
 _OPSYS_EMULDIR.osf1=	# empty
 
