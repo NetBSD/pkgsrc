@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2009/09/29 13:39:58 taca Exp $
+# $NetBSD: Makefile,v 1.41.2.1 2009/12/19 21:14:14 spz Exp $
 
-DISTNAME=	drupal-5.20
+DISTNAME=	drupal-5.21
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -25,7 +25,7 @@ BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 USE_TOOLS+=		perl:run pax
 REPLACE_PERL=		scripts/code-style.pl
 
-OWN_DIRS+=		${DRUPAL}/sites/default
+#OWN_DIRS+=		${DRUPAL}/sites/default
 OWN_DIRS_PERMS+=	${DRUPAL}/files ${APACHE_USER} ${APACHE_GROUP} 0750
 
 CONF_FILES=	${PREFIX}/share/examples/drupal/drupal.conf \
