@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.29 2009/12/15 21:39:09 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.30 2009/12/19 21:28:26 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -83,3 +83,7 @@ Pullup ticket #2948 - requested by wiz
 automake: security update
 Pullup ticket #2949 - requested by tnn
 ntp4: security update
+Pullup ticket #2950 - requested by taca
+drupal: security update
+Pullup ticket #2951 - requested by taca
+drupal6: security update
