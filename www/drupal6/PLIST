@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4.4.1 2009/12/19 21:26:46 spz Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -460,7 +460,7 @@ share/drupal/themes/pushbutton/tabs-option-on.png
 share/drupal/update.php
 share/drupal/xmlrpc.php
 share/examples/drupal/default.profile
-share/examples/drupal/settings.php
 share/examples/drupal/default.settings.php
 share/examples/drupal/drupal.conf
 @pkgdir share/drupal/files
+@pkgdir share/drupal
