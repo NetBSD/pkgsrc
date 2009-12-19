@@ -283,6 +283,8 @@ lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
 lua			Enable Lua support.
 lynx			Use and enable support for the lynx browser.
+lzma			Enable LZMA (de)compression support.
+lzo			Enable LZO (de)compression support.
 lzw			Enable LZW (De)compression support
 m17nlib			Enable the m17n library support.
 m68060-optimized	Optimize for m68060 (only).

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2009/11/25 11:33:56 obache Exp $
+# $NetBSD: Makefile,v 1.13 2009/12/19 12:56:45 obache Exp $
 #
 
 DISTNAME=	tokyodystopia-0.9.13
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
 
@@ -17,15 +18,22 @@ USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	tokyodystopia.pc.in
 
-CONFIGURE_ARGS+=	--enable-zlib
-CONFIGURE_ARGS+=	--enable-bzip
-
 TEST_TARGET=	check
 
 BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.29
 .include "../../databases/tokyocabinet/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../archivers/bzip2/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.tokyocabinet:Mbzip2)
+CONFIGURE_ARGS+=	--enable-bzip
+CONFIGURE_ARGS+=	--with-bzip=${BUILDLINK_PREFIX.bzip2}
+.else
+CONFIGURE_ARGS+=	--disable-bzip
+.endif
+.if !empty(PKG_BUILD_OPTIONS.tokyocabinet:Mzlib)
+CONFIGURE_ARGS+=	--enable-zlib
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+.else
+CONFIGURE_ARGS+=	--disable-zlib
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 PTHREAD_AUTO_VARS=	yes
 CONFIGURE_ARGS+=	--enable-pthread
