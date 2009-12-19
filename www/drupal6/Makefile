@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2009/09/29 13:41:00 taca Exp $
+# $NetBSD: Makefile,v 1.17.2.1 2009/12/19 21:26:46 spz Exp $
 
-DISTNAME=	drupal-6.14
+DISTNAME=	drupal-6.15
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -14,7 +14,7 @@ CONFLICTS+=	drupal-5.*{,nb*}
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.5:../../graphics/php-gd
 
 NO_BUILD=	YES
-DRUPAL=		${PREFIX}/share/drupal
+DRUPAL=		share/drupal
 PAX_DIRS=	includes misc modules scripts themes
 DOCS=		CHANGELOG.txt COPYRIGHT.txt INSTALL.mysql.txt \
 		INSTALL.pgsql.txt INSTALL.txt LICENSE.txt \
@@ -32,21 +32,28 @@ OWN_DIRS_PERMS+=	${DRUPAL}/sites/default \
 OWN_DIRS_PERMS+=	${DRUPAL}/files \
 			${WWW_USER} ${WWW_GROUP} 0750
 
-CONF_FILES=	${PREFIX}/share/examples/drupal/drupal.conf \
-		${PKG_SYSCONFDIR}/drupal.conf
-CONF_FILES+=	${PREFIX}/share/examples/drupal/default.profile \
-		${DRUPAL}/profiles/default/default.profile
+CONF_FILES=	share/examples/drupal/drupal.conf \
+		${PKG_SYSCONFDIR}/drupal.conf \
+		share/examples/drupal/default.profile \
+		${DRUPAL}/profiles/default/default.profile \
+		share/examples/drupal/default.settings.php \
+		${DRUPAL}/sites/default/default.settings.php
 
-CONF_FILES_PERMS+=	${PREFIX}/share/examples/drupal/default.settings.php \
-			${DRUPAL}/sites/default/settings.php \
-			${WWW_USER} ${WWW_GROUP} 0640
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*php[^ ]*
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	scripts/drupal.sh
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
-SUBST_FILES.conf=	drupal.conf scripts/drupal.sh
+SUBST_FILES.conf=	drupal.conf
 SUBST_SED.conf=		-e "s|@DRUPAL@|${DRUPAL}|g"
-SUBST_SED.conf+=	-e "s|/usr/bin/php|${PREFIX}/bin/php|g"
+SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
+
+INSTALLATION_DIRS+=	${DRUPAL}/files ${DRUPAL}/sites/all \
+			share/doc/drupal share/examples/drupal
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/php/phpversion.mk"
 
@@ -68,38 +75,25 @@ post-extract:
 	${CP} ${FILESDIR}/drupal.conf ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DRUPAL}
-	${INSTALL_DATA_DIR} ${DRUPAL}/files
-	${INSTALL_DATA_DIR} ${DRUPAL}/sites
-	${INSTALL_DATA_DIR} ${DRUPAL}/sites/all
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/drupal
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/drupal
-
-	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DRUPAL}
-	${INSTALL_DATA} ${WRKSRC}/sites/all/README.txt ${DRUPAL}/sites/all
+	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${PREFIX}/${DRUPAL}
+	${INSTALL_DATA} ${WRKSRC}/sites/all/README.txt \
+		${DESTDIR}${PREFIX}/${DRUPAL}/sites/all
 	${INSTALL_DATA} ${WRKSRC}/drupal.conf \
-		${PREFIX}/share/examples/drupal/drupal.conf
+		${DESTDIR}${PREFIX}/share/examples/drupal
 	${INSTALL_DATA} ${WRKSRC}/sites/default/default.settings.php \
-		${PREFIX}/share/examples/drupal/default.settings.php
-	${INSTALL_DATA} ${WRKSRC}/sites/default/default.settings.php \
-		${PREFIX}/share/examples/drupal/settings.php
+		${DESTDIR}${PREFIX}/share/examples/drupal
 	${INSTALL_DATA} ${WRKSRC}/profiles/default/default.profile \
-		${PREFIX}/share/examples/drupal/default.profile
-	${INSTALL_DATA} ${WRKSRC}/*.php ${DRUPAL}
-
-.	for i in ${PAX_DIRS}
-		cd ${WRKSRC}/${i} && ${PAX} -rw . ${DRUPAL}/${i}
-.	endfor
-
-.	for i in ${DOCS}
-		${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/drupal
-.	endfor
-
-	${CHOWN} ${WWW_USER}:${WWW_GROUP} ${DRUPAL}/files
-	${CHMOD} 0770 ${DRUPAL}/files
+		${DESTDIR}${PREFIX}/share/examples/drupal
+	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${PREFIX}/${DRUPAL}
+.for i in ${PAX_DIRS}
+	cd ${WRKSRC}/${i} && ${PAX} -rw . ${DESTDIR}${PREFIX}/${DRUPAL}/${i}
+.endfor
+.for i in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/doc/drupal
+.endfor
 
 post-install:
-	${FIND} ${DRUPAL} -name \*.jpg | ${XARGS} ${CHMOD} 0644
-	${FIND} ${DRUPAL} -name \*.png | ${XARGS} ${CHMOD} 0644
+	${FIND} ${DESTDIR}${PREFIX}/${DRUPAL} \
+		\( -name '*.jpg' -o -name '*.png' \) | ${XARGS} ${CHMOD} 0644
 
 .include "../../mk/bsd.pkg.mk"
