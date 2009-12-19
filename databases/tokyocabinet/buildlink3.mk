@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/03/21 05:32:04 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/12/19 12:56:45 obache Exp $
 
 BUILDLINK_TREE+=	tokyocabinet
 
@@ -6,13 +6,28 @@ BUILDLINK_TREE+=	tokyocabinet
 TOKYOCABINET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.3.7
-BUILDLINK_ABI_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.10
+BUILDLINK_ABI_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.32nb1
 BUILDLINK_PKGSRCDIR.tokyocabinet?=	../../databases/tokyocabinet
 
+pkgbase := tokyocabinet
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.tokyocabinet:Mbzip2)
 .include "../../archivers/bzip2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.tokyocabinet:Mlzma)
 .include "../../archivers/lzmalib/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.tokyocabinet:Mlzo)
 .include "../../archivers/lzo/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.tokyocabinet:Mzlib)
 .include "../../devel/zlib/buildlink3.mk"
+.endif
+
 .include "../../mk/pthread.buildlink3.mk"
 .endif # TOKYOCABINET_BUILDLINK3_MK
 
