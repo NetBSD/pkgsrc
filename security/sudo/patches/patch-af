@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.22 2009/08/02 07:39:27 hasso Exp $
+$NetBSD: patch-af,v 1.23 2009/12/20 07:46:32 taca Exp $
 
---- configure.in.orig	2009-07-20 16:34:37 +0300
-+++ configure.in	2009-08-01 22:19:54 +0300
-@@ -156,7 +156,6 @@ else
+--- configure.in.orig	2009-11-25 01:55:34.000000000 +0000
++++ configure.in
+@@ -158,7 +158,6 @@ else
  fi
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.22 2009/08/02 07:39:27 hasso Exp $
  
  dnl
  dnl Deprecated --with options (these all warn or generate an error)
-@@ -294,6 +293,19 @@ AC_ARG_WITH(csops, [AS_HELP_STRING([--wi
+@@ -296,6 +295,19 @@ AC_ARG_WITH(csops, [AS_HELP_STRING([--wi
  		;;
  esac])
  
@@ -30,7 +30,7 @@ $NetBSD: patch-af,v 1.22 2009/08/02 07:39:27 hasso Exp $
  AC_ARG_WITH(passwd, [AS_HELP_STRING([--without-passwd], [don't use passwd/shadow file for authentication])],
  [case $with_passwd in
      yes|no)	AC_MSG_CHECKING(whether to use shadow/passwd file authentication)
-@@ -1790,7 +1802,7 @@ fi
+@@ -1795,7 +1807,7 @@ fi
  if test ${with_logincap-'no'} != "no"; then
      AC_CHECK_HEADERS(login_cap.h, [LOGINCAP_USAGE='[[-c class|-]] '; LCMAN=""
  	case "$OS" in
@@ -39,12 +39,12 @@ $NetBSD: patch-af,v 1.22 2009/08/02 07:39:27 hasso Exp $
  	    ;;
  	esac
      ])
-@@ -2237,6 +2249,8 @@ if test ${with_kerb5-'no'} != "no" -a -z
- 	    AC_CHECK_LIB(krb5support, main, [SUDO_LIBS="${SUDO_LIBS} -lkrb5support,"])
+@@ -2242,6 +2254,8 @@ if test ${with_kerb5-'no'} != "no" -a -z
+ 	    AC_CHECK_LIB(krb5support, main, [SUDO_LIBS="${SUDO_LIBS} -lkrb5support"])
      ])
      AUTH_OBJS="$AUTH_OBJS kerb5.o"
 +fi
 +if test ${with_kerb5-'no'} != "no"; then
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDO_LIBS}"
-     AC_CHECK_FUNCS(krb5_verify_user krb5_init_secure_context krb5_get_init_creds_opt_alloc)
+     AC_CHECK_FUNCS(krb5_verify_user krb5_init_secure_context)
