@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.13 2009/12/15 17:35:36 joerg Exp $
+# $NetBSD: f2c.mk,v 1.14 2009/12/20 12:32:55 jmmv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -88,7 +88,7 @@ PREPEND_PATH+=	${_F2C_DIR}/bin
 .  endif
 
 # Dependencies:
-BUILD_DEPENDS+=	f2c>20090411:../../lang/f2c # translator
+BUILD_DEPENDS+=	f2c>=20090411nb2:../../lang/f2c # translator
 
 .if empty(PKGPATH:Mdevel/libtool-base) # See below
 .  include "../../devel/libf2c/buildlink3.mk" # library

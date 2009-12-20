@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2009/12/18 22:11:10 joerg Exp $
+# $NetBSD: Makefile,v 1.91 2009/12/20 12:32:55 jmmv Exp $
 
 ###########################################################################
 ###########################################################################
@@ -26,7 +26,7 @@
 .include "../../devel/libtool/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	2
+PKGREVISION=	3
 SVR4_PKGNAME=	ltoob
 
 COMMENT=	Generic shared library support script (the script itself)
