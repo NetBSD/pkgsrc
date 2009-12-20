@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8807 2009/12/20 19:26:23 tonnerre Exp $
+$NetBSD: TODO,v 1.8808 2009/12/20 22:15:27 tonnerre Exp $
 
 Suggested new packages
 ======================
@@ -748,7 +748,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o highlight-2.13
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
-	o horde-3.3.6
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
