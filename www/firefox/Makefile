@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.59.2.1 2009/10/28 18:13:24 tron Exp $
+# $NetBSD: Makefile,v 1.59.2.2 2009/12/20 19:41:08 spz Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	firefox-${FIREFOX_VER}
-FIREFOX_VER=	3.5.4
+FIREFOX_VER=	3.5.6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -56,7 +56,7 @@ post-install:
 	  > ${WRKDIR}/firefox
 	${INSTALL_SCRIPT} ${WRKDIR}/firefox ${DESTDIR}${PREFIX}/bin
 
-BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner-1.9.1.4{,nb*}
+BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner-1.9.1.6{,nb*}
 .include "../../devel/xulrunner/buildlink3.mk"
 PLIST_VARS+=	gnome
 .if !empty(PKG_BUILD_OPTIONS.xulrunner:Mgnome)
