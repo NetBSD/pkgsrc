@@ -1,0 +1,11 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2009/12/20 15:39:48 taca Exp $
+
+FO_DIR="@PREFIX@/@FO_DIR@"
+WWW_USER="@APACHE_USER@"
+
+case ${STAGE} in
+POST-INSTALL)
+	# enable to edit language translation.
+	(cd "${FO_DIR}"; ${CHOWN} -R ${WWW_USER} language)
+	;;
+esac
