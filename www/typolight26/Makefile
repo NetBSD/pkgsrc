@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2009/04/30 13:12:40 taca Exp $
+# $NetBSD: Makefile,v 1.2.4.1 2009/12/20 09:41:38 tron Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
 PKGNAME=	typolight${TL_VER}-${TL_PKGVER}
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.typolight.org/
 COMMENT=	Powerful web content management system (CMS)
+LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.1.0:../../misc/php-mbstring
@@ -75,6 +76,7 @@ INSTALLATION_DIRS+=	${TL_DOCDIR} ${TL_EGDIR} ${TL_WEBDIR}/system/config
 OWN_DIRS_PERMS+= \
 		${TL_WEBDIR} ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/plugins ${BINOWN} ${APACHE_GROUP} 0775 \
+		${TL_WEBDIR}/plugins/tcpdf/cache ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system/drivers ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system/html ${BINOWN} ${APACHE_GROUP} 0770 \
