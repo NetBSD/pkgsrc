@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.13 2009/02/05 13:48:12 taca Exp $
+$NetBSD: patch-ag,v 1.14 2009/12/20 07:46:32 taca Exp $
 
---- configure.orig	2008-12-10 06:04:36.000000000 +0900
+--- configure.orig	2009-11-25 01:57:27.000000000 +0000
 +++ configure
-@@ -1451,7 +1451,7 @@ Fine tuning of the installation director
+@@ -1454,7 +1454,7 @@ Fine tuning of the installation director
    --bindir=DIR           user executables [EPREFIX/bin]
    --sbindir=DIR          system admin executables [EPREFIX/sbin]
    --libexecdir=DIR       program executables [EPREFIX/libexec]
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.13 2009/02/05 13:48:12 taca Exp $
    --sharedstatedir=DIR   modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR    modifiable single-machine data [PREFIX/var]
    --libdir=DIR           object code libraries [EPREFIX/lib]
-@@ -1523,6 +1523,7 @@ Optional Packages:
+@@ -1527,6 +1527,7 @@ Optional Packages:
    --with-devel            add development options
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
@@ -19,7 +19,7 @@ $NetBSD: patch-ag,v 1.13 2009/02/05 13:48:12 taca Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey=DIR         enable S/Key support
    --with-opie=DIR         enable OPIE support
-@@ -2163,7 +2164,6 @@ else
+@@ -2183,7 +2184,6 @@ else
  fi
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -27,7 +27,7 @@ $NetBSD: patch-ag,v 1.13 2009/02/05 13:48:12 taca Exp $
  
  
  
-@@ -2356,6 +2356,23 @@ fi
+@@ -2396,6 +2396,23 @@ fi
  
  
  
@@ -51,7 +51,7 @@ $NetBSD: patch-ag,v 1.13 2009/02/05 13:48:12 taca Exp $
  # Check whether --with-passwd was given.
  if test "${with_passwd+set}" = set; then
    withval=$with_passwd; case $with_passwd in
-@@ -14091,7 +14108,7 @@ if test `eval echo '${'$as_ac_Header'}'`
+@@ -14287,7 +14304,7 @@ if test `eval echo '${'$as_ac_Header'}'`
  _ACEOF
   LOGINCAP_USAGE='[-c class|-] '; LCMAN=""
  	case "$OS" in
@@ -60,19 +60,12 @@ $NetBSD: patch-ag,v 1.13 2009/02/05 13:48:12 taca Exp $
  	    ;;
  	esac
  
-@@ -21080,11 +21098,12 @@ fi
+@@ -21537,6 +21554,8 @@ fi
  
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
      AUTH_OBJS="$AUTH_OBJS kerb5.o"
--    _LIBS="$LIBS"
--    LIBS="${LIBS} ${SUDO_LIBS}"
--
- 
 +fi
- 
 +if test ${with_kerb5-'no'} != "no"; then
-+_LIBS="$LIBS"
-+LIBS="${LIBS} ${SUDO_LIBS}"
- for ac_func in krb5_verify_user krb5_init_secure_context krb5_get_init_creds_opt_alloc
- do
- as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+     _LIBS="$LIBS"
+     LIBS="${LIBS} ${SUDO_LIBS}"
+ 
