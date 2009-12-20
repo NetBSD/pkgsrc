@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4669 2009/12/20 07:47:15 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4670 2009/12/20 11:31:58 manu Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6302,3 +6302,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight26 to 2.6.7nb3 [taca 2009-12-20]
 	Updated www/typolight27 to 2.7.6 [taca 2009-12-20]
 	Updated security/sudo to 1.7.2p2 [taca 2009-12-20]
+	Updated www/ap2-auth-mellon to 0.2.5nb2 [manu 2009-12-20]
