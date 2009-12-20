@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.32 2009/12/20 19:43:13 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.33 2009/12/20 21:04:35 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -95,3 +95,5 @@ typolight27-example: security update
 Pullup ticket #2953 - requested by tnn
 devel/xulrunner: security update
 www/firefox: security update
+Pullup ticket #2954 - requested by tonnerre
+wireshark: security update
