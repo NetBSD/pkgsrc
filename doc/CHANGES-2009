@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4671 2009/12/20 15:45:55 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4672 2009/12/20 16:12:23 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6305,3 +6305,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ap2-auth-mellon to 0.2.5nb2 [manu 2009-12-20]
 	Added www/fengoffice version 1.6.1 [taca 2009-12-20]
 	Removed www/opengoo [taca 2009-12-20]
+	Updated sysutils/coreutils to 6.12nb3 [tonnerre 2009-12-20]
