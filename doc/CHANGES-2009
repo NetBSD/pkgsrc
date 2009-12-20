@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4673 2009/12/20 16:41:50 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.4674 2009/12/20 19:26:23 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6306,3 +6306,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/fengoffice version 1.6.1 [taca 2009-12-20]
 	Removed www/opengoo successor www/fengoffice [taca 2009-12-20]
 	Updated sysutils/coreutils to 6.12nb3 [tonnerre 2009-12-20]
+	Updated net/wireshark to 1.2.5 [tonnerre 2009-12-20]
