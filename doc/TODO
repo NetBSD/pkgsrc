@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8804 2009/12/19 15:44:17 taca Exp $
+$NetBSD: TODO,v 1.8805 2009/12/20 02:37:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -326,7 +326,7 @@ Suggested new packages
 	font-micro-misc, font-misc-cyrillic, font-misc-ethiopic,
 	font-misc-meltho, font-schumacher-misc, font-screen-cyrillic,
 	font-sun-misc, font-winitzki-cyrillic, font-xfree86-type1,
-	libWindowsWM, libXfontcache, util-macros, windowswmproto,
+	libWindowsWM, libXfontcache, util-macros, viewres, windowswmproto,
 	xcmsdb, xf86-input-acecad, xf86-input-aiptek, xf86-input-evdev,
 	xf86-input-joystick, xf86-input-synaptics, xf86-input-wacom,
 	xf86-video-dummy, xf86-video-fbdev, xf86-video-glide,
@@ -336,7 +336,7 @@ Suggested new packages
 	xf86-video-suntcx, xf86-video-v4l, xf86-video-vermilion,
 	xf86-video-voodoo, xf86-video-xgi, xf86-video-xgixp, xf86dga,
 	xgc, xkbevd, xkbprint, xkbutils, xlsatoms, xorg-sgml-doctools,
-	xpr, mkcomposecache, xscope
+	xpr, xpyb, mkcomposecache, xscope
 
 
 Suggested package updates
@@ -387,6 +387,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o alee-ttf-11.2
 	o alephone-20091015 [pkg/42397]
 	o aliados-0.2.0
+	o alsa-lib-1.0.22
+	o alsa-plugins-1.0.22
+	o alsa-utils-1.0.22
 	o amanda-2.6.1p2
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.6.4
@@ -458,6 +461,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o boson-0.13
 	o bugzilla-3.4.4
 	o byacc-20080824
+	o bzr-2.0.3
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
@@ -472,7 +476,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.4
 	o cgicc-3.2.9
 	o cheese-2.28.1 [GNOME 2.28]
-	o cherokee-0.99.33
+	o cherokee-0.99.37
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
@@ -550,9 +554,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o empathy-2.28.2 [GNOME 2.28]
 	o enca-1.12
 	o enlightenment-1.0.0
+	o eog-2.28.2
 	o eog-plugins-2.28.1 [GNOME 2.28]
 	o epic4-2.6
-	o epiphany-2.28.1 [GNOME 2.28]
+	o epiphany-2.28.2 [GNOME 2.28]
 	o epiphany-extensions-2.28.1 [GNOME 2.28]
 	o epsg-7.4 [portions in pkg/42419]
 	o epstool-3.08
@@ -563,6 +568,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
+	o etm-423
 	o evolution-exchange-2.28.2
 	o evolution-mapi-0.28.2 [GNOME 2.28]
 	o ex-20050325
@@ -645,7 +651,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdb-7.0
 	o gdeskcal-1.01
 	o gdl-2.28.2 [GNOME 2.28]
-	o gdm-2.28.1 [GNOME 2.28]
+	o gdm-2.28.2 [GNOME 2.28]
 	o gdsreader-0.3.2
 	o geany-0.18
 	o geda-1.6.0.20091004
@@ -675,14 +681,17 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-bluetooth-2.28.3 [GNOME 2.28]
+	o gnome-desktop-2.28.2
 	o gnome-devel-docs-2.28.1 [GNOME 2.28]
+	o gnome-games-2.28.2
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
 	o gnome-nettool-2.28.0 [GNOME 2.28]
 	o gnome-packagekit-2.28.2 [GNOME 2.28]
 	o gnome-power-manager-2.28.2 [GNOME 2.28, wants DeviceKit-power]
 	o gnome-session-2.28.0 [GNOME 2.28, wants DeviceKit-power]
 	o gnome-subtitles-0.9.1
-	o gnome-system-tools-2.28.1 [GNOME 2.28]
+	o gnome-system-tools-2.28.2 [GNOME 2.28]
+	o gnome-user-docs-2.28.2 [GNOME 2.28]
 	o gnome-user-share-2.28.1 [GNOME 2.28]
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
@@ -708,6 +717,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gssdp-0.7.1
 	o gst-plugins0.10-ffmpeg-0.10.7
 	o gtick-0.4.2
+	o gtk-doc-1.13
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.1
 	o gtkimageview-1.6.4
@@ -867,7 +877,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libntlm-1.1
 	o libole2-2.2.8
 	o libpciaccess-0.11.0
-	o librep-0.90.3
+	o librep-0.90.4
 	o libssh-0.4.0
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
@@ -903,7 +913,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
-	o mathomatic-15.0.0
+	o mathomatic-15.0.1
 	o mc-4.6.2
 	o memcached-1.4.0
 	o memconf-2.9 [pkg/40201]
@@ -1008,6 +1018,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oo2c-2.1.7
 	o openafs-1.4.10 [pkg/41262]
 	o openafs-1.4.11
+	o openbox-3.4.9
 	o opencobol-1.0
 	o openh323-1.19.1
 	o openldap-2.4.20
@@ -1110,7 +1121,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pure-ftpd-1.0.27
 	o pureftpd-1.0.26
 	o puzzle-5.2
-	o puzzles-8780
+	o puzzles-8785
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1156,12 +1167,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o randread-0.2
 	o randrproto-1.3.1
 	o rapidsvn-0.12
+	o rasqal-0.9.17
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o recordproto-1.14
-	o rep-gtk-0.90.0
+	o redland-1.0.10
+	o rep-gtk-0.90.1
 	o recordproto-1.14
 	o resize_image-0.7
 	o rio500-0.8.1
@@ -1226,7 +1239,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scapy-2.1.0
 	o scew-0.4.0
 	o sch-3.8.3
-	o scilab-5.1.1
+	o scilab-5.2.0
 	o scm-5e5
 	o scmgit-base-1.6.5.6
 	o scmgit-docs-1.6.5.6
@@ -1259,7 +1272,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snes9x-1.51
 	o snort-2.8.5.1
 	o snownews-1.5.12
-	o solfege-3.14.9
+	o solfege-3.14.10
 	o sope-4.6
 	o source-highlight-3.1.1
 	o sox-14.2.0
@@ -1280,7 +1293,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o suse_base-11.0
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
-	o system-tools-backends-2.8.2 [needs polkit>=1.0?|GNOME 2.28]
+	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
 	o systrace-1.6e
 	o tacacs-4.0.4.14
 	o tads-3.0.16
@@ -1337,7 +1350,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-2.90
 	o uriparser-0.7.5
 	o userppp-030706
-	o vala-0.7.8
+	o vala-0.7.9
 	o valgrind-3.5.0
 	o varnish-2.0.4 [pkg/41118]
 	o vera-1.17
@@ -1369,7 +1382,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weewm-0.01
 	o whohas-0.23
 	o windowlab-1.38
-	o wine-devel-1.1.34
+	o wine-devel-1.1.35
+	o wireshark-1.2.5
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
