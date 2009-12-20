@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2009/12/20 23:22:35 tnn Exp $
+
+--- examples/Makefile.in.orig	2009-10-17 02:08:52.000000000 +0000
++++ examples/Makefile.in
+@@ -92,7 +92,7 @@ am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERB
+ am__v_at_0 = @
+ CCLD = $(CC)
+ LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+-	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
++	$(LIBTOOLFLAGS) --mode=link $(CCLD) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ AM_V_CCLD = $(am__v_CCLD_$(V))
+ am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
