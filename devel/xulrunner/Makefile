@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23.2.1 2009/10/28 18:13:23 tron Exp $
+# $NetBSD: Makefile,v 1.23.2.2 2009/12/20 19:41:08 spz Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/firefox/xulrunner/:S/3.5/1.9.1/:S/.source//}
-FIREFOX_VER=	3.5.4
+FIREFOX_VER=	3.5.6
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
