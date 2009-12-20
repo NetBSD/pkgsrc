@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.21 2009/05/21 03:42:49 taca Exp $
+$NetBSD: patch-aa,v 1.22 2009/12/20 07:46:32 taca Exp $
 
---- Makefile.in.orig	2009-03-12 08:19:56.000000000 +0900
+--- Makefile.in.orig	2009-11-25 10:42:00.000000000 +0900
 +++ Makefile.in
 @@ -198,7 +198,7 @@ sudo_noexec.lo: $(srcdir)/sudo_noexec.c
  	$(LIBTOOL) --mode=compile $(CC) -c $(CPPFLAGS) $(CFLAGS) $(DEFS) $(OPTIONS) $(srcdir)/sudo_noexec.c
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.21 2009/05/21 03:42:49 taca Exp $
  
  # Uncomment the following if you want "make distclean" to clean the parser
  @DEV@GENERATED = gram.h gram.c toke.c def_data.c def_data.h
-@@ -406,36 +406,36 @@ sudoers.ldap.cat: sudoers.ldap.man
+@@ -408,36 +408,36 @@ sudoers.ldap.cat: sudoers.ldap.man
  ChangeLog:
  	cvs2cl --follow-only trunk
  
