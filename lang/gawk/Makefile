@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2009/09/23 18:23:05 tron Exp $
+# $NetBSD: Makefile,v 1.43 2009/12/20 23:03:15 tnn Exp $
 
 DISTNAME=	gawk-3.1.7
 CATEGORIES=	lang
@@ -25,6 +25,7 @@ INFO_FILES=		yes
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 
 LDFLAGS.IRIX+=		-lgen
+CPPFLAGS.OSF1+=		-D_OSF_SOURCE
 
 .include "../../mk/bsd.prefs.mk"
 
