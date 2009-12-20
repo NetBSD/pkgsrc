@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.676 2009/12/15 16:18:19 abs Exp $
+# $NetBSD: Makefile,v 1.677 2009/12/20 15:42:12 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -113,6 +113,7 @@ SUBDIR+=	epiphany
 SUBDIR+=	epiphany-extensions
 SUBDIR+=	erubis
 SUBDIR+=	fcgi
+SUBDIR+=	fengoffice
 SUBDIR+=	ffproxy
 SUBDIR+=	firefox
 SUBDIR+=	firefox-bin
@@ -211,7 +212,6 @@ SUBDIR+=	ns-remote
 SUBDIR+=	nspluginwrapper
 SUBDIR+=	nvu
 SUBDIR+=	ocsigen
-SUBDIR+=	opengoo
 SUBDIR+=	openjdk7-icedtea-plugin
 SUBDIR+=	opera
 SUBDIR+=	opera-acroread
