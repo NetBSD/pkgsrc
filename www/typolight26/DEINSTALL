@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.1.1.1 2009/04/26 03:52:30 taca Exp $
+# $NetBSD: DEINSTALL,v 1.1.1.1.4.1 2009/12/20 09:41:38 tron Exp $
 
 TL_WEBDIR="@PREFIX@/@TL_WEBDIR@"
 TL_DIRS="system/config system/drivers system/libraries system/logs \
@@ -8,6 +8,8 @@ case ${STAGE} in
 DEINSTALL)
 	# remove cache files.
 	${FIND} ${TL_WEBDIR}/system/html -type f ! -name index.html \
+		-exec ${RM} -f {} \;
+	${FIND} ${TL_WEBDIR}/plugins/tcpdf/cache -type f ! -name .htaccess \
 		-exec ${RM} -f {} \;
 	;;
 POST-DEINSTALL)
