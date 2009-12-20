@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/10/19 19:17:42 he Exp $
+# $NetBSD: Makefile,v 1.6 2009/12/20 10:09:42 tron Exp $
 
 .include "../../chat/xchat/Makefile.common"
 
@@ -23,13 +23,13 @@ USE_TOOLS+=	perl
 .include "../../lang/perl5/buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xchat
+	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/share/examples/xchat
 	${INSTALL_DATA} ${WRKSRC}/plugins/perl/alt_completion.pl \
-		${PREFIX}/share/examples/xchat
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
+		${DESTDIR}/${PREFIX}/share/examples/xchat
+	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/share/doc/xchat
 	${INSTALL_DATA} ${WRKSRC}/plugins/perl/xchat2-perl.html \
-		${PREFIX}/share/doc/xchat
+		${DESTDIR}/${PREFIX}/share/doc/xchat
 	${INSTALL_DATA} ${WRKSRC}/plugins/perl/xchat2-perldocs.html \
-		${PREFIX}/share/doc/xchat
+		${DESTDIR}/${PREFIX}/share/doc/xchat
 
 .include "../../mk/bsd.pkg.mk"
