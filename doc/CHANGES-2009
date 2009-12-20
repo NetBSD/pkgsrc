@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4675 2009/12/20 22:15:27 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.4676 2009/12/20 22:50:00 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6308,3 +6308,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/coreutils to 6.12nb3 [tonnerre 2009-12-20]
 	Updated net/wireshark to 1.2.5 [tonnerre 2009-12-20]
 	Updated www/horde to 3.3.6 [tonnerre 2009-12-20]
+	Updated math/maxima to 5.20.1 [asau 2009-12-20]
