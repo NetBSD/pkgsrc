@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4667 2009/12/19 12:59:39 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4668 2009/12/20 04:23:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6299,3 +6299,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/ruby-tokyocabinet to 1.29nb1 [obache 2009-12-19]
 	Updated databases/tokyotyrant to 1.1.33nb1 [obache 2009-12-19]
 	Updated textproc/tokyodystopia to 0.9.13nb1 [obache 2009-12-19]
+	Updated www/typolight26 to 2.6.7nb3 [taca 2009-12-20]
+	Updated www/typolight27 to 2.7.6 [taca 2009-12-20]
