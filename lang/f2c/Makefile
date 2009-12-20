@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2009/12/03 12:48:37 asau Exp $
+# $NetBSD: Makefile,v 1.51 2009/12/20 12:27:57 jmmv Exp $
 
 DISTNAME=	f2c-20090411	# see notes below
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -20,6 +20,16 @@ USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		yacc
 INSTALLATION_DIRS=	bin share/doc/f2c ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
 
+.include "../../mk/bsd.prefs.mk"
+
+# XXX(jmmv): This is a very ugly workaround.  CPP should probably default to
+# /usr/bin/cpp in OS X.
+.if ${OPSYS} == "Darwin"
+F2C_F77_CPP=	/usr/bin/cpp
+.else
+F2C_F77_CPP=	${CPP}
+.endif
+
 post-extract:
 	@${CP} ${FILESDIR:Q}/f2c.mk ${WRKSRC}/src/Makefile
 	@mv ${WRKSRC}/src/.depend  ${WRKSRC}/src/depend.orig
@@ -28,7 +38,7 @@ post-extract:
 # Handle f2c-f77 script:
 post-build:
 	${SED} -e 's;@PREFIX@;${PREFIX};g' \
-	  -e 's;@CC@;${CC};g' -e 's;@CPP@;${CPP};g' \
+	  -e 's;@CC@;${CC};g' -e 's;@CPP@;${F2C_F77_CPP};g' \
 	  -e "s;@SHELL@;${TOOLS_PLATFORM.sh:Q};g" \
 	 ${FILESDIR}/f2c-f77.in > ${WRKSRC}/f2c-f77
 
