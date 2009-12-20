@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.3 2009/12/20 11:31:30 manu Exp $
+--- auth_mellon_handler.c.orig	2009-12-20 10:19:47.000000000 +0100
++++ auth_mellon_handler.c	2009-12-20 10:20:09.000000000 +0100
+@@ -1899,9 +1899,9 @@
+             return HTTP_BAD_REQUEST;
+         }
+     
+         /* Check that charset is sane */
+-        for (cp = psf_id; *cp; cp++) {
++        for (cp = charset; *cp; cp++) {
+             if (!apr_isalnum(*cp) && (*cp != '-') && (*cp != '_')) {
+                 ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r, 
+                               "Bad repost query: invalid charset \"%s\"", charset);
+                 return HTTP_BAD_REQUEST;
