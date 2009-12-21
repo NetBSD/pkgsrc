@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/12/15 13:32:10 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/12/21 12:07:27 joerg Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -398,7 +398,7 @@ lib/erlang/lib/crypto-${VERSION.crypto}/doc/html/licenses.html
 lib/erlang/lib/crypto-${VERSION.crypto}/doc/html/notes.html
 lib/erlang/lib/crypto-${VERSION.crypto}/doc/html/release_notes.html
 lib/erlang/lib/crypto-${VERSION.crypto}/doc/html/users_guide.html
-lib/erlang/lib/crypto-${VERSION.crypto}/doc/pdf/crypto-1.${OS_VERSION}.pdf
+lib/erlang/lib/crypto-${VERSION.crypto}/doc/pdf/crypto-${VERSION.crypto}.pdf
 lib/erlang/lib/crypto-${VERSION.crypto}/info
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/debugger.html
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/debugger_chapter.html
