@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1 2009/12/21 19:30:25 joerg Exp $
+
+--- coconut/Makefile.in.orig	2009-12-21 19:17:11.000000000 +0000
++++ coconut/Makefile.in
+@@ -132,8 +132,8 @@ SUBDIRS = $(gtk_subdir) $(gnet_subdir) $
+ SUFFIXES = .m .c
+ 
+ lib_LTLIBRARIES = libcoconut.la
+-LINK = $(LIBTOOL) --mode=link $(CC) $(LIBS) $(LDFLAGS) -o $@
+-OBJCLINK = $(LIBTOOL) --mode=link $(OBJC) $(LIBS) $(OBJCLIBS) $(LDFLAGS) -o $@
++LINK = $(LIBTOOL) --mode=link --tag=CC $(CC) $(LIBS) $(LDFLAGS) -o $@
++OBJCLINK = $(LIBTOOL) --mode=link --tag=CC $(OBJC) $(LIBS) $(OBJCLIBS) $(LDFLAGS) -o $@
+ 
+ 
+ # INCLUDES = -I$(top_srcdir) $(GLIB_CFLAGS) $(POPT_CFLAGS) $(XML_CFLAGS)
+@@ -431,12 +431,12 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@	./$(DEPDIR)/fvector.Plo ./$(DEPDIR)/fxml.Plo
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
++LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+ 	$(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+ OBJCCOMPILE = $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCFLAGS) $(OBJCFLAGS)
+-LTOBJCCOMPILE = $(LIBTOOL) --mode=compile $(OBJC) $(DEFS) \
++LTOBJCCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(OBJC) $(DEFS) \
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_OBJCFLAGS) $(OBJCFLAGS)
+ OBJCLD = $(OBJC)
