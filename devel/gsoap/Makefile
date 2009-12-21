@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/11/29 21:31:57 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2009/12/21 20:13:36 joerg Exp $
 
 DISTNAME=		gsoap_2.7.13
 PKGNAME=		gsoap-2.7.13
@@ -11,6 +11,7 @@ HOMEPAGE=		http://gsoap2.sourceforge.net/
 COMMENT=		Tools for coding SOAP XML Web Services in C and C++
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/gsoap-2.7
 GNU_CONFIGURE=		yes
