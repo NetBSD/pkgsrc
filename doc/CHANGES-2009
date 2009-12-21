@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4679 2009/12/21 07:00:44 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4680 2009/12/21 07:23:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6312,3 +6312,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/maxima to 5.20.1 [asau 2009-12-20]
 	Updated net/proftpd to 1.3.2c [tonnerre 2009-12-21]
 	Updated databases/ruby-ldap to 0.9.9 [taca 2009-12-21]
+	Updated graphics/optipng to 0.6.3nb1 [adam 2009-12-21]
