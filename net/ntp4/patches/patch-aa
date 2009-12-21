@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2009/12/21 14:19:58 tnn Exp $
+$NetBSD: patch-aa,v 1.10 2009/12/21 14:48:21 tnn Exp $
 
 --- include/ntp_syscall.h.orig	2004-02-25 05:57:56.000000000 +0000
 +++ include/ntp_syscall.h
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.9 2009/12/21 14:19:58 tnn Exp $
  # include <sys/timex.h>
  #endif
  
-+#ifdef NTP_SYSCALLS_STDDJ_NANO) && !defined(MOD_NANO)
++#if defined(ADJ_NANO) && !defined(MOD_NANO)
 +#define MOD_NANO ADJ_NANO
 +#endif
 +
