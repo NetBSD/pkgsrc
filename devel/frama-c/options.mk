@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/12/07 16:39:12 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2009/12/21 12:45:38 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.frama-c
 PKG_SUPPORTED_OPTIONS=	gnomecanvas
@@ -10,4 +10,6 @@ PKG_SUGGESTED_OPTIONS=	gnomecanvas
 
 .if !empty(PKG_OPTIONS:Mgnomecanvas)
 PLIST_SRC+=	PLIST.gnomecanvas
+
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .endif
