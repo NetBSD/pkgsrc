@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2009/12/15 21:31:52 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2009/12/21 20:38:04 joerg Exp $
 #
 
 DISTNAME=	geda-gaf-${PKGVERSION}
 PKGNAME=	geda-${PKGVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 PKGVERSION=	1.6.0
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/release/v1.6/${PKGVERSION}/ \
@@ -55,7 +55,8 @@ REPLACE_PERL+=		utils/scripts/pads_backannotate \
 			utils/scripts/gsymupdate \
 			utils/scripts/pcb_backannotate \
 			utils/scripts/refdes_renum \
-			utils/scripts/sarlacc_sym
+			utils/scripts/sarlacc_sym \
+			utils/gxyrs/gxyrs.pl
 
 # needs GNU m4 for the PCBboard and gsch2pcb netlisters
 USE_TOOLS+=		gmake m4:run pkg-config
