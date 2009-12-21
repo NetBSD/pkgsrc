@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2009/10/18 22:29:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/12/21 22:22:37 drochner Exp $
 
 BUILDLINK_TREE+=	libsoup24
 
@@ -15,6 +15,7 @@ BUILDLINK_PKGSRCDIR.libsoup24?=		../../net/libsoup24
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/libproxy/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .endif # LIBSOUP24_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libsoup24
