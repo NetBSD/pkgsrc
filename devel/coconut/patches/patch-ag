@@ -1,0 +1,27 @@
+$NetBSD: patch-ag,v 1.1 2009/12/21 19:30:25 joerg Exp $
+
+--- test/Makefile.in.orig	2009-12-21 19:23:48.000000000 +0000
++++ test/Makefile.in
+@@ -6636,18 +6636,18 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@	./$(DEPDIR)/message-test.Po ./$(DEPDIR)/simple.Po
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
++LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+ 	$(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
++LINK = $(LIBTOOL) --mode=link --tag=CC $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ OBJCCOMPILE = $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCFLAGS) $(OBJCFLAGS)
+-LTOBJCCOMPILE = $(LIBTOOL) --mode=compile $(OBJC) $(DEFS) \
++LTOBJCCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(OBJC) $(DEFS) \
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_OBJCFLAGS) $(OBJCFLAGS)
+ OBJCLD = $(OBJC)
+-OBJCLINK = $(LIBTOOL) --mode=link $(OBJCLD) $(AM_OBJCFLAGS) $(OBJCFLAGS) \
++OBJCLINK = $(LIBTOOL) --mode=link --tag=CC $(OBJCLD) $(AM_OBJCFLAGS) $(OBJCFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ DIST_SOURCES = $(carray_test_out_SOURCES) $(carrow_test_gui_out_SOURCES) \
+ 	$(casyncfile_test1_out_SOURCES) $(casyncfile_test2_out_SOURCES) \
