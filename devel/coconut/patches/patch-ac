@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1 2009/12/21 19:30:25 joerg Exp $
+
+--- coconut/gtk/Makefile.in.orig	2009-12-21 19:04:31.000000000 +0000
++++ coconut/gtk/Makefile.in
+@@ -210,11 +210,11 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@	./$(DEPDIR)/cwindow.Plo
+ OBJCCOMPILE = $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCFLAGS) $(OBJCFLAGS)
+-LTOBJCCOMPILE = $(LIBTOOL) --mode=compile $(OBJC) $(DEFS) \
++LTOBJCCOMPILE = $(LIBTOOL) --mode=compile --tag CC $(OBJC) $(DEFS) \
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_OBJCFLAGS) $(OBJCFLAGS)
+ OBJCLD = $(OBJC)
+-OBJCLINK = $(LIBTOOL) --mode=link $(OBJCLD) $(AM_OBJCFLAGS) $(OBJCFLAGS) \
++OBJCLINK = $(LIBTOOL) --mode=link --tag CC $(OBJCLD) $(AM_OBJCFLAGS) $(OBJCFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ DIST_SOURCES = $(libcoconut_gtk_la_SOURCES)
+ HEADERS = $(libcoconut_gtkinclude_HEADERS)
