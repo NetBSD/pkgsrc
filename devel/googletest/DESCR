@@ -1,0 +1,8 @@
+The googletest package provides Google's C++ test writing framework. 
+It is based on the xUnit architecture and works for a variety of
+platforms (Linux, Mac OS X, Windows, Cygwin, Windows CE, and
+Symbian). It provides various options for running the tests, a 
+rich set of assertions, automatic test discovery, and XML test
+report generation. It supports type- and value-parameterized tests,   
+death tests, fatal and non-fatal failures, and user-defined
+assertions.
