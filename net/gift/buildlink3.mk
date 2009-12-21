@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:08 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/12/21 20:34:05 joerg Exp $
 
 BUILDLINK_TREE+=	gift
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gift
 GIFT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gift+=	gift>=0.11.6
-BUILDLINK_ABI_DEPENDS.gift+=	gift>=0.11.6nb2
+BUILDLINK_ABI_DEPENDS.gift+=	gift>=0.11.8.1nb2
 BUILDLINK_PKGSRCDIR.gift?=	../../net/gift
 
 .include "../../devel/libltdl/buildlink3.mk"
