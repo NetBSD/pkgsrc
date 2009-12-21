@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/29 08:10:59 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/21 07:00:02 taca Exp $
 
 DISTNAME=	ruby-ldap-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ldap-${VER}
 CATEGORIES=	databases ruby
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ruby-ldap/}
+MASTER_SITES=	http://rubyforge.org/frs/download.php/58441/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://ruby-ldap.sourceforge.net/
+HOMEPAGE=	http://rubyforge.org/projects/ruby-ldap/
 COMMENT=	LDAP extension module for Ruby
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-VER=		0.9.8
+VER=		0.9.9
 
 REPLACE_RUBY_DIRS=	example/pr_ctl example/cgi/search.cgi
 RUBY_HAS_ARCHLIB=	yes
