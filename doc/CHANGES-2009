@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4677 2009/12/21 00:42:33 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.4678 2009/12/21 02:20:55 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6228,6 +6228,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/nagios-plugin-radius to 1.4.14 [bouyer 2009-03-24]
 	Updated net/nagios-plugin-snmp to 1.4.14 [bouyer 2009-03-24]
 	Updated lang/clisp to 2.48 [asau 2009-12-15]
+	Updated chat/centerim to 4.22.9 [jnemeth 2009-12-15]
 	Updated math/openaxiom to 1.3.0 [asau 2009-12-16]
 	Updated math/fricas to 1.0.8 [asau 2009-12-16]
 	Updated devel/xulrunner to 1.9.1.6 [tnn 2009-12-15]
