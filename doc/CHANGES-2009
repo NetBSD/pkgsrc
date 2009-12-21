@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4678 2009/12/21 02:20:55 jnemeth Exp $
+$NetBSD: CHANGES-2009,v 1.4679 2009/12/21 07:00:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -6311,3 +6311,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/horde to 3.3.6 [tonnerre 2009-12-20]
 	Updated math/maxima to 5.20.1 [asau 2009-12-20]
 	Updated net/proftpd to 1.3.2c [tonnerre 2009-12-21]
+	Updated databases/ruby-ldap to 0.9.9 [taca 2009-12-21]
