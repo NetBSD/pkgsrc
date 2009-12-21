@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/11 20:13:49 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/21 20:23:28 joerg Exp $
 #
 
 DISTNAME=	scidavis-0.2.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scidavis/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +17,8 @@ INSTALL_MAKE_FLAGS+= INSTALL_ROOT=${DESTDIR}
 
 do-configure:
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} ${QTDIR}/bin/qmake
+
+BUILDLINK_DEPMETHOD.qt4-tools=	full
 
 # XXX patched out for now
 #.include "../../lang/python/extension.mk"
