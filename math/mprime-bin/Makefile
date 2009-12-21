@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/12/13 02:01:27 asau Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/21 20:10:17 joerg Exp $
 #
 
 DISTNAME=		mprime2414
@@ -17,11 +17,11 @@ WRKSRC=			${WRKDIR}
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base
 
-do-build:
+NO_BUILD=		yes
+INSTALLATION_DIRS=	bin share/doc/mprime
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mprime ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mprime
 	${INSTALL_DATA} ${WRKSRC}/*txt ${DESTDIR}${PREFIX}/share/doc/mprime
 
 .include "../../mk/bsd.pkg.mk"
