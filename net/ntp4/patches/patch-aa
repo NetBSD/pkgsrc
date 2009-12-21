@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.9 2009/12/21 14:19:58 tnn Exp $
+
+--- include/ntp_syscall.h.orig	2004-02-25 05:57:56.000000000 +0000
++++ include/ntp_syscall.h
+@@ -14,6 +14,14 @@
+ # include <sys/timex.h>
+ #endif
+ 
++#ifdef NTP_SYSCALLS_STDDJ_NANO) && !defined(MOD_NANO)
++#define MOD_NANO ADJ_NANO
++#endif
++
++#if defined(ADJ_TAI) && !defined(MOD_TAI)
++#define MOD_TAI ADJ_TAI
++#endif
++
+ #ifndef NTP_SYSCALLS_LIBC
+ #ifdef NTP_SYSCALLS_STD
+ # define ntp_adjtime(t)		syscall(SYS_ntp_adjtime, (t))
