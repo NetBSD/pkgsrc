@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:56 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2009/12/21 20:19:53 joerg Exp $
 #
 
 DISTNAME=	regina301
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://regina-rexx.sourceforge.net/
 COMMENT=	Implementation of the REXX language
+
+MAKE_JOBS_SAFE=	no
 
 WRKSRC=		${WRKDIR}
 GNU_CONFIGURE=	yes
