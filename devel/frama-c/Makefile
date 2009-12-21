@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/07 16:39:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/21 12:45:38 joerg Exp $
 #
 
 DISTNAME=	frama-c-Beryllium-20090901
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
+
+PLIST_SRC=	${PLIST_SRC_DFLT}
 
 .include "options.mk"
 
