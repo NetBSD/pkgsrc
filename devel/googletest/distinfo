@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/12/21 19:18:25 reed Exp $
+
+SHA1 (gtest-1.4.0.tar.bz2) = d26e1a67ec08a9d6167ecf77c61961c469f448b2
+RMD160 (gtest-1.4.0.tar.bz2) = 2688f9e4c68af10a5974af91c0fe2dd551cf72c7
+Size (gtest-1.4.0.tar.bz2) = 525425 bytes
