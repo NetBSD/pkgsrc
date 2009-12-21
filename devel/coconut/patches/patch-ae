@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1 2009/12/21 19:30:25 joerg Exp $
+
+--- coconut/gl/Makefile.in.orig	2009-12-21 19:12:53.000000000 +0000
++++ coconut/gl/Makefile.in
+@@ -121,8 +121,8 @@ install_sh = @install_sh@
+ SUFFIXES = .m .c
+ 
+ lib_LTLIBRARIES = libcoconut_gl.la
+-LINK = $(LIBTOOL) --mode=link $(CC) $(LIBS) $(LDFLAGS) -o $@
+-OBJCLINK = $(LIBTOOL) --mode=link $(OBJC) $(LIBS) $(OBJCLIBS) $(LDFLAGS) -o $@
++LINK = $(LIBTOOL) --mode=link --tag=CC $(CC) $(LIBS) $(LDFLAGS) -o $@
++OBJCLINK = $(LIBTOOL) --mode=link --tag=CC $(OBJC) $(LIBS) $(OBJCLIBS) $(LDFLAGS) -o $@
+ 
+ INCLUDES = -I$(top_srcdir) 
+ 
+@@ -165,7 +165,7 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@	./$(DEPDIR)/cglwidget.Plo
+ OBJCCOMPILE = $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCFLAGS) $(OBJCFLAGS)
+-LTOBJCCOMPILE = $(LIBTOOL) --mode=compile $(OBJC) $(DEFS) \
++LTOBJCCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(OBJC) $(DEFS) \
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_OBJCFLAGS) $(OBJCFLAGS)
+ OBJCLD = $(OBJC)
