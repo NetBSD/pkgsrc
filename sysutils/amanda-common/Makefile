@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2009/12/11 17:36:36 heinz Exp $
+# $NetBSD: Makefile,v 1.49 2009/12/22 20:58:54 joerg Exp $
 
 PKGNAME=		amanda-common-${VERS}
 SVR4_PKGNAME=		amaco
@@ -36,5 +36,7 @@ PKG_SHELL.${AMANDA_USER}=	${SH}
 OWN_DIRS_PERMS=		${AMANDA_VAR} ${AMANDA_USER} ${AMANDA_GROUP} 0700
 OWN_DIRS_PERMS+=	${AMANDA_VAR}/gnutar-lists  ${AMANDA_USER} ${AMANDA_GROUP} 0700
 BUILD_DEFS+=		AMANDA_VAR
+
+INSTALL_MAKE_FLAGS+=	SETUID_GROUP=${ROOT_GROUP}
 
 .include "../../mk/bsd.pkg.mk"
