@@ -1,13 +1,16 @@
-$NetBSD: patch-ag,v 1.3 2009/04/28 11:43:31 hasso Exp $
+$NetBSD: patch-ag,v 1.4 2009/12/22 15:42:20 drochner Exp $
 
---- plug-ins/icc_examin/icc_examin/configure.orig	2009-04-12 11:30:12 +0300
-+++ plug-ins/icc_examin/icc_examin/configure	2009-04-12 11:31:02 +0300
-@@ -207,7 +207,7 @@ else
+--- plug-ins/icc_examin/icc_examin/configure.orig	2007-05-10 15:48:30.000000000 +0000
++++ plug-ins/icc_examin/icc_examin/configure
+@@ -207,9 +207,9 @@ else
        echo "SunOS                   detected"
        OSUNAME=SunOS
      else
 -      if [ $UNAME_ = "OpenBSD" ] || [ $UNAME_ = "NetBSD" ] || [ $UNAME_ = "FreeBSD" ]; then
 +      if [ $UNAME_ = "OpenBSD" ] || [ $UNAME_ = "NetBSD" ] || [ $UNAME_ = "FreeBSD" ] || [ $UNAME_ = "DragonFly" ]; then
          echo "BSD = 1" >> $CONF
-         OS_EXT=.bsd
+-        OS_EXT=.bsd
++#        OS_EXT=.bsd
          echo "#define BSD 1" >> $CONF_H
+         echo "BSD $UNAME_             detected"
+         OSUNAME=BSD
