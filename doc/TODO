@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8808 2009/12/20 22:15:27 tonnerre Exp $
+$NetBSD: TODO,v 1.8809 2009/12/22 20:54:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -595,7 +595,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o flashplayer-0.4.13
 	o flightgear-1.9.0
 	o flpsed-0.4.4
-	o fluidsynth-1.1.0
+	o fluidsynth-1.1.1
 	o fmsx-3.0
 	o fondu-040927
 	o font-adobe-100dpi-1.0.1
@@ -655,6 +655,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdsreader-0.3.2
 	o geany-0.18
 	o geda-1.6.0.20091004
+	o gedit-2.28.3
 	o gedit-plugins-2.28.0 [GNOME 2.28]
 	o gentoo-0.15.6
 	o gettext-0.17
@@ -665,7 +666,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ghostscript-esp-8.15.3
 	o gif2png-2.5.2
 	o gifsicle-1.48
-	o gimp-2.6.8
 	o gimp-docs-2.4.2
 	o gkrellm-2.3.1
 	o gkrellm-multiping-2.0.13
@@ -698,7 +698,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnupg2-2.0.13
 	o gogo-3.11p1
 	o golem-0.0.6
 	o gossip-0.31
@@ -723,6 +722,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtkglarea-2.0.1
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
+	o gtksourceview-2.8.2
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -770,7 +770,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o inputproto-2.0
 	o inspircd-1.2.1
 	o instiki-0.13
-	o intercal-0.24
 	o ircservices-5.1.20
 	o irrd-2.3.4 [pkg/36813|38002]
 	o iselect-1.4.0
@@ -1029,8 +1028,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmortal-0.7.1
 	o openmotif-2.3.2
 	o openmsx-0.7.0
-	o openoffice2-bin-2.4.3
-	o openoffice3-bin-3.1.1
 	o openssh-5.3.1
 	o openssl-0.9.8l
 	o openttd-0.7.4
@@ -1133,7 +1130,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pure-ftpd-1.0.27
 	o pureftpd-1.0.26
 	o puzzle-5.2
-	o puzzles-8785
+	o puzzles-8786
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1211,8 +1208,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubigen-1.5.2
 	o ruby-1.9.1.129 (Ruby 1.9.1-p129)
-	o ruby-DBD-mysql-0.4.2 [should be replace with new ruby-dbi]
-	o ruby-DBI-0.4.1 [should be replace with new ruby-dbi]
 	o ruby-SDL-2.0.1b
 	o ruby-builder-2.2.0
 	o ruby-cmd-0.8.0
@@ -1311,7 +1306,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
 	o systrace-1.6e
-	o t-prot-2.8
+	o t-prot-2.8.1
 	o tacacs-4.0.4.14
 	o tads-3.0.16
 	o tcl-8.5.8
