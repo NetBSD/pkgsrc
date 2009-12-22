@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4684 2009/12/22 13:59:02 reed Exp $
+$NetBSD: CHANGES-2009,v 1.4685 2009/12/22 16:09:30 jmmv Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -6317,3 +6317,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/ruby-ldap to 0.9.9 [taca 2009-12-21]
 	Updated graphics/optipng to 0.6.3nb1 [adam 2009-12-21]
 	Updated chat/pidgin to 2.6.2nb1 [dsainty 2009-12-22]
+	Updated devel/atf to 0.7 [jmmv 2009-12-22]
