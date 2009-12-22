@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2009/12/08 12:45:42 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2009/12/22 06:54:28 dsainty Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pidgin
 PKG_SUPPORTED_OPTIONS+=		dbus debug farsight gstreamer gtkspell
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	--disable-gtkspell
 .if !empty(PKG_OPTIONS:Mgstreamer)
 CONFIGURE_ARGS+=	--enable-gstreamer
 .  include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.  include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
