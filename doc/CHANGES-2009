@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4686 2009/12/22 20:43:53 drochner Exp $
+$NetBSD: CHANGES-2009,v 1.4687 2009/12/22 23:24:59 schmonz Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -6346,3 +6346,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/pinentry to 0.7.6 [drochner 2009-12-22]
 	Updated security/dirmngr to 1.0.3 [drochner 2009-12-22]
 	Updated security/libksba to 1.0.7 [drochner 2009-12-22]
+	Updated www/ikiwiki to 3.20091218 [schmonz 2009-12-22]
