@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2009/06/30 00:07:12 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/12/22 16:08:30 jmmv Exp $
 #
 
-DISTNAME=	atf-0.6
+DISTNAME=	atf-0.7
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jmmv/atf/0.6/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jmmv/atf/0.7/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/~jmmv/atf/
 COMMENT=	Automated testing framework
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

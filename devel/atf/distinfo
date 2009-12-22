@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/01/18 21:23:14 jmmv Exp $
+$NetBSD: distinfo,v 1.7 2009/12/22 16:08:30 jmmv Exp $
 
-SHA1 (atf-0.6.tar.gz) = 311b277477bae7dab8e634f7c17cce25a8664012
-RMD160 (atf-0.6.tar.gz) = e81a997e3c3f63b6e473aef6290617ac8438fdae
-Size (atf-0.6.tar.gz) = 572410 bytes
+SHA1 (atf-0.7.tar.gz) = a77edf79576039374a3d88872b9059ac5f6d25aa
+RMD160 (atf-0.7.tar.gz) = 38e9708a637696311c644cd1665b4753d6b8e939
+Size (atf-0.7.tar.gz) = 661714 bytes
