@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.14 2009/12/22 04:39:59 dsainty Exp $
+
+We intentionally wire down the 'libswanted' list in the package Makefile,
+so don't let the hints file add new libraries that may be found outside
+Pkgsrc control.
+
+--- hints/linux.sh	2009-02-13 11:58:12.000000000 +1300
++++ hints/linux.sh	2009-12-22 16:46:41.400187863 +1300
+@@ -54,9 +54,6 @@
+ shift
+ libswanted="$*"
+ 
+-# Debian 4.0 puts ndbm in the -lgdbm_compat library.
+-libswanted="$libswanted gdbm_compat"
+-
+ # If you have glibc, then report the version for ./myconfig bug reporting.
+ # (Configure doesn't need to know the specific version since it just uses
+ # gcc to load the library for all tests.)
