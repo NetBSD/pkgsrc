@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/12/02 21:38:43 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/12/22 23:23:27 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -199,6 +199,25 @@ share/ikiwiki/po/da/directives/ikiwiki/directive/toggle.da.po
 share/ikiwiki/po/da/directives/ikiwiki/directive/toggleable.da.po
 share/ikiwiki/po/da/directives/ikiwiki/directive/version.da.po
 share/ikiwiki/po/da/smiley/smileys.da.po
+share/ikiwiki/po/es/basewiki/ikiwiki.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/directive.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/formatting.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/markdown.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/openid.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/pagespec.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/pagespec/attachment.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/pagespec/po.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/searching.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/subpage.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/subpage/linkingrules.es.po
+share/ikiwiki/po/es/basewiki/ikiwiki/wikilink.es.po
+share/ikiwiki/po/es/basewiki/index.es.po
+share/ikiwiki/po/es/basewiki/recentchanges.es.po
+share/ikiwiki/po/es/basewiki/sandbox.es.po
+share/ikiwiki/po/es/basewiki/shortcuts.es.po
+share/ikiwiki/po/es/basewiki/templates.es.po
+share/ikiwiki/po/es/basewiki/templates/note.es.po
+share/ikiwiki/po/es/basewiki/templates/popup.es.po
 share/ikiwiki/po/fr/basewiki/ikiwiki.fr.po
 share/ikiwiki/po/fr/basewiki/ikiwiki/directive.fr.po
 share/ikiwiki/po/fr/basewiki/ikiwiki/formatting.fr.po
