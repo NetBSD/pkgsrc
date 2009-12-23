@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/01/04 15:16:11 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2009/12/23 19:22:28 abs Exp $
 
---- wmavgload.c.orig	2006-01-04 15:01:11.000000000 +0000
+--- wmavgload.c.orig	1998-09-28 22:04:06.000000000 +0000
 +++ wmavgload.c
 @@ -519,7 +519,7 @@ void InitLoad()
    loads_3 = 0.0;
