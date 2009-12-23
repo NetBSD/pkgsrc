@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.24 2009/12/03 12:39:59 asau Exp $
+$NetBSD: distinfo,v 1.25 2009/12/23 00:48:20 asau Exp $
 
 SHA1 (f2c-20090411.tar.gz) = 949e832b84aaa912a99471a95c6fd449898d50e0
 RMD160 (f2c-20090411.tar.gz) = e86ff3de4564267a57f508a5a68e81af2b1a9468
 Size (f2c-20090411.tar.gz) = 1045385 bytes
 SHA1 (patch-aa) = f1224ff17cdc96f083a247dce88b690e8b939eb0
 SHA1 (patch-ad) = 7f204a45891e3632589ea8fb0e4e379a0a792dea
+SHA1 (patch-ak) = 8652a54df300ddd60d9b1a9594d312349b782cf4
