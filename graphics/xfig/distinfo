@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2009/11/04 15:34:08 gdt Exp $
+$NetBSD: distinfo,v 1.22 2009/12/23 14:21:48 drochner Exp $
 
 SHA1 (xfig.3.2.5b.full.tar.gz) = 0730d7e6bc217c0de02682efb0078821512bb542
 RMD160 (xfig.3.2.5b.full.tar.gz) = aad4cfd808c116d34218e9890a898652e4f52ab6
@@ -13,3 +13,4 @@ SHA1 (patch-ai) = bd3f0c40e542aae1cfd739dbe0c0f096ddfdefcf
 SHA1 (patch-ak) = fcc358a595590ea3136d71bd9f61449d54914c46
 SHA1 (patch-al) = ca20d3ec7bcf2ac24fd0a415495f805add23142d
 SHA1 (patch-am) = 72adbda34425fda49f2072a3d40a3d942e07e1ba
+SHA1 (patch-an) = 4bfce8dbd420bc4b4d8efa5b01a39e3a9ce03ca6
