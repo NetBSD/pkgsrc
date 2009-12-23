@@ -41,13 +41,12 @@ CPPFLAGS+=	-I$(F2CSRCDIR)	# grammar
 
 DPSRCS+=	sysdep.hd
 
+# Handle obsolete systems like Solaris:
 sysdep.hd:
-	echo '/*OK*/' > $@	# stub
-# sysdep.hd:
-# 	if $(CC) sysdeptest.c; then echo '/*OK*/' > sysdep.hd;\
-# 	elif $(CC) -DNO_MKDTEMP sysdeptest.c; then echo '#define NO_MKDTEMP' >sysdep.hd;\
-# 	else echo '#define NO_MKDTEMP' >sysdep.hd; echo '#define NO_MKSTEMP' >>sysdep.hd; fi
-# 	rm -f a.out
+	if $(CC) sysdeptest.c; then echo '/*OK*/' > sysdep.hd; \
+	elif $(CC) -DNO_MKDTEMP sysdeptest.c; then echo '#define NO_MKDTEMP' > sysdep.hd; \
+	else { echo '#define NO_MKDTEMP'; echo '#define NO_MKSTEMP'; } > sysdep.hd; fi
+	rm -f a.out
 
 CLEANFILES+=	sysdep.hd # sysdep.hd tokdefs.h f2c.t
 
