@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4688 2009/12/23 07:09:46 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4689 2009/12/23 09:35:18 roy Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -6348,3 +6348,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/libksba to 1.0.7 [drochner 2009-12-22]
 	Updated www/ikiwiki to 3.20091218 [schmonz 2009-12-22]
 	Updated lang/php5 to 5.2.12 [taca 2009-12-23]
+	Updated net/dhcpcd to 5.1.4 [roy 2009-12-23]
