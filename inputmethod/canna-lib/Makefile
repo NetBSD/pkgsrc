@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/09/18 12:35:27 taca Exp $
+# $NetBSD: Makefile,v 1.11 2009/12/23 21:46:10 abs Exp $
 
 PKGREVISION=	2
 CANNA_MODULE=	lib
+
+PKG_DESTDIR_SUPPORT= destdir
 
 .include "../../inputmethod/canna/Makefile.common"
 
