@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/11 19:45:46 adam Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/23 23:38:46 joerg Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,6 +9,8 @@ COMMENT=	Classification and regression based on a forest of trees
 
 R_PKGNAME=	randomForest
 R_PKGVER=	4.5-34
+
+USE_LANGUAGES=	c fortran
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
