@@ -1,10 +1,8 @@
-$NetBSD: patch-ag,v 1.2.34.1 2009/11/30 23:10:20 tron Exp $
+$NetBSD: patch-ag,v 1.2.34.2 2009/12/23 19:09:51 spz Exp $
 
 * Ajust for pkgsrc.
-* Fix for http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4017:
-	http://svn.php.net/viewvc?view=revision&revision=289990
 
---- php.ini-dist.orig	2009-02-14 01:55:18.000000000 +0900
+--- php.ini-dist.orig	2009-11-05 13:29:34.000000000 +0000
 +++ php.ini-dist
 @@ -471,7 +471,7 @@ default_mimetype = "text/html"
  ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -27,7 +25,7 @@ $NetBSD: patch-ag,v 1.2.34.1 2009/11/30 23:10:20 tron Exp $
  
  ; Whether or not to enable the dl() function.  The dl() function does NOT work
  ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
-@@ -546,11 +547,13 @@ file_uploads = On
+@@ -546,7 +547,7 @@ file_uploads = On
  
  ; Temporary directory for HTTP uploaded files (will use system default if not
  ; specified).
@@ -36,9 +34,3 @@ $NetBSD: patch-ag,v 1.2.34.1 2009/11/30 23:10:20 tron Exp $
  
  ; Maximum allowed size for uploaded files.
  upload_max_filesize = 2M
- 
-+; Maximum number of files that can be uploaded via a single request
-+max_file_uploads = 100
- 
- ;;;;;;;;;;;;;;;;;;
- ; Fopen wrappers ;
