@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/24 11:51:49 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/23 09:03:20 obache Exp $
 #
 
 DISTNAME=		scim-ccinput-0.3.1
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config bash
+USE_TOOLS+=		pkg-config bash msgfmt
 CONFIG_SHELL=		${BASH}
 
 USE_SCIM_GTKUTILS=	yes
