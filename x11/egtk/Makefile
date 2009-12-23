@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/10/02 18:48:31 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2009/12/23 19:25:22 abs Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
@@ -17,7 +17,8 @@ USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/eGTK
 
-INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	bin lib ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/egtk/se share/examples/egtk
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -name "CVS" -print | ${XARGS} ${RM} -rf
@@ -43,25 +44,22 @@ do-build:
 	cd ${WRKSRC}/C/se && ${MAKE_PROGRAM} ${MAKE_FLAGS} -f Makefile.se
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/egtkbuild ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/man/egtkbuild.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/C/se/eif_gtk.a ${PREFIX}/lib/libegtk_se.a
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/egtkbuild ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/man/egtkbuild.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/C/se/eif_gtk.a ${DESTDIR}${PREFIX}/lib/libegtk_se.a
 
-	${INSTALL_DATA_DIR} ${PREFIX}/share/egtk
-	cd ${WRKSRC}/lib && pax -rw * ${PREFIX}/share/egtk
-	cd ${WRKSRC} && pax -rw pixmaps ${PREFIX}/share/egtk
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/egtk
-	${INSTALL_DATA_DIR} ${PREFIX}/share/egtk/se
-	${INSTALL_DATA} ${WRKSRC}/C/se/cecil.se ${PREFIX}/share/egtk/se
-	${INSTALL_DATA} ${WRKSRC}/C/se/eif_gtk_se.c ${PREFIX}/share/egtk/se
+	cd ${WRKSRC}/lib && pax -rw * ${DESTDIR}${PREFIX}/share/egtk
+	cd ${WRKSRC} && pax -rw pixmaps ${DESTDIR}${PREFIX}/share/egtk
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/egtk
+	${INSTALL_DATA} ${WRKSRC}/C/se/cecil.se ${DESTDIR}${PREFIX}/share/egtk/se
+	${INSTALL_DATA} ${WRKSRC}/C/se/eif_gtk_se.c ${DESTDIR}${PREFIX}/share/egtk/se
 
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/egtk
-	cd ${WRKSRC}/examples && pax -rw * ${PREFIX}/share/examples/egtk
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/egtk
+	cd ${WRKSRC}/examples && pax -rw * ${DESTDIR}${PREFIX}/share/examples/egtk
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/examples/egtk
 
 post-install:
-	cd ${WRKSRC} && ${INSTALL_DATA} copyright forum.txt ${PREFIX}/share/egtk
-	${INSTALL_DATA} ${WRKDIR}/loadpath.se ${PREFIX}/share/egtk/se
+	cd ${WRKSRC} && ${INSTALL_DATA} copyright forum.txt ${DESTDIR}${PREFIX}/share/egtk
+	${INSTALL_DATA} ${WRKDIR}/loadpath.se ${DESTDIR}${PREFIX}/share/egtk/se
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
