@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2007/02/18 18:50:43 adrianp Exp $
+$NetBSD: patch-ae,v 1.3 2009/12/23 07:03:17 obache Exp $
 
 --- configure.orig	2005-05-27 16:11:45.000000000 +0100
 +++ configure
@@ -22,7 +22,7 @@ $NetBSD: patch-ae,v 1.2 2007/02/18 18:50:43 adrianp Exp $
 -        LNETINC="-I$withval/include"
 -        LNETLIB="-L$withval/lib -L$withval/src -lnet"
 +        LNETINC="-I@@LN_INC@@"
-+        LNETLIB="-L@@_LNLIB@@ -L$withval/src -lnet"
++        LNETLIB="-L@@LN_LIB@@ -L$withval/src -lnet"
          ac_ec_libnet=$withval
          echo "$as_me:$LINENO: result: $withval" >&5
  echo "${ECHO_T}$withval" >&6
