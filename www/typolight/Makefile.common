@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2009/11/29 06:47:36 taca Exp $
+# $NetBSD: Makefile.common,v 1.16 2009/12/23 12:51:41 taca Exp $
 #
 # used by www/typolight26/Makefile
 # used by www/typolight26-example/Makefile
@@ -6,6 +6,9 @@
 # used by www/typolight27/Makefile
 # used by www/typolight27-example/Makefile
 # used by www/typolight27-translations/Makefile
+# used by www/typolight28/Makefile
+# used by www/typolight28-example/Makefile
+# used by www/typolight28-translations/Makefile
 #
 
 TL_VER?=	${TL_VERSION:C/([0-9]+)\.([0-9]+)\..*/\1\2/}
