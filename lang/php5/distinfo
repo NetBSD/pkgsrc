@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.67.2.2 2009/11/30 23:10:20 tron Exp $
+$NetBSD: distinfo,v 1.67.2.3 2009/12/23 19:09:51 spz Exp $
 
-SHA1 (php-5.2.11/php-5.2.11.tar.bz2) = 819c853ce657ef260d4a73b5a21f961115b97eef
-RMD160 (php-5.2.11/php-5.2.11.tar.bz2) = 6aad53dee864ab89f794a9d3c2aa32d435ed5654
-Size (php-5.2.11/php-5.2.11.tar.bz2) = 9030787 bytes
-SHA1 (php-5.2.11/suhosin-patch-5.2.11-0.9.7.patch.gz) = 248419332131efc53f3306c2a57a4b1a9dc92cc1
-RMD160 (php-5.2.11/suhosin-patch-5.2.11-0.9.7.patch.gz) = 0f6d442aace34c221f9fbff42a63e7f3b4489f15
-Size (php-5.2.11/suhosin-patch-5.2.11-0.9.7.patch.gz) = 23050 bytes
+SHA1 (php-5.2.12/php-5.2.12.tar.bz2) = 6605f23b70e3db824047830f08d636e09ec10ff3
+RMD160 (php-5.2.12/php-5.2.12.tar.bz2) = 027f3597fd961d2a95682e2f0738415f8a911371
+Size (php-5.2.12/php-5.2.12.tar.bz2) = 9075161 bytes
+SHA1 (php-5.2.12/suhosin-patch-5.2.11-0.9.7.patch.gz) = 248419332131efc53f3306c2a57a4b1a9dc92cc1
+RMD160 (php-5.2.12/suhosin-patch-5.2.11-0.9.7.patch.gz) = 0f6d442aace34c221f9fbff42a63e7f3b4489f15
+Size (php-5.2.12/suhosin-patch-5.2.11-0.9.7.patch.gz) = 23050 bytes
 SHA1 (patch-aa) = 20bc3831e435182d014b11ae9f1f6c537a21af20
-SHA1 (patch-ag) = 901552355a3d57d9b8e23b31cd0edfd28db8b2bb
-SHA1 (patch-ah) = 7702da73f3a457ee381542b454d19b1f4b421e01
+SHA1 (patch-ag) = 5e3e822657925a77fbccaca63f283863a1cc6d94
+SHA1 (patch-ah) = a25cb7fa3d1f5b9fb99493a4348fdba69d3d4728
 SHA1 (patch-aj) = 54812097499c81e5cb0196ab949cc86a4f24a9cc
 SHA1 (patch-al) = 0ee37782cc0d3bf5ede1a583de0589c2c1316b50
 SHA1 (patch-an) = 8f4174627b8cb5f8bfbc59413c95f71e26b9e602
@@ -16,9 +16,3 @@ SHA1 (patch-ap) = 5eb0e0e4244a993da93e36f8fcb5553454207fce
 SHA1 (patch-aq) = 0c9d48547da2fa80aa8357d23ad8505d1c0330df
 SHA1 (patch-ar) = 2d74ec926cc00bfbb67d16210af78c33ad9ac38d
 SHA1 (patch-as) = f7ce5caffe2acdd1f8e9fc8ae6c7ba1d8c6a25c1
-SHA1 (patch-ay) = 7ae502db6574a91fcbb487d37c14a5de644b01b6
-SHA1 (patch-az) = 04e69038e693cc72fb0f67ce04dd1778dacb1756
-SHA1 (patch-ba) = d9483f61b19c297eced12ae3d84d5163e33327b4
-SHA1 (patch-bb) = abbc8747e520d3665d3bcccf9c87741ecc6dc210
-SHA1 (patch-bc) = 9cb2e7fcd6f91d3382a69d68a80d72fdb8fbf2a7
-SHA1 (patch-bd) = 85c891ada42c062b365051b43a3b53c33fa39a92
