@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/06/30 00:07:21 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/23 13:00:41 ghen Exp $
 #
 
 DISTNAME=		pdns-recursor-3.1.7
@@ -28,6 +28,9 @@ INSTALL_MAKE_FLAGS+=	CONFIGDIR=${EGDIR} MANDIR=${PREFIX}/${PKGMANDIR}
 
 CONF_FILES+=		${EGDIR}/recursor.conf-dist \
 			${PKG_SYSCONFDIR}/recursor.conf
+
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 post-patch:
 	${SED} -e "s:/etc/powerdns:${PKG_SYSCONFDIR}:" \
