@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2009/12/15 13:30:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.15 2009/12/23 21:02:20 fhajny Exp $
 
-DISTNAME=	ejabberd-2.1.0
+DISTNAME=	ejabberd-2.1.1
 CATEGORIES=	chat
-MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.1.0/
+MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.1.1/
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.ejabberd.im/
@@ -78,8 +78,7 @@ PKG_HOME.${EJABBERD_USER}=	${EJABBERD_DB}
 
 EGDIR=			${PREFIX}/${EJABBERD_EXDIR}
 
-INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGNAME_NOREV}
-INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGNAME_NOREV}/api
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${EGDIR}
 
 CONF_FILES=		${EGDIR}/ejabberd.cfg ${PKG_SYSCONFDIR}/ejabberd.cfg
@@ -92,10 +91,10 @@ post-patch:
 	${RM} -f ${WRKSRC}/doc/guide.tex.orig
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
-	${INSTALL_DATA} ${WRKSRC}/doc/Makefile ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
-	${INSTALL_DATA} ${WRKSRC}/doc/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
-	${INSTALL_DATA} ${WRKSRC}/doc/api/* ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}/api
+	${INSTALL_DATA} ${WRKSRC}/doc/dev.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/features.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/features.pdf ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/guide.pdf ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
