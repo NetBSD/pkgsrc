@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.20 2009/12/15 12:42:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/12/24 03:13:07 snj Exp $
 bin/gdm-control
 bin/gnome-panel-control
 bin/openbox
 bin/openbox-gnome-session
 bin/openbox-kde-session
 bin/openbox-session
-etc/xdg/openbox/autostart.sh
 include/openbox/3.4/openbox/color.h
 include/openbox/3.4/openbox/font.h
 include/openbox/3.4/openbox/geom.h
@@ -45,6 +44,7 @@ share/doc/openbox/xbm/shade.xbm
 share/doc/openbox/xbm/shade_toggled.xbm
 share/examples/openbox/menu.xml
 share/examples/openbox/rc.xml
+share/examples/openbox/autostart.sh
 share/gnome/wm-properties/openbox.desktop
 share/locale/ar/LC_MESSAGES/openbox.mo
 share/locale/bn_IN/LC_MESSAGES/openbox.mo
