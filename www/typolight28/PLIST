@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/02 16:06:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/24 03:21:40 taca Exp $
 ${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
 ${TL_EGDIR}/print.css
@@ -26,11 +26,10 @@ ${TL_WEBDIR}/cron.php
 ${TL_WEBDIR}/index.php
 ${TL_WEBDIR}/plugins/calendar/css/calendar.css
 ${TL_WEBDIR}/plugins/calendar/css/calendar_src.css
-${TL_WEBDIR}/plugins/calendar/css/iefixes.css
-${TL_WEBDIR}/plugins/calendar/css/iefixes_src.css
 ${TL_WEBDIR}/plugins/calendar/js/calendar.js
 ${TL_WEBDIR}/plugins/calendar/js/calendar.js.gz
 ${TL_WEBDIR}/plugins/calendar/js/calendar_src.js
+${TL_WEBDIR}/plugins/calendar/media/calendar-hilite.gif
 ${TL_WEBDIR}/plugins/calendar/media/calendar-icon.gif
 ${TL_WEBDIR}/plugins/calendar/media/calendar-next.gif
 ${TL_WEBDIR}/plugins/calendar/media/calendar-prev.gif
@@ -1202,9 +1201,9 @@ ${TL_WEBDIR}/system/modules/backend/templates/be_wildcard.tpl
 ${TL_WEBDIR}/system/modules/calendar/Calendar.php
 ${TL_WEBDIR}/system/modules/calendar/Events.php
 ${TL_WEBDIR}/system/modules/calendar/ModuleCalendar.php
+${TL_WEBDIR}/system/modules/calendar/ModuleEventMenu.php
 ${TL_WEBDIR}/system/modules/calendar/ModuleEventReader.php
 ${TL_WEBDIR}/system/modules/calendar/ModuleEventlist.php
-${TL_WEBDIR}/system/modules/calendar/ModuleUpcomingEvents.php
 ${TL_WEBDIR}/system/modules/calendar/TimePeriod.php
 ${TL_WEBDIR}/system/modules/calendar/config/.htaccess
 ${TL_WEBDIR}/system/modules/calendar/config/config.php
@@ -1242,6 +1241,8 @@ ${TL_WEBDIR}/system/modules/calendar/templates/event_upcoming.tpl
 ${TL_WEBDIR}/system/modules/calendar/templates/mod_calendar.tpl
 ${TL_WEBDIR}/system/modules/calendar/templates/mod_event.tpl
 ${TL_WEBDIR}/system/modules/calendar/templates/mod_eventlist.tpl
+${TL_WEBDIR}/system/modules/calendar/templates/mod_eventmenu.tpl
+${TL_WEBDIR}/system/modules/calendar/templates/mod_eventmenu_year.tpl
 ${TL_WEBDIR}/system/modules/comments/Comments.php
 ${TL_WEBDIR}/system/modules/comments/ContentComments.php
 ${TL_WEBDIR}/system/modules/comments/ModuleComments.php
@@ -1657,6 +1658,7 @@ ${TL_WEBDIR}/system/themes/default/images/alias.gif
 ${TL_WEBDIR}/system/themes/default/images/all.gif
 ${TL_WEBDIR}/system/themes/default/images/all_big.gif
 ${TL_WEBDIR}/system/themes/default/images/article.gif
+${TL_WEBDIR}/system/themes/default/images/article_.gif
 ${TL_WEBDIR}/system/themes/default/images/articles.gif
 ${TL_WEBDIR}/system/themes/default/images/articles_.gif
 ${TL_WEBDIR}/system/themes/default/images/back.gif
@@ -1678,6 +1680,7 @@ ${TL_WEBDIR}/system/themes/default/images/cut_.gif
 ${TL_WEBDIR}/system/themes/default/images/delete.gif
 ${TL_WEBDIR}/system/themes/default/images/deleteAll.gif
 ${TL_WEBDIR}/system/themes/default/images/delete_.gif
+${TL_WEBDIR}/system/themes/default/images/demagnify.gif
 ${TL_WEBDIR}/system/themes/default/images/down.gif
 ${TL_WEBDIR}/system/themes/default/images/edit.gif
 ${TL_WEBDIR}/system/themes/default/images/edit_.gif
@@ -1708,6 +1711,8 @@ ${TL_WEBDIR}/system/themes/default/images/forward_5.gif
 ${TL_WEBDIR}/system/themes/default/images/group.gif
 ${TL_WEBDIR}/system/themes/default/images/group_.gif
 ${TL_WEBDIR}/system/themes/default/images/hbg.jpg
+${TL_WEBDIR}/system/themes/default/images/header.gif
+${TL_WEBDIR}/system/themes/default/images/header_.gif
 ${TL_WEBDIR}/system/themes/default/images/headline.gif
 ${TL_WEBDIR}/system/themes/default/images/help.gif
 ${TL_WEBDIR}/system/themes/default/images/home.gif
@@ -1738,6 +1743,7 @@ ${TL_WEBDIR}/system/themes/default/images/log.gif
 ${TL_WEBDIR}/system/themes/default/images/login.gif
 ${TL_WEBDIR}/system/themes/default/images/logo.gif
 ${TL_WEBDIR}/system/themes/default/images/logout.gif
+${TL_WEBDIR}/system/themes/default/images/magnify.gif
 ${TL_WEBDIR}/system/themes/default/images/member.gif
 ${TL_WEBDIR}/system/themes/default/images/member_.gif
 ${TL_WEBDIR}/system/themes/default/images/mgroup.gif
@@ -1780,8 +1786,6 @@ ${TL_WEBDIR}/system/themes/default/images/regular_5.gif
 ${TL_WEBDIR}/system/themes/default/images/regular_6.gif
 ${TL_WEBDIR}/system/themes/default/images/regular_7.gif
 ${TL_WEBDIR}/system/themes/default/images/reload.gif
-${TL_WEBDIR}/system/themes/default/images/resize.gif
-${TL_WEBDIR}/system/themes/default/images/resize_.gif
 ${TL_WEBDIR}/system/themes/default/images/right.gif
 ${TL_WEBDIR}/system/themes/default/images/root.gif
 ${TL_WEBDIR}/system/themes/default/images/root_1.gif
@@ -1833,3 +1837,5 @@ ${TL_WEBDIR}/typolight/switch.php
 ${TL_WEBDIR}/typolight/typolight.js
 ${TL_WEBDIR}/typolight/typolight.js.gz
 ${TL_WEBDIR}/typolight/typolight_src.js
+${TL_WEBDIR}/typolight/upload.php
+@pkgdir share/typolight28/templates
