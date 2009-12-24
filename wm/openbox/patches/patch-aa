@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2009/12/15 12:42:04 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2009/12/24 03:13:07 snj Exp $
 
---- Makefile.in.orig	2009-12-08 20:57:45.000000000 +0000
-+++ Makefile.in
+--- Makefile.in.orig	2009-12-08 12:57:45.000000000 -0800
++++ Makefile.in	2009-12-23 19:06:19.000000000 -0800
 @@ -483,7 +483,7 @@ top_srcdir = @top_srcdir@
  SUBDIRS = m4 po
  docxbmdir = $(docdir)/xbm
@@ -27,3 +27,19 @@ $NetBSD: patch-aa,v 1.8 2009/12/15 12:42:04 wiz Exp $
  	done
  
  uninstall-dist_rcDATA:
+@@ -3146,12 +3146,12 @@ uninstall-nodist_pkgconfigDATA:
+ 	done
+ install-nodist_rcDATA: $(nodist_rc_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(rcdir)" || $(MKDIR_P) "$(DESTDIR)$(rcdir)"
++	test -z "$(rcdir)" || $(MKDIR_P) "$(DESTDIR)$(datadir)/examples/openbox"
+ 	@list='$(nodist_rc_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(nodist_rcDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(rcdir)/$$f'"; \
+-	  $(nodist_rcDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(rcdir)/$$f"; \
++	  echo " $(nodist_rcDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(datadir)/examples/openbox/$$f'"; \
++	  $(nodist_rcDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(datadir)/examples/openbox/$$f"; \
+ 	done
+ 
+ uninstall-nodist_rcDATA:
