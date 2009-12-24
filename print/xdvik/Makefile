@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/07/27 08:59:36 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2009/12/24 17:30:01 joerg Exp $
 
 DISTNAME=	xdvik-22.84.14
 PKGREVISION=	2
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
 BUILD_DEPENDS+=	tex-bin-xdvi-[0-9]*:../../print/tex-bin-xdvi
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
