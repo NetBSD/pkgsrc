@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2008/11/19 01:54:25 hira Exp $
+$NetBSD: MESSAGE,v 1.5 2009/12/24 10:45:36 wiz Exp $
 
   OpenOffice.org has now been installed in ${OO_PREFIX}.
 
@@ -8,8 +8,11 @@ $NetBSD: MESSAGE,v 1.4 2008/11/19 01:54:25 hira Exp $
   Thereafter, OpenOffice can be started using the
   ${PREFIX}/bin/soffice command.
 
-  And the files of platform dependent extensions have been installed in
+  The files of platform dependent extensions have been installed in
   ${OO_PREFIX}/extensions.
+
+  An English dictionary for spellchecking resides in
+  ${OO_PREFIX}/openoffice.org3/share/extension/install/dict-en.oxt
 
   How to install/uninstall the extensions:
 
