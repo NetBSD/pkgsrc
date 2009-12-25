@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.8 2009/11/05 20:03:53 heinz Exp $
+$NetBSD: patch-aa,v 1.9 2009/12/25 17:50:52 heinz Exp $
 
   Do not hardcode share/man as the subdirectory for man pages.
   Submitted upstream as
-    http://sourceforge.net/tracker/index.php?func=detail&aid=2026068&group_id=3978&atid=103978
+    http://sourceforge.net/tracker/?func=detail&aid=2026068&group_id=3978&atid=103978
+
+  manifypods-razor depends on INST_MAN5DIR which gets created by the 'config'
+  target. Without this, there may problems building with parallel make.
+  Submitted upstream as
+    http://sourceforge.net/tracker/?func=detail&aid=2921151&group_id=3978&atid=103978
 
 --- Makefile.PL.orig	2007-05-09 00:47:53.000000000 +0200
 +++ Makefile.PL
@@ -24,3 +29,12 @@ $NetBSD: patch-aa,v 1.8 2009/11/05 20:03:53 heinz Exp $
  MAN5EXT = 5
  # end razor-agents
  
+@@ -115,7 +116,7 @@ sub MY::manifypods {
+ # begin razor-agents
+ %s
+ 
+-manifypods-razor : docs/razor-agent.conf.pod \
++manifypods-razor : config docs/razor-agent.conf.pod \
+ 	docs/razor-agents.pod                \
+ 	docs/razor-whitelist.pod
+ 	$(POD2MAN) \
