@@ -1,0 +1,53 @@
+$NetBSD: patch-bo,v 1.1 2009/12/25 13:55:12 taca Exp $
+
+--- conf/makefiles/zotnet/mf.orig	2001-06-11 01:26:24.000000000 +0000
++++ conf/makefiles/zotnet/mf
+@@ -20,6 +20,8 @@ OFILES	=	uumm.o mmuu.o
+ @END: MHMTS
+ REMOVE	=	@(MHREMOVE)
+ 
++CP      =       @(CP)
++
+ CC      =	@(MHCOMPILER)
+ CPP     =	@(MHCPP)
+ @BEGIN: OPTIM
+@@ -71,8 +73,7 @@ uninstall:;
+ inst-uminc:	$(ETCDIR)/uminc
+ 
+ $(ETCDIR)/uminc:	xuminc
+-		-$(REMOVE) $(ETCDIR)/uminc zuminc
+-		cp xuminc $@
++		$(CP) xuminc $@
+ 		-@ls -l $@
+ 		-@echo ""
+ 
+@@ -89,8 +90,7 @@ xuminc:		uminc.o uumm.o mf.o $(TWSLIB) $
+ inst-umsift:	$(ETCDIR)/umsift
+ 
+ $(ETCDIR)/umsift:	xumsift
+-		-$(REMOVE) $(ETCDIR)/umsift zumsift
+-		cp xumsift $@
++		$(CP) xumsift $@
+ 		-@ls -l $@
+ 		-@echo ""
+ 
+@@ -114,8 +114,7 @@ uumm:		uumm.o
+ inst-muinc:	$(ETCDIR)/muinc
+ 
+ $(ETCDIR)/muinc:	xmuinc
+-		-$(REMOVE) $(ETCDIR)/muinc zmuinc
+-		cp xmuinc $@
++		$(CP) xmuinc $@
+ 		-@ls -l $@
+ 		-@echo ""
+ 
+@@ -132,8 +131,7 @@ xmuinc:		muinc.o mmuu.o mf.o $(TWSLIB) $
+ inst-musift:	$(ETCDIR)/musift
+ 
+ $(ETCDIR)/musift:	xmusift
+-		-$(REMOVE) $(ETCDIR)/musift zmusift
+-		cp xmusift $@
++		$(CP) xmusift $@
+ 		-@ls -l $@
+ 		-@echo ""
+ 

@@ -1,0 +1,203 @@
+$NetBSD: patch-bm,v 1.1 2009/12/25 13:55:12 taca Exp $
+
+--- conf/makefiles/support/general.orig	1998-04-23 21:02:00.000000000 +0000
++++ conf/makefiles/support/general
+@@ -74,7 +74,6 @@ inst-aliases:	$(ETCDIR)/MailAliases
+ 
+ $(ETCDIR)/MailAliases:	MailAliases
+ 		-@if [ ! -f $@ ]; then \
+-		    $(REMOVE) $@ zMailAliases; \
+ 		    $(CP) MailAliases $@; \
+ 		else \
+ 		    echo "Will not overwrite existing $@"; \
+@@ -87,7 +86,6 @@ $(ETCDIR)/MailAliases:	MailAliases
+ inst-components:	$(ETCDIR)/components
+ 
+ $(ETCDIR)/components:	components
+-		-$(REMOVE) $@ zcomponents
+ 		$(CP) components $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -97,7 +95,6 @@ $(ETCDIR)/components:	components
+ inst-digestcomps:	$(ETCDIR)/digestcomps
+ 
+ $(ETCDIR)/digestcomps:	digestcomps
+-		-$(REMOVE) $@ zdigestcomps
+ 		$(CP) digestcomps $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -107,7 +104,6 @@ $(ETCDIR)/digestcomps:	digestcomps
+ inst-distcomps:	$(ETCDIR)/distcomps
+ 
+ $(ETCDIR)/distcomps:	distcomps
+-		-$(REMOVE) $@ zdistcomps
+ 		$(CP) distcomps $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -117,7 +113,6 @@ $(ETCDIR)/distcomps:	distcomps
+ inst-forwcomps:	$(ETCDIR)/forwcomps
+ 
+ $(ETCDIR)/forwcomps:	forwcomps
+-		-$(REMOVE) $@ zforwcomps
+ 		$(CP) forwcomps $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -127,7 +122,6 @@ $(ETCDIR)/forwcomps:	forwcomps
+ inst-rcvdistcomps:	$(ETCDIR)/rcvdistcomps
+ 
+ $(ETCDIR)/rcvdistcomps:	rcvdistcomps
+-		-$(REMOVE) $@ zrcvdistcomps
+ 		$(CP) rcvdistcomps $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -137,7 +131,6 @@ $(ETCDIR)/rcvdistcomps:	rcvdistcomps
+ inst-replcomps:	$(ETCDIR)/replcomps
+ 
+ $(ETCDIR)/replcomps:	replcomps
+-		-$(REMOVE) $@ zreplcomps
+ 		$(CP) replcomps $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -147,7 +140,6 @@ $(ETCDIR)/replcomps:	replcomps
+ inst-digest:	$(ETCDIR)/mhl.digest
+ 
+ $(ETCDIR)/mhl.digest:	mhl.digest
+-		-$(REMOVE) $@ zmhl.digest
+ 		$(CP) mhl.digest $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -162,7 +154,6 @@ MHL_FORMAT= mhl.format.hdecode
+ @END: MIME_HEADERS
+ 
+ $(ETCDIR)/mhl.format:	$(MHL_FORMAT)
+-		-$(REMOVE) $@ zmhl.format
+ 		$(CP) $(MHL_FORMAT) $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -172,7 +163,6 @@ $(ETCDIR)/mhl.format:	$(MHL_FORMAT)
+ inst-forward:	$(ETCDIR)/mhl.forward
+ 
+ $(ETCDIR)/mhl.forward:	mhl.forward
+-		-$(REMOVE) $@ zmhl.forward
+ 		$(CP) mhl.forward $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -182,7 +172,6 @@ $(ETCDIR)/mhl.forward:	mhl.forward
+ inst-body:	$(ETCDIR)/mhl.body
+ 
+ $(ETCDIR)/mhl.body:	mhl.body
+-		-$(REMOVE) $@ zmhl.body
+ 		$(CP) mhl.body $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -197,8 +186,7 @@ MHL_HEADERS= mhl.headers.hdecode
+ @END: MIME_HEADERS
+ 
+ $(ETCDIR)/mhl.headers:	$(MHL_HEADERS)
+-		-$(REMOVE) $@ zmhl.headers
+-		cp $(MHL_HEADERS) $@
++		$(CP) $(MHL_HEADERS) $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+ 		-@echo ""
+@@ -207,7 +195,6 @@ $(ETCDIR)/mhl.headers:	$(MHL_HEADERS)
+ inst-default:	$(ETCDIR)/scan.default
+ 
+ $(ETCDIR)/scan.default:	scan.default
+-		-$(REMOVE) $@ zscan.default
+ 		$(CP) scan.default $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -216,7 +203,6 @@ $(ETCDIR)/scan.default:	scan.default
+ inst-mailx:	$(ETCDIR)/scan.mailx
+ 
+ $(ETCDIR)/scan.mailx:	scan.mailx
+-		-$(REMOVE) $@ zscan.mailx
+ 		$(CP) scan.mailx $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -226,7 +212,6 @@ $(ETCDIR)/scan.mailx:	scan.mailx
+ inst-size:	$(ETCDIR)/scan.size
+ 
+ $(ETCDIR)/scan.size:	scan.size
+-		-$(REMOVE) $@ zscan.size
+ 		$(CP) scan.size $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -236,7 +221,6 @@ $(ETCDIR)/scan.size:	scan.size
+ inst-time:	$(ETCDIR)/scan.time
+ 
+ $(ETCDIR)/scan.time:	scan.time
+-		-$(REMOVE) $@ zscan.time
+ 		$(CP) scan.time $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -246,7 +230,6 @@ $(ETCDIR)/scan.time:	scan.time
+ inst-timely:	$(ETCDIR)/scan.timely
+ 
+ $(ETCDIR)/scan.timely:	scan.timely
+-		-$(REMOVE) $@ zscan.timely
+ 		$(CP) scan.timely $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+@@ -256,8 +239,7 @@ $(ETCDIR)/scan.timely:	scan.timely
+ inst-packmbox:	$(ETCDIR)/packmbox
+ 
+ $(ETCDIR)/packmbox:	packmbox.sh
+-		-$(REMOVE) $@ zpackmbox.sh
+-		cp packmbox.sh $@
++		$(CP) packmbox.sh $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+ 		-@echo ""
+@@ -267,7 +249,6 @@ inst-bboards:	$(ETCDIR)/BBoardAliases
+ 
+ $(ETCDIR)/BBoardAliases:	BBoardAliases
+ 		-@if [ ! -f $@ ]; then \
+-		    $(REMOVE) $@ zBBoardAliases; \
+ 		    $(CP) BBoardAliases $@; \
+ 		else \
+ 		    echo "Will not overwrite existing $@"; \
+@@ -281,8 +262,7 @@ $(ETCDIR)/BBoardAliases:	BBoardAliases
+ inst-viamail:	$(ETCDIR)/viamail
+ 
+ $(ETCDIR)/viamail:	viamail.sh
+-		-$(REMOVE) $@ zviamail.sh
+-		cp viamail.sh $@
++		$(CP) viamail.sh $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+ 		-@echo ""
+@@ -291,7 +271,6 @@ $(ETCDIR)/viamail:	viamail.sh
+ inst-mhndefs:	$(ETCDIR)/mhn_defaults
+ 
+ $(ETCDIR)/mhn_defaults:	true
+-		-$(REMOVE) $@ zmhn_defaults
+ 		-@echo "Will merge mhn_defaults into existing $@"
+ 		-@./bootmhn.sh $(ETCDIR)
+ 		-@chmod $(FILPROT) $@
+@@ -302,22 +281,19 @@ $(ETCDIR)/mhn_defaults:	true
+ inst-pgpmime:	$(ETCDIR)/pgped.tcl $(BINDIR)/pgped $(BINDIR)/pgpshow
+ 
+ $(ETCDIR)/pgped.tcl:	pgped.tcl
+-		-$(REMOVE) $@ zpgped.tcl
+-		cp pgped.tcl $@
++		$(CP) pgped.tcl $@
+ 		-@chmod $(FILPROT) $@
+ 		-@ls -l $@
+ 		-@echo ""
+ 
+ $(BINDIR)/pgped:	pgped.sh
+-		-$(REMOVE) $@ zpgped.sh
+ 		sed -e 's%@LIB%$(ETCDIR)%' < pgped.sh > $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+ 		-@echo ""
+ 
+ $(BINDIR)/pgpshow:	pgpshow.sh
+-		-$(REMOVE) $@ zpgpshow.sh
+-		cp pgpshow.sh $@
++		$(CP) pgpshow.sh $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+ 		-@echo ""
