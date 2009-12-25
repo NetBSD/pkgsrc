@@ -1,6 +1,6 @@
-$NetBSD: patch-ax,v 1.1 2006/04/11 15:08:38 joerg Exp $
+$NetBSD: patch-ax,v 1.2 2009/12/25 13:55:12 taca Exp $
 
---- uip/popsbr.c.orig	2006-04-11 14:26:31.000000000 +0000
+--- uip/popsbr.c.orig	2001-04-02 10:50:01.000000000 +0000
 +++ uip/popsbr.c
 @@ -27,10 +27,7 @@ static char ident[] = "@(#)$Id: popsbr.c
  #define	TRM	"."
@@ -13,3 +13,48 @@ $NetBSD: patch-ax,v 1.1 2006/04/11 15:08:38 joerg Exp $
  #if !defined(BSD44) && !defined(__GNU_LIBRARY__)
  extern int  sys_nerr;
  extern char *sys_errlist[];
+@@ -63,7 +60,7 @@ int	command(), multiline();
+ static	int	command(), multiline();
+ #endif
+ 
+-static int	getline();
++static int	_getline();
+ static putline();
+ 
+ #ifdef NNTP
+@@ -176,7 +173,7 @@ int	snoop;
+ 
+     (void) signal (SIGPIPE, SIG_IGN);
+ 
+-    switch (getline (response, sizeof response, input)) {
++    switch (_getline (response, sizeof response, input)) {
+ 	case OK: 
+ 	    if (poprint)
+ 		fprintf (stderr, "<--- %s\n", response);
+@@ -619,7 +616,7 @@ char   *fmt,
+     if (putline (buffer, output) == NOTOK)
+ 	return NOTOK;
+ 
+-    switch (getline (response, sizeof response, input)) {
++    switch (_getline (response, sizeof response, input)) {
+ 	case OK: 
+ 	    if (poprint)
+ 		fprintf (stderr, "<--- %s\n", response);
+@@ -645,7 +642,7 @@ static int  multiline () {
+ #endif
+     char    buffer[BUFSIZ + TRMLEN];
+ 
+-    if (getline (buffer, sizeof buffer, input) != OK)
++    if (_getline (buffer, sizeof buffer, input) != OK)
+ 	return NOTOK;
+ #ifdef	DEBUG
+     if (poprint)
+@@ -665,7 +662,7 @@ static int  multiline () {
+ 
+ /*  */
+ 
+-static int  getline (s, n, iop)
++static int  _getline (s, n, iop)
+ char   *s;
+ int     n;
+ FILE * iop;

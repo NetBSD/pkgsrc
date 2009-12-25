@@ -1,0 +1,46 @@
+$NetBSD: patch-bn,v 1.1 2009/12/25 13:55:12 taca Exp $
+
+--- conf/makefiles/support/pop.orig	2001-06-11 01:25:56.000000000 +0000
++++ conf/makefiles/support/pop
+@@ -122,7 +122,6 @@ uninstall:;	-cd $(ETCDIR); rm -f popd
+ inst-popd:	$(ETCDIR)/popd
+ 
+ $(ETCDIR)/popd:	xpopd
+-		-$(REMOVE) $@ zpopd
+ 		-rm -f $@
+ 		$(CP) xpopd $@
+ 		-chmod 700 $@
+@@ -159,7 +158,6 @@ l-popd:;	$(LINT) $(LFLAGS) popd.c popser
+ inst-popaka:	$(LIBDIR)/popaka
+ 
+ $(LIBDIR)/popaka:	xpopaka
+-		-$(REMOVE) $@ zpopaka
+ 		$(CP) xpopaka $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -180,8 +178,6 @@ l-popaka:;	$(LINT) $(LFLAGS) popaka.c $(
+ inst-popauth:	$(BINDIR)/popauth
+ 
+ $(BINDIR)/popauth:	xpopauth
+-		-$(REMOVE) $@ zpopauth
+-		-chmod u-s zpopauth
+ 		$(CP) xpopauth $@
+ 		-@chmod $(PGMPROT) $@
+ 		-$(CHOWN) $(POPUID) $@ && chmod u+s $@
+@@ -203,8 +199,6 @@ l-popauth:;	$(LINT) $(LFLAGS) popauth.c 
+ inst-popwrd:	$(LIBDIR)/popwrd
+ 
+ $(LIBDIR)/popwrd:	xpopwrd
+-		-$(REMOVE) $@ zpopwrd
+-		-chmod u-s zpopwrd
+ 		$(CP) xpopwrd $@
+ 		-chmod $(PGMPROT) $@
+ 		-$(CHOWN) $(POPUID) $@ && chmod u+s $@
+@@ -226,7 +220,6 @@ l-popwrd:;	$(LINT) $(LFLAGS) popwrd.c $(
+ inst-smtpd:	$(ETCDIR)/smtpd
+ 
+ $(ETCDIR)/smtpd:	xsmtpd
+-		-$(REMOVE) $@ zsmtpd
+ 		$(CP) xsmtpd $@
+ 		-chmod 700 $@
+ 		-@ls -l $@

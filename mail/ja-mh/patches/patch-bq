@@ -1,0 +1,47 @@
+$NetBSD: patch-bq,v 1.1 2009/12/25 13:55:12 taca Exp $
+
+--- conf/mhconfig.c.orig	2001-05-29 15:04:36.000000000 +0000
++++ conf/mhconfig.c
+@@ -6,6 +6,8 @@ static char ident[] = "@(#)$Id: mhconfig
+ 
+ #include <ctype.h>
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #ifdef	hpux
+ #define	SYS5
+ #endif
+@@ -16,7 +18,6 @@ static char ident[] = "@(#)$Id: mhconfig
+ 
+ static void insopt(), mkopts();
+ 
+-extern	char *strcpy(), *malloc(), *index(), *rindex();
+ #ifdef	notdef
+ extern	char *sprintf();	/* rely on stdio.h to declare this */
+ #endif
+@@ -268,7 +269,7 @@ static struct pair {
+ static do_sed(), do_sedfile(), do_files(), do_doc(), do_make();
+ static shell(), arginit(), add_option(), trim();
+ 
+-static char   *stradd (), *strdup (), *tail ();
++static char   *stradd (), *tail ();
+ 
+ /*  */
+ 
+@@ -1002,7 +1003,7 @@ char   *s1,
+     return p;
+ }
+ 
+-
++#if 0
+ static char *strdup (s)
+ char   *s;
+ {
+@@ -1014,6 +1015,7 @@ char   *s;
+     (void) strcpy (p, s);
+     return p;
+ }
++#endif
+ 
+ /*  */
+ 
