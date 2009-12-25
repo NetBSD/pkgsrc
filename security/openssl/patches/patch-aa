@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.20 2008/01/17 06:42:48 tnn Exp $
+$NetBSD: patch-aa,v 1.21 2009/12/25 11:58:06 obache Exp $
 
 --- config.orig	2007-08-01 13:21:35.000000000 +0200
 +++ config	2007-10-21 13:18:53.000000000 +0200
@@ -14,8 +14,8 @@ $NetBSD: patch-aa,v 1.20 2008/01/17 06:42:48 tnn Exp $
  	echo "mips4-sgi-irix64"; exit 0
  	;;
  
-+    Interix:3.*)
-+	echo "i386-pc-interix3"; exit 0
++    Interix:*)
++	echo "i386-pc-interix"; exit 0
 +	;;
 +
      Linux:[2-9].*)
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.20 2008/01/17 06:42:48 tnn Exp $
  			esac ;;
    *-*-*bsd*)		OUT="BSD-generic32" ;;
  
-+  *-*-interix3)		OUT="Interix3" ;;
++  *-*-interix)		OUT="Interix" ;;
 +
    *-*-osf)		OUT="osf1-alpha-cc" ;;
    *-*-tru64)		OUT="tru64-alpha-cc" ;;

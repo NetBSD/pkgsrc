@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.35 2009/04/16 09:50:37 tnn Exp $
+$NetBSD: patch-ac,v 1.36 2009/12/25 11:58:06 obache Exp $
 
 --- Configure.orig	2007-09-16 14:24:17.000000000 +0200
 +++ Configure	2007-10-21 13:21:36.000000000 +0200
@@ -39,7 +39,7 @@ $NetBSD: patch-ac,v 1.35 2009/04/16 09:50:37 tnn Exp $
 +"NetBSD-x86-aout", "gcc:-DTERMIOS -DL_ENDIAN -O2 -Wall::(unknown):::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_out_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-x86-elf", "gcc:-DTERMIOS -DL_ENDIAN -O2 -Wall::(unknown):::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-x86_64", "gcc:-DTERMIOS -DL_ENDIAN -DMD32_REG_T=int -O2::(unknown):::SIXTY_FOUR_BIT_LONG RC4_CHUNK BF_PTR2 DES_INT DES_UNROLL:${x86_64_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
-+"Interix3","gcc:-DTERMIOS -DL_ENDIAN -O2 -Wall::(unknown)::-ldl:BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}::::::::::::dlfcn:bsd-gcc-shared::-Wl,--image-base,\$\$((\$\$RANDOM /1024*1048576+1577058304)):.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
++"Interix","gcc:-DTERMIOS -DL_ENDIAN -O2 -Wall::-D_REENTRANT::-ldl:BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}::::::::::::dlfcn:bsd-gcc-shared::-Wl,--image-base,0x5e000000:.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"DragonFly-i386",  "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::-pthread -D_REENTRANT -D_THREAD_SAFE -D_THREADSAFE:::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +
  "bsdi-elf-gcc",     "gcc:-DPERL5 -DL_ENDIAN -fomit-frame-pointer -O3 -march=i486 -Wall::(unknown)::-ldl:BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",

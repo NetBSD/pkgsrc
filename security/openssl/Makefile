@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2009/06/10 13:57:08 tez Exp $
+# $NetBSD: Makefile,v 1.141 2009/12/25 11:58:06 obache Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -94,6 +94,13 @@ SUBST_STAGE.dl=		post-configure
 SUBST_FILES.dl=		Makefile apps/Makefile crypto/Makefile \
 			crypto/pkcs7/Makefile test/Makefile
 SUBST_SED.dl=		-e 's,^EX_LIBS=,EX_LIBS=${DL_LDFLAGS:Q} ,g'
+
+.elif ${OPSYS} == "Interix"
+
+SUBST_CLASSES+=		soname
+SUBST_STAGE.soname=	post-configure
+SUBST_FILES.soname=	Makefile.shared
+SUBST_SED.soname=	-e 's/-Wl,-soname=/-Wl,-h,/g'
 .endif
 
 .include "../../security/openssl/options.mk"
