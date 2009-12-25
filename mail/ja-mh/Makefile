@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/11/10 05:06:45 taca Exp $
+# $NetBSD: Makefile,v 1.12 2009/12/25 13:55:12 taca Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.05
 PKGNAME=	ja-mh6-3.05
@@ -20,6 +20,8 @@ DEPENDS+=	ja-less>=332:../../misc/ja-less
 
 CONFLICTS=	nmh-[0-9]* ja-mh-*_JP_*
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 .include "../../mk/bsd.prefs.mk"
 
 MAKE_JOBS_SAFE=	NO
@@ -34,6 +36,6 @@ CONFIGURE_ARGS+=	--enable-rpop
 INSTALLATION_DIRS=	bin lib
 
 post-install:
-	${LN} -sf libmh.so.3.2 ${PREFIX}/lib/libmh.so.3
+	${LN} -sf libmh.so.3.2 ${DESTDIR}${PREFIX}/lib/libmh.so.3
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,23 @@
+$NetBSD: patch-bp,v 1.1 2009/12/25 13:55:12 taca Exp $
+
+--- conf/makefiles/zotnet/mts.orig	2001-06-11 01:26:35.000000000 +0000
++++ conf/makefiles/zotnet/mts
+@@ -14,6 +14,8 @@ LDOPTLIB=	@(LDOPTLIB)
+ CHOWN	=	@(MHCHOWNPATH)
+ REMOVE	=	@(MHREMOVE)
+ 
++CP      =       @(CP)
++
+ CC      =	@(MHCOMPILER)
+ CPP     =	@(MHCPP)
+ @BEGIN: OPTIM
+@@ -94,8 +96,7 @@ inst-mtstailor:	$(ETCDIR)/mtstailor
+ 
+ $(ETCDIR)/mtstailor:	mtstailor
+ 		-@if [ ! -f $@ ]; then \
+-		    $(REMOVE) $@ zmtstailor; \
+-		    cp mtstailor $@; \
++		    $(CP) mtstailor $@; \
+ 		else \
+ 		    echo "Will not overwrite existing $@"; \
+ 		fi

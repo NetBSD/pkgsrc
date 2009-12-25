@@ -1,6 +1,6 @@
-$NetBSD: patch-au,v 1.1 2004/11/29 05:09:43 taca Exp $
+$NetBSD: patch-au,v 1.2 2009/12/25 13:55:12 taca Exp $
 
---- conf/makefiles/uip.orig	2001-05-30 23:57:47.000000000 +0900
+--- conf/makefiles/uip.orig	2001-05-30 14:57:47.000000000 +0000
 +++ conf/makefiles/uip
 @@ -140,7 +140,7 @@ LD	=	LD_LIBRARY_PATH=../sbr @(MHCOMPILER
  LD	=	LD_LIBRARY_PATH=../sbr @(MHCOMPILER)
@@ -22,3 +22,483 @@ $NetBSD: patch-au,v 1.1 2004/11/29 05:09:43 taca Exp $
  		@(SLDFLAG) -lmh$(SLIBVER) ../mts/libmts.a  ../zotnet/libzot.a
  LDLIBS	=	$(LDLIBES) ../config/version.o $(LDOPTLIB)
  LDLIBS_POST =	$(LDLIBES) ../config/version.o $(LDOPTLIB_POST)
+@@ -305,7 +309,6 @@ lint:		$(LCMDS) $(LMISC)
+ inst-ali:	$(BINDIR)/ali
+ 
+ $(BINDIR)/ali:	xali
+-		-$(REMOVE) $@ zali
+ 		$(CP) xali $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -322,7 +325,6 @@ l-ali:;		$(LINT) $(LFLAGS) ali.c aliasbr
+ inst-anno:	$(BINDIR)/anno
+ 
+ $(BINDIR)/anno:	xanno
+-		-$(REMOVE) $@ zanno
+ 		$(CP) xanno $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -339,7 +341,6 @@ l-anno:;	$(LINT) $(LFLAGS) anno.c annosb
+ inst-ap:	$(ETCDIR)/ap
+ 
+ $(ETCDIR)/ap:	xap
+-		-$(REMOVE) $@ zap
+ 		$(CP) xap $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -356,8 +357,6 @@ l-ap:;		$(LINT) $(LFLAGS) ap.c trmsbr.c 
+ inst-bbc:	$(BINDIR)/bbc
+ 
+ $(BINDIR)/bbc:	xbbc
+-		-$(REMOVE) $@ zbbc
+-		-chmod u-s zbbc
+ 		$(CP) xbbc $@
+ 		-@chmod $(PGMPROT) $@
+ @BEGIN: BPOP
+@@ -387,8 +386,6 @@ pshsbr.o:	pshsbr.c
+ inst-bbl:	$(BINDIR)/bbl
+ 
+ $(BINDIR)/bbl:	xbbl
+-		-$(REMOVE) $@ zbbl
+-		-chmod u-s zbbl
+ 		$(CP) xbbl $@
+ 		-chmod $(PGMPROT) $@
+ 		-$(CHOWN) $(BBUID) $@ && chmod u+s $@
+@@ -406,7 +403,6 @@ l-bbl:;		$(LINT) $(LFLAGS) bbl.c $(LLIBS
+ inst-burst:	$(BINDIR)/burst
+ 
+ $(BINDIR)/burst:	xburst
+-		-$(REMOVE) $@ zburst
+ 		$(CP) xburst $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -423,7 +419,6 @@ l-burst:;	$(LINT) $(LFLAGS) burst.c $(LL
+ inst-cipher:	$(BINDIR)/cipher
+ 
+ $(BINDIR)/cipher:	xcipher
+-		-$(REMOVE) $@ zcipher
+ 		$(CP) xcipher $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -440,7 +435,6 @@ l-cipher:;	$(LINT) $(LFLAGS) cipher.c $(
+ inst-comp:	$(BINDIR)/comp
+ 
+ $(BINDIR)/comp:	xcomp
+-		-$(REMOVE) $@ zcomp
+ 		$(CP) xcomp $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $(BINDIR)/comp
+@@ -460,7 +454,6 @@ l-comp:;	$(LINT) $(LFLAGS) comp.c whatno
+ inst-conflict:	$(ETCDIR)/conflict
+ 
+ $(ETCDIR)/conflict:	xconflict
+-		-$(REMOVE) $@ zconflict
+ 		$(CP) xconflict $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -477,7 +470,6 @@ l-conflict:;	$(LINT) $(LFLAGS) conflict.
+ inst-decipher:	$(BINDIR)/decipher
+ 
+ $(BINDIR)/decipher:	xdecipher
+-		-$(REMOVE) $@ zdecipher
+ 		$(CP) xdecipher $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -494,7 +486,6 @@ l-decipher:;	$(LINT) $(LFLAGS) decipher.
+ inst-dist:	$(BINDIR)/dist
+ 
+ $(BINDIR)/dist:	xdist
+-		-$(REMOVE) $@ zdist
+ 		$(CP) xdist $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -514,7 +505,6 @@ l-dist:;	$(LINT) $(LFLAGS) dist.c whatno
+ inst-dp:	$(ETCDIR)/dp
+ 
+ $(ETCDIR)/dp:	xdp
+-		-$(REMOVE) $@ zdp
+ 		$(CP) xdp $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $(ETCDIR)/dp
+@@ -531,7 +521,6 @@ l-dp:;		$(LINT) $(LFLAGS) dp.c trmsbr.c 
+ inst-fmtdump:	$(ETCDIR)/fmtdump
+ 
+ $(ETCDIR)/fmtdump:	xfmtdump
+-		-$(REMOVE) $@ zfmtdump
+ 		cp xfmtdump $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -549,7 +538,6 @@ inst-folders:	inst-folder
+ inst-folder:	$(BINDIR)/folder
+ 
+ $(BINDIR)/folder:	xfolder
+-		-$(REMOVE) $@ zfolder
+ 		$(CP) xfolder $@
+ 		-@chmod $(PGMPROT) $@
+ 		rm -f $(BINDIR)/folders
+@@ -569,7 +557,6 @@ l-folder:;	$(LINT) $(LFLAGS) folder.c $(
+ inst-forw:	$(BINDIR)/forw
+ 
+ $(BINDIR)/forw:	xforw
+-		-$(REMOVE) $@ zforw
+ 		$(CP) xforw $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -589,9 +576,6 @@ l-forw:;	$(LINT) $(LFLAGS) forw.c whatno
+ inst-inc:	$(BINDIR)/inc
+ 
+ $(BINDIR)/inc:	xinc
+-		-$(REMOVE) $@ zinc
+-		-chmod u-s zinc
+-		-chmod g-s zinc
+ 		$(CP) xinc $@
+ 		-@chmod $(PGMPROT) $@
+ @BEGIN: MAILGROUP
+@@ -620,7 +604,6 @@ l-inc:;		$(LINT) $(LFLAGS) inc.c scansbr
+ inst-install-mh:	$(ETCDIR)/install-mh
+ 
+ $(ETCDIR)/install-mh:	xinstall-mh
+-		-$(REMOVE) $@ zinstall-mh
+ 		$(CP) xinstall-mh $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -637,7 +620,6 @@ l-install-mh:;	$(LINT) $(LFLAGS) install
+ inst-kdsc:	$(ETCDIR)/kdsc
+ 
+ $(ETCDIR)/kdsc:	xkdsc
+-		-$(REMOVE) $@ zkdsc
+ 		$(CP) xkdsc $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -654,7 +636,6 @@ l-kdsc:;	$(LINT) $(LFLAGS) kdsc.c $(KDSL
+ inst-mark:	$(BINDIR)/mark
+ 
+ $(BINDIR)/mark:	xmark
+-		-$(REMOVE) $@ zmark
+ 		$(CP) xmark $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -671,7 +652,6 @@ l-mark:;	$(LINT) $(LFLAGS) mark.c $(LLIB
+ inst-mhl:	$(ETCDIR)/mhl
+ 
+ $(ETCDIR)/mhl:	xmhl
+-		-$(REMOVE) $@ zmhl
+ 		$(CP) xmhl $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -691,7 +671,6 @@ l-mhl:;		$(LINT) $(LFLAGS) mhl.c \
+ inst-mhmail:	$(BINDIR)/mhmail
+ 
+ $(BINDIR)/mhmail:	xmhmail
+-		-$(REMOVE) $@ zmhmail
+ 		$(CP) xmhmail $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -708,7 +687,6 @@ l-mhmail:;	$(LINT) $(LFLAGS) mhmail.c $(
+ inst-mhn:	$(BINDIR)/mhn
+ 
+ $(BINDIR)/mhn:	xmhn
+-		-$(REMOVE) $@ zmhn
+ 		cp xmhn $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -726,8 +704,7 @@ l-mhn:;		$(LINT) $(LFLAGS) mhn.c ftpsbr.
+ inst-mhparam:	$(BINDIR)/mhparam
+ 
+ $(BINDIR)/mhparam:	xmhparam
+-		-$(REMOVE) $@ zmhparam
+-		cp xmhparam $@
++		$(CP) xmhparam $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+ 		-@echo ""
+@@ -743,7 +720,6 @@ l-mhparam:;	$(LINT) $(LFLAGS) mhparam.c 
+ inst-mhpath:	$(BINDIR)/mhpath
+ 
+ $(BINDIR)/mhpath:	xmhpath
+-		-$(REMOVE) $@ zmhpath
+ 		$(CP) xmhpath $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -760,8 +736,6 @@ l-mhpath:;	$(LINT) $(LFLAGS) mhpath.c $(
+ inst-msgchk:	$(BINDIR)/msgchk
+ 
+ $(BINDIR)/msgchk:	xmsgchk
+-		-$(REMOVE) $@ zmsgchk
+-		-chmod u-s zmsgchk
+ 		$(CP) xmsgchk $@
+ 		-@chmod $(PGMPROT) $@
+ @BEGIN: RPOP
+@@ -783,7 +757,6 @@ l-msgchk:;	$(LINT) $(LFLAGS) msgchk.c $(
+ inst-msh:	$(BINDIR)/msh
+ 
+ $(BINDIR)/msh:	xmsh
+-		-$(REMOVE) $@ zmsh
+ 		$(CP) xmsh $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -810,7 +783,6 @@ l-msh:;		$(LINT) $(LFLAGS) msh.c mshcmds
+ inst-packf:	$(BINDIR)/packf
+ 
+ $(BINDIR)/packf:	xpackf
+-		-$(REMOVE) $@ zpackf
+ 		$(CP) xpackf $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -828,7 +800,6 @@ l-packf:;	$(LINT) $(LFLAGS) packf.c drop
+ inst-pgped:	$(BINDIR)/pgped
+ 
+ $(BINDIR)/pgped:	xpgped
+-		-$(REMOVE) $@ zpgped
+ 		$(CP) xpgped $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -845,7 +816,6 @@ l-pgped:;	$(LINT) $(LFLAGS) pgped.c alia
+ inst-pgpshow:	$(BINDIR)/pgpshow
+ 
+ $(BINDIR)/pgpshow:	xpgpshow
+-		-$(REMOVE) $@ zpgpshow
+ 		$(CP) xpgpshow $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -863,7 +833,6 @@ l-pgpshow:;	$(LINT) $(LFLAGS) pgpshow.c 
+ inst-pick:	$(BINDIR)/pick
+ 
+ $(BINDIR)/pick:	xpick
+-		-$(REMOVE) $@ zpick
+ 		$(CP) xpick $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -880,8 +849,7 @@ l-pick:;	$(LINT) $(LFLAGS) pick.c picksb
+ inst-popi:	$(BINDIR)/popi
+ 
+ $(BINDIR)/popi:	xpopi
+-		-$(REMOVE) $@ zpopi
+-		cp xpopi $@
++		$(CP) xpopi $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+ 		-@echo ""
+@@ -898,8 +866,6 @@ l-popi:;	$(LINT) $(LFLAGS) popi.c $(POPL
+ inst-post:	$(ETCDIR)/post
+ 
+ $(ETCDIR)/post:	xpost
+-		-$(REMOVE) $@ zpost
+-		-chmod u-s zpost
+ 		$(CP) xpost $@
+ 		-@chmod $(PGMPROT) $@
+ @BEGIN: MHMTS
+@@ -923,7 +889,6 @@ l-post:;	$(LINT) $(LFLAGS) post.c \
+ inst-prompter:	$(BINDIR)/prompter
+ 
+ $(BINDIR)/prompter:	xprompter
+-		-$(REMOVE) $@ zprompter
+ 		$(CP) xprompter $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -940,7 +905,6 @@ l-prompter:;	$(LINT) $(LFLAGS) prompter.
+ inst-rcvdist:	$(ETCDIR)/rcvdist
+ 
+ $(ETCDIR)/rcvdist:	xrcvdist
+-		-$(REMOVE) $@ zrcvdist
+ 		$(CP) xrcvdist $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -957,7 +921,6 @@ l-rcvdist:;	$(LINT) $(LFLAGS) rcvdist.c 
+ inst-rcvpack:	$(ETCDIR)/rcvpack
+ 
+ $(ETCDIR)/rcvpack:	xrcvpack
+-		-$(REMOVE) $@ zrcvpack
+ 		$(CP) xrcvpack $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -974,7 +937,6 @@ l-rcvpack:;	$(LINT) $(LFLAGS) rcvpack.c 
+ inst-rcvstore:	$(ETCDIR)/rcvstore
+ 
+ $(ETCDIR)/rcvstore:	xrcvstore
+-		-$(REMOVE) $@ zrcvstore
+ 		$(CP) xrcvstore $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -991,8 +953,6 @@ l-rcvstore:;	$(LINT) $(LFLAGS) rcvstore.
+ inst-rcvtty:	$(ETCDIR)/rcvtty
+ 
+ $(ETCDIR)/rcvtty:	xrcvtty
+-		-$(REMOVE) $@ zrcvtty
+-		-chmod g-s zrcvtty
+ 		$(CP) xrcvtty $@
+ 		-@chmod $(PGMPROT) $@
+ @BEGIN: BSD43
+@@ -1025,7 +985,6 @@ l-rcvtty:;	$(LINT) $(LFLAGS) rcvtty.c sc
+ inst-refile:	$(BINDIR)/refile
+ 
+ $(BINDIR)/refile:	xrefile
+-		-$(REMOVE) $@ zrefile
+ 		$(CP) xrefile $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1042,7 +1001,6 @@ l-refile:;	$(LINT) $(LFLAGS) refile.c $(
+ inst-repl:	$(BINDIR)/repl
+ 
+ $(BINDIR)/repl:	xrepl
+-		-$(REMOVE) $@ zrepl
+ 		$(CP) xrepl $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1062,8 +1020,6 @@ l-repl:;	$(LINT) $(LFLAGS) repl.c replsb
+ inst-rmail:	/bin/rmail
+ 
+ /bin/rmail:	xrmail
+-		-$(REMOVE) $@ zrmail
+-		-chmod u-s zrmail
+ 		$(CP) xrmail $@
+ 		-@chmod $(PGMPROT) $@
+ 		-$(CHOWN) root $@
+@@ -1082,7 +1038,6 @@ l-rmail:;	$(LINT) $(LFLAGS) rmail.c $(LL
+ inst-rmf:	$(BINDIR)/rmf
+ 
+ $(BINDIR)/rmf:	xrmf
+-		-$(REMOVE) $@ zrmf
+ 		$(CP) xrmf $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1099,7 +1054,6 @@ l-rmf:;		$(LINT) $(LFLAGS) rmf.c $(LLIBS
+ inst-rmm:	$(BINDIR)/rmm
+ 
+ $(BINDIR)/rmm:	xrmm
+-		-$(REMOVE) $@ zrmm
+ 		$(CP) xrmm $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1116,7 +1070,6 @@ l-rmm:;		$(LINT) $(LFLAGS) rmm.c $(LLIBS
+ inst-scan:	$(BINDIR)/scan
+ 
+ $(BINDIR)/scan:	xscan
+-		-$(REMOVE) $@ zscan
+ 		$(CP) xscan $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1136,7 +1089,6 @@ l-scan:;	$(LINT) $(LFLAGS) scan.c \
+ inst-send:	$(BINDIR)/send
+ 
+ $(BINDIR)/send:	xsend
+-		-$(REMOVE) $@ zsend
+ 		$(CP) xsend $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1158,7 +1110,6 @@ inst-prev:	inst-show
+ inst-show:	$(BINDIR)/show
+ 
+ $(BINDIR)/show:	xshow
+-		-$(REMOVE) $@ zshow
+ 		$(CP) xshow $@
+ 		-@chmod $(PGMPROT) $@
+ 		rm -f $(BINDIR)/next
+@@ -1184,8 +1135,6 @@ l-show:;	$(LINT) $(LFLAGS) show.c \
+ inst-sbboards:	$(SBBOARDS)
+ 
+ $(SBBOARDS):	xsbboards
+-		-$(REMOVE) $@ zsbboards
+-		-chmod u-s zsbboards
+ 		$(CP) xsbboards $@
+ 		-chmod $(PGMPROT) $@
+ @BEGIN: SENDMTS
+@@ -1205,7 +1154,6 @@ l-sbboards:;	$(LINT) $(LFLAGS) sbboards.
+ inst-slocal:	$(ETCDIR)/slocal
+ 
+ $(ETCDIR)/slocal:	xslocal
+-		-$(REMOVE) $@ zslocal
+ 		$(CP) xslocal $@
+ 		-chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1222,7 +1170,6 @@ l-slocal:;	$(LINT) $(LFLAGS) slocal.c al
+ inst-sortm:	$(BINDIR)/sortm
+ 
+ $(BINDIR)/sortm:	xsortm
+-		-$(REMOVE) $@ zsortm
+ 		$(CP) xsortm $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1239,8 +1186,6 @@ l-sortm:;	$(LINT) $(LFLAGS) sortm.c $(LL
+ inst-spop:	$(ETCDIR)/spop
+ 
+ $(ETCDIR)/spop:	xspop
+-		-$(REMOVE) $@ zspop
+-		-chmod u-s zspop
+ 		$(CP) xspop $@
+ 		-chmod $(PGMPROT) $@
+ 		-$(CHOWN) $(POPUID) $@ && chmod u+s $@
+@@ -1262,7 +1207,6 @@ l-spop:;	$(LINT) $(LFLAGS) -DSPOP spop.c
+ inst-spost:	$(ETCDIR)/spost
+ 
+ $(ETCDIR)/spost:	xspost
+-		-$(REMOVE) $@ zspost
+ 		$(CP) xspost $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1281,8 +1225,7 @@ l-spost:;	$(LINT) $(LFLAGS) spost.c alia
+ inst-sendmail:	$(ETCDIR)/sendmail
+ 
+ $(ETCDIR)/sendmail:	xsendmail
+-		-$(REMOVE) $@ zsendmail
+-		cp xsendmail $@
++		$(CP) xsendmail $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+ 		-@echo "Don't forget to: ln -s @(MHSENDMAILPATH) $@"
+@@ -1299,7 +1242,6 @@ l-sendmail:;		$(LINT) $(LFLAGS) sendmail
+ inst-tma:	$(BINDIR)/tma
+ 
+ $(BINDIR)/tma:	xtma
+-		-$(REMOVE) $@ ztma
+ 		$(CP) xtma $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1316,7 +1258,6 @@ l-tma:;		$(LINT) $(LFLAGS) tma.c $(TMALL
+ inst-umhook:	$(BINDIR)/umhook
+ 
+ $(BINDIR)/umhook:	xumhook
+-		-$(REMOVE) $@ zumhook
+ 		$(CP) xumhook $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1333,7 +1274,6 @@ l-umhook:;	$(LINT) $(LFLAGS) umhook.c $(
+ inst-vmh:	$(BINDIR)/vmh
+ 
+ $(BINDIR)/vmh:	xvmh
+-		-$(REMOVE) $@ zvmh
+ 		$(CP) xvmh $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1354,7 +1294,6 @@ xvmhtest:	vmhtest.o vmhsbr.o $(LIBES)
+ inst-whatnow:	$(BINDIR)/whatnow
+ 
+ $(BINDIR)/whatnow:	xwhatnow
+-		-$(REMOVE) $@ zwhatnow
+ 		$(CP) xwhatnow $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1374,7 +1313,6 @@ l-whatnow:;	$(LINT) $(LFLAGS) whatnow.c 
+ inst-whom:	$(BINDIR)/whom
+ 
+ $(BINDIR)/whom:	xwhom
+-		-$(REMOVE) $@ zwhom
+ 		$(CP) xwhom $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1391,7 +1329,6 @@ l-whom:;	$(LINT) $(LFLAGS) whom.c distsb
+ inst-wmh:	$(BINDIR)/wmh
+ 
+ $(BINDIR)/wmh:	xwmh
+-		-$(REMOVE) $@ zwmh
+ 		$(CP) xwmh $@
+ 		-@chmod $(PGMPROT) $@
+ 		-@ls -l $@
+@@ -1438,7 +1375,6 @@ unclean:;	-rm -f z* _* :* core *.core ed
+ #	inst-pickle:	$(BINDIR)/pickle
+ #	
+ #	$(BINDIR)/pickle:	xpickle
+-#			-$(REMOVE) $@ zpickle
+ #			cp xpickle $@
+ #			-@chmod $(PGMPROT) $@
+ #			-@ls -l $@
