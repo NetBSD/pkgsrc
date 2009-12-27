@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 2009/02/05 21:05:07 tron Exp $
+$NetBSD: patch-al,v 1.2 2009/12/27 15:06:28 abs Exp $
 
---- src/pulsecore/core-util.c.orig	2009-02-05 14:21:35.000000000 +0000
-+++ src/pulsecore/core-util.c	2009-02-05 14:42:02.000000000 +0000
+--- src/pulsecore/core-util.c.orig	2009-12-27 14:25:19.000000000 +0000
++++ src/pulsecore/core-util.c
 @@ -105,6 +105,10 @@
  #define MSG_NOSIGNAL 0
  #endif
@@ -13,3 +13,24 @@ $NetBSD: patch-al,v 1.1 2009/02/05 21:05:07 tron Exp $
  #ifdef OS_IS_WIN32
  
  #define PULSE_ROOTENV "PULSE_ROOT"
+@@ -687,11 +691,19 @@ int pa_raise_priority(int nice_level) {
+ void pa_reset_priority(void) {
+ #ifdef HAVE_SYS_RESOURCE_H
+     struct sched_param sp;
++    int policy;
+ 
+     setpriority(PRIO_PROCESS, 0, 0);
+ 
+     memset(&sp, 0, sizeof(sp));
+-    pa_assert_se(pthread_setschedparam(pthread_self(), SCHED_OTHER, &sp) == 0);
++    pa_assert_se(pthread_getschedparam(pthread_self(), &policy, &sp) == 0);
++    /*
++     * Set back to standard priority iff we previously set high_priority
++     * Avoid assert on at least NetBSD 5 in !high_priority case
++     */
++    if (policy != SCHED_OTHER)
++	pa_assert_se(pthread_setschedparam(pthread_self(), SCHED_OTHER, &sp)
++									== 0);
+ #endif
+ 
+ #ifdef OS_IS_WIN32
