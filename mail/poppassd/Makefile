@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2008/06/12 02:14:35 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/12/27 14:17:38 obache Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
 PKGNAME=		poppassd-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${QPOPPER_MASTER_SITES}
 
@@ -27,12 +28,7 @@ MAKE_ENV+=	ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP:Q}
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 share/doc libexec
 # popper makefile doesn't have an install target...
 INSTALL_DIRS=		password
-
-do-build:
-.for DIR in common password
-	cd ${WRKSRC}/${DIR}; ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_TARGET}
-.endfor
+BUILD_DIRS=		common password
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/poppassd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
