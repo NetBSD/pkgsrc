@@ -1,8 +1,16 @@
-$NetBSD: patch-al,v 1.1 2001/06/10 15:08:41 taca Exp $
+$NetBSD: patch-al,v 1.2 2009/12/27 14:17:38 obache Exp $
 
---- Makefile.in.orig	Mon Apr 23 07:59:14 2001
+--- Makefile.in.orig	2006-03-09 22:32:36.000000000 +0000
 +++ Makefile.in
-@@ -58,10 +58,10 @@
+@@ -26,6 +26,7 @@ MAKEFILE        =       Makefile
+ YACC            =       @YACC@
+ LEX             =       @LEX@
+ INSTALL         =       @INSTALL@
++DESTDIR		=
+ 
+ @SET_MAKE@
+ 
+@@ -58,10 +59,10 @@ popper_server: 
  	cd ${popper_dir}  && ${MAKE} all
  
  install:
@@ -10,9 +18,9 @@ $NetBSD: patch-al,v 1.1 2001/06/10 15:08:41 taca Exp $
 -	echo "Installed man/popper.8 as ${mandir}/man8/popper.8"
 -	${INSTALL} -m 0644 -o root ${top_srcdir}/man/popauth.8 ${mandir}/man8/
 -	echo "Installed man/popauth.8 as ${mandir}/man8/popauth.8"
-+	${INSTALL} -m 0644 -o root ${top_srcdir}/man/popper.8 ${mandir}/man8/qpopper.8
++	${BSD_INSTALL_MAN} ${top_srcdir}/man/popper.8 ${DESTDIR}${mandir}/man8/qpopper.8
 +	@echo "Installed man/popper.8 as ${mandir}/man8/qpopper.8"
-+	${INSTALL} -m 0644 -o root ${top_srcdir}/man/popauth.8 ${mandir}/man8/qpopauth.8
++	${BSD_INSTALL_MAN} ${top_srcdir}/man/popauth.8 ${DESTDIR}${mandir}/man8/qpopauth.8
 +	@echo "Installed man/popauth.8 as ${mandir}/man8/qpopauth.8"
  	cd ${popper_dir}  && ${MAKE} install
  
