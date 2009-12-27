@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2008/12/20 21:11:05 jmcneill Exp $
+$NetBSD: patch-aa,v 1.5 2009/12/27 16:17:34 abs Exp $
 
---- tools/hal-storage-mount.c.orig	2008-05-07 19:24:23.000000000 -0400
-+++ tools/hal-storage-mount.c	2008-12-20 15:34:05.000000000 -0500
+--- tools/hal-storage-mount.c.orig	2008-05-07 23:24:23.000000000 +0000
++++ tools/hal-storage-mount.c
 @@ -31,7 +31,7 @@
  #include <string.h>
  #include <glib.h>
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2008/12/20 21:11:05 jmcneill Exp $
  #include <fstab.h>
  #include <sys/param.h>
  #include <sys/ucred.h>
-@@ -41,6 +41,13 @@
+@@ -41,6 +41,14 @@
  #elif sun
  #include <sys/mnttab.h>
  #include <sys/vfstab.h>
@@ -22,10 +22,11 @@ $NetBSD: patch-aa,v 1.4 2008/12/20 21:11:05 jmcneill Exp $
 +#include <fcntl.h>
 +#include <sys/stat.h>
 +#include <unistd.h>
++#include <pwd.h>
  #else
  #include <mntent.h>
  #endif
-@@ -54,10 +61,14 @@
+@@ -54,10 +62,14 @@
  
  #include "hal-storage-shared.h"
  
@@ -41,7 +42,7 @@ $NetBSD: patch-aa,v 1.4 2008/12/20 21:11:05 jmcneill Exp $
  #elif sun
  #define MOUNT		"/sbin/mount"
  #define MOUNT_OPTIONS	"noexec,nosuid"
-@@ -421,7 +432,7 @@ device_is_mounted (const char *device, c
+@@ -421,7 +433,7 @@ device_is_mounted (const char *device, c
  static const char *
  map_fstype (const char *fstype)
  {
@@ -50,7 +51,7 @@ $NetBSD: patch-aa,v 1.4 2008/12/20 21:11:05 jmcneill Exp $
  	if (! strcmp (fstype, "iso9660"))
  		return "cd9660";
  	else if (! strcmp (fstype, "ext2"))
-@@ -430,6 +441,13 @@ map_fstype (const char *fstype)
+@@ -430,6 +442,13 @@ map_fstype (const char *fstype)
  		return "ext2fs";
  	else if (! strcmp (fstype, "vfat"))
  		return "msdosfs";
@@ -64,7 +65,13 @@ $NetBSD: patch-aa,v 1.4 2008/12/20 21:11:05 jmcneill Exp $
  #elif sun
  	if (! strcmp (fstype, "iso9660"))
  		return "hsfs";
-@@ -475,6 +493,11 @@ handle_mount (LibHalContext *hal_ctx, 
+@@ -470,11 +489,16 @@ handle_mount (LibHalContext *hal_ctx, 
+ 	gboolean is_remount;
+ 	gboolean explicit_mount_point_given;
+ 	const char *end;
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ 	struct passwd *pw;
  	uid_t calling_uid;
  	gid_t calling_gid;
  #endif
@@ -76,7 +83,7 @@ $NetBSD: patch-aa,v 1.4 2008/12/20 21:11:05 jmcneill Exp $
  	const char *label;
  	const char *uuid;
  
-@@ -731,7 +754,6 @@ handle_mount (LibHalContext *hal_ctx, 
+@@ -731,7 +755,6 @@ handle_mount (LibHalContext *hal_ctx, 
  	/* construct arguments to mount */
  	na = 0;
  	
@@ -84,7 +91,7 @@ $NetBSD: patch-aa,v 1.4 2008/12/20 21:11:05 jmcneill Exp $
  	if (strlen (mount_fstype) > 0) {
  		mount_do_fstype = (char *) map_fstype (mount_fstype);
  	} else if (volume == NULL) {
-@@ -742,8 +764,29 @@ handle_mount (LibHalContext *hal_ctx, 
+@@ -742,8 +765,29 @@ handle_mount (LibHalContext *hal_ctx, 
  	} else {
  		mount_do_fstype = "auto";
  	}
@@ -116,3 +123,12 @@ $NetBSD: patch-aa,v 1.4 2008/12/20 21:11:05 jmcneill Exp $
  
  	args[na++] = "-o";
  #ifdef HAVE_UMOUNT_HAL
+@@ -814,7 +858,7 @@ handle_mount (LibHalContext *hal_ctx, 
+ 			unknown_error ("Cannot create mount directory");
+ 		}
+ 		
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ 		calling_uid = (uid_t) strtol (invoked_by_uid, (char **) NULL, 10);
+ 		pw = getpwuid (calling_uid);
+ 		if (pw != NULL) {
