@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2003/03/13 07:23:25 itojun Exp $
+$NetBSD: patch-aa,v 1.10 2009/12/27 14:17:38 obache Exp $
 
---- configure-	Thu Mar 13 16:16:03 2003
-+++ configure	Thu Mar 13 16:16:25 2003
-@@ -3022,13 +3022,6 @@
+--- configure.orig	2009-12-27 12:17:33.000000000 +0000
++++ configure
+@@ -3023,13 +3023,6 @@ fi
  
  
  
@@ -16,3 +16,11 @@ $NetBSD: patch-aa,v 1.9 2003/03/13 07:23:25 itojun Exp $
  if test "$GCC" = yes
  then
          echo "$as_me:$LINENO: checking for gcc version 2.7.2.3" >&5
+@@ -5132,6 +5125,7 @@ fi
+       ipv6_cv_iruserok_sa=no
+       :
+     fi
++fi
+ 
+ 
+ USE_REG_STRUCT_RET="default"
