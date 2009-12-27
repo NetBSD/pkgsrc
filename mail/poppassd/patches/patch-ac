@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
+$NetBSD: patch-ac,v 1.9 2009/12/27 14:17:38 obache Exp $
 
---- password/poppassd.c.orig	Mon Dec  5 10:45:21 2005
+--- password/poppassd.c.orig	2009-12-27 13:05:39.000000000 +0000
 +++ password/poppassd.c
 @@ -171,8 +171,13 @@
  /* LANMAN allows up to 14 char passwords (truncates if longer), but tacacs
@@ -25,7 +25,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
  #if HAVE_SYS_NETINET_IN_H
  #  include <sys/netinet/in.h>
  #endif
-@@ -257,7 +264,7 @@ int     dochild (int master, char *slave
+@@ -251,7 +258,7 @@ int     dochild (int master, char *slave
  int     findpty (char **slave);
  void    writestring (int fd, char *s);
  int     talktochild (int master, char *user, char *oldpass, char *newpass,
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
  int     match (char *str, char *pat);
  int     expect (int master, char **expected, char *buf);
  void    getemess (int master, char **expected, char *buf);
-@@ -274,7 +281,7 @@ void    get_client_info ( POP *p, BOOL n
+@@ -268,7 +275,7 @@ void    get_client_info ( POP *p, BOOL n
  char   *sock_ntop ( struct sockaddr *p, int salen );
  int     sock_port ( struct sockaddr *p, int salen );
  char   *debug_str ( char *p, int inLen, int order );
@@ -43,7 +43,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
  
  /*
   * External prototypes
-@@ -295,6 +302,8 @@ pop_result auth_user ( POP *p, char *pas
+@@ -289,6 +296,8 @@ pop_result auth_user ( POP *p, char *pas
  
  static char *P1[] =
     {
@@ -52,7 +52,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
       "changing password for *\nold password: ",  /* shadow */
       "enter login password: ",                   /* Solaris */
       "old smb password: ",                       /* smb */
-@@ -324,6 +333,7 @@ static char *P4[] =
+@@ -318,6 +327,7 @@ static char *P4[] =
     {
       "password changed. ", /* shadow */
       "password changed ",  /* smb */
@@ -60,7 +60,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
       ""
     };
  
-@@ -338,6 +348,8 @@ char           msg_buf [ 2048 ]     = ""
+@@ -332,6 +342,8 @@ char           msg_buf [ 2048 ]     = ""
  char          *pwd_binary           = PASSWD_BINARY;
  char          *smb_binary           = SMBPASSWD_BINARY;
  
@@ -69,7 +69,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
  
  /*
   * Be careful using TRACE in an 'if' statement!
-@@ -347,18 +359,19 @@ char          *smb_binary           = SM
+@@ -341,18 +353,19 @@ char          *smb_binary           = SM
  #define RUN_PASSWD 1
  #define RUN_SMBPASSWD 2
  
@@ -91,7 +91,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
  
  #ifdef HAS_SHADOW
      struct spwd *spwd;
-@@ -376,8 +389,6 @@ int main ( int argc, char *argv[] )
+@@ -370,8 +383,6 @@ int main ( int argc, char *argv[] )
              pname = ptr + 1;
      }
  
@@ -100,7 +100,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
      /*
       * Set up some stuff in -p- so we can call Qpopper routines
       */
-@@ -385,6 +396,17 @@ int main ( int argc, char *argv[] )
+@@ -379,6 +390,17 @@ int main ( int argc, char *argv[] )
      p.AuthType            = noauth;
      p.myname              = pname;
  
@@ -118,7 +118,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
      /*
       * Handle command-line options
       */
-@@ -393,9 +415,9 @@ int main ( int argc, char *argv[] )
+@@ -387,9 +409,9 @@ int main ( int argc, char *argv[] )
      {
          switch (nopt)
          {
@@ -131,7 +131,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
                                    "[-t trace-file] [-v] [-y log-facility]\n",
                            pname );
                  exit (1);
-@@ -412,20 +434,34 @@ int main ( int argc, char *argv[] )
+@@ -406,20 +428,34 @@ int main ( int argc, char *argv[] )
                  verbose = TRUE;
                  break;
  
@@ -149,14 +149,14 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
                  TRACE ( trace_file, POP_DEBUG, HERE,
 -                        "Changing SMB passwords using %s", smb_binary );
 +                        "Changing SMB password using %s", smb_binary );
-+                break;
-+
+                 break;
+ 
 +           case 'P':
 +                mode |= RUN_PASSWD;
 +                TRACE ( trace_file, POP_DEBUG, HERE,
 +			"Changing standard password enabled" );
-                 break;
- 
++                break;
++
 +
             case 'p':
                  mode |= RUN_PASSWD;
@@ -168,7 +168,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
                  break;
  
             case 't':
-@@ -476,6 +512,10 @@ int main ( int argc, char *argv[] )
+@@ -470,6 +506,10 @@ int main ( int argc, char *argv[] )
                          "Avoiding reverse lookups (-R)" );
                  break;
  
@@ -179,7 +179,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
              case 'y': /* log facility */
                  if ( optarg == NULL || *optarg == '\0' ) {
                      err_msg ( HERE, "-y value expected" );
-@@ -563,44 +603,50 @@ int main ( int argc, char *argv[] )
+@@ -557,44 +597,50 @@ int main ( int argc, char *argv[] )
          return 1;
      }
  
@@ -257,7 +257,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
          return 1;
      }
  
-@@ -633,6 +679,20 @@ int main ( int argc, char *argv[] )
+@@ -627,6 +673,20 @@ int main ( int argc, char *argv[] )
      return 0;
  }
  
@@ -278,7 +278,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
  
  /* Run a child process to do the password change */
  
-@@ -653,6 +713,10 @@ void runchild ( char *userid, char *oldp
+@@ -647,6 +707,10 @@ void runchild ( char *userid, char *oldp
          exit ( 1 );
      }
  
@@ -289,7 +289,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
    /* fork child process to talk to password program */
  
    pid = fork();
-@@ -665,7 +729,7 @@ void runchild ( char *userid, char *oldp
+@@ -659,7 +723,7 @@ void runchild ( char *userid, char *oldp
  
    if ( pid > 0 )   /* Parent */
    {
@@ -298,7 +298,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
      {
        logit ( trace_file, LOG_ERR, HERE, 
                "%s failed for %s", smb ? "smbpasswd" : "passwd", userid );
-@@ -677,10 +741,16 @@ void runchild ( char *userid, char *oldp
+@@ -671,10 +735,16 @@ void runchild ( char *userid, char *oldp
      wpid = waitpid ( pid, &wstat, 0 );
      if ( wpid < 0 )
      {
@@ -318,7 +318,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
  
      if ( pid != wpid )
      {
-@@ -702,7 +772,6 @@ void runchild ( char *userid, char *oldp
+@@ -696,7 +766,6 @@ void runchild ( char *userid, char *oldp
        WriteToClient ("500 Server error (abnormal exit), get help!");
        exit(1);
      }
@@ -326,7 +326,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
      close ( master ); /* done with the pty */
    }
    else      /* Child */
-@@ -784,6 +853,13 @@ int dochild (int master, char *slavedev,
+@@ -778,6 +847,13 @@ int dochild (int master, char *slavedev,
     chdir ("/");
     umask (0);
  
@@ -340,7 +340,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
  /*
   * Become the user and run passwd. Linux shadowed passwd doesn't need
   * to be run as root with the username passed on the command line.
-@@ -883,20 +959,19 @@ void writestring (int fd, char *s)
+@@ -877,20 +953,19 @@ void writestring (int fd, char *s)
   * that the password wasn't changed).
   */
  int talktochild (int master, char *userid, char *oldpass, char *newpass,
@@ -365,7 +365,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
         /* wait for current password prompt */
         if (!expect(master, P1, buf)) return FAILURE;
  
-@@ -926,6 +1001,10 @@ int talktochild (int master, char *useri
+@@ -920,6 +995,10 @@ int talktochild (int master, char *useri
       if ( !expect(master, P4, buf) )
          TRACE ( trace_file, POP_DEBUG, HERE, "no response -- assuming OK" );
  
@@ -376,7 +376,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
       return SUCCESS;
  }
  
-@@ -955,8 +1034,12 @@ int match (char *str, char *pat)
+@@ -949,8 +1028,12 @@ int match (char *str, char *pat)
             strlen(pat), debug_str(pat, strlen(pat), 1) );
  
     while (*str && *pat) {
@@ -391,7 +391,7 @@ $NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
  
       /* ignore multiple space sequences */
       if (*pat == ' ' && isspace (*str)) {
-@@ -1055,7 +1138,11 @@ int expect (int master, char **expected,
+@@ -1049,7 +1132,11 @@ int expect (int master, char **expected,
          if ( m < 0 ) {
             err_msg ( HERE, "read error from child" );
             return FAILURE;

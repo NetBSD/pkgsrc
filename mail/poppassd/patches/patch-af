@@ -1,8 +1,16 @@
-$NetBSD: patch-af,v 1.1 2004/10/20 14:18:42 taca Exp $
+$NetBSD: patch-af,v 1.2 2009/12/27 14:17:38 obache Exp $
 
---- configure.orig	2004-10-20 14:19:23.833010000 +0900
+--- configure.orig	2009-12-27 13:05:39.000000000 +0000
 +++ configure
-@@ -9227,6 +9227,7 @@ gethostbyname \
+@@ -5132,6 +5132,7 @@ fi
+       ipv6_cv_iruserok_sa=no
+       :
+     fi
++fi
+ 
+ 
+ USE_REG_STRUCT_RET="default"
+@@ -9228,6 +9229,7 @@ gethostbyname \
  gettimeofday \
  getusershell \
  mkdir \
