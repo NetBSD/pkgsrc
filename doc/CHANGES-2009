@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4693 2009/12/25 13:51:00 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4694 2009/12/27 14:24:02 obache Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -6353,3 +6353,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight28 to 2.8rc2 [taca 2009-12-24]
 	Updated graphics/dia to 0.97nb1 [wiz 2009-12-24]
 	Updated www/squid30 to 3.0.21 [taca 2009-12-25]
+	Updated mail/qpopper to 4.0.9nb2 [obache 2009-12-27]
