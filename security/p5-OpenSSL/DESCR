@@ -1,4 +1,4 @@
-THIS IS A FUCKING HACK (nichts für die Goldwaage..)
+THIS IS AN UGLY HACK (nichts für die Goldwaage..)
 
 Don't read the man-pages/*.pm's (they are dummy), check t/*
 and fix OpenSSL.xs
