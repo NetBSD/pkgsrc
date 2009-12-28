@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2009/12/03 12:39:59 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/12/28 11:42:19 tnn Exp $
 bin/f2c
 bin/f2c-f77
-man/cat1/f2c.0
 man/man1/f2c.1
 share/doc/f2c/changes
 share/doc/f2c/f2c.pdf
