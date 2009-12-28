@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/08/23 07:47:00 obache Exp $
+# $NetBSD: Makefile,v 1.15 2009/12/28 11:26:17 obache Exp $
 #
 
 DISTNAME=		sope-4.5.4-nevermind-r878
@@ -11,9 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sope.opengroupware.org/
 COMMENT=		Set of frameworks for a complete web application server environment
 
-BUILD_DEPENDS+=		bash-[0-9]*:../../shells/bash
-
 USE_LANGUAGES=		objc
+USE_TOOLS+=		bash
 
 WRKSRC=			${WRKDIR}/sope
 USE_PKGLOCALEDIR=	yes
@@ -21,7 +20,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gnustep
 CONFIGURE_ARGS+=	--enable-strip
 CONFIGURE_ARGS+=	--disable-debug
-CONFIG_SHELL=		${PREFIX}/bin/bash
+CONFIG_SHELL=		${BASH}
 MAKE_ENV+=		ADDITIONAL_OBJCFLAGS="-Wno-import"
 
 SUBST_CLASSES+=		paths
