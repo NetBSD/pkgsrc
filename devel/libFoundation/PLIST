@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:48:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/12/28 09:17:44 obache Exp $
 include/libFoundation/Foundation/Foundation.h
 include/libFoundation/Foundation/NSAccount.h
 include/libFoundation/Foundation/NSAllocDebugZone.h
@@ -111,8 +111,8 @@ include/libFoundation/extensions/exceptions/GeneralExceptions.h
 include/libFoundation/extensions/exceptions/NSCoderExceptions.h
 include/libFoundation/extensions/objc-runtime.h
 include/libFoundation/extensions/support.h
-include/libFoundation/${MACHINE_ARCH}/${LOWER_OPSYS}/GNU/lfmemory.h
-include/libFoundation/${MACHINE_ARCH}/${LOWER_OPSYS}/GNU/real_exception_file.h
+include/libFoundation/${GNUSTEP_HOST_CPU}/${LIBF_HOST_OS}/GNU/lfmemory.h
+include/libFoundation/${GNUSTEP_HOST_CPU}/${LIBF_HOST_OS}/GNU/real_exception_file.h
 lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/CharacterSets/alphanumericCharacterSet.bitmap
 lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/CharacterSets/controlCharacterSet.bitmap
 lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/CharacterSets/decimalDigitCharacterSet.bitmap
