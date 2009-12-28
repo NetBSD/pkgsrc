@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.19 2009/10/08 12:49:27 joerg Exp $
+#	$NetBSD: gnustep.mk,v 1.20 2009/12/28 10:49:23 obache Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -46,7 +46,7 @@ SUBST_CLASSES+=				gnustep_installation_dir
 SUBST_STAGE.gnustep_installation_dir=	post-patch
 SUBST_FILES.gnustep_installation_dir?=	GNUmakefile
 SUBST_SED.gnustep_installation_dir+=	-e 's|GNUSTEP_INSTALLATION_DIR.*=.*..GNUSTEP_\(.*\)_ROOT.*|GNUSTEP_INSTALLATION_DOMAIN = \1|'
-SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Libraries|$${DESTDIR}${GNUSTEP_LIB_DIR}/Libraries/${PKGNAME}|g'
+SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Libraries|$${DESTDIR}${GNUSTEP_LIB_DIR}/Libraries/${PKGNAME_NOREV}|g'
 SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Library/Bundles|$${DESTDIR}${GNUSTEP_LIB_DIR}/Bundles|g'
 SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Library|$${DESTDIR}${GNUSTEP_ROOT}/${GNUSTEP_SUBDIR}/Library|g'
 SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_USER_ROOT)/Library|$${DESTDIR}${GNUSTEP_USER_ROOT}/${GNUSTEP_SUBDIR}/Library|g'
