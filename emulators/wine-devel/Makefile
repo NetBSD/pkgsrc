@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/09/07 20:27:25 reinoud Exp $
+# $NetBSD: Makefile,v 1.15 2009/12/29 13:46:43 mishka Exp $
 
 DISTNAME=	wine-1.1.16
 PKGREVISION=	2
@@ -34,7 +34,7 @@ REPLACE_PERL+=		tools/winemaker tools/winedump/function_grep.pl
 #
 CONFIGURE_ENV+=		X_LIBS=${LDFLAGS:M*:Q}
 CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}\ -DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
-CONFIGURE_ENV+=		LDD=${LDD}
+CONFIGURE_ENV+=		LDD=${LDD:Q}
 LIBS+=			${LDFLAGS}
 
 # If we're doing a 32-bit build, make sure that the appropriate
