@@ -1,0 +1,36 @@
+$NetBSD: patch-an,v 1.1 2009/12/29 21:51:00 joerg Exp $
+
+--- src/Makefile.in.in.orig	2009-12-29 21:28:28.000000000 +0000
++++ src/Makefile.in.in
+@@ -451,10 +451,10 @@ RAW_EXE  = temacs
+ DO_TEMACS = $(DUMPENV) ./$(RAW_EXE)
+ DO_XEMACS = ./$(PROGNAME)
+ 
+-BATCH = -no-packages -batch
++MY_BATCH = -no-packages -batch
+ BATCH_PACKAGES = -vanilla -batch
+-TEMACS_BATCH = $(DO_TEMACS) -nd $(BATCH)
+-XEMACS_BATCH = $(DO_XEMACS) $(BATCH)
++TEMACS_BATCH = $(DO_TEMACS) -nd $(MY_BATCH)
++XEMACS_BATCH = $(DO_XEMACS) $(MY_BATCH)
+ XEMACS_BATCH_PACKAGES = $(DO_XEMACS) $(BATCH_PACKAGES)
+ temacs_loadup_args = -l $(LISP)/loadup.el
+ dump_temacs_args   = $(temacs_loadup_args) dump
+@@ -663,7 +663,7 @@ load-shadows: update-elc-2
+ 
+ release: all
+ 	-if [ -w $(LISP) ]; then \
+-	  w=`pwd`; cd $(SRC) && $$w/$(RAW_EXE) -nd $(BATCH) -l $(LISP)/inc-vers; \
++	  w=`pwd`; cd $(SRC) && $$w/$(RAW_EXE) -nd $(MY_BATCH) -l $(LISP)/inc-vers; \
+ 	else true; fi
+ 	-$(dump_temacs)
+ 	touch release
+@@ -974,7 +974,7 @@ run-rtcmacs: rtcmacs
+ 	ignore POLL; \
+ 	check -access; \
+ 	suppress rui; \
+-	runargs -nd $(BATCH) $(run_temacs_args) -vanilla; \
++	runargs -nd $(MY_BATCH) $(run_temacs_args) -vanilla; \
+ 	run' rtcmacs
+ 
+ debug-temacs: $(RAW_EXE)
