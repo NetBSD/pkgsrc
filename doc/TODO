@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8812 2009/12/25 13:45:40 taca Exp $
+$NetBSD: TODO,v 1.8813 2009/12/29 14:08:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -417,7 +417,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aqsis-1.6.0
 	o aranym-0.9.9
 	o argtable-2.9
-	o aria2-1.7.2
+	o aria2-1.8.0
 	o arla-0.90
 	o arnold-20040104
 	o asapm-3.1
@@ -472,6 +472,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cddbd-1.5.2
 	o cdif-1.19
 	o cdlabelgen-4.1.0
+	o cdrtools-2.01.01alpha70
 	o cfitsio-3210
 	o cgdb-0.6.4
 	o cgicc-3.2.9
@@ -568,7 +569,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-437
+	o etm-444
 	o evolution-exchange-2.28.2
 	o evolution-mapi-0.28.2 [GNOME 2.28]
 	o ex-20050325
@@ -624,7 +625,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-sony-misc-1.0.1
 	o font-util-1.1.1
 	o fontcacheproto-0.1.3
-	o fotoxx-9.0
+	o fotoxx-9.1
 	o freeciv-2.1.10
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -649,7 +650,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcin-1.4.1
 	o gcombust-0.1.55
 	o gcpio-2.10
-	o gdb-7.0
+	o gdb-7.0.1
 	o gdeskcal-1.01
 	o gdl-2.28.2 [GNOME 2.28]
 	o gdm-2.28.2 [GNOME 2.28]
@@ -734,7 +735,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o guile-gtk-2.0
 	o gupnp-0.13.2
 	o gupnp-igd-0.1.5 [needs gupnp-1.0 >= 0.13.2]
-	o gv-3.6.7
+	o gv-3.6.8
 	o hackbot-2.21
 	o hal-0.5.14
 	o hamster-applet-2.28.2
@@ -756,7 +757,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o html2ps-1.0b5
 	o html2wml-0.4.11
 	o htop-0.8.3
-	o httping-1.31
+	o httping-1.40
 	o httptunnel-3.3
 	o hydrogen-0.9.3 [pkg/37424]
 	o hylafax-5.3.0
@@ -796,7 +797,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jgrasp-187
 	o jhead-2.88
 	o joe-3.6
-	o john-1.7.3.4
+	o john-1.7.4
 	o jools-1.0
 	o jpilot-1.6.2
 	o kadu-0.6.5
@@ -824,12 +825,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lapack-3.2.1
 	o latd-1.21
 	o latex2rtf-1.9.19
-	o lbreakout2-2.6
+	o lbreakout2-2.6.1
 	o lcc-4.2
 	o ldapsdk-6.0.2
 	o less-436
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
+	o lftp-4.0.5
 	o libX11-1.3.2
 	o libXaw-1.0.7
 	o libXcomposite-0.4.1
@@ -900,7 +902,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lq-sp-1.3.4.13
 	o lsh-2.0.3
 	o lsof-4.81
-	o ltris-1.0.13
+	o ltris-1.0.14
 	o lucy-1.20
 	o lwm-1.2.2
 	o lyx-1.6.5
@@ -976,6 +978,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o multitail-5.2.2
 	o munin-1.4.1
 	o muse-0.9.2
+	o musicpd-0.15.7
 	o mysql-5.0.89
 	o mysql-5.1.41
 	o mysqlcc-0.9.8
@@ -987,6 +990,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nawk-20071023
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncftp3-3.2.2
+	o ncmpc-0.16
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
@@ -1015,6 +1019,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nxtvepg-2.8.1
 	o objc-3.2.8
 	o ocamlnet-2.2.4
+	o ocp-0.1.18
 	o ocsigen-1.1.0 [pkg/40761]
 	o odbc-postgresql-8.2.3
 	o offlineimap-6.2.0
@@ -1118,6 +1123,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poedit-1.4.3
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.12.3
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1378,6 +1384,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vifm-0.5
 	o vino-2.28.1 [GNOME 2.28]
 	o visual-regexp-3.1
+	o vlgothic-ttf-20091214 [pkg/42520]
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
 	o vmware-5.5
@@ -1397,7 +1404,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webmin-1.500
 	o weewm-0.01
 	o whohas-0.23
-	o windowlab-1.38
+	o windowlab-1.39
 	o wine-devel-1.1.35
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1517,7 +1524,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xzip-182
 	o yafc-1.1
 	o yodl-2.14.3
-	o youtube-dl-20090913
+	o youtube-dl-20091226
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o yorick-2.1.05
