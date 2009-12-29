@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/12/07 13:00:56 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/12/29 18:12:44 asau Exp $
 
 BUILDLINK_TREE+=	libf2c
 
 .if !defined(LIBF2C_BUILDLINK3_MK)
 LIBF2C_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libf2c+=	libf2c>=20090201nb2
+BUILDLINK_API_DEPENDS.libf2c+=	libf2c>=20090201nb3
 BUILDLINK_PKGSRCDIR.libf2c?=	../../devel/libf2c
 .endif	# LIBF2C_BUILDLINK3_MK
 
