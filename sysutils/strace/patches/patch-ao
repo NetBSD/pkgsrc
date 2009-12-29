@@ -1,7 +1,7 @@
-$NetBSD: patch-ao,v 1.3 2007/12/05 16:31:00 christos Exp $
+$NetBSD: patch-ao,v 1.4 2009/12/29 22:03:41 spz Exp $
 
---- process.c.orig	2007-01-11 17:08:38.000000000 -0500
-+++ process.c	2007-12-05 11:21:20.000000000 -0500
+--- process.c.orig	2007-01-11 23:08:38.000000000 +0100
++++ process.c	2009-12-29 21:57:56.000000000 +0100
 @@ -40,6 +40,7 @@
  #include "defs.h"
  
@@ -115,7 +115,16 @@ $NetBSD: patch-ao,v 1.3 2007/12/05 16:31:00 christos Exp $
  	{ PT_TRACE_ME,		"PT_TRACE_ME"		},
  	{ PT_READ_I,		"PT_READ_I"		},
  	{ PT_READ_D,		"PT_READ_D"		},
-@@ -2289,13 +2292,17 @@
+@@ -2282,20 +2285,26 @@
+ #endif
+ 	{ PT_CONTINUE,		"PT_CONTINUE"		},
+ 	{ PT_KILL,		"PT_KILL"		},
++#if !(defined(NETBSD) && (defined(ALPHA) || defined(SPARC) || defined(SPARC64)))
+ 	{ PT_STEP,		"PT_STEP"		},
++#endif
+ 	{ PT_ATTACH,		"PT_ATTACH"		},
+ 	{ PT_DETACH,		"PT_DETACH"		},
+ 	{ PT_GETREGS,		"PT_GETREGS"		},
  	{ PT_SETREGS,		"PT_SETREGS"		},
  	{ PT_GETFPREGS,		"PT_GETFPREGS"		},
  	{ PT_SETFPREGS,		"PT_SETFPREGS"		},
@@ -135,7 +144,7 @@ $NetBSD: patch-ao,v 1.3 2007/12/05 16:31:00 christos Exp $
  #ifndef SUNOS4_KERNEL_ARCH_KLUDGE
  static
  #endif /* !SUNOS4_KERNEL_ARCH_KLUDGE */
-@@ -2982,12 +2989,14 @@
+@@ -2982,12 +2991,14 @@
  sys_ptrace(tcp)
  struct tcb *tcp;
  {
@@ -151,7 +160,7 @@ $NetBSD: patch-ao,v 1.3 2007/12/05 16:31:00 christos Exp $
  			  "PTRACE_???"
  #else
  			  "PT_???"
-@@ -2995,7 +3004,7 @@
+@@ -2995,7 +3006,7 @@
  			);
  		tprintf(", %lu, ", tcp->u_arg[1]);
  		addr = tcp->u_arg[2];
@@ -160,7 +169,7 @@ $NetBSD: patch-ao,v 1.3 2007/12/05 16:31:00 christos Exp $
  		if (tcp->u_arg[0] == PTRACE_PEEKUSER
  			|| tcp->u_arg[0] == PTRACE_POKEUSER) {
  			for (x = struct_user_offsets; x->str; x++) {
-@@ -3057,10 +3066,10 @@
+@@ -3057,10 +3068,10 @@
  		}
  	}
  #endif /* SUNOS4 */
