@@ -1,9 +1,9 @@
-$NetBSD: patch-aq,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
+$NetBSD: patch-aq,v 1.4 2009/12/30 04:11:02 jnemeth Exp $
 
---- configure.orig	2009-06-16 12:28:00.000000000 -0700
+--- configure.orig	2009-10-26 23:48:25.000000000 +0000
 +++ configure
-@@ -19395,6 +19395,144 @@ _ACEOF
- fi
+@@ -19294,6 +19294,146 @@ fi
+ 
  
  
 +if test "${ac_cv_header_sys_atomic_h+set}" = set; then
@@ -144,10 +144,12 @@ $NetBSD: patch-aq,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
 +
 +fi
 +
- 
- # The cast to long int works around a bug in the HP C Compiler
- # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
-@@ -33094,6 +33232,8 @@ _ACEOF
++ 
++
+ { echo "$as_me:$LINENO: checking for int" >&5
+ echo $ECHO_N "checking for int... $ECHO_C" >&6; }
+ if test "${ac_cv_type_int+set}" = set; then
+@@ -20567,6 +20707,8 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
