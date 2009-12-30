@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXv,v 1.1 2008/10/29 21:14:01 cube Exp $
+# $NetBSD: xorg.libXv,v 1.2 2009/12/30 17:10:33 tron Exp $
 #
 include/X11/extensions/Xvlib.h
 lib/libXv.1.0.0.dylib
@@ -9,4 +9,6 @@ lib/libXv.dylib
 lib/libXv.so
 lib/libXv.so.1
 lib/libXv.so.1.0
+lib/libXv.so.2
+lib/libXv.so.2.0
 lib/pkgconfig/xv.pc

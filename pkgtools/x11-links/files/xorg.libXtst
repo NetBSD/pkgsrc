@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXtst,v 1.1 2008/12/04 04:16:41 cube Exp $
+# $NetBSD: xorg.libXtst,v 1.2 2009/12/30 17:10:33 tron Exp $
 lib/libXtst.6.1.0.dylib
 lib/libXtst.6.1.dylib
 lib/libXtst.6.dylib
@@ -7,4 +7,6 @@ lib/libXtst.dylib
 lib/libXtst.so
 lib/libXtst.so.6
 lib/libXtst.so.6.1
+lib/libXtst.so.7
+lib/libXtst.so.7.0
 lib/pkgconfig/xtst.pc

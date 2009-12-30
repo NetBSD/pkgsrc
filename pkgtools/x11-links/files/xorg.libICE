@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libICE,v 1.1 2007/12/17 18:20:19 tron Exp $
+# $NetBSD: xorg.libICE,v 1.2 2009/12/30 17:10:33 tron Exp $
 #
 include/X11/ICE/ICE.h
 include/X11/ICE/ICEconn.h
@@ -15,4 +15,6 @@ lib/libICE.la
 lib/libICE.so
 lib/libICE.so.6
 lib/libICE.so.6.3
+lib/libICE.so.7
+lib/libICE.so.7.0
 lib/pkgconfig/ice.pc
