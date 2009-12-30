@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/12/30 21:13:15 joerg Exp $
+
+--- gnuradio-core/src/python/gnuradio/Makefile.am.orig	2009-12-23 19:51:56.000000000 +0000
++++ gnuradio-core/src/python/gnuradio/Makefile.am
+@@ -21,7 +21,7 @@
+ 
+ include $(top_srcdir)/Makefile.common
+ 
+-SUBDIRS = gr gru gruimpl blks2 blks2impl vocoder
++SUBDIRS = gr gru gruimpl blks2 blks2impl
+ 
+ grpython_PYTHON = 			\
+ 	__init__.py			\
