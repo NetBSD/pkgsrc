@@ -1,7 +1,0 @@
-# $NetBSD: Makefile.linux-i386,v 1.2 2009/01/04 18:48:47 shattered Exp $
-
-DISTNAME=	seamonkey-2.0a3pre.en-US.linux-i686
-EXTRACT_SUFX=	.tar.bz2
-
-MOZ_GTK2=	yes
-MOZ_PLATFORM=	linux
