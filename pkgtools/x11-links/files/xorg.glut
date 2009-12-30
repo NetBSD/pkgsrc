@@ -1,4 +1,4 @@
-# $NetBSD: xorg.glut,v 1.1 2008/11/11 16:19:23 cube Exp $
+# $NetBSD: xorg.glut,v 1.2 2009/12/30 17:10:33 tron Exp $
 #
 include/GL/glut.h
 include/GL/glutf90.h
@@ -6,4 +6,6 @@ lib/libglut.a
 lib/libglut.so
 lib/libglut.so.3
 lib/libglut.so.3.7.1
+lib/libglut.so.4
+lib/libglut.so.4.0
 lib/pkgconfig/glut.pc
