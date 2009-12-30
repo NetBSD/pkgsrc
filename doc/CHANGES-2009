@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4704 2009/12/30 17:11:28 tron Exp $
+$NetBSD: CHANGES-2009,v 1.4705 2009/12/30 21:07:56 joerg Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -6366,3 +6366,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20091228 [taca 2009-12-30]
 	Updated www/typolight28-translations to 20091228 [taca 2009-12-30]
 	Updated pkgtools/x11-links to 0.45 [tron 2009-12-30]
+	Removed www/seamonkey-bin-nightly [joerg 2009-12-30]
