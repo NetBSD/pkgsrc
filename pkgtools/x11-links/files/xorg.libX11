@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libX11,v 1.1 2007/12/15 17:53:41 tron Exp $
+# $NetBSD: xorg.libX11,v 1.2 2009/12/30 17:10:33 tron Exp $
 #
 include/X11/ImUtil.h
 include/X11/XKBlib.h
@@ -22,4 +22,6 @@ lib/libX11.so
 lib/libX11.so.6
 lib/libX11.so.6.1
 lib/libX11.so.6.2
+lib/libX11.so.7
+lib/libX11.so.7.0
 lib/pkgconfig/x11.pc
