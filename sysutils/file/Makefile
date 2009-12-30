@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/05/21 15:58:17 sno Exp $
+# $NetBSD: Makefile,v 1.23 2009/12/30 11:00:24 abs Exp $
 
 DISTNAME=		file-5.03
 CATEGORIES=		sysutils
@@ -27,6 +27,10 @@ TEST_TARGET=		check
 # XXX: should be treated with wrappers automatically.
 .if !empty(CC_VERSION:Mgcc-[23]*)
 BUILDLINK_TRANSFORM+=	rename:-Wextra:-W
+.endif
+# gcc<3 does not know -Wunused-parameter
+.if !empty(CC_VERSION:Mgcc-2*)
+BUILDLINK_TRANSFORM+=  rm:-Wunused-parameter
 .endif
 
 .if ${LOWER_OPSYS} == "aix"
