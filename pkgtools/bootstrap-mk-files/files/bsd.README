@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.README,v 1.1.1.1 2006/07/14 23:13:00 jlam Exp $
+#	$NetBSD: bsd.README,v 1.2 2009/12/30 20:46:22 abs Exp $
 #	@(#)bsd.README	8.2 (Berkeley) 4/2/94
 
 This is the README file for the new make "include" files for the BSD
@@ -550,7 +550,7 @@ WFORMAT 	-Wnetbsd-format-audit for extra-stringent format checking.
 		mk.conf if you're doing format-string auditing. 
 		FORMAT_AUDIT may go away in time.
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=-=-=-=-=   bsd.lib.mk   =-=-=-=-=
 
 The include file <bsd.lib.mk> has support for building libraries.  It has
 the same eight targets as <bsd.prog.mk>: all, clean, cleandir, depend,
@@ -564,6 +564,10 @@ It sets/uses the following variables:
 LIB		The name of the library to build.
 
 LIBDIR		Target directory for libraries.
+
+SHLIB_MAJOR
+SHLIB_MINOR
+SHLIB_TEENY	Major, minor, and teeny version numbers of shared library
 
 LINTLIBDIR	Target directory for lint libraries.
 
