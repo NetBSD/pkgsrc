@@ -1,4 +1,4 @@
-# $NetBSD: xorg.expat,v 1.2 2008/10/05 21:36:35 cube Exp $
+# $NetBSD: xorg.expat,v 1.3 2009/12/30 17:10:32 tron Exp $
 #
 include/expat.h
 include/expat_external.h
@@ -7,6 +7,8 @@ lib/libexpat.1.dylib
 lib/libexpat.a
 lib/libexpat.dylib
 lib/libexpat.la
-lib/libexpat.so.1.5.2
 lib/libexpat.so.1
+lib/libexpat.so.1.5.2
+lib/libexpat.so.2
+lib/libexpat.so.2.0
 lib/libexpat.so
