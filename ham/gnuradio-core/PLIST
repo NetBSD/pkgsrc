@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/08/12 12:21:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/12/30 21:13:15 joerg Exp $
 include/gnuradio/ccomplex_dotprod_generic.h
 include/gnuradio/ccomplex_dotprod_x86.h
 include/gnuradio/complex_dotprod_generic.h
@@ -974,9 +974,6 @@ ${PYSITELIB}/gnuradio/optfir.pyo
 ${PYSITELIB}/gnuradio/packet_utils.py
 ${PYSITELIB}/gnuradio/packet_utils.pyc
 ${PYSITELIB}/gnuradio/packet_utils.pyo
-${PYSITELIB}/gnuradio/vocoder/__init__.py
-${PYSITELIB}/gnuradio/vocoder/__init__.pyc
-${PYSITELIB}/gnuradio/vocoder/__init__.pyo
 ${PYSITELIB}/gnuradio/window.py
 ${PYSITELIB}/gnuradio/window.pyc
 ${PYSITELIB}/gnuradio/window.pyo
