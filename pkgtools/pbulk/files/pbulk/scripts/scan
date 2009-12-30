@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: scan,v 1.5 2009/12/16 19:41:41 joerg Exp $
+# $NetBSD: scan,v 1.6 2009/12/30 21:14:43 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -47,7 +47,6 @@ if [ -z "${limited_list}" ]; then
 		${pscan} -v -M ${make} ${pkgsrc} ${loc}/pscan 2>> ${loc}/pscan.stderr
 		;;
 	[yY][eE][sS])
-		${pscan} -v -I ${pscan_start_script} -m ${master_port_scan} -M ${make} ${pkgsrc} ${loc}/pscan
 		${pscan} -v -I ${pscan_start_script} -m ${master_port_scan} -M ${make} ${pkgsrc} ${loc}/pscan 2>> ${loc}/pscan.stderr
 		;;
 	*)
