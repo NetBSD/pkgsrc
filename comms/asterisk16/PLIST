@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/11/20 04:30:08 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/12/30 04:11:02 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -266,7 +266,6 @@ lib/asterisk/modules/res_smdi.so
 lib/asterisk/modules/res_speech.so
 lib/asterisk/modules/res_timing_pthread.so
 lib/pkgconfig/asterisk.pc
-libdata/asterisk/firmware/iax/iaxy.bin
 libdata/asterisk/images/asterisk-intro.jpg
 libdata/asterisk/images/kpad2.jpg
 libdata/asterisk/keys/freeworlddialup.pub
@@ -285,10 +284,10 @@ libdata/asterisk/phoneprov/000000000000-phone.cfg
 libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
 libdata/asterisk/phoneprov/polycom_line.xml
-libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.15
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.15
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.15
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.15
+libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.16
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.16
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.16
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.16
 libdata/asterisk/sounds/en/agent-alreadyon.gsm
 libdata/asterisk/sounds/en/agent-incorrect.gsm
 libdata/asterisk/sounds/en/agent-loggedoff.gsm
@@ -676,6 +675,7 @@ libdata/asterisk/sounds/en/vm-opts-full.gsm
 libdata/asterisk/sounds/en/vm-opts.gsm
 libdata/asterisk/sounds/en/vm-passchanged.gsm
 libdata/asterisk/sounds/en/vm-password.gsm
+libdata/asterisk/sounds/en/vm-pls-try-again.gsm
 libdata/asterisk/sounds/en/vm-press.gsm
 libdata/asterisk/sounds/en/vm-prev.gsm
 libdata/asterisk/sounds/en/vm-reachoper.gsm
@@ -1125,3 +1125,4 @@ share/examples/asterisk/vpb.conf
 share/examples/rc.d/asterisk
 @pkgdir libdata/asterisk/sounds/fr
 @pkgdir libdata/asterisk/sounds/es
+@pkgdir libdata/asterisk/firmware/iax

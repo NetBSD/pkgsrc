@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
+$NetBSD: patch-aa,v 1.4 2009/12/30 04:11:02 jnemeth Exp $
 
---- Makefile.orig	2009-08-04 07:54:45.000000000 -0700
+--- Makefile.orig	2009-11-03 20:01:04.000000000 +0000
 +++ Makefile
-@@ -116,20 +116,6 @@ DEBUG=-g3
+@@ -123,20 +123,6 @@ DEBUG=-g3
  
  # Define standard directories for various platforms
  # These apply if they are not redefined in asterisk.conf 
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
    ASTETCDIR=$(sysconfdir)/asterisk
    ASTLIBDIR=$(libdir)/asterisk
    ASTHEADERDIR=$(includedir)/asterisk
-@@ -139,19 +125,12 @@ else
+@@ -146,19 +132,12 @@ else
    ASTLOGDIR=$(localstatedir)/log/asterisk
    ASTVARRUNDIR=$(localstatedir)/run
    ASTMANDIR=$(mandir)
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
  
  # Asterisk.conf is located in ASTETCDIR or by using the -C flag
  # when starting Asterisk
-@@ -237,10 +216,6 @@ ifeq ($(AST_DEVMODE),yes)
+@@ -244,10 +223,6 @@ ifeq ($(AST_DEVMODE),yes)
    _ASTCFLAGS+=-Wformat=2
  endif
  
@@ -55,16 +55,18 @@ $NetBSD: patch-aa,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
  ifeq ($(findstring -march,$(_ASTCFLAGS) $(ASTCFLAGS)),)
    ifneq ($(PROC),ultrasparc)
      _ASTCFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
-@@ -456,7 +431,7 @@ distclean: $(SUBDIRS_DIST_CLEAN) _clean
+@@ -463,9 +438,7 @@ distclean: $(SUBDIRS_DIST_CLEAN) _clean
  	rm -f build_tools/menuselect-deps
  
  datafiles: _all
--	if [ x`$(ID) -un` = xroot ]; then CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" bash build_tools/mkpkgconfig $(DESTDIR)/usr/lib/pkgconfig; fi
+-	if [ `$(ID) -u` = 0 ]; then \
+-		CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" build_tools/mkpkgconfig $(DESTDIR)/usr/lib/pkgconfig; \
+-	fi
 +	CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" build_tools/mkpkgconfig $(DESTDIR)${PREFIX}/lib/pkgconfig
  # Should static HTTP be installed during make samples or even with its own target ala
  # webvoicemail?  There are portions here that *could* be customized but might also be
  # improved a lot.  I'll put it here for now.
-@@ -498,9 +473,10 @@ NEWHEADERS=$(notdir $(wildcard include/a
+@@ -507,9 +480,10 @@ NEWHEADERS=$(notdir $(wildcard include/a
  OLDHEADERS=$(filter-out $(NEWHEADERS),$(notdir $(wildcard $(DESTDIR)$(ASTHEADERDIR)/*.h)))
  
  installdirs:
@@ -76,7 +78,7 @@ $NetBSD: patch-aa,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
  	mkdir -p $(DESTDIR)$(ASTBINDIR)
  	mkdir -p $(DESTDIR)$(ASTVARRUNDIR)
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/voicemail
-@@ -509,6 +485,7 @@ installdirs:
+@@ -518,6 +492,7 @@ installdirs:
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/tmp
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/meetme
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/monitor
@@ -84,7 +86,7 @@ $NetBSD: patch-aa,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
  
  bininstall: _all installdirs $(SUBDIRS_INSTALL)
  	$(INSTALL) -m 755 main/asterisk $(DESTDIR)$(ASTSBINDIR)/
-@@ -604,22 +581,22 @@ upgrade: bininstall
+@@ -613,22 +588,22 @@ upgrade: bininstall
  # XXX why *.adsi is installed first ?
  adsi:
  	@echo Installing adsi config files...
@@ -112,7 +114,7 @@ $NetBSD: patch-aa,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
  		if [ -f $${dst} ]; then \
  			if [ "$(OVERWRITE)" = "y" ]; then \
  				if cmp -s $${dst} $$x ; then \
-@@ -635,10 +612,10 @@ samples: adsi
+@@ -644,10 +619,10 @@ samples: adsi
  		echo "Installing file $$x"; \
  		$(INSTALL) -m 644 $$x $${dst} ;\
  	done
@@ -125,7 +127,7 @@ $NetBSD: patch-aa,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
  		echo "astetcdir => $(ASTETCDIR)" ; \
  		echo "astmoddir => $(MODULES_DIR)" ; \
  		echo "astvarlibdir => $(ASTVARLIBDIR)" ; \
-@@ -691,7 +668,7 @@ samples: adsi
+@@ -700,7 +675,7 @@ samples: adsi
  		echo "pbx_realtime=1.6" ; \
  		echo "res_agi=1.6" ; \
  		echo "app_set=1.6" ; \
@@ -134,7 +136,7 @@ $NetBSD: patch-aa,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
  	else \
  		echo "Skipping asterisk.conf creation"; \
  	fi
-@@ -825,7 +802,7 @@ uninstall-all: _uninstall
+@@ -834,7 +809,7 @@ uninstall-all: _uninstall
  	rm -rf $(DESTDIR)$(ASTVARLIBDIR)
  	rm -rf $(DESTDIR)$(ASTDATADIR)
  	rm -rf $(DESTDIR)$(ASTSPOOLDIR)
@@ -143,3 +145,11 @@ $NetBSD: patch-aa,v 1.3 2009/09/14 08:44:51 jnemeth Exp $
  	rm -rf $(DESTDIR)$(ASTLOGDIR)
  
  menuconfig: menuselect
+@@ -905,6 +880,7 @@ asterisk.pdf:
+ 	$(MAKE) -C doc/tex asterisk.pdf
+ 
+ .PHONY: menuselect
++.PHONY: menuselect.makeopts
+ .PHONY: main
+ .PHONY: sounds
+ .PHONY: clean
