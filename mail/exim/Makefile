@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2009/12/07 14:29:09 adam Exp $
+# $NetBSD: Makefile,v 1.98 2009/12/30 13:24:50 abs Exp $
 
 DISTNAME=	exim-4.71
+PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -105,11 +106,14 @@ post-build:
 	    ${FILESDIR}/mailer.conf.exim \
 	    > ${WRKDIR}/mailer.conf
 
-INSTALLATION_DIRS =	${PKGMANDIR}/man8 sbin share/examples/exim
+INSTALLATION_DIRS = ${PKGMANDIR}/man8 sbin share/examples/exim share/doc/exim
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${DESTDIR}${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/exim.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/exim.8
+	${INSTALL_DATA} ${WRKSRC}/doc/exim.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/exim.8
+	${INSTALL_DATA} ${WRKSRC}/doc/spec.txt \
+		${DESTDIR}${PREFIX}/share/doc/exim
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
