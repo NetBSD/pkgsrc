@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2009/10/21 16:51:46 tnn Exp $
+$NetBSD: distinfo,v 1.15 2009/12/30 13:33:27 joerg Exp $
 
-SHA1 (pspp-0.6.1.tar.gz) = 22f335053a3e1d3861bfc2d87536b9a6fc5a1ae7
-RMD160 (pspp-0.6.1.tar.gz) = 930fc58b77ff50819cd7449147dab5906e872850
-Size (pspp-0.6.1.tar.gz) = 3217033 bytes
+SHA1 (pspp-0.6.2.tar.gz) = c45f721a7ee82aede2106b77eade5e568c0930da
+RMD160 (pspp-0.6.2.tar.gz) = 97667eb32b23a1bc7d18b7022649bd973ff01424
+Size (pspp-0.6.2.tar.gz) = 3375748 bytes
 SHA1 (patch-aa) = c7024562eee77aa558931cab387d250e046f11e4
-SHA1 (patch-ab) = e457be95e8b0658ca225137f4fed5f8bf6d77e4d
-SHA1 (patch-ad) = 34446abc6b187300e22a1fe764ea55df7c3dd43a
+SHA1 (patch-ab) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-ad) = cd06383be08b753423ea10f52098135002671385

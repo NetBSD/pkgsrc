@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.5 2009/09/04 21:39:10 asau Exp $
+$NetBSD: patch-ad,v 1.6 2009/12/30 13:33:27 joerg Exp $
 
---- configure.orig	2009-09-04 12:34:45.000000000 +0400
-+++ configure	2009-09-04 12:38:46.000000000 +0400
-@@ -21763,8 +21763,7 @@
- { echo "$as_me:$LINENO: result: $pspp_cv_build_exeext" >&5
- echo "${ECHO_T}$pspp_cv_build_exeext" >&6; }
+--- configure.orig	2009-10-12 01:16:57.000000000 +0400
++++ configure	2009-12-30 15:43:54.000000000 +0300
+@@ -13167,8 +13167,7 @@
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $pspp_cv_build_exeext" >&5
+ $as_echo "$pspp_cv_build_exeext" >&6; }
    EXEEXT_FOR_BUILD=""
 -  test x"${pspp_cv_build_exeext}" != xno && EXEEXT_FOR_BUILD=${pspp_cv_build_exeex
 -t}

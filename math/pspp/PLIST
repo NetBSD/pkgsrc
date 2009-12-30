@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/10/21 16:51:46 tnn Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/12/30 13:33:27 joerg Exp $
 bin/pspp
 ${PLIST.x11}bin/psppire
 info/pspp-dev.info
@@ -7,6 +7,8 @@ ${PLIST.x11}lib/pspp/libpsppire.la
 ${PLIST.x11}lib/pspp/libpsppwidgets.la
 share/examples/pspp/devices
 share/locale/en_GB/LC_MESSAGES/pspp.mo
+share/locale/nl/LC_MESSAGES/pspp.mo
+share/locale/pt_BR/LC_MESSAGES/pspp.mo
 ${PLIST.x11}share/pspp/crosstabs.glade
 ${PLIST.x11}share/pspp/data-editor.glade
 ${PLIST.x11}share/pspp/date-scale.png
