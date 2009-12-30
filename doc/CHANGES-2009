@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4703 2009/12/30 15:44:39 taca Exp $
+$NetBSD: CHANGES-2009,v 1.4704 2009/12/30 17:11:28 tron Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -6365,3 +6365,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated comms/asterisk16 to 1.6.1.12 [jnemeth 2009-12-30]
 	Updated www/typolight27-translations to 20091228 [taca 2009-12-30]
 	Updated www/typolight28-translations to 20091228 [taca 2009-12-30]
+	Updated pkgtools/x11-links to 0.45 [tron 2009-12-30]
