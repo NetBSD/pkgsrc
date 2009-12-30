@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4698 2009/12/28 09:17:59 obache Exp $
+$NetBSD: CHANGES-2009,v 1.4699 2009/12/30 11:59:34 abs Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -6358,3 +6358,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/memtestplus to 4.00nb1 [jakllsch 2009-12-27]
 	Updated x11/wterm to 6.2.9nb10 [obache 2009-12-28]
 	Updated devel/libFoundation to 1.1.7.168nb1 [obache 2009-12-28]
+	Updated textproc/dict-server to 1.11.2 [abs 2009-12-30]
+	Updated textproc/dict-client to 1.11.2 [abs 2009-12-30]
