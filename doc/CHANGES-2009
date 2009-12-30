@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.4701 2009/12/30 13:34:06 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.4702 2009/12/30 14:57:56 jnemeth Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -6362,3 +6362,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/dict-client to 1.11.2 [abs 2009-12-30]
 	Added editors/javascript-mode version 2.2.1 [abs 2009-12-30]
 	Updated math/pspp to 0.6.2 [joerg 2009-12-30]
+	Updated comms/asterisk16 to 1.6.1.12 [jnemeth 2009-12-30]
