@@ -1,9 +1,0 @@
-# $NetBSD: Makefile.solaris-sparc,v 1.2 2007/08/23 18:20:35 jlam Exp $
-
-EMUL_REQD=	solaris>=10
-
-DISTNAME=	seamonkey-1.5a.en-US.solaris10-nosvg-sparc
-EXTRACT_SUFX=	.tar.bz2
-
-MOZ_GTK2=	yes
-MOZ_PLATFORM=	solaris
