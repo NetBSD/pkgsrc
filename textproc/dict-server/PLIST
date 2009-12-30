@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 21:36:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/12/30 11:55:49 abs Exp $
 bin/dictfmt
 bin/dictfmt_index2suffix
 bin/dictfmt_index2word
-bin/dictfmt_plugin
-bin/dictfmt_virtual
 bin/dictunformat
 bin/dictzip
 man/man1/dictfmt.1
@@ -13,5 +11,18 @@ man/man1/dictunformat.1
 man/man1/dictzip.1
 man/man8/dictd.8
 sbin/dictd
+share/doc/dict-server/COPYING
+share/doc/dict-server/INSTALL
+share/doc/dict-server/NEWS
+share/doc/dict-server/README
 share/examples/dict-server/dictd.conf
-@pkgdir share/dictd
+share/examples/dict-server/dictd1.conf
+share/examples/dict-server/dictd2.conf
+share/examples/dict-server/dictd3.conf
+share/examples/dict-server/dictd4.conf
+share/examples/dict-server/dictd_complex.conf
+share/examples/dict-server/dictd_mime.conf
+share/examples/dict-server/dictd_plugin_dbi.conf
+share/examples/dict-server/dictd_site.txt
+share/examples/dict-server/dictd_virtual.conf
+share/examples/rc.d/dictd

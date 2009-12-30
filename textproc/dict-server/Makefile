@@ -1,45 +1,71 @@
-# $NetBSD: Makefile,v 1.26 2009/12/15 22:13:40 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2009/12/30 11:55:49 abs Exp $
 
-DISTNAME=	dictd-1.9.15
-PKGNAME=	dict-server-1.9.15
-PKGREVISION=	2
+.include "../../textproc/dict-server/Makefile.common"
+
+PKGNAME=	${DISTNAME:S/dictd/dict-server/}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
-		ftp://ftp.dict.org/pub/dict/
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary Service Protocol server
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+#LICENSE=		gnu-gpl-v2
 
-USE_TOOLS+=		gmake lex yacc
+.include "../../mk/bsd.prefs.mk"
+
+USE_TOOLS+=		gmake yacc lex m4:run
+USE_LIBTOOL=		yes
+
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
-CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--disable-plugin
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/dictd
 
-BUILD_TARGET=	dictd dictzip
+BUILD_DEFS+=		VARBASE
+MESSAGE_SUBST+=		VARBASE="${VARBASE}"
+MESSAGE_SUBST+=		PATH_TO_M4="${TOOLS_PATH.m4}"
+FILES_SUBST+=		PATH_TO_M4="${TOOLS_PATH.m4}"
+
+DICTD_USER?=		dictd
+.if ${OPSYS} == "Interix"
+DICTD_GROUP?=		nogroup
+.else
+DICTD_GROUP?=		dictd
+.endif
+
+PKG_GROUPS=		${DICTD_GROUP}
+PKG_USERS=		${DICTD_USER}:${DICTD_GROUP}
+PKG_GECOS.${DICTD_USER}=	Dictionary\ protocol\ server\ user
+#PKG_HOME.${DICT_USER}=		/nonexistent
+#PKG_SHELL.${DICT_USER}=		${NOLOGIN}
+
+RCD_SCRIPTS=		dictd
+
+# for -L /var/log/dictd/<filename_or_pattern>
+OWN_DIRS_PERMS=	${VARBASE}/log/dictd dictd dictd 0750
+
+BUILD_TARGET=	dictd dictzip dictfmt
+
 INSTALL_TARGET=	install.dictd install.dictzip install.dictfmt
-INSTALLATION_DIRS=	${EGDIR} share/dictd
 
-EGDIR=		${PREFIX}/share/examples/dict-server
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
+AUTO_MKDIRS=	yes
+
 CONF_FILES=	${EGDIR}/dictd.conf \
 		${PKG_SYSCONFDIR}/dictd.conf
 
-# A symbol T_USER is defined in trap.h so...
-post-patch:
-	${GREP} -lr T_USER ${WRKSRC} | \
-	while read f; do \
-		${MV} $$f $${f}.orig; \
-		${SED}	-e 's/T_USER/T_XUSER/g' \
-			-e 's/DICT_XUSER/DICT_USER/g' $${f}.orig >$$f; \
-	done
+EXTRA_DOC_FILES=	COPYING NEWS README INSTALL
+EXTRA_EXAMPLES_FILES=	dictd1.conf dictd2.conf \
+			dictd3.conf dictd4.conf dictd_complex.conf \
+			dictd_mime.conf dictd_plugin_dbi.conf \
+			dictd_site.txt dictd_virtual.conf
 
 post-install:
-	${SED} "s#/usr/lib/dict#${PREFIX}/share/dictd#" \
-		${WRKSRC}/dictd.conf >${DESTDIR}${EGDIR}/dictd.conf
+	${INSTALL_DATA} ${.CURDIR}/files/dictd.conf ${DESTDIR}${EGDIR}/
+.for i in ${EXTRA_DOC_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PKGDOCDIR}
+.endfor
+.for i in ${EXTRA_EXAMPLES_FILES}
+	${INSTALL_DATA} ${WRKSRC}/examples/${i} ${DESTDIR}${EGDIR}
+.endfor
 
-.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-
+.include "../../devel/libmaa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
