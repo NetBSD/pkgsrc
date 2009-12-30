@@ -1,0 +1,5 @@
+Emacs major mode for Javascript programming language.
+
+The main features of this JavaScript mode are syntactic highlighting
+(enabled with `font-lock-mode' or `global-font-lock-mode'), automatic
+indentation and filling of comments.
