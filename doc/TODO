@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8814 2009/12/31 08:54:36 wiz Exp $
+$NetBSD: TODO,v 1.8815 2009/12/31 09:03:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1047,6 +1047,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o orca-2.28.2
 	o oregano-0.60.0
 	o oroborus-2.0.18
+	o osh-20091218 [pkg/42536]
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Any-Moose-0.11
@@ -1361,6 +1362,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.8beta1
+	o tor-0.2.1.21 [pkg/42541]
 	o totem-2.28.5
 	o tpasm-1.2
 	o tpb-0.6.4
