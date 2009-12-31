@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8813 2009/12/29 14:08:33 wiz Exp $
+$NetBSD: TODO,v 1.8814 2009/12/31 08:54:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -466,7 +466,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.29
+	o calibre-0.6.30
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -477,7 +477,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.4
 	o cgicc-3.2.9
 	o cheese-2.28.1 [GNOME 2.28]
-	o cherokee-0.99.38
+	o cherokee-0.99.39
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
@@ -488,6 +488,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o colorize-0.3.4
 	o compositeproto-0.4.1
 	o cone-0.78 [pkg/41623]
+	o cone-0.80
 	o connect-1.96
 	o conserver-8.1.17
 	o consolekit-0.4.0
@@ -505,6 +506,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cssc-1.2.0
 	o cups-1.4.2
 	o cvs2p4-2.5.5 [schmonz]
+	o cvsd-1.0.17
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-2.3.13
 	o dansguardian-2.10.0.3
@@ -529,6 +531,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dircproxy-devel-1.2.0.2
 	o dnstracer-1.9
 	o dovecot-1.2.9
+	o doxygen-1.6.2
 	o dpkg-1.14.25
 	o drivel-3.0.0
 	o drscheme-4.0.2
@@ -543,7 +546,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6.2
 	o ejabberd-2.1.1
-	o electric-8.09
+	o electric-8.10
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
@@ -576,6 +579,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.1
 	o exiftool-7.67
+	o exiv2-0.19
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
 	o faces-1.7.7
@@ -976,7 +980,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o msmtp-1.4.19
 	o mtools-4.0.11
 	o multitail-5.2.2
-	o munin-1.4.1
+	o munin-1.4.3
 	o muse-0.9.2
 	o musicpd-0.15.7
 	o mysql-5.0.89
@@ -994,7 +998,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
-	o neon-0.29.1
+	o neon-0.29.2
 	o nessus-3.2.0
 	o netcdf-4.0.1
 	o netpbm-10.45.04
@@ -1031,7 +1035,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opencobol-1.0
 	o openh323-1.19.1
 	o openldap-2.4.21
-	o openldap-client-2.4.20
+	o openldap-client-2.4.21
 	o openmortal-0.7.1
 	o openmotif-2.3.2
 	o openmsx-0.7.0
@@ -1051,16 +1055,19 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-DBD-postgresql-2.16.0
 	o p5-Date-Manip-6.05
 	o p5-DateTime-Event-ICal-0.10
+	o p5-DateTime-TimeZone-1.07
 	o p5-Error-0.17016
 	o p5-FCGI-1.3.0
 	o p5-IMDB-Film-0.43
 	o p5-Image-Info-1.30
 	o p5-JSON-2.16
 	o p5-MailTools-2.05
+	o p5-Module-CoreList-2.24
 	o p5-Mouse-0.45
 	o p5-Pod-Simple-3.13
 	o p5-Spreadsheet-WriteExcel-2.30
 	o p5-WWW-Curl-4.11
+	o p5-XML-Atom-0.36
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o packagekit-0.5.1
@@ -1069,7 +1076,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
 	o parrot-1.9.0
-	o patch-2.6
+	o patch-2.6.1
 	o patchutils-0.3.1
 	o pavucontrol-0.9.8
 	o pcal-4.8
@@ -1121,6 +1128,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pngcheck-2.3.0
 	o po4a-0.36.3
 	o poedit-1.4.3
+	o polkit-qt-0.9.3
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o poppler-0.12.3
@@ -1138,7 +1146,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pure-ftpd-1.0.27
 	o pureftpd-1.0.26
 	o puzzle-5.2
-	o puzzles-8789
+	o puzzles-8800
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1153,8 +1161,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ZopeInterface-3.3.0
 	o py-anita-1.9
 	o py-bdb-xml-2.1.8
-	o py-bsddb3-4.8.1
+	o py-bsddb3-4.8.2
 	o py-checker-0.8.17
+	o py-cups-1.9.47
 	o py-fpconst-0.7.3
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
@@ -1175,7 +1184,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-zconfig-2.3.1
 	o python-3.1.1
 	o qbrew-0.3.9
-	o qemu-0.12.0
+	o qemu-0.12.1
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt3-qscintilla-2.4
@@ -1213,6 +1222,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rsnapshot-1.3.1
 	o rt-3.8.2
 	o rtcw-1.41.3
+	o rtorrent-0.8.6
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubigen-1.5.2
 	o ruby-1.8.7.248 (Ruby 1.8.7-p248)
@@ -1246,6 +1256,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-sequel-core-2.2.0
 	o ruby-will-paginate-2.2.3
 	o rudiments-0.30
+	o rxvt-unicode-9.07
 	o sabayon-2.28.1 [GNOME 2.28]
 	o sablecc-3.2
 	o samba-3.2.15
@@ -1261,8 +1272,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.2.0
 	o scm-5e5
-	o scmgit-base-1.6.5.7
-	o scmgit-docs-1.6.5.7
+	o scmgit-base-1.6.6
+	o scmgit-docs-1.6.6
 	o scrollz-1.9.99
 	o scrotwm-0.9.20
 	o scsh-1.3.0
@@ -1315,7 +1326,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
 	o systrace-1.6e
-	o t-prot-2.8.1
+	o t-prot-2.10
 	o tacacs-4.0.4.14
 	o tads-3.0.16
 	o tcl-8.5.8
@@ -1339,6 +1350,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o thoth-0.2.1
 	o tig-0.15
 	o tile-0.7.4
+	o tinc-1.0.11
 	o tinyproxy-1.7.0
 	o tk-8.5.8
 	o tk83-8.3.5
@@ -1417,7 +1429,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4
 	o x11vnc-0.9.9
-	o x264-devel-20091219
+	o x264-devel-20091226
 	o xanalyser-1.30
 	o xapian-1.0.17
 	o xapian-omega-1.0.17
@@ -1456,7 +1468,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-sunffb-1.2.1 [unpackaged]
 	o xf86-video-tga-1.2.1
 	o xf86-video-tseng-1.2.3
-	o xf86-video-vmware-10.16.8
+	o xf86-video-vmware-10.16.9
 	o xf86-video-voodoo-1.2.2
 	o xf86-video-wsfb-0.3.0
 	o xf86-video-xgi-1.5.1 [unpackaged]
