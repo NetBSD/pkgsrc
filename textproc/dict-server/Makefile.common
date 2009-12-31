@@ -1,0 +1,12 @@
+# $NetBSD: Makefile.common,v 1.1 2009/12/31 00:42:24 abs Exp $
+# used by textproc/dict-server/Makefile
+# used by textproc/dict-client/Makefile
+DISTNAME=	dictd-1.11.2
+
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
+		ftp://ftp.dict.org/pub/dict/
+
+MAINTAINER?=		cheusov@tut.by
+HOMEPAGE=		http://www.dict.org/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
