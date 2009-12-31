@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2009/11/23 09:37:45 ghen Exp $
+# $NetBSD: Makefile,v 1.23 2009/12/31 16:56:18 abs Exp $
 #
 
 DISTNAME=	roundcubemail-${RCVERSION}-dep
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep/-${VERSION}/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
@@ -61,6 +62,8 @@ OWN_DIRS_PERMS+=	${VARBASE}/tmp/roundcube \
 
 CONF_FILES=		${EGDIR}/roundcube.conf \
 			${PKG_SYSCONFDIR}/roundcube.conf
+CONF_FILES+=		${EGDIR}/mimetypes.php \
+			${PKG_SYSCONFDIR}/mimetypes.php
 CONF_FILES_PERMS+=	${EGDIR}/db.inc.php.dist \
 			${PKG_SYSCONFDIR}/db.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
@@ -107,6 +110,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/index.php ${DESTDIR}${RCDIR}/
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${RCDIR}/
 
+	${INSTALL_DATA} ${WRKSRC}/config/mimetypes.php \
+		${DESTDIR}${EGDIR}/mimetypes.php
 	${INSTALL_DATA} ${WRKSRC}/config/db.inc.php.dist \
 		${DESTDIR}${EGDIR}/db.inc.php.dist
 	${INSTALL_DATA} ${WRKSRC}/config/main.inc.php.dist \

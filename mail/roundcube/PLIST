@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/11/23 09:37:46 ghen Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/12/31 16:56:18 abs Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
@@ -12,6 +12,7 @@ share/examples/roundcube/SQL/sqlite.initial.sql
 share/examples/roundcube/SQL/sqlite.update.sql
 share/examples/roundcube/db.inc.php.dist
 share/examples/roundcube/main.inc.php.dist
+share/examples/roundcube/mimetypes.php
 share/examples/roundcube/roundcube.conf
 share/roundcube/.htaccess
 share/roundcube/bin/decrypt.php
