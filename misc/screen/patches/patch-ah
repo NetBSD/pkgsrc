@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.4 2010/01/01 19:38:44 spz Exp $
+
+--- screen.c.orig	2003-09-08 14:26:41.000000000 +0000
++++ screen.c
+@@ -50,7 +50,7 @@
+ 
+ #include "config.h"
+ 
+-#ifdef SVR4
++#ifdef HAVE_SYS_STROPTS_H
+ # include <sys/stropts.h>
+ #endif
+ 

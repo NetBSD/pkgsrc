@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2010/01/01 19:38:44 spz Exp $
+
+--- tty.c.dist.orig	2006-10-23 13:04:42.000000000 +0000
++++ tty.c.dist
+@@ -50,7 +50,7 @@
+ #endif
+ 
+ #include "config.h"
+-#ifdef SVR4
++#ifdef HAVE_SYS_STROPTS_H
+ #include <sys/stropts.h>	/* for I_POP */
+ #endif
+ 
