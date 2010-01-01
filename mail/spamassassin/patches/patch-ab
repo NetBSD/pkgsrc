@@ -1,13 +1,26 @@
-$NetBSD: patch-ab,v 1.14 2007/06/12 21:43:30 heinz Exp $
+$NetBSD: patch-ab,v 1.15 2010/01/01 13:55:32 heinz Exp $
+
+  - deal with internal changes of ExtUtils::MakeMaker and how SpamAssassin
+    (ab)used those internals regarding DESTDIR support. Will not be necessary
+    starting with SA 3.3.0.
 
   - enable build of qmail-spamc
   - some files (local.cf, *.pre) are managed by pkgsrc, disable
     their installation.
   - pkgsrc creates B_DATADIR, so there is no need to re-set permissions
 
---- Makefile.PL.orig	2007-04-23 14:15:49.000000000 +0200
+--- Makefile.PL.orig	2008-06-10 09:21:07.000000000 +0000
 +++ Makefile.PL
-@@ -167,6 +167,7 @@ my %makefile = (
+@@ -143,7 +143,7 @@ $mm_knows_destdir    = $ExtUtils::MakeMa
+ $mm_has_good_destdir = $mm_version >= 6.11;
+ # Add DESTDIR hack only if it's requested (and necessary)
+ $mm_needs_destdir    = $opt{'destdir'} && !$mm_has_good_destdir;
+-$mm_has_destdir      = $mm_knows_destdir || $mm_needs_destdir;
++$mm_has_destdir      = $mm_has_good_destdir || $mm_needs_destdir;
+ push(@ATT_KEYS, 'DESTDIR') if $mm_needs_destdir;
+ 
+ # Now make EU::MM understand our extended vars
+@@ -174,6 +174,7 @@ my %makefile = (
        'spamassassin.raw' => 'spamassassin',
        'sa-learn.raw'     => 'sa-learn',
        'sa-update.raw'    => 'sa-update',
@@ -15,7 +28,7 @@ $NetBSD: patch-ab,v 1.14 2007/06/12 21:43:30 heinz Exp $
        'sa-compile.raw'    => 'sa-compile',
        'spamc/spamc.c'    => 'spamc/spamc$(EXE_EXT)',
        'spamd/spamd.raw'  => 'spamd/spamd',
-@@ -1194,17 +1195,19 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
+@@ -1201,17 +1202,19 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
  
  conf__install:
  	-$(MKPATH) $(B_CONFDIR)
