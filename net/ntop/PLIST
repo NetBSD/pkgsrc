@@ -1,24 +1,18 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 21:00:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/01/01 13:50:09 tron Exp $
 bin/ntop
 lib/libcpacketPlugin-${PKGVERSION}.so
-lib/libcpacketPlugin.a
 lib/libcpacketPlugin.so
 lib/libicmpPlugin-${PKGVERSION}.so
-lib/libicmpPlugin.a
 lib/libicmpPlugin.so
 lib/liblastSeenPlugin-${PKGVERSION}.so
-lib/liblastSeenPlugin.a
 lib/liblastSeenPlugin.so
 lib/libnetflowPlugin-${PKGVERSION}.so
-lib/libnetflowPlugin.a
 lib/libnetflowPlugin.so
 lib/libntop.la
 lib/libntopreport.la
 lib/librrdPlugin-${PKGVERSION}.so
-lib/librrdPlugin.a
 lib/librrdPlugin.so
 lib/libsflowPlugin-${PKGVERSION}.so
-lib/libsflowPlugin.a
 lib/libsflowPlugin.so
 lib/ntop/plugins/cpacketPlugin.so
 lib/ntop/plugins/icmpPlugin.so
