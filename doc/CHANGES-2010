@@ -1,7 +1,8 @@
-$NetBSD: CHANGES-2010,v 1.1 2010/01/01 01:20:01 jnemeth Exp $
+$NetBSD: CHANGES-2010,v 1.2 2010/01/01 11:41:02 wiz Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
 
 Changes to the packages collection and infrastructure in 2010:
 
+	Updated textproc/mdoclint to 1.4 [wiz 2010-01-01]
