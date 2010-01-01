@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1 2010/01/01 18:23:48 joerg Exp $
+
+--- player/src/Makefile.in.orig	2010-01-01 18:08:12.000000000 +0000
++++ player/src/Makefile.in
+@@ -540,6 +540,7 @@ mp4player_LDADD = \
+ 	$(top_builddir)/lib/audio/libaudio.la \
+ 	$(top_builddir)/lib/ismacryp/libismacryp.la \
+ 	$(top_builddir)/lib/srtp/libsrtpif.la \
++	$(top_builddir)/lib/sdp/libsdp.la \
+ 	@SDL_LIBS@ @SRTPLIB@
+ 
+ gmp4player_LDFLAGS = $(SDL_AUDIO_FLAGS)
