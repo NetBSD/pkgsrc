@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2010/01/01 18:38:08 joerg Exp $
+
+--- gtkmozembed/extconf.rb.orig	2010-01-01 18:25:07.000000000 +0000
++++ gtkmozembed/extconf.rb
+@@ -48,7 +48,7 @@ mozilla_path = mozilla_library_path.stri
+ if mozilla_path
+   # please comment the CFLAGS line if you don't want a default comp_path
+   $CFLAGS << " -DDEFAULT_MOZILLA_FIVE_HOME='\"#{mozilla_path}\"' "
+-  $LDFLAGS << " -Wl,-rpath #{mozilla_path}"
++  $LDFLAGS << " -Wl,-rpath,#{mozilla_path}"
+ else
+   $stderr.puts "${package_id}.pc cannot be found."
+   exit 1
