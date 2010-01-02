@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2008/09/07 10:14:31 rhaen Exp $
+$NetBSD: distinfo,v 1.12 2010/01/02 10:55:05 sekiya Exp $
 
 SHA1 (cfengine-2.2.8.tar.gz) = 670b5fc15a4dd5c80b301adf1e1bf7979161a049
 RMD160 (cfengine-2.2.8.tar.gz) = a35ac5d87a345f38a779719314d3978ee9e3045c
 Size (cfengine-2.2.8.tar.gz) = 2715678 bytes
 SHA1 (patch-aa) = cdbebcf1a8d284bbaa9e8e0deb60112c5e33287c
 SHA1 (patch-ab) = 5c90d568392cba0b1049b607f861a4cf65e82740
+SHA1 (patch-ac) = 0962334c9251cf16bc4faa42d2b16c2b60a5c549
