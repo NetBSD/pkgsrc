@@ -1,0 +1,11 @@
+--- src/nameinfo.c.orig	2010-01-01 17:23:25.000000000 +0900
++++ src/nameinfo.c	2010-01-01 17:23:48.000000000 +0900
+@@ -37,7 +37,7 @@
+ #include <sys/syssgi.h>
+ #endif
+ 
+-#ifdef HAVE_STRUCT_SOCKADDR_SA_LEN
++#if defined (HAVE_STRUCT_SOCKADDR_SA_LEN) && !defined(__NetBSD__)
+ # ifdef _SIZEOF_ADDR_IFREQ
+ #  define SIZEOF_IFREQ(x) _SIZEOF_ADDR_IFREQ(x)
+ # else
