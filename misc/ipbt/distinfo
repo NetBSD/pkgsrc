@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/12/06 23:32:56 dholland Exp $
+$NetBSD: distinfo,v 1.4 2010/01/02 00:20:14 dholland Exp $
 
-SHA1 (ipbt-r8765.tar.gz) = e53f5708d8161cc605624d853ff9c299fd168bd9
-RMD160 (ipbt-r8765.tar.gz) = eac672b5ae8529946c03d6e32b1e4f13d214328b
-Size (ipbt-r8765.tar.gz) = 174878 bytes
+SHA1 (ipbt-20100101/ipbt-r8765.tar.gz) = 46ee505edcbcc5eecf5c14ab92d53921c3ff2018
+RMD160 (ipbt-20100101/ipbt-r8765.tar.gz) = 567f753c75b42f4b25d8a76571e6a073aecbc8c2
+Size (ipbt-20100101/ipbt-r8765.tar.gz) = 174878 bytes
 SHA1 (patch-aa) = 7c1f622e31619624594aa8a8e87549b03b7665d7

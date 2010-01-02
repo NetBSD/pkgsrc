@@ -1,10 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2009/12/06 23:32:56 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/02 00:20:14 dholland Exp $
 #
 
 DISTNAME=	ipbt-r8765
 PKGNAME=	ipbt-8765
 CATEGORIES=	misc
-MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/ipbt/
+# The upstream distfile is apparently rebuilt every night with
+# newly regenerated docs that have different timestamps. Use the
+# copy cached on ftp.NetBSD.org so the checksum works.
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+DIST_SUBDIR=	ipbt-20100101
+#MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/ipbt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/ipbt/
