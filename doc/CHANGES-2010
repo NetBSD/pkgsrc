@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.5 2010/01/02 11:08:39 gson Exp $
+$NetBSD: CHANGES-2010,v 1.6 2010/01/02 11:18:29 gson Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -9,4 +9,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/ntop to 3.3.10nb1 [tron 2010-01-01]
 	Updated net/libtorrent to 0.12.6 [snj 2010-01-01]
 	Updated net/rtorrent to 0.8.6 [snj 2010-01-01]
-	Updated misc/py-anita to 1.9 [gson 2010-01-03]
+	Updated misc/py-anita to 1.9 [gson 2010-01-02]
