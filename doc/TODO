@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8816 2010/01/01 19:38:32 snj Exp $
+$NetBSD: TODO,v 1.8817 2010/01/02 00:48:59 dholland Exp $
 
 Suggested new packages
 ======================
@@ -961,6 +961,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mlterm-2.9.4
 	o moc-2.4.4
 	o modular-xorg-server-1.7.3
+	o molden-4.8 [after which PR 40252 can be closed]
 	o mono-2.6.1
 	o mono-tools-2.4.3
 	o mono-xsp-2.4.3
