@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2010/01/01 13:55:32 heinz Exp $
+$NetBSD: distinfo,v 1.51 2010/01/02 03:48:40 heinz Exp $
 
 SHA1 (Mail-SpamAssassin-3.2.5.tar.gz) = 14b1f6eae0221a152176f7f597f55581445e800a
 RMD160 (Mail-SpamAssassin-3.2.5.tar.gz) = 5a72a97d124e72ff4da1627982748377f1e34128
@@ -9,3 +9,4 @@ SHA1 (patch-aq) = 3a273c7742275647c2334382fed29c0ea33dfbd8
 SHA1 (patch-ay) = ca8ea0b1e6d8fddd29d6ae960e1bf6e534d2f424
 SHA1 (patch-ba) = ea6b8eac3d9475641725dc4aa1e7a4d31912a044
 SHA1 (patch-bc) = 71fcf6297eacbd69a5c5d5b1911f648e4011ce3e
+SHA1 (patch-be) = 42b9975742834e836159b754f4a50a0d68d8ea75
