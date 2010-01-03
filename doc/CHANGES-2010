@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.8 2010/01/03 16:07:37 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.9 2010/01/03 23:04:50 gdt Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -12,3 +12,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/py-anita to 1.9 [gson 2010-01-02]
 	Updated net/rsync to 3.0.7 [tron 2010-01-02]
 	Updated www/ikiwiki to 3.20100102.3 [schmonz 2010-01-03]
+	Updated www/trac to 0.11.6 [gdt 2010-01-03]
