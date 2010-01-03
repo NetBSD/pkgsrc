@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/09/22 12:02:36 ahoka Exp $
+# $NetBSD: Makefile,v 1.34 2010/01/03 12:07:58 obache Exp $
 
 DISTNAME=	openttd-0.7.2-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -6,7 +6,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openttd/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openttd.com/
+HOMEPAGE=	http://www.openttd.org/
 COMMENT=	Open source clone of Transport Tycoon Deluxe
 EXTRACT_SUFX=	.tar.bz2
 
