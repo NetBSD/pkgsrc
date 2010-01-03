@@ -1,7 +1,7 @@
 # Makefile for f2c, a Fortran 77 to C converter
 
 PROG=	f2c
-SRCS=	main.c init.c gram.y lex.c proc.c equiv.c data.c format.c \
+SRCS=	main.c init.c gram.c lex.c proc.c equiv.c data.c format.c \
 	expr.c exec.c intr.c io.c misc.c error.c mem.c names.c \
 	output.c p1output.c pread.c put.c putpcc.c vax.c formatdata.c \
 	parse_args.c niceprintf.c cds.c sysdep.c version.c $(MALLOC)
@@ -21,6 +21,7 @@ MALLOC=		# empty
 # (derived with a Unix variant of the yacc from plan9).
 
 # There should be 4 shift/reduce conflicts:
+.if make(gram.c)
 gram.y:	gram.head gram.dcl gram.expr gram.exec gram.io tokdefs.h
 	( sed "s/#define/%token/" < $(.ALLSRC:M*tokdefs.h) ; \
 		cat $(.ALLSRC:M*gram.head) \
@@ -29,6 +30,9 @@ gram.y:	gram.head gram.dcl gram.expr gram.exec gram.io tokdefs.h
 		    $(.ALLSRC:M*gram.exec) \
 		    $(.ALLSRC:M*gram.io) ) > $@
 CLEANFILES+=	gram.y
+.else
+gram.c:
+.endif
 
 DPADD=	defs.h ftypes.h defines.h machdefs.h sysdep.h
 
