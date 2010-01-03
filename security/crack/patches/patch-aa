@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2005/04/29 16:59:02 kristerw Exp $
+$NetBSD: patch-aa,v 1.5 2010/01/03 14:30:37 schwarz Exp $
 
---- Crack.orig	Fri Dec 20 17:09:41 1996
-+++ Crack
+--- Crack.orig	1996-12-21 02:09:41.000000000 +0100
++++ Crack	2010-01-03 15:01:01.000000000 +0100
 @@ -1,4 +1,4 @@
 -#!/bin/sh
 +#!@@SH@@
@@ -19,7 +19,18 @@ $NetBSD: patch-aa,v 1.4 2005/04/29 16:59:02 kristerw Exp $
  
  # compiler options for crack 5.0
  #
-@@ -108,41 +108,11 @@ node=`uname -n`                         
+@@ -42,8 +42,8 @@
+ #
+ 
+ # vanilla unix cc
+-CC=cc
+-CFLAGS="-g -O $C5FLAGS"
++#CC=cc
++CFLAGS="$CFLAGS $C5FLAGS"
+ #LIBS=-lcrypt # uncomment only if necessary to use stdlib crypt(), eg: NetBSD MD5
+ 
+ # gcc 2.7.2
+@@ -108,41 +108,11 @@
  # home base
  ###
  
@@ -63,7 +74,7 @@ $NetBSD: patch-aa,v 1.4 2005/04/29 16:59:02 kristerw Exp $
  
  ###
  # Flagwaving
-@@ -279,110 +249,76 @@ fi
+@@ -279,110 +249,76 @@
  # Sanity test bindir - written in gruntscript for clarity.
  ###
  

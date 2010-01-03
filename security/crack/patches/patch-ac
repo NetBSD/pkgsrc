@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 1999/10/04 17:35:52 bouyer Exp $
+$NetBSD: patch-ac,v 1.2 2010/01/03 14:30:37 schwarz Exp $
 
---- src/libdes/Makefile.orig	Thu Dec 19 01:29:21 1996
-+++ src/libdes/Makefile	Fri Jan 31 11:14:52 1997
+--- src/libdes/Makefile.orig	1996-12-19 10:29:21.000000000 +0100
++++ src/libdes/Makefile	2010-01-03 15:22:36.000000000 +0100
 @@ -10,7 +10,7 @@
  # If you are on a DEC Alpha, edit des.h and change the DES_LONG
  # define to 'unsigned int'.  I have seen this give a %20 speedup.
@@ -11,3 +11,12 @@ $NetBSD: patch-ac,v 1.1 1999/10/04 17:35:52 bouyer Exp $
  
  # Version 1.94 has changed the strings_to_key function so that it is
  # now compatible with MITs when the string is longer than 8 characters.
+@@ -35,7 +35,7 @@
+ 
+ OPTS= $(OPTS0) $(OPTS1) $(OPTS2)
+ 
+-CC=cc
++#CC=cc
+ CFLAGS= -O $(OPTS) $(CFLAG)
+ 
+ #CC=gcc
