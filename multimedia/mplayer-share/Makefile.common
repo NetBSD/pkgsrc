@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2010/01/01 17:54:38 tnn Exp $
+# $NetBSD: Makefile.common,v 1.44 2010/01/03 23:42:44 ahoka Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -8,8 +8,10 @@ MPLAYER_VERSION=	1.0rc${MPLAYER_SNAPSHOT_DATE:S/-//g}
 
 DISTNAME=		mplayer-${MPLAYER_SNAPSHOT_DATE:S/-//g}
 CATEGORIES?=		multimedia
-MASTER_SITES=		http://irkmaffia.com/~ahoka/distfiles/
+
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=commondistfiles/}
 MASTER_SITES+=		http://mx1.nygren.pp.se/misc/
+
 EXTRACT_SUFX=		.tar.bz2
 DIST_SUBDIR=		mplayer
 
