@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2009/12/28 11:42:19 tnn Exp $
+# $NetBSD: Makefile,v 1.53 2010/01/03 01:37:59 tnn Exp $
 
 DISTNAME=	f2c-20090411	# see notes below
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -18,7 +18,6 @@ WRKSRC=		${WRKDIR}/f2c
 BUILD_DIRS=	src
 USE_BSD_MAKEFILE=	yes
 MAKE_ENV+=		MKCATPAGES=no
-USE_TOOLS+=		yacc
 INSTALLATION_DIRS=	bin share/doc/f2c ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
@@ -33,6 +32,7 @@ F2C_F77_CPP=	${CPP}
 
 post-extract:
 	@${CP} ${FILESDIR:Q}/f2c.mk ${WRKSRC}/src/Makefile
+	@${CP} ${FILESDIR:Q}/gram.c ${WRKSRC}/src/gram.c
 	@mv ${WRKSRC}/src/.depend  ${WRKSRC}/src/depend.orig
 	@mv ${WRKSRC}/src/f2c.1 ${WRKSRC}/src/f2c.1.orig
 
