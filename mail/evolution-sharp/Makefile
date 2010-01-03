@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/12 02:31:21 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/03 14:56:18 wiz Exp $
 #
 
 DISTNAME=	evolution-sharp-0.20.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.20/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.20/}
+HOMEPAGE=	http://www.go-evolution.org/EvolutionSharp
 COMMENT=	.NET language binding for various Evolution libraries
 LICENSE=	gnu-gpl-v2
 
