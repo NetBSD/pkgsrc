@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/12/20 11:31:30 manu Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/04 15:43:17 joerg Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
@@ -11,21 +11,22 @@ MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/modmellon/
 COMMENT=	SAML 2.0 authentication for Apache
 
-PKG_DESTDIR_SUPPORT=	destdir
-
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	pkg-config
 
 APACHE_MODULE=	YES
 APACHE_MODULE_NAME=	auth_mellon_module
-PKG_APACHE_ACCEPTED=    apache2 apache22
+PKG_APACHE_ACCEPTED=    apache22
 .include "../../mk/apache.mk"
 BUILDLINK_API_DEPENDS.apache+=  apache>=2.0.47
 
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.openssl}/include/openssl
+OPENSSL_LIBS=	-L${PREFIX}/lib -lssl -lcrypto
+
 CONFIGURE_ENV+=		PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
-CONFIGURE_ENV+=		OPENSSL_CFLAGS="${CPPFLAGS}"
-CONFIGURE_ENV+=		OPENSSL_LIBS="-L${PREFIX}/lib -lssl -lcrypto"
+CONFIGURE_ENV+=		OPENSSL_CFLAGS=${CPPFLAGS:Q}
+CONFIGURE_ENV+=		OPENSSL_LIBS=${OPENSSL_LIBS:Q}
 CONFIGURE_ARGS+=        --with-apxs2=${APXS:Q}
 
 # url2pkg-marker (please do not remove this line.)
