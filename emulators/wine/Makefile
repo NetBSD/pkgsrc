@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2009/08/26 19:56:41 sno Exp $
+# $NetBSD: Makefile,v 1.154 2010/01/04 15:30:08 joerg Exp $
 
 DISTNAME=	wine-1.0.1
 PKGREVISION=	3
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 Linux-*-i386 SunOS-*-i386 Darwin-*-i386
 ONLY_FOR_PLATFORM+=	*-*-x86_64
+
+NOT_FOR_PLATFORM+=	NetBSD-*-x86_64
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
