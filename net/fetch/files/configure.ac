@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.2 2009/11/19 22:55:53 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.3 2010/01/04 16:50:43 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -15,9 +15,8 @@ AC_TYPE_INTMAX_T
 AC_CHECK_FUNCS([getpass getpassphrase setproctitle])
 AC_CHECK_LIB(socket, socket)
 AC_CHECK_LIB(nsl, gethostbyname)
-AC_CHECK_LIB(fetch, fetchGet, [], [
-    AC_CHECK_LIB(fetch, fetchGet, [], [] [-lssl -lcrypto])
-])
+AC_CHECK_LIB(ssl, SSL_read, [], [], [-lcrypto])
+AC_CHECK_LIB(fetch, fetchGet)
 
 case "$host_os" in
 netbsd)
