@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/10/30 20:12:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/04 15:47:48 joerg Exp $
 
 DISTNAME=		xsd-3.2.0+dep
 EXTRACT_SUFX=		.tar.bz2
@@ -23,7 +23,7 @@ SUBST_SED.rpath=	-e 's|cxx_rpath[ ]*:=[ ]*n|cxx_rpath := y|g'
 
 do-build:
 	# XXX: rpath needs a better hack. TODO: add optimization
-	cd ${WRKSRC} && LDFLAGS="-Wl,-rpath,${PREFIX}/lib" ./build.sh
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} LDFLAGS="-Wl,-rpath,${PREFIX}/lib" ./build.sh
 
 do-install:
 	cd ${WRKSRC} && MAKEFLAGS="install_prefix=${DESTDIR}${PREFIX} \
