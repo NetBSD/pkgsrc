@@ -1,6 +1,8 @@
---- Makefile.in.orig	2009-08-23 15:47:53.000000000 +0200
-+++ Makefile.in	2009-08-23 15:56:25.000000000 +0200
-@@ -46,7 +46,7 @@
+$NetBSD: patch-ag,v 1.2 2010/01/04 19:43:39 joerg Exp $
+
+--- Makefile.in.orig	2009-06-14 16:25:39.000000000 +0000
++++ Makefile.in
+@@ -46,7 +46,7 @@ target_triplet = @target@
  ANSI2KNR = @ANSI2KNR@
  @HAVE_LD_VERSION_SCRIPT_TRUE@am__append_1 = -Wl,--version-script=$(srcdir)/libjpeg.map
  bin_PROGRAMS = cjpeg$(EXEEXT) djpeg$(EXEEXT) jpegtran$(EXEEXT) \
@@ -9,7 +11,7 @@
  subdir = .
  DIST_COMMON = README $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
  	$(top_srcdir)/configure $(am__configure_deps) \
-@@ -128,6 +128,9 @@
+@@ -128,6 +128,9 @@ rdjpgcom_LDADD = $(LDADD)
  am_wrjpgcom_OBJECTS = wrjpgcom$U.$(OBJEXT)
  wrjpgcom_OBJECTS = $(am_wrjpgcom_OBJECTS)
  wrjpgcom_LDADD = $(LDADD)
@@ -19,7 +21,7 @@
  DEFAULT_INCLUDES = -I.@am__isrc@
  depcomp = $(SHELL) $(top_srcdir)/depcomp
  am__depfiles_maybe = depfiles
-@@ -155,7 +158,8 @@
+@@ -155,7 +158,8 @@ AM_V_GEN = $(am__v_GEN_$(V))
  am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
  am__v_GEN_0 = @echo "  GEN   " $@;
  SOURCES = $(libjpeg_la_SOURCES) $(cjpeg_SOURCES) $(djpeg_SOURCES) \
@@ -29,7 +31,7 @@
  man1dir = $(mandir)/man1
  NROFF = nroff
  MANS = $(man_MANS)
-@@ -369,6 +373,7 @@
+@@ -369,6 +373,7 @@ jpegtran_SOURCES = jpegtran.c rdswitch.c
  jpegtran_LDADD = libjpeg.la
  rdjpgcom_SOURCES = rdjpgcom.c
  wrjpgcom_SOURCES = wrjpgcom.c
@@ -37,7 +39,7 @@
  
  # Manual pages to install
  man_MANS = $(DISTMANS)
-@@ -535,6 +540,9 @@
+@@ -535,6 +540,9 @@ rdjpgcom$(EXEEXT): $(rdjpgcom_OBJECTS) $
  wrjpgcom$(EXEEXT): $(wrjpgcom_OBJECTS) $(wrjpgcom_DEPENDENCIES) 
  	@rm -f wrjpgcom$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(wrjpgcom_OBJECTS) $(wrjpgcom_LDADD) $(LIBS)
@@ -47,7 +49,7 @@
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT)
-@@ -597,6 +605,7 @@
+@@ -597,6 +605,7 @@ mostlyclean-kr:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jidctfst$U.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jidctint$U.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jmemmgr$U.Plo@am__quote@
@@ -55,7 +57,7 @@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jpegtran$U.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jquant1$U.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jquant2$U.Plo@am__quote@
-@@ -732,6 +741,8 @@
+@@ -732,6 +741,8 @@ jidctint_.c: jidctint.c $(ANSI2KNR)
  	$(CPP) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) `if test -f $(srcdir)/jidctint.c; then echo $(srcdir)/jidctint.c; else echo jidctint.c; fi` | sed 's/^# \([0-9]\)/#line \1/' | $(ANSI2KNR) > $@ || rm -f $@
  jmemmgr_.c: jmemmgr.c $(ANSI2KNR)
  	$(CPP) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) `if test -f $(srcdir)/jmemmgr.c; then echo $(srcdir)/jmemmgr.c; else echo jmemmgr.c; fi` | sed 's/^# \([0-9]\)/#line \1/' | $(ANSI2KNR) > $@ || rm -f $@
@@ -64,7 +66,7 @@
  jpegtran_.c: jpegtran.c $(ANSI2KNR)
  	$(CPP) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) `if test -f $(srcdir)/jpegtran.c; then echo $(srcdir)/jpegtran.c; else echo jpegtran.c; fi` | sed 's/^# \([0-9]\)/#line \1/' | $(ANSI2KNR) > $@ || rm -f $@
  jquant1_.c: jquant1.c $(ANSI2KNR)
-@@ -793,6 +804,7 @@
+@@ -793,6 +804,7 @@ jerror_.$(OBJEXT) jerror_.lo jfdctflt_.$
  jfdctfst_.$(OBJEXT) jfdctfst_.lo jfdctint_.$(OBJEXT) jfdctint_.lo \
  jidctflt_.$(OBJEXT) jidctflt_.lo jidctfst_.$(OBJEXT) jidctfst_.lo \
  jidctint_.$(OBJEXT) jidctint_.lo jmemmgr_.$(OBJEXT) jmemmgr_.lo \
