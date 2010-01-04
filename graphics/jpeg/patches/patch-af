@@ -1,6 +1,8 @@
---- Makefile.am.orig	2009-08-23 15:48:01.000000000 +0200
-+++ Makefile.am	2009-08-23 15:49:50.000000000 +0200
-@@ -75,7 +75,7 @@
+$NetBSD: patch-af,v 1.4 2010/01/04 19:43:39 joerg Exp $
+
+--- Makefile.am.orig	2009-06-11 20:25:40.000000000 +0000
++++ Makefile.am
+@@ -75,7 +75,7 @@ if HAVE_LD_VERSION_SCRIPT
  endif
  
  # Executables to build
@@ -9,7 +11,7 @@
  
  # Executable sources & libs
  cjpeg_SOURCES    = cjpeg.c rdppm.c rdgif.c rdtarga.c rdrle.c rdbmp.c \
-@@ -88,6 +88,8 @@
+@@ -88,6 +88,8 @@ jpegtran_SOURCES = jpegtran.c rdswitch.c
  jpegtran_LDADD   = libjpeg.la
  rdjpgcom_SOURCES = rdjpgcom.c
  wrjpgcom_SOURCES = wrjpgcom.c
