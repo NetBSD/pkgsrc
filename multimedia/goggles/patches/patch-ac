@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2009/11/14 22:07:07 yyamano Exp $
+$NetBSD: patch-ac,v 1.2 2010/01/04 15:20:45 joerg Exp $
 
---- build/config.hpux.orig	2006-11-26 14:19:18.000000000 -0800
+--- build/config.hpux.orig	2006-11-26 22:19:18.000000000 +0000
 +++ build/config.hpux
 @@ -24,16 +24,13 @@ export PICFLAG=""                     # 
  if [ $DEFS == "-DDEBUG" ] ; then
