@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.10 2010/01/04 15:22:30 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.11 2010/01/04 15:22:56 joerg Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -14,3 +14,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ikiwiki to 3.20100102.3 [schmonz 2010-01-03]
 	Updated www/trac to 0.11.6 [gdt 2010-01-03]
 	Removed www/firefox-bin-nightly [joerg 2010-01-04]
+	Removed mail/thunderbird-bin-nightly [joerg 2010-01-04]
