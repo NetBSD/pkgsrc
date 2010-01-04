@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2009/12/10 20:59:22 abs Exp $
+$NetBSD: patch-aa,v 1.7 2010/01/04 20:55:52 abs Exp $
 
 --- Makefile.orig	1999-06-26 14:37:17.000000000 +0000
 +++ Makefile
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.6 2009/12/10 20:59:22 abs Exp $
 -INSTALL_SCORE	= install -c -o ${BINOWN} -g ${BINGRP} -m ${SCOREMODE}
 +INSTALL_PROG	= ${BSD_INSTALL_GAME}
 +INSTALL_MAN	= ${BSD_INSTALL_MAN}
-+INSTALL_SCORE	= ${BSD_INSTALL_GAME_DATA}
++INSTALL_SCORE	?= ${BSD_INSTALL_GAME_DATA}
  
  # SysVish
  #INSTALL_PROG	= install -u ${BINOWN} -g ${BINGRP} -m ${BINMODE}
