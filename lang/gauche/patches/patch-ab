@@ -1,17 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2009/11/27 09:26:07 enami Exp $
+$NetBSD: patch-ab,v 1.9 2010/01/05 13:21:23 tnn Exp $
 
---- src/Makefile.in.orig	2009-10-20 04:29:29.000000000 +0900
-+++ src/Makefile.in	2009-11-25 12:08:51.000000000 +0900
-@@ -60,7 +60,7 @@
- OBJEXT   = @OBJEXT@
- EXEEXT   = @EXEEXT@
- SOEXT    = @SHLIB_DYLIB_SUFFIX@
--LINK_HELPER = @LINK_HELPER@
-+LINK_HELPER = libtool --mode=link
- RPATH_TMP  = @RPATH_TMP@
- RPATH_REAL = @RPATH_REAL@
- SONAME_FLAG = @SONAME_FLAG@
-@@ -187,6 +187,7 @@
+--- src/Makefile.in.orig	2009-10-19 19:29:29.000000000 +0000
++++ src/Makefile.in
+@@ -187,6 +187,7 @@ gosh$(EXEEXT) : libgauche.$(SOEXT) $(gos
  relink :
  	$(RELINK) $(libgauche_LDFLAGS) libgauche.$(SOEXT) $(libgauche_OBJECTS) ../gc/.libs/*.o $(LIBS)
  	$(RELINK) $(gosh_LDFLAGS) -o gosh$(EXEEXT)  $(gosh_OBJECTS) $(gosh_LDADD) $(LIBS)
