@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.25 2009/11/29 13:01:06 enami Exp $
+$NetBSD: distinfo,v 1.26 2010/01/05 13:21:23 tnn Exp $
 
 SHA1 (Gauche-0.9.tgz) = ebc18917c36201d6c3fda29dfdc52fce2d856a5f
 RMD160 (Gauche-0.9.tgz) = 3e0dfc1d498849b0d647e13f49addd0a56cc56fe
 Size (Gauche-0.9.tgz) = 3938498 bytes
 SHA1 (patch-aa) = fc85a438f3c4e032001a3b875d575a455f91a3ac
-SHA1 (patch-ab) = 342ac7055e3e35a1f59c470376cfb7c21b05053d
+SHA1 (patch-ab) = b78322a4b99d0f60f82976055667f62f9d8e0c72
 SHA1 (patch-af) = 0741e1a047ee7935bffa215a69cc417ba67b81f2
 SHA1 (patch-ag) = ee9946e364d6723b0efe3b260fc5d02ccb04621d
 SHA1 (patch-ah) = db08d8363368331e006b45d88ef0f05e150adc86
