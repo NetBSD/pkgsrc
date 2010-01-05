@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.13 2010/01/05 11:21:54 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.14 2010/01/05 11:24:39 wiz Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -17,3 +17,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed mail/thunderbird-bin-nightly [joerg 2010-01-04]
 	Updated audio/ampache to 3.5.3 [abs 2010-01-04]
 	Updated shells/osh to 20091218 [wiz 2010-01-05]
+	Updated net/tor to 0.2.1.21 [wiz 2010-01-05]
