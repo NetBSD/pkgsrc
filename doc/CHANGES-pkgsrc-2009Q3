@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.34 2009/12/23 19:11:01 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q3,v 1.1.2.35 2010/01/05 16:06:17 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q3 branch:
@@ -100,3 +100,5 @@ wireshark: security update
 Pullup ticket #2955 - requested by taca
 php5: security update
 php5-xsl: security update
+Pullup ticket #2957 - requested by abs
+ampache: security update
