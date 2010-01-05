@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/08/26 19:57:11 sno Exp $
+# $NetBSD: Makefile,v 1.34 2010/01/05 13:55:07 tnn Exp $
 
 DISTNAME=	liteamp-0.2.4.2
 PKGREVISION=	14
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 
 CPPFLAGS+=		-UGNOME_DISABLE_DEPRECATED
 CPPFLAGS+=		-UGTK_DISABLE_DEPRECATED
+LDFLAGS+=		${BUILDLINK_LDADD.oss}
 
 .include "../../audio/libao/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
