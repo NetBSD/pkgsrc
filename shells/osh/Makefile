@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2009/05/30 12:49:44 obache Exp $
+# $NetBSD: Makefile,v 1.25 2010/01/05 11:21:20 wiz Exp $
 
-DISTNAME=	osh-20090527
+DISTNAME=	osh-20091218
 CATEGORIES=	shells
 MASTER_SITES=	http://v6shell.org/src/
 
 MAINTAINER=	jan+nbsd@v6shell.org
 HOMEPAGE=	http://v6shell.org/
 COMMENT=	Port of the Sixth Edition UNIX shell
+LICENSE+	original-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

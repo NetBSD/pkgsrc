@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2009/05/30 12:49:44 obache Exp $
+$NetBSD: distinfo,v 1.15 2010/01/05 11:21:20 wiz Exp $
 
-SHA1 (osh-20090527.tar.gz) = e13dabfc254c0dd083a9a0674a11730d3afd8eff
-RMD160 (osh-20090527.tar.gz) = 24e83098888d8c4c512462abc84d0b2cf5264e5c
-Size (osh-20090527.tar.gz) = 92440 bytes
+SHA1 (osh-20091218.tar.gz) = 7dc04fdd93401829803e9b22aa0a6a53203488e5
+RMD160 (osh-20091218.tar.gz) = 76502912f409fba780a6e649c848e6bffc234247
+Size (osh-20091218.tar.gz) = 99469 bytes
