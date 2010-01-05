@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/05 09:32:36 adam Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/05 11:18:04 adam Exp $
 
 DISTNAME=	enblend-enfuse-4.0
 # XXX distribution file has changed; remove the line below on next update
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}-753b534c819d
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl:build
+USE_TOOLS+=		gmake perl:build pkg-config
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
