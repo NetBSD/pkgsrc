@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.101 2009/08/25 12:32:55 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.102 2010/01/05 08:55:32 adam Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -883,7 +883,7 @@ ${LIBTOOL} --mode=link ${CC} -o <replaceable>someprog</replaceable> <replaceable
 	<filename>.la</filename>. e.g.</para>
 
 	<programlisting>
-${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
+${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
 	</programlisting>
 
 	<para>This will install the static <filename>.a</filename>,
