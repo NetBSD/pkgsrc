@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/05/03 14:29:15 abs Exp $
+# $NetBSD: Makefile,v 1.2.4.1 2010/01/05 16:05:36 tron Exp $
 #
 
-DISTNAME=	ampache-3.5-beta2
-PKGNAME=	${DISTNAME:S:-beta:beta:}
+DISTNAME=	ampache-3.5.3
 CATEGORIES=	audio
 MASTER_SITES=	http://ampache.org/downloads/
 
@@ -20,6 +19,7 @@ NO_BUILD=		yes
 USE_LANGUAGES=		# none
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pax
+LICENSE=       		gnu-gpl-v2
 
 INSTDIR=		${PREFIX}/share/ampache
 EGDIR=			${PREFIX}/share/examples
