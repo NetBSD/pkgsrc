@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2009/09/25 11:10:21 tron Exp $
+# $NetBSD: Makefile,v 1.55 2010/01/05 23:12:54 tron Exp $
 
-PKGREVISION=	4
+PKGREVISION=	5
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
@@ -30,6 +30,9 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/ffmpeg
 
 .include "options.mk"
+
+# "lame-3.98" isn't compatible with "ffmpeg" which breaks audio encoding.
+BUILDLINK_ABI_DEPENDS.lame+=	lame>=3.98.2nb1
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
