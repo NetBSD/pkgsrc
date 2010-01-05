@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8823 2010/01/04 20:46:40 abs Exp $
+$NetBSD: TODO,v 1.8824 2010/01/05 00:48:20 taca Exp $
 
 Suggested new packages
 ======================
@@ -1294,6 +1294,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sdcc-2.9.0
 	o sdlmame-0.136
 	o sendfile-20010424
+	o sendmail-8.14.4
 	o ser-0.9.6
 	o sessreg-1.0.5
 	o sharity-3.7
