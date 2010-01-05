@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/12/15 21:48:01 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/05 21:28:27 wiz Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 COMMENT=	Graphical tools for the KDE desktop
 
@@ -17,6 +17,11 @@ CHECK_PORTABILITY_SKIP+=ktimetracker/test/booktime-baddate.sh \
 		ktimetracker/test/delete.sh \
 		ktimetracker/test/refresh_on_change.sh \
 		ktimetracker/test/version.sh
+
+PKGCONFIG_OVERRIDE+=	libs/libkipi/libkipi.pc.cmake
+PKGCONFIG_OVERRIDE+=	libs/libksane/libksane.pc.cmake
+PKGCONFIG_OVERRIDE+=	libs/libkexiv2/libkexiv2.pc.cmake
+PKGCONFIG_OVERRIDE+=	libs/libkdcraw/libkdcraw.pc.cmake
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
