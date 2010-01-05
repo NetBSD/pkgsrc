@@ -1,0 +1,170 @@
+$NetBSD: patch-aa,v 1.16 2010/01/05 23:02:12 tron Exp $
+
+Fix compatibility problem with "ffmpeg":
+
+http://lame.cvs.sourceforge.net/viewvc/lame/lame/libmp3lame/lame.c?revision=1.323.2.5&view=markup
+http://lame.cvs.sourceforge.net/viewvc/lame/lame/libmp3lame/lame.c?revision=1.323.2.6&view=markup
+
+--- libmp3lame/lame.c.orig	2008-08-05 18:26:02.000000000 +0100
++++ libmp3lame/lame.c	2010-01-05 17:41:57.000000000 +0000
+@@ -1472,6 +1472,27 @@
+ }
+ 
+ 
++static int
++calcNeeded(lame_global_flags* gfp)
++{
++    int mf_needed;
++    /* some sanity checks */
++#if ENCDELAY < MDCTDELAY
++# error ENCDELAY is less than MDCTDELAY, see encoder.h
++#endif
++#if FFTOFFSET > BLKSIZE
++# error FFTOFFSET is greater than BLKSIZE, see encoder.h
++#endif
++
++    mf_needed = BLKSIZE + gfp->framesize - FFTOFFSET; /* amount needed for FFT */
++    /*mf_needed = Max(mf_needed, 286 + 576 * (1 + gfc->mode_gr)); */
++    mf_needed = Max(mf_needed, 512 + gfp->framesize - 32);
++
++    assert(MFSIZE >= mf_needed);
++    
++    return mf_needed;
++}
++
+ /*
+  * THE MAIN LAME ENCODING INTERFACE
+  * mt 3/00
+@@ -1555,20 +1576,7 @@
+         }
+     }
+ 
+-
+-    /* some sanity checks */
+-#if ENCDELAY < MDCTDELAY
+-# error ENCDELAY is less than MDCTDELAY, see encoder.h
+-#endif
+-#if FFTOFFSET > BLKSIZE
+-# error FFTOFFSET is greater than BLKSIZE, see encoder.h
+-#endif
+-
+-    mf_needed = BLKSIZE + gfp->framesize - FFTOFFSET; /* amount needed for FFT */
+-    /*mf_needed = Max(mf_needed, 286 + 576 * (1 + gfc->mode_gr)); */
+-    mf_needed = Max(mf_needed, 512 + gfp->framesize - 32);
+-
+-    assert(MFSIZE >= mf_needed);
++    mf_needed = calcNeeded(gfp);
+ 
+     mfbuf[0] = gfc->mfbuf[0];
+     mfbuf[1] = gfc->mfbuf[1];
+@@ -1602,6 +1610,13 @@
+         /* update mfbuf[] counters */
+         gfc->mf_size += n_out;
+         assert(gfc->mf_size <= MFSIZE);
++
++        /* lame_encode_flush may have set gfc->mf_sample_to_encode to 0
++         * so we have to reinitialize it here when that happened.
++         */
++        if (gfc->mf_samples_to_encode < 1) {
++            gfc->mf_samples_to_encode = ENCDELAY + POSTDELAY;
++        }
+         gfc->mf_samples_to_encode += n_out;
+ 
+ 
+@@ -1926,24 +1941,36 @@
+ 
+     /* we always add POSTDELAY=288 padding to make sure granule with real
+      * data can be complety decoded (because of 50% overlap with next granule */
+-    int     end_padding = POSTDELAY;
+-    int     pad_out_samples;
++    int     end_padding;
+     int     frames_left;
+-    int     samples_to_encode = gfc->mf_samples_to_encode;
++    int     samples_to_encode = gfc->mf_samples_to_encode - POSTDELAY;
++    int     mf_needed = calcNeeded(gfp);
+ 
++    /* Was flush already called? */
++    if (gfc->mf_samples_to_encode < 1) {
++        return 0;
++    }
+     memset(buffer, 0, sizeof(buffer));
+     mp3count = 0;
+-    
++
+     if (gfp->in_samplerate != gfp->out_samplerate) {
+         /* delay due to resampling; needs to be fixed, if resampling code gets changed */
+         samples_to_encode += 16.*gfp->out_samplerate/gfp->in_samplerate;
+     }
+-    pad_out_samples = gfp->framesize - (samples_to_encode % gfp->framesize);
+-    end_padding += pad_out_samples;
++    end_padding = gfp->framesize - (samples_to_encode % gfp->framesize);
++    gfp->encoder_padding = end_padding;
++
++    frames_left = (samples_to_encode + end_padding) / gfp->framesize;
+ 
+-    frames_left = (samples_to_encode + pad_out_samples) / gfp->framesize;
+-    while (frames_left > 0) {
++    /* send in a frame of 0 padding until all internal sample buffers are flushed */
++    while (frames_left > 0 && imp3 >= 0) {
++        int bunch = mf_needed-gfc->mf_size;
+         int frame_num = gfp->frameNum;
++        
++        bunch *= gfp->in_samplerate;
++        bunch /= gfp->out_samplerate;
++        if (bunch > 1152) bunch = 1152;
++        if (bunch < 1) bunch = 1;
+ 
+         mp3buffer_size_remaining = mp3buffer_size - mp3count;
+ 
+@@ -1951,22 +1978,23 @@
+         if (mp3buffer_size == 0)
+             mp3buffer_size_remaining = 0;
+ 
+-        /* send in a frame of 0 padding until all internal sample buffers
+-         * are flushed
+-         */
+-        imp3 = lame_encode_buffer(gfp, buffer[0], buffer[1], 32,
++        imp3 = lame_encode_buffer(gfp, buffer[0], buffer[1], bunch,
+                                   mp3buffer, mp3buffer_size_remaining);
+         
+-        if (frame_num != gfp->frameNum) {
+-            --frames_left;
+-        }
+-        if (imp3 < 0) {
+-            /* some type of fatal error */
+-            return imp3;
+-        }
+         mp3buffer += imp3;
+         mp3count += imp3;
++        frames_left -= (frame_num != gfp->frameNum) ? 1 : 0;
+     }
++    /* Set gfc->mf_samples_to_encode to 0, so we may detect
++     * and break loops calling it more than once in a row.
++     */
++    gfc->mf_samples_to_encode = 0;
++
++    if (imp3 < 0) {
++        /* some type of fatal error */
++        return imp3;
++    }
++
+     mp3buffer_size_remaining = mp3buffer_size - mp3count;
+     /* if user specifed buffer size = 0, dont check size */
+     if (mp3buffer_size == 0)
+@@ -1997,7 +2025,6 @@
+         }
+         mp3count += imp3;
+     }
+-    gfp->encoder_padding = end_padding;
+ #if 0
+     {
+         int const ed = gfp->encoder_delay;
+@@ -2011,6 +2038,8 @@
+         MSGF(gfc, "encoder padding=%d\n", ep);
+         MSGF(gfc, "sample count=%d (%g)\n", ns, gfp->in_samplerate*duration);
+         MSGF(gfc, "duration=%g sec\n", duration);
++        MSGF(gfc, "mf_size=%d\n",gfc->mf_size);
++        MSGF(gfc, "mf_samples_to_encode=%d\n",gfc->mf_samples_to_encode);
+     }
+ #endif
+     return mp3count;
