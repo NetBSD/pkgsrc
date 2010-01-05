@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/03 14:29:15 abs Exp $
+$NetBSD: distinfo,v 1.2.4.1 2010/01/05 16:05:36 tron Exp $
 
-SHA1 (ampache-3.5-beta2.tar.gz) = 801a5dd8778b2c758e031332a97c502e853e16ab
-RMD160 (ampache-3.5-beta2.tar.gz) = d4cc895fe9c50c1354eb066f11011f7d45479785
-Size (ampache-3.5-beta2.tar.gz) = 1737144 bytes
+SHA1 (ampache-3.5.3.tar.gz) = c9eb9ed7034e7c1d822fee34a74e74311900133e
+RMD160 (ampache-3.5.3.tar.gz) = b5525793c97f3881d9293c98fe2d7a5cccc7e8a5
+Size (ampache-3.5.3.tar.gz) = 1962048 bytes
