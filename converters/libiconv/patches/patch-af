@@ -1,17 +1,53 @@
-$NetBSD: patch-af,v 1.4 2010/01/06 18:53:05 tron Exp $
+$NetBSD: patch-af,v 1.5 2010/01/06 21:01:09 tron Exp $
 
---- lib/Makefile.in.orig	Mon May 28 00:15:31 2007
-+++ lib/Makefile.in	Wed Jan  6 19:44:49 2010
-@@ -82,7 +82,7 @@
+--- lib/Makefile.in.orig	2007-05-27 23:15:31.000000000 +0100
++++ lib/Makefile.in	2010-01-06 20:53:18.000000000 +0000
+@@ -69,35 +69,15 @@
+ libiconv.la : $(OBJECTS)
+ 	$(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(CFLAGS) -o libiconv.la -rpath $(libdir) -version-info $(LIBICONV_VERSION_INFO) -no-undefined $(OBJECTS)
  
- preloadable_libiconv_solaris.so : $(SOURCES)
- 	if test -n "@GCC@"; then \
+-preloadable_libiconv.so : preloadable_libiconv_@OS@.so
+-	$(RM) preloadable_libiconv.so
+-	$(LN_S) preloadable_libiconv_@OS@.so preloadable_libiconv.so
+-
+-preloadable_libiconv_linux.so : $(SOURCES)
+-	if test -n "@GCC@"; then \
+-	  $(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(INCLUDES) $(CFLAGS) $(CPPFLAGS) $(DEFS) -fPIC -DPIC -DLIBICONV_PLUG $(SOURCES) -shared -o preloadable_libiconv_linux.so; \
+-	else \
+-	  $(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(INCLUDES) $(CFLAGS) $(CPPFLAGS) $(DEFS) -KPIC -DPIC -DLIBICONV_PLUG $(SOURCES) -shared -o preloadable_libiconv_linux.so; \
+-	fi
+-
+-preloadable_libiconv_solaris.so : $(SOURCES)
+-	if test -n "@GCC@"; then \
 -	  $(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(INCLUDES) $(CFLAGS) $(CPPFLAGS) $(DEFS) -fPIC -DPIC -DLIBICONV_PLUG $(SOURCES) -shared -o preloadable_libiconv_solaris.so; \
-+	  $(CC) $(LDFLAGS) $(INCLUDES) $(CFLAGS) $(CPPFLAGS) $(DEFS) -fPIC -DPIC -DLIBICONV_PLUG $(SOURCES) -shared -o preloadable_libiconv_solaris.so; \
- 	else \
- 	  $(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(INCLUDES) $(CFLAGS) $(CPPFLAGS) $(DEFS) -KPIC -DPIC -DLIBICONV_PLUG $(SOURCES) -G -o preloadable_libiconv_solaris.so; \
- 	fi
-@@ -118,7 +118,7 @@
+-	else \
+-	  $(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(INCLUDES) $(CFLAGS) $(CPPFLAGS) $(DEFS) -KPIC -DPIC -DLIBICONV_PLUG $(SOURCES) -G -o preloadable_libiconv_solaris.so; \
+-	fi
+-
+-preloadable_libiconv_osf.so : $(SOURCES)
+-	if test -n "@GCC@"; then \
+-	  $(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(INCLUDES) $(CFLAGS) $(CPPFLAGS) $(DEFS) -fPIC -DPIC -DLIBICONV_PLUG $(SOURCES) -shared -o preloadable_libiconv_osf.so; \
+-	else \
+-	  mkdir objects; \
+-	  for f in $(SOURCES); do \
+-	    $(CC) $(INCLUDES) $(CFLAGS) $(CPPFLAGS) $(DEFS) -DPIC -DLIBICONV_PLUG -c $$f -o objects/`basename $$f | sed -e 's,\.c$$,.o,'`; \
+-	  done; \
+-	  /bin/ld -shared -expect_unresolved \* -o preloadable_libiconv_osf.so objects/*.o; \
+-	  rm -rf objects; \
+-	fi
++preloadable_libiconv.so : $(SOURCES)
++	$(RM) -rf objects
++	mkdir objects && \
++	for f in $(SOURCES); do \
++	  $(LIBTOOL_COMPILE) $(CC) $(INCLUDES) $(CFLAGS) $(CPPFLAGS) $(DEFS) -DLIBICONV_PLUG -c $$f -o objects/`basename $$f | sed -e 's,\.c$$,.o,'` || exit 1; \
++	done && \
++	$(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(CFLAGS) -o objects/libiconv.la -rpath $(libdir) -no-undefined objects/*.lo && \
++	cp objects/.libs/libiconv.so preloadable_libiconv.so
++	$(RM) -rf objects
+ 
+ iconv.lo : $(srcdir)/iconv.c $(srcdir)/converters.h $(srcdir)/encodings.def $(srcdir)/encodings_aix.def $(srcdir)/encodings_osf1.def $(srcdir)/encodings_dos.def $(srcdir)/encodings_local.def $(srcdir)/aliases.h $(srcdir)/aliases_aix.h $(srcdir)/aliases_osf1.h $(srcdir)/aliases_dos.h $(srcdir)/flags.h
+ 	$(LIBTOOL_COMPILE) $(CC) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(DEFS) -c $(srcdir)/iconv.c
+@@ -118,14 +98,14 @@
  # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
  install-lib : all force
  	if [ ! -d $(libdir) ] ; then $(mkinstalldirs) $(libdir) ; fi
@@ -20,7 +56,6 @@ $NetBSD: patch-af,v 1.4 2010/01/06 18:53:05 tron Exp $
  
  # On AIX, libiconv.a must include the object files of /lib/libiconv.a,
  # otherwise the setlocale() call fails when invoked from executables linked
-@@ -125,7 +125,7 @@
  # with -rpath $(libdir), even if linked without -liconv.
  install : all force
  	if [ ! -d $(DESTDIR)$(libdir) ] ; then $(mkinstalldirs) $(DESTDIR)$(libdir) ; fi
