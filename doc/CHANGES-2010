@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.18 2010/01/06 02:32:05 obache Exp $
+$NetBSD: CHANGES-2010,v 1.19 2010/01/06 08:05:03 obache Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -22,3 +22,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/lame to 3.98.2nb1 [tron 2010-01-05]
 	Updated multimedia/ffmpeg to 20090611nb5 [tron 2010-01-05]
 	Updated converters/kcc to 2.3 [obache 2010-01-06]
+	Updated games/blokus to 1.1 [obache 2010-01-06]
