@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/05/30 19:48:54 bouyer Exp $
+$NetBSD: distinfo,v 1.8 2010/01/06 08:33:23 obache Exp $
 
-SHA1 (eagle-lin-eng-4.14.tgz) = d4e8696ed63c3c1569dbb7314208b472880df1bc
-RMD160 (eagle-lin-eng-4.14.tgz) = 60b486a00e1b0ec62e9200a333fe0d0464f53d45
-Size (eagle-lin-eng-4.14.tgz) = 8139393 bytes
+SHA1 (eagle-lin-eng-4.16r2.tgz) = 42c2f619d8f765c5c9feaa1d7f75583c02f3ff6b
+RMD160 (eagle-lin-eng-4.16r2.tgz) = 32449bbed7df918e7825cd91f1c559cc0d8966f9
+Size (eagle-lin-eng-4.16r2.tgz) = 8922532 bytes
