@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8828 2010/01/06 06:00:15 obache Exp $
+$NetBSD: TODO,v 1.8829 2010/01/06 08:11:43 taca Exp $
 
 Suggested new packages
 ======================
@@ -597,6 +597,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
+	o firefox-3.5.7
 	o fisg-0.3.12
 	o fixesproto-4.1.1
 	o flashplayer-0.4.13
