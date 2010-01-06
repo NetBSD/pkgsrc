@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2009/12/03 13:06:55 asau Exp $
+# $NetBSD: Makefile,v 1.81 2010/01/06 18:24:12 joerg Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -18,9 +18,7 @@ SCIBASE=	scilab-4.1
 # SCIBASE is updated.
 WRKSRC=		${WRKDIR}/${SCIBASE}
 
-#needs FPC code not found in older versions of NetBSD
-NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
-			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
+NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
 
 USE_LANGUAGES=		c fortran
 USE_X11BASE=		yes
