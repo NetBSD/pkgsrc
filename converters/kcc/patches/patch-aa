@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/02/11 16:49:04 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/06 02:31:53 obache Exp $
 
---- kcc.c.orig	1994-03-28 20:00:12.000000000 +0900
+--- kcc.c.orig	1994-07-01 05:47:48.000000000 +0000
 +++ kcc.c
-@@ -134,7 +134,11 @@ extern unsigned short katakana[];
+@@ -27,6 +27,7 @@ static char copyright[] = "@(#)Copyright
+ #endif
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+@@ -134,7 +135,11 @@ extern unsigned short katakana[];
  extern unsigned short hiragana[];
  unsigned short *kanatbl = katakana;
  
@@ -14,7 +22,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/02/11 16:49:04 rillig Exp $
  
  /**********************************************************************
   *                                                                    *
-@@ -364,14 +368,26 @@ main(c, v)
+@@ -364,14 +369,26 @@ main(c, v)
      NAME
  	error - print formatted error message on stderr and die
   ---------------------------------------------------------------------*/
