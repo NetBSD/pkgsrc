@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/06 08:04:51 obache Exp $
 #
 
-DISTNAME=	blokus-1.0
-PKGREVISION=	1
+DISTNAME=	blokus-1.1
 CATEGORIES=	games
 MASTER_SITES=	http://www.saschahlusiak.de/blokus/
-DIST_SUBDIR=	blokus-1.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.saschahlusiak.de/blokus/
 COMMENT=	Abstract strategy board game for two to four players
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		Redistribution prohibited
 NO_BIN_ON_CDROM=	${RESTRICTED}
