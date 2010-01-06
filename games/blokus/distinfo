@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2007/05/23 15:05:36 rillig Exp $
+$NetBSD: distinfo,v 1.7 2010/01/06 08:04:51 obache Exp $
 
-SHA1 (blokus-1.0/blokus-1.0.tar.gz) = 163fddab255bb684509b12a564d3366f6dac5ff1
-RMD160 (blokus-1.0/blokus-1.0.tar.gz) = 4f339d193b34ed804f1d6bddfac77b145ec4c1e0
-Size (blokus-1.0/blokus-1.0.tar.gz) = 530394 bytes
+SHA1 (blokus-1.1.tar.gz) = 125dcd9149930c427b75a777552bbfc28aa7efa7
+RMD160 (blokus-1.1.tar.gz) = 2c269521670c97ba36810de38d1d9650b4d9a806
+Size (blokus-1.1.tar.gz) = 539457 bytes
 SHA1 (patch-aa) = 6081587206b69271f22b2d472bd32d7f2fe579ac
 SHA1 (patch-spielcpp) = c5346d3b04aa2a3a11de1bf99570a5ad5314f389
