@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2009/12/16 16:53:09 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2010/01/06 11:20:30 drochner Exp $
+
+Fix for LP64 on python > 2.4.
 
 --- pyid3lib.cc.orig	2003-02-16 23:50:20.000000000 +0000
 +++ pyid3lib.cc
