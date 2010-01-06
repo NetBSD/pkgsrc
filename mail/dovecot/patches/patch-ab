@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.28 2009/12/11 20:52:22 ghen Exp $
+$NetBSD: patch-ab,v 1.29 2010/01/06 16:57:18 sketch Exp $
 
 --- dovecot-example.conf.orig	2009-06-01 05:21:42.000000000 +0200
 +++ dovecot-example.conf
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.28 2009/12/11 20:52:22 ghen Exp $
    # list of plugins to load.
    #mail_plugins = 
 -  #mail_plugin_dir = /usr/lib/dovecot/imap
-+  #mail_plugin_dir = @PREFIX@/dovecot/imap
++  #mail_plugin_dir = @PREFIX@/lib/dovecot/imap
  
    # IMAP logout format string:
    #  %i - total number of bytes read from client
