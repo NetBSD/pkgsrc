@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.301 2009/12/13 08:19:45 obache Exp $
+# $NetBSD: bsd.prefs.mk,v 1.302 2010/01/06 18:21:44 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -696,5 +696,12 @@ _VARGROUPS+=		dirs
 _USER_VARS.dirs=	DISTDIR LOCALBASE PACKAGES PKG_SYSCONFDIR WRKOBJDIR
 _PKG_VARS.dirs=		WRKSRC PATCHDIR FILESDIR PKGDIR
 _SYS_VARS.dirs=		WRKDIR DESTDIR PKG_SYSCONFBASEDIR
+
+# List of 64bit operating systems with sizeof(int) != sizeof(void *).
+# This can be used for software that is not 64bit clean.
+#
+# Keywords: ONLY_FOR_PLATFORM NOT_FOR_PLATFORM 64bit
+#
+LP64PLATFORMS=		*-*-alpha *-*-sparc64 *-*-x86_64
 
 .endif	# BSD_PKG_MK
