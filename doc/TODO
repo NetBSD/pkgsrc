@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8827 2010/01/06 01:35:17 obache Exp $
+$NetBSD: TODO,v 1.8828 2010/01/06 06:00:15 obache Exp $
 
 Suggested new packages
 ======================
@@ -1158,7 +1158,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pulseaudio-0.9.21
 	o puppet-0.25.0
 	o pure-ftpd-1.0.27
-	o pureftpd-1.0.26
 	o puzzle-5.2
 	o puzzles-8802
 	o pv-1.1.4
