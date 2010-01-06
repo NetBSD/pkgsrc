@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.678 2009/12/30 21:11:20 joerg Exp $
+# $NetBSD: Makefile,v 1.679 2010/01/06 11:39:30 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -122,7 +122,6 @@ SUBDIR+=	firefox-bin-acroread5
 SUBDIR+=	firefox-bin-acroread7
 SUBDIR+=	firefox-bin-flash
 SUBDIR+=	firefox-bin-java
-SUBDIR+=	firefox-bin-nightly
 SUBDIR+=	firefox-bin-realplayer
 SUBDIR+=	galeon
 SUBDIR+=	galway
