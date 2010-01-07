@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2009/11/29 23:42:35 dholland Exp $
+# $NetBSD: Makefile,v 1.62 2010/01/07 07:36:54 wiz Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -12,7 +12,7 @@ HOMEPAGE=	http://sourceforge.net/projects/openh323/
 COMMENT=	Portable Windows Library
 # note: obsoleted by devel/ptlib
 
-NOT_FOR_PLATFORM+=	*-*-alpha *-*-sparc64 *-*-x86_64
+NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
 
 WRKSRC=			${WRKDIR}/pwlib
 USE_TOOLS+=		bison gmake
