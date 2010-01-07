@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 2010/01/07 08:38:44 obache Exp $
+
+--- EMULib/Rules.gcc.orig	2008-01-28 19:17:27.000000000 +0000
++++ EMULib/Rules.gcc
+@@ -8,9 +8,10 @@ PRIVATE	= $(BASEDIR)/Private
+ 
+ CC	= gcc
+ CPP	= cpp
+-CFLAGS	= -O3 -pthread -I.. -I$(EMULIB)
++CFLAGS	= -O3 $(PTHREAD_CFLAGS) -fomit-frame-pointer -I.. -I$(EMULIB)
+ DEFINES = -DZLIB
+-LIBS    = -lz -lpthread
++LIBS    = -lz $(PTHREAD_LIBS) $(LIBOSSAUDIO)
++LDFLAGS	= $(PTHREAD_LDFLAGS)
+ 
+ # EMULib sound, console, and other utility functions 
+ OBJECTS	= $(EMULIB)/EMULib.o $(EMULIB)/Console.o $(EMULIB)/Sound.o \

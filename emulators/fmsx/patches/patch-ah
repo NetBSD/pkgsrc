@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2010/01/07 08:38:44 obache Exp $
+
+--- fMSX/fMSX.c.orig	2007-12-30 16:03:22.000000000 +0000
++++ fMSX/fMSX.c
+@@ -72,6 +72,7 @@ int main(int argc,char *argv[])
+   ProgDir=GetFilePath(argv[0]);
+ #else
+   Verbose=1;
++  ProgDir=RomDir;
+ #endif
+ 
+   /* Clear everything */

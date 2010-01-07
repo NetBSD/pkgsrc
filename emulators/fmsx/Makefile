@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2010/01/07 08:38:43 obache Exp $
 
-DISTNAME=	fMSX24.tar
-PKGNAME=	fmsx-2.4
-PKGREVISION=	1
+DISTNAME=	fMSX351
+PKGNAME=	fmsx-3.5.1
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://fms.komkon.org/fMSX/
-EXTRACT_SUFX=	.Z
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fms.komkon.org/fMSX/
@@ -13,55 +12,57 @@ COMMENT=	MSX (Z80-based computer) emulator
 
 RESTRICTED=		ROM image copyright is questionable
 NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=	${WRKDIR}/MSX
+WRKSRC=	${WRKDIR}
+
+BUILD_DIRS=	fMSX/Unix
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/endian.mk"
+
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 USE_SUN_AUDIO?=	YES
 .else
 USE_SUN_AUDIO?=	NO
 .endif
-DEFS=		-DFontDir=\"${PREFIX:Q}/share/fmsx/\"
-DEFS+=		-DRomDir=\"${PREFIX:Q}/share/fmsx/\"
-DEFS+=		-DMITSHM -D${CUR_DEPTH} -DSOUND
+DEFS+=		-DRomDir=\"${PREFIX:Q}/share/fmsx\"
 .if ${USE_SUN_AUDIO} == "YES"
 DEFS+=		-DSUN_AUDIO
+.else
+.  include "../../mk/oss.buildlink3.mk"
+
+SUBST_CLASSES+=		devdsp
+SUBST_STAGE.devdsp=	pre-build
+SUBST_FILES.devdsp=	EMULib/SndUnix.c
+SUBST_SED.devdsp=	-e 's|/dev/dsp|${DEVOSSSOUND}|g'
+
+.endif
+.if ${MACHINE_ENDIAN} == "big"
+DEFS+=		-DMSB_FIRST
+.elif ${MACHINE_ENDIAN} == "little"
+DEFS+=		-DLSB_FIRST
+.else
+BROKEN+=	"Unknown endian"
 .endif
 
 MAKE_ENV+=	DEFS=${DEFS:Q}
 
-INSTALLATION_DIRS=	bin
-
-post-extract:
-	@${RM} ${WRKSRC}/CMOS.ROM
-	@${CHMOD} -R a+r ${WRKSRC}
-
-pre-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/fmsx
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html
+INSTALLATION_DIRS=	bin share/fmsx share/doc
 
 # Makefile of fMSX doesn't have install target.
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fmsx ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/rddsk ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/wrdsk ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/*.ROM ${DESTDIR}${PREFIX}/share/fmsx
-	${INSTALL_DATA} ${WRKSRC}/fMSX.html ${DESTDIR}${PREFIX}/share/doc/html
+	${INSTALL_PROGRAM} ${WRKSRC}/fMSX/Unix/fmsx ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/fMSX/ROMs/*.ROM ${DESTDIR}${PREFIX}/share/fmsx
+	${INSTALL_DATA} ${WRKSRC}/fMSX/ROMs/*.FNT ${DESTDIR}${PREFIX}/share/fmsx
+	${INSTALL_DATA} ${WRKSRC}/fMSX/fMSX.html ${DESTDIR}${PREFIX}/share/doc
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# XXX It would be nice to customize for each user's display, but this
-#     way of doing it at build time depending on build environment is wrong.
-#.ifdef DISPLAY
-#CUR_DEPTH!=	( xwininfo -display ${DISPLAY} -root | fgrep Depth: | ${SED} 's-.*Depth: -BPP-' )
-#.else
-CUR_DEPTH= BPP8
-#.endif

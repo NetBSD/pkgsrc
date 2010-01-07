@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2010/01/07 08:38:44 obache Exp $
+
+--- EMULib/NetUnix.c.orig	2007-12-30 16:01:15.000000000 +0000
++++ EMULib/NetUnix.c
+@@ -17,6 +17,8 @@
+ #include <stdio.h>
+ #include <netdb.h>
+ #include <errno.h>
++#include <netinet/in.h>
++#include <sys/types.h>
+ #include <sys/ioctl.h>
+ #include <sys/socket.h>
+ 
