@@ -316,7 +316,7 @@ mstats			Enable memory statistics
 mutt-compressed-mbox    Enable compressed mailbox support in mutt.
 mutt-hcache		Enable header caching in mutt.
 mutt-sidebar		Enable the mutt mailbox sidebar patch.
-mutt-smtp		Enable smpt support in mutt.
+mutt-smtp		Enable SMTP support in mutt.
 mysql			Enable MySQL support.
 nas			Enable usage of the Network Audio System.
 ncurses			Enable ncurses support.
