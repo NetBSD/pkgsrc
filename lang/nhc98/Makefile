@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/02/05 23:09:46 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2010/01/07 07:36:54 wiz Exp $
 
 DISTNAME=		nhc98src-1.18.tar.gz
 PKGNAME=		nhc98-1.18
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.cs.york.ac.uk/fp/nhc98/
 COMMENT=		Portable Haskell 98 compiler
 
 # Not yet ported to 64-bit machines
-NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64
+NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
