@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2010/01/07 13:30:26 is Exp $
+# $NetBSD: Makefile,v 1.29 2010/01/07 13:58:53 is Exp $
 
 DISTNAME=	xsnow-1.42
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://dropmix.xs4all.nl/rick/Xsnow/
 
