@@ -1,0 +1,10 @@
+--- libclamav/others.h.orig	2010-01-06 19:05:29 -1000
++++ libclamav/others.h	2010-01-06 19:05:39 -1000
+@@ -29,6 +29,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <unistd.h>
+ #include "cltypes.h"
+ 
+ #include "clamav.h"
