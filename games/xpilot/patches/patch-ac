@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/01/07 15:22:49 is Exp $
+
+--- src/common/error.h.orig	2001-05-30 11:34:15.000000000 -0700
++++ src/common/error.h
+@@ -34,7 +34,7 @@
+ #ifndef	ERROR_H
+ #define	ERROR_H
+ 
+-# if (defined(__STDC__) && !defined(__sun__) || defined(__cplusplus) || defined(_WINDOWS))
++# if (defined(__STDC__) || defined(__cplusplus) || defined(_WINDOWS))
+ #  include <stdarg.h>
+     extern void warn(const char *fmt, ...);
+     extern void error(const char *fmt, ...);

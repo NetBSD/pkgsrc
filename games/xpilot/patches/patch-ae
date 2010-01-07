@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2010/01/07 15:22:49 is Exp $
+
+--- src/common/net.h.orig	2001-06-02 14:02:14.000000000 -0700
++++ src/common/net.h
+@@ -84,7 +84,7 @@ int Sockbuf_read(sockbuf_t *sbuf);
+ int Sockbuf_copy(sockbuf_t *dest, sockbuf_t *src, int len);
+ 
+ #if !defined(STDVA)
+-#   if defined(__STDC__) && !defined(__sun__) || defined(__cplusplus)
++#   if defined(__STDC__) || defined(__cplusplus)
+ #	define STDVA	1		/* has ANSI stdarg stuff */
+ #   else
+ #	define STDVA	0		/* nope, still the K&R way */
