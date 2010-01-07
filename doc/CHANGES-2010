@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.23 2010/01/07 02:24:01 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.24 2010/01/07 08:38:59 obache Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -27,3 +27,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ja-trac to 0.11.5pl1nb1 [obache 2010-01-06]
 	Removed print/ghostscript-esp [joerg 2010-01-06]
 	Updated mail/getmail to 4.16.0 [schmonz 2010-01-07]
+	Updated emulators/fmsx to 3.5.1 [obache 2010-01-07]
