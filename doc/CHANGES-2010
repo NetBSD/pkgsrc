@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.25 2010/01/07 11:18:51 obache Exp $
+$NetBSD: CHANGES-2010,v 1.26 2010/01/07 13:32:01 is Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -29,3 +29,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/getmail to 4.16.0 [schmonz 2010-01-07]
 	Updated emulators/fmsx to 3.5.1 [obache 2010-01-07]
 	Updated fonts/mftrace to 1.2.15 [obache 2010-01-07]
+	Updated x11/xsnow to 1.42nb3 [is 2010-01-07]
