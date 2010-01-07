@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2009/02/09 22:56:23 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2010/01/07 11:18:33 obache Exp $
 
-DISTNAME=	mftrace-1.2.14
-PKGREVISION=	1
+DISTNAME=	mftrace-1.2.15
 CATEGORIES=	fonts
 MASTER_SITES=	http://lilypond.org/download/sources/mftrace/
 
 MAINTAINER=	atamaniuk-pkgsrc@frobs.net
 HOMEPAGE=	http://lilypond.org/mftrace/
 COMMENT=	Scalable Fonts for MetaFont
+LICENSE=	mit AND gnu-gpl-v2
 
 DEPENDS+=	autotrace>=0.31:../../graphics/autotrace
 DEPENDS+=	potrace>=1.5:../../graphics/potrace
