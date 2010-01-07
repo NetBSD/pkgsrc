@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/01/07 08:38:43 obache Exp $
 bin/fmsx
-bin/rddsk
-bin/wrdsk
+share/doc/fMSX.html
+share/fmsx/CYRILLIC.FNT
 share/fmsx/DISK.ROM
 share/fmsx/FMPAC.ROM
+share/fmsx/FMPAC16.ROM
+share/fmsx/ITALIC.FNT
 share/fmsx/KANJI.ROM
 share/fmsx/MSX.ROM
 share/fmsx/MSX2.ROM
 share/fmsx/MSX2EXT.ROM
 share/fmsx/MSX2P.ROM
 share/fmsx/MSX2PEXT.ROM
+share/fmsx/MSXDOS2.ROM
 share/fmsx/PAINTER.ROM
-share/doc/html/fMSX.html
+share/fmsx/RS232.ROM

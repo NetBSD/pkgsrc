@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2010/01/07 08:38:44 obache Exp $
+
+--- EMULib/Rules.Unix.orig	2008-01-28 19:48:23.000000000 +0000
++++ EMULib/Rules.Unix
+@@ -1,5 +1,5 @@
+ include ../../EMULib/Rules.gcc
+ 
+-CFLAGS += -I/usr/X11R6/include
++CFLAGS += -I${X11BASE}/include
+ DEFINES+= -DUNIX -DMITSHM
+-LIBS   += -lX11 -lXext
++LIBS   += ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib -lX11 -lXext
