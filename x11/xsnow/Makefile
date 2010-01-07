@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2008/12/28 12:57:17 obache Exp $
+# $NetBSD: Makefile,v 1.28 2010/01/07 13:30:26 is Exp $
 
 DISTNAME=	xsnow-1.42
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://dropmix.xs4all.nl/rick/Xsnow/
 
