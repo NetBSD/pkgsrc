@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/26 19:14:48 abs Exp $
+$NetBSD: distinfo,v 1.2 2010/01/08 12:57:17 sno Exp $
 
 SHA1 (eBay-API-0.25.tar.gz) = b44ae76209360498d652c4d545ec64fb9230011c
 RMD160 (eBay-API-0.25.tar.gz) = 9ee9c79129f34569141b90f7dde6f6c2d1b8be28
 Size (eBay-API-0.25.tar.gz) = 1211617 bytes
+SHA1 (patch-aa) = bcc4993a7a922f5ac6ed9ca9fa582a05a8417c1a
