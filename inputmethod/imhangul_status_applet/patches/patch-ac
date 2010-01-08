@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2010/01/08 18:10:53 joerg Exp $
+
+--- src/imhangul_status.c.orig	2010-01-08 18:07:35.000000000 +0000
++++ src/imhangul_status.c
+@@ -28,6 +28,7 @@
+ #include <gtk/gtk.h>
+ #include <gdk/gdkx.h>
+ #include <gdk-pixbuf/gdk-pixbuf.h>
++#include <libgnome/gnome-program.h>
+ #include <libgnomeui/gnome-about.h>
+ #include <libgnomeui/gnome-window-icon.h>
+ #include <panel-applet.h>
