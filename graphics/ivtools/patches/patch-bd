@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1 2010/01/08 18:46:48 joerg Exp $
+
+--- src/Attribute/attrvalue.c.orig	2010-01-08 18:22:39.000000000 +0000
++++ src/Attribute/attrvalue.c
+@@ -283,7 +283,7 @@ boolean AttributeValue::boolean_val() {
+     case AttributeValue::StringType:
+ 	return (boolean) int_val()!=-1;
+     case AttributeValue::ObjectType:
+-	return (boolean) obj_val();
++	return (boolean) (uintptr_t)obj_val();
+     case AttributeValue::StreamType:
+ 	return stream_mode() != 0;
+     default:
