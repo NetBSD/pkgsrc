@@ -1,0 +1,28 @@
+$NetBSD: patch-af,v 1.1 2010/01/08 17:02:42 joerg Exp $
+
+--- src/gm_ntfs.h.orig	2010-01-08 16:59:01.000000000 +0000
++++ src/gm_ntfs.h
+@@ -29,18 +29,11 @@
+ /* 'NTFS' in little endian */
+ #define NTFS_SUPER_MAGIC	0x5346544E
+ 
+-#if defined(i386) || defined(__i386__) || defined(__alpha__)
+-
+-/* unsigned integral types */
+-#ifndef NTFS_INTEGRAL_TYPES
+-#define NTFS_INTEGRAL_TYPES
+-typedef unsigned char		ntfs_u8;
+-typedef unsigned short		ntfs_u16;
+-typedef unsigned int		ntfs_u32;
+-typedef s64_t			ntfs_u64;
+-#endif /* NTFS_INTEGRAL_TYPES */
+-#endif /* defined(i386) || defined(__i386__) || defined(__alpha__) */
+-
++#include <inttypes.h>
++typedef uint8_t ntfs_u8;
++typedef uint16_t ntfs_u16;
++typedef uint32_t ntfs_u32;
++typedef int64_t ntfs_u64;
+ 
+ /* Macros reading unsigned integers from a byte pointer */
+ /* these should work for all little endian machines */
