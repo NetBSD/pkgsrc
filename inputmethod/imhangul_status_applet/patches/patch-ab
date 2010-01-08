@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2010/01/08 18:10:53 joerg Exp $
+
+--- configure.orig	2003-10-28 02:30:52.000000000 +0000
++++ configure
+@@ -8798,13 +8798,13 @@ echo "${ECHO_T}yes" >&6
+ 
+             echo "$as_me:$LINENO: checking IMHANGUL_STATUS_CFLAGS" >&5
+ echo $ECHO_N "checking IMHANGUL_STATUS_CFLAGS... $ECHO_C" >&6
+-            IMHANGUL_STATUS_CFLAGS=`$PKG_CONFIG --cflags "libpanelapplet-2.0 >= $GNOME_PANEL_REQUIRED"`
++            IMHANGUL_STATUS_CFLAGS=`$PKG_CONFIG --cflags "libpanelapplet-2.0 >= $GNOME_PANEL_REQUIRED libgnomeui-2.0"`
+             echo "$as_me:$LINENO: result: $IMHANGUL_STATUS_CFLAGS" >&5
+ echo "${ECHO_T}$IMHANGUL_STATUS_CFLAGS" >&6
+ 
+             echo "$as_me:$LINENO: checking IMHANGUL_STATUS_LIBS" >&5
+ echo $ECHO_N "checking IMHANGUL_STATUS_LIBS... $ECHO_C" >&6
+-            IMHANGUL_STATUS_LIBS=`$PKG_CONFIG --libs "libpanelapplet-2.0 >= $GNOME_PANEL_REQUIRED"`
++            IMHANGUL_STATUS_LIBS=`$PKG_CONFIG --libs "libpanelapplet-2.0 >= $GNOME_PANEL_REQUIRED" libgnomeui-2.0`
+             echo "$as_me:$LINENO: result: $IMHANGUL_STATUS_LIBS" >&5
+ echo "${ECHO_T}$IMHANGUL_STATUS_LIBS" >&6
+         else
