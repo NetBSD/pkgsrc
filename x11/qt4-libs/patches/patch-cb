@@ -1,0 +1,12 @@
+$NetBSD: patch-cb,v 1.1 2010/01/08 09:56:09 drochner Exp $
+
+--- src/3rdparty/webkit/WebCore/xml/XMLHttpRequest.cpp.orig	2009-09-29 11:01:37.000000000 +0000
++++ src/3rdparty/webkit/WebCore/xml/XMLHttpRequest.cpp
+@@ -735,7 +735,6 @@ void XMLHttpRequest::makeCrossSiteAccess
+             }
+ 
+             preflightRequest.setHTTPHeaderField("Access-Control-Request-Headers", String::adopt(headerBuffer));
+-            preflightRequest.addHTTPHeaderFields(m_requestHeaders);
+         }
+ 
+         if (m_async) {
