@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/21 08:12:03 agc Exp $
---- configure.orig	2003-08-12 07:11:14.000000000 +0100
-+++ configure	2006-01-07 10:38:02.000000000 +0000
-@@ -58,11 +58,16 @@
+$NetBSD: patch-aa,v 1.2 2010/01/08 12:47:44 joerg Exp $
+
+--- configure.orig	2003-08-12 06:11:14.000000000 +0000
++++ configure
+@@ -45,7 +45,6 @@ return 0
+ 
+ }
+ 
+-findwish
+ 
+ echo
+ if [ -z "$WISH" ]; then
+@@ -58,11 +57,16 @@ echo
  cd `dirname $0`
  VTCL_HOME=`pwd`
  
