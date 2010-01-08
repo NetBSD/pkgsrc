@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/05/26 02:13:18 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/08 12:47:44 joerg Exp $
 
 DISTNAME=		vtcl-1.6.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vtcl/}
 
@@ -11,7 +11,7 @@ COMMENT=		Visual Tcl/Tk application development environment
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	pax wish:run
 HAS_CONFIGURE=		yes
 NO_BUILD=		yes
 
@@ -20,6 +20,7 @@ VTCLDOCDIR=		${PREFIX}/share/doc/vtcl
 VTCLEGDIR=		${PREFIX}/share/examples/vtcl
 
 CONFIGURE_ARGS+=	--libdir ${VTCLDIR}
+CONFIGURE_ENV+=		WISH=${TOOLS_PATH.wish}
 
 do-install:
 	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin
