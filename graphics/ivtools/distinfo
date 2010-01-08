@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2007/06/21 11:55:32 markd Exp $
+$NetBSD: distinfo,v 1.17 2010/01/08 18:46:48 joerg Exp $
 
 SHA1 (ivtools-1.2.4.tgz) = 9c9cbfeedd7692c001b458ce82958428082367a5
 RMD160 (ivtools-1.2.4.tgz) = 88cc853e7a31b56a1968021c86394084ba07a4f4
@@ -32,3 +32,4 @@ SHA1 (patch-az) = ec58b1583cf750031c848d0455250226f3d54d99
 SHA1 (patch-ba) = bcc98482672d9c1642dd108fbecec16627d43345
 SHA1 (patch-bb) = 8221a722579cc8921cd71e9ff8aedbf73a938e0b
 SHA1 (patch-bc) = be65c4c37689880cb66de15efd27ab2fa77d76d0
+SHA1 (patch-bd) = c4cd942bbabf48df7919b83de6a6cef85eb9d2b3
