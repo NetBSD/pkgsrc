@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/04/24 17:15:23 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/08 12:57:17 sno Exp $
 
 DISTNAME=		eBay-API-0.25
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net perl5 www
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TK/TKEEFER/}
 
