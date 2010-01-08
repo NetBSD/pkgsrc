@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/26 19:58:06 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/08 17:33:24 joerg Exp $
 #
 
 DISTNAME=	HandBrake-0.9.3
@@ -46,7 +46,7 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake perl intltool msgfmt pkg-config
+USE_TOOLS+=	gmake perl intltool msgfmt pkg-config bash
 USE_TOOLS+=	autoconf automake aclocal autoreconf m4
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
