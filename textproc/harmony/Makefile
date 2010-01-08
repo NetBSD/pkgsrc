@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/25 18:02:01 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/08 17:49:01 joerg Exp $
 #
 
 DISTNAME=	harmony-stable-${VERSION}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://alliance.seas.upenn.edu/~harmony/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alliance.seas.upenn.edu/~harmony/
 COMMENT=	Generic framework for reconciling disconnected updates to heterogeneous, replicated XML data
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
@@ -23,6 +25,8 @@ USE_TOOLS+=	gmake
 TEX_DEPMETHOD=	build
 TEST_TARGET=	test
 
+INSTALLATION_DIRS=	bin share/doc/harmony
+
 do-install:
 	for file in src/harmony \
 		examples/addresses/harmonize-addresses \
@@ -33,11 +37,10 @@ do-install:
 		examples/plist/harmonize-plist \
 		examples/relational/harmonize-relational \
 		examples/structuredtext/harmonize-structuredtext; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/$$file ${PREFIX}/bin; \
+		${INSTALL_PROGRAM} ${WRKSRC}/$$file ${DESTDIR}${PREFIX}/bin; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/harmony
-	${INSTALL_DATA} ${WRKSRC}/doc/manual.pdf ${PREFIX}/share/doc/harmony
-	${INSTALL_DATA} ${WRKSRC}/doc/main.pdf ${PREFIX}/share/doc/harmony
+	${INSTALL_DATA} ${WRKSRC}/doc/manual.pdf ${DESTDIR}${PREFIX}/share/doc/harmony
+	${INSTALL_DATA} ${WRKSRC}/doc/main.pdf ${DESTDIR}${PREFIX}/share/doc/harmony
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/pcre-ocaml/buildlink3.mk"
