@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/06/07 22:02:24 hasso Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/08 16:19:18 joerg Exp $
 #
 
 DISTNAME=	cdrkit-1.1.9
@@ -13,12 +13,12 @@ CONFLICTS=	cdrtools-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake perl:run
+USE_CMAKE=	yes
+USE_TOOLS+=	perl:run
 USE_LANGUAGES=	c c++
-MAKE_FLAGS+=	MANSUBDIR=man
+CMAKE_ARGS+=	-DMANSUBDIR=${PKGMANDIR}
 
 REPLACE_PERL=	3rd-party/dirsplit/dirsplit
 
-.include "../../devel/cmake/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
