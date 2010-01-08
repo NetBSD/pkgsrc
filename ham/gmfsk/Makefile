@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/08/26 19:57:53 sno Exp $
+# $NetBSD: Makefile,v 1.29 2010/01/08 16:56:31 joerg Exp $
 #
 
 DISTNAME=	gmfsk-0.6
@@ -18,6 +18,9 @@ GNU_CONFIGURE=	yes
 GCONF_SCHEMAS+=gmfsk.schemas
 
 CONFIGURE_ARGS+=--enable-hamlib
+
+.include "../../mk/bsd.prefs.mk"
+LDFLAGS+=	${LIBOSSAUDIO}
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
