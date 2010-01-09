@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.9 2010/01/09 00:04:08 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.10 2010/01/09 21:43:26 tron Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 1.9.1.
 # 
@@ -9,7 +9,7 @@
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config perl gmake autoconf213
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES+=		c99 c++
 
 BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
