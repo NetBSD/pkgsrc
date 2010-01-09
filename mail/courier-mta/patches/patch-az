@@ -1,0 +1,18 @@
+$NetBSD: patch-az,v 1.1 2010/01/09 22:16:20 heinz Exp $
+
+   wrong syntax prevents valid ACTION-IF-NOT-GIVEN, so "--without-ldapaliasd"
+   cannot work.
+   Reported upstream in http://sourceforge.net/mailarchive/message.php?msg_name=20100109205111.GB703%40silence.h.kh-22.de
+
+--- courier/configure.in.orig	2007-11-24 03:25:52.000000000 +0000
++++ courier/configure.in
+@@ -267,7 +267,8 @@ AC_CHECK_FUNC(ldap_search_st, HAVE_LDAP=
+ LIBS="$saveLIBS"
+ 
+ AC_ARG_WITH(ldapaliasd, [ --without-ldapaliasd ],
+-			ldapaliasd="$withval"; ldapaliasd="yes")
++			ldapaliasd="$withval",
++			ldapaliasd="yes")
+ 
+ if test "$ldapaliasd" = "no"
+ then
