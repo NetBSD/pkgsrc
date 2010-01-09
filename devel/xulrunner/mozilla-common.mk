@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.8 2009/12/04 09:18:14 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.9 2010/01/09 00:04:08 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 1.9.1.
 # 
@@ -65,6 +65,11 @@ create-rm-wrapper:
 # The configure test for __thread succeeds, but later we end up with:
 # dist/bin/libxul.so: undefined reference to `__tls_get_addr'
 CONFIGURE_ENV+=	ac_cv_thread_keyword=no
+.endif
+
+.if ${OPSYS} == "SunOS"
+# native libbz2.so hides BZ2_crc32Table
+PREFER.bzip2?=	pkgsrc
 .endif
 
 .if ${OPSYS} == "Linux"
