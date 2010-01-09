@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.28 2010/01/08 13:02:44 sno Exp $
+$NetBSD: CHANGES-2010,v 1.29 2010/01/09 15:52:27 wiz Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -32,3 +32,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xsnow to 1.42nb4 [is 2010-01-07]
 	Updated games/xpilot to 4.5.4nb3 [is 2010-01-07]
 	Updated net/p5-eBay-API to 0.25nb2 [sno 2010-01-08]
+	Updated devel/scmgit-base to 1.6.4nb1 [wiz 2010-01-09]
