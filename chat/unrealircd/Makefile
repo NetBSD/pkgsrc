@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/08/19 08:17:59 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2010/01/09 16:34:08 joerg Exp $
 
 DISTNAME=	Unreal3.2.7
 PKGNAME=	unrealircd-3.2.7
@@ -27,7 +27,7 @@ BUILDLINK_API_DEPENDS.libcares+=	libcares-${CARES_NEEDED}
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ENV+=		tre_version=${TRE_NEEDED:Q}
-CONFIGURE_ENV+=		TRELIBS='-L${PREFIX:Q}/lib -ltre'
+CONFIGURE_ENV+=		TRELIBS='-L${PREFIX:Q}/lib -ltre' TREINCDIR=-I${PREFIX}/include
 CONFIGURE_ENV+=		cares_version=${CARES_NEEDED:Q}
 CONFIGURE_ENV+=		CARESINCDIR='${PREFIX:Q}/include'
 CONFIGURE_ENV+=		CARESLIBDIR='-L${PREFIX:Q}/lib'
