@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/11/10 17:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/09 11:55:35 obache Exp $
 #
 
 DISTNAME=	kdrill5.11.6
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bolthole.com/kdrill/
 COMMENT=	Kanji quiz and japanese dictionary
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	edict-[0-9]*:../../misc/edict
 DEPENDS+=	kanjidic-[0-9]*:../../misc/kanjidic
 
@@ -18,18 +20,18 @@ USE_IMAKE=	yes
 USE_TOOLS+=	gzip
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kdrill
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/kdrill
 	cd ${WRKSRC}/makedic && \
 	${INSTALL_DATA} hira.edic hiraplus.edic kata.edic kataplus.edic \
-		fullkatahira.edic ${PREFIX}/share/kdrill
+		fullkatahira.edic ${DESTDIR}${PREFIX}/share/kdrill
 	for f in hira.edic hiraplus.edic kata.edic kataplus.edic \
 		fullkatahira.edic; do \
-		${GZIP_CMD} -9 ${PREFIX}/share/kdrill/$$f; \
+		${GZIP_CMD} -9 ${DESTDIR}${PREFIX}/share/kdrill/$$f; \
 	done
 	${GZIP_CMD} -c ${PREFIX}/share/edict/edict > \
-		${PREFIX}/share/kdrill/edict.gz
+		${DESTDIR}${PREFIX}/share/kdrill/edict.gz
 	${GZIP_CMD} -c ${PREFIX}/share/kanjidic/kanjidic > \
-		${PREFIX}/share/kdrill/kanjidic.gz
+		${DESTDIR}${PREFIX}/share/kdrill/kanjidic.gz
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
