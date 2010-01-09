@@ -1,0 +1,42 @@
+$NetBSD: patch-ac,v 1.1 2010/01/09 12:03:04 obache Exp $
+
+Avoid to conflict with getline(3) defined in IEEE Std 1003.1-2008.
+
+--- readfile.c.orig	2001-08-30 22:27:37.000000000 +0000
++++ readfile.c
+@@ -31,7 +31,7 @@ int numberofkanji=0, highestkanji=0, low
+ static char *dictname=NULL;
+ static char *edictname=NULL;
+ 
+-/* getline:
++/* get_line:
+  *	reads a line (from dictionary).
+  *	Deals with 8-bit char reads (or attempts to)
+  *	Also attempts to deal with the problem of variable line length.
+@@ -50,7 +50,7 @@ static char *edictname=NULL;
+  *	if we have just started reading a stream;
+  */
+ 
+-int getline(FILE *fp,unsigned char *s)
++int get_line(FILE *fp,unsigned char *s)
+ {
+ 	char * val;
+ 	char *endparse;
+@@ -451,7 +451,7 @@ void readedict()
+ 		lowestkanji = nextindex;
+ 	}
+ 
+-	while(getline(fp, instring) != 0)
++	while(get_line(fp, instring) != 0)
+ 	{
+ 		int instrlen;
+ 
+@@ -653,7 +653,7 @@ void readstructs(){
+ 		exit(-1);
+ 	}
+ 
+-	while (getline(fp,instring) != 0) {
++	while (get_line(fp,instring) != 0) {
+ 		int Kanji;
+ 		int freq,grade,N,U,H,Q,SKIP;
+ 		unsigned char *parse;
