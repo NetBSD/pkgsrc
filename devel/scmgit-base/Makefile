@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2009/01/09 13:42:15 tonnerre Exp $
+# $NetBSD: Makefile,v 1.17 2010/01/09 15:52:19 wiz Exp $
 #
 
 .include "../../devel/scmgit/Makefile.common"
 
 PKGNAME=		scmgit-base-${GIT_VERSION}
+PKGREVISION=		1
 COMMENT=		GIT Tree History Storage Tool (base package)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -78,6 +79,15 @@ SUBST_FILES.fix-paths=	templates/hooks--post-receive.sample
 SUBST_MESSAGE.fix-paths=Fixing hard-coded pathnames
 SUBST_STAGE.fix-paths=	pre-build
 SUBST_VARS.fix-paths=	PREFIX
+
+SUBST_CLASSES+=		fix-cd-P
+SUBST_FILES.fix-cd-P=	git-sh-setup.sh
+SUBST_FILES.fix-cd-P+=	t/t0000-basic.sh
+SUBST_FILES.fix-cd-P+=	t/t5522-pull-symlink.sh
+SUBST_FILES.fix-cd-P+=	t/test-lib.sh
+SUBST_MESSAGE.fix-cd-P=	Fixing cd arguments.
+SUBST_STAGE.fix-cd-P=	pre-build
+SUBST_SED.fix-cd-P=	-e "s/cd -P/cd/g"
 
 #.include "../../editors/emacs/modules.mk" # XXX TODO (see patch-ad)
 
