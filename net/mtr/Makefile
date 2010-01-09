@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2009/09/12 22:07:56 tron Exp $
+# $NetBSD: Makefile,v 1.57 2010/01/09 19:44:05 tron Exp $
 
 DISTNAME=	mtr-0.75
 CATEGORIES=	net
@@ -8,6 +8,7 @@ PKGREVISION=	2
 MAINTAINER=	sommerfeld@NetBSD.org
 HOMEPAGE=	http://www.bitwizard.nl/mtr/
 COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
