@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/12/17 00:48:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/01/09 15:33:07 joerg Exp $
 include/Evas.h
-lib/evas/modules/engines/software_generic/${LOWER_OPSYS}-${MACHINE_ARCH}-ver-svn-05/module.la
+lib/evas/modules/engines/software_generic/${MODULE_ARCH}/module.la
 lib/libevas.la
 lib/pkgconfig/evas.pc
 @pkgdir lib/evas/modules/savers
