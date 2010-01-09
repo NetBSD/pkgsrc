@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/01/09 12:03:04 obache Exp $
+
+Avoid to conflict with getline(3) defined in IEEE Std 1003.1-2008.
+
+--- externs.h.orig	2001-08-30 22:27:01.000000000 +0000
++++ externs.h
+@@ -30,7 +30,7 @@ extern void SetWidgetHexval(Widget,int);
+ 
+ /* other "usefull" general functions */
+ extern int xtoi(char *);
+-extern int getline(FILE *, unsigned char *);
++extern int get_line(FILE *, unsigned char *);
+ extern void setstatus(char *);
+ 
+ extern int FindIndex(char *);
