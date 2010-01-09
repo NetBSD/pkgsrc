@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/01/04 16:27:48 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2010/01/09 22:20:31 heinz Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -90,6 +90,10 @@ SUBST_STAGE.paths=	post-patch
 
 REPLACE_PERL+=	courier/webadmin/*.pl courier/webadmin/*.pl.in webadmin/*.pl
 
+SPECIAL_PERMS+=	${DATADIR}/filterctl ${COURIER_USER} ${COURIER_GROUP} 0500
+SPECIAL_PERMS+=	${PREFIX}/sbin/courierfilter  ${COURIER_USER} \
+		${COURIER_GROUP} 0500
+
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../security/courier-authlib/buildlink3.mk"
 
@@ -101,12 +105,8 @@ post-build:
 
 post-install:
 	cd ${WRKSRC}/courier && \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-permissions
-	${CHOWN} ${COURIER_USER}:${COURIER_GROUP} \
-		${DESTDIR}${DATADIR}/filterctl \
-		${DESTDIR}${PREFIX}/sbin/courierfilter
-	${CHMOD} 0500 ${DESTDIR}${DATADIR}/filterctl \
-		${DESTDIR}${PREFIX}/sbin/courierfilter
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
+		DESTDIR=${DESTDIR} install-permissions
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/locallowercase \
 		${DESTDIR}${EGDIR}/locallowercase
