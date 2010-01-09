@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2010/01/09 16:55:10 joerg Exp $
+
+--- configure.orig	2010-01-09 16:43:54.000000000 +0000
++++ configure
+@@ -4197,8 +4197,7 @@ _ACEOF
+ fi
+ 
+ 
+-pkg_modules="libgnomeui-2.0"
+-pkg_modules="libpanelapplet-2.0"
++pkg_modules="libgnomeui-2.0 libpanelapplet-2.0"
+ 
+   succeeded=no
+ 
