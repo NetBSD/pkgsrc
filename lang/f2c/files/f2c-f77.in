@@ -26,6 +26,8 @@ PATH=$PATH:/bin:/usr/bin:@PREFIX@/bin
 #
 #	Options:
 #
+#		-arch		Compile for the specified architecture (Darwin)
+#
 #		-c		Do not call linker, leave relocatables in *.o.
 #
 #		-C		Check that subscripts are in bounds.
@@ -290,6 +292,10 @@ do
 	-current_version)
 		CFLAGS="$CFLAGS $1 $(shell_quote "$2")"
 		shift 2;
+		;;
+
+	-arch)	CFLAGS="$CFLAGS -arch $2"
+		shift 2
 		;;
 
 	-*)	CFLAGS="$CFLAGS $(shell_quote "$1")"
