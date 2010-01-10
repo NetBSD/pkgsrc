@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2009/08/11 14:26:58 taca Exp $
+$NetBSD: distinfo,v 1.41 2010/01/10 15:33:28 taca Exp $
 
 SHA1 (ruby-1.8.7-p174.tar.bz2) = 9e84b49ad545ad54b8e7dc3c227eaaefeb1041aa
 RMD160 (ruby-1.8.7-p174.tar.bz2) = f854d456003af1e31d50330c88c3cb152c434249
@@ -21,3 +21,7 @@ SHA1 (patch-ds) = 5344a63980b88d83e279cee50398312b90d5c2da
 SHA1 (patch-dt) = 3dd34a91cbffcb8e432d926c9490372f238e7f2e
 SHA1 (patch-du) = 55f021e2eb780743e35ecf70141f7738b04f4b62
 SHA1 (patch-dv) = 25e779444c16717c7aaf800ebf68988878ed636f
+SHA1 (patch-dw) = 4937ee0f2b79cfc93f378b415d1a81cbf997b8d4
+SHA1 (patch-dx) = d25267d700f997b951a65c016f45347a8b1a1517
+SHA1 (patch-dy) = 6c2f978b1803d2939377a4904cfc71e71a3b5fea
+SHA1 (patch-dz) = 52af1fbf17b6e6df6112d08c291215d54a25af67
