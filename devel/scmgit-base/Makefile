@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/01/09 15:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/10 07:53:10 wiz Exp $
 #
 
 .include "../../devel/scmgit/Makefile.common"
@@ -80,6 +80,9 @@ SUBST_MESSAGE.fix-paths=Fixing hard-coded pathnames
 SUBST_STAGE.fix-paths=	pre-build
 SUBST_VARS.fix-paths=	PREFIX
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "HPUX" || ${OPSYS} == "QNX" || ${OPSYS} == "UnixWare"
 SUBST_CLASSES+=		fix-cd-P
 SUBST_FILES.fix-cd-P=	git-sh-setup.sh
 SUBST_FILES.fix-cd-P+=	t/t0000-basic.sh
@@ -88,6 +91,7 @@ SUBST_FILES.fix-cd-P+=	t/test-lib.sh
 SUBST_MESSAGE.fix-cd-P=	Fixing cd arguments.
 SUBST_STAGE.fix-cd-P=	pre-build
 SUBST_SED.fix-cd-P=	-e "s/cd -P/cd/g"
+.endif
 
 #.include "../../editors/emacs/modules.mk" # XXX TODO (see patch-ad)
 
