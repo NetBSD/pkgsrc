@@ -1,0 +1,21 @@
+$NetBSD: patch-dx,v 1.1 2010/01/10 15:33:28 taca Exp $
+
+webrick security fix.
+
+http://www.ruby-lang.org/en/news/2010/01/10/webrick-escape-sequence-injection/
+
+--- lib/webrick/httprequest.rb.orig	2009-02-14 19:17:52.000000000 +0000
++++ lib/webrick/httprequest.rb
+@@ -242,11 +242,7 @@ module WEBrick
+           @raw_header << line
+         end
+       end
+-      begin
+-        @header = HTTPUtils::parse_header(@raw_header)
+-      rescue => ex
+-        raise  HTTPStatus::BadRequest, ex.message
+-      end
++      @header = HTTPUtils::parse_header(@raw_header.join)
+     end
+ 
+     def parse_uri(str, scheme="http")
