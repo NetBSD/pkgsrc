@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/14 18:13:48 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/10 07:58:05 obache Exp $
 #
 
 DISTNAME=	acpica-unix-${ACPICA_UTILS_VERSION}
@@ -28,6 +28,7 @@ LICENSE=	gnu-gpl-v2 # OR intel-acpica-license
 
 # Don't have sem_timedwait()
 CFLAGS.NetBSD+=	-DACPI_USE_ALTERNATE_TIMEOUT
+CFLAGS.DragonFly+=	-DACPI_USE_ALTERNATE_TIMEOUT
 
 do-build:
 	cd ${WRKSRC}/tools/acpiexec && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
