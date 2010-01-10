@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.21 2009/12/24 03:13:07 snj Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/01/10 16:20:10 snj Exp $
 bin/gdm-control
 bin/gnome-panel-control
+bin/obxprop
 bin/openbox
 bin/openbox-gnome-session
 bin/openbox-kde-session
@@ -25,6 +26,7 @@ man/man1/openbox-gnome-session.1
 man/man1/openbox-kde-session.1
 man/man1/openbox-session.1
 man/man1/openbox.1
+share/applications/openbox.desktop
 share/doc/openbox/AUTHORS
 share/doc/openbox/CHANGELOG
 share/doc/openbox/COMPLIANCE
