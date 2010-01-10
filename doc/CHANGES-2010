@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.31 2010/01/10 15:34:54 taca Exp $
+$NetBSD: CHANGES-2010,v 1.32 2010/01/10 16:21:05 snj Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -35,3 +35,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/scmgit-base to 1.6.4nb1 [wiz 2010-01-09]
 	Updated archivers/lha to 114.9nb4 [dholland 2010-01-09]
 	Updated lang/ruby18-base to 1.8.7.174nb3 [taca 2010-01-10]
+	Updated wm/openbox to 3.4.10 [snj 2010-01-10]
