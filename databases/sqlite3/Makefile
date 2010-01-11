@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2009/12/16 19:25:38 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2010/01/11 09:18:39 abs Exp $
 
 DISTNAME=	sqlite-amalgamation-3.6.21
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/sqlite-amalgamation/sqlite3/}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
@@ -21,7 +22,7 @@ WRKSRC=			${WRKDIR}/sqlite-${PKGVERSION_NOREV}
 PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-CONFIGURE_ARGS+=	--with-readline-inc=
+CONFIGURE_ARGS+=	--with-readline-inc= --enable-threadsafe
 
 # Uses dlopen and friends but doesn't use -ldl on Linux.
 # See http://www.sqlite.org/cvstrac/tktview?tn=3555
