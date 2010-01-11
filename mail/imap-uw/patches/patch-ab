@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.23 2008/11/06 15:27:00 tron Exp $
+$NetBSD: patch-ab,v 1.24 2010/01/11 09:26:02 tron Exp $
 
 --- src/osdep/unix/Makefile.orig	2008-06-04 19:18:34.000000000 +0100
-+++ src/osdep/unix/Makefile	2008-11-06 13:57:35.000000000 +0000
++++ src/osdep/unix/Makefile	2010-01-11 09:17:00.000000000 +0000
 @@ -48,7 +48,7 @@
  # Try to have some consistency in GCC builds.  We want optimization, but we
  # also want to be able to debug.
@@ -20,15 +20,6 @@ $NetBSD: patch-ab,v 1.23 2008/11/06 15:27:00 tron Exp $
  BINARIES=osdep.o mail.o misc.o newsrc.o smanager.o utf8.o utf8aux.o siglocal.o \
   dummy.o pseudo.o netmsg.o flstring.o fdstring.o \
   rfc822.o nntp.o smtp.o imap4r1.o pop3.o \
-@@ -430,7 +430,7 @@
- 	 RSHPATH=/usr/bin/rsh \
- 	 BASECFLAGS="$(GCCCFLAGS)" \
- 	 BASELDFLAGS="-lsocket -lnsl -lgen" \
--	 RANLIB=true CC=gcc
-+	 RANLIB=true
- 
- gsu:	# GCC SUN-OS
- 	$(BUILD) `$(CAT) SPECIALS` OS=sun \
 @@ -529,7 +529,7 @@
  	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
  	 CRXTYPE=nfs \
