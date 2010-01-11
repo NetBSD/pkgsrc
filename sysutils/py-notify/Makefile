@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2009/08/26 19:57:05 sno Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/11 05:34:12 obache Exp $
 #
 
 DISTNAME=	notify-python-0.1.1
 PKGNAME=	${PYPKGPREFIX}-notify-0.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES= \
  http://www.galago-project.org/files/releases/source/notify-python/
@@ -17,11 +17,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 
-PKGCONFIG_OVERRIDE+=	notify-python-0.1.1/notify-python.pc.in
+PKGCONFIG_OVERRIDE+=	notify-python.pc.in
 PYTHON_VERSIONS_ACCEPTED=	25
 PY_PATCHPLIST=	yes
+
+# Missing function attach_status_icon
+# http://trac.galago-project.org/ticket/121
+post-extract:
+	${RM} -f ${WRKSRC}/src/pynotify.c
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
