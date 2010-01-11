@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.30 2009/10/15 12:36:57 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.31 2010/01/11 17:23:10 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -1088,7 +1088,7 @@ ftp_cached_connect(struct url *url, struct url *purl, const char *flags)
 		return (NULL);
 	doc = strdup(url->doc);
 	if (doc != NULL) {
-		if (cached_connection)
+		if (cached_connection && !cached_connection->is_active)
 			ftp_disconnect(cached_connection);
 		cached_connection = fetch_ref(conn);
 		memcpy(&cached_host, url, sizeof(*url));
