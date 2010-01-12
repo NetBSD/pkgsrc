@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2009/09/07 19:02:14 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/12 01:34:18 obache Exp $
 #
 
 DISTNAME=	urlgrabber-3.1.0
 PKGREVISION=	1
 CATEGORIES=	www devel
-MASTER_SITES=	http://linux.duke.edu/projects/urlgrabber/download/
+MASTER_SITES=	# http://linux.duke.edu/sourcecode/urlgrabber/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://linux.duke.edu/projects/urlgrabber/download/
+HOMEPAGE=	http://linux.duke.edu/urlgrabber/
 COMMENT=	Python package that drastically simplifies the fetching of files
 
 PKG_DESTDIR_SUPPORT=		user-destdir
