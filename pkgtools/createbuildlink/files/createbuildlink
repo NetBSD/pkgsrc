@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.34 2009/03/20 19:25:13 joerg Exp $
+#	$NetBSD: createbuildlink,v 1.35 2010/01/13 15:27:52 wiz Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.34 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.35 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -174,7 +174,7 @@ grep -l '^.include.*\.\.\/.*\/.*/buildlink3.mk\"' $makefile $commons \
 EOF
 for i in $makefile $commons ; do
 	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink3.mk\"' $i |
-		egrep -v '/devel/pkg-config/|/textproc/intltool/' | sed 's,^,#,'
+		egrep -v '/devel/pkg-config/|/textproc/intltool/|/graphics/hicolor-icon-theme/' | sed 's,^,#,'
 done
 
 sed -f $sedrules <<EOF
