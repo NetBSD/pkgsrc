@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.35 2010/01/11 17:33:30 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.36 2010/01/13 15:28:16 wiz Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -39,3 +39,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/imake to 1.0.2nb3 [tron 2010-01-10]
 	Updated sysutils/py-notify to 0.1.1nb3 [obache 2010-01-11]
 	Updated net/libfetch to 2.27 [joerg 2010-01-11]
+	Updated pkgtools/createbuildlink to 3.16 [wiz 2010-01-13]
