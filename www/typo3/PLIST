@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/12/02 15:51:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/01/14 14:59:26 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -653,6 +653,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/c_wiz/images_only.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/c_wiz/login_form.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/c_wiz/mailform.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/c_wiz/multimedia.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/c_wiz/regular_header.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/c_wiz/regular_text.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/c_wiz/searchform.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/c_wiz/sitemap.gif
