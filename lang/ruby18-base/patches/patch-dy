@@ -1,4 +1,4 @@
-$NetBSD: patch-dy,v 1.1 2010/01/10 15:33:28 taca Exp $
+$NetBSD: patch-dy,v 1.2 2010/01/14 15:07:28 taca Exp $
 
 webrick security fix.
 
@@ -6,14 +6,15 @@ http://www.ruby-lang.org/en/news/2010/01/10/webrick-escape-sequence-injection/
 
 --- lib/webrick/httpstatus.rb.orig	2007-02-12 23:01:19.000000000 +0000
 +++ lib/webrick/httpstatus.rb
-@@ -12,7 +12,17 @@ module WEBrick
+@@ -12,7 +12,18 @@ module WEBrick
  
    module HTTPStatus
  
 -    class Status      < StandardError; end
-+    class Status      < StandardError
-+      def initialize(message=self.class, *rest)
-+        super(AccessLog.escape(message), *rest)
++    class Status < StandardError
++      def initialize(*args)
++        args[0] = AccessLog.escape(args[0]) unless args.empty?
++        super(*args)
 +      end
 +      class << self
 +        attr_reader :code, :reason_phrase
@@ -25,7 +26,7 @@ http://www.ruby-lang.org/en/news/2010/01/10/webrick-escape-sequence-injection/
      class Info        < Status; end
      class Success     < Status; end
      class Redirect    < Status; end
-@@ -68,6 +78,7 @@ module WEBrick
+@@ -68,6 +79,7 @@ module WEBrick
      CodeToError = {}
  
      StatusMessage.each{|code, message|
@@ -33,7 +34,7 @@ http://www.ruby-lang.org/en/news/2010/01/10/webrick-escape-sequence-injection/
        var_name = message.gsub(/[ \-]/,'_').upcase
        err_name = message.gsub(/[ \-]/,'')
  
-@@ -79,18 +90,12 @@ module WEBrick
+@@ -79,18 +91,12 @@ module WEBrick
        when 500...600; parent = ServerError
        end
  
