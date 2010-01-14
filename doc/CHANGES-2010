@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.37 2010/01/14 15:00:06 taca Exp $
+$NetBSD: CHANGES-2010,v 1.38 2010/01/14 15:08:17 taca Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -41,3 +41,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/libfetch to 2.27 [joerg 2010-01-11]
 	Updated pkgtools/createbuildlink to 3.16 [wiz 2010-01-13]
 	Updated www/typo3 to 4.3.1 [taca 2010-01-14]
+	Updated lang/ruby18-base to 1.8.7.174nb4 [taca 2010-01-14]
