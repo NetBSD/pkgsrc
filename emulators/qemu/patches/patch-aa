@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.5 2010/01/14 22:32:33 bouyer Exp $
+
+--- net.c.orig	2010-01-14 11:28:56.000000000 +0100
++++ net.c	2010-01-14 11:33:46.000000000 +0100
+@@ -43,6 +43,7 @@
+ #include <netinet/in.h>
+ #include <net/if.h>
+ #ifdef __NetBSD__
++#include <net/if.h>
+ #include <net/if_tap.h>
+ #endif
+ #ifdef __linux__
+@@ -1462,16 +1463,31 @@
+     int fd;
+     char *dev;
+     struct stat s;
++#ifdef TAPGIFNAME
++    struct ifreq ifr;
++#endif
+ 
+     TFR(fd = open("/dev/tap", O_RDWR));
+     if (fd < 0) {
+-        fprintf(stderr, "warning: could not open /dev/tap: no virtual network emulation\n");
++        fprintf(stderr, "warning: could not open /dev/tap: no virtual network emulation: %s\n", strerror(errno));
+         return -1;
+     }
+ 
+-    fstat(fd, &s);
++#ifdef TAPGIFNAME
++    if (ioctl (fd, TAPGIFNAME, (void*)&ifr) < 0) {
++       fprintf(stderr, "warning: could not open get tap name: %s\n",
++           strerror(errno));
++       return -1;
++    }
++    pstrcpy(ifname, ifname_size, ifr.ifr_name);
++#else
++    if (fstat(fd, &s) < 0) {
++        fprintf(stderr, "warning: could not stat /dev/tap: no virtual network emulation: %s\n", strerror(errno));
++        return -1;
++    }
+     dev = devname(s.st_rdev, S_IFCHR);
+     pstrcpy(ifname, ifname_size, dev);
++#endif
+ 
+     fcntl(fd, F_SETFL, O_NONBLOCK);
+     return fd;
