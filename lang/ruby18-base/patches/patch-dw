@@ -1,4 +1,4 @@
-$NetBSD: patch-dw,v 1.1 2010/01/10 15:33:28 taca Exp $
+$NetBSD: patch-dw,v 1.2 2010/01/14 15:07:28 taca Exp $
 
 webrick security fix.
 
@@ -11,7 +11,7 @@ http://www.ruby-lang.org/en/news/2010/01/10/webrick-escape-sequence-injection/
             raise AccessLogError,
               "parameter is required for \"#{spec}\"" unless param
 -           params[spec][param] || "-"
-+           param = params[spec][param] ? escape(param) : "-"
++           (param = params[spec][param]) ? escape(param) : "-"
           when ?t
             params[spec].strftime(param || CLF_TIME_FORMAT)
           when ?%
