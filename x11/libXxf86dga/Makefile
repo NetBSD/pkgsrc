@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/05/24 21:45:16 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/15 18:26:41 tnn Exp $
 #
 
-DISTNAME=		libXxf86dga-1.0.2
+DISTNAME=		libXxf86dga-1.1.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -25,8 +25,6 @@ PKGCONFIG_OVERRIDE+=	xxf86dga.pc.in
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 .endif
-
-BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.3
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
