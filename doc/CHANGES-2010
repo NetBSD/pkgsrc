@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.41 2010/01/15 10:37:38 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.42 2010/01/15 14:05:44 asau Exp $
 
 [PLEASE NOTE - NO INFRASTRUCTURE CHANGES OR NEW PACKAGES, PLEASE,
 PKGSRC IS BEING READIED FOR THE PKGSRC-2009Q4 BRANCH - agc]
@@ -47,3 +47,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/scmgit-base to 1.6.6 [wiz 2010-01-15]
 	Updated devel/scmgit-docs to 1.6.6 [wiz 2010-01-15]
 	Updated devel/scmgit to 1.6.6 [wiz 2010-01-15]
+	Updated math/mpfr to 2.4.2.3 [asau 2010-01-15]
