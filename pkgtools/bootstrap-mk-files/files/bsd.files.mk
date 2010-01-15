@@ -1,7 +1,7 @@
-#	$NetBSD: bsd.files.mk,v 1.1.1.1 2006/07/14 23:13:00 jlam Exp $
+#	$NetBSD: bsd.files.mk,v 1.2 2010/01/15 22:00:36 abs Exp $
 
-# This file can be included multiple times.  It clears the definition of
-# FILES at the end so that this is possible.
+.if !defined(_BSD_FILES_MK_)
+_BSD_FILES_MK_=1
 
 .PHONY:		filesinstall
 realinstall:	filesinstall
@@ -37,4 +37,4 @@ ${DESTDIR}${FILESDIR_${F}:U${FILESDIR}}/${FILESNAME_${F}:U${FILESNAME:U${F:T}}}:
 filesinstall::
 .endif
 
-FILES:=
+.endif	# !defined(_BSD_FILES_MK_)
