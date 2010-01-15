@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/03 19:54:04 joerg Exp $
+$NetBSD: distinfo,v 1.2 2010/01/15 17:51:32 tnn Exp $
 
-SHA1 (fontcacheproto-0.1.2.tar.bz2) = 6a531ef505ba2f7c1aa884bb4efdac3e32dfd99b
-RMD160 (fontcacheproto-0.1.2.tar.bz2) = 8873d1dd45a39c42e44d7f3f7e6bd779ee40462b
-Size (fontcacheproto-0.1.2.tar.bz2) = 38233 bytes
+SHA1 (fontcacheproto-0.1.3.tar.bz2) = 07f6ab3e1e1efe71c51f50e95851d93d2a1de773
+RMD160 (fontcacheproto-0.1.3.tar.bz2) = 4d3689e4616957966c8b51e24cd4ae6b7fb08c18
+Size (fontcacheproto-0.1.3.tar.bz2) = 84470 bytes
