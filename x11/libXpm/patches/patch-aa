@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2008/02/24 02:26:33 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/15 18:39:00 tnn Exp $
 
---- configure.orig	2007-08-22 16:23:54.000000000 -0400
+--- configure.orig	2009-10-09 17:32:40.000000000 +0000
 +++ configure
-@@ -20621,6 +20621,10 @@ else
- echo "${ECHO_T}$LOCALEDIR" >&6; }
+@@ -22115,6 +22115,10 @@ else
+ $as_echo "$LOCALEDIR" >&6; }
  fi
  
 +# For pkgsrc, always set USE_GETTEXT=yes because it is used by [cs]xpm.
