@@ -1,24 +1,30 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/01/15 18:33:45 tnn Exp $
 include/X11/extensions/Xvlib.h
 lib/libXv.la
 lib/pkgconfig/xv.pc
 man/man3/Xv.3
+man/man3/XvCreateImage.3
 man/man3/XvFreeAdaptorInfo.3
 man/man3/XvFreeEncodingInfo.3
 man/man3/XvGetPortAttribute.3
 man/man3/XvGetStill.3
 man/man3/XvGetVideo.3
 man/man3/XvGrabPort.3
+man/man3/XvListImageFormats.3
 man/man3/XvPortNotify.3
+man/man3/XvPutImage.3
 man/man3/XvPutStill.3
 man/man3/XvPutVideo.3
 man/man3/XvQueryAdaptors.3
 man/man3/XvQueryBestSize.3
 man/man3/XvQueryEncodings.3
 man/man3/XvQueryExtension.3
+man/man3/XvQueryPortAttributes.3
 man/man3/XvSelectPortNotify.3
 man/man3/XvSelectVideoNotify.3
 man/man3/XvSetPortAttribute.3
+man/man3/XvShmCreateImage.3
+man/man3/XvShmPutImage.3
 man/man3/XvStopVideo.3
 man/man3/XvUngrabPort.3
 man/man3/XvVideoNotify.3
