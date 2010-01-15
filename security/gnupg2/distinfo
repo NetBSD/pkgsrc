@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.15 2009/12/18 17:49:51 drochner Exp $
+$NetBSD: distinfo,v 1.16 2010/01/15 20:15:07 drochner Exp $
 
-SHA1 (gnupg-2.0.13.tar.bz2) = 2ff42aff14cdddafc291d44ac1968af5f09a9d4d
-RMD160 (gnupg-2.0.13.tar.bz2) = a2291f4d5923b50bca980b726e2fe0c31c2589a9
-Size (gnupg-2.0.13.tar.bz2) = 3946616 bytes
-SHA1 (gnupg-2.0.4-idea.patch) = 0f56a3d656d8ec3227c1b597bee010b8dbe1d7cd
-RMD160 (gnupg-2.0.4-idea.patch) = df2f628ee03880ff5b0916185cffe0b28316d08b
-Size (gnupg-2.0.4-idea.patch) = 906 bytes
+SHA1 (gnupg-2.0.14.tar.bz2) = cc5e4637f37f5bc82b00c73fc094ddadb7401821
+RMD160 (gnupg-2.0.14.tar.bz2) = 3e5ecf0108b65f7d2ecfd6f61b81e04e526ba52f
+Size (gnupg-2.0.14.tar.bz2) = 3982080 bytes
 SHA1 (libassuan-1.0.5.tar.bz2) = f6c36e9d99736883a8ce5b80b0a51d854cbbbc70
 RMD160 (libassuan-1.0.5.tar.bz2) = 7c4a75c71a3117cf140ea66ca89765349f39218e
 Size (libassuan-1.0.5.tar.bz2) = 297786 bytes
