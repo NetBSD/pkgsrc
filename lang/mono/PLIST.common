@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2009/11/25 10:13:06 kefren Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2010/01/15 19:41:23 drochner Exp $
 bin/al
 bin/al1
 bin/al2
@@ -412,6 +412,8 @@ lib/mono/2.0/ilasm.exe
 lib/mono/2.0/ilasm.exe.mdb
 lib/mono/2.0/installutil.exe
 lib/mono/2.0/installutil.exe.mdb
+lib/mono/2.0/lc.exe
+lib/mono/2.0/lc.exe.mdb
 lib/mono/2.0/mconfig.exe
 lib/mono/2.0/mconfig.exe.mdb
 lib/mono/2.0/mdoc.exe
@@ -798,6 +800,7 @@ lib/mono/gac/nunit.mocks/2.4.8.0__96d09a1eb7f44a77/nunit.mocks.dll
 lib/mono/gac/nunit.mocks/2.4.8.0__96d09a1eb7f44a77/nunit.mocks.dll.mdb
 lib/mono/gac/nunit.util/2.4.8.0__96d09a1eb7f44a77/nunit.util.dll
 lib/mono/gac/nunit.util/2.4.8.0__96d09a1eb7f44a77/nunit.util.dll.mdb
+lib/mono/xbuild/Microsoft/VisualStudio/v9.0/WebApplications/Microsoft.WebApplication.targets
 lib/mono/monodoc/monodoc.dll
 lib/monodoc/monodoc.xml
 lib/monodoc/sources/Mono.source
@@ -836,6 +839,7 @@ lib/pkgconfig/monodoc.pc
 lib/pkgconfig/smcs.pc
 lib/pkgconfig/system.web.extensions.design_1.0.pc
 lib/pkgconfig/system.web.extensions_1.0.pc
+lib/pkgconfig/system.web.mvc.pc
 lib/pkgconfig/wcf.pc
 man/man1/al.1
 man/man1/cert2spc.1
@@ -850,6 +854,7 @@ man/man1/genxs.1
 man/man1/httpcfg.1
 man/man1/ilasm.1
 man/man1/jay.1
+man/man1/lc.1
 man/man1/macpack.1
 man/man1/makecert.1
 man/man1/mconfig.1
@@ -888,6 +893,7 @@ man/man1/sn.1
 man/man1/soapsuds.1
 man/man1/sqlsharp.1
 man/man1/wsdl.1
+man/man1/xbuild.1
 man/man1/xsd.1
 man/man5/mdoc.5
 man/man5/mono-config.5
