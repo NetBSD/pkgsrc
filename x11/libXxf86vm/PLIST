@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/14 15:06:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/15 18:23:46 tnn Exp $
+include/X11/extensions/xf86vmode.h
 lib/libXxf86vm.la
 lib/pkgconfig/xxf86vm.pc
 man/man3/XF86VM.3
