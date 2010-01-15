@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/14 14:53:41 joerg Exp $
+$NetBSD: distinfo,v 1.2 2010/01/15 18:18:05 tnn Exp $
 
-SHA1 (xf86miscproto-0.9.2.tar.bz2) = bfaf893bb97085c79ef84e9911c97d11b2a4fdbe
-RMD160 (xf86miscproto-0.9.2.tar.bz2) = 1c780b74faf37105cc57030cf95d79e900a98979
-Size (xf86miscproto-0.9.2.tar.bz2) = 38464 bytes
+SHA1 (xf86miscproto-0.9.3.tar.bz2) = 52c54ed17e55f26b26654ff16d61da97f9fd36bc
+RMD160 (xf86miscproto-0.9.3.tar.bz2) = 644b08dae757338464273be818e28414b99aeba5
+Size (xf86miscproto-0.9.3.tar.bz2) = 84950 bytes
