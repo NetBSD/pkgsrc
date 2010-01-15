@@ -1,4 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2009/02/15 20:12:18 dholland Exp $
+$NetBSD: patch-ab,v 1.8 2010/01/15 23:47:14 dholland Exp $
+
+- Include fixes for modern Unix.
+- Don't try to use /usr/tmp.
+- Time handling fixes for NetBSD with 64-bit time_t.
+
+Upstream: as far as I know not actively maintained upstream.
 
 --- unixos.c.orig	2003-07-21 16:54:05.000000000 -0400
 +++ unixos.c	2009-02-15 14:56:48.000000000 -0500
