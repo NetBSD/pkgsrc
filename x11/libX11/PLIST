@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:24:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/01/15 18:55:11 tnn Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
@@ -221,6 +221,7 @@ man/man3/XFree.3
 man/man3/XFreeColormap.3
 man/man3/XFreeColors.3
 man/man3/XFreeCursor.3
+man/man3/XFreeEventData.3
 man/man3/XFreeExtensionList.3
 man/man3/XFreeFont.3
 man/man3/XFreeFontInfo.3
@@ -233,12 +234,14 @@ man/man3/XFreePixmap.3
 man/man3/XFreeStringList.3
 man/man3/XGCValues.3
 man/man3/XGContextFromGC.3
+man/man3/XGenericEventCookie.3
 man/man3/XGetAtomName.3
 man/man3/XGetAtomNames.3
 man/man3/XGetClassHint.3
 man/man3/XGetCommand.3
 man/man3/XGetErrorDatabaseText.3
 man/man3/XGetErrorText.3
+man/man3/XGetEventData.3
 man/man3/XGetFontPath.3
 man/man3/XGetFontProperty.3
 man/man3/XGetGCValues.3
@@ -826,6 +829,7 @@ man/man3/XwcTextExtents.3
 man/man3/XwcTextListToTextProperty.3
 man/man3/XwcTextPerCharExtents.3
 man/man3/XwcTextPropertyToTextList.3
+man/man5/Compose.5
 share/X11/XErrorDB
 share/X11/XKeysymDB
 share/X11/locale/C/Compose
@@ -1011,3 +1015,4 @@ share/X11/locale/zh_TW.big5/XLC_LOCALE
 share/X11/locale/zh_TW/Compose
 share/X11/locale/zh_TW/XI18N_OBJS
 share/X11/locale/zh_TW/XLC_LOCALE
+@pkgdir share/doc/libX11
