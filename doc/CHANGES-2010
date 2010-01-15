@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.43 2010/01/15 17:21:18 agc Exp $
+$NetBSD: CHANGES-2010,v 1.44 2010/01/15 18:41:54 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -46,3 +46,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/scmgit to 1.6.6 [wiz 2010-01-15]
 	Updated math/mpfr to 2.4.2.3 [asau 2010-01-15]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2009Q4 branch [agc 2010-01-15]
+	Updated mail/dovecot to 1.2.9 [ghen 2010-01-15]
