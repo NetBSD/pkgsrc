@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.52 2010/01/15 22:11:39 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.53 2010/01/15 22:12:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -82,3 +82,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added cross/dfu-programmer version 0.5.2 [jakllsch 2010-01-15]
 	Updated devel/mercurial to 1.4.2 [wiz 2010-01-15]
 	Updated sysutils/cdrtools to 2.01.01alpha70 [wiz 2010-01-15]
+	Updated games/rftg to 0.6.0 [wiz 2010-01-15]
