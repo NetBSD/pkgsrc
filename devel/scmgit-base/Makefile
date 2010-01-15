@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2010/01/12 14:19:55 fhajny Exp $
+# $NetBSD: Makefile,v 1.20 2010/01/15 10:36:41 wiz Exp $
 #
 
 .include "../../devel/scmgit/Makefile.common"
 
 PKGNAME=		scmgit-base-${GIT_VERSION}
-PKGREVISION=		2
 COMMENT=		GIT Tree History Storage Tool (base package)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -81,8 +80,6 @@ SUBST_VARS.fix-paths=	PREFIX
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "HPUX" || ${OPSYS} == "QNX" || ${OPSYS} == "UnixWare"
 SUBST_CLASSES+=		fix-cd-P
 SUBST_FILES.fix-cd-P=	git-sh-setup.sh
-SUBST_FILES.fix-cd-P+=	t/t0000-basic.sh
-SUBST_FILES.fix-cd-P+=	t/t5522-pull-symlink.sh
 SUBST_FILES.fix-cd-P+=	t/test-lib.sh
 SUBST_MESSAGE.fix-cd-P=	Fixing cd arguments.
 SUBST_STAGE.fix-cd-P=	pre-build
