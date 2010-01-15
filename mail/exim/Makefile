@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.98 2009/12/30 13:24:50 abs Exp $
+# $NetBSD: Makefile,v 1.99 2010/01/15 20:48:08 zafer Exp $
 
 DISTNAME=	exim-4.71
 PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
-		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
-		ftp://ftp.esat.net/pub/networking/mail/mta/exim/exim4/
+	http://dl.ambiweb.de/mirrors/ftp.exim.org/exim/exim4/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	abs@NetBSD.org
