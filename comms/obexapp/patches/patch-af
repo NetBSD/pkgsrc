@@ -1,32 +1,23 @@
-$NetBSD: patch-af,v 1.4 2009/05/12 14:43:17 plunky Exp $
+$NetBSD: patch-af,v 1.5 2010/01/15 17:48:44 plunky Exp $
 
---- Makefile.orig	2007-04-23 20:29:18.000000000 +0200
-+++ Makefile	2007-05-24 15:43:11.000000000 +0200
-@@ -6,7 +6,7 @@ MANDIR=		/usr/local/man/man
- PROG=		obexapp
- MAN1=		obexapp.1
- 
--WARNS?=		3
-+WARNS?=		0
- 
- SRCS=		client.c event.c log.c main.c sdp.c server.c stream.c \
- 		transport.c util.c
-@@ -17,9 +17,16 @@
- 		-I/usr/local/include/openobex \
- 		-fno-strict-aliasing
+--- Makefile.orig	2010-01-08 18:31:22.000000000 +0000
++++ Makefile
+@@ -16,9 +16,15 @@ DEBUG_FLAGS=	-g
+ CFLAGS+=	-I/usr/local/include \
+ 		-I/usr/local/include/openobex
  
 -DPADD=		${LIBBLUETOOTH} ${LIBSDP} ${LIBBSDXML} ${LIBREADLINE}
 +DPADD=		${LIBBLUETOOTH} ${LIBREADLINE}
  LDADD=		-L/usr/lib -L/usr/local/lib \
 -		-lbluetooth -lsdp -lopenobex -lbsdxml -lreadline -liconv
 +		-lbluetooth -lopenobex -lexpat -lreadline -liconv
-+
+ 
+-.include <bsd.prog.mk>
 +.if (${HAVE_LIBSDP:Uyes} == "no")
 +CPPFLAGS+=	-DSDP_COMPAT
 +.else
-+DPADD+=	${LIBSDP}
-+LDADD+=	-lsdp
++DPADD+=		${LIBSDP}
++LDADD+=		-lsdp
 +.endif
  
- .include <bsd.prog.mk>
- 
++.include <bsd.prog.mk>
