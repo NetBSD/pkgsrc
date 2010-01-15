@@ -1,9 +1,15 @@
-$NetBSD: distinfo,v 1.8 2009/12/15 12:35:57 wiz Exp $
+$NetBSD: distinfo,v 1.9 2010/01/15 14:04:36 asau Exp $
 
 SHA1 (mpfr-2.4.2/mpfr-2.4.2.tar.gz) = d2c3504bd0318dda8332ca80523659e9779c367c
 RMD160 (mpfr-2.4.2/mpfr-2.4.2.tar.gz) = 97f90103dd791b860a2736a73391a300441bcd35
 Size (mpfr-2.4.2/mpfr-2.4.2.tar.gz) = 1412116 bytes
-SHA1 (mpfr-2.4.2/patches) = 9c8a8325848b4331e5c032abee1c765ad2e56de2
-RMD160 (mpfr-2.4.2/patches) = e612c1f8013860bbe53354022700855fdbc804f2
-Size (mpfr-2.4.2/patches) = 7136 bytes
+SHA1 (mpfr-2.4.2/patch01) = 9c8a8325848b4331e5c032abee1c765ad2e56de2
+RMD160 (mpfr-2.4.2/patch01) = e612c1f8013860bbe53354022700855fdbc804f2
+Size (mpfr-2.4.2/patch01) = 7136 bytes
+SHA1 (mpfr-2.4.2/patch02) = 39d921bd8d9b9f6abbd7d0311bcceaab7e0b77a6
+RMD160 (mpfr-2.4.2/patch02) = 9d68771b4e7b267d20140a6e7b6fb55ddf38ef80
+Size (mpfr-2.4.2/patch02) = 2538 bytes
+SHA1 (mpfr-2.4.2/patch03) = 2dbc76735798c72340e92f4746dd951c7d5aacc5
+RMD160 (mpfr-2.4.2/patch03) = 9c62165ce20c0a9f3bc30989cf88955f0081b547
+Size (mpfr-2.4.2/patch03) = 2544 bytes
 SHA1 (patch-aa) = c86d768a642287fe6c4ef011f65aba7c59e089c0
