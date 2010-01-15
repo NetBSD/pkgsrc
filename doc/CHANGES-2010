@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.53 2010/01/15 22:12:02 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.54 2010/01/15 22:25:43 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -83,3 +83,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/mercurial to 1.4.2 [wiz 2010-01-15]
 	Updated sysutils/cdrtools to 2.01.01alpha70 [wiz 2010-01-15]
 	Updated games/rftg to 0.6.0 [wiz 2010-01-15]
+	Updated security/pam_ssh_agent_auth to 0.9.2 [agc 2010-01-15]
