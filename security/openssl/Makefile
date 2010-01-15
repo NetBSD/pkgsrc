@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.141 2009/12/25 11:58:06 obache Exp $
+# $NetBSD: Makefile,v 1.142 2010/01/15 04:55:30 taca Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
-OPENSSL_VERS?=		0.9.8k
-PKGREVISION=		1
+OPENSSL_VERS?=		0.9.8l
 
 .if empty(OPENSSL_SNAPSHOT)
 DISTNAME=	openssl-${OPENSSL_VERS}
 MASTER_SITES=	ftp://ftp.openssl.org/source/ \
 				ftp://sunsite.cnlab-switch.ch/mirror/openssl/source/ \
-				ftp://sunsite.uio.no/pub/security/openssl/source/ 
+				ftp://sunsite.uio.no/pub/security/openssl/source/
 .else
 .  if !empty(OPENSSL_STABLE:M[yY][eE][sS])
 DISTNAME=	openssl-${OPENSSL_VERS:C/[a-z]$//}-stable-SNAP-${OPENSSL_SNAPSHOT}
