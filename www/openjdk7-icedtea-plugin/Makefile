@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/11/07 14:49:33 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/15 19:18:42 tnn Exp $
 #
 
 DISTNAME=	# from icedtea-extras.mk
-PKGNAME=	openjdk7-icedtea-plugin-1.11.0.20091106
+PKGNAME=	openjdk7-icedtea-plugin-1.11.0.20100111
 CATEGORIES=	www
 MASTER_SITES=	# from icedtea-extras.mk
 
