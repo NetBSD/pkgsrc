@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.46 2010/01/15 19:20:19 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.47 2010/01/15 20:24:37 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -76,3 +76,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/xorg-util-macros to 1.4.1 [tnn 2010-01-15]
 	Updated lang/openjdk7 to 1.7.0.78.20100102 [tnn 2010-01-15]
 	Updated www/openjdk7-icedtea-plugin to 1.11.0.20100111 [tnn 2010-01-15]
+	Updated net/filezilla to 3.3.1 [zafer 2010-01-15]
