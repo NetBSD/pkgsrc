@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2008/07/13 23:41:02 bjs Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/15 18:41:54 tnn Exp $
 
-DISTNAME=	libXft-2.1.13
+DISTNAME=	libXft-2.1.14
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
