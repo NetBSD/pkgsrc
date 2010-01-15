@@ -1,12 +1,12 @@
-# $NetBSD: icedtea-extras.mk,v 1.4 2009/12/15 15:16:15 tnn Exp $
+# $NetBSD: icedtea-extras.mk,v 1.5 2010/01/15 19:18:42 tnn Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			bsdtar
 
 DIST_SUBDIR=			openjdk7
 
-ICEDTEA=			icedtea-9eb43c172d5b
-ICEDTEA_TGZ=			9eb43c172d5b.tar.bz2
+ICEDTEA=			icedtea-aaf3cf416fb4
+ICEDTEA_TGZ=			aaf3cf416fb4.tar.bz2
 SITES.${ICEDTEA_TGZ}=		http://icedtea.classpath.org/hg/icedtea/archive/
 DISTFILES+=			${ICEDTEA_TGZ}
 EXTRACT_ONLY+=			${ICEDTEA_TGZ}
@@ -46,6 +46,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=	gawk pkg-config autoconf automake
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 CONFIGURE_ENV+=	ac_cv_path_MD5SUM=/usr/bin/true
+CONFIGURE_ENV+=	ac_cv_path_SHA256SUM=/usr/bin/true
 CONFIGURE_ENV+=	ac_cv_path_WGET=/usr/bin/true
 
 pre-configure: icedtea-autoconf
