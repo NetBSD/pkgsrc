@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2009/06/13 06:46:48 rillig Exp $
+# $NetBSD: Makefile.common,v 1.14 2010/01/15 10:36:41 wiz Exp $
 #
 # used by devel/scmgit-base/Makefile
 # used by devel/scmgit-docs/Makefile
@@ -11,6 +11,7 @@ MASTER_SITES?=	http://www.kernel.org/pub/software/scm/git/
 
 MAINTAINER?=	bjs@NetBSD.org
 HOMEPAGE?=	http://git.or.cz/
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
