@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.51 2010/01/15 22:11:04 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.52 2010/01/15 22:11:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -81,3 +81,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/sdcc to 2.8.0nb2 [jakllsch 2010-01-15]
 	Added cross/dfu-programmer version 0.5.2 [jakllsch 2010-01-15]
 	Updated devel/mercurial to 1.4.2 [wiz 2010-01-15]
+	Updated sysutils/cdrtools to 2.01.01alpha70 [wiz 2010-01-15]
