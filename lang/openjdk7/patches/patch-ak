@@ -1,0 +1,19 @@
+$NetBSD: patch-ak,v 1.3 2010/01/15 19:18:42 tnn Exp $
+
+--- jdk/make/common/Defs-bsd.gmk.orig	2010-01-11 16:46:18.000000000 +0000
++++ jdk/make/common/Defs-bsd.gmk
+@@ -339,6 +339,14 @@ ifeq ($(OS_VENDOR), OpenBSD)
+   SYSTEM_ZLIB = true
+ endif
+ 
++ifeq ($(OS_VENDOR), NetBSD)
++  SYSTEM_ZLIB = true
++endif
++
++ifeq ($(OS_VENDOR), DragonFlyBSD)
++  SYSTEM_ZLIB = true
++endif
++
+ #
+ # Japanese manpages
+ #
