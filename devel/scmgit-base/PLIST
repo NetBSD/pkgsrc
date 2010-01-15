@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/08/07 02:39:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/01/15 10:36:41 wiz Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -47,7 +47,6 @@ libexec/git-core/git-difftool--helper
 libexec/git-core/git-fast-export
 libexec/git-core/git-fast-import
 libexec/git-core/git-fetch
-libexec/git-core/git-fetch--tool
 libexec/git-core/git-fetch-pack
 libexec/git-core/git-filter-branch
 libexec/git-core/git-fmt-merge-msg
@@ -62,6 +61,7 @@ ${PLIST.gui}libexec/git-core/git-gui
 ${PLIST.gui}libexec/git-core/git-gui--askpass
 libexec/git-core/git-hash-object
 libexec/git-core/git-help
+libexec/git-core/git-http-backend
 libexec/git-core/git-http-fetch
 libexec/git-core/git-http-push
 libexec/git-core/git-imap-send
@@ -93,6 +93,7 @@ libexec/git-core/git-mktag
 libexec/git-core/git-mktree
 libexec/git-core/git-mv
 libexec/git-core/git-name-rev
+libexec/git-core/git-notes
 libexec/git-core/git-pack-objects
 libexec/git-core/git-pack-redundant
 libexec/git-core/git-pack-refs
@@ -111,7 +112,9 @@ libexec/git-core/git-receive-pack
 libexec/git-core/git-reflog
 libexec/git-core/git-relink
 libexec/git-core/git-remote
+libexec/git-core/git-remote-curl
 libexec/git-core/git-repack
+libexec/git-core/git-replace
 libexec/git-core/git-repo-config
 libexec/git-core/git-request-pull
 libexec/git-core/git-rerere
@@ -194,6 +197,7 @@ ${PLIST.gui}share/git-gui/lib/logo.tcl
 ${PLIST.gui}share/git-gui/lib/merge.tcl
 ${PLIST.gui}share/git-gui/lib/mergetool.tcl
 ${PLIST.gui}share/git-gui/lib/msgs/de.msg
+${PLIST.gui}share/git-gui/lib/msgs/el.msg
 ${PLIST.gui}share/git-gui/lib/msgs/fr.msg
 ${PLIST.gui}share/git-gui/lib/msgs/hu.msg
 ${PLIST.gui}share/git-gui/lib/msgs/it.msg
@@ -220,6 +224,7 @@ ${PLIST.gui}share/git-gui/lib/win32_shortcut.js
 ${PLIST.gui}share/gitk/lib/msgs/de.msg
 ${PLIST.gui}share/gitk/lib/msgs/es.msg
 ${PLIST.gui}share/gitk/lib/msgs/it.msg
+${PLIST.gui}share/gitk/lib/msgs/ja.msg
 ${PLIST.gui}share/gitk/lib/msgs/ru.msg
 ${PLIST.gui}share/gitk/lib/msgs/sv.msg
 @pkgdir share/examples/scmgit/templates/branches
