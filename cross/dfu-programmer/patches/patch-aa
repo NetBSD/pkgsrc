@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/01/15 22:00:19 jakllsch Exp $
+
+--- src/util.c.orig	2009-08-22 23:11:09.000000000 +0000
++++ src/util.c
+@@ -29,11 +29,11 @@ void dfu_debug( const char *file, const 
+                 const int level, const char *format, ... )
+ {
+     if( level < debug ) {
+-        va_list va_arg;
++        va_list arg;
+ 
+-        va_start( va_arg, format );
++        va_start( arg, format );
+         fprintf( stderr, "%s:%d: ", file, line );
+-        vfprintf( stderr, format, va_arg );
+-        va_end( va_arg );
++        vfprintf( stderr, format, arg );
++        va_end( arg );
+     }
+ }
