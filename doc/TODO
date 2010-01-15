@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8840 2010/01/15 19:05:42 tnn Exp $
+$NetBSD: TODO,v 1.8841 2010/01/15 22:11:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -940,7 +940,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o merb-sequel-1.0.0
 	o merb-stories-0.9.13
 	o merb-test-unit-0.9.13
-	o mercurial-1.4.2
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
