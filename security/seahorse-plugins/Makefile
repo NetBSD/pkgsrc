@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2009/11/17 16:05:54 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/15 20:11:34 drochner Exp $
 
 DISTNAME=	seahorse-plugins-2.28.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse-plugins/2.28/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,14 +11,13 @@ HOMEPAGE=	http://www.gnome.org/projects/seahorse/
 COMMENT=	Plugins for the GnuPG front end and bonobo component for GNOME
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1
 
-DEPENDS+=	gnupg>=1.2.1:../../security/gnupg
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+CONFIGURE_ENV+=		ac_cv_path_GNUPG=${GPGME_GPG}
 
 GCONF_SCHEMAS=		seahorse-gedit.schemas
 GCONF_SCHEMAS+=		seahorse-plugins.schemas
