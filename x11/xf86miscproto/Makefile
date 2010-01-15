@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 21:45:18 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/15 18:18:05 tnn Exp $
 #
 
-DISTNAME=		xf86miscproto-0.9.2
+DISTNAME=		xf86miscproto-0.9.3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	xf86miscproto.pc.in
-USE_LANGUAGES=		# empty
 
 .include "../../x11/xproto/buildlink3.mk"
 
