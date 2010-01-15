@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 21:45:15 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/15 17:53:34 tnn Exp $
 #
 
-DISTNAME=		kbproto-1.0.3
+DISTNAME=		kbproto-1.0.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +16,5 @@ CONFLICTS+=		xextensions-[0-9]*
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	kbproto.pc.in
-USE_LANGUAGES=		# empty
 
 .include "../../mk/bsd.pkg.mk"
