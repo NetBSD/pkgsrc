@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2009/01/01 21:56:16 hasso Exp $
+$NetBSD: patch-aa,v 1.6 2010/01/15 18:03:32 tnn Exp $
 
---- Xos_r.h.in.orig	2006-09-20 19:59:42.000000000 +0200
+--- Xos_r.h.in.orig	2009-09-23 23:51:43.000000000 +0000
 +++ Xos_r.h.in
-@@ -76,13 +76,7 @@ in this Software without prior written a
+@@ -73,13 +73,7 @@ in this Software without prior written a
  # include <X11/Xfuncs.h>
  
  # ifndef X_NOT_POSIX
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/01 21:56:16 hasso Exp $
  #  ifndef LINE_MAX
  #   define X_LINE_MAX 2048
  #  else
-@@ -188,6 +182,13 @@ extern void XtProcessUnlock(
+@@ -185,6 +179,13 @@ extern void XtProcessUnlock(
  #  endif
  # endif
  
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/01 21:56:16 hasso Exp $
  #endif /* !defined WIN32 */
  
  /*
-@@ -226,7 +227,7 @@ extern void XtProcessUnlock(
+@@ -214,7 +215,7 @@ extern void XtProcessUnlock(
  
  #if defined(X_INCLUDE_PWD_H) && !defined(_XOS_INCLUDED_PWD_H)
  # include <pwd.h>
@@ -40,16 +40,16 @@ $NetBSD: patch-aa,v 1.5 2009/01/01 21:56:16 hasso Exp $
  #  define XOS_USE_MTSAFE_PWDAPI 1
  # endif
  #endif
-@@ -330,7 +331,7 @@ static __inline__ void _Xpw_copyPasswd(_
+@@ -318,7 +319,7 @@ static __inline__ void _Xpw_copyPasswd(_
    (_Xos_processUnlock), \
    (p).pwp )
  
 -#elif !defined(_POSIX_THREAD_SAFE_FUNCTIONS) && !defined(__APPLE__)
 +#elif !defined(_POSIX_THREAD_SAFE_FUNCTIONS) && !defined(__APPLE__) && !defined(__NetBSD__) && !defined(__DragonFly__)
- /* SVR4 threads, AIX 4.2.0 and earlier and OSF/1 3.2 and earlier pthreads */
  # define X_NEEDS_PWPARAMS
  typedef struct {
-@@ -410,7 +411,7 @@ typedef int _Xgetpwret;
+   struct passwd pws;
+@@ -384,7 +385,7 @@ typedef int _Xgetpwret;
  #if defined(X_INCLUDE_NETDB_H) && !defined(_XOS_INCLUDED_NETDB_H) \
      && !defined(WIN32)
  # include <netdb.h>
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/01 21:56:16 hasso Exp $
  #  define XOS_USE_MTSAFE_NETDBAPI 1
  # endif
  #endif
-@@ -573,7 +574,7 @@ typedef int _Xgetservbynameparams; /* du
+@@ -543,7 +544,7 @@ typedef int _Xgetservbynameparams; /* du
  #   define dirent direct
  #  endif
  # endif
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/01 21:56:16 hasso Exp $
  #  define XOS_USE_MTSAFE_DIRENTAPI 1
  # endif
  #endif
-@@ -656,15 +657,8 @@ extern int _Preaddir_r(DIR *, struct dir
+@@ -604,15 +605,8 @@ typedef struct {
  /* Pre-POSIX API, returns non-NULL on success. */
  #  define _XReaddir(d,p)	(readdir_r((d), &(p).dir_entry))
  # else
@@ -85,7 +85,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/01 21:56:16 hasso Exp $
  # endif
  #endif /* X_INCLUDE_DIRENT_H */
  
-@@ -691,7 +685,7 @@ extern int _Preaddir_r(DIR *, struct dir
+@@ -639,7 +633,7 @@ typedef struct {
  
  #if defined(X_INCLUDE_UNISTD_H) && !defined(_XOS_INCLUDED_UNISTD_H)
  /* <unistd.h> already included by <X11/Xos.h> */
@@ -94,7 +94,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/01 21:56:16 hasso Exp $
  #  define XOS_USE_MTSAFE_UNISTDAPI 1
  # endif
  #endif
-@@ -831,7 +825,7 @@ typedef struct {
+@@ -779,7 +773,7 @@ typedef struct {
  
  #if defined(X_INCLUDE_STRING_H) && !defined(_XOS_INCLUDED_STRING_H)
  /* <string.h> has already been included by <X11/Xos.h> */
@@ -103,7 +103,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/01 21:56:16 hasso Exp $
  #  define XOS_USE_MTSAFE_STRINGAPI 1
  # endif
  #endif
-@@ -883,7 +877,7 @@ typedef char * _Xstrtokparams;
+@@ -831,7 +825,7 @@ typedef char * _Xstrtokparams;
  
  #if defined(X_INCLUDE_TIME_H) && !defined(_XOS_INCLUDED_TIME_H)
  # include <time.h>
@@ -112,7 +112,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/01 21:56:16 hasso Exp $
  #  define XOS_USE_MTSAFE_TIMEAPI 1
  # endif
  #endif
-@@ -1046,7 +1040,7 @@ typedef struct tm _Xltimeparams;
+@@ -987,7 +981,7 @@ typedef struct tm _Xltimeparams;
  
  #if defined(X_INCLUDE_GRP_H) && !defined(_XOS_INCLUDED_GRP_H)
  # include <grp.h>
