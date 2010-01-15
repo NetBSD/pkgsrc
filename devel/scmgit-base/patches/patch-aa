@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2009/08/07 02:39:51 minskim Exp $
+$NetBSD: patch-aa,v 1.11 2010/01/15 10:36:41 wiz Exp $
 
---- Makefile.orig	2009-07-29 01:18:18.000000000 -0700
+--- Makefile.orig	2009-12-24 00:00:22.000000000 +0000
 +++ Makefile
-@@ -270,12 +270,8 @@ GITWEB_SITE_FOOTER =
+@@ -305,12 +305,8 @@ GITWEB_SITE_FOOTER =
  
  export prefix bindir sharedir sysconfdir
  
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.10 2009/08/07 02:39:51 minskim Exp $
  RPMBUILD = rpmbuild
  TCL_PATH = tclsh
  TCLTK_PATH = wish
-@@ -719,9 +715,10 @@ ifeq ($(uname_S),Darwin)
+@@ -768,9 +764,10 @@ ifeq ($(uname_S),Darwin)
  	USE_ST_TIMESPEC = YesPlease
  endif
  ifeq ($(uname_S),SunOS)
@@ -27,16 +27,16 @@ $NetBSD: patch-aa,v 1.10 2009/08/07 02:39:51 minskim Exp $
  	SANE_TOOL_PATH = /usr/xpg6/bin:/usr/xpg4/bin
  	NO_STRCASESTR = YesPlease
  	NO_MEMMEM = YesPlease
-@@ -754,8 +751,6 @@ ifeq ($(uname_S),SunOS)
- 	ifdef NO_IPV6
- 		NEEDS_RESOLV = YesPlease
+@@ -801,8 +798,6 @@ ifeq ($(uname_S),SunOS)
+ 		NO_C99_FORMAT = YesPlease
+ 		NO_STRTOUMAX = YesPlease
  	endif
 -	INSTALL = /usr/ucb/install
 -	TAR = gtar
  	BASIC_CFLAGS += -D__EXTENSIONS__ -D__sun__ -DHAVE_ALLOCA_H
  endif
  ifeq ($(uname_O),Cygwin)
-@@ -800,15 +795,20 @@ ifeq ($(uname_S),OpenBSD)
+@@ -850,15 +845,20 @@ ifeq ($(uname_S),OpenBSD)
  	THREADED_DELTA_SEARCH = YesPlease
  endif
  ifeq ($(uname_S),NetBSD)
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.10 2009/08/07 02:39:51 minskim Exp $
  ifeq ($(uname_S),AIX)
  	NO_STRCASESTR=YesPlease
  	NO_MEMMEM = YesPlease
-@@ -1289,7 +1289,7 @@ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_P
+@@ -1395,7 +1395,7 @@ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_P
  PERL_PATH_SQ = $(subst ','\'',$(PERL_PATH))
  TCLTK_PATH_SQ = $(subst ','\'',$(TCLTK_PATH))
  
@@ -69,7 +69,7 @@ $NetBSD: patch-aa,v 1.10 2009/08/07 02:39:51 minskim Exp $
  
  BASIC_CFLAGS += -DSHA1_HEADER='$(SHA1_HEADER_SQ)' \
  	$(COMPAT_CFLAGS)
-@@ -1643,10 +1643,10 @@ gitexec_instdir_SQ = $(subst ','\'',$(gi
+@@ -1788,10 +1788,10 @@ gitexec_instdir_SQ = $(subst ','\'',$(gi
  export gitexec_instdir
  
  install: all
