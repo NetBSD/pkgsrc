@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 21:45:15 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/15 18:46:21 tnn Exp $
 #
 
-DISTNAME=		libXdmcp-1.0.2
+DISTNAME=		libXdmcp-1.0.3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
