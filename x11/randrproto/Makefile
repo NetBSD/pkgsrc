@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2009/03/06 14:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/15 17:55:15 tnn Exp $
 #
 
-DISTNAME=		randrproto-1.3.0
+DISTNAME=		randrproto-1.3.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		randrext-[0-9]*
 
 GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/randrproto.pc.in
-USE_LANGUAGES=		# none, not even C
+PKGCONFIG_OVERRIDE+=	randrproto.pc.in
 
 .include "../../mk/bsd.pkg.mk"
