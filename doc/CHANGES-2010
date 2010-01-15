@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.48 2010/01/15 20:44:07 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.49 2010/01/15 21:23:53 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -78,3 +78,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/openjdk7-icedtea-plugin to 1.11.0.20100111 [tnn 2010-01-15]
 	Updated net/filezilla to 3.3.1 [zafer 2010-01-15]
 	Added print/tex-tetex version 3.0.16392 [minskim 2010-01-15]
+	Updated devel/sdcc to 2.8.0nb2 [jakllsch 2010-01-15]
