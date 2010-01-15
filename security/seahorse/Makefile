@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2009/10/24 12:53:55 drochner Exp $
+# $NetBSD: Makefile,v 1.86 2010/01/15 20:11:34 drochner Exp $
 
 DISTNAME=	seahorse-2.28.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.28/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,8 +12,6 @@ COMMENT=	GnuPG front end and bonobo component for GNOME
 #LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1 AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-DEPENDS+=		gnupg>=1.2.1:../../security/gnupg
 
 .if exists(/usr/bin/ssh) && exists(/usr/bin/ssh-add) && exists(/usr/bin/ssh-keygen)
 SSH_PATH=/usr/bin/ssh
@@ -35,6 +34,7 @@ CONFIGURE_ARGS+=	--disable-nautilus
 CONFIGURE_ENV+=		SSH_PATH=${SSH_PATH:Q}
 CONFIGURE_ENV+=		SSH_ADD_PATH=${SSH_ADD_PATH:Q}
 CONFIGURE_ENV+=		SSH_KEYGEN_PATH=${SSH_KEYGEN_PATH:Q}
+CONFIGURE_ENV+=		ac_cv_path_GNUPG=${GPGME_GPG}
 
 PKGCONFIG_OVERRIDE+=	libcryptui/cryptui.pc.in
 GCONF_SCHEMAS= 	seahorse.schemas
