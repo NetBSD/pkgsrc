@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/01/15 18:55:11 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2010/01/15 21:20:14 tnn Exp $
 #
 
 DISTNAME=		libX11-1.3.2
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--enable-man-pages=3
 CONFIGURE_ARGS+=	--without-xcb
 CONFIGURE_ARGS+=	--disable-specs
 PKGCONFIG_OVERRIDE+=	x11.pc.in
+
+CONFIGURE_ENV+=		FILE_MAN_SUFFIX=5
 
 .include "../../mk/bsd.prefs.mk"
 
