@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.152 2010/01/16 18:00:31 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.153 2010/01/16 18:00:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -181,3 +181,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-Types to 0.21 [sno 2010-01-16]
 	Updated devel/p5-MooseX-Types-Common to 0.001001 [sno 2010-01-16]
 	Updated devel/libidn to 1.16 [wiz 2010-01-16]
+	Updated devel/p5-namespace-clean to 0.12 [sno 2010-01-16]
