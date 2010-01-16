@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8845 2010/01/16 11:26:12 obache Exp $
+$NetBSD: TODO,v 1.8846 2010/01/16 15:08:34 sno Exp $
 
 Suggested new packages
 ======================
@@ -1047,7 +1047,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Class-Data-Inheritable-1.00
 	o p5-Compress-Raw-Bzip2-2.024
 	o p5-Compress-Raw-Zlib-2.024
-	o p5-DBD-SQLite-1.29
 	o p5-DBD-postgresql-2.16.0
 	o p5-Date-Manip-6.05
 	o p5-DateTime-Event-ICal-0.10
