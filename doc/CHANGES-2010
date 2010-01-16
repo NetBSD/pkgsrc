@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.168 2010/01/16 21:25:30 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.169 2010/01/16 21:33:53 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -197,3 +197,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added editors/p5-Padre-Plugin-Kate version 0.02 [sno 2010-01-16]
 	Added editors/p5-Acme-Padre-PlayCode version 0.12 [sno 2010-01-16]
 	Updated emulators/sdlmame to 0.136 [wiz 2010-01-16]
+	Added editors/p5-Padre-Plugin-Autoformat version 1.1.2 [sno 2010-01-16]
