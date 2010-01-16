@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.127 2010/01/16 16:21:33 sno Exp $
+$NetBSD: CHANGES-2010,v 1.128 2010/01/16 16:29:41 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -159,3 +159,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Template-Tiny version 0.09 [sno 2010-01-16]
 	Added textproc/p5-Text-FindIndent version 0.07 [sno 2010-01-16]
 	Added textproc/p5-Syntax-Highlight-Engine-Kate version 0.06 [sno 2010-01-16]
+	Updated devel/libffi to 3.0.9 [asau 2010-01-16]
