@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.75 2010/01/16 04:15:41 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.76 2010/01/16 04:33:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -107,3 +107,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/xdvik to 22.84.16 [minskim 2010-01-16]
 	Updated print/teTeX to 3.0nb8 [minskim 2010-01-16]
 	Updated fonts/tex-times to 2009.15878 [minskim 2010-01-16]
+	Removed print/tex-bin-tetex successor print/tex-tetex [minskim 2010-01-16]
