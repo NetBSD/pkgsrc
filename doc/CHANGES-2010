@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.72 2010/01/16 03:55:03 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.73 2010/01/16 03:56:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -104,3 +104,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-pkfix-doc version 1.5 [minskim 2010-01-16]
 	Updated print/dvipdfmx to 20090708 [minskim 2010-01-16]
 	Added print/tex-xdvi version 22.84.16 [minskim 2010-01-16]
+	Updated print/xdvik to 22.84.16 [minskim 2010-01-16]
