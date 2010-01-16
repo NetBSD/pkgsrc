@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.547 2009/12/17 11:33:01 jnemeth Exp $
+# $NetBSD: Makefile,v 1.548 2010/01/16 07:12:23 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -381,6 +381,7 @@ SUBDIR+=	tango-icon-theme
 SUBDIR+=	tesseract
 SUBDIR+=	tex-a2ping
 SUBDIR+=	tex-a2ping-doc
+SUBDIR+=	tex-dvipng-doc
 SUBDIR+=	tgif
 SUBDIR+=	tiff
 SUBDIR+=	tkpiechart
