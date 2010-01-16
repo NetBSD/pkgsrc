@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/16 14:06:38 sno Exp $
+
+SHA1 (ExtUtils-XSpp-0.05.tar.gz) = 593479da08961be6af7e74142ef9360323753cd5
+RMD160 (ExtUtils-XSpp-0.05.tar.gz) = ee76412424470b65d3616153055b328614043fa5
+Size (ExtUtils-XSpp-0.05.tar.gz) = 87209 bytes
