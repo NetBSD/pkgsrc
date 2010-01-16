@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.154 2010/01/16 18:03:04 sno Exp $
+$NetBSD: CHANGES-2010,v 1.155 2010/01/16 18:11:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -183,3 +183,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libidn to 1.16 [wiz 2010-01-16]
 	Updated devel/p5-namespace-clean to 0.12 [sno 2010-01-16]
 	Updated www/p5-App-Nopaste to 0.18 [sno 2010-01-16]
+	Updated www/p5-Catalyst-Runtime to 5.80018 [sno 2010-01-16]
