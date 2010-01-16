@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.45 2009/10/11 07:36:11 tnn Exp $
+# $NetBSD: tools.Linux.mk,v 1.46 2010/01/16 02:16:35 obache Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -63,7 +63,11 @@ TOOLS_PLATFORM.egrep?=		/bin/egrep
 TOOLS_PLATFORM.egrep?=		/usr/bin/egrep
 .endif
 TOOLS_PLATFORM.env?=		/usr/bin/env
+.if exists(/usr/bin/expr)
 TOOLS_PLATFORM.expr?=		/usr/bin/expr
+.elif exists(/bin/expr)
+TOOLS_PLATFORM.expr?=		/bin/expr
+.endif
 TOOLS_PLATFORM.false?=		false			# shell builtin
 .if exists(/bin/fgrep)
 TOOLS_PLATFORM.fgrep?=		/bin/fgrep
@@ -99,7 +103,11 @@ TOOLS_PLATFORM.gsed?=		/usr/bin/sed
 .if exists(/usr/bin/soelim)
 TOOLS_PLATFORM.gsoelim?=	/usr/bin/soelim
 .endif
+.if exists(/bin/tar)
 TOOLS_PLATFORM.gtar?=		/bin/tar
+.elif exists(/usr/bin/tar)
+TOOLS_PLATFORM.gtar?=		/usr/bin/tar
+.endif
 .if exists(/bin/gunzip)
 TOOLS_PLATFORM.gunzip?=		/bin/gunzip -f
 .elif exists(/usr/bin/gunzip)
@@ -107,6 +115,8 @@ TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 .endif
 .if exists(/bin/zcat)
 TOOLS_PLATFORM.gzcat?=		/bin/zcat
+.elif exists(/usr/bin/zcat)
+TOOLS_PLATFORM.gzcat?=		/usr/bin/zcat
 .endif
 .if exists(/bin/gzip)
 TOOLS_PLATFORM.gzip?=		/bin/gzip -nf ${GZIP}
@@ -221,4 +231,7 @@ TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
 .if exists(/usr/bin/xgettext)
 TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
+.endif
+.if exists(/usr/bin/yacc)
+TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
 .endif
