@@ -1,0 +1,2 @@
+This plugin uses the Wx::Perl::DataWalker module to provide facilities for
+interactively browsing Perl data structures.
