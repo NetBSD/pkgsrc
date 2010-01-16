@@ -1,8 +1,8 @@
-$NetBSD: patch-bn,v 1.6 2004/09/28 12:52:14 adam Exp $
+$NetBSD: patch-bn,v 1.7 2010/01/16 09:15:25 adam Exp $
 
---- scripts/autoconf/Makefile.in.orig	2004-09-26 14:15:08.000000000 +0000
+--- scripts/autoconf/Makefile.in.orig	2009-05-27 14:08:13.000000000 +0000
 +++ scripts/autoconf/Makefile.in
-@@ -246,8 +246,8 @@ xmVer = @xmVer@
+@@ -254,8 +254,8 @@ xmVer = @xmVer@
  #
  MAINTAINERCLEANFILES = Makefile.in
  EXTRA_DIST = ac_find_motif.m4
