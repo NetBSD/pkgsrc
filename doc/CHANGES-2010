@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.129 2010/01/16 16:32:27 sno Exp $
+$NetBSD: CHANGES-2010,v 1.130 2010/01/16 16:34:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -161,3 +161,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Syntax-Highlight-Engine-Kate version 0.06 [sno 2010-01-16]
 	Updated devel/libffi to 3.0.9 [asau 2010-01-16]
 	Updated www/p5-HTTP-Request-AsCGI to 1.2 [sno 2010-01-16]
+	Updated devel/p5-PPI to 1.208 [sno 2010-01-16]
