@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/18 18:38:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/16 17:23:50 wiz Exp $
 bin/blackbox
 bin/bridges
 bin/cube
@@ -9,8 +9,10 @@ bin/flip
 bin/galaxies
 bin/guess
 bin/inertia
+bin/keen
 bin/lightup
 bin/loopy
+bin/magnets
 bin/map
 bin/mines
 bin/netgame
@@ -19,10 +21,12 @@ bin/pattern
 bin/pegs
 bin/rect
 bin/samegame
+bin/singles
 bin/sixteen
 bin/slant
 bin/solo
 bin/tents
+bin/towers
 bin/twiddle
 bin/unequal
 bin/untangle
