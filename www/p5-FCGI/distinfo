@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:08:35 wiz Exp $
+$NetBSD: distinfo,v 1.5 2010/01/16 22:53:54 sno Exp $
 
-SHA1 (FCGI-0.67.tar.gz) = ca7aac202a1c718d73bcf570788e88f87bf8a138
-RMD160 (FCGI-0.67.tar.gz) = e3ff32de64cd000b9211c31c3a217c3ab08a4f45
-Size (FCGI-0.67.tar.gz) = 86238 bytes
+SHA1 (FCGI-0.68.tar.gz) = 34ac08d9c8b435bec6a7d4d27dd0c9bc25aa7924
+RMD160 (FCGI-0.68.tar.gz) = c5df09b55a87b84e3a4b8c6e06ac286d7cf31061
+Size (FCGI-0.68.tar.gz) = 90813 bytes
