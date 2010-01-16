@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.145 2010/01/16 17:46:09 sno Exp $
+$NetBSD: CHANGES-2010,v 1.146 2010/01/16 17:47:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -174,3 +174,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-Getopt to 0.26 [sno 2010-01-16]
 	Updated textproc/liblinebreak to 2.0 [wiz 2010-01-16]
 	Updated devel/p5-MooseX-MethodAttributes to 0.19 [sno 2010-01-16]
+	Updated devel/p5-MooseX-Params-Validate to 0.13 [sno 2010-01-16]
