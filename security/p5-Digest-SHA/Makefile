@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/05/19 08:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/01/16 19:27:17 heinz Exp $
 #
 
 DISTNAME=		Digest-SHA-5.47
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Digest/}
 MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Digest-SHA/
 COMMENT=		Perl module for SHA-1/224/256/384/512 algorithms
-#LICENSE=		gnu-gpl-v2 # under same terms as Perl
+LICENSE=		${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
