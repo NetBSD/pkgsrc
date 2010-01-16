@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/10/24 15:57:53 sno Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/16 18:12:51 sno Exp $
 
-DISTNAME=	Catalyst-Plugin-Static-Simple-0.25
+DISTNAME=	Catalyst-Plugin-Static-Simple-0.28
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -12,11 +12,13 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.80008:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-MIME-Types>=1.25:../../mail/p5-MIME-Types
-DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
+DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
+DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
+DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST= 	auto/Catalyst/Plugin/Static/Simple/.packlist
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
