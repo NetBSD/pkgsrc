@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/16 11:43:28 sborrill Exp $
+bin/wmzcalock
+share/wmzcalock/theme/mday.charterblack.xpm
+share/wmzcalock/theme/mday.charterbold.xpm
+share/wmzcalock/theme/mday.comic.xpm
+share/wmzcalock/theme/mday.eras.xpm
+share/wmzcalock/theme/mday.georgia.xpm
+share/wmzcalock/theme/mday.iceage.xpm
+share/wmzcalock/theme/mday.ocr.xpm
+share/wmzcalock/theme/mday.papyrus.xpm
+share/wmzcalock/theme/mday.utopia.xpm
+share/wmzcalock/theme/mdaynums.xcf
+share/wmzcalock/theme/wday.charter.xpm
+share/wmzcalock/theme/wday.comic.xpm
+share/wmzcalock/theme/wday.georgia.xpm
+share/wmzcalock/theme/wday.lcd.xpm
+share/wmzcalock/theme/wday.papyrus.xpm
+share/wmzcalock/theme/wdaytxts.xcf
