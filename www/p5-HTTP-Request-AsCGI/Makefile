@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/04/29 22:25:47 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/16 16:32:16 sno Exp $
 
-DISTNAME=	HTTP-Request-AsCGI-0.9
+DISTNAME=	HTTP-Request-AsCGI-1.2
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/HTTP-Request-AsCGI/
 COMMENT=	Setup a CGI enviroment from a HTTP::Request
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-libwww>=5.805:../../www/p5-libwww
