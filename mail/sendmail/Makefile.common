@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2009/08/15 23:18:11 zafer Exp $
+# $NetBSD: Makefile.common,v 1.51 2010/01/16 00:31:13 jnemeth Exp $
 #
 # used by mail/libmilter/Makefile
 # used by mail/sendmail/Makefile
@@ -18,7 +18,7 @@ DISTINFO_FILE=	${.CURDIR}/../../mail/sendmail/distinfo
 FILESDIR=	${.CURDIR}/../../mail/sendmail/files
 PATCHDIR=	${.CURDIR}/../../mail/sendmail/patches
 
-DIST_VERS=	8.14.3
+DIST_VERS=	8.14.4
 
 MAKE_ENV+=	BSD_BINOWN=${BINOWN} BSD_BINGRP=${BINGRP} \
 		BSD_MANOWN=${MANOWN} BSD_MANGRP=${MANGRP} \
