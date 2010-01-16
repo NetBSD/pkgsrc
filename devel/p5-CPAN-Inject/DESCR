@@ -1,0 +1,6 @@
+It takes any arbitrary Perl distribution tarball (open source or otherwise)
+and injects it into the local CPAN file cache, smoothing some metadata
+files to make it look as if it came from CPAN.
+
+It makes use the officially blessed "Reserved Local CPAN Author" id "LOCAL"
+as the author the distributions are added under.
