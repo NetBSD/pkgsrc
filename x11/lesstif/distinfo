@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.16 2007/06/26 10:39:44 tnn Exp $
+$NetBSD: distinfo,v 1.17 2010/01/16 09:15:25 adam Exp $
 
-SHA1 (lesstif-0.95.0.tar.bz2) = 2a6f20d3bd525e6066ba2be22d8a47bf4bcd0425
-RMD160 (lesstif-0.95.0.tar.bz2) = 0384f87cd1a71e6aea04b1963d03b4664cb66b50
-Size (lesstif-0.95.0.tar.bz2) = 2459799 bytes
-SHA1 (patch-aa) = a9748026f9645f346e2e0486cf975337a3bcabe4
-SHA1 (patch-ab) = 8839488b15ae6a01bb4d6af46e386e894eb2cddf
-SHA1 (patch-ac) = 0e7bd9c469d98ea6a4257e734f69e321f8fee442
-SHA1 (patch-am) = 67d89893e806032c23301e6bcbd48bc99d0dd216
-SHA1 (patch-an) = db515a483519f321bbeaec384a1ccd7ed0eb503c
-SHA1 (patch-ao) = 43ce04cc679d5181b03ca974edcb6a273370cf46
-SHA1 (patch-ap) = 809d82f12de219eaa7ce174f6b14d4110228f888
-SHA1 (patch-aq) = ccd7a53fed86e07f205d9937f408bd266c70ef3d
-SHA1 (patch-ar) = 2b0a55cece6927fd4fcf4347db18ae4625383601
-SHA1 (patch-bm) = f58cd23cb8d93027bbf105ff1bf186ff82313d9e
-SHA1 (patch-bn) = 5d16046510d23eb696575c9f9100ef15ea909831
-SHA1 (patch-bo) = 39ca358d90b288b44dd223211feb3d8d477efe82
+SHA1 (lesstif-0.95.2.tar.bz2) = b894e544d529a235a6a665d48ca94a465f44a4e5
+RMD160 (lesstif-0.95.2.tar.bz2) = 643fd81b70b6e8617803ddc4350272ca89b4a71f
+Size (lesstif-0.95.2.tar.bz2) = 2481073 bytes
+SHA1 (patch-aa) = da781d4ef3c552275848241e538ea452a6c16232
+SHA1 (patch-am) = 52c2a8a84436b0e7c5449b90813deb498a98cc50
+SHA1 (patch-an) = 6eef204e655613bb658aa32b6c2f2954e6f39250
+SHA1 (patch-ao) = ee1f3742804f41b592c7f3921f2353bb3c412393
+SHA1 (patch-ap) = c5b525a8661c4b7541a1f7a1c6ff12c6456103c0
+SHA1 (patch-aq) = a238d0be4d69d16e964651a112c4fcf421b06f2a
+SHA1 (patch-ar) = e4aefbc8c31bece408185d6bd9266f11d6852f7c
+SHA1 (patch-bm) = b32febe539b375a0ea8adfddeec01588927f9046
+SHA1 (patch-bn) = f96d95358a76db1a371bfc3ea7a3ba6b9d1d536f
