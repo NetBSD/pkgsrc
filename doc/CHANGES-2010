@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.96 2010/01/16 14:46:50 sno Exp $
+$NetBSD: CHANGES-2010,v 1.97 2010/01/16 14:49:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -128,3 +128,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-CPAN-Inject version 0.11 [sno 2010-01-16]
 	Added devel/p5-Module-Util version 1.07 [sno 2010-01-16]
 	Added devel/p5-Parse-ErrorString-Perl version 0.13 [sno 2010-01-16]
+	Added devel/p5-Path-Class-File-Stat version 0.02 [sno 2010-01-16]
