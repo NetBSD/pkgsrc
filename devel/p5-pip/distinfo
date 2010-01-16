@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/16 16:01:58 sno Exp $
+
+SHA1 (pip-1.16.tar.gz) = d9037bef3e555038a40b7840d7c745e14b9f8a3b
+RMD160 (pip-1.16.tar.gz) = b4783ab04f80a20982b7c6a1aaeae52bb26c1797
+Size (pip-1.16.tar.gz) = 106270 bytes
