@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.187 2010/01/16 23:43:06 sno Exp $
+$NetBSD: CHANGES-2010,v 1.188 2010/01/16 23:57:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -216,3 +216,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed editors/p5-Padre-Plugin-PlayCode [sno 2010-01-16]
 	Added editors/p5-Acme-Padre-PlayCode version 0.13 [sno 2010-01-16]
 	Updated textproc/p5-Pod-Simple to 3.13 [sno 2010-01-16]
+	Updated textproc/p5-podlators to 2.3.0 [sno 2010-01-16]
