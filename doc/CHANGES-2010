@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.156 2010/01/16 18:14:47 sno Exp $
+$NetBSD: CHANGES-2010,v 1.157 2010/01/16 18:15:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -185,3 +185,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-App-Nopaste to 0.18 [sno 2010-01-16]
 	Updated www/p5-Catalyst-Runtime to 5.80018 [sno 2010-01-16]
 	Updated www/p5-CatalystX-LeakChecker to 0.05 [sno 2010-01-16]
+	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.28 [sno 2010-01-16]
