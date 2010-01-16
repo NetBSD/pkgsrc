@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2008/07/14 12:56:18 joerg Exp $
+# $NetBSD: Makefile,v 1.95 2010/01/16 09:15:25 adam Exp $
 
-DISTNAME=	lesstif-0.95.0
-PKGREVISION=	1
+DISTNAME=	lesstif-0.95.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lesstif/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,8 +17,11 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-production --disable-debug --disable-verbose
-CONFIGURE_ARGS+=	--enable-editres --enable-xdnd
+CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-verbose
+CONFIGURE_ARGS+=	--enable-editres
+CONFIGURE_ARGS+=	--enable-production
+CONFIGURE_ARGS+=	--enable-xdnd
 
 # The following forces the build process to use sed as the HTML-to-text
 # converter.
@@ -48,7 +50,6 @@ post-extract:
 
 # Change references to {Core,Object,Shell}.3 to X{Core,Object,Shell}.3 to
 # avoid manpage conflicts with other packages.
-#
 post-patch:
 	cd ${WRKSRC}/doc/lessdox/widgets;				\
 	for name in Core Object Shell; do				\
