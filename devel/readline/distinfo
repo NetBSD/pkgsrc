@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2009/02/23 12:35:46 wiz Exp $
+$NetBSD: distinfo,v 1.17 2010/01/16 17:18:27 wiz Exp $
 
-SHA1 (readline-6.0.tar.gz) = 1e511b091514ef631c539552316787c75ace5262
-RMD160 (readline-6.0.tar.gz) = 9f886f437dfa3387cb3a4ce3439cefecffc2c789
-Size (readline-6.0.tar.gz) = 2270818 bytes
+SHA1 (readline-6.1.tar.gz) = 54840a0dc907e7fa598d7ffcdcbd17bae69ace83
+RMD160 (readline-6.1.tar.gz) = b50f47a3952e354655056d9684b05ee65027e291
+Size (readline-6.1.tar.gz) = 2261725 bytes
 SHA1 (patch-ae) = 5ef968372e27be7a4f5bfbfd71f8bcd371ab99e9
 SHA1 (patch-ag) = 3114e6959dfff3e2aae74c3df3ba4b0f692b79bb
 SHA1 (patch-ah) = 107701a092b4294907e9a2066cfa7cbb3afad301
