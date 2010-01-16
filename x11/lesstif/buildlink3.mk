@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2009/03/20 19:25:43 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2010/01/16 09:15:25 adam Exp $
 
 BUILDLINK_TREE+=	lesstif
 
@@ -12,7 +12,6 @@ BUILDLINK_PKGSRCDIR.lesstif?=	../../x11/lesstif
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/printproto/buildlink3.mk"
 .endif # LESSTIF_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-lesstif

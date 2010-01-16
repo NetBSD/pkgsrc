@@ -1,13 +1,13 @@
-$NetBSD: patch-ap,v 1.14 2005/06/30 15:28:45 adam Exp $
+$NetBSD: patch-ap,v 1.15 2010/01/16 09:15:25 adam Exp $
 
---- doc/lessdox/widgets/Makefile.in.orig	2005-03-31 19:44:59.000000000 +0000
+--- doc/lessdox/widgets/Makefile.in.orig	2009-05-27 14:08:05.000000000 +0000
 +++ doc/lessdox/widgets/Makefile.in
-@@ -282,7 +282,7 @@ manthree_DATA = \
+@@ -290,7 +290,7 @@ manthree_DATA = \
  	Rect.3 UnNamedObj.3 Constraint.3 VendorShell.3
  
  manfive_DATA = 
 -rootdir = $(prefix)/LessTif
 +rootdir = $(prefix)/share/lesstif
- docdir = $(rootdir)/doc
- htmldir = $(docdir)/html
  html_DATA = ${manone_DATA:.1=.html} ${manthree_DATA:.3=.html} \
+                 ${manfive_DATA:.5=.html}
+ 
