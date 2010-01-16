@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.141 2010/01/16 17:40:05 sno Exp $
+$NetBSD: CHANGES-2010,v 1.142 2010/01/16 17:42:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -170,3 +170,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/readline to 6.1 [wiz 2010-01-16]
 	Updated games/puzzles to 8839 [wiz 2010-01-16]
 	Updated devel/p5-Moose-Policy to 0.04 [sno 2010-01-16]
+	Updated devel/p5-MooseX-AttributeHelpers to 0.23 [sno 2010-01-16]
