@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.91 2010/01/16 14:06:59 sno Exp $
+$NetBSD: CHANGES-2010,v 1.92 2010/01/16 14:17:38 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -124,3 +124,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xf86-video-vmware to 10.16.9 [obache 2010-01-16]
 	Added x11/wmzcalock version 0.1 [sborrill 2010-01-16]
 	Added devel/p5-ExtUtils-XSpp version 0.05 [sno 2010-01-16]
+	Added devel/p5-CPAN-Checksums version 2.04 [sno 2010-01-16]
