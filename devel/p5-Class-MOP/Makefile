@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2009/11/19 21:21:25 seb Exp $
+# $NetBSD: Makefile,v 1.31 2010/01/16 17:08:02 sno Exp $
 #
 
-DISTNAME=	Class-MOP-0.95
+DISTNAME=	Class-MOP-0.97
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
@@ -15,13 +15,12 @@ DEPENDS+=	p5-Devel-GlobalDestruction-[0-9]*:../../devel/p5-Devel-GlobalDestructi
 DEPENDS+=	p5-MRO-Compat>=0.05:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Sub-Name>=0.04:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
-DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+DEPENDS+=	p5-Try-Tiny>=0.02:../../devel/p5-Try-Tiny
 
 # Only for test target
-BUILD_DEPENDS+=	p5-PathTools-[0-9]*:../../devel/p5-PathTools
 BUILD_DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER # t/050_scala_style_mixin_composition.t
 BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Simple>=0.88:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output # t/310_inline_structor.t
 BUILD_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace # t/312_anon_class_leak.t
 
