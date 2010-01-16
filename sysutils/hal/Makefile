@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/12/27 16:17:33 abs Exp $
+# $NetBSD: Makefile,v 1.44 2010/01/16 14:46:36 heinz Exp $
 
 DISTNAME=		hal-0.5.11
 PKGREVISION=		26
@@ -90,6 +90,8 @@ FILES_SUBST+=		HAL_USER=${HAL_USER}
 FILES_SUBST+=		HAL_GROUP=${HAL_GROUP}
 
 PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+
+TEST_TARGET=		check
 
 post-extract:
 	${CP} -r ${FILESDIR}/hald-netbsd ${WRKSRC}/hald/netbsd
