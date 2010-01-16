@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.606 2009/12/14 00:49:30 snj Exp $
+# $NetBSD: Makefile,v 1.607 2010/01/16 11:44:37 sborrill Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -350,6 +350,7 @@ SUBDIR+=	wmavgload
 SUBDIR+=	wmfire
 SUBDIR+=	wmfstatus
 SUBDIR+=	wmweather
+SUBDIR+=	wmzcalock
 SUBDIR+=	worker
 SUBDIR+=	wterm
 SUBDIR+=	wxGTK24
