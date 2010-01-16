@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.107 2010/01/16 15:14:39 sno Exp $
+$NetBSD: CHANGES-2010,v 1.108 2010/01/16 15:16:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -144,3 +144,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-ExtUtils-MakeMaker to 6.56 [sno 2010-01-16]
 	Updated devel/p5-ExtUtils-Manifest to 1.58 [sno 2010-01-16]
 	Updated devel/p5-ExtUtils-ParseXS to 2.22 [sno 2010-01-16]
+	Updated devel/p5-Path-Class to 0.18 [sno 2010-01-16]
