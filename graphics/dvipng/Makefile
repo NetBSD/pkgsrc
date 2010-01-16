@@ -1,28 +1,20 @@
-# $NetBSD: Makefile,v 1.8 2009/10/14 07:22:46 tron Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/16 03:31:25 minskim Exp $
 
-DISTNAME=	dvipng-1.11
-PKGREVISION=	4
+DISTNAME=	dvipng-1.12
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvipng/}
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://savannah.nongnu.org/projects/dvipng/
 COMMENT=	Convert TeX DVI files to PNG or GIF
-
-DEPENDS+=	teTeX-bin>=3.0nb27:../../print/teTeX3-bin
+LICENSE=	gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		yes
-INFO_FILES=		yes
-USE_TOOLS+=		makeinfo
+GNU_CONFIGURE=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-# DragonFly has stripped makeinfo in the base - without texi2dvi.
-.if ${OPSYS} == "DragonFly"
-BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
-.endif
+BUILD_TARGET=	dvipng
+INSTALL_TARGET=	install-dvigif
 
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
