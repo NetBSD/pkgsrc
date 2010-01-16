@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/01/16 04:43:19 minskim Exp $
+
+--- texmf/scripts/texlive/lua/texlive/tlpdb.tlu.orig	2008-07-22 01:58:59.000000000 -0700
++++ texmf/scripts/texlive/lua/texlive/tlpdb.tlu
+@@ -36,6 +36,7 @@
+ --  tlpobj.runsize string
+ --  tlpobj.depend = table indexed by numbers
+ --  tlpobj.execute = table indexed by numbers
++--  tlpobj.relocated = string
+ --
+ --*-Lua-*-
+ 
+@@ -225,6 +226,10 @@ function read_tlpdb(root)
+             tlpobj.execute = {}
+           end
+           table.insert(tlpobj.execute,rest)
++	elseif first == "relocated" then
++	  tlpobj.relocated = rest
++	elseif first == "postaction" then
++	  -- Ignore postaction
+         else
+           print("first = "..first)
+           io.stderr:write('Error reading tlpdb: unknown directive in line\n>>'..line.."<<\n")
