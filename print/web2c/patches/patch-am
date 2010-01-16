@@ -1,32 +1,14 @@
-$NetBSD: patch-am,v 1.1.1.1 2009/02/01 06:05:58 minskim Exp $
+$NetBSD: patch-am,v 1.2 2010/01/16 03:15:38 minskim Exp $
 
---- man/Makefile.in.orig	2008-01-30 06:56:21.000000000 -0800
+--- man/Makefile.in.orig	2009-07-23 11:43:28.000000000 -0700
 +++ man/Makefile.in
-@@ -32,19 +32,15 @@ localmodes = modes
- # The programs are listed in alphabetical order.
- # 
- manfiles=		\
--	amstex.1	\
- 	bibtex.1	\
- 	cweb.1		\
- 	dmp.1		\
- 	dvicopy.1	\
- 	dvitomp.1	\
- 	dvitype.1	\
--	eplain.1	\
--	etex.1		\
- 	gftodvi.1	\
- 	gftopk.1	\
- 	gftype.1	\
--	latex.1		\
- 	makempx.1	\
- 	mf.1		\
- 	mft.1		\
-@@ -53,7 +49,6 @@ manfiles=		\
- 	newer.1		\
- 	omega.1		\
- 	patgen.1	\
--	pdfetex.1	\
- 	pdftex.1	\
- 	pdftosrc.1	\
- 	pktogf.1	\
+@@ -289,8 +289,7 @@ x_tool_libs = @x_tool_libs@
+ man_sources = $(bootstrap_man_sources) $(am__append_1) $(am__append_2) \
+ 	$(am__append_3) $(am__append_4) $(am__append_5) \
+ 	$(am__append_6) $(am__append_7) $(am__append_8) \
+-	$(am__append_9) $(am__append_10) $(am__append_11) \
+-	$(misc_man_sources)
++	$(am__append_9) $(am__append_10) $(am__append_11)
+ EXTRA_DIST = $(bootstrap_man_sources) $(web_man_sources) tex.man \
+ 	mf.man mpost.man etex.man $(pdftex_man_sources) luatex.man \
+ 	aleph.man $(misc_man_sources) amslatex.min initex.min \
