@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2009/06/09 21:31:04 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/16 03:47:31 minskim Exp $
 
-DISTNAME=	texlive-20080816-source
-PKGNAME=	dvipsk-5.97
-PKGREVISION=	2
+DISTNAME=	texlive-20091011-source
+PKGNAME=	dvipsk-5.98
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
-EXTRACT_SUFX=	.tar.lzma
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.radicaleye.com/dvips.html
@@ -14,12 +13,10 @@ COMMENT=	DVI-to-PostScript translator
 CONFLICTS+=	teTeX-bin<3.0nb24
 CONFLICTS+=	teTeX-texmf<3.0nb9
 BUILD_DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
-DEPENDS+=	tex-bin-dvipsk-[0-9]*:../../print/tex-bin-dvipsk
+DEPENDS+=	tex-dvips>=2009.16376:../../print/tex-dvips
 
-EXTRACT_ELEMENTS=	${DISTNAME}/texk/dvipsk \
-			${DISTNAME}/texk/make \
-			${DISTNAME}/texk/install.sh \
-			${DISTNAME}/texk/mkinstalldirs
+EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
+			${DISTNAME}/texk/dvipsk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -28,18 +25,9 @@ INFO_FILES=	yes
 USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/dvipsk
 
-FIND_PREFIX:=	TETEX_PREFIX=texlive-tetex BIN_DVIPSK_PREFIX=tex-bin-dvipsk
-.include "../../mk/find-prefix.mk"
-
-MAKE_ENV+=	KPATHSEA_PREFIX=${BUILDLINK_PREFIX.kpathsea}
-MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q} \
-		kpathsea_parent=${BUILDLINK_PREFIX.kpathsea}/include \
-		kpathsea_srcdir=${BUILDLINK_PREFIX.kpathsea}/include/kpathsea \
-		kpathsea=${BUILDLINK_PREFIX.kpathsea}/lib/libkpathsea.la
-
-INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
-			infodir=${DESTDIR}${PREFIX}/${PKGINFODIR} \
-			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--with-system-kpathsea \
+		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
+		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
 
 PKG_SYSCONFSUBDIR=	texmf
 
@@ -62,12 +50,12 @@ TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 post-build:
 	${MKDIR} -p ${WRKSRC}/texmf/dvips/config
-	${CP} ${BIN_DVIPSK_PREFIX}/share/texmf/dvips/config/config.ps \
+	${CP} ${LOCALBASE}/share/texmf/dvips/config/config.ps \
 		${WRKSRC}/texmf/dvips/config
-	env TEXMFCONFIG=${BIN_DVIPSK_PREFIX}/share/texmf \
+	env TEXMFCONFIG=${LOCALBASE}/share/texmf \
 		TFC_TEXMFCONFIG=${WRKSRC}/texmf \
 		configPsFile=${WRKSRC}/config.ps \
-		${TETEX_PREFIX}/bin/texconfig dvips paper ${LOWER_PAPERSIZE}
+		${LOCALBASE}/bin/texconfig dvips paper ${LOWER_PAPERSIZE}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/texmf/dvips/config/config.ps \
