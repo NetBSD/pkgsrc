@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/05/03 13:03:37 wiz Exp $
+$NetBSD: distinfo,v 1.4 2010/01/16 17:45:54 wiz Exp $
 
-SHA1 (liblinebreak-1.2.tar.gz) = fe7f466fbf5c01bd01d9e549f3f954d985e307e7
-RMD160 (liblinebreak-1.2.tar.gz) = 0dc528ee7fbfc770ef120d83a26400e0f69c7fbf
-Size (liblinebreak-1.2.tar.gz) = 370221 bytes
+SHA1 (liblinebreak-2.0.tar.gz) = 8b97931e4f4645da933091ac9d6a4d87fb9b7350
+RMD160 (liblinebreak-2.0.tar.gz) = 1c2becdb8d1f05ba397045b413a02b3a026a4047
+Size (liblinebreak-2.0.tar.gz) = 397689 bytes
