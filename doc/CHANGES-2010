@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.63 2010/01/16 03:34:20 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.64 2010/01/16 03:36:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -94,3 +94,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/makeindexk to 2.15nb2 [minskim 2010-01-16]
 	Updated graphics/dvipng to 1.12 [minskim 2010-01-16]
 	Updated fonts/gsftopkk to 1.19.2nb1 [minskim 2010-01-16]
+	Updated fonts/ps2pkm to 1.5nb1 [minskim 2010-01-16]
