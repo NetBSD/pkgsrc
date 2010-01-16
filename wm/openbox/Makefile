@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.57 2010/01/10 16:20:10 snj Exp $
+# $NetBSD: Makefile,v 1.58 2010/01/16 23:33:25 snj Exp $
 
 DISTNAME=	openbox-3.4.10
 CATEGORIES=	wm x11
-MASTER_SITES=	http://icculus.org/openbox/releases/
-# PR pkg/36489
-MASTER_SITES+=	http://offload1.icculus.org/openbox/releases/
+MASTER_SITES=	http://openbox.org/dist/openbox/
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://icculus.org/openbox/
+HOMEPAGE=	http://openbox.org/
 COMMENT=	Standards compliant, light-weight and extensible window manager
 
 DEPENDS+=		vera-ttf>=1.10:../../fonts/vera-ttf
