@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.302 2010/01/06 18:21:44 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.303 2010/01/16 02:16:35 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -219,6 +219,8 @@ LOWER_VENDOR?=		mandrake
 LOWER_VENDOR?=		redhat
 .  elif exists(/etc/slackware-version)
 LOWER_VENDOR?=		slackware
+.  elif exists(/etc/ssdlinux_version)
+LOWER_VENDOR?=		ssd
 .  elif ${LOWER_ARCH} == "i386"
 LOWER_VENDOR?=          pc
 .  endif
