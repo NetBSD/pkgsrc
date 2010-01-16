@@ -1,0 +1,3 @@
+Acme::PlayCode provides some code transformations via plugins to convert
+existing code into code with lesser risk of typing errors, e.g.
+'if($a == 5)' -> 'if(5 == $a)' to avoid typo like 'if($a = 5)'.
