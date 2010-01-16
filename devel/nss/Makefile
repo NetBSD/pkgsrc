@@ -1,28 +1,18 @@
-# $NetBSD: Makefile,v 1.33 2009/08/19 15:01:21 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2010/01/16 14:41:25 tnn Exp $
 
-DISTNAME=		nss-3.11.5
+.include "../../devel/xulrunner/dist.mk"
+PKGNAME=		${DISTNAME:S/firefox-3.5/nss-${NSS_RELEASE}/:S/.source//}
+NSS_RELEASE=		3.12.4.5
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_3_11_5_RTM/src/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
 COMMENT=		Libraries to support development of security-enabled applications
 
-BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
-
 PKG_DESTDIR_SUPPORT=	user-destdir
+CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 
-BUILD_DIRS=		mozilla/security/nss
-
-USE_TOOLS+=		awk gmake pax perl
-DIST=			${WRKSRC}/mozilla/dist
-BUILD_TARGET=		nss_build_all
-MAKE_ENV+=		LD_LIBS="-L${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/nss"
-MAKE_ENV+=		LIBRUNPATH=${PREFIX}/lib BUILD_OPT=1
-
-INSTALLATION_DIRS=	include/nss lib/nss lib/pkgconfig
-
-MAKE_JOBS_SAFE=		no
+USE_TOOLS+=		gmake perl pax
 
 .include		"../../mk/bsd.prefs.mk"
 
@@ -36,18 +26,36 @@ SO_SUFFIX=		so.1.0
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 .if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
-MAKEFLAGS+=	NS_USE_GCC=YES
+MAKE_ENV+=	NS_USE_GCC=YES
 .endif
 
-.if ${OPSYS} == "Linux"
-.  if defined(ABI) && ${ABI} == "64"
-MAKE_FLAGS+=		USE_64=1
+.for platform in ${LP64PLATFORMS}
+.  if ${MACHINE_PLATFORM:M${platform}}
+MAKE_ENV+=	USE_64=1
 .  endif
-.endif
+.endfor
+
+MAKE_ENV+=	BUILD_OPT=1
+#MAKE_ENV+=	OPTIMIZER=${CFLAGS:Q}
+MAKE_ENV+=	INCLUDES=-I${BUILDLINK_PREFIX.nspr}/include/nspr
+MAKE_ENV+=	NSS_USE_SYSTEM_SQLITE=1
+MAKE_ENV+=	EXTRA_SHARED_LIBS="-Wl,-R${BUILDLINK_PREFIX.nspr}/lib/nspr -Wl,-R,${PREFIX}/lib/nss -L${BUILDLINK_PREFIX.nspr}/lib/nspr -lplc4 -lplds4 -lnspr4"
 
 pre-configure:
-	${CP} ${FILESDIR}/DragonFly.mk \
-		${WRKSRC}/mozilla/security/coreconf/
+# sanity check: make sure the nss release is what we think it is.
+	@set -e; if [ '"${NSS_RELEASE}"' !=			\
+	  "`${AWK} '/NSS_VERSION/ {print $$3}' <		\
+	  ${WRKSRC}/security//nss/lib/nss/nss.h`" ]; then	\
+	  ${ECHO} "package is out of date";			\
+	  exit 1;						\
+	fi
+
+do-build:
+	cd ${WRKSRC}/security/nss && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
+	  build_coreconf build_dbm all
+
+INSTALLATION_DIRS=	include/nss lib/nss lib/pkgconfig
+DIST=	${WRKSRC}/dist
 
 do-install:
 	(cd ${DIST}/public && pax -Lrwpe . ${DESTDIR}${PREFIX}/include/nss/ )
@@ -57,34 +65,14 @@ do-install:
 	{ ${ECHO} "Name: NSS"; \
 	  ${ECHO} "Description: Mozilla Network Security Services"; \
 	  ${ECHO} "Version: ${PKGVERSION}"; \
-	  ${ECHO} "Cflags: -I${PREFIX}/include/nss"; \
+	  ${ECHO} "Requires: nspr >= 4.8.2"; \
+	  ${ECHO} "Cflags: -I${PREFIX}/include/nss/nss -I${PREFIX}/include/nss"; \
 	  ${ECHO} "Libs: -L${PREFIX}/lib/nss" \
 	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss" \
 	      "-lnss3 -lsmime3 -lssl3 -lsoftokn3 "${BUILDLINK_LIBS.pthread:Q}; \
 	} >${DESTDIR}${PREFIX}/lib/pkgconfig/nss.pc
 
-# The exact set of libfreebl* libs built and installed depends on the
-# operating system and platform.  For example, on solaris/sparc you might
-# get
-#  libfreebl_32fpu_3.so
-#  libfreebl_32int_3.so
-#  libfreebl_32int64_3.so
-# and on others
-#  libfreebl3.so
-# Since this has been a continual problem in many mozilla packages, just
-# do that part dynamically rather than trying to always keep our conditionals
-# up to date.
-PLIST_SRC=	${WRKDIR}/PLIST
-post-install:
-	${AWK} '/@comment libfreebl/ {exit} {print}' ${.CURDIR}/PLIST > ${PLIST_SRC}
-	ls ${DESTDIR}${PREFIX}/lib/nss/libfreebl*.${SO_SUFFIX} | ${SORT} | \
-		${SED} 's;${DESTDIR}${PREFIX}/;;g' >> ${PLIST_SRC}
-	${AWK} 'ok == 1 {print} /@comment libfreebl/ {ok=1}' ${.CURDIR}/PLIST >> ${PLIST_SRC}
-	cd ${DESTDIR}${PREFIX}/include/nss && \
-		${CHMOD} ${SHAREMODE} nss/*.h dbm/*.h nss/*.api
-
-BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.4.1nb2
-
 .include "../../devel/nspr/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
