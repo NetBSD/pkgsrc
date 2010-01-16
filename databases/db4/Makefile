@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2009/01/21 15:44:32 drochner Exp $
+# $NetBSD: Makefile,v 1.58 2010/01/16 17:57:37 wiz Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (4.n -> 4.(n+1))
@@ -35,10 +35,6 @@ CONFIGURE_ARGS+=	--enable-rpc
 CONFIGURE_ARGS+=	--enable-compat185
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db4
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db4_,
-
-# NetBSD-sparc64-1.6*'s f77 makes configure failing and as f77 is not
-# needed for this package the following does no harm on other platform.
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 # Along with a hack in patch-ab, this forces shlib detection via
 # the pkgsrc-supplied libtool only.
