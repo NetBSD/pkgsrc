@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2009/02/03 19:59:41 shattered Exp $
+# $NetBSD: Makefile.common,v 1.25 2010/01/16 17:57:38 wiz Exp $
 #
 # used by x11/xmms-osd/Makefile
 
@@ -16,9 +16,6 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 SHLIBTOOL_OVERRIDE=	libtool-disable-static
-
-# Avoid an ICE on sparc64 with gcc2
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 SUBST_CLASSES+=		fixme
 SUBST_STAGE.fixme=	post-patch
