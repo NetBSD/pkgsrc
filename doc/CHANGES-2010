@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.181 2010/01/16 22:29:09 sno Exp $
+$NetBSD: CHANGES-2010,v 1.182 2010/01/16 22:39:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -210,3 +210,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Catalyst-Manual to 5.8003 [sno 2010-01-16]
 	Updated devel/p5-B-Utils to 0.11 [sno 2010-01-16]
 	Updated security/p5-Crypt-Rijndael to 1.08 [sno 2010-01-16]
+	Added devel/p5-Log-Any version 0.10 [sno 2010-01-16]
