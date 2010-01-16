@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/10/19 19:18:59 he Exp $
+# $NetBSD: Makefile,v 1.32 2010/01/16 23:37:49 heinz Exp $
 #
 
 DISTNAME=	XML-Parser-2.36
@@ -11,6 +11,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Parser/
 COMMENT=	Perl extension interface to James Clark's XML parser, expat
+LICENSE=	${PERL5_LICENSE}
 
 #TEST_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
