@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.151 2009/12/13 08:35:22 obache Exp $
+# $NetBSD: bootstrap,v 1.152 2010/01/16 02:16:35 obache Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -533,10 +533,11 @@ IRIX*)
 	fi
 	;;
 Linux)
-	if [ -f /etc/debian_version ]; then
-		DEBIAN=yes
+	if [ -f /etc/ssdlinux_version ]; then
+		root_group=wheel
+	else
+		root_group=root
 	fi
-	root_group=root
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no

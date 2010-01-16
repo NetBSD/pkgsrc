@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.34 2009/07/26 05:32:43 agc Exp $
+# $NetBSD: Linux.mk,v 1.35 2010/01/16 02:16:35 obache Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -23,7 +23,11 @@ MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
+.if exists(/etc/ssdlinux_version)
+ROOT_GROUP?=		wheel
+.else
 ROOT_GROUP?=		root
+.endif
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
