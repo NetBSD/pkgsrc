@@ -1,0 +1,4 @@
+Path::Class::File::Stat is a simple extension of Path::Class::File.
+Path::Class::File::Stat is useful in long-running programs (as under
+mod_perl) where you might have a file handle opened and want to check
+if the underlying file has changed.
