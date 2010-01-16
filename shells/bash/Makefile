@@ -1,21 +1,15 @@
-# $NetBSD: Makefile,v 1.48 2009/09/04 15:35:10 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2010/01/16 17:17:04 wiz Exp $
 
-BASH_VERSION=		4.0
-BASH_PATCHLEVEL=	28
+BASH_VERSION=		4.1
 
 DISTNAME=	bash-${BASH_VERSION}
-PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
+#PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
 
-PATCH_SITES=	${MASTER_SITES:=bash-4.0-patches/}
-PATCHFILES+=	bash40-001 bash40-002 bash40-003 bash40-004 bash40-005
-PATCHFILES+=	bash40-006 bash40-007 bash40-008 bash40-009 bash40-010
-PATCHFILES+=	bash40-011 bash40-012 bash40-013 bash40-014 bash40-015
-PATCHFILES+=	bash40-016 bash40-017 bash40-018 bash40-019 bash40-020
-PATCHFILES+=	bash40-021 bash40-022 bash40-023 bash40-024 bash40-025
-PATCHFILES+=	bash40-026 bash40-027 bash40-028
+#PATCH_SITES=	${MASTER_SITES:=bash-4.0-patches/}
+#PATCHFILES+=	bash40-001 bash40-002 bash40-003 bash40-004 bash40-005
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
