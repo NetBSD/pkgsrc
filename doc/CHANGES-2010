@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.56 2010/01/16 02:05:26 obache Exp $
+$NetBSD: CHANGES-2010,v 1.57 2010/01/16 03:07:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -87,3 +87,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/sendmail to 8.14.4 [jnemeth 2010-01-16]
 	Updated devel/libthai to 0.1.13 [obache 2010-01-16]
 	Updated fonts/vlgothic-ttf to 20091214 [obache 2010-01-16]
+	Updated print/kpathsea to 5.0.0nb3 [minskim 2010-01-16]
