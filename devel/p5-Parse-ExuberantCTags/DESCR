@@ -1,0 +1,2 @@
+This Perl module parses ctags files and handles both traditional ctags as
+well as extended ctags files such as produced with Exuberant ctags.
