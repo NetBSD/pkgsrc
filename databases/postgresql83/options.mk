@@ -1,8 +1,16 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/03/04 12:41:36 adam Exp $
+# $NetBSD: options.mk,v 1.2 2010/01/16 09:30:31 adam Exp $
 
 PKG_SUPPORTED_OPTIONS+=		# empty
 
 .include "../../mk/bsd.options.mk"
+
+###
+### LDAP authentication for the PostgreSQL backend.
+###
+.if !empty(PKG_OPTIONS:Mldap)
+.  include "../../databases/openldap-client/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ldap
+.endif
 
 ###
 ### PAM authentication for the PostgreSQL backend.
