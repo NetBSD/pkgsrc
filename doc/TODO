@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8843 2010/01/16 02:05:26 obache Exp $
+$NetBSD: TODO,v 1.8844 2010/01/16 03:31:56 minskim Exp $
 
 Suggested new packages
 ======================
@@ -537,7 +537,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o drivel-3.0.0
 	o drscheme-4.0.2
 	o dspam-3.9.0
-	o dvipng-1.12
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
