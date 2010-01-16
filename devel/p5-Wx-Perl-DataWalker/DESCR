@@ -1,0 +1,4 @@
+Wx::Perl::DataWalker implements a Wx::Frame subclass that shows a relatively
+simple Perl data structure browser. After opening such a frame and supplying
+it with a reference to an essentially arbitrary data structure, it can be
+visually browsed by double-clicking references.
