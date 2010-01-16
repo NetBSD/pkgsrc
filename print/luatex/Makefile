@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/09/19 23:08:16 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/16 03:19:07 minskim Exp $
 
-DISTNAME=	luatex-beta-0.40.2
+DISTNAME=	luatex-beta-0.40.6
 PKGNAME=	${DISTNAME:S/-beta//}
 CATEGORIES=	print
-MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/341/1275/
+MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/348/1318/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
@@ -89,6 +89,7 @@ CONFIGURE_ARGS+=--with-system-zlib \
 		--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include \
 		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
 CONFIGURE_DIRS+=. ./texk/web2c
+MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
 
 INSTALLATION_DIRS+=	bin
 
@@ -100,8 +101,11 @@ post-extract:
 	${RM} -rf ${WRKSRC}/texk/kpathsea
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/luatex ${DESTDIR}${PREFIX}/bin
-	${LN} -s luatex ${DESTDIR}${PREFIX}/bin/texlua
-	${LN} -s luatex ${DESTDIR}${PREFIX}/bin/texluac
+.for f in luatangle luatex
+	${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/${f} ${DESTDIR}${PREFIX}/bin
+.endfor
+.for f in texlua texluac
+	${LN} -s luatex ${DESTDIR}${PREFIX}/bin/${f}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
