@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/05/30 01:57:26 zafer Exp $
+# $NetBSD: Makefile,v 1.31.6.1 2010/01/16 20:32:14 spz Exp $
 
 DISTNAME=	opencdk-0.6.6
 CATEGORIES=	security devel
@@ -26,6 +26,12 @@ HTMLDIR=	${PREFIX}/share/doc/html/opencdk
 PKGCONFIG_OVERRIDE=	src/opencdk.pc.in
 
 INSTALLATION_DIRS=	${HTMLDIR} ${EGDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+LIBS+=	-lnsl
+.endif
 
 pre-install:
 	${INSTALL_DATA}	${WRKSRC}/doc/opencdk-api.html ${DESTDIR}${HTMLDIR}
