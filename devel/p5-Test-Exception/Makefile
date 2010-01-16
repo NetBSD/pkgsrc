@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/10/19 19:18:01 he Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/16 19:27:18 heinz Exp $
 #
 
 DISTNAME=		Test-Exception-0.27
@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-Exception/
 COMMENT=		Test exception based code
+LICENSE=		${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
