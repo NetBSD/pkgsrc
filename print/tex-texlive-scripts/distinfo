@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/16 04:43:19 minskim Exp $
+
+SHA1 (tex-texlive-scripts-2009.16483/texlive-scripts.tar.xz) = 1e021e6d3cef924a6d94659714ae32d297dc451a
+RMD160 (tex-texlive-scripts-2009.16483/texlive-scripts.tar.xz) = 692455addfc7faf58696552c0184b45299d32b5e
+Size (tex-texlive-scripts-2009.16483/texlive-scripts.tar.xz) = 40328 bytes
+SHA1 (patch-aa) = 6f8f348c11c5d8f98a59aa38f683b36fe0469e30
