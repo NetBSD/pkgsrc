@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2008/11/10 17:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2010/01/16 23:37:49 heinz Exp $
 
 DISTNAME=	gv-3.6.3
 PKGREVISION=	1
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gv/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gv/
 COMMENT=	PostScript and PDF previewer
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
