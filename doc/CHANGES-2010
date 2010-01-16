@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.137 2010/01/16 17:10:42 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.138 2010/01/16 17:17:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -166,3 +166,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/cdrtools to 2.01.01alpha72 [wiz 2010-01-16]
 	Updated devel/p5-Class-MOP to 0.97 [sno 2010-01-16]
 	Updated audio/ocp to 0.1.18 [wiz 2010-01-16]
+	Updated shells/bash to 4.1 [wiz 2010-01-16]
