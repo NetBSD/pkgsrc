@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.8 2009/05/26 12:27:12 he Exp $
+$NetBSD: patch-aa,v 1.9 2010/01/16 16:28:58 asau Exp $
 
 Extend which ports we accept to deal with.
 
---- configure.orig	2008-12-19 17:12:45.000000000 +0100
-+++ configure
-@@ -21017,7 +21017,7 @@ case "$host" in
+--- configure.orig	2009-12-31 15:41:51.000000000 +0300
++++ configure	2010-01-12 12:40:15.000000000 +0300
+@@ -12210,7 +12210,7 @@
    mips-sgi-irix5.* | mips-sgi-irix6.*)
  	TARGET=MIPS; TARGETDIR=mips
  	;;
 -  mips*-*-linux*)
 +  mips*-*-linux* | mips*-*-netbsd*)
+ 	# Support 128-bit long double for NewABI.
+ 	HAVE_LONG_DOUBLE='defined(__mips64)'
  	TARGET=MIPS; TARGETDIR=mips
- 	;;
- 
-@@ -21033,7 +21033,7 @@ case "$host" in
+@@ -12228,7 +12228,7 @@
    powerpc-*-aix* | rs6000-*-aix*)
  	TARGET=POWERPC_AIX; TARGETDIR=powerpc
  	;;
