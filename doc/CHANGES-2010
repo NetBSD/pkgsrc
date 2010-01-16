@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.135 2010/01/16 16:59:51 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.136 2010/01/16 17:08:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -164,3 +164,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-NYTProf to 3.01 [sno 2010-01-16]
 	Updated databases/p5-ORLite to 1.31 [sno 2010-01-16]
 	Updated sysutils/cdrtools to 2.01.01alpha72 [wiz 2010-01-16]
+	Updated devel/p5-Class-MOP to 0.97 [sno 2010-01-16]
