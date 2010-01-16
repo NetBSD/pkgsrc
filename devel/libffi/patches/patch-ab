@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2009/09/21 00:33:51 seb Exp $
+$NetBSD: patch-ab,v 1.4 2010/01/16 16:28:58 asau Exp $
 
---- src/x86/ffitarget.h.orig	2008-02-14 17:24:06.000000000 -0800
-+++ src/x86/ffitarget.h
-@@ -54,10 +54,10 @@ typedef enum ffi_abi {
- #endif
+--- src/x86/ffitarget.h.orig	2009-12-29 18:22:26.000000000 +0300
++++ src/x86/ffitarget.h	2010-01-12 12:42:54.000000000 +0300
+@@ -74,10 +74,10 @@
+ #else
  
    /* ---- Intel x86 and AMD x86-64 - */
 -#if !defined(X86_WIN32) && (defined(__i386__) || defined(__x86_64__))

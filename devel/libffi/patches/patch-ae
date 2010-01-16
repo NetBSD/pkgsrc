@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2009/05/26 12:27:12 he Exp $
+$NetBSD: patch-ae,v 1.2 2010/01/16 16:28:58 asau Exp $
 
 Make a minimal adjustment to support the various NetBSD mips ports.
 
---- src/mips/ffitarget.h.orig	2008-02-15 19:43:40.000000000 +0100
-+++ src/mips/ffitarget.h
-@@ -39,6 +39,11 @@
+--- src/mips/ffitarget.h.orig	2009-12-29 18:22:26.000000000 +0300
++++ src/mips/ffitarget.h	2010-01-12 12:45:23.000000000 +0300
+@@ -41,6 +41,11 @@
+ #  ifndef _ABIO32
  #    define _ABIO32 _MIPS_SIM_ABI32
  #  endif
- #endif
 +#ifdef __NetBSD__
 +/* Let's cheat a bit... */   
 +#  define _ABIO32 1     
