@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/01 21:49:54 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/16 19:27:18 heinz Exp $
 
 DISTNAME=	Net-LibIDN-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-LibIDN/
 COMMENT=	Perl bindings for GNU Libidn
+LICENSE=	artistic
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir

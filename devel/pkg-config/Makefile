@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/04/13 17:39:57 cube Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/16 19:27:18 heinz Exp $
 #
 
 DISTNAME=	pkg-config-0.23
@@ -9,6 +9,7 @@ MASTER_SITES=	http://pkgconfig.freedesktop.org/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pkgconfig.freedesktop.org/
 COMMENT=	System for managing library compile/link flags
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
