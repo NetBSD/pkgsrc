@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.87 2010/01/16 10:54:17 abs Exp $
+$NetBSD: CHANGES-2010,v 1.88 2010/01/16 11:26:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -120,3 +120,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added graphics/tex-dvipng-doc version 1.12 [minskim 2010-01-16]
 	Updated x11/lesstif to 0.95.2 [adam 2010-01-16]
 	Added www/py-django-registration version 0.8a1 [abs 2010-01-16]
+	Updated x11/xf86-video-vmware to 10.16.9 [obache 2010-01-16]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8844 2010/01/16 03:31:56 minskim Exp $
+$NetBSD: TODO,v 1.8845 2010/01/16 11:26:12 obache Exp $
 
 Suggested new packages
 ======================
@@ -1470,7 +1470,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-tga-1.2.1
 	o xf86-video-tseng-1.2.3
 	o xf86-video-vesa-2.3.0
-	o xf86-video-vmware-10.16.9
 	o xf86-video-voodoo-1.2.2
 	o xf86-video-wsfb-0.3.0
 	o xf86-video-xgi-1.5.1 [unpackaged]
