@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/01/16 03:48:32 minskim Exp $
+
+--- bin/pkfix.orig	2009-03-23 10:15:15.000000000 -0700
++++ bin/pkfix
+@@ -1,5 +1,4 @@
+-eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}' && eval 'exec perl -S $0 $argv:q'
+-    if 0;
++#! /usr/bin/perl
+ use strict;
+ $^W=1; # turn warning on
+ #
+@@ -117,9 +116,9 @@ my $PRT = \*STDOUT;
+ 
+ ### option variables
+ my @bool = ("false", "true");
+-$::opt_tex        = "tex";
+-$::opt_dvips      = "dvips";
+-$::opt_kpsewhich  = "kpsewhich --progname $project";
++$::opt_tex        = "@TEX@";
++$::opt_dvips      = "@DVIPS@";
++$::opt_kpsewhich  = "@KPSEWHICH@ --progname $project";
+ $::opt_options    = "-Ppdf -G0";
+ $::opt_usetex     = 0;
+ $::opt_help       = 0;
