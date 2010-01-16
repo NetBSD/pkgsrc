@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2010/01/16 03:52:41 minskim Exp $
+
+--- data/dvipdfmx.cfg.orig	2009-05-18 17:42:35.000000000 -0700
++++ data/dvipdfmx.cfg
+@@ -134,7 +134,7 @@ P  0x003C
+ %% than A0, and their llx=lly=0, you can use "-dEPSCrop" instead of
+ %% "-sPAPERSIZE=a0"
+ %%
+-D  "ps2pdf -dCompatibilityLevel=%v -sPAPERSIZE=a0 -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode %i %o"
++D  "@PS2PDF@ -dCompatibilityLevel=%v -sPAPERSIZE=a0 -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode %i %o"
+ 
+ %% Frank Siegert's PStill:
+ %D  "/usr/local/bin/pstill -c -o %o %i"
