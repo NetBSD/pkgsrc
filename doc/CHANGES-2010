@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.149 2010/01/16 17:52:25 sno Exp $
+$NetBSD: CHANGES-2010,v 1.150 2010/01/16 17:54:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -178,3 +178,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-Role-Parameterized to 0.15 [sno 2010-01-16]
 	Updated devel/p5-MooseX-Role-WithOverloading to 0.05 [sno 2010-01-16]
 	Updated devel/p5-MooseX-Singleton to 0.22 [sno 2010-01-16]
+	Updated devel/p5-MooseX-Types to 0.21 [sno 2010-01-16]
