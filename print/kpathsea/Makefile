@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2009/09/20 18:50:03 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/16 03:06:56 minskim Exp $
 
-DISTNAME=	luatex-beta-0.40.2
+DISTNAME=	texlive-20091011-source
 PKGNAME=	kpathsea-5.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
-MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/341/1275/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/kpathsea/
@@ -15,9 +15,8 @@ LICENSE=	gnu-lgpl-v2.1
 CONFLICTS+=	teTeX-bin<=3.0nb21
 CONFLICTS+=	teTeX-texmf<=3.0nb5
 
-EXTRACT_ELEMENTS=	${DISTNAME}/source/build-aux \
-			${DISTNAME}/source/texk/kpathsea \
-			${DISTNAME}/source/texk/make
+EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
+			${DISTNAME}/texk/kpathsea
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -25,7 +24,7 @@ GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
-WRKSRC=		${WRKDIR}/${DISTNAME}/source/texk/kpathsea
+WRKSRC=		${WRKDIR}/${DISTNAME}/texk/kpathsea
 
 MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
 
