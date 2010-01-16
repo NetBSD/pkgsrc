@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.170 2010/01/16 21:35:11 sno Exp $
+$NetBSD: CHANGES-2010,v 1.171 2010/01/16 21:37:07 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -199,3 +199,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/sdlmame to 0.136 [wiz 2010-01-16]
 	Added editors/p5-Padre-Plugin-Autoformat version 1.1.2 [sno 2010-01-16]
 	Added editors/p5-Padre-Plugin-Catalyst version 0.07 [sno 2010-01-16]
+	Added editors/p5-Padre-Plugin-DataWalker version 0.02 [sno 2010-01-16]
