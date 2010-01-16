@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.110 2010/01/16 15:29:22 sno Exp $
+$NetBSD: CHANGES-2010,v 1.111 2010/01/16 15:33:08 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -147,3 +147,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Path-Class to 0.18 [sno 2010-01-16]
 	Updated www/p5-URI to 1.52 [sno 2010-01-16]
 	Updated sysutils/pstree to 2.33 [sno 2010-01-16]
+	Updated net/p5-RPC-XML to 0.72 [sno 2010-01-16]
