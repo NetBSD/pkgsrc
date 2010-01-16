@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2009/09/02 08:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2010/01/16 03:45:08 minskim Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print japanese
 MASTER_SITES=	ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/tetex/ \
 		ftp://ftp.ring.gr.jp/pub/text/TeX/ascii-ptex/tetex/
@@ -27,7 +27,7 @@ SITES.mendexk2.6d.tar.gz= \
 DEPENDS+=	ja-ptex-share>=2.4nb1:../../print/ja-ptex-share
 DEPENDS+=	teTeX-bin>=3.0nb26:../../print/teTeX3-bin
 DEPENDS+=	teTeX-texmf>=3.0nb10:../../print/teTeX3-texmf
-DEPENDS+=	tex-bin-dvipsk-[0-9]*:../../print/tex-bin-dvipsk
+DEPENDS+=	tex-dvips-[0-9]*:../../print/tex-dvips
 
 .include "../../print/teTeX3-bin/Makefile.common"
 
