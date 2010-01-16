@@ -1,13 +1,13 @@
-$NetBSD: patch-ar,v 1.13 2005/06/30 15:28:45 adam Exp $
+$NetBSD: patch-ar,v 1.14 2010/01/16 09:15:25 adam Exp $
 
---- doc/www.lesstif.org/images/Makefile.in.orig	2005-03-31 19:44:59.000000000 +0000
+--- doc/www.lesstif.org/images/Makefile.in.orig	2009-05-27 14:08:06.000000000 +0000
 +++ doc/www.lesstif.org/images/Makefile.in
-@@ -253,7 +253,7 @@ EXTRA_DIST = $(DATA)
+@@ -261,7 +261,7 @@ EXTRA_DIST = $(DATA)
  # Lets put the informational stuff in a sub directory to avoid
  # polluting /usr/local for default installs.
  #
 -rootdir = $(prefix)/LessTif
 +rootdir = $(prefix)/share/lesstif
- docdir = $(rootdir)/doc
  imagesdir = $(docdir)/images
  images_DATA = hungry.png \
+ 		lesstif-realsmall.png lesstif-small.png lesstif.png \

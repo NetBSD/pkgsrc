@@ -1,8 +1,8 @@
-$NetBSD: patch-bm,v 1.7 2004/09/28 12:52:14 adam Exp $
+$NetBSD: patch-bm,v 1.8 2010/01/16 09:15:25 adam Exp $
 
---- lib/config/Makefile.in.orig	2004-09-26 14:15:06.000000000 +0000
+--- lib/config/Makefile.in.orig	2009-05-27 14:08:11.000000000 +0000
 +++ lib/config/Makefile.in
-@@ -251,11 +251,11 @@ xmVer = @xmVer@
+@@ -259,11 +259,11 @@ xmVer = @xmVer@
  #
  MAINTAINERCLEANFILES = Makefile.in
  bin_SCRIPTS = mxmkmf
