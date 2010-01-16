@@ -1,0 +1,2 @@
+This module allows accessing the perlapi documentation for multiple
+releases of perl as an index (a hash).
