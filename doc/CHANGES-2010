@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.57 2010/01/16 03:07:43 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.58 2010/01/16 03:16:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -88,3 +88,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libthai to 0.1.13 [obache 2010-01-16]
 	Updated fonts/vlgothic-ttf to 20091214 [obache 2010-01-16]
 	Updated print/kpathsea to 5.0.0nb3 [minskim 2010-01-16]
+	Updated print/web2c to 2009 [minskim 2010-01-16]
