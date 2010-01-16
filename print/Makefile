@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.318 2010/01/16 05:52:42 minskim Exp $
+# $NetBSD: Makefile,v 1.319 2010/01/16 05:55:54 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -152,8 +152,6 @@ SUBDIR+=	tex-bagpipetex
 SUBDIR+=	tex-bibtex
 SUBDIR+=	tex-bibtex-doc
 SUBDIR+=	tex-bin-dvipdfm
-SUBDIR+=	tex-bin-dvipsk
-SUBDIR+=	tex-bin-dvipsk-doc
 SUBDIR+=	tex-bin-kotex
 SUBDIR+=	tex-bin-kpathsea
 SUBDIR+=	tex-bin-latex
