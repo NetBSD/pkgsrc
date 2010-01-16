@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1275 2010/01/16 15:38:40 sno Exp $
+# $NetBSD: Makefile,v 1.1276 2010/01/16 16:06:42 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -716,6 +716,7 @@ SUBDIR+=	p5-Module-Dependency
 SUBDIR+=	p5-Module-ExtractUse
 SUBDIR+=	p5-Module-Find
 SUBDIR+=	p5-Module-Install
+SUBDIR+=	p5-Module-Install-PadrePlugin
 SUBDIR+=	p5-Module-Install-RTx
 SUBDIR+=	p5-Module-Install-Substitute
 SUBDIR+=	p5-Module-Load
@@ -794,6 +795,7 @@ SUBDIR+=	p5-Params-Util
 SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Parse-CPAN-Meta
 SUBDIR+=	p5-Parse-ErrorString-Perl
+SUBDIR+=	p5-Parse-ExuberantCTags
 SUBDIR+=	p5-Parse-Method-Signatures
 SUBDIR+=	p5-Parse-RecDescent
 SUBDIR+=	p5-Parse-Yapp
@@ -802,6 +804,7 @@ SUBDIR+=	p5-Path-Class
 SUBDIR+=	p5-Path-Class-File-Stat
 SUBDIR+=	p5-Path-Dispatcher
 SUBDIR+=	p5-PathTools
+SUBDIR+=	p5-Perl-APIReference
 SUBDIR+=	p5-Perl-Critic
 SUBDIR+=	p5-Perl-MinimumVersion
 SUBDIR+=	p5-Perl-Tidy
@@ -952,6 +955,7 @@ SUBDIR+=	p5-VCP-Dest-svk
 SUBDIR+=	p5-Variable-Magic
 SUBDIR+=	p5-Want
 SUBDIR+=	p5-WeakRef
+SUBDIR+=	p5-Wx-Perl-DataWalker
 SUBDIR+=	p5-XSLoader
 SUBDIR+=	p5-accessors
 SUBDIR+=	p5-aliased
@@ -973,6 +977,7 @@ SUBDIR+=	p5-namespace-clean
 SUBDIR+=	p5-pango
 SUBDIR+=	p5-parent
 SUBDIR+=	p5-perl-headers
+SUBDIR+=	p5-pip
 SUBDIR+=	p5-prefork
 SUBDIR+=	p5-sapnwrfc
 SUBDIR+=	p5-signatures
