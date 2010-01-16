@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2009/09/20 09:39:45 sno Exp $
+# $NetBSD: Makefile,v 1.56 2010/01/16 03:59:06 minskim Exp $
 
 DISTNAME=	teTeX-3.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print meta-pkgs
 MASTER_SITES=	# empty
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Thomas Esser's TeX distribution for UNIX compatible systems
 
 DEPENDS+=	dviljk-[0-9]*:../../print/dviljk
-DEPENDS+=	dvipdfm-[0-9]*:../../print/dvipdfm
+DEPENDS+=	dvipdfmx-[0-9]*:../../print/dvipdfmx
 DEPENDS+=	dvipng-[0-9]*:../../graphics/dvipng
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	gsftopkk-[0-9]*:../../fonts/gsftopkk
