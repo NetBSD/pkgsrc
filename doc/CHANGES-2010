@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.94 2010/01/16 14:19:48 sno Exp $
+$NetBSD: CHANGES-2010,v 1.95 2010/01/16 14:43:01 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -122,7 +122,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/lesstif to 0.95.2 [adam 2010-01-16]
 	Added www/py-django-registration version 0.8a1 [abs 2010-01-16]
 	Updated x11/xf86-video-vmware to 10.16.9 [obache 2010-01-16]
-	Added x11/wmzcalock version 0.1 [sborrill 2010-01-16]
+	Added time/wmzcalock version 0.1 [sborrill 2010-01-16]
 	Added devel/p5-ExtUtils-XSpp version 0.05 [sno 2010-01-16]
 	Added devel/p5-CPAN-Checksums version 2.04 [sno 2010-01-16]
 	Added devel/p5-CPAN-Inject version 0.11 [sno 2010-01-16]
