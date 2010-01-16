@@ -1,0 +1,5 @@
+This plugin is intended to extend Padre's support for editing XS and
+C-using-perlapi.
+
+Currently the plugin implements limited syntax highlighting and calltips
+using a configurable version of the perlapi.
