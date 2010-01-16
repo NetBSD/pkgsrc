@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.133 2010/01/16 16:45:53 sno Exp $
+$NetBSD: CHANGES-2010,v 1.134 2010/01/16 16:48:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -162,3 +162,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-PPI to 1.208 [sno 2010-01-16]
 	Updated games/rftg to 0.6.1 [wiz 2010-01-16]
 	Updated devel/p5-Devel-NYTProf to 3.01 [sno 2010-01-16]
+	Updated databases/p5-ORLite to 1.31 [sno 2010-01-16]
