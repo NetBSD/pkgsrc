@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.177 2010/01/16 21:44:20 sno Exp $
+$NetBSD: CHANGES-2010,v 1.178 2010/01/16 21:45:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -206,3 +206,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added editors/p5-Padre-Plugin-Git version 0.01 [sno 2010-01-16]
 	Added editors/p5-Padre-Plugin-HG version 0.14 [sno 2010-01-16]
 	Added editors/p5-Padre-Plugin-SVN version 0.04 [sno 2010-01-16]
+	Added editors/p5-Padre-Plugin-SpellCheck version 1.1.2 [sno 2010-01-16]
