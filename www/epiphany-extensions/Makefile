@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2009/08/26 19:58:25 sno Exp $
+# $NetBSD: Makefile,v 1.55 2010/01/16 14:56:18 tnn Exp $
 #
 
-DISTNAME=	epiphany-extensions-2.26.0
-PKGREVISION=	1
+DISTNAME=	epiphany-extensions-2.28.1
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -33,7 +32,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.5
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
-BUILDLINK_API_DEPENDS.epiphany+=	epiphany>=2.26.0
 .include "../../www/epiphany/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.11.6
 .include "../../x11/gtk2/buildlink3.mk"
