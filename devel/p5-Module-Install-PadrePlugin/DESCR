@@ -1,0 +1,4 @@
+This module adds one directive to Module::Install related to creating and
+installing Padre plugins as .par files and two make targets: is_padre_plugin.
+If this directive is added to Makefile.PL, two new make targets become
+available: plugin and installplugin.
