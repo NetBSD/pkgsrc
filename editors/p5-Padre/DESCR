@@ -1,0 +1,14 @@
+Padre is a Perl IDE, an Integrated Development environment, or in other
+words a text editor that is simple to use for new Perl programmers but
+also supports large multi-lingual and multi-technology projects.
+
+Features
+  * Customizable syntax highlighting of many languages
+  * Syntax checking for Perl 5 and Perl 6
+  * Refactoring tools for Perl 5 and Perl 6
+  * Context sensitive help
+  * Multi-platform: Microsoft Windows, Linux, Mac OS X
+  * Special features for beginners
+  * Extra features for advanced programmers
+  * Written in Perl 5
+  * ...
