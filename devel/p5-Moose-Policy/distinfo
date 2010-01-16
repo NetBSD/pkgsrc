@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/17 10:29:11 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/01/16 17:39:53 sno Exp $
 
-SHA1 (Moose-Policy-0.03.tar.gz) = f9b044816c4268c944cc5c3bcada28f46a004be4
-RMD160 (Moose-Policy-0.03.tar.gz) = 78c8fa519b2e2d726eae71a739b8367cd73bb4cc
-Size (Moose-Policy-0.03.tar.gz) = 7047 bytes
+SHA1 (Moose-Policy-0.04.tar.gz) = 977b17f77d7e34a3c69269a9c041b3f8ff2a29bb
+RMD160 (Moose-Policy-0.04.tar.gz) = 2705faa40815778fea77dcceab399e358de82bff
+Size (Moose-Policy-0.04.tar.gz) = 8262 bytes
