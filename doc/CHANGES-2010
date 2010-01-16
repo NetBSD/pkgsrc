@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.120 2010/01/16 15:56:51 sno Exp $
+$NetBSD: CHANGES-2010,v 1.121 2010/01/16 16:02:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -152,3 +152,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Module-Install-PadrePlugin version 0.01 [sno 2010-01-16]
 	Added devel/p5-Parse-ExuberantCTags version 1.01 [sno 2010-01-16]
 	Added devel/p5-Perl-APIReference version 0.03 [sno 2010-01-16]
+	Added devel/p5-pip version 1.16 [sno 2010-01-16]
