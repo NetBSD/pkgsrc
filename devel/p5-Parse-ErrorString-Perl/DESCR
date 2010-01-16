@@ -1,0 +1,3 @@
+This  module is aimed primarily at those developing an ide-like programs,
+allowing them to have a nice object oriented interface to parsed error
+messages of the perl interpreter.
