@@ -1,0 +1,4 @@
+This plugins allows one to checking her text spelling within Padre using
+F7 (standard spelling shortcut accross text processors). One can change the
+dictionary language used in the preferences window
+(menu Plugins / SpellCheck / Preferences).
