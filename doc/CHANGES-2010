@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.101 2010/01/16 15:00:09 sno Exp $
+$NetBSD: CHANGES-2010,v 1.102 2010/01/16 15:04:08 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -133,3 +133,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added x11/p5-Alien-wxWidgets version 0.48 [sno 2010-01-16]
 	Added x11/p5-Wx version 0.95 [sno 2010-01-16]
 	Added x11/p5-Wx-Perl-ProcessStream version 0.24 [sno 2010-01-16]
+	Added devel/p5-Debug-Client version 0.11 [sno 2010-01-16]
