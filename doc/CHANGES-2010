@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.99 2010/01/16 14:56:17 sno Exp $
+$NetBSD: CHANGES-2010,v 1.100 2010/01/16 14:56:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -131,3 +131,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Path-Class-File-Stat version 0.02 [sno 2010-01-16]
 	Added devel/p5-SVN-Class version 0.15 [sno 2010-01-16]
 	Added x11/p5-Alien-wxWidgets version 0.48 [sno 2010-01-16]
+	Added x11/p5-Wx version 0.95 [sno 2010-01-16]
