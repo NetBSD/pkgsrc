@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.59 2010/01/16 03:19:32 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.60 2010/01/16 03:22:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -90,3 +90,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/kpathsea to 5.0.0nb3 [minskim 2010-01-16]
 	Updated print/web2c to 2009 [minskim 2010-01-16]
 	Updated print/luatex to 0.40.6 [minskim 2010-01-16]
+	Updated print/xetex to 0.9995.2 [minskim 2010-01-16]
