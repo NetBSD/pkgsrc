@@ -1,0 +1,2 @@
+This is a simple Padre plugin to run Acme::PlayCode on either selected
+source code (if there is any selection) or the entire document.
