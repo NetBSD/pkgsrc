@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.105 2010/01/16 15:11:32 sno Exp $
+$NetBSD: CHANGES-2010,v 1.106 2010/01/16 15:13:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -142,3 +142,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Debug-Client version 0.11 [sno 2010-01-16]
 	Updated databases/p5-DBD-SQLite to 1.29 [sno 2010-01-16]
 	Updated devel/p5-ExtUtils-MakeMaker to 6.56 [sno 2010-01-16]
+	Updated devel/p5-ExtUtils-Manifest to 1.58 [sno 2010-01-16]
