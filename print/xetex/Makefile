@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2009/06/09 21:31:04 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/16 03:21:45 minskim Exp $
 
-DISTNAME=	texlive-20080816-source
-PKGNAME=	xetex-0.999.6
-PKGREVISION=	1
+DISTNAME=	texlive-20091011-source
+PKGNAME=	xetex-0.9995.2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
-EXTRACT_SUFX=	.tar.lzma
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/xetex/
@@ -13,16 +12,9 @@ COMMENT=	TeX system with Unicode and modern font technologies
 
 CONFLICTS+=	web2c<=7.5.7
 
-EXTRACT_ELEMENTS=	${DISTNAME}/config \
-			${DISTNAME}/libs/icu-xetex \
-			${DISTNAME}/libs/md5 \
-			${DISTNAME}/libs/slnunicode \
+EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
+			${DISTNAME}/libs/icu \
 			${DISTNAME}/libs/xpdf ${DISTNAME}/libs/obsdcompat \
-			${DISTNAME}/texk/make \
-			${DISTNAME}/texk/config.guess \
-			${DISTNAME}/texk/config.sub \
-			${DISTNAME}/texk/install.sh \
-			${DISTNAME}/texk/mkinstalldirs \
 			${DISTNAME}/texk/web2c
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -33,35 +25,42 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake lex perl yacc
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/web2c
 
-CONFIGURE_ARGS+=	--without-etex --without-omega --without-alepf \
-			--without-pdfetex --without-luatex
-CONFIGURE_ARGS+=	--with-system-freetype2 \
-			--with-freetype2-include=${BUILDLINK_PREFIX.freetype2}/include \
-			--with-freetype2-libdir=${BUILDLINK_PREFIX.freetype2}/lib
-CONFIGURE_ARGS+=	--with-fontconfig=${BUILDLINK_PREFIX.fontconfig}
-CONFIGURE_ARGS+=	--with-system-pnglib \
-			--with-pnglib-include=${BUILDLINK_PREFIX.png}/include \
-			--with-pnglib-libdir=${BUILDLINK_PREFIX.png}/lib
+CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
+			--disable-luatex --disable-mf disable-mf-nowin \
+			--disable-mp --disable-web-progs
+CONFIGURE_ARGS+= \
+	--with-fontconfig-includes=${BUILDLINK_PREFIX.fontconfig}/include \
+	--with-fontconfig-libdir=${BUILDLINK_PREFIX.fontconfig}/lib
+CONFIGURE_ARGS+=	--with-system-kpathsea \
+	--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
+	--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
 CONFIGURE_ARGS+=	--with-system-zlib \
-			--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include \
-			--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=	--enable-static
+	--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
+	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
+CONFIGURE_ARGS+=	--with-system-libpng \
+	--with-libpng-includes=${BUILDLINK_PREFIX.libpng}/include \
+	--with-libpng-libdir=${BUILDLINK_PREFIX.libpng}/lib
+CONFIGURE_ARGS+=	--with-system-graphite \
+	--with-graphite-includes=${BUILDLINK_PREFIX.silgraphite}/include \
+	--with-graphite-libdir=${BUILDLINK_PREFIX.silgraphite}/lib
+CONFIGURE_ARGS+=	--with-system-freetype2
+CONFIGURE_ARGS+=	--with-system-teckit \
+	--with-teckit-includes=${BUILDLINK_PREFIX.TECkit}/include/teckit \
+	--with-teckit-libdir=${BUILDLINK_PREFIX.TECkit}/lib
 
-CONFIGURE_DIRS=	${WRKDIR}/${DISTNAME}/libs/icu-xetex \
+CONFIGURE_DIRS=	${WRKDIR}/${DISTNAME}/libs/icu \
 		${WRKDIR}/${DISTNAME}/libs/xpdf \
 		${WRKDIR}/${DISTNAME}/libs/obsdcompat \
 		${WRKDIR}/${DISTNAME}/texk/web2c
 
-MAKE_ENV+=	KPATHSEA_PREFIX=${BUILDLINK_PREFIX.kpathsea}
-MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
-MAKE_FLAGS+=	TECKITFLAGS=-I${BUILDLINK_PREFIX.TECkit}/include/teckit \
-		LDTECKIT="-L${BUILDLINK_PREFIX.TECkit}/lib -lTECkit" \
-		TECKITDEP="" \
-		GRAPHITESRCDIR=${BUILDLINK_PREFIX.silgraphite} \
-		LDGRAPHITE="-L${BUILDLINK_PREFIX.silgraphite}/lib -lgraphite" \
-		GRAPHITEDEP=""
-
 INSTALLATION_DIRS+=	bin
+
+.include "../../mk/bsd.prefs.mk"
+
+# ATSUI is deprecated in Mac OS X Snow Leopard
+.if !empty(MACHINE_PLATFORM:MDarwin-1[0-9]*)
+CONFIGURE_ENV+=	kpse_cv_have_Carbon=no
+.endif
 
 .include "../../converters/TECkit/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
