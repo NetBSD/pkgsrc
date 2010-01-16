@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.158 2010/01/16 18:17:47 sno Exp $
+$NetBSD: CHANGES-2010,v 1.159 2010/01/16 18:27:49 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -187,3 +187,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-CatalystX-LeakChecker to 0.05 [sno 2010-01-16]
 	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.28 [sno 2010-01-16]
 	Updated www/p5-Catalyst-Devel to 1.26 [sno 2010-01-16]
+	Added editors/p5-PPIx-EditorTools version 0.09 [sno 2010-01-16]
