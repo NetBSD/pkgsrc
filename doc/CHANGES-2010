@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.132 2010/01/16 16:37:35 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.133 2010/01/16 16:45:53 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -161,3 +161,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-HTTP-Request-AsCGI to 1.2 [sno 2010-01-16]
 	Updated devel/p5-PPI to 1.208 [sno 2010-01-16]
 	Updated games/rftg to 0.6.1 [wiz 2010-01-16]
+	Updated devel/p5-Devel-NYTProf to 3.01 [sno 2010-01-16]
