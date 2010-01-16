@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/16 15:52:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/16 17:10:31 wiz Exp $
 
-DISTNAME=		ocp-0.1.17
+DISTNAME=		ocp-0.1.18
 CATEGORIES=		audio
 MASTER_SITES=		http://stian.cubic.org/ocp/
 EXTRACT_SUFX=		.tar.lzma
