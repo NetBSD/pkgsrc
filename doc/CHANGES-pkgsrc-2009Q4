@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.2 2010/01/16 18:20:39 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.3 2010/01/16 20:33:32 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -7,3 +7,5 @@ Created pkgsrc-2009Q4 branch [agc 2010-01-15 17:16 UTC]
 
 Pullup ticket #2958 - requested by obache
 libthai: security update
+Pullup ticket #2959 - requested by tron
+opencdk: build fix
