@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8852 2010/01/16 17:10:42 wiz Exp $
+$NetBSD: TODO,v 1.8853 2010/01/16 17:17:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -440,7 +440,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o baci-20040415
 	o bakefile-0.2.8
 	o balance-3.42
-	o bash-4.1
 	o bash-completion-1.1
 	o bbdb-2.35
 	o bbkeys-0.9.0
