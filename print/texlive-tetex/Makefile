@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2009/09/20 19:16:49 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/16 03:40:44 minskim Exp $
 
-DISTNAME=	texlive-20080816-source
-PKGNAME=	texlive-tetex-2008
-PKGREVISION=	4
+DISTNAME=	texlive-20091011-source
+PKGNAME=	texlive-tetex-2009
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
-EXTRACT_SUFX=	.tar.lzma
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -13,12 +12,10 @@ COMMENT=	Scripts included in teTeX
 
 CONFLICTS+=	teTeX-bin<=3.0nb22
 DEPENDS+=	dialog>=1.0:../../misc/dialog
-DEPENDS+=	tex-bin-tetex-[0-9]*:../../print/tex-bin-tetex
+DEPENDS+=	tex-tetex-[0-9]*:../../print/tex-tetex
 
-EXTRACT_ELEMENTS=	${DISTNAME}/texk/tetex \
-			${DISTNAME}/texk/make \
-			${DISTNAME}/texk/install.sh \
-			${DISTNAME}/texk/mkinstalldirs
+EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
+			${DISTNAME}/texk/tetex
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -50,8 +47,7 @@ SUBST_SED.paths=	-e 's,@DIALOG@,${LOCALBASE}/bin/dialog,g' \
 			-e 's,@UPDMAP@,${PREFIX}/bin/updmap,g' \
 			-e 's,@UPDMAP_SYS@,${PREFIX}/bin/updmap-sys,g'
 
-INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
-			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALLATION_DIRS+=	share/texmf/web2c
 
 TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR}
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
