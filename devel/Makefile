@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1276 2010/01/16 16:06:42 sno Exp $
+# $NetBSD: Makefile,v 1.1277 2010/01/16 16:10:01 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -421,6 +421,7 @@ SUBDIR+=	p4-docs
 SUBDIR+=	p4d
 SUBDIR+=	p4pr
 SUBDIR+=	p4web
+SUBDIR+=	p5-Acme-PlayCode
 SUBDIR+=	p5-Algorithm-Annotate
 SUBDIR+=	p5-Algorithm-C3
 SUBDIR+=	p5-Algorithm-Dependency
