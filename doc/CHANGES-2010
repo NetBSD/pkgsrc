@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.116 2010/01/16 15:54:13 sno Exp $
+$NetBSD: CHANGES-2010,v 1.117 2010/01/16 15:54:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -153,3 +153,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Parse-ExuberantCTags version 1.01 [sno 2010-01-16]
 	Added devel/p5-Perl-APIReference version 0.03 [sno 2010-01-16]
 	Added devel/p5-Perl-APIReference version 0.03 [sno 2010-01-16]
+	Added devel/p5-Parse-ExuberantCTags version 1.01 [sno 2010-01-16]
