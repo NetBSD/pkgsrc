@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.90 2010/01/16 11:46:10 sborrill Exp $
+$NetBSD: CHANGES-2010,v 1.91 2010/01/16 14:06:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -123,3 +123,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/py-django-registration version 0.8a1 [abs 2010-01-16]
 	Updated x11/xf86-video-vmware to 10.16.9 [obache 2010-01-16]
 	Added x11/wmzcalock version 0.1 [sborrill 2010-01-16]
+	Added devel/p5-ExtUtils-XSpp version 0.05 [sno 2010-01-16]
