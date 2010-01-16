@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.313 2010/01/16 04:44:36 minskim Exp $
+# $NetBSD: Makefile,v 1.314 2010/01/16 04:51:39 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -159,7 +159,6 @@ SUBDIR+=	tex-bin-kpathsea
 SUBDIR+=	tex-bin-latex
 SUBDIR+=	tex-bin-tex
 SUBDIR+=	tex-bin-texlive
-SUBDIR+=	tex-bin-xdvi
 SUBDIR+=	tex-caption
 SUBDIR+=	tex-caption-doc
 SUBDIR+=	tex-carlisle
