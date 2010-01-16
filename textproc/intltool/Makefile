@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2009/03/22 09:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2010/01/16 23:37:49 heinz Exp $
 #
 
 DISTNAME=		intltool-0.40.6
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Toolbox for internationalisation
+LICENSE=		gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir

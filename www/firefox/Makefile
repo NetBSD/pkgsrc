@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2009/12/16 08:18:33 tnn Exp $
+# $NetBSD: Makefile,v 1.66 2010/01/16 23:37:49 heinz Exp $
 #
 
 .include "../../devel/xulrunner/dist.mk"
@@ -8,6 +8,7 @@ CATEGORIES=	www
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
 COMMENT=	Web browser with support for extensions
+LICENSE=	mpl-1.1
 
 WRKSRC=		${WRKDIR}/mozilla-1.9.1
 MOZILLA_DIR=	# empty
