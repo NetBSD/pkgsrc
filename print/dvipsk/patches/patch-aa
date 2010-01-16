@@ -1,14 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/02/17 19:10:49 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/16 03:47:31 minskim Exp $
 
-Use the kpathsea library in print/kpathsea.
-
---- Makefile.in.orig	2008-04-29 15:40:29.000000000 -0700
+--- Makefile.in.orig	2009-06-23 02:46:14.000000000 -0700
 +++ Makefile.in
-@@ -66,7 +66,6 @@ $(prologues): squeeze
- texc.lpro: texc.script tex.lpro
- 	$(SHELL) $(srcdir)/texc.script $(srcdir)/tex.lpro $@
+@@ -376,7 +376,7 @@ dist_prologues = \
+ 	tex.lpro \
+ 	texps.lpro
  
--kpse_include ../make/tkpathsea.mk
- 
- # The environment for running check.
- # No need to specify TEXMF, as ../kpathsea/texmf.cnf should contain
+-prologdir = ${prefix}/texmf/dvips/base
++prologdir = ${prefix}/share/texmf/dvips/base
+ prologues = $(dist_prologues:.lpro=.pro) texc.pro
+ SUFFIXES = .pro .lpro
+ EXTRA_DIST = $(dist_prologues) texc.script dvips.test pfbincl.test \
