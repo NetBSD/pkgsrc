@@ -1,0 +1,8 @@
+django-registratio is a simple application which provides flexible
+user registration for Django-based projects. The default setup
+implements a fairly common workflow:
+
+  1. User signs up for account.
+  2. User receives an email containing instructions for activating
+     the account.
+  3. User activates and begins using the site.
