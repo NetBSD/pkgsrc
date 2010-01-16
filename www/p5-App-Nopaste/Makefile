@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/11/11 15:27:32 seb Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/16 18:02:53 sno Exp $
 
-DISTNAME=	App-Nopaste-0.17
+DISTNAME=	App-Nopaste-0.18
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	www perl5
@@ -17,7 +17,6 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/App/Nopaste/.packlist
 
 # We drop the git module dependency as we require p5-Config-INI
-MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skip
 
 DEPENDS+=	{perl>=5.10,p5-Module-Pluggable-[0-9]*}:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Moose>=0.74:../../devel/p5-Moose
@@ -29,6 +28,9 @@ DEPENDS+=	p5-Clipboard-[0-9]*:../../x11/p5-Clipboard
 DEPENDS+=	p5-Config-INI-[0-9]*:../../devel/p5-Config-INI
 DEPENDS+=	p5-WWW-Pastebin-PastebinCom-Create-[0-9]*:../../www/p5-WWW-Pastebin-PastebinCom-Create
 DEPENDS+=	p5-WWW-Pastebin-RafbNet-Create-[0-9]*:../../www/p5-WWW-Pastebin-RafbNet-Create
+
+PERL5_MODULE_TYPE=	Module::Install::Bundled
+#MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skip
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
