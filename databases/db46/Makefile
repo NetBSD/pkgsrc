@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/09/09 22:23:32 tron Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/16 17:57:37 wiz Exp $
 
 DISTNAME=	db-4.6.21
 PKGNAME=	${DISTNAME:S/db/db46/}
@@ -25,10 +25,6 @@ CONFIGURE_ARGS+=	--enable-rpc
 CONFIGURE_ARGS+=	--enable-compat185
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db46
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db46_,
-
-# NetBSD-sparc64-1.6*'s f77 makes configure failing and as f77 is not
-# needed for this package the following does no harm on other platform.
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 # Along with a hack in patch-ab, this forces shlib detection via
 # the pkgsrc-supplied libtool only.
