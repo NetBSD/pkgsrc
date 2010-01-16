@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2010/01/16 21:32:45 sno Exp $
+# $NetBSD: Makefile,v 1.137 2010/01/16 21:47:47 sno Exp $
 #
 
 COMMENT=	Editors
@@ -76,10 +76,20 @@ SUBDIR+=	obby
 SUBDIR+=	p5-Acme-Padre-PlayCode
 SUBDIR+=	p5-PPIx-EditorTools
 SUBDIR+=	p5-Padre
+SUBDIR+=	p5-Padre-Plugin-Autoformat
+SUBDIR+=	p5-Padre-Plugin-Catalyst
+SUBDIR+=	p5-Padre-Plugin-DataWalker
+SUBDIR+=	p5-Padre-Plugin-Debugger
+SUBDIR+=	p5-Padre-Plugin-Ecliptic
+SUBDIR+=	p5-Padre-Plugin-Encrypt
+SUBDIR+=	p5-Padre-Plugin-Git
+SUBDIR+=	p5-Padre-Plugin-HG
 SUBDIR+=	p5-Padre-Plugin-Kate
 SUBDIR+=	p5-Padre-Plugin-Nopaste
 SUBDIR+=	p5-Padre-Plugin-PerlCritic
 SUBDIR+=	p5-Padre-Plugin-PerlTidy
+SUBDIR+=	p5-Padre-Plugin-SVN
+SUBDIR+=	p5-Padre-Plugin-SpellCheck
 SUBDIR+=	p5-Padre-Plugin-Vi
 SUBDIR+=	p5-Padre-Plugin-XS
 SUBDIR+=	pico
