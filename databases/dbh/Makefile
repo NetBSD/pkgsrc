@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/04 21:29:08 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/16 17:57:37 wiz Exp $
 
 DISTNAME=	dbh-1.0.24
 CATEGORIES=	databases
@@ -11,9 +11,6 @@ COMMENT=	Library to create disk based Hashtables
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dbh

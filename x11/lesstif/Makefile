@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2010/01/16 09:15:25 adam Exp $
+# $NetBSD: Makefile,v 1.96 2010/01/16 17:57:38 wiz Exp $
 
 DISTNAME=	lesstif-0.95.2
 CATEGORIES=	x11
@@ -27,9 +27,6 @@ CONFIGURE_ARGS+=	--enable-xdnd
 # converter.
 CONFIGURE_ENV+=		LYNX_CMD=${WRKDIR}/nonexecutable
 CONFIGURE_ENV+=		LINKS_CMD=${WRKDIR}/nonexecutable
-
-# Work around an ICE on sparc64-1.6
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL

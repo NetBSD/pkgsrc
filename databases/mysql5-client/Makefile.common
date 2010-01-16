@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2009/11/26 16:33:29 tron Exp $
+# $NetBSD: Makefile.common,v 1.37 2010/01/16 17:57:37 wiz Exp $
 #
 # used by databases/mysql5-client/Makefile
 # used by databases/mysql5-server/Makefile
@@ -75,8 +75,6 @@ CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET:Q}
 CONFIGURE_ARGS+=	--enable-assembler
 .endif
 
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 CONFIGURE_ENV+=		mysql_cv_compress="yes"
 
 CPPFLAGS+=		-Dunix

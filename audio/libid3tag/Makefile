@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/05/20 13:31:39 simonb Exp $
+# $NetBSD: Makefile,v 1.23 2010/01/16 17:57:37 wiz Exp $
 #
 
 DISTNAME=	libid3tag-0.15.1b
@@ -18,9 +18,6 @@ CONFLICTS=	mad<0.15
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		pkg-config
-
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 INSTALLATION_DIRS=	lib/pkgconfig
 

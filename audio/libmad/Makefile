@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/06/08 18:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/01/16 17:57:37 wiz Exp $
 #
 
 DISTNAME=	libmad-0.15.1b
@@ -18,9 +18,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		pkg-config
-
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 INSTALLATION_DIRS=	lib/pkgconfig
 

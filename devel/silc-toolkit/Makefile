@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/06/30 00:07:14 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/16 17:57:37 wiz Exp $
 #
 
 DISTNAME=		silc-toolkit-0.9.13
@@ -32,10 +32,6 @@ CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-irssi
 CONFIGURE_ARGS+=	--without-silcd
 CONFIGURE_ARGS+=	--without-libtoolfix
-
-# XXX: Avoid an ICE in gcc2 on sparc64
-#
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 # lib/silcclient/client_attrs.c causes an ICE with xlc on Darwin.
 NOT_FOR_COMPILER+=	xlc

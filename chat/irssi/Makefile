@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2009/07/30 21:58:15 adrianp Exp $
+# $NetBSD: Makefile,v 1.54 2010/01/16 17:57:37 wiz Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 CATEGORIES=		chat
@@ -23,9 +23,6 @@ CONFIGURE_ARGS+=	--with-terminfo \
 			--with-proxy \
 			--without-ncurses \
 			--sysconfdir=${PKG_SYSCONFDIR}
-
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 EGDIR=		${PREFIX}/share/examples/irssi
 CONF_FILES=	${EGDIR}/irssi.conf ${PKG_SYSCONFDIR}/irssi.conf

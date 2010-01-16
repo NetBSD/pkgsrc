@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/06/17 15:15:09 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/16 17:57:38 wiz Exp $
 #
 
 DISTNAME=	ucl-1.03
@@ -15,9 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-shared=yes
-
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=	F77=${FALSE:Q}
 
 # Avoid path to build directory in example Makefile
 SUBST_CLASSES+=		example
