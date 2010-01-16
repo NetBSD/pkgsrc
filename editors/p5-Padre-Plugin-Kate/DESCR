@@ -1,0 +1,8 @@
+This plugin provides an interface to the Syntax::Highligh::Engine::Kate
+which implements syntax highlighting rules taken from the Kate editor.
+
+Currently the plugin only implements Perl 5 and PHP highlighting.
+
+Once this plug-in is installed the user can switch the highlighting of
+all Perl 5 or PHP files to use this highlighter via the Preferences menu
+of Padre.
