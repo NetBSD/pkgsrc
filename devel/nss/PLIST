@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:49:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/01/16 14:41:25 tnn Exp $
 include/nss/dbm/cdefs.h
 include/nss/dbm/mcom_db.h
 include/nss/dbm/ncompat.h
@@ -47,6 +47,7 @@ include/nss/nss/nssilock.h
 include/nss/nss/nsslocks.h
 include/nss/nss/nssrwlk.h
 include/nss/nss/nssrwlkt.h
+include/nss/nss/nssutil.h
 include/nss/nss/ocsp.h
 include/nss/nss/ocspt.h
 include/nss/nss/p12.h
@@ -92,10 +93,12 @@ include/nss/nss/ssl.h
 include/nss/nss/sslerr.h
 include/nss/nss/sslproto.h
 include/nss/nss/sslt.h
-include/nss/nss/watcomfx.h
-@comment libfreebl
+include/nss/nss/utilrename.h
+lib/nss/libfreebl3.${SO_SUFFIX}
 lib/nss/libnss3.${SO_SUFFIX}
 lib/nss/libnssckbi.${SO_SUFFIX}
+lib/nss/libnssdbm3.${SO_SUFFIX}
+lib/nss/libnssutil3.${SO_SUFFIX}
 lib/nss/libsmime3.${SO_SUFFIX}
 lib/nss/libsoftokn3.${SO_SUFFIX}
 lib/nss/libssl3.${SO_SUFFIX}
