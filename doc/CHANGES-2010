@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.79 2010/01/16 05:06:31 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.80 2010/01/16 05:09:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -111,3 +111,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-texlive-scripts version 2009.16483 [minskim 2010-01-16]
 	Removed print/tex-bin-xdvi successor print/tex-xdvi [minskim 2010-01-16]
 	Removed print/tex-memhangul-ucs successor print/tex-kotex [minskim 2010-01-16]
+	Removed print/tex-dhucs successor print/tex-kotex [minskim 2010-01-16]
