@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/09/12 20:43:19 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/01/16 17:48:57 sno Exp $
 
-SHA1 (MooseX-Role-Parameterized-0.13.tar.gz) = b01cf0fac1fe120daa8408a087d3239116633fdc
-RMD160 (MooseX-Role-Parameterized-0.13.tar.gz) = 43435807f7da56a7e545c506bc9a2507dae96114
-Size (MooseX-Role-Parameterized-0.13.tar.gz) = 26290 bytes
+SHA1 (MooseX-Role-Parameterized-0.15.tar.gz) = 32b903e0171877bcc21f22c2ea9b82bca5471b75
+RMD160 (MooseX-Role-Parameterized-0.15.tar.gz) = dd3c4970bd5d44be80dabf8d705b2ad2f0f5e08f
+Size (MooseX-Role-Parameterized-0.15.tar.gz) = 27688 bytes
