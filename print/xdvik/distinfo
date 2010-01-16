@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/23 19:32:01 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/01/16 03:56:07 minskim Exp $
 
-SHA1 (xdvik-22.84.14.tar.gz) = 1ca7f0c7930d24c3e10cc1d7115abed7dd39e95e
-RMD160 (xdvik-22.84.14.tar.gz) = a19920fcc9e4e5d2878b16e65fa95bab5f034b74
-Size (xdvik-22.84.14.tar.gz) = 2016256 bytes
-SHA1 (patch-aa) = 878d51f49647160c6f75acb1ca386fefb7fd778b
+SHA1 (texlive-20091011-source.tar.xz) = 82fc9fcdb82c63a00f4b08a51733c761cbda897d
+RMD160 (texlive-20091011-source.tar.xz) = 81b86cd93e629d6b1b3d7918848dd76babc0d5a9
+Size (texlive-20091011-source.tar.xz) = 29683728 bytes
+SHA1 (patch-aa) = 0dd1d3a94a064224589f5014dfc8fa8c9e66bf40
 SHA1 (patch-ab) = bbbeb011aa888f2ee7dab84c1602fb3e1127cdb1

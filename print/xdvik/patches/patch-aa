@@ -1,14 +1,29 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/02/23 19:32:01 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/16 03:56:07 minskim Exp $
 
-XDvi is installed by tex-bin-xdvi.
+- Do not install XDvi; it is installed by tex-xdvi.
+- Fix texmf paths for pkgsrc.
 
---- Makefile.in.orig	2008-05-03 12:45:05.000000000 -0700
+--- Makefile.in.orig	2009-06-16 05:01:38.000000000 -0700
 +++ Makefile.in
-@@ -161,7 +161,6 @@ install-data: $(manpage).1 pixmaps/toolb
- 	$(INSTALL_DATA) $(manpage).1 $(man1dir)/$(manpage).$(manext)
- 	rm -f $(man1dir)/o$(manpage).$(manext)
- 	ln -s $(manpage).$(manext) $(man1dir)/o$(manpage).$(manext)
--	$(INSTALL_DATA) $(srcdir)/texmf/XDvi $(texmf)/xdvi/XDvi
- 	$(INSTALL_DATA) $(srcdir)/pixmaps/toolbar.xpm $(srcdir)/pixmaps/toolbar2.xpm $(texmf)/xdvi/pixmaps
- 	if \
- 	    grep 'original xdvi.cfg --' $(texmf)/xdvi/xdvi.cfg >/dev/null 2>&1 \
+@@ -436,9 +436,9 @@ EXTRA_DIST = psheader.txt mksedscript xd
+ 	xdvi.icon xdvizilla xdvizilla.1
+ CLEANFILES = psheader.c sedscript xdvi.1
+ nodist_man1_MANS = xdvi.1
+-xdvidir = ${prefix}/texmf/xdvi
+-dist_xdvi_DATA = texmf/XDvi
+-pixmapdir = ${prefix}/texmf/xdvi/pixmap
++xdvidir = ${prefix}/share/texmf/xdvi
++dist_xdvi_DATA = texmf/xdvi/XDvi
++pixmapdir = ${prefix}/share/texmf/xdvi/pixmap
+ dist_pixmap_DATA = pixmaps/toolbar.xpm pixmaps/toolbar2.xpm
+ dist_noinst_DATA = texmf/xdvi.cfg
+ all: c-auto.h
+@@ -1579,7 +1579,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-dist_pixmapDATA install-dist_xdviDATA \
++install-data-am: install-dist_pixmapDATA \
+ 	install-man
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
