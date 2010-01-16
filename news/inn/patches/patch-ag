@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.10 2009/09/22 13:17:00 spz Exp $
+$NetBSD: patch-ag,v 1.11 2010/01/16 09:46:17 spz Exp $
 
 --- control/pgpverify.in.orig	2009-05-21 20:08:33.000000000 +0000
 +++ control/pgpverify.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ag,v 1.10 2009/09/22 13:17:00 spz Exp $
  # you have INN and the script is able to successfully include your
  # INN::Config module, the value of $INN::Config::pgp will override this.
 -$pgp = '/usr/local/bin/pgp';
-+$pgp = ''@_PATH_PGP@';
++# $pgp = '/usr/local/bin/pgp';
  
  # If you keep your keyring somewhere that is not the default used by pgp,
  # uncomment the next line and set appropriately.  If you have INN and the

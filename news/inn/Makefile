@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2009/12/16 22:10:25 spz Exp $
+# $NetBSD: Makefile,v 1.101 2010/01/16 09:46:16 spz Exp $
 
 DISTNAME=		inn-2.5.1
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -59,6 +60,7 @@ LDFLAGS.SunOS+= -lsocket -lnsl
 
 DEPENDS+=		p5-MIME-tools>0:../../mail/p5-MIME-tools
 DEPENDS+=		p5-GD>0:../../graphics/p5-GD
+DEPENDS+=		gnupg>0:../../security/gnupg
 
 ## Please note that USE_DESTDIR=yes only works for this package if the user
 ## and group already exist
