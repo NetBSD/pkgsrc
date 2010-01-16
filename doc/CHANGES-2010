@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.103 2010/01/16 15:06:41 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.104 2010/01/16 15:08:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -140,3 +140,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added x11/p5-Wx version 0.95 [sno 2010-01-16]
 	Added x11/p5-Wx-Perl-ProcessStream version 0.24 [sno 2010-01-16]
 	Added devel/p5-Debug-Client version 0.11 [sno 2010-01-16]
+	Updated databases/p5-DBD-SQLite to 1.29 [sno 2010-01-16]
