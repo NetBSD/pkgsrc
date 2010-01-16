@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/16 18:32:32 sno Exp $
+
+SHA1 (Padre-Plugin-Vi-0.22.tar.gz) = f47c59fe84a0836133ca05eef212782637ca8408
+RMD160 (Padre-Plugin-Vi-0.22.tar.gz) = 2ed81c5432a0a021501e43fabd04961e129de710
+Size (Padre-Plugin-Vi-0.22.tar.gz) = 25170 bytes
+SHA1 (patch-aa) = 28a1a7403a94e8fcc8cadb90aafc9a98e487b8d6
