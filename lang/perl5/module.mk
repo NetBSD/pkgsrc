@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.60 2009/06/11 10:32:29 sno Exp $
+# $NetBSD: module.mk,v 1.61 2010/01/16 15:02:14 sno Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -41,7 +41,8 @@ PERL5_MODULE_TYPE?=		MakeMaker
 
 .if (${PERL5_MODULE_TYPE} != "MakeMaker") && \
     (${PERL5_MODULE_TYPE} != "Module::Build") && \
-    (${PERL5_MODULE_TYPE} != "Module::Install")
+    (${PERL5_MODULE_TYPE} != "Module::Install") && \
+    (${PERL5_MODULE_TYPE} != "Module::Install::Bundled")
 PKG_FAIL_REASON+=	"\`\`${PERL5_MODULE_TYPE}'' is not a supported PERL5_MODULE_TYPE."
 .endif
 
@@ -58,6 +59,8 @@ _PERL5_MODBUILD_DESTDIR_OPTION=--destdir ${DESTDIR:Q}
 _PERL5_MODBUILD_DESTDIR_OPTION=
 .  endif
 .elif ${PERL5_MODULE_TYPE} == "Module::Install"
+_PERL5_MODTYPE=		modinst
+.elif ${PERL5_MODULE_TYPE} == "Module::Install::Bundled"
 _PERL5_MODTYPE=		modinst
 .elif ${PERL5_MODULE_TYPE} == "MakeMaker"
 _PERL5_MODTYPE=		makemaker
@@ -129,6 +132,7 @@ do-modbuild-configure:
 
 .PHONY: do-modinst-configure
 do-modinst-configure:
+.if ${PERL5_MODULE_TYPE} == "Module::Install"
 	${RUN}								\
 	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
 		cd ${WRKSRC};						\
@@ -141,6 +145,17 @@ do-modinst-configure:
 				${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL --skipdeps ${MAKE_PARAMS};	\
 		fi;							\
 	done
+.else
+	${RUN}								\
+	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
+		cd ${WRKSRC};						\
+		if ${TEST} -f "$$dir"/Makefile.PL; then			\
+			cd "$$dir";					\
+			${SETENV} ${MAKE_ENV}				\
+				${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL --skipdeps ${MAKE_PARAMS};	\
+		fi;							\
+	done
+.endif
 
 .PHONY: perl5-configure
 perl5-configure: do-${_PERL5_MODTYPE}-configure
