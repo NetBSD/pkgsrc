@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.161 2010/01/16 18:31:07 sno Exp $
+$NetBSD: CHANGES-2010,v 1.162 2010/01/16 18:32:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -190,3 +190,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added editors/p5-PPIx-EditorTools version 0.09 [sno 2010-01-16]
 	Added editors/p5-Padre version 0.54 [sno 2010-01-16]
 	Added editors/p5-Padre-Plugin-XS version 0.01 [sno 2010-01-16]
+	Added editors/p5-Padre-Plugin-Vi version 0.22 [sno 2010-01-16]
