@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/16 11:43:28 sborrill Exp $
+
+SHA1 (wmzcalock-0.1.tgz) = e18a377464f688140c0388cf7dd29c96ecb27233
+RMD160 (wmzcalock-0.1.tgz) = 902383d9046fe38932ed0e700d678cd5e5e82ed2
+Size (wmzcalock-0.1.tgz) = 47451 bytes
+SHA1 (patch-wmzcalock.c) = 55b316964a342248cfa70cf680e61129892303f7
