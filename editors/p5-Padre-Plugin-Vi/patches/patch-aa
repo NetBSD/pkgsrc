@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/01/16 18:32:32 sno Exp $
+
+--- lib/Padre/Plugin/Vi.pm.orig	2009-06-22 08:05:41.000000000 +0000
++++ lib/Padre/Plugin/Vi.pm
+@@ -307,7 +307,7 @@ sub about {
+ 	$about->SetCopyright( _T("Copyright 2008 Gabor Szabo") );
+ 
+ 	# Only Unix/GTK native about box supports websites
+-	if (Padre::Util::WXGTK) {
++	if (Padre::Constant::WXGTK) {
+ 		$about->SetWebSite("http://padre.perlide.org/");
+ 	}
+ 
