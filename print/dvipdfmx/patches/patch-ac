@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2010/01/16 03:52:41 minskim Exp $
+
+--- src/dvipdft.orig	2009-06-03 15:54:21.000000000 -0700
++++ src/dvipdft
+@@ -98,8 +98,8 @@ dvipdfm ${1+"$@"} -z0 "$dvifile"
+ 
+ # run gs
+ echo "$progname: running gs" >&2
+-gs -r10 -dNOPAUSE -dBATCH -sDEVICE=png256 -sOutputFile="$outBase.%d" "$outfile"
++@GS@ -r10 -dNOPAUSE -dBATCH -sDEVICE=png256 -sOutputFile="$outBase.%d" "$outfile"
+ 
+ # run dvipdfm with the users specified options for the last pass
+ echo "$progname: running dvipdfm -t $@ $dvifile" >&2
+-dvipdfm ${1+"$@"} -t "$dvifile"
++@DVIPDFM@ ${1+"$@"} -t "$dvifile"
