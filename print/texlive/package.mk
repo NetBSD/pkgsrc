@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.1 2010/01/15 20:32:27 minskim Exp $
+# $NetBSD: package.mk,v 1.2 2010/01/16 07:11:35 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live packages.
@@ -61,7 +61,7 @@ _dirs=		texmf texmf-dist
 _topdir=	${DESTDIR}${PREFIX}/share
 .endif
 
-.PHONY: _texlive-set-permission _texlive-man _texlive-install
+.PHONY: _texlive-set-permission _texlive-info _texlive-man _texlive-install
 _texlive-set-permission:
 .for _pat in ${TEXLIVE_IGNORE_PATTERNS}
 	${RM} -rf ${WRKSRC}/${_pat}
@@ -72,6 +72,13 @@ _texlive-set-permission:
 	  ${FIND} ${WRKSRC}/${_dir} -type f -exec ${CHMOD} ${SHAREMODE} {} \; ; \
 	fi
 .endfor
+
+_texlive-info:
+	if [ -d ${WRKSRC}/texmf/doc/info ]; then \
+		${MKDIR} ${WRKSRC}/info; \
+		${MV} ${WRKSRC}/texmf/doc/info/* ${WRKSRC}/info; \
+		${RMDIR} -p ${WRKSRC}/texmf/doc/info || ${TRUE}; \
+	fi
 
 _texlive-man:
 	if [ -d ${WRKSRC}/texmf/doc/man ]; then \
@@ -94,6 +101,13 @@ _texlive-install:
 		${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin; \
 		for script in ${WRKSRC}/bin/*; do \
 			${INSTALL_SCRIPT} $$script ${DESTDIR}${PREFIX}/bin; \
+		done; \
+	fi
+	if [ -d ${WRKSRC}/info ]; then \
+		${FIND} ${WRKSRC}/info -name \*.orig -exec ${RM} {} \; ; \
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/info; \
+		for script in ${WRKSRC}/info/*; do \
+			${INSTALL_DATA} $$script ${DESTDIR}${PREFIX}/info; \
 		done; \
 	fi
 	if [ -d ${WRKSRC}/man ]; then \
@@ -119,5 +133,5 @@ _texlive-install:
 .  include "../../print/texlive-tetex/map.mk"
 .endif
 
-post-extract: _texlive-set-permission
+post-extract: _texlive-set-permission _texlive-info _texlive-man
 do-install: _texlive-install
