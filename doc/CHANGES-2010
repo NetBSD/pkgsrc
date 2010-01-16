@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.125 2010/01/16 16:13:24 sno Exp $
+$NetBSD: CHANGES-2010,v 1.126 2010/01/16 16:15:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -157,3 +157,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Acme-PlayCode version 0.11 [sno 2010-01-16]
 	Added textproc/p5-Pod-Abstract version 0.20 [sno 2010-01-16]
 	Added textproc/p5-Template-Tiny version 0.09 [sno 2010-01-16]
+	Added textproc/p5-Text-FindIndent version 0.07 [sno 2010-01-16]
