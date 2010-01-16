@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/16 03:48:32 minskim Exp $
+bin/pkfix
