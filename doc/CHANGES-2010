@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.85 2010/01/16 07:12:23 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.86 2010/01/16 09:35:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -118,3 +118,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed print/tex-bin-dvipsk [minskim 2010-01-16]
 	Removed print/tex-bin-dvipsk-doc [minskim 2010-01-16]
 	Added graphics/tex-dvipng-doc version 1.12 [minskim 2010-01-16]
+	Updated x11/lesstif to 0.95.2 [adam 2010-01-16]
