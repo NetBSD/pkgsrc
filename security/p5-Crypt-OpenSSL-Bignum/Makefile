@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/19 08:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/16 19:27:18 heinz Exp $
 #
 
 DISTNAME=		Crypt-OpenSSL-Bignum-0.04
@@ -11,7 +11,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://perl-openssl.sourceforge.net/
 COMMENT=		Perl5 wrapper module for the OpenSSL Bignum functions
-#LICENSE=		gnu-gpl-v2 # under same terms as Perl
+LICENSE=		${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

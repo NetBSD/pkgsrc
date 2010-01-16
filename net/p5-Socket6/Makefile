@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/02/25 20:39:20 sno Exp $
+# $NetBSD: Makefile,v 1.31 2010/01/16 19:27:18 heinz Exp $
 #
 
 DISTNAME=		Socket6-0.23
@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Socket6/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Socket6/
 COMMENT=		Perl5 module to support getaddrinfo() and getnameinfo()
+LICENSE=		modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
