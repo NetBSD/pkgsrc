@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.95 2010/01/16 14:43:01 sborrill Exp $
+$NetBSD: CHANGES-2010,v 1.96 2010/01/16 14:46:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -127,3 +127,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-CPAN-Checksums version 2.04 [sno 2010-01-16]
 	Added devel/p5-CPAN-Inject version 0.11 [sno 2010-01-16]
 	Added devel/p5-Module-Util version 1.07 [sno 2010-01-16]
+	Added devel/p5-Parse-ErrorString-Perl version 0.13 [sno 2010-01-16]
