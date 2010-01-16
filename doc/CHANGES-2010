@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.184 2010/01/16 22:54:05 sno Exp $
+$NetBSD: CHANGES-2010,v 1.185 2010/01/16 23:20:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -213,3 +213,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Log-Any version 0.10 [sno 2010-01-16]
 	Updated www/p5-HTML-Mason to 1.44 [sno 2010-01-16]
 	Updated www/p5-FCGI to 0.68 [sno 2010-01-16]
+	Removed editors/p5-Padre-Plugin-PlayCode [sno 2010-01-16]
