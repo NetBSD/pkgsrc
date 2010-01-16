@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/16 15:52:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/16 17:10:31 wiz Exp $
 bin/ocp
 bin/${PKGNAME}
+bin/ocp-curses
 info/ocp.info.gz
 lib/${PKGNAME}/autoload/10-compat.so
 lib/${PKGNAME}/autoload/10-devi.so
