@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.124 2010/01/16 16:11:50 sno Exp $
+$NetBSD: CHANGES-2010,v 1.125 2010/01/16 16:13:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -156,3 +156,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-LWP-Online version 1.07 [sno 2010-01-16]
 	Added devel/p5-Acme-PlayCode version 0.11 [sno 2010-01-16]
 	Added textproc/p5-Pod-Abstract version 0.20 [sno 2010-01-16]
+	Added textproc/p5-Template-Tiny version 0.09 [sno 2010-01-16]
