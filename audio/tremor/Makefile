@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/06/20 01:09:07 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2010/01/16 19:12:08 asau Exp $
 
 DISTNAME=	tremor_snapshot_030406
 PKGNAME=	tremor-1.0.2
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/Tremor
 AUTOCONF_REQD=		2.50
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		automake14 gmake
+USE_TOOLS+=		autoconf automake gmake
 USE_LIBTOOL=		yes
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
