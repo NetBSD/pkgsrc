@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/16 14:15:52 sno Exp $
+
+SHA1 (CPAN-Checksums-2.04.tar.gz) = 2e1aa5110006511eb293d581b5e987eca9b4ca4b
+RMD160 (CPAN-Checksums-2.04.tar.gz) = b67a711b0ced80817200498e3b507512fcbf28d2
+Size (CPAN-Checksums-2.04.tar.gz) = 16248 bytes
