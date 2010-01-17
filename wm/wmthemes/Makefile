@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/06/14 22:58:09 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2010/01/17 17:14:31 tron Exp $
 
 #
 # There is no distinfo file because users can specify alternate themes
@@ -16,6 +16,8 @@ HOMEPAGE=	http://wm.themes.org/
 COMMENT=	Themes for the window manager WindowMaker
 
 DEPENDS+=	windowmaker>=0.80.0nb1:../../wm/windowmaker
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	wmthemes
@@ -46,7 +48,8 @@ do-install:
 	  ${ECHO} "Installing files in directory ${DIR}."; \
 	  cd ${WRKSRC}/${DIR}; \
 	  for FILE in *; do \
-	    ${INSTALL_DATA} "$$FILE" ${PREFIX}/${WM_DATADIR}/${DIR}; \
+	    ${MKDIR} ${DESTDIR}${PREFIX}/${WM_DATADIR}/${DIR}; \
+	    ${INSTALL_DATA} "$$FILE" ${DESTDIR}${PREFIX}/${WM_DATADIR}/${DIR}; \
 	    ${ECHO} "${WM_DATADIR}/${DIR}/$$FILE" >>${PLIST_SRC}; \
 	  done; \
 	fi
@@ -55,10 +58,10 @@ do-install:
 	for DIR in *.themed; do \
 	  if [ -d "$$DIR" ] && [ -n "`${LS} "$$DIR"`" ]; then \
 	    ${ECHO} "Installing \"`${BASENAME} "$$DIR" .themed`\" theme."; \
-	    ${INSTALL_DATA_DIR} "${PREFIX}/${WM_DATADIR}/Themes/$$DIR"; \
+	    ${INSTALL_DATA_DIR} "${DESTDIR}${PREFIX}/${WM_DATADIR}/Themes/$$DIR"; \
 	    cd "${WRKSRC}/$$DIR"; \
 	    for FILE in *; do \
-	      ${INSTALL_DATA} "$$FILE" "${PREFIX}/${WM_DATADIR}/Themes/$$DIR"; \
+	      ${INSTALL_DATA} "$$FILE" "${DESTDIR}${PREFIX}/${WM_DATADIR}/Themes/$$DIR"; \
 	      ${ECHO} "${WM_DATADIR}/Themes/$$DIR/$$FILE" >>${PLIST_SRC}; \
 	    done; \
 	    cd ..; \
