@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.210 2010/01/17 08:48:41 adam Exp $
+$NetBSD: CHANGES-2010,v 1.211 2010/01/17 10:36:02 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -242,3 +242,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/ruby-tokyotyrant to 1.13 [obache 2010-01-17]
 	Updated textproc/tokyodystopia to 0.9.13nb2 [obache 2010-01-17]
 	Updated graphics/hugin to 2009.4.0 [adam 2010-01-17]
+	Updated devel/p5-Mouse to 0.47 [seb 2010-01-17]
