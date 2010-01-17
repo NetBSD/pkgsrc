@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2009/12/04 09:30:20 spz Exp $
+# $NetBSD: Makefile,v 1.41 2010/01/17 15:45:54 spz Exp $
 
-DISTNAME=		rt-3.8.6
+DISTNAME=		rt-3.8.7
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		spz@NetBSD.org
 HOMEPAGE=		http://bestpractical.com/rt/
 COMMENT=		Industrial-grade ticketing system
 LICENSE=		gnu-gpl-v2
