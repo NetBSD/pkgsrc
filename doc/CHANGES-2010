@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.196 2010/01/17 00:36:19 jnemeth Exp $
+$NetBSD: CHANGES-2010,v 1.197 2010/01/17 00:38:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -225,3 +225,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-FindIndent to 0.08 [sno 2010-01-17]
 	Updated www/p5-HTTP-Body to 1.06 [sno 2010-01-17]
 	Updated pkgtools/pkglint to 4.92 [jnemeth 2010-01-17]
+	Updated x11/p5-Alien-wxWidgets to 0.50 [sno 2010-01-17]
