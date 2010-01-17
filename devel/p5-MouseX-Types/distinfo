@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/11/08 16:53:43 seb Exp $
+$NetBSD: distinfo,v 1.3 2010/01/17 11:13:27 seb Exp $
 
-SHA1 (MouseX-Types-0.02.tar.gz) = b9325e0f0ed8e91856900078b3825e31da1d92c1
-RMD160 (MouseX-Types-0.02.tar.gz) = 544a6e144d099289a62b8c996d892ab4b4362b5b
-Size (MouseX-Types-0.02.tar.gz) = 25003 bytes
+SHA1 (MouseX-Types-0.04.tar.gz) = da2033c709bf78113d5d9bc12e34e0c1a6f82c1e
+RMD160 (MouseX-Types-0.04.tar.gz) = 3813068cb164af9298b2619913b97214d25bd605
+Size (MouseX-Types-0.04.tar.gz) = 19875 bytes
