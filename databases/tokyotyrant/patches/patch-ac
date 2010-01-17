@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2009/05/07 11:03:50 obache Exp $
+$NetBSD: patch-ac,v 1.6 2010/01/17 02:49:05 obache Exp $
 
 Add NetBSD and DragonFly support.
 http://sourceforge.net/tracker/index.php?func=detail&aid=2447593&group_id=200242&atid=972717
 
---- myconf.h.orig	2009-05-05 07:55:39.000000000 +0000
+--- myconf.h.orig	2009-12-08 08:34:21.000000000 +0000
 +++ myconf.h
 @@ -44,6 +44,11 @@
  #define _SYS_OPENBSD_
@@ -14,7 +14,7 @@ http://sourceforge.net/tracker/index.php?func=detail&aid=2447593&group_id=200242
 +#define _SYS_DRAGONFLY_
 +#define TTSYSNAME   "DragonFly"
 +
- #elif defined(__sun__)
+ #elif defined(__sun__) || defined(__sun)
  
  #define _SYS_SUNOS_
 @@ -92,7 +97,7 @@
@@ -26,7 +26,7 @@ http://sourceforge.net/tracker/index.php?func=detail&aid=2447593&group_id=200242
  #error =======================================
  #error Your platform is not supported.  Sorry.
  #error =======================================
-@@ -214,7 +219,7 @@
+@@ -215,7 +220,7 @@
  #include <tctdb.h>
  #include <tcadb.h>
  
@@ -35,12 +35,12 @@ http://sourceforge.net/tracker/index.php?func=detail&aid=2447593&group_id=200242
  #define TTUSEKQUEUE    1
  #elif defined(_SYS_SUNOS_)
  
-@@ -243,7 +248,7 @@ typedef struct { int portev_object; } po
+@@ -242,7 +247,7 @@ typedef struct { int portev_object; } po
+  *************************************************************************************************/
  
- #define sizeof(a)      ((int)sizeof(a))
  
 -#if defined(_SYS_FREEBSD_) || defined(_SYS_NETBSD_) || defined(_SYS_OPENBSD_)
 +#if defined(_SYS_FREEBSD_)
  #define nan(TC_a)      strtod("nan", NULL)
+ #define nanl(TC_a)     ((long double)strtod("nan", NULL))
  #endif
- 
