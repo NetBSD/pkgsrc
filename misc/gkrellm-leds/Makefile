@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2009/08/26 19:58:01 sno Exp $
+# $NetBSD: Makefile,v 1.17 2010/01/17 12:02:27 wiz Exp $
 #
 
 DISTNAME=	gkleds-0.8.2
 PKGNAME=	${DISTNAME:S/^gk/gkrellm-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://heim.ifi.uio.no/~oyvinha/files/files/
 

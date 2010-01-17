@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/03/20 16:02:13 adam Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/17 12:02:10 wiz Exp $
 
 PKGNAME=	postgresql82-plpython-${BASE_VERS}
+PKGREVISION=	1
 COMMENT=	PL/Python procedural language for the PostgreSQL backend
 
 DEPENDS+=	postgresql82-server>=${BASE_VERS}:../../databases/postgresql82-server
