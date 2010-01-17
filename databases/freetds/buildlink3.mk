@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:24:05 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2010/01/17 12:02:08 wiz Exp $
 
 BUILDLINK_TREE+=	freetds
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	freetds
 FREETDS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.freetds+=	freetds>=0.82
-BUILDLINK_ABI_DEPENDS.freetds?=	freetds>=0.63nb4
+BUILDLINK_ABI_DEPENDS.freetds?=	freetds>=0.82nb2
 BUILDLINK_PKGSRCDIR.freetds?=	../../databases/freetds
 
 .include "../../converters/libiconv/buildlink3.mk"
