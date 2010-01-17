@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.206 2010/01/17 02:52:08 obache Exp $
+$NetBSD: CHANGES-2010,v 1.207 2010/01/17 02:53:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -238,3 +238,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/lua-tokyocabinet to 1.8nb2 [obache 2010-01-17]
 	Updated databases/p5-tokyocabinet to 1.32nb2 [obache 2010-01-17]
 	Updated databases/ruby-tokyocabinet to 1.29nb2 [obache 2010-01-17]
+	Updated databases/p5-tokyotyrant to 1.16 [obache 2010-01-17]
