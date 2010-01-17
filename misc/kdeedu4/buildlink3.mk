@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/10/02 20:51:26 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/01/17 12:02:28 wiz Exp $
 
 BUILDLINK_TREE+=	kdeedu4
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdeedu4
 KDEEDU4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdeedu4+=	kdeedu4>=4.1.1
-BUILDLINK_ABI_DEPENDS.kdeedu4?=	kdeedu4>=4.2.3nb1
+BUILDLINK_ABI_DEPENDS.kdeedu4?=	kdeedu4>=4.3.4nb1
 BUILDLINK_PKGSRCDIR.kdeedu4?=	../../misc/kdeedu4
 
 .include "../../x11/kdelibs4/buildlink3.mk"
