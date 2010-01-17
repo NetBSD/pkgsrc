@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.200 2010/01/17 01:00:23 sno Exp $
+$NetBSD: CHANGES-2010,v 1.201 2010/01/17 01:03:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -229,3 +229,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/p5-Wx to 0.96 [sno 2010-01-17]
 	Updated devel/p5-Sub-Uplevel to 0.2200 [sno 2010-01-17]
 	Updated devel/p5-SVN-Simple to 0.28 [sno 2010-01-17]
+	Updated devel/p5-Test-Aggregate to 0.36.3 [sno 2010-01-17]
