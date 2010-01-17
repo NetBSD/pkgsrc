@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2009/08/05 00:02:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/01/17 08:16:52 dholland Exp $
 #
 
 DISTNAME=	raines-0.43.3
 PKGNAME=	${DISTNAME:S/raines/raine/}
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.rainemu.com/html/archive/
+MASTER_SITES=	http://rainemu.swishparty.co.uk/html/archive/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rainemu.com/
+HOMEPAGE=	http://rainemu.swishparty.co.uk/
 COMMENT=	680x0 Arcade Emulator
 
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
