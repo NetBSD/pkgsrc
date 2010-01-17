@@ -1,0 +1,6 @@
+#	$NetBSD: Makefile,v 1.1.1.1 2010/01/17 01:33:16 dholland Exp $
+#	From NetBSD: Makefile,v 1.8 2005/09/17 16:52:02 chs Exp 
+
+SUBDIR = tools .WAIT tn3270 mset
+
+.include <bsd.subdir.mk>
