@@ -1,30 +1,28 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2010/01/17 01:33:23 dholland Exp $
-#	From NetBSD: Makefile,v 1.26 2003/10/21 10:01:22 lukem Exp 
+#	$NetBSD: Makefile,v 1.2 2010/01/17 01:41:34 dholland Exp $
 
-.include <bsd.own.mk>
+TOP=..
+include $(TOP)/mk/setup.mk
 
-PROG=	mset
 MAN=	mset.1 map3270.5
-SRCS=	astosc.c map3270.c mset.c
-DPSRCS=	astosc.out
 
-MKASTOSCDIR!=cd $(.CURDIR)/../tools/mkastosc && ${PRINTOBJDIR}
-MKASTOSC=${MKASTOSCDIR}/mkastosc
+CFLAGS+=-I.
 
-${MKASTOSC}:
-	@cd ${.CURDIR}/../tools/mkastosc && ${MAKE}
+PROG=mset
+SRCS=../api/astosc.c ../ascii/map3270.c ../ascii/mset.c
+GENFILES=astosc.out
 
-CLEANFILES+= astosc.out
-astosc.out: ${.CURDIR}/../ctlr/hostctlr.h ${.CURDIR}/../ctlr/function.h \
-	    ${.CURDIR}/../ctlr/${KBD} ${MKASTOSC}
-	${_MKTARGET_CREATE}
-	${MKASTOSC} \
-	    ${.CURDIR}/../ctlr/hostctlr.h ${.CURDIR}/../ctlr/function.h \
-	    < ${.CURDIR}/../ctlr/${KBD} > tmp
-	mv -f tmp ${.TARGET}
+include $(TOP)/mk/prog.mk
 
-.include <bsd.prog.mk>
+MKASTOSC=../tools/mkastosc/mkastosc
 
-.PATH: ${.CURDIR}/../api ${.CURDIR}/../ascii
+astosc.out: ${MKASTOSC} ../ctlr/hostctlr.h ../ctlr/function.h ../ctlr/${KBD}
+	${MKASTOSC} ../ctlr/hostctlr.h ../ctlr/function.h \
+	    < ../ctlr/${KBD} > astosc.tmp
+	mv -f astosc.tmp ${.TARGET}
 
+clean: cleanhere
+cleanhere:
+	rm -f astosc.tmp
+
+# depend should catch this, but just in case
 astosc.o:	astosc.out
