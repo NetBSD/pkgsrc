@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.205 2010/01/17 02:49:17 obache Exp $
+$NetBSD: CHANGES-2010,v 1.206 2010/01/17 02:52:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -234,3 +234,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Added comms/tn3270 version 0.20100116 [dholland 2010-01-17]
 	Updated databases/tokyocabinet to 1.4.41 [obache 2010-01-17]
 	Updated databases/tokyotyrant to 1.1.39 [obache 2010-01-17]
+	Updated databases/java-tokyocabinet to 1.22nb2 [obache 2010-01-17]
+	Updated databases/lua-tokyocabinet to 1.8nb2 [obache 2010-01-17]
+	Updated databases/p5-tokyocabinet to 1.32nb2 [obache 2010-01-17]
+	Updated databases/ruby-tokyocabinet to 1.29nb2 [obache 2010-01-17]
