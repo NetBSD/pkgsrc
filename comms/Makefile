@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2009/06/12 09:05:58 jnemeth Exp $
+# $NetBSD: Makefile,v 1.79 2010/01/17 02:16:29 dholland Exp $
 #
 
 COMMENT=	Communication utilities
@@ -67,6 +67,7 @@ SUBDIR+=	synce-libsynce
 SUBDIR+=	synce-rra
 SUBDIR+=	synce-serial
 SUBDIR+=	tkhylafax
+SUBDIR+=	tn3270
 SUBDIR+=	xisp
 SUBDIR+=	xtel
 SUBDIR+=	zaptel-netbsd
