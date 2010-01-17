@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.192 2010/01/17 00:17:18 sno Exp $
+$NetBSD: CHANGES-2010,v 1.193 2010/01/17 00:20:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -221,3 +221,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Regexp-Common to 2010010201 [sno 2010-01-17]
 	Updated textproc/p5-YAML to 0.71 [sno 2010-01-17]
 	Updated textproc/p5-Text-CSV_XS to 0.70 [sno 2010-01-17]
+	Updated textproc/p5-Text-CSV to 1.16 [sno 2010-01-17]
