@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.5 2009/06/09 13:57:56 taca Exp $
+$NetBSD: patch-ah,v 1.6 2010/01/17 11:48:03 markd Exp $
 
 --- config/Makefile.in.orig	2009-04-25 01:46:56.000000000 +0900
 +++ config/Makefile.in
@@ -20,18 +20,3 @@ $NetBSD: patch-ah,v 1.5 2009/06/09 13:57:56 taca Exp $
  		else \
  			echo "not overwriting $$f"; \
  		fi; \
-@@ -445,10 +446,10 @@ install-config-files: $(CONFFILES) $(GEN
- @USE_PAM_FALSE@install-data-local: install-config-files
- 
- @USE_PAM_FALSE@uninstall-local:
--@USE_PAM_FALSE@    for f in $(CONFFILES) $(GENFILES); do \
--@USE_PAM_FALSE@        echo rm -f $(DESTDIR)$(pkgconfdir)/$$f; \
--@USE_PAM_FALSE@        rm -f $(DESTDIR)$(pkgconfdir)/$$f; \
--@USE_PAM_FALSE@    done
-+@USE_PAM_FALSE@	for f in $(CONFFILES) $(GENFILES); do \
-+@USE_PAM_FALSE@		echo rm -f $(DESTDIR)$(pkgconfdir)/$$f; \
-+@USE_PAM_FALSE@		rm -f $(DESTDIR)$(pkgconfdir)/$$f; \
-+@USE_PAM_FALSE@	done
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:

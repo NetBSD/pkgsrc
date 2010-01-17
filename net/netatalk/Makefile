@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2009/08/26 19:58:45 sno Exp $
+# $NetBSD: Makefile,v 1.66 2010/01/17 11:48:03 markd Exp $
 
-DISTNAME=	netatalk-2.0.4
-PKGREVISION=	1
+DISTNAME=	netatalk-2.0.5
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,13 +30,6 @@ CONF_FILES=	${EG_DIR}/AppleVolumes.default ${PKG_SYSCONFDIR}/AppleVolumes.defaul
 		${EG_DIR}/papd.conf ${PKG_SYSCONFDIR}/papd.conf
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
-
-RCD_SCRIPTS=	atalkd afpd cnid_metad papd timelord
-RCD_SCRIPT_SRC.atalkd=		# empty
-RCD_SCRIPT_SRC.afpd=		# empty
-RCD_SCRIPT_SRC.cnid_metad=	# empty
-RCD_SCRIPT_SRC.papd=		# empty
-RCD_SCRIPT_SRC.timelord=	# empty
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -82,6 +74,7 @@ post-install:
 .endif
 
 .include "../../databases/db4/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
