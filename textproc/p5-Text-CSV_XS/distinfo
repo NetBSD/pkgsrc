@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2009/10/17 14:11:20 sno Exp $
+$NetBSD: distinfo,v 1.15 2010/01/17 00:17:06 sno Exp $
 
-SHA1 (Text-CSV_XS-0.69.tgz) = eaa9209210fd93267040c4f4c0fadf16ddca0e67
-RMD160 (Text-CSV_XS-0.69.tgz) = 6e686fee3e4c1e9744c2bb9b485f4b74d04100c7
-Size (Text-CSV_XS-0.69.tgz) = 105158 bytes
+SHA1 (Text-CSV_XS-0.70.tgz) = bd066b5c92335e5ee9e14dcec353fc8cd042e924
+RMD160 (Text-CSV_XS-0.70.tgz) = 02a42eab7071cb1a16f2376e1dabe9c9d702f8f8
+Size (Text-CSV_XS-0.70.tgz) = 105750 bytes
