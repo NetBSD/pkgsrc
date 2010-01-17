@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2009/11/08 16:50:54 seb Exp $
+# $NetBSD: Makefile,v 1.19 2010/01/17 10:35:53 seb Exp $
 
-DISTNAME=	Mouse-0.40
+DISTNAME=	Mouse-0.47
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GF/GFUJI/}
@@ -12,19 +12,13 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	# empty
-
-#DEPENDS+=	p5-Class-Method-Modifiers>=1.01:../../devel/p5-Class-Method-Modifiers
-#DEPENDS+=	p5-MRO-Compat>=0:../../devel/p5-MRO-Compat
-#DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
-#DEPENDS+=	p5-Sub-Exporter>=0:../../devel/p5-Sub-Exporter
-
 BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Simple>=0.88:../../devel/p5-Test-Simple
-#BUILD_DEPENDS+=	p5-Test-Output>=0:../../devel/p5-Test-Output
+BUILD_DEPENDS+=	p5-ExtUtils-ParseXS>=2.21:../../devel/p5-ExtUtils-ParseXS
+BUILD_DEPENDS+=	p5-Devel-PPPort-[0-9]*:../../devel/p5-Devel-PPPort
 
 PERL5_PACKLIST=	auto/Mouse/.packlist
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
