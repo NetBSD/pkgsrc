@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/07/07 19:05:23 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2010/01/17 12:02:49 wiz Exp $
 
 DISTNAME=	mini_httpd-1.19
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/mini_httpd/
 

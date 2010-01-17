@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2009/12/18 14:39:26 jnemeth Exp $
+# $NetBSD: Makefile,v 1.70 2010/01/17 12:02:08 wiz Exp $
 
 DISTNAME=	asterisk-1.2.37
+PKGREVISION=	1
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/releases/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/

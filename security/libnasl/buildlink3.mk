@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:25:19 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2010/01/17 12:02:41 wiz Exp $
 
 BUILDLINK_TREE+=	libnasl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libnasl
 LIBNASL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libnasl+=	libnasl>=2.2.11
-BUILDLINK_ABI_DEPENDS.libnasl?=	libnasl>=2.2.11nb1
+BUILDLINK_ABI_DEPENDS.libnasl?=	libnasl>=2.2.11nb2
 BUILDLINK_PKGSRCDIR.libnasl?=	../../security/libnasl
 
 .include "../../security/nessus-libraries/buildlink3.mk"

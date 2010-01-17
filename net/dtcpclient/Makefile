@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/01/18 05:08:41 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2010/01/17 12:02:31 wiz Exp $
 #
 
 DISTNAME=	dtcpclient-20060526
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://www.imasy.or.jp/~ume/ipv6/ \
 		http://home.jp.FreeBSD.org/~ume/ipv6/

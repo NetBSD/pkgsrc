@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/12 11:07:00 markd Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/17 12:02:49 wiz Exp $
 #
 
 DISTNAME=	konq-plugins-4.3.1
+PKGREVISION=	1
 CATEGORIES=	www kde
 MASTER_SITES=	${MASTER_SITE_KDE:=4.3.1/src/extragear/}
 EXTRACT_SUFX=	.tar.bz2

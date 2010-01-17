@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.common,v 1.3 2009/09/22 13:10:28 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4 2010/01/17 12:02:39 wiz Exp $
 #
-
 # used by security/cy2-saml/Makefile
 # used by security/pam-saml/Makefile
 

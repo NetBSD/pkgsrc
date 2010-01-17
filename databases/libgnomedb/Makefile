@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2009/08/26 19:56:53 sno Exp $
+# $NetBSD: Makefile,v 1.73 2010/01/17 12:02:09 wiz Exp $
 #
 
 DISTNAME=		libgnomedb-3.0.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomedb/3.0/}
 EXTRACT_SUFX=		.tar.bz2

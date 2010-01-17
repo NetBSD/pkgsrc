@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:19 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/17 12:02:11 wiz Exp $
 
 PKGNAME=	postgresql82-tsearch2-${BASE_VERS}
+PKGREVISION=	1
 COMMENT=	Tsearch2 contrib module for fulltext indexing in PostgreSQL
 
 DEPENDS+=	postgresql82-server>=${BASE_VERS}:../../databases/postgresql82-server

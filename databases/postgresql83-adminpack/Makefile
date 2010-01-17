@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/17 12:02:11 wiz Exp $
 
 PKGNAME=	postgresql83-adminpack-${BASE_VERS}
+PKGREVISION=	1
 COMMENT=	Admin pack module for pgAdmin management
 
 PKG_DESTDIR_SUPPORT=	user-destdir

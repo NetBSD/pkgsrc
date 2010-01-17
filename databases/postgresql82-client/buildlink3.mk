@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:24:06 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2010/01/17 12:02:10 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	postgresql82-client
 POSTGRESQL82_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.postgresql82-client+=	postgresql82-client>=8.2.0
-BUILDLINK_ABI_DEPENDS.postgresql82-client?=	postgresql82-client>=8.2.6nb1
+BUILDLINK_ABI_DEPENDS.postgresql82-client?=	postgresql82-client>=8.2.15nb1
 BUILDLINK_PKGSRCDIR.postgresql82-client?=	../../databases/postgresql82-client
 
 .  if defined(PG_SUBPREFIX) && !empty(PG_SUBPREFIX)

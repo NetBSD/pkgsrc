@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2009/12/15 21:48:02 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2010/01/17 12:02:21 wiz Exp $
 #
 
 DISTNAME=	pixieplus-0.5.4
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	graphics
 MASTER_SITES=	http://people.fruitsalad.org/avleeuwen/distfiles/pixieplus/
 

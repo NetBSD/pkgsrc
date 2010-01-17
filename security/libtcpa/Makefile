@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2008/01/18 05:09:38 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/17 12:02:41 wiz Exp $
 #
 
 DISTNAME=		tpm-1.1b
 PKGNAME=		${DISTNAME:S/tpm/libtcpa/}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		security
 MASTER_SITES=		${HOMEPAGE}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} tcpa_man_20031210.tgz

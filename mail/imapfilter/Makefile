@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2009/05/20 00:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/01/17 12:02:24 wiz Exp $
 
 DISTNAME=		imapfilter-2.0.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		http://imapfilter.hellug.gr/source/
 EXTRACT_SUFX=		.tar.bz2
