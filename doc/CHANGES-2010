@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.214 2010/01/17 11:53:52 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.215 2010/01/17 13:49:07 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -246,3 +246,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MouseX-Types to 0.04 [seb 2010-01-17]
 	Updated net/netatalk to 2.0.5 [markd 2010-01-17]
 	Updated graphics/jpeg to 8 [wiz 2010-01-17]
+	Updated textproc/p5-YAML to 0.71nb1 [seb 2010-01-17]
