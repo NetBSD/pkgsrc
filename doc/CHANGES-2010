@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.189 2010/01/17 00:02:41 sno Exp $
+$NetBSD: CHANGES-2010,v 1.190 2010/01/17 00:08:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -218,3 +218,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Pod-Simple to 3.13 [sno 2010-01-16]
 	Updated textproc/p5-podlators to 2.3.0 [sno 2010-01-16]
 	Updated textproc/p5-PPI-HTML to 1.08 [sno 2010-01-16]
+	Updated textproc/p5-Regexp-Common to 2010010201 [sno 2010-01-17]
