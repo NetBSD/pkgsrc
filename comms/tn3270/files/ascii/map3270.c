@@ -1,4 +1,4 @@
-/*	$NetBSD: map3270.c,v 1.1.1.1 2010/01/17 01:33:18 dholland Exp $	*/
+/*	$NetBSD: map3270.c,v 1.2 2010/01/17 02:11:57 dholland Exp $	*/
 /*	From NetBSD: map3270.c,v 1.15 2006/04/30 23:49:34 christos Exp 	*/
 
 /*-
@@ -35,7 +35,7 @@
 #if 0
 static char sccsid[] = "@(#)map3270.c	4.2 (Berkeley) 4/26/91";
 #else
-__RCSID("$NetBSD: map3270.c,v 1.1.1.1 2010/01/17 01:33:18 dholland Exp $");
+__RCSID("$NetBSD: map3270.c,v 1.2 2010/01/17 02:11:57 dholland Exp $");
 #endif
 #endif /* not lint */
 
@@ -929,7 +929,7 @@ int	(*translator)(char *);	/* Translates ascii string to integer */
 		GotIt = Position(environPointer, keybdPointer);
 	    }
 	    if (!GotIt) {
-		GotIt = Position("/usr/share/misc/map3270", keybdPointer);
+		GotIt = Position(PATH_MAP3270, keybdPointer);
 	    }
 	}
 	if (!GotIt) {
@@ -937,7 +937,7 @@ int	(*translator)(char *);	/* Translates ascii string to integer */
 		GotIt = Position(environPointer, "unknown");
 	    }
 	    if (!GotIt && keybdPointer) {
-		GotIt = Position("/usr/share/misc/map3270", keybdPointer);
+		GotIt = Position(PATH_MAP3270, keybdPointer);
 	    }
 	}
 	if (!GotIt) {
