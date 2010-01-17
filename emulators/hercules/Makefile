@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/09/02 11:54:08 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2010/01/17 08:00:47 dholland Exp $
 
 DISTNAME=		hercules-2.11
 PKGREVISION=		4
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.conmicro.cx/hercules/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.conmicro.cx/hercules/
 COMMENT=		S370 emulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		hercules-images-[0-9]*:../../emulators/hercules-images
 
@@ -19,10 +21,12 @@ REPLACE_BASH+=		dasdlist
 
 PTHREAD_OPTS+=		require
 
+INSTALLATION_DIRS+=	bin share/examples/hercules
+SPECIAL_PERMS+=		${PREFIX}/bin/hercifc ${SETUID_ROOT_PERMS}
+
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/hercules
-	${INSTALL_DATA} ${WRKSRC}/hercules.cnf ${PREFIX}/share/examples/hercules/
-	${INSTALL_DATA} ${WRKSRC}/zzsa.cnf ${PREFIX}/share/examples/hercules/
+	${INSTALL_DATA} ${WRKSRC}/hercules.cnf ${DESTDIR}${PREFIX}/share/examples/hercules/
+	${INSTALL_DATA} ${WRKSRC}/zzsa.cnf ${DESTDIR}${PREFIX}/share/examples/hercules/
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
