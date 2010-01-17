@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2009/08/18 16:24:16 sno Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/17 00:14:11 sno Exp $
 
-DISTNAME=	YAML-0.70
+DISTNAME=	YAML-0.71
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=YAML/}
@@ -18,6 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/YAML/.packlist
 MAKE_PARAMS+=		< /dev/null
+PERL5_MODULE_TYPE=	Module::Install
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
