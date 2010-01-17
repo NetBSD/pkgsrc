@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.204 2010/01/17 02:45:16 obache Exp $
+$NetBSD: CHANGES-2010,v 1.205 2010/01/17 02:49:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -233,3 +233,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-NoWarnings to 1.01 [sno 2010-01-17]
 	Added comms/tn3270 version 0.20100116 [dholland 2010-01-17]
 	Updated databases/tokyocabinet to 1.4.41 [obache 2010-01-17]
+	Updated databases/tokyotyrant to 1.1.39 [obache 2010-01-17]
