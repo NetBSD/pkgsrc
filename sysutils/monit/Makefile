@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/05/19 08:59:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/17 12:02:46 wiz Exp $
 #
 
 DISTNAME=		monit-4.10.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.tildeslash.com/monit/dist/
 

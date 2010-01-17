@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2009/05/16 17:45:26 kefren Exp $
+# $NetBSD: Makefile,v 1.28 2010/01/17 12:02:46 wiz Exp $
 
 .include "version.mk"
 
 DISTNAME=	webmin-${WBM_VERSION}
+PKGREVISION=	3
 CATEGORIES=	sysutils www
-PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

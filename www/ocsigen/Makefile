@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/01/18 05:09:52 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/17 12:02:50 wiz Exp $
 #
 
 DISTNAME=	ocsigen-0.6.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.ocsigen.org/download/
 
