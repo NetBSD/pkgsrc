@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2009/08/26 19:56:55 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2010/01/17 12:02:41 wiz Exp $
 
 BUILDLINK_TREE+=	nessus-core
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nessus-core
 NESSUS_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nessus-core+=	nessus-core>=2.2.11
-BUILDLINK_ABI_DEPENDS.nessus-core?=	nessus-core>=2.2.11nb2
+BUILDLINK_ABI_DEPENDS.nessus-core?=	nessus-core>=2.2.11nb3
 BUILDLINK_PKGSRCDIR.nessus-core?=	../../security/nessus-core
 
 .include "../../security/libnasl/buildlink3.mk"
