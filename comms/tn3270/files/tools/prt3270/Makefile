@@ -1,47 +1,40 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2010/01/17 01:33:27 dholland Exp $
-#	From NetBSD: Makefile,v 1.11 2006/03/20 01:34:49 gdamore Exp 
+#	$NetBSD: Makefile,v 1.2 2010/01/17 01:41:34 dholland Exp $
 
-NOMAN=		# defined
+TOP=../..
+include $(TOP)/mk/setup.mk
 
-.include <bsd.own.mk>
+PROG=prt3270
+SRCS=prt3270.c ../../api/asc_ebc.c ../../api/ebc_disp.c ../../api/astosc.c
 
-HOSTPROG=	prt3270
-SRCS=	prt3270.c asc_ebc.c ebc_disp.c astosc.c
-DPSRCS=	kbd.out astosc.out
-HOST_CPPFLAGS+=-I. -DHOST_TOOL
+GENFILES=kbd.out astosc.out
 
-MKHITSDIR!=cd $(.CURDIR)/../mkhits && ${PRINTOBJDIR}
-MKHITS=${MKHITSDIR}/mkhits
+CFLAGS+=-I../../api
+CFLAGS+=-I.
+CFLAGS+=-DHOST_TOOL
 
-${MKHITS}:
-	cd ${.CURDIR}/../mkhits; ${MAKE}
+# should be hostprog.mk for crosscompiling (FUTURE)
+include $(TOP)/mk/prog.mk
 
-kbd.out: ${.CURDIR}/../../ctlr/hostctlr.h ${.CURDIR}/../../ctlr/${KBD} ${MKHITS}
-	${HOST_CC} ${HOST_CPPFLAGS} -E ${.CURDIR}/../../ctlr/function.c > TMPfunc.out
-	${MKHITS} \
-	    ${.CURDIR}/../../ctlr/hostctlr.h TMPfunc.out \
-	    < ${.CURDIR}/../../ctlr/${KBD} > kbd.tmp
-	rm -f TMPfunc.out
-	mv -f kbd.tmp ${.TARGET}
-CLEANFILES+=	TMPfunc.out kbd.tmp kbd.out
+MKHITS=../mkhits/mkhits
+MKASTOSC=../mkastosc/mkastosc
 
-MKASTOSCDIR!=cd ${.CURDIR}/../mkastosc && ${PRINTOBJDIR}
-MKASTOSC= ${MKASTOSCDIR}/mkastosc
+kbd.out astosc.out: ../../ctlr/hostctlr.h ../../ctlr/$(KBD)
 
-${MKASTOSC}:
-	cd ${.CURDIR}/../mkastosc; ${MAKE}
+kbd.out: $(MKHITS) ../../ctlr/function.c
+	$(CC) $(CFLAGS) -E ../../ctlr/function.c > kbd.tmp
+	$(MKHITS) ../../ctlr/hostctlr.h kbd.tmp  < ../../ctlr/$(KBD) > kbd.tmp2
+	rm -f kbd.tmp
+	mv -f kbd.tmp2 kbd.out
 
-astosc.out: ${.CURDIR}/../../ctlr/hostctlr.h ${.CURDIR}/../../ctlr/function.h \
-	    ${.CURDIR}/../../ctlr/${KBD} ${MKASTOSC}
-	${MKASTOSC} \
-	    ${.CURDIR}/../../ctlr/hostctlr.h ${.CURDIR}/../../ctlr/function.h \
-	    < ${.CURDIR}/../../ctlr/${KBD} > astosc.tmp
-	mv -f astosc.tmp ${.TARGET}
-CLEANFILES+=	astosc.tmp astosc.out
+astosc.out: ${MKASTOSC} ../../ctlr/function.h
+	${MKASTOSC} ../../ctlr/hostctlr.h ../../ctlr/function.h \
+	    < ../../ctlr/${KBD} > astosc.tmp
+	mv -f astosc.tmp astosc.out
 
-.include <bsd.hostprog.mk>
+clean: cleanhere
+cleanhere:
+	rm -f kbd.tmp kbd.tmp2 astosc.tmp
 
-.PATH: ${.CURDIR}/../../api ${.CURDIR}/../../ascii
-
+# depend ought to pick these up, but just in case
 astosc.o:	astosc.out
 prt3270.o:	kbd.out

@@ -1,87 +1,88 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2010/01/17 01:33:25 dholland Exp $
-#	From NetBSD: Makefile,v 1.38 2008/08/29 00:02:24 gmcgarry Exp 
+#	$NetBSD: Makefile,v 1.2 2010/01/17 01:41:34 dholland Exp $
 
-.include <bsd.own.mk>
+TOP=..
+include $(TOP)/mk/setup.mk
 
-CPPFLAGS+=-I${NETBSDSRCDIR}/lib -I${NETBSDSRCDIR}/usr.bin/telnet
-LDADD+=	-lcurses -lcrypt
-DPADD+=	${LIBCURSES} ${LIBCRYPT}
+#.if (defined(HAVE_GCC) && ${HAVE_GCC} == 4) || defined(HAVE_PCC)
+#.for f in api commands system telnet terminal termout tn3270 utilities
+#COPTS.${f}.c+=  -Wno-pointer-sign
+#.endfor
+#.endif
 
-PROG=	tn3270
-SRCS=	api.c api_bsd.c api_exch.c apilib.c asc_ebc.c astosc.c commands.c \
-	dctype.c disp_asc.c ebc_disp.c function.c genbsubs.c genget.c \
-	globals.c inbound.c main.c map3270.c network.c oia.c options.c \
-	outbound.c ring.c sys_bsd.c system.c telnet.c termin.c terminal.c \
-	termout.c tn3270.c utilities.c
-DPSRCS=	asc_disp.out astosc.out disp_asc.out kbd.out
+CFLAGS+=-I.
 
-MKASTOSCDIR !=cd $(.CURDIR)/../tools/mkastosc && ${PRINTOBJDIR}
-MKASTOSC= ${MKASTOSCDIR}/mkastosc
+PROG=tn3270
+SRCS=\
+	../api/api_bsd.c \
+	../api/api_exch.c \
+	../api/apilib.c \
+	../api/asc_ebc.c \
+	../api/astosc.c \
+	../api/dctype.c \
+	../api/disp_asc.c \
+	../api/ebc_disp.c \
+	../ascii/map3270.c \
+	../ascii/termin.c \
+	../ctlr/api.c \
+	../ctlr/function.c \
+	../ctlr/inbound.c \
+	../ctlr/oia.c \
+	../ctlr/options.c \
+	../ctlr/outbound.c \
+	../general/genbsubs.c \
+	../general/globals.c \
+	../sys_curses/system.c \
+	../sys_curses/termout.c
 
-${MKASTOSC}:
-	@cd ${.CURDIR}/../tools/mkastosc && ${MAKE}
+GENFILES=asc_disp.out astosc.out disp_asc.out kbd.out
 
-MKASTODSDIR!=cd $(.CURDIR)/../tools/mkastods && ${PRINTOBJDIR}
-MKASTODS= ${MKASTODSDIR}/mkastods
+CFLAGS+=-I../telnet
+SRCS+=\
+	../telnet/libtelnet/genget.c \
+	../telnet/commands.c \
+	../telnet/main.c \
+	../telnet/network.c \
+	../telnet/ring.c \
+	../telnet/sys_bsd.c \
+	../telnet/telnet.c \
+	../telnet/terminal.c \
+	../telnet/tn3270.c \
+	../telnet/utilities.c
 
-${MKASTODS}:
-	@cd ${.CURDIR}/../tools/mkastods && ${MAKE}
+LIBS+=-lcurses
+LIBS+=-lcrypt
 
-MKDSTOASDIR!=cd $(.CURDIR)/../tools/mkdstoas && ${PRINTOBJDIR}
-MKDSTOAS= ${MKDSTOASDIR}/mkdstoas
+include $(TOP)/mk/prog.mk
 
-${MKDSTOAS}:
-	@cd ${.CURDIR}/../tools/mkdstoas && ${MAKE}
+MKASTOSC=../tools/mkastosc/mkastosc
+MKASTODS=../tools/mkastods/mkastods
+MKDSTOAS=../tools/mkdstoas/mkdstoas
+MKHITS=../tools/mkhits/mkhits
 
-MKHITSDIR!=cd $(.CURDIR)/../tools/mkhits && ${PRINTOBJDIR}
-MKHITS= ${MKHITSDIR}/mkhits
-
-${MKHITS}:
-	@cd ${.CURDIR}/../tools/mkhits && ${MAKE}
-
-astosc.out: ${.CURDIR}/../ctlr/hostctlr.h ${.CURDIR}/../ctlr/function.h \
-	    ${.CURDIR}/../ctlr/${KBD} ${MKASTOSC}
-	${_MKTARGET_CREATE}
-	${MKASTOSC} \
-	    ${.CURDIR}/../ctlr/hostctlr.h ${.CURDIR}/../ctlr/function.h \
-	    < ${.CURDIR}/../ctlr/${KBD} > astosc.tmp
+astosc.out: ${MKASTOSC} ../ctlr/hostctlr.h ../ctlr/function.h ../ctlr/${KBD}
+	${MKASTOSC} ../ctlr/hostctlr.h ../ctlr/function.h \
+	   < ../ctlr/${KBD} > astosc.tmp
 	mv -f astosc.tmp ${.TARGET}
-CLEANFILES+=	astosc.tmp astosc.out
 
 asc_disp.out: ${MKASTODS}
-	${_MKTARGET_CREATE}
 	${MKASTODS} > asc_disp.tmp
 	mv -f asc_disp.tmp ${.TARGET}
-CLEANFILES+=	asc_disp.tmp asc_disp.out
 
 disp_asc.out: ${MKDSTOAS}
-	${_MKTARGET_CREATE}
 	${MKDSTOAS} > disp_asc.tmp
 	mv -f disp_asc.tmp ${.TARGET}
-CLEANFILES+=	disp_asc.tmp disp_asc.out
 
-kbd.out: ${.CURDIR}/../ctlr/hostctlr.h ${.CURDIR}/../ctlr/${KBD} ${MKHITS}
-	${_MKTARGET_CREATE}
-	${CC} ${CPPFLAGS} -E ${.CURDIR}/../ctlr/function.c > TMPfunc.out
-	${MKHITS} \
-	    ${.CURDIR}/../ctlr/hostctlr.h TMPfunc.out \
-	    < ${.CURDIR}/../ctlr/${KBD} > kbd.tmp
-	rm -f TMPFunc.out
-	mv -f kbd.tmp ${.TARGET}
-CLEANFILES+=	TMPfunc.out kbd.tmp kbd.out
+kbd.out: ${MKHITS} ../ctlr/hostctlr.h ../ctlr/${KBD} ../ctlr/function.c
+	${CC} ${CPPFLAGS} -E ${.CURDIR}/../ctlr/function.c > kbd.tmp
+	${MKHITS} ../ctlr/hostctlr.h kbd.tmp < ../ctlr/${KBD} > kbd.tmp2
+	rm -f kbd.tmp
+	mv -f kbd.tmp2 ${.TARGET}
 
-.include <bsd.prog.mk>
+clean: cleanhere
+cleanhere:
+	rm -f astosc.tmp asc_disp.tmp disp_asc.tmp kbd.tmp kbd.tmp2
 
-.if (defined(HAVE_GCC) && ${HAVE_GCC} == 4) || defined(HAVE_PCC)
-.for f in api commands system telnet terminal termout tn3270 utilities
-COPTS.${f}.c+=  -Wno-pointer-sign
-.endfor
-.endif
-
-.PATH: ${.CURDIR}/../api ${.CURDIR}/../ascii ${.CURDIR}/../ctlr
-.PATH: ${.CURDIR}/../general ${.CURDIR}/../sys_curses ${.CURDIR}/../../telnet
-.PATH: ${NETBSDSRCDIR}/lib/libtelnet
-
+# depend should catch these, but just in case
 astosc.o:	astosc.out
 disp_asc.o:	asc_disp.out disp_asc.out
 inbound.o:	kbd.out
