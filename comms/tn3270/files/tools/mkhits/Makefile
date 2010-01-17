@@ -1,8 +1,13 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2010/01/17 01:33:26 dholland Exp $
-#	From NetBSD: Makefile,v 1.10 2002/09/15 01:27:47 thorpej Exp 
+#	$NetBSD: Makefile,v 1.2 2010/01/17 01:41:34 dholland Exp $
 
-HOSTPROG=	mkhits
-HOST_CPPFLAGS+=	-DHOST_TOOL
-SRCS=	mkhits.c dohits.c asc_ebc.c ebc_disp.c
+TOP=../..
+include $(TOP)/mk/setup.mk
 
-.include <bsd.hostprog.mk>
+PROG=mkhits
+SRCS=mkhits.c dohits.c ../../api/asc_ebc.c ../../api/ebc_disp.c
+
+CFLAGS+=-I../../api
+CFLAGS+=-DHOST_TOOL
+
+# should be hostprog.mk for crosscompiling (FUTURE)
+include $(TOP)/mk/prog.mk
