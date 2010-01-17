@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/17 02:14:51 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/17 02:28:22 dholland Exp $
 
 DISTNAME=	tn3270-0.20100116
 CATEGORIES=	comms net
@@ -18,4 +18,5 @@ INSTALLATION_DIRS+=	bin share/tn3270
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
