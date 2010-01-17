@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2009/12/19 12:56:45 obache Exp $
+# $NetBSD: Makefile,v 1.27 2010/01/17 02:49:05 obache Exp $
 #
 
-DISTNAME=	tokyotyrant-1.1.33
-PKGREVISION=	1
+DISTNAME=	tokyotyrant-1.1.39
 CATEGORIES=	databases net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
+MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://1978th.net/tokyotyrant/
