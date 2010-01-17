@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2009/07/21 11:34:35 obache Exp $
+$NetBSD: distinfo,v 1.13 2010/01/17 02:54:16 obache Exp $
 
-SHA1 (tokyotyrant-ruby-1.11.tar.gz) = b2dadd0a7b3103a8afb28819b10bcbf02e819fa0
-RMD160 (tokyotyrant-ruby-1.11.tar.gz) = b6c346d43842368e5b74e093f371d6ad859e2539
-Size (tokyotyrant-ruby-1.11.tar.gz) = 47601 bytes
+SHA1 (tokyotyrant-ruby-1.13.tar.gz) = 519fe95fe846bc741fffe0034f81d2dac48c97ce
+RMD160 (tokyotyrant-ruby-1.13.tar.gz) = 52579fca8a469472ff8d6d847ce88a78f8849ec8
+Size (tokyotyrant-ruby-1.13.tar.gz) = 47663 bytes
 SHA1 (patch-aa) = 0c00ced973f8d45922123495361f17588a5fd820
