@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.303 2010/01/16 02:16:35 obache Exp $
+# $NetBSD: bsd.prefs.mk,v 1.304 2010/01/17 08:04:32 dholland Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -427,7 +427,7 @@ PKG_FAIL_REASON+=	"PKG_DESTDIR_SUPPORT must be \`\`destdir'' or \`\`user-destdir
 .endif
 
 .if defined(PKG_DEVELOPER) && empty(PKG_DESTDIR_SUPPORT)
-WARNINGS+=	"[bsd.prefs.mk] The package ${PKGNAME} misses DESTDIR support."
+WARNINGS+=	"[bsd.prefs.mk] The package ${PKGNAME} is missing DESTDIR support."
 .endif
 
 # When using staged installation, everything gets installed into
