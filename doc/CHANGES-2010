@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.215 2010/01/17 13:49:07 seb Exp $
+$NetBSD: CHANGES-2010,v 1.216 2010/01/17 15:49:06 spz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -247,3 +247,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/netatalk to 2.0.5 [markd 2010-01-17]
 	Updated graphics/jpeg to 8 [wiz 2010-01-17]
 	Updated textproc/p5-YAML to 0.71nb1 [seb 2010-01-17]
+	Updated devel/rt3 to 3.8.7 [spz 2010-01-17]
