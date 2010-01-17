@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/08/26 19:57:23 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/17 12:02:15 wiz Exp $
 
 DISTNAME=	ruby-eet-0.1.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://code-monkey.de/pub/ruby-eet/
 

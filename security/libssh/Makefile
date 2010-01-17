@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/11/25 21:11:33 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/17 12:02:41 wiz Exp $
 #
 # This package currently exists as a dependency for the hydra package but
 # the later versions of it are not supported by hydra.
@@ -6,7 +6,7 @@
 #
 
 DISTNAME=	libssh-0.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.0xbadc0de.be/libssh/
 EXTRACT_SUFX=	.tgz

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2009/05/12 13:58:44 obache Exp $
+# $NetBSD: Makefile,v 1.24 2010/01/17 12:02:37 wiz Exp $
 #
 
 DISTNAME=		xorp-1.6
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.xorp.org/releases/1.6/
 

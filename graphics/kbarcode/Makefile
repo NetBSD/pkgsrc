@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2009/08/26 19:57:45 sno Exp $
+# $NetBSD: Makefile,v 1.25 2010/01/17 12:02:20 wiz Exp $
 
 DISTNAME=		kbarcode-2.0.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kbarcode/}
 

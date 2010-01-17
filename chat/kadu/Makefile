@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2009/08/26 19:57:15 sno Exp $
+# $NetBSD: Makefile,v 1.27 2010/01/17 12:02:07 wiz Exp $
 
 DISTNAME=	kadu-0.5.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat
 MASTER_SITES=	http://www.kadu.net/download/stable/
 EXTRACT_SUFX=	.tar.bz2

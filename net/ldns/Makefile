@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2009/12/06 15:29:36 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/17 12:02:33 wiz Exp $
 
 DISTNAME=	ldns-1.6.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/drill/
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/

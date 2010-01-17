@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2009/05/19 08:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2010/01/17 12:02:08 wiz Exp $
 
 DISTNAME=	cku211
 PKGNAME=	kermit-8.0.211
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	comms
 MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 

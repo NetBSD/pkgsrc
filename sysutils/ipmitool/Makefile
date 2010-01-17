@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/05/20 00:58:28 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/17 12:02:45 wiz Exp $
 #
 
 DISTNAME=		ipmitool-1.8.8
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ipmitool/}
 

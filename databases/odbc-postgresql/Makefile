@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:10 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/17 12:02:09 wiz Exp $
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
 PKGNAME=		odbc-postgresql-${BASE_VERS}
-PKGREVISION=		2
+PKGREVISION=		3
 COMMENT=		ODBC interface to PostgreSQL
 
 CONFIGURE_ARGS+=	--with-odbcinst=${PKG_SYSCONFDIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:24:27 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2010/01/17 12:02:14 wiz Exp $
 
 BUILDLINK_TREE+=	ptlib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ptlib
 PTLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ptlib+=	ptlib>=2.6.1
-BUILDLINK_ABI_DEPENDS.ptlib?=	ptlib>=2.6.1
+BUILDLINK_ABI_DEPENDS.ptlib?=	ptlib>=2.6.5nb2
 BUILDLINK_PKGSRCDIR.ptlib?=	../../devel/ptlib
 
 .include "../../devel/SDL/buildlink3.mk"
