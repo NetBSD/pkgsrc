@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.3 2010/01/17 18:26:28 spz Exp $
+bin/mset
+bin/tn3270
+man/man1/mset.1
+man/man1/tn3270.1
+man/man5/map3270.5
+share/tn3270/map3270
