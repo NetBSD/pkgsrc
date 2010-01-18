@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.229 2010/01/18 23:15:17 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.230 2010/01/18 23:38:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -263,3 +263,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/monotone-server to 0.46 [jmmv 2010-01-18]
 	Updated editors/emacs-snapshot to 23.1.91.20100111 [minskim 2010-01-18]
 	Updated print/tex-hyphen-base to 2009.14587 [minskim 2010-01-18]
+	Updated multimedia/mediatomb to 0.11.0nb8 [tron 2010-01-18]
