@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 19:57:34 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/18 09:58:54 wiz Exp $
 #
 
 DISTNAME=	stegavorto-src-2009.01.22
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://hamsterrepublic.com/games/stegavorto/
 EXTRACT_SUFX=	.tar.bz2

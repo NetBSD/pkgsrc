@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/10/11 10:30:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/01/18 09:59:23 wiz Exp $
 
 BUILDLINK_TREE+=	podofo
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	podofo
 PODOFO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.podofo+=	podofo>=0.7.0
+BUILDLINK_ABI_DEPENDS.podofo?=	podofo>=0.7.0nb2
 BUILDLINK_PKGSRCDIR.podofo?=	../../print/podofo
 BUILDLINK_DEPMETHOD.podofo?=	build
 

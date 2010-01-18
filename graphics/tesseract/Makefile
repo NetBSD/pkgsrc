@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2009/08/26 19:57:51 sno Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/18 09:59:09 wiz Exp $
 #
 
 DISTNAME=	tesseract-2.04
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://tesseract-ocr.googlecode.com/files/
 DISTFILES+=	${DISTNAME}.tar.gz

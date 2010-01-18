@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2010/01/17 12:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2010/01/18 09:59:07 wiz Exp $
 
 DISTNAME=	rmagick-2.12.2
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rmagick/RMagick/}
 CATEGORIES=	graphics
 

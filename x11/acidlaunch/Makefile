@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2009/08/26 19:58:28 sno Exp $
+# $NetBSD: Makefile,v 1.20 2010/01/18 09:59:33 wiz Exp $
 #
 
 DISTNAME=	acidlaunch-0.5
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	x11
 MASTER_SITES=	http://linuxgamers.net/download/
 

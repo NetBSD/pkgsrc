@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2009/08/26 19:57:51 sno Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/18 09:59:08 wiz Exp $
 #
 
 DISTNAME=	snx101util-0.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://www.medias.ne.jp/~takam/bsd/
 
