@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2009/09/03 12:12:14 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2010/01/18 09:59:32 wiz Exp $
 #
 
 DISTNAME=	XmHTML-1.1.7
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	http://www.xs4all.nl/~ripley/XmHTML/dist/
 
