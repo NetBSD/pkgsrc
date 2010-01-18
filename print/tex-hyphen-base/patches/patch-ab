@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/03/06 17:53:40 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2010/01/18 23:08:29 minskim Exp $
 
---- texmf/tex/generic/config/language.def.orig	2008-11-03 18:37:40.000000000 -0800
+--- texmf/tex/generic/config/language.def.orig	2009-08-08 19:05:20.000000000 -0700
 +++ texmf/tex/generic/config/language.def
-@@ -25,115 +25,6 @@
+@@ -25,119 +25,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
 -% from dehyph-exptl:
--\addlanguage{german-x-2008-06-18}{dehypht-x-2008-06-18.tex}{}{2}{2}
--\addlanguage{german-x-latest}{dehypht-x-2008-06-18.tex}{}{2}{2}
--\addlanguage{ngerman-x-2008-06-18}{dehyphn-x-2008-06-18.tex}{}{2}{2}
--\addlanguage{ngerman-x-latest}{dehyphn-x-2008-06-18.tex}{}{2}{2}
+-\addlanguage{german-x-2009-06-19}{dehypht-x-2009-06-19.tex}{}{2}{2}
+-\addlanguage{german-x-latest}{dehypht-x-2009-06-19.tex}{}{2}{2}
+-\addlanguage{ngerman-x-2009-06-19}{dehyphn-x-2009-06-19.tex}{}{2}{2}
+-\addlanguage{ngerman-x-latest}{dehyphn-x-2009-06-19.tex}{}{2}{2}
 -% from hyphen-ancientgreek:
 -\addlanguage{ancientgreek}{loadhyph-grc.tex}{}{1}{1}
 -\addlanguage{ibycus}{ibyhyph.tex}{}{2}{2}
@@ -68,8 +68,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/03/06 17:53:40 minskim Exp $
 -\addlanguage{irish}{loadhyph-ga.tex}{}{2}{3}
 -% from hyphen-italian:
 -\addlanguage{italian}{loadhyph-it.tex}{}{2}{2}
+-% from hyphen-kurmanji:
+-\addlanguage{kurmanji}{loadhyph-kmr.tex}{}{2}{2}
 -% from hyphen-latin:
 -\addlanguage{latin}{loadhyph-la.tex}{}{2}{2}
+-% from hyphen-latvian:
+-\addlanguage{latvian}{loadhyph-lv.tex}{}{2}{2}
 -% from hyphen-lithuanian:
 -\addlanguage{lithuanian}{loadhyph-lt.tex}{}{2}{2}
 -% from hyphen-mongolian:
