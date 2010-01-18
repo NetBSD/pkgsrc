@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.220 2010/01/17 18:30:45 spz Exp $
+$NetBSD: CHANGES-2010,v 1.221 2010/01/18 02:43:04 christos Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -252,3 +252,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed comms/tn3270 [dholland 2010-01-17]
 	Updated devel/p5-Module-Build to 0.36010 [sno 2010-01-17]
 	Updated comms/tn3270 [spz 2010-01-17]
+	Updated misc/git to 4.9.5 [christos 20101-01-17]
