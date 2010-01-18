@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2010/01/11 09:18:39 abs Exp $
+# $NetBSD: Makefile,v 1.25 2010/01/18 08:51:09 adam Exp $
 
-DISTNAME=	sqlite-amalgamation-3.6.21
-PKGREVISION=	1
+DISTNAME=	sqlite-amalgamation-3.6.22
 PKGNAME=	${DISTNAME:S/sqlite-amalgamation/sqlite3/}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
