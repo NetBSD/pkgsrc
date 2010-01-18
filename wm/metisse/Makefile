@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2009/09/07 16:39:28 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/18 09:59:29 wiz Exp $
 #
 
 DISTNAME=	metisse-0.4.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	http://insitu.lri.fr/metisse/download/metisse/
 EXTRACT_SUFX=	.tar.bz2
