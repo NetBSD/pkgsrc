@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.226 2010/01/18 11:38:55 obache Exp $
+$NetBSD: CHANGES-2010,v 1.227 2010/01/18 13:41:57 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -259,3 +259,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/proj to 4.7.0 [adam 2010-01-18]
 	Updated geography/gdal-lib to 1.6.3 [adam 2010-01-18]
 	Updated devel/libmtp to 1.0.1 [wiz 2010-01-18]
+	Updated devel/monotone to 0.46 [jmmv 2010-01-18]
+	Updated devel/monotone-server to 0.46 [jmmv 2010-01-18]
