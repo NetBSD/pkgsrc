@@ -1,15 +1,15 @@
-$NetBSD: patch-bc,v 1.1 2008/06/23 15:44:14 drochner Exp $
+$NetBSD: patch-bc,v 1.2 2010/01/18 19:00:16 drochner Exp $
 
---- configure.orig	2008-05-17 22:33:13.000000000 +0200
+--- configure.orig	2009-12-06 08:46:58.000000000 +0000
 +++ configure
-@@ -6289,12 +6289,12 @@ echo "${ECHO_T}$LINGUAS" >&6; }
+@@ -6504,12 +6504,12 @@ $as_echo "$LINGUAS" >&6; }
  
          if test -n "$PYTHON"; then
        # If the user set $PYTHON, use it and don't search something else.
--      { echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.5" >&5
--echo $ECHO_N "checking whether $PYTHON version >= 2.5... $ECHO_C" >&6; }
-+      { echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.4" >&5
-+echo $ECHO_N "checking whether $PYTHON version >= 2.4... $ECHO_C" >&6; }
+-      { $as_echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.5" >&5
+-$as_echo_n "checking whether $PYTHON version >= 2.5... " >&6; }
++      { $as_echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.4" >&5
++$as_echo_n "checking whether $PYTHON version >= 2.4... " >&6; }
        prog="import sys, string
  # split strings by '.' and convert to numeric.  Append some zeros
  # because we need at least 4 digits for the hex conversion.
