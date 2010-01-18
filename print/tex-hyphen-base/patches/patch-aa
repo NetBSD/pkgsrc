@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/03/06 17:53:40 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/18 23:08:29 minskim Exp $
 
---- texmf/tex/generic/config/language.dat.orig	2008-11-03 18:37:35.000000000 -0800
+--- texmf/tex/generic/config/language.dat.orig	2009-08-08 19:05:17.000000000 -0700
 +++ texmf/tex/generic/config/language.dat
-@@ -47,112 +47,3 @@ usenglishmax	ushyphmax.tex
+@@ -47,116 +47,3 @@ usenglishmax	ushyphmax.tex
  % 
  dumylang	dumyhyph.tex    %for testing a new language.
  nohyphenation	zerohyph.tex    %a language with no patterns at all.
 -% from dehyph-exptl:
--german-x-2008-06-18 dehypht-x-2008-06-18.tex
+-german-x-2009-06-19 dehypht-x-2009-06-19.tex
 -=german-x-latest
--ngerman-x-2008-06-18 dehyphn-x-2008-06-18.tex
+-ngerman-x-2009-06-19 dehyphn-x-2009-06-19.tex
 -=ngerman-x-latest
 -% from hyphen-ancientgreek:
 -ancientgreek loadhyph-grc.tex
@@ -68,8 +68,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/03/06 17:53:40 minskim Exp $
 -irish loadhyph-ga.tex
 -% from hyphen-italian:
 -italian loadhyph-it.tex
+-% from hyphen-kurmanji:
+-kurmanji loadhyph-kmr.tex
 -% from hyphen-latin:
 -latin loadhyph-la.tex
+-% from hyphen-latvian:
+-latvian loadhyph-lv.tex
 -% from hyphen-lithuanian:
 -lithuanian loadhyph-lt.tex
 -% from hyphen-mongolian:
