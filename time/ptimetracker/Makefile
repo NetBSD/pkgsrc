@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2009/08/26 19:58:22 sno Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/18 09:59:28 wiz Exp $
 
 DISTNAME=	ptimetracker-1.7.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	time kde
 MASTER_SITES=	http://www.eggtart.plus.com/ptt/prog/
 

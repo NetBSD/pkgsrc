@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2009/12/23 14:21:48 drochner Exp $
+# $NetBSD: Makefile,v 1.61 2010/01/18 09:59:10 wiz Exp $
 
 DISTNAME=	xfig.3.2.5b.full
 PKGNAME=	xfig-3.2.5b
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 

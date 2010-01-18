@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2009/11/10 19:03:32 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/01/18 09:58:53 wiz Exp $
 #
 
 DISTNAME=		orbital_eunuchs_sniper-1.30
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://icculus.org/oes/
 

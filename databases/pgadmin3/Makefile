@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/08/26 19:57:19 sno Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/18 09:58:43 wiz Exp $
 
 DISTNAME=	pgadmin3-1.8.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgadmin.org/
 

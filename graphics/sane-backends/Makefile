@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2009/09/04 23:09:06 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2010/01/18 09:59:08 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ COMMENT=	API for access to scanners, digital cameras, frame grabbers etc.
 
 DISTNAME=	sane-backends-${SANE_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-PKGREVISION=	3
+PKGREVISION=	4
 
 # lib/Makefile.in builds .o files and then .a, but rules for shlibs,
 # while apparently independent, cause libtool to create .o again,

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2010/01/17 12:02:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2010/01/18 09:59:23 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	libgnomeprint
 LIBGNOMEPRINT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.0
-BUILDLINK_ABI_DEPENDS.libgnomeprint+=	libgnomeprint>=2.18.6nb2
+BUILDLINK_ABI_DEPENDS.libgnomeprint+=	libgnomeprint>=2.18.6nb3
 BUILDLINK_PKGSRCDIR.libgnomeprint?=	../../print/libgnomeprint
 
 .include "../../devel/gettext-lib/buildlink3.mk"

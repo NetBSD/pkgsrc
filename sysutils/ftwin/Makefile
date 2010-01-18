@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/01/17 12:02:45 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/18 09:59:26 wiz Exp $
 #
 
 DISTNAME=	ftwin-0.8.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.meroware.org/ftwin/
 EXTRACT_SUFX=	.tar.bz2

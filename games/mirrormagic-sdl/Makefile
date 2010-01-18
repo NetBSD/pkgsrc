@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2009/08/26 19:57:32 sno Exp $
+# $NetBSD: Makefile,v 1.26 2010/01/18 09:58:53 wiz Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.2
 PKGNAME=		${DISTNAME:S/-/-sdl-/}
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.artsoft.org/RELEASES/unix/mirrormagic/
 

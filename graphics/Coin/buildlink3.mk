@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/08/26 19:56:49 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2010/01/18 09:58:55 wiz Exp $
 
 BUILDLINK_TREE+=	Coin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	Coin
 COIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.Coin+=		Coin>=2.2.1
-BUILDLINK_ABI_DEPENDS.Coin+=		Coin>=2.4.4nb4
+BUILDLINK_ABI_DEPENDS.Coin+=		Coin>=2.4.4nb5
 BUILDLINK_PKGSRCDIR.Coin?=		../../graphics/Coin
 
 .include "../../graphics/simage/buildlink3.mk"

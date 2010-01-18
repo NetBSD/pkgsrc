@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2009/12/03 02:35:52 taca Exp $
+# $NetBSD: Makefile,v 1.28 2010/01/18 09:59:07 wiz Exp $
 
 DISTNAME=	ruby-gd-0.8.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

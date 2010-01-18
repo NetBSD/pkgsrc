@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2009/08/26 19:58:06 sno Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/18 09:59:18 wiz Exp $
 #
 
 DISTNAME=	mpeg_encode-1.5b-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia net
 MASTER_SITES=	ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/encode/
 

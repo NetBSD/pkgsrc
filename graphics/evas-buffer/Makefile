@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/01/17 12:02:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/18 09:58:58 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/evas/evas-buffer/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	Evas buffer engine
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2009/08/26 19:58:39 sno Exp $
+# $NetBSD: Makefile,v 1.27 2010/01/18 09:59:43 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt3-libs/Makefile.common"
 
 PKGNAME=	qt3-docs-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Documentation for the QT C++ X GUI toolkit
 
 BUILD_QT3=	yes

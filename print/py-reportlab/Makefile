@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2009/10/19 11:17:16 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2010/01/18 09:59:24 wiz Exp $
 #
 
 DISTNAME=	ReportLab_2_3
 PKGNAME=	${PYPKGPREFIX}-reportlab-2.3
+PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	http://www.reportlab.com/ftp/
 

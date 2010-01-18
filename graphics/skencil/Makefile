@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2009/08/26 19:57:51 sno Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/18 09:59:08 wiz Exp $
 #
 
 DISTNAME=	skencil-0.6.17
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sketch/}
 

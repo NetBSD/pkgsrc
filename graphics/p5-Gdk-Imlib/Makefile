@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/08/26 19:57:46 sno Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/18 09:59:05 wiz Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -7,7 +7,7 @@ MAKE_JOBS_SAFE=		no
 .include "../../x11/p5-gtk/Makefile.common"
 
 PKGNAME=	p5-Gdk-Imlib-${GTKPERL_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl bindings for Imlib

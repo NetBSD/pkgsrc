@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/08/26 19:57:54 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/18 09:59:11 wiz Exp $
 
 .include		"../../inputmethod/uim/Makefile.common"
 PKGNAME=		uim-qt4-immodule-${UIM_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		inputmethod
 
 COMMENT=		Qt4 immodule for inputmethod/uim

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/08/26 19:56:51 sno Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:59:07 wiz Exp $
 
 DISTNAME=	qimageblitz-0.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qimageblitz/}
 EXTRACT_SUFX=	.tar.bz2
