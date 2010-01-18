@@ -1,16 +1,45 @@
-$NetBSD: patch-ab,v 1.5 2006/01/31 20:29:40 reed Exp $
+$NetBSD: patch-ab,v 1.6 2010/01/18 02:23:52 christos Exp $
 
---- term/Makefile.in.orig	2006-01-26 09:20:04.000000000 -0800
-+++ term/Makefile.in	2006-01-26 09:22:36.000000000 -0800
-@@ -79,9 +79,9 @@
- PRODUCT = @PRODUCT@
- VERSION = @VERSION@
+--- term/Makefile.in.orig	2009-02-17 21:31:26.000000000 -0500
++++ term/Makefile.in	2010-01-09 17:20:37.000000000 -0500
+@@ -105,7 +105,7 @@
+ CONFIG_CLEAN_FILES = gnuitrc.aixterm gnuitrc.ansi gnuitrc.generic \
+ 	gnuitrc.hft gnuitrc.hpterm gnuitrc.linux gnuitrc.linux-m \
+ 	gnuitrc.mach gnuitrc.minix gnuitrc.thix gnuitrc.vt100 \
+-	gnuitrc.vt102 gnuitrc.xterm gnuitrc.xterm-color
++	gnuitrc.vt102 gnuitrc.xterm gnuitrc.xterm-color gnuitrc.cons25
+ SOURCES =
+ DIST_SOURCES =
+ am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
+@@ -545,18 +545,19 @@
+ EXTRA_DIST = gnuitrc.aixterm.in gnuitrc.ansi.in gnuitrc.common.IN\
+ 	     gnuitrc.generic.in gnuitrc.hft.in gnuitrc.hpterm.in gnuitrc.linux.in\
+ 	     gnuitrc.mach.in gnuitrc.minix.in gnuitrc.thix.in gnuitrc.vt100.in\
+-	     gnuitrc.vt102.in gnuitrc.xterm.in gnuitrc.xterm-color.in gnuitrc.linux-m.in
++	     gnuitrc.vt102.in gnuitrc.xterm.in gnuitrc.xterm-color.in gnuitrc.linux-m.in gnuitrc.cons25.in
  
--EXTRA_DIST = .gitrc.aixterm .gitrc.ansi .gitrc.common.in 	     .gitrc.generic .gitrc.hft .gitrc.hpterm .gitrc.linux 	     .gitrc.mach .gitrc.minix .gitrc.thix .gitrc.vt100 	     .gitrc.vt102 .gitrc.xterm .gitrc.xterm-color
-+EXTRA_DIST = .gitrc.aixterm .gitrc.ansi .gitrc.common.in 	     .gitrc.generic .gitrc.hft .gitrc.hpterm .gitrc.linux 	     .gitrc.mach .gitrc.minix .gitrc.thix .gitrc.vt100 	     .gitrc.vt102 .gitrc.xterm .gitrc.xterm-color .gitrc.cons25
+ pkgdata_DATA = gnuitrc.aixterm gnuitrc.ansi gnuitrc.common\
+ 	       gnuitrc.generic gnuitrc.hft gnuitrc.hpterm gnuitrc.linux\
+ 	       gnuitrc.mach gnuitrc.minix gnuitrc.thix gnuitrc.vt100\
+-	       gnuitrc.vt102 gnuitrc.xterm gnuitrc.xterm-color gnuitrc.linux-m
++	       gnuitrc.vt102 gnuitrc.xterm gnuitrc.xterm-color gnuitrc.linux-m\
++	       gnuitrc.cons25
  
--pkgdata_DATA = .gitrc.aixterm .gitrc.ansi .gitrc.common 	       .gitrc.generic .gitrc.hft .gitrc.hpterm .gitrc.linux 	       .gitrc.mach .gitrc.minix .gitrc.thix .gitrc.vt100 	       .gitrc.vt102 .gitrc.xterm .gitrc.xterm-color
-+pkgdata_DATA = .gitrc.aixterm .gitrc.ansi .gitrc.common 	       .gitrc.generic .gitrc.hft .gitrc.hpterm .gitrc.linux 	       .gitrc.mach .gitrc.minix .gitrc.thix .gitrc.vt100 	       .gitrc.vt102 .gitrc.xterm .gitrc.xterm-color .gitrc.cons25
- 
- 
- GIT_GENERICS = .gitrc.sun .gitrc.sun-cmd .gitrc.eterm .gitrc.pc3
+ GIT_GENERICS = gnuitrc.sun gnuitrc.sun-cmd gnuitrc.eterm gnuitrc.pc3
+ GIT_XTERMS = gnuitrc.xterms
+ GIT_ANSIS = gnuitrc.iris-ansi gnuitrc.iris-ansi-net gnuitrc.cygwin
+ GIT_COLOR_XTERMS = gnuitrc.dtterm gnuitrc.rxvt gnuitrc.xterm-debian gnuitrc.Eterm gnuitrc.rxvt-unicode
+-GIT_LINUXS = gnuitrc.console
++GIT_LINUXS = gnuitrc.console gnuitrc.cons25
+ GIT_HPTERMS = gnuitrc.hp
+ GIT_VT100S = gnuitrc.vt125 gnuitrc.vt200 gnuitrc.vt201 gnuitrc.vt220\
+ 		   gnuitrc.vt240 gnuitrc.vt300 gnuitrc.vt320 gnuitrc.vt400\
+@@ -596,6 +597,8 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ gnuitrc.aixterm: $(top_builddir)/config.status $(srcdir)/gnuitrc.aixterm.in
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
++gnuitrc.cons25: $(top_builddir)/config.status $(srcdir)/gnuitrc.cons25.in
++	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
+ gnuitrc.ansi: $(top_builddir)/config.status $(srcdir)/gnuitrc.ansi.in
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
+ gnuitrc.generic: $(top_builddir)/config.status $(srcdir)/gnuitrc.generic.in
