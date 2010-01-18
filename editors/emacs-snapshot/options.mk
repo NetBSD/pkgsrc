@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/06/05 02:57:57 minskim Exp $
+# $NetBSD: options.mk,v 1.2 2010/01/18 19:34:20 minskim Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
@@ -7,7 +7,7 @@ PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
 PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
-PKG_SUGGESTED_OPTIONS=	x11 xft2
+PKG_SUGGESTED_OPTIONS=	dbus svg x11 xft2
 
 .include "../../mk/bsd.options.mk"
 
@@ -39,11 +39,11 @@ PKG_OPTIONS+=		x11
 .endif
 
 ###
-### Default to using the Xaw X11 toolkit if none is specified.
+### Default to using the GTK toolkit if none is specified.
 ###
 .if !empty(PKG_OPTIONS:Mx11)
 .  if empty(PKG_OPTIONS:Mgtk) && empty(PKG_OPTIONS:Mmotif) && empty(PKG_OPTIONS:Mxaw)
-PKG_OPTIONS+=		xaw
+PKG_OPTIONS+=		gtk
 .  endif
 .endif
 
