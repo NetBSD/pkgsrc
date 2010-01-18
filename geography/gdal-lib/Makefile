@@ -1,26 +1,29 @@
-# $NetBSD: Makefile,v 1.20 2010/01/17 12:02:17 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.21 2010/01/18 09:36:09 adam Exp $
 
-DISTNAME=		gdal-1.6.1
-PKGNAME=		gdal-lib-1.6.1
-PKGREVISION=		4
-CATEGORIES=		geography
-MASTER_SITES=		http://download.osgeo.org/gdal/
+DISTNAME=	gdal-1.6.3
+PKGNAME=	gdal-lib-1.6.3
+CATEGORIES=	geography
+MASTER_SITES=	http://download.osgeo.org/gdal/
 
-MAINTAINER=		brook@nmsu.edu
-HOMEPAGE=		http://www.gdal.org/
-COMMENT=		Translator library for raster geospatial data formats
+MAINTAINER=	brook@nmsu.edu
+HOMEPAGE=	http://www.gdal.org/
+COMMENT=	Translator library for raster geospatial data formats
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAKE_JOBS_SAFE=		no
+#MAKE_JOBS_SAFE=		no
 
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
-
-GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-geos
+CONFIGURE_ARGS+=	--with-libz=${BUILDLINK_PREFIX.zlib}/include
+CONFIGURE_ARGS+=	--with-xerces
+CONFIGURE_ARGS+=	--with-xerces-inc=${BUILDLINK_PREFIX.xerces-c}/include
+CONFIGURE_ARGS+=	--with-xerces-lib=-L${BUILDLINK_PREFIX.xerces-c}/lib\ -lxerces-c
+CONFIGURE_ARGS+=	--without-python
 
 MAKE_FILE=		GNUmakefile
 
@@ -28,32 +31,11 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.gdal-lib
 PKG_SUPPORTED_OPTIONS=	pgsql mysql
 PKG_SUGGESTED_OPTIONS=	pgsql
 
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mpgsql)
-. include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pg
-.else
-CONFIGURE_ARGS+=	--without-pg
-.endif
-
-.if !empty(PKG_OPTIONS:Mmysql)
-. include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql
-.else
-CONFIGURE_ARGS+=	--without-mysql
-.endif
-
-CONFIGURE_ARGS+=	--with-libz=${BUILDLINK_PREFIX.zlib}/include
-CONFIGURE_ARGS+=	--with-xerces
-CONFIGURE_ARGS+=	--with-xerces-inc=${BUILDLINK_PREFIX.xerces-c}/include
-CONFIGURE_ARGS+=	--with-xerces-lib=-L${BUILDLINK_PREFIX.xerces-c}/lib\ -lxerces-c
-CONFIGURE_ARGS+=	--with-geos
-CONFIGURE_ARGS+=	--without-python
+.include "options.mk"
 
 CHECK_PORTABILITY_SKIP+=	mkbindist.sh
 
-INSTALLATION_DIRS=	bin include lib man/man1 share/gdal
+INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
