@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2009/08/26 19:56:50 sno Exp $
+# $NetBSD: Makefile,v 1.39 2010/01/18 09:58:59 wiz Exp $
 #
 
 DISTNAME=		fnlib-0.5
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		x11 graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
