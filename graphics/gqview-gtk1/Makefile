@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/01/04 17:02:56 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2010/01/18 09:59:01 wiz Exp $
 
 DISTNAME=	gqview-1.2.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gqview/}
 

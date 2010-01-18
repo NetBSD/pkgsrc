@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/01/17 12:02:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/18 09:58:58 wiz Exp $
 #
 
 COMMENT=	Enlightened Canvas Library
-PKGREVISION=	1
+PKGREVISION=	2
 
 .include "Makefile.common"
 
