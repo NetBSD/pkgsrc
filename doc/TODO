@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8863 2010/01/17 11:53:52 wiz Exp $
+$NetBSD: TODO,v 1.8864 2010/01/18 13:35:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -426,7 +426,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asp2php-0.77.3
 	o aspell-norwegian-2.0.10
 	o ast-ksh-20080624 [pkg/37854]
-	o asterisk16-1.6.2.0
+	o asterisk16-1.6.2.1
 	o astyle-1.15.3
 	o asymptote-1.91
 	o aterm-1.0.1
@@ -437,6 +437,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avcheck-0.91
 	o avl-2.0.2a
 	o awesome-3.4.3
+	o babl-0.1.2
 	o baci-20040415
 	o bakefile-0.2.8
 	o balance-3.42
@@ -467,13 +468,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.33
+	o calibre-0.6.34
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
 	o cdif-1.19
 	o cdlabelgen-4.1.0
-	o cfitsio-3210
+	o cfitsio-3230
 	o cgdb-0.6.5
 	o cgicc-3.2.9
 	o cheese-2.28.1 [GNOME 2.28]
@@ -567,7 +568,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-474
+	o etm-494
 	o evolution-exchange-2.28.2
 	o evolution-mapi-0.28.2 [GNOME 2.28]
 	o ex-20050325
@@ -677,7 +678,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-xmms-2.1.22
 	o glade3-3.6.7 [GNOME 2.26]
 	o glchess-1.0.5
-	o gle-4.2.1
+	o gle-4.2.2
 	o glib2-2.22.4
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
@@ -701,6 +702,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-system-tools-2.28.2 [GNOME 2.28]
 	o gnome-user-docs-2.28.2 [GNOME 2.28]
 	o gnome-user-share-2.28.2 [GNOME 2.28]
+	o gnome-utils-2.28.3
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
@@ -740,8 +742,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtranslator-1.9.6
 	o guile-gtk-2.0
 	o gupnp-0.13.2
-	o gupnp-igd-0.1.5 [needs gupnp-1.0 >= 0.13.2]
-	o gupnp-igd-0.1.6
+	o gupnp-igd-0.1.6 [needs gupnp-1.0 >= 0.13.2]
 	o gv-3.6.8
 	o gxine-0.5.905
 	o hackbot-2.21
@@ -757,6 +758,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hesiod-3.1.0
 	o heyu-2.8.0
 	o hiawatha-6.19
+	o hicolor-icon-theme-0.12
 	o highlight-2.13
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
@@ -840,6 +842,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-4.0.5
+	o libX11-1.3.3
 	o libXext-1.1.1 [xorg-server 1.7]
 	o libXfixes-4.0.4 [xorg-server 1.7]
 	o libXi-1.3 [xorg-server 1.7]
@@ -854,7 +857,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libev-3.9
 	o libextractor-0.6.0
 	o libflash-0.4.13
-	o libgda-4.0.5 [GNOME 2.28]
+	o libgda-4.0.6 [GNOME 2.28]
 	o libgdiplus-2.6
 	o libgee-0.5.0
 	o libggi-2.2.2
@@ -881,7 +884,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libusb-1.0
-	o libv4l-0.6.3
+	o libv4l-0.6.4
 	o libxklavier-5.0
 	o licq-1.3.8
 	o lighttpd-1.4.25
@@ -1046,6 +1049,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Date-Manip-6.05
 	o p5-DateTime-Event-ICal-0.10
 	o p5-DateTime-TimeZone-1.08
+	o p5-Digest-HMAC-1.02
 	o p5-Digest-SHA-5.48
 	o p5-Error-0.17016
 	o p5-FCGI-1.3.0
@@ -1057,10 +1061,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Module-CoreList-2.24
 	o p5-Net-DNS-0.66
 	o p5-Spreadsheet-WriteExcel-2.35
+	o p5-Test-Exception-0.29
 	o p5-WWW-Curl-4.11
 	o p5-XML-Atom-0.37
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
+	o p5-version-0.7900
 	o packagekit-0.5.1
 	o pam-smbpass-3.0.13
 	o paprefs-0.9.8
@@ -1167,6 +1173,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-moin-1.9.0 [pkg/42602]
 	o py-psycopg-2.0.13
 	o py-pytz-2009u
+	o py-qt4-4.7
+	o py-sip-4.10
 	o py-subversion-1.6.6
 	o py-sybase-0.37
 	o py-twisted-9.0.0
@@ -1174,7 +1182,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-zconfig-2.6.1 [pkg/42563]
 	o python-3.1.1
 	o qbrew-0.3.9
-	o qemu-0.12.1
+	o qemu-0.12.2
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt3-qscintilla-2.4
@@ -1263,6 +1271,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scrotwm-0.9.22
 	o scsh-1.3.0
 	o sdcc-2.9.0
+	o sdlmess-0.136
 	o sendfile-20010424
 	o ser-0.9.6
 	o sessreg-1.0.5
@@ -1286,12 +1295,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o smtpfeed-1.20
 	o snd-10.6
 	o snes9x-1.51
+	o snes9x-gtk-1.52
 	o snort-2.8.5.2
 	o snownews-1.5.12
 	o socat-1.7.1.2
 	o solfege-3.14.10
 	o sope-4.6
-	o source-highlight-3.1.2
+	o source-highlight-3.1.3
 	o sox-14.2.0
 	o spcaview-20060501
 	o spim-7.4
@@ -1338,7 +1348,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tig-0.15
 	o tile-0.7.4
 	o tinc-1.0.11
-	o tinyproxy-1.7.0
+	o tinyproxy-1.8.0
 	o tk-8.5.8
 	o tk83-8.3.5
 	o tkcvs-8.2
@@ -1413,7 +1423,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4
 	o x11vnc-0.9.9
-	o x264-devel-20100109
+	o x264-devel-20100116
 	o xanalyser-1.30
 	o xapian-1.0.17
 	o xapian-omega-1.0.17
