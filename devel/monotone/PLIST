@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/09/23 16:05:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.20 2010/01/18 13:27:51 jmmv Exp $
 bin/mtn
 bin/mtnopt
 info/monotone.info
@@ -21,7 +21,13 @@ share/doc/monotone/figures/revision.png
 share/doc/monotone/figures/statement.png
 share/doc/monotone/figures/three-versions.png
 share/doc/monotone/figures/two-branches.png
+share/doc/monotone/images/bg.png
+share/doc/monotone/images/go-next.png
+share/doc/monotone/images/go-previous.png
+share/doc/monotone/images/go-up.png
+share/doc/monotone/images/toc.png
 share/doc/monotone/monotone.html
+share/doc/monotone/texinfo.css
 share/locale/de/LC_MESSAGES/monotone.mo
 share/locale/es/LC_MESSAGES/monotone.mo
 share/locale/it/LC_MESSAGES/monotone.mo
@@ -42,6 +48,7 @@ share/monotone/contrib/command/base.lua
 share/monotone/contrib/command/conflicts.lua
 share/monotone/contrib/command/fuse.lua
 share/monotone/contrib/command/init.lua
+share/monotone/contrib/command/remote_export.lua
 share/monotone/contrib/command/revision.lua
 share/monotone/contrib/display_branches.lua
 share/monotone/contrib/dtrace2calltree.py
