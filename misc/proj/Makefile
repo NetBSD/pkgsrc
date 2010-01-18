@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.26 2009/01/29 02:24:41 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2010/01/18 08:56:02 adam Exp $
 
-DISTNAME=		proj-4.6.1
-CATEGORIES=		misc geography
-MASTER_SITES=		http://download.osgeo.org/proj/
-#MASTER_SITES=		ftp://ftp.remotesensing.org/pub/proj/ \
-#			http://dl.maptools.org/dl/proj/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} proj-datumgrid-1.3${EXTRACT_SUFX}
+DISTNAME=	proj-4.7.0
+CATEGORIES=	misc geography
+MASTER_SITES=	http://download.osgeo.org/proj/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} proj-datumgrid-1.4${EXTRACT_SUFX}
 
-MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://www.remotesensing.org/proj/
-COMMENT=		Cartographic projection software
+MAINTAINER=	gdt@NetBSD.org
+HOMEPAGE=	http://www.remotesensing.org/proj/
+COMMENT=	Cartographic projection software
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
 
 DATUMGRID_FILES= 							\
 	FL.lla MD.lla README.NADUS TN.lla WI.lla WO.lla alaska.lla	\
