@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/08/26 19:56:42 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/01/18 09:59:45 wiz Exp $
 
 BUILDLINK_TREE+=	wxGTK
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	wxGTK
 WXGTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wxGTK+=	wxGTK>=2.6.0nb2
-BUILDLINK_ABI_DEPENDS.wxGTK+=	wxGTK>=2.6.3nb4
+BUILDLINK_ABI_DEPENDS.wxGTK+=	wxGTK>=2.6.3nb5
 BUILDLINK_PKGSRCDIR.wxGTK?=	../../x11/wxGTK26
 
 .include "../../devel/zlib/buildlink3.mk"

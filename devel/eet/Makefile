@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/01/17 12:02:12 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/18 09:58:44 wiz Exp $
 #
 
 DISTNAME=	eet-1.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel archivers
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2

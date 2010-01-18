@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/08/26 19:57:46 sno Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/18 09:59:05 wiz Exp $
 #
 
 DISTNAME=	ov51x-1.65-1.11-mark
 PKGNAME=	ov519view-0.00
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://alpha.dyndns.org/ov511/download/ov51x/
 EXTRACT_SUFX=	.tar.bz2

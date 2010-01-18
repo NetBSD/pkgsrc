@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2009/08/26 19:56:47 sno Exp $
+# $NetBSD: Makefile,v 1.51 2010/01/18 09:58:41 wiz Exp $
 #
 
 DISTNAME=		gnome-pilot-2.0.17
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		comms gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pilot/2.0/}
 

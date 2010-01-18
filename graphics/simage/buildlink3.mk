@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2009/08/26 19:56:40 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2010/01/18 09:59:08 wiz Exp $
 
 BUILDLINK_TREE+=	simage
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	simage
 SIMAGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.simage+=	simage>=1.6.1
-BUILDLINK_ABI_DEPENDS.simage+=	simage>=1.6.1nb6
+BUILDLINK_ABI_DEPENDS.simage+=	simage>=1.6.1nb7
 BUILDLINK_PKGSRCDIR.simage?=	../../graphics/simage
 
 .include "../../audio/libsndfile/buildlink3.mk"
