@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:43:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/01/18 19:00:16 drochner Exp $
 bin/gramps
 man/fr/man1/gramps.1
 man/man1/gramps.1
@@ -146,6 +146,9 @@ share/gramps/DateHandler/_Date_ru.pyo
 share/gramps/DateHandler/_Date_sk.py
 share/gramps/DateHandler/_Date_sk.pyc
 share/gramps/DateHandler/_Date_sk.pyo
+share/gramps/DateHandler/_Date_sr.py
+share/gramps/DateHandler/_Date_sr.pyc
+share/gramps/DateHandler/_Date_sr.pyo
 share/gramps/DateHandler/_Date_sv.py
 share/gramps/DateHandler/_Date_sv.pyc
 share/gramps/DateHandler/_Date_sv.pyo
