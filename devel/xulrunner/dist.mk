@@ -1,6 +1,7 @@
-# $NetBSD: dist.mk,v 1.3 2009/12/16 08:18:32 tnn Exp $
+# $NetBSD: dist.mk,v 1.4 2010/01/19 10:07:49 tnn Exp $
 #
 # used by devel/nspr/Makefile
+# used by devel/nss/Makefile
 # used by devel/xulrunner/Makefile
 # used by www/firefox/Makefile
 
