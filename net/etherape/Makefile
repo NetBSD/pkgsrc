@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2010/01/18 09:59:19 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2010/01/19 20:51:48 drochner Exp $
 
-DISTNAME=	etherape-0.9.7
-PKGREVISION=	7
+DISTNAME=	etherape-0.9.9
 CATEGORIES=	gnome net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=etherape/}
 
@@ -23,12 +22,16 @@ EGDIR=		${PREFIX}/share/examples/etherape
 
 CONF_FILES=	${EGDIR}/services ${PKG_SYSCONFDIR}/services
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/services ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/services ${DESTDIR}${EGDIR}
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
