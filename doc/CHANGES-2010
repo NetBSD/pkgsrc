@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.231 2010/01/19 00:48:19 asau Exp $
+$NetBSD: CHANGES-2010,v 1.232 2010/01/19 04:19:17 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -265,3 +265,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyphen-base to 2009.14587 [minskim 2010-01-18]
 	Updated multimedia/mediatomb to 0.11.0nb8 [tron 2010-01-18]
 	Updated parallel/openmpi to 1.4.1 [asau 2010-01-19]
+	Updated devel/p5-Class-MOP to 0.98 [seb 2010-01-19]
