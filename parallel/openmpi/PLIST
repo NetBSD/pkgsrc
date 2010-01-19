@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/12 23:30:01 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/19 00:45:58 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -506,3 +506,4 @@ share/openmpi/mpicc-wrapper-data.txt
 share/openmpi/mpicxx-wrapper-data.txt
 share/openmpi/mpif77-wrapper-data.txt
 share/openmpi/mpif90-wrapper-data.txt
+share/openmpi/openmpi-valgrind.supp
