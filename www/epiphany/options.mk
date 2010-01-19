@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.7 2009/08/06 11:03:49 tnn Exp $
+# $NetBSD: options.mk,v 1.8 2010/01/19 20:28:34 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.epiphany
 PKG_SUPPORTED_OPTIONS=		avahi
 # browser crashes with enchant
-PKG_SUGGESTED_OPTIONS=		avahi
 
 .include "../../mk/bsd.options.mk"
 
