@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/16 14:36:56 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/19 08:23:43 wiz Exp $
 #
 
 DISTNAME=		wmzcalock-0.1
@@ -15,7 +15,7 @@ EXTRACT_SUFX=		.tgz
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pax
-INSTALLATION_DIRS=	share/wmzcalock/theme
+INSTALLATION_DIRS=	bin share/wmzcalock/theme
 
 .include "../../mk/bsd.prefs.mk"
 
