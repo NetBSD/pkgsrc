@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.232 2010/01/19 04:19:17 seb Exp $
+$NetBSD: CHANGES-2010,v 1.233 2010/01/19 04:19:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -266,3 +266,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/mediatomb to 0.11.0nb8 [tron 2010-01-18]
 	Updated parallel/openmpi to 1.4.1 [asau 2010-01-19]
 	Updated devel/p5-Class-MOP to 0.98 [seb 2010-01-19]
+	Updated devel/p5-Moose to 0.94 [seb 2010-01-19]
