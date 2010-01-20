@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.238 2010/01/20 09:27:02 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.239 2010/01/20 10:01:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -272,3 +272,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/clutter to 1.0.10 [obache 2010-01-20]
 	Updated devel/fossil to 20100112141013 [wiz 2010-01-20]
 	Updated multimedia/farsight2 to 0.0.17 [wiz 2010-01-20]
+	Updated devel/boehm-gc to 7.1nb3 [wiz 2010-01-20]
