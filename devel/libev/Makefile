@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/08/18 14:10:53 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/20 14:06:55 wiz Exp $
 
-DISTNAME=	libev-3.8
+DISTNAME=	libev-3.9
 CATEGORIES=	devel
 MASTER_SITES=	http://dist.schmorp.de/libev/
 
