@@ -1,14 +1,28 @@
-# $NetBSD: options.mk,v 1.17 2009/10/01 12:30:32 obache Exp $
+# $NetBSD: options.mk,v 1.18 2010/01/20 11:06:07 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
-#PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk kde m17nlib qt prime sj3 uim-fep wnn xim
-PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk kde m17nlib qt prime uim-fep xim
+#PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk m17nlib prime sj3 uim-fep wnn xim
+PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk m17nlib prime uim-fep xim
+PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
+PKG_OPTIONS_GROUP.kde=	kde kde4
+PKG_OPTIONS_GROUP.qt=	qt qt4
 PKG_SUGGESTED_OPTIONS=	anthy canna gtk uim-fep xim
 
 .include "../../mk/bsd.options.mk"
 
+.if !empty(PKG_OPTIONS:Mqt4)
+.  if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
+PKG_FAIL_REASON+=	"'qt4' conflict with 'qt' or 'kde' option"
+.  endif
+.endif
+.if !empty(PKG_OPTIONS:Mqt)
+.  if !empty(PKG_OPTIONS:Mqt4) || !empty(PKG_OPTIONS:Mkde4)
+PKG_FAIL_REASON+=	"'qt' conflict with 'qt4' or 'kde4' option"
+.  endif
+.endif
+
 PLIST_VARS+=		helperdata uim-dict-gtk fep
-PLIST_VARS+=		anthy canna gnome gtk kde m17nlib prime qt sj3 wnn xim
+PLIST_VARS+=		anthy canna gnome gtk kde kde4 m17nlib prime qt qt4 sj3 wnn xim
 
 .if !empty(PKG_OPTIONS:Mxim)
 .include "../../x11/libX11/buildlink3.mk"
@@ -28,16 +42,23 @@ USE_NCURSES=		YES	# setupterm, clear_screen, clr_eos
 .include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-fep
 PLIST.fep=		yes
+INSTALLATION_DIRS+=	share/doc/uim/uim-fep
+
+post-install: install-fep-doc
+
+.PHONY: install-fep-doc
+install-fep-doc:
+	${INSTALL_DATA} ${WRKSRC}/fep/README ${DESTDIR}${PREFIX}/share/doc/uim/uim-fep
+	${INSTALL_DATA} ${WRKSRC}/fep/README.ja ${DESTDIR}${PREFIX}/share/doc/uim/uim-fep
 .else
 CONFIGURE_ARGS+=	--disable-fep
 .endif
 
 .if !empty(PKG_OPTIONS:Manthy)
 .  include "../../inputmethod/anthy/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-dict
+CONFIGURE_ARGS+=	--enable-dict --with-anthy-utf8
 PLIST.anthy=		yes
 .  if !empty(PKG_OPTIONS:Mgtk)
-PLIST.helperdata=	yes
 PLIST.uim-dict-gtk=	yes
 .  endif
 .else
@@ -53,6 +74,7 @@ PLIST.canna=		yes
 .if !empty(PKG_OPTIONS:Meb)
 .include "../../textproc/eb/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-eb
+CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFDIR}/eb.conf
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
@@ -80,6 +102,15 @@ CONFIGURE_ARGS+=	--enable-kde-applet
 PLIST.kde=		yes
 .endif
 
+.if !empty(PKG_OPTIONS:Mkde4)
+.  include "../../x11/kdelibs4/buildlink3.mk"
+.  include "../../x11/qt4-libs/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-kde4-applet
+PLIST.kde4=		yes
+.else
+CONFIGURE_ARGS+=	--disable-kde4-applet
+.endif
+
 .if !empty(PKG_OPTIONS:Mm17nlib)
 .  include "../../devel/m17n-lib/buildlink3.mk"
 DEPENDS+=		m17n-contrib-[0-9]*:../../misc/m17n-contrib
@@ -97,6 +128,14 @@ CONFIGURE_ARGS+=	--without-m17nlib
 CONFIGURE_ARGS+=	--with-qt CXXFLAGS=-lc
 PLIST.helperdata=	yes
 PLIST.qt=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mqt4) || !empty(PKG_OPTIONS:Mkde4)
+.  include "../../x11/qt4-libs/buildlink3.mk"
+.  include "../../x11/qt4-tools/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-qt4 --with-qt4-immodule
+PLIST.helperdata=	yes
+PLIST.qt4=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mprime)
