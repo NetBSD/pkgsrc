@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_create.1,v 1.21 2009/11/05 16:22:32 joerg Exp $
+.\" $NetBSD: pkg_create.1,v 1.22 2010/01/20 22:34:47 jmmv Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -24,7 +24,7 @@
 .\" [jkh] Took John's changes back and made some additional extensions for
 .\" better integration with FreeBSD's new ports collection.
 .\"
-.Dd November 15, 2009
+.Dd January 20, 2010
 .Dt PKG_CREATE 1
 .Os
 .Sh NAME
@@ -196,11 +196,9 @@ It will be invoked automatically when the package is later installed.
 Set
 .Ar pkg_dbdir
 as the package database directory.
-If this option isn't specified, then the package database directory is
-taken from the value of the environment variable
-.Ev PKG_DBDIR
-if it's set, otherwise it defaults to
-.Pa /var/db/pkg .
+See the
+.Sx ENVIRONMENT
+section below for details on how the default value is calculated.
 .It Fl k Ar dscript
 Set
 .Ar dscript
@@ -478,6 +476,19 @@ Declare a conflict with the
 .Ar pkgcflname
 package, as the two packages contain references to the same files,
 and so cannot co-exist on the same system.
+.El
+.Sh ENVIRONMENT
+.Bl -tag -width PKG_DBDIR
+.It Ev PKG_DBDIR
+If the
+.Fl K
+flag isn't given, then the value of the
+.Ev PKG_DBDIR
+variable overrides the
+.Xr pkg_install.conf 5
+variable of the same name.
+If all of this fails to locate a value, then it typically defaults to
+.Pa /var/db/pkg .
 .El
 .Sh SEE ALSO
 .Xr pkg_add 1 ,
