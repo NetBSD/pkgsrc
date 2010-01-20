@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.276 2010/01/20 15:07:13 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.277 2010/01/20 15:07:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -311,3 +311,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBD-postgresql to 2.16.0 [wiz 2010-01-20]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.024 [wiz 2010-01-20]
 	Updated devel/p5-Compress-Raw-Zlib to 2.024 [wiz 2010-01-20]
+	Updated devel/p5-IO-Compress to 2.024 [wiz 2010-01-20]
