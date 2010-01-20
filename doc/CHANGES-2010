@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.249 2010/01/20 12:06:40 obache Exp $
+$NetBSD: CHANGES-2010,v 1.250 2010/01/20 13:43:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -284,3 +284,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed inputmethod/uim-qt4-immodule [obache 2010-01-20]
 	Updated security/libtasn1 to 2.4 [wiz 2010-01-20]
 	Updated devel/doxygen to 1.6.2 [wiz 2010-01-20]
+	Updated graphics/hicolor-icon-theme to 0.12 [wiz 2010-01-20]
