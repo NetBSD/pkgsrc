@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/08/02 11:35:26 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/01/20 13:44:26 wiz Exp $
 
 BUILDLINK_TREE+=	gupnp
 
 .if !defined(GUPNP_BUILDLINK3_MK)
 GUPNP_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gupnp+=	gupnp>=0.12.6
+BUILDLINK_API_DEPENDS.gupnp+=	gupnp>=0.13.2
 BUILDLINK_PKGSRCDIR.gupnp?=	../../net/gupnp
 
 .include "../../devel/glib2/buildlink3.mk"

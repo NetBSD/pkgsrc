@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/02 11:35:26 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/20 13:44:26 wiz Exp $
 #
 
-DISTNAME=	gupnp-0.12.8
+DISTNAME=	gupnp-0.13.2
 CATEGORIES=	net
 MASTER_SITES=	http://www.gupnp.org/sources/gupnp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gupnp.org/
 COMMENT=	Framework for UPnP devices
+LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
