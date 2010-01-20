@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/02 11:35:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/20 13:44:26 wiz Exp $
 bin/gupnp-binding-tool
+include/gupnp-1.0/libgupnp/gupnp-context-manager.h
 include/gupnp-1.0/libgupnp/gupnp-context.h
 include/gupnp-1.0/libgupnp/gupnp-control-point.h
 include/gupnp-1.0/libgupnp/gupnp-device-info.h
@@ -13,10 +14,12 @@ include/gupnp-1.0/libgupnp/gupnp-service-introspection.h
 include/gupnp-1.0/libgupnp/gupnp-service-proxy.h
 include/gupnp-1.0/libgupnp/gupnp-service.h
 include/gupnp-1.0/libgupnp/gupnp-types.h
+include/gupnp-1.0/libgupnp/gupnp-xml-doc.h
 include/gupnp-1.0/libgupnp/gupnp.h
 lib/libgupnp-1.0.la
 lib/pkgconfig/gupnp-1.0.pc
 share/gtk-doc/html/gupnp/GUPnPContext.html
+share/gtk-doc/html/gupnp/GUPnPContextManager.html
 share/gtk-doc/html/gupnp/GUPnPControlPoint.html
 share/gtk-doc/html/gupnp/GUPnPDevice.html
 share/gtk-doc/html/gupnp/GUPnPDeviceInfo.html
@@ -27,6 +30,7 @@ share/gtk-doc/html/gupnp/GUPnPService.html
 share/gtk-doc/html/gupnp/GUPnPServiceInfo.html
 share/gtk-doc/html/gupnp/GUPnPServiceIntrospection.html
 share/gtk-doc/html/gupnp/GUPnPServiceProxy.html
+share/gtk-doc/html/gupnp/GUPnPXMLDoc.html
 share/gtk-doc/html/gupnp/api-device-control.html
 share/gtk-doc/html/gupnp/api-device-impl.html
 share/gtk-doc/html/gupnp/api-device-info.html
