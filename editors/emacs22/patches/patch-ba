@@ -1,0 +1,14 @@
+When running terminfo but compiled for termcap, we cannot assume
+that we actually have anything useable in termcap_term_buffer so just
+use the terminfo fixed size defined ealier.
+
+--- src/term.c	2010-01-14 21:56:53.000000000 +0000
++++ src/term.c	2010-01-14 21:57:25.000000000 +0000
+@@ -2400,7 +2400,6 @@
+ #ifndef TERMINFO
+   if (strlen (buffer) >= buffer_size)
+     abort ();
+-  buffer_size = strlen (buffer);
+ #endif
+   area = (char *) xmalloc (buffer_size);
+ 
