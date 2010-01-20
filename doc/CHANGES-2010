@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.252 2010/01/20 13:44:35 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.253 2010/01/20 13:45:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -287,3 +287,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/hicolor-icon-theme to 0.12 [wiz 2010-01-20]
 	Updated net/gssdp to 0.7.1 [wiz 2010-01-20]
 	Updated net/gupnp to 0.13.2 [wiz 2010-01-20]
+	Updated net/gupnp-igd to 0.1.6 [wiz 2010-01-20]
