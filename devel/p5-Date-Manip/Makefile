@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/01/20 15:12:13 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2010/01/20 15:13:16 wiz Exp $
 #
 
 DISTNAME=	Date-Manip-6.05
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Date-Manip/
 COMMENT=	Perl5 module for date calculations
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
