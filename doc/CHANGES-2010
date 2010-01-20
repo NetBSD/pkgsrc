@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.233 2010/01/19 04:19:31 seb Exp $
+$NetBSD: CHANGES-2010,v 1.234 2010/01/20 01:01:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -267,3 +267,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated parallel/openmpi to 1.4.1 [asau 2010-01-19]
 	Updated devel/p5-Class-MOP to 0.98 [seb 2010-01-19]
 	Updated devel/p5-Moose to 0.94 [seb 2010-01-19]
+	Updated net/bind96 to 9.6.1pl3 [taca 2010-01-20]
