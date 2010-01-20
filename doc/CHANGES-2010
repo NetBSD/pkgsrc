@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.264 2010/01/20 14:49:00 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.265 2010/01/20 14:50:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -299,3 +299,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-Net-DNS to 0.66 [wiz 2010-01-20]
 	Updated security/stunnel to 4.29 [wiz 2010-01-20]
 	Updated www/p5-WWW-Curl to 4.11 [wiz 2010-01-20]
+	Updated converters/p5-JSON to 2.17 [wiz 2010-01-20]
