@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.274 2010/01/20 15:01:40 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.275 2010/01/20 15:06:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -309,3 +309,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-XML-Atom to 0.37 [wiz 2010-01-20]
 	Updated devel/p5-Test-Exception to 0.29 [wiz 2010-01-20]
 	Updated databases/p5-DBD-postgresql to 2.16.0 [wiz 2010-01-20]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.024 [wiz 2010-01-20]
