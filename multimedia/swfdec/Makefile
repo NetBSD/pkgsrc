@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/08/26 19:56:54 sno Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/20 19:09:00 drochner Exp $
 #
 
 DISTNAME=		swfdec-0.8.4
@@ -33,8 +33,6 @@ PKG_SUGGESTED_OPTIONS=	pulseaudio
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 CONFIGURE_ARGS+=	--with-audio=pulse
 .include "../../audio/pulseaudio/buildlink3.mk"
-.include "../../databases/gdbm/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-audio=none
 .endif
