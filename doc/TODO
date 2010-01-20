@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8884 2010/01/20 14:27:55 wiz Exp $
+$NetBSD: TODO,v 1.8885 2010/01/20 14:30:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -665,7 +665,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ggiterm-0.7.1
 	o ghc-6.12.1
 	o ghostscript-esp-8.15.3
-	o gif2png-2.5.2
 	o gifsicle-1.48
 	o gimp-docs-2.4.2
 	o gkrellm-2.3.1
