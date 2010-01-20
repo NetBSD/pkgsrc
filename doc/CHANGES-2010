@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.280 2010/01/20 15:16:03 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.281 2010/01/20 15:17:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -315,3 +315,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Date-Manip to 6.05 [wiz 2010-01-20]
 	Updated math/p5-Spreadsheet-WriteExcel to 2.35 [wiz 2010-01-20]
 	Updated devel/p5-version to 0.7900 [wiz 2010-01-20]
+	Updated devel/p5-Module-CoreList to 2.24 [wiz 2010-01-20]
