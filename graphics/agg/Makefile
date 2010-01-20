@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/10/28 01:02:03 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/20 12:46:07 wiz Exp $
 #
 
 DISTNAME=	agg-2.5
@@ -11,6 +11,7 @@ COMMENT=	High Quality Rendering Engine for C++
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+MAKE_JOBS_SAFE=		no
 USE_TOOLS+=	gmake msgfmt pkg-config aclocal autoheader \
             automake autoconf
 USE_LANGUAGES=	c c++
