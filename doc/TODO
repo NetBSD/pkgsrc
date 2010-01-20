@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8891 2010/01/20 14:45:47 wiz Exp $
+$NetBSD: TODO,v 1.8892 2010/01/20 14:47:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1286,7 +1286,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o strace-4.5.16
 	o stratagus-2.2.2
 	o streamripper-1.63.0
-	o stunnel-4.29
 	o subtitleeditor-0.33.0
 	o subversion-1.6.6
 	o subversion-base-1.6.6
