@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.270 2010/01/20 14:56:00 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.271 2010/01/20 14:57:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -305,3 +305,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Error to 0.17016 [wiz 2010-01-20]
 	Updated security/p5-Digest-SHA to 5.48 [wiz 2010-01-20]
 	Updated devel/p5-Any-Moose to 0.11 [wiz 2010-01-20]
+	Updated databases/p5-BerkeleyDB to 0.41 [wiz 2010-01-20]
