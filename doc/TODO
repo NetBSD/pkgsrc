@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8870 2010/01/20 10:35:31 wiz Exp $
+$NetBSD: TODO,v 1.8871 2010/01/20 10:40:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1189,7 +1189,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o raine-0.51.7
 	o randread-0.2
 	o rapidsvn-0.12
-	o rasqal-0.9.17
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
