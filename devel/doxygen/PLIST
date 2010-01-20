@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2009/08/21 23:13:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2010/01/20 11:39:07 wiz Exp $
 bin/doxygen
 bin/doxytag
 man/man1/doxygen.1
@@ -578,17 +578,17 @@ share/doc/doxygen/examples/manual/html/search/search.png
 share/doc/doxygen/examples/manual/html/search/variables_62.html
 share/doc/doxygen/examples/manual/html/search/variables_72.html
 share/doc/doxygen/examples/manual/html/struct_car-members.html
-share/doc/doxygen/examples/manual/html/struct_car.gif
 share/doc/doxygen/examples/manual/html/struct_car.html
+share/doc/doxygen/examples/manual/html/struct_car.png
 share/doc/doxygen/examples/manual/html/struct_object-members.html
-share/doc/doxygen/examples/manual/html/struct_object.gif
 share/doc/doxygen/examples/manual/html/struct_object.html
+share/doc/doxygen/examples/manual/html/struct_object.png
 share/doc/doxygen/examples/manual/html/struct_truck-members.html
-share/doc/doxygen/examples/manual/html/struct_truck.gif
 share/doc/doxygen/examples/manual/html/struct_truck.html
+share/doc/doxygen/examples/manual/html/struct_truck.png
 share/doc/doxygen/examples/manual/html/struct_vehicle-members.html
-share/doc/doxygen/examples/manual/html/struct_vehicle.gif
 share/doc/doxygen/examples/manual/html/struct_vehicle.html
+share/doc/doxygen/examples/manual/html/struct_vehicle.png
 share/doc/doxygen/examples/manual/html/tab_b.gif
 share/doc/doxygen/examples/manual/html/tab_l.gif
 share/doc/doxygen/examples/manual/html/tab_r.gif
@@ -638,10 +638,10 @@ share/doc/doxygen/examples/mux.vhdl
 share/doc/doxygen/examples/mux/html/annotated.html
 share/doc/doxygen/examples/mux/html/classes.html
 share/doc/doxygen/examples/mux/html/classmux__using__with-members.html
-share/doc/doxygen/examples/mux/html/classmux__using__with.gif
 share/doc/doxygen/examples/mux/html/classmux__using__with.html
-share/doc/doxygen/examples/mux/html/classmux__using__with_1_1behavior.gif
+share/doc/doxygen/examples/mux/html/classmux__using__with.png
 share/doc/doxygen/examples/mux/html/classmux__using__with_1_1behavior.html
+share/doc/doxygen/examples/mux/html/classmux__using__with_1_1behavior.png
 share/doc/doxygen/examples/mux/html/doxygen.css
 share/doc/doxygen/examples/mux/html/doxygen.png
 share/doc/doxygen/examples/mux/html/files.html
@@ -820,6 +820,7 @@ share/doc/doxygen/examples/relates/html/doxygen.css
 share/doc/doxygen/examples/relates/html/doxygen.png
 share/doc/doxygen/examples/relates/html/functions.html
 share/doc/doxygen/examples/relates/html/functions_func.html
+share/doc/doxygen/examples/relates/html/functions_rela.html
 share/doc/doxygen/examples/relates/html/index.html
 share/doc/doxygen/examples/relates/html/installdox
 share/doc/doxygen/examples/relates/html/search/all_73.html
@@ -827,6 +828,7 @@ share/doc/doxygen/examples/relates/html/search/classes_73.html
 share/doc/doxygen/examples/relates/html/search/close.png
 share/doc/doxygen/examples/relates/html/search/functions_73.html
 share/doc/doxygen/examples/relates/html/search/nomatches.html
+share/doc/doxygen/examples/relates/html/search/related_73.html
 share/doc/doxygen/examples/relates/html/search/search.css
 share/doc/doxygen/examples/relates/html/search/search.js
 share/doc/doxygen/examples/relates/html/search/search.png
@@ -914,8 +916,8 @@ share/doc/doxygen/examples/tag.cfg
 share/doc/doxygen/examples/tag.cpp
 share/doc/doxygen/examples/tag/html/annotated.html
 share/doc/doxygen/examples/tag/html/class_tag-members.html
-share/doc/doxygen/examples/tag/html/class_tag.gif
 share/doc/doxygen/examples/tag/html/class_tag.html
+share/doc/doxygen/examples/tag/html/class_tag.png
 share/doc/doxygen/examples/tag/html/classes.html
 share/doc/doxygen/examples/tag/html/doxygen.css
 share/doc/doxygen/examples/tag/html/doxygen.png
@@ -943,11 +945,11 @@ share/doc/doxygen/examples/template/html/annotated.html
 share/doc/doxygen/examples/template/html/class_test-members.html
 share/doc/doxygen/examples/template/html/class_test.html
 share/doc/doxygen/examples/template/html/class_test_3_01_t_01_5_01_4-members.html
-share/doc/doxygen/examples/template/html/class_test_3_01_t_01_5_01_4.gif
 share/doc/doxygen/examples/template/html/class_test_3_01_t_01_5_01_4.html
+share/doc/doxygen/examples/template/html/class_test_3_01_t_01_5_01_4.png
 share/doc/doxygen/examples/template/html/class_test_3_01void_01_5_00_01200_01_4-members.html
-share/doc/doxygen/examples/template/html/class_test_3_01void_01_5_00_01200_01_4.gif
 share/doc/doxygen/examples/template/html/class_test_3_01void_01_5_00_01200_01_4.html
+share/doc/doxygen/examples/template/html/class_test_3_01void_01_5_00_01200_01_4.png
 share/doc/doxygen/examples/template/html/classes.html
 share/doc/doxygen/examples/template/html/doxygen.css
 share/doc/doxygen/examples/template/html/doxygen.png
@@ -979,10 +981,11 @@ share/doc/doxygen/html/diagrams.html
 share/doc/doxygen/html/docblocks.html
 share/doc/doxygen/html/doxygen.css
 share/doc/doxygen/html/doxygen.png
+share/doc/doxygen/html/doxygen__usage.html
 share/doc/doxygen/html/doxygen_logo.gif
 share/doc/doxygen/html/doxygen_logo_low.gif
-share/doc/doxygen/html/doxygen_usage.html
-share/doc/doxygen/html/doxytag_usage.html
+share/doc/doxygen/html/doxytag__usage.html
+share/doc/doxygen/html/doxywizard__usage.html
 share/doc/doxygen/html/doxywizard_expert.png
 share/doc/doxygen/html/doxywizard_main.png
 share/doc/doxygen/html/doxywizard_menu.png
@@ -990,7 +993,6 @@ share/doc/doxygen/html/doxywizard_page1.png
 share/doc/doxygen/html/doxywizard_page2.png
 share/doc/doxygen/html/doxywizard_page3.png
 share/doc/doxygen/html/doxywizard_page4.png
-share/doc/doxygen/html/doxywizard_usage.html
 share/doc/doxygen/html/external.html
 share/doc/doxygen/html/faq.html
 share/doc/doxygen/html/features.html
@@ -1013,14 +1015,15 @@ share/doc/doxygen/html/index.hhp
 share/doc/doxygen/html/index.html
 share/doc/doxygen/html/infoflow.gif
 share/doc/doxygen/html/install.html
-share/doc/doxygen/html/installdox_usage.html
+share/doc/doxygen/html/installdox__usage.html
 share/doc/doxygen/html/langhowto.html
 share/doc/doxygen/html/lists.html
 share/doc/doxygen/html/output.html
 share/doc/doxygen/html/pages.html
 share/doc/doxygen/html/perlmod.html
-share/doc/doxygen/html/perlmod_tree.html
+share/doc/doxygen/html/perlmod__tree.html
 share/doc/doxygen/html/preprocessing.html
+share/doc/doxygen/html/searching.html
 share/doc/doxygen/html/starting.html
 share/doc/doxygen/html/tab_b.gif
 share/doc/doxygen/html/tab_l.gif
