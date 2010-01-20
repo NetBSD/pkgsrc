@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2009/08/26 19:56:54 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2010/01/20 19:09:00 drochner Exp $
 
 BUILDLINK_TREE+=	swfdec
 
@@ -8,6 +8,12 @@ SWFDEC_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.swfdec+=	swfdec>=0.8.2
 BUILDLINK_ABI_DEPENDS.swfdec?=	swfdec>=0.8.4nb2
 BUILDLINK_PKGSRCDIR.swfdec?=	../../multimedia/swfdec
+
+pkgbase := swfdec
+.include "../../mk/pkg-build-options.mk"
+.if !empty(PKG_BUILD_OPTIONS.swfdec:Mpulseaudio)
+.include "../../audio/pulseaudio/buildlink3.mk"
+.endif
 
 .include "../../devel/liboil/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
