@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8871 2010/01/20 10:40:41 wiz Exp $
+$NetBSD: TODO,v 1.8872 2010/01/20 10:43:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -543,7 +543,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6.2
-	o ejabberd-2.1.1
+	o ejabberd-2.1.2
 	o electric-8.10
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -623,7 +623,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-mutt-misc-1.0.1
 	o font-sony-misc-1.0.1
 	o font-util-1.1.1
-	o fotoxx-9.3
+	o fotoxx-9.4
 	o freeciv-2.1.10
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -657,7 +657,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdsreader-0.3.2
 	o geany-0.18
 	o geda-1.6.0.20091004
-	o gedit-2.28.3
 	o gedit-plugins-2.28.0 [GNOME 2.28]
 	o genius-1.0.9
 	o gentoo-0.15.6
@@ -677,20 +676,18 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.6.7 [GNOME 2.26]
 	o glchess-1.0.5
 	o gle-4.2.2
-	o glib2-2.22.4
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
 	o glpk-4.42
 	o glproto-1.4.11
-	o gmime24-2.4.12
+	o gmime24-2.4.13
 	o gmp-5.0.0
 	o gnash-0.8.6
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-bluetooth-2.28.3 [GNOME 2.28]
 	o gnome-devel-docs-2.28.1 [GNOME 2.28]
-	o gnome-media-2.28.5
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
 	o gnome-nettool-2.28.0 [GNOME 2.28]
 	o gnome-packagekit-2.28.2 [GNOME 2.28]
@@ -700,12 +697,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-system-tools-2.28.2 [GNOME 2.28]
 	o gnome-user-docs-2.28.2 [GNOME 2.28]
 	o gnome-user-share-2.28.2 [GNOME 2.28]
-	o gnome-utils-2.28.3
-	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnupg2-2.0.14
 	o gogo-3.11p1
 	o golem-0.0.6
 	o gossip-0.31
@@ -721,18 +715,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o grep-2.5.4
 	o gsasl-1.4.0
 	o gsharutils-4.7
-	o gss-0.1.0
+	o gss-0.1.2
 	o gssdp-0.7.1
 	o gst-plugins0.10-ffmpeg-0.10.7
 	o gtick-0.4.2
 	o gtk-doc-1.13
 	o gtk-systrace-20030623
-	o gtk2+-2.18.6
-	o gtk2-engines-2.18.5
 	o gtkglarea-2.0.1
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtksourceview-2.8.2
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -742,7 +733,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gupnp-0.13.2
 	o gupnp-igd-0.1.6 [needs gupnp-1.0 >= 0.13.2]
 	o gv-3.6.8
-	o gxine-0.5.905
 	o hackbot-2.21
 	o hal-0.5.14
 	o hamster-applet-2.28.2
@@ -757,7 +747,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o heyu-2.8.0
 	o hiawatha-6.19
 	o hicolor-icon-theme-0.12
-	o highlight-2.13
+	o highlight-2.14
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
 	o host-20070128
@@ -805,7 +795,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jgrasp-187
 	o jhead-2.88
 	o joe-3.6
-	o john-1.7.4
+	o john-1.7.4.2
 	o jools-1.0
 	o jpilot-1.6.2
 	o kadu-0.6.5
@@ -880,6 +870,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o librep-0.90.5
 	o libssh-0.4.0
 	o libstree-0.4.2
+	o libtasn1-2.4
 	o libtcl-nothread-8.5.1
 	o libusb-1.0
 	o libv4l-0.6.4
@@ -900,7 +891,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lucy-1.20
 	o lwm-1.2.2
 	o lyx-1.6.5
-	o lzip-1.8
+	o lzip-1.9
 	o mDNSResponder-214
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
@@ -1029,7 +1020,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmortal-0.7.1
 	o openmotif-2.3.2
 	o openmsx-0.7.0
-	o openssh-5.3.1
+	o openssh-5.3.1 [pkg/42635]
 	o openttd-0.7.4
 	o open-vm-tools-2009.12.16.217847
 	o opera-10.10
@@ -1077,6 +1068,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pcal-4.8
 	o pciids-20091229
 	o pcmanfm-0.5.2 [pkg/42451]
+	o pcre-8.01
 	o pdmenu-1.2.87
 	o pear-Auth_SASL-1.0.3
 	o pear-Console_Table-1.1.3
@@ -1142,6 +1134,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-0.25.3
 	o pure-ftpd-1.0.27
 	o puzzle-5.2
+	o puzzles-8850
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1168,6 +1161,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-logging-0.4.9.6 [pkg/41675]
 	o py-m2crypto-0.20.2
 	o py-moin-1.9.0 [pkg/42602]
+	o py-moin-1.9.1
 	o py-psycopg-2.0.13
 	o py-qt4-4.7
 	o py-sip-4.10
@@ -1182,7 +1176,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt3-qscintilla-2.4
-	o qt4-libs-4.6.0
+	o qt4-libs-4.6.1
 	o quagga-0.99.15
 	o qvplay-0.95
 	o radiance-3.7.2
@@ -1251,7 +1245,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sablecc-3.2
 	o samba-3.2.15
 	o samba-3.3.10
-	o samba-3.4.4
+	o samba-3.4.5
 	o sarg-2.2.5
 	o sawfish-1.6.1
 	o saxon-9.2
@@ -1499,7 +1493,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xnap-2.5r3
 	o xorg-cf-files-1.0.3
 	o xorg-docs-1.5
-	o xorg-util-macros-1.4.2
+	o xorg-util-macros-1.5.0
 	o xpad-2.13
 	o xpr-1.0.3 [unpackaged]
 	o xpuyopuyo-0.9.8
@@ -1522,7 +1516,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xzip-182
 	o yafc-1.1
 	o yodl-2.14.3
-	o youtube-dl-20100106
+	o youtube-dl-20100119
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o yorick-2.1.05
