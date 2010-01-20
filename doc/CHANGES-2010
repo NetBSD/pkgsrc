@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.235 2010/01/20 03:32:30 jakllsch Exp $
+$NetBSD: CHANGES-2010,v 1.236 2010/01/20 04:55:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -269,3 +269,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Moose to 0.94 [seb 2010-01-19]
 	Updated net/bind96 to 9.6.1pl3 [taca 2010-01-20]
 	Updated cross/avrdude to 5.8nb1 [jakllsch 2010-01-20]
+	Updated graphics/clutter to 1.0.10 [obache 2010-01-20]
