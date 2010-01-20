@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2008/08/12 22:36:18 wiz Exp $
+$NetBSD: distinfo,v 1.23 2010/01/20 14:52:26 wiz Exp $
 
-SHA1 (MailTools-2.04.tar.gz) = 6fccd04f9db0f478e19eec047be3bf0a1d8297f5
-RMD160 (MailTools-2.04.tar.gz) = 7a8d149e3d3c8fc9e65166590637eed5115b2cb2
-Size (MailTools-2.04.tar.gz) = 52292 bytes
+SHA1 (MailTools-2.05.tar.gz) = 0aeb4cfb8398c93d5b22ac3e6aa08ae4e0fe135c
+RMD160 (MailTools-2.05.tar.gz) = 94bba9c351845e397e461703bb008e7052da0a59
+Size (MailTools-2.05.tar.gz) = 52978 bytes
