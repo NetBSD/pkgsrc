@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.243 2010/01/20 10:40:40 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.244 2010/01/20 11:09:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -277,3 +277,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/py-icalendar to 2.1 [wiz 2010-01-20]
 	Updated print/py-cups to 1.9.47 [wiz 2010-01-20]
 	Updated textproc/rasqal to 0.9.17 [wiz 2010-01-20]
+	Updated devel/pcre to 8.01 [wiz 2010-01-20]

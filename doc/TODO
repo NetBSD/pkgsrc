@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8872 2010/01/20 10:43:59 wiz Exp $
+$NetBSD: TODO,v 1.8873 2010/01/20 11:09:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1068,7 +1068,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pcal-4.8
 	o pciids-20091229
 	o pcmanfm-0.5.2 [pkg/42451]
-	o pcre-8.01
 	o pdmenu-1.2.87
 	o pear-Auth_SASL-1.0.3
 	o pear-Console_Table-1.1.3
