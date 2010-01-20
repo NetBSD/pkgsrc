@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/08/26 19:57:05 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/01/20 14:04:53 wiz Exp $
 
 BUILDLINK_TREE+=	telepathy-farsight
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	telepathy-farsight
 TELEPATHY_FARSIGHT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.telepathy-farsight+=	telepathy-farsight>=0.0.8
-BUILDLINK_ABI_DEPENDS.telepathy-farsight?=	telepathy-farsight>=0.0.8nb1
+BUILDLINK_ABI_DEPENDS.telepathy-farsight?=	telepathy-farsight>=0.0.12nb1
 BUILDLINK_PKGSRCDIR.telepathy-farsight?=	../../chat/telepathy-farsight
 
 .include "../../chat/telepathy-glib/buildlink3.mk"
