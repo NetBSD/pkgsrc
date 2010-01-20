@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.262 2010/01/20 14:45:47 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.263 2010/01/20 14:47:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -297,3 +297,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/p5-Image-Info to 1.30 [wiz 2010-01-20]
 	Updated security/p5-Digest-HMAC to 1.02 [wiz 2010-01-20]
 	Updated net/p5-Net-DNS to 0.66 [wiz 2010-01-20]
+	Updated security/stunnel to 4.29 [wiz 2010-01-20]
