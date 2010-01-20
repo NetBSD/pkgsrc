@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8882 2010/01/20 14:07:04 wiz Exp $
+$NetBSD: TODO,v 1.8883 2010/01/20 14:25:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -437,7 +437,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avcheck-0.91
 	o avl-2.0.2a
 	o awesome-3.4.3
-	o babl-0.1.2
+	o babl-0.1.2 [wait for gegl>0.1.0]
 	o baci-20040415
 	o bakefile-0.2.8
 	o balance-3.42
@@ -566,7 +566,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-494
+	o etm-500
 	o evolution-exchange-2.28.2
 	o evolution-mapi-0.28.2 [GNOME 2.28]
 	o ex-20050325
@@ -1179,7 +1179,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o recordproto-1.14 [xorg-server 1.7]
-	o redland-1.0.10.1
+	o redland-1.0.10
 	o rep-gtk-0.90.2
 	o recordproto-1.14
 	o resize_image-0.7
