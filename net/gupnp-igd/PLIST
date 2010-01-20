@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/17 21:07:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/20 13:45:39 wiz Exp $
 include/gupnp-igd-1.0/libgupnp-igd/gupnp-simple-igd-thread.h
 include/gupnp-igd-1.0/libgupnp-igd/gupnp-simple-igd.h
 lib/libgupnp-igd-1.0.la
 lib/pkgconfig/gupnp-igd-1.0.pc
+${PYSITELIB}/gupnp/igd.la
 share/gtk-doc/html/gupnp-igd/GUPnPSimpleIgd.html
 share/gtk-doc/html/gupnp-igd/GUPnPSimpleIgdThread.html
 share/gtk-doc/html/gupnp-igd/ch01.html
