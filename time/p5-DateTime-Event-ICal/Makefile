@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/20 14:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/20 14:40:50 wiz Exp $
 
 DISTNAME=		DateTime-Event-ICal-0.10
 PKGNAME=		p5-${DISTNAME}
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DateTime/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/DateTime-Event-ICal
 COMMENT=		DateTime extension for computing rfc2445 recurrences
+LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
