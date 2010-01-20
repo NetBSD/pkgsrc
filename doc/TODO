@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8873 2010/01/20 11:09:43 wiz Exp $
+$NetBSD: TODO,v 1.8874 2010/01/20 11:12:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -719,7 +719,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gssdp-0.7.1
 	o gst-plugins0.10-ffmpeg-0.10.7
 	o gtick-0.4.2
-	o gtk-doc-1.13
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.1
 	o gtkimageview-1.6.4
