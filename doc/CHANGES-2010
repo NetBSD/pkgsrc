@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.260 2010/01/20 14:43:05 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.261 2010/01/20 14:43:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -295,3 +295,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-DateTime-Event-ICal to 0.10 [wiz 2010-01-20]
 	Updated time/p5-DateTime-TimeZone to 1.08 [wiz 2010-01-20]
 	Updated graphics/p5-Image-Info to 1.30 [wiz 2010-01-20]
+	Updated security/p5-Digest-HMAC to 1.02 [wiz 2010-01-20]
