@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/17 21:07:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/20 13:45:39 wiz Exp $
 #
 
-DISTNAME=	gupnp-igd-0.1.3
+DISTNAME=	gupnp-igd-0.1.6
 CATEGORIES=	net devel
 MASTER_SITES=	http://www.gupnp.org/sources/gupnp-igd/
 
@@ -17,9 +17,12 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	gupnp-igd-1.0.pc.in
+PY_PATCHPLIST=	yes
 
 .include "../../net/gupnp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/py-gobject/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
