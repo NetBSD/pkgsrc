@@ -1,4 +1,4 @@
-/*	$NetBSD: parse-config.c,v 1.12 2009/10/21 17:10:36 joerg Exp $	*/
+/*	$NetBSD: parse-config.c,v 1.13 2010/01/20 22:34:47 jmmv Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: parse-config.c,v 1.12 2009/10/21 17:10:36 joerg Exp $");
+__RCSID("$NetBSD: parse-config.c,v 1.13 2010/01/20 22:34:47 jmmv Exp $");
 
 /*-
  * Copyright (c) 2008, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -59,6 +59,7 @@ const char *cert_chain_file;
 const char *certs_packages;
 const char *certs_pkg_vulnerabilities;
 const char *check_vulnerabilities;
+const char *config_pkg_dbdir;
 const char *config_pkg_path;
 const char *do_license_check;
 const char *verified_installation;
@@ -94,6 +95,7 @@ static struct config_variable {
 	{ "GPG_SIGN_AS", &gpg_sign_as },
 	{ "IGNORE_PROXY", &ignore_proxy },
 	{ "IGNORE_URL", &ignore_advisories },
+	{ "PKG_DBDIR", &config_pkg_dbdir },
 	{ "PKG_PATH", &config_pkg_path },
 	{ "PKGVULNDIR", &pkg_vulnerabilities_dir },
 	{ "PKGVULNURL", &pkg_vulnerabilities_url },
@@ -158,6 +160,11 @@ pkg_install_config(void)
 	int do_cache_index;
 	char *value;
 	parse_pkg_install_conf();
+
+	if ((value = getenv("PKG_DBDIR")) != NULL)
+		config_pkg_dbdir = value;
+	else if (config_pkg_dbdir != NULL)
+		_pkgdb_setPKGDB_DIR(config_pkg_dbdir);
 
 	if (pkg_vulnerabilities_dir == NULL)
 		pkg_vulnerabilities_dir = _pkgdb_getPKGDB_DIR();

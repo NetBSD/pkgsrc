@@ -62,10 +62,9 @@ OOPPTTIIOONNSS
              also the --kk option.
 
      --KK _p_k_g___d_b_d_i_r
-             Set _p_k_g___d_b_d_i_r as the package database directory.  If this option
-             isn't specified, then the package database directory is taken
-             from the value of the environment variable PKG_DBDIR if it's set,
-             otherwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
+             Set _p_k_g___d_b_d_i_r as the package database directory.  See the
+             _E_N_V_I_R_O_N_M_E_N_T section below for details on how the default value is
+             calculated.
 
      --kk      Silently skip all packages that are marked as pprreesseerrvveedd.
 
@@ -147,9 +146,10 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
      ppkkgg__ddeelleettee, PKG_DESTDIR will be set to _d_e_s_t_d_i_r.
 
 EENNVVIIRROONNMMEENNTT
-     PKG_DBDIR  If the --KK flag isn't given, then PKG_DBDIR is the location of
-                the package database directory.  The default package database
-                directory is _/_v_a_r_/_d_b_/_p_k_g.
+     PKG_DBDIR  If the --KK flag isn't given, then the value of the PKG_DBDIR
+                variable overrides the pkg_install.conf(5) variable of the
+                same name.  If all of this fails to locate a value, then it
+                typically defaults to _/_v_a_r_/_d_b_/_p_k_g.
 
      PKG_REFCOUNT_DBDIR
                 Location of the package reference counts database directory.
@@ -172,4 +172,4 @@ AAUUTTHHOORRSS
              Rewrote most of the code to compute correct order of deinstalla-
              tion and to improve error handling.
 
-NetBSD 5.0                      August 16, 2009                     NetBSD 5.0
+NetBSD 5.0                     January 20, 2010                     NetBSD 5.0

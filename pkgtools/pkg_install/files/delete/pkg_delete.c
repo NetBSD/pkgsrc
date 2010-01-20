@@ -34,7 +34,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_delete.c,v 1.8 2009/08/06 16:53:34 joerg Exp $");
+__RCSID("$NetBSD: pkg_delete.c,v 1.9 2010/01/20 22:34:47 jmmv Exp $");
 
 #if HAVE_ERR_H
 #include <err.h>
@@ -830,6 +830,8 @@ main(int argc, char *argv[])
 			break;
 		}
 	}
+
+	pkg_install_config();
 
 	if (destdir != NULL) {
 		char *pkgdbdir;
