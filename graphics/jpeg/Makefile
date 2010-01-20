@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2010/01/17 11:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2010/01/20 13:14:53 tnn Exp $
 #
 
 DISTNAME=		jpegsrc.v8
 PKGNAME=		jpeg-8
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.ijg.org/files/
 
@@ -18,6 +19,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	bin include share/doc/jpeg
+
+CONFIGURE_ARGS+=	--disable-ld-version-script
 
 post-extract:
 	${CP} ${FILESDIR}/jpegexiforient.c ${WRKSRC}
