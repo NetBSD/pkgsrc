@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.222 2009/11/21 14:50:28 joerg Exp $
+# $NetBSD: replace.mk,v 1.223 2010/01/20 14:47:30 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1026,19 +1026,7 @@ GHOSTSCRIPT_REQD?=	6.01
 #
 .if !defined(TOOLS_DEPENDS.ghostscript)
 _TOOLS_DEP.ghostscript:=	ghostscript
-_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-afpl
-_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-esp
-_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-gnu
-#
-# Determine the default Ghostscript package to build based on the
-# PKG_OPTIONS for the current package.
-#
-.  if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups))
-_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-esp
-.  else
-_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript
-.  endif
-TOOLS_DEPENDS.ghostscript=	{${_TOOLS_DEP.ghostscript}}>=${GHOSTSCRIPT_REQD}:${_TOOLS_PKGSRCDIR.ghostscript}
+TOOLS_DEPENDS.ghostscript=	ghostscript>=${GHOSTSCRIPT_REQD}:../../print/ghostscript
 MAKEVARS+=			${TOOLS_DEPENDS.ghostscript}
 .endif
 
