@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.37 2009/07/22 09:01:48 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2010/01/20 11:12:01 wiz Exp $
 #
 
-DISTNAME=	gtk-doc-1.11
-PKGREVISION=	1
+DISTNAME=	gtk-doc-1.13
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.11/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.13/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gtk.org/gtk-doc/
 COMMENT=	Tools for authors of the GTK+ reference documentation
+LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
