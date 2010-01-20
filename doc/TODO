@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8874 2010/01/20 11:12:10 wiz Exp $
+$NetBSD: TODO,v 1.8875 2010/01/20 11:16:08 obache Exp $
 
 Suggested new packages
 ======================
@@ -1360,7 +1360,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucarp-1.5.1
 	o ucblogo-5.5
 	o udunits-1.12.9
-	o uim-1.5.7 [pkg/42481]
 	o unrealircd-3.2.8.1
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
