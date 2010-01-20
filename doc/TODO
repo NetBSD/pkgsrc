@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8880 2010/01/20 13:44:35 wiz Exp $
+$NetBSD: TODO,v 1.8881 2010/01/20 13:45:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -727,7 +727,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtranscript-0.2.0
 	o gtranslator-1.9.6
 	o guile-gtk-2.0
-	o gupnp-igd-0.1.6 [needs gupnp-1.0 >= 0.13.2]
 	o gv-3.6.8
 	o hackbot-2.21
 	o hal-0.5.14
