@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8869 2010/01/20 10:34:33 wiz Exp $
+$NetBSD: TODO,v 1.8870 2010/01/20 10:35:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1157,7 +1157,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-4.8.2
 	o py-checker-0.8.17
-	o py-cups-1.9.47
 	o py-fpconst-0.7.2 [pkg/42556]
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
