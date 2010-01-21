@@ -1,0 +1,10 @@
+--- Makefile.in.orig	2008-10-19 15:25:08.000000000 +0400
++++ Makefile.in	2010-01-21 08:56:22.000000000 +0300
+@@ -426,7 +426,6 @@
+ ###########################################################
+ pkgconfigdir = $(libdir)/pkgconfig
+ nodist_pkgconfig_DATA = gnu-smalltalk.pc
+-pkglib_DATA = libc.la
+ noinst_DATA = gst.im
+ @WITH_EMACS_TRUE@nodist_lisp_LISP = smalltalk-mode.el $(am__append_2)
+ bin_SCRIPTS = gst-config
