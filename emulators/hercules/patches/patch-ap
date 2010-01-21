@@ -1,0 +1,378 @@
+$NetBSD: patch-ap,v 1.1.2.2 2010/01/21 11:59:30 tron Exp $
+
+Patch out gcc language extensions that are no longer supported.
+
+--- general.c.orig	2001-02-08 20:02:40.000000000 +0000
++++ general.c
+@@ -96,7 +96,7 @@ U32     n;                              
+     RX(inst, execflag, regs, r1, b2, effective_addr2);
+ 
+     /* Load 2 bytes from operand address */
+-    (S32)n = (S16)ARCH_DEP(vfetch2) ( effective_addr2, b2, regs );
++    n = (S32)(S16)ARCH_DEP(vfetch2) ( effective_addr2, b2, regs );
+ 
+     /* Add signed operands and set condition code */
+     regs->psw.cc =
+@@ -124,7 +124,7 @@ U32     n;                              
+ 
+     RI(inst, execflag, regs, r1, opcd, n2);
+ 
+-    (S32)n = (S16)n2;
++    n = (S32)(S16)n2;
+ 
+     /* Add signed operands and set condition code */
+     regs->psw.cc =
+@@ -682,7 +682,7 @@ S32     i, j;                           
+     j = (r3 & 1) ? (S32)regs->GR_L(r3) : (S32)regs->GR_L(r3+1);
+ 
+     /* Add the increment value to the R1 register */
+-    (S32)regs->GR_L(r1) += i;
++    regs->GR_L(r1) = (S32)regs->GR_L(r1) + i;
+ 
+     /* Branch if result compares high */
+     if ( (S32)regs->GR_L(r1) > j )
+@@ -710,7 +710,7 @@ S32     i, j;                           
+     j = (r3 & 1) ? (S32)regs->GR_L(r3) : (S32)regs->GR_L(r3+1);
+ 
+     /* Add the increment value to the R1 register */
+-    (S32)regs->GR_L(r1) += i;
++    regs->GR_L(r1) = (S32)regs->GR_L(r1) + i;
+ 
+     /* Branch if result compares low or equal */
+     if ( (S32)regs->GR_L(r1) <= j )
+@@ -809,7 +809,7 @@ int     i,j;                            
+     j = (r3 & 1) ? (S32)regs->GR_L(r3) : (S32)regs->GR_L(r3+1);
+ 
+     /* Add the increment value to the R1 register */
+-    (S32)regs->GR_L(r1) += i;
++    regs->GR_L(r1) = (S32)regs->GR_L(r1) + i;
+ 
+     /* Branch if result compares high */
+     if ( (S32)regs->GR_L(r1) > j )
+@@ -839,7 +839,7 @@ int     i,j;                            
+     j = (r3 & 1) ? (S32)regs->GR_L(r3) : (S32)regs->GR_L(r3+1);
+ 
+     /* Add the increment value to the R1 register */
+-    (S32)regs->GR_L(r1) += i;
++    regs->GR_L(r1) = (S32)regs->GR_L(r1) + i;
+ 
+     /* Branch if result compares low or equal */
+     if ( (S32)regs->GR_L(r1) <= j )
+@@ -924,7 +924,7 @@ U64     dreg;                           
+     regs->GR_L(r1) = dreg;
+ 
+     /* Update the operand address and length registers */
+-    GR_A(r2, regs) = addr2;
++    GR_Ax(r2, regs, addr2);
+     regs->GR_L(r2+1) = len;
+ 
+     /* Set condition code 0 or 3 */
+@@ -1127,7 +1127,7 @@ U32     n;                              
+        the physical CPU on a spinlock */
+     if(regs->psw.cc && sysblk.numcpu > 1 && sysblk.brdcstncpu == 0)
+         usleep(1L);
+-#endif MAX_CPU_ENGINES > 1
++#endif /* MAX_CPU_ENGINES > 1 */
+ 
+ #if defined(_FEATURE_SIE)
+     if(regs->sie_state && (regs->siebk->ic[0] & SIE_IC0_CS1))
+@@ -1193,7 +1193,7 @@ U32     n1, n2;                         
+        the physical CPU on a spinlock */
+     if(regs->psw.cc && sysblk.numcpu > 1 && sysblk.brdcstncpu == 0)
+         usleep(1L);
+-#endif MAX_CPU_ENGINES > 1
++#endif /* MAX_CPU_ENGINES > 1 */
+ 
+ #if defined(_FEATURE_SIE)
+     if(regs->sie_state && (regs->siebk->ic[0] & SIE_IC0_CDS1))
+@@ -1216,7 +1216,7 @@ U32     n;                              
+     RX(inst, execflag, regs, r1, b2, effective_addr2);
+ 
+     /* Load rightmost 2 bytes of comparand from operand address */
+-    (S32)n = (S16)ARCH_DEP(vfetch2) ( effective_addr2, b2, regs );
++    n = (S32)(S16)ARCH_DEP(vfetch2) ( effective_addr2, b2, regs );
+ 
+     /* Compare signed operands and set condition code */
+     regs->psw.cc =
+@@ -1552,10 +1552,10 @@ BYTE    pad;                            
+     } /* end for(i) */
+ 
+     /* Update the registers */
+-    GR_A(r1, regs) = addr1;
+-    GR_A(r1+1, regs) = len1;
+-    GR_A(r3, regs) = addr2;
+-    GR_A(r3+1, regs) = len2;
++    GR_Ax(r1, regs, addr1);
++    GR_Ax(r1+1, regs, len1);
++    GR_Ax(r3, regs, addr2);
++    GR_Ax(r3+1, regs, len2);
+ 
+     regs->psw.cc = cc;
+ 
+@@ -1634,8 +1634,8 @@ BYTE    termchar;                       
+     } /* end for(i) */
+ 
+     /* Set R1 and R2 to point to current character of each operand */
+-    GR_A(r1, regs) = addr1;
+-    GR_A(r2, regs) = addr2;
++    GR_Ax(r1, regs, addr1);
++    GR_Ax(r2, regs, addr2);
+ 
+     /* Set condition code */
+     regs->psw.cc =  cc;
+@@ -1776,8 +1776,8 @@ S32     remlen1, remlen2;               
+     if (cc < 2)
+     {
+         /* Update R1 and R2 to point to the equal substring */
+-        GR_A(r1, regs) = eqaddr1;
+-        GR_A(r2, regs) = eqaddr2;
++        GR_Ax(r1, regs, eqaddr1);
++        GR_Ax(r2, regs, eqaddr2);
+ 
+         /* Set R1+1 and R2+1 to length remaining in each
+            operand after the start of the substring */
+@@ -1787,8 +1787,8 @@ S32     remlen1, remlen2;               
+     else
+     {
+         /* Update R1 and R2 to point to next bytes to compare */
+-        GR_A(r1, regs) = addr1;
+-        GR_A(r2, regs) = addr2;
++        GR_Ax(r1, regs, addr1);
++        GR_Ax(r2, regs, addr2);
+ 
+         /* Set R1+1 and R2+1 to remaining operand lengths */
+         regs->GR_L(r1+1) = (GREG)len1;
+@@ -1914,9 +1914,9 @@ BYTE    utf[4];                         
+         len2 = nlen2;
+ 
+         /* Update the registers */
+-        GR_A(r1, regs) = addr1;
++        GR_Ax(r1, regs, addr1);
+         regs->GR_L(r1+1) = len1;
+-        GR_A(r2, regs) = addr2;
++        GR_Ax(r2, regs, addr2);
+         regs->GR_L(r2+1) = len2;
+ 
+     } /* end for(i) */
+@@ -2069,9 +2069,9 @@ BYTE    utf[4];                         
+         len2 -= n + 1;
+ 
+         /* Update the registers */
+-        GR_A(r1, regs) = addr1;
++        GR_Ax(r1, regs, addr1);
+         regs->GR_L(r1+1) = len1;
+-        GR_A(r2, regs) = addr2;
++        GR_Ax(r2, regs, addr2);
+         regs->GR_L(r2+1) = len2;
+ 
+     } /* end for(i) */
+@@ -2153,7 +2153,7 @@ BYTE    sbyte;                          
+     /* Result is negative if sign is X'B' or X'D' */
+     if (d == 0x0B || d == 0x0D)
+     {
+-        (S64)dreg = -((S64)dreg);
++        dreg = (U64) -((S64)dreg);
+     }
+ 
+     /* Store low-order 32 bits of result into R1 register */
+@@ -2678,7 +2678,7 @@ VADR    effective_addr2;                
+     RX(inst, execflag, regs, r1, b2, effective_addr2);
+ 
+     /* Load operand address into register */
+-    GR_A(r1, regs) = effective_addr2;
++    GR_Ax(r1, regs, effective_addr2);
+ }
+ 
+ 
+@@ -2695,7 +2695,7 @@ VADR    effective_addr2;                
+     RX(inst, execflag, regs, r1, b2, effective_addr2);
+ 
+     /* Load operand address into register */
+-    GR_A(r1, regs) = effective_addr2;
++    GR_Ax(r1, regs, effective_addr2);
+ 
+     /* Load corresponding value into access register */
+     if ( PRIMARY_SPACE_MODE(&(regs->psw)) )
+@@ -2749,7 +2749,7 @@ int     r1, r2;                         
+     }
+ 
+     /* Load complement of second operand and set condition code */
+-    (S32)regs->GR_L(r1) = -((S32)regs->GR_L(r2));
++    regs->GR_L(r1) = (U32) -((S32)regs->GR_L(r2));
+ 
+     regs->psw.cc = (S32)regs->GR_L(r1) < 0 ? 1 :
+                    (S32)regs->GR_L(r1) > 0 ? 2 : 0;
+@@ -2768,7 +2768,7 @@ VADR    effective_addr2;                
+     RX(inst, execflag, regs, r1, b2, effective_addr2);
+ 
+     /* Load rightmost 2 bytes of register from operand address */
+-    (S32)regs->GR_L(r1) = (S16)ARCH_DEP(vfetch2) ( effective_addr2, b2, regs );
++    regs->GR_L(r1) = (S32)(S16)ARCH_DEP(vfetch2) ( effective_addr2, b2, regs );
+ }
+ 
+ 
+@@ -2785,7 +2785,7 @@ U16     i2;                             
+     RI(inst, execflag, regs, r1, opcd, i2);
+ 
+     /* Load operand into register */
+-    (S32)regs->GR_L(r1) = (S16)i2;
++    regs->GR_L(r1) = (S32)(S16)i2;
+ 
+ }
+ #endif /*defined(FEATURE_IMMEDIATE_AND_RELATIVE)*/
+@@ -2835,7 +2835,7 @@ int     r1, r2;                         
+     RR(inst, execflag, regs, r1, r2);
+ 
+     /* Load negative value of second operand and set cc */
+-    (S32)regs->GR_L(r1) = (S32)regs->GR_L(r2) > 0 ?
++    regs->GR_L(r1) = (S32)regs->GR_L(r2) > 0 ?
+                             -((S32)regs->GR_L(r2)) :
+                             (S32)regs->GR_L(r2);
+ 
+@@ -2863,7 +2863,7 @@ int     r1, r2;                         
+     }
+ 
+     /* Load positive value of second operand and set cc */
+-    (S32)regs->GR_L(r1) = (S32)regs->GR_L(r2) < 0 ?
++    regs->GR_L(r1) = (S32)regs->GR_L(r2) < 0 ?
+                             -((S32)regs->GR_L(r2)) :
+                             (S32)regs->GR_L(r2);
+ 
+@@ -3020,8 +3020,8 @@ BYTE    pad;                            
+           || (n <= addr2
+                 && (addr1 > addr2 || addr1 <= n)))
+         {
+-            GR_A(r1, regs) = addr1;
+-            GR_A(r2, regs) = addr2;
++            GR_Ax(r1, regs, addr1);
++            GR_Ax(r2, regs, addr2);
+             regs->psw.cc =  3;
+             logmsg ("MVCL destructive overlap\n");
+             logmsg ("R%2.2d=%8.8X  R%2.2d=%8.8X  "
+@@ -3056,8 +3056,8 @@ BYTE    pad;                            
+         len1--;
+ 
+         /* Update the registers */
+-        GR_A(r1, regs) = addr1;
+-        GR_A(r2, regs) = addr2;
++        GR_Ax(r1, regs, addr1);
++        GR_Ax(r2, regs, addr2);
+         regs->GR_LA24(r1+1) = len1;
+         regs->GR_LA24(r2+1) = len2;
+ 
+@@ -3142,10 +3142,10 @@ BYTE    pad;                            
+         len1--;
+ 
+         /* Update the registers */
+-        GR_A(r1, regs) = addr1;
+-        GR_A(r1+1, regs) = len1;
+-        GR_A(r3, regs) = addr2;
+-        GR_A(r3+1, regs) = len2;
++        GR_Ax(r1, regs, addr1);
++        GR_Ax(r1+1, regs, len1);
++        GR_Ax(r3, regs, addr2);
++        GR_Ax(r3+1, regs, len2);
+ 
+     } /* end for(i) */
+ 
+@@ -3282,8 +3282,8 @@ BYTE    termchar;                       
+     } /* end for(i) */
+ 
+     /* Set R1 and R2 to point to next character of each operand */
+-    GR_A(r1, regs) = addr1;
+-    GR_A(r2, regs) = addr2;
++    GR_Ax(r1, regs, addr1);
++    GR_Ax(r2, regs, addr2);
+ 
+     /* Set condition code 3 */
+     regs->psw.cc = 3;
+@@ -3480,7 +3480,7 @@ U32     n;                              
+     RX(inst, execflag, regs, r1, b2, effective_addr2);
+ 
+     /* Load 2 bytes from operand address */
+-    (S32)n = (S16)ARCH_DEP(vfetch2) ( effective_addr2, b2, regs );
++    n = (S32)(S16)ARCH_DEP(vfetch2) ( effective_addr2, b2, regs );
+ 
+     /* Multiply R1 register by n, ignore leftmost 32 bits of
+        result, and place rightmost 32 bits in R1 register */
+@@ -3502,7 +3502,7 @@ U16     i2;                             
+     RI(inst, execflag, regs, r1, opcd, i2);
+ 
+     /* Multiply register by operand ignoring overflow  */
+-    (S32)regs->GR_L(r1) *= (S16)i2;
++    regs->GR_L(r1) = (S32)regs->GR_L(r1) * (S16)i2;
+ 
+ }
+ #endif /*defined(FEATURE_IMMEDIATE_AND_RELATIVE)*/
+@@ -3518,7 +3518,7 @@ int     r1, r2;                         
+     RRE(inst, execflag, regs, r1, r2);
+ 
+     /* Multiply signed registers ignoring overflow */
+-    (S32)regs->GR_L(r1) *= (S32)regs->GR_L(r2);
++    regs->GR_L(r1) = (S32)regs->GR_L(r1) * (S32)regs->GR_L(r2);
+ 
+ }
+ 
+@@ -3539,7 +3539,7 @@ U32     n;                              
+     n = ARCH_DEP(vfetch4) ( effective_addr2, b2, regs );
+ 
+     /* Multiply signed operands ignoring overflow */
+-    (S32)regs->GR_L(r1) *= (S32)n;
++    regs->GR_L(r1) = (S32)regs->GR_L(r1) * (S32)n;
+ 
+ }
+ 
+@@ -4595,7 +4595,7 @@ VADR    effective_addr2,
+         if(regs->psw.cc && sysblk.numcpu > 1
+             && sysblk.brdcstncpu == 0)
+             usleep(1L);
+-#endif MAX_CPU_ENGINES > 1
++#endif /* MAX_CPU_ENGINES > 1 */
+ 
+     }
+ }
+@@ -4644,7 +4644,7 @@ BYTE    termchar;                       
+            code 1 and load the address of the character into R1 */
+         if (sbyte == termchar)
+         {
+-            GR_A(r1, regs) = addr2;
++            GR_Ax(r1, regs, addr2);
+             regs->psw.cc = 1;
+             return;
+         }
+@@ -4656,7 +4656,7 @@ BYTE    termchar;                       
+     } /* end for(i) */
+ 
+     /* Set R2 to point to next character of operand */
+-    GR_A(r2, regs) = addr2;
++    GR_Ax(r2, regs, addr2);
+ 
+     /* Return condition code 3 */
+     regs->psw.cc = 3;
+@@ -4928,7 +4928,7 @@ U32     n;                              
+     n = effective_addr2 & 0x3F;
+ 
+     /* Shift the signed value of the R1 register */
+-    (S32)regs->GR_L(r1) = n > 30 ?
++    regs->GR_L(r1) = n > 30 ?
+                     ((S32)regs->GR_L(r1) < 0 ? -1 : 0) :
+                     (S32)regs->GR_L(r1) >> n;
+ 
+@@ -5293,7 +5293,7 @@ U32     n;                              
+     RX(inst, execflag, regs, r1, b2, effective_addr2);
+ 
+     /* Load 2 bytes from operand address */
+-    (S32)n = (S16)ARCH_DEP(vfetch2) ( effective_addr2, b2, regs );
++    n = (S32)(S16)ARCH_DEP(vfetch2) ( effective_addr2, b2, regs );
+ 
+     /* Subtract signed operands and set condition code */
+     regs->psw.cc =
+@@ -5723,7 +5723,7 @@ BYTE    trtab[256];                     
+         len1--;
+ 
+         /* Update the registers */
+-        GR_A(r1, regs) = addr1;
++        GR_Ax(r1, regs, addr1);
+         regs->GR_L(r1+1) = len1;
+ 
+     } /* end for(i) */
