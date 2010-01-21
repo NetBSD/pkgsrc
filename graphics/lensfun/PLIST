@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/21 23:43:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/01/21 22:41:23 wiz Exp $
 include/lensfun.h
 lib/liblensfun.so
 lib/liblensfun.so.0
@@ -19,10 +19,10 @@ share/doc/${PKGNAME}/manual/dbformat.html
 share/doc/${PKGNAME}/manual/dbsearch.html
 share/doc/${PKGNAME}/manual/doxygen.css
 share/doc/${PKGNAME}/manual/doxygen.png
-share/doc/${PKGNAME}/manual/el_camera.html
-share/doc/${PKGNAME}/manual/el_lens.html
-share/doc/${PKGNAME}/manual/el_mount.html
-share/doc/${PKGNAME}/manual/elem_calibration.html
+share/doc/${PKGNAME}/manual/el__camera.html
+share/doc/${PKGNAME}/manual/el__lens.html
+share/doc/${PKGNAME}/manual/el__mount.html
+share/doc/${PKGNAME}/manual/elem__calibration.html
 share/doc/${PKGNAME}/manual/example_8c-example.html
 share/doc/${PKGNAME}/manual/examples.html
 share/doc/${PKGNAME}/manual/files.html
