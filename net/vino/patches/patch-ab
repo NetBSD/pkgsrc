@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/01/21 18:20:43 drochner Exp $
+
+--- server/Makefile.in.orig	2009-10-19 12:06:23.000000000 +0000
++++ server/Makefile.in
+@@ -366,7 +366,7 @@ vino_enum_headers = \
+ schemasdir = $(GCONF_SCHEMA_FILE_DIR)
+ schemas_in_files = vino-server.schemas.in
+ schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
+-desktopdir = $(sysconfdir)/xdg/autostart
++desktopdir = $(PREFIX)/share/gnome/autostart
+ desktop_in_files = vino-server.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ servicedir = $(datadir)/dbus-1/services
