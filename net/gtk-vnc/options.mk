@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2009/09/14 10:07:03 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2010/01/21 17:05:59 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk-vnc
-PKG_SUPPORTED_OPTIONS=	python plugin
+PKG_SUPPORTED_OPTIONS=	python plugin vnc-sasl
+PKG_SUGGESTED_OPTIONS=	vnc-sasl
 
 .include "../../mk/bsd.options.mk"
 
@@ -20,4 +21,10 @@ PLIST_VARS+=	plugin
 .include "../../devel/xulrunner/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-plugin=yes
 PLIST.plugin=	yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mvnc-sasl)
+.include "../../security/cyrus-sasl/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-sasl
 .endif
