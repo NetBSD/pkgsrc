@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/12/05 19:00:27 ahoka Exp $
+# $NetBSD: Makefile,v 1.45 2010/01/21 23:32:10 heinz Exp $
 
 DISTNAME=	slrn-0.9.9p1
 CATEGORIES=	news
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
