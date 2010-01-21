@@ -1,0 +1,10 @@
+JBIG-KIT implements a highly effective data compression algorithm for
+bi-level high-resolution images such as fax pages or scanned
+documents.
+
+JBIG-KIT provides a portable library of compression and decompression
+functions with a documented interface. You can very easily include
+into your image or document processing software. In addition, JBIG-KIT
+provides ready-to-use compression and decompression programs with a
+simple command line interface (similar to the converters found in Jef
+Poskanzer's PBM graphics file conversion package).
