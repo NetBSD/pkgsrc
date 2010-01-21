@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/21 12:35:31 obache Exp $
+bin/jbgtopbm
+bin/jbgtopbm85
+bin/pbmtojbg
+bin/pbmtojbg85
+include/jbig.h
+include/jbig85.h
+include/jbig_ar.h
+lib/libjbig.la
+lib/libjbig85.la
+man/man1/jbgtopbm.1
+man/man1/pbmtojbg.1
+share/doc/jbig/jbig.txt
+share/doc/jbig/jbig85.txt
