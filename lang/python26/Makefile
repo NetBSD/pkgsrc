@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/01/17 12:02:22 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/21 16:28:51 heinz Exp $
 
 DISTNAME=	Python-2.6.4
 PKGNAME=	${DISTNAME:S/Python/python26/}
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
+LICENSE=	python-software-foundation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
