@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/01/21 12:53:19 adam Exp $
+
+--- liblwgeom/Makefile.in.orig	2009-01-13 12:27:39.000000000 +0000
++++ liblwgeom/Makefile.in
+@@ -48,10 +48,12 @@ SA_HEADERS = \
+ 	liblwgeom.h \
+ 	lwalgorithm.h
+ 
+-all: liblwgeom.a
++all: liblwgeom.la
+ 
+-liblwgeom.a: $(SA_OBJS) $(SA_HEADERS) 
+-	ar rs liblwgeom.a $(SA_OBJS) 	
++liblwgeom.la: $(SA_OBJS) $(SA_HEADERS) 
++	${LIBTOOL} --mode=link ${CC} -o liblwgeom.la \
++		${SA_OBJS:.o=.lo} -rpath ${PREFIX}/lib \
++		-version-info @POSTGIS_MAJOR_VERSION@:@POSTGIS_MINOR_VERSION@
+ 
+ clean:
+ 	rm -f $(SA_OBJS) 
+@@ -62,7 +64,7 @@ check: liblwgeom.a
+ 
+ # Command to build each of the .o files
+ $(SA_OBJS): %.o: %.c 
+-	$(CC) $(CFLAGS) -c -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
+ 
+ # Commands to generate the lexer and parser from input files
+ wktparse.tab.c: wktparse.y
