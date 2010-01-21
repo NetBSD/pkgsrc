@@ -1,0 +1,15 @@
+$NetBSD: patch-aw,v 1.1.2.2 2010/01/21 11:59:30 tron Exp $
+
+Patch out mismatched decls gcc no longer accepts.
+
+--- tapesplit.c~	2001-01-28 18:05:41.000000000 +0000
++++ tapesplit.c
+@@ -36,7 +36,7 @@ static BYTE buf[65500];
+ /*-------------------------------------------------------------------*/
+ /* ASCII to EBCDIC translate tables                                  */
+ /*-------------------------------------------------------------------*/
+-static unsigned char
++unsigned char
+ ebcdic_to_ascii[] = {
+ "\x00\x01\x02\x03\xA6\x09\xA7\x7F\xA9\xB0\xB1\x0B\x0C\x0D\x0E\x0F"
+ "\x10\x11\x12\x13\xB2\xB4\x08\xB7\x18\x19\x1A\xB8\xBA\x1D\xBB\x1F"

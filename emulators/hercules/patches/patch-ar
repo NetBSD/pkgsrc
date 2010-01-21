@@ -1,0 +1,17 @@
+$NetBSD: patch-ar,v 1.1.2.2 2010/01/21 11:59:30 tron Exp $
+
+Patch out gcc language extensions that are no longer supported.
+
+--- cmpsc.c~	2001-02-10 11:31:39.000000000 +0000
++++ cmpsc.c
+@@ -142,8 +142,8 @@
+ /*----------------------------------------------------------------------------*/
+ #define ADJUSTREGS(r, regs, len) \
+ { \
+-  GR_A ((r), (regs)) = (GR_A ((r), (regs)) + (len)) & ADDRESS_MAXWRAP((regs)); \
+-  GR_A ((r) + 1, (regs)) -= (len); \
++  GR_Ax ((r), (regs), (GR_A ((r), (regs)) + (len)) & ADDRESS_MAXWRAP((regs))); \
++  GR_Ax ((r) + 1, (regs), GR_A ((r) + 1, (regs)) - (len)); \
+ }
+ 
+ /*----------------------------------------------------------------------------*/
