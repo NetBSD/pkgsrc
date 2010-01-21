@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/06/14 20:34:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2010/01/21 06:21:07 asau Exp $
 bin/gst
 bin/gst-blox
 bin/gst-config
@@ -24,7 +24,6 @@ lib/smalltalk/gstglut.la
 lib/smalltalk/gstopengl.la
 lib/smalltalk/i18n.la
 lib/smalltalk/iconv.la
-lib/smalltalk/libc.la
 lib/smalltalk/sockets.la
 lib/smalltalk/zlib.la
 libexec/smalltalk/vfs/deb
