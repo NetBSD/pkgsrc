@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.313 2009/12/06 15:39:25 seb Exp $
+# $NetBSD: Makefile,v 1.314 2010/01/21 12:56:27 adam Exp $
 #
 
 COMMENT=	Databases
@@ -193,6 +193,7 @@ SUBDIR+=	php5-mysqli
 SUBDIR+=	phpldapadmin
 SUBDIR+=	phpmyadmin
 SUBDIR+=	phppgadmin
+SUBDIR+=	postgresql-postgis
 SUBDIR+=	postgresql82
 SUBDIR+=	postgresql82-adminpack
 SUBDIR+=	postgresql82-client
