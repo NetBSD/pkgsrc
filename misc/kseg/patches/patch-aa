@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/01/21 10:21:01 drochner Exp $
+
+--- main.cpp.orig	2006-02-04 02:06:38.000000000 +0000
++++ main.cpp
+@@ -37,7 +37,7 @@ int main(int argc, char **argv)
+ 
+   //set some default properties
+   KSegProperties::setPropertyDefault("Language", "");
+-  KSegProperties::setPropertyDefault("LanguageDir", ".");
++  KSegProperties::setPropertyDefault("LanguageDir", "@KSEGLANG@");
+   KSegProperties::setPropertyDefault("SelectType", "BorderSelect");
+   KSegProperties::setPropertyDefault("QuickPlayDirectory", ".");
+   KSegProperties::setPropertyDefault("RecentListSize", "4");
