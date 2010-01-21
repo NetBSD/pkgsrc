@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2010/01/18 09:59:21 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2010/01/21 18:20:43 drochner Exp $
 
-DISTNAME=	vino-2.24.1
-PKGREVISION=	4
+DISTNAME=	vino-2.28.1
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vino/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vino/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -25,18 +24,19 @@ GCONF_SCHEMAS=		vino-server.schemas
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-.include "../../net/ORBit2/buildlink3.mk"
+.include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../security/gnutls/libgnutls-config.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
