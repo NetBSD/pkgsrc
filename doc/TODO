@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8911 2010/01/20 15:17:15 wiz Exp $
+$NetBSD: TODO,v 1.8912 2010/01/21 11:47:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -566,7 +566,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-500
+	o etm-503
 	o evolution-exchange-2.28.2
 	o evolution-mapi-0.28.2 [GNOME 2.28]
 	o ex-20050325
@@ -657,7 +657,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geany-0.18
 	o geda-1.6.0.20091004
 	o gedit-plugins-2.28.0 [GNOME 2.28]
-	o genius-1.0.9
 	o gentoo-0.15.6
 	o gettext-0.17
 	o gettext-m4-0.17
@@ -931,7 +930,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o miredo-1.1.7
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-3.0.0
+	o mkvtoolnix-3.1.0
 	o mlterm-2.9.4
 	o moc-2.4.4
 	o modular-xorg-server-1.7.4
