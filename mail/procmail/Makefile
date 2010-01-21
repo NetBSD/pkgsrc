@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/07/18 03:15:18 smb Exp $
+# $NetBSD: Makefile,v 1.44 2010/01/21 17:41:07 heinz Exp $
 #
 
 DISTNAME=	procmail-3.22
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.procmail.org/pub/procmail/
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.procmail.org/
 COMMENT=	Local mail delivery agent
+LICENSE=	artistic OR gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
