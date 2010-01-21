@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.287 2010/01/21 20:45:07 spz Exp $
+$NetBSD: CHANGES-2010,v 1.288 2010/01/21 22:41:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -336,3 +336,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/postgresql-postgis version 1.4.1 [adam 2010-01-21]
 	Updated net/bind95 to 9.5.2-P2 [spz 2010-01-21]
 	Updated net/bind9 to 9.4.3-P5 [spz 2010-01-21]
+	Updated graphics/lensfun to 0.2.4nb1 [wiz 2010-01-21]
