@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.286 2010/01/21 13:00:56 adam Exp $
+$NetBSD: CHANGES-2010,v 1.287 2010/01/21 20:45:07 spz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -334,3 +334,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/postgresql83-client to 8.3.9nb2 [adam 2010-01-21]
 	Updated databases/postgresql83-server to 8.3.9nb2 [adam 2010-01-21]
 	Added databases/postgresql-postgis version 1.4.1 [adam 2010-01-21]
+	Updated net/bind95 to 9.5.2-P2 [spz 2010-01-21]
+	Updated net/bind9 to 9.4.3-P5 [spz 2010-01-21]
