@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/11/24 11:19:03 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/21 22:41:23 wiz Exp $
 #
 
 DISTNAME=	lensfun-0.2.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.berlios.de/lensfun/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +12,7 @@ HOMEPAGE=	http://lensfun.berlios.de/
 COMMENT=	Library for rectifying defects introduced by photographic equipment
 LICENSE=	gnu-lgpl-v3
 
-BUILD_DEPENDS+=	doxygen>=1.5.9:../../devel/doxygen
+BUILD_DEPENDS+=	doxygen>=1.6.2:../../devel/doxygen
 BUILD_DEPENDS+=	makedepend-[0-9]*:../../devel/makedepend
 
 HAS_CONFIGURE=		yes
