@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2008/08/07 10:47:43 drochner Exp $
+# $NetBSD: Makefile,v 1.83 2010/01/21 23:32:10 heinz Exp $
 
 DISTNAME=	libxslt-1.1.24
 PKGREVISION=	1
@@ -9,6 +9,7 @@ MASTER_SITES+=	ftp://xmlsoft.org/libxslt/
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/XSLT/
 COMMENT=	XSLT parser library from the GNOME project
+LICENSE=	mit # with advertisement clause
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir

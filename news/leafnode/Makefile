@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/04/29 10:54:10 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2010/01/21 23:32:10 heinz Exp $
 
 DISTNAME=		leafnode-1.11.7
 CATEGORIES=		news
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		cjep@NetBSD.org
 HOMEPAGE=		http://leafnode.sourceforge.net/
 COMMENT=		NNTP server for small (dialup) sites
+LICENSE=		mit AND gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
