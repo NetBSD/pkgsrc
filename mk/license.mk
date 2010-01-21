@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.30 2009/10/25 21:32:17 wiz Exp $
+# $NetBSD: license.mk,v 1.31 2010/01/21 16:28:51 heinz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -110,7 +110,8 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	cpl-1.0 \
 	open-font-license \
 	mpl-1.0 mpl-1.1 \
-	zpl
+	zpl \
+	python-software-foundation
 
 ##### Variant spellings
 
