@@ -1,10 +1,20 @@
-$NetBSD: patch-an,v 1.1 2001/05/11 11:17:39 dmcmahill Exp $
+$NetBSD: patch-an,v 1.1.62.1 2010/01/21 11:59:30 tron Exp $
 
-regparm is only for i386
+ - regparm is only for i386
+ - patch out gcc language extensions that are no longer supported
 
---- features.h.orig	Thu Feb  1 17:56:32 2001
-+++ features.h	Tue May  8 18:47:14 2001
-@@ -71,6 +71,11 @@
+--- features.h.orig	2001-02-01 22:56:32.000000000 +0000
++++ features.h
+@@ -48,6 +48,7 @@
+ #undef ET 
+ #undef RADR
+ #undef GR_A
++#undef GR_Ax
+ #undef VADR
+ #undef GREG
+ #undef CREG
+@@ -70,8 +71,13 @@
+ 
  #define ARCH_MODE	ARCH_370
  
 +#ifdef __i386__
@@ -16,7 +26,17 @@ regparm is only for i386
 +#endif
  
  #define ARCH_DEP(_name) \
-@@ -130,6 +135,11 @@
+ s370_ ## _name
+@@ -104,6 +110,7 @@ s370_ ## _name
+ #define CR(_r)	CR_L(_r)
+ #define GR(_r)	GR_L(_r)
+ #define GR_A(_r, _regs) ((_regs)->GR_L((_r)))
++#define GR_Ax(_r, _regs, _val) (((_regs)->GR_L((_r))) = (_val))
+ #define MONCODE MC_L
+ #define TEA	EA_L
+ #define ET 	ET_L
+@@ -129,8 +136,13 @@ s370_ ## _name
+ 
  #define ARCH_MODE	ARCH_390
  
 +#ifdef __i386__
@@ -28,7 +48,17 @@ regparm is only for i386
 +#endif
  
  #define ARCH_DEP(_name) \
-@@ -212,6 +222,11 @@
+ s390_ ## _name
+@@ -163,6 +175,7 @@ s390_ ## _name
+ #define CR(_r)	CR_L(_r)
+ #define GR(_r)	GR_L(_r)
+ #define GR_A(_r, _regs) ((_regs)->GR_L((_r)))
++#define GR_Ax(_r, _regs, _val) (((_regs)->GR_L((_r))) = (_val))
+ #define MONCODE MC_L
+ #define TEA	EA_L
+ #define ET 	ET_L
+@@ -211,8 +224,13 @@ s390_ ## _name
+ #define SSEVENT_BIT	ASCE_X
  #define SSGROUP_BIT	ASCE_G
  
 +#ifdef __i386__
@@ -40,7 +70,17 @@ regparm is only for i386
 +#endif
  
  #define ARCH_DEP(_name) \
-@@ -268,6 +283,11 @@
+ z900_ ## _name
+@@ -223,6 +241,7 @@ z900_ ## _name
+ #define CR(_r)	CR_G(_r)
+ #define GR(_r)	GR_G(_r)
+ #define GR_A(_r, _regs) ((_regs)->psw.amode64 ? (_regs)->GR_G((_r)) : (_regs)->GR_L((_r)))
++#define GR_Ax(_r, _regs, _val) ((_regs)->psw.amode64 ? ((_regs)->GR_G((_r)) = (_val)) : ((_regs)->GR_L((_r)) = (_val)))
+ #define MONCODE MC_G
+ #define TEA	EA_G
+ #define ET 	ET_G
+@@ -267,8 +286,13 @@ z900_ ## _name
+ #define SSEVENT_BIT	ASCE_X
  #define SSGROUP_BIT	ASCE_G
  
 +#ifdef __i386__
@@ -52,3 +92,12 @@ regparm is only for i386
 +#endif
  
  #define ARCH_DEP(_name) \
+ z964_ ## _name
+@@ -279,6 +303,7 @@ z964_ ## _name
+ #define CR(_r)	CR_G(_r)
+ #define GR(_r)	GR_G(_r)
+ #define GR_A(_r, _regs) ((_regs)->psw.amode64 ? (_regs)->GR_G((_r)) : (_regs)->GR_L((_r)))
++#define GR_Ax(_r, _regs, _val) ((_regs)->psw.amode64 ? ((_regs)->GR_G((_r)) = (_val)) : ((_regs)->GR_L((_r)) = (_val)))
+ #define MONCODE MC_G
+ #define TEA	EA_G
+ #define ET 	ET_G

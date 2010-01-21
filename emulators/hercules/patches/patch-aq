@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1.2.2 2010/01/21 11:59:30 tron Exp $
+
+Patch out gcc language extensions that are no longer supported.
+
+--- service.c~	2001-02-08 20:07:03.000000000 +0000
++++ service.c
+@@ -1300,7 +1300,7 @@ BYTE            *xstmap;                
+                     }
+                 }
+                 mcd_len -= obj_len;
+-                (BYTE*)obj_hdr += obj_len;
++                obj_hdr = (SCCB_OBJ_HDR *)((BYTE*)obj_hdr + obj_len);
+             }
+     
+ #ifndef NO_CYGWIN_STACK_BUG
