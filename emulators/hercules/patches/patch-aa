@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2005/12/09 10:46:43 joerg Exp $
+$NetBSD: patch-aa,v 1.7.38.1 2010/01/21 11:59:30 tron Exp $
 
 --- makefile.orig	2001-02-11 03:21:58.000000000 +0000
 +++ makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.7 2005/12/09 10:46:43 joerg Exp $
  #   overridden in the make command line, as in "PREFIX=/foo make install"
  #   (the directory is only used when installing).
 -DESTDIR  = $(PREFIX)/usr/bin
-+DESTDIR  = $(PREFIX)/bin
++INSTALLDIR  = $(DESTDIR)$(PREFIX)/bin
  
  # Standard flags for all architectures
  CFLAGS	 = -Wall -fomit-frame-pointer -DVERSION=$(VERSION) -DNO_BYTESWAP_H
@@ -57,3 +57,18 @@ $NetBSD: patch-aa,v 1.7 2005/12/09 10:46:43 joerg Exp $
  
  # Reverse the comments below to disable Compressed CKD Dasd support
  #CFLAGS  += -DNO_CCKD
+@@ -224,9 +226,9 @@ tar:	clean
+ 	(cd ..; tar cvzf hercules-$(VERSION).tar.gz hercules-$(VERSION))
+ 
+ install:  $(EXEFILES)
+-	cp $(EXEFILES) $(DESTDIR)
+-	cp dasdlist $(DESTDIR)
+-	chown root $(DESTDIR)/hercifc
+-	chmod 0751 $(DESTDIR)/hercifc
+-	chmod +s $(DESTDIR)/hercifc
++	cp $(EXEFILES) $(INSTALLDIR)
++	cp dasdlist $(INSTALLDIR)
++	#chown root $(INSTALLDIR)/hercifc
++	#chmod 0751 $(INSTALLDIR)/hercifc
++	#chmod +s $(INSTALLDIR)/hercifc
+ 	rm hercifc

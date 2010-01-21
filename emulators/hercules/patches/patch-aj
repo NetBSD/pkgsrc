@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2001/03/23 16:20:56 agc Exp $
+$NetBSD: patch-aj,v 1.1.62.1 2010/01/21 11:59:30 tron Exp $
 
 Patch from Wofgang Solfrank:
 
@@ -7,9 +7,29 @@ At least with unproven-pthreads, the comment above that is wrong
 when stating that a 1 usec timeout would be stretched to the next
 system clock tick."
 
---- timer.c.orig	Thu Feb  8 20:02:41 2001
-+++ timer.c	Fri Mar 23 16:01:53 2001
-@@ -319,7 +319,7 @@
+Also, patch out no-longer-supported gcc language extensions.
+
+--- timer.c.orig	2001-02-08 20:02:41.000000000 +0000
++++ timer.c
+@@ -190,7 +190,7 @@ struct  timeval tv;                     
+ 
+             /* Decrement the CPU timer if the CPU is running */
+             if(regs->cpustate == CPUSTATE_STARTED && (S64)diff > 0)
+-                (S64)regs->ptimer -= (S64)diff;
++                regs->ptimer = (S64)regs->ptimer - (S64)diff;
+ 
+             /* Set interrupt flag if the CPU timer is negative */
+             if ((S64)regs->ptimer < 0)
+@@ -207,7 +207,7 @@ struct  timeval tv;                     
+             {
+                 /* Decrement the CPU timer if the CPU is running */
+                 if( (S64)diff > 0)
+-                    (S64)regs->guestregs->ptimer -= (S64)diff;
++                    regs->guestregs->ptimer = (S64)regs->guestregs->ptimer - (S64)diff;
+ 
+                 /* Set interrupt flag if the CPU timer is negative */
+                 if ((S64)regs->guestregs->ptimer < 0)
+@@ -319,7 +319,7 @@ struct  timeval tv;                     
                  /* Calculate instructions/millisecond for this CPU */
                  regs->mipsrate =
                      (regs->instcount - regs->prevcount) / msecctr;
@@ -18,7 +38,7 @@ system clock tick."
  
                  /* Save the instruction counter */
                  regs->prevcount = regs->instcount;
-@@ -336,7 +336,7 @@
+@@ -336,7 +336,7 @@ struct  timeval tv;                     
          /* Sleep for one system clock tick by specifying a one-microsecond
             delay, which will get stretched out to the next clock tick */
          tv.tv_sec = 0;
