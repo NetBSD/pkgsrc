@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.31 2010/01/21 16:28:51 heinz Exp $
+# $NetBSD: license.mk,v 1.32 2010/01/21 16:32:21 heinz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -112,6 +112,9 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	mpl-1.0 mpl-1.1 \
 	zpl \
 	python-software-foundation
+
+# not approved by OSI, derived from BSD
+DEFAULT_ACCEPTABLE_LICENSES+=	info-zip
 
 ##### Variant spellings
 
