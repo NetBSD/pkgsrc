@@ -1,0 +1,37 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/01/21 12:53:19 adam Exp $
+
+--- loader/Makefile.in.orig	2009-10-06 08:51:49.000000000 +0000
++++ loader/Makefile.in
+@@ -39,7 +39,7 @@ PGSQL_FE_LDFLAGS=@PGSQL_FE_LDFLAGS@
+ ICONV_LDFLAGS=@ICONV_LDFLAGS@
+ 
+ # liblwgeom
+-LIBLWGEOM=../liblwgeom/liblwgeom.a
++LIBLWGEOM=../liblwgeom/liblwgeom.la
+ 
+ # GTK includes and libraries
+ GTK_CFLAGS = @GTK_CFLAGS@
+@@ -60,10 +60,10 @@ pgsql2shp.o: pgsql2shp.c
+ 	$(CC) $(CFLAGS) $(PGSQL_FE_CPPFLAGS) -c $<
+ 
+ $(PGSQL2SHP): shpopen.o dbfopen.o getopt.o pgsql2shp.o $(LIBLWGEOM) 
+-	$(CC) $(CFLAGS) $^ $(ICONV_LDFLAGS) $(PGSQL_FE_LDFLAGS) -lm -o $@ 
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $^ $(ICONV_LDFLAGS) $(PGSQL_FE_LDFLAGS) -lm -o $@ 
+ 
+ $(SHP2PGSQL): shpopen.o dbfopen.o getopt.o  shp2pgsql.o $(LIBLWGEOM) 
+-	$(CC) $(CFLAGS) $^ $(ICONV_LDFLAGS) -lm -o $@ 
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $^ $(ICONV_LDFLAGS) -lm -o $@ 
+ 
+ shp2pgsql-core-gui.o: shp2pgsql-core.c
+ 	$(CC) $(CFLAGS) -DPGUI -c -o $@ $^
+@@ -79,8 +79,8 @@ $(SHP2PGSQL-CLI): stringbuffer.o shpopen
+ 
+ install: all
+ 	@mkdir -p $(DESTDIR)$(bindir)
+-	$(INSTALL) $(PGSQL2SHP) $(DESTDIR)$(bindir)
+-	$(INSTALL) $(SHP2PGSQL) $(DESTDIR)$(bindir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $(PGSQL2SHP) $(DESTDIR)$(bindir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $(SHP2PGSQL) $(DESTDIR)$(bindir)
+ 
+ uninstall:
+ 	@rm -f $(DESTDIR)$(bindir)/$(PGSQL2SHP)
