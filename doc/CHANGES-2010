@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.296 2010/01/22 20:15:53 heinz Exp $
+$NetBSD: CHANGES-2010,v 1.297 2010/01/22 22:31:33 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -345,3 +345,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/gtk-doc to 1.13nb1 [wiz 2010-01-22]
 	Updated time/ruby-tzinfo to 0.3.16 [taca 2010-01-22]
 	Updated misc/esniper to 2.22.0 [heinz 2010-01-22]
+	Updated devel/exctags to 5.8 [tonio 2010-01-22]
