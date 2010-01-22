@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2010/01/22 19:55:07 ghen Exp $
+# $NetBSD: options.mk,v 1.2 2010/01/22 20:44:58 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dasher
 PKG_SUPPORTED_OPTIONS=	gnome
@@ -13,7 +13,7 @@ PLIST_VARS=		gnome
 ###
 .if !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--with-gnome
-PLIST.enchant=		yes
+PLIST.gnome=		yes
 .include "../../audio/gnome-speech/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/at-spi/buildlink3.mk"
@@ -21,13 +21,11 @@ PLIST.enchant=		yes
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .else
