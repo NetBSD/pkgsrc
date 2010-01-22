@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/21 12:45:28 adam Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/22 20:12:11 adam Exp $
 
 PKGNAME=	postgresql83-server-${BASE_VERS}
 PKGREVISION=	2
@@ -47,7 +47,7 @@ DL_LIBS+=	-lltdl
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql83-server
-PKG_SUPPORTED_OPTIONS=	ldap pam
+PKG_SUPPORTED_OPTIONS=	gssapi krb5 ldap pam
 .include "../../databases/postgresql83/options.mk"
 
 # PGUSER	username of the database administrator
@@ -93,6 +93,6 @@ pre-build:
 		../../src/include/utils/fmgroids.h
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC}/src/port &&					\
-       	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
+	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/17 12:02:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/22 20:12:11 adam Exp $
 
 PKGNAME=	postgresql84-server-${BASE_VERS}
 PKGREVISION=	1
@@ -47,7 +47,7 @@ DL_LIBS+=	-lltdl
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql84-server
-PKG_SUPPORTED_OPTIONS=	ldap pam
+PKG_SUPPORTED_OPTIONS=	gssapi krb5 ldap pam
 .include "../../databases/postgresql84/options.mk"
 
 # PGUSER	username of the database administrator
@@ -87,6 +87,6 @@ post-wrapper:
 pre-build:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC}/src/port &&					\
-       	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
+	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
 
 .include "../../mk/bsd.pkg.mk"
