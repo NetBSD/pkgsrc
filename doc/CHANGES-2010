@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.288 2010/01/21 22:41:35 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.289 2010/01/22 03:36:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -337,3 +337,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/bind95 to 9.5.2-P2 [spz 2010-01-21]
 	Updated net/bind9 to 9.4.3-P5 [spz 2010-01-21]
 	Updated graphics/lensfun to 0.2.4nb1 [wiz 2010-01-21]
+	Updated security/openssl to 0.9.8lnb1 [taca 2010-01-22]
