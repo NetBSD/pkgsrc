@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.18 2010/01/20 22:34:47 jmmv Exp $	*/
+/*	$NetBSD: main.c,v 1.19 2010/01/22 13:30:41 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.18 2010/01/20 22:34:47 jmmv Exp $");
+__RCSID("$NetBSD: main.c,v 1.19 2010/01/22 13:30:41 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -73,7 +73,6 @@ int
 main(int argc, char **argv)
 {
 	int     ch;
-	const char *pkgdb = NULL;
 
 	setprogname(argv[0]);
 	while ((ch = getopt(argc, argv, Options)) != -1)
@@ -135,7 +134,7 @@ main(int argc, char **argv)
 			break;
 
 		case 'K':
-			pkgdb = optarg;
+			pkgdb_set_dir(optarg, 3);
 			break;
 
 		case 'k':
@@ -196,9 +195,6 @@ main(int argc, char **argv)
 	argv += optind;
 
 	pkg_install_config();
-
-	if (pkgdb != NULL)
-		_pkgdb_setPKGDB_DIR(pkgdb);
 
 	if (argc == 0) {
 		warnx("missing package name");
