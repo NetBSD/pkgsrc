@@ -1,7 +1,7 @@
-/*	$NetBSD: ftp.c,v 1.31 2010/01/11 17:23:10 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.32 2010/01/22 13:21:09 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
- * Copyright (c) 2008, 2009 Joerg Sonnenberger <joerg@NetBSD.org>
+ * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -119,9 +119,6 @@
 #define FTP_FILE_OK			350
 #define FTP_SYNTAX_ERROR		500
 #define FTP_PROTOCOL_ERROR		999
-
-static struct url cached_host;
-static conn_t	*cached_connection;
 
 #define isftpreply(foo)				\
 	(isdigit((unsigned char)foo[0]) &&	\
@@ -565,6 +562,13 @@ ftp_writefn(void *v, const void *buf, size_t len)
 	return (-1);
 }
 
+static int
+ftp_disconnect(conn_t *conn)
+{
+	ftp_cmd(conn, "QUIT");
+	return fetch_close(conn);
+}
+
 static void
 ftp_closefn(void *v)
 {
@@ -583,15 +587,11 @@ ftp_closefn(void *v)
 		return;
 	}
 	fetch_close(io->dconn);
-	io->dir = -1;
-	io->dconn->is_active = 0;
 	io->dconn = NULL;
+	io->dir = -1;
+	io->cconn->is_active = 0;
 	r = ftp_chkerr(io->cconn);
-	if (io->cconn == cached_connection && io->cconn->ref == 1) {
-		free(cached_host.doc);
-		cached_connection = NULL;
-	}
-	fetch_close(io->cconn);
+	fetch_cache_put(io->cconn, ftp_disconnect);
 	free(io);
 	return;
 }
@@ -1001,10 +1001,23 @@ ftp_connect(struct url *url, struct url *purl, const char *flags)
 	/* check for proxy */
 	if (purl) {
 		/* XXX proxy authentication! */
-		conn = fetch_connect(purl->host, purl->port, af, verbose);
+		/* XXX connetion caching */
+		if (!purl->port)
+			purl->port = fetch_default_port(purl->scheme);
+
+		conn = fetch_connect(purl, af, verbose);
 	} else {
 		/* no proxy, go straight to target */
-		conn = fetch_connect(url->host, url->port, af, verbose);
+		if (!url->port)
+			url->port = fetch_default_port(url->scheme);
+
+		while ((conn = fetch_cache_get(url, af)) != NULL) {
+			e = ftp_cmd(conn, "NOOP");
+			if (e == FTP_OK)
+				return conn;
+			fetch_close(conn);
+		}
+		conn = fetch_connect(url, af, verbose);
 		purl = NULL;
 	}
 
@@ -1031,70 +1044,6 @@ fouch:
 		ftp_seterr(e);
 	fetch_close(conn);
 	return (NULL);
-}
-
-/*
- * Disconnect from server
- */
-static void
-ftp_disconnect(conn_t *conn)
-{
-	(void)ftp_cmd(conn, "QUIT");
-	if (conn == cached_connection && conn->ref == 1) {
-		free(cached_host.doc);
-		cached_host.doc = NULL;
-		cached_connection = NULL;
-	}
-	fetch_close(conn);
-}
-
-/*
- * Check if we're already connected
- */
-static int
-ftp_isconnected(struct url *url)
-{
-	return (cached_connection
-	    && (cached_connection->is_active == 0)
-	    && (strcmp(url->host, cached_host.host) == 0)
-	    && (strcmp(url->user, cached_host.user) == 0)
-	    && (strcmp(url->pwd, cached_host.pwd) == 0)
-	    && (url->port == cached_host.port));
-}
-
-/*
- * Check the cache, reconnect if no luck
- */
-static conn_t *
-ftp_cached_connect(struct url *url, struct url *purl, const char *flags)
-{
-	char *doc;
-	conn_t *conn;
-	int e;
-
-	/* set default port */
-	if (!url->port)
-		url->port = fetch_default_port(url->scheme);
-
-	/* try to use previously cached connection */
-	if (ftp_isconnected(url)) {
-		e = ftp_cmd(cached_connection, "NOOP");
-		if (e == FTP_OK || e == FTP_SYNTAX_ERROR)
-			return (fetch_ref(cached_connection));
-	}
-
-	/* connect to server */
-	if ((conn = ftp_connect(url, purl, flags)) == NULL)
-		return (NULL);
-	doc = strdup(url->doc);
-	if (doc != NULL) {
-		if (cached_connection && !cached_connection->is_active)
-			ftp_disconnect(cached_connection);
-		cached_connection = fetch_ref(conn);
-		memcpy(&cached_host, url, sizeof(*url));
-		cached_host.doc = doc;
-	}
-	return (conn);
 }
 
 /*
@@ -1155,7 +1104,7 @@ ftp_request(struct url *url, const char *op, const char *op_arg,
 	}
 
 	/* connect to server */
-	conn = ftp_cached_connect(url, purl, flags);
+	conn = ftp_connect(url, purl, flags);
 	if (purl)
 		fetchFreeURL(purl);
 	if (conn == NULL)

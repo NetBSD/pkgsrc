@@ -1,7 +1,7 @@
-/*	$NetBSD: common.c,v 1.21 2009/10/15 12:36:57 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.22 2010/01/22 13:21:09 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
- * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
+ * Copyright (c) 2008, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -234,23 +234,11 @@ fetch_reopen(int sd)
 	/* allocate and fill connection structure */
 	if ((conn = calloc(1, sizeof(*conn))) == NULL)
 		return (NULL);
+	conn->cache_url = NULL;
 	conn->next_buf = NULL;
 	conn->next_len = 0;
 	conn->sd = sd;
 	conn->is_active = 0;
-	++conn->ref;
-	return (conn);
-}
-
-
-/*
- * Bump a connection's reference count.
- */
-conn_t *
-fetch_ref(conn_t *conn)
-{
-
-	++conn->ref;
 	return (conn);
 }
 
@@ -281,7 +269,7 @@ fetch_bind(int sd, int af, const char *addr)
  * Establish a TCP connection to the specified port on the specified host.
  */
 conn_t *
-fetch_connect(const char *host, int port, int af, int verbose)
+fetch_connect(struct url *url, int af, int verbose)
 {
 	conn_t *conn;
 	char pbuf[10];
@@ -290,22 +278,22 @@ fetch_connect(const char *host, int port, int af, int verbose)
 	int sd, error;
 
 	if (verbose)
-		fetch_info("looking up %s", host);
+		fetch_info("looking up %s", url->host);
 
 	/* look up host name and set up socket address structure */
-	snprintf(pbuf, sizeof(pbuf), "%d", port);
+	snprintf(pbuf, sizeof(pbuf), "%d", url->port);
 	memset(&hints, 0, sizeof(hints));
 	hints.ai_family = af;
 	hints.ai_socktype = SOCK_STREAM;
 	hints.ai_protocol = 0;
-	if ((error = getaddrinfo(host, pbuf, &hints, &res0)) != 0) {
+	if ((error = getaddrinfo(url->host, pbuf, &hints, &res0)) != 0) {
 		netdb_seterr(error);
 		return (NULL);
 	}
 	bindaddr = getenv("FETCH_BIND_ADDRESS");
 
 	if (verbose)
-		fetch_info("connecting to %s:%d", host, port);
+		fetch_info("connecting to %s:%d", url->host, url->port);
 
 	/* try to connect */
 	for (sd = -1, res = res0; res; sd = -1, res = res->ai_next) {
@@ -332,9 +320,114 @@ fetch_connect(const char *host, int port, int af, int verbose)
 		fetch_syserr();
 		close(sd);
 	}
+	conn->cache_url = fetchCopyURL(url);
+	conn->cache_af = af;
 	return (conn);
 }
 
+static conn_t *connection_cache;
+static int cache_global_limit = 0;
+static int cache_per_host_limit = 0;
+
+/*
+ * Initialise cache with the given limits.
+ */
+void
+fetchConnectionCacheInit(int global_limit, int per_host_limit)
+{
+
+	if (global_limit < 0)
+		cache_global_limit = INT_MAX;
+	else if (per_host_limit > global_limit)
+		cache_global_limit = per_host_limit;
+	else
+		cache_global_limit = global_limit;
+	if (per_host_limit < 0)
+		cache_per_host_limit = INT_MAX;
+	else
+		cache_per_host_limit = per_host_limit;
+}
+
+/*
+ * Flush cache and free all associated resources.
+ */
+void
+fetchConnectionCacheClose(void)
+{
+	conn_t *conn;
+
+	while ((conn = connection_cache) != NULL) {
+		connection_cache = conn->next_cached;
+		(*conn->cache_close)(conn);
+	}
+}
+
+/*
+ * Check connection cache for an existing entry matching
+ * protocol/host/port/user/password/family.
+ */
+conn_t *
+fetch_cache_get(const struct url *url, int af)
+{
+	conn_t *conn, *last_conn = NULL;
+
+	for (conn = connection_cache; conn; conn = conn->next_cached) {
+		if (conn->cache_url->port == url->port &&
+		    strcmp(conn->cache_url->scheme, url->scheme) == 0 &&
+		    strcmp(conn->cache_url->host, url->host) == 0 &&
+		    strcmp(conn->cache_url->user, url->user) == 0 &&
+		    strcmp(conn->cache_url->pwd, url->pwd) == 0 &&
+		    (conn->cache_af == AF_UNSPEC || af == AF_UNSPEC ||
+		     conn->cache_af == af)) {
+			if (last_conn != NULL)
+				last_conn->next_cached = conn->next_cached;
+			else
+				connection_cache = conn->next_cached;
+			return conn;
+		}
+	}
+
+	return NULL;
+}
+
+/*
+ * Put the connection back into the cache for reuse.
+ * If the connection is freed due to LRU or if the cache
+ * is explicitly closed, the given callback is called.
+ */
+void
+fetch_cache_put(conn_t *conn, int (*closecb)(conn_t *))
+{
+	conn_t *iter, *last;
+	int global_count, host_count;
+
+	if (conn->cache_url == NULL || cache_global_limit == 0) {
+		(*closecb)(conn);
+		return;
+	}
+
+	global_count = host_count = 0;
+	last = NULL;
+	for (iter = connection_cache; iter;
+	    last = iter, iter = iter->next_cached) {
+		++global_count;
+		if (strcmp(conn->cache_url->host, iter->cache_url->host) == 0)
+			++host_count;
+		if (global_count < cache_global_limit &&
+		    host_count < cache_per_host_limit)
+			continue;
+		--global_count;
+		if (last != NULL)
+			last->next_cached = iter->next_cached;
+		else
+			connection_cache = iter->next_cached;
+		(*iter->cache_close)(iter);
+	}
+
+	conn->cache_close = closecb;
+	conn->next_cached = connection_cache;
+	connection_cache = conn;
+}
 
 /*
  * Enable SSL on a connection.
@@ -649,9 +742,9 @@ fetch_close(conn_t *conn)
 {
 	int ret;
 
-	if (--conn->ref > 0)
-		return (0);
 	ret = close(conn->sd);
+	if (conn->cache_url)
+		fetchFreeURL(conn->cache_url);
 	free(conn->buf);
 	free(conn);
 	return (ret);

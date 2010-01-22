@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.25 2009/10/15 12:36:57 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.26 2010/01/22 13:21:09 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -706,7 +706,7 @@ http_connect(struct url *URL, struct url *purl, const char *flags)
 		return (NULL);
 	}
 
-	if ((conn = fetch_connect(URL->host, URL->port, af, verbose)) == NULL)
+	if ((conn = fetch_connect(URL, af, verbose)) == NULL)
 		/* fetch_connect() has already set an error code */
 		return (NULL);
 	if (strcasecmp(URL->scheme, SCHEME_HTTPS) == 0 &&
