@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.17 2009/02/13 11:21:07 joerg Exp $
+# $NetBSD: Makefile.in,v 1.18 2010/01/22 13:30:41 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -58,7 +58,7 @@ install:
 	$(INSTALL) $(PROG) ${DESTDIR}$(sbindir)/$(PROG)
 	$(INSTALL) -m 555 $(SCRIPTS) ${DESTDIR}$(sbindir)
 	$(INSTALL) -m 444 $(PROG).1 ${DESTDIR}$(man1dir)/$(PROG).1
-	$(INSTALL) -m 444 $(PROG).cat1 ${DESTDIR}$(cat1dir)/$(PROG).0
+	$(INSTALL) -m 444 $(PROG).cat ${DESTDIR}$(cat1dir)/$(PROG).0
 
 audit-packages: audit-packages.sh.in
 	sed -e 's|@PKG_ADMIN@|${sbindir}/pkg_admin|' \
