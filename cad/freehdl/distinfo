@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/22 17:14:33 drochner Exp $
+
+SHA1 (freehdl-0.0.7.tar.gz) = eca7ad3ac58e56b72842e83a0a702c05b8f86aa4
+RMD160 (freehdl-0.0.7.tar.gz) = d00e14d6b1cd97154b221717124c6e20b0d4f776
+Size (freehdl-0.0.7.tar.gz) = 1394351 bytes
