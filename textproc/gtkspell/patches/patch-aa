@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2010/01/22 13:54:22 wiz Exp $
+
+--- docs/Makefile.in.orig	2010-01-22 13:46:23.000000000 +0000
++++ docs/Makefile.in
+@@ -500,7 +500,7 @@ uninstall-am:
+ @ENABLE_GTK_DOC_TRUE@	cd $(srcdir)/html && gtkdoc-mkhtml $(DOC_MODULE) ../$(DOC_MAIN_SGML_FILE)
+ @ENABLE_GTK_DOC_TRUE@	test "x$(HTML_IMAGES)" = "x" || ( cd $(srcdir) && cp $(HTML_IMAGES) html )
+ @ENABLE_GTK_DOC_TRUE@	@echo '-- Fixing Crossreferences' 
+-@ENABLE_GTK_DOC_TRUE@	cd $(srcdir) && gtkdoc-fixxref --module-dir=html --html-dir=$(HTML_DIR) $(FIXXREF_OPTIONS)
++@ENABLE_GTK_DOC_TRUE@	cd $(srcdir) && gtkdoc-fixxref --module=gtkspell --module-dir=html --html-dir=$(HTML_DIR) $(FIXXREF_OPTIONS)
+ @ENABLE_GTK_DOC_TRUE@	touch html-build.stamp
+ 
+ ##############
