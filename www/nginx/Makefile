@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2008/01/18 05:09:52 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/22 13:44:06 ghen Exp $
 
 DISTNAME=		nginx-0.5.35
 PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://nginx.net/
 COMMENT=		Lightweight HTTP server and mail proxy server
 
