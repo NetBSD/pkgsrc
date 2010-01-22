@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.22 2009/10/07 12:53:26 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.23 2010/01/22 13:30:41 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.22 2009/10/07 12:53:26 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.23 2010/01/22 13:30:41 joerg Exp $");
 
 /*
  *
@@ -41,7 +41,6 @@ __RCSID("$NetBSD: main.c,v 1.22 2009/10/07 12:53:26 joerg Exp $");
 
 static char Options[] = "AIK:LP:RVW:fhm:np:t:uvw:";
 
-const char *PlainPkgdb = NULL;
 char   *Destdir = NULL;
 char   *OverrideMachine = NULL;
 char   *Prefix = NULL;
@@ -72,7 +71,6 @@ main(int argc, char **argv)
 {
 	int     ch, error=0;
 	lpkg_head_t pkgs;
-	const char *pkgdb = NULL;
 
 	setprogname(argv[0]);
 	while ((ch = getopt(argc, argv, Options)) != -1) {
@@ -98,7 +96,7 @@ main(int argc, char **argv)
 			break;
 
 		case 'K':
-			pkgdb = optarg;
+			pkgdb_set_dir(optarg, 3);
 			break;
 
 		case 'L':
@@ -154,18 +152,13 @@ main(int argc, char **argv)
 
 	pkg_install_config();
 
-	if (pkgdb == NULL)
-		pkgdb = _pkgdb_getPKGDB_DIR();
-	PlainPkgdb = xstrdup(pkgdb);
-
 	if (Destdir != NULL) {
 		char *pkgdbdir;
 
-		pkgdbdir = xasprintf("%s/%s", Destdir, pkgdb);
-		_pkgdb_setPKGDB_DIR(pkgdbdir);
+		pkgdbdir = xasprintf("%s/%s", Destdir, config_pkg_dbdir);
+		pkgdb_set_dir(pkgdbdir, 4);
 		free(pkgdbdir);
-	} else
-		_pkgdb_setPKGDB_DIR(pkgdb);
+	}
 
 	process_pkg_path();
 	TAILQ_INIT(&pkgs);
