@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.91 2009/10/07 12:53:26 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.92 2010/01/22 13:30:41 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.91 2009/10/07 12:53:26 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.92 2010/01/22 13:30:41 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -875,7 +875,7 @@ run_install_script(struct pkg_task *pkg, const char *argument)
 		setenv(PKG_DESTDIR_VNAME, Destdir, 1);
 	setenv(PKG_PREFIX_VNAME, pkg->prefix, 1);
 	setenv(PKG_METADATA_DIR_VNAME, pkg->logdir, 1);
-	setenv(PKG_REFCOUNT_DBDIR_VNAME, pkgdb_refcount_dir(), 1);
+	setenv(PKG_REFCOUNT_DBDIR_VNAME, config_pkg_refcount_dbdir, 1);
 
 	if (Verbose)
 		printf("Running install with PRE-INSTALL for %s.\n", pkg->pkgname);
@@ -1087,13 +1087,13 @@ pkg_register_views(struct pkg_task *pkg)
 
 	if (Verbose) {
 		printf("%s/pkg_view -d %s %s%s %s%s %sadd %s\n",
-			BINDIR, _pkgdb_getPKGDB_DIR(),
+			BINDIR, pkgdb_get_dir(),
 			View ? "-w " : "", View ? View : "",
 			Viewbase ? "-W " : "", Viewbase ? Viewbase : "",
 			Verbose ? "-v " : "", pkg->pkgname);
 	}
 
-	fexec_skipempty(BINDIR "/pkg_view", "-d", _pkgdb_getPKGDB_DIR(),
+	fexec_skipempty(BINDIR "/pkg_view", "-d", pkgdb_get_dir(),
 			View ? "-w " : "", View ? View : "",
 			Viewbase ? "-W " : "", Viewbase ? Viewbase : "",
 			Verbose ? "-v " : "", "add", pkg->pkgname,
@@ -1136,12 +1136,12 @@ start_replacing(struct pkg_task *pkg)
 
 	if (Verbose || Fake) {
 		printf("%s/pkg_delete -K %s -p %s%s%s '%s'\n",
-			BINDIR, _pkgdb_getPKGDB_DIR(), pkg->prefix,
+			BINDIR, pkgdb_get_dir(), pkg->prefix,
 			Destdir ? " -P ": "", Destdir ? Destdir : "",
 			pkg->other_version);
 	}
 	if (!Fake)
-		fexec_skipempty(BINDIR "/pkg_delete", "-K", _pkgdb_getPKGDB_DIR(),
+		fexec_skipempty(BINDIR "/pkg_delete", "-K", pkgdb_get_dir(),
 		    "-p", pkg->prefix,
 		    Destdir ? "-P": "", Destdir ? Destdir : "",
 		    pkg->other_version, NULL);
@@ -1327,9 +1327,9 @@ pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 
 	if (pkg->meta_data.meta_views != NULL) {
 		pkg->logdir = xstrdup(pkg->prefix);
-		_pkgdb_setPKGDB_DIR(dirname_of(pkg->logdir));
+		pkgdb_set_dir(dirname_of(pkg->logdir), 4);
 	} else {
-		pkg->logdir = xasprintf("%s/%s", PlainPkgdb, pkg->pkgname);
+		pkg->logdir = xasprintf("%s/%s", config_pkg_dbdir, pkg->pkgname);
 	}
 
 	if (Destdir != NULL)
