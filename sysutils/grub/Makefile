@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2010/01/04 17:04:50 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2010/01/22 00:22:18 heinz Exp $
 
 DISTNAME=	grub-0.97
 PKGREVISION=	8
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://alpha.gnu.org/gnu/grub/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/grub/
 COMMENT=	GRand Unified Bootloader -- Boots *BSD, Linux, groks ffs, FAT, ext2
+LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	*-*-i386 NetBSD-[5-9].*-x86_64
 
