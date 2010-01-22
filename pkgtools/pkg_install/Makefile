@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2010/01/20 23:17:12 joerg Exp $
+# $NetBSD: Makefile,v 1.170 2010/01/22 13:30:41 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -164,5 +164,15 @@ update:
 	${MAKE} deinstall _UPDATE_RUNNING=YES
 	${MAKE} ${UPDATE_TARGET}
 	${MAKE} clean
+
+update-catpages:
+	for f in lib/pkgsrc.7 add/pkg_add.1 admin/pkg_admin.1 \
+	    create/pkg_create.1 delete/pkg_delete.1 info/pkg_info.1 \
+	    lib/pkg_summary.5 lib/pkgsrc.7; do \
+		nroff -mdoc ${FILESDIR}/$$f > \
+		    ${FILESDIR}/$${f%%.[157]}.cat; \
+	done
+	nroff -mdoc ${FILESDIR}/lib/pkg_install.conf.5.in > \
+	    ${FILESDIR}/lib/pkg_install.conf.cat.in
 
 .include "../../mk/bsd.pkg.mk"

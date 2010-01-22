@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.13 2009/02/25 16:29:08 joerg Exp $
+# $NetBSD: Makefile.in,v 1.14 2010/01/22 13:30:41 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -42,4 +42,4 @@ install:
 	$(INSTALL) -m 755 -d ${DESTDIR}$(cat1dir)
 	$(INSTALL) $(PROG) ${DESTDIR}$(sbindir)/$(PROG)
 	$(INSTALL) -m 444 $(PROG).1 ${DESTDIR}$(man1dir)/$(PROG).1
-	$(INSTALL) -m 444 $(PROG).cat1 ${DESTDIR}$(cat1dir)/$(PROG).0
+	$(INSTALL) -m 444 $(PROG).cat ${DESTDIR}$(cat1dir)/$(PROG).0
