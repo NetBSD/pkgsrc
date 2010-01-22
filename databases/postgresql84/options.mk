@@ -1,8 +1,23 @@
-# $NetBSD: options.mk,v 1.2 2010/01/16 09:16:12 adam Exp $
+# $NetBSD: options.mk,v 1.3 2010/01/22 20:12:11 adam Exp $
 
 PKG_SUPPORTED_OPTIONS+=		# empty
 
 .include "../../mk/bsd.options.mk"
+
+###
+### GSSAPI authentication for the PostgreSQL backend.
+###
+.if !empty(PKG_OPTIONS:Mgssapi)
+CONFIGURE_ARGS+=	--with-gssapi
+.endif
+
+###
+### Kerberos5 authentication for the PostgreSQL backend.
+###
+.if !empty(PKG_OPTIONS:Mkrb5)
+.  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-krb5
+.endif
 
 ###
 ### LDAP authentication for the PostgreSQL backend.
