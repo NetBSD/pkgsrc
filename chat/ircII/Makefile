@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2009/02/18 08:18:53 mrg Exp $
+# $NetBSD: Makefile,v 1.53 2010/01/22 00:22:19 heinz Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.eterna.com.au/ircii/
 COMMENT=		The 'Internet Relay Chat' and 'Internet Citizens Band' Client
+LICENSE=		modified-bsd
 
 CONFLICTS=		blackened-[0-9]*
 
