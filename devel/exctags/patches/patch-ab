@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.8 2010/01/22 22:30:05 tonio Exp $
+
+--- python.c.orig	2009-07-07 03:55:23.000000000 +0000
++++ python.c
+@@ -135,7 +135,7 @@ static boolean isIdentifierCharacter (in
+  * extract all relevant information and create a tag.
+  */
+ static void makeFunctionTag (vString *const function,
+-	vString *const parent, int is_class_parent, const char *arglist __unused__)
++	vString *const parent, int is_class_parent, const char *arglist __unused_)
+ {
+ 	tagEntryInfo tag;
+ 	initTagEntry (&tag, vStringValue (function));
