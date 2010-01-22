@@ -304,7 +304,7 @@ stat_end(struct xferstat *xs)
 
 #if HAVE_TERMIOS_H && !defined(PREFER_GETPASS)
 static int
-read_password(const char *prompt, char *buf, size_t buf_len)
+read_password(const char *prompt, char *pwbuf, size_t pwbuf_len)
 {
 	struct termios tios;
 	tcflag_t saved_flags;
@@ -312,13 +312,13 @@ read_password(const char *prompt, char *buf, size_t buf_len)
 
 	fprintf(stderr, prompt);
 	if (tcgetattr(STDIN_FILENO, &tios) != 0)
-		return (fgets(buf, buf_len, stdin) == NULL);
+		return (fgets(pwbuf, pwbuf_len, stdin) == NULL);
 
 	saved_flags = tios.c_lflag;
 	tios.c_lflag &= ~ECHO;
 	tios.c_lflag |= ECHONL|ICANON;
 	tcsetattr(STDIN_FILENO, TCSAFLUSH|TCSASOFT, &tios);
-	nopwd = (fgets(buf, buf_len, stdin) == NULL);
+	nopwd = (fgets(pwbuf, pwbuf_len, stdin) == NULL);
 	tios.c_lflag = saved_flags;
 	tcsetattr(STDIN_FILENO, TCSANOW|TCSASOFT, &tios);
 
@@ -326,7 +326,7 @@ read_password(const char *prompt, char *buf, size_t buf_len)
 }
 #elif HAVE_GETPASSPHRASE || HAVE_GETPASS
 static int
-read_password(const char *prompt, char *buf, size_t buf_len)
+read_password(const char *prompt, char *pwbuf, size_t pwbuf_len)
 {
 	char *pass;
 
@@ -335,18 +335,18 @@ read_password(const char *prompt, char *buf, size_t buf_len)
 #else
 	pass = getpass(prompt);
 #endif
-	if (pass == NULL || strlen(pass) >= buf_len)
+	if (pass == NULL || strlen(pass) >= pwbuf_len)
 		return 1;
-	strcpy(buf, pass);
+	strcpy(pwbuf, pass);
 	return 0;
 }
 #else
 static int
-read_password(const char *prompt, char *buf, size_t buf_len)
+read_password(const char *prompt, char *pwbuf, size_t pwbuf_len)
 {
 
 	fprintf(stderr, prompt);
-	return (fgets(buf, buf_len, stdin) == NULL);
+	return (fgets(pwbuf, pwbuf_len, stdin) == NULL);
 }
 #endif
 
@@ -943,6 +943,8 @@ main(int argc, char *argv[])
 		usage();
 		exit(EX_USAGE);
 	}
+
+	fetchConnectionCacheInit(10, 1);
 
 	/* allocate buffer */
 	if (B_size < MINBUFSIZE)
