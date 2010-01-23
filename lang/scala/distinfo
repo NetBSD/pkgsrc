@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/23 10:50:45 yyamano Exp $
+
+SHA1 (scala-2.7.7.final.tgz) = 2197475c8d137cb9f05614807e7d4f18ad8db7e3
+RMD160 (scala-2.7.7.final.tgz) = ea590b9e25fd0ede59cc6ccd5e9d3bba99885b0f
+Size (scala-2.7.7.final.tgz) = 15619192 bytes
+SHA1 (patch-aa) = ba7c9f1b154ed045ed29b6aa0ad85163db035034
+SHA1 (patch-ab) = 21cd2709f0f6669804ecfbac328df9d99572319c
+SHA1 (patch-ac) = 88ffdf598abc3a8c25f59d425cf149e6747829d2
+SHA1 (patch-ad) = de64edd3e5b9bd0f3e8ea8b6e9316a8344984907
+SHA1 (patch-ae) = 9030e246d502a9728ee20b4a2896559da3895ff3
+SHA1 (patch-af) = d5523354654cefd1e85233b2aa142b1d14fe5dc1
