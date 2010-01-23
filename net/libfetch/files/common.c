@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.22 2010/01/22 13:21:09 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.23 2010/01/23 13:39:42 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -238,7 +238,6 @@ fetch_reopen(int sd)
 	conn->next_buf = NULL;
 	conn->next_len = 0;
 	conn->sd = sd;
-	conn->is_active = 0;
 	return (conn);
 }
 
