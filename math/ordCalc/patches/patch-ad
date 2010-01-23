@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1 2010/01/23 23:27:55 is Exp $
+
+--- src/validate2.cpp.orig	2010-01-17 04:48:09.000000000 +0000
++++ src/validate2.cpp
+@@ -883,13 +883,16 @@ void Validate::cmpExitCodeTest()
+ #define LC(a,b)  outStream() << "Doing " << #b << "\n"; \
+     bool a = b ; outStream() << #b << " = " << a << "\n";
+ 
+-#define CMP_TST(str,aa,bb,eqf) { Validate::outCompareExit= true ; \
++#define CMP_TST(str,aa,bb,eqf) { \
++    string axn; string bxn; \
++    Validate::outCompareExit= true ; \
+     outStream() << "Test " << #str << "\n" ; \
+     const Ordinal& ax = aa ; const Ordinal &bx =bb ; \
+     LC(agb,ax>bx) ; LC(aeb, ax==bx) ; LC(alb, ax < bx) ; \
+     LC(bga, bx>ax) ; LC(bea, bx==ax) ; LC(bla, bx < ax) ; \
+-    outStream() << "Test " << #str << " summary \na = " << ax.normalForm() << "\n" \
+-        << "b = " << bx.normalForm() << "\na>b " << agb << ", a==b " << aeb \
++    axn = ax.normalForm(); bxn = bx.normalForm(); \
++    outStream() << "Test " << #str << " summary \na = " << axn << "\n" \
++        << "b = " << bxn << "\na>b " << agb << ", a==b " << aeb \
+         << ". a<b " << alb << ", b>a " << bga << ", b==a " << bea << \
+         ". b<a " << bla << "\n" ; \
+     if (eqf) assert (aeb && bea && !alb && ! bla & !agb & !bga) ; \
