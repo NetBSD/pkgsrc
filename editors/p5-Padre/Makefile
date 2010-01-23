@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/16 18:29:36 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/23 12:05:32 sno Exp $
 #
 
-DISTNAME=	Padre-0.54
+DISTNAME=	Padre-0.55
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
@@ -58,7 +58,6 @@ DEPENDS+=	{perl>=5.8.9,p5-Module-CoreList-[0-9]*}:../../devel/p5-Module-CoreList
 DEPENDS+=	p5-Module-Refresh>=0.13:../../devel/p5-Module-Refresh
 DEPENDS+=	p5-Module-Starter>=1.500:../../devel/p5-Module-Starter
 DEPENDS+=	p5-ORLite>=1.30:../../databases/p5-ORLite
-DEPENDS+=	p5-ORLite-Migrate>=0.03:../../databases/p5-ORLite-Migrate
 DEPENDS+=	p5-PPI>=1.205:../../devel/p5-PPI
 DEPENDS+=	p5-PPIx-EditorTools>=0.09:../../editors/p5-PPIx-EditorTools
 DEPENDS+=	p5-Params-Util>=0.33:../../devel/p5-Params-Util
@@ -67,6 +66,7 @@ DEPENDS+=	p5-Parse-ExuberantCTags>=1.00:../../devel/p5-Parse-ExuberantCTags
 DEPENDS+=	p5-Pod-Abstract>=0.16:../../textproc/p5-Pod-Abstract
 DEPENDS+=	p5-Pod-POM>=0.17:../../textproc/p5-Pod-POM
 DEPENDS+=	{perl>=5.10.1,p5-Pod-Simple>=3.07}:../../textproc/p5-Pod-Simple
+DEPENDS+=	p5-Probe-Perl>=0.01:../../devel/p5-Probe-Perl
 DEPENDS+=	{perl>=5.8.8,p5-Storable>=2.15}:../../devel/p5-Storable
 DEPENDS+=	p5-Template-Tiny>=0.03:../../textproc/p5-Template-Tiny
 DEPENDS+=	p5-Text-Diff>=0.35:../../textproc/p5-Text-Diff
