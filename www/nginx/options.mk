@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2010/01/23 16:32:11 joerg Exp $
+# $NetBSD: options.mk,v 1.3 2010/01/23 23:24:39 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
-PKG_SUPPORTED_OPTIONS=	ssl pcre dav flv sub gtools mail-proxy memcache realip
+PKG_SUPPORTED_OPTIONS=	ssl pcre dav flv sub gtools mail-proxy memcache \
+			realip inet6
 PKG_SUGGESTED_OPTIONS=	ssl pcre
 
 .include "../../mk/bsd.options.mk"
@@ -47,3 +48,8 @@ CONFIGURE_ARGS+=	--without-http_memcached_module
 CONFIGURE_ARGS+=       --with-http_realip_module
 .endif
 
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=       --with-ipv6
+.else
+CONFIGURE_ARGS+=       --without-ipv6
+.endif
