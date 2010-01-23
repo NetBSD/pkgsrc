@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.26 2010/01/22 13:21:09 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.27 2010/01/23 14:25:26 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -393,7 +393,7 @@ http_cmd(conn_t *conn, const char *fmt, ...)
 		return (-1);
 	}
 
-	r = fetch_putln(conn, msg, len);
+	r = fetch_write(conn, msg, len);
 	free(msg);
 
 	if (r == -1) {
@@ -634,7 +634,7 @@ http_basic_auth(conn_t *conn, const char *hdr, const char *usr, const char *pwd)
 	free(upw);
 	if (auth == NULL)
 		return (-1);
-	r = http_cmd(conn, "%s: Basic %s", hdr, auth);
+	r = http_cmd(conn, "%s: Basic %s\r\n", hdr, auth);
 	free(auth);
 	return (r);
 }
@@ -764,7 +764,7 @@ set_if_modified_since(conn_t *conn, time_t last_modified)
 	snprintf(buf, sizeof(buf), "%.3s, %02d %.3s %4d %02d:%02d:%02d GMT",
 	    weekdays + tm.tm_wday * 3, tm.tm_mday, months + tm.tm_mon * 3,
 	    tm.tm_year + 1900, tm.tm_hour, tm.tm_min, tm.tm_sec);
-	http_cmd(conn, "If-Modified-Since: %s", buf);
+	http_cmd(conn, "If-Modified-Since: %s\r\n", buf);
 }
 
 
@@ -858,10 +858,10 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 			fetch_info("requesting %s://%s%s",
 			    url->scheme, host, url->doc);
 		if (purl) {
-			http_cmd(conn, "%s %s://%s%s HTTP/1.1",
+			http_cmd(conn, "%s %s://%s%s HTTP/1.1\r\n",
 			    op, url->scheme, host, url->doc);
 		} else {
-			http_cmd(conn, "%s %s HTTP/1.1",
+			http_cmd(conn, "%s %s HTTP/1.1\r\n",
 			    op, url->doc);
 		}
 
@@ -869,7 +869,7 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 			set_if_modified_since(conn, url->last_modified);
 
 		/* virtual host */
-		http_cmd(conn, "Host: %s", host);
+		http_cmd(conn, "Host: %s\r\n", host);
 
 		/* proxy authorization */
 		if (purl) {
@@ -897,19 +897,19 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 		/* other headers */
 		if ((p = getenv("HTTP_REFERER")) != NULL && *p != '\0') {
 			if (strcasecmp(p, "auto") == 0)
-				http_cmd(conn, "Referer: %s://%s%s",
+				http_cmd(conn, "Referer: %s://%s%s\r\n",
 				    url->scheme, host, url->doc);
 			else
-				http_cmd(conn, "Referer: %s", p);
+				http_cmd(conn, "Referer: %s\r\n", p);
 		}
 		if ((p = getenv("HTTP_USER_AGENT")) != NULL && *p != '\0')
-			http_cmd(conn, "User-Agent: %s", p);
+			http_cmd(conn, "User-Agent: %s\r\n", p);
 		else
-			http_cmd(conn, "User-Agent: %s ", _LIBFETCH_VER);
+			http_cmd(conn, "User-Agent: %s\r\n", _LIBFETCH_VER);
 		if (url->offset > 0)
-			http_cmd(conn, "Range: bytes=%lld-", (long long)url->offset);
-		http_cmd(conn, "Connection: close");
-		http_cmd(conn, "");
+			http_cmd(conn, "Range: bytes=%lld-\r\n", (long long)url->offset);
+		http_cmd(conn, "Connection: close\r\n");
+		http_cmd(conn, "\r\n");
 
 		/*
 		 * Force the queued request to be dispatched.  Normally, one

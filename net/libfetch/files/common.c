@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.23 2010/01/23 13:39:42 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.24 2010/01/23 14:25:26 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -65,9 +65,6 @@
 #include "fetch.h"
 #include "common.h"
 
-#define DECONST(x,y) ((x)(uintptr_t)(y))
-
-
 /*** Local data **************************************************************/
 
 /*
@@ -82,10 +79,6 @@ static struct fetcherr netdb_errlist[] = {
 	{ EAI_NONAME,	FETCH_RESOLV,	"No address record" },
 	{ -1,		FETCH_UNKNOWN,	"Unknown resolver error" }
 };
-
-/* End-of-Line */
-static const char ENDL[2] = "\r\n";
-
 
 /*** Error-reporting functions ***********************************************/
 
@@ -620,26 +613,12 @@ fetch_getln(conn_t *conn)
 	return (0);
 }
 
-
-/*
- * Write to a connection w/ timeout
- */
-ssize_t
-fetch_write(conn_t *conn, const char *buf, size_t len)
-{
-	struct iovec iov;
-
-	iov.iov_base = DECONST(char *, buf);
-	iov.iov_len = len;
-	return fetch_writev(conn, &iov, 1);
-}
-
 /*
  * Write a vector to a connection w/ timeout
  * Note: can modify the iovec.
  */
 ssize_t
-fetch_writev(conn_t *conn, struct iovec *iov, int iovcnt)
+fetch_write(conn_t *conn, const void *buf, size_t len)
 {
 	struct timeval now, timeout, waittv;
 	fd_set writefds;
@@ -653,7 +632,7 @@ fetch_writev(conn_t *conn, struct iovec *iov, int iovcnt)
 	}
 
 	total = 0;
-	while (iovcnt > 0) {
+	while (len) {
 		while (fetchTimeout && !FD_ISSET(conn->sd, &writefds)) {
 			FD_SET(conn->sd, &writefds);
 			gettimeofday(&now, NULL);
@@ -679,11 +658,10 @@ fetch_writev(conn_t *conn, struct iovec *iov, int iovcnt)
 		errno = 0;
 #ifdef WITH_SSL
 		if (conn->ssl != NULL)
-			wlen = SSL_write(conn->ssl,
-			    iov->iov_base, iov->iov_len);
+			wlen = SSL_write(conn->ssl, buf, len);
 		else
 #endif
-			wlen = writev(conn->sd, iov, iovcnt);
+			wlen = send(conn->sd, buf, len, MSG_NOSIGNAL);
 		if (wlen == 0) {
 			/* we consider a short write a failure */
 			errno = EPIPE;
@@ -696,40 +674,10 @@ fetch_writev(conn_t *conn, struct iovec *iov, int iovcnt)
 			return (-1);
 		}
 		total += wlen;
-		while (iovcnt > 0 && wlen >= (ssize_t)iov->iov_len) {
-			wlen -= iov->iov_len;
-			iov++;
-			iovcnt--;
-		}
-		if (iovcnt > 0) {
-			iov->iov_len -= wlen;
-			iov->iov_base = DECONST(char *, iov->iov_base) + wlen;
-		}
+		buf = (const char *)buf + wlen;
+		len -= wlen;
 	}
 	return (total);
-}
-
-
-/*
- * Write a line of text to a connection w/ timeout
- */
-int
-fetch_putln(conn_t *conn, const char *str, size_t len)
-{
-	struct iovec iov[2];
-	ssize_t ret;
-
-	iov[0].iov_base = DECONST(char *, str);
-	iov[0].iov_len = len;
-	iov[1].iov_base = DECONST(char *, ENDL);
-	iov[1].iov_len = sizeof(ENDL);
-	if (len == 0)
-		ret = fetch_writev(conn, &iov[1], 1);
-	else
-		ret = fetch_writev(conn, iov, 2);
-	if (ret == -1)
-		return (-1);
-	return (0);
 }
 
 
