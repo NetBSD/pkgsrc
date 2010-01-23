@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:32 agc Exp $
+$NetBSD: distinfo,v 1.3 2010/01/23 11:19:03 obache Exp $
 
-SHA1 (ZConfig-1.0.tar.gz) = 55c8cda06ca294044fd9be724cb402df11a6533c
-RMD160 (ZConfig-1.0.tar.gz) = 2dbac740b842ea2acb444fb4e6651a7585dcaaa5
-Size (ZConfig-1.0.tar.gz) = 104083 bytes
+SHA1 (ZConfig-2.6.1.tar.gz) = 720e213a83f63407ac810cd02b2768fd4ef0bcf1
+RMD160 (ZConfig-2.6.1.tar.gz) = bce5ad7119b532691fb4494cd6c7ea65120e839c
+Size (ZConfig-2.6.1.tar.gz) = 251631 bytes
