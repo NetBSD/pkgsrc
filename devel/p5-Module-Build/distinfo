@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2010/01/17 17:38:17 sno Exp $
+$NetBSD: distinfo,v 1.18 2010/01/23 13:24:05 sno Exp $
 
-SHA1 (Module-Build-0.3601.tar.gz) = 12cae96fa2bc62bb554fe9086d69cc9deecfd1aa
-RMD160 (Module-Build-0.3601.tar.gz) = 92864d75e90e2e457903c273291baee0b07513fe
-Size (Module-Build-0.3601.tar.gz) = 296085 bytes
-SHA1 (patch-aa) = ecb95c0d24593787401e9d0776d95ba261975a72
+SHA1 (Module-Build-0.3603.tar.gz) = 772250ecde4022089063c4b07b7a05319b5cfcea
+RMD160 (Module-Build-0.3603.tar.gz) = fa75e511f0c4ba36472528fd3a51189bf11d8375
+Size (Module-Build-0.3603.tar.gz) = 296553 bytes
