@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/21 14:08:04 roy Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/23 22:57:05 joerg Exp $
 
 DISTVERS=	2.2.4
 DISTNAME=	python-openid-${DISTVERS}
@@ -15,7 +15,7 @@ LICENSE=	apache-2.0
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_ACCEPTED=	25
+PYTHON_VERSIONS_ACCEPTED=	26 25
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
