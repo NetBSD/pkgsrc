@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.32 2010/01/22 13:21:09 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.33 2010/01/23 13:39:42 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -589,7 +589,6 @@ ftp_closefn(void *v)
 	fetch_close(io->dconn);
 	io->dconn = NULL;
 	io->dir = -1;
-	io->cconn->is_active = 0;
 	r = ftp_chkerr(io->cconn);
 	fetch_cache_put(io->cconn, ftp_disconnect);
 	free(io);
@@ -610,7 +609,6 @@ ftp_setup(conn_t *cconn, conn_t *dconn, int mode)
 	io->dconn = dconn;
 	io->dir = mode;
 	io->eof = io->err = 0;
-	io->cconn->is_active = 1;
 	f = fetchIO_unopen(io, ftp_readfn, ftp_writefn, ftp_closefn);
 	if (f == NULL)
 		free(io);
