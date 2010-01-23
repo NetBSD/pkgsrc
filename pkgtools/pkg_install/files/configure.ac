@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.33 2010/01/22 13:30:41 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.34 2010/01/23 22:41:43 joerg Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 AC_INIT([pkg_install], [20090911], [joerg@NetBSD.org])
@@ -71,7 +71,7 @@ AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/ioctl.h sys/param.h \
 # Checks for library functions.
 AC_CHECK_FUNCS([vfork])
 
-AC_SEARCH_LIBS([gethostbyname], [nsl])
+AC_SEARCH_LIBS([gethostbyname], [nsl network])
 AC_SEARCH_LIBS([socket],
                [socket],
                [],
