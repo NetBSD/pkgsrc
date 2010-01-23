@@ -1,41 +1,46 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/12/11 09:12:26 ghen Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/23 16:32:11 joerg Exp $
 
---- conf/nginx.conf.orig	2007-01-18 08:08:18.000000000 +0100
+This patch provides config file adapted to pkgsrc settings.
+--- conf/nginx.conf.orig	2008-02-28 22:44:16.000000000 +0200
 +++ conf/nginx.conf
-@@ -2,11 +2,11 @@
- #user  nobody;
+@@ -2,12 +2,13 @@
+-#user  nobody;
++user   %%NGINX_USER%%  %%NGINX_GROUP%%;
  worker_processes  1;
  
 -#error_log  logs/error.log;
 -#error_log  logs/error.log  notice;
 -#error_log  logs/error.log  info;
-+#error_log  %%NGINX_LOGDIR%%/error.log;
-+#error_log  %%NGINX_LOGDIR%%/error.log  notice;
+-
+-#pid        logs/nginx.pid;
++#error_log  %%NGINX_LOGDIR%%/error.log;                                                                                                                                                                           
++#error_log  %%NGINX_LOGDIR%%/error.log  notice;                                                                                                                                                                   
 +#error_log  %%NGINX_LOGDIR%%/error.log  info;
  
--#pid        logs/nginx.pid;
-+#pid        %%NGINX_LOGDIR%%/nginx.pid;
- 
++#pid        %%NGINX_PIDDIR%%/nginx.pid;
  
  events {
-@@ -15,14 +15,14 @@ events {
++    # After increasing this value You probably should increase limit
++    # of file descriptors (for example in start_precmd in startup script)
+     worker_connections  1024;
+@@ -15,14 +14,14 @@
  
  
  http {
--    include       conf/mime.types;
+-    include       mime.types;
 +    include       %%PKG_SYSCONFDIR%%/mime.types;
      default_type  application/octet-stream;
  
-     #log_format  main  '$remote_addr - $remote_user [$time_local] $request '
-     #                  '"$status" $body_bytes_sent "$http_referer" '
+     #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+     #                  '$status $body_bytes_sent "$http_referer" '
      #                  '"$http_user_agent" "$http_x_forwarded_for"';
- 
+
 -    #access_log  logs/access.log  main;
 +    #access_log  %%NGINX_LOGDIR%%/access.log  main;
  
      sendfile        on;
      #tcp_nopush     on;
-@@ -38,10 +38,10 @@ http {
+@@ -38,10 +37,10 @@
  
          #charset koi8-r;
  
@@ -48,7 +53,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/12/11 09:12:26 ghen Exp $
              index  index.html index.htm;
          }
  
-@@ -51,7 +51,7 @@ http {
+@@ -51,7 +50,7 @@
          #
          error_page   500 502 503 504  /50x.html;
          location = /50x.html {
@@ -57,16 +62,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/12/11 09:12:26 ghen Exp $
          }
  
          # proxy the PHP scripts to Apache listening on 127.0.0.1:80
-@@ -66,7 +66,7 @@ http {
+@@ -67,7 +66,7 @@
          #    fastcgi_pass   127.0.0.1:9000;
          #    fastcgi_index  index.php;
          #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
--        #    include        conf/fastcgi_params;
+-        #    include        fastcgi_params;
 +        #    include        %%PKG_SYSCONFDIR%%/fastcgi_params;
          #}
  
          # deny access to .htaccess files, if Apache's document root
-@@ -86,7 +86,7 @@ http {
+@@ -87,7 +86,7 @@
      #    server_name  somename  alias  another.alias;
  
      #    location / {
@@ -75,7 +80,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/12/11 09:12:26 ghen Exp $
      #        index  index.html index.htm;
      #    }
      #}
-@@ -109,7 +109,7 @@ http {
+@@ -110,7 +109,7 @@
      #    ssl_prefer_server_ciphers   on;
  
      #    location / {
