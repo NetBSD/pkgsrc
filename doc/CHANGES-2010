@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.303 2010/01/23 13:24:32 sno Exp $
+$NetBSD: CHANGES-2010,v 1.304 2010/01/23 14:36:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -353,3 +353,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added lang/scala version 2.7.7 [yyamano 2010-01-23]
 	Updated editors/p5-Padre to 0.55 [sno 2010-01-23]
 	Updated devel/p5-Module-Build to 0.36030 [sno 2010-01-23]
+	Updated devel/p5-Test-Script to 1.07 [sno 2010-01-23]
