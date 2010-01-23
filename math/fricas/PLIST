@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/12/15 23:36:28 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/01/23 02:11:40 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -70,6 +70,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/BBTREE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/BEZOUT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/BGAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/BGAGG.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/BIALG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/BINARY.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/BINFILE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/BITS.${FASL}
@@ -109,6 +110,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CLAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CLIF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CLIP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CMPLXRT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COALG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COLOR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMBF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMBINAT.${FASL}
@@ -293,6 +295,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FLOATRP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FM2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMC.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMFUN.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMONOID.${FASL}
@@ -408,6 +411,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HEUGCD.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HEXADEC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HOAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HOAGG.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HOPFALG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HYPCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HYPCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IALGFACT.${FASL}
@@ -961,6 +965,8 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMATCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMATCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMITH.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMP.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMPCOER.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMPEXPR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMTS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SNTSCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SOLVEFOR.${FASL}
@@ -1007,7 +1013,6 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUMFS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUMRF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUP2.${FASL}
-lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUPEXPR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUPFRACF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUPXS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUTS.${FASL}
@@ -1026,6 +1031,13 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TBAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TBAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TBCMPPK.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TEMUTL.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TENSCAT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TENSOR.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TENSPC-.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TENSPC.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TENSPO2.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TENSPOW.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TENSPRP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TESTAUX.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TESTCNT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TESTUNIT.${FASL}
@@ -2826,6 +2838,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/system.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/table.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/tableau.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/taylor.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/tensor.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/tex.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/transsolve.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/tree.spad.pamphlet
