@@ -1,0 +1,52 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/01/23 10:50:45 yyamano Exp $
+
+--- bin/sbaz-setup.orig	2009-10-28 06:19:05.000000000 -0700
++++ bin/sbaz-setup
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ set -e
+ 
+@@ -10,23 +10,24 @@ case "`uname`" in
+ esac
+ 
+ 
+-SOURCE=$0;
+-SCRIPT=`basename "$SOURCE"`;
+-while [ -h "$SOURCE" ]; do
+-    SCRIPT=`basename "$SOURCE"`;
+-    LOOKUP=`ls -ld "$SOURCE"`;
+-    TARGET=`expr "$LOOKUP" : '.*-> \(.*\)$'`;
+-    if expr "${TARGET:-.}/" : '/.*/$' > /dev/null; then
+-        SOURCE=${TARGET:-.};
+-    else
+-        SOURCE=`dirname "$SOURCE"`/${TARGET:-.};
+-    fi;
+-done;
+-if [ "$SCALA_HOME" = "" ]
+-then
+-    SCALA_HOME=`dirname "$SOURCE"`/..;
+-    SCALA_HOME=`cd "$SCALA_HOME"; pwd`;
+-fi
++#SOURCE=$0;
++#SCRIPT=`basename "$SOURCE"`;
++#while [ -h "$SOURCE" ]; do
++#    SCRIPT=`basename "$SOURCE"`;
++#    LOOKUP=`ls -ld "$SOURCE"`;
++#    TARGET=`expr "$LOOKUP" : '.*-> \(.*\)$'`;
++#    if expr "${TARGET:-.}/" : '/.*/$' > /dev/null; then
++#        SOURCE=${TARGET:-.};
++#    else
++#        SOURCE=`dirname "$SOURCE"`/${TARGET:-.};
++#    fi;
++#done;
++#if [ "$SCALA_HOME" = "" ]
++#then
++#    SCALA_HOME=`dirname "$SOURCE"`/..;
++#    SCALA_HOME=`cd "$SCALA_HOME"; pwd`;
++#fi
++SCALA_HOME=@SCALA_HOME@
+ 
+ SBAZ="$SCALA_HOME/bin/sbaz"
+ 
