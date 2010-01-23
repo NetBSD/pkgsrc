@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/06 08:56:58 kefren Exp $
+$NetBSD: distinfo,v 1.2 2010/01/23 08:30:08 obache Exp $
 
-SHA1 (gnome-subtitles-0.8.tar.gz) = 14fe9eabf4288fc23072988f4423b5f447642352
-RMD160 (gnome-subtitles-0.8.tar.gz) = e326876698ddb052e0a78090e78ee84195722417
-Size (gnome-subtitles-0.8.tar.gz) = 756247 bytes
+SHA1 (gnome-subtitles-0.9.1.tar.gz) = 5dd240a392ea1fd9e672caeb45fb9aa55b87a620
+RMD160 (gnome-subtitles-0.9.1.tar.gz) = f2d5c49afe5fe8c01e10b802be19c24ca2065a42
+Size (gnome-subtitles-0.9.1.tar.gz) = 658660 bytes
 SHA1 (patch-aa) = 35360c5b436d409b870a63b6819868bbf7ca7b73
