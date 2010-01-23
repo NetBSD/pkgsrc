@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.302 2010/01/23 12:05:52 sno Exp $
+$NetBSD: CHANGES-2010,v 1.303 2010/01/23 13:24:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -352,3 +352,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/gnome-subtitles to 0.9.1 [obache 2010-01-23]
 	Added lang/scala version 2.7.7 [yyamano 2010-01-23]
 	Updated editors/p5-Padre to 0.55 [sno 2010-01-23]
+	Updated devel/p5-Module-Build to 0.36030 [sno 2010-01-23]
