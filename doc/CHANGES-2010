@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.298 2010/01/23 02:13:18 asau Exp $
+$NetBSD: CHANGES-2010,v 1.299 2010/01/23 05:50:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -347,3 +347,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/esniper to 2.22.0 [heinz 2010-01-22]
 	Updated devel/exctags to 5.8 [tonio 2010-01-22]
 	Updated math/fricas to 1.0.9 [asau 2010-01-23]
+	Updated mail/dbmail to 2.2.14 [obache 2010-01-23]
+	Updated print/acroread8 to 8.1.7nb2 [obache 2010-01-23]
