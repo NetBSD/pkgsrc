@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/01/23 23:21:45 is Exp $
+
+--- src/ordinal.cpp.orig	2010-01-17 04:51:35.000000000 +0000
++++ src/ordinal.cpp
+@@ -1341,7 +1341,7 @@ static void limitElementComboTest(const 
+ 	}
+ }
+ 
+-OutStream::OutStream():currentStream(&cerr),debugStream(0)
++OutStream::OutStream():currentStream(&cout),debugStream(0)
+ {
+ }
+ 
