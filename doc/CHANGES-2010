@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.304 2010/01/23 14:36:59 sno Exp $
+$NetBSD: CHANGES-2010,v 1.305 2010/01/23 16:33:50 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -354,3 +354,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/p5-Padre to 0.55 [sno 2010-01-23]
 	Updated devel/p5-Module-Build to 0.36030 [sno 2010-01-23]
 	Updated devel/p5-Test-Script to 1.07 [sno 2010-01-23]
+	Updated www/nginx to 0.5.35nb1 [joerg 2010-01-23]
