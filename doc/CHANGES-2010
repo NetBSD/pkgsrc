@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.300 2010/01/23 08:30:23 obache Exp $
+$NetBSD: CHANGES-2010,v 1.301 2010/01/23 10:53:01 yyamano Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -350,3 +350,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/dbmail to 2.2.14 [obache 2010-01-23]
 	Updated print/acroread8 to 8.1.7nb2 [obache 2010-01-23]
 	Updated textproc/gnome-subtitles to 0.9.1 [obache 2010-01-23]
+	Added lang/scala version 2.7.7 [yyamano 2010-01-23]
