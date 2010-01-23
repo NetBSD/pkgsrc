@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/01/23 08:30:08 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/23 08:51:13 obache Exp $
 
 DISTNAME=	gnome-subtitles-0.9.1
 CATEGORIES=	multimedia textproc
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnome-subtitles/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnome-subtitles.sourceforge.net/
 COMMENT=	Subtitle editor for the GNOME desktop
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
