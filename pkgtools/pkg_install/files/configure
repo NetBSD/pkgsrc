@@ -593,6 +593,7 @@ ac_includes_default="\
 
 ac_subst_vars='LTLIBOBJS
 LIBOBJS
+PKG_DBDIR
 SYSCONFDIR
 EGREP
 CPP
@@ -4601,7 +4602,7 @@ return gethostbyname ();
   return 0;
 }
 _ACEOF
-for ac_lib in '' nsl; do
+for ac_lib in '' nsl network; do
   if test -z "$ac_lib"; then
     ac_res="none required"
   else
@@ -4975,6 +4976,8 @@ esac
 
 
 SYSCONFDIR="$sysconfdir"
+
+PKG_DBDIR="$pkgdbdir"
 
 
 ac_config_files="$ac_config_files Makefile add/Makefile admin/Makefile bpm/bpm.sh create/Makefile delete/Makefile info/Makefile lib/Makefile lib/pkg_install.conf.5 lib/pkg_install.conf.cat"
