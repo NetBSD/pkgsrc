@@ -1,0 +1,46 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/01/23 10:50:45 yyamano Exp $
+
+--- bin/scala.orig	2009-10-28 06:19:03.000000000 -0700
++++ bin/scala
+@@ -14,20 +14,21 @@ case "`uname`" in
+ esac
+ 
+ # Finding the root folder for this Scala distribution
+-SOURCE=$0;
+-SCRIPT=`basename "$SOURCE"`;
+-while [ -h "$SOURCE" ]; do
+-    SCRIPT=`basename "$SOURCE"`;
+-    LOOKUP=`ls -ld "$SOURCE"`;
+-    TARGET=`expr "$LOOKUP" : '.*-> \(.*\)$'`;
+-    if expr "${TARGET:-.}/" : '/.*/$' > /dev/null; then
+-        SOURCE=${TARGET:-.};
+-    else
+-        SOURCE=`dirname "$SOURCE"`/${TARGET:-.};
+-    fi;
+-done;
+-SCALA_HOME=`dirname "$SOURCE"`/..;
+-SCALA_HOME=`cd "$SCALA_HOME"; pwd`;
++#SOURCE=$0;
++#SCRIPT=`basename "$SOURCE"`;
++#while [ -h "$SOURCE" ]; do
++#    SCRIPT=`basename "$SOURCE"`;
++#    LOOKUP=`ls -ld "$SOURCE"`;
++#    TARGET=`expr "$LOOKUP" : '.*-> \(.*\)$'`;
++#    if expr "${TARGET:-.}/" : '/.*/$' > /dev/null; then
++#        SOURCE=${TARGET:-.};
++#    else
++#        SOURCE=`dirname "$SOURCE"`/${TARGET:-.};
++#    fi;
++#done;
++#SCALA_HOME=`dirname "$SOURCE"`/..;
++#SCALA_HOME=`cd "$SCALA_HOME"; pwd`;
++SCALA_HOME=@SCALA_HOME@
+ # Remove spaces from SCALA_HOME on windows
+ if $cygwin; then
+     SCALA_HOME=`cygpath --windows --short-name "$SCALA_HOME"`
+@@ -63,4 +64,4 @@ if [ -z "$JAVACMD" -a -n "$JAVA_HOME" -a
+     JAVACMD="$JAVA_HOME/bin/java"
+ fi
+ 
+-exec "${JAVACMD:=java}" $JAVA_OPTS -cp "$TOOL_CLASSPATH" -Dscala.home="$SCALA_HOME" -Denv.classpath="$CLASSPATH" -Denv.emacs="$EMACS"  scala.tools.nsc.MainGenericRunner  "$@"
++exec "${JAVACMD:=@JAVA_HOME@/bin/java}" $JAVA_OPTS -cp "$TOOL_CLASSPATH" -Dscala.home="$SCALA_HOME" -Denv.classpath="$CLASSPATH" -Denv.emacs="$EMACS"  scala.tools.nsc.MainGenericRunner  "$@"
