@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.14 2010/01/22 13:30:41 joerg Exp $
+# $NetBSD: Makefile.in,v 1.15 2010/01/23 11:02:58 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -13,7 +13,7 @@ cat1dir=	$(mandir)/cat1
 
 CC=		@CC@
 CCLD=		$(CC)
-LIBS=		-linstall @LIBS@
+LIBS=		-linstall -lfetch @LIBS@
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib -DBINDIR=\"$(sbindir)\"
 DEFS=		@DEFS@
 CFLAGS=		@CFLAGS@
