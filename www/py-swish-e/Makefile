@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2007/09/02 10:38:44 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/23 23:05:14 joerg Exp $
 #
 
-DISTNAME=		SwishE-0.5
+DISTNAME=		swish-e-0.5
 PKGNAME=		${PYPKGPREFIX}-swish-e-0.5
 CATEGORIES=		textproc python
-MASTER_SITES=		http://jibe.freeshell.org/bits/download/
+MASTER_SITES=		http://download.berlios.de/py-swish-e/
+
+WRKSRC=			${WRKDIR}/SwishE-0.5
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://jibe.freeshell.org/bits/SwishE/
+HOMEPAGE=		http://py-swish-e.berlios.de/
 COMMENT=		Simple Python binding for Swish-E
 
 PKG_DESTDIR_SUPPORT=	user-destdir
