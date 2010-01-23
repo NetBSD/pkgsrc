@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2010/01/14 19:35:55 tez Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/23 05:49:59 obache Exp $
 
 DISTNAME=	acroread8	# overridden below
 PKGNAME=	acroread8-8.1.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/enu/
 
@@ -68,6 +68,7 @@ post-install:
 	  ${BIN_PATCH} <${FILESDIR}/acroread.diff && \
 	  ${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    -e 's|@ACROREAD_FONTPATH@|${ACROREAD_FONTPATH}|' \
+	    -e 's|@EMULDIR@|${EMULDIR}|' \
 		<acroread >acroread.tmp && \
 	  ${MV} acroread.tmp acroread && \
 	  ${RM} -f acroread.orig acroread.tmp
