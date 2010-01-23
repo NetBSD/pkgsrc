@@ -1,4 +1,4 @@
-/*	$NetBSD: common.h,v 1.14 2010/01/23 13:39:42 joerg Exp $	*/
+/*	$NetBSD: common.h,v 1.15 2010/01/23 14:25:26 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -86,9 +86,6 @@ struct fetcherr {
 	const char	*string;
 };
 
-/* for fetch_writev */
-struct iovec;
-
 void		 fetch_seterr(struct fetcherr *, int);
 void		 fetch_syserr(void);
 void		 fetch_info(const char *, ...);
@@ -102,9 +99,7 @@ conn_t		*fetch_reopen(int);
 int		 fetch_ssl(conn_t *, int);
 ssize_t		 fetch_read(conn_t *, char *, size_t);
 int		 fetch_getln(conn_t *);
-ssize_t		 fetch_write(conn_t *, const char *, size_t);
-ssize_t		 fetch_writev(conn_t *, struct iovec *, int);
-int		 fetch_putln(conn_t *, const char *, size_t);
+ssize_t		 fetch_write(conn_t *, const void *, size_t);
 int		 fetch_close(conn_t *);
 int		 fetch_add_entry(struct url_list *, struct url *, const char *, int);
 int		 fetch_netrc_auth(struct url *url);
