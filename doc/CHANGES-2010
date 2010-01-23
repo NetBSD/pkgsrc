@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.297 2010/01/22 22:31:33 tonio Exp $
+$NetBSD: CHANGES-2010,v 1.298 2010/01/23 02:13:18 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -346,3 +346,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/ruby-tzinfo to 0.3.16 [taca 2010-01-22]
 	Updated misc/esniper to 2.22.0 [heinz 2010-01-22]
 	Updated devel/exctags to 5.8 [tonio 2010-01-22]
+	Updated math/fricas to 1.0.9 [asau 2010-01-23]
