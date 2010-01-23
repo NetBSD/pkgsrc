@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/10/21 17:17:04 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/23 23:08:03 joerg Exp $
 #
 
-DISTNAME=	nbpatch-20091021
+DISTNAME=	nbpatch-20100124
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
