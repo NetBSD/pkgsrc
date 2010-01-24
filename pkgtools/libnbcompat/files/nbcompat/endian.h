@@ -1,4 +1,4 @@
-/*	$NetBSD: endian.h,v 1.2 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: endian.h,v 1.3 2010/01/24 12:41:21 obache Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -32,6 +32,10 @@
 #ifndef _NBCOMPAT_ENDIAN_H_
 #define _NBCOMPAT_ENDIAN_H_
 
+#if HAVE_ENDIAN_H
+# include <endian.h>
+#endif
+
 #if HAVE_SYS_ENDIAN_H
 # include <sys/endian.h>
 #endif
@@ -45,8 +49,8 @@
 #endif
 
 /*
- * Declare macros that may be missing in <sys/endian.h>, <machine/endian.h>,
- * and <sys/byteorder.h>
+ * Declare macros that may be missing in <endian.h>, <sys/endian.h>,
+ * <machine/endian.h> and <sys/byteorder.h>
  */
 
 #ifndef LITTLE_ENDIAN

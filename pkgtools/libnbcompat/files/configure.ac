@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.74 2009/06/05 19:58:04 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.75 2010/01/24 12:41:21 obache Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -33,8 +33,8 @@ AC_HEADER_STDC
 AC_HEADER_TIME
 AC_HEADER_STDBOOL
 
-AC_CHECK_HEADERS([alloca.h assert.h ctype.h dirent.h err.h errno.h fcntl.h \
-	fnmatch.h fts.h grp.h inttypes.h libutil.h limits.h \
+AC_CHECK_HEADERS([alloca.h assert.h ctype.h dirent.h endian.h err.h errno.h \
+	fcntl.h fnmatch.h fts.h grp.h inttypes.h libutil.h limits.h \
 	machine/endian.h ndir.h netdb.h paths.h pwd.h signal.h \
 	stdarg.h stddef.h stdint.h stdio.h \
 	stdlib.h string.h sys/byteorder.h sys/cdefs.h sys/dir.h sys/endian.h \
@@ -142,7 +142,7 @@ AC_ARG_ENABLE([bsd-getopt],
 	[AS_HELP_STRING([--enable-bsd-getopt],
 			[force use of BSDish getopt implementation])])
 
-AC_CHECK_DECLS([optind, optreset], [:], [:], [
+AC_CHECK_DECLS([optarg, optind, optreset], [:], [:], [
 	#include <stdio.h>
 	#include <stdlib.h>
 	#include <unistd.h>
@@ -245,7 +245,7 @@ AC_REPLACE_FUNCS([asprintf err fgetln fnmatch fparseln getenv isblank \
 	strlcat strlcpy strmode strsep strtoll unsetenv usleep utimes warn
 ])
 
-AC_CHECK_LIB(socket, socket)
+AC_SEARCH_LIBS(socket, [socket network])
 AC_CHECK_LIB(nsl, gethostbyname)
 
 need_getaddrinfo=no
