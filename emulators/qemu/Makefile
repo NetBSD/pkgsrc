@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2010/01/14 22:32:33 bouyer Exp $
+# $NetBSD: Makefile,v 1.63 2010/01/24 17:11:17 heinz Exp $
 #
 
 DISTNAME=		qemu-0.11.1
@@ -9,6 +9,7 @@ MASTER_SITES=		http://download.savannah.gnu.org/releases/qemu/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.qemu.org/
 COMMENT=		CPU emulator using dynamic translation
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
