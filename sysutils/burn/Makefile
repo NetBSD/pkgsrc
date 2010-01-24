@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2009/05/19 08:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2010/01/24 13:26:12 wiz Exp $
 #
 
 DISTNAME=	burn-0.4.1
+PKGREVISION=	1
 CATEGORIES=	sysutils gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gsburn/}
 
