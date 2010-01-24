@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2009/12/15 11:08:38 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2010/01/24 17:26:21 heinz Exp $
 
 DISTNAME=	libsndfile-1.0.21
 CATEGORIES=	audio
@@ -28,6 +28,8 @@ SUBST_MESSAGE.vorbis=	Allowing libvorbis-1.2.0.
 
 # This package compiles with gcc2, but its configure script doesn't know that
 CONFIGURE_ENV+=		ac_cv_c_struct_hack=yes
+
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
