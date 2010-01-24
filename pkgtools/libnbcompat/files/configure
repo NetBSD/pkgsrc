@@ -4230,8 +4230,9 @@ fi
 
 
 
-for ac_header in alloca.h assert.h ctype.h dirent.h err.h errno.h fcntl.h \
-	fnmatch.h fts.h grp.h inttypes.h libutil.h limits.h \
+
+for ac_header in alloca.h assert.h ctype.h dirent.h endian.h err.h errno.h \
+	fcntl.h fnmatch.h fts.h grp.h inttypes.h libutil.h limits.h \
 	machine/endian.h ndir.h netdb.h paths.h pwd.h signal.h \
 	stdarg.h stddef.h stdint.h stdio.h \
 	stdlib.h string.h sys/byteorder.h sys/cdefs.h sys/dir.h sys/endian.h \
@@ -5992,6 +5993,78 @@ if test "${enable_bsd_getopt+set}" = set; then
 fi
 
 
+{ $as_echo "$as_me:$LINENO: checking whether optarg is declared" >&5
+$as_echo_n "checking whether optarg is declared... " >&6; }
+if test "${ac_cv_have_decl_optarg+set}" = set; then
+  $as_echo_n "(cached) " >&6
+else
+  cat >conftest.$ac_ext <<_ACEOF
+/* confdefs.h.  */
+_ACEOF
+cat confdefs.h >>conftest.$ac_ext
+cat >>conftest.$ac_ext <<_ACEOF
+/* end confdefs.h.  */
+
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include <unistd.h>
+
+
+int
+main ()
+{
+#ifndef optarg
+  (void) optarg;
+#endif
+
+  ;
+  return 0;
+}
+_ACEOF
+rm -f conftest.$ac_objext
+if { (ac_try="$ac_compile"
+case "(($ac_try" in
+  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
+  *) ac_try_echo=$ac_try;;
+esac
+eval ac_try_echo="\"\$as_me:$LINENO: $ac_try_echo\""
+$as_echo "$ac_try_echo") >&5
+  (eval "$ac_compile") 2>conftest.er1
+  ac_status=$?
+  grep -v '^ *+' conftest.er1 >conftest.err
+  rm -f conftest.er1
+  cat conftest.err >&5
+  $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
+  (exit $ac_status); } && {
+	 test -z "$ac_c_werror_flag" ||
+	 test ! -s conftest.err
+       } && test -s conftest.$ac_objext; then
+  ac_cv_have_decl_optarg=yes
+else
+  $as_echo "$as_me: failed program was:" >&5
+sed 's/^/| /' conftest.$ac_ext >&5
+
+	ac_cv_have_decl_optarg=no
+fi
+
+rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+fi
+{ $as_echo "$as_me:$LINENO: result: $ac_cv_have_decl_optarg" >&5
+$as_echo "$ac_cv_have_decl_optarg" >&6; }
+if test "x$ac_cv_have_decl_optarg" = x""yes; then
+
+cat >>confdefs.h <<_ACEOF
+#define HAVE_DECL_OPTARG 1
+_ACEOF
+
+:
+else
+  cat >>confdefs.h <<_ACEOF
+#define HAVE_DECL_OPTARG 0
+_ACEOF
+
+:
+fi
 { $as_echo "$as_me:$LINENO: checking whether optind is declared" >&5
 $as_echo_n "checking whether optind is declared... " >&6; }
 if test "${ac_cv_have_decl_optind+set}" = set; then
@@ -10755,14 +10828,12 @@ done
 
 
 
-
-{ $as_echo "$as_me:$LINENO: checking for socket in -lsocket" >&5
-$as_echo_n "checking for socket in -lsocket... " >&6; }
-if test "${ac_cv_lib_socket_socket+set}" = set; then
+{ $as_echo "$as_me:$LINENO: checking for library containing socket" >&5
+$as_echo_n "checking for library containing socket... " >&6; }
+if test "${ac_cv_search_socket+set}" = set; then
   $as_echo_n "(cached) " >&6
 else
-  ac_check_lib_save_LIBS=$LIBS
-LIBS="-lsocket  $LIBS"
+  ac_func_search_save_LIBS=$LIBS
 cat >conftest.$ac_ext <<_ACEOF
 /* confdefs.h.  */
 _ACEOF
@@ -10785,7 +10856,14 @@ return socket ();
   return 0;
 }
 _ACEOF
-rm -f conftest.$ac_objext conftest$ac_exeext
+for ac_lib in '' socket network; do
+  if test -z "$ac_lib"; then
+    ac_res="none required"
+  else
+    ac_res=-l$ac_lib
+    LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
+  fi
+  rm -f conftest.$ac_objext conftest$ac_exeext
 if { (ac_try="$ac_link"
 case "(($ac_try" in
   *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
@@ -10806,27 +10884,34 @@ $as_echo "$ac_try_echo") >&5
 	 test "$cross_compiling" = yes ||
 	 $as_test_x conftest$ac_exeext
        }; then
-  ac_cv_lib_socket_socket=yes
+  ac_cv_search_socket=$ac_res
 else
   $as_echo "$as_me: failed program was:" >&5
 sed 's/^/| /' conftest.$ac_ext >&5
 
-	ac_cv_lib_socket_socket=no
+
 fi
 
 rm -rf conftest.dSYM
 rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
-      conftest$ac_exeext conftest.$ac_ext
-LIBS=$ac_check_lib_save_LIBS
+      conftest$ac_exeext
+  if test "${ac_cv_search_socket+set}" = set; then
+  break
 fi
-{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_socket_socket" >&5
-$as_echo "$ac_cv_lib_socket_socket" >&6; }
-if test "x$ac_cv_lib_socket_socket" = x""yes; then
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBSOCKET 1
-_ACEOF
-
-  LIBS="-lsocket $LIBS"
+done
+if test "${ac_cv_search_socket+set}" = set; then
+  :
+else
+  ac_cv_search_socket=no
+fi
+rm conftest.$ac_ext
+LIBS=$ac_func_search_save_LIBS
+fi
+{ $as_echo "$as_me:$LINENO: result: $ac_cv_search_socket" >&5
+$as_echo "$ac_cv_search_socket" >&6; }
+ac_res=$ac_cv_search_socket
+if test "$ac_res" != no; then
+  test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
 
 fi
 
