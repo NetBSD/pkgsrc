@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/01/21 12:12:27 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2010/01/24 17:11:19 heinz Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -11,6 +11,7 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pulseaudio.org/
 COMMENT=	Sound server for POSIX and Win32 systems
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
