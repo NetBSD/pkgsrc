@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.24 2010/01/23 14:25:26 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.25 2010/01/24 16:54:23 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -61,6 +61,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+
+#ifndef MSG_NOSIGNAL
+#include <signal.h>
+#endif
 
 #include "fetch.h"
 #include "common.h"
@@ -624,6 +628,17 @@ fetch_write(conn_t *conn, const void *buf, size_t len)
 	fd_set writefds;
 	ssize_t wlen, total;
 	int r;
+#ifndef MSG_NOSIGNAL
+	static int killed_sigpipe;
+#endif
+
+#ifndef MSG_NOSIGNAL
+	if (!killed_sigpipe) {
+		signal(SIGPIPE, SIG_IGN);
+		killed_sigpipe = 1;
+	}
+#endif
+
 
 	if (fetchTimeout) {
 		FD_ZERO(&writefds);
@@ -661,7 +676,11 @@ fetch_write(conn_t *conn, const void *buf, size_t len)
 			wlen = SSL_write(conn->ssl, buf, len);
 		else
 #endif
+#ifndef MSG_NOSIGNAL
+			wlen = send(conn->sd, buf, len, 0);
+#else
 			wlen = send(conn->sd, buf, len, MSG_NOSIGNAL);
+#endif
 		if (wlen == 0) {
 			/* we consider a short write a failure */
 			errno = EPIPE;
