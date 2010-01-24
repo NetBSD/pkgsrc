@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/18 09:59:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/24 13:00:44 joerg Exp $
 #
 
 DISTNAME=	Wx-0.96
@@ -13,6 +13,7 @@ COMMENT=	Perl5 interface to the wxWidgets cross-platform GUI toolkit
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 BUILD_DEPENDS+=	p5-Alien-wxWidgets>=0.25:../../x11/p5-Alien-wxWidgets
 BUILD_DEPENDS+=	p5-ExtUtils-XSpp>=0.05:../../devel/p5-ExtUtils-XSpp
