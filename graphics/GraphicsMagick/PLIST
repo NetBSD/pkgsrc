@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/09/20 11:30:58 obache Exp $
+@comment $NetBSD: PLIST,v 1.12.4.1 2010/01/24 11:16:19 tron Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -16,6 +16,7 @@ include/GraphicsMagick/Magick++/Montage.h
 include/GraphicsMagick/Magick++/Pixels.h
 include/GraphicsMagick/Magick++/STL.h
 include/GraphicsMagick/Magick++/TypeMetric.h
+include/GraphicsMagick/magick/analyze.h
 include/GraphicsMagick/magick/api.h
 include/GraphicsMagick/magick/attribute.h
 include/GraphicsMagick/magick/average.h
@@ -23,9 +24,11 @@ include/GraphicsMagick/magick/blob.h
 include/GraphicsMagick/magick/cdl.h
 include/GraphicsMagick/magick/channel.h
 include/GraphicsMagick/magick/color.h
+include/GraphicsMagick/magick/color_lookup.h
 include/GraphicsMagick/magick/colormap.h
 include/GraphicsMagick/magick/colorspace.h
 include/GraphicsMagick/magick/command.h
+include/GraphicsMagick/magick/common.h
 include/GraphicsMagick/magick/compare.h
 include/GraphicsMagick/magick/composite.h
 include/GraphicsMagick/magick/compress.h
@@ -74,6 +77,7 @@ include/GraphicsMagick/magick/symbols.h
 include/GraphicsMagick/magick/texture.h
 include/GraphicsMagick/magick/timer.h
 include/GraphicsMagick/magick/transform.h
+include/GraphicsMagick/magick/type.h
 include/GraphicsMagick/magick/utility.h
 include/GraphicsMagick/magick/version.h
 include/GraphicsMagick/wand/drawing_wand.h
@@ -99,7 +103,6 @@ man/man4/miff.4
 man/man5/quantize.5
 share/${PKGNAME}/config/colors.mgk
 share/${PKGNAME}/config/log.mgk
-share/${PKGNAME}/config/magic.mgk
 share/${PKGNAME}/config/modules.mgk
 share/doc/GraphicsMagick/ChangeLog
 share/doc/GraphicsMagick/ChangeLog.2001
@@ -110,10 +113,20 @@ share/doc/GraphicsMagick/ChangeLog.2005
 share/doc/GraphicsMagick/ChangeLog.2006
 share/doc/GraphicsMagick/ChangeLog.2007
 share/doc/GraphicsMagick/ChangeLog.2008
+share/doc/GraphicsMagick/ChangeLog.2009
 share/doc/GraphicsMagick/Copyright.txt
 share/doc/GraphicsMagick/NEWS.txt
 share/doc/GraphicsMagick/www/CVS.html
 share/doc/GraphicsMagick/www/CVS.rst
+share/doc/GraphicsMagick/www/ChangeLog-2001.html
+share/doc/GraphicsMagick/www/ChangeLog-2002.html
+share/doc/GraphicsMagick/www/ChangeLog-2003.html
+share/doc/GraphicsMagick/www/ChangeLog-2004.html
+share/doc/GraphicsMagick/www/ChangeLog-2005.html
+share/doc/GraphicsMagick/www/ChangeLog-2006.html
+share/doc/GraphicsMagick/www/ChangeLog-2007.html
+share/doc/GraphicsMagick/www/ChangeLog-2008.html
+share/doc/GraphicsMagick/www/ChangeLog-2009.html
 share/doc/GraphicsMagick/www/Changelog.html
 share/doc/GraphicsMagick/www/Copyright.html
 share/doc/GraphicsMagick/www/FAQ.html
@@ -226,8 +239,6 @@ share/doc/GraphicsMagick/www/api/types.rst
 share/doc/GraphicsMagick/www/api/widget.html
 share/doc/GraphicsMagick/www/authors.html
 share/doc/GraphicsMagick/www/authors.rst
-share/doc/GraphicsMagick/www/benchmarks-1.2.html
-share/doc/GraphicsMagick/www/benchmarks-1.2.rst
 share/doc/GraphicsMagick/www/benchmarks.html
 share/doc/GraphicsMagick/www/benchmarks.rst
 share/doc/GraphicsMagick/www/bugs.html
