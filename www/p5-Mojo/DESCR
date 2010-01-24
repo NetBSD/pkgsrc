@@ -1,0 +1,3 @@
+Mojo provides a minimal interface between web servers and Perl web
+frameworks.  Also included in the distribution are two MVC web
+frameworks named Mojolicious and Mojolicious::Lite.
