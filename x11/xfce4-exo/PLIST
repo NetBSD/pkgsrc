@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/09/16 01:15:35 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/01/24 20:00:06 gls Exp $
 bin/exo-csource
 bin/exo-desktop-item-edit
 bin/exo-eject
@@ -38,13 +38,6 @@ lib/libexo-0.3.la
 lib/libexo-hal-0.3.la
 lib/pkgconfig/exo-0.3.pc
 lib/pkgconfig/exo-hal-0.3.pc
-${PYSITELIB}/exo-0.3/_exo.la
-${PYSITELIB}/exo-0.3/exo/__init__.py
-${PYSITELIB}/exo-0.3/exo/__init__.pyc
-${PYSITELIB}/exo-0.3/exo/__init__.pyo
-${PYSITELIB}/pyexo.py
-${PYSITELIB}/pyexo.pyc
-${PYSITELIB}/pyexo.pyo
 libexec/exo-compose-mail-0.3
 libexec/exo-helper-0.3
 libexec/exo-mount-notify-0.3
@@ -150,7 +143,6 @@ share/locale/ur/LC_MESSAGES/libexo-0.3.mo
 share/locale/zh_CN/LC_MESSAGES/libexo-0.3.mo
 share/locale/zh_TW/LC_MESSAGES/libexo-0.3.mo
 share/pixmaps/exo-0.3/exo-thumbnail-frame.png
-share/pygtk/2.0/defs/exo-0.3/exo.defs
 share/xfce4/doc/C/exo-preferred-applications.html
 share/xfce4/doc/C/images/exo-preferred-applications-internet.png
 share/xfce4/doc/C/images/exo-preferred-applications-utilities.png
