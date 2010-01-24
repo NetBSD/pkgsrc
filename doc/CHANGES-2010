@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.313 2010/01/24 23:20:49 seb Exp $
+$NetBSD: CHANGES-2010,v 1.314 2010/01/24 23:37:32 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -362,3 +362,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Mojo version 0.999.914 [seb 2010-01-24]
 	Updated archivers/libzip to 0.9.1 [wiz 2010-01-24]
 	Updated devel/p5-OLE-Storage_Lite to 0.19 [seb 2010-01-24]
+	Updated math/p5-Spreadsheet-ParseExcel to 0.5700 [seb 2010-01-24]
