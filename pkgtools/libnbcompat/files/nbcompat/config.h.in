@@ -32,6 +32,10 @@
    don't. */
 #undef HAVE_DECL_ENDPWENT
 
+/* Define to 1 if you have the declaration of `optarg', and to 0 if you don't.
+   */
+#undef HAVE_DECL_OPTARG
+
 /* Define to 1 if you have the declaration of `optind', and to 0 if you don't.
    */
 #undef HAVE_DECL_OPTIND
@@ -63,6 +67,9 @@
 
 /* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
 #undef HAVE_DOPRNT
+
+/* Define to 1 if you have the <endian.h> header file. */
+#undef HAVE_ENDIAN_H
 
 /* Define to 1 if you have the `err' function. */
 #undef HAVE_ERR
@@ -153,9 +160,6 @@
 
 /* Define to 1 if you have the `nsl' library (-lnsl). */
 #undef HAVE_LIBNSL
-
-/* Define to 1 if you have the `socket' library (-lsocket). */
-#undef HAVE_LIBSOCKET
 
 /* Define to 1 if you have the `util' library (-lutil). */
 #undef HAVE_LIBUTIL
