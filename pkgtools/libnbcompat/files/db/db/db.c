@@ -1,4 +1,4 @@
-/*	$NetBSD: db.c,v 1.2 2008/10/28 18:01:06 joerg Exp $	*/
+/*	$NetBSD: db.c,v 1.3 2010/01/24 12:29:48 obache Exp $	*/
 /*	NetBSD: db.c,v 1.16 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -33,7 +33,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: db.c,v 1.2 2008/10/28 18:01:06 joerg Exp $");
+__RCSID("$NetBSD: db.c,v 1.3 2010/01/24 12:29:48 obache Exp $");
 
 #include <sys/types.h>
 
@@ -45,8 +45,10 @@ __RCSID("$NetBSD: db.c,v 1.2 2008/10/28 18:01:06 joerg Exp $");
 #include <nbcompat/db.h>
 static int __dberr(void);
 
+#if 0
 #ifdef __weak_alias
 __weak_alias(dbopen,_dbopen)
+#endif
 #endif
 
 DB *
