@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.28 2010/01/23 14:53:08 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.29 2010/01/24 19:10:35 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -329,7 +329,7 @@ http_closefn(void *v)
 			  fetch_cache_put(io->conn, fetch_close);
 #ifdef TCP_NOPUSH
 		val = 1;
-		setsockopt(conn->sd, IPPROTO_TCP, TCP_NOPUSH, &val,
+		setsockopt(io->conn->sd, IPPROTO_TCP, TCP_NOPUSH, &val,
 		    sizeof(val));
 #endif
 	} else {
