@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2009/03/06 14:34:43 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/01/24 17:11:17 heinz Exp $
 
 DISTNAME=	texi2html-1.82
 CATEGORIES=	textproc
@@ -7,6 +7,7 @@ MASTER_SITES=	http://savannah.nongnu.org/download/texi2html/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/texi2html/
 COMMENT=	Texinfo-to-HTML direct translator
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	teTeX-bin-1.*
 

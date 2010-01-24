@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2010/01/16 14:46:36 heinz Exp $
+# $NetBSD: Makefile,v 1.45 2010/01/24 17:11:19 heinz Exp $
 
 DISTNAME=		hal-0.5.11
 PKGREVISION=		26
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		netbsd-desktop@NetBSD.org
 HOMEPAGE=		http://hal.freedesktop.org/
 COMMENT=		FreeDesktop hardware abstraction layer
+LICENSE=		gnu-gpl-v2
 
 BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 PKG_DESTDIR_SUPPORT=	user-destdir
