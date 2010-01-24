@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.309 2010/01/24 17:13:34 imil Exp $
+$NetBSD: CHANGES-2010,v 1.310 2010/01/24 20:03:40 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -358,3 +358,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/fossil to 20100121205359 [wiz 2010-01-24]
 	Updated pkgtools/pkgin to 0.3.3 [imil 2010-01-24]
 	Updated pkgtools/pkgin to 0.3.3.1 [imil 2010-01-24]
+	Updated x11/xfce4-exo to 0.3.101nb1 [gls 2010-01-24]
