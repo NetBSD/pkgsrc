@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8915 2010/01/23 15:53:04 wiz Exp $
+$NetBSD: TODO,v 1.8916 2010/01/24 23:27:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,7 +383,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.8
 	o aewm++-1.0.27
 	o afterstep-2.2.9
-	o akonadi-1.2.90
+	o akonadi-1.3.0
 	o album-4.06
 	o alee-ttf-11.2
 	o alephone-20091015 [pkg/42397]
@@ -418,7 +418,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aqsis-1.6.0
 	o aranym-0.9.9
 	o argtable-2.9
-	o aria2-1.8.0
+	o aria2-1.8.1
 	o arla-0.90
 	o arnold-20040104
 	o asapm-3.1
@@ -469,7 +469,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.34
+	o calibre-0.6.35
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -527,6 +527,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o delegate-9.9.6
 	o denemo-0.8.12
 	o dhid-5.3
+	o dialog-1.1.20100119
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dircproxy-devel-1.2.0.2
@@ -568,7 +569,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-503
+	o etm-508
+	o eukleides-1.5.0
 	o evolution-exchange-2.28.2
 	o evolution-mapi-0.28.2 [GNOME 2.28]
 	o ex-20050325
@@ -709,7 +711,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gpsdrive-2.09
 	o gramofile-1.6P
 	o granulate-0.2
-	o graphviz-2.26.0
+	o graphviz-2.26.2
 	o grep-2.5.4
 	o gsasl-1.4.0
 	o gsharutils-4.7
@@ -812,7 +814,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kphotobook-0.0.7
 	o kronolith-2.3.3
 	o krusader-2.0
-	o ktorrent3-3.3.2
+	o ktorrent3-3.3.3
 	o lablgtk-2.14.0
 	o lapack-3.2.1
 	o latd-1.21
@@ -984,6 +986,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o newt-0.52.2 (ubuntu)
 	o ng-1.4.4
 	o nikto-2.0.1
+	o nmap-5.20
 	o ns-3.5
 	o ns-flash-10
 	o ns-plugger-common-5.1.3
@@ -996,6 +999,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nut-15.2
 	o nxtvepg-2.8.1
 	o objc-3.2.8
+	o ocaml-3.11.2
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
 	o odbc-postgresql-8.2.3
@@ -1020,15 +1024,20 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
+	o p5-DBD-postgresql-2.16.1
 	o p5-FCGI-1.3.0
+	o p5-Module-CoreList-2.25
+	o p5-Module-Install-0.92
+	o p5-Test-Pod-1.41
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
+	o p5-version-0.8000
 	o packagekit-0.5.1
 	o pam-smbpass-3.0.13
 	o paprefs-0.9.8
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
-	o parrot-1.9.0
+	o parrot-2.0.0
 	o patch-2.6.1
 	o patchutils-0.3.1
 	o pavucontrol-0.9.8
@@ -1116,6 +1125,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-4.8.2
 	o py-checker-0.8.17
+	o py-cups-1.9.48
 	o py-fpconst-0.7.2 [pkg/42556]
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
@@ -1130,7 +1140,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-psycopg-2.0.13
 	o py-qt4-4.7
 	o py-sip-4.10
-	o py-subversion-1.6.6
+	o py-subversion-1.6.9
 	o py-sybase-0.37
 	o py-twisted-9.0.0
 	o py-urwid-0.9.9
@@ -1220,6 +1230,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.2.0
 	o scm-5e5
+	o scmgit-base-1.6.6.1
+	o scmgit-docs-1.6.6.1
 	o scrollz-1.9.99
 	o scrotwm-0.9.22
 	o scsh-1.3.0
@@ -1269,8 +1281,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o stunnel-4.30
 	o subtitleeditor-0.33.0
-	o subversion-1.6.6
-	o subversion-base-1.6.6
+	o subversion-1.6.9
+	o subversion-base-1.6.9
 	o suse_base-11.0
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
@@ -1289,7 +1301,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-26.2.1
+	o tea-26.2.2
 	o ted-2.17
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
@@ -1360,10 +1372,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webby-0.9.3
 	o webkit-1.1.15.4
 	o webmin-1.500
+	o weechat-1.3.1
 	o weewm-0.01
 	o whohas-0.23
 	o windowlab-1.39
-	o wine-devel-1.1.36
+	o wine-devel-1.1.37
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1375,7 +1388,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4
 	o x11vnc-0.9.9
-	o x264-devel-20100116
+	o x264-devel-20100123
 	o xanalyser-1.30
 	o xapian-1.0.17
 	o xapian-omega-1.0.17
@@ -1478,6 +1491,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xwpe-1.5.30a
 	o xzip-182
 	o yafc-1.1
+	o yaz-4.0.0
 	o yodl-2.14.3
 	o youtube-dl-20100119
 	o ysm-2.9.9.1
