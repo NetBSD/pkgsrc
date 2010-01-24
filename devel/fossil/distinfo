@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/01/20 09:19:58 wiz Exp $
+$NetBSD: distinfo,v 1.3 2010/01/24 13:32:09 wiz Exp $
 
-SHA1 (fossil-src-20100112141013.tar.gz) = 14eb731bdd9133a49eae60f9aa5c2f4c686e624c
-RMD160 (fossil-src-20100112141013.tar.gz) = dd9331e6b81608b3ecca91438526acfcc82639b8
-Size (fossil-src-20100112141013.tar.gz) = 1839077 bytes
+SHA1 (fossil-src-20100121205359.tar.gz) = fe20a59ad5a7f65948c8b587e251e78f8770e674
+RMD160 (fossil-src-20100121205359.tar.gz) = 22ecaf59b66e6db9266b512796f44549a0d26d8d
+Size (fossil-src-20100121205359.tar.gz) = 1841775 bytes
