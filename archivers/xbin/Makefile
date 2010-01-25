@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2009/05/19 08:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2010/01/25 00:18:05 zafer Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
 PKGNAME=	${PRGNAME}-2.3
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://sunsite.unc.edu/pub/packages/TeX/tools/xbin/
+MASTER_SITES=	http://sunsite.bilkent.edu.tr/pub/tex/ctan/tools/xbin/
 DISTFILES=	${DISTNAME}.c ${PRGNAME}.man
 
 MAINTAINER=	rh@NetBSD.org
