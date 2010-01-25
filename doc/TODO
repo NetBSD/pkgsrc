@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8919 2010/01/25 20:13:07 markd Exp $
+$NetBSD: TODO,v 1.8920 2010/01/25 22:19:48 seb Exp $
 
 Suggested new packages
 ======================
@@ -1033,7 +1033,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Module-CoreList-2.25
 	o p5-Module-Install-0.92
 	o p5-Rose-DB-0.757 [pkg/42674]
-	o p5-Spreadsheet-WriteExcel-2.36
 	o p5-Test-Pod-1.41
 	o p5-Text-Markdown-1.000030
 	o p5-ispman-1.2
