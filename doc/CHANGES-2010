@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.318 2010/01/25 12:26:37 sno Exp $
+$NetBSD: CHANGES-2010,v 1.319 2010/01/25 12:55:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -367,3 +367,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/p5-Unicode-Map8 to 0.13 [sno 2010-01-25]
 	Updated devel/p5-ExtUtils-XSpp to 0.07 [sno 2010-01-25]
 	Updated devel/p5-File-Find-Rule to 0.32 [sno 2010-01-25]
+	Updated devel/p5-File-HomeDir to 0.89 [sno 2010-01-25]
