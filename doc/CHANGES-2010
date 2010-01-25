@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.322 2010/01/25 13:33:35 sno Exp $
+$NetBSD: CHANGES-2010,v 1.323 2010/01/25 13:37:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -371,3 +371,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-File-ShareDir to 1.01 [sno 2010-01-25]
 	Updated devel/p5-namespace-clean to 0.13 [sno 2010-01-25]
 	Updated devel/p5-Parse-Method-Signatures to 1.003013 [sno 2010-01-25]
+	Updated devel/p5-Parse-RecDescent to 1.96.3 [sno 2010-01-25]
