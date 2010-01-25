@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2009/12/11 20:52:22 ghen Exp $
+@comment $NetBSD: PLIST,v 1.27 2010/01/25 12:31:20 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -365,7 +365,6 @@ share/doc/dovecot/wiki/Design.Indexes.txt
 share/doc/dovecot/wiki/Design.MailProcess.txt
 share/doc/dovecot/wiki/Design.Processes.txt
 share/doc/dovecot/wiki/Design.txt
-share/doc/dovecot/wiki/DomainLost.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
@@ -383,8 +382,6 @@ share/doc/dovecot/wiki/LDA.Indexing.txt
 share/doc/dovecot/wiki/LDA.Postfix.txt
 share/doc/dovecot/wiki/LDA.Qmail.txt
 share/doc/dovecot/wiki/LDA.Sendmail.txt
-share/doc/dovecot/wiki/LDA.Sieve.CMU.txt
-share/doc/dovecot/wiki/LDA.Sieve.Dovecot.txt
 share/doc/dovecot/wiki/LDA.Sieve.txt
 share/doc/dovecot/wiki/LDA.txt
 share/doc/dovecot/wiki/Logging.txt
@@ -404,11 +401,6 @@ share/doc/dovecot/wiki/MailboxFormat.mailstore.txt
 share/doc/dovecot/wiki/MailboxFormat.mbox.txt
 share/doc/dovecot/wiki/MailboxFormat.mbx.txt
 share/doc/dovecot/wiki/MailboxFormat.txt
-share/doc/dovecot/wiki/ManageSieve.Clients.txt
-share/doc/dovecot/wiki/ManageSieve.Configuration.txt
-share/doc/dovecot/wiki/ManageSieve.Install.1.0.txt
-share/doc/dovecot/wiki/ManageSieve.Install.txt
-share/doc/dovecot/wiki/ManageSieve.Troubleshooting.txt
 share/doc/dovecot/wiki/ManageSieve.txt
 share/doc/dovecot/wiki/MboxLocking.txt
 share/doc/dovecot/wiki/MboxProblems.txt

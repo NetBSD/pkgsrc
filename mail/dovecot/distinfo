@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.107 2010/01/15 18:41:12 ghen Exp $
+$NetBSD: distinfo,v 1.108 2010/01/25 12:31:20 ghen Exp $
 
-SHA1 (dovecot-1.2-managesieve-0.11.10.tar.gz) = f79eef8cda5db41f6b61ec0723d60c72559980eb
-RMD160 (dovecot-1.2-managesieve-0.11.10.tar.gz) = b151df06a3f4be86f0a8327390ee8356a9a713c8
-Size (dovecot-1.2-managesieve-0.11.10.tar.gz) = 400657 bytes
-SHA1 (dovecot-1.2-sieve-0.1.14.tar.gz) = 2ba2b4208fa9ed341c38ec8e918b4a87e46b8367
-RMD160 (dovecot-1.2-sieve-0.1.14.tar.gz) = b61c9448c876062f2b1fd3d1cf72cbc430c5a82e
-Size (dovecot-1.2-sieve-0.1.14.tar.gz) = 992724 bytes
-SHA1 (dovecot-1.2.9-managesieve-0.11.10.diff.gz) = f817137163eb4b1cf9e310753f49569dde3f038b
-RMD160 (dovecot-1.2.9-managesieve-0.11.10.diff.gz) = 5e9692bf733d2100c5af7c066765c1383c43d346
-Size (dovecot-1.2.9-managesieve-0.11.10.diff.gz) = 6456 bytes
-SHA1 (dovecot-1.2.9.tar.gz) = 7c1013a1bc856a4366f76ac1f40e856185695e20
-RMD160 (dovecot-1.2.9.tar.gz) = fa17bafabdd6fab69c22d617deff368a4bc165d1
-Size (dovecot-1.2.9.tar.gz) = 2889394 bytes
+SHA1 (dovecot-1.2-managesieve-0.11.11.tar.gz) = 53f8618a9e02f953912390a7b803eb6218bf969a
+RMD160 (dovecot-1.2-managesieve-0.11.11.tar.gz) = 161d143f5a42aee929abf51b62b3b0e6e7a9f07a
+Size (dovecot-1.2-managesieve-0.11.11.tar.gz) = 439239 bytes
+SHA1 (dovecot-1.2-sieve-0.1.15.tar.gz) = 2827df60028639ec15422a86f48a1c9b2a78431a
+RMD160 (dovecot-1.2-sieve-0.1.15.tar.gz) = 7fd3d23d5ef93d443cdedc8512dab649b2a99694
+Size (dovecot-1.2-sieve-0.1.15.tar.gz) = 1051262 bytes
+SHA1 (dovecot-1.2.10-managesieve-0.11.11.diff.gz) = 11ff602015221300f291001daa09965e3e199428
+RMD160 (dovecot-1.2.10-managesieve-0.11.11.diff.gz) = 875011115ac4050a57f1c96725628ca531ccb61f
+Size (dovecot-1.2.10-managesieve-0.11.11.diff.gz) = 6415 bytes
+SHA1 (dovecot-1.2.10.tar.gz) = b717de1ab63f3d521c93385cbd20c49293921079
+RMD160 (dovecot-1.2.10.tar.gz) = 0b508502b7c2e9aecd274bf15f1ec5adbb1843a7
+Size (dovecot-1.2.10.tar.gz) = 2864295 bytes
 SHA1 (patch-aa) = 447e46268a93201b3ef22491ff0968752978d020
 SHA1 (patch-ab) = e5b5d72f0553da42d14ee05a9ed0faff8a6c7075
 SHA1 (patch-ac) = 5912392abb79df8e78de6f710c2a83264ee58fe7
