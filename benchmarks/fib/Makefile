@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2009/05/16 20:29:55 zafer Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/25 00:27:48 zafer Exp $
 
 DISTNAME=		fib.c
 PKGNAME=		fib-980203
 CATEGORIES=		benchmarks
-MASTER_SITES=		ftp://ftp.kreonet.re.kr/tools/benchmark/aburto/fib/
-EXTRACT_SUFX=		#empty
+MASTER_SITES=	http://ftp.sunet.se/pub/benchmark/aburto/fib/
+EXTRACT_SUFX=	#empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Mathematical benchmark
