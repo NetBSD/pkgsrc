@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.327 2010/01/25 14:00:30 sno Exp $
+$NetBSD: CHANGES-2010,v 1.328 2010/01/25 14:06:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -376,3 +376,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Perl-MinimumVersion to 1.24 [sno 2010-01-25]
 	Updated devel/p5-Proc-PID-File to 1.27 [sno 2010-01-25]
 	Updated devel/p5-Scope-Upper to 0.10 [sno 2010-01-25]
+	Updated databases/pgadmin3 to 1.10.1 [adam 2010-01-25]
