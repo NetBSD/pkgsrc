@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.324 2010/01/25 13:41:40 sno Exp $
+$NetBSD: CHANGES-2010,v 1.325 2010/01/25 13:45:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -373,3 +373,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Parse-Method-Signatures to 1.003013 [sno 2010-01-25]
 	Updated devel/p5-Parse-RecDescent to 1.96.3 [sno 2010-01-25]
 	Updated devel/p5-Path-Dispatcher to 0.14 [sno 2010-01-25]
+	Updated devel/p5-Perl-MinimumVersion to 1.24 [sno 2010-01-25]
