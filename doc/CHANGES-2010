@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.330 2010/01/25 14:15:09 sno Exp $
+$NetBSD: CHANGES-2010,v 1.331 2010/01/25 14:33:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -379,3 +379,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/pgadmin3 to 1.10.1 [adam 2010-01-25]
 	Updated devel/p5-Test-MinimumVersion to 0.013 [sno 2010-01-25]
 	Updated time/p5-Time-Piece to 1.16 [sno 2010-01-25]
+	Updated textproc/p5-Template-Tiny to 0.10 [sno 2010-01-25]
