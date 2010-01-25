@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/18 11:10:24 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/01/25 13:45:40 sno Exp $
 
-SHA1 (Perl-MinimumVersion-1.20.tar.gz) = e8671b1aa4b5e9fcedd2899dd7b48b1b20c5bbcc
-RMD160 (Perl-MinimumVersion-1.20.tar.gz) = 9038dd757c2f7307ca9db80167a1e577313c6fdc
-Size (Perl-MinimumVersion-1.20.tar.gz) = 33138 bytes
+SHA1 (Perl-MinimumVersion-1.24.tar.gz) = d48ad35fd5dfc5c978310499f4afee21857dba1c
+RMD160 (Perl-MinimumVersion-1.24.tar.gz) = 3a9bad6af80fe22553b0d7a4abdb8f162c1865ce
+Size (Perl-MinimumVersion-1.24.tar.gz) = 37297 bytes
