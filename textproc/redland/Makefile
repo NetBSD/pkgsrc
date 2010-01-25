@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2010/01/20 10:40:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/25 20:08:28 markd Exp $
 
-DISTNAME=	redland-1.0.9
-PKGREVISION=	3
+DISTNAME=	redland-1.0.10
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/
 
