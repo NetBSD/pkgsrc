@@ -1,0 +1,30 @@
+$NetBSD: patch-bb,v 1.1 2010/01/25 21:14:45 is Exp $
+
+--- /pkg_comp/obj/pkgsrc/mbone/vic/netbsd5/vic-2.8/rate-variable.cc.orig	1996-03-16 21:13:57.000000000 +0000
++++ /pkg_comp/obj/pkgsrc/mbone/vic/netbsd5/vic-2.8/rate-variable.cc
+@@ -61,13 +61,13 @@ class RateVariable : public TclObject {
+ public:
+ 	RateVariable(const char* name) : TclObject(name) { }
+ protected:
+-	static char* update_rate_var(ClientData, Tcl_Interp*, char* name1,
+-				     char* name2, int flags);
++	static char* update_rate_var(ClientData, Tcl_Interp*, const char* name1,
++				     const char* name2, int flags);
+ 	int command(int argc, const char*const* argv);
+ } rate_variable_cmd("rate_variable");
+ 
+ char* RateVariable::update_rate_var(ClientData clientData, Tcl_Interp* tcl,
+-				    char* name1, char* name2, int flags)
++				    const char* name1, const char* name2, int flags)
+ {
+ 	rv_data* rv = (rv_data*)clientData;
+ 	if (rv == NULL)
+@@ -80,7 +80,7 @@ char* RateVariable::update_rate_var(Clie
+ 		 */
+ 		char res[128];
+ 		flags &= TCL_GLOBAL_ONLY;
+-		char* cv = Tcl_GetVar2(tcl, name1, name2, flags);
++		const char* cv = Tcl_GetVar2(tcl, name1, name2, flags);
+ 		if (cv == NULL)
+ 			return (tcl->result);
+ 		int curval = atoi(cv);

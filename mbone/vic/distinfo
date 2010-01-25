@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2009/06/29 15:53:35 joerg Exp $
+$NetBSD: distinfo,v 1.12 2010/01/25 21:14:45 is Exp $
 
 SHA1 (vic-2.8_ov511p0.diff.gz) = 780116733fb52058429ca7d006667e13623d008e
 RMD160 (vic-2.8_ov511p0.diff.gz) = 26a9c80697f3fe2650b2ed76875b9a51dd1a01d9
@@ -9,12 +9,12 @@ Size (vicsrc-2.8.tar.gz) = 605136 bytes
 SHA1 (patch-aa) = 6029ae5ee56452e2a4303a34a5ffa258e266dffb
 SHA1 (patch-ab) = 8a9f5fbacc8e90b62cbb4dc7335fab2c23512ef4
 SHA1 (patch-ac) = e95936892d83876c90edb5e81963350c60e56866
-SHA1 (patch-ad) = 4604ae7077aee9e3165532a9a7947ed1875ae810
-SHA1 (patch-ae) = 05b45b8ac88a0c86d39b53cc1f2c4499411745da
+SHA1 (patch-ad) = 6662b51c5c35fde0df990f1f7c3c529c605d8ade
+SHA1 (patch-ae) = 206093cf5df5ccac43c2c9d8fe5cd655bf617262
 SHA1 (patch-af) = 4a82bb5322d16c8269923cd65c0e776a2570de90
 SHA1 (patch-ag) = 75fdeba7082c220cd105250f72e7899047c0d28a
-SHA1 (patch-ah) = b5ed0c03955ee1f60c18ea71a142a365947a4962
-SHA1 (patch-ai) = 2d651ec7bb05115ae655239716bde8856bab7ff2
+SHA1 (patch-ah) = d934007ab2c6a298bf292a4438931cbe86074fa5
+SHA1 (patch-ai) = 439cc24d945d72c447bd4285fafea50cccd558d2
 SHA1 (patch-aj) = 148d183345c159e4f02a0ea10648406eb733545a
 SHA1 (patch-ak) = 764766b60d93e3525bea01b65a43b6b9092e55d1
 SHA1 (patch-al) = ae870102e3badc8705ff517189b24766f5e13737
@@ -30,5 +30,7 @@ SHA1 (patch-au) = 46f3bee25bc2d9b983d29022ec3a86966ca07bbe
 SHA1 (patch-av) = 8811a912a1f166a5576ce0efdb1284941b62fa16
 SHA1 (patch-aw) = 735e7cda5f1cabe312decdcf992258ac8a895f63
 SHA1 (patch-ax) = 9f7ab611dc426a4f317b46803dbca218be903b10
-SHA1 (patch-ay) = 78cbf2e981efa40a21bcd9295670cae98bfe3ea3
+SHA1 (patch-ay) = c3622d5170c12ea0a0c32010ca04469b5f392201
 SHA1 (patch-az) = dabc8adce970fda55127e6667b250b5fa5d09bdb
+SHA1 (patch-ba) = ba23fc04060ae58cf6fadac96761c91dad5b8d13
+SHA1 (patch-bb) = c64ac258d110df702653198027784d80300ea496
