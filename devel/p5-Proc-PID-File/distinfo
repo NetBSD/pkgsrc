@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/20 11:38:13 grant Exp $
+$NetBSD: distinfo,v 1.2 2010/01/25 13:55:36 sno Exp $
 
-SHA1 (Proc-PID-File-1.24.tar.gz) = b2ac5cf7f04f962448f2b16d9eb269f8b67d1b68
-RMD160 (Proc-PID-File-1.24.tar.gz) = 0934d865595c0b7a1147e8774cbaa086fac21a6c
-Size (Proc-PID-File-1.24.tar.gz) = 12214 bytes
+SHA1 (Proc-PID-File-1.27.tar.gz) = 465992b19740d43f4c9e512a372aa2c9cd20b484
+RMD160 (Proc-PID-File-1.27.tar.gz) = d484c4baa6db868aecd03d00a52e68297630d734
+Size (Proc-PID-File-1.27.tar.gz) = 14586 bytes
