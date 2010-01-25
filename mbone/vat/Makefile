@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2009/06/30 00:07:20 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2010/01/25 21:07:48 is Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
 PKGNAME=		${DISTNAME:S/src//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mbone
 MASTER_SITES=		ftp://ftp.ee.lbl.gov/conferencing/vat/alpha-test/
 
@@ -32,5 +32,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/tk83/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
