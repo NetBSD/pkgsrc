@@ -1,0 +1,22 @@
+$NetBSD: patch-aq,v 1.1 2010/01/25 21:07:48 is Exp $
+
+--- /pkg_comp/obj/pkgsrc/mbone/vat/netbsd5/vat-4.0b2/Tcl.h.orig	1996-03-16 21:14:34.000000000 +0000
++++ /pkg_comp/obj/pkgsrc/mbone/vat/netbsd5/vat-4.0b2/Tcl.h
+@@ -73,7 +73,7 @@ class Tcl {
+ 			error(file);
+ 	}
+ 	inline char* var(const char* varname, int flags = TCL_GLOBAL_ONLY) {
+-		return (Tcl_GetVar(tcl_, (char*)varname, flags));
++		return ((char *)Tcl_GetVar(tcl_, (char*)varname, flags));
+ 	}
+ 	/*
+ 	 * Hooks for invoking the tcl interpreter:
+@@ -123,7 +123,7 @@ class TclObject {
+ 	virtual void reset();
+ 	void class_name(const char*);
+ 	/* make this public for Sun's compiler */
+-	static int callback(ClientData, Tcl_Interp*, int ac, char** av);
++	static int callback(ClientData, Tcl_Interp*, int ac, const char** av);
+ 	static void reset_all();
+     protected:
+ 	TclObject(const char* name = 0);
