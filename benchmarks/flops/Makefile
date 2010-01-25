@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2009/05/16 20:33:40 zafer Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/25 00:30:09 zafer Exp $
 
 DISTNAME=		flops
 PKGNAME=		flops-2.0
 CATEGORIES=		benchmarks
-MASTER_SITES=		ftp://ftp.kreonet.re.kr/tools/benchmark/aburto/flops/
+MASTER_SITES=	http://ftp.sunet.se/pub/benchmark/aburto/flops/
 DISTFILES=		${DISTNAME}.c ${DISTNAME}.doc
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
