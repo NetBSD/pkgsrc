@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2009/12/11 20:52:22 ghen Exp $
+# $NetBSD: options.mk,v 1.24 2010/01/25 12:31:08 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	dovecot-sieve dovecot-managesieve gssapi
@@ -131,3 +131,7 @@ INSTALL_DIRS+=		${WRKSRC.managesieve}
 PLIST_SRC+=		${PKGDIR}/PLIST.managesieve
 .endif # dovecot-managesieve
 .endif # dovecot-sieve
+
+.if !empty(PKG_OPTIONS:Mdovecot-managesieve) && empty(PKG_OPTIONS:Mdovecot-sieve)
+PKG_FAIL_REASON=	"You cannot enable dovecot-managesieve without dovecot-sieve."
+.endif
