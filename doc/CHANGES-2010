@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.335 2010/01/25 22:19:48 seb Exp $
+$NetBSD: CHANGES-2010,v 1.336 2010/01/25 22:37:08 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -385,3 +385,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/redland to 1.0.10 [markd 2010-01-25]
 	Updated math/p5-Spreadsheet-Read to 0.38 [seb 2010-01-25]
 	Updated math/p5-Spreadsheet-WriteExcel to 2.36 [seb 2010-01-25]
+	Updated devel/p5-Capture-Tiny to 0.07 [seb 2010-01-25]
