@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/24 20:00:06 gls Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/25 13:55:53 drochner Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,7 +16,7 @@ DEPENDS+=	p5-URI>=0:../../www/p5-URI
 
 PKGCONFIG_OVERRIDE+=	exo/exo-0.3.pc.in exo-hal/exo-hal-0.3.pc.in
 
-CONFIGURE_ARGS+=»·······--disable-python
+CONFIGURE_ARGS+=	--disable-python
 
 PKG_SYSCONFSUBDIR=	xdg/xfce4
 EGDIR=			${XFCE4_EGBASE}
