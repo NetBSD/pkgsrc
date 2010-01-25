@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.339 2010/01/25 23:38:26 seb Exp $
+$NetBSD: CHANGES-2010,v 1.340 2010/01/25 23:51:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -389,3 +389,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-CoreList to 2.25 [seb 2010-01-25]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.083 [seb 2010-01-25]
 	Updated time/p5-DateTime-TimeZone to 1.10 [seb 2010-01-25]
+	Updated time/p5-DateTime to 0.5300 [seb 2010-01-25]
