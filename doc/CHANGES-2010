@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.331 2010/01/25 14:33:24 sno Exp $
+$NetBSD: CHANGES-2010,v 1.332 2010/01/25 14:44:35 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -380,3 +380,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-MinimumVersion to 0.013 [sno 2010-01-25]
 	Updated time/p5-Time-Piece to 1.16 [sno 2010-01-25]
 	Updated textproc/p5-Template-Tiny to 0.10 [sno 2010-01-25]
+	Updated www/seamonkey to 2.0.2 [tnn 2010-01-25]
+	Updated mail/thunderbird to 3.0.1 [tnn 2010-01-25]
