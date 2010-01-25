@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/07/23 09:33:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/01/25 20:08:28 markd Exp $
 bin/rdfproc
 bin/redland-config
 bin/redland-db-upgrade
@@ -8,6 +8,7 @@ include/rdf_digest.h
 include/rdf_hash.h
 include/rdf_init.h
 include/rdf_iterator.h
+include/rdf_list.h
 include/rdf_log.h
 include/rdf_model.h
 include/rdf_node.h
@@ -58,6 +59,7 @@ share/gtk-doc/html/redland/redland-storage-module-postgresql.html
 share/gtk-doc/html/redland/redland-storage-module-sqlite.html
 share/gtk-doc/html/redland/redland-storage-module-tstore.html
 share/gtk-doc/html/redland/redland-storage-module-uri.html
+share/gtk-doc/html/redland/redland-storage-module-virtuoso.html
 share/gtk-doc/html/redland/redland-storage-modules.html
 share/gtk-doc/html/redland/redland-storage.html
 share/gtk-doc/html/redland/redland-stream.html
@@ -70,6 +72,7 @@ share/gtk-doc/html/redland/redland.html
 share/gtk-doc/html/redland/reference-manual.html
 share/gtk-doc/html/redland/right.png
 share/gtk-doc/html/redland/style.css
+share/gtk-doc/html/redland/tutorial-introduction.html
 share/gtk-doc/html/redland/tutorial.html
 share/gtk-doc/html/redland/up.png
 share/redland/Redland.i
