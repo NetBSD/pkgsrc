@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2010/01/18 09:58:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/25 14:05:22 adam Exp $
 
-DISTNAME=	pgadmin3-1.8.4
-PKGREVISION=	2
+.include "../../databases/postgresql84/Makefile.mirrors"
+
+DISTNAME=	pgadmin3-1.10.1
 CATEGORIES=	databases
-MASTER_SITES=	http://www.pgadmin.org/
+MASTER_SITES=	${PGSQL_MIRRORS:=pgadmin3/release/v1.10.1/src/}
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.pgadmin.org/
@@ -11,20 +12,14 @@ COMMENT=	Graphical PostgreSQL client and administration tool
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake msgfmt
-
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-wx=${BUILDLINK_PREFIX.wxGTK28}
 
-# CONFIGURE_ARGS+=	--enable-debug
-# PLIST_VARS.debug=	yes
-
-PLIST_VARS+=	debug
-
-.include "../../mk/pgsql.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../x11/wxGTK28-contrib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
