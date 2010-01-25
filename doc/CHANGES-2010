@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.316 2010/01/25 12:08:51 sno Exp $
+$NetBSD: CHANGES-2010,v 1.317 2010/01/25 12:15:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -365,3 +365,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/p5-Spreadsheet-ParseExcel to 0.5700 [seb 2010-01-24]
 	Updated archivers/pigz to 2.1.6 [zafer 2010-01-25]
 	Updated converters/p5-Unicode-Map8 to 0.13 [sno 2010-01-25]
+	Updated devel/p5-ExtUtils-XSpp to 0.07 [sno 2010-01-25]
