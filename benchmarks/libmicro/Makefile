@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/22 00:45:54 jym Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/25 00:35:48 zafer Exp $
 #
 
 DISTNAME=	libmicro-${LIBMICRO_VERSION}
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://hub.opensolaris.org/bin/download/Project+libmicro/files/
+MASTER_SITES=	http://hub.opensolaris.org/bin/download/Project+libmicro/Source+Archives/
 
 LIBMICRO_VERSION=	0.4.0
 
