@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.317 2010/01/25 12:15:01 sno Exp $
+$NetBSD: CHANGES-2010,v 1.318 2010/01/25 12:26:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -366,3 +366,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated archivers/pigz to 2.1.6 [zafer 2010-01-25]
 	Updated converters/p5-Unicode-Map8 to 0.13 [sno 2010-01-25]
 	Updated devel/p5-ExtUtils-XSpp to 0.07 [sno 2010-01-25]
+	Updated devel/p5-File-Find-Rule to 0.32 [sno 2010-01-25]
