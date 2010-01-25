@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.319 2010/01/25 12:55:57 sno Exp $
+$NetBSD: CHANGES-2010,v 1.320 2010/01/25 13:07:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -368,3 +368,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-ExtUtils-XSpp to 0.07 [sno 2010-01-25]
 	Updated devel/p5-File-Find-Rule to 0.32 [sno 2010-01-25]
 	Updated devel/p5-File-HomeDir to 0.89 [sno 2010-01-25]
+	Updated devel/p5-File-ShareDir to 1.01 [sno 2010-01-25]
