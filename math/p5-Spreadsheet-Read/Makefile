@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/11/10 13:21:14 seb Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/25 21:49:30 seb Exp $
 #
 
-DISTNAME=	Spreadsheet-Read-0.37
+DISTNAME=	Spreadsheet-Read-0.38
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Spreadsheet/}
@@ -22,10 +22,12 @@ REPLACE_PERL+=	Read.pm
 
 DEPENDS+=	p5-Spreadsheet-ParseExcel>=0.49:../../math/p5-Spreadsheet-ParseExcel
 DEPENDS+=	p5-Spreadsheet-ReadSXC>=0.20:../../math/p5-Spreadsheet-ReadSXC
-DEPENDS+=	p5-Text-CSV_XS>=0.69:../../textproc/p5-Text-CSV_XS
-DEPENDS+=	p5-Text-CSV>=1.15:../../textproc/p5-Text-CSV
+DEPENDS+=	p5-Text-CSV_XS>=0.70:../../textproc/p5-Text-CSV_XS
+DEPENDS+=	p5-Text-CSV>=1.16:../../textproc/p5-Text-CSV
 DEPENDS+=	p5-Spreadsheet-XLSX>=0.12:../../math/p5-Spreadsheet-XLSX
 DEPENDS+=	p5-Spreadsheet-ReadSXC>=0.20:../../math/p5-Spreadsheet-ReadSXC
+DEPENDS+=	p5-File-Temp>=0.22:../../devel/p5-File-Temp
+DEPENDS+=	p5-IO-stringy>=0:../../devel/p5-IO-stringy
 
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 BUILD_DEPENDS+=	p5-Test-Simple>=0.88:../../devel/p5-Test-Simple
