@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.346 2010/01/26 06:17:52 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.347 2010/01/26 09:03:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -397,3 +397,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated cross/avrdude to 5.8nb2 [jakllsch 2010-01-26]
 	Updated www/ikiwiki to 3.20100122 [schmonz 2010-01-26]
 	Updated sysutils/hal to 0.5.11nb27 [macallan 2010-01-26]
+	Updated geography/gdal-lib to 1.6.3nb2 [adam 2010-01-26]
+	Updated geography/mapserver to 5.6.1 [adam 2010-01-26]
