@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.11 2010/01/26 09:00:42 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.12 2010/01/26 16:05:07 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -33,3 +33,7 @@ Pullup ticket #2970 - requested by markd
 kdenetwork4: build fix
 Pullup ticket #2971 - requested by tron
 imap-uw: build fix
+Pullup ticket #2972 - requested by tron
+phpmyadmin: security update
+Pullup ticket #2973 - requested by tron
+python26: build fix
