@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.342 2010/01/26 01:23:37 reed Exp $
+$NetBSD: CHANGES-2010,v 1.343 2010/01/26 02:01:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -393,3 +393,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Data-OptList to 0.105 [seb 2010-01-26]
 	Added devel/googletest version 1.4.0 [reed 2010-01-26]
 	Added devel/lcov version 1.7 [reed 2010-01-26]
+	Updated www/ja-trac to 0.11.6pl1 [obache 2010-01-26]
