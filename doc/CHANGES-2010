@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.350 2010/01/26 11:38:26 sno Exp $
+$NetBSD: CHANGES-2010,v 1.351 2010/01/26 11:54:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -402,3 +402,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Class-Throwable version 0.11 [sno 2010-01-26]
 	Updated www/p5-Catalyst-Plugin-Authentication to 0.100160 [sno 2010-01-26]
 	Added www/p5-Catalyst-Plugin-Authorization-ACL version 0.15 [sno 2010-01-26]
+	Updated databases/p5-DBIx-Class to 0.08115 [sno 2010-01-26]
