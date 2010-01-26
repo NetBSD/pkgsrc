@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.363 2010/01/26 16:06:29 sno Exp $
+$NetBSD: CHANGES-2010,v 1.364 2010/01/26 16:11:44 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -415,3 +415,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/fengoffice to 1.6.2 [taca 2010-01-26]
 	Added www/p5-HTML-FormFu version 0.06001 [sno 2010-01-26]
 	Added www/p5-Catalyst-Controller-HTML-FormFu version 0.06001 [sno 2010-01-26]
+	Updated devel/p5-ExtUtils-ParseXS to 2.22.01 [sno 2010-01-26]
