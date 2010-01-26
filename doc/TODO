@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8923 2010/01/26 04:59:29 schmonz Exp $
+$NetBSD: TODO,v 1.8924 2010/01/26 09:03:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -897,7 +897,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o maketool-0.8.4
 	o makeztxt-1.60
 	o manedit-1.2.1
-	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
 	o mathomatic-15.0.3
