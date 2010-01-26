@@ -1,40 +1,57 @@
-# $NetBSD: Makefile,v 1.20 2010/01/18 09:58:55 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.21 2010/01/26 09:01:24 adam Exp $
 
-DISTNAME=		mapserver-4.0
-PKGREVISION=		7
-CATEGORIES=		geography www
-MASTER_SITES=		http://download.osgeo.org/mapserver/
+DISTNAME=	mapserver-5.6.1
+CATEGORIES=	geography www
+MASTER_SITES=	http://download.osgeo.org/mapserver/
 
-MAINTAINER=		hdp@cs.msu.edu
-HOMEPAGE=		http://mapserver.gis.umn.edu/
-COMMENT=		Environment for building spatially enabled Internet apps
+MAINTAINER=	hdp@cs.msu.edu
+HOMEPAGE=	http://mapserver.org/
+COMMENT=	Environment for building spatially enabled Internet apps
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+CONFIGURE_ARGS+=	--with-cairo
+CONFIGURE_ARGS+=	--with-freetype
+CONFIGURE_ARGS+=	--with-fribidi-config=${BUILDLINK_PREFIX.fribidi}/bin/fribidi-config
+CONFIGURE_ARGS+=	--with-gdal
+CONFIGURE_ARGS+=	--with-gd=${BUILDLINK_PREFIX.gd}
+CONFIGURE_ARGS+=	--with-geos
+CONFIGURE_ARGS+=	--with-libiconv
+CONFIGURE_ARGS+=	--with-ogr
+CONFIGURE_ARGS+=	--with-png
+CONFIGURE_ARGS+=	--with-proj
+CONFIGURE_ARGS+=	--with-wcs
+CONFIGURE_ARGS+=	--with-wfs
+CONFIGURE_ARGS+=	--with-zlib
 
-CONFIGURE_ARGS+=	--with-gd=${PREFIX:Q}				\
-			--with-libiconv=${PREFIX:Q}			\
-			--with-zlib=${BUILDLINK_PREFIX.zlib}
-
-INSTALLATION_DIRS=	bin include lib
+INSTALLATION_DIRS=	bin lib libexec/cgi-bin
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libmap.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/map.h ${DESTDIR}${PREFIX}/include
-.for f in shp2img shp2pdf mapserv legend shptree shptreevis		\
-	shptreetst scalebar sortshp
-	${INSTALL_PROGRAM} ${WRKSRC}/${f:Q} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/libmapserver.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_PROGRAM} ${WRKSRC}/mapserv ${DESTDIR}${PREFIX}/libexec/cgi-bin
+.for f in legend msencrypt scalebar shp2img shp2pdf \
+	shptree shptreetst shptreevis sortshp tile4ms
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
 
+.include "options.mk"
+
+.include "../../converters/fribidi/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../geography/gdal-lib/buildlink3.mk"
+.include "../../geography/geos/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../misc/proj/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
