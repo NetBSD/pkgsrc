@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2009/08/27 15:34:48 hasso Exp $
+$NetBSD: patch-ae,v 1.5 2010/01/26 02:01:47 jakllsch Exp $
 
 - add missing AM_PROG_CC_C_O that automake wants for the yacc
   sources.
@@ -8,7 +8,7 @@ $NetBSD: patch-ae,v 1.4 2009/08/27 15:34:48 hasso Exp $
   platforms available and they're not the same for different
   MACHINE_ARCH's in NetBSD).
 
---- configure.ac.orig	2009-07-11 00:52:03 +0200
+--- configure.ac.orig	2009-07-10 22:52:03.000000000 +0000
 +++ configure.ac
 @@ -74,6 +74,7 @@ AC_CHECK_HEADERS([ddk/hidsdi.h],,,[#incl
  
