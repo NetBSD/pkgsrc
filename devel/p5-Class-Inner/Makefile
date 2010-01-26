@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2008/10/19 19:17:48 he Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/26 16:20:23 sno Exp $
 
-DISTNAME=	Class-Inner-0.1
-PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+DISTNAME=	Class-Inner-0.200001
+PKGNAME=	p5-${DISTNAME:S/200001/200.001/}
+#PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cpan.uwinnipeg.ca/search?query=Class%3A%3AInner&mode=dist
+HOMEPAGE=	http://search.cpan.org/dist/Class-Inner/
 COMMENT=	Perlish implementation of Java like inner classes
+LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
