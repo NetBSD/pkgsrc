@@ -1,0 +1,4 @@
+LCOV is a front-end around gcov, the GCC code coverage tool. It
+collects the gcov data and creates HTML webpages showing coverage
+rates using bar graphs and specific colors.  It can also create
+webpages for browsing the source code.

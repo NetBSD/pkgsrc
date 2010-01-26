@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/26 01:05:04 reed Exp $
+bin/lcov
+bin/genhtml
+bin/geninfo
+bin/genpng
+bin/gendesc
+man/man1/lcov.1
+man/man1/genhtml.1
+man/man1/geninfo.1
+man/man1/genpng.1
+man/man1/gendesc.1
+man/man5/lcovrc.5
+share/examples/lcov/lcovrc
