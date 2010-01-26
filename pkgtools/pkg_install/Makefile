@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2010/01/22 13:30:41 joerg Exp $
+# $NetBSD: Makefile,v 1.171 2010/01/26 15:48:13 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -91,6 +91,8 @@ BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.5.4b
 .include "../../archivers/libarchive/builtin.mk"
 .include "../../devel/zlib/builtin.mk"
 .include "../../security/openssl/builtin.mk"
+
+.include "options.mk"
 
 .if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--with-ssl
