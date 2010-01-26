@@ -1,0 +1,22 @@
+Iso9660 Analyzer Tool is a free utility tool for detecting the
+structure of DVD/CD-ROM image file formats; the tool supports many
+CD/DVD-ROM data image file formats.
+
+Iso9660 Analyzer Tool provides the conversion of any image format
+to an UDF/ISO for easy mounting in your favorite Operating System.
+The tool also permits the creation of TOC or CUE file descriptor
+to burn the image easily with your favorite burner on your favorite
+Operating System. If the image is not compliant with TOC or CUE,
+it should be converted to UDF/ISO format which can be mounted upon
+any Operating System.
+
+If the Operating System does not support image of DVD/CD-ROM, then
+creating the TOC file descriptor is a good option burn 1:1 original
+image. Iso9960 Analyzer Tool provides option to create TOC file
+descriptor. Note some application does not support TOC descriptor.
+
+Similarly, if the Operating System does not support image of
+DVD/CD-ROM, then creating the CUE file descriptor is also a good
+option. Iso9960 Analyzer Tool provides option to create CUE file
+descriptor. Note the creation of CUE might not work with protected
+image.
