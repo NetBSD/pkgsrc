@@ -1,0 +1,21 @@
+This module provides Access Control List style path protection, with
+arbitrary rules for Catalyst applications. It operates only on the
+Catalyst private namespace, at least at the moment.
+
+The two hierarchies of actions and controllers in Catalyst are:
+* Private Namespace
+    Every action has its own private path. This path reflects the Perl
+    namespaces the actions were born in, and the namespaces of their
+    controllers.
+* External Namespace
+    Some actions are also directly accessible from the outside, via a URL.
+    The private and external paths will be the same, if you are using
+    Local actions. Alternatively Path, Regex, or Global can be used to
+    specify a different external path for an action.
+
+The ACL module currently only knows to exploit the private namespace. In
+the future extensions may be made to support external namespaces as well.
+
+When a path is visited, rules are tested one after the other, with the most
+exact rule fitting the path first, and continuing up the path. Testing
+continues until a rule explcitly allows or denies access.
