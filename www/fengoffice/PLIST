@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/20 15:39:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/26 15:36:24 taca Exp $
 ${FO_DIR}/application/application.php
 ${FO_DIR}/application/controllers/AccessController.class.php
 ${FO_DIR}/application/controllers/AccountController.class.php
@@ -873,6 +873,24 @@ ${FO_DIR}/language/it_it/fields.php
 ${FO_DIR}/language/it_it/general.php
 ${FO_DIR}/language/it_it/help.php
 ${FO_DIR}/language/it_it/help/dummy.txt
+${FO_DIR}/language/it_it/it_it/actions.php
+${FO_DIR}/language/it_it/it_it/administration.php
+${FO_DIR}/language/it_it/it_it/calendar.php
+${FO_DIR}/language/it_it/it_it/countries.php
+${FO_DIR}/language/it_it/it_it/emails.php
+${FO_DIR}/language/it_it/it_it/errors.php
+${FO_DIR}/language/it_it/it_it/fields.php
+${FO_DIR}/language/it_it/it_it/general.php
+${FO_DIR}/language/it_it/it_it/help.php
+${FO_DIR}/language/it_it/it_it/lang.js
+${FO_DIR}/language/it_it/it_it/messages.php
+${FO_DIR}/language/it_it/it_it/objects.php
+${FO_DIR}/language/it_it/it_it/project_interface.php
+${FO_DIR}/language/it_it/it_it/reporting.php
+${FO_DIR}/language/it_it/it_it/site_interface.php
+${FO_DIR}/language/it_it/it_it/slimey.js
+${FO_DIR}/language/it_it/it_it/timezones.php
+${FO_DIR}/language/it_it/it_it/upgrade.php
 ${FO_DIR}/language/it_it/lang.js
 ${FO_DIR}/language/it_it/messages.php
 ${FO_DIR}/language/it_it/objects.php
@@ -2808,7 +2826,6 @@ ${FO_DIR}/public/assets/themes/default/images/im/skype.gif
 ${FO_DIR}/public/assets/themes/default/images/im/yahoo.gif
 ${FO_DIR}/public/assets/themes/default/images/layout/header_bottom.gif
 ${FO_DIR}/public/assets/themes/default/images/layout/loading.gif
-${FO_DIR}/public/assets/themes/default/images/layout/logo.png
 ${FO_DIR}/public/assets/themes/default/images/layout/login/b1.png
 ${FO_DIR}/public/assets/themes/default/images/layout/login/b2.png
 ${FO_DIR}/public/assets/themes/default/images/layout/login/b3.png
@@ -2823,6 +2840,7 @@ ${FO_DIR}/public/assets/themes/default/images/layout/login/top2.png
 ${FO_DIR}/public/assets/themes/default/images/layout/login/top3.png
 ${FO_DIR}/public/assets/themes/default/images/layout/login/top4.png
 ${FO_DIR}/public/assets/themes/default/images/layout/login/top5.png
+${FO_DIR}/public/assets/themes/default/images/layout/logo.png
 ${FO_DIR}/public/assets/themes/default/images/layout/options.png
 ${FO_DIR}/public/assets/themes/default/images/layout/search/search_bl.png
 ${FO_DIR}/public/assets/themes/default/images/layout/search/search_br.png
