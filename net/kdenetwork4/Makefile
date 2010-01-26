@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/10/11 08:13:39 markd Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2010/01/26 08:22:59 tron Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -14,6 +14,7 @@ CONFLICTS=	kopete-[0-9]*
 UNLIMIT_RESOURCES+=	datasize memorysize stacksize
 
 CMAKE_ARGS+=	-DWITH_Xmms:BOOL=OFF
+CMAKE_ARGS+=	-DWITH_LibV4L2:BOOL=OFF
 
 REPLACE_PERL+= \
 	kopete/kopete/kconf_update/kopete-account-0.10.pl \
