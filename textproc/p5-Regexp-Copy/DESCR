@@ -1,0 +1,9 @@
+Regexp::Copy can copy the contents of one Regexp object to another. Regexp
+objects created with qr// are impossible to dereference. This causes problems
+on changing the data within the Regexp objects without want to loose the
+reference on it. Regexp::Copy allows to change the Regexp by copying one
+object created through qr// to another.
+
+The Regex::Copy distribution also loads Regexp::Storable, which provides
+hooks to allow the Storable persistence method to freeze and thaw Regexp
+objects created by qr//.
