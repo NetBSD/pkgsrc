@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2009/04/07 10:26:58 drochner Exp $
+$NetBSD: MESSAGE,v 1.2 2010/01/26 17:40:23 drochner Exp $
 
 Depending on the use of this program, various additional "gstreamer"
 plugins may be needed, eg for:
@@ -7,7 +7,6 @@ plugins may be needed, eg for:
  audio/gst-plugins0.10-fluendo-mp3
 -MPEG4 video: multimedia/gst-plugins0.10-x264 and
  audio/gst-plugins0.10-faad
--streaming web services (youtube, jamendo): net/gst-plugins0.10-soup
 -DVD playback: multimedia/gst-plugins0.10-resindvd,
  audio/gst-plugins0.10-a52 (or in rare cases gst-plugins0.10-dts)
 
