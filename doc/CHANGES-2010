@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.351 2010/01/26 11:54:26 sno Exp $
+$NetBSD: CHANGES-2010,v 1.352 2010/01/26 12:04:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -403,3 +403,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Catalyst-Plugin-Authentication to 0.100160 [sno 2010-01-26]
 	Added www/p5-Catalyst-Plugin-Authorization-ACL version 0.15 [sno 2010-01-26]
 	Updated databases/p5-DBIx-Class to 0.08115 [sno 2010-01-26]
+	Updated databases/phpmyadmin to 2.11.10 [tron 2010-01-26]
