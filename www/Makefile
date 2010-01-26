@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.685 2010/01/26 15:45:03 sno Exp $
+# $NetBSD: Makefile,v 1.686 2010/01/26 16:07:33 sno Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -260,6 +260,7 @@ SUBDIR+=	p5-Catalyst-Component-ACCEPT_CONTEXT
 SUBDIR+=	p5-Catalyst-Component-InstancePerContext
 SUBDIR+=	p5-Catalyst-Controller-BindLex
 SUBDIR+=	p5-Catalyst-Controller-FormBuilder
+SUBDIR+=	p5-Catalyst-Controller-HTML-FormFu
 SUBDIR+=	p5-Catalyst-Devel
 SUBDIR+=	p5-Catalyst-Engine-JobQueue-POE
 SUBDIR+=	p5-Catalyst-Manual
