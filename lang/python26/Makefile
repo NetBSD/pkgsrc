@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2009/12/20 23:58:27 tnn Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2010/01/26 16:02:46 spz Exp $
 
 DISTNAME=	Python-2.6.4
 PKGNAME=	${DISTNAME:S/Python/python26/}
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/2.6.4/
 EXTRACT_SUFX=	.tar.bz2
@@ -109,7 +109,7 @@ PLIST.oss=	yes
 INSTALL_UNSTRIPPED=	yes
 
 PLIST_VARS+=	nav
-.  if ${ABI} != "64"
+.  if !defined(ABI) || ${ABI} != "64"
 PLIST.nav=	yes
 .  endif
 .endif
