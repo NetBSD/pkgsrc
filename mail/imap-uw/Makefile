@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2009/08/21 11:55:50 obache Exp $
+# $NetBSD: Makefile,v 1.131.4.1 2010/01/26 08:59:08 spz Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -37,7 +37,13 @@ MAKE_JOBS_SAFE=	no
 
 # Each platform has its own special target in the imap Makefiles.
 OPSYSVARS+=		BUILD_TARGET
+
+.include "../../mk/compiler.mk"
+.  if empty(CC_VERSION:Mgcc-)
+BUILD_TARGET.SunOS=	soc
+.  else
 BUILD_TARGET.SunOS=	gso
+.  endif
 .if ${OPSYS} == Linux && exists(/usr/include/security/pam_appl.h)
 BUILD_TARGET.Linux=	lnp
 .else
