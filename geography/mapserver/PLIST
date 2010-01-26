@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/05 17:41:30 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/26 09:01:24 adam Exp $
 bin/legend
-bin/mapserv
+bin/msencrypt
 bin/scalebar
 bin/shp2img
 bin/shp2pdf
@@ -8,5 +8,6 @@ bin/shptree
 bin/shptreetst
 bin/shptreevis
 bin/sortshp
-include/map.h
-lib/libmap.a
+bin/tile4ms
+lib/libmapserver.a
+libexec/cgi-bin/mapserv
