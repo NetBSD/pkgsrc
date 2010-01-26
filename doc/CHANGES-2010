@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.360 2010/01/26 15:30:20 sno Exp $
+$NetBSD: CHANGES-2010,v 1.361 2010/01/26 15:37:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -412,3 +412,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight27-translations to 20100126 [taca 2010-01-26]
 	Added textproc/p5-Regexp-Copy version 0.06 [sno 2010-01-26]
 	Added devel/p5-Hash-Flatten version 1.16 [sno 2010-01-26]
+	Updated www/fengoffice to 1.6.2 [taca 2010-01-26]
