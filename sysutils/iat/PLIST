@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/26 19:37:23 wiz Exp $
+bin/iat
+include/calculate_pregap.h
+include/cmdline.h
+include/convert_2_iso.h
+include/debug.h
+include/define.h
+include/ecma119.h
+include/ecma167.h
+include/mkcore.h
+include/mkcue.h
+include/mktoc.h
+include/mmc2r11.h
+include/util.h
+man/man1/iat.1
