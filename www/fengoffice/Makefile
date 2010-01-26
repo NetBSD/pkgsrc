@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/20 15:39:45 taca Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/26 15:36:24 taca Exp $
 #
 
-DISTNAME=	fengoffice_1.6.1
+DISTNAME=	fengoffice_1.6.2
 PKGNAME=	${DISTNAME:S/_/-/:S/.rc/rc1/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
 EXTRACT_SUFX=	.zip
-DIST_SUBDIR=	${PKGBASE}-20091219
+DIST_SUBDIR=	${PKGBASE}-20100126
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://fengoffice.com/web/community/community_index.php

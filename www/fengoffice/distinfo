@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/20 15:39:48 taca Exp $
+$NetBSD: distinfo,v 1.2 2010/01/26 15:36:24 taca Exp $
 
-SHA1 (fengoffice-20091219/fengoffice_1.6.1.zip) = 08c5550548a31b2ed4f2e3d2ca5103388ee88344
-RMD160 (fengoffice-20091219/fengoffice_1.6.1.zip) = fb3384a985093e309909c91c18e6ced8d84b2596
-Size (fengoffice-20091219/fengoffice_1.6.1.zip) = 7242305 bytes
+SHA1 (fengoffice-20100126/fengoffice_1.6.2.zip) = 152496806db90b40315e74bf55b29f92db5ad7cd
+RMD160 (fengoffice-20100126/fengoffice_1.6.2.zip) = 5e68da7d830c035849b628030247ebc336bfe4ec
+Size (fengoffice-20100126/fengoffice_1.6.2.zip) = 7317725 bytes
