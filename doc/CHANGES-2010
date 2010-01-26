@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.366 2010/01/26 16:20:33 sno Exp $
+$NetBSD: CHANGES-2010,v 1.367 2010/01/26 16:24:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -418,3 +418,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-ExtUtils-ParseXS to 2.22.01 [sno 2010-01-26]
 	Updated devel/p5-Class-Accessor-Named to 0.009 [sno 2010-01-26]
 	Updated devel/p5-Class-Inner to 0.200.001 [sno 2010-01-26]
+	Updated devel/xulrunner to 1.9.1.7 [tron 2010-01-26]
+	Updated www/firefox to 3.5.7 [tron 2010-01-26]
