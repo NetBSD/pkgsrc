@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2010/01/26 09:01:24 adam Exp $
+
+--- configure.orig	2009-11-27 21:16:01.000000000 +0000
++++ configure
+@@ -9186,7 +9186,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-    if test "$FT_BIN" == "no" ; then
++    if test "$FT_BIN" = "no" ; then
+       { { echo "$as_me:$LINENO: error: the freetype-config executable could not be found and is required for agg support
+         to fix this, you should either:
+         * install the freetype development headers
+@@ -12159,7 +12159,7 @@ if test "$FRIBIDI_CONFIG" = "no" ; then
+   FRIBIDI_INC=
+   FRIBIDI_LIB=
+ else
+-  if test "$FRIBIDI_PKG_CONFIG" = "yes" -o ${FRIBIDI_CONFIG: -3} = ".pc" ; then
++  if test "$FRIBIDI_PKG_CONFIG" = "yes"; then
+      echo "$as_me:$LINENO: result: yes, user supplied path to fribidi.pc" >&5
+ echo "${ECHO_T}yes, user supplied path to fribidi.pc" >&6
+      FRIBIDI_ENABLED="-DUSE_FRIBIDI -DUSE_FRIBIDI2"
