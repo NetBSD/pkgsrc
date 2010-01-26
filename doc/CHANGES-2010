@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.356 2010/01/26 12:25:56 sno Exp $
+$NetBSD: CHANGES-2010,v 1.357 2010/01/26 12:34:16 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -408,3 +408,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001009 [sno 2010-01-26]
 	Updated lang/python26 to 2.6.4nb4 [tron 2010-01-26]
 	Updated devel/p5-Variable-Magic to 0.40 [sno 2010-01-26]
+	Updated databases/p5-DBIx-DBSchema to 0.38 [sno 2010-01-26]
