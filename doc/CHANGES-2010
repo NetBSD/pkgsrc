@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.365 2010/01/26 16:15:22 sno Exp $
+$NetBSD: CHANGES-2010,v 1.366 2010/01/26 16:20:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -417,3 +417,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Catalyst-Controller-HTML-FormFu version 0.06001 [sno 2010-01-26]
 	Updated devel/p5-ExtUtils-ParseXS to 2.22.01 [sno 2010-01-26]
 	Updated devel/p5-Class-Accessor-Named to 0.009 [sno 2010-01-26]
+	Updated devel/p5-Class-Inner to 0.200.001 [sno 2010-01-26]
