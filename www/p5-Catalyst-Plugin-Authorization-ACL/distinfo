@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/26 11:37:33 sno Exp $
+
+SHA1 (Catalyst-Plugin-Authorization-ACL-0.15.tar.gz) = 4b4bb17cf942d838aa97085f5641be913492b23d
+RMD160 (Catalyst-Plugin-Authorization-ACL-0.15.tar.gz) = f4a401b8f1bc8164dd9596ee23191037301d3f1b
+Size (Catalyst-Plugin-Authorization-ACL-0.15.tar.gz) = 33366 bytes
