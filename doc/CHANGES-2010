@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.358 2010/01/26 13:45:35 taca Exp $
+$NetBSD: CHANGES-2010,v 1.359 2010/01/26 15:12:42 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -410,3 +410,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Variable-Magic to 0.40 [sno 2010-01-26]
 	Updated databases/p5-DBIx-DBSchema to 0.38 [sno 2010-01-26]
 	Updated www/typolight27-translations to 20100126 [taca 2010-01-26]
+	Added textproc/p5-Regexp-Copy version 0.06 [sno 2010-01-26]
