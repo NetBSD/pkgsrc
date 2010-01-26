@@ -1,0 +1,2 @@
+Catalyst::Controller::HTML::FormFu provides Catalyst integration for
+HTML::FormFu.
