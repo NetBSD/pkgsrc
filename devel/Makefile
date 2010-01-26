@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1280 2010/01/26 09:33:12 sno Exp $
+# $NetBSD: Makefile,v 1.1281 2010/01/26 15:30:55 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -656,6 +656,7 @@ SUBDIR+=	p5-Graph
 SUBDIR+=	p5-Gtk2-GladeXML
 SUBDIR+=	p5-Guard
 SUBDIR+=	p5-Hash-Case
+SUBDIR+=	p5-Hash-Flatten
 SUBDIR+=	p5-Hash-Merge
 SUBDIR+=	p5-Hash-MoreUtils
 SUBDIR+=	p5-Hash-Util-FieldHash-Compat
