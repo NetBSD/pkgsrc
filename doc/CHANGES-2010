@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.369 2010/01/26 17:41:04 tron Exp $
+$NetBSD: CHANGES-2010,v 1.370 2010/01/26 19:38:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -422,3 +422,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/xulrunner to 1.9.1.7 [tron 2010-01-26]
 	Updated www/firefox to 3.5.7 [tron 2010-01-26]
 	Updated devel/p5-Class-Std to 0.0.11 [sno 2010-01-26]
+	Added sysutils/iat version 0.1.7 [wiz 2010-01-26]
