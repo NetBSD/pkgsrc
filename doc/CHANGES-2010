@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.354 2010/01/26 12:13:42 sno Exp $
+$NetBSD: CHANGES-2010,v 1.355 2010/01/26 12:18:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -406,3 +406,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/phpmyadmin to 2.11.10 [tron 2010-01-26]
 	Updated time/p5-DateTime-Format-SQLite to 0.11 [sno 2010-01-26]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001009 [sno 2010-01-26]
+	Updated lang/python26 to 2.6.4nb4 [tron 2010-01-26]
