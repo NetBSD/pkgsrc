@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2010/01/06 13:19:45 obache Exp $
+# $NetBSD: Makefile,v 1.29 2010/01/26 02:01:36 obache Exp $
 #
 
-DISTNAME=	Trac-0.11.5.ja1
+DISTNAME=	Trac-0.11.6.ja1
 PKGNAME=	ja-${DISTNAME:tl:S/.ja/pl/}
-PKGREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	http://www.i-act.co.jp/project/products/downloads/
 EXTRACT_SUFX=	.zip
