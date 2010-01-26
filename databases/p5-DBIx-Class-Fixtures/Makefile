@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/09/24 06:50:11 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/26 12:13:32 sno Exp $
 
-DISTNAME=	DBIx-Class-Fixtures-1.001003
+DISTNAME=	DBIx-Class-Fixtures-1.001009
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
@@ -22,7 +22,7 @@ DEPENDS+=	p5-Data-Visitor>=0.15:../../devel/p5-Data-Visitor
 DEPENDS+=	p5-DateTime>=0.41:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-MySQL>=0.04:../../time/p5-DateTime-Format-MySQL
 DEPENDS+=	p5-DateTime-Format-Pg-[0-9]*:../../time/p5-DateTime-Format-Pg
-DEPENDS+=	p5-DateTime-Format-SQLite>=0.1:../../time/p5-DateTime-Format-SQLite
+DEPENDS+=	p5-DateTime-Format-SQLite>=0.10:../../time/p5-DateTime-Format-SQLite
 DEPENDS+=	p5-File-Copy-Recursive>=0.35:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-Hash-Merge>=0.10:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-Path-Class>=0.16:../../devel/p5-Path-Class
