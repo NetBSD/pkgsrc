@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/07 17:45:42 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/01/26 12:09:02 sno Exp $
 
-SHA1 (DateTime-Format-SQLite-0.10.tar.gz) = 0ec5881a3260262bdb9bab67befff8076e68633a
-RMD160 (DateTime-Format-SQLite-0.10.tar.gz) = f7e458a0590b420d016440d4f4f37e1f052f15f8
-Size (DateTime-Format-SQLite-0.10.tar.gz) = 12942 bytes
+SHA1 (DateTime-Format-SQLite-0.11.tar.gz) = a04f88268e2c3cddbdc33d4d2082779014b88ea4
+RMD160 (DateTime-Format-SQLite-0.11.tar.gz) = acb1ceccca1b0eaa0a809c4f810ea30bd41346f7
+Size (DateTime-Format-SQLite-0.11.tar.gz) = 13089 bytes
