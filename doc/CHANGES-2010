@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.345 2010/01/26 04:59:29 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.346 2010/01/26 06:17:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -396,3 +396,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ja-trac to 0.11.6pl1 [obache 2010-01-26]
 	Updated cross/avrdude to 5.8nb2 [jakllsch 2010-01-26]
 	Updated www/ikiwiki to 3.20100122 [schmonz 2010-01-26]
+	Updated sysutils/hal to 0.5.11nb27 [macallan 2010-01-26]
