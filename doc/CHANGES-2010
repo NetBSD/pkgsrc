@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.343 2010/01/26 02:01:50 obache Exp $
+$NetBSD: CHANGES-2010,v 1.344 2010/01/26 02:02:02 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -394,3 +394,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/googletest version 1.4.0 [reed 2010-01-26]
 	Added devel/lcov version 1.7 [reed 2010-01-26]
 	Updated www/ja-trac to 0.11.6pl1 [obache 2010-01-26]
+	Updated cross/avrdude to 5.8nb2 [jakllsch 2010-01-26]
