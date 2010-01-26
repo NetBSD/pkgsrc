@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.357 2010/01/26 12:34:16 sno Exp $
+$NetBSD: CHANGES-2010,v 1.358 2010/01/26 13:45:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -409,3 +409,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/python26 to 2.6.4nb4 [tron 2010-01-26]
 	Updated devel/p5-Variable-Magic to 0.40 [sno 2010-01-26]
 	Updated databases/p5-DBIx-DBSchema to 0.38 [sno 2010-01-26]
+	Updated www/typolight27-translations to 20100126 [taca 2010-01-26]
