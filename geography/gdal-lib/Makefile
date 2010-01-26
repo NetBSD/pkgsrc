@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2010/01/18 09:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/01/26 08:26:11 adam Exp $
 
 DISTNAME=	gdal-1.6.3
 PKGNAME=	gdal-lib-1.6.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/gdal/
 
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.gdal.org/
 COMMENT=	Translator library for raster geospatial data formats
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-#MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
@@ -39,8 +37,11 @@ CHECK_PORTABILITY_SKIP+=	mkbindist.sh
 INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
+.include "../../graphics/jasper/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
