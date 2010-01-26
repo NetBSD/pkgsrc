@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.38 2010/01/11 09:26:01 tron Exp $
+$NetBSD: distinfo,v 1.38.2.1 2010/01/26 08:59:08 spz Exp $
 
 SHA1 (imap-2007e.tar.Z) = 24c63cad8d0e74aa76e4341fcfa54d24f23a8c70
 RMD160 (imap-2007e.tar.Z) = 7d6af203419975f763d7ec17b6a4544c94490b50
 Size (imap-2007e.tar.Z) = 2789469 bytes
 SHA1 (patch-aa) = ac880c250dfee3d0d316063ace5b92cd2f190510
-SHA1 (patch-ab) = 0cfdae5b64f41d45c027483364216b20bc8724b4
+SHA1 (patch-ab) = c7985a2db4d4b5c8d2644492b2e48f8ebe2d64b1
 SHA1 (patch-ac) = eab1435fdf7ab59ea8afbde949a92dd756e6aea3
 SHA1 (patch-ad) = d817dca51413bb8d228c2fabadffa3b924dff11d
 SHA1 (patch-ae) = 85e0917ce1934f6789bbce45ad5321e28cf294d9
