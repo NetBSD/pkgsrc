@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2010/01/17 12:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2010/01/27 19:22:35 joerg Exp $
 #
 
 DISTNAME=		jpilot-1.6.0
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.jpilot.org/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.jpilot.org/
 COMMENT=		Desktop organizer application for the palm pilot
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		jpilot-libplugin-[0-9]*
 
@@ -36,13 +38,12 @@ PLUGINSDIR=		${PREFIX}/lib/jpilot/plugins
 post-extract:
 	${RM} -f ${WRKSRC}/po/Makefile.in
 
+INSTALLATION_DIRS=	${DOCDIR} ${INCDIR} ${PLUGINSIDR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${INCDIR}
-	${INSTALL_DATA_DIR} ${PLUGINSDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} libplugin.h prefs.h ${INCDIR}
-	${INSTALL_DATA} ${WRKSRC}/BUGS ${DOCDIR}
-	cd ${WRKSRC}/docs; ${INSTALL_MAN} *.1 ${MAN1DIR}
-	${TOUCH} ${PLUGINSDIR}/.directory
+	cd ${WRKSRC} && ${INSTALL_DATA} libplugin.h prefs.h ${DESTDIR}${INCDIR}
+	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${DOCDIR}
+	${INSTALL_MAN} ${WRKSRC}/docs/*.1 ${DESTDIR}${MAN1DIR}
+	${TOUCH} ${DESTDIR}${PLUGINSDIR}/.directory
 
 .include "../../mk/bsd.pkg.mk"
