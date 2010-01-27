@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2010/01/18 09:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2010/01/27 10:24:08 wiz Exp $
 #
 
 DISTNAME=		comix-4.0.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=comix/}
 
@@ -23,6 +23,8 @@ DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 MANCOMPRESSED=		yes
 
+.include "options.mk"
+
 SUBST_CLASSES+=			install-path
 SUBST_STAGE.install-path=	pre-build
 SUBST_MESSAGE.install-path=	Fixing man page installation path.
@@ -37,11 +39,11 @@ do-install:
 	cd ${WRKSRC} && ${PYTHONBIN} install.py install --dir ${DESTDIR}${PREFIX}
 
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/GConf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pyimaging+=	${PYPKGPREFIX}-imaging>=1.1.5
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.12
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
