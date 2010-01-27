@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.12 2010/01/26 16:05:07 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.13 2010/01/27 16:51:51 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -37,3 +37,13 @@ Pullup ticket #2972 - requested by tron
 phpmyadmin: security update
 Pullup ticket #2973 - requested by tron
 python26: build fix
+Pullup ticket #2974 - requested by wiz
+python25: build fix
+Pullup ticket #2975 - requested by wiz
+gnome-terminal: build fix
+gtk2: build fix
+libxcb: build fix
+py-xcbgen: build fix
+telepathy-gabble: build fix
+telepathy-glib: build fix
+telepathy-idle: build fix
