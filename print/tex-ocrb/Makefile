@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/07/22 09:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/27 16:27:49 joerg Exp $
 #
 
 DISTNAME=	ocr-b
@@ -30,13 +30,14 @@ do-extract:
 		${CP} ${DISTDIR}/${DIST_SUBDIR}/$$f ${WRKSRC}; \
 	done
 
+INSTALLATION_DIRS+=	${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb \
+			${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb \
+			${PKG_LOCALTEXMFPREFIX}/fonts/tfm/ocrb
+
 do-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/ocrb
 	${INSTALL_DATA} ${WRKSRC}/ocrbinfo \
-		${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb
+	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb
 	${INSTALL_DATA} ${WRKSRC}/*.mf \
-		${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb
+	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb
 
 .include "../../mk/bsd.pkg.mk"
