@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/03/08 19:17:10 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2010/01/27 18:21:56 joerg Exp $
 #
 
 DISTNAME=	html2ps-1.0b4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://user.it.uu.se/~jan/
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://user.it.uu.se/~jan/html2ps.html
 COMMENT=	HTML to PostScript converter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
@@ -25,8 +27,8 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/html2ps
-	@cd ${WRKSRC} && PATH=${LOCALBASE}/bin:${PREFIX}/bin ./install ${PREFIX}
-	@${INSTALL_DATA} ${WRKSRC}/sample ${PREFIX}/share/html2ps/sample.rc
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/html2ps
+	@cd ${WRKSRC} && PATH=${LOCALBASE}/bin:${PREFIX}/bin ./install ${DESTDIR}${PREFIX}
+	@${INSTALL_DATA} ${WRKSRC}/sample ${DESTDIR}${PREFIX}/share/html2ps/sample.rc
 
 .include "../../mk/bsd.pkg.mk"
