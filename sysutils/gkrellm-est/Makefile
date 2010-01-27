@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/17 12:02:45 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/27 18:57:54 joerg Exp $
 #
 
 DISTNAME=		gkrellm-est-20040710
@@ -10,6 +10,8 @@ MAINTAINER=		cube@NetBSD.org
 HOMEPAGE=		http://cubidou.nerim.net/gkrellm-est/
 COMMENT=		GKrellM plugin that controls EST-capable processors
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
@@ -20,7 +22,7 @@ ONLY_FOR_PLATFORM+=	DragonFly-1.[7-9].*-i386 DragonFly-[2-9].*-i386
 INSTALLATION_DIRS=	lib/gkrellm2/plugins
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/gkrellm-est.so ${PREFIX}/lib/gkrellm2/plugins
+	${INSTALL_DATA} ${WRKSRC}/gkrellm-est.so ${DESTDIR}${PREFIX}/lib/gkrellm2/plugins
 
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
