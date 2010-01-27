@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/08/16 15:35:44 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/01/27 17:38:00 joerg Exp $
 #
 
 DISTNAME=	trickle-1.06
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monkey.org/~marius/trickle/
 COMMENT=	Portable lightweight userspace bandwidth shaper
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
@@ -19,10 +21,10 @@ EGDIR=		${PREFIX}/share/examples/trickle
 CONF_FILES=	${EGDIR}/trickled.conf ${PKG_SYSCONFDIR}/trickled.conf
 
 RCD_SCRIPTS=	trickled
+INSTALLATION_DIRS+=	${EGDIR}
 
 pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/trickled.conf ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/trickled.conf ${DESTDIR}${EGDIR}
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
