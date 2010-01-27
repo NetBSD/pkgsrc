@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/11/04 14:27:37 reed Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/27 18:20:43 joerg Exp $
 
 DISTNAME=		ed-1.1
 CATEGORIES=		editors
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.gnu.org/software/ed/ed.html
 COMMENT=		GNU version of line-oriented text editor
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 
@@ -21,7 +23,6 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
-post-install:
-	cd ${WRKSRC} && ${MAKE} install-man
+INSTALL_TARGET=		install install-man
 
 .include "../../mk/bsd.pkg.mk"
