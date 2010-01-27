@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/05/19 08:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2010/01/27 21:13:11 joerg Exp $
 
 DISTNAME=		vlp4510e
 PKGNAME=		uvscan-5.10
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mcafee.com/us/enterprise/products/anti_virus/file_servers_desktops/virusscan_command_line_scanner_windows_unix.html
 COMMENT=		Evaluation version of a DOS/Windows file virus scanner
 LICENSE=		uvscan-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		restrictive 30 day evaluation license
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -39,7 +41,8 @@ CONF_FILES+=		${EGDATDIR}/names.dat ${UVSCANDIR}/names.dat
 CONF_FILES+=		${EGDATDIR}/scan.dat ${UVSCANDIR}/scan.dat
 REQD_DIRS=		${UVSCANDIR}
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 sbin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 sbin ${EGDATDIR} ${DOCDIR} \
+			${UVSCANDIR}
 
 USE_TOOLS+=		gtar:run
 
@@ -54,24 +57,22 @@ post-extract:
 	${CP} ${FILESDIR}/uvscan.sh ${WRKSRC}/uvscan.sh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/update_dat.sh ${PREFIX}/sbin/update_dat
-	${INSTALL_MAN} ${WRKSRC}/uvscan.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_SCRIPT} ${WRKSRC}/uvscan ${UVSCANDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/uvscan.sh ${PREFIX}/bin/uvscan
-	${INSTALL_DATA} ${WRKSRC}/liblnxfv.so.4 ${UVSCANDIR}
-	${LN} -s liblnxfv.so.4 ${UVSCANDIR}/liblnxfv.so
+	${INSTALL_SCRIPT} ${WRKSRC}/update_dat.sh ${DESTDIR}${PREFIX}/sbin/update_dat
+	${INSTALL_MAN} ${WRKSRC}/uvscan.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/uvscan ${DESTDIR}${UVSCANDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/uvscan.sh ${DESTDIR}${PREFIX}/bin/uvscan
+	${INSTALL_DATA} ${WRKSRC}/liblnxfv.so.4 ${DESTDIR}${UVSCANDIR}
+	${LN} -s liblnxfv.so.4 ${DESTDIR}${UVSCANDIR}/liblnxfv.so
 	for file in license.dat messages.dat; do			\
-		${INSTALL_DATA} ${WRKSRC}/$${file} ${UVSCANDIR};	\
+		${INSTALL_DATA} ${WRKSRC}/$${file} ${DESTDIR}${UVSCANDIR};	\
 	done
-	${INSTALL_DATA_DIR} ${EGDATDIR}
 	for file in ${DATFILES}; do					\
 		if [ -f ${WRKSRC}/$${file} ]; then			\
-			${INSTALL_DATA} ${WRKSRC}/$${file} ${EGDATDIR};	\
+			${INSTALL_DATA} ${WRKSRC}/$${file} ${DESTDIR}${EGDATDIR};	\
 		fi;							\
 	done
-	${INSTALL_DATA_DIR} ${DOCDIR}
 	for file in contact.txt e5100upg.pdf license.txt ; do		\
-		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR};		\
+		${INSTALL_DATA} ${WRKSRC}/$${file} ${DESTDIR}${DOCDIR};		\
 	done
 
 .include "../../mk/bsd.pkg.mk"

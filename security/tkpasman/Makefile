@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/01/18 05:09:42 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2010/01/27 21:15:45 joerg Exp $
 #
 
 DISTNAME=	TkPasMan-2.2a
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xs4all.nl/~wbsoft/linux/tkpasman.html
 COMMENT=	Username and password manager that uses the Tk toolkit
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFIG_SUBST=		PREFIX="${PREFIX}"
 CONFIG_SUBST+=		SHELL="${SH}"
 CONFIG_SUBST+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
@@ -21,7 +23,7 @@ CONFIG_SUBST_SED=	${CONFIG_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 .include "options.mk"
 
 BUILD_TARGET=		tkpasman
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/tkpasman
 
 post-extract:
 	${MV} ${WRKSRC}/config ${WRKSRC}/config.in
@@ -30,9 +32,8 @@ do-configure:
 	${SED} ${CONFIG_SUBST_SED} ${WRKSRC}/config.in > ${WRKSRC}/config
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tkpasman ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tkpasman
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tkpasman
+	${INSTALL_SCRIPT} ${WRKSRC}/tkpasman ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/tkpasman
 
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
