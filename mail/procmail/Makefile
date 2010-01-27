@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2010/01/21 17:41:07 heinz Exp $
+# $NetBSD: Makefile,v 1.45 2010/01/27 18:14:05 joerg Exp $
 #
 
 DISTNAME=	procmail-3.22
@@ -10,6 +10,8 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.procmail.org/
 COMMENT=	Local mail delivery agent
 LICENSE=	artistic OR gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -46,14 +48,14 @@ pre-configure:
 do-install:
 	cd ${WRKSRC}/new;						\
 	for f in procmail formail lockfile; do				\
-		${INSTALL_PROGRAM} $$f ${PREFIX}/bin/$$f;		\
+		${INSTALL_PROGRAM} $$f ${DESTDIR}${PREFIX}/bin/$$f;	\
 	done;								\
-	${INSTALL_SCRIPT} mailstat ${PREFIX}/bin/mailstat;		\
+	${INSTALL_SCRIPT} mailstat ${DESTDIR}${PREFIX}/bin/mailstat;	\
 	for f in procmail.1 formail.1 lockfile.1; do			\
-		${INSTALL_MAN} $$f ${PREFIX}/${PKGMANDIR}/man1/$$f;		\
+		${INSTALL_MAN} $$f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$$f; \
 	done;								\
 	for f in procmailex.5 procmailrc.5 procmailsc.5; do		\
-		${INSTALL_MAN} $$f ${PREFIX}/${PKGMANDIR}/man5/$$f;		\
+		${INSTALL_MAN} $$f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/$$f; \
 	done
 	${SH} ${WRKSRC}/suid.sh
 .endif
