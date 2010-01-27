@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 20:41:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/27 10:38:39 markd Exp $
 bin/kmag
 bin/kmousetool
 bin/kmouth
@@ -47,17 +47,12 @@ share/doc/kde/HTML/en/kmouth/kmouthmain.png
 share/doc/kde/HTML/en/kmouth/kmouthwizard.png
 share/doc/kde/HTML/en/kmouth/man-kmouth.1.docbook
 share/doc/kde/HTML/en/kttsd/addtalker.png
-share/doc/kde/HTML/en/kttsd/audio.png
 share/doc/kde/HTML/en/kttsd/common
-share/doc/kde/HTML/en/kttsd/festivalintconf.png
 share/doc/kde/HTML/en/kttsd/filters.png
 share/doc/kde/HTML/en/kttsd/general.png
 share/doc/kde/HTML/en/kttsd/index.cache.bz2
 share/doc/kde/HTML/en/kttsd/index.docbook
-share/doc/kde/HTML/en/kttsd/interruption.png
 share/doc/kde/HTML/en/kttsd/jobs.png
-share/doc/kde/HTML/en/kttsd/notifications.png
-share/doc/kde/HTML/en/kttsd/selecttalker.png
 share/doc/kde/HTML/en/kttsd/stringreplacer.png
 share/doc/kde/HTML/en/kttsd/talkerchooser.png
 share/doc/kde/HTML/en/kttsd/talkers.png
