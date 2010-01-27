@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2009/04/11 19:42:23 snj Exp $
+@comment $NetBSD: PLIST.common,v 1.4.6.1 2010/01/27 15:08:06 tron Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}-config
@@ -1565,7 +1565,6 @@ ${PLIST.nis}lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
 ${PLIST.no-nis}lib/python${PY_VER_SUFFIX}/lib-dynload/nis_failed.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/operator.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/parser.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/pyexpat.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/resource.so
 ${PLIST.extra-so}lib/python${PY_VER_SUFFIX}/lib-dynload/rgbimg.so
 ${PLIST.oss}lib/python${PY_VER_SUFFIX}/lib-dynload/ossaudiodev.so
