@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/21 21:59:13 zafer Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/27 14:53:31 joerg Exp $
 #
 
 DISTNAME=	mudsh
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xirium.com/tech/mud-shell/index.html
 COMMENT=	M.U.D. game-like shell
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
 
@@ -22,6 +24,6 @@ do-build:
 		${WRKSRC}/mudsh.orig >${WRKSRC}/mudsh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/mudsh ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/mudsh ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
