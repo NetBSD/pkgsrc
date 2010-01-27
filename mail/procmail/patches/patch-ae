@@ -1,31 +1,76 @@
-$NetBSD: patch-ae,v 1.6 2003/01/20 22:55:44 jschauma Exp $
+$NetBSD: patch-ae,v 1.7 2010/01/27 18:14:05 joerg Exp $
 
 If the ``Housekeeping'' lines stay, `make install; make deinstall; make install' fails.
 
---- Makefile.1.orig	Tue Sep 11 00:53:09 2001
-+++ Makefile.1	Mon Jan 20 17:21:22 2003
-@@ -88,7 +88,7 @@
- 	@-$(MKDIRS) $(MAN1DIR) 2>$(DEVNULL); exit 0
- 	@-test -d $(MAN5DIR) || $(RM) $(MAN5DIR); exit 0
- 	@-$(MKDIRS) $(MAN5DIR) 2>$(DEVNULL); exit 0
+--- Makefile.1.orig	2001-09-11 04:53:09.000000000 +0000
++++ Makefile.1
+@@ -73,49 +73,47 @@ suid.sh: recommend
+ install-suid: suid.sh install.bin
+ 	@cat suid.sh
+ 	@$(SHELL) ./suid.sh
+-	@cd $(BINDIR); echo Installed in $(BINDIR); ls -l $(BINSS)
++	@cd ${DESTDIR}$(BINDIR); echo Installed in ${DESTDIR}$(BINDIR); ls -l $(BINSS)
+ 
+ $(MANS): mans
+ 
+ $(BINS): bins
+ 
+-$(BASENAME):
+-	$(MKDIRS) $(BASENAME)
++${DESTDIR}$(BASENAME):
++	$(MKDIRS) ${DESTDIR}$(BASENAME)
+ 
+ install.man: $(MANS) $(BASENAME)
+-	@-$(MKDIRS) $(MANDIR) 2>$(DEVNULL); exit 0
+-	@-test -d $(MAN1DIR) || $(RM) $(MAN1DIR); exit 0
+-	@-$(MKDIRS) $(MAN1DIR) 2>$(DEVNULL); exit 0
+-	@-test -d $(MAN5DIR) || $(RM) $(MAN5DIR); exit 0
+-	@-$(MKDIRS) $(MAN5DIR) 2>$(DEVNULL); exit 0
 -	@chmod 0644 $(MANS)
++	@-$(MKDIRS) ${DESTDIR}$(MANDIR) 2>$(DEVNULL); exit 0
++	@-test -d ${DESTDIR}$(MAN1DIR) || $(RM) ${DESTDIR}$(MAN1DIR); exit 0
++	@-$(MKDIRS) ${DESTDIR}$(MAN1DIR) 2>$(DEVNULL); exit 0
++	@-test -d ${DESTDIR}$(MAN5DIR) || $(RM) ${DESTDIR}$(MAN5DIR); exit 0
++	@-$(MKDIRS) ${DESTDIR}$(MAN5DIR) 2>$(DEVNULL); exit 0
 +	@${CHMOD} 0644 $(MANS)
  	@for a in $(MANS1S); \
-   do $(INSTALL) new/$$a.1 $(MAN1DIR)/$$a.$(MAN1SUFFIX) || exit 1; \
+-  do $(INSTALL) new/$$a.1 $(MAN1DIR)/$$a.$(MAN1SUFFIX) || exit 1; \
++  do $(INSTALL) new/$$a.1 ${DESTDIR}$(MAN1DIR)/$$a.$(MAN1SUFFIX) || exit 1; \
       if test "X$(MANCOMPRESS)" != "X"; \
-@@ -101,14 +101,12 @@
-      then $(MANCOMPRESS) -c new/$$a.5 >$(MAN5DIR)/$$a.$(MAN5SUFFIX); \
+-     then $(MANCOMPRESS) -c new/$$a.1 >$(MAN1DIR)/$$a.$(MAN1SUFFIX); \
++     then $(MANCOMPRESS) -c new/$$a.1 >${DESTDIR}$(MAN1DIR)/$$a.$(MAN1SUFFIX); \
+      else :; fi; \
+   done
+ 	@for a in $(MANS5S); \
+-  do $(INSTALL) new/$$a.5 $(MAN5DIR)/$$a.$(MAN5SUFFIX) || exit 1; \
++  do $(INSTALL) new/$$a.5 ${DESTDIR}$(MAN5DIR)/$$a.$(MAN5SUFFIX) || exit 1; \
+      if test "X$(MANCOMPRESS)" != "X"; \
+-     then $(MANCOMPRESS) -c new/$$a.5 >$(MAN5DIR)/$$a.$(MAN5SUFFIX); \
++     then $(MANCOMPRESS) -c new/$$a.5 >${DESTDIR}$(MAN5DIR)/$$a.$(MAN5SUFFIX); \
       else :; fi; \
    done
 -	echo Housekeeping file >install.man
  
  install.bin: $(BINS) $(BASENAME)
- 	@-$(MKDIRS) $(BINDIR) 2>$(DEVNULL); exit 0
+-	@-$(MKDIRS) $(BINDIR) 2>$(DEVNULL); exit 0
 -	@chmod 0755 $(BINS)
-+	@${CHMOD} 0755 $(BINS)
- 	$(INSTALL) $(BINS) $(BINDIR)
- 	@-dirname / >$(DEVNULL) || $(INSTALL) examples/dirname $(BINDIR)
+-	$(INSTALL) $(BINS) $(BINDIR)
+-	@-dirname / >$(DEVNULL) || $(INSTALL) examples/dirname $(BINDIR)
 -	echo Housekeeping file >install.bin
++	@-$(MKDIRS) ${DESTDIR}$(BINDIR) 2>$(DEVNULL); exit 0
++	@${CHMOD} 0755 $(BINS)
++	$(INSTALL) $(BINS) ${DESTDIR}$(BINDIR)
++	@-dirname / >$(DEVNULL) || $(INSTALL) examples/dirname ${DESTDIR}$(BINDIR)
  
  install:
  	@$(MAKE) install.man install.bin
+ 	@echo
+-	@cd $(BINDIR); echo Installed in $(BINDIR); ls -l $(BINSS)
+-	@cd $(MAN1DIR); echo Installed in $(MAN1DIR); ls -l $(MANS1)
+-	@cd $(MAN5DIR); echo Installed in $(MAN5DIR); ls -l $(MANS5)
++	@cd ${DESTDIR}$(BINDIR); echo Installed in ${DESTDIR}$(BINDIR); ls -l $(BINSS)
++	@cd ${DESTDIR}$(MAN1DIR); echo Installed in ${DESTDIR}$(MAN1DIR); ls -l $(MANS1)
++	@cd ${DESTDIR}$(MAN5DIR); echo Installed in ${DESTDIR}$(MAN5DIR); ls -l $(MANS5)
+ 	@$(MAKE) recommend
+ 
+ deinstall:
