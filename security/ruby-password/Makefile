@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/19 14:53:26 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/27 21:31:43 joerg Exp $
 
 DISTNAME=	ruby-password-0.5.3
 PKGNAME=	${DISTNAME:S/ruby/${RUBY_PKGPREFIX}/}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.caliban.org/files/ruby/
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.caliban.org/ruby/ruby-password.shtml
 COMMENT=	Suite of password handling methods for Ruby
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${RUBY_PKGPREFIX}-termios-[0-9]*:../../comms/ruby-termios
 
