@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/07/17 18:00:23 adrianp Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/27 16:59:03 joerg Exp $
 
 DISTNAME=	nikto-1.36
 CATEGORIES=	security www
@@ -7,6 +7,8 @@ MASTER_SITES=	http://www.cirt.net/nikto/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cirt.net/code/nikto.shtml
 COMMENT=	URL scanner used to search for known vulnerable CGIs on websites
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Net-SSLeay>=1.20:../../security/p5-Net-SSLeay
 DEPENDS+=	nmap>=2.00:../../net/nmap
@@ -27,23 +29,19 @@ SUBST_MESSAGE.conf=	Fixing PREFIX in files.
 CONF_FILES=	${PREFIX}/share/examples/nikto/config.txt \
 			 ${PREFIX}/share/nikto/config.txt
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin libdata/nikto/docs libdata/nikto/plugins \
+			share/doc/nikto share/examples/nikto share/nikto
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nikto
-	${INSTALL_DATA_DIR} ${PREFIX}/share/nikto
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/nikto/plugins
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/nikto/docs
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/nikto
-	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/nikto
-	${INSTALL_DATA} ${WRKSRC}/docs/CHANGES.txt ${PREFIX}/libdata/nikto/docs
-	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${PREFIX}/share/doc/nikto
-	${INSTALL_DATA} ${WRKSRC}/config.txt ${PREFIX}/share/examples/nikto
-	${INSTALL_SCRIPT} ${WRKSRC}/nikto.pl ${PREFIX}/bin/nikto
+	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DESTDIR}${PREFIX}/share/doc/nikto
+	${INSTALL_DATA} ${WRKSRC}/docs/CHANGES.txt ${DESTDIR}${PREFIX}/libdata/nikto/docs
+	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${DESTDIR}${PREFIX}/share/doc/nikto
+	${INSTALL_DATA} ${WRKSRC}/config.txt ${DESTDIR}${PREFIX}/share/examples/nikto
+	${INSTALL_SCRIPT} ${WRKSRC}/nikto.pl ${DESTDIR}${PREFIX}/bin/nikto
 	${INSTALL_DATA} ${WRKSRC}/plugins/*.plugin \
-		${PREFIX}/libdata/nikto/plugins
-	${INSTALL_DATA} ${WRKSRC}/plugins/LW.pm ${PREFIX}/libdata/nikto/plugins
-	${INSTALL_DATA} ${WRKSRC}/plugins/*.db ${PREFIX}/libdata/nikto/plugins
-	${INSTALL_DATA} ${WRKSRC}/plugins/*.txt ${PREFIX}/libdata/nikto/plugins
+	    ${DESTDIR}${PREFIX}/libdata/nikto/plugins
+	${INSTALL_DATA} ${WRKSRC}/plugins/LW.pm ${DESTDIR}${PREFIX}/libdata/nikto/plugins
+	${INSTALL_DATA} ${WRKSRC}/plugins/*.db ${DESTDIR}${PREFIX}/libdata/nikto/plugins
+	${INSTALL_DATA} ${WRKSRC}/plugins/*.txt ${DESTDIR}${PREFIX}/libdata/nikto/plugins
 
 .include "../../mk/bsd.pkg.mk"
