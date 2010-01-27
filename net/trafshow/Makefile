@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/10/18 09:32:43 obache Exp $
+# $NetBSD: Makefile,v 1.31 2010/01/27 17:32:54 joerg Exp $
 
 DISTNAME=	trafshow-5.2.3
 CATEGORIES=	net
@@ -26,10 +26,10 @@ CFLAGS.Darwin+=	-DBIND_8_COMPAT
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/trafshow
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/trafshow ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/trafshow.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/trafshow ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/trafshow.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/.trafshow \
-		${PREFIX}/share/examples/trafshow/trafshow
+	    ${DESTDIR}${PREFIX}/share/examples/trafshow/trafshow
 
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8.1
 .include "../../net/libpcap/buildlink3.mk"
