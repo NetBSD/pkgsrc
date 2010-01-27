@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 04:49:48 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/27 19:18:30 joerg Exp $
 #
 
 DISTNAME=		memconf
@@ -18,6 +18,6 @@ NO_BUILD=		yes
 INSTALLATION_DIRS=	sbin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/memconf ${PREFIX}/sbin/memconf
+	${INSTALL_SCRIPT} ${WRKSRC}/memconf ${DESTDIR}${PREFIX}/sbin/memconf
 
 .include "../../mk/bsd.pkg.mk"

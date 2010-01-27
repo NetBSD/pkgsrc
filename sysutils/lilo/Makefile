@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/08/30 08:10:29 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/27 19:13:37 joerg Exp $
 
 DISTNAME=		lilo-22.8.src
 PKGREVISION=		1
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/boot/lilo/} \
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://lilo.go.dyndns.org/
 COMMENT=		Generic boot loader for Linux
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # This is LInux LOader; it can load different operating systems.
 # Build untested on other operating systems.
@@ -52,14 +54,14 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8	\
 			share/lilo share/doc/lilo
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/lilo ${PREFIX}/sbin/lilo
-	${INSTALL_SCRIPT} ${WRKSRC}/mkrescue ${PREFIX}/sbin/mkrescue
-	${INSTALL_SCRIPT} ${WRKSRC}/keytab-lilo.pl ${PREFIX}/sbin/keytab-lilo
-	${INSTALL_MAN} ${WRKSRC}/manPages/lilo.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/manPages/lilo.conf.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/manPages/mkrescue.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/lilo
-	${INSTALL_DATA} ${WRKSRC}/sample/lilo.sample.conf ${PREFIX}/share/lilo
-	${INSTALL_DATA} ${FILESDIR}/lilo.conf.example ${PREFIX}/share/lilo
+	${INSTALL_PROGRAM} ${WRKSRC}/lilo ${DESTDIR}${PREFIX}/sbin/lilo
+	${INSTALL_SCRIPT} ${WRKSRC}/mkrescue ${DESTDIR}${PREFIX}/sbin/mkrescue
+	${INSTALL_SCRIPT} ${WRKSRC}/keytab-lilo.pl ${DESTDIR}${PREFIX}/sbin/keytab-lilo
+	${INSTALL_MAN} ${WRKSRC}/manPages/lilo.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/manPages/lilo.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/manPages/mkrescue.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/lilo
+	${INSTALL_DATA} ${WRKSRC}/sample/lilo.sample.conf ${DESTDIR}${PREFIX}/share/lilo
+	${INSTALL_DATA} ${FILESDIR}/lilo.conf.example ${DESTDIR}${PREFIX}/share/lilo
 
 .include "../../mk/bsd.pkg.mk"
