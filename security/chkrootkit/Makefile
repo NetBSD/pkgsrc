@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/02 12:23:04 obache Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/27 22:14:55 joerg Exp $
 #
 
 DISTNAME=		chkrootkit-0.47
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.chkrootkit.org/
 COMMENT=		Locally checks for signs of a rootkit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 NO_CONFIGURE=		yes
@@ -49,14 +50,13 @@ MAKE_ENV+=	STATIC="-static"
 MAKE_ENV+=	STATIC="-static"
 .endif
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin share/doc/chkrootkit
 
 do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PROGRAMS} ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/chkrootkit ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/chkrootkit
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.chklastlog ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.chkwtmp ${DOCDIR}
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PROGRAMS} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/chkrootkit ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.chklastlog ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.chkwtmp ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
