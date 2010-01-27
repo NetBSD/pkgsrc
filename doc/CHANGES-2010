@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.373 2010/01/27 09:02:45 sno Exp $
+$NetBSD: CHANGES-2010,v 1.374 2010/01/27 09:26:08 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -426,3 +426,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Task-Catalyst-Tutorial version 0.06 [sno 2010-01-27]
 	Updated lang/python25 to 2.5.4nb5 [wiz 2010-01-27]
 	Added devel/p5-String-Escape version 2002.001 [sno 2010-01-27]
+	Added www/p5-Catalyst-Authentication-Credential-HTTP version 1.011 [sno 2010-01-27]
