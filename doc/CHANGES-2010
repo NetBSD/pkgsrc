@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.375 2010/01/27 09:39:22 sno Exp $
+$NetBSD: CHANGES-2010,v 1.376 2010/01/27 10:24:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -428,3 +428,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-String-Escape version 2002.001 [sno 2010-01-27]
 	Added www/p5-Catalyst-Authentication-Credential-HTTP version 1.011 [sno 2010-01-27]
 	Added www/p5-Catalyst-Authentication-Credential-HTTP-Proxy version 0.06 [sno 2010-01-27]
+	Updated graphics/comix to 4.0.4nb3 [wiz 2010-01-27]
