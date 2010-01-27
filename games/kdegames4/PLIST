@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 20:34:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/27 10:38:38 markd Exp $
 bin/bomber
 bin/bovo
 bin/kapman
@@ -1570,6 +1570,9 @@ share/kde/apps/lskat/grafix/blue.svg
 share/kde/apps/lskat/grafix/default.desktop
 share/kde/apps/lskat/grafix/default.rc
 share/kde/apps/lskat/grafix/default.svg
+share/kde/apps/lskat/grafix/egyptian.desktop
+share/kde/apps/lskat/grafix/egyptian.rc
+share/kde/apps/lskat/grafix/egyptian.svg
 share/kde/apps/lskat/lskatui.rc
 share/kde/config.kcfg/bomber.kcfg
 share/kde/config.kcfg/kblocks.kcfg
