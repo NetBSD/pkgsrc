@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/05/19 08:59:35 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2010/01/27 20:12:53 joerg Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://opensource.adaptec.com/
 COMMENT=		Adaptec Storage Management software
 LICENSE=		generic-nonlicense
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -39,7 +41,7 @@ FETCH_MESSAGE=								\
 	"from"								\
 	"    ${DOWNLOAD}"
 
-INSTALLATION_DIRS=	etc/rc.d sbin
+INSTALLATION_DIRS=	etc/rc.d sbin lib/dpt
 
 do-extract:
 	${MKDIR} ${WRKSRC}
@@ -59,33 +61,32 @@ do-patch:
 		${FILESDIR}/dptelog > ${WRKDIR}/dptelog
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/dpt
-	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dptcom ${PREFIX}/lib/dpt
-	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dptelog ${PREFIX}/lib/dpt
-	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dpteng ${PREFIX}/lib/dpt
-	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dptmgr ${PREFIX}/lib/dpt
-	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dptscom ${PREFIX}/lib/dpt
-	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dptsig ${PREFIX}/lib/dpt
-	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/raidutil ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/dpt/dptcom.chk ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/dpt/dptelog.ini ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/dpt/dptmgr.hlp ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/dpt/dptmgr.rsc ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/dpt/dptmgr.ini ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/dpt/read.me ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libMrm.la ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libMrm.so ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libMrm.so.1 ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libMrm.so.1.0.2 ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.la ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.so ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.so.1 ${PREFIX}/lib/dpt
-	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.so.1.0.2 ${PREFIX}/lib/dpt
-	${INSTALL_MAN} ${WRKSRC}/usr/local/man/man8/raidutil.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_SCRIPT} ${WRKDIR}/dptmgr.sh ${PREFIX}/sbin/dptmgr
-	${INSTALL_SCRIPT} ${WRKDIR}/dptsig.sh ${PREFIX}/sbin/dptsig
-	${INSTALL_SCRIPT} ${WRKDIR}/raidutil.sh ${PREFIX}/sbin/raidutil
-	${INSTALL_SCRIPT} ${WRKDIR}/dpteng ${PREFIX}/etc/rc.d/dpteng
-	${INSTALL_SCRIPT} ${WRKDIR}/dptelog ${PREFIX}/etc/rc.d/dptelog
+	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dptcom ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dptelog ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dpteng ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dptmgr ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dptscom ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/dptsig ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_PROGRAM} ${WRKSRC}/usr/dpt/raidutil ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/dpt/dptcom.chk ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/dpt/dptelog.ini ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/dpt/dptmgr.hlp ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/dpt/dptmgr.rsc ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/dpt/dptmgr.ini ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/dpt/read.me ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libMrm.la ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libMrm.so ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libMrm.so.1 ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libMrm.so.1.0.2 ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.la ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.so ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.so.1 ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_DATA} ${WRKSRC}/usr/local/LessTif/Motif1.2/lib/libXm.so.1.0.2 ${DESTDIR}${PREFIX}/lib/dpt
+	${INSTALL_MAN} ${WRKSRC}/usr/local/man/man8/raidutil.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_SCRIPT} ${WRKDIR}/dptmgr.sh ${DESTDIR}${PREFIX}/sbin/dptmgr
+	${INSTALL_SCRIPT} ${WRKDIR}/dptsig.sh ${DESTDIR}${PREFIX}/sbin/dptsig
+	${INSTALL_SCRIPT} ${WRKDIR}/raidutil.sh ${DESTDIR}${PREFIX}/sbin/raidutil
+	${INSTALL_SCRIPT} ${WRKDIR}/dpteng ${DESTDIR}${PREFIX}/etc/rc.d/dpteng
+	${INSTALL_SCRIPT} ${WRKDIR}/dptelog ${DESTDIR}${PREFIX}/etc/rc.d/dptelog
 
 .include "../../mk/bsd.pkg.mk"

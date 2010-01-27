@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/04/17 04:32:16 ben Exp $
+$NetBSD: patch-aa,v 1.3 2010/01/27 20:15:39 joerg Exp $
 
 --- Makefile.orig	2004-04-16 20:59:06.000000000 -0700
 +++ Makefile
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.2 2004/04/17 04:32:16 ben Exp $
 +DEST=${PREFIX}
  BINDIR=$(DEST)/bin
 -MANDIR=$(DEST)/man
-+MANDIR=$(DEST)/man/man1
++MANDIR=$(DEST)/${PKGMANDIR}/man1
  
  # OPTIONS:
  # There are a number of DEFINES that can be used to configure su2.  Please
@@ -40,8 +40,8 @@ $NetBSD: patch-aa,v 1.2 2004/04/17 04:32:16 ben Exp $
 +all:	su2 su2.1
 +
 +install: su2 su2.1
-+	install -c -s -m 4711 -o root su2 $(BINDIR)/su2
-+	install -c su2.1 $(MANDIR)/su2.1
++	${BSD_INSTALL_PROGRAM} su2 ${DESTDIR}$(BINDIR)/su2
++	${BSD_INSTALL_MAN} su2.1 ${DESTDIR}$(MANDIR)/su2.1
  
  clean:
  	rm -f su2 *.o *.a
