@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2010/01/27 22:18:35 joerg Exp $
+
+--- bind/tcl/Makefile.in.orig	2010-01-27 22:17:02.000000000 +0000
++++ bind/tcl/Makefile.in
+@@ -26,7 +26,7 @@ PDFLIBCONVENIENT= @PDFLIBCONVENIENT@
+ .c.$(OBJ):
+ 	$(LIBTOOL) --mode=compile $(CC) -c $(CPPFLAGS) $(DEFINES) $<
+ 
+-LANG_LIBDIR 	= @TCLPACKAGEDIR@
++LANG_LIBDIR 	= ${DESTDIR}@TCLPACKAGEDIR@
+ TCLBIN		= @TCLBIN@
+ 
+ SWIG		= swig1.2 -I../../pdflib -tcl -stat
