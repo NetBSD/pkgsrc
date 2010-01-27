@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/09/07 21:27:30 dan Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/27 19:24:27 joerg Exp $
 
 DISTNAME=	mgm-1.1
 PKGREVISION=	2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://linuxmafia.com/mgm/
 COMMENT=	Moaning Goat Meter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
 
@@ -27,19 +29,19 @@ post-patch:
 	${SED} -e 's|@@MGM_PERL_DIR@@|${MGM_PERL_DIR}|' \
 		${FILESDIR}/mgm.sh > ${WRKDIR}/mgm.sh
 
+INSTALLATION_DIRS+=	${MGM_PERL_DIR}/modules ${MGM_DOC_DIR}
+
 do-install:
-	${INSTALL_DATA_DIR} ${MGM_PERL_DIR} ${MGM_PERL_DIR}/modules
-	${INSTALL_SCRIPT} ${WRKSRC}/mgm ${MGM_PERL_DIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/mgm ${DESTDIR}${MGM_PERL_DIR}
 	set -e; \
 	cd ${WRKSRC}; \
 	for DIR in lib modules/*; do \
-		${INSTALL_DATA_DIR} ${MGM_PERL_DIR}/"$$DIR"; \
+		${INSTALL_DATA_DIR} ${DESTDIR}${MGM_PERL_DIR}/"$$DIR"; \
 		for FILE in "$$DIR"/*; do \
-			${INSTALL_DATA} "$$FILE" ${MGM_PERL_DIR}/"$$DIR"; \
+			${INSTALL_DATA} "$$FILE" ${DESTDIR}${MGM_PERL_DIR}/"$$DIR"; \
 		done; \
 	done
-	${INSTALL_DATA_DIR} ${MGM_DOC_DIR}
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} * ${MGM_DOC_DIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/mgm.sh ${PREFIX}/bin/mgm
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} * ${DESTDIR}${MGM_DOC_DIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/mgm.sh ${DESTDIR}${PREFIX}/bin/mgm
 
 .include "../../mk/bsd.pkg.mk"
