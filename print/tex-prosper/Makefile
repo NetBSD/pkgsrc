@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/12/25 22:58:18 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/27 16:35:37 joerg Exp $
 #
 
 DISTNAME=	prosper-1.00.4
@@ -11,6 +11,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} PPRblends.sty.gz
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/prosper/
 COMMENT=	LaTeX class for writing transparencies
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/prosper
 NO_CONFIGURE=	yes
@@ -33,16 +35,15 @@ post-extract:
 	${MV} ${WRKSRC}/doc/doc-examples ${WRKSRC}/examples
 	${FIND} ${WRKSRC} -name CVS -print | ${XARGS} ${RM} -rf
 
+INSTALLATION_DIRS+=	${PROSPERDIR} ${DOCDIR} ${EGDIR}
+
 do-install:
-	${INSTALL_DATA_DIR} ${PROSPERDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC} && pax -rw -pp -pm *.sty *.cls img contrib designer \
-		${PROSPERDIR}
-	cd ${WRKSRC}/doc && pax -rw -pp -pm . ${DOCDIR}
-	cd ${WRKSRC}/examples && pax -rw -pp -pm . ${EGDIR}
+	    ${DESTDIR}${PROSPERDIR}
+	cd ${WRKSRC}/doc && pax -rw -pp -pm . ${DESTDIR}${DOCDIR}
+	cd ${WRKSRC}/examples && pax -rw -pp -pm . ${DESTDIR}${EGDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
