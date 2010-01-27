@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/09/08 21:57:13 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/27 14:54:06 joerg Exp $
 
 DISTNAME=	nologinmsg-1.0
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	cjep@NetBSD.org
 #HOMEPAGE=
 COMMENT=	More functional native binary replacement for /sbin/nologin
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES=	getprogname
 
@@ -23,8 +25,8 @@ do-build:
 		-o nologinmsg nologinmsg.c ${LIBS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nologinmsg ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/nologinmsg.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/nologinmsg ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/nologinmsg.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../devel/sysexits/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
