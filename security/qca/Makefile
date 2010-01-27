@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/01/18 09:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/01/27 17:07:18 joerg Exp $
 
 DISTNAME=	qca-1.0
 PKGREVISION=	5
@@ -10,12 +10,15 @@ MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://delta.affinix.com/qca/
 COMMENT=	Cross-platform crypto API for QT
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+= gmake
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c++
 
 INSTALLATION_DIRS=	include lib
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt3-tools+=	qt3-tools>=3.3.5nb6

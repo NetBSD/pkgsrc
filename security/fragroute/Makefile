@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/08/16 15:35:44 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/01/27 17:24:23 joerg Exp $
 
 DISTNAME=	fragroute-1.2
 PKGREVISION=	11
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.monkey.org/~dugsong/fragroute/
 COMMENT=	Tool for intercepting, modifying and rewriting egress traffic
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-libdnet=${BUILDLINK_PREFIX.libdnet}
@@ -19,10 +20,11 @@ SCRIPTS=	README.snort base-1 frag-1 frag-2 frag-3 frag-4 frag-5 \
 	frag-6 frag-7-unix frag-7-win32 ins-2 ins-3 tcbc-2 tcp-3 tcp-5 \
 	tcp-7 tcp-9
 
+INSTALLATION_DIRS+=	share/fragroute
+
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/fragroute
 .for FILE in ${SCRIPTS}
-	${INSTALL_DATA} ${WRKSRC}/scripts/${FILE} ${PREFIX}/share/fragroute
+	${INSTALL_DATA} ${WRKSRC}/scripts/${FILE} ${DESTDIR}${PREFIX}/share/fragroute
 .endfor
 
 .include "../../net/libpcap/buildlink3.mk"

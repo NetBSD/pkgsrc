@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/07/17 18:00:23 adrianp Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/27 16:52:13 joerg Exp $
 #
 
 DISTNAME=	SnortSnarf-050314.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.snort.org/dl/contrib/data_analysis/snortsnarf/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.silicondefense.com/software/snortsnarf/
 COMMENT=	Generate HTML report summaries from snort incident alerts
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Time-modules>=101.062101:../../time/p5-Time-modules
 
@@ -24,14 +26,12 @@ SUBST_FILES.paths=	snortsnarf.pl
 SUBST_SED.paths=	-e "s|./include|${PREFIX}/share/snortsnarf|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/snortsnarf share/doc/snortsnarf
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/snortsnarf.pl ${PREFIX}/bin/snortsnarf.pl
-	${INSTALL_DATA_DIR} ${PREFIX}/share/snortsnarf
-	cd ${WRKSRC}/include && pax -rw -pm * ${PREFIX}/share/snortsnarf
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snortsnarf
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/snortsnarf
-	${INSTALL_DATA} ${WRKSRC}/Usage ${PREFIX}/share/doc/snortsnarf
+	${INSTALL_SCRIPT} ${WRKSRC}/snortsnarf.pl ${DESTDIR}${PREFIX}/bin/snortsnarf.pl
+	cd ${WRKSRC}/include && pax -rw -pm * ${DESTDIR}${PREFIX}/share/snortsnarf
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/snortsnarf
+	${INSTALL_DATA} ${WRKSRC}/Usage ${DESTDIR}${PREFIX}/share/doc/snortsnarf
 
 .include "../../mk/bsd.pkg.mk"
