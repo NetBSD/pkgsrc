@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2009/04/11 17:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2010/01/27 19:27:24 joerg Exp $
 
 DISTNAME=	mklivecd-0.17
 CATEGORIES=	sysutils
@@ -8,6 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.netbsd.org/~xtraeme/mklivecd/
 COMMENT=	Make your own NetBSD/x86 Live CD-ROM/DVD-ROM
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,9 +38,9 @@ do-build:
 .endfor
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/mklivecd.sh ${PREFIX}/sbin/mklivecd
-	${INSTALL_MAN} ${WRKDIR}/mklivecd.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKDIR}/livecd ${PREFIX}/share/mklivecd
-	${INSTALL_DATA} ${FILESDIR}/personal_config ${PREFIX}/share/mklivecd
+	${INSTALL_SCRIPT} ${WRKDIR}/mklivecd.sh ${DESTDIR}${PREFIX}/sbin/mklivecd
+	${INSTALL_MAN} ${WRKDIR}/mklivecd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKDIR}/livecd ${DESTDIR}${PREFIX}/share/mklivecd
+	${INSTALL_DATA} ${FILESDIR}/personal_config ${DESTDIR}${PREFIX}/share/mklivecd
 
 .include "../../mk/bsd.pkg.mk"
