@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/08/25 12:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/27 19:31:05 joerg Exp $
 #
 
 PKGNAME=		nvnet-20050620nb1
@@ -7,6 +7,8 @@ DISTNAME+=		NFORCE-Linux-x86-1.0-0310-pkg1.run
 CATEGORIES=		sysutils
 MASTER_SITES+=		http://www.morgart.com/NetBSD/nVidia/nvnet/
 MASTER_SITES+=		http://download.nvidia.com/XFree86/nforce/1.0-0310/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_SUFX=
 
@@ -34,7 +36,7 @@ do-extract:
 	cd ${WRKDIR} && ${SH} ${DISTDIR}/NFORCE-Linux-x86-1.0-0310-pkg1.run -x
 
 do-install:
-	${INSTALL} -c -m 755 ${WRKSRC}/module/nv.o ${PREFIX}/lkm/nv.o
-	${INSTALL_MAN} ${WRKSRC}/man/nv.4 ${PREFIX}/${PKGMANDIR}/man4/nv.4
+	${INSTALL} -c -m 755 ${WRKSRC}/module/nv.o ${DESTDIR}${PREFIX}/lkm/nv.o
+	${INSTALL_MAN} ${WRKSRC}/man/nv.4 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/nv.4
 
 .include "../../mk/bsd.pkg.mk"
