@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2009/12/12 14:02:21 drochner Exp $
+# $NetBSD: Makefile,v 1.197 2010/01/27 14:17:33 drochner Exp $
 
 COMMENT=	Mathematics
 
@@ -153,6 +153,7 @@ SUBDIR+=	py-Scientific
 SUBDIR+=	py-Scientific-doc
 SUBDIR+=	py-ephem
 SUBDIR+=	py-fpconst
+SUBDIR+=	py-mpmath
 SUBDIR+=	py-networkx
 SUBDIR+=	py-numarray
 SUBDIR+=	py-numpy
