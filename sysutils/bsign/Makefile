@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/17 23:36:33 agc Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/27 18:36:54 joerg Exp $
 
 DISTNAME=	bsign_0.4.5
 PKGNAME=	bsign-0.4.5
@@ -8,6 +8,11 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/b/bsign/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/unstable/admin/bsign.html
 COMMENT=	Utility to embed a hash or signature into an executable
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
