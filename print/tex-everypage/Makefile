@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:01:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/27 16:12:38 joerg Exp $
 
 DISTNAME=	everypage
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -11,10 +11,12 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.ctan.org/tex-archive/macros/latex/contrib/everypage/
 COMMENT=	LaTeX package for hooks to run on every page
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-
-INSTALLATION_DIRS=	share/doc/tex-everypage
+INSTALLATION_DIRS=	share/doc/tex-everypage \
+			${PKG_LOCALTEXMFPREFIX}/tex/latex/everypage
 
 .include "../../print/teTeX/module.mk"
 
@@ -22,11 +24,11 @@ do-build:
 	cd ${WRKSRC} && ${PREFIX}/bin/latex everypage.ins
 
 do-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/everypage
 	${INSTALL_DATA} ${WRKSRC}/everypage.sty \
-		${PKG_LOCALTEXMFPREFIX}/tex/latex/everypage/
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tex-everypage/
+	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/everypage/
+	${INSTALL_DATA} ${WRKSRC}/README \
+	    ${DESTDIR}${PREFIX}/share/doc/tex-everypage/
 	${INSTALL_DATA} ${WRKSRC}/everypage.pdf \
-		${PREFIX}/share/doc/tex-everypage/
+	    ${DESTDIR}${PREFIX}/share/doc/tex-everypage/
 
 .include "../../mk/bsd.pkg.mk"
