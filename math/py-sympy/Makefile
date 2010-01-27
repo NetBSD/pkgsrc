@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/09/15 11:30:55 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/27 14:21:19 drochner Exp $
 #
 
-DISTNAME=	sympy-0.6.5
-PKGNAME=	${PYPKGPREFIX}-sympy-0.6.5
+DISTNAME=	sympy-0.6.6
+PKGNAME=	${PYPKGPREFIX}-sympy-0.6.6
 CATEGORIES=	math
 MASTER_SITES=	http://sympy.googlecode.com/files/
 
