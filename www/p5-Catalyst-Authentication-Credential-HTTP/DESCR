@@ -1,0 +1,8 @@
+This module provides the feature of HTTP authentication for
+Catalyst::Plugin::Authentication. Both basic and digest authentication
+are currently supported.
+
+When authentication is required, this module sets a status of 401, and
+the body of the response to 'Authorization required.'. To override this
+and set some own content, check for the $c->res->status == 401 in the
+end action, and change the body accordingly.

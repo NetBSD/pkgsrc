@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/27 09:25:56 sno Exp $
+
+SHA1 (Catalyst-Authentication-Credential-HTTP-1.011.tar.gz) = cf9499d7a900a007cb3c7f867b799815281b626b
+RMD160 (Catalyst-Authentication-Credential-HTTP-1.011.tar.gz) = 0d2ef13cdb938928bef6f366842cb069ee5c0bfc
+Size (Catalyst-Authentication-Credential-HTTP-1.011.tar.gz) = 32060 bytes
