@@ -1,0 +1,2 @@
+This plugin uses Authen::Htpasswd to let Catalyst applications use
+<.htpasswd> files for it's authentication storage.
