@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2009/11/10 19:31:31 epg Exp $
+# $NetBSD: Makefile,v 1.45 2010/01/27 08:46:23 wiz Exp $
 
 DISTNAME=		bzr-${VER}
 #PKGREVISION=		1
@@ -11,10 +11,10 @@ HOMEPAGE=		http://bazaar-vcs.org/
 COMMENT=		Bazaar open source distributed version control system
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 
