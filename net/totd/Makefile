@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/01/27 17:32:12 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2010/01/27 17:33:43 joerg Exp $
 #
 
 DISTNAME=	totd-1.5.1
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/totd/
 MAINTAINER=	feico@pasta.cs.uit.no
 HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/software/totd.html
 COMMENT=	DNS proxy that supports IPv6 <==> IPv4 record translation
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
