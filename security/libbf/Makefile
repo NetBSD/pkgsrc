@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/05/01 13:51:41 zafer Exp $
+# $NetBSD: Makefile,v 1.14 2010/01/27 21:59:21 joerg Exp $
 #
 
 DISTNAME=	libbf-0.8.2b
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.schneier.com/blowfish.html
 COMMENT=	Blowfish block cipher library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/bf
 CRYPTO=		YES
@@ -22,16 +24,15 @@ BF_ENC=bf_enc.o
 
 MAKEFLAGS+=	BF_ENC=${BF_ENC:Q}
 
-INSTALLATION_DIRS=	bin include lib
+INSTALLATION_DIRS=	bin include lib share/doc/blowfish
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/blowfish
 	cd ${WRKSRC} &&							\
-	${INSTALL_DATA} libblowfish.a ${PREFIX}/lib &&			\
-	${INSTALL_DATA} blowfish.h ${PREFIX}/include &&			\
-	${INSTALL_PROGRAM} bftest bfspeed ${PREFIX}/bin
+	${INSTALL_DATA} libblowfish.a ${DESTDIR}${PREFIX}/lib &&			\
+	${INSTALL_DATA} blowfish.h ${DESTDIR}${PREFIX}/include &&			\
+	${INSTALL_PROGRAM} bftest bfspeed ${DESTDIR}${PREFIX}/bin
 .for doc in blowfish.doc COPYRIGHT README VERSION
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/blowfish
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${DESTDIR}${PREFIX}/share/doc/blowfish
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
