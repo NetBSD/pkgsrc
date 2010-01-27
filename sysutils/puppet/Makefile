@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/11/11 12:21:52 tonnerre Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/27 19:51:55 joerg Exp $
 
 DISTNAME=		puppet-0.24.8
 CATEGORIES=		sysutils
@@ -7,6 +7,8 @@ MAINTAINER=		tonnerre@NetBSD.org
 HOMEPAGE=		http://www.reductivelabs.com/projects/puppet/
 MASTER_SITES=		http://reductivelabs.com/downloads/gems/
 COMMENT=		Configuration management framework written in Ruby
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,8 +37,10 @@ CONF_FILES=		${EGDIR}/puppet.conf ${PKG_SYSCONFDIR}/puppet.conf
 
 PLIST_VARS+=		sunos
 
+INSTALLATION_DIRS+=	${EGDIR}
+
 .if ${OPSYS} == "SunOS"
-INSTALLATION_DIRS=	lib/svc/method ${EGDIR}/svc
+INSTALLATION_DIRS+=	lib/svc/method ${EGDIR}/svc
 CONF_DIRS+=		${VARBASE}/svc/manifest
 CONF_FILES+=		${EGDIR}/svc/puppetd.xml ${VARBASE}/svc/manifest/puppetd.xml
 CONF_FILES+=		${EGDIR}/svc/puppetmasterd.xml ${VARBASE}/svc/manifest/puppetmasterd.xml
@@ -51,7 +55,6 @@ pre-build:
 		> examples/puppet.conf
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/puppet.conf			\
 		${DESTDIR}${EGDIR}
 .if ${OPSYS} == "SunOS"
