@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:30 tv Exp $
+# $NetBSD: Makefile,v 1.14 2010/01/27 20:35:10 joerg Exp $
 #
 
 DISTNAME=	whowatch-1.4
@@ -11,7 +11,13 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://wizard.ae.krakow.pl/~mike/\#whowatch
 COMMENT=	Interactive who-like program displaying real-time user information
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	YES
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}	
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
