@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/12/15 12:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2010/01/27 16:51:33 tron Exp $
 #
 
 DISTNAME=	xcb-proto-1.6
 PKGNAME=	${PYPKGPREFIX}-xcbgen-1.6
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://xcb.freedesktop.org/
 COMMENT=	XCB protocol descriptions (in XML)
+
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 CONFLICTS+=	xcb-proto<1.4nb1
 PKG_DESTDIR_SUPPORT=	user-destdir
