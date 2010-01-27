@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/12/09 10:22:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/01/27 19:38:51 drochner Exp $
 bin/dia
 lib/dia/libaadl_objects.la
 lib/dia/libart_filter.la
@@ -1850,6 +1850,7 @@ share/locale/be/LC_MESSAGES/dia.mo
 share/locale/bg/LC_MESSAGES/dia.mo
 share/locale/bs/LC_MESSAGES/dia.mo
 share/locale/ca/LC_MESSAGES/dia.mo
+share/locale/ca@valencia/LC_MESSAGES/dia.mo
 share/locale/cs/LC_MESSAGES/dia.mo
 share/locale/da/LC_MESSAGES/dia.mo
 share/locale/de/LC_MESSAGES/dia.mo
@@ -1884,6 +1885,7 @@ share/locale/ne/LC_MESSAGES/dia.mo
 share/locale/nl/LC_MESSAGES/dia.mo
 share/locale/nn/LC_MESSAGES/dia.mo
 share/locale/oc/LC_MESSAGES/dia.mo
+share/locale/or/LC_MESSAGES/dia.mo
 share/locale/pa/LC_MESSAGES/dia.mo
 share/locale/pl/LC_MESSAGES/dia.mo
 share/locale/pt/LC_MESSAGES/dia.mo
@@ -1897,6 +1899,7 @@ share/locale/sq/LC_MESSAGES/dia.mo
 share/locale/sr/LC_MESSAGES/dia.mo
 share/locale/sr@Latn/LC_MESSAGES/dia.mo
 share/locale/sv/LC_MESSAGES/dia.mo
+share/locale/ta/LC_MESSAGES/dia.mo
 share/locale/th/LC_MESSAGES/dia.mo
 share/locale/tr/LC_MESSAGES/dia.mo
 share/locale/uk/LC_MESSAGES/dia.mo
