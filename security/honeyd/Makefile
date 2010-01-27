@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/08/16 15:35:44 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/01/27 22:08:59 joerg Exp $
 #
 
 DISTNAME=	honeyd-1.5b
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.citi.umich.edu/u/provos/honeyd/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.honeyd.org/
 COMMENT=	Small daemon that creates virtual hosts on a network
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	honeyd-arpd>=0.2:../../security/honeyd-arpd
 
@@ -40,11 +42,9 @@ CONF_FILES+=		${EGDIR:Q}/${f:Q} ${PKG_SYSCONFDIR:Q}/${f:Q}
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/honeyd
+INSTALLATION_DIRS+=	share/examples/honeyd ${DOCDIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC:Q}/README ${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/README ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"

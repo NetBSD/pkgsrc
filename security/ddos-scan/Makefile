@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/06/30 18:49:38 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/27 22:13:41 joerg Exp $
 #
 
 DISTNAME=	ddos_scan
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://staff.washington.edu/dittrich/
 COMMENT=	Scan for a limited set of distributed denial of service (ddos) agents
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_TARGET=	default dds
 
 INSTALLATION_DIRS=	sbin share/doc
@@ -18,7 +20,7 @@ INSTALLATION_DIRS=	sbin share/doc
 BUILD_ENV+=	OPSYS=${OSYS:Q}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dds ${PREFIX}/sbin/dds
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dds
+	${INSTALL_PROGRAM} ${WRKSRC}/dds ${DESTDIR}${PREFIX}/sbin/dds
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/dds
 
 .include "../../mk/bsd.pkg.mk"
