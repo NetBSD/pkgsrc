@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/08 21:18:44 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/27 18:46:39 joerg Exp $
 #
 
 DISTNAME=	dmsdos-0.9.2.3-pre2
@@ -11,11 +11,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cmp.felk.cvut.cz/~pisa/dmsdos/
 COMMENT=	Program to access DBLSPACE/DRVSPACE containers
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/dmsdos-0.9.2.3-pre2/src
 
 F=	mcdmsdos.c dblspace_dec.c lib_interface.c dblspace_interface.c \
 	dblspace_chk.c dblspace_tables.c dstacker_alloc.c dblspace_alloc.c \
 	dblspace_compr.c dstacker_compr.c dstacker_dec.c dblspace_methsq.c
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	find ${WRKDIR}/dmsdos-0.9.2.3-pre2 -type d -exec chmod +x {} \;
@@ -27,6 +31,6 @@ do-build:
 	cd ${WRKSRC} && ${CC} -D__DMSDOS_LIB__ ${F} -o mcdmsdos
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mcdmsdos ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mcdmsdos ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
