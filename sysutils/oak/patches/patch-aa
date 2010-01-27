@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/03 14:28:21 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/27 22:26:39 joerg Exp $
 
 --- Makefile.in	2005-02-27 12:54:53.000000000 -0600
 +++ Makefile.in	2006-02-04 14:36:44.000000000 -0600
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/03 14:28:21 rillig Exp $
  
  install:        
 -	./install-sh -c oak /usr/local/bin/
-+	./install-sh -c oak @bindir@/
++	${BSD_INSTALL_PROGRAM} oak ${DESTDIR}@bindir@/
  
  clean:
  	$(RM) *~ *.o oak
