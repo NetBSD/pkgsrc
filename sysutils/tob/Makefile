@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/10/19 23:56:13 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/27 20:22:54 joerg Exp $
 
 DISTNAME=	tob-0.25
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://tinyplanet.ca/projects/tob/
 EXTRACT_SUFX=	.tgz
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tinyplanet.ca/projects/tob/
 COMMENT=	General driver for making and maintaining backups
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=		${PREFIX}/share/examples/tob
 CONF_FILES=	${EGDIR}/tob.rc ${PKG_SYSCONFDIR}/tob/tob.rc
@@ -29,17 +31,16 @@ SUBST_SED.confdir+=	-e 's|@VARBASE@|${VARBASE}|g'
 
 BUILD_DEFS+=		VARBASE
 
+OWN_DIRS+=	${VARBASE}/tob ${PKG_SYSCONFDIR}/tob/volumes
+
 do-build:
 	@${DO_NADA}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tob ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/tob.8 ${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/tob
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/tob/volumes
-	${INSTALL_DATA_DIR} ${VARBASE}/tob
-	${INSTALL_DATA} ${WRKSRC}/tob.rc ${EGDIR}/tob.rc
-	${INSTALL_DATA} ${WRKSRC}/example.exclude ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/example.startdir ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/tob ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/tob.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_DATA} ${WRKSRC}/tob.rc ${DESTDIR}${EGDIR}/tob.rc
+	${INSTALL_DATA} ${WRKSRC}/example.exclude ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/example.startdir ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
