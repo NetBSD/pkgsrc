@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/10/11 19:35:26 is Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/27 17:41:43 joerg Exp $
 
 --- Makefile.orig	2006-06-04 10:16:04.000000000 +0200
 +++ Makefile
@@ -32,13 +32,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/10/11 19:35:26 is Exp $
 -	install -D ssmping.1 $(DESTDIR)$(PREFIX)/man/man1/ssmping.1
 -	install -D asmping.1 $(DESTDIR)$(PREFIX)/man/man1/asmping.1
 -	install -D mcfirst.1 $(DESTDIR)$(PREFIX)/man/man1/mcfirst.1
-+	install -m 755 ssmping $(PREFIX)/bin/ssmping
-+	install -m 755 asmping $(PREFIX)/bin/asmping
-+	install -m 755 ssmpingd $(PREFIX)/sbin/ssmpingd
-+	install -m 755 mcfirst $(PREFIX)/bin/mcfirst
-+	install -m 644 ssmping.1 $(PREFIX)/man/man1/ssmping.1
-+	install -m 644 asmping.1 $(PREFIX)/man/man1/asmping.1
-+	install -m 644 mcfirst.1 $(PREFIX)/man/man1/mcfirst.1
++	${BSD_INSTALL_PROGRAM} ssmping ${DESTDIR}$(PREFIX)/bin/ssmping
++	${BSD_INSTALL_PROGRAM} asmping ${DESTDIR}$(PREFIX)/bin/asmping
++	${BSD_INSTALL_PROGRAM} ssmpingd ${DESTDIR}$(PREFIX)/sbin/ssmpingd
++	${BSD_INSTALL_PROGRAM} mcfirst ${DESTDIR}$(PREFIX)/bin/mcfirst
++	${BSD_INSTALL_DATA} ssmping.1 ${DESTDIR}$(PREFIX)/man/man1/ssmping.1
++	${BSD_INSTALL_DATA} asmping.1 ${DESTDIR}$(PREFIX)/man/man1/asmping.1
++	${BSD_INSTALL_DATA} mcfirst.1 ${DESTDIR}$(PREFIX)/man/man1/mcfirst.1
  
  clean:
 -	rm -f $(OBJ) joinch.o joingrp.o ssmping asmping ssmpingd mcfirst
