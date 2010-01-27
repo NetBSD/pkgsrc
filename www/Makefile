@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.689 2010/01/27 09:40:11 sno Exp $
+# $NetBSD: Makefile,v 1.690 2010/01/27 10:44:39 sno Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -258,6 +258,7 @@ SUBDIR+=	p5-Catalyst-Action-RenderView
 SUBDIR+=	p5-Catalyst-Authentication-Credential-HTTP
 SUBDIR+=	p5-Catalyst-Authentication-Credential-HTTP-Proxy
 SUBDIR+=	p5-Catalyst-Authentication-Store-DBIx-Class
+SUBDIR+=	p5-Catalyst-Authentication-Store-Htpasswd
 SUBDIR+=	p5-Catalyst-Component-ACCEPT_CONTEXT
 SUBDIR+=	p5-Catalyst-Component-InstancePerContext
 SUBDIR+=	p5-Catalyst-Controller-BindLex
