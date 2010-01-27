@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/04/19 06:07:50 obache Exp $
+# $NetBSD: Makefile,v 1.27 2010/01/27 19:57:12 joerg Exp $
 
 DISTNAME=	rtty-3.2
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://gatekeeper.hpl.hp.com/archive/pub/misc/vixie/ \
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multiuser "tip"/"cu" replacement with logging
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
@@ -26,8 +28,10 @@ pre-configure:
 	cd ${WRKDIR} && \
 		${SED} -e '/^agelog=/s:/usr/etc/:${PREFIX}/rtty/bin/:' agelogs.sh >agelogs.sh.pdone && ${MV} agelogs.sh.pdone agelogs.sh
 
+INSTALLATION_DIRS=	share/doc/rtty
+INSTALL_MAKE_FLAGS+=	DESTROOT=${DESTDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rtty
-	${INSTALL_DATA}  ${WRKDIR}/README ${PREFIX}/share/doc/rtty/
+	${INSTALL_DATA}  ${WRKDIR}/README ${DESTDIR}${PREFIX}/share/doc/rtty/
 
 .include "../../mk/bsd.pkg.mk"
