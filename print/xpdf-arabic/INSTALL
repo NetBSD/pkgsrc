@@ -1,0 +1,10 @@
+# $NetBSD: INSTALL,v 1.1 2010/01/27 15:14:00 joerg Exp $
+
+XPDFRC=${PKG_SYSCONFDIR}/xpdfrc
+CAT=@CAT@
+
+case ${STAGE} in
+POST-INSTALL)
+	${CAT} ${PREFIX}/share/xpdf/arabic/add-to-xpdfrc >> ${XPDFRC}
+	;;
+esac
