@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/27 16:22:49 joerg Exp $
 
 DISTNAME=	igo
 PKGNAME=	tex-${DISTNAME}-0
@@ -10,6 +10,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.ctan.org/tex-archive/fonts/igo/
 COMMENT=	Fonts and macro to typeset Go diagrams
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../print/teTeX/module.mk"
 
@@ -20,18 +21,19 @@ do-configure:
 do-build:
 	cd ${WRKSRC}/fonts && ${SH} makefonts.sh
 
+INSTALLATION_DIRS+=	${PKG_LOCALTEXMFPREFIX}/doc/latex/igo \
+			${PKG_LOCALTEXMFPREFIX}/tex/latex/igo \
+			${PKG_LOCALTEXMFPREFIX}/fonts/source/igo \
+			${PKG_LOCALTEXMFPREFIX}/fonts/tfm/igo
+
 do-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/latex/igo
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/igo.pdf ${WRKSRC}/igo.tex \
-		${PKG_LOCALTEXMFPREFIX}/doc/latex/igo
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/igo
+	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/latex/igo
 	${INSTALL_DATA} ${WRKSRC}/igo.sty ${WRKSRC}/repeat.tex \
-		${PKG_LOCALTEXMFPREFIX}/tex/latex/igo
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/source/igo
+	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/igo
 	${INSTALL_DATA} ${WRKSRC}/fonts/*.mf \
-		${PKG_LOCALTEXMFPREFIX}/fonts/source/igo
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/igo
+	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/source/igo
 	${INSTALL_DATA} ${WRKSRC}/fonts/*.tfm \
-		${PKG_LOCALTEXMFPREFIX}/fonts/tfm/igo
+	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/tfm/igo
 
 .include "../../mk/bsd.pkg.mk"
