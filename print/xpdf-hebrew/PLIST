@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:12:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/01/27 15:14:00 joerg Exp $
 share/xpdf/hebrew/ISO-8859-8.unicodeMap
+share/xpdf/hebrew/add-to-xpdfrc
