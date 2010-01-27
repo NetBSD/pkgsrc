@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/08/30 20:20:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/27 17:38:46 joerg Exp $
 #
 
 DISTNAME=	tac_plus.F4.0.4.alpha
@@ -12,6 +12,8 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.shrubbery.net/tac_plus/
 COMMENT=	Cisco authentication, authorization, and accounting protocol daemon
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_TARGET=	tac_plus
 
 .include "../../mk/bsd.prefs.mk"
@@ -19,12 +21,11 @@ BUILD_TARGET=	tac_plus
 MAKE_FLAGS+=	OS=-DSOLARIS OSLIBS="-lsocket -lnsl"
 .endif
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/tacacs
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tac_plus ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/tac_plus.1 ${PREFIX}/${PKGMANDIR}/man8/tac_plus.8
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tacacs
-	${INSTALL_DATA} ${WRKSRC}/users_guide ${PREFIX}/share/doc/tacacs
+	${INSTALL_PROGRAM} ${WRKSRC}/tac_plus ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/tac_plus.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/tac_plus.8
+	${INSTALL_DATA} ${WRKSRC}/users_guide ${DESTDIR}${PREFIX}/share/doc/tacacs
 
 .include "../../mk/bsd.pkg.mk"

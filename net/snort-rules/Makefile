@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:21 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/27 17:43:41 joerg Exp $
 
 DISTNAME=	Community-Rules-2.4
 PKGNAME=	snort-rules-2.4
@@ -9,18 +9,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.snort.org/
 COMMENT=	Network Intrusion Detection System (Community Rules)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	snort{,-mysql,-pgsql}>=2.4.0:../../net/snort
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
 
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/snort/rules
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort/signatures
+INSTALLATION_DIRS+=	share/snort/rules share/doc/snort/signatures
 
-	${INSTALL_DATA} ${WRKDIR}/rules/*.rules ${PREFIX}/share/snort/rules
-	${INSTALL_DATA} ${WRKDIR}/rules/*.map ${PREFIX}/share/snort/rules
+do-install:
+	${INSTALL_DATA} ${WRKDIR}/rules/*.rules ${DESTDIR}${PREFIX}/share/snort/rules
+	${INSTALL_DATA} ${WRKDIR}/rules/*.map ${DESTDIR}${PREFIX}/share/snort/rules
 	${INSTALL_DATA} ${WRKDIR}/docs/*.txt \
-		${PREFIX}/share/doc/snort/signatures
+		${DESTDIR}${PREFIX}/share/doc/snort/signatures
 
 .include "../../mk/bsd.pkg.mk"
