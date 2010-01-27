@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/22 09:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/27 16:15:19 joerg Exp $
 
 DISTNAME=	# empty
 PKGNAME=	tex-foiltex-2.1.4a
@@ -11,6 +11,8 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tex.ac.uk/tex-archive/help/Catalogue/entries/foiltex.html
 COMMENT=	LaTeX2e class for overhead transparencies
 LICENSE=	foiltex-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	May not be redistributed for profit
 NO_BIN_ON_CDROM=${RESTRICTED}
@@ -33,10 +35,11 @@ do-extract:
 do-build:
 	cd ${WRKSRC} && ${LATEX_PREFIX}/bin/latex foiltex.ins
 
+INSTALLATION_DIRS+=	${STYDIR}
+
 do-install:
-	${INSTALL_DATA_DIR} ${STYDIR}
 	cd ${WRKSRC} && for f in foils.* foil*.clo fltfonts.def; do \
-		${INSTALL_DATA} $$f ${STYDIR}/$$f; \
+		${INSTALL_DATA} $$f ${DESTDIR}${STYDIR}/$$f; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
