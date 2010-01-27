@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/07/22 22:26:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.22 2010/01/27 16:51:14 joerg Exp $
 #
 
 DISTNAME=	smtpd-2.0
@@ -15,6 +15,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.obtuse.com/smtpd.html
 COMMENT=	Store and forward SMTP proxy
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 SPOOL=		/var/spool/smtpd
 
 RCD_SCRIPTS=	smtpfwdd
@@ -30,20 +32,17 @@ OPSYSVARS+=	LD_LIBS
 LD_LIBS.SunOS+=	-lnsl -lsocket -lresolv
 MAKE_ENV+=	LD_LIBS=${LD_LIBS:Q}
 
-INSTALLATION_DIRS=	sbin
-OWN_DIRS=		${SPOOL}
+INSTALLATION_DIRS=	sbin share/doc/smtpd share/examples/smtpd
+OWN_DIRS=		${SPOOL}/etc
 
 do-install:
-	${INSTALL_DATA_DIR} ${SPOOL}/etc
-	${INSTALL} -m 500 ${WRKSRC}/smtpd ${PREFIX}/sbin/smtpd
-	${INSTALL} -m 500 ${WRKSRC}/smtpfwdd ${PREFIX}/sbin/smtpfwdd
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smtpd
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/smtpd
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/smtpd
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/smtpd
+	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/smtpd ${DESTDIR}${PREFIX}/sbin/smtpd
+	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/smtpfwdd ${DESTDIR}${PREFIX}/sbin/smtpfwdd
+	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/INSTALL \
+	    ${DESTDIR}${PREFIX}/share/doc/smtpd
 .for f in antirelay_check_rules_example antispam_check_rules.example \
 	    smtpd_check_rules.example
-		${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/examples/smtpd
+		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/examples/smtpd
 .endfor
 
 .include "../../devel/sysexits/buildlink3.mk"
