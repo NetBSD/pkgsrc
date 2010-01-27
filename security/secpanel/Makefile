@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:47 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/27 21:28:11 joerg Exp $
 #
 
 DISTNAME=		secpanel-0.5.1
@@ -10,17 +10,19 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.pingx.net/secpanel/
 COMMENT=		GUI front-end for SSH
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		tk>=8.4:../../x11/tk
 
 NO_BUILD=		yes
 
+INSTALLATION_DIRS+=	bin lib/secpanel/images
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/secpanel
-	${INSTALL_DATA} ${WRKSRC}/src/lib/secpanel/*.tcl ${PREFIX}/lib/secpanel/
-	${INSTALL_DATA} ${WRKSRC}/src/lib/secpanel/default.* ${PREFIX}/lib/secpanel/
-	${INSTALL_DATA} ${WRKSRC}/src/lib/secpanel/secpanel.* ${PREFIX}/lib/secpanel/
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/secpanel/images
-	${INSTALL_DATA} ${WRKSRC}/src/lib/secpanel/images/*.gif ${PREFIX}/lib/secpanel/images/
-	${INSTALL_SCRIPT} ${WRKSRC}/src/bin/secpanel ${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/src/lib/secpanel/*.tcl ${DESTDIR}${PREFIX}/lib/secpanel/
+	${INSTALL_DATA} ${WRKSRC}/src/lib/secpanel/default.* ${DESTDIR}${PREFIX}/lib/secpanel/
+	${INSTALL_DATA} ${WRKSRC}/src/lib/secpanel/secpanel.* ${DESTDIR}${PREFIX}/lib/secpanel/
+	${INSTALL_DATA} ${WRKSRC}/src/lib/secpanel/images/*.gif ${DESTDIR}${PREFIX}/lib/secpanel/images/
+	${INSTALL_SCRIPT} ${WRKSRC}/src/bin/secpanel ${DESTDIR}${PREFIX}/bin/
 
 .include "../../mk/bsd.pkg.mk"
