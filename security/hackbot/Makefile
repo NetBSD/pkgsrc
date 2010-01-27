@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/12/02 12:21:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/27 17:17:27 joerg Exp $
 
 DISTNAME=		hackbot-2.15
 CATEGORIES=		security net
@@ -9,21 +9,23 @@ MAINTAINER=		nk@atki.net
 HOMEPAGE=		http://ws.obit.nl/hackbot/
 COMMENT=		Vulnerability scanner written in Perl
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/hackbot
 MANCOMPRESSED=		YES
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		hackbot.pl
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/hackbot
 
 do-build:
 	${SED} "s,/usr/local/etc,${PREFIX}/share/hackbot,g" ${WRKSRC}/hackbot.pl > ${WRKSRC}/hackbot.pl.done
 	${MV} ${WRKSRC}/hackbot.pl.done ${WRKSRC}/hackbot.pl
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/hackbot
-	${INSTALL_SCRIPT} ${WRKSRC}/hackbot.pl ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/cgi.db ${WRKSRC}/fingerprint.db ${PREFIX}/share/hackbot
-	${INSTALL_MAN} ${WRKSRC}/hackbot.1.gz ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/hackbot.pl ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/cgi.db ${WRKSRC}/fingerprint.db \
+	    ${DESTDIR}${PREFIX}/share/hackbot
+	${INSTALL_MAN} ${WRKSRC}/hackbot.1.gz ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
