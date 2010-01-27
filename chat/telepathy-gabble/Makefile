@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2010/01/17 12:02:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/27 08:46:50 wiz Exp $
 #
 
 DISTNAME=	telepathy-gabble-0.9.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-gabble/
 
@@ -10,16 +10,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://telepathy.freedesktop.org/wiki/Components
 COMMENT=	Jabber/XMPP connection manager for Telepathy
 
+BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYPKGPREFIX} == "py24"
-BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-.endif
 
 pre-configure: wocky-pkg-config-hack
 wocky-pkg-config-hack:

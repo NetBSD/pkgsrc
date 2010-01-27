@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.195 2010/01/18 18:23:14 drochner Exp $
+# $NetBSD: Makefile,v 1.196 2010/01/27 08:46:50 wiz Exp $
 
 DISTNAME=		gtk+-2.18.6
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.18/ \
 			${MASTER_SITE_GNOME:=sources/gtk+/2.18/}
@@ -11,6 +12,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gtk.org/
 COMMENT=		GIMP Toolkit v2 - libraries for building X11 user interfaces
 LICENSE=		gnu-lgpl-v2.1
+
+# gtk-builder-convert uses minidom from xml.dom, which needs expat
+DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -67,11 +71,6 @@ SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
 SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 
 PYTHON_PATCH_SCRIPTS=	gtk/gtk-builder-convert
-# gtk-builder-convert uses minidom from xml.dom, which needs expat
-.include "../../lang/python/pyversion.mk"
-.if ${PYPKGPREFIX} == "py24"
-DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-.endif
 
 .include "options.mk"
 
