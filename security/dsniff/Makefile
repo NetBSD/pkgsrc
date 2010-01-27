@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2009/05/09 16:33:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.32 2010/01/27 22:10:07 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
@@ -12,8 +14,8 @@ BUILD_TARGET=	libmissing.a webspy
 INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/webspy ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/webspy.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/webspy ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/webspy.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

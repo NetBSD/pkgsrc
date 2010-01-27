@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/10/01 08:43:09 apb Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/27 22:12:22 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../security/dsniff/Makefile.common"
 
@@ -8,12 +10,15 @@ COMMENT=	Password sniffer
 
 CONFIGURE_ARGS+=	--without-x
 
+INSTALLATION_DIRS+=	${PKGMANDIR}/man8
+INSTALL_MAKE_FLAGS+=	install_prefix=${DESTDIR}
+
 post-configure:
 	( cd ${WRKSRC} \
 	  && grep '#define.*HAVE_SYS_QUEUE_H' config.h >/dev/null \
 	  && mv missing/sys/queue.h missing/sys/queue.h.fake )
 
 post-install:
-	${RM} ${PREFIX}/${PKGMANDIR}/man8/webspy.8
+	${RM} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/webspy.8
 
 .include "../../mk/bsd.pkg.mk"

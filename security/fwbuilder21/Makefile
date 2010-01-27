@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/18 09:59:24 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/27 22:13:02 joerg Exp $
 
 DISTNAME=	fwbuilder-2.1.19
 PKGNAME=	fwbuilder21-2.1.19
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fwbuilder.org/
 COMMENT=	Firewall Builder GUI
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=	fwbuilder-[0-9]*
 
 USE_TOOLS+=		gmake
@@ -20,6 +22,8 @@ UNLIMIT_RESOURCES+=	datasize
 CONFIGURE_ENV+=		QMAKE=${QMAKE:Q}
 MAKE_ENV+=		QMAKE=${QMAKE:Q}
 QMAKE=			${QTDIR}/bin/qmake
+
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 .include "../../security/libfwbuilder21/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
