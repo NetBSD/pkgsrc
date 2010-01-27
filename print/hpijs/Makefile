@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/01/18 09:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/01/27 13:42:20 joerg Exp $
 
 DISTNAME=	hpijs-2.1.4
 PKGREVISION=	2
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hpinkjet.sourceforge.net/
 COMMENT=	HP inkjet printer driver server
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=	ghostscript<=6.01nb4 ghostscript-nox11<=6.01nb4
 
 USE_LANGUAGES=		c c++
@@ -17,16 +19,14 @@ CPPFLAGS+=		-DAPDK_BUFFER_SEND
 
 USE_TOOLS+=		gzip
 ONLY_FOR_COMPILER=	gcc
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/ppd share/doc/html/hpijs
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ppd
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/hpijs
-	cd ${WRKSRC} && ${CP} hpijs ${PREFIX}/bin/hpijs
-	cd ${WRKSRC} && ${CP} hpijs_readme.html gs_hpijs.png \
-		 ${PREFIX}/share/doc/html/hpijs/
-	cd ${WRKSRC} && ${CP} ppd/HP* ${PREFIX}/share/ppd/
-	${GZIP_CMD} ${PREFIX}/share/ppd/HP*.ppd
+	${INSTALL_PROGRAM} ${WRKSRC}/hpijs ${DESTDIR}${PREFIX}/bin/hpijs
+	cd ${WRKSRC} && ${INSTALL_DATA} hpijs_readme.html gs_hpijs.png \
+		 ${DESTDIR}${PREFIX}/share/doc/html/hpijs/
+	${INSTALL_DATA} ${WRKSRC}/ppd/HP* ${DESTDIR}${PREFIX}/share/ppd/
+	${GZIP_CMD} ${DESTDIR}${PREFIX}/share/ppd/HP*.ppd
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
