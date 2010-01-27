@@ -1,35 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2009/12/09 10:22:04 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2010/01/27 19:38:51 drochner Exp $
 
---- configure.orig	2009-05-03 20:09:51.000000000 +0200
+--- configure.orig	2010-01-24 18:47:06.000000000 +0000
 +++ configure
-@@ -22005,7 +22005,7 @@ else
-   with_freetype=yes
- fi
- 
--if test "x$with_freetype" == "xyes"; then
-+if test "x$with_freetype" = "xyes"; then
- 
- pkg_failed=no
- { $as_echo "$as_me:$LINENO: checking for PANGOFT2" >&5
-@@ -22692,7 +22692,7 @@ else
- $as_echo "yes" >&6; }
- 	pangocairo_ok=yes
- fi
--if test "x$pangocairo_ok" == "xyes"; then
-+if test "x$pangocairo_ok" = "xyes"; then
- 
- cat >>confdefs.h <<\_ACEOF
- #define HAVE_PANGOCAIRO_H 1
-@@ -23393,7 +23393,7 @@ $as_echo "no" >&6; }
- fi
- 
- 
--if test "$XGETTEXT" == none ; then
-+if test "$XGETTEXT" = none ; then
-    { { $as_echo "$as_me:$LINENO: error: xgettext program not found: $XGETTEXT." >&5
- $as_echo "$as_me: error: xgettext program not found: $XGETTEXT." >&2;}
-    { (exit 1); exit 1; }; }
-@@ -26631,7 +26631,7 @@ $as_echo_n "checking for $am_display_PYT
+@@ -21819,7 +21819,7 @@ $as_echo_n "checking for $am_display_PYT
  if test "${am_cv_python_pythondir+set}" = set; then
    $as_echo_n "(cached) " >&6
  else
@@ -38,7 +11,7 @@ $NetBSD: patch-aa,v 1.6 2009/12/09 10:22:04 drochner Exp $
       echo "$PYTHON_PREFIX/lib/python$PYTHON_VERSION/site-packages"`
  fi
  { $as_echo "$as_me:$LINENO: result: $am_cv_python_pythondir" >&5
-@@ -26649,7 +26649,7 @@ $as_echo_n "checking for $am_display_PYT
+@@ -21837,7 +21837,7 @@ $as_echo_n "checking for $am_display_PYT
  if test "${am_cv_python_pyexecdir+set}" = set; then
    $as_echo_n "(cached) " >&6
  else
@@ -47,21 +20,3 @@ $NetBSD: patch-aa,v 1.6 2009/12/09 10:22:04 drochner Exp $
       echo "${PYTHON_EXEC_PREFIX}/lib/python${PYTHON_VERSION}/site-packages"`
  fi
  { $as_echo "$as_me:$LINENO: result: $am_cv_python_pyexecdir" >&5
-@@ -27022,7 +27022,7 @@ $as_echo "no" >&6; }
- fi
- 
- 
--if  test "x$dblatex" == "xno"; then
-+if  test "x$dblatex" = "xno"; then
-   if test "x$jw" != "xno"; then
-   WITH_JW_TRUE=
-   WITH_JW_FALSE='#'
-@@ -27043,7 +27043,7 @@ fi
- fi
- hardbook_ok=no
- xsltproc_ok=no
--if test "x$with_hardbooks" == "xno"; then
-+if test "x$with_hardbooks" = "xno"; then
-    if test "xno" != "xno"; then
-   WITH_JW_TRUE=
-   WITH_JW_FALSE='#'
