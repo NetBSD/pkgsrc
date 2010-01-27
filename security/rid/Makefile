@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/06/30 00:07:22 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/27 21:34:09 joerg Exp $
 #
 
 DISTNAME=	rid-1.11
@@ -11,13 +11,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.theorygroup.com/Software/RID/
 COMMENT=	Remote Intrusion Detection to track down compromised hosts
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	YES
 
 CONF_FILES=	${PREFIX}/share/examples/rid/rid.conf ${PKG_SYSCONFDIR}/rid.conf
 
-INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS=	sbin share/doc/rid share/examples/rid
 
 post-configure:
 	@echo "#undef DEFAULT_YYIN" >> ${WRKSRC}/netconfig.h
@@ -25,13 +27,11 @@ post-configure:
 		${WRKSRC}/netconfig.h
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rid ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rid
+	${INSTALL_PROGRAM} ${WRKSRC}/rid ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${WRKSRC}/CHANGES \
 		${WRKSRC}/COPYRIGHT ${WRKSRC}/CREDITS ${WRKSRC}/README \
-		${PREFIX}/share/doc/rid
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rid
-	${INSTALL_DATA} ${WRKSRC}/rid.conf ${PREFIX}/share/examples/rid
+		${DESTDIR}${PREFIX}/share/doc/rid
+	${INSTALL_DATA} ${WRKSRC}/rid.conf ${DESTDIR}${PREFIX}/share/examples/rid
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
