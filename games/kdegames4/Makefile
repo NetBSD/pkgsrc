@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 09:58:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/27 10:38:38 markd Exp $
 
 DISTNAME=	kdegames-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	games
 COMMENT=	Games for the KDE integrated X11 desktop
 

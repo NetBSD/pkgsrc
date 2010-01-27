@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/12/04 22:04:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/01/27 10:38:42 markd Exp $    
 share/icons/oxygen/128x128/actions/address-book-new.png
 share/icons/oxygen/128x128/actions/application-exit.png
 share/icons/oxygen/128x128/actions/appointment-new.png
@@ -2395,13 +2395,13 @@ share/icons/oxygen/22x22/devices/modem.png
 share/icons/oxygen/22x22/devices/multimedia-player-apple-ipod.png
 share/icons/oxygen/22x22/devices/multimedia-player.png
 share/icons/oxygen/22x22/devices/network-wired.png
-share/icons/oxygen/22x22/devices/network-wireless.png
 share/icons/oxygen/22x22/devices/network-wireless-connected-00.png
 share/icons/oxygen/22x22/devices/network-wireless-connected-100.png
 share/icons/oxygen/22x22/devices/network-wireless-connected-25.png
 share/icons/oxygen/22x22/devices/network-wireless-connected-50.png
 share/icons/oxygen/22x22/devices/network-wireless-connected-75.png
 share/icons/oxygen/22x22/devices/network-wireless-disconnected.png
+share/icons/oxygen/22x22/devices/network-wireless.png
 share/icons/oxygen/22x22/devices/pda.png
 share/icons/oxygen/22x22/devices/phone-openmoko-freerunner.png
 share/icons/oxygen/22x22/devices/phone.png
@@ -3375,8 +3375,8 @@ share/icons/oxygen/32x32/actions/user-properties.png
 share/icons/oxygen/32x32/actions/view-calendar-agenda.png
 share/icons/oxygen/32x32/actions/view-calendar-birthday.png
 share/icons/oxygen/32x32/actions/view-calendar-day.png
-share/icons/oxygen/32x32/actions/view-calendar-journal.png
 share/icons/oxygen/32x32/actions/view-calendar-holiday.png
+share/icons/oxygen/32x32/actions/view-calendar-journal.png
 share/icons/oxygen/32x32/actions/view-calendar-list.png
 share/icons/oxygen/32x32/actions/view-calendar-month.png
 share/icons/oxygen/32x32/actions/view-calendar-special-occasion.png
@@ -3656,13 +3656,13 @@ share/icons/oxygen/32x32/devices/modem.png
 share/icons/oxygen/32x32/devices/multimedia-player-apple-ipod.png
 share/icons/oxygen/32x32/devices/multimedia-player.png
 share/icons/oxygen/32x32/devices/network-wired.png
-share/icons/oxygen/32x32/devices/network-wireless.png
 share/icons/oxygen/32x32/devices/network-wireless-connected-00.png
 share/icons/oxygen/32x32/devices/network-wireless-connected-100.png
 share/icons/oxygen/32x32/devices/network-wireless-connected-25.png
 share/icons/oxygen/32x32/devices/network-wireless-connected-50.png
 share/icons/oxygen/32x32/devices/network-wireless-connected-75.png
 share/icons/oxygen/32x32/devices/network-wireless-disconnected.png
+share/icons/oxygen/32x32/devices/network-wireless.png
 share/icons/oxygen/32x32/devices/pda.png
 share/icons/oxygen/32x32/devices/phone-openmoko-freerunner.png
 share/icons/oxygen/32x32/devices/phone.png

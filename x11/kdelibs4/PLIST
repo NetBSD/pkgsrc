@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/04 22:04:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/01/27 10:38:41 markd Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -228,6 +228,7 @@ include/KDE/KBookmark
 include/KDE/KBookmarkAction
 include/KDE/KBookmarkActionInterface
 include/KDE/KBookmarkActionMenu
+include/KDE/KBookmarkDialog
 include/KDE/KBookmarkDomBuilder
 include/KDE/KBookmarkExporterBase
 include/KDE/KBookmarkGroup
