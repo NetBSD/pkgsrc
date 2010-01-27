@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/18 09:59:27 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/01/27 19:37:56 joerg Exp $
 
 DISTNAME=	pfstat-2.3
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.benzedrine.cx/
 MAINTAINER=	peter@NetBSD.org
 HOMEPAGE=	http://www.benzedrine.cx/pfstat.html
 COMMENT=	Utility to render graphical statistics for PF
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 MAKE_ENV+=	PF_VERSION=${PF_VERSION:S/.//} NOGCCERROR=yes
@@ -25,11 +27,11 @@ do-build:
 	cd ${WRKSRC}/pfstatd && ${SETENV} ${MAKE_ENV} ${MAKE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pfstat ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/pfstat.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/pfstat.conf.example ${PREFIX}/share/examples/pfstat
-	${INSTALL_PROGRAM} ${WRKSRC}/pfstatd/pfstatd ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/pfstatd/pfstatd.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/pfstat ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/pfstat.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/pfstat.conf.example ${DESTDIR}${PREFIX}/share/examples/pfstat
+	${INSTALL_PROGRAM} ${WRKSRC}/pfstatd/pfstatd ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/pfstatd/pfstatd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/pf.buildlink3.mk"
