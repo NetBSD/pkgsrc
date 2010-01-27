@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/05/01 14:52:02 zafer Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/27 19:59:16 joerg Exp $
 
 DISTNAME=	sarah-0.9.1b
 CATEGORIES=	sysutils
@@ -12,7 +12,8 @@ USE_TOOLS+=	perl:run
 REPLACE_PERL=	sarah
 NO_BUILD=	YES
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/sarah \
+			share/examples/sarah
 CONF_FILES+=	${PREFIX}/share/examples/sarah/sarah.conf.sample \
 			${PKG_SYSCONFDIR}/sarah.conf
 
@@ -27,11 +28,9 @@ post-patch:
 	${MV} ${WRKSRC}/sarah.1.done ${WRKSRC}/sarah.1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/sarah ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sarah
-	${INSTALL_DATA} ${WRKSRC}/sarah.conf.sample ${PREFIX}/share/examples/sarah
-	${INSTALL_MAN} ${WRKSRC}/sarah.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sarah
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/sarah
+	${INSTALL_SCRIPT} ${WRKSRC}/sarah ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/sarah.conf.sample ${DESTDIR}${PREFIX}/share/examples/sarah
+	${INSTALL_MAN} ${WRKSRC}/sarah.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/sarah
 
 .include "../../mk/bsd.pkg.mk"
