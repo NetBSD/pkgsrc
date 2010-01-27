@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/04/09 00:48:15 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2010/01/27 16:17:34 joerg Exp $
 #
 
 DISTNAME=	hugelatex-2.0
@@ -10,6 +10,8 @@ DISTFILES=	# nada
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	LaTeX format files with large limits
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
 
@@ -27,9 +29,11 @@ CHECK_FILES_SKIP+=	${PKG_TEXMFPREFIX}/web2c/hugelatex.log
 
 .include "../../print/kpathsea/texmf.mk"
 
+INSTALLATION_DIRS=	bin share/texmf/web2c/
+
 do-install:
-	${LN} -sf latex ${PREFIX}/bin/hugelatex
+	${LN} -sf latex ${DESTDIR}${PREFIX}/bin/hugelatex
 	${INSTALL_DATA} ${FILESDIR}/texmf.hugelatex.cnf \
-		${PREFIX}/share/texmf/web2c/texmf.hugelatex.cnf
+	    ${DESTDIR}${PREFIX}/share/texmf/web2c/texmf.hugelatex.cnf
 
 .include "../../mk/bsd.pkg.mk"
