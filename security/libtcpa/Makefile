@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/17 12:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/27 17:11:31 joerg Exp $
 #
 
 DISTNAME=		tpm-1.1b
@@ -13,6 +13,7 @@ HOMEPAGE=		http://www.research.ibm.com/gsal/tcpa/
 COMMENT=		TCPA libraries and test programs from IBM
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/TPM
 
@@ -22,16 +23,16 @@ BUILD_DIRS=		libtcpa examples
 INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man3 share/doc/${PKGBASE}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libtcpa/libtcpa.a ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/libtcpa/libtcpa.a ${DESTDIR}${PREFIX}/lib
 	for f in tcpa_demo takeown createkey loadkey evictkey signfile	\
 		verifyfile sealfile unsealfile; do			\
-		${INSTALL_PROGRAM} ${WRKSRC}/examples/$${f} ${PREFIX}/bin; \
+		${INSTALL_PROGRAM} ${WRKSRC}/examples/$${f} ${DESTDIR}${PREFIX}/bin; \
 	done
 	for f in ${WRKDIR}/tcpa_man/*.3; do			\
-		${INSTALL_MAN} $${f} ${PREFIX}/${PKGMANDIR}/man3;	\
+		${INSTALL_MAN} $${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3;	\
 	done
-	${INSTALL_DATA} ${WRKSRC}/libtcpa/License ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/libtcpa/License ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
