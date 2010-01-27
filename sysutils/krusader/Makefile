@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.27 2010/01/18 09:59:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/01/27 19:27:08 joerg Exp $
 #
 
 DISTNAME=	krusader-1.90.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	kde sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=krusader/}
 
 MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://krusader.sourceforge.net/
 COMMENT=	Advanced twin-panel (commander-style) file-manager for KDE 3.x
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake perl msgfmt
 USE_LANGUAGES=	c c++
@@ -22,8 +24,6 @@ SHLIBTOOL_OVERRIDE=	# empty
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+= --without-acl
 .endif
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
