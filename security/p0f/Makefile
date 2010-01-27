@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/07/17 18:00:23 adrianp Exp $
+# $NetBSD: Makefile,v 1.25 2010/01/27 21:35:44 joerg Exp $
 #
 
 DISTNAME=	p0f-2.0.8
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lcamtuf.coredump.cx/p0f.shtml
 COMMENT=	Passive OS fingerprinting tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/p0f
 
@@ -30,13 +32,13 @@ post-patch:
 	${LN} -s NetBSD ${WRKSRC}/mk/DragonFly
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/p0f ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/p0f/p0f.README
-	${INSTALL_DATA} ${WRKSRC}/p0frep ${PREFIX}/share/doc/p0f/p0frep
-	${INSTALL_DATA} ${WRKSRC}/p0f.fp ${PREFIX}/share/examples/p0f
-	${INSTALL_DATA} ${WRKSRC}/p0fa.fp ${PREFIX}/share/examples/p0f
-	${INSTALL_DATA} ${WRKSRC}/p0fr.fp ${PREFIX}/share/examples/p0f
-	${INSTALL_MAN} ${WRKSRC}/p0f.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/p0f ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/doc/README ${DESTDIR}${PREFIX}/share/doc/p0f/p0f.README
+	${INSTALL_DATA} ${WRKSRC}/p0frep ${DESTDIR}${PREFIX}/share/doc/p0f/p0frep
+	${INSTALL_DATA} ${WRKSRC}/p0f.fp ${DESTDIR}${PREFIX}/share/examples/p0f
+	${INSTALL_DATA} ${WRKSRC}/p0fa.fp ${DESTDIR}${PREFIX}/share/examples/p0f
+	${INSTALL_DATA} ${WRKSRC}/p0fr.fp ${DESTDIR}${PREFIX}/share/examples/p0f
+	${INSTALL_MAN} ${WRKSRC}/p0f.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:23 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2010/01/27 21:32:58 joerg Exp $
 #
 
 DISTNAME=		rc5-mlg-004
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.flame.org/netbsd-rc5/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.distributed.net/rc5/
 COMMENT=		Binaries for taking part in the rc5des challenge
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		netbsd-alpha netbsd-arm netbsd-i386
 EMUL_MODULES.netbsd=	base
@@ -42,8 +44,9 @@ do-build:
 #do-build:
 #	cd ${WRKSRC}; ${RM} -f master.ini.orig master.ini.in rc5.sh.orig
 
+INSTALLATION_DIRS+=	RC5
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/RC5
-	cd ${WRKSRC} && pax -rw . ${PREFIX}/RC5
+	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/RC5
 
 .include "../../mk/bsd.pkg.mk"
