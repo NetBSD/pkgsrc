@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2010/01/21 16:28:51 heinz Exp $
+# $NetBSD: Makefile,v 1.25 2010/01/27 08:43:04 wiz Exp $
 
 DISTNAME=	Python-2.5.4
 PKGNAME=	python25-2.5.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/2.5.4/
 EXTRACT_SUFX=	.tar.bz2
