@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2009/05/19 08:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2010/01/27 21:26:59 joerg Exp $
 
 DISTNAME=		srp-1.4.4
 PKGNAME=		srp-client-1.4.4
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://srp.stanford.edu/
 COMMENT=		Client programs using Secure Remote Password protocol
 LICENSE=		srp_client-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		Licensor makes vague patent claims.
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -35,8 +37,6 @@ SED_PATTERN+=	-e "s,-ldes,-ldes -lroken -lcom_err -lcrypt,"
 SED_PATTERN+=	-e "s,-ldes,-ldes -lcom_err,"
 .endif
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
 post-patch:
 	for FILE in ftp/ftp/Makefile.in ftp/ftpd/Makefile.in		\
 		telnet/configure.in telnet/configure;			\
@@ -47,13 +47,15 @@ post-patch:
 	done
 .endif
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/telnet/telnet/telnet \
-		${PREFIX}/bin/srptelnet
+	    ${DESTDIR}${PREFIX}/bin/srptelnet
 	${INSTALL_DATA} ${WRKSRC}/telnet/telnet/telnet.1 \
-		${PREFIX}/${PKGMANDIR}/man1/srptelnet.1
-	${INSTALL_PROGRAM} ${WRKSRC}/ftp/ftp/ftp ${PREFIX}/bin/srpftp
-	${INSTALL_DATA} ${WRKSRC}/ftp/ftp/ftp.M ${PREFIX}/${PKGMANDIR}/man1/srpftp.1
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/srptelnet.1
+	${INSTALL_PROGRAM} ${WRKSRC}/ftp/ftp/ftp ${DESTDIR}${PREFIX}/bin/srpftp
+	${INSTALL_DATA} ${WRKSRC}/ftp/ftp/ftp.M ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/srpftp.1
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

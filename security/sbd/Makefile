@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/10 18:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/27 21:30:48 joerg Exp $
 #
 
 DISTNAME=	sbd-0.5
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/sbd/
 COMMENT=	HMAC & one-time pad-based remote login program
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/sbd
 
 USE_LANGUAGES+=	c c++
@@ -18,7 +20,11 @@ CONF_FILES=	${EGDIR}/deckey.bits ${PKG_SYSCONFDIR}/sbd/deckey.bits
 CONF_FILES+=	${EGDIR}/enckey.bits ${PKG_SYSCONFDIR}/sbd/enckey.bits
 CONF_FILES+=	${EGDIR}/athkey.bits ${PKG_SYSCONFDIR}/sbd/athkey.bits
 
-do-configure:
+NO_CONFIGURE=	yes
+
+INSTALLATION_DIRS+=	bin share/sbd
+
+OWN_DIRS+=	${PKG_SYSCONFDIR}/sbd
 
 do-build:
 	cd ${WRKSRC} && \
@@ -26,14 +32,12 @@ do-build:
 	${CXX} -DPKG_SYSCONFDIR=\""${PKG_SYSCONFDIR}/sbd\"" -Wall -O2 -o sbd csocket.cpp sha1.cpp utils.cpp sbd.cpp
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sbdd ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/sbd ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/sbd
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/sbd
-	${INSTALL_DATA} ${WRKSRC}/PROTOCOL ${PREFIX}/share/sbd/
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/sbd/
-	${INSTALL_DATA} ${WRKSRC}/athkey.bits ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/deckey.bits ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/enckey.bits ${EGDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/sbdd ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/sbd ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/PROTOCOL ${DESTDIR}${PREFIX}/share/sbd/
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/sbd/
+	${INSTALL_DATA} ${WRKSRC}/athkey.bits ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/deckey.bits ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/enckey.bits ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2007/02/20 01:40:03 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/27 20:57:22 joerg Exp $
 #
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../sysutils/mbmon/Makefile.common"
 
@@ -16,7 +18,7 @@ LDFLAGS+=	-Wl,-R${X11BASE}/lib
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xmbmon ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/xmbmon ${DESTDIR}${PREFIX}/bin
 
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
