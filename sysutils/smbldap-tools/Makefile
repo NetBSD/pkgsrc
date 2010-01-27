@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/26 01:45:48 taca Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/27 20:05:28 joerg Exp $
 
 DISTNAME=	smbldap-tools-0.9.5
 CATEGORIES=	sysutils net databases
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gna.org/projects/smbldap-tools/
 COMMENT=	Set of ldap administration scripts for samba
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	samba>=3.0.22:../../net/samba
 DEPENDS+=	p5-perl-ldap>=0.33:../../databases/p5-perl-ldap
@@ -62,7 +64,8 @@ CONF_FILES_PERMS+=	${EGDIR}/smbldap_bind.conf \
 			${BINOWN} ${BINGRP} 0600
 
 BUILD_DEFS=		VARBASE
-INSTALLATION_DIRS=	bin sbin/smbldap-tools share/doc/smbldap-tools ${EGDIR}
+INSTALLATION_DIRS=	bin ${PERL5_INSTALLVENDORLIB} \
+			sbin/smbldap-tools share/doc/smbldap-tools ${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
