@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/12/02 12:00:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2010/01/27 16:51:33 tron Exp $
 #
 
 DISTNAME=	telepathy-idle-0.1.5
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-idle/
 
@@ -9,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://telepathy.freedesktop.org/wiki/Components
 COMMENT=	Full-featured IRC connection manager for Telepathy
 LICENSE=	gnu-lgpl-v2.1
+
+BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -19,10 +22,6 @@ USE_TOOLS+=	gmake pkg-config
 CONFIGURE_ARGS+=	OPENSSL_CFLAGS=-I${BUILDLINK_PREFIX.openssl}/include
 CONFIGURE_ARGS+=	OPENSSL_LIBS="-L${BUILDLINK_PREFIX.openssl}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib -lssl"
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYPKGPREFIX} == "py24"
-BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-.endif
 CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
 
 .include "../../chat/telepathy-glib/buildlink3.mk"

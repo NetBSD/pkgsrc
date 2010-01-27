@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2009/12/16 17:20:31 drochner Exp $
+# $NetBSD: Makefile,v 1.29.2.1 2010/01/27 16:51:33 tron Exp $
 #
 
 DISTNAME=		gnome-terminal-2.28.2
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.28/}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Xterm like terminal program for GNOME 2
+
+BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -24,10 +27,6 @@ CONFIGURE_ENV+=		ac_cv_path_GTK_BUILDER_CONVERT="${PYTHONBIN} ${BUILDLINK_PREFIX
 GCONF_SCHEMAS=	gnome-terminal.schemas
 
 PYTHON_FOR_BUILD_ONLY=	YES
-.include "../../lang/python/pyversion.mk"
-.if ${PYPKGPREFIX} == "py24"
-BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-.endif
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.14.0
