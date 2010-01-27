@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:16:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/01/27 15:14:00 joerg Exp $
 share/xpdf/greek/Greek.nameToUnicode
 share/xpdf/greek/ISO-8859-7.unicodeMap
+share/xpdf/greek/add-to-xpdfrc
