@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/11/03 01:03:13 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2010/01/27 08:46:23 wiz Exp $
 
 DISTNAME=	iso-codes-3.11.1
 CATEGORIES=	textproc
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alioth.debian.org/projects/pkg-isocodes/
 COMMENT=	List of country, language and currency names
 LICENSE=	gnu-lgpl-v2.1
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -19,8 +21,6 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 PKGCONFIG_OVERRIDE=	iso-codes.pc.in
 
 REPLACE_PYTHON=		*.py */*.py
-
-BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 PYTHON_FOR_BUILD_ONLY=		yes
 

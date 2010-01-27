@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/10/02 12:18:27 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/27 08:46:24 wiz Exp $
 #
 
 DISTNAME=	moin-1.7.1
@@ -10,9 +10,9 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://moinmo.in/
 COMMENT=	MoinMoin, a Python clone of WikiWiki
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED=	25 24
 PYDISTUTILSPKG=	# empty
