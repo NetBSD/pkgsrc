@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/04/14 22:35:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/27 20:30:24 joerg Exp $
 #
 
 DISTNAME=		user-20071026
@@ -8,6 +8,8 @@ DISTFILES=		# empty
 
 MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Limited NetBSD-compatible useradd/groupadd commands
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
@@ -19,9 +21,9 @@ NO_BUILD=		yes
 INSTALLATION_DIRS=	sbin
 
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/useradd.sh ${PREFIX}/sbin/useradd
-	${INSTALL_SCRIPT} ${FILESDIR}/userdel.sh ${PREFIX}/sbin/userdel
-	${INSTALL_SCRIPT} ${FILESDIR}/groupadd.sh ${PREFIX}/sbin/groupadd
-	${INSTALL_SCRIPT} ${FILESDIR}/groupdel.sh ${PREFIX}/sbin/groupdel
+	${INSTALL_SCRIPT} ${FILESDIR}/useradd.sh ${DESTDIR}${PREFIX}/sbin/useradd
+	${INSTALL_SCRIPT} ${FILESDIR}/userdel.sh ${DESTDIR}${PREFIX}/sbin/userdel
+	${INSTALL_SCRIPT} ${FILESDIR}/groupadd.sh ${DESTDIR}${PREFIX}/sbin/groupadd
+	${INSTALL_SCRIPT} ${FILESDIR}/groupdel.sh ${DESTDIR}${PREFIX}/sbin/groupdel
 
 .include "../../mk/bsd.pkg.mk"
