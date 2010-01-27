@@ -1,0 +1,5 @@
+This module enables use of HTTP Proxy authentication with
+Catalyst::Plugin::Authentication.
+
+Currently this module only supports the Basic scheme, but
+upon request Digest will also be added.
