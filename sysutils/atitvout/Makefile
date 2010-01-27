@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/01/05 04:56:27 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/27 18:29:02 joerg Exp $
 
 DISTNAME=	atitvout-0.4
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/atitvout/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://0pointer.de/lennart/projects/atitvout/
 COMMENT=	Allows TV-Out connector support under Linux/NetBSD
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 # Linux-*-i386 [gnumakefile needs work]
 
@@ -35,12 +37,11 @@ SUBST_STAGE.sh=	pre-configure
 SUBST_FILES.sh=	test.sh
 SUBST_SED.sh=	-e "s,@PREFIX@,${PREFIX},"
 
-INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS=	sbin share/doc/atitvout
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/atitvout ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/atitvout
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/atitvout
-	${INSTALL_DATA} ${WRKSRC}/test.sh ${PREFIX}/share/doc/atitvout
+	${INSTALL_PROGRAM} ${WRKSRC}/atitvout ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/atitvout
+	${INSTALL_DATA} ${WRKSRC}/test.sh ${DESTDIR}${PREFIX}/share/doc/atitvout
 
 .include "../../mk/bsd.pkg.mk"
