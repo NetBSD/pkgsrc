@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/23 13:55:24 agc Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/27 20:19:36 joerg Exp $
 
 --- Makefile	2003/05/19 15:39:04	1.1
 +++ Makefile	2003/05/19 16:01:40
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/06/23 13:55:24 agc Exp $
  
  
  # Any libraries
-@@ -29,4 +29,9 @@
+@@ -29,4 +29,8 @@
  	shar -c -l 45 -o tcx README VERSION COPYING Makefile tcx.1 untcx.1 tcx.c config.h untcx.c
  
  clean:
@@ -24,6 +24,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/06/23 13:55:24 agc Exp $
 +	rm -f *.o tcx untcx
 +
 +install:
-+	${BSD_INSTALL_PROGRAM} tcx ${PREFIX}/bin
-+	${BSD_INSTALL_PROGRAM} untcx ${PREFIX}/bin
-+	chmod 4755 ${PREFIX}/bin/untcx
++	${BSD_INSTALL_PROGRAM} tcx ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} untcx ${DESTDIR}${PREFIX}/bin

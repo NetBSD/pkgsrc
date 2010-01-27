@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/15 14:47:20 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/01/27 20:20:06 joerg Exp $
 #
 
 DISTNAME=	tkcron-2.12
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tcl.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Graphical frontend to crontab
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
@@ -21,6 +23,6 @@ do-build:
 	${SED} -e "\:/usr/local/bin/wish: s;;${LOCALBASE}/bin/wish;g" ${WRKSRC}/tkcron.tcl > ${WRKSRC}/tkcron
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tkcron ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tkcron ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
