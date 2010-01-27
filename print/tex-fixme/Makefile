@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/27 16:14:26 joerg Exp $
 
 DISTNAME=	fixme
 PKGNAME=	tex-${DISTNAME}-3.2
@@ -10,19 +10,22 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://tug.ctan.org/tex-archive/macros/latex/contrib/fixme/
 COMMENT=	Insert "fixme" notes into draft documents
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=	${PKGNAME}
 
 .include "../../print/teTeX/module.mk"
+
+INSTALLATION_DIRS+=	${PKG_LOCALTEXMFPREFIX}/doc/latex/fixme \
+			${PKG_LOCALTEXMFPREFIX}/tex/latex/fixme
 
 do-build:
 	cd ${WRKSRC} && latex fixme.ins
 
 do-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/latex/fixme
 	${INSTALL_DATA} ${WRKSRC}/NEWS ${WRKSRC}/README ${WRKSRC}/fixme.pdf \
-		${WRKSRC}/fixme.el ${PKG_LOCALTEXMFPREFIX}/doc/latex/fixme
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/fixme
+	    ${WRKSRC}/fixme.el ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/latex/fixme
 	${INSTALL_DATA} ${WRKSRC}/fixme.sty \
-		${PKG_LOCALTEXMFPREFIX}/tex/latex/fixme
+	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/fixme
 
 .include "../../mk/bsd.pkg.mk"
