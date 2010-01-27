@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2009/12/04 21:23:22 markd Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/27 20:48:20 drochner Exp $
 #
 
-DISTNAME=	numpy-1.3.0
-PKGNAME=	${PYPKGPREFIX}-numpy-1.3.0
-PKGREVISION=	3
+DISTNAME=	numpy-1.4.0
+PKGNAME=	${PYPKGPREFIX}-numpy-1.4.0
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
@@ -34,6 +33,10 @@ PYSETUPBUILDARGS+= --fcompiler=gnu95
 .elif !empty(PKGSRC_COMPILER:Mgcc)
 PYSETUPBUILDARGS+= --fcompiler=gnu
 .endif
+
+# needs devel/py-nose
+#do-test:
+#	${PYTHONBIN} -c "import numpy; numpy.test()"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
