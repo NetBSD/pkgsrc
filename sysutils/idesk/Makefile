@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/01/18 09:59:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2010/01/27 19:10:29 joerg Exp $
 #
 
 DISTNAME=	idesk-0.7.5
@@ -11,6 +11,8 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://idesk.sourceforge.net/
 COMMENT=	Lightweight desktop icons handler
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
@@ -22,9 +24,10 @@ SUBST_STAGE.lnkpath=	pre-configure
 SUBST_FILES.lnkpath=	examples/default.lnk
 SUBST_SED.lnkpath=	-e 's|/usr/local/share|${PREFIX}/share|g'
 
+INSTALLATION_DIRS+=	share/doc/idesk
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/idesk
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/idesk
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/idesk
 
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
