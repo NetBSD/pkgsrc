@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.379 2010/01/27 10:46:02 markd Exp $
+$NetBSD: CHANGES-2010,v 1.380 2010/01/27 11:08:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -458,3 +458,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/kdebindings4-python to 4.3.5 [markd 2010-01-27]
 	Updated x11/kdelibs-experimental4 to 4.3.5 [markd 2010-01-27]
 	Updated x11/kdelibs4 to 4.3.5 [markd 2010-01-27]
+	Added www/p5-Catalyst-Model-File version 0.08 [sno 2010-01-27]
