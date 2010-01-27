@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:01:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/27 16:08:19 joerg Exp $
 
 DISTNAME=	cooking
 PKGNAME=	tex-${DISTNAME}-0.9b
@@ -10,8 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tug.ctan.org/tex-archive/macros/latex/contrib/cooking/
 COMMENT=	Typeset recipes
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
+PKG_DESTDIR_SUPPORT=	user-destdir
 
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 .include "../../print/teTeX/module.mk"
 
@@ -22,13 +23,14 @@ do-build:
 	cd ${WRKSRC} && latex cooking.dtx
 	cd ${WRKSRC} && latex kraut.tex
 
+INSTALLATION_DIRS=	${PKG_LOCALTEXMFPREFIX}/doc/latex/cooking \
+			${PKG_LOCALTEXMFPREFIX}/tex/latex/cooking
+
 do-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/latex/cooking
 .for __tmp__ in README cooking.dvi kraut.tex kraut.dvi
-	${INSTALL_DATA} ${WRKSRC}/${__tmp__} ${PKG_LOCALTEXMFPREFIX}/doc/latex/cooking
+	${INSTALL_DATA} ${WRKSRC}/${__tmp__} ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/latex/cooking
 .endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/cooking
 	${INSTALL_DATA} ${WRKSRC}/cooking.sty \
-		${PKG_LOCALTEXMFPREFIX}/tex/latex/cooking
+	    ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/cooking
 
 .include "../../mk/bsd.pkg.mk"
