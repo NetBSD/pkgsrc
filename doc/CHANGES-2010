@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.371 2010/01/27 08:03:00 sno Exp $
+$NetBSD: CHANGES-2010,v 1.372 2010/01/27 08:43:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -424,3 +424,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Class-Std to 0.0.11 [sno 2010-01-26]
 	Added sysutils/iat version 0.1.7 [wiz 2010-01-26]
 	Added www/p5-Task-Catalyst-Tutorial version 0.06 [sno 2010-01-27]
+	Updated lang/python25 to 2.5.4nb5 [wiz 2010-01-27]
