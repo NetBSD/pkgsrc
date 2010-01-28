@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.319 2010/01/16 05:55:54 minskim Exp $
+# $NetBSD: Makefile,v 1.320 2010/01/28 09:26:46 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -200,7 +200,6 @@ SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-graphics
 SUBDIR+=	tex-graphics-doc
 SUBDIR+=	tex-hlatex
-SUBDIR+=	tex-hugelatex
 SUBDIR+=	tex-hyperref
 SUBDIR+=	tex-hyperref-doc
 SUBDIR+=	tex-hyph-utf8
