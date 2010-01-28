@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/17 18:00:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/28 19:32:48 joerg Exp $
 #
 
 DISTNAME=	atheme-services-3.0.4
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tbz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.atheme.org/
 COMMENT=	Flexible IRC services system with proven scalability
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -64,18 +66,19 @@ MAKE_DIRS_PERMS+=	${VARBASE}/log/atheme \
 MAKE_DIRS_PERMS+=	${VARBASE}/run/atheme \
 			${ATHEME_USER} ${ATHEME_GROUP} 0770
 
+INSTALLATION_DIRS+=	${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/dist/atheme.conf.example \
-		${EGDIR}/atheme.conf.example
+	    ${DESTDIR}${EGDIR}/atheme.conf.example
 	${INSTALL_DATA} ${WRKSRC}/dist/atheme.conf.userserv-example \
-		${EGDIR}/atheme.conf.userserv-example
+	    ${DESTDIR}${EGDIR}/atheme.conf.userserv-example
 	${INSTALL_DATA} ${WRKSRC}/dist/atheme.cron.example \
-		${EGDIR}/atheme.cron.example
+	    ${DESTDIR}${EGDIR}/atheme.cron.example
 	${INSTALL_DATA} ${WRKSRC}/dist/atheme.motd.example \
-		${EGDIR}/atheme.motd.example
+	    ${DESTDIR}${EGDIR}/atheme.motd.example
 .	for i in ${DOC_FILES}
-		${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/atheme/
+		${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/doc/atheme/
 .	endfor
 
 .include "../../devel/libmowgli/buildlink3.mk"
