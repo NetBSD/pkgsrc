@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/20 14:04:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/28 20:18:44 joerg Exp $
 
 VERSION=	1.27
 DISTNAME=	pidgin-facebookchat-source-${VERSION}
@@ -13,14 +13,21 @@ MAINTAINER=	smb@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/pidgin-facebookchat/
 COMMENT=	Plugin for pidgin to support Facebook IM
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 SUBST_CLASSES+=	paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing absolute paths.
 SUBST_FILES.paths=	Makefile
 SUBST_SED.paths=	-e 's+-I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include+-I${BUILDLINK_DIR}/include/glib/glib-2.0/glib -I${BUILDLINK_DIR}/include/glib/glib-2.0 -I${BUILDLINK_DIR}/lib/glib-2.0/include+g'
 SUBST_SED.paths+=	-e 's+-I/usr/include/libpurple+-I${BUILDLINK_DIR}/include/libpurple+g'
-SUBST_SED.paths+=	-e 's+/usr/share/+${PREFIX}/share/+g'
-SUBST_SED.paths+=	-e 's+/usr/lib/+${PREFIX}/lib/+g'
+SUBST_SED.paths+=	-e 's+/usr/share/+${DESTDIR}${PREFIX}/share/+g'
+SUBST_SED.paths+=	-e 's+/usr/lib/+${DESTDIR}${PREFIX}/lib/+g'
+
+INSTALLATION_DIRS+=	lib/purple-2 \
+			share/pixmaps/pidgin/protocols/16 \
+			share/pixmaps/pidgin/protocols/22 \
+			share/pixmaps/pidgin/protocols/48
 
 .include "../../chat/pidgin/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/20 14:04:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/28 20:19:01 joerg Exp $
 
 VERSION=	1.2.1
 PKGREVISION=	4
@@ -12,14 +12,18 @@ MAINTAINER=	smb@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/pidgin-latex/
 COMMENT=	Plugin for pidgin to render LaTeX as images
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	gmake
 USE_TOOLS+=	pkg-config
 
-#PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-INSTALLATION_DIRS=	share/doc/pidgin-latex
+INSTALLATION_DIRS=	lib/pidgin share/doc/pidgin-latex
 
-post-install:
+do-install:
+	${INSTALL_LIB} ${WRKSRC}/LaTeX.so ${DESTDIR}${PREFIX}/lib/pidgin/LaTeX.so
+
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/pidgin-latex/
 
 DEPENDS+= ImageMagick-[0-9]*:../../graphics/ImageMagick
