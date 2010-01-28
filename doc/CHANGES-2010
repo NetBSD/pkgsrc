@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.383 2010/01/28 09:27:27 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.384 2010/01/28 13:07:00 he Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -463,3 +463,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/tnftpd to 20091122 [lukem 2010-01-28]
 	Removed print/tex-hugelatex [wiz 2010-01-28]
 	Updated print/tex-jadetex to 3.13nb7 [wiz 2010-01-28]
+	Updated lang/parrot to 1.9.0 [he 2010-01-28]
