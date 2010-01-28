@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.389 2010/01/28 23:33:14 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.390 2010/01/28 23:41:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -470,3 +470,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/teTeX3-bin to 3.0nb38 [minskim 2010-01-28]
 	Updated print/teTeX3-bin to 3.0nb39 [minskim 2010-01-28]
 	Added print/tex-placeins-plain version 2.0 [minskim 2010-01-28]
+	Updated print/tex-tetex to 3.0.16770 [minskim 2010-01-28]
