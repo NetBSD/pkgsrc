@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/12/17 14:47:35 he Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/01/28 13:06:19 he Exp $
 bin/parrot
 bin/parrot-nqp
 bin/parrot_config
@@ -193,8 +193,8 @@ lib/parrot/${PKGVERSION}/library/CGI/QueryHash.pbc
 lib/parrot/${PKGVERSION}/library/CGI/QueryHash.pir
 lib/parrot/${PKGVERSION}/library/Config/JSON.pbc
 lib/parrot/${PKGVERSION}/library/Config/JSON.pir
-lib/parrot/${PKGVERSION}/library/Configure.pbc
-lib/parrot/${PKGVERSION}/library/Configure.pir
+lib/parrot/${PKGVERSION}/library/Configure/genfile.pbc
+lib/parrot/${PKGVERSION}/library/Configure/genfile.pir
 lib/parrot/${PKGVERSION}/library/Crow.pbc
 lib/parrot/${PKGVERSION}/library/Crow.pir
 lib/parrot/${PKGVERSION}/library/Curses.pir
@@ -339,6 +339,7 @@ lib/parrot/${PKGVERSION}/library/yaml_dumper.pir
 lib/parrot/${PKGVERSION}/parrot_config.o
 lib/parrot/${PKGVERSION}/tools/build/ops2c.pl
 lib/parrot/${PKGVERSION}/tools/build/pmc2c.pl
+lib/parrot/${PKGVERSION}/tools/dev/create_language.pl
 lib/parrot/${PKGVERSION}/tools/dev/gen_makefile.pl
 lib/parrot/${PKGVERSION}/tools/dev/mk_language_shell.pl
 lib/parrot/${PKGVERSION}/tools/dev/pbc_to_exe.pir
@@ -362,6 +363,7 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/Configure/Options/Test/Prepare.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Configure/Step.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Configure/Step/List.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Configure/Step/Methods.pm
+lib/parrot/${PKGVERSION}/tools/lib/Parrot/Configure/Step/Test.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Configure/Test.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Configure/Trace.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Configure/Utils.pm
@@ -440,11 +442,9 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/VTable.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Revision.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/SearchOps.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test.pm
-lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Cardinal.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Harness.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/PGE.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/PIR_PGE.pm
-lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Perl6.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Pod.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Pod/Utils.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Util.pm
@@ -516,7 +516,6 @@ src/parrot/${PKGVERSION}/pmc/bignum.pmc
 src/parrot/${PKGVERSION}/pmc/boolean.dump
 src/parrot/${PKGVERSION}/pmc/boolean.pmc
 src/parrot/${PKGVERSION}/pmc/callsignature.pmc
-src/parrot/${PKGVERSION}/pmc/callsignaturereturns.pmc
 src/parrot/${PKGVERSION}/pmc/capture.pmc
 src/parrot/${PKGVERSION}/pmc/class.pmc
 src/parrot/${PKGVERSION}/pmc/codestring.pmc
