@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2009/08/20 15:24:58 jwise Exp $
+# $NetBSD: Makefile,v 1.30 2010/01/28 19:35:16 joerg Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA5
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL} \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.draga.com/~jwise/i2cb/
 COMMENT=	Next generation Internet Citizens Band chat server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,12 +35,15 @@ RCD_SCRIPT_SRC.icbd=	${WRKSRC}/etc/icbd.sh
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/i2cbd \
 			share/examples/rc.d
 
+INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/sbin \
+			MAN8DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+
 post-extract:
 	-${RM} -f ${WRKSRC}/*/.depend
 
 post-install:
 .for f in ${EGFILES}
-	${INSTALL_DATA} ${WRKSRC}/etc/${f:Q} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${DESTDIR}${EGDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
