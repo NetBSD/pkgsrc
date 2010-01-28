@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/15 20:42:44 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/01/28 23:40:42 minskim Exp $
 
-SHA1 (tex-tetex-3.0.16392/tetex.tar.xz) = 451d6654fdfcec3c52b1b026fc24311717f99baf
-RMD160 (tex-tetex-3.0.16392/tetex.tar.xz) = aecc97e10ef2b61d81d418b8ead95946187369d4
-Size (tex-tetex-3.0.16392/tetex.tar.xz) = 18296 bytes
+SHA1 (tex-tetex-3.0.16770/tetex.tar.xz) = 1eb7f79c68c883e6dde57f9d11077be3532869f8
+RMD160 (tex-tetex-3.0.16770/tetex.tar.xz) = db2e8c012a1aaccb65dc2a9b30cd32a66e7ea6e2
+Size (tex-tetex-3.0.16770/tetex.tar.xz) = 18304 bytes
