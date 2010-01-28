@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2009/12/23 13:27:58 drochner Exp $
+# $NetBSD: Makefile,v 1.72.2.1 2010/01/28 10:16:14 tron Exp $
 
 DISTNAME=	ghostscript-8.70
 PKGREVISION=	2
@@ -38,6 +38,7 @@ GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/${PKGVERSION}/Resource
 CPPFLAGS+=		-Ijpeg
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
 CFLAGS+=		-DA4
@@ -58,9 +59,9 @@ CONFIGURE_ENV+=		ac_cv_func_fopen64=no
 # On Linux-*-x86_64, there was an error message:
 # gp_unix.o: relocation R_X86_64_32 against `a local symbol' can not be
 # used when making a shared object; recompile with -fPIC
-CFLAGS.NetBSD=		-fPIC
-CFLAGS.Linux=		-fPIC
-CFLAGS.SunOS=		-fPIC
+.if !empty(PKGSRC_COMPILER:Mgcc)
+CFLAGS+=		-fPIC
+.endif
 
 # Interim IRIX build fix, the real problem is that fontconfig.pc doesn't
 # require linking against libiconv when it should do so.
