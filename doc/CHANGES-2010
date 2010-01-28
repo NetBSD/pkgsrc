@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.387 2010/01/28 19:33:36 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.388 2010/01/28 21:38:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -468,3 +468,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/libXt to 1.0.7 [tnn 2010-01-28]
 	Updated www/apache-tomcat6 to 6.0.24 [spz 2010-01-28]
 	Updated print/teTeX3-bin to 3.0nb38 [minskim 2010-01-28]
+	Updated print/teTeX3-bin to 3.0nb39 [minskim 2010-01-28]
