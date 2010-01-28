@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1282 2010/01/27 09:03:36 sno Exp $
+# $NetBSD: Makefile,v 1.1283 2010/01/28 07:12:27 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1052,6 +1052,7 @@ SUBDIR+=	py-idle
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
 SUBDIR+=	py-newt
+SUBDIR+=	py-nose
 SUBDIR+=	py-pexpect
 SUBDIR+=	py-pqueue
 SUBDIR+=	py-pytemplate
