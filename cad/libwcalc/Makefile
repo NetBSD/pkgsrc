@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/14 12:55:59 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/28 01:11:27 joerg Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--without-scilab
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	libwcalc/wcalc.pc.in
+
+BUILD_DIRS=		${WRKSRC} ${WRKSRC}/po
 
 pre-build:
 	${MV} ${WRKSRC}/libwcalc/wcalc-config ${WRKSRC}/libwcalc/wcalc-config.bak
