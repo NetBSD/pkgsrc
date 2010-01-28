@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2010/01/18 09:58:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2010/01/28 20:11:47 joerg Exp $
 #
 
 DISTNAME=	konversation-1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat kde
 MASTER_SITES=	http://download.berlios.de/konversation/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://konversation.kde.org/
 COMMENT=	KDE IRC Client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
@@ -33,8 +35,6 @@ USE_TOOLS+=		bash:run
 .if ${OPSYS} != "Linux"
 DEPENDS+=		psmisc>=20.1:../../sysutils/psmisc
 .endif
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
