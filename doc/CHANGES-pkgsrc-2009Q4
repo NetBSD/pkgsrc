@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.15 2010/01/28 10:17:18 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.16 2010/01/28 15:06:12 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -52,3 +52,5 @@ ImageMagick: bug fix
 p5-PerlMagick: bug fix
 Pullup ticket #2977 - requested by tnn
 ghostscript: build fix
+Pullup ticket #2979 - requested by spz
+apache-tomcat6: security update
