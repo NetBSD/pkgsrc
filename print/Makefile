@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.320 2010/01/28 09:26:46 wiz Exp $
+# $NetBSD: Makefile,v 1.321 2010/01/28 23:33:14 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -298,6 +298,7 @@ SUBDIR+=	tex-pkfix
 SUBDIR+=	tex-pkfix-doc
 SUBDIR+=	tex-placeins
 SUBDIR+=	tex-placeins-doc
+SUBDIR+=	tex-placeins-plain
 SUBDIR+=	tex-plain
 SUBDIR+=	tex-preprint
 SUBDIR+=	tex-preprint-doc
