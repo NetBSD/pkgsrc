@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/02/22 19:01:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/28 01:11:27 joerg Exp $
 #
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../cad/wcalc/Makefile.common"
 PKGNAME=	gtk1-${DISTNAME}
