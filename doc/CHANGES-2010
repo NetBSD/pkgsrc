@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.381 2010/01/27 12:42:11 adam Exp $
+$NetBSD: CHANGES-2010,v 1.382 2010/01/28 08:33:53 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -460,3 +460,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/kdelibs4 to 4.3.5 [markd 2010-01-27]
 	Added www/p5-Catalyst-Model-File version 0.08 [sno 2010-01-27]
 	Updated graphics/exiv2 to 0.19 [adam 2010-01-27]
+	Updated net/tnftpd to 20091122 [lukem 2010-01-28]
