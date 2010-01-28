@@ -1,0 +1,6 @@
+This TeX file provides various mechanisms (for plain TeX and close
+relatives) to let insertions (footnotes, topins, pageins, etc.) float
+within their appropriate section, but to prevent them from intruding
+into the following section, even when sections do not normally begin a
+new page.  (If your sections normally begin a new page, just use
+\supereject to flush out insertions.)
