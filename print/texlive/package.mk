@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.2 2010/01/16 07:11:35 minskim Exp $
+# $NetBSD: package.mk,v 1.3 2010/01/28 21:57:17 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live packages.
@@ -54,7 +54,8 @@ REPLACE_FILES.texlua=	${REPLACE_TEXLUA}
 .endif
 
 .if empty(TEX_TEXMF_DIRS)
-_dirs=		dvips fonts tex
+_dirs=		bibtex doc dvips fonts makeindex metafont metapost \
+		omega scripts source tex vtex
 _topdir=	${DESTDIR}${PREFIX}/share/texmf-dist
 .else
 _dirs=		texmf texmf-dist
