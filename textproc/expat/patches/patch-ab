@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.2.2 2010/01/28 15:57:25 spz Exp $
+
+CVE-2009-3560
+
+--- lib/xmlparse.c.orig	2007-05-08 02:25:35.000000000 +0000
++++ lib/xmlparse.c
+@@ -3703,6 +3703,9 @@ doProlog(XML_Parser parser,
+         return XML_ERROR_UNCLOSED_TOKEN;
+       case XML_TOK_PARTIAL_CHAR:
+         return XML_ERROR_PARTIAL_CHAR;
++      case -XML_TOK_PROLOG_S:
++	tok = -tok;
++	break;
+       case XML_TOK_NONE:
+ #ifdef XML_DTD
+         /* for internal PE NOT referenced between declarations */
