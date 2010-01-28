@@ -1,4 +1,4 @@
-# $NetBSD: format-deinstall.tmpl,v 1.1.1.1 2009/01/26 21:04:33 minskim Exp $
+# $NetBSD: format-deinstall.tmpl,v 1.2 2010/01/28 21:37:36 minskim Exp $
 #
 # Delete format files.
 #
@@ -17,7 +17,11 @@ DEINSTALL)
 		  ${MV} ${FMTUTIL_CNF}.tmp ${FMTUTIL_CNF}
 		  case "$engine" in
 		    mpost)
-		      fmtfile="$format.mem"
+		      if [ "$format" = "mpost" ]; then
+		        fmtfile="mp*.mem"
+		      else
+		        fmtfile="$format.mem"
+		      fi
 		      texengine=metapost
 		      ;;
 		    mf*)
