@@ -34,8 +34,6 @@ mpost		mpost		-		-translate-file=cp227.tcx mpost.mp
 metafun		mpost		-		-translate-file=cp227.tcx metafun.mp
 
 # Standard formats (plain, latex) with all engines:
-omega		omega		-	omega.ini
-lambda		omega		language.dat	lambda.ini
 aleph		aleph		-		*aleph.ini
 lamed		aleph		language.dat	*lambda.ini
 
