@@ -1,4 +1,4 @@
-# $NetBSD: format-deinstall.tmpl,v 1.2 2010/01/28 21:37:36 minskim Exp $
+# $NetBSD: format-deinstall.tmpl,v 1.3 2010/01/28 22:37:33 minskim Exp $
 #
 # Delete format files.
 #
@@ -38,7 +38,6 @@ DEINSTALL)
 		done
 	done
 	@FIND@ -d @VARBASE@/lib/texmf -type d -empty -exec @RMDIR@ {} \;
-	@MKTEXLSR@ @VARBASE@/lib/texmf
         ;;
 *)
 	;;

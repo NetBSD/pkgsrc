@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.8 2009/08/08 11:05:35 minskim Exp $
+# $NetBSD: module.mk,v 1.9 2010/01/28 22:37:32 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live 2008 packages.
@@ -91,11 +91,11 @@ _texlive-install:
 		done; \
 	fi
 
-.if empty(TEX_TEXMF_DIRS) || ${TEX_TEXMF_DIRS} != "none"
-.include "../../print/kpathsea/texmf.mk"
-.endif
 .if !empty(TEX_FORMAT_NAMES)
 .  include "../../print/texlive-tetex/format.mk"
+.endif
+.if empty(TEX_TEXMF_DIRS) || ${TEX_TEXMF_DIRS} != "none"
+.include "../../print/kpathsea/texmf.mk"
 .endif
 .if !empty(TEX_HYPHEN_DAT) || !empty(TEX_HYPHEN_DEF)
 .  include "../../print/texlive-tetex/hyphen.mk"
