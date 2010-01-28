@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/29 19:57:43 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/28 19:27:03 joerg Exp $
 #
 
 DISTNAME=	nelma-3.0
@@ -11,8 +11,11 @@ HOMEPAGE=	http://www.tablix.org/~avian/nelma/
 COMMENT=	Circuit board capacitance extraction tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 
 .include "../../devel/confuse/buildlink3.mk"
