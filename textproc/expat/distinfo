@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.18 2009/11/08 08:34:32 obache Exp $
+$NetBSD: distinfo,v 1.18.2.1 2010/01/28 15:57:25 spz Exp $
 
 SHA1 (expat-2.0.1.tar.gz) = 663548c37b996082db1f2f2c32af060d7aa15c2d
 RMD160 (expat-2.0.1.tar.gz) = d31bcb152adaff9e358968be1ea901e1b4ed3b2f
 Size (expat-2.0.1.tar.gz) = 446456 bytes
 SHA1 (patch-aa) = 79b4caee7c1be8cecb1590b19c220d39e4723a26
+SHA1 (patch-ab) = bdca769ae40099e2e0e0f04c96b9ce7a97b4d66b
