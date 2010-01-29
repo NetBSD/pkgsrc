@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.406 2010/01/29 10:19:58 sno Exp $
+$NetBSD: CHANGES-2010,v 1.407 2010/01/29 10:40:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -490,3 +490,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-amsmath to 2.13nb1 [minskim 2010-01-29]
 	Updated print/tex-preprint to 2009 [minskim 2010-01-29]
 	Updated security/p5-Crypt-Rijndael to 1.09 [sno 2010-01-29]
+	Updated security/p5-Crypt-OpenSSL-RSA to 0.26 [sno 2010-01-29]
