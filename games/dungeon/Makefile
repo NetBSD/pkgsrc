@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/11/28 20:25:40 pgoyette Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/29 20:27:03 joerg Exp $
 #
 
 DISTNAME=	dungeon-3.2b
@@ -10,6 +10,8 @@ MASTER_SITES=	http://eblong.com/zarf/glk/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://eblong.com/zarf/glk/
 COMMENT=	Classic game of Dungeon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # There really isn't any license in any of the source code or in the
 # accompanying documentation, but the sources of many versions have
@@ -44,9 +46,10 @@ MAKE_ENV+=	GDT_FLAG=-DHAVE_GDT
 pre-build:
 	cd ${WRKDIR}/glkterm && env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
+INSTALLATION_DIRS+=	bin ${DATADIR}
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dungeon ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/dundat ${DESTDIR}${DATADIR}/
 
 .include "../../devel/ncurses/buildlink3.mk"

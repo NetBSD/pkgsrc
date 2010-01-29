@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/10/22 01:06:27 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2010/01/29 20:31:33 joerg Exp $
 
 --- makefile.orig	Thu Apr  2 21:55:07 1998
 +++ makefile	Sun Jul 26 06:51:44 1998
@@ -10,9 +10,9 @@ $NetBSD: patch-aa,v 1.4 2006/10/22 01:06:27 rillig Exp $
 -XLIB=-L/usr/X11/lib -lX11
 -
 +XLIB= -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lX11
-+INSTALLROOT=$(PREFIX)
-+DATA=$(PREFIX)/share/finalbattle
-+SPRITES=$(PREFIX)/share/finalbattle/sprites
++INSTALLROOT=${DESTDIR}$(PREFIX)
++DATA=${DESTDIR}$(PREFIX)/share/finalbattle
++SPRITES=${DESTDIR}$(PREFIX)/share/finalbattle/sprites
 +DEFS=-DSPRITES=\"$(SPRITES)\" -DDATA=\"$(DATA)\"
 +CFLAGS+= -I$(X11BASE)/include $(DEFS)
  
