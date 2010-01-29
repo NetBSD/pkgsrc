@@ -1,14 +1,14 @@
-$NetBSD: patch-ag,v 1.9 2009/10/11 09:14:52 adam Exp $
+$NetBSD: patch-ag,v 1.10 2010/01/29 18:19:09 adam Exp $
 
---- qmake/project.cpp.orig	2009-09-29 13:01:33.000000000 +0200
+--- qmake/project.cpp.orig	2010-01-15 17:01:30.000000000 +0000
 +++ qmake/project.cpp
-@@ -1609,6 +1609,9 @@ QMakeProject::isActiveConfig(const QStri
-     else if(x == "false")
-         return false;
+@@ -1612,6 +1612,9 @@ QMakeProject::isActiveConfig(const QStri
+     if(isForSymbian() && (x == "symbian" || x == "unix"))
+         return true;
  
 +    if(x == "compile_libtool" && (vars["TEMPLATE"].first() == "app" || vars["TEMPLATE"].first() == "lib"))
 +        return true;
 +
      //mkspecs
-     if((Option::target_mode == Option::TARG_MACX_MODE || Option::target_mode == Option::TARG_QNX6_MODE ||
+     if((Option::target_mode == Option::TARG_MACX_MODE ||
          Option::target_mode == Option::TARG_UNIX_MODE) && x == "unix")

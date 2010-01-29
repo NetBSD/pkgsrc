@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.6 2009/06/13 11:55:51 hasso Exp $
+$NetBSD: patch-ao,v 1.7 2010/01/29 18:19:09 adam Exp $
 
---- src/corelib/codecs/qiconvcodec.cpp.orig	2009-02-25 22:09:21.000000000 +0100
+--- src/corelib/codecs/qiconvcodec.cpp.orig	2010-01-15 17:01:36.000000000 +0000
 +++ src/corelib/codecs/qiconvcodec.cpp
 @@ -50,9 +50,14 @@
  #include <stdio.h>
@@ -13,8 +13,8 @@ $NetBSD: patch-ao,v 1.6 2009/06/13 11:55:51 hasso Exp $
 +
  // unistd.h is needed for the _XOPEN_UNIX macro
  #include <unistd.h>
--#if defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)
-+#if (defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)) || defined(Q_OS_NETBSD) || defined(__DragonFly__)
+-#if defined(_XOPEN_UNIX) && !defined(Q_OS_QNX) && !defined(Q_OS_OSF)
++#if (defined(_XOPEN_UNIX) && !defined(Q_OS_QNX) && !defined(Q_OS_OSF)) || defined(Q_OS_NETBSD) || defined(__DragonFly__)
  #  include <langinfo.h>
  #endif
  
@@ -37,7 +37,7 @@ $NetBSD: patch-ao,v 1.6 2009/06/13 11:55:51 hasso Exp $
      // GNU doesn't disagree with POSIX :/
      const char *inBytes = chars;
  #else
-@@ -306,7 +314,7 @@ QByteArray QIconvCodec::convertFromUnico
+@@ -305,7 +313,7 @@ QByteArray QIconvCodec::convertFromUnico
      char *outBytes;
      size_t inBytesLeft;
  
@@ -46,7 +46,7 @@ $NetBSD: patch-ao,v 1.6 2009/06/13 11:55:51 hasso Exp $
      const char **inBytesPtr = const_cast<const char **>(&inBytes);
  #else
      char **inBytesPtr = &inBytes;
-@@ -454,11 +462,13 @@ iconv_t QIconvCodec::createIconv_t(const
+@@ -451,11 +459,13 @@ iconv_t QIconvCodec::createIconv_t(const
      static const char empty_codeset[] = "";
      const char *codeset = empty_codeset;
      cd = iconv_open(to ? to : codeset, from ? from : codeset);
@@ -56,8 +56,8 @@ $NetBSD: patch-ao,v 1.6 2009/06/13 11:55:51 hasso Exp $
      char *codeset = 0;
  #endif
  
--#if defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)
-+#if (defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)) || defined(Q_OS_NETBSD) || defined(__DragonFly__)
+-#if defined(_XOPEN_UNIX) && !defined(Q_OS_QNX) && !defined(Q_OS_OSF)
++#if (defined(_XOPEN_UNIX) && !defined(Q_OS_QNX) && !defined(Q_OS_OSF)) || defined(Q_OS_NETBSD) || defined(__DragonFly__)
      if (cd == (iconv_t) -1) {
          codeset = nl_langinfo(CODESET);
          if (codeset)
