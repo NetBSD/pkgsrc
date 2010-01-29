@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.391 2010/01/29 01:34:31 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.392 2010/01/29 02:00:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -472,3 +472,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-placeins-plain version 2.0 [minskim 2010-01-28]
 	Updated print/tex-tetex to 3.0.16770 [minskim 2010-01-28]
 	Updated devel/sgb to 20070328nb1 [minskim 2010-01-29]
+	Updated print/tex-misc to 2009.15878 [minskim 2010-01-29]
+	Updated fonts/tex-cm to 2009.15878 [minskim 2010-01-29]
+	Updated print/tex-plain to 3.141592653 [minskim 2010-01-29]
+	Added print/tex-tex version 3.1415926 [minskim 2010-01-29]
