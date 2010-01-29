@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.404 2010/01/29 09:53:56 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.405 2010/01/29 09:58:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -488,3 +488,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-graphics to 1.0onb1 [minskim 2010-01-29]
 	Updated print/tex-tools to 2009 [minskim 2010-01-29]
 	Updated print/tex-amsmath to 2.13nb1 [minskim 2010-01-29]
+	Updated print/tex-preprint to 2009 [minskim 2010-01-29]
