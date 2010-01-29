@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2008/05/15 19:18:07 drochner Exp $
+$NetBSD: patch-ad,v 1.6 2010/01/29 19:54:39 joerg Exp $
 
---- Makefile.orig	2008-04-24 12:10:36.000000000 +0200
+--- Makefile.orig	2008-04-24 10:10:36.000000000 +0000
 +++ Makefile
 @@ -10,7 +10,7 @@
  VERSION=1.8.8
@@ -37,7 +37,18 @@ $NetBSD: patch-ad,v 1.5 2008/05/15 19:18:07 drochner Exp $
   $(OBJ)/ProgressDlg.o $(OBJ)/DocActionPix.o $(OBJ)/DocActionFinish.o $(OBJ)/DocActionFmt.o $(OBJ)/FmtInfo.o \
   $(OBJ)/FileAttachmentDlg.o $(OBJ)/DocActionAtt.o $(OBJ)/PixPropertiesDlg.o $(OBJ)/DocActionFinishDel.o \
   $(OBJ)/ShortcutsList.o $(OBJ)/ShortcutsListDlg.o $(OBJ)/DateTimeDlg.o $(OBJ)/AboutDlg.o $(OBJ)/EditDlg.o \
-@@ -630,7 +629,7 @@ updatesrc:
+@@ -526,9 +525,7 @@ poinstall:
+ 		rm -f po/messages.mo; \
+ 		msgfmt $$i -o po/messages.mo; \
+ 		echo "Installing: $(DESTDIR)$(datadir)/locale/$$loc/LC_MESSAGES/notecase.mo";\
+-		if [ "$(OSX_BUILD)" = "1" ]; then \
+-			mkdir -p $(DESTDIR)$(datadir)/locale/$$loc/LC_MESSAGES/; \
+-		fi; \
++		mkdir -p $(DESTDIR)$(datadir)/locale/$$loc/LC_MESSAGES/; \
+ 		$(INSTALL) -m 644 po/messages.mo "$(DESTDIR)$(datadir)/locale/$$loc/LC_MESSAGES/notecase.mo"; \
+ 	done; \
+ 	rm -f po/messages.mo; 
+@@ -630,7 +627,7 @@ updatesrc:
  	$(Q)$(SED) 's/^Version:.*/Version:        $(VERSION)/' ./docs/notecase.spec
  	$(Q)$(SED) 's/^Source:.*/Source:         $(archive)_src.tar.gz/' ./docs/notecase.spec
  	$(Q)$(SED) 's/\#define APP_VER_STR .*/\#define APP_VER_STR "$(VERSION)"/' ./src/config.h
