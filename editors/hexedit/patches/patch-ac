@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2002/01/18 22:59:31 mjl Exp $
+$NetBSD: patch-ac,v 1.7 2010/01/29 19:45:03 joerg Exp $
 
 --- Makefile.in.orig	Thu Oct 25 00:00:51 2001
 +++ Makefile.in
@@ -10,5 +10,5 @@ $NetBSD: patch-ac,v 1.6 2002/01/18 22:59:31 mjl Exp $
 -	$(INSTALL) -s -m 755 $(PRODUCT) $(bindir)
 -	$(INSTALL) -d -m 755 $(mandir)/man1
 -	$(INSTALL) -m 644 $(PRODUCT).1 $(mandir)/man1
-+	$(BSD_INSTALL_PROGRAM) $(PRODUCT) $(bindir)
-+	$(BSD_INSTALL_DATA) $(PRODUCT).1 $(mandir)/man1/
++	$(BSD_INSTALL_PROGRAM) $(PRODUCT) ${DESTDIR}$(bindir)
++	$(BSD_INSTALL_DATA) $(PRODUCT).1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/

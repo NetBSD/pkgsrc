@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2009/06/30 00:07:14 joerg Exp $
+# $NetBSD: Makefile.common,v 1.8 2010/01/29 19:46:20 joerg Exp $
 #
 DISTNAME=		jed-0.99-16
 CATEGORIES=		editors
@@ -19,10 +19,11 @@ GNU_CONFIGURE=		yes
 EGDIR=			${PREFIX}/share/examples/jed
 CONF_FILES=		${EGDIR}/jed.conf ${PREFIX}/etc/jed.conf
 
+INSTALLATION_DIRS+=	${EGDIR}
+
 post-install:
-	${RMDIR} ${PREFIX}/share/jed/bin
-	${RMDIR} ${PREFIX}/share/jed/lib/tm
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/lib/jed.conf ${EGDIR}
+	${RMDIR} ${DESTDIR}${PREFIX}/share/jed/bin
+	${RMDIR} ${DESTDIR}${PREFIX}/share/jed/lib/tm
+	${INSTALL_DATA} ${WRKSRC}/lib/jed.conf ${DESTDIR}${EGDIR}
 
 .include "../../devel/libslang/buildlink3.mk"
