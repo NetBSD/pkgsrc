@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2009/06/30 00:07:14 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2010/01/29 19:56:45 joerg Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.msg.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Unix version of Rob Pike's editor for plan9
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		libXgFonts>=1.0nb1:../../fonts/Xg
 
@@ -23,6 +25,8 @@ MAKE_ENV+=		X11PREFIX=${X11PREFIX:Q}
 
 INSTALLATION_DIRS=	bin include lib/X11/app-defaults \
 	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man4 ${PKGMANDIR}/man6
+
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} X11PREFIX=${DESTDIR}${X11PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
