@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.399 2010/01/29 08:38:28 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.400 2010/01/29 08:43:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -483,3 +483,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/tex-manfnt to 2009 [minskim 2010-01-29]
 	Updated fonts/tex-mflogo to 2009 [minskim 2010-01-29]
 	Updated fonts/tex-stmaryrd to 2009 [minskim 2010-01-29]
+	Updated fonts/tex-tipa to 1.3nb1 [minskim 2010-01-29]
