@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/19 20:11:14 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/01/29 15:31:51 sno Exp $
 
-SHA1 (IPC-System-Simple-1.18.tar.gz) = 66541a6c5dfc56a1b80a1e1bc5c05de0a1d99af2
-RMD160 (IPC-System-Simple-1.18.tar.gz) = 7b6d1de123834a1edacf5ff4ca0970ed495bbf9e
-Size (IPC-System-Simple-1.18.tar.gz) = 32783 bytes
+SHA1 (IPC-System-Simple-1.20.tar.gz) = 3afbe2bfbe73f48622122cecee6612627dd011c6
+RMD160 (IPC-System-Simple-1.20.tar.gz) = 8a9b27130073fe37761d8089d6c7fffa6be1ddce
+Size (IPC-System-Simple-1.20.tar.gz) = 33437 bytes
