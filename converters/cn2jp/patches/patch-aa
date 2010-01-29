@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/03/30 06:03:39 uebayasi Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/29 16:43:34 joerg Exp $
 
 --- Makefile.orig	Tue Feb 27 22:35:44 1996
 +++ Makefile
@@ -26,9 +26,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/03/30 06:03:39 uebayasi Exp $
 +LIB = libcn2jp.a
 +
 +install:
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIB:.a=.la) $(PREFIX)/lib
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIB:.a=.la) ${DESTDIR}$(PREFIX)/lib
 +	for i in $(PROG);do \
-+		$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $$i $(PREFIX)/bin; \
++		$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $$i ${DESTDIR}$(PREFIX)/bin; \
 +	done
 +
 +all: clean mktable $(LIB) makeall

@@ -1,19 +1,29 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/04/17 12:33:56 reed Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/29 16:47:52 joerg Exp $
 
---- Makefile.orig	2007-05-21 15:50:37.000000000 -0500
-+++ Makefile	2008-04-14 15:30:47.000000000 -0500
-@@ -19,10 +19,14 @@
+--- Makefile.orig	2007-05-21 20:50:37.000000000 +0000
++++ Makefile
+@@ -19,10 +19,8 @@ ALL_OBJ = $(OBJ) $(TEST_OBJ)
  INSTALL = install
  GROFF   = groff
  
-+ifndef DESTDIR
- DESTDIR = /usr/local
-+endif
- PREFIX  =
+-DESTDIR = /usr/local
+-PREFIX  =
  BINDIR  = $(PREFIX)/bin
-+ifndef MANDIR
- MANDIR  = $(PREFIX)/share/man
-+endif
+-MANDIR  = $(PREFIX)/share/man
++MANDIR  = $(PREFIX)/${PKGMANDIR}/man
  MAN1DIR = $(MANDIR)/man1
  
  ifeq ($(UNAME_S),FreeBSD)
+@@ -79,10 +77,8 @@ $(ALL_OBJ): Makefile
+ all: $(BIN)
+ 
+ install: $(BIN) $(MAN)
+-	$(INSTALL) -d -m755 $(DESTDIR)$(BINDIR)
+-	$(INSTALL) $(BIN) $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -d -m755 $(DESTDIR)$(MAN1DIR)
+-	$(INSTALL) $(MAN) $(DESTDIR)$(MAN1DIR)
++	$(BSD_INSTALL_PROGRAM) $(BIN) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_MAN) $(MAN) $(DESTDIR)$(MAN1DIR)
+ 
+ odt2txt.html: $(MAN)
+ 	$(GROFF) -Thtml -man $(MAN) > $@

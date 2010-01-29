@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2001/08/20 02:50:56 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/29 16:47:53 joerg Exp $
 
 --- makefile.orig	Sun Aug  5 07:04:08 1990
 +++ makefile
 @@ -1,7 +1,7 @@
 -DEST = .
-+DEST = ${PREFIX}/bin
++DEST = ${DESTDIR}${PREFIX}/bin
  #CFLAGS = -O -DSysV
 -CFLAGS = -O
 -LDFLAGS = -s
