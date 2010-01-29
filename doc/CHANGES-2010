@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.408 2010/01/29 10:45:56 sno Exp $
+$NetBSD: CHANGES-2010,v 1.409 2010/01/29 12:10:36 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -492,3 +492,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-Crypt-Rijndael to 1.09 [sno 2010-01-29]
 	Updated security/p5-Crypt-OpenSSL-RSA to 0.26 [sno 2010-01-29]
 	Updated time/p5-DateTime-Format-Natural to 0.83 [sno 2010-01-29]
+	Updated net/wireshark to 1.2.6 [tron 2010-01-29]
