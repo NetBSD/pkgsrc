@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/07 06:47:55 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/01/29 08:32:00 minskim Exp $
 
-SHA1 (tex-mflogo-2008.7340/mflogo.tar.lzma) = ccb8f029a9221becabce11802dcee778870f69f1
-RMD160 (tex-mflogo-2008.7340/mflogo.tar.lzma) = 6b1712d197978fc289698bc119fb4061cf5d0a30
-Size (tex-mflogo-2008.7340/mflogo.tar.lzma) = 21151 bytes
+SHA1 (tex-mflogo-2009/mflogo.tar.xz) = 5fbd3424a71b64f444f90a075283ea41b80e4828
+RMD160 (tex-mflogo-2009/mflogo.tar.xz) = 980d9ccc36e1a70b1ff1bdfb7332a558ebc023c5
+Size (tex-mflogo-2009/mflogo.tar.xz) = 21288 bytes
