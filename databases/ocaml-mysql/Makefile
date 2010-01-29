@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/17 12:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/29 17:23:45 joerg Exp $
 #
 
 DISTNAME=		ocaml-mysql-1.0.4
@@ -20,7 +20,7 @@ DOCDIR=			${PREFIX}/share/doc/ocaml-mysql
 INSTALLATION_DIRS=	${DOCDIR}
 
 post-install:
-	cd ${WRKSRC}/doc/html && ${INSTALL_DATA} *.html ${DOCDIR}
+	cd ${WRKSRC}/doc/html && ${INSTALL_DATA} *.html ${DESTDIR}${DOCDIR}
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../databases/mysql5-client/buildlink3.mk"
