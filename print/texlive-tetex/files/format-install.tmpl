@@ -1,4 +1,4 @@
-# $NetBSD: format-install.tmpl,v 1.2 2010/01/29 01:58:13 minskim Exp $
+# $NetBSD: format-install.tmpl,v 1.3 2010/01/29 04:12:41 minskim Exp $
 #
 # Create format files.
 #
@@ -25,6 +25,7 @@ POST-INSTALL)
 			@FMTUTIL_SYS@ --byfmt $format
 		done
 	done
+	@MKTEXLSR@ @VARBASE@/lib/texmf
         ;;
 *)
 	;;
