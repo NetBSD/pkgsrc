@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.7 2009/10/11 09:14:52 adam Exp $
+$NetBSD: patch-aj,v 1.8 2010/01/29 18:19:09 adam Exp $
 
---- mkspecs/netbsd-g++/qplatformdefs.h.orig	2009-09-29 13:01:33.000000000 +0200
+--- mkspecs/netbsd-g++/qplatformdefs.h.orig	2010-01-15 17:01:28.000000000 +0000
 +++ mkspecs/netbsd-g++/qplatformdefs.h
 @@ -65,6 +65,7 @@
  #include <sys/types.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-aj,v 1.7 2009/10/11 09:14:52 adam Exp $
  #include <sys/time.h>
  #include <sys/shm.h>
  #include <sys/socket.h>
-@@ -126,10 +127,14 @@
+@@ -127,10 +128,14 @@
  #define QT_SNPRINTF		::snprintf
  #define QT_VSNPRINTF		::vsnprintf
  

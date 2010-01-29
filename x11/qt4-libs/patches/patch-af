@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.6 2009/06/13 11:55:51 hasso Exp $
+$NetBSD: patch-af,v 1.7 2010/01/29 18:19:09 adam Exp $
 
---- qmake/Makefile.unix.orig	2009-02-25 22:09:16.000000000 +0100
+--- qmake/Makefile.unix.orig	2010-01-15 17:01:30.000000000 +0000
 +++ qmake/Makefile.unix
 @@ -3,7 +3,7 @@ BUILD_PATH = @BUILD_PATH@
  QTOBJS = @QMAKE_QTOBJS@
@@ -11,16 +11,16 @@ $NetBSD: patch-af,v 1.6 2009/06/13 11:55:51 hasso Exp $
  
  #qmake code
  OBJS=project.o property.o main.o makefile.o unixmake2.o unixmake.o  \
-@@ -88,7 +88,7 @@ DEPEND_SRC=project.cpp property.cpp meta
- 	   $(SOURCE_PATH)/src/script/qscriptstring.cpp \
+@@ -59,7 +59,7 @@ DEPEND_SRC=project.cpp property.cpp meta
+ 	   $(SOURCE_PATH)/src/corelib/xml/qxmlutils.cpp \
  	   $(QTSRCS)
  
--CPPFLAGS = -I. -Igenerators -Igenerators/unix -Igenerators/win32 -Igenerators/mac \
-+CPPFLAGS += -I. -Igenerators -Igenerators/unix -Igenerators/win32 -Igenerators/mac \
+-CPPFLAGS = -I. -Igenerators -Igenerators/unix -Igenerators/win32 -Igenerators/mac -Igenerators/symbian \
++CPPFLAGS += -I. -Igenerators -Igenerators/unix -Igenerators/win32 -Igenerators/mac -Igenerators/symbian \
  	   -I$(BUILD_PATH)/include -I$(BUILD_PATH)/include/QtCore \
- 	   -I$(BUILD_PATH)/src/corelib/global \
- 	   -I$(SOURCE_PATH)/src/script -DQT_NO_PCRE \
-@@ -97,7 +97,7 @@ CPPFLAGS = -I. -Igenerators -Igenerators
+ 	   -I$(BUILD_PATH)/src/corelib/global -I$(BUILD_PATH)/src/corelib/xml \
+ 	   -DQT_NO_PCRE \
+@@ -68,7 +68,7 @@ CPPFLAGS = -I. -Igenerators -Igenerators
  	   -DQT_NO_COMPRESS -I$(QMAKESPEC) -DHAVE_QCONFIG_CPP -DQT_NO_THREAD -DQT_NO_QOBJECT \
             -DQT_NO_GEOM_VARIANT $(OPENSOURCE_CXXFLAGS)
  

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2010/01/18 09:59:44 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2010/01/29 18:19:09 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-tools-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	QT GUI (WYSIWYG) builder and other tools
 
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
@@ -13,14 +12,21 @@ DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib
 CONFIGURE_ARGS+=	-DQT_NO_DBUS
 
-BUILD_TARGET=		sub-tools sub-tools-qdoc3
+# XXX this is to test what really gets installed when 'do-install' is disabled
+INSTALL_DIRS+=		tools
+
+BUILD_TARGET=		sub-tools-bootstrap sub-tools
 
 BUILD_QT4=		yes
 UNLIMIT_RESOURCES=	datasize
 
-INSTALLATION_DIRS=	${QTPREFIX}/bin ${QTPREFIX}/lib lib/pkgconfig \
-	${QTPREFIX}/plugins/designer ${QTPREFIX}/phrasebooks \
-	${QTPREFIX}/mkspecs ${QTPREFIX}/tools/qdoc3
+INSTALLATION_DIRS=	lib/pkgconfig
+INSTALLATION_DIRS+=	${QTPREFIX}/bin
+INSTALLATION_DIRS+=	${QTPREFIX}/lib
+INSTALLATION_DIRS+=	${QTPREFIX}/phrasebooks
+INSTALLATION_DIRS+=	${QTPREFIX}/plugins/designer
+INSTALLATION_DIRS+=	${QTPREFIX}/mkspecs
+INSTALLATION_DIRS+=	${QTPREFIX}/tools/qdoc3
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
 post-configure:
@@ -32,13 +38,11 @@ do-install:
 .for prog in assistant_adp lrelease lupdate pixeltool qmake qt3to4
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} ${DESTDIR}${QTPREFIX}/bin/
 .endfor
-.for prog in assistant designer linguist qtconfig qhelpconverter \
+.for prog in assistant designer linguist qdoc3 qtconfig qhelpconverter \
 		qhelpgenerator qcollectiongenerator
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
 		${DESTDIR}${QTPREFIX}/bin
 .endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/qdoc3/qdoc3 \
-		${DESTDIR}${QTPREFIX}/tools/qdoc3/
 	cd ${WRKSRC}/tools/assistant/lib && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
 	cd ${WRKSRC}/tools/assistant/compat/lib && env ${MAKE_ENV} ${INSTALL_ENV} \
@@ -56,6 +60,9 @@ do-install:
 .endfor
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/designer/libqt3supportwidgets.la \
+		${DESTDIR}${QTPREFIX}/plugins/designer/
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/plugins/designer/libqwebview.la \
 		${DESTDIR}${QTPREFIX}/plugins/designer/
 	${INSTALL_DATA} ${WRKSRC}/tools/linguist/phrasebooks/*.qph \
 		${DESTDIR}${QTPREFIX}/phrasebooks/

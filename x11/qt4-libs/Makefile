@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.38 2010/01/18 09:59:43 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2010/01/29 18:19:09 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	3
 COMMENT=	C++ X GUI toolkit
+
+# XXX this is to test what really gets installed when 'do-install' is disabled
+INSTALL_DIRS+=		src
 
 BUILD_TARGET=		sub-src
 INSTALL_TARGET=		install_flat_headers install_targ_headers install_class_headers
 
 PTHREAD_OPTS+=		require
 UNLIMIT_RESOURCES=	datasize
-BUILDLINK_PASSTHRU_DIRS+= ${QTPREFIX}
+BUILDLINK_PASSTHRU_DIRS+=${QTPREFIX}
 
 PLIST_SRC=		${WRKDIR}/PLIST ${PKGDIR}/PLIST
 
@@ -26,10 +28,13 @@ INSTALLATION_DIRS+=	${QTPREFIX}/bin
 INSTALLATION_DIRS+=	${QTPREFIX}/include
 INSTALLATION_DIRS+=	${QTPREFIX}/lib
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/accessible
+INSTALLATION_DIRS+=	${QTPREFIX}/plugins/codecs
+INSTALLATION_DIRS+=	${QTPREFIX}/plugins/graphicssystems
+INSTALLATION_DIRS+=	${QTPREFIX}/plugins/iconengines
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/imageformats
 INSTALLATION_DIRS+=	${QTPREFIX}/plugins/inputmethods
 
-INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR:Q}
+INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
 do-install:
 .for prog in moc rcc uic
@@ -37,12 +42,12 @@ do-install:
 .endfor
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic3 \
 	    ${DESTDIR}${QTPREFIX}/bin
-.for incl in corelib gui network opengl qt3support script scripttools sql svg xml script testlib 3rdparty/webkit/WebCore
+.for incl in corelib gui multimedia network opengl qt3support script scripttools sql svg xml script testlib 3rdparty/webkit/WebCore
 	cd ${WRKSRC}/src/${incl} && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} ${INSTALL_TARGET}
 .endfor
 	cd ${DESTDIR}${PREFIX} && find qt4/include -type f -print > ${WRKDIR}/PLIST
-.for lib in Qt3Support QtCore QtGui QtNetwork QtOpenGL QtSql QtSvg QtXml QtScript QtScriptTools QtTest QtWebKit
+.for lib in Qt3Support QtCore QtGui QtMultimedia QtNetwork QtOpenGL QtSql QtSvg QtXml QtScript QtScriptTools QtTest QtWebKit
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${DESTDIR}${QTPREFIX}/lib/
 	sed	-e "s:${WRKSRC}:${QTPREFIX}:g" \
@@ -56,7 +61,20 @@ do-install:
 		${WRKSRC}/plugins/accessible/lib${plug}.la \
 		${DESTDIR}${QTPREFIX}/plugins/accessible/
 .endfor
-.for plug in qgif qjpeg qmng qsvg
+.for codec in qcncodecs qjpcodecs qkrcodecs qtwcodecs
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/plugins/codecs/lib${codec}.la \
+		${DESTDIR}${QTPREFIX}/plugins/codecs/
+.endfor
+.for gfxs in qglgraphicssystem qtracegraphicssystem
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/plugins/graphicssystems/lib${gfxs}.la \
+		${DESTDIR}${QTPREFIX}/plugins/graphicssystems/
+.endfor
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/plugins/iconengines/libqsvgicon.la \
+		${DESTDIR}/${QTPREFIX}/plugins/iconengines/
+.for plug in qgif qico qjpeg qmng qsvg
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/imageformats/lib${plug}.la \
 		${DESTDIR}${QTPREFIX}/plugins/imageformats/

@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2009/10/11 09:14:52 adam Exp $
+$NetBSD: patch-ae,v 1.8 2010/01/29 18:19:09 adam Exp $
 
---- qmake/generators/unix/unixmake.cpp.orig	2009-09-29 13:01:33.000000000 +0200
+--- qmake/generators/unix/unixmake.cpp.orig	2010-01-15 17:01:30.000000000 +0000
 +++ qmake/generators/unix/unixmake.cpp
-@@ -324,27 +324,29 @@ UnixMakefileGenerator::init()
+@@ -325,27 +325,29 @@ UnixMakefileGenerator::init()
                  if(libtoolify[i].startsWith("QMAKE_LINK") || libtoolify[i] == "QMAKE_AR_CMD") {
                      libtool_flags += " --mode=link";
                      if(project->isActiveConfig("staticlib")) {
@@ -42,7 +42,7 @@ $NetBSD: patch-ae,v 1.7 2009/10/11 09:14:52 adam Exp $
                  } else {
                      libtool_flags += " --mode=compile";
                  }
-@@ -676,7 +678,6 @@ UnixMakefileGenerator::defaultInstall(co
+@@ -677,7 +679,6 @@ UnixMakefileGenerator::defaultInstall(co
      QString targetdir = Option::fixPathToTargetOS(project->first("target.path"), false);
      if(!destdir.isEmpty() && destdir.right(1) != Option::dir_sep)
          destdir += Option::dir_sep;
@@ -50,7 +50,7 @@ $NetBSD: patch-ae,v 1.7 2009/10/11 09:14:52 adam Exp $
      if(targetdir.right(1) != Option::dir_sep)
          targetdir += Option::dir_sep;
  
-@@ -714,10 +715,14 @@ UnixMakefileGenerator::defaultInstall(co
+@@ -715,10 +716,14 @@ UnixMakefileGenerator::defaultInstall(co
          QString src_targ = target;
          if(src_targ == "$(TARGET)")
              src_targ = "$(TARGETL)";
