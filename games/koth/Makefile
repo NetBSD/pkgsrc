@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/29 22:38:30 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/01/29 23:30:43 joerg Exp $
 #
 
 DISTNAME=	koth-0.8.0
@@ -18,11 +18,11 @@ CPPFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR:Q}\""
 EGDIR=		${PREFIX}/share/examples/koth
 CONF_FILES=	${EGDIR}/koth.cfg ${PKG_SYSCONFDIR}/koth.cfg
 
+INSTALLATION_DIRS+=	share/doc/koth ${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/koth
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/koth
-	${INSTALL_DATA} ${WRKSRC}/src/koth.cfg ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/koth
+	${INSTALL_DATA} ${WRKSRC}/src/koth.cfg ${DESTDIR}${EGDIR}
 
 .include "../../graphics/libggi/buildlink3.mk"
 .include "../../graphics/libgii/buildlink3.mk"
