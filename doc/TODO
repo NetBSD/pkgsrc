@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8934 2010/01/29 16:04:34 sno Exp $
+$NetBSD: TODO,v 1.8935 2010/01/29 16:20:43 sno Exp $
 
 Suggested new packages
 ======================
@@ -1030,7 +1030,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o otpCalc-0.97
 	o p5-DBD-postgresql-2.16.1
 	o p5-Rose-DB-0.757 [pkg/42674]
-	o p5-Test-Pod-1.41
 	o p5-Text-Markdown-1.000030
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
