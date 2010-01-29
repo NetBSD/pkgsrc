@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2009/11/14 12:14:07 roy Exp $
+# $NetBSD: Makefile,v 1.14 2010/01/29 12:33:06 roy Exp $
 #
 
-DISTNAME=		dnsmasq-2.51
+DISTNAME=		dnsmasq-2.52
 CATEGORIES=		net
 MASTER_SITES=		http://www.thekelleys.org.uk/dnsmasq/
 
@@ -30,7 +30,7 @@ INSTALL_MAKE_FLAGS+=	AWK="${AWK}"
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/dnsmasq
-	${INSTALL} ${WRKSRC}/dnsmasq.conf.example \
+	${INSTALL_DATA} ${WRKSRC}/dnsmasq.conf.example \
 		${DESTDIR}${PREFIX}/share/examples/dnsmasq/
 
 .include "../../mk/bsd.pkg.mk"
