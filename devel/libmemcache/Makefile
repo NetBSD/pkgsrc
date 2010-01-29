@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/03/30 05:01:31 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/29 03:44:53 dmcmahill Exp $
 #
 
 DISTNAME=		libmemcache-1.4.0.b9
 PKGNAME=		${DISTNAME:S/.b/beta/}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://people.freebsd.org/~seanc/libmemcache/
 EXTRACT_SUFX=		.tar.bz2
