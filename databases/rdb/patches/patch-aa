@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/12/20 17:22:16 agc Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/29 17:30:09 joerg Exp $
 
 Generalise to use ${PREFIX}
 
@@ -8,7 +8,7 @@ Generalise to use ${PREFIX}
  # RBD Makefile - installation only
  
 -INSTALL_DIR = /usr/local/bin
-+INSTALL_DIR = ${PREFIX}/bin
++INSTALL_DIR = ${DESTDIR}${PREFIX}/bin
  
  PERL_SCRIPTS = \
  	column compute dataent etbl headchg jointbl lst2tbl \
