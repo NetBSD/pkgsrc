@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2000/08/31 23:21:44 jwise Exp $
+$NetBSD: patch-aa,v 1.4 2010/01/29 16:39:49 joerg Exp $
 --- Makefile.orig	Sun Jan  4 23:47:29 1998
 +++ Makefile	Tue Dec 29 18:38:29 1998
 @@ -5,19 +5,19 @@
@@ -6,15 +6,15 @@ $NetBSD: patch-aa,v 1.3 2000/08/31 23:21:44 jwise Exp $
  ### EDIT THE NEXT FIVE LINES ONLY ###
  # The directory where the tkhylafax library will be installed
 -TCLLIB_DEST = /usr/local/lib/tkhylafax-3.1
-+TCLLIB_DEST = ${PREFIX}/share/tkhylafax-3.1
++TCLLIB_DEST = ${DESTDIR}${PREFIX}/share/tkhylafax-3.1
  
  # The directory where the tkhylafax command will be installed
 -TCLPRG_DEST = /usr/local/bin
-+TCLPRG_DEST = ${PREFIX}/bin
++TCLPRG_DEST = ${DESTDIR}${PREFIX}/bin
  
  # The directory where the man page will be installed
 -TCLMAN_DEST = /usr/local/man/man1
-+TCLMAN_DEST = ${PREFIX}/man/man1
++TCLMAN_DEST = ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
  
  # The full path to tclsh
 -TCLSH = /usr/local/bin/tclsh
