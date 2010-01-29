@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2001/07/04 02:23:27 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2010/01/29 23:24:15 joerg Exp $
 
 --- source/Makefile.orig	Thu Feb 22 17:01:18 1996
 +++ source/Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.5 2001/07/04 02:23:27 jlam Exp $
  
  #DEFINES=
 -BINDIR=..
-+BINDIR=$(PREFIX)/bin
++BINDIR=${DESTDIR}$(PREFIX)/bin
  COPT=-O
  #CC=
  
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.5 2001/07/04 02:23:27 jlam Exp $
  
  LD=$(CC)
 -INSTALL=install -s -m 755
-+INSTALL=install -c -s -o bin -g bin -m 0755
++INSTALL=${BSD_INSTALL_PROGRAM}
  
  XVLIBS=-L$(OPENWINHOME)/lib -lxview -lolgx -lX11
  XVINCLUDES=-I$(OPENWINHOME)/include
