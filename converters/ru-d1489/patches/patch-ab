@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/07/12 21:01:17 agc Exp $
+$NetBSD: patch-ab,v 1.2 2010/01/29 16:51:38 joerg Exp $
 
 --- Makefile.orig	Wed Nov  5 01:25:46 1997
 +++ Makefile	Fri Jul 12 21:48:50 2002
@@ -14,14 +14,14 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/07/12 21:01:17 agc Exp $
 -	ln /usr/local/bin/todos /usr/local/bin/fromwin
 -	ln /usr/local/bin/todos /usr/local/bin/towin
 -	cp a2kfcnv /usr/local/bin
-+	cp todos $(PREFIX)/bin
++	${BSD_INSTALL_PROGRAM} todos ${DESTDIR}$(PREFIX)/bin
 +	-rm -f $(PREFIX)/bin/fromdos
 +	-rm -f $(PREFIX)/bin/fromwin
 +	-rm -f $(PREFIX)/bin/towin
-+	ln $(PREFIX)/bin/todos $(PREFIX)/bin/fromdos
-+	ln $(PREFIX)/bin/todos $(PREFIX)/bin/fromwin
-+	ln $(PREFIX)/bin/todos $(PREFIX)/bin/towin
-+	cp a2kfcnv $(PREFIX)/bin
++	ln ${DESTDIR}$(PREFIX)/bin/todos ${DESTDIR}$(PREFIX)/bin/fromdos
++	ln ${DESTDIR}$(PREFIX)/bin/todos ${DESTDIR}$(PREFIX)/bin/fromwin
++	ln ${DESTDIR}$(PREFIX)/bin/todos ${DESTDIR}$(PREFIX)/bin/towin
++	${BSD_INSTALL_PROGRAM} a2kfcnv ${DESTDIR}$(PREFIX)/bin
  
  clean:
  	-rm -f todos a2kfcnv

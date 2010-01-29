@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/04/12 22:42:59 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2010/01/29 17:13:36 joerg Exp $
 
 DISTNAME=		lbdb_0.35.1
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.spinnaker.de/debian/
 MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.spinnaker.de/lbdb/
 COMMENT=		The little brother's database
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-perl-ldap>=0.20:../../databases/p5-perl-ldap
 
@@ -37,5 +39,7 @@ PLIST_VARS+=		yp
 .if ${OPSYS} != "Interix"
 PLIST.yp=		yes
 .endif
+
+INSTALL_MAKE_FLAGS+=	install_prefix=${DESTDIR}
 
 .include "../../mk/bsd.pkg.mk"

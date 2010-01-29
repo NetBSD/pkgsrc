@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.12 2006/03/20 19:51:40 joerg Exp $
+$NetBSD: patch-aa,v 1.13 2010/01/29 17:05:46 joerg Exp $
 
 --- Makefile.orig	Sat Jun  5 06:05:36 1999
 +++ Makefile
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.12 2006/03/20 19:51:40 joerg Exp $
  
  install: all
 -	cp gtksql $(DESTDIR)usr/bin/
-+	${BSD_INSTALL_PROGRAM} gtksql ${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} gtksql ${DESTDIR}${PREFIX}/bin
  
  .c.o: 
 -	gcc $(CFLAGS) $(GTKCFLAGS) $(DBSQLCFLAGS) -c $*.c -o ./$*.o

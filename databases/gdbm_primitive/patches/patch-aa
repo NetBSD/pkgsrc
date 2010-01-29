@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/10/10 00:35:57 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2010/01/29 17:00:26 joerg Exp $
 
 --- Makefile.orig	Thu Nov 30 07:44:57 2000
 +++ Makefile
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.2 2002/10/10 00:35:57 jlam Exp $
 +LIBS = ${BUILDLINK_LDFLAGS} -lgdbm
  
 -INSTALL_PREFIX=/opt/pkgs/gdbm_primitive-$(VERSION)
-+INSTALL_PREFIX=${prefix}
++INSTALL_PREFIX=${DESTDIR}${prefix}
  
  .c.o:
  	$(CC) $(CFLAGS) -c $<
