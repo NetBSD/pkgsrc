@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.3 2009/06/14 22:58:02 joerg Exp $
+# $NetBSD: package.mk,v 1.4 2010/01/29 18:52:09 joerg Exp $
 #
 
 PKGNAME=	hugs98-${DISTNAME}
@@ -11,6 +11,8 @@ HUGS_CPPHS=	${BUILDLINK_PREFIX.hugs98}/bin/cpphs-hugs
 HUGS_HSC2HS=	${BUILDLINK_PREFIX.hugs98}/bin/hsc2hs-hugs
 
 .include "../../lang/hugs/buildlink3.mk"
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 do-configure:
 	cd ${WRKSRC} && ${HUGS_RUN} -98 Setup.hs \
@@ -26,7 +28,19 @@ do-build:
 		build \
 		--verbose
 
+.if ${_USE_DESTDIR} != "no"
 do-install:
 	cd ${WRKSRC} && ${HUGS_RUN} -98 Setup.hs \
-		install \
-		--verbose
+		copy --verbose --destdir=${DESTDIR}
+	cd ${WRKSRC} && \
+	pkg=`awk '{ print $$2; nextfile }' < .installed-pkg-config` && \
+	echo $$pkg && \
+	${INSTALL_DATA_DIR} \
+	    ${DESTDIR}${PREFIX}/lib/hugs/packages/$$pkg/packages/$$pkg && \
+	${INSTALL_DATA} .installed-pkg-config \
+	    ${DESTDIR}${PREFIX}/lib/hugs/packages/$$pkg/packages/$$pkg/package.conf
+.else
+do-install:
+	cd ${WRKSRC} && ${HUGS_RUN} -98 Setup.hs \
+		install --verbose
+.endif
