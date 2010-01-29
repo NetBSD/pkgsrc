@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2010/01/28 21:37:35 minskim Exp $
+# $NetBSD: Makefile,v 1.55 2010/01/29 21:46:19 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -17,8 +17,8 @@ DEPENDS+=	teTeX-texmf>=3.0nb14:../../print/teTeX3-texmf
 DEPENDS+=	tex-bin-kpathsea-[0-9]*:../../print/tex-bin-kpathsea
 DEPENDS+=	tex-bin-latex-[0-9]*:../../print/tex-bin-latex
 DEPENDS+=	tex-bin-metafont-[0-9]*:../../fonts/tex-bin-metafont
-DEPENDS+=	tex-bin-tex-[0-9]*:../../print/tex-bin-tex
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
+DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 DEPENDS+=	web2c>=7.5.7nb2:../../print/web2c
 
 INFO_FILES=	# PLIST
@@ -67,7 +67,7 @@ INSTALLATION_DIRS+=	info share/texmf/fmtutil
 
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf
 
-TEX_FORMAT_NAMES+=	tetex
+TEX_FORMATS=	"mpost mpost - -translate-file=cp227.tcx mpost.mp\\nmetafun mpost - -translate-file=cp227.tcx metafun.mp\\naleph aleph - *aleph.ini\\nlamed aleph language.dat *lambda.ini\\ncont-en pdftex cont-usr.tex -translate-file=cp227.tcx *cont-en.ini\\nmptopdf pdftex - -translate-file=cp227.tcx mptopdf.tex\\n"
 
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/teTeX3-bin/Makefile.common"
@@ -80,7 +80,5 @@ post-install:
 	${LN} -sf mpost ${DESTDIR}${PREFIX}/bin/metafun
 	${LN} -sf aleph ${DESTDIR}${PREFIX}/bin/lamed
 	${LN} -sf pdftex ${DESTDIR}${PREFIX}/bin/mptopdf
-	${INSTALL_DATA} ${FILESDIR}/format.tetex.cnf \
-		${DESTDIR}${PREFIX}/share/texmf/fmtutil
 
 .include "../../mk/bsd.pkg.mk"
