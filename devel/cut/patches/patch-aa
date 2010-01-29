@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2008/01/21 11:08:33 ichiro Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/29 17:53:16 joerg Exp $
 
 --- Makefile.orig	2006-04-26 02:54:39.000000000 +0900
 +++ Makefile	2008-01-19 19:40:19.000000000 +0900
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1 2008/01/21 11:08:33 ichiro Exp $
  .SUFFIXES:
  
 -INSTALLPATH := /usr/local
-+INSTALLPATH = $(LOCALBASE)
++INSTALLPATH = ${DESTDIR}${PREFIX}
  INCDIR := $(INSTALLPATH)/include/cut-2
  BINDIR := $(INSTALLPATH)/bin
  
