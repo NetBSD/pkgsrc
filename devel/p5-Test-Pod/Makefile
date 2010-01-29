@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2009/07/16 06:13:48 sno Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/29 16:20:33 sno Exp $
 
-DISTNAME=		Test-Pod-1.40
+DISTNAME=		Test-Pod-1.41
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5tp
 CATEGORIES=		devel perl5
@@ -13,11 +13,12 @@ LICENSE=		artistic-2.0 OR gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=		p5-Pod-Simple>=3.07:../../textproc/p5-Pod-Simple
-DEPENDS+=		{p5-Test-Simple>=0.62,perl>=5.8.8}:../../devel/p5-Test-Simple
+DEPENDS+=		{perl>=5.10.1,p5-Pod-Simple>=3.07}:../../textproc/p5-Pod-Simple
+DEPENDS+=		{p5-Test-Simple>=0.70,perl>=5.8.9}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/Pod/.packlist
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
