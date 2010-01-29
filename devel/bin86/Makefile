@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/08 00:39:23 reed Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/29 17:51:31 joerg Exp $
 
 DISTNAME=		bin86-0.16.17
 PKGREVISION=		1
@@ -9,6 +9,8 @@ MASTER_SITES=		http://homepage.ntlworld.com/robert.debath/dev86/ \
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.debath.co.uk/
 COMMENT=		Simple assembler and linker for x86 machine code
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		bcc-[0-9]*
 CONFLICTS+=		dev86-[0-9]*
@@ -21,6 +23,6 @@ do-build:
 	cd ${WRKSRC} && ${GMAKE} PREFIX=${PREFIX:Q}
 
 do-install:
-	cd ${WRKSRC} && ${GMAKE} PREFIX=${PREFIX:Q} PKGMANDIR=${PKGMANDIR:Q} install
+	cd ${WRKSRC} && ${GMAKE} PREFIX=${DESTDIR}${PREFIX} PKGMANDIR=${PKGMANDIR} install
 
 .include "../../mk/bsd.pkg.mk"
