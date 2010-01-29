@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.420 2010/01/29 21:46:39 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.421 2010/01/29 21:54:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -511,3 +511,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/qt4-tiff to 4.6.1 [adam 2010-01-29]
 	Updated print/teTeX3-texmf to 3.0nb22 [minskim 2010-01-29]
 	Updated print/teTeX3-bin to 3.0nb40 [minskim 2010-01-29]
+	Removed print/tex-bin-tex successor print/tex-tex [minskim 2010-01-29]
