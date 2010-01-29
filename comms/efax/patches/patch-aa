@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/04/12 23:04:21 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2010/01/29 16:14:29 joerg Exp $
 
 --- Makefile.orig	Fri Mar 12 01:00:34 1999
 +++ Makefile
@@ -43,11 +43,11 @@ $NetBSD: patch-aa,v 1.2 2006/04/12 23:04:21 joerg Exp $
  install:
 -	cp fax efax efix $(BINDIR)
 -	cp fax.1 efax.1 efix.1 $(MANDIR)/man1
-+	$(BSD_INSTALL_PROGRAM) efax efix $(BINDIR)
-+	$(BSD_INSTALL_SCRIPT) fax $(BINDIR)
-+	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/examples/efax
-+	$(BSD_INSTALL_DATA) efax.rc $(PREFIX)/share/examples/efax
-+	$(BSD_INSTALL_MAN) fax.1 efax.1 efix.1 $(MANDIR)/man1
++	$(BSD_INSTALL_PROGRAM) efax efix ${DESTDIR}$(BINDIR)
++	$(BSD_INSTALL_SCRIPT) fax ${DESTDIR}$(BINDIR)
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(PREFIX)/share/examples/efax
++	$(BSD_INSTALL_DATA) efax.rc ${DESTDIR}$(PREFIX)/share/examples/efax
++	$(BSD_INSTALL_MAN) fax.1 efax.1 efix.1 ${DESTDIR}$(MANDIR)/man1
  
  clean:	
  	rm -f efax efix efax.o efix.o efaxlib.o efaxio.o efaxos.o efaxmsg.o

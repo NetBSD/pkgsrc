@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:29:04 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2010/01/29 16:14:03 joerg Exp $
 #
 
 DISTNAME=	conserver-7.2.7
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.conserver.com/
 COMMENT=	Application that allows multiple users to watch serial consoles
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 CONFLICTS+=	conserver8-[0-9]*
@@ -43,9 +44,7 @@ SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	conserver.cf/conserver.cf
 SUBST_SED.conf=		-e s,/var/consoles,${VARBASE}/consoles,
 
-pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
