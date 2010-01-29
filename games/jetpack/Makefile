@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/01/19 09:16:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/29 23:23:21 joerg Exp $
 
 DISTNAME=	jetpack
 PKGNAME=	jetpack-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://qiclab.scn.rain.com/pub/games/
 EXTRACT_SUFX=	.tar.Z
@@ -10,18 +10,22 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Arcade action game for X Windows
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_IMAKE=	yes
 NO_INSTALL_MANPAGES=	yes
+SETGIDGAME=		yes
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/jetpack
+
+SPECIAL_PERMS+=	bin/jetpack ${SETGID_GAMES_PERMS}
+
+CONF_FILES_PERM+=	/dev/null /var/games/jetpack.scores \
+			${GAMES_USER} ${GAMES_GROUP} 0664
+OWN_DIRS_PERMS+=	${PREFIX}/share/jetpack ${GAMES_USER} ${GAMES_GROUP} 0775
 
 post-install:
-	@${CHOWN} bin:games ${PREFIX}/bin/jetpack
-	@${CHOWN} bin:games ${PREFIX}/share/jetpack
-	@${CHMOD} 2755 ${PREFIX}/bin/jetpack
-	${INSTALL} -o bin -g games -m 664 /dev/null /var/games/jetpack.scores
-	@${CHMOD} 0775 ${PREFIX}/share/jetpack
-	${INSTALL_MAN} ${WRKSRC}/jetpack.man ${PREFIX}/${PKGMANDIR}/man6/jetpack.6
+	${INSTALL_MAN} ${WRKSRC}/jetpack.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/jetpack.6
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
