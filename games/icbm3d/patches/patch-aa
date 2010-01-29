@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2004/06/15 13:14:46 grant Exp $
+$NetBSD: patch-aa,v 1.6 2010/01/29 23:10:38 joerg Exp $
 
 --- makefile.orig	1998-07-31 14:41:20.000000000 +1000
 +++ makefile
@@ -29,9 +29,9 @@ $NetBSD: patch-aa,v 1.5 2004/06/15 13:14:46 grant Exp $
 -	- cp icbm3d $(INSTALLROOT)/icbm3d
 +
 +install:       icbm3d
-+	$(BSD_INSTALL_PROGRAM) icbm3d $(PREFIX)/bin
-+	$(BSD_INSTALL_MAN_DIR) $(PREFIX)/share/doc/icbm3d
-+	$(BSD_INSTALL_MAN) README.txt $(PREFIX)/share/doc/icbm3d/
++	$(BSD_INSTALL_PROGRAM) icbm3d ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_MAN_DIR) ${DESTDIR}$(PREFIX)/share/doc/icbm3d
++	$(BSD_INSTALL_MAN) README.txt ${DESTDIR}$(PREFIX)/share/doc/icbm3d/
  
  clean:
  	- rm *.o icbm3d language.h
