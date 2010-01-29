@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/13 07:19:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/29 01:54:26 minskim Exp $
 share/texmf-dist/makeindex/plain/plaintex.ist
 share/texmf-dist/tex/plain/base/fontchart.tex
 share/texmf-dist/tex/plain/base/gkpmac.tex
@@ -16,12 +16,12 @@ share/texmf-dist/tex/plain/base/webmac.tex
 share/texmf-dist/tex/plain/base/wlist.tex
 share/texmf-dist/tex/plain/config/aleph.ini
 share/texmf-dist/tex/plain/config/bplain.ini
+share/texmf-dist/tex/plain/config/dviluatex.ini
 share/texmf-dist/tex/plain/config/etex.ini
 share/texmf-dist/tex/plain/config/luatex.ini
 share/texmf-dist/tex/plain/config/omega.ini
 share/texmf-dist/tex/plain/config/pdfbplain.ini
 share/texmf-dist/tex/plain/config/pdfetex.ini
-share/texmf-dist/tex/plain/config/pdfluatex.ini
 share/texmf-dist/tex/plain/config/pdftexmagfix.tex
 share/texmf-dist/tex/plain/config/tex.ini
 share/texmf-dist/tex/plain/config/xetex.ini
