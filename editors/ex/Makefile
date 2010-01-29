@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/12/15 23:24:33 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/29 19:39:24 joerg Exp $
 #
 
 DISTNAME=	ex-040103
@@ -10,5 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ex-vi.sourceforge.net/
 COMMENT=	Berkeley vi 3.7
 LICENSE=	original-bsd
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"

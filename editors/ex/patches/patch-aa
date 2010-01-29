@@ -1,15 +1,19 @@
-$NetBSD: patch-aa,v 1.5 2005/11/08 21:46:03 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2010/01/29 19:39:24 joerg Exp $
 
---- Makefile.orig	Sat Jan  3 15:22:47 2004
-+++ Makefile	Tue Nov  8 22:41:34 2005
-@@ -83,13 +83,15 @@
- BINDIR		= bin
- LIBEXECDIR	= libexec
- MANDIR		= man
+--- Makefile.orig	2004-01-03 14:22:47.000000000 +0000
++++ Makefile
+@@ -80,16 +80,16 @@
+ # located  below $(DESTDIR). $(PRESERVEDIR) is used for recovery files. It
+ # will get mode 1777.
+ #
+-BINDIR		= bin
+-LIBEXECDIR	= libexec
+-MANDIR		= man
 -DESTDIR		= /usr/local
 -PRESERVEDIR	= /var/preserve
-+#DESTDIR	= /usr/local
-+DESTDIR		= ${PREFIX}
++BINDIR		= ${PREFIX}/bin
++LIBEXECDIR	= ${PREFIX}/libexec
++MANDIR		= ${PREFIX}/${PKGMANDIR}
 +PRESERVEDIR	= /var/tmp/vi.recover
  
  #
@@ -21,7 +25,7 @@ $NetBSD: patch-aa,v 1.5 2005/11/08 21:46:03 rillig Exp $
  
  #
  # Compiler and linker flags.
-@@ -140,9 +142,9 @@
+@@ -140,9 +140,9 @@ FEATURES	= -DLISPCODE -DCHDIR -DFASTTAG 
  # advanced multibyte character support etc. which might not be present
  # on your system.
  #
@@ -34,7 +38,7 @@ $NetBSD: patch-aa,v 1.5 2005/11/08 21:46:03 rillig Exp $
  
  #
  # These settings should be correct for any modern Unix.
-@@ -182,7 +184,7 @@
+@@ -182,7 +182,7 @@ OSTYPE	= -DVMUNIX -DPOSIX_1
  # On System V, the terminfo library may be more accurate than the termcap
  # file. To use it, link against the curses library.
  #
@@ -43,7 +47,7 @@ $NetBSD: patch-aa,v 1.5 2005/11/08 21:46:03 rillig Exp $
  #
  # You may also get terminfo access by using the ncurses library.
  #
-@@ -191,7 +193,7 @@
+@@ -191,7 +191,7 @@ OSTYPE	= -DVMUNIX -DPOSIX_1
  # The preferred choice for ex on Linux and other systems that provide a good
  # termcap file is the 2.11BSD termcap library included here.
  #
@@ -52,7 +56,7 @@ $NetBSD: patch-aa,v 1.5 2005/11/08 21:46:03 rillig Exp $
  
  #
  # Since ex uses sbrk() internally, a conflict with the libc's version of
-@@ -297,7 +299,7 @@
+@@ -297,7 +297,7 @@ install: all install-man
  		mv $(DESTDIR)/$(BINDIR)/ex $(DESTDIR)/$(BINDIR)/ex.old.$$$$; \
  		rm -f $(DESTDIR)/$(BINDIR)/ex.old.$$$$; \
  	fi
