@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8928 2010/01/29 11:44:22 obache Exp $
+$NetBSD: TODO,v 1.8929 2010/01/29 11:48:45 obache Exp $
 
 Suggested new packages
 ======================
@@ -416,7 +416,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-transform-0.6.0
 	o apache-1.3.42
 	o apache-maven-3.0
-	o apache-tomcat55-6.0.14
+	o apache-tomcat55-5.5.28
+	o apache-tomcat6-6.0.24
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o aranym-0.9.9
