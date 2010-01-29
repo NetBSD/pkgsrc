@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/01/18 09:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/01/29 23:01:53 joerg Exp $
 #
 
 DISTNAME=		openmsx-0.6.2
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openmsx/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://openmsx.sourceforge.net/
 COMMENT=		MSX emulator that aims for perfection
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
@@ -37,8 +39,11 @@ post-build:
 	${ECHO} 'exec ${PREFIX}/openmsx/bin/openmsx $$@'	\
 	) > ${WRKSRC}/openmsx.sh
 
+INSTALLATION_DIRS+=	bin
+INSTALL_MAKE_FLAGS+=	OPENMSX_INSTALL=${DESTDIR}${PREFIX}/openmsx
+
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/openmsx.sh ${PREFIX}/bin/openmsx
+	${INSTALL_SCRIPT} ${WRKSRC}/openmsx.sh ${DESTDIR}${PREFIX}/bin/openmsx
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
