@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2010/01/18 09:58:41 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2010/01/29 16:44:13 joerg Exp $
 
 VERS=		4.2.5
 DISTNAME=	hylafax-${VERS}
@@ -7,6 +7,8 @@ CATEGORIES=	comms
 MASTER_SITES_BETA=	ftp://ftp.hylafax.org/source/BETA/
 MASTER_SITES_RELEASE=	ftp://ftp.hylafax.org/source/
 MASTER_SITES=	${MASTER_SITES_RELEASE}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	hallmann@ahatec.de
 HOMEPAGE=	http://www.hylafax.org/
@@ -38,8 +40,10 @@ MAKE_JOBS_SAFE=	NO
 
 INSTALLATION_DIRS=	libdata/hylafax
 
-SUID_EXES=	${PREFIX}/libexec/faxgetty ${PREFIX}/sbin/faxq \
-		${PREFIX}/bin/faxrm ${PREFIX}/bin/faxalter
+SPECIAL_PERMS+=	bin/faxalter ${SETUID_ROOT_PERMS} \
+		bin/faxrm ${SETUID_ROOT_PERMS} \
+		libexec/faxgetty ${SETUID_ROOT_PERMS} \
+		sbin/faxq ${SETUID_ROOT_PERMS}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hylafax
 PKG_SUPPORTED_OPTIONS=	pam
@@ -58,10 +62,6 @@ CONFIGURE_ARGS+=	--disable-pam
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
 CONFIGURE_ENV+=		MACHDEPLIBS=-lrt
 .endif
-
-post-install:
-	chown ${FAXUSER} ${SUID_EXES}
-	chmod 4555 ${SUID_EXES}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
