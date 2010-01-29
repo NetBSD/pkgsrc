@@ -1,19 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/14 18:01:55 minskim Exp $
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lasy10.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lasy5.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lasy6.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lasy7.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lasy8.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lasy9.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lasyb10.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lcircle1.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lcirclew.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lcmss8.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lcmssb8.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/lcmssi8.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/line10.afm
-share/texmf-dist/fonts/afm/bluesky/latex-fonts/linew10.afm
-share/texmf-dist/fonts/map/dvips/latex-fonts/latex-bsr.map
+@comment $NetBSD: PLIST,v 1.2 2010/01/29 08:19:25 minskim Exp $
 share/texmf-dist/fonts/source/public/latex-fonts/circle.mf
 share/texmf-dist/fonts/source/public/latex-fonts/icmcsc10.mf
 share/texmf-dist/fonts/source/public/latex-fonts/icmex10.mf
@@ -67,17 +52,3 @@ share/texmf-dist/fonts/tfm/public/latex-fonts/lcmssb8.tfm
 share/texmf-dist/fonts/tfm/public/latex-fonts/lcmssi8.tfm
 share/texmf-dist/fonts/tfm/public/latex-fonts/line10.tfm
 share/texmf-dist/fonts/tfm/public/latex-fonts/linew10.tfm
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lasy10.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lasy5.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lasy6.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lasy7.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lasy8.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lasy9.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lasyb10.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lcircle1.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lcirclew.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lcmss8.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lcmssb8.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/lcmssi8.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/line10.pfb
-share/texmf-dist/fonts/type1/bluesky/latex-fonts/linew10.pfb
