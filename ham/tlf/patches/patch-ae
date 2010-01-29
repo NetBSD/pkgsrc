@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2010/01/29 23:54:51 joerg Exp $
+
+--- doc/Makefile.in.orig	2010-01-29 23:52:01.000000000 +0000
++++ doc/Makefile.in
+@@ -285,8 +285,8 @@ uninstall-am: uninstall-info-am
+ 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(pkgdatadir)/doc
+-	install -m 0644 README $(pkgdatadir)/doc
++	$(mkinstalldirs) ${DESTDIR}$(pkgdatadir)/doc
++	install -m 0644 README ${DESTDIR}$(pkgdatadir)/doc
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
