@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/08/06 01:44:47 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/29 17:53:56 joerg Exp $
 #
 
 DISTNAME=		cqual-0.991
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cqual/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cs.umd.edu/~jfoster/cqual/
 COMMENT=		Tool for adding type qualifiers to C
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -29,8 +31,8 @@ pre-build:
 .endif
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/user-guide.pdf ${PREFIX:Q}/share/doc/cqual/
-	${INSTALL_DATA} ${WRKSRC:Q}/examples/* ${PREFIX:Q}/share/examples/cqual/
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/user-guide.pdf ${DESTDIR}${PREFIX}/share/doc/cqual/
+	${INSTALL_DATA} ${WRKSRC:Q}/examples/* ${DESTDIR}${PREFIX}/share/examples/cqual/
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
