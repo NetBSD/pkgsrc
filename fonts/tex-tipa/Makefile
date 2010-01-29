@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2010/01/29 08:42:56 minskim Exp $
-# TeX Live Revision 12665
+# $NetBSD: Makefile,v 1.3 2010/01/29 08:48:04 minskim Exp $
+# TeX Live Revision 15878
 
 DISTNAME=	tipa
 PKGNAME=	tex-${DISTNAME}-1.3
