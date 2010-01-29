@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/04/27 14:56:27 agc Exp $
+$NetBSD: patch-ab,v 1.2 2010/01/30 00:02:54 joerg Exp $
 
 --- src/Imakefile.orig	Sun Feb  4 18:31:52 2001
 +++ src/Imakefile
@@ -42,10 +42,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/04/27 14:56:27 agc Exp $
 +NormalProgramTarget(checkrom, $(OBJS3),,,)
 +NormalProgramTarget(mkcard, $(OBJS4),,,)
 +
-+InstallProgram(x48, $(BINDIR))
-+InstallProgram(dump2rom, $(BINDIR))
-+InstallProgram(checkrom, $(BINDIR))
-+InstallProgram(mkcard, $(BINDIR))
++InstallProgram(x48,$(BINDIR))
++InstallProgram(dump2rom,$(BINDIR))
++InstallProgram(checkrom,$(BINDIR))
++InstallProgram(mkcard,$(BINDIR))
  
  InstallAppDefaults(X48)
  

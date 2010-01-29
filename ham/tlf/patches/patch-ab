@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/01/29 23:54:51 joerg Exp $
+
+--- scripts/Makefile.in.orig	2010-01-29 23:48:05.000000000 +0000
++++ scripts/Makefile.in
+@@ -284,7 +284,7 @@ uninstall-am: uninstall-info-am
+ 
+ 
+ install-exec-local:
+-	install soundlog $(bindir)
++	install soundlog ${DESTDIR}$(bindir)
+ 
+ uninstall:
+ 	rm -f $(bindir)/soundlog

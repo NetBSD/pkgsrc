@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1 2010/01/29 23:54:51 joerg Exp $
+
+--- share/Makefile.in.orig	2010-01-29 23:48:53.000000000 +0000
++++ share/Makefile.in
+@@ -286,14 +286,14 @@ uninstall-am: uninstall-info-am
+ 
+ 
+ install-data-local:
+-	install -m 0644 callmaster $(pkgdatadir)
+-	install -m 0644 cty.dat $(pkgdatadir)
+-	install -m 0644 logcfg.dat $(pkgdatadir)
+-	install -m 0644 arrlsections $(pkgdatadir)
+-	install -m 0644 ea_sections $(pkgdatadir)
+-	install -m 0644 paccmults $(pkgdatadir)
+-	install -m 0644 spdxmults $(pkgdatadir)
+-	install -m 0644 ssamults $(pkgdatadir)
++	install -m 0644 callmaster ${DESTDIR}$(pkgdatadir)
++	install -m 0644 cty.dat ${DESTDIR}$(pkgdatadir)
++	install -m 0644 logcfg.dat ${DESTDIR}$(pkgdatadir)
++	install -m 0644 arrlsections ${DESTDIR}$(pkgdatadir)
++	install -m 0644 ea_sections ${DESTDIR}$(pkgdatadir)
++	install -m 0644 paccmults ${DESTDIR}$(pkgdatadir)
++	install -m 0644 spdxmults ${DESTDIR}$(pkgdatadir)
++	install -m 0644 ssamults ${DESTDIR}$(pkgdatadir)
+ 
+ uninstall:
+ 	rm -rf $(pkgdatadir)
