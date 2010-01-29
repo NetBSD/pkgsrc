@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.305 2010/01/29 17:20:27 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.306 2010/01/29 17:20:51 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -405,7 +405,11 @@ do-install:
 .endif
 
 # PKG_DESTDIR_SUPPORT can only be one of "destdir" or "user-destdir".
+.if defined(PKG_DEVELOPER)
+USE_DESTDIR?=		yes
+.else
 USE_DESTDIR?=		no
+.endif
 PKG_DESTDIR_SUPPORT?=	# empty
 
 .if empty(PKG_DESTDIR_SUPPORT) || empty(USE_DESTDIR:M[Yy][Ee][Ss])
