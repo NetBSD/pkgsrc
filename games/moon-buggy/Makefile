@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/29 23:39:48 joerg Exp $
 #
 
 DISTNAME=		moon-buggy-1.0
@@ -9,6 +9,8 @@ MASTER_SITES=		http://seehuhn.de/data/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://seehuhn.de/media/programs/
 COMMENT=		Game on the Moon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
