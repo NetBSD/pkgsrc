@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.411 2010/01/29 15:13:48 sno Exp $
+$NetBSD: CHANGES-2010,v 1.412 2010/01/29 15:16:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -495,3 +495,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/wireshark to 1.2.6 [tron 2010-01-29]
 	Updated net/dnsmasq to 2.52 [roy 2010-01-29]
 	Updated textproc/p5-String-RewritePrefix to 0.005 [sno 2010-01-29]
+	Updated converters/p5-MIME-Base64 to 3.09 [sno 2010-01-29]
