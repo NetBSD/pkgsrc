@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/29 04:14:33 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/29 22:50:55 minskim Exp $
 # TeX Live Revision 16044
 
 DISTNAME=	tex
@@ -13,7 +13,7 @@ DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 SUPERSEDES=	tex-bin-tex<2009
 
-TEX_FORMATS+=	"tex tex - tex.ini"
+TEX_FORMATS+=	"tex tex - tex.ini\\n"
 TEX_TEXMF_DIRS=	# empty
 
 .include "../../print/texlive/package.mk"
