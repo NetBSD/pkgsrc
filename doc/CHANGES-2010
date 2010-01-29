@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.416 2010/01/29 16:20:43 sno Exp $
+$NetBSD: CHANGES-2010,v 1.417 2010/01/29 16:26:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IPC-System-Simple to 1.20 [sno 2010-01-29]
 	Updated devel/p5-IPC-Cmd to 0.54 [sno 2010-01-29]
 	Updated devel/p5-Test-Pod to 1.41 [sno 2010-01-29]
+	Updated devel/p5-Test-Harness to 3.20 [sno 2010-01-29]
