@@ -1,14 +1,16 @@
-$NetBSD: patch-ax,v 1.1 2009/06/13 11:55:51 hasso Exp $
+$NetBSD: patch-ax,v 1.2 2010/01/29 18:19:09 adam Exp $
 
---- src/3rdparty/webkit/JavaScriptCore/runtime/Collector.cpp.orig	2009-04-22 02:57:38 +0300
-+++ src/3rdparty/webkit/JavaScriptCore/runtime/Collector.cpp	2009-05-01 19:45:48 +0300
-@@ -76,9 +76,7 @@ extern int *__libc_stack_end;
- #include <thread.h>
- #endif
+--- src/3rdparty/webkit/WebCore/websockets/WebSocketHandshake.cpp.orig	2010-01-28 06:27:43.000000000 +0000
++++ src/3rdparty/webkit/WebCore/websockets/WebSocketHandshake.cpp
+@@ -252,7 +252,11 @@ int WebSocketHandshake::readServerHandsh
+         p += sizeof(webSocketConnectionHeader) - 1;
+     }
  
--#if PLATFORM(OPENBSD)
- #include <pthread.h>
--#endif
- 
- #if HAVE(PTHREAD_NP_H)
- #include <pthread_np.h>
++#if defined(__NetBSD__)
++    if (!strstr(p, "\r\n\r\n")) {
++#else
+     if (!strnstr(p, "\r\n\r\n", end - p)) {
++#endif
+         // Just hasn't been received fully yet.
+         return -1;
+     }
