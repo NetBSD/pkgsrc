@@ -1,26 +1,49 @@
-$NetBSD: patch-aa,v 1.3 2006/01/13 10:10:46 schmonz Exp $
+$NetBSD: patch-aa,v 1.4 2010/01/29 19:43:37 joerg Exp $
 
---- Makefile.in.orig	2003-11-06 16:36:36.000000000 -0500
+--- Makefile.in.orig	2003-11-06 21:36:36.000000000 +0000
 +++ Makefile.in
+@@ -72,8 +72,8 @@ TEACHCE =	teach-ce
+ BACKUP =	ce.bak
+ 
+ LINTFLAGS=	-chx
+-DESTDIR=	$(bindir)
+-MANDIR=		$(man1dir)
++BINDIR=		${DESTDIR}$(bindir)
++MANDIR=		${DESTDIR}$(man1dir)
+ 
+ #
+ # Systems like the NeXT that cannot use a non-libc malloc should comment
+@@ -81,7 +81,7 @@ MANDIR=		$(man1dir)
+ #
+ 
+ # DOCDIR must agree with the definition for LIBDIR in the source (see ce.h)
+-DOCDIR=		$(libdir)/ce
++DOCDIR=		${DESTDIR}$(libdir)/ce
+ 
+ CFILES=		basic.c bind.c buffer.c bug.c cinfo.c cmode.c \
+ 		complete.c dir.c display.c file.c fileio.c fio.c func.c \
 @@ -233,29 +233,31 @@ backup:
  depend:
  	makedepend -- $(CCFLAGS) -- $(CFILES)
  
 -installdirs:
-+install:	${PROG}
- 	@${SHELL} $(SUPPORT_SRC)/mkdirs $(DESTDIR)
+-	@${SHELL} $(SUPPORT_SRC)/mkdirs $(DESTDIR)
 -	@${SHELL} $(SUPPORT_SRC)/mkdirs $(MANDIR)
 -	@${SHELL} $(SUPPORT_SRC)/mkdirs $(DOCDIR)   
 -
 -install:	${PROG} ${XPROG} installdirs
 -	-$(MV) ${DESTDIR}/${PROG} ${DESTDIR}/${PROG}.${OLDEXT}
 -	-$(MV) ${DESTDIR}/${XPROG} ${DESTDIR}/${XPROG}.${OLDEXT}
- 	$(INSTALL_PROGRAM) $(PROG) $(DESTDIR)/${PROG}
+-	$(INSTALL_PROGRAM) $(PROG) $(DESTDIR)/${PROG}
+-	$(INSTALL_PROGRAM) $(XPROG) $(DESTDIR)/${XPROG}
+-	$(INSTALL_SCRIPT) $(TEACHCE) $(DESTDIR)/$(TEACHCE)
++install:	${PROG}
++	@${SHELL} $(SUPPORT_SRC)/mkdirs $(BINDIR)
++	$(INSTALL_PROGRAM) $(PROG) $(BINDIR)/${PROG}
 +
 +install-x11:	${XPROG}
-+	@${SHELL} $(SUPPORT_SRC)/mkdirs $(DESTDIR)
- 	$(INSTALL_PROGRAM) $(XPROG) $(DESTDIR)/${XPROG}
--	$(INSTALL_SCRIPT) $(TEACHCE) $(DESTDIR)/$(TEACHCE)
++	@${SHELL} $(SUPPORT_SRC)/mkdirs $(BINDIR)
++	$(INSTALL_PROGRAM) $(XPROG) $(BINDIR)/${XPROG}
  
  install-strip:
  	$(MAKE) $(MFLAGS) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' \
@@ -32,7 +55,7 @@ $NetBSD: patch-aa,v 1.3 2006/01/13 10:10:46 schmonz Exp $
  	${INSTALL_DATA} ${DOC_SRC}/TUTORIAL $(DOCDIR)/TUTORIAL
  	${INSTALL_DATA} ${DOC_SRC}/ce.help  $(DOCDIR)/ce.help
  	${INSTALL_DATA} ${DOC_SRC}/FUNCTIONS $(DOCDIR)/FUNCTIONS
-+	$(INSTALL_SCRIPT) $(TEACHCE) $(DESTDIR)/$(TEACHCE)
++	$(INSTALL_SCRIPT) $(TEACHCE) $(BINDIR)/$(TEACHCE)
  
 -man-install: installdirs
 +man-install:
