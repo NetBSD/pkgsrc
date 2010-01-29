@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/07/14 17:26:35 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2010/01/29 17:46:17 joerg Exp $
 
 DISTNAME=		bcc
 PKGREVISION=		1
@@ -7,6 +7,8 @@ CATEGORIES=		devel lang
 
 MAINTAINER=		tsarna@NetBSD.org
 COMMENT=		Bruce Evans' C compiler (with as and ld); can do 16-bit code
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		bin86-[0-9]*
 CONFLICTS+=		dev86-[0-9]*
