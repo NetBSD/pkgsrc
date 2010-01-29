@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/12/15 21:33:48 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2010/01/29 17:07:05 joerg Exp $
 #
 
 DISTNAME=	guile-pg-0.37
@@ -10,6 +10,8 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.gnuvola.org/software/guile-pg/
 COMMENT=	PostgreSQL interface for Guile
 LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake
@@ -35,8 +37,8 @@ SITE=${PREFIX}/guile/1.6/share/guile/site
 
 post-install:
 	# guile should make this, but if not
-	${INSTALL_DATA_DIR} ${SITE}
-	cd ${SITE} && ${LN} -sf ../../../../../lib/guile/site/database .
+	${INSTALL_DATA_DIR} ${DESTDIR}${SITE}
+	cd ${DESTDIR}${SITE} && ${LN} -sf ../../../../../lib/guile/site/database .
 
 .include "../../lang/guile16/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
