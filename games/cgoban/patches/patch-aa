@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2009/12/05 14:56:39 bad Exp $
+$NetBSD: patch-aa,v 1.7 2010/01/29 20:22:11 joerg Exp $
 
 --- Makefile.in.orig	2003-01-06 19:33:40.000000000 +0000
 +++ Makefile.in	2009-12-05 13:46:39.000000000 +0000
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.6 2009/12/05 14:56:39 bad Exp $
  info-am:
  
  install-data-am:
-+	$(INSTALL_DATA) seigen-minoru.sgf $(PREFIX)/share/misc/seigen-minoru.sgf
++	$(INSTALL_DATA) seigen-minoru.sgf ${DESTDIR}$(PREFIX)/share/misc/seigen-minoru.sgf
  
  install-exec-am: install-binSCRIPTS
  
