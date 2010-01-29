@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/05/26 02:13:19 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2010/01/29 20:20:00 joerg Exp $
 #
 
 DISTNAME=	angband-3.0.3
@@ -11,6 +11,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${SPOILERFILE}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.thangorodrim.net/
 COMMENT=	Tolkien based variant of Moria for X11 displays
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 CONFLICTS=	angband-tty-[0-9]*
 
@@ -36,13 +38,14 @@ SUBST_MESSAGE.070=	Fixing file permissions.
 SUBST_FILES.070=	lib/save/Makefile.in lib/bone/Makefile.in
 SUBST_SED.070=		-e 's,070,770,g'
 
+INSTALLATION_DIRS+=	share/games/angband/lib/info
+
 # add spoiler files and clean up a bit
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/games/angband/lib/info
-	cd ${PREFIX}/share/games/angband/lib/info/ && \
+	cd ${DESTDIR}${PREFIX}/share/games/angband/lib/info/ && \
 		 pax -O -zrf ${DISTDIR}/${SPOILERFILE}
-	${CHOWN} -R bin:games ${PREFIX}/share/games/angband
-	${FIND} ${PREFIX}/share/games/angband -name delete.me -exec ${RM} {} \;
+	${CHOWN} -R bin:games ${DESTDIR}${PREFIX}/share/games/angband
+	${FIND} ${DESTDIR}${PREFIX}/share/games/angband -name delete.me -exec ${RM} {} \;
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
