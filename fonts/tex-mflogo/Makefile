@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/07 06:47:55 minskim Exp $
-# TeX Live Revision 7340
+# $NetBSD: Makefile,v 1.2 2010/01/29 08:32:00 minskim Exp $
+# TeX Live Revision 15878
 
 DISTNAME=	mflogo
-PKGNAME=	tex-${DISTNAME}-2008.7340
+PKGNAME=	tex-${DISTNAME}-2009
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX support for MetaFont logo fonts
 
 CONFLICTS+=	teTeX-texmf<=3.0nb15
-DEPENDS+=	tex-bin-latex-[0-9]*:../../print/tex-bin-latex
 
 TEX_MIXEDMAP_FILES+=	mflogo.map
 
-.include "../../print/texlive/module.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
