@@ -1,4 +1,4 @@
-# $NetBSD: format-deinstall.tmpl,v 1.3 2010/01/28 22:37:33 minskim Exp $
+# $NetBSD: format-deinstall.tmpl,v 1.4 2010/01/29 01:58:13 minskim Exp $
 #
 # Delete format files.
 #
@@ -7,6 +7,31 @@ FMTUTIL_CNF=${PKG_SYSCONFBASE}/texmf/web2c/fmtutil.cnf
 
 case ${STAGE} in
 DEINSTALL)
+	formats=@FORMATS@
+	if [ "$formats" != "" ]; then
+		${ECHO} $formats |
+		while read format engine junk; do
+		  ${GREP} -v "^${format}[[:space:]][[:space:]]*${engine}[[:space:]]" ${FMTUTIL_CNF} > \
+			${FMTUTIL_CNF}.tmp &&
+		  ${MV} ${FMTUTIL_CNF}.tmp ${FMTUTIL_CNF}
+		  case "$engine" in
+		    mpost)
+		      fmtfile="$format.mem"
+		      texengine=metapost
+		      ;;
+		    mf*)
+		      fmtfile="$format.base"
+		      texengine=metafont
+		      ;;
+		    *)
+		      fmtfile="$format.fmt"
+		      texengine=$engine
+		      ;;
+		  esac
+			@RM@ -f @VARBASE@/lib/texmf/web2c/$texengine/$fmtfile
+			@RM@ -f @VARBASE@/lib/texmf/web2c/$texengine/$format.log
+		done
+	fi
 	format_names="@FORMAT_NAMES@"
 	for f in $format_names ; do
 		@CAT@ @PREFIX@/share/texmf/fmtutil/format.$f.cnf |

@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.3 2010/01/28 21:57:17 minskim Exp $
+# $NetBSD: package.mk,v 1.4 2010/01/29 01:58:13 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live packages.
@@ -8,7 +8,7 @@
 # REPLACE_TEXLUA
 #	A list of texlua scripts to be installed, relative to ${WRKSRC}.
 #
-# TEX_FORMAT_NAMES
+# TEX_FORMATS
 #	See ../../print/texlive-tetex/format.mk.
 #
 # TEX_HYPHEN_DAT
@@ -121,11 +121,11 @@ _texlive-install:
 		done; \
 	fi
 
-.if empty(TEX_TEXMF_DIRS) || ${TEX_TEXMF_DIRS} != "none"
-.include "../../print/kpathsea/texmf.mk"
-.endif
-.if !empty(TEX_FORMAT_NAMES)
+.if !empty(TEX_FORMATS) || !empty(TEX_FORMAT_NAMES)
 .  include "../../print/texlive-tetex/format.mk"
+.endif
+.if empty(TEX_TEXMF_DIRS) || ${TEX_TEXMF_DIRS} != "none"
+.  include "../../print/kpathsea/texmf.mk"
 .endif
 .if !empty(TEX_HYPHEN_DAT) || !empty(TEX_HYPHEN_DEF)
 .  include "../../print/texlive-tetex/hyphen.mk"
