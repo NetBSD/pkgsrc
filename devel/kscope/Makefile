@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/01/18 09:58:46 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2010/01/29 19:05:18 joerg Exp $
 #
 
 DISTNAME=		kscope-1.6.0
@@ -10,6 +10,8 @@ MAINTAINER=		martijn.van.buul@gmail.com
 HOMEPAGE=		http://kscope.sourceforge.net/
 COMMENT=		KDE frontend for cscope
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		cscope>=15.6:../../devel/cscope
 DEPENDS+=		exctags>=5.5.4:../../devel/exctags
 
@@ -19,12 +21,14 @@ USE_TOOLS+=		gmake flex pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 
+INSTALLATION_DIRS+=	${KDEDIR}/share/kde/config
+
 post-build:
 	sed -e "s,@LOCALBASE@,${LOCALBASE},g" \
 		${FILESDIR}/kscoperc > ${WRKDIR}/kscoperc
 
 pre-install:
-	${INSTALL_DATA} ${WRKDIR}/kscoperc ${KDEDIR}/share/kde/config
+	${INSTALL_DATA} ${WRKDIR}/kscoperc ${DESTDIR}${KDEDIR}/share/kde/config
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 
