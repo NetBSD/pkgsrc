@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/10/11 15:31:20 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2010/01/29 03:44:53 dmcmahill Exp $
 
---- src/buffer.c.orig	2005-10-11 00:41:57.000000000 +0200
+--- src/buffer.c.orig	2005-09-25 17:39:45.000000000 +0000
 +++ src/buffer.c
 @@ -35,7 +35,7 @@
  #include <sys/types.h>
@@ -11,3 +11,35 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/10/11 15:31:20 joerg Exp $
  
  #include "memcache/buffer.h"
  
+@@ -259,12 +259,6 @@ mcm_buf_free(struct memcache_ctxt *ctxt,
+ }
+ 
+ 
+-inline u_int32_t
+-mcm_buf_len(const struct memcache_ctxt *ctxt, const struct memcache_buf *s) {
+-  return s->len;
+-}
+-
+-
+ struct memcache_buf *
+ mcm_buf_new(struct memcache_ctxt *ctxt) {
+   struct memcache_buf *buf;
+@@ -422,18 +416,6 @@ mcm_buf_realloc(struct memcache_ctxt *ct
+ }
+ 
+ 
+-inline size_t
+-mcm_buf_remain(const struct memcache_ctxt *ctxt, const struct memcache_buf *buf) {
+-  return mcm_buf_size(ctxt, buf) - mcm_buf_len(ctxt, buf);
+-}
+-
+-
+-inline size_t
+-mcm_buf_remain_off(const struct memcache_ctxt *ctxt, const struct memcache_buf *buf) {
+-  return mcm_buf_len(ctxt, buf) - buf->off;
+-}
+-
+-
+ int
+ mcm_buf_replace(struct memcache_ctxt *ctxt, struct memcache_buf *buf, const char *cp, const u_int32_t len) {
+   if (mcm_buf_reset(ctxt, buf) == 0)
