@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/01/26 02:01:36 obache Exp $
+# $NetBSD: Makefile,v 1.30 2010/01/29 05:13:45 obache Exp $
 #
 
 DISTNAME=	Trac-0.11.6.ja1
@@ -39,6 +39,9 @@ post-install:
 		pax -rw -pp -pm . ${DESTDIR}${PREFIX}/${EGDIR}
 
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+
+# deploy template files
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/trac/admin/templates/deploy_*.*cgi
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
