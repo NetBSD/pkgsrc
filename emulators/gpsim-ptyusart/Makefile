@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/08/26 19:57:26 sno Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/29 22:54:48 joerg Exp $
 #
 
 DISTNAME=	ptyusart-0.3.2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www-asim.lip6.fr/~bouyer/pic/
 
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Pseudo-tty module for gpsim
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 

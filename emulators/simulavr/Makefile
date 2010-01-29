@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/08/25 12:32:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/29 22:58:10 joerg Exp $
 #
 
 DISTNAME=		simulavr-0.1.2.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/simulavr/
 COMMENT=		Simulator for Atmel AVR microcontrollers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
 BUILD_DEPENDS+=		avr-gcc-[0-9]*:../../cross/avr-gcc
