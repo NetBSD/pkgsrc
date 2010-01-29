@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/11/24 23:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/01/29 18:02:59 joerg Exp $
 
 DISTNAME=		gcvs-1.0
 PKGREVISION=		4
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://cvsgui.sourceforge.net/
 COMMENT=		GTK interface for CVS
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=		cvs-[0-9]*
 
 USE_LANGUAGES=		c c++
@@ -21,6 +23,10 @@ INFO_FILES=		# PLIST
 CONFIGURE_ARGS+=	--with-tclinclude="${BUILDLINK_PREFIX.tcl}/include"
 CONFIGURE_ARGS+=	--with-tcllib="${BUILDLINK_PREFIX.tcl}/lib"
 CONFIGURE_ARGS+=	perl_path=${PERL5}
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			infodir=${DESTDIR}${PREFIX}/${PKGINFODIR} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR} \
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
