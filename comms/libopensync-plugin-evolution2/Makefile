@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/02/27 17:42:23 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/29 16:33:30 joerg Exp $
 #
 
 DISTNAME=	libopensync-plugin-evolution2-0.22
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opensync.org/
 COMMENT=	Platform independent synchronization framework, evo plugin
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
