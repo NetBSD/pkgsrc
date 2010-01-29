@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/01/16 17:57:38 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/01/29 19:31:33 joerg Exp $
 #
 
 DISTNAME=	ucl-1.03
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.oberhumer.com/opensource/ucl/
 COMMENT=	Portable lossless data compression library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
@@ -26,8 +27,8 @@ INSTALLATION_DIRS=	bin share/examples/ucl
 
 post-install:
 	for i in simple.c lutil.h uclpack.c; do		\
-	${INSTALL_DATA} ${WRKSRC}/examples/$$i ${PREFIX}/share/examples/ucl;\
+	${INSTALL_DATA} ${WRKSRC}/examples/$$i ${DESTDIR}${PREFIX}/share/examples/ucl;\
 		done;
-	cd ${WRKSRC}/examples && libtool --mode=install ${INSTALL_PROGRAM} uclpack ${PREFIX}/bin
+	cd ${WRKSRC}/examples && libtool --mode=install ${INSTALL_PROGRAM} uclpack ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
