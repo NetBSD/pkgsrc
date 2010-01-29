@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/09 22:56:23 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/29 19:10:00 joerg Exp $
 #
 
 DISTNAME=		ncc-2.8
@@ -9,6 +9,8 @@ MASTER_SITES=		http://students.ceid.upatras.gr/~sxanth/ncc/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://students.ceid.upatras.gr/~sxanth/ncc/index.html
 COMMENT=		Compiler that produces program analysis information
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		tout
 CFLAGS+=		-DNOGNU='"${PREFIX}/share/ncc/nognu"'
@@ -23,22 +25,22 @@ SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
 
 PYTHON_PATCH_SCRIPTS+=	scripts/nccstrip2.py
 
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/ncc share/doc/ncc
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/objdir/ncc ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/nccstrip2.py ${PREFIX}/bin
-	${LN} -s ncc ${PREFIX}/bin/nccar
-	${LN} -s ncc ${PREFIX}/bin/nccc++
-	${LN} -s ncc ${PREFIX}/bin/nccld
-	${INSTALL_PROGRAM} ${WRKSRC}/nccnav/nccnav ${PREFIX}/bin
-	${LN} -s nccnav ${PREFIX}/bin/nccnavi
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ncc
-	${INSTALL_DATA} ${WRKSRC}/doc/nognu ${PREFIX}/share/ncc
-	${INSTALL_MAN} ${WRKSRC}/ncc.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ncc
-	${INSTALL_DATA} ${WRKSRC}/doc/KEYS.txt ${PREFIX}/share/doc/ncc
-	${INSTALL_DATA} ${WRKSRC}/doc/TROUBLES ${PREFIX}/share/doc/ncc
-	${INSTALL_DATA} ${WRKSRC}/doc/hacking.* ${PREFIX}/share/doc/ncc
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ncc
+	${INSTALL_PROGRAM} ${WRKSRC}/objdir/ncc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/nccstrip2.py ${DESTDIR}${PREFIX}/bin
+	${LN} -s ncc ${DESTDIR}${PREFIX}/bin/nccar
+	${LN} -s ncc ${DESTDIR}${PREFIX}/bin/nccc++
+	${LN} -s ncc ${DESTDIR}${PREFIX}/bin/nccld
+	${INSTALL_PROGRAM} ${WRKSRC}/nccnav/nccnav ${DESTDIR}${PREFIX}/bin
+	${LN} -s nccnav ${DESTDIR}${PREFIX}/bin/nccnavi
+	${INSTALL_DATA} ${WRKSRC}/doc/nognu ${DESTDIR}${PREFIX}/share/ncc
+	${INSTALL_MAN} ${WRKSRC}/ncc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/KEYS.txt ${DESTDIR}${PREFIX}/share/doc/ncc
+	${INSTALL_DATA} ${WRKSRC}/doc/TROUBLES ${DESTDIR}${PREFIX}/share/doc/ncc
+	${INSTALL_DATA} ${WRKSRC}/doc/hacking.* ${DESTDIR}${PREFIX}/share/doc/ncc
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/ncc
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/python/application.mk"
