@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2009/09/12 21:25:53 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/29 16:04:23 sno Exp $
 
-DISTNAME=	IPC-Cmd-0.50
+DISTNAME=	IPC-Cmd-0.54
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IPC/Cmd/.packlist
+
+PERL5_REQD+=		5.10.0
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
