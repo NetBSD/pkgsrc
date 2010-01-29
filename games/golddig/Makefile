@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/11/25 03:15:32 chuck Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/29 23:08:33 joerg Exp $
 #
 
 DISTNAME=	golddigC3.1
@@ -9,9 +9,13 @@ MASTER_SITES=	http://www.NetBSD.org/~chuck/gz/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fast action game designed for use with X
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_X11BASE=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \
+			MAN=${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
 SCORE_GROUP=    games
 PKG_GROUPS=     ${SCORE_GROUP}

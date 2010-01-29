@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/01/19 09:16:21 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/01/29 23:05:34 joerg Exp $
 #
 
 DISTNAME=	galaxa.0.1
@@ -11,12 +11,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/2/http://www.newbreedsoftware.com/galaxa/
 COMMENT=	Space game based loosely on "Galaga"
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/galaxa
 MAKE_FILE=	makefile
 
+INSTALLATION_DIRS+=	bin share/doc/galaxa
+INSTALL_MAKE_FLAGS+=	INSTALLROOT=${DESTDIR}${PREFIX}
+
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/galaxa
-	${CP} ${WRKSRC}/README.txt ${PREFIX}/share/doc/galaxa
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/doc/galaxa
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
