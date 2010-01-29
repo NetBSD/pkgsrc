@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/27 06:47:30 wulf Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/29 23:54:50 joerg Exp $
 #
 
 DISTNAME=	tlf-0.9.30
@@ -9,6 +9,8 @@ MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://home.iae.nl/users/reinc/TLF-0.2.html
 COMMENT=	Advanced hamradio logging and contest program
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_NCURSES=	yes
 USE_TOOLS+=	gmake msgfmt
 GNU_CONFIGURE=	yes
@@ -16,6 +18,8 @@ PTHREAD_OPTS+=	require
 PTHREAD_AUTO_VARS=	yes
 
 CONFIGURE_ARGS+=	--enable-hamlib
+
+INSTALLATION_DIRS+=	share/tlf
 
 post-patch:
 	${ECHO} SC_DEVICE=/dev/tty00 >> ${WRKSRC:Q}/share/logcfg.dat
