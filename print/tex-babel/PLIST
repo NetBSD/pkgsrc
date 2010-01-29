@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 20:57:59 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/29 05:47:01 minskim Exp $
 share/texmf-dist/makeindex/babel/bbglo.ist
 share/texmf-dist/makeindex/babel/bbind.ist
 share/texmf-dist/tex/generic/babel/8859-8.def
@@ -86,6 +86,7 @@ share/texmf-dist/tex/generic/babel/irish.ldf
 share/texmf-dist/tex/generic/babel/irish.sty
 share/texmf-dist/tex/generic/babel/italian.ldf
 share/texmf-dist/tex/generic/babel/italian.sty
+share/texmf-dist/tex/generic/babel/kurmanji.ldf
 share/texmf-dist/tex/generic/babel/latin.ldf
 share/texmf-dist/tex/generic/babel/latin.sty
 share/texmf-dist/tex/generic/babel/lgrcmr.fd
