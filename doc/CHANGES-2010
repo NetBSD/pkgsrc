@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.395 2010/01/29 08:20:08 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.396 2010/01/29 08:21:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -479,3 +479,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-kpathsea version 2009.16044 [minskim 2010-01-29]
 	Updated print/tex-babel to 3.8lnb1 [minskim 2010-01-29]
 	Updated fonts/tex-latex-fonts to 2009 [minskim 2010-01-29]
+	Updated fonts/tex-amsfonts to 3.0 [minskim 2010-01-29]
