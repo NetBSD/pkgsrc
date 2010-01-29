@@ -1,4 +1,4 @@
-# $NetBSD: format.mk,v 1.3 2010/01/29 01:58:13 minskim Exp $
+# $NetBSD: format.mk,v 1.4 2010/01/29 04:12:41 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install TeX format files.  It creates format files at
@@ -15,8 +15,6 @@
 TEX_FORMAT_MK=		# defined
 
 DEPENDS+=		texlive-tetex>=2008:../../print/texlive-tetex
-
-TEX_TEXMF_DIRS+=	${VARBASE}/lib/texmf
 
 EVAL_PREFIX+=		TETEX_PREFIX=texlive-tetex
 FILES_SUBST+=		FMTUTIL_SYS=${TETEX_PREFIX:Q}/bin/fmtutil-sys
