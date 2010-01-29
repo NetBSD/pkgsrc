@@ -1,4 +1,4 @@
-# $NetBSD: format-deinstall.tmpl,v 1.5 2010/01/29 04:12:41 minskim Exp $
+# $NetBSD: format-deinstall.tmpl,v 1.6 2010/01/29 19:59:47 minskim Exp $
 #
 # Delete format files.
 #
@@ -9,7 +9,7 @@ case ${STAGE} in
 DEINSTALL)
 	formats=@FORMATS@
 	if [ "$formats" != "" ]; then
-		${ECHO} $formats |
+		@PRINTF@ "$formats" |
 		while read format engine junk; do
 		  ${GREP} -v "^${format}[[:space:]][[:space:]]*${engine}[[:space:]]" ${FMTUTIL_CNF} > \
 			${FMTUTIL_CNF}.tmp &&

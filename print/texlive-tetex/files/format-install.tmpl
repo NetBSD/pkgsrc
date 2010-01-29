@@ -1,4 +1,4 @@
-# $NetBSD: format-install.tmpl,v 1.3 2010/01/29 04:12:41 minskim Exp $
+# $NetBSD: format-install.tmpl,v 1.4 2010/01/29 19:59:47 minskim Exp $
 #
 # Create format files.
 #
@@ -9,8 +9,8 @@ case ${STAGE} in
 POST-INSTALL)
 	formats=@FORMATS@
 	if [ "$formats" != "" ]; then
-		${ECHO} $formats >> ${FMTUTIL_CNF}
-		${ECHO} $formats |
+		@PRINTF@ "$formats" >> ${FMTUTIL_CNF}
+		@PRINTF@ "$formats" |
 		while read format engine junk; do
 			@FMTUTIL_SYS@ --byfmt $format
 		done
