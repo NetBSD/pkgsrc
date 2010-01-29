@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2010/01/18 09:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2010/01/29 23:33:15 joerg Exp $
 
 DISTNAME=	knights-0.6
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	games kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=knights/}
 
@@ -9,12 +9,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://knights.sourceforge.net/
 COMMENT=	Chess interface for KDE
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
