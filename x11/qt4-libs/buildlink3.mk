@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2010/01/18 09:59:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2010/01/29 18:19:09 adam Exp $
 
 BUILDLINK_TREE+=	qt4-libs
 
@@ -43,8 +43,8 @@ pkgbase := qt4-libs
 .endif
 
 .if !defined(BUILD_QT4)
-CONFIGURE_ENV+=		QTDIR=${QTDIR:Q}
-MAKE_ENV+=		QTDIR=${QTDIR:Q}
+CONFIGURE_ENV+=		QTDIR=${QTDIR}
+MAKE_ENV+=		QTDIR=${QTDIR}
 .endif
 
 CONFIGURE_ENV+=		MOC="${QTDIR}/bin/moc"
