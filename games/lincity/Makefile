@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/01/19 09:16:21 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2010/01/29 23:39:30 joerg Exp $
 
 DISTNAME=	lincity-1.12.1
 PKGREVISION=	1
@@ -9,20 +9,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lincity.sourceforge.net/
 COMMENT=	Free clone of SimCity for X11
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 CHECK_INTERPRETER_SKIP+=	share/lincity/icons/*
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/lincity/help
-	${INSTALL_DATA_DIR} ${PREFIX}/share/lincity/icons
-	${INSTALL_DATA_DIR} ${PREFIX}/share/lincity/messages
-	${INSTALL_DATA_DIR} ${PREFIX}/share/lincity/opening
+INSTALLATION_DIRS+=	share/lincity/help share/lincity/icons \
+			share/lincity/messages share/lincity/opening
 
 post-install:
-	${LN} -sf lincity.6 ${PREFIX}/${PKGMANDIR}/man6/xlincity.6
+	${LN} -sf lincity.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/xlincity.6
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
