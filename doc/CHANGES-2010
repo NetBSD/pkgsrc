@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.417 2010/01/29 16:26:40 sno Exp $
+$NetBSD: CHANGES-2010,v 1.418 2010/01/29 18:22:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -501,3 +501,11 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IPC-Cmd to 0.54 [sno 2010-01-29]
 	Updated devel/p5-Test-Pod to 1.41 [sno 2010-01-29]
 	Updated devel/p5-Test-Harness to 3.20 [sno 2010-01-29]
+	Updated x11/qt4-libs to 4.6.1 [adam 2010-01-29]
+	Updated x11/qt4-tools to 4.6.1 [adam 2010-01-29]
+	Updated x11/qt4-docs to 4.6.1 [adam 2010-01-29]
+	Updated x11/qt4-mysql to 4.6.1 [adam 2010-01-29]
+	Updated x11/qt4-pgsql to 4.6.1 [adam 2010-01-29]
+	Updated x11/qt4-qdbus to 4.6.1 [adam 2010-01-29]
+	Updated x11/qt4-sqlite3 to 4.6.1 [adam 2010-01-29]
+	Updated x11/qt4-tiff to 4.6.1 [adam 2010-01-29]
