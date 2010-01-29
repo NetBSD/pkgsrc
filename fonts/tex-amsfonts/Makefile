@@ -1,18 +1,23 @@
-# $NetBSD: Makefile,v 1.2 2009/04/29 04:24:33 minskim Exp $
-# TeX Live Revision 7340
+# $NetBSD: Makefile,v 1.3 2010/01/29 08:21:20 minskim Exp $
+# TeX Live Revision 15878
 
 DISTNAME=	amsfonts
-PKGNAME=	tex-${DISTNAME}-2.2
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-3.0
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX fonts from the American Mathematical Society
 
 CONFLICTS+=	teTeX-texmf<=3.0nb13
-DEPENDS+=	tex-ams-[0-9]*:../../print/tex-ams
-DEPENDS+=	tex-bin-latex-[0-9]*:../../print/tex-bin-latex
-DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
-DEPENDS+=	tex-cmex-[0-9]*:../../fonts/tex-cmex
+CONFLICTS+=	tex-cm<2009
+CONFLICTS+=	tex-latex-fonts<2009
+CONFLICTS+=	tex-misc<2009
 
-.include "../../print/texlive/module.mk"
+TEX_MAP_FILES+=		euler.map
+TEX_MIXEDMAP_FILES+=	cm.map
+TEX_MIXEDMAP_FILES+=	cmextra.map
+TEX_MIXEDMAP_FILES+=	cyrillic.map
+TEX_MIXEDMAP_FILES+=	latxfont.map
+TEX_MIXEDMAP_FILES+=	symbols.map
+
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
