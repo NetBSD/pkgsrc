@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/12/15 21:33:48 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2010/01/29 17:23:39 joerg Exp $
 #
 
 DISTNAME=	mysql-connector-odbc-3.51.26r1127
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_MYSQL:=Connector-ODBC/3.51/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mysql.com/
 COMMENT=	ODBC driver (server side) for MySQL
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
