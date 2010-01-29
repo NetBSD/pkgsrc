@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/05/04 09:35:33 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/29 01:34:06 minskim Exp $
 
 --- Makefile.orig	1999-12-27 14:27:24.000000000 -0800
 +++ Makefile
@@ -44,6 +44,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/05/04 09:35:33 minskim Exp $
  LDLIBS = -lgb
  LOADLIBES = $(LDLIBS)
  
+@@ -50,7 +50,7 @@ LOADLIBES = $(LDLIBS)
+ 	tex $*.tex
+ 
+ .w.c:
+-	if test -r $*.ch; then ctangle $*.w $*.ch; else ctangle $*.w; fi
++	if test -r $*.ch; then @LOCALBASE@/bin/ctangle $*.w $*.ch; else @LOCALBASE@/bin/ctangle $*.w; fi
+ 
+ .w.tex:
+ 	if test -r $*.ch; then cweave $*.w $*.ch; else cweave $*.w; fi
 @@ -67,6 +67,12 @@ LOADLIBES = $(LDLIBS)
  	make $*.tex
  	make $*.dvi
