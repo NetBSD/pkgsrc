@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2010/01/18 09:58:42 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/01/29 17:14:07 joerg Exp $
 
 DISTNAME=	kmysqladmin-0.7.2
 PKGREVISION=	4
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.alwins-world.de/programs/kmysqladmin/
 COMMENT=	MySQL administration GUI
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -17,7 +19,6 @@ MYSQLDIR=		${BUILDLINK_PREFIX.mysql-client}
 CONFIGURE_ARGS+=	--with-mysql-include=${MYSQLDIR}/include/mysql
 CONFIGURE_ARGS+=	--with-mysql-lib=${MYSQLDIR}/lib/mysql
 
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
@@ -26,5 +27,4 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
