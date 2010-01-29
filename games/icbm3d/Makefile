@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/01/19 09:16:21 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/29 23:10:38 joerg Exp $
 #
 
 DISTNAME=	icbm3d.0.4
@@ -10,6 +10,10 @@ MASTER_SITES=	ftp://ftp.billsgames.com/unix/x/icbm3d/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.newbreedsoftware.com/icbm3d/
 COMMENT=	3D X11 game of defense
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS+=	bin
 
 WRKSRC=		${WRKDIR}/icbm3d
 MAKE_FILE=	makefile
