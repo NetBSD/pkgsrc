@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/01/18 09:59:10 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/29 23:46:10 joerg Exp $
 #
 
 DISTNAME=	linpsk-0.8.1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linpsk/}
 MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://linpsk.sourceforge.net/
 COMMENT=	PSK31 terminal program using QT3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	qt3-tools-3.*:../../x11/qt3-tools
 
