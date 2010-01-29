@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/17 22:57:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/01/29 18:19:09 adam Exp $
 lib/pkgconfig/QtDBus.pc
 qt4/bin/qdbus
 qt4/bin/qdbuscpp2xml
@@ -21,8 +21,10 @@ qt4/include/Qt/qdbuspendingcall.h
 qt4/include/Qt/qdbuspendingreply.h
 qt4/include/Qt/qdbusreply.h
 qt4/include/Qt/qdbusserver.h
+qt4/include/Qt/qdbusservicewatcher.h
 qt4/include/QtDBus/QDBusAbstractAdaptor
 qt4/include/QtDBus/QDBusAbstractInterface
+qt4/include/QtDBus/QDBusAbstractInterfaceBase
 qt4/include/QtDBus/QDBusArgument
 qt4/include/QtDBus/QDBusConnection
 qt4/include/QtDBus/QDBusConnectionInterface
@@ -38,6 +40,7 @@ qt4/include/QtDBus/QDBusPendingReply
 qt4/include/QtDBus/QDBusPendingReplyData
 qt4/include/QtDBus/QDBusReply
 qt4/include/QtDBus/QDBusServer
+qt4/include/QtDBus/QDBusServiceWatcher
 qt4/include/QtDBus/QDBusSignature
 qt4/include/QtDBus/QDBusVariant
 qt4/include/QtDBus/QtDBus
@@ -57,4 +60,5 @@ qt4/include/QtDBus/qdbuspendingcall.h
 qt4/include/QtDBus/qdbuspendingreply.h
 qt4/include/QtDBus/qdbusreply.h
 qt4/include/QtDBus/qdbusserver.h
+qt4/include/QtDBus/qdbusservicewatcher.h
 qt4/lib/libQtDBus.la

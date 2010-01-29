@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/07/02 18:26:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/01/29 18:19:09 adam Exp $
 lib/pkgconfig/Qt3Support.pc
 lib/pkgconfig/QtCore.pc
 lib/pkgconfig/QtGui.pc
@@ -18,6 +18,7 @@ qt4/bin/uic3
 qt4/lib/libQt3Support.la
 qt4/lib/libQtCore.la
 qt4/lib/libQtGui.la
+qt4/lib/libQtMultimedia.la
 qt4/lib/libQtNetwork.la
 qt4/lib/libQtOpenGL.la
 qt4/lib/libQtScript.la
@@ -29,7 +30,15 @@ qt4/lib/libQtWebKit.la
 qt4/lib/libQtXml.la
 qt4/plugins/accessible/libqtaccessiblecompatwidgets.la
 qt4/plugins/accessible/libqtaccessiblewidgets.la
+qt4/plugins/codecs/libqcncodecs.la
+qt4/plugins/codecs/libqjpcodecs.la
+qt4/plugins/codecs/libqkrcodecs.la
+qt4/plugins/codecs/libqtwcodecs.la
+qt4/plugins/graphicssystems/libqglgraphicssystem.la
+qt4/plugins/graphicssystems/libqtracegraphicssystem.la
+qt4/plugins/iconengines/libqsvgicon.la
 qt4/plugins/imageformats/libqgif.la
+qt4/plugins/imageformats/libqico.la
 qt4/plugins/imageformats/libqjpeg.la
 qt4/plugins/imageformats/libqmng.la
 qt4/plugins/imageformats/libqsvg.la
