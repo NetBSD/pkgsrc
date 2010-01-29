@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/01/17 12:02:14 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2010/01/29 19:12:10 joerg Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-2-src
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opencm.org/
 COMMENT=	Secure, high-integrity replacement for CVS
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
 USE_TOOLS+=	gmake gzip makeinfo lex
@@ -31,7 +33,7 @@ CPPFLAGS+=	-D__unix__
 MAKE_ENV+=	GZIP_CMD=${GZIP_CMD:Q}
 
 post-install:
-	gzip -d ${PREFIX}/${PKGINFODIR}/opencm.info.gz
+	gzip -d ${DESTDIR}${PREFIX}/${PKGINFODIR}/opencm.info.gz
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
