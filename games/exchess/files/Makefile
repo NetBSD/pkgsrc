@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/25 08:40:00 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/29 20:29:26 joerg Exp $
 
-BINDIR=		${PREFIX}/bin
 LIBDIR=		${PREFIX}/lib/exchess
 
 CPPFLAGS=	-DEXCHESS_DIR=\"${LIBDIR}/\"
@@ -13,12 +12,6 @@ all: exchess
 
 exchess: ${OBJS}
 	${CXX} -o ${.TARGET} ${OBJS} -lm
-
-install: exchess
-	${BSD_INSTALL_PROGRAM_DIR} ${BINDIR}
-	${BSD_INSTALL_PROGRAM} exchess ${BINDIR}
-	${BSD_INSTALL_DATA_DIR} ${LIBDIR}
-	${BSD_INSTALL_DATA} search.par ${LIBDIR}
 
 .SUFFIXES: .cpp
 
