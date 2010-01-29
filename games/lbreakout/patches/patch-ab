@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2007/12/13 11:17:19 rillig Exp $
+$NetBSD: patch-ab,v 1.5 2010/01/29 23:35:58 joerg Exp $
 
 --- lbreakout/Makefile.in.orig	2001-03-15 15:28:10.000000000 +0000
 +++ lbreakout/Makefile.in
@@ -11,13 +11,12 @@ $NetBSD: patch-ab,v 1.4 2007/12/13 11:17:19 rillig Exp $
  
  EXTRA_SUBDIRS = manual
  
-@@ -353,7 +353,8 @@ install-data-local:
+@@ -353,7 +353,7 @@ install-data-local:
  	$(INSTALL_DATA) wontgiveup.wav $(DESTDIR)$(sdir)/wontgiveup.wav 
  	$(INSTALL_DATA) speedup.wav $(DESTDIR)$(sdir)/speedup.wav 
  	$(INSTALL_DATA) speeddown.wav $(DESTDIR)$(sdir)/speeddown.wav
 -	$(INSTALL_DATA) -m 666 lbreakout.hscr $(DESTDIR)$(hdir)/lbreakout.hscr
 +	$(INSTALL_DATA) -m 444 lbreakout.hscr $(DESTDIR)$(sdir)/lbreakout.hscr
-+	[ -f $(DESTDIR)$(hdir)/lbreakout.hscr ] || $(INSTALL_DATA) -m 666 lbreakout.hscr $(DESTDIR)$(hdir)/lbreakout.hscr
  
  uninstall-local:
  	rm -fr $(DESTDIR)$(sdir)
