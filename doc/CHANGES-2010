@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.413 2010/01/29 15:23:26 sno Exp $
+$NetBSD: CHANGES-2010,v 1.414 2010/01/29 15:32:02 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -497,3 +497,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-String-RewritePrefix to 0.005 [sno 2010-01-29]
 	Updated converters/p5-MIME-Base64 to 3.09 [sno 2010-01-29]
 	Updated devel/p5-Module-Install to 0.92 [sno 2010-01-29]
+	Updated devel/p5-IPC-System-Simple to 1.20 [sno 2010-01-29]
