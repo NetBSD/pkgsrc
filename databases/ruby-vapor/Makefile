@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/10/19 15:32:14 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2010/01/29 17:34:23 joerg Exp $
 
 DISTNAME=	vapor-0.81
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://rubyforge.org/frs/download.php/215/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vapor.rubyforge.org/
 COMMENT=	Ruby transparent persistence to postgresql
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${RUBY_PKGPREFIX}-dbd-pg>=0.0.20:../../databases/ruby-dbd-pg
 
@@ -25,7 +27,7 @@ CONFIGURE_ARGS+=	--site-ruby-common=${PREFIX}/${RUBY_VENDORLIB_BASE} \
 			--so-dir==${PREFIX}/${RUBY_VENDORARCHLIB}
 
 
-INSTALLATION_DIRS=	${RUBY_DOC}/vapor
+INSTALLATION_DIRS=	${RUBY_DOC}/vapor ${RUBY_EG}
 
 post-install:
 	cd ${WRKSRC}/doc; ${PAX} -rw . ${DESTDIR}${PREFIX}/${RUBY_DOC}/vapor
