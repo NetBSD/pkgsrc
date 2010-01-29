@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/05/09 03:44:43 reed Exp $
+# $NetBSD: Makefile,v 1.36 2010/01/29 19:29:04 joerg Exp $
 #
 
 DISTNAME=	tla-1.3.5
@@ -13,6 +13,7 @@ DEPENDS+=	patch-[0-9]*:../../devel/patch
 DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CHECK_PORTABILITY_SKIP+=	\
@@ -41,15 +42,17 @@ DOCDIR=			${PREFIX}/share/doc/tla
 post-extract:
 	cd ${WRKSRC} && ${MKDIR} ${CONFIGURE_DIRS}
 
-post-install:
+INSTALLATION_DIRS+=	bin ${DOCDIR}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/src/=build/tla/tla/tla ${DESTDIR}${PREFIX}/bin
 	# Install arch documentation.
-	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKDIR}/${DISTNAME}/src/docs-tla &&		\
 		${FIND} . \( -name \*.css -or -name \*.html	\
 			-or -name \*.txt \) -print		\
-		| pax -rwppm ${DOCDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOCDIR}
-	${FIND} ${DOCDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${DOCDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+		| pax -rwppm ${DESTDIR}${DOCDIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${DOCDIR}
+	${FIND} ${DESTDIR}${DOCDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${DOCDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../mk/bsd.pkg.mk"
