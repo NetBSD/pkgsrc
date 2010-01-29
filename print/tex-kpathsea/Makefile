@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/29 02:32:55 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/29 02:35:28 minskim Exp $
 # TeX Live Revision 16044
 
 DISTNAME=	kpathsea
@@ -6,6 +6,9 @@ PKGNAME=	tex-${DISTNAME}-2009.16044
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Translation tables for TeX
+
+CONFLICTS+=	tex-bin-kpathsea-[0-9]*
+SUPERSEDES=	tex-bin-kpathsea<=2008.12897
 
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
