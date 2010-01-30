@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.27 2010/01/30 20:13:19 joerg Exp $
+# $NetBSD: replace.mk,v 1.28 2010/01/30 21:07:29 joerg Exp $
 #
 
 # _flavor-replace:
@@ -30,8 +30,6 @@ _flavor-replace: \
 _flavor-destdir-replace: \
 	replace-names \
 	replace-destdir \
-	replace-fixup-required-by \
-	replace-fixup-installed-info \
 	.PHONY
 
 # _flavor-undo-replace:
@@ -194,3 +192,14 @@ replace-destdir: .PHONY
 .else
 	${PKG_ADD} -U ${PKGFILE}
 .endif
+	${RUN}${_REPLACE_OLDNAME_CMD}; \
+	${PKG_INFO} -qR ${PKGNAME:Q} | while read pkg; do \
+		[ -n "$$pkg" ] || continue; \
+		${PKG_ADMIN} set unsafe_depends_strict=YES "$$pkg"; \
+		if [ "$$oldname" != ${PKGNAME:Q} ]; then \
+			${PKG_ADMIN} set unsafe_depends=YES "$$pkg"; \
+		fi; \
+	done
+	${RUN}${PKG_ADMIN} unset unsafe_depends ${PKGNAME:Q}
+	${RUN}${PKG_ADMIN} unset unsafe_depends_strict ${PKGNAME:Q}
+	${RUN}${PKG_ADMIN} unset rebuild ${PKGNAME:Q}
