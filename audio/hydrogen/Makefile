@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2010/01/18 09:58:38 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/01/30 18:05:58 joerg Exp $
 
 DISTNAME=	hydrogen-0.8.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hydrogen/}
 
 MAINTAINER=	chris.wareham@btinternet.com
 HOMEPAGE=	http://www.hydrogen-music.org/
 COMMENT=	Real time drum machine/sequencer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
@@ -23,8 +25,6 @@ CONFIGURE_ARGS+=	--disable-jack-support
 .include "../../x11/libXinerama/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xinerama
 .endif
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../audio/libhydrogen/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
