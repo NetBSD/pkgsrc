@@ -1,4 +1,4 @@
-/*	$NetBSD: pax.h,v 1.11 2007/09/06 20:10:22 joerg Exp $	*/
+/*	$NetBSD: pax.h,v 1.12 2010/01/30 08:46:20 obache Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -251,6 +251,11 @@ typedef struct oplist {
 # define MINOR(x)	minor_netbsd(x)
 # define TODEV(x, y)	makedev_netbsd((x), (y))
 #else
+# ifdef __HAIKU__
+#  define major(x)		((int)(0x00ff & ((x) >> 8)))
+#  define minor(x)		((int)(0xffff00ff & (x)))
+#  define makedev(maj,min)	((0xff00 & ((maj)<<8))|(0xffff00ff & (min)))
+# endif
 # define MAJOR(x)	major(x)
 # define MINOR(x)	minor(x)
 # ifdef __QNXNTO__
