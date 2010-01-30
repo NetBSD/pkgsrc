@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.67 2010/01/17 12:02:34 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2010/01/30 17:50:03 schwarz Exp $
 
 DISTNAME=	netatalk-2.0.5
 PKGREVISION=	1
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
+PATCHFILES=	patch-adv1tov2.c
+PATCH_SITES=	http://svn.macosforge.org/repository/macports/trunk/dports/net/netatalk/files/ \
+		http://mirror.lug.udel.edu/pub/macports/trunk/dports/net/netatalk/files/
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://netatalk.sourceforge.net/
