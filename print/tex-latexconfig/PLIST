@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/14 18:09:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/30 15:45:58 minskim Exp $
+share/texmf-dist/tex/latex/latexconfig/color.cfg
+share/texmf-dist/tex/latex/latexconfig/dvilualatex.ini
+share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+share/texmf-dist/tex/latex/latexconfig/graphics.cfg
+share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 share/texmf-dist/tex/latex/latexconfig/latex.ini
 share/texmf-dist/tex/latex/latexconfig/lualatex.ini
+share/texmf-dist/tex/latex/latexconfig/lualatexiniconfig.tex
 share/texmf-dist/tex/latex/latexconfig/mllatex.ini
 share/texmf-dist/tex/latex/latexconfig/pdflatex.ini
-share/texmf-dist/tex/latex/latexconfig/pdflualatex.ini
 share/texmf-dist/tex/latex/latexconfig/xelatex.ini
