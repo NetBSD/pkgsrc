@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.3 2009/06/24 20:44:21 hasso Exp $
+$NetBSD: distinfo,v 1.3.6.1 2010/01/30 12:52:53 tron Exp $
 
-SHA1 (pdns-recursor-3.1.7.tar.bz2) = 3e9c46e432d57edd58f767311247e750350883e9
-RMD160 (pdns-recursor-3.1.7.tar.bz2) = 359b3e3fff942f9fd14bebe4bc16b9d6cd23d0e3
-Size (pdns-recursor-3.1.7.tar.bz2) = 174424 bytes
+SHA1 (pdns-recursor-3.1.7.2.tar.bz2) = 9dcaca50fe0c373d601e135a78f24f5b85480020
+RMD160 (pdns-recursor-3.1.7.2.tar.bz2) = 2a1118763ab630646b9ba25273d6066e380e55c6
+Size (pdns-recursor-3.1.7.2.tar.bz2) = 174082 bytes
 SHA1 (patch-aa) = 8ea6d7bd6e4b1625ca5df7fb115085223f8fb147
 SHA1 (patch-ab) = b8607622c082d2168aecf06586818760f1a6035c
-SHA1 (patch-ac) = 618d18ddc212c6aa417d16454a784854f7a327a4
-SHA1 (patch-ad) = a28cdd1a6e860c1c9460c36e2e8acece4b163436
-SHA1 (patch-ae) = 54ce9208671928bf4b63331f2a248b601325541e
-SHA1 (patch-af) = 23b8dbad8f7f69652d7417ca6dcca4dde4a6fe57
+SHA1 (patch-ae) = d832951abad18a429e7d567563af61b77f61c179
+SHA1 (patch-af) = 5a7ba19325f37922c0fcc8a8b23cc023c2b28789
 SHA1 (patch-ag) = 952182b856fa0ec995d9ba307124e069c1831049
 SHA1 (patch-ah) = 1d8c62313b730afed492b12e6e28c1c0757e9c24
