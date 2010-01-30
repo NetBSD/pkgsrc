@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/15 23:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/30 16:28:00 heinz Exp $
 #
 
 DISTNAME=		getopt-1.1.4
@@ -8,6 +8,7 @@ MASTER_SITES=		http://software.frodo.looijaard.name/getopt/files/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://software.frodo.looijaard.name/getopt/
 COMMENT=		Program to help shell scripts parse command-line parameters
+LICENSE=		gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
