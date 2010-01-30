@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.424 2010/01/30 00:42:08 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.425 2010/01/30 00:59:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -518,3 +518,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-pdftex to 1.40.9.12898nb2 [minskim 2010-01-30]
 	Removed print/tex-bin-kpathsea successor print/tex-kpathsea [minskim 2010-01-30]
 	Updated print/tex-pdftex to 1.40.10 [minskim 2010-01-30]
+	Updated graphics/rabbit to 0.6.4 [obache 2010-01-30]
