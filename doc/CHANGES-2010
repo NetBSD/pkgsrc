@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.433 2010/01/30 16:19:26 spz Exp $
+$NetBSD: CHANGES-2010,v 1.434 2010/01/30 16:45:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -531,3 +531,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/tex-xmltex to 1.9nb6 [minskim 2010-01-30]
 	Updated time/ruby-tzinfo to 0.3.16nb1 [taca 2010-01-30]
 	Added net/irrtoolset5 version pre-5.0.0 rev311 [spz 2010-01-30]
+	Removed print/tex-bin-xmltex successor print/tex-xmltex [minskim 2010-01-30]
