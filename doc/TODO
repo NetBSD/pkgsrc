@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8937 2010/01/30 00:42:07 minskim Exp $
+$NetBSD: TODO,v 1.8938 2010/01/30 15:37:17 tnn Exp $
 
 Suggested new packages
 ======================
@@ -847,11 +847,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgda-4.0.6 [GNOME 2.28]
 	o libgdiplus-2.6
 	o libgee-0.5.0
-	o libggi-2.2.2
-	o libggigcp-1.0.2
-	o libggimisc-2.2.2
-	o libggiwmh-0.3.2
-	o libgii-1.0.2
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
 	o libhydrogen-0.9.2
