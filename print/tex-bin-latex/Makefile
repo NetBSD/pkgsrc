@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/01/30 00:26:10 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/30 15:46:51 minskim Exp $
 # TeX Live Revision 12778
 
 DISTNAME=	bin-latex
 PKGNAME=	tex-${DISTNAME}-2008.12778
-PKGREVISION=	4
+PKGREVISION=	5
 DIST_SUBDIR=	${PKGNAME_NOREV}nb1
 
 MAINTAINER=	minskim@NetBSD.org
@@ -22,6 +22,8 @@ INSTALLATION_DIRS+=	bin
 
 TEX_FORMAT_NAMES+=	latex
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
+
+TEXLIVE_IGNORE_PATTERNS=	texmf/tex
 
 .include "../../print/texlive/module.mk"
 
