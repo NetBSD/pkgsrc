@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/02 11:45:32 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/30 17:43:42 joerg Exp $
 #
 
 DISTNAME=	camlzip-${VERSION}
@@ -10,6 +10,8 @@ MASTER_SITES=	http://caml.inria.fr/distrib/bazar-ocaml/
 MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://cristal.inria.fr/~xleroy/software.html
 COMMENT=	OCaml library to manipulate ZIP/GZIP/JAR archives
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
