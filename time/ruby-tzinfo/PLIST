@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:18:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/01/30 16:04:29 taca Exp $
 ${GEM_HOME}/cache/tzinfo-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -283,6 +283,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Makassar.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Manila.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Muscat.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Nicosia.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Novokuznetsk.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Novosibirsk.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Omsk.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Oral.rb
