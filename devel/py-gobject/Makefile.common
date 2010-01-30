@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2009/10/21 16:07:29 drochner Exp $
+# $NetBSD: Makefile.common,v 1.15 2010/01/30 16:28:01 heinz Exp $
 #
 # used by devel/py-gobject/Makefile
 # used by devel/py-gobject-shared/Makefile
@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.20/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pygtk.org/
 COMMENT=		Python bindings for glib2 gobject
+LICENSE=		gnu-lgpl-v2.1
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
