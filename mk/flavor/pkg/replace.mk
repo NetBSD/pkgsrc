@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.26 2009/10/02 12:35:54 obache Exp $
+# $NetBSD: replace.mk,v 1.27 2010/01/30 20:13:19 joerg Exp $
 #
 
 # _flavor-replace:
@@ -187,10 +187,10 @@ replace-destdir: .PHONY
 	@${PHASE_MSG} "Updating using binary package of "${PKGNAME:Q}
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 	@${MKDIR} ${_CROSS_DESTDIR}${PREFIX}
-	${PKG_ADD} -u -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${PKGFILE}
+	${PKG_ADD} -U -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${PKGFILE}
 	@${ECHO} "Fixing recorded cwd..."
 	@${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp
 	@${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS
 .else
-	${PKG_ADD} -u ${PKGFILE}
+	${PKG_ADD} -U ${PKGFILE}
 .endif
