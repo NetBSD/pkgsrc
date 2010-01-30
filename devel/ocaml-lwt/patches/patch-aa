@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/09/02 11:19:35 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/30 19:10:25 joerg Exp $
 
---- Makefile.orig	2008-07-07 11:24:41.000000000 +0200
-+++ Makefile	2008-07-07 11:24:56.000000000 +0200
-@@ -36,13 +36,13 @@
+--- Makefile.orig	2008-06-25 15:23:14.000000000 +0000
++++ Makefile
+@@ -22,7 +22,7 @@
+ 
+ OCAMLFIND := ocamlfind
+ OCAMLBUILD := ocamlbuild
+-DESTDIR := $(shell $(OCAMLFIND) printconf destdir)/$(NAME)
++INSTALLDIR := ${DESTDIR}$(shell $(OCAMLFIND) printconf destdir)/$(NAME)
+ 
+ NAME := lwt
+ VERSION := $(shell head -n 1 VERSION)
+@@ -36,13 +36,13 @@ TOINSTALL = $(wildcard $(ARCHIVES_BYTE) 
  all: META byte opt doc
  
  byte:
@@ -18,3 +27,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/09/02 11:19:35 obache Exp $
  
  examples:
  	$(MAKE) -C examples
+@@ -54,11 +54,11 @@ dist:
+ 	DARCS_REPO=$(PWD) darcs dist -d $(NAME)-$(VERSION)
+ 
+ install:
+-	mkdir -p "$(DESTDIR)"
+-	$(OCAMLFIND) install $(NAME) -destdir "$(DESTDIR)" META $(TOINSTALL)
++	mkdir -p "$(INSTALLDIR)"
++	$(OCAMLFIND) install $(NAME) -destdir "$(INSTALLDIR)" META $(TOINSTALL)
+ 
+ uninstall:
+-	$(OCAMLFIND) remove $(NAME) -destdir "$(DESTDIR)"
++	$(OCAMLFIND) remove $(NAME) -destdir "$(INSTALLDIR)"
+ 
+ clean:
+ 	$(OCAMLBUILD) -clean
