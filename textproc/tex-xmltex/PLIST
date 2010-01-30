@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 20:41:12 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/01/30 16:00:44 minskim Exp $
+bin/pdfxmltex
+bin/xmltex
 share/texmf-dist/tex/xmltex/base/iso-8859-1.xmt
 share/texmf-dist/tex/xmltex/base/iso-8859-2.xmt
 share/texmf-dist/tex/xmltex/base/koi8-r.xmt
