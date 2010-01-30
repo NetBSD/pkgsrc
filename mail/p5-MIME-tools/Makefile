@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/10/19 19:18:20 he Exp $
+# $NetBSD: Makefile,v 1.34 2010/01/30 23:08:00 heinz Exp $
 #
 
 DISTNAME=	MIME-tools-5.427
@@ -11,6 +11,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MIME/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MIME-tools/
 COMMENT=	Perl5 modules for encoding and decoding MIME messages
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
