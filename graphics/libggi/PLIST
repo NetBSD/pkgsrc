@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:59:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/01/30 15:19:26 tnn Exp $
 bin/cube3d
 bin/ggiteleserver
 bin/monitest
@@ -19,6 +19,7 @@ include/ggi/display/modelist.h
 include/ggi/display/monotext.h
 include/ggi/display/multi.h
 include/ggi/display/palemu.h
+include/ggi/display/quartz.h
 include/ggi/display/sub.h
 include/ggi/display/svgalib.h
 include/ggi/display/tele.h
@@ -35,7 +36,6 @@ include/ggi/ggi-defs.h
 include/ggi/ggi-unix.h
 include/ggi/ggi.h
 include/ggi/ggi_ext.h
-include/ggi/internal/debug.h
 include/ggi/internal/dltypes.h
 include/ggi/internal/ggi-dl.h
 include/ggi/internal/ggidlinit.h
@@ -79,7 +79,6 @@ ${PLIST.terminfo}lib/ggi/display/terminfo.la
 lib/ggi/display/tile.la
 lib/ggi/display/trueemu.la
 ${PLIST.libvgl}lib/ggi/display/vgl.la
-${PLIST.xf86dga}lib/ggi/display/xf86dga.la
 lib/ggi/helper/helper_x_dbe.la
 ${PLIST.xf86dga}lib/ggi/helper/helper_x_dga.la
 lib/ggi/helper/helper_x_evi.la
@@ -193,9 +192,31 @@ man/man3/ggi_pixellinearbuffer.3
 man/man3/ggi_pixelplanarbuffer.3
 man/man3/ggi_samplelinearbuffer.3
 man/man3/ggi_sampleplanarbuffer.3
+man/man3/ggidev-abs_3.3
+man/man3/ggidev-add_3.3
+man/man3/ggidev-assign_3.3
+man/man3/ggidev-assign_int_3.3
+man/man3/ggidev-assign_unsigned_3.3
+man/man3/ggidev-bits_3.3
+man/man3/ggidev-dec_3.3
+man/man3/ggidev-divmod_3.3
+man/man3/ggidev-eq0_3.3
+man/man3/ggidev-eq_3.3
+man/man3/ggidev-ge0_3.3
+man/man3/ggidev-ge_3.3
+man/man3/ggidev-gt0_3.3
+man/man3/ggidev-inc_3.3
+man/man3/ggidev-invert_3.3
+man/man3/ggidev-le0_3.3
+man/man3/ggidev-lshift_3.3
+man/man3/ggidev-lt0_3.3
+man/man3/ggidev-mul_3.3
+man/man3/ggidev-negate_3.3
+man/man3/ggidev-rshift_3.3
+man/man3/ggidev-sign_3.3
+man/man3/ggidev-sub_3.3
 man/man7/display-aa.7
 man/man7/display-auto.7
-man/man7/display-dga.7
 man/man7/display-directx.7
 man/man7/display-fbdev.7
 man/man7/display-file.7
@@ -205,6 +226,7 @@ man/man7/display-memory.7
 man/man7/display-monotext.7
 man/man7/display-multi.7
 man/man7/display-palemu.7
+man/man7/display-quartz.7
 man/man7/display-sub.7
 man/man7/display-svgalib.7
 man/man7/display-tele.7
@@ -214,5 +236,8 @@ man/man7/display-trueemu.7
 man/man7/display-vcsa.7
 man/man7/display-vgl.7
 man/man7/display-x.7
+man/man7/ggidev-triple-int.7
 man/man7/libggi.7
 share/examples/ggi/libggi.conf
+@pkgdir lib/ggi/default/kgi
+@pkgdir lib/ggi/default/fbdev

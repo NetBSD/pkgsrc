@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.7 2005/03/25 02:47:31 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2010/01/30 15:19:26 tnn Exp $
 
---- configure.orig	2004-11-30 22:11:36.000000000 +0100
+--- configure.orig	2007-01-26 20:28:56.000000000 +0000
 +++ configure
-@@ -18455,7 +18455,7 @@ cat >>confdefs.h <<_ACEOF
- _ACEOF
+@@ -22245,7 +22245,7 @@ _ACEOF
+ 
  
  cat >>confdefs.h <<_ACEOF
 -#define GGICONFDIR "$PATHTAG$static_sysconfdir/$ggi_subdir"
