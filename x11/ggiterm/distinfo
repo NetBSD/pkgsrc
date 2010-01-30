@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/29 13:58:21 wiz Exp $
+$NetBSD: distinfo,v 1.2 2010/01/30 15:52:15 tnn Exp $
 
-SHA1 (ggiterm-0.7.0.tar.gz) = 5840c96253cc65fa6aa9a32492727a0ee84dcc6c
-RMD160 (ggiterm-0.7.0.tar.gz) = c96f6aa57448745d7c436734a7062e4c90a857bf
-Size (ggiterm-0.7.0.tar.gz) = 159164 bytes
+SHA1 (ggiterm-0.7.1.tar.gz) = db9d0fbdfac54f746cd926aeb6db12ed4d383988
+RMD160 (ggiterm-0.7.1.tar.gz) = 66651813927b83fca28070b21c898386705a3842
+Size (ggiterm-0.7.1.tar.gz) = 380467 bytes
