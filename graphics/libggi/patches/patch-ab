@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.7 2005/03/25 02:47:31 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2010/01/30 15:19:26 tnn Exp $
 
---- Makefile.in.orig	2004-11-30 22:11:32.000000000 +0100
+--- Makefile.in.orig	2007-01-26 20:28:51.000000000 +0000
 +++ Makefile.in
-@@ -260,7 +260,7 @@ x_helper_xf86dga_libs = @x_helper_xf86dg
+@@ -343,7 +343,7 @@ x_helper_xf86dga_libs = @x_helper_xf86dg
  x_helper_xf86vm_libs = @x_helper_xf86vm_libs@
  AUTOMAKE_OPTIONS = 1.4 foreign
- SUBDIRS = include ggi display default extensions programs doc m4 dist
+ SUBDIRS = include display default ggi display-shared default-shared extensions programs doc m4 dist
 -ggiconfdatadir = $(sysconfdir)/$(ggi_subdir)
 +ggiconfdatadir = $(datadir)/examples/ggi
  ggiconfdata_DATA = libggi.conf
- DISTCLEANFILES = libggi.conf
- EXTRA_DIST = ChangeLog.1999 ChangeLog FAQ INSTALL.autoconf \
+ DISTCLEANFILES = libggi.conf config.lt
+ MAINTAINERCLEANFILES = Makefile.in acinclude.m4 aclocal.m4 config.h.in \
