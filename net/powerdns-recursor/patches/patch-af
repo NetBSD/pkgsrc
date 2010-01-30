@@ -1,33 +1,29 @@
-$NetBSD: patch-af,v 1.1.1.1 2009/04/21 14:16:47 roy Exp $
-
-Taken from FreeBSD ports
-
---- rec_control.1.orig	2008-03-30 22:41:26.000000000 +0200
-+++ rec_control.1	2008-04-02 00:15:23.000000000 +0200
+--- rec_control.1.orig	2010-01-03 14:26:42.000000000 +0000
++++ rec_control.1	2010-01-29 13:12:27.000000000 +0000
 @@ -5,7 +5,7 @@
  .\"    Manual: 
  .\"    Source: 
  .\"
--.TH "REC_CONTROL" "1" "03/16/2008" "" ""
-+.TH "REC_CONTROL" "8" "03/16/2008" "" ""
+-.TH "REC_CONTROL" "1" "12/29/2009" "" ""
++.TH "REC_CONTROL" "8" "12/29/2009" "" ""
  .\" disable hyphenation
  .nh
  .\" disable justification (adjust text to left margin only)
 @@ -16,7 +16,7 @@
- \fIrec_control\fR [\-\-help] [\-\-socket\-dir] [\-\-socket\-pid] command ..
+ \fIrec_control\fR [\-\-help] [\-\-socket\-dir] [\-\-socket\-pid] command \&.\&.
  .sp
  .SH "DESCRIPTION"
--rec_control(1) allows the operator to control a running instance of the pdns_recursor.
-+rec_control(8) allows the operator to control a running instance of the pdns_recursor.
+-rec_control(1) allows the operator to control a running instance of the pdns_recursor\&.
++rec_control(8) allows the operator to control a running instance of the pdns_recursor\&.
  .sp
- The commands that can be passed to the recursor are described on http://doc.powerdns.com/rec\-control.html
+ The commands that can be passed to the recursor are described on http://doc\&.powerdns\&.com/rec\-control\&.html
  .sp
 @@ -105,7 +105,7 @@
- Website: http://wiki.powerdns.com, http://www.powerdns.com
+ Website: http://wiki\&.powerdns\&.com, http://www\&.powerdns\&.com
  .sp
  .SH "SEE ALSO"
 -pdns_recursor(1)
 +pdns_recursor(8)
  .sp
  .SH "COPYING"
- Copyright \(co 2006 PowerDNS.COM BV. Free use of this software is granted under the terms of the GNU General Public License (GPL) version 2.
+ Copyright \(co 2006 PowerDNS\&.COM BV\&. Free use of this software is granted under the terms of the GNU General Public License (GPL) version 2\&.
