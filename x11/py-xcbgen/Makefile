@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/27 13:59:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/30 16:28:00 heinz Exp $
 #
 
 DISTNAME=	xcb-proto-1.6
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://xcb.freedesktop.org/
 COMMENT=	XCB protocol descriptions (in XML)
+LICENSE=	mit # with no-advertising clause
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 

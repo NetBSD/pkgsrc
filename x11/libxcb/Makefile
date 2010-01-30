@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/27 14:00:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/30 16:28:00 heinz Exp $
 #
 
 DISTNAME=	libxcb-1.5
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://xcb.freedesktop.org/
 COMMENT=	X protocol C-language Binding
+LICENSE=	mit # with no-advertising clause
 
 BUILD_DEPENDS+=		libxslt>=1.1.0:../../textproc/libxslt
 BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen>=1.6nb1:../../x11/py-xcbgen

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2009/12/03 13:06:54 asau Exp $
+# $NetBSD: Makefile,v 1.30 2010/01/30 16:28:00 heinz Exp $
 
 DISTNAME=	lapack-lite-3.1.1
 PKGNAME=	lapack-3.1.1
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/lapack/index.html
 COMMENT=	Linear Algebra PACKage
+LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir

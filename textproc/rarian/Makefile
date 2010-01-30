@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/09/06 15:23:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/30 16:28:00 heinz Exp $
 #
 
 DISTNAME=	rarian-0.8.1
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rarian.freedesktop.org/
 COMMENT=	Documentation metadata library
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
