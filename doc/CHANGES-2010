@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.426 2010/01/30 08:55:49 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.427 2010/01/30 13:32:10 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -520,3 +520,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-pdftex to 1.40.10 [minskim 2010-01-30]
 	Updated graphics/rabbit to 0.6.4 [obache 2010-01-30]
 	Updated x11/qt4-libs to 4.6.1nb1 [wiz 2010-01-30]
+	Updated net/bittorrent to 4.4.0nb3 [tron 2010-01-30]
