@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.41 2010/01/22 13:30:41 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.42 2010/01/30 20:09:34 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -17,7 +17,7 @@
 .\"
 .\"     @(#)pkg_add.1
 .\"
-.Dd January 22, 2010
+.Dd January 30, 2010
 .Dt PKG_ADD 1
 .Os
 .Sh NAME
@@ -25,7 +25,7 @@
 .Nd a utility for installing and upgrading software package distributions
 .Sh SYNOPSIS
 .Nm
-.Op Fl AfILnRuVv
+.Op Fl AfILnRUuVv
 .Op Fl K Ar pkg_dbdir
 .Op Fl m Ar machine
 .Op Fl P Ar destdir
@@ -155,10 +155,13 @@ This implies
 .Fl I .
 This means that you cannot deinstall it later, so only use this option if
 you know what you are doing!
+.It Fl U
+Replace an already installed version from a package.
+Implies
+.Fl u .
 .It Fl u
 If the package that's being installed is already installed,
 an update is performed.
-It is currently not possible to update to an identical version.
 If this is specified twice, then any dependent packages that are
 too old will also be updated to fulfill the dependency.
 See below for a more detailed description of the process.
