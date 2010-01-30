@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/08/31 13:20:34 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/30 19:16:09 joerg Exp $
 #
 
 DISTNAME=		pcre-ocaml-5.15.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ocaml.info/ocaml_sources/
 COMMENT=		Perl compatible regular expressions for OCaml
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
@@ -23,10 +25,10 @@ BUILD_TARGET=		byte
 .endif
 
 EGDIR=			${PREFIX}/share/examples/pcre-ocaml
-INSTALLATION_DIRS=	${EGDIR}
+INSTALLATION_DIRS=	${EGDIR} lib/ocaml/site-lib/pcre
 
 post-install:
-	cd ${WRKSRC}/examples && pax -rw -pm . ${EGDIR}
+	cd ${WRKSRC}/examples && pax -rw -pm . ${DESTDIR}${EGDIR}
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
