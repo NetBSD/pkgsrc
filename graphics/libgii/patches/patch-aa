@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2005/03/25 02:46:49 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2010/01/30 14:54:48 tnn Exp $
 
---- Makefile.in.orig	2004-11-30 21:56:24.000000000 +0100
+--- Makefile.in.orig	2007-01-26 20:08:28.000000000 +0000
 +++ Makefile.in
-@@ -255,7 +255,7 @@ target_alias = @target_alias@
+@@ -338,7 +338,7 @@ target_alias = @target_alias@
  # multiple AUTOMAKE_OPTIONS lines only confuses automake 1.6
  AUTOMAKE_OPTIONS = 1.4 foreign
- SUBDIRS = include gg gii input filter regress demos doc m4 dist
+ SUBDIRS = include gg input filter gii input-shared filter-shared regress demos doc m4 dist
 -giiconfdatadir = ${sysconfdir}/${ggi_subdir}
 +giiconfdatadir = ${prefix}/share/examples/ggi
  giiconfdata_DATA = libgii.conf
- DISTCLEANFILES = libgii.conf
- EXTRA_DIST = ChangeLog.1999 ChangeLog FAQ INSTALL.autoconf \
+ DISTCLEANFILES = libgii.conf config.lt
+ MAINTAINERCLEANFILES = configure aclocal.m4 acinclude.m4 autom4te.cache \
