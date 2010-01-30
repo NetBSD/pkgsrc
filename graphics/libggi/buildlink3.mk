@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2010/01/30 15:22:13 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2010/01/30 15:29:04 tnn Exp $
 
 BUILDLINK_TREE+=	libggi
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.libggi?=	../../graphics/libggi
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${X11_TYPE} == "modular"
+.include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .endif
 
