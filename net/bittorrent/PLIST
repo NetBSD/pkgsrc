@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:09:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/01/30 13:31:59 tron Exp $
 bin/bittorrent-console
 bin/bittorrent-curses
 bin/bittorrent-tracker
@@ -236,6 +236,36 @@ share/doc/BitTorrent-${PKGVERSION}/credits-l10n.txt
 share/doc/BitTorrent-${PKGVERSION}/credits.txt
 share/doc/BitTorrent-${PKGVERSION}/public.key
 share/doc/BitTorrent-${PKGVERSION}/redirdonate.html
+share/locale/af/LC_MESSAGES/bittorrent.mo
+share/locale/bg/LC_MESSAGES/bittorrent.mo
+share/locale/ca/LC_MESSAGES/bittorrent.mo
+share/locale/cs/LC_MESSAGES/bittorrent.mo
+share/locale/da/LC_MESSAGES/bittorrent.mo
+share/locale/de/LC_MESSAGES/bittorrent.mo
+share/locale/el/LC_MESSAGES/bittorrent.mo
+share/locale/es/LC_MESSAGES/bittorrent.mo
+share/locale/es_MX/LC_MESSAGES/bittorrent.mo
+share/locale/fr/LC_MESSAGES/bittorrent.mo
+share/locale/he/LC_MESSAGES/bittorrent.mo
+share/locale/hu/LC_MESSAGES/bittorrent.mo
+share/locale/is/LC_MESSAGES/bittorrent.mo
+share/locale/it/LC_MESSAGES/bittorrent.mo
+share/locale/ja/LC_MESSAGES/bittorrent.mo
+share/locale/ko/LC_MESSAGES/bittorrent.mo
+share/locale/nb_NO/LC_MESSAGES/bittorrent.mo
+share/locale/nl/LC_MESSAGES/bittorrent.mo
+share/locale/pl/LC_MESSAGES/bittorrent.mo
+share/locale/pt/LC_MESSAGES/bittorrent.mo
+share/locale/pt_BR/LC_MESSAGES/bittorrent.mo
+share/locale/ro/LC_MESSAGES/bittorrent.mo
+share/locale/ru/LC_MESSAGES/bittorrent.mo
+share/locale/sk/LC_MESSAGES/bittorrent.mo
+share/locale/sl/LC_MESSAGES/bittorrent.mo
+share/locale/sv/LC_MESSAGES/bittorrent.mo
+share/locale/tr/LC_MESSAGES/bittorrent.mo
+share/locale/vi/LC_MESSAGES/bittorrent.mo
+share/locale/zh_CN/LC_MESSAGES/bittorrent.mo
+share/locale/zh_TW/LC_MESSAGES/bittorrent.mo
 share/pixmaps/BitTorrent-${PKGVERSION}/bittorrent.ico
 share/pixmaps/BitTorrent-${PKGVERSION}/logo/bittorrent_32.png
 share/pixmaps/BitTorrent-${PKGVERSION}/logo/bittorrent_96.png
