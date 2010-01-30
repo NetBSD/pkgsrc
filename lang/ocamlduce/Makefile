@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/09/07 21:53:30 tonio Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/30 19:36:35 joerg Exp $
 #
 
 DISTNAME=       ocamlduce-3.11.1.0
@@ -15,6 +15,8 @@ MAINTAINER=     jaapb@kerguelen.org
 HOMEPAGE=       http://ocamlduce.ocamlcore.org/
 COMMENT=        Library to integrate XML features into OCaml
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=       ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
 USE_TOOLS+=     gmake
@@ -22,7 +24,9 @@ BUILD_TARGET=   all
 INSTALL_TARGET=	installbyte
 MAKE_JOBS_SAFE=	no
 
-MAKE_ENV=	BINDIR=${PREFIX}/bin LIBDIR=${PREFIX}/lib/ocaml/site-lib
+MAKE_ENV+=		BINDIR=${PREFIX}/bin LIBDIR=${PREFIX}/lib/ocaml/site-lib
+INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin \
+			LIBDIR=${DESTDIR}${PREFIX}/lib/ocaml/site-lib
 PLIST_SRC=	PLIST
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
