@@ -1,12 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:24:42 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2010/01/30 15:22:13 tnn Exp $
 
 BUILDLINK_TREE+=	libggi
 
 .if !defined(LIBGGI_BUILDLINK3_MK)
 LIBGGI_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libggi+=	libggi>=2.1.0
-BUILDLINK_ABI_DEPENDS.libggi?=	libggi>=2.1.1nb1
+BUILDLINK_API_DEPENDS.libggi+=	libggi>=2.2.2
 BUILDLINK_PKGSRCDIR.libggi?=	../../graphics/libggi
 
 .include "../../mk/bsd.fast.prefs.mk"
