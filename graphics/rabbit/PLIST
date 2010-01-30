@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/12/17 12:03:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/01/30 00:59:30 obache Exp $
 bin/rabbirc
 bin/rabbit
 bin/rabbit-command
@@ -295,6 +295,10 @@ ${RUBY_VENDORLIB}/rabbit/theme/pdf-tortoise-and-hare/pdf-tortoise-and-hare.rb
 ${RUBY_VENDORLIB}/rabbit/theme/pdf-tortoise-and-hare/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/pdf/pdf.rb
 ${RUBY_VENDORLIB}/rabbit/theme/pdf/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/per-slide-background-color/per-slide-background-color.rb
+${RUBY_VENDORLIB}/rabbit/theme/per-slide-background-color/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/per-slide-background-image/per-slide-background-image.rb
+${RUBY_VENDORLIB}/rabbit/theme/per-slide-background-image/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/powered-by/powered-by.rb
 ${RUBY_VENDORLIB}/rabbit/theme/powered-by/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rabbit-block-quote/property.rb
