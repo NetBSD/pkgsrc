@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.430 2010/01/30 15:49:04 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.431 2010/01/30 16:01:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -528,3 +528,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/libggiwmh to 0.3.2 [tnn 2010-01-30]
 	Updated print/tex-latexconfig to 2009 [minskim 2010-01-30]
 	Updated print/tex-bin-latex to 2008.12778nb5 [minskim 2010-01-30]
+	Updated textproc/tex-xmltex to 1.9nb6 [minskim 2010-01-30]
