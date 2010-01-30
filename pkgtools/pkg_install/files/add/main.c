@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.23 2010/01/22 13:30:41 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.24 2010/01/30 20:09:34 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.23 2010/01/22 13:30:41 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.24 2010/01/30 20:09:34 joerg Exp $");
 
 /*
  *
@@ -39,7 +39,7 @@ __RCSID("$NetBSD: main.c,v 1.23 2010/01/22 13:30:41 joerg Exp $");
 #include "lib.h"
 #include "add.h"
 
-static char Options[] = "AIK:LP:RVW:fhm:np:t:uvw:";
+static char Options[] = "AIK:LP:RVW:fhm:np:t:Uuvw:";
 
 char   *Destdir = NULL;
 char   *OverrideMachine = NULL;
@@ -54,6 +54,7 @@ Boolean ForceDepends = FALSE;
 
 int	LicenseCheck = 0;
 int     Replace = 0;
+int	ReplaceSame = 0;
 
 static void
 usage(void)
@@ -118,6 +119,12 @@ main(int argc, char **argv)
 
 		case 'p':
 			Prefix = optarg;
+			break;
+
+		case 'U':
+			ReplaceSame = 1;
+			if (!Replace)
+				Replace = 1;
 			break;
 
 		case 'u':
