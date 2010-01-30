@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2010/01/30 19:44:51 joerg Exp $
+
+--- src/Makefile.in.orig	2010-01-30 19:40:05.000000000 +0000
++++ src/Makefile.in
+@@ -50,7 +50,8 @@ byte: byte-code-library
+ opt: native-code-library
+ 
+ install:
+-	$(OCAMLFIND) install $(OCAMLFIND_INSTFLAGS) $(RESULT) META $(LIBINSTALL_FILES)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}`ocamlc -where`/site-lib
++	$(OCAMLFIND) install -destdir ${DESTDIR}`ocamlc -where`/site-lib $(OCAMLFIND_INSTFLAGS) $(RESULT) META $(LIBINSTALL_FILES)
+ 
+ uninstall:
+ 	$(OCAMLFIND) remove $(OCAMLFIND_INSTFLAGS) $(RESULT)
