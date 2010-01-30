@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/29 17:23:45 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/30 18:25:11 joerg Exp $
 #
 
 DISTNAME=		ocaml-mysql-1.0.4
@@ -9,6 +9,8 @@ MASTER_SITES=		http://raevnos.pennmush.org/code/ocaml-mysql/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://raevnos.pennmush.org/code/ocaml-mysql/
 COMMENT=		Ocaml library for MySQL database access
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
