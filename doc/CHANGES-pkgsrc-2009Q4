@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.18 2010/01/30 08:47:54 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.19 2010/01/30 12:53:35 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -58,3 +58,5 @@ Pullup ticket #2978 - requested by tron
 expat: security patch
 Pullup ticket #2980 - requested by tron
 wireshark: security update
+Pullup ticket #2981 - requested by roy
+powerdns-recursor: security update
