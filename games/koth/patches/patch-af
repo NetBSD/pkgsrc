@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2010/01/30 16:02:52 tnn Exp $
+
+--- src/gfx.h.orig	2003-01-18 22:24:17.000000000 +0000
++++ src/gfx.h
+@@ -20,6 +20,8 @@
+ #define _GFX_H_
+ 
+ #include <ggi/ggi.h>
++#include <inttypes.h>
++#define uint16 uint16_t
+ #include "player.h"
+ #include "terrain.h"
+ 
