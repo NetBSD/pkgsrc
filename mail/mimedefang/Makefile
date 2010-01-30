@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2010/01/30 23:08:00 heinz Exp $
 
 DISTNAME=		mimedefang-2.63
 CATEGORIES=		mail
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.mimedefang.org/static/
 MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.mimedefang.org/
 COMMENT=		To inspect/modify e-mail as it passes through your mail relay
+LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		p5-Digest-SHA1>=2.00:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser
