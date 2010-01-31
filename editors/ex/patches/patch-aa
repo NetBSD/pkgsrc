@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2010/01/29 19:39:24 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2010/01/31 21:24:04 joerg Exp $
 
 --- Makefile.orig	2004-01-03 14:22:47.000000000 +0000
 +++ Makefile
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.6 2010/01/29 19:39:24 joerg Exp $
 +BINDIR		= ${PREFIX}/bin
 +LIBEXECDIR	= ${PREFIX}/libexec
 +MANDIR		= ${PREFIX}/${PKGMANDIR}
-+PRESERVEDIR	= /var/tmp/vi.recover
++PRESERVEDIR	= ${VARBASE}/tmp/vi.recover
  
  #
  # A BSD-like install program. GNU install will fit well here, too.
@@ -65,3 +65,12 @@ $NetBSD: patch-aa,v 1.6 2010/01/29 19:39:24 joerg Exp $
  	test -d $(DESTDIR)/$(LIBEXECDIR) || mkdir $(DESTDIR)/$(LIBEXECDIR)
  	$(INSTALL) -c -s exrecover $(DESTDIR)/$(LIBEXECDIR)/exrecover
  	$(INSTALL) -c -s expreserve $(DESTDIR)/$(LIBEXECDIR)/expreserve
+@@ -305,8 +305,6 @@ install: all install-man
+ 	ln -s ex $(DESTDIR)/$(BINDIR)/vedit
+ 	ln -s ex $(DESTDIR)/$(BINDIR)/vi
+ 	ln -s ex $(DESTDIR)/$(BINDIR)/view
+-	test -d $(PRESERVEDIR) || mkdir $(PRESERVEDIR)
+-	chmod 1777 $(PRESERVEDIR)
+ 
+ ex.o: config.h ex_argv.h ex.h ex_proto.h ex_temp.h ex_tty.h ex_tune.h
+ ex.o: ex_vars.h libterm/libterm.h
