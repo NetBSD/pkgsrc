@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/22 17:14:33 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/31 21:15:25 joerg Exp $
 #
 
 DISTNAME=	freehdl-0.0.7
@@ -12,7 +12,7 @@ COMMENT=	VHDL simulator
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake perl:run
+USE_TOOLS+=	gmake perl:run pkg-config
 INFO_FILES=	yes
 REPLACE_PERL+=	freehdl/gvhdl.in
 PKG_DESTDIR_SUPPORT= user-destdir
