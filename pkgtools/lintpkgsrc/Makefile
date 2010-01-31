@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/09 00:48:11 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/31 11:38:48 obache Exp $
 #
 
 DISTNAME=	lintpkgsrc-4.82
@@ -44,7 +44,9 @@ do-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc.pl ${DESTDIR}${PREFIX}/bin/lintpkgsrc
+.if !empty(MANINSTALL:Mcatinstall)
 	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
+.endif
 .if !empty(MANINSTALL:Mmaninstall)
 	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endif
