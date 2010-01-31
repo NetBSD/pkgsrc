@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.10 2009/02/13 15:28:03 abs Exp $
+$NetBSD: patch-ae,v 1.11 2010/01/31 21:06:29 heinz Exp $
 
---- scripts/exim_install.orig	2006-04-28 11:32:21.000000000 +0100
+--- scripts/exim_install.orig	2009-10-30 16:14:04.000000000 +0100
 +++ scripts/exim_install
 @@ -84,6 +84,8 @@ if [ "${SYSTEM_ALIASES_FILE}" = "" ] ; t
    SYSTEM_ALIASES_FILE=/etc/aliases
@@ -11,7 +11,17 @@ $NetBSD: patch-ae,v 1.10 2009/02/13 15:28:03 abs Exp $
  # Allow INST_xx to over-ride xx
  case "$INST_BIN_DIRECTORY"       in ?*) BIN_DIRECTORY="$INST_BIN_DIRECTORY";; esac
  case "$INST_CONFIGURE_FILE"      in ?*) CONFIGURE_FILE="$INST_CONFIGURE_FILE";; esac
-@@ -415,15 +417,8 @@ elif [ ! -f ${CONFIGURE_FILE} ]; then
+@@ -220,6 +222,9 @@ while [ $# -gt 0 ]; do
+   if [ $name = exim${EXE} ]; then
+     version=exim-`./exim -bV -C /dev/null | \
+       awk '/Exim version/ { OFS=""; print $3,"-",substr($4,2,length($4)-1) }'`${EXE}
++    # only for pkgsrc: ./exim cannot run during install to DESTDIR because 
++    # EXIM_USER may not exist at this time, so we fake the version information
++    version=@PKGSRC_EXIM_VERSION@${EXE}
+ 
+     if [ "${version}" = "exim-${EXE}" ]; then
+       echo $com ""
+@@ -415,15 +420,8 @@ elif [ ! -f ${CONFIGURE_FILE} ]; then
      echo $com "*** Exim installation ${ver}failed ***"
      exit 1
    fi
