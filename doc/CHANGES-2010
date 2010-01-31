@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.436 2010/01/31 20:25:15 asau Exp $
+$NetBSD: CHANGES-2010,v 1.437 2010/01/31 20:38:35 roy Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -534,3 +534,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed print/tex-bin-xmltex successor print/tex-xmltex [minskim 2010-01-30]
 	Updated x11/ggiterm to 0.7.1 [tnn 2010-01-30]
 	Updated lang/mzscheme to 4.2.4 [asau 2010-01-31]
+	Updated net/dhcpcd to 5.1.5 [roy 2010-01-31]
