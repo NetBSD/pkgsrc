@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/01/31 23:45:58 joerg Exp $
 bin/galaxa
 share/doc/galaxa/README.txt
+share/examples/galaxa/galaxa-highs.dat
 share/galaxa/sounds/buzz.au
 share/galaxa/sounds/capture.au
 share/galaxa/sounds/fireworks.au
