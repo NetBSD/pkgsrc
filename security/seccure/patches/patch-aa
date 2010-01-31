@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/12/14 08:00:05 agc Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/31 23:24:24 joerg Exp $
 
---- Makefile	2009/12/07 22:32:10	1.1
-+++ Makefile	2009/12/07 22:37:20
+--- Makefile.orig	2009-04-09 12:42:50.000000000 +0000
++++ Makefile
 @@ -1,6 +1,9 @@
  CFLAGS = -O2 -Wall # -D NOBEEP
  
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/12/14 08:00:05 agc Exp $
  
  binaries: seccure-key seccure-encrypt seccure-decrypt seccure-sign \
  	seccure-verify seccure-signcrypt seccure-veridec seccure-dh
-@@ -8,15 +11,13 @@
+@@ -8,15 +11,13 @@ binaries: seccure-key seccure-encrypt se
  doc: seccure.1 seccure.1.html
  
  install: default
@@ -36,3 +36,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/12/14 08:00:05 agc Exp $
  
  clean:
  	rm -f *.o *~ seccure-key seccure-encrypt seccure-decrypt seccure-sign \
+@@ -28,9 +29,8 @@ rebuild: clean default
+ 
+ 
+ seccure-key: seccure.o numtheory.o ecc.o serialize.o protocol.o curves.o aes256ctr.o
+-	$(CC) $(CFLAGS) -o seccure-key -lgcrypt seccure.o numtheory.o ecc.o \
++	$(CC) $(LDFLAGS) $(CFLAGS) -o seccure-key -lgcrypt seccure.o numtheory.o ecc.o \
+ 	curves.o serialize.o protocol.o aes256ctr.o
+-	strip seccure-key
+ 
+ seccure-encrypt: seccure-key
+ 	ln -f seccure-key seccure-encrypt
