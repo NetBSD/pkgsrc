@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2010/01/26 16:22:59 tron Exp $
+# $NetBSD: Makefile,v 1.36 2010/01/31 20:54:44 tnn Exp $
 
 .include "dist.mk"
-PKGNAME=	${DISTNAME:S/firefox/xulrunner/:S/3.5/1.9.1/:S/.source//}
+PKGNAME=	xulrunner-${MOZ_BRANCH}.${MOZ_BRANCH_MINOR}
 CATEGORIES=	devel www
 
 MAINTAINER=	tnn@NetBSD.org
