@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2010/01/29 23:05:34 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2010/01/31 23:45:58 joerg Exp $
 #
 
 DISTNAME=	galaxa.0.1
 PKGNAME=	galaxa-0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.billsgames.com/unix/x/galaxa/
 
@@ -16,8 +16,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/galaxa
 MAKE_FILE=	makefile
 
-INSTALLATION_DIRS+=	bin share/doc/galaxa
+INSTALLATION_DIRS+=	bin share/doc/galaxa share/examples/galaxa
 INSTALL_MAKE_FLAGS+=	INSTALLROOT=${DESTDIR}${PREFIX}
+
+SETGIDGAME=	yes
+
+SPECIAL_PERMS+=	bin/galaxa ${SETGID_GAMES_PERMS}
+CONF_FILES_PERMS+=	${PREFIX}/share/examples/galaxa/galaxa-highs.dat \
+			/var/games/galaxa-highs.dat \
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/doc/galaxa
