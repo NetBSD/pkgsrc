@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2009/12/10 21:19:16 asau Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/31 21:08:58 zafer Exp $
 #
 
 DISTNAME=	DQS-3.3.2
 PKGNAME=	dqs-3.3.2
 PKGREVISION=	2
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/misc/
+MASTER_SITES=	http://www.sfr-fresh.com/unix/misc/old/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
