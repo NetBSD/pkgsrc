@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/10/11 13:10:43 asau Exp $
+$NetBSD: distinfo,v 1.10 2010/01/31 20:24:38 asau Exp $
 
-SHA1 (mz-4.2.2-src-unix.tgz) = 022862971f793c98fb1bcecaa53d6b9dc601ea74
-RMD160 (mz-4.2.2-src-unix.tgz) = e2ebf280823b4f8473e05e565044821035ce0301
-Size (mz-4.2.2-src-unix.tgz) = 4826888 bytes
+SHA1 (mz-4.2.4-src-unix.tgz) = 75b6af0bac7118f91025d8efc313e12dab9a8c26
+RMD160 (mz-4.2.4-src-unix.tgz) = c80ed91edf18b04dbe203b5eccb800c3cc94b868
+Size (mz-4.2.4-src-unix.tgz) = 5279517 bytes
