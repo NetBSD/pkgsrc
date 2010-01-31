@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1998/09/14 06:38:45 garbled Exp $
+$NetBSD: patch-aa,v 1.6 2010/01/31 23:45:58 joerg Exp $
 --- makefile.orig	Wed Apr 22 22:41:21 1998
 +++ makefile	Sun Sep 13 23:25:17 1998
 @@ -14,16 +14,21 @@
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.5 1998/09/14 06:38:45 garbled Exp $
  
  
  OBJECTS=galaxa.o hints.o randnum.o setup.o text.o soundmgr.o
-@@ -39,30 +44,26 @@
+@@ -39,30 +44,24 @@
  
  
  galaxa:	$(OBJECTS)
@@ -37,15 +37,13 @@ $NetBSD: patch-aa,v 1.5 1998/09/14 06:38:45 garbled Exp $
  	$(POSTPROCESS) galaxa
  
 +install: galaxa
-+	install -g games -o bin -m 2755 galaxa $(INSTALLROOT)/bin
++	${BSD_INSTALL_PROGRAM} galaxa $(INSTALLROOT)/bin
 +	mkdir -p $(DATA)
 +	mkdir -p $(SOUNDS)
 +	mkdir -p $(IMAGES)
-+	install -g bin -o bin -m 0644 sounds/* $(SOUNDS)
-+	install -g bin -o bin -m 0644 images/* $(IMAGES)
-+	if [ ! -e /var/games/galaxa-highs.dat ]; then \
-+		install -g games -o bin -m 0664 galaxa-highs.dat /var/games ; \
-+	fi
++	${BSD_INSTALL_DATA} sounds/* $(SOUNDS)
++	${BSD_INSTALL_DATA} images/* $(IMAGES)
++	${BSD_INSTALL_DATA} galaxa-highs.dat ${INSTALLROOT}/share/examples/galaxa
  
 -#-- App object--#
 +#-- Dependencies --#
