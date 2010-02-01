@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/01/18 09:58:39 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2010/02/01 02:01:59 joerg Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -10,6 +10,8 @@ MASTER_SITES=	# ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://shadowmere.student.utwente.nl/
 COMMENT=	Sound server for windowmaker
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
@@ -26,6 +28,8 @@ SUBST_MESSAGE.1x=	Changing the man page category from 1x to 1.
 SUBST_FILES.1x=		doc/*
 SUBST_SED.1x=		-e s,1x,1,g
 
+INSTALLATION_DIRS+=	${EGDIR}
+
 post-patch:
 	set -e;								\
 	cd ${WRKSRC:Q}/doc;						\
@@ -38,8 +42,7 @@ post-patch:
 		${FILESDIR:Q}/WMSound > ${WRKSRC:Q}/WMSound
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/WMSound ${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/WMSound ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
