@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.325 2010/01/30 00:30:04 minskim Exp $
+# $NetBSD: Makefile,v 1.326 2010/02/01 00:41:58 jym Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -25,6 +25,7 @@ SUBDIR+=	chktex
 SUBDIR+=	cjk-lyx
 SUBDIR+=	cnprint
 SUBDIR+=	cups
+SUBDIR+=	cups-drivers-Magicolor5440DL
 SUBDIR+=	dvidvi
 SUBDIR+=	dviljk
 SUBDIR+=	dvipdfm
