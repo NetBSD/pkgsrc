@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.18 2010/02/01 12:25:07 wiz Exp $
+.\" $NetBSD: pkg_rolling-replace.8,v 1.19 2010/02/01 19:06:43 sno Exp $
 .Dd February 1, 2010
 .Dt PKG_ROLLING-REPLACE 8
 .Os
@@ -8,8 +8,7 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl Fhknrsuv
-.Op Fl D Ar bool
-.Op Fl j Ar jobs
+.Op Fl D Ar VARIABLE=VALUE
 .Op Fl L Ar path
 .Op Fl X Ar pkgs
 .Op Fl x Ar pkgs
@@ -44,6 +43,11 @@ in the resulting topological order.
 The dependency graph and topological sort are re-calculated after each
 .Dq make replace ,
 in case it causes additional packages to be marked unsafe.
+.Nm
+will pass
+.Dq IN_PKG_ROLLING_REPLACE=1
+to make, so users can set flags depending on interactive usage and
+batch-replace in their @MAKECONF@.
 .Pp
 The user can mark additional packages to be rebuilt by setting the
 .Dq rebuild=YES
@@ -66,21 +70,10 @@ assuming the pkgsrc tree is more recent than the currently installed
 packages.)
 .Ss Options
 .Bl -tag -width xxxxxxxx
-.It Fl D Ar bool
-Sets
-.Dq USE_DESTDIR
-to the given boolean value
-.Ar bool
-.Po Dv YES No or Dv NO Pc .
-The default value is
-.Dq NO
-to ensure the same behaviour for pkgsrc developers when the act as users
-and update their system.
-To disable the default behaviour and fall back to pkgsrc defaults, use
-.Dq OFF
-as
-.Ar bool
-parameter.
+.It Fl D Ar VARIABLE=VALUE
+Passes VARIABLE=VALUE to each make call.
+.Dq -D
+can be specified more than once to pass several variables to make.
 .It Fl F
 Just fetches the sources of all mismatched packages required to be updated
 (and it's dependencies).
@@ -92,12 +85,6 @@ Warning: This could (potential will) rebuild package depending
 on the failed package, anyway.
 This may cause a broken tree.
 Use with caution!
-.It Fl j Ar jobs
-Enables a pkgsrc tunable
-.Pq Dv MAKE_JOBS= Ns Aq n
-to allow parallel build while
-compiling a package.
-It's unset by default.
 .It Fl L Ar path
 Logs each build (each command output from the commands which are run for
 packages) to given path.
@@ -218,6 +205,11 @@ To mark all packages that compiled against X11 as needing rebuild
 cd /var/db/pkg \*[Am]\*[Am] grep "blddep x11-links" */* | cut -d/ -f1 | \\
 sort -u | xargs pkg_admin set rebuild=YES
 .Ed
+.Pp
+To compile all packages heavily parallel, use
+.Bd -literal -offset indent
+pkg_rolling-replace -D MAKE_JOBS=8
+.Ed
 .Sh AUTHORS
 .An -nosplit
 .An Nick Goffee
@@ -234,7 +226,6 @@ were added by
 .Aq tnn@NetBSD.org .
 The options
 .Fl k ,
-.Fl j ,
 .Fl D ,
 .Fl F
 and
