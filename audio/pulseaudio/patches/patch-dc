@@ -1,0 +1,16 @@
+$NetBSD: patch-dc,v 1.1 2010/02/01 15:00:20 jmcneill Exp $
+
+--- src/modules/module-hal-detect.c.orig	2009-09-10 00:04:58.000000000 +0000
++++ src/modules/module-hal-detect.c
+@@ -337,6 +337,11 @@ static int hal_device_load_oss(struct us
+ 
+     /* We store only one entry per card, hence we look for the originating device */
+     originating_udi = libhal_device_get_property_string(u->context, udi, "oss.originating_device", &error);
++    if (dbus_error_is_set(&error) || !originating_udi) {
++	if (dbus_error_is_set(&error))
++            dbus_error_free(&error);
++	originating_udi = libhal_device_get_property_string(u->context, udi, "sound.originating_device", &error);
++    }
+     if (dbus_error_is_set(&error) || !originating_udi)
+         goto fail;
+ 
