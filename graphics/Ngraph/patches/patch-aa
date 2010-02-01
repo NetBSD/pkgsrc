@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2004/11/29 20:31:44 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2010/02/01 02:37:56 joerg Exp $
 --- Makefile.orig	Sat Aug  7 19:57:39 2004
 +++ Makefile	Tue Aug 31 20:40:29 2004
 @@ -1,26 +1,42 @@
@@ -9,8 +9,8 @@ $NetBSD: patch-aa,v 1.6 2004/11/29 20:31:44 wiz Exp $
 -INSTALLDIR = /usr/local/lib/Ngraph
 -BINDIR = /usr/local/bin
 +LIBDIR = '"${PREFIX}/libexec/Ngraph"'
-+INSTALLDIR =${PREFIX}/libexec/Ngraph
-+BINDIR = ${PREFIX}/bin
++INSTALLDIR =${DESTDIR}${PREFIX}/libexec/Ngraph
++BINDIR = ${DESTDIR}${PREFIX}/bin
  #
  #
  ###############################################################################
