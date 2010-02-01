@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2010/01/29 23:08:33 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/01 00:01:50 joerg Exp $
 #
 
 DISTNAME=	golddigC3.1
 PKGNAME=	golddig-3.1
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.NetBSD.org/~chuck/gz/
 
@@ -17,10 +18,15 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \
 			MAN=${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
-SCORE_GROUP=    games
+SCORE_GROUP=    ${GAMES_GROUP}
 PKG_GROUPS=     ${SCORE_GROUP}
 
-MAKE_ENV+=              SCORE_GROUP=${SCORE_GROUP:Q}
+SETGIDGAME=	yes
+
+SPECIAL_PERMS+=	bin/goldgid ${SETGID_GAMES_PERMS}
+
+CONF_FILES_PERMS+=	/dev/null /var/games/golddig.scores \
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 
 post-build:
 	for f in ${WRKSRC}/golddig.6 ${WRKSRC}/gdedit.6; do \
