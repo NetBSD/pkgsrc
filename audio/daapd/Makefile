@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/01/30 07:05:58 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2010/02/01 00:59:27 joerg Exp $
 
 DISTNAME=		daapd-0.2.4b
 PKGREVISION=		1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		nathanw@NetBSD.org
 HOMEPAGE=		http://www.deleet.de/projekte/daap/daapd/
 COMMENT=		Server for DAA protocol (iTunes)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
@@ -31,16 +33,18 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	daapd.8 daapd.cc
 SUBST_SED.paths=	-e 's,/etc/,${PKG_SYSCONFDIR}/,g'
 
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man8 ${EGDIR}
+
 post-extract:
 	for FILE in `${FIND} ${WRKSRC}/daaplib -type f -print`; do	\
 	  ${TR} -d \\r <$${FILE} >$${FILE}.new;				\
 	  ${MV} $${FILE}.new $${FILE};					\
 	done
 
-post-install:
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/daapd-example.conf ${EGDIR}/daapd.conf
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/daapd ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/daapd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/daapd-example.conf ${DESTDIR}${EGDIR}/daapd.conf
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../net/howl/buildlink3.mk"
