@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.23 2010/02/01 09:33:21 sno Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.24 2010/02/01 10:28:45 sno Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -361,7 +361,7 @@ if [ -n "${DESTDIR_OVERRIDE}" ]; then
 fi
 
 if [ -n "${MAKE_JOBS_OVERRIDE}" ]; then
-    MAKE_JOBS_VERIFY=`expr ${MAKE_JOBS_OVERRIDE}+0`
+    MAKE_JOBS_VERIFY=`expr ${MAKE_JOBS_OVERRIDE} + 0`
     if [ ${MAKE_JOBS_OVERRIDE} -eq ${MAKE_JOBS_VERIFY} ]; then
 	BUILD_REPLACE_TUNE="${BUILD_REPLACE_TUNE}${BUILD_REPLACE_TUNE_SEP}MAKE_JOBS=${MAKE_JOBS_VERIFY}"
     else
