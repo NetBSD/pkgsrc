@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/26 19:57:10 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/01 00:52:10 joerg Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.2.0
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://localhost.nl/~synap/libvisual-wiki/
 COMMENT=		Plugins for libvisual
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		libvisual-nebulus-[0-9]* libvisual-gforce-[0-9]*
 CONFLICTS+=		libvisual-plugins<0.4.0
@@ -28,7 +30,7 @@ CONFIGURE_ARGS+= 	--x-libraries=${X11BASE}/lib
 
 # install unnecessarily installed files
 post-install:
-	${RM} ${PREFIX}/share/libvisual-plugins/*/Makefile*
+	${RM} ${DESTDIR}${PREFIX}/share/libvisual-plugins/*/Makefile*
 
 .include "../../audio/goom/buildlink3.mk"
 .include "../../audio/libvisual0.2/buildlink3.mk"
