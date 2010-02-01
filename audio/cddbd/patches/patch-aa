@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2007/08/30 14:12:38 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2010/02/01 01:38:42 joerg Exp $
 
 --- install.sh.orig	1996-12-22 03:49:54.000000000 +0000
 +++ install.sh
@@ -78,6 +78,15 @@ $NetBSD: patch-aa,v 1.3 2007/08/30 14:12:38 joerg Exp $
  		return 0
  	else
  		$ECHO "\t$2 NOT installed"
+@@ -330,7 +328,7 @@ done
+ 
+ # Find other directories
+ 
+-BASEDIR=`cat .accessfile`
++BASEDIR=${DESTDIR}`cat .accessfile`
+ WORKDIR=${BASEDIR}
+ CDDBDIR=`dirname ${BASEDIR}`
+ 
 @@ -588,7 +586,7 @@ fi
  
  $ECHO "permissions:  default connect nopost noupdate noget" >> access
@@ -87,7 +96,7 @@ $NetBSD: patch-aa,v 1.3 2007/08/30 14:12:38 joerg Exp $
  if getyn "Do you want to create the motd file now"
  then
  	if [ "$EDITOR" = "" ]
-@@ -624,7 +622,7 @@ makedir $WORKDIR $DPERM $OWNID $GRPID
+@@ -624,10 +622,10 @@ makedir $WORKDIR $DPERM $OWNID $GRPID
  $ECHO "\nInstalling cddbd files..."
  
  # Binaries
@@ -95,7 +104,11 @@ $NetBSD: patch-aa,v 1.3 2007/08/30 14:12:38 joerg Exp $
 +instfile cddbd ${BINDIR}/cddbd $BINPERM $BINOWNER $BINGROUP
  
  # Configuration files
- instfile access `cat .accessfile`/access $FPERM $OWNID $GRPID
+-instfile access `cat .accessfile`/access $FPERM $OWNID $GRPID
++instfile access ${BASEDIR}/access $FPERM $OWNID $GRPID
+ instfile sites $SITE $FPERM $OWNID $GRPID
+ 
+ if [ -f motd ]
 @@ -635,7 +633,7 @@ then
  	instfile motd $MOTD $FPERM $OWNID $GRPID
  fi
