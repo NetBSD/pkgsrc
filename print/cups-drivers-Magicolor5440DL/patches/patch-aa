@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/01 00:38:36 jym Exp $
+
+--- configure.orig	2007-02-28 23:33:11.000000000 +0100
++++ configure
+@@ -2957,7 +2957,7 @@ fi
+ echo "$as_me: libdir is $libdir" >&6;}
+ #filterdir=/usr/lib/cups/filter
+ #AC_SUBST(filterdir)
+-KM_PPDDIR=/usr/share/cups/model/KONICA_MINOLTA
++KM_PPDDIR=${datadir}/cups/model/KONICA_MINOLTA
+ 
+ 
+ UNAME=`(uname) 2>/dev/null || echo unknown`
+@@ -2971,7 +2971,7 @@ cat >>confdefs.h <<_ACEOF
+ #define CUPS_SERVERBIN "$exec_prefix/libexec/cups"
+ _ACEOF
+ 
+-		LDFLAGS="$LDFALGS -L/usr/local/lib"
++		LDFLAGS="$LDFLAGS -L/usr/local/lib"
+ 		CPPFLAGS="$CPPFLAGS -I/usr/local/include -I/sw/include"
+ 		KM_DATADIR=/Library/Printers/KONICA_MINOLTA/mc5440DL
+ 
+@@ -2988,7 +2988,7 @@ cat >>confdefs.h <<_ACEOF
+ #define CUPS_SERVERBIN "$exec_prefix/libexec/cups"
+ _ACEOF
+ 
+-		LDFLAGS="$LDFALGS -L/usr/local/lib"
++		LDFLAGS="$LDFLAGS -L/usr/local/lib"
+ 		CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+ 		KM_DATADIR="$datadir/KONICA_MINOLTA/mc5440DL"
+ 
+@@ -3239,7 +3239,7 @@ elif test -f "/usr/lib/libjbig.a"; then
+ elif test -f "/usr/local/lib64/libjbig.a"; then
+ 	LIBJBIG="/usr/local/lib64/libjbig.a"
+ else
+-	LIBJBIG="/usr/local/lib/libjbig.a"
++	LIBJBIG="${libdir}/libjbig.a"
+ fi
+ else
+   { { echo "$as_me:$LINENO: error: Could not find libjbig.a" >&5
+@@ -3320,7 +3320,7 @@ elif test -f "/usr/lib/liblcms.a"; then
+ elif test -f "/usr/local/lib64/liblcms.a"; then
+ 	LIBLCMS="/usr/local/lib64/liblcms.a"
+ else
+-	LIBLCMS="/usr/local/lib/liblcms.a"
++	LIBLCMS="${libdir}/liblcms.a"
+ fi
+ else
+   { { echo "$as_me:$LINENO: error: Could not find liblcms.a" >&5
