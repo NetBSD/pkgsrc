@@ -1,0 +1,26 @@
+$NetBSD: patch-au,v 1.1 2010/02/01 00:24:37 joerg Exp $
+
+--- cvsunix/Makefile.in.orig	2010-02-01 00:11:27.000000000 +0000
++++ cvsunix/Makefile.in
+@@ -46,7 +46,7 @@ LDFLAGS = @LDFLAGS@
+ MAKEINFO = makeinfo
+ TEXI2DVI = texi2dvi
+ 
+-prefix = @prefix@
++prefix = ${DESTDIR}@prefix@
+ exec_prefix = @exec_prefix@
+ 
+ # Where to install the executables.
+@@ -56,10 +56,10 @@ bindir = @bindir@
+ libdir = @libdir@
+ 
+ # Where to put the Info files
+-infodir = @infodir@
++infodir = ${DESTDIR}${PREFIX}/${PKGINFODIR}
+ 
+ # Where to put the manual pages.
+-mandir = @mandir@
++mandir = ${DESTDIR}${PREFIX}/${PKGMANDIR}
+ 
+ #### End of system configuration section. ####
+ 
