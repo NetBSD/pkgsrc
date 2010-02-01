@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/16 00:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/01 02:51:29 joerg Exp $
 #
 
 DISTNAME=	clara-0.9.9
@@ -15,6 +15,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/claraocr/
 COMMENT=	Optical Character Recognition (OCR) program for books
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
 USE_TOOLS+=	perl:run
@@ -22,9 +24,11 @@ REPLACE_PERL=	clara.pl mkdoc.pl selthresh.pl
 
 CONFLICTS+=	clara-[0-9]*
 
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/doc/clara
+
 # install a example input file
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/imre.pbm ${PREFIX}/share/doc/clara
+	${INSTALL_DATA} ${WRKSRC}/imre.pbm ${DESTDIR}${PREFIX}/share/doc/clara
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
