@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/14 18:16:52 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/02/01 17:46:02 minskim Exp $
 
-SHA1 (tex-latex-2008.11896/latex.tar.lzma) = 092ee11c86786f866c82f98cea54eaf78179fe99
-RMD160 (tex-latex-2008.11896/latex.tar.lzma) = 556c39f48e254796e654aa95d3c6c3f235eb3937
-Size (tex-latex-2008.11896/latex.tar.lzma) = 147221 bytes
+SHA1 (tex-latex-2009/latex.tar.xz) = b30c211e26ef42bab02eb88074d277bd68621471
+RMD160 (tex-latex-2009/latex.tar.xz) = 789bfaa70787be85dbf3654241c1e0fe0538889c
+Size (tex-latex-2009/latex.tar.xz) = 148400 bytes
