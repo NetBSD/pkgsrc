@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.444 2010/02/01 17:46:25 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.445 2010/02/01 19:06:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -542,3 +542,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added filesystems/fuse-bindfs version 1.8.4 [jmmv 2010-02-01]
 	Updated audio/pulseaudio to 0.9.21 [jmcneill 2010-02-01]
 	Updated print/tex-latex to 2009 [minskim 2010-02-01]
+	Updated pkgtools/pkg_rolling-replace to 0.20 [sno 2010-02-01]
