@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/17 18:00:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/01 01:17:59 joerg Exp $
 
 DISTNAME=	mt-daapd-0.2.4.2
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mt-daapd/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mt-daapd.org/
 COMMENT=	Server for DAAP (iTunes)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
@@ -50,10 +52,11 @@ SUBST_FILES.paths=	src/main.c
 SUBST_SED.paths=	-e "s,/etc,${PKG_SYSCONFDIR},"
 SUBST_SED.paths+=	-e "s,/var,${VARBASE},"
 
+INSTALLATION_DIRS+=	${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/contrib/mt-daapd.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/contrib/mt-daapd.playlist ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/mt-daapd.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/mt-daapd.playlist ${DESTDIR}${EGDIR}
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
