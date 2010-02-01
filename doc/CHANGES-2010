@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.442 2010/02/01 13:38:11 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.443 2010/02/01 15:01:01 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -540,3 +540,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/pkg_rolling-replace to 0.19 [sno 2010-02-01]
 	Updated pkgtools/pkg_rolling-replace to 0.19nb1 [sno 2010-02-01]
 	Added filesystems/fuse-bindfs version 1.8.4 [jmmv 2010-02-01]
+	Updated audio/pulseaudio to 0.9.21 [jmcneill 2010-02-01]
