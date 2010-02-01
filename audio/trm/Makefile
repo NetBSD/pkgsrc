@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/07/01 11:59:01 chris Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/01 01:50:04 joerg Exp $
 #
 
 DISTNAME=	trm-0.2.1
@@ -10,6 +10,8 @@ MAINTAINER=	chris@NetBSD.org
 HOMEPAGE=	http://www.musicbrainz.org/products/trmgen/download.html
 COMMENT=	Acoustic signature generator
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=	tunepimp-[0-9]*
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
@@ -19,6 +21,8 @@ USE_LANGUAGES=		c c++
 
 AUTOMAKE_REQD=	1.6.3
 USE_TOOLS+=	automake aclocal autoheader autoconf
+
+INSTALLATION_DIRS+=	bin
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \

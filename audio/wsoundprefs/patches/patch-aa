@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2001/03/12 21:19:10 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2010/02/01 02:00:32 joerg Exp $
 
---- Imakefile.orig	Fri Mar 31 16:16:47 2000
+--- Imakefile.orig	2000-03-31 14:16:47.000000000 +0000
 +++ Imakefile
-@@ -6,15 +6,16 @@
+@@ -6,15 +6,14 @@ XCOMM Specify Your Installation Prefix H
  XCOMM Installation Path: $(PREFIX)/Apps/WSoundPrefs.app
  XCOMM -------------------------------------------------
  XCOMM PREFIX = /usr/GNUstep/Local
 -PREFIX = /usr/local/GNUstep
-+XCOMM PREFIX = /usr/local/GNUstep
++PREFIX := ${PREFIX}/GNUstep
  
  
  XCOMM CDEBUGFLAGS = -Wall -ggdb -DDEBUG
@@ -18,7 +18,6 @@ $NetBSD: patch-aa,v 1.3 2001/03/12 21:19:10 wiz Exp $
  SUBDIRS = src
  
 -DESTDIR = $(PREFIX)
-+DESTDIR = $(PREFIX)/GNUstep
- 
+-
  MakeSubdirs($(SUBDIRS))
  DependSubdirs($(SUBDIRS))
