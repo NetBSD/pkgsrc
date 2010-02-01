@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/04/12 22:43:00 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/01 02:23:45 joerg Exp $
 #
 
 DISTNAME=	p11-2.10i
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@grumpf.hope-2000.org
 COMMENT=	PDP11 emulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-begemot=${PREFIX:Q}
@@ -41,7 +43,7 @@ do-build:
 	cd ${WRKSRC} && ${GMAKE} ${BUILD_TARGET} MAKEFLAGS=
 
 do-install:
-	cd ${WRKSRC} && ${GMAKE} ${INSTALL_TARGET} MAKEFLAGS=
+	cd ${WRKSRC} && ${GMAKE} ${INSTALL_TARGET} MAKEFLAGS= DESTDIR=${DESTDIR}
 
 .include "../../devel/libbegemot/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
