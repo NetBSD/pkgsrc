@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.439 2010/02/01 00:46:46 jym Exp $
+$NetBSD: CHANGES-2010,v 1.440 2010/02/01 09:33:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -537,3 +537,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/dhcpcd to 5.1.5 [roy 2010-01-31]
 	Updated archivers/libzip to 0.9.2 [wiz 2010-01-31]
 	Added print/cups-drivers-Magicolor5440DL version 1.2.1 [jym 2010-02-01]
+	Updated pkgtools/pkg_rolling-replace to 0.19 [sno 2010-02-01]
