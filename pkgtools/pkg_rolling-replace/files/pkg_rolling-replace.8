@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.17 2010/02/01 09:33:21 sno Exp $
+.\" $NetBSD: pkg_rolling-replace.8,v 1.18 2010/02/01 12:25:07 wiz Exp $
 .Dd February 1, 2010
 .Dt PKG_ROLLING-REPLACE 8
 .Os
@@ -7,7 +7,7 @@
 .Nd rebuild or update packages using 'make replace' in tsorted order
 .Sh SYNOPSIS
 .Nm
-.Op Fl hFknrsuv
+.Op Fl Fhknrsuv
 .Op Fl D Ar bool
 .Op Fl j Ar jobs
 .Op Fl L Ar path
@@ -66,19 +66,47 @@ assuming the pkgsrc tree is more recent than the currently installed
 packages.)
 .Ss Options
 .Bl -tag -width xxxxxxxx
-.It Fl h
-Brief help.
+.It Fl D Ar bool
+Sets
+.Dq USE_DESTDIR
+to the given boolean value
+.Ar bool
+.Po Dv YES No or Dv NO Pc .
+The default value is
+.Dq NO
+to ensure the same behaviour for pkgsrc developers when the act as users
+and update their system.
+To disable the default behaviour and fall back to pkgsrc defaults, use
+.Dq OFF
+as
+.Ar bool
+parameter.
 .It Fl F
 Just fetches the sources of all mismatched packages required to be updated
 (and it's dependencies).
+.It Fl h
+Brief help.
 .It Fl k
 Keep on going, even on error during handling current package.
 Warning: This could (potential will) rebuild package depending
-on the failed package, anyway. This may cause a broken tree.
+on the failed package, anyway.
+This may cause a broken tree.
 Use with caution!
 .It Fl j Ar jobs
-Enables a pkgsrc tunable (MAKE_JOBS=<n>) to allow parallel build while
-compiling a package. It's unset by default.
+Enables a pkgsrc tunable
+.Pq Dv MAKE_JOBS= Ns Aq n
+to allow parallel build while
+compiling a package.
+It's unset by default.
+.It Fl L Ar path
+Logs each build (each command output from the commands which are run for
+packages) to given path.
+The full log file name is composed from the path given by this
+argument, the category name of the package and the package name:
+.Dq given-path/category/pkgname .
+The specified path must exists and being user writable of the invoking
+user or any parent directory must be writable by the invoking user.
+Potentially existing log in the same file name will be overwritten.
 .It Fl n
 Display actions that would be taken, but don't actually run
 .Dq make replace
@@ -105,26 +133,6 @@ Use
 to check for outdated packages, and replace those too.
 .It Fl v
 Verbose output.
-.It Fl D Ar bool
-Sets the
-.Dq USE_DESTDIR=<bool>
-for the given bool. The default value is
-.Dq NO
-to ensure the same behaviour for pkgsrc developers when the act as users
-and update their system. To disable the default behaviour, use
-.Dq OFF
-as value for the
-.Dq -D
-parameter.
-.It Fl L Ar path
-Logs each build (each command output from the commands which are run for
-packages) to given path. The full log file name is composed from the path
-given by this argument, the category name of the package and the package
-name:
-.Dq given-path/category/pkgname .
-The specified path must exists and being user writable of the invoking
-user or any parent directory must be writable by the invoking user.
-Potentially existing log in the same file name will be overwritten.
 .It Fl X Ar pkgs
 Exclude the comma-separated list of package base names
 from being rebuilt for any reason.
