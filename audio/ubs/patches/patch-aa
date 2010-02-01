@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/05 11:46:11 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/01 01:51:50 joerg Exp $
 
 --- Makefile.in.orig	2003-10-31 05:49:58.000000000 +0100
 +++ Makefile.in	2003-10-31 05:50:52.000000000 +0100
@@ -7,16 +7,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/05 11:46:11 xtraeme Exp $
  
  install-data-local:
 -	$(mkinstalldirs) $(prefix)/etc
- 	$(mkinstalldirs) $(prefix)/include
+-	$(mkinstalldirs) $(prefix)/include
 -	$(mkinstalldirs) $(prefix)/log
 -	$(mkinstalldirs) $(prefix)/tmp
 -	$(mkinstalldirs) $(prefix)/var
-+	$(mkinstalldirs) $(datadir)/examples/ubs
++	$(mkinstalldirs) ${DESTDIR}$(prefix)/include
++	$(mkinstalldirs) ${DESTDIR}$(datadir)/examples/ubs
  
 -	$(INSTALL_DATA) config/help.conf $(prefix)/etc
 -	$(INSTALL_DATA) config/ubs.conf.default $(prefix)/etc
-+	$(INSTALL_DATA) config/help.conf $(datadir)/examples/ubs
-+	$(INSTALL_DATA) config/ubs.conf.default $(datadir)/examples/ubs
++	$(INSTALL_DATA) config/help.conf ${DESTDIR}$(datadir)/examples/ubs
++	$(INSTALL_DATA) config/ubs.conf.default ${DESTDIR}$(datadir)/examples/ubs
  
- 	$(INSTALL_DATA) include/*.h $(prefix)/include
+-	$(INSTALL_DATA) include/*.h $(prefix)/include
++	$(INSTALL_DATA) include/*.h ${DESTDIR}$(prefix)/include
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
