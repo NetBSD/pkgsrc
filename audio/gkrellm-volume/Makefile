@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/01/17 12:02:04 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/02/01 01:10:28 joerg Exp $
 
 DISTNAME=	gkrellm-volume-2.1.13
 PKGREVISION=	6
@@ -9,12 +9,18 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://gkrellm.luon.net/volume.phtml
 COMMENT=	Gkrellm2 volume mixer plugin
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 WRKSRC=			${WRKDIR}/gkrellm-volume
 
 MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
 		enable_nls=1
+
+INSTALLATION_DIRS+=	lib/gkrellm2/plugins
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \
+			LOCALEDIR=${DESTDIR}${PREFIX}/${PKGLOCALEDIR}/locale
 
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
