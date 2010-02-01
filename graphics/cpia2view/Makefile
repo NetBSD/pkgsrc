@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/18 09:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/01 02:57:04 joerg Exp $
 #
 
 DISTNAME=	cpia2_driver-1.0
@@ -16,10 +16,12 @@ MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://home.384.jp/takam/bsd/NetBSD.html#cpia2
 COMMENT=	USB cameras based CPiA2 Utility Programs
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		groff nroff
 
-INSTALLATION_DIRS=	${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,7 +34,7 @@ do-build:
 
 do-install:
 	for f in cpia2shot cpia2view ; do			\
-		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
+		cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV}	\
 		${MAKE_PROGRAM} -f ${MAKE_FILE}.$$f install ;	\
 	done
 
