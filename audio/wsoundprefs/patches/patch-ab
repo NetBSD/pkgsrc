@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.7 2002/08/31 03:08:59 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2010/02/01 02:00:32 joerg Exp $
 
---- src/Imakefile.orig	Mon Oct 18 01:35:58 1999
+--- src/Imakefile.orig	1999-10-18 08:35:58.000000000 +0000
 +++ src/Imakefile
-@@ -30,7 +30,7 @@
+@@ -7,7 +7,7 @@ ICONS = WSoundPrefs.xpm WSoundPrefs.tiff
+ 
+ CC = gcc
+ 
+-BINDIR = /Apps/WSoundPrefs.app
++BINDIR = ${PREFIX}/GNUstep/Apps/WSoundPrefs.app
+ 
+ XCOMM EFENCELIB = -lefence
+ EFENCELIB =
+@@ -30,7 +30,7 @@ LINTLIBS = $(LINTXLIB)
  SRCS = PLFunctions.c SoundEvents.c SoundPaths.c SystemInfo.c WSoundPrefs.c main.c
  OBJS = PLFunctions.o SoundEvents.o SoundPaths.o SystemInfo.o WSoundPrefs.o main.o
  

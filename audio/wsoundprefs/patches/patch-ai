@@ -1,0 +1,10 @@
+$NetBSD: patch-ai,v 1.1 2010/02/01 02:00:32 joerg Exp $
+
+--- src/xpm/Imakefile.orig	2010-02-01 01:58:31.000000000 +0000
++++ src/xpm/Imakefile
+@@ -1,4 +1,4 @@
+-XPMDIR = /Apps/WSoundPrefs.app/xpm/
++XPMDIR = ${PREFIX}/GNUstep/Apps/WSoundPrefs.app/xpm/
+ 
+ XPMS = loadset.xpm saveset.xpm
+ 

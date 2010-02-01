@@ -1,8 +1,9 @@
-$NetBSD: patch-ad,v 1.8 2006/10/04 23:52:48 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.9 2010/02/01 02:19:35 joerg Exp $
 
---- Makefile.in.orig	2006-10-04 17:08:59.000000000 +0000
-+++ Makefile.in	2006-10-04 22:39:41.000000000 +0000
-@@ -171,6 +171,17 @@
+--- Makefile.in.orig	2008-12-10 03:21:48.000000000 +0000
++++ Makefile.in
+@@ -176,8 +176,19 @@ dep:
+ 
  lexor.o: lexor.cc parse.h
  
 -parse.o: parse.cc
@@ -21,3 +22,60 @@ $NetBSD: patch-ad,v 1.8 2006/10/04 23:52:48 dmcmahill Exp $
 + 
  parse.cc parse.h: $(srcdir)/parse.y
  	$(YACC) --verbose -t -p VL -d -o parse.cc $(srcdir)/parse.y
+ 	mv parse.cc.h parse.h 2>/dev/null || mv parse.hh parse.h
+@@ -233,10 +244,10 @@ install: all installdirs $(libdir)/ivl$(
+ 	    do (cd $$dir ; $(MAKE) $@); done
+ 
+ $(bindir)/iverilog-vpi$(suffix): ./iverilog-vpi
+-	$(INSTALL_SCRIPT) ./iverilog-vpi $(DESTDIR)$(bindir)/iverilog-vpi$(suffix)
++	$(INSTALL_SCRIPT) ./iverilog-vpi $(bindir)/iverilog-vpi$(suffix)
+ 
+ $(libdir)/ivl$(suffix)/ivl@EXEEXT@: ./ivl@EXEEXT@
+-	$(INSTALL_PROGRAM) ./ivl@EXEEXT@ $(DESTDIR)$(libdir)/ivl$(suffix)/ivl@EXEEXT@
++	$(INSTALL_PROGRAM) ./ivl@EXEEXT@ $(libdir)/ivl$(suffix)/ivl@EXEEXT@
+ 
+ $(libdir)/ivl$(suffix)/xnf-s.conf: $(srcdir)/xnf-s.conf
+ 	$(INSTALL_DATA) $(srcdir)/xnf-s.conf $(libdir)/ivl$(suffix)/xnf-s.conf
+@@ -260,15 +271,15 @@ $(includedir)/veriuser.h: $(srcdir)/veri
+ 	$(INSTALL_DATA) $(srcdir)/veriuser.h $(includedir)/veriuser.h
+ 
+ $(mandir)/man1/iverilog-vpi$(suffix).1: $(srcdir)/iverilog-vpi.man
+-	$(INSTALL_DATA) $(srcdir)/iverilog-vpi.man $(DESTDIR)$(mandir)/man1/iverilog-vpi$(suffix).1
++	$(INSTALL_DATA) $(srcdir)/iverilog-vpi.man $(mandir)/man1/iverilog-vpi$(suffix).1
+ 
+ $(prefix)/iverilog-vpi$(suffix).pdf: iverilog-vpi.pdf
+-	$(INSTALL_DATA) iverilog-vpi.pdf $(DESTDIR)$(prefix)/iverilog-vpi$(suffix).pdf
++	$(INSTALL_DATA) iverilog-vpi.pdf $(prefix)/iverilog-vpi$(suffix).pdf
+ 
+ 
+ installdirs: mkinstalldirs
+-	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir) $(DESTDIR)$(includedir) $(DESTDIR)$(libdir)/ivl$(suffix) \
+-	    $(DESTDIR)$(libdir)/ivl$(suffix)/include $(DESTDIR)$(mandir) $(DESTDIR)$(mandir)/man1
++	$(srcdir)/mkinstalldirs $(bindir) $(includedir) $(libdir)/ivl$(suffix) \
++	    $(libdir)/ivl$(suffix)/include $(mandir) $(mandir)/man1
+ 
+ uninstall:
+ 	for dir in $(SUBDIRS); do (cd $$dir ; $(MAKE) $@); done
+@@ -276,15 +287,15 @@ uninstall:
+ 	for dir in vpi ivlpp driver; \
+ 	    do (cd $$dir ; $(MAKE) $@); done
+ 	for f in xnf.conf xnf-s.conf ivl@EXEEXT@; \
+-	    do rm -f $(DESTDIR)$(libdir)/ivl$(suffix)/$$f; done
+-	-rmdir $(DESTDIR)$(libdir)/ivl$(suffix)/include
+-	-rmdir $(DESTDIR)$(libdir)/ivl$(suffix)
++	    do rm -f $(libdir)/ivl$(suffix)/$$f; done
++	-rmdir $(libdir)/ivl$(suffix)/include
++	-rmdir $(libdir)/ivl$(suffix)
+ 	for f in verilog$(suffix) iverilog-vpi$(suffix); \
+-	    do rm -f $(DESTDIR)$(bindir)/$$f; done
++	    do rm -f $(bindir)/$$f; done
+ 	for f in ivl_target.h vpi_user.h _pli_types.h acc_user.h veriuser.h; \
+-	    do rm -f $(DESTDIR)$(includedir)/$$f; done
+-	-test X$(suffix) = X || rmdir $(DESTDIR)/$(includedir)
+-	rm -f $(DESTDIR)$(mandir)/man1/iverilog-vpi$(suffix).1 $(DESTDIR)$(prefix)/iverilog-vpi$(suffix).pdf
++	    do rm -f $(includedir)/$$f; done
++	-test X$(suffix) = X || rmdir /$(includedir)
++	rm -f $(mandir)/man1/iverilog-vpi$(suffix).1 $(prefix)/iverilog-vpi$(suffix).pdf
+ 
+ 
+ -include $(patsubst %.o, dep/%.d, $O)
