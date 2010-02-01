@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
+$NetBSD: patch-aa,v 1.6 2010/02/01 15:00:20 jmcneill Exp $
 
---- src/utils/padsp.c.orig	2009-01-12 18:10:34.000000000 -0500
-+++ src/utils/padsp.c	2009-01-19 08:09:05.000000000 -0500
-@@ -59,6 +59,10 @@
+--- src/utils/padsp.c.orig	2009-09-18 20:21:44.000000000 +0000
++++ src/utils/padsp.c
+@@ -60,6 +60,10 @@
  # define SIOCINQ FIONREAD
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
  /* make sure gcc doesn't redefine open and friends as macros */
  #undef open
  #undef open64
-@@ -114,7 +118,11 @@ static pthread_mutex_t func_mutex = PTHR
+@@ -115,7 +119,11 @@ static pthread_mutex_t func_mutex = PTHR
  
  static PA_LLIST_HEAD(fd_info, fd_infos) = NULL;
  
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
  static int (*_close)(int) = NULL;
  static int (*_open)(const char *, int, mode_t) = NULL;
  static FILE* (*_fopen)(const char *path, const char *mode) = NULL;
-@@ -140,6 +148,15 @@ static inline fnptr dlsym_fn(void *handl
+@@ -141,6 +149,15 @@ static inline fnptr dlsym_fn(void *handl
      return (fnptr) (long) dlsym(handle, symbol);
  }
  
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
  #define LOAD_IOCTL_FUNC() \
  do { \
      pthread_mutex_lock(&func_mutex); \
-@@ -147,6 +164,7 @@ do { \
+@@ -148,6 +165,7 @@ do { \
          _ioctl = (int (*)(int, int, void*)) dlsym_fn(RTLD_NEXT, "ioctl"); \
      pthread_mutex_unlock(&func_mutex); \
  } while(0)
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
  
  #define LOAD_OPEN_FUNC() \
  do { \
-@@ -180,11 +198,16 @@ do { \
+@@ -181,11 +199,16 @@ do { \
      pthread_mutex_unlock(&func_mutex); \
  } while(0)
  
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
      pthread_mutex_unlock(&func_mutex); \
  } while(0)
  
-@@ -1452,7 +1475,8 @@ static int real_open(const char *filenam
+@@ -1458,7 +1481,8 @@ static int real_open(const char *filenam
          return _open(filename, flags, mode);
      }
  
@@ -77,7 +77,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
          r = dsp_open(flags, &_errno);
      else if (filename && mixer_cloak_enable() && strcmp(filename, "/dev/mixer") == 0)
          r = mixer_open(flags, &_errno);
-@@ -2313,19 +2337,27 @@ fail:
+@@ -2319,19 +2343,27 @@ fail:
  
  #ifdef sun
  int ioctl(int fd, int request, ...) {
@@ -105,7 +105,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
  
      if (!function_enter()) {
          LOAD_IOCTL_FUNC();
-@@ -2384,6 +2416,8 @@ int access(const char *pathname, int mod
+@@ -2390,6 +2422,8 @@ int access(const char *pathname, int mod
      if (!pathname ||
          (strcmp(pathname, "/dev/dsp") != 0 &&
           strcmp(pathname, "/dev/adsp") != 0 &&
@@ -114,7 +114,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
           strcmp(pathname, "/dev/sndstat") != 0 &&
           strcmp(pathname, "/dev/mixer") != 0 )) {
          LOAD_ACCESS_FUNC();
-@@ -2412,6 +2446,8 @@ int stat(const char *pathname, struct st
+@@ -2418,6 +2452,8 @@ int stat(const char *pathname, struct st
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -123,7 +123,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2469,6 +2505,8 @@ int stat64(const char *pathname, struct 
+@@ -2475,6 +2511,8 @@ int stat64(const char *pathname, struct 
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -132,7 +132,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2514,6 +2552,8 @@ int open64(const char *filename, int fla
+@@ -2520,6 +2558,8 @@ int open64(const char *filename, int fla
  
      if (!filename ||
          ( strcmp(filename, "/dev/dsp") != 0 &&
@@ -141,7 +141,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
            strcmp(filename, "/dev/adsp") != 0 &&
            strcmp(filename, "/dev/sndstat") != 0 &&
            strcmp(filename, "/dev/mixer") != 0 )) {
-@@ -2534,6 +2574,8 @@ int __xstat(int ver, const char *pathnam
+@@ -2540,6 +2580,8 @@ int __xstat(int ver, const char *pathnam
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -150,7 +150,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2557,6 +2599,8 @@ int __xstat64(int ver, const char *pathn
+@@ -2563,6 +2605,8 @@ int __xstat64(int ver, const char *pathn
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -159,7 +159,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2586,6 +2630,8 @@ FILE* fopen(const char *filename, const 
+@@ -2592,6 +2636,8 @@ FILE* fopen(const char *filename, const 
      if (!filename ||
          !mode ||
          ( strcmp(filename, "/dev/dsp") != 0 &&
@@ -168,7 +168,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/19 14:19:00 jmcneill Exp $
            strcmp(filename, "/dev/adsp") != 0 &&
            strcmp(filename, "/dev/sndstat") != 0 &&
            strcmp(filename, "/dev/mixer") != 0 )) {
-@@ -2629,6 +2675,8 @@ FILE *fopen64(const char *filename, cons
+@@ -2635,6 +2681,8 @@ FILE *fopen64(const char *filename, cons
      if (!filename ||
          !mode ||
          ( strcmp(filename, "/dev/dsp") != 0 &&
