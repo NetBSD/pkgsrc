@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2010/02/01 14:29:43 tnn Exp $
+$NetBSD: distinfo,v 1.8 2010/02/01 14:39:20 tnn Exp $
 
 SHA1 (obconf-2.0.3/obconf-2.0.3.tar.gz) = 61def2cdfe8691d127d0cec9ab73a66972b83a62
 RMD160 (obconf-2.0.3/obconf-2.0.3.tar.gz) = df9c585982fff56ec46b9c15e7af7e116c741db8
 Size (obconf-2.0.3/obconf-2.0.3.tar.gz) = 287485 bytes
 SHA1 (patch-aa) = 0de087b762e8f545fa361f480a0e2e30e0ac40ee
-SHA1 (patch-ab) = 40b232498f3f945ef1a2e89563cbc7be2e6636e0
+SHA1 (patch-ab) = cf618bda78bbf1a926a734250092f5bfa75cd178
