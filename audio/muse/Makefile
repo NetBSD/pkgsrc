@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/08/26 19:57:11 sno Exp $
+# $NetBSD: Makefile,v 1.27 2010/02/01 01:25:29 joerg Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -11,6 +11,8 @@ MASTER_SITES=	ftp://ftp.dyne.org/muse/releases/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://muse.dyne.org/
 COMMENT=	Multiple Streaming Engine
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
