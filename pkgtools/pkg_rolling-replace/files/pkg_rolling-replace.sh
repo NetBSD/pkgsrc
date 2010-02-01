@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.22 2009/11/13 19:40:55 sno Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.23 2010/02/01 09:33:21 sno Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -109,7 +109,9 @@ usage()
         -s         Replace even if the ABIs are still compatible ("strict")
         -u         Update outdated packages
         -v         Verbose
+	-D <bool>  set USE_DESTDIR=bool (default: NO)
         -L <path>  Log to path (<path>/pkgdir/pkg)
+	-j <jobs>  set MAKE_JOBS=jobs for building update
         -X <pkg>   exclude <pkg> from being rebuilt
         -x <pkg>   exclude <pkg> from outdated check
 
@@ -310,8 +312,9 @@ todo()
 ##
 
 EXCLUDE=
+DESTDIR_OVERRIDE="NO"
 
-args=$(getopt Fhknursvx:X:L: $*)
+args=$(getopt FhknursvD:j:x:X:L: $*)
 if [ $? -ne 0 ]; then
     opt_h=1
 fi
@@ -326,6 +329,8 @@ while [ $# -gt 0 ]; do
         -s) opt_s=1 ;;
         -u) opt_u=1 ;;
         -v) opt_v=1 ;;
+	-D) DESTDIR_OVERRIDE="$2"; shift ;;
+	-j) MAKE_JOBS_OVERRIDE="$2"; shift ;;
         -x) EXCLUDE="$EXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
         -X) REALLYEXCLUDE="$REALLYEXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
         -L) LOGPATH="$2"; shift ;;
@@ -336,6 +341,32 @@ done
 
 if [ -n "$opt_h" ]; then
     usage
+fi
+
+BUILD_REPLACE_TUNE_SEP=""
+
+if [ -n "${DESTDIR_OVERRIDE}" ]; then
+    case "${DESTDIR_OVERRIDE}" in
+        [yY][eE][sS]|[nN][oO])
+	    BUILD_REPLACE_TUNE="USE_DESTDIR=${DESTDIR_OVERRIDE}"
+	    BUILD_REPLACE_TUNE_SEP=" "
+		;;
+        [oO][fF][fF])
+		# Turn built-in default off
+		;;
+        *)
+		usage
+		;;
+    esac
+fi
+
+if [ -n "${MAKE_JOBS_OVERRIDE}" ]; then
+    MAKE_JOBS_VERIFY=`expr ${MAKE_JOBS_OVERRIDE}+0`
+    if [ ${MAKE_JOBS_OVERRIDE} -eq ${MAKE_JOBS_VERIFY} ]; then
+	BUILD_REPLACE_TUNE="${BUILD_REPLACE_TUNE}${BUILD_REPLACE_TUNE_SEP}MAKE_JOBS=${MAKE_JOBS_VERIFY}"
+    else
+	usage
+    fi
 fi
 
 if [ -n "$opt_s" ]; then
@@ -457,29 +488,39 @@ while [ -n "$REPLACE_TODO" ]; do
 
     # Do make replace, with clean before, and package and clean afterwards.
     fail=
-    cd "$PKGSRCDIR/$pkgdir";
-    if [ -z "$opt_F" ]; then
-        echo "${OPI} Replacing $pkgname"
-        cmd="${MAKE} clean || fail=1"
-        if [ -n "$opt_n" ]; then
-            echo "${OPI} Would run: $cmd"
-        else
-            if [ -n "$logfile" ]; then
-                eval "$cmd" >&3 2>&3
-            else
-                eval "$cmd"
-            fi
-            if [ -n "$fail" ]; then
-                FAILED="$FAILED$FAILEDSEP$pkg"
-                FAILEDSEP=" "
-                [ -n "$opt_k" ] || abort "'make clean' failed for package $pkg."
-            fi
-        fi
-        cmd="${MAKE} replace || fail=1" # XXX OLDNAME= support? xmlrpc-c -> xmlrpc-c-ss
+    if [ -d "$PKGSRCDIR/$pkgdir" ]; then
+	cd "$PKGSRCDIR/$pkgdir";
     else
-        echo "${OPI} Fetching $pkgname"
-        cmd="${MAKE} fetch depends-fetch || fail=1"
+	FAILED="$FAILED$FAILEDSEP$pkg"
+	FAILEDSEP=" "
+	[ -n "$opt_k" ] || abort "No package directory '$pkgdir' for $pkg."
     fi
+
+    if [ -z "$fail" ]; then
+	if [ -z "$opt_F" ]; then
+	    echo "${OPI} Replacing $pkgname"
+	    cmd="${MAKE} clean || fail=1"
+	    if [ -n "$opt_n" ]; then
+		echo "${OPI} Would run: $cmd"
+	    else
+		if [ -n "$logfile" ]; then
+		    eval "$cmd" >&3 2>&3
+		else
+		    eval "$cmd"
+		fi
+		if [ -n "$fail" ]; then
+		    FAILED="$FAILED$FAILEDSEP$pkg"
+		    FAILEDSEP=" "
+		    [ -n "$opt_k" ] || abort "'make clean' failed for package $pkg."
+		fi
+	    fi
+	    cmd="${MAKE} ${BUILD_REPLACE_TUNE} replace || fail=1" # XXX OLDNAME= support? xmlrpc-c -> xmlrpc-c-ss
+	else
+	    echo "${OPI} Fetching $pkgname"
+	    cmd="${MAKE} fetch depends-fetch || fail=1"
+	fi
+    fi
+
     if [ -n "$opt_n" -a -z "$fail" ]; then
 	echo "${OPI} Would run: $cmd"
     elif [ -z "$fail" ]; then

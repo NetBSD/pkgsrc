@@ -1,5 +1,5 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.16 2009/12/01 14:26:08 tnn Exp $
-.Dd November 13, 2009
+.\" $NetBSD: pkg_rolling-replace.8,v 1.17 2010/02/01 09:33:21 sno Exp $
+.Dd February 1, 2010
 .Dt PKG_ROLLING-REPLACE 8
 .Os
 .Sh NAME
@@ -8,6 +8,8 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl hFknrsuv
+.Op Fl D Ar bool
+.Op Fl j Ar jobs
 .Op Fl L Ar path
 .Op Fl X Ar pkgs
 .Op Fl x Ar pkgs
@@ -74,6 +76,9 @@ Keep on going, even on error during handling current package.
 Warning: This could (potential will) rebuild package depending
 on the failed package, anyway. This may cause a broken tree.
 Use with caution!
+.It Fl j Ar jobs
+Enables a pkgsrc tunable (MAKE_JOBS=<n>) to allow parallel build while
+compiling a package. It's unset by default.
 .It Fl n
 Display actions that would be taken, but don't actually run
 .Dq make replace
@@ -100,6 +105,17 @@ Use
 to check for outdated packages, and replace those too.
 .It Fl v
 Verbose output.
+.It Fl D Ar bool
+Sets the
+.Dq USE_DESTDIR=<bool>
+for the given bool. The default value is
+.Dq NO
+to ensure the same behaviour for pkgsrc developers when the act as users
+and update their system. To disable the default behaviour, use
+.Dq OFF
+as value for the
+.Dq -D
+parameter.
 .It Fl L Ar path
 Logs each build (each command output from the commands which are run for
 packages) to given path. The full log file name is composed from the path
@@ -210,6 +226,8 @@ were added by
 .Aq tnn@NetBSD.org .
 The options
 .Fl k ,
+.Fl j ,
+.Fl D ,
 .Fl F
 and
 .Fl L
