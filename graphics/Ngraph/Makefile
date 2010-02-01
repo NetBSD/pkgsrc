@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/02/17 13:02:20 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/01 02:37:56 joerg Exp $
 #
 
 DISTNAME=	Ngraph-6.3.30-src
@@ -14,15 +14,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www2e.biglobe.ne.jp/~isizaka/
 COMMENT=	The 2D graph and data analysis program
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=		gmake gtar
+
+INSTALLATION_DIRS+=	bin
 
 post-extract:
 	${GTAR} -C ${WRKSRC}/combo -xzf ${DISTDIR}/ileaf-widgets.tar.Z
 
 post-install:
-	${GTAR} -C ${PREFIX}/libexec/Ngraph -xzf ${DISTDIR}/Ngraph-6.3.30-doc.tar.gz
+	${GTAR} -C ${DESTDIR}${PREFIX}/libexec/Ngraph -xzf ${DISTDIR}/Ngraph-6.3.30-doc.tar.gz
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
