@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2010/01/01 17:47:05 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/01 02:29:55 joerg Exp $
 #
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../graphics/3DKit/Makefile.common"
 
