@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.24 2010/02/01 10:28:45 sno Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.25 2010/02/01 19:06:43 sno Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -109,9 +109,8 @@ usage()
         -s         Replace even if the ABIs are still compatible ("strict")
         -u         Update outdated packages
         -v         Verbose
-	-D <bool>  set USE_DESTDIR=bool (default: NO)
+	-D VAR=VAL Passes given variables and values to make
         -L <path>  Log to path (<path>/pkgdir/pkg)
-	-j <jobs>  set MAKE_JOBS=jobs for building update
         -X <pkg>   exclude <pkg> from being rebuilt
         -x <pkg>   exclude <pkg> from outdated check
 
@@ -312,9 +311,10 @@ todo()
 ##
 
 EXCLUDE=
-DESTDIR_OVERRIDE="NO"
+MAKE_VAR="IN_PKG_ROLLING_REPLACE=1"
+MAKE_VAR_SEP=" "
 
-args=$(getopt FhknursvD:j:x:X:L: $*)
+args=$(getopt FhknursvD:x:X:L: $*)
 if [ $? -ne 0 ]; then
     opt_h=1
 fi
@@ -329,8 +329,7 @@ while [ $# -gt 0 ]; do
         -s) opt_s=1 ;;
         -u) opt_u=1 ;;
         -v) opt_v=1 ;;
-	-D) DESTDIR_OVERRIDE="$2"; shift ;;
-	-j) MAKE_JOBS_OVERRIDE="$2"; shift ;;
+	-D) MAKE_VAR="${MAKE_VAR}${MAKE_VAR_SEP}$2"; MAKE_VAR_SEP=" "; shift ;;
         -x) EXCLUDE="$EXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
         -X) REALLYEXCLUDE="$REALLYEXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
         -L) LOGPATH="$2"; shift ;;
@@ -343,37 +342,13 @@ if [ -n "$opt_h" ]; then
     usage
 fi
 
-BUILD_REPLACE_TUNE_SEP=""
-
-if [ -n "${DESTDIR_OVERRIDE}" ]; then
-    case "${DESTDIR_OVERRIDE}" in
-        [yY][eE][sS]|[nN][oO])
-	    BUILD_REPLACE_TUNE="USE_DESTDIR=${DESTDIR_OVERRIDE}"
-	    BUILD_REPLACE_TUNE_SEP=" "
-		;;
-        [oO][fF][fF])
-		# Turn built-in default off
-		;;
-        *)
-		usage
-		;;
-    esac
-fi
-
-if [ -n "${MAKE_JOBS_OVERRIDE}" ]; then
-    MAKE_JOBS_VERIFY=`expr ${MAKE_JOBS_OVERRIDE} + 0`
-    if [ ${MAKE_JOBS_OVERRIDE} -eq ${MAKE_JOBS_VERIFY} ]; then
-	BUILD_REPLACE_TUNE="${BUILD_REPLACE_TUNE}${BUILD_REPLACE_TUNE_SEP}MAKE_JOBS=${MAKE_JOBS_VERIFY}"
-    else
-	usage
-    fi
-fi
-
 if [ -n "$opt_s" ]; then
     UNSAFE_VAR=unsafe_depends_strict
 else
     UNSAFE_VAR=unsafe_depends
 fi
+
+MAKE="${MAKE}${MAKE_VAR_SEP}${MAKE_VAR}"
 
 SUCCESSED=""
 SUCCESSEDSEP=""
@@ -514,7 +489,7 @@ while [ -n "$REPLACE_TODO" ]; do
 		    [ -n "$opt_k" ] || abort "'make clean' failed for package $pkg."
 		fi
 	    fi
-	    cmd="${MAKE} ${BUILD_REPLACE_TUNE} replace || fail=1" # XXX OLDNAME= support? xmlrpc-c -> xmlrpc-c-ss
+	    cmd="${MAKE} replace || fail=1" # XXX OLDNAME= support? xmlrpc-c -> xmlrpc-c-ss
 	else
 	    echo "${OPI} Fetching $pkgname"
 	    cmd="${MAKE} fetch depends-fetch || fail=1"
