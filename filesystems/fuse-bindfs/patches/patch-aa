@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/01 13:36:43 jmmv Exp $
+
+--- configure.orig	2010-02-01 13:18:14.000000000 +0000
++++ configure
+@@ -10322,7 +10322,7 @@ fi
+ 
+ 
+ 
+-if test x"$enable_debug" == "xyes" ; then
++if test x"$enable_debug" = "xyes" ; then
+ 	CFLAGS="${CFLAGS} -g -O0 -DMALLOC_CHECK_=2"
+ 
+ $as_echo "#define BINDFS_DEBUG 1" >>confdefs.h
+@@ -10331,7 +10331,7 @@ else
+ 	CFLAGS="${CFLAGS} -O2"
+ fi
+ 
+-if test x"$with_core_foundation" == "xyes" ; then
++if test x"$with_core_foundation" = "xyes" ; then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: Linking with Core Foundation" >&5
+ $as_echo "$as_me: Linking with Core Foundation" >&6;}
+ 	LDFLAGS="${LDFLAGS} -framework CoreFoundation"
