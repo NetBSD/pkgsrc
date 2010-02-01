@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.7 2010/02/01 03:14:09 joerg Exp $
+
+--- Makefile.orig	2010-01-31 23:49:22.000000000 +0000
++++ Makefile
+@@ -69,16 +69,9 @@ install: ${GAME} ${EDITOR}
+ 	${BSD_INSTALL_GAME_DIR} ${LIB}
+ 	${BSD_INSTALL_GAME} ${GAME} ${BIN}
+ 	${BSD_INSTALL_GAME} ${EDITOR} ${BIN}
+-	${BSD_INSTALL_GAME_DIR} /var/games
+-	touch golddig.scores
+-	${BSD_INSTALL_GAME_DATA} golddig.scores /var/games/golddig.scores
+ 	${BSD_INSTALL_GAME_DATA} levs/goldlev* levs/default ${LIB}
+ 	${BSD_INSTALL_MAN} golddig.6 ${MAN}/golddig.${MANEXT}
+ 	${BSD_INSTALL_MAN} gdedit.6 ${MAN}/gdedit.${MANEXT}
+-	chgrp ${SCORE_GROUP} ${BIN}/${GAME}
+-	chmod g+s ${BIN}/${GAME}
+-	chgrp ${SCORE_GROUP} /var/games/golddig.scores
+-	chmod 0664 /var/games/golddig.scores
+ 
+ update: ${GAME} ${EDITOR}
+ 	cp ${GAME} ${EDITOR} ${BIN}
