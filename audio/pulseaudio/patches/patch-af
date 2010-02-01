@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
+$NetBSD: patch-af,v 1.2 2010/02/01 15:00:20 jmcneill Exp $
 
---- src/daemon/default.pa.in.orig	2008-12-18 08:30:19.000000000 -0500
-+++ src/daemon/default.pa.in
-@@ -87,7 +87,7 @@ load-module module-rescue-streams
- load-module module-always-sink
+--- src/pulse/util.c.orig	2010-02-01 14:18:18.000000000 +0000
++++ src/pulse/util.c
+@@ -178,7 +178,7 @@ char *pa_get_binary_name(char *s, size_t
+     }
+ #endif
  
- ### Automatically suspend sinks/sources that become idle for too long
--load-module module-suspend-on-idle
-+#load-module module-suspend-on-idle
- 
- ### If autoexit on idle is enabled we want to make sure we only quit
- ### when no local session needs us anymore.
+-#ifdef __linux__
++#if defined(__linux__) || defined(__NetBSD__)
+     {
+         char *rp;
+         /* This works on Linux only */

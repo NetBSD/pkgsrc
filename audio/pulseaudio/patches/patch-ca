@@ -1,6 +1,6 @@
-$NetBSD: patch-ca,v 1.1 2009/01/21 15:40:20 drochner Exp $
+$NetBSD: patch-ca,v 1.2 2010/02/01 15:00:20 jmcneill Exp $
 
---- src/pulse/utf8.c.orig	2008-09-03 23:13:43.000000000 +0200
+--- src/pulse/utf8.c.orig	2009-09-10 00:04:58.000000000 +0000
 +++ src/pulse/utf8.c
 @@ -55,6 +55,7 @@
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ca,v 1.1 2009/01/21 15:40:20 drochner Exp $
  #endif
  
  #include <pulse/xmalloc.h>
-@@ -243,11 +244,11 @@ static char* iconv_simple(const char *st
+@@ -238,11 +239,11 @@ static char* iconv_simple(const char *st
  }
  
  char* pa_utf8_to_locale (const char *str) {

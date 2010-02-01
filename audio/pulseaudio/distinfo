@@ -1,21 +1,16 @@
-$NetBSD: distinfo,v 1.17 2009/12/27 15:06:28 abs Exp $
+$NetBSD: distinfo,v 1.18 2010/02/01 15:00:20 jmcneill Exp $
 
-SHA1 (pulseaudio-0.9.14.tar.gz) = a0fb7c21ee21178e102a1e5a11d8ac474e6f5da4
-RMD160 (pulseaudio-0.9.14.tar.gz) = c7722d0d0240555edf917391989ad2e1cd4eb6b1
-Size (pulseaudio-0.9.14.tar.gz) = 1303077 bytes
-SHA1 (patch-aa) = 49ef2b68ef5ffd861e1339e792ab43205b7b1ed2
-SHA1 (patch-ab) = 8e6270b50364d7d8010f2c42f8383362b315460c
-SHA1 (patch-ac) = 877f1dd615129aa7396fd3dc142474f2795fa802
-SHA1 (patch-ad) = 60caf8bc41504fc035a7264ff3c32a4b19da0645
-SHA1 (patch-ae) = 1cd31d18c133fdd5e8db59be319ba5b7a45fe0fe
-SHA1 (patch-af) = 31b8564cb91aabb5de5490659e77de984fd1920b
-SHA1 (patch-ag) = 67e3330c52c605e1eec505166e4ceed1a1277b11
-SHA1 (patch-ah) = 13cee1dc10be17f51978208843048ba9db7d9a3f
-SHA1 (patch-ai) = b8e9e2dee9d1c5d9de488cfa0d06440eedacb7c6
-SHA1 (patch-aj) = 50edf909d5d7cc35e925685cdf0831e73d06f6ec
-SHA1 (patch-ak) = 2a2f80a2ab4b30f2daaebdb1ad0bcb54345743cd
-SHA1 (patch-al) = 88f500154e8345572ebaf12ee891abe50ef19847
-SHA1 (patch-am) = 402dfc10280ec2b6a45781ad6d7b0daa89e2ae34
-SHA1 (patch-ba) = 6b1ac267a317eed77efc2fbfc2fddebc3a8a69d2
-SHA1 (patch-bb) = ae0209dac352df7abfcf66c452f2ebb91e35e42a
-SHA1 (patch-ca) = 75eef8955fa368a144b9e55258389332a177ed6c
+SHA1 (pulseaudio-0.9.21.tar.gz) = 0309c97f7e0812e243c1bb80a4b74dc26369ac22
+RMD160 (pulseaudio-0.9.21.tar.gz) = 6db0725253228b673a78cbfae4824fadce2198ed
+Size (pulseaudio-0.9.21.tar.gz) = 2056896 bytes
+SHA1 (patch-aa) = 078dd540b56f2db5d676835ab37cd4e8bbe33650
+SHA1 (patch-ab) = 1cf47a55b1c794b315646379ae03d633dc1d348f
+SHA1 (patch-ac) = b42e6ef8ff2851ea78a6eae6cb6241c94d74b2d0
+SHA1 (patch-ad) = 7340114467bc6d2fedb604e0b01ffbf1d319adc1
+SHA1 (patch-ae) = 5e6957e73ffd96d2e63e5ea4eb9b0ca9ea016b30
+SHA1 (patch-af) = e11fb419787e3cd1f305b66c995915f11276770e
+SHA1 (patch-ag) = 523743b49476a219f76b108a605b2b57ea63098a
+SHA1 (patch-ca) = 3016b290943c006392bff01d6eae75a432a7e171
+SHA1 (patch-da) = d56957d37bec15bd41d77b99ce60bcdea0ef4f20
+SHA1 (patch-db) = e1e48577618b4eb2586d8b37953b2474e2dcc864
+SHA1 (patch-dc) = d814e1a1d5aed3e3604d6df44621fe789c625982

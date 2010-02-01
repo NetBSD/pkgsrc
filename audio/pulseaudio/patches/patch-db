@@ -1,0 +1,15 @@
+$NetBSD: patch-db,v 1.1 2010/02/01 15:00:20 jmcneill Exp $
+
+--- src/daemon/default.pa.in.orig	2009-11-23 03:57:05.000000000 +0000
++++ src/daemon/default.pa.in
+@@ -49,8 +49,8 @@ load-module module-augment-properties
+ #load-module module-pipe-sink
+ 
+ ### Automatically load driver modules depending on the hardware available
+-.ifexists module-udev-detect@PA_SOEXT@
+-load-module module-udev-detect
++.ifexists module-hal-detect@PA_SOEXT@
++load-module module-hal-detect
+ .else
+ ### Alternatively use the static hardware detection module (for systems that
+ ### lack udev support)

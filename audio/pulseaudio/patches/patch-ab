@@ -1,23 +1,20 @@
-$NetBSD: patch-ab,v 1.2 2009/07/28 12:52:40 tnn Exp $
+$NetBSD: patch-ab,v 1.3 2010/02/01 15:00:20 jmcneill Exp $
 
---- src/daemon/main.c.orig	2009-01-13 00:11:38.000000000 +0100
+--- src/daemon/main.c.orig	2010-02-01 14:15:00.000000000 +0000
 +++ src/daemon/main.c
-@@ -302,7 +302,9 @@ static void set_all_rlimits(const pa_dae
- #ifdef RLIMIT_MEMLOCK
-     set_one_rlimit(&conf->rlimit_memlock, RLIMIT_MEMLOCK, "RLIMIT_MEMLOCK");
- #endif
-+#ifdef RLIMIT_AS
-     set_one_rlimit(&conf->rlimit_as, RLIMIT_AS, "RLIMIT_AS");
-+#endif
- #ifdef RLIMIT_LOCKS
-     set_one_rlimit(&conf->rlimit_locks, RLIMIT_LOCKS, "RLIMIT_LOCKS");
- #endif
-@@ -351,7 +353,7 @@ int main(int argc, char *argv[]) {
-     pa_log_set_maximal_level(PA_LOG_INFO);
-     pa_log_set_ident("pulseaudio");
+@@ -640,6 +640,7 @@ int main(int argc, char *argv[]) {
+          * first take the autospawn lock to make things
+          * synchronous. */
  
--#if defined(__linux__) && defined(__OPTIMIZE__)
-+#if defined(__linux__) && defined(__OPTIMIZE__) && 0 /* CVE-2009-1894 */
-     /*
-        Disable lazy relocations to make usage of external libraries
-        more deterministic for our RT threads. We abuse __OPTIMIZE__ as
++#if notyet	/* XXX broken on NetBSD and FreeBSD */
+         if ((autospawn_fd = pa_autospawn_lock_init()) < 0) {
+             pa_log("Failed to initialize autospawn lock");
+             goto finish;
+@@ -651,6 +652,7 @@ int main(int argc, char *argv[]) {
+         }
+ 
+         autospawn_locked = TRUE;
++#endif
+     }
+ 
+     if (conf->daemonize) {
