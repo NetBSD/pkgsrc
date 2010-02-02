@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.493 2010/02/02 23:28:04 sno Exp $
+$NetBSD: CHANGES-2010,v 1.494 2010/02/02 23:57:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -595,3 +595,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-url-doc version 3.2 [minskim 2010-02-02]
 	Updated databases/p5-ORLite-Migrate to 1.06 [sno 2010-02-02]
 	Updated databases/p5-Rose-DB to 0.758 [sno 2010-02-03]
+	Updated databases/p5-Rose-DB-Object to 0.786 [sno 2010-02-03]
