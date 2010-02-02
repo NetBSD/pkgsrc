@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/11/01 15:41:13 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/02 16:20:42 joerg Exp $
 #
 
 DISTNAME=	qof-0.7.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qof/}
 
@@ -14,7 +14,7 @@ MAKE_JOBS_SAFE=		no
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=	doxygen>=1.6.0:../../devel/doxygen
+BUILD_DEPENDS+=	doxygen>=1.6.2:../../devel/doxygen
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
