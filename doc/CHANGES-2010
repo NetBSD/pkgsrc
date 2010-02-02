@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.456 2010/02/02 12:11:23 sno Exp $
+$NetBSD: CHANGES-2010,v 1.457 2010/02/02 12:32:08 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -554,3 +554,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.29 [sno 2010-02-02]
 	Updated www/p5-Rose-HTML-Objects to 0.606.1 [sno 2010-02-02]
 	Updated www/p5-Rose-HTMLx-Form-Related to 0.19 [sno 2010-02-02]
+	Updated net/Transmission to 1.83 [tnn 2010-02-02]
