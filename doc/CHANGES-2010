@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.453 2010/02/02 11:43:25 sno Exp $
+$NetBSD: CHANGES-2010,v 1.454 2010/02/02 11:46:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -551,3 +551,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Catalyst-Plugin-AutoRestart to 0.93 [sno 2010-02-02]
 	Updated net/py-IP to 0.70 [obache 2010-02-02]
 	Updated www/p5-Catalyst-Action-REST to 0.81 [sno 2010-02-02]
+	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.29 [sno 2010-02-02]
