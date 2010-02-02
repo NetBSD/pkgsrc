@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.481 2010/02/02 19:17:52 sno Exp $
+$NetBSD: CHANGES-2010,v 1.482 2010/02/02 19:26:35 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -582,3 +582,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-String-Escape to 2010.002 [sno 2010-02-02]
 	Updated devel/p5-Test-Harness to 3.21 [sno 2010-02-02]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.05000 [sno 2010-02-02]
+	Updated textproc/p5-Lingua-EN-Inflect to 1.89.1 [sno 2010-02-02]
