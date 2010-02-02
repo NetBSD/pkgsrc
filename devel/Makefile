@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1284 2010/02/02 13:52:57 seb Exp $
+# $NetBSD: Makefile,v 1.1285 2010/02/02 16:37:58 reed Exp $
 #
 
 COMMENT=	Development utilities
@@ -105,6 +105,7 @@ SUBDIR+=	compiz-bcop
 SUBDIR+=	compizconfig-backend-gconf
 SUBDIR+=	confuse
 SUBDIR+=	cook
+SUBDIR+=	cppcheck
 SUBDIR+=	cppunit
 SUBDIR+=	cproto
 SUBDIR+=	cpuflags
