@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/02 14:07:18 adam Exp $
+qt4/plugins/imageformats/libqmng.la
