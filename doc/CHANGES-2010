@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.471 2010/02/02 16:37:58 reed Exp $
+$NetBSD: CHANGES-2010,v 1.472 2010/02/02 17:37:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -573,3 +573,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-UNIVERSAL-can to 1.16 [sno 2010-02-02]
 	Added net/istgt 20100125 [sborrill 2010-02-02]
 	Added devel/cppcheck 1.40 [reed 2010-02-02]
+	Updated devel/p5-Config-IniFiles to 2.56 [sno 2010-02-02]
