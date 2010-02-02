@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.5 2004/11/19 14:54:55 jlam Exp $
+$NetBSD: patch-af,v 1.6 2010/02/02 17:09:28 tnn Exp $
 
---- libpamc/Makefile.orig	2001-02-10 02:17:53.000000000 -0500
+--- libpamc/Makefile.orig	2001-02-10 07:17:53.000000000 +0000
 +++ libpamc/Makefile
 @@ -15,7 +15,7 @@ endif
  VERSION=.$(MAJOR_REL)
@@ -53,7 +53,7 @@ $NetBSD: patch-af,v 1.5 2004/11/19 14:54:55 jlam Exp $
  	$(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $< -o $@
  
 +%.lo : %.c
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $<
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $<
 +
  $(LIBNAMED): $(DLIBOBJECTS)
  ifeq ($(DYNAMIC_LIBPAM),yes)
@@ -65,7 +65,7 @@ $NetBSD: patch-af,v 1.5 2004/11/19 14:54:55 jlam Exp $
 -install: all
 +$(LIBNAMEDLIBTOOL): $(LALIBOBJECTS)
 +ifeq ($(LIBTOOL_LIBPAM),yes)
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) $(LALIBOBJECTS) -o $@ \
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(LDFLAGS) $(LALIBOBJECTS) -o $@ \
 +		$(MODULES) $(LINKLIBS) \
 +		-rpath $(libdir) -version-info $(MAJOR_REL):$(MINOR_REL)
 +endif
