@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 22:00:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/02/02 11:20:29 fhajny Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -14,6 +14,7 @@ awstats/cgi-bin/lang/awstats-ba.txt
 awstats/cgi-bin/lang/awstats-be.txt
 awstats/cgi-bin/lang/awstats-bg.txt
 awstats/cgi-bin/lang/awstats-br.txt
+awstats/cgi-bin/lang/awstats-bzg.txt
 awstats/cgi-bin/lang/awstats-ca.txt
 awstats/cgi-bin/lang/awstats-cn.txt
 awstats/cgi-bin/lang/awstats-cy.txt
@@ -60,12 +61,15 @@ awstats/cgi-bin/lang/tooltips_f/awstats-tt-en.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-gr.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-is.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-it.txt
+awstats/cgi-bin/lang/tooltips_f/awstats-tt-ru.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-br.txt
+awstats/cgi-bin/lang/tooltips_m/awstats-tt-cz.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-en.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-fr.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-gr.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-is.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-it.txt
+awstats/cgi-bin/lang/tooltips_m/awstats-tt-ru.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-al.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-ba.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-bg.txt
@@ -141,6 +145,7 @@ awstats/icon/browser/alcatel.png
 awstats/icon/browser/amaya.png
 awstats/icon/browser/amigavoyager.png
 awstats/icon/browser/analogx.png
+awstats/icon/browser/android.png
 awstats/icon/browser/apt.png
 awstats/icon/browser/avant.png
 awstats/icon/browser/aweb.png
@@ -161,6 +166,7 @@ awstats/icon/browser/feeddemon.png
 awstats/icon/browser/feedreader.png
 awstats/icon/browser/firefox.png
 awstats/icon/browser/flashget.png
+awstats/icon/browser/flock.png
 awstats/icon/browser/fpexpress.png
 awstats/icon/browser/fresco.png
 awstats/icon/browser/freshdownload.png
@@ -174,6 +180,8 @@ awstats/icon/browser/hotjava.png
 awstats/icon/browser/httrack.png
 awstats/icon/browser/ibrowse.png
 awstats/icon/browser/icab.png
+awstats/icon/browser/icecat.png
+awstats/icon/browser/iceweasel.png
 awstats/icon/browser/java.png
 awstats/icon/browser/jetbrains_omea.png
 awstats/icon/browser/kmeleon.png
@@ -219,6 +227,7 @@ awstats/icon/browser/rssxpress.png
 awstats/icon/browser/safari.png
 awstats/icon/browser/sagem.png
 awstats/icon/browser/samsung.png
+awstats/icon/browser/seamonkey.png
 awstats/icon/browser/sharp.png
 awstats/icon/browser/sharpreader.png
 awstats/icon/browser/shrook.png
@@ -443,6 +452,7 @@ awstats/icon/flags/nl.png
 awstats/icon/flags/nn.png
 awstats/icon/flags/no.png
 awstats/icon/flags/np.png
+awstats/icon/flags/nr.png
 awstats/icon/flags/nt.png
 awstats/icon/flags/nu.png
 awstats/icon/flags/nz.png
@@ -529,6 +539,7 @@ awstats/icon/mime/flash.png
 awstats/icon/mime/glasses.png
 awstats/icon/mime/html.png
 awstats/icon/mime/image.png
+awstats/icon/mime/jnlp.png
 awstats/icon/mime/jscript.png
 awstats/icon/mime/lit.png
 awstats/icon/mime/notavailable.png
@@ -554,8 +565,11 @@ awstats/icon/os/amigaos.png
 awstats/icon/os/apple.png
 awstats/icon/os/atari.png
 awstats/icon/os/beos.png
+awstats/icon/os/blackberry.png
 awstats/icon/os/bsd.png
+awstats/icon/os/bsddflybsd.png
 awstats/icon/os/bsdfreebsd.png
+awstats/icon/os/bsdkfreebsd.png
 awstats/icon/os/bsdi.png
 awstats/icon/os/bsdnetbsd.png
 awstats/icon/os/bsdopenbsd.png
@@ -570,18 +584,25 @@ awstats/icon/os/gnu.png
 awstats/icon/os/hpux.png
 awstats/icon/os/ibm.png
 awstats/icon/os/imode.png
+awstats/icon/os/inferno.png
 awstats/icon/os/irix.png
+awstats/icon/os/j2me.png
 awstats/icon/os/java.png
 awstats/icon/os/kfreebsd.png
 awstats/icon/os/linux.png
+awstats/icon/os/linuxandroid.png
+awstats/icon/os/linuxasplinux.png
 awstats/icon/os/linuxcentos.png
 awstats/icon/os/linuxdebian.png
 awstats/icon/os/linuxfedora.png
 awstats/icon/os/linuxgentoo.png
 awstats/icon/os/linuxmandr.png
+awstats/icon/os/linuxpclinuxos.png
 awstats/icon/os/linuxredhat.png
 awstats/icon/os/linuxsuse.png
 awstats/icon/os/linuxubuntu.png
+awstats/icon/os/linuxvine.png
+awstats/icon/os/linuxzenwalk.png
 awstats/icon/os/mac.png
 awstats/icon/os/macintosh.png
 awstats/icon/os/macosx.png
@@ -591,20 +612,24 @@ awstats/icon/os/next.png
 awstats/icon/os/openbsd.png
 awstats/icon/os/os2.png
 awstats/icon/os/osf.png
+awstats/icon/os/palmos.png
 awstats/icon/os/psp.png
 awstats/icon/os/qnx.png
 awstats/icon/os/riscos.png
 awstats/icon/os/sco.png
 awstats/icon/os/sunos.png
+awstats/icon/os/syllable.png
 awstats/icon/os/symbian.png
 awstats/icon/os/unix.png
 awstats/icon/os/unknown.png
 awstats/icon/os/vms.png
 awstats/icon/os/webtv.png
+awstats/icon/os/wii.png
 awstats/icon/os/win.png
 awstats/icon/os/win16.png
 awstats/icon/os/win2000.png
 awstats/icon/os/win2003.png
+awstats/icon/os/win2008.png
 awstats/icon/os/win95.png
 awstats/icon/os/win98.png
 awstats/icon/os/wince.png
@@ -612,6 +637,7 @@ awstats/icon/os/winlong.png
 awstats/icon/os/winme.png
 awstats/icon/os/winnt.png
 awstats/icon/os/winunknown.png
+awstats/icon/os/winvista.png
 awstats/icon/os/winxbox.png
 awstats/icon/os/winxp.png
 awstats/icon/other/awstats_logo1.png
