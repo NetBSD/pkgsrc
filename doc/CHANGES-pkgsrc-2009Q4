@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.21 2010/02/01 15:01:34 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.22 2010/02/02 17:37:44 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -66,3 +66,9 @@ devel/libevent: avoid conflict with "libev" package
 devel/p5-EV: update to match "libev" update
 Pullup ticket #2983 - requested by joerg
 bind9: syntax fix
+Pullup ticket #2895 - requested by taca
+gzip: security patch
+Pullup ticket #2896 - requested by taca
+squid27: security patch
+Pullup ticket #2987 - requested by taca
+squid30: security update
