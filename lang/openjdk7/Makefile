@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2010/01/18 09:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/02 23:12:53 jmcneill Exp $
 
 DISTNAME=	openjdk-7-ea-src-b78-17_dec_2009
 PKGNAME=	openjdk7-1.7.0.78.20100102
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -64,6 +64,8 @@ MAKE_ENV+=	NO_DOCS=true
 MAKE_ENV+=	SKIP_COMPARE_IMAGES=true
 MAKE_ENV+=	SKIP_FASTDEBUG_BUILD=yes
 MAKE_ENV+=	SKIP_DEBUG_BUILD=yes
+
+MAKE_ENV+=	EXTRA_CFLAGS="-DDEFAULT_LIBPATH=\\\"${PREFIX}/lib/jni:${PREFIX}/lib:/lib:/usr/lib\\\""
 
 BUILDDIR=	${WRKSRC}/build/${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/}-${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/}
 PLIST_SUBST+=	ARCH=${MACHINE_ARCH:S/x86_64/amd64/}
