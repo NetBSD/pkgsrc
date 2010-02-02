@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/12/17 00:30:39 he Exp $
+$NetBSD: distinfo,v 1.3 2010/02/02 21:26:21 seb Exp $
 
-SHA1 (DBM-Deep-1.0014.tar.gz) = 7e7dbc395c3d2957a99b1680d80bbefd6f2e0d42
-RMD160 (DBM-Deep-1.0014.tar.gz) = 6fdb1bcbb18a29458218f5ff683e740739a45d27
-Size (DBM-Deep-1.0014.tar.gz) = 115528 bytes
+SHA1 (DBM-Deep-1.0015.tar.gz) = bd7db084ce6117edbed5f82db0a3535b5b07e564
+RMD160 (DBM-Deep-1.0015.tar.gz) = 6e3bbce78157937ea64c122f1529137bc14c0aa0
+Size (DBM-Deep-1.0015.tar.gz) = 151720 bytes
