@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.40 2010/01/30 08:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/02/02 14:05:59 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 
 # XXX this is to test what really gets installed when 'do-install' is disabled
 INSTALL_DIRS+=		src
 
 BUILD_TARGET=		sub-src
-INSTALL_TARGET=		install_flat_headers install_targ_headers install_class_headers
 
 PTHREAD_OPTS+=		require
 UNLIMIT_RESOURCES=	datasize
@@ -21,8 +20,10 @@ BUILDLINK_PASSTHRU_DIRS+=${QTPREFIX}
 PLIST_SRC=		${WRKDIR}/PLIST ${PKGDIR}/PLIST
 
 # built as plugins
-CONFIGURE_ARGS+=	-no-sql-sqlite
+CONFIGURE_ARGS+=	-no-dbus
+CONFIGURE_ARGS+=	-no-libmng
 CONFIGURE_ARGS+=	-no-libtiff
+CONFIGURE_ARGS+=	-no-sql-sqlite
 
 INSTALLATION_DIRS=	lib/pkgconfig
 INSTALLATION_DIRS+=	${QTPREFIX}/bin
@@ -45,14 +46,14 @@ do-install:
 	    ${DESTDIR}${QTPREFIX}/bin
 .for incl in corelib gui multimedia network opengl qt3support script scripttools sql svg xml script testlib 3rdparty/webkit/WebCore
 	cd ${WRKSRC}/src/${incl} && env ${MAKE_ENV} ${INSTALL_ENV} \
-		${MAKE_PROGRAM} ${INSTALL_TARGET}
+		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
 .endfor
 	cd ${DESTDIR}${PREFIX} && find qt4/include -type f -print > ${WRKDIR}/PLIST
-.for lib in Qt3Support QtCore QtGui QtMultimedia QtNetwork QtOpenGL QtSql QtSvg QtXml QtScript QtScriptTools QtTest QtWebKit
+.for lib in Qt3Support QtCore QtGui QtMultimedia QtNetwork QtOpenGL QtSql QtSvg QtXml QtXmlPatterns QtScript QtScriptTools QtTest QtWebKit
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${DESTDIR}${QTPREFIX}/lib/
 	sed	-e "s:${WRKSRC}:${QTPREFIX}:g" \
-		-e "s:${QTPREFIX}/lib/lib\([A-Za-z3]*\)\.la:-l\1:g" \
+		-e "s:${QTPREFIX}/lib/lib\\([A-Za-z3]*\\)\\.la:-l\\1:g" \
 		${WRKSRC}/lib/pkgconfig/${lib}.pc > ${WRKDIR}/${lib}.pc
 	${INSTALL_DATA} ${WRKDIR}/${lib}.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
 .endfor
@@ -75,7 +76,7 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/iconengines/libqsvgicon.la \
 		${DESTDIR}/${QTPREFIX}/plugins/iconengines/
-.for plug in qgif qico qjpeg qmng qsvg
+.for plug in qgif qico qjpeg qsvg
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/imageformats/lib${plug}.la \
 		${DESTDIR}${QTPREFIX}/plugins/imageformats/
@@ -96,7 +97,6 @@ SUBST_SED.socklen=	-e 's/QT_SOCKLEN_T.*/QT_SOCKLEN_T socklen_t/'
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"

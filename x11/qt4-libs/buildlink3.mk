@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.16 2010/01/29 18:19:09 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2010/02/02 14:05:59 adam Exp $
 
 BUILDLINK_TREE+=	qt4-libs
 
 .if !defined(QT4_LIBS_BUILDLINK3_MK)
 QT4_LIBS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.1.0
-BUILDLINK_ABI_DEPENDS.qt4-libs+=	qt4-libs>=4.5.3nb3
+BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.6.1nb2
+BUILDLINK_ABI_DEPENDS.qt4-libs+=	qt4-libs>=4.6.1nb2
 BUILDLINK_PKGSRCDIR.qt4-libs?=	../../x11/qt4-libs
 
 BUILDLINK_INCDIRS.qt4-libs+=	qt4/include
@@ -23,7 +23,6 @@ PTHREAD_OPTS+=	require
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
