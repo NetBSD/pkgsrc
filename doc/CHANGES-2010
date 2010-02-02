@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.490 2010/02/02 22:12:00 sno Exp $
+$NetBSD: CHANGES-2010,v 1.491 2010/02/02 22:17:32 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -591,3 +591,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBM-Deep to 1.0015 [seb 2010-02-02]
 	Updated databases/p5-DBD-postgresql to 2.16.1 [sno 2010-02-02]
 	Updated databases/p5-ORLite to 1.40 [sno 2010-02-02]
+	Added print/tex-url version 3.2 [minskim 2010-02-02]
+	Added print/tex-url-doc version 3.2 [minskim 2010-02-02]
