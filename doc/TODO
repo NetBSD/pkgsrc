@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8943 2010/02/02 09:02:02 he Exp $
+$NetBSD: TODO,v 1.8944 2010/02/02 11:21:12 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -440,7 +440,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avcheck-0.91
 	o avl-2.0.2a
 	o awesome-3.4.3
-	o awstats-6.95
 	o babl-0.1.2 [wait for gegl>0.1.0]
 	o baci-20040415
 	o bacula-5.0.0
