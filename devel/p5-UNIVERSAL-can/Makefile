@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/07/07 19:56:24 sno Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/02 15:55:25 sno Exp $
 
-DISTNAME=	UNIVERSAL-can-1.15
+DISTNAME=	UNIVERSAL-can-1.16
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CH/CHROMATIC/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=UNIVERSAL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/UNIVERSAL-can/
