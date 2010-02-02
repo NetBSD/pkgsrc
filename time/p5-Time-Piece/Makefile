@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2010/01/25 14:14:59 sno Exp $
+# $NetBSD: Makefile,v 1.13 2010/02/02 12:43:41 sno Exp $
 
-DISTNAME=	Time-Piece-1.16
+DISTNAME=	Time-Piece-1.17
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5tpc
 CATEGORIES=	time perl5
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 
-PERL5_PACKLIST=		auto/Time/Piece/.packlist
+PERL5_PACKLIST=	auto/Time/Piece/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
