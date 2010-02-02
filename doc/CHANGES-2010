@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.462 2010/02/02 13:58:01 tron Exp $
+$NetBSD: CHANGES-2010,v 1.463 2010/02/02 14:12:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -560,3 +560,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated comms/gscmxx to 0.4.1nb6 [sno 2010-02-02]
 	Added devel/p5-File-Touch version 0.08 [seb 2010-02-02]
 	Updated www/squid31 to 3.1.0.15 [tron 2010-02-02]
+	Updated x11/qt4-libs to 4.6.1nb2 [adam 2010-02-02]
+	Updated x11/qt4-tools to 4.6.1nb1 [adam 2010-02-02]
+	Added x11/qt4-mng version 4.6.1 [adam 2010-02-02]
+	Updated graphics/babl to 0.1.2 [adam 2010-02-02]
