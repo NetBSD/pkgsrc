@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2008/10/30 09:58:46 is Exp $
+$NetBSD: distinfo,v 1.10 2010/02/02 18:34:03 tnn Exp $
 
 SHA1 (live.2008.07.25.tar.gz) = fbc84b2b16212a2891d587bff48bfb8822716a7c
 RMD160 (live.2008.07.25.tar.gz) = c3a7e8c79ca54753803389e2d0fc9d18fe8c27e6
 Size (live.2008.07.25.tar.gz) = 449624 bytes
+SHA1 (patch-aa) = bbbc5a265b5570edaab91fda16d077d0cdc0f242
 SHA1 (patch-ba) = 78e4e13511e02d9f05a568281490d10ad5e6d1b3
