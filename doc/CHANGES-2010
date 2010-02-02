@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.449 2010/02/02 11:11:40 sno Exp $
+$NetBSD: CHANGES-2010,v 1.450 2010/02/02 11:17:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -547,3 +547,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/ruby-gettext to 2.1.0nb1 [taca 2010-02-02]
 	Updated lang/parrot to 2.0.0 [he 2010-02-02]
 	Updated www/p5-Catalyst-Runtime to 5.80019 [sno 2010-02-02]
+	Updated www/p5-Catalyst-Model-Adaptor to 0.06 [sno 2010-02-02]
