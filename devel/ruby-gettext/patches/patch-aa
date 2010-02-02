@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2010/02/02 02:18:39 taca Exp $
+
+--- ../gettext-2.1.0.gemspec.orig	2010-02-02 01:11:06.000000000 +0000
++++ ../gettext-2.1.0.gemspec
+@@ -404,7 +404,6 @@ files: 
+ - samples/cgi/po/hu/helloerb1.po
+ - samples/cgi/po/hu/hellolib.po
+ - samples/cgi/po/bg/helloerb2.po
+-- samples/cgi/po/bg/#main.po#
+ - samples/cgi/po/bg/main.po
+ - samples/cgi/po/bg/helloerb1.po
+ - samples/cgi/po/bg/hellolib.po
