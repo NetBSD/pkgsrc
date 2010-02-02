@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.458 2010/02/02 12:40:32 sno Exp $
+$NetBSD: CHANGES-2010,v 1.459 2010/02/02 12:43:51 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -556,3 +556,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Rose-HTMLx-Form-Related to 0.19 [sno 2010-02-02]
 	Updated net/Transmission to 1.83 [tnn 2010-02-02]
 	Updated time/p5-Rose-DateTime to 0.533 [sno 2010-02-02]
+	Updated time/p5-Time-Piece to 1.17 [sno 2010-02-02]
