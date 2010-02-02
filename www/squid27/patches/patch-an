@@ -1,0 +1,24 @@
+$NetBSD: patch-an,v 1.1.2.2 2010/02/02 17:29:58 tron Exp $
+
+This is fix for security problem:
+
+http://www.squid-cache.org/Advisories/SQUID-2010_1.txt
+
+Since the announced patch contains RCS style revision string, it never
+applied to clearly.
+
+http://www.squid-cache.org/Versions/v2/HEAD/changesets/12597.patch.
+
+--- lib/rfc1035.c.orig	2008-06-19 01:11:44.000000000 +0000
++++ lib/rfc1035.c
+@@ -286,7 +286,9 @@ rfc1035NameUnpack(const char *buf, size_
+     size_t len;
+     assert(ns > 0);
+     do {
+-	assert((*off) < sz);
++	if ((*off) >= sz) {
++	    return 1;
++	}
+ 	c = *(buf + (*off));
+ 	if (c > 191) {
+ 	    /* blasted compression */
