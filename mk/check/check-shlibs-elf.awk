@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.2 2007/08/21 21:08:18 joerg Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.3 2010/02/02 23:35:36 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -68,7 +68,7 @@ function shquote(IN, out) {
 	return out;
 }
 
-function check_pkg(DSO, pkg) {
+function check_pkg(DSO, pkg, found) {
 	if (destdir == "")
 		return 0
 	cmd = pkg_info_cmd " -Fe " shquote(DSO) " 2> /dev/null"
@@ -79,14 +79,18 @@ function check_pkg(DSO, pkg) {
 	close(cmd)
 	if (pkg == "")
 		return 0
+	found=0
 	while ((getline < depends_file) > 0) {
 		if ($3 == pkg) {
+			found=1
 			if ($1 != "full")
-				print DSO ": " pkg " is not a runtime dependency"
+				continue
 			close(depends_file)
 			return 0
 		}
 	}
+	if (found)
+		print DSO ": " pkg " is not a runtime dependency"
 	# Not yet:
 	# print DSO ": " pkg " is not a dependency"
 	close(depends_file)
