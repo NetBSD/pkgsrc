@@ -1,0 +1,4 @@
+cppcheck is a tool for static C/C++ code analysis intended to
+complement the checking of the compiler.  It checks for memory
+leaks, mismatching allocation-deallocation, buffer overrun, unused
+functions, coding style, and much more.
