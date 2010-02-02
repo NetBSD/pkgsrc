@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.463 2010/02/02 14:12:36 adam Exp $
+$NetBSD: CHANGES-2010,v 1.464 2010/02/02 14:36:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -564,3 +564,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/qt4-tools to 4.6.1nb1 [adam 2010-02-02]
 	Added x11/qt4-mng version 4.6.1 [adam 2010-02-02]
 	Updated graphics/babl to 0.1.2 [adam 2010-02-02]
+	Updated time/p5-DateTimeX-Easy to 0.088 [sno 2010-02-02]
