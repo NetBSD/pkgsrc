@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2010/01/29 03:44:53 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2010/02/02 07:14:29 dmcmahill Exp $
 
 --- include/memcache/buffer.h.orig	2005-09-25 17:36:12.000000000 +0000
 +++ include/memcache/buffer.h
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1 2010/01/29 03:44:53 dmcmahill Exp $
  						    const char *, struct memcache_buf *);
  int	 mcm_buf_free(struct memcache_ctxt *, struct memcache_buf **);
 -inline u_int32_t	 mcm_buf_len(const struct memcache_ctxt *, const struct memcache_buf *);
-+inline u_int32_t
++static inline u_int32_t
 +mcm_buf_len(const struct memcache_ctxt *ctxt, const struct memcache_buf *s) {
 +  return s->len;
 +}
@@ -18,13 +18,13 @@ $NetBSD: patch-ac,v 1.1 2010/01/29 03:44:53 dmcmahill Exp $
  int	 mcm_buf_realloc(struct memcache_ctxt *, struct memcache_buf *, const u_int32_t);
 -inline size_t	 mcm_buf_remain(const struct memcache_ctxt *, const struct memcache_buf *);
 -inline size_t	 mcm_buf_remain_off(const struct memcache_ctxt *, const struct memcache_buf *);
-+inline size_t   
++static inline size_t   
 +mcm_buf_remain(const struct memcache_ctxt *ctxt, const struct memcache_buf *buf) {
 +  return mcm_buf_size(ctxt, buf) - mcm_buf_len(ctxt, buf);
 +}
 +
 +
-+inline size_t
++static inline size_t
 +mcm_buf_remain_off(const struct memcache_ctxt *ctxt, const struct memcache_buf *buf) {
 +  return mcm_buf_len(ctxt, buf) - buf->off;
 +}
