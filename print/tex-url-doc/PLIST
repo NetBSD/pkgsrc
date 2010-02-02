@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/02 22:16:28 minskim Exp $
+share/texmf-dist/doc/latex/url/miscdoc.sty
+share/texmf-dist/doc/latex/url/url.pdf
+share/texmf-dist/doc/latex/url/url.tex
