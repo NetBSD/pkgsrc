@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/21 19:39:58 adam Exp $
-include/babl-0.0/babl/babl-macros.h
-include/babl-0.0/babl/babl-types.h
-include/babl-0.0/babl/babl-version.h
-include/babl-0.0/babl/babl.h
-lib/babl-0.0/CIE-Lab.la
-lib/babl-0.0/gegl-fixups.la
-lib/babl-0.0/gggl-lies.la
-lib/babl-0.0/gggl.la
-lib/babl-0.0/gimp-8bit.la
-lib/babl-0.0/naive-CMYK.la
-lib/babl-0.0/sse-fixups.la
-lib/libbabl-0.0.la
+@comment $NetBSD: PLIST,v 1.6 2010/02/02 14:09:58 adam Exp $
+include/babl-0.1/babl/babl-macros.h
+include/babl-0.1/babl/babl-types.h
+include/babl-0.1/babl/babl-version.h
+include/babl-0.1/babl/babl.h
+lib/babl-0.1/CIE.la
+lib/babl-0.1/gegl-fixups.la
+lib/babl-0.1/gggl-lies.la
+lib/babl-0.1/gggl.la
+lib/babl-0.1/gimp-8bit.la
+lib/babl-0.1/naive-CMYK.la
+lib/babl-0.1/sse-fixups.la
+lib/libbabl-0.1.la
 lib/pkgconfig/babl.pc

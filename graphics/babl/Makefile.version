@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.version,v 1.4 2009/08/21 19:39:58 adam Exp $
-#
+# $NetBSD: Makefile.version,v 1.5 2010/02/02 14:09:58 adam Exp $
 
 BABL_API_VERSION=	0.1
-BABL_PKG_VERSION=	0
+BABL_PKG_VERSION=	2
 BABL_VERSION=		${BABL_API_VERSION}.${BABL_PKG_VERSION}
