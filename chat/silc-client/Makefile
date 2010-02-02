@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2009/08/02 19:18:40 tonnerre Exp $
+# $NetBSD: Makefile,v 1.56 2010/02/02 23:36:16 joerg Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		${SILC_CLIENT_EXTRACT_SUFX}
 MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.silcnet.org/
 COMMENT=		Client for the Secure Internet Live Conferencing (SILC) protocol
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../chat/silc-client/Makefile.common"
@@ -57,17 +59,17 @@ CONFIGURE_ARGS+=	--disable-asm
 .include "options.mk"
 
 PLIST_SRC+=		${PKGDIR}/PLIST
-INSTALLATION_DIRS+=	${PREFIX}/libexec/${PKGBASE}/scripts
+INSTALLATION_DIRS+=	lib/${PKGBASE} libexec/${PKGBASE}/scripts
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/apps/irssi/config.h ${SILC_CLIENT_CONFIG_H}
-	${INSTALL_DATA} ${WRKSRC}/apps/irssi/irssi-config ${SILC_CLIENT_CONFIG}
+	${INSTALL_DATA} ${WRKSRC}/apps/irssi/config.h ${DESTDIR}${SILC_CLIENT_CONFIG_H}
+	${INSTALL_DATA} ${WRKSRC}/apps/irssi/irssi-config ${DESTDIR}${SILC_CLIENT_CONFIG}
 .if !empty(PKG_OPTIONS:Mperl)
 	${INSTALL_DATA} ${WRKSRC}/apps/irssi/scripts/*.pl	\
-		${PREFIX}/libexec/${PKGBASE}/scripts
+	    ${DESTDIR}${PREFIX}/libexec/${PKGBASE}/scripts
 # Create PLIST fragment for Perl modules.
 #
-	@cd ${PREFIX} &&						     \
+	@cd ${DESTDIR}${PREFIX} &&						     \
 		${FIND} lib/${PKGBASE}/perl5 -type f > ${WRKDIR}/PLIST.perl
 .endif
 
