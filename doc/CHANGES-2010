@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.488 2010/02/02 21:26:40 seb Exp $
+$NetBSD: CHANGES-2010,v 1.489 2010/02/02 21:54:28 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-Net-OpenSSH to 0.44 [sno 2010-02-02]
 	Updated security/p5-Net-SSLeay to 1.36 [sno 2010-02-02]
 	Updated databases/p5-DBM-Deep to 1.0015 [seb 2010-02-02]
+	Updated databases/p5-DBD-postgresql to 2.16.1 [sno 2010-02-02]
