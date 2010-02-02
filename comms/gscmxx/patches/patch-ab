@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2010/01/05 12:18:51 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2010/02/02 13:00:56 sno Exp $
 
 --- Makefile.PL.orig	2002-09-01 12:23:14.000000000 +0000
 +++ Makefile.PL
@@ -28,3 +28,20 @@ $NetBSD: patch-ab,v 1.1 2010/01/05 12:18:51 joerg Exp $
  
  
  my $missing_modules = 0;
+@@ -197,12 +198,12 @@ package MY;
+ sub postamble {
+ 	my $postamble = <<'END';
+ pixmaps ::
+-	$(MKPATH) $(PREFIX)/share/pixmaps/gscmxx
+-	@$(MOD_INSTALL) ./pixmaps/ $(PREFIX)/share/pixmaps/gscmxx/
++	$(MKPATH) $(DESTDIR)$(PREFIX)/share/pixmaps/gscmxx
++	@$(MOD_INSTALL) ./pixmaps/ $(DESTDIR)$(PREFIX)/share/pixmaps/gscmxx/
+ 
+ i18n ::
+-	$(MKPATH) $(PREFIX)/share/gscmxx/i18n
+-	@$(MOD_INSTALL) ./share/i18n/ $(PREFIX)/share/gscmxx/i18n/
++	$(MKPATH) $(DESTDIR)$(PREFIX)/share/gscmxx/i18n
++	@$(MOD_INSTALL) ./share/i18n/ $(DESTDIR)$(PREFIX)/share/gscmxx/i18n/
+ 
+ END
+ 	return $postamble;
