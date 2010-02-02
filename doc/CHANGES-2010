@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.467 2010/02/02 14:54:40 taca Exp $
+$NetBSD: CHANGES-2010,v 1.468 2010/02/02 15:46:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -569,3 +569,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated archivers/gzip to 1.3.12nb3 [taca 2010-02-02]
 	Updated www/squid27 to 2.7.7nb2 [taca 2010-02-02]
 	Updated www/squid30 to 3.0.23 [taca 2010-02-02]
+	Updated www/p5-Catalyst-Action-RenderView to 0.14 [sno 2010-02-02]
