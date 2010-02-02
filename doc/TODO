@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8949 2010/02/02 18:15:28 sno Exp $
+$NetBSD: TODO,v 1.8950 2010/02/02 19:57:41 sno Exp $
 
 Suggested new packages
 ======================
@@ -1043,7 +1043,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Mouse-0.48
 	o p5-Net-SSLeay-1.36
 	o p5-Rose-DB-0.757 [pkg/42674]
-	o p5-Text-Markdown-1.000030
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-version-0.8000
