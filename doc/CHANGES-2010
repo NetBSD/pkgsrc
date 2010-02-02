@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.460 2010/02/02 13:01:11 sno Exp $
+$NetBSD: CHANGES-2010,v 1.461 2010/02/02 13:53:49 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -558,3 +558,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-Rose-DateTime to 0.533 [sno 2010-02-02]
 	Updated time/p5-Time-Piece to 1.17 [sno 2010-02-02]
 	Updated comms/gscmxx to 0.4.1nb6 [sno 2010-02-02]
+	Added devel/p5-File-Touch version 0.08 [seb 2010-02-02]
