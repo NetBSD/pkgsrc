@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.486 2010/02/02 20:18:40 sno Exp $
+$NetBSD: CHANGES-2010,v 1.487 2010/02/02 20:53:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -587,3 +587,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Try-Tiny to 0.04 [sno 2010-02-02]
 	Updated devel/p5-Module-Starter to 1.540 [sno 2010-02-02]
 	Updated security/p5-Net-OpenSSH to 0.44 [sno 2010-02-02]
+	Updated security/p5-Net-SSLeay to 1.36 [sno 2010-02-02]
