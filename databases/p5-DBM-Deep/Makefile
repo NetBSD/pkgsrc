@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/12/17 00:30:39 he Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/02 21:26:21 seb Exp $
 
-DISTNAME=	DBM-Deep-1.0014
+DISTNAME=	DBM-Deep-1.0015
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBM/}
@@ -14,10 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBM/Deep/.packlist
 
-DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
-DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
-DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
-DEPENDS+=	p5-Test-Warn>=0.08:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
+BUILD_DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
+BUILD_DEPENDS+= p5-Test-Simple>=0.88:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-Test-Warn>=0.08:../../devel/p5-Test-Warn
 
 # for test target
 BUILD_DEPENDS+=	p5-FileHandle-Fmode-[0-9]*:../../devel/p5-FileHandle-Fmode
