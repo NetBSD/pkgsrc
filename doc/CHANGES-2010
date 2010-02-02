@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.446 2010/02/01 22:44:48 snj Exp $
+$NetBSD: CHANGES-2010,v 1.447 2010/02/02 02:19:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -544,3 +544,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-latex to 2009 [minskim 2010-02-01]
 	Updated pkgtools/pkg_rolling-replace to 0.20 [sno 2010-02-01]
 	Updated wm/obconf to 2.0.3nb3 [snj 2010-02-01]
+	Updated devel/ruby-gettext to 2.1.0nb1 [taca 2010-02-02]
