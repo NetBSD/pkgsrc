@@ -1,0 +1,2 @@
+The Perl 5 module File::Touch allows to update files' access and modification
+timestamps, creating nonexistent files where necessary.
