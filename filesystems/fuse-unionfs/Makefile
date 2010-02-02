@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 19:31:31 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/02 10:45:17 jmmv Exp $
 #
 
 DISTNAME=	unionfs-fuse-0.17
@@ -14,6 +14,7 @@ COMMENT=	FUSE-based union filesystem
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	unionfs
+USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
 
