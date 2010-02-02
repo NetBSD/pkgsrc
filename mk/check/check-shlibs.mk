@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.16 2009/06/18 14:51:55 tnn Exp $
+# $NetBSD: check-shlibs.mk,v 1.17 2010/02/02 15:36:15 tnn Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -45,9 +45,9 @@ CHECK_SHLIBS_ELF_ENV+=	READELF=${TOOLS_PATH.readelf:Q}
 CHECK_SHLIBS_ELF_ENV+=	CROSS_DESTDIR=${_CROSS_DESTDIR:Q}
 CHECK_SHLIBS_ELF_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
 CHECK_SHLIBS_ELF_ENV+=	DEPENDS_FILE=${_RDEPENDS_FILE:Q}
-.if ${_USE_DESTDIR} != "no"
+.  if ${_USE_DESTDIR} != "no"
 CHECK_SHLIBS_ELF_ENV+=	DESTDIR=${DESTDIR:Q}
-.endif
+.  endif
 CHECK_SHLIBS_ELF_ENV+=	WRKDIR=${WRKDIR:Q}
 
 _check-shlibs: error-check .PHONY
@@ -60,6 +60,10 @@ _check-shlibs: error-check .PHONY
 	${SETENV} ${CHECK_SHLIBS_ELF_ENV} ${AWK} -f ${CHECK_SHLIBS_ELF} > ${ERROR_DIR}/${.TARGET}
 
 .else
+.  if ${_USE_DESTDIR} != "no"
+_check-shlibs: error-check .PHONY
+	@${WARNING_MSG} "Skipping missing run-time search-path check in DESTDIR mode."
+.  else
 _check-shlibs: error-check .PHONY
 	@${STEP_MSG} "Checking for missing run-time search paths in ${PKGNAME}"
 	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
@@ -85,4 +89,5 @@ _check-shlibs: error-check .PHONY
 		${ECHO} "    Please fix the package (add -Wl,-R.../lib in the right places)!"; \
 		${SHCOMMENT} Might not error-out for non-pkg-developers; \
 	fi
+.  endif
 .endif
