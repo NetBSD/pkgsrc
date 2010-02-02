@@ -1,0 +1,10 @@
+The command \url is a form of verbatim command that allows linebreaks
+at certain characters or combinations of characters, accepts
+reconfiguration, and can usually be used in the argument to another
+command.  (The \urldef command provides robust commands that serve in
+cases when \url doesn't work in an argument.)  The command is intended
+for email addresses, hypertext links, directories/paths, etc., which
+normally have no spaces, so by default the package ignores spaces in
+its argument.  However, a package option "allows spaces", which is
+useful for operating systems where spaces are a common part of file
+names.
