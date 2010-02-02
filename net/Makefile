@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.795 2010/01/30 16:16:42 spz Exp $
+# $NetBSD: Makefile,v 1.796 2010/02/02 16:11:31 sborrill Exp $
 #
 
 COMMENT=	Networking tools
@@ -191,6 +191,7 @@ SUBDIR+=	isc-dhcrelay4
 SUBDIR+=	ishell
 SUBDIR+=	isic
 SUBDIR+=	ispman
+SUBDIR+=	istgt
 SUBDIR+=	jftpgw
 SUBDIR+=	jigdo
 SUBDIR+=	jumpgate
