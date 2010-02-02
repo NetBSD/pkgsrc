@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.461 2010/02/02 13:53:49 seb Exp $
+$NetBSD: CHANGES-2010,v 1.462 2010/02/02 13:58:01 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -559,3 +559,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-Time-Piece to 1.17 [sno 2010-02-02]
 	Updated comms/gscmxx to 0.4.1nb6 [sno 2010-02-02]
 	Added devel/p5-File-Touch version 0.08 [seb 2010-02-02]
+	Updated www/squid31 to 3.1.0.15 [tron 2010-02-02]
