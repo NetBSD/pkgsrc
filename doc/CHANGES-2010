@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.450 2010/02/02 11:17:18 sno Exp $
+$NetBSD: CHANGES-2010,v 1.451 2010/02/02 11:28:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -548,3 +548,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/parrot to 2.0.0 [he 2010-02-02]
 	Updated www/p5-Catalyst-Runtime to 5.80019 [sno 2010-02-02]
 	Updated www/p5-Catalyst-Model-Adaptor to 0.06 [sno 2010-02-02]
+	Updated www/p5-Catalyst-Plugin-AutoRestart to 0.93 [sno 2010-02-02]
