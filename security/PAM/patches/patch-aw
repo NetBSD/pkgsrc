@@ -1,6 +1,6 @@
-$NetBSD: patch-aw,v 1.5 2004/11/19 14:54:55 jlam Exp $
+$NetBSD: patch-aw,v 1.6 2010/02/02 17:09:28 tnn Exp $
 
---- modules/pam_unix/Makefile.orig	2001-02-11 01:33:53.000000000 -0500
+--- modules/pam_unix/Makefile.orig	2001-02-11 06:33:53.000000000 +0000
 +++ modules/pam_unix/Makefile
 @@ -55,6 +55,7 @@ LIBSRC = pam_unix_auth.c pam_unix_acct.c
  		support.c
@@ -41,7 +41,7 @@ $NetBSD: patch-aw,v 1.5 2004/11/19 14:54:55 jlam Exp $
  	$(CC) $(CFLAGS) $(STATIC) $(CPPFLAGS) $(TARGET_ARCH) -c $< -o $@
  
 +%.lo : %.c
-+	$(SHLIBTOOL) --mode=compile $(CC) $(CFLAGS) $(LTCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $<
++	$(SHLIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(LTCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $<
 +
  dummy:
  	@echo "**** This is not a top-level Makefile "
@@ -54,7 +54,7 @@ $NetBSD: patch-aw,v 1.5 2004/11/19 14:54:55 jlam Exp $
 +$(LIBOBJLA): $(LIBSRC)
 +
 +$(LIBLIBTOOL): $(LIBOBJLA) $(PLUS:.o=.lo)
-+	$(SHLIBTOOL) --mode=link $(CC) $(LDFLAGS) $(LIBOBJLA) -o $@ $(PLUS:.o=.lo) $(CRACKLIB) $(LDLIBS) $(LIBNSL) $(LIBCRYPT) -module -avoid-version -rpath $(FAKEROOT)$(SECUREDIR)
++	$(SHLIBTOOL) --tag=CC --mode=link $(CC) $(LDFLAGS) $(LIBOBJLA) -o $@ $(PLUS:.o=.lo) $(CRACKLIB) $(LDLIBS) $(LIBNSL) $(LIBCRYPT) -module -avoid-version -rpath $(FAKEROOT)$(SECUREDIR)
 +endif
 +
  $(CHKPWD): unix_chkpwd.o md5_good.o md5_broken.o \
@@ -70,7 +70,7 @@ $NetBSD: patch-aw,v 1.5 2004/11/19 14:54:55 jlam Exp $
  		$(TARGET_ARCH) -c $< -o $@
  
 +md5_good.lo: md5.c
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) \
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) \
 +		-DHIGHFIRST -D'MD5Name(x)=Good##x' \
 +		$(TARGET_ARCH) -c $< -o $@
 +
@@ -79,7 +79,7 @@ $NetBSD: patch-aw,v 1.5 2004/11/19 14:54:55 jlam Exp $
  		$(TARGET_ARCH) -c $< -o $@
  
 +md5_broken.lo: md5.c
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) \
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) \
 +		-D'MD5Name(x)=Broken##x' \
 +		$(TARGET_ARCH) -c $< -o $@
 +
@@ -88,7 +88,7 @@ $NetBSD: patch-aw,v 1.5 2004/11/19 14:54:55 jlam Exp $
  		$(TARGET_ARCH) -c $< -o $@
  
 +md5_crypt_good.lo: md5_crypt.c
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) \
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) \
 +		-D'MD5Name(x)=Good##x' \
 +		$(TARGET_ARCH) -c $< -o $@
 +
@@ -97,7 +97,7 @@ $NetBSD: patch-aw,v 1.5 2004/11/19 14:54:55 jlam Exp $
  		$(TARGET_ARCH) -c $< -o $@
  
 +md5_crypt_broken.lo: md5_crypt.c
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) \
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) \
 +		-D'MD5Name(x)=Broken##x' \
 +		$(TARGET_ARCH) -c $< -o $@
 +
