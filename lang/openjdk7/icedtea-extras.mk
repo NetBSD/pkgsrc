@@ -1,4 +1,4 @@
-# $NetBSD: icedtea-extras.mk,v 1.5 2010/01/15 19:18:42 tnn Exp $
+# $NetBSD: icedtea-extras.mk,v 1.6 2010/02/02 23:12:53 jmcneill Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			bsdtar
@@ -26,7 +26,7 @@ EXTRACT_ONLY+=			${RHINO_TGZ}
 # fixme: Should depend on devel/apache-ant?
 ANT=				apache-ant-1.7.1
 ANT_TGZ=			${ANT}-bin.zip
-SITES.${ANT_TGZ}=		${MASTER_SITE_APACHE:=ant/binaries/}
+SITES.${ANT_TGZ}=		http://archive.apache.org/dist/ant/binaries/
 DISTFILES+=			${ANT_TGZ}
 EXTRACT_ONLY+=			${ANT_TGZ}
 ANT_BIN=			${WRKDIR}/${ANT}/bin
