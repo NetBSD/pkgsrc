@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.6 2004/11/19 14:54:55 jlam Exp $
+$NetBSD: patch-ad,v 1.7 2010/02/02 17:09:28 tnn Exp $
 
---- libpam/Makefile.orig	2001-12-09 16:44:58.000000000 -0500
+--- libpam/Makefile.orig	2001-12-09 21:44:58.000000000 +0000
 +++ libpam/Makefile
 @@ -6,7 +6,7 @@
  include ../Make.Rules
@@ -48,7 +48,7 @@ $NetBSD: patch-ad,v 1.6 2004/11/19 14:54:55 jlam Exp $
 +LALIBOBJECTS = $(LIBOBJECTS:.o=.lo) $(STATICOBJ:.o=.lo)
 +ifdef STATICOBJ
 +pam_static.lo: pam_static.c ../modules/_static_module_objects
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c pam_static.c
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) -c pam_static.c
 +endif
 +endif
 +
@@ -75,7 +75,7 @@ $NetBSD: patch-ad,v 1.6 2004/11/19 14:54:55 jlam Exp $
  	$(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $< -o $@
  
 +%.lo : %.c
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $<
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $<
 +
  $(LIBPAM): $(DLIBOBJECTS)
  ifeq ($(DYNAMIC_LIBPAM),yes)
@@ -87,7 +87,7 @@ $NetBSD: patch-ad,v 1.6 2004/11/19 14:54:55 jlam Exp $
 -install: all
 +$(LIBPAMLIBTOOL): $(LALIBOBJECTS)
 +ifeq ($(LIBTOOL_LIBPAM),yes)
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) $(LALIBOBJECTS) -o $@ \
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(LDFLAGS) $(LALIBOBJECTS) -o $@ \
 +		$(MODULES) $(LINKLIBS) \
 +		-rpath $(libdir) -version-info $(MAJOR_REL):$(MINOR_REL)
 +endif
