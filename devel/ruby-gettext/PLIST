@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/12/07 12:09:20 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/02/02 02:18:38 taca Exp $
 bin/rgettext
 bin/rmsgfmt
 bin/rmsgmerge
@@ -205,7 +205,6 @@ ${GEM_LIBDIR}/samples/cgi/locale/zh_TW/LC_MESSAGES/helloerb2.mo
 ${GEM_LIBDIR}/samples/cgi/locale/zh_TW/LC_MESSAGES/hellolib.mo
 ${GEM_LIBDIR}/samples/cgi/locale/zh_TW/LC_MESSAGES/main.mo
 ${GEM_LIBDIR}/samples/cgi/other.rhtml
-${GEM_LIBDIR}/samples/cgi/po/bg/#main.po#
 ${GEM_LIBDIR}/samples/cgi/po/bg/helloerb1.po
 ${GEM_LIBDIR}/samples/cgi/po/bg/helloerb2.po
 ${GEM_LIBDIR}/samples/cgi/po/bg/hellolib.po
