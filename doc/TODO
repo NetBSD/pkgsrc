@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8947 2010/02/02 14:56:30 taca Exp $
+$NetBSD: TODO,v 1.8948 2010/02/02 15:05:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -471,7 +471,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.36
+	o calibre-0.6.37
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -498,7 +498,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o consolekit-0.4.0
 	o cook-2.31
 	o coreutils-8.4
-	o coreutils-7.5
 	o courier-0.64.0
 	o courier-analog-0.16
 	o courier-authlib-0.63.0
@@ -701,6 +700,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnetman-20050429
 	o gnome-bluetooth-2.28.3 [GNOME 2.28]
 	o gnome-devel-docs-2.28.1 [GNOME 2.28]
+	o gnome-mag-0.16.0
 	o gnome-netstatus-2.28.0 [GNOME 2.28]
 	o gnome-nettool-2.28.0 [GNOME 2.28]
 	o gnome-packagekit-2.28.2 [GNOME 2.28]
@@ -930,6 +930,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o merb-sequel-1.0.0
 	o merb-stories-0.9.13
 	o merb-test-unit-0.9.13
+	o mercurial-1.4.3
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
