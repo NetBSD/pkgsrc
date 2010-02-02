@@ -1,6 +1,12 @@
-# $NetBSD: Makefile.common,v 1.19 2010/02/02 14:05:59 adam Exp $
-# used by x11/qt4-libs/Makefile
+# $NetBSD: Makefile.common,v 1.20 2010/02/02 14:33:05 wiz Exp $
 # used by x11/qt4-docs/Makefile
+# used by x11/qt4-libs/Makefile
+# used by x11/qt4-mng/Makefile
+# used by x11/qt4-mysql/Makefile
+# used by x11/qt4-pgsql/Makefile
+# used by x11/qt4-qdbus/Makefile
+# used by x11/qt4-sqlite3/Makefile
+# used by x11/qt4-tiff/Makefile
 
 DISTNAME=	qt-everywhere-opensource-src-${QTVERSION}
 CATEGORIES=	x11
