@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2009/08/03 13:57:14 joerg Exp $
+$NetBSD: distinfo,v 1.3 2010/02/02 10:45:17 jmmv Exp $
 
 SHA1 (unionfs-fuse-0.17.tar.bz2) = 791877d7e127c28345f3884f30b9a65032e9ca80
 RMD160 (unionfs-fuse-0.17.tar.bz2) = 020662308ea3930ed26685bcb2cdcaf08f3082f3
 Size (unionfs-fuse-0.17.tar.bz2) = 6447 bytes
-SHA1 (patch-aa) = 855c6d72e5963077ea08c5b296e9423a2c652452
+SHA1 (patch-aa) = 917a9997c5ceef0edf632b4738dd0e397c3d6705
 SHA1 (patch-ab) = fcb7ebe83f25488653ee42548c84d7709ce952d8
+SHA1 (patch-ac) = 0ce1100986d2a6e1941ebe6fb3ccca7fe54e7fee
