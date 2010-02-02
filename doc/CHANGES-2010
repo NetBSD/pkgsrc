@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.479 2010/02/02 18:29:05 sno Exp $
+$NetBSD: CHANGES-2010,v 1.480 2010/02/02 18:32:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -580,3 +580,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-ExtUtils-ParseXS to 2.22.02 [sno 2010-02-02]
 	Updated devel/p5-Rose-Object to 0.856 [sno 2010-02-02]
 	Updated devel/p5-String-Escape to 2010.002 [sno 2010-02-02]
+	Updated devel/p5-Test-Harness to 3.21 [sno 2010-02-02]
