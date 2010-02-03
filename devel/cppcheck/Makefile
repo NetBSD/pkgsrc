@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/03 09:46:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/03 09:52:32 wiz Exp $
 #
 
 DISTNAME=	cppcheck-1.40
@@ -21,6 +21,7 @@ USE_LANGUAGES=		c++
 
 .include "options.mk"
 
+.PHONY: man-build
 post-build: man-build
 man-build:
 	cd ${WRKSRC}/man && xsltproc --nonet \
