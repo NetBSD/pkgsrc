@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2010/01/18 09:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2010/02/03 23:04:20 joerg Exp $
 #
 
 DISTNAME=	gwenview-1.4.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	kde graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwenview/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://gwenview.sourceforge.net/
 COMMENT=	Image viewer for KDE whose aims are ease of use and speed
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config msgfmt
 USE_LANGUAGES=	c c++
@@ -20,8 +22,6 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-kipi
 
 SHLIBTOOL_OVERRIDE=	# empty
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
