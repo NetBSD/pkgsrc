@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8965 2010/02/03 13:03:20 obache Exp $
+$NetBSD: TODO,v 1.8966 2010/02/03 15:50:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -364,7 +364,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.13
 	o RTx-Shredder-0.05
 	o RealPlayer-11
-	o Sigil-0.1.8
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7.3
 	o TiffIO-130e
