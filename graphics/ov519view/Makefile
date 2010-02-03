@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/02/03 05:40:23 obache Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/03 22:32:00 joerg Exp $
 #
 
 DISTNAME=	ov51x-1.65-1.11-mark
@@ -16,7 +16,9 @@ MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://home.384.jp/takam/bsd/NetBSD.html#ov519
 COMMENT=	USB cameras based OV519 Utility Programs
 
-INSTALLATION_DIRS=	${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 MAKE_ENV+=	${BSD_MAKE_ENV}
 
@@ -30,7 +32,7 @@ do-build:
 do-install:
 	for f in ov519shot ov519view ; do                       \
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}           \
-		${MAKE_PROGRAM} -f ${MAKE_FILE}.$$f install ;    \
+		${MAKE_PROGRAM} -f ${MAKE_FILE}.$$f install ${INSTALL_MAKE_FLAGS};    \
 	done
 
 .include "../../graphics/imlib/buildlink3.mk"

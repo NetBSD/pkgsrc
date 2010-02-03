@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.12 2007/09/04 21:11:58 drochner Exp $
+$NetBSD: patch-aa,v 1.13 2010/02/03 22:13:09 joerg Exp $
 
 --- Makefile.orig	2007-07-01 17:05:57.000000000 +0200
 +++ Makefile
@@ -68,16 +68,15 @@ $NetBSD: patch-aa,v 1.12 2007/09/04 21:11:58 drochner Exp $
  	@echo
  	@echo "--------------------------------------------------------------"
  	@echo
-@@ -478,9 +466,9 @@ uninstall:	uninstall-i18n
+@@ -478,9 +466,8 @@ uninstall:	uninstall-i18n
  install-default-config:
  	@echo
  	@echo "...Installing default config file..."
 -	@install -d $(CONFDIR)
 -	@cp src/tuxpaint.conf $(CONFDIR)
 -	@chmod 644 $(CONFDIR)/tuxpaint.conf
-+	@$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/examples/tuxpaint
-+	@$(CP) src/tuxpaint.conf $(PREFIX)/share/examples/tuxpaint
-+	@$(CHMOD) 644 $(PREFIX)/share/examples/tuxpaint/tuxpaint.conf
++	@$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(PREFIX)/share/examples/tuxpaint
++	@$(BSD_INSTALL_DATA) src/tuxpaint.conf ${DESTDIR}$(PREFIX)/share/examples/tuxpaint
  
  
  # Install example stamps

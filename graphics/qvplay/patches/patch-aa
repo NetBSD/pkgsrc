@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/09/17 03:46:32 jwise Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/03 22:24:06 joerg Exp $
 --- Makefile.in.orig	Wed May  5 10:24:39 1999
 +++ Makefile.in	Sun Jun 20 19:21:55 1999
 @@ -10,8 +10,8 @@
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/09/17 03:46:32 jwise Exp $
 -bindir	= /usr/local/bin
 -mandir  = /usr/local/man/man1
 +bindir	= $(PREFIX)/bin
-+mandir  = $(PREFIX)/man/man1
++mandir  = $(PREFIX)/${PKGMANDIR}/man1
  
  SRCS1	= tty.c command.c command1.c getuint.c jpeg.c ppm.c bmp.c qvplay.c
  OBJS1	= tty.o command.o command1.o getuint.o jpeg.o ppm.o bmp.o qvplay.o
@@ -22,12 +22,12 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/09/17 03:46:32 jwise Exp $
 -	$(INSTALL_PROGRAM) -o root -g bin -m 444 $(MAN1) $(mandir)/$(MAN1)
 -	$(INSTALL_PROGRAM) -o root -g bin -m 444 $(MAN2) $(mandir)/$(MAN2)
 -	$(INSTALL_PROGRAM) -o root -g bin -m 444 $(MAN3) $(mandir)/$(MAN3)
-+	$(INSTALL_PROGRAM) $(PROG1) $(bindir)/$(PROG1)
-+	$(INSTALL_PROGRAM) $(PROG2) $(bindir)/$(PROG2)
-+	$(INSTALL_PROGRAM) $(PROG3) $(bindir)/$(PROG3)
-+	$(INSTALL_DATA) $(MAN1) $(mandir)/$(MAN1)
-+	$(INSTALL_DATA) $(MAN2) $(mandir)/$(MAN2)
-+	$(INSTALL_DATA) $(MAN3) $(mandir)/$(MAN3)
++	$(INSTALL_PROGRAM) $(PROG1) ${DESTDIR}$(bindir)/$(PROG1)
++	$(INSTALL_PROGRAM) $(PROG2) ${DESTDIR}$(bindir)/$(PROG2)
++	$(INSTALL_PROGRAM) $(PROG3) ${DESTDIR}$(bindir)/$(PROG3)
++	$(INSTALL_DATA) $(MAN1) ${DESTDIR}$(mandir)/$(MAN1)
++	$(INSTALL_DATA) $(MAN2) ${DESTDIR}$(mandir)/$(MAN2)
++	$(INSTALL_DATA) $(MAN3) ${DESTDIR}$(mandir)/$(MAN3)
  depend: .depend
  .depend:
  	mkdep $(SRCS1)
