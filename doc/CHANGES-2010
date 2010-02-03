@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.498 2010/02/03 01:34:08 sno Exp $
+$NetBSD: CHANGES-2010,v 1.499 2010/02/03 07:06:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -600,3 +600,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-Rose-DBx-TestDB to 0.05 [sno 2010-02-03]
 	Updated net/p5-Net-Twitter to 3.11003 [sno 2010-02-03]
 	Updated devel/p5-Test-Fixture-DBIC-Schema to 0.03 [sno 2010-02-03]
+	Updated security/cvm to 0.96 [schmonz 2010-02-03]
