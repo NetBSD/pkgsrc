@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.509 2010/02/03 11:48:18 obache Exp $
+$NetBSD: CHANGES-2010,v 1.510 2010/02/03 12:41:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -611,3 +611,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/p5-Padre to 0.56 [sno 2010-02-03]
 	Updated devel/p5-Wx-Perl-DataWalker to 0.02nb1 [sno 2010-02-03]
 	Updated net/pear-Net_Sieve to 1.1.7 [obache 2010-02-03]
+	Added fonts/umefont-ttf version 0.412 [wiz 2010-02-03]
