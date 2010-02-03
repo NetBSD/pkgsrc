@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2010/02/03 09:46:42 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2010/02/03 09:52:32 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cppcheck
 PKG_SUPPORTED_OPTIONS=	qt
@@ -19,11 +19,13 @@ PLIST_SRC+=		PLIST PLIST.qt
 do-configure:
 	cd ${WRKSRC} && ${PREFIX}/qt4/bin/qmake
 
+.PHONY: link-build
 post-build: link-build
 link-build:
-	echo '#!/bin/sh' > ${WRKSRC}/cppcheck-gui
-	echo 'cd ${PREFIX}/share/cppcheck && ${PREFIX}/lib/cppcheck-gui "$@"' >> ${WRKSRC}/cppcheck-gui
+	${ECHO} '#!/bin/sh' > ${WRKSRC}/cppcheck-gui
+	${ECHO} 'cd ${PREFIX}/share/cppcheck && ${PREFIX}/lib/cppcheck-gui "$$@"' >> ${WRKSRC}/cppcheck-gui
 
+.PHONY: qt-install
 post-install: qt-install
 qt-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cli/cppcheck ${DESTDIR}${PREFIX}/bin
@@ -37,6 +39,7 @@ qt-install:
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .else
+.PHONY: main-install
 post-install: main-install
 main-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cppcheck ${DESTDIR}${PREFIX}/bin/
