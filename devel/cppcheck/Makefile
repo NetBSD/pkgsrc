@@ -1,22 +1,33 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/02 16:35:46 reed Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/03 09:46:42 wiz Exp $
 #
 
 DISTNAME=	cppcheck-1.40
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcheck/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://cppcheck.wiki.sourceforge.net/
-COMMENT=	Simple syntax checking of C/C++
+COMMENT=	Tool for static C/C++ code analysis
+LICENSE=	gnu-gpl-v3
 
-INSTALLATION_DIRS+=	bin
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c++
 
-# TODO: manpage is in docbook, needs to be converted
+.include "options.mk"
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cppcheck ${DESTDIR}${PREFIX}/bin/
+post-build: man-build
+man-build:
+	cd ${WRKSRC}/man && xsltproc --nonet \
+		--param man.charmap.use.subset "0" \
+		--param make.year.ranges "1" \
+		--param make.single.year.ranges "1" \
+		${PREFIX}/share/xsl/docbook/manpages/docbook.xsl \
+		cppcheck.1.xml
 
 .include "../../mk/bsd.pkg.mk"
