@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/12/15 14:17:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/02/03 16:18:28 wiz Exp $
 bin/castool
 bin/imgtool
 bin/mess
@@ -291,7 +291,9 @@ share/mess/artwork/mk1.zip
 share/mess/artwork/mk2.zip
 share/mess/artwork/mm4.zip
 share/mess/artwork/mm5.zip
+share/mess/artwork/mm50.zip
 share/mess/artwork/mpf1.zip
+share/mess/artwork/mpf1b.zip
 share/mess/artwork/nes.zip
 share/mess/artwork/pc1401.zip
 share/mess/artwork/pc1402.zip
@@ -300,6 +302,7 @@ share/mess/artwork/rebel5.zip
 share/mess/artwork/roma32.zip
 share/mess/artwork/ssystem3.zip
 share/mess/artwork/thomson.lay
+share/mess/artwork/thomson.zip
 share/mess/hash/a2600.hsi
 share/mess/hash/a5200.hsi
 share/mess/hash/a7800.hsi
