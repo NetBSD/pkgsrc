@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2010/02/02 14:05:59 adam Exp $
+# $NetBSD: Makefile,v 1.42 2010/02/03 14:21:16 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -44,7 +44,7 @@ do-install:
 .endfor
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic3 \
 	    ${DESTDIR}${QTPREFIX}/bin
-.for incl in corelib gui multimedia network opengl qt3support script scripttools sql svg xml script testlib 3rdparty/webkit/WebCore
+.for incl in corelib gui multimedia network opengl qt3support script scripttools sql svg xml xmlpatterns testlib 3rdparty/webkit/WebCore
 	cd ${WRKSRC}/src/${incl} && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
 .endfor
