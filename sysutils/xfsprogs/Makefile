@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/05/20 00:58:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/02/03 12:41:47 joerg Exp $
 
 DISTNAME=	xfsprogs-2.7.3.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -10,12 +10,17 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oss.sgi.com/projects/xfs/
 COMMENT=	XFS filesystem manipulation utilities
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake autoconf msgfmt
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=--enable-readline
 CONFIGURE_ENV+=	INSTALL_USER=${ROOT_USER} INSTALL_GROUP=${ROOT_GROUP}
 INSTALL_SH_OVERRIDE=	no
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			PKG_MAN_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 BUILD_TARGET=
