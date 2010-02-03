@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2007/03/05 20:14:33 darcy Exp $
+$NetBSD: patch-aa,v 1.6 2010/02/03 23:41:03 joerg Exp $
 
 --- GNUmakefile.orig	2004-11-04 17:47:34.000000000 -0500
 +++ GNUmakefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.5 2007/03/05 20:14:33 darcy Exp $
  WWWDIR=base.lilypond.org:/var/www/lilypond/download/fonts/
  
 -prefix=$(DESTDIR)/usr
-+prefix=$(PREFIX)
++prefix=${DESTDIR}$(PREFIX)
  docdir=$(prefix)/share/doc
  sysconfdir=$(DESTDIR)/etc
  
@@ -16,8 +16,8 @@ $NetBSD: patch-aa,v 1.5 2007/03/05 20:14:33 darcy Exp $
  
 -TEXDIR=$(prefix)/share/texmf
 -TEXCONFDIR=$(prefix)/share/texmf
-+TEXDIR=${PKG_LOCALTEXMFPREFIX}
-+TEXCONFDIR=${PKG_LOCALTEXMFPREFIX}
++TEXDIR=${DESTDIR}${PKG_LOCALTEXMFPREFIX}
++TEXCONFDIR=${DESTDIR}${PKG_LOCALTEXMFPREFIX}
  ##TEXCONFDIR=$(sysconfdir)/texmf
  
  PATHSUF=$(NAME)
