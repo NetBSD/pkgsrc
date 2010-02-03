@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/03 12:40:43 wiz Exp $
+lib/X11/fonts/TTF/ume-pgc4.ttf
+lib/X11/fonts/TTF/ume-pgc5.ttf
+lib/X11/fonts/TTF/ume-pgo4.ttf
+lib/X11/fonts/TTF/ume-pgo5.ttf
+lib/X11/fonts/TTF/ume-pgs4.ttf
+lib/X11/fonts/TTF/ume-pgs5.ttf
+lib/X11/fonts/TTF/ume-pmo3.ttf
+lib/X11/fonts/TTF/ume-pms3.ttf
+lib/X11/fonts/TTF/ume-tgc4.ttf
+lib/X11/fonts/TTF/ume-tgc5.ttf
+lib/X11/fonts/TTF/ume-tgo4.ttf
+lib/X11/fonts/TTF/ume-tgo5.ttf
+lib/X11/fonts/TTF/ume-tgs4.ttf
+lib/X11/fonts/TTF/ume-tgs5.ttf
+lib/X11/fonts/TTF/ume-tmo3.ttf
+lib/X11/fonts/TTF/ume-tms3.ttf
+lib/X11/fonts/TTF/ume-ugo4.ttf
+lib/X11/fonts/TTF/ume-ugo5.ttf
+share/doc/umefont/license.html
