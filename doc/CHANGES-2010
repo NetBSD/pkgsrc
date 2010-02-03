@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.511 2010/02/03 13:03:20 obache Exp $
+$NetBSD: CHANGES-2010,v 1.512 2010/02/03 13:53:01 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -613,3 +613,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/pear-Net_Sieve to 1.1.7 [obache 2010-02-03]
 	Added fonts/umefont-ttf version 0.412 [wiz 2010-02-03]
 	Updated devel/py-ZopeInterface to 3.5.3 [obache 2010-02-03]
+	Added devel/swt version 3.5.1.3555 [jmcneill 2010-02-03]
