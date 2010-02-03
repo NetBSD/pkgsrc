@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/01/11 03:11:37 smb Exp $
+$NetBSD: distinfo,v 1.8 2010/02/03 19:45:05 drochner Exp $
 
-SHA1 (gtkhtml2_viewer-0.22.tar.gz) = 2c972c31dc1fa1f64f1ae752202ec0e1d5f8d2c7
-RMD160 (gtkhtml2_viewer-0.22.tar.gz) = 27ca323eb31457fcbe6ce06ada719ea567d37268
-Size (gtkhtml2_viewer-0.22.tar.gz) = 713781 bytes
+SHA1 (gtkhtml2_viewer-0.26.tar.gz) = 81027bf0553490e11acc72ef2e77543b0eb54f88
+RMD160 (gtkhtml2_viewer-0.26.tar.gz) = e6fc55f6336bcea43297453bcdd0b66399e974c6
+Size (gtkhtml2_viewer-0.26.tar.gz) = 684799 bytes
