@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.518 2010/02/03 19:05:33 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.519 2010/02/03 21:46:21 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -620,3 +620,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/sdlmess to 0.136 [wiz 2010-02-03]
 	Updated misc/JBidwatcher to 2.1pre5 [wiz 2010-02-03]
 	Updated misc/dialog to 1.1.20100119 [wiz 2010-02-03]
+	Updated devel/p5-Class-C3 to 0.22 [seb 2010-02-03]
