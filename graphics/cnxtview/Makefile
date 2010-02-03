@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2010/02/01 02:52:51 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2010/02/03 05:35:00 obache Exp $
 #
 
 DISTNAME=	cnxtutil-0.00-alpha
 PKGNAME=	cnxtview-0.00a
 PKGREVISION=	5
 CATEGORIES=	graphics x11
-MASTER_SITES=	http://www.medias.ne.jp/~takam/bsd/
+MASTER_SITES=	http://home.384.jp/takam/bsd/
 
 MAINTAINER=	hamajima@NetBSD.org
-HOMEPAGE=	http://www.medias.ne.jp/~takam/bsd/NetBSD.html#webcamnote
+HOMEPAGE=	http://home.384.jp/takam/bsd/NetBSD.html#webcamnote
 COMMENT=	Creative WEBCAM Notebook Utility Programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
