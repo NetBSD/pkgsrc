@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8968 2010/02/03 16:18:39 wiz Exp $
+$NetBSD: TODO,v 1.8969 2010/02/03 17:06:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o GutenMark-20090216
-	o JBidwatcher-2.1pre5
 	o MAMEDiff-2.30
 	o Mesa-7.7
 	o MesaLib-7.7
