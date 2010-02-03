@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2009/12/09 10:30:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.27 2010/02/03 12:45:15 drochner Exp $
 bin/rhythmbox
 bin/rhythmbox-client
 lib/librhythmbox-core.la
@@ -66,11 +66,11 @@ lib/rhythmbox/plugins/context/tmpl/artist-tmpl.html
 lib/rhythmbox/plugins/context/tmpl/loading.html
 lib/rhythmbox/plugins/context/tmpl/lyrics-tmpl.html
 lib/rhythmbox/plugins/context/tmpl/main.css
-lib/rhythmbox/plugins/daap/daap-prefs.ui
-lib/rhythmbox/plugins/daap/daap-ui.xml
-lib/rhythmbox/plugins/daap/daap.rb-plugin
-lib/rhythmbox/plugins/daap/libdaap.la
-lib/rhythmbox/plugins/daap/rb-daap-glue.h
+${PLIST.daap}lib/rhythmbox/plugins/daap/daap-prefs.ui
+${PLIST.daap}lib/rhythmbox/plugins/daap/daap-ui.xml
+${PLIST.daap}lib/rhythmbox/plugins/daap/daap.rb-plugin
+${PLIST.daap}lib/rhythmbox/plugins/daap/libdaap.la
+${PLIST.daap}lib/rhythmbox/plugins/daap/rb-daap-glue.h
 lib/rhythmbox/plugins/generic-player/generic-player-ui.xml
 lib/rhythmbox/plugins/generic-player/generic-player.rb-plugin
 lib/rhythmbox/plugins/generic-player/libgeneric-player.la
