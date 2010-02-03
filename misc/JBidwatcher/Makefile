@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/08 07:47:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/03 17:05:58 wiz Exp $
 #
 
-DISTNAME=	JBidwatcher-2.1pre4
+DISTNAME=	JBidwatcher-2.1pre5
 CATEGORIES=	misc
-MASTER_SITES=	http://www.jbidwatcher.com/alpha/
+MASTER_SITES=	http://www.jbidwatcher.com/download/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=      bin libexec/JBidwatcher
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/JBidwatcher
-	${ECHO} "${PKG_JAVA_HOME}/bin/java -jar ${PREFIX}/libexec/JBidwatcher/${DISTNAME}.jar"' "$$@"' >> ${WRKSRC}/JBidwatcher
+	${ECHO} "${PKG_JAVA_HOME}/bin/java -Xmx512m -jar ${PREFIX}/libexec/JBidwatcher/${DISTNAME}.jar"' "$$@"' >> ${WRKSRC}/JBidwatcher
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/JBidwatcher ${DESTDIR}${PREFIX}/bin
