@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.515 2010/02/03 16:04:37 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.516 2010/02/03 16:18:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -617,3 +617,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/qt4-libs to 4.6.1nb3 [wiz 2010-02-03]
 	Updated editors/Sigil to 0.1.8 [wiz 2010-02-03]
 	Updated sysutils/cdrtools to 2.01.01alpha74 [wiz 2010-02-03]
+	Updated emulators/sdlmess to 0.136 [wiz 2010-02-03]
