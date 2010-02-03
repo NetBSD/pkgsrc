@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8957 2010/02/03 10:47:32 wiz Exp $
+$NetBSD: TODO,v 1.8958 2010/02/03 10:49:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -693,7 +693,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glpk-4.42
 	o glproto-1.4.11
 	o gmime-2.2.25
-	o gmime24-2.4.15
 	o gmp-5.0.0
 	o gnash-0.8.6
 	o gnet1-1.1.9
