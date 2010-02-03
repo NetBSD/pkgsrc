@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/01/11 03:11:37 smb Exp $
+$NetBSD: distinfo,v 1.4 2010/02/03 19:45:04 drochner Exp $
 
-SHA1 (archive-0.6.3.tar.gz) = 83484bde94f4c03c8bc43f07c186515ed9e5ac56
-RMD160 (archive-0.6.3.tar.gz) = 950bbb0f17dcaf21833d700d10f33d5761bbb825
-Size (archive-0.6.3.tar.gz) = 440777 bytes
+SHA1 (archive-0.6.6.tar.gz) = 2068bc65c6bce6ea9c367ad1ee39d6275b1df5a1
+RMD160 (archive-0.6.6.tar.gz) = 54941c90eafe211192014f6c330b129fdc250e4b
+Size (archive-0.6.6.tar.gz) = 428520 bytes
