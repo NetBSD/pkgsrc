@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/03 13:51:29 jmcneill Exp $
+share/java/swt.jar
+lib/jni/libswt-atk-gtk-${SWTVER}.so
+lib/jni/libswt-awt-gtk-${SWTVER}.so
+lib/jni/libswt-cairo-gtk-${SWTVER}.so
+lib/jni/libswt-glx-gtk-${SWTVER}.so
+lib/jni/libswt-gnome-gtk-${SWTVER}.so
+lib/jni/libswt-gtk-${SWTVER}.so
+lib/jni/libswt-pi-gtk-${SWTVER}.so
+lib/jni/libswt-xulrunner-gtk-${SWTVER}.so

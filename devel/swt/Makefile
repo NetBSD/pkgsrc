@@ -1,0 +1,70 @@
+# $NetBSD: Makefile,v 1.1.1.1 2010/02/03 13:51:29 jmcneill Exp $
+#
+
+SWTREL=		3.5.1
+SWTVER=		3555
+SWTDATE=	200909170800
+
+PKGNAME=	swt-${SWTREL}.${SWTVER}
+DISTNAME=	swt-${SWTREL}-gtk-linux-x86
+CATEGORIES=	devel
+MASTER_SITES=	http://download.eclipse.org/eclipse/downloads/drops/R-${SWTVER}-${SWTDATE}/
+EXTRACT_SUFX=	.zip
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.eclipse.org/
+COMMENT=	Open source widget toolkit for Java
+#LICENSE=	# TODO: (see mk/license.mk)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}
+USE_TOOLS+=	gmake
+USE_LANGUAGES=	c c++
+USE_JAVA2=	yes
+
+BUILD_DEPENDS+=	apache-ant>=1.7.1:../../devel/apache-ant
+
+BUILD_TARGETS=	all make_awt make_cairo make_xulrunner
+BUILD_LIBS=	swt-atk-gtk swt-awt-gtk swt-cairo-gtk swt-glx-gtk \
+		swt-gnome-gtk swt-gtk swt-pi-gtk swt-xulrunner-gtk
+
+PLIST_SUBST+=	SWTVER=${SWTVER}
+
+INSTALLATION_DIRS+=	share/java
+INSTALLATION_DIRS+=	lib/jni
+
+post-extract:
+	cd ${WRKSRC} && jar -xf ${WRKSRC}/src.zip
+	cp ${FILESDIR}/make_pkgsrc.mak ${WRKSRC}
+
+do-build:
+.for target in ${BUILD_TARGETS}
+	cd ${WRKSRC} && ${GMAKE} \
+	    JAVA_HOME=${PKG_JAVA_HOME} \
+	    LOWER_OPSYS=${LOWER_OPSYS} \
+	    -f make_pkgsrc.mak ${target}
+.endfor
+	${TEST} -d ${WRKSRC}/bin || mkdir ${WRKSRC}/bin
+	cd ${WRKSRC} && find org/eclipse/swt -type f -name \*.java | \
+	    xargs ${JAVA_BINPREFIX}-javac -source 1.4 -target 1.4 -d bin
+	cd ${WRKSRC}/bin && ${JAVA_BINPREFIX}-jar -cf ${WRKSRC}/swt.jar .
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/swt.jar \
+	    ${DESTDIR}${PREFIX}/share/java/swt.jar
+.for libname in ${BUILD_LIBS}
+	${INSTALL_LIB} ${WRKSRC}/lib${libname}-${SWTVER}.so \
+	    ${DESTDIR}${PREFIX}/lib/jni/lib${libname}-${SWTVER}.so
+.endfor
+
+.include "../../devel/atk/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/xulrunner/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/java-vm.mk"
+.include "../../mk/bsd.pkg.mk"
