@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1285 2010/02/02 16:37:58 reed Exp $
+# $NetBSD: Makefile,v 1.1286 2010/02/03 13:52:22 jmcneill Exp $
 #
 
 COMMENT=	Development utilities
@@ -1191,6 +1191,7 @@ SUBDIR+=	subversion-base
 SUBDIR+=	sunifdef
 SUBDIR+=	svk
 SUBDIR+=	swig
+SUBDIR+=	swt
 SUBDIR+=	syncdir
 SUBDIR+=	sysexits
 SUBDIR+=	tailor
