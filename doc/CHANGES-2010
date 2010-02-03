@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.503 2010/02/03 10:52:09 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.504 2010/02/03 11:02:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -605,3 +605,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/mercurial to 1.4.3 [wiz 2010-02-03]
 	Updated mail/gmime24 to 2.4.15 [wiz 2010-02-03]
 	Updated misc/mnemosyne to 1.2.2 [wiz 2010-02-03]
+	Updated games/gbrainy to 1.30 [wiz 2010-02-03]
