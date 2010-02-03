@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/05/12 02:25:39 smb Exp $
+$NetBSD: distinfo,v 1.5 2010/02/03 19:45:05 drochner Exp $
 
-SHA1 (fetchinfo-plugin-0.4.23.tar.gz) = 24fea1a1e5d24a4aa9a5e84ae51c857db376deec
-RMD160 (fetchinfo-plugin-0.4.23.tar.gz) = 47dd337b7cfccdd6091267bccf46992fe82e0b5b
-Size (fetchinfo-plugin-0.4.23.tar.gz) = 334692 bytes
+SHA1 (fetchinfo-plugin-0.4.24.tar.gz) = 350fda62d2bac61ab02d8a7bae110ba6b66fa30f
+RMD160 (fetchinfo-plugin-0.4.24.tar.gz) = 8551b7d34a59b5a4e2cecd76fba23e5f7bf62cb6
+Size (fetchinfo-plugin-0.4.24.tar.gz) = 335971 bytes
