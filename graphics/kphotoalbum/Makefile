@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/01/18 09:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/03 22:53:39 joerg Exp $
 #
 
 DISTNAME=		kphotoalbum-3.1.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics
 MASTER_SITES=		http://ktown.kde.org/kphotoalbum/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,14 +11,14 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ktown.kde.org/kphotoalbum/
 COMMENT=		Image organizer
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS+=		kimdaba-*
 
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		msgfmt pkg-config
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
