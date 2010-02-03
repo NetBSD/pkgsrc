@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2010/01/18 09:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/03 22:40:00 joerg Exp $
 #
 
 DISTNAME=	kphotools-0.2.1
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	kde graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kphotools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://kphotools.sourceforge.net/
 COMMENT=	KDE app which helps you creating fast online photo galleries in HTML
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
@@ -24,8 +26,6 @@ SUBST_STAGE.kphotools=	post-patch
 
 post-configure:
 	${RUN}${LN} -s ${FILESDIR}/pkgsrc_fixes.h ${BUILDLINK_DIR}/include/
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
