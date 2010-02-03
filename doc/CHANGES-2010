@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.514 2010/02/03 15:50:43 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.515 2010/02/03 16:04:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -616,3 +616,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/swt version 3.5.1.3555 [jmcneill 2010-02-03]
 	Updated x11/qt4-libs to 4.6.1nb3 [wiz 2010-02-03]
 	Updated editors/Sigil to 0.1.8 [wiz 2010-02-03]
+	Updated sysutils/cdrtools to 2.01.01alpha74 [wiz 2010-02-03]
