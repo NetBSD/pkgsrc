@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.501 2010/02/03 10:47:32 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.502 2010/02/03 10:49:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -603,3 +603,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/cvm to 0.96 [schmonz 2010-02-03]
 	Updated devel/cppcheck to 1.40nb1 [wiz 2010-02-03]
 	Updated devel/mercurial to 1.4.3 [wiz 2010-02-03]
+	Updated mail/gmime24 to 2.4.15 [wiz 2010-02-03]
