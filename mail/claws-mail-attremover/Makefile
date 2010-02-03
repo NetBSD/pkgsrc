@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2009/08/26 19:57:55 sno Exp $
+# $NetBSD: Makefile,v 1.13 2010/02/03 19:45:04 drochner Exp $
 #
 
-DISTNAME=	att_remover-1.0.10
-PKGNAME=	claws-mail-att_remover-1.0.10
-PKGREVISION=	1
+DISTNAME=	att_remover-1.0.11
+PKGNAME=	claws-mail-att_remover-1.0.11
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
