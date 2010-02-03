@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8963 2010/02/03 11:58:48 obache Exp $
+$NetBSD: TODO,v 1.8964 2010/02/03 11:59:36 obache Exp $
 
 Suggested new packages
 ======================
@@ -1060,7 +1060,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pear-Log-1.12.0 [pkg/42673]
 	o pear-Mail_Mime-1.6.0 [pkg/42684]
 	o pear-Net_SMTP-1.4.0 [pkg/42659]
-	o pear-Net_Sieve-1.1.7 [pkg/42680]
 	o pear-Net_Socket-1.0.9
 	o pear-Net_URL-1.0.15
 	o pear-Numbers_Roman-1.0.1
