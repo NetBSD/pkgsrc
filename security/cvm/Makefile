@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2009/06/30 00:07:22 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/03 07:06:12 schmonz Exp $
 #
 
-DISTNAME=		cvm-0.95
+DISTNAME=		cvm-0.96
 CATEGORIES=		security
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/cvm/
 COMMENT=		Credential Validation Modules
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
@@ -15,6 +18,7 @@ DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
+INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
 
 USE_LIBTOOL=		yes
 
