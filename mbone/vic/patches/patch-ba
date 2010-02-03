@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.1 2010/01/25 21:14:45 is Exp $
+$NetBSD: patch-ba,v 1.2 2010/02/03 21:14:22 is Exp $
 
---- /pkg_comp/obj/pkgsrc/mbone/vic/netbsd5/vic-2.8/Tcl.h.orig	1996-03-16 21:14:34.000000000 +0000
-+++ /pkg_comp/obj/pkgsrc/mbone/vic/netbsd5/vic-2.8/Tcl.h
+--- Tcl.h.orig	1996-03-16 21:14:34.000000000 +0000
++++ Tcl.h
 @@ -72,7 +72,7 @@ class Tcl {
  		if (Tcl_EvalFile(tcl_, (char*)file) != TCL_OK)
  			error(file);

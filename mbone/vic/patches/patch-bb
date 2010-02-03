@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.1 2010/01/25 21:14:45 is Exp $
+$NetBSD: patch-bb,v 1.2 2010/02/03 21:14:22 is Exp $
 
---- /pkg_comp/obj/pkgsrc/mbone/vic/netbsd5/vic-2.8/rate-variable.cc.orig	1996-03-16 21:13:57.000000000 +0000
-+++ /pkg_comp/obj/pkgsrc/mbone/vic/netbsd5/vic-2.8/rate-variable.cc
+--- rate-variable.cc.orig	1996-03-16 21:13:57.000000000 +0000
++++ rate-variable.cc
 @@ -61,13 +61,13 @@ class RateVariable : public TclObject {
  public:
  	RateVariable(const char* name) : TclObject(name) { }
