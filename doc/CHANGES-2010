@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.512 2010/02/03 13:53:01 jmcneill Exp $
+$NetBSD: CHANGES-2010,v 1.513 2010/02/03 15:41:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -614,3 +614,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/umefont-ttf version 0.412 [wiz 2010-02-03]
 	Updated devel/py-ZopeInterface to 3.5.3 [obache 2010-02-03]
 	Added devel/swt version 3.5.1.3555 [jmcneill 2010-02-03]
+	Updated x11/qt4-libs to 4.6.1nb3 [wiz 2010-02-03]
