@@ -1,0 +1,14 @@
+SpeedCrunch is a simple but powerful calculator.
+Among its features are:
+- high precision, up to 50 decimal digits
+- to be enjoyed using keyboard
+- result shown in scrollable window
+- history of last expressions (use up and down arrow)
+- built-in functions: abs, sqrt, pi, log, exp, ln, sin, cos, tan, sinh,
+  cosh, tanh, asin, acos, atan, arsinh, arcosh, artanh
+- postfix operator ! lets you compute factorials
+- support for variables, e.g try x=pi/3 and then sin(x)
+- special variable ans holds the last calculation result
+- percent operator, try e.g. 45%*75 or price/80%
+- angle mode: Alt+D for degrees, Alt+R for radians
+- automatic parentheses closing, e.g. cos(pi/4 becomes cos(pi/4)
