@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/11/21 15:28:36 sno Exp $
+# $NetBSD: Makefile,v 1.8 2010/02/03 01:26:46 sno Exp $
 #
 
-DISTNAME=	Net-Twitter-3.09000
+DISTNAME=	Net-Twitter-3.11003
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
@@ -18,12 +18,13 @@ DEPENDS+=	p5-DateTime>=0.5100:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Strptime>=1.0900:../../time/p5-DateTime-Format-Strptime
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-JSON-Any>=1.21:../../converters/p5-JSON-Any
-DEPENDS*=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
-DEPENDS+=	p5-Moose>=0.85:../../devel/p5-Moose
-DEPENDS+=	p5-MooseX-AttributeHelpers-[0-9]*:../../devel/p5-MooseX-AttributeHelpers
+DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
+DEPENDS+=	p5-Moose>=0.90:../../devel/p5-Moose
+#DEPENDS+=	p5-MooseX-AttributeHelpers-[0-9]*:../../devel/p5-MooseX-AttributeHelpers
 DEPENDS+=	p5-MooseX-MultiInitArg-[0-9]*:../../devel/p5-MooseX-MultiInitArg
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 DEPENDS+=	p5-Net-OAuth>=0.20:../../net/p5-Net-OAuth
+DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-URI>=1.40:../../www/p5-URI
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-namespace-autoclean>=0.09:../../devel/p5-namespace-autoclean
