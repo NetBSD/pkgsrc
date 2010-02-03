@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/02/03 14:05:01 drochner Exp $
+
+--- share/extcalc.desktop.orig	2007-10-27 21:02:25.000000000 +0200
++++ share/extcalc.desktop
+@@ -5,4 +5,4 @@ Exec=extcalc
+ Terminal=false
+ Type=Application
+ Categories=Qt;Utility
+-Icon=/usr/share/icons/icon48.png
++Icon=@PREFIX@/share/extcalc/icons/icon48.png
