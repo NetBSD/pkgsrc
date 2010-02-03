@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/02/03 11:19:12 wiz Exp $
+
+The simplest way to play one of these scenarios is to set the ALEPHONE_DATA
+variable to the path of that directory, e.g.
+
+$ ALEPHONE_DATA=/usr/pkg/share/AlephOne/Scenarios/Infinity alephone &
+
+Alternately, you can select the Map, Shapes, Sounds, etc to use individually
+from within the game UI, but that is more tedious.
+
+The "Read Me M1A1.html" file may also be of interest.
+===========================================================================
