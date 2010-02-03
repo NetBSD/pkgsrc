@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.500 2010/02/03 09:46:52 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.501 2010/02/03 10:47:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -602,3 +602,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-Fixture-DBIC-Schema to 0.03 [sno 2010-02-03]
 	Updated security/cvm to 0.96 [schmonz 2010-02-03]
 	Updated devel/cppcheck to 1.40nb1 [wiz 2010-02-03]
+	Updated devel/mercurial to 1.4.3 [wiz 2010-02-03]
