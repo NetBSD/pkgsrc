@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/07/15 21:09:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/02/03 13:03:08 obache Exp $
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -7,11 +7,8 @@ ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/zope/interface/DEPENDENCIES.cfg
-${PYSITELIB}/zope/interface/PUBLICATION.cfg
 ${PYSITELIB}/zope/interface/README.ru.txt
 ${PYSITELIB}/zope/interface/README.txt
-${PYSITELIB}/zope/interface/SETUP.cfg
 ${PYSITELIB}/zope/interface/__init__.py
 ${PYSITELIB}/zope/interface/__init__.pyc
 ${PYSITELIB}/zope/interface/__init__.pyo
@@ -23,6 +20,7 @@ ${PYSITELIB}/zope/interface/_zope_interface_coptimizations.so
 ${PYSITELIB}/zope/interface/adapter.py
 ${PYSITELIB}/zope/interface/adapter.pyc
 ${PYSITELIB}/zope/interface/adapter.pyo
+${PYSITELIB}/zope/interface/adapter.ru.txt
 ${PYSITELIB}/zope/interface/adapter.txt
 ${PYSITELIB}/zope/interface/advice.py
 ${PYSITELIB}/zope/interface/advice.pyc
@@ -51,6 +49,9 @@ ${PYSITELIB}/zope/interface/common/tests/basemapping.pyo
 ${PYSITELIB}/zope/interface/common/tests/test_idatetime.py
 ${PYSITELIB}/zope/interface/common/tests/test_idatetime.pyc
 ${PYSITELIB}/zope/interface/common/tests/test_idatetime.pyo
+${PYSITELIB}/zope/interface/common/tests/test_import_interfaces.py
+${PYSITELIB}/zope/interface/common/tests/test_import_interfaces.pyc
+${PYSITELIB}/zope/interface/common/tests/test_import_interfaces.pyo
 ${PYSITELIB}/zope/interface/declarations.py
 ${PYSITELIB}/zope/interface/declarations.pyc
 ${PYSITELIB}/zope/interface/declarations.pyo
@@ -62,6 +63,7 @@ ${PYSITELIB}/zope/interface/exceptions.pyc
 ${PYSITELIB}/zope/interface/exceptions.pyo
 ${PYSITELIB}/zope/interface/human.ru.txt
 ${PYSITELIB}/zope/interface/human.txt
+${PYSITELIB}/zope/interface/index.txt
 ${PYSITELIB}/zope/interface/interface.py
 ${PYSITELIB}/zope/interface/interface.pyc
 ${PYSITELIB}/zope/interface/interface.pyo
@@ -123,3 +125,4 @@ ${PYSITELIB}/zope/interface/tests/unitfixtures.pyo
 ${PYSITELIB}/zope/interface/verify.py
 ${PYSITELIB}/zope/interface/verify.pyc
 ${PYSITELIB}/zope/interface/verify.pyo
+${PYSITELIB}/zope/interface/verify.txt
