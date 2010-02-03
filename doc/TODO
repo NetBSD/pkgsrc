@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8955 2010/02/03 07:53:23 taca Exp $
+$NetBSD: TODO,v 1.8956 2010/02/03 10:15:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -636,7 +636,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-mutt-misc-1.0.1
 	o font-sony-misc-1.0.1
 	o font-util-1.1.1
-	o fotoxx-9.4
+	o fotoxx-9.5
 	o freeciv-2.1.10
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -693,7 +693,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glpk-4.42
 	o glproto-1.4.11
 	o gmime-2.2.25
-	o gmime24-2.4.14
+	o gmime24-2.4.15
 	o gmp-5.0.0
 	o gnash-0.8.6
 	o gnet1-1.1.9
@@ -1315,7 +1315,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ted-2.17
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
-	o texmaker-1.9.2
+	o texmaker-1.9.9
 	o tfmxplay-1.1.6
 	o thin-1.0.0
 	o thoth-0.2.1
