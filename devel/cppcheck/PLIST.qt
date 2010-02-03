@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.qt,v 1.1 2010/02/03 09:46:42 wiz Exp $
+bin/cppcheck-gui
+lib/cppcheck-gui
+share/cppcheck/cppcheck_de.qm
+share/cppcheck/cppcheck_en.qm
+share/cppcheck/cppcheck_fi.qm
+share/cppcheck/cppcheck_nl.qm
+share/cppcheck/cppcheck_pl.qm
+share/cppcheck/cppcheck_ru.qm
+share/cppcheck/cppcheck_se.qm
