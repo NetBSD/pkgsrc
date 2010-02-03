@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/01/18 09:58:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/03 21:55:04 joerg Exp $
 #
 
 DISTNAME=		kdissert-1.0.7
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://freehackers.org/~tnagy/kdissert/
 COMMENT=		Mindmapping-like tool to generate text templates
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
@@ -28,7 +30,7 @@ do-build:
 do-install:
 	${RUN} ${_ULIMIT_CMD} \
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-	${PYTHONBIN} waf install
+	${PYTHONBIN} waf install --destdir=${DESTDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

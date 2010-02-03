@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/18 09:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/03 22:15:27 joerg Exp $
 #
 
 DISTNAME=	spca5xx-20060402
@@ -16,9 +16,13 @@ MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://www.medias.ne.jp/~takam/bsd/NetBSD.html#spca561
 COMMENT=	USB Cameras based SPCA5xx Utilities
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/drivers/usb
 MAKE_ENV+=	NOGCCERROR=
 MAKE_ENV+=	${BSD_MAKE_ENV}
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
