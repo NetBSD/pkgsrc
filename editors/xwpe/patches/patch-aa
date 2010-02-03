@@ -1,8 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/06 07:58:49 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/03 21:35:42 joerg Exp $
 
---- Makefile.in.orig	2003-10-30 02:15:04.000000000 +0100
-+++ Makefile.in	2003-10-30 02:21:43.000000000 +0100
-@@ -14,8 +14,7 @@
+--- Makefile.in.orig	2002-06-05 02:53:50.000000000 +0000
++++ Makefile.in
+@@ -9,13 +9,12 @@ srcdir=		@srcdir@
+ #Destination Directory
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+-DESTDIR=@bindir@
++BINDIR=@bindir@
+ LIBDIR=@libdir@
  XWPELIBDIR=	$(LIBDIR)/xwpe
  MANDIR=@mandir@
  
@@ -12,7 +18,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/07/06 07:58:49 xtraeme Exp $
  DEFS=@DEFS@ -DLIBRARY_DIR=\"$(XWPELIBDIR)\" -DSELECTION
  INSTALL=	cp
  LN_S=	@LN_S@
-@@ -91,11 +90,11 @@
+@@ -91,11 +90,11 @@ HFILES=		attrb.h edit.h keys.h \
  
  xwpe:	$(OFILES) $(X_OFILES) $(T_OFILES)
  	$(CC) $(CFLAGS) $(DEFS) $(OFILES) $(X_OFILES) $(T_OFILES) \
@@ -26,40 +32,46 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/07/06 07:58:49 xtraeme Exp $
  
  libxwpe-term.so:	$(T_OFILES)
  	$(CC) -shared $(T_OFILES) -o libxwpe-term.so
-@@ -115,36 +114,29 @@
+@@ -115,36 +114,27 @@ distclean:
  # Bug Note: Currently xwpe and xwe are installed even if X windows versions
  # are not compiled.  (They will function as wpe and we respectively.)
  install_fst:	xwpe
 -	if test ! -d $(DESTDIR); then mkdir -p $(DESTDIR); fi
 -	if test ! -d $(XWPELIBDIR); then mkdir -p $(XWPELIBDIR); fi
-+	if test ! -d $(DESTDIR); then ${BSD_INSTALL_DATA_DIR} $(DESTDIR); fi
-+	if test ! -d $(XWPELIBDIR); then ${BSD_INSTALL_DATA_DIR} $(XWPELIBDIR); fi
- 	rm -f $(DESTDIR)/wpe $(DESTDIR)/xwpe $(DESTDIR)/we $(DESTDIR)/xwe
+-	rm -f $(DESTDIR)/wpe $(DESTDIR)/xwpe $(DESTDIR)/we $(DESTDIR)/xwe
 -	$(INSTALL) xwpe $(DESTDIR)/we
 -	chmod ugo+x $(DESTDIR)/we
-+	${BSD_INSTALL_PROGRAM} xwpe $(DESTDIR)/we
- 	(cd $(DESTDIR) && $(LN_S) we xwe)
- 	(cd $(DESTDIR) && $(LN_S) we xwpe)
- 	(cd $(DESTDIR) && $(LN_S) we wpe)
- 	rm -f $(XWPELIBDIR)/help.xwpe
- 	if test ! -f $(XWPELIBDIR)/syntax_def; then  \
+-	(cd $(DESTDIR) && $(LN_S) we xwe)
+-	(cd $(DESTDIR) && $(LN_S) we xwpe)
+-	(cd $(DESTDIR) && $(LN_S) we wpe)
+-	rm -f $(XWPELIBDIR)/help.xwpe
+-	if test ! -f $(XWPELIBDIR)/syntax_def; then  \
 -	  $(INSTALL) syntax_def $(XWPELIBDIR)/syntax_def; \
 -	  chmod ugo=r $(XWPELIBDIR)/syntax_def; fi
 -	if test ! -d $(MANDIR)/man1; then mkdir -p $(MANDIR)/man1; fi
-+	  ${BSD_INSTALL_DATA} syntax_def $(XWPELIBDIR)/syntax_def; fi
-+	if test ! -d $(MANDIR)/man1; then ${BSD_INSTALL_MAN_DIR} $(MANDIR)/man1; fi
- 	rm -f $(MANDIR)/man1/xwpe.1 $(MANDIR)/man1/xwe.1 
- 	rm -f $(MANDIR)/man1/wpe.1 $(MANDIR)/man1/we.1 
+-	rm -f $(MANDIR)/man1/xwpe.1 $(MANDIR)/man1/xwe.1 
+-	rm -f $(MANDIR)/man1/wpe.1 $(MANDIR)/man1/we.1 
 -	$(INSTALL) xwe.1 wpe.1 we.1 $(MANDIR)/man1
 -	chmod ugo=r $(MANDIR)/man1/xwe.1 
 -	chmod ugo=r $(MANDIR)/man1/wpe.1 $(MANDIR)/man1/we.1 
-+	${BSD_INSTALL_MAN} xwe.1 wpe.1 we.1 $(MANDIR)/man1
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(XWPELIBDIR)
++	rm -f ${DESTDIR}$(BINDIR)/wpe ${DESTDIR}$(BINDIR)/xwpe ${DESTDIR}$(BINDIR)/we ${DESTDIR}$(BINDIR)/xwe
++	${BSD_INSTALL_PROGRAM} xwpe ${DESTDIR}$(BINDIR)/we
++	(cd ${DESTDIR}$(BINDIR) && $(LN_S) we xwe)
++	(cd ${DESTDIR}$(BINDIR) && $(LN_S) we xwpe)
++	(cd ${DESTDIR}$(BINDIR) && $(LN_S) we wpe)
++	rm -f ${DESTDIR}$(XWPELIBDIR)/help.xwpe
++	if test ! -f ${DESTDIR}$(XWPELIBDIR)/syntax_def; then  \
++	  ${BSD_INSTALL_DATA} syntax_def ${DESTDIR}$(XWPELIBDIR)/syntax_def; fi
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}$(MANDIR)/man1
++	${BSD_INSTALL_MAN} xwe.1 wpe.1 we.1 ${DESTDIR}$(MANDIR)/man1
  	if test -f libxwpe-x11.so; then \
 -	  $(INSTALL) libxwpe-x11.so $(XWPELIBDIR)/libxwpe-x11.so; fi
-+	  ${BSD_INSTALL_DATA} libxwpe-x11.so $(XWPELIBDIR)/libxwpe-x11.so; fi
++	  ${BSD_INSTALL_DATA} libxwpe-x11.so ${DESTDIR}$(XWPELIBDIR)/libxwpe-x11.so; fi
  	if test -f libxwpe-term.so; then \
 -	  $(INSTALL) libxwpe-term.so $(XWPELIBDIR)/libxwpe-term.so; fi
-+	  ${BSD_INSTALL_DATA} libxwpe-term.so $(XWPELIBDIR)/libxwpe-term.so; fi
++	  ${BSD_INSTALL_DATA} libxwpe-term.so ${DESTDIR}$(XWPELIBDIR)/libxwpe-term.so; fi
  
  install:	install_fst
 -	$(INSTALL) help.xwpe_eng $(XWPELIBDIR)/help.xwpe
@@ -68,9 +80,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/07/06 07:58:49 xtraeme Exp $
 -	chmod ugo=r $(XWPELIBDIR)/help.key
 -	$(INSTALL) xwpe.1_eng $(MANDIR)/man1/xwpe.1
 -	chmod ugo=r $(MANDIR)/man1/xwpe.1
-+	${BSD_INSTALL_DATA} help.xwpe_eng $(XWPELIBDIR)/help.xwpe
-+	${BSD_INSTALL_DATA} help.key_eng $(XWPELIBDIR)/help.key
-+	${BSD_INSTALL_DATA} xwpe.1_eng $(MANDIR)/man1/xwpe.1
++	${BSD_INSTALL_DATA} help.xwpe_eng ${DESTDIR}$(XWPELIBDIR)/help.xwpe
++	${BSD_INSTALL_DATA} help.key_eng ${DESTDIR}$(XWPELIBDIR)/help.key
++	${BSD_INSTALL_DATA} xwpe.1_eng ${DESTDIR}$(MANDIR)/man1/xwpe.1
  
  # German install uses old documention as no updated version is available
  install_german:	install_fst
