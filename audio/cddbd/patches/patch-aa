@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2010/02/01 01:38:42 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/03 14:43:57 joerg Exp $
 
 --- install.sh.orig	1996-12-22 03:49:54.000000000 +0000
 +++ install.sh
@@ -78,7 +78,31 @@ $NetBSD: patch-aa,v 1.4 2010/02/01 01:38:42 joerg Exp $
  		return 0
  	else
  		$ECHO "\t$2 NOT installed"
-@@ -330,7 +328,7 @@ done
+@@ -271,23 +269,6 @@ then
+ 	doexit 1
+ fi
+ 
+-# Check privilege
+-if [ "$OWNER" != "root" ]
+-then
+-	$ECHO "You are not the super-user. You should be sure to specify"
+-	$ECHO "install directories that you have the proper write permissions"
+-	$ECHO "for.\n"
+-
+-	YNDEF=n
+-	getyn "Proceed anyway"
+-	if [ $? -ne 0 ]
+-	then
+-		logerr -p "Not super user: installation aborted by user"
+-		doexit 1
+-	fi
+-fi
+-
+-
+ $ECHO "\nInstalling \"cddbd\" CDDB Protocol Server $CDDBD_VER by Steve Scherf"
+ 
+ 
+@@ -330,7 +311,7 @@ done
  
  # Find other directories
  
@@ -87,7 +111,7 @@ $NetBSD: patch-aa,v 1.4 2010/02/01 01:38:42 joerg Exp $
  WORKDIR=${BASEDIR}
  CDDBDIR=`dirname ${BASEDIR}`
  
-@@ -588,7 +586,7 @@ fi
+@@ -588,7 +569,7 @@ fi
  
  $ECHO "permissions:  default connect nopost noupdate noget" >> access
  
@@ -96,7 +120,7 @@ $NetBSD: patch-aa,v 1.4 2010/02/01 01:38:42 joerg Exp $
  if getyn "Do you want to create the motd file now"
  then
  	if [ "$EDITOR" = "" ]
-@@ -624,10 +622,10 @@ makedir $WORKDIR $DPERM $OWNID $GRPID
+@@ -624,10 +605,10 @@ makedir $WORKDIR $DPERM $OWNID $GRPID
  $ECHO "\nInstalling cddbd files..."
  
  # Binaries
@@ -109,7 +133,7 @@ $NetBSD: patch-aa,v 1.4 2010/02/01 01:38:42 joerg Exp $
  instfile sites $SITE $FPERM $OWNID $GRPID
  
  if [ -f motd ]
-@@ -635,7 +633,7 @@ then
+@@ -635,7 +616,7 @@ then
  	instfile motd $MOTD $FPERM $OWNID $GRPID
  fi
  
