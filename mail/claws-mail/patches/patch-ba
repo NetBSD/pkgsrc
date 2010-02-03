@@ -1,0 +1,34 @@
+$NetBSD: patch-ba,v 1.1 2010/02/03 19:45:04 drochner Exp $
+
+--- src/plugins/smime/smime.c.orig	2010-01-31 10:07:40.000000000 +0000
++++ src/plugins/smime/smime.c
+@@ -420,7 +420,9 @@ static MimeInfo *smime_decrypt(MimeInfo 
+ 	encinfo = mimeinfo;
+ 
+ 	cipher = sgpgme_data_from_mimeinfo(encinfo);
++#if 0
+ 	gpgme_data_set_encoding(cipher, GPGME_DATA_ENCODING_BASE64);
++#endif
+ 	plain = sgpgme_decrypt_verify(cipher, &sigstat, ctx);
+ 
+ 	gpgme_data_release(cipher);
+@@ -791,6 +793,9 @@ gboolean smime_encrypt(MimeInfo *mimeinf
+ 	encmultipart->subtype = g_strdup("x-pkcs7-mime");
+ 	g_hash_table_insert(encmultipart->typeparameters, g_strdup("name"),
+                             g_strdup("smime.p7m"));
++	g_hash_table_insert(encmultipart->typeparameters,
++			    g_strdup("smime-type"),
++			    g_strdup("enveloped-data"));
+ 	
+ 	encmultipart->disposition = DISPOSITIONTYPE_ATTACHMENT;
+ 	g_hash_table_insert(encmultipart->dispositionparameters, g_strdup("filename"),
+@@ -827,7 +832,9 @@ gboolean smime_encrypt(MimeInfo *mimeinf
+ 	gpgme_data_new(&gpgenc);
+ 	cm_gpgme_data_rewind(gpgtext);
+ 	
++#if 0
+ 	gpgme_data_set_encoding(gpgenc, GPGME_DATA_ENCODING_BASE64);
++#endif
+ 	gpgme_op_encrypt(ctx, kset, GPGME_ENCRYPT_ALWAYS_TRUST, gpgtext, gpgenc);
+ 
+ 	gpgme_release(ctx);
