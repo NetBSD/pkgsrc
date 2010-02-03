@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8964 2010/02/03 11:59:36 obache Exp $
+$NetBSD: TODO,v 1.8965 2010/02/03 13:03:20 obache Exp $
 
 Suggested new packages
 ======================
@@ -1122,7 +1122,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-TPG-3.0.5
 	o py-TTFQuery-1.0.0
 	o py-ZODB-3.2.10
-	o py-ZopeInterface-3.5.3 [pkg/42668]
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-4.8.2
 	o py-checker-0.8.17
