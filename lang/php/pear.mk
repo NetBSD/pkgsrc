@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.16 2010/02/03 11:44:35 obache Exp $
+# $NetBSD: pear.mk,v 1.17 2010/02/03 12:22:18 obache Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -34,7 +34,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-[0-9]*:../../lang/pear
 PEAR_CMD=	${PREFIX}/bin/pear
 PEAR_LIB=	lib/php
 .if ${_USE_DESTDIR} != "no"
-PEAR_DESTDIR=	-R ${DESTDIR} -n -f
+PEAR_DESTDIR=	-P ${DESTDIR} -n -f
 .endif
 
 # Dynamic PLIST, generated via a helper PHP script, which parses the package
