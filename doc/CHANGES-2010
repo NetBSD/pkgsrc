@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.520 2010/02/03 22:35:08 seb Exp $
+$NetBSD: CHANGES-2010,v 1.521 2010/02/03 23:26:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -622,3 +622,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/dialog to 1.1.20100119 [wiz 2010-02-03]
 	Updated devel/p5-Class-C3 to 0.22 [seb 2010-02-03]
 	Updated www/p5-Alien-GvaScript to 1.21 [seb 2010-02-03]
+	Updated devel/scmgit-base to 1.6.6.1 [minskim 2010-02-03]
+	Updated devel/scmgit-docs to 1.6.6.1 [minskim 2010-02-03]
+	Updated devel/scmgit to 1.6.6.1 [minskim 2010-02-03]
