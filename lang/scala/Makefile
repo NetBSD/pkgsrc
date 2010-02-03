@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/23 10:50:45 yyamano Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/03 13:01:04 joerg Exp $
 
 DISTNAME=	scala-2.7.7
 CATEGORIES=	lang
@@ -28,7 +28,7 @@ SUBST_SED.scala+=	-e 's,@SCALA_HOME@,${SCALA_HOME},g'
 
 PLIST_SUBST+=	DISTNAME=${DISTNAME}
 
-INSTALLATION_DIRS=	bin man share/${DISTNAME}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/${DISTNAME}
 
 post-extract:
 	@${RM}  ${WRKSRC}/bin/*.bat
