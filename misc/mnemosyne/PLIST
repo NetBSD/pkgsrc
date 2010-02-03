@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/02/03 10:51:59 wiz Exp $
 bin/mnemosyne
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -91,11 +91,14 @@ ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_es.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_fa.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_fr.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_he.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_hu.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_it.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_ja.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_nb_no.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_nl.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_pl.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_pt_BR.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_tr.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_zh_CN.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_zh_HK.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_zh_SG.qm
@@ -107,6 +110,7 @@ ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_de.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_es.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_fr.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_he.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_hu.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_it.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_ja.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_nb.qm
@@ -143,9 +147,6 @@ ${PYSITELIB}/mnemosyne/pyqt_ui/product_tour_frm.pyo
 ${PYSITELIB}/mnemosyne/pyqt_ui/qtextedit2.py
 ${PYSITELIB}/mnemosyne/pyqt_ui/qtextedit2.pyc
 ${PYSITELIB}/mnemosyne/pyqt_ui/qtextedit2.pyo
-${PYSITELIB}/mnemosyne/pyqt_ui/scrolllabel.py
-${PYSITELIB}/mnemosyne/pyqt_ui/scrolllabel.pyc
-${PYSITELIB}/mnemosyne/pyqt_ui/scrolllabel.pyo
 ${PYSITELIB}/mnemosyne/pyqt_ui/sound.py
 ${PYSITELIB}/mnemosyne/pyqt_ui/sound.pyc
 ${PYSITELIB}/mnemosyne/pyqt_ui/sound.pyo
