@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2010/01/18 09:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2010/02/03 22:59:13 joerg Exp $
 #
 
 DISTNAME=	hp2xx-3.4.4
@@ -10,13 +10,19 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/hp2xx/hp2xx.html
 COMMENT=	HPGL converter and previewer
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_DIRS=	sources
 USE_TOOLS+=	makeinfo
-MAKE_FLAGS=	prefix=${PREFIX:Q}					\
-		mandir=${PREFIX:Q}/${PKGMANDIR:Q}			\
-		infodir=${PREFIX:Q}/${PKGINFODIR:Q}
+MAKE_FLAGS=	prefix=${PREFIX}					\
+		mandir=${PREFIX}/${PKGMANDIR}				\
+		infodir=${PREFIX}/${PKGINFODIR}
 MAKE_ENV+=	XLDFLAGS=${LDFLAGS:Q} XCPPFLAGS=${CPPFLAGS:Q}
 INFO_FILES=	# PLIST
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}			\
+		mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}			\
+		infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
 
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1
 
