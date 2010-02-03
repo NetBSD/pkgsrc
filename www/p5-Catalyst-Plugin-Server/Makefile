@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/02/02 11:23:12 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/03 08:37:02 tnn Exp $
 
 DISTNAME=	Catalyst-Plugin-Server-0.24
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ BROKEN=		Catalyst::Plugin::Server must not be used with RPC::XML>0.67
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.66:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-RPC-XML>=0.64:../../net/p5-RPC-XML
-DEPENDS+=	p5-RPC-XML<=0.67:../../net/p5-RPC-XML
+#DEPENDS+=	p5-RPC-XML<=0.67:../../net/p5-RPC-XML
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Catalyst/Plugin/Server/.packlist
