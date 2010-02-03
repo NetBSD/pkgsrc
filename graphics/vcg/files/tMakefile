@@ -17,7 +17,7 @@
 # /*                                                                    */
 # /*--------------------------------------------------------------------*/
 #
-# $NetBSD: tMakefile,v 1.5 2006/09/02 20:47:03 rillig Exp $
+# $NetBSD: tMakefile,v 1.6 2010/02/03 22:22:53 joerg Exp $
 # FreeBSD Id: tMakefile,v 1.1.1.1 1995/02/19 09:25:45 hsu Exp $
 #
 # FreeBSD Log: tMakefile,v $
@@ -39,12 +39,12 @@ SHELL = /bin/sh
 # where the binaries go
 # BINDIR = /usr/local/bin/
 # BINDIR = /RW/esprit/users/sander/PUBLIC/CMD/
-BINDIR = ${PREFIX}/bin
+BINDIR = ${DESTDIR}${PREFIX}/bin
 
 # where the manual pages go
 # MANDIR = /usr/local/man/manl/
 # MANDIR = /RW/esprit/users/sander/PUBLIC/MAN/
-MANDIR = ${PREFIX}/${PKGMANDIR}/manl
+MANDIR = ${DESTDIR}${PREFIX}/${PKGMANDIR}/manl
 
 # what the manual extension is
 MANEXT = l

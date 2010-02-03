@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/06/30 00:07:17 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/03 22:22:53 joerg Exp $
 
 DISTNAME=	vcg.1.30.r3.17
 PKGNAME=	vcg-1.30
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Visualization Tool for compiler graphs
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/vcg.1.30
@@ -28,11 +29,11 @@ pre-patch:
 	${CP} ${FILESDIR}/globals.h ${WRKSRC}/preconf/X11ccDragonFly
 	${CP} ${FILESDIR}/tMakefile ${WRKSRC}/preconf/X11ccDragonFly
 
+INSTALLATION_DIRS+=	share/doc/vcg share/examples/vcg
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vcg
-	${INSTALL_DATA} ${WRKSRC}/doc/visual.ps  ${PREFIX}/share/doc/vcg
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/vcg
-	${INSTALL_DATA} ${WRKSRC}/expl/*.vcg ${PREFIX}/share/examples/vcg
+	${INSTALL_DATA} ${WRKSRC}/doc/visual.ps ${DESTDIR}${PREFIX}/share/doc/vcg
+	${INSTALL_DATA} ${WRKSRC}/expl/*.vcg ${DESTDIR}${PREFIX}/share/examples/vcg
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
