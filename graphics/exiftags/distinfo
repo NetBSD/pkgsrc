@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2007/12/17 11:16:44 drochner Exp $
+$NetBSD: distinfo,v 1.8 2010/02/03 23:25:05 joerg Exp $
 
 SHA1 (exiftags-1.01.tar.gz) = 06636feb7d5c5835da01d5da8cd0f4a291d23fd8
 RMD160 (exiftags-1.01.tar.gz) = 59549c222469cdc55bb74452e4cd458d5b545684
 Size (exiftags-1.01.tar.gz) = 70921 bytes
-SHA1 (patch-aa) = 69f55114465d53a957b038f17e1e82ca699baf78
+SHA1 (patch-aa) = 1a162b8ac6a3719fce398a2a6296575ca33ec22a
