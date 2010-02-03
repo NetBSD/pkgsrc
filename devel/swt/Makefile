@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/03 16:14:35 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/03 18:26:53 tnn Exp $
 #
 
 SWTREL=		3.5.1
@@ -66,5 +66,9 @@ do-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt+=	build
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
