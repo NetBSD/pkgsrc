@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.4 2010/01/25 21:14:45 is Exp $
+$NetBSD: patch-ae,v 1.5 2010/02/03 21:14:22 is Exp $
 
---- /pkg_comp/obj/pkgsrc/mbone/vic/netbsd5/vic-2.8/tkStripchart.c.orig	1996-03-16 21:14:00.000000000 +0000
-+++ /pkg_comp/obj/pkgsrc/mbone/vic/netbsd5/vic-2.8/tkStripchart.c
+--- tkStripchart.c.orig	1996-03-16 21:14:00.000000000 +0000
++++ tkStripchart.c
 @@ -148,7 +148,7 @@ struct strip_struct {
  	int scrollrequired;
  	int guarantee_draw;
