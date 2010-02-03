@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/03 14:09:17 drochner Exp $
+
+SHA1 (speedcrunch-0.10.1.tar.gz) = 385828ae8900dd4caee7fa437a2fb35f224d540a
+RMD160 (speedcrunch-0.10.1.tar.gz) = 1a3b81d979b95a0c88e65add28736e5960c19bad
+Size (speedcrunch-0.10.1.tar.gz) = 1722124 bytes
+SHA1 (patch-aa) = ca2f19a98b74fa5d8f2250c6914b72c68f2b73aa

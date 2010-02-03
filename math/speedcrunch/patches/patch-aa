@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/03 14:09:17 drochner Exp $
+
+--- gui/mainwindow.cpp.orig	2008-05-22 21:45:21.000000000 +0000
++++ gui/mainwindow.cpp
+@@ -341,16 +341,20 @@ QTranslator * MainWindow::Private::creat
+   return translator;
+ #else
+ 
++#if 0
+   BrInitError error;
+   if ( br_init( & error ) == 0 && error != BR_INIT_ERROR_DISABLED )
+   {
+       qDebug( "Warning: BinReloc failed to initialize (error code %d)", error );
+       qDebug( "Will fallback to hardcoded default path." );
+   }
++#endif
+ 
+-  char * dataDir = br_find_data_dir( 0 );
++  char * dataDir = "@PREFIX@/share";
+   QString localeDir = QString( dataDir ) + "/speedcrunch/locale";
++#if 0
+   free( dataDir );
++#endif
+   if ( translator->load( localeFile, localeDir ) )
+     return translator;
+   else
+@@ -1004,17 +1008,21 @@ void MainWindow::Private::createBookDock
+       appPath.remove( ii, appPath.length() );
+   booksDir = appPath + '/' + QString( "books/" );
+ #else
++#if 0
+   BrInitError error;
+   if ( br_init( & error ) == 0 && error != BR_INIT_ERROR_DISABLED )
+   {
+       qDebug( "Warning: BinReloc failed to initialize (error code %d)", error );
+       qDebug( "Will fallback to hardcoded default path." );
+   }
++#endif
+ 
+-  char * dataDir = br_find_data_dir( 0 );
++  char * dataDir = "@PREFIX@/share";
+   booksDir = QString( dataDir ) + "/speedcrunch/books/";
++#if 0
+   free( dataDir );
+ #endif
++#endif
+ 
+   docks.book = new BookDock( booksDir, "math_index.html", settings.language,
+                              p );
