@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/02 16:35:46 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/03 09:46:42 wiz Exp $
 bin/cppcheck
+man/man1/cppcheck.1
