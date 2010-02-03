@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/01/23 12:05:32 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/02/03 11:23:19 sno Exp $
 
-SHA1 (Padre-0.55.tar.gz) = 7c9611b7072a8a322e73e8b0a98571e3661fcb78
-RMD160 (Padre-0.55.tar.gz) = 1cbdcafef8682028b81b734a5039cbd605a39db0
-Size (Padre-0.55.tar.gz) = 1251954 bytes
+SHA1 (Padre-0.56.tar.gz) = 904ec73284acfe04718960e18be85bc87b3d260d
+RMD160 (Padre-0.56.tar.gz) = d195dc1044a456c4c08db19521b5ba817ea9977a
+Size (Padre-0.56.tar.gz) = 1270173 bytes
