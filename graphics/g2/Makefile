@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/01/18 09:58:59 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/02/03 23:21:08 joerg Exp $
 
 DISTNAME=		g2-0.50
 PKGREVISION=		3
@@ -8,6 +8,8 @@ MASTER_SITES=		http://g2.sourceforge.net/pub/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://g2.sourceforge.net/
 COMMENT=		Powerful, easy to use 2D graphics library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -25,9 +27,9 @@ post-configure: perl5-configure
 
 post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} doc/g2_ref.txt COPYING README	\
-		${PREFIX}/share/doc/g2
+		${DESTDIR}${PREFIX}/share/doc/g2
 	cd ${WRKSRC}/demo && ${INSTALL_DATA} *.c *.f *.inc  \
-		${PREFIX}/share/examples/g2
+		${DESTDIR}${PREFIX}/share/examples/g2
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
