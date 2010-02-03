@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 08:45:10 agc Exp $
+$NetBSD: distinfo,v 1.5 2010/02/03 22:37:56 joerg Exp $
 
 SHA1 (ncview-1.92d.tar.gz) = 259b7897dfbd4fa4835c9cc5dcbead5796659458
 RMD160 (ncview-1.92d.tar.gz) = 8e5f2e2ac6de9eded47f7d83de9087142588d412
 Size (ncview-1.92d.tar.gz) = 833480 bytes
 SHA1 (patch-aa) = 77ce989232b1a926e7cdfbbbe9e0e22f653bfb23
-SHA1 (patch-ab) = 6dbdfaea8b37ef792571320c38e9113709bcbbd4
+SHA1 (patch-ab) = 1294a99091e6d0aca8f3c13d813905bfb23e14c7
