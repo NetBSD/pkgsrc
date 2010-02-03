@@ -1,7 +1,18 @@
-$NetBSD: patch-ab,v 1.3 2006/10/04 22:22:37 rillig Exp $
+$NetBSD: patch-ab,v 1.4 2010/02/03 23:21:08 joerg Exp $
 
---- Makefile.in.orig	2004-03-01 00:47:46.000000000 +0100
-+++ Makefile.in	2006-10-05 00:19:32.000000000 +0200
+--- Makefile.in.orig	2004-02-29 23:47:46.000000000 +0000
++++ Makefile.in
+@@ -9,8 +9,8 @@ G2_VERSION = 0.50
+ #
+ # g2 installation directories
+ #
+-LIBDIR = @prefix@/lib
+-INCDIR = @prefix@/include
++LIBDIR = ${DESTDIR}@prefix@/lib
++INCDIR = ${DESTDIR}@prefix@/include
+ 
+ #LIBDIR = $(HOME)/local/lib
+ #INCDIR = $(HOME)/local/include
 @@ -66,30 +66,22 @@ OBJ = $(SRC:.c=.o)
  INS =  $(BASE_INS) $(PS_INS) $(X11_INS) $(WIN32_INS) $(GD_INS)
  
