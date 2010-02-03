@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/16 15:45:11 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/03 11:30:15 sno Exp $
 #
 
 DISTNAME=	Wx-Perl-DataWalker-0.02
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Wx/}
 
@@ -15,12 +16,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-XSAccessor>=0.06:../../devel/p5-Class-XSAccessor
 DEPENDS+=	p5-Devel-Size>=0.71:../../devel/p5-Devel-Size
-DEPENDS+=	p5-Wx>=0.88:../../x11/p5-Wx
 DEPENDS+=	p5-YAML-LibYAML>=0.32:../../textproc/p5-YAML-LibYAML
 
 USE_TOOLS+=	perl
 
 PERL5_PACKLIST=		auto/Wx/Perl/DataWalker/.packlist
 
+.include "../../x11/p5-Wx/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
