@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/01/20 03:21:21 roy Exp $
+# $NetBSD: Makefile,v 1.39 2010/02/04 06:40:19 dholland Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	13
@@ -22,6 +22,8 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 
@@ -76,6 +78,6 @@ pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig*" -print | ${XARGS} ${RM} -f
 
 post-install:
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/emacs
 
 .include "../../mk/bsd.pkg.mk"
