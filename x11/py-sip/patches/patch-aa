@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2009/06/09 13:51:57 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2010/02/04 18:34:43 drochner Exp $
 
---- configure.py.orig	2009-06-05 08:59:07.000000000 +0000
+--- configure.py.orig	2010-01-14 14:52:09.000000000 +0000
 +++ configure.py
-@@ -198,7 +198,7 @@ def set_platform_directories():
+@@ -208,7 +208,7 @@ def set_platform_directories():
  
          plat_py_lib_dir = lib_dir + "/config"
          plat_bin_dir = sys.exec_prefix + "/bin"
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2009/06/09 13:51:57 wiz Exp $
  
  
  def create_config(module, template, macros):
-@@ -216,7 +216,7 @@ def create_config(module, template, macr
+@@ -226,7 +226,7 @@ def create_config(module, template, macr
          "sip_version":      sip_version,
          "sip_version_str":  sip_version_str,
          "platform":         opts.platform,
@@ -20,12 +20,12 @@ $NetBSD: patch-aa,v 1.2 2009/06/09 13:51:57 wiz Exp $
          "sip_inc_dir":      opts.sipincdir,
          "sip_mod_dir":      opts.sipmoddir,
          "default_bin_dir":  plat_bin_dir,
-@@ -249,7 +249,7 @@ def create_makefiles(macros):
+@@ -261,7 +261,7 @@ def create_makefiles(macros):
      sipconfig.ParentMakefile(
          configuration=cfg,
          subdirs=["sipgen", "siplib"],
--        installs=(["sipconfig.py", "sipdistutils.py"], cfg.sip_mod_dir)
-+        installs=(["sipconfig.py", "sipconfig.pyc", "sipdistutils.py"], cfg.sip_mod_dir)
+-        installs=(["sipconfig.py", os.path.join(src_dir, "sipdistutils.py")],
++        installs=(["sipconfig.py", "sipconfig.pyc", os.path.join(src_dir, "sipdistutils.py")],
+                 cfg.sip_mod_dir)
      ).generate()
  
-     sipconfig.inform("Creating sip code generator Makefile...")
