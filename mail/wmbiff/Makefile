@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/01/18 09:59:12 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2010/02/04 14:24:29 joerg Exp $
 
 DISTNAME=	wmbiff-0.4.26
 PKGREVISION=	9
@@ -9,14 +9,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/wmbiff/
 COMMENT=	xbuffy like "mail-checker" for WindowMaker
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 
 EX_DIR=		${PREFIX}/share/examples/wmbiff
+INSTALLATION_DIRS+=	${EX_DIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${EX_DIR}
-	${INSTALL_DATA} ${WRKSRC}/wmbiff/sample.wmbiffrc ${EX_DIR}
+	${INSTALL_DATA} ${WRKSRC}/wmbiff/sample.wmbiffrc ${DESTDIR}${EX_DIR}
 
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/gnutls/libgnutls-config.mk"
