@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/11/28 23:39:18 dholland Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/02/04 16:22:02 taca Exp $
 bin/puppet
 bin/puppetca
 bin/puppetd
@@ -531,16 +531,16 @@ ${GEM_LIBDIR}/lib/puppet/util/tagging.rb
 ${GEM_LIBDIR}/lib/puppet/util/uri_helper.rb
 ${GEM_LIBDIR}/lib/puppet/util/user_attr.rb
 ${GEM_LIBDIR}/lib/puppet/util/warnings.rb
-${GEM_LIBDIR}/man/man8/filebucket.8.gz
-${GEM_LIBDIR}/man/man8/pi.8.gz
-${GEM_LIBDIR}/man/man8/puppet.8.gz
-${GEM_LIBDIR}/man/man8/puppet.conf.8.gz
-${GEM_LIBDIR}/man/man8/puppetca.8.gz
-${GEM_LIBDIR}/man/man8/puppetd.8.gz
-${GEM_LIBDIR}/man/man8/puppetdoc.8.gz
-${GEM_LIBDIR}/man/man8/puppetmasterd.8.gz
-${GEM_LIBDIR}/man/man8/puppetrun.8.gz
-${GEM_LIBDIR}/man/man8/ralsh.8.gz
+${GEM_LIBDIR}/man/man8/filebucket.8
+${GEM_LIBDIR}/man/man8/pi.8
+${GEM_LIBDIR}/man/man8/puppet.8
+${GEM_LIBDIR}/man/man8/puppet.conf.8
+${GEM_LIBDIR}/man/man8/puppetca.8
+${GEM_LIBDIR}/man/man8/puppetd.8
+${GEM_LIBDIR}/man/man8/puppetdoc.8
+${GEM_LIBDIR}/man/man8/puppetmasterd.8
+${GEM_LIBDIR}/man/man8/puppetrun.8
+${GEM_LIBDIR}/man/man8/ralsh.8
 ${GEM_LIBDIR}/spec/Rakefile
 ${GEM_LIBDIR}/spec/integration/checksum.rb
 ${GEM_LIBDIR}/spec/integration/defaults.rb
