@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/05/05 22:09:20 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/04 16:36:05 joerg Exp $
 
 DISTNAME=	SOAP-0.8.1
 CATEGORIES+=	net
@@ -6,6 +6,8 @@ PKGREVISION=	1
 
 MAINTAINER=	jdolecek@NetBSD.org
 COMMENT=	SOAP Client/Server for PHP
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-pear-SOAP-[0-9]*
 
