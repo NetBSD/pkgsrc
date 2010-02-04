@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.529 2010/02/04 12:34:28 obache Exp $
+$NetBSD: CHANGES-2010,v 1.530 2010/02/04 15:07:00 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -633,3 +633,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/gegl to 0.1.0nb3 [adma 2010-02-04]
 	Updated devel/p5-Moose to 0.95 [wiz 2010-02-04]
 	Updated net/pure-ftpd to 1.0.27 [obache 2010-02-04]
+	Updated net/nsd to 3.2.4 [joerg 2010-02-04]
