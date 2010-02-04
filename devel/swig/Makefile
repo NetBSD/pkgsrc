@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/02/04 15:39:39 taca Exp $
+# $NetBSD: Makefile,v 1.28 2010/02/04 16:10:47 taca Exp $
 
 DISTNAME=	swig-1.3.36
 CATEGORIES=	devel
@@ -38,14 +38,14 @@ INSTALLATION_DIRS+=	share/doc/swig share/examples/swig
 CHECK_INTERPRETER_SKIP+=	share/examples/swig/*
 
 post-install:
-	cd ${WRKSRC:Q}/Doc/Manual && \
+	cd ${WRKSRC}/Doc/Manual && \
 	${INSTALL_DATA} SWIGDocumentation.html SWIGDocumentation.pdf	\
-		*.png ${DESTDIR:Q}${PREFIX:Q}/share/doc/swig
-	cd ${WRKSRC:Q}/Examples &&					\
+		*.png ${DESTDIR}${PREFIX}/share/doc/swig
+	cd ${WRKSRC}/Examples &&					\
 	pax -wr								\
 		-s ',.*CVS.*,,'						\
 		-s ',.*Makefile\.in$$,,'				\
 		-s ',^test-suite.*,,'					\
-		. ${DESTDIR:Q}${PREFIX:Q}/share/examples/swig
+		. ${DESTDIR}${PREFIX}/share/examples/swig
 
 .include "../../mk/bsd.pkg.mk"
