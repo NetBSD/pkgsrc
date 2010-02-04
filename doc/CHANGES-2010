@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.532 2010/02/04 16:22:55 taca Exp $
+$NetBSD: CHANGES-2010,v 1.533 2010/02/04 20:15:40 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -636,3 +636,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/nsd to 3.2.4 [joerg 2010-02-04]
 	Updated devel/swig to 1.3.36 [taca 2010-02-04]
 	Updated sysutils/puppet to 0.24.9 [taca 2010-02-04]
+	Updated chat/ircd-hybrid to 7.2.3nb3 [adrianp 2010-02-04]
