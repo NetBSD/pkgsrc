@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/04 22:06:29 seb Exp $
+
+SHA1 (AnnoCPAN-Perldoc-0.10.tar.gz) = ecee1446deab3cc9ca86110a5b86b29081501217
+RMD160 (AnnoCPAN-Perldoc-0.10.tar.gz) = 57d7ddcef59786ad7cf55c79b1ec674422bd1285
+Size (AnnoCPAN-Perldoc-0.10.tar.gz) = 3862 bytes
