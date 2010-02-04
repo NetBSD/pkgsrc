@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 22:24:31 agc Exp $
+$NetBSD: distinfo,v 1.5 2010/02/04 10:35:28 obache Exp $
 
-SHA1 (Optik-1.4.tar.gz) = 311f159842ddea735653a4b125bf130a81c3ecf7
-RMD160 (Optik-1.4.tar.gz) = f83442943c280ef1cdd1c6545e2d2ad71f4ff2a0
-Size (Optik-1.4.tar.gz) = 42752 bytes
+SHA1 (optik-1.5.3.tar.gz) = e4718ed19bf15cf7d882b369e9e5de7c352d7fb5
+RMD160 (optik-1.5.3.tar.gz) = 01791efdcc7f1974a9f19b299b3e2ef066605056
+Size (optik-1.5.3.tar.gz) = 86179 bytes
