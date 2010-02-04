@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2010/02/04 12:49:03 tnn Exp $
+# $NetBSD: Makefile,v 1.56 2010/02/04 13:13:57 tnn Exp $
 #
 
 DISTNAME=	groff-1.20.1
@@ -38,20 +38,6 @@ PLIST_SRC+=		PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
-#
-# Groff installs its own man and ms macros as mgan and mgs if the
-# configure script thinks replacing the system ones is not safe. Since
-# this depends heavily on exactly what the system macros are, each
-# vendor OS is likely to be different and possibly differ by version.
-#
-# It also installs wrappers around the system macros for a variety of
-# other traditional macro packages, if those macros don't have an FSF
-# copyright.
-#
-# It also defaults to installing some of its own tools with a 'g'
-# prefix on some platforms.
-#
-
 .if ${OPSYS} == "SunOS"
 PLIST_SUBST+=	GNU_PREFIX="g"
 
@@ -73,6 +59,15 @@ post-patch:
 	${SED}	-e "s,@@VOLUME_OPERATING_SYSTEM@@,${OPSYS},g"	\
 		-e "s,@@OPERATING_SYSTEM@@,pkgsrc,g"	\
 		${FILESDIR}/mdoc.local > ${WRKDIR}/mdoc.local
+
+# Groff installs its own man and ms macros as mgan and mgs if the
+# configure script thinks replacing the system ones is not safe. Since
+# this depends heavily on exactly what the system macros are, each
+# vendor OS is likely to be different and possibly differ by version.
+#
+# It also installs wrappers around the system macros for a variety of
+# other traditional macro packages, if those macros don't have an FSF
+# copyright.
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mdoc.local \
