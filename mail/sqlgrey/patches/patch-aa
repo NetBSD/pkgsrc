@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/13 16:43:04 ghen Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/04 02:43:52 joerg Exp $
 
 --- Makefile.orig	2005-06-07 02:28:38.000000000 +0200
 +++ Makefile
@@ -10,10 +10,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/13 16:43:04 ghen Exp $
 -BINDIR = $(ROOTDIR)/usr/bin
 -INITDIR = $(ETCDIR)/init.d
 -MANDIR = $(ROOTDIR)/usr/share/man/man1
-+CONFDIR = $(EGDIR)
-+SBINDIR = $(PREFIX)/sbin
-+BINDIR = $(PREFIX)/bin
-+MANDIR = $(PREFIX)/$(PKGMANDIR)/man1
++CONFDIR = ${DESTDIR}$(EGDIR)
++SBINDIR = ${DESTDIR}$(PREFIX)/sbin
++BINDIR = ${DESTDIR}$(PREFIX)/bin
++MANDIR = ${DESTDIR}$(PREFIX)/$(PKGMANDIR)/man1
  
  VERSION := $(shell cat VERSION)
  TBZ2 = sqlgrey-$(VERSION).tar.bz2

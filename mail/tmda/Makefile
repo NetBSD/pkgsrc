@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2009/07/08 13:56:00 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2010/02/04 02:47:31 joerg Exp $
 #
 
 DISTNAME=	tmda-1.1.12
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://tmda.net/
 COMMENT=	Python-based SPAM reduction system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_PATCH_SCRIPTS=	${TMDA_PROGRAMS}
 PY_PATCHPLIST=		yes
@@ -60,40 +62,40 @@ pre-install:
 
 do-install:
 	for f in ${TMDA_PROGRAMS}; do \
-		${INSTALL_SCRIPT} ${WRKSRC}/$${f} ${PREFIX}/bin; \
+		${INSTALL_SCRIPT} ${WRKSRC}/$${f} ${DESTDIR}${PREFIX}/bin; \
 	done
 
-	${INSTALL_SCRIPT} ${WRKSRC}/TMDA/*.py* ${PREFIX}/${PYSITELIB}/TMDA
+	${INSTALL_SCRIPT} ${WRKSRC}/TMDA/*.py* ${DESTDIR}${PREFIX}/${PYSITELIB}/TMDA
 
 	${INSTALL_SCRIPT} ${WRKSRC}/TMDA/pythonlib/email/*.py* \
-		${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email
+		${DESTDIR}${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email
 	${INSTALL_SCRIPT} ${WRKSRC}/TMDA/pythonlib/email/mime/*.py* \
-		${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email/mime
+		${DESTDIR}${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email/mime
 	${INSTALL_SCRIPT} ${WRKSRC}/TMDA/Queue/*.py* \
-		${PREFIX}/${PYSITELIB}/TMDA/Queue
+		${DESTDIR}${PREFIX}/${PYSITELIB}/TMDA/Queue
 
-	${INSTALL_DATA} ${WRKSRC}/templates/*.txt ${PREFIX}/${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/templates/*.txt ${DESTDIR}${PREFIX}/${SHAREDIR}
 
 	for f in ${TMDA_DOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${DOCDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$${f} ${DESTDIR}${PREFIX}/${DOCDIR}; \
 	done
 
 	for f in ${TMDA_CONTRIB}; do \
 		if [ -f $${f} ]; then \
 			${INSTALL_DATA} ${WRKSRC}/$${f} \
-				${PREFIX}/${EGDIR}; \
+				${DESTDIR}${PREFIX}/${EGDIR}; \
 		else \
-			cp -Rp ${WRKSRC}/$${f} ${PREFIX}/${EGDIR}; \
+			cp -Rp ${WRKSRC}/$${f} ${DESTDIR}${PREFIX}/${EGDIR}; \
 		fi; \
 	done
 
-	cp -Rp ${WRKSRC}/doc/html/* ${PREFIX}/${HTMLDIR}
+	cp -Rp ${WRKSRC}/doc/html/* ${DESTDIR}${PREFIX}/${HTMLDIR}
 
 post-install:
-	${PY_COMPILE_ALL} ${PREFIX}/${PYSITELIB}/TMDA \
-		${PREFIX}/${PYSITELIB}/TMDA/Queue \
-		${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email \
-		${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email/mime
+	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/TMDA \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/TMDA/Queue \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email/mime
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
