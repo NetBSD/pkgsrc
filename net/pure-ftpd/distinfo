@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2006/02/24 14:35:30 ghen Exp $
+$NetBSD: distinfo,v 1.9 2010/02/04 12:34:08 obache Exp $
 
-SHA1 (pure-ftpd-1.0.21.tar.gz) = 0374031beb847d6a9aa61627c3db26cb81a28e92
-RMD160 (pure-ftpd-1.0.21.tar.gz) = 5f5a86f118cf34dc52650cebc38e50130ab0c7cf
-Size (pure-ftpd-1.0.21.tar.gz) = 594394 bytes
+SHA1 (pure-ftpd-1.0.27.tar.gz) = abd547ff4753e3e921e309175a786069393a8911
+RMD160 (pure-ftpd-1.0.27.tar.gz) = 1ac601910ba6b92ff7671259d4a6216cb4ba391b
+Size (pure-ftpd-1.0.27.tar.gz) = 568556 bytes
