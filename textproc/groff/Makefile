@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2009/12/07 00:01:04 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2010/02/04 12:49:03 tnn Exp $
 #
 
 DISTNAME=	groff-1.20.1
@@ -52,34 +52,12 @@ PLIST_SRC+=		PLIST
 # prefix on some platforms.
 #
 
-.if ${OPSYS} == "HPUX"
-PLIST_SUBST+=	GNU_PREFIX=""
-PLIST_SUBST+=	GNU_PREFIX_TMAC_WRAPPER="g"
-PLIST_SUBST+=	GNU_PREFIX_AN_TMAC="g"
-PLIST_SUBST+=	GNU_PREFIX_S_TMAC="g"
-
-.elif ${OPSYS} == "OSF1"
-PLIST_SUBST+=	GNU_PREFIX=""
-PLIST_SUBST+=	GNU_PREFIX_TMAC_WRAPPER="g"
-PLIST_SUBST+=	GNU_PREFIX_AN_TMAC="g"
-PLIST_SUBST+=	GNU_PREFIX_S_TMAC="g"
-
-.elif ${OPSYS} == "SunOS"
-# According to PR 35295, on (at least) Solaris 10 for x86 you get
-# an.tmac and not gan.tmac. If this turns out not to be true for
-# earlier/other Solaris revs we'll need more conditionals in here.
+.if ${OPSYS} == "SunOS"
 PLIST_SUBST+=	GNU_PREFIX="g"
-PLIST_SUBST+=	GNU_PREFIX_TMAC_WRAPPER="g"
-PLIST_SUBST+=	GNU_PREFIX_AN_TMAC=""
-PLIST_SUBST+=	GNU_PREFIX_S_TMAC="g"
 
 .else
 PLIST_SUBST+=	GNU_PREFIX=""
-PLIST_SUBST+=	GNU_PREFIX_TMAC_WRAPPER=""
-PLIST_SUBST+=	GNU_PREFIX_AN_TMAC=""
-PLIST_SUBST+=	GNU_PREFIX_S_TMAC=""
 .endif
-
 
 BUILD_DEFS+=	PAPERSIZE
 .if defined(PAPERSIZE)
@@ -101,6 +79,16 @@ post-install:
 		${DESTDIR}${PREFIX}/share/groff/site-tmac
 	${FIND} ${DESTDIR}${PREFIX}/lib/groff/site-tmac -type f -print | \
 		${SED} 's;${DESTDIR}${PREFIX}/;;g' > ${WRKDIR}/PLIST-local
+	${RUN}set -e; for f in an.tmac m.tmac mm.tmac mmse.tmac		\
+	  mse.tmac s.tmac; do						\
+	  for p in "" g; do						\
+	    line="share/groff/${PKGVERSION_NOREV}/tmac/$$p$$f";		\
+	    if [ -e "${DESTDIR}${PREFIX}/$$line" ]; then		\
+	      break;							\
+	    fi;								\
+	  done;								\
+	  ${ECHO} "$$line" >> ${WRKDIR}/PLIST-local;			\
+	done
 
 # we only want the charset.alias file, so no buildlinkery for libiconv
 DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
