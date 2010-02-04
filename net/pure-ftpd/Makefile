@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2008/06/12 02:14:41 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/04 12:34:08 obache Exp $
 
-DISTNAME=		pure-ftpd-1.0.21
+DISTNAME=		pure-ftpd-1.0.27
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/
 MASTER_SITES+=		http://download.pureftpd.org/pub/pure-ftpd/releases/
@@ -21,12 +21,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-everything
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+
+BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "Interix"
-CONFIGURE_ARGS+=	--with-privsep
+.if ${OPSYS} == "Interix"
+CONFIGURE_ARGS+=	--without-privsep
 .endif
 
 .include "options.mk"
