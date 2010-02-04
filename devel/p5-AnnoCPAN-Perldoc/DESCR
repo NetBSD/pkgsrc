@@ -1,0 +1,9 @@
+AnnoCPAN is a web interface for the documentation of all the modules
+on CPAN, where users can add annotations on the margin of specific
+paragraphs throughout the POD. The master AnnoCPAN site is located
+at http://annocpan.org/.
+
+The Perl 5 module AnnoCPAN::Perldoc provides a substitute for the
+'perldoc' command that displays the annotations locally and without
+requiring a connection to the Internet. It works by using a local
+note database that can be downloaded from http://annocpan.org/annopod.db
