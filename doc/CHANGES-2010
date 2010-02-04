@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.522 2010/02/03 23:39:52 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.523 2010/02/04 09:52:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -626,3 +626,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/scmgit-docs to 1.6.6.1 [minskim 2010-02-03]
 	Updated devel/scmgit to 1.6.6.1 [minskim 2010-02-03]
 	Added math/wxMaxima version 0.8.4nb1 [wiz 2010-02-03]
+	Added geography/p5-Geo-ShapeFile version 2.52 [wiz 2010-02-04]
