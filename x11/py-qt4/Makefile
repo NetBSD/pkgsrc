@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2010/01/18 09:59:42 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/02/04 18:40:28 drochner Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-qt4-${PYQT_VERSION}
-PYQT_VERSION=		4.6.2
-PKGREVISION=		1
+PYQT_VERSION=		4.7
 CATEGORIES=		x11 python
 MASTER_SITES=		http://www.riverbankcomputing.com/static/Downloads/PyQt4/
 
@@ -65,6 +64,8 @@ do-configure:
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../textproc/py-elementtree/buildlink3.mk"
+# needs the QtXmlPatterns fix
+BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.6.1nb3
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.4.0nb1
 .include "../../x11/qt4-tools/buildlink3.mk"

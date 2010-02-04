@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/11/23 15:00:33 wiz Exp $
+$NetBSD: distinfo,v 1.8 2010/02/04 18:40:28 drochner Exp $
 
-SHA1 (PyQt-x11-gpl-4.6.2.tar.gz) = 41c04232618b78497145ba91ff25e5891c1624b5
-RMD160 (PyQt-x11-gpl-4.6.2.tar.gz) = acd984f335c3b9661603388347e064098f50856c
-Size (PyQt-x11-gpl-4.6.2.tar.gz) = 6979753 bytes
+SHA1 (PyQt-x11-gpl-4.7.tar.gz) = 3cc46c8cc9c83ac111cd171ee594b2d34a4133dc
+RMD160 (PyQt-x11-gpl-4.7.tar.gz) = bddf2b4d668733a7a6bbb179dd986b5f82752198
+Size (PyQt-x11-gpl-4.7.tar.gz) = 7888435 bytes
 SHA1 (patch-aa) = ff6010dec03d1e17e2023d2f6d4418a03bf21bcc
