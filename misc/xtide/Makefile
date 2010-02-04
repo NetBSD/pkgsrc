@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/11/09 12:46:54 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2010/02/04 16:44:27 joerg Exp $
 
 DISTNAME=	xtide-2.8.3
 PKGREVISION=	2
@@ -9,6 +9,8 @@ DISTFILES=	${DISTNAME}.tar.bz2 ${HARMONICS_FILE}.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.flaterco.com/
 COMMENT=	X11 tide predictor
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -27,13 +29,15 @@ SUBST_SED.xt=	-e 's|/usr/local|${PREFIX}|g'
 PLIST_SUBST+=	HARMONICS_FILE=${HARMONICS_FILE:Q}
 
 INSTALLATION_DIRS=	share/xtide ${EGDIR}
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 post-extract:
 	${ECHO} "${PREFIX}/share/xtide/${HARMONICS_FILE}" > ${WRKDIR}/xtide.conf
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/xtide.conf ${EGDIR}/xtide.conf
-	${INSTALL_DATA} ${WRKDIR}/${HARMONICS_FILE} ${PREFIX}/share/xtide
+	${INSTALL_DATA} ${WRKDIR}/xtide.conf ${DESTDIR}${EGDIR}/xtide.conf
+	${INSTALL_DATA} ${WRKDIR}/${HARMONICS_FILE} ${DESTDIR}${PREFIX}/share/xtide
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
