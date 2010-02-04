@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/11/17 13:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/04 01:57:26 joerg Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
@@ -15,6 +15,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://www.foretune.co.jp/people/shigeya/distribute/
 # AWOL
 COMMENT=	Mail dispatcher for mailing list.  Fits nicely with majordomo
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man1
 
