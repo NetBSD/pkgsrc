@@ -1,0 +1,4 @@
+The Perl 5 module Search::Indexer provides support for indexing a
+collection of documents, for searching the collection, and displaying
+the sorted results, together with contextual excerpts of the original
+document.
