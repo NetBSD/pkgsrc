@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1287 2010/02/04 09:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.1288 2010/02/04 22:07:00 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -430,6 +430,7 @@ SUBDIR+=	p5-Algorithm-C3
 SUBDIR+=	p5-Algorithm-Dependency
 SUBDIR+=	p5-Algorithm-Diff
 SUBDIR+=	p5-Algorithm-Merge
+SUBDIR+=	p5-AnnoCPAN-Perldoc
 SUBDIR+=	p5-Any-Moose
 SUBDIR+=	p5-AnyEvent
 SUBDIR+=	p5-App-CLI
