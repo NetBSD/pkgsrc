@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.2 2000/07/15 07:14:37 rh Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/04 05:08:12 dholland Exp $
 
---- Makefile.in.old	Tue Dec 28 15:12:47 1999
-+++ Makefile.in	Tue Dec 28 15:12:59 1999
-@@ -23,7 +23,7 @@
+--- Makefile.in.orig	1999-07-17 19:03:14.000000000 +0000
++++ Makefile.in
+@@ -23,7 +23,7 @@ includedir = @includedir@
  
  CFLAGS = @CFLAGS@
  
@@ -11,3 +11,14 @@ $NetBSD: patch-aa,v 1.1.1.2 2000/07/15 07:14:37 rh Exp $
  DEFS=@DEFS@
  LIBS=@LIBS@
  INSTALL= @INSTALL@
+@@ -49,8 +49,8 @@ br_cmd.o: ${srcdir}/br_cmd.c ${srcdir}/b
+ 	${CC} ${CFLAGS} ${DEFS} -c ${srcdir}/br_cmd.c
+ 
+ install: br
+-	${INSTALL} -d -m 755 ${bindir}
+-	${INSTALL} -m 555 br ${bindir}
++	${INSTALL} -d -m 755 ${DESTDIR}${bindir}
++	${INSTALL} -m 555 br ${DESTDIR}${bindir}
+ 
+ clean:
+ 	-rm -f *.o br
