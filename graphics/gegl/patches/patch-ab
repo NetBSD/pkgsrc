@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/02/04 12:28:44 adam Exp $
+
+--- gegl/process/gegl-eval-visitor.c.orig	2010-02-03 09:32:18.000000000 +0000
++++ gegl/process/gegl-eval-visitor.c
+@@ -56,7 +56,7 @@ gegl_eval_visitor_init (GeglEvalVisitor 
+ {
+ }
+ 
+-extern long babl_total_usecs;
++long babl_total_usecs;
+ 
+ /* this is the visitor that does the real computations for GEGL */
+ static void
