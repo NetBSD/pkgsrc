@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.10 2009/11/15 21:22:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/02/04 11:17:06 wiz Exp $
 bin/yaz-asncomp
 bin/yaz-client
 bin/yaz-config
 bin/yaz-iconv
 bin/yaz-icu
 bin/yaz-illclient
+bin/yaz-json-parse
 bin/yaz-marcdump
 bin/yaz-ztest
 bin/zoomsh
@@ -19,12 +20,14 @@ include/yaz/daemon.h
 include/yaz/diagbib1.h
 include/yaz/diagsru_update.h
 include/yaz/diagsrw.h
+include/yaz/dirent.h
 include/yaz/errno.h
+include/yaz/file_glob.h
 include/yaz/icu.h
 include/yaz/ill-core.h
 include/yaz/ill.h
 include/yaz/item-req.h
-include/yaz/libxml2_error.h
+include/yaz/json.h
 include/yaz/log.h
 include/yaz/logrpn.h
 include/yaz/marcdisp.h
@@ -64,6 +67,7 @@ include/yaz/tpath.h
 include/yaz/unix.h
 include/yaz/wrbuf.h
 include/yaz/xmalloc.h
+include/yaz/xml_include.h
 include/yaz/xmlquery.h
 include/yaz/xmltypes.h
 include/yaz/yaz-ccl.h
@@ -111,6 +115,7 @@ man/man1/yaz-client.1
 man/man1/yaz-iconv.1
 man/man1/yaz-icu.1
 man/man1/yaz-illclient.1
+man/man1/yaz-json-parse.1
 man/man1/yaz-marcdump.1
 man/man1/zoomsh.1
 man/man7/bib1-attr.7
@@ -175,6 +180,7 @@ share/doc/yaz/yaz-config.html
 share/doc/yaz/yaz-iconv.html
 share/doc/yaz/yaz-icu.html
 share/doc/yaz/yaz-illclient.html
+share/doc/yaz/yaz-json-parse.html
 share/doc/yaz/yaz-log.html
 share/doc/yaz/yaz-marcdump.html
 share/doc/yaz/yaz-ztest.html
