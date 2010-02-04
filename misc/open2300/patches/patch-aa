@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/07/31 14:03:28 grant Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/04 17:37:51 joerg Exp $
 
 --- Makefile.orig	2004-11-13 11:25:31.000000000 +1100
 +++ Makefile
@@ -53,22 +53,22 @@ $NetBSD: patch-aa,v 1.4 2005/07/31 14:03:28 grant Exp $
 -	$(INSTALL) interval2300 $(bindir)
 -	$(INSTALL) minmax2300 $(bindir)
 -	
-+	${BSD_INSTALL_PROGRAM} open2300 $(bindir)
-+	${BSD_INSTALL_PROGRAM} dump2300 $(bindir)
-+	${BSD_INSTALL_PROGRAM} log2300 $(bindir)
-+	${BSD_INSTALL_PROGRAM} fetch2300 $(bindir)
-+	${BSD_INSTALL_PROGRAM} wu2300 $(bindir)
-+	${BSD_INSTALL_PROGRAM} cw2300 $(bindir)
-+	${BSD_INSTALL_PROGRAM} histlog2300 $(bindir)
-+	${BSD_INSTALL_PROGRAM} xml2300 $(bindir)
-+	${BSD_INSTALL_PROGRAM} light2300 $(bindir)
-+	${BSD_INSTALL_PROGRAM} interval2300 $(bindir)
-+	${BSD_INSTALL_PROGRAM} minmax2300 $(bindir)
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/open2300
-+	${BSD_INSTALL_DATA} open2300-dist.conf ${PREFIX}/share/examples/open2300/open2300.conf
++	${BSD_INSTALL_PROGRAM} open2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} dump2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} log2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} fetch2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} wu2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} cw2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} histlog2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} xml2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} light2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} interval2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} minmax2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/open2300
++	${BSD_INSTALL_DATA} open2300-dist.conf ${DESTDIR}${PREFIX}/share/examples/open2300/open2300.conf
 +
 +install-mysql:
-+	${BSD_INSTALL_PROGRAM} mysql2300 $(bindir)
++	${BSD_INSTALL_PROGRAM} mysql2300 ${DESTDIR}$(bindir)
 +
  uninstall:
  	rm -f $(bindir)/open2300 $(bindir)/dump2300 $(bindir)/log2300 $(bindir)/fetch2300 $(bindir)/wu2300 $(bindir)/cw2300 $(bindir)/xml2300 $(bindir)/light2300 $(bindir)/interval2300 $(bindir)/minmax2300
