@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/08/06 01:44:53 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/04 01:21:39 joerg Exp $
 #
 
 DISTNAME=	twelf-1-4
@@ -11,6 +11,8 @@ MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://www.cs.cmu.edu/~twelf/
 COMMENT=	Meta-language for proving properties of languages and logics
 LICENSE=	generic-nonlicense
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	License terms not specified; assume no redistribution rights
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -56,26 +58,26 @@ post-build:
 	find ${WRKSRC} -name "*.orig" | xargs rm
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pam bin ${TWELF_LIBDIR}
-	${LN} -sf ${TWELF_LIBDIR}/bin/* ${PREFIX}/bin
+	cd ${WRKSRC} && pax -rw -pam bin ${DESTDIR}${TWELF_LIBDIR}
+	${LN} -sf ${DESTDIR}${TWELF_LIBDIR}/bin/* ${DESTDIR}${PREFIX}/bin
 
-	cd ${WRKSRC}/emacs && pax -rw -pam * ${TWELF_EMACSDIR}
-	${LN} -sf ${TWELF_EMACSDIR} ${TWELF_LIBDIR}/emacs
+	cd ${WRKSRC}/emacs && pax -rw -pam * ${DESTDIR}${TWELF_EMACSDIR}
+	${LN} -sf ${DESTDIR}${TWELF_EMACSDIR} ${DESTDIR}${TWELF_LIBDIR}/emacs
 
 	cd ${WRKSRC}/doc; for t in dvi pdf ps; do			\
-		${INSTALL_DATA} $${t}/twelf.$${t} ${TWELF_DOCDIR};	\
+		${INSTALL_DATA} $${t}/twelf.$${t} ${DESTDIR}${TWELF_DOCDIR};	\
 	done
-	${LN} -sf ${TWELF_DOCDIR} ${TWELF_LIBDIR}/doc
+	${LN} -sf ${DESTDIR}${TWELF_DOCDIR} ${DESTDIR}${TWELF_LIBDIR}/doc
 
 	cd ${WRKSRC}/doc/info; for f in *.info *.info-[0-9]*; do	\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};		\
 	done
 
-	cd ${WRKSRC}/doc/html && pax -rw -pam * ${TWELF_HTMLDOCDIR}
+	cd ${WRKSRC}/doc/html && pax -rw -pam * ${DESTDIR}${TWELF_HTMLDOCDIR}
 
-	cd ${WRKSRC}/examples && pax -rw -pam * ${TWELF_EXAMPLEDIR}
-	${LN} -sf ${TWELF_EXAMPLEDIR} ${TWELF_LIBDIR}/examples
+	cd ${WRKSRC}/examples && pax -rw -pam * ${DESTDIR}${TWELF_EXAMPLEDIR}
+	${LN} -sf ${DESTDIR}${TWELF_EXAMPLEDIR} ${DESTDIR}${TWELF_LIBDIR}/examples
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
