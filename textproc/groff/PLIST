@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/10/21 16:51:46 tnn Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/02/04 12:49:03 tnn Exp $
 bin/addftinfo
 bin/afmtodit
 bin/${GNU_PREFIX}eqn
@@ -409,7 +409,7 @@ share/groff/${PKGVERSION}/tmac/Xps.tmac
 share/groff/${PKGVERSION}/tmac/a4.tmac
 share/groff/${PKGVERSION}/tmac/an-ext.tmac
 share/groff/${PKGVERSION}/tmac/an-old.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_AN_TMAC}an.tmac
+@comment handled dynamically: share/groff/${PKGVERSION}/tmac/an.tmac
 share/groff/${PKGVERSION}/tmac/andoc.tmac
 share/groff/${PKGVERSION}/tmac/composite.tmac
 share/groff/${PKGVERSION}/tmac/cp1047.tmac
@@ -444,7 +444,7 @@ share/groff/${PKGVERSION}/tmac/latin5.tmac
 share/groff/${PKGVERSION}/tmac/latin9.tmac
 share/groff/${PKGVERSION}/tmac/lbp.tmac
 share/groff/${PKGVERSION}/tmac/lj4.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC_WRAPPER}m.tmac
+@comment handled dynamically: share/groff/${PKGVERSION}/tmac/m.tmac
 share/groff/${PKGVERSION}/tmac/man.tmac
 share/groff/${PKGVERSION}/tmac/mandoc.tmac
 share/groff/${PKGVERSION}/tmac/mdoc.tmac
@@ -453,7 +453,7 @@ share/groff/${PKGVERSION}/tmac/mdoc/doc-ditroff
 share/groff/${PKGVERSION}/tmac/mdoc/doc-nroff
 share/groff/${PKGVERSION}/tmac/mdoc/doc-syms
 share/groff/${PKGVERSION}/tmac/me.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC_WRAPPER}mm.tmac
+@comment handled dynamically: share/groff/${PKGVERSION}/tmac/mm.tmac
 share/groff/${PKGVERSION}/tmac/mm/0.MT
 share/groff/${PKGVERSION}/tmac/mm/4.MT
 share/groff/${PKGVERSION}/tmac/mm/5.MT
@@ -461,10 +461,10 @@ share/groff/${PKGVERSION}/tmac/mm/locale
 share/groff/${PKGVERSION}/tmac/mm/ms.cov
 share/groff/${PKGVERSION}/tmac/mm/se_locale
 share/groff/${PKGVERSION}/tmac/mm/se_ms.cov
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC_WRAPPER}mmse.tmac
+@comment handled dynamically: share/groff/${PKGVERSION}/tmac/mmse.tmac
 share/groff/${PKGVERSION}/tmac/mom.tmac
 share/groff/${PKGVERSION}/tmac/ms.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC_WRAPPER}mse.tmac
+@comment handled dynamically: share/groff/${PKGVERSION}/tmac/mse.tmac
 share/groff/${PKGVERSION}/tmac/om.tmac
 share/groff/${PKGVERSION}/tmac/papersize.tmac
 share/groff/${PKGVERSION}/tmac/pdfmark.tmac
@@ -473,7 +473,7 @@ share/groff/${PKGVERSION}/tmac/ps.tmac
 share/groff/${PKGVERSION}/tmac/psatk.tmac
 share/groff/${PKGVERSION}/tmac/psold.tmac
 share/groff/${PKGVERSION}/tmac/pspic.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_S_TMAC}s.tmac
+@comment handled dynamically: share/groff/${PKGVERSION}/tmac/s.tmac
 share/groff/${PKGVERSION}/tmac/safer.tmac
 share/groff/${PKGVERSION}/tmac/spdf.tmac
 share/groff/${PKGVERSION}/tmac/sv.tmac
