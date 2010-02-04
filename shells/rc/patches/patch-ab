@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.5 2010/02/04 05:23:27 dholland Exp $
+
+DESTDIR support.
+
+--- Makefile.in~	2002-06-19 15:12:04.000000000 +0000
++++ Makefile.in
+@@ -533,10 +533,10 @@ trip: rc tripping
+ 	./rc -p < $(srcdir)/trip.rc
+ 
+ install-exec-hook:
+-@AMC_HISTORY_TRUE@	$(INSTALL_PROGRAM) history $(bindir)/- ;\
+-@AMC_HISTORY_TRUE@	rm -f $(bindir)/--;  $(LN) $(bindir)/- $(bindir)/-- ;\
+-@AMC_HISTORY_TRUE@	rm -f $(bindir)/-p;  $(LN) $(bindir)/- $(bindir)/-p ;\
+-@AMC_HISTORY_TRUE@	rm -f $(bindir)/--p; $(LN) $(bindir)/- $(bindir)/--p
++@AMC_HISTORY_TRUE@	$(INSTALL_PROGRAM) history ${DESTDIR}$(bindir)/- ;\
++@AMC_HISTORY_TRUE@	rm -f ${DESTDIR}$(bindir)/--;  $(LN) ${DESTDIR}$(bindir)/- ${DESTDIR}$(bindir)/-- ;\
++@AMC_HISTORY_TRUE@	rm -f ${DESTDIR}$(bindir)/-p;  $(LN) ${DESTDIR}$(bindir)/- ${DESTDIR}$(bindir)/-p ;\
++@AMC_HISTORY_TRUE@	rm -f ${DESTDIR}$(bindir)/--p; $(LN) ${DESTDIR}$(bindir)/- ${DESTDIR}$(bindir)/--p
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
