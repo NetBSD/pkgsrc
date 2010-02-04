@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/07/02 10:23:27 rillig Exp $
+$NetBSD: patch-aa,v 1.3 2010/02/04 01:39:11 joerg Exp $
 
 BSD-style Makefile (with libtool support)
 
@@ -55,20 +55,20 @@ BSD-style Makefile (with libtool support)
 +INSTALL_DATA_DIR= ${BSD_INSTALL_DATA_DIR}
 +
 +install: ${LIBNAME} rexx rxque rxstack
-+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} rexx ${PREFIX}/bin
-+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} rxque ${PREFIX}/bin
-+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} rxstack ${PREFIX}/bin
-+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${LIBNAME:.a=.la} ${PREFIX}/lib
-+	sed -e 's|@REXXLIBDIR@|${REXXLIBDIR}|g' rexx.1.in > ${PREFIX}/man/man1/rexx.1
-+	${INSTALL_MAN} rxque.1 ${PREFIX}/man/man1
-+	${INSTALL_MAN} rxstack.1 ${PREFIX}/man/man1
-+	${INSTALL_PROGRAM} rxmathfn.rxfn ${PREFIX}/lib
-+	${INSTALL_MAN} rexxsaa.h ${PREFIX}/include
-+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rexx-imc
++	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} rexx ${DESTDIR}${PREFIX}/bin
++	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} rxque ${DESTDIR}${PREFIX}/bin
++	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} rxstack ${DESTDIR}${PREFIX}/bin
++	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${LIBNAME:.a=.la} ${DESTDIR}${PREFIX}/lib
++	sed -e 's|@REXXLIBDIR@|${REXXLIBDIR}|g' rexx.1.in > ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rexx.1
++	${INSTALL_MAN} rxque.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++	${INSTALL_MAN} rxstack.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++	${INSTALL_PROGRAM} rxmathfn.rxfn ${DESTDIR}${PREFIX}/lib
++	${INSTALL_MAN} rexxsaa.h ${DESTDIR}${PREFIX}/include
++	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/rexx-imc
 +	for f in rexx.info rexx.ref rexx.summary rexx.tech; do		\
-+		${INSTALL_MAN} $$f ${PREFIX}/share/doc/rexx-imc;	\
++		${INSTALL_MAN} $$f ${DESTDIR}${PREFIX}/share/doc/rexx-imc;	\
 +	done
-+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rexx-imc
++	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/rexx-imc
 +	for f in box rexxcps.rexx rexxtest.rexx rxmathfn.rexx shell.rexx; do \
-+		${INSTALL_SCRIPT} $$f ${PREFIX}/share/examples/rexx-imc;\
++		${INSTALL_SCRIPT} $$f ${DESTDIR}${PREFIX}/share/examples/rexx-imc;\
 +	done

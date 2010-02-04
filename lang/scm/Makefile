@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/05/20 00:58:20 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/04 01:37:19 joerg Exp $
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -16,6 +16,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.swiss.ai.mit.edu/~jaffer/SCM
 COMMENT=	Portable scheme interpreter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	slib>=3.1.1:../../devel/slib
 
@@ -36,7 +38,8 @@ OBJS=		${SCM_MODULES:=.o}
 BUILD_TARGET=	scmlit libscm.a
 INSTALL_TARGET=	install installlib
 
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} mandir=${PREFIX:Q}/${PKGMANDIR:Q}/
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/
 
 INSTALLATION_DIRS=	${PKGINFODIR} share/scm
 
@@ -55,10 +58,10 @@ post-build:
 		${SH} ./buildscm.sh
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/slibcat ${PREFIX}/share/scm
+	${INSTALL_DATA} ${WRKSRC}/slibcat ${DESTDIR}${PREFIX}/share/scm
 	cd ${WRKSRC}; for f in *.info *.info-[0-9]*; do			\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};		\
 	done
 
 .include "../../mk/bsd.pkg.mk"
