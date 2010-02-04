@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.11 2010/02/04 05:23:27 dholland Exp $
+
+DESTDIR support.
+
+--- Makefile.am~	2001-10-29 09:59:29.000000000 +0000
++++ Makefile.am
+@@ -68,8 +68,8 @@ trip: rc tripping
+ 
+ install-exec-hook:
+ if AMC_HISTORY
+-	$(INSTALL_PROGRAM) history $(bindir)/- ;\
+-	rm -f $(bindir)/--;  $(LN) $(bindir)/- $(bindir)/-- ;\
+-	rm -f $(bindir)/-p;  $(LN) $(bindir)/- $(bindir)/-p ;\
+-	rm -f $(bindir)/--p; $(LN) $(bindir)/- $(bindir)/--p
++	$(INSTALL_PROGRAM) history ${DESTDIR}$(bindir)/- ;\
++	rm -f ${DESTDIR}$(bindir)/--;  $(LN) ${DESTDIR}$(bindir)/- ${DESTDIR}$(bindir)/-- ;\
++	rm -f ${DESTDIR}$(bindir)/-p;  $(LN) ${DESTDIR}$(bindir)/- ${DESTDIR}$(bindir)/-p ;\
++	rm -f ${DESTDIR}$(bindir)/--p; $(LN) ${DESTDIR}$(bindir)/- ${DESTDIR}$(bindir)/--p
+ endif
