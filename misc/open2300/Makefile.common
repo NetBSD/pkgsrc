@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/07/31 13:35:37 grant Exp $
+# $NetBSD: Makefile.common,v 1.6 2010/02/04 17:37:51 joerg Exp $
 #
 
 DISTNAME=		open2300-1.8
@@ -7,5 +7,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open2300/}
 
 MAINTAINER=		martin@NetBSD.org
 HOMEPAGE=		http://open2300.sourceforge.net/
+
+PATCHDIR=		${.CURDIR}/../open2300/patches
+DISTINFO_FILE=		${.CURDIR}/../open2300/distinfo
 
 .include "../../mk/bsd.pkg.mk"
