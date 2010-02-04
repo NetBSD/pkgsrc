@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/04 14:42:33 joerg Exp $
 #
 
 DISTNAME=	xmailbox-2.5
@@ -9,17 +9,20 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Enhanced xbiff, with pixmap and sound support
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_IMAKE=	YES
 
 MAKE_ENV+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
 MAKE_ENV+=	INSTALL_MAN=${INSTALL_MAN:Q}
 
+INSTALLATION_DIRS+=	share/xmailbox
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xmailbox
 	cd ${WRKSRC}/icons && ${INSTALL_DATA} \
 	     0xmail1.xpm 1xmail1.xpm 2xmail1.xpm 3xmail1.xpm 4xmail1.xpm \
 	     5xmail1.xpm xmail1.xpm xnomail1.xpm \
-	     ${PREFIX}/share/xmailbox
+	     ${DESTDIR}${PREFIX}/share/xmailbox
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
