@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2010/01/08 17:02:42 joerg Exp $
+$NetBSD: distinfo,v 1.8 2010/02/04 21:14:02 heinz Exp $
 
 SHA1 (gpart-0.1h.tar.gz) = 23f66162e1d85977ea43bfe6b5e5bff0ad2d566e
 RMD160 (gpart-0.1h.tar.gz) = 1cdfb1779801ee8755b05975ced24441a3a2b639
@@ -7,5 +7,5 @@ SHA1 (patch-aa) = f971cc7ae0efbacd64e8f5e6bf9c2496f75320a3
 SHA1 (patch-ab) = 43fda85fe6b11c00b256682c7184578a985b9397
 SHA1 (patch-ac) = 15a57dd0e9b57c7a64869b43df37a5b2493e77d2
 SHA1 (patch-ad) = e53ca24886c072d514802e7dca7a79da2e1916d0
-SHA1 (patch-ae) = e9126b145ec8995645d79cd5d569da6e882b3c89
+SHA1 (patch-ae) = d02258c0a702156a6be9370f4b60c59a1109afeb
 SHA1 (patch-af) = a201375f69b1581259a2bc287d7ce5ab7c7dafe4
