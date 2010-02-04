@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/05/19 08:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/04 02:35:08 joerg Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -21,6 +21,8 @@ MAINTAINER=	christos@NetBSD.org
 COMMENT=	Text-based mail client
 LICENSE=	mush-license
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 RESTRICTED=		Unmodified source may be distributed but not sold.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -30,7 +32,7 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	mush
 BUILD_TARGET=	mush
 
-INSTALLATION_DIRS=	bin share/misc
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/misc
 
 .include "../../mk/bsd.prefs.mk"
 
