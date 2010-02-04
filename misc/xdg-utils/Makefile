@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/09 15:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/04 16:47:54 joerg Exp $
 #
 
 DISTNAME=	xdg-utils-1.0.2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://portland.freedesktop.org/
 COMMENT=	Tools to assist applications with various desktop integration tasks
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
