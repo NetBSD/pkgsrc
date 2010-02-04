@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/16 23:30:38 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/02/04 18:17:46 minskim Exp $
 
-SHA1 (tex-subfigure-doc-2.1.5/subfigure.doc.tar.lzma) = 314bce3ab0d07dee454d556c15701550860886cd
-RMD160 (tex-subfigure-doc-2.1.5/subfigure.doc.tar.lzma) = 3af3c2aa555cece6c312184c95ea0abc04237b83
-Size (tex-subfigure-doc-2.1.5/subfigure.doc.tar.lzma) = 344566 bytes
+SHA1 (tex-subfigure-doc-2.1.5/subfigure.doc.tar.xz) = fc1792856e497abc881eb1421fa467bef53fa22f
+RMD160 (tex-subfigure-doc-2.1.5/subfigure.doc.tar.xz) = 5d1cc13f2f27262716fff5254e24489edb41c3b7
+Size (tex-subfigure-doc-2.1.5/subfigure.doc.tar.xz) = 344700 bytes
