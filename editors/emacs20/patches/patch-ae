@@ -1,9 +1,123 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+$NetBSD: patch-ae,v 1.2 2010/02/04 06:40:19 dholland Exp $
 
---- Makefile.in.orig	Sat Apr 10 04:16:24 1999
-+++ Makefile.in	Sat Aug  7 15:24:03 1999
-@@ -386,27 +386,23 @@
- 	      chmod a+r ${infodir}/dir); \
+--- Makefile.in.orig	1999-04-09 19:16:24.000000000 +0000
++++ Makefile.in
+@@ -295,12 +295,12 @@ install-arch-dep: mkdir
+ 	    exec_prefix=${exec_prefix} bindir=${bindir} \
+ 	    libexecdir=${libexecdir} archlibdir=${archlibdir} \
+ 	    INSTALL_STRIP=${INSTALL_STRIP})
+-	${INSTALL_PROGRAM} $(INSTALL_STRIP) src/emacs ${bindir}/emacs-${version}
+-	-chmod 1755  ${bindir}/emacs-${version}
+-	rm -f ${bindir}/$(EMACS)
+-	-ln ${bindir}/emacs-${version} ${bindir}/$(EMACS)
++	${INSTALL_PROGRAM} $(INSTALL_STRIP) src/emacs ${DESTDIR}${bindir}/emacs-${version}
++	-chmod 1755  ${DESTDIR}${bindir}/emacs-${version}
++	rm -f ${DESTDIR}${bindir}/$(EMACS)
++	-ln ${DESTDIR}${bindir}/emacs-${version} ${DESTDIR}${bindir}/$(EMACS)
+ 	for f in `cd lib-src && echo fns-*.el`; do \
+-	  ${INSTALL_DATA} lib-src/$$f ${archlibdir}/$$f; \
++	  ${INSTALL_DATA} lib-src/$$f ${DESTDIR}${archlibdir}/$$f; \
+ 	done
+ 
+ ### Install the files that are machine-independent.
+@@ -313,22 +313,24 @@ install-arch-dep: mkdir
+ install-arch-indep: mkdir
+ 	-set ${COPYDESTS} ; \
+ 	for dir in ${COPYDIR} ; do \
+-	  if [ `(cd $$1 && /bin/pwd)` != `(cd $${dir} && /bin/pwd)` ] ; then \
+-	    rm -rf $$1 ; \
++	  if [ `(cd ${DESTDIR}$$1 && /bin/pwd)` != `(cd $${dir} && /bin/pwd)` ] ; then \
++	    rm -rf ${DESTDIR}$$1 ; \
+ 	  fi ; \
+ 	  shift ; \
+ 	done
+ 	-set ${COPYDESTS} ; \
+-	mkdir ${COPYDESTS} ; \
+-	chmod ugo+rx ${COPYDESTS} ; \
++	for dir in ${COPYDESTS} ; do \
++	  mkdir ${DESTDIR}$${dir} ; \
++	  chmod ugo+rx ${DESTDIR}$${dir} ; \
++	done; \
+ 	for dir in ${COPYDIR} ; do \
+ 	  dest=$$1 ; shift ; \
+ 	  [ -d $${dir} ] \
+-	  && [ `(cd $${dir} && /bin/pwd)` != `(cd $${dest} && /bin/pwd)` ] \
+-	  && (echo "Copying $${dir} to $${dest}..." ; \
++	  && [ `(cd $${dir} && /bin/pwd)` != `(cd ${DESTDIR}$${dest} && /bin/pwd)` ] \
++	  && (echo "Copying $${dir} to ${DESTDIR}$${dest}..." ; \
+ 	      (cd $${dir}; tar -cf - . ) \
+-		|(cd $${dest};umask 022; tar -xvf - && cat > /dev/null); \
+-	      for subdir in `find $${dest} -type d ! -name RCS -print` ; do \
++		|(cd ${DESTDIR}$${dest};umask 022; tar -xvf - && cat > /dev/null); \
++	      for subdir in `find ${DESTDIR}$${dest} -type d ! -name RCS -print` ; do \
+ 		chmod a+rx $${subdir} ; \
+ 		rm -rf $${subdir}/RCS ; \
+ 		rm -rf $${subdir}/CVS ; \
+@@ -341,72 +343,69 @@ install-arch-indep: mkdir
+ 		rm -f  $${subdir}/dired.todo ; \
+ 	      done) ; \
+ 	done
+-	-rm -f ${lispdir}/subdirs.el
+-	$(srcdir)/update-subdirs ${lispdir}
+-	if [ -f ${datadir}/emacs/${version}/site-lisp/subdirs.el ]; \
++	-rm -f ${DESTDIR}${lispdir}/subdirs.el
++	$(srcdir)/update-subdirs ${DESTDIR}${lispdir}
++	if [ -f ${DESTDIR}${datadir}/emacs/${version}/site-lisp/subdirs.el ]; \
+ 	then true; \
+ 	else \
+ 	  (echo "(if (fboundp 'normal-top-level-add-subdirs-to-load-path)"; \
+ 	   echo "    (normal-top-level-add-subdirs-to-load-path))") \
+-	    > ${datadir}/emacs/${version}/site-lisp/subdirs.el; \
++	    > ${DESTDIR}${datadir}/emacs/${version}/site-lisp/subdirs.el; \
+ 	fi
+-	chmod a+r ${datadir}/emacs/${version}/site-lisp/subdirs.el
+-	-if [ -f ${datadir}/emacs/site-lisp/subdirs.el ]; \
++	chmod a+r ${DESTDIR}${datadir}/emacs/${version}/site-lisp/subdirs.el
++	-if [ -f ${DESTDIR}${datadir}/emacs/site-lisp/subdirs.el ]; \
+ 	then true; \
+ 	else \
+ 	  (echo "(if (fboundp 'normal-top-level-add-subdirs-to-load-path)"; \
+ 	   echo "    (normal-top-level-add-subdirs-to-load-path))") \
+-	    > ${datadir}/emacs/site-lisp/subdirs.el; \
++	    > ${DESTDIR}${datadir}/emacs/site-lisp/subdirs.el; \
+ 	fi
+-	-chmod a+r ${datadir}/emacs/site-lisp/subdirs.el
+-	if [ `(cd ./etc; /bin/pwd)` != `(cd ${docdir}; /bin/pwd)` ]; \
++	-chmod a+r ${DESTDIR}${datadir}/emacs/site-lisp/subdirs.el
++	if [ `(cd ./etc; /bin/pwd)` != `(cd ${DESTDIR}${docdir}; /bin/pwd)` ]; \
+ 	then \
+-	   echo "Copying etc/DOC-* to ${docdir} ..." ; \
++	   echo "Copying etc/DOC-* to ${DESTDIR}${docdir} ..." ; \
+ 	   (cd ./etc; tar -cf - DOC*) \
+-	     |(cd ${docdir}; umask 0; tar -xvf - && cat > /dev/null); \
+-	   (cd $(docdir); chmod a+r DOC*; rm DOC); \
++	     |(cd ${DESTDIR}${docdir}; umask 0; tar -xvf - && cat > /dev/null); \
++	   (cd ${DESTDIR}$(docdir); chmod a+r DOC*; rm DOC); \
+ 	else true; fi
+ 	if [ -r ./lisp ] \
+ 	   && [ -r ./lisp/simple.el ] \
+-	   && [ x`(cd ./lisp; /bin/pwd)` != x`(cd ${lispdir}; /bin/pwd)` ] \
++	   && [ x`(cd ./lisp; /bin/pwd)` != x`(cd ${DESTDIR}${lispdir}; /bin/pwd)` ] \
+ 	   && [ x`(cd ${srcdir}/lisp; /bin/pwd)` != x`(cd ./lisp; /bin/pwd)` ]; \
+ 	then \
+-	   echo "Copying lisp/*.el and lisp/*.elc to ${lispdir} ..." ; \
++	   echo "Copying lisp/*.el and lisp/*.elc to ${DESTDIR}${lispdir} ..." ; \
+ 	   (cd lisp; tar -cf - *.el *.elc) \
+-	     |(cd ${lispdir}; umask 0; tar -xvf - && cat > /dev/null); \
++	     |(cd ${DESTDIR}${lispdir}; umask 0; tar -xvf - && cat > /dev/null); \
+ 	else true; fi
+ 	thisdir=`/bin/pwd`; \
+-	if [ `(cd ${srcdir}/info && /bin/pwd)` != `(cd ${infodir} && /bin/pwd)` ]; \
++	if [ `(cd ${srcdir}/info && /bin/pwd)` != `(cd ${DESTDIR}${infodir} && /bin/pwd)` ]; \
+ 	then \
+ 	  (cd ${infodir};  \
+ 	   if [ -f dir ]; then true; \
+ 	   else	\
+ 	     (cd $${thisdir}; \
+-	      ${INSTALL_DATA} ${srcdir}/info/dir ${infodir}/dir; \
+-	      chmod a+r ${infodir}/dir); \
++	      ${INSTALL_DATA} ${srcdir}/info/dir ${DESTDIR}${infodir}/dir; \
++	      chmod a+r ${DESTDIR}${infodir}/dir); \
  	   fi; \
  	   cd ${srcdir}/info ; \
 -	   for f in ccmode* cl* dired-x* ediff* emacs* forms* gnus* info* message* mh-e* reftex* sc* vip* widget*; do \
@@ -11,7 +125,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  	     (cd $${thisdir}; \
 -	      ${INSTALL_DATA} ${srcdir}/info/$$f ${infodir}/$$f; \
 -	      chmod a+r ${infodir}/$$f); \
-+	      ${INSTALL_DATA} ${srcdir}/info/$$f ${infodir}/$$f); \
++	      ${INSTALL_DATA} ${srcdir}/info/$$f ${DESTDIR}${infodir}/$$f); \
  	   done); \
  	else true; fi
 -	-thisdir=`/bin/pwd`; \
@@ -22,7 +136,9 @@ $NetBSD: patch-ae,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
 -	     ${INSTALL_INFO} --dir-file=${infodir}/dir --info-file=${infodir}/$$f); \
 -	  done; \
 -	else true; fi
- 	-chmod -R a+r ${datadir}/emacs ${COPYDESTS} ${infodir}
+-	-chmod -R a+r ${datadir}/emacs ${COPYDESTS} ${infodir}
++	-chmod -R a+rX ${DESTDIR}${datadir}/emacs ${DESTDIR}${infodir}
++	-for dir in ${COPYDESTS}; do chmod -R a+rX ${DESTDIR}$$dir; done
  	thisdir=`/bin/pwd`; \
  	cd ${srcdir}/etc; \
  	for page in emacs etags ctags ; do \
@@ -30,16 +146,28 @@ $NetBSD: patch-ae,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
 -	   ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${man1dir}/$${page}${manext}; \
 -	   chmod a+r ${man1dir}/$${page}${manext}); \
 +	   if [ $${page} = emacs ]; then \
-+	     ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${man1dir}/$${page}${manext}; \
-+	     chmod a+r ${man1dir}/$${page}${manext}; \
++	     ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${DESTDIR}${man1dir}/$${page}${manext}; \
++	     chmod a+r ${DESTDIR}${man1dir}/$${page}${manext}; \
 +	   else \
-+	     ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${man1dir}/emacs-$${page}${manext}; \
-+	     chmod a+r ${man1dir}/emacs-$${page}${manext}; \
++	     ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${DESTDIR}${man1dir}/emacs-$${page}${manext}; \
++	     chmod a+r ${DESTDIR}${man1dir}/emacs-$${page}${manext}; \
 +	   fi) \
  	done
  
  ### Install LEIM files.  Although they are machine-independent, we
-@@ -458,7 +454,7 @@
+@@ -425,9 +424,9 @@ install-strip:
+ ### /usr/local/lib/emacs/19.0/mips-dec-ultrix4.2), we use mkinstalldirs
+ ### instead of mkdir.  Not all systems' mkdir programs have the `-p' flag.
+ mkdir: FRC
+-	if [ -d ${datadir} ]; then true; else \
++	if [ -d ${DESTDIR}${datadir} ]; then true; else \
+ 	  $(srcdir)/mkinstalldirs ${datadir}; \
+-	  chmod a+r ${datadir};\
++	  chmod a+rX ${DESTDIR}${datadir};\
+ 	fi
+ 	$(srcdir)/mkinstalldirs ${COPYDESTS} ${infodir} ${man1dir} \
+ 	  ${bindir} ${docdir} ${libexecdir} \
+@@ -458,7 +457,7 @@ uninstall:
  	    esac ;					\
  	  fi ;						\
  	done
