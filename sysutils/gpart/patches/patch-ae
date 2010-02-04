@@ -1,13 +1,16 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/09/01 16:10:28 veego Exp $
+$NetBSD: patch-ae,v 1.2 2010/02/04 21:14:03 heinz Exp $
 
---- inst.defs	Sun May 14 14:04:24 2000
-+++ inst.defs	Fri Sep  1 17:29:26 2000
-@@ -1,7 +1,7 @@
+--- inst.defs.orig	2000-12-13 22:45:49.000000000 +0000
++++ inst.defs
+@@ -1,9 +1,9 @@
  #
  # installation directories for gpart
  #
 -prefix=/usr/local
-+prefix=${PREFIX}
++prefix=$(DESTDIR)$(PREFIX)
  bindir=$(prefix)/bin
  libdir=$(prefix)/lib
- mandir=$(prefix)/man
+-mandir=$(prefix)/man
++mandir=$(prefix)/$(PKGMANDIR)
+ manext=8
+ sharedir=$(prefix)/share
