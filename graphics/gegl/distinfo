@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2009/08/21 19:41:13 adam Exp $
+$NetBSD: distinfo,v 1.4 2010/02/04 12:28:43 adam Exp $
 
 SHA1 (gegl-0.1.0.tar.bz2) = ede1789ce318b9afe4ec7dcb42c1065b4f278b64
 RMD160 (gegl-0.1.0.tar.bz2) = fb03f5a2170d28ef37f94a7941d456b0dc92600b
 Size (gegl-0.1.0.tar.bz2) = 1342198 bytes
 SHA1 (patch-aa) = 5eeefaaa80a93eefd73dba81eff88652e5213167
+SHA1 (patch-ab) = 6f0d59625b4fbbc61af8156ffc3cb01ade593a29
