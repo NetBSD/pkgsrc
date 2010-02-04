@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2007/08/26 08:06:48 obache Exp $
+# $NetBSD: options.mk,v 1.9 2010/02/04 12:03:51 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pureftpd
 PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql ssl virtualchroot utf8
@@ -42,5 +42,5 @@ CONFIGURE_ARGS+=	--with-virtualchroot
 .if !empty(PKG_OPTIONS:Mutf8)
 # Experimental
 .  include "../../converters/libiconv/buildlink3.mk"
-CONFIGURE_ARGS+=       --with-rfc2640
+CONFIGURE_ARGS+=	--with-rfc2640
 .endif
