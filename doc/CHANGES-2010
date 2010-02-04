@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.533 2010/02/04 20:15:40 adrianp Exp $
+$NetBSD: CHANGES-2010,v 1.534 2010/02/04 22:08:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -637,3 +637,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/swig to 1.3.36 [taca 2010-02-04]
 	Updated sysutils/puppet to 0.24.9 [taca 2010-02-04]
 	Updated chat/ircd-hybrid to 7.2.3nb3 [adrianp 2010-02-04]
+	Added devel/p5-AnnoCPAN-Perldoc version 0.10 [seb 2010-02-04]
