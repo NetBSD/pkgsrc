@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2005/10/22 16:17:14 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2010/02/04 01:48:01 joerg Exp $
 
 --- Makefile.orig	Thu Jan 11 10:55:40 1996
 +++ Makefile	Thu Jul 16 05:07:04 1998
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.5 2005/10/22 16:17:14 rillig Exp $
 -MANDIR   = /usr/local/man/man1
 +INCLUDES = -I$(X11BASE)/include
 +LIB_DIRS = -L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib
-+BINDIR   = $(PREFIX)/bin
-+MANDIR   = $(PREFIX)/man/man1
++BINDIR   = ${DESTDIR}$(PREFIX)/bin
++MANDIR   = ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1
  
 @@ -33,4 +33,6 @@
  # feature.

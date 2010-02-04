@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2010/01/17 12:02:23 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2010/02/04 01:51:24 joerg Exp $
 
 DISTNAME=		cyrus-imapd-2.1.18
 PKGREVISION=		6
@@ -12,6 +12,7 @@ HOMEPAGE=		http://cyrusimap.web.cmu.edu/imapd/
 COMMENT=		Cyrus IMAP server
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
@@ -165,18 +166,14 @@ post-patch:
 pre-configure:
 	cd ${WRKSRC} && autoheader && autoconf
 
+INSTALLATION_DIRS+=	${EGDIR} ${HTMLDIR}
+
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/translatesieve ${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/rehash ${PREFIX}/cyrus/bin
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${EGDIR}
-	cd ${WRKSRC}/master/conf; for file in *.conf; do		\
-		${INSTALL_DATA} $$file ${EGDIR};			\
-	done
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/doc; for file in *.html cyrusv2.mc; do		\
-		${INSTALL_DATA} $$file ${HTMLDIR};			\
-	done
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${DESTDIR}${PREFIX}/cyrus/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/translatesieve ${DESTDIR}${PREFIX}/cyrus/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/rehash ${DESTDIR}${PREFIX}/cyrus/bin
+	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/master/conf/*.conf ${DESTDIR}${EGDIR};			\
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${WRKSRC}/doc/cyrusv2.mc ${DESTDIR}${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"

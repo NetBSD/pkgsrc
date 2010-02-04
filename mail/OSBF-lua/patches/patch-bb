@@ -1,13 +1,28 @@
-$NetBSD: patch-bb,v 1.1.1.1 2008/10/13 11:29:53 shannonjr Exp $
+$NetBSD: patch-bb,v 1.2 2010/02/04 01:46:15 joerg Exp $
 
---- Makefile.orig	2007-01-14 11:57:19.000000000 -0700
+--- Makefile.orig	2007-01-14 18:57:19.000000000 +0000
 +++ Makefile
-@@ -18,6 +18,8 @@ lib: $(LIBNAME)
+@@ -18,16 +18,16 @@ lib: $(LIBNAME)
  $(LIBNAME): $(OBJS)
  	$(CC) $(CFLAGS) $(LIB_OPTION) -o $(LIBNAME) $(OBJS) $(LIBS)
  
 +all:	$(LIBNAME)
 +
  install: $(LIBNAME)
- 	mkdir -p $(LUA_LIBDIR)
- 	strip $(LIBNAME)
+-	mkdir -p $(LUA_LIBDIR)
+-	strip $(LIBNAME)
+-	cp $(LIBNAME) $(LUA_LIBDIR)
+-	(cd $(LUA_LIBDIR) ; rm -f $T$(LIB_EXT) ; ln -fs $(LIBNAME) $T$(LIB_EXT))
++	mkdir -p ${DESTDIR}$(LUA_LIBDIR)
++	${BSD_INSTALL_LIB} $(LIBNAME) ${DESTDIR}$(LUA_LIBDIR)
++	(cd ${DESTDIR}$(LUA_LIBDIR) ; rm -f $T$(LIB_EXT) ; ln -fs $(LIBNAME) $T$(LIB_EXT))
+ 
+ install_spamfilter:
+-	mkdir -p $(SPAMFILTER_DIR)
+-	cp spamfilter/* $(SPAMFILTER_DIR)
+-	chmod 755 $(SPAMFILTER_DIR)/*.lua
++	mkdir -p ${DESTDIR}$(SPAMFILTER_DIR)
++	${BSD_INSTALL_SCRIPT} spamfilter/* ${DESTDIR}$(SPAMFILTER_DIR)
+ 
+ clean:
+ 	rm -f $L $(LIBNAME) $(OBJS) *.so *~ spamfilter/*~

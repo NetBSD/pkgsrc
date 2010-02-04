@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/20 00:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/04 01:46:15 joerg Exp $
 #
 
 DISTNAME=	osbf-lua-2.0.4
@@ -10,6 +10,8 @@ MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://osbf-lua.luaforge.net/
 COMMENT=	Lua C module for text classification
 LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PREV_PKGPATH=	mail/lua-OSBF
 
