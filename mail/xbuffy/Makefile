@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/04 14:25:56 joerg Exp $
 #
 
 DISTNAME=	xbuffy-3.4
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.virginia.edu/pub/xbuffy/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Replacement for xbiff that handles multiple mail files
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
 
@@ -18,7 +20,7 @@ CPPFLAGS+=	-Wall
 INSTALLATION_DIRS=	lib/X11/app-defaults
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/XBuffy.ad ${PREFIX}/lib/X11/app-defaults/XBuffy
+	${INSTALL_DATA} ${WRKSRC}/XBuffy.ad ${DESTDIR}${PREFIX}/lib/X11/app-defaults/XBuffy
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
