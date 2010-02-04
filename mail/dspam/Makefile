@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2009/12/15 21:54:17 joerg Exp $
+# $NetBSD: Makefile,v 1.65 2010/02/04 02:00:36 joerg Exp $
 
 DISTNAME=	dspam-3.8.0
 PKGREVISION=	5
@@ -8,6 +8,8 @@ MASTER_SITES=	http://dspam.nuclearelephant.com/sources/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dspam.nuclearelephant.com/
 COMMENT=	Extremely scalable, statistical-hybrid anti-spam filter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -119,45 +121,44 @@ SUBST_MESSAGE.conf=	Fixing configuration file.
 post-extract:
 	${CHMOD} -R go-w ${WRKSRC}
 
+INSTALLATION_DIRS+=	${DOCDIR} ${DATADIR} ${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/RELEASE.NOTES ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DOCDIR}
-	${INSTALL_DATA_DIR} ${DATADIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/src/dspam.conf.in ${EGDIR}/dspam.conf
-	${INSTALL_DATA} ${WRKSRC}/webui/cgi-bin/admins ${EGDIR}/cgi-admins
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/RELEASE.NOTES ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/src/dspam.conf.in ${DESTDIR}${EGDIR}/dspam.conf
+	${INSTALL_DATA} ${WRKSRC}/webui/cgi-bin/admins ${DESTDIR}${EGDIR}/cgi-admins
 	${INSTALL_DATA} ${WRKSRC}/webui/cgi-bin/default.prefs \
-		${EGDIR}/cgi-default.prefs
+	    ${DESTDIR}${EGDIR}/cgi-default.prefs
 	${INSTALL_DATA} ${WRKSRC}/webui/cgi-bin/configure.pl \
-		${EGDIR}/configure.pl
+	    ${DESTDIR}${EGDIR}/configure.pl
 
 .for d in txt webui/cgi-bin webui/htdocs
-	${INSTALL_DATA_DIR} ${DATADIR}/${d}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}/${d}
 	cd ${WRKSRC}/${d} && pax -rwppm '-s|.*/Makefile.*$$||'	\
 		'-s|./admins.*$$||' '-s|./default.prefs.*$$||'		\
-		'-s|./configure.pl.*$$||' . ${DATADIR}/${d}
+		'-s|./configure.pl.*$$||' . ${DESTDIR}${DATADIR}/${d}
 .endfor
 
 .for drv in mysql pgsql
 .  if !empty(DSPAM_STORAGE_DRIVER:M${drv})
-	${INSTALL_DATA_DIR} ${DATADIR}/${drv}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}/${drv}
 	cd ${WRKSRC}/src/tools.${drv}_drv && \
-		pax -rwpm ./*.sql ${DATADIR}/${drv}
+		pax -rwpm ./*.sql ${DESTDIR}${DATADIR}/${drv}
 .  endif
 .endfor
 
 .if !empty(DSPAM_STORAGE_DRIVER:Msqlite*)
-	${INSTALL_DATA_DIR} ${DATADIR}/sqlite
+	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}/sqlite
 	 cd ${WRKSRC}/src/tools.sqlite_drv && \
-	 	pax -rwpm '-s|.*/Makefile.*$$||' . ${DATADIR}/sqlite
+	 	pax -rwpm '-s|.*/Makefile.*$$||' . ${DESTDIR}${DATADIR}/sqlite
 .endif
 
-	${CHMOD} ${SHAREMODE} ${DATADIR}/webui/cgi-bin/*.txt
-	${CHMOD} ${SHAREMODE} ${DATADIR}/webui/cgi-bin/templates/*.html
-	${CHMOD} ${SHAREMODE} ${DATADIR}/webui/htdocs/*.css
-	${CHMOD} ${SHAREMODE} ${DATADIR}/webui/htdocs/*.gif
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${DATADIR}/webui/cgi-bin/*.txt
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${DATADIR}/webui/cgi-bin/templates/*.html
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${DATADIR}/webui/htdocs/*.css
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${DATADIR}/webui/htdocs/*.gif
 
 .include "../../mk/bsd.pkg.mk"
