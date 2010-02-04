@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/10/07 23:58:50 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2010/02/04 01:32:00 joerg Exp $
 
 DISTNAME=	tcl-itcl-20040920
 PKGNAME=	${DISTNAME:S/itcl/itcl-current/}
@@ -12,6 +12,7 @@ HOMEPAGE=	http://incrtcl.sourceforge.net/itcl/
 COMMENT=	[incr Tcl] object-oriented extension to Tcl/Tk.  CVS snapshot
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	tcl-itcl-[0-9]*
 
@@ -33,6 +34,10 @@ SUBST_SED.tcl-itcl=	-e 's|^\(.*\)='\''\(.*\)'\''|\1="\2"|'
 SUBST_SED.tcl-itcl+=	-e s\|${WRKSRC:Q}/itcl\|${PREFIX:Q}/lib/tcl/itcl${ITCL_VERS:Q}\|
 SUBST_SED.tcl-itcl+=	-e s\|${PREFIX:Q}/lib/itcl${ITCL_VERS:Q}\|${PREFIX:Q}/lib/tcl/itcl${ITCL_VERS:Q}\|
 SUBST_SED.tcl-itcl+=	-e s\|${WRKDIR:Q}/${DISTNAME:C/-src//:Q}\|${PREFIX:Q}\|
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			exec_prefix=${DESTDIR}${PREFIX} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
