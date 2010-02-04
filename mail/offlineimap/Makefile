@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/04 02:36:28 joerg Exp $
 #
 
 DISTNAME=	offlineimap_${_OFFLINEIMAP_VER}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://software.complete.org/offlineimap/static/download_area/${_O
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://software.complete.org/offlineimap
 COMMENT=	Powerful IMAP/Maildir synchronization and reader support
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/offlineimap
 
@@ -23,9 +25,9 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/examples/offlineimap
 
 post-install:
 .for _f_ in offlineimap.conf offlineimap.conf.minimal
-	${INSTALL_DATA} ${WRKSRC}/${_f_} ${PREFIX}/share/examples/offlineimap/${_f_}
+	${INSTALL_DATA} ${WRKSRC}/${_f_} ${DESTDIR}${PREFIX}/share/examples/offlineimap/${_f_}
 .endfor
-	${INSTALL_MAN} ${WRKSRC}/offlineimap.1 ${PREFIX}/${PKGMANDIR}/man1/offlineimap.1
+	${INSTALL_MAN} ${WRKSRC}/offlineimap.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/offlineimap.1
 
 .include "../../devel/py-cursespanel/buildlink3.mk"
 .include "../../devel/py-curses/buildlink3.mk"
