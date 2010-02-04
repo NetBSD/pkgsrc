@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2006/07/02 10:23:27 rillig Exp $
+$NetBSD: distinfo,v 1.5 2010/02/04 01:39:11 joerg Exp $
 
 SHA1 (rexx-imc-1.76.tar.gz) = 3b567bf3e77e42f33eb0ad771ea17ed759c8b361
 RMD160 (rexx-imc-1.76.tar.gz) = 4fb42df97c113aa58e359deb78dfead74469ddde
 Size (rexx-imc-1.76.tar.gz) = 251581 bytes
-SHA1 (patch-aa) = 4317beb7ab2af956f3fa7ecc7c99cf3bd32ff625
+SHA1 (patch-aa) = 63de678adf302b818a43c4a79cff6248fae49190
 SHA1 (patch-ab) = f4d30c6d70f45fb463af1bb1fc2446621d7f7f50
