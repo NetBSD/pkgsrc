@@ -1,23 +1,58 @@
-$NetBSD: patch-ak,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+$NetBSD: patch-ak,v 1.2 2010/02/04 06:40:19 dholland Exp $
 
---- lib-src/Makefile.in.orig	Sun Aug  2 02:22:55 1998
-+++ lib-src/Makefile.in	Fri Sep  4 01:40:32 1998
-@@ -286,12 +286,14 @@
+--- lib-src/Makefile.in.orig	1999-11-13 22:41:47.000000000 +0000
++++ lib-src/Makefile.in
+@@ -254,7 +254,7 @@ blessmail:
+ maybe-blessmail: BLESSMAIL
+ #ifdef MOVEMAIL_NEEDS_BLESSING
+ /* Don't charge ahead and do it!  Let the installer decide.
+-	  ./blessmail ${archlibdir}/movemail  */
++	  ./blessmail ${DESTDIR}${archlibdir}/movemail  */
+ 	@if [ `wc -l <blessmail` != 2 ] ; then \
+ 	  dir=`sed -n -e 's/echo mail directory = \(.*\)/\1/p' blessmail`; \
+ 	  echo Assuming $$dir is really the mail spool directory, you should; \
+@@ -266,32 +266,34 @@ maybe-blessmail: BLESSMAIL
+ 
+ /* Install the internal utilities.  Until they are installed, we can
+    just run them directly from lib-src.  */
+-${archlibdir}: all
++${DESTDIR}${archlibdir}: all
+ 	@echo
+ 	@echo "Installing utilities run internally by Emacs."
+ 	$(top_srcdir)/mkinstalldirs ${archlibdir}
+-	if [ `(cd ${archlibdir} && /bin/pwd)` != `/bin/pwd` ]; then \
++	if [ `(cd ${DESTDIR}${archlibdir} && /bin/pwd)` != `/bin/pwd` ]; then \
+ 	  for file in ${UTILITIES}; do \
+-	    $(INSTALL_PROGRAM) $(INSTALL_STRIP) $$file ${archlibdir}/$$file ; \
++	    $(INSTALL_PROGRAM) $(INSTALL_STRIP) $$file ${DESTDIR}${archlibdir}/$$file ; \
+ 	  done ; \
+         fi
+-        if [ `(cd ${archlibdir} && /bin/pwd)` \
++        if [ `(cd ${DESTDIR}${archlibdir} && /bin/pwd)` \
+              != `(cd ${srcdir} && /bin/pwd)` ]; then \
+ 	  for file in ${SCRIPTS}; do \
+-	    $(INSTALL_PROGRAM) ${srcdir}/$$file ${archlibdir}/$$file; \
++	    $(INSTALL_PROGRAM) ${srcdir}/$$file ${DESTDIR}${archlibdir}/$$file; \
+ 	  done ; \
+ 	fi
+ 
+-install: ${archlibdir}
++install: ${DESTDIR}${archlibdir}
  	@echo
  	@echo "Installing utilities for users to run."
  	for file in ${INSTALLABLES} ; do \
 -	  $(INSTALL_PROGRAM) $(INSTALL_STRIP) $${file} ${bindir}/$${file} ; \
 -	  chmod a+rx ${bindir}/$${file}; \
 +	  if [ $${file} = emacsclient ] ; then \
-+	    $(INSTALL_PROGRAM) $(INSTALL_STRIP) $${file} ${bindir}/$${file} ; \
++	    $(INSTALL_PROGRAM) $(INSTALL_STRIP) $${file} ${DESTDIR}${bindir}/$${file} ; \
 +	  else \
-+	    $(INSTALL_PROGRAM) $(INSTALL_STRIP) $${file} ${bindir}/emacs-$${file} ; \
++	    $(INSTALL_PROGRAM) $(INSTALL_STRIP) $${file} ${DESTDIR}${bindir}/emacs-$${file} ; \
 +	  fi ; \
  	done
  	for file in ${INSTALLABLE_SCRIPTS} ; do \
 -	  $(INSTALL_PROGRAM) ${srcdir}/$${file} ${bindir}/$${file} ; \
 -	  chmod a+rx ${bindir}/$${file}; \
-+	  $(INSTALL_PROGRAM) ${srcdir}/$${file} ${bindir}/emacs-$${file} ; \
++	  $(INSTALL_PROGRAM) ${srcdir}/$${file} ${DESTDIR}${bindir}/emacs-$${file} ; \
  	done
  
  uninstall:
