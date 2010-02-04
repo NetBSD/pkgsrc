@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/01/24 13:26:11 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/04 16:15:14 joerg Exp $
 #
 
 DISTNAME=		Addresses-0.4.6
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://giesler.biz/bjoern/en/sw_addr.html
 COMMENT=		Address book for GNUstep
 LICENSE=		gnu-lgpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		objc
 

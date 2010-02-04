@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2009/04/13 12:37:23 rh Exp $
+$NetBSD: distinfo,v 1.6 2010/02/04 16:15:14 joerg Exp $
 
 SHA1 (Addresses-0.4.6.tar.gz) = 8495fd4d5f358cb51b5ddd0e204d86d40a7d5563
 RMD160 (Addresses-0.4.6.tar.gz) = 3bbeefb3fe2e47fdfd541f85df7b28a82aa4edae
 Size (Addresses-0.4.6.tar.gz) = 444463 bytes
 SHA1 (patch-aa) = 78d0a9d0f70cd7897f4bbd7d14711d0060baa5cb
-SHA1 (patch-ab) = 3babdba3010401715fb0bd48ddd535ac6ecf8faf
+SHA1 (patch-ab) = e2fb0b1aee991236c63ff00785688ae6e062ed3b

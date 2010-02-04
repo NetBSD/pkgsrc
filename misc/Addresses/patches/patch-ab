@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2009/04/13 12:37:23 rh Exp $
+$NetBSD: patch-ab,v 1.2 2010/02/04 16:15:14 joerg Exp $
 
 --- Frameworks/Addresses/GNUmakefile.orig	2004-07-30 01:36:21.000000000 +1000
 +++ Frameworks/Addresses/GNUmakefile
@@ -8,6 +8,6 @@ $NetBSD: patch-ab,v 1.1 2009/04/13 12:37:23 rh Exp $
  after-Addresses-install::
 -	ln -sf $(GNUSTEP_INSTALLATION_DIR)/Library/Headers/Addresses \
 -	       $(GNUSTEP_INSTALLATION_DIR)/Library/Headers/AddressBook
-+	ln -sf ${GNUSTEP_ROOT}/include/Addresses \
-+	       ${GNUSTEP_ROOT}/include/AddressBook
++	ln -sf ${DESTDIR}${GNUSTEP_ROOT}/include/Addresses \
++	       ${DESTDIR}${GNUSTEP_ROOT}/include/AddressBook
  
