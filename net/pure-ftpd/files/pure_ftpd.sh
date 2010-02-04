@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# 	$NetBSD: pure_ftpd.sh,v 1.1.1.1 2003/07/12 14:43:08 salo Exp $
+# 	$NetBSD: pure_ftpd.sh,v 1.2 2010/02/04 12:34:08 obache Exp $
 #
 # PROVIDE: pure_ftpd
 # REQUIRE: DAEMON
@@ -12,7 +12,7 @@ help_name="pure-ftpd"
 rcvar=$name
 command="@PREFIX@/sbin/${help_name}"
 command_args="-B"
-pidfile="/var/run/${help_name}.pid"
+pidfile="@VARBASE@/run/${help_name}.pid"
 
 load_rc_config $name
 run_rc_command "$1"
