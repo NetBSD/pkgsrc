@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/02/04 10:35:28 obache Exp $
 ${PYSITELIB}/optik/__init__.py
 ${PYSITELIB}/optik/__init__.pyc
 ${PYSITELIB}/optik/__init__.pyo
@@ -14,3 +14,9 @@ ${PYSITELIB}/optik/option.pyo
 ${PYSITELIB}/optik/option_parser.py
 ${PYSITELIB}/optik/option_parser.pyc
 ${PYSITELIB}/optik/option_parser.pyo
+${PYSITELIB}/optik/textwrap.py
+${PYSITELIB}/optik/textwrap.pyc
+${PYSITELIB}/optik/textwrap.pyo
+${PYSITELIB}/optparse.py
+${PYSITELIB}/optparse.pyc
+${PYSITELIB}/optparse.pyo
