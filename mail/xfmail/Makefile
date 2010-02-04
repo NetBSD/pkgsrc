@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/01/18 09:59:12 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2010/02/04 14:36:01 joerg Exp $
 
 DISTNAME=		xfmail-1.5.5
 PKGREVISION=		3
@@ -13,14 +13,17 @@ COMMENT=		Xforms based mail application for Unix operating systems
 # A few files are.
 #LICENSE+=		mit-license
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_X11BASE=		YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		YES
 
+INSTALLATION_DIRS+=	share/doc/xfmail
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfmail
-	${INSTALL_DATA} ${WRKSRC}/Copyright ${PREFIX}/share/doc/xfmail
+	${INSTALL_DATA} ${WRKSRC}/Copyright ${DESTDIR}${PREFIX}/share/doc/xfmail
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
