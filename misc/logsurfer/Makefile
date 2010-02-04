@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/01/18 11:01:56 shattered Exp $
+# $NetBSD: Makefile,v 1.20 2010/02/04 17:25:25 joerg Exp $
 
 DISTNAME=	logsurfer+-1.7
 PKGNAME=	logsurfer-1.7
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.crypt.gen.nz/logsurfer/
 COMMENT=	Processes logfiles and performs certain actions
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
@@ -19,9 +21,10 @@ BUILD_DEFS+=	VARBASE
 EGDIR=		${PREFIX}/share/examples/logsurfer
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 ${EGDIR}
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 post-install:
-	mkdir ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/start-mail/start-mail ${EGDIR}/start-mail
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/start-mail/start-mail ${DESTDIR}${EGDIR}/start-mail
 
 .include "../../mk/bsd.pkg.mk"
