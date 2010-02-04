@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.527 2010/02/04 12:29:48 adam Exp $
+$NetBSD: CHANGES-2010,v 1.528 2010/02/04 12:33:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -631,3 +631,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/yaz to 4.0.1 [wiz 2010-02-04]
 	Updated mail/p5-Mail-IMAPClient to 3.23 [wiz 2010-02-04]
 	Updated graphics/gegl to 0.1.0nb3 [adma 2010-02-04]
+	Updated devel/p5-Moose to 0.95 [wiz 2010-02-04]
