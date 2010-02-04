@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.525 2010/02/04 11:17:17 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.526 2010/02/04 12:09:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -629,3 +629,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added geography/p5-Geo-ShapeFile version 2.52 [wiz 2010-02-04]
 	Added devel/p5-InlineX-C2XS version 0.15 [wiz 2010-02-04]
 	Updated net/yaz to 4.0.1 [wiz 2010-02-04]
+	Updated mail/p5-Mail-IMAPClient to 3.23 [wiz 2010-02-04]
