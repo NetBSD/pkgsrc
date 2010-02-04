@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2002/12/24 17:21:04 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/04 14:56:21 joerg Exp $
 
 --- port/master.mk.in.orig	Wed Nov 25 17:26:56 1998
 +++ port/master.mk.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2002/12/24 17:21:04 jmmv Exp $
  # `etc/' files:
  ############################################################################
 -ETCDIR	= $(prefix)/etc
-+ETCDIR	= @datadir@/examples/udunits
++ETCDIR	= ${DESTDIR}@datadir@/examples/udunits
  ETCFILE	= dummy-etcfile		# to silence GNU make(1)
  
  installed_etcfiles:
