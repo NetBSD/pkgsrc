@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.23 2010/02/02 23:01:05 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.24 2010/02/04 23:14:55 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -74,3 +74,7 @@ Pullup ticket #2987 - requested by taca
 squid30: security update
 Pullup ticket #2984 - requested by tron
 squid31: security update
+Pullup ticket #2988 - requested by tron
+perl5: infrastructure fix
+Pullup ticket #2989 - requested by taca
+puppet: security update
