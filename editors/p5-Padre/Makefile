@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/02/03 11:23:19 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/04 13:58:45 joerg Exp $
 #
 
 DISTNAME=	Padre-0.56
@@ -12,6 +12,7 @@ COMMENT=	Perl Application Development and Refactoring Environment
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES+=	c c++
 REPLACE_PERL+=	share/templates/*.t
