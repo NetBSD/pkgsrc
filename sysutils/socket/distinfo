@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2006/11/28 16:48:31 tv Exp $
+$NetBSD: distinfo,v 1.10 2010/02/04 20:58:45 heinz Exp $
 
 SHA1 (socket-1.1.tar.gz) = 1ada9bc6d949c303734030b3a34e2d6f0544d1db
 RMD160 (socket-1.1.tar.gz) = 9a697cbdc807223f48229caa3349cba216b5ffc0
 Size (socket-1.1.tar.gz) = 14426 bytes
-SHA1 (patch-aa) = 83b6f15cc92b6bfbed03ea5d91b56cb329957241
+SHA1 (patch-aa) = d50e202c0599105fbfd8bb446b3b30e79034111c
 SHA1 (patch-ab) = a57ef3243601007113f07493201804a6050f3182
 SHA1 (patch-ac) = 73d6cabae5eec437edf39ee1cbb8ceea8cbb9f1e
 SHA1 (patch-ad) = 034f34565952f94b4e12cf78f0bb9b5612091e4d
