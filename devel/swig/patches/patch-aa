@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2006/05/21 16:34:19 rillig Exp $
+$NetBSD: patch-aa,v 1.4 2010/02/04 15:39:39 taca Exp $
 
---- Source/Makefile.in.orig	2006-03-22 09:03:30.000000000 +1030
-+++ Source/Makefile.in	2006-04-12 09:01:10.000000000 +0930
-@@ -412,47 +412,7 @@
+--- Source/Makefile.in.orig	2008-06-25 08:26:52.000000000 +0900
++++ Source/Makefile.in
+@@ -437,47 +437,7 @@ all: $(BUILT_SOURCES)
  
  .SUFFIXES:
  .SUFFIXES: .c .cxx .o .obj .y
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.3 2006/05/21 16:34:19 rillig Exp $
 -	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 -install-binPROGRAMS: $(bin_PROGRAMS)
 -	@$(NORMAL_INSTALL)
--	test -z "$(bindir)" || $(mkdir_p) "$(DESTDIR)$(bindir)"
+-	test -z "$(bindir)" || $(MKDIR_P) "$(DESTDIR)$(bindir)"
 -	@list='$(bin_PROGRAMS)'; for p in $$list; do \
 -	  p1=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
 -	  if test -f $$p \
