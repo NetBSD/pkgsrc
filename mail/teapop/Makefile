@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/12/02 11:20:22 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/02/04 02:45:20 joerg Exp $
 
 DISTNAME=	teapop-0.3.8
 PKGREVISION=	5
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.toontown.org/pub/teapop/
 MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://www.toontown.org/teapop/
 COMMENT=	Yet another RFC1939 compliant POP3 server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 
@@ -24,9 +26,10 @@ RCD_SCRIPTS=	teapop
 
 .include "options.mk"
 
+INSTALLATION_DIRS+=	${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/etc/teapop.passwd ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/teapop.passwd ${DESTDIR}${EGDIR}
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
