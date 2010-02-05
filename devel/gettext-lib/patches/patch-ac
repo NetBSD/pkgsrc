@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2006/02/05 22:45:54 joerg Exp $
+$NetBSD: patch-ac,v 1.3 2010/02/05 08:44:04 obache Exp $
 
---- intl/dcigettext.c.orig	2005-05-20 20:06:17.000000000 +0000
-+++ intl/dcigettext.c
+--- gettext-runtime/intl/dcigettext.c.orig	2005-05-20 20:06:17.000000000 +0000
++++ gettext-runtime/intl/dcigettext.c
 @@ -243,7 +243,9 @@ struct known_translation_t
  /* Root of the search tree with known translations.  We can use this
     only if the system provides the `tsearch' function family.  */
