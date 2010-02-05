@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.327 2010/02/02 22:17:32 minskim Exp $
+# $NetBSD: Makefile,v 1.328 2010/02/05 16:24:01 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -248,6 +248,8 @@ SUBDIR+=	tex-hyphen-ukenglish
 SUBDIR+=	tex-hyphen-ukrainian
 SUBDIR+=	tex-hyphen-uppersorbian
 SUBDIR+=	tex-hyphen-welsh
+SUBDIR+=	tex-ifluatex
+SUBDIR+=	tex-ifluatex-doc
 SUBDIR+=	tex-ifxetex
 SUBDIR+=	tex-ifxetex-doc
 SUBDIR+=	tex-igo
