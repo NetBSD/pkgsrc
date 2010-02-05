@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/17 12:02:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/05 14:50:38 gdt Exp $
 
 PKGNAME=	postgresql84-client-${BASE_VERS}
 PKGREVISION=	1
@@ -7,6 +7,9 @@ COMMENT=	PostgreSQL database client programs
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../databases/postgresql84/Makefile.common"
+
+# Couldn't find -lpgport, then rebuilt ok.
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gzip tar
 USE_LIBTOOL=		yes
