@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/09/28 14:15:49 rillig Exp $
+$NetBSD: MESSAGE,v 1.5 2010/02/05 15:27:27 martin Exp $
 
 Before you can use this program, you need to configure the MySQL
 connection in the open2300.conf file. The mysql user used by the
@@ -45,7 +45,8 @@ versions) works as well:
      `rel_hum_out` int(11) NOT NULL default '0',
      `windspeed` float NOT NULL default '0',
      `wind_angle` float NOT NULL default '0',
-     `wind_direction` enum('N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW') NOT NULL default 'N',
+     `wind_direction` enum('N','NNE','NE','ENE','E','ESE','SE','SSE','S',
+              'SSW','SW','WSW','W','WNW','NW','NNW') NOT NULL default 'N',
      `wind_chill` float NOT NULL default '0',
      `rain_1h` float NOT NULL default '0',
      `rain_24h` float NOT NULL default '0',
