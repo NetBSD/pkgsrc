@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/02/05 20:10:42 markd Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/05 20:13:20 markd Exp $
 
 DISTNAME=	dynamips-0.2.8-RC2
 PKGNAME=	${DISTNAME:S/-RC/rc/}
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.ipflow.utc.fr/dynamips/
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.ipflow.utc.fr/index.php/Cisco_7200_Simulator
 COMMENT=	Cisco 3600 and 7200 MIPS emulator
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
