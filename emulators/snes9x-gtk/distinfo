@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2009/10/20 15:34:53 wiz Exp $
+$NetBSD: distinfo,v 1.6 2010/02/05 12:57:27 wiz Exp $
 
-SHA1 (snes9x-1.51-src-gtk-78.tar.bz2) = 7d1bde82080f34bf4f16c2012a3bbaa886c6510c
-RMD160 (snes9x-1.51-src-gtk-78.tar.bz2) = f48bdf4cf4240f8bf7bca989bd97a971fdf1bde7
-Size (snes9x-1.51-src-gtk-78.tar.bz2) = 894388 bytes
-SHA1 (patch-aa) = 90b1624c04d7640fe87078e9309ade35693fd8e9
+SHA1 (snes9x-1.52-src.tar.bz2) = fb3957b68fcede882518516094a73ec5bbed76cf
+RMD160 (snes9x-1.52-src.tar.bz2) = ec7f85058e4571d89a65a89d3f09e2e40db0cbcc
+Size (snes9x-1.52-src.tar.bz2) = 1720137 bytes
+SHA1 (patch-aa) = bb32e36bd1d0c82dc4c68c3fb280f7474d1cf493
