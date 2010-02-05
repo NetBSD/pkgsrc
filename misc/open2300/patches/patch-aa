@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2010/02/04 17:37:51 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2010/02/05 15:26:15 martin Exp $
 
---- Makefile.orig	2004-11-13 11:25:31.000000000 +1100
-+++ Makefile
+--- Makefile.orig	2005-03-15 08:14:48.000000000 +0100
++++ Makefile	2010-02-04 18:52:12.000000000 +0100
 @@ -14,11 +14,11 @@
  
  prefix = /usr/local
@@ -16,27 +16,27 @@ $NetBSD: patch-aa,v 1.5 2010/02/04 17:37:51 joerg Exp $
  OBJ = open2300.o rw2300.o linux2300.o win2300.o
  LOGOBJ = log2300.o rw2300.o linux2300.o win2300.o
  FETCHOBJ = fetch2300.o rw2300.o linux2300.o win2300.o
-@@ -37,8 +37,8 @@ MINMAXOBJ = minmax2300.o rw2300.o linux2
+@@ -36,8 +36,8 @@
  
- VERSION = 1.8
+ VERSION = 1.10
  
 -CFLAGS = -Wall -O3 -DVERSION=\"$(VERSION)\"
 -CC_LDFLAGS = -lm
-+CFLAGS += -DVERSION=\"$(VERSION)\" ${CPPFLAGS}
++CFLAGS = -DVERSION=\"$(VERSION)\" ${CPPFLAGS}
 +CC_LDFLAGS = ${LDFLAGS} ${LIBS} -lm
  CC_WINFLAG = 
  # For Windows - comment the two line above and un-comment the two lines below.
- # CC_LDFLAGS = -lwsock32 -fno-exceptions -s
-@@ -80,7 +80,7 @@ xml2300 : $(XMLOBJ)
+ #CC_LDFLAGS = -lm -lwsock32
+@@ -79,7 +79,7 @@
  	$(CC) $(CFLAGS) -o $@ $(XMLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG)
  
- mysql2300: $(MYSQLOBJ)
--	$(CC) $(CFLAGS) -o $@ $(MYSQLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG) -I/usr/include/mysql -L/usr/lib/mysql -lmysqlclient
-+	$(CC) $(CFLAGS) -o $@ $(MYSQLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG)
- 	
- light2300: $(LIGHTOBJ)
- 	$(CC) $(CFLAGS) -o $@ $(LIGHTOBJ) $(CC_LDFLAGS)
-@@ -92,19 +92,23 @@ minmax2300: $(MINMAXOBJ)
+ mysql2300:
+-	$(CC) $(CFLAGS) -o mysql2300 mysql2300.c rw2300.c linux2300.c $(CC_LDFLAGS) $(CC_WINFLAG) -I/usr/include/mysql -L/usr/lib/mysql -lmysqlclient
++	$(CC) $(CFLAGS) -o mysql2300 mysql2300.c rw2300.c linux2300.c $(CC_LDFLAGS) $(CC_WINFLAG)
+ 
+ pgsql2300: $(PGSQLOBJ)
+ 	$(CC) $(CFLAGS) -o $@ $(PGSQLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG) -I/usr/include/pgsql -L/usr/lib/pgsql -lpq
+@@ -94,19 +94,25 @@
  	$(CC) $(CFLAGS) -o $@ $(MINMAXOBJ) $(CC_LDFLAGS) $(CC_WINFLAG)
  
  install:
@@ -53,23 +53,32 @@ $NetBSD: patch-aa,v 1.5 2010/02/04 17:37:51 joerg Exp $
 -	$(INSTALL) interval2300 $(bindir)
 -	$(INSTALL) minmax2300 $(bindir)
 -	
-+	${BSD_INSTALL_PROGRAM} open2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_PROGRAM} dump2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_PROGRAM} log2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_PROGRAM} fetch2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_PROGRAM} wu2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_PROGRAM} cw2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_PROGRAM} histlog2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_PROGRAM} xml2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_PROGRAM} light2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_PROGRAM} interval2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_PROGRAM} minmax2300 ${DESTDIR}$(bindir)
-+	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/open2300
-+	${BSD_INSTALL_DATA} open2300-dist.conf ${DESTDIR}${PREFIX}/share/examples/open2300/open2300.conf
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} open2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} dump2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} log2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} fetch2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} wu2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} cw2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} histlog2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} xml2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} light2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} interval2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} minmax2300 $(DESTDIR)$(bindir)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)${PREFIX}/share/examples/open2300
++	${BSD_INSTALL_DATA} open2300-dist.conf $(DESTDIR)${PREFIX}/share/examples/open2300/open2300.conf
 +
 +install-mysql:
-+	${BSD_INSTALL_PROGRAM} mysql2300 ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(bindir)
++	${BSD_INSTALL_PROGRAM} mysql2300 $(DESTDIR)$(bindir)
 +
  uninstall:
  	rm -f $(bindir)/open2300 $(bindir)/dump2300 $(bindir)/log2300 $(bindir)/fetch2300 $(bindir)/wu2300 $(bindir)/cw2300 $(bindir)/xml2300 $(bindir)/light2300 $(bindir)/interval2300 $(bindir)/minmax2300
  
+@@ -114,4 +118,4 @@
+ 	rm -f *~ *.o open2300 dump2300 log2300 fetch2300 wu2300 cw2300 history2300 histlog2300 bin2300 xml2300 mysql2300 pgsql2300 light2300 interval2300 minmax2300
+ 
+ cleanexe:
+-	rm -f *~ *.o open2300.exe dump2300.exe log2300.exe fetch2300.exe wu2300.exe cw2300.exe history2300.exe histlog2300.exe bin2300.exe xml2300.exe mysql2300.exe pgsql2300.exe light2300.exe interval2300.exe minmax2300.exe
+\ No newline at end of file
++	rm -f *~ *.o open2300.exe dump2300.exe log2300.exe fetch2300.exe wu2300.exe cw2300.exe history2300.exe histlog2300.exe bin2300.exe xml2300.exe mysql2300.exe pgsql2300.exe light2300.exe interval2300.exe minmax2300.exe
