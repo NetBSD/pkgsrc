@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.535 2010/02/04 22:53:44 seb Exp $
+$NetBSD: CHANGES-2010,v 1.536 2010/02/05 00:09:53 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -639,3 +639,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated chat/ircd-hybrid to 7.2.3nb3 [adrianp 2010-02-04]
 	Added devel/p5-AnnoCPAN-Perldoc version 0.10 [seb 2010-02-04]
 	Added textproc/p5-Search-Indexer version 0.76 [seb 2010-02-04]
+	Updated www/p5-Pod-POM-Web to 1.13 [seb 2010-02-05]
