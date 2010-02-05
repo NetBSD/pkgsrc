@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/05 17:12:06 minskim Exp $
+share/texmf/doc/texlive/index.html
+share/texmf/doc/texlive/texlive-common/examples/ex5.tex
+share/texmf/doc/texlive/texlive-common/examples/ex6.tex
+share/texmf/doc/texlive/texlive-common/examples/ex6a.tex
+share/texmf/doc/texlive/texlive-common/examples/ex6b.tex
+share/texmf/doc/texlive/texlive-common/examples/ex6c.tex
+share/texmf/doc/texlive/texlive-common/install-lnx-main.png
+share/texmf/doc/texlive/texlive-common/psview.png
+share/texmf/doc/texlive/texlive-common/stdcoll.png
+share/texmf/doc/texlive/texlive-common/tlmgr-config.png
+share/texmf/doc/texlive/texlive-common/tlmgr-gui.png
+share/texmf/doc/texlive/texlive-common/wizard-w32.png
