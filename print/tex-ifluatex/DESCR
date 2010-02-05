@@ -1,0 +1,2 @@
+The package looks for LuaTeX regardless of its mode and provides the
+switch \ifluatex; it works with Plain TeX or LaTeX.
