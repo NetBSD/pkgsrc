@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8979 2010/02/05 13:01:22 wiz Exp $
+$NetBSD: TODO,v 1.8980 2010/02/05 17:41:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1135,8 +1135,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-moin-1.9.1
 	o py-psycopg-2.0.13
 	o py-pytz-2010b
-	o py-qt4-4.7
-	o py-sip-4.10
 	o py-subversion-1.6.9
 	o py-sybase-0.37
 	o py-twisted-9.0.0
@@ -1219,7 +1217,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sarg-2.2.5
 	o sawfish-1.6.1
 	o saxon-9.2
-	o sbcl-1.0.34
+	o sbcl-1.0.35
 	o scamper-20070201
 	o scapy-2.1.0
 	o scew-0.4.0
@@ -1336,7 +1334,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-2.90
 	o uriparser-0.7.5
 	o userppp-030706
-	o vala-0.7.9
+	o vala-0.7.10
 	o valgrind-3.5.0
 	o varnish-2.0.4 [pkg/41118]
 	o vera-1.17
@@ -1462,7 +1460,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xnap-2.5r3
 	o xorg-cf-files-1.0.3
 	o xorg-docs-1.5
-	o xorg-util-macros-1.5.0
+	o xorg-util-macros-1.6.0
 	o xpad-2.13
 	o xpr-1.0.3 [unpackaged]
 	o xpuyopuyo-0.9.8
