@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/12/15 13:49:16 wiz Exp $
+$NetBSD: distinfo,v 1.10 2010/02/05 13:01:07 wiz Exp $
 
-SHA1 (raptor-1.4.20.tar.gz) = b50279944f7a3573c331183bd03f6140f670442d
-RMD160 (raptor-1.4.20.tar.gz) = f0b1ad050fb41208ebd699578b0327344a0bad9b
-Size (raptor-1.4.20.tar.gz) = 1717426 bytes
+SHA1 (raptor-1.4.21.tar.gz) = f8a82c6e9a342d0cc9772a02562c5e29c2c9b737
+RMD160 (raptor-1.4.21.tar.gz) = f2ee591e3e9e008b496d6b7bf78f1293173bf7ed
+Size (raptor-1.4.21.tar.gz) = 1651843 bytes
