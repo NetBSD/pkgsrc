@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2010/01/30 23:08:00 heinz Exp $
+# $NetBSD: Makefile,v 1.41 2010/02/05 19:53:08 markd Exp $
 
-DISTNAME=		mimedefang-2.63
+DISTNAME=		mimedefang-2.67
 CATEGORIES=		mail
 MASTER_SITES=		http://www.mimedefang.org/static/
 
@@ -14,8 +14,8 @@ DEPENDS+=		p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser
 DEPENDS+=		p5-HTML-Tagset>=3.03:../../www/p5-HTML-Tagset
 DEPENDS+=		p5-IO-stringy>=2.108:../../devel/p5-IO-stringy
 DEPENDS+=		p5-MailTools>=1.44:../../mail/p5-MailTools
-DEPENDS+=		p5-MIME-Base64>=2.11:../../converters/p5-MIME-Base64
-DEPENDS+=		p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
+DEPENDS+=		p5-MIME-Base64>=3.03:../../converters/p5-MIME-Base64
+DEPENDS+=		p5-MIME-tools>=5.413:../../mail/p5-MIME-tools
 DEPENDS+=		spamassassin>=2.31:../../mail/spamassassin
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -53,7 +53,7 @@ CONF_FILES+=		${EGDIR}/mimedefang-filter ${PKG_SYSCONFDIR}/mimedefang-filter
 CONF_FILES+=		${EGDIR}/sa-mimedefang.cf ${PKG_SYSCONFDIR}/sa-mimedefang.cf
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-confsubdir=
+CONFIGURE_ARGS+=	--with-confsubdir=${PKG_SYSCONFSUBDIR:Q}
 CONFIGURE_ARGS+=	--with-milterinc=${BUILDLINK_PREFIX.libmilter}/include
 CONFIGURE_ARGS+=	--with-milterlib=${BUILDLINK_PREFIX.libmilter}/lib
 CONFIGURE_ARGS+=	--with-spooldir=${DEFANG_SPOOLDIR:Q}
