@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2007/08/15 04:50:40 markd Exp $
+$NetBSD: patch-ac,v 1.7 2010/02/05 19:53:08 markd Exp $
 
---- mimedefang.pl.in.orig	2007-08-14 01:50:18.000000000 +1200
+--- mimedefang.pl.in.orig	2009-01-05 20:37:38.000000000 +0000
 +++ mimedefang.pl.in
-@@ -121,25 +121,25 @@ $VirusScannerRoutinesInitialized = 0;
+@@ -121,29 +121,29 @@ $VirusScannerRoutinesInitialized = 0;
  $SALocalTestsOnly = 1;
  $DoStatusTags = 0;
  
@@ -12,6 +12,7 @@ $NetBSD: patch-ac,v 1.6 2007/08/15 04:50:40 markd Exp $
 -$Features{'Virus:CLAMAV'}   = ('@CLAMSCAN@' ne '/bin/false' ? '@CLAMSCAN@' : 0);
 -$Features{'Virus:CLAMD'}    = ('@CLAMD@' ne '/bin/false' ? '@CLAMD@' : 0);
 -$Features{'Virus:FPROT'}    = ('@FPROT@' ne '/bin/false' ? '@FPROT@' : 0);
+-$Features{'Virus:FPSCAN'}    = ('@FPSCAN@' ne '/bin/false' ? '@FPSCAN@' : 0);
 -$Features{'Virus:FSAV'}     = ('@FSAV@' ne '/bin/false' ? '@FSAV@' : 0);
 -$Features{'Virus:HBEDV'}    = ('@HBEDV@' ne '/bin/false' ? '@HBEDV@' : 0);
 -$Features{'Virus:VEXIRA'}   = ('@VEXIRA@' ne '/bin/false' ? '@VEXIRA@' : 0);
@@ -24,6 +25,7 @@ $NetBSD: patch-ac,v 1.6 2007/08/15 04:50:40 markd Exp $
 +$Features{'Virus:CLAMAV'}   = ((('@CLAMSCAN@' ne '/bin/false') and (-x '@CLAMSCAN@')) ? '@CLAMSCAN@' : 0);
 +$Features{'Virus:CLAMD'}    = ((('@CLAMD@' ne '/bin/false') and (-x '@CLAMD@')) ? '@CLAMD@' : 0);
 +$Features{'Virus:FPROT'}    = ((('@FPROT@' ne '/bin/false') and (-x '@FPROT@')) ? '@FPROT@' : 0);
++$Features{'Virus:FPSCAN'}   = ((('@FPSCAN@' ne '/bin/false') and (-x '@FPSCAN@')) ? '@FPSCAN@' : 0);
 +$Features{'Virus:FSAV'}     = ((('@FSAV@' ne '/bin/false') and (-x '@FSAV@')) ? '@FSAV@' : 0);
 +$Features{'Virus:HBEDV'}    = ((('@HBEDV@' ne '/bin/false') and (-x '@HBEDV@')) ? '@HBEDV@' : 0);
 +$Features{'Virus:VEXIRA'}   = ((('@VEXIRA@' ne '/bin/false') and (-x '@VEXIRA@')) ? '@VEXIRA@' : 0);
@@ -32,16 +34,21 @@ $NetBSD: patch-ac,v 1.6 2007/08/15 04:50:40 markd Exp $
 +$Features{'Virus:NVCC'}     = ((('@NVCC@' ne '/bin/false') and (-x '@NVCC@')) ? '@NVCC@' : 0);
  $Features{'Virus:SymantecCSS'} = 0; # Ditto
  $Features{'Virus:FPROTD'}   = 0;
+ $Features{'Virus:FPROTD6'}   = 0;
 -$Features{'Virus:SOPHIE'}   = ('@SOPHIE@' ne '/bin/false' ? '@SOPHIE@' : 0);
 -$Features{'Virus:SOPHOS'}   = ('@SOPHOS@' ne '/bin/false' ? '@SOPHOS@' : 0);
+-$Features{'Virus:SAVSCAN'}   = ('@SAVSCAN@' ne '/bin/false' ? '@SAVSCAN@' : 0);
 -$Features{'Virus:TREND'}    = ('@TREND@' ne '/bin/false' ? '@TREND@' : 0);
 -$Features{'Virus:TROPHIE'}  = ('@TROPHIE@' ne '/bin/false' ? '@TROPHIE@' : 0);
 -$Features{'Virus:CSAV'}     = ('@CSAV@' ne '/bin/false' ? '@CSAV@' : 0);
+-$Features{'Virus:NOD32'}    = ('@NOD32@' ne '/bin/false' ? '@NOD32@' : 0);
 +$Features{'Virus:SOPHIE'}   = ((('@SOPHIE@' ne '/bin/false') and (-x '@SOPHIE@')) ? '@SOPHIE@' : 0);
 +$Features{'Virus:SOPHOS'}   = ((('@SOPHOS@' ne '/bin/false') and (-x '@SOPHOS@')) ? '@SOPHOS@' : 0);
++$Features{'Virus:SAVSCAN'}  = ((('@SAVSCAN@' ne '/bin/false') and (-x '@SAVSCAN@')) ? '@SAVSCAN@' : 0);
 +$Features{'Virus:TREND'}    = ((('@TREND@' ne '/bin/false') and (-x '@TREND@')) ? '@TREND@' : 0);
 +$Features{'Virus:TROPHIE'}  = ((('@TROPHIE@' ne '/bin/false') and (-x '@TROPHIE@')) ? '@TROPHIE@' : 0);
 +$Features{'Virus:CSAV'}     = ((('@CSAV@' ne '/bin/false') and (-x '@CSAV@')) ? '@CSAV@' : 0);
++$Features{'Virus:NOD32'}    = ((('@NOD32@' ne '/bin/false') and (-x '@NOD32@')) ? '@NOD32@' : 0);
  
  $Features{'Path:SENDMAIL'}  = '@SENDMAILPROG@';
  $Features{'Path:QUARANTINEDIR'} = '@QDIR@';
