@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/05 16:23:05 minskim Exp $
+share/texmf-dist/doc/latex/oberdiek/ifluatex.pdf
+share/texmf-dist/doc/latex/oberdiek/test/ifluatex-test1.tex
+share/texmf-dist/doc/latex/oberdiek/test/ifluatex-test2.tex
+share/texmf-dist/doc/latex/oberdiek/test/ifluatex-test3.tex
