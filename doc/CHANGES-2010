@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.544 2010/02/05 17:13:08 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.545 2010/02/05 17:21:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -650,3 +650,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-ifluatex version 1.2 [minskim 2010-02-05]
 	Added print/tex-ifluatex-doc version 1.2 [minskim 2010-02-05]
 	Added print/tex-texlive-common-doc version 2009 [minskim 2010-02-05]
+	Added print/tex-texlive-en-doc version 2009 [minskim 2010-02-05]
