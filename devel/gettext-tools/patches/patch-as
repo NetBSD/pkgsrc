@@ -1,0 +1,19 @@
+$NetBSD: patch-as,v 1.1 2010/02/05 11:18:12 obache Exp $
+
+Treat Haiku like BeOS
+
+http://git.savannah.gnu.org/cgit/gnulib.git/commit/?id=40d88197eef9efb44102f8fd6ce10141ca61fb3c
+
+--- gettext-tools/lib/binary-io.h.orig	2005-05-20 21:03:41.000000000 +0000
++++ gettext-tools/lib/binary-io.h
+@@ -31,8 +31,8 @@
+ # define O_BINARY _O_BINARY
+ # define O_TEXT _O_TEXT
+ #endif
+-#ifdef __BEOS__
+-  /* BeOS 5 has O_BINARY and O_TEXT, but they have no effect.  */
++#if defined __BEOS__ || defined __HAIKU__
++  /* BeOS 5 and Haiku have O_BINARY and O_TEXT, but they have no effect.  */
+ # undef O_BINARY
+ # undef O_TEXT
+ #endif
