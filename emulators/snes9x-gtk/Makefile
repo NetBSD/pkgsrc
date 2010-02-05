@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2009/10/20 15:34:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/05 12:57:27 wiz Exp $
 #
 
-DISTNAME=	snes9x-1.51-src-gtk-78
-PKGNAME=	snes9x-gtk-1.51.78
+DISTNAME=	snes9x-1.52-src
+PKGNAME=	snes9x-gtk-1.52.79
 CATEGORIES=	emulators
 MASTER_SITES=	http://snes9x-gtk.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ COMMENT=	SNES emulator with GTK frontend
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/snes9x-1.51-src/gtk
+WRKSRC=		${WRKDIR}/snes9x-1.52-src/gtk
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	intltool pkg-config msgfmt
@@ -30,6 +30,7 @@ BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
