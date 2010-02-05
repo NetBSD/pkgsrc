@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/05 17:38:36 minskim Exp $
+share/texmf-dist/bibtex/bst/apalike/apalike.bst
+share/texmf-dist/tex/latex/apalike/apalike.sty
+share/texmf-dist/tex/plain/apalike/apalike.tex
