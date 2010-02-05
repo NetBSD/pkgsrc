@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2006/02/05 22:45:54 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2010/02/05 08:44:04 obache Exp $
 
---- intl/Makefile.in.orig	Thu Jul 25 08:49:57 2002
-+++ intl/Makefile.in	Mon Mar 15 14:39:58 2004
+--- gettext-runtime/intl/Makefile.in.orig	Thu Jul 25 08:49:57 2002
++++ gettext-runtime/intl/Makefile.in	Mon Mar 15 14:39:58 2004
 @@ -156,8 +156,7 @@ libintl.la libgnuintl.la: $(OBJECTS)
  	  $(CC) $(CPPFLAGS) $(CFLAGS) $(XCFLAGS) $(LDFLAGS) -o $@ \
  	  $(OBJECTS) @LTLIBICONV@ @INTL_MACOSX_LIBS@ $(LIBS) -lc \
