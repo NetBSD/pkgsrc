@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.541 2010/02/05 13:01:22 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.542 2010/02/05 15:28:25 martin Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -645,3 +645,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/snes9x-gtk to 1.52.79 [wiz 2010-02-05]
 	Updated misc/pciids to 20091229 [wiz 2010-02-05]
 	Updated textproc/raptor to 1.4.21 [wiz 2010-02-05]
+	Updated misc/open2300 to 1.10 [martin 2010-02-05]
+	Updated misc/open2300 to 1.10 [martin 2010-02-05]
