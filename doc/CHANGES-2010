@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.540 2010/02/05 12:59:55 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.541 2010/02/05 13:01:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -644,3 +644,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/gmime to 2.2.25 [wiz 2010-02-05]
 	Updated emulators/snes9x-gtk to 1.52.79 [wiz 2010-02-05]
 	Updated misc/pciids to 20091229 [wiz 2010-02-05]
+	Updated textproc/raptor to 1.4.21 [wiz 2010-02-05]
