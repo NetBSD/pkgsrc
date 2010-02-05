@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2010/02/04 17:37:51 joerg Exp $
+$NetBSD: distinfo,v 1.9 2010/02/05 15:26:15 martin Exp $
 
-SHA1 (open2300-1.8.tar.gz) = 86fd2dcdef995498ed17062dd4b8df5db6b3383d
-RMD160 (open2300-1.8.tar.gz) = d0b7618cfa7d0ea92708d949fd4521311627865f
-Size (open2300-1.8.tar.gz) = 330320 bytes
-SHA1 (patch-aa) = b008ae36711b3f0543555d6cc00afa3a03c04d67
+SHA1 (open2300-1.10.tar.gz) = 428d30bd885b5c0acee257bcd04cb47eee14bc3e
+RMD160 (open2300-1.10.tar.gz) = 0773bfdf3d0c18b9113f16556651c559cc61b25f
+Size (open2300-1.10.tar.gz) = 337926 bytes
+SHA1 (patch-aa) = 860a31abbfbe8deb6daaf1e6bdfbe2fb49794f49
 SHA1 (patch-ab) = 9437137a36e434fcabde6acc5373be04523357e9
 SHA1 (patch-ac) = 48762f4c60ca475031659cad94701a1bc83b6795
