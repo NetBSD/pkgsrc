@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.537 2010/02/05 05:09:19 obache Exp $
+$NetBSD: CHANGES-2010,v 1.538 2010/02/05 12:41:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -641,3 +641,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Search-Indexer version 0.76 [seb 2010-02-04]
 	Updated www/p5-Pod-POM-Web to 1.13 [seb 2010-02-05]
 	Updated graphics/GraphicsMagick to 1.3.9 [obache 2010-02-05]
+	Updated mail/gmime to 2.2.25 [wiz 2010-02-05]
