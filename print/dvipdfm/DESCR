@@ -1,3 +1,0 @@
-dvipdfm is a DVI to PDF translator.  It offers a wide range of
-\special commands (including a colour stack), and supports compression
-of data streams, etc.
