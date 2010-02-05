@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8975 2010/02/05 08:46:21 obache Exp $
+$NetBSD: TODO,v 1.8976 2010/02/05 12:41:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -688,7 +688,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glom-1.10.0 [GNOME 2.26]
 	o glpk-4.42
 	o glproto-1.4.11
-	o gmime-2.2.25
 	o gmp-5.0.0
 	o gnash-0.8.6
 	o gnet1-1.1.9
