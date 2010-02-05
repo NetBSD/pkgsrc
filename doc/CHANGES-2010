@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.550 2010/02/05 19:30:06 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.551 2010/02/05 19:34:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -657,3 +657,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-bibtex to 0.99cnb1 [minskim 2010-02-05]
 	Removed print/dvipdfm successor print/dvipdfmx [minskim 2010-02-05]
 	Removed print/tex-bin-dvipdfm [minskim 2010-02-05]
+	Added print/tex-dvipdfm version 0.13.2d [minskim 2010-02-05]
