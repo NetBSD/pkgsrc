@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.548 2010/02/05 18:32:42 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.549 2010/02/05 19:15:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -655,3 +655,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-apalike-doc version 2009 [minskim 2010-02-05]
 	Updated mail/squirrelmail to 1.4.20rc2nb3 [wiz 2010-02-05]
 	Updated print/tex-bibtex to 0.99cnb1 [minskim 2010-02-05]
+	Removed print/dvipdfm successor print/dvipdfmx [minskim 2010-02-05]
