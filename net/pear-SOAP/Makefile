@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/02/04 16:36:05 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/06 16:00:49 taca Exp $
 
-DISTNAME=	SOAP-0.8.1
+DISTNAME=	SOAP-0.12.0
 CATEGORIES+=	net
-PKGREVISION=	1
 
 MAINTAINER=	jdolecek@NetBSD.org
 COMMENT=	SOAP Client/Server for PHP
