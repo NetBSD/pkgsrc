@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/24 06:26:16 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/02/06 00:49:27 minskim Exp $
 
-SHA1 (tex-dvipdfmx-def-3.0i/dvipdfmx-def.tar.lzma) = 3bbbb8b5d0975234581414aa627271f7eea998a5
-RMD160 (tex-dvipdfmx-def-3.0i/dvipdfmx-def.tar.lzma) = 6c8ef69d7905e1fbd9a851bd2cf0e919e6142699
-Size (tex-dvipdfmx-def-3.0i/dvipdfmx-def.tar.lzma) = 2366 bytes
+SHA1 (tex-dvipdfmx-def-3.0i/dvipdfmx-def.tar.xz) = d74f6a59b2b9fcaeb537437ceee3265aa5c7b43f
+RMD160 (tex-dvipdfmx-def-3.0i/dvipdfmx-def.tar.xz) = 58d6230c5d601df336312f14329d61554d894240
+Size (tex-dvipdfmx-def-3.0i/dvipdfmx-def.tar.xz) = 2432 bytes
