@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2010/02/04 16:36:05 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/06 15:57:38 taca Exp $
 
-DISTNAME=	Net_SMTP-1.3.0
+DISTNAME=	Net_SMTP-1.4.1
 CATEGORIES+=	net mail
 
 MAINTAINER=	jdolecek@NetBSD.org
