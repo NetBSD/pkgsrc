@@ -1,32 +1,42 @@
-# $NetBSD: Makefile,v 1.35 2009/08/16 13:33:07 he Exp $
+# $NetBSD: Makefile,v 1.36 2010/02/06 10:52:37 sno Exp $
 #
 
-DISTNAME=		Math-Pari-2.010801
-PKGREVISION=		2
-PKGNAME=		p5-${DISTNAME}
+DISTNAME=		Math-Pari-2.01080603
+PKGNAME=		p5-${DISTNAME:S/01080603/010806.03/}
+#PKGREVISION=		2
 SVR4_PKGNAME=		p5mpa
-CATEGORIES=		math perl5
+CATEGORIES+=		perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Math/}
 
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			pari-2.1.6.tgz
+#DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
+			${PARI_DISTNAME}${PARI_SUFX}
 
-#SITES.pari-2.1.6.tgz=	http://pari.math.u-bordeaux.fr/pub/pari/unix/
+#SITES.${PARI_DISTNAME}${PARI_SUFX}=	${PARI_SITES}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Math-Pari/
 COMMENT=		Perl5 interface to the pari math library
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-USE_TOOLS+=		perl
+#MAKE_PARAMS+=		paridir=${WRKDIR}/${PARI_DISTNAME}
 
 # XXX: to use or not to use...
 #DEPENDS+=		gnuplot-[0-9]*:../../graphics/gnuplot
 
-GCC_REQD+=		2.95
-MAKE_ENV+=		MP_NOGNUPLOT=1
+#GCC_REQD+=		2.95
+#MAKE_ENV+=		MP_NOGNUPLOT=1
+MAKE_PARAMS+=		pariprefix=${PREFIX:Q}
 PERL5_PACKLIST=		auto/Math/Pari/.packlist
+
+post-extract:
+	${RM} ${WRKSRC}/libPARI/Makefile.PL
+
+.include "../../math/pari/buildlink3.mk"
+MAKE_PARAMS+=		libpari=${PARI_LIB}
+.if !empty(PKG_BUILD_OPTIONS.pari:Mgmp)
+MAKE_PARAMS+=		addlibs="-lgmp"
+.endif
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
