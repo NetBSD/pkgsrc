@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.559 2010/02/06 15:19:25 taca Exp $
+$NetBSD: CHANGES-2010,v 1.560 2010/02/06 15:22:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -668,3 +668,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/p5-Math-Pari to 2.010806.03 [sno 2010-02-06]
 	Updated x11/xf86-video-vesa to 2.3.0 [tnn 2010-02-06]
 	Updated www/typolight27-translations to 20100131 [taca 2010-02-06]
+	Updated www/typolight28-translations to 20100205 [taca 2010-02-06]
