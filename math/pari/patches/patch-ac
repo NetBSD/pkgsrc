@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/03/07 20:57:51 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2010/02/06 10:37:06 sno Exp $
 
---- src/kernel/ix86/l0asm.c.orig	Fri Nov  3 21:00:25 2000
-+++ src/kernel/ix86/l0asm.c
-@@ -36,7 +36,7 @@
-    global variable `hiremainder'. */
- 
- /* This should ideally be determined at configure time. */
--#if defined(__EMX__) || defined(__DJGCC__) || defined(__GO32__) || (defined(linux) && !defined(__ELF__)) || defined(__386BSD__) || defined(__NetBSD__) || (defined(__FreeBSD__) && !defined(__ELF__)) || defined(NeXT) || defined(__CYGWIN32__) || defined(__MINGW32__)
-+#if defined(__EMX__) || defined(__DJGCC__) || defined(__GO32__) || (defined(linux) && !defined(__ELF__)) || defined(__386BSD__) || defined(__NetBSD__) && !defined(__ELF__)|| (defined(__FreeBSD__) && !defined(__ELF__)) || defined(NeXT) || defined(__CYGWIN32__) || defined(__MINGW32__)
- #  define ASM_UNDERSCORE
- #endif
- 
+--- config/get_archos.orig	2008-01-16 15:57:13.000000000 +0000
++++ config/get_archos
+@@ -26,7 +26,7 @@ if test "$fastread" != yes; then
+ ==========================================================================
+ I know of the following Operating Systems
+ EOM
+-  rep='os2 freebsd netbsd cygwin linux hpux aix osf1 solaris sunos nextstep concentrix irix';
++  rep='os2 freebsd netbsd cygwin linux hpux aix osf1 solaris sunos nextstep concentrix irix dragonfly';
+   . ./display
+   echo $n ..."Any of these apply ? $c"
+   dflt=$osname; . ./myread
