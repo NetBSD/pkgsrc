@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.557 2010/02/06 10:52:50 sno Exp $
+$NetBSD: CHANGES-2010,v 1.558 2010/02/06 15:16:07 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -666,3 +666,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/mew to 6.3 [taca 2010-02-06]
 	Updated math/pari to 2.3.5 [sno 2010-02-06]
 	Updated math/p5-Math-Pari to 2.010806.03 [sno 2010-02-06]
+	Updated x11/xf86-video-vesa to 2.3.0 [tnn 2010-02-06]
