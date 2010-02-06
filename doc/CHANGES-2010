@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.554 2010/02/06 01:00:12 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.555 2010/02/06 05:33:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -663,3 +663,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added emulators/dynagen to 0.11.0 [markd 2010-02-05]
 	Added print/tex-dvipdfmx version 2009 [minskim 2010-02-06]
 	Updated print/dvipdfmx to 20090708nb1 [minskim 2010-02-06]
+	Updated mail/mew to 6.3 [taca 2010-02-06]
