@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/01/28 15:14:33 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2010/02/06 20:03:01 tnn Exp $
 
 DISTNAME=	xdm-1.1.9
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,10 +24,19 @@ USE_LIBTOOL=	yes
 
 RCD_SCRIPTS=	xdm
 
+BUILD_DEFS+=		VARBASE
+CONFIGURE_ARGS+=	--with-authdir=${VARBASE}/lib/xdm
+OWN_DIRS_PERMS+=	${VARBASE}/lib/xdm \
+			  ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
+
 .include "../../mk/compiler.mk"
 
 .if !empty(CC_VERSION:Mgcc-[3-4]*)
 CFLAGS+=	-fno-strict-aliasing
+.endif
+
+.if empty(PKGSRC_COMPILER:Mgcc)
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -49,11 +59,6 @@ CONFIGURE_ARGS+=	--with-random-device=/dev/urandom
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD") && \
     (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 CONFIGURE_ARGS+=	--with-default-vt=vt05
-.endif
-
-.include "../../mk/compiler.mk"
-.if empty(PKGSRC_COMPILER:Mgcc)
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
 .include "options.mk"
