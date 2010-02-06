@@ -152,6 +152,7 @@ ghostscript		Enable GhostScript support.
 gif			Enable GIF support.
 gimp			Enable GIMP support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
+gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
 gnome			Enable GNOME support.
 gnome-keyring		Enable GNOME keyring support.
