@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.36 2009/08/15 03:31:11 taca Exp $
+$NetBSD: distinfo,v 1.37 2010/02/06 05:31:25 taca Exp $
 
-SHA1 (mew-6.2.tar.gz) = 8380cf0072e0615f27b39144481eb9b410c57e45
-RMD160 (mew-6.2.tar.gz) = fbda38606c228e2c7cb873a348821d2ec10138b9
-Size (mew-6.2.tar.gz) = 972731 bytes
+SHA1 (mew-6.3.tar.gz) = 206709f9423c787d94e120f9bac606b975d6aab1
+RMD160 (mew-6.3.tar.gz) = da816f4c7679a968b1765192a8eda78118d179a6
+Size (mew-6.3.tar.gz) = 976352 bytes
 SHA1 (patch-aa) = 85e20cda02fa5b7551776b11b80a911e0338afbc
-SHA1 (patch-ab) = 39320009cf8e400127dcd29e7d61d93a5ae81eb2
