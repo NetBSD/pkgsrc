@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2009/07/17 18:00:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.9 2010/02/06 15:55:52 taca Exp $
 
-DISTNAME=	Numbers_Words-0.14.0
-PKGREVISION=	1
+DISTNAME=	Numbers_Words-0.16.1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
