@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.155 2010/02/06 05:54:17 obache Exp $
+# $NetBSD: bootstrap,v 1.156 2010/02/06 10:28:54 obache Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -238,6 +238,10 @@ opsys_finish()
 			need_extras=yes
 			echo "LDD=			$prefix/sbin/fakeldd" >> ${TARGET_MKCONF}
 		fi
+		;;
+	Haiku)
+		need_extras=yes
+		echo "LDD=			$prefix/sbin/fakeldd" >> ${TARGET_MKCONF}
 		;;
 	esac
 }
@@ -505,6 +509,25 @@ FreeBSD)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -p`
+	;;
+Haiku)
+	root_user=user
+	root_group=root
+	need_bsd_install=no
+	need_awk=no
+	need_sed=no
+	set_opsys=no
+	case `uname -m` in
+	BeMac)
+		machine_arch=powerpc
+		;;
+	BePC)
+		machine_arch=i386
+		;;
+	*)
+		machine_arch=`uname -p`
+		;;
+	esac
 	;;
 HPUX)
 	root_group=sys
