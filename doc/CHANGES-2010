@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.561 2010/02/06 16:11:38 taca Exp $
+$NetBSD: CHANGES-2010,v 1.562 2010/02/06 16:17:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -687,3 +687,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/pear-HTML_Common to 1.2.5 [taca 2010-02-06]
 	Updated www/pear-HTTP to 1.4.1 [taca 2010-02-06]
 	Updated www/pear-HTTP_Request to 1.4.4 [taca 2010-02-06]
+	Added mail/pear-Mail_mimeDecode version 1.5.1 [taca 2010-02-06]
