@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.28 2009/03/20 19:25:01 joerg Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.29 2010/02/06 11:06:19 obache Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  The following
@@ -87,7 +87,7 @@ PTHREAD_OPTS?=	# empty
 # of /usr/include/pthread.h (we might want to make this check stricter).
 #
 .undef PTHREAD_TYPE
-.if exists(/usr/include/pthread.h) && \
+.if (exists(/usr/include/pthread.h) || ${OPSYS} == "Haiku") && \
     !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
 PTHREAD_TYPE=	native
 .else
