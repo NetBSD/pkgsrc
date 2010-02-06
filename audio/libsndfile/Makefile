@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2010/01/24 17:26:21 heinz Exp $
+# $NetBSD: Makefile,v 1.58 2010/02/06 14:38:27 tnn Exp $
 
 DISTNAME=	libsndfile-1.0.21
 CATEGORIES=	audio
@@ -17,8 +17,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
 GNU_CONFIGURE=		yes
-
-MAKE_JOBS_SAFE=		no
 
 SUBST_CLASSES+=		vorbis
 SUBST_FILES.vorbis=	configure
