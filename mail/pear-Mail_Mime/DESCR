@@ -1,9 +1,12 @@
 Provides classes to deal with creation and manipulation of mime messages:
+It allows people to create e-mail messages consisting of:
 
-  * mime.php: Create mime email, with html, attachments, embedded images etc.
-  * mimePart.php: Advanced method of creating mime messages.
-  * mimeDecode.php - Decodes mime messages to a usable structure.
-  * xmail.dtd: An XML DTD to acompany the getXML() method of the
-	decoding class.
-  * xmail.xsl: An XSLT stylesheet to transform the output of the
-	getXML() method back to an email
+* Text Parts
+* HTML Parts
+* Inline HTML Images
+* Attachments
+* Attached messages
+
+It supports big messages, base64 and quoted-printable encodings and
+non-ASCII characters in filenames, subjects, recipients, etc. encoded
+using RFC2047 and/or RFC2231.
