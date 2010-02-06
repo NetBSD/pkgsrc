@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/02/04 16:36:05 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/06 16:07:58 taca Exp $
 
-DISTNAME=	HTTP-1.4.0
+DISTNAME=	HTTP-1.4.1
 CATEGORIES+=	www
-PKGREVISION=	1
 
 MAINTAINER=	brook@nmsu.edu pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pear.php.net/package/HTTP
