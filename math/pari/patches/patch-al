@@ -1,34 +1,85 @@
-$NetBSD: patch-al,v 1.2 2005/09/08 08:39:59 adam Exp $
+$NetBSD: patch-al,v 1.3 2010/02/06 10:37:06 sno Exp $
 
---- src/kernel/sparcv8/Makefile.SH.orig	2003-04-25 19:08:14.000000000 +0000
-+++ src/kernel/sparcv8/Makefile.SH
-@@ -5,7 +5,7 @@
- #   that can (resp. cannot) be inline.
- #   Problem: "divll" uses "overflow", so kernel2.o is not the same when
- #   compiled with gcc or with cc. We should try to find a workaround.
--# For NextStep or Linux
-+#   For NextStep, Linux, or NetBSD
- #   We don't accept "asm inline" since it does not work (Ptitboul)
+--- config/DOC_Make.SH.orig	2008-01-16 15:57:02.000000000 +0000
++++ config/DOC_Make.SH
+@@ -12,7 +12,7 @@ doc all: develop.dvi libpari.dvi users.d
+ docps: develop.ps libpari.ps refcard.ps tutorial.ps users.ps INSTALL.ps
+ docpdf: develop.pdf libpari.pdf users.pdf tutorial.pdf refcard.pdf INSTALL.pdf
  
- if test "$gnuas" = "yes"; then do_cpp=yes; fi
-@@ -37,14 +37,14 @@ fi
- cat >> $file << EOT
- pariinl.h: $level0 $level1
- 	cat $level0 $level1 > \$@
--kernel.o:  $kernel1
--	\$(AS) \$(ASFLAGS) -o \$@ $kernel1
--kernel2.o: $kernel2
--	\$(AS) \$(ASFLAGS) -o \$@ $kernel2
-+kernel\$(_O):  $kernel1
-+	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o \$@ $kernel1
-+kernel2\$(_O): $kernel2
-+	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o \$@ $kernel2
- # Level 1 kernel is the generic one
--mp.o: .headers $src/kernel/none/mp.c
-+mp\$(_O): .headers $src/kernel/none/mp.c
- 	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o \$@ $src/kernel/none/mp.c
--mpinl.o: .headers $level1
-+mpinl\$(_O): .headers $level1
- 	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o \$@ $src/kernel/none/level1.c
+-.SUFFIXES: .tex .ipf .pod .inf .dumbpod .3 .html
++.SUFFIXES: .tex .ipf .pod .inf .dumbpod .3 .html .ps .pdf .dvi .idx .std
  
- EOT
+ paricfg.tex: paricfg.tex.in
+ 	sed -e 's/@version@/$version.$patch/'\\
+@@ -20,33 +20,33 @@ paricfg.tex: paricfg.tex.in
+ 	    -e 's!@libdir@!$libdir!'\\
+ 	    -e 's!@datadir@!$datadir!' paricfg.tex.in > \$@
+ 
+-%.pdf: %.tex \$(MACROS)
++.tex.pdf: \$*.tex \$(MACROS)
+ 	pdftex \$<
+ 
+-%.dvi: %.tex \$(MACROS)
++.tex.dvi: \$*.tex \$(MACROS)
+ 	tex \$<
+ 
+ libpari.pdf: \$(PARI_TEX) \$(MACROS)
+ 	-rm -f libpari.std
+ 	pdftex libpari
+ 	pdftex libpari
+-	make libpari.std; pdftex libpari; rm -f libpari.std
++	\$(MAKE) libpari.std; pdftex libpari; rm -f libpari.std
+ libpari.dvi: \$(PARI_TEX) \$(MACROS)
+ 	-rm -f libpari.std
+ 	tex libpari
+ 	tex libpari
+-	make libpari.std; tex libpari; rm -f libpari.std
++	\$(MAKE) libpari.std; tex libpari; rm -f libpari.std
+ 
+ develop.pdf: develop.tex \$(MACROS)
+ 	-rm -f develop.std
+ 	pdftex develop
+ 	pdftex develop
+-	make develop.std; pdftex develop; rm -f develop.std
++	\$(MAKE) develop.std; pdftex develop; rm -f develop.std
+ develop.dvi: develop.tex \$(MACROS)
+ 	-rm -f develop.std
+ 	tex develop
+ 	tex develop
+-	make develop.std; tex develop; rm -f develop.std
++	\$(MAKE) develop.std; tex develop; rm -f develop.std
+ 
+ tutorial.pdf: tutorial.tex \$(MACROS)
+ 	-rm -f tutorial.std
+@@ -57,13 +57,13 @@ tutorial.dvi: tutorial.tex \$(MACROS)
+ 	tex tutorial
+ 	tex tutorial
+ 
+-%.ps: %.dvi
++.dvi.ps: \$*.dvi
+ 	dvips \$< -o \$@
+ 
+ refcard.ps: refcard.dvi
+ 	dvips -t landscape -t a4 refcard.dvi -o \$@
+ 
+-%.std: %.idx
++.idx.std: \$*.idx
+ 	sed -e 's/!\([1-9]\)!/!00\1!/'\\
+ 	    -e 's/!\([1-9][0-9]\)!/!0\1!/'\\
+ 	    -e 's/\\\\EFF {}/f/g'\\
+@@ -74,13 +74,13 @@ users.dvi: \$(USERS_TEX)
+ 	-rm -f users.std
+ 	tex users
+ 	tex users
+-	make users.std; tex users; rm -f users.std
++	\$(MAKE) users.std; tex users; rm -f users.std
+ 
+ users.pdf: \$(USERS_TEX)
+ 	-rm -f users.std
+ 	pdftex users
+ 	pdftex users
+-	make users.std; pdftex users; rm -f users.std
++	\$(MAKE) users.std; pdftex users; rm -f users.std
+ 
+ gpman: gp.1
+ 	nroff -man gp.1 | unix2dos -ascii > gp.man
