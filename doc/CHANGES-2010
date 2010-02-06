@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.556 2010/02/06 10:37:22 sno Exp $
+$NetBSD: CHANGES-2010,v 1.557 2010/02/06 10:52:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -660,8 +660,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-dvipdfm version 0.13.2d [minskim 2010-02-05]
 	Updated mail/mimedefang to 2.67 [markd 2010-02-05]
 	Updated emulators/dynamips to 0.2.8rc2 [markd 2010-02-05]
-	Added emulators/dynagen to 0.11.0 [markd 2010-02-05]
+	Added emulators/dynagen version 0.11.0 [markd 2010-02-05]
 	Added print/tex-dvipdfmx version 2009 [minskim 2010-02-06]
 	Updated print/dvipdfmx to 20090708nb1 [minskim 2010-02-06]
 	Updated mail/mew to 6.3 [taca 2010-02-06]
 	Updated math/pari to 2.3.5 [sno 2010-02-06]
+	Updated math/p5-Math-Pari to 2.010806.03 [sno 2010-02-06]
