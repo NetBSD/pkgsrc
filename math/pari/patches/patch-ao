@@ -1,20 +1,28 @@
-$NetBSD: patch-ao,v 1.1 2003/07/07 21:57:52 jtb Exp $
+$NetBSD: patch-ao,v 1.2 2010/02/06 10:37:06 sno Exp $
 
---- src/kernel/alpha/Makefile.SH.orig
-+++ src/kernel/alpha/Makefile.SH
-@@ -4,11 +4,11 @@
- cat >> $file << EOT
- pariinl.h: $src/kernel/none/asm0.h $src/kernel/none/level1.h
- 	cat $src/kernel/none/asm0.h $src/kernel/none/level1.h > \$@
--kernel.o:  $src/kernel/$asmarch/level0.s
--	\$(AS) \$(ASFLAGS) -o kernel.o $src/kernel/$asmarch/level0.s
--mp.o: .headers $src/kernel/none/mp.c
-+kernel\$(_O):  $src/kernel/$asmarch/level0.s
-+	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o kernel.o $src/kernel/$asmarch/level0.s
-+mp\$(_O): .headers $src/kernel/none/mp.c
- 	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o mp.o $src/kernel/none/mp.c
--mpinl.o: .headers $src/kernel/none/level1.h
-+mpinl\$(_O): .headers $src/kernel/none/level1.h
- 	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o mpinl.o $src/kernel/none/level1.c
+--- src/headers/paripriv.h.orig	2010-02-05 15:33:33.000000000 +0000
++++ src/headers/paripriv.h
+@@ -850,4 +850,23 @@ GEN     kbesselnew(GEN n, GEN z, long pr
+ GEN     polylogd0(long m, GEN x, long flag, long prec);
+ GEN     twistpartialzeta(GEN p, GEN q, long f, long c, GEN va, GEN cff);
  
- EOT
++/* Something from src/languages/anal.[ch] to support Math::Pari */
++
++/* entrees */
++#define EpVALENCE(ep) ((ep)->valence & 0xFF)
++#define EpSTATIC(ep) ((ep)->valence & 0x100)
++#define EpSETSTATIC(ep) ((ep)->valence |= 0x100)
++#define EpPREDEFINED(ep) (EpVALENCE(ep) < EpUSER)
++enum { EpUSER = 100, EpNEW, EpALIAS, EpVAR, EpGVAR, EpMEMBER, EpINSTALL };
++
++extern entree **functions_hash;    /* functions hashtable */
++extern entree functions_basic[];
++extern entree  functions_highlevel[];
++
++extern void *foreignHandler;
++extern GEN  (*foreignExprHandler)(char*);
++extern char foreignExprSwitch;
++extern entree * (*foreignAutoload)(char*, long);
++extern void (*foreignFuncFree)(entree *);
++
+ ENDEXTERN

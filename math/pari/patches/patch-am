@@ -1,102 +1,13 @@
-$NetBSD: patch-am,v 1.1 2003/07/07 21:57:51 jtb Exp $
+$NetBSD: patch-am,v 1.2 2010/02/06 10:37:06 sno Exp $
 
---- src/test/dotest.orig
-+++ src/test/dotest
-@@ -57,14 +57,8 @@
- fi
- $RM -f $file_bench
- 
--dotestSUF=${dotestSUF:-"sta dyn"}
--for arg in $dotestSUF; do
--  case "$arg" in
--    sta|dyn) if test $x $execdir/gp-$arg; then SUF="$SUF $arg"; fi ;;
--  esac
--done
- file_test=gp.out
--for suf in $SUF; do eval time$suf=0 files$suf=; done
-+eval time=0 files=
- for testdata in $testlist; do
-   O=$IFS;IFS=_;set $testdata;IFS=$O;testname=$1;testmul=$2
-   file_in=$testdir/in/$testname
-@@ -74,45 +68,39 @@
-   else
-     testmul=${testmul:-1000}
-     wr "* Testing $testname $c"
--    for suf in $SUF; do
--      wr "	for gp-$suf..$c"
--      case "$suf" in
--        exe) file_diff=$testname.dif;;
--	*)   file_diff=$testname-$suf.dif
--	     gp=$execdir/gp-$suf;;
--      esac
-+      wr "	for gp..$c"
-+      file_diff=$testname.dif
-+      gp=$execdir/gp
-       $gp -q -test < $file_in > $file_test 2>&1
-       diff -c $file_out $file_test > $file_diff
-       pat=`grep "^[-+!] " $file_diff | grep -v "Total time"`
-       time=`tail -2 $file_test | sed -n 's,.*Total time spent: \(.*\),\1,p'`
-       if test -n "$time"; then
--        eval t='$'time$suf
-+        eval t='$'time
- 	if test -n "$exprbug"; then
- 	  t=`expr $time \'\*\' $testmul / 1000 + $t`
- 	else
- 	  t=`expr $time '*' $testmul / 1000 + $t`
- 	fi
--        eval time$suf=$t
-+        eval time=$t
-       fi
-       if test -z "$pat"; then
-         wr "TIME=$time";
-       else
--        eval BUG$suf=BUG
--        eval files$suf=\"'$'files$suf $file_diff\"
-+        eval BUG=BUG
-+        eval files=\"'$'files $file_diff\"
-         wr "BUG [${time:-0}]"
-       fi
--    done
-     wrln
-   fi
- done
- $RM $file_test
- BUG=
--for suf in $SUF; do
--  B=`eval echo '$'BUG$suf`; BUG="$BUG$B"
--  t=`eval echo '$'time$suf`
--  if test -n "$B"; then B=' [BUG]'; fi
--  wrln "+++$B Total bench for gp-$suf is $t"
--done
-+B=`eval echo '$'BUG`; BUG="$BUG$B"
-+t=`eval echo '$'time`
-+if test -n "$B"; then B=' [BUG]'; fi
-+wrln "+++$B Total bench for gp is $t"
-+
- if test -z "$BUG"; then exit 0; fi
- 
- pwd=`pwd`
-@@ -120,19 +108,17 @@
- wrln "PROBLEMS WERE NOTED. The following files list them in diff format: "
- wrln "Directory: $pwd"
- bugp=; buge=;
--for suf in $SUF; do
--  B=`eval echo '$'BUG$suf`; BUG="$BUG$B"
-+B=`eval echo '$'BUG`; BUG="$BUG$B"
-   if test -n "$B"; then
--    flist=`eval echo '$'files$suf`
-+    flist=`eval echo '$'files`
-     for f in $flist; do
-       wrln "	$f"
-       case "$f" in
--        *program*)  bugp="$suf$bugp";;
--        *elliptic*) buge="$suf$buge";;
-+        *program*)  bugp="$bugp";;
-+        *elliptic*) buge="$buge";;
-       esac
-     done
-   fi
--done
- 
- case "x$buge" in
-   x)  file_diff=;;
+--- config/get_ld.orig	2008-01-16 15:56:58.000000000 +0000
++++ config/get_ld
+@@ -58,7 +58,7 @@ if test "$GNULDused" = yes; then
+   runpathprefix='-rpath '
+ else # guess...
+   case "$osname" in
+-    gnu|osf1|linux|cygwin*|freebsd|netbsd) runpathprefix='-rpath ' ;;
++    gnu|osf1|linux|cygwin*|freebsd|netbsd|dragonfly*) runpathprefix='-rpath ' ;;
+     solaris) runpathprefix='-R ' ;;
+     hpux) runpathprefix='+b ' ;;
+     aix) runpathprefix='-blibpath:' ;;

@@ -1,19 +1,42 @@
-$NetBSD: patch-an,v 1.1 2003/07/07 21:57:52 jtb Exp $
+$NetBSD: patch-an,v 1.2 2010/02/06 10:37:06 sno Exp $
 
---- src/kernel/ix86/Makefile.SH.orig
-+++ src/kernel/ix86/Makefile.SH	2003-07-04
-@@ -6,11 +6,11 @@
- 	cat $src/kernel/ix86/level0.h $src/kernel/none/level1.h > \$@
- level0.s: ../src/kernel/ix86/l0asm.c ../src/kernel/ix86/l0asm.h
- 	\$(CPP) ../src/kernel/ix86/l0asm.c | sed -e '/^#/d' -e '/^ *#line/d' -e 's/%  */%/g' > level0.s
--kernel.o:  level0.s
-+kernel\$(_O):  level0.s
- 	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o kernel.o level0.s
--mp.o: .headers $src/kernel/none/mp.c
-+mp\$(_O): .headers $src/kernel/none/mp.c
- 	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o mp.o $src/kernel/none/mp.c
--mpinl.o: .headers $src/kernel/none/level1.h
-+mpinl\$(_O): .headers $src/kernel/none/level1.h
- 	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o mpinl.o $src/kernel/none/level1.c
+--- src/language/anal.h.orig	2010-02-05 15:33:40.000000000 +0000
++++ src/language/anal.h
+@@ -80,23 +80,15 @@ void hit_return(void);
+ extern char *gp_function_name;
+ extern int  (*whatnow_fun)(char *, int);
+ extern void (*sigint_fun)(void);
+-extern void *foreignHandler;
+-extern GEN  (*foreignExprHandler)(char*);
+-extern char foreignExprSwitch;
+-extern entree * (*foreignAutoload)(char*, long);
+-extern void (*foreignFuncFree)(entree *);
+ extern int (*default_exception_handler)(long);
  
- EOT
+ extern const long functions_tblsz;  /* hashcodes table size */
+ /* Variables containing the list of PARI functions */
+-extern entree **functions_hash;    /* functions hashtable */
+ extern entree **members_hash;      /* members hashtable */
+-extern entree functions_basic[];
+ 
+ /* Variables containing the list of specific GP functions */
+ extern entree  functions_gp[];
+ extern entree  gp_member_list[];
+-extern entree  functions_highlevel[];
+ 
+ /* Variables containing the list of old PARI fonctions (up to 1.39.15) */
+ extern entree **funct_old_hash;    /* hashtable */
+@@ -118,13 +110,6 @@ enum { RET_GEN, RET_INT, RET_LONG, RET_V
+ extern void *PARI_stack_limit;
+ #endif
+ 
+-/* entrees */
+-#define EpVALENCE(ep) ((ep)->valence & 0xFF)
+-#define EpSTATIC(ep) ((ep)->valence & 0x100)
+-#define EpSETSTATIC(ep) ((ep)->valence |= 0x100)
+-#define EpPREDEFINED(ep) (EpVALENCE(ep) < EpUSER)
+-enum { EpUSER = 100, EpNEW, EpALIAS, EpVAR, EpGVAR, EpMEMBER, EpINSTALL };
+-
+ /* defaults  */
+ char* get_sep(const char *t);
+ long get_int(const char *s, long dflt);

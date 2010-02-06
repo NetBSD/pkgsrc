@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 20:47:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/02/06 10:37:06 sno Exp $
 bin/gp
-bin/gp-2.1
+bin/gp-2.3
 bin/gphelp
 bin/tex2mail
 include/pari/genpari.h
@@ -12,31 +12,43 @@ include/pari/paridecl.h
 include/pari/parierr.h
 include/pari/parigen.h
 include/pari/pariinl.h
+include/pari/parinf.h
+include/pari/pariold.h
 include/pari/pariport.h
+include/pari/paripriv.h
 include/pari/paristio.h
 include/pari/parisys.h
+include/pari/paritune.h
 include/pari/paritype.h
-lib/libpari.la
+${PLIST.nogmp}lib/libpari.la
+${PLIST.gmp}lib/libpari-gmp.la
+lib/pari/pari.cfg
 man/man1/gp.1
 man/man1/gphelp.1
 man/man1/pari.1
 man/man1/tex2mail.1
+share/emacs/site-lisp/pari/pari-completion.el
+share/emacs/site-lisp/pari/pari-conf.el
+share/emacs/site-lisp/pari/pari-fontification.el
+share/emacs/site-lisp/pari/pari-help.el
+share/emacs/site-lisp/pari/pari-messages.el
+share/emacs/site-lisp/pari/pari.el
+share/emacs/site-lisp/pari/pariemacs.txt
+share/emacs/site-lisp/pari/sli-tools.el
 share/pari/AUTHORS
-share/pari/Announce.2.1
 share/pari/CHANGES
 share/pari/COMPAT
 share/pari/COPYING
-share/pari/CVS.txt
 share/pari/MACHINES
 share/pari/NEW
+share/pari/PARI/822.pm
 share/pari/README
-share/pari/TODO
 share/pari/doc/Makefile
 share/pari/doc/appa.tex
 share/pari/doc/appb.tex
 share/pari/doc/appc.tex
+share/pari/doc/libpari.dvi
 share/pari/doc/paricfg.tex
-share/pari/doc/paricfg.tex.in
 share/pari/doc/parimacro.tex
 share/pari/doc/pdfmacs.tex
 share/pari/doc/refcard.dvi
@@ -52,10 +64,6 @@ share/pari/doc/usersch2.tex
 share/pari/doc/usersch3.tex
 share/pari/doc/usersch4.tex
 share/pari/doc/usersch5.tex
-share/pari/emacs/pari-translator.el
-share/pari/emacs/pari.el
-share/pari/emacs/pariemacs.txt
-share/pari/emacs/with-syntax.el
 share/pari/examples/EXPLAIN
 share/pari/examples/Inputrc
 share/pari/examples/Makefile
@@ -63,8 +71,8 @@ share/pari/examples/bench.gp
 share/pari/examples/cl.gp
 share/pari/examples/classno.gp
 share/pari/examples/contfrac.gp
+share/pari/examples/extgcd.c
 share/pari/examples/lucas.gp
-share/pari/examples/matexp.c
 share/pari/examples/rho.gp
 share/pari/examples/squfof.gp
 share/pari/examples/taylor.gp
@@ -76,4 +84,4 @@ share/pari/misc/gprc.dft
 share/pari/misc/new.dic
 share/pari/misc/pari.xpm
 share/pari/misc/xgp
-@pkgdir share/pari/galdata
+share/pari/pari.desc

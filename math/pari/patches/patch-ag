@@ -1,28 +1,30 @@
-$NetBSD: patch-ag,v 1.1 2003/07/07 21:57:51 jtb Exp $
+$NetBSD: patch-ag,v 1.2 2010/02/06 10:37:06 sno Exp $
 
---- src/kernel/sparcv7/Makefile.SH.orig
-+++ src/kernel/sparcv7/Makefile.SH
-@@ -3,7 +3,7 @@
- level0=$src/kernel/none/asm0.h
- level1=$src/kernel/none/level1.h
- kernel1=$src/kernel/$asmarch/level0.S
--if test "$osname" = "nextstep" -o "$osname" = "linux" -o "$gnuas" = "yes";
-+if test "$osname" = "nextstep" -o "$osname" = "linux" -o "$osname" = "netbsd" -o "$gnuas" = "yes";
- then
- cat >> $file << EOT
- kernel1.s: $kernel1
-@@ -15,11 +15,11 @@
- cat >> $file << EOT
- pariinl.h: $level0 $level1
- 	cat $level0 $level1 > \$@
--kernel.o:  $kernel1
--	\$(AS) \$(ASFLAGS) -o \$@ $kernel1
-+kernel\$(_O):  $kernel1
-+	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o \$@ $kernel1
- mp.o: .headers $src/kernel/none/mp.c
- 	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o \$@ $src/kernel/none/mp.c
--mpinl.o: .headers $level1 
-+mpinl\$(_O): .headers $level1 
- 	\$(CC) -c \$(CFLAGS) \$(CPPFLAGS) -o \$@ $src/kernel/none/level1.c
+--- config/get_dlld.orig	2009-09-19 12:01:14.000000000 +0000
++++ config/get_dlld
+@@ -9,7 +9,7 @@ DLSUFFIX=so
+ soname=.$soname_num
+ do_dll=yes
+ case "$osname" in
+-  gnu*|aix|osf1|solaris|linux|freebsd|netbsd)
++  dragonfly*|gnu*|aix|osf1|solaris|linux|freebsd|netbsd)
+     case $pari_release_verbose in
+       *STABLE*)      sodest=.$version.$patch;; # released version
+       *DEVELOPMENT*) sodest=.$patch.0.0;;      # unstable version
+@@ -67,6 +67,7 @@ if test -n "$DLLD"; then
+       aix)     DLLDFLAGS='-r' ;;
+       darwin)  DLLD=; DLLDFLAGS='-dylib -flat_namespace -undefined suppress' ;;
+       freebsd) DLLDFLAGS='-Bshareable -x' ;;
++      dragonfly*) DLLDFLAGS='-Bshareable -x' ;;
+       hpux)    DLLDFLAGS='-b' ;;
+       irix)    DLLDFLAGS='-shared -elf -no_unresolved -all' ;;
+       osf1)    DLLDFLAGS='-shared' ;;
+@@ -91,7 +92,7 @@ if test -n "$DLLD"; then
+     DLLDFLAGS="-shared $extra \$(CFLAGS) \$(DLCFLAGS) $DLLDFLAGS"
+   fi
+   case "$osname" in
+-    gnu*|cygwin|osf1|freebsd|linux|sunos|solaris) EXTRADLLDFLAGS='-lc ${LIBS}';;
++    dragonfly*|gnu*|cygwin|osf1|freebsd|linux|sunos|solaris) EXTRADLLDFLAGS='-lc ${LIBS}';;
+   esac
  
- EOT
+   if test "$fastread" != yes; then
