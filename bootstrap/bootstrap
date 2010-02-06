@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.154 2010/02/06 05:51:50 obache Exp $
+# $NetBSD: bootstrap,v 1.155 2010/02/06 05:54:17 obache Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -807,7 +807,7 @@ VARBASE=$varbase; export VARBASE
 
 # set up an example mk.conf file
 TARGET_MKCONF=${wrkdir}/mk.conf.example
-echo_msg "Creating default mk.conf. in ${wrkdir}"
+echo_msg "Creating default mk.conf in ${wrkdir}"
 echo "# Example ${sysconfdir}/mk.conf file produced by bootstrap-pkgsrc" > ${TARGET_MKCONF}
 echo "# `date`" >> ${TARGET_MKCONF}
 echo "" >> ${TARGET_MKCONF}
