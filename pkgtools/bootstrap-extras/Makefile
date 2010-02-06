@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/04/09 00:48:10 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/06 10:26:09 obache Exp $
 
 DISTNAME=	bootstrap-extra-files-20070702
 CATEGORIES=	pkgtools
@@ -21,7 +21,7 @@ PLIST_VARS+=	${EXTRA_FILES}
 
 .PHONY: ${EXTRA_FILES:S/^/do-install-/}
 
-NEED_FAKELDD=		IRIX
+NEED_FAKELDD=		Haiku IRIX
 .if !empty(NEED_FAKELDD:M${OPSYS})
 PLIST.fakeldd=		yes
 do-install:		do-install-fakeldd
@@ -53,7 +53,11 @@ do-install:
 
 do-install-fakeldd:
 	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/sbin
+.if ${OPSYS} == "Haiku"
+	${INSTALL_SCRIPT} ${WRKSRC}/fakeldd-${OPSYS} ${DESTDIR}${PREFIX}/sbin/fakeldd
+.else
 	${INSTALL_SCRIPT} ${WRKSRC}/fakeldd ${DESTDIR}${PREFIX}/sbin/fakeldd
+.endif
 
 do-install-mkdir:
 	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin
