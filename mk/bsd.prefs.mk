@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.306 2010/01/29 17:20:51 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.307 2010/02/06 11:40:22 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -173,6 +173,12 @@ LOWER_OPSYS_VERSUFFIX=	${LOWER_OS_VERSION:C/([0-9]*).*/\1/}
 LOWER_VENDOR?=		pc
 .  endif
 LOWER_VENDOR?=		unknown
+
+.elif ${OPSYS} == "Haiku"
+LOWER_OPSYS?=		haiku
+.  if ${MACHINE_ARCH} == "i386"
+LOWER_VENDOR?=		pc
+.  endif
 
 .elif ${OPSYS} == "Interix"
 LOWER_OPSYS?=		interix
