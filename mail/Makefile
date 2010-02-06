@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.384 2010/01/06 11:39:42 wiz Exp $
+# $NetBSD: Makefile,v 1.385 2010/02/06 16:15:43 taca Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -219,6 +219,7 @@ SUBDIR+=	p5-razor-agents
 SUBDIR+=	pear-Auth_SASL
 SUBDIR+=	pear-Mail
 SUBDIR+=	pear-Mail_Mime
+SUBDIR+=	pear-Mail_mimeDecode
 SUBDIR+=	perdition
 SUBDIR+=	perdition-bdb
 SUBDIR+=	perdition-gdbm
