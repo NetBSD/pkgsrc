@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2010/01/18 09:58:56 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2010/02/06 14:52:33 tnn Exp $
 
 DISTNAME=	cairo-1.8.8
 PKGREVISION=	3
@@ -11,8 +11,6 @@ COMMENT=	Vector graphics library with cross-device output support
 LICENSE=	gnu-lgpl-v2.1 AND mpl-1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES+=		c99
 USE_LIBTOOL=		yes
