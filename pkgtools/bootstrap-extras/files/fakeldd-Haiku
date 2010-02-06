@@ -1,0 +1,40 @@
+#! /bin/sh
+#
+# $NetBSD: fakeldd-Haiku,v 1.1 2010/02/06 10:26:09 obache Exp $
+#
+
+read_rpath_needed_from_obj ()
+{
+	objdump -p "$1" | awk ' 				
+	/^ *NEEDED */ {num++; libs[num] = $2;}
+	/^ *RPATH */ {rpath = $2;}
+	END {
+		print rpath;
+		for(x = 1; x <= num; x++) {
+			print libs[x];
+		}
+	}'
+}
+
+print_as_ldd ()
+{
+	read rpath
+	rpath="$rpath:$LIBRARY_PATH"
+	while read f; do
+		abpath="not found"
+		IFS=':'
+		for r in $rpath; do
+			if test -e "$r/$f"; then
+				abpath="$r/$f"
+				break;
+			fi
+		done
+		echo "	$f => $abpath";
+	done
+}
+
+while test $# -gt 0; do
+	echo $1:
+	read_rpath_needed_from_obj $1 | print_as_ldd
+	shift
+done
