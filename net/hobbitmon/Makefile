@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/01/17 12:02:32 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2010/02/06 13:58:06 spz Exp $
 #
 
 DISTNAME=	hobbit-4.0-beta6
@@ -76,6 +76,6 @@ MAKE_ENV+=	PKGDIR=${PREFIX:Q}
 .include "../../security/openssl/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../www/apache/buildlink3.mk"
+.include "../../mk/apache.mk"
 
 .include "../../mk/bsd.pkg.mk"
