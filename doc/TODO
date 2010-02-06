@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8982 2010/02/06 05:33:15 taca Exp $
+$NetBSD: TODO,v 1.8983 2010/02/06 10:37:22 sno Exp $
 
 Suggested new packages
 ======================
@@ -1038,7 +1038,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o packagekit-0.5.1
 	o pam-smbpass-3.0.13
 	o paprefs-0.9.8
-	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
 	o patchutils-0.3.1
