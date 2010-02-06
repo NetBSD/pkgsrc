@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2009/11/15 15:50:50 drochner Exp $
+# $NetBSD: options.mk,v 1.6 2010/02/06 22:19:00 gdt Exp $
 
 PKG_OPTIONS_VAR=PKG_OPTIONS.hdf5
 PKG_SUPPORTED_OPTIONS=	szip cxx threads
-PKG_SUGGESTED_OPTIONS=	szip
+# szip is non-Free, so leave out by default
+PKG_SUGGESTED_OPTIONS=	
 
 .include "../../mk/bsd.options.mk"
 
