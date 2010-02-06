@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2009/11/15 15:50:50 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2010/02/06 22:11:44 gdt Exp $
 
 DISTNAME=	hdf5-1.6.10
 CATEGORIES=	devel
@@ -7,6 +7,8 @@ MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF5/current16/src/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hdfgroup.org/HDF5/
 COMMENT=	Hierarchical Data Format (new generation)
+
+LICENSE=	original-bsd
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pax tr
