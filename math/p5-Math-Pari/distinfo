@@ -1,13 +1,7 @@
-$NetBSD: distinfo,v 1.15 2009/09/16 02:32:00 schmonz Exp $
+$NetBSD: distinfo,v 1.16 2010/02/06 10:52:37 sno Exp $
 
-SHA1 (Math-Pari-2.010801.tar.gz) = 9becc6cbbb80983408de7b3f33e7f19a8015cc34
-RMD160 (Math-Pari-2.010801.tar.gz) = 72af931cd38b3d2e7bb158bbbe6221292dfe07e1
-Size (Math-Pari-2.010801.tar.gz) = 115860 bytes
-SHA1 (pari-2.1.6.tgz) = 54bd40fa70a02e76d78d0ea19c0f56f7da62de8e
-RMD160 (pari-2.1.6.tgz) = 6b79e84b639d1862df148b253136deacd73bf4f0
-Size (pari-2.1.6.tgz) = 1541464 bytes
-SHA1 (patch-aa) = 0260c0c980ccb11bcad7c744a37de990ffcb70cd
-SHA1 (patch-ab) = 2a8fa083962782dd498a72fbd7901636592bfc1b
-SHA1 (patch-ac) = 92e72613058ffa248f2428dea5de368a39186040
-SHA1 (patch-ad) = 6e7ff863f35d9c4c877c180a22935fb9852939b9
-SHA1 (patch-ae) = 2bd3bc8841fb646a478be10f4014bba2442500cb
+SHA1 (Math-Pari-2.01080603.tar.gz) = f8d8a85428886cd682c7672740421d6803dea0fa
+RMD160 (Math-Pari-2.01080603.tar.gz) = 93641a51a2dd1a2f0d9af691da28e7579511bb3b
+Size (Math-Pari-2.01080603.tar.gz) = 121370 bytes
+SHA1 (patch-aa) = c1b4540c29699d99f8f21fcda84a790c1b84bc95
+SHA1 (patch-ab) = b1e66e636eb823b45dd0c53ab0fa0bdf6472cfff

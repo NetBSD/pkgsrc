@@ -1,41 +1,20 @@
-$NetBSD: patch-ab,v 1.7 2009/08/16 13:33:07 he Exp $
+$NetBSD: patch-ab,v 1.8 2010/02/06 10:52:37 sno Exp $
 
-Improve detection of various processor types on netbsd.
-Treat DragonFly the same as FreeBSD.
-
---- ./utils/Math/PariBuild.pm.orig	2009-02-11 02:40:56.000000000 +0100
-+++ ./utils/Math/PariBuild.pm
-@@ -779,7 +779,7 @@ sub find_machine_architecture () {
-     } elsif ($machine ne 'ia64') {
-       $machine = 'hppa';
-     }
--  } elsif ($os eq 'os2' or $os eq 'netbsd'
-+  } elsif ($os eq 'os2' or $os eq 'dragonfly'
- 	   or $os eq 'freebsd' or $os =~ /^cygwin/) {
-     chomp($machine = `uname -m`);
-     $machine ||= 'ix86';
-@@ -808,6 +808,24 @@ sub find_machine_architecture () {
-       close IN or die "close /proc/cpuinfo: $!";
-       $machine = process_sparc $info, $machine;
-     }
-+  } elsif ($os eq 'netbsd') {
-+    chomp($machine = `uname -p`);
-+    if ($machine =~ 'arm.*') {
-+      $machine='arm';
-+    } elsif ($machine eq 'i386') {
-+      $machine='ix86';
-+    } elsif ($machine =~ 'mips.*') {
-+      $machine='mips';
-+    } elsif ($machine eq 'powerpc') {
-+      $machine='ppc';
-+    } elsif ($machine =~ 'sh3.*') {
-+      $machine='sh3';
-+    } elsif ($machine =~ 'sh5.*') {
-+      $machine='sh5';
-+    } elsif ($machine eq 'sparc64') {
-+      $machine='sparcv9';
-+    }
-+    # these can be used verbatim: alpha amd64 m68k sparc vax
-   } elsif ($os eq 'sunos') {
-     my $type = (split ' ', $Config{myuname})[4];
-     # format: SunOS name 5.9 Generic_118558-26 sun4u sparc SUNW,Ultra-5_10
+--- Pari.xs.orig	2009-12-11 02:18:24.000000000 +0000
++++ Pari.xs
+@@ -1,4 +1,6 @@
+-#  include <pari.h>
++#  include <pari/pari.h>
++#  include <pari/paripriv.h>
++#if 0
+ #  include <graph/rect.h>
+ #  include <language/anal.h>
+ 
+@@ -7,6 +9,7 @@
+ #endif
+ 
+ #  include <gp/gp.h>			/* init_opts */
++#endif
+ 
+ /* On some systems /usr/include/sys/dl.h attempts to declare
+    ladd which pari.h already defined with a different meaning.
