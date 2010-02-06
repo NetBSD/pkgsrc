@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2008/04/30 19:28:03 adrianp Exp $
+$NetBSD: distinfo,v 1.6 2010/02/06 15:54:18 taca Exp $
 
-SHA1 (pear/Mail_Mime-1.4.0.tgz) = d44b570f6c6252e7116708c1822bc2d3c8235605
-RMD160 (pear/Mail_Mime-1.4.0.tgz) = d04879ff81e2c4aa615cfd55abe7c20c7e0d2705
-Size (pear/Mail_Mime-1.4.0.tgz) = 28636 bytes
+SHA1 (pear/Mail_Mime-1.6.0.tgz) = 7b71d32a748cf2009f4148e9d5db03475065e5af
+RMD160 (pear/Mail_Mime-1.6.0.tgz) = 37c04871ad0d28a3a09f05e0fa7452e65ea6da4c
+Size (pear/Mail_Mime-1.6.0.tgz) = 29925 bytes
