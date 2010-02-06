@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/10/23 20:13:38 jdolecek Exp $
+$NetBSD: distinfo,v 1.6 2010/02/06 16:08:48 taca Exp $
 
-SHA1 (pear/HTTP_Request-1.3.0.tgz) = e801bda826b869a561c11ea30eb212ba92174293
-RMD160 (pear/HTTP_Request-1.3.0.tgz) = b4f9dc6e1922c517059f082ebb0a1bb8f7ac33ae
-Size (pear/HTTP_Request-1.3.0.tgz) = 13808 bytes
+SHA1 (pear/HTTP_Request-1.4.4.tgz) = 71a3b4cc3cec8dcd24052e97c53517dfb5605875
+RMD160 (pear/HTTP_Request-1.4.4.tgz) = 976c2ed0a1fcbcf5dc4f890c4d7c01c6211f8595
+Size (pear/HTTP_Request-1.4.4.tgz) = 17109 bytes
