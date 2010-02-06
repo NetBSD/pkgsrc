@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.153 2010/02/06 04:30:49 obache Exp $
+# $NetBSD: bootstrap,v 1.154 2010/02/06 05:51:50 obache Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -36,7 +36,7 @@
 #set -x
 
 # the following environment variables are honored:
-# compiler/linker flags: CFLAGS, CPPFLAGS, LDFLAGS
+# compiler/linker flags: CFLAGS, CPPFLAGS, LDFLAGS, LIBS
 # tools: CP, GREP, ID, MKDIR, SH, TEST, TOUCH, XARGS
 
 
@@ -945,7 +945,7 @@ esac
 case "$need_sed" in
 yes)	echo_msg "Bootstrapping sed"
 	copy_src $pkgsrcdir/textproc/nbsed/files sed
-	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake)"
+	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='$LIBS -lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/sed/sed $wrkdir/bin/sed"
 	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sed?=		$wrkdir/bin/sed" >> ${BOOTSTRAP_MKCONF}
@@ -958,7 +958,7 @@ copy_src $pkgsrcdir/pkgtools/pkg_install/files pkg_install
 run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV \
 CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' \
 LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' \
-LIBS='-lnbcompat' $shprog ./configure $configure_quiet_flags -C \
+LIBS='$LIBS -lnbcompat' $shprog ./configure $configure_quiet_flags -C \
 --enable-bootstrap --prefix=$prefix --sysconfdir=$sysconfdir \
 --with-pkgdbdir=$pkgdbdir --mandir=$mandir $pkg_install_args && $bmake)"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/admin/pkg_admin $wrkdir/sbin/pkg_admin"
@@ -1019,6 +1019,9 @@ if test -n "$CPPFLAGS"; then
 fi
 if test -n "$LDFLAGS"; then
 	echo "LDFLAGS+=		$LDFLAGS" >> ${TARGET_MKCONF}
+fi
+if test -n "$LIBS"; then
+	echo "LIBS+=		$LIBS" >> ${TARGET_MKCONF}
 fi
 
 # opsys specific fiddling
