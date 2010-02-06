@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2010/01/16 03:52:40 minskim Exp $
+# $NetBSD: Makefile,v 1.34 2010/02/06 00:59:50 minskim Exp $
 
 DISTNAME=	texlive-20091011-source
 PKGNAME=	dvipdfmx-20090708
+PKGREVISION=	1
 CATEGORIES=	print converters
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +13,7 @@ COMMENT=	DVI to PDF converter with CID-keyed font support
 
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
+DEPENDS+=	tex-dvipdfmx-[0-9]*:../../print/tex-dvipdfmx
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
