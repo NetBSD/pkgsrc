@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.152 2010/01/16 02:16:35 obache Exp $
+# $NetBSD: bootstrap,v 1.153 2010/02/06 04:30:49 obache Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -449,6 +449,15 @@ bmakexenv=
 bmakexargs=
 need_extras=no
 case "$opsys" in
+AIX)
+	root_group=system
+	need_bsd_install=yes
+	need_awk=yes
+	need_sed=yes
+	need_fixed_strip=yes
+	set_opsys=no
+	machine_arch=`get_machine_arch_aix`
+	;;
 Darwin)
 	root_group=wheel
 	need_bsd_install=no
@@ -505,6 +514,42 @@ HPUX)
 	set_opsys=no
 	machine_arch=`uname -m | sed 's/^9000.*$/hppa/'`
 	;;
+Interix)
+	is_root () {
+		if id -G | grep -q 131616; then
+			return 1
+		fi
+		return 0
+	}
+	mkdir_p () {
+		mkdir -p "$@" # allows umask to take effect
+	}
+	default_install_mode=0775
+	root_user=`id -u`
+	root_group=131616
+	case `uname -r` in
+	3.* | 5.*)
+		need_bsd_install=yes
+		need_awk=yes
+		need_sed=yes
+		set_opsys=no
+		need_xargs=yes
+		;;
+	*)
+		need_bsd_install=no
+		need_awk=no
+		need_sed=no
+		set_opsys=no
+		need_xargs=no
+		;;
+	esac
+	# only used for unprivileged builds
+	groupsprog="id -gn"
+	# for bootstrap only; pkgsrc uses CPPFLAGS
+	CC="gcc -D_ALL_SOURCE"; export CC
+	ac_cv_header_poll_h=no; export ac_cv_header_poll_h
+	ac_cv_func_poll=no; export ac_cv_func_poll
+	;;
 IRIX*)
 	if [ -d "/usr/freeware/bin" ]; then
 		overpath="/usr/freeware/bin:$overpath"
@@ -560,77 +605,6 @@ OpenBSD)
 	set_opsys=no
 	machine_arch=`uname -m`
 	;;
-SunOS)
-	if [ -d "/usr/xpg4/bin" ]; then
-		overpath="/usr/xpg4/bin:$overpath"
-	fi
-	root_group=root
-	need_bsd_install=yes
-	need_awk=yes
-	need_sed=yes
-	need_ksh=yes
-	set_opsys=no
-	groupsprog="/usr/xpg4/bin/id -gn"
-	whoamiprog="/usr/xpg4/bin/id -un"
-	machine_arch=`uname -p | sed -e 's/i86pc/i386/'`
-	check_compiler=yes
-	;;
-AIX)
-	root_group=system
-	need_bsd_install=yes
-	need_awk=yes
-	need_sed=yes
-	need_fixed_strip=yes
-	set_opsys=no
-	machine_arch=`get_machine_arch_aix`
-	;;
-Interix)
-	is_root () {
-		if id -G | grep -q 131616; then
-			return 1
-		fi
-		return 0
-	}
-	mkdir_p () {
-		mkdir -p "$@" # allows umask to take effect
-	}
-	default_install_mode=0775
-	root_user=`id -u`
-	root_group=131616
-	case `uname -r` in
-	3.* | 5.*)
-		need_bsd_install=yes
-		need_awk=yes
-		need_sed=yes
-		set_opsys=no
-		need_xargs=yes
-		;;
-	*)
-		need_bsd_install=no
-		need_awk=no
-		need_sed=no
-		set_opsys=no
-		need_xargs=no
-		;;
-	esac
-	# only used for unprivileged builds
-	groupsprog="id -gn"
-	# for bootstrap only; pkgsrc uses CPPFLAGS
-	CC="gcc -D_ALL_SOURCE"; export CC
-	ac_cv_header_poll_h=no; export ac_cv_header_poll_h
-	ac_cv_func_poll=no; export ac_cv_func_poll
-	;;
-UnixWare)
-	root_group=sys
-	need_bsd_install=no
-	BSTRAP_ENV="INSTALL=/usr/ucb/install $BSTRAP_ENV"
-	need_mkdir=yes
-	need_awk=yes
-	need_sed=yes
-	whoamiprog=/usr/ucb/whoami
-	set_opsys=no
-	CC="gcc -DUNIXWARE"; export CC
-	;;
 OSF1)
 	root_group=system
 	need_bsd_install=yes
@@ -647,6 +621,32 @@ QNX)
 	whoamiprog="id -un"
 	fetch_cmd="/usr/bin/ftp"
 	machine_arch=`uname -p | sed -e 's/x86/i386/'`
+	;;
+SunOS)
+	if [ -d "/usr/xpg4/bin" ]; then
+		overpath="/usr/xpg4/bin:$overpath"
+	fi
+	root_group=root
+	need_bsd_install=yes
+	need_awk=yes
+	need_sed=yes
+	need_ksh=yes
+	set_opsys=no
+	groupsprog="/usr/xpg4/bin/id -gn"
+	whoamiprog="/usr/xpg4/bin/id -un"
+	machine_arch=`uname -p | sed -e 's/i86pc/i386/'`
+	check_compiler=yes
+	;;
+UnixWare)
+	root_group=sys
+	need_bsd_install=no
+	BSTRAP_ENV="INSTALL=/usr/ucb/install $BSTRAP_ENV"
+	need_mkdir=yes
+	need_awk=yes
+	need_sed=yes
+	whoamiprog=/usr/ucb/whoami
+	set_opsys=no
+	CC="gcc -DUNIXWARE"; export CC
 	;;
 *)
 	echo "This platform ($opsys) is untried - good luck, and thanks for using pkgsrc"
