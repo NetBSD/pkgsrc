@@ -1,29 +1,13 @@
-$NetBSD: patch-ah,v 1.1 2003/07/07 21:57:51 jtb Exp $
+$NetBSD: patch-ah,v 1.2 2010/02/06 10:37:06 sno Exp $
 
---- src/kernel/sparcv7/level0.S.orig
-+++ src/kernel/sparcv7/level0.S
-@@ -13,7 +13,7 @@
- with the package; see the file 'COPYING'. If not, write to the Free Software
- Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. */
+--- config/get_install.orig	2008-01-16 15:57:11.000000000 +0000
++++ config/get_install
+@@ -23,7 +23,7 @@ fi
+ echo $n "...for architecture-independent files (share-prefix) ? $c"
+ dflt=$share_prefix; . ./myread; share_prefix=$ans
  
--#if defined(NO_UNDERSCORE) || defined(linux)
-+#if defined(NO_UNDERSCORE) || defined(linux) || defined(__NetBSD__)
- #  define C(entrypoint) entrypoint
- #elif defined(sun) || defined(NeXT)
- #  ifdef __STDC__
-@@ -22,13 +22,13 @@
- #    define C(entrypoint) _/**/entrypoint
- #  endif
- #endif
--#if defined(sun) || defined(linux)
-+#if defined(sun) || defined(linux) || defined(__NetBSD__)
- #  define GLOBL .global
- #elif defined(NeXT)
- #  define GLOBL .globl
- #endif
+-dfltman=$share_prefix/man/man1
++dfltman=$prefix/man/man1
+ dfltemacs=$share_prefix/emacs/site-lisp/pari
+ dfltdata=$share_prefix/pari
  
--#if   defined(sun) || defined(linux)
-+#if   defined(sun) || defined(linux) || defined(__NetBSD__)
-         .seg "text"
- #elif defined(NeXT)
- .text
