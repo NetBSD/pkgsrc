@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2009/12/31 11:01:38 obache Exp $
+# $NetBSD: Makefile,v 1.25 2010/02/06 11:26:44 obache Exp $
 
-DISTNAME=	skf_${VERSION}.5
+DISTNAME=	skf_${VERSION}.6
 VERSION=	1.96
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	japanese converters
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=skf/45206/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=skf/45823/}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://sourceforge.jp/projects/skf/
