@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.552 2010/02/05 20:27:19 markd Exp $
+$NetBSD: CHANGES-2010,v 1.553 2010/02/06 00:57:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -661,3 +661,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/mimedefang to 2.67 [markd 2010-02-05]
 	Updated emulators/dynamips to 0.2.8rc2 [markd 2010-02-05]
 	Added emulators/dynagen to 0.11.0 [markd 2010-02-05]
+	Added print/tex-dvipdfmx version 2009 [minskim 2010-02-06]
