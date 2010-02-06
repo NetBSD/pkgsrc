@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.zh,v 1.1.1.1 2009/12/02 16:10:55 taca Exp $
+@comment $NetBSD: PLIST.zh,v 1.2 2010/02/06 15:21:26 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/zh/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/zh/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/zh/default.php
@@ -46,7 +46,6 @@ ${TL_WEBDIR}/system/modules/frontend/languages/zh/.htaccess
 ${TL_WEBDIR}/system/modules/frontend/languages/zh/default.php
 ${TL_WEBDIR}/system/modules/frontend/languages/zh/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/zh/.htaccess
-${TL_WEBDIR}/system/modules/listing/languages/zh/default.php
 ${TL_WEBDIR}/system/modules/listing/languages/zh/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/zh/tl_module.php
 ${TL_WEBDIR}/system/modules/news/languages/zh/.htaccess
