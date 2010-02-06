@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8983 2010/02/06 10:37:22 sno Exp $
+$NetBSD: TODO,v 1.8984 2010/02/06 12:57:10 obache Exp $
 
 Suggested new packages
 ======================
@@ -840,7 +840,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXi-1.3 [xorg-server 1.7]
 	o libXinerama-1.1 [xorg-server 1.7]
 	o libXtst-1.1.0 [xorg-server 1.7]
-	o libarchive-2.7.0
+	o libarchive-2.8.0
 	o libassuan-2.0.0
 	o libcares-1.7.0
 	o libdockapp-0.6.1
