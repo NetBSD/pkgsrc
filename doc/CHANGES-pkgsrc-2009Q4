@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.25 2010/02/06 10:11:47 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.26 2010/02/07 17:44:36 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -80,3 +80,5 @@ Pullup ticket #2989 - requested by taca
 puppet: security update
 Pullup ticket #2990 - requested by obache
 php5: build fix
+Pullup ticket #2991 - requested by taca
+php5-pear-DB: security update
