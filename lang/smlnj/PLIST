@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2009/09/22 15:01:23 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/02/07 03:14:36 asau Exp $
+bin/heap2asm
 bin/heap2exec
 bin/ml-antlr
 bin/ml-build
@@ -11,6 +12,7 @@ bin/ml-yacc
 bin/nowhere
 bin/sml
 lib/smlnj/bin/.arch-n-opsys
+lib/smlnj/bin/.heap/heap2asm.${BOX}-${OS}
 lib/smlnj/bin/.heap/ml-antlr.${BOX}-${OS}
 lib/smlnj/bin/.heap/ml-burg.${BOX}-${OS}
 lib/smlnj/bin/.heap/ml-lex.${BOX}-${OS}
@@ -22,6 +24,7 @@ lib/smlnj/bin/.heap/sml.${BOX}-${OS}
 lib/smlnj/bin/.link-sml
 lib/smlnj/bin/.run-sml
 lib/smlnj/bin/.run/run.${BOX}-${LOWER_OPSYS}
+lib/smlnj/bin/heap2asm
 lib/smlnj/bin/heap2exec
 lib/smlnj/bin/ml-antlr
 lib/smlnj/bin/ml-build
