@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/02/07 16:12:01 wiz Exp $
 info/guile-www.info
 share/guile/site/www/cgi
 share/guile/site/www/data/content-type
@@ -11,6 +11,7 @@ share/guile/site/www/server-utils/big-dishing-loop
 share/guile/site/www/server-utils/cgi-prep
 share/guile/site/www/server-utils/cookies
 share/guile/site/www/server-utils/filesystem
+share/guile/site/www/server-utils/form-2-form
 share/guile/site/www/server-utils/log
 share/guile/site/www/server-utils/parse-request
 share/guile/site/www/url
