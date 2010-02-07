@@ -1,0 +1,49 @@
+termcap does not require curses.
+
+--- Src/Modules/termcap.c.orig	2010-02-07 08:23:33.000000000 +0000
++++ Src/Modules/termcap.c	2010-02-07 08:34:57.000000000 +0000
+@@ -27,22 +27,10 @@
+  *
+  */
+ 
+-/*
+- * We need to include the zsh headers later to avoid clashes with
+- * the definitions on some systems, however we need the configuration
+- * file to decide whether we should avoid curses.h, which clashes
+- * with several zsh constants on some systems (e.g. SunOS 4).
+- */
+ #include "../../config.h"
+ 
+ #ifdef HAVE_TGETENT
+-# if defined(ZSH_HAVE_CURSES_H) && defined(ZSH_HAVE_TERM_H)
+-#  define USES_TERM_H 1
+-# else
+-#  ifdef HAVE_TERMCAP_H
+-#   define USES_TERMCAP_H 1
+-#  endif
+-# endif
++# define USES_TERMCAP_H 1
+ #endif
+ 
+ #include "termcap.mdh"
+@@ -50,19 +38,7 @@
+ 
+ /**/
+ #ifdef HAVE_TGETENT
+-# ifdef USES_TERM_H
+-#  ifdef HAVE_TERMIO_H
+-#   include <termio.h>
+-#  endif
+-#  ifdef ZSH_HAVE_CURSES_H
+-#   include "../zshcurses.h"
+-#  endif
+-#  include "../zshterm.h"
+-# else
+-#  ifdef USES_TERMCAP_H
+-#   include <termcap.h>
+-#  endif
+-# endif
++# include <termcap.h>
+ 
+ #ifndef HAVE_BOOLCODES
+ static char *boolcodes[] = {
