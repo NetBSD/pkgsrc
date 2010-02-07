@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2009/12/10 16:56:59 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2010/02/07 17:59:40 gdt Exp $
 
 --- configure.orig	2009-12-04 21:45:59.000000000 +0100
 +++ configure
-@@ -4630,7 +4630,6 @@ sys.exit(sys.hexversion < minverhex)"
+@@ -4630,7 +4630,7 @@ sys.exit(sys.hexversion < minverhex)"
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  else
 -  as_fn_error "too old" "$LINENO" 5
++  true
  fi
        am_display_PYTHON=$PYTHON
      else
