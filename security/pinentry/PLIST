@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:43:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/02/07 15:36:58 drochner Exp $
 bin/pinentry
 bin/pinentry-curses
 info/pinentry.info
-${PLIST.gtk}bin/pinentry-gtk
-${PLIST.gtk2}bin/pinentry-gtk-2
-${PLIST.qt}bin/pinentry-qt
