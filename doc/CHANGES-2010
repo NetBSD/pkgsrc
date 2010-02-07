@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.564 2010/02/07 06:05:36 seb Exp $
+$NetBSD: CHANGES-2010,v 1.565 2010/02/07 11:29:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -690,3 +690,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added mail/pear-Mail_mimeDecode version 1.5.1 [taca 2010-02-06]
 	Updated lang/smlnj to 110.72 [asau 2010-02-07]
 	Added www/p5-HTML-Selector-XPath version 0.03 [seb 2010-02-07]
+	Added textproc/p5-XML-XPathEngine version 0.12 [seb 2010-02-07]
