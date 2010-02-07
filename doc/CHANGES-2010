@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.563 2010/02/07 03:15:18 asau Exp $
+$NetBSD: CHANGES-2010,v 1.564 2010/02/07 06:05:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -689,3 +689,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/pear-HTTP_Request to 1.4.4 [taca 2010-02-06]
 	Added mail/pear-Mail_mimeDecode version 1.5.1 [taca 2010-02-06]
 	Updated lang/smlnj to 110.72 [asau 2010-02-07]
+	Added www/p5-HTML-Selector-XPath version 0.03 [seb 2010-02-07]
