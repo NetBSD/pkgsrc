@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.578 2010/02/07 16:39:42 seb Exp $
+$NetBSD: CHANGES-2010,v 1.579 2010/02/07 17:17:55 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -704,3 +704,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/liboil to 0.3.17 [wiz 2010-02-07]
 	Updated devel/guile-www to 2.25 [wiz 2010-02-07]
 	Added www/p5-HTML-TreeBuilder-XPath version 0.11 [seb 2010-02-07]
+	Updated converters/fondu to 060102 [zafer 2010-02-07]
