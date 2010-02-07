@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.569 2010/02/07 16:00:23 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.570 2010/02/07 16:01:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -695,3 +695,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/kdebindings4-python to 4.3.5nb1 [wiz 2010-02-07]
 	Updated geography/viking to 0.9.91 [gdt 2010-02-07]
 	Updated devel/libidn to 1.17 [wiz 2010-02-07]
+	Updated archivers/p5-Archive-Tar to 1.56 [wiz 2010-02-07]
