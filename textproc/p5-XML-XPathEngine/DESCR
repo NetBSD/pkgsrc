@@ -1,0 +1,2 @@
+The Perl 5 module XML::XPathEngine provides an XPath engine, that
+can be re-used by other module/classes that implement trees.
