@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2010/02/07 15:36:58 drochner Exp $
+bin/pinentry-gtk
