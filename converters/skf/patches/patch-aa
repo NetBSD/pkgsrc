@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2009/04/14 06:00:41 obache Exp $
+$NetBSD: patch-aa,v 1.7 2010/02/07 13:17:55 obache Exp $
 
---- Makefile.in.orig	2009-03-18 14:36:21.000000000 +0000
+--- Makefile.in.orig	2010-01-09 15:37:45.000000000 +0000
 +++ Makefile.in
 @@ -55,15 +55,16 @@ GNU_S_INCLUDE_DIR = @gnu_s_headers_dir@
  #
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.6 2009/04/14 06:00:41 obache Exp $
  LOCALEJDIR	= "$(LOCALEDIR)/ja/LC_MESSAGES"
  SKFLIBDIR	= $(LSKFDIR)/lib
  
-@@ -110,8 +111,8 @@ CC = @CC@
+@@ -111,8 +112,8 @@ CC = @CC@
  
  SUBDIRS = 
  
