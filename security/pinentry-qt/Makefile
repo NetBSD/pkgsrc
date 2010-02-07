@@ -1,0 +1,39 @@
+# $NetBSD: Makefile,v 1.1 2010/02/07 15:36:58 drochner Exp $
+#
+
+DISTNAME=		pinentry-0.7.6
+PKGNAME=		pinentry-qt-0.7.6
+CATEGORIES=		security
+MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
+
+MAINTAINER=		shannonjr@NetBSD.org
+HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/pinentry/
+COMMENT=		Applications for entering PINs or Passphrases
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--enable-pinentry-qt
+CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR:Q}
+CONFIGURE_ARGS+=	--with-qt-includes=${BUILDLINK_PREFIX.qt3-libs}/qt3/include
+CONFIGURE_ARGS+=	--with-qt-libraries=${BUILDLINK_PREFIX.qt3-libs}/qt3/lib
+CONFIGURE_ARGS+=	--disable-pinentry-curses
+#CONFIGURE_ARGS+=	--disable-fallback-curses
+CONFIGURE_ARGS+=	--disable-pinentry-gtk
+CONFIGURE_ARGS+=	--disable-pinentry-gtk2
+CONFIGURE_ARGS+=	--disable-pinentry-qt4
+
+USE_LANGUAGES+=		c c++
+USE_TOOLS+=		gmake
+INFO_FILES=		yes
+
+INSTALL_DIRS=		qt
+
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+#.include "../../security/libgpg-error/buildlink3.mk"
+#.include "../../security/libksba/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
