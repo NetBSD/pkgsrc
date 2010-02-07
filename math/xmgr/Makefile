@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.33 2009/12/11 02:11:52 asau Exp $
+# $NetBSD: Makefile,v 1.34 2010/02/07 18:36:33 zafer Exp $
 
 DISTNAME=		xmgr-4.1.2
 PKGREVISION=		5
 CATEGORIES=		math
-MASTER_SITES=		ftp://plasma-gate.weizmann.ac.il/pub/xmgr4/src/ \
-			ftp://plasma-gate.weizmann.ac.il/pub/xmgr4/src/old/
+MASTER_SITES=		ftp://plasma-gate.weizmann.ac.il/pub/xmgr4/src/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://plasma-gate.weizmann.ac.il/Xmgr/
 COMMENT=		Powerful XY plotting tool for workstations or X-terminals using X
+LICENSE=		modified-bsd
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
