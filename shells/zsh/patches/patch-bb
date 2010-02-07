@@ -1,0 +1,25 @@
+terminfo does not require curses.
+
+--- Src/Modules/terminfo.c.orig	2010-02-07 08:54:08.000000000 +0000
++++ Src/Modules/terminfo.c	2010-02-07 08:55:11.000000000 +0000
+@@ -30,7 +30,7 @@
+ #define USES_TERM_H 1
+ #include "terminfo.mdh"
+ 
+-#if defined(HAVE_TIGETFLAG) && defined(HAVE_CURSES_H)
++#if defined(HAVE_TIGETFLAG) && defined(HAVE_TERM_H)
+ # define USE_TERMINFO_MODULE 1
+ #else
+ # undef USE_TERMINFO_MODULE
+@@ -50,10 +50,7 @@
+ #  undef offsetof
+ # endif
+ 
+-# include <curses.h>
+-# ifdef HAVE_TERM_H
+-#  include <term.h>
+-# endif
++#include <term.h>
+ 
+ static Param terminfo_pm;
+ 
