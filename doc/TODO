@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8994 2010/02/07 16:05:50 wiz Exp $
+$NetBSD: TODO,v 1.8995 2010/02/07 16:07:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1035,7 +1035,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-MailTools-2.06
-	o p5-Mouse-0.49
 	o p5-Spreadsheet-WriteExcel-2.37
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
