@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2010/02/07 07:22:08 obache Exp $
+# $NetBSD: Makefile.common,v 1.56 2010/02/07 09:53:20 roy Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -38,15 +38,15 @@ PLIST_VARS=	dynamic terminfo
 
 ################################################################################
 
-_ZSH_OPSYS.OpenBSD=		ldflags tcsetpgrp   -
-_ZSH_OPSYS.Linux=		ldflags tcsetpgrp   terminfo
-_ZSH_OPSYS.IRIX=		ldflags tcsetpgrp   -
-_ZSH_OPSYS.Interix=		ldflags notcsetpgrp -
-_ZSH_OPSYS.DragonFly=		ldflags tcsetpgrp   terminfo
-_ZSH_OPSYS.FreeBSD=		ldflags tcsetpgrp   terminfo
-_ZSH_OPSYS.SunOS=		-       tcsetpgrp   -
+_ZSH_OPSYS.OpenBSD=		ldflags tcsetpgrp
+_ZSH_OPSYS.Linux=		ldflags tcsetpgrp
+_ZSH_OPSYS.IRIX=		ldflags tcsetpgrp
+_ZSH_OPSYS.Interix=		ldflags notcsetpgrp
+_ZSH_OPSYS.DragonFly=		ldflags tcsetpgrp
+_ZSH_OPSYS.FreeBSD=		ldflags tcsetpgrp
+_ZSH_OPSYS.SunOS=		-       tcsetpgrp
 
-_ZSH_OPSYS.${OPSYS}?=		ldflags tcsetpgrp   -
+_ZSH_OPSYS.${OPSYS}?=		ldflags tcsetpgrp
 
 ################################################################################
 
@@ -74,8 +74,10 @@ _ZSH_LINKAGE.dynamic.LDFLAGS=	${_ZSH_DYNAMIC_VARS.ldflags}
 _ZSH_OPSYS_VARS.tcsetpgrp=	--with-tcsetpgrp
 _ZSH_OPSYS_VARS.notcsetpgrp=	--without-tcsetpgrp
 
-### terminfo (ncurses)
-.if !empty(_ZSH_OPSYS.${OPSYS}:Mterminfo)
+### terminfo
+CHECK_BUILTIN.terminfo=	yes
+.include "../../mk/terminfo.builtin.mk"
+.if !empty(IS_BUILTIN.terminfo:M[Yy][Ee][Ss])
 PLIST.terminfo=	yes
 .endif
 
