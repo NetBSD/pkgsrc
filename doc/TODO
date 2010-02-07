@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8989 2010/02/07 15:54:47 wiz Exp $
+$NetBSD: TODO,v 1.8990 2010/02/07 16:00:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -855,7 +855,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnomedb-3.1.2
 	o libhydrogen-0.9.2
 	o libiconv-1.13.1
-	o libidn-1.17
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o liblbxutil-1.1.0
