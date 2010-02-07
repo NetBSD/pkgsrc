@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2009/02/17 01:08:24 snj Exp $
+$NetBSD: patch-aa,v 1.7 2010/02/07 19:30:35 snj Exp $
 
---- Makefile.orig	2004-05-22 00:21:47.000000000 -0700
-+++ Makefile	2004-11-26 14:05:41.000000000 -0800
+--- Makefile.orig	2010-01-10 13:39:08.000000000 -0800
++++ Makefile	2010-02-07 11:02:21.000000000 -0800
 @@ -4,7 +4,7 @@
  #######################################################################
  
@@ -11,19 +11,23 @@ $NetBSD: patch-aa,v 1.6 2009/02/17 01:08:24 snj Exp $
  
  # Font to use for statusbar in fullscreen mode
  STATUSBAR_FONT = "fixed"
-@@ -57,11 +57,6 @@ SS_RANDOMIZE = -r
+@@ -45,15 +45,6 @@ MAGIC = -DHAVE_MAGIC
  # Do not edit below here!
  ######################################################################
  
 -CC        = gcc
--CFLAGS    = -O2 -Wall -fomit-frame-pointer -finline-functions \
+-#CFLAGS    = -O -g -Wall
+-CFLAGS    = -O2 -Wall \
 -	    -fcaller-saves -ffast-math -fno-strength-reduce \
 -	    -fthread-jumps #-march=pentium #-DSTAT_MACROS_BROKEN
+-#CFLAGS    = -O2 -Wall -fomit-frame-pointer -finline-functions \
+-#	    -fcaller-saves -ffast-math -fno-strength-reduce \
+-#	    -fthread-jumps #-march=pentium #-DSTAT_MACROS_BROKEN
 -
- INCLUDES  = `imlib-config --cflags-gdk`
- LIBS      = `imlib-config --libs-gdk`
+ INCLUDES  := $(shell pkg-config --cflags gdk-2.0 imlib2)
+ LIBS      := $(shell pkg-config --libs gdk-2.0 imlib2) -lX11
  
-@@ -96,10 +91,10 @@ SS_PROG   = $(PREFIX)/ss-qiv
+@@ -99,10 +90,10 @@ DEFINES_G = $(DEFINES) -DDEBUG
  all: $(PROGRAM)
  
  $(PROGRAM): $(OBJS)
@@ -36,10 +40,11 @@ $NetBSD: patch-aa,v 1.6 2009/02/17 01:08:24 snj Exp $
  
  main.o: main.h
  
-@@ -124,14 +119,8 @@ distclean : clean
+@@ -126,14 +117,9 @@ distclean : clean
+ 	rm -f $(PROGRAM) $(PROGRAM_G)
  
  install: $(PROGRAM)
- 	@echo "Installing QIV..."
+-	@echo "Installing QIV..."
 -	install -s -m 0755 $(PROGRAM) $(PREFIX)/bin
 -	install -m 0644 $(PROGRAM).1 $(PREFIX)/man/man1
 -	$(COMPRESS_PROG) $(PREFIX)/man/man1/$(PROGRAM).1
@@ -47,9 +52,10 @@ $NetBSD: patch-aa,v 1.6 2009/02/17 01:08:24 snj Exp $
 -	then echo "-- Test Passed --" ; \
 -	else echo "-- Test Failed --" ; \
 -	fi
--	@echo -ne "\nDont forget to look into the \"qiv-command\" file and install it!\n-> cp qiv-command.example /usr/local/bin/qiv-command\n\n" 
+-	@echo -ne "\nDont forget to look into the \"qiv-command\" file and install it!\n-> cp qiv-command.example /usr/local/bin/qiv-command\n\n"
 +	$(BSD_INSTALL_PROGRAM) $(PROGRAM) $(DESTDIR)$(PREFIX)/bin
 +	$(BSD_INSTALL_DATA) $(PROGRAM).1 $(DESTDIR)$(PREFIX)/man/man1
++	$(BSD_INSTALL_SCRIPT) qiv-command.example \
++		$(DESTDIR)$(PREFIX)/share/examples/qiv
  
- install-xscreensaver: install
- 	@echo "#!/bin/sh" > $(SS_PROG)
+ # the end... ;-)
