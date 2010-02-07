@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.692 2010/02/07 06:05:03 seb Exp $
+# $NetBSD: Makefile,v 1.693 2010/02/07 16:39:14 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -330,6 +330,7 @@ SUBDIR+=	p5-HTML-Template
 SUBDIR+=	p5-HTML-Tiny
 SUBDIR+=	p5-HTML-TokeParser-Simple
 SUBDIR+=	p5-HTML-Tree
+SUBDIR+=	p5-HTML-TreeBuilder-XPath
 SUBDIR+=	p5-HTML-WikiConverter
 SUBDIR+=	p5-HTML-WikiConverter-DokuWiki
 SUBDIR+=	p5-HTMLObject
