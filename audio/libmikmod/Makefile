@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/01/23 20:25:28 kefren Exp $
+# $NetBSD: Makefile,v 1.46 2010/02/07 21:02:15 heinz Exp $
 
 DISTNAME=		libmikmod-3.1.11
 PKGNAME=		libmikmod-3.1.11.1
@@ -13,6 +13,7 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		pkgsrc-users@netbsd.org
 HOMEPAGE=		http://mikmod.raphnet.net/
 COMMENT=		MikMod Sound Library
+LICENSE=		gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
