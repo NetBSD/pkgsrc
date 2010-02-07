@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8995 2010/02/07 16:07:10 wiz Exp $
+$NetBSD: TODO,v 1.8996 2010/02/07 16:08:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1233,7 +1233,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sendfile-20010424
 	o ser-0.9.6
 	o sessreg-1.0.5
-	o shared-mime-info-0.71
 	o sharity-3.7
 	o sharity-light-1.3
 	o shc-3.8
