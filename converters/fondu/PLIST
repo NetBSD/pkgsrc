@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/10 21:21:30 manu Exp $
-bin/fondu
-bin/ufond
-bin/showfond
+@comment $NetBSD: PLIST,v 1.2 2010/02/07 17:12:34 zafer Exp $
 bin/dfont2res
-bin/tobin
+bin/fondu
 bin/frombin
-man/man1/fondu.1
-man/man1/ufond.1
-man/man1/showfond.1
+bin/showfond
+bin/tobin
+bin/ufond
 man/man1/dfont2res.1
-man/man1/tobin.1
+man/man1/fondu.1
 man/man1/frombin.1
+man/man1/showfond.1
+man/man1/tobin.1
+man/man1/ufond.1
