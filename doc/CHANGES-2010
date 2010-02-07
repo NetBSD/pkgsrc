@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.567 2010/02/07 15:14:20 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.568 2010/02/07 15:54:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -693,3 +693,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-XML-XPathEngine version 0.12 [seb 2010-02-07]
 	Updated converters/skf to 1.97.0 [obache 2010-02-07]
 	Updated x11/kdebindings4-python to 4.3.5nb1 [wiz 2010-02-07]
+	Updated geography/viking to 0.9.91 [gdt 2010-02-07]
