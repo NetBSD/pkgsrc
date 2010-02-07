@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.574 2010/02/07 16:07:10 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.575 2010/02/07 16:08:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -700,3 +700,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Date-Manip to 6.07 [wiz 2010-02-07]
 	Updated devel/p5-Module-Install to 0.93 [wiz 2010-02-07]
 	Updated devel/p5-Mouse to 0.49 [wiz 2010-02-07]
+	Updated databases/shared-mime-info to 0.71 [wiz 2010-02-07]
