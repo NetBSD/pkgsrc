@@ -1,4 +1,4 @@
-# $NetBSD: termcap.buildlink3.mk,v 1.7 2009/03/20 19:25:01 joerg Exp $
+# $NetBSD: termcap.buildlink3.mk,v 1.8 2010/02/07 09:46:14 roy Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # a termcap implementation that supports the basic termcap functions:
@@ -19,7 +19,7 @@ TERMCAP_BUILDLINK3_MK:=	${TERMCAP_BUILDLINK3_MK}+
 # _TERMCAP_TYPES is an exhaustive list of all of the termcap
 #	implementations that may be found.
 #
-_TERMCAP_TYPES?=	curses termcap termlib tinfo
+_TERMCAP_TYPES?=	terminfo curses termcap termlib tinfo
 
 CHECK_BUILTIN.termcap:=	yes
 .  include "termcap.builtin.mk"
@@ -53,7 +53,8 @@ BUILDLINK_TRANSFORM+=		l:termcap:${BUILDLINK_LIBNAME.termcap}
 
 .if ${TERMCAP_TYPE} == "none"
 PKG_FAIL_REASON=	"No usable termcap library found on the system."
-.elif (${TERMCAP_TYPE} == "termlib") || \
+.elif (${TERMCAP_TYPE} == "terminfo") || \
+      (${TERMCAP_TYPE} == "termlib") || \
       (${TERMCAP_TYPE} == "termcap") || \
       (${TERMCAP_TYPE} == "tinfo")
 BUILDLINK_TREE+=		termcap -termcap
