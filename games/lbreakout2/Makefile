@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/02/07 21:02:16 heinz Exp $
+# $NetBSD: Makefile,v 1.31 2010/02/07 21:04:13 heinz Exp $
 
 DISTNAME=	lbreakout2-2.5.2
 PKGREVISION=	7
@@ -29,7 +29,7 @@ SUBST_SED.sunpro=	-e 's,^inline ,,'
 .endif
 
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/lbreakout2.hscr \
-			${ROOT_USER} games 664
+			${REAL_ROOT_USER} games 664
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
