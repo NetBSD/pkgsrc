@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/30 19:36:35 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/07 12:55:29 obache Exp $
 #
 
 DISTNAME=       ocamlduce-3.11.1.0
@@ -12,7 +12,7 @@ DISTFILES+=	ocaml-3.11.1.tar.bz2
 SITES.ocaml-3.11.1.tar.bz2= http://caml.inria.fr/pub/distrib/ocaml-3.11/	
 
 MAINTAINER=     jaapb@kerguelen.org
-HOMEPAGE=       http://ocamlduce.ocamlcore.org/
+HOMEPAGE=       http://ocamlduce.forge.ocamlcore.org/
 COMMENT=        Library to integrate XML features into OCaml
 
 PKG_DESTDIR_SUPPORT=	user-destdir
