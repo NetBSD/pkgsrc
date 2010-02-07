@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2010/02/07 17:32:40 heinz Exp $
+# $NetBSD: Makefile,v 1.41 2010/02/07 20:59:14 heinz Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
@@ -22,23 +22,35 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-PKG_DESTDIR_SUPPORT=	destdir
-
-USE_TOOLS+=		gtar
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	compat x11
 
 PLIST_SRC=		${WRKDIR}/PLIST.src
+EG_DIR=			share/examples/Rollemup
 GAMES_DIR=		share/games
 MESSAGE_SUBST+=		GAMES_DIR=${GAMES_DIR}
 
 SETGIDGAME=		yes
-CONF_FILES_PERMS+=	/dev/null ${GAMES_DIR}/Rollemup/Rollemup.ini	\
-			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+
 SPECIAL_PERMS=		bin/Rollemup ${SETGID_GAMES_PERMS}
 
-INSTALLATION_DIRS=	bin
+CONF_FILES_PERMS=	${EG_DIR}/Rollemup.ini				\
+			${GAMES_DIR}/Rollemup/Rollemup.ini		\
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+CONF_FILES_PERMS+=	${EG_DIR}/Highscore.html			\
+			${GAMES_DIR}/Rollemup/Upload/Highscore.html	\
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+OWN_DIRS_PERMS+=	${GAMES_DIR}/Rollemup/Games ${GAMES_USER}	\
+			${GAMES_GROUP} ${GAMEDIRMODE}
+OWN_DIRS_PERMS+=	${GAMES_DIR}/Rollemup/Upload ${GAMES_USER}	\
+			${GAMES_GROUP} ${GAMEDIRMODE}
+
+INSTALLATION_DIRS=	bin ${EG_DIR} ${GAMES_DIR}
+
+do-extract:
+	@mkdir ${WRKSRC} # dummy directory
 
 do-build:
 	${SED} -e 's|$${PREFIX}|${PREFIX}|g' \
@@ -48,17 +60,15 @@ do-build:
 		> ${WRKDIR}/README.Rollemup
 
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/${GAMES_DIR}
-	${GTAR} xCzf ${DESTDIR}${PREFIX}/${GAMES_DIR} ${_DISTDIR}/${DISTFILES}
-	${TOUCH} ${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup.ini
-	${MV} ${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup ${DESTDIR}${PREFIX}/bin
+	${EXTRACTOR} -d ${DESTDIR}${PREFIX}/${GAMES_DIR} ${DISTDIR}/${DISTFILES}
+	${TOUCH} ${DESTDIR}${PREFIX}/${EG_DIR}/Rollemup.ini
+	${MV} ${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup/Upload/Highscore.html \
+		${DESTDIR}${PREFIX}/${EG_DIR}
+	${MV} ${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup \
+		${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/rollemup ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/README.Rollemup \
 		${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	${CHOWN} -R ${ROOT_USER}:${GAMEGRP} \
-		${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup
-	${CHMOD} ${GAMEDIRMODE} ${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup/Games
-	${CHMOD} ${GAMEDIRMODE} ${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup/Upload
 
 .include "../../mk/bsd.pkg.mk"
