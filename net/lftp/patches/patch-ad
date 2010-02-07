@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.6 2010/02/07 14:36:40 tnn Exp $
+
+--- src/lftp_tinfo.cc.orig	2008-11-27 05:56:39.000000000 +0000
++++ src/lftp_tinfo.cc
+@@ -37,7 +37,8 @@ extern "C" {
+ # elif defined(HAVE_TERM_H)
+ #  include <term.h>
+ # endif
+-#elif defined(HAVE_TERMCAP_H)
++#endif
++#if defined(HAVE_TERMCAP_H)
+ # include <termcap.h>
+ #endif
+ }
