@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2008/12/30 01:55:22 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.55 2010/02/07 07:22:08 obache Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://mirrors.dotsrc.org/zsh/ \
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	${ZSH_MAINTAINER}
-HOMEPAGE=	http://zsh.dotsrc.org/
+HOMEPAGE=	http://zsh.sourceforge.net/
 COMMENT=	The Z shell
 
 PKG_DESTDIR_SUPPORT=	user-destdir
