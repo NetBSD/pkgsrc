@@ -1,26 +1,23 @@
-# $NetBSD: Makefile,v 1.24 2010/01/18 09:59:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2010/02/07 19:30:35 snj Exp $
 
-DISTNAME=	qiv-2.0-src
-PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	4
+DISTNAME=	qiv-2.2.3
 CATEGORIES=	graphics x11
-MASTER_SITES=	http://www.klografx.net/qiv/download/
+MASTER_SITES=	http://spiegl.de/qiv/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	snj@NetBSD.org
-HOMEPAGE=	http://www.klografx.net/qiv/
-COMMENT=	Quick image viewer
+HOMEPAGE=	http://spiegl.de/qiv/
+COMMENT=	Quick Image Viewer
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/qiv
 
 .include "../../devel/libgetopt/buildlink3.mk"
-.include "../../graphics/imlib/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
