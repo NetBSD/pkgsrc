@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2010/01/20 15:13:16 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/02/07 16:04:17 wiz Exp $
 #
 
-DISTNAME=	Date-Manip-6.05
+DISTNAME=	Date-Manip-6.07
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5dma
 CATEGORIES=	textproc perl5
