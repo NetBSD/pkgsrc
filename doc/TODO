@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8985 2010/02/07 12:56:23 obache Exp $
+$NetBSD: TODO,v 1.8986 2010/02/07 13:02:26 obache Exp $
 
 Suggested new packages
 ======================
@@ -933,6 +933,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o midori-0.2.2
 	o milkytracker-0.90.85
 	o mined-2000.15.4
+	o ming-0.4.3
 	o minicom-2.4
 	o minivmac-3.0.4
 	o miredo-1.1.7
@@ -1243,6 +1244,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sj3-lib-2.0.1.21 [http://code.google.com/p/sj3/]
 	o sjeng-11.2
 	o skipstone-1.0.1
+	o skf-1.97.0
 	o skype-2.1.0.47
 	o smalleiffel-0.90
 	o smproxy-1.0.3
