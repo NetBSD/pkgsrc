@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/02 16:09:51 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/07 11:40:22 sborrill Exp $
 #
 
 DISTNAME=		istgt-20100125
+PKGREVISION=		1
 CATEGORIES=		net
-MASTER_SITES=		http://shell.peach.ne.jp/~aoyama/wordpress/download/
+MASTER_SITES=		http://www.peach.ne.jp/archives/istgt/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		sborrill@NetBSD.org
 HOMEPAGE=		http://shell.peach.ne.jp/aoyama/
 COMMENT=		Configurable iSCSI target
 LICENSE=		modified-bsd
