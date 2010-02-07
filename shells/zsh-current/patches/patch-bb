@@ -1,0 +1,15 @@
+terminfo does not require curses.
+
+--- Src/Modules/terminfo.c.orig	2010-02-07 08:31:07.000000000 +0000
++++ Src/Modules/terminfo.c	2010-02-07 08:31:30.000000000 +0000
+@@ -49,10 +49,6 @@
+ #  undef offsetof
+ # endif
+ 
+-#ifdef ZSH_HAVE_CURSES_H
+-# include "../zshcurses.h"
+-#endif
+-
+ # ifdef ZSH_HAVE_TERM_H
+ #  include "../zshterm.h"
+ # endif
