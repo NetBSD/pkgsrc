@@ -1,0 +1,2 @@
+The Perl 5 module HTML::Selector::XPath is a utility function to
+compile CSS2 selector to the equivalent XPath expression.
