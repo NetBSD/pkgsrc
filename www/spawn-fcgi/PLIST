@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/08 14:37:54 joerg Exp $
+bin/spawn-fcgi
+man/man1/spawn-fcgi.1
+share/examples/rc.d/spawn-fcgi
