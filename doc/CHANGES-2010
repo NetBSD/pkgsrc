@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.589 2010/02/08 05:36:32 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.590 2010/02/08 10:49:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -715,3 +715,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-collection-basic version 2009 [minskim 2010-02-08]
 	Removed fonts/tex-bin-metafont successor fonts/tex-metafont [minskim 2010-02-08]
 	Updated fonts/tex-glyphlist to 2.0nb1 [minskim 2010-02-08]
+	Updated x11/qt4-libs to 4.6.1nb4 [wiz 2010-02-08]
