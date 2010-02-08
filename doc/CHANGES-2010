@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.599 2010/02/08 21:07:17 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.600 2010/02/08 22:06:11 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -726,3 +726,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/tex-amsfonts-doc to 3.0 [minskim 2010-02-08]
 	Added www/p5-HTML-TreeBuilder-LibXML version 0.11 [seb 2010-02-08]
 	Added audio/p5-Audio-Scan version 0.58 [wiz 2010-02-08]
+	Added www/p5-Web-Scraper version 0.32 [seb 2010-02-08]
