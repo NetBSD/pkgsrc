@@ -1,0 +1,11 @@
+--- src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h.orig	2010-01-15 10:01:33.000000000 -0700
++++ src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h	2010-02-07 15:59:53.000000000 -0700
+@@ -718,7 +718,7 @@
+ #endif
+ 
+ #if !defined(WTF_USE_JSVALUE64) && !defined(WTF_USE_JSVALUE32) && !defined(WTF_USE_JSVALUE32_64)
+-#if PLATFORM(X86_64) && (PLATFORM(DARWIN) || PLATFORM(LINUX) || PLATFORM(SOLARIS) || PLATFORM(HPUX))
++#if PLATFORM(X86_64) && (PLATFORM(DARWIN) || PLATFORM(LINUX) || PLATFORM(SOLARIS) || PLATFORM(HPUX) || PLATFORM(NETBSD))
+ #define WTF_USE_JSVALUE64 1
+ #elif (PLATFORM(IA64) && !PLATFORM(IA64_32)) || PLATFORM(SPARC64)
+ #define WTF_USE_JSVALUE64 1
