@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.7 2010/01/26 02:01:47 jakllsch Exp $
+$NetBSD: distinfo,v 1.8 2010/02/08 01:47:14 jakllsch Exp $
 
-SHA1 (avrdude-5.8.tar.gz) = 77198df91a7176bbdab19ef4a4caf0bdc5862c94
-RMD160 (avrdude-5.8.tar.gz) = c8eb0675f84477d6b58f0e8dc0438e16ac0714db
-Size (avrdude-5.8.tar.gz) = 488771 bytes
-SHA1 (patch-aa) = b7923399ec747cefca29e7fabf0997a9b1075d9e
+SHA1 (avrdude-5.10.tar.gz) = c09167ea64c3f60b594d0e4da71af7edea0d6f83
+RMD160 (avrdude-5.10.tar.gz) = 38ce9407a33bf4a4c656651071b44a92fdbdd639
+Size (avrdude-5.10.tar.gz) = 525750 bytes
+SHA1 (patch-aa) = 619f682af2e8eff36684993b331ba37cd1b446b6
 SHA1 (patch-ab) = d49e5988a83385471f863dd0ccb50db96f1c1783
 SHA1 (patch-ac) = f5281a525f0e61517c507db91f9abe71d2f02ae4
 SHA1 (patch-ad) = a91b4576d49953148054a7a1522690d1e4a2d9da
-SHA1 (patch-ae) = 9ff949785562d7d96bc80ea3d9cf55fd4bfd7be6
-SHA1 (patch-af) = 4c652ede19d0dbd3bfb9654cc9dba3728c97def8
-SHA1 (patch-ag) = 4b7640d91dd7784ed14c48e40bc4f07f79ad443c
+SHA1 (patch-ae) = 2476a0d1ff93a4372ff64dc07e39b1c93f8a557f
+SHA1 (patch-af) = 17447618ef8fc140e52dc52ff38cdf711dff2b48
+SHA1 (patch-ag) = 796763a888bb153d0794de8a152267e78a209056

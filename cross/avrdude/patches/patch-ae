@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2010/01/26 02:01:47 jakllsch Exp $
+$NetBSD: patch-ae,v 1.6 2010/02/08 01:47:14 jakllsch Exp $
 
 - add missing AM_PROG_CC_C_O that automake wants for the yacc
   sources.
@@ -8,7 +8,7 @@ $NetBSD: patch-ae,v 1.5 2010/01/26 02:01:47 jakllsch Exp $
   platforms available and they're not the same for different
   MACHINE_ARCH's in NetBSD).
 
---- configure.ac.orig	2009-07-10 22:52:03.000000000 +0000
+--- configure.ac.orig	2010-01-19 10:39:11.000000000 +0000
 +++ configure.ac
 @@ -74,6 +74,7 @@ AC_CHECK_HEADERS([ddk/hidsdi.h],,,[#incl
  
@@ -37,21 +37,21 @@ $NetBSD: patch-ae,v 1.5 2010/01/26 02:01:47 jakllsch Exp $
 +		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"unknown"}
 +		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/ttyS0"}
  		;;
- 	i[[3456]]86-*-freebsd*|amd64-*-freebsd*)
+ 	i[[3456]]86-*-*freebsd*|amd64-*-*freebsd*)
 -		DEFAULT_PAR_PORT="/dev/ppi0"
--		DEFAULT_SER_PORT="/dev/cuaa0"
+-		DEFAULT_SER_PORT="/dev/cuad0"
 +		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"/dev/ppi0"}
-+		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuaa0"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuad0"}
  		;;
- 	*-*-freebsd*)
+ 	*-*-*freebsd*)
 -		DEFAULT_PAR_PORT="unknown"
--		DEFAULT_SER_PORT="/dev/cuaa0"
+-		DEFAULT_SER_PORT="/dev/cuad0"
 +		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"unknown"}
-+		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuaa0"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuad0"}
 +		;;
 +	*-*-dragonfly*)
 +		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"/dev/ppi0"}
-+		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuaa0"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuad0"}
 +		;;
 +	*-*-netbsd*)
 +		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"unknown"}
