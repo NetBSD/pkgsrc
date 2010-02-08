@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.155 2009/08/26 19:58:29 sno Exp $
+# $NetBSD: Makefile,v 1.156 2010/02/08 09:47:06 tnn Exp $
 #
 
 DISTNAME=	gdm-2.20.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -56,7 +56,7 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .for f in Init/Default PostLogin/Default.sample PostSession/Default \
 	PreSession/Default XKeepsCrashing Xsession
 CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
-			${ROOT_USER} ${ROOT_GROUP} 0755
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 .endfor
 RCD_SCRIPTS=		gdm
 
@@ -84,10 +84,10 @@ SUBST_SED.desktop+=	-e 's|^\#HaltCommand=.*$$|HaltCommand=/sbin/shutdown -p now|
 SUBST_SED.desktop+=	-e 's|^PreFetchProgram=.*$$|PreFetchProgram=${PREFIX}/libexec/gdmprefetch @${PKG_SYSCONFDIR}/gdmprefetchlist|g'
 
 SUBST_CLASSES+=		gdmsetup
-SUBST_MESSAGE.gdmsetup=	Patching gdmsetup theme installer to use ${ROOT_USER}:${ROOT_GROUP}
+SUBST_MESSAGE.gdmsetup=	Patching gdmsetup theme installer to use ${REAL_ROOT_USER}:${REAL_ROOT_GROUP}
 SUBST_STAGE.gdmsetup=	post-patch
 SUBST_FILES.gdmsetup=	gui/gdmsetup.c
-SUBST_SED.gdmsetup=	-e 's/root:root/${ROOT_USER}:${ROOT_GROUP}/g'
+SUBST_SED.gdmsetup=	-e 's/root:root/${REAL_ROOT_USER}:${REAL_ROOT_GROUP}/g'
 
 .if ${OPSYS} == "SunOS"
 CFLAGS+=	-DSunOS
