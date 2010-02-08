@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/02/17 13:02:20 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2010/02/08 05:18:37 dholland Exp $
 
 DISTNAME=		binutils-2.12.1
 PKGNAME=		cross-h8300-hms-binutils-2.12.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		# empty
 COMMENT=		h8300-hms cross utility
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 H8300_PREFIX=		${PREFIX}/libexec/cross-h8300-hms
 
@@ -24,7 +26,7 @@ SRCDIR=			${WRKDIR}/${DISTNAME}
 BUILD_TARGET=		CFLAGS="-O2 -fomit-frame-pointer" all
 INFO_FILES=		# PLIST
 
-INSTALLATION_DIRS=	${H8300_PREFIX}
+INSTALLATION_DIRS=	bin ${H8300_PREFIX}
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -41,9 +43,10 @@ post-install:
 		 h8300-hms-addr2line h8300-hms-readelf h8300-hms-nm \
 		 h8300-hms-strip     h8300-hms-c++filt h8300-hms-as \
 		 h8300-hms-gasp      h8300-hms-ld ; do \
-		${LN} -s ${H8300_PREFIX}/bin/$$f ${PREFIX}/bin/$$f; \
+		${LN} -s ${H8300_PREFIX}/bin/"$$f" \
+		  ${DESTDIR}${PREFIX}/bin/"$$f" || exit 1; \
 	done
-	${MV} ${H8300_PREFIX}/lib/libiberty.a \
-	      ${H8300_PREFIX}/lib/libiberty_binutils.a
+	${MV} ${DESTDIR}${H8300_PREFIX}/lib/libiberty.a \
+	      ${DESTDIR}${H8300_PREFIX}/lib/libiberty_binutils.a
 
 .include "../../mk/bsd.pkg.mk"
