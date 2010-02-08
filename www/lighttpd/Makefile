@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.23 2009/03/23 00:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2010/02/08 14:47:54 joerg Exp $
 
-DISTNAME=	lighttpd-1.4.22
+DISTNAME=	lighttpd-1.4.26
 CATEGORIES=	www
-MASTER_SITES=	http://www.lighttpd.net/download/
+MASTER_SITES=	http://download.lighttpd.net/lighttpd/releases-1.4.x/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.lighttpd.net/
 COMMENT=	Fast, light-footprint HTTP server
+
+#PATCHFILES=	fix-2147-in-1.4.x.patch
+#PATCH_SITES=	http://redmine.lighttpd.net/attachments/download/1091/
+#PATCH_DIST_STRIP.fix-2147-in-1.4.x.patch= -p1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
