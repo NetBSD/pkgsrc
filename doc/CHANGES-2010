@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.597 2010/02/08 20:46:59 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.598 2010/02/08 21:02:24 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -724,3 +724,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100207 [taca 2010-02-08]
 	Added print/tex-collection-documentation-base-doc version 2009 [minskim 2010-02-08]
 	Updated fonts/tex-amsfonts-doc to 3.0 [minskim 2010-02-08]
+	Added www/p5-HTML-TreeBuilder-LibXML version 0.11 [seb 2010-02-08]
