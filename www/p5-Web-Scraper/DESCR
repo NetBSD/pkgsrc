@@ -1,0 +1,4 @@
+The Perl 5 module Web::Scraper is a web scraper toolkit, inspired
+by Ruby's equivalent Scrapi. It provides a DSL-ish interface for
+traversing HTML documents and returning a neatly arranged Perl data
+structure.
