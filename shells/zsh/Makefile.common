@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2010/02/07 09:53:20 roy Exp $
+# $NetBSD: Makefile.common,v 1.57 2010/02/08 22:12:40 roy Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -77,7 +77,7 @@ _ZSH_OPSYS_VARS.notcsetpgrp=	--without-tcsetpgrp
 ### terminfo
 CHECK_BUILTIN.terminfo=	yes
 .include "../../mk/terminfo.builtin.mk"
-.if !empty(IS_BUILTIN.terminfo:M[Yy][Ee][Ss])
+.if !empty(USE_BUILTIN.terminfo:M[Yy][Ee][Ss])
 PLIST.terminfo=	yes
 .endif
 
