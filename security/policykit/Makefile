@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2010/01/24 17:11:19 heinz Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/08 09:41:59 tnn Exp $
 #
 
 POLICYKIT_VER=		0.9
 DISTNAME=		PolicyKit-${POLICYKIT_VER}
 PKGNAME=		policykit-${POLICYKIT_VER}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		security
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 
@@ -50,10 +50,10 @@ CONFIGURE_ARGS+=	--with-polkit-user=${POLICYKIT_USER}
 CONFIGURE_ARGS+=	--with-polkit-group=${POLICYKIT_GROUP}
 
 OWN_DIRS_PERMS+=	${VARBASE}/lib/PolicyKit \
-				${ROOT_USER} ${POLICYKIT_GROUP} 0770
+				${REAL_ROOT_USER} ${POLICYKIT_GROUP} 0770
 OWN_DIRS_PERMS+=	${VARBASE}/lib/PolicyKit-public \
-				${POLICYKIT_USER} ${ROOT_GROUP} 0755
-OWN_DIRS_PERMS+=	${VARBASE}/lib/misc ${ROOT_USER} ${ROOT_GROUP} 0755
+				${POLICYKIT_USER} ${REAL_ROOT_GROUP} 0755
+OWN_DIRS_PERMS+=	${VARBASE}/lib/misc ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/lib/misc/PolicyKit.reload \
 				${POLICYKIT_USER} ${POLICYKIT_GROUP} 0664
 
