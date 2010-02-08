@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.588 2010/02/08 05:15:11 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.589 2010/02/08 05:36:32 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -714,3 +714,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/teTeX3-bin to 3.0nb42 [minskim 2010-02-08]
 	Added print/tex-collection-basic version 2009 [minskim 2010-02-08]
 	Removed fonts/tex-bin-metafont successor fonts/tex-metafont [minskim 2010-02-08]
+	Updated fonts/tex-glyphlist to 2.0nb1 [minskim 2010-02-08]
