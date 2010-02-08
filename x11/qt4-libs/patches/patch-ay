@@ -1,3 +1,5 @@
+$NetBSD: patch-ay,v 1.4 2010/02/08 10:49:07 wiz Exp $
+
 --- src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h.orig	2010-01-15 10:01:33.000000000 -0700
 +++ src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h	2010-02-07 15:59:53.000000000 -0700
 @@ -718,7 +718,7 @@
