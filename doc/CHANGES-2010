@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.591 2010/02/08 11:54:39 obache Exp $
+$NetBSD: CHANGES-2010,v 1.592 2010/02/08 14:26:02 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -717,3 +717,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/tex-glyphlist to 2.0nb1 [minskim 2010-02-08]
 	Updated x11/qt4-libs to 4.6.1nb4 [wiz 2010-02-08]
 	Updated math/py-mpmath to 0.14 [obache 2010-02-08]
+	Updated www/nginx to 0.8.33 [joerg 2010-02-08]
