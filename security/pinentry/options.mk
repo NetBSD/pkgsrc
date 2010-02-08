@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2010/02/07 15:36:58 drochner Exp $
+# $NetBSD: options.mk,v 1.7 2010/02/08 11:43:23 drochner Exp $
 #
 
 # XXX This usage of bsd.options.mk is incorrect.  The package should
@@ -20,7 +20,7 @@ PINENTRY_DEFAULT=	gtk
 CONFIGURE_ARGS+=	--disable-pinentry-gtk2
 .if !empty(PKG_OPTIONS:Mgtk2)
 DEPENDS+=		pinentry-gtk2-[0-9]*:../../security/pinentry-gtk2
-PINENTRY_DEFAULT=	gtk2
+PINENTRY_DEFAULT=	gtk-2
 .endif
 
 CONFIGURE_ARGS+=	--disable-pinentry-qt
