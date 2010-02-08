@@ -1,0 +1,7 @@
+spawn-fcgi is a small utility to start external FastCGI applications.
+It takes care of various common tasks to simplify deployment:
+- setuid/setgid
+- current working directory
+- chroot
+- socket creation and permissions in the case of Unix Domain Sockets
+- forking a number of worker processes
