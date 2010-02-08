@@ -1,11 +1,11 @@
-# $NetBSD: terminfo.builtin.mk,v 1.1 2010/02/07 09:46:14 roy Exp $
+# $NetBSD: terminfo.builtin.mk,v 1.2 2010/02/08 22:11:43 roy Exp $
 
 BUILTIN_PKG:=	terminfo
 
 BUILTIN_FIND_LIBS:=		terminfo curses tinfo
 BUILTIN_FIND_FILES_VAR:=	H_TERM
 BUILTIN_FIND_FILES.H_TERM:=	/usr/include/term.h
-BUILTIN_FIND_GREP.H_TERM:=	tigetent
+BUILTIN_FIND_GREP.H_TERM:=	tigetstr
 
 .include "buildlink3/bsd.builtin.mk"
 
@@ -15,10 +15,12 @@ BUILTIN_FIND_GREP.H_TERM:=	tigetent
 ###
 .if !defined(IS_BUILTIN.terminfo)
 IS_BUILTIN.terminfo=	no
-.  if !empty(BUILTIN_LIB_FOUND.terminfo:M[yY[eE][sS]) || \
-      !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS]) || \
-      !empty(BUILTIN_LIB_FOUND.tinfo:M[yY][eE][sS])
+.  if empty(H_TERM:M__nonexistent__) && empty(H_TERM:M${LOCALBASE}/*)
+.    if !empty(BUILTIN_LIB_FOUND.terminfo:M[yY[eE][sS]) || \
+        !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS]) || \
+        !empty(BUILTIN_LIB_FOUND.tinfo:M[yY][eE][sS])
 IS_BUILTIN.terminfo=	yes
+.    endif
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.terminfo
