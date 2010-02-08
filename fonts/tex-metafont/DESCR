@@ -1,5 +1,4 @@
-METAFONT is a system that allows you to describe a typeface once, and
-create as many fonts as you like of this typeface by just changing a
-set of well chosen parameters separately.
-
-This package contains files required by METAFONT commands.
+METAFONT is a powerful tool for font creation, which was used by
+Donald Knuth to create the Computer Modern fonts, used as standard by
+TeX and LaTeX, and now the standard fonts used for scientific
+publication.
