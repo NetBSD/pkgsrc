@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2010/01/26 02:01:47 jakllsch Exp $
+$NetBSD: patch-aa,v 1.6 2010/02/08 01:47:14 jakllsch Exp $
 
 - Fix the SUBDIRS stuff so it actually works right with multiple automake
   versions.
@@ -7,9 +7,9 @@ $NetBSD: patch-aa,v 1.5 2010/01/26 02:01:47 jakllsch Exp $
   egconfdir instead of hacking the configure script and Makefile.in directly.
 
 
---- Makefile.am.orig	2009-03-06 20:09:11.000000000 +0000
+--- Makefile.am.orig	2010-01-19 10:39:11.000000000 +0000
 +++ Makefile.am
-@@ -151,7 +151,8 @@ avrdude_SOURCES = \
+@@ -153,7 +153,8 @@ avrdude_SOURCES = \
  
  man_MANS = avrdude.1
  
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.5 2010/01/26 02:01:47 jakllsch Exp $
  
  install-exec-local: backup-avrdude-conf
  
-@@ -160,8 +161,6 @@ distclean-local:
+@@ -162,8 +163,6 @@ distclean-local:
  
  # This will get run before the config file is installed.
  backup-avrdude-conf:
