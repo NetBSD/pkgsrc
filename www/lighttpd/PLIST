@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 22:00:25 joerg Exp $
-bin/spawn-fcgi
+@comment $NetBSD: PLIST,v 1.9 2010/02/08 14:47:54 joerg Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_alias.la
@@ -32,13 +31,11 @@ lib/lighttpd/mod_trigger_b4_dl.la
 lib/lighttpd/mod_userdir.la
 lib/lighttpd/mod_usertrack.la
 lib/lighttpd/mod_webdav.la
-man/man1/lighttpd.1
-man/man1/spawn-fcgi.1
+man/man8/lighttpd.8
 sbin/lighttpd
 sbin/lighttpd-angel
 share/doc/lighttpd/AUTHORS
 share/doc/lighttpd/COPYING
-share/doc/lighttpd/ChangeLog
 share/doc/lighttpd/NEWS
 share/doc/lighttpd/README
 share/doc/lighttpd/access.txt
