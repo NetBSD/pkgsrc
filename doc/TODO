@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8999 2010/02/07 17:18:38 zafer Exp $
+$NetBSD: TODO,v 1.9000 2010/02/08 10:21:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1031,6 +1031,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
+	o p5-Audio-Wav-0.07 [pkg/42768]
 	o p5-MailTools-2.06
 	o p5-Spreadsheet-WriteExcel-2.37
 	o p5-ispman-1.2
@@ -1045,21 +1046,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pdmenu-1.2.87
-	o pear-Auth_SASL-1.0.3
-	o pear-Console_Table-1.1.3
-	o pear-DB-1.7.13
 	o pear-Date-1.5.0a1
-	o pear-HTTP_Request-1.4.4
-	o pear-Image_Canvas-0.3.0
-	o pear-Image_Graph-0.7.2
-	o pear-Log-1.12.0 [pkg/42673]
-	o pear-Mail_Mime-1.6.0 [pkg/42684]
-	o pear-Net_SMTP-1.4.0 [pkg/42659]
-	o pear-Net_Socket-1.0.9
-	o pear-Net_URL-1.0.15
-	o pear-Numbers_Roman-1.0.1
-	o pear-Numbers_Words-0.15.0
-	o pear-SOAP-0.10.1
 	o pen-0.17.3
 	o pessulus-2.28.0 [GNOME 2.28]
 	o pgpool-3.1.1
@@ -1416,7 +1403,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-sunffb-1.2.1 [unpackaged]
 	o xf86-video-tga-1.2.1
 	o xf86-video-tseng-1.2.3
-	o xf86-video-vesa-2.3.0
 	o xf86-video-voodoo-1.2.2
 	o xf86-video-wsfb-0.3.0
 	o xf86-video-xgi-1.5.1 [unpackaged]
