@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2010/01/18 09:59:44 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2010/02/08 09:47:44 tnn Exp $
 
 DISTNAME=		wdm-1.28
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 windowmaker
 MASTER_SITES=		http://voins.program.ru/wdm/
 
@@ -29,11 +29,11 @@ PKG_SYSCONFSUBDIR=	wdm
 PKG_DESTDIR_SUPPORT= user-destdir
 
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/authdir			\
-			${ROOT_USER} ${ROOT_GROUP} 700
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/authdir/authfiles		\
-			${ROOT_USER} ${ROOT_GROUP} 700
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/authdir/authdir		\
-			${ROOT_USER} ${ROOT_GROUP} 700
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
 
 CONF_FILES=
 .for f in	GiveConsole TakeConsole Xaccess Xclients Xclients.in	\
