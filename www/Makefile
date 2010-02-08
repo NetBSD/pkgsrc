@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.695 2010/02/08 20:57:29 seb Exp $
+# $NetBSD: Makefile,v 1.696 2010/02/08 22:05:48 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -426,6 +426,7 @@ SUBDIR+=	p5-WWW-Mechanize
 SUBDIR+=	p5-WWW-Pastebin-PastebinCom-Create
 SUBDIR+=	p5-WWW-Pastebin-RafbNet-Create
 SUBDIR+=	p5-WWW-Shorten
+SUBDIR+=	p5-Web-Scraper
 SUBDIR+=	p5-WordPress-XMLRPC
 SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libapreq2
