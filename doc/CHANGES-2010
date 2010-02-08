@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.595 2010/02/08 15:45:47 taca Exp $
+$NetBSD: CHANGES-2010,v 1.596 2010/02/08 20:19:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -722,3 +722,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/lighttpd to 1.4.26 [joerg 2010-02-08]
 	Updated www/typolight27-translations to 20100131nb1 [taca 2010-02-08]
 	Updated www/typolight28-translations to 20100207 [taca 2010-02-08]
+	Added print/tex-collection-documentation-base-doc version 2009 [minskim 2010-02-08]
