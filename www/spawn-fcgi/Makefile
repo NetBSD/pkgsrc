@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/08 14:37:54 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/08 18:07:54 joerg Exp $
 
 DISTNAME=	spawn-fcgi-1.6.3
 CATEGORIES=	www
@@ -14,6 +14,6 @@ CONFLICTS=       lighttpd<1.4.23
 
 GNU_CONFIGURE=		yes
 
-RCD_SCRIPTS=		spawn-fcgi
+RCD_SCRIPTS=		spawnfcgi
 
 .include "../../mk/bsd.pkg.mk"
