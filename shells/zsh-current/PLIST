@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 21:21:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/02/08 14:34:31 roy Exp $
 bin/${PKGNAME}
 bin/zsh
 info/zsh.info
@@ -8,7 +8,6 @@ ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/compctl.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/complete.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/complist.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/computil.so
-${PLIST.dynamic}${PLIST.terminfo}lib/zsh/${PKGVERSION}/zsh/curses.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/datetime.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/deltochar.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/example.so
