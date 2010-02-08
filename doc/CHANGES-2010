@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.583 2010/02/08 04:19:13 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.584 2010/02/08 04:52:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -709,3 +709,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated cross/avrdude to 5.10 [jakllsch 2010-02-08]
 	Updated print/tex-enctex to 2009 [minskim 2010-02-08]
 	Updated print/tex-hyph-utf8 to 2009 [minskim 2010-02-08]
+	Added fonts/tex-mfware version 2009 [minskim 2010-02-08]
