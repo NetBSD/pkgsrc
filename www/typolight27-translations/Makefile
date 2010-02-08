@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2010/02/06 15:18:02 taca Exp $
+# $NetBSD: Makefile,v 1.41 2010/02/08 15:41:41 taca Exp $
 #
 
 DISTNAME=	typolight${TL_VER}-translations-${VERS}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	# defined for each distfiles
 DISTFILES=	${TL_DISTFILES}
@@ -31,6 +32,7 @@ pre-install:
 .for d in ${SEPARATED_MODULES}
 	${RM} -fr ${WRKSRC}/system/modules/${d}
 .endfor
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
 
 do-install:
 	cd ${WRKSRC}; pax -rw . ${DESTDIR}${PREFIX}/${TL_WEBDIR}
