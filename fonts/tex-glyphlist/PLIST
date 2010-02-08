@@ -1,4 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/24 06:15:01 minskim Exp $
-share/texmf-dist/fonts/map/glyphlist/glyphlist.txt
-share/texmf-dist/fonts/map/glyphlist/pdfglyphlist.txt
+@comment $NetBSD: PLIST,v 1.2 2010/02/08 05:36:05 minskim Exp $
 share/texmf-dist/fonts/map/glyphlist/texglyphlist.txt
