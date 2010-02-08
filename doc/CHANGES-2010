@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.581 2010/02/08 01:47:37 jakllsch Exp $
+$NetBSD: CHANGES-2010,v 1.582 2010/02/08 03:58:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -707,3 +707,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/fondu to 060102 [zafer 2010-02-07]
 	Updated graphics/qiv to 2.2.3 [snj 2010-02-07]
 	Updated cross/avrdude to 5.10 [jakllsch 2010-02-08]
+	Updated print/tex-enctex to 2009 [minskim 2010-02-08]
