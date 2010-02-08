@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 12:17:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/08 14:07:47 tnn Exp $
 #
 
 DISTNAME=	xcb-util-0.3.6
@@ -13,7 +13,7 @@ COMMENT=	XCB Utilities
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake m4
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	atom/xcb-atom.pc.in
