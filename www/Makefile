@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.693 2010/02/07 16:39:14 seb Exp $
+# $NetBSD: Makefile,v 1.694 2010/02/08 14:38:53 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -503,6 +503,7 @@ SUBDIR+=	skipstone
 SUBDIR+=	snarf
 SUBDIR+=	snownews
 SUBDIR+=	sope
+SUBDIR+=	spawn-fcgi
 #SUBDIR+=	squid		# only contains Makefile fragments
 SUBDIR+=	squid27
 SUBDIR+=	squid30
