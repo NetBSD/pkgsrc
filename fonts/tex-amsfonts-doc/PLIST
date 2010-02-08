@@ -1,13 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/28 18:33:56 minskim Exp $
-share/texmf-dist/doc/fonts/amsfonts/READ.ME
-share/texmf-dist/doc/fonts/amsfonts/README-amsps.txt
-share/texmf-dist/doc/fonts/amsfonts/amsfndoc.cyr
-share/texmf-dist/doc/fonts/amsfonts/amsfndoc.def
-share/texmf-dist/doc/fonts/amsfonts/amsfndoc.fnt
-share/texmf-dist/doc/fonts/amsfonts/amsfndoc.ins
+@comment $NetBSD: PLIST,v 1.2 2010/02/08 20:46:34 minskim Exp $
+share/texmf-dist/doc/fonts/amsfonts/00README
+share/texmf-dist/doc/fonts/amsfonts/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/amsfonts/OFL.txt
 share/texmf-dist/doc/fonts/amsfonts/amsfndoc.pdf
-share/texmf-dist/doc/fonts/amsfonts/amsfndoc.tex
-share/texmf-dist/doc/fonts/amsfonts/amsfonts.bug
-share/texmf-dist/doc/fonts/amsfonts/amsfonts.faq
-share/texmf-dist/doc/fonts/amsfonts/eufrak.dvi
-share/texmf-dist/doc/fonts/amsfonts/euscript.dvi
+share/texmf-dist/doc/fonts/amsfonts/amsfonts.pdf
+share/texmf-dist/doc/fonts/amsfonts/amssymb.pdf
+share/texmf-dist/doc/fonts/amsfonts/cmmib57.pdf
+share/texmf-dist/doc/fonts/amsfonts/eufrak.pdf
+share/texmf-dist/doc/fonts/amsfonts/euscript.pdf
