@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.4 2010/01/26 02:01:47 jakllsch Exp $
+$NetBSD: patch-af,v 1.5 2010/02/08 01:47:14 jakllsch Exp $
 
---- ppi.c.orig	2009-03-06 20:09:11.000000000 +0000
+--- ppi.c.orig	2010-01-19 10:39:11.000000000 +0000
 +++ ppi.c
 @@ -33,7 +33,7 @@
  #include <unistd.h>
  #include <errno.h>
  
--#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
  # include "freebsd_ppi.h"
  #elif defined(__linux__)
  # include "linux_ppdev.h"

@@ -1,13 +1,22 @@
-$NetBSD: patch-ag,v 1.3 2010/01/26 02:01:47 jakllsch Exp $
-Work around AVRISP mkII sync stalls on NetBSD.
---- stk500v2.c.orig	2009-07-10 22:39:37.000000000 +0000
-+++ stk500v2.c
-@@ -635,6 +635,8 @@ retry:
-   // send the sync command and see if we can get there
-   buf[0] = CMD_SIGN_ON;
-   stk500v2_send(pgm, buf, 1);
-+  stk500v2_drain(pgm, 0);
-+  stk500v2_send(pgm, buf, 1);
+$NetBSD: patch-ag,v 1.4 2010/02/08 01:47:14 jakllsch Exp $
+Work around AVRISP mkII initial sync stalls on NetBSD.
+--- usb_libusb.c.orig	2010-01-19 10:39:11.000000000 +0000
++++ usb_libusb.c
+@@ -237,6 +237,17 @@ static void usbdev_close(union filedescr
+ {
+   usb_dev_handle *udev = (usb_dev_handle *)fd->usb.handle;
  
-   // try to get the response back and see where we got
-   status = stk500v2_recv(pgm, resp, sizeof(resp));
++#if defined(__NetBSD__)
++#define USB_FEAT_ENDPOINT_HALT 0
++  /*
++   * Clear Feature Endpoint Halt to reset device's data toggle to DATA0.
++   * This way, when we reopen expecting DATA0, things don't time out.
++   */
++  usb_control_msg(udev, USB_TYPE_STANDARD | USB_RECIP_ENDPOINT,
++		  USB_REQ_CLEAR_FEATURE, USB_FEAT_ENDPOINT_HALT,
++		  fd->usb.ep & 0xf, NULL, 0, 100);
++#endif
++
+   (void)usb_release_interface(udev, usb_interface);
+ 
+ #if !( defined(__FreeBSD__) ) // || ( defined(__APPLE__) && defined(__MACH__) ) )
