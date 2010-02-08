@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/08/29 13:53:34 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/02/08 09:54:23 tnn Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -10,7 +10,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.privoxy.org/
 COMMENT=	Web proxy with advanced filtering capabilities
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+# Package is not destdir ready:
+# 1) install expects the privoxy user to exist and fails if it doesn't
+# 2) unsafe use of ROOT_USER in post-install
+#PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
