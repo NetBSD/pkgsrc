@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 05:05:13 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/02/08 04:18:55 minskim Exp $
 
-SHA1 (tex-hyph-utf8-2008.11171/hyph-utf8.tar.lzma) = 2210d6e0e6e39ccbe83d58ae31bec59d3545a19a
-RMD160 (tex-hyph-utf8-2008.11171/hyph-utf8.tar.lzma) = ba38b256d6113f8a8679d0d072730347a9a26721
-Size (tex-hyph-utf8-2008.11171/hyph-utf8.tar.lzma) = 585527 bytes
+SHA1 (tex-hyph-utf8-2009/hyph-utf8.tar.xz) = cfeb961293a5c8ebc3ec6adc50ed31fd80e91931
+RMD160 (tex-hyph-utf8-2009/hyph-utf8.tar.xz) = 86f63f53d421cf2ab2b5411c80339bc2f12c9f9e
+Size (tex-hyph-utf8-2009/hyph-utf8.tar.xz) = 617040 bytes
