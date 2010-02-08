@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/02/07 15:36:58 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2010/02/08 11:44:39 drochner Exp $
 #
 
 DISTNAME=		pinentry-0.7.6
@@ -20,8 +20,8 @@ INFO_FILES=		yes
 
 .if defined(PINENTRY_DEFAULT)
 post-install:
-	${LN} -sf ${DESTDIR}${PREFIX}/bin/pinentry-${PINENTRY_DEFAULT} \
-		${DESTDIR}${PREFIX}/bin/pinentry
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${LN} -sf pinentry-${PINENTRY_DEFAULT} pinentry
 .endif
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
