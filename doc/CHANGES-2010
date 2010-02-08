@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.580 2010/02/07 19:31:12 snj Exp $
+$NetBSD: CHANGES-2010,v 1.581 2010/02/08 01:47:37 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -706,3 +706,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-HTML-TreeBuilder-XPath version 0.11 [seb 2010-02-07]
 	Updated converters/fondu to 060102 [zafer 2010-02-07]
 	Updated graphics/qiv to 2.2.3 [snj 2010-02-07]
+	Updated cross/avrdude to 5.10 [jakllsch 2010-02-08]
