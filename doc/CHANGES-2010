@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.593 2010/02/08 14:38:15 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.594 2010/02/08 14:56:36 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -719,3 +719,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/py-mpmath to 0.14 [obache 2010-02-08]
 	Updated www/nginx to 0.8.33 [joerg 2010-02-08]
 	Added www/spawn-fcgi version 1.6.3 [joerg 2010-02-08]
+	Updated www/lighttpd to 1.4.26 [joerg 2010-02-08]
