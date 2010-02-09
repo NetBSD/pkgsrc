@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.385 2010/02/06 16:15:43 taca Exp $
+# $NetBSD: Makefile,v 1.386 2010/02/09 22:06:38 seb Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -192,6 +192,7 @@ SUBDIR+=	p5-MIME-Lite
 SUBDIR+=	p5-MIME-Lite-HTML
 SUBDIR+=	p5-MIME-Types
 SUBDIR+=	p5-MIME-tools
+SUBDIR+=	p5-Mail-Alias
 SUBDIR+=	p5-Mail-Audit
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Mail-ClamAV
