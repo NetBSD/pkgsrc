@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/01/18 09:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2010/02/09 10:12:13 adam Exp $
 
 DISTNAME=	inkscape-0.47
 PKGREVISION=	1
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+= --with-gnome-vfs
 
 BUILDLINK_API_DEPENDS.poppler-includes+= poppler-includes>=0.12.2
 .include "../../devel/boehm-gc/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
