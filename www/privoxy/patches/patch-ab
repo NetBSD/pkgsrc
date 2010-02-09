@@ -1,0 +1,118 @@
+$NetBSD: patch-ab,v 1.5 2010/02/09 20:18:43 joerg Exp $
+
+--- GNUmakefile.in.orig	2009-02-28 08:28:14.000000000 +0000
++++ GNUmakefile.in
+@@ -87,7 +87,7 @@ INSTALL    = @INSTALL@
+ # Binaries
+ BIN_MODE	 = 0755
+ # Support files, docs, etc.
+-RA_MODE   = 0664
++RA_MODE   = 0644
+ # Directory
+ DIR_MODE   = 0755
+ # Files daemon writes to.
+@@ -1029,16 +1029,6 @@ install-strip:
+ # Perhaps the whole user/group validation should be done here, and simplified.
+ PROGRAM_V = Privoxy $(VERSION) $(CODE_STATUS)
+ install: CONF_DEST LOG_DEST PID_DEST check_doc GROUP_T
+-	@# Quick test for valid USER.
+-	@if [ -n "$(USER)" ]; then \
+-		$(ID) $(USER) >/dev/null || exit 1;\
+-	fi
+-	@# Test for valid group. FIXME. USER does not have to belong to GROUP 
+-	@# for file ownership purposes.
+-# 	if [ -n "$(GROUP_T)" ] && [ -n "$(USER)" ] && ! $(GROUPS) $(USER) | $(GREP) "\<$(GROUP_T)\>" >/dev/null; then \
+-# 		$(ECHO) Group $(GROUP_T) for User $(USER) is invalid && exit 1 ;\
+-# 	fi
+-
+ 	@$(ECHO) "Creating directories, and preparing $(PROGRAM_V) installation"
+ 	$(CHMOD) $(DIR_MODE) $(MKDIR)
+ 	@$(MKDIR) $(DESTDIR)$(SBIN_DEST) $(DESTDIR)$(prefix) $(DESTDIR)$(CONF_DEST) \
+@@ -1106,41 +1096,6 @@ install: CONF_DEST LOG_DEST PID_DEST che
+ 		$(INSTALL) $(INSTALL_T) $$i $(DESTDIR)$(CONF_DEST)/templates ;\
+ 	done
+ 
+-	@# FIXME: group/user validation is overly convoluted.
+-	@# If superuser install ... we require a minimum of group ownership
+-	@# of those files the daemon writes to, to be non-root owned.
+-	@if [ "`$(ID) |sed 's/(.*//' |sed 's/.*=//'`" = "0" ] ;then\
+-		if [ x$(USER) = x ] || [ $(USER) = root ]; then \
+-			if [ x$(GROUP) = x ] || [ $(GROUP) = root ]; then \
+-				if [ "`$(ID) privoxy`" ] && \
+-					$(GROUPS) privoxy | $(SED) 's/^.*://' |$(GREP) "\<privoxy\>" >/dev/null; then \
+-					$(ECHO) "Warning: Setting group owner to privoxy";\
+-					GROUP_T=privoxy ;\
+-				else \
+-					$(ECHO)  "******************************************************************" ;\
+-					$(ECHO)  " WARNING! WARNING! installing config files as root!" ;\
+-					$(ECHO)  " It is strongly recommended to run $(PROGRAM) as a non-root user," ;\
+-					$(ECHO)  " and to install the config files as that user and/or group!" ;\
+-					$(ECHO)  " Please read INSTALL, and create a privoxy user and group!" ;\
+-					$(ECHO)  "*******************************************************************" ;\
+-					exit 1 ;\
+-				fi ;\
+-			else \
+-				GROUP_T=$(GROUP) ;\
+-			fi ;\
+-			INSTALL_CONF="$(INSTALL_R) -g $$GROUP_T " ;\
+-		else \
+-			$(ECHO) "Superuser install, installing config files as $(USER):$(GROUP_T)" ;\
+-			INSTALL_CONF="$(INSTALL_R) -o $(USER) -g $(GROUP_T)" ;\
+-			GROUP_T=$(GROUP_T) ;\
+-		fi ;\
+-	else \
+-		if [ ! "`id $(USER)`" = "`id`" ] ;then \
+-			$(ECHO) "** WARNING ** current install user different from configured user!!" ;\
+-			$(ECHO) "Edit may fail." ;\
+-		fi ;\
+-		INSTALL_CONF="$(INSTALL_R)" ;\
+-	fi ;\
+ 	$(ECHO) Installing configuration files to $(DESTDIR)$(CONF_DEST);\
+ 	for i in $(CONFIGS); do \
+ 		if [ "$$i" = "default.action" ] || [ "$$i" = "default.filter" ] ; then \
+@@ -1159,45 +1114,6 @@ install: CONF_DEST LOG_DEST PID_DEST che
+ 		$(CHMOD) $(RWD_MODE) $(DESTDIR)$(CONF_DEST)/*.new || exit 1 ;\
+ 		$(ECHO) "Warning: Older config files are preserved. Check new versions for changes!" ;\
+ 	fi ;\
+-	[ ! -f $(DESTDIR)$(LOG_DEST)/logfile ] && $(ECHO) Creating logfiles in $(DESTDIR)$(LOG_DEST) || \
+-		$(ECHO) Checking logfiles in $(DESTDIR)$(LOG_DEST) ;\
+-		$(TOUCH) $(DESTDIR)$(LOG_DEST)/logfile || exit 1 ;\
+-	if [ x$$USER != x ]; then \
+-		$(CHOWN) $$USER $(DESTDIR)$(LOG_DEST)/logfile || \
+-		$(ECHO) "** WARNING ** current install user different from configured user. Logging may fail!!" ;\
+-	fi ;\
+-	if [ x$$GROUP_T != x ]; then \
+-		$(CHGRP) $$GROUP_T $(DESTDIR)$(LOG_DEST)/logfile || \
+-		$(ECHO) "** WARNING ** current install user different from configured user. Logging may fail!!" ;\
+-	fi ;\
+-	$(CHMOD) $(RWD_MODE) $(DESTDIR)$(LOG_DEST)/logfile || exit 1 ;\
+-	if [ "$(prefix)" = "/usr/local" ] || [ "$(prefix)" = "/usr" ]; then \
+-		if [ -f /etc/slackware-version ] && [ -d /etc/rc.d/ ] && [ -w /etc/rc.d/ ] ; then \
+-               $(SED) 's+%PROGRAM%+$(PROGRAM)+' slackware/rc.privoxy.orig | \
+-               $(SED) 's+%SBIN_DEST%+$(SBIN_DEST)+' | \
+-               $(SED) 's+%CONF_DEST%+$(CONF_DEST)+' | \
+-               $(SED) 's+%USER%+$(USER)+' | \
+-               $(SED) 's+%GROUP%+$(GROUP_T)+' >slackware/rc.privoxy ;\
+-			$(INSTALL) $(INSTALL_P) slackware/rc.privoxy $(DESTDIR)/etc/rc.d/ ;\
+-               $(ECHO) "Installing for Slackware." ;\
+-               $(ECHO) "Dont forget to add the rc.privoxy to rc.local if you want it started at every boot" ;\
+-		elif [ -f /etc/redhat-release ] && [ -d /etc/rc.d/init.d/ ] && [ -w /etc/rc.d/init.d/ ] ; then \
+-               $(ECHO) "Installing init script to /etc/rc.d/init.d/privoxy" ;\
+-			$(SED) 's,^PRIVOXY_BIN=.*,PRIVOXY_BIN="/usr/local/sbin/$(PROGRAM)",' privoxy.init |\
+-			$(SED) 's,^PRIVOXY_CONF=.*,PRIVOXY_CONF="$(CONF_DEST)/config",' |\
+-			$(SED) "s,^PRIVOXY_USER=.*,PRIVOXY_USER=$$USER," > init.tmp ;\
+-			$(INSTALL) $(INSTALL_P) init.tmp $(DESTDIR)/etc/rc.d/init.d/privoxy && $(RM) init.tmp;\
+-			$(MKDIR) $(DESTDIR)/etc/logrotate.d/ ;\
+-			$(ECHO) "Installing logrotate script to $(DESTDIR)/etc/logrotate.d/" ;\
+-			$(INSTALL) -m 0644 privoxy.logrotate $(DESTDIR)/etc/logrotate.d/privoxy ;\
+-		elif [ -d $(DESTDIR)/etc/init.d ] && [ -w $(DESTDIR)/etc/init.d ] ; then \
+-			$(ECHO) "Installing generic init script to $(DESTDIR)/etc/init.d/privoxy" ;\
+-			$(ECHO) "Please check that the PATHs are correct, and edit if needed." ;\
+-			$(INSTALL) $(INSTALL_P) privoxy-generic.init $(DESTDIR)/etc/init.d/privoxy ;\
+-		fi ;\
+-	else \
+-		$(ECHO) "No init script installed, install it manually if needed" ;\
+-	fi
+ 	$(RM) config.base config.tmp
+ 	@# mmmmm, good.
+ 	@$(ECHO) "$(PROGRAM_V) installation succeeded!"
