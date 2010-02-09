@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.604 2010/02/09 11:48:44 obache Exp $
+$NetBSD: CHANGES-2010,v 1.605 2010/02/09 14:06:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -731,3 +731,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added fonts/tex-cm-doc version 2009.15878 [minskim 2010-02-09]
 	Updated www/apache to 1.3.42 [dholland 2010-02-09]
 	Updated audio/p5-Audio-Scan to 0.59 [obache 2010-02-09]
+	Updated math/R to 2.10.1 [adam 2010-02-09]
