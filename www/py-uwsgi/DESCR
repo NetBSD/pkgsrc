@@ -1,0 +1,11 @@
+uWSGI is a fast (pure C), self-healing, developer-friendly WSGI server,
+aimed for professional python webapps deployment and development.
+Backend support exists for Apache, nginx, cherokee and lighttpd.
+
+Some of the features include:
+- low memory footprint
+- preforking and multithreaded operation
+- logging, diagnostic and profiling support
+- support for sendfile()
+- self-healing
+- graceful restart and hot-plug upgrading

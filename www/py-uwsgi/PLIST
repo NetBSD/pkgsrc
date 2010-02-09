@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/09 22:34:26 joerg Exp $
+bin/uwsgi-${PYVERSSUFFIX}
