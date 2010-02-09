@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.696 2010/02/08 22:05:48 seb Exp $
+# $NetBSD: Makefile,v 1.697 2010/02/09 22:35:30 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -468,6 +468,7 @@ SUBDIR+=	py-rss2gen
 SUBDIR+=	py-scgi
 SUBDIR+=	py-simpletal
 SUBDIR+=	py-swish-e
+SUBDIR+=	py-uwsgi
 SUBDIR+=	py-webpy
 SUBDIR+=	qDecoder
 SUBDIR+=	raggle
