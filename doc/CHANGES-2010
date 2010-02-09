@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.607 2010/02/09 18:54:22 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.608 2010/02/09 19:00:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -734,3 +734,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/R to 2.10.1 [adam 2010-02-09]
 	Added print/tex-dvipdfm-doc version 0.13.2d [minskim 2010-02-09]
 	Added print/tex-dvipdfmx-doc version 2009.16044 [minskim 2010-02-09]
+	Updated print/tex-enctex-doc to 2009 [minskim 2010-02-09]
