@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2010/02/08 16:11:54 joerg Exp $
+# $NetBSD: options.mk,v 1.6 2010/02/09 21:15:34 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	ssl pcre dav flv sub gtools mail-proxy memcache \
@@ -50,8 +50,6 @@ CONFIGURE_ARGS+=       --with-http_realip_module
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=       --with-ipv6
-.else
-CONFIGURE_ARGS+=       --without-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Muwsgi)
