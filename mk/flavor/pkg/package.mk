@@ -1,5 +1,15 @@
-# $NetBSD: package.mk,v 1.19 2009/11/05 15:39:42 joerg Exp $
+# $NetBSD: package.mk,v 1.20 2010/02/09 23:02:13 joerg Exp $
 
+.if defined(PKG_SUFX)
+WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
+.  if ${PKG_SUFX} == ".tgz"
+PKG_COMPRESSION=	gzip
+.  elif ${PKG_SUFX} == ".tbz"
+PKG_COMPRESSION=	bzip2
+.  else
+WARNINGS+=		"Unsupported value for PKG_SUFX"
+.  endif
+.endif
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
 PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
@@ -25,6 +35,7 @@ package-check-installed:
 package-create: package-remove ${PKGFILE} package-links
 
 _PKG_ARGS_PACKAGE+=	${_PKG_CREATE_ARGS}
+_PKG_ARGS_PACKAGE+=	-F ${PKG_COMPRESSION}
 .if ${_USE_DESTDIR} == "no"
 _PKG_ARGS_PACKAGE+=	-p ${PREFIX}
 .else
