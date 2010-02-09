@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2010/02/09 18:08:03 joerg Exp $
+
+--- src/Clients/Classical/gbrainy.in.orig	2010-02-09 17:59:25.000000000 +0000
++++ src/Clients/Classical/gbrainy.in
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+@@ -7,7 +7,7 @@ libdir=@libdir@ 
+ MONO_EXE="$libdir/gbrainy/gbrainy.exe"
+  
+ for arg in $*; do
+-    case "x--debug" in ("x${arg}")
++    case "x--debug" in "x${arg}")
+         MONO_OPTIONS="--debug${MONO_OPTIONS+:$MONO_OPTIONS}"
+     esac
+ done
