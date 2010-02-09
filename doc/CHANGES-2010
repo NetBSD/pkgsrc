@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.601 2010/02/08 22:31:41 seb Exp $
+$NetBSD: CHANGES-2010,v 1.602 2010/02/09 00:53:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -728,3 +728,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added audio/p5-Audio-Scan version 0.58 [wiz 2010-02-08]
 	Added www/p5-Web-Scraper version 0.32 [seb 2010-02-08]
 	Updated devel/p5-Moose to 0.96 [seb 2010-02-08]
+	Added fonts/tex-cm-doc version 2009.15878 [minskim 2010-02-09]
