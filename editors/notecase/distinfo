@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.5 2008/05/15 19:18:07 drochner Exp $
+$NetBSD: distinfo,v 1.6 2010/02/09 18:28:01 joerg Exp $
 
 SHA1 (notecase-1.8.8_src.tar.gz) = 9657fc83ed4c1820f713b4106c113acaabf6a3b3
 RMD160 (notecase-1.8.8_src.tar.gz) = ae98102173e85530c22bbd9d92df23bea9b67886
 Size (notecase-1.8.8_src.tar.gz) = 891728 bytes
 SHA1 (patch-aa) = c7f1734e0741fdd5c1280012391a425291bd7300
 SHA1 (patch-ab) = 360a714e1642102ee113c881d97ad787f37e7630
-SHA1 (patch-ad) = ab595432f17910f927ca3ff25f3e705d7d2e4a71
+SHA1 (patch-ad) = 24fb948fa9017203e95a0bd37cd1c5afcbc21935
 SHA1 (patch-ae) = 355b89d234a95697c5344bbfe24d347e9cd630f7
 SHA1 (patch-af) = eab3d1dfa00cb2eed49b4a08ad780d295b9a9dda
 SHA1 (patch-ag) = 376e7c934beb5b666503b92e970695ece879d4cc
