@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2010/02/08 09:54:23 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2010/02/09 20:18:43 joerg Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
 PKGNAME=	privoxy-3.0.12
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ijbswa/}
 
@@ -10,10 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.privoxy.org/
 COMMENT=	Web proxy with advanced filtering capabilities
 
-# Package is not destdir ready:
-# 1) install expects the privoxy user to exist and fails if it doesn't
-# 2) unsafe use of ROOT_USER in post-install
-#PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,6 +55,7 @@ CONF_FILES_PERMS+=	${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i} ${USER_GROUP} 0660
 .endfor
 
 OWN_DIRS_PERMS+=	/var/log/privoxy ${USER_GROUP} 0775
+CONF_FILES_PERMS+=	/dev/null /var/log/privoxy/logfile ${USER_GROUP} 0660
 
 FILES_SUBST+=		PRIVOXY_USER=${PRIVOXY_USER:Q}
 
@@ -65,12 +64,9 @@ SUBST_FILES.paths=	config
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
 
+
 pre-configure:
 	cd ${WRKSRC} && autoheader && autoconf
-
-post-install:
-	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${DESTDIR}${EGDIR}
-	${CHMOD} -R a+r ${DESTDIR}${EGDIR}
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
