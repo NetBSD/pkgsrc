@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/09 18:53:01 minskim Exp $
+man/man1/extractbb.1
