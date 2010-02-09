@@ -1,0 +1,3 @@
+The Perl 5 module Mail::Alias can read various formats of mail
+alias. Once an object has been created it can be used to expand
+aliases and output in another format.
