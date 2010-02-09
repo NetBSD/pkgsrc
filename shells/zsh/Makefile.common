@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.57 2010/02/08 22:12:40 roy Exp $
+# $NetBSD: Makefile.common,v 1.58 2010/02/09 00:08:50 zafer Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
 MASTER_SITES=	ftp://mirrors.dotsrc.org/zsh/ \
 		ftp://ftp.fu-berlin.de/pub/unix/shells/zsh/ \
-		ftp://ftp.funet.fi/pub/unix/shells/zsh/ \
 		http://www.math.technion.ac.il/pub/zsh/ \
 		ftp://ftp.zsh.org/zsh/
 EXTRACT_SUFX=	.tar.bz2
