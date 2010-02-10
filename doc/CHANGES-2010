@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.637 2010/02/10 17:10:45 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.638 2010/02/10 17:12:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -764,3 +764,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed emulators/vmware-module [joerg 2010-02-10]
 	Removed emulators/vmware-module3 [joerg 2010-02-10]
 	Removed emulators/vmware3 [joerg 2010-02-10]
+	Removed lang/gcc-ssp [joerg 2010-02-10]
