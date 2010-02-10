@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/12/03 16:46:32 christos Exp $
+$NetBSD: patch-ab,v 1.2 2010/02/10 10:43:28 obache Exp $
 
---- ../src/console.c.orig	2004-01-05 02:27:46.000000000 -0500
-+++ ../src/console.c	2005-12-03 11:37:19.000000000 -0500
-@@ -388,7 +388,22 @@
+--- src/console.c.orig	2004-01-05 07:27:46.000000000 +0000
++++ src/console.c
+@@ -388,7 +388,22 @@ public void ConsoleSetUp()
    signal( SIGINT, InterruptIgnoreHandler );
  #endif /* MSDOS */
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ab,v 1.1 2005/12/03 16:46:32 christos Exp $
    struct sigvec sigVec;
  
    sigVec.sv_handler = WindowChangeHandler;
-@@ -400,12 +415,13 @@
+@@ -400,12 +415,13 @@ public void ConsoleSetUp()
    sigVec.sv_mask = sigmask( SIGINT );
    sigVec.sv_flags = SV_INTERRUPT;
    sigvec( SIGINT, &sigVec, NULL );

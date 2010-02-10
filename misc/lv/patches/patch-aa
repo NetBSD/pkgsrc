@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2005/04/05 14:56:06 cube Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/10 10:43:28 obache Exp $
 
---- ../src/Makefile.in.orig	2004-01-06 08:22:17.000000000 +0100
-+++ ../src/Makefile.in
+--- src/Makefile.in.orig	2004-01-06 07:22:17.000000000 +0000
++++ src/Makefile.in
 @@ -64,18 +64,10 @@ depend::
  #
  
@@ -18,10 +18,10 @@ $NetBSD: patch-aa,v 1.4 2005/04/05 14:56:06 cube Exp $
 -	if test -d $(mandir) -a -d $(mandir)/man1; then \
 -		$(INSTALL) -m 444 $(srcdir)/../lv.1 $(mandir)/man1; \
 -	fi
-+	$(BSD_INSTALL_PROGRAM) lv $(bindir)/lv
-+	$(LN) -s lv $(bindir)/lgrep
-+	$(BSD_INSTALL_DATA) $(srcdir)/../lv.hlp $(lvlibdir)/lv.hlp
-+	$(BSD_INSTALL_MAN) $(srcdir)/../lv.1 $(mandir)/man1; \
++	$(BSD_INSTALL_PROGRAM) lv $(DESTDIR)$(bindir)/lv
++	$(LN) -s lv $(DESTDIR)$(bindir)/lgrep
++	$(BSD_INSTALL_DATA) $(srcdir)/../lv.hlp $(DESTDIR)$(lvlibdir)/lv.hlp
++	$(BSD_INSTALL_MAN) $(srcdir)/../lv.1 $(DESTDIR)$(mandir)/man1; \
  
  uninstall::
  	for i in $(bindir)/lv $(bindir)/lgrep $(lvlibdir)/lv.hlp $(mandir)/man1/lv.1; do \
