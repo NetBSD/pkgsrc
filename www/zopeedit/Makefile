@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2009/12/17 19:02:44 abs Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/10 19:17:48 joerg Exp $
 #
 
 DISTNAME=	zopeedit-0.7-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/Caseman/ExternalEditor/0.7/
 EXTRACT_SUFX=	.tgz
@@ -12,7 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/Caseman/ExternalEditor
 COMMENT=	Helper client application for Zope's ExternalEditor
 
-PYTHON_VERSIONS_ACCEPTED=	26 25 24
 PYDISTUTILSPKG=	yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir

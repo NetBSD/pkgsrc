@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2009/11/10 19:34:45 epg Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/10 19:17:36 joerg Exp $
 
 DISTNAME=	qbzr-${VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/qbzr/trunk/${VER}/+download/
 VER=		0.16
