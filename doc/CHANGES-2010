@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.630 2010/02/10 17:06:28 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.631 2010/02/10 17:06:45 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -757,3 +757,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed graphics/RenderKit [joerg 2010-02-10]
 	Removed graphics/SDLKit [joerg 2010-02-10]
 	Removed audio/csound4 [joerg 2010-02-10]
+	Removed audio/csound4-manual [joerg 2010-02-10]
