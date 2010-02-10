@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/10/19 11:19:37 joerg Exp $
+$NetBSD: distinfo,v 1.3 2010/02/10 15:30:27 joerg Exp $
 
 SHA1 (pisa-3.0.32.tar.gz) = d46519677af2290d298928b8f03a1436695ff90b
 RMD160 (pisa-3.0.32.tar.gz) = 380b0bcc4d00b3ee27205571383c754dd833ceb9
 Size (pisa-3.0.32.tar.gz) = 4517663 bytes
+SHA1 (patch-aa) = d0fd5bd36c204755c271e00cc72445aa6412f6c8
