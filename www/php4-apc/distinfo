@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 14:08:38 wiz Exp $
-
-SHA1 (php-apc/apc-2.0.4.tgz) = 228026609ef026988d8830fc6d766b3910c4eac4
-RMD160 (php-apc/apc-2.0.4.tgz) = 446c58ac64b999c8773bb70de28ccf826f0d93f1
-Size (php-apc/apc-2.0.4.tgz) = 44606 bytes
