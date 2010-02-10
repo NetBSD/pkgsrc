@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2009/07/07 05:50:21 joerg Exp $
-System/Library/Headers/SDLKit/G3DSDLCamera.h
-System/Library/Headers/SDLKit/G3DSDLEventHandler.h
-System/Library/Headers/SDLKit/G3DSDLKit.h
-System/Library/Libraries/libSDLKit.so
-System/Library/Libraries/libSDLKit.so.0.4.0
-@pkgdir share/GNUstep/Local/Headers/SDLKit

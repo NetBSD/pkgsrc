@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2010/02/01 02:32:34 joerg Exp $
-
-SHA1 (3DKit/3DKit-0.3.1r2.tar.gz) = 780e7dc975cb2ac0b96f8f605aa6ad0b3af596b9
-RMD160 (3DKit/3DKit-0.3.1r2.tar.gz) = bc6f154479156a10fb336fcf6a142b1474df4c61
-Size (3DKit/3DKit-0.3.1r2.tar.gz) = 216093 bytes
-SHA1 (patch-aa) = a12e85937d5b5eb23111749985cdf4099b9d26b4
-SHA1 (patch-ab) = 7c3e7c4cce76f58669fd70e8e8c58cc4285b5504
