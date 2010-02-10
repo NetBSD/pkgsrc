@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.655 2010/02/10 17:47:18 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.656 2010/02/10 17:47:50 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -782,3 +782,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed lang/sun-jre14 [joerg 2010-02-10]
 	Removed lang/sun-jre15 [joerg 2010-02-10]
 	Removed textproc/php4-xslt [joerg 2010-02-10]
+	Removed textproc/php4-domxml [joerg 2010-02-10]
