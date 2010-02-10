@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/02/17 15:56:41 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/10 19:17:46 joerg Exp $
 #
 
 DISTNAME=		wxRemind-0.6.18
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		time
 MASTER_SITES=		http://www.duke.edu/~dgraham/wxRemind/
 

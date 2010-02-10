@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/06/12 21:47:32 zafer Exp $
+# $NetBSD: Makefile,v 1.12 2010/02/10 19:17:36 joerg Exp $
 
 DISTNAME=	ply-1.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.dabeaz.com/ply/
 

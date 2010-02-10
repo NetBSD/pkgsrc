@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/02/13 22:00:12 abs Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/10 19:17:47 joerg Exp $
 #
 
 DISTNAME=	ies4linux-2.99.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.tatanka.com.br/ies4linux/downloads/
 

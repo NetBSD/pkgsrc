@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2009/02/16 13:36:46 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2010/02/10 19:17:45 joerg Exp $
 #
 
 DISTNAME=		logfinder-0.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.eff.org/osp/
 

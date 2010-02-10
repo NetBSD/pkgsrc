@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/01/17 12:02:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/10 19:17:34 joerg Exp $
 
 PKGNAME=	postgresql84-plpython-${BASE_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	PL/Python procedural language for the PostgreSQL backend
 
 PKG_DESTDIR_SUPPORT=	user-destdir

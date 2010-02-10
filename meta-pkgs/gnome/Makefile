@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2009/08/21 15:56:32 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2010/02/10 19:17:41 joerg Exp $
 
 DISTNAME=	gnome-2.26.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
