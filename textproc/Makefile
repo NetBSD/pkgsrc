@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.518 2010/02/07 11:29:08 seb Exp $
+# $NetBSD: Makefile,v 1.519 2010/02/10 17:52:30 joerg Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -387,8 +387,6 @@ SUBDIR+=	pear-File_Find
 SUBDIR+=	php-json
 SUBDIR+=	php-pspell
 SUBDIR+=	php-wddx
-SUBDIR+=	php4-domxml
-SUBDIR+=	php4-xslt
 SUBDIR+=	php5-dom
 SUBDIR+=	php5-xsl
 SUBDIR+=	po4a
