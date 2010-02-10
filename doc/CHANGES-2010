@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.642 2010/02/10 17:29:45 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.643 2010/02/10 17:30:47 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -769,3 +769,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed databases/py-psycopg [joerg 2010-02-10]
 	Removed mail/columba [joerg 2010-02-10]
 	Removed net/bind9 [joerg 2010-02-10]
+	Removed net/flan [joerg 2010-02-10]
