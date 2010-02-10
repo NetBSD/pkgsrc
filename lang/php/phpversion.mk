@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.9 2007/10/11 08:51:43 rillig Exp $
+# $NetBSD: phpversion.mk,v 1.10 2010/02/10 17:46:10 joerg Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -10,7 +10,7 @@
 #	The PHP version to choose when more than one is acceptable to
 #	the package.
 #
-#	Possible: 4 5
+#	Possible: 5
 #	Default: 5
 #
 # === Package-settable variables ===
@@ -18,14 +18,14 @@
 # PHP_VERSIONS_ACCEPTED
 #	The PHP versions that are accepted by the package.
 #
-#	Possible: 4 5
-#	Default: 4 5
+#	Possible: 5
+#	Default: 5
 #
 # PHP_VERSION_REQD
 #	If the package works only with a specific PHP version, this
 #	variable can be used to force it.
 #
-#	Possible: (undefined) 4 5
+#	Possible: (undefined) 5
 #	Default: (undefined)
 #
 # === Variables defined by this file ===
@@ -33,7 +33,7 @@
 # PKG_PHP_VERSION
 #	The selected PHP version.
 #
-#	Possible: 4 5
+#	Possible: 5
 #	Default: ${PHP_VERSION_DEFAULT}
 #
 # PKG_PHP
@@ -65,7 +65,7 @@ _SYS_VARS.php=	PKG_PHP_VERSION PKG_PHP PHPPKGSRCDIR PHP_PKG_PREFIX
 .include "../../mk/bsd.prefs.mk"
 
 PHP_VERSION_DEFAULT?=		5
-PHP_VERSIONS_ACCEPTED?=		4 5
+PHP_VERSIONS_ACCEPTED?=		5
 
 # transform the list into individual variables
 .for pv in ${PHP_VERSIONS_ACCEPTED}
@@ -73,9 +73,6 @@ _PHP_VERSION_${pv}_OK=	yes
 .endfor
 
 # check what is installed
-.if exists(${LOCALBASE}/lib/php/20020429)
-_PHP_VERSION_4_INSTALLED=	yes
-.endif
 .if exists(${LOCALBASE}/lib/php/20040412)
 _PHP_VERSION_5_INSTALLED=	yes
 .endif
@@ -128,10 +125,7 @@ PHP_VERSION_REQD:=	${PKG_PHP_VERSION}
 #
 # set variables for the version we decided to use:
 #
-.if ${_PHP_VERSION} == "4"
-PHPPKGSRCDIR=		../../www/php4
-PHP_PKG_PREFIX=		php4
-.elif ${_PHP_VERSION} == "5"
+.if ${_PHP_VERSION} == "5"
 PHPPKGSRCDIR=		../../lang/php5
 PHP_PKG_PREFIX=		php5
 .else
