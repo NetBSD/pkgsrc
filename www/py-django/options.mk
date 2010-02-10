@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2010/02/10 17:21:55 joerg Exp $
+# $NetBSD: options.mk,v 1.7 2010/02/10 19:30:09 joerg Exp $
 
 PKG_OPTIONS_VAR =	PKG_OPTIONS.django
-PKG_SUPPORTED_OPTIONS=	mysql postgresql sqlite
-PKG_SUGGESTED_OPTIONS=	postgresql
+PKG_SUPPORTED_OPTIONS=	mysql pgsql sqlite
+PKG_SUGGESTED_OPTIONS=	pgsql
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,9 +13,9 @@ DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
 PLIST.mysql=	yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mpostgresql)
+.if !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
-PLIST.postgresql=	yes
+PLIST.pgsql=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msqlite)
