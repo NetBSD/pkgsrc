@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.664 2010/02/10 18:15:48 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.665 2010/02/10 19:48:05 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -791,3 +791,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed www/php4 [joerg 2010-02-10]
 	Removed x11/tk83 [joerg 2010-02-10]
 	Removed lang/tcl83 [joerg 2010-02-10]
+	Removed meta-pkgs/php4-extensions [joerg 2010-02-10]
