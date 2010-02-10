@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2009/10/19 11:31:05 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/10 17:21:55 joerg Exp $
 
 DJANGOVERS=	1.1.1
 DISTNAME=	Django-${DJANGOVERS}
 PKGNAME=	${PYPKGPREFIX}-django-${DJANGOVERS}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://media.djangoproject.com/releases/${DJANGOVERS}/
 
@@ -30,10 +31,8 @@ pre-configure:
 .if empty(PKG_OPTIONS:Mmysql)
 	rm -r ${WRKSRC}/django/db/backends/mysql
 .endif
-.if empty(PKG_OPTIONS:Mpsycopg1) && empty(PKG_OPTIONS:Mpsycopg2)
+.if empty(PKG_OPTIONS:Mpostgresql)
 	rm -r ${WRKSRC}/django/db/backends/postgresql
-.endif
-.if empty(PKG_OPTIONS:Mpsycopg2)
 	rm -r ${WRKSRC}/django/db/backends/postgresql_psycopg2
 .endif
 .if empty(PKG_OPTIONS:Msqlite)
