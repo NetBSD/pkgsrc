@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/02/09 22:56:25 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/10 19:17:41 joerg Exp $
 #
 
 DISTNAME=		queue-repair-0.9.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 

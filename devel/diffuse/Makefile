@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2009/10/19 14:33:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/10 19:17:35 joerg Exp $
 #
 
 DISTNAME=	diffuse-0.4.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=diffuse/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/11/07 18:30:28 hasso Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/10 19:17:45 joerg Exp $
 #
 
 DISTNAME=	prelude-correlator-0.9.0-beta8
 PKGNAME=	prelude-correlator-${DISTNAME:S/-beta/beta/:C/.*-//}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.prelude-ids.com/download/releases/prelude-correlator/
 

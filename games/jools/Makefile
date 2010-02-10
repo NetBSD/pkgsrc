@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/29 23:24:40 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/10 19:17:38 joerg Exp $
 #
 
 DISTNAME=		jools-0.20
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://www.eecs.umich.edu/~pelzlpj/jools/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} jools-musicpack-1.0.tar.gz
