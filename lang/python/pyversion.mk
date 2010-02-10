@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.78 2010/02/09 22:55:16 joerg Exp $
+# $NetBSD: pyversion.mk,v 1.79 2010/02/10 19:16:48 joerg Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -9,7 +9,7 @@
 #	The preferred Python version to use.
 #
 #	Possible values: 24 25 26
-#	Default: 25
+#	Default: 26
 #
 # === Package-settable variables ===
 #
@@ -68,11 +68,7 @@ PYTHON_VERSION_REQD?= ${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
 BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
-.if empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
-PYTHON_VERSION_DEFAULT?=		25
-.else
 PYTHON_VERSION_DEFAULT?=		26
-.endif
 PYTHON_VERSIONS_ACCEPTED?=		26 25 24
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
