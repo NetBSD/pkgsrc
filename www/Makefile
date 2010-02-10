@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.698 2010/02/10 17:59:27 joerg Exp $
+# $NetBSD: Makefile,v 1.699 2010/02/10 18:08:33 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -440,7 +440,6 @@ SUBDIR+=	php-FastTemplate
 SUBDIR+=	php-apc
 SUBDIR+=	php-curl
 SUBDIR+=	php-eaccelerator
-SUBDIR+=	php4
 #SUBDIR+=	plone		# only contains Makefile fragments
 SUBDIR+=	plone25
 SUBDIR+=	plone3
