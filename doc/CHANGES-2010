@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.614 2010/02/10 12:27:35 obache Exp $
+$NetBSD: CHANGES-2010,v 1.615 2010/02/10 12:32:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -741,3 +741,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/py-karaoke to 0.7.2 [wiz 2010-02-10]
 	Updated audio/p5-Audio-Wav to 0.08 [obache 2010-02-10]
 	Updated net/p5-Net-Amazon to 0.59 [obache 2010-02-10]
+	Updated wm/echinus to 0.4.0 [wiz 2010-02-10]
