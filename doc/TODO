@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9005 2010/02/09 07:22:33 dholland Exp $
+$NetBSD: TODO,v 1.9006 2010/02/10 11:37:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1110,7 +1110,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-karaoke-0.7.2
 	o py-kenosis-0.96 [pkg/42561]
 	o py-logging-0.4.9.6 [pkg/41675]
 	o py-m2crypto-0.20.2
