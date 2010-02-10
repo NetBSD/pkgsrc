@@ -1,0 +1,22 @@
+$NetBSD: patch-ap,v 1.1 2010/02/10 21:56:41 asau Exp $
+
+"test" portability.
+Reported as applied upstream.
+
+--- packages/space/configure.in.orig	2010-01-10 16:35:20.000000000 +0300
++++ packages/space/configure.in	2010-01-17 19:19:50.000000000 +0300
+@@ -88,12 +88,12 @@
+ 
+ AC_CHECK_HEADERS(spatialindex/SpatialIndex.h,[si=1],[si=0])
+ #AC_TRY_LINK([#include <spatialindex/SpatialIndex.h>],[SpatialIndex::Point *p=new SpatialIndex::Point();],[si=1],[si=0])
+-if test $si == 0; then
++if test $si = 0; then
+    AC_ERROR("Cannot find spatialindex. Spatialindex must be installed first (http://trac.gispython.org/spatialindex/)")
+ fi
+ 
+ AC_CHECK_HEADERS(geos_c.h,[geos=1],[geos=0])
+-if test $si == 0; then
++if test $si = 0; then
+    AC_ERROR("Cannot find GEOS library. GEOS must be installed first (http://trac.osgeo.org/geos/)")
+ fi
+ 

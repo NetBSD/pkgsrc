@@ -1,22 +1,24 @@
-$NetBSD: patch-ao,v 1.1 2009/10/31 19:34:31 tnn Exp $
+$NetBSD: patch-ao,v 1.2 2010/02/10 21:56:41 asau Exp $
 
---- src/pl-arith.c.orig	2009-10-31 20:31:13.000000000 +0100
-+++ src/pl-arith.c
-@@ -1752,7 +1752,7 @@ ar_lsb(Number n1, Number r)
+Avoid conflict with library function.
+
+--- src/pl-arith.c.orig	2009-10-19 17:00:42.000000000 +0400
++++ src/pl-arith.c	2009-10-20 08:54:57.000000000 +0400
+@@ -2268,7 +2268,7 @@
  
  
  static int
 -popcount64(int64_t i)
-+popcount64_(int64_t i)
- { int c, j;
++ar_popcount64(int64_t i)
+ { int c;
+   size_t j;
    int64_t m = LL(1);
- 
-@@ -1775,7 +1775,7 @@ ar_popcount(Number n1, Number r)
+@@ -2292,7 +2292,7 @@
        if (  n1->value.i < 0 )
  	return notLessThanZero("popcount", 1, n1);
  
 -      r->value.i = popcount64(n1->value.i);
-+      r->value.i = popcount64_(n1->value.i);
++      r->value.i = ar_popcount64(n1->value.i);
        r->type = V_INTEGER;
        succeed;
  #ifdef O_GMP
