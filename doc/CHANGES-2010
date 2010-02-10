@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.658 2010/02/10 17:56:46 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.659 2010/02/10 17:57:19 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -785,3 +785,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed textproc/php4-domxml [joerg 2010-02-10]
 	Removed www/apc-gui [joerg 2010-02-10]
 	Removed www/php4-apc [joerg 2010-02-10]
+	Removed www/php-FastTemplate [joerg 2010-02-10]
