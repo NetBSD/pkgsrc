@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.639 2010/02/10 17:12:56 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.640 2010/02/10 17:22:39 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -766,3 +766,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed emulators/vmware3 [joerg 2010-02-10]
 	Removed lang/gcc-ssp [joerg 2010-02-10]
 	Removed net/boinc3-seti [joerg 2010-02-10]
+	Removed databases/py-psycopg [joerg 2010-02-10]
