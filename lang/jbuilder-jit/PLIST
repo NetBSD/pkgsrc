@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 20:34:14 joerg Exp $
-${JAVADIR}/lib/i386/libjavacomp.so
-${JAVADIR}/lib/i386/libjavacomp_g.so
-share/doc/jbuilder-jit/README.javacomp
-share/doc/jbuilder-jit/LICENSE.javacomp
