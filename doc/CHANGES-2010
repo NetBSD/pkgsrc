@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.632 2010/02/10 17:08:13 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.633 2010/02/10 17:09:05 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -759,3 +759,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed audio/csound4 [joerg 2010-02-10]
 	Removed audio/csound4-manual [joerg 2010-02-10]
 	Removed comms/plptools [joerg 2010-02-10]
+	Removed databases/php-pdo_odbc [joerg 2010-02-10]
