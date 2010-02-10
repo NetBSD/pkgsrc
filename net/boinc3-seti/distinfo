@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:43 agc Exp $
-
-SHA1 (seti_boinc-client-cvs-2004-07-15.tar.gz) = 1d4ef530895a464e9cec657cacaaea1b12f1002f
-RMD160 (seti_boinc-client-cvs-2004-07-15.tar.gz) = 74a3c45b6a39c2ed401b33588af9268b3477eecb
-Size (seti_boinc-client-cvs-2004-07-15.tar.gz) = 1202670 bytes
-SHA1 (patch-aa) = 300a6fbb7da1bcfa93e23cd136670e4f8456fcdc
