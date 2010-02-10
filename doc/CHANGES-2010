@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.645 2010/02/10 17:32:48 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.646 2010/02/10 17:33:07 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -772,3 +772,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed net/flan [joerg 2010-02-10]
 	Removed x11/swing [joerg 2010-02-10]
 	Removed parallel/GridSim [joerg 2010-02-10]
+	Removed devel/jgrasp [joerg 2010-02-10]
