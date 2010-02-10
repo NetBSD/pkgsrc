@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/02/10 17:21:55 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/10 19:30:09 joerg Exp $
 
 DJANGOVERS=	1.1.1
 DISTNAME=	Django-${DJANGOVERS}
@@ -31,7 +31,7 @@ pre-configure:
 .if empty(PKG_OPTIONS:Mmysql)
 	rm -r ${WRKSRC}/django/db/backends/mysql
 .endif
-.if empty(PKG_OPTIONS:Mpostgresql)
+.if empty(PKG_OPTIONS:Mpgsql)
 	rm -r ${WRKSRC}/django/db/backends/postgresql
 	rm -r ${WRKSRC}/django/db/backends/postgresql_psycopg2
 .endif
