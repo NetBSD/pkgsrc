@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.622 2010/02/10 16:55:46 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.623 2010/02/10 16:56:20 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -749,3 +749,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed net/isc-dhclient [joerg 2010-02-10]
 	Removed net/isc-dhcp [joerg 2010-02-10]
 	Removed net/isc-dhcpd [joerg 2010-02-10]
+	Removed net/isc-dhcrelay [joerg 2010-02-10]
