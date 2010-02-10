@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/12/15 14:28:09 wiz Exp $
+$NetBSD: distinfo,v 1.3 2010/02/10 12:32:47 wiz Exp $
 
-SHA1 (echinus-0.3.9.tar.gz) = 809153beefae35e78112cc759ef1dfd9661bad6f
-RMD160 (echinus-0.3.9.tar.gz) = 19822693809877761cb3f769797fa18ea7b7e8db
-Size (echinus-0.3.9.tar.gz) = 29053 bytes
+SHA1 (echinus-0.4.0.tar.gz) = df56650fd1e83a14a18870b199e0e3872bad027d
+RMD160 (echinus-0.4.0.tar.gz) = 7febf747f157823914c1b3603f65e90550bee9a2
+Size (echinus-0.4.0.tar.gz) = 28843 bytes
