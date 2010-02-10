@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2008/02/24 05:29:21 obache Exp $
+# $NetBSD: Makefile,v 1.107.20.1 2010/02/10 20:37:32 spz Exp $
 
 DISTNAME=		mod_ssl-2.8.31-1.3.41
 PKGNAME=		ap13-ssl-2.8.31
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../www/apache/buildlink3.mk"
-BUILDLINK_API_DEPENDS.apache+=	apache>=1.3.41
+BUILDLINK_API_DEPENDS.apache+=	apache>=1.3.42
 
 SSL_RPATH_LDFLAGS=	${LINKER_RPATH_FLAG} ${SSLBASE}/lib
 FIX_RPATH+=		SSL_RPATH_LDFLAGS
