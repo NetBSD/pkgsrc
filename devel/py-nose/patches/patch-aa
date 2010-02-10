@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2010/02/10 10:31:46 drochner Exp $
+
+--- setup.py.orig	2009-05-14 00:28:39.000000000 +0000
++++ setup.py
+@@ -10,7 +10,7 @@ try:
+         packages = find_packages(),
+         entry_points = {
+         'console_scripts': [
+-            'nosetests = nose:run_exit',
++#            'nosetests = nose:run_exit',
+             'nosetests%s = nose:run_exit' % py_vers_tag,
+             ],
+         'distutils.commands': [
+@@ -59,7 +59,7 @@ setup(
+     download_url = \
+     'http://somethingaboutorange.com/mrl/projects/nose/nose-%s.tar.gz' \
+     % VERSION,
+-    data_files = [('man/man1', ['nosetests.1'])],
++    data_files = [('man/man1', ['nosetests' + sys.version[0:3] + '.1'])],
+     package_data = {'': ['*.txt',
+                          'examples/*.py',
+                          'examples/*/*.py']},
