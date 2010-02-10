@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.644 2010/02/10 17:31:00 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.645 2010/02/10 17:32:48 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -771,3 +771,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed net/bind9 [joerg 2010-02-10]
 	Removed net/flan [joerg 2010-02-10]
 	Removed x11/swing [joerg 2010-02-10]
+	Removed parallel/GridSim [joerg 2010-02-10]
