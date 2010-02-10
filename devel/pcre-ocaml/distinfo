@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2010/01/30 19:16:09 joerg Exp $
+$NetBSD: distinfo,v 1.6 2010/02/10 16:35:18 joerg Exp $
 
 SHA1 (pcre-ocaml-5.15.0.tar.bz2) = b7fb293867cf2c7d7deddc29e6a445359b0f7604
 RMD160 (pcre-ocaml-5.15.0.tar.bz2) = b2a515f2120e2e6a25f03ee15d60fe766621f5a9
 Size (pcre-ocaml-5.15.0.tar.bz2) = 51120 bytes
 SHA1 (patch-aa) = ff7aaec3c2fb06b1c9ab410257b64c8d5d29dcf6
-SHA1 (patch-ab) = 95a3929612ebd5e81a1ab64b8bfbad9b63e9a330
+SHA1 (patch-ab) = 413052255a902c85ce8236f7f9ada75386849a64
