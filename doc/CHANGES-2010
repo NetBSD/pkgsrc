@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.624 2010/02/10 16:58:55 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.625 2010/02/10 16:59:17 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -751,3 +751,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed net/isc-dhcpd [joerg 2010-02-10]
 	Removed net/isc-dhcrelay [joerg 2010-02-10]
 	Removed graphics/3DKit [joerg 2010-02-10]
+	Removed graphics/GLXKit [joerg 2010-02-10]
