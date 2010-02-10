@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.647 2010/02/10 17:34:10 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.648 2010/02/10 17:34:24 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -774,3 +774,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed parallel/GridSim [joerg 2010-02-10]
 	Removed devel/jgrasp [joerg 2010-02-10]
 	Removed editors/jave [joerg 2010-02-10]
+	Removed lang/jbuilder-jit [joerg 2010-02-10]
