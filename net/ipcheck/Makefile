@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2009/02/09 22:56:26 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/10 19:17:43 joerg Exp $
 #
 
 DISTNAME=	ipcheck.233
 PKGNAME=	ipcheck-0.233
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://ipcheck.sourceforge.net/releases/
 

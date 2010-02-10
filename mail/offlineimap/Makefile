@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2010/02/04 02:36:28 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/10 19:17:40 joerg Exp $
 #
 
 DISTNAME=	offlineimap_${_OFFLINEIMAP_VER}
 PKGNAME=	offlineimap-${_OFFLINEIMAP_VER}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://software.complete.org/offlineimap/static/download_area/${_OFFLINEIMAP_VER}/
 

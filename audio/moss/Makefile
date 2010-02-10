@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/02/09 22:56:21 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2010/02/10 19:17:32 joerg Exp $
 
 DISTNAME=	moss-0.1.13
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://kldp.net/frs/download.php/1580/
 

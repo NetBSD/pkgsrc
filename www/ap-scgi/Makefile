@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/08/03 12:29:37 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/10 19:17:47 joerg Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 
 COMMENT=	Simple Common Gateway Interface for Apache
 

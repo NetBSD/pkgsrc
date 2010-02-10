@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/10/11 18:36:41 epg Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/10 19:17:35 joerg Exp $
 
 DISTNAME=	bzr-svn-${VER}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://launchpad.net/bzr-svn/1.0/${VER}/+download/
 MASTER_SITES+=	http://samba.org/~jelmer/bzr/

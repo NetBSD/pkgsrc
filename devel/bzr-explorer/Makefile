@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/11/10 19:36:00 epg Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/10 19:17:35 joerg Exp $
 
 DISTNAME=	bzr-explorer-${VER}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/bzr-explorer/trunk/${VER}/+download/
 VER=		0.9.0

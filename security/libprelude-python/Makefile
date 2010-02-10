@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/12/15 22:10:39 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/10 19:17:44 joerg Exp $
 
 PKGNAME=		libprelude-python-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Python bindings to LibPrelude
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2009/05/20 23:48:07 zafer Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/10 19:17:34 joerg Exp $
 
 DISTNAME=	oraedit-0.1.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.tar.bz2
