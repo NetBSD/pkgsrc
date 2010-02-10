@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2010/01/17 02:16:29 dholland Exp $
+# $NetBSD: Makefile,v 1.80 2010/02/10 17:08:22 joerg Exp $
 #
 
 COMMENT=	Communication utilities
@@ -55,7 +55,6 @@ SUBDIR+=	pilot-link
 SUBDIR+=	pilot-link-libs
 SUBDIR+=	pilotmgr
 SUBDIR+=	plp
-SUBDIR+=	plptools
 SUBDIR+=	py-gammu
 SUBDIR+=	qpage
 SUBDIR+=	ruby-termios
