@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.extras,v 1.4 2009/06/14 22:00:31 joerg Exp $
-share/doc/${PKGBASE}/INSTALL

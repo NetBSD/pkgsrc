@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.697 2010/02/09 22:35:30 joerg Exp $
+# $NetBSD: Makefile,v 1.698 2010/02/10 17:59:27 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -73,7 +73,6 @@ SUBDIR+=	apache-tomcat6
 SUBDIR+=	apache2
 SUBDIR+=	apache22
 SUBDIR+=	apachetop
-SUBDIR+=	apc-gui
 SUBDIR+=	asp2php
 SUBDIR+=	august
 SUBDIR+=	awstats
@@ -442,7 +441,6 @@ SUBDIR+=	php-apc
 SUBDIR+=	php-curl
 SUBDIR+=	php-eaccelerator
 SUBDIR+=	php4
-SUBDIR+=	php4-apc
 #SUBDIR+=	plone		# only contains Makefile fragments
 SUBDIR+=	plone25
 SUBDIR+=	plone3
