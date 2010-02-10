@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:18 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2010/02/10 19:34:06 joerg Exp $
 #
 
 VER=		1.5.3
 DISTNAME=	pgtcl${VER}
 PKGNAME=	pgtclng-${VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases tcl
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/1075/
 
@@ -24,9 +24,9 @@ CONFIGURE_ARGS+=	--with-postgres-lib=${PREFIX:Q}/lib
 
 PGTCLLIBNAME		= libpgtcl${VER:C/\.//g}.so
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/lib && ln -s pgtcl${VER}/${PGTCLLIBNAME} libpgtcl.so
+
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/lib && ln -s pgtcl${VER}/${PGTCLLIBNAME} libpgtcl.so
