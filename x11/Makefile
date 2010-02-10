@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.610 2010/02/02 14:07:47 adam Exp $
+# $NetBSD: Makefile,v 1.611 2010/02/10 17:32:21 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -334,7 +334,6 @@ SUBDIR+=	speyes
 SUBDIR+=	ssystem
 SUBDIR+=	stalonetray
 SUBDIR+=	startup-notification
-SUBDIR+=	swing
 SUBDIR+=	tile
 SUBDIR+=	tint2
 SUBDIR+=	tk
