@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.482 2010/02/10 16:49:05 joerg Exp $
+# $NetBSD: Makefile,v 1.483 2010/02/10 16:54:21 joerg Exp $
 #
 
 COMMENT=	System utilities
@@ -408,7 +408,6 @@ SUBDIR+=	xmeter
 SUBDIR+=	xnc
 SUBDIR+=	xosview
 SUBDIR+=	xps
-SUBDIR+=	xraidadmin
 SUBDIR+=	xuvmstat
 SUBDIR+=	zidrav
 
