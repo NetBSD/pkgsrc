@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.627 2010/02/10 17:00:22 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.628 2010/02/10 17:00:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -754,3 +754,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed graphics/GLXKit [joerg 2010-02-10]
 	Removed graphics/GeometryKit [joerg 2010-02-10]
 	Removed graphics/GlutKit [joerg 2010-02-10]
+	Removed graphics/RenderKit [joerg 2010-02-10]
