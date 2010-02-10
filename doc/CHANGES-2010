@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.648 2010/02/10 17:34:24 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.649 2010/02/10 17:35:23 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -775,3 +775,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed devel/jgrasp [joerg 2010-02-10]
 	Removed editors/jave [joerg 2010-02-10]
 	Removed lang/jbuilder-jit [joerg 2010-02-10]
+	Removed lang/jdk [joerg 2010-02-10]
