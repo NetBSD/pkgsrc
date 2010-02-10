@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/12/05 14:53:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/10 19:17:45 joerg Exp $
 #
 
 DISTNAME=	${PKGNAME:S:-doc-:_:}
 PKGNAME=	munin-doc-1.3.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
 
@@ -27,5 +28,7 @@ MAKE_ENV+=	PERL5=${PERL5:Q}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 CHECK_PORTABILITY_SKIP+=	node/node.d/*
 
-.include "../../mk/bsd.pkg.mk"
+PYTHON_FOR_BUILD_ONLY=	# empty
+
 .include "../../lang/python/application.mk"
+.include "../../mk/bsd.pkg.mk"
