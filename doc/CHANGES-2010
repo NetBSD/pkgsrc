@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.634 2010/02/10 17:09:55 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.635 2010/02/10 17:10:12 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -761,3 +761,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed comms/plptools [joerg 2010-02-10]
 	Removed databases/php-pdo_odbc [joerg 2010-02-10]
 	Removed emulators/vmware [joerg 2010-02-10]
+	Removed emulators/vmware-module [joerg 2010-02-10]
