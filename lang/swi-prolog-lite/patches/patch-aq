@@ -1,0 +1,25 @@
+$NetBSD: patch-aq,v 1.1 2010/02/10 21:56:41 asau Exp $
+
+"test" portability.
+Reported as applied upstream.
+
+--- packages/space/configure.orig	2010-01-17 19:18:27.000000000 +0300
++++ packages/space/configure	2010-01-17 19:20:26.000000000 +0300
+@@ -3797,7 +3797,7 @@
+ done
+ 
+ #AC_TRY_LINK([#include <spatialindex/SpatialIndex.h>],[SpatialIndex::Point *p=new SpatialIndex::Point();],[si=1],[si=0])
+-if test $si == 0; then
++if test $si = 0; then
+    { { $as_echo "$as_me:$LINENO: error: \"Cannot find spatialindex. Spatialindex must be installed first (http://trac.gispython.org/spatialindex/)\"" >&5
+ $as_echo "$as_me: error: \"Cannot find spatialindex. Spatialindex must be installed first (http://trac.gispython.org/spatialindex/)\"" >&2;}
+    { (exit 1); exit 1; }; }
+@@ -3951,7 +3951,7 @@
+ 
+ done
+ 
+-if test $si == 0; then
++if test $si = 0; then
+    { { $as_echo "$as_me:$LINENO: error: \"Cannot find GEOS library. GEOS must be installed first (http://trac.osgeo.org/geos/)\"" >&5
+ $as_echo "$as_me: error: \"Cannot find GEOS library. GEOS must be installed first (http://trac.osgeo.org/geos/)\"" >&2;}
+    { (exit 1); exit 1; }; }
