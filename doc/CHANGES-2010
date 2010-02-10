@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.650 2010/02/10 17:35:40 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.651 2010/02/10 17:36:01 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -777,3 +777,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed lang/jbuilder-jit [joerg 2010-02-10]
 	Removed lang/jdk [joerg 2010-02-10]
 	Removed lang/jdk-openjit [joerg 2010-02-10]
+	Removed lang/sun-jdk14 [joerg 2010-02-10]
