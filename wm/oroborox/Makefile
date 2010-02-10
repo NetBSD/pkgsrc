@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2009/08/26 19:58:24 sno Exp $
+# $NetBSD: Makefile,v 1.20 2010/02/10 19:17:47 joerg Exp $
 #
 
 DISTNAME=	OroboROX-0.9.8
 PKGNAME=	oroborox-0.9.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	wm
 MASTER_SITES=	http://roxos.sunsite.dk/dev-contrib/guido/
 EXTRACT_SUFX=	.tar.bz2
