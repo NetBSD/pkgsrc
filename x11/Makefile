@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.611 2010/02/10 17:32:21 joerg Exp $
+# $NetBSD: Makefile,v 1.612 2010/02/10 18:15:29 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -339,7 +339,6 @@ SUBDIR+=	tint2
 SUBDIR+=	tk
 SUBDIR+=	tk-BWidget
 SUBDIR+=	tk-Tix
-SUBDIR+=	tk83
 SUBDIR+=	tkinfo
 SUBDIR+=	tkman
 SUBDIR+=	transset-df
