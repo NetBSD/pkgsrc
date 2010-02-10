@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.660 2010/02/10 18:01:15 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.661 2010/02/10 18:02:11 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -787,3 +787,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed www/php4-apc [joerg 2010-02-10]
 	Removed www/php-FastTemplate [joerg 2010-02-10]
 	Removed databases/php-filepro [joerg 2010-02-10]
+	Removed net/php-yp [joerg 2010-02-10]
