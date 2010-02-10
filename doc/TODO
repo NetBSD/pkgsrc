@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9006 2010/02/10 11:37:32 wiz Exp $
+$NetBSD: TODO,v 1.9007 2010/02/10 12:14:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -1030,7 +1030,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
-	o p5-Audio-Wav-0.07 [pkg/42768]
 	o p5-MailTools-2.06
 	o p5-Spreadsheet-WriteExcel-2.37
 	o p5-ispman-1.2

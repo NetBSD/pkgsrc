@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.612 2010/02/10 11:37:32 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.613 2010/02/10 12:14:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -739,3 +739,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/py-uwsgi version 0.9.4.1 [joerg 2010-02-09]
 	Updated www/ap-ssl to 2.8.31nb2 [dholland 2010-02-10]
 	Updated audio/py-karaoke to 0.7.2 [wiz 2010-02-10]
+	Updated audio/p5-Audio-Wav to 0.08 [obache 2010-02-10]
