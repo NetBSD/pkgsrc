@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/10/11 08:12:07 adam Exp $
+$NetBSD: distinfo,v 1.8 2010/02/10 12:38:42 adam Exp $
 
-SHA1 (wormux-0.8.5.tar.bz2) = abb13b9bbed757196e1d23e0ff45e40f3c03587c
-RMD160 (wormux-0.8.5.tar.bz2) = df4c3979a0c2361a122c23a0d3449abc551e95b8
-Size (wormux-0.8.5.tar.bz2) = 79382498 bytes
+SHA1 (wormux-0.9.0.tar.bz2) = 5298a3dc122c7a0449a06825797a4f08eecf5e71
+RMD160 (wormux-0.9.0.tar.bz2) = ecfc1d347e7090250a6a132a9e327c2c64f400c5
+Size (wormux-0.9.0.tar.bz2) = 76733389 bytes
