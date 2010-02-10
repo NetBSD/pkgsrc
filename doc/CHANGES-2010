@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.667 2010/02/10 23:02:36 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.668 2010/02/10 23:43:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -793,4 +793,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed lang/tcl83 [joerg 2010-02-10]
 	Removed meta-pkgs/php4-extensions [joerg 2010-02-10]
 	Updated lang/swi-prolog-lite to 5.9.7 [asau 2010-02-10]
-	Updated pkgtools/x11-links to 0.46.5.99.24 [wiz 2010-02-10]
+	Updated pkgtools/x11-links to 0.46 [wiz 2010-02-10]
