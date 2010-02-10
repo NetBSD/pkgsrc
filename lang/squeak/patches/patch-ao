@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1 2010/02/10 23:33:09 bad Exp $
+
+--- platforms/unix/config/Makefile.in.orig	2006-04-05 19:40:24.000000000 +0200
++++ platforms/unix/config/Makefile.in	2010-02-08 01:34:56.000000000 +0100
+@@ -52,7 +52,7 @@
+ # VM
+ 
+ $(squeak) : config.sh $(SQLIBS) version.o
+-	$(LINK) $(squeak) $(SQLIBS) version.o $(LIBS) [plibs] vm/vm.a
++	$(LINK) $(squeak) vm/vm.a $(SQLIBS) version.o $(LIBS) [plibs]
+ 	@echo
+ 	@size $(squeak)
+ 	@echo
+@@ -123,7 +123,7 @@
+ 
+ NPSqueak : config.sh $(SQLIBS) version.o $(NPOBJS)
+ 	gcc -bundle -flat_namespace -undefined suppress -o NPSqueak \
+-	  $(NPLIBS) $(SQLIBS) version.o $(LIBS)  vm/vm.a
++	  $(NPLIBS) vm/vm.a $(SQLIBS) version.o $(LIBS) 
+ 
+ # manual page
+ 
