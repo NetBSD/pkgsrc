@@ -1,0 +1,25 @@
+$NetBSD: patch-ap,v 1.1 2010/02/10 23:33:09 bad Exp $
+
+--- platforms/unix/npsqueak/MakefileMakefile.orig	2006-10-10 21:01:44.000000000 +0200
++++ platforms/unix/npsqueak/MakefileMakefile	2010-02-11 00:13:25.000000000 +0100
+@@ -5,9 +5,9 @@
+ ############ Customize flags here #######################
+ 
+ INC	= -I./include -I/usr/X11R6/include
+-CC	= gcc
++CC	= cc
+ CFLAGS	= $(INC) -O2 -fPIC -Wall
+-LD	= gcc
++LD	= cc
+ LDFLAGS = 
+ 
+ # usually overridden from top level makefile
+@@ -26,7 +26,7 @@
+ 
+ npsqueak.so : npsqueak.la 
+ 	-@rm -f $@ 
+-	ln .libs/npsqueak $@ 
++	ln .libs/npsqueak.so $@ 
+ 
+ npsqueak.la : npsqueak.lo npunix.lo 
+ 	../libtool --mode=link $(LD) $(LDFLAGS) npsqueak.lo npunix.lo -avoid-version -module -rpath $(plgdir) -o $@

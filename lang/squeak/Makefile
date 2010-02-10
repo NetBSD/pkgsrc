@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/05/08 06:35:51 hasso Exp $
+# $NetBSD: Makefile,v 1.40 2010/02/10 23:33:09 bad Exp $
 #
 
 DISTNAME=	Squeak-3.9-8
@@ -27,6 +27,7 @@ BUILD_DIRS=		${WRKDIR}/build
 CONFIGURE_DIRS=		${WRKDIR}/build
 CONFIGURE_SCRIPT=	${WRKSRC}/platforms/unix/config/configure
 OVERRIDE_DIRDEPTH=	3
+LIBTOOL_OVERRIDE=	${BUILD_DIRS}/libtool
 DIST_SUBDIR=		squeak
 
 SQUEAK_CHANGES= Squeak3.9-final-7067/Squeak3.9-final-7067.changes.gz
