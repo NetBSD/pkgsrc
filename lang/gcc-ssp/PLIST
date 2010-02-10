@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:03:32 joerg Exp $
-${GCC_PREFIX}/info/chill.info
-${GCC_PREFIX}/info/cpp.info
-${GCC_PREFIX}/info/g77.info
-${GCC_PREFIX}/info/gcc.info
-share/examples/${PKGNAME}/mk.conf
