@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/10/20 18:21:51 wiz Exp $
-
-SHA1 (jdk1.1.8-rc1.tgz) = 3589187dedd270278d5a5faf23619e5c134bb471
-RMD160 (jdk1.1.8-rc1.tgz) = 24e08582dbfff71ecce4ee5d023d4075a35c8ec0
-Size (jdk1.1.8-rc1.tgz) = 12080592 bytes
-SHA1 (jdk1.1.8-rc1-elf.tgz) = 88483693d388887daf7e6568af924a8ef565c48e
-RMD160 (jdk1.1.8-rc1-elf.tgz) = 359ec18dea052e2bdf5f3dcd308aefe019469c23
-Size (jdk1.1.8-rc1-elf.tgz) = 9930832 bytes
-SHA1 (patch-aa) = 43b5e49ecaf3e4c4a4e3bf48f6e1e5a2d814042c

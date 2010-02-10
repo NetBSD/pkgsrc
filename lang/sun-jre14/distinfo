@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.26 2009/06/25 11:43:41 obache Exp $
-
-SHA1 (j2re-1_4_2_19-linux-i586.bin) = 7b230633bf6eaf3581f69d668542431c5833184a
-RMD160 (j2re-1_4_2_19-linux-i586.bin) = 54b15f0ea03c7cb7e35b91fe8a6269e21a0d39b2
-Size (j2re-1_4_2_19-linux-i586.bin) = 14384815 bytes
-SHA1 (jce_policy-1_4_2.zip) = ea17b649ebcaaf4246e9dd28dbc77926176c64ee
-RMD160 (jce_policy-1_4_2.zip) = 323340fa8a96f315a35b0ebc918731e6fe56c370
-Size (jce_policy-1_4_2.zip) = 12195 bytes
