@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/03/26 21:37:12 veego Exp $
-
-SHA1 (VMware-workstation-3.2.1-2242.tar.gz) = 3f3c8539270707087525e220264a38639bf17547
-RMD160 (VMware-workstation-3.2.1-2242.tar.gz) = f2a6c3cc38f3c3851446e8902237b958367293a1
-Size (VMware-workstation-3.2.1-2242.tar.gz) = 12577292 bytes
-SHA1 (vmware-any-any-update99.tar.gz) = ac2a6621fdaacfe40422d71fe27d567826635dd7
-RMD160 (vmware-any-any-update99.tar.gz) = e22e0530d248dde2922283683573eaa02cdbc567
-Size (vmware-any-any-update99.tar.gz) = 296093 bytes
-SHA1 (patch-aa) = 85d8d8da295c3cfb733b93f32bd2b6f6a25d13ac
