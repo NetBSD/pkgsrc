@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.314 2010/01/21 12:56:27 adam Exp $
+# $NetBSD: Makefile,v 1.315 2010/02/10 17:09:11 joerg Exp $
 #
 
 COMMENT=	Databases
@@ -184,7 +184,6 @@ SUBDIR+=	php-oracle
 SUBDIR+=	php-pdo
 SUBDIR+=	php-pdo_dblib
 SUBDIR+=	php-pdo_mysql
-SUBDIR+=	php-pdo_odbc
 SUBDIR+=	php-pdo_pgsql
 SUBDIR+=	php-pdo_sqlite
 SUBDIR+=	php-pgsql
