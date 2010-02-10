@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.620 2010/02/10 16:55:11 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.621 2010/02/10 16:55:30 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -747,3 +747,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed sysutils/fdgw [joerg 2010-02-10]
 	Removed sysutils/xraidadmin [joerg 2010-02-10]
 	Removed net/isc-dhclient [joerg 2010-02-10]
+	Removed net/isc-dhcp [joerg 2010-02-10]
