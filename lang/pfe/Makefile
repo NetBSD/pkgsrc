@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/15 14:17:44 asau Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/10 19:17:40 joerg Exp $
 
 DISTNAME=	pfe-0.33.71
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pfe/}
 EXTRACT_SUFX=	.tar.bz2
