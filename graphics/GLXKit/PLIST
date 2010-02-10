@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/07/07 05:46:52 joerg Exp $
-System/Library/Headers/GLXKit/G3DGLXCamera.h
-System/Library/Headers/GLXKit/G3DGLXKit.h
-System/Library/Headers/GLXKit/G3DXEventHandler.h
-System/Library/Libraries/libGLXKit.so
-System/Library/Libraries/libGLXKit.so.0.0.1
