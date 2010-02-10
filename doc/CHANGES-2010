@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.611 2010/02/10 03:56:00 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.612 2010/02/10 11:37:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -738,3 +738,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added mail/p5-Mail-Alias version 1.12 [seb 2010-02-09]
 	Added www/py-uwsgi version 0.9.4.1 [joerg 2010-02-09]
 	Updated www/ap-ssl to 2.8.31nb2 [dholland 2010-02-10]
+	Updated audio/py-karaoke to 0.7.2 [wiz 2010-02-10]
