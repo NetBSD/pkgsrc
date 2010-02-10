@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:03:08 agc Exp $
-
-SHA1 (OpenJIT-1.1.16.tar.gz) = fbe44c43db12f57b7f39b3f3f6f604f7a5486aee
-RMD160 (OpenJIT-1.1.16.tar.gz) = 30fb625c4908722451104f9e1bdef09b2532e703
-Size (OpenJIT-1.1.16.tar.gz) = 139609 bytes
-SHA1 (patch-aa) = 39caec6dfca4a595514824d19d891bb0ede04ea1
-SHA1 (patch-ab) = 6e458ac6b29fb3e11b35efcfca9f12b694641b6c
-SHA1 (patch-ac) = 37e247f4a55c03f79380254c54cdf89487b2f8f9
