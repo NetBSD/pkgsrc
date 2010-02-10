@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.618 2010/02/10 16:47:53 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.619 2010/02/10 16:53:24 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -745,3 +745,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/wormux to 0.9.0 [adam 2010-02-10]
 	Updated graphics/p5-Image-ExifTool to 8.10 [gdt 2010-02-10]
 	Removed sysutils/fdgw [joerg 2010-02-10]
+	Removed sysutils/xraidadmin [joerg 2010-02-10]
