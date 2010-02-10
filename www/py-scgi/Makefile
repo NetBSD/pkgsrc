@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/03/07 21:31:08 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/10 21:10:25 joerg Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,7 +9,6 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 DEPENDS+=	${PYPKGPREFIX}-quixote-[0-9]*:../../devel/py-quixote
 
-PYTHON_VERSIONS_ACCEPTED= 25 24 # 26
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
 .include "../../lang/python/extension.mk"
