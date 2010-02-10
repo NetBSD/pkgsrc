@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.798 2010/02/10 17:13:02 joerg Exp $
+# $NetBSD: Makefile,v 1.799 2010/02/10 17:32:17 joerg Exp $
 #
 
 COMMENT=	Networking tools
@@ -35,7 +35,6 @@ SUBDIR+=	balance
 SUBDIR+=	barnyard
 SUBDIR+=	batchftp
 SUBDIR+=	bftpd
-SUBDIR+=	bind9
 SUBDIR+=	bind95
 SUBDIR+=	bind96
 SUBDIR+=	bing
@@ -111,7 +110,6 @@ SUBDIR+=	fair-identd
 SUBDIR+=	fetch
 SUBDIR+=	filezilla
 SUBDIR+=	firewalk
-SUBDIR+=	flan
 SUBDIR+=	flodo
 SUBDIR+=	flow-tools
 SUBDIR+=	fmirror
