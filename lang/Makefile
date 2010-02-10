@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2010/02/10 17:34:57 joerg Exp $
+# $NetBSD: Makefile,v 1.285 2010/02/10 17:42:31 joerg Exp $
 #
 
 COMMENT=	Programming languages
@@ -72,8 +72,6 @@ SUBDIR+=	japhar
 SUBDIR+=	jasmin
 SUBDIR+=	java-lang-spec
 SUBDIR+=	java-vm-spec
-SUBDIR+=	jdk
-SUBDIR+=	jdk-openjit
 SUBDIR+=	jikes
 SUBDIR+=	jini
 SUBDIR+=	joos
@@ -163,11 +161,7 @@ SUBDIR+=	squeak
 SUBDIR+=	sr
 SUBDIR+=	sr-examples
 SUBDIR+=	stalin
-SUBDIR+=	sun-jdk14
-SUBDIR+=	sun-jdk15
 SUBDIR+=	sun-jdk6
-SUBDIR+=	sun-jre14
-SUBDIR+=	sun-jre15
 SUBDIR+=	sun-jre6
 SUBDIR+=	swi-prolog
 SUBDIR+=	swi-prolog-lite
