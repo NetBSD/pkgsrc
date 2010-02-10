@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/09 22:34:26 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/10 13:25:03 joerg Exp $
 #
 
 DISTNAME=	uwsgi-0.9.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://projects.unbit.it/downloads/
 
@@ -15,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 LICENSE=		gnu-gpl-v2
 
 CFLAGS.python=		${PYTHONCONFIG} --cflags
-LDFLAGS.python=		${PYTHONCONFIG} --ldflags --libs
+LDFLAGS.python=		${PYTHONCONFIG} --ldflags
 CFLAGS.libxml2=		xml2-config --cflags
 LDFLAGS.libxml2=	xml2-config --libs
 
@@ -23,6 +24,9 @@ INSTALLATION_DIRS+=	bin
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
+.include "../../mk/bsd.prefs.mk"
+
+LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib
 do-build:
 	cd ${WRKSRC} && \
 	    ${CC} -o uwsgi ${CFLAGS} ${CFLAGS.python:sh} ${CFLAGS.libxml2:sh} \
