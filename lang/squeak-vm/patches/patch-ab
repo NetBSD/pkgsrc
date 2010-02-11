@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/02/11 00:58:19 asau Exp $
+
+Use proper OSS library.
+Use proper audio device.
+
+--- unix/vm-sound-OSS/config.cmake.orig	2009-08-26 22:44:21.000000000 +0400
++++ unix/vm-sound-OSS/config.cmake	2010-01-24 06:10:44.000000000 +0300
+@@ -1,2 +1,2 @@
+-PLUGIN_REQUIRE_INCLUDE (ALSA_SOUNDLIB alsa/asoundlib.h)
+-PLUGIN_REQUIRE_LIBRARY (ASOUND asound)
++PLUGIN_REQUIRE_LIBRARY (ASOUND ossaudio)
++PLUGIN_DEFINITIONS (-DDEVOSSAUDIO=\"${DEVOSSAUDIO}\")
