@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2007/07/04 20:54:50 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2010/02/11 22:14:26 joerg Exp $
 
 DISTNAME=		mydns-1.1.0
 CATEGORIES=		net
@@ -34,10 +34,11 @@ RCD_SCRIPTS=		mydns
 PKG_GROUPS=		${MYDNS_GROUP}
 PKG_USERS=		${MYDNS_USER}:${MYDNS_GROUP}
 
+INSTALLATION_DIRS+=	${EGDIR}
+
 post-install:
-		${INSTALL_DATA_DIR} ${EGDIR}
-		${WRKSRC}/src/mydns/mydns --dump-config > ${EGDIR}/mydns.conf
-		${CHMOD} 0600 ${EGDIR}/mydns.conf
+	${WRKSRC}/src/mydns/mydns --dump-config > ${DESTDIR}${EGDIR}/mydns.conf
+	${CHMOD} 0600 ${DESTDIR}${EGDIR}/mydns.conf
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
