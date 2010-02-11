@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/02/11 22:05:00 joerg Exp $
 #
 
 DISTNAME=		llnlxdir2_1_2
@@ -12,13 +12,15 @@ MAINTAINER=		tor@stormwall.org
 HOMEPAGE=		http://www.llnl.gov/icc/sdd/img/xdir.html
 COMMENT=		Advanced graphical FTP client
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/llnlxdir2_1_2/sources
 INSTALLATION_DIRS=	bin lib/X11/app-defaults
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xdir ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/XDir.ad ${PREFIX}/lib/X11/app-defaults/XDir
+	${INSTALL_PROGRAM} ${WRKSRC}/xdir ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/XDir.ad ${DESTDIR}${PREFIX}/lib/X11/app-defaults/XDir
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"

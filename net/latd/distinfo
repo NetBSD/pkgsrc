@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.5 2007/01/27 10:33:25 wiz Exp $
+$NetBSD: distinfo,v 1.6 2010/02/11 22:04:14 joerg Exp $
 
 SHA1 (latd-1.18.tar.gz) = a7cecdb97507f485e726ea4c2fef0a59ad3adbae
 RMD160 (latd-1.18.tar.gz) = a0be3bd71b76c6a07c47fc2ad863526303d365bf
 Size (latd-1.18.tar.gz) = 233882 bytes
 SHA1 (patch-aa) = 70e2a543f471c9a818bfbe138137920d605d5aa9
 SHA1 (patch-ab) = 8729c74907ac9ea077e9ddf1131cc4af6ecedcc7
-SHA1 (patch-ac) = adbe7b78bce30b6fbf540a18922ddb073cfccf0c
+SHA1 (patch-ac) = c078151ba47ef878937e9cf818a3d0ad6dd3be7b
 SHA1 (patch-ad) = f606a87bf3dff0571db3ededc6889e31f2012397
 SHA1 (patch-ae) = 931842733d2166c0fd29b5f0d0772c44f1d79fd3
 SHA1 (patch-af) = 3b2f723ec163d925dee42b7d6597f8219ebe22df
