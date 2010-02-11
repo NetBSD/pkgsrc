@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.339 2010/02/09 18:54:22 minskim Exp $
+# $NetBSD: Makefile,v 1.340 2010/02/11 19:03:11 jnemeth Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -172,8 +172,8 @@ SUBDIR+=	tex-draftwatermark
 SUBDIR+=	tex-dvipdfm
 SUBDIR+=	tex-dvipdfm-doc
 SUBDIR+=	tex-dvipdfmx
-SUBDIR+=	tex-dvipdfmx-doc
 SUBDIR+=	tex-dvipdfmx-def
+SUBDIR+=	tex-dvipdfmx-doc
 SUBDIR+=	tex-dvips
 SUBDIR+=	tex-dvips-doc
 SUBDIR+=	tex-elsarticle
