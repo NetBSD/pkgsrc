@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2007/12/20 20:29:37 christos Exp $
+$NetBSD: patch-aa,v 1.3 2010/02/11 22:52:52 joerg Exp $
 
 --- Makefile.orig	2007-12-20 15:16:34.000000000 -0500
 +++ Makefile	2007-12-20 15:21:40.000000000 -0500
@@ -20,9 +20,9 @@ $NetBSD: patch-aa,v 1.2 2007/12/20 20:29:37 christos Exp $
 -	install -cs -m 555 -o bin -g bin ${PROGRAMS} ${NETBSD_BINDIR}
 -	install -c -m 444 -o bin -g bin ${MAN1} ${NETBSD_MAN1}
 -	install -c -m 444 -o bin -g bin ${MAN8} ${NETBSD_MAN8}
-+	${BSD_INSTALL_PROGRAM} ${PROGRAMS} ${NETBSD_BINDIR}
-+	${BSD_INSTALL_MAN} ${MAN1} ${NETBSD_MAN1}
-+	${BSD_INSTALL_MAN} ${MAN8} ${NETBSD_MAN8}
++	${BSD_INSTALL_PROGRAM} ${PROGRAMS} ${DESTDIR}${NETBSD_BINDIR}
++	${BSD_INSTALL_MAN} ${MAN1} ${DESTDIR}${NETBSD_MAN1}
++	${BSD_INSTALL_MAN} ${MAN8} ${DESTDIR}${NETBSD_MAN8}
  
  netcrypt.c:
  	@echo "[ Using netcryptvoid.c ]"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/01/07 09:14:06 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2010/02/11 22:47:49 joerg Exp $
 #
 
 DISTNAME=		sniffit.0.3.5
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://reptile.rug.ac.be/~coder/sniffit/sniffit.html
 COMMENT=		Packet sniffer program
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 loss
 
 GNU_CONFIGURE=		YES
@@ -18,9 +20,9 @@ BUILD_TARGET=
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sniffit ${PREFIX}/sbin/sniffit
-	${INSTALL_MAN}     ${WRKSRC}/sniffit.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN}     ${WRKSRC}/sniffit.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/sniffit ${DESTDIR}${PREFIX}/sbin/sniffit
+	${INSTALL_MAN}     ${WRKSRC}/sniffit.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN}     ${WRKSRC}/sniffit.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
