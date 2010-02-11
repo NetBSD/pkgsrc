@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.699 2010/02/10 18:08:33 joerg Exp $
+# $NetBSD: Makefile,v 1.700 2010/02/11 12:27:07 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -436,7 +436,6 @@ SUBDIR+=	pear-HTML_Select
 SUBDIR+=	pear-HTML_TreeMenu
 SUBDIR+=	pear-HTTP
 SUBDIR+=	pear-HTTP_Request
-SUBDIR+=	php-FastTemplate
 SUBDIR+=	php-apc
 SUBDIR+=	php-curl
 SUBDIR+=	php-eaccelerator
