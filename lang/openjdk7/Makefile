@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/02/02 23:12:53 jmcneill Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/11 09:44:26 tnn Exp $
 
 DISTNAME=	openjdk-7-ea-src-b78-17_dec_2009
 PKGNAME=	openjdk7-1.7.0.78.20100102
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tnn@NetBSD.org
+OWNER=		tnn@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
 COMMENT=	Open-source implementation of the Java Platform, Standard Edition
 
