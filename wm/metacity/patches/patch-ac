@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2010/02/11 18:19:13 drochner Exp $
+
+--- src/core/delete.c.orig	2010-01-26 11:11:27.000000000 +0000
++++ src/core/delete.c
+@@ -38,6 +38,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <sys/wait.h>
+ 
+ static void meta_window_present_delete_dialog (MetaWindow *window,
+                                                guint32     timestamp);

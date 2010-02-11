@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2009/10/22 17:33:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.32 2010/02/11 18:19:13 drochner Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -12,9 +12,9 @@ include/metacity-1/metacity-private/theme.h
 include/metacity-1/metacity-private/util.h
 lib/libmetacity-private.la
 lib/pkgconfig/libmetacity-private.pc
+man/man1/metacity-message.1
 man/man1/metacity-theme-viewer.1
 man/man1/metacity-window-demo.1
-man/man1/metacity-message.1
 man/man1/metacity.1
 share/applications/metacity.desktop
 share/gconf/schemas/metacity.schemas
@@ -36,12 +36,14 @@ share/locale/br/LC_MESSAGES/metacity.mo
 share/locale/bs/LC_MESSAGES/metacity.mo
 share/locale/ca/LC_MESSAGES/metacity.mo
 share/locale/ca@valencia/LC_MESSAGES/metacity.mo
+share/locale/crh/LC_MESSAGES/metacity.mo
 share/locale/cs/LC_MESSAGES/metacity.mo
 share/locale/cy/LC_MESSAGES/metacity.mo
 share/locale/da/LC_MESSAGES/metacity.mo
 share/locale/de/LC_MESSAGES/metacity.mo
 share/locale/dz/LC_MESSAGES/metacity.mo
 share/locale/el/LC_MESSAGES/metacity.mo
+share/locale/en@shaw/LC_MESSAGES/metacity.mo
 share/locale/en_CA/LC_MESSAGES/metacity.mo
 share/locale/en_GB/LC_MESSAGES/metacity.mo
 share/locale/es/LC_MESSAGES/metacity.mo
