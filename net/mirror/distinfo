@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:13:52 agc Exp $
+$NetBSD: distinfo,v 1.5 2010/02/11 22:08:58 joerg Exp $
 
 SHA1 (mirror-2.9.tar.gz) = 7a4f7a395cfff06be04a449a050b32e2c055e6c4
 RMD160 (mirror-2.9.tar.gz) = 2896ba289e182a8be09c50b7d1de8510d9caf188
 Size (mirror-2.9.tar.gz) = 123194 bytes
-SHA1 (patch-aa) = 5b88f78a7bfa3b4e9f0905efcac2e813ac0eeae2
+SHA1 (patch-aa) = 04ba59e036a946eeff5c1a8cea08465c21a92dd8
 SHA1 (patch-ab) = 09045d218a86890f95e381f355fa61c3dfc34ef0
 SHA1 (patch-ac) = 5dd115284903102cf1f83de57d2aacdf9addf2f7
 SHA1 (patch-ad) = 24b9dd4124756d2c058309e306da0ca022719ac6

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2003/10/21 20:55:42 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2010/02/11 22:04:14 joerg Exp $
 
 --- Makefile.in.orig	2003-10-20 19:18:37.000000000 +0200
 +++ Makefile.in	2003-10-20 19:20:20.000000000 +0200
@@ -7,14 +7,14 @@ $NetBSD: patch-ac,v 1.1 2003/10/21 20:55:42 xtraeme Exp $
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
 -	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
-+	$(mkinstalldirs) $(PREFIX)/share/examples/latd
++	$(mkinstalldirs) ${DESTDIR}$(PREFIX)/share/examples/latd
  	@list='$(sysconf_DATA)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
  	  f="`echo $$p | sed -e 's|^.*/||'`"; \
 -	  echo " $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f"; \
 -	  $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f; \
 +	  echo " $(sysconfDATA_INSTALL) $$d$$p $(PREFIX)/share/examples/latd/$$f"; \
-+	  $(sysconfDATA_INSTALL) $$d$$p $(PREFIX)/share/examples/latd/$$f; \
++	  $(sysconfDATA_INSTALL) $$d$$p ${DESTDIR}$(PREFIX)/share/examples/latd/$$f; \
  	done
  
  uninstall-sysconfDATA:

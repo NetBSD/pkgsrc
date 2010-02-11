@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2004/01/27 14:06:46 grant Exp $
+$NetBSD: patch-aa,v 1.7 2010/02/11 22:08:58 joerg Exp $
 
 --- makefile.orig	1998-06-02 04:28:47.000000000 +1000
 +++ makefile
@@ -19,13 +19,13 @@ $NetBSD: patch-aa,v 1.6 2004/01/27 14:06:46 grant Exp $
 +GRP = bin
  # directory to install .pl (perl library) files
 -PLDIR = /usr/local/perl5/lib/perl5
-+PLDIR = ${PREFIX}/lib/mirror
++PLDIR = ${DESTDIR}${PREFIX}/lib/mirror
  # directory to install public executables
 -BINDIR = /usr/local/sbin
-+BINDIR = ${PREFIX}/bin
++BINDIR = ${DESTDIR}${PREFIX}/bin
  # directory to install man pages
 -MANDIR = /usr/local/man/man1
-+MANDIR = ${PREFIX}/man/man1
++MANDIR = ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
  
  install:
 -	install -m $(PLMODE) -g $(GRP) lchat.pl $(PLDIR)
