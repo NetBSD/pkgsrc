@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/24 01:03:12 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/02/11 20:49:10 minskim Exp $
 
-SHA1 (tex-ifxetex-doc-0.5/ifxetex.doc.tar.lzma) = 94171cf40187836875eef5f13a40672e328ce393
-RMD160 (tex-ifxetex-doc-0.5/ifxetex.doc.tar.lzma) = f809e8200ff817bcfdcb9d80aa6e6e0a4b11aaed
-Size (tex-ifxetex-doc-0.5/ifxetex.doc.tar.lzma) = 56609 bytes
+SHA1 (tex-ifxetex-doc-0.5/ifxetex.doc.tar.xz) = 320a991328080460c5e82fd6e7db5c71feb40c8a
+RMD160 (tex-ifxetex-doc-0.5/ifxetex.doc.tar.xz) = e94f34033cd77b34bb675e3245782e6216b0e5c8
+Size (tex-ifxetex-doc-0.5/ifxetex.doc.tar.xz) = 56680 bytes
