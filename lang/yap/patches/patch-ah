@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2010/02/11 20:43:49 asau Exp $
+
+--- library/system/sys.c.orig	2008-05-23 17:16:13.000000000 +0400
++++ library/system/sys.c	2009-04-20 13:00:04.000000000 +0400
+@@ -97,6 +97,10 @@
+ #if HAVE_TIME_H
+ #include <time.h>
+ #endif
++#if !HAVE_DAYLIGHT
++time_t _daylight_() { time_t t = time(NULL); return localtime(&t)->tm_gmtoff; }
++#define daylight _daylight_()
++#endif
+ #if HAVE_SYS_TYPES_H
+ #include <sys/types.h>
+ #endif
