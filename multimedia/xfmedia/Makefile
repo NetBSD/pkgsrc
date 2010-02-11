@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/10/07 15:46:47 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2010/02/11 20:20:38 joerg Exp $
 #
 
 DISTNAME=		xfmedia-0.9.2
@@ -12,6 +12,8 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://spuriousinterrupt.org/projects/xfmedia/
 COMMENT=		Xfce media player based on xine
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -24,7 +26,7 @@ CONF_FILES=	${PREFIX}/share/xfmedia/keybindings.rc \
 
 post-install:
 	${INSTALL} ${WRKSRC}/src/keybindings.rc \
-	    ${PREFIX}/share/xfmedia/keybindings.rc
+	    ${DESTDIR}${PREFIX}/share/xfmedia/keybindings.rc
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
