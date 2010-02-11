@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.8 2010/01/26 12:15:26 tron Exp $
+$NetBSD: patch-am,v 1.9 2010/02/11 15:29:41 joerg Exp $
 
 Disabled modules for normal build:
 bsdddb
@@ -236,7 +236,22 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -1300,6 +1146,14 @@ class PyBuildExt(build_ext):
+@@ -1036,14 +882,6 @@ class PyBuildExt(build_ext):
+                         libraries = gdbm_libs ) )
+                 else:
+                     missing.append('dbm')
+-            elif db_incs is not None:
+-                exts.append( Extension('dbm', ['dbmmodule.c'],
+-                                       library_dirs=dblib_dir,
+-                                       runtime_library_dirs=dblib_dir,
+-                                       include_dirs=db_incs,
+-                                       define_macros=[('HAVE_BERKDB_H',None),
+-                                                      ('DB_DBM_HSEARCH',None)],
+-                                       libraries=dblibs))
+             else:
+                 missing.append('dbm')
+ 
+@@ -1300,6 +1138,14 @@ class PyBuildExt(build_ext):
                  )
              libraries = []
  
@@ -251,7 +266,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          else:                                   # Linux and other unices
              macros = dict(
                  HAVE_SEM_OPEN=1,
-@@ -1900,9 +1754,9 @@ def main():
+@@ -1900,9 +1746,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
