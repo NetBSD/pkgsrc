@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/07/17 18:00:20 adrianp Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/11 22:24:43 joerg Exp $
 
 DISTNAME=	oinkmaster-2.0
 CATEGORIES=	net
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oinkmaster/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oinkmaster.sourceforge.net/
 COMMENT=	Manage snort rule updates
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	snort{,-mysql,-pgsql}-[0-9]*:../../net/snort
 
@@ -32,29 +34,28 @@ SUBST_SED.pub=		-e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g"
 SUBST_SED.pub+=		-e "s|/usr/local|${PREFIX}|g"
 SUBST_MESSAGE.pub=	Fixing harcoded paths.
 
-INSTALLATION_DIRS=	bin share/snort/rules
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 \
+			share/doc/oinkmaster share/examples/oinkmaster \
+			share/snort/rules
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/oinkmaster
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/oinkmaster
-
 .	for f in ${DOCS}
-		${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}/${f}
+		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
 .	endfor
 
-	${INSTALL_DATA} ${WRKSRC}/oinkmaster.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/template-examples.conf ${EGDIR}
-	${INSTALL_MAN} ${WRKSRC}/oinkmaster.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_SCRIPT} ${WRKSRC}/oinkmaster.pl ${PREFIX}/bin/oinkmaster
+	${INSTALL_DATA} ${WRKSRC}/oinkmaster.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/template-examples.conf ${DESTDIR}${EGDIR}
+	${INSTALL_MAN} ${WRKSRC}/oinkmaster.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/oinkmaster.pl ${DESTDIR}${PREFIX}/bin/oinkmaster
 	${LN} -s ${PKG_SYSCONFDIR}/classification.config \
-		${PREFIX}/share/snort/rules/classification.config
+	    ${DESTDIR}${PREFIX}/share/snort/rules/classification.config
 	${LN} -s ${PKG_SYSCONFDIR}/reference.config \
-		${PREFIX}/share/snort/rules/reference.config
+	    ${DESTDIR}${PREFIX}/share/snort/rules/reference.config
 	${LN} -s ${PKG_SYSCONFDIR}/gen-msg.map \
-		${PREFIX}/share/snort/rules/gen-msg.map
+	    ${DESTDIR}${PREFIX}/share/snort/rules/gen-msg.map
 	${LN} -s ${PKG_SYSCONFDIR}/sid-msg.map \
-		${PREFIX}/share/snort/rules/sid-msg.map
+	    ${DESTDIR}${PREFIX}/share/snort/rules/sid-msg.map
 	${LN} -s ${PKG_SYSCONFDIR}/unicode.map \
-		${PREFIX}/share/snort/rules/unicode.map
+	    ${DESTDIR}${PREFIX}/share/snort/rules/unicode.map
 
 .include "../../mk/bsd.pkg.mk"
