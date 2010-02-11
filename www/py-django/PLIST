@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/02/10 19:30:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/02/11 13:37:44 joerg Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -1863,6 +1863,24 @@ ${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.pyo
 ${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/validation.py
 ${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/validation.pyc
 ${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/validation.pyo
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/__init__.py
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/__init__.pyc
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/__init__.pyo
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/base.py
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/base.pyc
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/base.pyo
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/client.py
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/client.pyc
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/client.pyo
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/creation.py
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/creation.pyc
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/creation.pyo
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/introspection.py
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/introspection.pyc
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/introspection.pyo
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/query.py
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/query.pyc
+${PLIST.oracle}${PYSITELIB}/django/db/backends/oracle/query.pyo
 ${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql/__init__.py
 ${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql/__init__.pyc
 ${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql/__init__.pyo
