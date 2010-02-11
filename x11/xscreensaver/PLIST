@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2009/06/14 18:25:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.36 2010/02/11 18:16:21 drochner Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -129,8 +129,6 @@ libexec/xscreensaver/config/halftone.xml
 libexec/xscreensaver/config/halo.xml
 libexec/xscreensaver/config/helix.xml
 libexec/xscreensaver/config/hopalong.xml
-libexec/xscreensaver/config/hyperball.xml
-libexec/xscreensaver/config/hypercube.xml
 libexec/xscreensaver/config/hypertorus.xml
 libexec/xscreensaver/config/hypnowheel.xml
 libexec/xscreensaver/config/ifs.xml
@@ -140,7 +138,6 @@ libexec/xscreensaver/config/interference.xml
 libexec/xscreensaver/config/intermomentary.xml
 libexec/xscreensaver/config/jigglypuff.xml
 libexec/xscreensaver/config/jigsaw.xml
-libexec/xscreensaver/config/juggle.xml
 libexec/xscreensaver/config/juggler3d.xml
 libexec/xscreensaver/config/julia.xml
 libexec/xscreensaver/config/kaleidescope.xml
@@ -194,6 +191,7 @@ libexec/xscreensaver/config/rocks.xml
 libexec/xscreensaver/config/rorschach.xml
 libexec/xscreensaver/config/rotzoomer.xml
 libexec/xscreensaver/config/rubik.xml
+libexec/xscreensaver/config/rubikblocks.xml
 libexec/xscreensaver/config/sballs.xml
 libexec/xscreensaver/config/shadebobs.xml
 libexec/xscreensaver/config/sierpinski.xml
@@ -214,6 +212,7 @@ libexec/xscreensaver/config/stonerview.xml
 libexec/xscreensaver/config/strange.xml
 libexec/xscreensaver/config/substrate.xml
 libexec/xscreensaver/config/superquadrics.xml
+libexec/xscreensaver/config/surfaces.xml
 libexec/xscreensaver/config/swirl.xml
 libexec/xscreensaver/config/tangram.xml
 libexec/xscreensaver/config/thornbird.xml
@@ -293,8 +292,6 @@ libexec/xscreensaver/halftone
 libexec/xscreensaver/halo
 libexec/xscreensaver/helix
 libexec/xscreensaver/hopalong
-libexec/xscreensaver/hyperball
-libexec/xscreensaver/hypercube
 libexec/xscreensaver/hypertorus
 libexec/xscreensaver/hypnowheel
 libexec/xscreensaver/ifs
@@ -304,7 +301,6 @@ libexec/xscreensaver/interference
 libexec/xscreensaver/intermomentary
 libexec/xscreensaver/jigglypuff
 libexec/xscreensaver/jigsaw
-libexec/xscreensaver/juggle
 libexec/xscreensaver/juggler3d
 libexec/xscreensaver/julia
 libexec/xscreensaver/kaleidescope
@@ -359,6 +355,7 @@ libexec/xscreensaver/rocks
 libexec/xscreensaver/rorschach
 libexec/xscreensaver/rotzoomer
 libexec/xscreensaver/rubik
+libexec/xscreensaver/rubikblocks
 libexec/xscreensaver/sballs
 libexec/xscreensaver/shadebobs
 libexec/xscreensaver/sierpinski
@@ -379,6 +376,7 @@ libexec/xscreensaver/stonerview
 libexec/xscreensaver/strange
 libexec/xscreensaver/substrate
 libexec/xscreensaver/superquadrics
+libexec/xscreensaver/surfaces
 libexec/xscreensaver/swirl
 libexec/xscreensaver/tangram
 libexec/xscreensaver/thornbird
@@ -496,8 +494,6 @@ man/man6/halftone.6
 man/man6/halo.6
 man/man6/helix.6
 man/man6/hopalong.6
-man/man6/hyperball.6
-man/man6/hypercube.6
 man/man6/hypertorus.6
 man/man6/hypnowheel.6
 man/man6/ifs.6
@@ -507,7 +503,6 @@ man/man6/interference.6
 man/man6/intermomentary.6
 man/man6/jigglypuff.6
 man/man6/jigsaw.6
-man/man6/juggle.6
 man/man6/juggler3d.6
 man/man6/julia.6
 man/man6/kaleidescope.6
@@ -560,6 +555,7 @@ man/man6/rocks.6
 man/man6/rorschach.6
 man/man6/rotzoomer.6
 man/man6/rubik.6
+man/man6/rubikblocks.6
 man/man6/sballs.6
 man/man6/shadebobs.6
 man/man6/sierpinski.6
@@ -580,6 +576,7 @@ man/man6/stonerview.6
 man/man6/strange.6
 man/man6/substrate.6
 man/man6/superquadrics.6
+man/man6/surfaces.6
 man/man6/swirl.6
 man/man6/tangram.6
 man/man6/thornbird.6
