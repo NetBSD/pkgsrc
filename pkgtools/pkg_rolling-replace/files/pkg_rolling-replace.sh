@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.27 2010/02/11 12:17:23 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.28 2010/02/11 12:54:27 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -287,7 +287,7 @@ abort()
 
 error()
 {
-    if [ -n "$opt_k" ]; then
+    if [ -z "$opt_k" ]; then
         abort "$1"
     fi
     echo "*** $1"
