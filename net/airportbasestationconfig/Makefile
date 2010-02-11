@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/05/25 14:45:17 tron Exp $
+# $NetBSD: Makefile,v 1.35 2010/02/11 20:21:50 joerg Exp $
 
 DISTNAME=	configurator_152-128
 PKGNAME=	${BINNAME}-1.5.2
@@ -23,7 +23,7 @@ LIBDIR=		${PREFIX}/lib/${BINNAME}
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 sun-jdk15 blackdown-jdk13 jdk14
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${DOCDIR} ${LIBDIR}
 
 post-extract:
 	${CHMOD} -R g-w,o-w ${WRKSRC}/*
@@ -38,15 +38,14 @@ do-build:
 	${ECHO} "exec java -jar ${LIBDIR}/${JARNAME}" >>${WRKSRC}/${BINNAME}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} ${LIBDIR}
 	cd ${WRKSRC} && \
-	${INSTALL_SCRIPT} ${BINNAME} ${PREFIX}/bin && \
-	${INSTALL_DATA} ${JARNAME} ${LIBDIR} && \
-	${INSTALL_DATA} AUTHORS ${DOCDIR} && \
-	${INSTALL_DATA} COPYING ${DOCDIR} && \
+	${INSTALL_SCRIPT} ${BINNAME} ${DESTDIR}${PREFIX}/bin && \
+	${INSTALL_DATA} ${JARNAME} ${DESTDIR}${LIBDIR} && \
+	${INSTALL_DATA} AUTHORS ${DESTDIR}${DOCDIR} && \
+	${INSTALL_DATA} COPYING ${DESTDIR}${DOCDIR} && \
 	cd helpdocs && \
-	${INSTALL_DATA} ReadMe.txt ${DOCDIR}/README && \
-	${INSTALL_DATA} mainscreen.jpg manual.html ${DOCDIR}
+	${INSTALL_DATA} ReadMe.txt ${DESTDIR}${DOCDIR}/README && \
+	${INSTALL_DATA} mainscreen.jpg manual.html ${DESTDIR}${DOCDIR}
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

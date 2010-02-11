@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2008/06/20 11:22:17 joerg Exp $
+$NetBSD: distinfo,v 1.11 2010/02/11 20:22:22 joerg Exp $
 
 SHA1 (IglooFTP-0.6.1.src.tar.gz) = ab56bc6c15dc81525b8e987ae5fc15e562f92eed
 RMD160 (IglooFTP-0.6.1.src.tar.gz) = 7f0971ec857542d96a09dffc9db8a3544df38fae
 Size (IglooFTP-0.6.1.src.tar.gz) = 300553 bytes
-SHA1 (patch-aa) = f65166073a34bd8bc65ea49f44b338ffa83ee072
+SHA1 (patch-aa) = 7e9bfe486aa70a58354efa0570ba67fa55bf8618
 SHA1 (patch-ab) = 95acf4685cf1da0ce04afc86f92ce201b24324e5
 SHA1 (patch-ac) = 4ab6aaf9e8bd4765a3d64a83ce6b84e661433749
 SHA1 (patch-ad) = 9e2fbcc3ece0782d32b8bf661dd81e513822852e

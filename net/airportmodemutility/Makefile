@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:16 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2010/02/11 20:22:28 joerg Exp $
 
 DISTNAME=	${BINNAME}_20
 PKGNAME=	${BINNAME}-2.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://edge.mcs.drexel.edu/GICL/people/sevy/airport/
 COMMENT=	Modem (dis)connection utility for Apple's Airport Base Station
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SUBST+=	BINNAME=${BINNAME:Q} JARNAME=${JARNAME:Q}
 
@@ -25,7 +27,7 @@ LIBDIR=		${PREFIX}/lib/${BINNAME}
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 blackdown-jdk13 jdk14
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${DOCDIR} ${LIBDIR}
 
 post-extract:
 	${CHMOD} -R g-w,o-w ${WRKSRC}/*
@@ -39,13 +41,12 @@ do-build:
 	${ECHO} "exec java ${JVM_OPTS} ${LIBDIR}/${JARNAME}" >>${WRKSRC}/${BINNAME}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} ${LIBDIR}
 	cd ${WRKSRC} && \
-	${INSTALL_SCRIPT} ${BINNAME} ${PREFIX}/bin && \
-	${INSTALL_DATA} ${JARNAME} ${LIBDIR} && \
-	${INSTALL_DATA} AUTHORS ${DOCDIR} && \
-	${INSTALL_DATA} COPYING ${DOCDIR} && \
-	${INSTALL_DATA} README ${DOCDIR}
+	${INSTALL_SCRIPT} ${BINNAME} ${DESTDIR}${PREFIX}/bin && \
+	${INSTALL_DATA} ${JARNAME} ${DESTDIR}${LIBDIR} && \
+	${INSTALL_DATA} AUTHORS ${DESTDIR}${DOCDIR} && \
+	${INSTALL_DATA} COPYING ${DESTDIR}${DOCDIR} && \
+	${INSTALL_DATA} README ${DESTDIR}${DOCDIR}
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
