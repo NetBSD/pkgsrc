@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/02/10 21:56:41 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/02/11 19:00:18 asau Exp $
 bin/plld
 bin/plrc
 bin/swi-prolog
@@ -26,7 +26,7 @@ lib/swi-prolog-${PKGVERSION}/boot/syspred.pl
 lib/swi-prolog-${PKGVERSION}/boot/toplevel.pl
 lib/swi-prolog-${PKGVERSION}/boot/topvars.pl
 lib/swi-prolog-${PKGVERSION}/boot/writef.pl
-lib/swi-prolog-${PKGVERSION}/boot32.prc
+lib/swi-prolog-${PKGVERSION}/boot${BITS}.prc
 lib/swi-prolog-${PKGVERSION}/demo/README
 lib/swi-prolog-${PKGVERSION}/demo/likes.pl
 lib/swi-prolog-${PKGVERSION}/doc/Manual/64bits.html
