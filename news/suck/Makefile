@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/01/17 12:02:37 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/02/11 23:33:41 joerg Exp $
 #
 
 DISTNAME=	suck-4.3.2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/news/transport/}
 MAINTAINER=	drankin@bohemians.lexington.ky.us
 HOMEPAGE=	http://home.comcast.net/~bobyetman/
 COMMENT=	Feed a local news server without a dedicated newsfeed
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_FEATURES=	snprintf
@@ -22,10 +24,12 @@ post-patch:
 		${WRKSRC}/Makefile.in >${WRKSRC}/Makefile.tmp
 	@${MV} ${WRKSRC}/Makefile.tmp ${WRKSRC}/Makefile.in
 
+INSTALLATION_DIRS+=	share/examples/suck
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/suck
-	${CP} ${WRKSRC}/sample/* ${PREFIX}/share/examples/suck
-	${CHMOD} 644 ${PREFIX}/share/examples/suck/*
+	${INSTALL_DATA} ${WRKSRC}/sample/* ${DESTDIR}${PREFIX}/share/examples/suck
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
