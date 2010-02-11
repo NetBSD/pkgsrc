@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/01/26 12:15:26 tron Exp $
+# $NetBSD: Makefile,v 1.20 2010/02/11 21:13:07 tnn Exp $
 
 DISTNAME=	Python-2.6.4
 PKGNAME=	${DISTNAME:S/Python/python26/}
@@ -125,8 +125,6 @@ PLIST.nis=	yes
 .else
 .  include "../../mk/bdb.buildlink3.mk"
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
-MAKE_ENV+=	PY_BDB_INCDIRS=${BUILDLINK_INCDIRS.${BDB_TYPE}:S,^,${BDBBASE}/,:Q}
-MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
 .if empty(BDB_LIBS)
 BUILDLINK_TRANSFORM+=	rm:-ldb
 .endif
