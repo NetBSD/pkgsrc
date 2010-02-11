@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/02/11 21:13:07 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/11 21:21:49 tnn Exp $
 
 DISTNAME=	Python-2.6.4
 PKGNAME=	${DISTNAME:S/Python/python26/}
@@ -115,7 +115,7 @@ PLIST.nav=	yes
 .  endif
 .endif
 
-PLIST_VARS+=	bsddb dll nis no-nis
+PLIST_VARS+=	dll nis no-nis
 .if ${OPSYS} == "IRIX"
 .  if ${ABI} == "64"
 PLIST.no-nis=	yes
@@ -123,13 +123,6 @@ PLIST.no-nis=	yes
 PLIST.nis=	yes
 .  endif
 .else
-.  include "../../mk/bdb.buildlink3.mk"
-MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
-.if empty(BDB_LIBS)
-BUILDLINK_TRANSFORM+=	rm:-ldb
-.endif
-CFLAGS+=	-DHAVE_DB_185_H
-PLIST.bsddb=	yes
 PLIST.dll=	yes
 .  if ${OPSYS} != "NetBSD" || exists(/usr/bin/ypcat)
 PLIST.nis=	yes
@@ -137,6 +130,13 @@ PLIST.nis=	yes
 PLIST.no-nis=	yes
 .  endif
 .endif
+
+.include "../../mk/bdb.buildlink3.mk"
+MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
+.if empty(BDB_LIBS)
+BUILDLINK_TRANSFORM+=	rm:-ldb
+.endif
+CFLAGS+=	-DHAVE_DB_185_H
 
 .if ${OPSYS} == "OSF1"
 # configure complains about buggy getaddrinfo()
