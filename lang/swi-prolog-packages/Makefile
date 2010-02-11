@@ -1,30 +1,45 @@
-# $NetBSD: Makefile,v 1.22 2010/01/18 09:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/11 01:06:58 asau Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
 PKGNAME=		swi-prolog-packages-${SWIPLVERS}
-PKGREVISION=		4
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Packages for SWI Prolog
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
-OVERRIDE_DIRDEPTH=	3
 USE_GNU_READLINE=	yes	# uses rl_event_hook() interface
 USE_TOOLS+=		gmake
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${X11_TYPE} == "xorg"
-BUILD_DEPENDS+=		xorg-server-[0-9]*:../../x11/xorg-server
+.if ${X11_TYPE} == "modular"
+BUILD_DEPENDS+=		modular-xorg-server-[0-9]*:../../x11/modular-xorg-server
 .endif
 
 CONFIGURE_ENV+=		PL=swi-prolog
-CONFIGURE_ARGS+=	--disable-mt
+CONFIGURE_ENV+=		ARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
 
-BUILD_DIRS+=		${WRKSRC}/packages
-INSTALL_DIRS+=		${WRKSRC}/packages
+CONFIGURE_DIRS+=	. packages
+BUILD_DIRS+=		packages
+INSTALL_DIRS+=		packages
+
+INSTALLATION_DIRS=	bin lib/swi-prolog-${PKGVERSION_NOREV}/bin/${MACHINE_GNU_PLATFORM} \
+			lib/swi-prolog-${PKGVERSION_NOREV}/include
+
+XPCE_VERSION=		6.6.66
+PLIST_SUBST+=		XPCE_VERSION=${XPCE_VERSION}
+# Help with PLIST:
+PRINT_PLIST_AWK+=	{sub("${XPCE_VERSION}","$${XPCE_VERSION}")}
+
+TEST_TARGET=	check
+
+pre-configure:
+	${LN} -sf ${LOCALBASE}/bin/plld       ${WRKSRC}/src
+	${LN} -sf ${LOCALBASE}/bin/swi-prolog ${WRKSRC}/src
 
 post-configure:
 	${LN} -sf ${LOCALBASE}/bin/plld       ${WRKSRC}/src
@@ -56,7 +71,7 @@ DISPLAY= :2
 MAKE_ENV+=		DISPLAY=${DISPLAY:Q}
 
 post-install: teardownx
-	${RM} -f ${LOCALBASE}/lib/swi-prolog-${SWIPLVERS}/xpce-6.6.17/prolog/lib/.pwd
+	${RM} -f ${LOCALBASE}/lib/swi-prolog-${SWIPLVERS}/xpce-${XPCE_VERSION}/prolog/lib/.pwd
 teardownx:
 	${ECHO} teardownx: Xvfb-PID: `${CAT} ${WRKDIR}/.Xvfb.pid`
 	sleep 5
@@ -73,5 +88,5 @@ teardownx:
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-#.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
