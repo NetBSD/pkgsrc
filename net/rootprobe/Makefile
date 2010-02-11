@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:24 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2010/02/11 22:39:23 joerg Exp $
 #
 
 DISTNAME=	rootprobe-20030115
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mawi.wide.ad.jp/mawi/dnsprobe/
 COMMENT=	Root DNS server performance analysis
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NOT_FOR_PLATFORM=	Interix-*-* # no <net/if.h> support
 
 WRKSRC=		${WRKDIR}/rootprobe
@@ -17,7 +19,7 @@ WRKSRC=		${WRKDIR}/rootprobe
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rootprobe ${PREFIX}/bin
-	(cd ${PREFIX}/bin; ${LN} rootprobe cctldprobe)
+	${INSTALL_PROGRAM} ${WRKSRC}/rootprobe ${DESTDIR}${PREFIX}/bin
+	(cd ${DESTDIR}${PREFIX}/bin; ${LN} rootprobe cctldprobe)
 
 .include "../../mk/bsd.pkg.mk"
