@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2003/12/16 19:19:41 martti Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/11 22:37:49 joerg Exp $
 
 --- src/Makefile.BSD.orig	Thu Apr 10 13:38:23 2003
 +++ src/Makefile.BSD	Tue Dec 16 20:15:35 2003
@@ -27,9 +27,9 @@ $NetBSD: patch-aa,v 1.4 2003/12/16 19:19:41 martti Exp $
 -SBINDIR = /usr/local/sbin
 -MANDIR  = /usr/local/man
 -SHAREDIR = /usr/local/share/radius
-+BINDIR  = $(PREFIX)/bin
-+SBINDIR = $(PREFIX)/sbin
-+MANDIR  = $(PREFIX)/man
-+SHAREDIR = $(PREFIX)/share/examples/raddb
++BINDIR  = ${DESTDIR}$(PREFIX)/bin
++SBINDIR = ${DESTDIR}$(PREFIX)/sbin
++MANDIR  = ${DESTDIR}$(PREFIX)/man
++SHAREDIR = ${DESTDIR}$(PREFIX)/share/examples/raddb
  
  .include "Make.inc"
