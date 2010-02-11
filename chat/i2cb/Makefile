@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/08/20 15:24:58 jwise Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/11 12:33:35 joerg Exp $
 #
 
 DISTNAME=	i2cb-6.0_ALPHA
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.draga.com/~jwise/i2cb/
 COMMENT=	Next generation Internet Citicen's Band chat client
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BROKEN=		Depends on TCL 8.3
 
 WRKSRC=		${WRKDIR}/icb
 USE_GNU_READLINE=	yes
