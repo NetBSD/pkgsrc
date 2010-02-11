@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/11 13:13:24 joerg Exp $
+
+SHA1 (cx_Oracle-5.0.2.tar.gz) = a875795fb04b6d6c27d2735b28b32fae3c642d6c
+RMD160 (cx_Oracle-5.0.2.tar.gz) = b165c5c877c9de25940b1527ffff561029563d0e
+Size (cx_Oracle-5.0.2.tar.gz) = 183536 bytes
