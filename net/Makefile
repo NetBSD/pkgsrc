@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.800 2010/02/10 18:02:50 joerg Exp $
+# $NetBSD: Makefile,v 1.801 2010/02/11 11:37:06 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -391,6 +391,7 @@ SUBDIR+=	partysip
 SUBDIR+=	pchar
 SUBDIR+=	pconsole
 SUBDIR+=	pear-Net_DIME
+SUBDIR+=	pear-Net_LDAP2
 SUBDIR+=	pear-Net_SMTP
 SUBDIR+=	pear-Net_Sieve
 SUBDIR+=	pear-Net_Socket
