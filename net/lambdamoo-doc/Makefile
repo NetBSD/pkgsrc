@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/04 21:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/02/11 21:59:11 joerg Exp $
 
 DISTNAME=	lambdamoo-doc-1.8.0p6
 CATEGORIES=	net
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/lambdamoo/
 COMMENT=	Documentation for lambdamoo
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 EXTRACT_ONLY=	ProgrammersManual.texinfo
 
 WRKSRC=		${WRKDIR}
@@ -21,13 +23,14 @@ do-build:
 		${WRKSRC}/ProgrammersManual.texinfo \
 		>${WRKSRC}/ProgrammersManual.txt
 
+INSTALLATION_DIRS+=	share/doc/lambdamoo
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/lambdamoo
 	${INSTALL_DATA} ${DISTDIR}/HelpSystem-02Jun93.txt \
-		${PREFIX}/share/doc/lambdamoo
+	    ${DESTDIR}${PREFIX}/share/doc/lambdamoo
 	${INSTALL_DATA} ${WRKSRC}/ProgrammersManual.texinfo \
-		${PREFIX}/share/doc/lambdamoo
+	    ${DESTDIR}${PREFIX}/share/doc/lambdamoo
 	${INSTALL_DATA} ${WRKSRC}/ProgrammersManual.txt \
-		${PREFIX}/share/doc/lambdamoo
+	    ${DESTDIR}${PREFIX}/share/doc/lambdamoo
 
 .include "../../mk/bsd.pkg.mk"
