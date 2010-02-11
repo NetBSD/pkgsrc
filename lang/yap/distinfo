@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.5 2006/01/11 18:35:19 joerg Exp $
+$NetBSD: distinfo,v 1.6 2010/02/11 20:43:49 asau Exp $
 
-SHA1 (Yap-5.0.0-1/Yap-5.0.0.tar.gz) = 56c6ddc976208f66f49c59f2a6787590d1512732
-RMD160 (Yap-5.0.0-1/Yap-5.0.0.tar.gz) = e63d5ecf66dda0fced26afe9dc9afb892a02762b
-Size (Yap-5.0.0-1/Yap-5.0.0.tar.gz) = 3102749 bytes
+SHA1 (Yap-5.1.3.tar.gz) = 76c84b32ad8fbe8324a1db370f8440be11398c34
+RMD160 (Yap-5.1.3.tar.gz) = b2e1153c7a6853a4814a672992d2b8b3834796bc
+Size (Yap-5.1.3.tar.gz) = 3266063 bytes
 SHA1 (patch-aa) = dca2acac805aabd8e2815b509ad516294484ad0f
-SHA1 (patch-ab) = fc4e742886129fac5cbb2195e8aec072c7a3e9ac
-SHA1 (patch-ac) = 4ebf6b8c6c7a9d4cecd2d0d59ee708168c4de60a
+SHA1 (patch-ab) = 76e1a2b4a183215c37ede5c8cbec624e901fe427
+SHA1 (patch-ac) = c0d382127f9bc3a962d01a0da34c99968f7388ab
+SHA1 (patch-ad) = e3765c0d6729b4d531cdea59dc8e442055091d10
+SHA1 (patch-ae) = cf4a79ccd0c34e42ca3d8a108619a9974288cde6
+SHA1 (patch-af) = e49296d42247aec7ead7f65d67a42f93b400ca0f
+SHA1 (patch-ag) = a9f2bfc921f5c2aaf2a92e6659c54047e5c13321
+SHA1 (patch-ah) = 572e29729d97d5e9942a3d2c22e121d4e756d648
+SHA1 (patch-ai) = a702088735520c36ada438e752b1852d9567e5e2

@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1 2010/02/11 20:43:49 asau Exp $
+
+Disable parts to avoid breakage.
+
+--- Makefile.in.orig	2008-06-04 18:47:18.000000000 +0400
++++ Makefile.in	2009-12-11 05:30:54.000000000 +0300
+@@ -659,7 +659,7 @@
+ 	@INSTALLCLP@(cd LGPL/clp ; make install)
+ 	@INSTALLCLP@(cd GPL/clpqr ; make install)
+ #	(cd CHR ; make install)
+-	@INSTALLCLP@(cd LGPL/chr ; make install)
++#	@INSTALLCLP@(cd LGPL/chr ; make install)
+ 	@INSTALLCLP@(cd CLPBN ; make install)
+ 
+ 

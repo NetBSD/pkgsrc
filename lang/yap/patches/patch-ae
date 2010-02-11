@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2010/02/11 20:43:49 asau Exp $
+
+--- C/c_interface.c.orig	2008-06-17 17:37:48.000000000 +0400
++++ C/c_interface.c	2009-02-06 22:53:50.000000000 +0300
+@@ -326,6 +326,9 @@
+ #if HAVE_STDARG_H
+ #include <stdarg.h>
+ #endif
++#if USE_SYSTEM_MALLOC
++#include <stdlib.h>
++#endif
+ #if HAVE_STRING_H
+ #include <string.h>
+ #endif
