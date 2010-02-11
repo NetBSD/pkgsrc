@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/03/17 11:37:41 obache Exp $
+# $NetBSD: Makefile,v 1.33 2010/02/11 19:39:04 joerg Exp $
 
 DISTNAME=	smtpfeed-1.18
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://sh.wide.ad.jp/WIDE/free-ware/smtpfeed/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://member.wide.ad.jp/wg/smtp/smtpfeed.html
 COMMENT=	SMTP Fast Exploding External Deliverer for Sendmail
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # sendmail 8.x with WIDE patch works better with it, than stock 8.x.
 # require sendmail from pkgsrc.
@@ -34,11 +36,12 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man8 share/doc/smtpfeed
+INSTALL_MAKE_FLAGS+=	libexecdir=${DESTDIR}${PREFIX}/libexec
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/smtpfeed.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/smtpfeed.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	for i in ${DOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/smtpfeed; \
+		${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/share/doc/smtpfeed; \
 	done
 
 .include "../../devel/sysexits/buildlink3.mk"
