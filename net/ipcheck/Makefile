@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/02/10 19:17:43 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/11 21:33:29 joerg Exp $
 #
 
 DISTNAME=	ipcheck.233
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ipcheck.sourceforge.net/
 COMMENT=	Python client for the dyndns service
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	#none
@@ -21,7 +23,7 @@ PYTHON_PATCH_SCRIPTS=	ipcheck.py
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ipcheck.py ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/ipcheck.py ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
