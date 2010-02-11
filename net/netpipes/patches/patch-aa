@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/06 23:58:34 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/11 22:17:36 joerg Exp $
 
 --- Makefile.orig	1998-10-28 15:30:03.000000000 -0500
 +++ Makefile
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/11/06 23:58:34 jlam Exp $
 -INSTROOT = /depot/collections0/netpipes4.1
 -#INSTROOT = /usr/local
 +#INSTROOT = /depot/collections0/netpipes4.1
-+INSTROOT = ${PREFIX}
++INSTROOT = ${DESTDIR}${PREFIX}
  INSTBIN = ${INSTROOT}/bin
 -INSTMAN = ${INSTROOT}/man
 +INSTMAN = ${INSTROOT}/${PKGMANDIR}
