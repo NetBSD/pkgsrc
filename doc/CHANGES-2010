@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.679 2010/02/11 20:44:24 asau Exp $
+$NetBSD: CHANGES-2010,v 1.680 2010/02/11 22:01:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -808,3 +808,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/gmime to 2.2.25nb1 [wiz 2010-02-11]
 	Updated print/tex-ifluatex-doc to 1.2.16936 [minskim 2010-02-11]
 	Updated lang/yap to 5.1.3 [asau 2010-02-11]
+	Updated print/tex-luatex to 0.2nb1 [minskim 2010-02-11]
