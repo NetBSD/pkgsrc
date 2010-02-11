@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/12/02 13:04:13 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2010/02/11 22:59:24 joerg Exp $
 
 DISTNAME=	tcpillust-1.0a
 PKGREVISION=	4
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.sonycsl.co.jp/CSL/nishida/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sonycsl.co.jp/person/nishida/tcpillust.html
 COMMENT=	Graphical TCP connection analysis tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 GNU_CONFIGURE=	yes
@@ -20,14 +22,14 @@ CONFIGURE_ARGS+=--with-tk-lib=${BUILDLINK_PREFIX.tk}/lib
 DOCS=		README
 SAMPLES=	tcpclient.log tcpserver.log
 
+INSTALLATION_DIRS+=	share/doc/tcpillust/sample
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcpillust
 	for i in ${DOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/tcpillust; \
+		${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/share/doc/tcpillust; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcpillust/sample
 	for i in ${SAMPLES}; do \
-		${INSTALL_DATA} ${WRKSRC}/sample/$$i ${PREFIX}/share/doc/tcpillust/sample; \
+		${INSTALL_DATA} ${WRKSRC}/sample/$$i ${DESTDIR}${PREFIX}/share/doc/tcpillust/sample; \
 	done
 
 .include "../../lang/tcl/buildlink3.mk"

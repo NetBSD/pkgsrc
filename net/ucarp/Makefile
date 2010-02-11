@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/22 19:01:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/11 23:06:05 joerg Exp $
 #
 
 DISTNAME=		ucarp-1.1
@@ -11,6 +11,8 @@ MAINTAINER=		joel@carnat.net
 HOMEPAGE=		http://www.ucarp.org/project/ucarp
 COMMENT=		Common Address Redundancy Protocol (CARP) for Unix
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		msgfmt
@@ -18,14 +20,14 @@ USE_TOOLS+=		msgfmt
 # pcap_freecode with one argument only
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.6.0
 
+INSTALLATION_DIRS+=	share/doc/ucarp share/examples/ucarp
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ucarp
 	for DOC in AUTHORS COPYING NEWS README; do \
-		${INSTALL_DATA} ${WRKSRC}/$$DOC ${PREFIX}/share/doc/ucarp; \
+		${INSTALL_DATA} ${WRKSRC}/$$DOC ${DESTDIR}${PREFIX}/share/doc/ucarp; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ucarp
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/bsd/*sh \
-		${PREFIX}/share/examples/ucarp
+	    ${DESTDIR}${PREFIX}/share/examples/ucarp
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

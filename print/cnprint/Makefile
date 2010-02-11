@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/11 23:42:13 joerg Exp $
 
 DISTNAME=		#
 PKGNAME=		cnprint-3.30b
@@ -26,9 +26,11 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.neurophys.wisc.edu/~cai/software/index.html
 COMMENT=		Print & convert CJK style text to PostScript
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_TOOLS+=		gtar gunzip
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/cnprint
 
 do-extract:
 	${MKDIR} ${WRKSRC}
@@ -48,13 +50,12 @@ do-build:
 		>cnprint.cmd <cnprint33.cmd
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/cnprint
-	${INSTALL_DATA} ${WRKSRC}/cnprint.cmd ${PREFIX}/share/cnprint
-	${INSTALL_DATA} ${WRKSRC}/*.sym ${PREFIX}/share/cnprint
-	${INSTALL_DATA} ${WRKSRC}/*.htf ${PREFIX}/share/cnprint
-	${INSTALL_DATA} ${WRKSRC}/*.hbf ${PREFIX}/share/cnprint
-	${INSTALL_DATA} ${WRKSRC}/*.bin ${PREFIX}/share/cnprint
-	${INSTALL_DATA} ${WRKSRC}/*.ttf ${PREFIX}/share/cnprint
-	${INSTALL_PROGRAM} ${WRKSRC}/cnprint ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/cnprint.cmd ${DESTDIR}${PREFIX}/share/cnprint
+	${INSTALL_DATA} ${WRKSRC}/*.sym ${DESTDIR}${PREFIX}/share/cnprint
+	${INSTALL_DATA} ${WRKSRC}/*.htf ${DESTDIR}${PREFIX}/share/cnprint
+	${INSTALL_DATA} ${WRKSRC}/*.hbf ${DESTDIR}${PREFIX}/share/cnprint
+	${INSTALL_DATA} ${WRKSRC}/*.bin ${DESTDIR}${PREFIX}/share/cnprint
+	${INSTALL_DATA} ${WRKSRC}/*.ttf ${DESTDIR}${PREFIX}/share/cnprint
+	${INSTALL_PROGRAM} ${WRKSRC}/cnprint ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
