@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/02/11 00:58:19 asau Exp $
+
+Make NAS optional.
+
+--- unix/vm-sound-NAS/config.cmake.orig	2009-08-26 22:42:18.000000000 +0400
++++ unix/vm-sound-NAS/config.cmake	2010-01-21 05:44:46.000000000 +0300
+@@ -1,2 +1,7 @@
+ PLUGIN_REQUIRE_INCLUDE (AUDIO_AUDIO_H audio/audio.h)
+ PLUGIN_REQUIRE_LIBRARY (AUDIO audio)
++
++CHECK_LIBRARY_EXISTS (audio AuOpenServer "" HAVE_NAS)
++IF (NOT HAVE_NAS OR without-nas)
++  PLUGIN_DISABLE ()
++ENDIF ()
