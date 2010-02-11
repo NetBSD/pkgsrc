@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.677 2010/02/11 15:44:40 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.678 2010/02/11 20:22:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -806,3 +806,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/py-cx_Oracle version 5.0.2 [joerg 2010-02-11]
 	Updated devel/py-dulwich to 0.4.1 [joerg 2010-02-11]
 	Updated mail/gmime to 2.2.25nb1 [wiz 2010-02-11]
+	Updated print/tex-ifluatex-doc to 1.2.16936 [minskim 2010-02-11]
