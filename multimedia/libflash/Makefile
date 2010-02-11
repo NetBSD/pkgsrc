@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2010/01/18 09:59:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/02/11 20:01:50 joerg Exp $
 #
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
@@ -11,6 +13,8 @@ USE_LIBTOOL=	yes
 BUILD_DIRS=	${WRKSRC}/Lib
 MAKE_ENV+=	LIBOSSAUDIO=${LIBOSSAUDIO:Q}
 MAKE_ENV+=	LIBSTDCPP=-lstdc++
+
+INSTALLATION_DIRS+=	lib
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
