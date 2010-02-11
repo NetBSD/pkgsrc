@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2010/02/11 21:22:17 joerg Exp $
+
+--- doc/Makefile.in.orig	2003-01-06 21:19:57.000000000 +0000
++++ doc/Makefile.in
+@@ -289,9 +289,9 @@ install-data-local: 
+ 	-@INSTALL@ -m 0644 $(srcdir)/html/*.html $(DESTDIR)$(TARGET_DIR)
+ 	-@INSTALL@ -m 0644 $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR)
+ 	-(cd $(DESTDIR); gtkdoc-fixxref --module=$(DOC_MODULE) --html-dir=$(HTML_DIR))
+-	-mv $(HTML_DIR)/$(DOC_MODULE)/* $(HTML_DIR)
+-	-rm -rf $(HTML_DIR)/$(DOC_MODULE)
+-	-(cd $(HTML_DIR); ln -s book1.html index.html)
++	-mv ${DESTDIR}$(HTML_DIR)/$(DOC_MODULE)/* ${DESTDIR}$(HTML_DIR)
++	-rm -rf ${DESTDIR}$(HTML_DIR)/$(DOC_MODULE)
++	-(cd ${DESTDIR}$(HTML_DIR); ln -s book1.html index.html)
+ 
+ dist-hook:
+ 	(cd $(srcdir) ; tar cvf - html/*.html html/*.sgml) | (cd $(distdir); tar xf -)
