@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+
+--- perl/sieve/Makefile.in.orig	2009-05-06 13:48:04.000000000 +0000
++++ perl/sieve/Makefile.in
+@@ -86,7 +86,7 @@ all::
+ 			   BDB_LIB="$(BDB_LIB)" BDB_INC="$(BDB_INC)" \
+ 			   OPENSSL_LIB="$(OPENSSL_LIB)" OPENSSL_INC="$(OPENSSL_INC)" \
+ 			   SASL_LIB="$(SASL_LIB)" SASL_INC="$(SASL_INC)" CC="$(CC)" \
+-			     $(PERL) Makefile.PL PREFIX=$(prefix); \
++			     $(PERL) Makefile.PL INSTALLDIRS=vendor PREFIX=$(prefix); \
+ 			fi; \
+ 			$(MAKE) $(MFLAGS) DESTDIR=$(DESTDIR) all) || exit 1; \
+ 	done

@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+
+--- imap/message.c.orig	2009-11-19 21:52:55.000000000 +0000
++++ imap/message.c
+@@ -74,6 +74,10 @@
+ #include "global.h"
+ #include "retry.h"
+ 
++#ifdef __APPLE__
++struct et_list *_et_list = NULL;
++#endif
++
+ /* Message being parsed */
+ struct msg {
+     const char *base;

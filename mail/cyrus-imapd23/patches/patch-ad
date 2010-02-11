@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+
+--- imap/cvt_cyrusdb.c.orig	2009-02-11 19:11:32.000000000 +0000
++++ imap/cvt_cyrusdb.c
+@@ -59,7 +59,9 @@
+ #include <syslog.h>
+ 
+ #include <sys/ipc.h>
++#if !defined(__APPLE__)
+ #include <sys/msg.h>
++#endif
+ 
+ #include "acl.h"
+ #include "assert.h"
