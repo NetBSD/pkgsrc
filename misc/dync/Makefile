@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/05/22 18:16:19 zafer Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/11 19:17:06 joerg Exp $
 #
 
 DISTNAME=		dync-1.1
@@ -10,10 +10,18 @@ MAINTAINER=		agc@NetBSD.org
 HOMEPAGE=		http://www.alistaircrooks.co.uk/software.html
 COMMENT=		awk-like utility with C as language
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		tst
 USE_TOOLS+=		file_cmd
 CONFIGURE_ENV+=		FILE_CMD=${TOOLS_FILE_CMD:Q}
 CONFIGURE_ENV+=		ac_cv_path_LDCONFIG=${TOOLS_LDCONFIG:Q}
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/dync ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/dync.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
