@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2003/09/22 12:29:20 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2010/02/11 19:02:01 joerg Exp $
 
 --- Makefile.orig	Tue Apr 25 08:04:52 1995
 +++ Makefile	Mon Sep 22 11:18:10 2003
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.3 2003/09/22 12:29:20 wiz Exp $
  # where to put the man page
 -MANDIR = /usr/man
 -MANEXT = l
-+MANDIR = ${PREFIX}/man
++MANDIR = ${PREFIX}/${PKGMANDIR}
 +MANEXT = 1
  
  # You should not have to change anything below this line
@@ -35,10 +35,10 @@ $NetBSD: patch-aa,v 1.3 2003/09/22 12:29:20 wiz Exp $
 -	chmod 666 $(MANDIR)/man$(MANEXT)/a2crd.$(MANEXT)
 -	
 +	for prog in $(PROGRAMS); do \
-+		${BSD_INSTALL_PROGRAM} $$prog $(BINDIR)/$$prog; \
++		${BSD_INSTALL_PROGRAM} $$prog ${DESTDIR}$(BINDIR)/$$prog; \
 +	done
-+	${BSD_INSTALL_MAN} chord.man $(MANDIR)/man$(MANEXT)/chord.$(MANEXT)
-+	${BSD_INSTALL_MAN} a2crd.man $(MANDIR)/man$(MANEXT)/a2crd.$(MANEXT)
++	${BSD_INSTALL_MAN} chord.man ${DESTDIR}$(MANDIR)/man$(MANEXT)/chord.$(MANEXT)
++	${BSD_INSTALL_MAN} a2crd.man ${DESTDIR}$(MANDIR)/man$(MANEXT)/a2crd.$(MANEXT)
 +
  shar : $(SRC)
  	rm -f $(RELNAME).part*
