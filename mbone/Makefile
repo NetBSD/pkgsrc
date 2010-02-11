@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/07/07 16:11:32 sborrill Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/11 12:32:39 joerg Exp $
 #
 
 COMMENT=	Multi-cast backBone applications
@@ -6,14 +6,14 @@ COMMENT=	Multi-cast backBone applications
 SUBDIR+=	beacon
 SUBDIR+=	common-mml
 SUBDIR+=	dbeacon
-SUBDIR+=	imm
+#SUBDIR+=	imm
 SUBDIR+=	mdd
 SUBDIR+=	mdp
-SUBDIR+=	nte
+#SUBDIR+=	nte
 SUBDIR+=	rat
 SUBDIR+=	rtptools
 SUBDIR+=	sapserver
-SUBDIR+=	sdr
+#SUBDIR+=	sdr
 SUBDIR+=	vat
 SUBDIR+=	vic
 SUBDIR+=	vic-devel
