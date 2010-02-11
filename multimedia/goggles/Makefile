@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/02/11 20:12:35 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/11 20:17:18 joerg Exp $
 #
 
 DISTNAME=		goggles-0.9.1
@@ -26,6 +26,8 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ${MAKE_ENV} ./gb --package-root=${DESTDIR}${PREFIX} --prefix=${PREFIX} install
+	sed "s|@location@|${PREFIX}/bin|" ${WRKSRC}/scripts/goggles.in > ${DESTDIR}${PREFIX}/bin/goggles
+
 
 .include "../../x11/fox/buildlink3.mk"
 .include "../../multimedia/ogle/buildlink3.mk"
