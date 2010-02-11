@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+
+--- imap/mboxlist.c.orig	2009-11-17 03:34:30.000000000 +0000
++++ imap/mboxlist.c
+@@ -59,7 +59,9 @@
+ #include <syslog.h>
+ 
+ #include <sys/ipc.h>
++#if !defined(__APPLE__)
+ #include <sys/msg.h>
++#endif
+ 
+ #include "acl.h"
+ #include "annotate.h"
