@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/02/04 01:28:59 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/11 13:44:02 joerg Exp $
 
 DISTNAME=	itcl3.2.1_src
 PKGNAME=	tcl-itcl-3.2.1
@@ -28,8 +28,7 @@ CONFIGURE_ENV+=	AR=${AR:Q}
 MAKE_ENV+=	TCL_HEADER_DIR=${BUILDLINK_PREFIX.tcl}/include/tcl
 
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR} \
-			prefix=${DESTDIR}${PREFIX} \
-			exec_prefix=${DESTDIR}${PREFIX}
+			includedir=${DESTDIR}${PREFIX}/include
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
