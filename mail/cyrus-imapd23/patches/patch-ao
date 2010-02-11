@@ -1,0 +1,17 @@
+$NetBSD: patch-ao,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+
+--- imap/imap_err.et.orig	2009-12-02 02:09:43.000000000 +0000
++++ imap/imap_err.et
+@@ -198,10 +198,10 @@ ec IMAP_NO_MSGGONE,
+    "Message %d no longer exists"
+ 
+ ec IMAP_NO_CHECKSEEN,
+-   "Unable to checkpoint \\Seen state"
++   "Unable to checkpoint \\\\Seen state"
+ 
+ ec IMAP_NO_CHECKPRESERVE,
+-   "Unable to preserve \\Seen state"
++   "Unable to preserve \\\\Seen state"
+ 
+ ec IMAP_NO_NOSUCHMSG,
+    "No matching messages"

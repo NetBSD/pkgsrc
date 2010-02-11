@@ -1,0 +1,38 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+
+IMAPDCONF=@IMAPDCONF@
+
+case ${STAGE} in
+DEINSTALL)
+	if [ -f ${IMAPDCONF} ]; then
+		IMAPDIRS=`
+			${AWK} '/configdirectory:/      { print $2 };	\
+				/partition-.*:/         { print $2 };	\
+				/sievedir:/             { print $2 }'	\
+				${IMAPDCONF} | ${SORT} -ur`
+		_IMAPDIRS=
+		for dir in ${IMAPDIRS}; do
+			${RMDIR} -p ${dir} 2>/dev/null || ${TRUE}
+			if [ -d ${dir} ]; then
+				_IMAPDIRS="${_IMAPDIRS} ${dir}"
+			fi
+		done
+		if [ -n "${_IMAPDIRS}" ]; then
+			${CAT} << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove
+the following directories:
+
+EOF
+			for dir in ${_IMAPDIRS}; do
+				if [ -d "${dir}" ]; then
+					${ECHO} "	${dir}"
+				fi
+			done
+                	${CAT} << EOF
+===========================================================================
+EOF
+		fi
+	fi
+	;;
+esac
