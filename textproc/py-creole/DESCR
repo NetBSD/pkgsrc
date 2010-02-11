@@ -1,0 +1,4 @@
+py-creole is a converter between HTML and the Creole markup language.
+Creole is a markup language that was created to simplify sharing content
+between different wikis.  It is supported by MoinMoin and various other
+engines.  The full language is descript in http://www.wikicreole.org/.
