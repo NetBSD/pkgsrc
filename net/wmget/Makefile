@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/17 12:02:36 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/11 23:12:10 joerg Exp $
 
 DISTNAME=	wmget-0.6.0-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -10,6 +10,8 @@ MASTER_SITES=	http://amtrickey.net/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://amtrickey.net/wmget/index.html
 COMMENT=	Background download manager in a Window Maker dock app
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		ldflags
 SUBST_MESSAGE.ldflags=	Fixing hardcoded LDFLAGS.
@@ -24,6 +26,12 @@ SUBST_FILES.paths=	Makefile
 SUBST_SED.paths=	-e 's|^PREFIX=.*|PREFIX=${LOCALBASE}|'
 
 USE_TOOLS+=	gmake
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/wmget ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/wmget.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
