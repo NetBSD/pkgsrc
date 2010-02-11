@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+
+--- configure.in.orig	2009-12-21 13:09:10.000000000 +0000
++++ configure.in
+@@ -391,11 +391,11 @@ if test "$sievedir" != "no"; then
+ 	AC_CHECK_LIB(fl,main)
+ 
+ 	AC_CHECK_HEADERS(pcreposix.h rxposix.h)
+-	if test "$ac_cv_header_pcreposix_h" == "yes"; then
++	if test "$ac_cv_header_pcreposix_h" = "yes"; then
+ 		LIBS="$LIBS -lpcre -lpcreposix";
+ 		AC_DEFINE(ENABLE_REGEX, [], [Do we have a regex library?])
+ 	else 
+-		if test "$ac_cv_header_rxposix_h" == "yes"; then
++		if test "$ac_cv_header_rxposix_h" = "yes"; then
+ 			LIBS="$LIBS -lrx"
+ 			AC_DEFINE(ENABLE_REGEX, [],
+ 				  [Do we have a regex library?])
