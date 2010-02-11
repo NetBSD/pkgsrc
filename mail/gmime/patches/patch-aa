@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.6 2010/02/11 15:44:29 wiz Exp $
+
+Fix for http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0409
+from Fedora.
+
+--- gmime/gmime-utils.h.orig	2009-08-12 22:42:55.000000000 +0000
++++ gmime/gmime-utils.h
+@@ -106,7 +106,7 @@ struct _GMimeReferences {
+  * Returns the number of output bytes needed to uuencode an input
+  * buffer of size @x.
+  **/
+-#define GMIME_UUENCODE_LEN(x)      ((size_t) (((((x) + 2) / 45) * 62) + 62))
++#define GMIME_UUENCODE_LEN(x)      ((size_t) (((((x) + 2) / 45) * 62) + 64))
+ 
+ 
+ /**
