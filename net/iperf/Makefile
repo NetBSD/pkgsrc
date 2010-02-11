@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/05/21 11:37:58 zafer Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/11 21:34:34 joerg Exp $
 
 DISTNAME=	iperf-2.0.2
 CATEGORIES=	net
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dast.nlanr.net/Projects/Iperf/
 COMMENT=	TCP and UDP bandwidth performance measurement tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,7 +29,7 @@ PTHREAD_OPTS+=	native optional
 
 post-install:
 	for f in ${WRKSRC}/doc/*.html ${WRKSRC}/doc/*.gif; do		\
-		${INSTALL_DATA} $$f ${PREFIX}/share/doc/html/${PKGBASE}; \
+		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/share/doc/html/${PKGBASE}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
