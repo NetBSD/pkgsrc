@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.672 2010/02/11 08:27:36 obache Exp $
+$NetBSD: CHANGES-2010,v 1.673 2010/02/11 11:36:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -801,3 +801,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-hyph-utf8-doc to 2009 [minskim 2010-02-11]
 	Updated graphics/GraphicsMagick to 1.3.10 [obache 2010-02-11]
 	Added mail/cyrus-imapd23 version 2.3.16 [obache 2010-02-11]
+	Added net/pear-Net_LDAP2 version 2.0.7 [obache 2010-02-11]
