@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2003/12/16 19:19:41 martti Exp $
+$NetBSD: patch-ab,v 1.5 2010/02/11 22:37:49 joerg Exp $
 
 --- src/Make.inc.orig	Thu Apr 10 13:51:47 2003
 +++ src/Make.inc	Tue Dec 16 20:10:28 2003
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.4 2003/12/16 19:19:41 martti Exp $
  #
  
 -RADIUS_DIR    = /etc/raddb
-+RADIUS_DIR    = ${PREFIX}/share/examples/raddb
++RADIUS_DIR    = ${DESTDIR}${PREFIX}/share/examples/raddb
  
  SERVER_OBJS   = radiusd.o files.o acct.o pam.o version.o proxy.o \
  			exec.o auth.o timestr.o cache.o readusers.o
