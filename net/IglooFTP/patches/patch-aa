@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2007/02/20 12:45:06 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/11 20:22:22 joerg Exp $
 
 --- src/Makefile.orig	1999-04-15 16:05:15.000000000 +0000
 +++ src/Makefile
-@@ -1,14 +1,13 @@
+@@ -1,21 +1,21 @@
  SHELL=/bin/sh
 -CC = gcc
 -C_FLAGS = -Wall -g -O2 -m486 -fno-strength-reduce
@@ -16,11 +16,13 @@ $NetBSD: patch-aa,v 1.4 2007/02/20 12:45:06 joerg Exp $
  VERSION = 0.6.1
  VERSION_DATE = 1999
 -DESTDIR = /usr/local
-+DESTDIR = $(PREFIX)
- BIN_PATH = $(DESTDIR)/bin
- MAN_PATH = $(DESTDIR)/man
- SHARE_PATH = $(DESTDIR)/share/$(PROGNAME)
-@@ -16,6 +15,8 @@ RPM_RELEASE = 1
+-BIN_PATH = $(DESTDIR)/bin
+-MAN_PATH = $(DESTDIR)/man
+-SHARE_PATH = $(DESTDIR)/share/$(PROGNAME)
++BIN_PATH = $(DESTDIR)${PREFIX}/bin
++MAN_PATH = $(DESTDIR)${PREFIX}/${PKGMANDIR}
++SHARE_PATH = $(DESTDIR)${PREFIX}/share/$(PROGNAME)
+ RPM_RELEASE = 1
  RPM_BUILDPATH = /usr/src/redhat
  CODE_LINES = `cat *.c *.h | grep -ch -e "[[:alpha:]|[:punct:]]"` 
  
@@ -29,7 +31,7 @@ $NetBSD: patch-aa,v 1.4 2007/02/20 12:45:06 joerg Exp $
  $(PROGNAME): main.o GTKmisc.o menu.o toolbar.o connectbar.o statusbar.o\
  	dirlist.o ftplist.o queue.o log.o console.o dialog.o chmod.o\
  	version.o custom.o string.o pixmaps.o color.o cursor.o\
-@@ -30,34 +31,34 @@ $(PROGNAME): main.o GTKmisc.o menu.o too
+@@ -30,34 +30,34 @@ $(PROGNAME): main.o GTKmisc.o menu.o too
  
  install : 
  	@if ! test -e $(SHARE_PATH); then \
