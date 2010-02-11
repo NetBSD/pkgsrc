@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/11 22:04:14 joerg Exp $
 #
 
 DISTNAME=	latd-1.18
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-decnet/}
 MAINTAINER=	fredette@theory.lcs.mit.edu
 HOMEPAGE=	http://theory.lcs.mit.edu/~fredette/latd/index.html
 COMMENT=	The linux-decnet project's LAT protocol suite
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Interix-*-* # no direct ethernet support
 
