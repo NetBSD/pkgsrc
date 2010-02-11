@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/08/26 19:58:01 sno Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/11 19:24:10 joerg Exp $
 #
 
 DISTNAME=		kanjipad-2.0.0
@@ -10,12 +10,14 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fishsoup.net/software/kanjipad/
 COMMENT=		Japanese handwriting recognition
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake perl pkg-config
 
-.include "../../x11/gtk2/buildlink3.mk"
+INSTALLATION_DIRS+=	share/doc/kanjipad
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/kanjipad
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/kanjipad
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/kanjipad
 
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
