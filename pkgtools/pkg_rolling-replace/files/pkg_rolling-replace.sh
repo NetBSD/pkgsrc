@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.25 2010/02/01 19:06:43 sno Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.26 2010/02/11 12:07:33 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -267,7 +267,7 @@ vsleep()
 
 report()
 {
-    for a in $SUCCESSED; do
+    for a in $SUCCEEDED; do
         verbose "+ $a"
     done
 
@@ -278,11 +278,37 @@ report()
 
 abort()
 {
-	echo "*** $1"
-	echo "*** Please read the errors listed above, fix the problem,"
-	echo "*** then re-run pkg_rolling-replace to continue."
-        report
-	exit 1
+    echo "*** $1"
+    echo "*** Please read the errors listed above, fix the problem,"
+    echo "*** then re-run pkg_rolling-replace to continue."
+    report
+    exit 1
+}
+
+error()
+{
+    if [ -n "$opt_k" ]; then
+        abort "$1"
+    fi
+    echo "*** $1"
+}
+
+mark_as_succeeded()
+{
+    if [ -n "$SUCCEEDED" ]; then
+        SUCCEEDED="$SUCCEEDED $1"
+    else
+        SUCCEEDED="$1"
+    fi
+}
+
+mark_as_failed()
+{
+    if [ -n "$FAILED" ]; then
+        FAILED="$FAILED $1"
+    else
+        FAILED="$1"
+    fi
 }
 
 todo()
@@ -350,10 +376,8 @@ fi
 
 MAKE="${MAKE}${MAKE_VAR_SEP}${MAKE_VAR}"
 
-SUCCESSED=""
-SUCCESSEDSEP=""
+SUCCEEDED=""
 FAILED=""
-FAILEDSEP=""
 
 MISMATCH_TODO=
 if [ -n "$opt_u" -o -n "$opt_F" ]; then
@@ -403,6 +427,8 @@ while [ -n "$REPLACE_TODO" ]; do
         fi
     done
     pkgdir=$(${PKG_INFO} -Q PKGPATH $pkg)
+    [ -n "$pkgdir" ] || abort "Couldn't extract PKGPATH from installed package $pkg"
+
     echo "${OPI} Selecting $pkg ($pkgdir) as next package to replace"
     sleep 1
 
@@ -466,9 +492,8 @@ while [ -n "$REPLACE_TODO" ]; do
     if [ -d "$PKGSRCDIR/$pkgdir" ]; then
 	cd "$PKGSRCDIR/$pkgdir";
     else
-	FAILED="$FAILED$FAILEDSEP$pkg"
-	FAILEDSEP=" "
-	[ -n "$opt_k" ] || abort "No package directory '$pkgdir' for $pkg."
+        mark_as_failed $pkg
+	error "No package directory '$pkgdir' for $pkg."
     fi
 
     if [ -z "$fail" ]; then
@@ -484,9 +509,8 @@ while [ -n "$REPLACE_TODO" ]; do
 		    eval "$cmd"
 		fi
 		if [ -n "$fail" ]; then
-		    FAILED="$FAILED$FAILEDSEP$pkg"
-		    FAILEDSEP=" "
-		    [ -n "$opt_k" ] || abort "'make clean' failed for package $pkg."
+                    mark_as_failed $pkg
+		    error "'make clean' failed for package $pkg."
 		fi
 	    fi
 	    cmd="${MAKE} replace || fail=1" # XXX OLDNAME= support? xmlrpc-c -> xmlrpc-c-ss
@@ -505,9 +529,8 @@ while [ -n "$REPLACE_TODO" ]; do
             eval "$cmd"
         fi
     	if [ -n "$fail" ]; then
-            FAILED="$FAILED$FAILEDSEP$pkg"
-            FAILEDSEP=" "
-            [ -n "$opt_k" ] || abort "'make replace' failed for package $pkg."
+            mark_as_failed $pkg
+            error "'make replace' failed for package $pkg."
         fi
     fi
     if [ -z "$opt_n" -a -z "$opt_k" -a -z "$opt_F" ]; then
@@ -531,9 +554,8 @@ while [ -n "$REPLACE_TODO" ]; do
                 eval "$cmd"
             fi
             if [ -n "$fail" ]; then
-                FAILED="$FAILED$FAILEDSEP$pkg"
-                FAILEDSEP=" "
-                [ -n "$opt_k" ] || abort "'make package' failed for package $pkg."
+                mark_as_failed $pkg
+                error "'make package' failed for package $pkg."
             fi
 	fi
     fi
@@ -546,15 +568,13 @@ while [ -n "$REPLACE_TODO" ]; do
             eval "$cmd"
         fi
     	if [ -n "$fail" ]; then
-            FAILED="$FAILED$FAILEDSEP$pkg"
-            FAILEDSEP=" "
-            [ -n "$opt_k" ] || abort "'make clean' failed for package $pkg."
+            mark_as_failed $pkg
+            error "'make clean' failed for package $pkg."
         fi
     fi
 
     if [ -z "$fail" ]; then
-        SUCCESSED="$SUCCESSED$SUCCESSEDSEP$pkg"
-        SUCCESSEDSEP=" "
+        mark_as_succeeded $pkg
     fi
 
     sleep 1
