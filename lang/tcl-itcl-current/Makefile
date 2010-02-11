@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/02/04 01:32:00 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/11 13:58:05 joerg Exp $
 
 DISTNAME=	tcl-itcl-20040920
 PKGNAME=	${DISTNAME:S/itcl/itcl-current/}
@@ -35,9 +35,8 @@ SUBST_SED.tcl-itcl+=	-e s\|${WRKSRC:Q}/itcl\|${PREFIX:Q}/lib/tcl/itcl${ITCL_VERS
 SUBST_SED.tcl-itcl+=	-e s\|${PREFIX:Q}/lib/itcl${ITCL_VERS:Q}\|${PREFIX:Q}/lib/tcl/itcl${ITCL_VERS:Q}\|
 SUBST_SED.tcl-itcl+=	-e s\|${WRKDIR:Q}/${DISTNAME:C/-src//:Q}\|${PREFIX:Q}\|
 
-INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
-			exec_prefix=${DESTDIR}${PREFIX} \
-			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALLATION_DIRS+=	lib
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
