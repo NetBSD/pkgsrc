@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2009/12/16 17:22:19 drochner Exp $
+# $NetBSD: Makefile,v 1.100 2010/02/11 17:50:40 drochner Exp $
 #
 
 DISTNAME=	file-roller-2.28.2
@@ -25,9 +25,7 @@ USE_PKGLOCALEDIR=	yes
 GCONF_SCHEMAS=		file-roller.schemas
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.12.0
-BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.10.0
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
-BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.4.0
 
 # Force to use unzip from pkgsrc as other installed versions in path
 # may be incompatible. (For example NetBSD 6.0's unzip)
