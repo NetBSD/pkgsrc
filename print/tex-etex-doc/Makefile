@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/13 18:39:26 minskim Exp $
-# TeX Live Revision 7340
+# $NetBSD: Makefile,v 1.2 2010/02/11 05:48:22 minskim Exp $
+# TeX Live Revision 16381
 
 DISTNAME=	etex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.1
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.1.16381
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-etex
 
-.include "../../print/texlive/module.mk"
+TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
+
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
