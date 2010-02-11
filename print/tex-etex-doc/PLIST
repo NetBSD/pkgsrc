@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/13 18:39:26 minskim Exp $
-share/texmf-dist/doc/etex/base/etex.html
+@comment $NetBSD: PLIST,v 1.2 2010/02/11 05:48:22 minskim Exp $
+man/man1/etex.1
+share/texmf-dist/doc/etex/base/NTS-FAQ
 share/texmf-dist/doc/etex/base/etex_gen.tex
 share/texmf-dist/doc/etex/base/etex_man.pdf
 share/texmf-dist/doc/etex/base/etex_man.sty
