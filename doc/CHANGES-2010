@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.669 2010/02/11 04:55:58 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.670 2010/02/11 05:48:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -797,3 +797,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/scmgit-base to 1.6.6.2 [minskim 2010-02-11]
 	Updated devel/scmgit-docs to 1.6.6.2 [minskim 2010-02-11]
 	Updated devel/scmgit to 1.6.6.2 [minskim 2010-02-11]
+	Updated print/tex-etex-doc to 2.1.16381 [minskim 2010-02-11]
