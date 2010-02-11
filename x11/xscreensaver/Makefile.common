@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.99 2009/07/07 17:28:04 joerg Exp $
+# $NetBSD: Makefile.common,v 1.100 2010/02/11 18:16:21 drochner Exp $
 #
 
 # When updating the package,
 # please check kdeartwork3 -- it installs some extra
 # files depending on which screensavers it finds.
-DISTNAME=		xscreensaver-5.08
+DISTNAME=		xscreensaver-5.10
 CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE}
 
