@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/03/02 09:28:55 adrianp Exp $
+# $NetBSD: Makefile,v 1.15 2010/02/11 23:00:57 joerg Exp $
 #
 
 DISTNAME=		tcptraceroute-1.4
@@ -10,11 +10,14 @@ MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://michael.toren.net/code/tcptraceroute/
 COMMENT=		Traceroute implementation using TCP packets
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_TARGET=		tcptraceroute
 BUILDLINK_API_DEPENDS.libnet10+=	libnet10>=1.0.2anb1
 
 DOCDIR=			${PREFIX}/share/doc/tcptraceroute
-BINMODE=		4711
+
+SPECIAL_PERMS+=		sbin/tcptraceroute ${SETUID_ROOT_PERMS}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,13 +27,12 @@ SUBST_FILES.conf=	Makefile
 SUBST_SED.conf=		-e "s|libnet-config|libnet10-config|g"
 SUBST_MESSAGE.conf=	Fixing configuration script.
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin ${DOCDIR}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tcptraceroute ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/tcptraceroute.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples.txt ${DOCDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/tcptraceroute ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/tcptraceroute.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/examples.txt ${DESTDIR}${DOCDIR}
 
 .include "../../devel/libnet10/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

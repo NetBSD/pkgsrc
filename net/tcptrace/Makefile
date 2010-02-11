@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/01/07 09:14:07 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2010/02/11 22:59:14 joerg Exp $
 
 DISTNAME=	tcptrace-6.6.7
 CATEGORIES=	net
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tcptrace.org/
 COMMENT=	TCP dump file analysis tool
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
 
 BUILD_TARGET=		tcptrace
@@ -16,14 +18,13 @@ DOCFILES=		COPYRIGHT FAQ README README.tput_graphs
 
 LDFLAGS.SunOS+=		-lm
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/tcptrace
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tcptrace ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/tcptrace.man ${PREFIX}/${PKGMANDIR}/man1/tcptrace.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcptrace
+	${INSTALL_PROGRAM} ${WRKSRC}/tcptrace ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/tcptrace.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tcptrace.1
 .for f in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/tcptrace
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/tcptrace
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2002/06/27 20:52:07 agc Exp $
+$NetBSD: patch-ae,v 1.2 2010/02/11 23:18:29 joerg Exp $
 
 --- Makefile.in	2002/06/27 20:47:49	1.1
 +++ Makefile.in	2002/06/27 20:49:00
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.1 2002/06/27 20:52:07 agc Exp $
  	$(INSTALL) data/pkt/* $(datadir)/xipdump/pkt
  	$(INSTALL) data/pkc/* $(datadir)/xipdump/pkc
 -	$(INSTALL) Xipdump.ad @APP_DEFAULTS_DIR@/Xipdump
-+	$(INSTALL) Xipdump.ad @prefix@/lib/X11/app-defaults/Xipdump
++	$(INSTALL) Xipdump.ad ${DESTDIR}@prefix@/lib/X11/app-defaults/Xipdump
  
  .SUFFIXES: .E .w
  

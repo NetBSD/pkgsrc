@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/04 21:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/11 23:07:16 joerg Exp $
 #
 
 DISTNAME=	udptunnel-1.1
@@ -10,10 +10,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www1.cs.columbia.edu/~lennox/udptunnel/
 COMMENT=	Tunnel UDP packets over a TCP connection
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		YES
 INSTALLATION_DIRS=	bin share/doc/html
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/udptunnel.html ${PREFIX}/share/doc/html/
+	${INSTALL_DATA} ${WRKSRC}/udptunnel.html ${DESTDIR}${PREFIX}/share/doc/html/
 
 .include "../../mk/bsd.pkg.mk"
