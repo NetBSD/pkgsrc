@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.519 2010/02/10 17:52:30 joerg Exp $
+# $NetBSD: Makefile,v 1.520 2010/02/11 13:05:03 joerg Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -398,6 +398,7 @@ SUBDIR+=	py-FourSuite
 SUBDIR+=	py-HappyDoc
 SUBDIR+=	py-X
 SUBDIR+=	py-cmTemplate
+SUBDIR+=	py-creole
 SUBDIR+=	py-docutils
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-enchant
