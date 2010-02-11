@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.21 2009/01/14 13:29:15 drochner Exp $
+$NetBSD: patch-ac,v 1.22 2010/02/11 18:16:22 drochner Exp $
 
---- configure.orig	2008-12-28 08:59:19.000000000 +0100
+--- configure.orig	2009-09-08 04:54:40.000000000 +0000
 +++ configure
-@@ -3504,6 +3504,9 @@ echo "${ECHO_T}$ac_cv_gcc_accepts_no_cpp
+@@ -3505,6 +3505,9 @@ echo "${ECHO_T}$ac_cv_gcc_accepts_no_cpp
     ac_gcc_accepts_no_cpp_precomp="$ac_cv_gcc_accepts_no_cpp_precomp"
    fi
  
@@ -10,9 +10,9 @@ $NetBSD: patch-ac,v 1.21 2009/01/14 13:29:15 drochner Exp $
 +# cause build failures.
 +if false; then
  if test -n "$GCC"; then
-    if test -n "$GCC"; then
-    { echo "$as_me:$LINENO: checking whether gcc accepts -std=c89" >&5
-@@ -3554,6 +3557,7 @@ echo "${ECHO_T}Disabling C++ comments in
+ 
+   case "$host" in
+@@ -3565,6 +3568,7 @@ echo "${ECHO_T}Disabling C++ comments in
       CC="$CC -Wp,-lang-c89"
     fi
    fi
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.21 2009/01/14 13:29:15 drochner Exp $
  
  ac_ext=c
  ac_cpp='$CPP $CPPFLAGS'
-@@ -7925,7 +7929,7 @@ _ACEOF
+@@ -7936,7 +7940,7 @@ _ACEOF
  
  
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.21 2009/01/14 13:29:15 drochner Exp $
  if test -n "$ac_tool_prefix"; then
    # Extract the first word of "${ac_tool_prefix}ranlib", so it can be a program name with args.
  set dummy ${ac_tool_prefix}ranlib; ac_word=$2
-@@ -13644,7 +13648,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
+@@ -13632,7 +13636,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.21 2009/01/14 13:29:15 drochner Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -13731,7 +13735,7 @@ echo "$as_me: WARNING: Cannot find compa
+@@ -13719,7 +13723,7 @@ echo "$as_me: WARNING: Cannot find compa
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
@@ -47,7 +47,7 @@ $NetBSD: patch-ac,v 1.21 2009/01/14 13:29:15 drochner Exp $
  
      # jwz: MacOS X uses -lkrb5, but not -lcrypt
  
-@@ -14893,7 +14897,7 @@ fi
+@@ -14881,7 +14885,7 @@ fi
  #
  if test "$enable_locking" = yes ; then
    case "$host" in
@@ -56,7 +56,7 @@ $NetBSD: patch-ac,v 1.21 2009/01/14 13:29:15 drochner Exp $
        need_setuid=yes
      ;;
    esac
-@@ -15327,11 +15331,7 @@ echo "${ECHO_T}$ac_cv_gtk_config_libs" >
+@@ -15315,11 +15319,7 @@ echo "${ECHO_T}$ac_cv_gtk_config_libs" >
    ac_gtk_config_libs=$ac_cv_gtk_config_libs
  
    GTK_EXTRA_OBJS=""
