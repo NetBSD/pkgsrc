@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2010/01/18 09:59:20 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2010/02/11 22:14:30 joerg Exp $
 
 DISTNAME=	mrtg-2.16.2
 PKGREVISION=	4
@@ -10,6 +10,8 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://oss.oetiker.ch/mrtg/
 COMMENT=	The Multi-Router Traffic Grapher
 LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 GNU_CONFIGURE=	YES
@@ -40,7 +42,7 @@ SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.files=	Fixing default configuration files.
 
 INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1 ${EGDIR}
-INSTALLATION_DIRS+=	share/mrtg share/doc/mrtg
+INSTALLATION_DIRS+=	share/mrtg share/doc/mrtg ${PERL5_INSTALLVENDORLIB}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
@@ -53,34 +55,33 @@ post-extract:
 
 do-install:
 	for FILE in ${WRKSRC}/doc/*.??*; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/mrtg; \
+	  ${INSTALL_DATA} $$FILE ${DESTDIR}${PREFIX}/share/doc/mrtg; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/doc/mrtg*.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA} ${WRKSRC}/doc/mrtg*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	for FILE in cfgmaker.1 indexmaker.1; do \
-	  ${INSTALL_DATA} ${WRKSRC}/doc/$$FILE ${PREFIX}/${PKGMANDIR}/man1/mrtg$$FILE; \
+	  ${INSTALL_DATA} ${WRKSRC}/doc/$$FILE ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mrtg$$FILE; \
 	done
 	for FILE in CHANGES COPYING COPYRIGHT README; do \
-	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${PREFIX}/share/doc/mrtg; \
+	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${DESTDIR}${PREFIX}/share/doc/mrtg; \
 	done
 	for FILE in ${WRKSRC}/images/*.png; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/mrtg; \
+	  ${INSTALL_DATA} $$FILE ${DESTDIR}${PREFIX}/share/mrtg; \
 	done
-	${INSTALL_DATA} ${WRKDIR}/mrtg.conf.example ${EGDIR}/mrtg.conf
+	${INSTALL_DATA} ${WRKDIR}/mrtg.conf.example ${DESTDIR}${EGDIR}/mrtg.conf
 	for FILE in netstat2mrtg sys2mrtg envstat2mrtg; do \
-	  ${INSTALL_SCRIPT} ${WRKDIR}/$$FILE ${PREFIX}/libexec; \
+	  ${INSTALL_SCRIPT} ${WRKDIR}/$$FILE ${DESTDIR}${PREFIX}/libexec; \
 	done
-	${INSTALL_DATA_DIR} ${PERL5_INSTALLVENDORLIB}
 	${INSTALL_DATA} ${WRKSRC}/lib/mrtg2/BER.pm \
 	  ${WRKSRC}/lib/mrtg2/SNMP_Session.pm \
 	  ${WRKSRC}/lib/mrtg2/SNMP_util.pm \
 	  ${WRKSRC}/lib/mrtg2/Net_SNMP_util.pm \
 	  ${WRKSRC}/lib/mrtg2/MRTG_lib.pm \
 	  ${WRKSRC}/lib/mrtg2/locales_mrtg.pm \
-	  ${PERL5_INSTALLVENDORLIB}
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/rateup ${PREFIX}/libexec/
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/mrtg ${PREFIX}/bin/
+	  ${DESTDIR}${PERL5_INSTALLVENDORLIB}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/rateup ${DESTDIR}${PREFIX}/libexec/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/mrtg ${DESTDIR}${PREFIX}/bin/
 	for FILE in cfgmaker indexmaker; do \
-	  ${INSTALL_SCRIPT} ${WRKSRC}/bin/$$FILE ${PREFIX}/bin/mrtg$$FILE; \
+	  ${INSTALL_SCRIPT} ${WRKSRC}/bin/$$FILE ${DESTDIR}${PREFIX}/bin/mrtg$$FILE; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
