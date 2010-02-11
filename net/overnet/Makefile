@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/07/29 05:19:47 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/11 22:31:25 joerg Exp $
 #
 
 DISTNAME=	overnetclc-1.0.1
@@ -12,6 +12,8 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://www.overnet.com/
 COMMENT=	Peer-to-peer file sharing client (binary pkg)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	compat
 
@@ -23,17 +25,15 @@ RPM2PKG_PLIST=		# empty
 RPM2PKG_STRIP=		0
 RUN_LDCONFIG=		no
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/overnetclc share/overnetclc
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/usr/bin/overnetclc ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/overnetclc
+	${INSTALL_PROGRAM} ${WRKDIR}/usr/bin/overnetclc ${DESTDIR}${PREFIX}/bin
 .for f in ChangeLog LISEZMOI README
 	${INSTALL_DATA} ${WRKDIR}/usr/share/doc/overnetclc/${f}		\
-		${PREFIX}/share/doc/overnetclc
+	    ${DESTDIR}${PREFIX}/share/doc/overnetclc
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/overnetclc
 	${INSTALL_DATA} ${WRKSRC}/usr/share/overnetclc/contact.dat	\
-		${PREFIX}/share/overnetclc
+	    ${DESTDIR}${PREFIX}/share/overnetclc
 
 .include "../../mk/bsd.pkg.mk"
