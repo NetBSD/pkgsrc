@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/11 12:51:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/11 18:28:07 drochner Exp $
 bin/extrema
 lib/libextrema.la
 share/extrema/Help/BasicTasks/BasicTasks.htm
@@ -994,6 +994,7 @@ share/extrema/Help/extrema.hhp
 share/extrema/Help/extremaMain.htm
 share/extrema/Help/shadow_left.gif
 share/extrema/Help/shadow_right.gif
+share/extrema/Images/3dplot.bmp
 share/extrema/Images/arrow1.bmp
 share/extrema/Images/arrow11.bmp
 share/extrema/Images/arrow12.bmp
@@ -1009,6 +1010,7 @@ share/extrema/Images/arrow33.bmp
 share/extrema/Images/aspectRatio.GIF
 share/extrema/Images/clear.GIF
 share/extrema/Images/constants.GIF
+share/extrema/Images/downarrow.bmp
 share/extrema/Images/drawfigure.GIF
 share/extrema/Images/drawgraph.GIF
 share/extrema/Images/drawtext.GIF
@@ -1016,6 +1018,7 @@ share/extrema/Images/execute.GIF
 share/extrema/Images/executeClearList.GIF
 share/extrema/Images/executeRemoveFilename.GIF
 share/extrema/Images/exit.GIF
+share/extrema/Images/figures.bmp
 share/extrema/Images/fillcolor.GIF
 share/extrema/Images/fillcolors.bmp
 share/extrema/Images/fit.GIF
@@ -1023,6 +1026,7 @@ share/extrema/Images/generate.GIF
 share/extrema/Images/help.GIF
 share/extrema/Images/importdrawing.GIF
 share/extrema/Images/leftArrow.GIF
+share/extrema/Images/leftarrow.bmp
 share/extrema/Images/linecolor.GIF
 share/extrema/Images/linecolors.bmp
 share/extrema/Images/linethickness.bmp
@@ -1032,9 +1036,12 @@ share/extrema/Images/peakfind.GIF
 share/extrema/Images/print.GIF
 share/extrema/Images/rectangle.bmp
 share/extrema/Images/rectangle1.bmp
+share/extrema/Images/regularPolygon.bmp
+share/extrema/Images/regularPolygon1.bmp
 share/extrema/Images/removePage.GIF
 share/extrema/Images/restore.GIF
 share/extrema/Images/rightArrow.GIF
+share/extrema/Images/rightarrow.bmp
 share/extrema/Images/save.GIF
 share/extrema/Images/show.GIF
 share/extrema/Images/square.bmp
@@ -1042,3 +1049,6 @@ share/extrema/Images/square1.bmp
 share/extrema/Images/stack.GIF
 share/extrema/Images/star.bmp
 share/extrema/Images/star1.bmp
+share/extrema/Images/uparrow.bmp
+share/extrema/Images/zoomin.bmp
+share/extrema/Images/zoomout.bmp
