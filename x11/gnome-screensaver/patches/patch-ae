@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2010/02/11 18:02:39 drochner Exp $
+
+--- src/Makefile.in.orig	2010-02-08 15:58:16.000000000 +0000
++++ src/Makefile.in
+@@ -396,7 +396,7 @@ INCLUDES = \
+ 	$(LIBNOTIFY_CFLAGS)					\
+ 	$(NULL)
+ 
+-desktopdir = $(sysconfdir)/xdg/autostart
++desktopdir = $(PREFIX)/share/gnome/autostart
+ desktop_in_files = gnome-screensaver.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ gnome_screensaver_command_SOURCES = \

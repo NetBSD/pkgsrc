@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/11/17 17:54:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/02/11 18:02:39 drochner Exp $
 bin/gnome-screensaver
 bin/gnome-screensaver-command
 bin/gnome-screensaver-preferences
@@ -30,12 +30,12 @@ share/backgrounds/cosmos/whirlpool.jpg
 share/desktop-directories/gnome-screensaver.directory
 share/examples/gnome-screensaver/pam.d/gnome-screensaver-Linux
 share/examples/gnome-screensaver/pam.d/gnome-screensaver-NetBSD
-share/examples/gnome-screensaver/xdg/autostart/gnome-screensaver.desktop
 share/examples/gnome-screensaver/xdg/menus/gnome-screensavers.menu
 share/gconf/schemas/gnome-screensaver.schemas
 share/gnome-background-properties/cosmos.xml
 share/gnome-screensaver/gnome-screensaver-preferences.ui
 share/gnome-screensaver/lock-dialog-default.ui
+share/gnome/autostart/gnome-screensaver.desktop
 share/locale/ar/LC_MESSAGES/gnome-screensaver.mo
 share/locale/as/LC_MESSAGES/gnome-screensaver.mo
 share/locale/ast/LC_MESSAGES/gnome-screensaver.mo
