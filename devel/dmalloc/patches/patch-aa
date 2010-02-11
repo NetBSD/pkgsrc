@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.3 2010/02/11 18:35:07 drochner Exp $
+
+--- Makefile.in.orig	2007-05-14 17:26:14.000000000 +0000
++++ Makefile.in
+@@ -257,7 +257,7 @@ shlib : $(BUILD_SL)
+ # via: http://256.com/gray/email.html
+ $(LIB_SL) : $(LIBRARY)
+ 	rm -f $@ $@.t
+-	@shlinkargs@ $(LIBRARY) $(OBJS) $(NORMAL_OBJS)
++	@shlinkargs@ $(OBJS) $(NORMAL_OBJS)
+ 	mv $@.t $@
+ 
+ $(LIBRARY) : $(OBJS) $(NORMAL_OBJS)
+@@ -270,7 +270,7 @@ $(LIB_TH) : $(OBJS) $(THREAD_OBJS)
+ 
+ $(LIB_TH_SL) : $(LIB_TH)
+ 	rm -f $@ $@.t
+-	@shlinkargs@ $(LIB_TH) $(OBJS) $(THREAD_OBJS)
++	@shlinkargs@ $(OBJS) $(THREAD_OBJS)
+ 	mv $@.t $@
+ 
+ $(LIB_CXX) : $(OBJS) $(NORMAL_OBJS) $(CXX_OBJS)
+@@ -279,7 +279,7 @@ $(LIB_CXX) : $(OBJS) $(NORMAL_OBJS) $(CX
+ 
+ $(LIB_CXX_SL) : $(LIB_CXX)
+ 	rm -f $@ $@.t
+-	@shlinkargs@ $(LIB_CXX) $(OBJS) $(NORMAL_OBJS) $(CXX_OBJS)
++	@shlinkargs@ $(OBJS) $(NORMAL_OBJS) $(CXX_OBJS)
+ 	mv $@.t $@
+ 
+ $(LIB_TH_CXX) : $(OBJS) $(THREAD_OBJS) $(CXX_OBJS)
+@@ -288,7 +288,7 @@ $(LIB_TH_CXX) : $(OBJS) $(THREAD_OBJS) $
+ 
+ $(LIB_TH_CXX_SL) : $(LIB_TH_CXX)
+ 	rm -f $@ $@.t
+-	@shlinkargs@ $(LIB_TH_CXX) $(OBJS) $(THREAD_OBJS) $(CXX_OBJS)
++	@shlinkargs@ $(OBJS) $(THREAD_OBJS) $(CXX_OBJS)
+ 	mv $@.t $@
+ 
+ threadssl : $(LIB_TH_SL)
