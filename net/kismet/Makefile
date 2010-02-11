@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/24 13:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/11 21:58:29 joerg Exp $
 
 DISTNAME=		kismet-2008-05-R1
 PKGNAME=		kismet-2008.05.01
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.kismetwireless.net/code/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.kismetwireless.net/
 COMMENT=		802.11 wireless network detector, sniffer and IDS
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_NCURSES=		yes # needs libpanel
@@ -50,16 +52,17 @@ SUBST_STAGE.user=	pre-configure
 SUBST_FILES.user=	conf/kismet.conf.in
 SUBST_SED.user=		-e 's/your_user_here/${KISMET_USER}/'
 
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/ap_manuf ${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/conf/client_manuf ${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/conf/ap_manuf ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/conf/client_manuf ${DESTDIR}${EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/conf/kismet.conf		\
-		${EGDIR}/kismet.conf.default
+	    ${DESTDIR}${EGDIR}/kismet.conf.default
 	${INSTALL_DATA} ${WRKSRC}/conf/kismet_drone.conf	\
-		${EGDIR}/kismet_drone.conf.default
+	    ${DESTDIR}${EGDIR}/kismet_drone.conf.default
 	${INSTALL_DATA} ${WRKSRC}/conf/kismet_ui.conf		\
-		${EGDIR}/kismet_ui.conf.default
+	    ${DESTDIR}${EGDIR}/kismet_ui.conf.default
 
 .include "options.mk"
 
