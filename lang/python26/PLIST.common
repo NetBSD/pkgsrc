@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.8 2010/01/26 12:15:26 tron Exp $
+@comment $NetBSD: PLIST.common,v 1.9 2010/02/11 21:21:49 tnn Exp $
 bin/2to3
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1708,7 +1708,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_weakref.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/array.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/audioop.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/binascii.so
-${PLIST.bsddb}lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb185.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb185.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/bz2.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cPickle.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cStringIO.so
