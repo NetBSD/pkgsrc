@@ -1,18 +1,18 @@
-$NetBSD: patch-am,v 1.9 2010/02/11 15:29:41 joerg Exp $
+$NetBSD: patch-am,v 1.10 2010/02/11 21:09:50 tnn Exp $
 
 Disabled modules for normal build:
 bsdddb
 curses
 curses_panel
 elementtree
-Those have separate packages. 
+Those have separate packages.
 
 Only check the BUILDLINK_DIR for libraries etc, do not pick up random
 headers and libraries from the system.
 
 Build the 1.85 compat module all the time against the BDB version of choice.
 
---- setup.py.orig	2009-09-20 12:37:33.000000000 +0200
+--- setup.py.orig	2009-10-08 09:48:32.000000000 +0000
 +++ setup.py
 @@ -17,7 +17,7 @@ from distutils.command.install import in
  from distutils.command.install_lib import install_lib
@@ -226,7 +226,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 -                    exts.append(Extension('bsddb185', ['bsddbmodule.c']))
 -            else:
 -                missing.append('bsddb185')
-+	libraries = os.getenv("PY_BDB_TYPE", "")
++        libraries = os.getenv("PY_BDB_TYPE", "")
 +        if libraries:
 +            exts.append(Extension('bsddb185', ['bsddbmodule.c'],
 +                                  libraries=["db"]))
@@ -236,22 +236,33 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -1036,14 +882,6 @@ class PyBuildExt(build_ext):
+@@ -1020,7 +866,7 @@ class PyBuildExt(build_ext):
+                 exts.append( Extension('dbm', ['dbmmodule.c'],
+                                        define_macros=[('HAVE_NDBM_H',None)],
+                                        libraries = ndbm_libs ) )
+-            elif self.compiler.find_library_file(lib_dirs, 'gdbm'):
++            elif 1==0 and self.compiler.find_library_file(lib_dirs, 'gdbm'):
+                 gdbm_libs = ['gdbm']
+                 if self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
+                     gdbm_libs.append('gdbm_compat')
+@@ -1036,14 +882,11 @@ class PyBuildExt(build_ext):
                          libraries = gdbm_libs ) )
                  else:
                      missing.append('dbm')
 -            elif db_incs is not None:
--                exts.append( Extension('dbm', ['dbmmodule.c'],
++            elif 1==1:
+                 exts.append( Extension('dbm', ['dbmmodule.c'],
 -                                       library_dirs=dblib_dir,
 -                                       runtime_library_dirs=dblib_dir,
 -                                       include_dirs=db_incs,
--                                       define_macros=[('HAVE_BERKDB_H',None),
--                                                      ('DB_DBM_HSEARCH',None)],
+                                        define_macros=[('HAVE_BERKDB_H',None),
+                                                       ('DB_DBM_HSEARCH',None)],
 -                                       libraries=dblibs))
++                                       libraries=["db"]))
              else:
                  missing.append('dbm')
  
-@@ -1300,6 +1138,14 @@ class PyBuildExt(build_ext):
+@@ -1300,6 +1143,14 @@ class PyBuildExt(build_ext):
                  )
              libraries = []
  
@@ -266,7 +277,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          else:                                   # Linux and other unices
              macros = dict(
                  HAVE_SEM_OPEN=1,
-@@ -1900,9 +1746,9 @@ def main():
+@@ -1900,9 +1751,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
