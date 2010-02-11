@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/12/22 12:39:57 obache Exp $
+# $NetBSD: Makefile,v 1.26 2010/02/11 22:37:49 joerg Exp $
 
 DISTNAME=	radiusd-cistron-1.6.8
 CATEGORIES=	net
@@ -7,6 +7,8 @@ MASTER_SITES=	ftp://ftp.cistron.nl/pub/people/miquels/radius/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.radius.cistron.nl/
 COMMENT=	RADIUS-compliant remote authentication and accounting server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	freeradius-[0-9]*
 
@@ -23,7 +25,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
 
 RCD_SCRIPTS=	radiusd
 
-OWN_DIRS_PERMS=	/var/log/radacct ${ROOT_USER} ${ROOT_GROUP} 700
+OWN_DIRS_PERMS=	/var/log/radacct ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
 
 PKG_SYSCONFSUBDIR=	raddb
 EGDIR=		${PREFIX}/share/examples/raddb
@@ -38,20 +40,20 @@ CONF_FILES+=	${EGDIR}/${cfile} ${PKG_SYSCONFDIR}/${cfile:S/.sample//}
 .endfor
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${PREFIX}/share/doc/radiusd-cistron/
+	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DESTDIR}${PREFIX}/share/doc/radiusd-cistron/
 .for i in	ChangeLog README README.CVX README.Y2K README.cisco	\
 		README.pam README.proxy README.radrelay README.simul	\
 		README.tunnel README.usersfile
-	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/radiusd-cistron/
+	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/share/doc/radiusd-cistron/
 .endfor
 .for i in	radclient.1 radlast.1 radtest.1 radwho.1 radzap.1
-	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 .endfor
 .for i in	clients.5rad naslist.5rad
-	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/${PKGMANDIR}/man5/
+	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/
 .endfor
 .for i in	radiusd.8 radrelay.8 radwatch.8
-	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

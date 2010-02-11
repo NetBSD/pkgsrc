@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/08 21:12:31 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2010/02/11 22:38:12 joerg Exp $
 #
 
 DISTNAME=		rinetd
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.boutell.com/rinetd/http/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.boutell.com/rinetd/
 COMMENT=		Internet redirection server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 BUILD_TARGET=		rinetd
@@ -31,7 +33,7 @@ do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} cc ${CPPFLAGS} ${CFLAGS} -o rinetd *.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rinetd ${PREFIX}/sbin/.
-	${INSTALL_MAN} ${WRKSRC}/rinetd.8 ${PREFIX}/${PKGMANDIR}/man8/.
+	${INSTALL_PROGRAM} ${WRKSRC}/rinetd ${DESTDIR}${PREFIX}/sbin/.
+	${INSTALL_MAN} ${WRKSRC}/rinetd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/.
 
 .include "../../mk/bsd.pkg.mk"
