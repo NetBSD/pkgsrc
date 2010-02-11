@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.40 2010/02/10 23:33:09 bad Exp $
+# $NetBSD: Makefile,v 1.41 2010/02/11 02:18:34 asau Exp $
 #
 
-DISTNAME=	Squeak-3.9-8
-PKGNAME=	squeak-3.9.8
-PKGREVISION=	2
+SQUEAK_VERSION=	3.11.3.2135	# see lang/squeak-vm
+
+DISTNAME=	Squeak3.10.2-7179-basic
+PKGNAME=	squeak-3.10.2.7179
 CATEGORIES=	lang
-MASTER_SITES=	http://ftp.squeak.org/3.9/unix-linux/
-DISTFILES=	Squeak-3.9-8.src.tar.gz
-DISTFILES+=	Squeak3.9-final-7067.zip
+MASTER_SITES=	http://ftp.squeak.org/3.10/
+EXTRACT_SUFX=	.zip
+DISTFILES=	$(DISTNAME)$(EXTRACT_SUFX) SqueakV39.sources.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://squeakvm.org/unix/
@@ -15,58 +16,22 @@ COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	automake14 gmake gzip bash:run
-REPLACE_BASH+=	platforms/unix/npsqueak/npsqueakrun.in
+DEPENDS=	squeak-vm-[0-9]*:../../lang/squeak-vm
 
-AUTOCONF_REQD=	2.57
-AUTOMAKE_REQD=	1.4.6
+DIST_SUBDIR=	squeak
+USE_TOOLS+=	gzip unzip
+NO_BUILD=	yes
 
-BUILD_DIRS=		${WRKDIR}/build
-CONFIGURE_DIRS=		${WRKDIR}/build
-CONFIGURE_SCRIPT=	${WRKSRC}/platforms/unix/config/configure
-OVERRIDE_DIRDEPTH=	3
-LIBTOOL_OVERRIDE=	${BUILD_DIRS}/libtool
-DIST_SUBDIR=		squeak
+INSTALLATION_DIRS=	lib/squeak/$(SQUEAK_VERSION)
 
-SQUEAK_CHANGES= Squeak3.9-final-7067/Squeak3.9-final-7067.changes.gz
-SQUEAK_IMAGE=	Squeak3.9-final-7067/Squeak3.9-final-7067.image.gz
-SQUEAK_SOURCES=	Squeak3.9-final-7067/SqueakV39.sources
-
-INSTALLATION_DIRS=	bin lib/squeak
-INSTALL_ENV+=	ROOT=${DESTDIR:Q}
+SQUEAK_SOURCES=	SqueakV39.sources
 
 post-extract:
-	${GZIP_CMD} ${WRKDIR}/${SQUEAK_IMAGE:S/.gz$//W}
-	${GZIP_CMD} ${WRKDIR}/${SQUEAK_CHANGES:S/.gz$//W}
+	$(GZIP_CMD) -dc $(DISTDIR)/$(DIST_SUBDIR)/$(SQUEAK_SOURCES).gz > $(WRKDIR)/$(SQUEAK_SOURCES)
 
-pre-configure:
-	cd ${WRKSRC}/platforms/unix/config 				\
-	    && ${SETENV} PATH=${PREFIX}/bin:${PATH} ${MAKE} configure
-	${MKDIR} ${CONFIGURE_DIRS}
+do-install:
+	$(INSTALL_DATA) $(WRKDIR)/$(DISTNAME:=.image) $(DESTDIR)$(PREFIX)/lib/squeak/$(SQUEAK_VERSION)/
+	$(INSTALL_DATA) $(WRKDIR)/$(DISTNAME:=.changes) $(DESTDIR)$(PREFIX)/lib/squeak/$(SQUEAK_VERSION)/
+	$(INSTALL_DATA) $(WRKDIR)/$(SQUEAK_SOURCES) $(DESTDIR)$(PREFIX)/lib/squeak/$(SQUEAK_VERSION)/$(SQUEAK_SOURCES)
 
-post-install:
-	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_CHANGES} ${DESTDIR}${PREFIX}/lib/squeak/
-	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_IMAGE} ${DESTDIR}${PREFIX}/lib/squeak/
-	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_SOURCES} ${DESTDIR}${PREFIX}/lib/squeak/
-	cd ${DESTDIR}${PREFIX}/lib/squeak						\
-	    && ${LN} -s ${SQUEAK_CHANGES:C/.*\///} squeak.changes.gz	\
-	    && ${LN} -s ${SQUEAK_IMAGE:C/.*\///} squeak.image.gz
-	${INSTALL_SCRIPT} ${WRKDIR}/build/inisqueak ${DESTDIR}${PREFIX}/bin
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == i386
-CONFIGURE_ARGS+=	--enable-mpg-mmx
-.endif
-
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE}
-
-.include "../../audio/nas/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
