@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2010/02/11 20:43:49 asau Exp $
+
+No "struct mallinfo" on NetBSD (?)
+
+--- H/dlmalloc.h.orig	2005-11-23 06:01:33.000000000 +0300
++++ H/dlmalloc.h	2009-04-19 05:14:25.000000000 +0400
+@@ -489,7 +489,7 @@
+   HAVE_USR_INCLUDE_MALLOC_H.
+ */
+ 
+-#if HAVE_MALLOC_H && !defined(_WIN32)
++#if HAVE_MALLOC_H && !defined(__NetBSD__) && !defined(_WIN32)
+ #define HAVE_USR_INCLUDE_MALLOC_H 1
+ #endif
+ 

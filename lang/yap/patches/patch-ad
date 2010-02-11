@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2010/02/11 20:43:49 asau Exp $
+
+--- C/dlmalloc.c.orig	2008-01-24 03:11:59.000000000 +0300
++++ C/dlmalloc.c	2009-02-06 22:25:05.000000000 +0300
+@@ -2508,7 +2508,11 @@
+   ------------------------------ mallinfo ------------------------------
+ */
+ 
++#if __STD_C
++struct mallinfo mALLINFo(void)
++#else
+ struct mallinfo mALLINFo()
++#endif
+ {
+   mstate av = get_malloc_state();
+   struct mallinfo mi;

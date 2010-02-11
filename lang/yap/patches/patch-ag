@@ -1,0 +1,56 @@
+$NetBSD: patch-ag,v 1.1 2010/02/11 20:43:49 asau Exp $
+
+--- LGPL/chr/Makefile.in.orig	2008-04-03 17:26:38.000000000 +0400
++++ LGPL/chr/Makefile.in	2009-04-19 05:42:22.000000000 +0400
+@@ -48,42 +48,42 @@
+ 		$(srcdir)/Benchmarks/bool.chr $(srcdir)/Benchmarks/family.chr $(srcdir)/Benchmarks/fibonacci.chr $(srcdir)/Benchmarks/leq.chr $(srcdir)/Benchmarks/listdom.chr \
+ 		$(srcdir)/Benchmarks/chrdif.chr
+ 
+-all:		chr_translate.pl
++all:		chr_translate.pl guard_entailment.pl
+ 
+ chr_translate_bootstrap1.pl: $(srcdir)/chr_translate_bootstrap1.chr
+ 		$(PL) -f -l chr_swi_bootstrap.yap \
+-		      -g "chr_compile_step1('$<','$@'),halt." \
++		      -g "chr_compile_step1('$>','$@'),halt." \
+ 		      -z 'halt(1).'
+ 		$(PL) -f -l chr_swi_bootstrap.yap \
+-		      -g "chr_compile_step2('$<','$@'),halt." \
++		      -g "chr_compile_step2('$>','$@'),halt." \
+ 		      -z 'halt(1).'
+ 
+ chr_translate_bootstrap2.pl: $(srcdir)/chr_translate_bootstrap2.chr  chr_translate_bootstrap1.pl
+ 		$(PL) -f -l chr_swi_bootstrap.yap \
+-		      -g "chr_compile_step2('$<','$@'),halt." \
++		      -g "chr_compile_step2('$>','$@'),halt." \
+ 		      -z 'halt(1).'
+ 		$(PL) -f -l chr_swi_bootstrap.yap \
+-		      -g "chr_compile_step3('$<','$@'),halt." \
++		      -g "chr_compile_step3('$>','$@'),halt." \
+ 		      -z 'halt(1).'
+ 
+ guard_entailment.pl: $(srcdir)/guard_entailment.chr chr_translate_bootstrap2.pl 
+ 		$(PL) -f -l chr_swi_bootstrap.yap \
+-		      -g "chr_compile_step3('$<','$@'),halt." \
++		      -g "chr_compile_step3('$>','$@'),halt." \
+ 		      -z 'halt(1).'
+ 
+ chr_translate.pl: $(srcdir)/chr_translate.chr chr_translate_bootstrap2.pl guard_entailment.pl
+ 		$(PL) -f -l chr_swi_bootstrap.yap \
+-		      -g "chr_compile_step3('$<','$@'),halt." \
++		      -g "chr_compile_step3('$>','$@'),halt." \
+ 		      -z 'halt(1).'
+ 		$(PL) -f -p chr=. -l chr_swi_bootstrap.yap \
+ 		      -g "chr_compile_step4('guard_entailment.chr','guard_entailment.pl'),halt." \
+ 		      -z 'halt(1).'
+ 		$(PL) -f -p chr=. -l chr_swi_bootstrap.yap \
+-		      -g "chr_compile_step4('$<','$@'),halt." \
++		      -g "chr_compile_step4('$>','$@'),halt." \
+ 		      -z 'halt(1).'
+ 
+ chr.pl:		chr_swi.pl
+-		cp $< $@
++		cp $> $@
+ 
+ install:	chr_translate.pl guard_entailment.pl
+ 		mkdir -p $(DESTDIR)$(CHRDIR)
