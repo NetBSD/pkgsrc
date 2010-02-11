@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/12/24 08:47:31 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/02/11 22:18:35 joerg Exp $
 #
 
 DISTNAME=	netname-1.7
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.gw.com/pub/people/kim/
 
 MAINTAINER=	kim@tac.nyc.ny.us
 COMMENT=	Return the canonical network name of a host
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
