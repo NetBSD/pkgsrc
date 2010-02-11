@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2007/12/20 13:46:15 obache Exp $
+# $NetBSD: Makefile,v 1.54 2010/02/11 18:58:46 joerg Exp $
 
 DISTNAME=	nxtvepg-2.7.6
 PKGREVISION=	1
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/nxtvepg/
 COMMENT=	NextView EPG decoder
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
@@ -27,6 +28,8 @@ MAKE_ENV+=	WANT_THREADS=1
 .endif
 # Required for Tcl/Tk 8.4
 LDFLAGS+=	${PTHREAD_LIBS}
+
+INSTALL_MAKE_FLAGS+=	ROOT=${DESTDIR} resdir=${DESTDIR}${PREFIX}/lib/X11
 
 pre-configure:
 	cd ${WRKSRC};							\
