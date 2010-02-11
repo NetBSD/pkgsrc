@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.12 2009/03/22 04:53:39 manu Exp $
+# $NetBSD: Makefile,v 1.13 2010/02/11 19:53:03 joerg Exp $
 #
 
 DISTNAME=		jchkmail-1.3.1a
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://j-chkmail.ensmp.fr/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://j-chkmail.ensmp.fr/
 COMMENT=		Behavior-based virus and spam milter for Sendmail
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -31,6 +33,9 @@ RCD_SCRIPT_SRC.jchkmail=	${WRKSRC}/bin/jchkmail.init
 PTHREAD_AUTO_VARS=	yes
 
 INSTALLATION_DIRS=	share/examples/rc.d
+
+OWN_DIRS_PERMS+=	/var/spool/jchkmail smmsp smmsp 750 \
+			/var/jchkmail  smmsp smmsp 755
 
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
