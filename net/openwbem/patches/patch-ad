@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/10/29 15:05:21 agc Exp $
+$NetBSD: patch-ad,v 1.2 2010/02/11 22:46:18 joerg Exp $
 
 --- etc/Makefile.in	2007/10/29 14:15:16	1.1
 +++ etc/Makefile.in	2007/10/29 14:17:27
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2007/10/29 15:05:21 agc Exp $
  SUBDIRS = init sysconfig pam.d
  openwbemconf_DATA = openwbem.conf ssleay.cnf owgencert
 -openwbemconfdir = $(sysconfdir)/openwbem
-+openwbemconfdir = ${DESTDIR}$(prefix)/share/examples/openwbem
++openwbemconfdir = $(prefix)/share/examples/openwbem
  EXTRA_DIST = openwbem.conf.sh owgencert.sh ssleay.cnf
  CLEANFILES = openwbem.conf owgencert
  SUFFIXES = .sh
