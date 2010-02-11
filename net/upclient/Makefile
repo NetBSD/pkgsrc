@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/03/04 21:30:25 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2010/02/11 23:08:17 joerg Exp $
 #
 
 DISTNAME=	upclient-4.2.1.23
@@ -9,6 +9,8 @@ MASTER_SITES=	http://uptimes.atomicvoid.net/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://uptimes.hostingwired.com/
 COMMENT=	Keeps track of your server uptime, and compares it to other hosts
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,7 +28,7 @@ RCD_SCRIPTS=	upclient
 
 BUILD_DIRS=	${WRKSRC}/src
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/upclient ${EGDIR}
 
 pre-configure:
 	${MV} ${WRKSRC}/scripts/upchk ${WRKSRC}/scripts/upchk.bak
@@ -35,15 +37,13 @@ pre-configure:
 		>${WRKSRC}/scripts/upchk <${WRKSRC}/scripts/upchk.bak
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/upclient ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/upclient
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/upclient
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/upclient
-	${INSTALL_DATA} ${WRKSRC}/HISTORY ${PREFIX}/share/doc/upclient
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/upclient
-	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/upclient
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/upclient
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/upclient.conf ${EGDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/upclient ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/share/doc/upclient
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/upclient
+	${INSTALL_DATA} ${WRKSRC}/HISTORY ${DESTDIR}${PREFIX}/share/doc/upclient
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/upclient
+	${INSTALL_DATA} ${WRKSRC}/FAQ ${DESTDIR}${PREFIX}/share/doc/upclient
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/upclient
+	${INSTALL_DATA} ${WRKSRC}/conf/upclient.conf ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

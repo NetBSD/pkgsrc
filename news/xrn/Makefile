@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/11/10 17:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/11 23:32:50 joerg Exp $
 #
 
 DISTNAME=	9.01
@@ -12,16 +12,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mit.edu/people/jik/software/xrn.html
 COMMENT=	Usenet News reader for the X window system
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	xrn
 
 USE_TOOLS+=	lex yacc
 USE_IMAKE=	yes
 
+INSTALLATION_DIRS+=	share/doc/xrn
+
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xrn
 	for f in COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog; do		\
-		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/xrn;	\
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/share/doc/xrn;	\
 	done
 
 .include "../../x11/libXaw/buildlink3.mk"
