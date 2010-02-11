@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.26 2010/02/11 12:07:33 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.27 2010/02/11 12:17:23 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -295,20 +295,12 @@ error()
 
 mark_as_succeeded()
 {
-    if [ -n "$SUCCEEDED" ]; then
-        SUCCEEDED="$SUCCEEDED $1"
-    else
-        SUCCEEDED="$1"
-    fi
+    SUCCEEDED=$(uniqify $SUCCEEDED $1)
 }
 
 mark_as_failed()
 {
-    if [ -n "$FAILED" ]; then
-        FAILED="$FAILED $1"
-    else
-        FAILED="$1"
-    fi
+    FAILED=$(uniqify $FAILED $1)
 }
 
 todo()
