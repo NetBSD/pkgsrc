@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.687 2010/02/12 15:31:57 sno Exp $
+$NetBSD: CHANGES-2010,v 1.688 2010/02/12 15:41:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -823,3 +823,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated meta-pkgs/boost to 1.42.0 [adam 2010-02-12]
 	Added devel/p5-Log-Any-Adapter version 0.03 [sno 2010-02-12]
 	Added devel/p5-Log-Any-Adapter-Dispatch version 0.05 [sno 2010-02-12]
+	Added devel/p5-Log-Any-Adapter-Log4perl version 0.04 [sno 2010-02-12]
