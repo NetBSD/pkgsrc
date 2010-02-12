@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.682 2010/02/12 00:43:25 asau Exp $
+$NetBSD: CHANGES-2010,v 1.683 2010/02/12 01:02:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -811,3 +811,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-luatex to 0.2nb1 [minskim 2010-02-11]
 	Added print/tex-anonchap version 1.1a [minskim 2010-02-12]
 	Updated math/octave to 3.2.4 [asau 2010-02-12]
+	Updated fonts/tex-metafont to 2009nb1 [minskim 2010-02-12]
