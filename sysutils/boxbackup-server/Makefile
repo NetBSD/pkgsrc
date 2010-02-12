@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/17 12:02:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/12 14:16:57 joerg Exp $
 #
 
 DISTNAME=	boxbackup-0.10
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.boxbackup.org/
 COMMENT=	Backup tool
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes
@@ -21,7 +23,14 @@ USE_TOOLS+=	perl:run
 REPLACE_PERL+=	bin/bbstored/bbstored-certs bin/bbstored/bbstored-config
 REPLACE_PERL+=	lib/raidfile/raidfile-config
 
-INSTALL_TARGET=	install-backup-server
+INSTALLATION_DIRS+=	bin
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/parcels/boxbackup*-backup-server-*/bbstoreaccounts ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/parcels/boxbackup*-backup-server-*/bbstored ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/parcels/boxbackup*-backup-server-*/bbstored-certs ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/parcels/boxbackup*-backup-server-*/bbstored-config ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/parcels/boxbackup*-backup-server-*/raidfile-config ${DESTDIR}${PREFIX}/bin
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
