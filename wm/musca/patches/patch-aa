@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2010/02/12 22:28:56 tonio Exp $
+
+--- Makefile.orig	2009-11-03 02:20:21.000000000 +0000
++++ Makefile
+@@ -1,9 +1,9 @@
+ CFLAGS?=-Wall -g
+ 
+ all:
+-	$(CC) $(CFLAGS) -I/usr/X11R6/include -L/usr/X11R6/lib -lc -lm -lX11 -o musca musca.c
+-	$(CC) $(CFLAGS) -I/usr/X11R6/include -L/usr/X11R6/lib -lc -lm -lX11 -o apis apis.c
+-	$(CC) $(CFLAGS) -I/usr/X11R6/include -L/usr/X11R6/lib -lc -lm -lX11 -o xlisten xlisten.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -I@X11BASE@/include -L@X11BASE@/lib -lc -lm -lX11 -o musca musca.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -I@X11BASE@/include -L@X11BASE@/lib -lc -lm -lX11 -o apis apis.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -I@X11BASE@/include -L@X11BASE@/lib -lc -lm -lX11 -o xlisten xlisten.c
+ 
+ clean:
+ 	rm -f musca apis
