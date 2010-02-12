@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2009/08/31 22:16:39 tron Exp $
+# $NetBSD: Makefile,v 1.57 2010/02/12 00:18:29 joerg Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	7
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/printing/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Customizable, extensible automatic printer filter
 LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Any version will do:
 #
@@ -50,12 +52,14 @@ GENERATE_PLIST+= \
 	  ${ECHO} ${FILTER_DIR}/"$$f";					\
 	done;
 
-post-install:
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/magicfilter ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/magicfilter.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/magicfilter.8
 	set -e;								\
 	cd ${WRKSRC}/filters;						\
 	for f in *-filter; do						\
-	  ${ECHO} "Installing $$f as ${PREFIX}/${FILTER_DIR}/$$f";	\
-	  ${INSTALL_SCRIPT} "$$f" ${PREFIX}/${FILTER_DIR}/"$$f";	\
+	  ${ECHO} "Installing $$f as ${DESTDIR}${PREFIX}/${FILTER_DIR}/$$f";	\
+	  ${INSTALL_SCRIPT} "$$f" ${DESTDIR}${PREFIX}/${FILTER_DIR}/"$$f";	\
 	done
 
 .include "../../mk/bsd.pkg.mk"
