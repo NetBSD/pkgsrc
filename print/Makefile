@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.340 2010/02/11 19:03:11 jnemeth Exp $
+# $NetBSD: Makefile,v 1.341 2010/02/12 00:20:02 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -146,6 +146,7 @@ SUBDIR+=	tex-amsmath
 SUBDIR+=	tex-amsmath-doc
 SUBDIR+=	tex-amsrefs
 SUBDIR+=	tex-amsrefs-doc
+SUBDIR+=	tex-anonchap
 SUBDIR+=	tex-apalike
 SUBDIR+=	tex-apalike-doc
 SUBDIR+=	tex-babel
