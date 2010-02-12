@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.7 2009/12/22 17:46:17 drochner Exp $
+$NetBSD: patch-ag,v 1.8 2010/02/12 00:41:48 asau Exp $
 
 --- src/Makefile.in.orig	2009-06-03 12:32:49.000000000 +0000
 +++ src/Makefile.in
@@ -19,7 +19,7 @@ $NetBSD: patch-ag,v 1.7 2009/12/22 17:46:17 drochner Exp $
 -	$(RANLIB) $@
 +	${LIBTOOL} --mode=link ${CC} -o liboctinterp.$(LIBEXT) \
 +		$(OBJECTS:.o=.lo) $(XERBLA:.o=.lo) -rpath ${PREFIX}/lib \
-+		-version-info ${version:3.2.%=3:2:%} $(OCTINTERP_LINK_DEPS)
++		-version-number ${version:3.2.%=3:2:%} $(OCTINTERP_LINK_DEPS)
  
  $(SHLPRE)octinterp.$(SHLEXT_VER): $(SHLPRE)octinterp.$(SHLEXT)
  	rm -f $@
