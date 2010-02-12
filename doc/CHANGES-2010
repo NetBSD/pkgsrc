@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.684 2010/02/12 08:59:40 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.685 2010/02/12 10:35:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -813,3 +813,11 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/octave to 3.2.4 [asau 2010-02-12]
 	Updated fonts/tex-metafont to 2009nb1 [minskim 2010-02-12]
 	Added textproc/py-jsonlib version 1.6.1 [wiz 2010-02-12]
+	Updated graphics/scribus to 1.3.3.14 [adam 2010-02-12]
+	Updated devel/boost-jam to 1.42.0 [adam 2010-02-12]
+	Updated devel/boost-headers to 1.42.0 [adam 2010-02-12]
+	Updated devel/boost-libs to 1.42.0 [adam 2010-02-12]
+	Updated devel/boost-docs to 1.42.0 [adam 2010-02-12]
+	Updated devel/boost-build to 1.42.0 [adam 2010-02-12]
+	Updated devel/boost-python to 1.42.0 [adam 2010-02-12]
+	Updated meta-pkgs/boost to 1.42.0 [adam 2010-02-12]
