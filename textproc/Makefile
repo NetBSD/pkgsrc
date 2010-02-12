@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.520 2010/02/11 13:05:03 joerg Exp $
+# $NetBSD: Makefile,v 1.521 2010/02/12 08:59:14 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -410,6 +410,7 @@ SUBDIR+=	py-html2text
 SUBDIR+=	py-html5lib
 SUBDIR+=	py-jinja
 SUBDIR+=	py-jinja2
+SUBDIR+=	py-jsonlib
 SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-lxml
