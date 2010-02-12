@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/07/06 16:08:30 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2010/02/12 00:21:17 joerg Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lprng.com/
 COMMENT=	Enhanced Printer Spooler
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
@@ -49,6 +51,12 @@ CONF_FILES+=		${EXAMPLESDIR}/lpd.conf ${PKG_SYSCONFDIR}/lpd/lpd.conf
 CONF_FILES+=		${EXAMPLESDIR}/lpd.perms ${PKG_SYSCONFDIR}/lpd/lpd.perms
 CONF_FILES+=		${EXAMPLESDIR}/printcap ${PKG_SYSCONFDIR}/printcap
 
+SPECIAL_PERMS+=		bin/lpq ${SETUID_ROOT_PERMS} \
+			bin/lpr ${SETUID_ROOT_PERMS} \
+			bin/lprm ${SETUID_ROOT_PERMS} \
+			bin/lpstat ${SETUID_ROOT_PERMS} \
+			sbin/lpc ${SETUID_ROOT_PERMS} \
+
 pre-patch:
 	${MV} ${WRKSRC:Q}/man/lpd.conf.n ${WRKSRC:Q}/man/lpd.conf.n.in
 
@@ -65,10 +73,12 @@ pre-install:
 	${SED}	-e s,@PREFIX@,${PREFIX:Q},g				\
 		${FILESDIR:Q}/LPRng.sh > ${WRKDIR:Q}/LPRng.sh
 
+INSTALLATION_DIRS+=	${EXAMPLESDIR}
+INSTALL_MAKE_FLAGS+=	SUID_ROOT_PERMS=555
+
 post-install:
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/lpd.conf ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/lpd.perms ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/printcap ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/lpd.conf ${DESTDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/lpd.perms ${DESTDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/printcap ${DESTDIR}${EXAMPLESDIR}
 
 .include "../../mk/bsd.pkg.mk"

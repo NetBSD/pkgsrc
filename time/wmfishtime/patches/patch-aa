@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2003/01/19 10:27:57 salo Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/12 00:28:02 joerg Exp $
 --- Makefile.orig	Sat May 26 22:49:41 2001
 +++ Makefile	Sat Jan 19 05:48:48 2002
 @@ -2,22 +2,22 @@
@@ -35,5 +35,5 @@ $NetBSD: patch-aa,v 1.4 2003/01/19 10:27:57 salo Exp $
  install:
 -	install $(INSTALL) wmfishtime $(PREFIX)/bin
 -	install $(INSTALL) wmfishtime.1 $(PREFIX)/man/man1
-+	$(BSD_INSTALL_PROGRAM) wmfishtime $(PREFIX)/bin
-+	$(BSD_INSTALL_MAN) wmfishtime.1 $(PREFIX)/man/man1
++	$(BSD_INSTALL_PROGRAM) wmfishtime ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_MAN) wmfishtime.1 ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1
