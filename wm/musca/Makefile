@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/12 15:38:52 asau Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/12 22:28:56 tonio Exp $
 #
 
 DISTNAME=	musca-0.9.24
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://aerosuidae.net/
 EXTRACT_SUFX=	.tgz
@@ -21,7 +22,7 @@ SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing Makefile
 SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile+=	-e 's,/usr/X11R6,${X11BASE},'
+SUBST_SED.makefile+=	-e 's,@X11BASE@,${X11BASE},g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/apis ${DESTDIR}${PREFIX}/bin
