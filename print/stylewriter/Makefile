@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.21 2008/06/16 13:22:49 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/12 00:12:11 joerg Exp $
 #
 
 DISTNAME=	stylewriter
 PKGNAME=	stylewriter-0.9.9
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://homepage.mac.com/monroe/styl/
 COMMENT=	Apple StyleWriter driver for un*x
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	enscript>=1.6.3nb1:../../print/enscript
 
@@ -31,34 +33,34 @@ PRINTCAP_SED=	-e "s,/var/spool/stylps,/var/spool/lpd/stylps,g" \
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
+INSTALLATION_DIRS+=	${FILTER_DIR} share/doc/stylewriter share/examples/stylewriter
+
+OWN_DIRS+=	/var/spool/lpd/stylps
+
 post-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	${INSTALL_DATA_DIR} ${PREFIX}/${FILTER_DIR}
 	(cd ${WRKSRC}/scripts; \
 	 for FILTER in ${FILTERS}; do \
 		${SED} ${FILTER_SED} \
 			< $${FILTER} > ${WRKDIR}/$${FILTER}; \
 		${INSTALL_SCRIPT} ${WRKDIR}/$${FILTER} \
-			${PREFIX}/${FILTER_DIR}/$${FILTER}; \
+			${DESTDIR}${PREFIX}/${FILTER_DIR}/$${FILTER}; \
 		${RM} ${WRKDIR}/$${FILTER}; \
 	 done)
 
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/stylewriter
 	for FILE in README README.protocol README.troubleshooting; do \
 		${INSTALL_DATA} ${WRKSRC}/$${FILE} \
-			${PREFIX}/share/doc/stylewriter; \
+			${DESTDIR}${PREFIX}/share/doc/stylewriter; \
 	done
 
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/stylewriter
 	(cd ${WRKSRC}; \
 	 for PRINTCAP in printcap printcap.a4; do \
 		${SED} ${PRINTCAP_SED} \
 			< $${PRINTCAP} > ${WRKDIR}/$${PRINTCAP}; \
 		${INSTALL_DATA} ${WRKDIR}/$${PRINTCAP} \
-			${PREFIX}/share/examples/stylewriter; \
+			${DESTDIR}${PREFIX}/share/examples/stylewriter; \
 		${RM} ${WRKDIR}/$${PRINTCAP}; \
 	 done)
-	${INSTALL_DATA} ${WRKSRC}/styl.ppd ${PREFIX}/share/examples/stylewriter
-	${INSTALL_DATA_DIR} /var/spool/lpd/stylps
+	${INSTALL_DATA} ${WRKSRC}/styl.ppd ${DESTDIR}${PREFIX}/share/examples/stylewriter
 
 .include "../../mk/bsd.pkg.mk"
