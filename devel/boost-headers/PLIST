@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/11/24 09:51:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/02/12 10:31:04 adam Exp $
 include/boost/accumulators/accumulators.hpp
 include/boost/accumulators/accumulators_fwd.hpp
 include/boost/accumulators/framework/accumulator_base.hpp
@@ -818,14 +818,13 @@ include/boost/dynamic_bitset.hpp
 include/boost/dynamic_bitset/config.hpp
 include/boost/dynamic_bitset/dynamic_bitset.hpp
 include/boost/dynamic_bitset_fwd.hpp
-include/boost/dynamic_property_map.hpp
 include/boost/enable_shared_from_this.hpp
 include/boost/exception.hpp
 include/boost/exception/all.hpp
 include/boost/exception/current_exception_cast.hpp
 include/boost/exception/detail/attribute_noreturn.hpp
 include/boost/exception/detail/error_info_impl.hpp
-include/boost/exception/detail/exception_ptr_base.hpp
+include/boost/exception/detail/exception_ptr.hpp
 include/boost/exception/detail/is_output_streamable.hpp
 include/boost/exception/detail/object_hex_dump.hpp
 include/boost/exception/detail/type_info.hpp
@@ -1047,13 +1046,6 @@ include/boost/fusion/adapted/boost_tuple/detail/size_impl.hpp
 include/boost/fusion/adapted/boost_tuple/detail/value_at_impl.hpp
 include/boost/fusion/adapted/boost_tuple/tag_of.hpp
 include/boost/fusion/adapted/class.hpp
-include/boost/fusion/adapted/class/adapt_assoc_class.hpp
-include/boost/fusion/adapted/class/adapt_class.hpp
-include/boost/fusion/adapted/class/class_iterator.hpp
-include/boost/fusion/adapted/class/detail/at_impl.hpp
-include/boost/fusion/adapted/class/detail/at_key_impl.hpp
-include/boost/fusion/adapted/class/detail/begin_impl.hpp
-include/boost/fusion/adapted/class/detail/category_of_impl.hpp
 include/boost/fusion/adapted/mpl.hpp
 include/boost/fusion/adapted/mpl/detail/at_impl.hpp
 include/boost/fusion/adapted/mpl/detail/begin_impl.hpp
@@ -1108,7 +1100,6 @@ include/boost/fusion/algorithm/query/count.hpp
 include/boost/fusion/algorithm/query/count_if.hpp
 include/boost/fusion/algorithm/query/detail/all.hpp
 include/boost/fusion/algorithm/query/detail/any.hpp
-include/boost/fusion/algorithm/query/detail/assoc_find.hpp
 include/boost/fusion/algorithm/query/detail/count.hpp
 include/boost/fusion/algorithm/query/detail/count_if.hpp
 include/boost/fusion/algorithm/query/detail/find_if.hpp
@@ -1197,28 +1188,30 @@ include/boost/fusion/container/list/list_fwd.hpp
 include/boost/fusion/container/map.hpp
 include/boost/fusion/container/map/convert.hpp
 include/boost/fusion/container/map/detail/as_map.hpp
-include/boost/fusion/container/map/detail/at_key_impl.hpp
 include/boost/fusion/container/map/detail/begin_impl.hpp
 include/boost/fusion/container/map/detail/convert_impl.hpp
+include/boost/fusion/container/map/detail/deref_data_impl.hpp
+include/boost/fusion/container/map/detail/deref_impl.hpp
 include/boost/fusion/container/map/detail/end_impl.hpp
-include/boost/fusion/container/map/detail/lookup_key.hpp
+include/boost/fusion/container/map/detail/key_of_impl.hpp
 include/boost/fusion/container/map/detail/map_forward_ctor.hpp
-include/boost/fusion/container/map/detail/map_lookup.hpp
-include/boost/fusion/container/map/detail/value_at_key_impl.hpp
+include/boost/fusion/container/map/detail/value_of_data_impl.hpp
+include/boost/fusion/container/map/detail/value_of_impl.hpp
 include/boost/fusion/container/map/limits.hpp
 include/boost/fusion/container/map/map.hpp
 include/boost/fusion/container/map/map_fwd.hpp
 include/boost/fusion/container/set.hpp
 include/boost/fusion/container/set/convert.hpp
 include/boost/fusion/container/set/detail/as_set.hpp
-include/boost/fusion/container/set/detail/at_key_impl.hpp
 include/boost/fusion/container/set/detail/begin_impl.hpp
 include/boost/fusion/container/set/detail/convert_impl.hpp
+include/boost/fusion/container/set/detail/deref_data_impl.hpp
+include/boost/fusion/container/set/detail/deref_impl.hpp
 include/boost/fusion/container/set/detail/end_impl.hpp
-include/boost/fusion/container/set/detail/lookup_key.hpp
+include/boost/fusion/container/set/detail/key_of_impl.hpp
 include/boost/fusion/container/set/detail/set_forward_ctor.hpp
-include/boost/fusion/container/set/detail/set_lookup.hpp
-include/boost/fusion/container/set/detail/value_at_key_impl.hpp
+include/boost/fusion/container/set/detail/value_of_data_impl.hpp
+include/boost/fusion/container/set/detail/value_of_impl.hpp
 include/boost/fusion/container/set/limits.hpp
 include/boost/fusion/container/set/set.hpp
 include/boost/fusion/container/set/set_fwd.hpp
@@ -1314,6 +1307,7 @@ include/boost/fusion/include/deque.hpp
 include/boost/fusion/include/deque_fwd.hpp
 include/boost/fusion/include/deque_tie.hpp
 include/boost/fusion/include/deref.hpp
+include/boost/fusion/include/deref_data.hpp
 include/boost/fusion/include/distance.hpp
 include/boost/fusion/include/empty.hpp
 include/boost/fusion/include/end.hpp
@@ -1356,6 +1350,7 @@ include/boost/fusion/include/iterator_facade.hpp
 include/boost/fusion/include/iterator_range.hpp
 include/boost/fusion/include/join.hpp
 include/boost/fusion/include/joint_view.hpp
+include/boost/fusion/include/key_of.hpp
 include/boost/fusion/include/less.hpp
 include/boost/fusion/include/less_equal.hpp
 include/boost/fusion/include/list.hpp
@@ -1425,6 +1420,7 @@ include/boost/fusion/include/unused.hpp
 include/boost/fusion/include/value_at.hpp
 include/boost/fusion/include/value_at_key.hpp
 include/boost/fusion/include/value_of.hpp
+include/boost/fusion/include/value_of_data.hpp
 include/boost/fusion/include/vector.hpp
 include/boost/fusion/include/vector10.hpp
 include/boost/fusion/include/vector20.hpp
@@ -1439,7 +1435,9 @@ include/boost/fusion/include/zip.hpp
 include/boost/fusion/include/zip_view.hpp
 include/boost/fusion/iterator.hpp
 include/boost/fusion/iterator/advance.hpp
+include/boost/fusion/iterator/basic_iterator.hpp
 include/boost/fusion/iterator/deref.hpp
+include/boost/fusion/iterator/deref_data.hpp
 include/boost/fusion/iterator/detail/adapt_deref_traits.hpp
 include/boost/fusion/iterator/detail/adapt_value_traits.hpp
 include/boost/fusion/iterator/detail/advance.hpp
@@ -1447,12 +1445,14 @@ include/boost/fusion/iterator/detail/distance.hpp
 include/boost/fusion/iterator/distance.hpp
 include/boost/fusion/iterator/equal_to.hpp
 include/boost/fusion/iterator/iterator_facade.hpp
+include/boost/fusion/iterator/key_of.hpp
 include/boost/fusion/iterator/mpl.hpp
 include/boost/fusion/iterator/mpl/convert_iterator.hpp
 include/boost/fusion/iterator/mpl/fusion_iterator.hpp
 include/boost/fusion/iterator/next.hpp
 include/boost/fusion/iterator/prior.hpp
 include/boost/fusion/iterator/value_of.hpp
+include/boost/fusion/iterator/value_of_data.hpp
 include/boost/fusion/mpl.hpp
 include/boost/fusion/mpl/at.hpp
 include/boost/fusion/mpl/back.hpp
@@ -1546,11 +1546,14 @@ include/boost/fusion/view/ext_/segmented_iterator.hpp
 include/boost/fusion/view/ext_/segmented_iterator_range.hpp
 include/boost/fusion/view/filter_view.hpp
 include/boost/fusion/view/filter_view/detail/begin_impl.hpp
+include/boost/fusion/view/filter_view/detail/deref_data_impl.hpp
 include/boost/fusion/view/filter_view/detail/deref_impl.hpp
 include/boost/fusion/view/filter_view/detail/end_impl.hpp
 include/boost/fusion/view/filter_view/detail/equal_to_impl.hpp
+include/boost/fusion/view/filter_view/detail/key_of_impl.hpp
 include/boost/fusion/view/filter_view/detail/next_impl.hpp
 include/boost/fusion/view/filter_view/detail/size_impl.hpp
+include/boost/fusion/view/filter_view/detail/value_of_data_impl.hpp
 include/boost/fusion/view/filter_view/detail/value_of_impl.hpp
 include/boost/fusion/view/filter_view/filter_view.hpp
 include/boost/fusion/view/filter_view/filter_view_iterator.hpp
@@ -1562,9 +1565,12 @@ include/boost/fusion/view/iterator_range/detail/value_at_impl.hpp
 include/boost/fusion/view/iterator_range/iterator_range.hpp
 include/boost/fusion/view/joint_view.hpp
 include/boost/fusion/view/joint_view/detail/begin_impl.hpp
+include/boost/fusion/view/joint_view/detail/deref_data_impl.hpp
 include/boost/fusion/view/joint_view/detail/deref_impl.hpp
 include/boost/fusion/view/joint_view/detail/end_impl.hpp
+include/boost/fusion/view/joint_view/detail/key_of_impl.hpp
 include/boost/fusion/view/joint_view/detail/next_impl.hpp
+include/boost/fusion/view/joint_view/detail/value_of_data_impl.hpp
 include/boost/fusion/view/joint_view/detail/value_of_impl.hpp
 include/boost/fusion/view/joint_view/joint_view.hpp
 include/boost/fusion/view/joint_view/joint_view_iterator.hpp
@@ -1595,12 +1601,17 @@ include/boost/fusion/view/repetitive_view/repetitive_view_fwd.hpp
 include/boost/fusion/view/repetitive_view/repetitive_view_iterator.hpp
 include/boost/fusion/view/reverse_view.hpp
 include/boost/fusion/view/reverse_view/detail/advance_impl.hpp
+include/boost/fusion/view/reverse_view/detail/at_impl.hpp
 include/boost/fusion/view/reverse_view/detail/begin_impl.hpp
+include/boost/fusion/view/reverse_view/detail/deref_data_impl.hpp
 include/boost/fusion/view/reverse_view/detail/deref_impl.hpp
 include/boost/fusion/view/reverse_view/detail/distance_impl.hpp
 include/boost/fusion/view/reverse_view/detail/end_impl.hpp
+include/boost/fusion/view/reverse_view/detail/key_of_impl.hpp
 include/boost/fusion/view/reverse_view/detail/next_impl.hpp
 include/boost/fusion/view/reverse_view/detail/prior_impl.hpp
+include/boost/fusion/view/reverse_view/detail/value_at_impl.hpp
+include/boost/fusion/view/reverse_view/detail/value_of_data_impl.hpp
 include/boost/fusion/view/reverse_view/detail/value_of_impl.hpp
 include/boost/fusion/view/reverse_view/reverse_view.hpp
 include/boost/fusion/view/reverse_view/reverse_view_iterator.hpp
@@ -1798,6 +1809,7 @@ include/boost/graph/distributed/strong_components.hpp
 include/boost/graph/distributed/two_bit_color_map.hpp
 include/boost/graph/distributed/unsafe_serialize.hpp
 include/boost/graph/distributed/vertex_list_adaptor.hpp
+include/boost/graph/dll_import_export.hpp
 include/boost/graph/dominator_tree.hpp
 include/boost/graph/eccentricity.hpp
 include/boost/graph/edge_connectivity.hpp
@@ -1838,6 +1850,7 @@ include/boost/graph/kolmogorov_max_flow.hpp
 include/boost/graph/kruskal_min_spanning_tree.hpp
 include/boost/graph/labeled_graph.hpp
 include/boost/graph/leda_graph.hpp
+include/boost/graph/lookup_edge.hpp
 include/boost/graph/make_biconnected_planar.hpp
 include/boost/graph/make_connected.hpp
 include/boost/graph/make_maximal_planar.hpp
@@ -2202,6 +2215,7 @@ include/boost/iostreams/detail/config/gcc.hpp
 include/boost/iostreams/detail/config/limits.hpp
 include/boost/iostreams/detail/config/overload_resolution.hpp
 include/boost/iostreams/detail/config/rtl.hpp
+include/boost/iostreams/detail/config/unreachable_return.hpp
 include/boost/iostreams/detail/config/wide_streams.hpp
 include/boost/iostreams/detail/config/windows_posix.hpp
 include/boost/iostreams/detail/config/zlib.hpp
@@ -3955,7 +3969,6 @@ include/boost/parameter/value_type.hpp
 include/boost/pending/bucket_sorter.hpp
 include/boost/pending/container_traits.hpp
 include/boost/pending/cstddef.hpp
-include/boost/pending/ct_if.hpp
 include/boost/pending/detail/disjoint_sets.hpp
 include/boost/pending/detail/int_iterator.hpp
 include/boost/pending/detail/property.hpp
@@ -4245,7 +4258,6 @@ include/boost/program_options/value_semantic.hpp
 include/boost/program_options/variables_map.hpp
 include/boost/program_options/version.hpp
 include/boost/progress.hpp
-include/boost/property_map.hpp
 include/boost/property_map/dynamic_property_map.hpp
 include/boost/property_map/parallel/caching_property_map.hpp
 include/boost/property_map/parallel/distributed_property_map.hpp
@@ -4256,7 +4268,6 @@ include/boost/property_map/property_map.hpp
 include/boost/property_map/property_map_iterator.hpp
 include/boost/property_map/shared_array_property_map.hpp
 include/boost/property_map/vector_property_map.hpp
-include/boost/property_map_iterator.hpp
 include/boost/property_tree/detail/exception_implementation.hpp
 include/boost/property_tree/detail/file_parser_error.hpp
 include/boost/property_tree/detail/info_parser_error.hpp
@@ -4304,9 +4315,7 @@ include/boost/proto/detail/ignore_unused.hpp
 include/boost/proto/detail/local.hpp
 include/boost/proto/detail/poly_function.hpp
 include/boost/proto/detail/pop_front.hpp
-include/boost/proto/detail/prefix.hpp
 include/boost/proto/detail/reverse.hpp
-include/boost/proto/detail/suffix.hpp
 include/boost/proto/domain.hpp
 include/boost/proto/eval.hpp
 include/boost/proto/expr.hpp
@@ -4594,6 +4603,8 @@ include/boost/random/binomial_distribution.hpp
 include/boost/random/cauchy_distribution.hpp
 include/boost/random/detail/config.hpp
 include/boost/random/detail/const_mod.hpp
+include/boost/random/detail/disable_warnings.hpp
+include/boost/random/detail/enable_warnings.hpp
 include/boost/random/detail/iterator_mixin.hpp
 include/boost/random/detail/pass_through_engine.hpp
 include/boost/random/detail/ptr_helper.hpp
@@ -5205,6 +5216,10 @@ include/boost/spirit/home/classic/version.hpp
 include/boost/spirit/home/karma.hpp
 include/boost/spirit/home/karma/action.hpp
 include/boost/spirit/home/karma/action/action.hpp
+include/boost/spirit/home/karma/auto.hpp
+include/boost/spirit/home/karma/auto/auto.hpp
+include/boost/spirit/home/karma/auto/create_generator.hpp
+include/boost/spirit/home/karma/auto/meta_create.hpp
 include/boost/spirit/home/karma/auxiliary.hpp
 include/boost/spirit/home/karma/auxiliary/attr_cast.hpp
 include/boost/spirit/home/karma/auxiliary/eol.hpp
@@ -5217,11 +5232,14 @@ include/boost/spirit/home/karma/char.hpp
 include/boost/spirit/home/karma/char/char.hpp
 include/boost/spirit/home/karma/char/char_class.hpp
 include/boost/spirit/home/karma/char/char_generator.hpp
+include/boost/spirit/home/karma/delimit_flag.hpp
 include/boost/spirit/home/karma/delimit_out.hpp
 include/boost/spirit/home/karma/detail/alternative_function.hpp
 include/boost/spirit/home/karma/detail/default_width.hpp
 include/boost/spirit/home/karma/detail/extract_from.hpp
 include/boost/spirit/home/karma/detail/fail_function.hpp
+include/boost/spirit/home/karma/detail/generate.hpp
+include/boost/spirit/home/karma/detail/generate_auto.hpp
 include/boost/spirit/home/karma/detail/generate_to.hpp
 include/boost/spirit/home/karma/detail/get_casetag.hpp
 include/boost/spirit/home/karma/detail/output_iterator.hpp
@@ -5232,6 +5250,7 @@ include/boost/spirit/home/karma/detail/unused_delimiter.hpp
 include/boost/spirit/home/karma/directive.hpp
 include/boost/spirit/home/karma/directive/buffer.hpp
 include/boost/spirit/home/karma/directive/center_alignment.hpp
+include/boost/spirit/home/karma/directive/columns.hpp
 include/boost/spirit/home/karma/directive/delimit.hpp
 include/boost/spirit/home/karma/directive/left_alignment.hpp
 include/boost/spirit/home/karma/directive/maxwidth.hpp
@@ -5241,6 +5260,8 @@ include/boost/spirit/home/karma/directive/right_alignment.hpp
 include/boost/spirit/home/karma/directive/upper_lower_case.hpp
 include/boost/spirit/home/karma/directive/verbatim.hpp
 include/boost/spirit/home/karma/domain.hpp
+include/boost/spirit/home/karma/format.hpp
+include/boost/spirit/home/karma/format_auto.hpp
 include/boost/spirit/home/karma/generate.hpp
 include/boost/spirit/home/karma/generate_attr.hpp
 include/boost/spirit/home/karma/generator.hpp
@@ -5270,9 +5291,11 @@ include/boost/spirit/home/karma/operator/not_predicate.hpp
 include/boost/spirit/home/karma/operator/optional.hpp
 include/boost/spirit/home/karma/operator/plus.hpp
 include/boost/spirit/home/karma/operator/sequence.hpp
+include/boost/spirit/home/karma/phoenix_attributes.hpp
 include/boost/spirit/home/karma/reference.hpp
 include/boost/spirit/home/karma/stream.hpp
 include/boost/spirit/home/karma/stream/detail/format_manip.hpp
+include/boost/spirit/home/karma/stream/detail/format_manip_auto.hpp
 include/boost/spirit/home/karma/stream/detail/iterator_sink.hpp
 include/boost/spirit/home/karma/stream/format_manip.hpp
 include/boost/spirit/home/karma/stream/format_manip_attr.hpp
@@ -5280,6 +5303,7 @@ include/boost/spirit/home/karma/stream/ostream_iterator.hpp
 include/boost/spirit/home/karma/stream/stream.hpp
 include/boost/spirit/home/karma/string.hpp
 include/boost/spirit/home/karma/string/lit.hpp
+include/boost/spirit/home/karma/string/symbols.hpp
 include/boost/spirit/home/karma/what.hpp
 include/boost/spirit/home/lex.hpp
 include/boost/spirit/home/lex/argument.hpp
@@ -5441,6 +5465,10 @@ include/boost/spirit/home/phoenix/version.hpp
 include/boost/spirit/home/qi.hpp
 include/boost/spirit/home/qi/action.hpp
 include/boost/spirit/home/qi/action/action.hpp
+include/boost/spirit/home/qi/auto.hpp
+include/boost/spirit/home/qi/auto/auto.hpp
+include/boost/spirit/home/qi/auto/create_parser.hpp
+include/boost/spirit/home/qi/auto/meta_create.hpp
 include/boost/spirit/home/qi/auxiliary.hpp
 include/boost/spirit/home/qi/auxiliary/attr.hpp
 include/boost/spirit/home/qi/auxiliary/attr_cast.hpp
@@ -5459,6 +5487,8 @@ include/boost/spirit/home/qi/detail/assign_to.hpp
 include/boost/spirit/home/qi/detail/construct.hpp
 include/boost/spirit/home/qi/detail/expect_function.hpp
 include/boost/spirit/home/qi/detail/fail_function.hpp
+include/boost/spirit/home/qi/detail/parse.hpp
+include/boost/spirit/home/qi/detail/parse_auto.hpp
 include/boost/spirit/home/qi/detail/pass_container.hpp
 include/boost/spirit/home/qi/detail/pass_function.hpp
 include/boost/spirit/home/qi/detail/permute_function.hpp
@@ -5466,12 +5496,15 @@ include/boost/spirit/home/qi/detail/string_parse.hpp
 include/boost/spirit/home/qi/detail/unused_skipper.hpp
 include/boost/spirit/home/qi/directive.hpp
 include/boost/spirit/home/qi/directive/lexeme.hpp
+include/boost/spirit/home/qi/directive/matches.hpp
 include/boost/spirit/home/qi/directive/no_case.hpp
 include/boost/spirit/home/qi/directive/omit.hpp
 include/boost/spirit/home/qi/directive/raw.hpp
 include/boost/spirit/home/qi/directive/repeat.hpp
 include/boost/spirit/home/qi/directive/skip.hpp
 include/boost/spirit/home/qi/domain.hpp
+include/boost/spirit/home/qi/match.hpp
+include/boost/spirit/home/qi/match_auto.hpp
 include/boost/spirit/home/qi/meta_compiler.hpp
 include/boost/spirit/home/qi/nonterminal.hpp
 include/boost/spirit/home/qi/nonterminal/debug_handler.hpp
@@ -5510,10 +5543,12 @@ include/boost/spirit/home/qi/parse.hpp
 include/boost/spirit/home/qi/parse_attr.hpp
 include/boost/spirit/home/qi/parser.hpp
 include/boost/spirit/home/qi/reference.hpp
+include/boost/spirit/home/qi/skip_flag.hpp
 include/boost/spirit/home/qi/skip_over.hpp
 include/boost/spirit/home/qi/stream.hpp
 include/boost/spirit/home/qi/stream/detail/iterator_source.hpp
 include/boost/spirit/home/qi/stream/detail/match_manip.hpp
+include/boost/spirit/home/qi/stream/detail/match_manip_auto.hpp
 include/boost/spirit/home/qi/stream/match_manip.hpp
 include/boost/spirit/home/qi/stream/match_manip_attr.hpp
 include/boost/spirit/home/qi/stream/stream.hpp
@@ -5534,6 +5569,7 @@ include/boost/spirit/home/support/argument.hpp
 include/boost/spirit/home/support/assert_msg.hpp
 include/boost/spirit/home/support/attributes.hpp
 include/boost/spirit/home/support/attributes_fwd.hpp
+include/boost/spirit/home/support/auto/meta_create.hpp
 include/boost/spirit/home/support/auxiliary/attr_cast.hpp
 include/boost/spirit/home/support/char_class.hpp
 include/boost/spirit/home/support/char_encoding/ascii.hpp
@@ -5562,6 +5598,7 @@ include/boost/spirit/home/support/detail/lexer/conversion/char_state_machine.hpp
 include/boost/spirit/home/support/detail/lexer/debug.hpp
 include/boost/spirit/home/support/detail/lexer/file_input.hpp
 include/boost/spirit/home/support/detail/lexer/generate_cpp.hpp
+include/boost/spirit/home/support/detail/lexer/generate_re2c.hpp
 include/boost/spirit/home/support/detail/lexer/generator.hpp
 include/boost/spirit/home/support/detail/lexer/input.hpp
 include/boost/spirit/home/support/detail/lexer/internals.hpp
@@ -5602,12 +5639,14 @@ include/boost/spirit/home/support/iterators/detail/fixed_size_queue.hpp
 include/boost/spirit/home/support/iterators/detail/fixed_size_queue_policy.hpp
 include/boost/spirit/home/support/iterators/detail/functor_input_policy.hpp
 include/boost/spirit/home/support/iterators/detail/input_iterator_policy.hpp
+include/boost/spirit/home/support/iterators/detail/istream_policy.hpp
 include/boost/spirit/home/support/iterators/detail/lex_input_policy.hpp
 include/boost/spirit/home/support/iterators/detail/multi_pass.hpp
 include/boost/spirit/home/support/iterators/detail/no_check_policy.hpp
 include/boost/spirit/home/support/iterators/detail/ref_counted_policy.hpp
 include/boost/spirit/home/support/iterators/detail/split_functor_input_policy.hpp
 include/boost/spirit/home/support/iterators/detail/split_std_deque_policy.hpp
+include/boost/spirit/home/support/iterators/istream_iterator.hpp
 include/boost/spirit/home/support/iterators/look_ahead.hpp
 include/boost/spirit/home/support/iterators/multi_pass.hpp
 include/boost/spirit/home/support/iterators/multi_pass_fwd.hpp
@@ -5756,6 +5795,7 @@ include/boost/spirit/include/karma_action.hpp
 include/boost/spirit/include/karma_alternative.hpp
 include/boost/spirit/include/karma_and_predicate.hpp
 include/boost/spirit/include/karma_attr_cast.hpp
+include/boost/spirit/include/karma_auto.hpp
 include/boost/spirit/include/karma_auxiliary.hpp
 include/boost/spirit/include/karma_binary.hpp
 include/boost/spirit/include/karma_bool.hpp
@@ -5764,6 +5804,7 @@ include/boost/spirit/include/karma_center_alignment.hpp
 include/boost/spirit/include/karma_char.hpp
 include/boost/spirit/include/karma_char_.hpp
 include/boost/spirit/include/karma_char_class.hpp
+include/boost/spirit/include/karma_columns.hpp
 include/boost/spirit/include/karma_delimit.hpp
 include/boost/spirit/include/karma_directive.hpp
 include/boost/spirit/include/karma_domain.hpp
@@ -5771,8 +5812,10 @@ include/boost/spirit/include/karma_eol.hpp
 include/boost/spirit/include/karma_eps.hpp
 include/boost/spirit/include/karma_format.hpp
 include/boost/spirit/include/karma_format_attr.hpp
+include/boost/spirit/include/karma_format_auto.hpp
 include/boost/spirit/include/karma_generate.hpp
 include/boost/spirit/include/karma_generate_attr.hpp
+include/boost/spirit/include/karma_generate_auto.hpp
 include/boost/spirit/include/karma_grammar.hpp
 include/boost/spirit/include/karma_int.hpp
 include/boost/spirit/include/karma_kleene.hpp
@@ -5786,6 +5829,7 @@ include/boost/spirit/include/karma_numeric.hpp
 include/boost/spirit/include/karma_omit.hpp
 include/boost/spirit/include/karma_operator.hpp
 include/boost/spirit/include/karma_optional.hpp
+include/boost/spirit/include/karma_phoenix_attributes.hpp
 include/boost/spirit/include/karma_plus.hpp
 include/boost/spirit/include/karma_real.hpp
 include/boost/spirit/include/karma_repeat.hpp
@@ -5794,6 +5838,7 @@ include/boost/spirit/include/karma_rule.hpp
 include/boost/spirit/include/karma_sequence.hpp
 include/boost/spirit/include/karma_stream.hpp
 include/boost/spirit/include/karma_string.hpp
+include/boost/spirit/include/karma_symbols.hpp
 include/boost/spirit/include/karma_uint.hpp
 include/boost/spirit/include/karma_upper_lower_case.hpp
 include/boost/spirit/include/karma_verbatim.hpp
@@ -5841,6 +5886,7 @@ include/boost/spirit/include/qi_alternative.hpp
 include/boost/spirit/include/qi_and_predicate.hpp
 include/boost/spirit/include/qi_attr.hpp
 include/boost/spirit/include/qi_attr_cast.hpp
+include/boost/spirit/include/qi_auto.hpp
 include/boost/spirit/include/qi_auxiliary.hpp
 include/boost/spirit/include/qi_binary.hpp
 include/boost/spirit/include/qi_bool.hpp
@@ -5864,6 +5910,8 @@ include/boost/spirit/include/qi_list.hpp
 include/boost/spirit/include/qi_lit.hpp
 include/boost/spirit/include/qi_match.hpp
 include/boost/spirit/include/qi_match_attr.hpp
+include/boost/spirit/include/qi_match_auto.hpp
+include/boost/spirit/include/qi_matches.hpp
 include/boost/spirit/include/qi_no_case.hpp
 include/boost/spirit/include/qi_nonterminal.hpp
 include/boost/spirit/include/qi_not_predicate.hpp
@@ -5873,6 +5921,7 @@ include/boost/spirit/include/qi_operator.hpp
 include/boost/spirit/include/qi_optional.hpp
 include/boost/spirit/include/qi_parse.hpp
 include/boost/spirit/include/qi_parse_attr.hpp
+include/boost/spirit/include/qi_parse_auto.hpp
 include/boost/spirit/include/qi_permutation.hpp
 include/boost/spirit/include/qi_plus.hpp
 include/boost/spirit/include/qi_raw.hpp
@@ -5897,6 +5946,7 @@ include/boost/spirit/include/support_ascii.hpp
 include/boost/spirit/include/support_attributes.hpp
 include/boost/spirit/include/support_char_class.hpp
 include/boost/spirit/include/support_iso8859_1.hpp
+include/boost/spirit/include/support_istream_iterator.hpp
 include/boost/spirit/include/support_locals.hpp
 include/boost/spirit/include/support_look_ahead.hpp
 include/boost/spirit/include/support_modify.hpp
@@ -5949,6 +5999,7 @@ include/boost/spirit/repository/home/qi/nonterminal.hpp
 include/boost/spirit/repository/home/qi/nonterminal/subrule.hpp
 include/boost/spirit/repository/home/qi/primitive.hpp
 include/boost/spirit/repository/home/qi/primitive/flush_multi_pass.hpp
+include/boost/spirit/repository/home/qi/primitive/iter_pos.hpp
 include/boost/spirit/repository/home/support/confix.hpp
 include/boost/spirit/repository/home/support/distinct.hpp
 include/boost/spirit/repository/home/support/flush_multi_pass.hpp
@@ -5963,6 +6014,7 @@ include/boost/spirit/repository/include/qi_confix.hpp
 include/boost/spirit/repository/include/qi_directive.hpp
 include/boost/spirit/repository/include/qi_distinct.hpp
 include/boost/spirit/repository/include/qi_flush_multi_pass.hpp
+include/boost/spirit/repository/include/qi_iter_pos.hpp
 include/boost/spirit/repository/include/qi_nonterminal.hpp
 include/boost/spirit/repository/include/qi_primitive.hpp
 include/boost/spirit/repository/include/qi_subrule.hpp
@@ -6833,6 +6885,12 @@ include/boost/utility/result_of.hpp
 include/boost/utility/swap.hpp
 include/boost/utility/typed_in_place_factory.hpp
 include/boost/utility/value_init.hpp
+include/boost/uuid/seed_rng.hpp
+include/boost/uuid/sha1.hpp
+include/boost/uuid/uuid.hpp
+include/boost/uuid/uuid_generators.hpp
+include/boost/uuid/uuid_io.hpp
+include/boost/uuid/uuid_serialize.hpp
 include/boost/variant.hpp
 include/boost/variant/apply_visitor.hpp
 include/boost/variant/bad_visit.hpp
@@ -6866,7 +6924,6 @@ include/boost/variant/static_visitor.hpp
 include/boost/variant/variant.hpp
 include/boost/variant/variant_fwd.hpp
 include/boost/variant/visitor_ptr.hpp
-include/boost/vector_property_map.hpp
 include/boost/version.hpp
 include/boost/visit_each.hpp
 include/boost/wave.hpp
@@ -6936,6 +6993,7 @@ include/boost/xpressive/detail/core/finder.hpp
 include/boost/xpressive/detail/core/flow_control.hpp
 include/boost/xpressive/detail/core/icase.hpp
 include/boost/xpressive/detail/core/linker.hpp
+include/boost/xpressive/detail/core/list.hpp
 include/boost/xpressive/detail/core/matcher/action_matcher.hpp
 include/boost/xpressive/detail/core/matcher/alternate_end_matcher.hpp
 include/boost/xpressive/detail/core/matcher/alternate_matcher.hpp
@@ -6976,6 +7034,7 @@ include/boost/xpressive/detail/core/matchers.hpp
 include/boost/xpressive/detail/core/optimize.hpp
 include/boost/xpressive/detail/core/peeker.hpp
 include/boost/xpressive/detail/core/quant_style.hpp
+include/boost/xpressive/detail/core/regex_domain.hpp
 include/boost/xpressive/detail/core/regex_impl.hpp
 include/boost/xpressive/detail/core/results_cache.hpp
 include/boost/xpressive/detail/core/state.hpp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/11/24 10:13:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/02/12 10:31:04 adam Exp $
 share/doc/boost/boost.css
 share/doc/boost/boost.png
 share/doc/boost/index.htm
@@ -219,6 +219,25 @@ share/doc/boost/libs/asio/example/http/server3/request_parser.hpp
 share/doc/boost/libs/asio/example/http/server3/server.cpp
 share/doc/boost/libs/asio/example/http/server3/server.hpp
 share/doc/boost/libs/asio/example/http/server3/win_main.cpp
+share/doc/boost/libs/asio/example/http/server4/Jamfile
+share/doc/boost/libs/asio/example/http/server4/Jamfile.v2
+share/doc/boost/libs/asio/example/http/server4/coroutine.hpp
+share/doc/boost/libs/asio/example/http/server4/file_handler.cpp
+share/doc/boost/libs/asio/example/http/server4/file_handler.hpp
+share/doc/boost/libs/asio/example/http/server4/header.hpp
+share/doc/boost/libs/asio/example/http/server4/mime_types.cpp
+share/doc/boost/libs/asio/example/http/server4/mime_types.hpp
+share/doc/boost/libs/asio/example/http/server4/posix_main.cpp
+share/doc/boost/libs/asio/example/http/server4/reply.cpp
+share/doc/boost/libs/asio/example/http/server4/reply.hpp
+share/doc/boost/libs/asio/example/http/server4/request.hpp
+share/doc/boost/libs/asio/example/http/server4/request_parser.cpp
+share/doc/boost/libs/asio/example/http/server4/request_parser.hpp
+share/doc/boost/libs/asio/example/http/server4/server.cpp
+share/doc/boost/libs/asio/example/http/server4/server.hpp
+share/doc/boost/libs/asio/example/http/server4/unyield.hpp
+share/doc/boost/libs/asio/example/http/server4/win_main.cpp
+share/doc/boost/libs/asio/example/http/server4/yield.hpp
 share/doc/boost/libs/asio/example/icmp/Jamfile
 share/doc/boost/libs/asio/example/icmp/Jamfile.v2
 share/doc/boost/libs/asio/example/icmp/icmp_header.hpp
@@ -854,7 +873,6 @@ share/doc/boost/libs/function_types/doc/html/boost_functiontypes/reference/macro
 share/doc/boost/libs/function_types/doc/html/boost_functiontypes/reference/synthesis.html
 share/doc/boost/libs/function_types/doc/html/boost_functiontypes/reference/tag_types.html
 share/doc/boost/libs/function_types/doc/html/boost_functiontypes/use_cases.html
-share/doc/boost/libs/function_types/doc/html/boostbook.css
 share/doc/boost/libs/function_types/doc/html/index.html
 share/doc/boost/libs/function_types/example/Jamfile
 share/doc/boost/libs/function_types/example/detail/param_type.hpp
@@ -1027,9 +1045,6 @@ share/doc/boost/libs/fusion/doc/html/fusion/functional/adapters/fused_function_o
 share/doc/boost/libs/fusion/doc/html/fusion/functional/adapters/fused_procedure.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/adapters/limits.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/adapters/unfused.html
-share/doc/boost/libs/fusion/doc/html/fusion/functional/adapters/unfused_generic.html
-share/doc/boost/libs/fusion/doc/html/fusion/functional/adapters/unfused_lvalue_args.html
-share/doc/boost/libs/fusion/doc/html/fusion/functional/adapters/unfused_rvalue_args.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/adapters/unfused_typed.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/concepts.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/concepts/callable.html
@@ -1042,17 +1057,11 @@ share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/functions/mk_f
 share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/functions/mk_fused_fobj.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/functions/mk_fused_proc.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/functions/mk_unfused.html
-share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/functions/mk_unfused_genrc.html
-share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/functions/mk_unfused_lvargs.html
-share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/functions/mk_unfused_rvargs.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/metafunctions.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/metafunctions/mk_fused.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/metafunctions/mk_fused_fobj.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/metafunctions/mk_fused_proc.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/metafunctions/mk_unfused.html
-share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/metafunctions/mk_unfused_genrc.html
-share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/metafunctions/mk_unfused_lvargs.html
-share/doc/boost/libs/fusion/doc/html/fusion/functional/generation/metafunctions/mk_unfused_rvargs.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/invocation.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/invocation/functions.html
 share/doc/boost/libs/fusion/doc/html/fusion/functional/invocation/functions/invoke.html
@@ -1066,6 +1075,7 @@ share/doc/boost/libs/fusion/doc/html/fusion/functional/invocation/metafunctions/
 share/doc/boost/libs/fusion/doc/html/fusion/introduction.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/concepts.html
+share/doc/boost/libs/fusion/doc/html/fusion/iterator/concepts/associative_iterator.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/concepts/bidirectional_iterator.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/concepts/forward_iterator.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/concepts/random_access_iterator.html
@@ -1073,6 +1083,7 @@ share/doc/boost/libs/fusion/doc/html/fusion/iterator/functions.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/functions/advance.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/functions/advance_c.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/functions/deref.html
+share/doc/boost/libs/fusion/doc/html/fusion/iterator/functions/deref_data.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/functions/distance.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/functions/next.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/functions/prior.html
@@ -1080,11 +1091,14 @@ share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/advance.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/advance_c.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/deref.html
+share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/deref_data.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/distance.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/equal_to.html
+share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/key_of.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/next.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/prior.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/value_of.html
+share/doc/boost/libs/fusion/doc/html/fusion/iterator/metafunctions/value_of_data.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/operator.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/operator/operator_equality.html
 share/doc/boost/libs/fusion/doc/html/fusion/iterator/operator/operator_inequality.html
@@ -1196,6 +1210,7 @@ share/doc/boost/libs/fusion/example/extension/detail/at_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/at_key_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/begin_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/category_of_impl.hpp
+share/doc/boost/libs/fusion/example/extension/detail/deref_data_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/deref_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/distance_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/end_impl.hpp
@@ -1203,11 +1218,13 @@ share/doc/boost/libs/fusion/example/extension/detail/equal_to_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/has_key_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/is_sequence_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/is_view_impl.hpp
+share/doc/boost/libs/fusion/example/extension/detail/key_of_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/next_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/prior_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/size_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/value_at_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/value_at_key_impl.hpp
+share/doc/boost/libs/fusion/example/extension/detail/value_of_data_impl.hpp
 share/doc/boost/libs/fusion/example/extension/detail/value_of_impl.hpp
 share/doc/boost/libs/fusion/example/extension/example_struct.hpp
 share/doc/boost/libs/fusion/example/extension/example_struct_iterator.hpp
@@ -2693,13 +2710,17 @@ share/doc/boost/libs/graph_parallel/index.html
 share/doc/boost/libs/graph_parallel/src/mpi_process_group.cpp
 share/doc/boost/libs/graph_parallel/src/tag_allocator.cpp
 share/doc/boost/libs/index.html
-share/doc/boost/libs/integer/cstdint.htm
-share/doc/boost/libs/integer/doc/integer_mask.html
-share/doc/boost/libs/integer/doc/static_log2.html
-share/doc/boost/libs/integer/doc/static_min_max.html
+share/doc/boost/libs/integer/doc/Jamfile.v2
+share/doc/boost/libs/integer/doc/html/boost_integer/cstdint.html
+share/doc/boost/libs/integer/doc/html/boost_integer/history.html
+share/doc/boost/libs/integer/doc/html/boost_integer/integer.html
+share/doc/boost/libs/integer/doc/html/boost_integer/log2.html
+share/doc/boost/libs/integer/doc/html/boost_integer/mask.html
+share/doc/boost/libs/integer/doc/html/boost_integer/minmax.html
+share/doc/boost/libs/integer/doc/html/boost_integer/traits.html
+share/doc/boost/libs/integer/doc/html/index.html
+share/doc/boost/libs/integer/doc/integer.qbk
 share/doc/boost/libs/integer/index.html
-share/doc/boost/libs/integer/integer.htm
-share/doc/boost/libs/integer/integer_traits.html
 share/doc/boost/libs/interprocess/doc/Jamfile.v2
 share/doc/boost/libs/interprocess/doc/html/boostbook.css
 share/doc/boost/libs/interprocess/doc/html/images/blank.png
@@ -3121,7 +3142,6 @@ share/doc/boost/libs/iostreams/example/unix2dos_filter.hpp
 share/doc/boost/libs/iostreams/index.html
 share/doc/boost/libs/iostreams/src/bzip2.cpp
 share/doc/boost/libs/iostreams/src/file_descriptor.cpp
-share/doc/boost/libs/iostreams/src/file_times.cpp
 share/doc/boost/libs/iostreams/src/gzip.cpp
 share/doc/boost/libs/iostreams/src/mapped_file.cpp
 share/doc/boost/libs/iostreams/src/zlib.cpp
@@ -6537,6 +6557,7 @@ share/doc/boost/libs/program_options/src/convert.cpp
 share/doc/boost/libs/program_options/src/options_description.cpp
 share/doc/boost/libs/program_options/src/parsers.cpp
 share/doc/boost/libs/program_options/src/positional_options.cpp
+share/doc/boost/libs/program_options/src/split.cpp
 share/doc/boost/libs/program_options/src/utf8_codecvt_facet.cpp
 share/doc/boost/libs/program_options/src/value_semantic.cpp
 share/doc/boost/libs/program_options/src/variables_map.cpp
@@ -7469,6 +7490,7 @@ share/doc/boost/libs/serialization/vc7ide/readme.txt
 share/doc/boost/libs/serialization/vc7ide/test_array.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_binary.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_bitset.vcproj
+share/doc/boost/libs/serialization/vc7ide/test_check.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_class_info_load.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_class_info_save.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_codecvt_null.vcproj
@@ -7509,6 +7531,7 @@ share/doc/boost/libs/serialization/vc7ide/test_nvp.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_object.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_optional.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_polymorphic.vcproj
+share/doc/boost/libs/serialization/vc7ide/test_polymorphic2.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_primitive.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_private_base.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_private_ctor.vcproj
@@ -7648,6 +7671,7 @@ share/doc/boost/libs/spirit/benchmarks/karma/int_generator.cpp
 share/doc/boost/libs/spirit/benchmarks/karma/real_generator.cpp
 share/doc/boost/libs/spirit/benchmarks/karma/sequence_performance.cpp
 share/doc/boost/libs/spirit/benchmarks/measure.hpp
+share/doc/boost/libs/spirit/benchmarks/qi/Jamfile
 share/doc/boost/libs/spirit/benchmarks/qi/int_parser.cpp
 share/doc/boost/libs/spirit/benchmarks/qi/real_parser.cpp
 share/doc/boost/libs/spirit/classic/change_log.html
@@ -7929,6 +7953,9 @@ share/doc/boost/libs/spirit/doc/html/spirit/advanced/customize.html
 share/doc/boost/libs/spirit/doc/html/spirit/advanced/customize/assign_to.html
 share/doc/boost/libs/spirit/doc/html/spirit/advanced/customize/assign_to/assign_to_attribute_from_iterators.html
 share/doc/boost/libs/spirit/doc/html/spirit/advanced/customize/assign_to/assign_to_attribute_from_value.html
+share/doc/boost/libs/spirit/doc/html/spirit/advanced/customize/auto.html
+share/doc/boost/libs/spirit/doc/html/spirit/advanced/customize/auto/create_generator.html
+share/doc/boost/libs/spirit/doc/html/spirit/advanced/customize/auto/create_parser.html
 share/doc/boost/libs/spirit/doc/html/spirit/advanced/customize/clear_value.html
 share/doc/boost/libs/spirit/doc/html/spirit/advanced/customize/extract_from.html
 share/doc/boost/libs/spirit/doc/html/spirit/advanced/customize/is_container.html
@@ -7960,6 +7987,7 @@ share/doc/boost/libs/spirit/doc/html/spirit/karma/quick_reference/non_terminals.
 share/doc/boost/libs/spirit/doc/html/spirit/karma/quick_reference/phoenix.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/quick_reference/primitive_generators.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/quick_reference/primitive_generators/action.html
+share/doc/boost/libs/spirit/doc/html/spirit/karma/quick_reference/primitive_generators/auto.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/quick_reference/primitive_generators/auxiliary.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/quick_reference/primitive_generators/binary.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/quick_reference/primitive_generators/boolean.html
@@ -7974,6 +8002,7 @@ share/doc/boost/libs/spirit/doc/html/spirit/karma/quick_reference/primitive_gene
 share/doc/boost/libs/spirit/doc/html/spirit/karma/quick_reference/semantic_actions.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/action.html
+share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/auto.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/auxiliary.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/auxiliary/attr_cast.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/auxiliary/eol.html
@@ -7989,12 +8018,14 @@ share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/char/char_generator.
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/directive.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/directive/alignment.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/directive/buffer.html
+share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/directive/columns.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/directive/delimit.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/directive/maxwidth.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/directive/omit.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/directive/repeat.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/directive/upperlower.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/generate_api.html
+share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/generate_api/create_generator.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/generate_api/iterator_api.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/generate_api/stream_api.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/generator_concepts.html
@@ -8026,6 +8057,7 @@ share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/stream.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/stream/stream.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/string.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/string/string.html
+share/doc/boost/libs/spirit/doc/html/spirit/karma/reference/string/symbols.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/tutorials.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/tutorials/karma_complex.html
 share/doc/boost/libs/spirit/doc/html/spirit/karma/tutorials/karma_easier_complex.html
@@ -8075,6 +8107,7 @@ share/doc/boost/libs/spirit/doc/html/spirit/qi/quick_reference/non_terminals.htm
 share/doc/boost/libs/spirit/doc/html/spirit/qi/quick_reference/phoenix.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/quick_reference/qi_parsers.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/quick_reference/qi_parsers/action.html
+share/doc/boost/libs/spirit/doc/html/spirit/qi/quick_reference/qi_parsers/auto.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/quick_reference/qi_parsers/auxiliary.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/quick_reference/qi_parsers/binary.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/quick_reference/qi_parsers/char.html
@@ -8085,6 +8118,7 @@ share/doc/boost/libs/spirit/doc/html/spirit/qi/quick_reference/qi_parsers/string
 share/doc/boost/libs/spirit/doc/html/spirit/qi/quick_reference/semantic_actions.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/action.html
+share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/auto.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/auxiliary.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/auxiliary/attr.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/auxiliary/attr_cast.html
@@ -8102,6 +8136,7 @@ share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/char/char.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/char/char_class.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/directive.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/directive/lexeme.html
+share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/directive/matches.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/directive/no_case.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/directive/omit.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/directive/raw.html
@@ -8129,6 +8164,7 @@ share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/operator/plus.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/operator/sequence.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/operator/sequential_or.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/parse_api.html
+share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/parse_api/create_parser.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/parse_api/iterator_api.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/parse_api/stream_api.html
 share/doc/boost/libs/spirit/doc/html/spirit/qi/reference/parser_concepts.html
@@ -8167,6 +8203,7 @@ share/doc/boost/libs/spirit/doc/introduction.qbk
 share/doc/boost/libs/spirit/doc/karma.qbk
 share/doc/boost/libs/spirit/doc/karma/action.qbk
 share/doc/boost/libs/spirit/doc/karma/actions.qbk
+share/doc/boost/libs/spirit/doc/karma/auto.qbk
 share/doc/boost/libs/spirit/doc/karma/auxiliary.qbk
 share/doc/boost/libs/spirit/doc/karma/basics.qbk
 share/doc/boost/libs/spirit/doc/karma/binary.qbk
@@ -8221,6 +8258,7 @@ share/doc/boost/libs/spirit/doc/preface.qbk
 share/doc/boost/libs/spirit/doc/qi.qbk
 share/doc/boost/libs/spirit/doc/qi/action.qbk
 share/doc/boost/libs/spirit/doc/qi/actions.qbk
+share/doc/boost/libs/spirit/doc/qi/auto.qbk
 share/doc/boost/libs/spirit/doc/qi/auxiliary.qbk
 share/doc/boost/libs/spirit/doc/qi/basics.qbk
 share/doc/boost/libs/spirit/doc/qi/binary.qbk
@@ -8256,6 +8294,7 @@ share/doc/boost/libs/spirit/doc/support/multi_pass.qbk
 share/doc/boost/libs/spirit/doc/what_s_new.qbk
 share/doc/boost/libs/spirit/example/karma/Jamfile
 share/doc/boost/libs/spirit/example/karma/actions.cpp
+share/doc/boost/libs/spirit/example/karma/auto_facilities.cpp
 share/doc/boost/libs/spirit/example/karma/basic_facilities.cpp
 share/doc/boost/libs/spirit/example/karma/calc2_ast.hpp
 share/doc/boost/libs/spirit/example/karma/calc2_ast_dump.cpp
@@ -8268,6 +8307,7 @@ share/doc/boost/libs/spirit/example/karma/complex_number_easier.cpp
 share/doc/boost/libs/spirit/example/karma/customize_counter.cpp
 share/doc/boost/libs/spirit/example/karma/customize_embedded_container.cpp
 share/doc/boost/libs/spirit/example/karma/customize_use_as_container.cpp
+share/doc/boost/libs/spirit/example/karma/escaped_string.cpp
 share/doc/boost/libs/spirit/example/karma/generate_code.cpp
 share/doc/boost/libs/spirit/example/karma/key_value_sequence.cpp
 share/doc/boost/libs/spirit/example/karma/mini_xml_karma.cpp
@@ -8277,8 +8317,11 @@ share/doc/boost/libs/spirit/example/karma/num_list3.cpp
 share/doc/boost/libs/spirit/example/karma/num_matrix.cpp
 share/doc/boost/libs/spirit/example/karma/printf_style_double_format.cpp
 share/doc/boost/libs/spirit/example/karma/quick_start1.cpp
+share/doc/boost/libs/spirit/example/karma/quoted_strings.cpp
 share/doc/boost/libs/spirit/example/karma/reference.cpp
 share/doc/boost/libs/spirit/example/karma/reorder_struct.cpp
+share/doc/boost/libs/spirit/example/karma/simple_columns_directive.cpp
+share/doc/boost/libs/spirit/example/karma/simple_columns_directive.hpp
 share/doc/boost/libs/spirit/example/lex/Jamfile
 share/doc/boost/libs/spirit/example/lex/custom_token_attribute.cpp
 share/doc/boost/libs/spirit/example/lex/example.hpp
@@ -8318,6 +8361,7 @@ share/doc/boost/libs/spirit/example/lex/word_count_functor_flex.cpp
 share/doc/boost/libs/spirit/example/lex/word_count_lexer.cpp
 share/doc/boost/libs/spirit/example/qi/Jamfile
 share/doc/boost/libs/spirit/example/qi/actions.cpp
+share/doc/boost/libs/spirit/example/qi/boost_array.cpp
 share/doc/boost/libs/spirit/example/qi/calc1.cpp
 share/doc/boost/libs/spirit/example/qi/calc2.cpp
 share/doc/boost/libs/spirit/example/qi/calc2_ast.cpp
@@ -8341,6 +8385,11 @@ share/doc/boost/libs/spirit/example/qi/calc7/calc7c.cpp
 share/doc/boost/libs/spirit/example/qi/calc7/calc7c.hpp
 share/doc/boost/libs/spirit/example/qi/complex_number.cpp
 share/doc/boost/libs/spirit/example/qi/employee.cpp
+share/doc/boost/libs/spirit/example/qi/iter_pos.hpp
+share/doc/boost/libs/spirit/example/qi/iter_pos_parser.cpp
+share/doc/boost/libs/spirit/example/qi/key_value_sequence.cpp
+share/doc/boost/libs/spirit/example/qi/key_value_sequence_empty_value.cpp
+share/doc/boost/libs/spirit/example/qi/key_value_sequence_ordered.cpp
 share/doc/boost/libs/spirit/example/qi/mini_c/mini_c.cpp
 share/doc/boost/libs/spirit/example/qi/mini_c/mini_c.hpp
 share/doc/boost/libs/spirit/example/qi/mini_c/mini_ca.cpp
@@ -8360,6 +8409,7 @@ share/doc/boost/libs/spirit/example/qi/mini_xml_samples/1.toyxml
 share/doc/boost/libs/spirit/example/qi/mini_xml_samples/2.toyxml
 share/doc/boost/libs/spirit/example/qi/mini_xml_samples/3.toyxml
 share/doc/boost/libs/spirit/example/qi/mini_xml_samples/4.toyxml
+share/doc/boost/libs/spirit/example/qi/nabialek.cpp
 share/doc/boost/libs/spirit/example/qi/num_list1.cpp
 share/doc/boost/libs/spirit/example/qi/num_list2.cpp
 share/doc/boost/libs/spirit/example/qi/num_list3.cpp
@@ -8371,6 +8421,7 @@ share/doc/boost/libs/spirit/example/qi/reference.cpp
 share/doc/boost/libs/spirit/example/qi/reorder_struct.cpp
 share/doc/boost/libs/spirit/example/qi/roman.cpp
 share/doc/boost/libs/spirit/example/qi/sum.cpp
+share/doc/boost/libs/spirit/example/qi/typeof.cpp
 share/doc/boost/libs/spirit/example/support/Jamfile
 share/doc/boost/libs/spirit/example/support/multi_pass.cpp
 share/doc/boost/libs/spirit/example/support/multi_pass.txt
@@ -8487,6 +8538,7 @@ share/doc/boost/libs/spirit/repository/example/qi/confix.cpp
 share/doc/boost/libs/spirit/repository/example/qi/distinct.cpp
 share/doc/boost/libs/spirit/repository/example/qi/flush_multi_pass.cpp
 share/doc/boost/libs/spirit/repository/example/qi/flush_multi_pass.txt
+share/doc/boost/libs/spirit/repository/example/qi/iter_pos_parser.cpp
 share/doc/boost/libs/spirit/repository/example/qi/mini_xml2_sr.cpp
 share/doc/boost/libs/statechart/Jamfile.v2
 share/doc/boost/libs/statechart/Statechart.sln
@@ -9012,6 +9064,7 @@ share/doc/boost/libs/type_traits/doc/has_trivial_constructor.qbk
 share/doc/boost/libs/type_traits/doc/has_trivial_copy.qbk
 share/doc/boost/libs/type_traits/doc/has_trivial_destructor.qbk
 share/doc/boost/libs/type_traits/doc/has_virtual_destructor.qbk
+share/doc/boost/libs/type_traits/doc/history.qbk
 share/doc/boost/libs/type_traits/doc/html/boost_typetraits/background.html
 share/doc/boost/libs/type_traits/doc/html/boost_typetraits/category.html
 share/doc/boost/libs/type_traits/doc/html/boost_typetraits/category/alignment.html
@@ -9028,6 +9081,7 @@ share/doc/boost/libs/type_traits/doc/html/boost_typetraits/examples/destruct.htm
 share/doc/boost/libs/type_traits/doc/html/boost_typetraits/examples/fill.html
 share/doc/boost/libs/type_traits/doc/html/boost_typetraits/examples/iter.html
 share/doc/boost/libs/type_traits/doc/html/boost_typetraits/examples/to_double.html
+share/doc/boost/libs/type_traits/doc/html/boost_typetraits/history.html
 share/doc/boost/libs/type_traits/doc/html/boost_typetraits/intrinsics.html
 share/doc/boost/libs/type_traits/doc/html/boost_typetraits/intro.html
 share/doc/boost/libs/type_traits/doc/html/boost_typetraits/mpl.html
@@ -9283,6 +9337,8 @@ share/doc/boost/libs/utility/value_init_test_fail1.cpp
 share/doc/boost/libs/utility/value_init_test_fail2.cpp
 share/doc/boost/libs/utility/value_init_test_fail3.cpp
 share/doc/boost/libs/utility/verify_test.cpp
+share/doc/boost/libs/uuid/index.html
+share/doc/boost/libs/uuid/uuid.html
 share/doc/boost/libs/variant/doc/Jamfile.v2
 share/doc/boost/libs/variant/doc/biblio.xml
 share/doc/boost/libs/variant/doc/design.xml
