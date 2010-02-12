@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9011 2010/02/12 00:43:25 asau Exp $
+$NetBSD: TODO,v 1.9012 2010/02/12 00:45:39 asau Exp $
 
 Suggested new packages
 ======================
@@ -1270,7 +1270,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tacacs-4.0.4.14
 	o tads-3.0.16
 	o tcl-8.5.8
-	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
@@ -1292,7 +1291,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tinc-1.0.12
 	o tinyproxy-1.8.0
 	o tk-8.5.8
-	o tk83-8.3.5
 	o tkcvs-8.2.1
 	o tkgate-1.8.7
 	o tkhylafax-3.2
