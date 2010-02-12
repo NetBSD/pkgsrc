@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2009/06/16 15:25:32 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/02/12 00:06:13 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
@@ -28,9 +30,11 @@ GENERATE_PLIST+=							\
 	  ${FIND} ppd -type f -print | ${SORT} -u |			\
 	  ${SED} -e "s|^|share/foomatic/|" );
 
-do-build:	# nothing
+NO_BUILD=	yes
+
+INSTALLATION_DIRS+=	share/foomatic
 
 do-install:
-	${CP} -R ${WRKSRC}/share/ppd ${PREFIX}/share/foomatic/ppd
+	${CP} -R ${WRKSRC}/share/ppd ${DESTDIR}${PREFIX}/share/foomatic
 
 .include "../../mk/bsd.pkg.mk"
