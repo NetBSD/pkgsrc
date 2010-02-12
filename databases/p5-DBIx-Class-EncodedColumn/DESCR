@@ -1,0 +1,21 @@
+This DBIx::Class component can be used to automatically encode a column's
+contents whenever the value of that column is set.
+
+This module is similar to the existing DBIx::Class::DigestColumns, but
+there is some key differences:
+
+DigestColumns performs the encode operation on insert and update, and
+EncodedColumn performs the operation when the value is set, or on new.
+DigestColumns supports only algorithms of the Digest family. EncodedColumn
+employs a set of thin wrappers around different cipher modules to provide
+support for any cipher you wish to use and wrappers are very simple to
+write (typically less than 30 lines).
+EncodedColumn supports having more than one encoded column per table
+and each column can use a different cipher.
+Encode adds only one item to the namespace of the object utilizing it
+(_column_encoders).
+
+There is, unfortunately, some features that EncodedColumn doesn't support.
+DigestColumns supports changing certain options at runtime, as well as the
+option to not automatically encode values on set. The author of this module
+found these options to be non-essential and omitted them by design.
