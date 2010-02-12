@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/09/02 08:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2010/02/12 00:04:36 joerg Exp $
 
 DISTNAME=	jsclasses-071024
 PKGNAME=	ja-${DISTNAME}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oku.edu.mie-u.ac.jp/~okumura/jsclasses/
 COMMENT=	New document class files for pLaTeX
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ja-ptex-bin>=3.1.9:../../print/ja-ptex-bin
 
@@ -27,9 +29,10 @@ post-extract:
 	@cd ${WRKSRC}; \
 	${MV} ../*.* .
 
+INSTALLATION_DIRS+=	${PLATEX_DIR}/js
+
 do-install:
-	@cd ${WRKSRC}; \
-	${INSTALL_DATA_DIR} ${PLATEX_DIR}/js; \
-	${INSTALL_DATA} *.cls *.dtx *.ins *.sty ${PLATEX_DIR}/js
+	@cd ${WRKSRC} && \
+	${INSTALL_DATA} *.cls *.dtx *.ins *.sty ${DESTDIR}${PLATEX_DIR}/js
 
 .include "../../mk/bsd.pkg.mk"
