@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:10:10 agc Exp $
+$NetBSD: distinfo,v 1.5 2010/02/12 18:26:36 sno Exp $
 
-SHA1 (Crypt-OpenPGP-1.03.tar.gz) = 5f3f744d2a44f415e057f2ceef0f026c79d3d0b7
-RMD160 (Crypt-OpenPGP-1.03.tar.gz) = 64fa8389af322cb26d8fc6434022c8fa91509507
-Size (Crypt-OpenPGP-1.03.tar.gz) = 96872 bytes
+SHA1 (Crypt-OpenPGP-1.04.tar.gz) = 492a0b357086ef266721f984903c6fb81605ed8d
+RMD160 (Crypt-OpenPGP-1.04.tar.gz) = 784e915b5a9925fdea6c7ff0fae491cdbf2fe392
+Size (Crypt-OpenPGP-1.04.tar.gz) = 108477 bytes
