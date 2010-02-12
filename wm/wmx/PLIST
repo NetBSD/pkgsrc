@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:19:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/02/12 19:59:29 joerg Exp $
 bin/wmx
 share/doc/wmx/README
 share/doc/wmx/README.contrib
-@exec	${MKDIR} %D/etc/wmx
-@unexec	${RMDIR} -p %D/etc/wmx 2>/dev/null || ${TRUE}
