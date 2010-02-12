@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2007/10/11 21:26:10 adam Exp $
+# $NetBSD: Makefile.common,v 1.21 2010/02/12 19:59:29 joerg Exp $
 
 DISTNAME=	wmx-6
 WMX_VERS=	6.0
@@ -22,13 +22,14 @@ PATCHDIR=		${.CURDIR}/../../wm/wmx/patches
 PLIST_SRC=		${.CURDIR}/../../wm/wmx/PLIST
 
 INSTALLATION_DIRS=	bin
-INSTALLATION_DIRS+=	etc/wmx
 INSTALLATION_DIRS+=	share/doc/wmx
 
+OWN_DIRS+=	etc/wmx
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wmx ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wmx
-	${INSTALL_DATA} ${WRKSRC}/README.contrib ${PREFIX}/share/doc/wmx
+	${INSTALL_PROGRAM} ${WRKSRC}/wmx ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/wmx
+	${INSTALL_DATA} ${WRKSRC}/README.contrib ${DESTDIR}${PREFIX}/share/doc/wmx
 
 BUILDLINK_DEPMETHOD.libXt+=	build
 
