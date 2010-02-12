@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/02/10 19:17:44 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2010/02/12 00:00:45 joerg Exp $
 
 DISTNAME=	lyx-${LYX_VERS}
 PKGNAME=	cjk-${DISTNAME}
@@ -14,6 +14,8 @@ PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -p0
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://cellular.phys.pusan.ac.kr/cjk.html
 COMMENT=	Multibyte version of LyX
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LYX_VERS=	1.2.0
 

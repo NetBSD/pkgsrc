@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/12/30 18:00:03 tron Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/12 00:08:35 joerg Exp $
 
 SHELL=/bin/sh
 INSTALL_PROGRAM=${BSD_INSTALL_PROGRAM}
@@ -25,7 +25,7 @@ LD=cc -s
 
 # This is where executables, man-pages and support files are installed
 BINDIR = ${PREFIX}/bin
-MANDIR = ${PREFIX}/man/man1
+MANDIR = ${PREFIX}/${PKGMANDIR}/man1
 RTFDIR = ${PREFIX}/share/rtf
 
 ############### No configuration parameters below this line ###############
@@ -45,10 +45,10 @@ all:	rtf2LaTeX
 rtf2LaTeX: $(LATEXOBJS)
 	$(LD) $(LDFLAGS) -o $@ $(LATEXOBJS)
 install: rtf2LaTeX $(DOCFILS) $(SUPPORT)
-	$(INSTALL_PROGRAM) rtf2LaTeX $(BINDIR)
-	$(INSTALL_MAN) rtf2LaTeX.man $(MANDIR)/rtf2LaTeX.1
-	-mkdir $(RTFDIR)
-	$(INSTALL_DATA) ansi.code mac.code german.land english.land $(RTFDIR)
+	$(INSTALL_PROGRAM) rtf2LaTeX ${DESTDIR}$(BINDIR)
+	$(INSTALL_MAN) rtf2LaTeX.man ${DESTDIR}$(MANDIR)/rtf2LaTeX.1
+	-mkdir ${DESTDIR}$(RTFDIR)
+	$(INSTALL_DATA) ansi.code mac.code german.land english.land ${DESTDIR}$(RTFDIR)
 tags:
 	etags -et *.[ch]
 clean::
