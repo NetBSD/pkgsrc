@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2004/07/11 00:32:43 salo Exp $
+$NetBSD: patch-aa,v 1.4 2010/02/12 19:37:50 joerg Exp $
 
 --- Makefile.orig	2003-03-26 19:35:11.000000000 +0100
 +++ Makefile	2004-07-11 02:22:19.000000000 +0200
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.3 2004/07/11 00:32:43 salo Exp $
 -	@if [ -e gtkasp2php ]; then install gtkasp2php /usr/local/bin; fi;
 -	@echo "Compiled programs have been installed in /usr/local/bin"
 -	@echo ""
-+	${BSD_INSTALL_PROGRAM} gtkasp2php ${BINDIR}
++	${BSD_INSTALL_PROGRAM} gtkasp2php ${DESTDIR}${BINDIR}
  
  uninstall:
  	@if [ -e /usr/local/bin/asp2php ]; then rm /usr/local/bin/asp2php; fi;
