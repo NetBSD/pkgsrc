@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/20 16:21:15 seb Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/12 00:27:18 joerg Exp $
 
---- Makefile.in.orig	2004-06-19 08:31:32.000000000 +0200
+--- Makefile.in.orig	2006-01-07 02:24:57.000000000 +0000
 +++ Makefile.in
-@@ -550,7 +550,7 @@ info-am:
+@@ -670,7 +670,7 @@ info-am:
  
  install-data-am: install-man
  
@@ -11,3 +11,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/20 16:21:15 seb Exp $
  	install-libexecPROGRAMS
  	@$(NORMAL_INSTALL)
  	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
+@@ -728,7 +728,6 @@ uninstall-man: uninstall-man1 uninstall-
+ 	$(CC) -c $(DEFS) $(ourdefs) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $<
+ 
+ install-exec-hook:
+-	chmod u+s $(libexecdir)/rssh_chroot_helper
+ 
+ rpm:	dist
+ 	rpmbuild -ta --sign $(base).tar.gz

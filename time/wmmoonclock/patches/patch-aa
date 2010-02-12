@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2002/10/27 13:40:30 bouyer Exp $
+$NetBSD: patch-aa,v 1.4 2010/02/12 00:28:36 joerg Exp $
 
 --- Makefile.orig	Tue Mar 23 03:20:32 1999
 +++ Makefile	Thu Oct 17 00:31:50 2002
@@ -25,5 +25,5 @@ $NetBSD: patch-aa,v 1.3 2002/10/27 13:40:30 bouyer Exp $
 -	install -s -m 0755 wmMoonClock $(DESTDIR)/bin
 -	install    -m 0644 wmMoonClock.1 $(DESTDIR)/man/man1 
 -
-+	$(BSD_INSTALL_PROGRAM) wmMoonClock $(DESTDIR)/bin
-+	$(BSD_INSTALL_DATA) wmMoonClock.1 $(DESTDIR)/man/man1 
++	$(BSD_INSTALL_PROGRAM) wmMoonClock $(DESTDIR)${PREFIX}/bin
++	$(BSD_INSTALL_DATA) wmMoonClock.1 $(DESTDIR)${PREFIX}/${PKGMANDIR}/man1 
