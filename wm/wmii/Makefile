@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/06/15 12:43:15 ghen Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/12 20:42:33 joerg Exp $
 
 DISTNAME=		wmii-3.6
 PKGREVISION=		4
@@ -8,6 +8,8 @@ MASTER_SITES=		http://code.suckless.org/dl/wmii/
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://wmii.suckless.org/
 COMMENT=		Modular and keyboard-friendly window manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		dmenu>=3.7:../../x11/dmenu
 
