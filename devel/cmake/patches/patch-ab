@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.8 2010/02/12 13:45:54 drochner Exp $
+
+--- Modules/FindPythonInterp.cmake.orig	2009-11-13 18:32:52.000000000 +0000
++++ Modules/FindPythonInterp.cmake
+@@ -19,8 +19,15 @@
+ # (To distributed this file outside of CMake, substitute the full
+ #  License text for the above reference.)
+ 
++# for pkgsrc: force Python version (set in pyversion.mk)
++IF(DEFINED PYVERSSUFFIX)
++  SET(_VERSIONS python${PYVERSSUFFIX})
++ELSE(DEFINED PYVERSSUFFIX)
++  SET(_VERSIONS python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 python1.6 python1.5 python)
++ENDIF(DEFINED PYVERSSUFFIX)
++
+ FIND_PROGRAM(PYTHON_EXECUTABLE
+-  NAMES python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 python1.6 python1.5 python
++  NAMES ${_VERSIONS}
+   PATHS
+   [HKEY_LOCAL_MACHINE\\SOFTWARE\\Python\\PythonCore\\2.6\\InstallPath]
+   [HKEY_LOCAL_MACHINE\\SOFTWARE\\Python\\PythonCore\\2.5\\InstallPath]
