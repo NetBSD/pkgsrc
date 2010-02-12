@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1291 2010/02/12 15:32:47 sno Exp $
+# $NetBSD: Makefile,v 1.1292 2010/02/12 15:42:13 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -706,6 +706,7 @@ SUBDIR+=	p5-Log-Agent
 SUBDIR+=	p5-Log-Any
 SUBDIR+=	p5-Log-Any-Adapter
 SUBDIR+=	p5-Log-Any-Adapter-Dispatch
+SUBDIR+=	p5-Log-Any-Adapter-Log4perl
 SUBDIR+=	p5-Log-Dispatch
 SUBDIR+=	p5-Log-Dispatch-Config
 SUBDIR+=	p5-Log-Dispatch-DBI
