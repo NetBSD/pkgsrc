@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2010/02/12 00:31:52 joerg Exp $
+
+--- Makefile.in.orig	2010-02-12 00:29:07.000000000 +0000
++++ Makefile.in
+@@ -190,14 +190,7 @@ headers:
+ #########
+ 
+ install: $(LIBS) $(CLIBS) META
+-	@if [ "`sed -n -e 's/version = "\([0-9.]*\)"/\1/p' META`" = "$(VERSION)" ]; then \
+-	  (if test -d $(CAMLLIB)/site-lib/$(NAME); then $(MAKE) uninstall; fi;\
+-	  $(CAMLFIND) install $(NAME) target/*.cm[iox] $(MLI) $(CMI) $(CLIBS) META\
+-	)else \
+-	  (echo; echo "Not the good version. Please, do :"; \
+-	   echo "  make clean && make"; \
+-	   echo "next reinstall"; echo) \
+-	fi
++	$(CAMLFIND) install -destdir ${DESTDIR}${CAMLLIB}/site-lib -ldconf /dev/null $(NAME) target/*.cm[iox] $(MLI) $(CMI) $(CLIBS) META\
+ 
+ uninstall:
+ 	$(CAMLFIND) remove $(NAME)
