@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/22 19:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2010/02/12 20:34:16 joerg Exp $
 #
 
 DISTNAME=	windowlab-1.33
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nickgravgaard.com/windowlab/
 COMMENT=	Small and simple window manager
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	gmake pkg-config
@@ -21,8 +22,7 @@ CONF_FILES=	${EGDIR}/windowlab.menurc ${PKG_SYSCONFDIR}/windowlab.menurc
 INSTALLATION_DIRS=	share/examples/windowlab
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/windowlab.menurc ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/windowlab.menurc ${DESTDIR}${EGDIR}
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
