@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2010/02/12 20:31:32 joerg Exp $
+
+--- data/po/Makefile.in.orig	2010-02-12 20:07:42.000000000 +0000
++++ data/po/Makefile.in
+@@ -319,8 +319,8 @@ install-data-yes: all
+ 	for cat in $$catalogs; do \
+ 	  cat=`basename $$cat`; \
+ 	  case "$$cat" in \
+-	    *.gmo) destdir=$(gnulocaledir);; \
+-	    *)     destdir=$(localedir);; \
++	    *.gmo) destdir=${DESTDIR}$(gnulocaledir);; \
++	    *)     destdir=${DESTDIR}$(localedir);; \
+ 	  esac; \
+ 	  echo $$destdir; \
+ 	  lang=`echo $$cat | sed 's/\$(CATOBJEXT)$$//'`; \
