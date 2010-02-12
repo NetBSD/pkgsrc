@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/09/16 09:24:55 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/02/12 08:35:28 adam Exp $
 bin/scribus
 lib/scribus/import.prolog
 lib/scribus/keysets/scribus13.ksxml
@@ -36,7 +36,7 @@ lib/scribus/swatches/Scribus_X11Grey.txt
 man/man1/scribus.1
 man/man1/scribus.1.de
 man/pl/man1/scribus.1
-share/applications/scribus.desktop
+share/applications/vnd.scribus.desktop
 share/doc/scribus/AUTHORS
 share/doc/scribus/BUILDING
 share/doc/scribus/COPYING
@@ -177,6 +177,7 @@ share/doc/scribus/de/translation_howto.html
 share/doc/scribus/de/tutorials.html
 share/doc/scribus/en/about1.html
 share/doc/scribus/en/about2.html
+share/doc/scribus/en/bugreport.html
 share/doc/scribus/en/cms.html
 share/doc/scribus/en/cms2.html
 share/doc/scribus/en/cms3.html
@@ -206,6 +207,12 @@ share/doc/scribus/en/gsadv.html
 share/doc/scribus/en/gsfont.html
 share/doc/scribus/en/gsview.html
 share/doc/scribus/en/hyphenator.html
+share/doc/scribus/en/images/Mantis_my_view.png
+share/doc/scribus/en/images/Mantis_new_report1.png
+share/doc/scribus/en/images/Mantis_new_report2.png
+share/doc/scribus/en/images/Mantis_new_report3.png
+share/doc/scribus/en/images/Mantis_searching.png
+share/doc/scribus/en/images/Mantis_signup.png
 share/doc/scribus/en/images/RDF.png
 share/doc/scribus/en/images/Scripter.png
 share/doc/scribus/en/images/Scripter_error_string.png
@@ -533,6 +540,30 @@ share/doc/scribus/pl/tutorials/scribus-short-words/menu.xml
 share/doc/scribus/pl/tutorials/scribus-short-words/short-words-manual.html
 share/mime/packages/scribus.xml
 share/pixmaps/scribus.png
+share/scribus/dicts/CMakeLists.txt
+share/scribus/dicts/README_ca_ES.txt
+share/scribus/dicts/README_cs_CZ.txt
+share/scribus/dicts/README_cy_GB.txt
+share/scribus/dicts/README_de_DE.txt
+share/scribus/dicts/README_en_EN.txt
+share/scribus/dicts/README_en_GB.txt
+share/scribus/dicts/README_es_ES.txt
+share/scribus/dicts/README_fi_FI.txt
+share/scribus/dicts/README_hu_HU.txt
+share/scribus/dicts/README_hyph_da_DK.txt
+share/scribus/dicts/README_hyph_pl_PL.txt
+share/scribus/dicts/README_id_ID.txt
+share/scribus/dicts/README_is_IS.txt
+share/scribus/dicts/README_ku.txt
+share/scribus/dicts/README_lt_LT.txt
+share/scribus/dicts/README_no_NO.txt
+share/scribus/dicts/README_pt_BR.txt
+share/scribus/dicts/README_pt_PT.txt
+share/scribus/dicts/README_ru_RU_0.txt
+share/scribus/dicts/README_sk_SK.txt
+share/scribus/dicts/README_sl_SI.txt
+share/scribus/dicts/README_sv_SE.txt
+share/scribus/dicts/README_uk_UA.txt
 share/scribus/dicts/hyph_af.dic
 share/scribus/dicts/hyph_bg.dic
 share/scribus/dicts/hyph_ca.dic
@@ -550,8 +581,10 @@ share/scribus/dicts/hyph_hu.dic
 share/scribus/dicts/hyph_id.dic
 share/scribus/dicts/hyph_is.dic
 share/scribus/dicts/hyph_it.dic
+share/scribus/dicts/hyph_ku.dic
 share/scribus/dicts/hyph_lt.dic
 share/scribus/dicts/hyph_nl.dic
+share/scribus/dicts/hyph_nn.dic
 share/scribus/dicts/hyph_nn_NO.dic
 share/scribus/dicts/hyph_pl.dic
 share/scribus/dicts/hyph_pt.dic
@@ -868,6 +901,7 @@ share/scribus/loremipsum/greek.xml
 share/scribus/loremipsum/hebrew.xml
 share/scribus/loremipsum/hu.xml
 share/scribus/loremipsum/italian.xml
+share/scribus/loremipsum/japanese.xml
 share/scribus/loremipsum/loremipsum.xml
 share/scribus/loremipsum/russian.xml
 share/scribus/loremipsum/slovenian.xml
