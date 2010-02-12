@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2008/01/06 21:55:38 ghen Exp $
+$NetBSD: patch-aa,v 1.7 2010/02/12 20:42:33 joerg Exp $
 
 --- config.mk.orig	2007-11-16 14:59:15.000000000 +0100
 +++ config.mk
@@ -7,11 +7,12 @@ $NetBSD: patch-aa,v 1.6 2008/01/06 21:55:38 ghen Exp $
  
  # paths
 -PREFIX = /usr/local
- BIN = ${PREFIX}/bin
+-BIN = ${PREFIX}/bin
++BIN = ${DESTDIR}${PREFIX}/bin
 -MAN = ${PREFIX}/share/man
 -ETC = ${PREFIX}/etc
-+MAN = ${PREFIX}/${PKGMANDIR}
-+ETC = ${PKG_SYSCONFBASE}
++MAN = ${DESTDIR}${PREFIX}/${PKGMANDIR}
++ETC = ${DESTDIR}${PKG_SYSCONFBASE}
  LIBDIR = ${PREFIX}/lib
  INCLUDE = ${PREFIX}/include
  
