@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 20:47:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/12 23:05:03 wiz Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -4385,8 +4385,6 @@ share/kde4/services/ScreenSavers/halftone.desktop
 share/kde4/services/ScreenSavers/halo.desktop
 share/kde4/services/ScreenSavers/helix.desktop
 share/kde4/services/ScreenSavers/hopalong.desktop
-share/kde4/services/ScreenSavers/hyperball.desktop
-share/kde4/services/ScreenSavers/hypercube.desktop
 share/kde4/services/ScreenSavers/hypertorus.desktop
 share/kde4/services/ScreenSavers/ifs.desktop
 share/kde4/services/ScreenSavers/imsmap.desktop
@@ -4394,7 +4392,6 @@ share/kde4/services/ScreenSavers/interference.desktop
 share/kde4/services/ScreenSavers/intermomentary.desktop
 share/kde4/services/ScreenSavers/jigglypuff.desktop
 share/kde4/services/ScreenSavers/jigsaw.desktop
-share/kde4/services/ScreenSavers/juggle.desktop
 share/kde4/services/ScreenSavers/julia.desktop
 share/kde4/services/ScreenSavers/kaleidescope.desktop
 share/kde4/services/ScreenSavers/klein.desktop
