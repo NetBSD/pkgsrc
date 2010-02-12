@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.688 2010/02/12 15:41:36 sno Exp $
+$NetBSD: CHANGES-2010,v 1.689 2010/02/12 15:49:40 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -824,3 +824,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Log-Any-Adapter version 0.03 [sno 2010-02-12]
 	Added devel/p5-Log-Any-Adapter-Dispatch version 0.05 [sno 2010-02-12]
 	Added devel/p5-Log-Any-Adapter-Log4perl version 0.04 [sno 2010-02-12]
+	Added wm/musca version 0.9.24 [asau 2010-02-12]
