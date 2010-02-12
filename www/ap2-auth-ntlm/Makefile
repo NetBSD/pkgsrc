@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/17 19:24:10 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/12 21:17:22 joerg Exp $
 #
 
 DISTNAME=	ntlm2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.jamiekerwick.co.uk/modntlm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://modntlm.sourceforge.com/
 COMMENT=	Apache module for NTLM authentication
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
 
@@ -26,9 +28,11 @@ MESSAGE_SUBST+=	EGDIR=${EGDIR}
 
 EGDIR=		${PREFIX}/share/examples/mod_ntlm
 
-post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/ntlm.conf ${EGDIR}
+INSTALLATION_DIRS+=	lib/httpd ${EGDIR}
+
+do-install:
+	${INSTALL_LIB} ${WRKSRC}/.libs/mod_ntlm.so ${DESTDIR}${PREFIX}/lib/httpd
+	${INSTALL_DATA} ${WRKSRC}/ntlm.conf ${DESTDIR}${EGDIR}
 
 .include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"
