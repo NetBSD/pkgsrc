@@ -1,0 +1,38 @@
+A simple dynamic window manager for X, with features nicked from
+ratpoison and dwm:
+
+  * Musca operates as a tiling window manager by default. It uses
+    manual tiling, which means the user determines how the screen is
+    divided into non-overlapping frames, with no restrictions on
+    layout.  Application windows always fill their assigned frame,
+    with the exception of transient windows and popup dialog boxes
+    which float above their parent application at the appropriate
+    size.  Once visible, applications do not change frames unless
+    so instructed.
+  * Since not all applications suit tiling, a more traditional
+    stacking window manager mode is also available, allowing windows
+    to float at any screen location and overlap.
+  * There are no built in status bars, panels, tabs or window
+    decorations to take up screen real estate. If the user wants
+    any of these things, there are plenty of external applications
+    available to do the job. Window decoration is limited to a
+    slender border, which is coloured to indicate keyboard focus.
+  * Windows are placed in named groups which can be used in a
+    similar fashion to virtual desktops. Groups can be added and
+    removed on the fly, and each group has its own frame layout.
+  * The excellent dmenu utility is used to execute commands and
+    launch applications, and it can also act as a window and group
+    switcher. Basic EWMH support allows use of common panels, pagers
+    and wmctrl.
+  * Windows and frames are navigated and focused on any mouse button
+    click, including rolling the wheel, or alternatively driven
+    entirely by the keyboard. Simple key combinations exist for
+    window switching, group switching, frame control and screen
+    switching.
+  * Frames can be dedicated to a single application window, preventing
+    new windows usurping said frame. One frame per group can also
+    be flagged as a catch-all so that all new application windows
+    open there. The frame border colour changes to reflect these
+    modes.
+  * Musca has multi-screen support out of the box, and will
+    automatically create groups for every available screen.
