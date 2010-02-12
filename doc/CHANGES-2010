@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.694 2010/02/12 19:44:08 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.695 2010/02/12 19:57:51 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -830,3 +830,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-Crypt-OpenPGP to 1.04 [sno 2010-02-12]
 	Added databases/p5-DBIx-Class-EncodedColumn version 0.00006 [sno 2010-02-12]
 	Updated devel/hg-git to 0.2.1 [joerg 2010-02-12]
+	Added www/p5-Task-CatInABox version 0.03 [sno 2010-02-12]
