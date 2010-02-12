@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/12 08:58:34 wiz Exp $
+
+SHA1 (jsonlib-1.6.1.tar.gz) = 9ea686040471d0797475d5d4bee941bca9ae0108
+RMD160 (jsonlib-1.6.1.tar.gz) = f09c82416b0670c71639463e03aaf01126bf4323
+Size (jsonlib-1.6.1.tar.gz) = 43828 bytes
