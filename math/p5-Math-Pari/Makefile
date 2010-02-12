@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2010/02/06 10:52:37 sno Exp $
+# $NetBSD: Makefile,v 1.37 2010/02/12 18:19:40 sno Exp $
 #
 
 DISTNAME=		Math-Pari-2.01080603
 PKGNAME=		p5-${DISTNAME:S/01080603/010806.03/}
-#PKGREVISION=		2
+PKGREVISION=		1
 SVR4_PKGNAME=		p5mpa
 CATEGORIES+=		perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Math/}
@@ -32,6 +32,7 @@ PERL5_PACKLIST=		auto/Math/Pari/.packlist
 post-extract:
 	${RM} ${WRKSRC}/libPARI/Makefile.PL
 
+BUILDLINK_API_DEPENDS.pari+=	pari>=2.3.5nb1
 .include "../../math/pari/buildlink3.mk"
 MAKE_PARAMS+=		libpari=${PARI_LIB}
 .if !empty(PKG_BUILD_OPTIONS.pari:Mgmp)
