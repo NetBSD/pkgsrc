@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.695 2010/02/12 19:57:51 sno Exp $
+$NetBSD: CHANGES-2010,v 1.696 2010/02/12 20:33:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -831,3 +831,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/p5-DBIx-Class-EncodedColumn version 0.00006 [sno 2010-02-12]
 	Updated devel/hg-git to 0.2.1 [joerg 2010-02-12]
 	Added www/p5-Task-CatInABox version 0.03 [sno 2010-02-12]
+	Updated editors/p5-Padre-Plugin-Catalyst to 0.08 [sno 2010-02-12]
