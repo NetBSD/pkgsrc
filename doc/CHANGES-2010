@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.685 2010/02/12 10:35:03 adam Exp $
+$NetBSD: CHANGES-2010,v 1.686 2010/02/12 15:06:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -821,3 +821,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/boost-build to 1.42.0 [adam 2010-02-12]
 	Updated devel/boost-python to 1.42.0 [adam 2010-02-12]
 	Updated meta-pkgs/boost to 1.42.0 [adam 2010-02-12]
+	Updated devel/p5-Log-Any-Adapter to 0.03 [sno 2010-02-12]
