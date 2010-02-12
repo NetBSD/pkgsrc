@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2010/01/16 14:41:25 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2010/02/12 09:01:45 tnn Exp $
 
 .include "../../devel/xulrunner/dist.mk"
 PKGNAME=		${DISTNAME:S/firefox-3.5/nss-${NSS_RELEASE}/:S/.source//}
@@ -12,7 +12,7 @@ COMMENT=		Libraries to support development of security-enabled applications
 PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 
-USE_TOOLS+=		gmake perl pax
+USE_TOOLS+=		gmake perl pax pkg-config
 
 .include		"../../mk/bsd.prefs.mk"
 
