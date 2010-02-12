@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2005/03/10 16:58:39 tv Exp $
+$NetBSD: patch-aa,v 1.6 2010/02/12 00:23:34 joerg Exp $
 
 --- Makefile.orig	1995-05-30 07:14:14.000000000 -0400
 +++ Makefile
@@ -20,9 +20,9 @@ $NetBSD: patch-aa,v 1.5 2005/03/10 16:58:39 tv Exp $
 +all: es
 +
 +install:
-+	${BSD_INSTALL_PROGRAM} es $(PREFIX)/bin
-+	${BSD_INSTALL_SCRIPT} esdebug $(PREFIX)/bin/esdebug
-+	${BSD_INSTALL_MAN} es.1 $(PREFIX)/man/man1
++	${BSD_INSTALL_PROGRAM} es ${DESTDIR}$(PREFIX)/bin
++	${BSD_INSTALL_SCRIPT} esdebug ${DESTDIR}$(PREFIX)/bin/esdebug
++	${BSD_INSTALL_MAN} es.1 ${DESTDIR}$(PREFIX)/man/man1
 +
  es	: ${OFILES} initial.o
  	${CC} -o es ${LDFLAGS} ${OFILES} initial.o ${LIBS}
