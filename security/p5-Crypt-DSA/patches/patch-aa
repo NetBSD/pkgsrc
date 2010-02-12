@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/02/12 18:16:44 sno Exp $
+
+--- lib/Crypt/DSA/KeyChain.pm.orig	2009-09-11 12:45:37.000000000 +0000
++++ lib/Crypt/DSA/KeyChain.pm
+@@ -53,7 +53,7 @@ sub generate_params {
+             my $cur_part;
+             foreach (@res) {
+                 if (/^\s+(\w):\s*$/) {
+-                    $cur_part = $1;
++                    $cur_part = lc($1);
+                     next;
+                 }
+                 if (/^\s*((?:[0-9a-f]{2,2}:?)+)\s*$/) {

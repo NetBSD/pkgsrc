@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2009/09/19 22:22:34 sno Exp $
+$NetBSD: distinfo,v 1.6 2010/02/12 18:16:44 sno Exp $
 
 SHA1 (Crypt-DSA-1.16.tar.gz) = 2d82e1cb5928bde85e73ff5517ee0f66d06a09fa
 RMD160 (Crypt-DSA-1.16.tar.gz) = dbad1e495baeb515e24beb04a07e98c4b6cacd17
 Size (Crypt-DSA-1.16.tar.gz) = 39534 bytes
+SHA1 (patch-aa) = 7626d8828a1ca7f4b0e0dcaf7fe802fcbe41e091
