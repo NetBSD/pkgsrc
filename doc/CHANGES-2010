@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.683 2010/02/12 01:02:31 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.684 2010/02/12 08:59:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -812,3 +812,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-anonchap version 1.1a [minskim 2010-02-12]
 	Updated math/octave to 3.2.4 [asau 2010-02-12]
 	Updated fonts/tex-metafont to 2009nb1 [minskim 2010-02-12]
+	Added textproc/py-jsonlib version 1.6.1 [wiz 2010-02-12]
