@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.4 2010/02/12 13:45:54 drochner Exp $
+
+--- Modules/FindPythonLibs.cmake.orig	2009-11-13 18:32:52.000000000 +0000
++++ Modules/FindPythonLibs.cmake
+@@ -27,7 +27,14 @@ INCLUDE(CMakeFindFrameworks)
+ # Search for the python framework on Apple.
+ CMAKE_FIND_FRAMEWORKS(Python)
+ 
+-FOREACH(_CURRENT_VERSION 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
++# for pkgsrc: force Python version (set in pyversion.mk)
++IF(DEFINED PYVERSSUFFIX)
++  SET(_VERSIONS ${PYVERSSUFFIX})
++ELSE(DEFINED PYVERSSUFFIX)
++  SET(_VERSIONS 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
++ENDIF(DEFINED PYVERSSUFFIX)
++
++FOREACH(_CURRENT_VERSION ${_VERSIONS})
+   STRING(REPLACE "." "" _CURRENT_VERSION_NO_DOTS ${_CURRENT_VERSION})
+   IF(WIN32)
+     FIND_LIBRARY(PYTHON_DEBUG_LIBRARY

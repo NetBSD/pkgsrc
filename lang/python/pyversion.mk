@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.79 2010/02/10 19:16:48 joerg Exp $
+# $NetBSD: pyversion.mk,v 1.80 2010/02/12 13:45:54 drochner Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -175,5 +175,9 @@ PRINT_PLIST_AWK+=	/^${PYLIB:S|/|\\/|g}/ \
 .endif
 
 ALL_ENV+=	PYTHON=${PYTHONBIN}
+.if defined(USE_CMAKE)
+# used by FindPythonInterp.cmake and FindPythonLibs.cmake
+CMAKE_ARGS+=	-DPYVERSSUFFIX:STRING=${PYVERSSUFFIX}
+.endif
 
 .endif	# PYTHON_PYVERSION_MK
