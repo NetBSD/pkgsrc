@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9013 2010/02/12 00:47:26 asau Exp $
+$NetBSD: TODO,v 1.9014 2010/02/12 01:09:07 asau Exp $
 
 Suggested new packages
 ======================
@@ -593,7 +593,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fbreader-0.12.2
 	o fcitx-3.6.2
 	o fd-3.00d
-	o fdgw-20040609
 	o festival-1.96
 	o felt-3.07
 	o fetchmail-6.3.13
