@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.21 2009/11/24 09:49:39 adam Exp $
+# $NetBSD: Makefile.common,v 1.22 2010/02/12 10:31:04 adam Exp $
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
 
-BOOST_VERSION=		1.41.0
+BOOST_VERSION=		1.42.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
