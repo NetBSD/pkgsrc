@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9016 2010/02/13 09:50:09 asau Exp $
+$NetBSD: TODO,v 1.9017 2010/02/13 09:51:41 asau Exp $
 
 Suggested new packages
 ======================
@@ -672,7 +672,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gettext-m4-0.17
 	o gfract-0.33
 	o ghc-6.12.1
-	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
 	o gimp-docs-2.4.2
 	o gkrellm-2.3.1
