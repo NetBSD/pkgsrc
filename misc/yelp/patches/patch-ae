@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2010/02/13 12:26:15 tnn Exp $
+
+http://git.gnome.org/browse/yelp/commit/?id=a5588114ed94d00ca64913aa5b248e09a5e13edc
+
+--- stylesheets/db2html.xsl.in.orig	2009-11-19 17:09:56.000000000 +0000
++++ stylesheets/db2html.xsl.in
+@@ -68,7 +68,7 @@ FIXME: yelp:cache no longer works
+ <!-- == db.xref.target == -->
+ <xsl:template name="db.xref.target">
+   <xsl:param name="linkend"/>
+-  <xsl:value-of select="concat('#', $linkend)"/>
++  <xsl:value-of select="concat('xref:', $linkend)"/>
+ </xsl:template>
+ 
+ <!-- == db2html.css.custom == -->
