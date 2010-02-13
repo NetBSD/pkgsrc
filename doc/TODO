@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9017 2010/02/13 09:51:41 asau Exp $
+$NetBSD: TODO,v 1.9018 2010/02/13 11:58:28 obache Exp $
 
 Suggested new packages
 ======================
@@ -1382,7 +1382,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xeyes-1.1.0
 	o xf86-input-keyboard-1.4.0
 	o xf86-input-mouse-1.5.0
-	o xf86-input-vmmouse-12.6.6
 	o xf86-input-void-1.3.0
 	o xf86-video-ark-0.7.2
 	o xf86-video-chips-1.2.2
