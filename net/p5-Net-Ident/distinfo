@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/16 17:42:46 heinz Exp $
+$NetBSD: distinfo,v 1.2 2010/02/13 22:18:24 heinz Exp $
 
 SHA1 (Net-Ident-1.20.tar.gz) = 1780c4048c9f9b49477103bf2a6f6d2ec1aafe52
 RMD160 (Net-Ident-1.20.tar.gz) = 5d6693739d62f8fc5a6677f5d775338e6c56ebdc
 Size (Net-Ident-1.20.tar.gz) = 24983 bytes
-SHA1 (patch-aa) = d3135c66f80fde092aa04684698238dc93f014f0
+SHA1 (patch-aa) = d0eb4934d8130091cb9affcf35b27f72e74626af
