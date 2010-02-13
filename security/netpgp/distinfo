@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/12/15 00:06:15 agc Exp $
+$NetBSD: distinfo,v 1.6 2010/02/13 00:18:47 agc Exp $
 
-SHA1 (netpgp-20091210.tar.gz) = 96b7184800b22cfa20be1709ed7cfbfa930494c3
-RMD160 (netpgp-20091210.tar.gz) = 214a146e0d70a412e49ed78954e3daa95f59d0df
-Size (netpgp-20091210.tar.gz) = 1558692 bytes
+SHA1 (netpgp-20100212.tar.gz) = dca04a902f1e5390e3927315ca592137aaebf5f9
+RMD160 (netpgp-20100212.tar.gz) = b22a11185a6d118b55f9a9abf90885f741b8e24a
+Size (netpgp-20100212.tar.gz) = 1477865 bytes
