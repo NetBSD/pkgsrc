@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/08/09 22:28:51 wiz Exp $
+$NetBSD: distinfo,v 1.6 2010/02/13 11:58:11 obache Exp $
 
-SHA1 (xf86-input-vmmouse-12.6.5.tar.bz2) = bf2f1031ccc0096f388272ce93b75572d24548be
-RMD160 (xf86-input-vmmouse-12.6.5.tar.bz2) = 6924a9c0522a378cdc0d2280cc756ab08bb4e3db
-Size (xf86-input-vmmouse-12.6.5.tar.bz2) = 260212 bytes
+SHA1 (xf86-input-vmmouse-12.6.6.tar.bz2) = b6e04f93d7d2a888ab118858b2b6a4f4dd947be6
+RMD160 (xf86-input-vmmouse-12.6.6.tar.bz2) = 5621998cfb616cdb62372c9090e1830be143aaa6
+Size (xf86-input-vmmouse-12.6.6.tar.bz2) = 272965 bytes
