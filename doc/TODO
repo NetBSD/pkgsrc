@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9018 2010/02/13 11:58:28 obache Exp $
+$NetBSD: TODO,v 1.9019 2010/02/13 12:05:53 obache Exp $
 
 Suggested new packages
 ======================
@@ -827,7 +827,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lbreakout2-2.6.1
 	o lcc-4.2
 	o ldapsdk-6.0.2
-	o ldns-1.6.4 [pkg/42675]
 	o less-436
 	o level9-4.1
 	o lft-2.5 [at http://pwhois.org/]
