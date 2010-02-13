@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.700 2010/02/13 06:28:40 obache Exp $
+$NetBSD: CHANGES-2010,v 1.701 2010/02/13 09:50:09 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -836,3 +836,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/netpgp to 20100212 [agc 2010-02-12]
 	Updated www/ikiwiki to 3.20100212 [schmonz 2010-02-13]
 	Updated devel/aegis to 4.24.2 [obache 2010-02-13]
+	Updated devel/gmp to 5.0.1 [asau 2010-02-13]
+	Updated devel/gmp to 5.0.1 [asau 2010-02-13]
