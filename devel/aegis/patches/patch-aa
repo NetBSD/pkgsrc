@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2009/06/10 11:16:36 obache Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/13 06:28:21 obache Exp $
 
---- Makefile.in.orig	2008-09-24 21:48:58.000000000 +0000
+--- Makefile.in.orig	2009-06-25 16:00:55.000000000 +0000
 +++ Makefile.in
 @@ -10248,7 +10248,7 @@ $(DESTDIR)$(datadir)/cshrc: lib/cshrc li
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2009/06/10 11:16:36 obache Exp $
  
  $(DESTDIR)$(datadir)/db_forced.sh: lib/db_forced.sh lib/.mkdir.datadir
  	$(INSTALL_SCRIPT) lib/db_forced.sh $@
-@@ -14292,7 +14292,7 @@ $(DESTDIR)$(datadir)/profile: lib/profil
+@@ -14300,7 +14300,7 @@ $(DESTDIR)$(datadir)/profile: lib/profil
  
  $(DESTDIR)$(sysconfdir)/profile.d/aegis.sh: $(DESTDIR)$(datadir)/profile
  	-@mkdir -p $(DESTDIR)$(sysconfdir)/profile.d
