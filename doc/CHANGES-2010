@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.697 2010/02/12 23:05:15 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.698 2010/02/13 00:19:54 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -833,3 +833,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/p5-Task-CatInABox version 0.03 [sno 2010-02-12]
 	Updated editors/p5-Padre-Plugin-Catalyst to 0.08 [sno 2010-02-12]
 	Updated misc/kdeartwork4 to 4.3.5nb1 [wiz 2010-02-12]
+	Updated security/netpgp to 20100212 [agc 2010-02-12]
