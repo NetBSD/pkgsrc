@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.698 2010/02/13 00:19:54 agc Exp $
+$NetBSD: CHANGES-2010,v 1.699 2010/02/13 05:53:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -834,3 +834,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/p5-Padre-Plugin-Catalyst to 0.08 [sno 2010-02-12]
 	Updated misc/kdeartwork4 to 4.3.5nb1 [wiz 2010-02-12]
 	Updated security/netpgp to 20100212 [agc 2010-02-12]
+	Updated www/ikiwiki to 3.20100212 [schmonz 2010-02-13]
