@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1 2010/02/13 12:26:16 tnn Exp $
+
+http://git.gnome.org/browse/yelp/commit/?id=a5588114ed94d00ca64913aa5b248e09a5e13edc
+
+--- stylesheets/mal2html.xsl.in.orig	2009-11-19 17:09:56.000000000 +0000
++++ stylesheets/mal2html.xsl.in
+@@ -44,10 +44,10 @@
+     <xsl:when test="contains($xref, '#')">
+       <xsl:variable name="pageid" select="substring-before($xref, '#')"/>
+       <xsl:variable name="sectionid" select="substring-after($xref, '#')"/>
+-      <xsl:value-of select="concat('#', $pageid, '/', $sectionid)"/>
++      <xsl:value-of select="concat('xref:', $pageid, '/', $sectionid)"/>
+     </xsl:when>
+     <xsl:otherwise>
+-      <xsl:value-of select="concat('#', $xref)"/>
++      <xsl:value-of select="concat('xref:', $xref)"/>
+     </xsl:otherwise>
+   </xsl:choose>
+ </xsl:template>

@@ -1,0 +1,29 @@
+$NetBSD: patch-ad,v 1.1 2010/02/13 12:26:15 tnn Exp $
+
+http://git.gnome.org/browse/yelp/commit/?id=a5588114ed94d00ca64913aa5b248e09a5e13edc
+
+--- src/yelp-window.c.orig	2009-11-19 17:09:56.000000000 +0000
++++ src/yelp-window.c
+@@ -1854,14 +1854,21 @@ html_uri_selected_cb (YelpHtml  *html,
+ 		      gboolean   handled,
+ 		      gpointer   user_data)
+ {
++    gchar *new_uri = uri;
+     YelpWindow *window = YELP_WINDOW (user_data);
+ 
+     debug_print (DB_FUNCTION, "entering\n");
+     debug_print (DB_ARG, "  uri = \"%s\"\n", uri);
+ 
++    if (g_str_has_prefix (uri, "xref:"))
++        new_uri = g_strconcat (window->priv->base_uri, "#", uri + 5, NULL);
++
+     if (!handled) {
+-	yelp_window_load (window, uri);
++	yelp_window_load (window, new_uri);
+     }
++
++    if (new_uri != uri)
++        g_free (new_uri);
+ }
+ 
+ static gboolean
