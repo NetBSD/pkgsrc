@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9015 2010/02/12 01:10:43 asau Exp $
+$NetBSD: TODO,v 1.9016 2010/02/13 09:50:09 asau Exp $
 
 Suggested new packages
 ======================
@@ -687,7 +687,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glom-1.10.0 [GNOME 2.26]
 	o glpk-4.42
 	o glproto-1.4.11
-	o gmp-5.0.1
 	o gnash-0.8.6
 	o gnet1-1.1.9
 	o gnetman-20050429
