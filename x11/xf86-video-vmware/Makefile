@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/16 11:25:26 obache Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/13 12:01:31 obache Exp $
 #
 
 DISTNAME=	xf86-video-vmware-10.16.9
@@ -10,11 +10,11 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg VMware virtual video driver
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LIBTOOL=    yes
-GNU_CONFIGURE=  yes
-USE_TOOLS+=     pkg-config
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
