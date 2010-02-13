@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/16 17:42:46 heinz Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/13 22:18:25 heinz Exp $
 
---- Ident.pm.orig	Fri Aug 27 00:58:15 1999
+--- Ident.pm.orig	1999-08-26 22:58:15.000000000 +0000
 +++ Ident.pm
-@@ -25,6 +25,8 @@ use vars qw(@ISA @EXPORT_OK $DEBUG $VERS
-     'debug' => \&_set_debug,
- );
+@@ -505,7 +507,7 @@ sub geterror ($) {
+ }
  
-+# avoid "called too early to check prototype" messages
-+sub _export_hooks ();
- # put the export hooks in the standard Exporter structures
- _export_hooks();
- # for compatibility mode, uncomment the next line @@ s/^#\s*// @@
+ # provide import magic
+-sub _export_hooks () {
++sub _export_hooks {
+     my($tag, $hook);
+     while ( ($tag, $hook) = each %EXPORT_HOOKS ) {
+ 	my $hookname = "_export_hook_$tag"; # pseudo-function name
