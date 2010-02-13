@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.701 2010/02/13 09:50:09 asau Exp $
+$NetBSD: CHANGES-2010,v 1.702 2010/02/13 11:58:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -838,3 +838,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/aegis to 4.24.2 [obache 2010-02-13]
 	Updated devel/gmp to 5.0.1 [asau 2010-02-13]
 	Updated devel/gmp to 5.0.1 [asau 2010-02-13]
+	Updated x11/xf86-input-vmmouse to 12.6.6 [obache 2010-02-13]
