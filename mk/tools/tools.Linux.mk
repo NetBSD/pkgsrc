@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.46 2010/01/16 02:16:35 obache Exp $
+# $NetBSD: tools.Linux.mk,v 1.47 2010/02/13 08:30:59 obache Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -27,9 +27,17 @@ TOOLS_PLATFORM.bzip2?=		/usr/bin/bzip2
 TOOLS_PLATFORM.bzip2?=		/bin/bzip2
 .endif
 TOOLS_PLATFORM.cat?=		/bin/cat
+.if exists(/bin/chgrp)
 TOOLS_PLATFORM.chgrp?=		/bin/chgrp
+.elif exists(/usr/bin/chgrp)
+TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
+.endif
 TOOLS_PLATFORM.chmod?=		/bin/chmod
+.if exists(/bin/chown)
 TOOLS_PLATFORM.chown?=		/bin/chown
+.elif exists(/usr/sbin/chown)
+TOOLS_PLATFORM.chown?=		/usr/sbin/chown
+.endif
 .if exists(/bin/cmp)
 TOOLS_PLATFORM.cmp?=		/bin/cmp
 .elif exists(/usr/bin/cmp)
