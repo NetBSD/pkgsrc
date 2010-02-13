@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2009/10/30 20:34:43 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/02/13 13:36:08 tnn Exp $
 bin/kazehakase
 bin/kz-embed-process
-lib/kazehakase/embed/gecko.la
 lib/kazehakase/embed/per_process.la
+lib/kazehakase/embed/webkit_gtk.la
 lib/kazehakase/libkazehakase.la
 man/man1/kazehakase.1
 share/applications/kazehakase.desktop
