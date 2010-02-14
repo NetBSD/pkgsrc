@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.804 2010/02/14 18:12:39 spz Exp $
+# $NetBSD: Makefile,v 1.805 2010/02/14 22:59:57 spz Exp $
 #
 
 COMMENT=	Networking tools
@@ -591,6 +591,7 @@ SUBDIR+=	xnap
 SUBDIR+=	xorp
 SUBDIR+=	xrmftp
 SUBDIR+=	xtraceroute
+SUBDIR+=	xymon
 SUBDIR+=	xymonclient
 SUBDIR+=	yafc
 SUBDIR+=	yale-tftpd
