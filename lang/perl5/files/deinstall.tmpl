@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.tmpl,v 1.2 2010/02/03 13:29:37 tron Exp $
+# $NetBSD: deinstall.tmpl,v 1.3 2010/02/14 15:10:38 tron Exp $
 
 case ${STAGE} in
 DEINSTALL)
@@ -7,17 +7,17 @@ DEINSTALL)
 
 	# Remove the perllocal.pod file.
 	case "$archlib" in
-	$prefix/*)	archlib="@PREFIX@/${archlib#$prefix/}" ;;
+	$prefix/*)	archlib="${PKG_PREFIX-@PREFIX@}/${archlib#$prefix/}" ;;
 	esac
 	${RM} -f $archlib/perllocal.pod
 	${RMDIR} -p $archlib 2>/dev/null || ${TRUE}
 
 	# Remove any symlinked bits that belong to this module.
-	$scriptdir/perllink -f -p @PREFIX@ delete ${PERL5_PACKLIST}
+	$scriptdir/perllink -f -p ${PKG_PREFIX-@PREFIX@} delete ${PERL5_PACKLIST}
 
 	# If this is not the perl package, then re-link any perl bits
 	# back into place.
 	#
-	@PERL5_COMMENT@$scriptdir/perllink -p @PREFIX@ add
+	@PERL5_COMMENT@$scriptdir/perllink -p ${PKG_PREFIX-@PREFIX@} add
 	;;
 esac
