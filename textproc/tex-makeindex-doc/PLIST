@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 06:30:32 minskim Exp $
-share/texmf-dist/doc/makeindex/base/ind.pdf
-share/texmf-dist/doc/makeindex/base/makeindex.pdf
+@comment $NetBSD: PLIST,v 1.2 2010/02/14 22:29:49 minskim Exp $
+share/texmf-dist/doc/support/makeindex/doc-src.zip
+share/texmf-dist/doc/support/makeindex/ind-src.zip
+share/texmf-dist/doc/support/makeindex/ind.pdf
+share/texmf-dist/doc/support/makeindex/makeindex.pdf
