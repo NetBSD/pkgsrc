@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2010/02/14 19:52:53 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/14 22:07:38 dholland Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://skk.kuis.kyoto-u.ac.jp/skk/9.6/
 
@@ -15,7 +15,6 @@ HOMEPAGE=	http://skk.kuis.kyoto-u.ac.jp/
 COMMENT=	Dictionary server for Simple Kana-Kanji conversion programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
 
 WRKSRC=			${WRKDIR}/skk-9.6
 
