@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.1 1998/08/07 11:54:29 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/14 21:03:19 joerg Exp $
 
 --- Makefile.orig	Fri Aug  7 04:21:15 1998
 +++ Makefile	Fri Aug  7 04:24:19 1998
-@@ -15,6 +15,6 @@
+@@ -15,6 +15,5 @@
  # spell list postscript file are installed. Change them to whatever is appropriate.
 -DESTDIR=/afs/andrew.cmu.edu/usr0/games
 -DESTBIN=$(DESTDIR)/bin/.unpriv/@sys
-+DESTDIR=$(PREFIX)
-+DESTBIN=$(DESTDIR)/bin
- DESTMAN=$(DESTDIR)/man/man6
+-DESTMAN=$(DESTDIR)/man/man6
 -DESTLIB=$(DESTDIR)/lib/spellcast
-+DESTLIB=$(DESTDIR)/share/doc/spellcast
++DESTBIN=$(DESTDIR)${PREFIX}/bin
++DESTMAN=$(DESTDIR)${PREFIX}/${PKGMANDIR}/man6
++DESTLIB=$(DESTDIR)${PREFIX}/share/doc/spellcast
  
 @@ -24,7 +24,7 @@
  
