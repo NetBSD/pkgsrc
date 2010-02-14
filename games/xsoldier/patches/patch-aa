@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/09/14 03:48:07 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/14 22:28:55 joerg Exp $
 --- Imakefile.orig	Fri Feb 28 08:48:57 1997
 +++ Imakefile	Mon Sep 14 16:52:46 1998
 @@ -11,12 +11,12 @@
@@ -8,9 +8,9 @@ $NetBSD: patch-aa,v 1.4 2001/09/14 03:48:07 jlam Exp $
 -PIXMAPDIR	= /usr/local/games/lib/xsoldier
 -SCOREDIR	= /usr/local/games/lib/xsoldier
 -BINDIR		= /usr/local/games
-+PIXMAPDIR	= $(PREFIX)/share/xsoldier
++PIXMAPDIR	= ${DESTDIR}$(PREFIX)/share/xsoldier
 +SCOREDIR	= /var/games/
-+BINDIR		= $(PREFIX)/bin
++BINDIR		= ${DESTDIR}$(PREFIX)/bin
  
  /* スコアファイル名．SCOREDIR 以下に置かれます．			   */
 -SCOREFILE	= .scorefile
@@ -36,5 +36,5 @@ $NetBSD: patch-aa,v 1.4 2001/09/14 03:48:07 jlam Exp $
  	@if [ -d $(BINDIR) ]; then set +x; \
          else (set -x; $(MKDIRHIER) $(BINDIR)); fi
 -	$(INSTALL) -c -m 4755 $(PROGRAM) $(BINDIR)/$(PROGRAM)
-+	$(INSTALL) -c -o $(BINOWN) -g games -m 2755 $(PROGRAM) $(BINDIR)/$(PROGRAM)
++	$(BSD_INSTALL_PROGRAM) $(PROGRAM) $(BINDIR)/$(PROGRAM)
  	@echo "install bin . done"
