@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.714 2010/02/14 13:37:45 taca Exp $
+$NetBSD: CHANGES-2010,v 1.715 2010/02/14 20:20:04 snj Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -852,3 +852,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/ruby-activeldap to 1.2.1 [taca 2010-02-14]
 	Updated www/squid27 to 2.7.7nb3 [taca 2010-02-14]
 	Updated www/squid30 to 3.0.24 [taca 2010-02-14]
+	Updated www/dillo to 2.2 [snj 2010-02-14]
