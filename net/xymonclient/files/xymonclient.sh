@@ -19,7 +19,7 @@ name="xymonclient"
 : ${xymon_pidfile:="/var/run/xymonclient.pid"}
 
 rcvar=${name}
-xymon_user="xymon"
+xymonclient_user="xymon"
 pidfile=${xymon_pidfile}
 required_files="${xymon_launchcfg} ${xymon_clientcfg}"
 command="@XYBINDIR@/client/hobbitlaunch"
@@ -44,6 +44,7 @@ xymon_precmd()
 	if [ ! -h $HOBBITCLIENTHOME/logs ]; then
 		ln -s @BBLOGDIR@ $HOBBITCLIENTHOME/logs
 	fi
+	touch ${xymon_pidfile} && chown ${xymonclient_user} ${xymon_pidfile}
 }
 
 start_precmd="xymon_precmd"
