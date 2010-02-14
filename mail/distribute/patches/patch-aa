@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 1999/12/26 17:20:33 itojun Exp $
+$NetBSD: patch-aa,v 1.3 2010/02/14 17:56:14 joerg Exp $
 
---- Makefile.orig	Mon Dec 27 00:23:29 1999
-+++ Makefile	Mon Dec 27 00:24:57 1999
-@@ -28,7 +28,8 @@
+--- Makefile.orig	2010-02-14 17:50:30.000000000 +0000
++++ Makefile
+@@ -28,7 +28,8 @@ RCONFIG=-DRELEASESTATE=\"Alpha1\"
  #	-DLOGDEBUG		LOGGING DEBUG
  #
  OPTIONS= -DSYSLOG -DISSUE -DSUBJALIAS -DADDVERSION \
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.2 1999/12/26 17:20:33 itojun Exp $
  
  #
  # DEFAULT parameters -- YOU SHOULD EDIT THESE
-@@ -71,7 +72,7 @@
+@@ -71,7 +72,7 @@ OPTIONS= -DSYSLOG -DISSUE -DSUBJALIAS -D
  #
  # External Library -- you should change this if mimekit is in different loc.
  #
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.2 1999/12/26 17:20:33 itojun Exp $
  
  #
  DESTDIR=
-@@ -84,7 +85,7 @@
+@@ -84,7 +85,7 @@ MAKE=	make
  CC= 	${PURIFY} ${PURIFYOPTS} gcc
  #-D__USE_FIXED_PROTOTYPES__
  
@@ -30,3 +30,18 @@ $NetBSD: patch-aa,v 1.2 1999/12/26 17:20:33 itojun Exp $
  WHERE=	${PREFIX}/libexec
  MANDIR=	${PREFIX}/man
  MANSEC=	1
+@@ -140,11 +141,11 @@ xarchive: ${AOBJS}
+ 	@size xarchive
+ 
+ install: xdistribute distribute.1 xarchive
+-	${INSTALL} -s -o ${OWNER} -g ${GROUP} -m 511 xdistribute \
++	${BSD_INSTALL_PROGRAM} xdistribute \
+ 		${DESTDIR}${WHERE}/distribute
+-	${INSTALL} -s -o ${OWNER} -g ${GROUP} -m 511 xarchive \
++	${BSD_INSTALL_PROGRAM} xarchive \
+ 		${DESTDIR}${WHERE}/archive
+-	${INSTALL} -m 444 distribute.1 \
++	${BSD_INSTALL_MAN} distribute.1 \
+ 		${DESTDIR}${MANDIR}/man${MANSEC}/distribute.${MANSEC}
+ 
+ testinst: xdistribute xarchive
