@@ -1,20 +1,23 @@
-$NetBSD: patch-aa,v 1.8 2009/07/09 05:04:02 snj Exp $
+$NetBSD: patch-aa,v 1.9 2010/02/14 20:19:25 snj Exp $
 
---- dpid/Makefile.in.orig	2009-07-01 10:56:37.000000000 -0700
-+++ dpid/Makefile.in	2009-07-08 20:42:08.000000000 -0700
-@@ -320,12 +320,12 @@ distclean-compile:
- uninstall-info-am:
+--- dpid/Makefile.in.orig	2010-02-11 02:20:00.000000000 -0800
++++ dpid/Makefile.in	2010-02-14 09:55:43.000000000 -0800
+@@ -335,15 +335,15 @@ distclean-compile:
+ @am__fastdepCC_FALSE@	$(COMPILE) -c `$(CYGPATH_W) '$<'`
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(sysconfdir)" || $(mkdir_p) "$(DESTDIR)$(sysconfdir)"
-+	test -z "$(datadir)/examples/$(PACKAGE)" || $(mkdir_p) "$(DESTDIR)$(datadir)/examples/$(PACKAGE)"
- 	@list='$(sysconf_DATA)'; for p in $$list; do \
+-	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
++	$(MKDIR_P) "$(DESTDIR)$(datadir)/examples/$(PACKAGE)"
+ 	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
+ 	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f=$(am__strip_dir) \
--	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
--	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
-+	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(datadir)/examples/$(PACKAGE)/$$f'"; \
-+	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(datadir)/examples/$(PACKAGE)/$$f"; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(datadir)/examples/$(PACKAGE)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(datadir)/examples/$(PACKAGE)" || exit $$?; \
  	done
  
  uninstall-sysconfDATA:
