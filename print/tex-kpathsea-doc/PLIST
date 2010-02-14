@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/14 22:14:47 minskim Exp $
+info/tds.info
+share/texmf/doc/kpathsea/kpathsea.html
+share/texmf/doc/kpathsea/kpathsea.pdf
+share/texmf/doc/web2c/web2c.html
+share/texmf/doc/web2c/web2c.pdf
