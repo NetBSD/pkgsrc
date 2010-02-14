@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.711 2010/02/14 12:27:43 taca Exp $
+$NetBSD: CHANGES-2010,v 1.712 2010/02/14 12:47:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -848,3 +848,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/f-prot-antivirus6-ms-bin to 6.0.1nb1 [taca 2010-02-14]
 	Updated www/typolight28-translations to 20100210 [taca 2010-02-14]
 	Updated databases/ruby-odbc to 0.9998 [taca 2010-02-14]
+	Updated chat/ruby-net-irc to 0.0.9 [taca 2010-02-14]
+	Updated databases/ruby-activeldap to 1.2.1 [taca 2010-02-14]
