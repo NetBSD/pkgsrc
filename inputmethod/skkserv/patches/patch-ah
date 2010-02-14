@@ -1,12 +1,13 @@
-$NetBSD: patch-ah,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
+$NetBSD: patch-ah,v 1.2 2010/02/14 22:07:38 dholland Exp $
 
---- jisyo-tools/skkdic-sort.c-orig	Tue Dec 17 06:51:28 1996
-+++ jisyo-tools/skkdic-sort.c	Sun Nov 18 13:01:23 2001
-@@ -22,7 +22,7 @@
+--- jisyo-tools/skkdic-sort.c.orig	1996-12-17 05:51:28.000000000 +0000
++++ jisyo-tools/skkdic-sort.c
+@@ -22,7 +22,8 @@ the Free Software Foundation, 675 Mass A
   */
  
  #include <stdio.h>
 -#ifndef NO_MALLOC_H
++#include <stdlib.h>
 +#ifdef HAVE_MALLOC_H
  #include <malloc.h>
  #endif

@@ -1,8 +1,16 @@
-$NetBSD: patch-ai,v 1.1 2005/02/22 10:48:36 hira Exp $
+$NetBSD: patch-ai,v 1.2 2010/02/14 22:07:38 dholland Exp $
 
---- skkserv/skkserv.h.orig	2005-02-22 19:14:10.000000000 +0900
-+++ skkserv/skkserv.h	2005-02-22 19:14:46.000000000 +0900
-@@ -43,6 +43,7 @@
+--- skkserv/skkserv.h.orig	1997-01-20 19:16:36.000000000 +0000
++++ skkserv/skkserv.h
+@@ -37,12 +37,15 @@
+ /* Necessary for SunOS 3.x and maybe other old systems */
+ 
+ #include	<stdio.h>
++#include	<stdlib.h>
++#include	<string.h>
+ 
+ #include	<sys/types.h>
+ #ifdef HAVE_SYS_IOCTL_H
  #include	<sys/ioctl.h>
  #endif
  #include	<sys/socket.h>
