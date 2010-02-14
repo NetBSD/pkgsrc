@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.717 2010/02/14 22:15:38 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.718 2010/02/14 22:21:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -856,3 +856,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated cross/h8300-hms-gcc to 3.1nb4 [dholland 2010-02-14]
 	Updated cross/h8300-hms-gcc to 3.1nb5 [dholland 2010-02-14]
 	Added print/tex-kpathsea-doc version 2009.16044 [minskim 2010-02-14]
+	Updated print/tex-luatex-doc to 0.2 [minskim 2010-02-14]
