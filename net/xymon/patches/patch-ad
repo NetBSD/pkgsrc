@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/02/14 22:58:58 spz Exp $
+
+--- build/Makefile.NetBSD.orig	2010-02-08 23:58:57.000000000 +0000
++++ build/Makefile.NetBSD
+@@ -10,7 +10,8 @@ NETLIBS =
+ CC= gcc
+ PKGDIR?=/usr/pkg
+ CFLAGS = -g -O2 -Wall -Wno-unused -D_REENTRANT $(LFSDEF) $(OSDEF) \
+-       -I${PKGDIR}/include -L${PKGDIR}/lib, -Wl,--rpath=${PKGDIR}/lib
++       -I${PKGDIR}/include -L${PKGDIR}/lib, -Wl,--rpath=${PKGDIR}/lib \
++       -DHAVE_STDINT_H
+ RPATH = "-Wl,--rpath,"
+ 
+ # Compile flags for debugging

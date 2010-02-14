@@ -1,0 +1,10 @@
+Xymon is the successor to (rename of) Hobbit which was the successor
+to the bbgen toolkit, which had been available as an add-on to Big Brother
+since late 2002.
+
+Xymon monitors your hosts, your network services, and anything else
+you configure it to do via extensions. Xymon will
+periodically generate requests to network services - http, ftp,
+smtp and so on - and record if the service is responding as
+expected. Through the use of agents installed on the servers,
+you can also monitor local disk utilisation, logfiles and processes.

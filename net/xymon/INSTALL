@@ -1,0 +1,165 @@
+#! /bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2010/02/14 22:58:57 spz Exp $
+#
+
+# xymons user/group
+
+BBUSER=xymon
+BBGROUP=xymon
+
+EXAMPLEDIR=@EXAMPLEDIR@
+BBHOME=@BBHOME@
+BBVAR=@BBVAR@
+BBLOGDIR=@BBLOGDIR@
+
+XYBINDIR=@XYBINDIR@
+XYETCDIR=@XYETCDIR@
+XYEXTDIR=@XYEXTDIR@
+XYTMPDIR=@XYTMPDIR@
+XYWEBDIR=@XYWEBDIR@
+XYWWWDIR=@XYWWWDIR@
+
+case ${STAGE} in
+POST-INSTALL)
+
+	GIFS="README arrow.gif bkg-blue.gif bkg-clear.gif		\
+		bkg-green.gif bkg-purple.gif bkg-red.gif bkg-yellow.gif	\
+		blue-ack.gif blue-recent.gif blue.gif clear-recent.gif	\
+		clear.gif favicon-blue.ico favicon-clear.ico		\
+		favicon-green.ico favicon-purple.ico favicon-red.ico	\
+		favicon-unknown.ico favicon-yellow.ico green-recent.gif	\
+		green.gif purple-ack.gif purple-recent.gif purple.gif	\
+		red-ack.gif red-recent.gif red.gif unknown-recent.gif	\
+		unknown.gif yellow-ack.gif yellow-recent.gif		\
+		yellow.gif zoom.gif"
+	for file in ${GIFS}; do
+		${CP} ${EXAMPLEDIR}/www/gifs/${file} ${XYWWWDIR}/gifs/${file}
+		${CHMOD} 0444 ${XYWWWDIR}/gifs/${file}
+	done
+
+	MENUFILES="README menu.css menu.js menu_items.js menu_tpl.js"
+	for file in ${MENUFILES}; do
+		${CP} ${EXAMPLEDIR}/www/menu/${file} ${XYWWWDIR}/menu/${file}
+		${CHMOD} 0444 ${XYWWWDIR}/menu/${file}
+	done
+
+	DOCFILES="about.html bb-to-hobbit.html clonewarn.jpg	\
+			configure.txt criticalsystems.html		\
+			critview-detail-acked.jpg			\
+			critview-detail-ackform.jpg			\
+			critview-detail.jpg critview-disk.jpg		\
+			critview-green.jpg editor-clonemaster.jpg	\
+			editor-diskchanged.jpg editor-disksetup.jpg	\
+			editor-main.jpg editor-makeclone.jpg		\
+			editor-nohost.jpg editor-showclone.jpg		\
+			hobbit-alerts.html hobbit-apacheconf.txt	\
+			hobbit-bbhosts.png hobbit-clients.png		\
+			hobbit-config.html hobbit-mrtg.html		\
+			hobbit-tips.html hobbitmain.png hobbitprocs.png	\
+			howtograph.html install.html known-issues.html	\
+			mainview-acked.jpg mainview.jpg			\
+			manpages/index.html				\
+			manpages/man1/bb-ack.cgi.1.html			\
+			manpages/man1/bb-csvinfo.cgi.1.html		\
+			manpages/man1/bb-datepage.cgi.1.html		\
+			manpages/man1/bb-eventlog.cgi.1.html		\
+			manpages/man1/bb-findhost.cgi.1.html		\
+			manpages/man1/bb-hist.cgi.1.html		\
+			manpages/man1/bb-rep.cgi.1.html			\
+			manpages/man1/bb-replog.cgi.1.html		\
+			manpages/man1/bb-snapshot.cgi.1.html		\
+			manpages/man1/bb-webpage.cgi.1.html		\
+			manpages/man1/bb.1.html				\
+			manpages/man1/bbcmd.1.html			\
+			manpages/man1/bbcombotest.1.html		\
+			manpages/man1/bbdigest.1.html			\
+			manpages/man1/bbgen.1.html			\
+			manpages/man1/bbhostgrep.1.html			\
+			manpages/man1/bbhostshow.1.html			\
+			manpages/man1/bbretest-net.sh.1.html		\
+			manpages/man1/bbtest-net.1.html			\
+			manpages/man1/clientupdate.1.html		\
+			manpages/man1/hobbit-ackinfo.cgi.1.html		\
+			manpages/man1/hobbit-confreport.cgi.1.html	\
+			manpages/man1/hobbit-ghosts.cgi.1.html		\
+			manpages/man1/hobbit-hostgraphs.cgi.1.html	\
+			manpages/man1/hobbit-nkedit.cgi.1.html		\
+			manpages/man1/hobbit-nkview.cgi.1.html		\
+			manpages/man1/hobbit-statusreport.cgi.1.html	\
+			manpages/man1/hobbitgraph.cgi.1.html		\
+			manpages/man1/hobbitping.1.html			\
+			manpages/man1/hobbitsvc.cgi.1.html		\
+			manpages/man1/logfetch.1.html			\
+			manpages/man1/orcahobbit.1.html			\
+			manpages/man5/bb-hosts.5.html			\
+			manpages/man5/bb-services.5.html		\
+			manpages/man5/bbcombotest.cfg.5.html		\
+			manpages/man5/client-local.cfg.5.html		\
+			manpages/man5/clientlaunch.cfg.5.html		\
+			manpages/man5/hobbit-alerts.cfg.5.html		\
+			manpages/man5/hobbit-clients.cfg.5.html		\
+			manpages/man5/hobbit-nkview.cfg.5.html		\
+			manpages/man5/hobbitcgi.cfg.5.html		\
+			manpages/man5/hobbitclient.cfg.5.html		\
+			manpages/man5/hobbitgraph.cfg.5.html		\
+			manpages/man5/hobbitlaunch.cfg.5.html		\
+			manpages/man5/hobbitserver.cfg.5.html		\
+			manpages/man5/hobbitweb.5.html			\
+			manpages/man7/xymon.7.html			\
+			manpages/man8/bbmessage.cgi.8.html		\
+			manpages/man8/bbproxy.8.html			\
+			manpages/man8/hobbit-enadis.cgi.8.html		\
+			manpages/man8/hobbit-mailack.8.html		\
+			manpages/man8/hobbitd.8.html			\
+			manpages/man8/hobbitd_alert.8.html		\
+			manpages/man8/hobbitd_channel.8.html		\
+			manpages/man8/hobbitd_client.8.html		\
+			manpages/man8/hobbitd_filestore.8.html		\
+			manpages/man8/hobbitd_history.8.html		\
+			manpages/man8/hobbitd_hostdata.8.html		\
+			manpages/man8/hobbitd_rrd.8.html		\
+			manpages/man8/hobbitd_sample.8.html		\
+			manpages/man8/hobbitfetch.8.html		\
+			manpages/man8/hobbitlaunch.8.html		\
+			manpages/man8/msgcache.8.html			\
+			manpages/man8/trimhistory.8.html		\
+			stdview-detail-acked.jpg"
+	DOCDIRS="manpages manpages/man1 manpages/man5		\
+			manpages/man7 manpages/man8"
+	for dir in ${DOCDIRS}; do
+		${MKDIR} ${XYWWWDIR}/help/${dir}
+		${CHMOD} 0755 ${XYWWWDIR}/help/${dir}
+	done
+	for file in ${DOCFILES}; do
+		${CP} ${EXAMPLEDIR}/www/help/${file} ${XYWWWDIR}/help/${file}
+		${CHMOD} 0444 ${XYWWWDIR}/help/${file}
+	done
+
+	if [ ! -h ${BBHOME}/bin ]; then
+		${LN} -s ${XYBINDIR} ${BBHOME}/bin
+	fi
+	if [ ! -h ${BBHOME}/etc ]; then
+		${LN} -s ${XYETCDIR} ${BBHOME}/etc
+	fi
+	if [ ! -h ${BBHOME}/ext ]; then
+		${LN} -s ${XYEXTDIR} ${BBHOME}/ext
+	fi
+	if [ ! -h ${BBHOME}/tmp ]; then
+		${LN} -s ${XYTMPDIR} ${BBHOME}/tmp
+	fi
+	if [ ! -h ${BBHOME}/web ]; then
+		${LN} -s ${XYWEBDIR} ${BBHOME}/web
+	fi
+	if [ ! -h ${BBHOME}/www ]; then
+		${LN} -s ${XYWWWDIR} ${BBHOME}/www
+	fi
+	if [ ! -h ${BBHOME}/download ]; then
+		${LN} -s ${BBVAR}/download ${BBHOME}/download
+	fi
+	if [ ! -h ${BBHOME}/logs ]; then
+		${LN} -s ${BBLOGDIR} ${BBHOME}/logs
+	fi
+
+	;;
+esac

@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/02/14 22:58:58 spz Exp $
+
+--- hobbitd/Makefile.orig	2009-02-12 13:09:34.000000000 +0000
++++ hobbitd/Makefile
+@@ -159,7 +159,9 @@ install-cfg:
+ 	cd etcfiles; ../../build/merge-lines columndoc.csv $(INSTALLROOT)$(INSTALLETCDIR)/columndoc.csv
+ 	cd etcfiles; (echo "bb-hosts"; echo "hobbit-alerts.cfg"; echo "hobbit-clients.cfg"; echo "bbcombotest.cfg"; echo "client-local.cfg") | ../../build/setup-newfiles $(INSTALLROOT)$(INSTALLETCDIR)/
+ 	cd etcfiles; cp -fp hobbit-apache.conf $(INSTALLROOT)$(INSTALLETCDIR)/hobbit-apache.conf
++ifndef PKGBUILD
+ 	cd $(INSTALLROOT)$(BBHOME); rm -f hobbit.sh; ln -sf bin/hobbit.sh .
++endif
+ 	cd wwwfiles; find . | grep -v RCS | grep -v DIST | ../../build/setup-newfiles $(INSTALLROOT)$(INSTALLWWWDIR)/ ../../build/md5.dat
+ 	cd webfiles; find . | grep -v RCS | grep -v DIST | ../../build/setup-newfiles $(INSTALLROOT)$(INSTALLWEBDIR)/ ../../build/md5.dat
+ 	touch $(INSTALLROOT)$(INSTALLETCDIR)/hobbit-nkview.cfg $(INSTALLROOT)$(INSTALLETCDIR)/hobbit-nkview.cfg.bak
