@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.719 2010/02/14 22:22:05 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.720 2010/02/14 22:30:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -858,3 +858,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated inputmethod/skkserv to 3.9.4nb6 [dholland 2010-02-14]
 	Added print/tex-kpathsea-doc version 2009.16044 [minskim 2010-02-14]
 	Updated print/tex-luatex-doc to 0.2 [minskim 2010-02-14]
+	Updated textproc/tex-makeindex-doc to 2.12nb1 [minskim 2010-02-14]
