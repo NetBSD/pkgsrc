@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/01/06 18:36:14 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/14 20:26:35 joerg Exp $
 #
 
 DISTNAME=	quirc-0.9.84
@@ -9,6 +9,8 @@ MASTER_SITES=	http://quirc.org/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://quirc.org/
 COMMENT=	Stable and powerful graphical IRC client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
