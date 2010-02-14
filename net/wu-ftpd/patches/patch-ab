@@ -1,29 +1,53 @@
-$NetBSD: patch-ab,v 1.8 2000/07/08 16:52:05 rh Exp $
+$NetBSD: patch-ab,v 1.9 2010/02/14 21:36:20 joerg Exp $
 
---- Makefile.in.orig	Sat Jul  1 19:42:15 2000
-+++ Makefile.in	Sat Jul  8 18:41:53 2000
-@@ -67,11 +67,13 @@
+--- Makefile.in.orig	2000-07-01 17:42:15.000000000 +0000
++++ Makefile.in
+@@ -67,25 +67,28 @@ install: all
  	-@mkdir -p $(DESTDIR)/$(mandir)/man1
  	-@mkdir -p $(DESTDIR)/$(mandir)/man5
  	-@mkdir -p $(DESTDIR)/@ETCDIR@
 -	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpd $(DESTDIR)/@sbindir@/in.ftpd
+-	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpshut $(DESTDIR)/@sbindir@/ftpshut
+-	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpcount $(DESTDIR)/@bindir@/ftpcount
+-	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpwho $(DESTDIR)/@bindir@/ftpwho
+-	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ckconfig $(DESTDIR)/@sbindir@/ckconfig
+-	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftprestart $(DESTDIR)/@sbindir@/ftprestart
+-	@INSTALL_PROGRAM@ -o bin -g bin -m 755 util/privatepw/privatepw $(DESTDIR)/@sbindir@/privatepw
 +	-@mkdir -p $(DESTDIR)/@libexecdir@
 +	-@mkdir -p $(DESTDIR)/@datadir@/examples/wu-ftpd
-+	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpd $(DESTDIR)/@libexecdir@/ftpd
- 	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpshut $(DESTDIR)/@sbindir@/ftpshut
- 	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpcount $(DESTDIR)/@bindir@/ftpcount
- 	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftpwho $(DESTDIR)/@bindir@/ftpwho
--	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ckconfig $(DESTDIR)/@sbindir@/ckconfig
-+	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ckconfig $(DESTDIR)/@sbindir@/ftpckconfig
- 	@INSTALL_PROGRAM@ -o bin -g bin -m 755 bin/ftprestart $(DESTDIR)/@sbindir@/ftprestart
- 	@INSTALL_PROGRAM@ -o bin -g bin -m 755 util/privatepw/privatepw $(DESTDIR)/@sbindir@/privatepw
++	@INSTALL_PROGRAM@ bin/ftpd $(DESTDIR)/@libexecdir@/ftpd
++	@INSTALL_PROGRAM@ bin/ftpshut $(DESTDIR)/@sbindir@/ftpshut
++	@INSTALL_PROGRAM@ bin/ftpcount $(DESTDIR)/@bindir@/ftpcount
++	@INSTALL_PROGRAM@ bin/ftpwho $(DESTDIR)/@bindir@/ftpwho
++	@INSTALL_PROGRAM@ bin/ckconfig $(DESTDIR)/@sbindir@/ftpckconfig
++	@INSTALL_PROGRAM@ bin/ftprestart $(DESTDIR)/@sbindir@/ftprestart
++	@INSTALL_PROGRAM@ util/privatepw/privatepw $(DESTDIR)/@sbindir@/privatepw
  	@echo installing manpages.
-@@ -87,5 +89,6 @@
- 	@INSTALL_DATA@ -o bin -g bin -m 644 doc/xferlog.5 $(DESTDIR)/$(mandir)/man5/xferlog.5
- 	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftprestart.8 $(DESTDIR)/$(mandir)/man8/ftprestart.8
- 	@INSTALL_DATA@ -o bin -g bin -m 644 util/privatepw/privatepw.8 $(DESTDIR)/$(mandir)/man8/privatepw.8
+ 	-@mkdir -p $(mandir)
+-	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftpd.8 $(DESTDIR)/$(mandir)/man8/ftpd.8
+-	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftpcount.1 $(DESTDIR)/$(mandir)/man1/ftpcount.1
+-	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftpwho.1 $(DESTDIR)/$(mandir)/man1/ftpwho.1
+-	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftpshut.8 $(DESTDIR)/$(mandir)/man8/ftpshut.8
+-	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftpaccess.5 $(DESTDIR)/$(mandir)/man5/ftpaccess.5
+-	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftphosts.5 $(DESTDIR)/$(mandir)/man5/ftphosts.5
+-	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftpconversions.5 $(DESTDIR)/$(mandir)/man5/ftpconversions.5
+-	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftpservers.5 $(DESTDIR)/$(mandir)/man5/ftpservers.5
+-	@INSTALL_DATA@ -o bin -g bin -m 644 doc/xferlog.5 $(DESTDIR)/$(mandir)/man5/xferlog.5
+-	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftprestart.8 $(DESTDIR)/$(mandir)/man8/ftprestart.8
+-	@INSTALL_DATA@ -o bin -g bin -m 644 util/privatepw/privatepw.8 $(DESTDIR)/$(mandir)/man8/privatepw.8
 -	@if test ! -f $(DESTDIR)/@ETCDIR@/ftpaccess; then echo "Since you didn't have a ftpaccess file, the sample has been"; echo "installed to $(DESTDIR)/@ETCDIR@/ftpaccess."; echo "You will probably want to edit it."; @INSTALL@ -c -o bin -g bin -m 644 doc/examples/ftpaccess $(DESTDIR)/@ETCDIR@/ftpaccess; fi
 -	@if test ! -f $(DESTDIR)/@ETCDIR@/ftpconversions; then echo "Since you didn't have a ftpconversions file, the sample has been"; echo "installed to $(DESTDIR)/@ETCDIR@/ftpconversions."; echo "You will probably want to edit it."; @INSTALL@ -c -o bin -g bin -m 644 doc/examples/ftpconversions $(DESTDIR)/@ETCDIR@/ftpconversions; fi
-+	@INSTALL_DATA@ -c -o bin -g bin -m 644 doc/examples/ftpaccess $(DESTDIR)/@datadir@/examples/wu-ftpd/ftpaccess.example
-+	@INSTALL_DATA@ -c -o bin -g bin -m 644 doc/examples/ftpconversions $(DESTDIR)/@datadir@/examples/wu-ftpd/ftpconversions.example
-+	@INSTALL_DATA@ -c -o bin -g bin -m 644 doc/examples/ftpusers $(DESTDIR)/@datadir@/examples/wu-ftpd/ftpusers.example
++	@INSTALL_DATA@ doc/ftpd.8 $(DESTDIR)/$(mandir)/man8/ftpd.8
++	@INSTALL_DATA@ doc/ftpcount.1 $(DESTDIR)/$(mandir)/man1/ftpcount.1
++	@INSTALL_DATA@ doc/ftpwho.1 $(DESTDIR)/$(mandir)/man1/ftpwho.1
++	@INSTALL_DATA@ doc/ftpshut.8 $(DESTDIR)/$(mandir)/man8/ftpshut.8
++	@INSTALL_DATA@ doc/ftpaccess.5 $(DESTDIR)/$(mandir)/man5/ftpaccess.5
++	@INSTALL_DATA@ doc/ftphosts.5 $(DESTDIR)/$(mandir)/man5/ftphosts.5
++	@INSTALL_DATA@ doc/ftpconversions.5 $(DESTDIR)/$(mandir)/man5/ftpconversions.5
++	@INSTALL_DATA@ doc/ftpservers.5 $(DESTDIR)/$(mandir)/man5/ftpservers.5
++	@INSTALL_DATA@ doc/xferlog.5 $(DESTDIR)/$(mandir)/man5/xferlog.5
++	@INSTALL_DATA@ doc/ftprestart.8 $(DESTDIR)/$(mandir)/man8/ftprestart.8
++	@INSTALL_DATA@ util/privatepw/privatepw.8 $(DESTDIR)/$(mandir)/man8/privatepw.8
++	@INSTALL_DATA@ -c doc/examples/ftpaccess $(DESTDIR)/@datadir@/examples/wu-ftpd/ftpaccess.example
++	@INSTALL_DATA@ -c doc/examples/ftpconversions $(DESTDIR)/@datadir@/examples/wu-ftpd/ftpconversions.example
++	@INSTALL_DATA@ -c doc/examples/ftpusers $(DESTDIR)/@datadir@/examples/wu-ftpd/ftpusers.example
