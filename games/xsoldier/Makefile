@@ -1,14 +1,19 @@
-# $NetBSD: Makefile,v 1.20 2008/01/19 09:16:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/14 22:28:55 joerg Exp $
 #
 
 DISTNAME=		xsoldier-0.96
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.interq.or.jp/libra/oohara/xsoldier/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.interq.or.jp/libra/oohara/xsoldier/
 COMMENT=		Updated xgalaga type game with awesome graphics
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+SETGIDGAME=		yes
+SPECIAL_PERMS+=		bin/xsoldier ${SETGID_GAMES_PERMS}
 
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
