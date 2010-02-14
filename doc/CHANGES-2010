@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.709 2010/02/14 10:57:37 taca Exp $
+$NetBSD: CHANGES-2010,v 1.710 2010/02/14 12:24:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -846,3 +846,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/gtk2 to 2.18.7 [wiz 2010-02-14]
 	Updated net/clive to 2.2.9 [wiz 2010-02-14]
 	Updated security/f-prot-antivirus6-ms-bin to 6.0.1nb1 [taca 2010-02-14]
+	Updated www/typolight28-translations to 20100210 [taca 2010-02-14]
