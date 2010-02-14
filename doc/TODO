@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9020 2010/02/13 12:37:36 obache Exp $
+$NetBSD: TODO,v 1.9021 2010/02/14 09:46:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -596,7 +596,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fd-3.00d
 	o festival-1.96
 	o felt-3.07
-	o fetchmail-6.3.13
 	o fetchyahoo-2.13.8
 	o file-5.04
 	o fillets-ng-0.7.4
