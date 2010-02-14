@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:20 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/14 22:04:01 joerg Exp $
 #
 
 DISTNAME=	urban-1.5.3
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://urban.bengburken.net/eng/
 COMMENT=	U.R.B.A.N The Cyborg Project
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PTHREAD_AUTO_VARS=	yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -18,7 +20,7 @@ USE_TOOLS+=	pax
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 post-install:
-	cd ${WRKDIR} && pax -rwppm snd ${PREFIX}/share/urban
+	cd ${WRKDIR} && pax -rwppm snd ${DESTDIR}${PREFIX}/share/urban
 
 .include "../../audio/libmikmod/buildlink3.mk"
 .include "../../graphics/libggi/buildlink3.mk"
