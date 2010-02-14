@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/06/23 01:36:56 taca Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/14 12:45:27 taca Exp $
 
---- Rakefile.orig	2008-06-22 13:27:50.000000000 +0900
+--- Rakefile.orig	2009-12-17 01:35:34.000000000 +0000
 +++ Rakefile
 @@ -18,7 +18,7 @@ base_dir_included_components = %w(CHANGE
                                    README Rakefile TODO)
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/06/23 01:36:56 taca Exp $
 +excluded_suffixes = %w(.help .sqlite3 .orig)
  white_list_paths =
    [
-    "rails/plugin/active_ldap/generators/scaffold_al/templates/ldap.yml"
+    "rails/plugin/active_ldap/generators/scaffold_al/templates/ldap.yml",
