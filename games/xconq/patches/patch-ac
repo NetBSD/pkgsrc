@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2007/04/16 18:47:19 joerg Exp $
+$NetBSD: patch-ac,v 1.8 2010/02/14 08:17:12 dholland Exp $
 
---- x11/Makefile.in.orig	Mon Jun 19 17:36:18 2000
+--- x11/Makefile.in.orig	2000-08-22 12:52:56.000000000 +0000
 +++ x11/Makefile.in
-@@ -25,10 +25,10 @@
+@@ -25,10 +25,10 @@ VPATH = @srcdir@
  krnsrcdir = $(srcdir)/../kernel
  
  GAMEUID = games
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.7 2007/04/16 18:47:19 joerg Exp $
  FILEPERM = 0644
  
  SHELL = /bin/sh
-@@ -49,7 +49,7 @@
+@@ -49,7 +49,7 @@ XAW_LIB = -lXaw -lXt $(X11_LIB) -lXext -
  
  #TCLTK_LIB = -ltk -ltcl -ldl -lm
  #TCLTK_LIB = ../tcl/unix/libtcl8.0.a ../tk/unix/libtk8.0.a -ldl -lm
@@ -25,7 +25,7 @@ $NetBSD: patch-ac,v 1.7 2007/04/16 18:47:19 joerg Exp $
  
  # Extra flags that the TCLTK files need:
  TCLTK_CFLAGS = $(TCL_CFLAGS) $(TK_CFLAGS)
-@@ -65,14 +65,14 @@
+@@ -65,14 +65,14 @@ LIB_INSTALL_DIR = $(libdir)
  # This variable is needed when doing dynamic linking.
  LIB_RUNTIME_DIR = $(libdir)
  TCL = @TCL_LD_SEARCH_FLAGS@ @TCL_LIB_SPEC@
@@ -42,7 +42,7 @@ $NetBSD: patch-ac,v 1.7 2007/04/16 18:47:19 joerg Exp $
  TK_DEPS =
  
  X11_CFLAGS = @TK_XINCLUDES@
-@@ -81,7 +81,7 @@
+@@ -81,7 +81,7 @@ X11_LIBS =
  
  GUI_CFLAGS_X = @GUI_CFLAGS_X@
  
@@ -51,7 +51,7 @@ $NetBSD: patch-ac,v 1.7 2007/04/16 18:47:19 joerg Exp $
  
  # Override this to disable SelFile calls.
  
-@@ -173,7 +173,7 @@
+@@ -154,7 +154,7 @@ HFLAGS = @HFLAGS@
  
  X11_INCLUDE_FLAGS = @XINCLUDES@
  
@@ -60,3 +60,35 @@ $NetBSD: patch-ac,v 1.7 2007/04/16 18:47:19 joerg Exp $
  
  .c.o:
  	$(CC) -c $(ALL_CFLAGS) $<
+@@ -209,20 +209,20 @@ install: all install-only
+ 
+ install-only:
+ 	srcroot=`cd $(srcroot); pwd`; export srcroot; \
+-	$(INSTALL_PROGRAM) xconq $(bindir); \
+-	chown $(GAMEUID) $(bindir)/xconq; \
+-	chgrp $(GAMEGRP) $(bindir)/xconq; \
+-	chmod $(GAMEPERM) $(bindir)/xconq; \
+-	$(INSTALL_PROGRAM) imf2x $(bindir); \
+-	$(INSTALL_PROGRAM) x2imf $(bindir); \
+-	$(INSTALL_PROGRAM) ximfapp $(bindir); \
+-	$(INSTALL_DATA) xconq.6 $(man6dir)
++	$(INSTALL_PROGRAM) xconq $(DESTDIR)$(bindir); \
++	#chown $(GAMEUID) $(DESTDIR)$(bindir)/xconq; \
++	#chgrp $(GAMEGRP) $(DESTDIR)$(bindir)/xconq; \
++	#chmod $(GAMEPERM) $(DESTDIR)$(bindir)/xconq; \
++	$(INSTALL_PROGRAM) imf2x $(DESTDIR)$(bindir); \
++	$(INSTALL_PROGRAM) x2imf $(DESTDIR)$(bindir); \
++	$(INSTALL_PROGRAM) ximfapp $(DESTDIR)$(bindir); \
++	$(INSTALL_DATA) xconq.6 $(DESTDIR)$(man6dir)
+ 
+ install-xshowimf:
+ 	srcroot=`cd $(srcroot); pwd`; export srcroot; \
+-	$(INSTALL_PROGRAM) xshowimf $(bindir); \
+-	$(INSTALL_DATA) XShowimf $(appdefaultsdir); \
+-	$(INSTALL_DATA) XShowimf-color $(appdefaultsdir); \
++	$(INSTALL_PROGRAM) xshowimf $(DESTDIR)$(bindir); \
++	$(INSTALL_DATA) XShowimf $(DESTDIR)$(appdefaultsdir); \
++	$(INSTALL_DATA) XShowimf-color $(DESTDIR)$(appdefaultsdir); \
+ 
+ # Cleanliness support.
+ 
