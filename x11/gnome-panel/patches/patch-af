@@ -1,0 +1,31 @@
+$NetBSD: patch-af,v 1.6 2010/02/14 11:12:21 drochner Exp $
+
+--- po/it.po.orig	2009-09-08 00:08:42.000000000 +0000
++++ po/it.po
+@@ -93,7 +93,7 @@ msgstr "%l.%M %p"
+ #: ../applets/clock/calendar-window.c:307 ../applets/clock/clock.c:450
+ #: ../applets/clock/clock.c:1574 ../applets/clock/clock-location-tile.c:480
+ msgid "%H:%M"
+-msgstr "%-H.%M"
++msgstr "%H.%M"
+ 
+ #. Translators: If the event did not start on the current day
+ #. * we will display the start date in the most abbreviated way
+@@ -145,7 +145,7 @@ msgstr "%l.%M.%S %p"
+ # creava problemi in nautilus preferisco %-H
+ #: ../applets/clock/clock.c:450 ../applets/clock/clock.c:1572
+ msgid "%H:%M:%S"
+-msgstr "%-H.%M.%S"
++msgstr "%H.%M.%S"
+ 
+ #. translators: replace %e with %d if, when the day of the
+ #. *              month as a decimal number is a single digit, it
+@@ -677,7 +677,7 @@ msgstr "%l.%M <small>%p (%A)</small>"
+ #.
+ #: ../applets/clock/clock-location-tile.c:462
+ msgid "%H:%M <small>(%A)</small>"
+-msgstr "%-H.%M <small>(%A)</small>"
++msgstr "%H.%M <small>(%A)</small>"
+ 
+ #. translators: This is a strftime format string that is used for formatting
+ #. * the time that is displayed for locations in the popup. This string is used
