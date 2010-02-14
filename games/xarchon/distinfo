@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2006/08/03 01:00:00 kristerw Exp $
+$NetBSD: distinfo,v 1.11 2010/02/14 21:36:26 joerg Exp $
 
 SHA1 (xarchon-0.60.tar.gz) = e68f79a712a8bff5ca18e5011d1582f7e5196f49
 RMD160 (xarchon-0.60.tar.gz) = fdaa7556ee980b004efe4aaae59618fddba8a10b
@@ -19,3 +19,4 @@ SHA1 (patch-am) = 619b7e66a072666c499abfde09fe707cd7d06d3f
 SHA1 (patch-an) = f0be4b2d99512c0130c4d1be7bfb99eb6923ff19
 SHA1 (patch-ao) = b472cace00aa8ee151fb9e37ec79b40e2574ea88
 SHA1 (patch-ap) = 524ef2d48a6c02f7052199a92c0ece690cb7a51f
+SHA1 (patch-aq) = 4612462f01687078255300e6a63c4ee96b34893b

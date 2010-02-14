@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1 2010/02/14 21:36:26 joerg Exp $
+
+--- data/Makefile.in.orig	2010-02-14 21:29:09.000000000 +0000
++++ data/Makefile.in
+@@ -248,8 +248,8 @@ install-data-hook:
+ 	   echo "--> Installing theme '$$theme'"; \
+ 	   THEME_DIRS=`find $$theme -type d`; \
+ 	   for p in $$THEME_DIRS; do \
+-	      echo "mkdir $(pkgdatadir)/$$p"; \
+-	      mkdir $(pkgdatadir)/$$p; \
++	      echo "mkdir ${DESTDIR}$(pkgdatadir)/$$p"; \
++	      mkdir ${DESTDIR}$(pkgdatadir)/$$p; \
+ 	   done; \
+ 	   THEME_FILES=`find $$theme -type f`; \
+ 	   for p in $$THEME_FILES; do \
