@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.10 2007/04/16 18:47:19 joerg Exp $
+$NetBSD: distinfo,v 1.11 2010/02/14 08:17:11 dholland Exp $
 
 SHA1 (xconq-7.4.1.tar.gz) = b7d03d17806500f05c23889a00b7608843a27ce7
 RMD160 (xconq-7.4.1.tar.gz) = e596eaccb6a48709e9ceb58fc59e715e36dbf43a
 Size (xconq-7.4.1.tar.gz) = 3402832 bytes
-SHA1 (patch-aa) = 71ca2de62949a33068d145fd8d41246bf97a889d
-SHA1 (patch-ab) = 8c7c69b453d128f9a1bf816b8946bd39b090f86e
-SHA1 (patch-ac) = 97fbb844a3142d648ba24a7dca0487dbc5fd0a83
+SHA1 (patch-aa) = 8b594e6003e3a5b271900f77edf0c62ea364f5e3
+SHA1 (patch-ab) = 14fbedcc58e8593374972a570e18dd6acc852e1c
+SHA1 (patch-ac) = b71d639b3746bd0cb29892ed70df207a8d047403
 SHA1 (patch-ad) = 2e20bd999e935eaccd2c569ca6712ff28187c244
 SHA1 (patch-ae) = fc440492eac9aa6feafb31dc6ba6bfceeb5408a4
 SHA1 (patch-af) = 420a6702dd189058873da4a5353ebad020bec018
@@ -14,3 +14,6 @@ SHA1 (patch-ah) = 56ed616d61b2029bbf1dcd9a9fb1b89793761c5c
 SHA1 (patch-ai) = 10d285f9693f79f8591f1f24baf8916f0973b9a1
 SHA1 (patch-aj) = 89d6d7e50c776ef2628897a081da7b9f61cddc4d
 SHA1 (patch-ak) = c8ed8ac403cd9dc1fc1c6befdd175f1e3f4d4ddb
+SHA1 (patch-al) = ffe9cd40b051d96e8144aad865a074c002406c2d
+SHA1 (patch-am) = 9b070c53ef7b7bc0710fdca8e3dfaf9105cec22c
+SHA1 (patch-an) = 2f8766a947d8fc13a9447df0ec8f20acc2cf347f
