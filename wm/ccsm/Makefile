@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/02/10 19:17:47 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/14 18:15:31 joerg Exp $
 #
 
 PKGVER=			0.8.4
@@ -22,7 +22,7 @@ REPLACE_PYTHON=		${WRKSRC}/setup.py ${WRKSRC}/ccm/*.py
 
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
 
-PYTHON_VERSIONS_ACCEPTED=	25
+PYTHON_VERSIONS_ACCEPTED=	26 25
 
 DEPENDS+=	compizconfig-backend-gconf>=0.6.0:../../devel/compizconfig-backend-gconf
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
