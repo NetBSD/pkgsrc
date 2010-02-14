@@ -1,0 +1,85 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/14 00:06:16 reed Exp $
+
+--- Makefile.orig	2002-02-19 23:51:44.000000000 +0200
++++ Makefile
+@@ -1,12 +1,14 @@
+-ASFLAGS= -mips2
+-CC= cc
+-AR= ar
+-INSTALL= install
+-MV= mv
+-CHMOD= chmod
+-CFLAGS= -g
+-LIB_INSTALL_DIR= /usr/lib
+-MAN_INSTALL_DIR= /usr/man/man3
++#ASFLAGS= -mips2
++#CC= cc
++#AR= ar
++#INSTALL= install
++#MV= mv
++#CHMOD= chmod
++#CFLAGS= -g
++LIB_INSTALL_DIR=	${PREFIX}/lib
++MAN_INSTALL_DIR=	${PREFIX}/${PKGMANDIR}/man3
++SO_VER=			0:0
++LIBTOOL=		libtool
+ 
+ PACKAGE_SOURCE= README libefence.3 Makefile efence.h \
+ 	efence.c page.c print.c eftest.c tstheap.c CHANGES COPYING
+@@ -26,9 +28,9 @@ PACKAGE_SOURCE= README libefence.3 Makef
+ # as well if using Sun's compiler, -static if using GCC.
+ # CFLAGS= -g -Bstatic -DPAGE_PROTECTION_VIOLATED_SIGNAL=SIGBUS
+ 
+-OBJECTS= efence.o page.o print.o
++OBJECTS= efence.lo page.lo print.lo
+ 
+-all:	libefence.a tstheap eftest
++all:	libefence.la tstheap eftest
+ 	@ echo
+ 	@ echo "Testing Electric Fence."
+ 	@ echo "After the last test, it should print that the test has PASSED."
+@@ -38,11 +40,9 @@ all:	libefence.a tstheap eftest
+ 	@ echo "Electric Fence confidence test PASSED." 
+ 	@ echo
+ 
+-install: libefence.a libefence.3
+-	$(MV) libefence.a $(LIB_INSTALL_DIR)
+-	$(CHMOD) 644 $(LIB_INSTALL_DIR)/libefence.a
+-	$(INSTALL) libefence.3 $(MAN_INSTALL_DIR)/libefence.3
+-	$(CHMOD) 644 $(MAN_INSTALL_DIR)/libefence.3
++install: libefence.la libefence.3
++	$(LIBTOOL) --mode=install $(INSTALL) -c libefence.la $(DESTDIR)${LIB_INSTALL_DIR}
++	$(INSTALL_MAN) libefence.3 ${DESTDIR}$(MAN_INSTALL_DIR)/libefence.3
+ 
+ clean:
+ 	- rm -f $(OBJECTS) tstheap.o eftest.o tstheap eftest libefence.a \
+@@ -57,16 +57,22 @@ ElectricFence.shar: $(PACKAGE_SOURCE)
+ 
+ shar: ElectricFence.shar
+ 
+-libefence.a: $(OBJECTS)
+-	- rm -f libefence.a
+-	$(AR) crv libefence.a $(OBJECTS)
++libefence.la: $(OBJECTS)
++	$(LIBTOOL) --tag=CC --mode=link ${CC} -o libefence.la \
++		${OBJECTS} ${LDFLAGS} ${LIBS} \
++		-rpath ${LIB_INSTALL_DIR} -version-info ${SO_VER}
+ 
+-tstheap: libefence.a tstheap.o
++tstheap: libefence.la tstheap.o
+ 	- rm -f tstheap
+-	$(CC) $(CFLAGS) tstheap.o libefence.a -o tstheap -lpthread
++	$(CC) $(CFLAGS) tstheap.o .libs/libefence.a -o tstheap -lpthread
+ 
+-eftest: libefence.a eftest.o
++eftest: libefence.la eftest.o
+ 	- rm -f eftest
+-	$(CC) $(CFLAGS) eftest.o libefence.a -o eftest -lpthread
++	$(CC) $(CFLAGS) eftest.o .libs/libefence.a -o eftest -lpthread
+ 
+ $(OBJECTS) tstheap.o eftest.o: efence.h
++
++.SUFFIXES: .lo
++.c.lo:
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) -o ${.TARGET} \
++		-c ${CPPFLAGS} ${CFLAGS} ${.IMPSRC}
