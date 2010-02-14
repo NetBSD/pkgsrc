@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.712 2010/02/14 12:47:32 taca Exp $
+$NetBSD: CHANGES-2010,v 1.713 2010/02/14 13:28:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -850,3 +850,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/ruby-odbc to 0.9998 [taca 2010-02-14]
 	Updated chat/ruby-net-irc to 0.0.9 [taca 2010-02-14]
 	Updated databases/ruby-activeldap to 1.2.1 [taca 2010-02-14]
+	Updated www/squid27 to 2.7.7nb3 [taca 2010-02-14]
