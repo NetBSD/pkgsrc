@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.706 2010/02/14 09:46:27 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.707 2010/02/14 09:58:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -843,3 +843,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/dbmail to 2.2.15 [obache 2010-02-14]
 	Updated pkgtools/gnome-packagekit to 0.4.0nb2 [obache 2010-02-14]
 	Updated mail/fetchmail to 6.3.14 [wiz 2010-02-14]
+	Updated x11/gtk2 to 2.18.7 [wiz 2010-02-14]
