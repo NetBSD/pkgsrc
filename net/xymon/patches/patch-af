@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/02/14 22:58:58 spz Exp $
+
+--- ./hobbitd/etcfiles/hobbitlaunch.cfg.DIST.orig	2008-11-27 13:12:12.000000000 +0000
++++ ./hobbitd/etcfiles/hobbitlaunch.cfg.DIST
+@@ -198,7 +198,8 @@
+ # Note: If you are using another client package, you should disable this one.
+ 
+ [hobbitclient]
+-	ENVFILE @BBTOPDIR@/client/etc/hobbitclient.cfg
++	DISABLED
++	ENVFILE @BBHOME@/client/etc/hobbitclient.cfg
+ 	NEEDS hobbitd
+ 	CMD @BBTOPDIR@/client/bin/hobbitclient.sh
+ 	LOGFILE $BBSERVERLOGS/hobbitclient.log
