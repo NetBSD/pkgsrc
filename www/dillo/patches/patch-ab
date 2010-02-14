@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.15 2009/07/09 05:04:03 snj Exp $
+$NetBSD: patch-ab,v 1.16 2010/02/14 20:19:25 snj Exp $
 
---- Makefile.in.orig	2009-07-01 10:56:55.000000000 -0700
-+++ Makefile.in	2009-07-08 15:30:55.000000000 -0700
-@@ -194,7 +194,7 @@ target_os = @target_os@
- target_vendor = @target_vendor@
+--- Makefile.in.orig	2010-02-11 02:20:01.000000000 -0800
++++ Makefile.in	2010-02-14 09:56:36.000000000 -0800
+@@ -244,7 +244,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
  SUBDIRS = lout dw dlib dpip src doc dpid dpi test
  EXTRA_DIST = Doxyfile dillorc install-dpi-local
 -sysconf_DATA = dillorc
