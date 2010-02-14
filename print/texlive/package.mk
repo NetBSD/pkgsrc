@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.5 2010/01/29 04:12:41 minskim Exp $
+# $NetBSD: package.mk,v 1.6 2010/02/14 22:13:19 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live packages.
@@ -76,6 +76,7 @@ _texlive-set-permission:
 
 _texlive-info:
 	if [ -d ${WRKSRC}/texmf/doc/info ]; then \
+		${RM} -f ${WRKSRC}/texmf/doc/info/dir; \
 		${MKDIR} ${WRKSRC}/info; \
 		${MV} ${WRKSRC}/texmf/doc/info/* ${WRKSRC}/info; \
 		${RMDIR} -p ${WRKSRC}/texmf/doc/info || ${TRUE}; \
