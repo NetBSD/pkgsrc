@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2010/01/30 19:44:51 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/14 19:16:25 joerg Exp $
 
 --- src/Makefile.in.orig	2010-01-30 19:40:05.000000000 +0000
 +++ src/Makefile.in
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.1 2010/01/30 19:44:51 joerg Exp $
  install:
 -	$(OCAMLFIND) install $(OCAMLFIND_INSTFLAGS) $(RESULT) META $(LIBINSTALL_FILES)
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}`ocamlc -where`/site-lib
-+	$(OCAMLFIND) install -destdir ${DESTDIR}`ocamlc -where`/site-lib $(OCAMLFIND_INSTFLAGS) $(RESULT) META $(LIBINSTALL_FILES)
++	$(OCAMLFIND) install -ldconf /dev/null -destdir ${DESTDIR}`ocamlc -where`/site-lib $(OCAMLFIND_INSTFLAGS) $(RESULT) META $(LIBINSTALL_FILES)
  
  uninstall:
  	$(OCAMLFIND) remove $(OCAMLFIND_INSTFLAGS) $(RESULT)
