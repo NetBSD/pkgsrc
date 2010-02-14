@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2001/06/15 23:04:52 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2010/02/14 22:21:42 joerg Exp $
 
 --- Makefile.orig	Sun Jul 12 00:27:32 1998
 +++ Makefile	Tue Aug 11 00:14:31 1998
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.2 2001/06/15 23:04:52 wiz Exp $
  
  # definition for where to install xzip executable and man page
 -DESTDIR = /usr/local
-+DESTDIR = $(PREFIX)
++#DESTDIR = $(PREFIX)
  
  # --------------------
  
@@ -42,8 +42,8 @@ $NetBSD: patch-aa,v 1.2 2001/06/15 23:04:52 wiz Exp $
  install: $(PROGRAM)
 -	install -s $(PROGRAM) $(DESTDIR)/bin
 -	install $(PROGRAM).1 $(DESTDIR)/man/man1
-+	${BSD_INSTALL_PROGRAM} $(PROGRAM) $(DESTDIR)/bin
-+	${BSD_INSTALL_MAN} $(PROGRAM).1 $(DESTDIR)/man/man6/$(PROGRAM).6
++	${BSD_INSTALL_PROGRAM} $(PROGRAM) $(DESTDIR)${PREFIX}/bin
++	${BSD_INSTALL_MAN} $(PROGRAM).1 $(DESTDIR)${PREFIX}/${PKGMANDIR}/man6/$(PROGRAM).6
  
  clean :
  	-rm -f *~ *.o $(PROGRAM) test
