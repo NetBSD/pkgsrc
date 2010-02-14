@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/06/05 16:02:51 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/14 21:08:23 joerg Exp $
 
 DISTNAME=	Sjeng-Free-11.0
 PKGNAME=	sjeng-11.0
@@ -10,6 +10,8 @@ MASTER_SITES=	http://sjeng.sourceforge.net/ftp/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sjeng.org/
 COMMENT=	Engine for chess variations (bughouse, suicide, etc.)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
@@ -36,14 +38,13 @@ post-build:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
+INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR} ${BOOKDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 	${CAT} ${WRKSRC}/sjeng.rc | ${TR} -d "\015" > ${WRKDIR}/sample.sjengrc
-	${INSTALL_DATA} ${WRKDIR}/sample.sjengrc ${EGDIR}
-	${INSTALL_DATA_DIR} ${BOOKDIR}
-	${INSTALL_DATA} ${WRKSRC}/books/*.opn ${BOOKDIR}
+	${INSTALL_DATA} ${WRKDIR}/sample.sjengrc ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/books/*.opn ${DESTDIR}${BOOKDIR}
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
