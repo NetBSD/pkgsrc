@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2010/02/14 06:28:07 dholland Exp $
+$NetBSD: patch-ab,v 1.2 2010/02/14 21:30:51 dholland Exp $
+
+Patch out illegal C constructs.
 
 --- ../gcc-3.1/gcc/cp/decl.c~	2002-05-03 18:55:23.000000000 +0000
 +++ ../gcc-3.1/gcc/cp/decl.c
