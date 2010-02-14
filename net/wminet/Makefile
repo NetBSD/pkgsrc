@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/02/11 23:13:17 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2010/02/14 19:25:24 joerg Exp $
 
 DISTNAME=	wmnet-1.2
 PKGNAME=	wminet-1.2
@@ -20,7 +20,7 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wminet ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/wminet.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/wmnet.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/wminet.1
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
