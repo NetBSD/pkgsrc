@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.702 2010/02/13 11:58:28 obache Exp $
+$NetBSD: CHANGES-2010,v 1.703 2010/02/14 00:09:50 reed Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -839,3 +839,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/gmp to 5.0.1 [asau 2010-02-13]
 	Updated devel/gmp to 5.0.1 [asau 2010-02-13]
 	Updated x11/xf86-input-vmmouse to 12.6.6 [obache 2010-02-13]
+	Renamed devel/electricfence to devel/electric-fence [reed 2010-02-13]
