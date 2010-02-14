@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.720 2010/02/14 22:30:11 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.721 2010/02/14 23:05:53 spz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -859,3 +859,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-kpathsea-doc version 2009.16044 [minskim 2010-02-14]
 	Updated print/tex-luatex-doc to 0.2 [minskim 2010-02-14]
 	Updated textproc/tex-makeindex-doc to 2.12nb1 [minskim 2010-02-14]
+	Added net/xymonclient version 4.3.0b2 [spz 2010-02-14]
+	Added net/xymon	version 4.3.0b2 [spz 2010-02-14]
