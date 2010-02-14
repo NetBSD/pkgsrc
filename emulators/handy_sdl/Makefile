@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/31 21:25:05 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/14 18:42:53 joerg Exp $
 #
 
 DISTNAME=	handy_sdl-0.5-src
@@ -18,6 +18,9 @@ MAKE_FILE=	Makefile-0.95
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin share/doc/handy_sdl
+
+post-extract:
+	${CHMOD} -R a+X ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/handy_sdl ${DESTDIR}${PREFIX}/bin
