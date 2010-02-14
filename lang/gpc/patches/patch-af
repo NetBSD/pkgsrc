@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2003/02/17 18:47:25 jtb Exp $
+$NetBSD: patch-af,v 1.2 2010/02/14 06:58:25 dholland Exp $
 
---- ../gcc-2.95.3/gcc/p/Make-lang.in.orig	Fri Jan 17 21:44:39 2003
-+++ ../gcc-2.95.3/gcc/p/Make-lang.in	Fri Jan 17 21:46:16 2003
+--- ../gcc-2.95.3/gcc/p/Make-lang.in.orig	2002-05-09 13:50:30.000000000 -0400
++++ ../gcc-2.95.3/gcc/p/Make-lang.in	2010-02-14 01:24:23.000000000 -0500
 @@ -44,9 +44,9 @@
  # - define the names for selecting the language in LANGUAGES.
  
@@ -14,7 +14,7 @@ $NetBSD: patch-af,v 1.1.1.1 2003/02/17 18:47:25 jtb Exp $
  
  RTSSRCDIR=$(srcdir)/p/rts
  
-@@ -78,8 +78,8 @@
+@@ -78,8 +78,8 @@ GPC_EXTRA_INSTALL_LIBS=
  PASCAL_INSTALL_DOC=pascal.real-install-doc
  
  # Where to install the documentation and demos (relative to the prefix)
@@ -25,13 +25,273 @@ $NetBSD: patch-af,v 1.1.1.1 2003/02/17 18:47:25 jtb Exp $
  demodir=$(docdir)/demos
  docdemodir=$(docdir)/docdemos
  
-@@ -677,8 +677,7 @@
- 	  chmod a+x $(bindir)/$(GPC_INSTALL_NAME)$(exeext); \
+@@ -651,72 +651,71 @@ man1dir=$(mandir)/$(GPC_GCC_VERSION_MAN1
+ 
+ pascal.install-info-man-dirs:
+ 	for directory in $(infodir) $(man1dir); do \
+-	  $(srcdir)/p/script/mkdir-p -m a+rx $$directory || exit 1; \
++	  $(srcdir)/p/script/mkdir-p -m a+rx $(DESTDIR)$$directory || exit 1; \
+ 	done
+ 
+ pascal.install-dir:
+ 	for directory in $(prefix) $(bindir) $(unitsubdir) $(libsubdir)/include \
+ 	                 $(infodir) $(docdir) $(demodir) $(docdemodir) $(man1dir); do \
+-	  $(srcdir)/p/script/mkdir-p -m a+rx $$directory || exit 1; \
++	  $(srcdir)/p/script/mkdir-p -m a+rx $(DESTDIR)$$directory || exit 1; \
+ 	done
+ 
+ install-gpcpp: pascal.install-dir gpcpp$(exeext)
+-	rm -f $(libsubdir)/gpcpp$(exeext)
+-	$(INSTALL_PROGRAM) gpcpp$(exeext) $(libsubdir)/gpcpp$(exeext)
++	rm -f $(DESTDIR)$(libsubdir)/gpcpp$(exeext)
++	$(INSTALL_PROGRAM) gpcpp$(exeext) $(DESTDIR)$(libsubdir)/gpcpp$(exeext)
+ 
+ # Install the driver program as $(target)-gpc
+ # and also as either gpc (if native) or $(tooldir)/bin/gpc.
+ pascal.install-common: pascal.install-dir
+ 	if [ -f gpc-cross$(exeext) ]; then \
+-	  rm -f $(bindir)/$(GPC_CROSS_NAME)$(exeext); \
+-	  $(INSTALL_PROGRAM) gpc-cross$(exeext) $(bindir)/$(GPC_CROSS_NAME)$(exeext) && \
+-	  chmod a+x $(bindir)/$(GPC_CROSS_NAME)$(exeext); \
++	  rm -f $(DESTDIR)$(bindir)/$(GPC_CROSS_NAME)$(exeext); \
++	  $(INSTALL_PROGRAM) gpc-cross$(exeext) $(DESTDIR)$(bindir)/$(GPC_CROSS_NAME)$(exeext) && \
++	  chmod a+x $(DESTDIR)$(bindir)/$(GPC_CROSS_NAME)$(exeext); \
+ 	else \
+-	  rm -f $(bindir)/$(GPC_INSTALL_NAME)$(exeext); \
+-	  $(INSTALL_PROGRAM) xgpc$(exeext) $(bindir)/$(GPC_INSTALL_NAME)$(exeext) && \
+-	  chmod a+x $(bindir)/$(GPC_INSTALL_NAME)$(exeext); \
++	  rm -f $(DESTDIR)$(bindir)/$(GPC_INSTALL_NAME)$(exeext); \
++	  $(INSTALL_PROGRAM) xgpc$(exeext) $(DESTDIR)$(bindir)/$(GPC_INSTALL_NAME)$(exeext) && \
++	  chmod a+x $(DESTDIR)$(bindir)/$(GPC_INSTALL_NAME)$(exeext); \
  	fi
- 	rm -f $(bindir)/gpc-run
+-	rm -f $(bindir)/gpc-run
 -	$(INSTALL_PROGRAM) $(srcdir)/p/script/gpc-run $(bindir)/gpc-run
 -	chmod a+x $(bindir)/gpc-run
-+	$(BSD_INSTALL_SCRIPT) $(srcdir)/p/script/gpc-run $(bindir)/gpc-run
++	rm -f $(DESTDIR)$(bindir)/gpc-run
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/p/script/gpc-run $(DESTDIR)$(bindir)/gpc-run
  
  pascal.install-lib: pascal.install-dir pascal.rts
  	if [ -f libgpc.a ]; then \
+-	  rm -f $(libsubdir)/libgpc.a; \
++	  rm -f $(DESTDIR)$(libsubdir)/libgpc.a; \
+ 	  if $(RANLIB_TEST_FOR_TARGET); then \
+ 	    $(RANLIB_FOR_TARGET) libgpc.a || exit 1; \
+ 	  fi; \
+-	  $(INSTALL_DATA) libgpc.a $(libsubdir)/libgpc.a && \
+-	  chmod a-x $(libsubdir)/libgpc.a || exit 1; \
++	  $(INSTALL_DATA) libgpc.a $(DESTDIR)$(libsubdir)/libgpc.a && \
++	  chmod a-x $(DESTDIR)$(libsubdir)/libgpc.a || exit 1; \
+ 	fi
+ 	for f in .. $(GPC_EXTRA_INSTALL_LIBS); do \
+ 	  if [ x"$$f" != x.. ]; then \
+-	    $(INSTALL_DATA) "$$f" "$(libsubdir)/`echo "$$f" | sed -e 's,.*/,,'`" || exit 1; \
++	    $(INSTALL_DATA) "$$f" $(DESTDIR)"$(libsubdir)/`echo "$$f" | sed -e 's,.*/,,'`" || exit 1; \
+ 	  fi; \
+ 	done
+ 	if [ x$(WITH_SHARED) = xyes ] && [ -f $(GPCSOLIBNAME) ]; then \
+-	  $(srcdir)/p/script/mkdir-p -m a+rx $(prefix)/$(GPCSOLIBDIR) && \
+-	  rm -f $(libsubdir)/$(GPCSOLIBSHORTNAME) $(prefix)/$(GPCSOLIBDIR)/$(GPCSOLIBNAME); \
+-	  $(INSTALL_DATA) $(GPCSOLIBNAME) $(prefix)/$(GPCSOLIBDIR)/$(GPCSOLIBNAME) && \
+-	  chmod a-x $(prefix)/$(GPCSOLIBDIR)/$(GPCSOLIBNAME) && \
+-	  $(SYMLINK) $(real_prefix)/$(GPCSOLIBDIR)/$(GPCSOLIBNAME) $(libsubdir)/$(GPCSOLIBSHORTNAME); \
++	  $(srcdir)/p/script/mkdir-p -m a+rx $(DESTDIR)$(prefix)/$(GPCSOLIBDIR) && \
++	  rm -f $(libsubdir)/$(GPCSOLIBSHORTNAME) $(DESTDIR)$(prefix)/$(GPCSOLIBDIR)/$(GPCSOLIBNAME); \
++	  $(INSTALL_DATA) $(GPCSOLIBNAME) $(DESTDIR)$(prefix)/$(GPCSOLIBDIR)/$(GPCSOLIBNAME) && \
++	  chmod a-x $(DESTDIR)$(prefix)/$(GPCSOLIBDIR)/$(GPCSOLIBNAME) && \
++	  $(SYMLINK) $(real_prefix)/$(GPCSOLIBDIR)/$(GPCSOLIBNAME) $(DESTDIR)$(libsubdir)/$(GPCSOLIBSHORTNAME); \
+ 	else \
+ 	  true; \
+ 	fi
+ 
+ pascal.install-units: pascal.install-dir $(srcdir)/p/units/crtc.h $(RTSSRCDIR)/gpc.pas
+-	$(INSTALL_DATA) p/rts/rts-config.inc $(unitsubdir)/rts-config.inc
+-	$(INSTALL_DATA) $(RTSSRCDIR)/gpc.pas $(unitsubdir)/gpc.pas
+-	chmod a-x $(unitsubdir)/rts-config.inc $(unitsubdir)/gpc.pas
++	$(INSTALL_DATA) p/rts/rts-config.inc $(DESTDIR)$(unitsubdir)/rts-config.inc
++	$(INSTALL_DATA) $(RTSSRCDIR)/gpc.pas $(DESTDIR)$(unitsubdir)/gpc.pas
++	chmod a-x $(DESTDIR)$(unitsubdir)/rts-config.inc $(DESTDIR)$(unitsubdir)/gpc.pas
+ 	for f in `cd $(srcdir)/p/units && echo *`; do \
+ 	  if [ $$f = gpc-in-c.h ]; then \
+-	    rm -f $(libsubdir)/include/$$f; \
+-	    $(INSTALL_DATA) $(srcdir)/p/units/$$f $(libsubdir)/include/$$f || exit 1; \
+-	    chmod a-x $(libsubdir)/include/$$f; \
++	    rm -f $(DESTDIR)$(libsubdir)/include/$$f; \
++	    $(INSTALL_DATA) $(srcdir)/p/units/$$f $(DESTDIR)$(libsubdir)/include/$$f || exit 1; \
++	    chmod a-x $(DESTDIR)$(libsubdir)/include/$$f; \
+ 	  elif [ $$f != CVS ]; then \
+-	    rm -f $(unitsubdir)/$$f; \
+-	    $(INSTALL_DATA) $(srcdir)/p/units/$$f $(unitsubdir)/$$f || exit 1; \
+-	    chmod a-x $(unitsubdir)/$$f; \
++	    rm -f $(DESTDIR)$(unitsubdir)/$$f; \
++	    $(INSTALL_DATA) $(srcdir)/p/units/$$f $(DESTDIR)$(unitsubdir)/$$f || exit 1; \
++	    chmod a-x $(DESTDIR)$(unitsubdir)/$$f; \
+ 	  fi; \
+ 	done
+ 
+@@ -728,45 +727,45 @@ pascal.real-install-doc: pascal.install-
+  $(srcdir)/p/NEWS $(srcdir)/p/FAQ $(srcdir)/p/AUTHORS \
+  $(srcdir)/p/COPYING $(srcdir)/p/COPYING.LIB $(srcdir)/p/test/README pascal.docdemos
+ 	for f in README NEWS INSTALL FAQ AUTHORS COPYING COPYING.LIB; do \
+-	  rm -f "$(docdir)/$$f"; \
+-	  $(INSTALL_DATA) "$(srcdir)/p/$$f" "$(docdir)/$$f" || exit 1; \
+-	  chmod a-x "$(docdir)/$$f"; \
++	  rm -f "$(DESTDIR)$(docdir)/$$f"; \
++	  $(INSTALL_DATA) "$(srcdir)/p/$$f" "$(DESTDIR)$(docdir)/$$f" || exit 1; \
++	  chmod a-x "$(DESTDIR)$(docdir)/$$f"; \
+ 	done
+-	rm -f "$(docdir)/BUGS"
+-	$(INSTALL_DATA) "$(srcdir)/p/test/README" "$(docdir)/BUGS"
++	rm -f "$(DESTDIR)$(docdir)/BUGS"
++	$(INSTALL_DATA) "$(srcdir)/p/test/README" "$(DESTDIR)$(docdir)/BUGS"
+ 	for f in `cd "$(srcdir)/p/demos" && echo *`; do \
+ 	  if [ "$$f" != CVS ]; then \
+-	    rm -f "$(demodir)/$$f"; \
+-	    $(INSTALL_DATA) "$(srcdir)/p/demos/$$f" "$(demodir)/$$f" || exit 1; \
++	    rm -f "$(DESTDIR)$(demodir)/$$f"; \
++	    $(INSTALL_DATA) "$(srcdir)/p/demos/$$f" "$(DESTDIR)$(demodir)/$$f" || exit 1; \
+ 	  fi \
+ 	done
+-	chmod a-x "$(docdir)/BUGS" "$(demodir)"/*
++	chmod a-x "$(DESTDIR)$(docdir)/BUGS" "$(DESTDIR)$(demodir)"/*
+ 	if [ "`cd p/docdemos && echo a*`" != "a*" ]; then \
+-	  (cd "$(docdemodir)"; for f in *; do rm -f "$$f"; done) && \
++	  (cd "$(DESTDIR)$(docdemodir)"; for f in *; do rm -f "$$f"; done) && \
+ 	  for f in `cd p/docdemos && echo *`; do \
+-	    rm -f "$(docdemodir)/$$f"; \
+-	    $(INSTALL_DATA) "p/docdemos/$$f" "$(docdemodir)/$$f" && \
+-	    chmod a-x "$(docdemodir)/$$f" || exit 1; \
++	    rm -f "$(DESTDIR)$(docdemodir)/$$f"; \
++	    $(INSTALL_DATA) "p/docdemos/$$f" "$(DESTDIR)$(docdemodir)/$$f" && \
++	    chmod a-x "$(DESTDIR)$(docdemodir)/$$f" || exit 1; \
+ 	  done; \
+ 	fi
+ 
+ pascal.install-info: pascal.install-info-man-dirs pascal.info
+-	rm -f $(infodir)/gpc.info* $(infodir)/gpcs.info* $(infodir)/gpcs-de.info* $(infodir)/gpcs-hr.info*
++	rm -f $(DESTDIR)$(infodir)/gpc.info* $(DESTDIR)$(infodir)/gpcs.info* $(DESTDIR)$(infodir)/gpcs-de.info* $(DESTDIR)$(infodir)/gpcs-hr.info*
+ 	for f in `cd $(srcdir)/p/doc/info && echo gpc.info* gpcs*.info*`; do \
+-	  $(INSTALL_DATA) $(srcdir)/p/doc/info/$$f $(infodir)/$$f || exit 1; \
++	  $(INSTALL_DATA) $(srcdir)/p/doc/info/$$f $(DESTDIR)$(infodir)/$$f || exit 1; \
+ 	done
+-	chmod a-x $(infodir)/gpc.info* $(infodir)/gpcs.info* $(infodir)/gpcs-de.info* $(infodir)/gpcs-hr.info*
++	chmod a-x $(DESTDIR)$(infodir)/gpc.info* $(DESTDIR)$(infodir)/gpcs.info* $(DESTDIR)$(infodir)/gpcs-de.info* $(DESTDIR)$(infodir)/gpcs-hr.info*
+ 
+ pascal.install-man: pascal.install-info-man-dirs $(srcdir)/p/doc/en/gpc.1
+ 	-if [ -f gpc1$(exeext) ]; then \
+ 	  if [ -f gpc-cross$(exeext) ]; then \
+-	    rm -f $(man1dir)/$(GPC_CROSS_NAME)$(manext); \
+-	    $(INSTALL_DATA) $(srcdir)/p/doc/en/gpc.1 $(man1dir)/$(GPC_CROSS_NAME)$(manext); \
+-	    chmod a-x $(man1dir)/$(GPC_CROSS_NAME)$(manext); \
++	    rm -f $(DESTDIR)$(man1dir)/$(GPC_CROSS_NAME)$(manext); \
++	    $(INSTALL_DATA) $(srcdir)/p/doc/en/gpc.1 $(DESTDIR)$(man1dir)/$(GPC_CROSS_NAME)$(manext); \
++	    chmod a-x $(DESTDIR)$(man1dir)/$(GPC_CROSS_NAME)$(manext); \
+ 	  else \
+-	    rm -f $(man1dir)/$(GPC_INSTALL_NAME)$(manext); \
+-	    $(INSTALL_DATA) $(srcdir)/p/doc/en/gpc.1 $(man1dir)/$(GPC_INSTALL_NAME)$(manext); \
+-	    chmod a-x $(man1dir)/$(GPC_INSTALL_NAME)$(manext); \
++	    rm -f $(DESTDIR)$(man1dir)/$(GPC_INSTALL_NAME)$(manext); \
++	    $(INSTALL_DATA) $(srcdir)/p/doc/en/gpc.1 $(DESTDIR)$(man1dir)/$(GPC_INSTALL_NAME)$(manext); \
++	    chmod a-x $(DESTDIR)$(man1dir)/$(GPC_INSTALL_NAME)$(manext); \
+ 	  fi; \
+ 	else \
+ 	  true; \
+@@ -775,22 +774,22 @@ pascal.install-man: pascal.install-info-
+ pascal.install-hr: pascal.install-info-hr pascal.install-man-hr
+ 
+ pascal.install-info-hr: pascal.install-info-man-dirs pascal.info
+-	rm -f $(infodir)/gpc-hr.info* $(infodir)/gpcs-hr.info*
++	rm -f $(DESTDIR)$(infodir)/gpc-hr.info* $(DESTDIR)$(infodir)/gpcs-hr.info*
+ 	for f in `cd $(srcdir)/p/doc/info && echo gpc-hr.info* gpcs-hr.info*`; do \
+-	  $(INSTALL_DATA) $(srcdir)/p/doc/info/$$f $(infodir)/$$f || exit 1; \
++	  $(INSTALL_DATA) $(srcdir)/p/doc/info/$$f $(DESTDIR)$(infodir)/$$f || exit 1; \
+ 	done
+-	chmod a-x $(infodir)/gpc-hr.info* $(infodir)/gpcs-hr.info*
++	chmod a-x $(DESTDIR)$(infodir)/gpc-hr.info* $(DESTDIR)$(infodir)/gpcs-hr.info*
+ 
+ pascal.install-man-hr: pascal.install-info-man-dirs $(srcdir)/p/doc/hr/gpc.1
+ 	-if [ -f gpc1$(exeext) ]; then \
+ 	  if [ -f gpc-cross$(exeext) ]; then \
+-	    rm -f $(man1dir)/$(GPC_CROSS_NAME)-hr$(manext); \
+-	    $(INSTALL_DATA) $(srcdir)/p/doc/hr/gpc.1 $(man1dir)/$(GPC_CROSS_NAME)-hr$(manext); \
+-	    chmod a-x $(man1dir)/$(GPC_CROSS_NAME)-hr$(manext); \
++	    rm -f $(DESTDIR)$(man1dir)/$(GPC_CROSS_NAME)-hr$(manext); \
++	    $(INSTALL_DATA) $(srcdir)/p/doc/hr/gpc.1 $(DESTDIR)$(man1dir)/$(GPC_CROSS_NAME)-hr$(manext); \
++	    chmod a-x $(DESTDIR)$(man1dir)/$(GPC_CROSS_NAME)-hr$(manext); \
+ 	  else \
+-	    rm -f $(man1dir)/$(GPC_INSTALL_NAME)-hr$(manext); \
+-	    $(INSTALL_DATA) $(srcdir)/p/doc/en/gpc.1 $(man1dir)/$(GPC_INSTALL_NAME)-hr$(manext); \
+-	    chmod a-x $(man1dir)/$(GPC_INSTALL_NAME)-hr$(manext); \
++	    rm -f $(DESTDIR)$(man1dir)/$(GPC_INSTALL_NAME)-hr$(manext); \
++	    $(INSTALL_DATA) $(srcdir)/p/doc/en/gpc.1 $(DESTDIR)$(man1dir)/$(GPC_INSTALL_NAME)-hr$(manext); \
++	    chmod a-x $(DESTDIR)$(man1dir)/$(GPC_INSTALL_NAME)-hr$(manext); \
+ 	  fi; \
+ 	else \
+ 	  true; \
+@@ -801,25 +800,25 @@ pascal.install-man-hr: pascal.install-in
+ pascal.install-compiler: pascal.install-dir pascal
+ 	for file in gpc1$(exeext); do \
+ 	  if [ -f $$file ]; then \
+-	    rm -f $(libsubdir)/$$file; \
+-	    $(INSTALL_PROGRAM) $$file $(libsubdir)/$$file || exit 1; \
++	    rm -f $(DESTDIR)$(libsubdir)/$$file; \
++	    $(INSTALL_PROGRAM) $$file $(DESTDIR)$(libsubdir)/$$file || exit 1; \
+ 	  fi; \
+ 	done; exit 0
+ 	for file in $(EXTRA_PASSES) $(EXTRA_PROGRAMS) $(USE_COLLECT2) ..; do \
+-	  if [ x"$$file" != x.. ] && [ ! -f $(libsubdir)/$$file ]; then \
+-	    $(INSTALL_PROGRAM) $$file $(libsubdir)/$$file || exit 1; \
++	  if [ x"$$file" != x.. ] && [ ! -f $(DESTDIR)$(libsubdir)/$$file ]; then \
++	    $(INSTALL_PROGRAM) $$file $(DESTDIR)$(libsubdir)/$$file || exit 1; \
+ 	  fi; \
+ 	done; exit 0
+ 	for file in $(EXTRA_PARTS) ..; do \
+-	  if [ x"$$file" != x.. ] && [ ! -f $(libsubdir)/$$file ]; then \
+-	    $(INSTALL_DATA) $$file $(libsubdir)/$$file && \
+-	    chmod a-x $(libsubdir)/$$file || exit 1; \
++	  if [ x"$$file" != x.. ] && [ ! -f $(DESTDIR)$(libsubdir)/$$file ]; then \
++	    $(INSTALL_DATA) $$file $(DESTDIR)$(libsubdir)/$$file && \
++	    chmod a-x $(DESTDIR)$(libsubdir)/$$file || exit 1; \
+ 	  fi; \
+ 	done; exit 0
+ # Don't mess with specs if it doesn't exist yet.
+-	if [ -f specs ] && [ ! -f $(libsubdir)/specs ]; then \
+-	  $(INSTALL_DATA) specs $(libsubdir)/specs && \
+-	  chmod a-x $(libsubdir)/specs || exit 1; \
++	if [ -f specs ] && [ ! -f $(DESTDIR)$(libsubdir)/specs ]; then \
++	  $(INSTALL_DATA) specs $(DESTDIR)$(libsubdir)/specs && \
++	  chmod a-x $(DESTDIR)$(libsubdir)/specs || exit 1; \
+ 	fi; exit 0
+ 
+ pascal.install-normal: pascal.install-common pascal.install-compiler \
+@@ -837,23 +836,23 @@ pascal.install-with-gcc: $(INSTALL_HEADE
+ 	for file in cc1$(exeext) cpp$(exeext) cpp0$(exeext); do \
+ 	  if [ -f $$file ]; then \
+ 	    rm -f $(libsubdir)/$$file; \
+-	    $(INSTALL_PROGRAM) $$file $(libsubdir)/$$file || exit 1; \
++	    $(INSTALL_PROGRAM) $$file $(DESTDIR)$(libsubdir)/$$file || exit 1; \
+ 	  fi; \
+ 	done; exit 0
+ # Install libgcc.a @@FIXME: doesn't handle multilib (multiple libgcc.a)
+-	if [ -f libgcc.a ] && [ ! -f $(libsubdir)/libgcc.a ]; then \
++	if [ -f libgcc.a ] && [ ! -f $(DESTDIR)$(libsubdir)/libgcc.a ]; then \
+ 	  if $(RANLIB_TEST_FOR_TARGET); then \
+ 	    $(RANLIB_FOR_TARGET) libgcc.a || exit 1; \
+ 	  fi; \
+-	  $(INSTALL_DATA) libgcc.a $(libsubdir)/libgcc.a && \
+-	  chmod a-x $(libsubdir)/libgcc.a || exit 1; \
++	  $(INSTALL_DATA) libgcc.a $(DESTDIR)$(libsubdir)/libgcc.a && \
++	  chmod a-x $(DESTDIR)$(libsubdir)/libgcc.a || exit 1; \
+ 	fi; exit 0
+ 
+ pascal.uninstall:
+-	-rm -rf $(bindir)/$(GPC_INSTALL_NAME)$(exeext)
+-	-rm -rf $(bindir)/$(GPC_CROSS_NAME)$(exeext)
+-	-rm -rf $(man1dir)/$(GPC_INSTALL_NAME)$(manext)
+-	-rm -rf $(man1dir)/$(GPC_CROSS_NAME)$(manext)
++	-rm -rf $(DESTDIR)$(bindir)/$(GPC_INSTALL_NAME)$(exeext)
++	-rm -rf $(DESTDIR)$(bindir)/$(GPC_CROSS_NAME)$(exeext)
++	-rm -rf $(DESTDIR)$(man1dir)/$(GPC_INSTALL_NAME)$(manext)
++	-rm -rf $(DESTDIR)$(man1dir)/$(GPC_CROSS_NAME)$(manext)
+ 
+ pascal.bindist: pascal
+ 	tmp_base=`pwd`/tmp && \
