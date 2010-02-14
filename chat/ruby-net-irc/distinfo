@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/14 09:16:39 obache Exp $
+$NetBSD: distinfo,v 1.3 2010/02/14 12:29:13 taca Exp $
 
-SHA1 (net-irc-0.0.7.gem) = 7a260939a8b1e75ef23930b208de2c69b9826baf
-RMD160 (net-irc-0.0.7.gem) = 069929ae665ba6416952d2d293129fe40cea10aa
-Size (net-irc-0.0.7.gem) = 46080 bytes
-SHA1 (patch-aa) = 07c8b38909c8a89057a66f4ef557926df234b7c8
+SHA1 (net-irc-0.0.9.gem) = 23325bc5b7ec718661d8a6e92c797b3019f48abc
+RMD160 (net-irc-0.0.9.gem) = 44bcf84880f78d0d58b13a381cacb061da332697
+Size (net-irc-0.0.9.gem) = 67072 bytes
