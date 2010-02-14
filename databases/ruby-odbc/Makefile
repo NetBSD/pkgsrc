@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/10/19 08:39:37 taca Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/14 12:26:47 taca Exp $
 
-DISTNAME=	ruby-odbc-0.9997
-PKGNAME=	${RUBY_PKGPREFIX}-${GEM_NAME}
+DISTNAME=	ruby-odbc-0.9998
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.ch-werner.de/rubyodbc/
 # needs EXTRACT_SUFX since DISTFILE isn't Ruby's gem format.
@@ -13,14 +13,12 @@ COMMENT=	ODBC binding for Ruby
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GEM_NAME=	${DISTNAME:S/ruby-//}
 GEM_BUILD=	gemspec
-GEM_CLEANBUILD=	Makefile mkmf.log *.o odbc.${RUBY_DLEXT} utf8/*
 
 CONFIGURE_ARGS=	--disable-dlopen
 
-post-extract:
-	cp ${FILESDIR}/gemspec ${GEM_SPECFILE}
+pre-patch:
+	mv ${WRKSRC}/ruby-odbc.gemspec ${GEM_SPECFILE}
 
 .include "options.mk"
 .include "../../misc/rubygems/rubygem.mk"

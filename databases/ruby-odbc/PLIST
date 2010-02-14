@@ -1,18 +1,20 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:36:20 joerg Exp $
-${GEM_HOME}/cache/odbc-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.4 2010/02/14 12:26:47 taca Exp $
+${GEM_HOME}/cache/ruby-odbc-${PKGVERSION}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/GPL
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README
-${GEM_LIBDIR}/cqgen.rb
 ${GEM_LIBDIR}/doc/odbc.html
-${GEM_LIBDIR}/extconf.rb
-${GEM_LIBDIR}/init.c
+${GEM_LIBDIR}/ext/extconf.rb
+${GEM_LIBDIR}/ext/init.c
+${GEM_LIBDIR}/ext/odbc.c
+${GEM_LIBDIR}/ext/utf8/extconf.rb
+${GEM_LIBDIR}/ext/utf8/init.c
+${GEM_LIBDIR}/ext/utf8/odbc.c
+${GEM_LIBDIR}/lib/cqgen.rb
 ${GEM_LIBDIR}/lib/odbc.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/odbc_utf8.${RUBY_DLEXT}
-${GEM_LIBDIR}/odbc.c
-${GEM_LIBDIR}/test.rb
 ${GEM_LIBDIR}/test/00connect.rb
 ${GEM_LIBDIR}/test/10create_table.rb
 ${GEM_LIBDIR}/test/20insert.rb
@@ -20,8 +22,7 @@ ${GEM_LIBDIR}/test/30select.rb
 ${GEM_LIBDIR}/test/40update.rb
 ${GEM_LIBDIR}/test/50drop_table.rb
 ${GEM_LIBDIR}/test/70close.rb
-${GEM_LIBDIR}/utf8/extconf.rb
-${GEM_LIBDIR}/utf8/init.c
-${GEM_LIBDIR}/utf8/odbc.c
-${GEM_LIBDIR}/utf8/test.rb
-${GEM_HOME}/specifications/odbc-${PKGVERSION}.gemspec
+${GEM_LIBDIR}/test/test.rb
+${GEM_LIBDIR}/test/utf8/test.rb
+${GEM_HOME}/specifications/ruby-odbc-${PKGVERSION}.gemspec
+@pkgdir lib/ruby/gems/1.8/doc/ruby-odbc-${PKGVERSION}/rdoc/classes
