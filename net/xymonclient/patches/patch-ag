@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/02/14 16:11:11 spz Exp $
+
+--- build/Makefile.orig	2009-02-12 13:00:50.000000000 +0000
++++ build/Makefile
+@@ -8,8 +8,8 @@ merge-lines: merge-lines.c
+ merge-sects: merge-sects.c
+ 	$(CC) -o $@ $(CFLAGS) $<
+ 
+-setup-newfiles: setup-newfiles.c
+-	$(CC) -o $@ $(CFLAGS) $(RPATHOPT) $< ../lib/hobbitclient.a $(SSLLIBS) $(NETLIBS) $(LIBRTDEF)
++setup-newfiles: setup-newfiles.c ../lib/hobbitclient.a
++	$(CC) -o $@ $(CFLAGS) $< ../lib/hobbitclient.a $(RPATHOPT) $(SSLLIBS) $(NETLIBS) $(LIBRTDEF) 
+ 
+ clean:
+ 	rm -f $(TOOLS) testfile *.o *~

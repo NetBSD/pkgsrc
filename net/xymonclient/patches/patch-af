@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/02/14 16:11:11 spz Exp $
+
+--- client/netbsd-meminfo.c.orig	2009-02-12 13:09:34.000000000 +0000
++++ client/netbsd-meminfo.c
+@@ -22,7 +22,7 @@ static char rcsid[] = "$Id: netbsd-memin
+ int main(int argc, char *argv[])
+ {
+ 	int hw_physmem[] = { CTL_HW, HW_PHYSMEM64 };
+-	int64 physmem;
++	int64_t physmem;
+ 
+ 	int hw_pagesize[] = { CTL_HW, HW_PAGESIZE };
+ 	int pagesize;

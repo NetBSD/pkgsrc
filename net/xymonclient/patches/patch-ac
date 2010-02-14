@@ -1,0 +1,91 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/02/14 16:11:11 spz Exp $
+
+--- client/Makefile.orig	2009-02-12 13:09:34.000000000 +0000
++++ client/Makefile
+@@ -19,6 +19,22 @@ endif
+ PROGRAMS=hobbitlaunch logfetch clientupdate orcahobbit msgcache
+ COMMONTOOLS=bb bbcmd bbhostgrep bbhostshow bbdigest
+ 
++ifndef INSTALLBINDIR
++INSTALLBINDIR = $(BBHOME)/bin
++endif
++ifndef INSTALLETCDIR
++INSTALLETCDIR = $(BBHOME)/etc
++endif
++ifndef INSTALLEXTDIR
++INSTALLEXTDIR = $(BBHOME)/ext
++endif
++ifndef INSTALLTMPDIR
++INSTALLTMPDIR = $(BBHOME)/tmp
++endif
++ifndef BBLOGDIR
++BBLOGDIR = $(BBHOME)/logs
++endif
++
+ all: $(PROGRAMS) $(COMMONTOOLS) hobbitclient.cfg clientlaunch.cfg $(EXTRATOOLS)
+ 
+ hobbitclient.cfg: hobbitclient.cfg.DIST
+@@ -58,24 +74,50 @@ netbsd-meminfo: netbsd-meminfo.c
+ 
+ install:
+ 	if test ! -d $(INSTALLROOT)$(BBHOME)     ; then mkdir -p $(INSTALLROOT)$(BBHOME)     ; fi
+-	if test ! -d $(INSTALLROOT)$(BBHOME)/bin ; then mkdir -p $(INSTALLROOT)$(BBHOME)/bin ; fi
+-	if test ! -d $(INSTALLROOT)$(BBHOME)/etc ; then mkdir -p $(INSTALLROOT)$(BBHOME)/etc ; fi
+-	if test ! -d $(INSTALLROOT)$(BBHOME)/tmp ; then mkdir -p $(INSTALLROOT)$(BBHOME)/tmp ; fi
+-	if test ! -d $(INSTALLROOT)$(BBHOME)/logs; then mkdir -p $(INSTALLROOT)$(BBHOME)/logs; fi
+-	if test ! -d $(INSTALLROOT)$(BBHOME)/ext ; then mkdir -p $(INSTALLROOT)$(BBHOME)/ext ; fi
+-	if test ! -f $(INSTALLROOT)$(BBHOME)/etc/localclient.cfg ; then cp localclient.cfg $(INSTALLROOT)$(BBHOME)/etc/ ; fi
+-	cp -fp runclient.sh $(INSTALLROOT)$(BBHOME)
+-	cp -fp $(PROGRAMS) hobbitclient*.sh $(COMMONTOOLS) $(EXTRATOOLS) $(INSTALLROOT)$(BBHOME)/bin/
+-	chmod ugo+x $(INSTALLROOT)$(BBHOME)/bin/*
++	if test ! -d $(INSTALLROOT)$(INSTALLBINDIR) ; then mkdir -p $(INSTALLROOT)$(INSTALLBINDIR) ; fi
++ifndef PKGBUILD
++ifneq ($(INSTALLBINDIR),$(BBHOME)/bin)
++	ln -sf $(INSTALLBINDIR) $(INSTALLROOT)$(BBHOME)/bin
++endif
++endif
++	if test ! -d $(INSTALLROOT)$(INSTALLETCDIR) ; then mkdir -p $(INSTALLROOT)$(INSTALLETCDIR) ; fi
++ifndef PKGBUILD
++ifneq ($(INSTALLETCDIR),$(BBHOME)/etc)
++	ln -sf $(INSTALLETCDIR) $(INSTALLROOT)$(BBHOME)/etc
++endif
++endif
++	if test ! -d $(INSTALLROOT)$(INSTALLTMPDIR) ; then mkdir -p $(INSTALLROOT)$(INSTALLTMPDIR) ; fi
++ifndef PKGBUILD
++ifneq ($(INSTALLTMPDIR),$(BBHOME)/tmp)
++	ln -sf $(INSTALLTMPDIR) $(INSTALLROOT)$(BBHOME)/tmp
++endif
++endif
++	if test ! -d $(INSTALLROOT)$(BBLOGDIR) ; then mkdir -p $(INSTALLROOT)$(BBLOGDIR) ; fi
++ifndef PKGBUILD
++ifneq ($(BBLOGDIR),$(BBHOME)/logs)
++	ln -sf $(BBLOGDIR) $(INSTALLROOT)$(BBHOME)/logs
++endif
++endif
++	if test ! -d $(INSTALLROOT)$(INSTALLEXTDIR) ; then mkdir -p $(INSTALLROOT)$(INSTALLEXTDIR) ; fi
++ifndef PKGBUILD
++ifneq ($(INSTALLEXTDIR),$(BBHOME)/ext)
++	ln -sf $(INSTALLEXTDIR) $(INSTALLROOT)$(BBHOME)/ext
++endif
++endif
++
++	if test ! -f $(INSTALLROOT)$(INSTALLETCDIR)/localclient.cfg ; then cp localclient.cfg $(INSTALLROOT)$(INSTALLETCDIR)/ ; fi
++	cp -fp runclient.sh $(INSTALLROOT)$(INSTALLBINDIR)
++	cp -fp $(PROGRAMS) hobbitclient*.sh $(COMMONTOOLS) $(EXTRATOOLS) $(INSTALLROOT)$(INSTALLBINDIR)
++	chmod ugo+x $(INSTALLROOT)$(INSTALLBINDIR)/*
+ 
+-	../build/merge-sects clientlaunch.cfg $(INSTALLROOT)$(BBHOME)/etc/clientlaunch.cfg
+-	../build/merge-lines hobbitclient.cfg $(INSTALLROOT)$(BBHOME)/etc/hobbitclient.cfg
++	../build/merge-sects clientlaunch.cfg $(INSTALLROOT)$(INSTALLETCDIR)/clientlaunch.cfg
++	../build/merge-lines hobbitclient.cfg $(INSTALLROOT)$(INSTALLETCDIR)/hobbitclient.cfg
+ ifndef PKGBUILD
+-	chown -R $(BBUSER) $(INSTALLROOT)$(BBHOME)
++	chown -R $(BBUSER) $(INSTALLROOT)$(BBHOME) $(INSTALLROOT)$(INSTALLETCDIR) $(INSTALLROOT)$(INSTALLEXTDIR) $(INSTALLROOT)$(INSTALLBINDIR) $(INSTALLROOT)$(INSTALLTMPDIR) $(INSTALLROOT)$(BBLOGDIR)
+ endif
+ 
+ install-localclient:
+-	cp -fp hobbitd_client $(INSTALLROOT)$(BBHOME)/bin/
++	cp -fp hobbitd_client $(INSTALLROOT)$(INSTALLBINDIR)
+ ifndef PKGBUILD
+ 	chown $(BBUSER) $(INSTALLROOT)$(BBHOME)/bin/hobbitd_client
+ endif
