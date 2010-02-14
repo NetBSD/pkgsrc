@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: spawnfcgi.sh,v 1.1.1.1 2010/02/08 14:37:54 joerg Exp $
+# $NetBSD: spawnfcgi.sh,v 1.2 2010/02/14 19:03:51 joerg Exp $
 #
 # PROVIDE: spawnfcgi
 # BEFORE: apache cherokee lighttpd nginx
@@ -55,9 +55,7 @@ spawnfcgi_start()
 			opt_F=""
 		fi
 		if [ -n "${job_socket_mode}" ]; then
-			opt_m="-m"
-		else
-			opt_m=""
+			opt_M="-M"
 		fi
 		if [ -n "${job_socket}" ]; then
 			opt_s="-s"
@@ -81,7 +79,7 @@ spawnfcgi_start()
 		    $opt_C ${job_php_children} \
 		    $opt_F ${job_children} \
 		    $opt_s ${job_socket} \
-		    $opt_m ${job_socket_mode} \
+		    $opt_M ${job_socket_mode} \
 		    $opt_a ${job_address} \
 		    $opt_p ${job_port} \
 		    -P ${pidfile_base}${job} -- \
