@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2006/01/12 23:49:45 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2010/02/14 21:52:53 joerg Exp $
 
 --- Imakefile.orig	1996-11-22 01:28:46.000000000 +0000
 +++ Imakefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/12 23:49:45 joerg Exp $
  XCOMM placed. Default will be the current directory.
  
 -    XBOING_DIR = .
-+    XBOING_DIR = $(X11PREFIX)/share/xboing
++    XBOING_DIR = ${DESTDIR}$(X11PREFIX)/share/xboing
  
  XCOMM These are some defines that must be set. Some may be overwritten in the
  XCOMM machine arch section.
@@ -65,14 +65,12 @@ $NetBSD: patch-aa,v 1.9 2006/01/12 23:49:45 joerg Exp $
  XCOMM   -DNEED_USLEEP=\"True\" \
  XCOMM   -DNO_LOCKING=\"True\" 
  
-@@ -204,8 +204,8 @@ install:: $(PROGRAMS)
+@@ -204,8 +204,6 @@ install:: $(PROGRAMS)
  	 fi
  	@:
  	@echo "Creating a highscore file " $(HIGH_SCORE_FILE)
 -	@touch $(HIGH_SCORE_FILE);
 -	@chmod a+rw $(HIGH_SCORE_FILE);
-+	@touch xboing.scr
-+	@${BSD_INSTALL_GAME_DATA} xboing.scr $(HIGH_SCORE_FILE);
  
  XCOMM I use this for my daily backup of my code.
  
