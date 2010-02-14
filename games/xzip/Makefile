@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/01/19 09:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/14 22:21:42 joerg Exp $
 
 DISTNAME=		xzip180
 PKGNAME=		xzip-1.8
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.eblong.com/zarf/xzip.html
 COMMENT=		Z-code interpreter for X11 (Infocom game format)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/xzip
 USE_X11BASE=		yes
