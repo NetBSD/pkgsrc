@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.722 2010/02/14 23:46:13 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.723 2010/02/14 23:56:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -862,3 +862,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/xymonclient version 4.3.0b2 [spz 2010-02-14]
 	Added net/xymon	version 4.3.0b2 [spz 2010-02-14]
 	Updated print/tex-luatex to 0.2nb2 [minskim 2010-02-14]
+	Updated fonts/tex-mflogo-doc to 2009 [minskim 2010-02-14]
