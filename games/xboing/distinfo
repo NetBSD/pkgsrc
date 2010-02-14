@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2006/01/12 23:49:45 joerg Exp $
+$NetBSD: distinfo,v 1.11 2010/02/14 21:52:53 joerg Exp $
 
 SHA1 (xboing2.4.tar.gz) = 57fad37ab99e6a3ff87ff814d0de1baad3b93b91
 RMD160 (xboing2.4.tar.gz) = 3aa027dd7a7abe9b4119362a1c8b5fb968971567
 Size (xboing2.4.tar.gz) = 588811 bytes
-SHA1 (patch-aa) = 6a4523f40fe2fb7c107773cddbaa8912a2137a71
+SHA1 (patch-aa) = d28a7f42480fba31f703ef1e4327142de3b7579b
 SHA1 (patch-ab) = 70d125ef4d34ad0dc92556b59cf6e4165d96004c
 SHA1 (patch-ac) = 97ac52a5f8095178f690a33df6ede70498c28fb7
 SHA1 (patch-ad) = 444331ce4cbca8e291331bc3d5e698e9f01d8f6e
