@@ -1,0 +1,26 @@
+$NetBSD: patch-am,v 1.1 2010/02/14 08:17:12 dholland Exp $
+
+DESTDIR support.
+
+XXX: see comment in patch-al (same issue)
+
+--- images/Makefile.in~	2000-06-09 14:52:41.000000000 +0000
++++ images/Makefile.in
+@@ -51,12 +51,12 @@ install: all install-only
+ install-only:
+ 	for i in `ls $(srcdir)/*.gif `; do \
+ 		echo $$i; \
+-		$(INSTALL_DATA) $(srcdir)/$$i $(imagesdir); \
++		$(INSTALL_DATA) $(srcdir)/$$i $(DESTDIR)$(imagesdir); \
+ 	done
+-	chown $(GAMEUID) $(imagesdir) $(imagesdir)/*
+-	chgrp $(GAMEGRP) $(imagesdir) $(imagesdir)/*
+-	chmod $(DIRPERM) $(imagesdir)
+-	chmod $(FILEPERM) $(imagesdir)/*
++	#chown $(GAMEUID) $(DESTDIR)$(imagesdir) $(DESTDIR)$(imagesdir)/*
++	#chgrp $(GAMEGRP) $(DESTDIR)$(imagesdir) $(DESTDIR)$(imagesdir)/*
++	#chmod $(DIRPERM) $(DESTDIR)$(imagesdir)
++	#chmod $(FILEPERM) $(DESTDIR)$(imagesdir)/*
+ 
+ clean:
+ 
