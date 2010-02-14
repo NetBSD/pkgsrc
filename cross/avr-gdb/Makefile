@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/08/03 19:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2010/02/14 20:34:58 joerg Exp $
 
 DISTNAME=	gdb-5.3
 PKGNAME=	avr-gdb-5.3
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GNU gdb for Atmel AVR 8-bit RISC microcontrollers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -20,6 +22,6 @@ pre-configure:
 	cd ${WRKSRC} ; ${RM} -rf dejagnu expect sim tcl texinfo
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb ${PREFIX}/bin/avr-gdb
+	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb ${DESTDIR}${PREFIX}/bin/avr-gdb
 
 .include "../../mk/bsd.pkg.mk"
