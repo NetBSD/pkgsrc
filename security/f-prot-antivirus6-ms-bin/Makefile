@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/22 17:41:07 taca Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/14 10:56:32 taca Exp $
 #
 DISTNAME=		${FP_DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		security
 
 MAINTAINER=		taca@NetBSD.org
@@ -14,7 +15,7 @@ FP_TYPE=		ms
 
 RCD_SCRIPTS=		fpscand scanmail
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		FPROT_GROUP FPROT_USER VARBASE
 
 VARDIR=			${VARBASE}/f-prot
 
@@ -22,8 +23,13 @@ OWN_DIRS_PERMS+=	${VARDIR} ${BINOWN} ${BINGRP} 0751 \
 			${VARDIR}/backup ${BINOWN} ${BINGRP} 0700 \
 			${VARDIR}/tmp ${BINOWN} ${BINGRP} 0700 \
 
-FILES_SUBST+=		VARDIR=${VARDIR}
+FILES_SUBST+=		FPROT_USER=${FPROT_USER} VARDIR=${VARDIR}
 PLIST_SUBST+=		VARDIR=${VARDIR}
+
+SPECIAL_PERMS+=		${FPROTDIR}/scan-mail.pl ${BINOWN} ${FPROT_GROUP} 0750
+
+PKG_GROUP=		${FPROT_GROUP}
+PKG_USERS=		${FPROT_USER}
 
 REPLACE_PERL+=		mailtools/scan-mail.pl
 
@@ -36,6 +42,11 @@ SUBST_FILES.paths+=	mailtools/scan-mail.pl
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
 			${PKGMANDIR}/man8 sbin ${DATADIR} ${DOCDIR}/html \
 			${EGDIR} ${FPROTDIR} ${PERL5_SUB_INSTALLVENDORLIB}
+
+.include "../../mk/bsd.prefs.mk"
+
+FPROT_GROUP?=		f-prot
+FPROT_USER?=		f-prot
 
 do-install: install-common install-fpscand install-ms
 
