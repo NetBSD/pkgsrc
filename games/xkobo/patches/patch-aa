@@ -1,35 +1,32 @@
-$NetBSD: patch-aa,v 1.4 2001/10/18 19:12:40 abs Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/14 22:13:00 joerg Exp $
 
---- Imakefile.orig	Fri Jan 10 02:29:36 1997
+--- Imakefile.orig	1997-01-10 02:29:36.000000000 +0000
 +++ Imakefile
-@@ -6,7 +6,7 @@
+@@ -6,7 +6,7 @@ WAIT_MSEC   = 30
  SHIPS       = 5
  
  /*  RECORDS  */
 -HSCORE_DIR  = /usr/local/games/xkobo-scores
-+HSCORE_DIR  = $(LIBDIR)/xkobo-scores
++HSCORE_DIR  = $(VARBASE)/games/xkobo-scores
  
  /*  C++ COMPILER  */
  /*  CXX         = g++  */
-@@ -69,15 +69,15 @@
+@@ -67,18 +67,5 @@ xkp256.c: # xkp256.tif
+ 	hexdump -v -e '"\t" 8/1 "0x0%02x," "\n"' xkp256.tif >> xkp256.c
+ 	echo '};'                                           >> xkp256.c
  
- #ifdef SECURE_SCOREFILES
- install::
+-#ifdef SECURE_SCOREFILES
+-install::
 -	if [ -d $(HSCORE_DIR) ]; then chmod 755 $(HSCORE_DIR); \
 -	else mkdirhier $(HSCORE_DIR); chmod 755 $(HSCORE_DIR); fi
 -	chown $(XKOBO_ADMINISTER) $(BINDIR)/xkobo
 -	chown -R $(XKOBO_ADMINISTER) $(HSCORE_DIR)
 -	chmod 4755 $(BINDIR)/xkobo
-+	if [ -d $(HSCORE_DIR) ]; then chmod 775 $(HSCORE_DIR); \
-+	else $(MKDIRHIER) $(HSCORE_DIR); chmod 775 $(HSCORE_DIR); fi
-+	chgrp $(XKOBO_ADMINISTER) $(BINDIR)/xkobo
-+	chgrp -R $(XKOBO_ADMINISTER) $(HSCORE_DIR)
-+	chmod 2755 $(BINDIR)/xkobo
- #else /* SECURE_SCOREFILES */
- install::
- 	if [ -d $(HSCORE_DIR) ]; then chmod 777 $(HSCORE_DIR); \
+-#else /* SECURE_SCOREFILES */
+-install::
+-	if [ -d $(HSCORE_DIR) ]; then chmod 777 $(HSCORE_DIR); \
 -	else mkdirhier $(HSCORE_DIR); chmod 777 $(HSCORE_DIR); fi
-+	else $(MKDIRHIER) $(HSCORE_DIR); chmod 777 $(HSCORE_DIR); fi
- #endif /* SECURE_SCOREFILES */
- 
+-#endif /* SECURE_SCOREFILES */
+-
  clean::
+ 	$(RM) xkobo
