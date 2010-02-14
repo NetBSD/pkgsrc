@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2010/02/14 06:28:07 dholland Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/14 21:30:51 dholland Exp $
+
+Patch out illegal C constructs.
 
 --- ../gcc-3.1/include/obstack.h.orig	2001-03-14 19:44:38.000000000 +0000
 +++ ../gcc-3.1/include/obstack.h
