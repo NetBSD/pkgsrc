@@ -1,0 +1,15 @@
+$NetBSD: patch-an,v 1.1 2010/02/14 08:17:12 dholland Exp $
+
+DESTDIR support.
+
+--- doc/Makefile.in.orig	2000-06-09 14:52:40.000000000 +0000
++++ doc/Makefile.in
+@@ -92,7 +92,7 @@ hacking.info:	$(DOCFILES_HACKING)
+ 
+ install-info: info
+ 	for i in *.info* ; do \
+-		$(INSTALL_DATA) $$i $(infodir)/$$i ; \
++		$(BSD_INSTALL_DATA) $$i $(DESTDIR)$(infodir)/$$i ; \
+ 	done
+ 
+ # Generation of DVI files.

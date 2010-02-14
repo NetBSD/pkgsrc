@@ -1,0 +1,37 @@
+$NetBSD: patch-al,v 1.1 2010/02/14 08:17:12 dholland Exp $
+
+DESTDIR support.
+
+XXX: I've disabled the chown/chgrp because as things previously were,
+XXX: it had no effect.
+XXX: 
+XXX: It was installing the data files as 644/755 games.bin, while the
+XXX: program was installed setgid games because we patched things that
+XXX: way. Installing the files with the pkgsrc default ownership will
+XXX: not change the behavior (no write permission).
+XXX: 
+XXX: However, it is likely wrong and someone needs to wade in and find
+XXX: out if these things really need to be writeable, and if so figure
+XXX: out the best way to arrange that. SPECIAL_PERMS for all these files
+XXX: (there are a lot) won't be pretty.
+
+--- lib/Makefile.in.orig	2000-06-09 14:52:41.000000000 +0000
++++ lib/Makefile.in
+@@ -51,12 +51,12 @@ install: all install-only
+ install-only:
+ 	for i in `ls $(srcdir)/*.dir $(srcdir)/*.g $(srcdir)/*.imf $(srcdir)/news.txt`; do \
+ 		echo $$i; \
+-		$(INSTALL_DATA) $(srcdir)/$$i $(gamelibdir); \
++		$(INSTALL_DATA) $(srcdir)/$$i $(DESTDIR)$(gamelibdir); \
+ 	done
+-	chown $(GAMEUID) $(gamelibdir) $(gamelibdir)/*
+-	chgrp $(GAMEGRP) $(gamelibdir) $(gamelibdir)/*
+-	chmod $(DIRPERM) $(gamelibdir)
+-	chmod $(FILEPERM) $(gamelibdir)/*
++	#chown $(GAMEUID) $(gamelibdir) $(gamelibdir)/*
++	#chgrp $(GAMEGRP) $(gamelibdir) $(gamelibdir)/*
++	#chmod $(DIRPERM) $(gamelibdir)
++	#chmod $(FILEPERM) $(gamelibdir)/*
+ 
+ clean:
+ 
