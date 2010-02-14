@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2009/02/17 13:02:20 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2010/02/14 06:28:07 dholland Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		cross
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/gcc/gcc-3.1/ \
 			ftp://sources.redhat.com/pub/newlib/
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--enable-languages=c,c++
 CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 SRCDIR=			${WRKDIR}/gcc-3.1
+MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 BUILD_TARGET=		CFLAGS="-O2 -fomit-frame-pointer" all
 INFO_FILES=		# PLIST
 
