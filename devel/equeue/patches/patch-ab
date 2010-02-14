@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/02/14 20:51:23 joerg Exp $
+
+--- src/equeue/Makefile.orig	2010-02-14 20:45:27.000000000 +0000
++++ src/equeue/Makefile
+@@ -39,7 +39,7 @@ distclean: clean
+ .PHONY: install
+ install:
+ 	files=`$(COLLECT_FILES) *.mli *.cmi *.cma *.cmxa *.a unixqueue_mt.cmo unixqueue_mt.cmx unixqueue_mt.o META` && \
+-	$(OCAMLFIND) install equeue $$files
++	$(OCAMLFIND) install -ldconf /dev/null -destdir ${DESTDIR}`ocamlc -where`/site-lib equeue $$files
+ 
+ .PHONY: uninstall
+ uninstall:
