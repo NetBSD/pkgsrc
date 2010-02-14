@@ -1,0 +1,67 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/14 16:11:11 spz Exp $
+
+--- configure.client.orig	2009-02-22 20:41:16.000000000 +0000
++++ configure.client
+@@ -75,7 +75,7 @@ then
+ 	BBUSER="xymon"
+ fi
+ 
+-if test -z "$BBTOPDIR"
++if test -z "$BBHOME"
+ then
+ 	if test "`uname -s`" = "Darwin"
+ 	then
+@@ -92,22 +92,24 @@ then
+ 		echo ""; echo ""
+ 		HOMEDIR="`dscl . -read /Users/$BBUSER | grep HomeDirectory | awk '{print $2}'`"
+ 	else
+-		USERDATA=`getent passwd $BBUSER 2>/dev/null || ypmatch "${BBUSER}" passwd || grep "^${BBUSER}:" /etc/passwd`
+-		if test $? -eq 0
+-		then
+-			echo "Found passwd entry for user $USERDATA"
+-		else
+-			echo "FAILURE: The user $BBUSER does not exist. Create user and try again."
+-			exit 1
++		if [ -z ${PKGBUILD} ]; then
++			USERDATA=`getent passwd $BBUSER 2>/dev/null || ypmatch "${BBUSER}" passwd || grep "^${BBUSER}:" /etc/passwd`
++			if test $? -eq 0
++			then
++				echo "Found passwd entry for user $USERDATA"
++			else
++				echo "FAILURE: The user $BBUSER does not exist. Create user and try again."
++				exit 1
++			fi
++			echo ""; echo ""
++			HOMEDIR="`echo $USERDATA|cut -d: -f6`"
+ 		fi
+-		echo ""; echo ""
+-		HOMEDIR="`echo $USERDATA|cut -d: -f6`"
+ 	fi
+ else
+-	HOMEDIR="$BBTOPDIR"
++	HOMEDIR="$BBHOME"
+ fi
+ 
+-echo "Where do you want the Xymon installation [${HOMEDIR}] ?"
++echo "Where do you want the Xymon installation [${BBTOPDIR}] ?"
+ if test -z "$BBTOPDIR"
+ then
+ 	read BBTOPDIR
+@@ -158,6 +160,7 @@ echo "# Toplevel dir"                   
+ echo "BBTOPDIR = $BBTOPDIR"              >>Makefile
+ echo "# Server home dir for etc/, www/"  >>Makefile
+ echo "BBHOME = $BBHOME"                  >>Makefile
++echo "HOBBITCLIENTHOME = $BBHOME/client" >>Makefile
+ echo ""                                  >>Makefile
+ echo "# Xymon settings follows"          >>Makefile
+ echo "#"                                 >>Makefile
+@@ -194,6 +197,9 @@ fi
+ if test "$INSTALLETCDIR" != ""; then
+ 	echo "INSTALLETCDIR = $INSTALLETCDIR"   >>Makefile
+ fi
++if test "$INSTALLEXADIR" != ""; then
++	echo "INSTALLEXADIR = $INSTALLEXADIR"   >>Makefile
++fi
+ if test "$INSTALLEXTDIR" != ""; then
+ 	echo "INSTALLEXTDIR = $INSTALLEXTDIR"   >>Makefile
+ fi

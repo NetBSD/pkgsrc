@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/14 16:11:11 spz Exp $
+
+SHA1 (xymon-4.3.0-beta2.tar.gz) = 484ab668358856c7bbc7ba85bfe2afa7c0fa2f10
+RMD160 (xymon-4.3.0-beta2.tar.gz) = ab8db88d1e2cb7363c8a9b35396094ea921cc5b5
+Size (xymon-4.3.0-beta2.tar.gz) = 2405826 bytes
+SHA1 (patch-aa) = 169d8e4287b8c8c22660d683403bc644c3764e75
+SHA1 (patch-ab) = 344d5ec4ebc681ac592d2456c1abccd83a3e60f8
+SHA1 (patch-ac) = eb97125d0bfb6ef640054f14d7046ed375620d25
+SHA1 (patch-ad) = 8be66af4b877958f2bc64e18494c67a73acd4360
+SHA1 (patch-ae) = e5a42cbc6537e23a5a44ed343c86e121adadb139
+SHA1 (patch-af) = ae5d0acde8e2cd05527253c41e31a806b04614f6
+SHA1 (patch-ag) = ffecf3de095995bbd01bb27dc99126cbe04a08fd
