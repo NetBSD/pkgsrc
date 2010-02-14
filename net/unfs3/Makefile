@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/02/04 14:43:31 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/14 20:00:12 joerg Exp $
 #
 
 DISTNAME=	unfs3-0.9.22
@@ -14,7 +14,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake flex bison
 
-LDFLAGS+=	-lfl
+.include "../../mk/bsd.prefs.mk"
+
+LIBS+=	-lfl
 
 CONF_FILES+=		${PREFIX}/share/examples/unfs3/exports \
 			    ${PKG_SYSCONFDIR}/exports
