@@ -1,4 +1,5 @@
-The mod_fcgid Apache module is a binary compatible alternative to
-Apache module mod_fastcgi, but only for apache2 and later.
-FastCGI provides a high-performance alternative to CGI for writing
-webserver applications.
+High performance alternative to mod_cgi or mod_cgid, which starts a sufficient
+number instances of the CGI program to handle concurrent requests, and these
+programs remain running to handle further incoming requests. It is favored by
+the PHP developers, for example, as a preferred alternative to running mod_php
+in-process, delivering very similar performance.
