@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/12 02:34:47 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/02/15 00:51:26 minskim Exp $
 
-SHA1 (tex-ae-doc-1.4/ae.doc.tar.lzma) = c66d500e4afca69261952a9ca988f85cd665a3f2
-RMD160 (tex-ae-doc-1.4/ae.doc.tar.lzma) = 797be999d28f3acd33147d6d630b9b5bfbe33c30
-Size (tex-ae-doc-1.4/ae.doc.tar.lzma) = 7665 bytes
+SHA1 (tex-ae-doc-1.4/ae.doc.tar.xz) = d9b83d8b43f785cf81f5c9e9fa3f56999c58071a
+RMD160 (tex-ae-doc-1.4/ae.doc.tar.xz) = 83124cd0339c8cdc33c025ea0dacdc1440623ec1
+Size (tex-ae-doc-1.4/ae.doc.tar.xz) = 7732 bytes
