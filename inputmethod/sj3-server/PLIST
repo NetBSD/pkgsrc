@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.6 2010/02/15 13:35:22 obache Exp $
+bin/sj3mkdic
+lib/libsj3core.la
+libdata/sj3main.dic
+man/man1/sj3mkdic.1
+man/man1/sj3serv.1
+sbin/sj3proxy
+sbin/sj3serv
+share/doc/sj3/hinsi.ms
+share/doc/sj3/makedict.ms
+share/doc/sj3/sj3serv.ms
+share/examples/rc.d/sj3proxy
+share/examples/rc.d/sj3serv
+share/examples/sj3/freebsd-sj3.sh.in
+share/examples/sj3/freebsd-sj3proxy.sh.in
+share/examples/sj3/sj3proxy.lua.example
+share/examples/sj3/sj3serv.lua.example

@@ -1,0 +1,4 @@
+SJ3 is is a Japanese input system developed by Sony Corporation.
+
+SJ3 is composed of Kana-Kanji conversion server(sj3serv),
+Kana-Kanji conversion library(sj3lib) and utility tools.

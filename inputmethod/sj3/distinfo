@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2010/02/15 13:35:21 obache Exp $
+
+SHA1 (sj3-2.0.1.23p1.tar.gz) = 313a8f71f03071ad4d6006d18b569ce390edca8d
+RMD160 (sj3-2.0.1.23p1.tar.gz) = 2541f19bcf6b74c5b59c2e930fe27bb0ffa97ddf
+Size (sj3-2.0.1.23p1.tar.gz) = 1117190 bytes
+SHA1 (patch-aa) = 83416c5aeae4514349c6ab1a4f1ac3018feea406
