@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2004/09/18 07:59:57 uebayasi Exp $
+$NetBSD: patch-ab,v 1.2 2010/02/15 13:41:18 obache Exp $
 
---- sj3def/Imakefile.orig	1999-05-27 08:55:31.000000000 +0900
+--- sj3def/Imakefile.orig	2002-10-03 09:35:31.000000000 +0000
 +++ sj3def/Imakefile
 @@ -24,7 +24,7 @@ SjdefTarget(sjrc)
  SjdefTarget(sjrk)

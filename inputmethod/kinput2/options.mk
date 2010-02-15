@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/12/01 18:58:39 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2010/02/15 13:41:17 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kinput2
 PKG_OPTIONS_NONEMPTY_SETS=	inputmethod
@@ -29,7 +29,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST-freewnn
 .endif
 
 .if !empty(PKG_OPTIONS:Msj3)
-.include "../../inputmethod/sj3-lib/buildlink3.mk"
+.include "../../inputmethod/sj3-client/buildlink3.mk"
 KINPUT2_DEFS+=	-DUseSj3
 KINPUT2_DEFS+=	-Dport_SJ3SRC=${BUILDLINK_PREFIX.sj3-lib}/include
 KINPUT2_DEFS+=	-Dport_SJ3LIB="${LDFLAGS} -lsj3lib"

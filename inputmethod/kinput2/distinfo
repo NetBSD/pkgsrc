@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2010/01/09 11:50:36 obache Exp $
+$NetBSD: distinfo,v 1.5 2010/02/15 13:41:17 obache Exp $
 
-SHA1 (kinput2-v3.tar.gz) = a9e2be1fe4da4c5f4921a1d753f58d20f1ef3693
-RMD160 (kinput2-v3.tar.gz) = 8c8a72a693edc52882be392ef91e7ad9a5c2a7e6
-Size (kinput2-v3.tar.gz) = 462281 bytes
-SHA1 (patch-aa) = c41b2baa5de117c031c266afbff0e947340ab708
-SHA1 (patch-ab) = b2372ee1f50cc828eae4e8c6ca6d7bc6de11964b
-SHA1 (patch-ac) = 318e4fd8404bc19080f6879a2895ba36aca89c15
+SHA1 (kinput2-v3.1.tar.gz) = 48050f70e7c0cc67193ea260f8d7f6e822a02ca3
+RMD160 (kinput2-v3.1.tar.gz) = c56684769859bbee5f8238cd1af061796ff931e8
+Size (kinput2-v3.1.tar.gz) = 512177 bytes
+SHA1 (patch-aa) = debe271517550c47610a7ac128432e6e567fb6d7
+SHA1 (patch-ab) = a084421f399e753f25040fd0cba6d43a391fc15b
+SHA1 (patch-ac) = cd71af4a86102c1aedb84f64cda29ad5df2b7789
