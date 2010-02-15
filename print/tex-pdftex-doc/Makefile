@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2009/06/09 22:06:07 minskim Exp $
-# TeX Live Revision 12898
+# $NetBSD: Makefile,v 1.3 2010/02/15 00:08:08 minskim Exp $
+# TeX Live Revision 16770
 
 DISTNAME=	pdftex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.40.9.12898
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.40.10
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pdftex
 
-TEXLIVE_IGNORE_PATTERNS=	texmf/doc
+TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
-.include "../../print/texlive/module.mk"
+TEXLIVE_IGNORE_PATTERNS=	texmf
+
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
