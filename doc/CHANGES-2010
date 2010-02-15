@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.730 2010/02/15 12:58:44 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.731 2010/02/15 13:39:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -869,3 +869,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated converters/skf to 1.97.0a [obache 2010-02-15]
 	Updated graphics/oxygen-icons to 4.3.5nb1 [wiz 2010-02-15]
 	Removed shells/bash3 successor shells/bash [wiz 2010-02-15]
+	Removed inputmethod/sj3-lib [obache 2010-02-15]
+	Removed inputmethod/sj3-server-bin [obache 2010-02-15]
+	Removed inputmethod/sj3-dict [obache 2010-02-15]
+	Added inputmethod/sj3-client version 2.0.2.23p1 [obache 2010-02-15]
+	Updated inputmethod/sj3-server to 2.0.2.23p1 [obache 2010-02-15]
+	Added inputmethod/sj3 version 2.0.2.23p1 [obache 2010-02-15]
