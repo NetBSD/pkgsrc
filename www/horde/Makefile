@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2009/12/20 22:15:13 tonnerre Exp $
+# $NetBSD: Makefile,v 1.65 2010/02/15 17:52:01 joerg Exp $
 
 DISTNAME=	horde-3.3.6
 CATEGORIES=	www
@@ -8,6 +8,8 @@ MASTER_SITES=	http://ftp.horde.org/pub/horde/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/
 COMMENT=	PHP application framework
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 CONFLICTS+=	horde-2.*{,nb*}
 
@@ -121,31 +123,29 @@ do-build:
 	${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
 	${CHMOD} 0750 ${WRKSRC}/scripts/set_perms.sh
 
+INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR} ${HORDEDIR}/config
+
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${HORDEDIR}
-	${INSTALL_DATA_DIR} ${HORDEDIR}/config
-	${INSTALL_DATA} ${WRKSRC}/horde.conf.dist ${EGDIR}/horde.conf
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/horde.conf.dist ${DESTDIR}${EGDIR}/horde.conf
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${DOCDIR}
 
 .	for d in ${PAXDIRS}
-		${INSTALL_DATA_DIR} ${HORDEDIR}/${d}
+		${INSTALL_DATA_DIR} ${DESTDIR}${HORDEDIR}/${d}
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && pax -rwpam . ${HORDEDIR}/${d}
+		cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${HORDEDIR}/${d}
 .	endfor
 
-	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${HORDEDIR}/config
-	${INSTALL_DATA} ${WRKSRC}/*.php ${HORDEDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HORDEDIR}
-	${FIND} ${HORDEDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${HORDEDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${HORDEDIR}/config
-	${CHMOD} 0750 ${HORDEDIR}/config
+	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${HORDEDIR}/config
+	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${HORDEDIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${HORDEDIR}
+	${FIND} ${DESTDIR}${HORDEDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${HORDEDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${DESTDIR}${HORDEDIR}/config
+	${CHMOD} 0750 ${DESTDIR}${HORDEDIR}/config
 
 .include "../../mk/apachever.mk"
 .include "../../mk/bsd.pkg.mk"
