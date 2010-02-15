@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.748 2010/02/15 15:13:37 sno Exp $
+$NetBSD: CHANGES-2010,v 1.749 2010/02/15 15:21:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -897,3 +897,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/tellico to 2.2 [wiz 2010-02-15]
 	Updated devel/p5-Data-Visitor to 0.27 [sno 2010-02-15]
 	Updated devel/p5-Devel-Dumpvar to 1.06 [sno 2010-02-15]
+	Updated devel/p5-Devel-PartialDump to 0.13 [sno 2010-02-15]
