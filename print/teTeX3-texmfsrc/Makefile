@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/09/02 08:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2010/02/15 13:38:20 joerg Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -17,6 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	teTeX-texmf>=3.0nb3:../../print/teTeX3-texmf
 
 CONFLICTS+=	teTeX-sharesrc-[0-9]*
+
+BROKEN=		Conflicts with dependency (tex-koma-script).
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	teTeX
