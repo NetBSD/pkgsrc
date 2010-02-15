@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.736 2010/02/15 14:07:59 sno Exp $
+$NetBSD: CHANGES-2010,v 1.737 2010/02/15 14:24:44 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -880,3 +880,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-ExtUtils-ParseXS to 2.22.03 [sno 2010-02-15]
 	Updated devel/p5-ExtUtils-XSpp to 0.09 [sno 2010-02-15]
 	Updated devel/p5-CPAN-Reporter to 1.1710 [sno 2010-02-15]
+	Updated devel/p5-Data-Compare to 1.22 [sno 2010-02-15]
