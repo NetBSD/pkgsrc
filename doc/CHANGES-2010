@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.768 2010/02/15 17:58:41 sno Exp $
+$NetBSD: CHANGES-2010,v 1.769 2010/02/15 20:16:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -918,3 +918,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/mysql51-embedded version 5.1.43 [wiz 2010-02-15]
 	Added audio/moodbar version 0.1.2 [wiz 2010-02-15]
 	Updated devel/p5-Rose-Object to 0.858 [sno 2010-02-15]
+	Updated print/tex-dvips to 2009.16770 [minskim 2010-02-15]
+	Updated print/tex-dvips-doc to 2009.16770 [minskim 2010-02-15]
