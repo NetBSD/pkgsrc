@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.728 2010/02/15 12:14:57 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.729 2010/02/15 12:55:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -860,7 +860,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-luatex-doc to 0.2 [minskim 2010-02-14]
 	Updated textproc/tex-makeindex-doc to 2.12nb1 [minskim 2010-02-14]
 	Added net/xymonclient version 4.3.0b2 [spz 2010-02-14]
-	Added net/xymon	version 4.3.0b2 [spz 2010-02-14]
+	Added net/xymon version 4.3.0b2 [spz 2010-02-14]
 	Updated print/tex-luatex to 0.2nb2 [minskim 2010-02-14]
 	Updated fonts/tex-mflogo-doc to 2009 [minskim 2010-02-14]
 	Updated print/tex-pdftex-doc to 1.40.10 [minskim 2010-02-15]
