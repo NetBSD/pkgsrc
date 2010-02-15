@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.741 2010/02/15 14:39:05 sno Exp $
+$NetBSD: CHANGES-2010,v 1.742 2010/02/15 14:42:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -887,3 +887,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Data-Dumper-Concise to 1.200 [sno 2010-02-15]
 	Updated devel/p5-Data-Page to 2.02 [sno 2010-02-15]
 	Updated devel/p5-Data-Pageset to 1.06 [sno 2010-02-15]
+	Moved graphics/kipi-plugins to graphics/kipi-plugins-kde3 [wiz 2010-02-15]
+	Moved graphics/kipi-plugins-calendar to graphics/kipi-plugins-calendar-kde3 [wiz 2010-02-15]
+	Updated graphics/kipi-plugins to 1.1.0 [wiz 2010-02-15]
