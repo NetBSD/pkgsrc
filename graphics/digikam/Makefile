@@ -1,44 +1,37 @@
-# $NetBSD: Makefile,v 1.54 2010/02/15 14:12:43 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2010/02/15 14:19:30 wiz Exp $
+#
 
-DISTNAME=		digikam-0.9.6
-PKGREVISION=		5
-CATEGORIES=		graphics kde
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	digikam-1.1.0
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://www.digikam.org/
-COMMENT=		Advanced digital photo management application for KDE
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	wiz@NetBSD.org
+HOMEPAGE=	http://digikam.sourceforge.net/
+COMMENT=	Advanced digital photo management application (KDE4)
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2.1
 
-USE_TOOLS+=		gmake msgfmt perl:run pkg-config
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+DEPENDS+=	qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
+
 PKG_DESTDIR_SUPPORT=	user-destdir
+USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 
-CONFIGURE_ARGS+=	--without-included-sqlite3
+REPLACE_PERL=	utilities/scripts/digitaglinktree/digitaglinktree
+USE_CMAKE=	yes
+USE_TOOLS+=	gawk msgfmt perl:run pkg-config
 
-REPLACE_PERL+=		digikam/utilities/scripts/digitaglinktree
+.include "options.mk"
 
-BUILDLINK_API_DEPENDS.imlib2+=	imlib2>=1.2
-BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.5.2
-BUILDLINK_API_DEPENDS.libkexiv2+=	libkexiv2>=0.1.6
-BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=0.1.6
-
-PLIST_SUBST=	HTMLDIR=${DISTNAME}
-
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/imlib2/buildlink3.mk"
-.include "../../graphics/jasper/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/libkdcraw/buildlink3.mk"
-.include "../../graphics/libkexiv2/buildlink3.mk"
-.include "../../graphics/libkipi/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../meta-pkgs/kde3/kde3.mk"
+# for libkdcraw>=0.4.0
+BUILDLINK_API_DEPENDS.kdegraphics4+=	kdegraphics4>=4.1.2nb1
+.include "../../graphics/kdegraphics4/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/liblqr/buildlink3.mk"
+.include "../../multimedia/kdemultimedia4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
