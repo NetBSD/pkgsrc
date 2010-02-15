@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/11/08 22:40:25 seb Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/15 15:20:00 sno Exp $
 #
 
 DISTNAME=	Devel-PartialDump-0.12
@@ -12,13 +12,15 @@ HOMEPAGE=	http://search.cpan.org/dist/Devel-PartialDump/
 COMMENT=	Perl 5 module to make partial dumps of data structures
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Any-Moose-[0-9]*:../../devel/p5-Any-Moose
-DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
+DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
-DEPENDS+=	p5-Test-use-ok-[0-9]*:../../devel/p5-Test-use-ok
+DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
 
 # For test target
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=	p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=	p5-Test-use-ok-[0-9]*:../../devel/p5-Test-use-ok
+
+REPLACE_PERL+=	lib/Devel/PartialDump.pm
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
