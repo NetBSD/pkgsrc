@@ -1,7 +1,7 @@
 KMLDonkey is a cross-platform graphical user interface for Mldonkey
 cross-platform peer-to-peer downloader.
 
-* Runs wherever kde runs.
+* Runs wherever KDE runs.
 * Can handle multiple threads simultaneously
 * Integrates with several browsers
 * Can be used with traffic-shaping tools
