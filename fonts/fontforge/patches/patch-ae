@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.20 2009/10/11 08:01:47 adam Exp $
+$NetBSD: patch-ae,v 1.21 2010/02/15 20:39:31 schwarz Exp $
 
 --- configure.orig	2009-09-24 01:55:22.000000000 +0200
 +++ configure
@@ -43,7 +43,7 @@ $NetBSD: patch-ae,v 1.20 2009/10/11 08:01:47 adam Exp $
  fi
  
 -CFLAGS_NOOPT=`echo $CFLAGS | sed -e s/-O2// | sed -e s/-O//`
-+CFLAGS_NOOPT=`echo $CFLAGS | sed -e s/-O2//g | sed -e s/-O//g`
++CFLAGS_NOOPT=`echo $CFLAGS | sed -e s/-O[1-9]//g | sed -e s/-O//g`
  
  cp $ac_confdir/Makefile.dynamic.in $ac_confdir/Makefile.in
  cp $ac_confdir/Unicode/Makefile.dynamic.in $ac_confdir/Unicode/Makefile.in
