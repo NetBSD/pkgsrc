@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.750 2010/02/15 15:30:57 sno Exp $
+$NetBSD: CHANGES-2010,v 1.751 2010/02/15 15:32:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -899,3 +899,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-Dumpvar to 1.06 [sno 2010-02-15]
 	Updated devel/p5-Devel-PartialDump to 0.13 [sno 2010-02-15]
 	Updated devel/p5-Devel-StackTrace-WithLexicals to 0.05 [sno 2010-02-15]
+	Moved net/kmldonkey to net/kmldonkey-kde3 [wiz 2010-02-15]
+	Updated net/kmldonkey to 2.0.2.4.3.3 [wiz 2010-02-15]
