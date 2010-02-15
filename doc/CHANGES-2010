@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.758 2010/02/15 16:05:39 sno Exp $
+$NetBSD: CHANGES-2010,v 1.759 2010/02/15 16:10:28 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -908,3 +908,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added audio/liblastfm version 0.3.0nb2 [wiz 2010-02-15]
 	Added devel/qtscriptgenerator version 0.1.0nb3 [wiz 2010-02-15]
 	Updated devel/p5-Log-Log4perl to 1.27 [sno 2010-02-15]
+	Updated devel/p5-Log-Any to 0.11 [sno 2010-02-15]
