@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.3 2010/02/15 17:06:18 joerg Exp $
+
+--- Makefile.in.orig	1997-07-08 06:19:04.000000000 +0000
++++ Makefile.in
+@@ -75,11 +75,11 @@ priv: ${OBJ} @LIBOBJS@
+ ${OBJ}: ${srcdir}/priv.h config.h 
+ 
+ install: all ${srcdir}/priv.1 installdirs
+-	${INSTALL_PROGRAM} -o root -m ${BINMODE} priv ${bindir}/${binprefix}priv
++	${BSD_INSTALL_PROGRAM} priv ${bindir}/${binprefix}priv
+ 	${INSTALL_DATA} ${srcdir}/priv.1 ${mandir}/${manprefix}priv.${manext}
+ 
+ installdirs: mkinstalldirs
+-	${srcdir}/mkinstalldirs ${bindir} ${mandir} ${sysconfdir}/priv
++	${srcdir}/mkinstalldirs ${bindir} ${mandir}
+ 
+ uninstall:
+ 	rm -f ${bindir}/${binprefix}priv
