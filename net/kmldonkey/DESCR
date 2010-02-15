@@ -1,2 +1,8 @@
-KMLDonkey is a frontend for MLDonkey, a powerful P2P file sharing
-tool, designed for the KDE desktop.
+KMLDonkey is a cross-platform graphical user interface for Mldonkey
+cross-platform peer-to-peer downloader.
+
+* Runs wherever kde runs.
+* Can handle multiple threads simultaneously
+* Integrates with several browsers
+* Can be used with traffic-shaping tools
+* Can handle several security options
