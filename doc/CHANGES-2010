@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.729 2010/02/15 12:55:45 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.730 2010/02/15 12:58:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -868,3 +868,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-collection-basic-doc version 2009 [minskim 2010-02-15]
 	Updated converters/skf to 1.97.0a [obache 2010-02-15]
 	Updated graphics/oxygen-icons to 4.3.5nb1 [wiz 2010-02-15]
+	Removed shells/bash3 successor shells/bash [wiz 2010-02-15]
