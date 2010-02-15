@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2010/01/09 11:50:36 obache Exp $
+$NetBSD: patch-ac,v 1.2 2010/02/15 13:41:18 obache Exp $
 
 Avoid to conflict with getline(3) in IEEE Std 1003.1-2008.
 
---- lib/cconv.c.orig	1999-05-26 23:55:25.000000000 +0000
+--- lib/cconv.c.orig	2002-10-03 09:35:28.000000000 +0000
 +++ lib/cconv.c
-@@ -767,7 +767,7 @@ static wchar *promptsave(wchar *);
+@@ -790,7 +790,7 @@ static wchar *promptsave(wchar *);
  static int parseLine(uchar *, uchar **, int);
  static FILE *openfile(char *);
  static int doinclude(uchar *, Files *, void (*)());
@@ -13,7 +13,7 @@ Avoid to conflict with getline(3) in IEEE Std 1003.1-2008.
  static int readRuleFile(ccRule, char *);
  static int registMode(ccRule, int, uchar **);
  static int newMode(ccRule, Files *, _strbufRec *, _funcbufRec *,
-@@ -1012,8 +1012,8 @@ void (*efunc)();
+@@ -1035,8 +1035,8 @@ void (*efunc)();
  	return 0;
  }
  
@@ -24,7 +24,7 @@ Avoid to conflict with getline(3) in IEEE Std 1003.1-2008.
  uchar *line;
  int linesize;
  Files *files;
-@@ -1077,7 +1077,7 @@ char *file;
+@@ -1100,7 +1100,7 @@ char *file;
  	rule->nmode = 0;
  	rule->initialmode = -1;
  
@@ -33,7 +33,7 @@ Avoid to conflict with getline(3) in IEEE Std 1003.1-2008.
  		(void)Strcpy(tmp, line);
  		if ((argc = parseLine(tmp, argv, 20)) == 0)
  			continue;
-@@ -1246,7 +1246,7 @@ uchar **av;
+@@ -1269,7 +1269,7 @@ uchar **av;
  	cdbuf.cdbuf = NULL;
  
  	/* ルールを読んでストアする */
