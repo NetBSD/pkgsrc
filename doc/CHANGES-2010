@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.725 2010/02/15 00:25:22 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.726 2010/02/15 00:33:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -865,3 +865,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/tex-mflogo-doc to 2009 [minskim 2010-02-14]
 	Updated print/tex-pdftex-doc to 1.40.10 [minskim 2010-02-15]
 	Added print/tex-tetex-doc version 3.0 [minskim 2010-02-15]
+	Added print/tex-collection-basic-doc version 2009 [minskim 2010-02-15]
