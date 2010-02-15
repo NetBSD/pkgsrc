@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/15 16:38:15 wiz Exp $
+
+--- hotplug.sh.in.orig	2009-04-25 00:20:55.000000000 +0000
++++ hotplug.sh.in	2009-04-25 00:21:18.000000000 +0000
+@@ -165,7 +165,7 @@
+ 	fi
+     fi
+ fi
+-if [ "x${EDITMAP}" == "xyes" ]; then
++if [ "x${EDITMAP}" = "xyes" ]; then
+     echo "We need to edit the ${HOTPLUGPATH}/usb.usermap if it exists..."
+     if test -f ${HOTPLUGPATH}/usb.usermap
+     then
