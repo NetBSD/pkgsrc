@@ -1,0 +1,25 @@
+$NetBSD: patch-ao,v 1.1.2.2 2010/02/15 07:04:03 spz Exp $
+
+This is fix for security problem:
+
+http://www.squid-cache.org/Advisories/SQUID-2010_2.txt
+
+Since the announced patch contains RCS style revision string, it never
+applied to clearly.
+
+http://www.squid-cache.org/Versions/v2/2.7/changesets/12600.patch.
+
+--- src/htcp.c.orig	2008-05-04 23:23:13.000000000 +0000
++++ src/htcp.c
+@@ -950,6 +950,11 @@ htcpHandleClr(htcpDataHeader * hdr, char
+ 	debug(31, 3) ("htcpHandleClr: htcpUnpackSpecifier failed\n");
+ 	return;
+     }
++    if (!s->request) {
++	debug(31, 2) ("htcpHandleTstRequest: failed to parse request\n");
++	htcpFreeSpecifier(s);
++	return;
++    }
+     if (!htcpAccessCheck(Config.accessList.htcp_clr, s, from)) {
+ 	debug(31, 2) ("htcpHandleClr: Access denied\n");
+ 	htcpFreeSpecifier(s);
