@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/02/02 18:11:44 sno Exp $
+$NetBSD: distinfo,v 1.5 2010/02/15 14:24:33 sno Exp $
 
-SHA1 (Data-Compare-1.2102.tar.gz) = 613c560f7aae3ef017d703df5ad85494209981dc
-RMD160 (Data-Compare-1.2102.tar.gz) = f36816c13b4c3c961ae1a8988b80a6b1af56fbbd
-Size (Data-Compare-1.2102.tar.gz) = 24220 bytes
+SHA1 (Data-Compare-1.22.tar.gz) = 00079776bf7481a4c9a76163a269dbd4e40c2bea
+RMD160 (Data-Compare-1.22.tar.gz) = 141aa84b7b5712188be2deb66bd53703ebb3e85b
+Size (Data-Compare-1.22.tar.gz) = 23483 bytes
