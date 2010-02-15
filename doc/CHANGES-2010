@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.727 2010/02/15 01:04:13 obache Exp $
+$NetBSD: CHANGES-2010,v 1.728 2010/02/15 12:14:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -867,3 +867,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-tetex-doc version 3.0 [minskim 2010-02-15]
 	Added print/tex-collection-basic-doc version 2009 [minskim 2010-02-15]
 	Updated converters/skf to 1.97.0a [obache 2010-02-15]
+	Updated graphics/oxygen-icons to 4.3.5nb1 [wiz 2010-02-15]
