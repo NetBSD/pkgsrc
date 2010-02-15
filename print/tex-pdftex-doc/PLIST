@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/27 16:24:27 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/15 00:08:08 minskim Exp $
 share/texmf-dist/doc/pdftex/Announcement-1.40.2
 share/texmf-dist/doc/pdftex/NEWS
 share/texmf-dist/doc/pdftex/README
@@ -46,4 +46,3 @@ share/texmf-dist/doc/pdftex/thanh/ext/mktextfm.ext
 share/texmf-dist/doc/pdftex/thanh/ext/mktfm8z
 share/texmf-dist/doc/pdftex/thanh/ext/protcode.tex
 share/texmf-dist/doc/pdftex/thanh/ext/ufntinst.sty
-share/texmf-dist/doc/pdftex/thanh/thesis-png.pdf
