@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1294 2010/02/15 16:00:26 wiz Exp $
+# $NetBSD: Makefile,v 1.1295 2010/02/15 16:42:17 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -323,6 +323,7 @@ SUBDIR+=	libmowgli
 SUBDIR+=	libmtp
 SUBDIR+=	libnet10
 SUBDIR+=	libnet11
+SUBDIR+=	libnjb
 SUBDIR+=	libntlm
 SUBDIR+=	liboil
 SUBDIR+=	liboop
