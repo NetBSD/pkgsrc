@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.740 2010/02/15 14:33:13 sno Exp $
+$NetBSD: CHANGES-2010,v 1.741 2010/02/15 14:39:05 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -886,3 +886,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/digikam to 1.1.0 [wiz 2010-02-15]
 	Updated devel/p5-Data-Dumper-Concise to 1.200 [sno 2010-02-15]
 	Updated devel/p5-Data-Page to 2.02 [sno 2010-02-15]
+	Updated devel/p5-Data-Pageset to 1.06 [sno 2010-02-15]
