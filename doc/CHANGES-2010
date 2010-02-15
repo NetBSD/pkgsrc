@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.766 2010/02/15 17:02:15 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.767 2010/02/15 17:17:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -916,3 +916,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/libnjb version 2.2.6 [wiz 2010-02-15]
 	Updated x11/p5-Wx to 0.97.01 [sno 2010-02-15]
 	Added databases/mysql51-embedded version 5.1.43 [wiz 2010-02-15]
+	Added audio/moodbar version 0.1.2 [wiz 2010-02-15]
