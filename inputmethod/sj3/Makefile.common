@@ -1,0 +1,47 @@
+# $NetBSD: Makefile.common,v 1.1 2010/02/15 13:35:21 obache Exp $
+# used by inputmethod/sj3-server/Makefile
+# used by inputmethod/sj3-client/Makefile
+#
+
+.include "${.CURDIR}/../../inputmethod/sj3/version.mk"
+
+DISTNAME=	sj3-${SJ3_VERSION}
+CATEGORIES=	japanese inputmethod
+MASTER_SITES=	http://sj3.googlecode.com/files/
+
+MAINTAINER=	obache@NetBSD.org
+HOMEPAGE=	http://code.google.com/p/sj3/
+COMMENT?=	SJ3 Japanese input method
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+DISTINFO_FILE=	${.CURDIR}/../../inputmethod/sj3/distinfo
+PATCHDIR=	${.CURDIR}/../../inputmethod/sj3/patches
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
+
+PKGCONFIG_OVERRIDE+=	lib/sj3lib/sj3lib.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+SJ3OWNER?=		daemon
+SJ3GROUP?=		daemon
+PKG_GROUPS=		${SJ3GROUP}
+PKG_USERS=		${SJ3OWNER}:${SJ3GROUP}
+PKG_GROUPS_VARS+=	SJ3GROUP
+PKG_USERS_VARS+=	SJ3OWNER
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/sj3
+CONFIGURE_ARGS+=	--with-user=${SJ3OWNER:Q}
+CONFIGURE_ARGS+=	--with-group=${SJ3GROUP:Q}
+CONFIGURE_ARGS+=	--disable-server
+CONFIGURE_ARGS+=	--disable-client
+CONFIGURE_ARGS+=	--disable-dict
+CONFIGURE_ARGS+=	--disable-demo
+
+BUILD_DEFS+=		VARBASE
+
+PKG_SYSCONFSUBDIR=	sj3
