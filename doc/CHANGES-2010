@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.755 2010/02/15 15:50:57 sno Exp $
+$NetBSD: CHANGES-2010,v 1.756 2010/02/15 16:00:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -905,3 +905,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added audio/taglib-extras version 1.0.1 [wiz 2010-02-15]
 	Updated devel/p5-Inline to 0.46 [sno 2010-02-15]
 	Updated devel/p5-IPC-Cmd to 0.56 [sno 2010-02-15]
+	Added audio/liblastfm version 0.3.0nb2 [wiz 2010-02-15]
