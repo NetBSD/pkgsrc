@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/25 02:22:29 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/02/15 21:48:23 dholland Exp $
 bin/xcdplayer
 lib/X11/app-defaults/XCdplayer
-${IMAKE_MAN_DIR}/xcdplayer.${IMAKE_MANNEWSUFFIX}.gz
+${IMAKE_MAN_DIR}/xcdplayer.${IMAKE_MAN_SUFFIX}
