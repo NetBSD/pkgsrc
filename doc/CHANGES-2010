@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.756 2010/02/15 16:00:53 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.757 2010/02/15 16:01:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -906,3 +906,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Inline to 0.46 [sno 2010-02-15]
 	Updated devel/p5-IPC-Cmd to 0.56 [sno 2010-02-15]
 	Added audio/liblastfm version 0.3.0nb2 [wiz 2010-02-15]
+	Added devel/qtscriptgenerator version 0.1.0nb3 [wiz 2010-02-15]
