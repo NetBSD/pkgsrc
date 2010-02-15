@@ -1,4 +1,4 @@
-This package provides Kipi (KDE Image Plugin Interface) plugins:
+This package provides Kipi (KDE3 Image Plugin Interface) plugins:
 RawConverter, SlideShow, MpegEncoder, ImagesGallery, PrintWizard,
 JpegLossLess, CdArchiving, AcquireImages, Calendar, SendImages,
 BatchProcessImages, TimeAdjust, WallPaper, FindImages, HelloWorld.
