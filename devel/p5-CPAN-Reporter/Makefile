@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/06/14 19:39:48 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/15 14:07:48 sno Exp $
 
-DISTNAME=	CPAN-Reporter-1.1708
+DISTNAME=	CPAN-Reporter-1.1710
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
@@ -29,12 +29,13 @@ PKG_SUGGESTED_OPTIONS+=	#empty
 DEPENDS+=	p5-CPAN>=1.9301:../../devel/p5-CPAN
 DEPENDS+=	p5-Config-Tiny>=2.12:../../devel/p5-Config-Tiny
 DEPENDS+=	p5-Devel-Autoflush>=0.04:../../devel/p5-Devel-Autoflush
+DEPENDS+=	p5-ExtUtils-MakeMaker>=6.36:../../devel/p5-ExtUtils-MakeMaker
 DEPENDS+=	p5-File-Copy-Recursive>=0.35:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-File-HomeDir>=0.58:../../devel/p5-File-HomeDir
 DEPENDS+=	p5-File-pushd>=0.32:../../devel/p5-File-pushd
 DEPENDS+=	p5-IO-CaptureOutput>=1.03:../../devel/p5-IO-CaptureOutput
 DEPENDS+=	p5-Parse-CPAN-Meta-[0-9]*:../../devel/p5-Parse-CPAN-Meta
-DEPENDS+=	p5-Probe-Perl>=0.01:../../devel/p5-Probe-Perl
+DEPENDS+=	p5-Probe-Perl-[0-9]*:../../devel/p5-Probe-Perl
 DEPENDS+=	p5-Tee>=0.13:../../devel/p5-Tee
 DEPENDS+=	p5-Test-Reporter>=1.54:../../devel/p5-Test-Reporter
 
