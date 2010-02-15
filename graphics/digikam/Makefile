@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2010/01/18 09:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2010/02/15 14:12:43 wiz Exp $
 
 DISTNAME=		digikam-0.9.6
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
@@ -39,5 +39,6 @@ PLIST_SUBST=	HTMLDIR=${DISTNAME}
 .include "../../graphics/libkipi/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
