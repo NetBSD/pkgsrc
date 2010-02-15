@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/06/14 19:39:48 sno Exp $
+$NetBSD: distinfo,v 1.4 2010/02/15 14:07:48 sno Exp $
 
-SHA1 (CPAN-Reporter-1.1708.tar.gz) = 1c5fc36870711d6461750badc64c8d8c0fd5a0b6
-RMD160 (CPAN-Reporter-1.1708.tar.gz) = e98e0b3582cb9322d439a9277fdf7988953eeaed
-Size (CPAN-Reporter-1.1708.tar.gz) = 123146 bytes
+SHA1 (CPAN-Reporter-1.1710.tar.gz) = 6175a7814501cd0b5d6ec64687ea11d9dfe6191f
+RMD160 (CPAN-Reporter-1.1710.tar.gz) = be225b819b5e38210689d461c32f6d5a3c731010
+Size (CPAN-Reporter-1.1710.tar.gz) = 125717 bytes
