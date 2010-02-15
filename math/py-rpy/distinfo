@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2007/03/14 11:55:41 markd Exp $
+$NetBSD: distinfo,v 1.8 2010/02/15 16:32:20 joerg Exp $
 
 SHA1 (rpy-0.99.0.tar.gz) = 6b94e20adb555b9dfb914ef89745e75f3e9e4c8b
 RMD160 (rpy-0.99.0.tar.gz) = 9880e9da9d8b8cacccd947df906e643b7457aa44
 Size (rpy-0.99.0.tar.gz) = 79120 bytes
-SHA1 (patch-aa) = 216dc7abbdfb9f6c9a127c7be8a5b44dfdbfaa11
+SHA1 (patch-aa) = e148451a16e1d89bc26b4e86670772c626d24d69
