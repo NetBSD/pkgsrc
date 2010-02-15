@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.28 2010/02/10 20:39:34 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.29 2010/02/15 07:58:39 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -87,3 +87,16 @@ esniper: repair update
 Pullup ticket #2996 - requested by dholland
 apache: security update
 ap-ssl: resulting build fix
+Pullup ticket #3002 - requested by taca
+squid27: security patch
+Pullup ticket #3003 - requested by taca
+squid30: security update
+Pullup ticket #3004 - requested by taca
+f-prot-antivirus6-ms-bin: security fix
+Pullup ticket #3005 - requested by taca
+rubygems: functionality fix
+Pullup ticket #3006 - requested by tron
+fetchmail: security update
+fetchmailconf: version adjustment
+Pullup ticket #3007 - requested by dholland
+h3800-hms-gcc: build fix
