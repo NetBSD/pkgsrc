@@ -1,0 +1,41 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/02/15 14:37:58 wiz Exp $
+
+--- kipi-plugins/ipodexport/ipodexportdialog.cpp.orig	2008-12-13 11:20:05.000000000 +0000
++++ kipi-plugins/ipodexport/ipodexportdialog.cpp
+@@ -47,6 +47,10 @@
+ #include <libkipi/imagedialog.h>
+ #endif
+ 
++extern "C" {
++#include <gdk-pixbuf/gdk-pixbuf.h>
++}
++
+ #define debug() kdDebug()
+ 
+ using namespace IpodExport;
+@@ -344,9 +348,13 @@ UploadDialog::ipodItemSelected( QListVie
+         return;
+ 
+     Itdb_Artwork *artwork = item->artwork();
+-    Itdb_Thumb *thumb = itdb_artwork_get_thumb_by_type( artwork, ITDB_THUMB_PHOTO_SMALL );
++    GdkPixbuf *gpixbuf = NULL;
+ 
+-    if( !thumb )
++    // First arg in itdb_artwork_get_pixbuf(...) is pointer to Itdb_Device struct,
++    // in kipiplugin-ipodexport it is m_itdb->device. i hope it _is_ initialiezed
++    gpixbuf = (GdkPixbuf*) itdb_artwork_get_pixbuf( m_itdb->device, artwork, -1, -1 );
++
++    if( !gpixbuf )
+     {
+         debug() << "no thumb was found" << endl;
+         return;
+@@ -361,6 +369,9 @@ UploadDialog::ipodItemSelected( QListVie
+ //     QPixmap pix;
+ //     pix.convertFromImage( image );
+ //     m_ipodPreview->setPixmap( pix );
++
++    // memory release
++    gdk_pixbuf_unref ( gpixbuf );
+ }
+ 
+ void

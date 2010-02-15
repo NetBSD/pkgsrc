@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/15 14:37:58 wiz Exp $
+
+--- kipi-plugins/ipodexport/Makefile.in.orig	2008-12-13 11:20:38.000000000 +0000
++++ kipi-plugins/ipodexport/Makefile.in
+@@ -384,6 +384,7 @@ xdg_menudir = @xdg_menudir@
+ INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) \
+               $(LIBKIPI_CFLAGS) \
+               $(LIBGPOD_CFLAGS) \
++              $(GDK_CFLAGS) \
+               $(all_includes)
+ 
+ #>- METASOURCES = AUTO
+@@ -396,7 +397,7 @@ kipiplugin_ipodexport_la_SOURCES = plugi
+                                    imagelist.cpp
+ 
+ kipiplugin_ipodexport_la_LIBADD = $(LIBKIPI_LIBS) $(LIB_KIO) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
+-kipiplugin_ipodexport_la_LDFLAGS = -module $(KDE_PLUGIN) $(LIBGPOD_LIBS) $(all_libraries)
++kipiplugin_ipodexport_la_LDFLAGS = -module $(KDE_PLUGIN) $(LIBGPOD_LIBS) $(GDK_LIBS) $(all_libraries)
+ kde_services_DATA = kipiplugin_ipodexport.desktop
+ #>- all: all-am
+ #>+ 1
