@@ -9,4 +9,9 @@ entries are grouped together by any field you like, allowing you
 to see how many are in each group. On the right, selected fields
 are shown in column format, allowing you to sort by any field. On
 the bottom is a customizable HTML view of the current entry. The
-entry editor is a dialog box where you enter the data.
+entry editor is a dialog box where you enter the data. Check out
+the screenshots.
+
+Tellico keeps things simple, so no database server is needed. The
+data is saved in XML format, which makes for easy parsing, portability,
+and styling.
