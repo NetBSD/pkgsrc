@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.763 2010/02/15 16:33:55 sno Exp $
+$NetBSD: CHANGES-2010,v 1.764 2010/02/15 16:43:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -913,3 +913,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Log-Any-Adapter-Log4perl to 0.05 [sno 2010-02-15]
 	Updated devel/p5-Log-Dispatch-Config to 1.03 [sno 2010-02-15]
 	Updated devel/p5-Term-ANSIColor to 3.00 [sno 2010-02-15]
+	Added devel/libnjb version 2.2.6 [wiz 2010-02-15]
