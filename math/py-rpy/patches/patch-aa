@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/06/20 19:54:14 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2010/02/15 16:32:20 joerg Exp $
 
 --- rpy_tools.py.orig	2006-06-20 19:22:37.000000000 +0000
 +++ rpy_tools.py
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2006/06/20 19:54:14 joerg Exp $
        raise RuntimeError("Couldn't execute the R interpreter" +
                           " `%s'.\n" % rexec )
 -    version = re.search("R +([0-9]\.[0-9]\.[0-9])", output)
-+    version = re.search("R version +([0-9]\.[0-9]\.[0-9])", output)
++    version = re.search("R version +([0-9]+\.[0-9]+\.[0-9]+)", output)
      if not version:
        raise RuntimeError("Couldn't obtain version number from output\n"
                                 "of `R --version'.\n")
