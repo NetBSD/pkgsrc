@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/01/18 09:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2010/02/15 16:17:29 joerg Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -15,6 +15,8 @@ COMMENT=	Palm OS Emulator
 #LICENSE=       GPL
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BROKEN=		Casts to va_list are forbidden by ISO C++.
 
 POSE_VERSION=	3.5
 
