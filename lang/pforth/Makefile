@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/08/29 18:53:57 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/15 16:41:46 joerg Exp $
 
 DISTNAME=		pfthpc21
 PKGNAME=		pforth-21
@@ -17,7 +17,7 @@ WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
 
-NOT_FOR_PLATFORM=	*-*-alpha  #segfaults when running ./pforth during build
+NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 
 INSTALLATION_DIRS=	bin
 
