@@ -1,21 +1,21 @@
-$NetBSD: patch-aa,v 1.11 2009/02/15 14:41:40 wiz Exp $
+$NetBSD: patch-aa,v 1.12 2010/02/15 14:40:38 wiz Exp $
 
---- kipi-plugins/ipodexport/Makefile.in.orig	2008-12-13 11:20:38.000000000 +0000
-+++ kipi-plugins/ipodexport/Makefile.in
-@@ -384,6 +384,7 @@ xdg_menudir = @xdg_menudir@
- INCLUDES = $(KIPI_PLUGINS_COMMON_INCLUDE) \
-               $(LIBKIPI_CFLAGS) \
-               $(LIBGPOD_CFLAGS) \
-+              $(GDK_CFLAGS) \
-               $(all_includes)
+--- dngconverter/dngwriter/extra/dng_sdk/dng_pthread.cpp.orig	2009-11-01 22:51:46.000000000 +0000
++++ dngconverter/dngwriter/extra/dng_sdk/dng_pthread.cpp
+@@ -35,7 +35,6 @@
+ #include <windows.h>
  
- #>- METASOURCES = AUTO
-@@ -396,7 +397,7 @@ kipiplugin_ipodexport_la_SOURCES = plugi
-                                    imagelist.cpp
+ #include <process.h>
+-#include <errno.h>
+ #include <memory>
+ #include <new>
+ #include <map>
+@@ -46,6 +45,8 @@
  
- kipiplugin_ipodexport_la_LIBADD = $(LIBKIPI_LIBS) $(LIB_KIO) $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
--kipiplugin_ipodexport_la_LDFLAGS = -module $(KDE_PLUGIN) $(LIBGPOD_LIBS) $(all_libraries)
-+kipiplugin_ipodexport_la_LDFLAGS = -module $(KDE_PLUGIN) $(LIBGPOD_LIBS) $(GDK_LIBS) $(all_libraries)
- kde_services_DATA = kipiplugin_ipodexport.desktop
- #>- all: all-am
- #>+ 1
+ #endif
+ 
++#include <errno.h>
++
+ /*****************************************************************************/
+ 
+ #if qWinOS

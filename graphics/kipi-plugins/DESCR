@@ -1,4 +1,18 @@
-This package provides Kipi (KDE Image Plugin Interface) plugins:
-RawConverter, SlideShow, MpegEncoder, ImagesGallery, PrintWizard,
-JpegLossLess, CdArchiving, AcquireImages, Calendar, SendImages,
-BatchProcessImages, TimeAdjust, WallPaper, FindImages, HelloWorld.
+KIPI (KDE Image Plugin Interface) is an effort to develop a common
+plugin structure for Digikam, KPhotoAlbum, Showimg and GwenView.
+Its aim is to share image plugins among graphic applications. Kipi
+is based on the old digiKam plugins implementation.
+
+One of the nicest things about KDE Photo Management Programs like
+"digiKam", "KPhotoAlbum", "GwenView" and "ShowImg" is how easily
+its functionality can be extended, by using plugins. Plugins can
+manipulate image files in almost any way that users can. Their
+advantage is that it is much easier to add a capability to the host
+application by writing a small plugin than by modifying the host
+application core. Many valuable plugins have C++ source code that
+only comes to 100-200 lines or so.
+
+Kipi plugins are additional functions for the KDE Images Managment
+Host Programs. They can add extra menus and shortcuts, and extend
+the host programs features. You can install as many or as few as
+you like, from within host programs.
