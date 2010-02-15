@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/02/04 01:46:15 joerg Exp $
+$NetBSD: distinfo,v 1.3 2010/02/15 16:13:25 joerg Exp $
 
 SHA1 (osbf-lua-2.0.4.tar.gz) = 6fd4fb6496c20e9340cdcff4820c50a793e2ea27
 RMD160 (osbf-lua-2.0.4.tar.gz) = ba808072739de2bcb40ce81f0177ef7588508670
 Size (osbf-lua-2.0.4.tar.gz) = 82343 bytes
 SHA1 (patch-aa) = 25fe0abc6543893d88d147e418027cee9a544502
-SHA1 (patch-bb) = 1d2cc734d37285c2d635fa9f72e6e50f28713e09
+SHA1 (patch-bb) = ead9d141481c2eabd510dd26eb39b5f88ede9e04
