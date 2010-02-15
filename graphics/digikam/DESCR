@@ -1,2 +1,43 @@
-Digikam is a simple digital photo management KDE application, which makes
-importing and organizing digital photos easy.
+digiKam is an advanced digital photo management application for
+KDE, which makes importing and organizing digital photos a "snap".
+The photos are organized in albums which can be sorted chronologically,
+by folder layout or by custom collections.
+
+Tired of the folder constraints? Don't worry, digiKam also provides
+tagging. You tag your images which can be spread out across multiple
+folders, and digiKam provides fast and intuitive ways to browse
+these tagged images. You can also add comments to your images.
+digiKam makes use of a fast and robust database to store these
+meta-informations which makes adding and editing of comments and
+tags very reliable.
+
+digiKam makes use of KIPI plugins for lots of added functionality.
+KIPI (KDE Image Plugin Interface) is an initiative to create a
+common plugin infrastructure for digiKam, KPhotoAlbum, Showimg,
+and GwenView. Its aim is to allow development of image plugins
+which can be shared among KDE graphical applications.
+
+An easy-to-use interface is provided that enables you to connect
+to your camera and preview, download and/or delete your images.
+Basic auto-transformations can be deployed on the fly during image
+downloading.
+
+Another tool, which most artists and photographers will be familiar
+with, is a Light Table. This tool assists artists and photographers
+with reviewing their work ensuring the highest quality only. A
+classical light table will show the artist the place on the images
+to touch up. Well in digiKam, the light table function provides
+the user a similar experience. You can import a photo, drag it onto
+the light table, and touch up only the areas that need it.
+
+The digiKam Image Editor has its own plugin subsystem with some
+common tools e.g. red eye correction or Gamma correction. Additional
+plugins are provided with the main application to process advanced
+corrections on image like color management, noise reduction, or
+special effects. digiKam Image Editor supports all camera RAW file
+formats, 16 bits color depth, Exif/Makernote/IPTC/GPS metadata,
+Color management, tagging/rating/comments pictures, etc.
+
+A stand-alone image editor version named ShowFoto is also available.
+It runs without digiKam images database support, but provides all
+Image Editor functions.
