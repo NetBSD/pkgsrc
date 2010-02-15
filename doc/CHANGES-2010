@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.745 2010/02/15 14:56:29 sno Exp $
+$NetBSD: CHANGES-2010,v 1.746 2010/02/15 15:09:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -894,3 +894,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Moved misc/tellico to misc/tellico-kde3 [wiz 2010-02-15]
 	Updated misc/tellico to 2.1.1nb3 [wiz 2010-02-15]
 	Updated devel/p5-Data-Section to 0.100.270 [sno 2010-02-15]
+	Updated misc/tellico to 2.2 [wiz 2010-02-15]
