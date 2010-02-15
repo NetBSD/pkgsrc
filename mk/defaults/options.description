@@ -169,8 +169,8 @@ gstreamer		Enable gstreamer support.
 gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
 gtkspell		Enable gtkspell support.	
-gzip			Enable compression using gzip
 guile			Enable support for GUILE
+gzip			Enable compression using gzip
 hal			Support for the freedesktop.org Hardware Abstraction Layer
 halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hping-suid		Install hping executable setuid root.
@@ -267,9 +267,11 @@ lang-zh-cn		Add Chinese Simplified language support.
 lang-zh-tw		Add Chinese Traditional language support.
 lcms			Enable Light Color Management System support.
 ldap			Enable LDAP support.
+lensfun			Enable lensfun (camera lens distortion rectifyer) support.
 libao			Enable the platform-independent 'ao' audio library.
 libgpod			Enable libgpod support.
 libiconv-cp932		Add supplemental support for CP932
+liblqr			Enable liblqr (liquid rescale) support.
 libmtp			Enable MTP via libmtp support.
 libofx			Enable OFX support.
 libspiff		Use libspiff for XML shareable playlist support.
@@ -293,6 +295,7 @@ m68060-optimized	Optimize for m68060 (only).
 mac			Enable Monkey's Audio Codec support.
 mad			Enable usage of the mad library to play MP3 files.
 maintainer-zts		Enable the Zend Thread Safety option for PHP
+marble			Enable marble (virtual globe) support.
 mex			Enable matlab mex support (Linux and Solaris only).
 mikmod			Enable MikMod sound library.
 mitshm			Enable MIT-SHM X extension support.
@@ -356,6 +359,7 @@ pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
 perl			Enable Perl support.
 pgsql			Enable PostgreSQL support.
+pim			Enable pim (personal information management) support.
 pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 pkcs11			Use certificate-on-a-stick (or card) support.
@@ -503,8 +507,8 @@ xjdic-locale		Honor LOCALE env var, instead of requiring ISO-2022-JP
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
 xml			Enable XML support.
-xrender			Enable Xrender support.
 xrandr			Enable Xrandr support.
+xrender			Enable Xrender support.
 xscreensaver-webcollage	Install webcollage screensaver.
 xterm-256color		Enable 256 color support.
 xterm-88color		Enable 88 color support.
