@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/15 14:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/15 14:44:16 wiz Exp $
 
 DISTNAME=		digikam-doc-0.9.5
 PKGREVISION=		3
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.digikam.org/
-COMMENT=		Documentation for Digikam
+COMMENT=		Documentation for Digikam (KDE3)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

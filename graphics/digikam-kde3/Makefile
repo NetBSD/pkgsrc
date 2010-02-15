@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/15 14:33:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/15 14:44:17 wiz Exp $
 
 DISTNAME=		digikam-0.9.6
 PKGREVISION=		5
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.digikam.org/
-COMMENT=		Advanced digital photo management application for KDE
+COMMENT=		Advanced digital photo management application (KDE3)
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake msgfmt perl:run pkg-config
