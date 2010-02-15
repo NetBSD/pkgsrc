@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2010/02/15 13:35:21 obache Exp $
+bin/sj3dic
+bin/sj3stat
+include/sj3lib.h
+lib/libsj3lib.la
+lib/pkgconfig/sj3lib.pc
+man/man1/sj3dic.1
+share/doc/sj3/Nihongo.ps
+share/doc/sj3/sj3lib.ms
