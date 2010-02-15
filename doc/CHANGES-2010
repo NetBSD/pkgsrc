@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.733 2010/02/15 13:41:37 obache Exp $
+$NetBSD: CHANGES-2010,v 1.734 2010/02/15 13:43:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -877,3 +877,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added inputmethod/sj3 version 2.0.2.23p1 [obache 2010-02-15]
 	Updated time/p5-Time-HiRes to 1.9720 [sno 2010-02-15]
 	Updated inputmethod/kinput2 to 3.1 [obache 2010-02-15]
+	Updated devel/p5-ExtUtils-ParseXS to 2.22.03 [sno 2010-02-15]
