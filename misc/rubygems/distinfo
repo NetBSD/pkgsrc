@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2009/09/25 16:09:00 minskim Exp $
+$NetBSD: distinfo,v 1.23.4.1 2010/02/15 07:54:22 spz Exp $
 
 SHA1 (rubygems-1.3.5.tgz) = 8545f25d00c757a310b879a2580e56d6012fc981
 RMD160 (rubygems-1.3.5.tgz) = 2d17f0de2d387bd2a034916cb79531110f3be196
@@ -8,7 +8,7 @@ SHA1 (patch-ab) = b38026920e31ae7782df6bbd7d7285d18dcf6ece
 SHA1 (patch-ac) = 30ff76c661575d9c51051bb207363f3d2d8b5283
 SHA1 (patch-ad) = 9e6b11f5edae0656a59d623f4dae05ca7ecbdfaf
 SHA1 (patch-af) = a89a1e21fa6389359653c21ed5eac02d84114b51
-SHA1 (patch-ag) = deaf4ee53542a9bb83073863a2c48cc80b08c302
+SHA1 (patch-ag) = 2892adb1fdfeac0d50b7ffea8b1f802094195ba3
 SHA1 (patch-ah) = 015aaccf066333d057997404f43b126e648ff379
 SHA1 (patch-aj) = fa2192319a01e7a9dc50e497de5d3d52ab9f5768
 SHA1 (patch-ak) = 999b52ab6f61dd1c81608d08418b9bb34bdc8aa6
