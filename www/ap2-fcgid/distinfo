@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/04/17 18:18:08 abs Exp $
+$NetBSD: distinfo,v 1.3 2010/02/15 11:38:44 fhajny Exp $
 
-SHA1 (mod_fcgid.2.2.tar.gz) = dc817a20ad6528480a441e4b7ad6920ec11c55e0
-RMD160 (mod_fcgid.2.2.tar.gz) = 9c45c2b25fcf0f4069cee4fb8917493f0a13b338
-Size (mod_fcgid.2.2.tar.gz) = 56954 bytes
+SHA1 (mod_fcgid-2.3.5.tar.gz) = e64d21ee27b8c0327c1c2754a68173def5c80de6
+RMD160 (mod_fcgid-2.3.5.tar.gz) = 9e989b6f91dcffa8a61dd855aa305bfc5c698dab
+Size (mod_fcgid-2.3.5.tar.gz) = 97784 bytes
+SHA1 (patch-aa) = 412ff767f32e569e7cee1940d382ea2d0f4ea235
