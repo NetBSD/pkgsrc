@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.738 2010/02/15 14:27:03 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.739 2010/02/15 14:29:49 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -884,3 +884,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Moved graphics/digikam to graphics/digikam-kde3 [wiz 2010-02-15]
 	Moved graphics/digikam-doc to graphics/digikam-doc [wiz 2010-02-15]
 	Updated graphics/digikam to 1.1.0 [wiz 2010-02-15]
+	Updated devel/p5-Data-Dumper-Concise to 1.200 [sno 2010-02-15]
