@@ -3,19 +3,11 @@ KDE, which makes importing and organizing digital photos a "snap".
 The photos are organized in albums which can be sorted chronologically,
 by folder layout or by custom collections.
 
-Tired of the folder constraints? Don't worry, digiKam also provides
-tagging. You tag your images which can be spread out across multiple
-folders, and digiKam provides fast and intuitive ways to browse
-these tagged images. You can also add comments to your images.
-digiKam makes use of a fast and robust database to store these
-meta-informations which makes adding and editing of comments and
-tags very reliable.
-
-digiKam makes use of KIPI plugins for lots of added functionality.
-KIPI (KDE Image Plugin Interface) is an initiative to create a
-common plugin infrastructure for digiKam, KPhotoAlbum, Showimg,
-and GwenView. Its aim is to allow development of image plugins
-which can be shared among KDE graphical applications.
+You tag your images which can be spread out across multiple folders,
+and digiKam provides fast and intuitive ways to browse these tagged
+images. You can also add comments to your images.  digiKam makes
+use of a fast and robust database to store these meta-informations
+which makes adding and editing of comments and tags very reliable.
 
 An easy-to-use interface is provided that enables you to connect
 to your camera and preview, download and/or delete your images.
