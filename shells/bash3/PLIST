@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/24 15:47:43 wiz Exp $
-bin/bash
-bin/bashbug
-info/bash.info
-man/man1/bash.1
-man/man1/bashbug.1
-share/locale/en@boldquot/LC_MESSAGES/bash.mo
-share/locale/en@quot/LC_MESSAGES/bash.mo
