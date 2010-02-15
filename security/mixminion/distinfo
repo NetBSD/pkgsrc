@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.5 2009/08/14 14:09:28 joerg Exp $
+$NetBSD: distinfo,v 1.6 2010/02/15 15:57:44 joerg Exp $
 
 SHA1 (Mixminion-0.0.8alpha3.tar.gz) = 543235e96ccde34e2db20fe79aad32412db3ccac
 RMD160 (Mixminion-0.0.8alpha3.tar.gz) = d321c45f86a363f29f92d3130e38b1608be27459
 Size (Mixminion-0.0.8alpha3.tar.gz) = 483281 bytes
 SHA1 (patch-aa) = 3b9a4ab8bd12f69cb03c28ea1be25b4a807391cd
+SHA1 (patch-ab) = fbad0097f4eed0b377dc30e765674e2135830d44
+SHA1 (patch-ac) = 66a356002fded22d1b8fdb67676c13f84e61dd58
