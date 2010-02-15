@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/02/10 19:17:45 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/15 15:57:44 joerg Exp $
 #
 
 DISTNAME=		Mixminion-0.0.8alpha3
@@ -14,10 +14,12 @@ LICENSE=		mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+REPLACE_PYTHON=	lib/mixminion/Main.py
 PYDISTUTILSPKG=	yes
 
 TEST_TARGET=		test
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

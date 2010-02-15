@@ -1,0 +1,86 @@
+$NetBSD: patch-ac,v 1.3 2010/02/15 15:57:45 joerg Exp $
+
+--- lib/mixminion/test.py.orig	2010-02-15 15:50:06.000000000 +0000
++++ lib/mixminion/test.py
+@@ -3444,15 +3444,15 @@ class QueueTests(FStoreTestBase):
+         h3 = q.queueDeliveryMessage("Message number three", A1, start)
+         q._repOK()
+ 
+-        m, ds, as = q._inspect(h1)
++        m, ds, as_ = q._inspect(h1)
+         self.assertEquals(m, "Message number one")
+         self.assertEquals(ds.address, A1)
+-        self.assertEquals(as.address, A1)
++        self.assertEquals(as_.address, A1)
+         self.assert_(not ds.isPending())
+         self.assertEquals(ds.lastAttempt, None)
+-        self.assertEquals(as.lastSuccess, None)
+-        self.assertEquals(as.lastFailure, None)
+-        self.assertEquals(as.firstFailure, None)
++        self.assertEquals(as_.lastSuccess, None)
++        self.assertEquals(as_.lastFailure, None)
++        self.assertEquals(as_.firstFailure, None)
+         q.removeExpiredMessages(start)
+         self.assertEquals(q.store.count(), 3)
+ 
+@@ -3470,16 +3470,16 @@ class QueueTests(FStoreTestBase):
+         msgs[h3].failed(now=start+40, retriable=1)
+         self.assert_(not q._inspect(h3)[1].isPending())
+ 
+-        as = q.addressStateDB[str(A1)]
+-        self.assertIEquals(as.lastSuccess-start, 30)
+-        self.assertIEquals(as.firstFailure-start, 10)
+-        self.assertIEquals(as.lastFailure-start, 10)
+-        self.assertIEquals(as.nextAttempt-start, 10+HOUR)
+-        as = q.addressStateDB[str(A2)]
+-        self.assertIEquals(as.lastSuccess-start, 20)
+-        self.assertEquals(as.firstFailure, None)
+-        self.assertEquals(as.lastFailure, None)
+-        self.assertIEquals(as.nextAttempt-start, 20)
++        as_ = q.addressStateDB[str(A1)]
++        self.assertIEquals(as_.lastSuccess-start, 30)
++        self.assertIEquals(as_.firstFailure-start, 10)
++        self.assertIEquals(as_.lastFailure-start, 10)
++        self.assertIEquals(as_.nextAttempt-start, 10+HOUR)
++        as_ = q.addressStateDB[str(A2)]
++        self.assertIEquals(as_.lastSuccess-start, 20)
++        self.assertEquals(as_.firstFailure, None)
++        self.assertEquals(as_.lastFailure, None)
++        self.assertIEquals(as_.nextAttempt-start, 20)
+ 
+         # Queue two more messages; the one on A2 gets tried; the ones on
+         # A1 doesn't get tried for a while.
+@@ -3495,13 +3495,13 @@ class QueueTests(FStoreTestBase):
+         q.sendReadyMessages(start+HOUR+MIN)
+         msgs = self._pendingMsgDict(q._msgs)
+         self.assertUnorderedEq(msgs.keys(), [h3, h4])
+-        as = q.addressStateDB[str(A1)]
++        as_ = q.addressStateDB[str(A1)]
+         msgs[h3].failed(now=start+HOUR+MIN+5, retriable=1)
+         msgs[h4].failed(now=start+HOUR+MIN+5, retriable=1)
+ 
+-        self.assertIEquals(as.firstFailure-start, 10)
+-        self.assertIEquals(as.lastFailure-start, HOUR+MIN)
+-        self.assertIEquals(as.nextAttempt-start, 10+2*HOUR)
++        self.assertIEquals(as_.firstFailure-start, 10)
++        self.assertIEquals(as_.lastFailure-start, HOUR+MIN)
++        self.assertIEquals(as_.nextAttempt-start, 10+2*HOUR)
+ 
+         h6 = q.queueDeliveryMessage("The sixth message", A1,
+                                     now=start+HOUR*17-MIN)
+@@ -3525,13 +3525,13 @@ class QueueTests(FStoreTestBase):
+         self.assertUnorderedEq(q.addressStateDB.keys(), [str(A1)])
+ 
+         # Make sure that messages keep getting retried...
+-        as = q.addressStateDB[str(A1)]
++        as_ = q.addressStateDB[str(A1)]
+         # (Reset nextDelivery on A1, since not all the delivery attempts
+         # have really happened.)
+         q.sendReadyMessages(now=start+HOUR*17+MIN*15)
+         msgs = self._pendingMsgDict(q._msgs)
+         msgs[h6].failed(now=start+HOUR*17+MIN*16, retriable=0)
+-        self.assertEquals(as.nextAttempt - start, 25*HOUR+10)
++        self.assertEquals(as_.nextAttempt - start, 25*HOUR+10)
+         self.assertEquals([], q.store.getAllMessages())
+ 
+         # Test reloading.

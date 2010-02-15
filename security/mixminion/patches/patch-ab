@@ -1,0 +1,77 @@
+$NetBSD: patch-ab,v 1.4 2010/02/15 15:57:44 joerg Exp $
+
+--- lib/mixminion/server/ServerQueue.py.orig	2010-02-15 15:46:36.000000000 +0000
++++ lib/mixminion/server/ServerQueue.py
+@@ -617,16 +617,16 @@ class PerAddressDeliveryQueue(DeliveryQu
+         try:
+             for ds in self.store._metadata_cache.values():
+                 if not self.addressStateDB.has_key(str(ds.address)):
+-                    as = _AddressState(ds.address)
+-                    self.addressStateDB[str(ds.address)] = as
++                    as_ = _AddressState(ds.address)
++                    self.addressStateDB[str(ds.address)] = as_
+             if not self.retrySchedule:
+                 rs = [3600]
+                 self.totalLifetime = 3600
+             else:
+                 rs = self.retrySchedule
+                 self.totalLifetime = reduce(operator.add,self.retrySchedule,0)
+-            for as in self.addressStateDB.values():
+-                as.setNextAttempt(rs, now)
++            for as_ in self.addressStateDB.values():
++                as_.setNextAttempt(rs, now)
+             self._repOK()
+         finally:
+             self._lock.release()
+@@ -643,10 +643,10 @@ class PerAddressDeliveryQueue(DeliveryQu
+                 else:
+                     have[ds.address]=1
+ 
+-            for k, as in self.addressStateDB.items():
+-                if have.has_key(as.address):
++            for k, as_ in self.addressStateDB.items():
++                if have.has_key(as_.address):
+                     continue
+-                lastActivity = as.getLastActivity()
++                lastActivity = as_.getLastActivity()
+                 if lastActivity and (
+                     lastActivity + self.totalLifetime < now):
+                     del self.addressStateDB[k]
+@@ -655,11 +655,11 @@ class PerAddressDeliveryQueue(DeliveryQu
+ 
+     def _getAddressState(self, address, now=None):
+         try:
+-            as = self.addressStateDB[str(address)]
++            as_ = self.addressStateDB[str(address)]
+         except KeyError:
+-            as = self.addressStateDB[str(address)] = _AddressState(address)
+-            as.setNextAttempt(self.retrySchedule, now)
+-        return as
++            as_ = self.addressStateDB[str(address)] = _AddressState(address)
++            as_.setNextAttempt(self.retrySchedule, now)
++        return as_
+ 
+     def queueDeliveryMessage(self, msg, address, now=None):
+         self._getAddressState(address, now=now)
+@@ -767,8 +767,8 @@ class PerAddressDeliveryQueue(DeliveryQu
+         self._repOK()
+         o = self.store.getObject(handle)
+         ds = self.store.getMetadata(handle)
+-        as = self._getAddressState(ds.address)
+-        return (o, ds, as)
++        as_ = self._getAddressState(ds.address)
++        return (o, ds, as_)
+ 
+     def _repOK(self):
+         """Raise an assertion error if the internal state of this object is
+@@ -780,8 +780,8 @@ class PerAddressDeliveryQueue(DeliveryQu
+             DeliveryQueue._repOK(self)
+             for h in self.store._metadata_cache.keys():
+                 ds = self.store._metadata_cache[h]
+-                as = self._getAddressState(ds.address)
+-                assert as.address == ds.address
++                as_ = self._getAddressState(ds.address)
++                assert as_.address == ds.address
+         finally:
+             self._lock.release()
+ 
