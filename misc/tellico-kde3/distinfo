@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/15 14:52:45 wiz Exp $
+
+SHA1 (tellico-1.3.6.tar.gz) = 6405149383655bd072b1443aad1243dd1f6c16a3
+RMD160 (tellico-1.3.6.tar.gz) = bd5d7f5fd1a1389ccecd0e9ea3f7cabed9540bd9
+Size (tellico-1.3.6.tar.gz) = 5216266 bytes
+SHA1 (patch-aa) = 110d5cd17419456a0d2d4e9a7f77cba8b9ffc311
