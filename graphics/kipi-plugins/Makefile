@@ -1,38 +1,39 @@
-# $NetBSD: Makefile,v 1.48 2010/01/18 09:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2010/02/15 14:40:38 wiz Exp $
+#
 
-DISTNAME=	kipi-plugins-0.1.7
-PKGREVISION=	7
+DISTNAME=	kipi-plugins-1.1.0
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/kipi-plugins/1.1.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kipi-plugins.org/drupal/
-COMMENT=	Kipi (KDE Image Plugin Interface) plugins
+COMMENT=	Common plugin structure for KDE4 programs
+#LICENSE=	gnu-gpl-v2 AND Adobe DNG SDK license
+
+BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		gmake perl pkg-config msgfmt bash:run
+USE_CMAKE=		yes
+USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	# empty
+USE_TOOLS+=		msgfmt pkg-config
 
-REPLACE_BASH=		kipi-plugins/mpegencoder/images2mpg
-
-.include "../../meta-pkgs/kde3/kde3.mk"
-BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.7.0
+# for IpodExport
 .include "../../audio/libgpod/buildlink3.mk"
-.include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=0.1.4
-.include "../../graphics/libkdcraw/buildlink3.mk"
-.include "../../graphics/libkexiv2/buildlink3.mk"
-.include "../../graphics/libkipi/buildlink3.mk"
-.include "../../multimedia/mjpegtools/buildlink3.mk"
-# gdk from gtk2 is needed for libgpod artwork support
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../graphics/kdegraphics4/buildlink3.mk"
+# for RemoveRedEyes
+.include "../../graphics/opencv/buildlink3.mk"
+# for Calendar
+.include "../../misc/kdepimlibs4/buildlink3.mk"
+# for Shwup
+.include "../../security/qca2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/expat/buildlink3.mk"
+# for Gdk for IpodExport XXX: configure doesn't accept it.
+#.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
