@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9029 2010/02/15 13:43:36 sno Exp $
+$NetBSD: TODO,v 1.9030 2010/02/15 15:09:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1266,7 +1266,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tea-26.2.2
 	o ted-2.17
 	o ted-en-us-2.17
-	o tellico-2.2
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.9.9
 	o tfmxplay-1.1.6
