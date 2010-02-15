@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/10 13:25:03 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/15 16:19:09 joerg Exp $
 #
 
 DISTNAME=	uwsgi-0.9.4.1
@@ -12,6 +12,8 @@ HOMEPAGE=	http://projects.unbit.it/uwsgi
 COMMENT=	Feature-rich WSGI server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_ACCEPTED=	26 25
 
 LICENSE=		gnu-gpl-v2
 
