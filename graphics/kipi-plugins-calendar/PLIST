@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2008/03/02 12:33:09 drochner Exp $
-lib/kde3/kipiplugin_calendar.la
-share/kde/services/kipiplugin_calendar.desktop
