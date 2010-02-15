@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.742 2010/02/15 14:42:27 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.743 2010/02/15 14:46:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -890,3 +890,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Moved graphics/kipi-plugins to graphics/kipi-plugins-kde3 [wiz 2010-02-15]
 	Moved graphics/kipi-plugins-calendar to graphics/kipi-plugins-calendar-kde3 [wiz 2010-02-15]
 	Updated graphics/kipi-plugins to 1.1.0 [wiz 2010-02-15]
+	Updated devel/p5-Data-Peek to 0.30 [sno 2010-02-15]
