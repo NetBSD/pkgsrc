@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2010/02/15 11:38:44 fhajny Exp $
+
+Do not mangle httpd.conf.
+
+--- Makefile.apxs.orig	2009-11-11 15:13:31.000000000 +0000
++++ Makefile.apxs
+@@ -21,7 +21,7 @@ SUBDIRS = modules/fcgid
+ CLEAN_SUBDIRS = 
+ 
+ TARGETS         = 
+-INSTALL_TARGETS = install-conf install-manual
++INSTALL_TARGETS = install-manual
+ ## no such targets yet; install-include
+ DISTCLEAN_TARGETS  = config.apxs.log modules/fcgid/fcgid_config.h
+ EXTRACLEAN_TARGETS = 

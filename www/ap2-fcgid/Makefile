@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:54 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/15 11:38:44 fhajny Exp $
 
-DISTNAME=	mod_fcgid.2.2
-PKGNAME=	${APACHE_PKG_PREFIX}-fcgid-2.2
+DISTNAME=	mod_fcgid-2.3.5
+PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mod-fcgid/}
+MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/mod_fcgid/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fastcgi.coremail.cn/
-COMMENT=	Binary compatible alternative to Apache module mod_fastcgi
+HOMEPAGE=	http://httpd.apache.org/mod_fcgid/
+COMMENT=	High performance alternative to mod_cgi or mod_cgid
+LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -15,13 +16,13 @@ PKG_APACHE_ACCEPTED=	apache2 apache22
 APACHE_MODULE=		YES
 USE_LIBTOOL=		YES
 
+CONFIGURE_ENV+=		APXS=${APXS:Q}
+
 MAKE_FLAGS+=		LIBTOOL=${LIBTOOL:Q}
 MAKE_FLAGS+=		INCLUDES="-I${BUILDLINK_PREFIX.apache}/include/httpd"
 
-SUBST_CLASSES+=		ap2
-SUBST_STAGE.ap2=	pre-build
-SUBST_FILES.ap2=	Makefile
-SUBST_SED.ap2=		-e s,/usr/local/apache2,${PREFIX}/share/httpd,
+do-configure:
+	cd ${WRKSRC} && ./configure.apxs
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
