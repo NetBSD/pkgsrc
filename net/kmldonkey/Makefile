@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/02/15 15:30:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/15 15:31:38 wiz Exp $
 #
 
 DISTNAME=	kmldonkey-2.0.2-kde4.3.3
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://userbase.kde.org/KMLDonkey
-COMMENT=	KDE interface for mldonkey
+COMMENT=	KDE4 interface for mldonkey
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
