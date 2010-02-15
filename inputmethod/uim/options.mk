@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.18 2010/01/20 11:06:07 obache Exp $
+# $NetBSD: options.mk,v 1.19 2010/02/15 13:56:17 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 #PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk m17nlib prime sj3 uim-fep wnn xim
-PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk m17nlib prime uim-fep xim
+PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk m17nlib prime sj3 uim-fep xim
 PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
 PKG_OPTIONS_GROUP.kde=	kde kde4
 PKG_OPTIONS_GROUP.qt=	qt qt4
@@ -144,13 +144,13 @@ CONFIGURE_ARGS+=	--with-prime
 PLIST.prime=		yes
 .endif
 
-#.if !empty(PKG_OPTIONS:Msj3)
-#.  include "../../inputmethod/sj3-lib/buildlink3.mk"
-#CONFIGURE_ARGS+=	--with-sj3
-#CONFIGURE_ARGS+=	SJ3_CFLAGS=-I${BUILDLINK_PREFIX.sj3-lib}/includes
-#CONFIGURE_ARGS+=	SJ3_LIBS="-L${BUILDLINK_PREFIX.sj3-lib}/lib -lsj3lib"
-#PLIST.sj3=		yes
-#.endif
+.if !empty(PKG_OPTIONS:Msj3)
+.  include "../../inputmethod/sj3-client/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sj3
+CONFIGURE_ARGS+=	SJ3_CFLAGS=-I${BUILDLINK_PREFIX.sj3-lib}/includes
+CONFIGURE_ARGS+=	SJ3_LIBS="-L${BUILDLINK_PREFIX.sj3-lib}/lib -lsj3lib"
+PLIST.sj3=		yes
+.endif
 
 #.if !empty(PKG_OPTIONS:Mwnn)
 #.  include "../../inputmethod/ja-freewnn-lib/buildlink3.mk"
