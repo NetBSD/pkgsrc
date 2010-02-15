@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/15 14:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/15 14:45:17 wiz Exp $
 
 DISTNAME=	kipi-plugins-0.1.7
 PKGREVISION=	7
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kipi-plugins.org/drupal/
-COMMENT=	Kipi (KDE Image Plugin Interface) plugins
+COMMENT=	Kipi (KDE Image Plugin Interface) plugins (KDE3)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
