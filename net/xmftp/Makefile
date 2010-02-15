@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/02/11 23:21:26 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/15 17:24:54 joerg Exp $
 #
 
 DISTNAME=	xmftp-1.0.4
@@ -20,9 +20,9 @@ INSTALLATION_DIRS=	bin share/doc/xmftp
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xmftp ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/../BUGS ${PREFIX}/share/doc/xmftp
-	${INSTALL_DATA} ${WRKSRC}/../CHANGES ${PREFIX}/share/doc/xmftp
-	${INSTALL_DATA} ${WRKSRC}/../FAQ ${PREFIX}/share/doc/xmftp
+	${INSTALL_DATA} ${WRKSRC}/../BUGS ${DESTDIR}${PREFIX}/share/doc/xmftp
+	${INSTALL_DATA} ${WRKSRC}/../CHANGES ${DESTDIR}${PREFIX}/share/doc/xmftp
+	${INSTALL_DATA} ${WRKSRC}/../FAQ ${DESTDIR}${PREFIX}/share/doc/xmftp
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/02/11 23:23:11 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2010/02/15 17:27:16 joerg Exp $
 #
 
 DISTNAME=	xnap-2.0
@@ -25,7 +25,7 @@ pre-configure:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xnap.sh ${DESTDIR}${PREFIX}/bin/xnap
-	${INSTALL_DATA} ${WRKSRC}/xnap.jar ${PREFIX}/share/xnap/xnap.jar
+	${INSTALL_DATA} ${WRKSRC}/xnap.jar ${DESTDIR}${PREFIX}/share/xnap/xnap.jar
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/xnap
 
 .include "../../mk/java-vm.mk"
