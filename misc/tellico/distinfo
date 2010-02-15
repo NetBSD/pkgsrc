@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2010/02/15 14:53:43 wiz Exp $
+$NetBSD: distinfo,v 1.9 2010/02/15 15:08:59 wiz Exp $
 
-SHA1 (tellico-2.1.1.tar.bz2) = 6492bfe71dfaf66652fe060722cd3bf187b38401
-RMD160 (tellico-2.1.1.tar.bz2) = 6abea81f4af8637f1f407837f5ced12e4543c46c
-Size (tellico-2.1.1.tar.bz2) = 2434019 bytes
+SHA1 (tellico-2.2.tar.bz2) = fac25f4e776fcfd41ac0b60a6982081be7880296
+RMD160 (tellico-2.2.tar.bz2) = 88b5cbcc01292dadb5d1ad12e51d7908fff9bded
+Size (tellico-2.2.tar.bz2) = 2355608 bytes

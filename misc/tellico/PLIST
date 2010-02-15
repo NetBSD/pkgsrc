@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/02/15 14:53:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/02/15 15:08:59 wiz Exp $
 bin/tellico
 share/applications/kde4/tellico.desktop
 share/doc/kde/HTML/en/tellico/advanced.docbook
@@ -50,6 +50,17 @@ share/doc/kde/HTML/fr/tellico/importing-exporting.docbook
 share/doc/kde/HTML/fr/tellico/index.cache.bz2
 share/doc/kde/HTML/fr/tellico/index.docbook
 share/doc/kde/HTML/fr/tellico/menus.docbook
+share/doc/kde/HTML/pt_BR/tellico/advanced.docbook
+share/doc/kde/HTML/pt_BR/tellico/common
+share/doc/kde/HTML/pt_BR/tellico/configuration.docbook
+share/doc/kde/HTML/pt_BR/tellico/details.docbook
+share/doc/kde/HTML/pt_BR/tellico/faqs.docbook
+share/doc/kde/HTML/pt_BR/tellico/fundamentals.docbook
+share/doc/kde/HTML/pt_BR/tellico/hacking.docbook
+share/doc/kde/HTML/pt_BR/tellico/importing-exporting.docbook
+share/doc/kde/HTML/pt_BR/tellico/index.cache.bz2
+share/doc/kde/HTML/pt_BR/tellico/index.docbook
+share/doc/kde/HTML/pt_BR/tellico/menus.docbook
 share/doc/kde/HTML/sv/tellico/advanced.docbook
 share/doc/kde/HTML/sv/tellico/common
 share/doc/kde/HTML/sv/tellico/configuration.docbook
@@ -116,10 +127,12 @@ share/kde/apps/tellico/entry-templates/Default.xsl
 share/kde/apps/tellico/entry-templates/Fancy.xsl
 share/kde/apps/tellico/entry-templates/Video.xsl
 share/kde/apps/tellico/gcstar2tellico.xsl
+share/kde/apps/tellico/giantbomb2tellico.xsl
 share/kde/apps/tellico/griffith2tellico.py
 share/kde/apps/tellico/hddvd-logo.png
 share/kde/apps/tellico/isbndb2tellico.xsl
 share/kde/apps/tellico/mods2tellico.xsl
+share/kde/apps/tellico/musicbrainz2tellico.xsl
 share/kde/apps/tellico/pics/README.icons
 share/kde/apps/tellico/pics/README.quesnay
 share/kde/apps/tellico/pics/album.png
@@ -185,6 +198,7 @@ share/kde/apps/tellico/tellico2html.js
 share/kde/apps/tellico/tellico2html.xsl
 share/kde/apps/tellico/tellico2onix.xsl
 share/kde/apps/tellico/tellicoui.rc
+share/kde/apps/tellico/tmdb2tellico.xsl
 share/kde/apps/tellico/vhs-logo.png
 share/kde/apps/tellico/welcome.html
 share/kde/apps/tellico/winecom2tellico.xsl
@@ -198,6 +212,7 @@ share/kde/config/tellicorc
 share/kde/mimelnk/application/x-tellico.desktop
 share/locale/bg/LC_MESSAGES/tellico.mo
 share/locale/ca/LC_MESSAGES/tellico.mo
+share/locale/ca@valencia/LC_MESSAGES/tellico.mo
 share/locale/cs/LC_MESSAGES/tellico.mo
 share/locale/da/LC_MESSAGES/tellico.mo
 share/locale/de/LC_MESSAGES/tellico.mo
@@ -219,14 +234,4 @@ share/locale/nds/LC_MESSAGES/tellico.mo
 share/locale/nl/LC_MESSAGES/tellico.mo
 share/locale/nn/LC_MESSAGES/tellico.mo
 share/locale/pl/LC_MESSAGES/tellico.mo
-share/locale/pt/LC_MESSAGES/tellico.mo
-share/locale/pt_BR/LC_MESSAGES/tellico.mo
-share/locale/ro/LC_MESSAGES/tellico.mo
-share/locale/ru/LC_MESSAGES/tellico.mo
-share/locale/sk/LC_MESSAGES/tellico.mo
-share/locale/sv/LC_MESSAGES/tellico.mo
-share/locale/tr/LC_MESSAGES/tellico.mo
-share/locale/uk/LC_MESSAGES/tellico.mo
-share/locale/zh_CN/LC_MESSAGES/tellico.mo
-share/locale/zh_TW/LC_MESSAGES/tellico.mo
 share/mime/packages/tellico.xml
