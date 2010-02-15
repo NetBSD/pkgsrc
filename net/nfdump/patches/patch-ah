@@ -1,0 +1,34 @@
+$NetBSD: patch-ah,v 1.1 2010/02/15 14:30:41 joerg Exp $
+
+--- Makefile.in.orig	2010-02-15 14:07:30.000000000 +0000
++++ Makefile.in
+@@ -47,8 +47,8 @@ YFLAGS	 = -d -v
+ LFLAGS	 = @LFLAGS@
+ LDFLAGS	 = @LDFLAGS@
+ prefix   = @prefix@
+-PREFIX	 = $(DESTDIR)/$(prefix)
+-MANDIR 	 = $(DESTDIR)/@mandir@
++PREFIX	 = $(prefix)
++MANDIR 	 = @mandir@
+ COMMON_OBJ	= minilzo.o nffile.o nf_common.o util.o flist.o panonymizer.o rijndael.o @FTS_OBJ@
+ FILTER_OBJ	= grammar.o scanner.o nftree.o ipconv.o 
+ NFDUMP_OBJ	= nfdump.o $(COMMON_OBJ) $(FILTER_OBJ) nfstat.o nfprof.o
+@@ -103,14 +103,12 @@ nfreader: $(NFRDR_OBJ)
+ 	$(CC) $(CFLAGS) -o $@ $(NFRDR_OBJ) $(LDFLAGS)
+ 
+ install: $(OBJECTS)
+-	test -d $(PREFIX) || install -d -o root -g bin -m 755 $(PREFIX)
+-	test -d $(PREFIX)/bin || install -d -o root -g bin -m 755 $(PREFIX)/bin
+-	test -d $(MANDIR) || install -d -o root -g bin -m 755 $(MANDIR)
+-	test -d $(MANDIR)/man1 || install -d -o root -g bin -m 755 $(MANDIR)/man1
++	test -d ${DESTDIR}$(PREFIX)/bin || ${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}$(PREFIX)/bin
++	test -d ${DESTDIR}$(MANDIR)/man1 || ${BSD_INSTALL_MAN_DIR} ${DESTDIR}$(MANDIR)/man1
+ 	for file in $(OBJECTS); do \
+ 		if [ -f $$file.1 ]; then \
+-			$(INSTALL) -o root -g bin -m 755 $$file $(PREFIX)/bin ; \
+-			$(INSTALL) -o root -g bin -m 644 $$file.1 $(MANDIR)/man1 ; \
++			${BSD_INSTALL_PROGRAM} $$file ${DESTDIR}$(PREFIX)/bin ; \
++			${BSD_INSTALL_MAN} $$file.1 ${DESTDIR}$(MANDIR)/man1 ; \
+ 		fi \
+ 	done;
+ 
