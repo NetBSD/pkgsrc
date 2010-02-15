@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.752 2010/02/15 15:33:34 sno Exp $
+$NetBSD: CHANGES-2010,v 1.753 2010/02/15 15:39:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -902,3 +902,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Moved net/kmldonkey to net/kmldonkey-kde3 [wiz 2010-02-15]
 	Updated net/kmldonkey to 2.0.2.4.3.3 [wiz 2010-02-15]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.084 [sno 2010-02-15]
+	Added audio/taglib-extras version 1.0.1 [wiz 2010-02-15]
