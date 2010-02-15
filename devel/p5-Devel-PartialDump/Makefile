@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/02/15 15:20:00 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/15 15:21:45 sno Exp $
 #
 
-DISTNAME=	Devel-PartialDump-0.12
+DISTNAME=	Devel-PartialDump-0.13
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
