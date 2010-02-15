@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.767 2010/02/15 17:17:06 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.768 2010/02/15 17:58:41 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -917,3 +917,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/p5-Wx to 0.97.01 [sno 2010-02-15]
 	Added databases/mysql51-embedded version 5.1.43 [wiz 2010-02-15]
 	Added audio/moodbar version 0.1.2 [wiz 2010-02-15]
+	Updated devel/p5-Rose-Object to 0.858 [sno 2010-02-15]
