@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2009/09/25 16:09:00 minskim Exp $
+$NetBSD: patch-ag,v 1.5.4.1 2010/02/15 07:54:22 spz Exp $
 
 --- lib/rubygems/uninstaller.rb.orig	2009-05-15 11:32:23.000000000 -0700
 +++ lib/rubygems/uninstaller.rb
@@ -19,7 +19,7 @@ $NetBSD: patch-ag,v 1.5 2009/09/25 16:09:00 minskim Exp $
  
      unless spec.executables.empty? then
        bindir = @bin_dir ? @bin_dir : Gem.bindir(spec.installation_path)
-+      bindir = @bin_dir ? @bin_dir : Gem.bindir(spec_installation_path, @install_root)
++      bindir = @bin_dir ? @bin_dir : Gem.bindir(spec.installation_path, @install_root)
 +
 +      unless @install_root.nil? or @install_root == ""
 +        bindir = File.join(@install_root, bindir)
