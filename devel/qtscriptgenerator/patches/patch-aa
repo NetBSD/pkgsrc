@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/15 15:57:49 wiz Exp $
+
+--- qtbindings/qtbindings.pro.orig	2009-02-20 11:42:24.000000000 +0000
++++ qtbindings/qtbindings.pro
+@@ -6,8 +6,6 @@ SUBDIRS = qtscript_core \
+ 	  qtscript_sql \
+ 	  qtscript_svg \
+ 	  qtscript_xml \
+-	  qtscript_phonon \
+ 	  qtscript_webkit \
+-	  qtscript_xmlpatterns \
+ 	  qtscript_uitools \
+ 	  qs_eval
