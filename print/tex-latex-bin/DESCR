@@ -1,0 +1,7 @@
+LaTeX is a widely-used macro package for TeX, providing many basic
+document formating commands extended by a wide range of packages.  It
+is a development of Leslie Lamport's original LaTeX 2.09, and
+superseded the older system in June 1994.
+
+This package provides the following commands: latex, lualatex,
+pdflatex, and dvilualatex.
