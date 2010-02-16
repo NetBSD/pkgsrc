@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/02/16 08:59:13 wiz Exp $
+
+SVN commit 917750 by nhnielsen:
+Fix for wikipedia tab not showing any info. Thanks to Helge Stenström
+and WarwickH at
+https://bugs.edge.launchpad.net/ubuntu/+source/amarok/+bug/316140 for
+the fix.
+
+--- amarok/src/contextbrowser.cpp.orig	2008-08-13 21:21:51.000000000 +0000
++++ amarok/src/contextbrowser.cpp
+@@ -4189,7 +4189,7 @@ ContextBrowser::wikiResult( KIO::Job* jo
+     }
+ 
+     // Ok lets remove the top and bottom parts of the page
+-    m_wiki = m_wiki.mid( m_wiki.find( "<h1 class=\"firstHeading\">" ) );
++    m_wiki = m_wiki.mid( m_wiki.find( "<h1 id=\"firstHeading\"" ) );
+     m_wiki = m_wiki.mid( 0, m_wiki.find( "<div class=\"printfooter\">" ) );
+     // Adding back license information
+     m_wiki += copyright;
