@@ -1,0 +1,17 @@
+$NetBSD: patch-aw,v 1.1.1.1 2010/02/16 16:24:16 taca Exp $
+
+--- utils/testparm.c.orig	2010-01-14 10:12:10.000000000 +0000
++++ utils/testparm.c
+@@ -66,6 +66,12 @@ cannot be set in the smb.conf file. nmbd
+ 		ret = 1;
+ 	}
+ 
++	if (!directory_exist(lp_statedir(), &st)) {
++		fprintf(stderr, "ERROR: state directory %s does not exist\n",
++		       lp_statedir());
++		ret = 1;
++	}
++
+ 	if (!directory_exist(lp_piddir(), &st)) {
+ 		fprintf(stderr, "ERROR: pid directory %s does not exist\n",
+ 		       lp_piddir());
