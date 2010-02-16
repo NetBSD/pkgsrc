@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2010/01/20 14:04:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/16 15:29:50 wiz Exp $
 #
 
-DISTNAME=	gupnp-av-0.4.1
-PKGREVISION=	1
+DISTNAME=	gupnp-av-0.5.4
 CATEGORIES=	net
 MASTER_SITES=	http://www.gupnp.org/sources/gupnp-av/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gupnp.org/
 COMMENT=	Helpers for audio/video applications using GUPnP
+LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
