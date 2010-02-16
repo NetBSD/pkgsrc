@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.786 2010/02/16 11:46:06 sno Exp $
+$NetBSD: CHANGES-2010,v 1.787 2010/02/16 11:53:23 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -938,3 +938,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/bzr to 2.0.3 [wiz 2010-02-16]
 	Updated security/caff to 1.1.3 [wiz 2010-02-16]
 	Updated devel/p5-MooseX-ClassAttribute to 0.13 [sno 2010-02-16]
+	Updated devel/p5-MooseX-Types-Structured to 0.20 [sno 2010-02-16]
