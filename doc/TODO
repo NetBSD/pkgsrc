@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9033 2010/02/16 11:19:38 wiz Exp $
+$NetBSD: TODO,v 1.9034 2010/02/16 11:27:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -460,7 +460,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bouml-4.18.2
 	o bugzilla-3.4.5
 	o byacc-20080824
-	o bzr-2.0.3
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o caff-1.1.3
