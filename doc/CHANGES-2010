@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.795 2010/02/16 13:10:15 adam Exp $
+$NetBSD: CHANGES-2010,v 1.796 2010/02/16 13:23:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -955,3 +955,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/qt4-qdbus to 4.6.2 [adam 2010-02-16]
 	Updated x11/qt4-sqlite3 to 4.6.2 [adam 2010-02-16]
 	Updated x11/qt4-tiff to 4.6.2 [adam 2010-02-16]
+	Updated databases/p5-SQL-Abstract to 1.61 [sno 2010-02-16]
