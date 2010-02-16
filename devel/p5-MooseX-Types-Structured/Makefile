@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/11/10 11:52:09 seb Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/16 11:53:13 sno Exp $
 #
 
-DISTNAME=	MooseX-Types-Structured-0.19
+DISTNAME=	MooseX-Types-Structured-0.20
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
@@ -25,10 +25,9 @@ BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	# empty
-#PERL5_MODULE_TYPE=	Module::Install
-MAKE_PARAMS=	--skipdeps
-PERL5_PACKLIST=	auto/MooseX/Types/Structured/.packlist
+USE_LANGUAGES=		# empty
+PERL5_MODULE_TYPE=	Module::Install::Bundled
+PERL5_PACKLIST=		auto/MooseX/Types/Structured/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
