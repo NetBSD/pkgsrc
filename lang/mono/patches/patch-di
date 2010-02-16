@@ -1,13 +1,12 @@
-$NetBSD: patch-di,v 1.1 2009/04/28 10:31:58 hasso Exp $
-
---- mono/tests/libtest.c.orig	2009-04-27 12:38:38 +0300
-+++ mono/tests/libtest.c	2009-04-27 12:40:25 +0300
-@@ -2978,7 +2978,7 @@ mono_test_marshal_ccw_itest (MonoComObje
+$NetBSD: patch-di,v 1.2 2010/02/16 17:01:05 kefren Exp $
+--- mono/tests/libtest.c.orig	2009-12-17 14:23:15.000000000 +0200
++++ mono/tests/libtest.c	2010-02-16 12:37:39.000000000 +0200
+@@ -3190,7 +3190,7 @@ mono_test_marshal_ccw_itest (MonoComObje
   * mono_method_get_unmanaged_thunk tests
   */
  
--#if defined(__GNUC__) && ((defined(__i386__) && (defined(__linux__) || defined (__APPLE__))) || (defined(__ppc__) && defined(__APPLE__)))
-+#if defined(__GNUC__) && ((defined(__i386__) && (defined(__linux__) || defined (__APPLE__) || defined (__FreeBSD__) || defined(__DragonFly__))) || (defined(__ppc__) && defined(__APPLE__)))
+-#if defined(__GNUC__) && ((defined(__i386__) && (defined(__linux__) || defined (__APPLE__)) || defined (__FreeBSD__)) || (defined(__ppc__) && defined(__APPLE__)))
++#if defined(__GNUC__) && ((defined(__i386__) && (defined(__linux__) || defined (__APPLE__) || defined (__NetBSD__)) || defined (__FreeBSD__) || defined(__DragonFly__)) || (defined(__ppc__) && defined(__APPLE__)))
  #define ALIGN(size) __attribute__ ((aligned(size)))
  #else
  #define ALIGN(size)
