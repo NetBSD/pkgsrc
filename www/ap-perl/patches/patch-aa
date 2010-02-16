@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2005/06/24 06:58:26 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2010/02/16 15:04:56 joerg Exp $
 
 --- apaci/Makefile.tmpl.orig	Tue Nov 24 11:38:52 1998
 +++ apaci/Makefile.tmpl	Fri Apr 30 20:36:05 1999
@@ -7,8 +7,8 @@ $NetBSD: patch-aa,v 1.7 2005/06/24 06:58:26 jlam Exp $
  #   FOR STAND-ALONE BUILDING ONLY
  install:
 -	$(APXS) -i -a -n perl libperl.so
-+	@cp libperl.so mod_perl.so
-+	$(APXS) -i -n perl mod_perl.so
++	#@cp libperl.so mod_perl.so
++	#$(APXS) -i -n perl mod_perl.so
  
  depend:
  	cp Makefile.tmpl Makefile.tmpl.bak \
