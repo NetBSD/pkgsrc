@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9048 2010/02/16 14:53:23 wiz Exp $
+$NetBSD: TODO,v 1.9049 2010/02/16 14:57:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -518,7 +518,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o darcs-2.1.2
 	o db4-4.8.26
 	o dbench-4.0
-	o dbus-1.2.16 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
+	o dbus-1.2.20 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
 	o dbxml-2.5.13
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -532,7 +532,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-mode-9.3e
 	o dnstracer-1.9
 	o dpkg-1.14.25
-	o dri2proto-2.2
+	o dri2proto-2.3
 	o drivel-3.0.0
 	o drscheme-4.0.2
 	o dspam-3.9.0
@@ -671,7 +671,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glade3-3.6.7 [GNOME 2.26]
-	o gle-4.2.2
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
@@ -713,10 +712,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsasl-1.4.0
 	o gsharutils-4.7
 	o gss-0.1.2
-	o gst-plugins0.10-base-0.10.26
 	o gst-plugins0.10-ffmpeg-0.10.7
-	o gst-plugins0.10-good-0.10.18
-	o gstreamer0.10-0.10.26
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.1
