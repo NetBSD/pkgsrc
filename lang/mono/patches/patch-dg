@@ -1,18 +1,18 @@
-$NetBSD: patch-dg,v 1.1 2009/04/05 16:20:06 he Exp $
-
-For some reason, this test fails on NetBSD/powerpc, so just avoid it.
-
---- ./mono/metadata/threads.c.orig	2009-04-05 15:00:34.000000000 +0200
-+++ ./mono/metadata/threads.c
-@@ -782,9 +782,11 @@ mono_thread_get_stack_bounds (guint8 **s
+$NetBSD: patch-dg,v 1.2 2010/02/16 17:01:05 kefren Exp $
+--- mono/metadata/threads.c.orig	2009-11-03 02:36:41.000000000 +0200
++++ mono/metadata/threads.c	2010-02-16 12:34:11.000000000 +0200
+@@ -865,8 +865,14 @@ mono_thread_get_stack_bounds (guint8 **s
  
- #ifndef sun
+ #  ifndef sun
  	pthread_attr_getstack (&attr, (void**)staddr, stsize);
-+#if !(defined(__NetBSD__) && defined(__powerpc__))
++	/*
++	 * he@NetBSD.org: For some reason, this test fails on NetBSD/powerpc,
++	 * so just avoid it.
++	 */
++    #if !(defined(__NetBSD__) && defined(__powerpc__))
  	if (*staddr)
  		g_assert ((current > *staddr) && (current < *staddr + *stsize));
- #endif
-+#endif
++    #endif
+ #  endif
  
  	pthread_attr_destroy (&attr); 
- #endif
