@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.775 2010/02/16 08:43:42 sno Exp $
+$NetBSD: CHANGES-2010,v 1.776 2010/02/16 08:57:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -926,3 +926,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/ruby-activeldap to 1.2.1nb1 [taca 2010-02-16]
 	Updated cad/mcalc to 1.6 [dmcmahill 2010-02-16]
 	Updated devel/p5-PPI to 1.210 [sno 2010-02-16]
+	Added audio/libifp version 1.0.0.2 [wiz 2010-02-16]
