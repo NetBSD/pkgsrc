@@ -1,9 +1,0 @@
-$NetBSD: patch-aa,v 1.5 2009/04/07 12:36:33 kefren Exp $
---- src/core/MonoDevelop.Projects/MonoDevelop.Projects.dll.config.orig	2009-04-07 15:31:34.000000000 +0300
-+++ src/core/MonoDevelop.Projects/MonoDevelop.Projects.dll.config	2009-04-07 15:31:56.000000000 +0300
-@@ -1,4 +1,4 @@
- <configuration>
--  <dllmap dll="libglib-2.0-0.dll" target="libglib-2.0.so.0" os="linux" />
-+  <dllmap dll="libglib-2.0-0.dll" target="libglib-2.0.so.0" os="linux,netbsd" />
-   <dllmap dll="libglib-2.0-0.dll" target="libglib-2.0.dylib" os="osx" />
- </configuration>

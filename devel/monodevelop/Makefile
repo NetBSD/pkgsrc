@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2010/01/18 09:58:46 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2010/02/16 18:13:55 kefren Exp $
 
-DISTNAME=	monodevelop-2.0
-PKGREVISION=	5
+DISTNAME=	monodevelop-2.2.1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/monodevelop/
 EXTRACT_SUFX=	.tar.bz2
@@ -28,7 +27,7 @@ REPLACE_BASH+=	theme-icons/icon-theme-installer
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libgdiplus/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtksourceview-sharp2/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
