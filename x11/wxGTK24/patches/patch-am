@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.1 2010/02/16 17:33:39 taca Exp $
+
+deal with CVE-2009-2625.
+
+--- contrib/src/xrc/expat/xmltok/xmltok_impl.c.orig	2003-09-21 11:32:55.000000000 +0000
++++ contrib/src/xrc/expat/xmltok/xmltok_impl.c
+@@ -1753,7 +1753,7 @@ void PREFIX(updatePosition)(const ENCODI
+ 			    const char *end,
+ 			    POSITION *pos)
+ {
+-  while (ptr != end) {
++  while (ptr < end) {
+     switch (BYTE_TYPE(enc, ptr)) {
+ #define LEAD_CASE(n) \
+     case BT_LEAD ## n: \
