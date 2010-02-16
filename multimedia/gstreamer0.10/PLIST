@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/10/21 16:39:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2010/02/16 13:07:05 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -11,6 +11,7 @@ include/gstreamer-0.10/gst/base/gstbasesrc.h
 include/gstreamer-0.10/gst/base/gstbasetransform.h
 include/gstreamer-0.10/gst/base/gstbitreader.h
 include/gstreamer-0.10/gst/base/gstbytereader.h
+include/gstreamer-0.10/gst/base/gstbytewriter.h
 include/gstreamer-0.10/gst/base/gstcollectpads.h
 include/gstreamer-0.10/gst/base/gstdataqueue.h
 include/gstreamer-0.10/gst/base/gstpushsrc.h
@@ -98,6 +99,7 @@ ${PLIST.gstcheck}lib/pkgconfig/gstreamer-check-0.10.pc
 lib/pkgconfig/gstreamer-controller-0.10.pc
 lib/pkgconfig/gstreamer-dataprotocol-0.10.pc
 lib/pkgconfig/gstreamer-net-0.10.pc
+libexec/gstreamer-0.10/gst-plugin-scanner
 man/man1/gst-feedback-0.10.1
 man/man1/gst-inspect-0.10.1
 man/man1/gst-launch-0.10.1
@@ -129,6 +131,7 @@ share/gtk-doc/html/gstreamer-0.10/GstTask.html
 share/gtk-doc/html/gstreamer-0.10/GstTaskPool.html
 share/gtk-doc/html/gstreamer-0.10/GstTypeFindFactory.html
 share/gtk-doc/html/gstreamer-0.10/GstXML.html
+share/gtk-doc/html/gstreamer-0.10/annotation-glossary.html
 share/gtk-doc/html/gstreamer-0.10/api-index-deprecated.html
 share/gtk-doc/html/gstreamer-0.10/api-index-full.html
 share/gtk-doc/html/gstreamer-0.10/gst-building.html
@@ -197,10 +200,12 @@ share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-0.10.devhelp2
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstBitReader.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstBufferStraw.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstByteReader.html
+share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstByteWriter.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstCheck.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstControllerGObject.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstDataQueue.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstNetTimePacket.html
+share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstStreamConsistency.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstTypeFindHelper.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-gstdataprotocol.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs.html
@@ -228,6 +233,7 @@ share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-multiqueue.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-plugin-coreelements.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-plugin-coreindexers.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-queue.html
+share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-queue2.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-tee.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-typefind.html
 share/gtk-doc/html/gstreamer-plugins-0.10/home.png
