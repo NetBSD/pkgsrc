@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2009/06/15 17:38:21 he Exp $
+# $NetBSD: Makefile,v 1.35 2010/02/16 14:00:14 sno Exp $
 
 DISTNAME=	mod_perl-2.0.4
-PKGREVISION=	5
+PKGREVISION=	6
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=	www perl5
 MASTER_SITES=	http://perl.apache.org/dist/
@@ -23,6 +23,9 @@ MAKE_PARAMS+=		MP_APXS=${APXS}
 
 MODPERLDOCSDIR=	${PREFIX}/share/doc/mod_perl
 INSTALLATION_DIRS=	${MODPERLDOCSDIR}
+
+pre-configure:
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
 
 post-install:
 	${CP} -R ${WRKSRC}/docs/* ${DESTDIR}${MODPERLDOCSDIR}

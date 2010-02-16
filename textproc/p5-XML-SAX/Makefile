@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2009/08/16 18:21:04 bouyer Exp $
+# $NetBSD: Makefile,v 1.27 2010/02/16 14:00:14 sno Exp $
 
 DISTNAME=	XML-SAX-0.96
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -29,6 +29,9 @@ CONF_FILES=	${EGSUBDIR}/ParserDetails.ini \
 PERL5_PACKLIST=	auto/XML/SAX/.packlist
 
 INSTALLATION_DIRS+=	${EGSUBDIR}
+
+pre-configure:
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
 
 post-install:
 	${ECHO} > ${DESTDIR:Q}${PREFIX:Q}/${EGSUBDIR}/ParserDetails.ini
