@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.817 2010/02/16 16:43:08 taca Exp $
+$NetBSD: CHANGES-2010,v 1.818 2010/02/16 17:24:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -977,3 +977,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/alsa-lib to 1.0.22 [wiz 2010-02-16]
 	Added net/samba33 version 3.3.10 [taca 2010-02-16]
 	Updated net/pear-Net_LDAP2 to 2.0.8 [taca 2010-02-16]
+	Added textproc/po-mode version 2.01 [taca 2010-02-16]
