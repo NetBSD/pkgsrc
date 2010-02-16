@@ -4,7 +4,7 @@ features but has some own too.
 
 With Net_LDAP2 you have:
 * A simple object-oriented interface to connections, searches entries and
-filters.
+  filters.
 * Support for tls and ldap v3.
 * Simple modification, deletion and creation of ldap entries.
 * Support for schema handling.
