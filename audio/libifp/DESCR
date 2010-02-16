@@ -1,0 +1,5 @@
+libifp is a general-purpose library-driver for iRiver's iFP
+(flash-based) portable audio players.
+
+This driver has been reported to work with models iFP1xx, 3xx, 5xx,
+7xx, 8xx, 9xx and N10.
