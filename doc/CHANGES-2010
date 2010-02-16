@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.799 2010/02/16 13:31:44 sno Exp $
+$NetBSD: CHANGES-2010,v 1.800 2010/02/16 13:43:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -959,3 +959,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/dbus-glib to 0.84 [wiz 2010-02-16]
 	Updated devel/libgsf to 1.14.17 [wiz 2010-02-16]
 	Updated databases/p5-DBIx-Class to 0.08119 [sno 2010-02-16]
+	Updated wm/openbox to 3.4.11 [wiz 2010-02-16]
