@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/16 18:32:32 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/16 15:22:45 sno Exp $
 #
 
 DISTNAME=	Padre-Plugin-Vi-0.22
@@ -19,7 +19,7 @@ PERL5_PACKLIST=		auto/Padre/Plugin/Vi/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 pre-configure:
-	cd ${WRKSRC} && find `pwd` -name "*.orig" -type f | xargs rm
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
