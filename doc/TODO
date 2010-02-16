@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9032 2010/02/15 23:48:16 dholland Exp $
+$NetBSD: TODO,v 1.9033 2010/02/16 11:19:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -457,6 +457,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bonnie++-1.96
 	o bos-2.5
 	o boson-0.13
+	o bouml-4.18.2
 	o bugzilla-3.4.5
 	o byacc-20080824
 	o bzr-2.0.3
@@ -859,7 +860,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libntlm-1.1
 	o libpciaccess-0.11.0
 	o librep-0.90.5
-	o libssh-0.4.0
+	o libssh-0.4.1
 	o libssh2-1.2.4
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
@@ -935,7 +936,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mkvtoolnix-3.2.0
 	o mlterm-2.9.4
 	o moc-2.4.4
-	o modular-xorg-server-1.7.4
+	o modular-xorg-server-1.7.5
 	o molden-4.8 [after which PR 40252 can be closed]
 	o mono-2.6.1
 	o mono-tools-2.4.3
@@ -1012,6 +1013,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmortal-0.7.1
 	o openmotif-2.3.2
 	o openmsx-0.7.0
+	o openoffice3-3.2
 	o openssh-5.3.1 [pkg/42635]
 	o openttd-0.7.4
 	o open-vm-tools-2009.12.16.217847
@@ -1080,7 +1082,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puf-0.93.3
 	o puppet-0.25.4
 	o puzzle-5.2
-	o puzzles-8850
+	o puzzles-8865
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1117,13 +1119,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt3-qscintilla-2.4.2
+	o qt4-libs-4.6.2
 	o quagga-0.99.15
 	o qvplay-0.95
 	o radiance-3.7.2
 	o raine-0.51.8
 	o randread-0.2
 	o rapidsvn-0.12
-	o rasqal-0.9.18
+	o rasqal-0.9.19
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
@@ -1251,7 +1254,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
 	o systrace-1.6e
-	o t-prot-2.14
+	o t-prot-2.15
 	o tacacs-4.0.4.14
 	o tads-3.0.16
 	o tcl-8.5.8
@@ -1349,8 +1352,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o x11vnc-0.9.9
 	o x264-devel-20100213
 	o xanalyser-1.30
-	o xapian-1.0.17
-	o xapian-omega-1.0.17
+	o xapian-1.0.18
+	o xapian-omega-1.0.18
 	o xaric-0.13.2
 	o xbiff-1.0.2
 	o xbindkeys-1.8.3
