@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9042 2010/02/16 14:01:48 wiz Exp $
+$NetBSD: TODO,v 1.9043 2010/02/16 14:08:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1059,7 +1059,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pngcheck-2.3.0
 	o po4a-0.36.3
 	o poedit-1.4.4
-	o polkit-qt-0.9.3
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o poppy-4.01
