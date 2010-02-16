@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.14 2009/09/08 20:22:03 drochner Exp $
+$NetBSD: patch-ab,v 1.15 2010/02/16 13:16:53 drochner Exp $
 
---- configure.orig	2009-08-28 22:05:53.000000000 +0200
+--- configure.orig	2010-02-10 22:46:11.000000000 +0000
 +++ configure
-@@ -21808,6 +21808,9 @@ main ()
+@@ -22014,6 +22014,9 @@ main ()
  #error GCC before 3.4 has critical bugs compiling inline assembly
  #endif
  #endif
@@ -12,16 +12,16 @@ $NetBSD: patch-ab,v 1.14 2009/09/08 20:22:03 drochner Exp $
  __asm__ (""::)
    ;
    return 0;
-@@ -22043,7 +22046,7 @@ $as_echo "#define HAVE_MMAP 1" >>confdef
+@@ -22303,7 +22306,7 @@ $as_echo "#define HAVE_MMAP 1" >>confdef
  fi
- rm -f conftest.mmap
+ rm -f conftest.mmap conftest.txt
  
 - if test "x$ac_cv_func_mmap_fixed_mapped" == "xyes"; then
 + if test "x$ac_cv_func_mmap_fixed_mapped" = "xyes"; then
    GST_HAVE_MMAP_TRUE=
    GST_HAVE_MMAP_FALSE='#'
  else
-@@ -23411,7 +23414,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -23673,7 +23676,7 @@ rm -f core conftest.err conftest.$ac_obj
  $as_echo "$flag_ok" >&6; }
  
  
@@ -30,7 +30,7 @@ $NetBSD: patch-ab,v 1.14 2009/09/08 20:22:03 drochner Exp $
      then
  
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking to see if compiler understands -errwarn=%all" >&5
-@@ -26464,6 +26467,10 @@ $as_echo_n "checking struct v4l2_buffer 
+@@ -26653,6 +26656,10 @@ $as_echo_n "checking Checking for up to 
  #ifdef __sun /* Solaris */
  #include <sys/types.h>
  #include <sys/videodev2.h>
