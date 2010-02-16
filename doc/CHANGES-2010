@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.819 2010/02/16 17:39:55 taca Exp $
+$NetBSD: CHANGES-2010,v 1.820 2010/02/16 18:18:24 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -981,3 +981,10 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/wxGTK24 to 2.4.2nb16 [taca 2010-02-16]
 	Updated x11/wxGTK26 to 2.6.3nb6 [taca 2010-02-16]
 	Updated x11/wxGTK28 to 2.8.10nb5 [taca 2010-02-16]
+	Updated lang/mono to 2.6.1 [kefren 2010-02-16]
+	Updated graphics/libgdiplus to 2.6 [kefren 2010-02-16]
+	Updated devel/mono-tools to 2.6.1 [kefren 2010-02-16]
+	Updated lang/mono-basic to 2.6 [kefren 2010-02-16]
+	Updated www/mono-xsp to 2.6 [kefren 2010-02-16]
+	Updated www/ap-mono to 2.6 [kefren 2010-02-16]
+	Updated devel/monodevelop to 2.2.1 [kefren 2010-02-16]
