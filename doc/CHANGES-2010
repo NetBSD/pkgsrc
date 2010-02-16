@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.811 2010/02/16 14:53:23 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.812 2010/02/16 15:29:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -971,3 +971,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/t-prot to 2.15 [wiz 2010-02-16]
 	Updated textproc/xapian to 1.0.18 [wiz 2010-02-16]
 	Updated textproc/xapian-omega to 1.0.18 [wiz 2010-02-16]
+	Updated net/gupnp-av to 0.5.4 [wiz 2010-02-16]
