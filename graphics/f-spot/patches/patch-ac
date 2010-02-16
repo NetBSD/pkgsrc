@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/02/16 12:16:23 drochner Exp $
+
+--- configure.orig	2009-11-04 19:35:17.000000000 +0000
++++ configure
+@@ -19761,7 +19761,7 @@ $as_echo "yes" >&6; }
+ fi
+ 
+ if pkg-config --atleast-version=2.4 libgphoto2; then
+-	CSC_DEFINES="$CSC_DEFINES -d:GPHOTO2_2_4"
++	CSC_DEFINES="$CSC_DEFINES -d:GPHOTO2_2_4 $EXTRACSDEFINES"
+ fi
+ 
+ 
