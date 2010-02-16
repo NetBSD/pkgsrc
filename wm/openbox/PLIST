@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2010/01/10 16:20:10 snj Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/02/16 13:43:09 wiz Exp $
 bin/gdm-control
 bin/gnome-panel-control
 bin/obxprop
@@ -6,22 +6,23 @@ bin/openbox
 bin/openbox-gnome-session
 bin/openbox-kde-session
 bin/openbox-session
-include/openbox/3.4/openbox/color.h
-include/openbox/3.4/openbox/font.h
-include/openbox/3.4/openbox/geom.h
-include/openbox/3.4/openbox/gradient.h
-include/openbox/3.4/openbox/image.h
-include/openbox/3.4/openbox/instance.h
-include/openbox/3.4/openbox/mask.h
-include/openbox/3.4/openbox/parse.h
-include/openbox/3.4/openbox/render.h
-include/openbox/3.4/openbox/theme.h
-include/openbox/3.4/openbox/version.h
+include/openbox/${PKGVERSION}/openbox/color.h
+include/openbox/${PKGVERSION}/openbox/font.h
+include/openbox/${PKGVERSION}/openbox/geom.h
+include/openbox/${PKGVERSION}/openbox/gradient.h
+include/openbox/${PKGVERSION}/openbox/image.h
+include/openbox/${PKGVERSION}/openbox/instance.h
+include/openbox/${PKGVERSION}/openbox/mask.h
+include/openbox/${PKGVERSION}/openbox/parse.h
+include/openbox/${PKGVERSION}/openbox/render.h
+include/openbox/${PKGVERSION}/openbox/theme.h
+include/openbox/${PKGVERSION}/openbox/version.h
 lib/libobparser.la
 lib/libobrender.la
 lib/openbox/xdg-autostart
 lib/pkgconfig/obparser-3.0.pc
 lib/pkgconfig/obrender-3.0.pc
+man/man1/obxprop.1
 man/man1/openbox-gnome-session.1
 man/man1/openbox-kde-session.1
 man/man1/openbox-session.1
@@ -44,9 +45,9 @@ share/doc/openbox/xbm/max.xbm
 share/doc/openbox/xbm/max_toggled.xbm
 share/doc/openbox/xbm/shade.xbm
 share/doc/openbox/xbm/shade_toggled.xbm
+share/examples/openbox/autostart.sh
 share/examples/openbox/menu.xml
 share/examples/openbox/rc.xml
-share/examples/openbox/autostart.sh
 share/gnome/wm-properties/openbox.desktop
 share/locale/ar/LC_MESSAGES/openbox.mo
 share/locale/bn_IN/LC_MESSAGES/openbox.mo
