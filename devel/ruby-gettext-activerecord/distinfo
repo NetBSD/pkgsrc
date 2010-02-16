@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/07 12:10:18 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2010/02/16 03:11:52 taca Exp $
 
 SHA1 (gettext_activerecord-2.1.0.gem) = b1f5c37391a75f4c31106d80876128e6ddad9a7b
 RMD160 (gettext_activerecord-2.1.0.gem) = c5f1c24ee46b6ff564406a8088877a910a8aca11
 Size (gettext_activerecord-2.1.0.gem) = 56832 bytes
+SHA1 (patch-aa) = 74e70ccd73b4d9f75e840a4d02f59fa2ae06a8a4
