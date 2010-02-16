@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9050 2010/02/16 15:37:15 wiz Exp $
+$NetBSD: TODO,v 1.9051 2010/02/16 15:40:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o alee-ttf-11.2
 	o alephone-20091015 [pkg/42397]
 	o aliados-0.2.0
-	o alsa-lib-1.0.22
 	o alsa-plugins-1.0.22
 	o alsa-utils-1.0.22
 	o amanda-2.6.1p2
