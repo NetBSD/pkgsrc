@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/12/19 03:33:45 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/16 18:28:01 wiz Exp $
 
 --- configure.orig	2008-10-29 08:48:06.000000000 -0400
 +++ configure
@@ -11,12 +11,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/19 03:33:45 jmcneill Exp $
  LIBS="$ALSA_LIBS $LIBS"
  { echo "$as_me:$LINENO: result: $ALSA_LIBS" >&5
  echo "${ECHO_T}$ALSA_LIBS" >&6; }
-@@ -9042,6 +9042,8 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     echo "$ac_cs_version"; exit ;;
