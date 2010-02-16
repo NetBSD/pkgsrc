@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.809 2010/02/16 14:37:20 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.810 2010/02/16 14:51:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -969,3 +969,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/py-pytz to 2010b [wiz 2010-02-16]
 	Updated textproc/rasqal to 0.9.19 [wiz 2010-02-16]
 	Updated mail/t-prot to 2.15 [wiz 2010-02-16]
+	Updated textproc/xapian to 1.0.18 [wiz 2010-02-16]
