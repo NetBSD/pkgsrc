@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1.1.1 2010/02/16 16:24:16 taca Exp $
+
+--- script/installscripts.sh.orig	2010-01-14 10:12:10.000000000 +0000
++++ script/installscripts.sh
+@@ -12,7 +12,7 @@ echo Installing scripts in $BINDIR
+ 
+ for d in $BINDIR; do
+  if [ ! -d $d ]; then
+-  mkdir $d
++  mkdir -p $d
+   if [ ! -d $d ]; then
+     echo Failed to make directory $d
+     echo Have you run installbin first?
