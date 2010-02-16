@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2010/01/26 11:54:16 sno Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/16 13:31:33 sno Exp $
 
-DISTNAME=	DBIx-Class-0.08115
+DISTNAME=	DBIx-Class-0.08119
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
@@ -21,8 +21,8 @@ DEPENDS+=	p5-Data-Dumper-Concise>=1.000:../../devel/p5-Data-Dumper-Concise
 DEPENDS+=	p5-JSON-Any>=1.18:../../converters/p5-JSON-Any
 DEPENDS+=	p5-MRO-Compat>=0.09:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Module-Find>=0.06:../../devel/p5-Module-Find
-DEPENDS+=	p5-Path-Class>=0.16:../../devel/p5-Path-Class
-DEPENDS+=	p5-SQL-Abstract>=1.60:../../databases/p5-SQL-Abstract
+DEPENDS+=	p5-Path-Class>=0.18:../../devel/p5-Path-Class
+DEPENDS+=	p5-SQL-Abstract>=1.61:../../databases/p5-SQL-Abstract
 DEPENDS+=	p5-SQL-Abstract-Limit>=0.13:../../databases/p5-SQL-Abstract-Limit
 DEPENDS+=	p5-Scope-Guard>=0.03:../../devel/p5-Scope-Guard
 DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.19}:../../devel/p5-Scalar-List-Utils
@@ -30,8 +30,8 @@ DEPENDS+=	{perl>=5.10,p5-Storable-[0-9]*}:../../devel/p5-Storable
 DEPENDS+=	p5-Sub-Name>=0.04:../../devel/p5-Sub-Name
 
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.22}:../../devel/p5-File-Temp
-BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
 
