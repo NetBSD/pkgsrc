@@ -1,7 +1,19 @@
-$NetBSD: patch-bg,v 1.1 2008/02/13 14:16:43 kefren Exp $
---- mono/metadata/socket-io.c.orig	2008-02-07 08:37:02.000000000 +0200
-+++ mono/metadata/socket-io.c	2008-02-07 08:37:17.000000000 +0200
-@@ -2751,7 +2751,7 @@
+$NetBSD: patch-bg,v 1.2 2010/02/16 17:01:05 kefren Exp $
+--- mono/metadata/socket-io.c.orig	2009-10-22 00:48:35.000000000 +0300
++++ mono/metadata/socket-io.c	2010-02-16 13:54:05.000000000 +0200
+@@ -2759,7 +2759,10 @@ MonoBoolean ves_icall_System_Net_Dns_Get
+ 	memset(&hints, 0, sizeof(hints));
+ 	hints.ai_family = get_family_hint ();
+ 	hints.ai_socktype = SOCK_STREAM;
+-	hints.ai_flags = AI_CANONNAME | AI_ADDRCONFIG;
++	hints.ai_flags = AI_CANONNAME;
++#ifdef AI_ADDRCONFIG
++	hints.ai_flags |= AI_ADDRCONFIG;
++#endif
+ 
+ 	if (*hostname && getaddrinfo(hostname, NULL, &hints, &info) == -1) {
+ 		return(FALSE);
+@@ -2904,7 +2907,7 @@ extern MonoBoolean ves_icall_System_Net_
  	struct sockaddr_in6 saddr6;
  	struct addrinfo *info = NULL, hints;
  	gint32 family;
@@ -10,3 +22,15 @@ $NetBSD: patch-bg,v 1.1 2008/02/13 14:16:43 kefren Exp $
  	int flags = 0;
  #else
  	struct in_addr inaddr;
+@@ -2961,7 +2964,10 @@ extern MonoBoolean ves_icall_System_Net_
+ 	memset (&hints, 0, sizeof(hints));
+ 	hints.ai_family = get_family_hint ();
+ 	hints.ai_socktype = SOCK_STREAM;
+-	hints.ai_flags = AI_CANONNAME | AI_ADDRCONFIG;
++	hints.ai_flags = AI_CANONNAME;
++#ifdef AI_ADDRCONFIG
++	hints.ai_flags |= AI_ADDRCONFIG;
++#endif
+ 
+ 	if( getaddrinfo (hostname, NULL, &hints, &info) == -1 ) {
+ 		return(FALSE);
