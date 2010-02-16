@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/16 08:56:08 wiz Exp $
+bin/ifpline
+include/ifp.h
+lib/libifp.la
+man/man3/ifp.h.3
