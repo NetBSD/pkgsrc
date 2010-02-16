@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/08/26 13:21:46 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/16 10:11:46 sno Exp $
 #
 
-DISTNAME=	Hash-Merge-0.11
+DISTNAME=	Hash-Merge-0.12
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Hash/}
@@ -18,6 +18,9 @@ PERL5_PACKLIST=	auto/Hash/Merge/.packlist
 
 # Merge.pm proves this version, even if it's not named in META.yml
 DEPENDS+=	p5-Clone>=0.09:../../devel/p5-Clone
+
+post-extract:
+	${FIND} ${WRKSRC} -name "*.pm" -type f -exec ${CHMOD} -x {} \;
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
