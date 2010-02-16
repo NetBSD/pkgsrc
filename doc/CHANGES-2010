@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.781 2010/02/16 10:13:36 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.782 2010/02/16 10:22:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -933,3 +933,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Hash-Case to 1.010 [sno 2010-02-16]
 	Updated devel/p5-Hash-Merge to 0.12 [sno 2010-02-16]
 	Updated devel/libidn to 1.18 [wiz 2010-02-16]
+	Updated devel/p5-Mixin-Linewise to 0.003 [sno 2010-02-16]
