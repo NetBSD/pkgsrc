@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.71 2009/10/21 20:08:01 tnn Exp $
+$NetBSD: TODO,v 1.72 2010/02/16 10:06:55 wiz Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -34,6 +34,7 @@ include the name of an example package where a warning should occur.
   cd ${WRKSRC} && autoconf, then an incorrect warning is issued.
 * LOCALBASE should not be used in normal Makefiles
 * parse LICENSE expressions (make help topic=license)
+* complain if LICENSE definition is missing
 
 %
 
