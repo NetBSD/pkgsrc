@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2008/10/19 19:18:31 he Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/16 15:22:45 sno Exp $
 #
 
 DISTNAME=		ispman-0.5
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 SVR4_PKGNAME=		p5isp
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ispman/}
@@ -34,6 +34,9 @@ SUBST_CLASSES+=		etc-fix
 SUBST_STAGE.etc-fix=	pre-configure
 SUBST_FILES.etc-fix=	ISPMan/*
 SUBST_SED.etc-fix=	-e 's:/etc:${PREFIX}/etc:g'
+
+pre-configure:
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/IO-stringy-1.212_patched/lib/IO/Scalar.pm \
