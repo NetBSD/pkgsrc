@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2010/02/16 03:11:52 taca Exp $
+
+Don't do test since some of them depends on existence of
+specific system locale.
+
+--- Rakefile.orig	2010-02-16 02:31:52.000000000 +0000
++++ Rakefile
+@@ -113,12 +113,3 @@ task :release => [:makemo, :package ] do
+                         "pkg/gettext_activerecord-#{PKG_VERSION}.tar.gz")
+ end
+ 
+-# Run the unit tests
+-desc 'Run tests'
+-task :test do
+-  cd "test"
+-  Dir.glob("test_*.rb").each do |v|
+-    ruby "-Ilib:../../locale/lib:../../gettext/lib #{v}"
+-  end
+-  cd ".."
+-end
