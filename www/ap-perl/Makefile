@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/06/15 17:42:04 he Exp $
+# $NetBSD: Makefile,v 1.46 2010/02/16 15:04:56 joerg Exp $
 #
 
 DISTNAME=		mod_perl-1.29
@@ -11,6 +11,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/} \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://perl.apache.org/
 COMMENT=		Module that embeds a Perl interpreter into Apache
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		ap-perl-[0-9]*
 CONFLICTS+=		ap2-perl-[0-9]*
@@ -25,13 +27,15 @@ MAKE_PARAMS+=		USE_APXS=1
 MAKE_PARAMS+=		WITH_APXS=${APXS}
 MAKE_PARAMS+=		EVERYTHING=1
 
-INSTALLATION_DIRS+=	share/httpd/htdocs/manual/mod
+INSTALLATION_DIRS+=	lib/httpd share/httpd/htdocs/manual/mod
 
 .include "../../lang/perl5/module.mk"
 .include "../../www/apache/buildlink3.mk"
 
 post-install:
+	${INSTALL_LIB} ${WRKSRC}/apaci/libperl.so \
+	    ${DESTDIR}${PREFIX}/lib/httpd/mod_perl.so
 	${INSTALL_DATA} ${WRKSRC}/htdocs/manual/mod/mod_perl.html \
-		${PREFIX}/share/httpd/htdocs/manual/mod
+	    ${DESTDIR}${PREFIX}/share/httpd/htdocs/manual/mod
 
 .include "../../mk/bsd.pkg.mk"
