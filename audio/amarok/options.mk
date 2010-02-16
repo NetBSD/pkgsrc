@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2010/02/16 09:01:46 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2010/02/16 09:18:23 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amarok
 PKG_SUPPORTED_OPTIONS=	libgpod libmp4v2 libmtp libvisual mp3tunes
@@ -40,5 +40,4 @@ BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.6.0nb1
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-# XXX: make sure qt4-libs have glib enabled
 .endif
