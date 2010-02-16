@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/16 17:22:13 taca Exp $
+${EMACS_LISPPREFIX}/po-mode/po-compat.el
+${EMACS_LISPPREFIX}/po-mode/po-compat.elc
+${EMACS_LISPPREFIX}/po-mode/po-mode.el
+${EMACS_LISPPREFIX}/po-mode/po-mode.elc
+${EMACS_LISPPREFIX}/po-mode/start-po.el
+${EMACS_LISPPREFIX}/po-mode/start-po.elc
