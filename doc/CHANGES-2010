@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.773 2010/02/16 03:15:49 taca Exp $
+$NetBSD: CHANGES-2010,v 1.774 2010/02/16 03:44:05 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -924,3 +924,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Data-OptList to 0.106 [seb 2010-02-16]
 	Updated devel/ruby-gettext-activerecord to 2.1.0nb1 [taca 2010-02-16]
 	Updated databases/ruby-activeldap to 1.2.1nb1 [taca 2010-02-16]
+	Updated cad/mcalc to 1.6 [dmcmahill 2010-02-16]
