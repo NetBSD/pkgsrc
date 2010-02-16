@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9043 2010/02/16 14:08:54 wiz Exp $
+$NetBSD: TODO,v 1.9044 2010/02/16 14:14:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1098,7 +1098,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-moin-1.9.0 [pkg/42602]
 	o py-moin-1.9.1
 	o py-psycopg2-2.0.13
-	o py-pytz-2010b
 	o py-subversion-1.6.9
 	o py-sybase-0.37
 	o py-twisted-9.0.0
