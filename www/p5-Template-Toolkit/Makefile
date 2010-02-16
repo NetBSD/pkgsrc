@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/08/26 17:36:53 sno Exp $
+# $NetBSD: Makefile,v 1.33 2010/02/16 15:22:45 sno Exp $
 #
 
 DISTNAME=	Template-Toolkit-2.22
@@ -26,7 +26,7 @@ MAKE_PARAMS=	TT_ACCEPT=y
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 pre-configure:
-	cd ${WRKSRC} && find `pwd` -name "*.orig" -type f | xargs rm
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
