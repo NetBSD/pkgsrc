@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/02/16 08:59:13 wiz Exp $
+
+--- configure.orig	2007-06-17 19:52:02.000000000 +0000
++++ configure
+@@ -37060,7 +37060,7 @@ if test "${ac_cv_lib_tunepimp_tr_GetPUID
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ltunepimp  $LIBS"
++LIBS="-ltunepimp $PTHREAD_LDFLAGS $PTHREAD_LIBS $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -37579,7 +37579,7 @@ if test "${ac_cv_lib_konqsidebarplugin__
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lkonqsidebarplugin  $LIBS"
++LIBS="-lkonqsidebarplugin ${PTHREAD_LIBS} ${PTHREAD_LDFLAGS} $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
