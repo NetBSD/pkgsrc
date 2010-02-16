@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2009/08/18 18:31:18 hasso Exp $
+$NetBSD: patch-aa,v 1.3 2010/02/16 15:30:50 wiz Exp $
 
---- src/network-light/upnp.c.orig	2009-04-30 14:30:23.000000000 +0200
+--- src/network-light/upnp.c.orig	2009-08-26 14:54:42.000000000 +0000
 +++ src/network-light/upnp.c
 @@ -25,7 +25,11 @@
  #include <stdio.h>
@@ -14,29 +14,24 @@ $NetBSD: patch-aa,v 1.2 2009/08/18 18:31:18 hasso Exp $
  #include <glib/gstdio.h>
  
  #include "gui.h"
-@@ -265,6 +269,9 @@ change_uuid (xmlDoc *doc)
+@@ -317,9 +321,19 @@ static void init_uuid ()
+         uuid_t uuid_context;
          xmlNode *uuid_node;
-         uuid_t uuid;
-         char *udn, uuidstr[37];
+         char *udn;
+-
 +#if defined(__NetBSD__) || defined(__DragonFly__)
 +	char *myuuidstr;
 +#endif
- 
-         uuid_node = xml_util_get_element ((xmlNode *) doc,
-                                           "root",
-@@ -278,8 +285,15 @@ change_uuid (xmlDoc *doc)
-                 return NULL;
-         }
- 
++
 +#if defined(__NetBSD__) || defined(__DragonFly__)
-+	uuid_create(&uuid, 0);
-+	uuid_to_string(&uuid, &myuuidstr, 0);
-+	strncpy(uuidstr, myuuidstr, sizeof(uuidstr));
-+	free(myuuidstr);
++        uuid_create(&uuid_context, 0);
++        uuid_to_string(&uuid_context, &myuuidstr, 0);
++        strncpy(uuid, myuuidstr, sizeof(uuid));
++        free(myuuidstr);
 +#else
-         uuid_generate (uuid);
-         uuid_unparse (uuid, uuidstr);
+         uuid_generate (uuid_context);
+         uuid_unparse (uuid_context, uuid);
 +#endif
  
-         if (uuidstr == NULL) {
-                 udn = (char *) xmlNodeGetContent (uuid_node);
+         uuid_node = xml_util_get_element ((xmlNode *) doc->doc,
+                                           "root",
