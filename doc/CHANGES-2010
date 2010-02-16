@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.815 2010/02/16 15:40:17 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.816 2010/02/16 16:26:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -975,3 +975,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/gupnp-tools to 0.8 [wiz 2010-02-16]
 	Updated editors/Sigil to 0.1.9 [wiz 2010-02-16]
 	Updated audio/alsa-lib to 1.0.22 [wiz 2010-02-16]
+	Added net/samba33 version 3.3.10 [taca 2010-02-16]
