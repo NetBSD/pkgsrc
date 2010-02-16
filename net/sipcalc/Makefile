@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/01/11 22:49:11 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/16 03:05:29 obache Exp $
 #
 
 DISTNAME=	sipcalc-1.1.4
@@ -13,9 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.sipcalc
-PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
-PKG_OPTIONS_GROUP.inet6=	inet6
+USE_FEATURES=		inet6
 
-.include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.pkg.mk"
