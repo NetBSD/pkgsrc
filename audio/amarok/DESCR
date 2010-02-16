@@ -4,3 +4,5 @@ interface, that doesn't get in the way of the user. How many buttons
 do you have to press for simply adding some new tracks to the
 playlist? amaroK tries to be a little different, providing a simple
 drag and drop interface, that really makes playlist handling easy.
+
+This package contains the KDE4 version of amarok.
