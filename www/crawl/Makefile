@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/08/16 15:35:44 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2010/02/16 18:11:52 joerg Exp $
 
 DISTNAME=	crawl-0.4
 PKGREVISION=	8
@@ -9,14 +9,17 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monkey.org/~provos/crawl/
 COMMENT=	Small and efficient HTTP crawler
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_DB185=	yes
 
-CONF_FILES=	${PREFIX}/share/examples/${PKGBASE}/crawl.conf ${PKG_SYSCONFDIR}/crawl.conf
+CONF_FILES=	${PREFIX}/share/examples/crawl/crawl.conf ${PKG_SYSCONFDIR}/crawl.conf
+
+INSTALLATION_DIRS+=	share/examples/crawl
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/crawl.conf ${PREFIX}/share/examples/${PKGBASE}/crawl.conf
+	${INSTALL_DATA} ${WRKSRC}/crawl.conf ${DESTDIR}${PREFIX}/share/examples/crawl/crawl.conf
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
