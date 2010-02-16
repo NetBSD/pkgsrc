@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.29 2010/02/15 07:58:39 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.30 2010/02/16 10:38:03 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -100,3 +100,5 @@ fetchmail: security update
 fetchmailconf: version adjustment
 Pullup ticket #3007 - requested by dholland
 h3800-hms-gcc: build fix
+Pullup ticket #3008 - requested by dholland
+hobbitmon: build fix
