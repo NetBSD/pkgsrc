@@ -1,4 +1,6 @@
-$NetBSD: patch-bb,v 1.1 2009/08/01 14:03:19 drochner Exp $
+$NetBSD: patch-bb,v 1.2 2010/02/16 17:38:14 taca Exp $
+
+deal with CVE-2009-2369.
 
 --- src/common/imagtiff.cpp.orig	2009-03-06 13:17:40.000000000 +0100
 +++ src/common/imagtiff.cpp
