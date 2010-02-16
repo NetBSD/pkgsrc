@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.806 2010/02/16 14:08:54 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.807 2010/02/16 14:14:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -966,3 +966,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/pear-HTML_Select to 1.3.0 [taca 2010-02-16]
 	Updated devel/p5-Mouse to 0.50 [wiz 2010-02-16]
 	Updated security/polkit-qt to 0.9.3 [wiz 2010-02-16]
+	Updated time/py-pytz to 2010b [wiz 2010-02-16]
