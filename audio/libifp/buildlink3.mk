@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2010/02/16 08:56:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/02/16 08:57:48 wiz Exp $
 
 BUILDLINK_TREE+=	libifp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libifp
 LIBIFP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libifp+=	libifp>=1.0.0.2
-BUILDLINK_PKGSRCDIR.libifp?=	../../nih/libifp
+BUILDLINK_PKGSRCDIR.libifp?=	../../audio/libifp
 
 .include "../../devel/libusb/buildlink3.mk"
 .endif	# LIBIFP_BUILDLINK3_MK
