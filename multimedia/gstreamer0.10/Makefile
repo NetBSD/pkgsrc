@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2009/10/22 09:42:51 drochner Exp $
+# $NetBSD: Makefile,v 1.33 2010/02/16 13:07:05 drochner Exp $
 #
 
-DISTNAME=		gstreamer-0.10.25
+DISTNAME=		gstreamer-0.10.26
 PKGNAME=		${DISTNAME:S/gstreamer/gstreamer0.10/}
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		http://gstreamer.freedesktop.org/src/gstreamer/
@@ -17,6 +17,9 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gmake perl pkg-config
+
+# queue2 moved from gst-plugins-base to here
+CONFLICTS+=		gst-plugins0.10-base<0.10.26
 
 CONFIGURE_ARGS+=	--disable-examples
 CONFIGURE_ARGS+=	--disable-tests
