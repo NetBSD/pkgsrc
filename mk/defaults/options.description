@@ -227,6 +227,7 @@ lame			Use the lame encoder to create MP3 files.
 lang-af			Add Afrikaans language support.
 lang-be			Add Belarusian language support.
 lang-bg			Add Bulgarian language support.
+lang-bs			Add Bosnian language support.
 lang-ca			Add Catalan language support.
 lang-cs			Add Czech language support.
 lang-da			Add Danish language support.
@@ -238,6 +239,7 @@ lang-fi			Add Finnish language support.
 lang-fr			Add French language support.
 lang-gu			Add Gujarati language support.
 lang-he			Add Hebrew language support.
+lang-hr			Add Croatian language support.
 lang-hu			Add Hungarian language support.
 lang-id			Add Indonesian language support.
 lang-is			Add Icelandic language support.
@@ -255,10 +257,12 @@ lang-pt-br		Add Brazilian Portuguese language support.
 lang-ro			Add Romanian language support.
 lang-ru			Add Russian language support.
 lang-sk			Add Slovak language support.
+lang-sl			Add Slovenian language support.
 lang-sq			Add Albanian language support.
 lang-sr			Add Serbian language support.
 lang-sv			Add Swedish language support.
 lang-th			Add Thai language support.
+lang-tl			Add Tagalog language support.
 lang-tr			Add Turkish language support.
 lang-uk			Add Ukrainian language support.
 lang-uk-ua		Add Ukrainian/UKRAINE language support.
