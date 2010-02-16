@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2009/05/25 16:10:52 drochner Exp $
+$NetBSD: patch-aa,v 1.10 2010/02/16 13:14:31 drochner Exp $
 
---- configure.orig	2009-05-10 23:50:52.000000000 +0200
+--- configure.orig	2010-02-10 19:26:02.000000000 +0000
 +++ configure
-@@ -24238,7 +24238,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -18848,7 +18848,7 @@ rm -f core conftest.err conftest.$ac_obj
  $as_echo "$flag_ok" >&6; }
  
  
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.9 2009/05/25 16:10:52 drochner Exp $
 +        if test "x$ERROR_CFLAGS" = "x"
      then
  
-   { $as_echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
-@@ -29572,11 +29572,11 @@ $as_echo "yes" >&6; }
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking to see if compiler understands -errwarn=%all" >&5
+@@ -22818,11 +22818,11 @@ $as_echo "yes" >&6; }
  fi
  
  
