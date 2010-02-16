@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.818 2010/02/16 17:24:57 taca Exp $
+$NetBSD: CHANGES-2010,v 1.819 2010/02/16 17:39:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -978,3 +978,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/samba33 version 3.3.10 [taca 2010-02-16]
 	Updated net/pear-Net_LDAP2 to 2.0.8 [taca 2010-02-16]
 	Added textproc/po-mode version 2.01 [taca 2010-02-16]
+	Updated x11/wxGTK24 to 2.4.2nb16 [taca 2010-02-16]
+	Updated x11/wxGTK26 to 2.6.3nb6 [taca 2010-02-16]
+	Updated x11/wxGTK28 to 2.8.10nb5 [taca 2010-02-16]
