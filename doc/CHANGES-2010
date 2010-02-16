@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.804 2010/02/16 13:59:06 taca Exp $
+$NetBSD: CHANGES-2010,v 1.805 2010/02/16 14:01:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -964,3 +964,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.05002 [sno 2010-02-16]
 	Updated mail/p5-MailTools to 2.06 [wiz 2010-02-16]
 	Updated www/pear-HTML_Select to 1.3.0 [taca 2010-02-16]
+	Updated devel/p5-Mouse to 0.50 [wiz 2010-02-16]
