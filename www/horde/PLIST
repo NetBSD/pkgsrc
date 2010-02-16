@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/12/20 22:15:13 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/02/16 16:08:59 joerg Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -13,6 +13,14 @@ share/doc/horde/SECURITY
 share/doc/horde/TODO
 share/doc/horde/TRANSLATIONS
 share/doc/horde/UPGRADING
+share/examples/horde/config/conf.php
+share/examples/horde/config/conf.xml
+share/examples/horde/config/hooks.php
+share/examples/horde/config/mime_drivers.php
+share/examples/horde/config/motd.php
+share/examples/horde/config/nls.php
+share/examples/horde/config/prefs.php
+share/examples/horde/config/registry.php
 share/examples/horde/horde.conf
 share/horde/admin/alarms.php
 share/horde/admin/cmdshell.php
@@ -36,22 +44,6 @@ share/horde/admin/setup/scripts.php
 share/horde/admin/signup_confirm.php
 share/horde/admin/sqlshell.php
 share/horde/admin/user.php
-share/horde/config/conf.php
-share/horde/config/conf.php.dist
-share/horde/config/conf.xml
-share/horde/config/conf.xml.dist
-share/horde/config/hooks.php
-share/horde/config/hooks.php.dist
-share/horde/config/mime_drivers.php
-share/horde/config/mime_drivers.php.dist
-share/horde/config/motd.php
-share/horde/config/motd.php.dist
-share/horde/config/nls.php
-share/horde/config/nls.php.dist
-share/horde/config/prefs.php
-share/horde/config/prefs.php.dist
-share/horde/config/registry.php
-share/horde/config/registry.php.dist
 share/horde/index.php
 share/horde/js/QuickFinder.js
 share/horde/js/accesskeys.js
