@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/11/06 04:06:06 seb Exp $
+# $NetBSD: Makefile,v 1.8 2010/02/16 12:33:42 sno Exp $
 #
 
-DISTNAME=	MooseX-Declare-0.32
+DISTNAME=	MooseX-Declare-0.33
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
@@ -13,13 +13,13 @@ COMMENT=	Perl 5 module providing declarative syntax for Moose
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Devel-Declare>=0.005011:../../devel/p5-Devel-Declare
+DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Moose>=0.90:../../devel/p5-Moose
-DEPENDS+=	p5-MooseX-Method-Signatures>=0.24:../../devel/p5-MooseX-Method-Signatures
+DEPENDS+=	p5-MooseX-Method-Signatures>=0.30:../../devel/p5-MooseX-Method-Signatures
 DEPENDS+=	p5-MooseX-Role-Parameterized>=0.12:../../devel/p5-MooseX-Role-Parameterized
 DEPENDS+=	p5-MooseX-Types>=0.20:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-namespace-autoclean>=0.09:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-namespace-clean>=0.11:../../devel/p5-namespace-clean
-DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
