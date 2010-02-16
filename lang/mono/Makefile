@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2010/01/15 19:41:23 drochner Exp $
+# $NetBSD: Makefile,v 1.97 2010/02/16 17:01:04 kefren Exp $
 
-DISTNAME=	mono-${MONO_VERSION}
+DISTNAME=	mono-2.6.1
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 CONFLICTS=	pnet-[0-9]*
 
-MONO_VERSION=		2.4.3.1
 ALL_ENV+=		MONO_SHARED_DIR=${WRKDIR:Q}
 
 USE_TOOLS+=		bison gmake gtar perl:run pkg-config bash:run msgfmt
@@ -31,8 +30,6 @@ CONFIGURE_ARGS+=	--with-libgdiplus=installed
 
 .include "options.mk"
 
-MAKE_JOBS_SAFE=		no
-
 MAKE_FLAGS+=		PERL=${PERL5:Q}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 UNLIMIT_RESOURCES=	datasize
@@ -44,15 +41,16 @@ PKGCONFIG_OVERRIDE+=	data/cecil.pc.in
 PKGCONFIG_OVERRIDE+=	data/dotnet.pc.in
 PKGCONFIG_OVERRIDE+=	data/dotnet35.pc.in
 PKGCONFIG_OVERRIDE+=	data/mint.pc.in
+PKGCONFIG_OVERRIDE+=	data/mono.web.pc.in
 PKGCONFIG_OVERRIDE+=	data/monodoc.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono-cairo.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono-lineeditor.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono-nunit.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono-options.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono.pc.in
-PKGCONFIG_OVERRIDE+=	data/smcs.pc.in
 PKGCONFIG_OVERRIDE+=	data/system.web.extensions_1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/system.web.extensions.design_1.0.pc.in
+PKGCONFIG_OVERRIDE+=	data/system.web.mvc.pc.in
 PKGCONFIG_OVERRIDE+=	data/wcf.pc.in
 
 REPLACE_PERL+=	mcs/errors/do-tests.pl
@@ -102,6 +100,8 @@ CONF_FILES+=	${EGDIR}/2.0/settings.map \
 		${PKG_SYSCONFDIR}/mono/2.0/settings.map
 CONF_FILES+=	${EGDIR}/2.0/web.config \
 		${PKG_SYSCONFDIR}/mono/2.0/web.config
+CONF_FILES+=	${EGDIR}/2.0/Browsers/Compat.browser \
+		${PKG_SYSCONFDIR}/mono/2.0/Browsers/Compat.browser
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/1.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0

@@ -1,33 +1,18 @@
-$NetBSD: patch-dc,v 1.2 2009/04/28 10:31:58 hasso Exp $
-
---- mono/mini/mini-x86.h.orig	2009-02-14 01:34:26 +0200
-+++ mono/mini/mini-x86.h	2009-04-27 13:32:19 +0300
-@@ -43,7 +43,7 @@ LONG CALLBACK seh_handler(EXCEPTION_POIN
+$NetBSD: patch-dc,v 1.3 2010/02/16 17:01:05 kefren Exp $
+--- mono/mini/mini-x86.h.orig	2009-12-17 01:26:00.000000000 +0200
++++ mono/mini/mini-x86.h	2010-02-16 12:29:54.000000000 +0200
+@@ -44,7 +44,7 @@ LONG CALLBACK seh_handler(EXCEPTION_POIN
  
  #endif /* PLATFORM_WIN32 */
  
--#if defined( __linux__) || defined(__sun) || defined(__APPLE__) || defined(__NetBSD__)
+-#if defined( __linux__) || defined(__sun) || defined(__APPLE__) || defined(__NetBSD__) || defined(__FreeBSD__)
 +#if defined( __linux__) || defined(__sun) || defined(__APPLE__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
  #define MONO_ARCH_USE_SIGACTION
  #endif
  
-@@ -138,11 +138,11 @@ struct MonoLMF {
- 
- typedef void* MonoCompileArch;
- 
--#if defined(__FreeBSD__) || defined(__APPLE__)
-+#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__)
- #include <ucontext.h>
- #endif 
- 
--#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
- 	#define UCONTEXT_REG_EAX(ctx) ((ctx)->uc_mcontext.mc_eax)
- 	#define UCONTEXT_REG_EBX(ctx) ((ctx)->uc_mcontext.mc_ebx)
- 	#define UCONTEXT_REG_ECX(ctx) ((ctx)->uc_mcontext.mc_ecx)
-@@ -194,7 +194,7 @@ typedef void* MonoCompileArch;
- 	#define UCONTEXT_REG_EIP(ctx) ((ctx)->uc_mcontext.gregs [REG_EIP])
- #endif
+@@ -150,7 +150,7 @@ typedef struct {
+ 	gboolean need_stack_frame;
+ } MonoCompileArch;
  
 -#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
 +#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__) || defined(__DragonFly__)

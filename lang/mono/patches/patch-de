@@ -1,13 +1,12 @@
-$NetBSD: patch-de,v 1.2 2009/04/28 10:31:58 hasso Exp $
-
---- ikvm-native/jni.c.orig	2009-03-03 16:07:20 -0800
-+++ ikvm-native/jni.c	2009-03-03 16:07:43 -0800
+$NetBSD: patch-de,v 1.3 2010/02/16 17:01:05 kefren Exp $
+--- ikvm-native/jni.c.orig	2009-09-25 17:58:13.000000000 +0300
++++ ikvm-native/jni.c	2010-02-16 12:31:23.000000000 +0200
 @@ -28,7 +28,7 @@
  #include <malloc.h>
  #define ALLOCA _alloca
  #else
--#if defined(__FreeBSD__) || defined(__NetBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
  #include <stdlib.h>
  #else
  #include <alloca.h>
