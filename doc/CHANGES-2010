@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.777 2010/02/16 09:26:12 sno Exp $
+$NetBSD: CHANGES-2010,v 1.778 2010/02/16 09:27:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -928,3 +928,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-PPI to 1.210 [sno 2010-02-16]
 	Added audio/libifp version 1.0.0.2 [wiz 2010-02-16]
 	Added devel/p5-Log-Report version 0.26 [sno 2010-02-16]
+	Moved audio/amarok to audio/amarok-kde3 [wiz 2010-02-16]
+	Updated audio/amarok to 2.2.2nb3 [wiz 2010-02-16]
