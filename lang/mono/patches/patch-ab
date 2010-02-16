@@ -1,26 +1,25 @@
-$NetBSD: patch-ab,v 1.21 2010/01/15 19:41:23 drochner Exp $
-
---- configure.orig	2009-12-28 19:58:39.000000000 +0000
-+++ configure
-@@ -3058,11 +3058,15 @@ _ACEOF
+$NetBSD: patch-ab,v 1.22 2010/02/16 17:01:04 kefren Exp $
+--- configure.orig	2010-02-16 12:05:01.000000000 +0200
++++ configure	2010-02-16 12:15:36.000000000 +0200
+@@ -3115,12 +3115,15 @@ _ACEOF
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
  		need_link_unlink=yes
 -		libdl="-ldl"
 +		libdl="-ldl /libexec/ld.elf_so"
  		libgc_threads=pthreads
+ 		with_sigaltstack=no
+ 		use_sigposix=yes
 +		cat >>confdefs.h <<\_ACEOF
 +#define PTHREAD_POINTER_ID 1
 +_ACEOF
-+
- 		with_sigaltstack=no
  		;;
 -	*-*-*freebsd*)
 +	*-*-*freebsd* | *-*-*dragonfly*)
  		platform_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -3078,7 +3082,8 @@ _ACEOF
+@@ -3136,7 +3139,8 @@ _ACEOF
  			LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
  			libmono_ldflags="$PTHREAD_LIBS"
  		fi
@@ -30,16 +29,7 @@ $NetBSD: patch-ab,v 1.21 2010/01/15 19:41:23 drochner Exp $
  		need_link_unlink=yes
  
  cat >>confdefs.h <<\_ACEOF
-@@ -31859,7 +31864,7 @@ LIBC="libc.so.6"
- INTL="libc.so.6"
- SQLITE="libsqlite.so.0"
- SQLITE3="libsqlite3.so.0"
--X11="libX11.so"
-+X11="/usr/pkg/lib/libX11.so"
- 
- sizeof_register="SIZEOF_VOID_P"
- 
-@@ -32309,10 +32314,10 @@ case "$host" in
+@@ -37054,10 +37058,10 @@ case "$host" in
  	X11="libX11.dylib"
  	;;
       *-*-*netbsd*)
@@ -49,11 +39,11 @@ $NetBSD: patch-ab,v 1.21 2010/01/15 19:41:23 drochner Exp $
 +	INTL="libintl.so"
  	;;
 -    *-*-*freebsd*)
-+    *-*-*freebsd*|*-*-*dragonfly*)
++    *-*-*freebsd* | *-*-*dragonfly*)
      	LIBC="libc.so"
  	INTL="libintl.so"
  	;;
-@@ -32613,6 +32618,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -37358,6 +37362,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
  #include <$ac_header>
@@ -63,7 +53,7 @@ $NetBSD: patch-ab,v 1.21 2010/01/15 19:41:23 drochner Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (ac_try="$ac_compile"
-@@ -32654,6 +32662,9 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -37399,6 +37406,9 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <$ac_header>
