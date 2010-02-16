@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.779 2010/02/16 09:45:25 sno Exp $
+$NetBSD: CHANGES-2010,v 1.780 2010/02/16 10:11:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -931,3 +931,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Moved audio/amarok to audio/amarok-kde3 [wiz 2010-02-16]
 	Updated audio/amarok to 2.2.2nb3 [wiz 2010-02-16]
 	Updated devel/p5-Hash-Case to 1.010 [sno 2010-02-16]
+	Updated devel/p5-Hash-Merge to 0.12 [sno 2010-02-16]
