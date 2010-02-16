@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1 2010/02/16 12:16:23 drochner Exp $
+
+--- lib/libgphoto2-sharp/CameraFilesystem.cs.orig	2009-11-04 19:34:32.000000000 +0000
++++ lib/libgphoto2-sharp/CameraFilesystem.cs
+@@ -45,7 +45,11 @@ namespace LibGPhoto2
+ 	{
+ 		public CameraFileInfoFields fields;
+ 		public CameraFileStatus status;
++#if LONG_IS_64BITS
+ 		public ulong size;
++#else
++		public uint size;
++#endif
+ 		[MarshalAs(UnmanagedType.ByValTStr, SizeConst=64)] public char[] type;
+ 	}
+ 	
+@@ -54,7 +58,11 @@ namespace LibGPhoto2
+ 	{
+ 		public CameraFileInfoFields fields;
+ 		public CameraFileStatus status;
++#if LONG_IS_64BITS
+ 		public ulong size;
++#else
++		public uint size;
++#endif
+ 		[MarshalAs(UnmanagedType.ByValTStr, SizeConst=64)] public char[] type;
+ 		
+ 		public uint width, height;
+@@ -65,7 +73,11 @@ namespace LibGPhoto2
+ 	{
+ 		public CameraFileInfoFields fields;
+ 		public CameraFileStatus status;
++#if LONG_IS_64BITS
+ 		public ulong size;
++#else
++		public uint size;
++#endif
+ 		[MarshalAs(UnmanagedType.ByValTStr, SizeConst=64)] public char[] type;
+ 		
+ 		public uint width, height;

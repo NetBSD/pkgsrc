@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1 2010/02/16 12:16:23 drochner Exp $
+
+--- lib/libgphoto2-sharp/CameraFile.cs.orig	2009-11-04 19:34:32.000000000 +0000
++++ lib/libgphoto2-sharp/CameraFile.cs
+@@ -76,11 +76,19 @@ namespace LibGPhoto2
+ 		}
+ 		
+ 		[DllImport ("libgphoto2.so")]
++#if LONG_IS_64BITS
+ 		internal static extern ErrorCode gp_file_append (HandleRef file, byte[] data, ulong size);
++#else
++		internal static extern ErrorCode gp_file_append (HandleRef file, byte[] data, uint size);
++#endif
+ 
+ 		public void Append (byte[] data)
+ 		{
++#if LONG_IS_64BITS
+ 			Error.CheckError (gp_file_append (this.Handle, data, (ulong)data.Length));
++#else
++			Error.CheckError (gp_file_append (this.Handle, data, (uint)data.Length));
++#endif
+ 		}
+ 		
+ 		[DllImport ("libgphoto2.so")]
+@@ -223,11 +231,19 @@ namespace LibGPhoto2
+ 		}
+ 		
+ 		[DllImport ("libgphoto2.so")]
++#if LONG_IS_64BITS
+ 		internal static extern ErrorCode gp_file_set_data_and_size (HandleRef file, byte[] data, ulong size);
++#else
++		internal static extern ErrorCode gp_file_set_data_and_size (HandleRef file, byte[] data, uint size);
++#endif
+ 
+ 		public void SetDataAndSize (byte[] data)
+ 		{
++#if LONG_IS_64BITS
+ 			Error.CheckError (gp_file_set_data_and_size (this.Handle, data, (ulong)data.Length));
++#else
++			Error.CheckError (gp_file_set_data_and_size (this.Handle, data, (uint)data.Length));
++#endif
+ 		}
+ 		
+ 		[DllImport ("libgphoto2.so")]
