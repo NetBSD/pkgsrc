@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2010/02/02 19:17:30 sno Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/16 13:53:38 sno Exp $
 
-DISTNAME=	DBIx-Class-Schema-Loader-0.05000
+DISTNAME=	DBIx-Class-Schema-Loader-0.05002
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
@@ -43,6 +43,9 @@ MAKE_ENV+=	DBIC_FEATURE_NOQUESTIONS=1
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBIx/Class/Schema/Loader/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
+
+pre-configure:
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
 
 BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.560
 BUILDLINK_DEPMETHOD.p5-DBI?=	build
