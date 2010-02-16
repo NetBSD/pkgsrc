@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2009/10/11 18:36:00 epg Exp $
+@comment $NetBSD: PLIST,v 1.32 2010/02/16 11:27:27 wiz Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -1686,6 +1686,8 @@ ${PYSITELIB}/bzrlib/tests/test_patch.pyo
 ${PYSITELIB}/bzrlib/tests/test_patches.py
 ${PYSITELIB}/bzrlib/tests/test_patches.pyc
 ${PYSITELIB}/bzrlib/tests/test_patches.pyo
+${PYSITELIB}/bzrlib/tests/test_patches_data/binary-after-normal.patch
+${PYSITELIB}/bzrlib/tests/test_patches_data/binary.patch
 ${PYSITELIB}/bzrlib/tests/test_patches_data/diff
 ${PYSITELIB}/bzrlib/tests/test_patches_data/diff-2
 ${PYSITELIB}/bzrlib/tests/test_patches_data/diff-3
