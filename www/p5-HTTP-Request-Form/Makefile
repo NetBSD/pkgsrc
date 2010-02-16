@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2008/10/19 19:19:15 he Exp $
+# $NetBSD: Makefile,v 1.20 2010/02/16 15:22:45 sno Exp $
 #
 
 DISTNAME=	HTTP-Request-Form-0.952
 PKGNAME=	p5-${DISTNAME:S/952/9.5.2/}
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	p5htt
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
@@ -19,6 +19,9 @@ DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
 PERL5_PACKLIST=		auto/HTTP/Request/Form/.packlist
+
+pre-configure:
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
