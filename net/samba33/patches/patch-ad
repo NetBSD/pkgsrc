@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/02/16 16:24:15 taca Exp $
+
+--- VERSION.orig	2010-01-14 10:12:10.000000000 +0000
++++ VERSION
+@@ -84,7 +84,7 @@ SAMBA_VERSION_IS_GIT_SNAPSHOT=
+ #       SAMBA_VERSION_VENDOR_FUNCTION                  #
+ #                                                      #
+ ########################################################
+-SAMBA_VERSION_VENDOR_SUFFIX=
++SAMBA_VERSION_VENDOR_SUFFIX="pkgsrc"
+ SAMBA_VERSION_VENDOR_PATCH=
+ 
+ ########################################################

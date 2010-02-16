@@ -1,0 +1,99 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/02/16 16:24:15 taca Exp $
+
+--- Makefile.in.orig	2010-01-14 10:12:10.000000000 +0000
++++ Makefile.in
+@@ -1432,7 +1432,7 @@ bin/smbget@EXEEXT@: $(BINARY_PREREQS) $(
+ 	@echo Linking $@
+ 	@$(CC) $(FLAGS) -o $@ $(SMBGET_OBJ) $(LDFLAGS) $(DYNEXP) $(LIBS) \
+ 		$(POPT_LIBS)  $(KRB5LIBS) $(LDAP_LIBS) $(NSCD_LIBS) \
+-		$(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(WINBIND_LIBS)
++		$(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(WINBIND_LIBS)  $(PASSDB_LIBS)
+ 
+ bin/nmblookup@EXEEXT@: $(BINARY_PREREQS) $(NMBLOOKUP_OBJ) @BUILD_POPT@ @LIBTALLOC_SHARED@ @LIBTDB_SHARED@
+ 	@echo Linking $@
+@@ -1478,18 +1478,18 @@ bin/smbcacls@EXEEXT@: $(BINARY_PREREQS) 
+ 	@echo Linking $@
+ 	@$(CC) $(FLAGS) -o $@ $(SMBCACLS_OBJ) $(DYNEXP) $(LDFLAGS) \
+ 		$(LIBS) $(POPT_LIBS) $(KRB5LIBS) $(LDAP_LIBS) $(NSCD_LIBS) \
+-		$(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(WINBIND_LIBS)
++		$(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(WINBIND_LIBS) $(PASSDB_LIBS)
+ 
+ bin/smbcquotas@EXEEXT@: $(BINARY_PREREQS) $(SMBCQUOTAS_OBJ) @BUILD_POPT@ @LIBTALLOC_SHARED@ @LIBTDB_SHARED@ @LIBWBCLIENT_SHARED@
+ 	@echo Linking $@
+ 	@$(CC) $(FLAGS) -o $@ $(SMBCQUOTAS_OBJ) $(DYNEXP) $(LDFLAGS) \
+ 		$(LIBS) $(POPT_LIBS) $(KRB5LIBS) $(LDAP_LIBS) $(NSCD_LIBS) \
+-		$(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(WINBIND_LIBS)
++		$(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(WINBIND_LIBS) $(PASSDB_LIBS)
+ 
+ bin/eventlogadm@EXEEXT@: $(BINARY_PREREQS) $(EVTLOGADM_OBJ) @BUILD_POPT@ @LIBTALLOC_SHARED@ @LIBTDB_SHARED@
+ 	@echo Linking $@
+ 	@$(CC) $(FLAGS) -o $@ $(EVTLOGADM_OBJ) $(DYNEXP) $(LDFLAGS) \
+-		$(LIBS) $(LDAP_LIBS) $(POPT_LIBS) $(LIBTALLOC_LIBS) $(LIBTDB_LIBS)
++		$(LIBS) $(LDAP_LIBS) $(POPT_LIBS) $(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(PASSDB_LIBS)
+ 
+ bin/sharesec@EXEEXT@: $(BINARY_PREREQS) $(SHARESEC_OBJ) @BUILD_POPT@ @LIBTALLOC_SHARED@ @LIBTDB_SHARED@
+ 	@echo Linking $@
+@@ -2488,13 +2488,13 @@ bin/ntlm_auth@EXEEXT@: $(BINARY_PREREQS)
+ 	@$(CC) $(FLAGS) -o $@ $(LDFLAGS) $(DYNEXP) $(NTLM_AUTH_OBJ) \
+ 		$(PARAM_OBJ) $(LIB_NONSMBD_OBJ) $(LIBS) \
+ 		$(POPT_LIBS) $(KRB5LIBS) $(LDAP_LIBS) $(NSCD_LIBS) \
+-		$(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(WINBIND_LIBS)
++		$(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(WINBIND_LIBS) $(PASSDB_LIBS)
+ 
+ bin/pam_smbpass.@SHLIBEXT@: $(BINARY_PREREQS) $(PAM_SMBPASS_OBJ) @LIBTALLOC_SHARED@ @LIBWBCLIENT_SHARED@ @LIBTDB_SHARED@
+ 	@echo "Linking shared library $@"
+ 	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_OBJ) -lpam $(DYNEXP) \
+ 		$(LIBS) $(LDAP_LIBS) $(KRB5LIBS) $(NSCD_LIBS) \
+-		$(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(WINBIND_LIBS)
++		$(LIBTALLOC_LIBS) $(LIBTDB_LIBS) $(WINBIND_LIBS) $(PASSDB_LIBS)
+ 
+ bin/tdbbackup@EXEEXT@: $(BINARY_PREREQS) $(TDBBACKUP_OBJ) @LIBTALLOC_SHARED@ @LIBTDB_SHARED@
+ 	@echo Linking $@
+@@ -2544,7 +2544,7 @@ bin/rpc_open_tcp@EXEEXT@: $(BINARY_PRERE
+ 
+ install:: installservers installbin @INSTALL_CIFSMOUNT@ @INSTALL_CIFSUPCALL@ installman \
+ 		installscripts installdat installmodules @SWAT_INSTALL_TARGETS@ \
+-		@INSTALL_PAM_MODULES@ installlibs installmo
++		@INSTALL_PAM_MODULES@ installlibs installmo @INSTALL_LIBADDNS@
+ 
+ install-everything:: install installmodules
+ 
+@@ -2557,7 +2557,7 @@ install-everything:: install installmodu
+ # is not used
+ 
+ installdirs::
+-	@$(SHELL) $(srcdir)/script/installdirs.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(BINDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(PRIVATEDIR) $(PIDDIR) $(LOCKDIR) $(MANDIR) $(CODEPAGEDIR) $(MODULESDIR) $(LOCALEDIR)
++	@$(SHELL) $(srcdir)/script/installdirs.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(BINDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(STATEDIR) $(PRIVATEDIR) $(PIDDIR) $(LOCKDIR) $(MANDIR) $(CODEPAGEDIR) $(MODULESDIR) $(LOCALEDIR)
+ 
+ installservers:: all installdirs
+ 	@$(SHELL) script/installbin.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(SBINDIR) $(SBIN_PROGS)
+@@ -2580,7 +2580,9 @@ installmodules:: modules installdirs
+ 	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(PDBLIBDIR) $(PDB_MODULES)
+ 	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(RPCLIBDIR) $(RPC_MODULES)
+ 	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(IDMAPLIBDIR) $(IDMAP_MODULES)
+-	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(NSSINFOLIBDIR) $(NSS_INFO_MODULES)
++	@if [ -n "$(NSS_INFO_MODULES)" ]; then \
++		@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(NSSINFOLIBDIR) $(NSS_INFO_MODULES); \
++	fi
+ 	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(CHARSETLIBDIR) $(CHARSET_MODULES)
+ 	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(AUTHLIBDIR) $(AUTH_MODULES)
+ 	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS_BIN) $(DESTDIR) $(prefix) $(GPEXTLIBDIR) $(GPEXT_MODULES)
+@@ -2591,7 +2593,9 @@ installmodules:: modules installdirs
+ 	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(AUTHLIBDIR) sam.@SHLIBEXT@ sam_ignoredomain.@SHLIBEXT@
+ 	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(AUTHLIBDIR) domain.@SHLIBEXT@ trustdomain.@SHLIBEXT@ ntdomain.@SHLIBEXT@
+ 	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(AUTHLIBDIR) builtin.@SHLIBEXT@ guest.@SHLIBEXT@ fixed_challenge.@SHLIBEXT@ name_to_ntstatus.@SHLIBEXT@
+-	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(NSSINFOLIBDIR) ../idmap/ad.@SHLIBEXT@ rfc2307.@SHLIBEXT@ sfu.@SHLIBEXT@ sfu20.@SHLIBEXT@
++	@if [ -n "$(NSS_INFO_MODULES)" ]; then \
++		@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(NSSINFOLIBDIR) ../idmap/ad.@SHLIBEXT@ rfc2307.@SHLIBEXT@ sfu.@SHLIBEXT@ sfu20.@SHLIBEXT@; \
++	fi
+ 	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(NSSINFOLIBDIR) ../idmap/adex.@SHLIBEXT@ adex.@SHLIBEXT@
+ 	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(NSSINFOLIBDIR) ../idmap/hash.@SHLIBEXT@ hash.@SHLIBEXT@
+ 
+@@ -2640,6 +2644,7 @@ showlayout::
+ 	@echo "  privatedir:  $(PRIVATE_DIR)"
+ 	@echo "  configdir:   $(CONFIGDIR)"
+ 	@echo "  lockdir:     $(LOCKDIR)"
++	@echo "  statedir:    $(STATEDIR)"
+ 	@echo "  piddir:      $(PIDDIR)"
+ 	@echo "  swatdir:     $(SWATDIR)"
+ 	@echo "  codepagedir: $(CODEPAGEDIR)"

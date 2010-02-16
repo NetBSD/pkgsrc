@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1.1.1 2010/02/16 16:24:16 taca Exp $
+
+--- script/installman.sh.orig	2010-01-14 10:12:10.000000000 +0000
++++ script/installman.sh
+@@ -33,7 +33,7 @@ for lang in $langs; do
+     langdir=$MANDIR/$lang
+     for d in $MANDIR $langdir $langdir/man1 $langdir/man5 $langdir/man7 $langdir/man8; do
+ 	if [ ! -d $d ]; then
+-	    mkdir $d
++	    mkdir -p $d
+ 	    if [ ! -d $d ]; then
+ 		echo Failed to make directory $d, does $USER have privileges?
+ 		exit 1

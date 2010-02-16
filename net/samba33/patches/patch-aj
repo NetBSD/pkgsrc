@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1.1.1 2010/02/16 16:24:16 taca Exp $
+
+--- include/proto.h.orig	2010-01-14 10:12:10.000000000 +0000
++++ include/proto.h
+@@ -5629,6 +5629,7 @@ char *lp_addprinter_cmd(void);
+ char *lp_deleteprinter_cmd(void);
+ char *lp_os2_driver_map(void);
+ char *lp_lockdir(void);
++char *lp_statedir(void);
+ char *lp_piddir(void);
+ char *lp_mangling_method(void);
+ int lp_mangle_prefix(void);
