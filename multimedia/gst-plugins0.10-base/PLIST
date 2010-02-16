@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/10/21 16:45:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/02/16 13:14:31 drochner Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/app/gstappbuffer.h
 include/gstreamer-0.10/gst/app/gstappsink.h
@@ -78,7 +78,6 @@ lib/gstreamer-0.10/libgstdecodebin2.la
 lib/gstreamer-0.10/libgstffmpegcolorspace.la
 lib/gstreamer-0.10/libgstgdp.la
 lib/gstreamer-0.10/libgstplaybin.la
-lib/gstreamer-0.10/libgstqueue2.la
 lib/gstreamer-0.10/libgstsubparse.la
 lib/gstreamer-0.10/libgsttcp.la
 lib/gstreamer-0.10/libgsttypefindfunctions.la
@@ -115,8 +114,8 @@ lib/pkgconfig/gstreamer-sdp-0.10.pc
 lib/pkgconfig/gstreamer-tag-0.10.pc
 lib/pkgconfig/gstreamer-video-0.10.pc
 man/man1/gst-visualise-0.10.1
-share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/api-index.html
-share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/compiling.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/api-index-deprecated.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/api-index-full.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/compiling.sgml
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-0.10.devhelp
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-0.10.devhelp2
@@ -170,6 +169,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsts
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttag.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttagdemux.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttagid3.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttaglanguagecodes.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttagvorbis.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttuner.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttunerchannel.html
@@ -215,6 +215,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugin
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-appsink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-appsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audioconvert.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audiorate.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audioresample.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audiotestsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-cdparanoiasrc.html
@@ -266,6 +267,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugin
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-vorbis.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ximagesink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-xvimagesink.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-subtitleoverlay.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-tcpclientsink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-tcpclientsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-tcpserversink.html
