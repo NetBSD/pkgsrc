@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2009/07/15 11:57:29 kefren Exp $
+$NetBSD: distinfo,v 1.8 2010/02/16 17:47:26 kefren Exp $
 
-SHA1 (xsp-2.4.2.tar.bz2) = 92ca7fe25bd6e454e241a35efcb1dfb729898c86
-RMD160 (xsp-2.4.2.tar.bz2) = d201fdb276aea603d4fcfb8c919e92ecadd75ff6
-Size (xsp-2.4.2.tar.bz2) = 264677 bytes
+SHA1 (xsp-2.6.tar.bz2) = 1f4b621e640cb23a764dc7a23d8c533be11a26b6
+RMD160 (xsp-2.6.tar.bz2) = 04832860ff50253aaad6326f5cbcea0d4d26886b
+Size (xsp-2.6.tar.bz2) = 263207 bytes
 SHA1 (patch-aa) = 309ea56b58eed03f7a115b332f9218319751bc4b
-SHA1 (patch-ab) = 46a9dd17ab315abd9102fff5d8296c6d8e01c1bb
+SHA1 (patch-ab) = 43dbd1c7aeb0ac9565e5e76122c7aa98d77185a4
