@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.521 2010/02/12 08:59:14 wiz Exp $
+# $NetBSD: Makefile,v 1.522 2010/02/16 17:23:39 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -389,6 +389,7 @@ SUBDIR+=	php-pspell
 SUBDIR+=	php-wddx
 SUBDIR+=	php5-dom
 SUBDIR+=	php5-xsl
+SUBDIR+=	po-mode
 SUBDIR+=	po4a
 SUBDIR+=	postgresql-autodoc
 SUBDIR+=	psgml-mode
