@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.791 2010/02/16 12:45:06 sno Exp $
+$NetBSD: CHANGES-2010,v 1.792 2010/02/16 12:47:16 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -943,3 +943,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-Declare to 0.33 [sno 2010-02-16]
 	Updated devel/p5-MooseX-Role-Parameterized to 0.17 [sno 2010-02-16]
 	Updated devel/p5-MooseX-Traits to 0.08 [sno 2010-02-16]
+	Updated devel/p5-MooseX-Traits-Pluggable to 0.09 [sno 2010-02-16]
