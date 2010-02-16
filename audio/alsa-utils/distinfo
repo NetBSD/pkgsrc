@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2009/08/31 14:31:00 wiz Exp $
+$NetBSD: distinfo,v 1.4 2010/02/16 18:28:01 wiz Exp $
 
-SHA1 (alsa-utils-1.0.20.tar.bz2) = 14364394d1eaff5b5719c6be834de1311c83475e
-RMD160 (alsa-utils-1.0.20.tar.bz2) = f8e8f036caa2a687c2768b19fddb4c973aafe152
-Size (alsa-utils-1.0.20.tar.bz2) = 1044483 bytes
-SHA1 (patch-aa) = b3dcc338045b95fd5e531428af4253d356f59944
+SHA1 (alsa-utils-1.0.22.tar.bz2) = 3587dc19d9a60ab9bb2bfe2d23491230eae99fe1
+RMD160 (alsa-utils-1.0.22.tar.bz2) = f9f9c3cc81e9c0d97fd62c3f91424a8f117ca6c3
+Size (alsa-utils-1.0.22.tar.bz2) = 1075216 bytes
+SHA1 (patch-aa) = d44e1fb7a27a8002425c90ce00e5f5970e1a1265
 SHA1 (patch-ab) = b899128edb57bdb3a8b8186b6dd69182a7c1932f
 SHA1 (patch-ac) = 613414c9683255e1a9ed6c32187a220b151beea2
-SHA1 (patch-ad) = 2e6863b262083de14a7147f035dbf2e37bc47765
+SHA1 (patch-ad) = 0c287dba62636778edab76d977f230626803e5ba
