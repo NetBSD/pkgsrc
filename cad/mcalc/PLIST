@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:55 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/02/16 03:43:12 dmcmahill Exp $
 ${MCALCBASE}/README
 ${MCALCBASE}/copying.html
 ${MCALCBASE}/erinfo.html
+${MCALCBASE}/favicon.ico
+${MCALCBASE}/favicon.xpm
 ${MCALCBASE}/index.html
 ${MCALCBASE}/mstrip.gif
+${MCALCBASE}/mstrip.obj
 ${MCALCBASE}/rghinfo.html
 ${MCALCBASE}/rhoinfo.html
 ${MCALCBASE}/tmetinfo.html
