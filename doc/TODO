@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9037 2010/02/16 13:10:15 adam Exp $
+$NetBSD: TODO,v 1.9038 2010/02/16 13:24:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -519,7 +519,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o db4-4.8.26
 	o dbench-4.0
 	o dbus-1.2.16 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
-	o dbus-glib-0.84
 	o dbxml-2.5.13
 	o dc_gui2-0.80
 	o dctc-0.85.9
