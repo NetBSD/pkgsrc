@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9053 2010/02/16 18:18:24 kefren Exp $
+$NetBSD: TODO,v 1.9054 2010/02/16 18:28:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,7 +383,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o alephone-20091015 [pkg/42397]
 	o aliados-0.2.0
 	o alsa-plugins-1.0.22
-	o alsa-utils-1.0.22
 	o amanda-2.6.1p2
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.6.4

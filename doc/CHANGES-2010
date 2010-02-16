@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.821 2010/02/16 18:27:18 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.822 2010/02/16 18:28:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -989,3 +989,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ap-mono to 2.6 [kefren 2010-02-16]
 	Updated devel/monodevelop to 2.2.1 [kefren 2010-02-16]
 	Updated audio/alsa-plugins-oss to 1.0.22 [wiz 2010-02-16]
+	Updated audio/alsa-utils to 1.0.22 [wiz 2010-02-16]
