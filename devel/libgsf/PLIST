@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2009/10/30 11:18:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.28 2010/02/16 13:29:26 wiz Exp $
 bin/gsf
 bin/gsf-office-thumbnailer
 bin/gsf-vba-dump
@@ -102,8 +102,11 @@ share/locale/eu/LC_MESSAGES/libgsf.mo
 share/locale/fr/LC_MESSAGES/libgsf.mo
 share/locale/nb/LC_MESSAGES/libgsf.mo
 share/locale/oc/LC_MESSAGES/libgsf.mo
+share/locale/pa/LC_MESSAGES/libgsf.mo
 share/locale/pt/LC_MESSAGES/libgsf.mo
 share/locale/pt_BR/LC_MESSAGES/libgsf.mo
+share/locale/sl/LC_MESSAGES/libgsf.mo
 share/locale/sv/LC_MESSAGES/libgsf.mo
+share/locale/zh_CN/LC_MESSAGES/libgsf.mo
 share/locale/zh_HK/LC_MESSAGES/libgsf.mo
 share/locale/zh_TW/LC_MESSAGES/libgsf.mo
