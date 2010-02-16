@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/10/19 19:19:07 he Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/16 14:00:14 sno Exp $
 
 DISTNAME=		CGI-FormBuilder-3.0501
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 EXTRACT_SUFX=		.tgz
@@ -19,6 +19,8 @@ DEPENDS+=		p5-HTML-Template>=2.6:../../www/p5-HTML-Template
 DEPENDS+=		p5-Text-Template>=1.43:../../textproc/p5-Text-Template
 #DEPENDS+=		p5-Template-Toolkit>=2.08:../../www/p5-Template-Toolkit
 
+pre-configure:
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
