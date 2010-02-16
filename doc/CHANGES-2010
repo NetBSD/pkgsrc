@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.797 2010/02/16 13:24:03 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.798 2010/02/16 13:29:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -957,3 +957,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/qt4-tiff to 4.6.2 [adam 2010-02-16]
 	Updated databases/p5-SQL-Abstract to 1.61 [sno 2010-02-16]
 	Updated sysutils/dbus-glib to 0.84 [wiz 2010-02-16]
+	Updated devel/libgsf to 1.14.17 [wiz 2010-02-16]
