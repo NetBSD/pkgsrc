@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/11 11:35:37 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/02/16 16:42:10 taca Exp $
 
-SHA1 (pear/Net_LDAP2-2.0.7.tgz) = af6dfb7bd2b7b3ae1c3dff0703daa1c965c82c4c
-RMD160 (pear/Net_LDAP2-2.0.7.tgz) = 72d5319cd1a639566ecb163eee8eefa6db504ce5
-Size (pear/Net_LDAP2-2.0.7.tgz) = 88979 bytes
+SHA1 (pear/Net_LDAP2-2.0.8.tgz) = 10bbcf0dd742697f024014d20e8542dde9344df0
+RMD160 (pear/Net_LDAP2-2.0.8.tgz) = 6ab4feb4a7d8ac2ce52f85db90a8f5a734b2f4e1
+Size (pear/Net_LDAP2-2.0.8.tgz) = 92966 bytes
+SHA1 (patch-aa) = 644e752b3c7b8fab4378c9375e0dbc0f55228321
