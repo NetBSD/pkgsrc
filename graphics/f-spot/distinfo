@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.5 2009/11/13 17:35:29 drochner Exp $
+$NetBSD: distinfo,v 1.6 2010/02/16 12:16:23 drochner Exp $
 
 SHA1 (f-spot-0.6.1.5.tar.bz2) = 712aa5ce0a8844403a751456ae467117d1ab71da
 RMD160 (f-spot-0.6.1.5.tar.bz2) = f132d1b6d044521d0550f982e006f99ad8fc05ac
 Size (f-spot-0.6.1.5.tar.bz2) = 2902761 bytes
+SHA1 (patch-aa) = 7f2d5aaca2b0685c1460afaef3d9a34b230412c8
+SHA1 (patch-ab) = 2c4744ff8915c7e98ceb9a402447e168c2b972b5
+SHA1 (patch-ac) = a37283a80a0067b1486c2f49f5dd9894888b486b
