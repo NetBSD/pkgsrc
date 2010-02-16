@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/28 22:06:14 seb Exp $
+$NetBSD: distinfo,v 1.2 2010/02/16 10:22:00 sno Exp $
 
-SHA1 (Mixin-Linewise-0.002.tar.gz) = 690054ea0c6876192e8223f39c5c814ba8a6fef1
-RMD160 (Mixin-Linewise-0.002.tar.gz) = eb8cb482a38aa45681a9895f86ae032f7fa69c86
-Size (Mixin-Linewise-0.002.tar.gz) = 21788 bytes
+SHA1 (Mixin-Linewise-0.003.tar.gz) = bdd08c018497dc3c65071beb0c1efada8d0272d5
+RMD160 (Mixin-Linewise-0.003.tar.gz) = d88fb964fc977f41e690537f31c66bb83584387d
+Size (Mixin-Linewise-0.003.tar.gz) = 25343 bytes
