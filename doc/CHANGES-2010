@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.784 2010/02/16 11:27:37 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.785 2010/02/16 11:29:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -936,3 +936,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Mixin-Linewise to 0.003 [sno 2010-02-16]
 	Updated devel/p5-Moose to 0.98 [sno 2010-02-16]
 	Updated devel/bzr to 2.0.3 [wiz 2010-02-16]
+	Updated security/caff to 1.1.3 [wiz 2010-02-16]
