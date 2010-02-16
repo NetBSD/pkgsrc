@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2009/04/07 11:29:52 kefren Exp $
---- Makefile.in.orig	2009-04-07 14:26:25.000000000 +0300
-+++ Makefile.in	2009-04-07 14:26:34.000000000 +0300
-@@ -163,7 +163,7 @@
- target_vendor = @target_vendor@
+$NetBSD: patch-ab,v 1.2 2010/02/16 17:47:26 kefren Exp $
+--- Makefile.in.orig	2009-11-24 01:19:04.000000000 +0200
++++ Makefile.in	2010-02-16 19:43:17.000000000 +0200
+@@ -164,7 +164,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
 -SUBDIRS = man src test tools scripts docs packaging unittests
