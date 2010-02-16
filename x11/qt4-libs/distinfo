@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.39 2010/02/08 10:49:07 wiz Exp $
+$NetBSD: distinfo,v 1.40 2010/02/16 13:08:09 adam Exp $
 
-SHA1 (qt-everywhere-opensource-src-4.6.1.tar.gz) = d3b44ae6d9bc9c44fc57f32e545b92daf0b54775
-RMD160 (qt-everywhere-opensource-src-4.6.1.tar.gz) = 7365dfe3c688df36002d2c9aaef6b79ba8175402
-Size (qt-everywhere-opensource-src-4.6.1.tar.gz) = 160197277 bytes
+SHA1 (qt-everywhere-opensource-src-4.6.2.tar.gz) = 977c10b88a2230e96868edc78a9e3789c0fcbf70
+RMD160 (qt-everywhere-opensource-src-4.6.2.tar.gz) = 5f3fea120f2dba274c4150b02162bba40b65a872
+Size (qt-everywhere-opensource-src-4.6.2.tar.gz) = 160601949 bytes
 SHA1 (patch-aa) = 899242f5a3b9101db98f2e87fa1a38f3bffdb262
 SHA1 (patch-ab) = c19f854a08c3c5ce1791d6fbd63443144d8f1fc8
 SHA1 (patch-ac) = db39e471fb43ee820556983ebf9108658ce11e84
