@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9041 2010/02/16 13:57:37 wiz Exp $
+$NetBSD: TODO,v 1.9042 2010/02/16 14:01:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1016,7 +1016,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
-	o p5-Mouse-0.50
 	o p5-POE-1.284 [pkg/42798]
 	o p5-POE-Component-IRC-6.24 [pkg/42801]
 	o p5-POE-Filter-IRCD-2.42 [pkg/42800]
