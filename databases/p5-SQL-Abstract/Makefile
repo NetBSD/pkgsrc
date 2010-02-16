@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2009/09/22 19:50:42 sno Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/16 13:23:21 sno Exp $
 #
 
-DISTNAME=	SQL-Abstract-1.60
+DISTNAME=	SQL-Abstract-1.61
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5sqa
 CATEGORIES=	databases perl5
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2 # OR artistic
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
+
 BUILD_DEPENDS+=	p5-Clone>=0.31:../../devel/p5-Clone
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
