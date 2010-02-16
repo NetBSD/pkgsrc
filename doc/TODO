@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9047 2010/02/16 14:51:36 wiz Exp $
+$NetBSD: TODO,v 1.9048 2010/02/16 14:53:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1339,7 +1339,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o x11vnc-0.9.9
 	o x264-devel-20100213
 	o xanalyser-1.30
-	o xapian-omega-1.0.18
 	o xaric-0.13.2
 	o xbiff-1.0.2
 	o xbindkeys-1.8.3
