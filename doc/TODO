@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9052 2010/02/16 16:27:42 taca Exp $
+$NetBSD: TODO,v 1.9053 2010/02/16 18:18:24 kefren Exp $
 
 Suggested new packages
 ======================
@@ -833,7 +833,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libflash-0.4.13
 	o libgda-4.0.7 [GNOME 2.28]
 	o libgdata-0.6.0
-	o libgdiplus-2.6
 	o libgee-0.5.0
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
@@ -927,10 +926,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moc-2.4.4
 	o modular-xorg-server-1.7.5
 	o molden-4.8 [after which PR 40252 can be closed]
-	o mono-2.6.1
-	o mono-tools-2.4.3
-	o mono-xsp-2.4.3
-	o monodevelop-2.2.1
 	o moserial-2.28.2 [GNOME 2.28]
 	o mousetweaks-2.28.2
 	o mp3blaster-3.2.3
