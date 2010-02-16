@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/11/17 14:44:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/02/16 14:14:13 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -164,6 +164,7 @@ ${PYSITELIB}/pytz/zoneinfo/America/Managua
 ${PYSITELIB}/pytz/zoneinfo/America/Manaus
 ${PYSITELIB}/pytz/zoneinfo/America/Marigot
 ${PYSITELIB}/pytz/zoneinfo/America/Martinique
+${PYSITELIB}/pytz/zoneinfo/America/Matamoros
 ${PYSITELIB}/pytz/zoneinfo/America/Mazatlan
 ${PYSITELIB}/pytz/zoneinfo/America/Mendoza
 ${PYSITELIB}/pytz/zoneinfo/America/Menominee
@@ -182,6 +183,7 @@ ${PYSITELIB}/pytz/zoneinfo/America/Nome
 ${PYSITELIB}/pytz/zoneinfo/America/Noronha
 ${PYSITELIB}/pytz/zoneinfo/America/North_Dakota/Center
 ${PYSITELIB}/pytz/zoneinfo/America/North_Dakota/New_Salem
+${PYSITELIB}/pytz/zoneinfo/America/Ojinaga
 ${PYSITELIB}/pytz/zoneinfo/America/Panama
 ${PYSITELIB}/pytz/zoneinfo/America/Pangnirtung
 ${PYSITELIB}/pytz/zoneinfo/America/Paramaribo
@@ -198,6 +200,7 @@ ${PYSITELIB}/pytz/zoneinfo/America/Regina
 ${PYSITELIB}/pytz/zoneinfo/America/Resolute
 ${PYSITELIB}/pytz/zoneinfo/America/Rio_Branco
 ${PYSITELIB}/pytz/zoneinfo/America/Rosario
+${PYSITELIB}/pytz/zoneinfo/America/Santa_Isabel
 ${PYSITELIB}/pytz/zoneinfo/America/Santarem
 ${PYSITELIB}/pytz/zoneinfo/America/Santiago
 ${PYSITELIB}/pytz/zoneinfo/America/Santo_Domingo
