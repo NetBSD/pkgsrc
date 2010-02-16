@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/16 16:24:15 taca Exp $
+
+--- ../docs/manpages/smb.conf.5.orig	2010-01-14 10:18:02.000000000 +0000
++++ ../docs/manpages/smb.conf.5
+@@ -6955,6 +6955,15 @@ Example:
+ \fI\fIpasswd chat\fR\fR\fI = \fR\fI"*Enter NEW password*" %n\en "*Reenter NEW password*" %n\en "*Password changed*"\fR\fI \fR
+ .RE
+ 
++passwd expand gecos (G)
++.PP
++.RS 4
++This boolean specifies if ampersand characters in the GECOS field of a passwd database entry should be replaced with the capitalized login name for that entry when the information is used by various Samba programs\&. This parameter is off by default\&.
++.sp
++Default: \fB\fIpasswd expand gecos\fR = no \fR 
++.TP 3n
++.sp
++
+ passwd program (G)
+ .\" passwd program
+ .PP
+@@ -9003,6 +9012,15 @@ Default:
+ \fI\fIstat cache\fR\fR\fI = \fR\fIyes\fR\fI \fR
+ .RE
+ 
++state directory (G)
++.PP
++.RS 4
++This parameter defines the directory the Samba daemon processes will use for storing state files that must persist across machine reboots.
++.sp
++Default:
++\fB\fIstate directory\fR = /var/db/samba \fR
++.RE
++
+ store dos attributes (S)
+ .\" store dos attributes
+ .PP

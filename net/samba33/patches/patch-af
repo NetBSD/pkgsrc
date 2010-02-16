@@ -1,0 +1,196 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/02/16 16:24:16 taca Exp $
+
+--- configure.orig	2010-01-14 10:38:54.000000000 +0000
++++ configure
+@@ -899,6 +899,7 @@ with_fhs
+ with_privatedir
+ with_rootsbindir
+ with_lockdir
++with_statedir
+ with_piddir
+ with_swatdir
+ with_configdir
+@@ -1637,6 +1638,8 @@ Optional Packages:
+                           ($ac_default_prefix/sbin)
+   --with-lockdir=DIR      Where to put lock files
+                           ($ac_default_prefix/var/locks)
++  --with-statedir=DIR     Where to put state files
++			  ($ac_default_prefix/var/locks)
+   --with-piddir=DIR       Where to put pid files
+                           ($ac_default_prefix/var/locks)
+   --with-swatdir=DIR      Where to put SWAT files ($ac_default_prefix/swat)
+@@ -2403,6 +2406,7 @@ echo "LIBREPLACE_LOCATION_CHECKS: END"
+ 
+ rootsbindir="\${SBINDIR}"
+ lockdir="\${VARDIR}/locks"
++statedir="\${VARDIR}/locks"
+ piddir="\${VARDIR}/locks"
+ test "${mandir}" || mandir="\${prefix}/man"
+ logfilebase="\${VARDIR}"
+@@ -2422,7 +2426,8 @@ localedir="\${prefix}/share/locale"
+ if test "${with_fhs+set}" = set; then
+   withval=$with_fhs;  case "$withval" in
+   yes)
+-    lockdir="\${VARDIR}/lib/samba"
++    lockdir="\${VARDIR}/run/samba"
++    statedir="\${VARDIR}/db/samba"
+     piddir="\${VARDIR}/run"
+     mandir="\${prefix}/share/man"
+     logfilebase="\${VARDIR}/log/samba"
+@@ -2505,6 +2510,26 @@ fi
+ 
+ 
+ #################################################
++# set state directory location
++
++# Check whether --with-statedir was given.
++if test "${with_statedir+set}" = set; then
++  withval=$with_statedir;  case "$withval" in
++  yes|no)
++  #
++  # Just in case anybody calls it without argument
++  #
++    { $as_echo "$as_me:$LINENO: WARNING: --with-statedir called without argument - will use default" >&5
++$as_echo "$as_me: WARNING: --with-statedir called without argument - will use default" >&2;}
++  ;;
++  * )
++    statedir="$withval"
++    ;;
++  esac
++fi
++
++
++#################################################
+ # set pid directory location
+ 
+ # Check whether --with-piddir was given.
+@@ -40236,7 +40261,7 @@ done
+ 
+ 
+ 
+-for ac_func in getdents getdents64
++for ac_func in getdents getdents64 getpwent_r
+ do
+ as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ { $as_echo "$as_me:$LINENO: checking for $ac_func" >&5
+@@ -60703,9 +60728,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+ 
+ 
+ 
+-        { $as_echo "$as_me:$LINENO: checking for des_set_key in -lcrypto" >&5
+-$as_echo_n "checking for des_set_key in -lcrypto... " >&6; }
+-if test "${ac_cv_lib_ext_crypto_des_set_key+set}" = set; then
++        { $as_echo "$as_me:$LINENO: checking for EVP_des_cbc -lcrypto" >&5
++$as_echo_n "checking for EVP_des_cbc in -lcrypto... " >&6; }
++if test "${ac_cv_lib_ext_crypto_EVP_des_cbc+set}" = set; then
+   $as_echo_n "(cached) " >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+@@ -60721,11 +60746,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char des_set_key ();
++char EVP_des_cbc ();
+ int
+ main ()
+ {
+-return des_set_key ();
++return EVP_des_cbc ();
+   ;
+   return 0;
+ }
+@@ -60751,13 +60776,13 @@ $as_echo "$ac_try_echo") >&5
+ 	 test "$cross_compiling" = yes ||
+ 	 $as_test_x conftest$ac_exeext
+        }; then
+-  ac_cv_lib_ext_crypto_des_set_key=yes;
++  ac_cv_lib_ext_crypto_EVP_des_cbc=yes;
+ 		  ac_cv_lib_ext_crypto=yes
+ else
+   $as_echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_lib_ext_crypto_des_set_key=no;
++	ac_cv_lib_ext_crypto_EVP_des_cbc=no;
+ 		  ac_cv_lib_ext_crypto=no
+ fi
+ 
+@@ -60766,11 +60791,11 @@ rm -f core conftest.err conftest.$ac_obj
+       conftest$ac_exeext conftest.$ac_ext
+ 
+ fi
+-{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_des_set_key" >&5
+-$as_echo "$ac_cv_lib_ext_crypto_des_set_key" >&6; }
+-    if test $ac_cv_lib_ext_crypto_des_set_key = yes; then
++{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_EVP_des_cbc" >&5
++$as_echo "$ac_cv_lib_ext_crypto_EVP_des_cbc" >&6; }
++    if test $ac_cv_lib_ext_crypto_EVP_des_cbc = yes; then
+   cat >>confdefs.h <<_ACEOF
+-#define HAVE_DES_SET_KEY 1
++#define HAVE_EVP_DES_CBC 1
+ _ACEOF
+ 
+ fi
+@@ -76724,31 +76749,39 @@ case "$host_os" in
+ 		NSSSONAMEVERSIONSUFFIX=".2"
+ 		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
+ 		;;
+-	*freebsd[5-9]*)
+-		# FreeBSD winbind client is implemented as a wrapper around
+-		# the Linux version.
+-		NSSSONAMEVERSIONSUFFIX=".1"
+-		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_freebsd.o \
+-		    nsswitch/winbind_nss_linux.o"
+-		WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
+-		WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
+-		;;
+-
+-	*netbsd*[3-9]*)
+-		# NetBSD winbind client is implemented as a wrapper
+-		# around the Linux version. It needs getpwent_r() to
+-		# indicate libc's use of the correct nsdispatch API.
+-		#
+-		if test x"$ac_cv_func_getpwent_r" = x"yes"; then
+-			WINBIND_NSS_EXTRA_OBJS="\
+-			    nsswitch/winbind_nss_netbsd.o \
++	*freebsd*)
++		case "$UNAME_R" in
++		[5-9]*)
++			# FreeBSD winbind client is implemented as a wrapper
++			# around the Linux version.
++			NSSSONAMEVERSIONSUFFIX=".1"
++			WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_freebsd.o \
+ 			    nsswitch/winbind_nss_linux.o"
+ 			WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
+ 			WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
+-		else
+-			HAVE_WINBIND=no
+-			winbind_no_reason=", getpwent_r is missing on $host_os so winbind is unsupported"
+-		fi
++			;;
++		esac
++		;;
++
++	*netbsd*)
++		case "$UNAME_R" in
++		[3-9]*)
++			# NetBSD winbind client is implemented as a wrapper
++			# around the Linux version. It needs getpwent_r() to
++			# indicate libc's use of the correct nsdispatch API.
++			#
++			if test x"$ac_cv_func_getpwent_r" = x"yes"; then
++				WINBIND_NSS_EXTRA_OBJS="\
++				    nsswitch/winbind_nss_netbsd.o \
++				    nsswitch/winbind_nss_linux.o"
++				WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
++				WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
++			else
++				HAVE_WINBIND=no
++				winbind_no_reason=", getpwent_r is missing on $host_os so winbind is unsupported"
++			fi
++			;;
++		esac
+ 		;;
+ 	*irix*)
+ 		# IRIX has differently named shared libraries

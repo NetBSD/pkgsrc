@@ -1,0 +1,26 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/02/16 16:24:16 taca Exp $
+
+--- dynconfig.c.orig	2010-01-14 10:12:10.000000000 +0000
++++ dynconfig.c
+@@ -79,20 +79,7 @@ DEFINE_DYN_CONFIG_PARAM(LOCKDIR)
+ DEFINE_DYN_CONFIG_PARAM(PIDDIR)
+ DEFINE_DYN_CONFIG_PARAM(SMB_PASSWD_FILE)
+ DEFINE_DYN_CONFIG_PARAM(PRIVATE_DIR)
+-
+-/* In non-FHS mode, these should be configurable using 'lock dir =';
+-   but in FHS mode, they are their own directory.  Implement as wrapper
+-   functions so that everything can still be kept in dynconfig.c.
+- */
+-
+-const char *get_dyn_STATEDIR(void)
+-{
+-#ifdef FHS_COMPATIBLE
+-	return STATEDIR;
+-#else
+-	return lp_lockdir();
+-#endif
+-}
++DEFINE_DYN_CONFIG_PARAM(STATEDIR)
+ 
+ const char *get_dyn_CACHEDIR(void)
+ {
