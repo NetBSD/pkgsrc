@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2010/01/29 18:19:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/02/16 13:08:09 adam Exp $
 lib/pkgconfig/QtAssistantClient.pc
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
@@ -216,6 +216,8 @@ qt4/mkspecs/features/staticlib.prf
 qt4/mkspecs/features/symbian/application_icon.prf
 qt4/mkspecs/features/symbian/armcc_warnings.prf
 qt4/mkspecs/features/symbian/data_caging_paths.prf
+qt4/mkspecs/features/symbian/def_files.prf
+qt4/mkspecs/features/symbian/def_files_disabled.prf
 qt4/mkspecs/features/symbian/default_post.prf
 qt4/mkspecs/features/symbian/default_pre.prf
 qt4/mkspecs/features/symbian/epocallowdlldata.prf
