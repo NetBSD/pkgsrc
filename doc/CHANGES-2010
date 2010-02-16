@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.772 2010/02/16 03:12:33 taca Exp $
+$NetBSD: CHANGES-2010,v 1.773 2010/02/16 03:15:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -923,3 +923,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-latex-bin version 2009 [minskim 2010-02-15]
 	Updated devel/p5-Data-OptList to 0.106 [seb 2010-02-16]
 	Updated devel/ruby-gettext-activerecord to 2.1.0nb1 [taca 2010-02-16]
+	Updated databases/ruby-activeldap to 1.2.1nb1 [taca 2010-02-16]
