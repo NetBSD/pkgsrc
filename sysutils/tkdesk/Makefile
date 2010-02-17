@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/17 15:44:11 joerg Exp $
 #
 
 DISTNAME=	tkdesk-2.0
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tkdesk.sourceforge.net/
 COMMENT=	Graphical file manager
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	pax
 
 GNU_CONFIGURE=	YES
@@ -19,6 +21,9 @@ CONFIGURE_ARGS+=--with-tcl=${BUILDLINK_PREFIX.tcl}/lib	\
 		--with-blt=${BUILDLINK_PREFIX.blt}/lib
 MAKE_ENV+=	LIB_RUNTIME_DIR=${BUILDLINK_PREFIX.tcl-itcl:Q}/lib \
 		PAX=${PAX:Q}
+
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../lang/tcl-itcl/buildlink3.mk"
