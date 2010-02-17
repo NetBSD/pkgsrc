@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.827 2010/02/17 11:36:43 sno Exp $
+$NetBSD: CHANGES-2010,v 1.828 2010/02/17 11:47:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -995,3 +995,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Acme-PlayCode to 0.12 [sno 2010-02-17]
 	Updated sysutils/p5-SSH-Batch to 0.023 [sno 2010-02-17]
 	Updated devel/p5-MooseX-MethodAttributes to 0.20 [sno 2010-02-17]
+	Updated devel/p5-MooseX-SimpleConfig to 0.05 [sno 2010-02-17]
