@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2010/02/16 17:01:04 kefren Exp $
+# $NetBSD: Makefile,v 1.98 2010/02/17 20:22:39 kefren Exp $
 
 DISTNAME=	mono-2.6.1
 CATEGORIES=	lang
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND x11
 
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
