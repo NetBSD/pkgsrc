@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.824 2010/02/17 09:22:51 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.825 2010/02/17 11:04:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -992,3 +992,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/alsa-utils to 1.0.22 [wiz 2010-02-16]
 	Updated audio/alsa-plugins-pulse to 1.0.22 [wiz 2010-02-16]
 	Updated devel/libgsf-gnome to 1.14.17 [wiz 2010-02-17]
+	Updated devel/p5-Acme-PlayCode to 0.12 [sno 2010-02-17]
