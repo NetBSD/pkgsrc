@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/16 16:08:32 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/02/17 11:04:44 sno Exp $
 
-SHA1 (Acme-PlayCode-0.11.tar.gz) = 0034e6c7961d2f9ed8b5e6ad60ac7333941d73d9
-RMD160 (Acme-PlayCode-0.11.tar.gz) = dede126047d140e5a3021cfd8cc97ed06589d8c9
-Size (Acme-PlayCode-0.11.tar.gz) = 7739 bytes
+SHA1 (Acme-PlayCode-0.12.tar.gz) = 2a89068d0e78e7ed7def43cdc49d1b87ec4311fc
+RMD160 (Acme-PlayCode-0.12.tar.gz) = 3589080ad683c482e71f269ee07d291583d72aed
+Size (Acme-PlayCode-0.12.tar.gz) = 9711 bytes
