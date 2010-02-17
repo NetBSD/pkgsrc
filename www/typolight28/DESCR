@@ -1,24 +1,37 @@
-TYPOlight webCMS is a powerful web content management system that
-specializes in accessibility (back end and front end) and uses XHTML
-and CSS to generate W3C/WAI compliant pages. It was developed by Leo
-Feyer in 2004 and has been released under the Lesser General Public
-License (LGPL).
+TYPOlight is an open source content management system (CMS) for people who
+want a professional internet presence that is easy to maintain.
+The state-of-the-art structure of the system offers a high security standard
+and allows you to develop search engine friendly websites that are also
+accessible for people with disabilities.  Furthermore, the system can be
+expanded flexibly and inexpensively.  Easy management of user rights, the
+Live Update Service, the modern CSS framework and many already integrated
+modules (news, calendar, forms, etc.) have quickly made TYPOlight one of the
+most popular open source content management systems on the market.
 
-Here are some prominent features that make TYPOlight stand out from
-the variety of content management systems. If you want to learn more,
-check out the full feature list ( http://www.typolight.org/features.html).
+TYPOlight has an intuitive user interface that uses Ajax and Web 2.0
+technologies for optimal usability.  Multiple back end languages and themes,
+a powerful permission system, versioning and undo management, advanced search
+and sorting options or the Live Update Service are just a few of many
+features that make TYPOlight stand out from other CMS.  The TYPOlight front
+end is 100% template based and generates accessible XHTML strict output that
+meets the W3C/WAI requirements.  Search engine friendly URLs, GZip support, a
+PDF export function, multi-language support and many more allow you to build
+contemporary websites without being a programmer.
 
-* Live update feature
-* Multilingual documentation
-* Accessible XHTML strict output
-* Uses Ajax and Web 2.0 technologies
-* Multi-language support (character set UTF-8)
-* Cross-browser CSS framework generator (IE7 compatible)
-* Built-in file manager, search engine and form generator
-* Multiple back end languages and back end themes
-* Front end output 100% template based
-* Versioning and undo management
+* Advanced editing features
+* Powerful site structure
+* Fine-grained permission system
+* Flexible form generator
+* Full-text search engine
+* Built-in CSS framework
+* Built-in file manager
+* Built-in news/blog module
+* Built-in calendar module
+* Built-in newsletter module
+* Wide choice of additional modules
+* Accessible front and back end
+* Easy live update
+* Ajax and PHP 5
 
-Note: Live update feature dosen't work because of pkgsrc's nature.
-
-And this is development release and shouldn't be used production site.
+Note: Live update feature would work with typolight-liveupdate PKG_OPTION
+enabled, but it might be conflict with regular pkgsrc maintainous.
