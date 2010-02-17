@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.832 2010/02/17 12:48:08 sno Exp $
+$NetBSD: CHANGES-2010,v 1.833 2010/02/17 14:38:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1000,3 +1000,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Config-Any to 0.19 [sno 2010-02-17]
 	Updated devel/p5-common-sense to 3.00 [sno 2010-02-17]
 	Updated converters/p5-JSON-XS to 2.270 [sno 2010-02-17]
+	Updated www/typolight28 to 2.8.0 [taca 2010-02-17]
