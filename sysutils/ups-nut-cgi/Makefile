@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2010/01/18 09:59:27 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2010/02/17 15:39:02 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../sysutils/ups-nut/Makefile.common"
 
@@ -10,6 +12,7 @@ DEPENDS+=		ups-nut-2.*:../../sysutils/ups-nut
 
 BUILD_TARGET=		cgi
 INSTALL_TARGET=		install-cgi
+INSTALLATION_DIRS+=	${NUT_EGDIR}
 
 CONFIGURE_ARGS+=	--with-cgi
 CONFIGURE_ARGS+=	--with-cgipath=${NUT_CGIDIR:Q}
