@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/11/08 22:09:33 seb Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/17 11:47:11 sno Exp $
 
-DISTNAME=	MooseX-SimpleConfig-0.04
+DISTNAME=	MooseX-SimpleConfig-0.05
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
@@ -20,7 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# empty
 
 PERL5_PACKLIST=	auto/MooseX/SimpleConfig/.packlist
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
