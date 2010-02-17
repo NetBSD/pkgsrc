@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2010/02/16 13:29:26 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2010/02/17 09:23:17 wiz Exp $
+#
+# Some files are shared with libgsf-gnome, so update that
+# as well when updating libgsf!
 #
 
 DISTNAME=	libgsf-1.14.17
