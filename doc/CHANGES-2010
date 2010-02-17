@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.831 2010/02/17 12:38:34 sno Exp $
+$NetBSD: CHANGES-2010,v 1.832 2010/02/17 12:48:08 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -999,3 +999,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Parse-RecDescent to 1.96.4 [sno 2010-02-17]
 	Updated devel/p5-Config-Any to 0.19 [sno 2010-02-17]
 	Updated devel/p5-common-sense to 3.00 [sno 2010-02-17]
+	Updated converters/p5-JSON-XS to 2.270 [sno 2010-02-17]
