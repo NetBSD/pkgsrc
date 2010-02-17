@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/16 16:24:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/17 15:11:10 taca Exp $
 bin/eventlogadm
 bin/findsmb
 bin/ldbadd
@@ -29,12 +29,12 @@ bin/tdbdump
 bin/tdbtool
 bin/testparm
 ${PLIST.winbind}bin/wbinfo
-include/libsmbclient.h
+${PLIST.winbind}include/libsmbclient.h
 include/netapi.h
 include/smb_share_modes.h
 include/talloc.h
 include/tdb.h
-include/wbclient.h
+${PLIST.winbind}include/wbclient.h
 lib/libnetapi.so
 lib/libnetapi.so.0
 lib/libsmbclient.so
@@ -45,8 +45,8 @@ lib/libtalloc.so
 lib/libtalloc.so.1
 lib/libtdb.so
 lib/libtdb.so.1
-lib/libwbclient.so
-lib/libwbclient.so.0
+${PLIST.winbind}lib/libwbclient.so
+${PLIST.winbind}lib/libwbclient.so.0
 ${PLIST.winbind}${NSS_WINBIND}
 ${PLIST.winbind}${NSS_WINS}
 lib/samba/auth/script.so
