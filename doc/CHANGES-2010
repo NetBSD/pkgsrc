@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.834 2010/02/17 14:44:23 taca Exp $
+$NetBSD: CHANGES-2010,v 1.835 2010/02/17 15:12:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1004,3 +1004,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed www/typolight26-translations [taca 2010-02-17]
 	Removed www/typolight26-example [taca 2010-02-17]
 	Removed www/typolight26 [taca 2010-02-17]
+	Updated net/samba33 to 3.3.10 [taca 2010-02-17]
