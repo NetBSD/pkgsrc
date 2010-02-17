@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.826 2010/02/17 11:10:32 sno Exp $
+$NetBSD: CHANGES-2010,v 1.827 2010/02/17 11:36:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -994,3 +994,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libgsf-gnome to 1.14.17 [wiz 2010-02-17]
 	Updated devel/p5-Acme-PlayCode to 0.12 [sno 2010-02-17]
 	Updated sysutils/p5-SSH-Batch to 0.023 [sno 2010-02-17]
+	Updated devel/p5-MooseX-MethodAttributes to 0.20 [sno 2010-02-17]
