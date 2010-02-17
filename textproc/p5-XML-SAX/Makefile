@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/02/17 14:55:36 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2010/02/17 14:56:05 tnn Exp $
 
 DISTNAME=	XML-SAX-0.96
 PKGNAME=	p5-${DISTNAME}
@@ -29,10 +29,6 @@ CONF_FILES=	${EGSUBDIR}/ParserDetails.ini \
 PERL5_PACKLIST=	auto/XML/SAX/.packlist
 
 INSTALLATION_DIRS+=	${EGSUBDIR}
-
-pre-configure:
-	echo fail
-	exit 1
 
 post-extract:
 	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
