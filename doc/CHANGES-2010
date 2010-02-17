@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.829 2010/02/17 11:59:08 sno Exp $
+$NetBSD: CHANGES-2010,v 1.830 2010/02/17 12:02:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -997,3 +997,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-MooseX-MethodAttributes to 0.20 [sno 2010-02-17]
 	Updated devel/p5-MooseX-SimpleConfig to 0.05 [sno 2010-02-17]
 	Updated devel/p5-Parse-RecDescent to 1.96.4 [sno 2010-02-17]
+	Updated devel/p5-Config-Any to 0.19 [sno 2010-02-17]
