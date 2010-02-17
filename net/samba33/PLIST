@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/17 15:11:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/02/17 16:02:17 taca Exp $
 bin/eventlogadm
 bin/findsmb
 bin/ldbadd
@@ -29,7 +29,7 @@ bin/tdbdump
 bin/tdbtool
 bin/testparm
 ${PLIST.winbind}bin/wbinfo
-${PLIST.winbind}include/libsmbclient.h
+include/libsmbclient.h
 include/netapi.h
 include/smb_share_modes.h
 include/talloc.h
