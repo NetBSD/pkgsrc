@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2010/01/16 14:22:30 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2010/02/17 18:53:00 tnn Exp $
 #
 
 .include "../../devel/xulrunner/dist.mk"
 PKGNAME=	${DISTNAME:S/firefox-3.5/nspr-${NSPR_RELEASE}/:S/.source//}
-NSPR_RELEASE=	4.8.2
+NSPR_RELEASE=	4.8.3
 CATEGORIES=	devel
 
 MAINTAINER=	tnn@NetBSD.org
