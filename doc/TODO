@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9055 2010/02/17 20:39:02 asau Exp $
+$NetBSD: TODO,v 1.9056 2010/02/18 08:05:18 martti Exp $
 
 Suggested new packages
 ======================
@@ -996,7 +996,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmotif-2.3.2
 	o openmsx-0.7.0
 	o openoffice3-3.2
-	o openssh-5.3.1 [pkg/42635]
 	o openttd-0.7.4
 	o open-vm-tools-2009.12.16.217847
 	o opera-10.10
