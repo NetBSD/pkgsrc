@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.837 2010/02/17 20:54:43 reed Exp $
+$NetBSD: CHANGES-2010,v 1.838 2010/02/18 01:07:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1009,3 +1009,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/firefox to 3.5.8 [tnn 2010-02-17]
 	Updated devel/nspr to 4.8.3.8 [tnn 2010-02-17]
 	Updated www/seamonkey to 2.0.3 [tnn 2010-02-17]
+	Updated print/gutenprint-lib to 5.2.5 [gdt 2010-02-18]
