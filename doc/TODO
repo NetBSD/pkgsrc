@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9058 2010/02/18 15:51:20 taca Exp $
+$NetBSD: TODO,v 1.9059 2010/02/18 19:25:26 asau Exp $
 
 Suggested new packages
 ======================
@@ -243,7 +243,7 @@ Suggested new packages
 	Fenix Project [pkg/35346]
 	http://fenix.divsite.net
 	
-	*BSD Usage Statistics [pkg/35365]
+	*BSD Usage Statistics [pkg/35365 wip/bsdstats]
 	http://www.bsdstats.org/
 	Report machine statistics to the BSDstats Project
 
