@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.849 2010/02/18 08:58:49 sno Exp $
+$NetBSD: CHANGES-2010,v 1.850 2010/02/18 09:02:39 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1020,3 +1020,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Params-Validate to 0.95 [sno 2010-02-18]
 	Updated devel/p5-ExtUtils-CBuilder to 0.27.01 [sno 2010-02-18]
 	Updated time/p5-Time-Piece to 1.19 [sno 2010-02-18]
+	Updated www/p5-FCGI to 0.69 [sno 2010-02-18]
