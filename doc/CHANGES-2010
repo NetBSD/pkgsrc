@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.856 2010/02/18 17:05:18 taca Exp $
+$NetBSD: CHANGES-2010,v 1.857 2010/02/18 18:18:56 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1028,3 +1028,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql5-server to 5.0.90 [taca 2010-02-18]
 	Updated www/typolight28-translations to 20100218 [taca 2010-02-18]
 	Updated www/typolight28-translations to 20100218nb1 [taca 2010-02-18]
+	Updated net/Transmission to 1.90 [tnn 2010-02-18]
