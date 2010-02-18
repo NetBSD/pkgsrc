@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9056 2010/02/18 08:05:18 martti Exp $
+$NetBSD: TODO,v 1.9057 2010/02/18 12:03:40 obache Exp $
 
 Suggested new packages
 ======================
@@ -1175,7 +1175,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scmgit-base-1.7.0
 	o scmgit-docs-1.7.0
 	o scrollz-1.9.99
-	o scrotwm-0.9.22
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o sendfile-20010424
