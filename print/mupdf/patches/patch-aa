@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/18 10:07:32 wiz Exp $
+
+--- Jamrules.orig	2010-01-21 00:27:14.000000000 +0000
++++ Jamrules
+@@ -73,6 +73,24 @@ if $(OS) = LINUX
+     if $(HAVE_OPENJPEG)	{ LINKLIBS += -lopenjpeg ; }
+ }
+ 
++if $(OS) = pkgsrc
++{
++    Echo Building for pkgsrc ;
++
++    BUILD_X11APP = true ;
++
++    CCFLAGS = -Wall -std=gnu99 -I${FT}/include/freetype2 -I${PREFIX}/include ;
++    LINKFLAGS = -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib ;
++    LINKLIBS = -lfreetype -ljpeg -lz -lm ;
++    APPLINKLIBS = -lX11 -lXext -lpthread ;
++
++    if $(BUILD) = debug   { OPTIM = -g -O0 -fno-inline ; }
++    if $(BUILD) = release { OPTIM = -O3 ; }
++
++    if $(HAVE_JBIG2DEC)	{ LINKLIBS += -ljbig2dec ; }
++    if $(HAVE_OPENJPEG)	{ LINKLIBS += -lopenjpeg ; }
++}
++
+ if $(OS) = MACOSX
+ {
+     Echo Building for MACOSX ;

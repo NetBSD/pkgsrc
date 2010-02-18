@@ -1,0 +1,10 @@
+prefix=@PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: mupdf
+Description: library for PDF files
+Version: 0.0.937
+Libs: -Wl,-R${libdir} -L${libdir} -lmupdf
+Cflags: -I${includedir}
