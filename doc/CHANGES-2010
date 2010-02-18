@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.841 2010/02/18 03:00:34 seb Exp $
+$NetBSD: CHANGES-2010,v 1.842 2010/02/18 08:03:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1012,3 +1012,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/samba33 to 3.3.10nb1 [taca 2010-02-18]
 	Added sysutils/p5-Mac-AppleScript version 0.04 [seb 2010-02-18]
 	Added sysutils/p5-Mac-AppleScript-Glue version 0.03 [seb 2010-02-18]
+	Updated lang/parrot to 2.1.0 [he 2010-02-18]
