@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.858 2010/02/18 21:37:40 drochner Exp $
+$NetBSD: CHANGES-2010,v 1.859 2010/02/18 21:56:52 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1037,3 +1037,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/gst-plugins0.10-good to 0.10.18 [drochner 2010-02-18]
 	Updated multimedia/gst-plugins0.10-base to 0.10.26 [drochner 2010-02-18]
 	Updated multimedia/gstreamer0.10 to 0.10.26 [drochner 2010-02-18]
+	Updated lang/mono to 2.6.1nb1 [ghen 2010-02-18]
