@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.7 2008/09/18 11:51:37 taca Exp $
+$NetBSD: patch-ag,v 1.8 2010/02/18 15:46:10 taca Exp $
 
---- man/Makefile.in.orig	2008-08-04 15:22:07.000000000 +0300
-+++ man/Makefile.in	2008-09-16 13:48:02.000000000 +0300
-@@ -354,7 +354,7 @@
+--- man/Makefile.in.orig	2010-01-15 09:53:44.000000000 +0000
++++ man/Makefile.in
+@@ -349,7 +349,7 @@ yassl_h_ln_cmd = @yassl_h_ln_cmd@
  yassl_libs = @yassl_libs@
  yassl_taocrypt_extra_cxxflags = @yassl_taocrypt_extra_cxxflags@
  zlib_dir = @zlib_dir@

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2008/09/18 11:50:44 taca Exp $
+$NetBSD: patch-ac,v 1.8 2010/02/18 15:46:10 taca Exp $
 
---- configure.in.orig	2008-08-04 21:19:07.000000000 +0900
+--- configure.in.orig	2010-01-15 09:47:42.000000000 +0000
 +++ configure.in
-@@ -2697,9 +2697,9 @@ linked_client_targets="linked_libmysql_s
+@@ -2768,9 +2768,9 @@ linked_client_targets="linked_libmysql_s
  
  if test "$THREAD_SAFE_CLIENT" = "no"
  then
