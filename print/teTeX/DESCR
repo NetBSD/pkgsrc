@@ -2,4 +2,6 @@ Thomas Esser's teTeX is _the_ TeX distribution for UNIX compatible
 systems.  It contains the latest versions of TeX & friends and
 nearly everything you need for happy TeX'ing.
 
-This is the meta-package.
+This is the meta-package.  teTeX is being replaced in pkgsrc with TeX
+Live.  If you would like a full TeX setup via pkgsrc, this is
+currently the best package to install.
