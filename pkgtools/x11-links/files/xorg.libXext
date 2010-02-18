@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXext,v 1.2 2009/12/30 17:10:33 tron Exp $
+# $NetBSD: xorg.libXext,v 1.3 2010/02/18 12:32:19 obache Exp $
 #
 lib/libXext.6.3.dylib
 lib/libXext.6.4.0.dylib
@@ -13,4 +13,5 @@ lib/libXext.so.6.3
 lib/libXext.so.6.4
 lib/libXext.so.7
 lib/libXext.so.7.0
+lib/libXext.so.10.0
 lib/pkgconfig/xext.pc

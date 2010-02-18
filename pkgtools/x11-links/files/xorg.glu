@@ -1,4 +1,4 @@
-# $NetBSD: xorg.glu,v 1.2 2009/12/30 17:10:32 tron Exp $
+# $NetBSD: xorg.glu,v 1.3 2010/02/18 12:32:19 obache Exp $
 #
 include/GL/glu.h
 lib/libGLU.a
@@ -8,7 +8,9 @@ lib/libGLU.so.1.0.3
 lib/libGLU.so.1.3
 lib/libGLU.so.2
 lib/libGLU.so.2.0
+lib/libGLU.so.7.0
 lib/libGLU.dylib
 lib/libGLU.1.dylib
 lib/libGLU.1.3.dylib
+lib/libGLU_pic.a
 lib/pkgconfig/glu.pc
