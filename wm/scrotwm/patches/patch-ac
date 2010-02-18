@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/02/18 12:03:23 obache Exp $
+
+--- linux/Makefile.orig	2010-01-11 21:02:08.000000000 +0000
++++ linux/Makefile
+@@ -28,7 +28,7 @@ scrotwm: scrotwm.o linux.o
+ 	$(CC) $(CFLAGS) -c -fpic -DPIC $+ -o $@
+ 
+ libswmhack.so.$(LVERS): swm_hack.so
+-	$(CC) -shared -fpic -o libswmhack.so.$(LVERS) swm_hack.so $(LDADD)
++	$(CC) -shared -fpic -o libswmhack.so.$(LVERS) swm_hack.so $(LDFLAGS) $(LDADD)
+ 
+ install: all
+ 	install -m 755 -d $(DESTDIR)$(BINDIR)
