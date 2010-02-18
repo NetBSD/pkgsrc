@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/07/17 18:00:14 adrianp Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/18 13:45:35 joerg Exp $
 #
 
 DISTNAME=	adodb496a
@@ -18,10 +18,6 @@ NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
 .include "../../lang/php/phpversion.mk"
-
-.if ${PHP_PKG_PREFIX} == "php4"
-.include "../../www/php4/buildlink3.mk"
-.endif
 
 .if ${PHP_PKG_PREFIX} == "php5"
 .include "../../lang/php5/buildlink3.mk"
