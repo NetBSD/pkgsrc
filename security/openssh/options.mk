@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2009/05/21 03:22:29 taca Exp $
+# $NetBSD: options.mk,v 1.18 2010/02/18 08:04:35 martti Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--with-kerberos5=${KRB5BASE:Q}
 .endif
 
 .if !empty(PKG_OPTIONS:Mhpn-patch)
-PATCHFILES=		openssh-5.2p1-hpn13v6.diff.gz
+PATCHFILES=		openssh-5.3p1-hpn13v7.diff.gz
 PATCH_SITES=		http://www.psc.edu/networking/projects/hpn-ssh/
 PATCH_DIST_STRIP=	-p1
 .endif

@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.25 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-ah,v 1.26 2010/02/18 08:04:35 martti Exp $
 
 --- Makefile.in.orig	2008-11-05 14:20:46.000000000 +0900
 +++ Makefile.in
@@ -20,9 +20,9 @@ $NetBSD: patch-ah,v 1.25 2009/05/21 03:22:29 taca Exp $
  install-nosysconf: $(CONFIGFILES) ssh_prng_cmds.out $(MANPAGES) $(TARGETS) install-files
  
  check-config:
-@@ -242,7 +242,7 @@ check-config:
+@@ -244,7 +244,7 @@ check-config:
  scard-install:
- 	(cd scard && $(MAKE) DESTDIR=$(DESTDIR) install)
+ 	(cd scard && env DESTDIR=$(DESTDIR) $(MAKE) DESTDIR=$(DESTDIR) install)
  
 -install-files: scard-install
 +install-files:
