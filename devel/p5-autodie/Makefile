@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/19 20:17:30 sno Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/18 08:48:09 sno Exp $
 
-DISTNAME=	autodie-2.06
+DISTNAME=	autodie-2.08
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=autodie/}
@@ -15,8 +15,11 @@ DEPENDS+=	p5-IPC-System-Simple>=0.12:../../devel/p5-IPC-System-Simple
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PERL5_MODULE_TYPE=	Module::Install	# better Module::Install::Bundled
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 PERL5_PACKLIST=		auto/autodie/.packlist
+
+post-extract:
+	${FIND} ${WRKSRC} -name "*.pm" -type f -exec ${CHMOD} -x {} \;
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
