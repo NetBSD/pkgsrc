@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/02/18 21:00:44 drochner Exp $
+
+--- configure.orig	2010-02-11 23:58:23.000000000 +0000
++++ configure
+@@ -14301,7 +14301,7 @@ if test "x$gnumeric_with_gtk" = xtrue -a
+ 
+ # Check whether --with-gnome was given.
+ if test "${with_gnome+set}" = set; then
+-  withval=$with_gnome; if test "x$withval" == xyes; then
++  withval=$with_gnome; if test "x$withval" = xyes; then
+ 			ui_msg="Gnome"
+ 			gnumeric_with_gnome=true
+ 		fi
