@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.839 2010/02/18 01:10:48 taca Exp $
+$NetBSD: CHANGES-2010,v 1.840 2010/02/18 02:59:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1010,3 +1010,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/seamonkey to 2.0.3 [tnn 2010-02-17]
 	Updated print/gutenprint-lib to 5.2.5 [gdt 2010-02-18]
 	Updated net/samba33 to 3.3.10nb1 [taca 2010-02-18]
+	Added sysutils/p5-Mac-AppleScript version 0.04 [seb 2010-02-18]
