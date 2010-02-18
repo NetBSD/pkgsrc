@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.853 2010/02/18 12:33:43 obache Exp $
+$NetBSD: CHANGES-2010,v 1.854 2010/02/18 15:47:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1024,3 +1024,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/mupdf version 0.0.937 [wiz 2010-02-18]
 	Updated wm/scrotwm to 0.9.22 [obache 2010-02-18]
 	Updated pkgtools/x11-links to 0.47 [obache 2010-02-18]
+	Updated databases/mysql5-client to 5.0.90 [taca 2010-02-18]
+	Updated databases/mysql5-server to 5.0.90 [taca 2010-02-18]
