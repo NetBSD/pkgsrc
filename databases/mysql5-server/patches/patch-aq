@@ -1,0 +1,21 @@
+$NetBSD: patch-aq,v 1.1 2010/02/18 15:46:10 taca Exp $
+
+Prevent redefined warning.
+
+--- sql/sql_profile.h.orig	2010-01-15 09:49:22.000000000 +0000
++++ sql/sql_profile.h
+@@ -17,12 +17,14 @@
+ #define _SQL_PROFILE_H
+ 
+ #if __STDC_VERSION__ < 199901L
++# ifndef __func__
+ #  if __GNUC__ >= 2
+ #    define __func__ __FUNCTION__
+ #  else
+ #    define __func__ _unknown_func_
+ extern const char * const _unknown_func_;
+ #  endif
++# endif
+ #elif defined(_MSC_VER)
+ #  if _MSC_VER < 1300
+ #     define __func__ _unknown_func_
