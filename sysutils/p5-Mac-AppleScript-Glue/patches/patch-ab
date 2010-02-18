@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/02/18 02:56:35 seb Exp $
+
+Prevent division by 0 for disks with no free space.
+
+--- t/finder.t.orig	2002-09-12 16:24:21.000000000 +0200
++++ t/finder.t
+@@ -36,7 +36,7 @@ ok($disks)
+ 
+ for my $disk (ref($disks) eq 'ARRAY' ? @{$disks} : $disks) {
+     my $name = $disk->name;
+-    my $free = int($disk->free_space / 1024 / 1024);
++    my $free = ($disk->free_space ? int($disk->free_space / 1024 / 1024) : 0);
+ 
+     print "disk \"$name\" has ${free} mb free\n";
+ }

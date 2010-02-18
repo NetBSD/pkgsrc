@@ -1,0 +1,4 @@
+The Perl 5 module Mac::AppleScript::Glue allows you to write Perl
+code in object-oriented syntax to control Mac applications. The
+module does not actually execute Apple Events, but actually translates
+Perl code to AppleScript code and causes it to be executed.

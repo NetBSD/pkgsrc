@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/18 02:56:35 seb Exp $
+
+SHA1 (Mac-AppleScript-Glue-0.03.tar.gz) = 934293946f78cb8e8838931d411d45592f4e363c
+RMD160 (Mac-AppleScript-Glue-0.03.tar.gz) = 9ed438297477bfc2b9ebd04e9fe1566842b8043e
+Size (Mac-AppleScript-Glue-0.03.tar.gz) = 13229 bytes
+SHA1 (patch-aa) = 3a4c0c9c97ccc5439c3f20a3fbdd36982919c42e
+SHA1 (patch-ab) = e379f128c98f3d36ee692f52ffb26b4425a6e0cc
+SHA1 (patch-ac) = 0ba14c484a70a4ebb18ad4e83fac6ab263452472
+SHA1 (patch-ad) = f4d1a9d87f3aade747c9e67eab08bb2135cc6d5b
