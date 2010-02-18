@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/02/02 09:01:09 he Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/02/18 07:59:38 he Exp $
 bin/parrot
 bin/parrot-nqp
 bin/parrot_config
@@ -47,7 +47,6 @@ include/parrot/${PKGVERSION}/parrot/io_unix.h
 include/parrot/${PKGVERSION}/parrot/io_win32.h
 include/parrot/${PKGVERSION}/parrot/key.h
 include/parrot/${PKGVERSION}/parrot/library.h
-include/parrot/${PKGVERSION}/parrot/list.h
 include/parrot/${PKGVERSION}/parrot/longopt.h
 include/parrot/${PKGVERSION}/parrot/memory.h
 include/parrot/${PKGVERSION}/parrot/misc.h
@@ -148,10 +147,14 @@ lib/parrot/${PKGVERSION}/include/test_more.pir
 lib/parrot/${PKGVERSION}/include/timer.pasm
 lib/parrot/${PKGVERSION}/include/tm.pasm
 lib/parrot/${PKGVERSION}/include/warnings.pasm
+lib/parrot/${PKGVERSION}/languages/data_json/Defines.mak
+lib/parrot/${PKGVERSION}/languages/data_json/Rules.mak
 lib/parrot/${PKGVERSION}/languages/data_json/data_json.pbc
 lib/parrot/${PKGVERSION}/languages/data_json/data_json.pir
 lib/parrot/${PKGVERSION}/languages/data_json/data_json/grammar.pg
 lib/parrot/${PKGVERSION}/languages/data_json/data_json/pge2pir.tg
+lib/parrot/${PKGVERSION}/languages/nqp/Defines.mak
+lib/parrot/${PKGVERSION}/languages/nqp/Rules.mak
 lib/parrot/${PKGVERSION}/languages/nqp/TODO.pod
 lib/parrot/${PKGVERSION}/languages/nqp/bootstrap/actions.pm
 lib/parrot/${PKGVERSION}/languages/nqp/bootstrap/nqp.pir
@@ -161,7 +164,9 @@ lib/parrot/${PKGVERSION}/languages/nqp/src/Grammar.pg
 lib/parrot/${PKGVERSION}/languages/nqp/src/Grammar/Actions.pir
 lib/parrot/${PKGVERSION}/languages/nqp/src/builtins.pir
 lib/parrot/${PKGVERSION}/languages/parrot/parrot.pir
+lib/parrot/${PKGVERSION}/languages/pct/Defines.mak
 lib/parrot/${PKGVERSION}/languages/pct/PCT.pir
+lib/parrot/${PKGVERSION}/languages/pct/Rules.mak
 lib/parrot/${PKGVERSION}/languages/pct/src/PAST.pir
 lib/parrot/${PKGVERSION}/languages/pct/src/PAST/Compiler.pir
 lib/parrot/${PKGVERSION}/languages/pct/src/PAST/Node.pir
@@ -171,6 +176,7 @@ lib/parrot/${PKGVERSION}/languages/pct/src/PCT/HLLCompiler.pir
 lib/parrot/${PKGVERSION}/languages/pct/src/PCT/Node.pir
 lib/parrot/${PKGVERSION}/languages/pct/src/POST/Compiler.pir
 lib/parrot/${PKGVERSION}/languages/pct/src/POST/Node.pir
+lib/parrot/${PKGVERSION}/languages/pge/Defines.mak
 lib/parrot/${PKGVERSION}/languages/pge/P6Rule.grammar
 lib/parrot/${PKGVERSION}/languages/pge/PGE.pir
 lib/parrot/${PKGVERSION}/languages/pge/PGE/Exp.pir
@@ -180,7 +186,10 @@ lib/parrot/${PKGVERSION}/languages/pge/PGE/P5Regex.pir
 lib/parrot/${PKGVERSION}/languages/pge/PGE/Perl6Regex.pir
 lib/parrot/${PKGVERSION}/languages/pge/PGE/Regex.pir
 lib/parrot/${PKGVERSION}/languages/pge/PGE/builtins.pg
+lib/parrot/${PKGVERSION}/languages/pge/Rules.mak
 lib/parrot/${PKGVERSION}/languages/pge/STATUS
+lib/parrot/${PKGVERSION}/languages/tge/Defines.mak
+lib/parrot/${PKGVERSION}/languages/tge/Rules.mak
 lib/parrot/${PKGVERSION}/languages/tge/TGE.pir
 lib/parrot/${PKGVERSION}/languages/tge/TGE/Compiler.pir
 lib/parrot/${PKGVERSION}/languages/tge/TGE/Grammar.pir
@@ -251,6 +260,7 @@ lib/parrot/${PKGVERSION}/library/Protoobject.pir
 lib/parrot/${PKGVERSION}/library/Range.pbc
 lib/parrot/${PKGVERSION}/library/Range.pir
 lib/parrot/${PKGVERSION}/library/Regex.pbc
+lib/parrot/${PKGVERSION}/library/Rules.mak
 lib/parrot/${PKGVERSION}/library/SDL.pir
 lib/parrot/${PKGVERSION}/library/SDL/App.pir
 lib/parrot/${PKGVERSION}/library/SDL/Button.pir
@@ -390,6 +400,7 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Section/Perl.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Section/Tests.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Section/Tools.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Docs/Text2HTML.pm
+lib/parrot/${PKGVERSION}/tools/lib/Parrot/H2inc.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/DefaultTests.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/Options.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/Smoke.pm
@@ -467,12 +478,12 @@ src/parrot/${PKGVERSION}/dynpmc/dynlexpad.pmc
 src/parrot/${PKGVERSION}/dynpmc/foo.pmc
 src/parrot/${PKGVERSION}/dynpmc/foo2.pmc
 src/parrot/${PKGVERSION}/dynpmc/gdbmhash.pmc
+src/parrot/${PKGVERSION}/dynpmc/pccmethod_test.pmc
 src/parrot/${PKGVERSION}/dynpmc/rational.pmc
 src/parrot/${PKGVERSION}/dynpmc/rotest.pmc
 src/parrot/${PKGVERSION}/dynpmc/subproxy.pmc
 src/parrot/${PKGVERSION}/ops/ops.num
 src/parrot/${PKGVERSION}/pmc/addrregistry.pmc
-src/parrot/${PKGVERSION}/pmc/array.pmc
 src/parrot/${PKGVERSION}/pmc/arrayiterator.pmc
 src/parrot/${PKGVERSION}/pmc/bigint.pmc
 src/parrot/${PKGVERSION}/pmc/bignum.pmc
@@ -510,6 +521,7 @@ src/parrot/${PKGVERSION}/pmc/hash.dump
 src/parrot/${PKGVERSION}/pmc/hash.pmc
 src/parrot/${PKGVERSION}/pmc/hashiterator.pmc
 src/parrot/${PKGVERSION}/pmc/hashiteratorkey.pmc
+src/parrot/${PKGVERSION}/pmc/imageio.pmc
 src/parrot/${PKGVERSION}/pmc/integer.dump
 src/parrot/${PKGVERSION}/pmc/integer.pmc
 src/parrot/${PKGVERSION}/pmc/iterator.pmc
@@ -540,7 +552,6 @@ src/parrot/${PKGVERSION}/pmc/parrotinterpreter.pmc
 src/parrot/${PKGVERSION}/pmc/parrotlibrary.pmc
 src/parrot/${PKGVERSION}/pmc/parrotrunningthread.pmc
 src/parrot/${PKGVERSION}/pmc/parrotthread.pmc
-src/parrot/${PKGVERSION}/pmc/pccmethod_test.pmc
 src/parrot/${PKGVERSION}/pmc/pmcproxy.pmc
 src/parrot/${PKGVERSION}/pmc/pointer.pmc
 src/parrot/${PKGVERSION}/pmc/resizablebooleanarray.pmc
