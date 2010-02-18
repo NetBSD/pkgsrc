@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.13 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-ao,v 1.14 2010/02/18 08:04:35 martti Exp $
 
 One more replacing 0 with ROOTUID is handled by using SUBST framework
 because patch can't handle it when hpn-patch option is enabled.
@@ -43,7 +43,7 @@ So, don't simply update this file with mkpatch command.
  	if (debug_flag) {
  		/* dump the environment */
  		fprintf(stderr, "Environment:\n");
-@@ -1464,9 +1476,9 @@ do_setusercontext(struct passwd *pw)
+@@ -1462,9 +1474,9 @@ do_setusercontext(struct passwd *pw)
  	(void)ssh_selinux_enabled();
  #endif
  
@@ -53,8 +53,8 @@ So, don't simply update this file with mkpatch command.
 -#endif /* HAVE_CYGWIN */
 +#endif /* !HAVE_CYGWIN && !HAVE_INTERIX */
  	{
- 
- #ifdef HAVE_SETPCRED
+ #ifdef HAVE_LOGIN_CAP
+ # ifdef __bsdi__
 @@ -1500,11 +1512,13 @@ do_setusercontext(struct passwd *pw)
  			perror("setgid");
  			exit(1);
