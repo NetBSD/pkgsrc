@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.73 2010/02/18 08:04:35 martti Exp $
+$NetBSD: distinfo,v 1.74 2010/02/18 16:27:58 taca Exp $
 
+SHA1 (openssh-5.3.1-20100218/openssh-5.3p1-hpn13v7.diff.gz) = 724aa137c8c42e89af454ce904845a3a2d9e8ed9
+RMD160 (openssh-5.3.1-20100218/openssh-5.3p1-hpn13v7.diff.gz) = a57c038d6b57a2869295e3000abd50658ebb5b93
+Size (openssh-5.3.1-20100218/openssh-5.3p1-hpn13v7.diff.gz) = 22734 bytes
 SHA1 (openssh-5.3.1-20100218/openssh-5.3p1.tar.gz) = d411fde2584ef6022187f565360b2c63a05602b5
 RMD160 (openssh-5.3.1-20100218/openssh-5.3p1.tar.gz) = f8c98b4b91b7e0e02b33837ef6978e8b7570cf9e
 Size (openssh-5.3.1-20100218/openssh-5.3p1.tar.gz) = 1027130 bytes
