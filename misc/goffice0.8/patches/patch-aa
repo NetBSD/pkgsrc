@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/18 20:48:56 drochner Exp $
+
+--- libgoffice.pc.in.orig	2009-05-19 01:56:21.000000000 +0000
++++ libgoffice.pc.in
+@@ -6,7 +6,7 @@ includedir=@includedir@
+ Name: libGOffice
+ Description: G Office support library
+ Version: @VERSION@
+-Requires.private: glib-2.0 gobject-2.0 gio-2.0 libgsf-1 libxml-2.0 gtk+-2.0 libglade-2.0 cairo pangocairo @EXTRA_DEPS@
++Requires.private: glib-2.0 gobject-2.0 gio-2.0 libgsf-1 libxml-2.0 gtk+-2.0 cairo pangocairo @EXTRA_DEPS@
+ Libs: -L${libdir} -lgoffice-@GOFFICE_API_VER@
+ Libs.private: @EXTRA_LIBS@
+ Cflags: -I${includedir}/libgoffice-@GOFFICE_API_VER@ @EXTRA_INCLUDES@
