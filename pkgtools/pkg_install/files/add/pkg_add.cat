@@ -89,10 +89,10 @@ OOPPTTIIOONNSS
      --UU      Replace an already installed version from a package.  Implies --uu.
 
      --uu      If the package that's being installed is already installed, an
-             update is performed.  If this is specified twice, then any depen-
-             dent packages that are too old will also be updated to fulfill
-             the dependency.  See below for a more detailed description of the
-             process.
+             update is performed.  Installed dependent packages are updated
+             recursively, if they are too old to fulfill the dependencies of
+             the to-be-installed version.  See below for a more detailed
+             description of the process.
 
      --VV      Print version number and exit.
 
@@ -124,17 +124,19 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
 
            1.   A check is made to determine if the package or another version
                 of it is already recorded as installed.  If it is, installa-
-                tion is terminated if the --uu option is not given.
+                tion is terminated if the --uu or --UU options are not given.
 
-                If the --uu option is given, it's assumed the package should be
-                replaced by the new version instead.  Before doing so, all
-                packages that depend on the pkg being upgraded are checked if
-                they also work with the new version.  If that test is success-
-                ful, replacing is prepared by moving an existing _+_R_E_Q_U_I_R_E_D___B_Y
-                file aside (if it exists), and running pkg_delete(1) on the
-                installed package.  Installation then proceeds as if the pack-
-                age was not installed, and restores the _+_R_E_Q_U_I_R_E_D___B_Y file
-                afterwards.
+                If the same version is installed and --UU is not given, it is
+                marked as manually installed and process stops.  If the --uu
+                option is given, it's assumed the package should be replaced
+                by the new version instead.  Before doing so, all packages
+                that depend on the pkg being upgraded are checked if they also
+                work with the new version.  If that test is not successful,
+                the dependent packages are updated first.  The replacing is
+                then prepared by moving an existing _+_R_E_Q_U_I_R_E_D___B_Y file aside
+                (if it exists), and running pkg_delete(1) on the installed
+                package.  Installation then proceeds as if the package was not
+                installed, and restores the _+_R_E_Q_U_I_R_E_D___B_Y file afterwards.
 
            2.   The package build information is extracted from the
                 _+_B_U_I_L_D___I_N_F_O file and compared against the result of uname(3).
@@ -162,10 +164,6 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 these required packages are not currently installed, an
                 attempt is made to find and install it; if the missing package
                 cannot be found or installed, the installation is terminated.
-                If the --uu option was specified twice, any required packages
-                that are installed, but which have a version number that is
-                considered to be too old, are also updated.  The dependent
-                packages are found according to the normal PKG_PATH rules.
 
            7.   If the package contains an _i_n_s_t_a_l_l script, it is executed with
                 the following arguments:
@@ -264,4 +262,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 5.0                     January 30, 2010                     NetBSD 5.0
+NetBSD 5.0                     February 18, 2010                    NetBSD 5.0
