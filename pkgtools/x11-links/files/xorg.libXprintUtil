@@ -1,6 +1,7 @@
-# $NetBSD: xorg.libXprintUtil,v 1.2 2008/10/05 21:36:35 cube Exp $
+# $NetBSD: xorg.libXprintUtil,v 1.3 2010/02/18 12:32:19 obache Exp $
 #
 lib/libXprintUtil.so
 lib/libXprintUtil.so.1
+lib/libXprintUtil.so.1.0
 lib/libXprintUtil.so.1.0.0
 lib/pkgconfig/xprintutil.pc
