@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.857 2010/02/18 18:18:56 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.858 2010/02/18 21:37:40 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1029,3 +1029,11 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100218 [taca 2010-02-18]
 	Updated www/typolight28-translations to 20100218nb1 [taca 2010-02-18]
 	Updated net/Transmission to 1.90 [tnn 2010-02-18]
+	Updated x11/pixman to 0.16.6 [drochner 2010-02-18]
+	Updated graphics/freetype2 to 2.3.12 [drochner 2010-02-18]
+	Added math/gnumeric110 version 1.10.0 [drochner 2010-02-18]
+	Added misc/goffice0.8 version 0.8.0 [drochner 2010-02-18]
+	Updated x11/gnome-screensaver to 2.28.3 [drochner 2010-02-18]
+	Updated multimedia/gst-plugins0.10-good to 0.10.18 [drochner 2010-02-18]
+	Updated multimedia/gst-plugins0.10-base to 0.10.26 [drochner 2010-02-18]
+	Updated multimedia/gstreamer0.10 to 0.10.26 [drochner 2010-02-18]
