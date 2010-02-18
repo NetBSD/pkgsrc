@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.847 2010/02/18 08:52:24 sno Exp $
+$NetBSD: CHANGES-2010,v 1.848 2010/02/18 08:55:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1018,3 +1018,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IO-CaptureOutput to 1.11.02 [sno 2010-02-18]
 	Updated devel/p5-autodie to 2.08 [sno 2010-02-18]
 	Updated devel/p5-Params-Validate to 0.95 [sno 2010-02-18]
+	Updated devel/p5-ExtUtils-CBuilder to 0.27.01 [sno 2010-02-18]
