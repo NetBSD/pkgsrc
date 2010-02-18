@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.72 2009/05/21 03:22:29 taca Exp $
+$NetBSD: distinfo,v 1.73 2010/02/18 08:04:35 martti Exp $
 
-SHA1 (openssh-5.2.1-20090521/openssh-5.2p1-hpn13v6.diff.gz) = 9683d5feb3f7e302ef836901af5366df6c425815
-RMD160 (openssh-5.2.1-20090521/openssh-5.2p1-hpn13v6.diff.gz) = d647d3b0547e4d698c616f5ed6643b3ddbcced95
-Size (openssh-5.2.1-20090521/openssh-5.2p1-hpn13v6.diff.gz) = 33540 bytes
-SHA1 (openssh-5.2.1-20090521/openssh-5.2p1.tar.gz) = 8273a0237db98179fbdc412207ff8eb14ff3d6de
-RMD160 (openssh-5.2.1-20090521/openssh-5.2p1.tar.gz) = 7c53f342034b16e9faa9f5a09ef46390420722eb
-Size (openssh-5.2.1-20090521/openssh-5.2p1.tar.gz) = 1016612 bytes
+SHA1 (openssh-5.3.1-20100218/openssh-5.3p1.tar.gz) = d411fde2584ef6022187f565360b2c63a05602b5
+RMD160 (openssh-5.3.1-20100218/openssh-5.3p1.tar.gz) = f8c98b4b91b7e0e02b33837ef6978e8b7570cf9e
+Size (openssh-5.3.1-20100218/openssh-5.3p1.tar.gz) = 1027130 bytes
 SHA1 (patch-aa) = 38546f8fd8bf6021d43cdf076ab723ad39a5f78e
 SHA1 (patch-ab) = 00e7e50a35e8b3bcfa53b239b520a12498c8dca0
 SHA1 (patch-ac) = ba97b23c6527311256b335c58175da9e9a3616e4
@@ -13,14 +10,14 @@ SHA1 (patch-ad) = 254e11c5f56a72bf0b30bb8860e45156b3a0adf2
 SHA1 (patch-ae) = 9585221f9e49b4ebea31c374066d70e11aa804a1
 SHA1 (patch-af) = ca3224af0b648803404776a8c12ed678db4f8ff6
 SHA1 (patch-ag) = b5cb0400d3cda9cb6d60dc729e54b1ffc34ec9e2
-SHA1 (patch-ah) = fa5175734678e95d05dcdcebadeb79df3ecef760
+SHA1 (patch-ah) = 6ddd934be038c9177df6856dbcb6e44feab05146
 SHA1 (patch-ai) = becad6262e5daeef2a6db14097a8971c40088403
 SHA1 (patch-aj) = 5c89b4a7da59f05c50c16083aa6dd6e465cd0305
 SHA1 (patch-ak) = 550eae0b47dc220dac2439f57b39b7e4319057c5
-SHA1 (patch-al) = a3906a9b6a9a15b948b8bab3a85454f2515400bd
+SHA1 (patch-al) = ffd15b2ef3cb6b57419c0f6f1f4f795e497382d7
 SHA1 (patch-am) = 4893a8a059d611d35c1fb9ff03b598c590e0355e
 SHA1 (patch-an) = 5b41d9493028dd4dce4a73ea78e43f3a073108e5
-SHA1 (patch-ao) = 6b64be9b230ddb634b9b5fdab22c4944ae605153
+SHA1 (patch-ao) = 1343faeb45f8e1fe8126a1c76b41439b275efa9b
 SHA1 (patch-ap) = 041059e25d2331aace0eaa5a6c3032afb3d565b4
 SHA1 (patch-aq) = 1a7d8a4c5e70a0c6211247ba583534ed8ce317d0
 SHA1 (patch-ar) = a1099e0175a2b14f3b19db04261891179b1e3299
