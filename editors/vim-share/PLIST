@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:50:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/02/18 08:18:25 martti Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -1137,6 +1137,7 @@ share/vim/${VIM_SUBDIR}/tools/pltags.pl
 share/vim/${VIM_SUBDIR}/tools/ref
 share/vim/${VIM_SUBDIR}/tools/shtags.1
 share/vim/${VIM_SUBDIR}/tools/shtags.pl
+share/vim/${VIM_SUBDIR}/tools/unicode.vim
 share/vim/${VIM_SUBDIR}/tools/vim132
 share/vim/${VIM_SUBDIR}/tools/vim_vs_net.cmd
 share/vim/${VIM_SUBDIR}/tools/vimm
