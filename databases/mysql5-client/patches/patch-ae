@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.9 2007/07/15 19:22:06 tron Exp $
+$NetBSD: patch-ae,v 1.10 2010/02/18 15:46:10 taca Exp $
 
---- scripts/Makefile.in.orig	2007-07-04 14:10:00.000000000 +0100
-+++ scripts/Makefile.in	2007-07-15 17:24:02.000000000 +0100
-@@ -377,13 +377,12 @@
+--- scripts/Makefile.in.orig	2010-01-15 09:54:00.000000000 +0000
++++ scripts/Makefile.in
+@@ -377,13 +377,12 @@ zlib_dir = @zlib_dir@
  BUILT_SOURCES = mysql_fix_privilege_tables.sql \
  		mysql_fix_privilege_tables_sql.c
  
@@ -17,11 +17,13 @@ $NetBSD: patch-ae,v 1.9 2007/07/15 19:22:06 tron Exp $
  			mysql_zap \
  			mysqlaccess \
  			mysqlbug \
-@@ -394,7 +393,6 @@
+@@ -393,8 +392,7 @@ bin_SCRIPTS = @server_scripts@ \
+ 			mysqldumpslow \
  			mysql_explain_log \
  			mysql_tableinfo \
- 			mysql_upgrade_shell \
+-			mysql_upgrade_shell \
 -			mysqld_multi
++			mysql_upgrade_shell
  
  noinst_SCRIPTS = make_binary_distribution \
  			make_sharedlib_distribution \

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/11/26 16:33:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/02/18 15:46:10 taca Exp $
 bin/comp_err
 bin/innochecksum
 bin/my_print_defaults
@@ -190,6 +190,7 @@ share/mysql-test/r/big_test.require
 share/mysql-test/r/bigint.result
 share/mysql-test/r/binary.result
 share/mysql-test/r/binlog.result
+share/mysql-test/r/binlog_delete_and_flush_index.result
 share/mysql-test/r/binlog_index.result
 share/mysql-test/r/binlog_innodb.result
 share/mysql-test/r/binlog_killed.result
@@ -406,6 +407,8 @@ share/mysql-test/r/innodb.result
 share/mysql-test/r/innodb_bug35220.result
 share/mysql-test/r/innodb_bug40565.result
 share/mysql-test/r/innodb_bug42419.result
+share/mysql-test/r/innodb_bug46000.result
+share/mysql-test/r/innodb_bug47777.result
 share/mysql-test/r/innodb_cache.result
 share/mysql-test/r/innodb_gis.result
 share/mysql-test/r/innodb_handler.result
@@ -1450,6 +1453,7 @@ share/mysql-test/t/bigint.test
 share/mysql-test/t/binary.test
 share/mysql-test/t/binlog-master.opt
 share/mysql-test/t/binlog.test
+share/mysql-test/t/binlog_delete_and_flush_index.test
 share/mysql-test/t/binlog_index.test
 share/mysql-test/t/binlog_innodb.test
 share/mysql-test/t/binlog_killed.test
@@ -1647,6 +1651,8 @@ share/mysql-test/t/innodb.test
 share/mysql-test/t/innodb_bug35220.test
 share/mysql-test/t/innodb_bug40565.test
 share/mysql-test/t/innodb_bug42419.test
+share/mysql-test/t/innodb_bug46000.test
+share/mysql-test/t/innodb_bug47777.test
 share/mysql-test/t/innodb_cache-master.opt
 share/mysql-test/t/innodb_cache.test
 share/mysql-test/t/innodb_gis.test

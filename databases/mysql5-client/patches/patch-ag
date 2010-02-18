@@ -1,28 +1,13 @@
-$NetBSD: patch-ag,v 1.4 2008/09/18 11:50:44 taca Exp $
+$NetBSD: patch-ag,v 1.5 2010/02/18 15:46:10 taca Exp $
 
---- strings/Makefile.in.orig	2008-08-04 15:22:30.000000000 +0300
-+++ strings/Makefile.in	2008-09-16 12:18:09.000000000 +0300
-@@ -622,7 +622,6 @@
- 	  if test -f $$p; then \
- 	    f=$(am__strip_dir) \
- 	    echo " $(pkglibLIBRARIES_INSTALL) '$$p' '$(DESTDIR)$(pkglibdir)/$$f'"; \
--	    $(pkglibLIBRARIES_INSTALL) "$$p" "$(DESTDIR)$(pkglibdir)/$$f"; \
- 	  else :; fi; \
- 	done
- 	@$(POST_INSTALL)
-@@ -630,7 +629,6 @@
- 	  if test -f $$p; then \
- 	    p=$(am__strip_dir) \
- 	    echo " $(RANLIB) '$(DESTDIR)$(pkglibdir)/$$p'"; \
--	    $(RANLIB) "$(DESTDIR)$(pkglibdir)/$$p"; \
- 	  else :; fi; \
- 	done
+--- strings/Makefile.in.orig	2010-01-15 09:54:02.000000000 +0000
++++ strings/Makefile.in
+@@ -889,7 +889,7 @@ install-data-am:
  
-@@ -639,7 +637,6 @@
- 	@list='$(pkglib_LIBRARIES)'; for p in $$list; do \
- 	  p=$(am__strip_dir) \
- 	  echo " rm -f '$(DESTDIR)$(pkglibdir)/$$p'"; \
--	  rm -f "$(DESTDIR)$(pkglibdir)/$$p"; \
- 	done
+ install-dvi: install-dvi-am
  
- clean-pkglibLIBRARIES:
+-install-exec-am: install-pkglibLIBRARIES
++install-exec-am:
+ 
+ install-html: install-html-am
+ 
