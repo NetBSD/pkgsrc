@@ -1,17 +1,17 @@
-$NetBSD: patch-al,v 1.8 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-al,v 1.9 2010/02/18 08:04:35 martti Exp $
 
 --- auth1.c.orig	2008-07-09 19:54:05.000000000 +0900
 +++ auth1.c
-@@ -328,7 +328,7 @@ do_authloop(Authctxt *authctxt)
- 		}
- #else
+@@ -320,7 +320,7 @@ do_authloop(Authctxt *authctxt)
+ 
+ #ifndef HAVE_CYGWIN
  		/* Special handling for root */
 -		if (authenticated && authctxt->pw->pw_uid == 0 &&
 +		if (authenticated && authctxt->pw->pw_uid == ROOTUID &&
  		    !auth_root_allowed(meth->name)) {
   			authenticated = 0;
  # ifdef SSH_AUDIT_EVENTS
-@@ -426,8 +426,8 @@ do_authentication(Authctxt *authctxt)
+@@ -418,8 +418,8 @@ do_authentication(Authctxt *authctxt)
  	 * If we are not running as root, the user must have the same uid as
  	 * the server.
  	 */
