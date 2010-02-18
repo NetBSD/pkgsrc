@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1 2009/12/09 09:23:51 he Exp $
+$NetBSD: patch-ak,v 1.2 2010/02/18 07:59:38 he Exp $
 
 Prevent problem exposed by "library cloning", where the dlopen()-returned
 handle is copied, causing dlclose() to be called twice with the same handle,
@@ -7,9 +7,9 @@ http://trac.parrot.org/parrot/ticket/1340.
 
 Index: config/gen/platform/generic/dl.c
 ===================================================================
---- config/gen/platform/generic/dl.c	(revision 42823)
-+++ config/gen/platform/generic/dl.c	(working copy)
-@@ -22,11 +22,69 @@
+--- config/gen/platform/generic/dl.c.orig	2009-12-12 01:16:58.000000000 +0100
++++ config/gen/platform/generic/dl.c
+@@ -22,11 +22,69 @@ Dynlib stuff
  */
  
  #ifdef PARROT_HAS_HEADER_DLFCN
@@ -34,7 +34,7 @@ Index: config/gen/platform/generic/dl.c
 +{
 +    struct handle_entry *e;
 +
-+    e = malloc(sizeof(struct handle_entry));
++    e = (struct handle_entry *) malloc(sizeof(struct handle_entry));
 +    if (!e) { return; }
 +    e->handle = handle;
 +    e->next = handle_list;
@@ -79,7 +79,7 @@ Index: config/gen/platform/generic/dl.c
  /*
  
  =item C<void * Parrot_dlopen(const char *filename)>
-@@ -39,7 +97,11 @@
+@@ -39,7 +97,11 @@ void *
  Parrot_dlopen(const char *filename)
  {
  #ifdef PARROT_HAS_HEADER_DLFCN
@@ -92,11 +92,13 @@ Index: config/gen/platform/generic/dl.c
  #else
      return 0;
  #endif
-@@ -93,7 +155,13 @@
+@@ -93,10 +155,15 @@ int
  Parrot_dlclose(void *handle)
  {
  #ifdef PARROT_HAS_HEADER_DLFCN
 -    return dlclose(handle);
+-#else
+-    return -1;
 +    int rv;
 +
 +    if (find_handle_entry(handle)) {
@@ -104,6 +106,8 @@ Index: config/gen/platform/generic/dl.c
 +	rv = dlclose(handle);
 +	return rv;
 +    }
- #else
-     return -1;
  #endif
++    return -1;
+ }
+ 
+ /*
