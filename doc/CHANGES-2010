@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.838 2010/02/18 01:07:24 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.839 2010/02/18 01:10:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1004,9 +1004,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed www/typolight26-translations [taca 2010-02-17]
 	Removed www/typolight26-example [taca 2010-02-17]
 	Removed www/typolight26 [taca 2010-02-17]
-	Updated net/samba33 to 3.3.10 [taca 2010-02-17]
 	Updated devel/xulrunner to 1.9.1.8 [tnn 2010-02-17]
 	Updated www/firefox to 3.5.8 [tnn 2010-02-17]
 	Updated devel/nspr to 4.8.3.8 [tnn 2010-02-17]
 	Updated www/seamonkey to 2.0.3 [tnn 2010-02-17]
 	Updated print/gutenprint-lib to 5.2.5 [gdt 2010-02-18]
+	Updated net/samba33 to 3.3.10nb1 [taca 2010-02-18]
