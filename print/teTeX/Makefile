@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2010/01/16 03:59:06 minskim Exp $
+# $NetBSD: Makefile,v 1.57 2010/02/18 15:23:24 gdt Exp $
 
 DISTNAME=	teTeX-3.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	print meta-pkgs
 MASTER_SITES=	# empty
 
