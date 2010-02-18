@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2009/12/15 13:32:57 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2010/02/18 08:52:11 sno Exp $
 
-DISTNAME=	Params-Validate-0.94
+DISTNAME=	Params-Validate-0.95
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5pva
 CATEGORIES=	devel perl5
@@ -18,7 +18,7 @@ DEPENDS+=	{p5-Attribute-Handlers>=0.79,perl>=5.10.0}:../../devel/p5-Attribute-Ha
 DEPENDS+=	{p5-Scalar-List-Utils>=1.0,perl>=5.10.0}:../../devel/p5-Scalar-List-Utils
 
 BUILD_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
-BUILD_DEPENDS+=	p5-Module-Build>=0.35:../../devel/p5-Module-Build
+BUILD_DEPENDS+=	{perl>=5.10.1,p5-Module-Build>=0.35}:../../devel/p5-Module-Build
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Params/Validate/.packlist
