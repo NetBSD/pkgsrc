@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/01/24 13:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/18 01:06:49 gdt Exp $
 
-VERSION=	5.2.4
+VERSION=	5.2.5
 DISTNAME=	gutenprint-${VERSION}
 PKGNAME=	gutenprint-lib-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 EXTRACT_SUFX=	.tar.bz2
@@ -90,6 +89,8 @@ CONFIGURE_ARGS+=	--without-readline
 # test pattern generator.
 #CONFIGURE_ARGS+=	--disable-test
 #CONFIGURE_ARGS+=	--disable-testpattern
+
+TEST_TARGET=		check
 
 # A libintl is optional in gutenprint.
 .include "../../devel/gettext-lib/buildlink3.mk"
