@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.22 2010/02/16 17:01:04 kefren Exp $
---- configure.orig	2010-02-16 12:05:01.000000000 +0200
-+++ configure	2010-02-16 12:15:36.000000000 +0200
+$NetBSD: patch-ab,v 1.23 2010/02/18 21:55:48 ghen Exp $
+
+--- configure.orig	2009-12-17 15:50:43.000000000 +0000
++++ configure
 @@ -3115,12 +3115,15 @@ _ACEOF
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
@@ -29,6 +30,15 @@ $NetBSD: patch-ab,v 1.22 2010/02/16 17:01:04 kefren Exp $
  		need_link_unlink=yes
  
  cat >>confdefs.h <<\_ACEOF
+@@ -36565,7 +36569,7 @@ LIBC="libc.so.6"
+ INTL="libc.so.6"
+ SQLITE="libsqlite.so.0"
+ SQLITE3="libsqlite3.so.0"
+-X11="libX11.so"
++X11="@X11BASE@/lib/libX11.so"
+ 
+ sizeof_register="SIZEOF_VOID_P"
+ 
 @@ -37054,10 +37058,10 @@ case "$host" in
  	X11="libX11.dylib"
  	;;
