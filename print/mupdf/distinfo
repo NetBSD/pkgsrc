@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/18 10:07:32 wiz Exp $
+
+SHA1 (mupdf-r937.tar.gz) = 757b4070fa70c0942f0031411420df6d4a5fa26c
+RMD160 (mupdf-r937.tar.gz) = 668a7fea2b3857d875726d5b60b00d592d8299de
+Size (mupdf-r937.tar.gz) = 3611931 bytes
+SHA1 (patch-aa) = aa576dfe6591271101ca63cf3cb05c4a1eb90b79
