@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/21 15:38:30 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/02/18 08:43:25 sno Exp $
 
-SHA1 (IO-CaptureOutput-1.1101.tar.gz) = 1df59f517cad4987f7d3dd865be1ab3e01adb5c5
-RMD160 (IO-CaptureOutput-1.1101.tar.gz) = c128b2d3b33a7d3b0731112630a258ee2dc0206d
-Size (IO-CaptureOutput-1.1101.tar.gz) = 22116 bytes
+SHA1 (IO-CaptureOutput-1.1102.tar.gz) = ac95c24b244723ec86c3f2128b9fa7dea037de55
+RMD160 (IO-CaptureOutput-1.1102.tar.gz) = 30b38ecf434b389a4fceacad7acf3ef17e5e2228
+Size (IO-CaptureOutput-1.1102.tar.gz) = 26126 bytes
