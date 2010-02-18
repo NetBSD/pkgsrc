@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/14 22:58:57 spz Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/18 06:41:34 spz Exp $
 #
 
 DISTNAME=		xymon-4.3.0-beta2
@@ -12,6 +12,7 @@ COMMENT=		Network services monitor a la Big Brother
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		NO
 
 CONFLICTS+=		hobbitmon-[0-9]*
 CONFLICTS+=		hobbitclient-[0-9]*
