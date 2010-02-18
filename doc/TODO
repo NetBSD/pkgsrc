@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9057 2010/02/18 12:03:40 obache Exp $
+$NetBSD: TODO,v 1.9058 2010/02/18 15:51:20 taca Exp $
 
 Suggested new packages
 ======================
@@ -754,6 +754,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
+	o im-150
 	o imp-4.3.6
 	o ingo-1.2.3
 	o inputproto-2.0 [xorg-server 1.7]
@@ -940,8 +941,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o multitail-5.2.5
 	o munin-1.4.3
 	o muse-0.9.2
-	o mysql-5.0.89
-	o mysql-5.1.43
+	o mysql-5.1.44 [taca]
 	o mysqlcc-0.9.8
 	o nagios-3.2.0
 	o nano-2.2.0
@@ -1129,34 +1129,33 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rubigen-1.5.2
 	o ruby-1.8.7.248 (Ruby 1.8.7-p248)
 	o ruby-1.9.1.129 (Ruby 1.9.1-p129)
-	o ruby-SDL-2.0.1b
+	o ruby-SDL-2.1.1.1
 	o ruby-builder-2.2.0
 	o ruby-cmd-0.8.0
-	o ruby-coderay-0.8.1
-	o ruby-columnize-0.3.0
-	o ruby-datamapper-0.9.10
+	o ruby-coderay-0.9.1
+	o ruby-columnize-0.3.1
+	o ruby-datamapper-0.10.2
 	o ruby-debug-0.10.3
 	o ruby-debug-base-0.10.3.1
 	o ruby-debug-ide-0.4.4
-	o ruby-directory-watcher-1.1.2
+	o ruby-directory-watcher-1.3.1
 	o ruby-eventmachine-0.12.2
-	o ruby-fastercsv-1.4.0
+	o ruby-fastercsv-1.5.1
 	o ruby-itex2MML-1.3.5
 	o ruby-jsmin-1.0.1
-	o ruby-logging-0.9.5
-	o ruby-mechanize-0.9.0
+	o ruby-logging-1.3.0
+	o ruby-mechanize-1.0.0
 	o ruby-ming-0.2.1
-	o ruby-mocha-0.9.4
-	o ruby-net-ssh-1.1.4
+	o ruby-mocha-0.9.8
 	o ruby-opengl-0.60.1
 	o ruby-parsetree-3.0.3
 	o ruby-racc-1.4.6
 	o ruby-rgl-0.4.0
-	o ruby-rspec-1.1.12
+	o ruby-rspec-1.2.9
 	o ruby-rttool-1.0.3.0
-	o ruby-sequel-2.9.0
+	o ruby-sequel-3.6.0
 	o ruby-sequel-core-2.2.0
-	o ruby-will-paginate-2.2.3
+	o ruby-will-paginate-2.3.12
 	o rudiments-0.30
 	o rxvt-unicode-9.07
 	o sabayon-2.28.1 [GNOME 2.28]
