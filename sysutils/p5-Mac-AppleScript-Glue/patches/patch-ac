@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/02/18 02:56:35 seb Exp $
+
+Modernize POP tests.
+
+--- t/pod.t.orig	2002-09-08 05:18:03.000000000 +0200
++++ t/pod.t
+@@ -7,21 +7,7 @@
+ 
+ use strict;
+ 
+-my %pods;
+-
+-BEGIN {
+-    use Pod::Find qw(pod_find);
+-
+-    %pods = pod_find(
+-        { 
+-            -verbose => 1, 
+-        },
+-        'blib'
+-    );
+-}
+-
+-use Test::Pod tests => scalar keys %pods;
+-
+-for my $pod (keys %pods) {
+-    pod_ok($pod);
+-}
++use Test::More;
++eval "use Test::Pod 1.00";
++plan skip_all => "Test::Pod 1.00 required for testing POD" if $@;
++all_pod_files_ok();
