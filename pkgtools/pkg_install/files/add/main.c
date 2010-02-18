@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.24 2010/01/30 20:09:34 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.25 2010/02/18 13:43:11 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.24 2010/01/30 20:09:34 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.25 2010/02/18 13:43:11 joerg Exp $");
 
 /*
  *
@@ -123,12 +123,11 @@ main(int argc, char **argv)
 
 		case 'U':
 			ReplaceSame = 1;
-			if (!Replace)
-				Replace = 1;
+			Replace = 1;
 			break;
 
 		case 'u':
-			Replace++;
+			Replace = 1;
 			break;
 
 		case 'V':
