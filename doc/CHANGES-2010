@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.842 2010/02/18 08:03:28 he Exp $
+$NetBSD: CHANGES-2010,v 1.843 2010/02/18 08:05:18 martti Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1013,3 +1013,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added sysutils/p5-Mac-AppleScript version 0.04 [seb 2010-02-18]
 	Added sysutils/p5-Mac-AppleScript-Glue version 0.03 [seb 2010-02-18]
 	Updated lang/parrot to 2.1.0 [he 2010-02-18]
+	Updated security/openssh to 5.3.1 [martti 2010-02-18]
