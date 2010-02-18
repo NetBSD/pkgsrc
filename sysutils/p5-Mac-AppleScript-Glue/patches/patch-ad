@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/02/18 02:56:35 seb Exp $
+
+Modern Quicktime Player can open a PNG file, so try to open
+a movie file instead.
+
+--- t/quicktime.t.orig	2002-09-12 16:25:40.000000000 +0200
++++ t/quicktime.t
+@@ -28,9 +28,12 @@ ok(defined $quicktime)
+     or die "can't initialize application object (Quicktime)\n";
+ 
+ ######################################################################
+-
++my $path =
++'/System/Library/PreferencePanes/Mouse.prefPane/Contents/Resources/touchMovie.mov';
++$path = '/System/Library/CoreServices/Dock.app/Contents/Resources/finder.png'
++if ( ! -f $path );
+ my $file = $quicktime->objref(
+-    posix_file => "/System/Library/CoreServices/Dock.app/Contents/Resources/finder.png",
++    posix_file => $path,
+ );
+ 
+ ok(defined $file)
