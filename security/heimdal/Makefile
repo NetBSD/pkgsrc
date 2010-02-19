@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2010/01/17 12:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2010/02/19 20:16:05 joerg Exp $
 
 DISTNAME=	heimdal-1.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
 
@@ -62,7 +62,7 @@ PLIST.afskauth=		yes
 PLIST.hcrypto=		yes
 .endif
 
-OWN_DIRS_PERMS=		${HEIMDAL_HDB_DIR} ${ROOT_USER} ${ROOT_GROUP} 0700
+OWN_DIRS_PERMS=		${HEIMDAL_HDB_DIR} ${REAL_ROOT_USER} ${ROOT_GROUP} 0700
 SPECIAL_PERMS+=		${PREFIX}/bin/otp ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS=		${PREFIX}/bin/${KRB5_PREFIX}su ${SETUID_ROOT_PERMS}
 RCD_SCRIPTS=		kadmind kcm kdc kpasswdd
