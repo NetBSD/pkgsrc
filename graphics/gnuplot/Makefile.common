@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2009/10/27 20:48:07 asau Exp $
+# $NetBSD: Makefile.common,v 1.18 2010/02/19 14:09:58 asau Exp $
 
 # used by ../../graphics/gnuplot-nox11
 
@@ -21,7 +21,6 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		makeinfo
 INFO_FILES=		# PLIST
 
-CONFIGURE_ARGS+=	--with-pdf
 CONFIGURE_ARGS+=	--enable-history-file
 CONFIGURE_ARGS+=	--with-plot=${PREFIX:Q}
 CONFIGURE_ARGS+=	--without-lisp-files
@@ -37,6 +36,3 @@ CONFIGURE_ARGS+=	--with-readline=bsd
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 .include "../../devel/readline/buildlink3.mk"
 .endif
-
-.include "../../graphics/gd/buildlink3.mk"
-.include "../../print/pdflib/buildlink3.mk"
