@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.866 2010/02/19 18:20:55 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.867 2010/02/19 18:23:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1055,3 +1055,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-ltxmisc to 2008.12680nb2 [minskim 2010-02-19]
 	Updated print/tex-oberdiek to 2008.12705nb1 [minskim 2010-02-19]
 	Updated print/tex-rotating to 2.16anb1 [minskim 2010-02-19]
+	Removed print/tex-bin-latex successor print/tex-latex-bin [minskim 2010-02-19]
