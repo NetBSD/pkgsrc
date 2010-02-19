@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2010/01/29 23:10:53 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2010/02/19 20:14:07 joerg Exp $
 
 DISTNAME=	gtkballs-3.1.5
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	games
 MASTER_SITES=	http://gtkballs.antex.ru/dist/
 
@@ -22,8 +22,11 @@ BUILD_DEFS+=		VARBASE
 
 PLIST_SUBST+=	VARBASE=${VARBASE}
 
+SETGIDGAME=		yes
+SPECIAL_PERMS+=		bin/gtkballs ${SETGID_GAMES_PERMS}
+
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/gtkballs-scores \
-			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 
 post-install:
 	mv ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/gtkballs.6x ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/gtkballs.6
