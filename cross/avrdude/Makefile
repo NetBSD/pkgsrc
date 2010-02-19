@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2010/02/08 01:47:14 jakllsch Exp $
+# $NetBSD: Makefile,v 1.30 2010/02/19 19:13:45 joerg Exp $
 
 DISTNAME=		avrdude-5.10
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		http://download.savannah.gnu.org/releases/avrdude/
 
@@ -26,7 +27,7 @@ INFO_FILES=		yes
 EGDIR=			${PREFIX}/share/examples/avrdude
 CONF_FILES=		${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf
 CONF_FILES_PERMS=	${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf \
-			${ROOT_USER} ${ROOT_GROUP} 644
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
 
 CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
