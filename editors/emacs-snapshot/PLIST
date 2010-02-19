@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/01/18 19:34:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/02/19 19:04:11 minskim Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -419,8 +419,17 @@ share/emacs/${EMACS_VERSION}/etc/images/gud/print.pbm
 share/emacs/${EMACS_VERSION}/etc/images/gud/print.xpm
 share/emacs/${EMACS_VERSION}/etc/images/gud/pstar.pbm
 share/emacs/${EMACS_VERSION}/etc/images/gud/pstar.xpm
+share/emacs/${EMACS_VERSION}/etc/images/gud/rcont.xpm
+share/emacs/${EMACS_VERSION}/etc/images/gud/rcont.xpm
+share/emacs/${EMACS_VERSION}/etc/images/gud/recstart.xpm
+share/emacs/${EMACS_VERSION}/etc/images/gud/recstop.xpm
 share/emacs/${EMACS_VERSION}/etc/images/gud/remove.pbm
 share/emacs/${EMACS_VERSION}/etc/images/gud/remove.xpm
+share/emacs/${EMACS_VERSION}/etc/images/gud/rfinish.xpm
+share/emacs/${EMACS_VERSION}/etc/images/gud/rnext.xpm
+share/emacs/${EMACS_VERSION}/etc/images/gud/rnexti.xpm
+share/emacs/${EMACS_VERSION}/etc/images/gud/rstep.xpm
+share/emacs/${EMACS_VERSION}/etc/images/gud/rstepi.xpm
 share/emacs/${EMACS_VERSION}/etc/images/gud/run.pbm
 share/emacs/${EMACS_VERSION}/etc/images/gud/run.xpm
 share/emacs/${EMACS_VERSION}/etc/images/gud/step.pbm
