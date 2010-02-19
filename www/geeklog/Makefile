@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2009/11/30 15:44:45 taca Exp $
+# $NetBSD: Makefile,v 1.26 2010/02/19 19:58:38 joerg Exp $
 #
 
 DISTNAME=	geeklog-${VER}
 PKGNAME=	geeklog-${VER:C/(sr|-)/./g}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
 
@@ -39,17 +40,17 @@ CONF_FILES+=		${GL_EG}/geeklog.conf \
 
 .for f in ${GL_CONF_FILES}
 CONF_FILES_PERMS+=	${GL_EG}/${f:T} ${GEEKLOG_BASE}/${f} \
-			${BINOWN} ${APACHE_GROUP} 0660
+			${REAL_ROOT_USER} ${APACHE_GROUP} 0660
 .endfor
 
 .for f in ${GL_CONF_PUB_FILES}
 CONF_FILES_PERMS+=	${GL_EG}/${f:T} ${GEEKLOG_PUB}/${f:T} \
-			${BINOWN} ${APACHE_GROUP} 0660
+			${REAL_ROOT_USER} ${APACHE_GROUP} 0660
 .endfor
 
-OWN_DIRS_PERMS+=	${GEEKLOG_BASE}/backups ${BINOWN} ${APACHE_GROUP} 0770 \
-			${GEEKLOG_BASE}/data ${BINOWN} ${APACHE_GROUP} 0770 \
-			${GEEKLOG_BASE}/logs ${BINOWN} ${APACHE_GROUP} 0775
+OWN_DIRS_PERMS+=	${GEEKLOG_BASE}/backups ${REAL_ROOT_USER} ${APACHE_GROUP} 0770 \
+			${GEEKLOG_BASE}/data ${REAL_ROOT_USER} ${APACHE_GROUP} 0770 \
+			${GEEKLOG_BASE}/logs ${REAL_ROOT_USER} ${APACHE_GROUP} 0775
 OWN_DIRS+=		${GEEKLOG_PUB}
 
 FILES_SUBST+=		APACHE_GROUP=${APACHE_GROUP:Q} \
