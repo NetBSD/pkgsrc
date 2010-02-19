@@ -364,6 +364,7 @@ p0f			Enable support for passive OS fingerprinting.
 pam			Enable PAM support.
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
+pdf			Enable PDF support.
 perl			Enable Perl support.
 pgsql			Enable PostgreSQL support.
 pim			Enable pim (personal information management) support.
