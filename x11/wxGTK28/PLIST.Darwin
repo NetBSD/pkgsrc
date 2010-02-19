@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2010/02/19 17:34:41 sno Exp $
+include/wx-2.8/wx/mac/corefoundation/cfdataref.h
+include/wx-2.8/wx/mac/corefoundation/cfref.h
+include/wx-2.8/wx/mac/corefoundation/cfstring.h
+include/wx-2.8/wx/mac/corefoundation/hid.h
+include/wx-2.8/wx/mac/corefoundation/stdpaths.h
