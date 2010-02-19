@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2010/02/17 15:21:36 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2010/02/19 21:23:34 joerg Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -39,13 +39,13 @@ CONF_FILES+=		${NUT_EGDIR}/upssched.conf.sample 		\
 
 CONF_FILES_PERMS=	${NUT_EGDIR}/upsd.conf.sample			\
 			${NUT_CONFDIR}/upsd.conf			\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 CONF_FILES_PERMS+=	${NUT_EGDIR}/upsd.users.sample			\
 			${NUT_CONFDIR}/upsd.users			\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 CONF_FILES_PERMS+=	${NUT_EGDIR}/upsmon.conf.sample			\
 			${NUT_CONFDIR}/upsmon.conf			\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 RCD_SCRIPTS=		ups upsd upsdriver upslog upsmon
 
 OWN_DIRS=		${NUT_CONFDIR}
