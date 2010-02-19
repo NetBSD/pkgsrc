@@ -1,12 +1,12 @@
-$NetBSD: patch-ao,v 1.14 2010/02/18 08:04:35 martti Exp $
+$NetBSD: patch-ao,v 1.15 2010/02/19 10:17:34 martti Exp $
 
 One more replacing 0 with ROOTUID is handled by using SUBST framework
 because patch can't handle it when hpn-patch option is enabled.
 So, don't simply update this file with mkpatch command.
 
---- session.c.orig	2009-01-28 14:29:49.000000000 +0900
-+++ session.c
-@@ -1068,7 +1068,7 @@ read_etc_default_login(char ***env, u_in
+--- session.c.orig	2009-08-20 09:20:50.000000000 +0300
++++ session.c	2010-02-19 12:09:09.000000000 +0200
+@@ -1066,7 +1066,7 @@
  	if (tmpenv == NULL)
  		return;
  
@@ -15,7 +15,7 @@ So, don't simply update this file with mkpatch command.
  		var = child_get_env(tmpenv, "SUPATH");
  	else
  		var = child_get_env(tmpenv, "PATH");
-@@ -1177,7 +1177,7 @@ do_setup_env(Session *s, const char *she
+@@ -1175,7 +1175,7 @@
  #  endif /* HAVE_ETC_DEFAULT_LOGIN */
  		if (path == NULL || *path == '\0') {
  			child_set_env(&env, &envsize, "PATH",
@@ -24,7 +24,7 @@ So, don't simply update this file with mkpatch command.
  				SUPERUSER_PATH : _PATH_STDPATH);
  		}
  # endif /* HAVE_CYGWIN */
-@@ -1291,6 +1291,18 @@ do_setup_env(Session *s, const char *she
+@@ -1289,6 +1289,18 @@
  		    strcmp(pw->pw_dir, "/") ? pw->pw_dir : "");
  		read_environment_file(&env, &envsize, buf);
  	}
@@ -43,7 +43,7 @@ So, don't simply update this file with mkpatch command.
  	if (debug_flag) {
  		/* dump the environment */
  		fprintf(stderr, "Environment:\n");
-@@ -1462,9 +1474,9 @@ do_setusercontext(struct passwd *pw)
+@@ -1462,9 +1474,9 @@
  	(void)ssh_selinux_enabled();
  #endif
  
@@ -55,7 +55,7 @@ So, don't simply update this file with mkpatch command.
  	{
  #ifdef HAVE_LOGIN_CAP
  # ifdef __bsdi__
-@@ -1500,11 +1512,13 @@ do_setusercontext(struct passwd *pw)
+@@ -1493,11 +1505,13 @@
  			perror("setgid");
  			exit(1);
  		}
@@ -69,7 +69,7 @@ So, don't simply update this file with mkpatch command.
  		endgrent();
  # ifdef USE_PAM
  		/*
-@@ -2328,7 +2342,7 @@ session_pty_cleanup2(Session *s)
+@@ -2322,7 +2336,7 @@
  		record_logout(s->pid, s->tty, s->pw->pw_name);
  
  	/* Release the pseudo-tty. */
