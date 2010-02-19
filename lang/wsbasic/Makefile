@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/01/04 12:17:16 ghen Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/19 14:06:19 ghen Exp $
 
-DISTNAME=		wsbasic-1_2_5
+DISTNAME=		wsbasic-1_2_7
 PKGNAME=		${DISTNAME:S/_/./g}
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wsbasic/}
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wsbasic/}
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://wsbasic.sourceforge.net/
 COMMENT=		Simple BASIC interpreter
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
