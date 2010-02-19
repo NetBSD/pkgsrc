@@ -1,15 +1,15 @@
-$NetBSD: patch-da,v 1.1 2006/11/03 07:45:19 rillig Exp $
+$NetBSD: patch-da,v 1.2 2010/02/19 18:25:44 drochner Exp $
 
---- converter/other/jpeg2000/pamtojpeg2k.c.orig	Tue Oct 31 09:41:12 2006
-+++ converter/other/jpeg2000/pamtojpeg2k.c	Tue Oct 31 10:53:02 2006
-@@ -9,7 +9,11 @@
- *****************************************************************************/
+--- converter/other/jpeg2000/pamtojpeg2k.c.orig	2007-12-27 22:32:59.000000000 +0000
++++ converter/other/jpeg2000/pamtojpeg2k.c
+@@ -10,7 +10,11 @@
  
  #define _BSD_SOURCE 1    /* Make sure strdup() is in string.h */
+ /* Make sure strdup() is in string.h and int_fast32_t is in inttypes.h */
 +#ifdef __osf__
 +#define _OSF_SOURCE
 +#else
- #define _XOPEN_SOURCE 500  /* Make sure strdup() is in string.h */
+ #define _XOPEN_SOURCE 600
 +#endif /* __osf__ */
  #include <string.h>
  
