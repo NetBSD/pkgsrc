@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9060 2010/02/19 06:48:47 wiz Exp $
+$NetBSD: TODO,v 1.9061 2010/02/19 20:50:19 ghen Exp $
 
 Suggested new packages
 ======================
@@ -989,8 +989,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openafs-1.4.11
 	o opencobol-1.0
 	o openh323-1.19.1
-	o openldap-2.4.21
-	o openldap-client-2.4.21
 	o openmortal-0.7.1
 	o openmotif-2.3.2
 	o openmsx-0.7.0
