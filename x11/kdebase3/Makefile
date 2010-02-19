@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.155 2010/01/18 09:59:40 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2010/02/19 20:23:01 joerg Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -108,7 +108,7 @@ PLIST.joystick=		yes
 ICONDIR=		share/icons
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${BINOWN} kmem 2555
+SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${REAL_ROOT_USER} kmem 2555
 .endif
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS"
