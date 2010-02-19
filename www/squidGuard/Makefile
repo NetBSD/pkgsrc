@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2009/10/17 01:50:38 taca Exp $
+# $NetBSD: Makefile,v 1.20 2010/02/19 21:10:25 joerg Exp $
 
 DISTNAME=	squidGuard-1.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.squidguard.org/Downloads/ \
 		http://www.squidguard.org/Downloads/Patches/1.4/
@@ -34,10 +34,10 @@ DBDIR=		${VARBASE}/squidGuard
 PLIST_SUBST+=	EGDIR=${EGDIR}
 
 CONF_FILES_PERMS+=	${PREFIX}/${EGDIR}/squidGuard-simple.cgi \
-			${CGIBINDIR}/squidGuard.cgi ${BINOWN} ${BINGRP} 0755
+			${CGIBINDIR}/squidGuard.cgi ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 CONF_FILES_PERMS+=	${PREFIX}/${EGDIR}/squidGuard.conf \
 			${PKG_SYSCONFDIR}/squidGuard.conf \
-			${BINOWN} ${SQUID_GROUP} 0640
+			${REAL_ROOT_USER} ${SQUID_GROUP} 0640
 MAKE_DIRS+=		${CGIBINDIR}
 OWN_DIRS+=		${DBDIR}
 OWN_DIRS_PERMS+=	${DBDIR} ${SQUID_USER} ${SQUID_GROUP} 0750
