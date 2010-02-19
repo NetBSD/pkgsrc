@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2009/07/08 17:07:41 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2010/02/19 22:02:04 joerg Exp $
 #
 
 DISTNAME=		xbill-2.0
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 EXTRACT_SUFX=		.tgz
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.xbill.org/
 COMMENT=		Stop the dreaded Windows virus from infecting computers
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+SETGIDGAME=		yes
 
 CONFLICTS+=		gnome-games-[0-9]*
 
@@ -21,13 +22,14 @@ NO_INSTALL_MANPAGES=	YES
 
 CPPFLAGS+=		-DVARBASE=\"${VARBASE}\"
 CPPFLAGS.SunOS+=	-DXBILL_HOME=\"${PREFIX}/share/xbill/\"
-PKG_USERS=		${GAMEOWN}:${GAMEGRP}
 PKG_GROUPS=		${GAMEGRP}
-MAKE_DIRS_PERMS+=	${VARBASE}/games ${GAMEOWN} ${GAMEGRP} 0775
+MAKE_DIRS_PERMS+=	${VARBASE}/games ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 MAKE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 MAKE_ENV+=		GAMEGRP=${GAMEGRP:Q}
 MAKE_ENV+=		GAMEMODE=${GAMEMODE:Q}
-CONF_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores ${VARBASE}/games/xbill.scores ${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+CONF_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores \
+			${VARBASE}/games/xbill.scores \
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man6 share/examples
 
