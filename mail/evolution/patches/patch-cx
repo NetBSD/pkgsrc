@@ -1,3 +1,5 @@
+$NetBSD: patch-cx,v 1.2 2010/02/19 22:52:21 roy Exp $
+
 --- plugins/startup-wizard/startup-wizard.c	2010-02-19 08:21:55.000000000 +0000
 +++ plugins/startup-wizard/startup-wizard.c	2010-02-19 10:25:21.000000000 +0000
 @@ -34,6 +34,7 @@

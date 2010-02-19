@@ -1,3 +1,5 @@
+$NetBSD: patch-cc,v 1.2 2010/02/19 22:52:21 roy Exp $
+
 --- plugins/backup-restore/backup-restore.c	2010-02-19 08:21:55.000000000 +0000
 +++ plugins/backup-restore/backup-restore.c	2010-02-19 10:05:59.000000000 +0000
 @@ -51,6 +51,14 @@
