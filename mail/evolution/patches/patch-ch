@@ -1,0 +1,21 @@
+--- plugins/default-source/default-source.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/default-source/default-source.c	2010-02-19 10:09:52.000000000 +0000
+@@ -30,9 +30,18 @@
+ #include <libedataserver/e-source.h>
+ #include <glib/gi18n.h>
+ #include <string.h>
++
+ GtkWidget* org_gnome_default_book (EPlugin *epl, EConfigHookItemFactoryData *data);
+ void commit_default_calendar (EPlugin *epl, EConfigTarget *target);
+ void commit_default_book (EPlugin *epl, EConfigTarget *target);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
++
+ void
+ commit_default_calendar (EPlugin *epl, EConfigTarget *target)
+ {
