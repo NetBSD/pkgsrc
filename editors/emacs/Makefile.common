@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2009/08/12 18:11:24 hasso Exp $
+# $NetBSD: Makefile.common,v 1.24 2010/02/19 21:28:04 joerg Exp $
 
 DISTNAME=	emacs-${EMACS_VERSION}
 CATEGORIES=	editors
@@ -10,6 +10,7 @@ COMMENT=	GNU editing macros (editor)
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
@@ -19,7 +20,9 @@ USE_TOOLS+=	gmake makeinfo gzip
 
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN}
+CONFIGURE_ENV+=		GAMEOWN=${GAMES_USER}
+
+SETGIDGAME=	yes
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
@@ -34,11 +37,13 @@ PLIST_SUBST+=		EMACS_VERSION=${EMACS_VERSION}
 REPLACE_PERL=		lib-src/grep-changelog
 CHECK_INTERPRETER_SKIP=	bin/grep-changelog
 
-MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN} ${GAMEGRP} ${GAMEDIRMODE}
+MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
-			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
-			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+
+SPECIAL_PERMS+=		libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/update-game-score ${SETGID_GAMES_PERMS}
 
 # build PATH in the dumped emacs is not a problem
 CHECK_WRKREF_SKIP+=	bin/emacs
