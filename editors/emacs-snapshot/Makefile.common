@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2010/02/19 19:04:11 minskim Exp $
+# $NetBSD: Makefile.common,v 1.3 2010/02/19 20:37:08 joerg Exp $
 
 DISTNAME=	emacs-snapshot_20100217.orig
 PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
@@ -11,6 +11,7 @@ COMMENT=	GNU editing macros (development version)
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+SETGIDGAME=		yes
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
@@ -36,11 +37,12 @@ PLIST_SUBST+=		EMACS_VERSION=${EMACS_VERSION}
 REPLACE_PERL=		lib-src/grep-changelog
 CHECK_INTERPRETER_SKIP=	bin/grep-changelog
 
-MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN} ${GAMEGRP} ${GAMEDIRMODE}
+MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
-			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
-			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+SPECIAL_PERMS+=		libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/update-game-score ${SETGID_GAMES_PERMS}
 
 # build PATH in the dumped emacs is not a problem
 CHECK_WRKREF_SKIP+=	bin/emacs
