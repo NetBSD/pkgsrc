@@ -1,0 +1,16 @@
+--- plugins/ipod-sync/ipod-sync.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/ipod-sync/ipod-sync.c	2010-02-19 10:20:31.000000000 +0000
+@@ -53,6 +53,13 @@
+ void org_gnome_sync_tasks (EPlugin *ep, ECalPopupTargetSource *target);
+ void org_gnome_sync_memos (EPlugin *ep, ECalPopupTargetSource *target);
+ void org_gnome_sync_addressbook (EPlugin *ep, EABPopupTargetSource *target);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ static void
+ display_error_message (GtkWidget *parent, const gchar *message)
