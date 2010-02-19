@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.864 2010/02/19 17:34:58 sno Exp $
+$NetBSD: CHANGES-2010,v 1.865 2010/02/19 18:17:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1043,3 +1043,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/wsbasic to 1.2.7 [ghen 2010-02-19]
 	Updated devel/libdaemon to 0.14nb1 [he 2010-02-19]
 	Updated x11/wxGTK28 to 2.8.10nb6 [sno 2010-02-19]
+	Updated math/pari to 2.3.5nb3 [schmonz 2010-02-19]
