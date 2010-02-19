@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.861 2010/02/19 13:57:12 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.862 2010/02/19 14:06:46 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1040,3 +1040,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/mono to 2.6.1nb1 [ghen 2010-02-18]
 	Updated math/pari to 2.3.5nb2 [schmonz 2010-02-19]
 	Added math/prng version 3.0.2 [wiz 2010-02-19]
+	Updated lang/wsbasic to 1.2.7 [ghen 2010-02-19]
