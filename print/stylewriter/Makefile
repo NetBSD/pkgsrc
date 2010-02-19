@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/02/12 00:12:11 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/19 15:34:10 joerg Exp $
 #
 
 DISTNAME=	stylewriter
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	enscript>=1.6.3nb1:../../print/enscript
 
+USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=	gs:run
 NO_CONFIGURE=	yes
 

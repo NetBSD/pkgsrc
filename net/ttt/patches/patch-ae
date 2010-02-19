@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1 2010/02/19 15:38:07 joerg Exp $
+
+--- Makefile.in.orig	2010-02-19 15:34:56.000000000 +0000
++++ Makefile.in
+@@ -94,17 +94,16 @@ text_viewer.o: viewer.c 
+ 
+ install: all
+ 	for i in ttt tttprobe tttview; do \
+-		$(INSTALL) -m 555 -o bin -g bin $$i $(bindir); \
++		$(BSD_INSTALL_PROGRAM) $$i $(bindir); \
+ 	done
+ 	if [ ! -d $(libdir) ]; then \
+ 		mkdir $(libdir); \
+ 	fi
+-	$(INSTALL) -m 444 -o bin -g bin ttt.tcl $(libdir)
++	$(BSD_INSTALL_SCRIPT) ttt.tcl $(libdir)
+ 
+ install-man:
+ 	for i in ttt tttprobe tttview; do \
+-		$(INSTALL) -m 444 -o bin -g bin $$i.1 \
+-			    $(mandir)/man1; \
++		$(BSD_INSTALL_MAN) $$i.1 $(mandir)/man1; \
+ 	done
+ 
+ clean:
