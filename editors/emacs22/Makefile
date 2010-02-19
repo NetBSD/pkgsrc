@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2010/01/24 13:26:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/19 19:46:45 joerg Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
 
 DISTNAME=	emacs-22.3
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
@@ -22,6 +22,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake gzip mktemp:run perl:run pkg-config
 GNU_CONFIGURE=		yes
 INFO_FILES=		# PLIST
+
+SETGIDGAME=		yes
 
 .include "options.mk"
 
@@ -46,12 +48,12 @@ SUBST_FILES.test_equal=		mac/make-package
 SUBST_SED.test_equal=		-e 's/ == / = /g'
 
 MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs \
-			${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q}
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
-			${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
-			${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
-SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM}/update-game-score ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEMODE:Q}
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE:Q}
+SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM}/update-game-score ${SETGID_GAMES_PERMS}
 
 .if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
 CPPFLAGS+=		-DDFLY_CRT_USRLIB
