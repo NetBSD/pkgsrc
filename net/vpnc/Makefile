@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2009/02/04 21:51:27 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2010/02/19 21:24:46 joerg Exp $
 #
 
 DISTNAME=		vpnc-0.5.3
+PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		http://www.unix-ag.uni-kl.de/~massar/vpnc/
 
@@ -41,7 +42,7 @@ CONF_FILES+=		${EGDIR}/default.conf \
 CONF_FILES_MODE=	0600
 CONF_FILES_PERMS+=	${EGDIR}/vpnc-script \
 			${PKG_SYSCONFDIR}/vpnc/vpnc-script \
-			${ROOT_USER} ${ROOT_GROUP} 755
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vpnc ${DESTDIR}${PREFIX}/sbin
