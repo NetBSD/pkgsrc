@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2009/12/17 22:36:00 abs Exp $
+# $NetBSD: Makefile,v 1.28 2010/02/19 19:26:09 joerg Exp $
 
 DISTNAME=	ddclient-3.6.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ddclient/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +21,7 @@ EGDIR=			${PREFIX}/share/examples/ddclient
 RCD_SCRIPTS=		ddclient
 CONF_FILES_PERMS=	${EGDIR}/sample-etc_ddclient.conf		\
 			${PKG_SYSCONFDIR}/ddclient.conf			\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 
 INSTALLATION_DIRS=	sbin share/doc/ddclient share/examples/ddclient
 PKG_DESTDIR_SUPPORT=	user-destdir
