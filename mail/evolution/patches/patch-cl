@@ -1,0 +1,16 @@
+--- plugins/groupwise-features/addressbook-groupwise.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/groupwise-features/addressbook-groupwise.c	2010-02-19 10:14:02.000000000 +0000
+@@ -28,6 +28,13 @@
+ 
+ void commit_groupwise_addressbook (EPlugin *epl, EConfigTarget *target);
+ GtkWidget *e_book_groupwise_dummy (EPlugin *epl, EConfigHookItemFactoryData *data);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ void
+ commit_groupwise_addressbook (EPlugin *epl, EConfigTarget *target)
