@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/19 13:56:53 wiz Exp $
+include/prng.h
+info/prng.info
+lib/libprng.a
