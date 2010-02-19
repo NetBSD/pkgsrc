@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.865 2010/02/19 18:17:14 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.866 2010/02/19 18:20:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1044,3 +1044,14 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/libdaemon to 0.14nb1 [he 2010-02-19]
 	Updated x11/wxGTK28 to 2.8.10nb6 [sno 2010-02-19]
 	Updated math/pari to 2.3.5nb3 [schmonz 2010-02-19]
+	Updated print/teTeX3-bin to 3.0nb43 [minskim 2010-02-19]
+	Updated print/tex-IEEEtran to 1.7anb3 [minskim 2010-02-19]
+	Updated print/tex-carlisle to 2008.7340nb1 [minskim 2010-02-19]
+	Updated print/tex-colortbl to 0.1nb1 [minskim 2010-02-19]
+	Updated print/tex-exam to 2.3nb1 [minskim 2010-02-19]
+	Updated print/tex-natbib to 8.3nb1 [minskim 2010-02-19]
+	Updated print/tex-fancyhdr to 3.1nb1 [minskim 2010-02-19]
+	Updated print/tex-hyperref to 6.78rnb1 [minskim 2010-02-19]
+	Updated print/tex-ltxmisc to 2008.12680nb2 [minskim 2010-02-19]
+	Updated print/tex-oberdiek to 2008.12705nb1 [minskim 2010-02-19]
+	Updated print/tex-rotating to 2.16anb1 [minskim 2010-02-19]
