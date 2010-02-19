@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2010/02/11 22:14:26 joerg Exp $
+# $NetBSD: Makefile.common,v 1.15 2010/02/19 20:30:21 joerg Exp $
 
 DISTNAME=		mydns-1.1.0
 CATEGORIES=		net
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR:Q}
 
 MYDNS_USER?=		mydns
 MYDNS_GROUP?=		mydns
-MYDNS_PERMS=		${ROOT_USER} ${ROOT_GROUP} 600
+MYDNS_PERMS=		${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 600
 
 PKG_GROUPS_VARS+=	MYDNS_GROUP
 PKG_USERS_VARS+=	MYDNS_USER
