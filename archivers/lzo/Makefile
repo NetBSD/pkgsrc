@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/09/13 13:11:56 tron Exp $
+# $NetBSD: Makefile,v 1.9 2010/02/19 20:16:40 heinz Exp $
 
 DISTNAME=	lzo-2.03
 CATEGORIES=	archivers
@@ -8,6 +8,7 @@ MASTER_SITES=	http://ftp.uni-koeln.de/util/arc/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oberhumer.com/opensource/lzo/
 COMMENT=	Portable lossless data compression library
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
