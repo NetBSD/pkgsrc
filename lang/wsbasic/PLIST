@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/02/19 14:06:19 ghen Exp $
 bin/wsbasic
 share/wsbasic/add.b
 share/wsbasic/argtest.b
 share/wsbasic/assigns.b
 share/wsbasic/changepath.b
 share/wsbasic/datatest.b
+share/wsbasic/deftest.b
 share/wsbasic/dir-foreach.b
 share/wsbasic/dir.b
 share/wsbasic/foreach.b
@@ -19,6 +20,7 @@ share/wsbasic/modtest.b
 share/wsbasic/post_ip.b
 share/wsbasic/rantest.b
 share/wsbasic/runtest.b
+share/wsbasic/shelltest.b
 share/wsbasic/speed2.b
 share/wsbasic/strings.b
 share/wsbasic/while.b
