@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/02/08 18:25:40 ahoka Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/19 20:16:41 heinz Exp $
 #
 
 DISTNAME=	hunspell-1.2.8
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hunspell/}
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://hunspell.sourceforge.net/
 COMMENT=	Improved spellchecker
+LICENSE=	mpl-1.1 OR gnu-lgpl-v2.1 OR gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

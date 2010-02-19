@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2009/05/14 23:00:46 obache Exp $
+# $NetBSD: Makefile.common,v 1.15 2010/02/19 20:16:40 heinz Exp $
 #
 # This file is currently included by:
 #
@@ -26,6 +26,7 @@ MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://asg.web.cmu.edu/sasl/
+LICENSE=	original-bsd # CMU version
 
 DISTINFO_FILE=		${.CURDIR}/../cyrus-sasl/distinfo
 PATCHDIR=		${.CURDIR}/../cyrus-sasl/patches
