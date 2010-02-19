@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2009/06/08 15:23:26 tnn Exp $
+$NetBSD: distinfo,v 1.16 2010/02/19 13:22:33 asau Exp $
 
 SHA1 (tightvnc-1.3.10_unixsrc.tar.bz2) = ab4ed3d8e9d5188edf0ff27fce3027495f1a8851
 RMD160 (tightvnc-1.3.10_unixsrc.tar.bz2) = 0c24207ec13c1d41f445ccbdea16ce2b5d0729a7
@@ -16,3 +16,4 @@ SHA1 (patch-aj) = bac4b0703f86f10a8a39a2de255694517330af22
 SHA1 (patch-ak) = f79238fabee0dfcf6c8ffa29c269d0d70d2f362f
 SHA1 (patch-al) = 4a5cbb99b4ddde6ac64050f1efd3005548828442
 SHA1 (patch-am) = 2de40589cc8ff7401086d6400655123f0eaeff3a
+SHA1 (patch-an) = f6a87780d4fb51a7e5bd2e171f6bbf0165101477
