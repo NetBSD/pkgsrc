@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9059 2010/02/18 19:25:26 asau Exp $
+$NetBSD: TODO,v 1.9060 2010/02/19 06:48:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -467,12 +467,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cddbd-1.5.2
 	o cdif-1.19
 	o cdlabelgen-4.1.0
+	o cdrtools-2.01.01alpha76
 	o cfengine2-2.2.10
 	o cfitsio-3230
 	o cgdb-0.6.5
 	o cgicc-3.2.9
 	o cheese-2.28.1 [GNOME 2.28]
-	o cherokee-0.99.42
+	o cherokee-0.99.43
 	o chrony-1.24
 	o cinepaint-0.23
 	o cint-5.16
@@ -533,7 +534,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o drivel-3.0.0
 	o drscheme-4.0.2
 	o dspam-3.9.0
-	o dvdstyler-1.8.0
+	o dvdstyler-1.8.0.1
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
@@ -542,7 +543,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6.2
 	o ejabberd-2.1.2
-	o electric-8.10
+	o electric-8.11
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
@@ -629,7 +630,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o freesci-0.6.4
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
-	o freetype2-2.3.12
 	o freewais-sf-2.2.14
 	o frozen-bubble-2.2.0
 	o ftplibpp-2.0.2
@@ -684,7 +684,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-nettool-2.28.0 [GNOME 2.28]
 	o gnome-packagekit-2.28.2 [GNOME 2.28]
 	o gnome-power-manager-2.28.3 [GNOME 2.28, wants DeviceKit-power]
-	o gnome-screensaver-2.28.3
 	o gnome-session-2.28.0 [GNOME 2.28, wants DeviceKit-power]
 	o gnome-system-tools-2.28.2 [GNOME 2.28]
 	o gnome-user-docs-2.28.2 [GNOME 2.28]
@@ -706,7 +705,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o granulate-0.2
 	o graphviz-2.26.3
 	o grep-2.5.4
-	o gsasl-1.4.0
+	o gsasl-1.4.1
 	o gsharutils-4.7
 	o gss-0.1.2
 	o gst-plugins0.10-ffmpeg-0.10.7
@@ -828,11 +827,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libassuan-2.0.0
 	o libcares-1.7.0
 	o libdockapp-0.6.1
-	o libdrm-2.4.16
+	o libdrm-2.4.18
 	o libextractor-0.6.0
 	o libflash-0.4.13
 	o libgda-4.0.7 [GNOME 2.28]
-	o libgdata-0.6.0
+	o libgdata-0.6.1
 	o libgee-0.5.0
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
@@ -1003,11 +1002,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
+	o p5-Devel-Caller-2.04 [pkg/42831]
+	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-POE-1.284 [pkg/42798]
 	o p5-POE-Component-IRC-6.24 [pkg/42801]
 	o p5-POE-Filter-IRCD-2.42 [pkg/42800]
 	o p5-POE-Test-Loops-1.031 [pkg/42797]
 	o p5-Spreadsheet-WriteExcel-2.37
+	o p5-Test-LongString-0.13 [pkg/42835]
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o packagekit-0.5.1
@@ -1036,7 +1038,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pinfo-0.6.9
 	o pioneers-0.12.2
 	o pircbot-1.4.6
-	o pixman-0.16.6
 	o pks-0.9.6
 	o plone-3.2.3 [should make plone-32?]
 	o plone3-3.3.4
@@ -1060,7 +1061,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puf-0.93.3
 	o puppet-0.25.4
 	o puzzle-5.2
-	o puzzles-8865
+	o puzzles-8872
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1084,6 +1085,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-m2crypto-0.20.2
 	o py-moin-1.9.0 [pkg/42602]
 	o py-moin-1.9.1
+	o py-networkx-1.0.1 [pkg/42834]
 	o py-psycopg2-2.0.13
 	o py-subversion-1.6.9
 	o py-sybase-0.37
@@ -1162,7 +1164,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sablecc-3.2
 	o samba-3.4.5
 	o sarg-2.2.5
-	o sawfish-1.6.1
+	o sawfish-1.6.2
 	o saxon-9.2
 	o sbcl-1.0.35
 	o scamper-20070201
@@ -1198,7 +1200,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o smtpfeed-1.20
 	o snd-10.6
 	o snes9x-1.51
-	o snort-2.8.5.2
+	o snort-2.8.5.3
 	o snownews-1.5.12
 	o socat-1.7.1.2
 	o solfege-3.14.11
