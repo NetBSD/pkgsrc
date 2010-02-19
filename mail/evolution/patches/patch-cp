@@ -1,0 +1,17 @@
+--- plugins/mail-account-disable/mail-account-disable.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/mail-account-disable/mail-account-disable.c	2010-02-19 10:22:12.000000000 +0000
+@@ -46,6 +46,14 @@
+ 	{ E_POPUP_ITEM, (gchar *) "40.emc.04", (gchar *) N_("Proxy _Logout"), mail_account_disable, NULL, NULL, 0, EM_POPUP_FOLDER_STORE }
+ };
+ 
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
++
+ static void
+ popup_free (EPopup *ep, GSList *items, gpointer data)
+ {

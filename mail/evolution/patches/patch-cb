@@ -1,0 +1,17 @@
+--- plugins/audio-inline/audio-inline.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/audio-inline/audio-inline.c	2010-02-19 10:05:00.000000000 +0000
+@@ -38,6 +38,14 @@
+ 
+ #define d(x)
+ 
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
++
+ void org_gnome_audio_inline_format (gpointer ep, EMFormatHookTarget *t);
+ 
+ static volatile gint org_gnome_audio_class_id_counter = 0;
