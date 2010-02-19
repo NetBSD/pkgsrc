@@ -1,0 +1,14 @@
+$NetBSD: patch-an,v 1.1 2010/02/19 13:22:33 asau Exp $
+
+--- Xvnc/include/Xos.h.orig	2000-06-11 16:00:51.000000000 +0400
++++ Xvnc/include/Xos.h	2010-02-19 16:07:44.000000000 +0300
+@@ -151,7 +151,9 @@
+ #endif /* X_NOT_POSIX else */
+ 
+ #ifdef CSRG_BASED
++#ifndef __FreeBSD__
+ #include <stdlib.h>
++#endif
+ #include <unistd.h>
+ #endif /* CSRG_BASED */
+ 
