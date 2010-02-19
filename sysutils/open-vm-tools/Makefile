@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2010/01/17 12:02:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2010/02/19 20:33:07 joerg Exp $
 
 DISTNAME=	open-vm-tools-2008.08.08-109361
 PKGNAME=	open-vm-tools-2008.08.08.109361
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=open-vm-tools/}
 
@@ -27,11 +27,11 @@ INSTALLATION_DIRS+=		${PKG_SYSCONFDIR} share/examples/vmware-tools
 
 PKG_SYSCONFSUBDIR=		vmware-tools
 EGDIR=				${PREFIX}/share/examples/vmware-tools
-CONF_FILES_PERMS+=		${EGDIR}/poweroff-vm-default ${PKG_SYSCONFDIR}/poweroff-vm-default ${ROOT_USER} ${ROOT_GROUP} 755
-CONF_FILES_PERMS+=		${EGDIR}/poweron-vm-default ${PKG_SYSCONFDIR}/poweron-vm-default ${ROOT_USER} ${ROOT_GROUP} 755
-CONF_FILES_PERMS+=		${EGDIR}/resume-vm-default ${PKG_SYSCONFDIR}/resume-vm-default ${ROOT_USER} ${ROOT_GROUP} 755
-CONF_FILES_PERMS+=		${EGDIR}/suspend-vm-default ${PKG_SYSCONFDIR}/suspend-vm-default ${ROOT_USER} ${ROOT_GROUP} 755
-CONF_FILES_PERMS+=		${EGDIR}/tools.conf ${PKG_SYSCONFDIR}/tools.conf ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+=		${EGDIR}/poweroff-vm-default ${PKG_SYSCONFDIR}/poweroff-vm-default ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
+CONF_FILES_PERMS+=		${EGDIR}/poweron-vm-default ${PKG_SYSCONFDIR}/poweron-vm-default ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
+CONF_FILES_PERMS+=		${EGDIR}/resume-vm-default ${PKG_SYSCONFDIR}/resume-vm-default ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
+CONF_FILES_PERMS+=		${EGDIR}/suspend-vm-default ${PKG_SYSCONFDIR}/suspend-vm-default ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
+CONF_FILES_PERMS+=		${EGDIR}/tools.conf ${PKG_SYSCONFDIR}/tools.conf ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 RCD_SCRIPTS=			vmtools
 
 SUBST_CLASSES+=			fix-paths
