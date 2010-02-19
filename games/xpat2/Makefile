@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/02/19 19:30:10 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2010/02/19 21:38:42 joerg Exp $
 
 DISTNAME=	xpat2-1.07
 PKGREVISION=	3
@@ -19,7 +19,7 @@ MAKE_ENV+=	XPMDIR=${BUILDLINK_PREFIX.libXpm:Q} XMKMF=${XMKMF_CMD:Q}
 
 SETGIDGAME=	yes
 
-CONF_FILES_PERMS=	/dev/null /var/games/xpat.log ${GAMEOWN} ${GAMEGRP} ${GAMEMODE}
+CONF_FILES_PERMS=	/dev/null /var/games/xpat.log ${GAMES_USER} ${GAMES_GROUP} ${GAMEMODE}
 MAKE_DIRS=		/var/games
 
 SPECIAL_PERMS+=	bin/xpat2 ${SETGID_GAMES_PERMS}
