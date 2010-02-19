@@ -1,0 +1,17 @@
+--- plugins/backup-restore/backup-restore.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/backup-restore/backup-restore.c	2010-02-19 10:05:59.000000000 +0000
+@@ -51,6 +51,14 @@
+ 	BR_START = 1<<1
+ }br_flags;
+ 
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
++
+ static void
+ backup (const gchar *filename, gboolean restart)
+ {
