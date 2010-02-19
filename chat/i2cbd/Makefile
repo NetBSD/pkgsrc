@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2010/01/28 19:35:16 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2010/02/19 20:17:09 joerg Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://www.draga.com/~jwise/i2cb/
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		ICBD_OWNER
-ICBD_OWNER?=		${ROOT_USER}
+ICBD_OWNER?=		${REAL_ROOT_USER}
 PKG_USERS_VARS+=	ICBD_OWNER
 PLIST_SUBST+=		ICBD_OWNER=${ICBD_OWNER:Q}
 
@@ -26,10 +26,10 @@ EGFILES=		motd icbd_help icbd.deny news.1
 CONF_FILES_PERMS=	# empty
 .for f in ${EGFILES}
 CONF_FILES_PERMS+=	${EGDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} \
-			${ICBD_OWNER} ${ROOT_GROUP} 644
+			${ICBD_OWNER} ${REAL_ROOT_GROUP} 644
 .endfor
 CONF_FILES_PERMS+=	/dev/null /var/log/icbd.log \
-			${ICBD_OWNER} ${ROOT_GROUP} 644
+			${ICBD_OWNER} ${REAL_ROOT_GROUP} 644
 RCD_SCRIPTS=		icbd
 RCD_SCRIPT_SRC.icbd=	${WRKSRC}/etc/icbd.sh
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/i2cbd \
