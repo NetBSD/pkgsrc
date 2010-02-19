@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2009/12/15 22:10:40 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2010/02/19 21:31:56 joerg Exp $
 #
 
 DISTNAME=		prelude-manager-0.9.15
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/prelude-manager/ \
 			http://www.prelude-ids.org/download/releases/ \
@@ -56,8 +56,7 @@ SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
 
 EGDIR=			share/examples/prelude-manager/
-CONF_FILES_PERMS+=	${EGDIR}/prelude-manager.conf ${PKG_SYSCONFDIR}/prelude-manager/prelude-manager.conf \
-			${ROOT_USER} ${ROOT_GROUP} 0644
+CONF_FILES+=		${EGDIR}/prelude-manager.conf ${PKG_SYSCONFDIR}/prelude-manager/prelude-manager.conf
 
 pre-patch:
 	${CP} ${FILESDIR}/run-prelude-manager.c ${WRKSRC}
