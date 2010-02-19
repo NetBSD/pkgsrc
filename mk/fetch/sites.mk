@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.73 2009/11/17 20:08:29 zafer Exp $
+# $NetBSD: sites.mk,v 1.74 2010/02/19 23:35:25 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -174,15 +174,12 @@ MASTER_SITE_MOZILLA+=	\
 	http://mozilla.ftp.iij.ad.jp/pub/mozilla/mozilla.org/ \
 	http://mozilla-mirror.naist.jp/ \
 	http://mirror.kr.freebsd.org/mozilla.org/ \
-	http://ftp.isu.edu.tw/pub/Mozilla/ \
-	http://mozilla-current.sit.kmutt.ac.th/ \
 	http://ftp.kaist.ac.kr/pub/mozilla/ \
 	http://ftp.ncnu.edu.tw/mozilla.org/ \
 	http://ftp.yz.yamagata-u.ac.jp/pub/network/mozilla/ \
 	http://ftp.ntu.edu.tw/pub/mozilla/ \
 	http://ftp.kddilabs.jp/Mozilla/ \
 	http://mozilla.hongo.wide.ad.jp/pub/mozilla.org/ \
-	http://ftp.cgu.edu.tw/Mirror/Mozilla/ \
 	http://mozilla.hns.net.in/ \
 	http://mozilla.unpad.ac.id/ \
 	http://mirror-fpt-telecom.fpt.net/mozilla/ \
@@ -202,9 +199,7 @@ MASTER_SITE_MOZILLA+=	\
 	http://mozilla.kn.vutbr.cz/ \
 	http://mirror.switch.ch/ftp/mirror/mozilla/ \
 	http://ftp.plusline.de/mozilla/ \
-	http://mozilla.miroir-francais.fr/ \
 	http://mozilla.mirrors.skynet.be/pub/ftp.mozilla.org/ \
-	http://mozilla.osmirror.nl/ \
 	http://mirrors.linux.edu.lv/mozilla.org/ \
 	http://www.artfiles.org/mozilla.org/ \
 	http://mirrors.xservers.ro/mozilla/ \
@@ -215,8 +210,6 @@ MASTER_SITE_MOZILLA+=	\
 	http://ftp.pwr.wroc.pl/pub/mozilla/ \
 	http://ftp.heanet.ie/mirrors/ftp.mozilla.org/pub/mozilla.org/ \
 	http://mozilla.wpro.lv/ \
-	http://mozilla.spegulo.be/ \
-	http://mozilla.nedmirror.nl/ \
 	http://mozilla.c3sl.ufpr.br/releases/ \
 	http://mozilla.mirror.pop-sc.rnp.br/mirror/mozilla.org/ \
 	http://mozilla.patan.com.ar/
