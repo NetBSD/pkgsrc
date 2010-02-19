@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/06/20 01:09:23 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2010/02/19 20:04:17 joerg Exp $
 #
 
 DISTNAME=		gld-1.7
@@ -18,7 +18,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl -lresolv
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES_PERMS=	${EGDIR}/gld.conf ${PKG_SYSCONFDIR}/gld.conf	\
-			${BINOWN} ${GLD_GROUP} 0640
+			${REAL_ROOT_USER} ${GLD_GROUP} 0640
 
 RCD_SCRIPTS=		gld
 GLD_USER?=		gld
