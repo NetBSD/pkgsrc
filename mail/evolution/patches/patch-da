@@ -1,0 +1,16 @@
+--- plugins/vcard-inline/vcard-inline.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/vcard-inline/vcard-inline.c	2010-02-19 10:26:24.000000000 +0000
+@@ -53,6 +53,13 @@
+ 
+ /* Forward Declarations */
+ void org_gnome_vcard_inline_format (gpointer ep, EMFormatHookTarget *target);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ static void
+ org_gnome_vcard_inline_pobject_free (EMFormatHTMLPObject *object)

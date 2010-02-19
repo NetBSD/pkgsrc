@@ -1,0 +1,17 @@
+--- plugins/external-editor/external-editor.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/external-editor/external-editor.c	2010-02-19 10:10:23.000000000 +0000
+@@ -66,6 +66,14 @@
+ /* used to track when the external editor is active */
+ static GThread *editor_thread;
+ 
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
++
+ void
+ ee_editor_command_changed (GtkWidget *textbox)
+ {

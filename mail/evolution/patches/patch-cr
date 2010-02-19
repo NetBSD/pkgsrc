@@ -1,0 +1,16 @@
+--- plugins/mark-all-read/mark-all-read.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/mark-all-read/mark-all-read.c	2010-02-19 10:23:03.000000000 +0000
+@@ -44,6 +44,13 @@
+ void org_gnome_mark_all_read (EPlugin *ep, EMPopupTargetFolder *target);
+ static void mar_got_folder (gchar *uri, CamelFolder *folder, gpointer data);
+ static void mar_all_sub_folders (CamelStore *store, CamelFolderInfo *fi, CamelException *ex);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ static void
+ button_clicked_cb (GtkButton *button,

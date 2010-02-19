@@ -1,9 +1,36 @@
-$NetBSD: distinfo,v 1.72 2009/12/16 18:00:23 drochner Exp $
+$NetBSD: distinfo,v 1.73 2010/02/19 22:48:13 roy Exp $
 
 SHA1 (evolution-2.28.2.tar.bz2) = 19e970417cc91c82a5279cfe5dd7262d9d4c3319
 RMD160 (evolution-2.28.2.tar.bz2) = 6e5f5ae60563fdaa9daa4c78f780cfa556770043
 Size (evolution-2.28.2.tar.bz2) = 29735192 bytes
 SHA1 (patch-ab) = b56533feb1bf7d3c3eabf905a50a54e7f27f5b1c
+SHA1 (patch-ca) = f67561447b6051f70d495df890bc65e8416c511d
+SHA1 (patch-cb) = 02449e5b7989af88cc02bf9013d4748648e36046
+SHA1 (patch-cc) = 92d1990b7d228da741e8257fcab569d69f18bd8a
+SHA1 (patch-cd) = 31ce3c8954af07477b551abb3c01261af074cd8f
+SHA1 (patch-ce) = 95d67c612faeaa1b2998bd86aee8b5d8ede653ea
+SHA1 (patch-cf) = d0077fa9d02000cfc23d8218fcb2baf2a1e61f1a
+SHA1 (patch-cg) = df0760ca4f57d6d44c23d313d2d6810e345afafe
+SHA1 (patch-ch) = 85c31baaee399aae39230e0979a75f16c8e4dac3
+SHA1 (patch-ci) = ffa4ddb9c9c40e942c72e2d11bc474b698ee1513
+SHA1 (patch-cj) = d45c2c4a6371b141db3a02c7a8f50866d69c99cd
+SHA1 (patch-ck) = 7c7705e7a079cfe3ab8e9547786aa026be7e86df
+SHA1 (patch-cl) = 83a00a4b0471670a33c2d6fd51d3bc4c3d0ea341
+SHA1 (patch-cm) = a004c5456e1a8b2fbbdb99791185b4175ceac546
+SHA1 (patch-cn) = 6d0bf2e43c463613374c2644477a36efa6e71058
+SHA1 (patch-co) = 0071a8eb18ea57f24749cf532331aef37018eaec
+SHA1 (patch-cp) = cc0c3d134bd2a747a4024580f711b8ac511e6a2f
+SHA1 (patch-cq) = 4a00b7e5ed422bb1e057967207ed885250129bb6
+SHA1 (patch-cr) = a176efd68421d5591a5837df840982d7c612a712
+SHA1 (patch-cs) = 09df5b7d2b226b1e42eacd8fa9becf8098d77943
+SHA1 (patch-ct) = c82eb6d4704a71298841f4e3f0b5874a2850ad59
+SHA1 (patch-cu) = 4124133aa32ee2a23dc1ca710dc073f4ffdc17df
+SHA1 (patch-cv) = 1dc3b44452879a666c4f5acbb847897a4e96b66e
+SHA1 (patch-cw) = 8ea346f4f7e95351d0d2ee9ae2bfb40c3be4f06f
+SHA1 (patch-cx) = 8f70dffa5c9342d641df0f813a6b4d34361f933e
+SHA1 (patch-cy) = 31f5f95d90054f6e88d07bf650348a2c51fe11b8
+SHA1 (patch-cz) = 2b175c7409a7de919445a65ffbd6848bbe2bf42d
+SHA1 (patch-da) = 2bf34f62983139d7fa13a5a782fe955dabcc93ae
 SHA1 (patch-ya) = f21a92e93394ad76166f2da09ee21cbddb043576
 SHA1 (patch-yb) = 6d09dceb5405b29cde657eea6fa0fbd004a8bd1f
 SHA1 (patch-yc) = dc97fda0d5fc05df37274192466702e7fe9da4e0

@@ -1,0 +1,16 @@
+--- plugins/imap-features/imap-headers.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/imap-features/imap-headers.c	2010-02-19 10:20:02.000000000 +0000
+@@ -64,6 +64,13 @@
+ void imap_headers_abort (EPlugin *efp, EConfigHookItemFactoryData *data);
+ void imap_headers_commit (EPlugin *efp, EConfigHookItemFactoryData *data);
+ GtkWidget * org_gnome_imap_headers (EPlugin *epl, EConfigHookItemFactoryData *data);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ void
+ imap_headers_abort (EPlugin *efp, EConfigHookItemFactoryData *data)

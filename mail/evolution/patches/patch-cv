@@ -1,0 +1,16 @@
+--- plugins/save-calendar/save-calendar.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/save-calendar/save-calendar.c	2010-02-19 10:24:36.000000000 +0000
+@@ -49,6 +49,13 @@
+ void org_gnome_save_calendar (EPlugin *ep, ECalPopupTargetSource *target);
+ void org_gnome_save_tasks (EPlugin *ep, ECalPopupTargetSource *target);
+ void org_gnome_save_memos (EPlugin *ep, ECalPopupTargetSource *target);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ static void
+ extra_widget_foreach_hide (GtkWidget *widget, gpointer data)

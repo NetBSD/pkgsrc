@@ -1,0 +1,23 @@
+--- plugins/startup-wizard/startup-wizard.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/startup-wizard/startup-wizard.c	2010-02-19 10:25:21.000000000 +0000
+@@ -34,6 +34,7 @@
+ #include "mail/em-account-editor.h"
+ #include "calendar/gui/calendar-config.h"
+ 
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
+ void startup_wizard (EPlugin *ep, ESEventTargetUpgrade *target);
+ GtkWidget *startup_wizard_importer_page (EPlugin *ep, EConfigHookItemFactoryData *hook_data);
+ gboolean startup_wizard_check (EPlugin *ep, EConfigHookPageCheckData *check_data);
+@@ -46,6 +47,12 @@
+ static GtkWidget *import_dialog, *import_progress, *import_label;
+ static GSList *import_iterator, *import_importers;
+ 
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
++
+ G_GNUC_NORETURN static void
+ startup_wizard_delete (void) {
+ 	gtk_main_quit ();

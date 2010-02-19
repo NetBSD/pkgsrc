@@ -1,0 +1,16 @@
+--- plugins/python/python-plugin-loader.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/python/python-plugin-loader.c	2010-02-19 10:29:40.000000000 +0000
+@@ -42,6 +42,13 @@
+ #define epp ((EPluginPython *)ep)
+ 
+ gpointer  load_plugin_type_register_function (gpointer a, gpointer b);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ static gchar *
+ get_xml_prop(xmlNodePtr node, const gchar *id)
