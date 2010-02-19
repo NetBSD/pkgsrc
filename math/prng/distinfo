@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/19 13:56:53 wiz Exp $
+
+SHA1 (prng-3.0.2.tar.gz) = 02175da3f49a16bcf7eee70b53564f05941232d4
+RMD160 (prng-3.0.2.tar.gz) = e7d885a74751e8d9c906279516a025a152d4c12e
+Size (prng-3.0.2.tar.gz) = 497047 bytes
