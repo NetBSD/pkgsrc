@@ -1,3 +1,5 @@
+$NetBSD: patch-ck,v 1.2 2010/02/19 22:52:21 roy Exp $
+
 --- plugins/folder-unsubscribe/folder-unsubscribe.c	2010-02-19 08:21:55.000000000 +0000
 +++ plugins/folder-unsubscribe/folder-unsubscribe.c	2010-02-19 10:11:06.000000000 +0000
 @@ -46,6 +46,14 @@
