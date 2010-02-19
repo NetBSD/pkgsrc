@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.44 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-aa,v 1.45 2010/02/19 10:17:33 martti Exp $
 
---- configure.orig	2009-02-23 09:18:14.000000000 +0900
-+++ configure
-@@ -5666,6 +5666,9 @@ if test "${with_rpath+set}" = set; then
+--- configure.orig	2009-09-26 09:31:15.000000000 +0300
++++ configure	2010-02-19 12:06:28.000000000 +0200
+@@ -5997,6 +5997,9 @@
  fi
  
  
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.44 2009/05/21 03:22:29 taca Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags was given.
-@@ -5812,6 +5815,7 @@ for ac_header in \
+@@ -6142,6 +6145,7 @@
  	maillock.h \
  	ndir.h \
  	net/if_tun.h \
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.44 2009/05/21 03:22:29 taca Exp $
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -7521,6 +7525,36 @@ _ACEOF
+@@ -7965,6 +7969,36 @@
  		;;
  	esac
  	;;
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.44 2009/05/21 03:22:29 taca Exp $
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  
-@@ -8082,7 +8116,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -8537,7 +8571,7 @@
  _ACEOF
  
  	;;
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.44 2009/05/21 03:22:29 taca Exp $
  	check_for_libcrypt_later=1
  
  cat >>confdefs.h <<\_ACEOF
-@@ -29187,14 +29221,21 @@ fi
+@@ -30831,14 +30865,21 @@
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
@@ -92,7 +92,7 @@ $NetBSD: patch-aa,v 1.44 2009/05/21 03:22:29 taca Exp $
  #define CONF_UTMPX_FILE "$conf_utmpx_location"
  _ACEOF
  
-@@ -29258,14 +29299,20 @@ fi
+@@ -30903,14 +30944,20 @@
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -118,7 +118,7 @@ $NetBSD: patch-aa,v 1.44 2009/05/21 03:22:29 taca Exp $
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
  _ACEOF
  
-@@ -30518,7 +30565,7 @@ echo "OpenSSH has been configured with t
+@@ -32200,7 +32247,7 @@
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
