@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/01/16 11:23:03 tron Exp $
+# $NetBSD: Makefile,v 1.33 2010/02/19 20:16:40 heinz Exp $
 
 DISTNAME=	opencdk-0.6.6
 CATEGORIES=	security devel
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	Open Crypto Development Kit
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
