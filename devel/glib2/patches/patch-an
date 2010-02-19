@@ -1,0 +1,24 @@
+$NetBSD: patch-an,v 1.1 2010/02/19 11:44:56 roy Exp $
+
+Use RTLD_DEFAULT if the platform defines it.
+
+--- gmodule/gmodule-dl.c	2009-04-01 00:04:20.000000000 +0100
++++ gmodule/gmodule-dl.c	2010-02-19 07:13:26.000000000 +0000
+@@ -107,6 +107,9 @@
+ static gpointer
+ _g_module_self (void)
+ {
++#ifdef RTLD_DEFAULT
++  return RTLD_DEFAULT;
++#else
+   gpointer handle;
+   
+   /* to query symbols from the program itself, special link options
+@@ -118,6 +121,7 @@
+     g_module_set_error (fetch_dlerror (TRUE));
+   
+   return handle;
++#endif
+ }
+ 
+ static void
