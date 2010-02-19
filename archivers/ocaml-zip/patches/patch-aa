@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2010/01/30 17:43:42 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2010/02/19 22:21:30 joerg Exp $
 
 --- Makefile.orig	2002-04-22 15:28:57.000000000 +0000
 +++ Makefile
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.2 2010/01/30 17:43:42 joerg Exp $
 -installopt:
 -	cp zip.cmxa zip.a zip.cmx gzip.cmx $(INSTALLDIR)
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(INSTALLDIR)
-+	ocamlfind install -destdir ${DESTDIR}$(INSTALLDIR) -optional zip META zip.cma zip.cmi gzip.cmi zip.mli \
++	ocamlfind install -ldconf /dev/null -destdir ${DESTDIR}$(INSTALLDIR) -optional zip META zip.cma zip.cmi gzip.cmi zip.mli \
 +	gzip.mli libcamlzip.a dllcamlzip.so zip.cmxa zip.a zip.cmx gzip.cmx \
 +	zlib.mli zlib.cmi zlib.cmx
  
