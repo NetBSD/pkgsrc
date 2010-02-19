@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.10 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-ap,v 1.11 2010/02/19 10:17:34 martti Exp $
 
---- ssh.c.orig	2009-02-14 14:28:21.000000000 +0900
-+++ ssh.c
-@@ -702,7 +702,7 @@ main(int ac, char **av)
+--- ssh.c.orig	2009-07-06 00:16:56.000000000 +0300
++++ ssh.c	2010-02-19 12:09:35.000000000 +0200
+@@ -705,7 +705,7 @@
  	if (ssh_connect(host, &hostaddr, options.port,
  	    options.address_family, options.connection_attempts, &timeout_ms,
  	    options.tcp_keep_alive, 

@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.7 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-av,v 1.8 2010/02/19 10:17:34 martti Exp $
 
---- sshd.c.orig	2009-01-28 14:31:23.000000000 +0900
-+++ sshd.c
-@@ -234,7 +234,11 @@ int *startup_pipes = NULL;
+--- sshd.c.orig	2009-06-21 13:26:17.000000000 +0300
++++ sshd.c	2010-02-19 12:10:07.000000000 +0200
+@@ -235,7 +235,11 @@
  int startup_pipe;		/* in child */
  
  /* variables used for privilege separation */
@@ -14,7 +14,7 @@ $NetBSD: patch-av,v 1.7 2009/05/21 03:22:29 taca Exp $
  struct monitor *pmonitor = NULL;
  
  /* global authentication context */
-@@ -604,10 +608,15 @@ privsep_preauth_child(void)
+@@ -605,10 +609,15 @@
  	/* XXX not ready, too heavy after chroot */
  	do_setusercontext(privsep_pw);
  #else
@@ -30,7 +30,7 @@ $NetBSD: patch-av,v 1.7 2009/05/21 03:22:29 taca Exp $
  #endif
  }
  
-@@ -647,7 +656,7 @@ privsep_preauth(Authctxt *authctxt)
+@@ -648,7 +657,7 @@
  		close(pmonitor->m_sendfd);
  
  		/* Demote the child */
@@ -39,7 +39,7 @@ $NetBSD: patch-av,v 1.7 2009/05/21 03:22:29 taca Exp $
  			privsep_preauth_child();
  		setproctitle("%s", "[net]");
  	}
-@@ -662,7 +671,7 @@ privsep_postauth(Authctxt *authctxt)
+@@ -663,7 +672,7 @@
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
@@ -48,7 +48,7 @@ $NetBSD: patch-av,v 1.7 2009/05/21 03:22:29 taca Exp $
  #endif
  		/* File descriptor passing is broken or root login */
  		use_privsep = 0;
-@@ -1272,8 +1281,10 @@ main(int ac, char **av)
+@@ -1273,8 +1282,10 @@
  	av = saved_argv;
  #endif
  
@@ -60,7 +60,7 @@ $NetBSD: patch-av,v 1.7 2009/05/21 03:22:29 taca Exp $
  
  	/* Ensure that fds 0, 1 and 2 are open or directed to /dev/null */
  	sanitise_stdfd();
-@@ -1577,7 +1588,7 @@ main(int ac, char **av)
+@@ -1578,7 +1589,7 @@
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else
@@ -69,7 +69,7 @@ $NetBSD: patch-av,v 1.7 2009/05/21 03:22:29 taca Exp $
  #endif
  			fatal("%s must be owned by root and not group or "
  			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
-@@ -1601,8 +1612,10 @@ main(int ac, char **av)
+@@ -1602,8 +1613,10 @@
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */
