@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.863 2010/02/19 15:05:20 he Exp $
+$NetBSD: CHANGES-2010,v 1.864 2010/02/19 17:34:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1042,3 +1042,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added math/prng version 3.0.2 [wiz 2010-02-19]
 	Updated lang/wsbasic to 1.2.7 [ghen 2010-02-19]
 	Updated devel/libdaemon to 0.14nb1 [he 2010-02-19]
+	Updated x11/wxGTK28 to 2.8.10nb6 [sno 2010-02-19]
