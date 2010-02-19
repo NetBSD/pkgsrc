@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2008/05/26 02:13:16 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2010/02/19 20:38:40 joerg Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 CATEGORIES=	databases www
-PKGREVISION=	5
+PKGREVISION=	6
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,9 +24,8 @@ USE_TOOLS+=	pax
 VERSION=	0.9.8.3
 NO_BUILD=	YES
 
-CONF_FILES_PERMS+=  ${PREFIX}/share/examples/phpldapadmin/config.php.example \
-		${PREFIX}/share/phpldapadmin/config/config.php		 \
-		${ROOT_USER} ${ROOT_GROUP} 0644
+CONF_FILES+=  ${PREFIX}/share/examples/phpldapadmin/config.php.example \
+		${PREFIX}/share/phpldapadmin/config/config.php
 CONF_FILES+=	${PREFIX}/share/examples/phpldapadmin/phpldapadmin.conf \
 		${PKG_SYSCONFDIR}/phpldapadmin.conf
 PAX_DIRS=	config doc htdocs lib locale templates tools
