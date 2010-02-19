@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2010/01/30 18:25:11 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2010/02/19 22:22:22 joerg Exp $
 
 --- OCamlMakefile.orig	2010-01-30 18:14:57.000000000 +0000
 +++ OCamlMakefile
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.1 2010/01/30 18:25:11 joerg Exp $
  	$(QUIET)printf "\nInstalling library with ocamlfind\n"
 -	$(OCAMLFIND) install $(OCAMLFIND_INSTFLAGS) $(RESULT) META $(LIBINSTALL_FILES)
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(INSTALLDIR)
-+	$(OCAMLFIND) install -destdir ${DESTDIR}$(INSTALLDIR) $(OCAMLFIND_INSTFLAGS) $(RESULT) META $(LIBINSTALL_FILES)
++	$(OCAMLFIND) install -ldconf /dev/null -destdir ${DESTDIR}$(INSTALLDIR) $(OCAMLFIND_INSTFLAGS) $(RESULT) META $(LIBINSTALL_FILES)
  	$(QUIET)printf "\nInstallation successful.\n"
  
  .PHONY: libuninstall
