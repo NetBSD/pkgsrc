@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/06/10 13:20:00 obache Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/19 22:04:25 joerg Exp $
 
 DISTNAME=	xev111
 PKGNAME=	xbat-1.11
@@ -30,11 +30,11 @@ SCORE_DIR=	share/games/Xbat/Score
 
 SETGIDGAME=		yes
 SPECIAL_PERMS=		bin/xbat ${SETGID_GAMES_PERMS}
-REQD_DIRS_PERMS+=	${VARBASE}/games/Xbat ${GAMEOWN} ${GAMEGRP} ${GAMEDIRMODE}
+REQD_DIRS_PERMS+=	${VARBASE}/games/Xbat ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 .for n in 0 1 2 3 4
 REQD_FILES_PERMS+=	${SCORE_DIR}/top10-${n}.txt			\
 			${VARBASE}/games/Xbat/top10-${n}.txt 		\
-			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 .endfor
 
 BUILD_DEFS+=	VARBASE
