@@ -1,0 +1,17 @@
+--- plugins/calendar-file/calendar-file.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/calendar-file/calendar-file.c	2010-02-19 10:06:46.000000000 +0000
+@@ -27,6 +27,14 @@
+ #include <glib/gi18n.h>
+ #include <string.h>
+ 
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
++
+ static void
+ location_changed (GtkFileChooserButton *widget, ESource *source)
+ {

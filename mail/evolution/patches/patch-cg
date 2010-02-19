@@ -1,0 +1,16 @@
+--- plugins/default-mailer/default-mailer.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/default-mailer/default-mailer.c	2010-02-19 10:09:06.000000000 +0000
+@@ -36,6 +36,13 @@
+ #define EVOLUTION_MAILTO_COMMAND "evolution --component=mail %s"
+ 
+ void org_gnome_default_mailer_check_default (EPlugin *ep, ESEventTargetUpgrade *target);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ static gboolean
+ evolution_is_default_mailer (const gchar *mailto_command)
