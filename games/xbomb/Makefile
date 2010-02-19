@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/11/21 16:48:33 adam Exp $
+# $NetBSD: Makefile,v 1.15 2010/02/19 21:57:51 joerg Exp $
 
 DISTNAME=	xbomb-2.2
 CATEGORIES=	games x11
@@ -16,16 +16,15 @@ BUILD_TARGET=		xbomb
 MAKE_ENV+=		SCORE_PATH=${SCORE_PATH:Q}
 INSTALL_MAKE_FLAGS+=	INSTDIR=${DESTDIR}${PREFIX}
 
+SETGIDGAME=	yes
 SCORE_PATH=	${VARBASE}/games/xbomb
-SCORE_USER=	games
-SCORE_GROUP=	games
-PKG_USERS=	${SCORE_USER}:${SCORE_GROUP}
-PKG_GROUPS=	${SCORE_GROUP}
+
+SPECIAL_PERMS+=	bin/xbomb ${SETGID_GAMES_PERMS}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 lib/X11/app-defaults
-CONF_FILES_PERMS+=	/dev/null ${SCORE_PATH:Q}/xbomb3.hi ${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
-CONF_FILES_PERMS+=	/dev/null ${SCORE_PATH:Q}/xbomb4.hi ${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
-CONF_FILES_PERMS+=	/dev/null ${SCORE_PATH:Q}/xbomb6.hi ${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+CONF_FILES_PERMS+=	/dev/null ${SCORE_PATH:Q}/xbomb3.hi ${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+CONF_FILES_PERMS+=	/dev/null ${SCORE_PATH:Q}/xbomb4.hi ${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+CONF_FILES_PERMS+=	/dev/null ${SCORE_PATH:Q}/xbomb6.hi ${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
