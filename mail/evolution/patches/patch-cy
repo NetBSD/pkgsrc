@@ -1,0 +1,16 @@
+--- plugins/subject-thread/subject-thread.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/subject-thread/subject-thread.c	2010-02-19 10:25:38.000000000 +0000
+@@ -36,6 +36,13 @@
+ #define GCONF_KEY "/apps/evolution/mail/display/thread_subject"
+ 
+ GtkWidget *org_gnome_subject_thread_factory (EPlugin *ep, EConfigHookItemFactoryData *hook_data);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ static void
+ toggled_cb (GtkWidget *widget, EConfig *config)

@@ -1,0 +1,17 @@
+--- plugins/mailing-list-actions/mailing-list-actions.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/mailing-list-actions/mailing-list-actions.c	2010-02-19 10:22:42.000000000 +0000
+@@ -87,6 +87,14 @@
+ 	gchar * uri;
+ } emla_action_data;
+ 
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
++
+ void emla_list_action (EPlugin *item, EMMenuTargetSelect* sel, EmlaAction action)
+ {
+ 	emla_action_data *data;

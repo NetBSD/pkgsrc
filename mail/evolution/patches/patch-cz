@@ -1,0 +1,17 @@
+--- plugins/templates/templates.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/templates/templates.c	2010-02-19 10:26:03.000000000 +0000
+@@ -102,6 +102,14 @@
+ static gboolean clue_foreach_check_isempty (GtkTreeModel *model, GtkTreePath
+ 					*path, GtkTreeIter *iter, UIData *ui);
+ 
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
++
+ static void
+ selection_changed (GtkTreeSelection *selection, UIData *ui)
+ {

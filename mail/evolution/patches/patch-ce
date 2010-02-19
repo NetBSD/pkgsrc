@@ -1,0 +1,17 @@
+--- plugins/calendar-http/calendar-http.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/calendar-http/calendar-http.c	2010-02-19 10:07:24.000000000 +0000
+@@ -33,6 +33,14 @@
+ GtkWidget * e_calendar_http_secure (EPlugin *epl, EConfigHookItemFactoryData *data);
+ GtkWidget *e_calendar_http_auth (EPlugin *epl, EConfigHookItemFactoryData *data);
+ 
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
++
+ /* replaces all '@' with '%40' in str; returns newly allocated string */
+ static gchar *
+ replace_at_sign (const gchar *str)

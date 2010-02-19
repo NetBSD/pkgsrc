@@ -1,0 +1,16 @@
+--- plugins/select-one-source/select-one-source.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/select-one-source/select-one-source.c	2010-02-19 10:24:55.000000000 +0000
+@@ -31,6 +31,13 @@
+ #include <calendar/gui/e-cal-popup.h>
+ 
+ void org_gnome_select_one_source (EPlugin *ep, ECalPopupTargetSource *target);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ void
+ org_gnome_select_one_source (EPlugin *ep, ECalPopupTargetSource *target)

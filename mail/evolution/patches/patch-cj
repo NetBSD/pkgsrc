@@ -1,0 +1,16 @@
+--- plugins/face/face.c	2010-02-19 08:21:55.000000000 +0000
++++ plugins/face/face.c	2010-02-19 10:10:39.000000000 +0000
+@@ -36,6 +36,13 @@
+ 
+ gboolean	e_plugin_ui_init		(GtkUIManager *ui_manager,
+ 						 EMsgComposer *composer);
++gint e_plugin_lib_enable (EPluginLib *ep, gint enable);
++
++gint
++e_plugin_lib_enable (EPluginLib *ep, gint enable)
++{
++	return 0;
++}
+ 
+ static void
+ action_face_cb (GtkAction *action,
