@@ -1,4 +1,4 @@
-# $NetBSD
+# $NetBSD: setup.py,v 1.2 2010/02/19 17:15:11 joerg Exp $
 
 from distutils.core import setup, Extension
 
