@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/10/29 21:53:10 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/19 17:54:38 joerg Exp $
 #
 
 DISTNAME=	zephyr-20010518
@@ -40,6 +40,10 @@ SUBST_STAGE.mandir=	pre-configure
 SUBST_MESSAGE.mandir=	Fixing mandir in Makefile.in
 SUBST_FILES.mandir=	*/*/Makefile.in */Makefile.in Makefile.in
 SUBST_SED.mandir=	-e 's,$${prefix}/man,@mandir@,g'
+
+.if ${OPSYS} == "NetBSD"
+BUILDLINK_TRANSFORM+=	l:ss:ss:roken:crypt
+.endif
 
 pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
