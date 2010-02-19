@@ -1,3 +1,5 @@
+$NetBSD: patch-co,v 1.2 2010/02/19 22:52:21 roy Exp $
+
 --- plugins/itip-formatter/itip-formatter.c	2010-02-19 08:21:55.000000000 +0000
 +++ plugins/itip-formatter/itip-formatter.c	2010-02-19 10:21:46.000000000 +0000
 @@ -142,6 +142,7 @@
