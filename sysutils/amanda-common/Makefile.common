@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2009/12/14 23:33:01 heinz Exp $
+# $NetBSD: Makefile.common,v 1.29 2010/02/19 18:55:56 joerg Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -40,7 +40,7 @@ CONFIGURE_ENV+=		GNUTAR=${TOOLS_GTAR:Q}
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-user=${AMANDA_USER:Q}
 CONFIGURE_ARGS+=	--with-group=${AMANDA_GROUP:Q}
-CONFIGURE_ARGS+=	--with-owner=${ROOT_USER:Q}
+CONFIGURE_ARGS+=	--with-owner=${REAL_ROOT_USER:Q}
 CONFIGURE_ARGS+=	--with-mmap
 CONFIGURE_ARGS+=	--with-amandahosts
 CONFIGURE_ARGS+=	--with-tmpdir=${AMANDA_TMP:Q}
