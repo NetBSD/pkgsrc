@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.26 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-ab,v 1.27 2010/02/19 10:17:33 martti Exp $
 
---- configure.ac.orig	2009-02-16 13:37:03.000000000 +0900
-+++ configure.ac
-@@ -191,6 +191,9 @@ AC_ARG_WITH(rpath,
+--- configure.ac.orig	2009-09-11 07:56:08.000000000 +0300
++++ configure.ac	2010-02-19 12:13:02.000000000 +0200
+@@ -191,6 +191,9 @@
  	]
  )
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/21 03:22:29 taca Exp $
  # Allow user to specify flags
  AC_ARG_WITH(cflags,
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -258,6 +261,7 @@ AC_CHECK_HEADERS( \
+@@ -258,6 +261,7 @@
  	maillock.h \
  	ndir.h \
  	net/if_tun.h \
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/21 03:22:29 taca Exp $
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -531,6 +535,15 @@ main() { if (NSVersionOfRunTimeLibrary("
+@@ -535,6 +539,15 @@
  		;;
  	esac
  	;;
@@ -36,7 +36,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/21 03:22:29 taca Exp $
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  	AC_DEFINE(BROKEN_INET_NTOA, 1,
-@@ -4063,9 +4076,17 @@ AC_TRY_COMPILE([
+@@ -4129,9 +4142,17 @@
  )
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/21 03:22:29 taca Exp $
  	AC_DEFINE_UNQUOTED(CONF_UTMPX_FILE, "$conf_utmpx_location",
  		[Define if you want to specify the path to your utmpx file])
  fi
-@@ -4089,9 +4110,17 @@ AC_TRY_COMPILE([
+@@ -4155,9 +4176,17 @@
  )
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -76,7 +76,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/21 03:22:29 taca Exp $
  	AC_DEFINE_UNQUOTED(CONF_WTMPX_FILE, "$conf_wtmpx_location",
  		[Define if you want to specify the path to your wtmpx file])
  fi
-@@ -4138,7 +4167,7 @@ echo "OpenSSH has been configured with t
+@@ -4204,7 +4233,7 @@
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
