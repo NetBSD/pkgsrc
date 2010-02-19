@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2010/02/19 14:16:31 joerg Exp $
+
+--- Makefile.in.orig	1999-03-18 23:57:21.000000000 +0000
++++ Makefile.in
+@@ -82,8 +82,7 @@ xtend:	xtend.o util.o parse.o exec.o @LI
+ 	$(CC) $(LDFLAGS) xtend.o util.o parse.o exec.o @LIBOBJS@ -o xtend
+ 
+ install: $(PROGS)
+-	-mv $(bindir)/xtend $(bindir)/xtend.old
+-	${INSTALL_PROGRAM} -m @xtend_perms@ @xtend_group@ @xtend_owner@ xtend $(DESTDIR)$(bindir)
++	${INSTALL_PROGRAM} xtend $(DESTDIR)$(bindir)
+ 	${INSTALL_DATA} xtend.1 $(DESTDIR)$(mandir)/man1
+ 
+ config.h.in: configure acconfig.h
