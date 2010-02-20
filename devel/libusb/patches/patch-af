@@ -1,0 +1,43 @@
+$NetBSD: patch-af,v 1.1 2010/02/20 22:42:02 schwarz Exp $
+
+--- darwin.c.orig	2010-02-20 23:22:35.000000000 +0100
++++ darwin.c	2010-02-20 23:36:10.000000000 +0100
+@@ -254,7 +254,7 @@
+   
+   result = IOCreatePlugInInterfaceForService(usbDevice, kIOUSBDeviceUserClientTypeID,
+ 					     kIOCFPlugInInterfaceID, &plugInInterface,
+-					     &score);
++					     (SInt32*)&score);
+   
+   result = IOObjectRelease(usbDevice);
+   if (result || !plugInInterface)
+@@ -557,7 +557,7 @@
+   result = IOCreatePlugInInterfaceForService(usbInterface,
+ 					     kIOUSBInterfaceUserClientTypeID,
+ 					     kIOCFPlugInInterfaceID,
+-					     &plugInInterface, &score);
++					     &plugInInterface, (SInt32*)&score);
+   /* No longer need the usbInterface object after getting the plug-in */
+   result = IOObjectRelease(usbInterface);
+   if (result || !plugInInterface)
+@@ -758,7 +758,7 @@
+ 
+ /* argument to handle multiple parameters to rw_completed */
+ struct rw_complete_arg {
+-  UInt32        io_size;
++  unsigned long io_size;
+   IOReturn      result;
+   CFRunLoopRef  cf_loop;
+ };
+@@ -769,9 +769,9 @@
+ 
+   if (usb_debug > 2)
+     fprintf(stderr, "io async operation completed: %s, size=%lu, result=0x%08x\n", darwin_error_str(result),
+-	    (UInt32)io_size, result);
++	    (unsigned long)io_size, result);
+ 
+-  rw_arg->io_size = (UInt32)io_size;
++  rw_arg->io_size = (unsigned long)io_size;
+   rw_arg->result  = result;
+ 
+   CFRunLoopStop(rw_arg->cf_loop);
