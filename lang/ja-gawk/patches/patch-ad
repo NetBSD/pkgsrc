@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2006/01/13 21:51:06 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2010/02/20 08:14:44 obache Exp $
 
---- io.c.orig	2006-01-13 21:48:53.000000000 +0000
+--- io.c.orig	2010-02-20 07:58:14.000000000 +0000
 +++ io.c
-@@ -1055,7 +1055,6 @@ int interesting;	/* pid of interest, if 
+@@ -1072,7 +1072,6 @@ int interesting;	/* pid of interest, if 
  	int pid;
  	int status = 0;
  	struct redirect *redp;
