@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.76 2010/02/20 00:00:51 zafer Exp $
+# $NetBSD: sites.mk,v 1.77 2010/02/20 00:22:35 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -86,9 +86,7 @@ MASTER_SITE_KDE+=	\
 	ftp://ftp.solnet.ch/mirror/KDE/stable/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.kde.org/pub/kde/stable/ \
 	ftp://mirrors.dotsrc.org/kde/stable/ \
-	ftp://ftp.fi.muni.cz/pub/kde/stable/ \
-	ftp://ftp.rediris.es/mirror/kde/ftp.kde.org/pub/kde/stable/ \
-	http://sunsite.rediris.es/mirror/kde/ftp.kde.org/pub/kde/stable/
+	ftp://ftp.fi.muni.cz/pub/kde/stable/
 
 MASTER_SITE_SOURCEFORGE+=	\
 	http://freefr.dl.sourceforge.net/sourceforge/ \
@@ -194,7 +192,6 @@ MASTER_SITE_MOZILLA+=	\
 	http://mirror.yandex.ru/mozilla/ \
 	http://elizabeth.acc.umu.se/pub/mozilla.org/ \
 	http://www.mirrorservice.org/sites/releases.mozilla.org/pub/mozilla.org/ \
-	http://sunsite.rediris.es/pub/mozilla.org/ \
 	http://ftp.cvut.cz/mozilla/ \
 	http://mozilla.kn.vutbr.cz/ \
 	http://mirror.switch.ch/ftp/mirror/mozilla/ \
@@ -384,7 +381,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://ftp.iasi.roedu.net/mirrors/openoffice.org/ \
 	ftp://ftp.arnes.si/packages/OpenOffice.org/ \
 	ftp://ftp.saix.net/pub/OpenOffice.org/ \
-	http://ftp.rediris.es/ftp/mirror/openoffice.org/ \
 	http://ftp.sunet.se/pub/Office/OpenOffice.org/ \
 	ftp://mirror.switch.ch/mirror/OpenOffice/ \
 	http://mirror.pacific.net.au/openoffice/ \
@@ -493,7 +489,6 @@ MASTER_SITE_GENTOO+= \
 	http://mirrors.cs.wmich.edu/gentoo/ \
 	http://mirror.datapipe.net/gentoo/ \
 	ftp://mirror.datapipe.net/gentoo/ \
-	http://gentoo.mirrors.easynews.com/linux/gentoo/ \
 	ftp://ftp.gtlib.gatech.edu/pub/gentoo/ \
 	http://www.gtlib.gatech.edu/pub/gentoo/ \
 	http://gentoo.mirrors.hoobly.com/ \
@@ -507,7 +502,6 @@ MASTER_SITE_GENTOO+= \
 	http://gentoo.osuosl.org/ \
 	http://gentoo.mirrors.pair.com/ \
 	ftp://gentoo.mirrors.pair.com/ \
-	ftp://mirror.iawnet.sandia.gov/pub/gentoo/ \
 	http://gentoo.llarian.net/ \
 	ftp://gentoo.llarian.net/pub/gentoo/ \
 	http://gentoo.mirrors.tds.net/gentoo/ \
@@ -572,7 +566,6 @@ MASTER_SITE_GENTOO+= \
 	ftp://ftp.rhnet.is/pub/gentoo/ \
 	http://ftp.heanet.ie/pub/gentoo/ \
 	ftp://ftp.heanet.ie/pub/gentoo/ \
-	ftp://ftp.unina.it/pub/linux/distributions/gentoo/ \
 	http://gentoo.tups.lv/source/ \
 	http://mirror.muntinternet.net/pub/gentoo/ \
 	ftp://mirror.muntinternet.net/pub/gentoo/ \
@@ -581,7 +574,6 @@ MASTER_SITE_GENTOO+= \
 	http://ftp.snt.utwente.nl/pub/os/linux/gentoo/ \
 	ftp://ftp.snt.utwente.nl/pub/os/linux/gentoo/ \
 	http://mirror.gentoo.no/ \
-	ftp://mirror.icis.pcz.pl/gentoo/ \
 	http://gentoo.prz.rzeszow.pl/ \
 	http://gentoo.po.opole.pl/ \
 	ftp://gentoo.po.opole.pl/ \
@@ -630,9 +622,7 @@ MASTER_SITE_GENTOO+= \
 	ftp://ftp.iij.ad.jp/pub/linux/gentoo/ \
 	http://ftp.jaist.ac.jp/pub/Linux/Gentoo/ \
 	ftp://ftp.jaist.ac.jp/pub/Linux/Gentoo/ \
-	ftp://ftp.ecc.u-tokyo.ac.jp/GENTOO/ \
 	http://ftp.daum.net/gentoo/ \
-	ftp://ftp.daum.net/gentoo/ \
 	http://ftp.kaist.ac.kr/pub/gentoo/ \
 	ftp://ftp.kaist.ac.kr/gentoo/ \
 	http://ftp.lecl.net/pub/gentoo/ \
