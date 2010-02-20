@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.807 2010/02/16 16:25:20 taca Exp $
+# $NetBSD: Makefile,v 1.808 2010/02/20 10:40:38 seb Exp $
 #
 
 COMMENT=	Networking tools
@@ -383,6 +383,7 @@ SUBDIR+=	p5-SNMP-MIB-Compiler
 SUBDIR+=	p5-SNMP_Session
 SUBDIR+=	p5-SOAP-Lite
 SUBDIR+=	p5-Socket6
+SUBDIR+=	p5-Test-DNS
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-eBay-API
 SUBDIR+=	p5-ispman
