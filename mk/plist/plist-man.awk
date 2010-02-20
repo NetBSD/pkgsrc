@@ -1,4 +1,4 @@
-# $NetBSD: plist-man.awk,v 1.7 2009/06/14 23:10:39 joerg Exp $
+# $NetBSD: plist-man.awk,v 1.8 2010/02/20 07:05:52 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -63,11 +63,15 @@
 ###
 ### PKGMANDIR is the ${PREFIX}-relative path to the installed man pages.
 ###
+function getenv(varname, defval) {
+	return varname in ENVIRON ? ENVIRON[varname] : defval;
+}
+
 BEGIN {
-	IMAKE_MANINSTALL = ENVIRON["IMAKE_MANINSTALL"] ? ENVIRON["IMAKE_MANINSTALL"] : "maninstall catinstall"
-	MANINSTALL = ENVIRON["MANINSTALL"] ? ENVIRON["MANINSTALL"] : "maninstall catinstall"
-	MANZ = ENVIRON["MANZ"] ? ENVIRON["MANZ"] : "no"
-	PKGMANDIR = ENVIRON["PKGMANDIR"] ? ENVIRON["PKGMANDIR"] : "man"
+	IMAKE_MANINSTALL = getenv("IMAKE_MANINSTALL", "maninstall catinstall")
+	MANINSTALL = getenv("MANINSTALL", "maninstall catinstall")
+	MANZ = getenv("MANZ", "no")
+	PKGMANDIR = getenv("PKGMANDIR", "man")
 }
 
 ###
