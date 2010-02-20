@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.75 2010/02/19 23:50:45 zafer Exp $
+# $NetBSD: sites.mk,v 1.76 2010/02/20 00:00:51 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -274,16 +274,12 @@ MASTER_SITE_MYSQL+=	\
 	http://na.mirror.garr.it/mirrors/MySQL/Downloads/ \
 	http://mysql.bst.lt/Downloads/ \
 	http://mysql.proserve.nl/Downloads/ \
-	http://ftp.tpnet.pl/vol/d3/ftp.mysql.com/Downloads/ \
-	ftp://ftp.tpnet.pl/d3/ftp.mysql.com/Downloads/ \
 	http://mysql.nfsi.pt/Downloads/ \
 	ftp://ftp.nfsi.pt/pub/mysql/Downloads/ \
 	http://mirrors.xservers.ro/mysql/Downloads/ \
 	http://ftp.astral.ro/mirrors/mysql.com/Downloads/ \
 	ftp://ftp.astral.ro/mirrors/mysql.com/Downloads/ \
 	http://mirrors.bevc.net/mysql/Downloads/ \
-	http://mysql.rediris.es/Downloads/ \
-	ftp://ftp.rediris.es/mirror/mysql/Downloads/ \
 	http://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/ \
 	ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/ \
 	http://mysql.dataphone.se/Downloads/ \
@@ -306,7 +302,6 @@ MASTER_SITE_MYSQL+=	\
 	http://mysql.llarian.net/Downloads/ \
 	ftp://mysql.llarian.net/pub/mysql/Downloads/ \
 	ftp://mirror.anl.gov/pub/mysql/Downloads/ \
-	http://mysql.mirrors.pair.com/Downloads/ \
 	http://mirror.services.wisc.edu/mysql/Downloads/ \
 	ftp://mirror.services.wisc.edu/mirrors/mysql/Downloads/ \
 	http://mysql.he.net/Downloads/ \
@@ -324,7 +319,6 @@ MASTER_SITE_MYSQL+=	\
 	ftp://ftp.oss.eznetsols.org/mysql/Downloads/ \
 	http://mysql.cs.pu.edu.tw/Downloads/ \
 	ftp://ftp.cs.pu.edu.tw/Unix/mysql/Downloads/ \
-	http://mysql.isu.edu.tw/Downloads/ \
 	http://mysql.ntu.edu.tw/Downloads/ \
 	ftp://ftp.ntu.edu.tw/pub/MySQL/Downloads/ \
 	http://mysql.cdpa.nsysu.edu.tw/Downloads/ \
