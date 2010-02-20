@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/02/14 19:03:51 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/20 15:23:41 joerg Exp $
 
 DISTNAME=	spawn-fcgi-1.6.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.lighttpd.net/download/
 
