@@ -1,18 +1,21 @@
 .TH MTREE 5 "August 20, 2007" ""
 .SH NAME
-\fBmtree\fP
+.ad l
+\fB\%mtree\fP
 \- format of mtree dir hierarchy files
 .SH DESCRIPTION
+.ad l
 The
-\fBmtree\fP
+\fB\%mtree\fP
 format is a textual format that describes a collection of filesystem objects.
 Such files are typically used to create or verify directory hierarchies.
 .SS General Format
 An
-\fBmtree\fP
+\fB\%mtree\fP
 file consists of a series of lines, each providing information
 about a single filesystem object.
 Leading whitespace is always ignored.
+.PP
 When encoding file or pathnames, any backslash character or
 character outside of the 95 printable ASCII characters must be
 encoded as a a backslash followed by three
@@ -20,7 +23,9 @@ octal digits.
 When reading mtree files, any appearance of a backslash
 followed by three octal digits should be converted into the
 corresponding character.
+.PP
 Each line is interpreted independently as one of the following types:
+.RS 5
 .TP
 Signature
 The first line of any mtree file must begin with
@@ -66,14 +71,17 @@ character after
 the first character, it is the pathname of a file relative to the
 starting directory.
 There can be multiple full entries describing the same file.
+.RE
+.PP
 Some tools that process
-\fBmtree\fP
+\fB\%mtree\fP
 files may require that multiple lines describing the same file
 occur consecutively.
 It is not permitted for the same file to be mentioned using
 both a relative and a full file specification.
 .SS Special commands
 Two special commands are currently defined:
+.RS 5
 .TP
 \fB/set\fP
 This command defines default values for one or more keywords.
@@ -88,6 +96,7 @@ This command removes any default value set by a previous
 command.
 It is followed on the same line by one or more keywords
 separated by whitespace.
+.RE
 .SS Keywords
 After the filename, a full or relative entry consists of zero
 or more whitespace-separated keyword definitions.
@@ -96,7 +105,9 @@ list immediately followed by an '=' sign
 and a value.
 Software programs reading mtree files should warn about
 unrecognized keywords.
+.PP
 Currently supported keywords are as follows:
+.RS 5
 .TP
 \fBcksum\fP
 The checksum of the file using the default algorithm specified by
@@ -188,6 +199,8 @@ The last modification time of the file.
 .TP
 \fBtype\fP
 The type of the file; may be set to any one of the following:
+.PP
+.RS 5
 .TP
 \fBblock\fP
 block special device
@@ -209,30 +222,36 @@ symbolic link
 .TP
 \fBsocket\fP
 socket
+.RE
 .TP
 \fBuid\fP
 The file owner as a numeric value.
 .TP
 \fBuname\fP
 The file owner as a symbolic name.
+.RE
+.PP
 .SH SEE ALSO
+.ad l
 \fBcksum\fP(1),
 \fBfind\fP(1),
 \fBmtree\fP(8)
 .SH BUGS
+.ad l
 The
 FreeBSD
 implementation of mtree does not currently support
 the
-\fBmtree\fP
+\fB\%mtree\fP
 2.0
 format.
 The requirement for a
 ``#mtree''
 signature line is new and not yet widely implemented.
 .SH HISTORY
+.ad l
 The
-\fBmtree\fP
+\fB\%mtree\fP
 utility appeared in
 Bx 4.3 Reno.
 The

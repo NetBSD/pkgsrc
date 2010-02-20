@@ -73,36 +73,33 @@ OPTIONS
 	     following files.  In x mode, change directories after opening the
 	     archive but before extracting entries from the archive.
 
-     --check-links (-W check-links)
+     --check-links
 	     (c and r modes only) Issue a warning message unless all links to
 	     each file are archived.
 
-     --exclude pattern (-W exclude=pattern)
+     --chroot
+	     (x mode only) chroot() to the current directory after processing
+	     any -C options and before extracting any files.
+
+     --exclude pattern
 	     Do not process files or directories that match the specified pat-
 	     tern.  Note that exclusions take precedence over patterns or
 	     filenames specified on the command line.
 
-     --format format (-W format=format)
-	     (c mode only) Use the specified format for the created archive.
-	     Supported formats include ``cpio'', ``pax'', ``shar'', and
-	     ``ustar''.  Other formats may also be supported; see
+     --format format
+	     (c, r, u mode only) Use the specified format for the created ar-
+	     chive.  Supported formats include ``cpio'', ``pax'', ``shar'',
+	     and ``ustar''.  Other formats may also be supported; see
 	     libarchive-formats(5) for more information about currently-sup-
-	     ported formats.
+	     ported formats.  In r and u modes, when extending an existing ar-
+	     chive, the format specified here must be compatible with the for-
+	     mat of the existing archive on disk.
 
      -f file
 	     Read the archive from or write the archive to the specified file.
 	     The filename can be - for standard input or standard output.  If
 	     not specified, the default tape device will be used.  (On
 	     FreeBSD, the default tape device is /dev/sa0.)
-
-     --fast-read (-W fast-read)
-	     (x and t mode only) Extract or list only the first archive entry
-	     that matches each pattern or filename operand.  Exit as soon as
-	     each specified pattern or filename has been matched.  By default,
-	     the archive is always read to the very end, since there can be
-	     multiple entries with the same name and, by convention, later
-	     entries overwrite earlier entries.  This option is provided as a
-	     performance optimization.
 
      -H      (c and r mode only) Symbolic links named on the command line will
 	     be followed; the target of the link will be archived, not the
@@ -112,7 +109,7 @@ OPTIONS
 
      -I      Synonym for -T.
 
-     --include pattern (-W include=pattern)
+     --include pattern
 	     Process only files or directories that match the specified pat-
 	     tern.  Note that exclusions specified with --exclude take prece-
 	     dence over inclusions.  If no inclusions are explicitly speci-
@@ -132,14 +129,15 @@ OPTIONS
 	     a file appears more than once in an archive, later copies will
 	     not overwrite earlier copies.
 
+     --keep-newer-files
+	     (x mode only) Do not overwrite existing files that are newer than
+	     the versions appearing in the archive being extracted.
+
      -L      (c and r mode only) All symbolic links will be followed.  Nor-
 	     mally, symbolic links are archived as such.  With this option,
 	     the target of the link will be archived instead.
 
-     -l      If POSIXLY_CORRECT is specified in the environment, this is a
-	     synonym for the --check-links option.  Otherwise, an error will
-	     be displayed.  Users who desire behavior compatible with GNU tar
-	     should use the --one-file-system option instead.
+     -l      This is a synonym for the --check-links option.
 
      -m      (x mode only) Do not extract modification time.  By default, the
 	     modification time is set to the time stored in the archive.
@@ -147,45 +145,102 @@ OPTIONS
      -n      (c, r, u modes only) Do not recursively archive the contents of
 	     directories.
 
-     --newer date (-W newer=date)
+     --newer date
 	     (c, r, u modes only) Only include files and directories newer
 	     than the specified date.  This compares ctime entries.
 
-     --newer-mtime date (-W newer-mtime=date)
+     --newer-mtime date
 	     (c, r, u modes only) Like --newer, except it compares mtime
 	     entries instead of ctime entries.
 
-     --newer-than file (-W newer-than=file)
+     --newer-than file
 	     (c, r, u modes only) Only include files and directories newer
 	     than the specified file.  This compares ctime entries.
 
-     --newer-mtime-than file (-W newer-mtime-than=file)
+     --newer-mtime-than file
 	     (c, r, u modes only) Like --newer-than, except it compares mtime
 	     entries instead of ctime entries.
 
-     --nodump (-W nodump)
+     --nodump
 	     (c and r modes only) Honor the nodump file flag by skipping this
 	     file.
 
-     --null (-W null)
-	     (use with -I, -T, or -X) Filenames or patterns are separated by
+     --null  (use with -I, -T, or -X) Filenames or patterns are separated by
 	     null characters, not by newlines.	This is often used to read
 	     filenames output by the -print0 option to find(1).
+
+     --numeric-owner
+	     (x mode only) Ignore symbolic user and group names when restoring
+	     archives to disk, only numeric uid and gid values will be obeyed.
 
      -O      (x, t modes only) In extract (-x) mode, files will be written to
 	     standard out rather than being extracted to disk.	In list (-t)
 	     mode, the file listing will be written to stderr rather than the
 	     usual stdout.
 
-     -o      (x mode only) Use the user and group of the user running the pro-
-	     gram rather than those specified in the archive.  Note that this
-	     has no significance unless -p is specified, and the program is
-	     being run by the root user.  In this case, the file modes and
-	     flags from the archive will be restored, but ACLs or owner infor-
-	     mation in the archive will be discarded.
+     -o      (x mode) Use the user and group of the user running the program
+	     rather than those specified in the archive.  Note that this has
+	     no significance unless -p is specified, and the program is being
+	     run by the root user.  In this case, the file modes and flags
+	     from the archive will be restored, but ACLs or owner information
+	     in the archive will be discarded.
 
-     --one-file-system (-W one-file-system)
+     -o      (c, r, u mode) A synonym for --format ustar
+
+     --one-file-system
 	     (c, r, and u modes) Do not cross mount points.
+
+     --options options
+	     Select optional behaviors for particular modules.	The argument
+	     is a text string containing comma-separated keywords and values.
+	     These are passed to the modules that handle particular formats to
+	     control how those formats will behave.  Each option has one of
+	     the following forms:
+	     key=value
+		     The key will be set to the specified value in every mod-
+		     ule that supports it.  Modules that do not support this
+		     key will ignore it.
+	     key     The key will be enabled in every module that supports it.
+		     This is equivalent to key=1.
+	     !key    The key will be disabled in every module that supports
+		     it.
+	     module:key=value, module:key, module:!key
+		     As above, but the corresponding key and value will be
+		     provided only to modules whose name matches module.
+	     The currently supported modules and keys are:
+	     iso9660:joliet
+		     Support Joliet extensions.  This is enabled by default,
+		     use !joliet or iso9660:!joliet to disable.
+	     iso9660:rockridge
+		     Support Rock Ridge extensions.  This is enabled by
+		     default, use !rockridge or iso9660:!rockridge to disable.
+	     gzip:compression-level
+		     A decimal integer from 0 to 9 specifying the gzip com-
+		     pression level.
+	     xz:compression-level
+		     A decimal integer from 0 to 9 specifying the xz compres-
+		     sion level.
+	     mtree:keyword
+		     The mtree writer module allows you to specify which mtree
+		     keywords will be included in the output.  Supported key-
+		     words include: cksum, device, flags, gid, gname, indent,
+		     link, md5, mode, nlink, rmd160, sha1, sha256, sha384,
+		     sha512, size, time, uid, uname.  The default is equiva-
+		     lent to: ``device, flags, gid, gname, link, mode, nlink,
+		     size, time, type, uid, uname''.
+	     mtree:all
+		     Enables all of the above keywords.  You can also use
+		     mtree:!all to disable all keywords.
+	     mtree:use-set
+		     Enable generation of /set lines in the output.
+	     mtree:indent
+		     Produce human-readable output by indenting options and
+		     splitting lines to fit into 80 columns.
+	     zip:compression=type
+		     Use type as compression method.  Supported values are
+		     store (uncompressed) and deflate (gzip algorithm).
+	     If a provided option is not supported by any module, that is a
+	     fatal error.
 
      -P      Preserve pathnames.  By default, absolute pathnames (those that
 	     begin with a / character) have the leading slash removed both
@@ -203,11 +258,39 @@ OPTIONS
 	     is being run by root, the default is to restore the owner unless
 	     the -o option is also specified.
 
-     --strip-components count (-W strip-components=count)
-	     (x and t mode only) Remove the specified number of leading path
-	     elements.	Pathnames with fewer elements will be silently
-	     skipped.  Note that the pathname is edited after checking inclu-
-	     sion/exclusion patterns but before security checks.
+     -q (--fast-read)
+	     (x and t mode only) Extract or list only the first archive entry
+	     that matches each pattern or filename operand.  Exit as soon as
+	     each specified pattern or filename has been matched.  By default,
+	     the archive is always read to the very end, since there can be
+	     multiple entries with the same name and, by convention, later
+	     entries overwrite earlier entries.  This option is provided as a
+	     performance optimization.
+
+     -S      (x mode only) Extract files as sparse files.  For every block on
+	     disk, check first if it contains only NULL bytes and seek over it
+	     otherwise.  This works similiar to the conv=sparse option of dd.
+
+     --strip-components count
+	     (x mode only) Remove the specified number of leading path ele-
+	     ments.  Pathnames with fewer elements will be silently skipped.
+	     Note that the pathname is edited after checking inclusion/exclu-
+	     sion patterns but before security checks.
+
+     -s pattern
+	     Modify file or archive member names according to pattern.	The
+	     pattern has the format /old/new/[gps] where old is a basic regu-
+	     lar expression, new is the replacement string of the matched
+	     part, and the optional trailing letters modify how the replace-
+	     ment is handled.  If old is not matched, the pattern is skipped.
+	     Within new, ~ is substituted with the match, 1 to 9 with the con-
+	     tent of the corresponding captured group.	The optional trailing
+	     g specifies that matching should continue after the matched part
+	     and stopped on the first unmatched pattern.  The optional trail-
+	     ing s specifies that the pattern applies to the value of symbolic
+	     links.  The optional trailing p specifies that after a successful
+	     substitution the original path name and the new path name should
+	     be printed to standard error.
 
      -T filename
 	     In x or t mode, tar will read the list of names to be extracted
@@ -233,11 +316,8 @@ OPTIONS
 	     In list mode, tar will produce output similar to that of ls(1).
 	     Additional -v options will provide additional detail.
 
-     -W longopt=value
-	     Long options (preceded by --) are only supported directly on sys-
-	     tems that have the getopt_long(3) function.  The -W option can be
-	     used to access long options on systems that do not support this
-	     function.
+     --version
+	     Print version of tar and libarchive, and exit.
 
      -w      Ask for confirmation for every action.
 
@@ -255,15 +335,15 @@ OPTIONS
 	     other tar implementations, this implementation recognizes gzip
 	     compression automatically when reading archives.
 
+     -Z      (c mode only) Compress the resulting archive with compress(1).
+	     In extract or list modes, this option is ignored.	Note that,
+	     unlike other tar implementations, this implementation recognizes
+	     compress compression automatically when reading archives.
+
 ENVIRONMENT
      The following environment variables affect the execution of tar:
 
      LANG	The locale to use.  See environ(7) for more information.
-
-     POSIXLY_CORRECT
-		If this environment variable is defined, the -l option will be
-		interpreted in accordance with ISO/IEC 9945-1:1996
-		(``POSIX.1'').
 
      TAPE	The default tape device.  The -f option overrides this.
 
@@ -306,9 +386,29 @@ EXAMPLES
      Finally, it will switch to the /tmp directory and add foo2 to the output
      archive.
 
+     An input file in mtree(5) format can be used to create an output archive
+     with arbitrary ownership, permissions, or names that differ from existing
+     data on disk:
+
+	   $ cat input.mtree
+	   #mtree
+	   usr/bin uid=0 gid=0 mode=0755 type=dir
+	   usr/bin/ls uid=0 gid=0 mode=0755 type=file content=myls
+	   $ tar -cvf output.tar @input.mtree
+
      The --newer and --newer-mtime switches accept a variety of common date
      and time specifications, including ``12 Mar 2005 7:14:29pm'',
      ``2005-03-12 19:14'', ``5 minutes ago'', and ``19:14 PST May 1''.
+
+     The --options argument can be used to control various details of archive
+     generation or reading.  For example, you can generate mtree output which
+     only contains type, time, and uid keywords:
+	   tar -cf file.tar --format=mtree --options='!all,type,time,uid' dir
+     or you can set the compression level used by gzip or xz compression:
+	   tar -czf file.tar --options='compression-level=9'.
+     For more details, see the explanation of the archive_read_set_options()
+     and archive_write_set_options() API calls that are described in
+     archive_read(3) and archive_write(3).
 
 COMPATIBILITY
      The bundled-arguments format is supported for compatibility with historic
@@ -329,8 +429,8 @@ COMPATIBILITY
      argument format above, should limit themselves to the c, t, and x modes,
      and the b, f, m, v, and w options.
 
-     On systems that support getopt_long(), additional long options are avail-
-     able to improve compatibility with other tar implementations.
+     Additional long options are provided to improve compatibility with other
+     tar implementations.
 
 SECURITY
      Certain security issues are common to many archiving programs, including
@@ -371,8 +471,8 @@ SECURITY
      ries.
 
 SEE ALSO
-     bzip2(1), cpio(1), gzip(1), mt(1), pax(1), shar(1), libarchive(3),
-     libarchive-formats(5), tar(5)
+     bzip2(1), compress(1), cpio(1), gzip(1), mt(1), pax(1), shar(1),
+     libarchive(3), libarchive-formats(5), tar(5)
 
 STANDARDS
      There is no current POSIX standard for the tar command; it appeared in
@@ -396,10 +496,9 @@ HISTORY
      This is a complete re-implementation based on the libarchive(3) library.
 
 BUGS
-     POSIX and GNU violently disagree about the meaning of the -l option.
-     Because of the potential for disaster if someone expects one behavior and
-     gets the other, the -l option is deliberately broken in this implementa-
-     tion.
+     This program follows ISO/IEC 9945-1:1996 (``POSIX.1'') for the definition
+     of the -l option.	Note that GNU tar prior to version 1.15 treated -l as
+     a synonym for the --one-file-system option.
 
      The -C dir option may differ from historic implementations.
 
@@ -447,4 +546,4 @@ BUGS
      There are alternative long options for many of the short options that are
      deliberately not documented.
 
-FreeBSD 6.0			April 13, 2004			   FreeBSD 6.0
+FreeBSD 8.0			 Oct 12, 2009			   FreeBSD 8.0

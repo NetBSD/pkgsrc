@@ -6,14 +6,16 @@ NAME
      archive_write_set_format_shar, archive_write_set_format_shar_binary,
      archive_write_set_format_ustar, archive_write_get_bytes_per_block,
      archive_write_set_bytes_per_block, archive_write_set_bytes_in_last_block,
-     archive_write_set_compression_bzip2, archive_write_set_compression_gzip,
-     archive_write_set_compression_none,
-     archive_write_set_compression_program, archive_write_open,
-     archive_write_open_fd, archive_write_open_FILE,
-     archive_write_open_filename, archive_write_open_memory,
-     archive_write_header, archive_write_data, archive_write_finish_entry,
-     archive_write_close, archive_write_finish -- functions for creating ar-
-     chives
+     archive_write_set_compression_bzip2,
+     archive_write_set_compression_compress,
+     archive_write_set_compression_gzip, archive_write_set_compression_none,
+     archive_write_set_compression_program,
+     archive_write_set_compressor_options, archive_write_set_format_options,
+     archive_write_set_options, archive_write_open, archive_write_open_fd,
+     archive_write_open_FILE, archive_write_open_filename,
+     archive_write_open_memory, archive_write_header, archive_write_data,
+     archive_write_finish_entry, archive_write_close, archive_write_finish --
+     functions for creating archives
 
 SYNOPSIS
      #include <archive.h>
@@ -32,6 +34,9 @@ SYNOPSIS
 
      int
      archive_write_set_compression_bzip2(struct archive *);
+
+     int
+     archive_write_set_compression_compress(struct archive *);
 
      int
      archive_write_set_compression_gzip(struct archive *);
@@ -60,6 +65,15 @@ SYNOPSIS
 
      int
      archive_write_set_format_ustar(struct archive *);
+
+     int
+     archive_write_set_format_options(struct archive *, const char *);
+
+     int
+     archive_write_set_compressor_options(struct archive *, const char *);
+
+     int
+     archive_write_set_options(struct archive *, const char *);
 
      int
      archive_write_open(struct archive *, void *client_data,
@@ -159,6 +173,7 @@ DESCRIPTION
 	     result in ordinary ustar archives.
 
      archive_write_set_compression_bzip2(),
+	     archive_write_set_compression_compress(),
 	     archive_write_set_compression_gzip(),
 	     archive_write_set_compression_none()
 	     The resulting archive will be compressed as specified.  Note that
@@ -168,6 +183,54 @@ DESCRIPTION
 	     The archive will be fed into the specified compression program.
 	     The output of that program is blocked and written to the client
 	     write callbacks.
+
+     archive_write_set_compressor_options(),
+	     archive_write_set_format_options(), archive_write_set_options()
+	     Specifies options that will be passed to the currently-enabled
+	     compressor and/or format writer.  The argument is a comma-sepa-
+	     rated list of individual options.	Individual options have one of
+	     the following forms:
+	     option=value
+		     The option/value pair will be provided to every module.
+		     Modules that do not accept an option with this name will
+		     ignore it.
+	     option  The option will be provided to every module with a value
+		     of ``1''.
+	     !option
+		     The option will be provided to every module with a NULL
+		     value.
+	     module:option=value, module:option, module:!option
+		     As above, but the corresponding option and value will be
+		     provided only to modules whose name matches module.
+	     The return value will be ARCHIVE_OK if any module accepts the
+	     option, or ARCHIVE_WARN if no module accepted the option, or
+	     ARCHIVE_FATAL if there was a fatal error while attempting to
+	     process the option.
+
+	     The currently supported options are:
+	     Compressor gzip
+		     compression-level
+			     The value is interpreted as a decimal integer
+			     specifying the gzip compression level.
+	     Compressor xz
+		     compression-level
+			     The value is interpreted as a decimal integer
+			     specifying the compression level.
+	     Format mtree
+		     cksum, device, flags, gid, gname, indent, link, md5,
+			     mode, nlink, rmd160, sha1, sha256, sha384,
+			     sha512, size, time, uid, uname
+			     Enable a particular keyword in the mtree output.
+			     Prefix with an exclamation mark to disable the
+			     corresponding keyword.  The default is equivalent
+			     to ``device, flags, gid, gname, link, mode,
+			     nlink, size, time, type, uid, uname''.
+		     all     Enables all of the above keywords.
+		     use-set
+			     Enables generation of /set lines that specify
+			     default values for the following files and/or
+			     directories.
+		     indent  XXX needs explanation XXX
 
      archive_write_open()
 	     Freeze the settings, open the archive, and prepare for writing
@@ -257,8 +320,8 @@ CLIENT CALLBACKS
      If the open fails, it should call archive_set_error() to register an
      error code and message and return ARCHIVE_FATAL.
 
-	   typedef ssize_t archive_write_callback(struct archive *, void
-	   *client_data, void *buffer, size_t length)
+	   typedef ssize_t archive_write_callback(struct archive *,
+	   void *client_data, const void *buffer, size_t length)
 
      The write callback is invoked whenever the library needs to write raw
      bytes to the archive.  For correct blocking, each call to the write call-
@@ -281,6 +344,9 @@ EXAMPLE
      example, the callback functions are simply wrappers around the standard
      open(2), write(2), and close(2) system calls.
 
+	   #ifdef __linux__
+	   #define _FILE_OFFSET_BITS 64
+	   #endif
 	   #include <sys/stat.h>
 	   #include <archive.h>
 	   #include <archive_entry.h>
@@ -306,7 +372,7 @@ EXAMPLE
 	   }
 
 	   ssize_t
-	   mywrite(struct archive *a, void *client_data, void *buff, size_t n)
+	   mywrite(struct archive *a, void *client_data, const void *buff, size_t n)
 	   {
 	     struct mydata *mydata = client_data;
 
@@ -417,4 +483,4 @@ BUGS
      correctly restore device nodes with large device numbers from archives
      created by this library.
 
-FreeBSD 6.0			August 19, 2006 		   FreeBSD 6.0
+FreeBSD 8.0			 May 11, 2008			   FreeBSD 8.0
