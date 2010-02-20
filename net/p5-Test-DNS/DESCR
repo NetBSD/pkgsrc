@@ -1,0 +1,3 @@
+The Perl 5 module allows you to run tests which translate as DNS
+queries. It's simple to use and abstracts all the difficult query
+checks from you.
