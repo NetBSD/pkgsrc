@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2009/04/08 23:08:21 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/20 10:39:01 obache Exp $
 
-META_PACKAGE=	# empty
+META_PACKAGE=	yes
 
 .include "Makefile.common"
 
