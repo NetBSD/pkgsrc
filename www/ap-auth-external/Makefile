@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/02/12 21:01:27 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/02/20 14:58:44 joerg Exp $
 #
 
 DISTNAME=	mod_auth_external-${DISTVERS}
@@ -22,12 +22,6 @@ APACHE_MODULE_NAME=	mod_auth_external.${MODULE_EXT}
 DISTVERS=	2.1.19
 MODULE_EXT=	so
 MESSAGE_SUBST+=	MODULE_NAME=external_auth_module
-
-INSTALLATION_DIRS+=	lib/httpd
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/mod_auth_external.so \
-	    ${DESTDIR}${PREFIX}/lib/httpd
 
 .include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"

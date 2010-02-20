@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/08/23 07:47:00 obache Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/20 14:58:45 joerg Exp $
 #
 
 DISTNAME=	mod_mp3-0.35
@@ -10,6 +10,8 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://tangent.org/index.pl?lastnode_id=478&node_id=380
 COMMENT=	Apache module for streaming mp3 files
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=	ap-mp3-[0-9]*
 
 APACHE_MODULE_NAME=	${DISTNAME:C|-.*||}.so
@@ -20,9 +22,10 @@ APACHE_MODULE_SRC+=	ogg.c shout.c utility.c
 
 DOC_DIR=	${PREFIX}/share/httpd/htdocs/manual/mod/mod_mp3
 
+INSTALLATION_DIRS+=	${DOC_DIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOC_DIR}
-	${INSTALL_DATA} ${WRKSRC}/faq.html ${DOC_DIR}
+	${INSTALL_DATA} ${WRKSRC}/faq.html ${DESTDIR}${DOC_DIR}
 
 .include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"
