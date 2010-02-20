@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2009/01/10 05:13:01 obache Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/20 10:48:00 obache Exp $
 
 PKGREVISION=	4
 CANNA_MODULE=	server
 
 .include "../../inputmethod/canna/Makefile.common"
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 INSTALL_TARGET=	instserver
 
