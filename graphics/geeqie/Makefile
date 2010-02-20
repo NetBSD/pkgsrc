@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2009/08/26 19:57:41 sno Exp $
+# $NetBSD: Makefile,v 1.8 2010/02/20 20:50:34 gdt Exp $
 #
 
-DISTNAME=	geeqie-1.0beta2
-PKGREVISION=	2
+DISTNAME=	geeqie-1.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=geeqie/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://geeqie.sourceforge.net/
 COMMENT=	Image viewer
 LICENSE=	gnu-gpl-v2

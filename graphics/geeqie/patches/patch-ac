@@ -1,22 +1,32 @@
-$NetBSD: patch-ac,v 1.2 2009/07/24 10:51:16 drochner Exp $
+$NetBSD: patch-ac,v 1.3 2010/02/20 20:50:34 gdt Exp $
 
---- src/main.c.orig	2009-07-02 19:45:20.000000000 +0200
+--- src/main.c.orig	2010-02-17 21:21:19.000000000 +0000
 +++ src/main.c
-@@ -698,7 +698,7 @@ void exit_program(void)
+@@ -709,6 +709,7 @@ void exit_program(void)
   */
  /* FIXME: this probably needs some better ifdefs. Please report any compilation problems */
  
--#ifdef SIGBUS
 +#if 0
+ #if defined(SIGBUS) && defined(SA_SIGINFO)
  static void sigbus_handler_cb(int signum, siginfo_t *info, void *context)
  {
- 	unsigned long pagesize = sysconf(_SC_PAGE_SIZE);
-@@ -709,7 +709,7 @@ static void sigbus_handler_cb(int signum
+@@ -717,9 +718,11 @@ static void sigbus_handler_cb(int signum
+ 	mmap((void *)(((unsigned long)info->si_addr / pagesize) * pagesize), pagesize, PROT_READ | PROT_WRITE, MAP_FIXED | MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+ }
+ #endif
++#endif /* 0 */
  
  static void setup_sigbus_handler(void)
  {
--#ifdef SIGBUS
 +#if 0
+ #if defined(SIGBUS) && defined(SA_SIGINFO)
  	struct sigaction sigbus_action;
  	sigfillset(&sigbus_action.sa_mask);
- 	sigbus_action.sa_sigaction = sigbus_handler_cb;
+@@ -728,6 +731,7 @@ static void setup_sigbus_handler(void)
+ 
+ 	sigaction(SIGBUS, &sigbus_action, NULL);
+ #endif
++#endif /* 0 */
+ }
+ 
+ gint main(gint argc, gchar *argv[])
