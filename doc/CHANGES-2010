@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.876 2010/02/20 10:40:21 seb Exp $
+$NetBSD: CHANGES-2010,v 1.877 2010/02/20 11:15:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1066,3 +1066,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/sipcalc to 1.1.5 [seb 2010-02-20]
 	Updated inputmethod/canna-canuum to 3.6pl4nb3 [obache 2010-02-20]
 	Added net/p5-Test-DNS version 0.07 [seb 2010-02-20]
+	Added devel/p5-Test-SharedFork version 0.11 [seb 2010-02-20]
