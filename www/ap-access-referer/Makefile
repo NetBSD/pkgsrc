@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/02/12 20:56:54 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/20 14:58:44 joerg Exp $
 #
 
 DISTNAME=	mod_access_referer-1.0.2
@@ -18,11 +18,9 @@ APACHE_MODULE_NAME=	mod_access_referer.so
 
 DOCDIR=		${PREFIX}/share/doc
 
-INSTALLATION_DIRS+=	lib/httpd ${DOCDIR}/html/mod_access_referer
+INSTALLATION_DIRS+=	${DOCDIR}/html/mod_access_referer
 
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/mod_access_referer.so 			\
-	    ${DESTDIR}${PREFIX}/lib/httpd
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/mod_access_referer.html		\
 	    ${DESTDIR}${DOCDIR}/html/mod_access_referer
 
