@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2006/03/11 13:04:07 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2010/02/20 08:14:44 obache Exp $
 
---- awklib/Makefile.in.orig	2005-10-23 20:59:29.000000000 +0900
+--- awklib/Makefile.in.orig	2010-02-20 07:58:14.000000000 +0000
 +++ awklib/Makefile.in
 @@ -33,7 +33,7 @@ CFLAGS = @CFLAGS@
  
@@ -11,16 +11,22 @@ $NetBSD: patch-ab,v 1.2 2006/03/11 13:04:07 wiz Exp $
  manprefix =
  
  bindir = @bindir@
-@@ -74,7 +74,7 @@ group.awk: $(srcdir)/eg/lib/groupawk.in
+@@ -74,19 +74,19 @@ group.awk: $(srcdir)/eg/lib/groupawk.in
  	sed 's;/usr/local/libexec/awk;$(libexecdir);' < groupawk.in) > group.awk
  
  install: igawk $(AUXPROGS) $(AUXAWK)
 -	$(INSTALL_PROGRAM) igawk $(bindir)/igawk
-+	$(INSTALL_PROGRAM:-s=) igawk $(bindir)/$(binprefix)igawk
++	$(INSTALL_PROGRAM:-s=) igawk $(DESTDIR)$(bindir)/$(binprefix)igawk
  	for i in $(AUXPROGS) ; do \
- 		$(INSTALL_PROGRAM) $$i $(libexecdir)/$$i ; \
+-		$(INSTALL_PROGRAM) $$i $(libexecdir)/$$i ; \
++		$(INSTALL_PROGRAM) $$i $(DESTDIR)$(libexecdir)/$$i ; \
  	done
-@@ -86,7 +86,7 @@ install: igawk $(AUXPROGS) $(AUXAWK)
+ 	for i in $(AUXAWK) $(srcdir)/eg/lib/*.awk ; do \
+ 		progname=`echo $$i | sed 's;.*/;;'` ; \
+-		$(INSTALL_DATA) $$i $(datadir)/$$progname ; \
++		$(INSTALL_DATA) $$i $(DESTDIR)$(datadir)/$$progname ; \
+ 	done
+ 
  # libexecdir and datadir are removed in the top level Makefile's uninstall
  uninstall:
  	rm -fr $(libexecdir)/* $(datadir)/*

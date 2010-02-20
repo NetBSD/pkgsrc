@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2006/03/11 13:04:07 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2010/02/20 08:14:44 obache Exp $
 
---- Makefile.in.orig	2005-10-23 20:59:29.000000000 +0900
+--- Makefile.in.orig	2010-02-20 07:58:13.000000000 +0000
 +++ Makefile.in
 @@ -46,7 +46,7 @@ LN_S = @LN_S@
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2006/03/11 13:04:07 wiz Exp $
  manprefix =
  
  bindir = @bindir@
-@@ -194,14 +194,8 @@ alloca.o:	alloca.c
+@@ -194,31 +194,20 @@ alloca.o:	alloca.c
  mbc.o: Makefile
  
  install:	gawk info installdirs
@@ -24,11 +24,17 @@ $NetBSD: patch-aa,v 1.2 2006/03/11 13:04:07 wiz Exp $
 -	then	$(LN_S) gawk awk; \
 -	fi; exit 0)
 +	$(INSTALL_PROGRAM) gawk$(exec_suffix) \
-+		$(bindir)/$(binprefix)gawk$(exec_suffix)
++		$(DESTDIR)$(bindir)/$(binprefix)gawk$(exec_suffix)
  	cd doc && $(MAKE) install
  	cd awklib && $(MAKE) install
  
-@@ -213,12 +207,7 @@ install-strip:
+ installdirs: mkinstalldirs
+-	$(srcdir)/mkinstalldirs $(bindir) $(datadir) \
+-		$(libdir) $(infodir) $(mandir) $(libexecdir)
++	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir) $(DESTDIR)$(datadir) \
++		$(DESTDIR)$(libdir) $(DESTDIR)$(infodir) $(DESTDIR)$(mandir) $(DESTDIR)$(libexecdir)
+ 
+ install-strip:
  	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' install
  
  uninstall:
