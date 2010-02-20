@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2009/11/27 09:26:06 enami Exp $
+# $NetBSD: Makefile,v 1.53 2010/02/20 13:51:12 obache Exp $
 #
 
 DISTNAME=	Gauche-0.9
@@ -13,8 +13,7 @@ COMMENT=	R5RS Scheme implementation aimed to be a handy tool for daily works
 
 DEPENDS+=		slib-[0-9]*:../../devel/slib
 
-# XXX Wants to execute bin/gosh during installation
-#PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 .include "options.mk"
@@ -26,7 +25,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-slib=${SLIB_PREFIX}/share/slib
 CONFIGURE_ARGS+=	--enable-threads=pthreads
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
-MAKEVARS+=		DESTDIR
 
 CHECK_BUILTIN.iconv:=	no
 .include "../../converters/libiconv/builtin.mk"
@@ -41,7 +39,10 @@ ALL_ENV+=		\
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gzip makeinfo
 TEST_TARGET=	check
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
+
+# refer %install in ${WRKSRC}/Gauche.spec
+INSTALL_TARGET=	install-pkg install-doc
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

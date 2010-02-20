@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/11/27 09:26:06 enami Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/02/20 13:51:12 obache Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -220,7 +220,7 @@ share/gauche/${PKGVERSION}/lib/rfc/sha1.scm
 share/gauche/${PKGVERSION}/lib/rfc/uri.scm
 share/gauche/${PKGVERSION}/lib/rfc/zlib.scm
 share/gauche/${PKGVERSION}/lib/slib.scm
-share/gauche/${PKGVERSION}/lib/slibcat
+@unexec ${RM} -f %D/share/gauche/${PKGVERSION}/lib/slibcat || ${TRUE}
 share/gauche/${PKGVERSION}/lib/srfi-0.scm
 share/gauche/${PKGVERSION}/lib/srfi-1.scm
 share/gauche/${PKGVERSION}/lib/srfi-11.scm
@@ -288,3 +288,4 @@ share/gauche/${PKGVERSION}/template.module.scm
 share/gauche/${PKGVERSION}/template.test.scm
 @pkgdir lib/gauche/site/${PKGVERSION}/${MACHINE_GNU_PLATFORM}
 @pkgdir share/gauche/site/lib
+@exec %D/bin/gosh -ftest -uslib -E"require 'new-catalog" -Eexit || ${TRUE}
