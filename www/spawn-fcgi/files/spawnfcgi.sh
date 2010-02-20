@@ -1,9 +1,8 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: spawnfcgi.sh,v 1.2 2010/02/14 19:03:51 joerg Exp $
+# $NetBSD: spawnfcgi.sh,v 1.3 2010/02/20 15:23:41 joerg Exp $
 #
 # PROVIDE: spawnfcgi
-# BEFORE: apache cherokee lighttpd nginx
 # REQUIRE: DAEMON
 
 . /etc/rc.subr
