@@ -1,3 +1,5 @@
+$NetBSD: patch-ba,v 1.2 2010/02/20 10:32:20 wiz Exp $
+
 When running terminfo but compiled for termcap, we cannot assume
 that we actually have anything useable in termcap_term_buffer so just
 use the terminfo fixed size defined ealier.
