@@ -1,0 +1,3 @@
+The Perl 5 module Test::SharedFork is an utility module for
+Test::Builder: it makes forking test and merges test count with
+parent process & child process.
