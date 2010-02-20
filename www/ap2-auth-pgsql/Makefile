@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/02/10 19:34:07 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/20 14:58:45 joerg Exp $
 
 DISTNAME=		mod_auth_pgsql-2.0.3
 PKGNAME=		${APACHE_PKG_PREFIX}-auth-pgsql-2.0.3
@@ -10,25 +10,21 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.giuseppetanzilli.it/mod_auth_pgsql2/
 COMMENT=		Allows users to use PostgreSQL databases for user authentication
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=		ap-auth-postgresql-*
 
 APACHE_MODULE=		yes
-APACHE_MODULE_NAME=	ap2-auth-pgsql
+APACHE_MODULE_NAME=	mod_auth_pgsql.la
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
 
-do-build:
-	cd ${WRKSRC} && \
-		${APXS} -c -n ${APACHE_MODULE_NAME} \
-		-I${PGSQL_PREFIX}/include/postgresql \
-		-L${LOCALBASE}/lib \
-		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib \
-		-lpq ${DISTNAME:C/-[^-]*$//}.c
+.include "../../mk/apache.mk"
+.include "../../www/apache/module.mk"
 
-do-install:
-	(cd ${WRKSRC} && ${APXS} -i ${DISTNAME:C/-[^-]*$//}.la)
-	#${MKDIR} ${DOCSDIR}
-	#${INSTALL_DATA} ${WRKSRC}/mod_auth_pgsql.html ${DOCSDIR}
+CPPFLAGS+=	-I${PGSQL_PREFIX}/include/postgresql
+LDFLAGS+=	-L${LOCALBASE}/lib \
+		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib -lpq
 
 .include "../../mk/apache.mk"
 .include "../../mk/pgsql.buildlink3.mk"

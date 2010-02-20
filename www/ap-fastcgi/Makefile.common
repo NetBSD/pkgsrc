@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2008/10/01 10:03:11 taca Exp $
+# $NetBSD: Makefile.common,v 1.7 2010/02/20 14:58:45 joerg Exp $
 #
 # used by www/ap-fastcgi/Makefile
 # used by www/ap2-fastcgi/Makefile
@@ -19,6 +19,8 @@ MESSAGE_SRC=	${.CURDIR}/../../www/ap-fastcgi/MESSAGE
 PLIST_SUBST+=	APACHE_MANUAL=${APACHE_MANUAL:Q}
 MESSAGE_SUBST+=	APACHE_MANUAL=${APACHE_MANUAL:Q}
 
+INSTALLATION_DIRS+=	share/httpd/${APACHE_MANUAL}/mod
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/mod_fastcgi.html	\
-		${PREFIX}/share/httpd/${APACHE_MANUAL}/mod/
+		${DESTDIR}${PREFIX}/share/httpd/${APACHE_MANUAL}/mod/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/17 12:02:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/20 14:58:45 joerg Exp $
 
 DISTNAME=	mod_auth_radius
 PKGNAME=	${APACHE_PKG_PREFIX}-auth-radius-1.5.7
@@ -10,15 +10,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freeradius.org/mod_auth_radius/
 COMMENT=	Module to allow apache2 authentication against a RADIUS server
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/${DISTNAME}-1.5.7
 EXTRACT_SUFX=		.tar
 NO_CONFIGURE=		YES
 APACHE_MODULE=		YES
-APACHE_MODULE_NAME=	mod_auth_radius
+APACHE_MODULE_NAME=	mod_auth_radius.la
+APACHE_MODULE_SRC=	mod_auth_radius.c
 USE_LIBTOOL=		YES
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
 .include "../../mk/apache.mk"
+.include "../../www/apache/module.mk"
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
 
 .include "../../security/openssl/buildlink3.mk"
@@ -27,22 +31,15 @@ post-extract:
 	${MV} ${WRKSRC}/mod_auth_radius.c ${WRKSRC}/mod_auth_radius-1.0.c
 	${MV} ${WRKSRC}/mod_auth_radius-2.0.c ${WRKSRC}/mod_auth_radius.c
 
-do-build:
-	cd ${WRKSRC} && \
-		${APXS} -c -n ${APACHE_MODULE_NAME} ${APACHE_MODULE_NAME}.c
+INSTALLATION_DIRS+=	share/doc/mod_auth_radius share/examples/mod_auth_radius
 
-do-install:
-	cd ${WRKSRC} && ${APXS} -i -n ${APACHE_MODULE_NAME} \
-		${APACHE_MODULE_NAME}.la
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mod_auth_radius
+	${INSTALL_DATA} ${WRKSRC}/index.html ${DESTDIR}${PREFIX}/share/doc/mod_auth_radius
 
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_radius
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/mod_auth_radius
-	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/doc/mod_auth_radius
-
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mod_auth_radius
 	${INSTALL_DATA} ${WRKSRC}/htaccess \
-		${PREFIX}/share/examples/mod_auth_radius
+	    ${DESTDIR}${PREFIX}/share/examples/mod_auth_radius
 	${INSTALL_DATA} ${WRKSRC}/httpd.conf \
-		${PREFIX}/share/examples/mod_auth_radius
+	    ${DESTDIR}${PREFIX}/share/examples/mod_auth_radius
 
 .include "../../mk/bsd.pkg.mk"
