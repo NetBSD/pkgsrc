@@ -1,7 +1,11 @@
-# $NetBSD: Makefile.common,v 1.19 2009/01/10 05:13:01 obache Exp $
+# $NetBSD: Makefile.common,v 1.20 2010/02/20 10:41:59 obache Exp $
 #
 # Canna common makefile.
 #
+# used by inputmethod/canna-canuum/Makefile
+# used by inputmethod/canna-dict/Makefile
+# used by inputmethod/canna-lib/Makefile
+# used by inputmethod/canna-server/Makefile
 
 # "Pkgsrc" version.
 CANNA_VERSION=	3.6pl4
