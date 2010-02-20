@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/15 20:29:15 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/20 01:59:52 minskim Exp $
 # TeX Live Revision 16044
 
 DISTNAME=	latex-bin
 PKGNAME=	tex-${DISTNAME}-2009
+PKGREVISION=	1
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX executables
 
-CONFLICTS+=	teTeX-texmf<=3.0nb31
+CONFLICTS+=	teTeX-texmf<=3.0nb21
 CONFLICTS+=	tex-bin-latex<2009
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 SUPERSEDES=	tex-bin-latex<2009
