@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.873 2010/02/20 03:57:11 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.874 2010/02/20 07:43:51 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1063,3 +1063,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-latex-bin to 2009nb1 [minskim 2010-02-20]
 	Updated archivers/bsdtar to 2.8.0 [joerg 2010-02-20]
 	Updated archivers/libarchive to 2.8.0 [joerg 2010-02-20]
+	Updated net/sipcalc to 1.1.5 [seb 2010-02-20]
