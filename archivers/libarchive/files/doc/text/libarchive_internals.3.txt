@@ -245,4 +245,4 @@ AUTHORS
      The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
 BUGS
-FreeBSD 6.0			April 16, 2007			   FreeBSD 6.0
+FreeBSD 8.0			April 16, 2007			   FreeBSD 8.0

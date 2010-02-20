@@ -1,131 +1,93 @@
-.TH archive_write_disk 3 "March 2, 2007" ""
+.TH archive_write_disk 3 "August 5, 2008" ""
 .SH NAME
-\fBarchive_write_disk_new\fP,
-\fBarchive_write_disk_set_options\fP,
-\fBarchive_write_disk_set_skip_file\fP,
-\fBarchive_write_disk_set_group_lookup\fP,
-\fBarchive_write_disk_set_standard_lookup\fP,
-\fBarchive_write_disk_set_user_lookup\fP,
-\fBarchive_write_header\fP,
-\fBarchive_write_data\fP,
-\fBarchive_write_finish_entry\fP,
-\fBarchive_write_close\fP,
-\fBarchive_write_finish\fP
+.ad l
+\fB\%archive_write_disk_new\fP,
+\fB\%archive_write_disk_set_options\fP,
+\fB\%archive_write_disk_set_skip_file\fP,
+\fB\%archive_write_disk_set_group_lookup\fP,
+\fB\%archive_write_disk_set_standard_lookup\fP,
+\fB\%archive_write_disk_set_user_lookup\fP,
+\fB\%archive_write_header\fP,
+\fB\%archive_write_data\fP,
+\fB\%archive_write_finish_entry\fP,
+\fB\%archive_write_close\fP,
+\fB\%archive_write_finish\fP
 \- functions for creating objects on disk
 .SH SYNOPSIS
+.ad l
 \fB#include <archive.h>\fP
 .br
 \fIstruct archive *\fP
-.RE
-.nh
-\fBarchive_write_disk_new\fP
-.hy
-("void");
+.br
+\fB\%archive_write_disk_new\fP(\fI\%void\fP);
+.br
 \fIint\fP
-.RE
-.nh
-\fBarchive_write_disk_set_options\fP
-.hy
-("struct archive *" "int flags");
+.br
+\fB\%archive_write_disk_set_options\fP(\fI\%struct\ archive\ *\fP, \fI\%int\ flags\fP);
+.br
 \fIint\fP
-.RE
-.nh
-\fBarchive_write_disk_set_skip_file\fP
-.hy
-("struct archive *" "dev_t" "ino_t");
+.br
+\fB\%archive_write_disk_set_skip_file\fP(\fI\%struct\ archive\ *\fP, \fI\%dev_t\fP, \fI\%ino_t\fP);
+.br
 \fIint\fP
-.RE
-Fo archive_write_disk_set_group_lookup
-Fa "struct archive *"
-Fa "void *"
-Fa "gid_t (*)(void *, const char *gname, gid_t gid)"
-Fa "void (*cleanup)(void *)"
-Fc
+.br
+\fB\%archive_write_disk_set_group_lookup\fP(\fI\%struct\ archive\ *\fP, \fI\%void\ *\fP, \fI\%gid_t\ (*)(void\ *,\ const\ char\ *gname,\ gid_t\ gid)\fP, \fI\%void\ (*cleanup)(void\ *)\fP);
+.br
 \fIint\fP
-.RE
-.nh
-\fBarchive_write_disk_set_standard_lookup\fP
-.hy
-("struct archive *");
+.br
+\fB\%archive_write_disk_set_standard_lookup\fP(\fI\%struct\ archive\ *\fP);
+.br
 \fIint\fP
-.RE
-Fo archive_write_disk_set_user_lookup
-Fa "struct archive *"
-Fa "void *"
-Fa "uid_t (*)(void *, const char *uname, uid_t uid)"
-Fa "void (*cleanup)(void *)"
-Fc
+.br
+\fB\%archive_write_disk_set_user_lookup\fP(\fI\%struct\ archive\ *\fP, \fI\%void\ *\fP, \fI\%uid_t\ (*)(void\ *,\ const\ char\ *uname,\ uid_t\ uid)\fP, \fI\%void\ (*cleanup)(void\ *)\fP);
+.br
 \fIint\fP
-.RE
-.nh
-\fBarchive_write_header\fP
-.hy
-("struct archive *" "struct archive_entry *");
+.br
+\fB\%archive_write_header\fP(\fI\%struct\ archive\ *\fP, \fI\%struct\ archive_entry\ *\fP);
+.br
 \fIssize_t\fP
-.RE
-.nh
-\fBarchive_write_data\fP
-.hy
-("struct archive *" "const void *" "size_t");
+.br
+\fB\%archive_write_data\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ void\ *\fP, \fI\%size_t\fP);
+.br
 \fIint\fP
-.RE
-.nh
-\fBarchive_write_finish_entry\fP
-.hy
-("struct archive *");
+.br
+\fB\%archive_write_finish_entry\fP(\fI\%struct\ archive\ *\fP);
+.br
 \fIint\fP
-.RE
-.nh
-\fBarchive_write_close\fP
-.hy
-("struct archive *");
+.br
+\fB\%archive_write_close\fP(\fI\%struct\ archive\ *\fP);
+.br
 \fIint\fP
-.RE
-.nh
-\fBarchive_write_finish\fP
-.hy
-("struct archive *");
+.br
+\fB\%archive_write_finish\fP(\fI\%struct\ archive\ *\fP);
 .SH DESCRIPTION
+.ad l
 These functions provide a complete API for creating objects on
 disk from
 Tn struct archive_entry
 descriptions.
 They are most naturally used when extracting objects from an archive
 using the
-.nh
-\fBarchive_read\fP
-.hy
-();
+\fB\%archive_read\fP()
 interface.
 The general process is to read
 Tn struct archive_entry
 objects from an archive, then write those objects to a
 Tn struct archive
 object created using the
-.nh
-\fBarchive_write_disk\fP
-.hy
-();
+\fB\%archive_write_disk\fP()
 family functions.
 This interface is deliberately very similar to the
-.nh
-\fBarchive_write\fP
-.hy
-();
+\fB\%archive_write\fP()
 interface used to write objects to a streaming archive.
+.RS 5
 .TP
-.nh
-\fBarchive_write_disk_new\fP
-.hy
-();
+\fB\%archive_write_disk_new\fP()
 Allocates and initializes a
 Tn struct archive
 object suitable for writing objects to disk.
 .TP
-.nh
-\fBarchive_write_disk_set_skip_file\fP
-.hy
-();
+\fB\%archive_write_disk_set_skip_file\fP()
 Records the device and inode numbers of a file that should not be
 overwritten.
 This is typically used to ensure that an extraction process does not
@@ -133,12 +95,10 @@ overwrite the archive from which objects are being read.
 This capability is technically unnecessary but can be a significant
 performance optimization in practice.
 .TP
-.nh
-\fBarchive_write_disk_set_options\fP
-.hy
-();
+\fB\%archive_write_disk_set_options\fP()
 The options field consists of a bitwise OR of one or more of the
 following values:
+.RS 5
 .TP
 \fBARCHIVE_EXTRACT_OWNER\fP
 The user and group IDs should be set on the restored file.
@@ -214,17 +174,10 @@ always cause an error, regardless of this flag.
 Scan data for blocks of NUL bytes and try to recreate them with holes.
 This results in sparse files, independent of whether the archive format
 supports or uses them.
+.RE
 .TP
-Xo
-.nh
-\fBarchive_write_disk_set_group_lookup\fP
-.hy
-(,);
-.nh
-\fBarchive_write_disk_set_user_lookup\fP
-.hy
-();
-Xc
+\fB\%archive_write_disk_set_group_lookup\fP(),
+\fB\%archive_write_disk_set_user_lookup\fP()
 The
 Tn struct archive_entry
 objects contain both names and ids that can be used to identify users
@@ -243,10 +196,7 @@ The cleanup function will be invoked when the
 Tn struct archive
 object is destroyed.
 .TP
-.nh
-\fBarchive_write_disk_set_standard_lookup\fP
-.hy
-();
+\fB\%archive_write_disk_set_standard_lookup\fP()
 This convenience function installs a standard set of user
 and group lookup functions.
 These functions use
@@ -261,10 +211,7 @@ the number of calls to
 and
 \fBgetgrnam\fP(3).
 .TP
-.nh
-\fBarchive_write_header\fP
-.hy
-();
+\fB\%archive_write_header\fP()
 Build and write a header using the data in the provided
 Tn struct archive_entry
 structure.
@@ -274,55 +221,35 @@ for information on creating and populating
 Tn struct archive_entry
 objects.
 .TP
-.nh
-\fBarchive_write_data\fP
-.hy
-();
+\fB\%archive_write_data\fP()
 Write data corresponding to the header just written.
 Returns number of bytes written or -1 on error.
 .TP
-.nh
-\fBarchive_write_finish_entry\fP
-.hy
-();
+\fB\%archive_write_finish_entry\fP()
 Close out the entry just written.
 Ordinarily, clients never need to call this, as it
 is called automatically by
-.nh
-\fBarchive_write_next_header\fP
-.hy
-();
+\fB\%archive_write_next_header\fP()
 and
-.nh
-\fBarchive_write_close\fP
-.hy
-();
+\fB\%archive_write_close\fP()
 as needed.
 .TP
-.nh
-\fBarchive_write_close\fP
-.hy
-();
+\fB\%archive_write_close\fP()
 Set any attributes that could not be set during the initial restore.
 For example, directory timestamps are not restored initially because
 restoring a subsequent file would alter that timestamp.
 Similarly, non-writable directories are initially created with
 write permissions (so that their contents can be restored).
 The
-\fBarchive_write_disk_new\fP
+\fB\%archive_write_disk_new\fP
 library maintains a list of all such deferred attributes and
 sets them when this function is invoked.
 .TP
-.nh
-\fBarchive_write_finish\fP
-.hy
-();
+\fB\%archive_write_finish\fP()
 Invokes
-.nh
-\fBarchive_write_close\fP
-.hy
-();
+\fB\%archive_write_close\fP()
 if it was not invoked manually, then releases all resources.
+.RE
 More information about the
 \fIstruct\fP archive
 object and the overall design of the library can be found in the
@@ -331,6 +258,7 @@ overview.
 Many of these functions are also documented under
 \fBarchive_write\fP(3).
 .SH RETURN VALUES
+.ad l
 Most functions return
 \fBARCHIVE_OK\fP
 (zero) on success, or one of several non-zero
@@ -343,74 +271,56 @@ for unusual conditions that do not prevent further operations, and
 \fBARCHIVE_FATAL\fP
 for serious errors that make remaining operations impossible.
 The
-.nh
-\fBarchive_errno\fP
-.hy
-();
+\fB\%archive_errno\fP()
 and
-.nh
-\fBarchive_error_string\fP
-.hy
-();
+\fB\%archive_error_string\fP()
 functions can be used to retrieve an appropriate error code and a
 textual error message.
-.nh
-\fBarchive_write_disk_new\fP
-.hy
-();
+.PP
+\fB\%archive_write_disk_new\fP()
 returns a pointer to a newly-allocated
 Tn struct archive
 object.
-.nh
-\fBarchive_write_data\fP
-.hy
-();
+.PP
+\fB\%archive_write_data\fP()
 returns a count of the number of bytes actually written.
 On error, -1 is returned and the
-.nh
-\fBarchive_errno\fP
-.hy
-();
+\fB\%archive_errno\fP()
 and
-.nh
-\fBarchive_error_string\fP
-.hy
-();
+\fB\%archive_error_string\fP()
 functions will return appropriate values.
 .SH SEE ALSO
+.ad l
 \fBarchive_read\fP(3),
 \fBarchive_write\fP(3),
 \fBtar\fP(1),
 \fBlibarchive\fP(3)
 .SH HISTORY
+.ad l
 The
-\fBlibarchive\fP
+\fB\%libarchive\fP
 library first appeared in
 FreeBSD 5.3.
 The
-\fBarchive_write_disk\fP
+\fB\%archive_write_disk\fP
 interface was added to
-\fBlibarchive\fP 2.0
+\fB\%libarchive\fP 2.0
 and first appeared in
 FreeBSD 6.3.
 .SH AUTHORS
+.ad l
 -nosplit
 The
-\fBlibarchive\fP
+\fB\%libarchive\fP
 library was written by
-Tim Kientzle <kientzle@acm.org.>
+Tim Kientzle \%<kientzle@acm.org.>
 .SH BUGS
+.ad l
 Directories are actually extracted in two distinct phases.
 Directories are created during
-.nh
-\fBarchive_write_header\fP
-.hy
-(,);
+\fB\%archive_write_header\fP(),
 but final permissions are not set until
-.nh
-\fBarchive_write_close\fP
-.hy
-(.);
+\fB\%archive_write_close\fP().
 This separation is necessary to correctly handle borderline
 cases such as a non-writable directory containing
 files, but can cause unexpected results.
@@ -419,24 +329,20 @@ restored until the archive is closed.
 If you use
 \fBchdir\fP(2)
 to change the current directory between calls to
-.nh
-\fBarchive_read_extract\fP
-.hy
-();
+\fB\%archive_read_extract\fP()
 or before calling
-.nh
-\fBarchive_read_close\fP
-.hy
-(,);
+\fB\%archive_read_close\fP(),
 you may confuse the permission-setting logic with
 the result that directory permissions are restored
 incorrectly.
+.PP
 The library attempts to create objects with filenames longer than
 \fBPATH_MAX\fP
 by creating prefixes of the full path and changing the current directory.
 Currently, this logic is limited in scope; the fixup pass does
 not work correctly for such objects and the symlink security check
 option disables the support for very long pathnames.
+.PP
 Restoring the path
 \fIaa/../bb\fP
 does create each intermediate directory.
@@ -449,10 +355,12 @@ with a single request.
 Of course, this does not work if the
 \fBARCHIVE_EXTRACT_NODOTDOT\fP
 option is specified.
+.PP
 Implicit directories are always created obeying the current umask.
 Explicit objects are created obeying the current umask unless
 \fBARCHIVE_EXTRACT_PERM\fP
 is specified, in which case they current umask is ignored.
+.PP
 SGID and SUID bits are restored only if the correct user and
 group could be set.
 If
@@ -461,6 +369,7 @@ is not specified, then no attempt is made to set the ownership.
 In this case, SGID and SUID bits are restored only if the
 user and group of the final object happen to match those specified
 in the entry.
+.PP
 The
 ``standard''
 user-id and group-id lookup functions are not the defaults because
@@ -470,7 +379,8 @@ and
 are sometimes too large for particular applications.
 The current design allows the application author to use a more
 compact implementation when appropriate.
+.PP
 There should be a corresponding
-\fBarchive_read_disk\fP
+\fB\%archive_read_disk\fP
 interface that walks a directory heirarchy and returns archive
 entry objects.
