@@ -5,21 +5,22 @@ NAME
      archive_entry_acl_clear, archive_entry_acl_count, archive_entry_acl_next,
      archive_entry_acl_next_w, archive_entry_acl_reset,
      archive_entry_acl_text_w, archive_entry_atime, archive_entry_atime_nsec,
-     archive_entry_clear, archive_entry_clone,
+     archive_entry_clear, archive_entry_clone, archive_entry_copy_fflags_text,
      archive_entry_copy_fflags_text_w, archive_entry_copy_gname,
      archive_entry_copy_gname_w, archive_entry_copy_hardlink,
-     archive_entry_copy_hardlink_w, archive_entry_copy_pathname_w,
-     archive_entry_copy_stat, archive_entry_copy_symlink,
-     archive_entry_copy_symlink_w, archive_entry_copy_uname,
-     archive_entry_copy_uname_w, archive_entry_dev, archive_entry_devmajor,
-     archive_entry_devminor, archive_entry_filetype, archive_entry_fflags,
-     archive_entry_fflags_text, archive_entry_free, archive_entry_gid,
-     archive_entry_gname, archive_entry_hardlink, archive_entry_ino,
-     archive_entry_mode, archive_entry_mtime, archive_entry_mtime_nsec,
-     archive_entry_nlink, archive_entry_new, archive_entry_pathname,
-     archive_entry_pathname_w, archive_entry_rdev, archive_entry_rdevmajor,
-     archive_entry_rdevminor, archive_entry_set_atime,
-     archive_entry_set_ctime, archive_entry_set_dev,
+     archive_entry_copy_hardlink_w, archive_entry_copy_link,
+     archive_entry_copy_link_w, archive_entry_copy_pathname_w,
+     archive_entry_copy_sourcepath, archive_entry_copy_stat,
+     archive_entry_copy_symlink, archive_entry_copy_symlink_w,
+     archive_entry_copy_uname, archive_entry_copy_uname_w, archive_entry_dev,
+     archive_entry_devmajor, archive_entry_devminor, archive_entry_filetype,
+     archive_entry_fflags, archive_entry_fflags_text, archive_entry_free,
+     archive_entry_gid, archive_entry_gname, archive_entry_hardlink,
+     archive_entry_ino, archive_entry_mode, archive_entry_mtime,
+     archive_entry_mtime_nsec, archive_entry_nlink, archive_entry_new,
+     archive_entry_pathname, archive_entry_pathname_w, archive_entry_rdev,
+     archive_entry_rdevmajor, archive_entry_rdevminor,
+     archive_entry_set_atime, archive_entry_set_ctime, archive_entry_set_dev,
      archive_entry_set_devmajor, archive_entry_set_devminor,
      archive_entry_set_filetype, archive_entry_set_fflags,
      archive_entry_set_gid, archive_entry_set_gname,
@@ -28,9 +29,10 @@ NAME
      archive_entry_set_pathname, archive_entry_set_rdevmajor,
      archive_entry_set_rdevminor, archive_entry_set_size,
      archive_entry_set_symlink, archive_entry_set_uid,
-     archive_entry_set_uname, archive_entry_size, archive_entry_stat,
-     archive_entry_symlink, archive_entry_uid, archive_entry_uname -- func-
-     tions for manipulating archive entry descriptions
+     archive_entry_set_uname, archive_entry_size, archive_entry_sourcepath,
+     archive_entry_stat, archive_entry_symlink, archive_entry_uid,
+     archive_entry_uname -- functions for manipulating archive entry descrip-
+     tions
 
 SYNOPSIS
      #include <archive_entry.h>
@@ -75,6 +77,9 @@ SYNOPSIS
      struct archive_entry *
      archive_entry_clone(struct archive_entry *);
 
+     const char * *
+     archive_entry_copy_fflags_text_w(struct archive_entry *, const char *);
+
      const wchar_t *
      archive_entry_copy_fflags_text_w(struct archive_entry *,
 	 const wchar_t *);
@@ -90,6 +95,9 @@ SYNOPSIS
 
      void
      archive_entry_copy_hardlink_w(struct archive_entry *, const wchar_t *);
+
+     void
+     archive_entry_copy_sourcepath(struct archive_entry *, const char *);
 
      void
      archive_entry_copy_pathname_w(struct archive_entry *, const wchar_t *);
@@ -237,6 +245,9 @@ SYNOPSIS
      int64_t
      archive_entry_size(struct archive_entry *);
 
+     const char *
+     archive_entry_sourcepath(struct archive_entry *);
+
      const struct stat *
      archive_entry_stat(struct archive_entry *);
 
@@ -316,15 +327,15 @@ DESCRIPTION
      bits that are not meaningful on the current platform will be ignored.
 
      The canonical text format is a comma-separated list of flag names.  The
-     archive_entry_copy_fflags_text_w() function parses the provided text and
-     sets the internal bitmap values.  This is a platform-specific operation;
-     names that are not meaningful on the current platform will be ignored.
-     The function returns a pointer to the start of the first name that was
-     not recognized, or NULL if every name was recognized.  Note that every
-     name--including names that follow an unrecognized name--will be evalu-
-     ated, and the bitmaps will be set to reflect every name that is recog-
-     nized.  (In particular, this differs from strtofflags(3), which stops
-     parsing at the first unrecognized name.)
+     archive_entry_copy_fflags_text() and archive_entry_copy_fflags_text_w()
+     functions parse the provided text and sets the internal bitmap values.
+     This is a platform-specific operation; names that are not meaningful on
+     the current platform will be ignored.  The function returns a pointer to
+     the start of the first name that was not recognized, or NULL if every
+     name was recognized.  Note that every name--including names that follow
+     an unrecognized name--will be evaluated, and the bitmaps will be set to
+     reflect every name that is recognized.  (In particular, this differs from
+     strtofflags(3), which stops parsing at the first unrecognized name.)
 
    ACL Handling
      XXX This needs serious help.  XXX
@@ -347,4 +358,4 @@ HISTORY
 AUTHORS
      The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
-FreeBSD 6.0		       December 15, 2003		   FreeBSD 6.0
+FreeBSD 8.0			 May 12, 2008			   FreeBSD 8.0

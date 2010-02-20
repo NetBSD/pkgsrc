@@ -1,35 +1,40 @@
 .TH BSDCPIO 1 "December 21, 2007" ""
 .SH NAME
-\fBcpio\fP
+.ad l
+\fB\%cpio\fP
 \- copy files to and from archives
 .SH SYNOPSIS
+.ad l
 .br
-\fBcpio\fP
+\fB\%cpio\fP
 {\fB\-i\fP}
 [\fIoptions\fP]
 [\fIpattern\fP ...]
 [\fI<\fP archive]
 .br
-\fBcpio\fP
+\fB\%cpio\fP
 {\fB\-o\fP}
 [\fIoptions\fP]
 \fI<\fP name-list
 [\fI>\fP archive]
 .br
-\fBcpio\fP
+\fB\%cpio\fP
 {\fB\-p\fP}
 [\fIoptions\fP]
 \fIdest-dir\fP
 \fI<\fP name-list
 .SH DESCRIPTION
-\fBcpio\fP
+.ad l
+\fB\%cpio\fP
 copies files between archives and directories.
 This implementation can extract from tar, pax, cpio, zip, jar, ar,
 and ISO 9660 cdrom images and can create tar, pax, cpio, ar,
 and shar archives.
+.PP
 The first option to
-\fBcpio\fP
+\fB\%cpio\fP
 is a mode indicator from the following list:
+.RS 5
 .TP
 \fB\-i\fP
 Input.
@@ -50,9 +55,17 @@ on standard output (unless overriden) containing the specified items.
 Pass-through.
 Read a list of filenames from standard input and copy the files to the
 specified directory.
+.RE
+.PP
 .SH OPTIONS
+.ad l
 Unless specifically stated otherwise, options are applicable in
 all operating modes.
+.RS 5
+.TP
+\fB\-0\fP
+Read filenames separated by NUL characters instead of newlines.
+This is necessary if any of the filenames being read might contain newlines.
 .TP
 \fB\-A\fP
 (o mode only)
@@ -102,6 +115,8 @@ Ignore files that match
 (o mode only)
 Produce the output archive in the specified format.
 Supported formats include:
+.PP
+.RS 5
 .TP
 \fIcpio\fP
 Synonym for
@@ -118,6 +133,8 @@ The POSIX.1 pax format, an extension of the ustar format.
 .TP
 \fIustar\fP
 The POSIX.1 tar format.
+.RE
+.PP
 The default format is
 \fIodc\fP.
 See
@@ -126,6 +143,13 @@ for more complete information about the
 formats currently supported by the underlying
 \fBlibarchive\fP(3)
 library.
+.TP
+\fB\-H\fP \fIformat\fP
+Synonym for
+\fB\--format\fP.
+.TP
+\fB\-h\fP, \fB\--help\fP
+Print usage information.
 .TP
 \fB\-I\fP \fIfile\fP
 Read archive from
@@ -142,6 +166,16 @@ This allows extraction via symbolic links and path names containing
 Sq ..
 in the name.
 .TP
+\fB\-J\fP
+(o mode only)
+Compress the file with xz-compatible compression before writing it.
+In input mode, this option is ignored; xz compression is recognized
+automatically on input.
+.TP
+\fB\-j\fP
+Synonym for
+\fB\-y\fP.
+.TP
 \fB\-L\fP
 (o and p modes)
 All symbolic links will be followed.
@@ -153,10 +187,31 @@ With this option, the target of the link will be archived or copied instead.
 Create links from the target directory to the original files,
 instead of copying.
 .TP
+\fB\-lzma\fP
+(o mode only)
+Compress the file with lzma-compatible compression before writing it.
+In input mode, this option is ignored; lzma compression is recognized
+automatically on input.
+.TP
 \fB\-m\fP
 (i and p modes)
 Set file modification time on created files to match
 those in the source.
+.TP
+\fB\-n\fP
+(i mode, only with
+\fB\-t\fP)
+Display numeric uid and gid.
+By default,
+\fB\%cpio\fP
+displays the user and group names when they are provided in the
+archive, or looks up the user and group names in the system
+password database.
+.TP
+\fB\-no-preserve-owner\fP
+(i mode only)
+Do not attempt to restore file ownership.
+This is the default when run by non-root users.
 .TP
 \fB\-O\fP \fIfile\fP
 Write archive to
@@ -169,6 +224,11 @@ See above for description.
 \fB\-p\fP
 Pass-through mode.
 See above for description.
+.TP
+\fB\-preserve-owner\fP
+(i mode only)
+Restore file ownership.
+This is the default when run by the root user.
 .TP
 \fB\--quiet\fP
 Suppress unnecessary messages.
@@ -239,9 +299,12 @@ compression is recognized automatically on input.
 Compress the archive with gzip-compatible compression before writing it.
 In input mode, this option is ignored;
 gzip compression is recognized automatically on input.
+.RE
 .SH ENVIRONMENT
+.ad l
 The following environment variables affect the execution of
-\fB:\fP
+\fB\%cpio\fP:
+.RS 5
 .TP
 .B LANG
 The locale to use.
@@ -254,11 +317,14 @@ The timezone to use when displaying dates.
 See
 \fBenviron\fP(7)
 for more information.
+.RE
 .SH EXIT STATUS
+.ad l
 The \fBcpio\fP utility exits 0 on success, and >0 if an error occurs.
 .SH EXAMPLES
+.ad l
 The
-\fBcpio\fP
+\fB\%cpio\fP
 command is traditionally used to copy file heirarchies in conjunction
 with the
 \fBfind\fP(1)
@@ -267,9 +333,10 @@ The first example here simply copies all files from
 \fIsrc\fP
 to
 \fIdest\fP:
-.RS
-\fBcpio\fP find \fIsrc\fP | \fBcpio\fP \fB\-pmud\fP \fIdest\fP
+.RS 4
+\fB\%find\fP \fIsrc\fP | \fB\%cpio\fP \fB\-pmud\fP \fIdest\fP
 .RE
+.PP
 By carefully selecting options to the
 \fBfind\fP(1)
 command and combining it with other standard utilities,
@@ -279,21 +346,24 @@ This next example copies files from
 to
 \fIdest\fP
 that are more than 2 days old and whose names match a particular pattern:
-.RS
-\fBcpio\fP find \fIsrc\fP \fB\-mtime\fP \fI+2\fP | \fINm\fP grep foo[bar] | \fBcpio\fP \fB\-pdmu\fP \fIdest\fP
+.RS 4
+\fB\%find\fP \fIsrc\fP \fB\-mtime\fP \fI+2\fP | \fB\%grep\fP foo[bar] | \fB\%cpio\fP \fB\-pdmu\fP \fIdest\fP
 .RE
+.PP
 This example copies files from
 \fIsrc\fP
 to
 \fIdest\fP
 that are more than 2 days old and which contain the word
-Do foobar Dc:
-.RS
-\fBcpio\fP find \fIsrc\fP \fB\-mtime\fP \fI+2\fP | \fINm\fP xargs \fBcpio\fP grep -l foobar | \fBcpio\fP \fB\-pdmu\fP \fIdest\fP
+``foobar'':
+.RS 4
+\fB\%find\fP \fIsrc\fP \fB\-mtime\fP \fI+2\fP | \fB\%xargs\fP \fB\%grep\fP -l foobar | \fB\%cpio\fP \fB\-pdmu\fP \fIdest\fP
 .RE
 .SH COMPATIBILITY
+.ad l
 The mode options i, o, and p and the options
 a, B, c, d, f, l, m, r, t, u, and v comply with SUSv2.
+.PP
 The old POSIX.1 standard specified that only
 \fB\-i\fP,
 \fB\-o\fP,
@@ -320,6 +390,7 @@ with the standard.
 For best compatibility, scripts should limit themselves to the
 standard syntax.
 .SH SEE ALSO
+.ad l
 \fBbzip2\fP(1),
 \fBtar\fP(1),
 \fBgzip\fP(1),
@@ -330,19 +401,22 @@ standard syntax.
 \fBlibarchive-formats\fP(5),
 \fBtar\fP(5)
 .SH STANDARDS
+.ad l
 There is no current POSIX standard for the cpio command; it appeared
 in
 ISO/IEC 9945-1:1996 (``POSIX.1'')
 but was dropped from
 IEEE Std 1003.1-2001 (``POSIX.1'').
+.PP
 The cpio, ustar, and pax interchange file formats are defined by
 IEEE Std 1003.1-2001 (``POSIX.1'')
 for the pax command.
 .SH HISTORY
+.ad l
 The original
-\fBcpio\fP
+\fB\%cpio\fP
 and
-\fBfind\fP
+\fB\%find\fP
 utilities were written by Dick Haight
 while working in AT&T's Unix Support Group.
 They first appeared in 1977 in PWB/UNIX 1.0, the
@@ -350,14 +424,16 @@ They first appeared in 1977 in PWB/UNIX 1.0, the
 system developed for use within AT&T.
 They were first released outside of AT&T as part of System III Unix in 1981.
 As a result,
-\fBcpio\fP
+\fB\%cpio\fP
 actually predates
-\fBtar\fP,
+\fB\%tar\fP,
 even though it was not well-known outside of AT&T until some time later.
+.PP
 This is a complete re-implementation based on the
 \fBlibarchive\fP(3)
 library.
 .SH BUGS
+.ad l
 The cpio archive format has several basic limitations:
 It does not store user and group names, only numbers.
 As a result, it cannot be reliably used to transfer

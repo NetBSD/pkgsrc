@@ -182,4 +182,4 @@ BUGS
      formats do not support nanosecond timestamps; old tar formats do not sup-
      port large device numbers.
 
-FreeBSD 6.0			August 19, 2006 		   FreeBSD 6.0
+FreeBSD 8.0			August 19, 2006 		   FreeBSD 8.0

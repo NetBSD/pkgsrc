@@ -128,6 +128,10 @@ DESCRIPTION
 		     where within it.  The default is to not refuse such
 		     paths.  Note that paths ending in .. always cause an
 		     error, regardless of this flag.
+	     ARCHIVE_EXTRACT_SPARSE
+		     Scan data for blocks of NUL bytes and try to recreate
+		     them with holes.  This results in sparse files, indepen-
+		     dent of whether the archive format supports or uses them.
 
      archive_write_disk_set_group_lookup(),
 	     archive_write_disk_set_user_lookup()
@@ -250,4 +254,4 @@ BUGS
      There should be a corresponding archive_read_disk interface that walks a
      directory heirarchy and returns archive entry objects.
 
-FreeBSD 6.0			 March 2, 2007			   FreeBSD 6.0
+FreeBSD 8.0			August 5, 2008			   FreeBSD 8.0

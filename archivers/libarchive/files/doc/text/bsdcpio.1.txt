@@ -14,13 +14,14 @@ DESCRIPTION
      and can create tar, pax, cpio, ar, and shar archives.
 
      The first option to cpio is a mode indicator from the following list:
-     -i      Input.  Read an archive from standard input and extract the con-
-	     tents to disk or (if the -t option is specified) list the con-
-	     tents to standard output.
+     -i      Input.  Read an archive from standard input (unless overriden)
+	     and extract the contents to disk or (if the -t option is speci-
+	     fied) list the contents to standard output.  If one or more file
+	     patterns are specified, only files matching one of the patterns
+	     will be extracted.
      -o      Output.  Read a list of filenames from standard input and produce
-	     a new archive on standard output containing the specified items.
-	     If one or more file patterns are specified, only files matching
-	     one of the patterns will be extracted.
+	     a new archive on standard output (unless overriden) containing
+	     the specified items.
      -p      Pass-through.  Read a list of filenames from standard input and
 	     copy the files to the specified directory.
 
@@ -28,19 +29,34 @@ OPTIONS
      Unless specifically stated otherwise, options are applicable in all oper-
      ating modes.
 
+     -0      Read filenames separated by NUL characters instead of newlines.
+	     This is necessary if any of the filenames being read might con-
+	     tain newlines.
+
+     -A      (o mode only) Append to the specified archive.  (Not yet imple-
+	     mented.)
+
      -a      (o and p modes) Reset access times on files after they are read.
-	     (Not yet implemented)
 
      -B      (o mode only) Block output to records of 5120 bytes.
+
+     -C size
+	     (o mode only) Block output to records of size bytes.
 
      -c      (o mode only) Use the old POSIX portable character format.
 	     Equivalent to --format odc.
 
      -d      (i and p modes) Create directories as necessary.
 
+     -E file
+	     (i mode only) Read list of file name patterns from file to list
+	     and extract.
+
+     -F file
+	     Read archive from or write archive to file.
+
      -f pattern
-	     (i mode only) Ignore files that match pattern.  (Not yet imple-
-	     mented.)
+	     (i mode only) Ignore files that match pattern.
 
      --format format
 	     (o mode only) Produce the output archive in the specified format.
@@ -57,25 +73,65 @@ OPTIONS
 	     complete information about the formats currently supported by the
 	     underlying libarchive(3) library.
 
+     -H format
+	     Synonym for --format.
+
+     -h, --help
+	     Print usage information.
+
+     -I file
+	     Read archive from file.
+
      -i      Input mode.  See above for description.
+
+     --insecure
+	     (i and p mode only) Disable security checks during extraction or
+	     copying.  This allows extraction via symbolic links and path
+	     names containing `..' in the name.
+
+     -J      (o mode only) Compress the file with xz-compatible compression
+	     before writing it.  In input mode, this option is ignored; xz
+	     compression is recognized automatically on input.
+
+     -j      Synonym for -y.
 
      -L      (o and p modes) All symbolic links will be followed.  Normally,
 	     symbolic links are archived and copied as symbolic links.	With
 	     this option, the target of the link will be archived or copied
-	     instead.  (Not yet implemented.)
+	     instead.
 
      -l      (p mode only) Create links from the target directory to the orig-
 	     inal files, instead of copying.
 
+     -lzma   (o mode only) Compress the file with lzma-compatible compression
+	     before writing it.  In input mode, this option is ignored; lzma
+	     compression is recognized automatically on input.
+
      -m      (i and p modes) Set file modification time on created files to
 	     match those in the source.
+
+     -n      (i mode, only with -t) Display numeric uid and gid.  By default,
+	     cpio displays the user and group names when they are provided in
+	     the archive, or looks up the user and group names in the system
+	     password database.
+
+     -no-preserve-owner
+	     (i mode only) Do not attempt to restore file ownership.  This is
+	     the default when run by non-root users.
+
+     -O file
+	     Write archive to file.
 
      -o      Output mode.  See above for description.
 
      -p      Pass-through mode.  See above for description.
 
+     -preserve-owner
+	     (i mode only) Restore file ownership.  This is the default when
+	     run by the root user.
+
      --quiet
-	     (Not yet implemented.)
+	     Suppress unnecessary messages.
 
      -R [user][:][group]
 	     Set the owner and/or group on files in the output.  If group is
@@ -108,12 +164,16 @@ OPTIONS
 	     Print the program version information and exit.
 
      -y      (o mode only) Compress the archive with bzip2-compatible compres-
-	     sion before writing to stdout.  In input mode, this option is
-	     ignored; bzip2 compression is recognized automatically on input.
+	     sion before writing it.  In input mode, this option is ignored;
+	     bzip2 compression is recognized automatically on input.
+
+     -Z      (o mode only) Compress the archive with compress-compatible com-
+	     pression before writing it.  In input mode, this option is
+	     ignored; compression is recognized automatically on input.
 
      -z      (o mode only) Compress the archive with gzip-compatible compres-
-	     sion before writing it to stdout.	In input mode, this option is
-	     ignored; gzip compression is recognized automatically on input.
+	     sion before writing it.  In input mode, this option is ignored;
+	     gzip compression is recognized automatically on input.
 
 ENVIRONMENT
      The following environment variables affect the execution of cpio:
@@ -170,13 +230,11 @@ STANDARDS
 
 HISTORY
      The original cpio and find utilities were written by Dick Haight while
-     working in AT&T's Unix Support Group.  They first appeared in PWB/UNIX
-     1.0, the ``Programmer's Work Bench'' system developed for use within AT&T
-     and released in 1977.  XXX  It was first released outside of AT&T as part
-     of System III Unix in 1981. XXX XXX Need to verify the previous state-
-     ment. XXX As a result, cpio actually predates tar, even though it was not
-     well-known outside of AT&T until some time later.	XXX When did cpio
-     first appear in BSD? XXX
+     working in AT&T's Unix Support Group.  They first appeared in 1977 in
+     PWB/UNIX 1.0, the ``Programmer's Work Bench'' system developed for use
+     within AT&T.  They were first released outside of AT&T as part of System
+     III Unix in 1981.	As a result, cpio actually predates tar, even though
+     it was not well-known outside of AT&T until some time later.
 
      This is a complete re-implementation based on the libarchive(3) library.
 
@@ -189,11 +247,4 @@ BUGS
      mats cannot support files over 4 gigabytes, except for the ``odc'' vari-
      ant, which can support files up to 8 gigabytes.
 
-     This is an early alpha version of cpio.  The underlying libarchive
-     library is quite mature, so the archive format support and creation of
-     objects on disk should be robust.	However, the cpio-specific options and
-     features are still very new.  Known issues that will be fixed soon:
-	   o   Options documented above as ``Not yet implemented''.
-	   o   Filter arguments to -i, and -it.
-
-FreeBSD 6.0			August 05, 2007 		   FreeBSD 6.0
+FreeBSD 8.0		       December 21, 2007		   FreeBSD 8.0
