@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.75 2010/01/24 12:41:21 obache Exp $
+dnl $NetBSD: configure.ac,v 1.76 2010/02/20 15:21:35 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -238,6 +238,13 @@ AC_FUNC_VFORK
 AC_FUNC_VPRINTF
 
 AC_CHECK_DECLS([snprintf, vasprintf], [], [], [#include <stdio.h>])
+
+case $host_os in
+darwin*)
+	# NetBSD PR 38488: warnx(3) escapes certain characters like \n
+	ac_cv_func_warn=no
+	;;
+esac
 
 AC_REPLACE_FUNCS([asprintf err fgetln fnmatch fparseln getenv isblank \
 	lchflags lchmod lchown lutimes mkdtemp mkstemp setenv setgroupent \
