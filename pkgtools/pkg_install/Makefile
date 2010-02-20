@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2010/02/03 14:20:14 joerg Exp $
+# $NetBSD: Makefile,v 1.173 2010/02/20 20:24:24 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -150,7 +150,8 @@ pre-configure:
 	${SETENV} ${_CONFIGURE_SCRIPT_ENV}				\
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
 		./configure --disable-shared --disable-bsdtar		\
-		--disable-dependency-tracking --disable-acl
+		--disable-bsdcpio --without-expat --without-xml2	\
+		--disable-dependency-tracking --disable-acl 
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
 	cd ${WRKDIR}/libfetch && ${SETENV} ${MAKE_ENV}			\
