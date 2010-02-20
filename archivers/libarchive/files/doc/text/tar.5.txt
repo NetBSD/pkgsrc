@@ -1,4 +1,4 @@
-TAR(5)			  FreeBSD File Formats Manual			TAR(5)
+tar(5)			  FreeBSD File Formats Manual			tar(5)
 
 NAME
      tar -- format of tape archive files
@@ -20,18 +20,20 @@ DESCRIPTION
      For compatibility with tape drives that use fixed block sizes, programs
      that read or write tar files always read or write a fixed number of
      records with each I/O operation.  These ``blocks'' are always a multiple
-     of the record size.  The most common block size--and the maximum sup-
-     ported by historic implementations--is 10240 bytes or 20 records.	(Note:
-     the terms ``block'' and ``record'' here are not entirely standard; this
-     document follows the convention established by John Gilmore in document-
-     ing pdtar.)
+     of the record size.  The maximum block size supported by early implemen-
+     tations was 10240 bytes or 20 records.  This is still the default for
+     most implementations although block sizes of 1MiB (2048 records) or
+     larger are commonly used with modern high-speed tape drives.  (Note: the
+     terms ``block'' and ``record'' here are not entirely standard; this docu-
+     ment follows the convention established by John Gilmore in documenting
+     pdtar.)
 
    Old-Style Archive Format
      The original tar archive format has been extended many times to include
      additional information that various implementors found necessary.	This
      section describes the variant implemented by the tar command included in
-     Version 7 AT&T UNIX, which is one of the earliest widely-used versions of
-     the tar program.
+     Version 7 AT&T UNIX, which seems to be the earliest widely-used version
+     of the tar program.
 
      The header record for an old-style tar archive consists of the following:
 
@@ -143,7 +145,7 @@ DESCRIPTION
      typeflag
 	     Type of entry.  POSIX extended the earlier linkflag field with
 	     several new type values:
-	     ``0''   Regular file.  NULL should be treated as a synonym, for
+	     ``0''   Regular file.  NUL should be treated as a synonym, for
 		     compatibility purposes.
 	     ``1''   Hard link.
 	     ``2''   Symbolic link.
@@ -167,7 +169,7 @@ DESCRIPTION
 	     allocate directory space.	For all other types, it should be set
 	     to zero by writers and ignored by readers.
 
-     magic   Contains the magic value ``ustar'' followed by a NULL byte to
+     magic   Contains the magic value ``ustar'' followed by a NUL byte to
 	     indicate that this is a POSIX standard archive.  Full compliance
 	     requires the uname and gname fields be properly set.
 
@@ -184,22 +186,25 @@ DESCRIPTION
 	     Major and minor numbers for character device or block device
 	     entry.
 
-     prefix  First part of pathname.  If the pathname is too long to fit in
-	     the 100 bytes provided by the standard format, it can be split at
-	     any / character with the first portion going here.  If the prefix
-	     field is not empty, the reader will prepend the prefix value and
-	     a / character to the regular name field to obtain the full path-
-	     name.
+     name, prefix
+	     If the pathname is too long to fit in the 100 bytes provided by
+	     the standard format, it can be split at any / character with the
+	     first portion going into the prefix field.  If the prefix field
+	     is not empty, the reader will prepend the prefix value and a /
+	     character to the regular name field to obtain the full pathname.
+	     The standard does not require a trailing / character on directory
+	     names, though most implementations still include this for compat-
+	     ibility reasons.
 
-     Note that all unused bytes must be set to NULL.
+     Note that all unused bytes must be set to NUL.
 
      Field termination is specified slightly differently by POSIX than by pre-
      vious implementations.  The magic, uname, and gname fields must have a
-     trailing NULL.  The pathname, linkname, and prefix fields must have a
-     trailing NULL unless they fill the entire field.  (In particular, it is
+     trailing NUL.  The pathname, linkname, and prefix fields must have a
+     trailing NUL unless they fill the entire field.  (In particular, it is
      possible to store a 256-character pathname if it happens to have a / as
      the 156th character.)  POSIX requires numeric fields to be zero-padded in
-     the front, and allows them to be terminated with either space or NULL
+     the front, and requires them to be terminated with either space or NUL
      characters.
 
      Currently, most tar implementations comply with the ustar format, occa-
@@ -275,6 +280,12 @@ DESCRIPTION
 
      SCHILY.devminor, SCHILY.devmajor
 	     The full minor and major numbers for device nodes.
+
+     SCHILY.fflags
+	     The file flags.
+
+     SCHILY.realsize
+	     The full size of the file on disk.  XXX explain? XXX
 
      SCHILY.dev, SCHILY.ino, SCHILY.nlinks
 	     The device number, inode number, and link count for the entry.
@@ -408,9 +419,7 @@ DESCRIPTION
 		     extracting, GNU tar checks that the header file name is
 		     the one it is expecting, that the header offset is in the
 		     correct sequence, and that the sum of offset and size is
-		     equal to realsize.  FreeBSD's version of GNU tar does not
-		     handle the corner case of an archive's being continued in
-		     the middle of a long name or other extension header.
+		     equal to realsize.
 
 	     N	     Type "N" records are no longer generated by GNU tar.
 		     They contained a list of files to be renamed or symlinked
@@ -419,7 +428,8 @@ DESCRIPTION
 		     description of the operations to be done, in the form
 		     ``Rename %s to %s\n'' or ``Symlink %s to %s\n''; in
 		     either case, both filenames are escaped using K&R C syn-
-		     tax.
+		     tax.  Due to security concerns, "N" records are now gen-
+		     erally ignored when reading archives.
 
 	     S	     This is a ``sparse'' regular file.  Sparse files are
 		     stored as a series of fragments.  The header contains a
@@ -478,6 +488,43 @@ DESCRIPTION
 	     entry; the realsize field will indicate the total size of the
 	     file.
 
+   GNU tar pax archives
+     GNU tar 1.14 (XXX check this XXX) and later will write pax interchange
+     format archives when you specify the --posix flag.  This format uses cus-
+     tom keywords to store sparse file information.  There have been three
+     iterations of this support, referred to as ``0.0'', ``0.1'', and ``1.0''.
+
+     GNU.sparse.numblocks, GNU.sparse.offset, GNU.sparse.numbytes,
+	     GNU.sparse.size
+	     The ``0.0'' format used an initial GNU.sparse.numblocks attribute
+	     to indicate the number of blocks in the file, a pair of
+	     GNU.sparse.offset and GNU.sparse.numbytes to indicate the offset
+	     and size of each block, and a single GNU.sparse.size to indicate
+	     the full size of the file.  This is not the same as the size in
+	     the tar header because the latter value does not include the size
+	     of any holes.  This format required that the order of attributes
+	     be preserved and relied on readers accepting multiple appearances
+	     of the same attribute names, which is not officially permitted by
+	     the standards.
+
+     GNU.sparse.map
+	     The ``0.1'' format used a single attribute that stored a comma-
+	     separated list of decimal numbers.  Each pair of numbers indi-
+	     cated the offset and size, respectively, of a block of data.
+	     This does not work well if the archive is extracted by an
+	     archiver that does not recognize this extension, since many pax
+	     implementations simply discard unrecognized attributes.
+
+     GNU.sparse.major, GNU.sparse.minor, GNU.sparse.name, GNU.sparse.realsize
+	     The ``1.0'' format stores the sparse block map in one or more
+	     512-byte blocks prepended to the file data in the entry body.
+	     The pax attributes indicate the existence of this map (via the
+	     GNU.sparse.major and GNU.sparse.minor fields) and the full size
+	     of the file.  The GNU.sparse.name holds the true name of the
+	     file.  To avoid confusion, the name stored in the regular tar
+	     header is a modified name so that extraction errors will be
+	     apparent to users.
+
    Solaris Tar
      XXX More Details Needed XXX
 
@@ -490,26 +537,43 @@ DESCRIPTION
 	     entry.
      o	     An additional A entry is used to store an ACL for the following
 	     regular entry.  The body of this entry contains a seven-digit
-	     octal number (whose value is 01000000 plus the number of ACL
-	     entries) followed by a zero byte, followed by the textual ACL
-	     description.
+	     octal number followed by a zero byte, followed by the textual ACL
+	     description.  The octal value is the number of ACL entries plus a
+	     constant that indicates the ACL type: 01000000 for POSIX.1e ACLs
+	     and 03000000 for NFSv4 ACLs.
+
+   AIX Tar
+     XXX More details needed XXX
+
+   Mac OS X Tar
+     The tar distributed with Apple's Mac OS X stores most regular files as
+     two separate entries in the tar archive.  The two entries have the same
+     name except that the first one has ``._'' added to the beginning of the
+     name.  This first entry stores the ``resource fork'' with additional
+     attributes for the file.  The Mac OS X CopyFile() API is used to separate
+     a file on disk into separate resource and data streams and to reassemble
+     those separate streams when the file is restored to disk.
 
    Other Extensions
-     One common extension, utilized by GNU tar, star, and other newer tar
-     implementations, permits binary numbers in the standard numeric fields.
-     This is flagged by setting the high bit of the first character.  This
-     permits 95-bit values for the length and time fields and 63-bit values
-     for the uid, gid, and device numbers.  GNU tar supports this extension
-     for the length, mtime, ctime, and atime fields.  Joerg Schilling's star
-     program supports this extension for all numeric fields.  Note that this
-     extension is largely obsoleted by the extended attribute record provided
-     by the pax interchange format.
+     One obvious extension to increase the size of files is to eliminate the
+     terminating characters from the various numeric fields.  For example, the
+     standard only allows the size field to contain 11 octal digits, reserving
+     the twelfth byte for a trailing NUL character.  Allowing 12 octal digits
+     allows file sizes up to 64 GB.
+
+     Another extension, utilized by GNU tar, star, and other newer tar imple-
+     mentations, permits binary numbers in the standard numeric fields.  This
+     is flagged by setting the high bit of the first byte.  This permits
+     95-bit values for the length and time fields and 63-bit values for the
+     uid, gid, and device numbers.  GNU tar supports this extension for the
+     length, mtime, ctime, and atime fields.  Joerg Schilling's star program
+     supports this extension for all numeric fields.  Note that this extension
+     is largely obsoleted by the extended attribute record provided by the pax
+     interchange format.
 
      Another early GNU extension allowed base-64 values rather than octal.
-     This extension was short-lived and such archives are almost never seen.
-     However, there is still code in GNU tar to support them; this code is
-     responsible for a very cryptic warning message that is sometimes seen
-     when GNU tar encounters a damaged archive.
+     This extension was short-lived and is no longer supported by any imple-
+     mentation.
 
 SEE ALSO
      ar(1), pax(1), tar(1)
@@ -527,8 +591,11 @@ HISTORY
      January, 1979.  It replaced the tp program from Fourth Edition Unix which
      in turn replaced the tap program from First Edition Unix.	John Gilmore's
      pdtar public-domain implementation (circa 1987) was highly influential
-     and formed the basis of GNU tar.  Joerg Shilling's star archiver is
-     another open-source (GPL) archiver (originally developed circa 1985)
-     which features complete support for pax interchange format.
+     and formed the basis of GNU tar (circa 1988).  Joerg Shilling's star
+     archiver is another open-source (GPL) archiver (originally developed
+     circa 1985) which features complete support for pax interchange format.
 
-FreeBSD 6.0			 May 20, 2004			   FreeBSD 6.0
+     This documentation was written as part of the libarchive and bsdtar
+     project by Tim Kientzle <kientzle@FreeBSD.org>.
+
+FreeBSD 8.0		       December 27, 2009		   FreeBSD 8.0
