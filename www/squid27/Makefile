@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/02/14 13:27:52 taca Exp $
+# $NetBSD: Makefile,v 1.13 2010/02/20 15:11:40 tron Exp $
 
 DISTNAME=	squid-2.7.STABLE7
 PKGNAME=	${DISTNAME:S/STABLE//}
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
-PKG_DESTDIR_SUPPORT=	destdir
 MESSAGE_SRC=		../squid/MESSAGE MESSAGE
 
 .include "../../www/squid/Makefile.squid"
