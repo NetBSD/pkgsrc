@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2009/07/17 04:47:27 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/20 03:56:14 joerg Exp $
 #
 
-DISTNAME=	bsdtar-2.5.5
+DISTNAME=	bsdtar-2.8.0
 CATEGORIES=	archivers
-MASTER_SITES=	http://people.freebsd.org/~kientzle/libarchive/src/
+MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://people.freebsd.org/~kientzle/libarchive/
+HOMEPAGE=	http://code.google.com/p/libarchive/
 COMMENT=	Fast multi-format tape archiver
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -34,7 +34,8 @@ FILESDIR.bzip2?=	${.CURDIR}/../../archivers/bzip2/files
 FILESDIR.libarchive?=	${.CURDIR}/../../archivers/libarchive/files
 FILESDIR.zlib?=		${.CURDIR}/../../devel/zlib/files
 
-CONFIGURE_ARGS+=	--enable-bsdtar=static --disable-shared
+CONFIGURE_ARGS+=	--enable-bsdtar=static --disable-cpio \
+			--disable-shared --without-xml2 --without-expat
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
