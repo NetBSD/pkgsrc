@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9062 2010/02/20 03:57:11 joerg Exp $
+$NetBSD: TODO,v 1.9063 2010/02/20 07:43:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -753,7 +753,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
-	o im-150
 	o imp-4.3.6
 	o ingo-1.2.3
 	o inputproto-2.0 [xorg-server 1.7]
@@ -767,8 +766,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ispell-slovak-0.3.2
 	o ispman-1.2
 	o ivtools-1.2.8
-	o ja-gawk-3.1.5
-	o ja-grep-2.5.1a
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
