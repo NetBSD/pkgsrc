@@ -1,9 +1,8 @@
-$NetBSD: patch-cb,v 1.1 2009/09/07 14:25:08 reinoud Exp $
+$NetBSD: patch-cb,v 1.2 2010/02/20 08:35:58 schwarz Exp $
 
 --- dlls/gdi32/freetype.c.orig	2008-10-17 17:45:25.000000000 +0200
-+++ dlls/gdi32/freetype.c
-@@ -162,8 +162,12 @@ MAKE_FUNCPTR(FT_Get_Sfnt_Name_Count);
- MAKE_FUNCPTR(FT_Get_Sfnt_Table);
++++ dlls/gdi32/freetype.c	2010-02-19 23:42:59.000000000 +0100
+@@ -163,7 +163,11 @@
  MAKE_FUNCPTR(FT_Init_FreeType);
  MAKE_FUNCPTR(FT_Load_Glyph);
  MAKE_FUNCPTR(FT_Matrix_Multiply);
@@ -15,7 +14,7 @@ $NetBSD: patch-cb,v 1.1 2009/09/07 14:25:08 reinoud Exp $
  MAKE_FUNCPTR(FT_New_Face);
  MAKE_FUNCPTR(FT_New_Memory_Face);
  MAKE_FUNCPTR(FT_Outline_Get_Bitmap);
-@@ -2438,7 +2441,9 @@ static BOOL init_freetype(void)
+@@ -2438,7 +2442,9 @@
      LOAD_FUNCPTR(FT_Init_FreeType)
      LOAD_FUNCPTR(FT_Load_Glyph)
      LOAD_FUNCPTR(FT_Matrix_Multiply)
