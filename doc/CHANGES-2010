@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.870 2010/02/19 23:41:22 tron Exp $
+$NetBSD: CHANGES-2010,v 1.871 2010/02/20 02:00:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1060,3 +1060,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/openldap-* to 2.4.21 [ghen 2010-02-19]
 	Added print/tex-german version 2.5e [tron 2010-02-19]
 	Updated meta-pkgs/netbsd-www to 1.5 [tron 2010-02-19]
+	Updated print/tex-latex-bin to 2009nb1 [minskim 2010-02-20]
