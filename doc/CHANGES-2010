@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.878 2010/02/20 11:52:12 seb Exp $
+$NetBSD: CHANGES-2010,v 1.879 2010/02/20 16:24:29 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1068,3 +1068,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/p5-Test-DNS version 0.07 [seb 2010-02-20]
 	Added devel/p5-Test-SharedFork version 0.11 [seb 2010-02-20]
 	Added net/p5-Test-TCP version 0.16 [seb 2010-02-20]
+	Updated pkgtools/x11-links to 0.47nb1 [bouyer 2010-02-20]
