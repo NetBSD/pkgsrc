@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/01/11 22:49:11 shattered Exp $
+$NetBSD: distinfo,v 1.6 2010/02/20 07:43:10 seb Exp $
 
-SHA1 (sipcalc-1.1.4.tar.gz) = 99d0d75b489fc6882fd660fcf093363c238097d1
-RMD160 (sipcalc-1.1.4.tar.gz) = 811211a1f5ea48bef7adceff6085795e0c18c387
-Size (sipcalc-1.1.4.tar.gz) = 108508 bytes
+SHA1 (sipcalc-1.1.5.tar.gz) = fe2180df9e14d28407a089c9ac23e4fabfb6e2a1
+RMD160 (sipcalc-1.1.5.tar.gz) = f1f6d53ca6eafcaa82f4c3ff09603997703bbbdf
+Size (sipcalc-1.1.5.tar.gz) = 106096 bytes
