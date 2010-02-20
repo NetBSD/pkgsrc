@@ -1,15 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/10/11 09:56:57 agc Exp $
---- Makefile.orig	Sun Sep 16 00:29:47 2001
-+++ Makefile	Sun Sep 16 00:30:51 2001
-@@ -80,9 +80,9 @@
+$NetBSD: patch-aa,v 1.2 2010/02/20 00:02:33 joerg Exp $
+
+--- Makefile.orig	2002-03-25 13:48:52.000000000 +0000
++++ Makefile
+@@ -79,14 +79,14 @@ bin2src : bin2src.c extipl.h
+ 
  install:
  	@test -d $(BINDIR) || (set -x; mkdir -p -m 0755 $(BINDIR))
- 	install -c -s -o root -m 700 extipl $(BINDIR)
+-	install -c -s -o root -m 700 extipl $(BINDIR)
 -	sed -e 's#!!DOCDIR!!#$(DOCDIR)#g' extipl.8.in | gzip > extipl.8.gz
++	${BSD_INSTALL_PROGRAM} extipl $(BINDIR)
 +	sed -e 's#!!DOCDIR!!#$(DOCDIR)#g' extipl.8.in > extipl.8
  	@test -d $(MAN8) || (set -x; mkdir -p -m 0755 $(MAN8))
 -	install -o root -m 644 extipl.8.gz $(MAN8)
-+	install -o root -m 644 extipl.8 $(MAN8)
++	${BSD_INSTALL_MAN} extipl.8 $(MAN8)
  	@test -d $(ENGDIR) || (set -x; mkdir -p -m 0755 $(ENGDIR))
- 	install -c -o root -m 644 ../doc/English/*.txt  $(ENGDIR)
+-	install -c -o root -m 644 ../doc/English/*.txt  $(ENGDIR)
++	${BSD_INSTALL_DATA} ../doc/English/*.txt  $(ENGDIR)
  	@test -d $(JPNDIR) || (set -x; mkdir -p -m 0755 $(JPNDIR))
+-	install -c -o root -m 644 ../doc/Japanese/*.txt $(JPNDIR)
++	${BSD_INSTALL_DATA} ../doc/Japanese/*.txt $(JPNDIR)
+ 
+ install-jman:
+ 	sed -e 's#!!DOCDIR!!#$(DOCDIR)#g' extipl.8j.in | gzip > extipl.8j.gz
