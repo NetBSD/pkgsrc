@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9063 2010/02/20 07:43:59 obache Exp $
+$NetBSD: TODO,v 1.9064 2010/02/20 08:08:23 dholland Exp $
 
 Suggested new packages
 ======================
@@ -871,7 +871,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mDNSResponder-214
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
-	o maildrop-2.3.0
+	o maildrop-2.4.1 [security]
 	o mailgraph-1.14
 	o mailman-2.1.13
 	o mailscanner-4.74
