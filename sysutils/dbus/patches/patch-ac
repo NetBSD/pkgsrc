@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2008/06/13 11:28:35 drochner Exp $
+$NetBSD: patch-ac,v 1.9 2010/02/21 19:32:26 tez Exp $
 
---- configure.orig	2008-04-04 14:23:44.000000000 -0400
-+++ configure
-@@ -5996,6 +5996,224 @@ esac
+--- configure.orig	2009-05-06 12:35:38.000000000 -0500
++++ configure	2009-12-01 13:23:46.338973100 -0600
+@@ -6110,6 +6110,224 @@
  
  need_locks="$enable_libtool_lock"
  
@@ -227,3 +227,15 @@ $NetBSD: patch-ac,v 1.8 2008/06/13 11:28:35 drochner Exp $
  
  # On IRIX 5.3, sys/types and inttypes.h are conflicting.
  
+@@ -20958,7 +21176,10 @@
+   esac
+   case " $CFLAGS " in
+   *[\ \	]-Wno-pointer-sign[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wno-pointer-sign" ;;
++  *) if cc_supports_flag -Wno-pointer-sign; then
++	CFLAGS="$CFLAGS -Wno-pointer-sign"
++     fi
++     ;;
+   esac
+ 
+   # http://bugs.freedesktop.org/show_bug.cgi?id=19195
