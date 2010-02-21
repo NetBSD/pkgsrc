@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/06/12 02:14:54 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/21 08:01:46 obache Exp $
 #
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_BASE_VERS}
@@ -17,7 +17,7 @@ APACHE_MODULE=		YES
 .include "${PHPPKGSRCDIR}/Makefile.php"
 
 # Ensure we export symbols in the linked shared object.
-LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+CONFIGURE_ENV+=	EXTRA_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:M*:Q}
 
 INSTALLATION_DIRS=	lib/httpd
 
