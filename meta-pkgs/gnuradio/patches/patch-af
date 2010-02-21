@@ -1,0 +1,67 @@
+$NetBSD: patch-af,v 1.1 2010/02/21 23:11:39 schwarz Exp $
+
+--- usrp/host/lib/legacy/fusb_darwin.cc.orig	2010-02-21 15:52:58.000000000 +0100
++++ usrp/host/lib/legacy/fusb_darwin.cc	2010-02-21 15:57:20.000000000 +0100
+@@ -345,7 +345,7 @@
+   if ((! l_both) || (! d_started)) {
+     if (usb_debug > 4)
+       fprintf (stderr, "fusb_ephandle_darwin::read_issue: Doing nothing; "
+-	       "l_both is %X; started is %s\n", (unsigned int) l_both,
++	       "l_both is %X; started is %s\n", (unsigned long) l_both,
+ 	       d_started ? "TRUE" : "FALSE");
+     return;
+   }
+@@ -380,7 +380,7 @@
+ 			  darwin_error_str (result));
+   else if (usb_debug > 4)
+     fprintf (stderr, "fusb_ephandle_darwin::read_issue: "
+-	     "Queued %X (%ld Bytes)\n", (unsigned int) l_both, bufLen);
++	     "Queued %X (%ld Bytes)\n", (unsigned long) l_both, bufLen);
+ }
+ 
+ void
+@@ -388,7 +388,7 @@
+ 				      io_return_t result,
+ 				      void* io_size)
+ {
+-  UInt32 l_size = (UInt32) io_size;
++  unsigned long l_size = (unsigned long) io_size;
+   s_both_ptr l_both = static_cast<s_both_ptr>(refCon);
+   fusb_ephandle_darwin* This = static_cast<fusb_ephandle_darwin*>(l_both->This ());
+   s_node_ptr l_node = l_both->node ();
+@@ -403,7 +403,7 @@
+   else if (usb_debug > 4)
+     fprintf (stderr, "fusb_ephandle_darwin::read_completed: "
+ 	     "Read %X (%ld bytes)\n",
+-	     (unsigned int) l_both, l_size);
++	     (unsigned long) l_both, l_size);
+ 
+ // add this read to the transfer buffer
+   if (l_buffer->enqueue (l_buf->buffer (), l_size) == -1) {
+@@ -477,7 +477,7 @@
+ 		     darwin_error_str (result));
+     else if (usb_debug > 4) {
+       fprintf (stderr, "fusb_ephandle_darwin::write_thread: "
+-	       "Queued %X (%ld Bytes)\n", (unsigned int) l_both, t_nbytes);
++	       "Queued %X (%ld Bytes)\n", (unsigned long) l_both, t_nbytes);
+     }
+     l_nbytes -= t_nbytes;
+   }
+@@ -492,7 +492,7 @@
+ {
+   s_both_ptr l_both = static_cast<s_both_ptr>(refCon);
+   fusb_ephandle_darwin* This = static_cast<fusb_ephandle_darwin*>(l_both->This ());
+-  UInt32 l_size = (UInt32) io_size;
++  unsigned long l_size = (unsigned long) io_size;
+   s_node_ptr l_node = l_both->node ();
+   s_queue_ptr l_queue = This->d_queue;
+   s_buffer_ptr l_buf = l_node->object ();
+@@ -504,7 +504,7 @@
+ 	     l_i_size, l_size);
+   else if (usb_debug > 4)
+     fprintf (stderr, "fusb_ephandle_darwin::write_completed: "
+-	     "Wrote %X (%ld Bytes)\n", (unsigned int) l_both, l_size);
++	     "Wrote %X (%ld Bytes)\n", (unsigned long) l_both, l_size);
+ 
+ // set buffer's # data to 0
+   l_buf->n_used (0);
