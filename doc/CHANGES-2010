@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.889 2010/02/21 16:17:39 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.890 2010/02/21 16:26:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1079,3 +1079,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100221 [taca 2010-02-21]
 	Added print/tex-german-doc version 2.5e [minskim 2010-02-21]
 	Removed games/xdoom [wiz 2010-02-21]
+	Removed sysutils/adjustkernel [wiz 2010-02-21]
