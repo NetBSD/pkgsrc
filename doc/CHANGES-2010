@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.882 2010/02/21 13:02:57 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.883 2010/02/21 13:07:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1072,3 +1072,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/geeqie to 1.0 [gdt 2010-02-20]
 	Added devel/easygit version 1.6.5.3 [plunky 2010-02-21]
 	Updated graphics/cairo to 1.8.10 [wiz 2010-02-21]
+	Updated databases/mysql51-embedded to 5.1.44 [wiz 2010-02-21]
