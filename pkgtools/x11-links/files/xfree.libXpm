@@ -1,4 +1,4 @@
-# $NetBSD: xfree.xpm,v 1.3 2008/10/05 21:36:35 cube Exp $
+# $NetBSD: xfree.libXpm,v 1.1.2.2 2010/02/21 21:22:52 spz Exp $
 #
 include/X11/xpm.h
 lib/libXpm.a
