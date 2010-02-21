@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9068 2010/02/21 13:35:02 wiz Exp $
+$NetBSD: TODO,v 1.9069 2010/02/21 16:09:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -568,7 +568,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-541
+	o etm-544
 	o eukleides-1.5.1
 	o evolution-exchange-2.28.2
 	o evolution-mapi-0.28.2 [GNOME 2.28]
@@ -590,7 +590,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
-	o firefox-3.6 [pkgsrc-wip]
+	o firefox-3.6.2 [pkgsrc-wip]
 	o fisg-0.3.12
 	o fixesproto-4.1.1 [xorg-server 1.7]
 	o flashplayer-0.4.13
@@ -692,8 +692,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnumeric-1.10.0
-	o goffice-0.8.0
 	o gogo-3.11p1
 	o golem-0.0.6
 	o gossip-0.31
@@ -938,7 +936,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o munin-1.4.3
 	o muse-0.9.2
 	o mysql-5.1.44 [taca]
-	o mysql51-embedded-5.1.44
 	o mysqlcc-0.9.8
 	o nagios-3.2.0
 	o nano-2.2.0
@@ -1258,6 +1255,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.8beta1
+	o tor-0.2.1.23
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.12
@@ -1323,7 +1321,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-101
 	o wyrd-1.4.4
 	o x11vnc-0.9.9
-	o x264-devel-20100213
+	o x264-devel-20100220
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbiff-1.0.2
