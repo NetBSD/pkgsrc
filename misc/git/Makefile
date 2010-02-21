@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/01/18 02:23:52 christos Exp $
+# $NetBSD: Makefile,v 1.31 2010/02/21 12:24:59 obache Exp $
 PKGNAME=	git-4.9.5
 DISTNAME=	gnuit-4.9.5
 CATEGORIES=	misc
@@ -10,7 +10,7 @@ COMMENT=	GNU Interactive Tools - a file system browser for UNIX systems
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/gnuit
-INFO_FILES=	# PLIST
+INFO_FILES=	YES
 
 post-extract:
 	${CP} ${WRKSRC}/term/gnuitrc.ansi.in ${WRKSRC}/term/gnuitrc.cons25.in
