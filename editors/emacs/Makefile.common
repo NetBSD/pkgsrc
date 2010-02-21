@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.24 2010/02/19 21:28:04 joerg Exp $
+# $NetBSD: Makefile.common,v 1.25 2010/02/21 12:26:36 wiz Exp $
+#
+# used by editors/emacs/Makefile
+# used by editors/emacs-nox11/Makefile
 
 DISTNAME=	emacs-${EMACS_VERSION}
 CATEGORIES=	editors
