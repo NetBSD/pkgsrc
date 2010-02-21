@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/02/21 13:19:51 wiz Exp $
 bin/btcflash
+bin/cdda2mp3
+bin/cdda2ogg
 bin/cdda2wav
 bin/cdrecord
 bin/devdump
@@ -60,6 +62,8 @@ lib/siconv/iso8859-9
 lib/siconv/koi8-r
 lib/siconv/koi8-u
 man/man1/btcflash.1
+man/man1/cdda2mp3.1
+man/man1/cdda2ogg.1
 man/man1/cdda2wav.1
 man/man1/cdrecord.1
 man/man1/readcd.1
