@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.884 2010/02/21 13:20:00 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.885 2010/02/21 13:35:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1074,3 +1074,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/cairo to 1.8.10 [wiz 2010-02-21]
 	Updated databases/mysql51-embedded to 5.1.44 [wiz 2010-02-21]
 	Updated sysutils/cdrtools to 2.01.01alpha76 [wiz 2010-02-21]
+	Updated multimedia/py-gstreamer0.10 to 0.10.18 [wiz 2010-02-21]
