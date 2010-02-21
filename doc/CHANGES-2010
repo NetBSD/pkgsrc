@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.890 2010/02/21 16:26:01 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.891 2010/02/21 16:45:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1080,3 +1080,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-german-doc version 2.5e [minskim 2010-02-21]
 	Removed games/xdoom [wiz 2010-02-21]
 	Removed sysutils/adjustkernel [wiz 2010-02-21]
+	Updated sysutils/grub to 0.97nb9 [wiz 2010-02-21]
