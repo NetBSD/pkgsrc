@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.34 2009/11/23 19:10:46 drochner Exp $
+$NetBSD: distinfo,v 1.35 2010/02/21 19:32:25 tez Exp $
 
 SHA1 (dbus-1.2.4.6permissive.tar.gz) = f71219624885fe2ec1990bb8bdd599e184dd5774
 RMD160 (dbus-1.2.4.6permissive.tar.gz) = 05d1c5fae8ae763a9beb8c7d6f390f3ff54e9c30
 Size (dbus-1.2.4.6permissive.tar.gz) = 1575270 bytes
 SHA1 (patch-aa) = fd7cc2e11e15e13885e882e8de51e17af8a63d70
 SHA1 (patch-ab) = b2761914edfe2c7666c5412abf79c5d7b87a2006
-SHA1 (patch-ac) = afec419973f339e846dc109866148529f80998b3
+SHA1 (patch-ac) = 63aab0ffac02a9cb85a80e31bbb1234534db378b
 SHA1 (patch-ag) = 999071b782982c12329025ea8e393bfed940b654
 SHA1 (patch-ai) = a45bd8d29955e9c14a4d8b3f44b42242d70c1cd8
 SHA1 (patch-ak) = 56c0a917e770b8d6ffc37ec7ab8beb631dd8ef72
