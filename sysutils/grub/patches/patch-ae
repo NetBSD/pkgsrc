@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.3 2005/08/21 15:08:46 jmmv Exp $
+$NetBSD: patch-ae,v 1.4 2010/02/21 16:44:52 wiz Exp $
 
 --- stage2/shared.h	2004-06-19 18:40:09.000000000 +0200
 +++ stage2/shared.h	2005-07-25 21:33:19.000000000 +0200
+@@ -911,7 +911,7 @@ int substring (const char *s1, const cha
+ int nul_terminate (char *str);
+ int get_based_digit (int c, int base);
+ int safe_parse_maxint (char **str_ptr, int *myint_ptr);
+-int memcheck (int start, int len);
++int memcheck (unsigned long int start, unsigned long int len);
+ void grub_putstr (const char *str);
+
+ #ifndef NO_DECOMPRESSION
 @@ -975,6 +975,8 @@
  #ifndef STAGE1_5
  void bsd_boot (kernel_t type, int bootdev, char *arg)
