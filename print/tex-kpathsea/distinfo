@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/29 02:32:55 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/02/21 16:01:34 minskim Exp $
 
-SHA1 (tex-kpathsea-2009.16044/kpathsea.tar.xz) = 75fa9fb2540db7122fdef74ef36b2fd3249b12fd
-RMD160 (tex-kpathsea-2009.16044/kpathsea.tar.xz) = fd149f8bd003493b4ebf9e80bd88368537e3134f
-Size (tex-kpathsea-2009.16044/kpathsea.tar.xz) = 30872 bytes
+SHA1 (tex-kpathsea-2009.17032/kpathsea.tar.xz) = d0e804ac3fa12090fa1a63a393fe7d2500eeeabc
+RMD160 (tex-kpathsea-2009.17032/kpathsea.tar.xz) = 518394cc58b8ecb54fcd0e99a381b06c51c1aa6d
+Size (tex-kpathsea-2009.17032/kpathsea.tar.xz) = 30880 bytes
