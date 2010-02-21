@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.887 2010/02/21 15:28:58 taca Exp $
+$NetBSD: CHANGES-2010,v 1.888 2010/02/21 15:47:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1077,3 +1077,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/py-gstreamer0.10 to 0.10.18 [wiz 2010-02-21]
 	Updated archivers/par2 to 0.4nb1 [wiz 2010-02-21]
 	Updated www/typolight28-translations to 20100221 [taca 2010-02-21]
+	Added print/tex-german-doc version 2.5e [minskim 2010-02-21]
