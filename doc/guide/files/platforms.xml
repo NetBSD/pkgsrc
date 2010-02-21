@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.60 2008/05/07 09:10:19 obache Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.61 2010/02/21 19:25:32 schmonz Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -48,92 +48,13 @@
     <sect2 id="darwin">
       <title>Darwin (Mac OS X)</title>
 
-      <para>Darwin 5.x and up are supported. There are two methods of using
-	pkgsrc on Mac OS X, by using a <link linkend="platform.osx-image">disk
-	  image</link>, or a <link linkend="platform.osx-part">UFS or HFSX
-	  partition</link>.</para>
-
-      <para>Before you start, you will need to download and install the Mac OS X Developer
-      Tools from Apple's Developer Connection.  See <ulink
-      url="http://developer.apple.com/macosx/">http://developer.apple.com/macosx/</ulink>
-      for details.  Also, make sure you install X11 for Mac OS X and the X11 SDK
-      from <ulink
-      url="http://www.apple.com/macosx/x11/download/">http://www.apple.com/macosx/x11/download/</ulink>
-      if you intend to build packages that use the X11 Window System.</para>
-
-      <para>If you already have a UFS or HFSX partition, or have a spare partition
-      that you can format as UFS or HFSX, it is recommended to use that instead of
-      the disk image. It'll be somewhat faster and will mount automatically
-      at boot time, where you must manually mount a disk image.</para>
-
-      <note>
-	<para>You cannot use an ordinary HFS+ file system for pkgsrc, because pkgsrc currently
-	  requires the file system to be case-sensitive. You can, however, use a case-sensitive HFS+ (aka HFSX) file system as found in Darwin 7.0 and newer.</para>
-      </note>
-
-      <sect3 id="platform.osx-image">
-	<title>Using a disk image</title>
-
-	<para>Create the disk image:</para>
-
-	<screen>&rprompt; <userinput>cd pkgsrc/bootstrap</userinput>
-&rprompt; <userinput>./darwindiskimage create ~/Documents/NetBSD 1024</userinput> # megabytes - season to taste
-&rprompt; <userinput>./darwindiskimage mount ~/Documents/NetBSD</userinput>
-&rprompt; <userinput>sudo chown `id -u`:`id -g` /Volumes/NetBSD</userinput></screen>
-
-	<note>
-	  <para>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  In the case of UFS, it will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.  In the case of HFSX, it will disable journaling.</para>
-	</note>
-
-	<para>Allow suid:</para>
-	<screen>&rprompt; <userinput>sudo mount -u -o suid /Volumes/NetBSD</userinput></screen>
-
-	<para>Changing the build directory:</para>
-	<para>After bootstrapping you need to change the default package build directory to somewhere outside the disk image so it doesn't get filled up in the process of building packages. Add something like that to <filename>mk.conf</filename>.</para>
-	<programlisting>
-	  WRKOBJDIR?=		/tmp/pkgsrc         # build here instead of in pkgsrc
-	</programlisting>
-      </sect3>
-
-      <sect3 id="platform.osx-part">
-	<title>Using a UFS or HFSX partition</title>
-
-	<para>By default, <filename>/usr</filename> will be on your root file
-	system, normally HFS+. It is possible to use the default
-	<emphasis>prefix</emphasis> of <filename>/usr/pkg</filename>
-	by symlinking <filename>/usr/pkg</filename> to a directory on a UFS
-	or HFSX file system. Obviously, another symlink is required if you want to
-	place the package database directory outside the
-	<emphasis>prefix</emphasis>. e.g.</para>
-
-	<screen>&rprompt; <userinput>./bootstrap --pkgdbdir /usr/pkg/pkgdb</userinput></screen>
-
-	<para>If you created your partitions at the time of installing Mac OS X
-	and formatted the target partition as UFS or HFSX, it should automatically
-	mount on <filename>/Volumes/&lt;volume name&gt;</filename> when the
-	machine boots. If you are (re)formatting a partition as UFS or HFSX, you need
-	to ensure that the partition map correctly reflects
-	<quote>Apple_UFS</quote> or <quote>Apple_HFSX</quote> and not <quote>Apple_HFS</quote>.</para>
-
-	<para>The problem is that none of the disk tools will let you touch a
-	disk that is booted from. You can unmount the partition, but even if
-	you newfs it, the partition type will be incorrect and the
-	automounter won't mount it. It can be mounted manually, but it won't
-	appear in Finder.</para>
-
-	<para>You'll need to boot off of the OS X Installation (User) CD.  When
-	the Installation program starts, go up to the menu and select Disk
-	Utility.  Now, you will be able to select the partition you want
-	to be UFS or HFSX, and Format it Apple UFS or HFSX. Quit the Disk Utility, quit the
-	installer which will reboot your machine. The new UFS or HFSX file system
-	will appear in Finder.</para>
-
-	<para>Be aware that the permissions on the new file system will be writable
-	by root only.</para>
-
-	<para>This note is as of 10.2 (Jaguar) and applies to earlier versions.
-	Hopefully Apple will fix Disk Utility in 10.3 (Panther).</para>
-      </sect3>
+      <para>Darwin 5.x and up are supported. Before you start, you
+      will need to download and install the Mac OS X Developer Tools
+      from Apple's Developer Connection. See
+      <ulink url="http://developer.apple.com/macosx/">http://developer.apple.com/macosx/</ulink>
+      for details.  Also, make sure you install X11 (an optional
+      package included with the Developer Tools) if you intend to
+      build packages that use the X11 Window System.</para>
     </sect2>
 
     <sect2 id="freebsd">
