@@ -1,15 +1,4 @@
-$NetBSD: README.MacOSX,v 1.7 2009/09/21 15:33:13 tron Exp $
-
-Please read "README.Darwin" as well, as everything there also applies
-to Mac OS X.
-
-
-File systems:
-
-Previously, pkgsrc needed to be installed on a case-insensitive file
-system.  Starting in 2007, this restriction has been relaxed, and
-pkgsrc will work on case-insensitive as well as case sensitive file
-systems.
+$NetBSD: README.MacOSX,v 1.8 2010/02/21 19:04:07 schmonz Exp $
 
 
 Mac OS X Snow Leopard Binary ABI problem:
