@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/10/31 03:03:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/02/21 13:34:53 wiz Exp $
 lib/gstreamer-0.10/libgstpython.la
 lib/pkgconfig/gst-python-0.10.pc
 ${PYSITELIB}/gst-0.10/gst/__init__.py
@@ -53,6 +53,7 @@ share/gst-python/0.10/examples/filesrc.py
 share/gst-python/0.10/examples/fvumeter.py
 share/gst-python/0.10/examples/gst-discover
 share/gst-python/0.10/examples/gstfile.py
+share/gst-python/0.10/examples/maemogst.py
 share/gst-python/0.10/examples/mixer.py
 share/gst-python/0.10/examples/pipeline-tester
 share/gst-python/0.10/examples/play.py
