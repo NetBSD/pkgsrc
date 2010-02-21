@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.32 2010/02/19 15:31:49 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.33 2010/02/21 21:24:23 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -106,3 +106,5 @@ Pullup ticket #3009 - requested by tnn
 firefox: security update
 Pullup ticket #3011 - requested by tnn
 seamonkey: security update
+Pullup ticket #3015 - requested by bouyer
+x11-links: bug fix
