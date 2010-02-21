@@ -1,0 +1,6 @@
+Easy GIT is a single-file wrapper Perl script for git
+
+    * makes git easy to learn and use
+    * focuses on documentation and examples
+    * removes obstacles to "getting" git
+    * is biased towards luring existing svn users
