@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.329 2010/02/03 11:19:50 wiz Exp $
+# $NetBSD: Makefile,v 1.330 2010/02/21 16:17:12 wiz Exp $
 #
 
 COMMENT=	Games
@@ -268,7 +268,6 @@ SUBDIR+=	xbomber
 SUBDIR+=	xbreaky
 SUBDIR+=	xconq
 SUBDIR+=	xdemineur
-SUBDIR+=	xdoom
 SUBDIR+=	xemeraldia
 SUBDIR+=	xevil
 SUBDIR+=	xfreecell
