@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.880 2010/02/20 20:51:11 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.881 2010/02/21 09:14:37 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1070,3 +1070,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/p5-Test-TCP version 0.16 [seb 2010-02-20]
 	Updated pkgtools/x11-links to 0.47nb1 [bouyer 2010-02-20]
 	Updated graphics/geeqie to 1.0 [gdt 2010-02-20]
+	Added devel/easygit version 1.6.5.3 [plunky 2010-02-21]
