@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/21 15:46:32 minskim Exp $
+share/texmf-dist/doc/generic/german/00readme.1st
+share/texmf-dist/doc/generic/german/betatest/00readme.1st
+share/texmf-dist/doc/generic/german/gerdoc.pdf
+share/texmf-dist/doc/generic/german/gerdoc.tex
+share/texmf-dist/doc/generic/german/german.MISSING
+share/texmf-dist/doc/generic/german/hyphxmpl.cfg
