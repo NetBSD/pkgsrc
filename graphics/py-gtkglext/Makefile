@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/26 19:57:48 sno Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/22 12:10:59 obache Exp $
 #
 
 DISTNAME=	pygtkglext-1.1.0
@@ -12,13 +12,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtkglext.sourceforge.net/
 COMMENT=	Python bindings for gtkglext
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 PYDISTUTILSPKG=	yes
 
-PYTHON_VERSIONS_ACCEPTED= 25
+PYTHON_VERSIONS_ACCEPTED= 26 25
 
 PKGCONFIG_OVERRIDE+=	pygtkglext.pc.in
 
