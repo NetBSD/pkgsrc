@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/01/18 09:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2010/02/22 11:39:10 obache Exp $
 #
 
 DISTNAME=	mgl2-alpha-020
@@ -12,6 +12,10 @@ HOMEPAGE=	http://www.NetBSD.org/ports/hpcmips/mgl2.html
 COMMENT=	Graphics library for NEC Mobilegear/PocketBSD, NetBSD/hpcmips
 
 DEPENDS+=	mglfonts>=0.1:../../fonts/mglfonts
+
+PKG_DESTDIR_SUPPORT=	destdir
+
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=	gmake flex
 
@@ -39,6 +43,10 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	utils/mglcons.sh
 SUBST_VARS.prefix=	PREFIX
 
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+
+INSTALLATION_DIRS+=	bin sbin
+
 post-configure:
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "sh3el"
 	${MV} -f ${WRKSRC}/conf/config.mk-hpcmips ${WRKSRC}/conf/config.mk.tmp
@@ -57,50 +65,50 @@ post-configure:
 
 post-install:
 .for i in ${MGLUTILS}
-	${INSTALL_SCRIPT} ${WRKSRC}/utils/${i} ${PREFIX}/bin/
-	${CHMOD} +x ${PREFIX}/bin/${i}
+	${INSTALL_SCRIPT} ${WRKSRC}/utils/${i} ${DESTDIR}${PREFIX}/bin/
+	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/${i}
 .endfor
-	${LN} -s mglcons.sh ${PREFIX}/bin/start_mgl.sh
+	${LN} -s mglcons.sh ${DESTDIR}${PREFIX}/bin/start_mgl.sh
 
-	${TEST} ! -r ${PREFIX}/bin/mglsvrcons				\
-	|| ${MV} -f ${PREFIX}/bin/mglsvrcons ${PREFIX}/sbin/
+	${TEST} ! -r ${DESTDIR}${PREFIX}/bin/mglsvrcons			\
+	|| ${MV} -f ${DESTDIR}${PREFIX}/bin/mglsvrcons ${DESTDIR}${PREFIX}/sbin/
 	# The following three commands are only present on hpcmips:
-	${TOUCH} ${PREFIX}/sbin/mglcalibrate
-	${TOUCH} ${PREFIX}/sbin/calibconf
-	${TOUCH} ${PREFIX}/sbin/calibdata-update
+	${TOUCH} ${DESTDIR}${PREFIX}/sbin/mglcalibrate
+	${TOUCH} ${DESTDIR}${PREFIX}/sbin/calibconf
+	${TOUCH} ${DESTDIR}${PREFIX}/sbin/calibdata-update
 	#
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mgl2
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/mgl2
 .for i in ${MGLFONTUTILS}
-	${INSTALL_DATA} ${WRKSRC}/bin/${i} ${PREFIX}/share/mgl2
+	${INSTALL_DATA} ${WRKSRC}/bin/${i} ${DESTDIR}${PREFIX}/share/mgl2
 .endfor
-	${RM} -f -r ${PREFIX}/share/doc/mgl2
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/memo
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/mgterm
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/mil
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/nine
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/doc
+	${RM} -f -r ${DESTDIR}${PREFIX}/share/doc/mgl2
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mgl2
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mgl2/memo
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mgl2/mgterm
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mgl2/mil
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mgl2/nine
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mgl2/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mgl2/doc
 .for i in ${MGLDOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/mgl2/doc/
+	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/share/doc/mgl2/doc/
 .endfor
 .for i in ${MGL2DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/mgl2/
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/doc/mgl2/
 .endfor
 .for i in ${MGL2MEMOS}
-	${INSTALL_DATA} ${WRKSRC}/memo/${i} ${PREFIX}/share/doc/mgl2/memo/
+	${INSTALL_DATA} ${WRKSRC}/memo/${i} ${DESTDIR}${PREFIX}/share/doc/mgl2/memo/
 .endfor
 .for i in ${BINDOCS}
-	${INSTALL_DATA} ${WRKSRC}/bin/${i} ${PREFIX}/share/doc/mgl2/bin/
+	${INSTALL_DATA} ${WRKSRC}/bin/${i} ${DESTDIR}${PREFIX}/share/doc/mgl2/bin/
 .endfor
 .for i in ${MGTERMDOCS}
-	${INSTALL_DATA} ${WRKSRC}/mgterm/${i} ${PREFIX}/share/doc/mgl2/mgterm/
+	${INSTALL_DATA} ${WRKSRC}/mgterm/${i} ${DESTDIR}${PREFIX}/share/doc/mgl2/mgterm/
 .endfor
 .for i in ${MILDOCS}
-	${INSTALL_DATA} ${WRKSRC}/mil/${i} ${PREFIX}/share/doc/mgl2/mil/
+	${INSTALL_DATA} ${WRKSRC}/mil/${i} ${DESTDIR}${PREFIX}/share/doc/mgl2/mil/
 .endfor
 .for i in ${NINEDOCS}
-	${INSTALL_DATA} ${WRKSRC}/nine/${i} ${PREFIX}/share/doc/mgl2/nine/
+	${INSTALL_DATA} ${WRKSRC}/nine/${i} ${DESTDIR}${PREFIX}/share/doc/mgl2/nine/
 .endfor
 
 .include "../../graphics/jpeg/buildlink3.mk"
