@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.907 2010/02/22 16:10:28 sno Exp $
+$NetBSD: CHANGES-2010,v 1.908 2010/02/22 16:24:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1098,3 +1098,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-XML-Elemental to 2.1.1 [sno 2010-02-22]
 	Updated security/p5-Authen-SASL to 2.13 [sno 2010-02-22]
 	Updated textproc/p5-XML-Stream to 1.23 [sno 2010-02-22]
+	Updated textproc/p5-XML-Twig to 3.34 [sno 2010-02-22]
