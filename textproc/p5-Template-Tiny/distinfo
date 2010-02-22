@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/01/25 14:33:15 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/02/22 13:55:24 sno Exp $
 
-SHA1 (Template-Tiny-0.10.tar.gz) = fec4a3ad6d7463119f2fc1daf292470398f3c15e
-RMD160 (Template-Tiny-0.10.tar.gz) = 728d847d5a55c1182cfb889020922a304f636bf7
-Size (Template-Tiny-0.10.tar.gz) = 15379 bytes
+SHA1 (Template-Tiny-0.11.tar.gz) = 24bed5f6647647f554b503d04a5137b19d5063d8
+RMD160 (Template-Tiny-0.11.tar.gz) = d4fd2fdc096f5ea278efe0830f46ad7e875de691
+Size (Template-Tiny-0.11.tar.gz) = 16129 bytes
