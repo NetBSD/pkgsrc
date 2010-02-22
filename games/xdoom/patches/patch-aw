@@ -1,0 +1,27 @@
+$NetBSD: patch-aw,v 1.4 2010/02/22 21:58:47 wiz Exp $
+
+--- linuxdoom-1.10/z_zone.c.orig	Mon Dec 22 21:07:09 1997
++++ linuxdoom-1.10/z_zone.c	Thu Aug 22 05:00:10 2002
+@@ -192,8 +192,12 @@
+     memblock_t* newblock;
+     memblock_t*	base;
+ 
++#ifdef __alpha
++    size = (size + 7) & ~7;
++#else
+     size = (size + 3) & ~3;
+-    
++#endif
++
+     // scan through the block list,
+     // looking for the first free block
+     // of sufficient size,
+@@ -437,7 +441,7 @@
+     if (block->id != ZONEID)
+ 	I_Error ("Z_ChangeTag: freed a pointer without ZONEID");
+ 
+-    if (tag >= PU_PURGELEVEL && (unsigned)block->user < 0x100)
++    if (tag >= PU_PURGELEVEL && block->user < (void **)0x100)
+ 	I_Error ("Z_ChangeTag: an owner is required for purgable blocks");
+ 
+     block->tag = tag;

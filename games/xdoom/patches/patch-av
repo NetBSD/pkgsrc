@@ -1,0 +1,16 @@
+$NetBSD: patch-av,v 1.4 2010/02/22 21:58:47 wiz Exp $
+
+--- linuxdoom-1.10/w_wad.h.orig	Mon Dec 22 20:25:32 1997
++++ linuxdoom-1.10/w_wad.h	Thu Feb  3 01:34:03 2000
+@@ -36,9 +36,8 @@
+ {
+     // Should be "IWAD" or "PWAD".
+     char		identification[4];		
+-    int			numlumps;
+-    int			infotableofs;
+-    
++    int		numlumps __attribute__ ((packed));
++    int		infotableofs __attribute__ ((packed));
+ } wadinfo_t;
+ 
+ 
