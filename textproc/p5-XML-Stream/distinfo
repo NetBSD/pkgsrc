@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/06/22 15:21:52 he Exp $
+$NetBSD: distinfo,v 1.4 2010/02/22 16:10:16 sno Exp $
 
-SHA1 (XML-Stream-1.22.tar.gz) = e3b603eda6febb32f8380e8cff4f933f4121a1f0
-RMD160 (XML-Stream-1.22.tar.gz) = 8ec1bf1a9ab51a1757d9174ea42b24a483f89ee3
-Size (XML-Stream-1.22.tar.gz) = 80529 bytes
+SHA1 (XML-Stream-1.23.tar.gz) = 9b48b5a7f3b4e4cd5e0c91b19d994ca305a517a9
+RMD160 (XML-Stream-1.23.tar.gz) = 50e27cf82027e3c74368d19925a91f3aa354489d
+Size (XML-Stream-1.23.tar.gz) = 85045 bytes
