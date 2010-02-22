@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2008/10/19 19:19:00 he Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/22 16:24:04 sno Exp $
 #
 
-DISTNAME=	XML-Twig-3.32
+DISTNAME=	XML-Twig-3.34
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 SVR4_PKGNAME=	p5xtw
 CATEGORIES=	textproc perl5
 MASTER_SITES=	http://www.xmltwig.com/xmltwig/ \
@@ -12,6 +12,7 @@ MASTER_SITES=	http://www.xmltwig.com/xmltwig/ \
 MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://www.xmltwig.com/
 COMMENT=	Efficient XML document interface
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
 
@@ -37,6 +38,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/XML/Twig/.packlist
+MAKE_ENV+=		PERL_MM_USE_DEFAULT=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
