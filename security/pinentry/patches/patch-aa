@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.3 2010/02/22 17:19:09 drochner Exp $
+
+--- pinentry/pinentry-curses.c.orig	2009-04-16 15:06:53.000000000 +0000
++++ pinentry/pinentry-curses.c
+@@ -819,8 +819,10 @@ dialog_run (pinentry_t pinentry, const c
+       if (pin_utf8)
+ 	{
+ 	  pinentry_setbufferlen (pinentry, strlen (pin_utf8) + 1);
+-	  if (pinentry->pin)
++	  if (pinentry->pin) {
+ 	    strcpy (pinentry->pin, pin_utf8);
++	    diag.pin_len = strlen (pin_utf8);
++	  }
+ 	  secmem_free (pin_utf8);
+ 	  pinentry->locale_err = 0;
+ 	}
