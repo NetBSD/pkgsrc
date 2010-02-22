@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/01/16 23:57:19 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/02/22 14:01:03 sno Exp $
 
-SHA1 (podlators-2.3.0.tar.gz) = d24c1f847e11be035e89967e9115f5379a4152dd
-RMD160 (podlators-2.3.0.tar.gz) = d4c3b8269bfac5600dba02765aa41b9ddd88ffa9
-Size (podlators-2.3.0.tar.gz) = 92784 bytes
+SHA1 (podlators-2.3.1.tar.gz) = 1ad5cc2561c18cfd69fd33c24d9d3d502510ce67
+RMD160 (podlators-2.3.1.tar.gz) = dd9a6e0634ac24ed7d8d323b92dc7ddd1ae8530e
+Size (podlators-2.3.1.tar.gz) = 92874 bytes
