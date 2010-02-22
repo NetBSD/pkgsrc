@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/09/11 17:12:13 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/22 20:29:09 sno Exp $
 #
 
-DISTNAME=		URI-Find-20090319
+DISTNAME=		URI-Find-20100211
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=URI/}
@@ -13,15 +13,16 @@ LICENSE=		${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=		p5-URI>=1.00:../../www/p5-URI
-BUILD_REQUIRES+=	p5-Test-Simple>=0.82:../../devel/p5-Test-Simple
+# requires URI::URL 5.00 - oldest available URI on CPAN contains 5.03
+DEPENDS+=		p5-URI>=1.40:../../www/p5-URI
+BUILD_DEPENDS+=		{perl>=5.10.1,p5-Test-Simple>=0.82}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 
 PERL5_PACKLIST=		auto/URI/Find/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
-BUILD_DEPENDS+=		p5-Module-Build>=0.30000:../../devel/p5-Module-Build
+#BUILD_DEPENDS+=		p5-Module-Build>=0.30000:../../devel/p5-Module-Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
