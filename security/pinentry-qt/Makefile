@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/02/07 15:36:58 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/22 17:20:39 drochner Exp $
 #
 
 DISTNAME=		pinentry-0.7.6
@@ -10,6 +10,8 @@ MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 COMMENT=		Applications for entering PINs or Passphrases
 
+PATCHDIR=		${.CURDIR}/../../security/pinentry/patches
+DISTINFO_FILE=		${.CURDIR}/../../security/pinentry/distinfo
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
