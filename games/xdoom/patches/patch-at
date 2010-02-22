@@ -1,0 +1,123 @@
+$NetBSD: patch-at,v 1.3 2010/02/22 21:58:47 wiz Exp $
+
+--- linuxdoom-1.10/s_sound.c.orig	Thu Feb  3 13:28:09 2000
++++ linuxdoom-1.10/s_sound.c	Thu Feb  3 13:37:06 2000
+@@ -115,6 +115,7 @@
+ // Maximum volume of music. Useless so far.
+ int 		snd_MusicVolume = 15; 
+ 
++static int	no_sound = 0;
+ 
+ 
+ // whether songs are mus_paused
+@@ -164,6 +165,8 @@
+ {  
+   int		i;
+ 
++  if (no_sound)
++    return;
+   fprintf( stderr, "S_Init: default sfx volume %d\n", sfxVolume);
+ 
+   // Whatever these did with DMX, these are rather dummies now.
+@@ -204,6 +207,8 @@
+   int cnum;
+   int mnum;
+ 
++  if (no_sound)
++    return;
+   // kill all playing sounds at start of level
+   //  (trust me - a good idea)
+   for (cnum=0 ; cnum<numChannels ; cnum++)
+@@ -268,6 +273,8 @@
+   mobj_t*	origin = (mobj_t *) origin_p;
+   
+   
++  if (no_sound)
++    return;
+   // Debug.
+   /*fprintf( stderr,
+   	   "S_StartSoundAtVolume: playing sound %d (%s)\n",
+@@ -403,6 +410,9 @@
+     // if (sfx_id == sfx_sawful)
+     // sfx_id = sfx_itemup;
+ #endif
++
++    if (no_sound)
++      return;
+   
+     S_StartSoundAtVolume(origin, sfx_id, snd_SfxVolume);
+ 
+@@ -473,6 +483,9 @@
+ 
+     int cnum;
+ 
++    if (no_sound)
++	return;
++
+     for (cnum=0 ; cnum<numChannels ; cnum++)
+     {
+ 	if (channels[cnum].sfxinfo && channels[cnum].origin == origin)
+@@ -496,6 +509,8 @@
+ //
+ void S_PauseSound(void)
+ {
++    if (no_sound)
++      return;
+     if (mus_playing && !mus_paused)
+     {
+ 	I_PauseSong(mus_playing->handle);
+@@ -505,6 +520,8 @@
+ 
+ void S_ResumeSound(void)
+ {
++    if (no_sound)
++      return;
+     if (mus_playing && mus_paused)
+     {
+ 	I_ResumeSong(mus_playing->handle);
+@@ -529,6 +546,8 @@
+     mobj_t*	listener = (mobj_t*)listener_p;
+ 
+ 
++    if (no_sound)
++      return;
+     
+     // Clean up unused data.
+     // This is currently not done for 16bit (sounds cached static).
+@@ -636,6 +655,8 @@
+ 
+     snd_SfxVolume = volume;
+ 
++    if (volume == 0)
++      no_sound = ! volume;
+ }
+ 
+ //
+@@ -711,6 +732,8 @@
+     int		i;
+     channel_t*	c = &channels[cnum];
+ 
++    if (no_sound)
++      return;
+     if (c->sfxinfo)
+     {
+ 	// stop the sound playing
+@@ -762,6 +785,9 @@
+     fixed_t	ady;
+     angle_t	angle;
+ 
++    if (no_sound)
++      return(1);
++
+     // calculate the distance to sound origin
+     //  and clip it if necessary
+     adx = abs(listener->x - source->x);
+@@ -834,6 +860,8 @@
+     
+     channel_t*	c;
+ 
++    if (no_sound)
++      return(-1);
+     // Find an open channel
+     for (cnum=0 ; cnum<numChannels ; cnum++)
+     {
