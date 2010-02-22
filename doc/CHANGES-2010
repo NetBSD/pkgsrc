@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.897 2010/02/22 13:55:35 sno Exp $
+$NetBSD: CHANGES-2010,v 1.898 2010/02/22 14:01:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1088,3 +1088,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-Data-SimplePassword to 0.05 [sno 2010-02-22]
 	Updated textproc/p5-Text-RecordParser to 1.4.0 [sno 2010-02-22]
 	Updated textproc/p5-Template-Tiny to 0.11 [sno 2010-02-22]
+	Updated textproc/p5-podlators to 2.3.1 [sno 2010-02-22]
