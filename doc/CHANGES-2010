@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.910 2010/02/22 16:38:26 sno Exp $
+$NetBSD: CHANGES-2010,v 1.911 2010/02/22 17:11:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1101,3 +1101,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-XML-Twig to 3.34 [sno 2010-02-22]
 	Updated sysutils/p5-Lchown to 1.01 [sno 2010-02-22]
 	Updated security/p5-Net-OpenSSH to 0.45 [sno 2010-02-22]
+	Updated devel/p5-CPAN-Reporter to 1.1711 [sno 2010-02-22]
