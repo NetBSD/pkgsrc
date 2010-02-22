@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.921 2010/02/22 22:04:37 ghen Exp $
+$NetBSD: CHANGES-2010,v 1.922 2010/02/22 22:13:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1115,3 +1115,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Rose-HTMLx-Form-Related to 0.20 [sno 2010-02-22]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.05003 [sno 2010-02-22]
 	Updated databases/p5-SQL-Translator to 0.11004 [sno 2010-02-22]
+	Added games/doom1 version 1.8 [wiz 2010-02-22]
