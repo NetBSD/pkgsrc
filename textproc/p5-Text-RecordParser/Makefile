@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/08/20 17:32:45 sno Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/22 13:47:29 sno Exp $
 #
 
-DISTNAME=	Text-RecordParser-1.3.0
+DISTNAME=	Text-RecordParser-1.4.0
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-Readonly-[0-9]*:../../devel/p5-Readonly
 
 # Recommended dependencies
 DEPENDS+=	p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
-DEPENDS+=	p5-Readonly-[0-9]*:../../devel/p5-Readonly
+DEPENDS+=	p5-Readonly-XS-[0-9]*:../../devel/p5-Readonly-XS
 DEPENDS+=	p5-Text-TabularDisplay>=1.22:../../textproc/p5-Text-TabularDisplay
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
