@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.892 2010/02/22 01:20:07 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.893 2010/02/22 08:38:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1082,3 +1082,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed sysutils/adjustkernel [wiz 2010-02-21]
 	Updated sysutils/grub to 0.97nb9 [wiz 2010-02-21]
 	Added print/tex-latex-doc version 2009 [minskim 2010-02-22]
+	Removed devel/mk-files [wiz 2010-02-22]
