@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/01/11 14:30:08 he Exp $
+$NetBSD: distinfo,v 1.6 2010/02/22 15:56:28 sno Exp $
 
-SHA1 (Authen-SASL-2.12.tar.gz) = 861e025083e8c4bea4d0a6533cbc618d65614838
-RMD160 (Authen-SASL-2.12.tar.gz) = 2401202e15effd8c3f9e8b2bdb8f05226c95f2b8
-Size (Authen-SASL-2.12.tar.gz) = 50394 bytes
+SHA1 (Authen-SASL-2.13.tar.gz) = 474858839f2d3fa2a0f2fedeb4b0fb78d180fc74
+RMD160 (Authen-SASL-2.13.tar.gz) = 690aeb885bfd00baa947bf7d95616c261a43258e
+Size (Authen-SASL-2.13.tar.gz) = 36196 bytes
