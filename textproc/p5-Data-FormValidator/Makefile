@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2009/01/11 15:05:07 he Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/22 15:02:21 sno Exp $
 
-DISTNAME=	Data-FormValidator-4.63
+DISTNAME=	Data-FormValidator-4.65
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
@@ -8,9 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Data-FormValidator/
 COMMENT=	Validates user input based on input profile
-
-PERL5_MODULE_TYPE=	Module::Build
-PKG_DESTDIR_SUPPORT=	user-destdir
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Date-Calc>=5.0:../../devel/p5-Date-Calc
 DEPENDS+=	p5-Email-Valid-[0-9]*:../../mail/p5-Email-Valid
@@ -20,9 +18,13 @@ DEPENDS+=	p5-MIME-Types>=1.005:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Perl6-Junction-[0-9]*:../../devel/p5-Perl6-Junction
 DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 
+BUILD_DEPENDS+=	{perl>=5.11.1,p5-CGI>=3.48}:../../www/p5-CGI
+
 PERL5_REQD+=	5.8.0
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=		auto/Data/FormValidator/.packlist
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
