@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/02/03 23:26:17 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/22 09:20:30 obache Exp $
 #
 
 .include "../../devel/scmgit/Makefile.common"
@@ -8,7 +8,7 @@ COMMENT=		GIT Tree History Storage Tool (base package)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS+=		git-[0-9]*		# misc/git
+CONFLICTS+=		git<4.9.5nb1		# misc/git
 
 DEPENDS+=		p5-Error>=0.17015:../../devel/p5-Error
 
