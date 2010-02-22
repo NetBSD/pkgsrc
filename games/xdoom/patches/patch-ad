@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5 2010/02/22 21:58:47 wiz Exp $
+
+--- linuxdoom-1.10/d_net.h.orig	Sun Dec 14 11:53:05 1997
++++ linuxdoom-1.10/d_net.h	Thu Feb  3 01:33:46 2000
+@@ -79,7 +79,7 @@
+ typedef struct
+ {
+     // Supposed to be DOOMCOM_ID?
+-    long		id;
++    int		id;
+     
+     // DOOM executes an int to execute commands.
+     short		intnum;		

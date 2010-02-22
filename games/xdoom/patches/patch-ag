@@ -1,0 +1,35 @@
+$NetBSD: patch-ag,v 1.4 2010/02/22 21:58:47 wiz Exp $
+
+--- linuxdoom-1.10/i_net.c.orig	Mon Dec 22 20:37:46 1997
++++ linuxdoom-1.10/i_net.c	Thu Feb  3 01:33:48 2000
+@@ -50,21 +50,6 @@
+ 
+ 
+ 
+-
+-// For some odd reason...
+-#define ntohl(x) \
+-        ((unsigned long int)((((unsigned long int)(x) & 0x000000ffU) << 24) | \
+-                             (((unsigned long int)(x) & 0x0000ff00U) <<  8) | \
+-                             (((unsigned long int)(x) & 0x00ff0000U) >>  8) | \
+-                             (((unsigned long int)(x) & 0xff000000U) >> 24)))
+-
+-#define ntohs(x) \
+-        ((unsigned short int)((((unsigned short int)(x) & 0x00ff) << 8) | \
+-                              (((unsigned short int)(x) & 0xff00) >> 8))) \
+-	  
+-#define htonl(x) ntohl(x)
+-#define htons(x) ntohs(x)
+-
+ void	NetSend (void);
+ boolean NetListen (void);
+ 
+@@ -73,7 +58,7 @@
+ // NETWORKING
+ //
+ 
+-int	DOOMPORT =	(IPPORT_USERRESERVED +0x1d );
++int	DOOMPORT =	(IPPORT_RESERVED +0x1d );
+ 
+ int			sendsocket;
+ int			insocket;
