@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2009/11/21 14:39:49 sno Exp $
+# $NetBSD: Makefile,v 1.15 2010/02/22 19:17:29 sno Exp $
 #
 
-DISTNAME=	HTTP-Server-Simple-0.41
+DISTNAME=	HTTP-Server-Simple-0.42
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5hss
 CATEGORIES=	www perl5
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 PERL5_PACKLIST=		auto/HTTP/Server/Simple/.packlist
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
