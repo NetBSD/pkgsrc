@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.916 2010/02/22 20:50:25 sno Exp $
+$NetBSD: CHANGES-2010,v 1.917 2010/02/22 21:00:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1107,3 +1107,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-HTTP-Server-Simple to 0.42 [sno 2010-02-22]
 	Updated www/p5-URI-Find to 20100211 [sno 2010-02-22]
 	Updated www/p5-CSS-Squish to 0.09 [sno 2010-02-22]
+	Updated www/p5-Rose-HTMLx-Form-Related to 0.20 [sno 2010-02-22]
