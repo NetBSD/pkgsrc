@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.899 2010/02/22 14:17:50 sno Exp $
+$NetBSD: CHANGES-2010,v 1.900 2010/02/22 14:20:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1090,3 +1090,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Template-Tiny to 0.11 [sno 2010-02-22]
 	Updated textproc/p5-podlators to 2.3.1 [sno 2010-02-22]
 	Updated textproc/p5-String-BufferStack to 1.15 [sno 2010-02-22]
+	Updated textproc/p5-Template-Declare to 0.43 [sno 2010-02-22]
