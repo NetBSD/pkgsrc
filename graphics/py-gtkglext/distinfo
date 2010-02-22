@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/13 15:01:27 drochner Exp $
+$NetBSD: distinfo,v 1.2 2010/02/22 12:10:59 obache Exp $
 
 SHA1 (pygtkglext-1.1.0.tar.bz2) = a22962982d12a43acac7601a8b370ec02834eb8f
 RMD160 (pygtkglext-1.1.0.tar.bz2) = a050519f520dc45254f485bdc2c41e2d51a2d26f
 Size (pygtkglext-1.1.0.tar.bz2) = 349067 bytes
-SHA1 (patch-aa) = bbc4f2cd0fce5851c5e1020f2f0dffe1c82eae20
+SHA1 (patch-aa) = 07c33bed02cb4b756bb2bc6b324bf2ce051e9408
