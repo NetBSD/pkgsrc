@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.918 2010/02/22 21:24:39 sno Exp $
+$NetBSD: CHANGES-2010,v 1.919 2010/02/22 21:41:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1109,3 +1109,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-CSS-Squish to 0.09 [sno 2010-02-22]
 	Updated www/p5-Rose-HTMLx-Form-Related to 0.20 [sno 2010-02-22]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.05003 [sno 2010-02-22]
+	Updated databases/p5-SQL-Translator to 0.11004 [sno 2010-02-22]
