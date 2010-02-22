@@ -1,0 +1,16 @@
+$NetBSD: patch-ax,v 1.5 2010/02/22 21:58:47 wiz Exp $
+
+--- sndserv/Makefile.orig	Mon Dec 22 21:17:10 1997
++++ sndserv/Makefile	Thu Feb  3 01:34:04 2000
+@@ -7,9 +7,9 @@
+ #
+ 
+ CC=gcc
+-CFLAGS=-O -DNORMALUNIX -DLINUX
++CFLAGS+= -DNORMALUNIX
+ LDFLAGS=
+-LIBS=-lm
++LIBS=-lm ${LIBOSSAUDIO}
+ 
+ O=linux
+ 

@@ -1,0 +1,38 @@
+$NetBSD: patch-az,v 1.4 2010/02/22 21:58:48 wiz Exp $
+
+--- sndserv/wadread.c.orig	1997-01-30 19:54:23.000000000 +0000
++++ sndserv/wadread.c
+@@ -39,7 +39,6 @@ static const char rcsid[] = "$Id: wadrea
+ 
+ 
+ 
+-#include <malloc.h>
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <stdio.h>
+@@ -94,12 +93,7 @@ void**		lumpcache;
+ // Something new.
+ // This version of w_wad.c does handle endianess.
+ //
+-#ifndef __BIG_ENDIAN__
+-
+-#define LONG(x) (x)
+-#define SHORT(x) (x)
+-
+-#else
++#if defined(__BIG_ENDIAN__) || (BYTE_ORDER == BIG_ENDIAN)
+ 
+ #define LONG(x) ((long)SwapLONG((unsigned long) (x)))
+ #define SHORT(x) ((short)SwapSHORT((unsigned short) (x)))
+@@ -119,6 +113,11 @@ unsigned short SwapSHORT(unsigned short 
+ 	(x>>8) | (x<<8);
+ }
+ 
++#else
++
++#define LONG(x) (x)
++#define SHORT(x) (x)
++
+ #endif
+ 
+ 

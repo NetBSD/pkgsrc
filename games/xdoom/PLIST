@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.4 2010/02/22 21:58:47 wiz Exp $
+bin/xdoom
+bin/sndserver
+share/doom/doom1.wad
