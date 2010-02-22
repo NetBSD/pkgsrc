@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.902 2010/02/22 14:32:19 sno Exp $
+$NetBSD: CHANGES-2010,v 1.903 2010/02/22 15:02:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1093,3 +1093,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Template-Declare to 0.43 [sno 2010-02-22]
 	Updated sysutils/p5-Sys-Filesystem to 1.27 [sno 2010-02-22]
 	Updated textproc/p5-Convert-BER to 1.3200 [sno 2010-02-22]
+	Updated textproc/p5-Data-FormValidator to 4.65 [sno 2010-02-22]
