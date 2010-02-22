@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.905 2010/02/22 15:23:17 sno Exp $
+$NetBSD: CHANGES-2010,v 1.906 2010/02/22 15:56:38 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1096,3 +1096,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Data-FormValidator to 4.65 [sno 2010-02-22]
 	Updated textproc/p5-Kwalify to 1.21 [sno 2010-02-22]
 	Updated textproc/p5-XML-Elemental to 2.1.1 [sno 2010-02-22]
+	Updated security/p5-Authen-SASL to 2.13 [sno 2010-02-22]
