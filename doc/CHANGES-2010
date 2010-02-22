@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.913 2010/02/22 17:29:56 sno Exp $
+$NetBSD: CHANGES-2010,v 1.914 2010/02/22 19:17:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1104,3 +1104,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-CPAN-Reporter to 1.1711 [sno 2010-02-22]
 	Updated mail/p5-MIME-Charset to 1.008 [sno 2010-02-22]
 	Updated www/p5-HTTP-Body to 1.07 [sno 2010-02-22]
+	Updated www/p5-HTTP-Server-Simple to 0.42 [sno 2010-02-22]
