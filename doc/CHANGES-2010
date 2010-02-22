@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.920 2010/02/22 21:59:12 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.921 2010/02/22 22:04:37 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1057,7 +1057,13 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/tex-rotating to 2.16anb1 [minskim 2010-02-19]
 	Removed print/tex-bin-latex successor print/tex-latex-bin [minskim 2010-02-19]
 	Updated editors/emacs-snapshot to 23.1.92.20100217 [minskim 2010-02-19]
-	Updated databases/openldap-* to 2.4.21 [ghen 2010-02-19]
+	Updated databases/openldap to 2.4.21 [ghen 2010-02-19]
+	Updated databases/openldap-client to 2.4.21 [ghen 2010-02-19]
+	Updated databases/openldap-cloak to 2.4.21 [ghen 2010-02-19]
+	Updated databases/openldap-doc to 2.4.21 [ghen 2010-02-19]
+	Updated databases/openldap-nops to 2.4.21 [ghen 2010-02-19]
+	Updated databases/openldap-server to 2.4.21 [ghen 2010-02-19]
+	Updated databases/openldap-smbk5pwd to 2.4.21 [ghen 2010-02-19]
 	Added print/tex-german version 2.5e [tron 2010-02-19]
 	Updated meta-pkgs/netbsd-www to 1.5 [tron 2010-02-19]
 	Updated print/tex-latex-bin to 2009nb1 [minskim 2010-02-20]
