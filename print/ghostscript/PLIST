@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 21:16:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/02/23 20:31:26 drochner Exp $
 bin/bdftops
 bin/dumphint
 bin/dvipdf
@@ -112,6 +112,7 @@ share/ghostscript/${PKGVERSION}/Resource/CMap/Adobe-CNS1-2
 share/ghostscript/${PKGVERSION}/Resource/CMap/Adobe-CNS1-3
 share/ghostscript/${PKGVERSION}/Resource/CMap/Adobe-CNS1-4
 share/ghostscript/${PKGVERSION}/Resource/CMap/Adobe-CNS1-5
+share/ghostscript/${PKGVERSION}/Resource/CMap/Adobe-CNS1-6
 share/ghostscript/${PKGVERSION}/Resource/CMap/Adobe-CNS1-B5pc
 share/ghostscript/${PKGVERSION}/Resource/CMap/Adobe-CNS1-ETenms-B5
 share/ghostscript/${PKGVERSION}/Resource/CMap/Adobe-CNS1-H-CID
@@ -329,6 +330,8 @@ share/ghostscript/${PKGVERSION}/Resource/ColorSpace/DefaultCMYK
 share/ghostscript/${PKGVERSION}/Resource/ColorSpace/DefaultGray
 share/ghostscript/${PKGVERSION}/Resource/ColorSpace/DefaultRGB
 share/ghostscript/${PKGVERSION}/Resource/ColorSpace/TrivialCMYK
+share/ghostscript/${PKGVERSION}/Resource/ColorSpace/sGray
+share/ghostscript/${PKGVERSION}/Resource/ColorSpace/sRGB
 share/ghostscript/${PKGVERSION}/Resource/Decoding/FCO_Dingbats
 share/ghostscript/${PKGVERSION}/Resource/Decoding/FCO_Symbol
 share/ghostscript/${PKGVERSION}/Resource/Decoding/FCO_Unicode

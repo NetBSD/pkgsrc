@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.28 2009/12/23 13:27:59 drochner Exp $
+$NetBSD: distinfo,v 1.29 2010/02/23 20:31:26 drochner Exp $
 
-SHA1 (ghostscript-8.70.tar.bz2) = 4e4132713258c680a4fbec577e6dfc82b980ec01
-RMD160 (ghostscript-8.70.tar.bz2) = 88f7d380d1075c57829aa7f34334542fd2bbd6ce
-Size (ghostscript-8.70.tar.bz2) = 17019673 bytes
+SHA1 (ghostscript-8.71.tar.gz) = 629299140f612fac32f6289be0904107dfd1b555
+RMD160 (ghostscript-8.71.tar.gz) = efce74cf22cf99b2b1a145df466e79a86e3dfefb
+Size (ghostscript-8.71.tar.gz) = 25240801 bytes
 SHA1 (patch-ab) = 7a98cad37f94394f172bdac23f5dd73fb1f08006
 SHA1 (patch-ad) = 8b3b743b2d6405ea35bfb16970942ecd55702401
-SHA1 (patch-ae) = 50335e72adebe95ab0cb5873d1c6dd00e971579a
-SHA1 (patch-af) = e4d56f13f5eb595a3929aac6c257012961f59c2b
+SHA1 (patch-af) = 13aa7b5159cbd5413353b48380d5665ed879fe64
 SHA1 (patch-ag) = bdfbe40c849537d84ac2b3def4a0a3a87ecc152f
-SHA1 (patch-ah) = efc85dead838505ee462714167f196db2deeb0aa
+SHA1 (patch-ah) = 8cdf9cc1a62e3eb34ca8edf7bbaf9d542b612519
 SHA1 (patch-ai) = ad69ddd4a4bd50cf2263ac6c6d17a59798ef3124
 SHA1 (patch-aj) = 620d921210b5c0efec0a84e33bc416e4ab4bd11c
-SHA1 (patch-ak) = ff4603b188dad8ba8144e96f677ee4bda53df009
+SHA1 (patch-al) = 86489b704c60320385794c3eb68170d9b9f1f6cc
