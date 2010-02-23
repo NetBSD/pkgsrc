@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1965 2010/02/23 17:24:17 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1966 2010/02/23 17:24:55 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -138,11 +138,6 @@ PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
 
 .if defined(PKG_PATH)
 PKG_FAIL_REASON+='Please unset PKG_PATH before doing pkgsrc work!'
-.endif
-
-.if defined(ONLY_FOR_ARCHS) || defined(NOT_FOR_ARCHS) \
-	|| defined(ONLY_FOR_OPSYS) || defined(NOT_FOR_OPSYS)
-PKG_FAIL_REASON+='ONLY/NOT_FOR_ARCHS/OPSYS are deprecated and must be replaced with ONLY/NOT_FOR_PLATFORM.'
 .endif
 
 # Allow variables to be set on a per-OS basis
