@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/01/16 18:02:53 sno Exp $
+# $NetBSD: Makefile,v 1.8 2010/02/23 20:07:49 sno Exp $
 
-DISTNAME=	App-Nopaste-0.18
+DISTNAME=	App-Nopaste-0.19
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	www perl5
@@ -27,7 +27,6 @@ DEPENDS+=	p5-WWW-Mechanize-[0-9]*:../../www/p5-WWW-Mechanize
 DEPENDS+=	p5-Clipboard-[0-9]*:../../x11/p5-Clipboard
 DEPENDS+=	p5-Config-INI-[0-9]*:../../devel/p5-Config-INI
 DEPENDS+=	p5-WWW-Pastebin-PastebinCom-Create-[0-9]*:../../www/p5-WWW-Pastebin-PastebinCom-Create
-DEPENDS+=	p5-WWW-Pastebin-RafbNet-Create-[0-9]*:../../www/p5-WWW-Pastebin-RafbNet-Create
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 #MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skip
