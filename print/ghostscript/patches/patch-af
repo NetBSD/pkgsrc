@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.5 2009/02/12 19:51:08 drochner Exp $
+$NetBSD: patch-af,v 1.6 2010/02/23 20:31:26 drochner Exp $
 
---- base/unix-dll.mak.orig	2008-09-13 22:22:25.000000000 +0200
+--- base/unix-dll.mak.orig	2009-10-19 20:24:53.000000000 +0000
 +++ base/unix-dll.mak
 @@ -52,12 +52,12 @@ GS_SONAME_MAJOR_MINOR=$(GS_SONAME).$(GS_
  LDFLAGS_SO=-shared -Wl,-soname=$(GS_SONAME_MAJOR)
@@ -14,23 +14,28 @@ $NetBSD: patch-af,v 1.5 2009/02/12 19:51:08 drochner Exp $
 +#Darwin#GS_SONAME=$(GS_SONAME_BASE).$(GS_SOEXT)
 +#Darwin#GS_SONAME_MAJOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_SOEXT)
 +#Darwin#GS_SONAME_MAJOR_MINOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_VERSION_MINOR).$(GS_SOEXT)
- #LDFLAGS_SO=-dynamiclib -flat-namespace
--#LDFLAGS_SO=-dynamiclib -install-name $(GS_SONAME_MAJOR_MINOR)
+ #LDFLAGS_SO=-dynamiclib -flat_namespace
+-#LDFLAGS_SO=-dynamiclib -install_name $(GS_SONAME_MAJOR_MINOR)
 +#Darwin#LDFLAGS_SO=-dynamiclib -install_name $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
- #LDFLAGS_SO=-dynamiclib
+ #LDFLAGS_SO=-dynamiclib -install_name $(FRAMEWORK_NAME)
  
  GS_SO=$(BINDIR)/$(GS_SONAME)
-@@ -79,11 +79,11 @@ $(GS_SO_MAJOR): $(GS_SO_MAJOR_MINOR)
- # Build the small Ghostscript loaders, with Gtk+ and without
+@@ -80,15 +80,15 @@ $(GS_SO_MAJOR): $(GS_SO_MAJOR_MINOR)
  
  $(GSSOC_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
--	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c -L$(BINDIR) -l$(GS)
-+	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c -L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS)
+ 	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c \
+-	$(LDFLAGS) -L$(BINDIR) -l$(GS)
++	$(LDFLAGS) -L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS)
  
  $(GSSOX_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
  	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(PSSRC)$(SOC_LOADER) \
--	-L$(BINDIR) -l$(GS) $(SOC_LIBS)
-+	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS)
+-	$(LDFLAGS) -L$(BINDIR) -l$(GS) $(SOC_LIBS)
++	$(LDFLAGS) -L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS)
  
  # ------------------------- Recursive make targets ------------------------- #
  
+-SODEFS=LDFLAGS='$(LDFLAGS) $(LDFLAGS_SO)'\
++SODEFS=LDFLAGS='$(LDFLAGS)' LDFLAGS_SO='$(LDFLAGS_SO)'\
+  GS_XE=$(BINDIR)/$(SOBINRELDIR)/$(GS_SONAME_MAJOR_MINOR)\
+  STDIO_IMPLEMENTATION=c\
+  DISPLAY_DEV=$(DD)$(SOOBJRELDIR)/display.dev\
