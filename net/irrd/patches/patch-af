@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.3 2010/02/23 20:37:06 spz Exp $
+
+--- programs/IRRd/Makefile.orig	2005-11-16 20:05:41.000000000 +0000
++++ programs/IRRd/Makefile
+@@ -27,10 +27,10 @@ $(GOAL).lint:
+ 	lint $(CPPFLAGS) `echo $(OBJS) | sed -e 's,\.o,.c,g'`
+ 
+ install: $(GOAL)
+-	$(INSTALL) -m 755 $(GOAL) $(DESTDIR)/$(GOAL)
++	$(INSTALL) -m 755 $(GOAL) $(DESTDIR)$(sbindir)/$(GOAL)
+ 
+ install-man: irrd.8
+-	$(INSTALL) -m 644 irrd.8 $(MANDIR)/man8/irrd.8
++	$(INSTALL) -m 644 irrd.8 $(DESTDIR)$(MANDIR)/man8/irrd.8
+ 
+ clean:
+ 	$(RM) *.o core *.core *~* *.quanitfy *.purify $(GOAL)
