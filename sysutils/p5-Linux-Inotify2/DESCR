@@ -1,0 +1,9 @@
+This module implements an interface to the Linux 2.6.13 and later Inotify
+file/directory change notification sytem.
+
+It has a number of advantages over the Linux::Inotify module:
+    - it is portable (Linux::Inotify only works on x86)
+    - the equivalent of fullname works correctly
+    - it is better documented
+    - it has callback-style interface, which is better suited for
+      integration.
