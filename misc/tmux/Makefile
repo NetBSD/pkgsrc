@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/02/22 19:07:41 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2010/02/23 10:56:04 drochner Exp $
 
 DISTNAME=	tmux-1.1
 PKGREVISION=	1
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	yes
+USE_TERMINFO=	yes
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
