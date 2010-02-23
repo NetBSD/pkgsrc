@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.3 2010/02/23 20:37:06 spz Exp $
+
+--- programs/irr_rpsl_submit/Makefile.orig	2003-04-01 19:21:52.000000000 +0000
++++ programs/irr_rpsl_submit/Makefile
+@@ -19,7 +19,7 @@ lint:
+ 	lint `echo $(RPSLOBJS) | sed -e 's,\.o,.c,g'`
+ 
+ install: $(GOAL)
+-	$(INSTALL) -m 755 $(GOAL) $(DESTDIR)/
++	$(INSTALL) -m 755 $(GOAL) $(DESTDIR)$(sbindir)/$(GOAL)
+ 
+ 
+ clean:
