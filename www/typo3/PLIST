@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/01/14 14:59:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/02/23 14:12:22 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2354,6 +2354,10 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/mod1/locallang.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/mod1/locallang_mod.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/mod1/moduleicon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/README
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/oracle/indexed_search.diff
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/oracle/realurl.diff
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/oracle/scheduler.diff
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/oracle/templavoila.diff
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/postgresql/postgresql-compatibility.sql
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Configuration/AbstractConfigurationManager.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Configuration/BackendConfigurationManager.php
@@ -3826,6 +3830,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/classes/salts/class.tx_sal
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/classes/salts/class.tx_saltedpasswords_salts_md5.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/classes/salts/class.tx_saltedpasswords_salts_phpass.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/classes/salts/interfaces/interface.tx_saltedpasswords_salts.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/doc/manual.sxw
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/ext_autoload.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/ext_conf_template.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/ext_emconf.php
