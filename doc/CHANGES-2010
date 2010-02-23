@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.938 2010/02/23 17:50:00 sno Exp $
+$NetBSD: CHANGES-2010,v 1.939 2010/02/23 18:04:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1132,3 +1132,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typo3 to 4.3.2 [taca 2010-02-23]
 	Updated devel/p5-Method-Signatures-Simple to 0.05 [sno 2010-02-23]
 	Updated devel/p5-Test-WWW-Selenium to 1.21 [sno 2010-02-23]
+	Updated devel/p5-Test-YAML-Meta to 0.15 [sno 2010-02-23]
