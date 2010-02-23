@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1963 2010/02/23 17:20:53 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1964 2010/02/23 17:22:12 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -130,10 +130,6 @@ PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite
 
 .if empty(PKG_INSTALLATION_TYPES:M${PKG_INSTALLATION_TYPE})
 PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
-.endif
-
-.if defined(ALL_TARGET)
-PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGET.'
 .endif
 
 .if !defined(CATEGORIES) || !defined(DISTNAME)
