@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1964 2010/02/23 17:22:12 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1965 2010/02/23 17:24:17 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -138,14 +138,6 @@ PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
 
 .if defined(PKG_PATH)
 PKG_FAIL_REASON+='Please unset PKG_PATH before doing pkgsrc work!'
-.endif
-
-.if defined(MASTER_SITE_SUBDIR)
-PKG_FAIL_REASON+='MASTER_SITE_SUBDIR is deprecated and must be replaced with MASTER_SITES.'
-.endif
-
-.if defined(PATCH_SITE_SUBDIR)
-PKG_FAIL_REASON+='PATCH_SITE_SUBDIR is deprecated and must be replaced with PATCH_SITES.'
 .endif
 
 .if defined(ONLY_FOR_ARCHS) || defined(NOT_FOR_ARCHS) \
