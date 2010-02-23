@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.940 2010/02/23 19:04:34 sno Exp $
+$NetBSD: CHANGES-2010,v 1.941 2010/02/23 19:13:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1134,3 +1134,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-WWW-Selenium to 1.21 [sno 2010-02-23]
 	Updated devel/p5-Test-YAML-Meta to 0.15 [sno 2010-02-23]
 	Updated security/p5-IO-Socket-SSL to 1.32 [sno 2010-02-23]
+	Updated time/p5-DateTime-Format-Natural to 0.84 [sno 2010-02-23]
