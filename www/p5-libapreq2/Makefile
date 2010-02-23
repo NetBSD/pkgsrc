@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2008/10/19 19:19:17 he Exp $
+# $NetBSD: Makefile,v 1.27 2010/02/23 20:00:54 sno Exp $
 
-DISTNAME=	libapreq2-2.08
+DISTNAME=	libapreq2-2.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+#PKGREVISION=	2
 SVR4_PKGNAME=	p5la2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/libapreq/}
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/libapreq/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://httpd.apache.org/apreq/
 COMMENT=	Lots of Apache specific httpd handling modules
+LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
