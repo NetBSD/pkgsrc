@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/05/29 16:14:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/02/23 20:37:05 spz Exp $
 man/man8/irrd.8
 sbin/irr_notify
 sbin/irrd
@@ -6,3 +6,7 @@ sbin/irr_rpsl_check
 sbin/irr_rpsl_submit
 sbin/irrdcacher
 sbin/ripe2rpsl
+share/examples/irrd/irrd.conf
+share/examples/rc.d/irrd
+share/doc/irrd/irrd-user.pdf
+share/doc/irrd/irrd-user.sgml

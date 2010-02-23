@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.7 2004/12/31 23:01:33 kim Exp $
+$NetBSD: patch-aa,v 1.8 2010/02/23 20:37:06 spz Exp $
 
---- configure.in.orig	2003-11-17 15:29:46.000000000 -0500
-+++ configure.in	2004-12-31 17:55:25.000000000 -0500
-@@ -10,27 +10,23 @@
+--- configure.in.orig	2006-09-12 17:40:57.000000000 +0000
++++ configure.in
+@@ -11,23 +11,23 @@ dnl initializing defaults
  dnl I've seen a report that pthread support is shaky in FreeBSD 2.x releases
  case "${host_os}" in
      freebsd2* )
 -	disable_thread=yes
 +	enable_thread=no
      ;;
-     solaris*|linux*|freebsd* )
+-    solaris*|linux*|freebsd* )
 -	disable_thread=no
++    solaris*|linux*|freebsd*|dragonfly*|netbsd* )
 +	enable_thread=yes
      ;;
      * ) 
@@ -22,50 +23,73 @@ $NetBSD: patch-aa,v 1.7 2004/12/31 23:01:33 kim Exp $
  AC_ARG_ENABLE(thread,
  [  --disable-thread        disable thread always],
 -[disable_thread=yes],)
--
--AC_ARG_ENABLE(thread,
--[  --enable-thread         enable thread (on non-solaris platform)],
++[enable_thread=no],)
+ 
+ AC_ARG_ENABLE(thread,
+ [  --enable-thread         enable thread (on non-solaris platform)],
 -[disable_thread=no],)
-+)
++[enable_thread=yes],)
  
  AC_ARG_ENABLE(wall,
  [  --disable-wall          disable -Wall option always],
--[disable_wall=yes],)
-+)
+@@ -52,7 +52,7 @@ MODULES=""
  
- pwd=`pwd`
- pwd=`basename $pwd`
-@@ -65,7 +61,7 @@
- dnl fi
+ EXTRA_INCLUDE_DIRS=""
+ EXTRA_LIBS=""
+-CPPFLAGS="-DFUNCPROTO -I../../include"
++CPPFLAGS="$CPPFLAGS -DFUNCPROTO -I../../include"
+ dnl defining FUNCPROTO ensures that struct library uses portotype
+ dnl we don't expect non-ANSI (K&R) C compilers to be used
+ dnl Some compiles may define __STDC__ by itself which makes it enable, 
+@@ -83,7 +83,7 @@ fi
+ QUANTIFY="quantify"
+ PURIFY="purify"
  
- AC_MSG_CHECKING(for -Wall option)
--if test "$disable_wall" = yes; then
-+if test "$enable_wall" != yes; then
-    if test "$GCC" != "yes"; then
- dnl shut up SUN WorkShop Compilers
-        CFLAGS="$CFLAGS -w"
-@@ -115,12 +111,18 @@
+-AC_DEFUN(AC_FILE_EXIST, [
++AC_DEFUN([AC_FILE_EXIST], [
+ if test -f "$1" >/dev/null 2>&1; then
+   ifelse([$2], , :, [$2])
+   ifelse([$3], , , [else $3])
+@@ -109,28 +109,34 @@ dnl	fi
+ esac
+ 
+ case "${host_os}" in
+-    solaris* )
+-	CRYPT_LIB="-lcrypt"
+-    ;;
+     bsdi* )
          LIBS="$LIBS -lipc"
      ;;
-     freebsd*|netbsd*|openbsd* )
+-    freebsd*|netbsd*|openbsd* )
 -        if test "$disable_thread" != yes; then
-+        if test "$enable_thread" = yes; then
- 		LDFLAGS="$LDFLAGS -pthread"
-                 THREAD_CFLAGS="-D_THREAD_SAFE -pthread"
-         fi
- 	CRYPT_LIB="-lcrypt"
+-		LDFLAGS="$LDFLAGS -pthread"
+-                THREAD_CFLAGS="-D_THREAD_SAFE -pthread"
+-        fi
+-	CRYPT_LIB="-lcrypt"
 -        ac_pthrlib="c_r"
+-    ;;
+-    linux* )
++    solaris*|freebsd*|dragonfly*|netbsd*|openbsd*|linux* )
+ 	CRYPT_LIB="-lcrypt"
 +	case "${host_os}" in
-+	    netbsd* )
-+	    ;;
-+	    * )
++	    freebsd*|dragonfly*|openbsd* )
++		if test "$enable_thread" = yes; then
++		    LDFLAGS="$LDFLAGS $(PTHREAD_LDFLAGS)"
++		    THREAD_CFLAGS="$(PTHREAD_CFLAGS)"
++		    LIBS="$LIBS $(PTHREAD_LIBS)"
++		fi
 +		ac_pthrlib="c_r"
++	    ;;
++	    netbsd* )
++		if test "$enable_thread" = yes; then
++		    LDFLAGS="$LDFLAGS $(PTHREAD_LDFLAGS)"
++		    THREAD_CFLAGS="$(PTHREAD_CFLAGS)"
++		    LIBS="$LIBS $(PTHREAD_LIBS)"
++		fi
 +	    ;;
 +	esac
      ;;
-     linux* )
- 	CRYPT_LIB="-lcrypt"
-@@ -129,7 +131,7 @@
+     osf* )
  	if test $CC = "cc" ; then
             CPPFLAGS="$CPPFLAGS -taso -pthread"
          fi
@@ -74,7 +98,7 @@ $NetBSD: patch-aa,v 1.7 2004/12/31 23:01:33 kim Exp $
  		LDFLAGS="$LDFLAGS -lc_r"
                  THREAD_CFLAGS="-D_THREAD_SAFE"
  	fi
-@@ -152,7 +154,7 @@
+@@ -153,7 +159,7 @@ fi
  AC_SUBST(MAKEDEPCLEAN)
  
  dnl Checks for pthread libraries. (linux has pthread.h only, so ...)
@@ -83,3 +107,98 @@ $NetBSD: patch-aa,v 1.7 2004/12/31 23:01:33 kim Exp $
    AC_MSG_CHECKING(for thread support)
    AC_MSG_RESULT(disabled)
  else
+@@ -167,7 +173,7 @@ fi
+ AC_MSG_CHECKING(for thread support)
+ if test "$pthread" = yes; then
+   AC_MSG_RESULT(yes)
+-  AC_DEFINE(HAVE_LIBPTHREAD)
++  AC_DEFINE([HAVE_LIBPTHREAD],[],[Define if you have pthread library (-lpthread)])
+   CFLAGS="$CFLAGS $THREAD_CFLAGS"
+   CPPFLAGS="-D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS $CPPFLAGS"
+   QUANTIFY="$QUANTIFY -threads=yes -max-threads=80"
+@@ -176,7 +182,7 @@ if test "$pthread" = yes; then
+   LIBS="$LIBS $THREADLIBS"
+ dnl at least FreeBSD 3.1 doesn't have this
+   AC_CHECK_LIB($ac_pthrlib, pthread_attr_setscope, 
+-	       AC_DEFINE(HAVE_PTHREAD_ATTR_SETSCOPE))
++	       AC_DEFINE([HAVE_PTHREAD_ATTR_SETSCOPE],[],[Define if you have pthread_attr_setscope]))
+   AC_CHECK_FUNCS(thr_setconcurrency)
+ else
+   AC_MSG_RESULT(no)
+@@ -231,13 +237,13 @@ AC_PATH_PROG(SENDMAIL_PATH,sendmail,no,$
+ if test $SENDMAIL_PATH = no; then
+     SENDMAIL_PATH=""
+ else
+-    AC_DEFINE(HAVE_SENDMAIL)
++    AC_DEFINE([HAVE_SENDMAIL],[],[Define if you have any sendmail program])
+ fi
+ AC_PATH_PROG(MAIL_PATH,mail,no)
+ if test $MAIL_PATH = no; then
+     MAIL_PATH=""
+ else
+-    AC_DEFINE(HAVE_MAIL)
++    AC_DEFINE([HAVE_MAIL],[],[Define if you have the mail program])
+ fi
+ 
+ dnl Prefer GPG, second choice PGP version 5
+@@ -287,7 +293,7 @@ else
+ 	PGPS_PATH=""
+ 	PGPV_PATH=""
+ 	PGPDIR=gpg
+-	AC_DEFINE(PGP)
++	AC_DEFINE([PGP],[],[Define if you have any pgp program])
+ fi
+ AC_SUBST(PGP)
+ AC_SUBST(PGPDIR)
+@@ -300,19 +306,19 @@ AC_PATH_PROG(GZIP_PATH,gzip,no)
+ if test $GZIP_PATH = no; then
+     GZIP_PATH=""
+ else
+-    AC_DEFINE(HAVE_GZIP)
++    AC_DEFINE([HAVE_GZIP],[],[Define if you have gzip])
+ fi
+ AC_PATH_PROG(IRRDCACHER_PATH,irrdcacher,no)
+ if test $IRRDCACHER_PATH = no; then
+     IRRDCACHER_PATH=""
+ else
+-    AC_DEFINE(HAVE_IRRDCACHER)
++    AC_DEFINE([HAVE_IRRDCACHER],[],[Define if you have irrdcacher])
+ fi
+ AC_PATH_PROG(WGET_PATH,wget,no)
+ if test $WGET_PATH = no; then
+     WGET_PATH=""
+ else
+-    AC_DEFINE(HAVE_WGET)
++    AC_DEFINE([HAVE_WGET],[],[Define if you have wget])
+ fi
+ AC_SUBST(SENDMAIL_PATH)
+ AC_SUBST(MAIL_PATH)
+@@ -340,11 +346,11 @@ AC_STRUCT_TM
+ dnl u_char, u_int, u_short, and u_long
+ AC_MSG_CHECKING([u_char, u_int, u_short, and u_long])
+   AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <sys/types.h>]], [[
+-  u_char c; u_int i; u_short s; u_long l;]])],[AC_DEFINE(HAVE_U_TYPES) AC_MSG_RESULT(yes)],[AC_MSG_RESULT(no)]);
++  u_char c; u_int i; u_short s; u_long l;]])],[AC_DEFINE([HAVE_U_TYPES],[],[Define if you have u_char, u_int, u_short, and u_long]) AC_MSG_RESULT(yes)],[AC_MSG_RESULT(no)]);
+ 
+ dnl Check for in6_addr structure definition
+ AC_EGREP_HEADER(struct in6_addr, netinet/in.h,
+-                  AC_DEFINE(HAVE_STRUCT_IN6_ADDR))
++                  AC_DEFINE([HAVE_STRUCT_IN6_ADDR],[],[Define if you have struct in6_addr]))
+ 
+ dnl Checks for library functions.
+ AC_CHECK_FUNCS(localtime_r strtok_r gethostbyname_r gethostbyaddr_r)
+@@ -358,12 +364,12 @@ AC_CHECK_FUNCS(mkdtemp)
+ AC_CHECK_FUNCS(snprintf)
+ AC_CHECK_FUNCS(dirname basename)
+ 
+-AC_DEFUN(AC_TYPE_SOCKLEN_T,
++AC_DEFUN([AC_TYPE_SOCKLEN_T],
+ [AC_CACHE_CHECK(for socklen_t in sys/socket.h, ac_cv_type_socklen_t,
+ [AC_EGREP_HEADER(socklen_t, sys/socket.h,
+   ac_cv_type_socklen_t=yes, ac_cv_type_socklen_t=no)])
+ if test $ac_cv_type_socklen_t = no; then
+-  AC_DEFINE(socklen_t, int)
++  AC_DEFINE([socklen_t], [int], [define socklen_t if necessary])
+ fi
+ ])
+ 
