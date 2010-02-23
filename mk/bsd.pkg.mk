@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1962 2010/02/23 17:16:51 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1963 2010/02/23 17:20:53 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -135,11 +135,6 @@ PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INST
 .if defined(ALL_TARGET)
 PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGET.'
 .endif
-
-.if defined(NO_WRKSUBDIR)
-PKG_FAIL_REASON+='NO_WRKSUBDIR has been deprecated - please replace it with an explicit'
-PKG_FAIL_REASON+='assignment of WRKSRC= $${WRKDIR}'
-.endif # NO_WRKSUBDIR
 
 .if !defined(CATEGORIES) || !defined(DISTNAME)
 PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
