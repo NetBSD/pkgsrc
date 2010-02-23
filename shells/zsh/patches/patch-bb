@@ -1,3 +1,5 @@
+$NetBSD: patch-bb,v 1.2 2010/02/23 17:11:01 roy Exp $
+
 terminfo does not require curses.
 
 --- Src/Modules/terminfo.c.orig	2010-02-07 08:54:08.000000000 +0000
