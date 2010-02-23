@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.930 2010/02/23 12:41:53 he Exp $
+$NetBSD: CHANGES-2010,v 1.931 2010/02/23 12:48:07 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1124,3 +1124,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/p5-Spreadsheet-WriteExcel to 2.37 [sno 2010-02-23]
 	Updated devel/p5-Module-Install to 0.94 [sno 2010-02-23]
 	Updated lang/parrot to 2.1.1 [he 2010-02-23]
+	Updated devel/p5-MooseX-Types-Common to 0.001002 [sno 2010-02-23]
