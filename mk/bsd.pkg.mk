@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1961 2010/02/20 07:05:52 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1962 2010/02/23 17:16:51 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -140,16 +140,6 @@ PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGE
 PKG_FAIL_REASON+='NO_WRKSUBDIR has been deprecated - please replace it with an explicit'
 PKG_FAIL_REASON+='assignment of WRKSRC= $${WRKDIR}'
 .endif # NO_WRKSUBDIR
-
-# We need to make sure the buildlink-x11 package is not installed since it
-# breaks builds that use imake.
-.if defined(USE_IMAKE)
-.  if exists(${LOCALBASE}/lib/X11/config/buildlinkX11.def) || \
-      exists(${X11BASE}/lib/X11/config/buildlinkX11.def)
-PKG_FAIL_REASON+= "${PKGNAME} uses imake, but the buildlink-x11 package was found." \
-	 "    Please deinstall it (pkg_delete buildlink-x11)."
-.  endif
-.endif	# USE_IMAKE
 
 .if !defined(CATEGORIES) || !defined(DISTNAME)
 PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
