@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.924 2010/02/23 10:12:35 sno Exp $
+$NetBSD: CHANGES-2010,v 1.925 2010/02/23 10:19:49 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1118,3 +1118,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added games/doom1 version 1.8 [wiz 2010-02-22]
 	Updated databases/p5-Rose-DBx-Garden to 0.17 [sno 2010-02-23]
 	Updated devel/p5-Cache-FastMmap to 1.35 [sno 2010-02-23]
+	Updated devel/p5-Devel-Caller to 2.04 [sno 2010-02-23]
