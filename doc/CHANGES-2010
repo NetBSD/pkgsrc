@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.936 2010/02/23 14:13:08 taca Exp $
+$NetBSD: CHANGES-2010,v 1.937 2010/02/23 17:41:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1130,3 +1130,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added sysutils/p5-Linux-Inotify2 version 1.2.1 [sno 2010-02-23]
 	Updated devel/p5-File-ChangeNotify to 0.12 [sno 2010-02-23]
 	Updated www/typo3 to 4.3.2 [taca 2010-02-23]
+	Updated devel/p5-Method-Signatures-Simple to 0.05 [sno 2010-02-23]
