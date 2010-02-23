@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.485 2010/02/21 16:25:48 wiz Exp $
+# $NetBSD: Makefile,v 1.486 2010/02/23 13:22:09 sno Exp $
 #
 
 COMMENT=	System utilities
@@ -218,6 +218,7 @@ SUBDIR+=	p5-Filesys-Df
 SUBDIR+=	p5-Filesys-DfPortable
 SUBDIR+=	p5-Filesys-Statvfs
 SUBDIR+=	p5-GTop
+SUBDIR+=	p5-IO-KQueue
 SUBDIR+=	p5-Lchown
 SUBDIR+=	p5-Mac-AppleScript
 SUBDIR+=	p5-Mac-AppleScript-Glue
