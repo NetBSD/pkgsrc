@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.927 2010/02/23 10:55:18 sno Exp $
+$NetBSD: CHANGES-2010,v 1.928 2010/02/23 11:22:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1121,3 +1121,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-Caller to 2.04 [sno 2010-02-23]
 	Updated archivers/p5-Archive-Tar to 1.58 [sno 2010-02-23]
 	Updated devel/p5-Test-LongString to 0.13 [sno 2010-02-23]
+	Updated math/p5-Spreadsheet-WriteExcel to 2.37 [sno 2010-02-23]
