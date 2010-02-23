@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.935 2010/02/23 14:12:30 sno Exp $
+$NetBSD: CHANGES-2010,v 1.936 2010/02/23 14:13:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1129,3 +1129,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added sysutils/p5-IO-Kqueue version 0.34 [sno 2010-02-23]
 	Added sysutils/p5-Linux-Inotify2 version 1.2.1 [sno 2010-02-23]
 	Updated devel/p5-File-ChangeNotify to 0.12 [sno 2010-02-23]
+	Updated www/typo3 to 4.3.2 [taca 2010-02-23]
