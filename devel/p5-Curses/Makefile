@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2009/03/08 19:13:42 he Exp $
+# $NetBSD: Makefile,v 1.37 2010/02/23 20:26:24 sno Exp $
 
-DISTNAME=	Curses-1.27
+DISTNAME=	Curses-1.28
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cur
 CATEGORIES=	devel perl5
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Curses/
 COMMENT=	Perl5 module for terminal screen handling and optimization
+# really it's gnu-gpl-v1+ OR artistic-1.0, but currently we don't have gplv1
+LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
