@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/09/04 23:11:53 seb Exp $
+# $NetBSD: Makefile,v 1.12 2010/02/23 20:19:01 sno Exp $
 #
 
-DISTNAME=	App-Cmd-0.301
+DISTNAME=	App-Cmd-0.304
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-Getopt-Long-Descriptive>=0.075:../../devel/p5-Getopt-Long-Descriptive
+DEPENDS+=	p5-Getopt-Long-Descriptive>=0.081:../../devel/p5-Getopt-Long-Descriptive
 DEPENDS+=	{perl>=5.10,p5-Module-Pluggable-[0-9]*}:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Sub-Exporter>=0.975:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Sub-Install-[0-9]*:../../devel/p5-Sub-Install
