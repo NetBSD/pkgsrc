@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/01/14 14:59:26 taca Exp $
+# $NetBSD: Makefile,v 1.19 2010/02/23 14:12:22 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -15,9 +15,9 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-VER=		4.3.1
+VER=		4.3.2
 NO_BUILD=	yes
 USE_TOOLS=	pax
 
@@ -50,10 +50,11 @@ INSTALLATION_DIRS+= ${EGDIR} ${TYPO3DIR}/${SITEDIR} ${TYPO3DIR}/${TYPO3NAME}
 
 CONF_FILES_PERMS+=	${EGDIR}/localconf.php \
 			${TYPO3DIR}/${SITEDIR}/typo3conf/localconf.php \
-			${BINOWN} ${APACHE_GROUP} 0660
+			${REAL_ROOT_USER} ${APACHE_GROUP} 0660
 
 .for d in ${TYPO3DATADIR}
-OWN_DIRS_PERMS+= ${TYPO3DIR}/${SITEDIR}/${d} ${BINOWN} ${APACHE_GROUP} 0770
+OWN_DIRS_PERMS+= ${TYPO3DIR}/${SITEDIR}/${d} ${REAL_ROOT_USER} \
+	${APACHE_GROUP} 0770
 CHECK_PERMS_SKIP+= ${TYPO3DIR}/${SITEDIR}/${d}
 .endfor
 
