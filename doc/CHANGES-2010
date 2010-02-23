@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.946 2010/02/23 20:19:11 sno Exp $
+$NetBSD: CHANGES-2010,v 1.947 2010/02/23 20:26:35 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1140,3 +1140,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-App-Nopaste to 0.19 [sno 2010-02-23]
 	Updated devel/p5-autodie to 2.09 [sno 2010-02-23]
 	Updated devel/p5-App-Cmd to 0.304 [sno 2010-02-23]
+	Updated devel/p5-Curses to 1.28 [sno 2010-02-23]
