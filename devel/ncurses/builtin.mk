@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.24 2009/07/07 11:04:55 joerg Exp $
+# $NetBSD: builtin.mk,v 1.25 2010/02/23 10:55:07 drochner Exp $
 
 BUILTIN_PKG:=	ncurses
 
-BUILTIN_FIND_LIBS:=		ncurses curses
+BUILTIN_FIND_LIBS:=		ncurses curses terminfo
 BUILTIN_FIND_FILES_VAR:=	H_NCURSES H_CURSES
 BUILTIN_FIND_FILES.H_NCURSES=	/usr/include/ncurses.h /usr/include/curses.h
 BUILTIN_FIND_GREP.H_NCURSES=	\#define[ 	]*NCURSES_VERSION
@@ -104,6 +104,13 @@ MAKEVARS+=	USE_BUILTIN.ncurses
 .  elif !empty(IS_BUILTIN.ncurses:M[nN][oO])
 USE_BUILTIN.ncurses=	no
 .  endif
+.endif
+
+# if terminfo is needed and we don't have it, use pkgsrc ncurses
+.if defined(USE_TERMINFO)
+.if !empty(BUILTIN_LIB_FOUND.terminfo:M[nN][oO])
+USE_BUILTIN.ncurses=	no
+.endif
 .endif
 
 # Define BUILTIN_LIBNAME.ncurses to be the base name of the built-in
