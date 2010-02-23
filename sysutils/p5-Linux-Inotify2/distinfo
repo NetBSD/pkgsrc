@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/23 13:51:34 sno Exp $
+
+SHA1 (Linux-Inotify2-1.21.tar.gz) = dcd09e476f91567b71f98671a49ec0ac0715c5fc
+RMD160 (Linux-Inotify2-1.21.tar.gz) = ada2582fd891fb2582e83c5848f96798cc45b82c
+Size (Linux-Inotify2-1.21.tar.gz) = 8340 bytes
