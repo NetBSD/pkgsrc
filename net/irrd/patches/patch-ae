@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.3 2010/02/23 20:37:06 spz Exp $
+
+--- Make.include.in.orig	2001-12-03 20:07:33.000000000 +0000
++++ Make.include.in
+@@ -33,7 +33,7 @@ MAKEDEPCLEAN= 	@MAKEDEPCLEAN@
+ 
+ prefix=		@prefix@
+ exec_prefix=	@exec_prefix@
+-DESTDIR=	@sbindir@
++sbindir=	@sbindir@
+ MANDIR=		@mandir@
+ 
+ MRTLIB= 	../../lib/libmrt.a
