@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9069 2010/02/21 16:09:13 wiz Exp $
+$NetBSD: TODO,v 1.9070 2010/02/23 10:19:49 sno Exp $
 
 Suggested new packages
 ======================
@@ -995,7 +995,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Archive-Tar-1.58
-	o p5-Devel-Caller-2.04 [pkg/42831]
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-POE-1.284 [pkg/42798]
 	o p5-POE-Component-IRC-6.24 [pkg/42801]
