@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2010/02/07 16:01:30 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2010/02/23 10:41:36 sno Exp $
 
-DISTNAME=		Archive-Tar-1.56
+DISTNAME=		Archive-Tar-1.58
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5tar
 CATEGORIES=		archivers perl5
@@ -14,7 +14,7 @@ LICENSE=		${PERL5_LICENSE}
 DEPENDS+=		p5-IO-Zlib>=1.01:../../devel/p5-IO-Zlib
 DEPENDS+=		p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
 DEPENDS+=		p5-IO-String-[0-9]*:../../devel/p5-IO-String
-DEPENDS+=		p5-Package-Constants-[0-9]*:../../devel/p5-Package-Constants
+DEPENDS+=		{perl>=5.10.0,p5-Package-Constants-[0-9]*}:../../devel/p5-Package-Constants
 DEPENDS+=		p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
