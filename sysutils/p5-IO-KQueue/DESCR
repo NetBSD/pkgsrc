@@ -1,0 +1,6 @@
+This module provides a fairly low level interface to the BSD kqueue(2) system
+call, allowing you to monitor for changes on sockets, files, processes and
+signals.
+
+Usage is very similar to the kqueue system calls, so having read and
+understood the kqueue(2) man page is a usage prereqisite.
