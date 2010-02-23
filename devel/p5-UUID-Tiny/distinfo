@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/23 23:15:19 seb Exp $
+$NetBSD: distinfo,v 1.2 2010/02/23 20:38:23 sno Exp $
 
-SHA1 (UUID-Tiny-1.02.tar.gz) = 59f8b481e9e06fc9973cabc13b7af16be69bf688
-RMD160 (UUID-Tiny-1.02.tar.gz) = 720e406c70540d498964e4493a2524c5bc9fe804
-Size (UUID-Tiny-1.02.tar.gz) = 13326 bytes
+SHA1 (UUID-Tiny-1.03.tar.gz) = 3503566b95a7aa499336b71104d555229aebb616
+RMD160 (UUID-Tiny-1.03.tar.gz) = 55a659f2a45e543a82180de05a23655b84e19039
+Size (UUID-Tiny-1.03.tar.gz) = 14098 bytes
