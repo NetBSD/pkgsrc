@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9071 2010/02/23 10:41:47 sno Exp $
+$NetBSD: TODO,v 1.9072 2010/02/23 10:55:19 sno Exp $
 
 Suggested new packages
 ======================
@@ -1000,7 +1000,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-POE-Filter-IRCD-2.42 [pkg/42800]
 	o p5-POE-Test-Loops-1.031 [pkg/42797]
 	o p5-Spreadsheet-WriteExcel-2.37
-	o p5-Test-LongString-0.13 [pkg/42835]
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o packagekit-0.5.1
