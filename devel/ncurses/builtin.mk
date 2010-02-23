@@ -1,13 +1,15 @@
-# $NetBSD: builtin.mk,v 1.25 2010/02/23 10:55:07 drochner Exp $
+# $NetBSD: builtin.mk,v 1.26 2010/02/23 19:50:49 drochner Exp $
 
 BUILTIN_PKG:=	ncurses
 
 BUILTIN_FIND_LIBS:=		ncurses curses terminfo
-BUILTIN_FIND_FILES_VAR:=	H_NCURSES H_CURSES
+BUILTIN_FIND_FILES_VAR:=	H_NCURSES H_CURSES H_CURSES1
 BUILTIN_FIND_FILES.H_NCURSES=	/usr/include/ncurses.h /usr/include/curses.h
 BUILTIN_FIND_GREP.H_NCURSES=	\#define[ 	]*NCURSES_VERSION
 BUILTIN_FIND_FILES.H_CURSES=	/usr/include/ncurses.h /usr/include/curses.h
 BUILTIN_FIND_GREP.H_CURSES=	mvwchgat
+BUILTIN_FIND_FILES.H_CURSES1=	/usr/include/ncurses.h /usr/include/curses.h
+BUILTIN_FIND_GREP.H_CURSES1=	wsyncup
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -98,10 +100,11 @@ MAKEVARS+=	USE_BUILTIN.ncurses
 #
 # If it is set to chgat, a curses implementation with chgat(3) support
 # is considered good enough.
-.if defined(USE_NCURSES)
-.  if empty(USE_NCURSES:M[yY][eE][sS]) && !empty(USE_NCURSES:Mchgat) &&\
-      empty(H_CURSES:M__nonexistent__)
-.  elif !empty(IS_BUILTIN.ncurses:M[nN][oO])
+.if defined(USE_NCURSES) && empty(USE_NCURSES:M[yY][eE][sS])
+.  if !empty(USE_NCURSES:Mchgat) && !empty(H_CURSES:M__nonexistent__)
+USE_BUILTIN.ncurses=	no
+.  endif
+.  if !empty(USE_NCURSES:Mwsyncup) && !empty(H_CURSES1:M__nonexistent__)
 USE_BUILTIN.ncurses=	no
 .  endif
 .endif
