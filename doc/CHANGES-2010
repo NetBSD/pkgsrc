@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.950 2010/02/23 20:46:08 sno Exp $
+$NetBSD: CHANGES-2010,v 1.951 2010/02/24 01:20:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1144,3 +1144,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-YAML-Valid to 0.04 [sno 2010-02-23]
 	Updated devel/p5-UUID-Tiny to 1.03 [sno 2010-02-23]
 	Updated databases/p5-Apache-DBI to 1.08 [sno 2010-02-23]
+	Updated net/msdl to 1.2.7 [obache 2010-02-24]
