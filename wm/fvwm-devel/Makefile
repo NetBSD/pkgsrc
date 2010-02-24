@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/09/22 07:53:28 martti Exp $
+# $NetBSD: Makefile,v 1.32 2010/02/24 12:37:04 martti Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 #PKGREVISION=	1
@@ -50,6 +50,12 @@ SUBST_FILES.perl+=	modules/FvwmWindowMenu/FvwmWindowMenu
 SUBST_FILES.perl+=	modules/FvwmScript/Scripts/FvwmScript-ComExample
 SUBST_FILES.perl+=	modules/FvwmScript/Scripts/FvwmScript-Setup95
 SUBST_SED.perl=		-e "s|${TOOLS_CMD.perl}|${PERL5}|"
+
+SUBST_CLASSES+=		mail
+SUBST_STAGE.mail=	post-patch
+SUBST_MESSAGE.mail=	Fixing mail address
+SUBST_FILES.mail+=	bin/fvwm-bug.in
+SUBST_SED.mail=		-e "s|@MAINTAINER@|${MAINTAINER}|"
 
 post-install:
 	cd ${WRKSRC}/sample.fvwmrc && ${INSTALL_DATA} \
