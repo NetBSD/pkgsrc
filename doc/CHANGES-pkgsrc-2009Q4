@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.34 2010/02/22 13:26:04 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.35 2010/02/24 14:47:15 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -112,3 +112,8 @@ Pullup ticket #3017 - requested by obache
 GraphicsMagick: security update
 Pullup ticket #3018 - requested by he
 libdaemon: build fix
+Pullup ticket #3019 - requested by taca
+typo3: security update
+Pullup ticket #3020 - requested by taca
+mysql5-client: security update
+mysql5-server: security update
