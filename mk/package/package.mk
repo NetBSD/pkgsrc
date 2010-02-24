@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.21 2009/06/09 08:40:28 joerg Exp $
+# $NetBSD: package.mk,v 1.22 2010/02/24 22:53:34 joerg Exp $
 #
 # This file provides the code for the "package" phase.
 #
@@ -16,7 +16,7 @@ _PACKAGE_TARGETS+=	check-vulnerable
 .if make(replace) && ${_USE_DESTDIR} == "no"
 _PACKAGE_TARGETS+=	replace
 .else
-_PACKAGE_TARGETS+=	install
+_PACKAGE_TARGETS+=	stage-install
 .endif
 _PACKAGE_TARGETS+=	acquire-package-lock
 _PACKAGE_TARGETS+=	${_COOKIE.package}

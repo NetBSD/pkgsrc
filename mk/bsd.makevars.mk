@@ -1,4 +1,4 @@
-# $NetBSD: bsd.makevars.mk,v 1.4 2006/07/10 22:59:27 jlam Exp $
+# $NetBSD: bsd.makevars.mk,v 1.5 2010/02/24 22:53:34 joerg Exp $
 #
 # This Makefile fragment is included by bsd.prefs.mk to set all of
 # the variables saved through MAKEVARS.  Typical usage is:
@@ -20,8 +20,8 @@
 #
 
 _ALL_PHASES=		fetch tools extract patch			\
-			wrapper configure build install package
-_REV_ALL_PHASES=	package install build configure wrapper		\
+			wrapper configure build stage-install package
+_REV_ALL_PHASES=	package stage-install build configure wrapper	\
 			patch extract tools fetch
 
 # Try including the *.makevars.mk files in reverse order so that the
