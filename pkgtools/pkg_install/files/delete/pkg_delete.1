@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_delete.1,v 1.28 2010/02/24 21:13:23 wiz Exp $
+.\" $NetBSD: pkg_delete.1,v 1.29 2010/02/24 22:06:21 wiz Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -97,7 +97,7 @@ will be removed.
 If the
 .Fl F
 flag is given, one or more (absolute) filenames may be specified and
-the Package Database will be consulted for the package to which the
+the package database will be consulted for the package to which the
 given file belongs.
 These packages are then deinstalled.
 .It Fl A
@@ -112,13 +112,16 @@ If a deinstallation script exists for a given package, do not execute it.
 Any
 .Ar pkg-name
 given will be interpreted as pathname which is
-subsequently transformed in a (real) package name via the Package
-Database.
+subsequently transformed in a (real) package name via the package
+database.
 That way, packages can be deleted by giving a filename
 instead of the package-name.
 .It Fl f
 Force removal of the package, even if a dependency is recorded or the
 deinstall script fails.
+This might break the package database; see also
+.Xr pkg_admin 1
+on how to repair it.
 .It Fl ff
 Force removal of the package, even if the package is marked as a
 .Cm preserved
@@ -151,7 +154,8 @@ touch the package or its files itself.
 Prefix all file and directory names with
 .Ar destdir .
 For packages without install scripts this has the same behavior as
-using chroot.
+using
+.Xr chroot 8 .
 .It Fl p Ar prefix
 Set
 .Ar prefix
