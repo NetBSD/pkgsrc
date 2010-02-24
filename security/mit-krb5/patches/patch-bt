@@ -1,0 +1,17 @@
+$NetBSD: patch-bt,v 1.1 2010/02/24 19:07:51 tez Exp $
+
+--- lib/crypto/dk/dk_decrypt.c.orig	2004-02-24 15:07:21.000000000 -0600
++++ lib/crypto/dk/dk_decrypt.c	2010-02-23 17:43:53.607557500 -0600
+@@ -89,6 +89,12 @@
+     else if (hmacsize > hashsize)
+ 	return KRB5KRB_AP_ERR_BAD_INTEGRITY;
+ 
++    /* Verify input and output lengths. */
++    if (input->length < blocksize + hmacsize)
++	return KRB5_BAD_MSIZE;
++    if (output->length < input->length - blocksize - hmacsize)
++	return KRB5_BAD_MSIZE;
++
+     enclen = input->length - hmacsize;
+ 
+     if ((kedata = (unsigned char *) malloc(keylength)) == NULL)

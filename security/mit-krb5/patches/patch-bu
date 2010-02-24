@@ -1,0 +1,12 @@
+$NetBSD: patch-bu,v 1.1 2010/02/24 19:07:51 tez Exp $
+
+--- lib/crypto/raw/raw_decrypt.c.orig	2004-02-18 20:46:30.000000000 -0600
++++ lib/crypto/raw/raw_decrypt.c	2010-02-23 17:43:53.638863200 -0600
+@@ -34,5 +34,7 @@
+ 		 const krb5_data *ivec, const krb5_data *input,
+ 		 krb5_data *output)
+ {
++    if (output->length < input->length)
++	return KRB5_BAD_MSIZE;
+     return((*(enc->decrypt))(key, ivec, input, output));
+ }

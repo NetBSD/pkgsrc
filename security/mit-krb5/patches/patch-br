@@ -1,0 +1,17 @@
+$NetBSD: patch-br,v 1.1 2010/02/24 19:07:51 tez Exp $
+
+--- lib/crypto/arcfour/arcfour.c.orig	2004-02-18 20:46:26.000000000 -0600
++++ lib/crypto/arcfour/arcfour.c	2010-02-23 17:43:53.543585400 -0600
+@@ -203,6 +203,12 @@
+   keylength = enc->keylength;
+   hashsize = hash->hashsize;
+ 
++  /* Verify input and output lengths. */
++  if (input->length < hashsize + CONFOUNDERLENGTH)
++    return KRB5_BAD_MSIZE;
++  if (output->length < input->length - hashsize - CONFOUNDERLENGTH)
++    return KRB5_BAD_MSIZE;
++
+   d1.length=keybytes;
+   d1.data=malloc(d1.length);
+   if (d1.data == NULL)

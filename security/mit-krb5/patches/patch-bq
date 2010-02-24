@@ -1,0 +1,62 @@
+$NetBSD: patch-bq,v 1.1 2010/02/24 19:07:51 tez Exp $
+
+--- lib/crypto/Makefile.in.orig	2004-06-16 20:56:28.000000000 -0500
++++ lib/crypto/Makefile.in	2010-02-23 17:33:02.605810700 -0600
+@@ -20,6 +20,7 @@
+ 	$(srcdir)/t_hmac.c	\
+ 	$(srcdir)/t_pkcs5.c	\
+ 	$(srcdir)/t_cts.c	\
++	$(srcdir)/t_short.c	\
+ 	$(srcdir)/vectors.c
+ 
+ ##DOSBUILDTOP = ..\..
+@@ -170,12 +171,13 @@
+ 
+ clean-unix:: clean-liblinks clean-libs clean-libobjs
+ 
+-check-unix:: t_nfold t_encrypt t_prng t_hmac t_pkcs5
++check-unix:: t_nfold t_encrypt t_prng t_hmac t_pkcs5 t_short
+ 	$(RUN_SETUP) ./t_nfold
+ 	$(RUN_SETUP) ./t_encrypt
+ 	$(RUN_SETUP) ./t_prng <$(srcdir)/t_prng.seed >t_prng.output && \
+ 	diff t_prng.output $(srcdir)/t_prng.expected
+ 	$(RUN_SETUP) ./t_hmac
++	$(RUN_SETUP) ./t_short
+ 
+ #	$(RUN_SETUP) ./t_pkcs5
+ 
+@@ -201,10 +203,14 @@
+ 	$(CC_LINK) -o $@ t_cts.$(OBJEXT) \
+ 		$(K5CRYPTO_LIB) $(COM_ERR_LIB) $(SUPPORT_LIB)
+ 
++t_short$(EXEEXT): t_short.$(OBJEXT) $(CRYPTO_DEPLIB)
++	$(CC_LINK) -o $@ t_short.$(OBJEXT) \
++		$(K5CRYPTO_LIB) $(COM_ERR_LIB) $(SUPPORT_LIB)
++
+ 
+ clean::
+ 	$(RM) t_nfold.o t_nfold t_encrypt t_encrypt.o t_prng.o t_prng \
+-		t_hmac.o t_hmac t_pkcs5.o t_pkcs5 pbkdf2.o
++		t_hmac.o t_hmac t_pkcs5.o t_pkcs5 pbkdf2.o t_short t_short.o
+ 	-$(RM) t_prng.output
+ 
+ all-windows::
+@@ -595,6 +601,13 @@
+   $(SRCTOP)/include/k5-thread.h $(BUILDTOP)/include/profile.h \
+   $(SRCTOP)/include/port-sockets.h $(SRCTOP)/include/socket-utils.h \
+   $(SRCTOP)/include/krb5/kdb.h
++t_short.so t_short.po $(OUTPRE)t_short.$(OBJEXT): t_short.c $(BUILDTOP)/include/krb5.h \
++  $(COM_ERR_DEPS) $(srcdir)/hash_provider/hash_provider.h \
++  $(SRCTOP)/include/k5-int.h $(BUILDTOP)/include/krb5/osconf.h \
++  $(BUILDTOP)/include/krb5/autoconf.h $(SRCTOP)/include/k5-platform.h \
++  $(SRCTOP)/include/k5-thread.h $(BUILDTOP)/include/profile.h \
++  $(SRCTOP)/include/port-sockets.h $(SRCTOP)/include/socket-utils.h \
++  $(SRCTOP)/include/krb5/kdb.h
+ vectors.so vectors.po $(OUTPRE)vectors.$(OBJEXT): vectors.c $(BUILDTOP)/include/krb5.h \
+   $(COM_ERR_DEPS) $(srcdir)/hash_provider/hash_provider.h \
+   $(SRCTOP)/include/k5-int.h $(BUILDTOP)/include/krb5/osconf.h \
+@@ -602,4 +615,3 @@
+   $(SRCTOP)/include/k5-thread.h $(BUILDTOP)/include/profile.h \
+   $(SRCTOP)/include/port-sockets.h $(SRCTOP)/include/socket-utils.h \
+   $(SRCTOP)/include/krb5/kdb.h
+-

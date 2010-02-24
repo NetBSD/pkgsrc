@@ -1,0 +1,30 @@
+$NetBSD: patch-bs,v 1.1 2010/02/24 19:07:51 tez Exp $
+
+--- lib/crypto/enc_provider/aes.c.orig	2004-05-25 13:06:13.000000000 -0500
++++ lib/crypto/enc_provider/aes.c	2010-02-23 17:43:53.574980200 -0600
+@@ -68,9 +68,11 @@
+     nblocks = (input->length + BLOCK_SIZE - 1) / BLOCK_SIZE;
+ 
+     if (nblocks == 1) {
+-	/* XXX Used for DK function.  */
++	/* Used when deriving keys. */
++	if (input->length < BLOCK_SIZE)
++	    return KRB5_BAD_MSIZE;
+ 	enc(output->data, input->data, &ctx);
+-    } else {
++    } else if (nblocks > 1) {
+ 	unsigned int nleft;
+ 
+ 	for (blockno = 0; blockno < nblocks - 2; blockno++) {
+@@ -123,9 +125,9 @@
+ 
+     if (nblocks == 1) {
+ 	if (input->length < BLOCK_SIZE)
+-	    abort();
++	    return KRB5_BAD_MSIZE;
+ 	dec(output->data, input->data, &ctx);
+-    } else {
++    } else if (nblocks > 1) {
+ 
+ 	for (blockno = 0; blockno < nblocks - 2; blockno++) {
+ 	    dec(tmp2, input->data + blockno * BLOCK_SIZE, &ctx);
