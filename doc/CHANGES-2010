@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.955 2010/02/24 19:30:17 tez Exp $
+$NetBSD: CHANGES-2010,v 1.956 2010/02/24 23:02:11 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1148,3 +1148,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated cad/gerbv to 2.4.0 [dmcmahill 2010-02-24]
 	Updated lang/sbcl to 1.0.35 [asau 2010-02-24]
 	Updated security/mit-krb5 to 1.4.2nb9 [tez 2010-02-24]
+	Updated pkgtools/pbulk to 0.46 [joerg 2010-02-24]
