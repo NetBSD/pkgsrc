@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.952 2010/02/24 03:41:16 dmcmahill Exp $
+$NetBSD: CHANGES-2010,v 1.953 2010/02/24 12:17:18 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1146,3 +1146,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-Apache-DBI to 1.08 [sno 2010-02-23]
 	Updated net/msdl to 1.2.7 [obache 2010-02-24]
 	Updated cad/gerbv/to 2.4.0 [dmcmahill 2010-02-24]
+	Updated lang/sbcl to 1.0.35 [asau 2010-02-24]
