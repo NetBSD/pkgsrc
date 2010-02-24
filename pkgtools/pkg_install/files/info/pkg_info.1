@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_info.1,v 1.27 2010/01/22 13:30:42 joerg Exp $
+.\" $NetBSD: pkg_info.1,v 1.28 2010/02/24 22:05:31 wiz Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -117,7 +117,7 @@ can contain wildcards (see the
 section below).
 .It Fl F
 Interpret any pkg-name given as filename, and translate it to a
-package name using the Package Database.
+package name using the package database.
 This can be used to query information on a per-file basis, e.g. in
 conjunction with the
 .Fl e
@@ -207,7 +207,7 @@ in
 .Pp
 A filename can be given instead of a (installed) package name to query
 information on the package this file belongs to.
-This filename is then resolved to a package name using the Package Database.
+This filename is then resolved to a package name using the package database.
 For this translation to take place, the
 .Fl F
 flag must be given.
