@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.19 2009/10/25 23:08:02 joerg Exp $
+# $NetBSD: pkg-build,v 1.20 2010/02/24 22:51:37 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -159,7 +159,7 @@ fi
 run_make run_direct checksum  > ${bulklog}/${pkgname}/checksum.log 2>&1 || cleanup
 run_make ${run_build} configure  > ${bulklog}/${pkgname}/configure.log 2>&1 || cleanup
 run_make ${run_build} all  > ${bulklog}/${pkgname}/build.log 2>&1 || cleanup
-run_make ${run_install} install  > ${bulklog}/${pkgname}/install.log 2>&1 || cleanup
+run_make ${run_install} stage-install  > ${bulklog}/${pkgname}/install.log 2>&1 || cleanup
 run_make run_direct package  > ${bulklog}/${pkgname}/package.log 2>&1 || cleanup
 
 # When using DESTDIR build, add the package once to test install rules.
