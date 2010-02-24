@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.36 2009/11/26 16:33:29 tron Exp $
+# $NetBSD: Makefile.common,v 1.36.2.1 2010/02/24 14:23:22 tron Exp $
 #
 # used by databases/mysql5-client/Makefile
 # used by databases/mysql5-server/Makefile
 #
 
-DISTNAME=		mysql-5.0.88
+DISTNAME=		mysql-5.0.90
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQL-5.0/}
 
@@ -103,14 +103,14 @@ USE_TOOLS+=		autoconf bash autoheader gmake perl:run
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 SUBST_CLASSES=		mk
-SUBST_STAGE.mk=		post-patch
+SUBST_STAGE.mk=		pre-configure
 SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in	\
 			mysys/Makefile.in strings/Makefile.in
 SUBST_SED.mk=		-e "/^install-exec:/s/install-pkglibLIBRARIES//"
 SUBST_MESSAGE.mk=	Fixing Makefiles.
 
 SUBST_CLASSES+=		scr
-SUBST_STAGE.scr=	post-patch
+SUBST_STAGE.scr=	pre-configure
 SUBST_FILES.scr=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
 			scripts/mysql_secure_installation.sh \
 			support-files/mysql.server.sh
@@ -121,7 +121,7 @@ SUBST_MESSAGE.scr=	Fixing scripts.
 # Fix broken shared library detection under Mac OS X
 .if ${OPSYS} == "Darwin"
 SUBST_CLASSES+=		dylib
-SUBST_STAGE.dylib=	post-patch
+SUBST_STAGE.dylib=	pre-configure
 SUBST_FILES.dylib=	configure
 SUBST_SED.dylib=	-e "s|\\\$$shrext_cmds|\\.dylib|g"
 .endif

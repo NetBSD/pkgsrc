@@ -1,0 +1,28 @@
+$NetBSD: patch-ap,v 1.1.2.2 2010/02/24 14:23:22 tron Exp $
+
+Prevent redefined warning.
+
+--- include/my_no_pthread.h.orig	2010-01-15 09:47:45.000000000 +0000
++++ include/my_no_pthread.h
+@@ -41,9 +41,21 @@
+   to make thread safe code, that should also work in single thread
+   environment, easier to use.
+ */
++#ifdef pthread_mutex_init
++#undef pthread_mutex_init
++#endif
+ #define pthread_mutex_init(A,B)
++#ifdef pthread_mutex_lock
++#undef pthread_mutex_lock
++#endif
+ #define pthread_mutex_lock(A)
++#ifdef pthread_mutex_unlock
++#undef pthread_mutex_unlock
++#endif
+ #define pthread_mutex_unlock(A)
++#ifdef pthread_mutex_destroy
++#undef pthread_mutex_destroy
++#endif
+ #define pthread_mutex_destroy(A)
+ #define my_rwlock_init(A,B)
+ #define rw_rdlock(A)

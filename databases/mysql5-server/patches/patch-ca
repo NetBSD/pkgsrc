@@ -1,12 +1,12 @@
-$NetBSD: patch-ca,v 1.2 2008/09/18 11:51:37 taca Exp $
+$NetBSD: patch-ca,v 1.2.12.1 2010/02/24 14:23:22 tron Exp $
 
 Before calling sigsend(), make sure the function actuall exists. Fixes
 the build on NetBSD >= 4.99.49, in which the macro P_MYID is defined
 somewhere unrelated to signals.
 
---- configure.in.orig	2008-08-04 15:19:07.000000000 +0300
-+++ configure.in	2008-09-16 13:52:59.000000000 +0300
-@@ -2001,7 +2001,7 @@
+--- configure.in.orig	2010-01-15 09:47:42.000000000 +0000
++++ configure.in
+@@ -2051,7 +2051,7 @@ AC_CHECK_HEADERS(varargs.h stdarg.h dire
  paths.h semaphore.h)
  
  # Already-done: strcasecmp

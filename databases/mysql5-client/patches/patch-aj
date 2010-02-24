@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.3 2008/09/18 11:50:44 taca Exp $
+$NetBSD: patch-aj,v 1.3.12.1 2010/02/24 14:23:22 tron Exp $
 
---- client/mysqladmin.cc.orig	2008-08-04 15:19:04.000000000 +0300
-+++ client/mysqladmin.cc	2008-09-16 12:18:37.000000000 +0300
-@@ -331,8 +331,14 @@
+--- client/mysqladmin.cc.orig	2010-01-15 09:47:38.000000000 +0000
++++ client/mysqladmin.cc
+@@ -332,8 +332,14 @@ int main(int argc,char *argv[])
    if (tty_password)
      opt_password = get_tty_password(NullS);
  
