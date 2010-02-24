@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_delete.1,v 1.27 2010/02/24 21:11:27 wiz Exp $
+.\" $NetBSD: pkg_delete.1,v 1.28 2010/02/24 21:13:23 wiz Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -103,7 +103,7 @@ These packages are then deinstalled.
 .It Fl A
 Recursively remove all automatically installed packages that were needed
 by the given packages and are no longer required.
-See also the
+Does not remove manually installed packages; see also the
 .Fl R
 flag.
 .It Fl D
@@ -162,7 +162,7 @@ be set automatically to the installed location by
 .Xr pkg_add 1 .
 .It Fl R
 Recursively remove all packages that were needed by the given packages
-and are no longer required, even if they were installed manually.
+and are no longer required.
 This option overrides the
 .Fl A
 flag.
