@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.954 2010/02/24 16:00:29 reed Exp $
+$NetBSD: CHANGES-2010,v 1.955 2010/02/24 19:30:17 tez Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1147,3 +1147,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/msdl to 1.2.7 [obache 2010-02-24]
 	Updated cad/gerbv to 2.4.0 [dmcmahill 2010-02-24]
 	Updated lang/sbcl to 1.0.35 [asau 2010-02-24]
+	Updated security/mit-krb5 to 1.4.2nb9 [tez 2010-02-24]
