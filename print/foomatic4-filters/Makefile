@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 09:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/24 19:25:40 drochner Exp $
 
-DISTNAME=	foomatic-filters-4.0.3
-PKGREVISION=	2
+DISTNAME=	foomatic-filters-4.0.4
 CATEGORIES=	print
 MASTER_SITES=	http://www.linuxprinting.org/download/foomatic/
 
@@ -63,5 +62,5 @@ INSTALLATION_DIRS+=	${EGDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/filter.conf ${DESTDIR}${EGDIR}
 
-.include "../../print/ghostscript/buildlink3.mk"
+#.include "../../print/ghostscript/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
