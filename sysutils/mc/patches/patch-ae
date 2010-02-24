@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.9 2010/02/24 17:56:20 drochner Exp $
+
+--- src/slint.c.orig	2005-05-27 14:19:18.000000000 +0000
++++ src/slint.c
+@@ -179,6 +179,7 @@ slang_init (void)
+ {
+     struct sigaction act, oact;
+     
++    SLutf8_enable (-1);
+     SLtt_get_terminfo ();
+ 
+    /*
