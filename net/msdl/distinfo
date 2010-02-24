@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/10/26 04:12:12 obache Exp $
+$NetBSD: distinfo,v 1.8 2010/02/24 01:20:05 obache Exp $
 
-SHA1 (msdl-1.2.6.tar.gz) = f8ee1ef77513dd7b8fbc65a99643c92c3f0cbb39
-RMD160 (msdl-1.2.6.tar.gz) = c0ad93d273d0a8623da90412cfa8722b724f3540
-Size (msdl-1.2.6.tar.gz) = 198525 bytes
+SHA1 (msdl-1.2.7.tar.gz) = 8eb8b4cc13debc2563a2c7b6f05f277ab18db9d1
+RMD160 (msdl-1.2.7.tar.gz) = 4ff685937c1dcb51a32e1f38fcce733326836bbb
+Size (msdl-1.2.7.tar.gz) = 207032 bytes
