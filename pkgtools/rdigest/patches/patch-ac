@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2008/09/18 10:38:45 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2010/02/24 22:00:03 joerg Exp $
 
 --- digest.c.orig	2008-09-18 12:13:50.000000000 +0200
 +++ digest.c
-@@ -41,8 +41,17 @@ __RCSID("$NetBSD: digest.c,v 1.15 2007/0
+@@ -41,8 +41,17 @@
  #endif
  
 +#include <nbcompat.h>

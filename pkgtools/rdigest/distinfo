@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2008/09/18 10:38:45 joerg Exp $
+$NetBSD: distinfo,v 1.8 2010/02/24 22:00:03 joerg Exp $
 
 SHA1 (patch-aa) = abb2e5088629b2b9ddd854d5238d6bcdf5cd9cae
 SHA1 (patch-ab) = 576c6afbde00e64e1fb7c35c1c2f90b8037f2c9a
-SHA1 (patch-ac) = cfbfc98c76b25b8c88ad022e5099374cbabd9d0e
+SHA1 (patch-ac) = c465218f29c8135a54a1a0cab91eae034780a077
