@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.953 2010/02/24 12:17:18 asau Exp $
+$NetBSD: CHANGES-2010,v 1.954 2010/02/24 16:00:29 reed Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1126,7 +1126,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/parrot to 2.1.1 [he 2010-02-23]
 	Updated devel/p5-MooseX-Types-Common to 0.001002 [sno 2010-02-23]
 	Updated devel/p5-ExtUtils-CBuilder to 0.27.02 [sno 2010-02-23]
-	Added sysutils/p5-IO-Kqueue version 0.34 [sno 2010-02-23]
+	Added sysutils/p5-IO-KQueue version 0.34 [sno 2010-02-23]
 	Added sysutils/p5-Linux-Inotify2 version 1.2.1 [sno 2010-02-23]
 	Updated devel/p5-File-ChangeNotify to 0.12 [sno 2010-02-23]
 	Updated www/typo3 to 4.3.2 [taca 2010-02-23]
@@ -1145,5 +1145,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-UUID-Tiny to 1.03 [sno 2010-02-23]
 	Updated databases/p5-Apache-DBI to 1.08 [sno 2010-02-23]
 	Updated net/msdl to 1.2.7 [obache 2010-02-24]
-	Updated cad/gerbv/to 2.4.0 [dmcmahill 2010-02-24]
+	Updated cad/gerbv to 2.4.0 [dmcmahill 2010-02-24]
 	Updated lang/sbcl to 1.0.35 [asau 2010-02-24]
