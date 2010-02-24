@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-up-to-date,v 1.8 2009/10/25 23:08:02 joerg Exp $
+# $NetBSD: pkg-up-to-date,v 1.9 2010/02/24 22:51:37 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -67,5 +67,11 @@ ${pkg_info} -qN ${pkg} | while read dep; do
 		fi
 	done
 	[ $found = 1 ]
-	[ "${packages}/All/${dep}.tgz" -ot "${pkg}" ]
+	case "$skip_age_check" in
+	[Yy][Ee][Ss])
+		;;
+	*)
+		[ "${packages}/All/${dep}.tgz" -ot "${pkg}" ]
+		;;
+	esac
 done
