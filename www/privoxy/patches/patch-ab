@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2010/02/09 20:18:43 joerg Exp $
+$NetBSD: patch-ab,v 1.6 2010/02/24 23:22:45 mjl Exp $
 
---- GNUmakefile.in.orig	2009-02-28 08:28:14.000000000 +0000
-+++ GNUmakefile.in
-@@ -87,7 +87,7 @@ INSTALL    = @INSTALL@
+--- GNUmakefile.in.orig	2009-12-16 09:15:42.000000000 +0100
++++ GNUmakefile.in	2010-02-24 20:15:48.000000000 +0100
+@@ -85,7 +85,7 @@
  # Binaries
  BIN_MODE	 = 0755
  # Support files, docs, etc.
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.5 2010/02/09 20:18:43 joerg Exp $
  # Directory
  DIR_MODE   = 0755
  # Files daemon writes to.
-@@ -1029,16 +1029,6 @@ install-strip:
+@@ -787,16 +787,6 @@
  # Perhaps the whole user/group validation should be done here, and simplified.
  PROGRAM_V = Privoxy $(VERSION) $(CODE_STATUS)
  install: CONF_DEST LOG_DEST PID_DEST check_doc GROUP_T
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.5 2010/02/09 20:18:43 joerg Exp $
  	@$(ECHO) "Creating directories, and preparing $(PROGRAM_V) installation"
  	$(CHMOD) $(DIR_MODE) $(MKDIR)
  	@$(MKDIR) $(DESTDIR)$(SBIN_DEST) $(DESTDIR)$(prefix) $(DESTDIR)$(CONF_DEST) \
-@@ -1106,41 +1096,6 @@ install: CONF_DEST LOG_DEST PID_DEST che
+@@ -864,41 +854,6 @@
  		$(INSTALL) $(INSTALL_T) $$i $(DESTDIR)$(CONF_DEST)/templates ;\
  	done
  
@@ -70,7 +70,7 @@ $NetBSD: patch-ab,v 1.5 2010/02/09 20:18:43 joerg Exp $
  	$(ECHO) Installing configuration files to $(DESTDIR)$(CONF_DEST);\
  	for i in $(CONFIGS); do \
  		if [ "$$i" = "default.action" ] || [ "$$i" = "default.filter" ] ; then \
-@@ -1159,45 +1114,6 @@ install: CONF_DEST LOG_DEST PID_DEST che
+@@ -917,36 +872,6 @@
  		$(CHMOD) $(RWD_MODE) $(DESTDIR)$(CONF_DEST)/*.new || exit 1 ;\
  		$(ECHO) "Warning: Older config files are preserved. Check new versions for changes!" ;\
  	fi ;\
@@ -96,15 +96,6 @@ $NetBSD: patch-ab,v 1.5 2010/02/09 20:18:43 joerg Exp $
 -			$(INSTALL) $(INSTALL_P) slackware/rc.privoxy $(DESTDIR)/etc/rc.d/ ;\
 -               $(ECHO) "Installing for Slackware." ;\
 -               $(ECHO) "Dont forget to add the rc.privoxy to rc.local if you want it started at every boot" ;\
--		elif [ -f /etc/redhat-release ] && [ -d /etc/rc.d/init.d/ ] && [ -w /etc/rc.d/init.d/ ] ; then \
--               $(ECHO) "Installing init script to /etc/rc.d/init.d/privoxy" ;\
--			$(SED) 's,^PRIVOXY_BIN=.*,PRIVOXY_BIN="/usr/local/sbin/$(PROGRAM)",' privoxy.init |\
--			$(SED) 's,^PRIVOXY_CONF=.*,PRIVOXY_CONF="$(CONF_DEST)/config",' |\
--			$(SED) "s,^PRIVOXY_USER=.*,PRIVOXY_USER=$$USER," > init.tmp ;\
--			$(INSTALL) $(INSTALL_P) init.tmp $(DESTDIR)/etc/rc.d/init.d/privoxy && $(RM) init.tmp;\
--			$(MKDIR) $(DESTDIR)/etc/logrotate.d/ ;\
--			$(ECHO) "Installing logrotate script to $(DESTDIR)/etc/logrotate.d/" ;\
--			$(INSTALL) -m 0644 privoxy.logrotate $(DESTDIR)/etc/logrotate.d/privoxy ;\
 -		elif [ -d $(DESTDIR)/etc/init.d ] && [ -w $(DESTDIR)/etc/init.d ] ; then \
 -			$(ECHO) "Installing generic init script to $(DESTDIR)/etc/init.d/privoxy" ;\
 -			$(ECHO) "Please check that the PATHs are correct, and edit if needed." ;\
