@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2009/04/07 14:02:06 mjl Exp $
+$NetBSD: patch-ag,v 1.3 2010/02/24 23:22:45 mjl Exp $
 
---- jbsockets.c.orig	2008-12-20 15:53:55.000000000 +0100
-+++ jbsockets.c	2009-04-07 15:54:10.000000000 +0200
-@@ -945,6 +945,14 @@
+--- jbsockets.c.orig	2009-10-04 18:38:26.000000000 +0200
++++ jbsockets.c	2009-10-19 23:16:53.000000000 +0200
+@@ -1097,6 +1097,14 @@
     struct sockaddr_in inaddr;
     struct hostent *hostp;
     unsigned int dns_retries = 0;
@@ -17,7 +17,7 @@ $NetBSD: patch-ag,v 1.2 2009/04/07 14:02:06 mjl Exp $
  #if defined(HAVE_GETHOSTBYNAME_R_6_ARGS) || defined(HAVE_GETHOSTBYNAME_R_5_ARGS) || defined(HAVE_GETHOSTBYNAME_R_3_ARGS)
     struct hostent result;
  #if defined(HAVE_GETHOSTBYNAME_R_6_ARGS) || defined(HAVE_GETHOSTBYNAME_R_5_ARGS)
-@@ -995,6 +1003,39 @@
+@@ -1147,6 +1155,39 @@
        {
           hostp = NULL;
        }
@@ -54,6 +54,6 @@ $NetBSD: patch-ag,v 1.2 2009/04/07 14:02:06 mjl Exp $
 +		}
 +	}
 +
- #elif FEATURE_PTHREAD
+ #elif defined(MUTEX_LOCKS_AVAILABLE)
        privoxy_mutex_lock(&resolver_mutex);
        while (NULL == (hostp = gethostbyname(host))
