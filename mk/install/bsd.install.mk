@@ -1,11 +1,11 @@
-# $NetBSD: bsd.install.mk,v 1.12 2008/01/04 01:46:27 rillig Exp $
+# $NetBSD: bsd.install.mk,v 1.13 2010/02/24 22:53:34 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
 #
 # The following are the "public" targets provided this module:
 #
-#    install, deinstall, reinstall, replace, undo-replace
+#    install, stage-install, deinstall, reinstall, replace, undo-replace
 #
 # The following targets may be overridden in a package Makefile:
 #
@@ -17,19 +17,35 @@ _COOKIE.install=	${WRKDIR}/.install_done
 ######################################################################
 ### install (PUBLIC)
 ######################################################################
-### install is a public target to install the package.
+### install is a public target to install the package either by
+### depending on stage-install (_USE_DESTDIR=no) or package-install
+### (_USE_DESTDIR!=no).
 ###
 .PHONY: install
+.if ${_USE_DESTDIR} == "no"
+install: stage-install
+.else
+install: package-install
+.endif
+
+######################################################################
+### stage-install (PUBLIC)
+######################################################################
+### stage-install is a public target to install the package to
+### ${PREFIX} (_USE_DESTDIR=no) or to ${DESTDIR}${PREFIX}
+### (_USE_DESTDIR!=no)
+###
+.PHONY: stage-install
 .if !defined(NO_INSTALL)
 .  include "install.mk"
-.elif !target(install)
+.else
 .  if exists(${_COOKIE.install})
-install:
+stage-install:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
-install: ${_PKGSRC_BUILD_TARGETS} install-cookie
+stage-install: ${_PKGSRC_BUILD_TARGETS} install-cookie
 .  else
-install: barrier
+stage-install: barrier
 .  endif
 .endif
 
