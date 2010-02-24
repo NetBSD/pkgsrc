@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2010/01/19 20:28:33 drochner Exp $
+# $NetBSD: Makefile,v 1.104 2010/02/24 18:47:07 drochner Exp $
 #
 
 DISTNAME=	epiphany-2.28.2
@@ -24,9 +24,7 @@ PKGCONFIG_OVERRIDE=	data/epiphany-2.28.pc
 .include "options.mk"
 
 GCONF_SCHEMAS=		epiphany.schemas
-GCONF_SCHEMAS+=	epiphany-fonts.schemas
 GCONF_SCHEMAS+=	epiphany-lockdown.schemas
-GCONF_SCHEMAS+=	epiphany-pango.schemas
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
