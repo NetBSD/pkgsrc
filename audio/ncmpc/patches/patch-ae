@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2010/02/24 18:08:12 drochner Exp $
+
+--- src/ncu.c.orig	2009-09-24 14:05:30.000000000 +0000
++++ src/ncu.c
+@@ -58,6 +58,7 @@ ncu_init(void)
+ 
+ 	/* enable extra keys */
+ 	keypad(stdscr, TRUE);
++	raw();
+ 
+ 	/* initialize mouse support */
+ #ifdef HAVE_GETMOUSE
