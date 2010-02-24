@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/31 11:38:48 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/24 22:04:38 joerg Exp $
 #
 
 DISTNAME=	lintpkgsrc-4.82
@@ -17,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	perl:run
 
-FILESDIR=	../../pkgtools/pkglint/files
+FILESDIR=	${.CURDIR}/../../pkgtools/pkglint/files
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
