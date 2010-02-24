@@ -1,8 +1,8 @@
-$NetBSD: patch-bf,v 1.2 2007/03/11 18:42:50 adam Exp $
+$NetBSD: patch-bf,v 1.2.28.1 2010/02/24 14:23:22 tron Exp $
 
---- bdb/dist/configure.orig	2007-03-05 20:23:33.000000000 +0100
+--- bdb/dist/configure.orig	2010-01-15 09:54:18.000000000 +0000
 +++ bdb/dist/configure
-@@ -5039,7 +5039,7 @@ fi
+@@ -5939,7 +5939,7 @@ fi
  # we're using.
  case "$host_os" in
  sysv5UnixWare*|sysv5OpenUNIX8*)

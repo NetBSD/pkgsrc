@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2007/07/15 19:22:07 tron Exp $
+$NetBSD: patch-aa,v 1.5.24.1 2010/02/24 14:23:22 tron Exp $
 
---- Makefile.in.orig	2007-07-04 14:10:07.000000000 +0100
-+++ Makefile.in	2007-07-15 18:10:44.000000000 +0100
-@@ -374,12 +374,8 @@
+--- Makefile.in.orig	2010-01-15 09:54:05.000000000 +0000
++++ Makefile.in
+@@ -375,12 +375,8 @@ AUTOMAKE_OPTIONS = foreign
  EXTRA_DIST = INSTALL-SOURCE INSTALL-WIN-SOURCE \
  			README COPYING EXCEPTIONS-CLIENT CMakeLists.txt
  

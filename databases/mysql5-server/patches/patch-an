@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.6 2009/11/26 16:33:29 tron Exp $
+$NetBSD: patch-an,v 1.6.2.1 2010/02/24 14:23:22 tron Exp $
 
---- mysql-test/Makefile.in.orig	2009-11-09 18:37:53.000000000 +0000
-+++ mysql-test/Makefile.in	2009-11-26 15:16:50.000000000 +0000
-@@ -368,7 +368,7 @@
+--- mysql-test/Makefile.in.orig	2010-01-15 09:53:45.000000000 +0000
++++ mysql-test/Makefile.in
+@@ -369,7 +369,7 @@ zlib_dir = @zlib_dir@
  @HAVE_NDBCLUSTER_DB_FALSE@USE_NDBCLUSTER = \"\"
  @HAVE_NDBCLUSTER_DB_TRUE@USE_NDBCLUSTER = \"--ndbcluster\"
  benchdir_root = $(prefix)
