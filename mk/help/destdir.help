@@ -1,4 +1,4 @@
-# $NetBSD: destdir.help,v 1.4 2009/05/09 14:59:08 joerg Exp $
+# $NetBSD: destdir.help,v 1.5 2010/02/24 22:53:34 joerg Exp $
 #
 # ===
 # Warning: This file is still under construction. Don't rely on it.
@@ -40,7 +40,7 @@
 #
 # === Implementation notes ===
 #
-# In the "install" phase, the variable DESTDIR is set in the make(1)
+# In the "stage-install" phase, the variable DESTDIR is set in the make(1)
 # environment of the default "do-install" target. Additionally, the
 # variable is passed in the INSTALL_MAKE_FLAGS to override potential
 # "DESTDIR=" entries in the Makefiles.

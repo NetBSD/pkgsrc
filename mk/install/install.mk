@@ -1,11 +1,11 @@
-# $NetBSD: install.mk,v 1.57 2009/10/06 13:34:53 joerg Exp $
+# $NetBSD: install.mk,v 1.58 2010/02/24 22:53:34 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
 # Public targets:
 #
-# install:
-#	Installs the package files into LOCALBASE.
+# stage-install:
+#	Installs the package files into LOCALBASE or ${DESTDIR}${LOCALBASE}.
 #
 
 # Interface for other infrastructure components:
@@ -62,15 +62,15 @@ _INSTALL_TARGETS+=	acquire-install-lock
 _INSTALL_TARGETS+=	${_COOKIE.install}
 _INSTALL_TARGETS+=	release-install-lock
 
-.PHONY: install
-.if !target(install)
+.PHONY: stage-install
+.if !target(stage-install)
 .  if exists(${_COOKIE.install})
-install:
+stage-install:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
-install: ${_INSTALL_TARGETS}
+stage-install: ${_INSTALL_TARGETS}
 .  else
-install: barrier
+stage-install: barrier
 .  endif
 .endif
 
@@ -94,7 +94,7 @@ ${_COOKIE.install}: real-install
 _REAL_INSTALL_TARGETS+=	install-check-interactive
 _REAL_INSTALL_TARGETS+=	install-check-version
 _REAL_INSTALL_TARGETS+=	install-message
-_REAL_INSTALL_TARGETS+=	install-vars
+_REAL_INSTALL_TARGETS+=	stage-install-vars
 _REAL_INSTALL_TARGETS+=	unprivileged-install-hook
 _REAL_INSTALL_TARGETS+=	install-all
 _REAL_INSTALL_TARGETS+=	install-cookie
