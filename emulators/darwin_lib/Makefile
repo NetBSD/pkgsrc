@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/10/11 09:21:23 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/25 15:05:31 joerg Exp $
 
 DISTNAME=	darwin_lib-6.6.2
 PKGREVISION=	2
@@ -12,7 +12,7 @@ DISTFILES=	org.opendarwin.Libsystem-6.6.2-4.fat.rpm \
 		org.opendarwin.IOKitUser-6.6.2-4.fat.rpm \
 		org.opendarwin.XFree86-6.6.2-4.${DARWIN_ARCH}.rpm
 
-MAINTAINER=	abacau@yahoo.com.au
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Darwin compatibility libraries (including X11)
 
 # The opendarwin.org domain is completely gone.  MASTER_SITES should
