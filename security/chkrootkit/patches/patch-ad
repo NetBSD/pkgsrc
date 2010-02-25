@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1 2010/02/25 07:15:42 agc Exp $
+
+modern NetBSD has PAM too
+
+--- chkrootkit	2010/02/24 22:13:30	1.1
++++ chkrootkit	2010/02/24 22:12:34
+@@ -476,7 +476,7 @@
+ 
+ 
+        ### OpenBSD rootkit v1
+-       if [ "$SYSTEM" != "SunOS" -a ! -f /usr/lib/security/libgcj.security ]
++       if [ "$SYSTEM" != "SunOS" -a "$SYSTEM" != "NetBSD" -a ! -f /usr/lib/security/libgcj.security ]
+           then
+           expertmode_output "${find} ${ROOTDIR}usr/lib/security"
+        fi
+@@ -893,7 +893,7 @@
+    fi
+ 
+    ### OpenBSD rootkit v1
+-   if [ "${SYSTEM}" != "SunOS" -a ! -f ${ROOTDIR}usr/lib/security/libgcj.security ]; then
++   if [ "${SYSTEM}" != "SunOS" -a "$SYSTEM" != "NetBSD" -a ! -f ${ROOTDIR}usr/lib/security/libgcj.security ]; then
+       files=""
+       if [ "${QUIET}" != "t" ];then printn "Searching for OBSD rk v1... "; fi
+       files=`${find} ${ROOTDIR}usr/lib/security 2>/dev/null`
