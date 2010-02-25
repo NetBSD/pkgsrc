@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/12/21 22:22:37 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2010/02/25 17:24:34 reed Exp $
 
 BUILDLINK_TREE+=	libsoup24
 
 .if !defined(LIBSOUP24_BUILDLINK3_MK)
 LIBSOUP24_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libsoup24+=	libsoup24>=2.4.0
+# API 2.4.0 but 2.28.0 due to buildlink dependency change
+BUILDLINK_API_DEPENDS.libsoup24+=	libsoup24>=2.28.0
 BUILDLINK_ABI_DEPENDS.libsoup24?=	libsoup24>=2.26.0
 BUILDLINK_PKGSRCDIR.libsoup24?=		../../net/libsoup24
 
