@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.37 2010/01/26 13:31:50 ghen Exp $
+# $NetBSD: options.mk,v 1.38 2010/02/25 18:48:01 drochner Exp $
 
 # Global and legacy options
 
@@ -50,7 +50,6 @@ CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 ### ncursesw
 ###
 .if !empty(PKG_OPTIONS:Mncursesw)
-USE_NCURSES=		yes
 .  include "../../devel/ncursesw/buildlink3.mk"
 .else
 SUBST_CLASSES+=		curse
