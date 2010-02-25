@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2009/11/27 13:26:49 joerg Exp $
+$NetBSD: distinfo,v 1.15 2010/02/25 19:53:55 joerg Exp $
 
 SHA1 (tclx8.3.5-src.tar.gz) = 74092449684d11dd73a4cb91fa3e1442e9e21d47
 RMD160 (tclx8.3.5-src.tar.gz) = b501c1c48b54950ea7fb6d3d6d27ef3e7d58c5a5
@@ -8,7 +8,7 @@ SHA1 (patch-ab) = 2c319d289481b6d1d5262f39c630034c33b324ed
 SHA1 (patch-ac) = c42669fab43b253b6fb07b04e8fc41099062a014
 SHA1 (patch-ad) = 252a21da464267d7c7d45e168a89b29a40273359
 SHA1 (patch-ae) = a43144f37706245779362026073e09d8505a3d3f
-SHA1 (patch-af) = a7fd0f1f3a884617162f98635257ae7a916ec37a
+SHA1 (patch-af) = 7eb9dec7a938e62a5a06a5a37c5fa951912006cc
 SHA1 (patch-ag) = 6c8876699bfe325b3370bb554d4727e05fc64b8b
 SHA1 (patch-ah) = 37f883b17e3cec0266f9cd8c60cece521e59f56a
 SHA1 (patch-ai) = 07572c47a3ee375f89488dbbfe52697091beccfb
