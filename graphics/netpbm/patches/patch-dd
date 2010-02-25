@@ -1,11 +1,11 @@
-$NetBSD: patch-dd,v 1.1 2006/11/03 07:45:19 rillig Exp $
+$NetBSD: patch-dd,v 1.1.30.1 2010/02/25 08:43:28 spz Exp $
 
---- converter/other/cameratopam/cameratopam.c.orig	Tue Oct 31 09:55:51 2006
-+++ converter/other/cameratopam/cameratopam.c	Tue Oct 31 10:55:17 2006
-@@ -18,7 +18,11 @@
- */
- #include <time.h>
+--- converter/other/cameratopam/cameratopam.c.orig	2006-08-19 03:12:28.000000000 +0000
++++ converter/other/cameratopam/cameratopam.c
+@@ -8,7 +8,11 @@
  
+ 
+ #define _BSD_SOURCE 1   /* Make sure string.h contains strcasecmp() */
 +#ifdef __osf__
 +#define _OSF_SOURCE
 +#else
