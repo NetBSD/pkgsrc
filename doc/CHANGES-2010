@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.958 2010/02/25 11:03:38 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.959 2010/02/25 13:02:39 martti Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1151,3 +1151,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/pbulk to 0.46 [joerg 2010-02-24]
 	Updated www/privoxy to 3.0.16 [mjl 2010-02-24]
 	Removed www/galeon successor www/epiphany [tnn 2010-02-25]
+	Updated mail/postfix to 2.7.0 [martti 2010-02-25]
+	Updated mail/postfix-current to 2.8.20100213 [martti 2010-02-25]
