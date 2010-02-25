@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2010/02/25 17:03:13 wiz Exp $
+
+--- pyuic/uic/port_v3/proxy_base.py.orig	2010-01-14 14:36:26.000000000 +0000
++++ pyuic/uic/port_v3/proxy_base.py
+@@ -1,5 +1,5 @@
+ from PyQt4.uic.Compiler.proxy_type import ProxyType
+ 
+ 
+-class ProxyBase(metaclass=ProxyType):
+-    pass
++class ProxyBase:
++    __metaclass__=ProxyType
