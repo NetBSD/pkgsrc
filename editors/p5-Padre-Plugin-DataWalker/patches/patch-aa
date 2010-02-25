@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2010/02/25 14:07:52 sno Exp $
+
+--- Makefile.PL.orig	2010-01-12 16:33:35.000000000 +0000
++++ Makefile.PL
+@@ -15,7 +15,6 @@ requires  'YAML::XS'             => '0';
+ build_requires 'Test::More';
+ 
+ is_padre_plugin; # authors: Install Module::Install::PadrePlugin
+-auto_install;
+ 
+ install_share_with_mofiles; # install Locale::Msgfmt
+ 
