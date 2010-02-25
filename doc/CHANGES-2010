@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.961 2010/02/25 13:33:02 sno Exp $
+$NetBSD: CHANGES-2010,v 1.962 2010/02/25 14:30:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1155,3 +1155,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/postfix-current to 2.8.20100213 [martti 2010-02-25]
 	Updated x11/p5-Wx to 0.97.01nb1 [sno 2010-02-25]
 	Updated editors/p5-Padre to 0.57 [sno 2010-02-25]
+	Updated misc/calibre to 0.6.24nb6 [wiz 2010-02-25]
