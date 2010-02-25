@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/02/15 16:49:46 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/25 13:26:01 sno Exp $
 #
 
 DISTNAME=	Wx-0.9701
 PKGNAME=	p5-${DISTNAME:S/9701/97.01/}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Wx/}
 
@@ -23,6 +23,8 @@ BUILD_DEPENDS+=	p5-ExtUtils-XSpp>=0.09:../../devel/p5-ExtUtils-XSpp
 USE_TOOLS+=		perl
 USE_LANGUAGES+=		c c++
 PERL5_PACKLIST=		auto/Wx/.packlist
+
+MAKE_PARAMS+=		--wx-toolkit=gtk2
 
 .include "../../lang/perl5/module.mk"
 .include "../../x11/wxGTK28-contrib/buildlink3.mk"
