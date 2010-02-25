@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.110 2009/12/13 08:55:57 martti Exp $
+# $NetBSD: Makefile,v 1.111 2010/02/25 13:02:02 martti Exp $
 
-DISTNAME=	postfix-2.7-20091209
-PKGNAME=	postfix-2.7.20091209
+DISTNAME=	postfix-2.8-20100213
+PKGNAME=	postfix-2.8.20100213
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/
 MASTER_SITES+=	http://postfix.it-austria.net/releases/experimental/
@@ -15,7 +15,7 @@ COMMENT=	Postfix SMTP server and tools
 LICENSE=	postfix-license
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
-CONFLICTS+=	postfix-2.6-[0-9]*
+CONFLICTS+=	postfix-2.[6-7]-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -125,10 +125,6 @@ CONF_FILES=		# empty
 CONF_FILES+=		${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 .endfor
 CONF_FILES_PERMS=	# empty
-.for i in post-install postfix-script
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i} \
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
-.endfor
 
 MAKE_ENV+=		DEBUG= # empty
 
@@ -164,8 +160,6 @@ do-install:
 .endif
 	cd ${WRKSRC} && sh ./postfix-install -non-interactive		\
 		${DESTDIR_INSTALLOPTIONS} config_directory="${EXAMPLEDIR}"
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${DESTDIR}${EXAMPLEDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${DESTDIR}${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
 		${DESTDIR}${EXAMPLEDIR}/mailer.conf
 	${INSTALL_SCRIPT} ${WRKSRC}/auxiliary/qshape/qshape.pl \
