@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2009/10/25 13:11:16 sno Exp $
+# $NetBSD: Makefile,v 1.27 2010/02/25 17:29:41 sno Exp $
 #
 
-DISTNAME=	Image-Size-3.210
-PKGNAME=	p5-${DISTNAME:S/210/2.1/}
+DISTNAME=	Image-Size-3.220
+PKGNAME=	p5-${DISTNAME:S/220/2.2/}
 SVR4_PKGNAME=	p5isi
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/}
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
 
-BUILD_DEPENDS+=	p5-Test-Simple>=0.80:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	{perl>=5.10.0,p5-Test-Simple>=0.80}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Image/Size/.packlist
 
