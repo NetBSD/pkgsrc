@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.19 2010/02/20 12:49:48 obache Exp $
+# $NetBSD: bsd.depends.mk,v 1.20 2010/02/25 02:06:34 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -22,10 +22,8 @@ SKIP_DEPENDS?=	no
 # dependencies.  This variable is user-settable in /etc/mk.conf.
 #
 .if !defined(DEPENDS_TARGET)
-.  if defined(USE_DESTDIR) && !empty(USE_DESTDIR:M[Yy][Ee][Ss])
+.  if !empty(USE_DESTDIR:M[Yy][Ee][Ss]) || make(package)
 DEPENDS_TARGET=		package-install
-.  elif make(package)
-DEPENDS_TARGET=		package
 .  elif make(update)
 .    if defined(UPDATE_TARGET) && (${UPDATE_TARGET} == "replace")
 DEPENDS_TARGET=		${UPDATE_TARGET}
