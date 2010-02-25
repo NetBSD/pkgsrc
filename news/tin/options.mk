@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2008/07/14 10:09:56 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2010/02/25 16:05:57 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tin
 PKG_SUPPORTED_OPTIONS=		icu inet6 tin-use-inn-spool
@@ -28,12 +28,6 @@ CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.ncurses}
 .  include "../../devel/ncursesw/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-screen=ncursesw
 CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.ncursesw}
-# XXX: NetBSD's wide curses are not accepted, because the configure
-# script doesn't find the proper headers.
-# This could be a bug in the buildlink framework for wide curses.
-# The next line is a workaround until someone(TM) finds time to
-# investigate this.
-USE_BUILTIN.ncursesw=	no
 .endif
 
 .if !empty(PKG_OPTIONS:Micu)
