@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9075 2010/02/25 13:02:39 martti Exp $
+$NetBSD: TODO,v 1.9076 2010/02/25 20:21:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -521,7 +521,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dc_gui2-0.80
 	o dctc-0.85.9
 	o ddclient-3.7.3
-	o ddrescue-1.11
 	o defendguin-0.0.11
 	o delegate-9.9.6
 	o denemo-0.8.12
