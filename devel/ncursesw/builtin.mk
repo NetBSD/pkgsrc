@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2009/01/18 06:56:34 dholland Exp $
+# $NetBSD: builtin.mk,v 1.9 2010/02/25 16:01:47 drochner Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -133,6 +133,7 @@ BUILDLINK_TARGETS+=		buildlink-ncursesw-curses-h
 # Packages will expect the following includes to provide declarations
 # for ncursesw if wide curses are supported:
 #
+#	<ncursesw/ncurses.h>
 #	<ncursesw/curses.h>
 #	<ncurses.h>
 #	<curses.h>
@@ -147,7 +148,7 @@ buildlink-ncursesw-curses-h:
 	curses_h="ncursesw/ncurses.h curses.h";				\
 	for f in $$curses_h; do						\
 		src=${BUILDLINK_PREFIX.ncursesw:Q}"/include/$$f";	\
-		dests="ncursesw/curses.h ncurses.h curses.h";		\
+		dests="ncursesw/ncurses.h ncursesw/curses.h ncurses.h curses.h"; \
 		for dest in $$dests; do					\
 			dest=${BUILDLINK_DIR:Q}"/include/$$dest";	\
 			if ${TEST} -f "$$src"; then			\
