@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/02/10 19:17:39 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2010/02/25 21:41:11 drochner Exp $
 #
 
 DISTNAME=	scigraphica-2.1.0
@@ -12,6 +12,7 @@ COMMENT=	Data analysis and technical graphics
 
 USE_TOOLS+=		gmake intltool pkg-config
 USE_GNU_READLINE=	YES
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-gnome
