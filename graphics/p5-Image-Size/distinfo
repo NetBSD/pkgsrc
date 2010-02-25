@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2009/10/25 13:11:16 sno Exp $
+$NetBSD: distinfo,v 1.12 2010/02/25 17:29:41 sno Exp $
 
-SHA1 (Image-Size-3.210.tar.gz) = 2de8f020a5a62f635bbbf5b7c0efe94f1b883b4d
-RMD160 (Image-Size-3.210.tar.gz) = a7231bc09b5473f6cf9abc8c8a0ce00c71a455b9
-Size (Image-Size-3.210.tar.gz) = 170175 bytes
+SHA1 (Image-Size-3.220.tar.gz) = 30d8c02ad1ce64a75785d0da78ef847ad85820c2
+RMD160 (Image-Size-3.220.tar.gz) = db56b183013e1fd8ca57256f4f2d350ed9c182c6
+Size (Image-Size-3.220.tar.gz) = 170087 bytes
