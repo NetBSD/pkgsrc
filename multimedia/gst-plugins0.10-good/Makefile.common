@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2010/02/16 13:16:53 drochner Exp $
+# $NetBSD: Makefile.common,v 1.24 2010/02/25 17:27:06 reed Exp $
 #
 # used by audio/gst-plugins0.10-esound/Makefile
 # used by audio/gst-plugins0.10-flac/Makefile
@@ -50,5 +50,5 @@ CONFIGURE_ARGS+=	--disable-${driver}
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.23
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.23
+BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.26
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
