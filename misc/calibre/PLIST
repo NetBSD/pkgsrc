@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/18 17:41:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/02/25 14:30:23 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -701,27 +701,6 @@ lib/calibre/pyPdf/generic.py
 lib/calibre/pyPdf/pdf.py
 lib/calibre/pyPdf/utils.py
 lib/calibre/pyPdf/xmp.py
-${PYSITELIB}/PyQt4/__init__.pyc
-${PYSITELIB}/PyQt4/pyqtconfig.pyc
-${PYSITELIB}/PyQt4/uic/Compiler/__init__.pyc
-${PYSITELIB}/PyQt4/uic/Compiler/compiler.pyc
-${PYSITELIB}/PyQt4/uic/Compiler/indenter.pyc
-${PYSITELIB}/PyQt4/uic/Compiler/misc.pyc
-${PYSITELIB}/PyQt4/uic/Compiler/proxy_type.pyc
-${PYSITELIB}/PyQt4/uic/Compiler/qobjectcreator.pyc
-${PYSITELIB}/PyQt4/uic/Compiler/qtproxies.pyc
-${PYSITELIB}/PyQt4/uic/__init__.pyc
-${PYSITELIB}/PyQt4/uic/exceptions.pyc
-${PYSITELIB}/PyQt4/uic/icon_cache.pyc
-${PYSITELIB}/PyQt4/uic/objcreator.pyc
-${PYSITELIB}/PyQt4/uic/port_v2/__init__.pyc
-${PYSITELIB}/PyQt4/uic/port_v2/ascii_upper.pyc
-${PYSITELIB}/PyQt4/uic/port_v2/encode_utf8.pyc
-${PYSITELIB}/PyQt4/uic/port_v2/load_plugin.pyc
-${PYSITELIB}/PyQt4/uic/port_v2/proxy_base.pyc
-${PYSITELIB}/PyQt4/uic/properties.pyc
-${PYSITELIB}/PyQt4/uic/uiparser.pyc
-${PYSITELIB}/sipconfig.pyc
 lib/udev/rules.d/95-calibre.rules
 man/man1/calibre-customize.1
 man/man1/calibre-debug.1
