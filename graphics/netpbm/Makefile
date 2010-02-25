@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.163 2009/08/26 19:56:52 sno Exp $
+# $NetBSD: Makefile,v 1.163.4.1 2010/02/25 08:43:28 spz Exp $
 
-DISTNAME=	netpbm-10.34
-PKGREVISION=	3
+DISTNAME=	netpbm-10.35.73
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -22,7 +21,6 @@ INSTALL_TARGET=	install-dev install-run
 MAKE_ENV+=	INSTALL=${INSTALL:Q} STRIPFLAG=${_STRIPFLAG_INSTALL:Q} \
 		pkgdir=${STAGEDIR:Q} MACHINE=${MACHINE:Q}
 MAKE_FILE=	GNUmakefile
-PLIST_SRC=	${WRKDIR}/PLIST_STAGE
 REPLACE_PERL+=	editor/ppmfade editor/ppmshadow editor/pnmquant \
 		generator/ppmrainbow manweb editor/pnmflip editor/ppmquant
 STAGEDIR=	${WRKDIR}/staging
@@ -90,7 +88,6 @@ post-install:
 	${MV} share/doc/netpbm/*.1	${PKGMANDIR}/man1 &&	\
 	${MV} misc share/netpbm && 				\
 	${CHOWN} -R ${BINOWN}:${BINGRP} . &&			\
-	${FIND} * \! -type d -print | ${SORT} >${PLIST_SRC} &&	\
 	pax -rwpppm . ${DESTDIR}${PREFIX}
 	${RM} -fr ${STAGEDIR}
 	${FIND} ${DESTDIR}${PREFIX}/share/doc/netpbm -type f -print |	\
