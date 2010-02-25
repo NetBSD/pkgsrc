@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/02/23 12:41:14 he Exp $
+# $NetBSD: Makefile,v 1.30 2010/02/25 17:59:34 joerg Exp $
 #
 
 VERSION=		2.1.1
@@ -62,6 +62,8 @@ REPLACE.parrot.old=	.*parrot[^[:space:]]*
 REPLACE.parrot.new=	${PREFIX}/bin/parrot
 REPLACE_FILES.parrot+= 	tools/dev/pbc_to_exe.pir
 
+# Does relink internally, so allow local rpath entries
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${WRKSRC}
 
 pre-install:
 	${CHMOD} -R g-w ${WRKSRC}
