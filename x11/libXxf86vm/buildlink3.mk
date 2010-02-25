@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:46 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/02/25 17:10:49 reed Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -11,7 +11,7 @@ BUILDLINK_TREE+=	libXxf86vm
 .if !defined(LIBXXF86VM_BUILDLINK3_MK)
 LIBXXF86VM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libXxf86vm+=	libXxf86vm>=1.0.1
+BUILDLINK_API_DEPENDS.libXxf86vm+=	libXxf86vm>=1.1.0
 BUILDLINK_PKGSRCDIR.libXxf86vm?=	../../x11/libXxf86vm
 
 .include "../../x11/libX11/buildlink3.mk"
