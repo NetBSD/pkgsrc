@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2010/02/25 11:30:03 drochner Exp $
+bin/pinentry-qt4
