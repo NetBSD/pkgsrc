@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/01/17 12:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2010/02/25 17:55:48 joerg Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-src
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freeworld.thc.org/thc-hydra/
 COMMENT=	Login password cracker
 LICENSE=	hydra-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,7 +28,7 @@ SUBST_SED.build=	-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g"
 SUBST_SED.build+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_SED.build+=	-e "s|uname|${UNAME}|g"
 SUBST_SED.build+=	-e "s|\\./hydra|${PREFIX}/bin/hydra|g"
-SUBST_SED.build+=	-e "s|LIBS=-lm|LIBS=-lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib ${COMPILER_RPATH_FLAG}/usr/lib|g"
+SUBST_SED.build+=	-e "s|LIBS=-lm|LIBS=-L${PREFIX}/lib -lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib ${COMPILER_RPATH_FLAG}/usr/lib|g"
 SUBST_MESSAGE.build=	Patching build files.
 
 USE_OLD_DES_API=	YES
@@ -45,7 +47,7 @@ pre-build:
 	${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hydra ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/pw-inspector ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/hydra ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/pw-inspector ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
