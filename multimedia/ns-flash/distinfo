@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2009/03/06 19:10:52 tnn Exp $
+$NetBSD: distinfo,v 1.19 2010/02/25 15:54:18 mishka Exp $
 
-SHA1 (flash/9.0r159/install_flash_player_9.tar.gz) = df4868afc1927319b37bf2b6cd3871cc033da58c
-RMD160 (flash/9.0r159/install_flash_player_9.tar.gz) = 959557613c79b52f8e80daa8346948a8ed6e20a3
-Size (flash/9.0r159/install_flash_player_9.tar.gz) = 3057882 bytes
+SHA1 (flash/9.0r262/install_flash_player_9.tar.gz) = fd6da8b2afbcaf3213c772e7afc664030a50a683
+RMD160 (flash/9.0r262/install_flash_player_9.tar.gz) = 691de4c0b2b5ea3d6f7e3e07246dc7cee80ca902
+Size (flash/9.0r262/install_flash_player_9.tar.gz) = 3056624 bytes
