@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/27 22:14:55 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/25 07:15:42 agc Exp $
 #
 
 DISTNAME=		chkrootkit-0.47
@@ -9,13 +9,13 @@ MASTER_SITES=		ftp://ftp.pangeia.com.br/pub/seg/pac/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.chkrootkit.org/
 COMMENT=		Locally checks for signs of a rootkit
+LICENSE=		modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 NO_CONFIGURE=		yes
-NOT_FOR_PLATFORM=	NetBSD-[2-9]*-*
 
 PROGRAMS=	chkdirs chklastlog chkproc chkwtmp ifpromisc strings-static \
 		chkutmp
@@ -50,7 +50,7 @@ MAKE_ENV+=	STATIC="-static"
 MAKE_ENV+=	STATIC="-static"
 .endif
 
-INSTALLATION_DIRS+=	bin share/doc/chkrootkit
+INSTALLATION_DIRS+=	bin ${DOCDIR}
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PROGRAMS} ${DESTDIR}${PREFIX}/bin
