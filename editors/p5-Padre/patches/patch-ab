@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2010/02/25 13:32:50 sno Exp $
+
+--- lib/Padre/Perl.pm.orig	2010-02-18 10:09:59.000000000 +0000
++++ lib/Padre/Perl.pm
+@@ -136,7 +136,7 @@ sub cperl {
+ 		if ( $path =~ s/\b(wxPerl)\z// ) {
+ 
+ 			# Convert to non-GUI
+-			if ( -f "${path}perl" ) {
++			if ( -x "${path}perl" ) {
+ 				return "${path}perl";
+ 			} else {
+ 				return "${path}wxPerl";
+@@ -193,7 +193,7 @@ sub wxperl {
+ 		if ( $path =~ s/\b(perl)\z// ) {
+ 
+ 			# Convert to Wx launcher
+-			if ( -f "${path}wxPerl" ) {
++			if ( -x "${path}wxPerl" ) {
+ 				return "${path}wxPerl";
+ 			} else {
+ 				return "${path}perl";
