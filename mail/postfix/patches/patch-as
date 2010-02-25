@@ -1,9 +1,9 @@
-$NetBSD: patch-as,v 1.5 2009/05/13 10:33:23 martti Exp $
+$NetBSD: patch-as,v 1.6 2010/02/25 13:01:23 martti Exp $
 
 Support for sqlite.
 
---- src/global/Makefile.in.orig	2009-02-13 03:25:05.000000000 +0200
-+++ src/global/Makefile.in	2009-05-13 12:27:54.000000000 +0300
+--- src/global/Makefile.in.orig	2009-10-07 03:09:52.000000000 +0300
++++ src/global/Makefile.in	2010-02-25 14:49:15.000000000 +0200
 @@ -4,7 +4,7 @@
  	clnt_stream.c conv_time.c db_common.c debug_peer.c debug_process.c \
  	defer.c deliver_completed.c deliver_flock.c deliver_pass.c \
@@ -31,7 +31,7 @@ Support for sqlite.
  	dot_lockfile.h dot_lockfile_as.h dsb_scan.h dsn.h dsn_buf.h \
  	dsn_mask.h dsn_print.h dsn_util.h ehlo_mask.h ext_prop.h \
  	file_id.h flush_clnt.h header_opts.h header_token.h input_transp.h \
-@@ -862,6 +862,13 @@
+@@ -868,6 +868,13 @@
  dict_proxy.o: dict_proxy.h
  dict_proxy.o: mail_params.h
  dict_proxy.o: mail_proto.h
@@ -45,7 +45,7 @@ Support for sqlite.
  domain_list.o: ../../include/match_list.h
  domain_list.o: ../../include/match_ops.h
  domain_list.o: ../../include/sys_defs.h
-@@ -1233,6 +1240,7 @@
+@@ -1239,6 +1246,7 @@
  mail_dict.o: dict_mysql.h
  mail_dict.o: dict_pgsql.h
  mail_dict.o: dict_proxy.h

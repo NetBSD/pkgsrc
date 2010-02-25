@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.230 2009/08/31 09:37:35 martti Exp $
+# $NetBSD: Makefile,v 1.231 2010/02/25 13:01:22 martti Exp $
 
-DISTNAME=	postfix-2.6.5
+DISTNAME=	postfix-2.7.0
 #PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
@@ -124,10 +124,6 @@ CONF_FILES=		# empty
 CONF_FILES+=		${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 .endfor
 CONF_FILES_PERMS=	# empty
-.for i in post-install postfix-script
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i} \
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
-.endfor
 
 MAKE_ENV+=		DEBUG= # empty
 
@@ -163,8 +159,6 @@ do-install:
 .endif
 	cd ${WRKSRC} && sh ./postfix-install -non-interactive		\
 		${DESTDIR_INSTALLOPTIONS} config_directory="${EXAMPLEDIR}"
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${DESTDIR}${EXAMPLEDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${DESTDIR}${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
 		${DESTDIR}${EXAMPLEDIR}/mailer.conf
 	${INSTALL_SCRIPT} ${WRKSRC}/auxiliary/qshape/qshape.pl \
