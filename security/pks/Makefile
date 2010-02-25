@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/05/01 14:43:29 zafer Exp $
+# $NetBSD: Makefile,v 1.28 2010/02/25 14:59:22 joerg Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	3
@@ -10,7 +10,7 @@ PATCHFILES=	pks094-patch2 \
 		pks094-patch3
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	burgess@neonramp.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mit.edu/people/marc/pks/
 COMMENT=	PGP Public Key Server
 
