@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.957 2010/02/24 23:25:02 mjl Exp $
+$NetBSD: CHANGES-2010,v 1.958 2010/02/25 11:03:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1150,3 +1150,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/mit-krb5 to 1.4.2nb9 [tez 2010-02-24]
 	Updated pkgtools/pbulk to 0.46 [joerg 2010-02-24]
 	Updated www/privoxy to 3.0.16 [mjl 2010-02-24]
+	Removed www/galeon successor www/epiphany [tnn 2010-02-25]
