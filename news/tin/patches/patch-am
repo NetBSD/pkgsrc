@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.1 2010/02/25 16:05:57 drochner Exp $
+
+--- configure.orig	2009-02-11 20:29:48.000000000 +0000
++++ configure
+@@ -7996,6 +7996,9 @@ test "$cf_cv_curses_dir" != "no" && { \
+ if test -n "$cf_cv_curses_dir/include $cf_cv_curses_dir/include/$cf_ncuhdr_root" ; then
+   for cf_add_incdir in $cf_cv_curses_dir/include $cf_cv_curses_dir/include/$cf_ncuhdr_root
+   do
++    if ! [ -d $cf_add_incdir ]; then
++      continue;
++    fi
+ 	while test $cf_add_incdir != /usr/include
+ 	do
+ 	  if test -d $cf_add_incdir
+@@ -8093,7 +8096,6 @@ printf("%s\n", NCURSES_VERSION);
+ #ifdef __NCURSES_H
+ printf("old\n");
+ #else
+-	make an error
+ #endif
+ #endif
+ 	
