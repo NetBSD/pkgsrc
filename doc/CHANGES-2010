@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.962 2010/02/25 14:30:36 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.963 2010/02/25 15:58:51 mishka Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1156,3 +1156,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/p5-Wx to 0.97.01nb1 [sno 2010-02-25]
 	Updated editors/p5-Padre to 0.57 [sno 2010-02-25]
 	Updated misc/calibre to 0.6.24nb6 [wiz 2010-02-25]
+	Updated multimedia/ns-flash to 9.0.262 [mishka 2010-02-25]
