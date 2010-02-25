@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/05/19 08:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2010/02/25 15:54:18 mishka Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://download.macromedia.com/pub/flashplayer/installers/current/9/
@@ -20,7 +20,6 @@ CONFLICTS+=		navigator<=4.76nb1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/${WRKNAME}
 BUILD_DIRS=		# empty
 DIST_SUBDIR=		flash/${FLASH_VERS}
 
@@ -39,12 +38,14 @@ PKGREVISION=		2
 DISTUNAME=		solaris
 DISTNAME=		install_flash_player_7_${DISTUNAME}_sparc
 WRKNAME=		install_flash_player_7_${DISTUNAME}
+WRKSRC=			${WRKDIR}/${WRKNAME}
 .else  # if ${EMUL_PLATFORM} == "linux-i386"
 # Defaults so lintpkgsrc is happy
-FLASH_VERS=		9.0r159
+FLASH_VERS=		9.0r262
 DISTUNAME=		linux
 DISTNAME=		install_flash_player_9
 WRKNAME=		install_flash_player_9_${DISTUNAME}
+WRKSRC=			${WRKDIR}
 .endif
 
 PKGNAME=		ns-flash-${FLASH_VERS:S/r/./}
