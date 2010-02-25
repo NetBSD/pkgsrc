@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.959 2010/02/25 13:02:39 martti Exp $
+$NetBSD: CHANGES-2010,v 1.960 2010/02/25 13:26:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1153,3 +1153,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed www/galeon successor www/epiphany [tnn 2010-02-25]
 	Updated mail/postfix to 2.7.0 [martti 2010-02-25]
 	Updated mail/postfix-current to 2.8.20100213 [martti 2010-02-25]
+	Updated x11/p5-Wx to 0.97.01nb1 [sno 2010-02-25]
