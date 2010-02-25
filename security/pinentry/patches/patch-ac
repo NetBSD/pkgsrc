@@ -1,0 +1,106 @@
+$NetBSD: patch-ac,v 1.1 2010/02/25 11:30:03 drochner Exp $
+
+--- qt4/qsecurelineedit.moc.orig	2009-04-03 08:18:25.000000000 -0600
++++ qt4/qsecurelineedit.moc	2010-02-24 13:54:48.000000000 -0700
+@@ -1,8 +1,8 @@
+ /****************************************************************************
+ ** Meta object code from reading C++ file 'qsecurelineedit.h'
+ **
+-** Created: Mon Mar 16 13:03:26 2009
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.4.1)
++** Created: Wed Feb 24 13:54:48 2010
++**      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
+ **
+ ** WARNING! All changes made in this file will be lost!
+ *****************************************************************************/
+@@ -10,8 +10,8 @@
+ #include "qsecurelineedit.h"
+ #if !defined(Q_MOC_OUTPUT_REVISION)
+ #error "The header file 'qsecurelineedit.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.4.1. It"
++#elif Q_MOC_OUTPUT_REVISION != 62
++#error "This file was generated using the moc from 4.6.2. It"
+ #error "cannot be used with the include files from this version of Qt."
+ #error "(The moc has changed too much.)"
+ #endif
+@@ -20,12 +20,15 @@ QT_BEGIN_MOC_NAMESPACE
+ static const uint qt_meta_data_QSecureLineEdit[] = {
+ 
+  // content:
+-       1,       // revision
++       4,       // revision
+        0,       // classname
+        0,    0, // classinfo
+-      14,   10, // methods
+-      16,   80, // properties
+-       1,  128, // enums/sets
++      14,   14, // methods
++      16,   84, // properties
++       1,  148, // enums/sets
++       0,    0, // constructors
++       0,       // flags
++       6,       // signalCount
+ 
+  // signals: signature, parameters, type, tag, flags
+       17,   16,   16,   16, 0x05,
+@@ -47,7 +50,7 @@ static const uint qt_meta_data_QSecureLi
+ 
+  // properties: name, type, flags
+      280,  272, 0x0a095103,
+-     301,  290, 0x0019510b,
++     301,  290, 0x0059510b,
+      310,  306, 0x02095103,
+      325,  320, 0x01095103,
+      340,  331, 0x00095009,
+@@ -63,8 +66,26 @@ static const uint qt_meta_data_QSecureLi
+      473,  320, 0x01095001,
+      487,  320, 0x01095001,
+ 
++ // properties: notify_signal_id
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++       0,
++
+  // enums: name, flags, count, data
+-     331, 0x0,    4,  132,
++     331, 0x0,    4,  152,
+ 
+  // enum data: key, value
+      503, uint(QSecureLineEdit::Normal),
+@@ -98,9 +119,13 @@ const QMetaObject QSecureLineEdit::stati
+       qt_meta_data_QSecureLineEdit, 0 }
+ };
+ 
++#ifdef Q_NO_DATA_RELOCATION
++const QMetaObject &QSecureLineEdit::getStaticMetaObject() { return staticMetaObject; }
++#endif //Q_NO_DATA_RELOCATION
++
+ const QMetaObject *QSecureLineEdit::metaObject() const
+ {
+-    return &staticMetaObject;
++    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+ }
+ 
+ void *QSecureLineEdit::qt_metacast(const char *_clname)
+@@ -132,6 +157,7 @@ int QSecureLineEdit::qt_metacall(QMetaOb
+         case 11: d_func()->_q_clipboardChanged(); break;
+         case 12: d_func()->_q_handleWindowActivate(); break;
+         case 13: d_func()->_q_deleteSelected(); break;
++        default: ;
+         }
+         _id -= 14;
+     }

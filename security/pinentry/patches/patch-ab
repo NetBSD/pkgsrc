@@ -1,0 +1,68 @@
+$NetBSD: patch-ab,v 1.1 2010/02/25 11:30:03 drochner Exp $
+
+--- qt4/pinentrydialog.moc.orig	2009-04-03 08:18:25.000000000 -0600
++++ qt4/pinentrydialog.moc	2010-02-24 13:54:20.000000000 -0700
+@@ -1,8 +1,8 @@
+ /****************************************************************************
+ ** Meta object code from reading C++ file 'pinentrydialog.h'
+ **
+-** Created: Mon Mar 16 13:03:03 2009
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.4.1)
++** Created: Wed Feb 24 13:54:20 2010
++**      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
+ **
+ ** WARNING! All changes made in this file will be lost!
+ *****************************************************************************/
+@@ -10,8 +10,8 @@
+ #include "pinentrydialog.h"
+ #if !defined(Q_MOC_OUTPUT_REVISION)
+ #error "The header file 'pinentrydialog.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.4.1. It"
++#elif Q_MOC_OUTPUT_REVISION != 62
++#error "This file was generated using the moc from 4.6.2. It"
+ #error "cannot be used with the include files from this version of Qt."
+ #error "(The moc has changed too much.)"
+ #endif
+@@ -20,12 +20,15 @@ QT_BEGIN_MOC_NAMESPACE
+ static const uint qt_meta_data_PinEntryDialog[] = {
+ 
+  // content:
+-       1,       // revision
++       4,       // revision
+        0,       // classname
+        0,    0, // classinfo
+-       3,   10, // methods
+-       4,   25, // properties
++       3,   14, // methods
++       4,   29, // properties
+        0,    0, // enums/sets
++       0,    0, // constructors
++       0,       // flags
++       2,       // signalCount
+ 
+  // signals: signature, parameters, type, tag, flags
+       16,   15,   15,   15, 0x05,
+@@ -55,9 +58,13 @@ const QMetaObject PinEntryDialog::static
+       qt_meta_data_PinEntryDialog, 0 }
+ };
+ 
++#ifdef Q_NO_DATA_RELOCATION
++const QMetaObject &PinEntryDialog::getStaticMetaObject() { return staticMetaObject; }
++#endif //Q_NO_DATA_RELOCATION
++
+ const QMetaObject *PinEntryDialog::metaObject() const
+ {
+-    return &staticMetaObject;
++    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+ }
+ 
+ void *PinEntryDialog::qt_metacast(const char *_clname)
+@@ -78,6 +85,7 @@ int PinEntryDialog::qt_metacall(QMetaObj
+         case 0: accepted(); break;
+         case 1: rejected(); break;
+         case 2: updateQuality((*reinterpret_cast< const secqstring(*)>(_a[1]))); break;
++        default: ;
+         }
+         _id -= 3;
+     }
