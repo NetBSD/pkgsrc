@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/03/24 19:21:26 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/02/25 15:08:02 joerg Exp $
 #
 
 DISTNAME=	drac
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cc.umanitoba.ca/src/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	groo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mail.cc.umanitoba.ca/drac/
 COMMENT=	Dynamic Relay Authorization Control
 
