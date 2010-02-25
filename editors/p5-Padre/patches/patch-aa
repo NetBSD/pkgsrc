@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1 2010/02/25 13:32:50 sno Exp $
+
+--- script/padre.orig	2010-02-16 12:45:40.000000000 +0000
++++ script/padre
+@@ -11,20 +11,6 @@ local $SIG{__DIE__} =
+ 	? sub { print STDERR Carp::longmess "\nDIE: @_\n" . ( "-" x 80 ) . "\n" }
+ 	: $SIG{__DIE__};
+ 
+-# Must run using wxPerl on OS X.
+-if ( $^O eq 'darwin' and $^X !~ m{/wxPerl\.app/} ) {
+-	require File::Which;
+-	my $perl = scalar File::Which::which('wxPerl');
+-	chomp($perl);
+-	if ( -e $perl ) {
+-		warn "spawning 'wxPerl' interpreter for OS X\n";
+-		system( $perl, '-S', $0, @ARGV );
+-	} else {
+-		warn "padre cannot find wxPerl executable (which it requires on OS X)\n";
+-	}
+-	exit 0;
+-}
+-
+ # Handle special command line cases early, because options like --home
+ # MUST be processed before the Padre.pm library is loaded.
+ require Getopt::Long;
