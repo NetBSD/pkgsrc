@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.966 2010/02/25 20:21:54 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.967 2010/02/25 21:32:05 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1160,3 +1160,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/py-qt4 to 4.7nb1 [wiz 2010-02-25]
 	Updated graphics/p5-Image-Size to 3.2.2 [sno 2010-02-25]
 	Updated sysutils/ddrescue to 1.11 [wiz 2010-02-25]
+	Updated net/Transmission to 1.91 [tnn 2010-02-25]
