@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.965 2010/02/25 17:29:52 sno Exp $
+$NetBSD: CHANGES-2010,v 1.966 2010/02/25 20:21:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1159,3 +1159,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/ns-flash to 9.0.262 [mishka 2010-02-25]
 	Updated x11/py-qt4 to 4.7nb1 [wiz 2010-02-25]
 	Updated graphics/p5-Image-Size to 3.2.2 [sno 2010-02-25]
+	Updated sysutils/ddrescue to 1.11 [wiz 2010-02-25]
