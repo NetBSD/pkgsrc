@@ -1,20 +1,20 @@
-$NetBSD: patch-ai,v 1.25 2009/05/13 10:33:23 martti Exp $
+$NetBSD: patch-ai,v 1.26 2010/02/25 13:01:23 martti Exp $
 
 Make this pkgsrc friendly.
 Add support for NetBSD 5.x and DragonFly BSD.
 
---- makedefs.orig	2009-05-12 00:26:46.000000000 +0300
-+++ makedefs	2009-05-13 12:26:34.000000000 +0300
-@@ -144,6 +144,8 @@
+--- makedefs.orig	2010-02-03 22:58:58.000000000 +0200
++++ makedefs	2010-02-25 14:48:50.000000000 +0200
+@@ -146,6 +146,8 @@
  		;;
-   FreeBSD.7*)	SYSTYPE=FREEBSD7
+   FreeBSD.8*)	SYSTYPE=FREEBSD8
  		;;
 + DragonFly.*)	SYSTYPE=DRAGONFLY
 +		;;
    OpenBSD.2*)	SYSTYPE=OPENBSD2
  		;;
    OpenBSD.3*)	SYSTYPE=OPENBSD3
-@@ -160,6 +162,8 @@
+@@ -162,6 +164,8 @@
  		;;
     NetBSD.4*)	SYSTYPE=NETBSD4
  		;;
@@ -23,7 +23,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
     BSD/OS.2*)	SYSTYPE=BSDI2
  		;;
     BSD/OS.3*)	SYSTYPE=BSDI3
-@@ -212,13 +216,6 @@
+@@ -214,13 +218,6 @@
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -37,7 +37,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -250,25 +247,8 @@
+@@ -252,25 +249,8 @@
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -63,7 +63,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
  		# GDBM locks the DBM .pag file after open. This breaks postmap.
  		# if [ -f /usr/include/gdbm-ndbm.h ]
  		# then
-@@ -279,7 +259,6 @@
+@@ -281,7 +261,6 @@
  		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm/ndbm.h>'"
  		#     GDBM_LIBS=gdbm
  		# fi
@@ -71,7 +71,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -372,25 +351,13 @@
+@@ -383,25 +362,13 @@
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP"

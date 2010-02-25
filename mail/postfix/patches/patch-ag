@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.28 2009/05/13 10:33:23 martti Exp $
+$NetBSD: patch-ag,v 1.29 2010/02/25 13:01:23 martti Exp $
 
 Only define HAS_DB if it hasn't been defined.
 Add support for NetBSD 5.x and DragonFly BSD.
 
---- src/util/sys_defs.h.orig	2009-05-11 03:45:27.000000000 +0300
-+++ src/util/sys_defs.h	2009-05-13 12:25:40.000000000 +0300
-@@ -28,8 +28,8 @@
+--- src/util/sys_defs.h.orig	2009-11-15 01:32:37.000000000 +0200
++++ src/util/sys_defs.h	2010-02-25 14:47:46.000000000 +0200
+@@ -29,8 +29,8 @@
      || defined(BSDI2) || defined(BSDI3) || defined(BSDI4) \
      || defined(OPENBSD2) || defined(OPENBSD3) || defined(OPENBSD4) \
      || defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD3) \
@@ -16,7 +16,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
  #define SUPPORTED
  #include <sys/types.h>
  #include <sys/param.h>
-@@ -42,7 +42,9 @@
+@@ -43,7 +43,9 @@
  #define DEF_MAILBOX_LOCK "flock, dotlock"
  #define HAS_SUN_LEN
  #define HAS_FSYNC
@@ -26,7 +26,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
  #define HAS_SA_LEN
  #define DEF_DB_TYPE	"hash"
  #if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104250000)
-@@ -158,9 +160,19 @@
+@@ -163,9 +165,19 @@
  #define HAS_FUTIMES
  #endif
  
@@ -46,7 +46,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
      || defined(USAGI_LIBINET6)
  #ifndef NO_IPV6
  # define HAS_IPV6
-@@ -169,14 +181,16 @@
+@@ -174,14 +186,16 @@
  
  #if (defined(__FreeBSD_version) && __FreeBSD_version >= 300000) \
      || (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 103000000) \
