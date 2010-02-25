@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2010/02/25 19:55:28 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2010/02/25 21:11:29 wiz Exp $
 
 --- plugins/excelplugins/Makefile.in.orig	2010-02-25 17:14:46.000000000 +0000
 +++ plugins/excelplugins/Makefile.in
@@ -11,15 +11,6 @@ $NetBSD: patch-ab,v 1.1 2010/02/25 19:55:28 joerg Exp $
  am_plugin_la_OBJECTS = excelplugins.lo
  plugin_la_OBJECTS = $(am_plugin_la_OBJECTS)
  AM_V_lt = $(am__v_lt_$(V))
-@@ -300,7 +300,7 @@ infodir = @infodir@
- install_sh = @install_sh@
- libdir = @libdir@
- libexecdir = @libexecdir@
--localedir = @localedir@
-+localedir = /usr/pkg/share/locale
- localstatedir = @localstatedir@
- lt_ECHO = @lt_ECHO@
- mandir = @mandir@
 @@ -327,7 +327,7 @@ gnumeric_plugin_excelpluginsdir = $(gnum
  xmldir = $(gnumeric_plugin_excelpluginsdir)
  gnumeric_plugin_excelplugins_LTLIBRARIES = plugin.la xlcall32.la
