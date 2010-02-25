@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/02/04 13:58:45 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/25 13:32:50 sno Exp $
 #
 
-DISTNAME=	Padre-0.56
+DISTNAME=	Padre-0.57
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
@@ -50,7 +50,7 @@ DEPENDS+=	{perl>=5.10.1,p5-File-Path>=2.07}:../../devel/p5-File-Path
 DEPENDS+=	p5-File-Remove>=1.42:../../sysutils/p5-File-Remove
 DEPENDS+=	p5-File-ShareDir>=1.00:../../devel/p5-File-ShareDir
 DEPENDS+=	p5-File-Which>=1.08:../../devel/p5-File-Which
-DEPENDS+=	p5-Format-Human-Bytes-[0-9]*:../../devel/p5-Format-Human-Bytes
+DEPENDS+=	p5-Format-Human-Bytes>=0.04:../../devel/p5-Format-Human-Bytes
 DEPENDS+=	p5-HTML-Parser>=3.58:../../www/p5-HTML-Parser
 DEPENDS+=	p5-IO-stringy>=2.110:../../devel/p5-IO-stringy
 DEPENDS+=	p5-IO-String>=1.08:../../devel/p5-IO-String
@@ -70,7 +70,9 @@ DEPENDS+=	p5-Pod-POM>=0.17:../../textproc/p5-Pod-POM
 DEPENDS+=	{perl>=5.10.1,p5-Pod-Simple>=3.07}:../../textproc/p5-Pod-Simple
 DEPENDS+=	p5-Probe-Perl>=0.01:../../devel/p5-Probe-Perl
 DEPENDS+=	{perl>=5.8.8,p5-Storable>=2.15}:../../devel/p5-Storable
+DEPENDS+=	p5-Readonly-XS>=1.05:../../devel/p5-Readonly-XS
 DEPENDS+=	p5-Template-Tiny>=0.03:../../textproc/p5-Template-Tiny
+DEPENDS+=	{perl>=5.11.0,p5-Text-Balanced>=2.01}:../../textproc/p5-Text-Balanced
 DEPENDS+=	p5-Text-Diff>=0.35:../../textproc/p5-Text-Diff
 DEPENDS+=	p5-Text-FindIndent>=0.06:../../textproc/p5-Text-FindIndent
 # Thread::Queue 2.11 is in Perl 5.8.9, but Perl 5.10.0 contains "only" 2.00
