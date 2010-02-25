@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/28 14:08:07 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/02/25 20:21:44 wiz Exp $
 
-SHA1 (ddrescue-1.8.tar.bz2) = eefe5aaf47fd3e854d74f4877caf29110e3e88f6
-RMD160 (ddrescue-1.8.tar.bz2) = 41d91d2e6bbc59e35295c6e141198bcbeaf9ca75
-Size (ddrescue-1.8.tar.bz2) = 42569 bytes
+SHA1 (ddrescue-1.11.tar.gz) = d39ef5fab0ca0a2d6310fdd00580459f83c973bc
+RMD160 (ddrescue-1.11.tar.gz) = 54bb0db1e6b940e722533f4f8048aee7b07851e2
+Size (ddrescue-1.11.tar.gz) = 50259 bytes
