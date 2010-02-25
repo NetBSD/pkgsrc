@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.7 2008/10/03 17:46:55 joerg Exp $
+$NetBSD: patch-af,v 1.8 2010/02/25 19:53:56 joerg Exp $
 
 --- ../tk/unix/Makefile.in.orig	2000-08-09 21:21:48.000000000 -0500
 +++ ../tk/unix/Makefile.in
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.7 2008/10/03 17:46:55 joerg Exp $
  wishx: tkXAppInit.o @TKX_SHLIB_BUILD_REF@ @TKX_STLIB_BUILD_REF@ ${TCL} Makefile
 -	${CC} ${LD_SWITCHES} tkXAppInit.o ${ALL_LIBS} \
 -	    -o $@ || (rm -f $@; exit 1)
-+	${LD} tkXAppInit.o -o $@ -Wl,-R ${PREFIX}/lib -Wl,-R${X11BASE}/lib \
++	${LD} tkXAppInit.o -o $@ -Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib \
 +		-L${PREFIX}/lib -L${X11BASE}/lib \
 +		${TKX_SHLIB_NAME:C/\.so.*/.la/} -ltclx83 -ltk -ltcl -lX11 -lm \
 +		${TCL_LIBS}
