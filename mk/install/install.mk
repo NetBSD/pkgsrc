@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.58 2010/02/24 22:53:34 joerg Exp $
+# $NetBSD: install.mk,v 1.59 2010/02/25 01:03:44 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -388,5 +388,5 @@ privileged-install-hook: .PHONY
 ### install-clean removes the state files for the "install" and
 ### later phases so that the "install" target may be re-invoked.
 ###
-install-clean: .PHONY package-clean check-clean _flavor-install-clean
+install-clean: .PHONY package-eat-cookie check-clean _flavor-install-clean
 	${RUN} ${RM} -f ${PLIST} ${_COOKIE.install} ${_DEPENDS_PLIST}
