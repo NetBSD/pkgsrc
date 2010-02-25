@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/07/22 09:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2010/02/25 15:03:36 joerg Exp $
 #
 
 DISTNAME=	FD-2.09a
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	misc shells
 MASTER_SITES=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 
-MAINTAINER=	nobu@psrc.isac.co.jp
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 COMMENT=	File and directory management tool
 
