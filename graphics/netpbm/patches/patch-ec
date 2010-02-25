@@ -1,0 +1,17 @@
+$NetBSD: patch-ec,v 1.1.2.2 2010/02/25 08:43:28 spz Exp $
+
+--- lib/libsystem.c.orig	2009-12-29 20:46:34.000000000 +0000
++++ lib/libsystem.c
+@@ -223,8 +223,11 @@ signalName(unsigned int const signalClas
+         default:
+             return "???";
+         }
+-    } else if ((int)signalClass >= SIGRTMIN && (int)signalClass <= SIGRTMAX)
++    }
++#if 0
++    else if ((int)signalClass >= SIGRTMIN && (int)signalClass <= SIGRTMAX)
+         return "SIGRTxxx";
++#endif
+     else
+         return "???";
+ }

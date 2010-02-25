@@ -1,7 +1,7 @@
-$NetBSD: patch-ao,v 1.3 2006/10/03 22:56:51 schwarz Exp $
+$NetBSD: patch-ao,v 1.3.30.1 2010/02/25 08:43:28 spz Exp $
 
---- converter/ppm/ppmtompeg/headers/frames.h.orig	2006-10-03 17:41:32.000000000 +0200
-+++ converter/ppm/ppmtompeg/headers/frames.h	2006-10-03 17:45:50.000000000 +0200
+--- converter/ppm/ppmtompeg/headers/frames.h.orig	2006-10-18 18:29:13.000000000 +0000
++++ converter/ppm/ppmtompeg/headers/frames.h
 @@ -8,6 +8,8 @@
  #ifndef FRAMES_INCLUDED
  #define FRAMES_INCLUDED
@@ -11,12 +11,3 @@ $NetBSD: patch-ao,v 1.3 2006/10/03 22:56:51 schwarz Exp $
  /*==============*
   * HEADER FILES *
   *==============*/
-@@ -85,7 +87,7 @@
-   int fmotionX, fmotionY, bmotionX, bmotionY;
- } dct_data_type;
- 
--void    EncodeYDC _ANSI_ARGS_((int32 dc_term, int32 *pred_term, BitBucket *bb));
-+void    EncodeYDC _ANSI_ARGS_((int32 const dc_term, int32 * const pred_term, BitBucket * const bb));
- void
- EncodeCDC(int32       const dc_term,
-           int32     * const pred_term,
