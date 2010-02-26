@@ -1,25 +1,32 @@
-$NetBSD: patch-ae,v 1.3 2006/01/08 13:27:53 joerg Exp $
+$NetBSD: patch-ae,v 1.4 2010/02/26 09:27:43 hannken Exp $
 
---- examples/chrony.conf.example.orig	2002-02-03 22:46:29.000000000 +0100
-+++ examples/chrony.conf.example
-@@ -3,5 +3,5 @@
+--- examples/chrony.conf.example.orig	2010-02-04 13:07:19.000000000 +0100
++++ examples/chrony.conf.example	2010-02-26 09:06:48.000000000 +0100
+@@ -2,5 +2,5 @@
  #
  # This is an example chrony configuration file.  You should copy it to
 -# /etc/chrony.conf after uncommenting and editing the options that you
 +# @PKG_SYSCONFDIR@/chrony.conf after uncommenting and editing the options that you
- # want to enable.  I have not included the more obscure options.  Refer
+ # want to enable.  The more obscure options are not included.  Refer
  # to the documentation for these.
-@@ -91,5 +91,5 @@
+@@ -90,5 +90,5 @@
  # generally want this, so it is uncommented.
  
 -driftfile /etc/chrony.drift
-+driftfile /var/db/chrony.drift
++driftfile @VARBASE@/db/chrony.drift
  
  # If you want to use the program called chronyc to configure aspects of
-@@ -100,5 +100,5 @@ driftfile /etc/chrony.drift
+@@ -99,5 +99,5 @@
  # assumed by default.
  
 -keyfile /etc/chrony.keys
 +keyfile @PKG_SYSCONFDIR@/chrony.keys
  
  # Tell chronyd which numbered key in the file is used as the password
+@@ -130,5 +130,5 @@
+ # file, uncomment this line and edit it.  The default path is shown.
+ 
+-! pidfile /var/run/chronyd.pid
++! pidfile @VARBASE@/run/chronyd.pid
+ 
+ #######################################################################
