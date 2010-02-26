@@ -1,0 +1,14 @@
+$NetBSD: patch-bb,v 1.1 2010/02/26 10:56:38 drochner Exp $
+
+--- core/editline/src/readline.cxx.orig	2010-02-25 15:13:11.000000000 +0000
++++ core/editline/src/readline.cxx
+@@ -54,9 +54,6 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <limits.h>
+-#ifndef __FreeBSD__
+-#include <alloca.h>
+-#endif // __FreeBSD__
+ #include "histedit.h"
+ // #include "readline/readline.h"
+ #include "editline.h"

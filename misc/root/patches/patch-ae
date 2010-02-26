@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.2 2006/05/27 12:38:27 drochner Exp $
+$NetBSD: patch-ae,v 1.3 2010/02/26 10:56:38 drochner Exp $
 
---- eg/inc/cfortran.h.orig	2006-05-26 18:20:11.000000000 +0200
-+++ eg/inc/cfortran.h
-@@ -89,7 +89,7 @@ only C calling FORTRAN subroutines will 
+--- montecarlo/eg/inc/cfortran.h.orig	2010-02-11 13:20:42.000000000 +0000
++++ montecarlo/eg/inc/cfortran.h
+@@ -150,7 +150,7 @@ only C calling FORTRAN subroutines will 
+ #if !(defined(NAGf90Fortran)||defined(f2cFortran)||defined(hpuxFortran)||defined(apolloFortran)||defined(sunFortran)||defined(IBMR2Fortran)||defined(CRAYFortran))
  #if !(defined(mipsFortran)||defined(DECFortran)||defined(vmsFortran)||defined(CONVEXFortran)||defined(PowerStationFortran)||defined(AbsoftUNIXFortran)||defined(AbsoftProFortran)||defined(SXFortran))
  /* If no Fortran compiler is given, we choose one for the machines we know.   */
- #if defined(lynx) || defined(VAXUltrix) || defined(linux) || defined(_HIUX_SOURCE) || \
--    defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
-+    defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__APPLE__) || defined(__NetBSD__)
+-#if defined(lynx) || defined(VAXUltrix)
++#if defined(lynx) || defined(VAXUltrix) || defined(__NetBSD__)
  #define f2cFortran    /* Lynx:      Only support f2c at the moment.
                           VAXUltrix: f77 behaves like f2c.
-                            Support f2c or f77 with gcc, vcc with f2c.
+                            Support f2c or f77 with gcc, vcc with f2c. 

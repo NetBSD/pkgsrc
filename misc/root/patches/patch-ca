@@ -1,0 +1,16 @@
+$NetBSD: patch-ca,v 1.1 2010/02/26 10:56:39 drochner Exp $
+
+--- config/Makefile.netbsd.orig	2010-02-25 20:17:41.000000000 +0000
++++ config/Makefile.netbsd
+@@ -38,9 +38,9 @@ CILIBS        = -lm -ltermcap -lstdc++
+ CRYPTLIBS     = -lcrypt
+ 
+ # Fortran:
+-F77           = f77
++F77           = /usr/pkg/gcc3/bin/g77
+ F77FLAGS      = $(OPT)
+-F77LIBS       = -lg2c
++F77LIBS       = -L/usr/pkg/gcc3/lib -Wl,-R/usr/pkg/gcc3/lib -lg2c
+ 
+ # Extras
+ 

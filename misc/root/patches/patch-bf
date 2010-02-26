@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1 2010/02/26 10:56:39 drochner Exp $
+
+--- montecarlo/vmc/inc/TMCProcess.h.orig	2010-02-25 16:51:41.000000000 +0000
++++ montecarlo/vmc/inc/TMCProcess.h
+@@ -81,7 +81,7 @@ enum TMCProcess
+   kPNoProcess           // unknown process
+ };
+ 
+-static const char * const TMCProcessName[kMaxMCProcess] = {
++static const char * const TMCProcessName[45] = {
+   "Primary particle emission",
+   "Multiple scattering",
+   "Energy loss",
