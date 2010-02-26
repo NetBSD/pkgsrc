@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/18 10:07:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/26 13:42:17 joerg Exp $
 #
 
 DISTNAME=	mupdf-r937
@@ -42,4 +42,6 @@ do-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
