@@ -1,0 +1,16 @@
+Lua support for libcurl.
+
+Connect and communicate to many different types of servers with many
+different types of protocols.
+
+This project is not a fork of LuaCURL, which is a direct mapping of
+parts of the libcurl-easy interface.
+
+The intent of Lua-cURL is to adapt the
+
+    * Easy Interface
+    * Multi Interface
+    * Shared Interface
+
+of libcurl to the functionality of Lua (for example by using iterators
+instead of callbacks when possible).
