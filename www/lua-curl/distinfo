@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/26 22:03:00 agc Exp $
+
+SHA1 (lua-curl-0.2.tar.gz) = 875d8578972187a86e7c59e18d4c10b7e11707cc
+RMD160 (lua-curl-0.2.tar.gz) = f4950cc7e0c29f51e750c78c7995ee893b399d96
+Size (lua-curl-0.2.tar.gz) = 326984 bytes
