@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2010/01/26 13:31:50 ghen Exp $
+# $NetBSD: options.mk,v 1.13 2010/02/26 11:00:40 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
@@ -36,7 +36,6 @@ CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
 ### ncursesw
 ###
 .if !empty(PKG_OPTIONS:Mncursesw)
-USE_NCURSES=		yes
 .  include "../../devel/ncursesw/buildlink3.mk"
 .else
 SUBST_CLASSES+=		curse
