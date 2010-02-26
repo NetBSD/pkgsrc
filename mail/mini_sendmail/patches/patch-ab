@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2003/02/15 22:11:28 is Exp $
+$NetBSD: patch-ab,v 1.2 2010/02/26 19:45:11 is Exp $
 
 --- Makefile.orig	Fri Jan  4 07:05:25 2002
 +++ Makefile
@@ -10,8 +10,8 @@ $NetBSD: patch-ab,v 1.1 2003/02/15 22:11:28 is Exp $
 -MANDIR =	/usr/local/man
 -CC =		gcc
 -CFLAGS =	-O
-+BINDIR =	$(PREFIX)/sbin
-+MANDIR =	$(PREFIX)/man
++BINDIR =	${DESTDIR}$(PREFIX)/sbin
++MANDIR =	${DESTDIR}$(PREFIX)/man
 +#CC =		gcc
 +#CFLAGS =	-O
  #CFLAGS =	-g
