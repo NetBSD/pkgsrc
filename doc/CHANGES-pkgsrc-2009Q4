@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.36 2010/02/25 08:46:46 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.37 2010/02/26 06:52:42 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -119,3 +119,5 @@ mysql5-client: security update
 mysql5-server: security update
 Pullup ticket #3022 - requested by taca
 netpbm: security update
+Pullup ticket #3024 - requested by taca
+sudo: security update
