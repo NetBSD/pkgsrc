@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.971 2010/02/26 16:03:33 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.972 2010/02/26 18:57:27 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1165,3 +1165,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/openssl to 0.9.8m [taca 2010-02-26]
 	Updated devel/m4 to 1.4.14 [wiz 2010-02-26]
 	Updated textproc/p5-Text-vCard to 2.07 [wiz 2010-02-26]
+	Updated mail/thunderbird to 3.0.2 [tnn 2010-02-26]
