@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/10/19 19:18:57 he Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/26 16:00:13 wiz Exp $
 
 DISTNAME=	Text-vCard-2.03
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-vCard/
-COMMENT=	parse, edit and create vCards (RFC 2426)
+COMMENT=	Parse, edit and create vCards (RFC 2426)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
