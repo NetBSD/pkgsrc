@@ -1,0 +1,14 @@
+$NetBSD: patch-bd,v 1.1 2010/02/26 10:56:38 drochner Exp $
+
+--- cint/cint/src/init.cxx.orig	2010-02-25 15:46:10.000000000 +0000
++++ cint/cint/src/init.cxx
+@@ -2094,6 +2094,9 @@ void G__platformMacro()
+ #ifdef __FreeBSD__   /* FreeBSD */
+    G__DEFINE_MACRO_N(__FreeBSD__, "G__FBSD");
+ #endif
++#ifdef __NetBSD__
++   G__DEFINE_MACRO_N(__NetBSD__, "G__NBSD");
++#endif
+ #ifdef __OpenBSD__   /* OpenBSD */
+    G__DEFINE_MACRO_N(__OpenBSD__, "G__OBSD");
+ #endif

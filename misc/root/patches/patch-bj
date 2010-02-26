@@ -1,0 +1,13 @@
+$NetBSD: patch-bj,v 1.1 2010/02/26 10:56:39 drochner Exp $
+
+--- misc/minicern/src/cernlib.c.orig	2010-02-25 18:17:20.000000000 +0000
++++ misc/minicern/src/cernlib.c
+@@ -185,7 +185,7 @@ int cfstati_(char *fname, int *info, int
+       info[4] = (int) buf.st_uid;
+       info[5] = (int) buf.st_gid;
+       info[6] = (int) buf.st_size;
+-#if defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+       info[7] = (int) buf.st_atimespec.tv_sec;
+       info[8] = (int) buf.st_mtimespec.tv_sec;
+       info[9] = (int) buf.st_ctimespec.tv_sec;

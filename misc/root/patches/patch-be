@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1 2010/02/26 10:56:38 drochner Exp $
+
+--- cint/cint/src/DataMbr.cxx.orig	2010-02-25 16:10:17.000000000 +0000
++++ cint/cint/src/DataMbr.cxx
+@@ -234,6 +234,8 @@ int Cint::G__DataMemberInfo::MaxIndex(in
+       else {
+         // -- For first dimension divide number of elements by stride.
+         // Note: This may be zero, if this is not an array!
++	if (!var->varlabel[index][0])
++		return -1;
+ 	return var->varlabel[index][1] /* num of elements*/ / var->varlabel[index][0] /* stride */;
+       }
+     }
