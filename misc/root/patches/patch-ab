@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2006/05/27 12:38:27 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2010/02/26 10:56:38 drochner Exp $
 
---- auth/src/TAuthenticate.cxx.orig	2006-05-26 17:05:03.000000000 +0200
-+++ auth/src/TAuthenticate.cxx
+--- net/auth/src/TAuthenticate.cxx.orig	2006-05-26 17:05:03.000000000 +0200
++++ net/auth/src/TAuthenticate.cxx
 @@ -47,7 +47,7 @@
  #include <sys/types.h>
  #include <time.h>
