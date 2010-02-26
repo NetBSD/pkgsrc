@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2009/02/16 19:12:00 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/26 10:28:34 wiz Exp $
 #
 
 DISTNAME=		service-config-0.51
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.superscript.com/service-config/
 
-MAINTAINER=		zuntum@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.superscript.com/service-config/intro.html
 COMMENT=		Utility to create and configure svscan service directories
 

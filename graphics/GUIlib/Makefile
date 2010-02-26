@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:31 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/02/26 10:28:31 wiz Exp $
 #
 
 DISTNAME=	GUIlib-1.1.0
@@ -6,7 +6,7 @@ PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.libsdl.org/projects/GUIlib/src/
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/GUIlib/
 COMMENT=	Very simple GUI framework library
 
