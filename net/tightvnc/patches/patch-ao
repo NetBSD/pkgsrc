@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2010/02/26 18:26:51 joerg Exp $
+
+--- Xvnc/lib/font/fontfile/Imakefile.orig	2010-02-26 18:20:00.000000000 +0000
++++ Xvnc/lib/font/fontfile/Imakefile
+@@ -5,7 +5,7 @@ XCOMM $XFree86: xc/lib/font/fontfile/Ima
+ #if !HasZlib
+     ZLIBINC = /usr/local/include
+ #endif
+-   INCLUDES = -I$(FONTINCSRC) -I../include -I$(SERVERSRC)/include -I$(ZLIBINC)
++   INCLUDES = -I$(FONTINCSRC) -I../include -I$(SERVERSRC)/include
+     HEADERS = 
+ #ifdef FontFormatDefines
+ FORMAT_DEFS = FontFormatDefines
