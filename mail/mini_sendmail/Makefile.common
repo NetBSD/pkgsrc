@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.14 2010/02/26 19:45:11 is Exp $
+# $NetBSD: Makefile.common,v 1.15 2010/02/26 20:11:51 is Exp $
 #
 
 DISTNAME=	mini_sendmail-1.3.6
 CATEGORIES=	mail
 MASTER_SITES=	http://www.acme.com/software/mini_sendmail/
+LICENSE=	2-clause-bsd
 
 MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www.acme.com/software/mini_sendmail/
