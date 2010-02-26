@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2010/01/18 09:59:15 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2010/02/26 10:56:38 drochner Exp $
 
-DISTNAME=		root_v5.10.00.source
-PKGNAME=		root-5.10
-PKGREVISION=		5
+DISTNAME=		root_v5.26.00b.source
+PKGNAME=		root-5.26
 CATEGORIES=		misc
 MASTER_SITES=		ftp://root.cern.ch/root/
 
@@ -10,10 +9,13 @@ MAINTAINER=		drochner@NetBSD.org
 HOMEPAGE=		http://root.cern.ch/
 COMMENT=		OO framework for data analysis and visualisation
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/root
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++ #fortran f2c lacks LOC()
+.include "../../lang/gcc3-f77/buildlink3.mk"
 
+CHECK_PORTABILITY_SKIP=	build/win/*.sh cint/tool/INSTALLBIN
 BUILD_TARGET=
 
 .if (${MACHINE_ARCH} == "arm")
@@ -43,6 +45,8 @@ CONFIGURE_ARGS+=	--disable-xml
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
+.include "../../math/gsl/buildlink3.mk"
+
 post-extract:
 	${CP} ${FILESDIR}/Makefile.netbsd ${WRKSRC}/config
 
@@ -54,4 +58,5 @@ post-extract:
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

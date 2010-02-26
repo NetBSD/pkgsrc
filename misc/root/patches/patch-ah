@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.2 2006/05/27 12:38:27 drochner Exp $
+$NetBSD: patch-ah,v 1.3 2010/02/26 10:56:38 drochner Exp $
 
---- rootd/src/rootd.cxx.orig	2006-05-26 19:22:55.000000000 +0200
-+++ rootd/src/rootd.cxx
+--- net/rootd/src/rootd.cxx.orig	2006-05-26 19:22:55.000000000 +0200
++++ net/rootd/src/rootd.cxx
 @@ -242,7 +242,7 @@ extern "C" int fstatfs(int file_descript
  extern "C" int fstatfs(int file_descriptor, struct statfs *buffer);
  #elif defined(linux) || defined(__hpux) || defined(cygwingcc)

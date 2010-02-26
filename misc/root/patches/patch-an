@@ -1,15 +1,15 @@
-$NetBSD: patch-an,v 1.1 2006/05/27 12:38:27 drochner Exp $
+$NetBSD: patch-an,v 1.2 2010/02/26 10:56:38 drochner Exp $
 
---- gl/Module.mk.orig	2006-05-27 01:05:13.000000000 +0200
-+++ gl/Module.mk
-@@ -35,8 +35,8 @@ GLH1         := $(MODDIRI)/gl2ps.h $(MOD
+--- graf3d/gl/Module.mk.orig	2010-02-11 13:20:45.000000000 +0000
++++ graf3d/gl/Module.mk
+@@ -38,8 +38,8 @@ GLH1         := $(MODDIRI)/gl2ps.h $(MOD
  GLH2         := $(filter-out $(GLH1), $(GLH))
  
  ifneq ($(OPENGLLIB),)
 -GLLIBS       := $(OPENGLLIBDIR) $(OPENGLULIB) $(OPENGLLIB) \
--                $(X11LIBDIR) -lX11 -lXext -lXmu -lXi -lm
+-                $(X11LIBDIR) -lX11 -lm
 +GLLIBS       := $(OPENGLLIBDIR) $(OPENGLULIB) $(OPENGLLIB) -Wl,-R${LOCALBASE}/lib \
-+                $(X11LIBDIR) -lX11 -lXext -lXmu -lXi -lm -Wl,-R${X11BASE}/lib
++                $(X11LIBDIR) -lX11 -lm -Wl,-R${X11BASE}/lib
  endif
  ifeq ($(ARCH),win32)
- GLLIBS       := opengl32.lib glu32.lib $(LPATH)/libGraf.lib $(LPATH)/libHist.lib 
+ GLLIBS       := opengl32.lib glu32.lib

@@ -1,12 +1,12 @@
-$NetBSD: patch-aj,v 1.2 2006/05/27 12:38:27 drochner Exp $
+$NetBSD: patch-aj,v 1.3 2010/02/26 10:56:38 drochner Exp $
 
---- config/ARCHS.orig	2006-05-26 19:54:56.000000000 +0200
+--- config/ARCHS.orig	2010-02-11 13:20:59.000000000 +0000
 +++ config/ARCHS
-@@ -35,6 +35,7 @@ macosxicc            for MacOS X with In
- macosx64             for MacOS X with gcc 4.0 64 bit mode
- macosxxlc            for MacOS X with IBM xl compilers
- mklinux              for MkLinux gcc and glibc
+@@ -27,6 +27,7 @@ macosx               for MacOS X >= 10.4
+ macosxicc            for MacOS X >= 10.4 with Intel icc (Intel only)
+ macosx64             for MacOS X >= 10.5 with gcc 4.0 64 bit mode
+ macosxxlc            for MacOS X >= 10.4 with IBM xl compilers (PPC only)
 +netbsd		     for NetBSD
- openbsd              for OpenBSD >= 3.7
- sgicc                for SGI IRIX 6.x CC
- sgicc64              for SGI IRIX 6.x CC 64 bits
+ openbsd              for OpenBSD >= 3.7 with gcc
+ sgicc                for SGI IRIX 6.x with CC
+ sgicc64              for SGI IRIX 6.x with CC 64 bits

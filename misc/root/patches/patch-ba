@@ -1,0 +1,12 @@
+$NetBSD: patch-ba,v 1.1 2010/02/26 10:56:38 drochner Exp $
+
+--- core/editline/src/rlcurses.h.orig	2010-02-25 15:12:02.000000000 +0000
++++ core/editline/src/rlcurses.h
+@@ -30,6 +30,7 @@ extern "C" {
+    // conflicts with the system one:
+ # ifndef _TERMCAP_H
+ #  include <termcap.h>
++#  include <term.h>
+ # endif
+ int setupterm(const char* term, int fd, int* perrcode);
+ }
