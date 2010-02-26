@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/21 20:37:40 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2010/02/26 10:28:35 wiz Exp $
 #
 
 DISTNAME=	bsdgrep-20071201
@@ -6,7 +6,7 @@ PKGNAME=	bsdgrep-devel-20071201
 CATEGORIES=	sysutils textproc
 MASTER_SITES=	http://www.fawlty.net/software/
 
-MAINTAINER=	cjep@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	BSD version of grep as in NetBSD src/usr.bin/grep
 

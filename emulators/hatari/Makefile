@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2009/01/18 20:07:45 adam Exp $
+# $NetBSD: Makefile,v 1.26 2010/02/26 10:28:31 wiz Exp $
 
 DISTNAME=	hatari-1.1.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hatari/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	cjep@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hatari.sourceforge.net/
 COMMENT=	Atari ST emulator
 

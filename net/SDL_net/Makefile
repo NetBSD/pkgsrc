@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2007/07/26 00:06:04 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/26 10:28:33 wiz Exp $
 
 DISTNAME=	SDL_net-1.2.7
 CATEGORIES=	net
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_net/release/
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_net/
 COMMENT=	Small sample cross-platform networking library for SDL
 
