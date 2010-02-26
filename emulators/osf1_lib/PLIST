@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:06 joerg Exp $
-emul/osf1/etc/hosts
+@comment $NetBSD: PLIST,v 1.4 2010/02/26 05:09:54 schnoebe Exp $
 emul/osf1/etc/sia/OSFC2_matrix.conf
 emul/osf1/etc/sia/bsd_matrix.conf
 emul/osf1/etc/sia/matrix.conf
 emul/osf1/etc/sia/siainitgood
 emul/osf1/etc/svc.conf
 emul/osf1/sbin/loader
-emul/osf1/usr/lib/X11/locale
 emul/osf1/usr/shlib/LICENSE
 emul/osf1/usr/shlib/libICE.so
 emul/osf1/usr/shlib/libSM.so
