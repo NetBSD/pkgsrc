@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.2 2006/05/27 12:38:27 drochner Exp $
+$NetBSD: patch-ak,v 1.3 2010/02/26 10:56:38 drochner Exp $
 
---- clib/src/Getline.c.orig	2006-05-26 22:33:35.000000000 +0200
-+++ clib/src/Getline.c
+--- core/clib/src/Getline.c.orig	2006-05-26 22:33:35.000000000 +0200
++++ core/clib/src/Getline.c
 @@ -331,7 +331,7 @@ static void     search_forw(int s);     
  #endif /* WIN32 */
  
