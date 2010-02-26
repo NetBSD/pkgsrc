@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9078 2010/02/26 09:27:43 hannken Exp $
+$NetBSD: TODO,v 1.9079 2010/02/26 18:57:27 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1233,7 +1233,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tfmxplay-1.1.6
 	o thin-1.0.0
 	o thoth-0.2.1
-	o thunderbird-3.0.2
 	o tig-0.15
 	o tile-0.7.4
 	o tinc-1.0.12
