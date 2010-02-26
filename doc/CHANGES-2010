@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.968 2010/02/26 01:09:13 taca Exp $
+$NetBSD: CHANGES-2010,v 1.969 2010/02/26 03:16:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1162,3 +1162,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/ddrescue to 1.11 [wiz 2010-02-25]
 	Updated net/Transmission to 1.91 [tnn 2010-02-25]
 	Updated security/sudo to 1.7.2p4 [taca 2010-02-26]
+	Updated security/openssl to 0.9.8m [taca 2010-02-26]
