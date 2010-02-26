@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/04/28 19:14:35 zafer Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/26 10:28:30 wiz Exp $
 #
 
 DISTNAME=	epic4-help-20050315
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/ \
 		ftp://ftp.archive.de.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/ \
 		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.epicsol.org/
 COMMENT=	Additional documentation for epic4 package
 
