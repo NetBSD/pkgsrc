@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.143 2010/01/22 03:35:10 taca Exp $
+# $NetBSD: Makefile,v 1.144 2010/02/26 03:15:13 taca Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
-OPENSSL_VERS?=		0.9.8l
-PKGREVISION=		1
+OPENSSL_VERS?=		0.9.8m
 
 .if empty(OPENSSL_SNAPSHOT)
 DISTNAME=	openssl-${OPENSSL_VERS}
@@ -123,6 +122,8 @@ PKG_SYSCONFSUBDIR=	openssl
 CONF_FILES=		${PREFIX}/share/examples/openssl/openssl.cnf	\
 			${PKG_SYSCONFDIR}/openssl.cnf
 OWN_DIRS=		${PKG_SYSCONFDIR}/certs ${PKG_SYSCONFDIR}/private
+
+INSTALLATION_DIRS+=	share/examples/openssl
 
 # Fix the path to perl in various scripts.
 pre-configure:
