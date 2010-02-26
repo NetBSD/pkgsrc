@@ -1,90 +1,85 @@
-$NetBSD: patch-am,v 1.3 2007/08/09 20:13:17 drochner Exp $
+$NetBSD: patch-am,v 1.4 2010/02/26 10:56:38 drochner Exp $
 
---- configure.orig	2006-03-02 09:41:46.000000000 +0100
+--- configure.orig	2010-02-11 13:21:10.000000000 +0000
 +++ configure
-@@ -1174,7 +1174,7 @@ if test ! "$platform" = "win32"; then
+@@ -1680,7 +1680,7 @@ if test ! "x$platform" = "xwin32"; then
      check_library "libX11" "yes" "$x11libdir" \
- 	/usr/lib /usr/X11R6/lib /usr/lib/X11 /usr/openwin/lib \
- 	/usr/local/lib /usr/local/lib/X11 /usr/local/X11R6/lib \
--	/usr/X11/lib /usr/lib/X11R5
-+	/usr/X11/lib /usr/lib/X11R5 ${LOCALBASE}/lib
+         /usr/lib /usr/X11R6/lib /usr/lib/X11 /usr/openwin/lib \
+         /usr/local/lib /usr/local/lib/X11 /usr/local/X11R6/lib \
+-        /usr/X11/lib /usr/lib/X11R5
++        /usr/X11/lib /usr/lib/X11R5 ${LOCALBASE}/lib
      x11libdir=$found_dir
  
      if test "x$found_lib" = "x" ; then
-@@ -1185,7 +1185,7 @@ if test ! "$platform" = "win32"; then
+@@ -1691,7 +1691,7 @@ if test ! "x$platform" = "xwin32"; then
      check_header "X11/Xlib.h" "" \
- 	/usr/include /usr/X11R6/include /usr/include/X11 /usr/openwin/include \
- 	/usr/local/include /usr/local/include/X11 /usr/local/X11R6/include \
--	/usr/X11/include /usr/include/X11R5
-+	/usr/X11/include /usr/include/X11R5 ${LOCALBASE}/include
+         /usr/include /usr/X11R6/include /usr/include/X11 /usr/openwin/include \
+         /usr/local/include /usr/local/include/X11 /usr/local/X11R6/include \
+-        /usr/X11/include /usr/include/X11R5
++        /usr/X11/include /usr/include/X11R5 ${LOCALBASE}/include
  
      if test "x$found_dir" = "x" ; then
- 	result "`basename $0`: X11 headers (package x11-devel) MUST be installed"
-@@ -1195,7 +1195,7 @@ if test ! "$platform" = "win32"; then
+         result "`basename $0`: X11 headers (package x11-devel) MUST be installed"
+@@ -1701,7 +1701,7 @@ if test ! "x$platform" = "xwin32"; then
+     check_header "X11/Xft/Xft.h" "" \
+         /usr/include /usr/X11R6/include /usr/include/X11 /usr/openwin/include \
+         /usr/local/include /usr/local/include/X11 /usr/local/X11R6/include \
+-        /usr/X11/include /usr/include/X11R5
++        /usr/X11/include /usr/include/X11R5 ${LOCALBASE}/include
+ 
+     if test "x$found_dir" = "x" ; then
+         result "`basename $0`: Xft headers (libxft-devel) MUST be installed"
+@@ -1711,7 +1711,7 @@ if test ! "x$platform" = "xwin32"; then
+     check_header "X11/extensions/shape.h" "" \
+         /usr/include /usr/X11R6/include /usr/include/X11 /usr/openwin/include \
+         /usr/local/include /usr/local/include/X11 /usr/local/X11R6/include \
+-        /usr/X11/include /usr/include/X11R5
++        /usr/X11/include /usr/include/X11R5 ${LOCALBASE}/include
+ 
+     if test "x$found_dir" = "x" ; then
+         result "`basename $0`: X11/extensions/shape.h header (xorg-x11-proto-devel) MUST be installed"
+@@ -1721,7 +1721,7 @@ if test ! "x$platform" = "xwin32"; then
      check_library "libXpm" "$enable_shared" "$xpmlibdir" \
- 	$XPM $XPM/lib /usr/local/lib /usr/lib /usr/lib/X11 \
- 	/usr/local/lib/X11 /usr/X11R6/lib /usr/local/X11R6/lib \
--	/usr/X11/lib
-+	/usr/X11/lib ${LOCALBASE}/lib
+         $XPM $XPM/lib /usr/local/lib /usr/lib /usr/lib/X11 \
+         /usr/local/lib/X11 /usr/X11R6/lib /usr/local/X11R6/lib \
+-        /usr/X11/lib
++        /usr/X11/lib ${LOCALBASE}/lib
      xpmlib=$found_lib
      xpmlibdir=$found_dir
  
-@@ -1352,7 +1352,7 @@ if test ! "x$enable_opengl" = "xno" && t
- 	/usr/local/X11R6/include /usr/local/include \
- 	/usr/include/Mesa /usr/local/include/Mesa /usr/Mesa/include \
- 	/usr/local/Mesa/include /usr/Mesa /usr/local/Mesa /opt/Mesa \
--	/opt/Mesa/include /opt/graphics/OpenGL/include
-+	/opt/Mesa/include /opt/graphics/OpenGL/include ${LOCALBASE}/include
+@@ -1733,7 +1733,7 @@ if test ! "x$platform" = "xwin32"; then
+     check_library "libXft" "$enable_shared" "" \
+         /usr/local/lib /usr/lib /usr/lib/X11 \
+         /usr/local/lib/X11 /usr/X11R6/lib /usr/local/X11R6/lib \
+-        /usr/X11/lib
++        /usr/X11/lib ${LOCALBASE}/lib
+ 
+     if test "x$found_lib" = "x" ; then
+         result "`basename $0`: libXft (libxft-devel) MUST be installed"
+@@ -1743,7 +1743,7 @@ if test ! "x$platform" = "xwin32"; then
+     check_library "libXext" "$enable_shared" "" \
+         /usr/local/lib /usr/lib /usr/lib/X11 \
+         /usr/local/lib/X11 /usr/X11R6/lib /usr/local/X11R6/lib \
+-        /usr/X11/lib
++        /usr/X11/lib ${LOCALBASE}/lib
+ 
+     if test "x$found_lib" = "x" ; then
+         result "`basename $0`: libXext (libXext-devel) MUST be installed"
+@@ -2040,7 +2040,7 @@ if test ! "x$enable_opengl" = "xno" && t
+         /usr/local/X11R6/include /usr/local/include \
+         /usr/include/Mesa /usr/local/include/Mesa /usr/Mesa/include \
+         /usr/local/Mesa/include /usr/Mesa /usr/local/Mesa /opt/Mesa \
+-        /opt/Mesa/include /opt/graphics/OpenGL/include"
++        /opt/Mesa/include /opt/graphics/OpenGL/include ${LOCALBASE}/include"
+     check_header "GL/gl.h" "$openglincdir" $openglincdirs
      openglinc=$found_hdr
      openglincdir=$found_dir
- 
-@@ -1364,12 +1364,12 @@ if test ! "x$enable_opengl" = "xno" && t
+@@ -2049,7 +2049,7 @@ if test ! "x$enable_opengl" = "xno" && t
+         /usr/X11R6/lib /usr/local/lib/X11 /usr/local/X11R6/lib \
+         /usr/X11/lib /usr/lib/Mesa /usr/local/lib/Mesa /usr/Mesa/lib \
+         /usr/local/Mesa/lib /usr/Mesa /usr/local/Mesa /opt/Mesa \
+-        /opt/Mesa/lib /opt/graphics/OpenGL/lib"
++        /opt/Mesa/lib /opt/graphics/OpenGL/lib ${LOCALBASE}/lib"
  
      keep=$opengllibdir
      check_library "libGL libMesaGL" "$enable_shared" \
--	"$opengllibdir" $opengllibdirs
-+	"$opengllibdir" $opengllibdirs ${LOCALBASE}/lib
-     opengllib=$found_lib
-     opengllibdir=$found_dir
- 
-     check_library "libGLU libMesaGLU" "$enable_shared" \
--	"$keep" $opengllibdirs
-+	"$keep" $opengllibdirs ${LOCALBASE}/lib
-     openglulib=$found_lib
-     openglulibdir=$found_dir
- 
-@@ -1982,21 +1982,20 @@ if test ! "x$enable_asimage" = "xno" ; t
-     # for a system library, then see if we have various headers needed.
-     if test "x$enable_builtin_afterimage" = "xyes" ; then
-        check_header "jpeglib.h" "" $ASIMAGE $ASIMAGE/include \
--          /usr/local/include /usr/include /opt/include
-+          ${LOCALBASE}/include
-        asjpegincdir=$found_dir
-        check_header "png.h" "" $ASIMAGE $ASIMAGE/include \
--          /usr/local/include /usr/include /usr/local/include/libpng \
--          /opt/include
-+          ${LOCALBASE}/include
-        aspngincdir=$found_dir
-        if test ! "x$enable_astiff" = "xno" ; then
-            check_header "tiffio.h" "" $ASIMAGE $ASIMAGE/include \
--               /usr/local/include /usr/include /opt/include
-+               ${LOCALBASE}/include
-            astiffincdir=$found_dir
-        else
-            astiffincdir="--with-tiff=no"
-        fi
-        check_header "gif_lib.h" "" $ASIMAGE $ASIMAGE/include \
--          /usr/local/include /usr/include /opt/include
-+          ${LOCALBASE}/include
-        asgifincdir=$found_dir
- 
-        asextralib=""
-@@ -2014,7 +2013,7 @@ if test ! "x$enable_asimage" = "xno" ; t
-        fi
-        for k in $aslibs ; do
-            check_library $k "$enable_shared" "" \
--             $ASIMAGE $ASIMAGE/lib /usr/local/lib /usr/lib /opt/lib
-+             $ASIMAGE $ASIMAGE/lib ${LOCALBASE}/lib /usr/lib
-            if test "x$k" = "xlibz" ; then
-                found_libz=$found_lib
-                found_dirz=$found_dir
