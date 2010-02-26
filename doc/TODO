@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9076 2010/02/25 20:21:54 wiz Exp $
+$NetBSD: TODO,v 1.9077 2010/02/26 03:16:31 taca Exp $
 
 Suggested new packages
 ======================
@@ -987,7 +987,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmsx-0.7.0
 	o openoffice3-3.2
 	o openttd-0.7.4
-	o open-vm-tools-2009.12.16.217847
+	o open-vm-tools-2010.02.23.236320
 	o opera-10.10
 	o orca-2.28.3
 	o oroborus-2.0.18
@@ -1211,7 +1211,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o subtitleeditor-0.33.0
 	o subversion-1.6.9
 	o subversion-base-1.6.9
-	o sudo-1.7.2p3
 	o suse_base-11.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
