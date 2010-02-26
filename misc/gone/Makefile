@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2009/02/16 18:29:53 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/26 10:28:33 wiz Exp $
 #
 
 DISTNAME=	gone-1.3.5
 CATEGORIES=	misc
 MASTER_SITES=	http://jaguar.ir.miami.edu/~marcus/
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jaguar.ir.miami.edu/~marcus/
 COMMENT=	Terminal locking utility with many improvements over lock(1)
 

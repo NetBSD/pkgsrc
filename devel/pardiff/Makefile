@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:27 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2010/02/26 10:28:31 wiz Exp $
 #
 
 DISTNAME=	pardiff-0.9.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pardiff/}
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pardiff.sourceforge.net/
 COMMENT=	Converts diff output to paralleled (side-by-side) format
 

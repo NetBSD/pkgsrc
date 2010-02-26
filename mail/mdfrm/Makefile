@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/26 10:28:31 wiz Exp $
 #
 
 DISTNAME=	mdfrm.pl
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	http://www.goof.com/~mmead/
 EXTRACT_SUFX=	#
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Print a summary of mail in a Maildir waiting to be read
 
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate

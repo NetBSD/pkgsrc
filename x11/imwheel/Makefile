@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/02/16 18:21:24 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/26 10:28:35 wiz Exp $
 #
 
 DISTNAME=	imwheel-0.9.9
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=imwheel/}
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://imwheel.sourceforge.net/
 COMMENT=	Tool which helps to use mousewheels
 
