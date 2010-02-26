@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.10 2009/01/31 23:25:38 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.11 2010/02/26 16:25:49 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -46,6 +46,8 @@
 
 #include "pbulk.h"
 #include "pbuild.h"
+
+static int post_initial;
 
 static int log_success;
 static int log_failed;
@@ -292,6 +294,10 @@ mark_initial(void)
 
 	mark_initial_state(log_success, JOB_DONE, "successful");
 	mark_initial_state(log_failed, JOB_FAILED, "failing");
+
+	if (verbosity >= 1)
+		printf("Initialisation complete.\n");
+	post_initial = 1;
 }
 
 static void
@@ -399,7 +405,7 @@ process_job(struct build_job *job, enum job_state state, int log_state)
 				err(1, "Cannot log successful build");
 			free(buf);
 		}
-		if (verbosity >= 1)
+		if (verbosity >= 1 && post_initial)
 			ts_printf("Successfully built %s\n", job->pkgname);
 		break;
 	case JOB_FAILED:
@@ -409,7 +415,7 @@ process_job(struct build_job *job, enum job_state state, int log_state)
 				err(1, "Cannot log failed build");
 			free(buf);
 		}
-		if (verbosity >= 1)
+		if (verbosity >= 1 && post_initial)
 			ts_printf("Failed to build    %s\n", job->pkgname);
 		/* FALLTHROUGH */
 	case JOB_INDIRECT_FAILED:
