@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/16 05:01:06 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/02/26 18:11:08 joerg Exp $
 
 SHA1 (HTTP-GHTTP-1.07.tar.gz) = ea8db0a43f2a78f376db9b3ed238843c2a2bff94
 RMD160 (HTTP-GHTTP-1.07.tar.gz) = b5c37619a4d218561c2496807e88e36b4305a799
 Size (HTTP-GHTTP-1.07.tar.gz) = 8205 bytes
+SHA1 (patch-aa) = 3fef15e154a84794a89aaf4d96883b660d2c08ed
