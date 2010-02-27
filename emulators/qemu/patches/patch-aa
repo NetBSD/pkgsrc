@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.5 2010/01/14 22:32:33 bouyer Exp $
+$NetBSD: patch-aa,v 1.6 2010/02/27 23:21:13 tnn Exp $
 
---- net.c.orig	2010-01-14 11:28:56.000000000 +0100
-+++ net.c	2010-01-14 11:33:46.000000000 +0100
-@@ -43,6 +43,7 @@
- #include <netinet/in.h>
- #include <net/if.h>
+--- net/tap-bsd.c.orig	2010-02-23 20:54:38.000000000 +0000
++++ net/tap-bsd.c
+@@ -27,6 +27,8 @@
+ #include "sysemu.h"
+ 
  #ifdef __NetBSD__
++#include <sys/ioctl.h>
 +#include <net/if.h>
  #include <net/if_tap.h>
  #endif
- #ifdef __linux__
-@@ -1462,16 +1463,31 @@
+ 
+@@ -45,6 +47,9 @@ int tap_open(char *ifname, int ifname_si
      int fd;
      char *dev;
      struct stat s;
@@ -18,12 +19,17 @@ $NetBSD: patch-aa,v 1.5 2010/01/14 22:32:33 bouyer Exp $
 +    struct ifreq ifr;
 +#endif
  
+ #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+     /* if no ifname is given, always start the search from tap0. */
+@@ -75,14 +80,26 @@ int tap_open(char *ifname, int ifname_si
+ #else
      TFR(fd = open("/dev/tap", O_RDWR));
      if (fd < 0) {
 -        fprintf(stderr, "warning: could not open /dev/tap: no virtual network emulation\n");
 +        fprintf(stderr, "warning: could not open /dev/tap: no virtual network emulation: %s\n", strerror(errno));
          return -1;
      }
+ #endif
  
 -    fstat(fd, &s);
 +#ifdef TAPGIFNAME
@@ -42,5 +48,5 @@ $NetBSD: patch-aa,v 1.5 2010/01/14 22:32:33 bouyer Exp $
      pstrcpy(ifname, ifname_size, dev);
 +#endif
  
-     fcntl(fd, F_SETFL, O_NONBLOCK);
-     return fd;
+     if (*vnet_hdr) {
+         /* BSD doesn't have IFF_VNET_HDR */
