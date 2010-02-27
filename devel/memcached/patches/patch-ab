@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.6 2010/02/27 20:40:52 morr Exp $
+
+time_t changes
+
+--- items.c.orig	2009-10-23 20:38:01.000000000 +0000
++++ items.c
+@@ -366,9 +366,9 @@ char *do_item_cachedump(const unsigned i
+         /* Copy the key since it may not be null-terminated in the struct */
+         strncpy(key_temp, ITEM_key(it), it->nkey);
+         key_temp[it->nkey] = 0x00; /* terminate */
+-        len = snprintf(temp, sizeof(temp), "ITEM %s [%d b; %lu s]\r\n",
++        len = snprintf(temp, sizeof(temp), "ITEM %s [%d b; %jd s]\r\n",
+                        key_temp, it->nbytes - 2,
+-                       (unsigned long)it->exptime + process_started);
++                       (intmax_t)it->exptime + process_started);
+         if (bufcurr + len + 6 > memlimit)  /* 6 is END\r\n\0 */
+             break;
+         memcpy(buffer + bufcurr, temp, len);
+@@ -394,13 +394,13 @@ void do_item_stats(ADD_STAT add_stats, v
+             int klen = 0, vlen = 0;
+ 
+             APPEND_NUM_FMT_STAT(fmt, i, "number", "%u", sizes[i]);
+-            APPEND_NUM_FMT_STAT(fmt, i, "age", "%u", tails[i]->time);
++            APPEND_NUM_FMT_STAT(fmt, i, "age", "%jd", tails[i]->time);
+             APPEND_NUM_FMT_STAT(fmt, i, "evicted",
+                                 "%u", itemstats[i].evicted);
+             APPEND_NUM_FMT_STAT(fmt, i, "evicted_nonzero",
+                                 "%u", itemstats[i].evicted_nonzero);
+             APPEND_NUM_FMT_STAT(fmt, i, "evicted_time",
+-                                "%u", itemstats[i].evicted_time);
++                                "%jd", itemstats[i].evicted_time);
+             APPEND_NUM_FMT_STAT(fmt, i, "outofmemory",
+                                 "%u", itemstats[i].outofmemory);
+             APPEND_NUM_FMT_STAT(fmt, i, "tailrepairs",
+
+--- memcached.h.orig	2009-11-26 00:37:49.000000000 +0000
++++ memcached.h
+@@ -191,7 +191,7 @@ enum delta_result_type {
+ };
+ 
+ /** Time relative to server start. Smaller than time_t on 64-bit systems. */
+-typedef unsigned int rel_time_t;
++typedef intmax_t rel_time_t;
+ 
+ /** Stats stored per slab (and per thread). */
+ struct slab_stats {
