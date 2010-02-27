@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9080 2010/02/26 20:01:59 tnn Exp $
+$NetBSD: TODO,v 1.9081 2010/02/27 18:19:40 snj Exp $
 
 Suggested new packages
 ======================
@@ -1426,7 +1426,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zope29-Silva-2.1
 	o zope34-3.4.0
 	o zopeedit-0.8
-	o zsh-4.3.10
 
 Infrastructure problems which need addressing
 =============================================

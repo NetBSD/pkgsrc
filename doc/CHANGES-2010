@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.979 2010/02/27 16:07:14 roy Exp $
+$NetBSD: CHANGES-2010,v 1.980 2010/02/27 18:19:40 snj Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1173,3 +1173,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/dhcpcd to 5.2.0 [roy 2010-02-27]
 	Removed emulators/peace [kent 2010-02-27]
 	Updated net/dhcpcd to 5.2.1 [roy 2010-02-27]
+	Updated shells/zsh-current to 4.3.10 [snj 2010-02-27]
