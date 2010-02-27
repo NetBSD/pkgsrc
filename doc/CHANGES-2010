@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.975 2010/02/27 03:54:51 taca Exp $
+$NetBSD: CHANGES-2010,v 1.976 2010/02/27 04:27:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1169,3 +1169,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/lua-curl version 0.2 [agc 2010-02-26]
 	Updated lang/php5 to 5.2.13 [taca 2010-02-27]
 	Updated textproc/php-json to 5.2.13 [taca 2010-02-27]
+	Updated net/msdl to 1.2.7r1 [obache 2010-02-27]
