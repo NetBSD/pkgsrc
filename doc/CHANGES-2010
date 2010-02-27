@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.977 2010/02/27 15:47:12 roy Exp $
+$NetBSD: CHANGES-2010,v 1.978 2010/02/27 16:06:51 kent Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1171,3 +1171,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/php-json to 5.2.13 [taca 2010-02-27]
 	Updated net/msdl to 1.2.7r1 [obache 2010-02-27]
 	Updated net/dhcpcd to 5.2.0 [roy 2010-02-27]
+	Removed emulators/peace [kent 2010-02-27]
