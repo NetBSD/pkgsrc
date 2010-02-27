@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.20 2009/10/11 16:04:13 asau Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/02/27 23:21:13 tnn Exp $
 bin/qemu
 bin/qemu-i386
 bin/qemu-img
+bin/qemu-io
 bin/qemu-sparc
 bin/qemu-sparc64
 bin/qemu-system-arm
@@ -64,6 +65,7 @@ share/qemu/keymaps/sl
 share/qemu/keymaps/sv
 share/qemu/keymaps/th
 share/qemu/keymaps/tr
+share/qemu/linuxboot.bin
 share/qemu/multiboot.bin
 share/qemu/openbios-ppc
 share/qemu/openbios-sparc32
@@ -71,9 +73,11 @@ share/qemu/openbios-sparc64
 share/qemu/petalogix-s3adsp1800.dtb
 share/qemu/ppc_rom.bin
 share/qemu/pxe-e1000.bin
+share/qemu/pxe-i82559er.bin
 share/qemu/pxe-ne2k_pci.bin
 share/qemu/pxe-pcnet.bin
 share/qemu/pxe-rtl8139.bin
+share/qemu/pxe-virtio.bin
 share/qemu/vgabios-cirrus.bin
 share/qemu/vgabios.bin
 share/qemu/video.x
