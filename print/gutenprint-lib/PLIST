@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/08/19 00:19:06 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/02/27 01:15:13 gdt Exp $
 bin/cups-calibrate
 bin/escputil
 bin/testpattern
@@ -90,6 +90,7 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/wf500.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/x80.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/artisan.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/b500.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/cd.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/cd_cutter_roll_feed.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/cd_roll_feed.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/cutter_roll_feed.xml
@@ -241,6 +242,8 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_95.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_96.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_97.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_98.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_99.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_100.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/qualitypresets/p1_5.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/qualitypresets/picturemate.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/qualitypresets/standard.xml
