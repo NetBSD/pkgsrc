@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.973 2010/02/26 22:05:54 agc Exp $
+$NetBSD: CHANGES-2010,v 1.974 2010/02/27 03:36:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1167,3 +1167,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-vCard to 2.07 [wiz 2010-02-26]
 	Updated mail/thunderbird to 3.0.2 [tnn 2010-02-26]
 	Added www/lua-curl version 0.2 [agc 2010-02-26]
+	Updated lang/php5 to 5.2.13 [taca 2010-02-27]
