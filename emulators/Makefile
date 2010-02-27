@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.181 2010/02/10 17:10:52 joerg Exp $
+# $NetBSD: Makefile,v 1.182 2010/02/27 16:06:51 kent Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -95,7 +95,6 @@ SUBDIR+=	osf1_lib
 SUBDIR+=	p11
 SUBDIR+=	palmosemulator
 SUBDIR+=	pcemu
-SUBDIR+=	peace
 SUBDIR+=	pearpc
 SUBDIR+=	qemu
 SUBDIR+=	raine
