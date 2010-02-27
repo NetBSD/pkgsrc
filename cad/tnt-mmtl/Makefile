@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/12/03 13:06:52 asau Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/27 03:21:06 dmcmahill Exp $
 #
 
 DISTNAME=	tnt-1.2.2
@@ -14,6 +14,7 @@ COMMENT=	Multilayer Multiconductor Transmission Line 2-D and 2.5-D simulator
 BUILD_DEPENDS+=	latex2html-[0-9]*:../../textproc/latex2html
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	autoconf automake gmake
