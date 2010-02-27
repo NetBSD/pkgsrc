@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.149 2008/02/07 21:36:13 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.150 2010/02/27 03:37:58 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -89,6 +89,11 @@ BULK_ID?=		.${MACHINE_ARCH}
 BULK_ID?=
 .endif
 
+.if ${_USE_DESTDIR} != "no"
+_PACKAGE_TARGET=	package package-install
+.else
+_PACKAGE_TARGET=	package
+.endif
 #
 # Package-specific files
 #
@@ -432,7 +437,7 @@ bulk-package:
 			done ;\
 		fi ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
-		${DO} ${RECURSIVE_MAKE} ${MAKEFLAGS} package; \
+		${DO} ${RECURSIVE_MAKE} ${MAKEFLAGS} ${_PACKAGE_TARGET};\
 		${ECHO} "";						\
 		${ECHO} "===> Warnings from the wrapper log (sorted):"; \
 		${GREP} "^WARNING" ${WRKLOG} | ${SORT} -u | ${TO_HTML}; \
