@@ -1,4 +1,4 @@
-/*	$NetBSD: hash.h,v 1.2 2008/10/28 15:06:26 joerg Exp $	*/
+/*	$NetBSD: hash.h,v 1.3 2010/02/27 16:27:00 joerg Exp $	*/
 /*	NetBSD: hash.h,v 1.15 2008/08/26 21:18:38 joerg Exp 	*/
 
 /*-
@@ -274,6 +274,8 @@ typedef struct htab	 {		/* Memory resident data structure */
 #define	REAL_KEY	4
 
 /* Short hands for accessing structure */
+#undef BSIZE
+#undef BSHIFT
 #define BSIZE		hdr.bsize
 #define BSHIFT		hdr.bshift
 #define DSIZE		hdr.dsize
