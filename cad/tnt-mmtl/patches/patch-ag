@@ -1,13 +1,25 @@
-$NetBSD: patch-ag,v 1.1 2004/10/01 22:56:11 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.2 2010/02/27 03:21:06 dmcmahill Exp $
 
---- doc/Makefile.am.orig	Wed Jul 21 15:45:26 2004
-+++ doc/Makefile.am
-@@ -43,7 +43,7 @@ AUTOMAKE_OPTIONS = foreign
- #
+--- doc/Makefile.am.orig	2004-07-21 15:45:26.000000000 +0000
++++ doc/Makefile.am	2010-02-27 03:15:00.000000000 +0000
+@@ -44,5 +44,5 @@
  #---------------------------------------------------------------
  
 -docdir = $(prefix)/doc
 +docdir = $(pkgdatadir)
  doc_DATA = \
  	user-guide.pdf 
+@@ -77,9 +77,9 @@
+ install-data-local:
+ 	for f in $(doc_DATA); do \
+-	  $(mkinstalldirs) $(docdir); \
+-	  $(INSTALL_DATA) $$f $(docdir)/$$f; \
++	  $(mkinstalldirs) $(DESTDIR)$(docdir); \
++	  $(INSTALL_DATA) $$f $(DESTDIR)$(docdir)/$$f; \
+ 	  d=`basename $$f .pdf`; \
+-	  $(mkinstalldirs) $(docdir)/$$d; \
+-	  $(INSTALL_DATA) $$d/* $(docdir)/$$d; \
++	  $(mkinstalldirs) $(DESTDIR)$(docdir)/$$d; \
++	  $(INSTALL_DATA) $$d/* $(DESTDIR)$(docdir)/$$d; \
+ 	done
  
