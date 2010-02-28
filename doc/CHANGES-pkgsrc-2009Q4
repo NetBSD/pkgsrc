@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.37 2010/02/26 06:52:42 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.38 2010/02/28 14:16:52 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -121,3 +121,9 @@ Pullup ticket #3022 - requested by taca
 netpbm: security update
 Pullup ticket #3024 - requested by taca
 sudo: security update
+Pullup ticket #3027 - requested by taca
+wxGTK24: security patch
+Pullup ticket #3028 - requested by taca
+wxGTK26: security patch
+Pullup ticket #3029 - requested by taca
+wxGTK28: security patch
