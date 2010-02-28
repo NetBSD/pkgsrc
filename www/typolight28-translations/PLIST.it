@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.it,v 1.1.1.1 2009/12/02 16:10:55 taca Exp $
+@comment $NetBSD: PLIST.it,v 1.2 2010/02/28 11:28:26 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/it/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/it/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/it/default.php
@@ -10,6 +10,7 @@ ${TL_WEBDIR}/system/modules/backend/languages/it/tl_content.php
 ${TL_WEBDIR}/system/modules/backend/languages/it/tl_files.php
 ${TL_WEBDIR}/system/modules/backend/languages/it/tl_form.php
 ${TL_WEBDIR}/system/modules/backend/languages/it/tl_form_field.php
+${TL_WEBDIR}/system/modules/backend/languages/it/tl_install.php
 ${TL_WEBDIR}/system/modules/backend/languages/it/tl_layout.php
 ${TL_WEBDIR}/system/modules/backend/languages/it/tl_log.php
 ${TL_WEBDIR}/system/modules/backend/languages/it/tl_maintenance.php
