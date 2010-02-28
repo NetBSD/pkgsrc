@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.983 2010/02/28 11:29:12 taca Exp $
+$NetBSD: CHANGES-2010,v 1.984 2010/02/28 11:33:31 morr Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1176,4 +1176,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated shells/zsh-current to 4.3.10 [snj 2010-02-27]
 	Updated x11/py-qt4 to 4.7nb2 [wiz 2010-02-27]
 	Updated emulators/qemu to 0.12.3 [tnn 2010-02-27]
+	Updated devel/memcached to 1.4.4 [morr 2010-02-27]
 	Updated www/typolight28-translations to 20100226 [taca 2010-02-28]
