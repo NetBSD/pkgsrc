@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.2.2 2010/02/28 13:34:22 spz Exp $
+
+deal with CVE-2009-2369.
+
+--- src/common/image.cpp.orig	2006-03-21 23:42:10.000000000 +0000
++++ src/common/image.cpp
+@@ -192,6 +192,10 @@ bool wxImage::Create( int width, int hei
+ 
+     m_refData = new wxImageRefData();
+ 
++    if (width <= 0 || height <= 0 || width > INT_MAX / 3 / height) {
++	UnRef();
++	return false;
++    }
+     M_IMGDATA->m_data = (unsigned char *) malloc( width*height*3 );
+     if (!M_IMGDATA->m_data)
+     {
