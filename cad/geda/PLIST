@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/11/06 22:29:26 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/02/28 16:07:00 dmcmahill Exp $
 bin/convert_sym
 bin/garchive
 bin/gattrib
@@ -175,14 +175,16 @@ share/doc/geda-gaf/wiki/geda-glossaire.fr.html
 share/doc/geda-gaf/wiki/geda-glossary.fr.html
 share/doc/geda-gaf/wiki/geda-glossary.html
 share/doc/geda-gaf/wiki/geda-gnetlist_mp.html
+share/doc/geda-gaf/wiki/geda-gnetlist_scheme_tutorial.html
 share/doc/geda-gaf/wiki/geda-gnetlist_ug.html
+share/doc/geda-gaf/wiki/geda-gparts_dd.html
 share/doc/geda-gaf/wiki/geda-grcsan.html
 share/doc/geda-gaf/wiki/geda-grenum_mp.html
 share/doc/geda-gaf/wiki/geda-gsch2pcb_readme.html
 share/doc/geda-gaf/wiki/geda-gsch2pcb_tutorial.html
 share/doc/geda-gaf/wiki/geda-gsch2pcb_tutorial_releasenotes.html
-share/doc/geda-gaf/wiki/geda-gschem2pcb_readme.html
 share/doc/geda-gaf/wiki/geda-gschem_mp.html
+share/doc/geda-gaf/wiki/geda-gschem_symbol_creation.html
 share/doc/geda-gaf/wiki/geda-gschem_ug.fr.html
 share/doc/geda-gaf/wiki/geda-gschem_ug.html
 share/doc/geda-gaf/wiki/geda-gschem_warmup.html
@@ -231,6 +233,7 @@ share/doc/geda-gaf/wiki/geda-olib_readme.html
 share/doc/geda-gaf/wiki/geda-pcb-quick_reference.fr.html
 share/doc/geda-gaf/wiki/geda-pcb-quick_reference.html
 share/doc/geda-gaf/wiki/geda-pcb_footprints.html
+share/doc/geda-gaf/wiki/geda-pcb_footprint_naming_conventions.html
 share/doc/geda-gaf/wiki/geda-pcb_funding_sow-fwdann_ideas.html
 share/doc/geda-gaf/wiki/geda-pcb_funding_sow-gui_ideas.html
 share/doc/geda-gaf/wiki/geda-pcb_funding_sow.html
@@ -365,6 +368,18 @@ share/doc/geda-gaf/wiki/media/geda/dialogvdc1.png
 share/doc/geda-gaf/wiki/media/geda/faq_attrib.jpg
 share/doc/geda-gaf/wiki/media/geda/fileformat_textgraphic.jpg
 share/doc/geda-gaf/wiki/media/geda/geda_flow.png
+share/doc/geda-gaf/wiki/media/geda/gparts-flow-2.png
+share/doc/geda-gaf/wiki/media/geda/gparts-ss-companies.png
+share/doc/geda-gaf/wiki/media/geda/gparts-ss-devices.png
+share/doc/geda-gaf/wiki/media/geda/gparts-ss-documentation.png
+share/doc/geda-gaf/wiki/media/geda/gparts-ss-footprints.png
+share/doc/geda-gaf/wiki/media/geda/gparts-ss-packages.png
+share/doc/geda-gaf/wiki/media/geda/gparts-ss-parts-2.png
+share/doc/geda-gaf/wiki/media/geda/gparts-ss-parts.png
+share/doc/geda-gaf/wiki/media/geda/gparts-ss-symbols-2.png
+share/doc/geda-gaf/wiki/media/geda/gparts-ss-symbols.png
+share/doc/geda-gaf/wiki/media/geda/gparts_erd_main.png
+share/doc/geda-gaf/wiki/media/geda/gparts_flow.png
 share/doc/geda-gaf/wiki/media/geda/gschem-sym-1.png
 share/doc/geda-gaf/wiki/media/geda/gschem-sym-2.png
 share/doc/geda-gaf/wiki/media/geda/gschem-sym-3.png
@@ -418,8 +433,6 @@ share/doc/geda-gaf/wiki/media/tragesym/xemacs_modifiedselection.png
 share/doc/geda-gaf/wiki/media/tragesym/xemacs_rawselection.png
 share/doc/geda-gaf/wiki/media/wiki/dokuwiki-128.png
 share/doc/geda-gaf/wiki/pcb-projects.html
-share/doc/geda-gaf/wiki/playground-playground.html
-share/doc/geda-gaf/wiki/playground-transistor_guide.html
 share/doc/geda-gaf/wiki/print.css
 share/doc/geda-gaf/wiki/start.html
 share/doc/geda-gaf/wiki/start_es.html
