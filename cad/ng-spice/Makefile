@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2009/05/20 00:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2010/02/28 18:00:19 dmcmahill Exp $
 #
 
-DISTNAME=	ng-spice-rework-17
-PKGNAME=	ng-spice-17
-PKGREVISION=	3
+DISTNAME=	ng-spice-rework-20
+PKGNAME=	ng-spice-20
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
 
@@ -13,7 +12,7 @@ COMMENT=	Next generation circuit simulation program
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/ng-spice-rework-17
+WRKSRC=			${WRKDIR}/ngspice-20
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake makeinfo
 USE_GNU_READLINE=	uses rl_* interface
