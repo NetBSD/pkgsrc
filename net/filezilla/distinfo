@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2010/01/15 20:22:11 zafer Exp $
+$NetBSD: distinfo,v 1.9 2010/02/28 20:28:55 zafer Exp $
 
-SHA1 (FileZilla_3.3.1_src.tar.bz2) = aa0c42e0fed93e7068376b63213ff7c164fd078e
-RMD160 (FileZilla_3.3.1_src.tar.bz2) = 72ade8ebc1d8e26b21900814aa168e834d3b9155
-Size (FileZilla_3.3.1_src.tar.bz2) = 3129864 bytes
+SHA1 (FileZilla_3.3.2_src.tar.bz2) = 80c5357eea6ec9ce74d9e85789680eb289abc354
+RMD160 (FileZilla_3.3.2_src.tar.bz2) = 5d74132747aa6345ab8bc19aff06cf034412c597
+Size (FileZilla_3.3.2_src.tar.bz2) = 3186595 bytes
