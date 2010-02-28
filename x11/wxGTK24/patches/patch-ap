@@ -1,0 +1,35 @@
+$NetBSD: patch-ap,v 1.1.2.2 2010/02/28 13:15:02 spz Exp $
+
+deal with CVE-2009-2369.
+
+--- src/common/imagtiff.cpp.orig	2003-09-21 11:31:39.000000000 +0000
++++ src/common/imagtiff.cpp
+@@ -188,15 +188,25 @@ bool wxTIFFHandler::LoadFile( wxImage *i
+     }
+ 
+     uint32 w, h;
+-    uint32 npixels;
+     uint32 *raster;
+ 
+     TIFFGetField( tif, TIFFTAG_IMAGEWIDTH, &w );
+     TIFFGetField( tif, TIFFTAG_IMAGELENGTH, &h );
+ 
+-    npixels = w * h;
++    // guard against integer overflow during multiplication which could result
++    // in allocating a too small buffer and then overflowing it
++    const double bytesNeeded = (double)w * (double)h * sizeof(uint32);
++    if ( bytesNeeded >= 4294967295U /* UINT32_MAX */ )
++    {
++	if ( verbose )
++	    wxLogError( _("TIFF: Image size is abnormally big.") );
++
++	TIFFClose(tif);
++
++	return false;
++    }
+ 
+-    raster = (uint32*) _TIFFmalloc( npixels * sizeof(uint32) );
++    raster = (uint32*) _TIFFmalloc( bytesNeeded );
+ 
+     if (!raster)
+     {
