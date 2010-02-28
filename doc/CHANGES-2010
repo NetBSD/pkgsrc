@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.986 2010/02/28 16:01:24 dmcmahill Exp $
+$NetBSD: CHANGES-2010,v 1.987 2010/02/28 16:07:36 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1180,3 +1180,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100226 [taca 2010-02-28]
 	Updated www/typolight28 to 2.8.1 [taca 2010-02-28]
 	Updated cad/verilog-current to 20090923 [dmcmahill 2010-02-28]
+	Updated cad/geda to 1.6.1 [dmcmahill 2010-02-28]
