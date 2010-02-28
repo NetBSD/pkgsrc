@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:35:55 joerg Exp $
-bin/nghelp
+@comment $NetBSD: PLIST,v 1.11 2010/02/28 18:00:19 dmcmahill Exp $
+@comment bin/nghelp
 bin/ngmakeidx
 bin/ngmultidec
 bin/ngnutmeg
@@ -7,12 +7,12 @@ bin/ngproc2mod
 bin/ngsconvert
 bin/ngspice
 info/ngspice.info
-lib/ng-spice-rework/libbsim4.a
+man/man1/ngmultidec.1
 man/man1/ngnutmeg.1
 man/man1/ngsconvert.1
 man/man1/ngspice.1
-share/ng-spice-rework/helpdir/ngspice.idx
-share/ng-spice-rework/helpdir/ngspice.txt
-share/ng-spice-rework/scripts/setplot
-share/ng-spice-rework/scripts/spectrum
-share/ng-spice-rework/scripts/spinit
+share/ngspice/helpdir/ngspice.idx
+share/ngspice/helpdir/ngspice.txt
+share/ngspice/scripts/setplot
+share/ngspice/scripts/spectrum
+share/ngspice/scripts/spinit
