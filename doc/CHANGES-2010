@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.984 2010/02/28 11:33:31 morr Exp $
+$NetBSD: CHANGES-2010,v 1.985 2010/02/28 12:47:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1178,3 +1178,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated emulators/qemu to 0.12.3 [tnn 2010-02-27]
 	Updated devel/memcached to 1.4.4 [morr 2010-02-27]
 	Updated www/typolight28-translations to 20100226 [taca 2010-02-28]
+	Updated www/typolight28 to 2.8.1 [taca 2010-02-28]
