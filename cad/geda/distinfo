@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.14 2009/11/17 02:51:52 dmcmahill Exp $
+$NetBSD: distinfo,v 1.15 2010/02/28 16:07:00 dmcmahill Exp $
 
-SHA1 (geda-gaf-1.6.0.tar.gz) = 9ebff9a7f57008f564b310fed8e3907648856e83
-RMD160 (geda-gaf-1.6.0.tar.gz) = bbcaa7dad64e2a24b7acf54da3e0426c265c980e
-Size (geda-gaf-1.6.0.tar.gz) = 6214126 bytes
-SHA1 (patch-aa) = cdfe0dac14e542cf505aecbec0b5a47c35957c07
-SHA1 (patch-ab) = 22fa037556fa4569fcbf652654e7ad8917f83fb1
-SHA1 (patch-ac) = 314aac05226fc71cfe76d208d7af69c869b08e52
+SHA1 (geda-gaf-1.6.1.tar.gz) = 54f706f8ecb3638b0384c5428ef6089237847b6e
+RMD160 (geda-gaf-1.6.1.tar.gz) = 7274c898985fe097b0cfb87bd9910961e14d1150
+Size (geda-gaf-1.6.1.tar.gz) = 7099085 bytes
