@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2009/09/21 17:48:46 tnn Exp $
+# $NetBSD: Makefile.common,v 1.4.4.1 2010/02/28 14:14:23 spz Exp $
 #
 # used by x11/wxGTK28/Makefile
 
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--with-libjpeg=sys
 CONFIGURE_ARGS+=	--with-libpng=sys
 CONFIGURE_ARGS+=	--with-libtiff=sys
 CONFIGURE_ARGS+=	--with-opengl
+CONFIGURE_ARGS+=	--with-expat=sys
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-regex=builtin
 
@@ -64,6 +65,7 @@ pre-configure:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 
