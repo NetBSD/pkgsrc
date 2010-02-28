@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/12/16 19:02:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/02/28 20:49:21 tonio Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
@@ -36,13 +36,13 @@ include/libsoup-2.4/libsoup/soup-uri.h
 include/libsoup-2.4/libsoup/soup-value-utils.h
 include/libsoup-2.4/libsoup/soup-xmlrpc.h
 include/libsoup-2.4/libsoup/soup.h
-include/libsoup-gnome-2.4/libsoup/soup-cookie-jar-sqlite.h
-include/libsoup-gnome-2.4/libsoup/soup-gnome-features.h
-include/libsoup-gnome-2.4/libsoup/soup-gnome.h
+${PLIST.gnome}include/libsoup-gnome-2.4/libsoup/soup-cookie-jar-sqlite.h
+${PLIST.gnome}include/libsoup-gnome-2.4/libsoup/soup-gnome-features.h
+${PLIST.gnome}include/libsoup-gnome-2.4/libsoup/soup-gnome.h
 lib/libsoup-2.4.la
-lib/libsoup-gnome-2.4.la
+${PLIST.gnome}lib/libsoup-gnome-2.4.la
 lib/pkgconfig/libsoup-2.4.pc
-lib/pkgconfig/libsoup-gnome-2.4.pc
+${PLIST.gnome}lib/pkgconfig/libsoup-gnome-2.4.pc
 share/gtk-doc/html/libsoup-2.4/SoupAddress.html
 share/gtk-doc/html/libsoup-2.4/SoupAuth.html
 share/gtk-doc/html/libsoup-2.4/SoupAuthDomain.html
