@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.332 2010/02/22 22:13:23 wiz Exp $
+# $NetBSD: Makefile,v 1.333 2010/03/01 11:16:03 wiz Exp $
 #
 
 COMMENT=	Games
@@ -128,6 +128,7 @@ SUBDIR+=	gtklevel9
 SUBDIR+=	gtkmagnetic
 SUBDIR+=	gturing
 SUBDIR+=	heretic2-demo
+SUBDIR+=	hex-a-hop
 SUBDIR+=	hugo
 SUBDIR+=	icbm3d
 SUBDIR+=	icebreaker
