@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/01/13 20:10:09 jnemeth Exp $
+# $NetBSD: options.mk,v 1.4 2010/03/01 07:06:48 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc
@@ -51,7 +51,7 @@ PLIST.ilbc=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11) || !empty(PKG_OPTIONS:Munixodbc) || !empty(PKG_OPTIONS:Milbc)
-RUN_MENUSELECT= # defined
+RUN_MENUSELECT= # empty
 MAKE_FLAGS+=	GLOBAL_MAKEOPTS=${WRKSRC}/pkgsrc.makeopts
 .endif
 post-configure:
@@ -64,7 +64,7 @@ post-configure:
 .if !empty(PKG_OPTIONS:Milbc)
 	${ECHO} "MENUSELECT_CODECS=-codec_ilbc" >> ${WRKSRC}/pkgsrc.makeopts
 .endif
-.ifdef RUN_MENUSELECT
+.if defined(RUN_MENUSELECT)
 	# this is a hack to work around a bug in menuselect
 	cd ${WRKSRC} && make menuselect.makeopts
 .endif
