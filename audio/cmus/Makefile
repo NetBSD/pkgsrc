@@ -1,17 +1,46 @@
-# $NetBSD: Makefile,v 1.20 2009/08/27 19:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2010/03/01 02:58:26 ahoka Exp $
 #
 
-DISTNAME=		cmus-2.2.0
-PKGREVISION=		6
+DISTNAME=		cmus-v2.3.0-rc1
+PKGNAME=		${DISTNAME:S/-rc/rc/:S/-v/-/}
 CATEGORIES=		audio
-MASTER_SITES=		http://mirror.greaterscope.net/cmus/
+MASTER_SITES=		http://downloads.sourceforge.net/project/cmus/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://cmus.sourceforge.net/
-COMMENT=		Cmus is a curses based music player with a lot of features
+COMMENT=		cmus is a small, fast and powerful text mode music player
 
 CONFLICTS+=		cmus-unofficial-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+HAS_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
+
+CONFIGURE_ARGS+=	prefix=${PREFIX}
+CONFIGURE_ARGS+=	CONFIG_ALSA=n
+CONFIGURE_ARGS+=	mandir=${PREFIX}/${PKGMANDIR}/
+PLIST_VARS+=		sunaudio oss
+
+.include "../../mk/oss.buildlink3.mk"
+.if ${OSS_TYPE} != "none"
+PLIST.oss=	yes
+CONFIGURE_ARGS+=        CONFIG_OSS=y
+.else
+CONFIGURE_ARGS+=        CONFIG_OSS=n
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS" || exists(/usr/include/sys/audioio.h)
+CONFIGURE_ARGS+=	CONFIG_SUN=y
+PLIST.sunaudio=		yes
+.else
+CONFIGURE_ARGS+=        CONFIG_SUN=n
+.endif
+
 .include "options.mk"
-.include "../../audio/cmus/Makefile.common"
+
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
