@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9085 2010/02/28 22:37:41 wiz Exp $
+$NetBSD: TODO,v 1.9086 2010/03/01 10:28:22 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1224,7 +1224,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o subversion-1.6.9
 	o subversion-base-1.6.9
 	o suse_base-11.0
-	o sylpheed-3.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
 	o systrace-1.6e
