@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/01 11:07:50 is Exp $
+bin/likepython
+share/doc/likepython/README
+share/examples/likepython/hello_world.lp
