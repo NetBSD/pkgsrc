@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/03/01 11:15:47 wiz Exp $
+
+--- src/Makefile.in.orig	2009-11-01 11:09:08.000000000 +0000
++++ src/Makefile.in
+@@ -313,7 +313,7 @@ dat2bmp$(EXEEXT): $(dat2bmp_OBJECTS) $(d
+ 	$(LINK) $(dat2bmp_OBJECTS) $(dat2bmp_LDADD) $(LIBS)
+ hex-a-hop$(EXEEXT): $(hex_a_hop_OBJECTS) $(hex_a_hop_DEPENDENCIES) 
+ 	@rm -f hex-a-hop$(EXEEXT)
+-	$(CXXLINK) $(hex_a_hop_OBJECTS) $(hex_a_hop_LDADD) $(LIBS)
++	$(CXXLINK) $(hex_a_hop_OBJECTS) $(hex_a_hop_LDADD) $(LIBS) -lintl
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
