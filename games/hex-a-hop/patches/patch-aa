@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/01 11:15:47 wiz Exp $
+
+--- src/text.cpp.orig	2009-10-02 22:26:15.000000000 +0000
++++ src/text.cpp
+@@ -441,7 +441,7 @@ void ConvertToUTF8(const std::string &te
+ 	iconv_t cd = iconv_open("UTF-8", locale_enc);
+ 	char *in_buf = const_cast<char *>(&text_locally_encoded[0]);
+ 	char *out_buf = &text_utf8[0];
+-	iconv(cd, &in_buf, &text_length, &out_buf, &text_utf8_length);
++	iconv(cd, (const char **)&in_buf, &text_length, &out_buf, &text_utf8_length);
+ 	iconv_close(cd);
+ 	if (errno != 0)
+ 		std::cerr << "An error occurred recoding " << text_locally_encoded << " to UTF8" << std::endl;
