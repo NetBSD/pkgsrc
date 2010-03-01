@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/12/30 04:11:02 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/03/01 07:06:48 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -284,10 +284,10 @@ libdata/asterisk/phoneprov/000000000000-phone.cfg
 libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
 libdata/asterisk/phoneprov/polycom_line.xml
-libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.16
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.16
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.16
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.16
+libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.17
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.17
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.17
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.17
 libdata/asterisk/sounds/en/agent-alreadyon.gsm
 libdata/asterisk/sounds/en/agent-incorrect.gsm
 libdata/asterisk/sounds/en/agent-loggedoff.gsm

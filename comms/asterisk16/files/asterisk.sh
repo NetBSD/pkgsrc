@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: asterisk.sh,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
+# $NetBSD: asterisk.sh,v 1.2 2010/03/01 07:06:48 jnemeth Exp $
 #
 # PROVIDE: asterisk
 # REQUIRE: DAEMON
@@ -30,9 +30,9 @@ command_args="-U $auser -G $agroup"
 asterisk_prestart() {
 	if test ! -d @ASTVARRUNDIR@; then
 		mkdir @ASTVARRUNDIR@
-		chown $auser:$agroup @ASTVARRUNDIR@
-		chmod 0755 @ASTVARRUNDIR@
 	fi
+	chown $auser:$agroup @ASTVARRUNDIR@
+	chmod 0755 @ASTVARRUNDIR@
 }
 
 stop_cmd="$command -r -x 'stop gracefully' >/dev/null"
