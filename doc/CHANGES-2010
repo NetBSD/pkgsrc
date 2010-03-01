@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.994 2010/03/01 11:10:44 is Exp $
+$NetBSD: CHANGES-2010,v 1.995 2010/03/01 11:16:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1188,3 +1188,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/openssl to 0.9.8mnb1 [taca 2010-03-01]
 	Updated mail/sylpheed to 3.0.0 [tnn 2010-03-01]
 	Added lang/likepython version 0.1 [is 2010-03-01]
+	Added games/hex-a-hop version 1.1.0 [wiz 2010-03-01]
