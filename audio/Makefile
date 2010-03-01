@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.430 2010/02/16 08:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.431 2010/03/01 02:41:26 ahoka Exp $
 #
 
 COMMENT=	Audio tools
@@ -59,7 +59,6 @@ SUBDIR+=	cdplayer
 SUBDIR+=	celt
 SUBDIR+=	cmp3
 SUBDIR+=	cmus
-SUBDIR+=	cmus-unofficial
 SUBDIR+=	cplay
 SUBDIR+=	cripple
 SUBDIR+=	cs4235
