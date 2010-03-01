@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.4 2009/12/30 04:11:02 jnemeth Exp $
+$NetBSD: patch-aq,v 1.5 2010/03/01 07:06:48 jnemeth Exp $
 
---- configure.orig	2009-10-26 23:48:25.000000000 +0000
+--- configure.orig	2009-12-28 15:31:22.000000000 +0000
 +++ configure
-@@ -19294,6 +19294,146 @@ fi
+@@ -13761,6 +13761,146 @@ fi
  
  
  
@@ -144,17 +144,17 @@ $NetBSD: patch-aq,v 1.4 2009/12/30 04:11:02 jnemeth Exp $
 +
 +fi
 +
-+ 
 +
- { echo "$as_me:$LINENO: checking for int" >&5
- echo $ECHO_N "checking for int... $ECHO_C" >&6; }
- if test "${ac_cv_type_int+set}" = set; then
-@@ -20567,6 +20707,8 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
++
+ # The cast to long int works around a bug in the HP C Compiler
+ # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
+ # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
+@@ -14172,6 +14312,8 @@ $as_echo_n "checking if \"struct ifaddrs
+ 
+ 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-+#include <sys/types.h>
-+#include <sys/socket.h>
- #include <ifaddrs.h>
++ #include <sys/types.h>
++ #include <sys/socket.h>
+  #include <ifaddrs.h>
  int
  main ()
