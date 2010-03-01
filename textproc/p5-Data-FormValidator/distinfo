@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2010/02/22 15:02:22 sno Exp $
+$NetBSD: distinfo,v 1.9 2010/03/01 06:09:55 sno Exp $
 
-SHA1 (Data-FormValidator-4.65.tar.gz) = ed539cecd828743c3d2bb327c1244a6234c237ac
-RMD160 (Data-FormValidator-4.65.tar.gz) = 578fdd2f25cc02ee38f45902b34ad69bf422cb54
-Size (Data-FormValidator-4.65.tar.gz) = 117087 bytes
+SHA1 (Data-FormValidator-4.66.tar.gz) = 0d3b0fd71544ab4568e2480f8f6e095530a3fba8
+RMD160 (Data-FormValidator-4.66.tar.gz) = d0a54bd5a9e2fdbe83381dd089d90a474c79b144
+Size (Data-FormValidator-4.66.tar.gz) = 97145 bytes
