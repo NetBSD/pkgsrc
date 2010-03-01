@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/07/27 23:06:46 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/03/01 10:26:50 tnn Exp $
 bin/sylpheed
 include/sylpheed/plugin.h
 include/sylpheed/sylph/account.h
@@ -81,6 +81,7 @@ share/sylpheed/faq/de/sylpheed-faq.html
 share/sylpheed/faq/en/sylpheed-faq-1.html
 share/sylpheed/faq/en/sylpheed-faq-2.html
 share/sylpheed/faq/en/sylpheed-faq-3.html
+share/sylpheed/faq/en/sylpheed-faq-4.html
 share/sylpheed/faq/en/sylpheed-faq.html
 share/sylpheed/faq/es/sylpheed-faq-1.html
 share/sylpheed/faq/es/sylpheed-faq-2.html
@@ -133,6 +134,7 @@ share/sylpheed/manual/ja/sylpheed-22.html
 share/sylpheed/manual/ja/sylpheed-23.html
 share/sylpheed/manual/ja/sylpheed-24.html
 share/sylpheed/manual/ja/sylpheed-25.html
+share/sylpheed/manual/ja/sylpheed-26.html
 share/sylpheed/manual/ja/sylpheed-3.html
 share/sylpheed/manual/ja/sylpheed-4.html
 share/sylpheed/manual/ja/sylpheed-5.html
