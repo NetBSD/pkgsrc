@@ -1,0 +1,13 @@
+QLandkarte M is a moving map application for mobile devices. As QLandkarte GT
+it will display mapsets of different resolutions and point to your current
+location. Additionally it will record your location data for further use by
+QLandkarte GT. It's user interface is optimized to the few buttons of a
+typical PDA.
+
+This is experimental pre-alpha software and not targeted towards end-users
+in this stage of developement! This package is provided as a convenience to 
+QLandkarte M developers only.
+
+Copy or hard-link the qlm executable to a user-writable directory as qlm
+wants to put its data files in the same directory as the executable, 
+otherwise it will dump core.

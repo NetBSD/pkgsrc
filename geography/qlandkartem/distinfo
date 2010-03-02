@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2010/03/02 21:48:55 jkunz Exp $
+
+SHA1 (QLandkarteM.0.2.0.tar.gz) = 54649684df7dd904d436eee37513c3dcd42c44bf
+RMD160 (QLandkarteM.0.2.0.tar.gz) = e6f18e7442b2845c9e492c67f44114bae1a5730c
+Size (QLandkarteM.0.2.0.tar.gz) = 422493 bytes
+SHA1 (patch-aa) = e3b996bcd37034e4486af58fc32c2f06492ec809
+SHA1 (patch-ab) = 85ee59c2e40adc3927a928ff8becb983ee329148

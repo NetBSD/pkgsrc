@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 2010/03/02 21:48:55 jkunz Exp $
+
+--- common.orig	2010-02-13 18:37:58.000000000 +0100
++++ common
+@@ -8,4 +8,4 @@ DEFINES += VER_STEP=0
+ # QMAKE_QWS:                                set for mobile Linux or WinCE, do not set for QT X11/Win32 system
+ # QMAKE_NO_BACKLIGHT_VIA_TS:                you want to skip this on touchscreen only systems
+ #                                           you want to set this if your system has Qt::Key_Bar to toggle backlight
+-CONFIG += QMAKE_DISPLAY_LARGE QMAKE_QWS QMAKE_NO_BACKLIGHT_VIA_TS warn_on release
++CONFIG += QMAKE_DISPLAY_LARGE QMAKE_NO_BACKLIGHT_VIA_TS warn_on release
