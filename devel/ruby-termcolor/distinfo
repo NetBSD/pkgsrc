@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/02 11:48:02 obache Exp $
+
+SHA1 (termcolor-1.2.0.gem) = ccb19dc24757f5a2a27f948fe7bfc7a72e8a4601
+RMD160 (termcolor-1.2.0.gem) = 234b7c6e5fdae65febe9214442c66062908d91af
+Size (termcolor-1.2.0.gem) = 6656 bytes
