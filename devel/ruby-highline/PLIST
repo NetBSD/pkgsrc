@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/03/02 11:44:52 obache Exp $
 ${GEM_HOME}/cache/highline-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/INSTALL
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/examples/ansi_colors.rb
 ${GEM_LIBDIR}/examples/asking_for_arrays.rb
 ${GEM_LIBDIR}/examples/basic_usage.rb
 ${GEM_LIBDIR}/examples/color_scheme.rb
+${GEM_LIBDIR}/examples/limit.rb
 ${GEM_LIBDIR}/examples/menus.rb
 ${GEM_LIBDIR}/examples/overwrite.rb
 ${GEM_LIBDIR}/examples/page_and_wrap.rb
@@ -18,6 +19,7 @@ ${GEM_LIBDIR}/examples/trapping_eof.rb
 ${GEM_LIBDIR}/examples/using_readline.rb
 ${GEM_LIBDIR}/lib/highline.rb
 ${GEM_LIBDIR}/lib/highline/color_scheme.rb
+${GEM_LIBDIR}/lib/highline/compatibility.rb
 ${GEM_LIBDIR}/lib/highline/import.rb
 ${GEM_LIBDIR}/lib/highline/menu.rb
 ${GEM_LIBDIR}/lib/highline/question.rb
