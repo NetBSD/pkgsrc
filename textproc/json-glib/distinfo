@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/01/17 02:10:38 obache Exp $
+$NetBSD: distinfo,v 1.5 2010/03/02 11:13:26 obache Exp $
 
-SHA1 (json-glib-0.10.0.tar.gz) = d60667a2e638cc3bc389f4157df0f94ee4864cd7
-RMD160 (json-glib-0.10.0.tar.gz) = 09c9958b67e803f44e20f8705c6e48899af0ce10
-Size (json-glib-0.10.0.tar.gz) = 526307 bytes
+SHA1 (json-glib-0.10.2.tar.gz) = fb1c3129216e50e40e3e1c5db75abd3aad684459
+RMD160 (json-glib-0.10.2.tar.gz) = 108af2a189318888c92a1f6974831ee2714d8bff
+Size (json-glib-0.10.2.tar.gz) = 528172 bytes
