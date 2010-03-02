@@ -1,0 +1,24 @@
+This package provides the emacs modules shipped with monotone in a ready-to-use
+manner.  These are:
+
+* monotone.el: Runs monotone from within emacs.
+
+  Highlights for emacs configuration/use:
+
+  (require 'monotone)
+  (monotone-set-vc-prefix-key [f5]) ;; or "\C-xv"
+  (setq monotone-passwd-remember t)
+
+
+* monotone-nav.el: A database browser for monotone databases.  Using the sql
+  option of monotone, it extacts the data into emacs which you may browse
+  using the arrow keys.  You can also mark revisons to run diffs or do other
+  work.
+
+  Highlights for emacs configuration/use:
+
+  (require 'monotone-nav)
+  (mnav-revdb-reload)
+  (message "mnav-pick: %s" (mnav-rev-id (mnav-pick)))
+
+You may also want to install the lua-mode package if you edit config files.

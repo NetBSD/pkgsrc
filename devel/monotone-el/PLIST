@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/02 18:38:33 jmmv Exp $
+${EMACS_LISPPREFIX}/monotone.el
+${EMACS_LISPPREFIX}/monotone.elc
+${EMACS_LISPPREFIX}/monotone-nav.el
+${EMACS_LISPPREFIX}/monotone-nav.elc
