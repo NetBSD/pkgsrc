@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.704 2010/02/26 22:04:47 agc Exp $
+# $NetBSD: Makefile,v 1.705 2010/03/02 12:27:59 obache Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -517,6 +517,7 @@ SUBDIR+=	swiggle
 SUBDIR+=	swill
 SUBDIR+=	swish-e
 SUBDIR+=	tcl-cgi
+SUBDIR+=	termtter
 SUBDIR+=	thin
 SUBDIR+=	thoth
 SUBDIR+=	thoth-delicious
