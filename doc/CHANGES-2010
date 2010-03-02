@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.999 2010/03/02 11:48:20 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1000 2010/03/02 12:10:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1193,3 +1193,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/tor to 0.2.1.24 [obache 2010-03-02]
 	Updated devel/ruby-highline to 1.5.2 [obache 2010-03-02]
 	Added devel/ruby-termcolor version 1.2.0 [obache 2010-03-02]
+	Added net/ruby-rubytter version 1.0.3 [obache 2010-03-02]
