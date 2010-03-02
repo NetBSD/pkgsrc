@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1007 2010/03/02 18:39:53 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.1008 2010/03/02 23:08:42 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1201,3 +1201,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100301 [taca 2010-03-02]
 	Updated net/samba33 to 3.3.11 [taca 2010-03-02]
 	Added devel/monotone-el version 0.46 [jmmv 2010-03-02]
+	Updated audio/cmus to 2.3.0 [ahoka 2010-02-28]
