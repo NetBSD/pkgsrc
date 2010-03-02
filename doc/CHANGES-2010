@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1003 2010/03/02 14:43:47 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1004 2010/03/02 14:47:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1197,3 +1197,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added www/termtter version 1.7.2 [obache 2010-03-02]
 	Updated x11/p5-Wx-Perl-ProcessStream to 0.27 [sno 2010-03-02]
 	Updated mail/pear-Mail to 1.2.0 [taca 2010-03-02]
+	Updated archivers/php-zip to 5.2.13.1.8.11 [taca 2010-03-02]
