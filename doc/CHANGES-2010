@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1004 2010/03/02 14:47:35 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1005 2010/03/02 14:51:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1198,3 +1198,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/p5-Wx-Perl-ProcessStream to 0.27 [sno 2010-03-02]
 	Updated mail/pear-Mail to 1.2.0 [taca 2010-03-02]
 	Updated archivers/php-zip to 5.2.13.1.8.11 [taca 2010-03-02]
+	Updated www/typolight28-translations to 20100301 [taca 2010-03-02]
