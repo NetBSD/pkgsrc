@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9086 2010/03/01 10:28:22 tnn Exp $
+$NetBSD: TODO,v 1.9087 2010/03/02 11:13:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -781,7 +781,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jools-1.0
 	o jpeg-8a
 	o jpilot-1.6.2
-	o json-glib-0.10.2
 	o kadu-0.6.5
 	o kaffe-1.1.9
 	o kaffeine-0.8.7
