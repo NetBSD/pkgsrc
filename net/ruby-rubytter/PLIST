@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/02 12:10:22 obache Exp $
+${GEM_HOME}/cache/rubytter-${PKGVERSION}.gem
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/examples/direct_message.rb
+${GEM_LIBDIR}/examples/favorite.rb
+${GEM_LIBDIR}/examples/follow.rb
+${GEM_LIBDIR}/examples/friends_timeline.rb
+${GEM_LIBDIR}/examples/home_timeline.rb
+${GEM_LIBDIR}/examples/limit.rb
+${GEM_LIBDIR}/examples/lists.rb
+${GEM_LIBDIR}/examples/replies.rb
+${GEM_LIBDIR}/examples/search.rb
+${GEM_LIBDIR}/examples/update_status.rb
+${GEM_LIBDIR}/examples/use_oauth.rb
+${GEM_LIBDIR}/examples/user.rb
+${GEM_LIBDIR}/lib/rubytter.rb
+${GEM_LIBDIR}/lib/rubytter/connection.rb
+${GEM_LIBDIR}/lib/rubytter/core_ext.rb
+${GEM_LIBDIR}/lib/rubytter/oauth_rubytter.rb
+${GEM_LIBDIR}/spec/rubytter_spec.rb
+${GEM_LIBDIR}/spec/search.json
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/rubytter-${PKGVERSION}.gemspec
