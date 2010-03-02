@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/03/02 21:48:55 jkunz Exp $
+
+--- 3rdparty/qserialiodevice.cpp.orig	2009-03-15 14:46:11.000000000 +0100
++++ 3rdparty/qserialiodevice.cpp
+@@ -464,7 +464,7 @@ void QPseudoTtyProcess::setupChildProces
+ 
+     //we have to change pppd's process group because pppd terminates its process group
+     //when receiving SIGTERM while it is running the chat script
+-    int ret = ::setpgrp();
++    int ret = ::setpgid( 0, 0);
+     if (  ret < 0 )
+         perror("change process grp");
+ #endif
