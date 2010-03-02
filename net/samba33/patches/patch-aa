@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/02/16 16:24:15 taca Exp $
+$NetBSD: patch-aa,v 1.2 2010/03/02 14:56:22 taca Exp $
 
---- ../docs/manpages/smb.conf.5.orig	2010-01-14 10:18:02.000000000 +0000
+--- ../docs/manpages/smb.conf.5.orig	2010-02-22 15:53:37.000000000 +0000
 +++ ../docs/manpages/smb.conf.5
-@@ -6955,6 +6955,15 @@ Example:
- \fI\fIpasswd chat\fR\fR\fI = \fR\fI"*Enter NEW password*" %n\en "*Reenter NEW password*" %n\en "*Password changed*"\fR\fI \fR
+@@ -7441,6 +7441,15 @@ Example:
+ \fI\fIpasswd chat\fR\fR\fI = \fR\fI\FC"*Enter NEW password*" %n\en "*Reenter NEW password*" %n\en "*Password changed*"\F[]\fR\fI \fR
  .RE
  
 +passwd expand gecos (G)
@@ -18,8 +18,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/02/16 16:24:15 taca Exp $
  passwd program (G)
  .\" passwd program
  .PP
-@@ -9003,6 +9012,15 @@ Default:
- \fI\fIstat cache\fR\fR\fI = \fR\fIyes\fR\fI \fR
+@@ -9587,6 +9596,15 @@ Default:
+ \fI\fIstat cache\fR\fR\fI = \fR\fI\FCyes\F[]\fR\fI \fR
  .RE
  
 +state directory (G)
