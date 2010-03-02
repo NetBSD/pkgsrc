@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/02 11:48:02 obache Exp $
+${GEM_HOME}/cache/termcolor-${PKGVERSION}.gem
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/examples/example.rb
+${GEM_LIBDIR}/lib/termcolor.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/termcolor_spec.rb
+${GEM_HOME}/specifications/termcolor-${PKGVERSION}.gemspec
