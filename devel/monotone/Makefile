@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2010/01/18 13:27:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.61 2010/03/02 20:01:23 jmmv Exp $
 #
 
 DISTNAME=	monotone-0.46
@@ -27,9 +27,6 @@ PKG_SUPPORTED_OPTIONS=	inet6
 
 CHECK_INTERPRETER_SKIP+=	share/monotone/contrib/*
 CHECK_PORTABILITY_SKIP+=	debian/*
-
-# Remove with the 0.46 update.
-BUILDLINK_TRANSFORM+=	l:sqlite:sqlite3
 
 REPLACE_SH=			mtnopt
 
