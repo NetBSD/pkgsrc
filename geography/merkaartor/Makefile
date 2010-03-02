@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2010/01/18 09:58:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2010/03/02 21:38:44 jkunz Exp $
 #
 
-DISTNAME=	merkaartor-0.14
-PKGREVISION=	4
+DISTNAME=	merkaartor-0.15.1
 CATEGORIES=	geography
 MASTER_SITES=	http://www.merkaartor.org/downloads/source/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +15,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 QMAKE=			${QTDIR}/bin/qmake
 CONFIGURE_ARGS=		PREFIX=${PREFIX} NODEBUG=1 OSMARENDER=1 PROJ=1 GDAL=1 \
-			GEOIMAGE=1 GPSD=1
+			GEOIMAGE=1 GPSD=1 RELEASE=1
 
 SUBST_CLASSES+=			installtarget
 SUBST_MESSAGE.installtarget=	Fixing wrong install target
