@@ -1,11 +1,11 @@
-$NetBSD: patch-aq,v 1.1.1.1 2010/02/16 16:24:16 taca Exp $
+$NetBSD: patch-aq,v 1.2 2010/03/02 14:56:22 taca Exp $
 
 Add support for:
 
 	passwd expand gecos
 	state directory
 
---- param/loadparm.c.orig	2010-01-14 10:12:10.000000000 +0000
+--- param/loadparm.c.orig	2010-02-25 09:46:35.000000000 +0000
 +++ param/loadparm.c
 @@ -121,6 +121,7 @@ struct global {
  	char *szDeletePrinterCommand;
@@ -23,15 +23,6 @@ Add support for:
  	bool bTimestampLogs;
  	bool bNTSmbSupport;
  	bool bNTPipeSupport;
-@@ -589,7 +591,7 @@ static struct service sDefault = {
- 	True,			/* bLevel2OpLocks */
- 	False,			/* bOnlyUser */
- 	True,			/* bMangledNames */
--	True,			/* bWidelinks */
-+	False,			/* bWidelinks */
- 	True,			/* bSymlinks */
- 	False,			/* bSyncAlways */
- 	False,			/* bStrictAllocate */
 @@ -1248,6 +1250,15 @@ static struct parm_struct parm_table[] =
  		.flags		= FLAG_ADVANCED,
  	},
