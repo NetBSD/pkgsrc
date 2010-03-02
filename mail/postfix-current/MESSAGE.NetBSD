@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.4 2009/09/08 13:06:01 martti Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.5 2010/03/02 08:07:36 martti Exp $
 
-If you are running NetBSD 1.5 (or newer), the existing /etc/rc.d/postfix
-can be forced to start ${PREFIX}/sbin/postfix instead of /usr/sbin/postfix,
-by adding the following lines to /etc/rc.conf.d/postfix:
+The existing /etc/rc.d/postfix can be forced to start ${PREFIX}/sbin/postfix
+instead of /usr/sbin/postfix, by adding the following lines to
+/etc/rc.conf.d/postfix:
 
 	postfix_command='${PREFIX}/sbin/postfix'
 	required_files='${PKG_SYSCONFDIR}/main.cf'
@@ -14,4 +14,7 @@ by adding the following lines to /etc/rc.conf.d/postfix:
 
 Please note that /etc/rc.conf.d/postfix does not exist by default so
 you need to create that file if you need to override the default settings.
+
+Remember to modify /etc/mailer.conf to use ${PREFIX}/sbin/sendmail instead
+of /usr/libexec/postfix/sendmail.
 ===========================================================================
