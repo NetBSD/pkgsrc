@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/03/01 02:58:26 ahoka Exp $
+$NetBSD: distinfo,v 1.8 2010/03/02 23:06:43 ahoka Exp $
 
-SHA1 (cmus-v2.3.0-rc1.tar.bz2) = da167298f45119bcff63223fb021eb7de0558b16
-RMD160 (cmus-v2.3.0-rc1.tar.bz2) = 7e03581c0235608b91c95785b08440b97ee70dcb
-Size (cmus-v2.3.0-rc1.tar.bz2) = 306054 bytes
+SHA1 (cmus-v2.3.0.tar.bz2) = e4685336501efe16b41410bcaf33eab9412aa45b
+RMD160 (cmus-v2.3.0.tar.bz2) = 08020ac9f48f341d4f76df5afa646721f92c2516
+Size (cmus-v2.3.0.tar.bz2) = 166633 bytes
