@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.997 2010/03/02 11:26:19 obache Exp $
+$NetBSD: CHANGES-2010,v 1.998 2010/03/02 11:45:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1191,3 +1191,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added games/hex-a-hop version 1.1.0 [wiz 2010-03-01]
 	Updated textproc/json-glib to 0.10.2 [obache 2010-03-02]
 	Updated net/tor to 0.2.1.24 [obache 2010-03-02]
+	Updated devel/ruby-highline to 1.5.2 [obache 2010-03-02]
