@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2009/08/12 02:38:24 dsainty Exp $
-
-SHA1 (php-zip/zip-1.8.10.tgz) = e4280bfdfecbeedc16e0528bfbda2254a70d5918
-RMD160 (php-zip/zip-1.8.10.tgz) = 424e2401e6ce473c158038b0b6dd4432a3b81364
-Size (php-zip/zip-1.8.10.tgz) = 66972 bytes
