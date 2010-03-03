@@ -1,0 +1,12 @@
+$NetBSD: patch-bp,v 1.1 2010/03/03 15:24:20 is Exp $
+
+--- examples/other/mbrot/bkend.c.orig	1999-07-31 01:29:27.000000000 +0200
++++ examples/other/mbrot/bkend.c
+@@ -39,6 +39,7 @@ char *path;
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ filter(io,name,argv)
+ int io;
