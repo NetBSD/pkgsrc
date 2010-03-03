@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.1.1.1 2005/10/17 16:16:48 is Exp $
+$NetBSD: patch-as,v 1.2 2010/03/03 13:31:53 is Exp $
 
 --- Makefile.orig	2001-02-06 19:30:37.000000000 +0100
 +++ Makefile
@@ -10,6 +10,15 @@ $NetBSD: patch-as,v 1.1.1.1 2005/10/17 16:16:48 is Exp $
 +CFLAGS = -O3 -Wall
  MAKE = make
  SHELL = /bin/sh
+ 
+@@ -34,7 +34,7 @@ all:	config
+ 
+ ##  Install everything.
+ 
+-install:  paths.sh	; sh install.sh
++install:  paths.sh	; sh install.sh ${DESTDIR}
+ 
+ 
  
 @@ -212,6 +212,9 @@ vscripts:  ; @cd vsuite; find * -name Sc
  
