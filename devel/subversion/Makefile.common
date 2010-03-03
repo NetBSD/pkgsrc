@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2009/08/06 22:08:56 gdt Exp $
+# $NetBSD: Makefile.common,v 1.34 2010/03/03 16:33:08 gdt Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -14,6 +14,12 @@ MASTER_SITES=		http://subversion.tigris.org/downloads/
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://subversion.tigris.org/
 LICENSE=		apache-1.1
+
+# gdt isn't set up to test ruby/python/perl and java bindings, and
+# testing ap2-subversion is awkward.  If you object to updates without
+# these tests, please volunteer to test patches and I'll record your
+# email address here.
+MAINTAINER_TEST_VOLUNTEERS=
 
 .include "../../devel/subversion/Makefile.version"
 
