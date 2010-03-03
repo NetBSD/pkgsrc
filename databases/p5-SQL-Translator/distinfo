@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2010/02/22 21:41:18 sno Exp $
+$NetBSD: distinfo,v 1.11 2010/03/03 18:15:54 sno Exp $
 
-SHA1 (SQL-Translator-0.11004.tar.gz) = ddff4e79c8b56d0668188f46be1b4bba7924111e
-RMD160 (SQL-Translator-0.11004.tar.gz) = 2810481115bc5ac01ea74b1fea2abe9a611c003b
-Size (SQL-Translator-0.11004.tar.gz) = 403878 bytes
+SHA1 (SQL-Translator-0.11005.tar.gz) = 78ea5265bbed785ade1a14f318789b9ff493d8ff
+RMD160 (SQL-Translator-0.11005.tar.gz) = b35fef08a91d4887f1284caea29439d53f8e2c31
+Size (SQL-Translator-0.11005.tar.gz) = 404890 bytes
