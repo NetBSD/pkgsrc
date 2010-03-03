@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/11/28 14:34:28 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2010/03/03 08:44:39 obache Exp $
 
---- libdv/Makefile.in.orig	2004-07-14 17:41:22.000000000 +0200
+--- libdv/Makefile.in.orig	2006-09-25 20:11:48.000000000 +0000
 +++ libdv/Makefile.in
-@@ -55,7 +55,7 @@ CONFIG_CLEAN_FILES =
+@@ -61,7 +61,7 @@ am__strip_dir = `echo $$p | sed -e 's|^.
  am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkgincludedir)"
  libLTLIBRARIES_INSTALL = $(INSTALL)
  LTLIBRARIES = $(lib_LTLIBRARIES)

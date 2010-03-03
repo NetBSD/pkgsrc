@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2010/03/03 07:55:51 obache Exp $
+# $NetBSD: Makefile.common,v 1.11 2010/03/03 08:44:38 obache Exp $
 #
 # used by multimedia/libdv-tools/Makefile
 
-DISTNAME=	libdv-0.104
+DISTNAME=	libdv-1.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdv/}
 
@@ -21,8 +21,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libdv.pc.in
 PTHREAD_AUTO_VARS=	yes
-
-CONFIGURE_ARGS+=	--disable-gtk
 
 .include "../../mk/bsd.prefs.mk"
 

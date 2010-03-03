@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2007/12/15 15:30:16 heinz Exp $
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+# $NetBSD: Makefile,v 1.14 2010/03/03 08:44:38 obache Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	2
+CONFIGURE_ARGS+=	--disable-gtk
 
 MAKE_FLAGS+=	SUBDIRS=libdv
 
