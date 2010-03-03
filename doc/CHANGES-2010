@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1012 2010/03/03 08:44:59 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1013 2010/03/03 08:45:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1206,3 +1206,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed databases/php-oracle [taca 2010-03-03]
 	Updated cad/magic to 7.5.188 [dmcmahill 2010-03-03]
 	Updated multimedia/libdv to 1.0.0 [obache 2010-03-03]
+	Updated multimedia/libdv-tools to 1.0.0 [obache 2010-03-03]
