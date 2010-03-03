@@ -1,40 +1,12 @@
-$NetBSD: patch-ai,v 1.3 2006/02/03 02:19:42 rillig Exp $
+$NetBSD: patch-ai,v 1.4 2010/03/03 03:40:00 dmcmahill Exp $
 
---- extflat/EFread.c.orig	2001-01-12 22:12:35.000000000 +0000
-+++ extflat/EFread.c
-@@ -24,7 +24,7 @@
- #include <stdio.h>
- #include <ctype.h>
- #include <stdlib.h>
--#include <varargs.h>
-+#include <stdarg.h>
- #include "misc/magic.h"
- #include "utils/geometry.h"
- #include "utils/hash.h"
-@@ -33,6 +33,9 @@
- #include "extflat/EFint.h"
- #include "misc/paths.h"
+--- graphics/grMain.c.orig	2008-02-03 21:23:56.000000000 +0000
++++ graphics/grMain.c
+@@ -439,7 +439,6 @@ grFgets(str, n, stream, name)
+     fd_set fn;
+     char *newstr;
+     struct timeval threeSec, twentySecs;
+-    extern int errno;
  
-+int efReadError(char *, ...);
-+
-+
- /*
-  * The following table describes the kinds of lines
-  * that may be read in a .ext file.
-@@ -534,14 +537,12 @@ start:
-  */
- 
-     /*VARARGS1*/
--efReadError(fmt, va_alist)
--    char *fmt;
--    va_dcl
-+efReadError(char *fmt, ...)
- {
-     va_list args;
- 
-     (void) printf("%s, line %d: ", efReadFileName, efReadLineNum);
--    va_start(args);
-+    va_start(args, fmt);
-     vfprintf(stdout, fmt, args);
-     va_end(args);
-     (void) fflush(stdout);
+     threeSec.tv_sec = 3;	
+     threeSec.tv_usec = 0;
