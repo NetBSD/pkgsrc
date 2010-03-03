@@ -1,0 +1,12 @@
+$NetBSD: patch-bo,v 1.1 2010/03/03 15:24:20 is Exp $
+
+--- srm/fill.c.orig	1999-07-28 22:42:26.000000000 +0200
++++ srm/fill.c
+@@ -1,6 +1,7 @@
+ /* fill.c */
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include "../config.h"
+ #include "srm.h"
+ 
