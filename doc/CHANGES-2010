@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1024 2010/03/03 17:02:45 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1025 2010/03/03 17:07:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1218,3 +1218,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-CSV_XS to 0.71 [sno 2010-03-03]
 	Updated devel/p5-Log-Log4perl to 1.28 [sno 2010-03-03]
 	Updated devel/p5-Tie-IxHash to 1.22 [sno 2010-03-03]
+	Updated devel/p5-Module-Find to 0.10 [sno 2010-03-03]
