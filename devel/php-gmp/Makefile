@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:27 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2010/03/03 07:32:26 taca Exp $
 
 MODNAME=		gmp
 CATEGORIES+=		devel math
 COMMENT=		PHP extension for arbitrary precision math
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+USE_PHP_EXT_PATCHES=	yes
 
 CONFLICTS=	php-gmp-[0-9]*
 
