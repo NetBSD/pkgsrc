@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2010/01/21 16:32:21 heinz Exp $
+# $NetBSD: Makefile,v 1.73 2010/03/03 16:27:57 wiz Exp $
 
-DISTNAME=	unzip552
-PKGNAME=	unzip-5.52
-PKGREVISION=	4
+DISTNAME=	unzip60
+PKGNAME=	unzip-6.0
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 EXTRACT_SUFX=	.tgz
@@ -15,8 +14,6 @@ LICENSE=	info-zip
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DIST_SUBDIR=	${PKGNAME_NOREV}	# Remove on next update.
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
 
 CONFLICTS=	fcrackzip<1.0nb1
@@ -32,7 +29,7 @@ CFLAGS+=	-I. -DUNIX -Dunix -DUSE_UNSHRINK
 MAKE_FLAGS+=	CF=${CPPFLAGS:Q}\ ${CFLAGS:Q}
 MAKE_FLAGS+=	LF2=${_STRIPFLAG_CC:Q}\ ${LDFLAGS:Q}\ -lz
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/unzip
 
 TEST_TARGET=	check
 
@@ -42,11 +39,10 @@ do-install:
 	cd ${WRKSRC}/unix && ${INSTALL_SCRIPT} zipgrep ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}/man && ${INSTALL_MAN} funzip.1 unzip.1 unzipsfx.1 \
 		zipgrep.1 zipinfo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/unzip
 	cd ${WRKSRC} && ${INSTALL_DATA} BUGS LICENSE README WHERE \
 		${DESTDIR}${PREFIX}/share/doc/unzip
 	cd ${WRKSRC} && ${INSTALL_DATA} COPYING.OLD \
-		${DESTDIR}${PREFIX}/share/doc/unzip/COPYING
+		${DESTDIR}${PREFIX}/share/doc/unzip
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

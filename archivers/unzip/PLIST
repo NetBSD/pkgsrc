@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:28:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/03/03 16:27:57 wiz Exp $
 bin/funzip
 bin/unzip
 bin/unzipsfx
@@ -10,7 +10,7 @@ man/man1/unzipsfx.1
 man/man1/zipgrep.1
 man/man1/zipinfo.1
 share/doc/unzip/BUGS
-share/doc/unzip/COPYING
+share/doc/unzip/COPYING.OLD
 share/doc/unzip/LICENSE
 share/doc/unzip/README
 share/doc/unzip/WHERE
