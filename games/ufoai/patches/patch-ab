@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2010/03/03 07:07:40 wiz Exp $
+
+--- src/renderer/r_image.c.orig	2008-04-25 16:15:02.000000000 +0000
++++ src/renderer/r_image.c
+@@ -651,17 +651,6 @@ static void jpg_skip_input_data (j_decom
+ 	cinfo->src->bytes_in_buffer -= (size_t) num_bytes;
+ }
+ 
+-static void jpeg_mem_src (j_decompress_ptr cinfo, byte * mem, int len)
+-{
+-	cinfo->src = (struct jpeg_source_mgr *) (*cinfo->mem->alloc_small) ((j_common_ptr) cinfo, JPOOL_PERMANENT, sizeof(struct jpeg_source_mgr));
+-	cinfo->src->init_source = jpg_null;
+-	cinfo->src->fill_input_buffer = jpg_fill_input_buffer;
+-	cinfo->src->skip_input_data = jpg_skip_input_data;
+-	cinfo->src->resync_to_restart = jpeg_resync_to_restart;
+-	cinfo->src->term_source = jpg_null;
+-	cinfo->src->bytes_in_buffer = len;
+-	cinfo->src->next_input_byte = mem;
+-}
+ 
+ /**
+  * @sa R_LoadTGA
