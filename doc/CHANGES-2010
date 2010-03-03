@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1009 2010/03/02 23:45:05 bad Exp $
+$NetBSD: CHANGES-2010,v 1.1010 2010/03/03 01:43:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1203,3 +1203,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/monotone-el version 0.46 [jmmv 2010-03-02]
 	Updated audio/cmus to 2.3.0 [ahoka 2010-02-28]
 	Updated misc/openoffice3-bin to 3.2.0 [bad 2010-03-02]
+	Removed databases/php-oracle [taca 2010-03-03]
