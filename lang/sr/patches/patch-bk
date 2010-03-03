@@ -1,0 +1,17 @@
+$NetBSD: patch-bk,v 1.1 2010/03/03 13:01:43 is Exp $
+
+--- install.sh.orig	1999-07-28 22:42:21.000000000 +0200
++++ install.sh
+@@ -3,6 +3,12 @@
+ #  Install SR.
+ 
+ . ./paths.sh
++
++for var in SRCMD SRLIB MAN1 MAN3 MAN5; do
++	eval val=\$${var}
++	eval ${var}=$1${val}
++done
++
+ if [ -z "$SRCMD" -o -z "$SRLIB" ]; then
+     echo 'cannot install -- SRCMD or SRLIB is null' 1>&2
+     exit 1
