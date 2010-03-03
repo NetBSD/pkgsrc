@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/06/30 00:07:18 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2010/03/03 13:01:43 is Exp $
 #
 
 DISTNAME=		sr233
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://www.cs.arizona.edu/sr/
 COMMENT=		The SR language compiler and run time system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
@@ -27,8 +29,8 @@ SUBST_SED.sr+=		-e 's,_XINC_,${X11BASE}/include,g'
 SUBST_SED.sr+=		-e 's,_XLIB_,${X11BASE}/lib,g'
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/csw/cstest ${PREFIX}/bin
-	cd ${WRKSRC}/ps && ${INSTALL_DATA} *.ps ${PREFIX}/share/doc/sr
+	${INSTALL_PROGRAM} ${WRKSRC}/csw/cstest ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC}/ps && ${INSTALL_DATA} *.ps ${DESTDIR}${PREFIX}/share/doc/sr
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
