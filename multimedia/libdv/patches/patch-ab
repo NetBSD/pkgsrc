@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/06/03 15:40:31 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2010/03/03 08:44:39 obache Exp $
 
---- encodedv/Makefile.in.orig	2004-11-30 03:23:42.000000000 +0000
+--- encodedv/Makefile.in.orig	2006-09-25 20:11:48.000000000 +0000
 +++ encodedv/Makefile.in
-@@ -57,19 +57,19 @@ PROGRAMS = $(bin_PROGRAMS) $(noinst_PROG
+@@ -55,19 +55,19 @@ PROGRAMS = $(bin_PROGRAMS) $(noinst_PROG
  am_dubdv_OBJECTS = insert_audio.$(OBJEXT)
  dubdv_OBJECTS = $(am_dubdv_OBJECTS)
  am__DEPENDENCIES_1 =
@@ -26,7 +26,7 @@ $NetBSD: patch-ab,v 1.1 2005/06/03 15:40:31 jmmv Exp $
  am_ppmqscale_OBJECTS = ppmqscale.$(OBJEXT)
  ppmqscale_OBJECTS = $(am_ppmqscale_OBJECTS)
  ppmqscale_LDADD = $(LDADD)
-@@ -232,18 +232,18 @@ EXTRA_DIST = $(man_MANS)
+@@ -236,18 +236,18 @@ EXTRA_DIST = $(man_MANS)
  MAINTAINERCLEANFILES = Makefile.in $(AUX_DIST)
  CLEANFILES = 
  encodedv_SOURCES = encodedv.c 
