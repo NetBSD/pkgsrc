@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.1 2010/03/03 02:01:40 taca Exp $
+$NetBSD: patch-af,v 1.2 2010/03/03 02:15:15 taca Exp $
 
 Fix php-gmp build problem with gmp-5.0.1 and later refering
 http://svn.php.net/viewvc?view=revision&revision=295402.
 
---- gmp.c.orig	2010-01-03 09:23:27.000000000 +0000
-+++ gmp.c
+--- ext/gmp/gmp.c.orig	2010-01-03 09:23:27.000000000 +0000
++++ ext/gmp/gmp.c
 @@ -1396,8 +1396,11 @@ ZEND_FUNCTION(gmp_random)
  
  		GMPG(rand_initialized) = 1;
