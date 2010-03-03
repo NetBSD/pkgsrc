@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2010/01/25 21:14:45 is Exp $
+# $NetBSD: Makefile,v 1.40 2010/03/03 14:30:13 is Exp $
 
 DISTNAME=	vicsrc-2.8
 PKGNAME=	${DISTNAME:S/src//}
@@ -7,6 +7,8 @@ CATEGORIES=	mbone tk
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vic/
 
 MAKE_JOBS_SAFE=		no
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,6 +25,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 
 USE_LANGUAGES=	c c++
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
