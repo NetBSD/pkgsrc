@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1021 2010/03/03 16:28:55 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.1022 2010/03/03 16:49:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1215,3 +1215,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/vim-share to 7.2.385 [martti 2010-03-03]
 	Updated archivers/unzip to 6.0 [wiz 2010-03-03]
 	Updated devel/subversion to 1.6.9nb1 [gdt 2010-03-03]
+	Updated textproc/p5-Text-CSV_XS to 0.71 [sno 2010-03-03]
