@@ -1,12 +1,22 @@
-$NetBSD: patch-ag,v 1.1 2004/01/23 11:43:33 agc Exp $
+$NetBSD: patch-ag,v 1.2 2010/03/03 03:40:00 dmcmahill Exp $
 
---- extcheck/extcheck.c	2004/01/23 09:56:51	1.1
-+++ extcheck/extcheck.c	2004/01/23 09:57:23
-@@ -28,7 +28,6 @@
+--- utils/getrect.c.orig	2006-11-02 23:44:07.000000000 +0000
++++ utils/getrect.c
+@@ -97,6 +97,7 @@ GetRect(fin, skip, rect, scalen, scaled)
+     int dir = 0x1;
+ #endif
  
- #include <stdio.h>
- #include <ctype.h>
--#include <varargs.h>
- #include "misc/magic.h"
- #include "misc/paths.h"
- #include "utils/geometry.h"
++#if !defined(__DragonFly__)
+     if (FILE_CNT(fin) < RECTBUFTHRESHOLD) goto slow;
+     /*
+      * Fast version of GetRect -- read directly from buffer.
+@@ -178,6 +179,9 @@ fastbad:
+ 
+     /* Slow version of GetRect -- read via getc */
+ slow:
++
++#endif /* __DragonFly__ */
++
+     while (skip-- > 0)
+ 	(void) getc(fin);
+ 
