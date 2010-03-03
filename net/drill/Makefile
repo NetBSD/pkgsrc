@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2008/12/17 17:53:26 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/03 13:43:08 he Exp $
 
-VERSION=	1.4.0
+VERSION=	1.6.4
 DISTNAME=	ldns-${VERSION}
 PKGNAME=	drill-${VERSION}
 CATEGORIES=	net
-MASTER_SITES=	http://www.nlnetlabs.nl/downloads/drill/
+MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://www.nlnetlabs.nl/dnssec/drill.html
 COMMENT=	DNSSEC debugging tool a'la dig
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
