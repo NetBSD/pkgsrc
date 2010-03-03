@@ -1,0 +1,9 @@
+sfxr's original purpose was to provide a simple means of getting
+basic sound effects into a game for those people who were working
+hard to get their entries done for the Ludum Dare gaming contest
+within the 48 hours and didn't have time to spend looking for
+suitable ways of doing this.
+
+The idea was that they could just hit a few buttons in this
+application and get some largely randomized effects that were custom
+in the sense that the user could accept/reject each proposed sound.
