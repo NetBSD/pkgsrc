@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2005/06/03 15:40:31 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2010/03/03 08:44:39 obache Exp $
 
---- playdv/Makefile.in.orig	2004-11-30 03:23:43.000000000 +0000
+--- playdv/Makefile.in.orig	2006-09-25 20:11:48.000000000 +0000
 +++ playdv/Makefile.in
-@@ -58,7 +58,7 @@ am_playdv_OBJECTS = playdv.$(OBJEXT) dis
+@@ -56,7 +56,7 @@ am_playdv_OBJECTS = playdv.$(OBJEXT) dis
  playdv_OBJECTS = $(am_playdv_OBJECTS)
  am__DEPENDENCIES_1 =
  playdv_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1 2005/06/03 15:40:31 jmmv Exp $
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/depcomp
  am__depfiles_maybe = depfiles
-@@ -209,7 +209,7 @@ CLEANFILES = 
+@@ -213,7 +213,7 @@ CLEANFILES = 
  AM_CFLAGS = $(SDL_CFLAGS) $(GTK_CFLAGS)
  noinst_HEADERS = display.h oss.h
  playdv_SOURCES = playdv.c display.c display.h oss.c
