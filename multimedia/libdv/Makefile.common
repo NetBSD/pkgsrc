@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.9 2007/06/28 10:11:33 obache Exp $
+# $NetBSD: Makefile.common,v 1.10 2010/03/03 07:55:51 obache Exp $
+#
+# used by multimedia/libdv-tools/Makefile
 
 DISTNAME=	libdv-0.104
 CATEGORIES=	multimedia
