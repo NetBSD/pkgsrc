@@ -1,0 +1,12 @@
+$NetBSD: patch-bn,v 1.1 2010/03/03 15:24:20 is Exp $
+
+--- srtex/print.c.orig	1999-08-03 19:48:22.000000000 +0200
++++ srtex/print.c
+@@ -3,6 +3,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include "../config.h"
+ char *yyref ();
+ 
