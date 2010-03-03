@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9093 2010/03/03 15:43:07 taca Exp $
+$NetBSD: TODO,v 1.9094 2010/03/03 16:28:55 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1222,7 +1222,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o stunnel-4.31
 	o subtitleeditor-0.33.0
-	o subversion-1.6.9
 	o subversion-base-1.6.9
 	o suse_base-11.0
 	o sysinfo-4.2.2
