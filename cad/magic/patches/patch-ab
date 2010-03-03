@@ -1,59 +1,51 @@
-$NetBSD: patch-ab,v 1.7 2006/02/16 18:06:46 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2010/03/03 03:40:00 dmcmahill Exp $
 
---- scripts/config.orig	2006-02-16 11:01:27.000000000 +0000
-+++ scripts/config
-@@ -52,7 +52,7 @@ Magic works with the following window co
- CAT_EOF
+--- scripts/configure.orig	2009-12-30 13:45:48.000000000 +0000
++++ scripts/configure
+@@ -8833,7 +8833,7 @@ fi
  
- set cflags=
--set cppflags='-I. -I${MAGICDIR}'
-+set cppflags="${CPPFLAGS} "'-I. -I${MAGICDIR}'
- set dflags=
- set oflags=
+ if test $usingTcl ; then
+   case $target in
+-    *-sunos4*|*-*-netbsd|NetBSD-*|FreeBSD-*|OpenBSD-*)
++    *-sunos4*|*-*-netbsd*|NetBSD-*|FreeBSD-*|OpenBSD-*)
+       TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
+       TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
+       ;;
+@@ -8843,7 +8843,7 @@ if test $usingTcl ; then
+       ;;
+   esac
  
-@@ -191,15 +191,21 @@ case "1":
-     breaksw
- case "2":
-     echo "NetBSD 1.x selected"
--    set cpp = "/usr/libexec/cpp -P -traditional"
-+    if (-f xx/usr/libexec/cpp) then
-+    	set cpp = "/usr/libexec/cpp -P -traditional"
-+    else if (-f xx/usr/libexec/cpp0) then
-+    	set cpp = "/usr/libexec/cpp0 -P -traditional"
-+    else
-+	set cpp = "cc -E -traditional"
-+    endif
-     if ($?usingX11) then
- 	echo "NOTE:  Since you are running NetBSD using X11, we're assuming"
- 	echo "       that you want to get the X11 library from either the normal"
-  	echo "       library area or from the directory /usr/X11R6/lib.  If this"
-  	echo "       is not correct, edit the defs.mak file by hand after this"
- 	echo "       script completes."
--    set gr_cflags=("$gr_cflags" -I/usr/X11R6/include)
-- 	set gr_libs=(-L/usr/X11R6/lib "$gr_libs")
-+    set gr_cflags=("$gr_cflags" -I${X11BASE}/include)
-+ 	set gr_libs=(-L${X11BASE}/lib -R${X11BASE}/lib "$gr_libs")
-     endif
-     breaksw
- case "3":
-@@ -453,16 +459,10 @@ endif
- set have_readline="no"
- if ($readline == "y" || $readline == "yes") then
-     set dflags=("$dflags" -DUSE_READLINE)
--    if ( -f /usr/lib/libreadline.so ) then
--	if ( `nm /usr/lib/libreadline.so | grep pre_input | wc -l` > 0 ) then
--	    set have_readline="yes"
--	    set dflags=($dflags -DHAVE_READLINE)
--	    set rl_libs=($rl_libs -lreadline -ltermcap)
--	    if ( `nm /usr/lib/libreadline.so | grep rl_filename_completion_function | wc -l` > 0) then
--		set dflags=($dflags -DREADLINE_4_DOT_2_PLUS)
--	    endif
--	endif
--    endif
-+    set have_readline="yes"
-+    set dflags=($dflags -DHAVE_READLINE)
-+    set rl_libs=($rl_libs '-Wl,-R${LOCALBASE}/lib' -lreadline -ltermcap)
-+    set dflags=($dflags -DREADLINE_4_DOT_2_PLUS)
-     if ($?compileIRIX) then
-        echo "NOTE:  Must compile with GNU make (gmake), not the IRIX make"
-     endif
+-  loclib=`echo ${TCL_LIB_SPEC} | cut -d ' ' -f 1 | sed -e 's/-L//'`
++  loclib=`echo ${TCL_LIB_SPEC} | sed -e 's/.*-L//' -e 's/ .*//'`
+ 
+   TCL_LIB_SPEC="-l${TCL_LIB_NAME}"
+   TK_LIB_SPEC="-l${TK_LIB_NAME}"
+@@ -9461,7 +9461,7 @@ else
+   use_system_readline=no
+ fi
+ 
+-    if test $use_system_readline == yes ; then
++    if test $use_system_readline = yes ; then
+ 	cat >>confdefs.h <<\_ACEOF
+ #define HAVE_READLINE 1
+ _ACEOF
+@@ -10586,8 +10586,8 @@ fi
+ 
+ 
+       if test "$test_ok" = yes; then
+-        SHLIB_CFLAGS="-fpic"
+-        LDDL_FLAGS="-Bshareable -x ${LIB_SPEC}"
++        SHLIB_CFLAGS="-fPIC"
++        LDDL_FLAGS="-shared ${LIB_SPEC}"
+       fi
+       ;;
+ 
+@@ -12141,7 +12143,7 @@ if test $usingTcl ; then
+ EOF
+       usingBLT=`cat temp.out`
+       rm -f temp.out
+-      if test "x${usingBLT}" == "xyes" ; then
++      if test "x${usingBLT}" = "xyes" ; then
+          echo "yes"
+       else
+          echo "no"

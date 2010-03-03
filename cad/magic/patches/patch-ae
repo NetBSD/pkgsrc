@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2004/01/23 11:43:33 agc Exp $
+$NetBSD: patch-ae,v 1.2 2010/03/03 03:40:00 dmcmahill Exp $
 
---- ext2sim/ext2sim.c	2004/01/23 09:53:44	1.1
-+++ ext2sim/ext2sim.c	2004/01/23 09:54:02
-@@ -19,7 +19,7 @@
- #include <stdio.h>
- #include <ctype.h>
- #include <stdlib.h>
--#include <varargs.h>
-+#include <stdarg.h>
- #include "misc/magic.h"
- #include "utils/geometry.h"
- #include "utils/hash.h"
+--- utils/magic.h.orig	2006-10-04 17:30:19.000000000 +0000
++++ utils/magic.h
+@@ -280,7 +280,7 @@ extern char AbortMessage[];
+ #ifdef CYGWIN
+ #include <errno.h>
+ #define sys_errlist _sys_errlist
+-#elif !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(macosx)
++#elif !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(macosx)
+ extern int errno;
+ /* extern char *sys_errlist[]; */
+ #elif defined(macosx)
