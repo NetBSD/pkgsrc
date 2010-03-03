@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9092 2010/03/03 12:01:16 obache Exp $
+$NetBSD: TODO,v 1.9093 2010/03/03 15:43:07 taca Exp $
 
 Suggested new packages
 ======================
@@ -443,6 +443,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o benchfft-3.1
 	o bftpd-2.6
 	o biew-6.1.0
+	o bind-9.6.2
+	o bind-9.7.0
 	o binutils-2.20
 	o bioperl-1.5.0
 	o bitlbee-1.2.4
@@ -983,6 +985,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o odbc-postgresql-8.2.3
 	o offlineimap-6.2.0
 	o olvwm-4.5
+	o oniguruma-5.9.2
 	o oo2c-2.1.7
 	o openafs-1.4.10 [pkg/41262]
 	o openafs-1.4.11
