@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1026 2010/03/03 17:12:37 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1027 2010/03/03 18:16:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1220,3 +1220,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Tie-IxHash to 1.22 [sno 2010-03-03]
 	Updated devel/p5-Module-Find to 0.10 [sno 2010-03-03]
 	Updated devel/p5-autodie to 2.10 [sno 2010-03-03]
+	Updated databases/p5-SQL-Translator to 0.11005 [sno 2010-03-03]
