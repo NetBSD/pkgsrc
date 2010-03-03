@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1018 2010/03/03 15:42:31 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1019 2010/03/03 16:06:49 martti Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1212,3 +1212,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/drill to 1.6.4 [he 2010-03-03]
 	Updated www/ikiwiki to 3.20100302 [schmonz 2010-03-03]
 	Updated www/typolight28-translations to 20100302 [taca 2010-03-03]
+	Updated editors/vim-share to 7.2.385 [martti 2010-03-03]
