@@ -1,0 +1,38 @@
+$NetBSD: patch-bm,v 1.1 2010/03/03 15:24:19 is Exp $
+
+--- sr/main.c.orig	2010-03-03 15:16:17.000000000 +0100
++++ sr/main.c
+@@ -11,7 +11,7 @@ static void dofile	PARAMS ((char *filena
+ static int  concrete	PARAMS ((Nodeptr e));
+ static void genmake	PARAMS ((Nodeptr e));
+ static void gmake	PARAMS ((Nodeptr e, char *rtype, char *half));
+-static void link	PARAMS ((char *files[]));
++static void mylink	PARAMS ((char *files[]));
+ 
+ 
+ 
+@@ -101,7 +101,7 @@ char *argv[];
+     } else {
+ 	if (!option_q)
+ 	    fprintf (stderr, "linking:\n");
+-	link (argv + optind);		/* exec srl to build executable file */
++	mylink (argv + optind);		/* exec srl to build executable file */
+ 	/*NOTREACHED*/
+     }
+ }
+@@ -348,13 +348,13 @@ char *dir, *fname;
+ 
+ 
+ 
+-/*  link (files) -- run srl to link the components we have compiled
++/*  mylink (files) -- run srl to link the components we have compiled
+  *
+  *  "files" is portion of orig argv containing file names (including SR files).
+  */
+ 
+ static void
+-link (files)
++mylink (files)
+ char *files[];
+ {
+     char path [MAX_PATH];
