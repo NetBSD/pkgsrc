@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1028 2010/03/03 18:21:30 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1029 2010/03/03 18:43:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1222,3 +1222,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-autodie to 2.10 [sno 2010-03-03]
 	Updated databases/p5-SQL-Translator to 0.11005 [sno 2010-03-03]
 	Updated databases/p5-DBIx-Class to 0.08120 [sno 2010-03-03]
+	Updated graphics/p5-RRDTool-OO to 0.30 [sno 2010-03-03]
