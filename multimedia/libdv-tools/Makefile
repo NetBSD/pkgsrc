@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2006/04/06 06:22:25 reed Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/03 08:44:39 obache Exp $
 
 .include "../../multimedia/libdv/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-tools-/}
-PKGREVISION=		1
 
 COMMENT+=		(standalone tools)
 
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-gtk/--enable-gtk/g}
+USE_TOOLS+=		pkg-config
 
-BUILD_DIRS=		${WRKSRC}/encodedv ${WRKSRC}/playdv
-INSTALL_DIRS=		${WRKSRC}/encodedv ${WRKSRC}/playdv
+CONFIGURE_ARGS+=	--enable-gtk
 
-BUILDLINK_API_DEPENDS.libdv+=	libdv>=0.104nb1
+BUILD_DIRS=		encodedv playdv
+INSTALL_DIRS=		encodedv playdv
+
+BUILDLINK_API_DEPENDS.libdv+=	libdv>=1.0.0
 
 .include "../../devel/glib/buildlink3.mk"
 .include "../../multimedia/libdv/buildlink3.mk"
