@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.18 2008/03/23 13:03:13 tron Exp $
+$NetBSD: distinfo,v 1.19 2010/03/03 16:27:57 wiz Exp $
 
-SHA1 (unzip-5.52/unzip552.tgz) = 1831bd59b9e607a69052f83b263384895e2d4a19
-RMD160 (unzip-5.52/unzip552.tgz) = b749b0923bc4cceaa6f937aef688e9713a84328c
-Size (unzip-5.52/unzip552.tgz) = 1140291 bytes
+SHA1 (unzip60.tgz) = abf7de8a4018a983590ed6f5cbd990d4740f8a22
+RMD160 (unzip60.tgz) = 48af66606e9472e45fbb94bc4e285da23d1b89ba
+Size (unzip60.tgz) = 1376845 bytes
 SHA1 (patch-aa) = de66b7b5c45904167e8596ce5235d957c2df4d2a
-SHA1 (patch-ab) = dd426fdf4b774bd73f4ee46da470ffa3c2cf6513
-SHA1 (patch-ac) = ada9059d9b3384396bbf6437f55fa40f2f6c0c73
-SHA1 (patch-ad) = a0ad66bc1f13dd1ec9f9d7c9eb5b49ca3edb09be
-SHA1 (patch-ae) = b6f50523a0020b57e3385731dd0c7b447b1a9242
+SHA1 (patch-ab) = 3b15e24ac04af371b2b424251582b5434e14a91f
+SHA1 (patch-ac) = 7891fad33d07746d1067e373bf955086489e0fee
