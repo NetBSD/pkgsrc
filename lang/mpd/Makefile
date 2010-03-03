@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/06/30 00:07:18 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2010/03/03 13:31:53 is Exp $
 #
 
 DISTNAME=		mpd.1.0.1
@@ -15,12 +15,16 @@ COMMENT=		The MPD language compiler and run time system
 
 MAKE_JOBS_SAFE=		no
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS+=		musicpd-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
 
 
 TEST_TARGET=		verify
+
+DP=			${DESTDIR}${PREFIX}
 
 SUBST_CLASSES+=		mpd
 SUBST_STAGE.mpd=	pre-configure
@@ -35,11 +39,11 @@ INSTALLATION_DIRS=	bin lib/mpd ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 \
 			${PKGMANDIR}/man5 share/doc/mpd
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/csw/cstest ${PREFIX}/bin/mpd-cstest
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/mpd
-	${INSTALL_DATA} ${WRKSRC}/doc/cairn.jpg ${PREFIX}/share/doc/mpd
-	${INSTALL_DATA} ${WRKSRC}/doc/install.html ${PREFIX}/share/doc/mpd
-	${INSTALL_DATA} ${WRKSRC}/doc/release.html ${PREFIX}/share/doc/mpd
+	${INSTALL_PROGRAM} ${WRKSRC}/csw/cstest ${DP}/bin/mpd-cstest
+	${INSTALL_DATA} ${WRKSRC}/README ${DP}/share/doc/mpd
+	${INSTALL_DATA} ${WRKSRC}/doc/cairn.jpg ${DP}/share/doc/mpd
+	${INSTALL_DATA} ${WRKSRC}/doc/install.html ${DP}/share/doc/mpd
+	${INSTALL_DATA} ${WRKSRC}/doc/release.html ${DP}/share/doc/mpd
 
 .include "../..//x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

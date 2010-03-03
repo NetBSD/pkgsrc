@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2006/05/18 12:54:50 is Exp $
+$NetBSD: distinfo,v 1.7 2010/03/03 13:31:53 is Exp $
 
 SHA1 (mpd-language/mpd.1.0.1.tgz) = 797b505935ccc741fdca6010bc0bd53601a6f262
 RMD160 (mpd-language/mpd.1.0.1.tgz) = 2862ae9220ec0a546ed4193aeee4dc8dc94610a2
@@ -6,7 +6,7 @@ Size (mpd-language/mpd.1.0.1.tgz) = 581498 bytes
 SHA1 (patch-aa) = f3c3911afa2596e72d8e3056f93e5277cd41dabc
 SHA1 (patch-ab) = 2a086280fefb4acddd19cb3cbafd58f8de5b309e
 SHA1 (patch-ar) = 7b9c76e47a5f5900a2bfd6b9bb4b585dc10da562
-SHA1 (patch-as) = 4a7701f337f64ca4f0e68377ca6f32e5110a5ff0
+SHA1 (patch-as) = 510df56b50ee7c0ab1c64a24e6c9f97317541d3c
 SHA1 (patch-at) = 6f7be8ba344a1606663f7dfeefa73edd62380721
 SHA1 (patch-au) = f694bd75154de25247e9609dc954c9319ab32089
 SHA1 (patch-av) = b10aa333ecf77e29933256117a9c4d27792993bd
@@ -26,3 +26,4 @@ SHA1 (patch-bi) = 31fc9eb664dd3e73c7fe12ae6e95fd85b67286fc
 SHA1 (patch-bj) = c5123801140fbfdcbfdabbcd39fe70d2e71355fc
 SHA1 (patch-bk) = ffbcc49346ea57a3fd0eed51d7bb00f80e25f3a5
 SHA1 (patch-bl) = 4739bac6eafea8946394b403081ab3e6612ab39d
+SHA1 (patch-bm) = 7e089cf0c69d758f3bcc12b93217554bd26da08c
