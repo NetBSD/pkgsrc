@@ -1,28 +1,26 @@
-# $NetBSD: Makefile,v 1.21 2009/06/30 00:07:11 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/03/03 03:40:00 dmcmahill Exp $
 #
 
-DISTNAME=	magic-7.1
-PKGREVISION=	5
+DISTNAME=	magic-7.5.188
 CATEGORIES=	cad
-MASTER_SITES=	http://vlsi.cornell.edu/magic/
+MASTER_SITES=	http://opencircuitdesign.com/magic/archive/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://vlsi.cornell.edu/magic/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://opencircuitdesign.com/magic/index.html
 COMMENT=	Integrated circuit layout system
 
 MAKE_JOBS_SAFE=		no
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake printf
-USE_GNU_READLINE=	# uses rl_*_completion_function
+USE_GNU_READLINE=yes	# uses rl_*_completion_function
 MAKE_ENV+=	MAGIC_HOME=${PREFIX:Q}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+GNU_CONFIGURE=	yes
+CONFIG_DIRS=	scripts
 
-.include "../../mk/endian.mk"
-.if ${MACHINE_ENDIAN} == "big"
-CPPFLAGS+=	-DIS_BIG_ENDIAN
-.else
-CPPFLAGS+=	-DIS_LITTLE_ENDIAN
-.endif
+MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
 
 USE_TOOLS+=		awk:run
 REPLACE_INTERPRETER+=	awk
@@ -30,18 +28,22 @@ REPLACE.awk.old=	/bin/awk
 REPLACE.awk.new=	${TOOLS_PATH.awk}
 REPLACE_FILES.awk=	ext2spice/spice2sim
 
-post-patch:
-	cd ${WRKSRC} && for f in `${FIND} . -type f -exec ${GREP} -l CAD_HOME {} /dev/null \\;` ; do \
-		${ECHO} "Replacing CAD_HOME in $$f" ; \
-		${MV} -f $$f $$f.bak ; ${SED} 's;CAD_HOME;MAGIC_HOME;g' $$f.bak > $$f ; \
-		${RM} $$f.bak ; \
-		done
-	${CHMOD} 755 ${WRKSRC}/scripts/config
+USE_TOOLS+=		tclsh:run
+REPLACE_INTERPRETER+=	tclsh
+REPLACE.tclsh.old=	.*tclsh
+REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
+REPLACE_FILES.tclsh=	tcltk/strip_reflibs.tcl
 
-do-configure:
-	cd ${WRKSRC} && ${PRINTF} '1\n2\n6\n\n\n\n\n\n\n\n\n\n\n' | \
-		${SETENV} ${MAKE_ENV} ./scripts/config
+USE_TOOLS+=		wish:run
+REPLACE_INTERPRETER+=	wish
+REPLACE.wish.old=	.*wish
+REPLACE.wish.new=	${PREFIX}/bin/wish
+REPLACE_FILES.wish=	tcltk/tkshell.tcl
 
 .include "../../devel/readline/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/blt/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
