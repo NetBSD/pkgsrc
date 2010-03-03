@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.16 2010/03/03 14:22:23 dmcmahill Exp $
+
+Some builds of gcc seem to support this for compiling but then fail during
+linking with undefined reference to `__stack_chk_fail_local'
+
+--- config-scripts/cups-compiler.m4.orig	2008-06-16 17:41:11.000000000 +0000
++++ config-scripts/cups-compiler.m4
+@@ -109,7 +109,7 @@ if test -n "$GCC"; then
+ 	AC_MSG_CHECKING(if GCC supports -fstack-protector)
+ 	OLDCFLAGS="$CFLAGS"
+ 	CFLAGS="$CFLAGS -fstack-protector"
+-	AC_TRY_COMPILE(,,
++	AC_TRY_LINK(, [return 0;],
+ 		OPTIM="$OPTIM -fstack-protector"
+ 		AC_MSG_RESULT(yes),
+ 		AC_MSG_RESULT(no))
