@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2004/01/22 12:25:59 grant Exp $
+$NetBSD: patch-ab,v 1.6 2010/03/03 16:27:57 wiz Exp $
 
---- unix/Makefile.orig	2002-02-17 04:00:38.000000000 +1100
+--- unix/Makefile.orig	2009-01-18 22:41:18.000000000 +0000
 +++ unix/Makefile
 @@ -42,7 +42,7 @@
  # such as -DDOSWILD).
@@ -10,8 +10,8 @@ $NetBSD: patch-ab,v 1.5 2004/01/22 12:25:59 grant Exp $
 +#CC = cc#	try using "gcc" target rather than changing this (CC and LD
  LD = $(CC)#	must match, else "unresolved symbol:  ___main" is possible)
  AS = as
- LOC = $(LOCAL_UNZIP)
-@@ -552,7 +552,7 @@ generic3:	unix_make  # third try if unkn
+ LOC = $(D_USE_BZ2) $(LOCAL_UNZIP)
+@@ -580,7 +580,7 @@ generic_bz2:	unix_make
  generic_zlib:	unix_make
  	@echo\
   "This target assumes zlib (libz.a or libz.so.*) is already installed."
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.5 2004/01/22 12:25:59 grant Exp $
  
  # Generic GNU C shared library.  This is an example of how to compile UnZip as
  # a shared library.  (Doing so as a static library would be similar.)  See also
-@@ -613,7 +613,7 @@ vax:		unzips	# general-purpose VAX targe
+@@ -651,7 +651,7 @@ vax:		unzips	# general-purpose VAX targe
  bsd:		_bsd	# generic BSD (BSD 4.2 & Ultrix handled in unzip.h)
  
  _bsd:		unix_make
