@@ -1,0 +1,16 @@
+$NetBSD: patch-bl,v 1.1 2010/03/03 15:24:19 is Exp $
+
+--- gen.h.orig	1999-07-28 22:42:21.000000000 +0200
++++ gen.h
+@@ -43,8 +43,9 @@ void exit();
+ double fmod();	/* not in Sequent <math.h> */
+ 
+ #if defined(__STDC__) || defined(__sgi) || defined(_AIX) || defined(__alpha)
+-void *malloc(), *realloc();
+-void *memset(), *memcpy();
++#include <unistd.h>
++#include <string.h>
++#include <stdlib.h>
+ #else
+ char *malloc(), *realloc();
+ char *memset(), *memcpy();
