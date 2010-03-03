@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9089 2010/03/03 07:53:56 obache Exp $
+$NetBSD: TODO,v 1.9090 2010/03/03 08:44:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -824,7 +824,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcares-1.7.0
 	o libdockapp-0.6.1
 	o libdrm-2.4.18
-	o libdv-1.0.0
 	o libextractor-0.6.0
 	o libflash-0.4.13
 	o libgda-4.0.7 [GNOME 2.28]
