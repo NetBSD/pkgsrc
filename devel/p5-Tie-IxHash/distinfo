@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:29 agc Exp $
+$NetBSD: distinfo,v 1.4 2010/03/03 17:02:11 sno Exp $
 
-SHA1 (Tie-IxHash-1.21.tar.gz) = 8f7bbd0cc96fe4bf9b4587ed4ae9fd5cc70d7cbd
-RMD160 (Tie-IxHash-1.21.tar.gz) = ba69f40b28400a4d5dbb43aa63562ff31ec8f5e9
-Size (Tie-IxHash-1.21.tar.gz) = 6446 bytes
+SHA1 (Tie-IxHash-1.22.tar.gz) = dfb3be70ed185ba7ad36cd136649e95d187a6ad0
+RMD160 (Tie-IxHash-1.22.tar.gz) = 43d1dae9df02e317a8fe9ca922bc773102faa7f7
+Size (Tie-IxHash-1.22.tar.gz) = 8552 bytes
