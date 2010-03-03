@@ -1,0 +1,17 @@
+$NetBSD: patch-bm,v 1.1 2010/03/03 13:31:54 is Exp $
+
+--- install.sh.orig	2000-10-31 23:53:40.000000000 +0100
++++ install.sh
+@@ -3,6 +3,12 @@
+ #  Install MPD.
+ 
+ . ./paths.sh
++
++for var in MPDCMD MPDLIB MAN1 MAN3 MAN5; do
++	eval val=\$${var}
++	eval ${var}=$1${val}
++done
++
+ if [ -z "$MPDCMD" -o -z "$MPDLIB" ]; then
+     echo 'cannot install -- MPDCMD or MPDLIB is null' 1>&2
+     exit 1
