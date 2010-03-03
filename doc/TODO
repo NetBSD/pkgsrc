@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9090 2010/03/03 08:44:59 obache Exp $
+$NetBSD: TODO,v 1.9091 2010/03/03 08:58:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -1302,6 +1302,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.2.4
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
+	o webalizer-2.21.2
 	o webby-0.9.3
 	o webkit-1.1.15.4
 	o webmin-1.500
