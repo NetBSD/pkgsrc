@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1014 2010/03/03 12:01:16 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1015 2010/03/03 13:43:17 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1208,3 +1208,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/libdv to 1.0.0 [obache 2010-03-03]
 	Updated multimedia/libdv-tools to 1.0.0 [obache 2010-03-03]
 	Updated math/py-networkx to 1.0.1 [obache 2010-03-03]
+	Added devel/colordiff version 1.0.9 [gdt 2010-03-03]
