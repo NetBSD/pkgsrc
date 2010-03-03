@@ -1,4 +1,4 @@
-/*	$NetBSD: db.h,v 1.2 2010/01/24 08:52:01 obache Exp $	*/
+/*	$NetBSD: db.h,v 1.3 2010/03/03 06:03:45 obache Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993, 1994
@@ -42,6 +42,14 @@
 #define	RET_ERROR	-1		/* Return values. */
 #define	RET_SUCCESS	 0
 #define	RET_SPECIAL	 1
+
+/*
+ * XXX
+ * SGI/IRIX already has a pgno_t.
+*/
+#ifdef  __sgi
+#define pgno_t	db_pgno_t
+#endif
 
 #define	MAX_PAGE_NUMBER	0xffffffff	/* >= # of pages in a file */
 typedef uint32_t	pgno_t;
