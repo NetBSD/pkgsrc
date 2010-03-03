@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1010 2010/03/03 01:43:55 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1011 2010/03/03 03:41:38 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1204,3 +1204,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/cmus to 2.3.0 [ahoka 2010-02-28]
 	Updated misc/openoffice3-bin to 3.2.0 [bad 2010-03-02]
 	Removed databases/php-oracle [taca 2010-03-03]
+	Updated cad/magic to 7.5.188 [dmcmahill 2010-03-03]
