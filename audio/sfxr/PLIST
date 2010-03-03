@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/03 22:29:34 wiz Exp $
+bin/sfxr
+share/applications/sfxr.desktop
+share/doc/sfxr/readme.txt
+share/icons/hicolor/48x48/apps/sfxr.png
+share/sfxr/font.tga
+share/sfxr/ld48.tga
+share/sfxr/sfxr.bmp
