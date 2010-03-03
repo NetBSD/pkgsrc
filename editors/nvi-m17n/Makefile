@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2009/12/17 22:12:49 abs Exp $
+# $NetBSD: Makefile,v 1.43 2010/03/03 09:18:14 obache Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040401
@@ -15,6 +15,8 @@ COMMENT=	Clone of vi/ex, with multilingual patch
 
 CONFLICTS=	vigor-[0-9]* nvi-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFIGURE_DIRS=	${WRKSRC}/build
 GNU_CONFIGURE=	YES
 
@@ -29,6 +31,8 @@ CONFIGURE_ENV+=	vi_cv_path_perl=${TOOLS_PATH.perl:Q}
 USE_TOOLS+=	sh perl:run
 
 CPPFLAGS+=	-DGTAGS
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "options.mk"
 
