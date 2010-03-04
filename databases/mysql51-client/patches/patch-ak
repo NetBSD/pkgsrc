@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- include/Makefile.in.orig	2010-02-04 11:46:18.000000000 +0000
++++ include/Makefile.in
+@@ -393,6 +393,7 @@ BUILT_SOURCES = $(HEADERS_GEN_MAKE) link
+ HEADERS_GEN_CONFIGURE = mysql_version.h
+ HEADERS_GEN_MAKE = my_config.h
+ HEADERS_ABI = mysql.h mysql_com.h mysql_time.h \
++		mysqld_ername.h mysqld_error.h sql_state.h \
+ 			my_list.h my_alloc.h typelib.h mysql/plugin.h
+ 
+ pkginclude_HEADERS = $(HEADERS_ABI) my_dbug.h m_string.h my_sys.h \

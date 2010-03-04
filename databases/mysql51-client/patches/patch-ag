@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- config/ac-macros/readline.m4.orig	2010-02-04 11:36:58.000000000 +0000
++++ config/ac-macros/readline.m4
+@@ -26,7 +26,7 @@ AC_DEFUN([MYSQL_CHECK_LIBEDIT_INTERFACE]
+ 		#include "readline/readline.h"
+ 	    ],
+ 	    [ 
+-		char res= *(*rl_completion_entry_function)(0,0);
++		char res= (*rl_completion_entry_function)(0,0);
+ 		completion_matches(0,0);
+ 	    ],
+ 	    [

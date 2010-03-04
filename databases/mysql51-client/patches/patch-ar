@@ -1,0 +1,21 @@
+$NetBSD: patch-ar,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- scripts/Makefile.in.orig	2010-02-04 11:46:23.000000000 +0000
++++ scripts/Makefile.in
+@@ -414,15 +414,13 @@ bin_SCRIPTS = @server_scripts@ \
+ 			mysql_fix_privilege_tables \
+ 			mysql_fix_extensions \
+ 			mysql_setpermission \
+-			mysql_secure_installation \
+ 			mysql_zap \
+ 			mysqlaccess \
+ 			mysqlbug \
+ 			mysql_convert_table_format \
+ 			mysql_find_rows \
+ 			mysqlhotcopy \
+-			mysqldumpslow \
+-			mysqld_multi
++			mysqldumpslow
+ 
+ noinst_SCRIPTS = make_binary_distribution \
+ 			make_sharedlib_distribution
