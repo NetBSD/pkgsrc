@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- client/sql_string.cc.orig	2010-02-04 11:36:53.000000000 +0000
++++ client/sql_string.cc
+@@ -37,6 +37,10 @@ extern void sql_element_free(void *ptr);
+ 
+ #include "sql_string.h"
+ 
++#ifdef NEEDS_BSTRING_H
++#include <bstring.h> /* defines bzero() */
++#endif
++
+ /*****************************************************************************
+ ** String functions
+ *****************************************************************************/

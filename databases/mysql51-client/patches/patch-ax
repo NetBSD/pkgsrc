@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- strings/Makefile.in.orig	2010-02-04 11:46:44.000000000 +0000
++++ strings/Makefile.in
+@@ -927,7 +927,7 @@ install-data-am:
+ 
+ install-dvi: install-dvi-am
+ 
+-install-exec-am: install-pkglibLIBRARIES
++install-exec-am:
+ 
+ install-html: install-html-am
+ 

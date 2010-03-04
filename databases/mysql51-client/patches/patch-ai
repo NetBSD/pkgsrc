@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- configure.in.orig	2010-02-04 11:36:59.000000000 +0000
++++ configure.in
+@@ -2784,7 +2784,7 @@ server_scripts=
+ 
+ dnl This probably should be cleaned up more - for now the threaded
+ dnl client is just using plain-old libs.
+-sql_client_dirs="strings mysys dbug extra regex libmysql"
++sql_client_dirs="strings mysys regex libmysql"
+ 
+ AM_CONDITIONAL(THREAD_SAFE_CLIENT, test "$THREAD_SAFE_CLIENT" != "no")
+ 

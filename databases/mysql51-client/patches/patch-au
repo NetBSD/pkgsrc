@@ -1,0 +1,15 @@
+$NetBSD: patch-au,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- sql/log_event.h.orig	2010-02-04 11:39:50.000000000 +0000
++++ sql/log_event.h
+@@ -28,6 +28,10 @@
+ #ifndef _log_event_h
+ #define _log_event_h
+ 
++#ifdef NEEDS_BSTRING_H
++#include <bstring.h> /* defines bzero() */
++#endif
++
+ #if defined(USE_PRAGMA_INTERFACE) && !defined(MYSQL_CLIENT)
+ #pragma interface			/* gcc class implementation */
+ #endif

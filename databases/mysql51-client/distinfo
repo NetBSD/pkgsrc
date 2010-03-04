@@ -1,0 +1,30 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+SHA1 (mysql-5.1.44.tar.gz) = 265fbca02b2ef62926e2845d5fdf394298eb3206
+RMD160 (mysql-5.1.44.tar.gz) = f98d25322893b422ee708d683ee73ec9e17ad40a
+Size (mysql-5.1.44.tar.gz) = 23400457 bytes
+SHA1 (patch-aa) = 2a5321738e637a56e57cd6b1b40908d2bf275506
+SHA1 (patch-ab) = 8bbbb84d659810031162475917ec233951c67ca4
+SHA1 (patch-ac) = 5d5f1b67eb96254b821cf4a3e99eec26dd703bf6
+SHA1 (patch-ad) = 4e98f696b8b5098456e53a8de710a6bcd547997c
+SHA1 (patch-ae) = c74481e5856cbd73662495630c73baec93586e9b
+SHA1 (patch-af) = 399a55ac369831757fad5aec4dbd8b76050276e4
+SHA1 (patch-ag) = bfb6eec77d7c5aa8d2b849632769005dcf2e272c
+SHA1 (patch-ah) = 5fd4db0e04a97289f38a5467bbae5041f4082b51
+SHA1 (patch-ai) = 722364e59070ab2d3377a694698f32bf25427bf2
+SHA1 (patch-aj) = 476384877154dd8d2465c6c9a0e411c220d405e4
+SHA1 (patch-ak) = 5dd0982e9c9b2d0199a3a148a12a4dd219533e9d
+SHA1 (patch-al) = 93ba34d66fd054fbcf9e1eb3a042770d4d6820ec
+SHA1 (patch-am) = 7cced70246776a64e782e0c7d335d5948a2189f1
+SHA1 (patch-an) = a608060cee7aadaf8bcde84016a73131a75dea32
+SHA1 (patch-ao) = dbf68af2d2ded85140aac3602d4f6ce5d68cc78a
+SHA1 (patch-ap) = 88dd29051ee68775cf15f3618a16c4f994e5e104
+SHA1 (patch-aq) = d04016a2ab84709aee0c08aef71c2f79e82fc6f3
+SHA1 (patch-ar) = bc0e2083ec285be8adac1027e63bf076e4c57211
+SHA1 (patch-as) = 5eb3a9308b13a25fa813db0ed4a06f8e43db74f6
+SHA1 (patch-at) = 241049f78ed4aa51497c1ebac4acea75efb0da03
+SHA1 (patch-au) = b177ebba44026ebd6ad5683f81875544c6f8746d
+SHA1 (patch-av) = 8b5eb4b6535f1acb4e64496cd1228107895741a1
+SHA1 (patch-aw) = 96b2078f40a57ec5377f551b1c756473c684612e
+SHA1 (patch-ax) = 390debbc31e710f5aa41fda6a8b1134a14a2ff23
+SHA1 (patch-ay) = 857758885a24d72ceb206475474b4f395543cb8e
