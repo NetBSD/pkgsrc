@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- src/folders_delete.php.orig	2009-08-12 17:29:53.000000000 +0900
++++ src/folders_delete.php
+@@ -106,7 +106,7 @@ else
+ /** lets see if we CAN move folders to the trash.. otherwise,
+     ** just delete them **/
+ if ((isset($delete_folder) && $delete_folder) ||
+-    preg_match('/^' . $trash_folder . '.+/', $mailbox) ) {
++    preg_match('/^' . preg_quote($trash_folder, '/') . '.+/i', $mailbox) ) {
+     $can_move_to_trash = FALSE;
+ }
+ 
