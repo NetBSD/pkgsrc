@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.37.4.1 2010/02/06 10:08:54 spz Exp $
+# $NetBSD: Makefile.php,v 1.37.4.2 2010/03/04 20:27:04 tron Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -56,7 +56,7 @@ SUBST_MESSAGE.ini=	Fixing default ini files.
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msuhosin)
-SUHOSIN_PHPVER=		5.2.12
+SUHOSIN_PHPVER=		5.2.13
 . if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS}
 PKG_FAIL_REASON+=	"The suhosin patch is currently not available for"
 PKG_FAIL_REASON+=	"this version of PHP.  You may have to wait until"
