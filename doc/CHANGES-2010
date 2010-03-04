@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1031 2010/03/04 01:31:09 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1032 2010/03/04 01:48:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1226,3 +1226,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added audio/sfxr version 1.1 [wiz 2010-03-03]
 	Updated www/drupal to 5.22 [taca 2010-03-04]
 	Updated www/drupal6 to 6.16 [taca 2010-03-04]
+	Updated geography/epsg to 7.4.1 [gdt 2010-03-04]
