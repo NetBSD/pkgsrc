@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2006/11/10 10:07:20 martin Exp $
+$NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
 
 --- xuvmstat.c.orig	2005-09-09 15:38:48.000000000 +0200
-+++ xuvmstat.c	2006-11-10 10:52:11.000000000 +0100
++++ xuvmstat.c	2010-03-04 15:51:54.000000000 +0100
 @@ -40,13 +40,13 @@
  
  #include "libcdcx.h"
@@ -199,12 +199,18 @@ $NetBSD: patch-aa,v 1.8 2006/11/10 10:07:20 martin Exp $
        gp_ctx = create_graph(3, "SWITCH/SWAP", names, before, after, color, white);
      }  
  
-@@ -373,25 +373,25 @@
+@@ -372,26 +372,31 @@
+ 		   buf, strlen(buf)); 
      y += get_fontheight(fnt_fixed) + 5;
  
++#if __NetBSD_Version__ >= 599002100
++    snprintf(buf, sizeof(buf), " woke=%d, revs=%d",
++	curexp.pdwoke, curexp.pdrevs);
++#else
      snprintf(buf, sizeof(buf), " woke=%d, revs=%d, swout=%d",
 -	cexp.pdwoke, cexp.pdrevs, cexp.pdswout);
 +	curexp.pdwoke, curexp.pdrevs, curexp.pdswout);
++#endif
      XDrawImageString(xdpy->dpy, win, gc, 5, get_fontheight(fnt_fixed) + y,
  		   buf, strlen(buf)); 
      y += get_fontheight(fnt_fixed) + 1;
