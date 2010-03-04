@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9095 2010/03/04 01:48:50 gdt Exp $
+$NetBSD: TODO,v 1.9096 2010/03/04 08:33:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -362,7 +362,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-6.0.1
-	o abcmidi-20100123
+	o abcmidi-20100223
 	o abiword-2.8
 	o abook-0.6.0pre2 [pkg/42672]
 	o accerciser-1.8.0 [GNOME 2.28]
@@ -431,7 +431,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avl-2.0.2a
 	o awesome-3.4.3
 	o baci-20040415
-	o bacula-5.0.0
+	o bacula-5.0.1
 	o balance-3.52
 	o bash-completion-1.1
 	o bbdb-2.35
@@ -470,6 +470,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cddbd-1.5.2
 	o cdif-1.19
 	o cdlabelgen-4.1.0
+	o cdrtools-2.01.01alpha77
 	o cfengine2-2.2.10
 	o cfitsio-3230
 	o cgdb-0.6.5
@@ -569,8 +570,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-554
+	o etm-556
 	o eukleides-1.5.1
+	o evolution-data-server-2.28.3.1
 	o evolution-exchange-2.28.2
 	o evolution-mapi-0.28.2 [GNOME 2.28]
 	o ex-20050325
@@ -581,7 +583,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ezxml-0.8.6
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o fbreader-0.12.5.1
+	o fbreader-0.12.6
 	o fcitx-3.6.2
 	o fd-3.00d
 	o festival-1.96
@@ -595,7 +597,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fisg-0.3.12
 	o fixesproto-4.1.1 [xorg-server 1.7]
 	o flashplayer-0.4.13
-	o flightgear-1.9.0
+	o flightgear-2.0.0
 	o flpsed-0.4.4
 	o fluidsynth-1.1.1
 	o font-adobe-100dpi-1.0.1
@@ -641,6 +643,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.27.0
 	o gap-4r4p9
 	o gated-3.6
+	o gbrainy-1.40
 	o gcc-4.3.2
 	o gcc44-4.4.3
 	o gcdmaster-1.2.3
@@ -668,6 +671,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
+	o glabels-2.2.7
 	o glade3-3.6.7 [GNOME 2.26]
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
@@ -790,6 +794,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kbibtex-0.2.2
 	o kdbg-2.2.0
 	o kde-4.4
+	o kde4-4.4.1
 	o kdrill-6.5
 	o kid3-1.3
 	o kismet-2010.01r1
@@ -824,7 +829,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libassuan-2.0.0
 	o libcares-1.7.0
 	o libdockapp-0.6.1
-	o libdrm-2.4.18
+	o libdrm-2.4.19
 	o libextractor-0.6.0
 	o libflash-0.4.13
 	o libgda-4.0.7 [GNOME 2.28]
@@ -886,6 +891,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mathomatic-15.0.5
 	o mc-4.7.0.2
 	o memconf-2.9 [pkg/40201]
+	o memtester-4.1.3
 	o merb-1.0.8.1
 	o merb-action-args-1.0.8.1
 	o merb-activerecord-1.0.0.1
@@ -937,9 +943,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpop-1.0.19
 	o mserv-devel-0.41
 	o msmtp-1.4.19
-	o mtools-4.0.11
+	o mtools-4.0.13
 	o multitail-5.2.6
-	o munin-1.4.3
+	o munin-1.4.4
 	o muse-0.9.2
 	o mysql-5.1.44 [taca]
 	o mysqlcc-0.9.8
@@ -1083,7 +1089,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-lxml-2.2.5
 	o py-m2crypto-0.20.2
 	o py-moin-1.9.0 [pkg/42602]
-	o py-moin-1.9.1
+	o py-moin-1.9.2
 	o py-mutagen-1.19 [pkg/42851]
 	o py-psycopg2-2.0.13
 	o py-pyrex-0.9.8.6
@@ -1163,6 +1169,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sabayon-2.28.1 [GNOME 2.28]
 	o sablecc-3.2
 	o samba-3.4.6
+	o samba-3.5.0
 	o samba33-3.3.11
 	o sarg-2.2.5
 	o sawfish-1.6.2
@@ -1210,6 +1217,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o spamassassin-3.3.0
 	o spcaview-20060501
 	o spim-7.4
+	o sqlitemanager-1.2.4
 	o sqwebmail-5.4.0
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
@@ -1317,7 +1325,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wmx-7
 	o wordpress-2.9.1 [pkg/42765]
 	o wordpress-2.9.2
-	o worker-2.17.5
+	o worker-2.17.6
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9f
 	o wxRemind-101
@@ -1348,6 +1356,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-input-mouse-1.5.0
 	o xf86-input-void-1.3.0
 	o xf86-video-ark-0.7.2
+	o xf86-video-ati-6.12.5
 	o xf86-video-chips-1.2.2
 	o xf86-video-dummy-0.3.2
 	o xf86-video-geode-2.11.6 [wip]
@@ -1431,7 +1440,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yorick-2.1.05
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.3.14
+	o zile-2.3.15
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zope-3.4.0
