@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1038 2010/03/04 16:01:14 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1039 2010/03/04 16:32:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1233,3 +1233,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/php5 to 5.2.13nb1 [taca 2010-03-04]
 	Updated security/php-suhosin to 5.2.13.0.9.29 [taca 2010-03-04]
 	Updated mail/squirrelmail to 1.4.20rc2nb4 [taca 2010-03-04]
+	Added databases/mysql51-client version 5.1.44 [taca 2010-03-04]
+	Added databases/mysql51-server version 5.1.44 [taca 2010-03-04]
