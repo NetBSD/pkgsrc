@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.1 2010/03/04 21:40:29 spz Exp $
+
+--- src/ipcf.c.orig	2000-03-15 22:13:28.000000000 +0000
++++ src/ipcf.c
+@@ -63,7 +63,7 @@ c_userchar (void)
+ 	static char *s;	/* user input string */
+ 
+ 	/* user typed one or more characters - gather a line of input */
+-	s=getline(NULL, 1);
++	s=i2cb_getline(NULL, 1);
+ 
+ 	if (!s) /* EOF */
+ 	{ 	

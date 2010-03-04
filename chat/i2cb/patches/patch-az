@@ -1,0 +1,13 @@
+$NetBSD: patch-az,v 1.1 2010/03/04 21:40:29 spz Exp $
+
+--- src/s_person.c.orig	2000-03-15 22:13:29.000000000 +0000
++++ src/s_person.c
+@@ -107,7 +107,7 @@ sendpersonal (char *nick, char *text, in
+ 	{
+ 		do
+ 		{
+-			text = getline(">> ",0);
++			text = i2cb_getline(">> ",0);
+ 
+ 			if (!text || (!*text))
+ 			{
