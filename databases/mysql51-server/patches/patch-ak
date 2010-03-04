@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- mysql-test/Makefile.in.orig	2010-02-04 11:46:20.000000000 +0000
++++ mysql-test/Makefile.in
+@@ -401,7 +401,7 @@ yassl_libs = @yassl_libs@
+ yassl_taocrypt_extra_cxxflags = @yassl_taocrypt_extra_cxxflags@
+ zlib_dir = @zlib_dir@
+ testroot = $(prefix)
+-testdir = $(testroot)/mysql-test
++testdir = $(testroot)/share/mysql-test
+ test_SCRIPTS = mtr \
+ 		mysql-test-run \
+ 		mysql-test-run.pl \

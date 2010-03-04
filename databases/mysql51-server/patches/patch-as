@@ -1,0 +1,22 @@
+$NetBSD: patch-as,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- libmysql/Makefile.in.orig	2010-02-04 11:46:18.000000000 +0000
++++ libmysql/Makefile.in
+@@ -549,7 +549,6 @@ nh = my_global.h config-win32.h dbug.h e
+ # Get a list of the needed objects  
+ lobjs = $(mysysobjects1) $(dbugobjects) $(mystringsobjects) $(sqlobjects)
+ all: $(BUILT_SOURCES)
+-	$(MAKE) $(AM_MAKEFLAGS) all-am
+ 
+ .SUFFIXES:
+ .SUFFIXES: .c .lo .o .obj
+@@ -745,8 +744,7 @@ installdirs:
+ 	for dir in "$(DESTDIR)$(pkglibdir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+-install: $(BUILT_SOURCES)
+-	$(MAKE) $(AM_MAKEFLAGS) install-am
++install:
+ install-exec: install-exec-am
+ install-data: install-data-am
+ uninstall: uninstall-am

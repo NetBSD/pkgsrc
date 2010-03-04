@@ -1,0 +1,33 @@
+$NetBSD: patch-an,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- scripts/Makefile.in.orig	2010-02-04 11:46:23.000000000 +0000
++++ scripts/Makefile.in
+@@ -409,19 +409,7 @@ BUILT_SOURCES = mysql_fix_privilege_tabl
+ 		mysql_fix_privilege_tables_sql.c
+ 
+ bin_SCRIPTS = @server_scripts@ \
+-			msql2mysql \
+-			mysql_config \
+-			mysql_fix_privilege_tables \
+-			mysql_fix_extensions \
+-			mysql_setpermission \
+ 			mysql_secure_installation \
+-			mysql_zap \
+-			mysqlaccess \
+-			mysqlbug \
+-			mysql_convert_table_format \
+-			mysql_find_rows \
+-			mysqlhotcopy \
+-			mysqldumpslow \
+ 			mysqld_multi
+ 
+ noinst_SCRIPTS = make_binary_distribution \
+@@ -727,7 +715,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-dist_pkgdataDATA
++install-data-am:
+ 
+ install-dvi: install-dvi-am
+ 

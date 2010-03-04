@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- mysys/stacktrace.c.orig	2010-02-04 11:38:51.000000000 +0000
++++ mysys/stacktrace.c
+@@ -327,7 +327,7 @@ void my_write_core(int sig)
+   __gcov_flush();
+ #endif
+   pthread_kill(pthread_self(), sig);
+-#if defined(P_MYID) && !defined(SCO)
++#if HAVE_SIGSEND && defined(P_MYID) && !defined(SCO)
+   /* On Solaris, the above kill is not enough */
+   sigsend(P_PID,P_MYID,sig);
+ #endif
