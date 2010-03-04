@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1030 2010/03/03 22:30:48 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1031 2010/03/04 01:31:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1224,3 +1224,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBIx-Class to 0.08120 [sno 2010-03-03]
 	Updated graphics/p5-RRDTool-OO to 0.30 [sno 2010-03-03]
 	Added audio/sfxr version 1.1 [wiz 2010-03-03]
+	Updated www/drupal to 5.22 [taca 2010-03-04]
+	Updated www/drupal6 to 6.16 [taca 2010-03-04]
