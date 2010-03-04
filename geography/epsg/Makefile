@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2009/08/25 11:57:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2010/03/04 01:48:39 gdt Exp $
 #
 
 DISTNAME=		epsg-v${VERS}sql-PostgreSQL
-PKGNAME=		epsg-6.13
-PKGREVISION=		1
-VERS=			6_13
+PKGNAME=		epsg-7.4.1
+VERS=			7_4_1
+VERS_README=		7_4
 CATEGORIES=		geography databases
 MASTER_SITES+=		http://www.epsg.org/databases/ \
 			http://www.epsg.org/databases/Arc/${VERS}/
@@ -47,12 +47,13 @@ SUBST_VARS.epsg=	PREFIX EPSGDIR VERS
 SUBST_MESSAGE.epsg=	Fixing EPSG example script
 
 PLIST_SUBST+=		VERS=${VERS}
+PLIST_SUBST+=		VERS_README=${VERS_README}
 
 post-extract:
 	${CP} ${FILESDIR}/epsg-load ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/epsg-v${VERS}_Readme.pdf ${DESTDIR}${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/epsg-v${VERS_README}_readme.pdf ${DESTDIR}${DOCDIR:Q}
 	${INSTALL_SCRIPT} ${WRKSRC}/epsg-load ${DESTDIR}${BINDIR}
 .for d in pgsql mysql
 .for f in ${DATAFILES.${d}}
