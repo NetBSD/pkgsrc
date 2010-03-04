@@ -1,22 +1,25 @@
-# $NetBSD: Makefile,v 1.23 2009/06/15 13:12:02 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2010/03/04 20:42:01 gls Exp $
 
-DISTNAME=	x3270-3213
-PKGNAME=	x3270-3.2.13
-PKGREVISION=	5
+DISTNAME=	suite3270-3.3.10ga4-src
+PKGNAME=	x3270-3.3.10ga4
 CATEGORIES=	x11
-MASTER_SITES=	http://www.geocities.com/SiliconValley/Peaks/7814/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=x3270/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.geocities.com/SiliconValley/Peaks/7814/
+HOMEPAGE=	http://x3270.bgp.nu/
 COMMENT=	3270 Terminal emulator
 
+GNU_CONFIGURE=	yes
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/x3270-3.2
+WRKSRC=		${WRKDIR}/x3270-3.3
 USE_IMAKE=	yes
 
 FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/misc
+
+EGDIR=			${PREFIX}/share/examples/x3270
+CONF_FILES=		${EGDIR}/ibm_hosts ${PKG_SYSCONFDIR}/ibm_hosts
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
