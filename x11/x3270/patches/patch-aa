@@ -1,20 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2001/05/12 21:54:13 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.6 2010/03/04 20:42:01 gls Exp $
 
-fix types (needed on LP64)
-
---- pr3287/pr3287.c.orig	Thu Sep 14 10:41:12 2000
-+++ pr3287/pr3287.c	Sat May 12 17:49:49 2001
-@@ -97,5 +97,5 @@
- /* Memory allocation. */
- void *
--Malloc(unsigned len)
-+Malloc(size_t len)
- {
- 	void *p = malloc(len);
-@@ -115,5 +115,5 @@
+--- configure.orig      2009-09-22 01:59:47.000000000 +0000
++++ configure
+@@ -4025,7 +4025,7 @@ no|*)     no_xmkmf=1
+ esac
  
- void *
--Realloc(void *p, unsigned len)
-+Realloc(void *p, size_t len)
- {
- 	void *pn;
+ # Set up the configuration directory.
+-LIBX3270DIR='${sysconfdir}/x3270'
++LIBX3270DIR='${PREFIX}/share/examples/x3270'
+ 
+ 
+ { $as_echo "$as_me:$LINENO: checking for library containing forkpty" >&5
