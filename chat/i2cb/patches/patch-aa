@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/11/14 00:55:44 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2010/03/04 21:40:29 spz Exp $
 
---- config.orig	Sun Mar 12 02:51:52 2000
+--- config.orig	2000-03-12 01:51:52.000000000 +0000
 +++ config
 @@ -7,31 +7,31 @@
  #
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/11/14 00:55:44 hubertf Exp $
  
  # Compile options.
 -CFLAGS		= -Wall -Werror -g -I/usr/pkg/include -I/usr/pkg/include/tcl8.0
-+CFLAGS		+= -Wall -Werror -g -I${LOCALBASE}/include -I${LOCALBASE}/include/tcl/generic -DLOCALBASE=\"${LOCALBASE}\"
++CFLAGS		+= -Wall -g -I${LOCALBASE}/include -I${LOCALBASE}/include/tcl/generic -DLOCALBASE=\"${LOCALBASE}\"
  
  # Lint flags
 -LFLAGS		= -uvberxHz -I/usr/pkg/include -I/usr/pkg/include/tcl8.0
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/11/14 00:55:44 hubertf Exp $
  
  # Other libraries to include.
 -OTHERLIBS	=-L/usr/pkg/lib -ltcl80 -lreadline -lcurses -ltermcap -lm
-+OTHERLIBS	+=-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -ltcl83 -lreadline -lcurses -ltermcap -lm
++OTHERLIBS	+=-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -ltcl -lreadline -lcurses -ltermcap -lm
  
  # Makefile dependency generator.
  MAKEDEPEND	= mkdep
