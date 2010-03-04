@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- scripts/mysqld_safe.sh.orig	2010-02-04 11:38:53.000000000 +0000
++++ scripts/mysqld_safe.sh
+@@ -539,7 +539,7 @@ fi
+ # Alternatively, you can start mysqld with the "myisam-recover" option. See
+ # the manual for details.
+ #
+-# echo "Checking tables in $DATADIR"
++# log_notice "Checking tables in $DATADIR"
+ # $MY_BASEDIR_VERSION/bin/myisamchk --silent --force --fast --medium-check $DATADIR/*/*.MYI
+ # $MY_BASEDIR_VERSION/bin/isamchk --silent --force $DATADIR/*/*.ISM
+ 

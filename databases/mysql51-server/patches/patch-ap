@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- storage/myisam/Makefile.in.orig	2010-02-04 11:46:32.000000000 +0000
++++ storage/myisam/Makefile.in
+@@ -137,7 +137,7 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUD
+ LTCOMPILE = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-CCLD = $(CC)
++CCLD = $(CXX)
+ LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+ 	$(LDFLAGS) -o $@

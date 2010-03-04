@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- support-files/Makefile.in.orig	2010-02-04 11:46:45.000000000 +0000
++++ support-files/Makefile.in
+@@ -779,7 +779,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-aclocalDATA install-pkgsuppDATA \
++install-data-am: install-aclocalDATA \
+ 	install-pkgsuppSCRIPTS
+ 
+ install-dvi: install-dvi-recursive

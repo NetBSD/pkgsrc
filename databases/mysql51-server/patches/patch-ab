@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- Makefile.in.orig	2010-02-04 11:46:48.000000000 +0000
++++ Makefile.in
+@@ -407,14 +407,10 @@ AUTOMAKE_OPTIONS = foreign
+ EXTRA_DIST = INSTALL-SOURCE INSTALL-WIN-SOURCE \
+ 			README COPYING EXCEPTIONS-CLIENT CMakeLists.txt
+ 
+-SUBDIRS = . include @docs_dirs@ @zlib_dir@ \
+-			@readline_topdir@ sql-common scripts \
+-			@pstack_dir@ \
+-			@sql_union_dirs@ unittest \
+-			@sql_server@ @man_dirs@ tests \
+-			netware @libmysqld_dirs@ \
+-			mysql-test support-files sql-bench @tools_dirs@ \
+-			win
++SUBDIRS = . include scripts @pstack_dir@ \
++			strings mysys dbug extra regex storage plugin \
++			libmysql @sql_server@ @man_dirs@ tests \
++			@libmysqld_dirs@ mysql-test support-files
+ 
+ DIST_SUBDIRS = . include Docs zlib \
+ 			cmd-line-utils sql-common scripts \

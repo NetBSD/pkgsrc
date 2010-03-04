@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- mysys/my_gethwaddr.c.orig	2010-02-04 11:38:50.000000000 +0000
++++ mysys/my_gethwaddr.c
+@@ -33,7 +33,7 @@ static my_bool memcpy_and_test(uchar *to
+ }
+ #endif   /* FreeBSD || linux */
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ 
+ #include <net/ethernet.h>
+ #include <sys/sysctl.h>

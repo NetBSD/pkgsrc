@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- config/ac-macros/ssl.m4.orig	2010-02-04 11:36:58.000000000 +0000
++++ config/ac-macros/ssl.m4
+@@ -105,7 +105,7 @@ AC_DEFUN([MYSQL_FIND_OPENSSL], [
+   openssl_libs="-L$location/lib/ -lssl -lcrypto"
+   MYSQL_CHECK_SSL_DIR([$openssl_includes], [$openssl_libs])
+ 
+-  if test "$mysql_ssl_found" == "no"
++  if test "$mysql_ssl_found" = "no"
+   then
+     #
+     # BUG 764: Compile failure with OpenSSL on Red Hat Linux (krb5.h missing)
+@@ -115,7 +115,7 @@ AC_DEFUN([MYSQL_FIND_OPENSSL], [
+     MYSQL_CHECK_SSL_DIR([$openssl_includes], [$openssl_libs])
+   fi
+ 
+-  if test "$mysql_ssl_found" == "no"
++  if test "$mysql_ssl_found" = "no"
+   then
+     AC_MSG_ERROR([Could not link with SSL libs at $location])
+   fi
