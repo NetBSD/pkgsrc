@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.287 2010/02/11 00:59:54 asau Exp $
+# $NetBSD: Makefile,v 1.288 2010/03/04 05:01:51 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -83,6 +83,7 @@ SUBDIR+=	kali
 SUBDIR+=	ksi
 SUBDIR+=	librep
 SUBDIR+=	libtcl-nothread
+SUBDIR+=	likepython
 SUBDIR+=	lua
 SUBDIR+=	lush
 SUBDIR+=	maude
@@ -141,6 +142,8 @@ SUBDIR+=	ruby
 SUBDIR+=	ruby-doc-stdlib
 SUBDIR+=	ruby18
 SUBDIR+=	ruby18-base
+SUBDIR+=	ruby19
+SUBDIR+=	ruby19-base
 SUBDIR+=	sablevm
 SUBDIR+=	sablevm-classpath
 SUBDIR+=	sablevm-classpath-gui
