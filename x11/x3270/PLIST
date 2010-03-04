@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/15 13:12:02 joerg Exp $
-bin/pr3287
+@comment $NetBSD: PLIST,v 1.7 2010/03/04 20:42:01 gls Exp $
 bin/x3270
 bin/x3270if
 lib/X11/fonts/misc/3270-12.pcf.gz
@@ -8,7 +7,6 @@ lib/X11/fonts/misc/3270-20.pcf.gz
 lib/X11/fonts/misc/3270-20b.pcf.gz
 lib/X11/fonts/misc/3270.pcf.gz
 lib/X11/fonts/misc/3270b.pcf.gz
-lib/X11/fonts/misc/3270d.pcf.gz
 lib/X11/fonts/misc/3270gr.pcf.gz
 lib/X11/fonts/misc/3270gt12.pcf.gz
 lib/X11/fonts/misc/3270gt12b.pcf.gz
@@ -20,9 +18,8 @@ lib/X11/fonts/misc/3270gt32.pcf.gz
 lib/X11/fonts/misc/3270gt32b.pcf.gz
 lib/X11/fonts/misc/3270gt8.pcf.gz
 lib/X11/fonts/misc/3270h.pcf.gz
-lib/X11/x3270/ibm_hosts
-${IMAKE_MAN_DIR}/ibm_hosts.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/pr3287.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/x3270-script.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/x3270.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/x3270if.${IMAKE_MANNEWSUFFIX}
+man/cat1/x3270.0
+man/man1/x3270-script.1
+man/man1/x3270if.1
+man/man5/ibm_hosts.5
+share/examples/x3270/ibm_hosts
