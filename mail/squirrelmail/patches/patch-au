@@ -1,0 +1,30 @@
+$NetBSD: patch-au,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- src/options_highlight.php.orig	2009-08-12 17:29:53.000000000 +0900
++++ src/options_highlight.php
+@@ -40,7 +40,7 @@ sqGetGlobalVar('color_type', $color_type
+ sqGetGlobalVar('match_type', $match_type);
+ sqGetGlobalVar('value', $value);
+ 
+-if (!sqgetGlobalVar('smtoken',$submitted_token, SQ_POST)) {
++if (!sqgetGlobalVar('smtoken',$submitted_token, SQ_FORM)) {
+     $submitted_token = '';
+ }
+ /* end of get globals */
+@@ -163,13 +163,13 @@ if ($mhl_count > 0) {
+ 
+         $links = '<small>[<a href="options_highlight.php?action=edit&amp;theid=' . $i . '">' .
+                  _("Edit") .
+-                 '</a>]&nbsp;[<a href="options_highlight.php?action=delete&amp;theid='.  $i . '">' .
++                 '</a>]&nbsp;[<a href="options_highlight.php?action=delete&amp;smtoken=' . sm_generate_security_token() . '&amp;theid='.  $i . '">' .
+                  _("Delete");
+         if($i > 0) {
+-            $links .= '</a>]&nbsp;[<a href="options_highlight.php?action=up&amp;theid='.  $i . '">' .  _("Up");
++            $links .= '</a>]&nbsp;[<a href="options_highlight.php?action=up&amp;smtoken=' . sm_generate_security_token() . '&amp;theid='.  $i . '">' .  _("Up");
+         }
+         if($i+1 < $mhl_count) {
+-            $links .= '</a>]&nbsp;[<a href="options_highlight.php?action=down&amp;theid='.  $i . '">' .  _("Down");
++            $links .= '</a>]&nbsp;[<a href="options_highlight.php?action=down&amp;smtoken=' . sm_generate_security_token() . '&amp;theid='.  $i . '">' .  _("Down");
+         }
+         $links .= '</a>]</small>';
+ 

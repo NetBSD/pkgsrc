@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.14 2009/10/04 01:27:15 taca Exp $
+$NetBSD: patch-ab,v 1.15 2010/03/04 16:00:37 taca Exp $
 
 * Use case ignore match for detecting encoded word.
 * Fix encoding problem of attached filenames; don't convert encoding here.
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.14 2009/10/04 01:27:15 taca Exp $
          case 'decodeheader':
              $ret = str_replace("\t", "", $ret);
 -            if (preg_match('/=\?([^?]+)\?(q|b)\?([^?]+)\?=/', $ret))
-+            if (preg_match('/=\?([^?]*)\?(Q|B)\?([^?]*)\?=/Ui', $ret))
++            if (preg_match('/=\?([^?]*)\?(Q|B)\?([^?]*)\?=/i', $ret))
                  $ret = @mb_decode_mimeheader($ret);
              $ret = @mb_convert_encoding($ret, 'EUC-JP', 'AUTO');
              break;
