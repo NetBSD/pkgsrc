@@ -1,0 +1,63 @@
+$NetBSD: patch-af,v 1.3 2010/03/04 16:00:37 taca Exp $
+
+--- src/search.php.orig	2009-08-12 17:29:53.000000000 +0900
++++ src/search.php
+@@ -226,7 +226,7 @@ function printSearchMessages($msgs,$mail
+         if ((!empty($allow_server_sort) && $allow_server_sort) || (!empty($allow_server_thread) && $allow_server_thread)) {
+             $msort = $msgs;
+         } else {
+-            $msort = calc_msort($msgs, $sort);
++            $msort = calc_msort($msgs, $sort, $mailbox);
+         }
+ 
+         if ( $mailbox == 'INBOX' ) {
+@@ -368,6 +368,7 @@ if ($saved_count > 0) {
+         .     '?mailbox=' . urlencode($saved_attributes['saved_folder'][$i + 1])
+         .     '&amp;what=' . urlencode($saved_attributes['saved_what'][$i + 1])
+         .     '&amp;where=' . urlencode($saved_attributes['saved_where'][$i + 1])
++        .     '&amp;smtoken=' . sm_generate_security_token()
+         .   '">' . _("edit") . '</a>'
+         .   '&nbsp;|&nbsp;'
+         .   '<a href="search.php'
+@@ -375,9 +376,10 @@ if ($saved_count > 0) {
+         .     '&amp;what=' . urlencode($saved_attributes['saved_what'][$i + 1])
+         .     '&amp;where=' . urlencode($saved_attributes['saved_where'][$i + 1])
+         .     '&amp;submit=Search_no_update'
++        .     '&amp;smtoken=' . sm_generate_security_token()
+         .   '">' . _("search") . '</a>'
+         .   '&nbsp;|&nbsp;'
+-        .   "<a href=\"search.php?count=$i&amp;submit=delete\">"
++        .   "<a href=\"search.php?count=$i&amp;submit=delete&amp;smtoken=" . sm_generate_security_token() .'">'
+         .     _("delete")
+         .   '</a>'
+         . '</td></tr>';
+@@ -395,7 +397,7 @@ if ($recent_count > 0) {
+        . html_tag( 'td' )
+        . html_tag( 'table', '', 'center', '', 'width="100%" cellpadding="0" cellspacing="0" border="0"' );
+     for ($i=1; $i <= $recent_count; ++$i) {
+-            if (isset($attributes['search_folder'][$i])) { 
++            if (isset($attributes['search_folder'][$i])) {
+             if ($attributes['search_folder'][$i] == "") {
+                 $attributes['search_folder'][$i] = "INBOX";
+             }
+@@ -411,7 +413,7 @@ if ($recent_count > 0) {
+                . html_tag( 'td', htmlspecialchars($attributes['search_what'][$i]), 'left' )
+                . html_tag( 'td', htmlspecialchars($attributes['search_where'][$i]), 'center' )
+                . html_tag( 'td', '', 'right' )
+-               .   "<a href=\"search.php?count=$i&amp;submit=save\">"
++               .   "<a href=\"search.php?count=$i&amp;submit=save&amp;smtoken=" . sm_generate_security_token() . '">'
+                .     _("save")
+                .   '</a>'
+                .   '&nbsp;|&nbsp;'
+@@ -420,9 +422,10 @@ if ($recent_count > 0) {
+                .     '&amp;what=' . urlencode($attributes['search_what'][$i])
+                .     '&amp;where=' . urlencode($attributes['search_where'][$i])
+                .     '&amp;submit=Search_no_update'
++               .     '&amp;smtoken=' . sm_generate_security_token()
+                .   '">' . _("search") . '</a>'
+                .   '&nbsp;|&nbsp;'
+-               .   "<a href=\"search.php?count=$i&amp;submit=forget\">"
++               .   "<a href=\"search.php?count=$i&amp;submit=forget&amp;smtoken=" . sm_generate_security_token() . '">'
+                .     _("forget")
+                .   '</a>'
+                . '</td></tr>';

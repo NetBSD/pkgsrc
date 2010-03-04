@@ -1,0 +1,14 @@
+$NetBSD: patch-am,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- functions/page_header.php.orig	2009-04-13 16:52:57.000000000 +0000
++++ functions/page_header.php
+@@ -28,7 +28,8 @@ function displayHtmlHeader( $title = 'Sq
+ 
+     echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">' .
+          "\n\n" . html_tag( 'html' ,'' , '', '', '' ) . "\n<head>\n" .
+-         "<meta name=\"robots\" content=\"noindex,nofollow\">\n";
++         "<meta name=\"robots\" content=\"noindex,nofollow\">\n" .
++         "<meta http-equiv=\"x-dns-prefetch-control\" content=\"off\">\n";
+ 
+     if ( !isset( $custom_css ) || $custom_css == 'none' ) {
+         if ($theme_css != '') {

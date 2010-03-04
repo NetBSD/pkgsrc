@@ -1,0 +1,13 @@
+$NetBSD: patch-cd,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- plugins/squirrelspell/modules/edit_dic.mod.orig	2009-04-16 07:00:49.000000000 +0900
++++ plugins/squirrelspell/modules/edit_dic.mod
+@@ -96,7 +96,7 @@ if (!$words){
+   /**
+    * Check if all dictionaries were empty.
+    */
+-  if (!$msg) {
++  if (empty($msg)) {
+     $msg = '<p>' . _("No words in your personal dictionary.") . '</p>';
+   } else {
+     $msg .= '</table>';

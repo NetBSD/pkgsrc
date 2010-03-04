@@ -1,0 +1,44 @@
+$NetBSD: patch-ao,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- functions/imap_messages.php.orig	2009-07-29 11:21:06.000000000 +0900
++++ functions/imap_messages.php
+@@ -930,19 +930,27 @@ function sqimap_get_small_header_list($i
+ 
+         /* non server sort stuff */
+         if (!$allow_server_sort) {
+-           $from = parseAddress($from);
+-           if ($from[0][1]) {
+-              $from = decodeHeader($from[0][1], true, false);
+-           } else {
+-              $from = $from[0][0];
+-           }
+-           $messages[$msgi]['FROM-SORT'] = $from;
+-           $subject_sort = strtolower(decodeHeader($subject, true, false));
+-           if (preg_match("/^(?:(?:vedr|sv|re|aw|fw|fwd|\[\w\]):\s*)*\s*(.*)$/si", $subject_sort, $matches)){
++            $from = parseAddress($from);
++            if ($from[0][1]) {
++                $from = decodeHeader($from[0][1], true, false);
++            } else {
++                $from = $from[0][0];
++            }
++            $messages[$msgi]['FROM-SORT'] = $from;
++            $subject_sort = strtolower(decodeHeader($subject, true, false));
++            if (preg_match("/^(?:(?:vedr|sv|re|aw|fw|fwd|\[\w\]):\s*)*\s*(.*)$/si", $subject_sort, $matches)){
+                 $messages[$msgi]['SUBJECT-SORT'] = $matches[1];
+-           } else {
+-               $messages[$msgi]['SUBJECT-SORT'] = $subject_sort;
+-           }
++            } else {
++                $messages[$msgi]['SUBJECT-SORT'] = $subject_sort;
++            }
++            
++            $to = parseAddress($to);
++            if ($to[0][1]) {
++           	    $to = decodeHeader($to[0][1], true, false);
++            } else {
++                $to = $to[0][0];
++            }
++            $messages[$msgi]['TO-SORT'] = $to;
+         }
+         ++$msgi;
+     }

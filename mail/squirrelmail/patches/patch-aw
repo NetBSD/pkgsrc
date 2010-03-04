@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- src/webmail.php.orig	2009-05-12 07:48:03.000000000 +0900
++++ src/webmail.php
+@@ -48,8 +48,6 @@ if(sqgetGlobalVar('mailtodata', $mailtod
+     $mailtourl = '';
+ }
+ 
+-is_logged_in();
+-
+ // this value may be changed by a plugin, but initialize
+ // it first to avoid register_globals headaches
+ //
