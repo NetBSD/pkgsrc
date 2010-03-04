@@ -1,0 +1,20 @@
+$NetBSD: patch-cb,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- plugins/newmail/newmail_opt.php.orig	2009-04-16 07:00:49.000000000 +0900
++++ plugins/newmail/newmail_opt.php
+@@ -71,6 +71,7 @@ echo '</td></tr>' .
+             html_tag( 'td', '', 'center', $color[4] ) . "\n" . '<hr style="width: 25%; height: 1px;" />' . "\n";
+ 
+ echo '<form action="'.sqm_baseuri().'src/options.php" method="post">' . "\n" .
++        '<input type="hidden" name="smtoken" value="' . sm_generate_security_token() . '">' . "\n" .
+         html_tag( 'table', '', '', '', 'width="100%" cellpadding="5" cellspacing="0" border="0"' ) . "\n";
+ 
+ // Option: media_allbox
+@@ -182,6 +183,7 @@ echo html_tag( 'tr', "\n" .
+         html_tag( 'td',
+             '<input type="hidden" name="optmode" value="submit" />' .
+             '<input type="hidden" name="optpage" value="newmail" />' .
++        	'<input type="hidden" name="smtoken" value="' . sm_generate_security_token() . '" />' .
+             '<input type="submit" value="' . _("Submit") . '" name="submit_newmail" />',
+         'left' )
+      ) . "\n";

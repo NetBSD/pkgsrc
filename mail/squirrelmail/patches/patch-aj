@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- class/mime/Message.class.php.orig	2009-04-16 07:00:49.000000000 +0900
++++ class/mime/Message.class.php
+@@ -1059,8 +1059,7 @@ class Message {
+                 }
+ 
+                 if (!$exclude) {
+-                    if (($entity->type0 == 'multipart') &&
+-                        ($entity->type1 != 'related')) {
++                    if ($entity->type0 == 'multipart') {
+                         $result = $entity->getAttachments($exclude_id, $result);
+                     } else if ($entity->type0 != 'multipart') {
+                         $result[] = $entity;

@@ -1,0 +1,29 @@
+$NetBSD: patch-ca,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- plugins/filters/filters.php.orig	2009-07-27 10:40:44.000000000 +0900
++++ plugins/filters/filters.php
+@@ -317,8 +317,14 @@ function filter_search_and_delete($imap,
+     if ($allow_charset_search &&
+         isset($languages[$squirrelmail_language]['CHARSET']) &&
+         $languages[$squirrelmail_language]['CHARSET']) {
++	if ($squirrelmail_language == 'ja_JP') {
++	    $cs = 'euc-JP';
++	} else {
++	    $cs = $languages[$squirrelmail_language]['CHARSET'];
++	}
++	$cs = strtoupper($cs);
+         $search_str = 'SEARCH CHARSET '
+-                    . strtoupper($languages[$squirrelmail_language]['CHARSET'])
++                    . $cs
+                     . ' ' . $category;
+     } else {
+         $search_str = 'SEARCH CHARSET US-ASCII ' . $category;
+@@ -552,7 +558,7 @@ function load_filters() {
+ 
+     $filters = array();
+     for ($i = 0; $fltr = getPref($data_dir, $username, 'filter' . $i); $i++) {
+-        $ary = explode(',', $fltr);
++        $ary = explode(',', $fltr, 3);
+         $filters[$i]['where'] = $ary[0];
+         $filters[$i]['what'] = str_replace('###COMMA###', ',', $ary[1]);
+         $filters[$i]['folder'] = $ary[2];

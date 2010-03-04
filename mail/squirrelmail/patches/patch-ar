@@ -1,0 +1,12 @@
+$NetBSD: patch-ar,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- src/delete_message.php.orig	2009-08-18 08:17:41.000000000 +0900
++++ src/delete_message.php
+@@ -78,6 +78,7 @@ $location = get_location();
+ 
+ if (isset($where) && isset($what)) {
+     header("Location: $location/search.php?where=" . $where .
++           '&smtoken=' . sm_generate_security_token() .
+            '&what=' . $what . '&mailbox=' . urlencode($mailbox));
+ } else {
+     if (!empty($saved_draft) || !empty($mail_sent)) {
