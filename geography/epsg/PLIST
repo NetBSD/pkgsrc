@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:57:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/03/04 01:48:39 gdt Exp $
 bin/epsg-load
-share/doc/epsg/epsg-v${VERS}_Readme.pdf
+share/doc/epsg/epsg-v${VERS_README}_readme.pdf
 share/epsg/EPSG_v${VERS}.mdb_Data_MySQL.sql
 share/epsg/EPSG_v${VERS}.mdb_Data_PostgreSQL.sql
 share/epsg/EPSG_v${VERS}.mdb_FKeys_MySQL.sql
