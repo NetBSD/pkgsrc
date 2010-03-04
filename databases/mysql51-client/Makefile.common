@@ -1,0 +1,131 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+#
+# used by databases/mysql51-client/Makefile
+# used by databases/mysql51-server/Makefile
+#
+
+DISTNAME=		mysql-5.1.44
+CATEGORIES=		databases
+MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQL-5.1/}
+
+MAINTAINER=		sketch@NetBSD.org
+HOMEPAGE=		http://www.mysql.com/
+LICENSE=		gnu-gpl-v2
+
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
+
+EXTRACT_USING=		bsdtar
+
+# MYSQL_USER		username of the database administrator
+# MYSQL_GROUP		group of the database administrator
+# MYSQL_DATADIR		home directory of the database administrator and
+#			location of the databases
+MYSQL_USER?=		mysql
+MYSQL_GROUP?=		mysql
+MYSQL_DATADIR?=		${VARBASE}/mysql
+
+PKG_USERS_VARS+=	MYSQL_USER
+PKG_GROUPS_VARS+=	MYSQL_GROUP
+
+# MYSQL_CHARSET		default character set
+# MYSQL_EXTRA_CHARSET	additional character set to be compiled in.
+#
+MYSQL_CHARSET?=		latin1
+MYSQL_EXTRA_CHARSET?=	all
+
+CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR:Q}
+CONFIGURE_ARGS+=	--with-named-z-libs=z
+CONFIGURE_ARGS+=	--without-libwrap
+CONFIG_SHELL=		${TOOLS_PATH.bash}
+
+.if ${OPSYS} == "IRIX"
+CFLAGS+=		-DIRIX5 -DNEEDS_BSTRING_H
+# libgen is incorrectly detected
+CONFIGURE_ENV+=		ac_cv_lib_gen_p2open="no"
+.endif
+
+BUILD_DEFS+=		VARBASE
+
+# We always use our own readline.  Note that these --without-* settings
+# are confusing, but they just mean "don't use the included readline
+# or libedit".
+#
+CONFIGURE_ARGS+=	--without-readline
+CONFIGURE_ARGS+=	--without-libedit
+
+# Speed up production one-time builds; see "./configure --help" for
+# more information on using or disabling this option.
+CONFIGURE_ARGS+=	--disable-dependency-tracking
+
+CONFIGURE_ARGS+=	--without-debug
+CONFIGURE_ARGS+=	--without-bench
+CONFIGURE_ARGS+=	--with-low-memory
+CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib:Q}
+CONFIGURE_ARGS+=	--with-vio
+
+CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET:Q}
+CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET:Q}
+
+.if !empty(MACHINE_ARCH:Mi386) && ${OPSYS} != "Interix" && \
+	${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
+CONFIGURE_ARGS+=	--enable-assembler
+.endif
+
+CONFIGURE_ENV+=		mysql_cv_compress="yes"
+
+CPPFLAGS+=		-Dunix
+CFLAGS+=		-DUSE_OLD_FUNCTIONS # 3.23.x compat
+
+# force HAVE_CURSES_H on Solaris since the configure script is broken
+# and does not properly detect this, breaking the build later on.
+.if ${OPSYS} == "SunOS"
+CFLAGS+=		-DHAVE_CURSES_H
+CXXFLAGS+=		-DHAVE_CURSES_H
+.endif
+
+.include "../../mk/pthread.buildlink3.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
+CFLAGS+=		-DSIGNALS_DONT_BREAK_READ
+CXXFLAGS+=		-DSIGNALS_DONT_BREAK_READ
+CONFIGURE_ENV+=		ac_cv_func_pthread_setschedparam=no
+CONFIGURE_ENV+=		ac_cv_func_pthread_attr_setschedparam=no
+.endif
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		autoconf bash autoheader gmake perl:run
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
+
+SUBST_CLASSES=		mk
+SUBST_STAGE.mk=		pre-configure
+SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in	\
+			mysys/Makefile.in strings/Makefile.in
+SUBST_SED.mk=		-e "/^install-exec:/s/install-pkglibLIBRARIES//"
+SUBST_MESSAGE.mk=	Fixing Makefiles.
+
+SUBST_CLASSES+=		scr
+SUBST_STAGE.scr=	pre-configure
+SUBST_FILES.scr=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
+			scripts/mysql_secure_installation.sh \
+			support-files/mysql.server.sh
+SUBST_SED.scr=		-e "s,chown,${CHOWN},g"
+SUBST_SED.scr+=		-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
+SUBST_MESSAGE.scr=	Fixing scripts.
+
+# Fix broken shared library detection under Mac OS X
+.if ${OPSYS} == "Darwin"
+SUBST_CLASSES+=		dylib
+SUBST_STAGE.dylib=	pre-configure
+SUBST_FILES.dylib=	configure
+SUBST_SED.dylib=	-e "s|\\\$$shrext_cmds|\\.dylib|g"
+.endif
+
+pre-configure:
+	${RM} -f ${WRKSRC}/configure~
+	cd ${WRKSRC} && autoconf && autoheader
+
+.include "../../devel/zlib/buildlink3.mk"

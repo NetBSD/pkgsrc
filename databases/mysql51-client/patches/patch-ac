@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- client/completion_hash.cc.orig	2010-02-04 11:36:51.000000000 +0000
++++ client/completion_hash.cc
+@@ -22,6 +22,10 @@
+ 
+ #include <my_global.h>
+ #include <m_string.h>
++#ifdef NEEDS_BSTRING_H                         // defines bzero()
++#include <bstring.h>
++#endif
++
+ #undef SAFEMALLOC				// Speed things up
+ #include <my_sys.h>
+ #include "completion_hash.h"

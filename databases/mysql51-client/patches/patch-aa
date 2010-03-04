@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- BUILD/compile-pentium-gcov.orig	2010-02-04 11:36:48.000000000 +0000
++++ BUILD/compile-pentium-gcov
+@@ -7,7 +7,7 @@ CCACHE_GCOV_VERSION_ENABLED=0
+ if ccache -V > /dev/null 2>&1
+ then
+   CCACHE_VER=`ccache -V | head -1 | sed s/"ccache version "//`
+-  if test "$CCACHE_VER" == "2.4-gcov"
++  if test "$CCACHE_VER" = "2.4-gcov"
+   then
+     CCACHE_GCOV_VERSION_ENABLED=1
+   else
