@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9096 2010/03/04 08:33:06 wiz Exp $
+$NetBSD: TODO,v 1.9097 2010/03/04 08:43:30 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -891,7 +891,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mathomatic-15.0.5
 	o mc-4.7.0.2
 	o memconf-2.9 [pkg/40201]
-	o memtester-4.1.3
 	o merb-1.0.8.1
 	o merb-action-args-1.0.8.1
 	o merb-activerecord-1.0.0.1
