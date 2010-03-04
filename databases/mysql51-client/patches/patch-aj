@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- extra/Makefile.in.orig	2010-02-04 11:46:15.000000000 +0000
++++ extra/Makefile.in
+@@ -818,7 +818,7 @@ distdir: $(DISTFILES)
+ check-am: all-am
+ check: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) check-recursive
+-all-am: Makefile $(PROGRAMS) $(HEADERS)
++all-am: Makefile $(HEADERS)
+ installdirs: installdirs-recursive
+ installdirs-am:
+ 	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgincludedir)"; do \
+@@ -876,7 +876,7 @@ install-data-am: install-pkgincludeHEADE
+ 
+ install-dvi: install-dvi-recursive
+ 
+-install-exec-am: install-binPROGRAMS
++install-exec-am:
+ 
+ install-html: install-html-recursive
+ 
