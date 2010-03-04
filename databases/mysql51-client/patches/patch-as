@@ -1,0 +1,24 @@
+$NetBSD: patch-as,v 1.1.1.1 2010/03/04 16:27:18 taca Exp $
+
+--- sql/Makefile.in.orig	2010-02-04 11:46:24.000000000 +0000
++++ sql/Makefile.in
+@@ -527,10 +527,8 @@ SUBDIRS = share
+ noinst_LTLIBRARIES = libndb.la \
+ 			udf_example.la
+ 
+-SUPPORTING_LIBS = $(top_builddir)/vio/libvio.a \
++SUPPORTING_LIBS = \
+ 			$(top_builddir)/mysys/libmysys.a \
+-			$(top_builddir)/dbug/libdbug.a \
+-			$(top_builddir)/regex/libregex.a \
+ 			$(top_builddir)/strings/libmystrings.a
+ 
+ mysqld_DEPENDENCIES = @mysql_plugin_libs@ $(SUPPORTING_LIBS) libndb.la
+@@ -646,7 +644,6 @@ AM_YFLAGS = -d --verbose
+ udf_example_la_SOURCES = udf_example.c
+ udf_example_la_LDFLAGS = -module -rpath $(pkglibdir)
+ all: $(BUILT_SOURCES)
+-	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
+ .SUFFIXES:
+ .SUFFIXES: .c .cc .lo .o .obj .yy
