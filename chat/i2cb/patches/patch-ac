@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2005/12/13 21:30:11 joerg Exp $
+$NetBSD: patch-ac,v 1.4 2010/03/04 21:40:29 spz Exp $
 
 --- src/externs.h.orig	2000-03-15 22:28:13.000000000 +0000
 +++ src/externs.h
@@ -28,3 +28,12 @@ $NetBSD: patch-ac,v 1.3 2005/12/13 21:30:11 joerg Exp $
  void	copenmsg (char *pkt);
  void	cpersonalmsg (char *pkt);
  void	csendopen (char *txt);
+@@ -79,7 +82,7 @@ void	echo (void);
+ void	errormsg (char *pkt);
+ void	exitmsg (void);
+ char	*findspace (char *s);
+-char	*getline (char *prompt, int expand);
++char	*i2cb_getline (char *prompt, int expand);
+ char	*getloginid (void);
+ char	*getswitch (int argc, char **argv, char **switchv);
+ void	getterm (void);
