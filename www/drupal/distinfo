@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2009/12/19 09:20:23 taca Exp $
+$NetBSD: distinfo,v 1.34 2010/03/04 01:29:39 taca Exp $
 
-SHA1 (drupal-5.21.tar.gz) = a361c7e0259f30994ff47c7f363711df2cd12793
-RMD160 (drupal-5.21.tar.gz) = e01121759dbcbe396ba0063e611519e07cce299a
-Size (drupal-5.21.tar.gz) = 767162 bytes
+SHA1 (drupal-5.22.tar.gz) = 32e8d4dbaf6dee6841b2ea8496535ca0ebe1ebd9
+RMD160 (drupal-5.22.tar.gz) = fcec6b3e9609ed4de5f83b909733ea586aa757d5
+Size (drupal-5.22.tar.gz) = 768157 bytes
