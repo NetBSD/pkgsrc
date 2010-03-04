@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9094 2010/03/03 16:28:55 gdt Exp $
+$NetBSD: TODO,v 1.9095 2010/03/04 01:48:50 gdt Exp $
 
 Suggested new packages
 ======================
@@ -561,7 +561,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o enscript-1.6.5
 	o eog-plugins-2.28.1 [GNOME 2.28]
 	o epic4-2.6
-	o epsg-7.4 [portions in pkg/42419]
 	o epstool-3.08
 	o eric3-4.4.1 [now called eric4]
 	o erubis-2.6.2
