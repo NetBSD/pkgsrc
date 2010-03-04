@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1035 2010/03/04 10:54:09 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.1036 2010/03/04 15:36:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1230,3 +1230,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/clutter to 1.2.0 [obache 2010-03-04]
 	Updated sysutils/memtester to 4.1.3 [schmonz 2010-03-04]
 	Updated geography/epsg-docs to 200911 [gdt 2010-03-04]
+	Updated lang/php5 to 5.2.13nb1 [taca 2010-03-04]
