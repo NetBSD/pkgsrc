@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2007/07/28 11:06:36 gdt Exp $
+$NetBSD: distinfo,v 1.6 2010/03/04 01:48:39 gdt Exp $
 
-SHA1 (epsg-6_13/epsg-v6_13sql-PostgreSQL.zip) = 5004f35422f6fb5c26cc5666a0397e908c029674
-RMD160 (epsg-6_13/epsg-v6_13sql-PostgreSQL.zip) = 5337617501f42d8b84f1225f1d4ec5e36451f9d3
-Size (epsg-6_13/epsg-v6_13sql-PostgreSQL.zip) = 924613 bytes
-SHA1 (epsg-6_13/epsg-v6_13sql-mySQL.zip) = fa4d370fd1c34040af184ceff0c2e45b61a4f69c
-RMD160 (epsg-6_13/epsg-v6_13sql-mySQL.zip) = 7c2123a0bc04302b1901ddf0da957d0df3569ee6
-Size (epsg-6_13/epsg-v6_13sql-mySQL.zip) = 924585 bytes
+SHA1 (epsg-7_4_1/epsg-v7_4_1sql-PostgreSQL.zip) = 9e1e41991932eaf2fd54f0e4bfcb6af6a474e5db
+RMD160 (epsg-7_4_1/epsg-v7_4_1sql-PostgreSQL.zip) = c7bac54170fd1cc851e658398325a8eca5dec7a3
+Size (epsg-7_4_1/epsg-v7_4_1sql-PostgreSQL.zip) = 1033731 bytes
+SHA1 (epsg-7_4_1/epsg-v7_4_1sql-mySQL.zip) = 19c5226b49948acfb4f60db48b08ffaf4d5ede88
+RMD160 (epsg-7_4_1/epsg-v7_4_1sql-mySQL.zip) = a126dce2a3ae926eb9cc8bba3cb3f082deb32c13
+Size (epsg-7_4_1/epsg-v7_4_1sql-mySQL.zip) = 1033939 bytes
