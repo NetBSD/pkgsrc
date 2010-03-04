@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.41 2010/03/04 17:38:42 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.42 2010/03/04 20:28:10 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -133,3 +133,59 @@ Pullup ticket #3034 - requested by obache
 tor: security and compatibility update
 Pullup ticket #3032 - requested by tnn
 thunderbird: security update
+Pullup ticket #3036 - requested by taca
+php5: security update
+php-bz2: security update
+php-zip: security update
+php-zlib: security update
+php-iconv: security update
+php-dba: security update
+php-dbase: security update
+php-dbx: security update
+php-ldap: security update
+php-mssql: security update
+php-mysql: security update
+php-oci8: security update
+php-odbc: security update
+php-pdo: security update
+php-pdo_dblib: security update
+php-pdo_mysql: security update
+php-pdo_pgsql: security update
+php-pdo_sqlite: security update
+php-pgsql: security update
+php-sqlite: security update
+php5-mysqli: security update
+php-gettext: security update
+php-gmp: security update
+php-memcache: security update
+php-pcntl: security update
+php-posix: security update
+php-shmop: security update
+php-sysvsem: security update
+php-sysvshm: security update
+php-exif: security update
+php-gd: security update
+php5-perl: security update
+php-imap: security update
+php-bcmath: security update
+php-calendar: security update
+php-mbstring: security update
+php-ming: security update
+php-ftp: security update
+php-snmp: security update
+php-sockets: security update
+php-xmlrpc: security update
+php-yaz: security update
+php5-soap: security update
+php-pdflib: security update
+php-mcrypt: security update
+php-mhash: security update
+php-suhosin: security update
+php-json: security update
+php-pspell: security update
+php-wddx: security update
+php5-dom: security update
+php5-xsl: security update
+php-apc: security update
+php-curl: security update
+php-eaccelerator: security update
