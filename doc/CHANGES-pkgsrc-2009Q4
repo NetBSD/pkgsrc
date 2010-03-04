@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.40 2010/03/02 12:32:40 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.41 2010/03/04 17:38:42 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -131,3 +131,5 @@ Pullup ticket #3026 - requested by spz
 curl: security update
 Pullup ticket #3034 - requested by obache
 tor: security and compatibility update
+Pullup ticket #3032 - requested by tnn
+thunderbird: security update
