@@ -1,0 +1,12 @@
+$NetBSD: patch-cf,v 1.1 2010/03/04 16:00:37 taca Exp $
+
+--- plugins/squirrelspell/modules/lang_setup.mod.orig	2009-04-16 07:00:49.000000000 +0900
++++ plugins/squirrelspell/modules/lang_setup.mod
+@@ -23,6 +23,7 @@ $msg = '<p>'
+   . '</p>'
+   . '<form method="post">'
+   . '<input type="hidden" name="MOD" value="lang_change" />'
++  . '<input type="hidden" name="smtoken" value="' . sm_generate_security_token() . '" />'
+   . '<blockquote><p>';
+ /**
+  * Present a nice listing.
