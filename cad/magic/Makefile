@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2010/03/03 03:40:00 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.23 2010/03/04 03:19:58 dmcmahill Exp $
 #
 
 DISTNAME=	magic-7.5.188
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://opencircuitdesign.com/magic/archive/
 EXTRACT_SUFX=	.tgz
@@ -45,5 +46,4 @@ REPLACE_FILES.wish=	tcltk/tkshell.tcl
 .include "../../x11/blt/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
