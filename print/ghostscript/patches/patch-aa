@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2010/03/04 11:16:27 tnn Exp $
+
+--- base/gsnogc.c.orig	2009-11-25 19:59:11.000000000 +0000
++++ base/gsnogc.c
+@@ -32,7 +32,7 @@ nogc_alloc_string(gs_memory_t * mem, uin
+ static void
+ nogc_free_string(gs_memory_t * mem, byte * str, uint size, client_name_t cname)
+ {
+-    return gs_free_object(mem, str, cname);
++    gs_free_object(mem, str, cname);
+ }
+ 
+ static byte *
