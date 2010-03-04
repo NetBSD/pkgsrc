@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2009/12/16 10:05:44 tnn Exp $
+# $NetBSD: Makefile,v 1.45.2.1 2010/03/04 17:38:24 tron Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		3.0
-PKGREVISION=	1
+TB_VER=		3.0.2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -59,6 +58,12 @@ post-install:
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
 	${INSTALL_DATA} ${WRKSRC}/mail/branding/nightly/mailicon48.png	\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
+
+SUBST_CLASSES+=			fix-sqlite-dep
+SUBST_STAGE.fix-sqlite-dep=	pre-configure
+SUBST_MESSAGE.fix-sqlite-dep=	Fixing sqlite dependency
+SUBST_FILES.fix-sqlite-dep=	${MOZILLA_DIR}/configure.in configure.in
+SUBST_SED.fix-sqlite-dep=	-e 's,\(SQLITE_VERSION\)=[.0-9]*,\1=3.6.21,g'
 
 .include "../../devel/xulrunner/mozilla-common.mk"
 .include "options.mk"
