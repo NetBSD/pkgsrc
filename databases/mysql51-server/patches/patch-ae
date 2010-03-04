@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+
+--- configure.in.orig	2010-02-04 11:36:59.000000000 +0000
++++ configure.in
+@@ -2023,7 +2023,7 @@ AC_CHECK_HEADERS(varargs.h stdarg.h dire
+ paths.h semaphore.h)
+ 
+ # Already-done: strcasecmp
+-AC_CHECK_FUNCS(lstat putenv select setenv setlocale strcoll tcgetattr)
++AC_CHECK_FUNCS(lstat putenv select setenv setlocale sigsend strcoll tcgetattr)
+ 
+ AC_STAT_MACROS_BROKEN
+ MYSQL_SIGNAL_CHECK
