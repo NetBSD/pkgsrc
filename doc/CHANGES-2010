@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1042 2010/03/05 13:51:01 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1043 2010/03/05 14:55:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1238,3 +1238,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/x3270 to 3.3.10ga4 [gls 2010-03-04]
 	Updated mail/squirrelmail to 1.4.20rc2nb5 [taca 2010-03-05]
 	Updated databases/mysqlcc to 0.9.8 [taca 2010-03-05]
+	Updated databases/postgresql-postgis to 1.5.0 [gdt 2010-03-05]
