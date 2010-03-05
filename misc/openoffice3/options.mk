@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2009/09/18 11:38:56 tnn Exp $
+# $NetBSD: options.mk,v 1.20 2010/03/05 14:30:01 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
@@ -43,6 +43,7 @@ OO_LANGPACKS?=	${OO_LANGS:S/${OO_BASELANG}//1}
 .if !empty(PKG_OPTIONS:Mxulrunner)
 CONFIGURE_ARGS+=	--with-system-mozilla=mozilla
 BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner>=1.9.1.2nb5
+BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner<1.9.2.2pre
 .include "../../devel/xulrunner/buildlink3.mk"
 #
 # OOo ships headers that are too old and conflict with xulrunner headers.
