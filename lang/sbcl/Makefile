@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2010/02/24 12:16:09 asau Exp $
+# $NetBSD: Makefile,v 1.22 2010/03/05 14:20:25 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-1.0.35
+PKGNAME=		sbcl-1.0.36
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -30,13 +30,6 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 #
 # SBCL needs an existing Common Lisp system to build it...
 # Currently allowed systems are CLISP, CMUCL, OpenMCL, and SBCL itself.
-#
-#  Note that CLISP 2.39nb1 worked two or three times when testing
-#  this package and it failed to build SBCL twice.  It is also at
-#  least twice as slow as using SBCL when building on an i386 platform.
-#
-#  I have reports that CLISP will build on PowerPC platforms, but is
-#  unable to build SBCL.
 #
 #  If SBCL is installed in an unusual place when trying to build this
 #  package, you may need to set the full path in SBCL_BOOT_SYSTEM and

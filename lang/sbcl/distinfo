@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2010/02/24 12:16:09 asau Exp $
+$NetBSD: distinfo,v 1.9 2010/03/05 14:20:25 asau Exp $
 
-SHA1 (sbcl-1.0.35-source.tar.bz2) = c790adf728a5fd5da055001633ae8a08f5d3a872
-RMD160 (sbcl-1.0.35-source.tar.bz2) = a8309dbf8ba8c6db9bd16626212e0d545600fcfc
-Size (sbcl-1.0.35-source.tar.bz2) = 3384898 bytes
+SHA1 (sbcl-1.0.36-source.tar.bz2) = 58263e0f6d17833bc722846e1be01c2a9af90228
+RMD160 (sbcl-1.0.36-source.tar.bz2) = 160e2adf42557a12879e0476aa8e46d6c255e6aa
+Size (sbcl-1.0.36-source.tar.bz2) = 3393142 bytes
 SHA1 (patch-aa) = 3bd72ba259fc23c3ae09bf104c8e395f3826fff0
 SHA1 (patch-ab) = e8420a7aa51f6920d6556e84ef3f0ca32fdeb2fd
 SHA1 (patch-ac) = bce87555a5944cfeb25c65df9d41c3f49b5d4866
