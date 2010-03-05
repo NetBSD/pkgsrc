@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2010/03/03 16:27:57 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2010/03/05 14:32:26 wiz Exp $
 
 DISTNAME=	unzip60
 PKGNAME=	unzip-6.0
@@ -26,6 +26,7 @@ BUILD_TARGET=	generic_zlib unzipsfx
 CFLAGS+=	-DBSD
 .endif
 CFLAGS+=	-I. -DUNIX -Dunix -DUSE_UNSHRINK
+CFLAGS.SunOS+=	-DNO_LCHMOD
 MAKE_FLAGS+=	CF=${CPPFLAGS:Q}\ ${CFLAGS:Q}
 MAKE_FLAGS+=	LF2=${_STRIPFLAG_CC:Q}\ ${LDFLAGS:Q}\ -lz
 
