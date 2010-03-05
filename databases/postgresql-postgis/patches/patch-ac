@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/01/21 12:53:19 adam Exp $
+$NetBSD: patch-ac,v 1.2 2010/03/05 14:55:21 gdt Exp $
 
---- loader/Makefile.in.orig	2009-10-06 08:51:49.000000000 +0000
+--- loader/Makefile.in.orig	2010-01-02 07:01:49.000000000 +0000
 +++ loader/Makefile.in
-@@ -39,7 +39,7 @@ PGSQL_FE_LDFLAGS=@PGSQL_FE_LDFLAGS@
- ICONV_LDFLAGS=@ICONV_LDFLAGS@
+@@ -39,7 +39,7 @@ ICONV_LDFLAGS=@ICONV_LDFLAGS@
+ ICONV_CFLAGS=@ICONV_CFLAGS@
  
  # liblwgeom
 -LIBLWGEOM=../liblwgeom/liblwgeom.a
@@ -11,27 +11,34 @@ $NetBSD: patch-ac,v 1.1.1.1 2010/01/21 12:53:19 adam Exp $
  
  # GTK includes and libraries
  GTK_CFLAGS = @GTK_CFLAGS@
-@@ -60,10 +60,10 @@ pgsql2shp.o: pgsql2shp.c
- 	$(CC) $(CFLAGS) $(PGSQL_FE_CPPFLAGS) -c $<
+@@ -79,16 +79,16 @@ pgsql2shp.o: pgsql2shp.c
+ 	$(CC) $(CFLAGS) $(ICONV_CFLAGS) $(PGSQL_FE_CPPFLAGS) -c $<
  
  $(PGSQL2SHP): shpopen.o dbfopen.o getopt.o pgsql2shp.o $(LIBLWGEOM) 
 -	$(CC) $(CFLAGS) $^ $(ICONV_LDFLAGS) $(PGSQL_FE_LDFLAGS) -lm -o $@ 
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $^ $(ICONV_LDFLAGS) $(PGSQL_FE_LDFLAGS) -lm -o $@ 
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $^ $(ICONV_LDFLAGS) $(PGSQL_FE_LDFLAGS) -lm -o $@
  
- $(SHP2PGSQL): shpopen.o dbfopen.o getopt.o  shp2pgsql.o $(LIBLWGEOM) 
--	$(CC) $(CFLAGS) $^ $(ICONV_LDFLAGS) -lm -o $@ 
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $^ $(ICONV_LDFLAGS) -lm -o $@ 
+ $(SHP2PGSQL-CLI): stringbuffer.o shpopen.o dbfopen.o getopt.o shp2pgsql-core.o shp2pgsql-cli.o $(LIBLWGEOM) 
+-	$(CC) $(CFLAGS) $^ -o $@ $(ICONV_LDFLAGS) -lm 
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $^ -o $@ $(ICONV_LDFLAGS) -lm 
  
- shp2pgsql-core-gui.o: shp2pgsql-core.c
- 	$(CC) $(CFLAGS) -DPGUI -c -o $@ $^
-@@ -79,8 +79,8 @@ $(SHP2PGSQL-CLI): stringbuffer.o shpopen
+ shp2pgsql-gui.o: shp2pgsql-gui.c
+ 	$(CC) $(CFLAGS) $(PGSQL_FE_CPPFLAGS) $(GTK_CFLAGS) -o $@ -c shp2pgsql-gui.c
  
- install: all
+ $(SHP2PGSQL-GUI): stringbuffer.o shpopen.o dbfopen.o shp2pgsql-core.o shp2pgsql-gui.o getopt.o $(LIBLWGEOM) $(GTK_WIN32_RES)
+-	$(CC) $(CFLAGS) $(GTK_WIN32_FLAGS) $^ -o $@ $(GTK_LIBS) $(ICONV_LDFLAGS) $(PGSQL_FE_LDFLAGS) -lm 
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(GTK_WIN32_FLAGS) $^ -o $@ $(GTK_LIBS) $(ICONV_LDFLAGS) $(PGSQL_FE_LDFLAGS) -lm 
+ 
+ installdir:
  	@mkdir -p $(DESTDIR)$(bindir)
+@@ -97,8 +97,8 @@ install: installdir 
+ ifdef gtk_build
+ 	$(INSTALL) $(SHP2PGSQL-GUI) $(DESTDIR)$(bindir)
+ endif
 -	$(INSTALL) $(PGSQL2SHP) $(DESTDIR)$(bindir)
--	$(INSTALL) $(SHP2PGSQL) $(DESTDIR)$(bindir)
+-	$(INSTALL) $(SHP2PGSQL-CLI) $(DESTDIR)$(bindir)
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $(PGSQL2SHP) $(DESTDIR)$(bindir)
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $(SHP2PGSQL) $(DESTDIR)$(bindir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $(SHP2PGSQL-CLI) $(DESTDIR)$(bindir)
  
  uninstall:
  	@rm -f $(DESTDIR)$(bindir)/$(PGSQL2SHP)
