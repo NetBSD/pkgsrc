@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2009/12/19 09:20:23 taca Exp $
+# $NetBSD: Makefile,v 1.43.2.1 2010/03/05 10:50:03 tron Exp $
 
-DISTNAME=	drupal-5.21
+DISTNAME=	drupal-5.22
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -43,14 +43,10 @@ SUBST_FILES.conf=	drupal.conf
 SUBST_SED.conf=		-e "s|@DRUPAL@|${DRUPAL}|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
-PKG_DESTDIR_SUPPORT=destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"
-
-.if ${PKG_PHP_VERSION} == "4"
-DEPENDS+=	php>=4.4.7:../../www/php4
-.endif
 
 .if ${PKG_PHP_VERSION} == "5"
 DEPENDS+=	php>=5.2.4:../../lang/php5
@@ -83,9 +79,6 @@ do-install:
 .	for i in ${PAX_DIRS}
 		cd ${WRKSRC}/${i} && pax -rw . ${DESTDIR}${DRUPAL}/${i}
 .	endfor
-
-	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${DRUPAL}/files
-	${CHMOD} 0770 ${DESTDIR}${DRUPAL}/files
 
 post-install:
 	${FIND} ${DESTDIR}${DRUPAL} -name \*.jpg | ${XARGS} ${CHMOD} 0644
