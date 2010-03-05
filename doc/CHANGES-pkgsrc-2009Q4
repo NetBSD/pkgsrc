@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.42 2010/03/04 20:28:10 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.43 2010/03/05 10:53:13 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -189,3 +189,7 @@ php5-xsl: security update
 php-apc: security update
 php-curl: security update
 php-eaccelerator: security update
+Pullup ticket #3037 - requested taca
+drupal: security update
+Pullup ticket #3038 - requested by taca
+drupal6: security update
