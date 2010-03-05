@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2010/01/18 09:58:43 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2010/03/05 13:50:03 taca Exp $
 #
 
-DISTNAME=		mysqlcc-0.9.4-src
+DISTNAME=		mysqlcc-0.9.8-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		12
 CATEGORIES=		databases
-MASTER_SITES=		# ${MASTER_SITE_SOURCEFORGE:=mysqlcc/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mysqlcc/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mysqlcc.sourceforge.net/
@@ -15,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		automake
+USE_TOOLS+=		autoconf automake
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	\
 	--with-mysql-lib=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
@@ -25,15 +24,29 @@ CONFIGURE_ARGS+=	--with-openssl-includes=${SSLBASE}/include
 CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
 CONFIGURE_ENV+=		QMAKESPEC="${QTDIR}/mkspecs/netbsd-g++"
 
-MYSQL_VERSIONS_ACCEPTED=	41
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	src/CApplication.cpp
+SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|"
+SUBST_MESSAGE.paths=	Fixing paths.
 
-INSTALLATION_DIRS=	bin
+MYSQL_VERSIONS_ACCEPTED=	50 41
+
+INSTALLATION_DIRS=	bin share/mysqlcc/translations
+SUPPORT_FILES=		error.wav information.wav syntax.txt warning.wav
 
 pre-configure:
 	cd ${WRKSRC} && aclocal && autoconf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mysqlcc ${DESTDIR}${PREFIX}/bin
+.for f in ${SUPPORT_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/mysqlcc
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/translations/*.qm \
+		${DESTDIR}${PREFIX}/share/mysqlcc/translations
+	${INSTALL_DATA} ${WRKSRC}/translations/*.ts \
+		${DESTDIR}${PREFIX}/share/mysqlcc/translations
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
