@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1041 2010/03/05 03:06:26 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1042 2010/03/05 13:51:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1237,3 +1237,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/mysql51-server version 5.1.44 [taca 2010-03-04]
 	Updated x11/x3270 to 3.3.10ga4 [gls 2010-03-04]
 	Updated mail/squirrelmail to 1.4.20rc2nb5 [taca 2010-03-05]
+	Updated databases/mysqlcc to 0.9.8 [taca 2010-03-05]
