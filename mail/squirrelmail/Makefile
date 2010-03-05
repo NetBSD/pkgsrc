@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.112 2010/03/04 16:00:37 taca Exp $
+# $NetBSD: Makefile,v 1.113 2010/03/05 03:05:40 taca Exp $
 
 DISTNAME=	squirrelmail-1.4.20-RC2
 PKGNAME=	${DISTNAME:S/-RC2/rc2/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -50,8 +50,10 @@ CONF_FILES+=		${SMDIR}/data/default_pref \
 			${DATADIR}/data/default_pref
 CONF_FILES+=		${EGDIR}/squirrelmail.conf \
 			${PKG_SYSCONFDIR}/squirrelmail.conf
-CONF_FILES+=		${USER_PREFS_DIR}/.htaccess ${DATADIR}/data/.htaccess
-CONF_FILES+=		${USER_PREFS_DIR}/index.php ${DATADIR}/data/index.php
+CONF_FILES+=		${EGDIR}/data/.htaccess ${DATADIR}/data/.htaccess
+CONF_FILES+=		${EGDIR}/data/index.php ${DATADIR}/data/index.php
+CONF_FILES+=		${EGDIR}/data/.htaccess ${USER_PREFS_DIR}/.htaccess
+CONF_FILES+=		${EGDIR}/data/index.php ${USER_PREFS_DIR}/index.php
 
 REQD_DIRS+=		${SMDIR} ${SMDIR}/config
 
@@ -68,9 +70,8 @@ SUBST_SED.paths+=	-e 's,@USER_PREFS_DIR@,${USER_PREFS_DIR},g'
 SUBST_SED.paths+=	-e 's,@SMDIR@,${PREFIX}/${SMDIR},g'
 SUBST_STAGE.paths=	pre-configure
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8
-INSTALLATION_DIRS+=	share/examples/squirrelmail
-INSTALLATION_DIRS+=	share/squirrelmail
+DATA_FILES=		.htaccess index.php
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 ${EGDIR}/data ${SMDIR}
 
 post-extract:
 	${CP} ${FILESDIR}/squirrelmail.conf.dist \
@@ -88,6 +89,9 @@ pre-install:
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/squirrelmail.conf.dist \
 		${DESTDIR}${PREFIX}/${EGDIR}/squirrelmail.conf
+.for f in ${DATA_FILES}
+	${INSTALL_DATA} ${WRKSRC}/data/${f} ${DESTDIR}${PREFIX}/${EGDIR}/data
+.endfor
 	cd ${WRKSRC}; pax -rw -pp . ${DESTDIR}${PREFIX}/${SMDIR}
 	${INSTALL_DATA} ${WRKDIR}/squirrelmail-conf.pl.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
