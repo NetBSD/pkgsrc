@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.1 2010/03/05 13:50:04 taca Exp $
+
+Use proper max value.
+
+--- src/main.cpp.orig	2006-08-11 20:29:12.000000000 +0000
++++ src/main.cpp
+@@ -95,7 +95,7 @@ static struct my_option my_long_options[
+    0, 1},
+ 
+   {"select_limit", OPT_SELECT_LIMIT, "", (gptr*) &select_limit,
+-   (gptr*) &select_limit, 0, GET_ULONG, REQUIRED_ARG, 1000L, 1, ~0L, 0, 1, 0},
++   (gptr*) &select_limit, 0, GET_ULONG, REQUIRED_ARG, 1000L, 1, LONG_MAX, 0, 1, 0},
+   
+   {"net_buffer_length", OPT_NET_BUFFER_LENGTH, "",
+    (gptr*) &my_net_buffer_length, (gptr*) &my_net_buffer_length, 0, GET_ULONG,
+@@ -111,7 +111,7 @@ static struct my_option my_long_options[
+    (gptr*) &opt_local_infile, 0, GET_BOOL, OPT_ARG, 0, 0, 0, 0, 0, 0},
+ 
+   {"max_join_size", OPT_MAX_JOIN_SIZE, "", (gptr*) &max_join_size,
+-   (gptr*) &max_join_size, 0, GET_ULONG, REQUIRED_ARG, 1000000L, 1, ~0L, 0, 1,
++   (gptr*) &max_join_size, 0, GET_ULONG, REQUIRED_ARG, 1000000L, 1, LONG_MAX, 0, 1,
+    0},
+ 
+   { 0, 0, 0, 0, 0, 0, GET_NO_ARG, NO_ARG, 0, 0, 0, 0, 0, 0}
