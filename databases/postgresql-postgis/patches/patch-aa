@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/01/21 12:53:19 adam Exp $
+$NetBSD: patch-aa,v 1.2 2010/03/05 14:55:21 gdt Exp $
 
---- postgis/Makefile.in.orig	2009-11-13 22:26:00.000000000 +0000
+--- postgis/Makefile.in.orig	2010-01-08 22:48:29.000000000 +0000
 +++ postgis/Makefile.in
-@@ -60,7 +60,7 @@ OBJS=$(PG_OBJS)
+@@ -69,7 +69,7 @@ OBJS=$(PG_OBJS)
  # older version of PostGIS, rather than with the static liblwgeom.a 
  # supplied with newer versions of PostGIS
  PG_CPPFLAGS+=@CPPFLAGS@ -I../liblwgeom
@@ -11,12 +11,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/01/21 12:53:19 adam Exp $
  
  # Extra files to remove during 'make clean'
  EXTRA_CLEAN=$(SQL_OBJS)
-@@ -73,7 +73,7 @@ include $(PGXS)
+@@ -103,7 +103,7 @@ endif
  
  # Borrow the $libdir substitution from PGXS but customise by adding the version number
  %.sql: %.sql.in
--	sed 's,MODULE_PATHNAME,$$libdir/$*-@POSTGIS_MAJOR_VERSION@.@POSTGIS_MINOR_VERSION@,g' $< >$@
-+	sed 's,MODULE_PATHNAME,$$libdir/../lib$*-@POSTGIS_MAJOR_VERSION@.@POSTGIS_MINOR_VERSION@,g' $< >$@
+-	sed 's,MODULE_PATHNAME,$$libdir/postgis-@POSTGIS_MAJOR_VERSION@.@POSTGIS_MINOR_VERSION@,g' $< >$@
++	sed 's,MODULE_PATHNAME,$$libdir/libpostgis-@POSTGIS_MAJOR_VERSION@.@POSTGIS_MINOR_VERSION@,g' $< >$@
  
- postgis_upgrade_14_minor.sql: postgis.sql
- 	$(PERL) ../utils/postgis_proc_upgrade.pl $< 1.4 > $@
+ postgis_upgrade_15_minor.sql: postgis.sql
+ 	$(PERL) ../utils/postgis_proc_upgrade.pl $< 1.5 > $@
