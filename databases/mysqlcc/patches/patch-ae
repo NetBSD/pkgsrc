@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2010/03/05 13:50:04 taca Exp $
+
+Substitute path.
+
+--- src/CApplication.cpp.orig	2006-08-11 20:29:12.000000000 +0000
++++ src/CApplication.cpp
+@@ -110,7 +110,7 @@ void CApplication::initGlobals(bool star
+ #else
+   //Directory where mysqlcc.exe (or mysqlcc) is.
+   //QString mydir = QDir::currentDirPath() + "/";
+-  QString mydir = "/usr/share/mysqlcc/";  // This needs to be done with a PREFIX define ..
++  QString mydir = "@PREFIX@/share/mysqlcc/";  // This needs to be done with a PREFIX define ..
+ #endif
+ 
+   //Translations path
