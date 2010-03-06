@@ -1,15 +1,16 @@
-# $NetBSD: Makefile.common,v 1.5 2008/08/22 21:49:08 epg Exp $
+# $NetBSD: Makefile.common,v 1.6 2010/03/06 13:18:07 obache Exp $
 # used by net/py-twisted/Makefile
 # used by net/py-twisted-docs/Makefile
 
-TWISTED_VERSION=	8.1.0
+TWISTED_VERSION=	10.0.0
 DISTNAME=		Twisted-${TWISTED_VERSION}
 CATEGORIES=		net python
-MASTER_SITES=		http://tmrc.mit.edu/mirror/twisted/Twisted/8.1/
+MASTER_SITES=		http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.twistedmatrix.com/
+LICENSE=		mit
 
 DISTINFO_FILE?=		${.CURDIR}/../py-twisted/distinfo
 PATCHDIR?=		${.CURDIR}/../py-twisted/patches
