@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9098 2010/03/05 13:58:06 obache Exp $
+$NetBSD: TODO,v 1.9099 2010/03/06 11:25:23 obache Exp $
 
 Suggested new packages
 ======================
@@ -1089,6 +1089,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-m2crypto-0.20.2
 	o py-moin-1.9.0 [pkg/42602]
 	o py-moin-1.9.2
+	o py-nevow-0.10.0
 	o py-psycopg2-2.0.13
 	o py-pyrex-0.9.8.6
 	o py-subversion-1.6.9
