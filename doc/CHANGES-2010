@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1046 2010/03/05 20:00:22 agc Exp $
+$NetBSD: CHANGES-2010,v 1.1047 2010/03/06 13:18:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1242,3 +1242,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/gitweb to 1.6.6.2 [gdt 2010-03-05]
 	Updated security/netpgp to 20100304 [agc 2010-03-05]
 	Updated security/netpgp to 20100305 [agc 2010-03-05]
+	Updated net/py-twisted to 10.0.0 [obache 2010-03-06]
