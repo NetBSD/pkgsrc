@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2010/01/17 12:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2010/03/06 09:07:15 spz Exp $
 
-DISTNAME=		ipsec-tools-0.7.1
-PKGREVISION=		1
+DISTNAME=		ipsec-tools-0.7.3
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_NETBSD:=ipsec-tools/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +10,7 @@ HOMEPAGE=		http://ipsec-tools.sourceforge.net/
 COMMENT=		IPsec-tools racoon IKE daemon
 
 ONLY_FOR_PLATFORM=	NetBSD-[3-9].*-* FreeBSD-[5-9].*-* Linux-2.[6-9].*-*
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -55,32 +55,37 @@ pre-configure:
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}
-	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}/roadwarrior
-	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}/roadwarrior/client
-	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}/roadwarrior/server
-	${INSTALL_DATA} ${SAMPLE_DIR}/psk.txt ${EXAMPLE_DIR}
-	${INSTALL_DATA} ${SAMPLE_DIR}/psk.txt.in ${EXAMPLE_DIR}
-	${INSTALL_DATA} ${SAMPLE_DIR}/psk.txt.sample ${EXAMPLE_DIR}
-	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf ${EXAMPLE_DIR}
-	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.in ${EXAMPLE_DIR}
-	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample ${EXAMPLE_DIR}
-	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-gssapi ${EXAMPLE_DIR}
-	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-inherit ${EXAMPLE_DIR}
-	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-natt ${EXAMPLE_DIR}
-	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-plainrsa ${EXAMPLE_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLE_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLE_DIR}/roadwarrior
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLE_DIR}/roadwarrior/client
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLE_DIR}/roadwarrior/server
+	${INSTALL_DATA} ${SAMPLE_DIR}/psk.txt ${DESTDIR}${EXAMPLE_DIR}
+	${INSTALL_DATA} ${SAMPLE_DIR}/psk.txt.in ${DESTDIR}${EXAMPLE_DIR}
+	${INSTALL_DATA} ${SAMPLE_DIR}/psk.txt.sample ${DESTDIR}${EXAMPLE_DIR}
+	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf ${DESTDIR}${EXAMPLE_DIR}
+	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.in ${DESTDIR}${EXAMPLE_DIR}
+	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample \
+	    ${DESTDIR}${EXAMPLE_DIR}
+	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-gssapi \
+	    ${DESTDIR}${EXAMPLE_DIR}
+	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-inherit \
+	    ${DESTDIR}${EXAMPLE_DIR}
+	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-natt \
+	    ${DESTDIR}${EXAMPLE_DIR}
+	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-plainrsa \
+	    ${DESTDIR}${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/README \
-	    ${EXAMPLE_DIR}/roadwarrior
+	    ${DESTDIR}${EXAMPLE_DIR}/roadwarrior
 	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/client/racoon.conf \
-	    ${EXAMPLE_DIR}/roadwarrior/client
+	    ${DESTDIR}${EXAMPLE_DIR}/roadwarrior/client
 	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/client/phase1-up.sh \
-	    ${EXAMPLE_DIR}/roadwarrior/client
+	    ${DESTDIR}${EXAMPLE_DIR}/roadwarrior/client
 	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/client/phase1-down.sh \
-	    ${EXAMPLE_DIR}/roadwarrior/client
+	    ${DESTDIR}${EXAMPLE_DIR}/roadwarrior/client
 	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/server/racoon.conf \
-	    ${EXAMPLE_DIR}/roadwarrior/server
+	    ${DESTDIR}${EXAMPLE_DIR}/roadwarrior/server
 	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/server/racoon.conf-radius \
-	    ${EXAMPLE_DIR}/roadwarrior/server
+	    ${DESTDIR}${EXAMPLE_DIR}/roadwarrior/server
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
