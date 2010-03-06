@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9099 2010/03/06 11:25:23 obache Exp $
+$NetBSD: TODO,v 1.9100 2010/03/06 13:18:31 obache Exp $
 
 Suggested new packages
 ======================
@@ -1094,7 +1094,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-pyrex-0.9.8.6
 	o py-subversion-1.6.9
 	o py-sybase-0.37
-	o py-twisted-9.0.0
 	o py-urwid-0.9.9
 	o python-2.5.5 [CVE-2009-3560, CVE-2009-3720]
 	o python-3.1.1
