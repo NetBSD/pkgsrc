@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1050 2010/03/07 07:47:04 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.1051 2010/03/07 08:55:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1247,3 +1247,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated geography/epsg-docs to 200911nb1 [dholland 2010-03-07]
 	Updated mail/squirrelmail to 1.4.20 [taca 2010-03-07]
 	Updated news/newsfetch to 1.3nb2 [dholland 2010-03-07]
+	Updated misc/gaupol to 0.15 [wiz 2010-03-07]
