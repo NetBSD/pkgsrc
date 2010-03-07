@@ -1,0 +1,33 @@
+$NetBSD: patch-an,v 1.1 2010/03/07 08:52:27 lukem Exp $
+
+--- src/client.c.orig	1999-11-01 00:22:14.000000000 +0000
++++ src/client.c
+@@ -435,7 +435,7 @@ static int sendfile(rname, opts, stb, us
+ 
+ 	(void) sendcmd(C_RECVREG, "%o %04o %ld %ld %ld %s %s %s", 
+ 		       opts, stb->st_mode & 07777, (long) stb->st_size, 
+-		       stb->st_mtime, stb->st_atime,
++		       (long)stb->st_mtime, (long)stb->st_atime,
+ 		       user, group, ername);
+ 	if (response() < 0) {
+ 		(void) close(f);
+@@ -734,7 +734,7 @@ static int sendlink(rname, opts, stb, us
+ 	ENCODE(ername, rname);
+ 	(void) sendcmd(C_RECVSYMLINK, "%o %04o %ld %ld %ld %s %s %s", 
+ 		       opts, stb->st_mode & 07777, (long) stb->st_size, 
+-		       stb->st_mtime, stb->st_atime,
++		       (long)stb->st_mtime, (long)stb->st_atime,
+ 		       user, group, ername);
+ 	if (response() < 0)
+ 		return(-1);
+@@ -973,8 +973,8 @@ static int update(rname, opts, statp)
+ 
+ 	debugmsg(DM_MISC, "update(%s,) local mode %04o remote mode %04o\n", 
+ 		 rname, lmode, rmode);
+-	debugmsg(DM_MISC, "update(%s,) size %ld mtime %d owner '%s' grp '%s'\n",
+-		 rname, (long) size, mtime, owner, group);
++	debugmsg(DM_MISC, "update(%s,) size %ld mtime %ld owner '%s' grp '%s'\n",
++		 rname, (long) size, (long)mtime, owner, group);
+ 
+ 	if (statp->st_mtime != mtime) {
+ 		if (statp->st_mtime < mtime && IS_ON(opts, DO_YOUNGER)) {
