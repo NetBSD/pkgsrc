@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9103 2010/03/07 08:55:54 wiz Exp $
+$NetBSD: TODO,v 1.9104 2010/03/07 23:19:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -427,7 +427,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o auctex-11.86
 	o audacious-plugins-2.2
 	o autoconvert-0.3.16
-	o autogen-5.10
+	o autogen-5.10.1
 	o avcheck-0.91
 	o avl-2.0.2a
 	o awesome-3.4.3
@@ -446,7 +446,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o biew-6.1.0
 	o bind-9.6.2
 	o bind-9.7.0
-	o binutils-2.20
+	o binutils-2.20.1
 	o bioperl-1.5.0
 	o bitlbee-1.2.4
 	o bluefish-2.0.0
@@ -465,7 +465,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.6.43
+	o calibre-0.6.44
 	o camlimages-3.0.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -572,7 +572,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o etm-556
-	o eukleides-1.5.1
+	o eukleides-1.5.2
+	o evolution-2.28.3.1
 	o evolution-data-server-2.28.3.1
 	o evolution-exchange-2.28.2
 	o evolution-mapi-0.28.2 [GNOME 2.28]
@@ -584,7 +585,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ezxml-0.8.6
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o fbreader-0.12.6
+	o fbreader-0.12.7
 	o fcitx-3.6.2
 	o fd-3.00d
 	o festival-1.96
@@ -710,7 +711,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o graphviz-2.26.3
 	o grep-2.5.4
 	o gsasl-1.4.1
-	o gsharutils-4.8
+	o gsharutils-4.9
 	o gss-0.1.2
 	o gst-plugins0.10-ffmpeg-0.10.7
 	o gtick-0.4.2
@@ -833,7 +834,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdrm-2.4.19
 	o libextractor-0.6.0
 	o libflash-0.4.13
-	o libgda-4.0.7 [GNOME 2.28]
+	o libgda-4.0.8 [GNOME 2.28]
 	o libgdata-0.6.2
 	o libgee-0.5.0
 	o libgiigic-1.1.2
@@ -911,6 +912,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o merb-sequel-1.0.0
 	o merb-stories-0.9.13
 	o merb-test-unit-0.9.13
+	o mercurial-1.5
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -1077,6 +1079,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-checker-0.8.17
 	o py-cups-1.9.48
 	o py-dbus-0.83.1
+	o py-enchant-1.6.1 [pkg/42927]
 	o py-fpconst-0.7.2 [pkg/42556]
 	o py-game-1.9.1
 	o py-gdata-2.0.8 [pkg/42892]
@@ -1178,8 +1181,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.2.0
 	o scm-5e5
-	o scmgit-base-1.7.0
-	o scmgit-docs-1.7.0
+	o scmgit-base-1.7.0.1
+	o scmgit-docs-1.7.0.1
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o sdcc-2.9.0
@@ -1232,6 +1235,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
 	o systrace-1.6e
+	o t-prot-2.97
 	o tacacs-4.0.4.14
 	o tads-3.0.16
 	o tcl-8.5.8
@@ -1251,6 +1255,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tfmxplay-1.1.6
 	o thin-1.0.0
 	o thoth-0.2.1
+	o thunderbird-3.0.3
 	o tig-0.15
 	o tile-0.7.4
 	o tinc-1.0.12
