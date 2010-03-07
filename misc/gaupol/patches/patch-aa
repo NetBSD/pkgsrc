@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1 2010/03/07 08:55:45 wiz Exp $
+
+--- manifest/data-files.orig	2009-03-01 17:42:18.000000000 +0000
++++ manifest/data-files
+@@ -40,5 +40,5 @@ data/icons/hicolor/32x32/apps/*.png
+ [share/icons/hicolor/scalable/apps]
+ data/icons/hicolor/scalable/apps/*.svg
+ 
+-[share/man/man1]
++[man/man1]
+ doc/gaupol.1
