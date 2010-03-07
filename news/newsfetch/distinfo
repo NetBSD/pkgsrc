@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2009/10/29 22:40:23 tnn Exp $
+$NetBSD: distinfo,v 1.8 2010/03/07 07:28:22 dholland Exp $
 
 SHA1 (newsfetch-1.3.tar.gz) = e497eecffa15d62b1cde6921734dd6e1cb9d933c
 RMD160 (newsfetch-1.3.tar.gz) = dfe2878e6bb0e5c5c249c3e4d7a3489adac17d97
 Size (newsfetch-1.3.tar.gz) = 12159 bytes
 SHA1 (patch-aa) = 57bf7387cf8a3b6c1189d782b054750d21c31c94
-SHA1 (patch-ab) = 2d30938b62011db3afa2c0e06043b43bbb5cf0b2
+SHA1 (patch-ab) = d0d064038a04a125f48aeeaa83f69f0f5d4e1720
 SHA1 (patch-ac) = 2241ba0950d3ee5f4c0c253cf4870cb4e070fe11
 SHA1 (patch-ad) = bda1504ce87969da67b14675bdecf351e7bdf148
