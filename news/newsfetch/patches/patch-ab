@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2004/03/29 17:31:55 tv Exp $
+$NetBSD: patch-ab,v 1.2 2010/03/07 07:28:22 dholland Exp $
 
---- nntp.c.orig	Mon Nov  3 08:34:59 2003
+--- nntp.c.orig	2000-11-13 02:01:49.000000000 +0000
 +++ nntp.c
+@@ -23,7 +23,7 @@ extern FILE *rcfp, *rctmpfp, *socket_fp[
+ 
+ char *header;
+ 
+-#define MAXBUFSIZE 500
++#define MAXBUFSIZE 5000
+ char command_buf[MAXBUFSIZE + 1];
+ 
+ /* lots of protos */
 @@ -51,7 +51,7 @@ void read_nntp_data() 
  int set_reader_mode() 
  {
