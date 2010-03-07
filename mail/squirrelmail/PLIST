@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.35 2010/03/05 03:05:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.36 2010/03/07 03:41:49 taca Exp $
 man/man8/squirrelmail-conf.pl.8
-share/examples/squirrelmail/squirrelmail.conf
 share/examples/squirrelmail/data/.htaccess
 share/examples/squirrelmail/data/index.php
+share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/README
 share/squirrelmail/class/.htaccess
 share/squirrelmail/class/deliver/Deliver.class.php
@@ -77,6 +77,7 @@ share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.17.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.18.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.19.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.2.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.20-RC2.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.20RC1.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.3.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.3a.txt
