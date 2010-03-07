@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/12/02 12:08:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/03/07 23:23:59 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -111,6 +111,9 @@ ${PYSITELIB}/hgext/parentrevspec.pyo
 ${PYSITELIB}/hgext/patchbomb.py
 ${PYSITELIB}/hgext/patchbomb.pyc
 ${PYSITELIB}/hgext/patchbomb.pyo
+${PYSITELIB}/hgext/progress.py
+${PYSITELIB}/hgext/progress.pyc
+${PYSITELIB}/hgext/progress.pyo
 ${PYSITELIB}/hgext/purge.py
 ${PYSITELIB}/hgext/purge.pyc
 ${PYSITELIB}/hgext/purge.pyo
@@ -274,17 +277,6 @@ ${PYSITELIB}/mercurial/httprepo.pyo
 ${PYSITELIB}/mercurial/i18n.py
 ${PYSITELIB}/mercurial/i18n.pyc
 ${PYSITELIB}/mercurial/i18n.pyo
-${PYSITELIB}/mercurial/i18n/da.po
-${PYSITELIB}/mercurial/i18n/de.po
-${PYSITELIB}/mercurial/i18n/el.po
-${PYSITELIB}/mercurial/i18n/fr.po
-${PYSITELIB}/mercurial/i18n/hggettext
-${PYSITELIB}/mercurial/i18n/it.po
-${PYSITELIB}/mercurial/i18n/ja.po
-${PYSITELIB}/mercurial/i18n/pt_BR.po
-${PYSITELIB}/mercurial/i18n/sv.po
-${PYSITELIB}/mercurial/i18n/zh_CN.po
-${PYSITELIB}/mercurial/i18n/zh_TW.po
 ${PYSITELIB}/mercurial/ignore.py
 ${PYSITELIB}/mercurial/ignore.pyc
 ${PYSITELIB}/mercurial/ignore.pyo
@@ -382,6 +374,9 @@ ${PYSITELIB}/mercurial/tags.pyo
 ${PYSITELIB}/mercurial/templatefilters.py
 ${PYSITELIB}/mercurial/templatefilters.pyc
 ${PYSITELIB}/mercurial/templatefilters.pyo
+${PYSITELIB}/mercurial/templatekw.py
+${PYSITELIB}/mercurial/templatekw.pyc
+${PYSITELIB}/mercurial/templatekw.pyo
 ${PYSITELIB}/mercurial/templater.py
 ${PYSITELIB}/mercurial/templater.pyc
 ${PYSITELIB}/mercurial/templater.pyo
@@ -418,6 +413,7 @@ ${PYSITELIB}/mercurial/templates/gitweb/tags.tmpl
 ${PYSITELIB}/mercurial/templates/map-cmdline.changelog
 ${PYSITELIB}/mercurial/templates/map-cmdline.compact
 ${PYSITELIB}/mercurial/templates/map-cmdline.default
+${PYSITELIB}/mercurial/templates/map-cmdline.xml
 ${PYSITELIB}/mercurial/templates/monoblue/branches.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/changelogentry.tmpl
