@@ -1,30 +1,9 @@
-$NetBSD: distinfo,v 1.58 2010/03/04 16:00:37 taca Exp $
+$NetBSD: distinfo,v 1.59 2010/03/07 03:41:49 taca Exp $
 
-SHA1 (squirrelmail-1.4.20-RC2.tar.bz2) = f1cdccfdd17d8974adc0b79aba44b62f98f78f64
-RMD160 (squirrelmail-1.4.20-RC2.tar.bz2) = f736e33af6f7b5a4c49f96968ed3fdeb2d42f06f
-Size (squirrelmail-1.4.20-RC2.tar.bz2) = 516825 bytes
+SHA1 (squirrelmail-1.4.20.tar.bz2) = ea1f8911961685393da2872739a060e0cf1f03f3
+RMD160 (squirrelmail-1.4.20.tar.bz2) = aa4e7f97a0f9eddc207d0f390c6f25dd1e69c16a
+Size (squirrelmail-1.4.20.tar.bz2) = 521070 bytes
 SHA1 (patch-aa) = 4c5556c804c1b728eec87322272abb06edcfcc2a
-SHA1 (patch-ab) = 9b522ab15b3be1ee6d4f93e13117402bc0c34ea5
-SHA1 (patch-ac) = 9a67070fd00baeae71260ea828461ad297f9ed88
-SHA1 (patch-af) = bcaaf9f0e4e185aedca1cd43ae28ac3fb7f376d2
-SHA1 (patch-ai) = 701fdbc84afde5f8e255af13ba0e44469343e17c
-SHA1 (patch-aj) = 0347dfe01a977a5b112bbcfc2aa68fbf5fcda3e4
-SHA1 (patch-ak) = deef584a60802d1530091872b9af9d088ce80924
-SHA1 (patch-al) = f961e26e47215aaa2b91d409142d81d77549d468
-SHA1 (patch-am) = 3bbd987153bf20ad2c4a148bfa455bfeaf1936f2
-SHA1 (patch-an) = 263e5943b5c9ed64f97d6e23403be98c63f6e661
-SHA1 (patch-ao) = b62b142252f596ced511deffc9fa0aa7362d93c9
-SHA1 (patch-ap) = 7f950d47f26521f1671529143860dc8d0309ebb2
-SHA1 (patch-aq) = cb15f6ac784991016752316d0f4e85857dd12f16
-SHA1 (patch-ar) = f3c824cdee855ad6870ccc479617221469c6ec3e
-SHA1 (patch-as) = 737ea47e5a94ebb5754f5b2eab05069adf4e2037
-SHA1 (patch-at) = 7a6f120bce676f747dff9c0c3e9202c6fa8b49ca
-SHA1 (patch-au) = 448d9895a9be60f8ae5c605bb58d35efbd62047c
-SHA1 (patch-av) = 12b82f72507ff313a05aeed08161d6f553247621
-SHA1 (patch-aw) = 0b64a0ef5395b3ceb293d0c8d874ddc95f002151
+SHA1 (patch-ab) = 30bf68c730f20e817fbe81d18bc2a95899ee3fd0
+SHA1 (patch-ai) = 1c08904ecf074ff3ba7e6042becc0f0771388b9f
 SHA1 (patch-ca) = deaf791fd6eaf25001b369d505531ae065fe0801
-SHA1 (patch-cb) = 76d8d0ade2d01ce7fc8d0151c817562bdf10c027
-SHA1 (patch-cc) = 5bdd4f6346bc119ed2bec43d69cb855892f2d051
-SHA1 (patch-cd) = ec265daffc4b2c98fb5e77584971e28c6813f956
-SHA1 (patch-ce) = d73c3d38b77ac589bac5c01f3775df6995b476f8
-SHA1 (patch-cf) = 237c0f584d4d393ca74241b52380abd2217a2ac0
