@@ -1,8 +1,28 @@
-$NetBSD: patch-ai,v 1.1 2003/09/06 03:36:04 kim Exp $
+$NetBSD: patch-ai,v 1.2 2010/03/07 08:52:27 lukem Exp $
 
---- src/server.c.orig	Wed Aug  4 11:57:33 1999
-+++ src/server.c	Sun Nov 24 18:44:10 2002
-@@ -1737,7 +1737,7 @@
+--- src/server.c.orig	1999-08-04 15:57:33.000000000 +0000
++++ src/server.c
+@@ -684,7 +684,7 @@ static void query(xname)
+ #endif
+ #endif
+ 		(void) sendcmd(QC_YES, "%ld %ld %o %s %s",
+-			       (long) stb.st_size, stb.st_mtime,
++			       (long) stb.st_size, (long)stb.st_mtime,
+ 			       stb.st_mode & 07777,
+ 			       getusername(stb.st_uid, target, options), 
+ 			       getgroupname(stb.st_gid, target, options));
+@@ -1534,8 +1534,8 @@ static void recvit(cmd, type)
+ 	file = fileb;
+ 
+ 	debugmsg(DM_MISC,
+-		 "recvit: opts = %04o mode = %04o size = %d mtime = %d",
+-		 opts, mode, size, mtime);
++		 "recvit: opts = %04o mode = %04o size = %ld mtime = %ld",
++		 opts, mode, (long)size, (long)mtime);
+ 	debugmsg(DM_MISC,
+        "recvit: owner = '%s' group = '%s' file = '%s' catname = %d isdir = %d",
+ 		 owner, group, file, catname, (type == S_IFDIR) ? 1 : 0);
+@@ -1737,7 +1737,7 @@ static void settarget(cmd, isdir)
  	/*
  	 * Handle target
  	 */
