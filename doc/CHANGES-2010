@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1052 2010/03/07 08:57:24 lukem Exp $
+$NetBSD: CHANGES-2010,v 1.1053 2010/03/07 23:24:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1249,3 +1249,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated news/newsfetch to 1.3nb2 [dholland 2010-03-07]
 	Updated misc/gaupol to 0.15 [wiz 2010-03-07]
 	Updated net/rdist6 to 0.92nb3 [lukem 2010-03-07]
+	Updated devel/mercurial to 1.5 [wiz 2010-03-07]
