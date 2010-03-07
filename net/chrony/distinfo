@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.6 2008/08/12 16:37:32 sborrill Exp $
+$NetBSD: distinfo,v 1.6.14.1 2010/03/07 00:10:17 tron Exp $
 
-SHA1 (chrony-1.23.tar.gz) = f0c6b32099329f358dbdb4f62753d2c7cbc13c79
-RMD160 (chrony-1.23.tar.gz) = 6f92aeac15d252821ff72a02f340fc0e562eddc1
-Size (chrony-1.23.tar.gz) = 321015 bytes
-SHA1 (patch-aa) = 84d1276a00e30ac66ae1cb142c001cba76fab4a8
-SHA1 (patch-ab) = 08716e6d8983c33f2f9e9df1a7b29f627469576f
-SHA1 (patch-ac) = 14f34e14d595e235f9febfaef7a75d332dfe5bdb
-SHA1 (patch-ad) = 98f5ba97e0052a0e83a0017769bd869ce593c461
-SHA1 (patch-ae) = f55536cf3be9c9fc55345a3d21b88500e30807ad
+SHA1 (chrony-1.24.tar.gz) = 6e17d7b8cdd3508751713bd2279202b75643e268
+RMD160 (chrony-1.24.tar.gz) = a393c3f51d99a24a1aefd1653575de5a6c642191
+Size (chrony-1.24.tar.gz) = 364311 bytes
+SHA1 (patch-aa) = 1fe34e98bcdf70686e3e38bf88bfdbbe9f27b42d
+SHA1 (patch-ab) = efec09e45ea46c7f700a507a565e27a3d9c38f78
+SHA1 (patch-ac) = e6676efc4151b394451b7de64d44351789892561
+SHA1 (patch-ad) = 621626000457731ac89778d41200e9046a4edb25
+SHA1 (patch-ae) = a1efbc23807fa74c5393946400fa2565af12e7c5
 SHA1 (patch-af) = 3d09c0aba56bdce704a923ae7c15673cdb6a7489
-SHA1 (patch-ag) = 63a2f96165d16bac2ac3796bb554bdc8ec6272e5
