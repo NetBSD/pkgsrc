@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2010/03/04 10:53:55 gdt Exp $
+$NetBSD: distinfo,v 1.3 2010/03/07 01:25:42 dholland Exp $
 
 SHA1 (epsg-docs-200911/G7-1.pdf) = 0f81b7102746075d245722ab8fa972d8736b173d
 RMD160 (epsg-docs-200911/G7-1.pdf) = e86faf3797672bfd6d3a967a6e9f6c5c6e706406
@@ -6,3 +6,9 @@ Size (epsg-docs-200911/G7-1.pdf) = 1597812 bytes
 SHA1 (epsg-docs-200911/G7-2.pdf) = 5d19bc62cb461f548e6e80d4786fe09963baa598
 RMD160 (epsg-docs-200911/G7-2.pdf) = b99183fc46fa517bc3eaf6a17dc1d0d8be7314b3
 Size (epsg-docs-200911/G7-2.pdf) = 3161696 bytes
+SHA1 (epsg-docs-200911/G7-3.pdf) = fe236efc84c3a2a69e3d11fe1fe72664a691a5e9
+RMD160 (epsg-docs-200911/G7-3.pdf) = 651a84ab3c82d3d05b808dcb01f0645e7891d7d3
+Size (epsg-docs-200911/G7-3.pdf) = 469930 bytes
+SHA1 (epsg-docs-200911/G7-4.pdf) = a47478ad02b5f8dd576994aa7d1ff44360aabdf4
+RMD160 (epsg-docs-200911/G7-4.pdf) = 15f6ea7a36402cd1851f13ce39a80018e7660e46
+Size (epsg-docs-200911/G7-4.pdf) = 499072 bytes
