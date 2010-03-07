@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1049 2010/03/07 03:42:36 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1050 2010/03/07 07:47:04 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1244,4 +1244,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/netpgp to 20100305 [agc 2010-03-05]
 	Updated net/py-twisted to 10.0.0 [obache 2010-03-06]
 	Updated net/py-twisted-docs to 10.0.0 [obache 2010-03-06]
+	Updated geography/epsg-docs to 200911nb1 [dholland 2010-03-07]
 	Updated mail/squirrelmail to 1.4.20 [taca 2010-03-07]
+	Updated news/newsfetch to 1.3nb2 [dholland 2010-03-07]
