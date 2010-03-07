@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: monotone-server-init.sh,v 1.4 2007/06/24 20:55:29 jmmv Exp $
+# $NetBSD: monotone-server-init.sh,v 1.5 2010/03/07 22:09:36 jmmv Exp $
 #
 
 progname=$(basename $0)
@@ -118,7 +118,7 @@ server:
 At last, do not forget to register the public keys for the users with
 write access by using a command similar to:
 
-    monotone --db=${home}/monotone.db read < file-with-public-keys
+    ${MONOTONE##*/} --db=${home}/monotone.db read < file-with-public-keys
 
 Once finished, use the installed rc.d script (monotone) to start the
 dedicated server process.
