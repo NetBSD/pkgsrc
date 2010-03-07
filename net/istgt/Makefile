@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/02/07 11:40:22 sborrill Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/07 10:51:02 sborrill Exp $
 #
 
 DISTNAME=		istgt-20100125
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://www.peach.ne.jp/archives/istgt/
 
@@ -21,7 +21,7 @@ PKG_SYSCONFSUBDIR=	istgt
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	doc/istgt.1 src/istgt.h src/istgtcontrol.h
+SUBST_FILES.paths=	doc/istgt.1 src/istgt.h src/istgtcontrol.c
 SUBST_SED.paths=	-e "s,/usr/local,${PREFIX},"
 
 EG_DIR=		${PREFIX}/share/examples/istgt
