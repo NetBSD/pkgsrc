@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 09:59:21 agc Exp $
+$NetBSD: distinfo,v 1.6 2010/03/07 13:30:48 obache Exp $
 
 SHA1 (drac-1.12/drac.tar.Z) = 2434e7f238ee1212c742705d3653dedec64266f5
 RMD160 (drac-1.12/drac.tar.Z) = b2a485c554e8d97a6defe0046bb9c485c6014a54
 Size (drac-1.12/drac.tar.Z) = 20705 bytes
-SHA1 (patch-aa) = fb56b4681f131a379f42f449bccbd826a0e97e6f
+SHA1 (patch-aa) = b4f3316c4273df33fdf86e05d0b4cffec0aa3d39
