@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2010/03/07 08:52:27 lukem Exp $
+
+--- src/docmd.c.orig	2001-03-12 18:42:23.000000000 +0000
++++ src/docmd.c
+@@ -786,7 +786,7 @@ static void dodcolon(cmd, filev)
+ 		return;
+ 	}
+ 
+-	debugmsg(DM_MISC, "%s: mtime %d\n", stamp, stb.st_mtime);
++	debugmsg(DM_MISC, "%s: mtime %ld\n", stamp, (long) stb.st_mtime);
+ 
+ 	env = NULL;
+ 	for (sc = sbcmds; sc != NULL; sc = sc->sc_next) {
