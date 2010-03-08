@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9107 2010/03/08 14:07:45 joerg Exp $
+$NetBSD: TODO,v 1.9108 2010/03/08 15:26:31 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1133,7 +1133,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rt-3.8.2
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
-	o rubigen-1.5.2
 	o ruby-1.8.7.248 (Ruby 1.8.7-p248)
 	o ruby-1.9.1.129 (Ruby 1.9.1-p129)
 	o ruby-SDL-2.1.1.1
@@ -1251,7 +1250,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.9.9
 	o tfmxplay-1.1.6
-	o thin-1.0.0
 	o thoth-0.2.1
 	o thunderbird-3.0.3
 	o tig-0.15
@@ -1288,7 +1286,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o valgrind-3.5.0
-	o varnish-2.0.4 [pkg/41118]
 	o vera-1.17
 	o vfu-4.09
 	o vice-2.2 [pkgsrc-wip]
