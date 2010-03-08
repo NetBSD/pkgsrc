@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/08/12 11:43:57 ahoka Exp $
+$NetBSD: distinfo,v 1.4 2010/03/08 14:01:21 joerg Exp $
 
-SHA1 (vala-0.7.5.tar.bz2) = 8db8be893abc44d77215f66819313e867845a65c
-RMD160 (vala-0.7.5.tar.bz2) = ecffc985432273dee20f086dad37d4a9cba105c1
-Size (vala-0.7.5.tar.bz2) = 1925666 bytes
+SHA1 (vala-0.7.10.tar.bz2) = 161fdbcb366b3c0130aa744d2fc3816b5f4be45f
+RMD160 (vala-0.7.10.tar.bz2) = 3ee773f1cb4ea984c57f0dd72bc0ea2f8f8094c0
+Size (vala-0.7.10.tar.bz2) = 1976085 bytes
