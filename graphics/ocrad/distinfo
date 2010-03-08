@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/07/11 08:05:06 obache Exp $
+$NetBSD: distinfo,v 1.5 2010/03/08 12:35:54 adam Exp $
 
-SHA1 (ocrad-0.18.tar.gz) = 6168dd37dd5ee71a1b1814bbccf2b89c1bcf732f
-RMD160 (ocrad-0.18.tar.gz) = 471658e7f50ca1ccf3ff773df3639014c450e028
-Size (ocrad-0.18.tar.gz) = 95043 bytes
+SHA1 (ocrad-0.19.tar.gz) = af8e190ca59f3376976fa7d953021c6bb6b68422
+RMD160 (ocrad-0.19.tar.gz) = c13735aa80db28df7c3ba4081d2456a123843370
+Size (ocrad-0.19.tar.gz) = 102451 bytes
+SHA1 (patch-aa) = 39729c825c1b9591c7dda23597f7d8f900b42b2c
 SHA1 (patch-ab) = 8bbfafd788c4fd377f8f8b51cb297b528b9be65c
-SHA1 (patch-ac) = bf7f9c6d5257fc5dd125954ec23754870fc34b8f
+SHA1 (patch-ac) = 952531f89f29a93c20dd4af8050b8e6fa8a5a6a4
