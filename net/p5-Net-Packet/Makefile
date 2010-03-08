@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2009/07/18 18:40:05 sno Exp $
+# $NetBSD: Makefile,v 1.9 2010/03/08 18:02:48 sno Exp $
 
-DISTNAME=	Net-Packet-3.26
+DISTNAME=	Net-Packet-3.27
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
@@ -25,11 +25,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.9.3nb2
 
 PERL5_PACKLIST=		auto/Net/Packet/.packlist
-
-.include "../../mk/endian.mk"
-.if ${MACHINE_ENDIAN} == "big"
-PKG_SKIP_REASON+=	"Big endian architectures not supported yet"
-.endif
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
