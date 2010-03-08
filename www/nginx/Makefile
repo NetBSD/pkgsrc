@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2010/02/08 14:25:44 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/03/08 13:54:47 joerg Exp $
 
-DISTNAME=		nginx-0.8.33
+DISTNAME=		nginx-0.8.34
 DISTFILES=		${DEFAULT_DISTFILES}
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
