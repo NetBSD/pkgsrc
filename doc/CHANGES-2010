@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1079 2010/03/08 19:22:39 jkunz Exp $
+$NetBSD: CHANGES-2010,v 1.1080 2010/03/08 20:41:20 snj Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1279,3 +1279,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/p5-Padre-Plugin-PerlTidy to 0.10 [sno 2010-03-08]
 	Updated editors/p5-Padre-Plugin-PerlCritic to 0.07 [sno 2010-03-08]
 	Updated net/p5-Net-Twitter to 3.11008 [sno 2010-03-08]
+	Updated x11/xf86-video-radeonhd to 1.3.0nb1 [snj 2010-03-08]
