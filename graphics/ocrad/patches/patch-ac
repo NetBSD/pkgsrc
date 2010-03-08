@@ -1,17 +1,15 @@
-$NetBSD: patch-ac,v 1.2 2009/07/11 08:05:06 obache Exp $
+$NetBSD: patch-ac,v 1.3 2010/03/08 12:35:54 adam Exp $
 
-The Solaris install(1) does not know about the -p option.
-
---- Makefile.in.orig	2009-05-04 18:39:20.000000000 +0000
+--- Makefile.in.orig	2010-01-27 12:02:48.000000000 +0000
 +++ Makefile.in
-@@ -1,8 +1,8 @@
- 
- DISTNAME = $(progname)-$(progversion)
+@@ -2,8 +2,8 @@
+ DISTNAME = $(pkgname)-$(pkgversion)
+ AR = ar
  INSTALL = install
 -INSTALL_PROGRAM = $(INSTALL) -p -m 755
 -INSTALL_DATA = $(INSTALL) -p -m 644
 +INSTALL_PROGRAM = $(INSTALL) -m 755
 +INSTALL_DATA = $(INSTALL) -m 644
+ INSTALL_DIR = $(INSTALL) -d -m 755
  SHELL = /bin/sh
  
- objs = arg_parser.o common.o mask.o rational.o rectangle.o track.o ucs.o \
