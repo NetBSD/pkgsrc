@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/08 22:00:31 snj Exp $
+
+SHA1 (quakespasm-0.85.1.tgz) = 4877148c09662c153a92c276116222e6c444f76d
+RMD160 (quakespasm-0.85.1.tgz) = d1ac2c9c96ea1b877e575351d5018730822169d3
+Size (quakespasm-0.85.1.tgz) = 1519477 bytes
+SHA1 (patch-aa) = 0665fd591c509216ccdb9a72b00c0f4772b7834b
