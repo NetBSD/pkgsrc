@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/08 22:00:31 snj Exp $
+
+--- Makefile.orig	2010-02-18 08:55:28.000000000 -0800
++++ Makefile	2010-03-07 18:05:57.000000000 -0800
+@@ -138,7 +138,7 @@ common.o    gl_rlight.o  host_cmd.o   ne
+ # ------------------------
+ 
+ quakespasm:	$(OBJS)
+-	$(CC) $(CFLAGS) -o quakespasm $(OBJS) $(X11_LFLAGS) $(SDL_LFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) -o quakespasm $(OBJS) $(X11_LFLAGS) $(SDL_LFLAGS) $(LIBS) $(LDFLAGS)
+ 	$(STRIP_CMD) $@
+ 
+ release:	quakespasm
+@@ -151,3 +151,4 @@ install:	quakespasm
+ clean:
+ 	rm -f $(shell find . \( -name '*~' -o -name '#*#' -o -name '*.o' -o -name '*.res' -o -name $(DEFAULT_TARGET) \) -print)
+ 
++all:		quakespasm
