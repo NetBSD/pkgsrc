@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2009/12/15 13:30:54 fhajny Exp $
+$NetBSD: patch-aa,v 1.6 2010/03/08 17:30:23 dmcmahill Exp $
 
 --- src/Makefile.in.orig	2009-11-06 19:53:19.000000000 +0000
 +++ src/Makefile.in
@@ -72,7 +72,7 @@ $NetBSD: patch-aa,v 1.5 2009/12/15 13:30:54 fhajny Exp $
 -	[ -d $(SBINDIR) ] || install -d -m 755 $(SBINDIR)
 -	install -m 550 $(G_USER) ejabberdctl.example $(SBINDIR)/ejabberdctl
 +	[ -d $(SBINDIR) ] || $(BSD_INSTALL_DATA_DIR) -m 755 $(SBINDIR)
-+	$(BSD_INSTALL_DATA) -m 550 $(G_USER) ejabberdctl.example $(SBINDIR)/ejabberdctl
++	$(BSD_INSTALL_SCRIPT) -m 550 $(G_USER) ejabberdctl.example $(SBINDIR)/ejabberdctl
  	#
  	# Init script
  	sed -e "s*@ctlscriptpath@*$(SBINDIR)*" \
