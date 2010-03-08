@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1302 2010/03/03 13:41:34 gdt Exp $
+# $NetBSD: Makefile,v 1.1303 2010/03/08 12:40:08 dmcmahill Exp $
 #
 
 COMMENT=	Development utilities
@@ -178,6 +178,7 @@ SUBDIR+=	fastdep
 SUBDIR+=	ffcall
 SUBDIR+=	fhist
 SUBDIR+=	flex
+SUBDIR+=	flexdock
 SUBDIR+=	flim
 SUBDIR+=	florist
 SUBDIR+=	fortran-utils
