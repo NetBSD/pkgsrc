@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1062 2010/03/08 14:54:00 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1063 2010/03/08 15:16:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1259,3 +1259,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-NYTProf to 3.02 [sno 2010-03-08]
 	Updated devel/p5-FreezeThaw to 0.50 [sno 2010-03-08]
 	Updated print/p5-LaTeX-Table to 1.0.1 [sno 2010-03-08]
+	Updated security/p5-Crypt-Blowfish to 2.12 [sno 2010-03-08]
