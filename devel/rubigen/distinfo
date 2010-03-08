@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/11/15 08:26:24 taca Exp $
+$NetBSD: distinfo,v 1.5 2010/03/08 12:51:45 fhajny Exp $
 
-SHA1 (rubigen-1.3.4.gem) = 73be09c0e56edcc8c6c501c8f12ded5b188a0066
-RMD160 (rubigen-1.3.4.gem) = ece237ef1d738eb6dae7ff7dbdd1fe7ae395c30a
-Size (rubigen-1.3.4.gem) = 61952 bytes
+SHA1 (rubigen-1.5.4.gem) = ecf883bf9c680bb616c0c2ce85068d54f3bc3e09
+RMD160 (rubigen-1.5.4.gem) = e6f40676a32f68f50d78794909d35d17aa17a9f4
+Size (rubigen-1.5.4.gem) = 56320 bytes
