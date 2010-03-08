@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1067 2010/03/08 16:45:37 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1068 2010/03/08 16:51:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1264,3 +1264,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added time/p5-DateTime-TimeZone-HPUX version 1.04 [sno 2010-03-08]
 	Updated time/p5-DateTime-TimeZone to 1.11 [sno 2010-03-08]
 	Updated time/p5-DateTime-Format-Flexible to 0.14 [sno 2010-03-08]
+	Updated devel/p5-Set-Scalar to 1.25 [sno 2010-03-08]
