@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/15 14:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/08 00:47:08 snj Exp $
 #
 
 DISTNAME=		xmms_osx_plugin-1.0
@@ -14,6 +14,8 @@ LDFLAGS+=		-lm
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool-disable-static
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 ONLY_FOR_PLATFORM=	Darwin-*-*
