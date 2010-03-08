@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2009/10/07 16:03:00 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/08 12:10:06 sborrill Exp $
 
 DISTNAME=	vic-2.8ucl1.4.0beta-4337
 PKGNAME=	vic-devel-2.8.1.4.0beta.4337
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mbone tk
 MASTER_SITES=	http://www.NetBSD.org/~sborrill/snapshots/
 
 MAKE_JOBS_SAFE=	no
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -25,6 +27,7 @@ WRKSRC=		${WRKDIR}/vic-mpeg4
 GNU_CONFIGURE=	yes
 
 USE_LANGUAGES=	c c++
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
