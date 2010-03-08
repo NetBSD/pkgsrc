@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1064 2010/03/08 16:10:43 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1065 2010/03/08 16:29:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1261,3 +1261,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated print/p5-LaTeX-Table to 1.0.1 [sno 2010-03-08]
 	Updated security/p5-Crypt-Blowfish to 2.12 [sno 2010-03-08]
 	Updated devel/p5-Graph to 0.93 [sno 2010-03-08]
+	Added time/p5-DateTime-TimeZone-HPUX version 1.04 [sno 2010-03-08]
