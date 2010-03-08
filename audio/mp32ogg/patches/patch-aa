@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2010/03/08 23:30:23 pettai Exp $
+
+--- mp32ogg-0.11.orig	2010-02-06 00:13:36.000000000 +0100
++++ mp32ogg-0.11	2010-02-06 00:16:44.000000000 +0100
+@@ -144,7 +144,9 @@
+ }
+ 
+ sub ConvertFile() {
+-	my $mp3file = shift(@_);
++	# force arg stringfication to get actual filename, not getopt::long
++	# callback
++	my $mp3file = "" . shift(@_);
+ 	my $delete = $opt_delete;
+ 	my $filename = $opt_rename;
+ 	my $lowercase = $opt_lowercase;
