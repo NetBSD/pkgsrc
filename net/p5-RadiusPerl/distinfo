@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/04 00:31:51 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2010/03/08 18:10:25 sno Exp $
 
-SHA1 (RadiusPerl-0.13.tar.gz) = cde7d79ab36cf70663240c287b7b20078f050bec
-RMD160 (RadiusPerl-0.13.tar.gz) = b50318ed399ef7873a99d09932142cc014fc9aa9
-Size (RadiusPerl-0.13.tar.gz) = 31378 bytes
+SHA1 (RadiusPerl-0.17.tar.gz) = 7edc6eb7fab83291cf8492d3e7a9be0d43aed3da
+RMD160 (RadiusPerl-0.17.tar.gz) = c1303925c46877cd30c4a7bb3371f416a36daeef
+Size (RadiusPerl-0.17.tar.gz) = 36367 bytes
