@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2008/10/19 19:19:01 he Exp $
+# $NetBSD: Makefile,v 1.8 2010/03/08 12:49:35 sborrill Exp $
 
-DISTNAME=	dansguardian-2.8.0.6.source
-PKGNAME=	dansguardian-2.8.0.6
-PKGREVISION=	5
+DISTNAME=	dansguardian-${VERSION}.source
+PKGNAME=	dansguardian-${VERSION}
+VERSION=	2.8.0.6
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://dansguardian.org/downloads/2/Stable/
 
@@ -10,7 +11,9 @@ MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	http://dansguardian.org/
 COMMENT=	Fast, featureful web content filter for Squid proxy servers
 
-WRKSRC=		${WRKDIR}/dansguardian-2.8.0.6
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/dansguardian-${VERSION}
 HAS_CONFIGURE=	yes
 MANCOMPRESSED=	yes
 RCD_SCRIPTS+=	dansguardian
@@ -36,11 +39,14 @@ SUBST_SED.perlpath=	-e 's,/usr/bin,${PREFIX}/bin,g'
 DANSGUARDIAN_USER?=	nobody
 DANSGUARDIAN_GROUP?=	nobody
 
+INSTALLATION_DIRS=	share/examples/dansguardian
+
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--cgidir=/libexec/cgi-bin/ \
 			--sysconfdir=/etc/dansguardian/ \
 			--bindir=/sbin/ \
 			--mandir=/man/ \
+			--installprefix=${DESTDIR:Q} \
 			--runas_usr=${DANSGUARDIAN_USER} \
 			--runas_grp=${DANSGUARDIAN_GROUP} \
 			--logdir=${VARBASE}/log/dansguardian/
@@ -141,11 +147,11 @@ LANGUAGEDIRS=	arspanish bulgarian chinesebig5 chinesegb2312 \
 		swedish turkish ukenglish
 
 .for d in ${PHRASEDIRS}
-OWN_DIRS+=	${PKG_SYSCONFDIR}/phraselists/${d}
+OWN_DIRS+=	${DESTDIR}${PKG_SYSCONFDIR}/phraselists/${d}
 .endfor
 
 .for d in ${LANGUAGEDIRS}
-OWN_DIRS+=	${PKG_SYSCONFDIR}/languages/${d}
+OWN_DIRS+=	${DESTDIR}${PKG_SYSCONFDIR}/languages/${d}
 CONF_FILES+=	${EGDIR}/languages/${d}/messages \
 		${PKG_SYSCONFDIR}/languages/${d}/messages
 CONF_FILES+=	${EGDIR}/languages/${d}/template.html \
