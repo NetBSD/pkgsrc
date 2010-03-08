@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9108 2010/03/08 15:26:31 fhajny Exp $
+$NetBSD: TODO,v 1.9109 2010/03/08 21:08:43 pettai Exp $
 
 Suggested new packages
 ======================
@@ -1279,7 +1279,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucarp-1.5.1
 	o ucblogo-5.5
 	o udunits-1.12.9
-	o unbound-1.4.1 [pkg/42785]
 	o unrealircd-3.2.8.1
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
