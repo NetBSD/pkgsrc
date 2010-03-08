@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.3 2010/03/08 12:35:54 adam Exp $
+
+--- configure.orig	2010-03-08 12:32:58.000000000 +0000
++++ configure
+@@ -29,10 +29,6 @@ infodir='$(datadir)/info'
+ libdir='${exec_prefix}/lib'
+ mandir='$(datadir)/man'
+ sysconfdir='$(prefix)/etc'
+-CXX=
+-CPPFLAGS=
+-CXXFLAGS='-Wall -W -O2'
+-LDFLAGS=
+ 
+ # Loop over all args
+ while [ -n "$1" ] ; do
