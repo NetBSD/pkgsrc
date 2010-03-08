@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2010/03/08 10:53:05 wiz Exp $
+
+--- src/hash.cc.orig	2004-05-10 00:40:55.000000000 +0000
++++ src/hash.cc
+@@ -144,7 +144,7 @@ int hash(const unsigned int& x, int M)
+ 
+ int hash(FileEntry*const& x, int M)
+ {
+-  return (unsigned int)x % M;
++  return (unsigned int)(unsigned long)x % M;
+ }
+ 
+ #define generic template<class Key, class Data>
