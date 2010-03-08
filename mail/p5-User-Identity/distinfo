@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/09/10 19:18:38 he Exp $
+$NetBSD: distinfo,v 1.5 2010/03/08 18:21:26 sno Exp $
 
-SHA1 (User-Identity-0.92.tar.gz) = 978064743834c156c70d4af344a9218ad930ffba
-RMD160 (User-Identity-0.92.tar.gz) = 14c2a66dfa969486dabb2e91d92424063aad3adb
-Size (User-Identity-0.92.tar.gz) = 26023 bytes
+SHA1 (User-Identity-0.93.tar.gz) = 83ba30ab997a7b2c2efcad675b475d2b9193ea9e
+RMD160 (User-Identity-0.93.tar.gz) = 97369dea02eacfb3912152cbefa6ce4361bd5c68
+Size (User-Identity-0.93.tar.gz) = 26484 bytes
