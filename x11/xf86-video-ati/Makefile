@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2009/09/11 07:29:42 hasso Exp $
+# $NetBSD: Makefile,v 1.15 2010/03/08 20:46:11 snj Exp $
 
 DISTNAME=	xf86-video-ati-6.12.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +20,7 @@ USE_TOOLS+=	gmake pkg-config
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
