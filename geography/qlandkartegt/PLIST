@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2010/03/02 21:51:06 jkunz Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/03/08 22:00:01 jkunz Exp $
 bin/qlandkartegt
 share/qlandkartegt/translations/qlandkartegt_de_DE.qm
 share/qlandkartegt/translations/qlandkartegt_es_ES.qm
 share/qlandkartegt/translations/qlandkartegt_fr_FR.qm
 share/qlandkartegt/translations/qlandkartegt_it_IT.qm
+share/qlandkartegt/translations/qlandkartegt_nl_NL.qm
 share/qlandkartegt/translations/qlandkartegt_ru_RU.qm
