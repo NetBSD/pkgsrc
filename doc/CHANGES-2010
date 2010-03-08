@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1077 2010/03/08 18:33:33 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1078 2010/03/08 18:41:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1274,3 +1274,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Object-InsideOut to 3.63 [sno 2010-03-08]
 	Updated editors/p5-Padre-Plugin-PerlTidy to 0.10 [sno 2010-03-08]
 	Updated editors/p5-Padre-Plugin-PerlCritic to 0.07 [sno 2010-03-08]
+	Updated net/p5-Net-Twitter to 3.11008 [sno 2010-03-08]
