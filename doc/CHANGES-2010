@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1075 2010/03/08 18:26:32 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1076 2010/03/08 18:30:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1272,3 +1272,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/p5-Locale-Codes to 3.11 [sno 2010-03-08]
 	Updated mail/p5-User-Identity to 0.93 [sno 2010-03-08]
 	Updated devel/p5-Object-InsideOut to 3.63 [sno 2010-03-08]
+	Updated editors/p5-Padre-Plugin-PerlTidy to 0.10 [sno 2010-03-08]
