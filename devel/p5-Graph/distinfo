@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/01/20 23:27:09 he Exp $
+$NetBSD: distinfo,v 1.8 2010/03/08 16:10:33 sno Exp $
 
-SHA1 (Graph-0.91.tar.gz) = 5982f396a08fe61d9a1c429e1115b36eefb44cca
-RMD160 (Graph-0.91.tar.gz) = 7dcf036e1aa714337d19c13bcfa3234657f8b9cc
-Size (Graph-0.91.tar.gz) = 143462 bytes
+SHA1 (Graph-0.93.tar.gz) = bed0b25f7c854953ee7ac2fbb2124a943902d129
+RMD160 (Graph-0.93.tar.gz) = d625d9ea4a3a9fb88de760c4e281e0081fd10ef4
+Size (Graph-0.93.tar.gz) = 144938 bytes
