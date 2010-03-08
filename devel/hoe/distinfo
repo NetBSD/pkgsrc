@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/11/23 13:42:52 fhajny Exp $
+$NetBSD: distinfo,v 1.6 2010/03/08 12:39:32 fhajny Exp $
 
-SHA1 (hoe-2.3.3.gem) = 1d18724ba478ba3dc1def990adf6dc010db3cfeb
-RMD160 (hoe-2.3.3.gem) = 8ce7544a0a9796787161036112a53da0da0c11fd
-Size (hoe-2.3.3.gem) = 26624 bytes
+SHA1 (hoe-2.5.0.gem) = 384af5f4a78d93cc46fa21dc56258f7ce878bd2c
+RMD160 (hoe-2.5.0.gem) = 60cde1696168764857be1b5cfc62f1a9fad4f3d4
+Size (hoe-2.5.0.gem) = 113664 bytes
