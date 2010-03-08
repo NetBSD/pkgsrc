@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2010/02/08 16:11:54 joerg Exp $
+$NetBSD: distinfo,v 1.7 2010/03/08 13:54:47 joerg Exp $
 
-SHA1 (nginx-0.8.33.tar.gz) = bf3e3ab90609a62e8896f49895c3f4b4fa308270
-RMD160 (nginx-0.8.33.tar.gz) = 3ab3ea6d07fcac74465dbf40af824fccfd7f5fdd
-Size (nginx-0.8.33.tar.gz) = 620448 bytes
-SHA1 (uwsgi-0.9.4.tar.gz) = 6088d9ffee1de3b0192d8df884abde8983a751e0
-RMD160 (uwsgi-0.9.4.tar.gz) = eab4b83a023bb1f9b26a69ae3447fd592ce3a04b
-Size (uwsgi-0.9.4.tar.gz) = 71397 bytes
+SHA1 (nginx-0.8.34.tar.gz) = bf9a291ee7c20ea6aca4e785af59c8b662ec1d24
+RMD160 (nginx-0.8.34.tar.gz) = 9472f7d2b7b456d54fdc8e4c8dcb35e6531d4a67
+Size (nginx-0.8.34.tar.gz) = 621534 bytes
+SHA1 (uwsgi-0.9.4.2.tar.gz) = 8374bb8b0d09a808a48d82ab8023358eb621ec4e
+RMD160 (uwsgi-0.9.4.2.tar.gz) = c071ab93171b09d72c42a8fc094a96089844b720
+Size (uwsgi-0.9.4.2.tar.gz) = 81952 bytes
 SHA1 (patch-aa) = 1ef1a800f0d7dffe182b8a74f115105ded205f8e
