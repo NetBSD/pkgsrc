@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1056 2010/03/08 12:41:34 dmcmahill Exp $
+$NetBSD: CHANGES-2010,v 1.1057 2010/03/08 13:49:38 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1253,3 +1253,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/tct to 1.09nb4 [dholland 2010-03-08]
 	Updated graphics/ocrad to 0.19 [adam 2010-03-08]
 	Added devel/flexdock version 0.5.1 [dmcmahill 2010-03-08]
+	Updated www/py-uwsgi to 0.9.4.2 [joerg 2010-03-08]
