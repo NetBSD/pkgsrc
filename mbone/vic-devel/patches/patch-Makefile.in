@@ -1,9 +1,7 @@
-$NetBSD: patch-Makefile.in,v 1.1.1.1 2008/12/16 19:35:46 sborrill Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2010/03/08 12:10:07 sborrill Exp $
 
-Dynamically link common mml library
-
---- Makefile.in.orig	2008-12-10 21:06:38.000000000 +0000
-+++ Makefile.in	2008-12-10 21:06:52.000000000 +0000
+--- Makefile.in.orig	2008-12-10 19:24:48.000000000 +0000
++++ Makefile.in	2010-03-08 11:54:16.000000000 +0000
 @@ -92,7 +92,7 @@
  CODEC_LIB = @V_CODEC_LIB@ codec/tmndec/libh263.a codec/tmn-x/libh263coder.a
  
@@ -13,3 +11,22 @@ Dynamically link common mml library
  
  
  INCLUDE = $(INCLUDE_MISC) $(INCLUDE_GRABBER) $(INCLUDE_TK) $(INCLUDE_TCL) \
+@@ -349,15 +349,9 @@
+ 	$(CC) -o $@ $(CFLAGS) render/ppmtolut/ppmtolut.c -lm $(STATIC)
+ 
+ install: force
+-	 cp vic @prefix@/bin/vic
+-	 chown bin @prefix@/bin/vic
+-	 chgrp bin @prefix@/bin/vic
+-	 chmod 555 @prefix@/bin/vic
+-	 cp vic.1 @prefix@/man/vic.1
+-	 cp histtolut @prefix@/bin/histtolut
+-	 chown bin @prefix@/bin/histtolut
+-	 chgrp bin @prefix@/bin/histtolut
+-	 chmod 555 @prefix@/bin/histtolut
++	${BSD_INSTALL_PROGRAM} vic ${DESTDIR}@prefix@/bin
++	${BSD_INSTALL_MAN} vic.1 ${DESTDIR}@prefix@/man/man1
++	${BSD_INSTALL_PROGRAM} histtolut ${DESTDIR}@prefix@/bin
+ 
+ clean:
+ 	rm -f *.o codec/jpeg/*.o codec/p64/*.o codec/h263/*.o \

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2009/07/01 13:51:47 sborrill Exp $
+$NetBSD: distinfo,v 1.3 2010/03/08 12:10:06 sborrill Exp $
 
 SHA1 (vic-2.8ucl1.4.0_ov511.diff.gz) = 46faceb1d926820e41ffda71228f63959747a73e
 RMD160 (vic-2.8ucl1.4.0_ov511.diff.gz) = b60a9d3f5764cc4528dffbf5e9465301d71723de
@@ -6,7 +6,7 @@ Size (vic-2.8ucl1.4.0_ov511.diff.gz) = 8646 bytes
 SHA1 (vic-2.8ucl1.4.0beta-4337.tgz) = 6c15491fa5bdfaedf94731094f8952ed3ff027bb
 RMD160 (vic-2.8ucl1.4.0beta-4337.tgz) = 631b18fe036c289e5622722e521af2c9735c63da
 Size (vic-2.8ucl1.4.0beta-4337.tgz) = 9345775 bytes
-SHA1 (patch-Makefile.in) = f908c984d9bd9c216ceda0eba99987904eea4dfd
+SHA1 (patch-Makefile.in) = 417c540eb903ace3c5859f21d92556494d52c30d
 SHA1 (patch-color-swscale.cpp) = 0796262c5db74cc354ce7f55ae246c489f5c9b33
 SHA1 (patch-configure) = 509e31f0e0c1037701d7f012569ac5e5e1e4c033
 SHA1 (patch-crypt-rijndael.cpp) = 5dfda8c17c91fa5f6b2df24d4e1ed93bc4ae5b87
