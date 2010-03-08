@@ -1,0 +1,7 @@
+This distribution implement detection of the local timezone as defined at
+the operating system level, either in $ENV{TZ} or in /etc/TIMEZONE.
+
+HP-UX has its own system for defining timezones. See tztab(4). This is
+incompatible with the now common set of timezones known as the Olson DB
+that is used by DateTime::TimeZone. This module fixes this hole by
+providing the map between the two systems.
