@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/21 09:11:14 plunky Exp $
+$NetBSD: distinfo,v 1.2 2010/03/08 00:57:55 dholland Exp $
 
-SHA1 (eg) = 1129cba0e4fbf1195525bec2bfcfadd34f5e03cb
-RMD160 (eg) = 8d884788a2c0ce20a2801201b714d4ccbece0348
-Size (eg) = 281352 bytes
+SHA1 (easygit-1.6.5.3/eg) = 1129cba0e4fbf1195525bec2bfcfadd34f5e03cb
+RMD160 (easygit-1.6.5.3/eg) = 8d884788a2c0ce20a2801201b714d4ccbece0348
+Size (easygit-1.6.5.3/eg) = 281352 bytes
