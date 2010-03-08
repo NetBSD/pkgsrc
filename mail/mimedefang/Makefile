@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2010/02/05 19:53:08 markd Exp $
+# $NetBSD: Makefile,v 1.42 2010/03/08 23:46:44 pettai Exp $
 
-DISTNAME=		mimedefang-2.67
+DISTNAME=		mimedefang-2.68
 CATEGORIES=		mail
 MASTER_SITES=		http://www.mimedefang.org/static/
 
-MAINTAINER=		markd@NetBSD.org
+MAINTAINER=		pettai@NetBSD.org
 HOMEPAGE=		http://www.mimedefang.org/
 COMMENT=		To inspect/modify e-mail as it passes through your mail relay
 LICENSE=		gnu-gpl-v2
@@ -91,6 +91,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/suggested-minimum-filter-for-windows-clients ${DESTDIR}${EGDIR}/mimedefang-filter
 	${INSTALL_DATA} ${WRKSRC}/SpamAssassin/spamassassin.cf ${DESTDIR}${EGDIR}/sa-mimedefang.cf
 
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
