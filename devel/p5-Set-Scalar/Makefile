@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/07/07 21:23:47 sno Exp $
+# $NetBSD: Makefile,v 1.16 2010/03/08 16:51:04 sno Exp $
 #
 
-DISTNAME=	Set-Scalar-1.24
+DISTNAME=	Set-Scalar-1.25
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5ssc
 CATEGORIES=	net perl5
