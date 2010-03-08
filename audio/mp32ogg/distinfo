@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 20:39:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2010/03/08 23:30:23 pettai Exp $
 
 SHA1 (mp32ogg-0.11) = 03ac3955b8ed79233d6f3952152535f6cff48ff5
 RMD160 (mp32ogg-0.11) = 3ae39a86e662e37359d5041533413bd66ea27af4
 Size (mp32ogg-0.11) = 9216 bytes
+SHA1 (patch-aa) = cbdc4a2df4d8fc2d6c6ef240ba95c44cf807c899
