@@ -101,6 +101,7 @@ dspam-virtualusers	Enable support for virtual users.
 dts			Enable DTS Coherent Acoustics support.
 dv			Enable usage of the libdv library.
 dvdread			Enable reproduction of DVDs.
+dvi			Enable device independent file format (mostly TeX) support.
 eb			Enable EB dictionary library support.
 ecl			Use Embeddable Common Lisp.
 efnet			Enable tweaks to support EFNet.
