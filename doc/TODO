@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9109 2010/03/08 21:08:43 pettai Exp $
+$NetBSD: TODO,v 1.9110 2010/03/08 23:49:07 pettai Exp $
 
 Suggested new packages
 ======================
@@ -918,7 +918,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mgetty+sendfax-1.1.35
 	o midori-0.2.3
 	o milkytracker-0.90.85
-	o mimedefang-2.68
 	o mined-2000.16
 	o ming-0.4.3
 	o minicom-2.4
