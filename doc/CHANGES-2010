@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1061 2010/03/08 14:43:44 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1062 2010/03/08 14:54:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1258,3 +1258,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/vala to 0.7.10 [joerg 2010-03-08]
 	Updated devel/p5-Devel-NYTProf to 3.02 [sno 2010-03-08]
 	Updated devel/p5-FreezeThaw to 0.50 [sno 2010-03-08]
+	Updated print/p5-LaTeX-Table to 1.0.1 [sno 2010-03-08]
