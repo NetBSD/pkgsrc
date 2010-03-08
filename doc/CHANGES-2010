@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1078 2010/03/08 18:41:56 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1079 2010/03/08 19:22:39 jkunz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1203,6 +1203,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/monotone-el version 0.46 [jmmv 2010-03-02]
 	Updated audio/cmus to 2.3.0 [ahoka 2010-02-28]
 	Updated misc/openoffice3-bin to 3.2.0 [bad 2010-03-02]
+	Added geography/qlandkartegt [jkunz 2010-03-02]
+	Added geography/qlandkartegt-garmindev [jkunz 2010-03-02]
+	Added geography/qlandkartem [jkunz 2010-03-02]
 	Removed databases/php-oracle [taca 2010-03-03]
 	Updated cad/magic to 7.5.188 [dmcmahill 2010-03-03]
 	Updated multimedia/libdv to 1.0.0 [obache 2010-03-03]
@@ -1250,6 +1253,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/gaupol to 0.15 [wiz 2010-03-07]
 	Updated net/rdist6 to 0.92nb3 [lukem 2010-03-07]
 	Updated devel/mercurial to 1.5 [wiz 2010-03-07]
+	Updated geography/merkaartor to 0.15.2 [jkunz 2010-03-07]
 	Updated security/tct to 1.09nb4 [dholland 2010-03-08]
 	Updated graphics/ocrad to 0.19 [adam 2010-03-08]
 	Added devel/flexdock version 0.5.1 [dmcmahill 2010-03-08]
