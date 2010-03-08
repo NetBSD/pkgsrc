@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2010/02/20 20:24:24 joerg Exp $
+# $NetBSD: Makefile,v 1.174 2010/03/08 17:20:40 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -121,6 +121,11 @@ LDFLAGS+=	-L${WRKDIR}/zlib
 .if empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
 CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive
 LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
+
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess
+
+# Hack to make sure that the libarchive version is replaced
+pre-configure: config-guess-override
 .endif
 CPPFLAGS+=	-I${WRKDIR}/libfetch
 LDFLAGS+=	-L${WRKDIR}/libfetch
