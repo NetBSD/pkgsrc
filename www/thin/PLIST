@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/03/08 13:38:24 fhajny Exp $
 bin/thin
 ${GEM_HOME}/cache/thin-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
-${GEM_LIBDIR}/COMMITTERS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
@@ -11,9 +10,13 @@ ${GEM_LIBDIR}/benchmark/benchmarker.rb
 ${GEM_LIBDIR}/benchmark/runner
 ${GEM_LIBDIR}/bin/thin
 ${GEM_LIBDIR}/example/adapter.rb
+${GEM_LIBDIR}/example/async_app.ru
+${GEM_LIBDIR}/example/async_chat.ru
+${GEM_LIBDIR}/example/async_tailer.ru
 ${GEM_LIBDIR}/example/config.ru
 ${GEM_LIBDIR}/example/monit_sockets
 ${GEM_LIBDIR}/example/monit_unixsock
+${GEM_LIBDIR}/example/myapp.rb
 ${GEM_LIBDIR}/example/ramaze.ru
 ${GEM_LIBDIR}/example/thin.god
 ${GEM_LIBDIR}/example/thin_solaris_smf.erb
@@ -28,7 +31,6 @@ ${GEM_LIBDIR}/ext/thin_parser/parser.rl
 ${GEM_LIBDIR}/ext/thin_parser/thin.c
 ${GEM_LIBDIR}/lib/rack/adapter/loader.rb
 ${GEM_LIBDIR}/lib/rack/adapter/rails.rb
-${GEM_LIBDIR}/lib/rack/handler/thin.rb
 ${GEM_LIBDIR}/lib/thin.rb
 ${GEM_LIBDIR}/lib/thin/backends/base.rb
 ${GEM_LIBDIR}/lib/thin/backends/swiftiply_client.rb
@@ -51,7 +53,6 @@ ${GEM_LIBDIR}/lib/thin/stats.html.erb
 ${GEM_LIBDIR}/lib/thin/stats.rb
 ${GEM_LIBDIR}/lib/thin/statuses.rb
 ${GEM_LIBDIR}/lib/thin/version.rb
-${GEM_LIBDIR}/lib/thin_parser.bundle
 ${GEM_LIBDIR}/lib/thin_parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/spec/backends/swiftiply_client_spec.rb
 ${GEM_LIBDIR}/spec/backends/tcp_server_spec.rb
@@ -131,7 +132,6 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/tasks/announce.rake
 ${GEM_LIBDIR}/tasks/deploy.rake
 ${GEM_LIBDIR}/tasks/email.erb
-${GEM_LIBDIR}/tasks/ext.rake
 ${GEM_LIBDIR}/tasks/gem.rake
 ${GEM_LIBDIR}/tasks/rdoc.rake
 ${GEM_LIBDIR}/tasks/site.rake
