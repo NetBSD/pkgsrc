@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1054 2010/03/08 01:22:26 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.1055 2010/03/08 12:37:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1251,3 +1251,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/rdist6 to 0.92nb3 [lukem 2010-03-07]
 	Updated devel/mercurial to 1.5 [wiz 2010-03-07]
 	Updated security/tct to 1.09nb4 [dholland 2010-03-08]
+	Updated graphics/ocrad to 0.19 [adam 2010-03-08]
