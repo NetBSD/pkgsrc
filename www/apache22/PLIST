@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/10/30 21:10:57 christos Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/03/09 02:30:15 taca Exp $
 ${PLIST.suexec}sbin/suexec
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -869,6 +869,8 @@ share/httpd/manual/mod/mod_proxy_http.html
 share/httpd/manual/mod/mod_proxy_http.html.en
 share/httpd/manual/mod/mod_proxy_scgi.html
 share/httpd/manual/mod/mod_proxy_scgi.html.en
+share/httpd/manual/mod/mod_reqtimeout.html
+share/httpd/manual/mod/mod_reqtimeout.html.en
 share/httpd/manual/mod/mod_rewrite.html
 share/httpd/manual/mod/mod_rewrite.html.en
 share/httpd/manual/mod/mod_setenvif.html
