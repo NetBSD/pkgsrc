@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.334 2010/03/08 22:01:17 snj Exp $
+# $NetBSD: Makefile,v 1.335 2010/03/09 22:09:06 snj Exp $
 #
 
 COMMENT=	Games
@@ -134,6 +134,7 @@ SUBDIR+=	icbm3d
 SUBDIR+=	icebreaker
 SUBDIR+=	imaze
 SUBDIR+=	ioquake3
+SUBDIR+=	ioquake3-pk3
 SUBDIR+=	ivan
 SUBDIR+=	jetpack
 SUBDIR+=	jools
