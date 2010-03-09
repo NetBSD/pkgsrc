@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/09 23:20:01 snj Exp $
+
+--- Makefile.orig	2010-03-07 13:13:21.000000000 -0800
++++ Makefile	2010-03-07 13:13:51.000000000 -0800
+@@ -611,11 +611,11 @@ tyr-glquake.exe:	$(patsubst %,$(NQGLDIR)
+ 
+ # Unix
+ tyr-quake:	$(patsubst %,$(NQSWDIR)/%,$(NQ_UNIX_SW_OBJS))
+-	$(call do_cc_link,$(NQ_UNIX_SW_LFLAGS))
++	$(call do_cc_link,$(NQ_UNIX_SW_LFLAGS)) $(LDFLAGS)
+ 	$(call do_strip,$@)
+ 
+ tyr-glquake:	$(patsubst %,$(NQGLDIR)/%,$(NQ_UNIX_GL_OBJS))
+-	$(call do_cc_link,$(NQ_UNIX_GL_LFLAGS))
++	$(call do_cc_link,$(NQ_UNIX_GL_LFLAGS)) $(LDFLAGS)
+ 	$(call do_strip,$@)
+ 
+ 
+@@ -860,11 +860,11 @@ tyr-glqwcl.exe:	$(patsubst %,$(QWGLDIR)/
+ 
+ # Unix
+ tyr-qwcl:	$(patsubst %,$(QWSWDIR)/%,$(QW_UNIX_SW_OBJS))
+-	$(call do_cc_link,$(QW_UNIX_SW_LFLAGS))
++	$(call do_cc_link,$(QW_UNIX_SW_LFLAGS)) $(LDFLAGS)
+ 	$(call do_strip,$@)
+ 
+ tyr-glqwcl:	$(patsubst %,$(QWGLDIR)/%,$(QW_UNIX_GL_OBJS))
+-	$(call do_cc_link,$(QW_UNIX_GL_LFLAGS))
++	$(call do_cc_link,$(QW_UNIX_GL_LFLAGS)) $(LDFLAGS)
+ 	$(call do_strip,$@)
+ 
+ UNUSED_OBJS	= cd_audio.o
+@@ -946,7 +946,7 @@ tyr-qwsv.exe:	$(patsubst %,$(QWSVDIR)/%,
+ 
+ # Unix
+ tyr-qwsv:	$(patsubst %,$(QWSVDIR)/%,$(QWSV_UNIX_OBJS))
+-	$(call do_cc_link,$(QWSV_UNIX_LFLAGS))
++	$(call do_cc_link,$(QWSV_UNIX_LFLAGS)) $(LDFLAGS)
+ 	$(call do_strip,$@)
+ 
+ # ----------------------------------------------------------------------------
