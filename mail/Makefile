@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.388 2010/02/11 08:28:49 obache Exp $
+# $NetBSD: Makefile,v 1.389 2010/03/09 21:02:43 pettai Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -202,6 +202,7 @@ SUBDIR+=	p5-Mail-IMAPClient
 SUBDIR+=	p5-Mail-ListDetector
 SUBDIR+=	p5-Mail-Mbox-MessageParser
 SUBDIR+=	p5-Mail-Milter
+SUBDIR+=	p5-Mail-RFC822-Address
 SUBDIR+=	p5-Mail-SPF-Query
 SUBDIR+=	p5-Mail-SRS
 SUBDIR+=	p5-Mail-Sender
