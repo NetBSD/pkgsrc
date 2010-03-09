@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1303 2010/03/08 12:40:08 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.1304 2010/03/09 21:27:44 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -523,6 +523,7 @@ SUBDIR+=	p5-Compress-Raw-Bzip2
 SUBDIR+=	p5-Compress-Raw-Zlib
 SUBDIR+=	p5-Config-Any
 SUBDIR+=	p5-Config-Auto
+SUBDIR+=	p5-Config-AutoConf
 SUBDIR+=	p5-Config-Find
 SUBDIR+=	p5-Config-General
 SUBDIR+=	p5-Config-GitLike
