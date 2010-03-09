@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9115 2010/03/09 07:11:22 adam Exp $
+$NetBSD: TODO,v 1.9116 2010/03/09 08:42:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1044,7 +1044,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ploticus-examples-230
 	o plotutils-2.5
 	o png-1.4.1
-	o png-1.2.43 [http://libpng.sourceforge.net/ADVISORY-1.4.1.html]
 	o pngcheck-2.3.0
 	o po4a-0.36.3
 	o poedit-1.4.4
