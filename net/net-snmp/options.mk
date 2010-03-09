@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2009/03/18 22:50:28 adrianp Exp $
+# $NetBSD: options.mk,v 1.9 2010/03/09 22:52:56 hubertf Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.net-snmp
-PKG_SUPPORTED_OPTIONS=		ssl snmp-unprived snmp-nokmem
+PKG_SUPPORTED_OPTIONS=		ssl snmp-unprived snmp-nokmem perl
+PKG_SUGGESTED_OPTIONS=		perl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,3 +35,25 @@ CONFIGURE_ARGS+=	--without-kmem-usage
 .if !empty(PKG_OPTIONS:Msnmp-unprived)
 CONFIGURE_ARGS+=	--without-root-access
 .endif
+
+.if !empty(PKG_OPTIONS:Mperl)
+# The self-test of Perl modules only works after installation because perl
+# can't load the shared libraries from WRKSRC/
+# Until this is fixed you can test them after installation by doing
+# `make test TEST_TARGET=perltest'
+TEST_TARGET=            test
+
+# Enable the perl modules build and installation
+# 
+PERL5_CONFIGURE=        no
+PERL5_PACKLIST=         auto/Bundle/NetSNMP/.packlist
+CONFIGURE_ARGS+=        --with-perl-modules=${MAKE_PARAMS:Q}
+CONFIGURE_ENV+=         PERLPROG=${PERL5:Q}
+USE_TOOLS+=perl
+
+.include "../../lang/perl5/module.mk"
+.else # !perl
+CONFIGURE_ARGS+= --enable-embedded-perl=no
+CONFIGURE_ARGS+= --enable-perl-cc-checks=no
+CONFIGURE_ARGS+= --with-perl-modules=no
+.endif # perl
