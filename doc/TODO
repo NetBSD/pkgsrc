@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9112 2010/03/09 02:31:25 taca Exp $
+$NetBSD: TODO,v 1.9113 2010/03/09 03:01:34 taca Exp $
 
 Suggested new packages
 ======================
@@ -1308,7 +1308,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webalizer-2.21.2
 	o webby-0.9.3
 	o webkit-1.1.15.4
-	o webmin-1.500
+	o webmin-1.510
 	o weechat-0.3.1.1
 	o weewm-0.01
 	o whohas-0.24
