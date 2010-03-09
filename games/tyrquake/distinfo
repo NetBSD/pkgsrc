@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/09 23:20:01 snj Exp $
+
+SHA1 (tyrquake-0.61.tar.gz) = b9c9ec45b339759f1e6bf884a6bed516ad1f8939
+RMD160 (tyrquake-0.61.tar.gz) = 005363c07abb3e071f3352517ac549a5ae3aa8fa
+Size (tyrquake-0.61.tar.gz) = 1188917 bytes
+SHA1 (patch-aa) = 0d5ec2c3a5d71aff7798d95021d1402dc14e423c
+SHA1 (patch-ab) = 5e7bc38524448e2dec6e9665bfac0c77e681e9eb

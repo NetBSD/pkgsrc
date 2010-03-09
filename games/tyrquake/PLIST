@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/09 23:20:01 snj Exp $
+bin/tyr-glquake
+bin/tyr-glqwcl
+bin/tyr-quake
+bin/tyr-qwcl
+bin/tyr-qwsv
