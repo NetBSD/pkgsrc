@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1095 2010/03/09 19:58:11 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1096 2010/03/09 20:26:09 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1300,3 +1300,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/mp32ogg to 0.11nb5 [pettai 2010-03-09]
 	Updated textproc/p5-List-Compare to 0.37 [pettai 2010-03-09]
 	Updated security/p5-Authen-TacacsPlus to 0.20 [pettai 2010-03-09]
+	Updated mail/p5-Mail-RFC822-Address to 0.3 [pettai 2010-03-09]
