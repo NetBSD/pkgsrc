@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/02/25 13:32:50 sno Exp $
+# $NetBSD: Makefile,v 1.6 2010/03/09 21:56:59 sno Exp $
 #
 
-DISTNAME=	Padre-0.57
+DISTNAME=	Padre-0.58
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
@@ -79,7 +79,7 @@ DEPENDS+=	p5-Text-FindIndent>=0.06:../../textproc/p5-Text-FindIndent
 #DEPENDS+=	{perl>=5.10.1,p5-Thread-Queue>=2.11}:../../devel/p5-Thread-Queue # XXX missing
 PERL5_REQD+=	5.10.1
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
-DEPENDS+=	p5-Wx-Perl-ProcessStream>=0.24:../../x11/p5-Wx-Perl-ProcessStream
+DEPENDS+=	p5-Wx-Perl-ProcessStream>=0.25:../../x11/p5-Wx-Perl-ProcessStream
 DEPENDS+=	p5-YAML-Tiny>=1.32:../../textproc/p5-YAML-Tiny
 DEPENDS+=	p5-pip>=0.13:../../devel/p5-pip
 DEPENDS+=	p5-version>=0.8000:../../devel/p5-version
