@@ -38,11 +38,14 @@ check_parm_count() {
 # Check for special cases where only 2 arguments are needed, 
 # all others are a minimum of 5
 case $2 in
-    list)
+    list|listall)
 	check_parm_count $# 2
 	;;
     slots)
 	check_parm_count $# 2
+	;;
+    transfer)
+	check_parm_count $# 4
 	;;
     *)
 	check_parm_count $# 5
@@ -67,13 +70,17 @@ case $cmd in
       ;;
 
    list) 
-      ${CHIO} -f $ctl status slot voltags | awk "/</ { slot=\$2 }\
+      ${CHIO} -f $ctl status slot voltags | /usr/bin/awk "/</ { slot=\$2 }\
 		/Primary volume tag:/ { tag=\$4 }\
 		/From:/ { print slot tag }"
       ;;
 
+   listall)
+      echo "Not yet implemented"
+      ;;
+
    loaded)
-      ${CHIO} -f $ctl status drive $drive | awk "BEGIN { from=0 }\
+      ${CHIO} -f $ctl status drive $drive | /usr/bin/awk "BEGIN { from=0 }\
 		/From:/{ from=\$3 }\
 		END { print from }"
       ;;
@@ -81,4 +88,10 @@ case $cmd in
    slots)
       ${CHIO} -f $ctl params | awk "/slots/{print \$2}"
       ;;
+
+   transfer)
+      ${CHIO} -f $ctl move slot $slot slot $device
+      ;;
 esac
+
+sleep 1
