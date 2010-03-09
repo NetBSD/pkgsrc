@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1090 2010/03/09 07:11:22 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1091 2010/03/09 08:42:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1294,3 +1294,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/bacula-tray-monitor to 5.0.1 [adam 2010-03-09]
 	Updated sysutils/bacula-qt-console to 5.0.1 [adam 2010-03-09]
 	Updated sysutils/bacula-wx-console to 5.0.1 [adam 2010-03-09]
+	Updated graphics/png to 1.2.43 [wiz 2010-03-09]
