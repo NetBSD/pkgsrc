@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9117 2010/03/09 22:13:43 snj Exp $
+$NetBSD: TODO,v 1.9118 2010/03/09 22:50:19 gls Exp $
 
 Suggested new packages
 ======================
@@ -988,6 +988,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o olvwm-4.5
 	o oniguruma-5.9.2
 	o oo2c-2.1.7
+	o opal-3.8.0 [pkg/42942]
 	o openafs-1.4.10 [pkg/41262]
 	o openafs-1.4.11
 	o opencobol-1.0
@@ -1058,6 +1059,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o proxsmtp-1.6
 	o psmisc-21.9
 	o pstoedit-3.50
+	o ptlib-2.8.0 [pkg/42941]
 	o puf-0.93.3
 	o puppet-0.25.4
 	o puzzle-5.2
