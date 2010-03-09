@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1101 2010/03/09 21:57:23 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1102 2010/03/09 22:01:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1306,3 +1306,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Config-AutoConf version 0.15 [sno 2010-03-09]
 	Updated textproc/p5-Text-BibTeX to 0.40 [sno 2010-03-09]
 	Updated editors/p5-Padre to 0.58 [sno 2010-03-09]
+	Updated net/p5-Net-eBay to 0.54 [sno 2010-03-09]
