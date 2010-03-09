@@ -1,11 +1,11 @@
-$NetBSD: patch-aq,v 1.1 2009/11/09 12:26:08 joerg Exp $
+$NetBSD: patch-aq,v 1.2 2010/03/09 07:06:00 adam Exp $
 
---- src/plugins/fd/Makefile.in.orig	2009-11-09 13:04:36.000000000 +0100
+--- src/plugins/fd/Makefile.in.orig	2010-02-24 15:33:48.000000000 +0000
 +++ src/plugins/fd/Makefile.in
-@@ -51,7 +51,6 @@ bpipe-fd.so: bpipe-fd.o
+@@ -28,7 +28,6 @@ bpipe-fd.la: Makefile bpipe-fd$(DEFAULT_
  install: all
  	$(MKDIR) $(DESTDIR)$(plugindir)
- 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bpipe-fd$(DEFAULT_SHARED_OBJECT_TYPE) $(DESTDIR)$(plugindir)
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bpipe-fd.la $(DESTDIR)$(plugindir)
 -	$(RMF) $(DESTDIR)$(plugindir)/bpipe-fd.la
  
  libtool-clean:

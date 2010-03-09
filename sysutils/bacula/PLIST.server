@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.server,v 1.5 2009/07/01 10:39:05 adam Exp $
+@comment $NetBSD: PLIST.server,v 1.6 2010/03/09 07:06:00 adam Exp $
 lib/libbacsql.la
 libexec/bacula/chio-changer
 libexec/bacula/create_${BACULA_DB}_database
@@ -13,6 +13,7 @@ libexec/bacula/grant_bacula_privileges
 libexec/bacula/make_${BACULA_DB}_tables
 libexec/bacula/make_bacula_tables
 libexec/bacula/make_catalog_backup
+libexec/bacula/make_catalog_backup.pl
 libexec/bacula/query.sql
 libexec/bacula/update_${BACULA_DB}_tables
 libexec/bacula/update_bacula_tables
