@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9111 2010/03/09 01:34:33 taca Exp $
+$NetBSD: TODO,v 1.9112 2010/03/09 02:31:25 taca Exp $
 
 Suggested new packages
 ======================
@@ -404,7 +404,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
-	o apache-2.2.15
 	o apache-ant-1.8.0
 	o apache-maven-3.0
 	o apache-tomcat55-5.5.28
