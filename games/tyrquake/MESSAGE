@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/03/09 23:20:01 snj Exp $
+
+To use TyrQuake, you must have a set of data files.  One possible source
+is pkgsrc/games/quakedata/.  Once you have obtained a set of data files,
+place the id1 directory in ~/.tyrquake/.
+
+===========================================================================

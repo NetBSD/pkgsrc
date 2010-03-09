@@ -1,0 +1,5 @@
+TyrQuake is meant to be a fairly conservative branch of the Quake source
+code.  It's intended to support Quake and Quakeworld in both software and
+GL versions, as well as the Quakeworld Server.  It only contains bug fixes,
+and does does not change the look or feel of the game by adding lots of
+rendering enhancements, etc.
