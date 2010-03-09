@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/09 12:42:50 fhajny Exp $
+${GEM_HOME}/cache/gemcutter-${PKGVERSION}.gem
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/commands/abstract_command.rb
+${GEM_LIBDIR}/lib/commands/migrate.rb
+${GEM_LIBDIR}/lib/commands/owner.rb
+${GEM_LIBDIR}/lib/commands/push.rb
+${GEM_LIBDIR}/lib/commands/tumble.rb
+${GEM_LIBDIR}/lib/commands/webhook.rb
+${GEM_LIBDIR}/lib/rubygems_plugin.rb
+${GEM_LIBDIR}/test/abstract_command_test.rb
+${GEM_LIBDIR}/test/command_helper.rb
+${GEM_LIBDIR}/test/push_command_test.rb
+${GEM_LIBDIR}/test/webhook_command_test.rb
+${GEM_HOME}/specifications/gemcutter-${PKGVERSION}.gemspec
