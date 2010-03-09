@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9116 2010/03/09 08:42:00 wiz Exp $
+$NetBSD: TODO,v 1.9117 2010/03/09 22:13:43 snj Exp $
 
 Suggested new packages
 ======================
@@ -268,7 +268,7 @@ Suggested new packages
 	ftp://mud.stack.nl/pub/OuterSpace/willem/
 	XMMS input plugin that reads audio data from CDs
 
-	ioquake3 data files [pkg/36366, pkg/36367]
+	ioquake3-demo [pkg/36367]
 
 	OTR localhost AIM proxy [pkg/37397]
 	http://www.cypherpunks.ca/otr/
