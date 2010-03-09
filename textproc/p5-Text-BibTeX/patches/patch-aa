@@ -1,0 +1,69 @@
+$NetBSD: patch-aa,v 1.3 2010/03/09 21:54:01 sno Exp $
+
+--- inc/MyBuilder.pm.orig	2010-03-07 18:53:31.000000000 +0000
++++ inc/MyBuilder.pm
+@@ -75,9 +75,10 @@ sub ACTION_compile_xscode {
+     # .o => .(a|bundle)
+     my $lib_file = catfile( $archdir, "BibTeX.$Config{dlext}" );
+     if ( !$self->up_to_date( [ @$objects ], $lib_file ) ) {
++	my $btparselibdir = $self->install_path('usrlib');
+         $cbuilder->link(
+                         module_name => 'Text::BibTeX',
+-                        extra_linker_flags => '-Lbtparse/src -lbtparse ',
++                        extra_linker_flags => "-Lbtparse/src -Wl,-R${btparselibdir} -lbtparse ",
+                         objects     => $objects,
+                         lib_file    => $lib_file,
+                        );
+@@ -142,24 +143,25 @@ sub ACTION_create_binaries {
+ 
+     print STDERR "\n** Creating binaries (dumpnames$EXEEXT, biblex$EXEEXT, bibparse$EXEEXT)\n";
+ 
++    my $btparselibdir = $self->install_path('usrlib');
+     # NO INST?
+     ## FIXME - uptodate
+     $CCL->($cbuilder,
+            exe_file => "btparse/progs/dumpnames$EXEEXT",
+-           extra_linker_flags => '-Lbtparse/src -lbtparse ',
++	   extra_linker_flags => "-Lbtparse/src -Wl,-R${btparselibdir} -lbtparse ",
+            objects => [ "btparse/progs/dumpnames.o" ]);
+ 
+     # NO INST?
+     ## FIXME - uptodate
+     $CCL->($cbuilder,
+            exe_file => "btparse/progs/biblex$EXEEXT",
+-           extra_linker_flags => '-Lbtparse/src -lbtparse ',
++	   extra_linker_flags => "-Lbtparse/src -Wl,-R${btparselibdir} -lbtparse ",
+            objects => [ "btparse/progs/biblex.o" ]);
+ 
+     ## FIXME - uptodate
+     $CCL->($cbuilder,
+            exe_file => "btparse/progs/bibparse$EXEEXT",
+-           extra_linker_flags => '-Lbtparse/src -lbtparse ',
++	   extra_linker_flags => "-Lbtparse/src -Wl,-R${btparselibdir} -lbtparse ",
+            objects => [ map {"btparse/progs/$_.o"} (qw.bibparse args getopt getopt1.) ]);
+ 
+     $self->copy_if_modified( from    => "btparse/progs/dumpnames$EXEEXT",
+@@ -187,7 +189,7 @@ sub ACTION_create_tests {
+     ## FIXME - uptodate
+     $CCL->($cbuilder,
+            exe_file => "btparse/tests/simple_test$EXEEXT",
+-           extra_linker_flags => '-Lbtparse/src -lbtparse ',
++           extra_linker_flags => "-Lbtparse/src -Wl,-Rbtparse/src -lbtparse ",
+            objects => [ map "btparse/tests/$_.o", (qw.simple_test testlib.) ]);
+ 
+     ## FIXME - uptodate
+@@ -264,9 +266,13 @@ sub ACTION_test {
+     if ($^O =~ /darwin/i) {
+         $ENV{DYLD_LIBRARY_PATH} = catdir($self->blib,"usrlib").":$ENV{DYLD_LIBRARY_PATH}";
+     }
+-    if ($^O =~ /linux/i) {
++    if ($^O =~ /(?:linux|bsd|sun|sol|dragonfly|hpux|irix)/i) {
+         $ENV{LD_LIBRARY_PATH} = catdir($self->blib,"usrlib").":$ENV{LD_LIBRARY_PATH}";
+     }
++    if ($^O =~ /aix/i) {
++	my $oldlibpath = $ENV{LIBPATH} || '/lib:/usr/lib';
++        $ENV{LIBPATH} = catdir($self->blib,"usrlib").":$oldlibpath";
++    }
+ 
+     $self->SUPER::ACTION_test
+ }
