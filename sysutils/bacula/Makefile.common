@@ -1,17 +1,16 @@
-# $NetBSD: Makefile.common,v 1.52 2009/10/28 09:30:21 adam Exp $
+# $NetBSD: Makefile.common,v 1.53 2010/03/09 07:06:00 adam Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
-# used by sysutils/bacula-gnome-console/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
 # used by sysutils/bacula-wx-console/Makefile
 
-DISTNAME=		bacula-3.0.3
-CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
+DISTNAME=	bacula-5.0.1
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bacula/}
 
-#PATCH_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
+#PATCH_SITES=	${MASTER_SITE_SOURCEFORGE:=bacula/}
 #PATCHFILES=
-#DIST_SUBDIR=		${DISTNAME}
+#DIST_SUBDIR=	${DISTNAME}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bacula.org/

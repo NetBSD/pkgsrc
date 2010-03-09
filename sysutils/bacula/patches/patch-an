@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.1 2009/05/15 10:29:05 adam Exp $
+$NetBSD: patch-an,v 1.2 2010/03/09 07:06:00 adam Exp $
 
---- src/tools/Makefile.in.orig	2009-04-14 23:04:07.000000000 +0200
+--- src/tools/Makefile.in.orig	2010-02-24 15:33:48.000000000 +0000
 +++ src/tools/Makefile.in
 @@ -57,21 +57,21 @@ all: Makefile $(TOOLS) gigaslam grow
  	@echo " "
@@ -56,10 +56,10 @@ $NetBSD: patch-an,v 1.1 2009/05/15 10:29:05 adam Exp $
 -	  -lbacsql -lbac -lm $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
 +	  ../cats/libbacsql.la ../lib/libbac.la -lm $(DB_LIBS) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
- gigaslam.o: gigaslam.c
- 	$(CC) -c $<  
-@@ -110,7 +110,7 @@ gigaslam: gigaslam.o
- 	$(CC) -o $@ gigaslam.o
+ bvfs_test: Makefile ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) bvfs_test.o
+ 	$(LIBTOOL_LINK) $(CXX) -g $(LDFLAGS) -L../cats -L. -L../lib -L../findlib -o $@ bvfs_test.o  \
+@@ -118,7 +118,7 @@ gigaslam: gigaslam.o
+ 	$(CXX) -o $@ gigaslam.o
  
  grow: Makefile grow.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
 -	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -o $@ grow.o -lbac -lm $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)

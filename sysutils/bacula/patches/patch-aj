@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.5 2007/01/04 12:29:26 ghen Exp $
+$NetBSD: patch-aj,v 1.6 2010/03/09 07:06:00 adam Exp $
 
---- manpages/Makefile.in.orig	2006-08-27 20:30:56.000000000 +0200
+--- manpages/Makefile.in.orig	2010-02-24 15:33:48.000000000 +0000
 +++ manpages/Makefile.in
-@@ -20,15 +20,11 @@ depend:
+@@ -21,15 +21,11 @@ depend:
  install:
  	$(MKDIR) $(DESTDIR)/$(mandir)/man8
  	for I in ${MAN8}; \

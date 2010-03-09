@@ -1,17 +1,17 @@
-$NetBSD: patch-ae,v 1.5 2009/05/16 08:06:56 adam Exp $
+$NetBSD: patch-ae,v 1.6 2010/03/09 07:06:00 adam Exp $
 
---- src/filed/Makefile.in.orig	2009-02-18 12:40:09.000000000 +0100
+--- src/filed/Makefile.in.orig	2010-02-24 15:33:48.000000000 +0000
 +++ src/filed/Makefile.in
-@@ -86,7 +86,7 @@ win32:	$(WIN32OBJS)
+@@ -87,7 +87,7 @@ win32:	$(WIN32OBJS)
  bacula-fd:  Makefile $(SVROBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
  	@echo "Linking $@ ..."
  	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(SVROBJS) \
 -	  $(WIN32LIBS) $(FDLIBS) -lbacfind -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(LIBS) \
 +	  $(WIN32LIBS) $(FDLIBS) ../findlib/libbacfind.la ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(LIBS) \
- 	  $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+ 	  $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
  
  static-bacula-fd: Makefile $(SVROBJS) ../findlib/libbacfind.a ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
-@@ -129,14 +129,14 @@ devclean: realclean
+@@ -130,14 +130,14 @@ devclean: realclean
  install: all
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bacula-fd $(DESTDIR)$(sbindir)/bacula-fd 
  	@srcconf=bacula-fd.conf; \
