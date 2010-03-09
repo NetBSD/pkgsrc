@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:21 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2010/03/09 18:24:53 joerg Exp $
 
 DISTNAME=	gimp-help-2.4.0
 PKGNAME=	gimp-docs-2.4.0
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.gimp.org/
 COMMENT=	Documentation package for The Gimp image manipulation software
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 # Only xsltproc is needed.
