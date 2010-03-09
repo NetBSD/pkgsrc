@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1102 2010/03/09 22:01:21 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1103 2010/03/09 22:02:43 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1298,11 +1298,11 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/png to 1.2.43 [wiz 2010-03-09]
 	Updated mail/mimedefang to 2.68 [pettai 2010-03-09]
 	Updated audio/mp32ogg to 0.11nb5 [pettai 2010-03-09]
-	Updated textproc/p5-List-Compare to 0.37 [pettai 2010-03-09]
-	Updated security/p5-Authen-TacacsPlus to 0.20 [pettai 2010-03-09]
-	Updated mail/p5-Mail-RFC822-Address to 0.3 [pettai 2010-03-09]
-	Updated mail/p5-Net-validMX to 2.2.0 [pettai 2010-03-09]
-	Updated mail/py-sendmail-admin to 1.0 [pettai 2010-03-09]
+	Added textproc/p5-List-Compare to 0.37 [pettai 2010-03-09]
+	Added security/p5-Authen-TacacsPlus to 0.20 [pettai 2010-03-09]
+	Added mail/p5-Mail-RFC822-Address to 0.3 [pettai 2010-03-09]
+	Added mail/p5-Net-validMX to 2.2.0 [pettai 2010-03-09]
+	Added mail/py-sendmail-admin to 1.0 [pettai 2010-03-09]
 	Added devel/p5-Config-AutoConf version 0.15 [sno 2010-03-09]
 	Updated textproc/p5-Text-BibTeX to 0.40 [sno 2010-03-09]
 	Updated editors/p5-Padre to 0.58 [sno 2010-03-09]
