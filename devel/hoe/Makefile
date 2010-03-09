@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/03/08 12:39:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/09 12:44:29 fhajny Exp $
 
 DISTNAME=	hoe-2.5.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,6 +11,7 @@ LICENSE=	mit
 
 DEPENDS+=	rake>=0.8.7:../../devel/rake
 DEPENDS+=	rubyforge>=2.0.3:../../devel/rubyforge
+DEPENDS+=	${RUBY_PKGPREFIX}-gemcutter>=0.2.1:../../devel/ruby-gemcutter
 
 GEM_BUILD=	gemspec
 
