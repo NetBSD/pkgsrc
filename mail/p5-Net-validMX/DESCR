@@ -1,0 +1,4 @@
+I wanted the ability to use DNS to verify if an email address COULD be valid
+by checking for valid MX records. This could be used for sender verification
+for emails with a program such as MIMEDefang or for websites to verify email
+addresses prior to registering users and/or sending a confirmation email.
