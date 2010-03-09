@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1092 2010/03/09 09:16:36 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1093 2010/03/09 11:08:17 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1297,3 +1297,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated sysutils/bacula-wx-console to 5.0.1 [adam 2010-03-09]
 	Updated graphics/png to 1.2.43 [wiz 2010-03-09]
 	Updated mail/mimedefang to 2.68 [pettai 2010-03-09]
+	Updated audio/mp32ogg to 0.11nb5 [pettai 2010-03-09]
