@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.7 2009/08/18 15:23:59 joerg Exp $
+$NetBSD: patch-ah,v 1.8 2010/03/09 07:06:00 adam Exp $
 
---- src/wx-console/Makefile.in.orig	2009-03-09 16:34:05.000000000 +0100
+--- src/wx-console/Makefile.in.orig	2010-02-24 15:33:48.000000000 +0000
 +++ src/wx-console/Makefile.in
 @@ -81,7 +81,7 @@ bwx-console.app: bwx-console
  	mv bwx-console bwx-console.app/Contents/MacOS/bwx-console
@@ -8,8 +8,8 @@ $NetBSD: patch-ah,v 1.7 2009/08/18 15:23:59 joerg Exp $
  
 -bwx-console: Makefile $(CONSOBJS) @WIN32@ ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
 +bwx-console: Makefile $(CONSOBJS) @WIN32@
- 	$(LIBTOOL_LINK) $(CXX) $(CONSOBJS) $(WIN32RES) -o $@ $(LIBS) -L../lib $(CONS_LDFLAGS) \
- 	  -lbaccfg -lbac $(OPENSSL_LIBS)
+ 	$(LIBTOOL_LINK) $(CXX) $(CONSOBJS) $(WIN32RES) -o $@ -L../lib $(CONS_LDFLAGS) \
+ 	  -lbaccfg -lbac $(LIBS) $(OPENSSL_LIBS)
  
 @@ -114,14 +114,14 @@ install: all
  	fi
