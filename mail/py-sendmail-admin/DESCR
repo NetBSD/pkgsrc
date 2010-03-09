@@ -1,0 +1,10 @@
+This package provides two scripts that can help administer a mail server
+that uses the sendmail Mail Transport Agent (MTA).
+
+* mailqs reads the output from sendmail's mailq(8) command and summarizes
+each queue entry, one entry per line. As such, its output is more easily
+consumed by other scripts.
+* rmmq is a convenience command for removing items from a sendmail queue.
+When you run mailq(8) or mailqs, you get a list of sendmail queue IDs.
+These queue IDs map to several files in a sendmail queue directory. This
+command automatically maps the queue IDs to the files and removes them for you.
