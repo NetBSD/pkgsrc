@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/09 22:05:53 snj Exp $
+lib/ioquake3/baseq3/pak1.pk3
+lib/ioquake3/baseq3/pak2.pk3
+lib/ioquake3/baseq3/pak3.pk3
+lib/ioquake3/baseq3/pak4.pk3
+lib/ioquake3/baseq3/pak5.pk3
+lib/ioquake3/baseq3/pak6.pk3
+lib/ioquake3/baseq3/pak7.pk3
+lib/ioquake3/baseq3/pak8.pk3
+lib/ioquake3/missionpack/pak1.pk3
+lib/ioquake3/missionpack/pak2.pk3
+lib/ioquake3/missionpack/pak3.pk3
