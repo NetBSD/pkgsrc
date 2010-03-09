@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1084 2010/03/08 22:03:01 snj Exp $
+$NetBSD: CHANGES-2010,v 1.1085 2010/03/09 01:20:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1283,3 +1283,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xf86-video-ati to 6.12.4nb1 [snj 2010-03-08]
 	Updated geography/qlandkartegt to 0.18.0 [jkunz 2010-03-08]
 	Added games/quakespasm version 0.85.1 [snj 2010-03-08]
+	Updated graphics/GraphicsMagick to 1.3.12 [obache 2010-03-09]
