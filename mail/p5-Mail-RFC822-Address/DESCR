@@ -1,0 +1,4 @@
+Mail::RFC822::Address validates email addresses against the grammar
+described in RFC 822 using regular expressions. This module is
+functionally equivalent to RFC::RFC822::Address, but uses regular
+expressions rather than the Parse::RecDescent parser.
