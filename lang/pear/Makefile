@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/10/29 08:29:03 seb Exp $
+# $NetBSD: Makefile,v 1.12 2010/03/09 07:48:38 obache Exp $
 #
 
 DISTNAME=	PEAR-1.9.0
@@ -89,7 +89,7 @@ do-build:
 	${CP} ${CONSOLE_WRKSRC}/Console/Getopt.php ${BUNDLE}
 
 do-install:
-	${PREFIX}/bin/php ${DESTDIR}${WRKSRC}/install/go-pear.php local
+	${PREFIX}/bin/php ${WRKSRC}/install/go-pear.php local
 	${INSTALL_SCRIPT} ${WRKSRC}/pear.sh ${DESTDIR}${PREFIX}/bin/pear
 	${INSTALL_DATA} ${WRKSRC}/pear.conf \
 		${DESTDIR}${PREFIX}/share/examples/pear/pear.conf
