@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.390 2010/03/09 21:14:24 pettai Exp $
+# $NetBSD: Makefile,v 1.391 2010/03/09 21:22:47 pettai Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -247,6 +247,7 @@ SUBDIR+=	procmail
 SUBDIR+=	proxsmtp
 SUBDIR+=	pulsar
 SUBDIR+=	py-libgmail
+SUBDIR+=	py-sendmail-admin
 SUBDIR+=	pymsgauth
 SUBDIR+=	qcheck
 SUBDIR+=	qgreylist
