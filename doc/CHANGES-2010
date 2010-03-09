@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1099 2010/03/09 21:26:12 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1100 2010/03/09 21:54:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1304,3 +1304,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/p5-Net-validMX to 2.2.0 [pettai 2010-03-09]
 	Updated mail/py-sendmail-admin to 1.0 [pettai 2010-03-09]
 	Added devel/p5-Config-AutoConf version 0.15 [sno 2010-03-09]
+	Updated textproc/p5-Text-BibTeX to 0.40 [sno 2010-03-09]
