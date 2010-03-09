@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/09 12:42:50 fhajny Exp $
+
+SHA1 (gemcutter-0.3.0.gem) = cd3573e43bfde0f65ba9ee1420d9757927bccd39
+RMD160 (gemcutter-0.3.0.gem) = 0b38c6107714ccb53423b4daf51acb964f51ebda
+Size (gemcutter-0.3.0.gem) = 10240 bytes
