@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1 2010/03/09 19:57:43 pettai Exp $
+
+--- tacpluslib/tac_plus.h.orig	2009-01-08 06:26:43.000000000 +0100
++++ tacpluslib/tac_plus.h	2009-01-08 06:30:42.000000000 +0100
+@@ -78,6 +78,7 @@
+ #define STDLIB_MALLOC
+ #define NO_PWAGE
+ #define CONST_SYSERRLIST
++#define HAVE_SYSERR_PROTO
+ #define VOIDSIG
+ #endif
+ 
+@@ -673,12 +674,13 @@
+ extern void set_expiration_status();
+ 
+ /* miscellaneous */
++#ifndef HAVE_SYSERR_PROTO
+ #ifdef CONST_SYSERRLIST
+ extern const char *const sys_errlist[];
+ #else
+ /*extern char *sys_errlist[];*/
+ #endif
+-extern int errno;
++#endif
+ extern int sendauth_fn();
+ extern int sendpass_fn();
+ extern int enable_fn();
