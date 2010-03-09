@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.44 2010/03/07 00:10:42 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.45 2010/03/09 10:52:22 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -195,3 +195,5 @@ Pullup ticket #3038 - requested by taca
 drupal6: security update
 Pullup ticket #3041 - requested by hannken
 chrony: security update
+Pullup ticket #3046 - requested by martti
+mediawiki: security update
