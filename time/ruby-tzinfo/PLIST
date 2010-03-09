@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/01/30 16:04:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/03/09 01:28:23 taca Exp $
 ${GEM_HOME}/cache/tzinfo-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -159,6 +159,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Managua.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Manaus.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Marigot.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Martinique.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Matamoros.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Mazatlan.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Mendoza.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Menominee.rb
@@ -177,6 +178,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Nome.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Noronha.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/North_Dakota/Center.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/North_Dakota/New_Salem.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Ojinaga.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Panama.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Pangnirtung.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Paramaribo.rb
@@ -193,6 +195,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Regina.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Resolute.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Rio_Branco.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Rosario.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Santa_Isabel.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Santarem.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Santiago.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Santo_Domingo.rb
