@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1089 2010/03/09 05:17:04 martti Exp $
+$NetBSD: CHANGES-2010,v 1.1090 2010/03/09 07:11:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1288,3 +1288,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/samba33 to 3.3.12 [taca 2010-03-09]
 	Updated www/apache22 to 2.2.15 [taca 2010-03-09]
 	Updated www/mediawiki to 1.15.2 [martti 2010-03-09]
+	Updated sysutils/bacula to 5.0.1 [adam 2010-03-09]
+	Updated sysutils/bacula-clientonly to 5.0.1 [adam 2010-03-09]
+	Updated sysutils/bacula-doc to 5.0.1 [adam 2010-03-09]
+	Updated sysutils/bacula-tray-monitor to 5.0.1 [adam 2010-03-09]
+	Updated sysutils/bacula-qt-console to 5.0.1 [adam 2010-03-09]
+	Updated sysutils/bacula-wx-console to 5.0.1 [adam 2010-03-09]
