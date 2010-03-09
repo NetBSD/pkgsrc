@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2009/08/30 02:21:58 obache Exp $
+# $NetBSD: Makefile,v 1.79 2010/03/09 22:52:56 hubertf Exp $
 
 DISTNAME=	net-snmp-5.4.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/}
 
@@ -21,13 +21,9 @@ MAKE_JOBS_SAFE=		NO
 
 MAKE_ENV+=	OPSYS=${OPSYS}
 
-# The self-test of Perl modules only works after installation because perl
-# can't load the shared libraries from WRKSRC/
-# Until this is fixed you can test them after installation by doing
-# `make test TEST_TARGET=perltest'
-TEST_TARGET=		test
-
 .include "../../mk/bsd.prefs.mk"
+
+.include "options.mk"
 
 .if ${OPSYS} == "DragonFly"
 MAKE_ENV+=	MIB_SYSTEM_LIBS=-lkinfo
@@ -98,15 +94,6 @@ CONFIGURE_ARGS+=	--with-dummy-values
 # older software to use net-snmp.
 #
 CONFIGURE_ARGS+=	--enable-ucd-snmp-compatibility
-#
-# Enable the perl modules build and installation
-#
-PERL5_CONFIGURE=	no
-PERL5_PACKLIST=		auto/Bundle/NetSNMP/.packlist
-CONFIGURE_ARGS+=	--with-perl-modules=${MAKE_PARAMS:Q}
-CONFIGURE_ENV+=		PERLPROG=${PERL5:Q}
-
-.include "options.mk"
 
 # Handle ${PREFIX}/share/snmp in the DEINSTALL script since it may contain
 # leftover config files or pidfiles after deinstallation.
@@ -139,6 +126,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/agent/snmp_perl.pl \
 		${DESTDIR}${PREFIX}/share/snmp/
 
-.include "../../lang/perl5/module.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
