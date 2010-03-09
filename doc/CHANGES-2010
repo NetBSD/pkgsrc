@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1103 2010/03/09 22:02:43 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1104 2010/03/09 22:03:19 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1307,3 +1307,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-BibTeX to 0.40 [sno 2010-03-09]
 	Updated editors/p5-Padre to 0.58 [sno 2010-03-09]
 	Updated net/p5-Net-eBay to 0.54 [sno 2010-03-09]
+	Updated www/p5-HTML-Selector-XPath to 0.04 [sno 2010-03-09]
