@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2009/05/16 08:06:56 adam Exp $
+$NetBSD: patch-aa,v 1.5 2010/03/09 07:06:00 adam Exp $
 
---- src/dird/Makefile.in.orig	2009-02-18 12:40:09.000000000 +0100
+--- src/dird/Makefile.in.orig	2010-02-24 15:33:48.000000000 +0000
 +++ src/dird/Makefile.in
-@@ -63,7 +63,7 @@ all: Makefile bacula-dir @STATIC_DIR@
+@@ -64,7 +64,7 @@ all: Makefile bacula-dir @STATIC_DIR@
  bacula-dir: Makefile $(SVROBJS) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
  	@echo "Linking $@ ..."
  	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../cats -L../findlib -o $@ $(SVROBJS) \
 -	      -lbacfind -lbacsql -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(DLIB) $(DB_LIBS) $(LIBS) \
 +	      ../findlib/libbacfind.la ../cats/libbacsql.la ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(DLIB) $(DB_LIBS) $(LIBS) \
- 	      $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+ 	      $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
  
  static-bacula-dir:  Makefile $(SVROBJS) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
-@@ -97,14 +97,14 @@ devclean: realclean
+@@ -98,14 +98,14 @@ devclean: realclean
  install: all
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bacula-dir $(DESTDIR)$(sbindir)/bacula-dir
  	@srcconf=bacula-dir.conf; \

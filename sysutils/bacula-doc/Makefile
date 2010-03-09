@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2009/10/28 09:30:22 adam Exp $
+# $NetBSD: Makefile,v 1.23 2010/03/09 07:06:00 adam Exp $
 
-DISTNAME=	bacula-docs-3.0.3
+DISTNAME=	bacula-docs-5.0.1
 PKGNAME=	${DISTNAME:S/docs/doc/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bacula/}
@@ -18,20 +18,18 @@ NO_BUILD=		yes
 DOCDIR=			share/doc/bacula
 
 INSTALLATION_DIRS=	${DOCDIR}
-INSTALLATION_DIRS+=	${DOCDIR}/catalog
-INSTALLATION_DIRS+=	${DOCDIR}/concepts
 INSTALLATION_DIRS+=	${DOCDIR}/console
 INSTALLATION_DIRS+=	${DOCDIR}/developers
-INSTALLATION_DIRS+=	${DOCDIR}/install
+INSTALLATION_DIRS+=	${DOCDIR}/main
+INSTALLATION_DIRS+=	${DOCDIR}/misc
 INSTALLATION_DIRS+=	${DOCDIR}/problems
 INSTALLATION_DIRS+=	${DOCDIR}/utility
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/manuals/en/catalog/catalog/* ${DESTDIR}${PREFIX}/${DOCDIR}/catalog/
-	${INSTALL_DATA} ${WRKSRC}/manuals/en/concepts/concepts/* ${DESTDIR}${PREFIX}/${DOCDIR}/concepts/
 	${INSTALL_DATA} ${WRKSRC}/manuals/en/console/console/* ${DESTDIR}${PREFIX}/${DOCDIR}/console/
 	${INSTALL_DATA} ${WRKSRC}/manuals/en/developers/developers/* ${DESTDIR}${PREFIX}/${DOCDIR}/developers/
-	${INSTALL_DATA} ${WRKSRC}/manuals/en/install/install/* ${DESTDIR}${PREFIX}/${DOCDIR}/install/
+	${INSTALL_DATA} ${WRKSRC}/manuals/en/main/main/* ${DESTDIR}${PREFIX}/${DOCDIR}/main/
+	${INSTALL_DATA} ${WRKSRC}/manuals/en/misc/misc/* ${DESTDIR}${PREFIX}/${DOCDIR}/misc/
 	${INSTALL_DATA} ${WRKSRC}/manuals/en/problems/problems/* ${DESTDIR}${PREFIX}/${DOCDIR}/problems/
 	${INSTALL_DATA} ${WRKSRC}/manuals/en/utility/utility/* ${DESTDIR}${PREFIX}/${DOCDIR}/utility/
 

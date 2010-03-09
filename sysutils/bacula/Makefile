@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2009/11/09 12:26:08 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2010/03/09 07:06:00 adam Exp $
 
 CONFLICTS+=		bacula-client-[0-9]* bacula-clientonly-[0-9]*
-PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	destdir
 
@@ -36,6 +35,7 @@ RCD_SCRIPTS=		bacula bacula-dir bacula-sd bacula-fd
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/scripts/dvd-handler ${DESTDIR}${EXAMPLESDIR}
-	${INSTALL_DATA} ${FILESDIR}/chio-changer ${DESTDIR}${PREFIX}/libexec/bacula/
+	${INSTALL_SCRIPT} ${FILESDIR}/chio-changer \
+		${DESTDIR}${PREFIX}/libexec/bacula/
 
 .include "../../mk/bsd.pkg.mk"

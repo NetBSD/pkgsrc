@@ -1,17 +1,17 @@
-$NetBSD: patch-af,v 1.5 2009/05/16 08:06:57 adam Exp $
+$NetBSD: patch-af,v 1.6 2010/03/09 07:06:00 adam Exp $
 
---- src/stored/Makefile.in.orig	2009-02-18 12:40:09.000000000 +0100
+--- src/stored/Makefile.in.orig	2010-02-24 15:33:48.000000000 +0000
 +++ src/stored/Makefile.in
-@@ -90,7 +90,7 @@ all: Makefile bacula-sd @STATIC_SD@ bls 
+@@ -91,7 +91,7 @@ all: Makefile bacula-sd @STATIC_SD@ bls 
  bacula-sd: Makefile $(SDOBJS) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
  	@echo "Linking $@ ..."
  	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -o $@ $(SDOBJS) $(FDLIBS) \
 -	   -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(DLIB) $(LIBS) $(WRAPLIBS) \
 +	   ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(DLIB) $(LIBS) $(WRAPLIBS) \
- 	$(GETTEXT_LIBS) $(OPENSSL_LIBS)
+ 	$(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
  
  static-bacula-sd: Makefile $(SDOBJS) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
-@@ -106,7 +106,7 @@ btape.o: btape.c
+@@ -107,7 +107,7 @@ btape.o: btape.c
  
  btape: Makefile  $(TAPEOBJS) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE)
  	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../cats  -o $@ $(TAPEOBJS) \
@@ -20,7 +20,7 @@ $NetBSD: patch-af,v 1.5 2009/05/16 08:06:57 adam Exp $
  
  bls.o:	bls.c
  	@echo "Compiling $<"
-@@ -116,7 +116,7 @@ bls.o:	bls.c
+@@ -117,7 +117,7 @@ bls.o:	bls.c
  bls:	Makefile $(BLSOBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
  	@echo "Compiling $<"
  	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(BLSOBJS) $(DLIB) \
@@ -29,7 +29,7 @@ $NetBSD: patch-af,v 1.5 2009/05/16 08:06:57 adam Exp $
  
  bextract.o: bextract.c
  	@echo "Compiling $<"
-@@ -126,7 +126,7 @@ bextract.o: bextract.c
+@@ -127,7 +127,7 @@ bextract.o: bextract.c
  bextract: Makefile $(BEXTOBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
  	@echo "Compiling $<"
  	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(BEXTOBJS) $(DLIB) $(FDLIBS) \
@@ -38,7 +38,7 @@ $NetBSD: patch-af,v 1.5 2009/05/16 08:06:57 adam Exp $
  
  bscan.o: bscan.c
  	@echo "Compiling $<"
-@@ -135,7 +135,7 @@ bscan.o: bscan.c
+@@ -136,7 +136,7 @@ bscan.o: bscan.c
  
  bscan:	Makefile $(SCNOBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE)
  	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -L../cats -L../findlib -o $@ $(SCNOBJS) \
@@ -47,7 +47,7 @@ $NetBSD: patch-af,v 1.5 2009/05/16 08:06:57 adam Exp $
  
  bcopy.o: bcopy.c
  	@echo "Compiling $<"
-@@ -144,7 +144,7 @@ bcopy.o: bcopy.c
+@@ -145,7 +145,7 @@ bcopy.o: bcopy.c
  
  bcopy:	Makefile $(COPYOBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
  	$(LIBTOOL_LINK) $(CXX) $(TTOOL_LDFLAGS) $(LDFLAGS) -L../lib -o $@ $(COPYOBJS) \
@@ -56,7 +56,7 @@ $NetBSD: patch-af,v 1.5 2009/05/16 08:06:57 adam Exp $
  
  Makefile: $(srcdir)/Makefile.in $(topdir)/config.status
  	cd $(topdir) \
-@@ -158,14 +158,14 @@ install: all
+@@ -159,14 +159,14 @@ install: all
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bscan $(DESTDIR)$(sbindir)/bscan
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) btape $(DESTDIR)$(sbindir)/btape
  	@srcconf=bacula-sd.conf; \
