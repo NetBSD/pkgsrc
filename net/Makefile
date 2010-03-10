@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.810 2010/03/02 12:11:19 obache Exp $
+# $NetBSD: Makefile,v 1.811 2010/03/10 23:45:56 pettai Exp $
 #
 
 COMMENT=	Networking tools
@@ -506,6 +506,7 @@ SUBDIR+=	stripes
 SUBDIR+=	sup
 SUBDIR+=	synergy
 SUBDIR+=	synergy1.2
+SUBDIR+=	sysmon
 SUBDIR+=	tacacs
 SUBDIR+=	tcl-scotty
 SUBDIR+=	tcpdmerge
