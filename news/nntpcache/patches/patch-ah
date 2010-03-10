@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2010/03/10 12:54:27 obache Exp $
+
+destdir installation support
+
+--- src/Makefile.in.orig	2010-03-10 12:15:22.000000000 +0000
++++ src/Makefile.in
+@@ -454,7 +454,7 @@ uninstall-am: uninstall-info-am uninstal
+ 
+ 
+ install-exec-hook:
+-	cp nntpcached $(libexecdir)/nntpcached.debug && chmod a+x $(libexecdir)/nntpcached.debug
++	cp nntpcached $(DESTDIR)$(libexecdir)/nntpcached.debug && chmod a+x $(DESTDIR)$(libexecdir)/nntpcached.debug
+ 
+ nnconf.c nnconf.h : ../cf/nnconf.cf
+ 	$(top_srcdir)/confused/confused $<

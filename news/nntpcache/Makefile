@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/05/19 08:59:29 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2010/03/10 12:54:27 obache Exp $
 
 DISTNAME=		nntpcache-3.0.2
 PKGREVISION=		1
@@ -9,6 +9,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://iq.org/~proff/nntpcache.org/
 COMMENT=		NNTP multi-server caching daemon
 LICENSE=		nntpcache-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

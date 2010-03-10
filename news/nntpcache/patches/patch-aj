@@ -1,0 +1,19 @@
+$NetBSD: patch-aj,v 1.1 2010/03/10 12:54:27 obache Exp $
+
+pkgsrc take care permissons for directories and files.
+need to user-destdir installation.
+
+--- pgp/Makefile.in.orig	2010-03-10 12:26:40.000000000 +0000
++++ pgp/Makefile.in
+@@ -236,10 +236,9 @@ uninstall-am: uninstall-info-am uninstal
+ 
+ # the trailing slash is to force symlink transversal
+ install-data-local:
+-	cd $(sysconfdir) && chmod 700 . && chown @nntpcacheUID@ . && chgrp @nntpcacheUID@ . && chmod 600 $(sysconf_DATA) && chown @nntpcacheUID@ $(sysconf_DATA) && chgrp @nntpcacheGID@ $(sysconf_DATA)
+ 
+ install-data-hook:
+-	for f in $(sysconf_DATA); do { cd $(sysconfdir) && (orig=`basename $$f -dist`; test -e $$orig || cp $$f $$orig) ;} done
++	for f in $(sysconf_DATA); do { cd $(DESTDIR)$(sysconfdir) && (orig=`basename $$f -dist`; test -e $$orig || cp $$f $$orig) ;} done
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
