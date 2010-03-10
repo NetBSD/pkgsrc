@@ -1,0 +1,20 @@
+$NetBSD: patch-ai,v 1.1 2010/03/10 12:54:27 obache Exp $
+
+pkgsrc take care permissons for directories and files.
+need to user-destdir installation.
+
+--- http/Makefile.in.orig	2010-03-10 12:20:48.000000000 +0000
++++ http/Makefile.in
+@@ -216,10 +216,8 @@ uninstall-am: uninstall-info-am
+ 
+ 
+ install-data-local:
+-	-mkdir $(sysconfdir)/http
+-	cp $(httpdata) $(sysconfdir)/http
+-	cd $(sysconfdir)/http && chown @nntpcacheUID@ $(ch)
+-	cd $(sysconfdir)/http && chgrp @nntpcacheUID@ $(ch)
++	-mkdir $(DESTDIR)$(sysconfdir)/http
++	cp $(httpdata) $(DESTDIR)$(sysconfdir)/http
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

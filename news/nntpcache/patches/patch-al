@@ -1,0 +1,17 @@
+$NetBSD: patch-al,v 1.1 2010/03/10 12:54:27 obache Exp $
+
+pkgsrc take care permissons for directories and files.
+need to user-destdir installation.
+
+--- unixauth/Makefile.in.orig	2010-03-10 12:26:40.000000000 +0000
++++ unixauth/Makefile.in
+@@ -327,9 +327,6 @@ uninstall-am: uninstall-info-am uninstal
+ 
+ 
+ install-exec-hook:
+-	chown root $(libexecdir)/unixauth
+-	chgrp @nntpcacheGID@ $(libexecdir)/unixauth
+-	chmod u+s,g+x,o-x $(libexecdir)/unixauth 
+ 
+ %.ext : %.c %.h $(top_srcdir)/config.h $(top_srcdir)/scripts/genextern.sh
+ 	CPP="$(CPP)";export CPP; sh $(top_srcdir)/scripts/genextern.sh $< > $@.tmp $(DEFS) $(INCLUDES) $(CPPFLAGS) && mv -f $@.tmp $@ || rm -f $@.tmp
