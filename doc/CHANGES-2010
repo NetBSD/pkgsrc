@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1146 2010/03/10 19:00:20 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1147 2010/03/10 19:07:38 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1350,3 +1350,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-Nmap-Parser to 1.20 [sno 2010-03-10]
 	Updated devel/p5-App-Cmd to 0.307 [sno 2010-03-10]
 	Updated devel/p5-IO-Interactive to 0.0.6 [sno 2010-03-10]
+	Updated devel/p5-IPC-SysV to 2.02 [sno 2010-03-10]
