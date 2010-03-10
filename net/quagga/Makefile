@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.33 2009/06/14 22:58:07 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2010/03/10 20:05:38 gdt Exp $
 #
 
 DISTNAME=	quagga-0.98.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://www.quagga.net/download/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.quagga.net/
 COMMENT=	Free multithreaded routing daemon software (fork of zebra)
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,15 +53,15 @@ RCD_SCRIPT_SRC.${_script_}?=	${WRKSRC}/pkgsrc/${_script_}.sh
 .endfor
 
 post-install:
-	@${CHMOD} a+r ${PREFIX}/share/examples/quagga/*
-	${INSTALL} -d -o quagga -g quagga -m 750 ${PKG_SYSCONFDIR}
-	${INSTALL_DATA} ${FILESDIR}/log_syslog.conf ${PREFIX}/share/examples/quagga
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/quagga
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/quagga/mpls
-	${INSTALL_DATA} ${WRKSRC}/doc/BGP-TypeCode ${PREFIX}/share/doc/quagga
-	${INSTALL_DATA} ${WRKSRC}/doc/draft-zebra-00.txt ${PREFIX}/share/doc/quagga
-	${INSTALL_DATA} ${WRKSRC}/doc/mpls/* ${PREFIX}/share/doc/quagga/mpls
+	@${CHMOD} a+r ${DESTDIR}${PREFIX}/share/examples/quagga/*
+	${INSTALL} -d -o quagga -g quagga -m 750 ${DESTDIR}${PKG_SYSCONFDIR}
+	${INSTALL_DATA} ${FILESDIR}/log_syslog.conf ${DESTDIR}${PREFIX}/share/examples/quagga
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/quagga
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/quagga/mpls
+	${INSTALL_DATA} ${WRKSRC}/doc/BGP-TypeCode ${DESTDIR}${PREFIX}/share/doc/quagga
+	${INSTALL_DATA} ${WRKSRC}/doc/draft-zebra-00.txt ${DESTDIR}${PREFIX}/share/doc/quagga
+	${INSTALL_DATA} ${WRKSRC}/doc/mpls/* ${DESTDIR}${PREFIX}/share/doc/quagga/mpls
 	${CAT} ${PLIST_CAT} > ${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} share/doc/quagga -type f -print ) >> ${PLIST_SRC}
+	(cd ${DESTDIR}${PREFIX}; ${FIND} share/doc/quagga -type f -print ) >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
