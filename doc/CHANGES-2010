@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1122 2010/03/10 11:02:32 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1123 2010/03/10 11:10:22 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1325,3 +1325,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Catalyst-Manual to 5.8004 [sno 2010-03-10]
 	Updated www/p5-Catalyst-Devel to 1.27 [sno 2010-03-10]
 	Updated www/p5-Catalyst-Action-REST to 0.83 [sno 2010-03-10]
+	Updated www/p5-Catalyst-Authentication-Store-DBIx-Class to 0.1083 [sno 2010-03-10]
