@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1121 2010/03/10 10:59:06 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1122 2010/03/10 11:02:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1324,3 +1324,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Catalyst-View-JSON to 0.28 [sno 2010-03-10]
 	Updated www/p5-Catalyst-Manual to 5.8004 [sno 2010-03-10]
 	Updated www/p5-Catalyst-Devel to 1.27 [sno 2010-03-10]
+	Updated www/p5-Catalyst-Action-REST to 0.83 [sno 2010-03-10]
