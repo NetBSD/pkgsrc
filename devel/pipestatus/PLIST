@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/10 23:47:02 wiz Exp $
+bin/pipestatus
+share/doc/pipestatus/NEWS
+share/doc/pipestatus/README

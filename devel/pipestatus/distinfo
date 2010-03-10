@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/10 23:47:02 wiz Exp $
+
+SHA1 (pipestatus-0.6.0.tar.gz) = ea1dfcf05ec421d15ec0c060b0d00a3e4dd59d41
+RMD160 (pipestatus-0.6.0.tar.gz) = 587ca90797dcd67a843bc4bc56ba6cbff2e50d15
+Size (pipestatus-0.6.0.tar.gz) = 6541 bytes
