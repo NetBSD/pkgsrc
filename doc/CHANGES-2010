@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1138 2010/03/10 15:28:25 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1139 2010/03/10 15:59:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1342,3 +1342,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-CatalystX-CRUD-Controller-RHTMLO to 0.20 [sno 2010-03-10]
 	Updated www/p5-CatalystX-CRUD-View-Excel to 0.07 [sno 2010-03-10]
 	Updated www/p5-CatalystX-CRUD-YUI to 0.023 [sno 2010-03-10]
+	Updated devel/p5-autobox-Core to 1.0 [sno 2010-03-10]
