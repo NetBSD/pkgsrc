@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2010/02/06 10:52:37 sno Exp $
+$NetBSD: patch-aa,v 1.5 2010/03/10 09:24:52 sno Exp $
 
---- Makefile.PL.orig	2009-12-11 01:28:42.000000000 +0000
+--- Makefile.PL.orig	2010-03-03 21:26:10.000000000 +0000
 +++ Makefile.PL
 @@ -2,9 +2,6 @@
  use ExtUtils::MakeMaker;
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.4 2010/02/06 10:52:37 sno Exp $
  # Uncomment and change this line if I fail to find it
  # $paridir = "..";
  
-@@ -16,208 +13,54 @@ unless (-t STDOUT) {		# Better reports i
+@@ -16,137 +13,16 @@ unless (-t STDOUT) {		# Better reports i
      select $odef;
  }
  
@@ -81,6 +81,13 @@ $NetBSD: patch-aa,v 1.4 2010/02/06 10:52:37 sno Exp $
 -  ### words, updating to 2.3.* might allow your use of fast processor-specific
 -  ### assembler code.)
 -
+-  ### Switching to 2.3.* should be as simple as giving Makefile.PL an option
+-  ###           version23_ok=1
+-  ###   (if you or Makefile.PL already downloaded-and-extracted version-2.1.* 
+-  ###    distribution, give an extra option, force_download).
+-  ### Alternatively, give option
+-  ###           paridir=DIRECTORY-of-extracted-distribution
+-
 -  ### However, keep in mind: v.2.3.* supports only plotting to PostScript.
 -
 -EOP
@@ -88,15 +95,9 @@ $NetBSD: patch-aa,v 1.4 2010/02/06 10:52:37 sno Exp $
 -  $common::main_paridir = $paridir;
 -  *MY::postamble = \&xMY::postamble;
 -}
-+my $pariprefix;
-+my $addlibs;
-+my $libpari = "pari";
- 
+-
 -$os = $Config{osname};
-+grep {/^pariprefix=(.*)$/i	 and $pariprefix = $1}  @ARGV;
-+grep {/^addlibs=(.*)$/i		 and $addlibs = $1}  @ARGV;
-+grep {/^libpari=(.*)$/i		 and $libpari = $1}  @ARGV;
- 
+-
 -$define .= " -DPARI_VERSION_EXP=$pari_version -DDEBUG_PARI";
 -$define .= " -DUSE_SLOW_ARRAY_ACCESS -DUSE_SLOW_NARGS_ACCESS" if $] >= 5.009;
 -$libs = "-lm";
@@ -123,7 +124,14 @@ $NetBSD: patch-aa,v 1.4 2010/02/06 10:52:37 sno Exp $
 -} elsif ($os eq 'linux') {
 -  $noexp2 = 1;
 -}
--
++my $pariprefix;
++my $addlibs;
++my $libpari = "pari";
++ 
++grep {/^pariprefix=(.*)$/i	 and $pariprefix = $1}  @ARGV;
++grep {/^addlibs=(.*)$/i		 and $addlibs = $1}  @ARGV;
++grep {/^libpari=(.*)$/i		 and $libpari = $1}  @ARGV;
+ 
 -my %opts;
 -unless ($common::parilib) {
 -  build_tests $paridir;		# Convert the test suite
@@ -147,26 +155,16 @@ $NetBSD: patch-aa,v 1.4 2010/02/06 10:52:37 sno Exp $
 -  }
 -}
 +@ARGV = grep !/^((pariprefix|addlibs|libpari)=.*)$/i, @ARGV;
- 
--# We want to find the offset of the least significant byte
--# of SV.flags inside an SV.
--# It is enough to find the offset of the least significant byte inside a U32.
--# (Needed for recognizing Perl code supplied to lisseq and lisexpr.)
 +my $define = "-DPARI_VERSION_EXP=" . get_pari_formatted_version();
  
- $offset = index($Config{byteorder}, "1");
- $offset = 3 if $offset > 3;	# SvFLAGS is actually I32
- $define .= " -DLSB_in_U32=$offset";
+ # We want to find the offset of the least significant byte
+ # of SV.flags inside an SV.
+@@ -164,67 +40,40 @@ my $perl_int_size = $Config{'ivsize'} ||
+ $define .= ' -DLONG_SHORTER_THAN_IV' if $perl_int_size > $longsize;
  
--my $longsize = length(eval { pack 'l!', 1 } or pack 'l', 1);
--my $perl_int_size = $Config{'ivsize'} || $Config{'intsize'}
--	or die "Can't deduce Perl int size";
--
--$define .= ' -DLONG_SHORTER_THAN_IV' if $perl_int_size > $longsize;
--
--$define .= ' -Derr=pari_err'; # On linux it can get a wrong dynamic loading
+ $define .= ' -Derr=pari_err'; # On linux it can get a wrong dynamic loading
 -$define .= ' -DHAVE_LADD' if $opts{have_ladd};
--$define .= ' -DGCC_INLINE' if $Config{gccversion} and not $Config{optimize} =~ /-g\b/;
+ $define .= ' -DGCC_INLINE' if $Config{gccversion} and not $Config{optimize} =~ /-g\b/;
 -$define .= ' -DHAVE_PARIPRIV' if -f "$paridir/src/headers/paripriv.h";
 -#$define .= ' -DNO_GRAPHICS_PARI' unless -f "$paridir/src/graph/plotgnuplot.c";
 -
@@ -177,7 +175,7 @@ $NetBSD: patch-aa,v 1.4 2010/02/06 10:52:37 sno Exp $
 -
 -# This is done in Makefile in GP/PARI, and in paricfg.h without do_configure
 -$define .= ' -DDL_DFLT_NAME=NULL' if $common::do_configure;
--
+ 
 -my $extra_inc = extra_includes($paridir);
 +$define .= " -DNO_HIGHLEVEL_PARI";
  
