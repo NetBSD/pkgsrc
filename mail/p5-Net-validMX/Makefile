@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/03/09 21:12:40 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/10 16:11:02 pettai Exp $
 #
 
 DISTNAME=	Net-validMX-2.2.0
@@ -7,8 +7,9 @@ CATEGORIES=	perl5 mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~kmcgrail/Net-validMX-2.2.0/lib/Net/validMX.pm
+HOMEPAGE=	http://search.cpan.org/~kmcgrail/Net-validMX-2.2.0/
 COMMENT=	Use DNS and/or regular expressions to verify a email address
+LICENSE=	artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
