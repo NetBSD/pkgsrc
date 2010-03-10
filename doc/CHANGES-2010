@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1110 2010/03/10 08:55:41 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1111 2010/03/10 09:25:02 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1313,3 +1313,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-DBM-Deep to 1.0016 [sno 2010-03-10]
 	Updated devel/p5-Moose to 0.99 [sno 2010-03-10]
 	Updated net/p5-Net-Interface to 1.012 [sno 2010-03-10]
+	Updated math/p5-Math-Pari to 2.010806.04 [sno 2010-03-10]
