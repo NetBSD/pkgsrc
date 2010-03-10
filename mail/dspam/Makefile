@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2010/02/04 02:00:36 joerg Exp $
+# $NetBSD: Makefile,v 1.66 2010/03/10 13:43:38 martti Exp $
 
 DISTNAME=	dspam-3.8.0
 PKGREVISION=	5
@@ -6,8 +6,10 @@ CATEGORIES=	mail
 MASTER_SITES=	http://dspam.nuclearelephant.com/sources/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dspam.nuclearelephant.com/
+HOMEPAGE=	http://dspam.sourceforge.net/
 COMMENT=	Extremely scalable, statistical-hybrid anti-spam filter
+
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -65,15 +67,15 @@ DSPAM_WWWGROUP?=	${APACHE_GROUP}
 PKG_GROUPS_VARS+=	DSPAM_GROUP DSPAM_WWWGROUP
 PKG_USERS_VARS+=	DSPAM_USER DSPAM_WWWUSER
 
-CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE:Q}
-CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME:Q}		\
-			--with-dspam-home-owner=${DSPAM_USER:Q}		\
-			--with-dspam-home-group=${DSPAM_GROUP:Q}	\
-			--with-dspam-owner=${DSPAM_USER:Q}		\
-			--with-dspam-group=${DSPAM_GROUP:Q}		\
-			--with-dspam-mode=${DSPAM_BINMODE:Q}		\
-			--with-logdir=${DSPAM_LOGDIR:Q}			\
-			--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
+CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}			\
+			--with-dspam-home-owner=${DSPAM_USER}		\
+			--with-dspam-home-group=${DSPAM_GROUP}		\
+			--with-dspam-owner=${DSPAM_USER}		\
+			--with-dspam-group=${DSPAM_GROUP}		\
+			--with-dspam-mode=${DSPAM_BINMODE}		\
+			--with-logdir=${DSPAM_LOGDIR}			\
+			--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "options.mk"
 .include "../../mk/pthread.buildlink3.mk"
@@ -104,9 +106,9 @@ OWN_DIRS_PERMS=		${DSPAM_HOME} ${DSPAM_USER} ${DSPAM_WWWGROUP} 0775
 OWN_DIRS_PERMS+=	${DSPAM_LOGDIR} ${DSPAM_USER} ${DSPAM_GROUP} 0775
 OWN_DIRS_PERMS+=	${DSPAM_PIDDIR} ${DSPAM_USER} ${DSPAM_GROUP} 0770
 
-FILES_SUBST+=		DSPAM_USER=${DSPAM_USER:Q}
-FILES_SUBST+=		DSPAM_GROUP=${DSPAM_GROUP:Q}
-FILES_SUBST+=		DSPAM_PIDDIR=${DSPAM_PIDDIR:Q}
+FILES_SUBST+=		DSPAM_USER=${DSPAM_USER}
+FILES_SUBST+=		DSPAM_GROUP=${DSPAM_GROUP}
+FILES_SUBST+=		DSPAM_PIDDIR=${DSPAM_PIDDIR}
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install

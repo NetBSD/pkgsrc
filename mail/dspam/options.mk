@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2009/08/17 19:09:13 sno Exp $
+# $NetBSD: options.mk,v 1.25 2010/03/10 13:43:38 martti Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -24,11 +24,11 @@ PKG_OPTIONS_LEGACY_OPTS+=	preferences-extension:dspam-preferences-extension
 DSPAM_DELIVERY_AGENT?=		procmail
 BUILD_DEFS+=		DSPAM_DELIVERY_AGENT
 .if !empty(DSPAM_DELIVERY_AGENT:Mprocmail)
-DSPAM_DELIVERY_AGENT_BIN?=	${LOCALBASE}/bin/procmail
+DSPAM_DELIVERY_AGENT_BIN?=	${PREFIX}/bin/procmail
 BUILD_DEPENDS+=		procmail-[0-9]*:../../mail/procmail
 CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
 .elif !empty(DSPAM_DELIVERY_AGENT:Mmaildrop)
-DSPAM_DELIVERY_AGENT_BIN?=	${LOCALBASE}/bin/maildrop
+DSPAM_DELIVERY_AGENT_BIN?=	${PREFIX}/bin/maildrop
 BUILD_DEPENDS+=		maildrop-[0-9]*:../../mail/maildrop
 CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
 .elif !empty(DSPAM_DELIVERY_AGENT)

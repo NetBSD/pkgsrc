@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2005/10/20 08:33:13 adrianp Exp $
+$NetBSD: patch-aa,v 1.5 2010/03/10 13:43:38 martti Exp $
+
+Make this pkgsrc friendly.
 
 --- src/Makefile.in.orig	2005-10-17 14:07:30.000000000 +0100
 +++ src/Makefile.in
