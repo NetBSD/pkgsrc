@@ -1,0 +1,7 @@
+libdbi-drivers - drivers for libdbi,
+the Database Independent Abstraction Layer for C
+
+This driver allows libdbi-enabled applications to use PostgreSQL as a
+database backend. Internally, it provides a libdbi driver around the libpq
+client library. See the included driver documentation for installation
+instructions, usage, and information about driver-specific peculiarities.

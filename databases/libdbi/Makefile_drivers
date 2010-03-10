@@ -1,0 +1,25 @@
+# $NetBSD: Makefile_drivers,v 1.1.1.1 2010/03/10 23:55:48 wiz Exp $
+#
+
+DISTNAME=	libdbi-drivers-0.8.3-1
+PKGNAME=	${DISTNAME:S/libdbi-drivers/libdbi-driver-${DRIVER}/:S/-1/.1/:S/-2/.2/}
+CATEGORIES=	databases devel
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdbi-drivers/}
+
+MAINTAINER=	cheusov@tut.by
+HOMEPAGE=	http://libdbi-drivers.sourceforge.net/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+
+DISTINFO_FILE=		${.CURDIR}/../../databases/libdbi/distinfo_drivers
+#PATCHDIR=		${.CURDIR}/../../databases/libdbi/patches_drivers
+
+INSTALLATION_DIRS+=	lib/dbd
+
+CONFIGURE_ARGS+=	--disable-dependency-tracking
+CONFIGURE_ARGS+=	--with-dbi-incdir=${BUILDLINK_PREFIX.libdbi}/include/dbi
+CONFIGURE_ARGS+=	--with-dbi-libdir=${BUILDLINK_PREFIX.libdbi}/lib
+CONFIGURE_ARGS+=	--disable-docs
