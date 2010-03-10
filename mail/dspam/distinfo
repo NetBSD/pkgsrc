@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.32 2009/03/16 18:13:34 adrianp Exp $
+$NetBSD: distinfo,v 1.33 2010/03/10 13:43:38 martti Exp $
 
 SHA1 (dspam-3.8.0.tar.gz) = d1de7ee2134522adaf52f49167accecf1589fa96
 RMD160 (dspam-3.8.0.tar.gz) = e7831e2415e30e819dd9cbc0ba3f269e113e2fb9
 Size (dspam-3.8.0.tar.gz) = 726160 bytes
-SHA1 (patch-aa) = 04e94e3da9de06c15863425d0a827858b5dd4a6c
-SHA1 (patch-ad) = cfa68c01cb3f5ce0556c7a3b008dc214bdfbbd95
+SHA1 (patch-aa) = ff48b3bb84a13f841ee38115377fcb97d03798c0
+SHA1 (patch-ad) = 581ac7b6e01e68474ecf944be8620212d69900b9
 SHA1 (patch-ae) = 21f450dd67dc2101b44f1a952632b933a3c8a913
 SHA1 (patch-af) = 31c86b3f0cb7d7856e46207bee656472fcd093e0
 SHA1 (patch-ag) = d4b1cf206f8113a1150687e2942bd69f0b9767ee
