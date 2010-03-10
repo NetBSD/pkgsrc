@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1107 2010/03/09 23:21:43 snj Exp $
+$NetBSD: CHANGES-2010,v 1.1108 2010/03/10 08:47:07 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1310,3 +1310,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-HTML-Selector-XPath to 0.04 [sno 2010-03-09]
 	Added games/ioquake3-pk3 version 0 [snj 2010-03-09]
 	Added games/tyrquake version 0.61 [snj 2010-03-09]
+	Updated databases/p5-DBM-Deep to 1.0016 [sno 2010-03-10]
