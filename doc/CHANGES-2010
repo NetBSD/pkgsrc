@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1127 2010/03/10 11:54:15 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1128 2010/03/10 11:57:28 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1330,3 +1330,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Test-WWW-Mechanize-Catalyst to 0.52 [sno 2010-03-10]
 	Updated geography/gdal-lib to 1.7.1 [adam 2010-03-10]
 	Updated databases/p5-CatalystX-CRUD to 0.48 [sno 2010-03-10]
+	Updated devel/p5-MRO-Compat to 0.11nb1 [sno 2010-03-10]
