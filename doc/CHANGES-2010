@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1137 2010/03/10 15:04:42 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1138 2010/03/10 15:28:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1341,3 +1341,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/py-pygments to 1.3.1 [obache 2010-03-10]
 	Updated www/p5-CatalystX-CRUD-Controller-RHTMLO to 0.20 [sno 2010-03-10]
 	Updated www/p5-CatalystX-CRUD-View-Excel to 0.07 [sno 2010-03-10]
+	Updated www/p5-CatalystX-CRUD-YUI to 0.023 [sno 2010-03-10]
