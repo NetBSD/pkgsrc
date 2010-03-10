@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1109 2010/03/10 08:48:33 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1110 2010/03/10 08:55:41 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1312,3 +1312,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added games/tyrquake version 0.61 [snj 2010-03-09]
 	Updated databases/p5-DBM-Deep to 1.0016 [sno 2010-03-10]
 	Updated devel/p5-Moose to 0.99 [sno 2010-03-10]
+	Updated net/p5-Net-Interface to 1.012 [sno 2010-03-10]
