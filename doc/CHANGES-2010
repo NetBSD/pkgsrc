@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1148 2010/03/10 19:15:33 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1149 2010/03/10 19:25:16 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1352,3 +1352,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IO-Interactive to 0.0.6 [sno 2010-03-10]
 	Updated devel/p5-IPC-SysV to 2.02 [sno 2010-03-10]
 	Updated devel/p5-Scalar-Defer to 0.23 [sno 2010-03-10]
+	Updated devel/p5-Test-Class to 0.34 [sno 2010-03-10]
