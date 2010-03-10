@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1131 2010/03/10 13:12:29 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1132 2010/03/10 13:41:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1334,3 +1334,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.40 [sno 2010-03-10]
 	Updated databases/p5-CatalystX-CRUD-ModelAdapter-DBIC to 0.11 [sno 2010-03-10]
 	Updated devel/p5-Devel-REPL to 1.003009 [sno 2010-03-10]
+	Updated devel/libdatrie to 0.2.3 [obache 2010-03-10]
+	Updated devel/libthai to 0.1.14 [obache 2010-03-10]
