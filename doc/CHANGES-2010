@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1117 2010/03/10 10:19:19 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1118 2010/03/10 10:42:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1320,3 +1320,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/p5-ORLite to 1.41 [sno 2010-03-10]
 	Updated www/p5-Catalyst-Runtime to 5.80021 [sno 2010-03-10]
 	Updated www/p5-Catalyst-Model-Adaptor to 0.08 [sno 2010-03-10]
+	Updated www/p5-Catalyst-View-TT to 0.32 [sno 2010-03-10]
