@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2009/09/24 06:50:21 sno Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/10 15:28:15 sno Exp $
 
-DISTNAME=	CatalystX-CRUD-YUI-0.019
+DISTNAME=	CatalystX-CRUD-YUI-0.023
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/CatalystX-CRUD-YUI/
 COMMENT=	YUI for your CatalystX::CRUD view
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 # Recommended dependencies
 DEPENDS+=	p5-CatalystX-CRUD-Model-RDBO>=0.20:../../databases/p5-CatalystX-CRUD-Model-RDBO
@@ -31,12 +31,14 @@ DEPENDS+=	p5-JSON-XS>=2.23:../../converters/p5-JSON-XS
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 DEPENDS+=	p5-Rose-HTMLx-Form-Related>=0.17:../../www/p5-Rose-HTMLx-Form-Related
+DEPENDS+=	{p5-Template-Toolkit<=2.21,p5-Template-Plugin-Autoformat-[0-9]*}:../../textproc/p5-Template-Plugin-Autoformat
 DEPENDS+=	p5-Template-Plugin-Handy>=0.002:../../devel/p5-Template-Plugin-Handy
 DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-Autoformat-[0-9]*:../../textproc/p5-Text-Autoformat
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/CatalystX/CRUD/YUI/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/CatalystX/CRUD/YUI/.packlist
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
