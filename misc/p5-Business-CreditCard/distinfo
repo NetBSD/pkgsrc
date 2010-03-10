@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2008/07/17 14:02:14 he Exp $
+$NetBSD: distinfo,v 1.7 2010/03/10 18:20:16 sno Exp $
 
-SHA1 (Business-CreditCard-0.30.tar.gz) = d725fceb501f082abfb291aeb0bb77590fcaef68
-RMD160 (Business-CreditCard-0.30.tar.gz) = dff5d6ff33ceb8e397c45361a24a4b42d321eca5
-Size (Business-CreditCard-0.30.tar.gz) = 5929 bytes
+SHA1 (Business-CreditCard-0.31.tar.gz) = 10d75c254eb164170ae08dd66152b2f248c9625f
+RMD160 (Business-CreditCard-0.31.tar.gz) = 1fc70396af101f481d3489a873afb9f937806f4d
+Size (Business-CreditCard-0.31.tar.gz) = 7121 bytes
