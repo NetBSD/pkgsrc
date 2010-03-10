@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/10 23:37:48 pettai Exp $
+
+--- autoconf/Makefile.in.orig	2009-12-13 14:50:15.000000000 +0100
++++ autoconf/Makefile.in	2009-12-13 14:52:57.000000000 +0100
+@@ -19,6 +19,7 @@
+ LDFLAGS         = @LDFLAGS@
+ RM		= /bin/rm -f
+ 
++destdir = @destdir@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ 
+@@ -54,13 +55,13 @@
+ 	grep SYSM_VERS config.h | mail -s"Sysmon Registration" jared@puck.nether.net
+ 
+ install:	all
+-	@echo "installing into @bindir@"
+-	-mkdir -p @bindir@
+-	-mv @bindir@/sysmond @bindir@/sysmond.old
+-	-mv @bindir@/sysmon @bindir@/sysmon.old
+-	cp sysmon sysmond @bindir@
+-	@echo "creating directory @sysconfdir@"
+-	-mkdir -p @sysconfdir@
++	@echo "installing into @destdir@/@bindir@"
++	-mkdir -p @destdir@/@bindir@
++	-mv @destdir@/@bindir@/sysmond @destdir@/@bindir@/sysmond.old
++	-mv @destdir@/@bindir@/sysmon @destdir@/@bindir@/sysmon.old
++	cp sysmon sysmond @destdir@/@bindir@
++	@echo "creating directory @destdir@/@sysconfdir@"
++	-mkdir -p @destdir@/@sysconfdir@
+ 
+ strip:
+ 	-strip @PROGS@
