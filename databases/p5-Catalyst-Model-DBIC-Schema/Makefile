@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2009/11/29 12:28:12 seb Exp $
+# $NetBSD: Makefile,v 1.10 2010/03/10 12:51:06 sno Exp $
 
-DISTNAME=	Catalyst-Model-DBIC-Schema-0.31
+DISTNAME=	Catalyst-Model-DBIC-Schema-0.40
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	www perl5
@@ -13,12 +13,10 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Carp-Clan-[0-9]*:../../devel/p5-Carp-Clan
 DEPENDS+=	p5-Catalyst-Runtime>=5.80005:../../www/p5-Catalyst-Runtime
-DEPENDS+=	p5-CatalystX-Component-Traits>=0.10:../../www/p5-CatalystX-Component-Traits
-DEPENDS+=	p5-Class-Accessor-Grouped>=0.09000:../../devel/p5-Class-Accessor-Grouped
-DEPENDS+=	p5-DBIx-Class>=0.08111:../../databases/p5-DBIx-Class
+DEPENDS+=	p5-CatalystX-Component-Traits>=0.14:../../www/p5-CatalystX-Component-Traits
+DEPENDS+=	p5-DBIx-Class>=0.08114:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
-DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
-DEPENDS+=	p5-Moose-Autobox-[0-9]*:../../devel/p5-Moose-Autobox
+DEPENDS+=	p5-Moose>=0.90:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
@@ -30,8 +28,10 @@ DEPENDS+=	p5-DBIx-Class-Schema-Loader>=0.04005:../../databases/p5-DBIx-Class-Sch
 # Caching support
 DEPENDS+=	p5-DBIx-Class-Cursor-Cached-[0-9]*:../../databases/p5-DBIx-Class-Cursor-Cached
 # Replication Support
-DEPENDS+=	p5-MooseX-AttributeHelpers-[0-9]*:../../devel/p5-MooseX-AttributeHelpers
 DEPENDS+=	p5-Hash-Merge-[0-9]*:../../devel/p5-Hash-Merge
+DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
+
+BUILD_DEPENDS+=	p5-Test-Simple>=0.94:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Catalyst/Model/DBIC/Schema/.packlist
