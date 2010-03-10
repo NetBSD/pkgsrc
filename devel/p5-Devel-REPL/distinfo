@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/07/20 09:38:04 sno Exp $
+$NetBSD: distinfo,v 1.8 2010/03/10 13:12:19 sno Exp $
 
-SHA1 (Devel-REPL-1.003007.tar.gz) = 4f7d7567509742be5cd48e0dc17c67369ebb5e24
-RMD160 (Devel-REPL-1.003007.tar.gz) = cf3c6cd30650686da48f8ff9d3b674e41b74d6c6
-Size (Devel-REPL-1.003007.tar.gz) = 44082 bytes
+SHA1 (Devel-REPL-1.003009.tar.gz) = 78ea103bce1a50ed512f851f9a29a97a82173019
+RMD160 (Devel-REPL-1.003009.tar.gz) = 99a981b6aa3cae430832b01eb52766ce91764b2a
+Size (Devel-REPL-1.003009.tar.gz) = 49226 bytes
