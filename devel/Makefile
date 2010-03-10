@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1304 2010/03/09 21:27:44 sno Exp $
+# $NetBSD: Makefile,v 1.1305 2010/03/10 23:47:37 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1030,6 +1030,7 @@ SUBDIR+=	physfs
 SUBDIR+=	picp
 SUBDIR+=	picprg
 SUBDIR+=	pilrc
+SUBDIR+=	pipestatus
 SUBDIR+=	pkg-config
 SUBDIR+=	ply
 SUBDIR+=	pmccabe
@@ -1123,6 +1124,7 @@ SUBDIR+=	ruby-eet
 SUBDIR+=	ruby-eventmachine
 SUBDIR+=	ruby-facade
 SUBDIR+=	ruby-flexmock
+SUBDIR+=	ruby-gemcutter
 SUBDIR+=	ruby-gettext
 SUBDIR+=	ruby-gettext-activerecord
 SUBDIR+=	ruby-gettext-rails
