@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1132 2010/03/10 13:41:48 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1133 2010/03/10 13:51:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1336,3 +1336,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Devel-REPL to 1.003009 [sno 2010-03-10]
 	Updated devel/libdatrie to 0.2.3 [obache 2010-03-10]
 	Updated devel/libthai to 0.1.14 [obache 2010-03-10]
+	Updated inputmethod/gtk-im-libthai to 0.1.5 [obache 2010-03-10]
