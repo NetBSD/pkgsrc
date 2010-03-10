@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2008/06/01 08:15:36 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/03/10 13:51:27 obache Exp $
 
---- src/Makefile.in.orig	2006-09-13 03:38:40.000000000 +0000
+Handled by pkgsrc package install script.
+
+--- src/Makefile.in.orig	2009-12-27 05:07:04.000000000 +0000
 +++ src/Makefile.in
-@@ -485,19 +485,7 @@ uninstall-am: uninstall-info-am uninstal
+@@ -542,19 +542,6 @@ uninstall-am: uninstall-moduleLTLIBRARIE
  # Running this if cross compiling or if DESTDIR is set is going to
  # not work at all, so skip it.
  install-data-hook:
@@ -19,7 +21,6 @@ $NetBSD: patch-aa,v 1.1 2008/06/01 08:15:36 obache Exp $
 -	  echo "*** system using gtk-query-immodules-2.0" ; \
 -	  echo "***" ; \
 -        fi
-+
+ 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
