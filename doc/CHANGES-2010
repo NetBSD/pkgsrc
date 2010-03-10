@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1140 2010/03/10 16:46:27 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.1141 2010/03/10 17:06:28 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1344,3 +1344,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-CatalystX-CRUD-YUI to 0.023 [sno 2010-03-10]
 	Updated devel/p5-autobox-Core to 1.0 [sno 2010-03-10]
 	Updated www/trac to 0.11.7 [gdt 2010-03-10]
+	Updated net/p5-Net-FTPSSL to 0.14 [sno 2010-03-10]
