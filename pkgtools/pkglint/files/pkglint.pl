@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.821 2009/11/20 12:02:33 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.822 2010/03/10 14:42:22 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3146,6 +3146,15 @@ sub parse_mk_cond($$) {
 	}
 }
 
+sub parse_licenses($) {
+	my ($licenses) = @_;
+
+	# XXX: this is clearly cheating
+	$licenses =~ s,[()]|AND|OR,,g;
+	my @licenses = split(/\s+/, $licenses);
+	return \@licenses;
+}
+
 # This procedure fills in the extra fields of a line, depending on the
 # line type. These fields can later be queried without having to parse
 # them again and again.
@@ -5107,18 +5116,21 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			shareware
 		));
 
-		my $license_file = "${cwd_pkgsrcdir}/licenses/${value}";
-		if (defined($pkgctx_vardef) && exists($pkgctx_vardef->{"LICENSE_FILE"})) {
-			my $license_file_line = $pkgctx_vardef->{"LICENSE_FILE"};
+		my $licenses = parse_licenses($value);
+		foreach my $license (@$licenses) {
+			my $license_file = "${cwd_pkgsrcdir}/licenses/${license}";
+			if (defined($pkgctx_vardef) && exists($pkgctx_vardef->{"LICENSE_FILE"})) {
+				my $license_file_line = $pkgctx_vardef->{"LICENSE_FILE"};
 
-			$license_file = "${current_dir}/" . resolve_relative_path($license_file_line->get("value"), false);
-		}
-		if (!-f $license_file) {
-			$line->log_warning("License file ".normalize_pathname($license_file)." does not exist.");
-		}
+				$license_file = "${current_dir}/" . resolve_relative_path($license_file_line->get("value"), false);
+			}
+			if (!-f $license_file) {
+				$line->log_warning("License file ".normalize_pathname($license_file)." does not exist.");
+			}
 
-		if (exists(deprecated_licenses->{$value})) {
-			$line->log_warning("License ${value} is deprecated.");
+			if (exists(deprecated_licenses->{$license})) {
+				$line->log_warning("License ${license} is deprecated.");
+			}
 		}
 
 	} elsif ($type eq "Mail_Address") {
