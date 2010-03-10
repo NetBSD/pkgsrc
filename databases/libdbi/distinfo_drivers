@@ -1,0 +1,5 @@
+$NetBSD: distinfo_drivers,v 1.1.1.1 2010/03/10 23:55:48 wiz Exp $
+
+SHA1 (libdbi-drivers-0.8.3-1.tar.gz) = 599fbab115419e8fc88b3b31a38031584ee213b5
+RMD160 (libdbi-drivers-0.8.3-1.tar.gz) = e0aa9e67f6560fb44018b1d35d90d4ac21b48597
+Size (libdbi-drivers-0.8.3-1.tar.gz) = 1534420 bytes
