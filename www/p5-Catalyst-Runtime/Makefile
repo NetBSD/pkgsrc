@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2010/02/02 11:11:30 sno Exp $
+# $NetBSD: Makefile,v 1.19 2010/03/10 10:16:10 sno Exp $
 
-DISTNAME=	Catalyst-Runtime-5.80019
+DISTNAME=	Catalyst-Runtime-5.80021
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -13,12 +13,12 @@ LICENSE=	${PERL5_LICENSE}
 CONFLICTS+=	p5-Catalyst-[0-9]*
 
 DEPENDS+=	p5-B-Hooks-EndOfScope>=0.08:../../devel/p5-B-Hooks-EndOfScope
-DEPENDS+=	p5-CGI-Simple>=0:../../www/p5-CGI-Simple
+DEPENDS+=	p5-CGI-Simple-[0-9]*:../../www/p5-CGI-Simple
 DEPENDS+=	p5-Class-C3-Adopt-NEXT>=0.07:../../devel/p5-Class-C3-Adopt-NEXT
 DEPENDS+=	p5-Class-MOP>=0.95:../../devel/p5-Class-MOP
-DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
-DEPENDS+=	p5-File-Modified>=0:../../devel/p5-File-Modified
-DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
+DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
+DEPENDS+=	p5-File-Modified-[0-9]*:../../devel/p5-File-Modified
+DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Body>=1.04:../../www/p5-HTTP-Body
 DEPENDS+=	p5-HTTP-Request-AsCGI>=1.0:../../www/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
@@ -32,14 +32,14 @@ DEPENDS+=	p5-MooseX-Role-WithOverloading>=0.05:../../devel/p5-MooseX-Role-WithOv
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-MooseX-Types-Common-[0-9]*:../../devel/p5-MooseX-Types-Common
 DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
-DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-String-RewritePrefix>=0.004:../../textproc/p5-String-RewritePrefix
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-Text-SimpleTable>=0.03:../../textproc/p5-Text-SimpleTable
-DEPENDS+=	{perl>=5.10,p5-Time-HiRes>=0}:../../time/p5-Time-HiRes
+DEPENDS+=	{perl>=5.10,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Tree-Simple>=1.15:../../devel/p5-Tree-Simple
-DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../devel/p5-Tree-Simple-VisitorFactory
+DEPENDS+=	p5-Tree-Simple-VisitorFactory-[0-9]*:../../devel/p5-Tree-Simple-VisitorFactory
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
 DEPENDS+=	p5-libwww>=5.814:../../www/p5-libwww
 DEPENDS+=	p5-namespace-autoclean>=0.09:../../devel/p5-namespace-autoclean
