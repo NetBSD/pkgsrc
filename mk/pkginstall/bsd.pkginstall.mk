@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.46 2008/03/04 06:51:41 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.47 2010/03/10 15:01:42 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -356,13 +356,18 @@ su-create-usergroup: ${_INSTALL_USERGROUP_UNPACKER}
 
 # SPECIAL_PERMS are lists that look like:
 #		file user group mode
-#	At post-install time, file (it may be a directory) is changed to be
-#	owned by user:group with mode permissions.  If a file pathname
-#	is relative, then it is taken to be relative to ${PREFIX}.
+#	At post-install time, <file> (it may be a directory) is changed
+#	to be owned by <user>:<group> with <mode> permissions.  If a file
+#	pathname is relative, then it is taken to be relative to ${PREFIX}.
 #
-# SPECIAL_PERMS should be used primarily to change permissions of files or
-# directories listed in the PLIST.  This may be used to make certain files
-# set-uid or to change the ownership or a directory.
+#	SPECIAL_PERMS should be used primarily to change permissions of
+#	files or directories listed in the PLIST.  This may be used to
+#	make certain files set-uid or to change the ownership or a
+#	directory.
+#
+#	Note that when USE_DESTDIR is in effect, the special permissions
+#	are not directly recorded (as file attributes) in the binary
+#	package file.
 #
 # SETUID_ROOT_PERMS is a convenience definition to note an executable is
 # meant to be setuid-root, and should be used as follows:
