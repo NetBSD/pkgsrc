@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/21 13:50:18 sno Exp $
+$NetBSD: distinfo,v 1.2 2010/03/10 08:55:29 sno Exp $
 
-SHA1 (Net-Interface-1.010.tar.gz) = 6328db6d706c28f974c1a3a6a3a629e8c9818dc7
-RMD160 (Net-Interface-1.010.tar.gz) = f9b5059c8b8a0da4c16d0a8e346d81abb239439c
-Size (Net-Interface-1.010.tar.gz) = 173123 bytes
-SHA1 (patch-aa) = 94ffbe6a6a27f73c9524ab66cd66afde53a615ce
+SHA1 (Net-Interface-1.012.tar.gz) = 2567ccd68128b851e4fe7b186a5a4308f47646a5
+RMD160 (Net-Interface-1.012.tar.gz) = 39171b79699db38db2ad75f3740c0150022bc679
+Size (Net-Interface-1.012.tar.gz) = 173350 bytes
