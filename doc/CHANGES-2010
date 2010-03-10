@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1143 2010/03/10 18:20:27 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1144 2010/03/10 18:25:08 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1347,3 +1347,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-Net-FTPSSL to 0.14 [sno 2010-03-10]
 	Updated math/p5-Excel-Template-Plus to 0.05 [sno 2010-03-10]
 	Updated misc/p5-Business-CreditCard to 0.31 [sno 2010-03-10]
+	Updated net/p5-Nmap-Parser to 1.20 [sno 2010-03-10]
