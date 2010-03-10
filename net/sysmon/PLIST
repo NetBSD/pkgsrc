@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/10 23:37:48 pettai Exp $
+bin/sysmon
+bin/sysmond
+man/man5/sysmon.conf.5
+man/man8/sysmon.8
+share/doc/sysmon/CHANGES
+share/doc/sysmon/Changes.html
+share/doc/sysmon/LICENSE
+share/doc/sysmon/README
+share/doc/sysmon/binaries.html
+share/doc/sysmon/config.html
+share/doc/sysmon/docs.html
+share/doc/sysmon/index.html
+share/doc/sysmon/jclient.jpg
+share/doc/sysmon/reporting.xml-spec.txt
+share/doc/sysmon/sysmon.conf.man.html
+share/doc/sysmon/sysmon.jpg
+share/doc/sysmon/sysmon.man.html
+share/examples/sysmon/sysmon.conf.dist
