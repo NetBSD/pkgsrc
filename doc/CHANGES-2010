@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1151 2010/03/10 23:42:19 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1152 2010/03/10 23:47:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1355,3 +1355,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Test-Class to 0.34 [sno 2010-03-10]
 	Updated net/quagga-devel to 0.99.16 [gdt 2010-03-10]
 	Added net/sysmon version 0.92.2 [pettai 2010-03-10]
+	Added devel/pipestatus version 0.6.0 [wiz 2010-03-10]
