@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2010/01/18 09:36:09 adam Exp $
+$NetBSD: distinfo,v 1.8 2010/03/10 11:45:26 adam Exp $
 
-SHA1 (gdal-1.6.3.tar.gz) = b8fc53f562dd253c0c75e9ea4d4398f9548c1f1f
-RMD160 (gdal-1.6.3.tar.gz) = aab37ae4b7a98f9af6c10511e2ce5205505b9769
-Size (gdal-1.6.3.tar.gz) = 7007613 bytes
-SHA1 (patch-aa) = 8403f7314a5529e0e47877329578a1c94528f326
+SHA1 (gdal-1.7.1.tar.gz) = 1ff42b51f416da966ee25c42631a3faa3cca5d4d
+RMD160 (gdal-1.7.1.tar.gz) = 337502e12e0eb4b5ff5fad806545752e677a4ab8
+Size (gdal-1.7.1.tar.gz) = 7709157 bytes
+SHA1 (patch-aa) = 2c017bda45d4ed4fb10f7e70d33b707ca33149d1
