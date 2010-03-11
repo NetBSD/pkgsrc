@@ -1,0 +1,10 @@
+Throwable is a role for classes that are meant to be thrown as exceptions
+to standard program flow. It is very simple and does only two things:
+saves any previous value for $@ and calls die $self.
+
+Throwable::Error is a base class for exceptions that will be thrown to
+signal errors and abort normal program flow. Throwable::Error is an
+alternative to Exception::Class, the features of which are largely provided
+by the Moose object system atop which Throwable::Error is built.
+
+Throwable::Error performs the Throwable role.
