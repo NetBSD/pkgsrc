@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.5 2006/10/23 12:29:56 tron Exp $
+$NetBSD: patch-ad,v 1.6 2010/03/11 12:46:42 drochner Exp $
 
---- src/file.c.orig	2005-08-10 13:33:21.000000000 +0200
+--- src/file.c.orig	2005-08-10 11:33:21.000000000 +0000
 +++ src/file.c
+@@ -199,7 +199,7 @@ file_getTmpFilename(baseDirectory,baseFi
+ #ifdef VMS
+          sprintf(tempFilename,"%sgv_%lx_%x_%s_%s.tmp",tmpDirBuf,time(NULL),i,tmpName,tmpExt);
+ #else
+-         sprintf(tempFilename,"%sgv_%lx_%x_%s.%s.tmp",tmpDirBuf,time(NULL),i,tmpName,tmpExt);
++         sprintf(tempFilename,"%sgv_%llx_%x_%s.%s.tmp",tmpDirBuf,(long long)time(NULL),i,tmpName,tmpExt);
+ #endif
+          file_translateTildeInPath(tempFilename);
+          no_such_file = stat(tempFilename,&s);
 @@ -265,6 +265,9 @@ int file_fileIsDir(fn)
  /* file_fileIsNotUseful */
  /*############################################################*/
