@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1159 2010/03/11 06:27:12 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1160 2010/03/11 06:32:46 martti Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1367,3 +1367,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/py-clutter to 1.0.0nb1 [obache 2010-03-11]
 	Added graphics/py-clutter-gtk version 0.10.0 [obache 2010-03-11]
 	Added multimedia/py-clutter-gst version 1.0.0 [obache 2010-03-11]
+	Updated editors/vim-share to 7.2.394 [martti 2010-03-11]
