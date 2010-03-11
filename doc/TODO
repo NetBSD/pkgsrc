@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9122 2010/03/11 07:05:49 obache Exp $
+$NetBSD: TODO,v 1.9123 2010/03/11 12:25:11 gdt Exp $
 
 Suggested new packages
 ======================
@@ -957,7 +957,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
-	o neon-0.29.3
 	o nessus-3.2.0
 	o netcdf-4.0.1
 	o netperf-2.4.4
