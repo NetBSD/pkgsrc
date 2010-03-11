@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1171 2010/03/11 11:16:19 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1172 2010/03/11 11:32:53 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1379,3 +1379,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/p5-Email-Sender to 0.100460 [sno 2010-03-11]
 	Updated mail/p5-Catalyst-View-Email to 0.23 [sno 2010-03-11]
 	Updated misc/stellarium 0.10.4 [adam 2010-03-11]
+	Added net/py-dpkt version 1.6 [pettai 2010-03-11]
