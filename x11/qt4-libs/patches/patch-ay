@@ -1,13 +1,13 @@
-$NetBSD: patch-ay,v 1.4 2010/02/08 10:49:07 wiz Exp $
+$NetBSD: patch-ay,v 1.5 2010/03/11 00:07:24 wiz Exp $
 
---- src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h.orig	2010-01-15 10:01:33.000000000 -0700
-+++ src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h	2010-02-07 15:59:53.000000000 -0700
+--- src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h.orig	2010-02-11 15:55:20.000000000 +0000
++++ src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h
 @@ -718,7 +718,7 @@
  #endif
  
  #if !defined(WTF_USE_JSVALUE64) && !defined(WTF_USE_JSVALUE32) && !defined(WTF_USE_JSVALUE32_64)
 -#if PLATFORM(X86_64) && (PLATFORM(DARWIN) || PLATFORM(LINUX) || PLATFORM(SOLARIS) || PLATFORM(HPUX))
-+#if PLATFORM(X86_64) && (PLATFORM(DARWIN) || PLATFORM(LINUX) || PLATFORM(SOLARIS) || PLATFORM(HPUX) || PLATFORM(NETBSD))
++#if (PLATFORM(X86_64) && (PLATFORM(UNIX) || PLATFORM(WIN_OS))) || PLATFORM(IA64) || PLATFORM(ALPHA)
  #define WTF_USE_JSVALUE64 1
  #elif (PLATFORM(IA64) && !PLATFORM(IA64_32)) || PLATFORM(SPARC64)
  #define WTF_USE_JSVALUE64 1
