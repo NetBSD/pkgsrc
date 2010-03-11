@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1153 2010/03/10 23:58:14 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1154 2010/03/11 00:05:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1361,3 +1361,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/libdbi-driver-pgsql version 0.8.3.1nb1 [wiz 2010-03-10]
 	Added databases/libdbi-driver-sqlite version 0.8.3.1 [wiz 2010-03-10]
 	Added databases/libdbi-driver-sqlite3 version 0.8.3.1 [wiz 2010-03-10]
+	Updated www/neon to 0.29.2 [gdt 2010-03-11]
