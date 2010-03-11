@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2009/07/28 19:12:36 drochner Exp $
+$NetBSD: distinfo,v 1.14 2010/03/11 11:15:17 adam Exp $
 
-SHA1 (stellarium-0.10.2.tar.gz) = aa24cbb8d4a911121108df67483b4c753402928e
-RMD160 (stellarium-0.10.2.tar.gz) = ea88f1ba4c29a3a9087e5ca89a16258e59d12e72
-Size (stellarium-0.10.2.tar.gz) = 35250510 bytes
-SHA1 (patch-aa) = 308fb712725a7651a91c553fbc3c68e6b64a6cd9
+SHA1 (stellarium-0.10.4.tar.gz) = 8a9f22da5a0049ea10b19b24d28490dc15dea1a8
+RMD160 (stellarium-0.10.4.tar.gz) = ed2ea67c905adb211266df29dca2f8ed1626ad8e
+Size (stellarium-0.10.4.tar.gz) = 36129866 bytes
+SHA1 (patch-aa) = de6b97a0933d32ee77f9f94845ad1bc83ff695c5
 SHA1 (patch-ab) = d94f54f6945d19b340748fbfd2a9187c543aed2a
-SHA1 (patch-ac) = 5853ceaa1325a85c95e9f0967f860638c8d271f4
+SHA1 (patch-ac) = 8d4db22a7ae457bd0b0fba25899ada5d62be7742
