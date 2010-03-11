@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1164 2010/03/11 09:26:59 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1165 2010/03/11 09:42:44 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1372,3 +1372,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/p5-Email-Date-Format to 1.002nb2 [sno 2010-03-11]
 	Updated mail/p5-Email-Simple to 2.100 [sno 2010-03-11]
 	Removed mail/p5-Email-Simple-Creator [sno 2010-03-11]
+	Updated mail/p5-Email-MIME to 1.903 [sno 2010-03-11]
