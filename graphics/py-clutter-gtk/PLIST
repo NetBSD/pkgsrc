@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/11 06:12:59 obache Exp $
+lib/pkgconfig/pyclutter-gtk-0.10.pc
+${PYSITELIB}/cluttergtk/__init__.py
+${PYSITELIB}/cluttergtk/__init__.pyc
+${PYSITELIB}/cluttergtk/__init__.pyo
+${PYSITELIB}/cluttergtk/_cluttergtk.la
+share/pyclutter/1.0/defs/cluttergtk-types.defs
+share/pyclutter/1.0/defs/cluttergtk.defs
