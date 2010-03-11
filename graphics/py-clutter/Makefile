@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/10/26 19:57:23 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2010/03/11 05:41:24 obache Exp $
 #
 
 DISTNAME=	pyclutter-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/pyclutter/1.0/
 
@@ -25,14 +26,8 @@ PKGCONFIG_OVERRIDE+=	pyclutter.pc.in
 
 PY_PATCHPLIST=	yes
 
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.clutter+=	clutter>=0.8.4
 .include "../../graphics/clutter/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
-.include "../../devel/py-gobject/buildlink3.mk"
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

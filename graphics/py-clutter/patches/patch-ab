@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.1 2010/03/11 05:41:24 obache Exp $
+
+Change CGL_* constants to GL_*
+http://git.clutter-project.org/cgit.cgi?url=bindings/pyclutter/commit/&id=e249844f1dbeb9abb64f4a1245042a0756233330
+
+--- clutter/cluttermodule.c.orig	2009-08-28 11:36:36.000000000 +0000
++++ clutter/cluttermodule.c
+@@ -148,19 +148,19 @@ pycogl_add_gl_constants (PyObject *modul
+    * should also be loading PyOpenGL, which exposes all the
+    * enumeration values
+    */
+-  PyModule_AddObject (module, "NEVER", Py_BuildValue ("i", CGL_NEVER));
+-  PyModule_AddObject (module, "LESS", Py_BuildValue ("i", CGL_LESS));
+-  PyModule_AddObject (module, "LEQUAL", Py_BuildValue ("i", CGL_LEQUAL));
+-  PyModule_AddObject (module, "EQUAL", Py_BuildValue ("i", CGL_EQUAL));
+-  PyModule_AddObject (module, "NOTEQUAL", Py_BuildValue ("i", CGL_NOTEQUAL));
+-  PyModule_AddObject (module, "GEQUAL", Py_BuildValue ("i", CGL_GEQUAL));
+-  PyModule_AddObject (module, "GREATER", Py_BuildValue ("i", CGL_GREATER));
+-  PyModule_AddObject (module, "ALWAYS", Py_BuildValue ("i", CGL_ALWAYS));
++  PyModule_AddObject (module, "NEVER", Py_BuildValue ("i", GL_NEVER));
++  PyModule_AddObject (module, "LESS", Py_BuildValue ("i", GL_LESS));
++  PyModule_AddObject (module, "LEQUAL", Py_BuildValue ("i", GL_LEQUAL));
++  PyModule_AddObject (module, "EQUAL", Py_BuildValue ("i", GL_EQUAL));
++  PyModule_AddObject (module, "NOTEQUAL", Py_BuildValue ("i", GL_NOTEQUAL));
++  PyModule_AddObject (module, "GEQUAL", Py_BuildValue ("i", GL_GEQUAL));
++  PyModule_AddObject (module, "GREATER", Py_BuildValue ("i", GL_GREATER));
++  PyModule_AddObject (module, "ALWAYS", Py_BuildValue ("i", GL_ALWAYS));
+ 
+-  PyModule_AddObject (module, "SRC_ALPHA", Py_BuildValue ("i", CGL_SRC_ALPHA));
+-  PyModule_AddObject (module, "ONE_MINUS_SRC_ALPHA", Py_BuildValue ("i", CGL_ONE_MINUS_SRC_ALPHA));
++  PyModule_AddObject (module, "SRC_ALPHA", Py_BuildValue ("i", GL_SRC_ALPHA));
++  PyModule_AddObject (module, "ONE_MINUS_SRC_ALPHA", Py_BuildValue ("i", GL_ONE_MINUS_SRC_ALPHA));
+ 
+-  PyModule_AddObject (module, "OBJECT_COMPILE_STATUS", Py_BuildValue ("i", CGL_OBJECT_COMPILE_STATUS));
++  PyModule_AddObject (module, "OBJECT_COMPILE_STATUS", Py_BuildValue ("i", GL_OBJECT_COMPILE_STATUS_ARB));
+ 
+   if (PyErr_Occurred ())
+     PyErr_Print ();
