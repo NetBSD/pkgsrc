@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/10/26 08:54:52 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/03/11 04:24:57 obache Exp $
 #
 
 DISTNAME=	clutter-perl-1.0.1
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/clutter-perl/1.0/
 
@@ -25,13 +26,10 @@ USE_LANGUAGES=	c
 
 PERL5_PACKLIST=	auto/Clutter/.packlist
 
-BUILDLINK_API_DEPENDS.p5-glib2+=	p5-glib2>=1.180
+BUILDLINK_API_DEPENDS.p5-glib2+=	p5-glib2>=1.220
 .include "../../devel/p5-glib2/buildlink3.mk"
+.include "../../devel/p5-pango/buildlink3.mk"
 .include "../../graphics/clutter/buildlink3.mk"
-.include "../../graphics/clutter-gtk/buildlink3.mk"
 .include "../../graphics/p5-cairo/buildlink3.mk"
-.include "../../multimedia/clutter-gst/buildlink3.mk"
-.include "../../multimedia/p5-GStreamer/buildlink3.mk"
-.include "../../x11/p5-gtk2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
