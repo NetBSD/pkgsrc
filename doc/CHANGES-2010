@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1173 2010/03/11 12:25:11 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.1174 2010/03/11 19:19:18 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1354,6 +1354,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Scalar-Defer to 0.23 [sno 2010-03-10]
 	Updated devel/p5-Test-Class to 0.34 [sno 2010-03-10]
 	Updated net/quagga-devel to 0.99.16 [gdt 2010-03-10]
+	Updated sysutils/ipa to 2.0.7 [gls 2010-03-10]
 	Added net/sysmon version 0.92.2 [pettai 2010-03-10]
 	Added devel/pipestatus version 0.6.0 [wiz 2010-03-10]
 	Added databases/libdbi version 0.8.3 [wiz 2010-03-10]
