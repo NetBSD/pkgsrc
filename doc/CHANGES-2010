@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1155 2010/03/11 04:08:12 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1156 2010/03/11 04:25:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1363,3 +1363,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/libdbi-driver-sqlite3 version 0.8.3.1 [wiz 2010-03-10]
 	Updated www/neon to 0.29.2 [gdt 2010-03-11]
 	Updated multimedia/clutter-gst to 1.0.0 [obache 2010-03-11]
+	Updated graphics/p5-clutter to 1.0.1nb1 [obache 2010-03-11]
