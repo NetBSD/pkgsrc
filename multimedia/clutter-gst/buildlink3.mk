@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/10/26 08:52:43 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/03/11 04:07:58 obache Exp $
 #
 
 BUILDLINK_TREE+=	clutter-gst
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	clutter-gst
 .if !defined(CLUTTER_GST_BUILDLINK3_MK)
 CLUTTER_GST_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.clutter-gst+=	clutter-gst>=0.10.0
+BUILDLINK_API_DEPENDS.clutter-gst+=	clutter-gst>=1.0.0
 BUILDLINK_PKGSRCDIR.clutter-gst?=	../../multimedia/clutter-gst
 
 .include "../../graphics/clutter/buildlink3.mk"
