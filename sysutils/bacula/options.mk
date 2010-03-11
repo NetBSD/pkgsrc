@@ -1,18 +1,14 @@
-# $NetBSD: options.mk,v 1.15 2009/02/08 21:38:15 shattered Exp $
+# $NetBSD: options.mk,v 1.16 2010/03/11 16:03:49 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
 PKG_SUPPORTED_OPTIONS=		bacula-static ssl python
 PKG_OPTIONS_REQUIRED_GROUPS=	database
-PKG_OPTIONS_GROUP.database=	catalog-sqlite catalog-sqlite3 catalog-pgsql catalog-mysql
-PKG_SUGGESTED_OPTIONS=		catalog-sqlite
+PKG_OPTIONS_GROUP.database=	catalog-sqlite3 catalog-pgsql catalog-mysql
+PKG_SUGGESTED_OPTIONS=		catalog-sqlite3
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mcatalog-sqlite)
-.  include "../../databases/sqlite/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite}
-BACULA_DB=		sqlite
-.elif !empty(PKG_OPTIONS:Mcatalog-sqlite3)
+.if !empty(PKG_OPTIONS:Mcatalog-sqlite3)
 .  include "../../databases/sqlite3/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 BACULA_DB=		sqlite3
