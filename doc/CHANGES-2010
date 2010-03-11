@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1157 2010/03/11 05:41:38 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1158 2010/03/11 06:13:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1365,3 +1365,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/clutter-gst to 1.0.0 [obache 2010-03-11]
 	Updated graphics/p5-clutter to 1.0.1nb1 [obache 2010-03-11]
 	Updated graphics/py-clutter to 1.0.0nb1 [obache 2010-03-11]
+	Added graphics/py-clutter-gtk version 0.10.0 [obache 2010-03-11]
