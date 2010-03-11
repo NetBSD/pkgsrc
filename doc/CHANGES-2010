@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1167 2010/03/11 09:44:49 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1168 2010/03/11 10:45:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1375,3 +1375,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/p5-Email-MIME to 1.903 [sno 2010-03-11]
 	Removed mail/p5-Email-MIME-Creator [sno 2010-03-11]
 	Removed mail/p5-Email-MIME-Modifier [sno 2010-03-11]
+	Added devel/p5-Throwable version 0.100090 [sno 2010-03-11]
