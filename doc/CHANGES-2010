@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1162 2010/03/11 09:20:42 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1163 2010/03/11 09:24:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1370,3 +1370,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated editors/vim-share to 7.2.394 [martti 2010-03-11]
 	Updated textproc/p5-Text-SimpleTable to 2.02 [sno 2010-03-11]
 	Updated mail/p5-Email-Date-Format to 1.002nb2 [sno 2010-03-11]
+	Updated mail/p5-Email-Simple to 2.100 [sno 2010-03-11]
