@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2010/03/05 14:55:21 gdt Exp $
+$NetBSD: patch-ae,v 1.2 2010/03/12 21:15:36 gdt Exp $
 
 The regress target puts the postgis library as @prefix@/lib within the
 regress destdir, rather than in plain lib, so point the loader script
@@ -11,7 +11,7 @@ at it.
  	$(MAKE) -C ../postgis REGRESS=1 DESTDIR=$(REGRESS_INSTALLDIR) install
  	$(MAKE) -C ../loader REGRESS=1 DESTDIR=$(REGRESS_INSTALLDIR) install
 -	sed 's,$$libdir,$(REGRESS_INSTALLDIR)/lib,g' ../postgis/postgis.sql > postgis.sql
-+	sed 's,$$libdir,$(REGRESS_INSTALLDIR)/@prefix@/lib,g' ../postgis/postgis.sql > postgis.sql
++	sed 's,$$libdir/..,$(REGRESS_INSTALLDIR)@prefix@/lib,g' ../postgis/postgis.sql > postgis.sql
  	@USE_VERSION=$(POSTGIS_PGSQL_VERSION) ./run_test $(TESTS)
  
  cleanup:
