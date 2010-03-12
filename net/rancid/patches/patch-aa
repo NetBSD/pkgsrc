@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/12 23:39:16 pettai Exp $
+
+--- configure.orig	2009-12-13 00:37:15.000000000 +0100
++++ configure	2009-12-13 00:37:29.000000000 +0100
+@@ -6212,7 +6212,7 @@
+ 	    # since organized religion; see if -U 4 works.
+ 	    ${_diff}/diff -U 4 /dev/null /dev/null > /dev/null 2>&1
+ 	    if test $? -ne 0; then
+-		if test "${ADIFF}" == "" ; then
++		if test "${ADIFF}" = "" ; then
+ 		    ADIFF="${_diff}/diff"
+ 		    ADIFF_CMD="diff -c -4"
+ 		fi
