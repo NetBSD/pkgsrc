@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/01/17 12:02:23 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/03/12 13:12:08 obache Exp $
 #
 
-DISTNAME=	esmtp-0.5.1
-PKGREVISION=	4
+DISTNAME=	esmtp-1.2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=esmtp/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +9,12 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://esmtp.sourceforge.net/
 COMMENT=	Relay-only Mail Transfer Agent with sendmail-compatible syntax
+LICENSE=	gnu-gpl-v2
+
+CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
+CONFLICTS+=	sendmail-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bison flex
@@ -30,14 +35,14 @@ EGDIR=			${PREFIX}/share/examples/esmtp
 CONF_FILES=		${EGDIR}/sample.esmtprc \
 			${PKG_SYSCONFDIR}/esmtprc
 
+INSTALLATION_DIRS=	${EGDIR} share/doc/esmtp
+
 .include "../../mail/libesmtp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/esmtp
-	${INSTALL_DATA} ${WRKSRC}/sample.esmtprc ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/esmtp
+	${INSTALL_DATA} ${WRKSRC}/sample.esmtprc ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/esmtp
 
 .include "../../mk/bsd.pkg.mk"

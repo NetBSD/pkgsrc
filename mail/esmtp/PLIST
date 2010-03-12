@@ -1,6 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/03/12 13:12:08 obache Exp $
 bin/esmtp
+bin/mailq
+bin/newaliases
+lib/sendmail
 man/man1/esmtp.1
+man/man1/mailq.1
+man/man1/newaliases.1
+man/man1/sendmail.1
 man/man5/esmtprc.5
+sbin/sendmail
 share/doc/esmtp/README
 share/examples/esmtp/sample.esmtprc
