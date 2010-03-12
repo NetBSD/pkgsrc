@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9124 2010/03/12 09:13:28 adam Exp $
+$NetBSD: TODO,v 1.9125 2010/03/12 13:12:22 obache Exp $
 
 Suggested new packages
 ======================
@@ -565,7 +565,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eric3-4.4.1 [now called eric4]
 	o erubis-2.6.2
 	o esh-0.8.5
-	o esmtp-1.0
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
