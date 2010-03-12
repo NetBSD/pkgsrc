@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/12 20:59:45 minskim Exp $
+share/texmf-dist/doc/latex/threeparttable/miscdoc.sty
+share/texmf-dist/doc/latex/threeparttable/threeparttable.pdf
+share/texmf-dist/doc/latex/threeparttable/threeparttable.tex
