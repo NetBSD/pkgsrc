@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/01 07:08:23 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/03/12 21:04:43 minskim Exp $
 
-SHA1 (tex-cite-doc-5.1/cite.doc.tar.lzma) = 2841e8f3c6ecb476cc9ca26c5dfe65e20cc0f985
-RMD160 (tex-cite-doc-5.1/cite.doc.tar.lzma) = 66f1084f406036755fd1915729583c966526e403
-Size (tex-cite-doc-5.1/cite.doc.tar.lzma) = 818 bytes
+SHA1 (tex-cite-doc-5.2/cite.doc.tar.xz) = 639ee13803015bf786d55255df722d964854908e
+RMD160 (tex-cite-doc-5.2/cite.doc.tar.xz) = e2f88802aab42f227cf155c1123f376e226b26b6
+Size (tex-cite-doc-5.2/cite.doc.tar.xz) = 884 bytes
