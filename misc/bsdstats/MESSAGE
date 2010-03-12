@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/03/12 00:13:40 morr Exp $
+
+Add the following line to your /etc/monthly.local:
+
+${PREFIX}/bin/300.statistics > /dev/null
+
+And add the following lines to your /etc/rc.conf:
+
+monthly_statistics_enable="YES" # needed for bsdstats to work at all
+monthly_statistics_report_devices="YES" # optionally report devices too
+monthly_statistics_report_ports="YES" # optionally report installed ports
+
+===========================================================================
