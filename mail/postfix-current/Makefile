@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2010/02/25 13:02:02 martti Exp $
+# $NetBSD: Makefile,v 1.112 2010/03/12 13:19:49 obache Exp $
 
 DISTNAME=	postfix-2.8-20100213
 PKGNAME=	postfix-2.8.20100213
@@ -15,7 +15,7 @@ COMMENT=	Postfix SMTP server and tools
 LICENSE=	postfix-license
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
-CONFLICTS+=	postfix-2.[6-7]-[0-9]*
+CONFLICTS+=	postfix-2.[6-7]-[0-9]* esmtp>=1.2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
