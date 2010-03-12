@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/03/12 22:42:55 pettai Exp $
+--- /dev/null	2008-10-16 17:49:30.000000000 +1300
++++ include/sm/os/sm_os_netbsd.h
+@@ -0,0 +1,23 @@
++/*
++ */
++
++/*
++**  sm_os_netbsd.h -- platform definitions for NetBSD
++*/
++
++#define SM_OS_NAME   "netbsd"
++
++#define SM_CONF_SYS_CDEFS_H  1
++
++#if defined(__NetBSD__)
++#  include <sys/param.h> /* defines __NetBSD_Version__ */
++#  if __NetBSD_Version__ >= 104030000
++     /* 1.4.3 and later have strlcpy()/strlcat() */
++#    ifndef SM_CONF_STRL
++#       define SM_CONF_STRL             1
++#    endif
++#  endif
++#  if __NetBSD_Version__ >= 499006500
++#    define SM_CONF_STDBOOL_H           1
++#  endif
++#endif

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/12 22:42:55 pettai Exp $
+
+SHA1 (sid-milter-1.0.0.tar.gz) = dd6517b36933083923c3094cf7f09e74825e7dcb
+RMD160 (sid-milter-1.0.0.tar.gz) = 7aca88c5d1c18581a17a779c87e7dda3d0091e0e
+Size (sid-milter-1.0.0.tar.gz) = 351161 bytes
+SHA1 (patch-aa) = 4c47aeb2dc12851703ffdc8a0e7239fd5f673af2
+SHA1 (patch-ab) = c8d6294625d698e8eea0e23a3b9fcbe448dabcae
