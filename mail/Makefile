@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.391 2010/03/09 21:22:47 pettai Exp $
+# $NetBSD: Makefile,v 1.392 2010/03/12 09:29:13 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -171,15 +171,12 @@ SUBDIR+=	p5-Email-LocalDelivery
 SUBDIR+=	p5-Email-MIME
 SUBDIR+=	p5-Email-MIME-Attachment-Stripper
 SUBDIR+=	p5-Email-MIME-ContentType
-SUBDIR+=	p5-Email-MIME-Creator
 SUBDIR+=	p5-Email-MIME-Encodings
-SUBDIR+=	p5-Email-MIME-Modifier
 SUBDIR+=	p5-Email-MessageID
 SUBDIR+=	p5-Email-Reply
 SUBDIR+=	p5-Email-Send
 SUBDIR+=	p5-Email-Sender
 SUBDIR+=	p5-Email-Simple
-SUBDIR+=	p5-Email-Simple-Creator
 SUBDIR+=	p5-Email-Stuff
 SUBDIR+=	p5-Email-Valid
 SUBDIR+=	p5-Email-Valid-Loose
