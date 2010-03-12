@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/12 22:38:52 minskim Exp $
+share/texmf-dist/doc/latex/a4wide/a4wide.pdf
+share/texmf-dist/doc/latex/a4wide/a4wide.tex
