@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1177 2010/03/12 01:06:27 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.1178 2010/03/12 04:20:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1379,7 +1379,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Throwable version 0.100090 [sno 2010-03-11]
 	Updated mail/p5-Email-Sender to 0.100460 [sno 2010-03-11]
 	Updated mail/p5-Catalyst-View-Email to 0.23 [sno 2010-03-11]
-	Updated misc/stellarium 0.10.4 [adam 2010-03-11]
+	Updated misc/stellarium to 0.10.4 [adam 2010-03-11]
 	Added net/py-dpkt version 1.6 [pettai 2010-03-11]
 	Updated www/neon to 0.29.3 [gdt 2010-03-11]
 	Updated pkgtools/pkglint to 4.93 [rillig 2010-03-11]
