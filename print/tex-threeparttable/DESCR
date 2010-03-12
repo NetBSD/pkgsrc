@@ -1,0 +1,5 @@
+This package provides a scheme for tables that have a structured note
+section, after the caption.  This scheme provides an answer to the old
+problem of putting footnotes in tables---by making footnotes entirely
+unnecessary.  Note that a threeparttable is not a float of itself; but
+you can place it in a table or a table* environment, if necessary.
