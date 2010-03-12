@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.18 2010/02/27 12:00:54 spz Exp $
+# $NetBSD: binpkg-cache,v 1.19 2010/03/12 20:19:15 spz Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -48,6 +48,7 @@ CMP=${CMP:-cmp}
 FIND=${FIND:-find}
 GREP=${GREP:-grep}
 GZIP_CMD=${GZIP_CMD:-gzip}
+BZIP2=${BZIP2:-bzip2}
 PKG_INFO=${PKG_INFO:-pkg_info}
 PKG_SUFX=${PKG_SUFX:-.tgz}
 SED=${SED:-sed}
@@ -262,6 +263,17 @@ process_binpkg_dir(){
 				echo "Perhaps you do not have write permissions to ${d}?"
 				echo "********** WARNING **********"
 				return
+			fi
+			# if it's there, update it, otherwise don't bother
+			if test -f ${d}/${summaryfile}.bz2 ; then
+				cat ${tmpd}/${summaryfile} | ${BZIP2} > ${d}/${summaryfile}.bz2
+				if test $? -ne 0 ; then
+					echo "********** WARNING **********"
+					echo "${BZIP2} of ${tmpd}/${summaryfile} to ${d}/${summaryfile}.bz2 failed!"
+					echo "Perhaps you do not have write permissions to ${d}?"
+					echo "********** WARNING **********"
+					return
+				fi
 			fi
 		fi
 
