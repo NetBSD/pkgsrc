@@ -1,0 +1,4 @@
+TACACS+ protocol client library and PAM module in C.
+This PAM module support authentication, authorization (account
+management) and accounting (session management) performed using
+TACACS+ protocol designed by Cisco.

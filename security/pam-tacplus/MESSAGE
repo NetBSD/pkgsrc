@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/03/12 22:15:27 pettai Exp $
+
+pam_tacplus.so adds the option to authenicate a user using the tacacs+
+protocol via the pam framework.
+
+See the included sample.pam example file, on how this is done for pam
+-enabled services
+
+===========================================================================
