@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/02/15 20:12:20 minskim Exp $
-# TeX Live Revision 16770
+# $NetBSD: Makefile,v 1.4 2010/03/12 19:38:22 minskim Exp $
+# TeX Live Revision 17180
 
 DISTNAME=	dvips
-PKGNAME=	tex-${DISTNAME}-2009.16770
+PKGNAME=	tex-${DISTNAME}-2009.17180
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Files for a DVI to PostScript driver
