@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:59 joerg Exp $
-sbin/monotone-server-init
-share/examples/monotone-server/hooks.conf
+@comment $NetBSD: PLIST,v 1.6 2010/03/12 09:27:17 jmmv Exp $
+man/man7/monotone-server.7
+share/examples/monotone-server/monotonerc
 share/examples/monotone-server/read-permissions
 share/examples/monotone-server/write-permissions
 share/examples/rc.d/monotone
