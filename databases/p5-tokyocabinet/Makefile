@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2010/01/17 02:46:56 obache Exp $
+# $NetBSD: Makefile,v 1.22 2010/03/12 10:30:59 obache Exp $
 #
 
-DISTNAME=	tokyocabinet-perl-1.32
-PKGREVISION=	2
+DISTNAME=	tokyocabinet-perl-1.33
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
+MASTER_SITES=	${HOMEPAGE:S/perldoc/perlpkg/}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://1978th.net/tokyocabinet/perldoc/
