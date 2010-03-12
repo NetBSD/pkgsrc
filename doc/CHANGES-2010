@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1185 2010/03/12 14:37:59 tonio Exp $
+$NetBSD: CHANGES-2010,v 1.1186 2010/03/12 15:57:09 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1395,3 +1395,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/tokyotyrant to 1.1.40 [obache 2010-03-12]
 	Updated mail/esmtp to 1.2 [obache 2010-03-12]
 	Updated chat/weechat to 0.3.1.1 [tonio 2010-03-12]
+	Added geography/garmintools version 0.10 [ghen 2010-03-12]
