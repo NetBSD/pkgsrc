@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1195 2010/03/12 23:11:13 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1196 2010/03/12 23:19:17 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1411,3 +1411,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-a4wide-doc version 2009 [minskim 2010-03-12]
 	Added mail/sid-milter version 1.0.0 [pettai 2010-03-12]
 	Removed fonts/tex-cmex successor fonts/tex-amsfonts [minskim 2010-03-12]
+	Added devel/tclreadline version 2.1.0 [pettai 2010-03-12]
