@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 03:31:31 minskim Exp $
-share/texmf-dist/fonts/map/dvips/cmex/ttcmex.map
-share/texmf-dist/fonts/type1/public/cmex/fmex7.pfb
-share/texmf-dist/fonts/type1/public/cmex/fmex8.pfb
-share/texmf-dist/fonts/type1/public/cmex/fmex9.pfb
