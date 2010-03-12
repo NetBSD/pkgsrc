@@ -1,0 +1,3 @@
+Dnsruby is a pure Ruby DNS client library.
+It provides a complete DNS client implementation, including full DNSSEC support.
+Dnsruby is currently used in projects such as OpenDNSSEC and ISC's DLV service.
