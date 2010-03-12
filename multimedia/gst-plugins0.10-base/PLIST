@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/02/16 13:14:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/03/12 20:31:03 drochner Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/app/gstappbuffer.h
 include/gstreamer-0.10/gst/app/gstappsink.h
@@ -116,6 +116,7 @@ lib/pkgconfig/gstreamer-video-0.10.pc
 man/man1/gst-visualise-0.10.1
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/api-index-deprecated.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/api-index-full.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/compiling.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/compiling.sgml
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-0.10.devhelp
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-0.10.devhelp2
