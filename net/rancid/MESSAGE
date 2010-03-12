@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/03/12 23:39:16 pettai Exp $
+
+rancid is now installed.
+
+To get rancid up and running asap, you have to complete these basic steps:
+
+- Configure LIST_OF_GROUPS in ${PREFIX}/etc/rancid/rancid.conf.
+- Configure the LIST_OF_GROUPS users in your mail aliases file.
+- As superuser, run the command "su - ${RC_USER} -c rancid-cvs".
+- Add the following line to ${RC_USER}'s crontab.
+
+# Run config differ hourly
+1 * * * * ${PREFIX}/bin/rancid-run
+
+Please read the included README (${PREFIX}/share/doc/rancid/README) file,
+for more information about configuring and starting rancid.
+
+===========================================================================
