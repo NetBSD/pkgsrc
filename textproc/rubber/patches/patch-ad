@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2010/03/12 10:30:04 tonio Exp $
+
+Enable destdir
+
+--- setup.py.orig	2006-03-17 13:51:18.000000000 +0000
++++ setup.py
+@@ -182,7 +182,8 @@ It will be installed in the following di
+ 		sys.argv = sys.argv + [
+ 			"--prefix", sub["prefix"],
+ 			"--install-lib", expand_vars(sub, sub["moddir"]),
+-			"--install-scripts", expand_vars(sub, sub["bindir"])]
++			"--install-scripts", expand_vars(sub, sub["bindir"]),
++			"--root", os.environ.get("DESTDIR","/")]
+ 		sys.argv[1] = "install"
+ 		do_setup()
+ 	else:

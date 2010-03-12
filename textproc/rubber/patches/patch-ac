@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/06/01 09:09:52 tonio Exp $
+$NetBSD: patch-ac,v 1.2 2010/03/12 10:30:04 tonio Exp $
+
+Add support for import
 
 --- /dev/null	2006-06-01 10:55:34.000000000 +0200
 +++ src/rules/latex/import.py
