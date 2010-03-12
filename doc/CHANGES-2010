@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1187 2010/03/12 19:39:17 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1188 2010/03/12 19:59:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1398,3 +1398,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added geography/garmintools version 0.10 [ghen 2010-03-12]
 	Updated print/tex-dvips to 2009.17180 [minskim 2010-03-12]
 	Updated print/tex-dvips-doc to 2009.17180 [minskim 2010-03-12]
+	Updated fonts/tex-lm to 2.004nb1 [minskim 2010-03-12]
+	Updated fonts/tex-lm-doc to 2.004 [minskim 2010-03-12]
