@@ -1,0 +1,14 @@
+The sid-milter package is an open source implementation of the Sender-ID and
+SPF sender authentication systems.
+
+Sender-ID and SPF have both been published by the IETF (RFC4406 and RFC4408,
+respectively) as experimental proposals.
+
+This package consists of a library that implements the record parsers needed
+to provide the authentication service, and a milter-based filter application
+that can plug in to the sendmail MTA to provide that service to sufficiently
+recent sendmail and postfix MTAs.
+
+An optional asynchronous resolver library is also provided to work around
+limitations of the basic BIND resolver which comes installed on most
+systems.

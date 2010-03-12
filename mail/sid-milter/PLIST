@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/12 22:42:55 pettai Exp $
+bin/sid-filter
+include/sm-marid.h
+lib/libar.a
+man/cat3/ar.0
+man/cat8/sid-filter.0
+share/doc/sid-milter/FEATURES
+share/doc/sid-milter/INSTALL
+share/doc/sid-milter/KNOWNBUGS
+share/doc/sid-milter/LICENSE
+share/doc/sid-milter/README
+share/doc/sid-milter/README-SenderID
+share/doc/sid-milter/RELEASE_NOTES
+share/doc/sid-milter/rfc4406.txt
+share/doc/sid-milter/rfc4407.txt
+share/doc/sid-milter/rfc4408.txt
+share/examples/rc.d/sid-milter
