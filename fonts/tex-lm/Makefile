@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2010/03/12 19:58:45 minskim Exp $
-# TeX Live Revision 7340
+# $NetBSD: Makefile,v 1.4 2010/03/12 20:00:56 minskim Exp $
+# TeX Live Revision 15938
 
 DISTNAME=	lm
 PKGNAME=	tex-${DISTNAME}-2.004
