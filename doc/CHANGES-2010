@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1181 2010/03/12 09:27:54 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.1182 2010/03/12 10:43:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1390,3 +1390,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/sqlite3-tcl to 3.6.23 [adam 2010-03-12]
 	Added net/ruby-dnsruby version 1.44 [pettai 2010-03-12]
 	Updated devel/monotone-server to 0.46nb2 [jmmv 2010-03-12]
+	Updated databases/p5-tokyocabinet to 1.33 [obache 2010-03-12]
+	Updated databases/tokyocabinet to 1.4.43 [obache 2010-03-12]
