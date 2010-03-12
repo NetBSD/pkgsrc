@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1186 2010/03/12 15:57:09 ghen Exp $
+$NetBSD: CHANGES-2010,v 1.1187 2010/03/12 19:39:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1396,3 +1396,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/esmtp to 1.2 [obache 2010-03-12]
 	Updated chat/weechat to 0.3.1.1 [tonio 2010-03-12]
 	Added geography/garmintools version 0.10 [ghen 2010-03-12]
+	Updated print/tex-dvips to 2009.17180 [minskim 2010-03-12]
+	Updated print/tex-dvips-doc to 2009.17180 [minskim 2010-03-12]
