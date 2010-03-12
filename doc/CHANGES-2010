@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1190 2010/03/12 21:01:12 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1191 2010/03/12 21:05:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1404,3 +1404,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-twoinone-doc version 2009 [minskim 2010-03-12]
 	Added print/tex-threeparttable version 2009 [minskim 2010-03-12]
 	Added print/tex-threeparttable-doc version 2009 [minskim 2010-03-12]
+	Updated print/tex-cite to 5.2 [minskim 2010-03-12]
+	Updated print/tex-cite-doc to 5.2 [minskim 2010-03-12]
