@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/01/09 22:20:31 heinz Exp $
+# $NetBSD: Makefile,v 1.29 2010/03/12 13:19:49 obache Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
 
-CONFLICTS+=	postfix-[0-9]* qmail-[0-9]* sendmail-[0-9]*
+CONFLICTS+=	esmtp>=1.2 postfix-[0-9]* qmail-[0-9]* sendmail-[0-9]*
 
 MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Courier mail transport agent
