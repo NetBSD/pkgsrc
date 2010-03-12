@@ -1,0 +1,4 @@
+This package increases the width of the LaTeX typeset area of an a4
+page.  This sort of operation is capable of producing typographically
+poor results; the operation itself is better provided by the geometry
+package.  The package uses the a4 package.
