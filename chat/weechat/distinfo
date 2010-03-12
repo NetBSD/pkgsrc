@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.16 2009/11/03 22:22:31 tonio Exp $
+$NetBSD: distinfo,v 1.17 2010/03/12 14:36:57 tonio Exp $
 
-SHA1 (weechat-0.3.0.tar.gz) = d7d0ae999fb8aba65afca4bcf3a557fd318f59ef
-RMD160 (weechat-0.3.0.tar.gz) = 3cbdc99b36b64761b77d2f2d4e6cc4a2e62d1764
-Size (weechat-0.3.0.tar.gz) = 1933034 bytes
+SHA1 (weechat-0.3.1.1.tar.gz) = bc4f5dffeff91feb430aec5ee25e308796b68936
+RMD160 (weechat-0.3.1.1.tar.gz) = d9a183ccbb76d9b98ca1435f59f936a8de0e2591
+Size (weechat-0.3.1.1.tar.gz) = 2263262 bytes
 SHA1 (patch-aa) = 5bfba8832834898030fb1612adee83c8a7d1e708
 SHA1 (patch-ab) = 14264c459810e7300b5adedd0ff98e749dad3f2d
 SHA1 (patch-ac) = 1f713c92e58898fd0ef3169fe9f815265cfea2e9
+SHA1 (patch-ad) = 5b9dcc4605660f2f6da9c0e3bc9e6e1b9a26bb24
