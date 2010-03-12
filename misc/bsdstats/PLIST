@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/12 00:13:40 morr Exp $
+bin/300.statistics

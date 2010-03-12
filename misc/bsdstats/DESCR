@@ -1,0 +1,4 @@
+BSD-Stats is collecting statistics about *BSD installations (and flavours) and
+the hardware used for running those, to demonstrate to hardware and software
+vendors out there that *BSD should be viewed as a serious operating system,
+not just as a hobbyist system, for support (ie. hardware drivers) purposes.
