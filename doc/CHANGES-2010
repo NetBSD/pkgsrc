@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1182 2010/03/12 10:43:19 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1183 2010/03/12 10:47:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1392,3 +1392,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/monotone-server to 0.46nb2 [jmmv 2010-03-12]
 	Updated databases/p5-tokyocabinet to 1.33 [obache 2010-03-12]
 	Updated databases/tokyocabinet to 1.4.43 [obache 2010-03-12]
+	Updated databases/tokyotyrant to 1.1.40 [obache 2010-03-12]
