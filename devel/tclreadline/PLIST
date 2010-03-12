@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/12 23:18:13 pettai Exp $
+include/tclreadline.h
+lib/libtclreadline.la
+lib/tclreadline${PKGVERSION}/pkgIndex.tcl
+lib/tclreadline${PKGVERSION}/tclreadlineCompleter.tcl
+lib/tclreadline${PKGVERSION}/tclreadlineInit.tcl
+lib/tclreadline${PKGVERSION}/tclreadlineSetup.tcl
+man/mann/tclreadline.n
+share/examples/tclreadline/tclshrc

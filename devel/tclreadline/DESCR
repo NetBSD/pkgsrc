@@ -1,0 +1,7 @@
+The tclreadline package makes the GNU Readline library available for
+interactive tcl shells. This includes history expansion and file/command
+completion. Command completion for all tcl/tk commands is provided and
+commmand completers for user defined commands can be easily added.
+tclreadline can also be used for tcl scripts which want to use a shell
+like input interface. In this case the ::tclreadline::readline
+read command has to be called explicitly.
