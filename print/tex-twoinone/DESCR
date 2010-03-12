@@ -1,0 +1,3 @@
+The package is for printing two pages on a single (landscape) A4 page.
+Page numbers appear on the included pages, and not on the landscape
+'container' page.
