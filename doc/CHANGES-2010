@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1189 2010/03/12 20:15:19 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1190 2010/03/12 21:01:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1402,3 +1402,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated fonts/tex-lm-doc to 2.004 [minskim 2010-03-12]
 	Added print/tex-twoinone version 2009 [minskim 2010-03-12]
 	Added print/tex-twoinone-doc version 2009 [minskim 2010-03-12]
+	Added print/tex-threeparttable version 2009 [minskim 2010-03-12]
+	Added print/tex-threeparttable-doc version 2009 [minskim 2010-03-12]
