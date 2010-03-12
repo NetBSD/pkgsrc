@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1193 2010/03/12 22:40:43 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1194 2010/03/12 22:44:03 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1409,3 +1409,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added security/pam-tacplus version 1.2.11 [pettai 2010-03-12]
 	Added print/tex-a4wide version 2009 [minskim 2010-03-12]
 	Added print/tex-a4wide-doc version 2009 [minskim 2010-03-12]
+	Added mail/sid-milter version 1.0.0 [pettai 2010-03-12]
