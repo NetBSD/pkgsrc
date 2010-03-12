@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1175 2010/03/11 20:56:33 rillig Exp $
+$NetBSD: CHANGES-2010,v 1.1176 2010/03/12 00:17:13 morr Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1383,3 +1383,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/py-dpkt version 1.6 [pettai 2010-03-11]
 	Updated www/neon to 0.29.3 [gdt 2010-03-11]
 	Updated pkgtools/pkglint to 4.93 [rillig 2010-03-11]
+	Added misc/bsdstats version 5.3 [morr 2010-03-12]
