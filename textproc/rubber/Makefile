@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/07/13 18:37:55 tonio Exp $
+# $NetBSD: Makefile,v 1.22 2010/03/12 10:30:04 tonio Exp $
 #
 
 DISTNAME=		rubber-1.1
@@ -10,10 +10,12 @@ MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.pps.jussieu.fr/~beffara/soft/rubber/
 COMMENT=		Automated system for building LaTeX documents
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		makeinfo
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 TEXINFO_REQD=		4.6
 TEX_ACCEPTED=		teTeX3
 
