@@ -1,0 +1,16 @@
+This software provides Linux users with the ability to communicate with the
+Garmin Forerunner 305 via the USB interface. While this is the only Garmin
+unit that I own, I did implement all of the documented Garmin protocols as of
+Rev C (May 19, 2006) over the USB physical link. This means that if you have a
+Garmin with a USB connection to a PC, you ought to be able to use this
+software to communicate with it.
+
+If you're looking for a complete solution to all of your Linux Garmin GPS
+needs, this is not it. I own a Garmin Forerunner 305 and wrote this code
+specifically so I could download and save data from that particular GPS unit
+to my Linux machine. I tried gpsbabel, but found that it did not have command
+line options specific to the Forerunner run and lap data - all I could do was
+get the tracklog. That's how all of this got started. I also wanted a few
+other things, like the ability to convert a track log into a Google maps
+encoded polyline, and (eventually) the ability to generate PNG images of heart
+rate and elevation data.
