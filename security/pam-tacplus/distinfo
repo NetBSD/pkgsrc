@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/12 22:15:27 pettai Exp $
+
+SHA1 (pam_tacplus-1.2.11.tar.gz) = 74b33dde8aa80b49cc59e587eb254fd66d3e104a
+RMD160 (pam_tacplus-1.2.11.tar.gz) = 841038262f0320a5b3a39e7337294e6807a29ada
+Size (pam_tacplus-1.2.11.tar.gz) = 30736 bytes
