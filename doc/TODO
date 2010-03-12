@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9125 2010/03/12 13:12:22 obache Exp $
+$NetBSD: TODO,v 1.9126 2010/03/12 14:37:59 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1305,7 +1305,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webby-0.9.3
 	o webkit-1.1.15.4
 	o webmin-1.510
-	o weechat-0.3.1.1
 	o weewm-0.01
 	o whohas-0.24
 	o windowlab-1.39
