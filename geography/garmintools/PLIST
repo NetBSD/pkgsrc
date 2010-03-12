@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/12 15:55:40 ghen Exp $
+bin/garmin_dump
+bin/garmin_gchart
+bin/garmin_get_info
+bin/garmin_gmap
+bin/garmin_gpx
+bin/garmin_save_runs
+include/garmin.h
+lib/libgarmintools.la
+man/man1/garmin_dump.1
+man/man1/garmin_get_info.1
+man/man1/garmin_gmap.1
+man/man1/garmin_gpx.1
+man/man1/garmin_save_runs.1
+share/doc/garmintools/README
