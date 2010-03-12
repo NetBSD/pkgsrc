@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.337 2010/02/18 21:05:32 drochner Exp $
+# $NetBSD: Makefile,v 1.338 2010/03/12 00:17:46 morr Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -19,6 +19,7 @@ SUBDIR+=	blccc
 SUBDIR+=	bottlerocket
 SUBDIR+=	brs
 SUBDIR+=	bsdiff
+SUBDIR+=	bsdstats
 SUBDIR+=	buffer
 SUBDIR+=	calibre
 SUBDIR+=	celestia
