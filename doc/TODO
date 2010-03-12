@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9123 2010/03/11 12:25:11 gdt Exp $
+$NetBSD: TODO,v 1.9124 2010/03/12 09:13:28 adam Exp $
 
 Suggested new packages
 ======================
@@ -1165,7 +1165,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sablecc-3.2
 	o samba-3.4.6
 	o samba-3.5.0
-	o samba33-3.3.11
 	o sarg-2.2.5
 	o sawfish-1.6.2
 	o saxon-9.2
