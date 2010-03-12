@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1191 2010/03/12 21:05:17 minskim Exp $
+$NetBSD: CHANGES-2010,v 1.1192 2010/03/12 22:16:38 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1406,3 +1406,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-threeparttable-doc version 2009 [minskim 2010-03-12]
 	Updated print/tex-cite to 5.2 [minskim 2010-03-12]
 	Updated print/tex-cite-doc to 5.2 [minskim 2010-03-12]
+	Added security/pam-tacplus version 1.2.11 [pettai 2010-03-12]
