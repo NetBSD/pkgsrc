@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/09/08 20:22:02 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2010/03/12 20:36:41 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -8,7 +8,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 COMMENT+=		good plugins
 
 # some plugins were moved from bad to good
-CONFLICTS+=		gst-plugins0.10-bad<0.10.14
+CONFLICTS+=		gst-plugins0.10-bad<0.10.18
 
 CONFIGURE_ARGS+=	--enable-gconf
 CONFIGURE_ARGS+=	--enable-gconftool
