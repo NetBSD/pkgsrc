@@ -7,7 +7,7 @@ and client-side RSA certificates.  It has good internationalization
 support, has no external dependencies, runs on NetBSD, Linux, Solaris,
 OSX and Windows (among others), and is licensed under the GNU GPL.
 
-This package provides all the necessary stuff to easily configure a
-dedicated Monotone server.  Of special interest are the included rc.d
-script and the monotone-server-init script, which will greatly simplify
-the whole process.
+This package provides the necessary stuff to configure a dedicated Monotone
+server.  The package will create a dedicated user/group account to run the
+server, will install a set of configuration files and will guide you, through
+an rc.d script, to initialize the database and populate it.

@@ -1,7 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/01/12 12:52:50 jmmv Exp $
+$NetBSD: MESSAGE,v 1.2 2010/03/12 09:27:17 jmmv Exp $
 
-You should now run 'monotone-server-init' to finish installation _before_
-enabling the server.  Then, follow the on-screen instructions.
+Please read monotone-server(7) for instructions on how to set up a new
+monotone server with the support files installed by this package.
+
+WARNING: If you are updating from a previous version of this package and
+used the (now non-existent) monotone-server-init script to initialize the
+server, you will need to manually aid the upgrade.  Contact the package
+maintainer for assistance.
 
 ===========================================================================
