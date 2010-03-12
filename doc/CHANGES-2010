@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1196 2010/03/12 23:19:17 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1197 2010/03/12 23:40:56 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1412,3 +1412,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added mail/sid-milter version 1.0.0 [pettai 2010-03-12]
 	Removed fonts/tex-cmex successor fonts/tex-amsfonts [minskim 2010-03-12]
 	Added devel/tclreadline version 2.1.0 [pettai 2010-03-12]
+	Added net/rancid version 2.3.2 [pettai 2010-03-12]
