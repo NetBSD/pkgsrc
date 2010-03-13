@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/13 10:20:53 pettai Exp $
+
+--- setup.py.orig	2010-02-13 22:48:07.000000000 +0100
++++ setup.py	2010-02-13 22:48:31.000000000 +0100
+@@ -42,7 +42,7 @@
+             dirs = [ '/usr', sys.prefix ] + glob.glob('/opt/libpcap*') + \
+                    glob.glob('../libpcap*') + glob.glob('../wpdpack*')
+         for d in dirs:
+-            for sd in ('include', 'include/pcap', ''):
++            for sd in ('include/pcap', 'include', ''):
+                 incdirs = [ os.path.join(d, sd) ]
+                 if os.path.exists(os.path.join(d, sd, 'pcap.h')):
+                     cfg['include_dirs'] = [ os.path.join(d, sd) ]
