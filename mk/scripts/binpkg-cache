@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.19 2010/03/12 20:19:15 spz Exp $
+# $NetBSD: binpkg-cache,v 1.20 2010/03/13 11:45:16 spz Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -266,6 +266,7 @@ process_binpkg_dir(){
 			fi
 			# if it's there, update it, otherwise don't bother
 			if test -f ${d}/${summaryfile}.bz2 ; then
+				rm -f ${d}/${summaryfile}.bz2
 				cat ${tmpd}/${summaryfile} | ${BZIP2} > ${d}/${summaryfile}.bz2
 				if test $? -ne 0 ; then
 					echo "********** WARNING **********"
