@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/13 17:47:56 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/13 17:51:26 pettai Exp $
 #
 
 DISTNAME=	softhsm-1.1.3
 CATEGORIES=	security
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
-MAINTAINER=	pettai@nordu.net
+MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.opendnssec.se/wiki/SoftHSM/
 COMMENT=	Cryptographic store accessible through a PKCS#11 interface
 LICENSE=	2-clause-bsd
