@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.375 2010/03/12 22:18:42 pettai Exp $
+# $NetBSD: Makefile,v 1.376 2010/03/13 18:02:27 pettai Exp $
 #
 
 COMMENT=	Security tools
@@ -319,6 +319,7 @@ SUBDIR+=	smtpd
 SUBDIR+=	sniff
 SUBDIR+=	snortsnarf
 SUBDIR+=	snow
+SUBDIR+=	softhsm
 SUBDIR+=	srm
 SUBDIR+=	srp_client
 SUBDIR+=	ssh-askpass
