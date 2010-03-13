@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/13 19:19:51 pettai Exp $
+man/man8/dnssec-signer.8
+man/man8/dnssec-zkt.8
+sbin/dnssec-signer
+sbin/dnssec-zkt
+sbin/zkt-soaserial
+share/doc/zkt/README
+share/doc/zkt/README.logging
