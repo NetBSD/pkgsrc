@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/11/30 00:38:47 dholland Exp $
+# $NetBSD: Makefile,v 1.37 2010/03/13 05:05:51 obache Exp $
 
 DISTNAME=	nn-6.7.3
 CATEGORIES=	news
@@ -6,6 +6,7 @@ MASTER_SITES=	ftp://ftp.nndev.org/pub/nn-6.7/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.nndev.org/
 COMMENT=	NN newsreader
 
 PKG_SYSCONFSUBDIR=	nntp
