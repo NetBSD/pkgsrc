@@ -1,0 +1,3 @@
+Simplified object-oriented Python extension module for libpcap -
+the current tcpdump.org version, the legacy version shipping with some of
+the BSD operating systems, and the WinPcap port for Windows.
