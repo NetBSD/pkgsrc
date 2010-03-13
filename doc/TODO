@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9127 2010/03/13 04:40:27 obache Exp $
+$NetBSD: TODO,v 1.9128 2010/03/13 21:06:14 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -544,7 +544,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6.2
-	o ejabberd-2.1.2
 	o electric-8.11
 	o electricfence-2.4.16
 	o elf-0.5.4p1
