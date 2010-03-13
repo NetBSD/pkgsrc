@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2010/03/08 17:30:23 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.7 2010/03/13 21:05:49 fhajny Exp $
 
---- src/Makefile.in.orig	2009-11-06 19:53:19.000000000 +0000
+--- src/Makefile.in.orig	2010-03-12 10:40:41.000000000 +0000
 +++ src/Makefile.in
 @@ -59,7 +59,7 @@ endif
  
@@ -27,23 +27,27 @@ $NetBSD: patch-aa,v 1.6 2010/03/08 17:30:23 dmcmahill Exp $
  
  # /share/doc/ejabberd
  PACKAGE_TARNAME = @PACKAGE_TARNAME@
-@@ -108,13 +108,13 @@ SODIR = $(PRIVDIR)/lib
+@@ -108,16 +108,16 @@ SODIR = $(PRIVDIR)/lib
  MSGSDIR = $(PRIVDIR)/msgs
  
  # /var/lib/ejabberd/
 -SPOOLDIR = $(DESTDIR)@localstatedir@/lib/ejabberd
-+SPOOLDIR = @EJABBERD_VARDIR@/spool/ejabberd/db/$NODE
++SPOOLDIR = $(DESTDIR)@EJABBERD_DB@
+ 
+ # /var/lock/ejabberdctl
+-CTLLOCKDIR = $(DESTDIR)@localstatedir@/lock/ejabberdctl
++CTLLOCKDIR = $(DESTDIR)@EJABBERD_PIDDIR@
  
  # /var/lib/ejabberd/.erlang.cookie
  COOKIEFILE = $(SPOOLDIR)/.erlang.cookie
  
  # /var/log/ejabberd/
 -LOGDIR = $(DESTDIR)@localstatedir@/log/ejabberd
-+LOGDIR = $(DESTDIR)/@JABBERD_LOGDIR@
++LOGDIR = $(DESTDIR)@JABBERD_LOGDIR@
  
  # Assume Linux-style dynamic library flags
  DYNAMIC_LIB_CFLAGS = -fpic -shared
-@@ -167,10 +167,10 @@ translations:
+@@ -170,10 +170,10 @@ translations:
  install: all
  	#
  	# Configuration files
@@ -57,7 +61,7 @@ $NetBSD: patch-aa,v 1.6 2010/03/08 17:30:23 dmcmahill Exp $
  	sed -e "s*@rootdir@*@prefix@*" \
  		-e "s*@installuser@*@INSTALLUSER@*" \
  		-e "s*@LIBDIR@*@libdir@*" \
-@@ -180,13 +180,13 @@ install: all
+@@ -183,13 +183,13 @@ install: all
  		-e "s*@erl@*@ERL@*" ejabberdctl.template \
  		> ejabberdctl.example
  	[ -f $(ETCDIR)/ejabberdctl.cfg ] \
@@ -72,11 +76,11 @@ $NetBSD: patch-aa,v 1.6 2010/03/08 17:30:23 dmcmahill Exp $
 -	[ -d $(SBINDIR) ] || install -d -m 755 $(SBINDIR)
 -	install -m 550 $(G_USER) ejabberdctl.example $(SBINDIR)/ejabberdctl
 +	[ -d $(SBINDIR) ] || $(BSD_INSTALL_DATA_DIR) -m 755 $(SBINDIR)
-+	$(BSD_INSTALL_SCRIPT) -m 550 $(G_USER) ejabberdctl.example $(SBINDIR)/ejabberdctl
++	$(BSD_INSTALL_SCRIPT) -m 555 $(G_USER) ejabberdctl.example $(SBINDIR)/ejabberdctl
  	#
  	# Init script
  	sed -e "s*@ctlscriptpath@*$(SBINDIR)*" \
-@@ -194,54 +194,48 @@ install: all
+@@ -197,59 +197,53 @@ install: all
  		> ejabberd.init
  	#
  	# Binary Erlang files
@@ -139,6 +143,12 @@ $NetBSD: patch-aa,v 1.6 2010/03/08 17:30:23 dmcmahill Exp $
 +	$(BSD_INSTALL_DATA_DIR) $(MSGSDIR)
 +	$(BSD_INSTALL_DATA) -m 644 msgs/*.msg $(MSGSDIR)
  	#
+ 	# ejabberdctl lock directory
+-	install -d -m 750 $(O_USER) $(CTLLOCKDIR)
++	$(BSD_INSTALL_DATA_DIR) -m 750 ${O_USER} ${CTLLOCKDIR}
+ 	$(CHOWN_COMMAND) -R @INSTALLUSER@ $(CTLLOCKDIR) >$(CHOWN_OUTPUT)
+ 	chmod -R 750 $(CTLLOCKDIR)
+ 	#
  	# Log directory
 -	install -d -m 750 $(O_USER) $(LOGDIR)
 +	$(BSD_INSTALL_DATA_DIR) -m 750 $(O_USER) $(LOGDIR)
@@ -147,9 +157,9 @@ $NetBSD: patch-aa,v 1.6 2010/03/08 17:30:23 dmcmahill Exp $
  	#
  	# Documentation
 -	install -d $(DOCDIR)
--	install ../doc/guide.html $(DOCDIR)
--	install ../doc/*.png $(DOCDIR)
--	install ../doc/*.txt $(DOCDIR)
+-	install -m 644 ../doc/guide.html $(DOCDIR)
+-	install -m 644 ../doc/*.png $(DOCDIR)
+-	install -m 644 ../doc/*.txt $(DOCDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)
 +	$(BSD_INSTALL_DATA) ../doc/guide.html $(DOCDIR)
 +	$(BSD_INSTALL_DATA) ../doc/*.png $(DOCDIR)
