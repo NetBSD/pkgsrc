@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2007/04/01 21:26:48 wiz Exp $
+$NetBSD: distinfo,v 1.8 2010/03/13 04:40:12 obache Exp $
 
-SHA1 (lsh-2.0.2.tar.gz) = baaf8de1368b0bd3b6c0e67e03f66284b910b54c
-RMD160 (lsh-2.0.2.tar.gz) = fa876113924a6045ecd302892dc0fbbec764dabe
-Size (lsh-2.0.2.tar.gz) = 2179353 bytes
-SHA1 (patch-aa) = 08cb6cf3f28ae2281d109e20dc9585111009ea50
-SHA1 (patch-ab) = 179647434ecf7a4b42e301f1ac1c794f217d69d0
+SHA1 (lsh-2.0.4.tar.gz) = c4e2a0b6a0e20dcba7fe02a0d5605bc00960106a
+RMD160 (lsh-2.0.4.tar.gz) = 24f16d6945f7c801aac190fd0109cad608a317de
+Size (lsh-2.0.4.tar.gz) = 2183843 bytes
+SHA1 (patch-aa) = ae43022c180e9f8ee2bb95fe424f371e834fdf07
+SHA1 (patch-ab) = e241831267630ffcf0b7079627e91c58482427c3
