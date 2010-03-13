@@ -1,0 +1,3 @@
+The Perl 5 module Test::Requires allows to test if a module can be
+loaded.  When used in a Test::Simple/Test::More test script all
+tests are skipped if a module can not be loaded.
