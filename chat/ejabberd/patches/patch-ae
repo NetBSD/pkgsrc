@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.4 2009/12/15 13:30:54 fhajny Exp $
+$NetBSD: patch-ae,v 1.5 2010/03/13 21:05:49 fhajny Exp $
 
---- src/ejabberdctl.template.orig	2009-11-16 20:25:51.344260518 +0000
+--- src/ejabberdctl.template.orig	2010-03-12 10:40:41.000000000 +0000
 +++ src/ejabberdctl.template
 @@ -43,10 +43,10 @@ if [ "$EJABBERDCTL_CONFIG_PATH" = "" ] ;
  fi
@@ -15,7 +15,7 @@ $NetBSD: patch-ae,v 1.4 2009/12/15 13:30:54 fhajny Exp $
  fi
  if [ "$EJABBERD_DOC_PATH" = "" ] ; then
      EJABBERD_DOC_PATH=@DOCDIR@
-@@ -83,7 +83,7 @@ ERLANG_OPTS="+K $POLL -smp $SMP +P $ERL_
+@@ -86,7 +86,7 @@ ERLANG_OPTS="+K $POLL -smp $SMP +P $ERL_
  
  # define additional environment variables
  if [ "$EJABBERDDIR" = "" ]; then
@@ -24,3 +24,12 @@ $NetBSD: patch-ae,v 1.4 2009/12/15 13:30:54 fhajny Exp $
  fi
  if [ "$EJABBERD_EBIN_PATH" = "" ]; then
      EJABBERD_EBIN_PATH=$EJABBERDDIR/ebin
+@@ -234,7 +234,7 @@ ctl ()
+     # using flock if available. Expects a linux-style
+     # flock that can lock a file descriptor.
+     MAXCONNID=100
+-    CONNLOCKDIR=@LOCALSTATEDIR@/lock/ejabberdctl
++    CONNLOCKDIR=@EJABBERD_PIDDIR@
+     FLOCK='/usr/bin/flock'
+     if [ ! -x "$FLOCK" ] ; then
+ 	JOT='/usr/bin/jot'
