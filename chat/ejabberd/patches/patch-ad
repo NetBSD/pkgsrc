@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2009/12/15 13:30:54 fhajny Exp $
+$NetBSD: patch-ad,v 1.5 2010/03/13 21:05:49 fhajny Exp $
 
---- src/ejabberd.cfg.example.orig	2009-11-06 19:53:19.000000000 +0000
+--- src/ejabberd.cfg.example.orig	2010-03-12 10:40:41.000000000 +0000
 +++ src/ejabberd.cfg.example
 @@ -109,7 +109,6 @@
   [
@@ -8,11 +8,11 @@ $NetBSD: patch-ad,v 1.4 2009/12/15 13:30:54 fhajny Exp $
    {5222, ejabberd_c2s, [
 -
  			%%
- 			%% If TLS is compiled and you installed a SSL
- 			%% certificate, put the correct path to the
+ 			%% If TLS is compiled in and you installed a SSL
+ 			%% certificate, specify the full path to the
 @@ -125,12 +124,12 @@
    %%
-   %% To enable the old SSL connection method in port 5223:
+   %% To enable the old SSL connection method on port 5223:
    %%
 -  %%{5223, ejabberd_c2s, [
 -  %%			{access, c2s},
@@ -31,7 +31,7 @@ $NetBSD: patch-ad,v 1.4 2009/12/15 13:30:54 fhajny Exp $
  			   {shaper, s2s_shaper},
 @@ -140,10 +139,10 @@
    %%
-   %% ejabberd_service: Interact with external components (transports...)
+   %% ejabberd_service: Interact with external components (transports, ...)
    %%
 -  %%{8888, ejabberd_service, [
 +  %%{{8888, "127.0.0.1"},
@@ -42,7 +42,7 @@ $NetBSD: patch-ad,v 1.4 2009/12/15 13:30:54 fhajny Exp $
    %%			    {hosts, ["icq.example.org", "sms.example.org"],
    %%			     [{password, "secret"}]
    %%			    }
-@@ -465,7 +464,7 @@
+@@ -471,7 +470,7 @@
  %%
  %% Full path to a script that generates the image.
  %%
