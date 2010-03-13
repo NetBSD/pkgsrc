@@ -1,0 +1,29 @@
+$NetBSD: patch-az,v 1.1 2010/03/13 16:41:21 spz Exp $
+
+--- src/rrd_restore.c.orig	2009-10-24 10:46:42.000000000 +0000
++++ src/rrd_restore.c
+@@ -966,10 +966,20 @@ static int parse_tag_rrd(
+             else { if (sizeof(time_t) == sizeof(long long)) {
+                        status = get_llong_from_node(doc, child, (long long *)&rrd->live_head->last_up);
+                     }
+-                    else {
+-                       rrd_set_error("can't convert to time_t ...", child->name);
+-                       status = -1;    
+-                    }
++                    else if (sizeof(time_t) == sizeof(int)) {
++				long temp_last_up;
++				status = get_long_from_node(doc, child, &temp_last_up);
++				if (temp_last_up < INT_MAX)
++					rrd->live_head->last_up = temp_last_up;
++				else {
++					rrd_set_error("can't convert to time_t ...", child->name);
++					status = -1;    
++				}
++			}
++			else {
++				rrd_set_error("can't convert to time_t ...", child->name);
++				status = -1;    
++			}
+             }
+         }
+         else if (xmlStrcmp(child->name, (const xmlChar *) "ds") == 0)
