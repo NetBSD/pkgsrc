@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2010/01/31 21:12:20 zafer Exp $
+# $NetBSD: Makefile,v 1.36 2010/03/13 05:20:24 obache Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	6
@@ -16,6 +16,8 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 CONFLICTS+=	inn-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	inews
 PKG_GROUPS=	news
@@ -40,11 +42,11 @@ post-build:
 		${AR} clq libnntpclnt.a nntpclnt.o && ${RANLIB} libnntpclnt.a
 
 do-install:
-	${INSTALL_PROGRAM} -g ${PKG_GROUPS} -m 2555 ${WRKSRC}/inews \
-	  ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/nntp.h ${PREFIX}/include/
-	${INSTALL_DATA} ${WRKSRC}/libnntpclnt.a ${PREFIX}/lib/
-	${INSTALL_DATA} ${WRKSRC}/nntpclnt.3 ${PREFIX}/${PKGMANDIR}/man3/
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/inews ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/nntp.h ${DESTDIR}${PREFIX}/include/
+	${INSTALL_DATA} ${WRKSRC}/libnntpclnt.a ${DESTDIR}${PREFIX}/lib/
+	${INSTALL_DATA} ${WRKSRC}/nntpclnt.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/
+
+SPECIAL_PERMS+=	bin/inews ${REAL_ROOT_USER} ${PKG_GROUPS} 2555
 
 .include "../../mk/bsd.pkg.mk"
