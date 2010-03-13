@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/03/13 10:20:53 pettai Exp $
+$NetBSD: patch-ab,v 1.2 2010/03/13 12:44:29 wiz Exp $
 
 --- Makefile.orig	2005-10-17 02:08:17.000000000 +0200
 +++ Makefile	2010-02-14 17:31:22.000000000 +0100
-@@ -2,7 +2,7 @@
+@@ -2,6 +2,6 @@
  
 -PYTHON	= python
 -#CONFIG_ARGS = --with-pcap=$(HOME)/build/libpcap-0.8.3
