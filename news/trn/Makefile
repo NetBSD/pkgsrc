@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/05/19 08:59:29 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2010/03/13 05:46:55 obache Exp $
 
 DISTNAME=		trn-4.0-test76
 PKGNAME=		trn-4.76
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://trn.sourceforge.net/
 COMMENT=		Threaded version of rn, the classic news reader
 LICENSE=		trn-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_SYSCONFSUBDIR=	nntp
 
@@ -46,12 +48,12 @@ CONFIGURE_ARGS+=	-d -e -D bin=${PREFIX:Q}/bin \
 			-D phost=${PKG_SYSCONFDIR}'/domainname' \
 			-D filexp=${PREFIX:Q}'/share/trn/filexp' \
 			-D hostbits=${TRN_HOSTBITS:Q} \
-			-D installbin=${PREFIX:Q}'/bin' \
-			-D installmansrc=${PREFIX:Q}'/man/man1' \
-			-D installprivlib=${PREFIX:Q}'/share/trn' \
+			-D installbin=${DESTDIR:Q}${PREFIX:Q}'/bin' \
+			-D installmansrc=${DESTDIR:Q}${PREFIX:Q}'/man/man1' \
+			-D installprivlib=${DESTDIR:Q}${PREFIX:Q}'/share/trn' \
 			-D libpth=${PREFIX:Q}'/lib /usr/lib' \
-			-D mansrc=${PREFIX:Q}'/man/man1' \
-			-D mansrcexp=${PREFIX:Q}'/man/man1' \
+			-D mansrc=${PREFIX:Q}/${PKGMANDIR:Q}'/man1' \
+			-D mansrcexp=${PREFIX:Q}/${PKGMANDIR:Q}'/man1' \
 			-D mimecap=${PREFIX:Q}'/etc/mimecap' \
 			-D orgname=${PKG_SYSCONFDIR}'/organization' \
 			-D perl=${PERL5:Q} \
@@ -69,9 +71,9 @@ CONFIGURE_ARGS+=	-d -e -D bin=${PREFIX:Q}/bin \
 			-D useinews=${PREFIX:Q}'/bin/inews'
 
 post-install:
-	@${RM} -f ${PREFIX}/bin/rn ${PREFIX}/${PKGMANDIR}/man1/rn.1 \
-		${PREFIX}/${PKGMANDIR}/man1/rn.1.gz
-	@${LN} -s trn ${PREFIX}/bin/rn
-	@${LN} -s trn.1 ${PREFIX}/${PKGMANDIR}/man1/rn.1
+	@${RM} -f ${DESTDIR}${PREFIX}/bin/rn ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rn.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rn.1.gz
+	@${LN} -s trn ${DESTDIR}${PREFIX}/bin/rn
+	@${LN} -s trn.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rn.1
 
 .include "../../mk/bsd.pkg.mk"
