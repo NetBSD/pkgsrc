@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1200 2010/03/13 18:00:57 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1201 2010/03/13 18:13:42 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1417,3 +1417,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/lsh to 2.0.4 [obache 2010-03-13]
 	Added net/py-pcap version 1.1 [pettai 2010-03-13]
 	Added security/softhsm version 1.1.3 [pettai 2010-03-13]
+	Added devel/p5-Test-Requires version 0.03 [seb 2010-03-13]
