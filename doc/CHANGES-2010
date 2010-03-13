@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1203 2010/03/13 20:20:19 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.1204 2010/03/13 21:18:57 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1420,3 +1420,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Test-Requires version 0.03 [seb 2010-03-13]
 	Added security/zkt version 0.99c [pettai 2010-03-13]
 	Updated www/ikiwiki to 3.20100312 [schmonz 2010-03-13]
+	Added devel/p5-Devel-StackTrace-AsHTML version 0.05 [seb 2010-03-13]
