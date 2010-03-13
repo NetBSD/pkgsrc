@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9126 2010/03/12 14:37:59 tonio Exp $
+$NetBSD: TODO,v 1.9127 2010/03/13 04:40:27 obache Exp $
 
 Suggested new packages
 ======================
@@ -866,7 +866,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lout-3.38
 	o lpairs-1.0.4
 	o lq-sp-1.3.4.13
-	o lsh-2.0.3
 	o lsof-4.81
 	o ltris-1.0.14
 	o lucy-1.20
