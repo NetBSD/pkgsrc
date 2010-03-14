@@ -1,4 +1,4 @@
-# $LastChangedRevision: 1827 $, $LastChangedDate: 2010-01-16 16:21:36 -0800 (Sat, 16 Jan 2010) $
+# $LastChangedRevision: 8 $, $LastChangedDate: 2008-05-01 00:11:33 +0200 (Thu, 01 May 2008) $
 Summary:        Library to create and read several different archive formats
 Summary(pl):    Biblioteka do tworzenia i odczytu ró¿nych formatów archiwów
 Name:           libarchive
@@ -127,29 +127,17 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.1aix53.spec,v $
-Revision 1.1.1.2  2010/02/20 03:49:41  joerg
-Import libarchive 2.8.0:
-- Infrastructure:
-  - Allow command line tools as fallback for missing compression
-    libraries. If compiled without gzip for example, gunzip will
-    be used automatically.
-  - Improved support for a number of platforms like high-resolution
-    timestamps and Extended Attributes on various Unix systems
-  - New convience interface for creating archives based on disk content,
-    complement of the archive_write_disk interface.
-- Frontends:
-  - bsdcpio ready for public consumption
-  - hand-written date parser replaces the yacc code
-- Filter system:
-  - Simplified read filter chains
-  - Option support for filters
-  - LZMA, XZ, uudecode handled
-- Format support:
-  - Write support for mtree files based on file system or archive
-    content
-  - Basic read support for Joliet
-  - Write support for zip files
-  - Write support for shar archives, both text-only and binary-safe
+Revision 1.1.1.3  2010/03/14 17:57:17  joerg
+libarchive-2.8.2:
+- Fix NULL deference for short self-extracting zip archives
+- Don't dereference symlinks on Linux when reading ACLs
+- Better detection of SHA2 support for old OpenSSL versions
+- Fix parsing of input files for bsdtar -T
+- Do not leak setup_xattr into the global namespace
+- Fix build when an older libarchive is already installed
+- Use O_BINARY opening files in bsdtar
+- Include missing archive_crc32.h
+- Correctly include iconv.h required by libxml2
 
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3
