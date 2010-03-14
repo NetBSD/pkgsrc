@@ -1,0 +1,4 @@
+Computes Mercator Projection of input latitude/longitude coordinates
+(in degrees) into (x, y) coordinates (as distances in meters) from
+the meridian/equator. Also provides a method to convert back into
+latitude, longitude.

@@ -1,0 +1,4 @@
+PROJ is a collection of programs and a library for performing
+cartographic projections. The programs are designed as a standard UNIX
+filters to be used with other programs in the generation of maps and
+charts, and as map digitizing applications.
