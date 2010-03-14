@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1220 2010/03/14 18:41:35 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.1221 2010/03/14 20:14:26 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1446,3 +1446,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/hping3 version 3a2 [pettai 2010-03-14]
 	Updated archivers/libarchive to 2.8.2 [joerg 2010-03-14]
 	Updated archivers/bsdtar to 2.8.2 [joerg 2010-03-14]
+	Updated www/p5-WWW-Facebook-API to 0.4.18 [gls 2010-03-14]
