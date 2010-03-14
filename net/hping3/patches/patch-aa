@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/14 18:37:58 pettai Exp $
+
+--- configure.orig	2004-06-04 08:39:10.000000000 +0200
++++ configure	2010-01-26 23:07:03.000000000 +0100
+@@ -20,7 +20,7 @@
+ 
+ INSTALL_MANPATH=`echo $MANPATH|cut -f1 -d:`
+ if [ "$INSTALL_MANPATH" = "" ]; then
+-	INSTALL_MANPATH="/usr/local/man"
++	INSTALL_MANPATH="@PREFIX@/man"
+ fi
+ BYTEORDER=`./byteorder -m`
+ 
+@@ -61,7 +61,7 @@
+ #
+ # TCL detection
+ #
+-for TCLPATH_TRY in "/usr/bin/" "/usr/local/bin/" "/bin/"
++for TCLPATH_TRY in "/usr/bin/" "@PREFIX@/bin/" "/bin/"
+ do
+ 	for TCLVER_TRY in "8.4" "8.3" "8.2" "8.1" "8.0"
+ 	do
+@@ -84,12 +84,12 @@
+ 	if [ -e /usr/include/tcl${TCL_VER} ]
+ 	then
+ 		TCL_INC="-I/usr/include/tcl${TCL_VER}"
+-	elif [ -e /usr/include/tcl.h ]
++	elif [ -e @PREFIX@/include/tcl.h ]
+ 	then
+-		TCL_INC=""
+-	elif [ -e /usr/local/include/tcl${TCL_VER} ]
++		TCL_INC="-I@PREFIX@/include"
++	elif [ -e @PREFIX@/include/tcl${TCL_VER} ]
+ 	then
+-		TCL_INC="-I/usr/local/include/tcl${TCL_VER}"
++		TCL_INC="-I@PREFIX@/include/tcl${TCL_VER}"
+ 	else
+ 		USE_TCL=""
+ 		TCL_LIB=""
+@@ -98,7 +98,7 @@
+ fi
+ if [ -n $USE_TCL ]
+ then
+-	LIBPOSTFIX=`ls -1 /usr/local/lib/ /usr/lib | grep 'libtcl[0-9]' | grep so | sed -e 's/\.so.*//g' -e 's/libtcl//g' | sort -r | head -1`
++	LIBPOSTFIX=`ls -1 @PREFIX@/lib/ /usr/lib | grep 'libtcl[0-9]' | grep so | sed -e 's/\.so.*//g' -e 's/libtcl//g' | sort -r | head -1`
+ 	TCL_LIB="-ltcl${LIBPOSTFIX} -lm -lpthread"
+ fi
+ 

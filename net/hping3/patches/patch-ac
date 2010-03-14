@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/03/14 18:37:58 pettai Exp $
+
+--- bytesex.h.orig	2010-01-26 22:26:08.000000000 +0100
++++ bytesex.h	2010-01-26 22:26:39.000000000 +0100
+@@ -8,6 +8,7 @@
+ #define ARS_BYTESEX_H
+ 
+ #if 	defined(__i386__) \
++	|| defined(__amd64__) \
+ 	|| defined(__alpha__) \
+ 	|| (defined(__mips__) && (defined(MIPSEL) || defined (__MIPSEL__)))
+ #define BYTE_ORDER_LITTLE_ENDIAN
