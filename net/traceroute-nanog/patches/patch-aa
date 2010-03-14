@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/14 18:19:22 pettai Exp $
+
+--- traceroute.c.orig	2006-05-06 11:10:00.000000000 +0000
++++ traceroute.c
+@@ -750,17 +750,6 @@ void cksum(u_int16_t *, int, volatile u_
+ #undef IP_HDRINCL
+ #endif
+ 
+-#ifndef vms
+-extern  int errno;
+-#endif
+-
+-extern  char *inet_ntoa();
+-extern  u_long inet_addr();
+-
+-#ifndef ULTRIX43
+-char *index(const char *string, int character);
+-#endif
+-
+ #ifdef V630
+ #ifndef __linux__
+ void halt();	/* signal handler */
