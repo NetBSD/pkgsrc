@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.4 2008/06/21 17:58:17 joerg Exp $
+$NetBSD: distinfo,v 1.5 2010/03/14 10:59:14 pettai Exp $
 
-SHA1 (beacon-1.1-0.tar.gz) = f6d5e88e00d26e53df8c9742e7454b84d72e0911
-RMD160 (beacon-1.1-0.tar.gz) = efa8097288b110572f5e2f0a1bed5ed8532a28bd
-Size (beacon-1.1-0.tar.gz) = 247815 bytes
-SHA1 (patch-aa) = 30e80b4a0f9dedfd7c4149b3d32d820ac17707c8
-SHA1 (patch-ab) = 749360884745c5f2138b3ab2829a682bdd73d79a
-SHA1 (patch-ac) = e7ba066f09382ff27ad93ce9e5731a4028290a88
+SHA1 (beacon-1.3.tar.gz) = 3c899161df370f8858d6a2ca499ab2b783c6892d
+RMD160 (beacon-1.3.tar.gz) = 10e9d0810fa6080175f6226b1d265a1cc6594a68
+Size (beacon-1.3.tar.gz) = 411823 bytes
+SHA1 (patch-aa) = b0dfa5326e1ff37e8221c16a1237971944e70b4f
 SHA1 (patch-ad) = 5ea95045071112d5b70745edd335c6fa82233b48
