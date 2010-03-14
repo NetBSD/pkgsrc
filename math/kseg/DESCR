@@ -1,0 +1,6 @@
+KSEG is a Free (GPL) interactive geometry program for exploring
+Euclidean geometry. It runs on Unix-based platforms (according to users,
+it also compiles and runs on Mac OS X and should run on anything that Qt
+supports). You create a construction, such as a triangle with a circumcenter,
+and then, as you drag verteces of the triangle, you can see the circumcenter
+moving in real time.
