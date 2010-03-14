@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2009/02/28 15:44:55 manu Exp $
+$NetBSD: distinfo,v 1.10 2010/03/14 16:59:27 pettai Exp $
 
-SHA1 (dkim-milter-2.8.2.tar.gz) = d39840bbbc572e455fa617b1ab297694a1c23156
-RMD160 (dkim-milter-2.8.2.tar.gz) = f1f114f7cd1842404d58e2681f539015953b65c7
-Size (dkim-milter-2.8.2.tar.gz) = 740258 bytes
+SHA1 (dkim-milter-2.8.3.tar.gz) = ee8f7aa1429f763f6a4012e902296733df0fa0e6
+RMD160 (dkim-milter-2.8.3.tar.gz) = 339886a8ec02615a785b5a5605b2b752e8e946bb
+Size (dkim-milter-2.8.3.tar.gz) = 748415 bytes
 SHA1 (patch-aa) = e3564e641979ae4e94a85790c699e14f7c6c8ca1
 SHA1 (patch-ab) = ab99d7cbc6cf3ad5aff905d32c50caac7d5c02e0
 SHA1 (patch-ac) = 863ff7ec1ac1ebf06732a78c8429fcc1b2799ac4
