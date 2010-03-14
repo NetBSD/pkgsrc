@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.10 2010/03/14 23:07:30 tron Exp $
+
+Really turn AMD 3DNow (and MMX, etc.) because the shared library
+will otherwise not work on Intel CPUs.
+
+--- libswscale/rgb2rgb.c.orig	Thu Mar 19 04:45:29 2009
++++ libswscale/rgb2rgb.c	Sun Mar 14 23:55:39 2010
+@@ -101,7 +101,7 @@
+                                       long lumStride, long chromStride, long srcStride);
+ 
+ 
+-#if ARCH_X86 && CONFIG_GPL
++#if ARCH_X86 && CONFIG_GPL && !defined(sun)
+ DECLARE_ASM_CONST(8, uint64_t, mmx_null)     = 0x0000000000000000ULL;
+ DECLARE_ASM_CONST(8, uint64_t, mmx_one)      = 0xFFFFFFFFFFFFFFFFULL;
+ DECLARE_ASM_CONST(8, uint64_t, mask32b)      = 0x000000FF000000FFULL;
+@@ -162,7 +162,7 @@
+ #define RENAME(a) a ## _C
+ #include "rgb2rgb_template.c"
+ 
+-#if ARCH_X86 && CONFIG_GPL
++#if ARCH_X86 && CONFIG_GPL && !defined(sun)
+ 
+ //MMX versions
+ #undef RENAME
