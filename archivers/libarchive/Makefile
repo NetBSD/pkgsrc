@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2010/02/20 03:56:14 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2010/03/14 18:40:15 joerg Exp $
 #
 
-DISTNAME=	libarchive-2.8.0
+DISTNAME=	libarchive-2.8.2
 CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
