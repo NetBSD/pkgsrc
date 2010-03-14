@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/02 06:10:33 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2010/03/14 17:55:28 martin Exp $
 #
 
 DISTNAME=	liveice
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://star.arm.ac.uk/~spm/software/liveice.html
 COMMENT=	Source client for Icecast
 
-DEPENDS+=	mpg123-0.5*:../../audio/mpg123
+DEPENDS+=	mpg123-1.*:../../audio/mpg123
 DEPENDS+=	lame-3.*:../../audio/lame
 DEPENDS+=	tk>=8.0:../../x11/tk
 
