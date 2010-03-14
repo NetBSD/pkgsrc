@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1205 2010/03/13 22:17:04 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.1206 2010/03/14 01:22:11 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1422,3 +1422,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ikiwiki to 3.20100312 [schmonz 2010-03-13]
 	Added devel/p5-Devel-StackTrace-AsHTML version 0.05 [seb 2010-03-13]
 	Updated math/pari to 2.3.5nb4 [schmonz 2010-03-13]
+	Updated security/netpgp to 20100313 [agc 2010-03-13]
