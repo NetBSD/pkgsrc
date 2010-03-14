@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:59:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/14 16:32:16 wiz Exp $
 #
 
 DISTNAME=	zyGrib-3.5.1
@@ -106,7 +106,7 @@ do-install:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../misc/proj/buildlink3.mk"
+.include "../../geography/proj/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

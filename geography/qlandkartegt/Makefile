@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/03/08 22:00:01 jkunz Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/14 16:32:15 wiz Exp $
 #
 
 DISTNAME=	qlandkartegt-0.18.0
@@ -18,10 +18,10 @@ USE_CMAKE=	yes
 
 DEPENDS+=	qlandkartegt-garmindev>=0.3:../../geography/qlandkartegt-garmindev
 
-.include "../../geography/gdal-lib/buildlink3.mk"
-.include "../../misc/proj/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
+.include "../../geography/gdal-lib/buildlink3.mk"
+.include "../../geography/proj/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../graphics/libexif/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

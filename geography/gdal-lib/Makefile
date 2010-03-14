@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/03/10 11:45:26 adam Exp $
+# $NetBSD: Makefile,v 1.26 2010/03/14 16:32:15 wiz Exp $
 
 DISTNAME=	gdal-1.7.1
 PKGNAME=	gdal-lib-1.7.1
@@ -37,11 +37,11 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
+.include "../../geography/proj/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../misc/proj/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
