@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.12 2010/01/18 08:56:02 adam Exp $
-
-SHA1 (proj-4.7.0.tar.gz) = bfe59b8dc1ea0c57e1426c37ff2b238fea66acd7
-RMD160 (proj-4.7.0.tar.gz) = cd96c09906b99d2ad205cc087e2863910d1124e1
-Size (proj-4.7.0.tar.gz) = 684923 bytes
-SHA1 (proj-datumgrid-1.4.tar.gz) = 1ef8262271daabed37db1816a4796f06ea5e1ba9
-RMD160 (proj-datumgrid-1.4.tar.gz) = f8b7f866ad8d7e148a81f746d66e2c5dfa914045
-Size (proj-datumgrid-1.4.tar.gz) = 2252273 bytes
