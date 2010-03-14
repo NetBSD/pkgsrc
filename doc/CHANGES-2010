@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1210 2010/03/14 14:07:58 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1211 2010/03/14 14:20:05 martin Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1428,3 +1428,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/aide to 0.13.1 [pettai 2010-03-14]
 	Updated games/wormux to 0.9.1 [adam 2010-03-14]
 	Updated shells/tcsh to 6.17.00 [adam 2010-03-14]
+	Updated audio/mpg123 to 1.10.1 [martin 2010-03-14]
