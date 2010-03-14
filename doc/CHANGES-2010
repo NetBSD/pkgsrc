@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1219 2010/03/14 18:41:09 joerg Exp $
+$NetBSD: CHANGES-2010,v 1.1220 2010/03/14 18:41:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1445,3 +1445,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added net/traceroute-nanog version 6.4.2 [pettai 2010-03-14]
 	Added net/hping3 version 3a2 [pettai 2010-03-14]
 	Updated archivers/libarchive to 2.8.2 [joerg 2010-03-14]
+	Updated archivers/bsdtar to 2.8.2 [joerg 2010-03-14]
