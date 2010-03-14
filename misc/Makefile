@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.340 2010/03/14 16:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.341 2010/03/14 16:40:11 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -237,7 +237,6 @@ SUBDIR+=	xjdic
 SUBDIR+=	xrolodex
 SUBDIR+=	xtail
 SUBDIR+=	xtend
-SUBDIR+=	xtide
 SUBDIR+=	yelp
 SUBDIR+=	yrolo
 SUBDIR+=	zorro
