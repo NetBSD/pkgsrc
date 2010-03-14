@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2010/03/14 11:13:36 pettai Exp $
 #
 
-DISTNAME=		pylibpcap-0.5.1
-PKGNAME=		${PYPKGPREFIX}-libpcap-0.5.1
+DISTNAME=		pylibpcap-0.6.2
+PKGNAME=		${PYPKGPREFIX}-libpcap-0.6.2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pylibpcap/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pylibpcap.sourceforge.net/
 COMMENT=		Python wrapper for libpcap
+LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
