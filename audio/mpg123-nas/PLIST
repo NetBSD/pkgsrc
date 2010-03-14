@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/25 06:28:00 rh Exp $
-bin/mpg123
-man/man1/mpg123.1
+@comment $NetBSD: PLIST,v 1.2 2010/03/14 14:47:36 martin Exp $
+lib/mpg123/output_nas.la
