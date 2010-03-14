@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9129 2010/03/14 10:59:43 pettai Exp $
+$NetBSD: TODO,v 1.9130 2010/03/14 13:27:40 pettai Exp $
 
 Suggested new packages
 ======================
@@ -376,7 +376,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o advi-1.8
 	o aewm++-1.0.27
 	o afterstep-2.2.9
-	o aide-0.13.1 [pkg/42677]
 	o akonadi-1.3.1
 	o album-4.06
 	o alee-ttf-11.2
