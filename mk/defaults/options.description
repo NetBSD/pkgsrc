@@ -320,7 +320,10 @@ mozilla-single-profile	Enable single profiles on mozilla browsers
 mp3tunes		Enable support for mp3tunes.com.
 mpcdec			Enable the portable Musepack decoder library.
 mpeg4ip			Enable mpeg4ip support.
-mpg123-arm-fixed64	Enable 64-bit calculations to avoid glitches on ARM.
+mpg123-fifo		Enable FIFO support for the mpg123 control interface
+mpg123-x86-dither	Enable runtime selection of optimized x86 dithering (like MMX or 3Dnow)
+mpg123-with-fpu		Enable generic fpu code
+mpg123-altivec		Enable altivec optimized dithering code
 mplayer-menu		Enable support for user-defined menus.
 mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
