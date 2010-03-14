@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1217 2010/03/14 18:21:54 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1218 2010/03/14 18:40:12 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1443,3 +1443,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Moved misc/xtide to time/xtide [wiz 2010-03-14]
 	Updated mail/dkim-milter to 2.8.3 [pettai 2010-03-14]
 	Added net/traceroute-nanog version 6.4.2 [pettai 2010-03-14]
+	Added net/hping3 version 3a2 [pettai 2010-03-14]
