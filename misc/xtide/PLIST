@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:32 joerg Exp $
-bin/tide
-bin/xtide
-man/man1/tide.1
-man/man1/xtide.1
-man/man8/xttpd.8
-sbin/xttpd
-share/examples/xtide/xtide.conf
-share/xtide/${HARMONICS_FILE}
