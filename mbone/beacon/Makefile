@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2009/05/21 11:25:12 zafer Exp $
+# $NetBSD: Makefile,v 1.13 2010/03/14 10:59:14 pettai Exp $
 #
 
-DISTNAME=	beacon-1.1-0
-PKGNAME=	beacon-1.1.0
-PKGREVISION=	4
+DISTNAME=	beacon-1.3
 CATEGORIES=	mbone
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://dast.nlanr.net/Projects/Beacon/
 COMMENT=	Multicast supervision tool
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
