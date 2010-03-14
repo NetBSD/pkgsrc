@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2009/07/17 17:04:56 adrianp Exp $
+# $NetBSD: Makefile,v 1.16 2010/03/14 10:46:55 spz Exp $
 #
 
 DISTNAME=	bugzilla-3.2.4
+PKGREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
@@ -14,8 +15,7 @@ DEPENDS+=	p5-DBI>=1.41:../../databases/p5-DBI
 DEPENDS+=	p5-Template-Toolkit>=2.15:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
 DEPENDS+=	p5-Email-Send>=2.00:../../mail/p5-Email-Send
-DEPENDS+=	p5-Email-MIME>=1.861:../../mail/p5-Email-MIME
-DEPENDS+=	p5-Email-MIME-Modifier>=1.442:../../mail/p5-Email-MIME-Modifier
+DEPENDS+=	p5-Email-MIME>=1.903:../../mail/p5-Email-MIME
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
