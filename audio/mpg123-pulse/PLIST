@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2010/03/14 16:28:02 martin Exp $
+lib/mpg123/output_pulse.la
