@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:04:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/03/14 16:59:27 pettai Exp $
 ${PLIST.arlib}lib/libar.a
 ${PLIST.arlib}man/man3/ar.3
 lib/libdkim.a
@@ -20,13 +20,12 @@ share/doc/dkim-milter/KNOWNBUGS
 share/doc/dkim-milter/README
 share/doc/dkim-milter/RELEASE_NOTES
 share/examples/dkim-milter/dkim-filter.conf.sample
-share/doc/dkim-milter/draft-hoffman-dac-vbr-05.txt
-share/doc/dkim-milter/draft-ietf-dkim-deployment-03.txt
-share/doc/dkim-milter/draft-ietf-dkim-overview-10.txt
-share/doc/dkim-milter/draft-ietf-dkim-ssp-09.txt
+share/doc/dkim-milter/draft-ietf-dkim-deployment-04.txt
+share/doc/dkim-milter/draft-ietf-dkim-overview-12.txt
+share/doc/dkim-milter/draft-ietf-dkim-rfc4871-errata-05.txt
+share/doc/dkim-milter/draft-ietf-dkim-ssp-10.txt
 share/doc/dkim-milter/draft-kucherawy-dkim-reporting-04.txt
-share/doc/dkim-milter/draft-kucherawy-sender-auth-header-20.txt
-share/doc/dkim-milter/draft-shafranovich-feedback-report-06.txt
+share/doc/dkim-milter/draft-shafranovich-feedback-report-07.txt
 share/doc/dkim-milter/libdkim/dkim_dnssec.html
 share/doc/dkim-milter/libdkim/dkim_policy_getdnssec.html
 share/doc/dkim-milter/libdkim/dkim_policy_getreportinfo.html
@@ -108,4 +107,6 @@ share/doc/dkim-milter/libdkim/rfc2822_mailbox_split.html
 share/doc/dkim-milter/rfc4686.txt
 share/doc/dkim-milter/rfc4871.txt
 share/doc/dkim-milter/rfc5016.txt
+share/doc/dkim-milter/rfc5451.txt
+share/doc/dkim-milter/rfc5518.txt
 share/examples/rc.d/dkim-filter
