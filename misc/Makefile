@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.338 2010/03/12 00:17:46 morr Exp $
+# $NetBSD: Makefile,v 1.339 2010/03/14 16:33:03 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -164,10 +164,6 @@ SUBDIR+=	p5-ControlX10-CM17
 SUBDIR+=	p5-File-MMagic
 SUBDIR+=	p5-File-MMagic-XS
 SUBDIR+=	p5-File-Tail
-SUBDIR+=	p5-Geo-Coordinates-UTM
-SUBDIR+=	p5-Geo-Mercator
-SUBDIR+=	p5-Geo-Weather
-SUBDIR+=	p5-Geography-Countries
 SUBDIR+=	p5-I18N-LangTags
 SUBDIR+=	p5-Locale-Codes
 SUBDIR+=	p5-Locale-Maketext
@@ -186,8 +182,6 @@ SUBDIR+=	php-calendar
 SUBDIR+=	php-mbstring
 SUBDIR+=	pinfo
 SUBDIR+=	ppower
-SUBDIR+=	proj
-SUBDIR+=	proj-doc
 SUBDIR+=	pty-redir
 SUBDIR+=	py-anita
 SUBDIR+=	qbrew
