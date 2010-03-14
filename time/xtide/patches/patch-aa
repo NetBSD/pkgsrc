@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/14 16:39:24 wiz Exp $
+
+--- errors.cc.orig	2004-11-17 17:27:18.000000000 +0100
++++ errors.cc	2006-11-05 21:59:29.000000000 +0100
+@@ -121,10 +121,10 @@ If the harmonics file has been updated, 
+     break;
+   case NO_HFILE_PATH:
+     errout += "NO_HFILE_PATH\n\
+-If /etc/xtide.conf is not provided, you must set the environment variable\n\
++If "PKG_SYSCONFDIR"/xtide.conf is not provided, you must set the environment variable\n\
+ HFILE_PATH to point to your harmonics files.  Example:\n\
+-  export HFILE_PATH=/usr/local/share/xtide/harmonics.tcd\n\
+-Please refer to the documentation for usage of /etc/xtide.conf.";
++  export HFILE_PATH="PREFIX"/share/xtide/harmonics.tcd\n\
++Please refer to the documentation for usage of "PKG_SYSCONFDIR"/xtide.conf.";
+     break;
+   case IMPOSSIBLE_CONVERSION:
+     errout += "IMPOSSIBLE_CONVERSION\n\
