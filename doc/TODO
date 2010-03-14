@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9128 2010/03/13 21:06:14 fhajny Exp $
+$NetBSD: TODO,v 1.9129 2010/03/14 10:59:43 pettai Exp $
 
 Suggested new packages
 ======================
@@ -439,7 +439,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bbsload-0.2.8
 	o bbweather-0.6.3
 	o bdb-xml-2.0.9
-	o beacon-1.3
 	o benchfft-3.1
 	o bftpd-2.6
 	o biew-6.1.0
