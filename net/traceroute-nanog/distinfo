@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/14 18:19:22 pettai Exp $
+
+SHA1 (traceroute-nanog/traceroute-nanog_6.3.10-2.diff.gz) = 80c45e405eed93e29d036f759ea39b6f9f2e3da1
+RMD160 (traceroute-nanog/traceroute-nanog_6.3.10-2.diff.gz) = ed24a3f466448829d397a7034bc5dc1611d243db
+Size (traceroute-nanog/traceroute-nanog_6.3.10-2.diff.gz) = 16699 bytes
+SHA1 (traceroute-nanog/traceroute.c) = f7a160f95488c2c8aa976d168944fc6d0514792b
+RMD160 (traceroute-nanog/traceroute.c) = 07d5c0b2da83d2444c337cd7a791e33e2e3d4226
+Size (traceroute-nanog/traceroute.c) = 107519 bytes
+SHA1 (patch-aa) = f400adc5be4c7f3a3fda54f65a66f02dbd61431b
