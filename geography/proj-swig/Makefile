@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/02/10 19:17:39 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2010/03/14 16:32:15 wiz Exp $
 #
 
 DISTNAME=		proj-swig-0.02
@@ -30,7 +30,7 @@ SUBST_FILES.pkg=	Makefile.in
 SUBST_SED.pkg=		-e 's,/usr/pkg,${PREFIX},g'
 
 .include "../../devel/swig/buildlink3.mk"
+.include "../../geography/proj/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../misc/proj/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

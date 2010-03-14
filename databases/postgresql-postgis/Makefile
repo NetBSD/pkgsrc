@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/03/12 21:15:36 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2010/03/14 16:32:15 wiz Exp $
 
 DISTNAME=	postgis-1.5.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -57,7 +57,7 @@ post-install:
 	${INSTALL_MAN} ${BUILD_DIRS:Q}/doc/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../geography/geos/buildlink3.mk"
-.include "../../misc/proj/buildlink3.mk"
+.include "../../geography/proj/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
