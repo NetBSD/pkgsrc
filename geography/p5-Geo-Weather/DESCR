@@ -1,0 +1,3 @@
+The Geo::Weather module retrieves the current weather from weather.com
+when given city and state or a US zip code. Geo::Weather relies on
+LWP::UserAgent to work.
