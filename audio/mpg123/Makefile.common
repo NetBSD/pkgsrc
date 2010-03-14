@@ -1,8 +1,10 @@
-# $NetBSD: Makefile.common,v 1.33 2010/03/14 15:03:34 martin Exp $
+# $NetBSD: Makefile.common,v 1.34 2010/03/14 16:28:02 martin Exp $
 #
+# used by audio/mpg123-arts/Makefile
 # used by audio/mpg123-esound/Makefile
 # used by audio/mpg123-nas/Makefile
 # used by audio/mpg123-oss/Makefile
+# used by audio/mpg123-pulse/Makefile
 # used by audio/mpg123-sun/Makefile
 
 DISTNAME=	mpg123-1.10.1
