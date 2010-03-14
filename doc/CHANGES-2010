@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1212 2010/03/14 16:30:06 martin Exp $
+$NetBSD: CHANGES-2010,v 1.1213 2010/03/14 16:35:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1431,4 +1431,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/mpg123 to 1.10.1 [martin 2010-03-14]
 	Added audio/mpg123-arts [martin 2010-03-14]
 	Added audio/mpg123-pulse [martin 2010-03-14]
-
+	Moved misc/p5-Geo-Coordinates-UTM to geography/p5-Geo-Coordinates-UTM [wiz 2010-03-14]
+	Moved misc/p5-Geo-Mercator to geography/p5-Geo-Mercator [wiz 2010-03-14]
+	Moved misc/p5-Geo-Weather to geography/p5-Geo-Weather [wiz 2010-03-14]
+	Moved misc/p5-Geography-Countries to geography/p5-Geography-Countries [wiz 2010-03-14]
+	Moved misc/proj to geography/proj [wiz 2010-03-14]
+	Moved misc/proj-doc to geography/proj-doc [wiz 2010-03-14]
