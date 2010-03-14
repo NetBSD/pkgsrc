@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/14 18:37:58 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/14 18:39:38 pettai Exp $
 #
 
 DISTNAME=		hping3-alpha-2
@@ -6,7 +6,7 @@ PKGNAME=		hping3-3a2
 CATEGORIES=		net
 MASTER_SITES=		http://wiki.hping.org/uploadedfiles/101/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pettai@NetBSD.org
 HOMEPAGE=		http://wiki.hping.org/
 COMMENT=		Command-line oriented TCP/IP packet assembler/analyzer
 LICENSE=		gnu-gpl-v2
