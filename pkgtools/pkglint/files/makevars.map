@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.202 2009/12/29 09:35:10 adam Exp $
+# $NetBSD: makevars.map,v 1.203 2010/03/14 16:42:54 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -617,6 +617,7 @@ PLIST_SUBST		List of ShellWord [$package_list]
 PLIST_TYPE		{ dynamic static }
 PREPEND_PATH		List of Pathname
 PREFIX			Pathname [*:u]			# ???
+PREV_PKGPATH		Pathname [*:u]	# doesn't exist any longer
 PRINT_PLIST_AWK		AwkCommand [*:a]
 PRIVILEGED_STAGES	List of { install package clean }
 PTHREAD_AUTO_VARS	YesNo [m:s]
