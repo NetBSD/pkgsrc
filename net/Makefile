@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.816 2010/03/14 18:23:22 pettai Exp $
+# $NetBSD: Makefile,v 1.817 2010/03/14 18:41:29 pettai Exp $
 #
 
 COMMENT=	Networking tools
@@ -162,6 +162,7 @@ SUBDIR+=	hobbitmon
 SUBDIR+=	host
 SUBDIR+=	howl
 SUBDIR+=	hping
+SUBDIR+=	hping3
 SUBDIR+=	httping
 SUBDIR+=	httptunnel
 SUBDIR+=	icsi-finger
