@@ -1,6 +1,1 @@
-mpg123 reads one or more files (or standard input if ``-'' is
-specified) or URLs and plays them to the NAS device (default) or
-outputs them to a specified file or to stdout.
-
-File(s) and/or URL contents are assumed to be MPEG-1.0/2.0 audio
-layer 1, 2, or 3 bit streams.
+NAS (Network Audio System) output module for the mpg123 audio player.
