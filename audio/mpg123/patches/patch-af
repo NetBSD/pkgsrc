@@ -1,19 +1,33 @@
-$NetBSD: patch-af,v 1.1 1999/04/08 07:35:56 tron Exp $
+$NetBSD: patch-af,v 1.2 2010/03/14 14:19:19 martin Exp $
 
---- audio.c.orig	Mon Nov 23 08:16:24 1998
-+++ audio.c	Wed Apr  7 16:23:29 1999
-@@ -81,10 +81,14 @@
- 		k1 = NUM_RATES;
- 	}
+--- src/xfermem.c.orig	2009-12-05 21:26:24.000000000 +0100
++++ src/xfermem.c	2010-02-06 20:14:14.000000000 +0100
+@@ -37,6 +37,13 @@
  
-+#ifndef NETBSD
- 	if(audio_open(&ai1) < 0) {
- 		perror("audio");
- 		exit(1);
- 	}
-+#else
-+	audio_open(&ai1);
+ #ifdef HAVE_MMAP
+ #  ifdef MAP_ANON
++
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 104030000)
++	if(madvise((void *)xf, (regsize - sizeof(txfermem)),
++		    MADV_SEQUENTIAL) < 0)
++		fprintf(stderr,"madvise failed, continuing anyway...\n");
 +#endif
- 
- 	for(i=0;i<NUM_CHANNELS;i++) {
- 		for(j=0;j<NUM_RATES;j++) {
++
+ 	if ((*xf = (txfermem *) mmap(0, regsize, PROT_READ | PROT_WRITE,
+ 			MAP_ANON | MAP_SHARED, -1, 0)) == (txfermem *) -1) {
+ 		perror ("mmap()");
+@@ -92,7 +99,13 @@
+ 	if(!xf)
+ 		return;
+ #ifdef HAVE_MMAP
+-	munmap ((caddr_t) xf, xf->size + xf->metasize + sizeof(txfermem));
++	munmap ((void *) xf, xf->size + xf->metasize + sizeof(txfermem));
++
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 104030000)
++	if(madvise((void *)xf, (xf->size + xf->metasize), MADV_FREE) < 0)
++		fprintf(stderr,"madvise failed, continuing anyways..\n");
++#endif
++
+ #else
+ 	if (shmdt((void *) xf) == -1) {
+ 		perror ("shmdt()");

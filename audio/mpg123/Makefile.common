@@ -1,93 +1,46 @@
-# $NetBSD: Makefile.common,v 1.31 2009/05/19 08:59:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.32 2010/03/14 14:19:19 martin Exp $
+#
+# used by audio/mpg123-oss/Makefile
+# used by audio/mpg123-sun/Makefile
 
-DISTNAME=	mpg123-0.59r
-MPG123_VERSION=	0.59.18
+DISTNAME=	mpg123-1.10.1
+PKGNAME?=	${DISTNAME:C/[[:alnum:]]*/&-${MPG123_MODULE}/}
 CATEGORIES=	audio
-MASTER_SITES=	http://www.mpg123.de/mpg123/ \
-		http://www-ti.informatik.uni-tuebingen.de/~hippm/mpg123/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
+EXTRACT_SUFX=	.tar.bz2
+DISTINFO_FILE=${.CURDIR}/../../audio/mpg123/distinfo
+LICENSE=	gnu-lgpl-v2.1
 
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz
+MAINTAINER=	martin@NetBSD.org
+HOMEPAGE=	http://www.mpg123.org/
+COMMENT?=	Contains the ${MPG123_MODULE} module for mpg123
 
-MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mpg123.de/
-LICENSE=	mpg123-license
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-DIST_SUBDIR=	mpg123
+GNU_CONFIGURE?=	yes
+USE_LIBTOOL?=	yes
+USE_TOOLS+=	pkg-config gmake
+
+CONFIGURE_ARGS+=	--enable-modules=yes
+MPG123_SUBDIRS?=		src
+MPG123_SUBDIRS.src?=		output
+
+CONFIGURE_ENV+=		BUILD_${MPG123_MODULE:tu}=yes
+CONFIGURE_ENV+=		MPG123_MODULE=${MPG123_MODULE:Q}
+MAKE_ENV+=		MPG123_SUBDIRS=${MPG123_SUBDIRS:Q}
+MAKE_ENV+=		MPG123_SUBDIRS.src=${MPG123_SUBDIRS.src:Q}
+
+.if !defined(MPG123_BUILDING_BASE)
+INSTALLATION_DIRS+=	lib/mpg123
+LIBS+=			-lmpg123
+BUILD_DIRS=		src/output
 PATCHDIR=	${.CURDIR}/../../audio/mpg123/patches
-FILESDIR=	${.CURDIR}/../../audio/mpg123/files
-DISTINFO_FILE=	${.CURDIR}/../../audio/mpg123/distinfo
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-.include "../../mk/bsd.prefs.mk"
-
-TARGET_SUFFIX?=
-
-# PKG_OPTIONS_VAR must be set in the including Makefile
-PKG_SUPPORTED_OPTIONS=	inet6 mpg123-arm-fixed64
-PKG_SUGGESTED_OPTIONS=	inet6
-PKG_OPTIONS_LEGACY_VARS+= MPG123_ARM_FIXED64:mpg123-arm-fixed64
-.include "../../mk/bsd.options.mk"
-
-###
-### IPv6 support
-###
-.if !empty(PKG_OPTIONS:Minet6)
-CPPFLAGS+=	-DINET6
+do-install:
+	${LIBTOOL} --mode=install ${INSTALL_LIB} 			\
+		${WRKSRC}/src/output/output_${MPG123_MODULE}.la 	\
+		${DESTDIR}${PREFIX}/lib/mpg123
 .endif
 
-.include "../../mk/compiler.mk"
-.if ${OPSYS} == "SunOS"
-.  if !empty(PKGSRC_COMPILER:Msunpro)
-BUILD_TARGET=	solaris
-.  else
-BUILD_TARGET=	solaris-gcc${TARGET_SUFFIX}
-.  endif
-.elif ${OPSYS} == "IRIX"
-BUILD_TARGET=	sgi
-.elif ${OPSYS} == "Linux"
-.  if ${TARGET_SUFFIX} == "-nas"
-BUILD_TARGET=	linux-nas
-.  elif ${MACHINE_ARCH} == "i386"
-BUILD_TARGET=	linux
-.  elif ${MACHINE_ARCH} == "powerpc"
-BUILD_TARGET=	linux-ppc
-.  else
-BUILD_TARGET=	${LOWER_OPSYS}-${MACHINE_ARCH}
-.  endif
-.elif ${OPSYS} == "NetBSD"
-.  if ${MACHINE_ARCH} == "i386"
-.    if ${OBJECT_FMT} == "ELF"
-BUILD_TARGET=	netbsd-i386-elf${TARGET_SUFFIX}
-.    else
-BUILD_TARGET=	netbsd-i386${TARGET_SUFFIX}
-.    endif # ELF
-.  elif ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-###
-### Optionally enable 64-bit calculations to avoid glitches on ARM.
-###
-.    if !empty(PKG_OPTIONS:Mmpg123-arm-fixed64)
-BUILD_TARGET=	netbsd-arm-64${TARGET_SUFFIX}
-.    else
-BUILD_TARGET=	netbsd-arm${TARGET_SUFFIX}
-.    endif
-.  elif ${MACHINE_ARCH} == "m68k"
-BUILD_TARGET=	netbsd-m68k${TARGET_SUFFIX}
-.  else
-BUILD_TARGET=	netbsd${TARGET_SUFFIX}
-.  endif
-.else
-BUILD_TARGET=	${LOWER_OPSYS}${TARGET_SUFFIX}
-.endif
-
-MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
-
-pre-patch:
-	${LN} -s . ${WRKSRC}/mpg123
-
-post-patch:
-	${RM} -f ${WRKSRC}/mpg123
-	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}
-	cd ${WRKSRC} && ${MV} decode_i586.s decode_i586.s.orig; \
-		${SED} -e 's@^/@#/@g' decode_i586.s.orig > decode_i586.s
+# .include "../../devel/libltdl/convenience.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
