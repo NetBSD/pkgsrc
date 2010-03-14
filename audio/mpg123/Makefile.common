@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.32 2010/03/14 14:19:19 martin Exp $
+# $NetBSD: Makefile.common,v 1.33 2010/03/14 15:03:34 martin Exp $
 #
+# used by audio/mpg123-esound/Makefile
+# used by audio/mpg123-nas/Makefile
 # used by audio/mpg123-oss/Makefile
 # used by audio/mpg123-sun/Makefile
 
