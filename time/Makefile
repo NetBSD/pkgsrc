@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2010/03/08 16:30:00 sno Exp $
+# $NetBSD: Makefile,v 1.110 2010/03/14 16:39:53 wiz Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -137,6 +137,7 @@ SUBDIR+=	xfce4-datetime-plugin
 SUBDIR+=	xfce4-orage
 SUBDIR+=	xfce4-timer-plugin
 SUBDIR+=	xonclock
+SUBDIR+=	xtide
 SUBDIR+=	xtimer
 SUBDIR+=	xtu
 SUBDIR+=	zonetab
