@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.8 2010/03/14 21:44:49 tron Exp $
+
+Fix installation using the "install-sh" the package.
+
+--- subdir.mak.orig	Wed May 20 20:37:34 2009
++++ subdir.mak	Sun Mar 14 22:37:07 2010
+@@ -64,7 +64,7 @@
+ 
+ install-lib$(NAME)-shared: $(SUBDIR)$(SLIBNAME)
+ 	install -d "$(SHLIBDIR)"
+-	install -m 755 $$< "$(SHLIBDIR)/$(SLIBNAME_WITH_VERSION)"
++	install -c -m 755 $$< "$(SHLIBDIR)/$(SLIBNAME_WITH_VERSION)"
+ 	$(STRIP) "$(SHLIBDIR)/$(SLIBNAME_WITH_VERSION)"
+ 	cd "$(SHLIBDIR)" && \
+ 		$(LN_S) $(SLIBNAME_WITH_VERSION) $(SLIBNAME_WITH_MAJOR)
+@@ -74,14 +74,14 @@
+ 
+ install-lib$(NAME)-static: $(SUBDIR)$(LIBNAME)
+ 	install -d "$(LIBDIR)"
+-	install -m 644 $$< "$(LIBDIR)"
++	install -c -m 644 $$< "$(LIBDIR)"
+ 	$(LIB_INSTALL_EXTRA_CMD)
+ 
+ install-headers::
+ 	install -d "$(INCINSTDIR)"
+ 	install -d "$(LIBDIR)/pkgconfig"
+-	install -m 644 $(addprefix "$(SRC_DIR)"/,$(HEADERS)) "$(INCINSTDIR)"
+-	install -m 644 $(BUILD_ROOT)/lib$(NAME)/lib$(NAME).pc "$(LIBDIR)/pkgconfig"
++	install -c -m 644 $(addprefix "$(SRC_DIR)"/,$(HEADERS)) "$(INCINSTDIR)"
++	install -c -m 644 $(BUILD_ROOT)/lib$(NAME)/lib$(NAME).pc "$(LIBDIR)/pkgconfig"
+ 
+ uninstall-libs::
+ 	-rm -f "$(SHLIBDIR)/$(SLIBNAME_WITH_MAJOR)" \
