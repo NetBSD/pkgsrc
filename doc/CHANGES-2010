@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1214 2010/03/14 16:38:48 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1215 2010/03/14 16:41:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1440,3 +1440,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Moved misc/proj to geography/proj [wiz 2010-03-14]
 	Moved misc/proj-doc to geography/proj-doc [wiz 2010-03-14]
 	Moved misc/kseg to math/kseg [wiz 2010-03-14]
+	Moved misc/xtide to time/xtide [wiz 2010-03-14]
