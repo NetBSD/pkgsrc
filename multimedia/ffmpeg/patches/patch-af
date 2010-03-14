@@ -1,0 +1,87 @@
+$NetBSD: patch-af,v 1.7 2010/03/14 23:07:30 tron Exp $
+
+1.) Fixes pkg/42000, not necessary after the next upgrade.
+2.) Really turn AMD 3DNow (and MMX, etc.) because the shared library
+    will otherwise not work on Intel CPUs.
+
+--- libswscale/swscale.c.orig	Thu Jun  4 23:55:52 2009
++++ libswscale/swscale.c	Sun Mar 14 23:53:08 2010
+@@ -221,7 +221,7 @@
+ write special BGR->BGR scaler
+ */
+ 
+-#if ARCH_X86 && CONFIG_GPL
++#if ARCH_X86 && CONFIG_GPL && !defined(sun)
+ DECLARE_ASM_CONST(8, uint64_t, bF8)=       0xF8F8F8F8F8F8F8F8LL;
+ DECLARE_ASM_CONST(8, uint64_t, bFC)=       0xFCFCFCFCFCFCFCFCLL;
+ DECLARE_ASM_CONST(8, uint64_t, w10)=       0x0010001000100010LL;
+@@ -1307,12 +1307,14 @@
+ 
+ #if ARCH_PPC
+ #if (HAVE_ALTIVEC || CONFIG_RUNTIME_CPUDETECT) && CONFIG_GPL
++#if !CONFIG_RUNTIME_CPUDETECT
+ #undef COMPILE_C
++#endif
+ #define COMPILE_ALTIVEC
+ #endif
+ #endif //ARCH_PPC
+ 
+-#if ARCH_X86
++#if ARCH_X86 && !defined(sun)
+ 
+ #if ((HAVE_MMX && !HAVE_AMD3DNOW && !HAVE_MMX2) || CONFIG_RUNTIME_CPUDETECT) && CONFIG_GPL
+ #define COMPILE_MMX
+@@ -1349,7 +1351,7 @@
+ #include "swscale_template.c"
+ #endif
+ 
+-#if ARCH_X86
++#if ARCH_X86 && !defined(sun)
+ 
+ //MMX versions
+ #ifdef COMPILE_MMX
+@@ -1417,7 +1419,7 @@
+     int64_t *filter2=NULL;
+     const int64_t fone= 1LL<<54;
+     int ret= -1;
+-#if ARCH_X86
++#if ARCH_X86 && !defined(sun)
+     if (flags & SWS_CPU_CAPS_MMX)
+         __asm__ volatile("emms\n\t"::: "memory"); //FIXME this should not be required but it IS (even for non-MMX versions)
+ #endif
+@@ -1976,7 +1978,7 @@
+ #if CONFIG_RUNTIME_CPUDETECT && CONFIG_GPL
+     int flags = c->flags;
+ 
+-#if ARCH_X86
++#if ARCH_X86 && !defined(sun)
+     // ordered per speed fastest first
+     if (flags & SWS_CPU_CAPS_MMX2) {
+         sws_init_swScale_MMX2(c);
+@@ -2561,7 +2563,7 @@
+     int unscaled, needsDither;
+     int srcRange, dstRange;
+     SwsFilter dummyFilter= {NULL, NULL, NULL, NULL};
+-#if ARCH_X86
++#if ARCH_X86 && !defined(sun)
+     if (flags & SWS_CPU_CAPS_MMX)
+         __asm__ volatile("emms\n\t"::: "memory");
+ #endif
+@@ -3046,7 +3048,7 @@
+         }
+         else
+         {
+-#if ARCH_X86
++#if ARCH_X86 && !defined(sun)
+             av_log(c, AV_LOG_VERBOSE, "using x86 asm scaler for horizontal scaling\n");
+ #else
+             if (flags & SWS_FAST_BILINEAR)
+@@ -3555,7 +3557,7 @@
+     av_freep(&c->hLumFilterPos);
+     av_freep(&c->hChrFilterPos);
+ 
+-#if ARCH_X86 && CONFIG_GPL
++#if ARCH_X86 && CONFIG_GPL && !defined(sun)
+ #ifdef MAP_ANONYMOUS
+     if (c->funnyYCode ) munmap(c->funnyYCode , MAX_FUNNY_CODE_SIZE);
+     if (c->funnyUVCode) munmap(c->funnyUVCode, MAX_FUNNY_CODE_SIZE);
