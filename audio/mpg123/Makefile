@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2010/03/14 14:19:19 martin Exp $
+# $NetBSD: Makefile,v 1.45 2010/03/14 15:46:05 schmonz Exp $
 
 PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
 COMMENT=	MPEG layer 1, 2, and 3 audio player
@@ -17,11 +17,15 @@ MPG123_BUILDING_BASE=	# empty
 
 PLIST_VARS+=	oss
 PLIST_VARS+=	sun
+PLIST_VARS+=	coreaudio
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" \
 	|| ${OPSYS} == "SunOS" || ${OPSYS} == "DragonFly"
 MPG123_DEFAULT_MODULE=	sun
 PLIST.sun	=	yes
+.elif ${OPSYS} == "Darwin"
+MPG123_DEFAULT_MODULE=	coreaudio
+PLIST.coreaudio	=	yes
 .else
 MPG123_DEFAULT_MODULE=	oss
 PLIST.oss	=	yes
