@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2010/01/17 12:02:50 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2010/03/14 21:06:15 gls Exp $
 
-DISTNAME=		sitecopy-0.16.2
-PKGREVISION=		2
+DISTNAME=		sitecopy-0.16.6
 CATEGORIES=		www
-MASTER_SITES=		${MASTER_SITE_BACKUP}
+MASTER_SITES=		http://www.manyfish.co.uk/sitecopy/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.lyra.org/sitecopy/
+HOMEPAGE=		http://www.manyfish.co.uk/sitecopy/
 COMMENT=		Utility for synchronizing remote and local web sites
 
 PKG_DESTDIR_SUPPORT=	user-destdir
