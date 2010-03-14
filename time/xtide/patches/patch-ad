@@ -1,0 +1,29 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/03/14 16:39:24 wiz Exp $
+
+Kill broken X11 check.
+
+--- configure.orig	2006-03-14 01:54:31.000000000 +0100
++++ configure
+@@ -2596,20 +2596,8 @@ fi
+ 
+ echo "$as_me:$LINENO: checking location of X11" >&5
+ echo $ECHO_N "checking location of X11... $ECHO_C" >&6
+-xroot="NOT FOUND"
+-for dir in "/usr/X11R6" "/usr/openwin" "/usr/contrib/X11R6" "/usr"; do
+-  if test -r "$dir/lib/libXaw.so" -o -r "$dir/lib/libXaw.a" -o -r "$dir/lib/libXaw.dll.a"; then
+-    xroot="$dir"
+-    xlibdir="$dir/lib"
+-    break
+-  else
+-    if test -r "$dir/lib64/libXaw.so" -o -r "$dir/lib64/libXaw.a" -o -r "$dir/lib64/libXaw.dll.a"; then
+-      xroot="$dir"
+-      xlibdir="$dir/lib64"
+-      break
+-    fi
+-  fi
+-done
++xroot="$X11BASE"
++xlibdir="$xroot/lib"
+ echo "$as_me:$LINENO: result: $xroot" >&5
+ echo "${ECHO_T}$xroot" >&6
+ if test "$xroot" = "NOT FOUND"; then
