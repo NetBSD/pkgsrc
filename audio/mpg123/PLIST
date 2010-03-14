@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:31 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/03/14 14:19:19 martin Exp $
 bin/mpg123
+include/mpg123.h
+lib/libmpg123.la
+lib/pkgconfig/libmpg123.pc
 man/man1/mpg123.1
+${PLIST.sun}lib/mpg123/output_sun.la
+${PLIST.oss}lib/mpg123/output_oss.la
