@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1221 2010/03/14 20:14:26 gls Exp $
+$NetBSD: CHANGES-2010,v 1.1222 2010/03/14 21:07:15 gls Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1447,3 +1447,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated archivers/libarchive to 2.8.2 [joerg 2010-03-14]
 	Updated archivers/bsdtar to 2.8.2 [joerg 2010-03-14]
 	Updated www/p5-WWW-Facebook-API to 0.4.18 [gls 2010-03-14]
+	Updated www/sitecopy to 0.16.6 [gls 2010-03-14]
