@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.7 2010/03/14 21:44:49 tron Exp $
+
+Fix installation using the "install-sh" the package.
+
+--- Makefile.orig	Fri May 29 00:13:17 2009
++++ Makefile	Sun Mar 14 22:35:24 2010
+@@ -93,15 +93,15 @@
+ 
+ install-progs: $(PROGS) $(INSTALL_PROGS_TARGETS-yes)
+ 	install -d "$(BINDIR)"
+-	install -c -m 755 $(PROGS) "$(BINDIR)"
++	install -c -c -m 755 $(PROGS) "$(BINDIR)"
+ 
+ install-data: $(DATA_FILES)
+ 	install -d "$(DATADIR)"
+-	install -m 644 $(DATA_FILES) "$(DATADIR)"
++	install -c -m 644 $(DATA_FILES) "$(DATADIR)"
+ 
+ install-man: $(MANPAGES)
+ 	install -d "$(MANDIR)/man1"
+-	install -m 644 $(MANPAGES) "$(MANDIR)/man1"
++	install -c -m 644 $(MANPAGES) "$(MANDIR)/man1"
+ 
+ uninstall: uninstall-progs uninstall-data uninstall-man
+ 
