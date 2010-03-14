@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2009/08/15 23:43:26 zafer Exp $
+# $NetBSD: Makefile,v 1.67 2010/03/14 14:06:09 adam Exp $
 
-DISTNAME=	tcsh-6.16.00
+DISTNAME=	tcsh-6.17.00
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 		ftp://ftp.funet.fi/pub/unix/shells/tcsh/
@@ -35,12 +35,12 @@ post-install:
 	cp ${PKGDIR}/PLIST ${PLIST_SRC}
 	set -e;							\
 	if [ -f ${WRKSRC}/tcsh.C.cat ];				\
-	then								\
-	    [ -d ${DESTDIR}${PREFIX:Q}/${NLSDIR:Q}/C ] ||		\
-		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/${NLSDIR:Q}/C;\
-	    ${INSTALL_DATA} ${WRKSRC:Q}/tcsh.C.cat 			\
-		${DESTDIR}${PREFIX}/${NLSDIR:Q}/C/tcsh.cat;		\
-	    ${ECHO} ${NLSDIR:Q}/C/tcsh.cat >> ${PLIST_SRC:Q};		\
+	then							\
+	    [ -d ${DESTDIR}${PREFIX}/${NLSDIR}/C ] ||		\
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${NLSDIR}/C;	\
+	    ${INSTALL_DATA} ${WRKSRC}/tcsh.C.cat 			\
+		${DESTDIR}${PREFIX}/${NLSDIR}/C/tcsh.cat;		\
+	    ${ECHO} ${NLSDIR}/C/tcsh.cat >> ${PLIST_SRC};		\
 	    for i in 							\
 		et:ISO_8859-15:et:EE					\
 		finnish:ISO_8859-1:fi:FI				\
@@ -65,7 +65,7 @@ post-install:
 		o=;							\
 		while [ $$# -gt 0 ];					\
 		do							\
-		    d=${NLSDIR:Q}/$${c}_$$1.$${s};			\
+		    d=${NLSDIR}/$${c}_$$1.$${s};			\
 		    [ -d ${DESTDIR}${PREFIX}/$$d ] ||			\
 			${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/$$d;	\
 		    if [ -z "$$o" ];					\
