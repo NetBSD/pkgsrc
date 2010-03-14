@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2010/03/14 12:59:30 tron Exp $
+# $NetBSD: Makefile,v 1.57 2010/03/14 23:07:30 tron Exp $
 
 PKGREVISION=	5
 
@@ -13,8 +13,6 @@ CONFIGURE_ARGS+=	--enable-avfilter \
 			--enable-postproc \
 			--enable-libvorbis \
 			--enable-libmp3lame 
-
-USE_LANGUAGES+=	c99
 
 INSTALLATION_DIRS=	lib share/examples/ffmpeg share/doc/ffmpeg
 
