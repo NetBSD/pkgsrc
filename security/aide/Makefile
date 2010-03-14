@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.28 2008/06/12 02:14:44 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2010/03/14 13:27:10 pettai Exp $
 #
 
-DISTNAME=	aide-0.10
-PKGREVISION=	1
+DISTNAME=	aide-0.13.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aide/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.tut.fi/~rammer/aide.html
 COMMENT=	Free intrusion detection system for checking file integrity
+LICENSE=	artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
