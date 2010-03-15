@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2008/09/14 13:58:57 taca Exp $
+$NetBSD: distinfo,v 1.4 2010/03/15 07:51:56 taca Exp $
 
 SHA1 (raggle-0.4.4.tar.gz) = ac16328b46eaec7a732f429ee667513f0b52f277
 RMD160 (raggle-0.4.4.tar.gz) = 43b9353bb192185310eceecdedc00449fbeb0fe3
 Size (raggle-0.4.4.tar.gz) = 279758 bytes
-SHA1 (patch-aa) = 27e34556e106fd5ad2f209ca9023b031f70d7905
+SHA1 (patch-aa) = 3eb86339d1b0f7f960067873025e7c1e21b52e2b
 SHA1 (patch-ab) = 76065bdc75c52a40ba14bce3ad8beabf59d537a5
