@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/23 10:17:42 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/03/15 12:22:24 wiz Exp $
 bin/xdelta3
+share/doc/xdelta3/README
