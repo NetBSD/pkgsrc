@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/01/29 16:20:33 sno Exp $
+$NetBSD: distinfo,v 1.7 2010/03/15 12:23:57 wiz Exp $
 
-SHA1 (Test-Pod-1.41.tar.gz) = 20eac12b386b2a5ba52c147cd3de128c07454640
-RMD160 (Test-Pod-1.41.tar.gz) = 00c48843bdcbd3d7e07723d78feee940bedc0ffd
-Size (Test-Pod-1.41.tar.gz) = 8775 bytes
+SHA1 (Test-Pod-1.42.tar.gz) = 1204819ad360fac788edc800cb3a81f0a6e9b7ea
+RMD160 (Test-Pod-1.42.tar.gz) = 3e608e30206e38d2f406ae63f55bdf041763f4a1
+Size (Test-Pod-1.42.tar.gz) = 10005 bytes
