@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2009/08/09 08:36:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2010/03/15 12:34:32 wiz Exp $
 # used by comms/p5-pilot-link/Makefile
 # used by comms/pilot-link/Makefile
 # used by comms/pilot-link-libs/Makefile
@@ -8,10 +8,11 @@ CATEGORIES=		comms
 MASTER_SITES=		http://downloads.pilot-link.org/
 EXTRACT_SUFX=		.tar.bz2
 
-PILOT_LINK_VERS=	0.12.4
+PILOT_LINK_VERS=	0.12.5
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.pilot-link.org/
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
