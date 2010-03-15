@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/12/15 15:14:54 asau Exp $
+# $NetBSD: Makefile,v 1.8 2010/03/15 05:20:13 asau Exp $
 #
 
-DISTNAME=		ecl-9.12.3
+DISTNAME=		ecl-10.3.1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
 EXTRACT_SUFX=		.tgz
@@ -21,6 +21,12 @@ USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 
 CONFIGURE_ARGS+=	--enable-boehm=system --with-system-gmp
+
+SUBST_CLASSES+=			fix-libffi-include
+SUBST_STAGE.fix-libdir=		post-patch
+SUBST_MESSAGE.fix-libdir=	Fixing libffi layout.
+SUBST_FILES.fix-libdir=		src/c/ffi.d
+SUBST_SED.fix-libdir=		-e '/include.*<ffi/ffi.h>/s:ffi/ffi.h:ffi.h:'
 
 .include "options.mk"
 
