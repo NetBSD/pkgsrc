@@ -1,0 +1,3 @@
+OpenSAML is a set of open source C++ libraries meant to support developers
+working with the Security Assertion Markup Language (SAML). OpenSAML 2,
+the current version, supports SAML 1.0, 1.1, and 2.0.
