@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2010/01/18 13:27:51 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/03/15 09:51:32 jmmv Exp $
 bin/mtn
 bin/mtnopt
 info/monotone.info
@@ -31,6 +31,7 @@ share/doc/monotone/texinfo.css
 share/locale/de/LC_MESSAGES/monotone.mo
 share/locale/es/LC_MESSAGES/monotone.mo
 share/locale/it/LC_MESSAGES/monotone.mo
+share/locale/pt/LC_MESSAGES/monotone.mo
 share/locale/sv/LC_MESSAGES/monotone.mo
 share/monotone/contrib/ChangeLog.sh
 share/monotone/contrib/Monotone.pm
