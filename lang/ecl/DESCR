@@ -15,3 +15,6 @@ The current ECL implementation features:
   * The Gnu Multiprecision library for fast bignum operations.
   * A simple conservative mark & sweep garbage collector.
   * The Boehm-Weiser garbage collector.
+  * Threads using the POSIX threads library.
+  * CLX, an X11 client not needing extra X11 libraries.
+  * Unicode.
