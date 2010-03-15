@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9144 2010/03/15 12:24:58 wiz Exp $
+$NetBSD: TODO,v 1.9145 2010/03/15 12:35:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1037,7 +1037,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phpmyadmin-3.3.0
 	o phylip-3.68
 	o picp-0.6.8
-	o pilot-link-libs-0.12.5
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinentry-0.8.0
