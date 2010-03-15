@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2009/10/24 20:15:05 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2010/03/15 08:27:06 adam Exp $
 #
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
-PKGREVISION=		4
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,11 +20,11 @@ USE_TOOLS+=		awk:run bash:run perl chmod \
 
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
-GCC_VERSION=		4.4.1
+GCC_VERSION=		4.4.3
 
 GCC_SUBPREFIX=		gcc44
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
-FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
+FILES_SUBST+=		PKGNAME=${PKGNAME}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 
 
@@ -103,13 +102,13 @@ CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 
-CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL:Q}
+CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 
 # ${WRKSRC}/gcc-4.4.1/libjava/contrib/aotcompile.py.in stores the path to
 # a 'make' program so we need to make sure we give it the installed 'make' and not
 # the tool wrapped one.
-CONFIGURE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake:Q}
-MAKE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake:Q}
+CONFIGURE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake}
+MAKE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake}
 
 # fastjar-0.93 from pkgsrc/archivers/fastjar seems to trigger a build
 # failure (seen on NetBSD-5.0/i386) when building java.  So in case
@@ -121,12 +120,12 @@ MAKE_ENV+=		ac_cv_prog_JAR=no
 
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
-MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
+MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD}
 
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
 # a binary so we need to make sure we give it the installed sed and not
 # the tool wrapped one.
-MAKE_ENV+=		lt_cv_path_SED=${TOOLS_SED:Q}
+MAKE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
 
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include
 CFLAGS+=		-I${BUILDLINK_DIR}/include
@@ -154,7 +153,7 @@ do-configure:
 	cd ${WRKDIR}/obj; ${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ${WRKSRC}/configure ${CONFIGURE_ARGS}
 
 do-build:
-	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1} )
+	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1:Q} )
 
 do-test:
 .if (${MACHINE_GNU_ARCH} == "x86_64")
@@ -163,7 +162,7 @@ do-test:
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install DESTDIR=${DESTDIR:Q} \
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install DESTDIR=${DESTDIR} \
 	 && ${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc)
 
 GENERATE_PLIST+=                                                        \

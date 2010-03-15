@@ -1,4 +1,4 @@
-	# $NetBSD: preconfigure.mk,v 1.1.1.1 2009/09/18 11:24:50 dmcmahill Exp $
+# $NetBSD: preconfigure.mk,v 1.2 2010/03/15 08:27:06 adam Exp $
 	# Create compiler driver scripts in ${WRKDIR}.
 	(${TEST} -d ${WRKDIR}/.gcc/bin || ${MKDIR} ${WRKDIR}/.gcc/bin)
 	(cd ${BUILDLINK_PREFIX.gcc44}/bin && bin_files=`${LS} *` && \
