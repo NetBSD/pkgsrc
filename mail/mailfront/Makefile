@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/04/08 01:44:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2010/03/15 02:51:24 schmonz Exp $
 #
 
 DISTNAME=		mailfront-1.12
@@ -8,6 +8,8 @@ MASTER_SITES=		${HOMEPAGE}archive/
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/mailfront/
 COMMENT=		Mail server network protocol front-ends
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
@@ -21,16 +23,15 @@ DJB_CONFIG_CMDS+=	${ECHO} ${PREFIX}/include > conf-include;	\
 
 RCD_SCRIPTS=		smtpfront
 INSTALLATION_DIRS=	share/doc/mailfront
+INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
 post-install:
 	cd ${WRKSRC};							\
-	for f in *.html; do						\
-		${INSTALL_DATA} $${f} ${PREFIX}/share/doc/mailfront;	\
-	done;								\
-	for f in ANNOUNCEMENT NEWS README; do				\
-		${INSTALL_DATA} $${f} ${PREFIX}/share/doc/mailfront;	\
+	for f in ANNOUNCEMENT NEWS README *.html; do			\
+		${INSTALL_DATA} $${f} 					\
+			${DESTDIR}${PREFIX}/share/doc/mailfront;	\
 	done
 
 # Detect the PKG_SYSCONFDIR of the installed qmail, so we can create
