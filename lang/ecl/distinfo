@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/12/15 15:14:54 asau Exp $
+$NetBSD: distinfo,v 1.7 2010/03/15 05:20:13 asau Exp $
 
-SHA1 (ecl-9.12.3.tgz) = cf293b029f33b0b0f9539e9163618a9d31df6f30
-RMD160 (ecl-9.12.3.tgz) = 10deb139394edffce8f1f7f4b1c682b9a86f93d9
-Size (ecl-9.12.3.tgz) = 5758828 bytes
+SHA1 (ecl-10.3.1.tgz) = b3e95fc0bf10ab953fffc04badbc28df1e1e37fc
+RMD160 (ecl-10.3.1.tgz) = e8c6dce125c973bc4e3ad07035046aad7bb6ca8c
+Size (ecl-10.3.1.tgz) = 5906221 bytes
