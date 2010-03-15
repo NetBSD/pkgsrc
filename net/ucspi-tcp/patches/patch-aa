@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1 2010/03/15 17:32:17 schmonz Exp $
+
+--- Makefile.orig	2000-03-18 15:18:42.000000000 +0000
++++ Makefile
+@@ -36,6 +36,14 @@ auto-str.o: \
+ compile auto-str.c buffer.h readwrite.h exit.h
+ 	./compile auto-str.c
+ 
++auto_destdir.c: \
++auto-str conf-destdir
++	./auto-str auto_home `head -1 conf-destdir` > auto_destdir.c
++
++auto_destdir.o: \
++compile auto_destdir.c
++	./compile auto_destdir.c
++
+ auto_home.c: \
+ auto-str conf-home
+ 	./auto-str auto_home `head -1 conf-home` > auto_home.c
+@@ -347,16 +355,16 @@ warn-auto.sh http@.sh conf-home
+ 	chmod 755 http@
+ 
+ install: \
+-load install.o hier.o auto_home.o unix.a byte.a
+-	./load install hier.o auto_home.o unix.a byte.a 
++load install.o hier.o auto_destdir.o unix.a byte.a
++	./load install hier.o auto_destdir.o unix.a byte.a 
+ 
+ install.o: \
+ compile install.c buffer.h strerr.h error.h open.h readwrite.h exit.h
+ 	./compile install.c
+ 
+ instcheck: \
+-load instcheck.o hier.o auto_home.o unix.a byte.a
+-	./load instcheck hier.o auto_home.o unix.a byte.a 
++load instcheck.o hier.o auto_destdir.o unix.a byte.a
++	./load instcheck hier.o auto_destdir.o unix.a byte.a 
+ 
+ instcheck.o: \
+ compile instcheck.c strerr.h error.h readwrite.h exit.h
