@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1258 2010/03/15 19:20:54 asau Exp $
+$NetBSD: CHANGES-2010,v 1.1259 2010/03/15 19:34:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added cross/mingw-runtime-bin version 3.14 [asau 2010-03-15]
 	Added cross/mingw-w32api-bin version 3.11 [asau 2010-03-15]
 	Updated www/p5-HTTP-DAV to 0.40 [sno 2010-03-15]
+	Updated www/p5-Apache-Test to 1.31 [sno 2010-03-15]
