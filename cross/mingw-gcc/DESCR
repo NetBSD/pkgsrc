@@ -1,0 +1,4 @@
+MinGW: A collection of freely available and freely distributable Windows
+specific header files and import libraries combined with GNU toolsets that
+allow one to produce native Windows programs that do not rely on any
+3rd-party DLLs.
