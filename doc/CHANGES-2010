@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1228 2010/03/15 09:54:29 jmmv Exp $
+$NetBSD: CHANGES-2010,v 1.1229 2010/03/15 10:08:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1456,3 +1456,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/monotone to 0.47 [jmmv 2010-03-15]
 	Updated devel/monotone-el to 0.47 [jmmv 2010-03-15]
 	Updated devel/monotone-server to 0.47 [jmmv 2010-03-15]
+	Updated audio/lame to 3.98.3 [wiz 2010-03-15]
