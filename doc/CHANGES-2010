@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1240 2010/03/15 12:55:56 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1241 2010/03/15 16:14:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1470,3 +1470,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated comms/pilot-link-libs to 0.12.5 [wiz 2010-03-15]
 	Updated comms/p5-pilot-link to 0.12.5 [wiz 2010-03-15]
 	Updated lang/py-pyrex to 0.9.8.6 [wiz 2010-03-15]
+	Updated databases/p5-BerkeleyDB to 0.42 [sno 2010-03-15]
