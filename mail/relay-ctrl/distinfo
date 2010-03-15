@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/28 14:12:40 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2010/03/15 04:34:05 schmonz Exp $
 
 SHA1 (relay-ctrl-3.1.1.tar.gz) = 01ae6eba6fff3b93761ce0bdd5ca7059a999d2d1
 RMD160 (relay-ctrl-3.1.1.tar.gz) = 48fa830f08b1ea3b37ca07d62cde05dc35388287
 Size (relay-ctrl-3.1.1.tar.gz) = 35046 bytes
+SHA1 (patch-aa) = 0f1e7c51ad5a36d42d3abbeb82a160f337cd61bb
+SHA1 (patch-ab) = 8ba3ab5acb4a3493a56a4f26e56b2dac6c391378

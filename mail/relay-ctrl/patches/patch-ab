@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1 2010/03/15 04:34:05 schmonz Exp $
+
+--- Makefile.orig	2002-04-26 16:07:38.000000000 +0000
++++ Makefile
+@@ -6,7 +6,7 @@ SHELL=/bin/sh
+ 
+ DEFAULT: all
+ 
+-all: programs installer instcheck instshow
++all: programs
+ 
+ authenticated.o: compile authenticated.c relay-ctrl.h net/socket.h net/ipv4.h
+ 	./compile authenticated.c
+@@ -54,6 +54,10 @@ fork.h: compile load fork.h1 fork.h2 try
+ 	  && cat fork.h2 || cat fork.h1 ) > fork.h
+ 	rm -f tryvfork.o tryvfork
+ 
++install: INSTHIER conf-bin conf-man
++	bg-installer -v <INSTHIER
++	bg-installer -c <INSTHIER
++
+ installer: load installer.o insthier.o
+ 	./load installer insthier.o
+ 
