@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9137 2010/03/15 10:31:58 wiz Exp $
+$NetBSD: TODO,v 1.9138 2010/03/15 10:45:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -713,7 +713,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o grep-2.5.4
 	o gsasl-1.4.1
 	o gsharutils-4.9
-	o gsl-1.14
 	o gss-0.1.2
 	o gst-plugins0.10-bad-0.10.18
 	o gst-plugins0.10-base-0.10.28
