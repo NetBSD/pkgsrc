@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1227 2010/03/15 08:28:49 adam Exp $
+$NetBSD: CHANGES-2010,v 1.1228 2010/03/15 09:54:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1453,3 +1453,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/pear-Net_LDAP2 to 2.0.9 [taca 2010-03-15]
 	Added devel/log4shib version 1.0.4 [pettai 2010-03-15]
 	Updated lang/gcc44 to 4.4.3 [adam 2010-03-15]
+	Updated devel/monotone to 0.47 [jmmv 2010-03-15]
+	Updated devel/monotone-el to 0.47 [jmmv 2010-03-15]
+	Updated devel/monotone-server to 0.47 [jmmv 2010-03-15]
