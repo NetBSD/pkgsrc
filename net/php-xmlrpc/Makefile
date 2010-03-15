@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:41 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/03/15 16:48:53 taca Exp $
 
 MODNAME=		xmlrpc
 CATEGORIES+=		net
@@ -14,14 +14,7 @@ CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
 
 .include "../../lang/php/phpversion.mk"
 
-.if ${PKG_PHP_VERSION} == 5
-# the extension has been changed in PHP 5.1 to require libxml2; while
-# there is some "compatibility" expat configure setting, it doesn't build
-# with that
 CONFIGURE_ARGS+=	--with-libxml-dir=${BUILDLINK_PREFIX.libxml2}
-.else
-CONFIGURE_ARGS+=	--with-expat-dir=${BUILDLINK_PREFIX.expat}
-.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 
@@ -39,11 +32,6 @@ CONFIGURE_ARGS+=	--with-iconv-dir=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-iconv-dir
 .endif
 
-.if ${PKG_PHP_VERSION} == 5
 .include "../../textproc/libxml2/buildlink3.mk"
-.else
-.include "../../textproc/expat/buildlink3.mk"
-.endif
-
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
