@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1238 2010/03/15 12:24:58 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1239 2010/03/15 12:35:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1466,3 +1466,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/xdelta3 to 3.0y [wiz 2010-03-15]
 	Updated devel/p5-Test-Pod to 1.42 [wiz 2010-03-15]
 	Updated www/p5-URI to 1.53 [wiz 2010-03-15]
+	Updated comms/pilot-link to 0.12.5 [wiz 2010-03-15]
+	Updated comms/pilot-link-libs to 0.12.5 [wiz 2010-03-15]
+	Updated comms/p5-pilot-link to 0.12.5 [wiz 2010-03-15]
