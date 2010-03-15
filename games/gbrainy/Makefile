@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2010/02/03 11:02:02 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/03/15 11:19:22 wiz Exp $
 #
 
-DISTNAME=	gbrainy-1.30
+DISTNAME=	gbrainy-1.40
 CATEGORIES=	games
 MASTER_SITES=	http://www.softcatala.org/~jmas/gbrainy/
 
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+MAKE_JOBS_SAFE=	no
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c
@@ -19,7 +21,8 @@ USE_TOOLS+=	gmake intltool pkg-config bash:run msgfmt
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 
-REPLACE_BASH=	src/gbrainy.in
+REPLACE_BASH=		src/gbrainy.in
+PKGCONFIG_OVERRIDE=	data/gbrainy.pc.in
 
 .include "../../devel/mono-addins/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
