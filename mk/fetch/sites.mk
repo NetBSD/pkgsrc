@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.77 2010/02/20 00:22:35 zafer Exp $
+# $NetBSD: sites.mk,v 1.78 2010/03/15 10:00:49 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -89,27 +89,7 @@ MASTER_SITE_KDE+=	\
 	ftp://ftp.fi.muni.cz/pub/kde/stable/
 
 MASTER_SITE_SOURCEFORGE+=	\
-	http://freefr.dl.sourceforge.net/sourceforge/ \
-	http://garr.dl.sourceforge.net/sourceforge/ \
-	http://heanet.dl.sourceforge.net/sourceforge/ \
-	http://hivelocity.dl.sourceforge.net/sourceforge/ \
-	http://internap.dl.sourceforge.net/sourceforge/ \
-	http://internode.dl.sourceforge.net/sourceforge/ \
-	http://iweb.dl.sourceforge.net/sourceforge/ \
-	http://jaist.dl.sourceforge.net/sourceforge/ \
-	http://kent.dl.sourceforge.net/sourceforge/ \
-	http://nchc.dl.sourceforge.net/sourceforge/ \
-	http://ncu.dl.sourceforge.net/sourceforge/ \
-	http://puzzle.dl.sourceforge.net/sourceforge/ \
-	http://softlayer.dl.sourceforge.net/sourceforge/ \
-	http://sunet.dl.sourceforge.net/sourceforge/ \
-	http://superb-east.dl.sourceforge.net/sourceforge/ \
-	http://superb-west.dl.sourceforge.net/sourceforge/ \
-	http://surfnet.dl.sourceforge.net/sourceforge/ \
-	http://switch.dl.sourceforge.net/sourceforge/ \
-	http://transact.dl.sourceforge.net/sourceforge/ \
-	http://ufpr.dl.sourceforge.net/sourceforge/ \
-	http://voxel.dl.sourceforge.net/sourceforge/
+	http://downloads.sourceforge.net/sourceforge/
 
 MASTER_SITE_SOURCEFORGE_JP+=	\
 	http://osdn.dl.sourceforge.jp/ \
