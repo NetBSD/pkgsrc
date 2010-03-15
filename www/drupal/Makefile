@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2010/03/04 01:29:39 taca Exp $
+# $NetBSD: Makefile,v 1.45 2010/03/15 16:48:53 taca Exp $
 
 DISTNAME=	drupal-5.22
 CATEGORIES=	www
@@ -13,6 +13,7 @@ CONFLICTS+=	drupal-6.*{,nb*}
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.3:../../graphics/php-gd
+DEPENDS+=	php>=5.2.4:../../lang/php5
 
 NO_BUILD=	YES
 DRUPAL=		${PREFIX}/share/drupal
@@ -47,10 +48,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"
-
-.if ${PKG_PHP_VERSION} == "5"
-DEPENDS+=	php>=5.2.4:../../lang/php5
-.endif
 
 .include "options.mk"
 

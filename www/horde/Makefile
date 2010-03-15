@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2010/02/16 16:08:59 joerg Exp $
+# $NetBSD: Makefile,v 1.67 2010/03/15 16:48:53 taca Exp $
 
 DISTNAME=	horde-3.3.6
 PKGREVISION=	1
@@ -24,11 +24,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Log-[0-9]*:../../sysutils/pear-Log
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime-[0-9]*:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-DB-[0-9]*:../../databases/pear-DB
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
-.if ${PKG_PHP_VERSION} == "4"
-DEPENDS+=	${PHP_PKG_PREFIX}-domxml>=4.3.3:../../textproc/php4-domxml
-.elif ${PKG_PHP_VERSION} == "5"
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php5-dom
-.endif
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.3:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Console_Table-[0-9]*:../../textproc/pear-Console_Table
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-File_Find-[0-9]*:../../textproc/pear-File_Find
