@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1248 2010/03/15 17:36:17 asau Exp $
+$NetBSD: CHANGES-2010,v 1.1249 2010/03/15 18:39:52 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1480,3 +1480,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-BSD-Resource to 1.29.04 [sno 2010-03-15]
 	Updated devel/p5-ExtUtils-ParseXS to 2.22.05 [sno 2010-03-15]
 	Added biology/gromacs version 3.0.7 [asau 2010-03-15]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.085 [sno 2010-03-15]
