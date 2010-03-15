@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.7 2010/03/15 17:29:23 schmonz Exp $
+
+--- Makefile.orig	2006-11-23 19:12:29.000000000 +0000
++++ Makefile
+@@ -1095,9 +1095,9 @@ compile seek_set.c seek.h
+ 	./compile seek_set.c
+ 
+ setup: \
+-it man install conf-bin conf-man BIN MAN
+-	./install "`head -n 1 conf-bin`" < BIN
+-	./install "`head -n 1 conf-man`" < MAN
++it man install conf-bin conf-man conf-destdir BIN MAN
++	./install "`head -1 conf-destdir``head -n 1 conf-bin`" < BIN
++	./install "`head -1 conf-destdir``head -n 1 conf-man`" < MAN
+ 
+ sgetopt.0: \
+ sgetopt.3
