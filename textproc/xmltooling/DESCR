@@ -1,0 +1,4 @@
+OpenSAML requires this lower-level library that provides a higher level
+interface to XML processing, particularly in light of signing and encryption.
+This package includes two alternate library versions, one with security support,
+and one so-called "lite" version without that support.
