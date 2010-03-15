@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1230 2010/03/15 10:11:40 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1231 2010/03/15 10:31:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1458,3 +1458,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/monotone-server to 0.47 [jmmv 2010-03-15]
 	Updated audio/lame to 3.98.3 [wiz 2010-03-15]
 	Updated print/libspectre to 0.2.4 [wiz 2010-03-15]
+	Updated net/yaz to 4.0.2 [wiz 2010-03-15]
