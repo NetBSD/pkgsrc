@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/02/07 15:54:33 gdt Exp $
+$NetBSD: distinfo,v 1.5 2010/03/15 22:58:40 gdt Exp $
 
-SHA1 (viking-0.9.91.tar.gz) = e070bc144d75c3aa6a0e5c86cc1a61031fd2545d
-RMD160 (viking-0.9.91.tar.gz) = 7abe496518a7bb6adec4505d6dafa321f61e3ccf
-Size (viking-0.9.91.tar.gz) = 862423 bytes
+SHA1 (viking-0.9.92.tar.gz) = 93492f4916cdb282f493bb94d77f55df08686b62
+RMD160 (viking-0.9.92.tar.gz) = 5f0f0152115b9ed7a8772da87e31f58da1e419cf
+Size (viking-0.9.92.tar.gz) = 866528 bytes
 SHA1 (patch-aa) = 24dba675c4aeacef6541f474edd90b7457d98d02
