@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2008/01/13 19:24:49 tonio Exp $
+$NetBSD: patch-aa,v 1.10 2010/03/15 21:00:57 tonio Exp $
 
---- Makefile.orig	2007-06-11 17:23:08.000000000 +0200
+--- Makefile.orig	2007-06-11 15:23:08.000000000 +0000
 +++ Makefile
 @@ -1,16 +1,16 @@
  #### Standard configuration parameters
@@ -16,7 +16,8 @@ $NetBSD: patch-aa,v 1.9 2008/01/13 19:24:49 tonio Exp $
  # Where to install programms
  BINDIR=$(PREFIX)/bin
  # Install prefix prefix
- DESTDIR=
+-DESTDIR=
++#DESTDIR=
  #Where to install hevea.sty
 -LATEXLIBDIR=$(PREFIX)/lib/hevea
 +LATEXLIBDIR=$(LIBDIR)
