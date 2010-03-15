@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.10 2009/08/19 05:47:17 minskim Exp $
+# $NetBSD: options.mk,v 1.11 2010/03/15 08:41:05 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.w3m
-PKG_SUPPORTED_OPTIONS=	inet6 w3m-lynx-key
+PKG_SUPPORTED_OPTIONS=	inet6 migemo w3m-lynx-key
 
 .if ${_W3M_USE_IMAGE} == "YES"
 PKG_OPTIONS_REQUIRED_GROUPS+=	imagelib
@@ -18,6 +18,16 @@ PKG_OPTIONS_GROUP.imagelib=	w3m-image-gdk-pixbuf w3m-image-imlib	\
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mmigemo)
+.include "../../lang/ruby/rubyversion.mk"
+DEPENDS+=	${RUBY_PKGPREFIX}-migemo-[0-9]*:../../textproc/migemo
+FIND_PREFIX:=	MIGEMODIR=${RUBY_PKGPREFIX}-migemo
+.include "../../mk/find-prefix.mk"
+CONFIGURE_ARGS+=	--with-migemo="${MIGEMODIR}/bin/migemo -t egrep ${MIGEMODIR}/share/migemo/migemo-dict"
+.else
+CONFIGURE_ARGS+=	--without-migemo
 .endif
 
 .if !empty(PKG_OPTIONS:Mw3m-lynx-key)
