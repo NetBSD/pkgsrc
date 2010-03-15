@@ -305,7 +305,7 @@ mad			Enable usage of the mad library to play MP3 files.
 maintainer-zts		Enable the Zend Thread Safety option for PHP
 marble			Enable marble (virtual globe) support.
 mex			Enable matlab mex support (Linux and Solaris only).
-migemo			Enable migemo support.
+migemo			Enable migemo (Japanese text search tool/library) support.
 mikmod			Enable MikMod sound library.
 mitshm			Enable MIT-SHM X extension support.
 mlib			Enable usage of medialib (SunOS only).
