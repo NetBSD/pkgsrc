@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1261 2010/03/15 22:58:53 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.1262 2010/03/15 23:04:20 tron Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1497,3 +1497,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/p5-Apache-Test to 1.31 [sno 2010-03-15]
 	Added security/opensaml version 2.3 [pettai 2010-03-15]
 	Updated geography/viking to 0.9.92 [gdt 2010-03-15]
+	Updated www/squid31 to 3.1.0.18 [tron 2010-03-15]
