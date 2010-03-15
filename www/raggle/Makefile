@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/09/14 13:58:57 taca Exp $
+# $NetBSD: Makefile,v 1.8 2010/03/15 07:51:56 taca Exp $
 
 DISTNAME=	raggle-0.4.4
 PKGREVISION=	3
@@ -15,6 +15,8 @@ NO_BUILD=	yes
 
 REPLACE_RUBY=	raggle extras/feed_dump.rb extras/feed_sizes.rb \
 		extras/rss_dir_list.rb extras/rss_grab.rb
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
