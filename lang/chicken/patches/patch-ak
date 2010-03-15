@@ -1,0 +1,26 @@
+$NetBSD: patch-ak,v 1.1 2010/03/15 03:43:51 asau Exp $
+
+--- csc.c.orig	2010-03-10 19:09:15.000000000 +0000
++++ csc.c
+@@ -1363,9 +1363,9 @@ if(!C_demand(3)){
+ C_save(t1);
+ C_reclaim((void*)toplevel_trampoline,NULL);}
+ toplevel_initialized=1;
+-if(!C_demand_2(2728)){
++if(!C_demand_2(2741)){
+ C_save(t1);
+-C_rereclaim2(2728*sizeof(C_word), 1);
++C_rereclaim2(2741*sizeof(C_word), 1);
+ t1=C_restore;}
+ a=C_alloc(3);
+ C_initialize_lf(lf,422);
+@@ -1373,7 +1373,8 @@ lf[1]=C_decode_literal(C_heaptop,"\376B\
+ lf[2]=C_h_intern(&lf[2],7,"mingw32");
+ lf[4]=C_h_intern(&lf[4],4,"msvc");
+ lf[6]=C_h_intern(&lf[6],6,"macosx");
+-lf[9]=C_decode_literal(C_heaptop,"\376\003\000\000\002\376\001\000\000\005linux\376\003\000\000\002\376\001\000\000\007freebsd\376\003\000\000\002\376\001\000\000\007solaris\376\003\000\000\002\376\001\000\000\007openbsd\376\377\016");
++lf[9]=C_decode_literal(C_heaptop,"\376\003\000\000\002\376\001\000\000\005linux\376\003\000\000\002\376\001\000\000\006netbsd\376\003\000\000\002\376\001\000\000\007freebsd\376\003\000\000\002\376\001\000\000\007solaris\376\003\000\000\002\376\001\000\000\007openb"
++"sd\376\377\016");
+ lf[12]=C_h_intern(&lf[12],4,"exit");
+ lf[13]=C_h_intern(&lf[13],7,"fprintf");
+ lf[14]=C_decode_literal(C_heaptop,"\376B\000\000\010~a: ~\077~%");
