@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/29 16:02:44 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/15 04:09:13 dholland Exp $
 #
 
-DISTNAME=	pulsaudio-tools-0.9
+DISTNAME=	pulseaudio-tools-0.9
 CATEGORIES=	meta-pkgs audio
 MASTER_SITES=	# empty
 DISTFILES=	# empty
