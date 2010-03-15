@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1256 2010/03/15 19:14:18 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1257 2010/03/15 19:19:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1488,3 +1488,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-Load to 0.18 [sno 2010-03-15]
 	Updated devel/p5-MooseX-Role-Parameterized to 0.18 [sno 2010-03-15]
 	Updated devel/p5-Test-Reporter to 1.5600 [sno 2010-03-15]
+	Updated www/p5-HTTP-DAV to 0.40 [sno 2010-03-15]
