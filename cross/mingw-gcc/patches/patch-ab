@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/03/15 18:34:39 asau Exp $
+
+--- libiberty/physmem.c.orig	2003-12-01 04:42:16.000000000 +0100
++++ libiberty/physmem.c	2003-12-01 04:42:28.000000000 +0100
+@@ -48,7 +48,7 @@
+ # include <sys/param.h>
+ #endif
+ 
+-#if HAVE_SYS_SYSCTL_H
++#if 0
+ # include <sys/sysctl.h>
+ #endif
+ 
