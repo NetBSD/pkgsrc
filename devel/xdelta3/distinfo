@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/11/08 19:57:48 heinz Exp $
+$NetBSD: distinfo,v 1.3 2010/03/15 12:22:24 wiz Exp $
 
-SHA1 (xdelta3.0u.tar.gz) = b6a6c68abe879133c769b101dbc9e171254f583b
-RMD160 (xdelta3.0u.tar.gz) = 7913e773d3b27e18d5636e12b04e5bef7a8c97dd
-Size (xdelta3.0u.tar.gz) = 219264 bytes
+SHA1 (xdelta3.0y.tar.gz) = 3120ff9ff57734e08c06a97675572370d2da92e4
+RMD160 (xdelta3.0y.tar.gz) = b6ad7d1a9d1fee3496cd4f30680a996aaa4f639c
+Size (xdelta3.0y.tar.gz) = 228808 bytes
