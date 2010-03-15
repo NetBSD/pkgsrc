@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2009/12/23 21:02:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2010/03/15 10:21:58 tron Exp $
 
-DISTNAME=	ejabberd-2.1.1
+DISTNAME=	ejabberd-2.1.3
 CATEGORIES=	chat
-MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.1.1/
+MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.1.3/
 
-MAINTAINER=	martti@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
@@ -105,7 +105,9 @@ SUBST_FILES.paths+=	src/ejabberdctl.template
 SUBST_FILES.paths+=	doc/guide.tex
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@JABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,@EJABBERD_DBDIR@,${EJABBERD_DB},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,@EJABBERD_PIDDIR@,${EJABBERD_PIDDIR},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_DB@,${EJABBERD_DB},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@DISTNAME@,${DISTNAME},g'
