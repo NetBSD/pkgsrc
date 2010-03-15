@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2009/08/09 08:36:34 wiz Exp $
+$NetBSD: distinfo,v 1.23 2010/03/15 12:34:32 wiz Exp $
 
-SHA1 (pilot-link-0.12.4.tar.bz2) = cb1fcf11f8f1b26cfa3b83fab0293ea55ae62471
-RMD160 (pilot-link-0.12.4.tar.bz2) = c7f8fb0312d8d071c12cf9e3333981b050f281df
-Size (pilot-link-0.12.4.tar.bz2) = 1576699 bytes
-SHA1 (patch-aa) = c124995244710b802686fd766a8717eab4f3ace6
+SHA1 (pilot-link-0.12.5.tar.bz2) = b822466333ba58bbb32d7cfe5c547f4e7a78bdee
+RMD160 (pilot-link-0.12.5.tar.bz2) = 806c87b9849d37fc5f88b453fb0842504be71a76
+Size (pilot-link-0.12.5.tar.bz2) = 1578735 bytes
+SHA1 (patch-aa) = dbed32343c5750f0278ba9a43050ead38574503a
 SHA1 (patch-ab) = add1156600a681cc0ae30c5d9095b4f1bb6739c3
