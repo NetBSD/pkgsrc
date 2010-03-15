@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1225 2010/03/15 07:52:27 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1226 2010/03/15 08:20:02 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1451,3 +1451,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated lang/chicken to 4.4.0 [asau 2010-03-15]
 	Updated lang/ecl to 10.3.1 [asau 2010-03-15]
 	Updated net/pear-Net_LDAP2 to 2.0.9 [taca 2010-03-15]
+	Added devel/log4shib version 1.0.4 [pettai 2010-03-15]
