@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1246 2010/03/15 17:05:54 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1247 2010/03/15 17:12:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1478,3 +1478,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/pear-Mail_Mime to 1.6.1 [taca 2010-03-15]
 	Updated net/pear-Net_SMTP to 1.4.2 [taca 2010-03-15]
 	Updated devel/p5-BSD-Resource to 1.29.04 [sno 2010-03-15]
+	Updated devel/p5-ExtUtils-ParseXS to 2.22.05 [sno 2010-03-15]
