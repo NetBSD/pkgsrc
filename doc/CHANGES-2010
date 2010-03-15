@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1233 2010/03/15 11:19:33 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1234 2010/03/15 12:03:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1461,3 +1461,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/yaz to 4.0.2 [wiz 2010-03-15]
 	Updated math/gsl to 1.14 [wiz 2010-03-15]
 	Updated games/gbrainy to 1.40 [wiz 2010-03-15]
+	Updated print/mupdf to 0.0.940 [wiz 2010-03-15]
