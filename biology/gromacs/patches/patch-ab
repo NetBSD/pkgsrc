@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/03/15 14:08:49 asau Exp $
+
+Avoid non-standard "==" in test.
+
+--- configure.ac.orig	2009-12-07 00:18:27.000000000 +0300
++++ configure.ac	2010-03-15 16:02:27.000000000 +0300
+@@ -183,7 +183,7 @@
+ 			     [set --enable-ppc-sqrt=1 for better speed.])],,
+ 			     enable_ppc_sqrt=no)
+ if test "$enable_ppc_sqrt" != "no"; then
+-   if test "$enable_ppc_sqrt" == "1"; then
++   if test "$enable_ppc_sqrt" = "1"; then
+      ppc_sqrt_niter=1;
+    else 
+      ppc_sqrt_niter=2;
+@@ -193,7 +193,7 @@
+    enable_software_sqrt="no";
+ fi
+ AM_CONDITIONAL([GMX_POWERPC_SQRT],[test "$enable_ppc_sqrt" != "no"])
+-AM_CONDITIONAL([GMX_POWERPC_SQRT_SINGLE_ITERATION],[test "$ppc_sqrt_niter" == "1"])
++AM_CONDITIONAL([GMX_POWERPC_SQRT_SINGLE_ITERATION],[test "$ppc_sqrt_niter" = "1"])
+ 
+ 
+ if test "$enable_software_sqrt" = "yes"; then
