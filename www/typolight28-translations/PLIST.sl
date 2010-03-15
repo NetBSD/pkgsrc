@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sl,v 1.1 2010/02/08 15:44:48 taca Exp $
+@comment $NetBSD: PLIST.sl,v 1.2 2010/03/15 16:34:20 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/sl/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/sl/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/sl/default.php
@@ -10,6 +10,7 @@ ${TL_WEBDIR}/system/modules/backend/languages/sl/tl_content.php
 ${TL_WEBDIR}/system/modules/backend/languages/sl/tl_files.php
 ${TL_WEBDIR}/system/modules/backend/languages/sl/tl_form.php
 ${TL_WEBDIR}/system/modules/backend/languages/sl/tl_form_field.php
+${TL_WEBDIR}/system/modules/backend/languages/sl/tl_install.php
 ${TL_WEBDIR}/system/modules/backend/languages/sl/tl_layout.php
 ${TL_WEBDIR}/system/modules/backend/languages/sl/tl_log.php
 ${TL_WEBDIR}/system/modules/backend/languages/sl/tl_maintenance.php
@@ -46,7 +47,6 @@ ${TL_WEBDIR}/system/modules/frontend/languages/sl/.htaccess
 ${TL_WEBDIR}/system/modules/frontend/languages/sl/default.php
 ${TL_WEBDIR}/system/modules/frontend/languages/sl/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/sl/.htaccess
-${TL_WEBDIR}/system/modules/listing/languages/sl/default.php
 ${TL_WEBDIR}/system/modules/listing/languages/sl/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/sl/tl_module.php
 ${TL_WEBDIR}/system/modules/news/languages/sl/.htaccess
