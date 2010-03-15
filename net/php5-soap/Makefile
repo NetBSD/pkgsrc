@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:41 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/15 16:45:59 taca Exp $
 
 MODNAME=		soap
 CATEGORIES+=		net
@@ -9,8 +9,6 @@ MAINTAINER=		jdolecek@NetBSD.org
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-soap-[0-9]*
-
-PHP_VERSIONS_ACCEPTED=	5
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 CONFIGURE_ARGS+=	--with-libxml-dir=${BUILDLINK_PREFIX.libxml2}
