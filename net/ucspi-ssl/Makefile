@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.4 2010/01/17 12:02:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/15 03:02:25 schmonz Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.70
 PKGREVISION=		3
 CATEGORIES=		net
-MASTER_SITES=		http://www.superscript.com/ucspi-ssl/
+MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.superscript.com/ucspi-ssl/intro.html
+HOMEPAGE=		http://www.superscript.com/ucspi-ssl/
 COMMENT=		Command-line tools for SSL client-server applications
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
 WRKSRC=			${WRKDIR}/host/superscript.com/net/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
+DJB_RESTRICTED=		no
 
 SSL_SCRIPTS=		https@ sslcat sslconnect
 SSL_PROGRAMS=		sslclient sslserver
@@ -43,15 +46,16 @@ INSTALLATION_DIRS=	bin share/doc/ucspi-ssl
 
 do-install:
 .	for i in ${SSL_SCRIPTS}
-	  ${INSTALL_SCRIPT} ${WRKSRC}/command/${i} ${PREFIX}/bin
+	  ${INSTALL_SCRIPT} ${WRKSRC}/command/${i} ${DESTDIR}${PREFIX}/bin
 .	endfor
 
 .	for i in ${SSL_PROGRAMS}
-	  ${INSTALL_PROGRAM} ${WRKSRC}/command/${i} ${PREFIX}/bin
+	  ${INSTALL_PROGRAM} ${WRKSRC}/command/${i} ${DESTDIR}${PREFIX}/bin
 .	endfor
 
 .	for i in CHANGES TODO UCSPI-SSL
-	  ${INSTALL_DATA} ${WRKSRC}/src/${i} ${PREFIX}/share/doc/ucspi-ssl
+	  ${INSTALL_DATA} ${WRKSRC}/src/${i} \
+	    ${DESTDIR}${PREFIX}/share/doc/ucspi-ssl
 .	endfor
 
 .include "../../security/openssl/buildlink3.mk"
