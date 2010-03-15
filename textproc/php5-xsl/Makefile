@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/12/23 07:08:31 taca Exp $
+# $NetBSD: Makefile,v 1.14 2010/03/15 16:46:00 taca Exp $
 
 MODNAME=		xsl
 CATEGORIES+=		textproc
@@ -17,7 +17,6 @@ DEPENDS+=		php5*-dom-*:../../textproc/php5-dom
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/${MODNAME} ${DISTNAME}/ext/dom
 WRKSRC=			${WRKDIR}/${DISTNAME}/ext/${MODNAME}
 
-PHP_VERSIONS_ACCEPTED=	5
 .include "../../lang/php/ext.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/02/23 14:12:22 taca Exp $
+# $NetBSD: Makefile,v 1.20 2010/03/15 16:45:59 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -23,8 +23,6 @@ USE_TOOLS=	pax
 
 TYPO3NAME=	typo3_src-${VER}
 SITESRC=	dummy-${VER}
-
-PHP_VERSIONS_ACCEPTED=	5
 
 # maybe resides in lang/php/phpversion.mk
 REPLACE_INTERPRETER+=	php
