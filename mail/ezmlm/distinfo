@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:59:22 agc Exp $
+$NetBSD: distinfo,v 1.3 2010/03/15 17:28:46 schmonz Exp $
 
 SHA1 (ezmlm-0.53.tar.gz) = 3a7b618737fed8b774bec69c272d70f4142c1e30
 RMD160 (ezmlm-0.53.tar.gz) = 6d366de2d7028a984ba454f1bec9d2d9f495c88b
 Size (ezmlm-0.53.tar.gz) = 62693 bytes
+SHA1 (patch-aa) = a6ca78b9862d2c87b8ff0ea4bb3efbba891715a9

@@ -1,0 +1,43 @@
+$NetBSD: patch-ad,v 1.1 2010/03/15 17:30:02 schmonz Exp $
+
+--- Makefile.orig	1998-09-05 02:33:37.000000000 +0000
++++ Makefile
+@@ -120,6 +120,14 @@ auto-str.o: \
+ compile auto-str.c substdio.h readwrite.h exit.h
+ 	./compile auto-str.c
+ 
++auto_destdir.c: \
++auto-str conf-destdir
++	./auto-str auto_home `head -1 conf-destdir` > auto_destdir.c
++
++auto_destdir.o: \
++compile auto_destdir.c
++	./compile auto_destdir.c
++
+ auto_home.c: \
+ auto-str conf-home
+ 	./auto-str auto_home `head -1 conf-home` > auto_home.c
+@@ -359,9 +367,9 @@ exit.h
+ 	./compile iftocc.c
+ 
+ install: \
+-load install.o hier.o auto_home.o strerr.a substdio.a stralloc.a \
++load install.o hier.o auto_destdir.o strerr.a substdio.a stralloc.a \
+ alloc.a open.a error.a str.a
+-	./load install hier.o auto_home.o strerr.a substdio.a \
++	./load install hier.o auto_destdir.o strerr.a substdio.a \
+ 	stralloc.a alloc.a open.a error.a str.a 
+ 
+ install.o: \
+@@ -370,9 +378,9 @@ exit.h
+ 	./compile install.c
+ 
+ instcheck: \
+-load instcheck.o hier.o auto_home.o strerr.a substdio.a stralloc.a \
++load instcheck.o hier.o auto_destdir.o strerr.a substdio.a stralloc.a \
+ alloc.a error.a str.a
+-	./load instcheck hier.o auto_home.o strerr.a substdio.a \
++	./load instcheck hier.o auto_destdir.o strerr.a substdio.a \
+ 	stralloc.a alloc.a error.a str.a 
+ 
+ instcheck.o: \
