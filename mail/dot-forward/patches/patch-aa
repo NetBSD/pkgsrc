@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1 2010/03/15 17:28:10 schmonz Exp $
+
+--- Makefile.orig	1998-05-19 10:15:50.000000000 +0000
++++ Makefile
+@@ -31,6 +31,14 @@ auto-str.o: \
+ compile auto-str.c substdio.h readwrite.h exit.h
+ 	./compile auto-str.c
+ 
++auto_destdir.c: \
++auto-str conf-destdir
++	./auto-str auto_qmail `head -1 conf-destdir` > auto_destdir.c
++
++auto_destdir.o: \
++compile auto_destdir.c
++	./compile auto_destdir.c
++
+ auto_qmail.c: \
+ auto-str conf-qmail
+ 	./auto-str auto_qmail `head -1 conf-qmail` > auto_qmail.c
+@@ -181,9 +189,9 @@ compile hier.c auto_qmail.h
+ 	./compile hier.c
+ 
+ install: \
+-load install.o hier.o auto_qmail.o strerr.a substdio.a error.a open.a \
++load install.o hier.o auto_destdir.o strerr.a substdio.a error.a open.a \
+ str.a
+-	./load install hier.o auto_qmail.o strerr.a substdio.a \
++	./load install hier.o auto_destdir.o strerr.a substdio.a \
+ 	error.a open.a str.a 
+ 
+ install.o: \
+@@ -192,9 +200,9 @@ exit.h
+ 	./compile install.c
+ 
+ instcheck: \
+-load instcheck.o hier.o auto_qmail.o strerr.a substdio.a error.a \
++load instcheck.o hier.o auto_destdir.o strerr.a substdio.a error.a \
+ str.a
+-	./load instcheck hier.o auto_qmail.o strerr.a substdio.a \
++	./load instcheck hier.o auto_destdir.o strerr.a substdio.a \
+ 	error.a str.a 
+ 
+ instcheck.o: \

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2008/07/30 10:40:56 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2010/03/15 17:30:02 schmonz Exp $
 
 SHA1 (mess822-0.58.tar.gz) = ef3380c793c852d40688c108d164234ecf8a5362
 RMD160 (mess822-0.58.tar.gz) = 40fbcb5af92882e133ab3653c6119022180caedb
@@ -6,3 +6,4 @@ Size (mess822-0.58.tar.gz) = 64287 bytes
 SHA1 (patch-aa) = 62464e4d3afb31ad2ef38575cddbee969c8a82b3
 SHA1 (patch-ab) = b947129046bbef7012208db39a341648c13ff68f
 SHA1 (patch-ac) = af02dc2acf416ae63f93de08bdafdad80faebc12
+SHA1 (patch-ad) = 2d3e489b2cac3fc580200f0ecc61f3987ffaebf0

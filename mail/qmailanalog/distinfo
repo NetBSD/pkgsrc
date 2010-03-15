@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:59:28 agc Exp $
+$NetBSD: distinfo,v 1.3 2010/03/15 17:30:45 schmonz Exp $
 
 SHA1 (qmailanalog-0.70.tar.gz) = d9f47b6c5348759aeba3873b6b7653b823b2f92c
 RMD160 (qmailanalog-0.70.tar.gz) = 2f67793dc46930a4375dc481341d33b3406525d0
 Size (qmailanalog-0.70.tar.gz) = 28416 bytes
+SHA1 (patch-aa) = be5c86804cb3ba9fcbff3bf58997ae7a2d87b84c

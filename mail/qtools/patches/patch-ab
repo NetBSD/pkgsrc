@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1 2010/03/15 17:31:09 schmonz Exp $
+
+--- Makefile.orig	2001-11-08 13:07:57.000000000 +0000
++++ Makefile
+@@ -688,9 +688,9 @@ error.a alloc.a open.a auto_ezmlm.o auto
+ 	./load replier-config strerr.a buffer.a stralloc.a str.a error.a alloc.a \
+ 	open.a auto_ezmlm.o auto_home.o auto_qmail.o 
+ 
+-instcheck: load instcheck.o hier.o auto_home.o strerr.a buffer.a error.a \
++instcheck: load instcheck.o hier.o auto_destdir.o strerr.a buffer.a error.a \
+ str.a
+-	./load instcheck hier.o auto_home.o strerr.a buffer.a error.a str.a 
++	./load instcheck hier.o auto_destdir.o strerr.a buffer.a error.a str.a 
+ 
+ make-text: load make-text.o getln.a buffer.a stralloc.a alloc.a error.a \
+ str.a
+@@ -710,6 +710,13 @@ strerr.h buffer.h stralloc.h gen_alloc.h
+ auto_ezmlm.h auto_home.h auto_qmail.h str.h help.t
+ 	./compile replier-config.c
+ 
++auto_destdir.o: compile \
++auto_destdir.c
++	./compile auto_destdir.c
++
++auto_destdir.c: auto-str conf-destdir
++	./auto-str auto_home `head -1 conf-destdir` > auto_destdir.c
++
+ auto_ezmlm.o: compile \
+ auto_ezmlm.c
+ 	./compile auto_ezmlm.c
+@@ -724,9 +731,9 @@ auto_home.c
+ auto_home.c: auto-str conf-home
+ 	./auto-str auto_home `head -1 conf-home` > auto_home.c
+ 
+-install: load install.o hier.o auto_home.o stralloc.a alloc.a strerr.a \
++install: load install.o hier.o auto_destdir.o stralloc.a alloc.a strerr.a \
+ buffer.a open.a error.a str.a
+-	./load install hier.o auto_home.o stralloc.a alloc.a strerr.a buffer.a \
++	./load install hier.o auto_destdir.o stralloc.a alloc.a strerr.a buffer.a \
+ 	open.a error.a str.a 
+ 
+ install.o: compile \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/03/12 13:19:49 obache Exp $
+# $NetBSD: Makefile,v 1.20 2010/03/15 17:29:43 schmonz Exp $
 #
 
 DISTNAME=		fastforward-0.51
@@ -10,6 +10,8 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/fastforward.html
 COMMENT=		Sendmail-style /etc/aliases support for qmail
 LICENSE=		public-domain
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 

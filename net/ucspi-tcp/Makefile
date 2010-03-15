@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/05/19 09:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2010/03/15 17:32:17 schmonz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		2
@@ -16,13 +16,15 @@ SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 DJB_RESTRICTED=		no
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man1
 
 post-install:
-	cd ${WRKDIR}/*-man; for i in 1; do		 		\
-	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/${PKGMANDIR}/man$$i; done \
+	cd ${WRKDIR}/${PKGNAME_NOREV}-man; for i in 1; do	 	\
+		for j in *.$$i; do ${INSTALL_MAN} $$j			\
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man$$i; done	\
 	done
 
 .include "../../mk/djbware.mk"

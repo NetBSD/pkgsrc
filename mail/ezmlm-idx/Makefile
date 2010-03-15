@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/05/19 09:07:13 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2010/03/15 17:29:23 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -17,9 +17,11 @@ CONFLICTS=		ezmlm-[0-9]*
 DISTFILES+=		${EZMLM_VERS}.tar.gz
 PLIST_SRC+=		PLIST.idx
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DJB_RESTRICTED=		no
+DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q} > conf-destdir
 
 PKG_SYSCONFSUBDIR=	ezmlm
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
@@ -42,11 +44,11 @@ pre-patch:
 	cd ${WRKSRC}; ${PATCH} ${PATCH_DIST_ARGS} < idx.patch
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/ezcgirc ${EGDIR}/ezcgirc
-	${INSTALL_DATA} ${WRKSRC}/ezmlmrc ${EGDIR}/ezmlmrc
-	${INSTALL_DATA} ${WRKSRC}/ezmlmglrc ${EGDIR}/ezmlmglrc
-	${INSTALL_DATA} ${WRKSRC}/ezmlmsubrc ${EGDIR}/ezmlmsubrc
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/ezcgirc ${DESTDIR}${EGDIR}/ezcgirc
+	${INSTALL_DATA} ${WRKSRC}/ezmlmrc ${DESTDIR}${EGDIR}/ezmlmrc
+	${INSTALL_DATA} ${WRKSRC}/ezmlmglrc ${DESTDIR}${EGDIR}/ezmlmglrc
+	${INSTALL_DATA} ${WRKSRC}/ezmlmsubrc ${DESTDIR}${EGDIR}/ezmlmsubrc
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
