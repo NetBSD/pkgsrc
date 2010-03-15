@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1244 2010/03/15 16:35:04 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1245 2010/03/15 16:40:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1474,3 +1474,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Scalar-List-Utils to 1.23 [sno 2010-03-15]
 	Updated www/p5-Catalyst-View-TT to 0.33 [sno 2010-03-15]
 	Updated www/typolight28-translations to 20100312 [taca 2010-03-15]
+	Updated mail/pear-Auth_SASL to 1.0.4 [taca 2010-03-15]
+	Updated mail/pear-Mail_Mime to 1.6.1 [taca 2010-03-15]
+	Updated net/pear-Net_SMTP to 1.4.2 [taca 2010-03-15]
