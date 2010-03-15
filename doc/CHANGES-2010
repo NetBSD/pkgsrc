@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1235 2010/03/15 12:10:47 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1236 2010/03/15 12:22:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1463,3 +1463,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/gbrainy to 1.40 [wiz 2010-03-15]
 	Updated print/mupdf to 0.0.940 [wiz 2010-03-15]
 	Updated sysutils/cdrtools to 2.01.01alpha77 [wiz 2010-03-15]
+	Updated devel/xdelta3 to 3.0y [wiz 2010-03-15]
