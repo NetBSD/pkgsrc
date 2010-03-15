@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1245 2010/03/15 16:40:46 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1246 2010/03/15 17:05:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1477,3 +1477,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/pear-Auth_SASL to 1.0.4 [taca 2010-03-15]
 	Updated mail/pear-Mail_Mime to 1.6.1 [taca 2010-03-15]
 	Updated net/pear-Net_SMTP to 1.4.2 [taca 2010-03-15]
+	Updated devel/p5-BSD-Resource to 1.29.04 [sno 2010-03-15]
