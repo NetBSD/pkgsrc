@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2010/03/15 04:34:05 schmonz Exp $
+
+--- INSTHIER.orig	2010-03-15 04:21:36.000000000 +0000
++++ INSTHIER
+@@ -0,0 +1,14 @@
++>bin
++c:::755::relay-ctrl-allow
++c:::755::relay-ctrl-age
++c:::755::relay-ctrl-chdir
++c:::755::relay-ctrl-check
++c:::755::relay-ctrl-send
++c:::755::relay-ctrl-udp
++
++>man
++c:::644:man8:relay-ctrl-allow.8
++c:::644:man8:relay-ctrl-age.8
++c:::644:man8:relay-ctrl-check.8
++c:::644:man8:relay-ctrl-send.8
++c:::644:man8:relay-ctrl-udp.8
