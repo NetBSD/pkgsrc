@@ -1,0 +1,3 @@
+MinGW-binutils: A part of cross-environment for MingGW, gas, ld, and binutils.
+This runs on any platform and generating binaries to run on MingGW, say,
+Windows environment.

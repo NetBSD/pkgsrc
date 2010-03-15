@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2010/03/15 18:34:36 asau Exp $
+#
+# used by cross/mingw-gcc/buildlink3.mk
+# used by cross/mingw-binutils/Makefile
+# used by cross/mingw-gcc/Makefile
+# used by cross/mingw-runtime-bin/Makefile
+# used by cross/mingw-w32api-bin/Makefile
+
+.if !defined(MINGW_MAKEFILECOMMON)
+MINGW_MAKEFILECOMMON=	# defined
+USE_CROSSBASE=		yes
+
+MASTER_SITE_MINGW=	${MASTER_SITE_SOURCEFORGE:=mingw/}
+MINGW_TARGET?=		i386--mingw32
+PLIST_SUBST+=		MINGW_TARGET=${MINGW_TARGET:Q}
+MAKE_ENV+=		MINGW_TARGET=${MINGW_TARGET:Q}
+CONFIGURE_ENV+=		MINGW_TARGET=${MINGW_TARGET:Q}
+
+PATH:=			${CROSSBASE}/bin:${PATH}
+
+.if defined(GNU_CONFIGURE)
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--target=${MINGW_TARGET:Q}
+# following line to avoid getting
+#    make: exec(i386--netbsdelf-ar) failed (No such file or directory)
+USE_GNU_CONFIGURE_HOST=	NO
+.endif
+.endif

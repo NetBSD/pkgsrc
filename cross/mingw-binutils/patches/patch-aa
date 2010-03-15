@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/15 18:34:37 asau Exp $
+
+--- ld/genscripts.sh-orig	2008-07-12 17:45:33.000000000 +0900
++++ ld/genscripts.sh	2008-07-12 17:43:56.000000000 +0900
+@@ -400,7 +400,7 @@
+   }
+   fragment()
+   {
+-    local lineno=$[${BASH_LINENO[0]} + 1]
++    local lineno=$[\${BASH_LINENO[0]} + 1]
+     echo >> e${EMULATION_NAME}.c "#line $lineno \"$em_script\""
+     cat >> e${EMULATION_NAME}.c
+   }
