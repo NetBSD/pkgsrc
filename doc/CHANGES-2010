@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1257 2010/03/15 19:19:24 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1258 2010/03/15 19:20:54 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1488,4 +1488,9 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Module-Load to 0.18 [sno 2010-03-15]
 	Updated devel/p5-MooseX-Role-Parameterized to 0.18 [sno 2010-03-15]
 	Updated devel/p5-Test-Reporter to 1.5600 [sno 2010-03-15]
+	Added cross/mingw version 3.3.1 [asau 2010-03-15]
+	Added cross/mingw-binutils version 2.18 [asau 2010-03-15]
+	Added cross/mingw-gcc version 3.4.5 [asau 2010-03-15]
+	Added cross/mingw-runtime-bin version 3.14 [asau 2010-03-15]
+	Added cross/mingw-w32api-bin version 3.11 [asau 2010-03-15]
 	Updated www/p5-HTTP-DAV to 0.40 [sno 2010-03-15]
