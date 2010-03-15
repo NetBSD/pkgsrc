@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/15 14:08:49 asau Exp $
+
+Allow flags to contain commas.
+
+--- share/template/Makefile.in.orig	2010-01-12 15:44:18.000000000 +0300
++++ share/template/Makefile.in	2010-01-12 15:58:57.000000000 +0300
+@@ -389,9 +389,9 @@
+ 
+ Makefile.@host@ Makefile.@host@_double: Template.mak Makefile 
+ 	cat $(srcdir)/Template.mak | \
+-	sed 's,@LDFLAGS\@,$(LDFLAGS),' | \
+-	sed 's,@LIBS\@,$(LIBS),' | \
+-	sed 's,@CFLAGS\@,$(MYCFLAGS),' | \
++	sed 's|@LDFLAGS\@|$(LDFLAGS)|' | \
++	sed 's|@LIBS\@|$(LIBS)|' | \
++	sed 's|@CFLAGS\@|$(MYCFLAGS)|' | \
+ 	sed 's,@CC\@,$(CC),' | \
+ 	sed 's,@host\@,@host@,' >$@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
