@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1224 2010/03/15 05:21:31 asau Exp $
+$NetBSD: CHANGES-2010,v 1.1225 2010/03/15 07:52:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1450,3 +1450,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/sitecopy to 0.16.6 [gls 2010-03-14]
 	Updated lang/chicken to 4.4.0 [asau 2010-03-15]
 	Updated lang/ecl to 10.3.1 [asau 2010-03-15]
+	Updated net/pear-Net_LDAP2 to 2.0.9 [taca 2010-03-15]
