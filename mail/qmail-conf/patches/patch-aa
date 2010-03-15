@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1 2010/03/15 17:30:28 schmonz Exp $
+
+--- Makefile.ini.orig	2001-09-02 07:47:33.000000000 +0000
++++ Makefile.ini
+@@ -25,6 +25,14 @@ auto-str: \
+ load auto-str.o djb.a
+ 	./load auto-str djb.a
+ 
++auto_destdir.c: \
++auto-str conf-destdir
++	./auto-str auto_qmail `sed 1q conf-destdir` > auto_destdir.c
++
++auto_destdir.o: \
++compile auto_destdir.c
++	./compile auto_destdir.c
++
+ auto_qmail.c: \
+ auto-str conf-qmail
+ 	./auto-str auto_qmail `sed 1q conf-qmail` > auto_qmail.c
+@@ -72,12 +80,12 @@ compile hier.c auto_qmail.h
+ 	./compile hier.c
+ 
+ install: \
+-load install.o hier.o auto_qmail.o djb.a
+-	./load install hier.o auto_qmail.o djb.a
++load install.o hier.o auto_destdir.o djb.a
++	./load install hier.o auto_destdir.o djb.a
+ 
+ instcheck: \
+-load instcheck.o hier.o auto_qmail.o djb.a
+-	./load instcheck hier.o auto_qmail.o djb.a
++load instcheck.o hier.o auto_destdir.o djb.a
++	./load instcheck hier.o auto_destdir.o djb.a
+ 
+ it: \
+ djbdns.version prog install instcheck

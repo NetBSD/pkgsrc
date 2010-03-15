@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1 2010/03/15 17:29:43 schmonz Exp $
+
+--- hier.c.orig	1998-05-19 16:25:42.000000000 +0000
++++ hier.c
+@@ -5,8 +5,10 @@ void hier()
+   h(auto_qmail,-1,-1,0755);
+ 
+   d(auto_qmail,"bin",-1,-1,0755);
+-  d(auto_qmail,"doc",-1,-1,0755);
+-  d(auto_qmail,"doc/fastforward",-1,-1,0755);
++  d(auto_qmail,"share",-1,-1,0755);
++  d(auto_qmail,"share/doc",-1,-1,0755);
++  d(auto_qmail,"share/doc/qmail",-1,-1,0755);
++  d(auto_qmail,"share/doc/qmail/fastforward",-1,-1,0755);
+   d(auto_qmail,"man",-1,-1,0755);
+   d(auto_qmail,"man/man1",-1,-1,0755);
+   d(auto_qmail,"man/cat1",-1,-1,0755);
+@@ -19,7 +21,7 @@ void hier()
+   c(auto_qmail,"bin","setmaillist",-1,-1,0755);
+   c(auto_qmail,"bin","newinclude",-1,-1,0755);
+ 
+-  c(auto_qmail,"doc/fastforward","ALIASES",-1,-1,0644);
++  c(auto_qmail,"share/doc/qmail/fastforward","ALIASES",-1,-1,0644);
+ 
+   c(auto_qmail,"man/man1","fastforward.1",-1,-1,0644);
+   c(auto_qmail,"man/man1","printforward.1",-1,-1,0644);

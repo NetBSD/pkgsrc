@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.9 2006/01/05 03:00:21 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.10 2010/03/15 17:28:46 schmonz Exp $
 #
+# used by mail/ezmlm/Makefile
+# used by mail/ezmlm-idx/Makefile
 
 EZMLM_VERS=		ezmlm-0.53
 
