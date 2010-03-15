@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9133 2010/03/15 09:31:15 wiz Exp $
+$NetBSD: TODO,v 1.9134 2010/03/15 09:35:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apache-ant-1.8.0
 	o apache-maven-3.0
 	o apache-tomcat55-5.5.28
-	o apache22-2.2.15
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o aranym-0.9.9
@@ -477,7 +476,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgicc-3.2.9
 	o cheese-2.28.1 [GNOME 2.28]
 	o cherokee-0.99.43
-	o chicken-4.4.0
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
@@ -1016,7 +1014,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
-	o p5-DateTime-TimeZone-1.11
 	o p5-ExtUtils-ParseXS-2.2205
 	o p5-Geo-IPfree-1.100470 [pkg/42833]
 	o p5-Module-Install-0.95
@@ -1212,7 +1209,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o silc-toolkit-1.1.10
 	o simulavr-0.1.2.2
 	o singularity-0.30
-	o sitecopy-0.16.5
 	o sitescooper-3.1.2
 	o sj3-lib-2.0.1.21 [http://code.google.com/p/sj3/]
 	o sjeng-11.2
