@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.523 2010/03/09 19:44:52 pettai Exp $
+# $NetBSD: Makefile,v 1.524 2010/03/15 18:48:52 pettai Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -534,6 +534,7 @@ SUBDIR+=	xmlrpc-c
 SUBDIR+=	xmlstarlet
 SUBDIR+=	xmlto
 SUBDIR+=	xmltoman
+SUBDIR+=	xmltooling
 SUBDIR+=	xp
 SUBDIR+=	xslide
 SUBDIR+=	xt
