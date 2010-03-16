@@ -3,7 +3,7 @@ abook			Enable abook support.
 acl			Enable POSIX ACL support.
 ads			Enable Windows's Active Directory support.
 agg			Enable agg support.
-amule-alc		Build aMule LinkCreator GUI version. 
+amule-alc		Build aMule LinkCreator GUI version. .
 amule-alcc		Build aMule LinkCreator for console.
 amule-cas		Build C aMule Statistics.
 amule-cmd		Build aMule command line client.
@@ -17,7 +17,7 @@ anope-dbencryption	Enable database encryption.
 anthy			Use Anthy as Japanese conversion program.
 anthy-2ch-dict		Include the 2ch dictionary.
 anthy-okinawa-dict	Include the okinawa dictionary.
-apache			Enable support for apache web server
+apache			Enable support for apache web server.
 apache-shared-modules	Build all modules as shared for apache22.
 ares			Use the ares library for asynchronous name resolution.
 aria2-metalink		Enable Metalink support.
@@ -27,15 +27,15 @@ aterm-big5		Enable Chinese support.
 aterm-greek		Enable Greek keyboard support.
 aterm-kanji		Enable kanji support.
 aterm-xterm-scroll	Use xterm-scrollbar instead of a NeXT-like one.
-atheme-large-net	Enable support for large networks (i.e. > 2000 users)
+atheme-large-net	Enable support for large networks (i.e. > 2000 users).
 avahi			Enable DNS service discovery and multicast DNS support.
 avahi-howl		Enable howl compatibility in avahi.
-bacula-static		Enable building of statically linked versions of the Bacula daemons
+bacula-static		Enable building of statically linked versions of the Bacula daemons.
 batch			Enable batch mode support.
 bdb			Enable Berkeley DB support.
 bind-dig-sigchase	Enable dig(1) option +sigchase for DNSSEC signature chasing.
 bind-xml-statistics-server	Enable building in the statistics server in bind95 and later.
-bittorrent		Enable bittorrent support
+bittorrent		Enable bittorrent support.
 blender-exppython	Enable the Experimental Python support.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
@@ -43,7 +43,7 @@ bugzilla-charts		Enable generation of charts.
 bugzilla-imagemagick	Compress .BMPs to save space.
 bugzilla-patchviewer	Enable patchviewer support.
 bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
-bzip2			Enable compression using bzip2
+bzip2			Enable compression using bzip2.
 cairo			Enable cairo support.
 canna			Use Canna as Japanese conversion program.
 cares			Use the c-ares library for asynchronous name resolution.
@@ -52,11 +52,11 @@ catalog-pgsql		Store Bacula catalog in PostgreSQL database.
 catalog-sqlite		Store Bacula catalog in SQLite database.
 catalog-sqlite3		Store Bacula catalog in SQLite 3 database.
 cdparanoia		Use cdparanoia to rip CDDA media.
-cgi			Enable CGI support
+cgi			Enable CGI support.
 cjk			Enable Chinese/Japanese/Korean support.
 clamav			Enable ClamAV support.
-claws-mail-jpilot	Add jpilot support
-clisp			Common/C Lisp
+claws-mail-jpilot	Add jpilot support.
+clisp			Common/C Lisp.
 compface		Enable compface support.
 coqide			Enable ide support for coq.
 courier-dsn		Delivery Status Notification (DNS) mail delivery.
@@ -88,8 +88,8 @@ djbfft-ppro		Optimize for Pentium{Pro,II,III} processors.
 djbfft-sparc		Optimize for UltraSPARC-{I,II} processors.
 djbware-errno-hack	Patch to #include <errno.h> for correctness.
 djvu			Enable DjVuLibRe support.
-dkim-milter-arlib	ar(3) support for dkim-milter
-dkim-stats		dkim-stats(8) support for dkim-milter
+dkim-milter-arlib	ar(3) support for dkim-milter.
+dkim-stats		dkim-stats(8) support for dkim-milter.
 dnsrbl			Enable DNS Real-time Blackhole List support.
 doc			Include the documentation.
 drac			Enable DRAC support.
@@ -113,7 +113,7 @@ emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 embedded-server		Enable embedded server support for MySQL.
 enchant			Add spell checking support using enchant.
 enchant-zemberek	Add spell checking support for Turkish.
-epoll			Enable support for epoll I/O event notification facility
+epoll			Enable support for epoll I/O event notification facility.
 esound			Enable support for the Enlightment Sound Daemon.
 evolution-data-server	Enable support for evolution-data-server.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
@@ -143,7 +143,7 @@ flac			Enable FLAC support.
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
 ftp			Enable File Transfer Protocol (FTP) support.
-gd			Use GD to render graphical output
+gd			Use GD to render graphical output.
 gdal			Use the GDAL library.
 gdb6-tui		Build the tui application.
 gdbm			Use the GNU gdbm database library.
@@ -154,7 +154,7 @@ ghostscript		Enable GhostScript support.
 gif			Enable GIF support.
 gimp			Enable GIMP support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
-gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support
+gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support.
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
 gnome			Enable GNOME support.
 gnome-keyring		Enable GNOME keyring support.
@@ -170,10 +170,10 @@ gsl			Use GNU Scientific Library.
 gstreamer		Enable gstreamer support.
 gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
-gtkspell		Enable gtkspell support.	
-guile			Enable support for GUILE
-gzip			Enable compression using gzip
-hal			Support for the freedesktop.org Hardware Abstraction Layer
+gtkspell		Enable gtkspell support.	.
+guile			Enable support for GUILE.
+gzip			Enable compression using gzip.
+hal			Support for the freedesktop.org Hardware Abstraction Layer.
 halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hping-suid		Install hping executable setuid root.
 hpn-patch		High Performance Enabled SSH/SCP for OpenSSH.
@@ -207,7 +207,7 @@ ipa-without-rules	Disable static rules support.
 ipa-without-sublimits	Disable sublimits support.
 ipa-without-thresholds	Disable thresholds support.
 irssi-perl		Enable Perl support in irssi.
-iso			Build a .iso file
+iso			Build a .iso file.
 ispell			Add spell checking support using ispell.
 jasper			Enable JPEG 2000 support using the jasper library.
 java			Enable Java support.
@@ -217,12 +217,12 @@ jdbc-mysql5		Enable MySQL JDBC driver.
 jpeg			Enable JPEG support.
 jwhois-enable-cache	Enable cache support.
 kde			Enable KDE support.
-kde4			Enable support for KDE 4
+kde4			Enable support for KDE 4.
 kerberos		Enable Kerberos support.
 kerberos4		Enable Kerberos4 support.
 kermit-suid-uucp	Install kermit setuid uucp.
 klash			Install Konqueror flash plugin.
-kqueue			Enable support for kernel event notification mechanism
+kqueue			Enable support for kernel event notification mechanism.
 lablgtk			Use lablgtk.
 lablgtk1		Use lablgtk1 (GTK1).
 lame			Use the lame encoder to create MP3 files.
@@ -276,7 +276,7 @@ ldap			Enable LDAP support.
 lensfun			Enable lensfun (camera lens distortion rectifyer) support.
 libao			Enable the platform-independent 'ao' audio library.
 libgpod			Enable libgpod support.
-libiconv-cp932		Add supplemental support for CP932
+libiconv-cp932		Add supplemental support for CP932.
 liblqr			Enable liblqr (liquid rescale) support.
 libmp4v2		Enable libmp4v2 (MP4) support.
 libmtp			Enable MTP via libmtp support.
@@ -284,7 +284,7 @@ libofx			Enable OFX support.
 libspiff		Use libspiff for XML shareable playlist support.
 libssh2 	 	Use libssh2 for SSHv2 protocol support.
 libvisual		Enable libvisual (audio visualisation) support.
-libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.)
+libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.).
 libxml2			Use the libxml2 library for XML support.
 liferea-gtkhtml		Use libgtkhtml2 to render HTML.
 liferea-mozilla		Use xulrunner to render HTML.
@@ -297,12 +297,12 @@ lua			Enable Lua support.
 lynx			Use and enable support for the lynx browser.
 lzma			Enable LZMA (de)compression support.
 lzo			Enable LZO (de)compression support.
-lzw			Enable LZW (De)compression support
+lzw			Enable LZW (De)compression support.
 m17nlib			Enable the m17n library support.
 m68060-optimized	Optimize for m68060 (only).
 mac			Enable Monkey's Audio Codec support.
 mad			Enable usage of the mad library to play MP3 files.
-maintainer-zts		Enable the Zend Thread Safety option for PHP
+maintainer-zts		Enable the Zend Thread Safety option for PHP.
 marble			Enable marble (virtual globe) support.
 mex			Enable matlab mex support (Linux and Solaris only).
 migemo			Enable migemo (Japanese text search tool/library) support.
@@ -315,22 +315,22 @@ modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
 modplug			Use for decoding mod-like music formats.
 motif			Enable motif support.
 mozilla			Use mozilla as gecko rendering engine.
-mozilla-jemalloc	Enable building with Mozilla'a jemalloc
-mozilla-jit		Enable nanojit javascript acceleration
-mozilla-single-profile	Enable single profiles on mozilla browsers
+mozilla-jemalloc	Enable building with Mozilla'a jemalloc.
+mozilla-jit		Enable nanojit javascript acceleration.
+mozilla-single-profile	Enable single profiles on mozilla browsers.
 mp3tunes		Enable support for mp3tunes.com.
 mpcdec			Enable the portable Musepack decoder library.
 mpeg4ip			Enable mpeg4ip support.
-mpg123-fifo		Enable FIFO support for the mpg123 control interface
-mpg123-x86-dither	Enable runtime selection of optimized x86 dithering (like MMX or 3Dnow)
-mpg123-with-fpu		Enable generic fpu code
-mpg123-altivec		Enable altivec optimized dithering code
+mpg123-fifo		Enable FIFO support for the mpg123 control interface.
+mpg123-x86-dither	Enable runtime selection of optimized x86 dithering (like MMX or 3Dnow).
+mpg123-with-fpu		Enable generic fpu code.
+mpg123-altivec		Enable altivec optimized dithering code.
 mplayer-menu		Enable support for user-defined menus.
 mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
 mrtg-snmpv3		Enable SNMPv3 support.
-mstats			Enable memory statistics
+mstats			Enable memory statistics.
 mutt-compressed-mbox    Enable compressed mailbox support in mutt.
 mutt-hcache		Enable header caching in mutt.
 mutt-sidebar		Enable the mutt mailbox sidebar patch.
@@ -340,32 +340,32 @@ nas			Enable usage of the Network Audio System.
 ncurses			Enable ncurses support.
 ncursesw		Enable wide character ncurses support.
 nextstep		Enable Cocoa or GNUstep support.
-nfdump-ftconv		Build the flow-tools to nfdump converter
-nfdump-nfprofile	Build the netflow profiler
-nfdump-sflow		Build sflow collector sfcpad
-nls			Use native language support
+nfdump-ftconv		Build the flow-tools to nfdump converter.
+nfdump-nfprofile	Build the netflow profiler.
+nfdump-sflow		Build sflow collector sfcpad.
+nls			Use native language support.
 nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
-nspluginwrapper		Enable running non native netscape compatible plugins
+nspluginwrapper		Enable running non native netscape compatible plugins.
 nss			Enable Network Security Services (NSS) support.
 ocamlduce		Enable OcamlDuce support.
-octave			Enable Octave support
-odbc			Enable ODBC support
+octave			Enable Octave support.
+odbc			Enable ODBC support.
 official-mozilla-branding	Use official Mozilla reg. trademarks and logos.
 ogg			Enable Ogg support.
 oniguruma		Support regular expressions via the oniguruma library.
 online-tests		Requiring Internet connectivity for "make test".
 openal			Enable OpenAL support.
-openexr			Use OpenEXR as imaging library
+openexr			Use OpenEXR as imaging library.
 opengl			Use OpenGL as display library.
-opengrok-build		Enable building of OpenGrok from source
+opengrok-build		Enable building of OpenGrok from source.
 openldap		Enable OpenLDAP support.
 openmpi-vampirtrace	Build VampirTrace as part of OpenMPI.
 openssl			Enable OpenSSL support.
 oracle			Enable Oracle support.
 oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for the Mac OS X Address Book.
-otr			Enable Off-the-record encrypted messaging
+otr			Enable Off-the-record encrypted messaging.
 p0f			Enable support for passive OS fingerprinting.
 pam			Enable PAM support.
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
@@ -396,7 +396,7 @@ qmail-realrcptto	Patch to SMTP-reject nonexistent recipients.
 qmail-viruscan		Patch to SMTP-reject certain types of MIME attachments.
 qpopper-servermode	Enable server mode.
 qt			Enable support for QT.
-quartz			Enable Quartz support on Mac OS X.	
+quartz			Enable Quartz support on Mac OS X.	.
 readline		Enable use of GNU readline library.
 rsaref			Use RSAREF library.
 ruby			Enable Ruby support.
@@ -406,15 +406,15 @@ sane			Enable support for SANE scanners.
 sane-backends-hp3900	Include HP3900 driver.
 sasl			Enable SASL support.
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
-sbcl			Use Steel-Bank Common Lisp
-scapy-crypto		Add in crypto support
-scapy-pyx		Add in py-X support
+sbcl			Use Steel-Bank Common Lisp.
+scapy-crypto		Add in crypto support.
+scapy-pyx		Add in py-X support.
 scmgit-gui		Build the GUI in Tcl/Tk.
 sdl			Use SDL as display library.
 seamonkey		Use seamonkey as gecko rendering engine.
 sendmail-milter		Build the milter with support for the Sendmail MTA.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
-serialconsole		Enable use of serial console
+serialconsole		Enable use of serial console.
 sieve			Enable sieve support.
 simd			Enable MMX/3DNOW/SSE/Altivec support.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
@@ -426,9 +426,9 @@ smime			Enable S/MIME support.
 smokeping-speedycgi	Enable SpeedyCGI.
 sndfile			Enable sndfile support.
 snmp			Enable SNMP support.
-snort-flexresp		Flexible Responses on hostile connection attempts
-snort-flexresp2		NEW Flexible Responses on hostile connection attempts
-snort-prelude		Enable support for the Prelude Hybrid IDS system
+snort-flexresp		Flexible Responses on hostile connection attempts.
+snort-flexresp2		NEW Flexible Responses on hostile connection attempts.
+snort-prelude		Enable support for the Prelude Hybrid IDS system.
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
 spamassassin		Enable SpamAssassin support.
@@ -455,16 +455,16 @@ squid-pf		Enable use of transparent proxy with Packet Filter.
 squid-unlinkd		Enable use of unlinkd.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
-streamtuner-local	Enable local metadata support
-streamtuner-xiph	Enable the Xiph plugin	
+streamtuner-local	Enable local metadata support.
+streamtuner-xiph	Enable the Xiph plugin	.
 suhosin			Enable suhosin security enhancements for PHP.
 sun-jre-jce		Use unlimited strength cryptography extension.
 svg			Enable SVG support.
 svn			Enable subversion support.
-sybase			Enable Sybase/MS SQL Server support
+sybase			Enable Sybase/MS SQL Server support.
 syncdir			Force synchronous link() and related syscalls.
 syslog			Enable syslog support.
-syslogng-spoof		Spoof the original source address of forwarded packets
+syslogng-spoof		Spoof the original source address of forwarded packets.
 tcl			Enable Tcl scripting support.
 tcpwrappers		Enable tcpwrappers support.
 theora			Use the theora codecs.
@@ -514,10 +514,10 @@ x11			Enable X11 support.
 xapian-flint-backend	Enable "Flint" format Xapian database support.
 xapian-quartz-backend	Enable "Quartz" format Xapian database support.
 xaw			Enable Xaw support.
-xblast-mini		Use a 480x392 window instead a 960x784 window in xblast
+xblast-mini		Use a 480x392 window instead a 960x784 window in xblast.
 xft2			Enable Xft support.
 xim			Enable X Input Method support.
-xjdic-locale		Honor LOCALE env var, instead of requiring ISO-2022-JP
+xjdic-locale		Honor LOCALE env var, instead of requiring ISO-2022-JP.
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
 xml			Enable XML support.
@@ -529,7 +529,7 @@ xterm-88color		Enable 88 color support.
 xterm-luit		Enable locale <> UTF encoding translation.
 xvid			Enable usage of XVid codecs.
 zaptel			Enable usage of Zaptel drivers.
-zenmap			Enable nmap GUI frontend
+zenmap			Enable nmap GUI frontend.
 ziplinks		Compress data before transmitting it between servers.
-zlib			Enable support for zlib compression
+zlib			Enable support for zlib compression.
 zsh-multibyte		Enable multibyte support in Zsh.
