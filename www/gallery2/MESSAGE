@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/03/16 23:02:02 pettai Exp $
+
+Gallery2 is now installed in the ${G2DIR} directory,
+and Gallery2's data directory is ${G2DATA}.
+
+To get the final installation & setup instructions, go to the Gallery2
+documentation homepage:
+
+	http://codex.gallery2.org/Category:Gallery_2:Installation
+
+And don't forget to read the security information regarding Gallery2:
+
+	http://codex.gallery2.org/Gallery2:Security
+
+More tips? Read more about optional (but useful) Gallery2 plugins here:
+http://codex.gallery2.org/Gallery2:Installation_Requirements#Optional_Items
+
+===========================================================================
