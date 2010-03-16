@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1265 2010/03/16 09:17:54 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1266 2010/03/16 09:39:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1501,3 +1501,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/gtk2 to 2.18.8 [wiz 2010-03-16]
 	Updated textproc/p5-Text-Quoted to 2.06 [sno 2010-03-16]
 	Updated finance/kmymoney2 to 1.0.3 [wiz 2010-03-16]
+	Updated textproc/p5-Text-SimpleTable to 2.03 [sno 2010-03-16]
