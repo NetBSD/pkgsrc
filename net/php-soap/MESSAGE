@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/03/16 15:08:54 taca Exp $
+
+PHP 5.1.0 introduced some changes in SOAP extension in WSDL mode:
+* XML base64Binary values transparently base64 encoded/decoded
+* NULL values with maxOccurs="0" nillable="yes" not included in XML output
+===========================================================================
