@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.40 2010/02/27 03:25:16 taca Exp $
+# $NetBSD: Makefile.common,v 1.41 2010/03/16 16:03:22 taca Exp $
 # used by lang/php5/Makefile.php
 # used by lang/php/ext.mk
+# used by meta-pkgs/php5-extensions/Makefile
 
 #
 # NOTE:
@@ -13,21 +14,13 @@
 # Check these packages when update to new release of PHP and consider to
 # reset PKG_REVISION:
 #
-#		databases/php-pdo
-#		databases/php-pdo_dblib
-#		databases/php-pdo_mysql
-#		databases/php-pdo_odbc
-#		databases/php-pdo_pgsql
-#		databases/php-pdo_sqlite
-#		databases/php-pgsql
-#		databases/php5-mysqli
-#		multimedia/php-ming
-#		net/php5-soap
-#		textproc/php5-dom
-#		textproc/php5-xsl
-#		www/php-apc
+#	databases/php-dase
+#	databases/php-dbx
+#	multimedia/php-ming
+#	security/php-mhash
+#	textproc/php-pspell
 #
-# Since other PHP extensions are shared between www/php4, we can't reset
+# Since other PHP extensions are shared between www/php53, we can't reset
 # PKGREVSION.
 #
 
