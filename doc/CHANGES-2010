@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1271 2010/03/16 10:33:02 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1272 2010/03/16 10:48:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1507,3 +1507,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-Crypt-Eksblowfish to 0.008 [sno 2010-03-16]
 	Updated security/p5-Authen-SASL to 2.14 [sno 2010-03-16]
 	Updated security/p5-Net-DNS-SEC to 0.16 [sno 2010-03-16]
+	Updated converters/p5-JSON-XS to 2.280 [sno 2010-03-16]
