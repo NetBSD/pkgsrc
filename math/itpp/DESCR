@@ -1,0 +1,8 @@
+C++ library of mathematical, signal processing and communication
+routines
+
+Its main use is in simulation of communication systems and for
+performing research in the area of communications.  The kernel of the
+library consists of generic vector and matrix classes, and a set of
+accompanying routines.  Such a kernel makes IT++ similar to MATLAB or
+GNU Octave.
