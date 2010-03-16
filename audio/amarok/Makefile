@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2010/02/16 09:01:46 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2010/03/16 19:28:50 wiz Exp $
 #
 
 DISTNAME=	amarok-${VERS}
-VERS=		2.2.2
-PKGREVISION=	3
+VERS=		2.3.0
 CATEGORIES=	audio multimedia
 #MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
 #		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
@@ -25,19 +24,19 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt pkg-config
 
-CMAKE_ARGS+=	-DMYSQL_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.mysql-embedded}/mysqld/include/mysql
-CMAKE_ARGS+=	-DMYSQL_EMBEDDED_LIBRARIES:PATH=${BUILDLINK_PREFIX.mysql-embedded}/mysqld/lib/mysql/libmysqld.a
+CMAKE_ARGS+=	-DMYSQL_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.mysql-client}/include/mysql
+CMAKE_ARGS+=	-DMYSQL_EMBEDDED_LIBRARIES:PATH=${BUILDLINK_PREFIX.mysql-server}/lib/mysql/libmysqld.a
 CMAKE_ARGS+=	-DMYSQL_EMBEDDED_FOUND:BOOL=TRUE
 CMAKE_ARGS+=	-DHAVE_MYSQL_OPT_EMBEDDED_CONNECTION:BOOL=TRUE
-CMAKE_ARGS+=	-DMYSQL_LIBRARIES:PATH=${BUILDLINK_PREFIX.mysql-embedded}/mysqld/lib/mysql/libmysqlclient.so
+CMAKE_ARGS+=	-DMYSQL_LIBRARIES:PATH=${BUILDLINK_PREFIX.mysql-client}/lib/mysql/libmysqlclient.so
 
 SUBST_CLASSES+=		mysql
 SUBST_STAGE.mysql=	post-patch
 SUBST_MESSAGE.mysql=	Fixup paths for MySQL embedded
 SUBST_FILES.mysql=	cmake/modules/FindMySQLAmarok.cmake
-SUBST_FILES.mysql+=	src/collection/mysqlecollection/CMakeLists.txt
-SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-embedded}/mysqld:
-SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-embedded}/mysqld/lib/mysql:
+SUBST_FILES.mysql+=	src/collection/sqlcollection/mysqlecollection/CMakeLists.txt
+SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-server}:
+SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib/mysql:
 
 .include "options.mk"
 
@@ -45,7 +44,10 @@ SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-em
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/taglib-extras/buildlink3.mk"
-.include "../../databases/mysql51-embedded/buildlink3.mk"
+BUILDLINK_API_DEPENDS.mysql-client+=	mysql-client>=5.1.44nb1
+.include "../../databases/mysql51-client/buildlink3.mk"
+BUILDLINK_API_DEPENDS.mysql-server+=	mysql-server>=5.1.44nb1
+.include "../../databases/mysql51-server/buildlink3.mk"
 .include "../../devel/qtscriptgenerator/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
