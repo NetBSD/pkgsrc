@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1268 2010/03/16 10:08:39 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1269 2010/03/16 10:15:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1504,3 +1504,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-SimpleTable to 2.03 [sno 2010-03-16]
 	Updated textproc/p5-Text-BibTeX to 0.41 [sno 2010-03-16]
 	Updated misc/p5-App-MrShell to 2.0207 [sno 2010-03-16]
+	Updated security/p5-Crypt-Eksblowfish to 0.008 [sno 2010-03-16]
