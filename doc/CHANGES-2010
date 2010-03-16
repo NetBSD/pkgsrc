@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1329 2010/03/16 23:31:32 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1330 2010/03/16 23:41:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1575,3 +1575,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-DHCPLeases to 0.9 [sno 2010-03-16]
 	Added net/p5-Net-Bonjour version 0.96 [sno 2010-03-16]
 	Removed net/p5-Net-Rendezvous [sno 2010-03-16]
+	Updated devel/p5-Smart-Comments to 1.0.4 [sno 2010-03-16]
