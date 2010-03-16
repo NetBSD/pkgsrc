@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.527 2010/03/16 15:43:32 taca Exp $
+# $NetBSD: Makefile,v 1.528 2010/03/16 21:10:21 sno Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -312,6 +312,7 @@ SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Text-TabularDisplay
 SUBDIR+=	p5-Text-Template
 SUBDIR+=	p5-Text-Textile
+SUBDIR+=	p5-Text-Trac
 SUBDIR+=	p5-Text-Unaccent
 SUBDIR+=	p5-Text-Unidecode
 SUBDIR+=	p5-Text-WikiCreole
