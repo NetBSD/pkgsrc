@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
+
+To process PHP scripts, you will need a PHP-enabled HTTP server.  You may
+either configure the HTTP server to use the PHP CGI binary located in
+
+        ${CGIDIR}/php
+
+or you may install a PHP module for your HTTP server, e.g. www/ap-php.
+
+===========================================================================

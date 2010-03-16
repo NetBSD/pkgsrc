@@ -1,0 +1,10 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
+
+--- ext/phar/phar/phar.php.orig	2008-08-01 13:42:56.000000000 +0000
++++ ext/phar/phar/phar.php
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/php
++#!@PREFIX@/bin/php
+ <?php
+ 
+ /** @file phar.php
