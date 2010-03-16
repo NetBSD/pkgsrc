@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1310 2010/03/16 21:35:20 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1311 2010/03/16 21:45:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1556,3 +1556,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added math/itpp version 4.0.7 [agc 2010-03-16]
 	Removed cross/i386-mingw32 [asau 2010-03-16]
 	Updated databases/p5-ORLite to 1.42 [sno 2010-03-16]
+	Updated devel/p5-Data-Peek to 0.31 [sno 2010-03-16]
