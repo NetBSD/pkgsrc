@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1282 2010/03/16 15:57:47 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1283 2010/03/16 16:30:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1523,3 +1523,8 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/php-enchant version 5.3.2 [taca 2010-03-16]
 	Updated meta-pkgs/php5-extensions to 5.2.13 [taca 2010-03-16]
 	Added meta-pkgs/php53-extensions version 5.3.2 [taca 2010-03-16]
+	Updated devel/xulrunner to 1.9.2.2 [tnn 2010-03-16]
+	Updated devel/nspr to 4.8.3.9.2 [tnn 2010-03-16]
+	Updated devel/nss to 3.12.6.2.2 [tnn 2010-03-16]
+	Updated www/firefox to 3.6.2 [tnn 2010-03-16]
+	Updated net/Transmission to 1.92 [tnn 2010-03-16]
