@@ -1,4 +1,4 @@
-archive_read(3)		NetBSD Library Functions Manual	       archive_read(3)
+archive_read(3)        FreeBSD Library Functions Manual        archive_read(3)
 
 NAME
      archive_read_new, archive_read_set_filter_options,
@@ -163,7 +163,7 @@ DESCRIPTION
      These functions provide a complete API for reading streaming archives.
      The general process is to first create the struct archive object, set
      options, initialize the reader, iterate over the archive headers and
-     associated data, then close the archive and release all resources.	 The
+     associated data, then close the archive and release all resources.  The
      following summary describes the functions in approximately the order they
      would be used:
      archive_read_new()
@@ -239,7 +239,7 @@ DESCRIPTION
 
 	     The currently supported options are:
 	     Format iso9660
-		     joliet  Support Joliet extensions.	 Defaults to enabled,
+		     joliet  Support Joliet extensions.  Defaults to enabled,
 			     use !joliet to disable.
      archive_read_open()
 	     The same as archive_read_open2(), except that the skip callback
@@ -258,7 +258,7 @@ DESCRIPTION
 	     other devices that require strict I/O blocking.
      archive_read_open_fd()
 	     Like archive_read_open(), except that it accepts a file descrip-
-	     tor and block size rather than a set of function pointers.	 Note
+	     tor and block size rather than a set of function pointers.  Note
 	     that the file descriptor will not be automatically closed at end-
 	     of-archive.  This function is safe for use with tape drives or
 	     other blocked devices.
@@ -314,7 +314,7 @@ DESCRIPTION
 	     invokes archive_write_disk_set_options(3),
 	     archive_write_header(3), archive_write_data(3), and
 	     archive_write_finish_entry(3) to create the entry on disk and
-	     copy data into it.	 The flags argument is passed unmodified to
+	     copy data into it.  The flags argument is passed unmodified to
 	     archive_write_disk_set_options(3).
      archive_read_extract2()
 	     This is another version of archive_read_extract() that allows you
@@ -345,9 +345,9 @@ DESCRIPTION
 	     libarchive 2.0.
 
      Note that the library determines most of the relevant information about
-     the archive by inspection.	 In particular, it automatically detects
+     the archive by inspection.  In particular, it automatically detects
      gzip(1) or bzip2(1) compression and transparently performs the appropri-
-     ate decompression.	 It also automatically detects the archive format.
+     ate decompression.  It also automatically detects the archive format.
 
      A complete description of the struct archive and struct archive_entry
      objects can be found in the overview manual page for libarchive(3).
@@ -493,4 +493,4 @@ BUGS
      format of an empty file by inspecting the contents, so this library
      treats empty files as having a special ``empty'' format.
 
-NetBSD 5.0			April 13, 2009			    NetBSD 5.0
+FreeBSD 9.0			April 13, 2009			   FreeBSD 9.0
