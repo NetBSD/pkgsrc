@@ -1,9 +1,9 @@
-$NetBSD: patch-ra,v 1.1 2009/10/11 10:49:56 tnn Exp $
+$NetBSD: patch-ra,v 1.2 2010/03/16 15:57:02 tnn Exp $
 
---- browser/branding/unofficial/locales/browserconfig.properties.orig	2009-08-24 17:52:36.000000000 +0200
+--- browser/branding/unofficial/locales/browserconfig.properties.orig	2009-10-29 23:10:36.000000000 +0100
 +++ browser/branding/unofficial/locales/browserconfig.properties
 @@ -1,3 +1,3 @@
  # Do NOT localize or otherwise change these values
--browser.startup.homepage=http://www.mozilla.org/projects/shiretoko/
+-browser.startup.homepage=http://www.mozilla.org/projects/namoroka/
 +browser.startup.homepage=http://www.google.com/firefox
  
