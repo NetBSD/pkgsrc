@@ -1,0 +1,33 @@
+$NetBSD: patch-as,v 1.1 2010/03/16 10:59:10 tnn Exp $
+
+Treat DragonFly like FreeBSD.
+
+--- mozilla/js/src/configure.in.orig	2009-06-29 18:14:51.000000000 +0200
++++ mozilla/js/src/configure.in
+@@ -1693,7 +1693,7 @@ case "$target" in
+     fi
+     ;;
+ 
+-*-freebsd*)
++*-freebsd*|*-dragonfly*)
+     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
+ 	DLL_SUFFIX=".so.1.0"
+ 	DSO_LDOPTS="-shared"
+@@ -2504,7 +2504,7 @@ darwin*)
+ solaris*)
+     AC_DEFINE(AVMPLUS_UNIX)
+     ;;
+-freebsd*|kfreebsd*)
++freebsd*|kfreebsd*|netbsd*|dragonfly*)
+     AC_DEFINE(AVMPLUS_UNIX)
+     ;;
+ *cygwin*|*mingw*|*mks*|*msvc*|*wince)
+@@ -4185,7 +4185,7 @@ if test "$MOZ_MEMORY"; then
+   darwin*)
+     AC_DEFINE(MOZ_MEMORY_DARWIN)
+     ;;
+-  *freebsd*)
++  *freebsd*|dragonfly*)
+     AC_DEFINE(MOZ_MEMORY_BSD)
+     ;;
+   *linux*)

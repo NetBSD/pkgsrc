@@ -1,0 +1,37 @@
+$NetBSD: patch-nd,v 1.1 2010/03/16 10:59:09 tnn Exp $
+
+# reported upstream as
+#   https://bugzilla.mozilla.org/show_bug.cgi?id=514002
+
+--- mozilla/gfx/qcms/iccread.c.orig	2009-07-30 17:30:16.000000000 +0200
++++ mozilla/gfx/qcms/iccread.c	2009-09-01 21:29:29.000000000 +0200
+@@ -23,6 +23,7 @@
+ #include <math.h>
+ #include <assert.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include "qcmsint.h"
+ 
+ //XXX: use a better typename
+@@ -84,7 +85,9 @@ static uint32_t read_u32(struct mem_sour
+ 		invalid_source(mem, "Invalid offset");
+ 		return 0;
+ 	} else {
+-		return be32_to_cpu(*(__be32*)(mem->buf + offset));
++		uint32_t v;
++		memcpy(&v, mem->buf + offset, 4);
++		return be32_to_cpu(v);
+ 	}
+ }
+ 
+@@ -94,7 +97,9 @@ static uint16_t read_u16(struct mem_sour
+ 		invalid_source(mem, "Invalid offset");
+ 		return 0;
+ 	} else {
+-		return be16_to_cpu(*(__be16*)(mem->buf + offset));
++		uint16_t v;
++		memcpy(&v, mem->buf + offset, 2);
++		return be16_to_cpu(v);
+ 	}
+ }
+ 

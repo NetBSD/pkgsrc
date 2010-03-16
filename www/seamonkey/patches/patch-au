@@ -1,0 +1,26 @@
+$NetBSD: patch-au,v 1.1 2010/03/16 10:59:10 tnn Exp $
+
+SOUND_VERSION just isn't a reliable way to detect features supported by
+particular OSS implementation.
+
+--- mozilla/media/libsydneyaudio/src/sydney_audio_oss.c.orig	2009-06-29 18:15:03.000000000 +0200
++++ mozilla/media/libsydneyaudio/src/sydney_audio_oss.c
+@@ -51,9 +51,9 @@
+ // support only versions newer than 3.6.1
+ #define SUPP_OSS_VERSION OSS_VERSION(3,6,1)
+ 
+-#if (SOUND_VERSION < SUPP_OSS_VERSION)
+-#error Unsupported OSS Version
+-#else
++//#if (SOUND_VERSION < SUPP_OSS_VERSION)
++//#error Unsupported OSS Version
++//#else
+ 
+ typedef struct sa_buf sa_buf;
+ struct sa_buf {
+@@ -716,4 +716,4 @@ UNSUPPORTED(int sa_stream_drain(sa_strea
+ 
+ const char *sa_strerror(int code) { return NULL; }
+ 
+-#endif
++//#endif

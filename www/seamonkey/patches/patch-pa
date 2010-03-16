@@ -1,0 +1,12 @@
+$NetBSD: patch-pa,v 1.1 2010/03/16 10:59:10 tnn Exp $
+
+--- mozilla/xulrunner/installer/mozilla-js.pc.in.orig	2009-06-29 18:15:36.000000000 +0200
++++ mozilla/xulrunner/installer/mozilla-js.pc.in
+@@ -6,5 +6,5 @@ Name: JavaScript
+ Description: The Mozilla JavaScript Library
+ Version: %MOZILLA_VERSION%
+ Requires: %NSPR_NAME% >= %NSPR_VERSION%
+-Libs: -L${sdkdir}/lib -lmozjs
+-Cflags: -I${includedir}/stable -DXP_UNIX -DJS_THREADSAFE
++Libs: -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner -lmozjs
++Cflags: -I${includedir}/stable -I${includedir}/unstable -DXP_UNIX -DJS_THREADSAFE

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2010/03/03 13:54:47 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2010/03/16 10:59:09 tnn Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
 TB_VER=		3.0.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,14 +23,6 @@ CONFIGURE_ARGS+=	--enable-application=mail
 CONFIGURE_ARGS+=	--enable-static
 
 ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird
-
-MOZILLA_PATCHES=	${.CURDIR}/../../devel/xulrunner/patches/patch-*
-pre-patch:
-	@${STEP_MSG} "Applying common mozilla patches from devel/xulrunner"
-.for i in ${MOZILLA_PATCHES}
-	${RUN} ${CAT} ${i} | ${PATCH} -s -p0 -d ${WRKSRC}/${MOZILLA_DIR} || \
-	  { ${ERROR_MSG} "Patch ${i} failed"; ${_PKGSRC_PATCH_FAIL}; }
-.endfor
 
 pre-configure:
 	cd ${WRKSRC}/directory/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
@@ -58,12 +51,6 @@ post-install:
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
 	${INSTALL_DATA} ${WRKSRC}/mail/branding/nightly/mailicon48.png	\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
-
-SUBST_CLASSES+=			fix-sqlite-dep
-SUBST_STAGE.fix-sqlite-dep=	pre-configure
-SUBST_MESSAGE.fix-sqlite-dep=	Fixing sqlite dependency
-SUBST_FILES.fix-sqlite-dep=	${MOZILLA_DIR}/configure.in configure.in
-SUBST_SED.fix-sqlite-dep=	-e 's,\(SQLITE_VERSION\)=[.0-9]*,\1=3.6.21,g'
 
 .include "../../devel/xulrunner/mozilla-common.mk"
 .include "options.mk"

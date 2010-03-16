@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2010/02/17 20:22:45 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2010/03/16 10:59:09 tnn Exp $
 #
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER}
 SM_VER=		2.0.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,14 +23,6 @@ CONFIGURE_ARGS+=	--enable-application=suite
 CONFIGURE_ARGS+=	--enable-static
 
 ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
-
-MOZILLA_PATCHES=	${.CURDIR}/../../devel/xulrunner/patches/patch-*
-pre-patch:
-	@${STEP_MSG} "Applying common mozilla patches from devel/xulrunner"
-.for i in ${MOZILLA_PATCHES}
-	${RUN} ${CAT} ${i} | ${PATCH} -s -p0 -d ${WRKSRC}/${MOZILLA_DIR} || \
-	  { ${ERROR_MSG} "Patch ${i} failed"; ${_PKGSRC_PATCH_FAIL}; }
-.endfor
 
 pre-configure:
 	cd ${WRKSRC}/directory/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
