@@ -1,0 +1,10 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
+
+--- ext/phar/Makefile.frag.orig	2009-07-23 15:48:04.000000000 +0000
++++ ext/phar/Makefile.frag
+@@ -44,4 +44,4 @@ install-pharcmd: pharcmd
+ 	-@$(mkinstalldirs) $(INSTALL_ROOT)$(bindir)
+ 	$(INSTALL) $(builddir)/phar.phar $(INSTALL_ROOT)$(bindir)
+ 	-@rm -f $(INSTALL_ROOT)$(bindir)/phar
+-	$(LN_S) -f $(bindir)/phar.phar $(INSTALL_ROOT)$(bindir)/phar
++	$(LN_S) -f phar.phar $(INSTALL_ROOT)$(bindir)/phar

@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
+
+--- ext/gd/config.m4.orig	2009-05-27 08:18:24.000000000 +0000
++++ ext/gd/config.m4
+@@ -45,18 +45,7 @@ dnl Checks for the configure options
+ dnl
+ 
+ AC_DEFUN([PHP_GD_ZLIB],[
+-	if test "$PHP_ZLIB_DIR" != "no" && test "$PHP_ZLIB_DIR" != "yes"; then
+-		if test -f "$PHP_ZLIB_DIR/include/zlib/zlib.h"; then
+-			PHP_ZLIB_DIR="$PHP_ZLIB_DIR"
+-			PHP_ZLIB_INCDIR="$PHP_ZLIB_DIR/include/zlib"
+-		elif test -f "$PHP_ZLIB_DIR/include/zlib.h"; then
+-			PHP_ZLIB_DIR="$PHP_ZLIB_DIR"
+-			PHP_ZLIB_INCDIR="$PHP_ZLIB_DIR/include"
+-		else
+-			AC_MSG_ERROR([Can't find zlib headers under "$PHP_ZLIB_DIR"])
+-		fi
+-	else
+-		for i in /usr/local /usr; do
++		for i in "$PHP_ZLIB_DIR" /usr/local /usr; do
+ 			if test -f "$i/include/zlib/zlib.h"; then
+ 				PHP_ZLIB_DIR="$i"
+ 				PHP_ZLIB_INCDIR="$i/include/zlib"
+@@ -65,7 +54,6 @@ AC_DEFUN([PHP_GD_ZLIB],[
+ 				PHP_ZLIB_INCDIR="$i/include"
+ 			fi
+ 		done
+-	fi
+ ])
+ 
+ AC_DEFUN([PHP_GD_JPEG],[
