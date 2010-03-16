@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1312 2010/03/16 14:03:50 taca Exp $
+# $NetBSD: Makefile,v 1.1313 2010/03/16 22:47:12 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -653,6 +653,7 @@ SUBDIR+=	p5-File-pushd
 SUBDIR+=	p5-FileHandle-Fmode
 SUBDIR+=	p5-FileHandle-Unget
 SUBDIR+=	p5-FileKGlob
+SUBDIR+=	p5-Filesys-Notify-Simple
 SUBDIR+=	p5-Format-Human-Bytes
 SUBDIR+=	p5-FreezeThaw
 SUBDIR+=	p5-Getopt-ArgvFile
