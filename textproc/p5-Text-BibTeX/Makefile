@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2010/03/09 21:54:01 sno Exp $
+# $NetBSD: Makefile,v 1.19 2010/03/16 09:53:02 sno Exp $
 
-DISTNAME=	Text-BibTeX-0.40
+DISTNAME=	Text-BibTeX-0.41
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5tbt
 CATEGORIES=	textproc perl5
