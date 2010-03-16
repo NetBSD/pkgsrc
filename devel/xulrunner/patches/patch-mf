@@ -1,9 +1,9 @@
-$NetBSD: patch-mf,v 1.2 2009/10/28 11:36:36 tnn Exp $
+$NetBSD: patch-mf,v 1.3 2010/03/16 15:57:02 tnn Exp $
 
 Add DragonFly support.
 Make sure nss libraries have a run path defined.
 
---- security/coreconf/config.mk.orig	2009-10-16 17:14:17.000000000 +0200
+--- security/coreconf/config.mk.orig	2010-03-15 14:56:04.000000000 +0000
 +++ security/coreconf/config.mk
 @@ -63,7 +63,7 @@ endif
  #######################################################################
@@ -14,7 +14,7 @@ Make sure nss libraries have a run path defined.
  
  ifeq (,$(filter-out $(TARGET_OSES),$(OS_TARGET)))
  include $(CORE_DEPTH)/coreconf/$(OS_TARGET).mk
-@@ -212,3 +212,4 @@ endif
+@@ -207,3 +207,4 @@ endif
  DEFINES += -DUSE_UTIL_DIRECTLY
  USE_UTIL_DIRECTLY = 1
  
