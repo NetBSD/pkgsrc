@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1320 2010/03/16 22:42:23 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1321 2010/03/16 22:48:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1566,3 +1566,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated textproc/p5-Text-BibTeX to 0.42 [sno 2010-03-16]
 	Added textproc/py-4Suite version 1.0.2 [pettai 2010-03-16]
 	Updated math/p5-Spreadsheet-Read to 0.39 [sno 2010-03-16]
+	Added devel/p5-Filesys-Notify-Simple version 0.05 [seb 2010-03-16]
