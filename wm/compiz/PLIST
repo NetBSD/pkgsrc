@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2010/03/16 08:03:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/03/16 11:06:17 obache Exp $
 bin/compiz
 bin/gtk-window-decorator
+${PLIST.kde}bin/kde-window-decorator
 include/compiz/compiz-common.h
 include/compiz/compiz-core.h
 include/compiz/compiz-cube.h
@@ -20,6 +21,7 @@ lib/compiz/libgconf.la
 lib/compiz/libglib.la
 lib/compiz/libgnomecompat.la
 lib/compiz/libini.la
+${PLIST.kde}lib/compiz/libkconfig.la
 lib/compiz/libminimize.la
 lib/compiz/libmove.la
 lib/compiz/libobs.la
@@ -39,6 +41,7 @@ lib/compiz/libzoom.la
 lib/libdecoration.la
 lib/pkgconfig/compiz-cube.pc
 lib/pkgconfig/compiz-gconf.pc
+${PLIST.kde}lib/pkgconfig/compiz-kconfig.pc
 lib/pkgconfig/compiz-scale.pc
 lib/pkgconfig/compiz.pc
 lib/pkgconfig/libdecoration.pc
@@ -61,7 +64,9 @@ share/compiz/gnomecompat.xml
 share/compiz/icon.png
 share/compiz/ini.xml
 share/compiz/inotify.xml
+${PLIST.kde}share/compiz/kcfg.xslt
 share/compiz/kconfig.xml
+${PLIST.kde}share/compiz/kconfig.xslt
 share/compiz/minimize.xml
 share/compiz/move.xml
 share/compiz/obs.xml
@@ -115,6 +120,39 @@ share/gconf/schemas/gwd.schemas
 ${PLIST.gnome}share/gnome-control-center/keybindings/50-compiz-desktop-key.xml
 ${PLIST.gnome}share/gnome-control-center/keybindings/50-compiz-key.xml
 ${PLIST.gnome}share/gnome/wm-properties/compiz-wm.desktop
+${PLIST.kde}share/kde/config.kcfg/compiz-annotate.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-blur.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-clone.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-commands.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-core.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-cube.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-dbus.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-decoration.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-fade.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-fs.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-gconf.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-glib.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-gnomecompat.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-ini.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-inotify.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-kconfig.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-minimize.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-move.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-obs.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-place.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-png.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-regex.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-resize.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-rotate.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-scale.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-screenshot.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-svg.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-switcher.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-video.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-water.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-wobbly.kcfg
+${PLIST.kde}share/kde/config.kcfg/compiz-zoom.kcfg
+${PLIST.kde}share/kde/config/compizrc
 share/locale/af/LC_MESSAGES/compiz.mo
 share/locale/ar/LC_MESSAGES/compiz.mo
 share/locale/bg/LC_MESSAGES/compiz.mo
