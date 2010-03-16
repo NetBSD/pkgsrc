@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1301 2010/03/16 19:14:56 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1302 2010/03/16 19:25:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1546,3 +1546,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Config-IniFiles to 2.57 [sno 2010-03-16]
 	Updated devel/p5-Async-Interrupt to 1.03 [sno 2010-03-16]
 	Updated devel/p5-lib-abs to 0.91 [sno 2010-03-16]
+	Updated databases/mysql51-client to 5.1.44nb1 [wiz 2010-03-16]
+	Updated databases/mysql51-server to 5.1.44nb1 [wiz 2010-03-16]
