@@ -1,4 +1,4 @@
-# $LastChangedRevision: 8 $, $LastChangedDate: 2008-05-01 00:11:33 +0200 (Thu, 01 May 2008) $
+# $LastChangedRevision: 1827 $, $LastChangedDate: 2010-01-16 16:21:36 -0800 (Sat, 16 Jan 2010) $
 Summary:        Library to create and read several different archive formats
 Summary(pl):    Biblioteka do tworzenia i odczytu ró¿nych formatów archiwów
 Name:           libarchive
@@ -127,17 +127,8 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.1aix53.spec,v $
-Revision 1.1.1.3  2010/03/14 17:57:17  joerg
-libarchive-2.8.2:
-- Fix NULL deference for short self-extracting zip archives
-- Don't dereference symlinks on Linux when reading ACLs
-- Better detection of SHA2 support for old OpenSSL versions
-- Fix parsing of input files for bsdtar -T
-- Do not leak setup_xattr into the global namespace
-- Fix build when an older libarchive is already installed
-- Use O_BINARY opening files in bsdtar
-- Include missing archive_crc32.h
-- Correctly include iconv.h required by libxml2
+Revision 1.1.1.4  2010/03/16 17:07:00  joerg
+libarchive-2.8.3: Build fix for Linux
 
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3
