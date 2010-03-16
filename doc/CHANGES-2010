@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1325 2010/03/16 23:05:25 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1326 2010/03/16 23:07:08 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1571,3 +1571,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Lexical-Persistence to 1.02 [sno 2010-03-16]
 	Added www/gallery2 version 2.2.6 [pettai 2010-03-16]
 	Updated devel/p5-ShipIt to 0.53 [sno 2010-03-16]
+	Added www/gallery version 1.5.10 [pettai 2010-03-16]
