@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.818 2010/03/16 15:15:54 taca Exp $
+# $NetBSD: Makefile,v 1.819 2010/03/16 15:21:32 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -409,7 +409,6 @@ SUBDIR+=	php-soap
 SUBDIR+=	php-sockets
 SUBDIR+=	php-xmlrpc
 SUBDIR+=	php-yaz
-SUBDIR+=	php5-soap
 SUBDIR+=	pim6dd
 SUBDIR+=	pim6sd
 SUBDIR+=	pload
