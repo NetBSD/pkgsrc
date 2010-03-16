@@ -15,25 +15,16 @@
 # * $Locker:  $
 # * $ProjectName: $
 # * $ProjectRevision: $
-# * $LastChangedRevision: 29 $
-# * $LastChangedDate: 2008-05-06 00:10:33 +0200 (Tue, 06 May 2008) $
+# * $LastChangedRevision: 1827 $
+# * $LastChangedDate: 2010-01-16 16:21:36 -0800 (Sat, 16 Jan 2010) $
 # * $State: Exp $
 # * $RCSfile: wccpp.nt,v $
 # * $Source: /cvsroot/pkgsrc/archivers/libarchive/files/build/windows/Attic/wccpp.nt,v $
 # *
 # * Change Log:
 # * $Log: wccpp.nt,v $
-# * Revision 1.1.1.2  2010/03/14 17:56:32  joerg
-# * libarchive-2.8.2:
-# * - Fix NULL deference for short self-extracting zip archives
-# * - Don't dereference symlinks on Linux when reading ACLs
-# * - Better detection of SHA2 support for old OpenSSL versions
-# * - Fix parsing of input files for bsdtar -T
-# * - Do not leak setup_xattr into the global namespace
-# * - Fix build when an older libarchive is already installed
-# * - Use O_BINARY opening files in bsdtar
-# * - Include missing archive_crc32.h
-# * - Correctly include iconv.h required by libxml2
+# * Revision 1.1.1.3  2010/03/16 17:05:52  joerg
+# * libarchive-2.8.3: Build fix for Linux
 # *
 # *
 # */

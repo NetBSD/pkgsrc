@@ -1,10 +1,10 @@
-LIBARCHIVE(3)		NetBSD Library Functions Manual		 LIBARCHIVE(3)
+LIBARCHIVE(3)	       FreeBSD Library Functions Manual 	 LIBARCHIVE(3)
 
 NAME
      libarchive -- functions for reading and writing streaming archives
 
 LIBRARY
-     Reading and Writing Streaming Archives Library (libarchive, -larchive)
+     Streaming Archive Library (libarchive, -larchive)
 
 OVERVIEW
      The libarchive library provides a flexible interface for reading and
@@ -16,22 +16,22 @@ OVERVIEW
 
      When reading an archive, the library automatically detects the format and
      the compression.  The library currently has read support for:
-       old-style tar archives,
-       most variants of the POSIX ``ustar'' format,
-       the POSIX ``pax interchange'' format,
-       GNU-format tar archives,
-       most common cpio archive formats,
-       ISO9660 CD images (with or without RockRidge extensions),
-       Zip archives.
+     o	 old-style tar archives,
+     o	 most variants of the POSIX ``ustar'' format,
+     o	 the POSIX ``pax interchange'' format,
+     o	 GNU-format tar archives,
+     o	 most common cpio archive formats,
+     o	 ISO9660 CD images (with or without RockRidge extensions),
+     o	 Zip archives.
      The library automatically detects archives compressed with gzip(1),
      bzip2(1), or compress(1) and decompresses them transparently.
 
      When writing an archive, you can specify the compression to be used and
-     the format to use.	 The library can write
-       POSIX-standard ``ustar'' archives,
-       POSIX ``pax interchange format'' archives,
-       POSIX octet-oriented cpio archives,
-       two different variants of shar archives.
+     the format to use.  The library can write
+     o	 POSIX-standard ``ustar'' archives,
+     o	 POSIX ``pax interchange format'' archives,
+     o	 POSIX octet-oriented cpio archives,
+     o	 two different variants of shar archives.
      Pax interchange format is an extension of the tar archive format that
      eliminates essentially all of the limitations of historic tar formats in
      a standard fashion that is supported by POSIX-compliant pax(1) implemen-
@@ -57,7 +57,7 @@ READING AN ARCHIVE
      corresponding compression and format support.  Note that these latter
      functions perform two distinct operations: they cause the corresponding
      support code to be linked into your program, and they enable the corre-
-     sponding auto-detect code.	 Unless you have specific constraints, you
+     sponding auto-detect code.  Unless you have specific constraints, you
      will generally want to invoke archive_read_support_compression_all() and
      archive_read_support_format_all() to enable auto-detect for all formats
      and compression types currently supported by the library.
@@ -106,7 +106,7 @@ WRITING AN ARCHIVE
 
      Individual archive entries are written in a three-step process: You first
      initialize a struct archive_entry structure with information about the
-     new entry.	 At a minimum, you should set the pathname of the entry and
+     new entry.  At a minimum, you should set the pathname of the entry and
      provide a struct stat with a valid st_mode field, which specifies the
      type of object and st_size field, which specifies the size of the data
      portion of the object.  The archive_write_header() function actually
@@ -133,7 +133,7 @@ DESCRIPTION
      Users familiar with historic formats should be aware that the newer vari-
      ants have eliminated most restrictions on the length of textual fields.
      Clients should not assume that filenames, link names, user names, or
-     group names are limited in length.	 In particular, pax interchange format
+     group names are limited in length.  In particular, pax interchange format
      can easily accommodate pathnames in arbitrary character sets that exceed
      PATH_MAX.
 
@@ -151,7 +151,7 @@ RETURN VALUES
      cated and initialized struct archive object.
 
      archive_read_data() and archive_write_data() return a count of the number
-     of bytes actually read or written.	 A value of zero indicates the end of
+     of bytes actually read or written.  A value of zero indicates the end of
      the data for this entry.  A negative value indicates an error, in which
      case the archive_errno() and archive_error_string() functions can be used
      to obtain more information.
@@ -182,4 +182,4 @@ BUGS
      formats do not support nanosecond timestamps; old tar formats do not sup-
      port large device numbers.
 
-NetBSD 5.0			August 19, 2006			    NetBSD 5.0
+FreeBSD 9.0			August 19, 2006 		   FreeBSD 9.0

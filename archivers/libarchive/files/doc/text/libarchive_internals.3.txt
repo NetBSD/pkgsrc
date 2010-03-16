@@ -1,4 +1,4 @@
-LIBARCHIVE(3)		NetBSD Library Functions Manual		 LIBARCHIVE(3)
+LIBARCHIVE(3)	       FreeBSD Library Functions Manual 	 LIBARCHIVE(3)
 
 NAME
      libarchive_internals -- description of libarchive internal interfaces
@@ -32,7 +32,7 @@ READ ARCHITECTURE
      archive object to read entries and bodies from an archive stream.	Inter-
      nally, the archive object is cast to an archive_read object, which holds
      all read-specific data.  The API has four layers: The lowest layer is the
-     I/O layer.	 This layer can be overridden by clients, but most clients use
+     I/O layer.  This layer can be overridden by clients, but most clients use
      the packaged I/O callbacks provided, for example, by
      archive_read_open_memory(3), and archive_read_open_fd(3).	The compres-
      sion layer calls the I/O layer to read bytes and decompresses them for
@@ -55,11 +55,11 @@ READ ARCHITECTURE
 
      The client read callback is expected to provide a block of data on each
      call.  A zero-length return does indicate end of file, but otherwise
-     blocks may be as small as one byte or as large as the entire file.	 In
+     blocks may be as small as one byte or as large as the entire file.  In
      particular, blocks may be of different sizes.
 
      The client skip callback returns the number of bytes actually skipped,
-     which may be much smaller than the skip requested.	 The only requirement
+     which may be much smaller than the skip requested.  The only requirement
      is that the skip not be larger.  In particular, clients are allowed to
      return zero for any skip that they don't want to handle.  The skip call-
      back must never be invoked with a negative value.
@@ -96,7 +96,7 @@ READ ARCHITECTURE
 	     pression handler invokes the internal
 	     __archive_read_register_compression() function to provide bid and
 	     initialization functions.	This function returns NULL on error or
-	     else a pointer to a struct decompressor_t.	 This structure con-
+	     else a pointer to a struct decompressor_t.  This structure con-
 	     tains a void * config slot that can be used for storing any cus-
 	     tomization information.
      Bid     The bid function is invoked with a pointer and size of a block of
@@ -148,7 +148,7 @@ READ ARCHITECTURE
 	     The header read is usually the most complex part of any format.
 	     There are a few strategies worth mentioning: For formats such as
 	     tar or cpio, reading and parsing the header is straightforward
-	     since headers alternate with data.	 For formats that store all
+	     since headers alternate with data.  For formats that store all
 	     header data at the beginning of the file, the first header read
 	     request may have to read all headers into memory and store that
 	     data, sorted by the location of the file data.  Subsequent header
@@ -162,7 +162,7 @@ READ ARCHITECTURE
 	     ber that the decompressor will return as much data as it has.
 	     Generally, you will want to request one byte, examine the return
 	     value to see how much data is available, and possibly trim that
-	     to the amount you can use.	 You should invoke consume for each
+	     to the amount you can use.  You should invoke consume for each
 	     block just before you return it.
      Skip All Data
 	     The skip data call should skip over all file data and trailing
@@ -202,7 +202,7 @@ WRITE_DISK ARCHITECTURE
 GENERAL SERVICES
      The archive_read, archive_write, and archive_write_disk objects all con-
      tain an initial archive object which provides common support for a set of
-     standard services.	 (Recall that ANSI/ISO C90 guarantees that you can
+     standard services.  (Recall that ANSI/ISO C90 guarantees that you can
      cast freely between a pointer to a structure and a pointer to the first
      element of that structure.)  The archive object has a magic value that
      indicates which API this object is associated with, slots for storing
@@ -212,7 +212,7 @@ MISCELLANEOUS NOTES
      Connecting existing archiving libraries into libarchive is generally
      quite difficult.  In particular, many existing libraries strongly assume
      that you are reading from a file; they seek forwards and backwards as
-     necessary to locate various pieces of information.	 In contrast,
+     necessary to locate various pieces of information.  In contrast,
      libarchive never seeks backwards in its input, which sometimes requires
      very different approaches.
 
@@ -245,4 +245,4 @@ AUTHORS
      The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
 BUGS
-NetBSD 5.0			April 16, 2007			    NetBSD 5.0
+FreeBSD 9.0			April 16, 2007			   FreeBSD 9.0
