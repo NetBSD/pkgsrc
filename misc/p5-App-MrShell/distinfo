@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/08/19 19:55:01 sno Exp $
+$NetBSD: distinfo,v 1.3 2010/03/16 10:08:22 sno Exp $
 
-SHA1 (App-MrShell-2.0205.tar.gz) = 7a02a20af60bae5c799fd692c3fa60c79739857a
-RMD160 (App-MrShell-2.0205.tar.gz) = 6086a078900071c26e4be9c6cf48def4493cb3e6
-Size (App-MrShell-2.0205.tar.gz) = 15017 bytes
+SHA1 (App-MrShell-2.0207.tar.gz) = 39df8184bd38a109366becdaf64ad21c7129fce5
+RMD160 (App-MrShell-2.0207.tar.gz) = a2891a83ca16f85515db934e667837ed659525ac
+Size (App-MrShell-2.0207.tar.gz) = 15165 bytes
