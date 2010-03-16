@@ -458,14 +458,12 @@ builds)</a></span></dt>
 </dl></dd>
 <dt><span class="appendix"><a href="#ftp-layout">C. Directory layout of the pkgsrc FTP server</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#ftp-bootstrap">C.1. bootstrap-pkgsrc: Bootstrap kits</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-distfiles">C.2. distfiles: The distributed source files</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-iso">C.3. iso: Currently empty</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-misc">C.4. misc: Miscellaneous things</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-packages">C.5. packages: Binary packages</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-reports">C.6. reports: Bulk build reports</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-source">C.7. current,
-pkgsrc-200xQy:
+<dt><span class="sect1"><a href="#ftp-distfiles">C.1. distfiles: The distributed source files</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-misc">C.2. misc: Miscellaneous things</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-packages">C.3. packages: Binary packages</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-reports">C.4. reports: Bulk build reports</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-source">C.5. current,
+pkgsrc-20xxQy:
 source packages</a></span></dt>
 </dl></dd>
 <dt><span class="appendix"><a href="#editing">D. Editing guidelines for the pkgsrc guide</a></span></dt>
@@ -567,14 +565,14 @@ pkgsrc provides the following key features:
 <p>The following principles are basic to pkgsrc:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>&#8220;<span class="quote">It should only work if it's right.</span>&#8221;
-&#8212; That means, if a package contains bugs, it's better to find
+&mdash; That means, if a package contains bugs, it's better to find
 them and to complain about them rather than to just install the package
 and hope that it works. There are numerous checks in pkgsrc that try to
 find such bugs: Static analysis tools (<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>), build-time checks (portability
 of shell scripts), and post-installation checks (installed files,
 references to shared libraries, script interpreters).</p></li>
 <li><p>&#8220;<span class="quote">If it works, it should work everywhere</span>&#8221;
-&#8212; Like NetBSD has been ported to many hardware architectures,
+&mdash; Like NetBSD has been ported to many hardware architectures,
 pkgsrc has been ported to many operating systems. Care is taken that
 packages behave the same on all platforms.</p></li>
 </ul></div>
@@ -950,12 +948,12 @@ and dashes.</p>
 	directory <code class="filename">pkgsrc-2009Q1</code> and is also called <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2009Q1/pkgsrc-2009Q1.tar.gz" target="_top"><code class="filename">pkgsrc-2009Q1.tar.gz</code></a>.</p>
 <p>To download a pkgsrc stable tarball, run:</p>
 <pre class="screen">
-<code class="prompt">$</code> <strong class="userinput"><code>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/<em class="replaceable"><code>pkgsrc-200xQy</code></em>/<em class="replaceable"><code>pkgsrc-200xQy</code></em>.tar.gz</code></strong></pre>
-<p>Where <em class="replaceable"><code>pkgsrc-200xQy</code></em> is the
+<code class="prompt">$</code> <strong class="userinput"><code>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/<em class="replaceable"><code>pkgsrc-20xxQy</code></em>/<em class="replaceable"><code>pkgsrc-20xxQy</code></em>.tar.gz</code></strong></pre>
+<p>Where <em class="replaceable"><code>pkgsrc-20xxQy</code></em> is the
 	stable branch to be downloaded, for example, 
 	&#8220;<span class="quote">pkgsrc-2009Q1</span>&#8221;.</p>
 <p>Then, extract it with:</p>
-<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>tar -xzf <em class="replaceable"><code>pkgsrc-200xQy</code></em>.tar.gz -C /usr</code></strong></pre>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>tar -xzf <em class="replaceable"><code>pkgsrc-20xxQy</code></em>.tar.gz -C /usr</code></strong></pre>
 <p>This will create the directory <code class="filename">pkgsrc/</code>
 	in <code class="filename">/usr/</code> and all the package source will be 
 	stored under <code class="filename">/usr/pkgsrc/</code>.</p>
@@ -1013,8 +1011,8 @@ rdiff -u
 </pre>
 <p>To fetch a specific pkgsrc stable branch from scratch, run:</p>
 <pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr</code></strong>
-<code class="prompt">$</code> <strong class="userinput"><code>cvs checkout -r <em class="replaceable"><code>pkgsrc-200xQy</code></em> -P pkgsrc</code></strong></pre>
-<p>Where <em class="replaceable"><code>pkgsrc-200xQy</code></em> is the stable 
+<code class="prompt">$</code> <strong class="userinput"><code>cvs checkout -r <em class="replaceable"><code>pkgsrc-20xxQy</code></em> -P pkgsrc</code></strong></pre>
+<p>Where <em class="replaceable"><code>pkgsrc-20xxQy</code></em> is the stable 
 	branch to be checked out, for example, &#8220;<span class="quote">pkgsrc-2009Q1</span>&#8221;</p>
 <p>This will create the directory <code class="filename">pkgsrc/</code> 
 	in your <code class="filename">/usr/</code> directory and all the package source 
@@ -1072,7 +1070,7 @@ rdiff -u
 	by adding the option &#8220;<span class="quote">-A</span>&#8221; after the
 	&#8220;<span class="quote">update</span>&#8221; keyword. To switch from the current branch
 	back to the stable branch, add the
-	&#8220;<span class="quote">-rpkgsrc-2009Q1</span>&#8221; option.</p>
+	&#8220;<span class="quote">-rpkgsrc-2009Q3</span>&#8221; option.</p>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
@@ -1146,77 +1144,13 @@ rdiff -u
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="darwin"></a>3.3.1. Darwin (Mac OS X)</h3></div></div></div>
-<p>Darwin 5.x and up are supported. There are two methods of using
-	pkgsrc on Mac OS X, by using a <a class="link" href="#platform.osx-image" title="3.3.1.1. Using a disk image">disk
-	  image</a>, or a <a class="link" href="#platform.osx-part" title="3.3.1.2. Using a UFS or HFSX partition">UFS or HFSX
-	  partition</a>.</p>
-<p>Before you start, you will need to download and install the Mac OS X Developer
-      Tools from Apple's Developer Connection.  See <a class="ulink" href="http://developer.apple.com/macosx/" target="_top">http://developer.apple.com/macosx/</a>
-      for details.  Also, make sure you install X11 for Mac OS X and the X11 SDK
-      from <a class="ulink" href="http://www.apple.com/macosx/x11/download/" target="_top">http://www.apple.com/macosx/x11/download/</a>
-      if you intend to build packages that use the X11 Window System.</p>
-<p>If you already have a UFS or HFSX partition, or have a spare partition
-      that you can format as UFS or HFSX, it is recommended to use that instead of
-      the disk image. It'll be somewhat faster and will mount automatically
-      at boot time, where you must manually mount a disk image.</p>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Note</h3>
-<p>You cannot use an ordinary HFS+ file system for pkgsrc, because pkgsrc currently
-	  requires the file system to be case-sensitive. You can, however, use a case-sensitive HFS+ (aka HFSX) file system as found in Darwin 7.0 and newer.</p>
-</div>
-<div class="sect3" lang="en">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="platform.osx-image"></a>3.3.1.1. Using a disk image</h4></div></div></div>
-<p>Create the disk image:</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cd pkgsrc/bootstrap</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>./darwindiskimage create ~/Documents/NetBSD 1024</code></strong> # megabytes - season to taste
-<code class="prompt">#</code> <strong class="userinput"><code>./darwindiskimage mount ~/Documents/NetBSD</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>sudo chown `id -u`:`id -g` /Volumes/NetBSD</code></strong></pre>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Note</h3>
-<p>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  In the case of UFS, it will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.  In the case of HFSX, it will disable journaling.</p>
-</div>
-<p>Allow suid:</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>sudo mount -u -o suid /Volumes/NetBSD</code></strong></pre>
-<p>Changing the build directory:</p>
-<p>After bootstrapping you need to change the default package build directory to somewhere outside the disk image so it doesn't get filled up in the process of building packages. Add something like that to <code class="filename">mk.conf</code>.</p>
-<pre class="programlisting">
-	  WRKOBJDIR?=		/tmp/pkgsrc         # build here instead of in pkgsrc
-	</pre>
-</div>
-<div class="sect3" lang="en">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="platform.osx-part"></a>3.3.1.2. Using a UFS or HFSX partition</h4></div></div></div>
-<p>By default, <code class="filename">/usr</code> will be on your root file
-	system, normally HFS+. It is possible to use the default
-	<span class="emphasis"><em>prefix</em></span> of <code class="filename">/usr/pkg</code>
-	by symlinking <code class="filename">/usr/pkg</code> to a directory on a UFS
-	or HFSX file system. Obviously, another symlink is required if you want to
-	place the package database directory outside the
-	<span class="emphasis"><em>prefix</em></span>. e.g.</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>./bootstrap --pkgdbdir /usr/pkg/pkgdb</code></strong></pre>
-<p>If you created your partitions at the time of installing Mac OS X
-	and formatted the target partition as UFS or HFSX, it should automatically
-	mount on <code class="filename">/Volumes/&lt;volume name&gt;</code> when the
-	machine boots. If you are (re)formatting a partition as UFS or HFSX, you need
-	to ensure that the partition map correctly reflects
-	&#8220;<span class="quote">Apple_UFS</span>&#8221; or &#8220;<span class="quote">Apple_HFSX</span>&#8221; and not &#8220;<span class="quote">Apple_HFS</span>&#8221;.</p>
-<p>The problem is that none of the disk tools will let you touch a
-	disk that is booted from. You can unmount the partition, but even if
-	you newfs it, the partition type will be incorrect and the
-	automounter won't mount it. It can be mounted manually, but it won't
-	appear in Finder.</p>
-<p>You'll need to boot off of the OS X Installation (User) CD.  When
-	the Installation program starts, go up to the menu and select Disk
-	Utility.  Now, you will be able to select the partition you want
-	to be UFS or HFSX, and Format it Apple UFS or HFSX. Quit the Disk Utility, quit the
-	installer which will reboot your machine. The new UFS or HFSX file system
-	will appear in Finder.</p>
-<p>Be aware that the permissions on the new file system will be writable
-	by root only.</p>
-<p>This note is as of 10.2 (Jaguar) and applies to earlier versions.
-	Hopefully Apple will fix Disk Utility in 10.3 (Panther).</p>
-</div>
+<p>Darwin 5.x and up are supported. Before you start, you
+      will need to download and install the Mac OS X Developer Tools
+      from Apple's Developer Connection. See
+      <a class="ulink" href="http://developer.apple.com/macosx/" target="_top">http://developer.apple.com/macosx/</a>
+      for details.  Also, make sure you install X11 (an optional
+      package included with the Developer Tools) if you intend to
+      build packages that use the X11 Window System.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -2204,7 +2138,7 @@ works.</p>
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &#8212; it is an internal definition which refers to the
+	    &mdash; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -2875,7 +2809,7 @@ fi
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 	  <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -2956,17 +2890,17 @@ fi
 <p>Then, make sure that you have <code class="varname">RSYNC_DST</code>
       set properly in your <code class="filename">mk/bulk/build.conf</code>
       file, i.e. adjust it to something like one of the following:</p>
-<pre class="screen">RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch/upload </pre>
-<p>Please use appropriate values for "packages-200xQy",
+<pre class="screen">RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload </pre>
+<p>Please use appropriate values for "packages-20xxQy",
       "NetBSD-a.b.c" and "arch" here. If your login on ftp.NetBSD.org
       is different from your local login, write your login directly
       into the variable, e.g. my local account is "feyrer", but for my
       login "hubertf", I use:</p>
-<pre class="screen">RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch/upload</pre>
+<pre class="screen">RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload</pre>
 <p>A separate <code class="filename">upload</code> directory is used
       here to allow "closing" the directory during upload. To do
       so, run the following command on ftp.NetBSD.org next:</p>
-<pre class="screen">nbftp% <strong class="userinput"><code>mkdir -p -m 750 /pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch/upload</code></strong></pre>
+<pre class="screen">nbftp% <strong class="userinput"><code>mkdir -p -m 750 /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload</code></strong></pre>
 <p>Please note that <code class="filename">/pub/NetBSD/packages</code> is
       only appropriate for packages for the NetBSD operating
       system. Binary packages for other operating systems should go
@@ -3008,7 +2942,7 @@ chroot-<code class="prompt">#</code> <strong class="userinput"><code>exit</code>
       <code class="filename">upload</code> directory to have them accessible
       to everyone:</p>
 <pre class="screen">
-nbftp% <strong class="userinput"><code>cd /pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch</code></strong>
+nbftp% <strong class="userinput"><code>cd /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch</code></strong>
 nbftp% <strong class="userinput"><code>mv upload/* .</code></strong>
 nbftp% <strong class="userinput"><code>rmdir upload</code></strong>
 nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
@@ -4044,7 +3978,7 @@ the software is known to work with, from the most recent to the older
 one, e.g.
 </p>
 <pre class="programlisting">
-PYTHON_VERSIONS_ACCEPTED=       25 24 23
+PYTHON_VERSIONS_ACCEPTED=       25 24
 </pre>
 <p>
 If the packaged software is a Python module, include
@@ -4603,7 +4537,7 @@ PATCHDIR= ${.CURDIR}/../xemacs/patches
       specific <span class="emphasis"><em>features</em></span> you need.  For example,
       instead of assuming that kqueue is available under NetBSD and
       using the <code class="varname">__NetBSD__</code> macro to conditionalize
-      kqueue support, add a check that detects kqueue itself &#8212;
+      kqueue support, add a check that detects kqueue itself &mdash;
       yes, this generally involves patching the
       <span class="command"><strong>configure</strong></span> script.  There is absolutely nothing
       that prevents some OSes from adopting interfaces from other OSes
@@ -4974,7 +4908,7 @@ correct:
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&#8212;the <span class="command"><strong>.for</strong></span>
+<p>No rule without exception&mdash;the <span class="command"><strong>.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -7627,7 +7561,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168230298940"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id52055318"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7637,7 +7571,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168230298949"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id52055326"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7648,7 +7582,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168230298957"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id52055335"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -8476,7 +8410,7 @@ ${LIBTOOL} --mode=link ${CC} -o <em class="replaceable"><code>someprog</code></e
 	--mode=install</span>&#8221;, and change the library name to
 	<code class="filename">.la</code>. e.g.</p>
 <pre class="programlisting">
-${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
+${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
 	</pre>
 <p>This will install the static <code class="filename">.a</code>,
 	shared library, any needed symlinks, and run
@@ -9523,7 +9457,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
   removes possibly existing entries for the package in the
   <code class="filename">TODO</code> file. Don't forget to commit
   the changes, e.g. by using <span class="command"><strong>make changes-entry-commit</strong></span>!
-  If you are not using a checkout directly from cvs.netbsd.org, but e.g.
+  If you are not using a checkout directly from cvs.NetBSD.org, but e.g.
   a local copy of the repository, you can set USE_NETBSD_REPO=yes. This
   makes the cvs commands use the main repository.
   </p>
@@ -9695,7 +9629,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168230286524"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id52060368"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9711,7 +9645,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168230286557"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id52060403"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9729,7 +9663,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168230286595"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id52060441"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9747,7 +9681,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168230286629"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id52060476"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9760,7 +9694,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168230286648"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id52060494"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9776,7 +9710,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168230286674"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id52060521"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9800,7 +9734,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168230286741"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id52060587"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9825,7 +9759,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168230286772"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id52060621"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9873,7 +9807,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168230286826"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id52060812"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9889,7 +9823,7 @@ anyway.</p>
     will tell you about newer versions of installed packages that are
     available, but not yet updated in pkgsrc.</p></li>
 <li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
-    &#8212; it contains a list of suggested new packages and a list of
+    &mdash; it contains a list of suggested new packages and a list of
     cleanups and enhancements for pkgsrc that would be nice to
     have.</p></li>
 <li><p>Review packages for which review was requested on
@@ -10407,8 +10341,8 @@ CFLAGS+=                -Wall
 <a name="infr.design.intf.proc"></a>24.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&#8212;after
-	inclusion&#8212;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&mdash;after
+	inclusion&mdash;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
@@ -10999,14 +10933,12 @@ Registering depends:.
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#ftp-bootstrap">C.1. bootstrap-pkgsrc: Bootstrap kits</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-distfiles">C.2. distfiles: The distributed source files</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-iso">C.3. iso: Currently empty</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-misc">C.4. misc: Miscellaneous things</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-packages">C.5. packages: Binary packages</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-reports">C.6. reports: Bulk build reports</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-source">C.7. current,
-pkgsrc-200xQy:
+<dt><span class="sect1"><a href="#ftp-distfiles">C.1. distfiles: The distributed source files</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-misc">C.2. misc: Miscellaneous things</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-packages">C.3. packages: Binary packages</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-reports">C.4. reports: Bulk build reports</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-source">C.5. current,
+pkgsrc-20xxQy:
 source packages</a></span></dt>
 </dl>
 </div>
@@ -11020,16 +10952,7 @@ source packages</a></span></dt>
 	explained below.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ftp-bootstrap"></a>C.1. <code class="filename">bootstrap-pkgsrc</code>: Bootstrap kits</h2></div></div></div>
-<p>This directory used to contain binary packages of the
-	package management tools for various platforms. For those
-	package collections that need them, they are now stored near the
-	binary packages, so you should look <a class="link" href="#ftp-packages" title="C.5. packages: Binary packages">in the <code class="filename">packages</code>
-	directory</a>.</p>
-</div>
-<div class="sect1" lang="en">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ftp-distfiles"></a>C.2. <code class="filename">distfiles</code>: The distributed source files</h2></div></div></div>
+<a name="ftp-distfiles"></a>C.1. <code class="filename">distfiles</code>: The distributed source files</h2></div></div></div>
 <p>The directory <code class="filename">distfiles</code> contains lots
 	of archive files from all pkgsrc packages, which are mirrored
 	here. The subdirectories are called after their package names
@@ -11039,18 +10962,13 @@ source packages</a></span></dt>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ftp-iso"></a>C.3. <code class="filename">iso</code>: Currently empty</h2></div></div></div>
-<p>This directory is currently not in use.</p>
-</div>
-<div class="sect1" lang="en">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ftp-misc"></a>C.4. <code class="filename">misc</code>: Miscellaneous things</h2></div></div></div>
+<a name="ftp-misc"></a>C.2. <code class="filename">misc</code>: Miscellaneous things</h2></div></div></div>
 <p>This directory contains things that individual pkgsrc
 	developers find worth publishing.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ftp-packages"></a>C.5. <code class="filename">packages</code>: Binary packages</h2></div></div></div>
+<a name="ftp-packages"></a>C.3. <code class="filename">packages</code>: Binary packages</h2></div></div></div>
 <p>This directory contains binary packages for the various
 	platforms that are supported by pkgsrc.
 	Each subdirectory is of the form <em class="replaceable"><code>OPSYS</code></em>/<em class="replaceable"><code>ARCH</code></em>/<em class="replaceable"><code>OSVERSION_TAG</code></em>. The meaning of these variables is:</p>
@@ -11071,7 +10989,7 @@ source packages</a></span></dt>
 	replaced with an <code class="literal">x</code>, for example
 	<code class="literal">4.99.x</code>.</p></li>
 <li><p><code class="varname">TAG</code> is either
-	<code class="literal">200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code>
+	<code class="literal">20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em></code>
 	for a stable branch, or <code class="literal">head</code> for packages
 	built from the HEAD branch. The latter should only be used when
 	the packages are updated on a regular basis. Otherwise the date
@@ -11094,15 +11012,15 @@ source packages</a></span></dt>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ftp-reports"></a>C.6. <code class="filename">reports</code>: Bulk build reports</h2></div></div></div>
+<a name="ftp-reports"></a>C.4. <code class="filename">reports</code>: Bulk build reports</h2></div></div></div>
 <p>Here are the reports from bulk builds, for those who want
 	to fix packages that didn't build on some of the platforms. The
-	structure of subdirectories should look like the one in <a class="xref" href="#ftp-packages" title="C.5. packages: Binary packages">Section C.5, &#8220;packages: Binary packages&#8221;</a>.</p>
+	structure of subdirectories should look like the one in <a class="xref" href="#ftp-packages" title="C.3. packages: Binary packages">Section C.3, &#8220;packages: Binary packages&#8221;</a>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ftp-source"></a>C.7. <code class="filename">current</code>,
-<code class="filename">pkgsrc-200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code>:
+<a name="ftp-source"></a>C.5. <code class="filename">current</code>,
+<code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em></code>:
 source packages</h2></div></div></div>
 <p>These directories contain the &#8220;<span class="quote">real</span>&#8221; pkgsrc,
 	that is the files that define how to create binary packages from
@@ -11113,7 +11031,7 @@ source packages</h2></div></div></div>
 	directory, ready to be downloaded as a whole.</p>
 <p>In the directories for the quarterly branches, there is an
 	additional file called
-	<code class="filename">pkgsrc-200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em>.tar.gz</code>,
+	<code class="filename">pkgsrc-20<em class="replaceable"><code>xx</code></em>Q<em class="replaceable"><code>y</code></em>.tar.gz</code>,
 	which contains the state of pkgsrc when it was branched.</p>
 </div>
 </div>
