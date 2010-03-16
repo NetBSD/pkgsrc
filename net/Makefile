@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.819 2010/03/16 15:21:32 taca Exp $
+# $NetBSD: Makefile,v 1.820 2010/03/16 23:32:40 sno Exp $
 #
 
 COMMENT=	Networking tools
@@ -331,6 +331,7 @@ SUBDIR+=	p5-Net-Amazon
 SUBDIR+=	p5-Net-Amazon-S3
 SUBDIR+=	p5-Net-Bind
 SUBDIR+=	p5-Net-CIDR-Lite
+SUBDIR+=	p5-Net-Bonjour
 SUBDIR+=	p5-Net-CIDR-Set
 SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-DNS
@@ -357,7 +358,6 @@ SUBDIR+=	p5-Net-OpenID-Consumer
 SUBDIR+=	p5-Net-Packet
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Net-RawIP
-SUBDIR+=	p5-Net-Rendezvous
 SUBDIR+=	p5-Net-SNMP
 SUBDIR+=	p5-Net-SNMP-Mixin
 SUBDIR+=	p5-Net-Server
