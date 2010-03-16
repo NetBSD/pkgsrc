@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1295 2010/03/16 18:31:51 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1296 2010/03/16 18:40:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1540,3 +1540,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-Net-OAuth to 0.22 [sno 2010-03-16]
 	Updated net/p5-Net-Twitter to 3.11012 [sno 2010-03-16]
 	Updated net/p5-IO-Socket-Multicast to 1.11 [sno 2010-03-16]
+	Updated geography/p5-Geography-Countries to 2009041301 [sno 2010-03-16]
