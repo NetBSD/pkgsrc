@@ -1,4 +1,4 @@
-archive_entry(3)	NetBSD Library Functions Manual	      archive_entry(3)
+archive_entry(3)       FreeBSD Library Functions Manual       archive_entry(3)
 
 NAME
      archive_entry_acl_add_entry, archive_entry_acl_add_entry_w,
@@ -259,7 +259,7 @@ SYNOPSIS
 
 DESCRIPTION
      These functions create and manipulate data objects that represent entries
-     within an archive.	 You can think of a struct archive_entry as a heavy-
+     within an archive.  You can think of a struct archive_entry as a heavy-
      duty version of struct stat: it includes everything from struct stat plus
      associated pathname, textual group and user names, etc.  These objects
      are used by libarchive(3) to represent the metadata associated with a
@@ -302,7 +302,7 @@ DESCRIPTION
 
      There are a few set/get functions that merit additional description:
      archive_entry_set_link()
-	     This function sets the symlink field if it is already set.	 Oth-
+	     This function sets the symlink field if it is already set.  Oth-
 	     erwise, it sets the hardlink field.
 
    File Flags
@@ -326,7 +326,7 @@ DESCRIPTION
      Converting a bitmap to a textual string is a platform-specific operation;
      bits that are not meaningful on the current platform will be ignored.
 
-     The canonical text format is a comma-separated list of flag names.	 The
+     The canonical text format is a comma-separated list of flag names.  The
      archive_entry_copy_fflags_text() and archive_entry_copy_fflags_text_w()
      functions parse the provided text and sets the internal bitmap values.
      This is a platform-specific operation; names that are not meaningful on
@@ -342,7 +342,7 @@ DESCRIPTION
 
      An ``Access Control List'' (ACL) is a list of permissions that grant
      access to particular users or groups beyond what would normally be pro-
-     vided by standard POSIX mode bits.	 The ACL handling here addresses some
+     vided by standard POSIX mode bits.  The ACL handling here addresses some
      deficiencies in the POSIX.1e draft 17 ACL specification.  In particular,
      POSIX.1e draft 17 specifies several different formats, but none of those
      formats include both textual user/group names and numeric UIDs/GIDs.
@@ -358,4 +358,4 @@ HISTORY
 AUTHORS
      The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
-NetBSD 5.0			 May 12, 2008			    NetBSD 5.0
+FreeBSD 9.0			 May 12, 2008			   FreeBSD 9.0
