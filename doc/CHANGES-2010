@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1323 2010/03/16 23:00:01 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1324 2010/03/16 23:03:22 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1569,3 +1569,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Filesys-Notify-Simple version 0.05 [seb 2010-03-16]
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.79 [sno 2010-03-16]
 	Updated devel/p5-Lexical-Persistence to 1.02 [sno 2010-03-16]
+	Added www/gallery2 version 2.2.6 [pettai 2010-03-16]
