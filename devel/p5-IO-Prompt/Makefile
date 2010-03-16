@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2008/12/19 18:01:58 he Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/16 23:46:40 sno Exp $
 #
 
-DISTNAME=	IO-Prompt-v0.99.4
-PKGNAME=	p5-${DISTNAME:S:-v:-:}
-PKGREVISION=	2
+DISTNAME=	IO-Prompt-0.997
+PKGNAME=	p5-${DISTNAME:S/997/99.7/}
+#PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DC/DCONWAY/}
 
 MAINTAINER=	abs@absd.org
 HOMEPAGE=	http://search.cpan.org/~dconway/IO-Prompt/
 COMMENT=	Interactively prompt for user input
+LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
