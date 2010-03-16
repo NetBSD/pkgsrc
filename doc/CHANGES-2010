@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1279 2010/03/16 13:55:52 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1280 2010/03/16 13:59:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1515,3 +1515,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/php-mbstring to 5.3.2nb1 [taca 2010-03-16]
 	Updated net/unbound to 1.4.3 [joerg 2010-03-16]
 	Updated print/php-pdflib to 2.1.7 [taca 2010-03-16]
+	Updated www/php-apc to 3.1.3p1 [taca 2010-03-16]
+	Updated www/php-eaccelerator to 0.9.6 [taca 2010-03-16]
