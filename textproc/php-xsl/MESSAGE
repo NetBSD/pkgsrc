@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/03/16 15:11:58 taca Exp $
+
+To enable this module, DOM extension must also be enabled. Make sure PHP
+configuration file ${PKG_SYSCONFDIR}/php.ini contains also:
+
+    extension=dom.so
+
+===========================================================================
