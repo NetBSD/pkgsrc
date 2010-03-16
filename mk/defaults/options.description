@@ -217,7 +217,7 @@ jdbc-mysql5		Enable MySQL JDBC driver.
 jpeg			Enable JPEG support.
 jwhois-enable-cache	Enable cache support.
 kde			Enable KDE support.
-kde4			Enable support for KDE 4 (needs pkgsrc-wip).
+kde4			Enable support for KDE 4
 kerberos		Enable Kerberos support.
 kerberos4		Enable Kerberos4 support.
 kermit-suid-uucp	Install kermit setuid uucp.
