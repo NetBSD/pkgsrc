@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.39 2009/10/28 11:36:36 tnn Exp $
+@comment $NetBSD: PLIST,v 1.40 2010/03/16 15:57:03 tnn Exp $
 bin/firefox
 lib/firefox/.autoreg
+lib/firefox/LICENSE
 lib/firefox/README.txt
 lib/firefox/application.ini
 lib/firefox/blocklist.xml
@@ -19,12 +20,8 @@ lib/firefox/chrome/reporter.manifest
 lib/firefox/components/FeedConverter.js
 lib/firefox/components/FeedWriter.js
 lib/firefox/components/WebContentConverter.js
-lib/firefox/components/aboutCertError.js
-lib/firefox/components/aboutPrivateBrowsing.js
-lib/firefox/components/aboutRights.js
-lib/firefox/components/aboutRobots.js
-lib/firefox/components/aboutSessionRestore.js
 lib/firefox/components/browser.xpt
+lib/firefox/components/components.list
 lib/firefox/components/fuelApplication.js
 lib/firefox/components/libbrowsercomps.so
 lib/firefox/components/libbrowserdirprovider.so
@@ -50,15 +47,15 @@ lib/firefox/defaults/profile/chrome/userContent-example.css
 lib/firefox/defaults/profile/localstore.rdf
 lib/firefox/defaults/profile/mimeTypes.rdf
 lib/firefox/defaults/profile/prefs.js
+lib/firefox/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/icon.png
 lib/firefox/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
+lib/firefox/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/preview.png
 lib/firefox/firefox
 lib/firefox/icons/document.png
 lib/firefox/icons/mozicon128.png
-lib/firefox/icons/mozicon16.xpm
-lib/firefox/icons/mozicon50.xpm
+lib/firefox/modules/NetworkPrioritizer.jsm
 lib/firefox/modules/distribution.js
 lib/firefox/modules/openLocationLastURL.jsm
-${PLIST.branding}lib/firefox/old-homepage-default.properties
 lib/firefox/removed-files
 lib/firefox/run-mozilla.sh
 lib/firefox/searchplugins/amazondotcom.xml
