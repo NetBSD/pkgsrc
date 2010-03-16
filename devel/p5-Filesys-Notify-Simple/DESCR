@@ -1,0 +1,5 @@
+The Perl 5 module Filesys::Notify::Simple is a simple but unified
+interface to get notifications of changes to a given filesystem
+path. It utilizes inotify2 on Linux and fsevents on OS X if they're
+installed, with a fallback to the full directory scan if they're
+not available.
