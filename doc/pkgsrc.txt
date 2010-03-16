@@ -442,13 +442,11 @@ B. Build logs
 
 C. Directory layout of the pkgsrc FTP server
 
-    C.1. bootstrap-pkgsrc: Bootstrap kits
-    C.2. distfiles: The distributed source files
-    C.3. iso: Currently empty
-    C.4. misc: Miscellaneous things
-    C.5. packages: Binary packages
-    C.6. reports: Bulk build reports
-    C.7. current, pkgsrc-200xQy: source packages
+    C.1. distfiles: The distributed source files
+    C.2. misc: Miscellaneous things
+    C.3. packages: Binary packages
+    C.4. reports: Bulk build reports
+    C.5. current, pkgsrc-20xxQy: source packages
 
 D. Editing guidelines for the pkgsrc guide
 
@@ -850,14 +848,14 @@ is also called pkgsrc-2009Q1.tar.gz.
 
 To download a pkgsrc stable tarball, run:
 
-$ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-200xQy/pkgsrc-200xQy.tar.gz
+$ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-20xxQy/pkgsrc-20xxQy.tar.gz
 
-Where pkgsrc-200xQy is the stable branch to be downloaded, for example,
+Where pkgsrc-20xxQy is the stable branch to be downloaded, for example,
 "pkgsrc-2009Q1".
 
 Then, extract it with:
 
-$ tar -xzf pkgsrc-200xQy.tar.gz -C /usr
+$ tar -xzf pkgsrc-20xxQy.tar.gz -C /usr
 
 This will create the directory pkgsrc/ in /usr/ and all the package source will
 be stored under /usr/pkgsrc/.
@@ -908,9 +906,9 @@ rdiff -u
 To fetch a specific pkgsrc stable branch from scratch, run:
 
 $ cd /usr
-$ cvs checkout -r pkgsrc-200xQy -P pkgsrc
+$ cvs checkout -r pkgsrc-20xxQy -P pkgsrc
 
-Where pkgsrc-200xQy is the stable branch to be checked out, for example,
+Where pkgsrc-20xxQy is the stable branch to be checked out, for example,
 "pkgsrc-2009Q1"
 
 This will create the directory pkgsrc/ in your /usr/ directory and all the
@@ -962,7 +960,7 @@ When updating pkgsrc, the CVS program keeps track of the branch you selected.
 But if you, for whatever reason, want to switch from the stable branch to the
 current one, you can do it by adding the option "-A" after the "update"
 keyword. To switch from the current branch back to the stable branch, add the
-"-rpkgsrc-2009Q1" option.
+"-rpkgsrc-2009Q3" option.
 
 2.2.2.2. What happens to my changes when updating?
 
@@ -1018,86 +1016,11 @@ Here are some platform-specific notes you should be aware of.
 
 3.3.1. Darwin (Mac OS X)
 
-Darwin 5.x and up are supported. There are two methods of using pkgsrc on Mac
-OS X, by using a disk image, or a UFS or HFSX partition.
-
-Before you start, you will need to download and install the Mac OS X Developer
-Tools from Apple's Developer Connection. See http://developer.apple.com/macosx/
-for details. Also, make sure you install X11 for Mac OS X and the X11 SDK from
-http://www.apple.com/macosx/x11/download/ if you intend to build packages that
-use the X11 Window System.
-
-If you already have a UFS or HFSX partition, or have a spare partition that you
-can format as UFS or HFSX, it is recommended to use that instead of the disk
-image. It'll be somewhat faster and will mount automatically at boot time,
-where you must manually mount a disk image.
-
-Note
-
-You cannot use an ordinary HFS+ file system for pkgsrc, because pkgsrc
-currently requires the file system to be case-sensitive. You can, however, use
-a case-sensitive HFS+ (aka HFSX) file system as found in Darwin 7.0 and newer.
-
-3.3.1.1. Using a disk image
-
-Create the disk image:
-
-# cd pkgsrc/bootstrap
-# ./darwindiskimage create ~/Documents/NetBSD 1024 # megabytes - season to taste
-# ./darwindiskimage mount ~/Documents/NetBSD
-# sudo chown `id -u`:`id -g` /Volumes/NetBSD
-
-Note
-
-darwindiskimage will mount the filesystem nosuid, which will cause problems for
-packages that depend on setgid. In the case of UFS, it will also mount the
-filesystem asynchronous, which is somewhat dangerous according to the mount(8)
-man page. In the case of HFSX, it will disable journaling.
-
-Allow suid:
-
-# sudo mount -u -o suid /Volumes/NetBSD
-
-Changing the build directory:
-
-After bootstrapping you need to change the default package build directory to
-somewhere outside the disk image so it doesn't get filled up in the process of
-building packages. Add something like that to mk.conf.
-
-          WRKOBJDIR?=           /tmp/pkgsrc         # build here instead of in pkgsrc
-
-
-3.3.1.2. Using a UFS or HFSX partition
-
-By default, /usr will be on your root file system, normally HFS+. It is
-possible to use the default prefix of /usr/pkg by symlinking /usr/pkg to a
-directory on a UFS or HFSX file system. Obviously, another symlink is required
-if you want to place the package database directory outside the prefix. e.g.
-
-# ./bootstrap --pkgdbdir /usr/pkg/pkgdb
-
-If you created your partitions at the time of installing Mac OS X and formatted
-the target partition as UFS or HFSX, it should automatically mount on /Volumes/
-<volume name> when the machine boots. If you are (re)formatting a partition as
-UFS or HFSX, you need to ensure that the partition map correctly reflects
-"Apple_UFS" or "Apple_HFSX" and not "Apple_HFS".
-
-The problem is that none of the disk tools will let you touch a disk that is
-booted from. You can unmount the partition, but even if you newfs it, the
-partition type will be incorrect and the automounter won't mount it. It can be
-mounted manually, but it won't appear in Finder.
-
-You'll need to boot off of the OS X Installation (User) CD. When the
-Installation program starts, go up to the menu and select Disk Utility. Now,
-you will be able to select the partition you want to be UFS or HFSX, and Format
-it Apple UFS or HFSX. Quit the Disk Utility, quit the installer which will
-reboot your machine. The new UFS or HFSX file system will appear in Finder.
-
-Be aware that the permissions on the new file system will be writable by root
-only.
-
-This note is as of 10.2 (Jaguar) and applies to earlier versions. Hopefully
-Apple will fix Disk Utility in 10.3 (Panther).
+Darwin 5.x and up are supported. Before you start, you will need to download
+and install the Mac OS X Developer Tools from Apple's Developer Connection. See
+http://developer.apple.com/macosx/ for details. Also, make sure you install X11
+(an optional package included with the Developer Tools) if you intend to build
+packages that use the X11 Window System.
 
 3.3.2. FreeBSD
 
@@ -2551,19 +2474,19 @@ everything.
 Then, make sure that you have RSYNC_DST set properly in your mk/bulk/build.conf
 file, i.e. adjust it to something like one of the following:
 
-RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch/upload
+RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload
 
-Please use appropriate values for "packages-200xQy", "NetBSD-a.b.c" and "arch"
+Please use appropriate values for "packages-20xxQy", "NetBSD-a.b.c" and "arch"
 here. If your login on ftp.NetBSD.org is different from your local login, write
 your login directly into the variable, e.g. my local account is "feyrer", but
 for my login "hubertf", I use:
 
-RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch/upload
+RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload
 
 A separate upload directory is used here to allow "closing" the directory
 during upload. To do so, run the following command on ftp.NetBSD.org next:
 
-nbftp% mkdir -p -m 750 /pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch/upload
+nbftp% mkdir -p -m 750 /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload
 
 Please note that /pub/NetBSD/packages is only appropriate for packages for the
 NetBSD operating system. Binary packages for other operating systems should go
@@ -2609,7 +2532,7 @@ Use whatever is needed to remove the key you've entered before! Last, move the
 uploaded packages out of the upload directory to have them accessible to
 everyone:
 
-nbftp% cd /pub/NetBSD/packages/packages-200xQy/NetBSD-a.b.c/arch
+nbftp% cd /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch
 nbftp% mv upload/* .
 nbftp% rmdir upload
 nbftp% chmod 755 .
@@ -7152,7 +7075,7 @@ Here's how to use libtool in a package in seven simple steps:
  6. When installing libraries, preface the install(1) or cp(1) command with "$
     {LIBTOOL} --mode=install", and change the library name to .la. e.g.
 
-    ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
+    ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
 
 
     This will install the static .a, shared library, any needed symlinks, and
@@ -7966,7 +7889,7 @@ your local login name is not the same as your NetBSD login name. The target
 also automatically removes possibly existing entries for the package in the
 TODO file. Don't forget to commit the changes, e.g. by using make
 changes-entry-commit! If you are not using a checkout directly from
-cvs.netbsd.org, but e.g. a local copy of the repository, you can set
+cvs.NetBSD.org, but e.g. a local copy of the repository, you can set
 USE_NETBSD_REPO=yes. This makes the cvs commands use the main repository.
 
 21.4. Committing: Importing a package into CVS
@@ -8626,10 +8549,11 @@ subtle bugs.
 24.5.1. Procedures with parameters
 
 In a traditional imperative programming language some of the .mk files could be
-described as procedures. They take some input parameters and?after inclusion?
-provide a result in output parameters. Since all variables in Makefiles have
-global scope care must be taken not to use parameter names that have already
-another meaning. For example, PKGNAME is a bad choice for a parameter name.
+described as procedures. They take some input parameters and?after
+inclusion?provide a result in output parameters. Since all variables in
+Makefiles have global scope care must be taken not to use parameter names that
+have already another meaning. For example, PKGNAME is a bad choice for a
+parameter name.
 
 Procedures are completely evaluated at preprocessing time. That is, when
 calling a procedure all input parameters must be completely resolvable. For
@@ -9152,13 +9076,11 @@ Appendix C. Directory layout of the pkgsrc FTP server
 
 Table of Contents
 
-C.1. bootstrap-pkgsrc: Bootstrap kits
-C.2. distfiles: The distributed source files
-C.3. iso: Currently empty
-C.4. misc: Miscellaneous things
-C.5. packages: Binary packages
-C.6. reports: Bulk build reports
-C.7. current, pkgsrc-200xQy: source packages
+C.1. distfiles: The distributed source files
+C.2. misc: Miscellaneous things
+C.3. packages: Binary packages
+C.4. reports: Bulk build reports
+C.5. current, pkgsrc-20xxQy: source packages
 
 As in other big projects, the directory layout of pkgsrc is quite complex for
 newbies. This chapter explains where you find things on the FTP server. The
@@ -9167,14 +9089,7 @@ different, but inside this directory, everything should look the same, no
 matter on which server you are. This directory contains some subdirectories,
 which are explained below.
 
-C.1. bootstrap-pkgsrc: Bootstrap kits
-
-This directory used to contain binary packages of the package management tools
-for various platforms. For those package collections that need them, they are
-now stored near the binary packages, so you should look in the packages
-directory.
-
-C.2. distfiles: The distributed source files
+C.1. distfiles: The distributed source files
 
 The directory distfiles contains lots of archive files from all pkgsrc
 packages, which are mirrored here. The subdirectories are called after their
@@ -9182,16 +9097,12 @@ package names and are used when the distributed files have names that don't
 explicitly contain a version number or are otherwise too generic (for example
 release.tar.gz).
 
-C.3. iso: Currently empty
-
-This directory is currently not in use.
-
-C.4. misc: Miscellaneous things
+C.2. misc: Miscellaneous things
 
 This directory contains things that individual pkgsrc developers find worth
 publishing.
 
-C.5. packages: Binary packages
+C.3. packages: Binary packages
 
 This directory contains binary packages for the various platforms that are
 supported by pkgsrc. Each subdirectory is of the form OPSYS/ARCH/OSVERSION_TAG.
@@ -9209,7 +9120,7 @@ The meaning of these variables is:
     change often (for example NetBSD-current), the often-changing part should
     be replaced with an x, for example 4.99.x.
 
-  * TAG is either 200xQy for a stable branch, or head for packages built from
+  * TAG is either 20xxQy for a stable branch, or head for packages built from
     the HEAD branch. The latter should only be used when the packages are
     updated on a regular basis. Otherwise the date from checking out pkgsrc
     should be appended, for example head_20071015.
@@ -9227,13 +9138,13 @@ specific platform. It has a directory called All which contains all binary
 packages. Besides that, there are various category directories that contain
 symbolic links to the real binary packages.
 
-C.6. reports: Bulk build reports
+C.4. reports: Bulk build reports
 
 Here are the reports from bulk builds, for those who want to fix packages that
 didn't build on some of the platforms. The structure of subdirectories should
-look like the one in Section C.5, "packages: Binary packages".
+look like the one in Section C.3, "packages: Binary packages".
 
-C.7. current, pkgsrc-200xQy: source packages
+C.5. current, pkgsrc-20xxQy: source packages
 
 These directories contain the "real" pkgsrc, that is the files that define how
 to create binary packages from source archives.
@@ -9243,7 +9154,7 @@ updated regularly. The file pkgsrc.tar.gz contains the same as the directory,
 ready to be downloaded as a whole.
 
 In the directories for the quarterly branches, there is an additional file
-called pkgsrc-200xQy.tar.gz, which contains the state of pkgsrc when it was
+called pkgsrc-20xxQy.tar.gz, which contains the state of pkgsrc when it was
 branched.
 
 Appendix D. Editing guidelines for the pkgsrc guide
