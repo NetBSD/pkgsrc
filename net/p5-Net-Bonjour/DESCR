@@ -1,0 +1,12 @@
+Net::Bonjour is a set of modules that allow one to discover local services
+via multicast DNS (mDNS) or enterprise services via traditional DNS. This
+method of service discovery has been branded as Bonjour by Apple Computer.
+
+More information can be found at:
+
+http://www.zeroconf.org/
+http://developer.apple.com/macosx/rendezvous/index.html
+
+A list of register service types can be found at:
+
+http://www.dns-sd.org/ServiceTypes.html
