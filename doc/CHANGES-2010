@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1322 2010/03/16 22:56:13 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1323 2010/03/16 23:00:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1568,3 +1568,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated math/p5-Spreadsheet-Read to 0.39 [sno 2010-03-16]
 	Added devel/p5-Filesys-Notify-Simple version 0.05 [seb 2010-03-16]
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.79 [sno 2010-03-16]
+	Updated devel/p5-Lexical-Persistence to 1.02 [sno 2010-03-16]
