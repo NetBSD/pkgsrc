@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1281 2010/03/16 14:05:34 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1282 2010/03/16 15:57:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1518,3 +1518,8 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/php-apc to 3.1.3p1 [taca 2010-03-16]
 	Updated www/php-eaccelerator to 0.9.6 [taca 2010-03-16]
 	Added devel/php-sysvmsg version 5.3.2 [taca 2010-03-16]
+	Added lang/php53 version 5.3.2 [taca 2010-03-16]
+	Added misc/php-intl version 5.3.2 [taca 2010-03-16]
+	Added textproc/php-enchant version 5.3.2 [taca 2010-03-16]
+	Updated meta-pkgs/php5-extensions to 5.2.13 [taca 2010-03-16]
+	Added meta-pkgs/php53-extensions version 5.3.2 [taca 2010-03-16]
