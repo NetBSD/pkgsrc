@@ -1,0 +1,122 @@
+$NetBSD: patch-na,v 1.1 2010/03/16 10:59:10 tnn Exp $
+
+# reported upstream as:
+#   https://bugzilla.mozilla.org/show_bug.cgi?id=512802
+
+--- mozilla/js/src/jsscript.cpp.orig	2009-08-24 01:32:14.000000000 +0200
++++ mozilla/js/src/jsscript.cpp	2009-08-24 01:36:20.000000000 +0200
+@@ -1370,19 +1370,49 @@ js_NewScript(JSContext *cx, uint32 lengt
+     size_t size, vectorSize;
+     JSScript *script;
+     uint8 *cursor;
++#ifdef _LP64
++#define LP64_ALIGN(V)  if ((V) & 7) (V) = (((V)|7) + 1)
++#define LP64_ALIGNP(P)  if ((uintptr_t)(P) & 7) (P) = (uint8*)(((uintptr_t)(P)|7) + 1)
++#else
++#define LP64_ALIGN(V)
++#define LP64_ALIGNP(V)
++#endif
+ 
+-    size = sizeof(JSScript) +
+-           sizeof(JSAtom *) * natoms +
+-           length * sizeof(jsbytecode) +
+-           nsrcnotes * sizeof(jssrcnote);
+-    if (nobjects != 0)
+-        size += sizeof(JSObjectArray) + nobjects * sizeof(JSObject *);
+-    if (nupvars != 0)
+-        size += sizeof(JSUpvarArray) + nupvars * sizeof(uint32);
+-    if (nregexps != 0)
+-        size += sizeof(JSObjectArray) + nregexps * sizeof(JSObject *);
+-    if (ntrynotes != 0)
+-        size += sizeof(JSTryNoteArray) + ntrynotes * sizeof(JSTryNote);
++    size = sizeof(JSScript);
++    if (nobjects != 0) {
++	LP64_ALIGN(size);
++        size += sizeof(JSObjectArray);
++    }
++    if (nupvars != 0) {
++	LP64_ALIGN(size);
++        size += sizeof(JSUpvarArray);
++    }
++    if (nregexps != 0) {
++	LP64_ALIGN(size);
++        size += sizeof(JSObjectArray);
++    }
++    if (ntrynotes != 0) {
++	LP64_ALIGN(size);
++        size += sizeof(JSTryNoteArray);
++    }
++    if (natoms != 0) {
++	LP64_ALIGN(size);
++	size += sizeof(JSAtom *) * natoms;
++    }
++    if (nobjects != 0) {
++	LP64_ALIGN(size);
++        size += nobjects * sizeof(JSObject *);
++    }
++    if (nupvars != 0) {
++        size += nupvars * sizeof(uint32);
++    }
++    if (nregexps != 0) {
++	LP64_ALIGN(size);
++        size += nregexps * sizeof(JSObject *);
++    }
++    size += length * sizeof(jsbytecode) +
++	nsrcnotes * sizeof(jssrcnote) +
++	ntrynotes * sizeof(JSTryNote);
+ 
+     script = (JSScript *) JS_malloc(cx, size);
+     if (!script)
+@@ -1393,23 +1423,28 @@ js_NewScript(JSContext *cx, uint32 lengt
+ 
+     cursor = (uint8 *)script + sizeof(JSScript);
+     if (nobjects != 0) {
++	LP64_ALIGNP(cursor);
+         script->objectsOffset = (uint8)(cursor - (uint8 *)script);
+         cursor += sizeof(JSObjectArray);
+     }
+     if (nupvars != 0) {
++	LP64_ALIGNP(cursor);
+         script->upvarsOffset = (uint8)(cursor - (uint8 *)script);
+         cursor += sizeof(JSUpvarArray);
+     }
+     if (nregexps != 0) {
++	LP64_ALIGNP(cursor);
+         script->regexpsOffset = (uint8)(cursor - (uint8 *)script);
+         cursor += sizeof(JSObjectArray);
+     }
+     if (ntrynotes != 0) {
++	LP64_ALIGNP(cursor);
+         script->trynotesOffset = (uint8)(cursor - (uint8 *)script);
+         cursor += sizeof(JSTryNoteArray);
+     }
+ 
+     if (natoms != 0) {
++	LP64_ALIGNP(cursor);
+         script->atomMap.length = natoms;
+         script->atomMap.vector = (JSAtom **)cursor;
+         vectorSize = natoms * sizeof(script->atomMap.vector[0]);
+@@ -1423,6 +1458,7 @@ js_NewScript(JSContext *cx, uint32 lengt
+     }
+ 
+     if (nobjects != 0) {
++	LP64_ALIGNP(cursor);
+         JS_SCRIPT_OBJECTS(script)->length = nobjects;
+         JS_SCRIPT_OBJECTS(script)->vector = (JSObject **)cursor;
+         vectorSize = nobjects * sizeof(JS_SCRIPT_OBJECTS(script)->vector[0]);
+@@ -1431,6 +1467,7 @@ js_NewScript(JSContext *cx, uint32 lengt
+     }
+ 
+     if (nupvars != 0) {
++	LP64_ALIGNP(cursor);
+         JS_SCRIPT_UPVARS(script)->length = nupvars;
+         JS_SCRIPT_UPVARS(script)->vector = (uint32 *)cursor;
+         vectorSize = nupvars * sizeof(JS_SCRIPT_UPVARS(script)->vector[0]);
+@@ -1439,6 +1476,7 @@ js_NewScript(JSContext *cx, uint32 lengt
+     }
+ 
+     if (nregexps != 0) {
++	LP64_ALIGNP(cursor);
+         JS_SCRIPT_REGEXPS(script)->length = nregexps;
+         JS_SCRIPT_REGEXPS(script)->vector = (JSObject **)cursor;
+         vectorSize = nregexps * sizeof(JS_SCRIPT_REGEXPS(script)->vector[0]);

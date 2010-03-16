@@ -1,0 +1,67 @@
+$NetBSD: patch-aa,v 1.6 2010/03/16 10:59:09 tnn Exp $
+
+--- mozilla/configure.in.orig	2009-10-16 17:13:35.000000000 +0200
++++ mozilla/configure.in
+@@ -1799,7 +1799,7 @@ case "$target" in
+     fi
+     ;;
+ 
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
+ 	DLL_SUFFIX=".so.1.0"
+ 	DSO_LDOPTS="-shared"
+@@ -1813,6 +1813,9 @@ case "$target" in
+ #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
+ #	MKSHLIB_UNFORCE_ALL=''
+ #    fi
++    if test "$LIBRUNPATH"; then
++       DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++    fi
+     ;; 
+ 
+ *-hpux*)
+@@ -3043,6 +3046,9 @@ dnl ====================================
+ case $target in
+ *-hpux11.*)
+ 	;;
++*-dragonfly*)
++	AC_CHECK_LIB(c, gethostbyname_r)
++	;;
+ *)
+ 	AC_CHECK_LIB(c_r, gethostbyname_r)
+ 	;;
+@@ -4158,6 +4164,14 @@ else
+    fi
+ fi
+ 
++if test -n "${LIBXUL_SDK_DIR}"; then
++    AC_MSG_WARN([pkgsrc: LIBXUL_SDK_DIR is set; assuming we want nss and nspr from xulrunner.])
++    NSPR_CFLAGS="-I${prefix}/include/xulrunner/unstable `pkg-config --cflags mozilla-nspr`"
++    NSPR_LIBS="`pkg-config --libs mozilla-nspr`"
++    NSS_CFLAGS="`pkg-config --cflags mozilla-nss`"
++    NSS_LIBS="`pkg-config --libs mozilla-nss`"
++fi
++
+ if test -z "$SKIP_LIBRARY_CHECKS"; then
+ dnl system JPEG support
+ dnl ========================================================
+@@ -8375,7 +8389,8 @@ rm -f confdefs.h.save
+ mv confdefs.h confdefs.h.save
+ egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
+ AC_OUTPUT_MAKE_DEFS()
+-MOZ_DEFINES=$DEFS
++# nbsed broken. PR bin/42261
++MOZ_DEFINES="$DEFS`awk 'BEGIN {while(x<1000){printf " ";x++}}'`"
+ AC_SUBST(MOZ_DEFINES)
+ rm -f confdefs.h
+ mv confdefs.h.save confdefs.h
+@@ -8466,6 +8481,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+     AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
+     if test "$OS_ARCH" != "WINNT" && test "$OS_ARCH" != "WINCE"; then
+        NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
++       AC_MSG_WARN([pkgsrc: adding run path to NSPR_LIBS for bundled NSPR.])
++       NSPR_LIBS="-Wl,-R${prefix}/lib/\${MOZILLA_PKG_NAME} ${NSPR_LIBS}"
+        $PERL -pi.bak -e "s '^NSPR_LIBS\\s*=.*'NSPR_LIBS = $NSPR_LIBS'" config/autoconf.mk
+        NSPR_CFLAGS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --includedir=$LIBXUL_DIST/include/nspr --cflags`
+        $PERL -pi.bak -e "s '^NSPR_CFLAGS\\s*=.*'NSPR_CFLAGS = $NSPR_CFLAGS'" config/autoconf.mk

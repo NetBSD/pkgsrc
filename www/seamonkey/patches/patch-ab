@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.10 2010/03/16 10:59:10 tnn Exp $
+
+--- mozilla/nsprpub/pr/include/md/_netbsd.h.orig	2009-06-29 18:15:06.000000000 +0200
++++ mozilla/nsprpub/pr/include/md/_netbsd.h
+@@ -94,6 +94,12 @@
+ #define _PR_INET6_PROBE
+ #endif
+ 
++#if __NetBSD_Version__ >= 106370000
++/* NetBSD 1.6ZK */
++#define _PR_HAVE_GETPROTO_R
++#define _PR_HAVE_GETPROTO_R_INT
++#endif
++
+ #define USE_SETJMP
+ 
+ #ifndef _PR_PTHREADS
+@@ -107,6 +113,8 @@
+ #define JB_SP_INDEX 2
+ #elif defined(__mips__)
+ #define JB_SP_INDEX 4
++#elif defined(__amd64__)
++#define JB_SP_INDEX 6
+ #elif defined(__alpha__)
+ #define JB_SP_INDEX 34
+ #elif defined(__arm32__)

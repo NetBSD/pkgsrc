@@ -1,0 +1,40 @@
+$NetBSD: patch-aw,v 1.3 2010/03/16 10:59:10 tnn Exp $
+
+--- mozilla/xulrunner/stub/nsXULStub.cpp.orig	2009-08-24 17:53:30.000000000 +0200
++++ mozilla/xulrunner/stub/nsXULStub.cpp
+@@ -44,6 +44,27 @@
+ #include "nsILocalFile.h"
+ 
+ #include <stdarg.h>
++#include <sys/resource.h>
++/*
++ * On netbsd-4, ulimit -n is 64 by default; too few for us.
++ */
++static void netbsd_fixrlimit(void) {
++	struct rlimit rlp;
++	if (getrlimit(RLIMIT_NOFILE, &rlp) == -1) {
++		fprintf(stderr, "warning: getrlimit failed\n");
++		return;
++	}
++	if (rlp.rlim_cur >= 512)
++		return;
++	if (rlp.rlim_max < 512) {
++		fprintf(stderr, "warning: hard limit of 'ulimit -n' too low\n");
++		rlp.rlim_cur = rlp.rlim_max;
++	}
++	else
++		rlp.rlim_cur = 512;
++	if (setrlimit(RLIMIT_NOFILE, &rlp) == -1)
++		fprintf(stderr, "warning: setrlimit failed\n");
++}
+ 
+ #ifdef XP_WIN
+ #include <windows.h>
+@@ -205,6 +226,7 @@ main(int argc, char **argv)
+   char tmpPath[MAXPATHLEN];
+   char greDir[MAXPATHLEN];
+   PRBool greFound = PR_FALSE;
++  netbsd_fixrlimit();
+ 
+ #if defined(XP_MACOSX)
+   CFBundleRef appBundle = CFBundleGetMainBundle();

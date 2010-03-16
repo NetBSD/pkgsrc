@@ -1,0 +1,19 @@
+$NetBSD: patch-ak,v 1.3 2010/03/16 10:59:10 tnn Exp $
+
+--- mozilla/toolkit/components/places/src/nsMorkHistoryImporter.cpp.orig	2009-06-29 18:15:22.000000000 +0200
++++ mozilla/toolkit/components/places/src/nsMorkHistoryImporter.cpp
+@@ -148,9 +148,12 @@ AddToHistoryCB(const nsCSubstring &aRowI
+     }
+ 
+     PRTime date;
+-    if (PR_sscanf(values[kLastVisitColumn].get(), "%lld", &date) != 1) {
++    long long ld;
++    if (PR_sscanf(values[kLastVisitColumn].get(), "%lld", &ld) != 1) {
+       date = -1;
+-    }
++    } else {
++      date = ld;
++   }
+ 
+     PRBool isTyped = values[kTypedColumn].EqualsLiteral("1");
+     PRInt32 transition = isTyped ?
