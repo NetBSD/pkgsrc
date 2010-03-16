@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2009/08/20 18:45:48 sno Exp $
+# $NetBSD: Makefile,v 1.14 2010/03/16 18:31:41 sno Exp $
 #
 
-DISTNAME=		IO-Socket-Multicast-1.07
+DISTNAME=		IO-Socket-Multicast-1.11
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ism
 CATEGORIES=		net perl5
