@@ -1,0 +1,14 @@
+PHP is a programming language designed to be embedded into web pages.
+This module provides support for enchant support.
+
+Enchant is a binder for libenchant. Libenchant provides a common
+API for many spell libraries:
+
+	- aspell/pspell (intended to replace ispell)
+	- hspell (hebrew)
+	- ispell 
+	- myspell/hunspell (OpenOffice project, mozilla)
+	- uspell (primarily Yiddish, Hebrew, and Eastern European languages)
+
+A plugin system allows to add custom spell support,
+see www.abisource.com/enchant/
