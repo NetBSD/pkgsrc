@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1273 2010/03/16 10:56:48 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1274 2010/03/16 11:32:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1509,3 +1509,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated security/p5-Net-DNS-SEC to 0.16 [sno 2010-03-16]
 	Updated converters/p5-JSON-XS to 2.280 [sno 2010-03-16]
 	Updated databases/p5-SQL-Abstract to 1.62 [sno 2010-03-16]
+	Updated devel/p5-Variable-Magic to 0.41 [sno 2010-03-16]
