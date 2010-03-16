@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/03/15 16:48:53 taca Exp $
+# $NetBSD: options.mk,v 1.5 2010/03/16 16:02:21 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal
 
@@ -29,14 +29,14 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 ### syndication.
 ###
 .if !empty(PKG_OPTIONS:Mdrupal-xmlservices)
-DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php5-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 .endif
 
 ###
 ### Support for unicode
 ###
 .if !empty(PKG_OPTIONS:Municode)
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.3:../../misc/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.3:../../converters/php-mbstring
 .endif
 
 ###
