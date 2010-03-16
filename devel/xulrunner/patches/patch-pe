@@ -1,11 +1,11 @@
-$NetBSD: patch-pe,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
+$NetBSD: patch-pe,v 1.2 2010/03/16 15:57:02 tnn Exp $
 
---- xulrunner/installer/libxul-unstable.pc.in.orig	2009-06-29 18:15:36.000000000 +0200
-+++ xulrunner/installer/libxul-unstable.pc.in
-@@ -8,5 +8,5 @@ Name: libxul
- Description: The Mozilla Runtime and Embedding Engine (unstable API)
+--- xulrunner/installer/mozilla-plugin.pc.in.orig	2009-12-04 21:19:58.000000000 +0000
++++ xulrunner/installer/mozilla-plugin.pc.in
+@@ -5,5 +5,5 @@ includedir=%includedir%
+ Name: Mozilla Plug-In API
+ Description: Mozilla Plug-In API
  Version: %MOZILLA_VERSION%
- Requires: %NSPR_NAME% >= %NSPR_VERSION%
--Libs: -L${sdkdir}/lib -lxpcomglue_s -lxul -lxpcom
-+Libs: -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner -lxpcomglue_s -lxul -lxpcom
- Cflags: -I${includedir}/${includetype} %WCHAR_CFLAGS%
+-Cflags: -I${includedir}/stable -DXP_UNIX %ojidef%
++Cflags: -I${includedir} -DXP_UNIX %ojidef%
+ 

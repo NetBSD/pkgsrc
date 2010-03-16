@@ -1,19 +1,35 @@
-$NetBSD: patch-bb,v 1.1 2010/01/10 09:43:06 tron Exp $
+$NetBSD: patch-bb,v 1.2 2010/03/16 15:57:02 tnn Exp $
 
-Fix build using Sun Studio C++.
+# make sure the inline assembler code works on the same word size as
+# the C/C++ code on sparc64 when compiling for 64bit
+# https://bugzilla.mozilla.org/show_bug.cgi?id=550271
 
---- memory/jemalloc/jemalloc.h.orig	2009-12-02 04:29:06.000000000 +0000
-+++ memory/jemalloc/jemalloc.h	2010-01-09 23:24:34.000000000 +0000
-@@ -1,3 +1,4 @@
-+#ifndef  __cplusplus
- #ifndef MOZ_MEMORY_WINDOWS
- #  include <stdbool.h>
- #else
-@@ -6,6 +7,7 @@
- #    define bool BOOL
- #  endif
- #endif
-+#endif
+--- js/src/jslock.cpp.orig	2010-02-27 02:32:31.000000000 +0000
++++ js/src/jslock.cpp
+@@ -159,6 +159,7 @@ NativeCompareAndSwap(jsword *w, jsword o
+ {
+     unsigned int res;
  
- extern const char	*_malloc_options;
++#if JS_BITS_PER_WORD == 32
+     __asm__ __volatile__ (
+                   "stbar\n"
+                   "cas [%1],%2,%3\n"
+@@ -169,6 +170,18 @@ NativeCompareAndSwap(jsword *w, jsword o
+                   "1:"
+                   : "=r" (res)
+                   : "r" (w), "r" (ov), "r" (nv));
++#else
++    __asm__ __volatile__ (
++                  "stbar\n"
++                  "casx [%1],%2,%3\n"
++                  "cmp %2,%3\n"
++                  "be,a 1f\n"
++                  "mov 1,%0\n"
++                  "mov 0,%0\n"
++                  "1:"
++                  : "=r" (res)
++                  : "r" (w), "r" (ov), "r" (nv));
++#endif
+     return (int)res;
+ }
  
