@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2010/01/26 12:04:37 tron Exp $
+# $NetBSD: Makefile,v 1.82 2010/03/16 16:02:21 taca Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.phpmyadmin.net/
 COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.3:../../misc/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.3:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql{,i}>=4.3.3:../../databases/php-mysql
 
 PKG_DESTDIR_SUPPORT=	user-destdir
