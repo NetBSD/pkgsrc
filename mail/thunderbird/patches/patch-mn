@@ -1,0 +1,15 @@
+$NetBSD: patch-mn,v 1.1 2010/03/16 10:59:09 tnn Exp $
+
+Make sure we link correctly with sqlite3 from pkgsrc.
+
+--- mozilla/security/nss/lib/softoken/config.mk.orig	2009-10-16 17:14:19.000000000 +0200
++++ mozilla/security/nss/lib/softoken/config.mk
+@@ -83,7 +83,7 @@ EXTRA_SHARED_LIBS += \
+ 	-L$(DIST)/lib \
+ 	-L$(NSSUTIL_LIB_DIR) \
+ 	-lnssutil3 \
+-	-lsqlite3 \
++	`pkg-config --libs sqlite3` \
+ 	-L$(NSPR_LIB_DIR) \
+ 	-lplc4 \
+ 	-lplds4 \
