@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/22 12:01:37 seb Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/16 19:14:46 sno Exp $
 #
 
-DISTNAME=	lib-abs-0.90
+DISTNAME=	lib-abs-0.91
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=lib/}
@@ -15,10 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/lib/abs/.packlist
-# This module uses Module::Install but only depends on modern
-# core modules so there is no need to bring in the build dependencies
-# of devel/p5-Module-Install
-#PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install # to handle auto_install flags properly
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
