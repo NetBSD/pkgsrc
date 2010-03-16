@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.38 2010/02/16 09:01:46 wiz Exp $
+$NetBSD: distinfo,v 1.39 2010/03/16 19:28:50 wiz Exp $
 
-SHA1 (amarok-2.2.2.tar.bz2) = 2075299b856477cf55cba8ba983ea25a93dc139b
-RMD160 (amarok-2.2.2.tar.bz2) = 0782c4b032d318179bd8bb91353f8e33772d2912
-Size (amarok-2.2.2.tar.bz2) = 8788107 bytes
-SHA1 (patch-aa) = 524a9563db17cbf5e234f2ebe261820326e5d30d
-SHA1 (patch-ab) = 62beea32f17ce6e138702e740d089c6257ddfced
-SHA1 (patch-ac) = c8c111d0927efe56a07ce89b2ec788a6364257aa
+SHA1 (amarok-2.3.0.tar.bz2) = 64856a21907d1ba7d198149a8a46276fc4cda7a6
+RMD160 (amarok-2.3.0.tar.bz2) = ff2a7cea8ffbd0e6b08a9b37ab7529e1b1d43a37
+Size (amarok-2.3.0.tar.bz2) = 9391281 bytes
+SHA1 (patch-ab) = 91e6bf8a84d63832641b6270c6f5215baa8f139e
