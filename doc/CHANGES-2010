@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1327 2010/03/16 23:11:25 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1328 2010/03/16 23:29:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1573,3 +1573,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-ShipIt to 0.53 [sno 2010-03-16]
 	Added www/gallery version 1.5.10 [pettai 2010-03-16]
 	Updated textproc/p5-Text-DHCPLeases to 0.9 [sno 2010-03-16]
+	Added net/p5-Net-Bonjour version 0.96 [sno 2010-03-16]
