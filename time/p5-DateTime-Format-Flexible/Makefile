@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2010/03/08 16:45:23 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/16 17:10:55 sno Exp $
 
-DISTNAME=	DateTime-Format-Flexible-0.14
+DISTNAME=	DateTime-Format-Flexible-0.15
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?DateTime::Format::Flexible
+HOMEPAGE=	http://search.cpan.org/dist/DateTime-Format-Flexible/
 COMMENT=	Flexibly parse strings and turn them into DateTime objects
 LICENSE=	${PERL5_LICENSE}
 
