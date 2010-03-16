@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2009/02/22 11:08:20 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2010/03/16 13:50:34 taca Exp $
 
 MODNAME=		mbstring
+PKGREVISION=		1
 CATEGORIES+=		misc
-COMMENT=		PHP extension for multibyte characters support (currently, Japanese only)
+COMMENT=		PHP extension for multibyte characters support
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-mbstring-[0-9]*
-
-USE_PHP_EXT_PATCHES=	yes
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
 
