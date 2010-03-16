@@ -45,6 +45,13 @@ xymon_precmd()
 		ln -s @BBLOGDIR@ $HOBBITCLIENTHOME/logs
 	fi
 	touch ${xymon_pidfile} && chown ${xymonclient_user} ${xymon_pidfile}
+
+	MACHINEDOTS="`uname -n`"
+	export MACHINEDOTS
+	BBOSTYPE="`uname -s | tr '[ABCDEFGHIJKLMNOPQRSTUVWXYZ/]' '[abcdefghijklmnopqrstuvwxyz_]'`"
+	export BBOSTYPE
+	BBOSSCRIPT="hobbitclient-$BBOSTYPE.sh"
+	export BBOSSCRIPT
 }
 
 start_precmd="xymon_precmd"
