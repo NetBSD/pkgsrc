@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1317 2010/03/16 22:21:34 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1318 2010/03/16 22:30:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1563,3 +1563,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/p5-DateTime to 0.5500 [sno 2010-03-16]
 	Updated devel/p5-EV to 3.9 [sno 2010-03-16]
 	Updated devel/p5-AnyEvent to 5.251 [sno 2010-03-16]
+	Updated textproc/p5-Text-BibTeX to 0.42 [sno 2010-03-16]
