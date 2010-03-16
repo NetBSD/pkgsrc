@@ -1,0 +1,20 @@
+$NetBSD: patch-bc,v 1.1 2010/03/16 15:57:02 tnn Exp $
+
+# ensure at least pointer compatible alignement of memory arena for
+# RuleProcessorData::operator new
+# Reported upstream as https://bugzilla.mozilla.org/show_bug.cgi?id=550842
+
+--- content/base/src/nsGenericElement.cpp.orig	2010-02-27 02:32:31.000000000 +0000
++++ content/base/src/nsGenericElement.cpp
+@@ -5132,9 +5132,9 @@ TryMatchingElementsInSubtree(nsINode* aR
+    * cheaper than heap-allocating all the datas and keeping track of them all,
+    * and helps a good bit in the common cases.  We also keep track of the whole
+    * parent data chain, since we have those Around anyway */
+-  char databuf[2 * sizeof(RuleProcessorData)];
++  union { char c[2 * sizeof(RuleProcessorData)]; void *p; } databuf;
+   RuleProcessorData* prevSibling = nsnull;
+-  RuleProcessorData* data = reinterpret_cast<RuleProcessorData*>(databuf);
++  RuleProcessorData* data = reinterpret_cast<RuleProcessorData*>(&databuf);
+ 
+   PRBool continueIteration = PR_TRUE;
+   for (nsINode::ChildIterator iter(aRoot); !iter.IsDone(); iter.Next()) {

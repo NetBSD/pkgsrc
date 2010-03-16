@@ -1,32 +1,46 @@
-$NetBSD: patch-mb,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
+$NetBSD: patch-mb,v 1.2 2010/03/16 15:57:02 tnn Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2009-06-29 18:15:32.000000000 +0200
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2009-11-25 05:13:10.000000000 +0100
 +++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
-@@ -64,14 +64,21 @@ include $(topsrcdir)/config/config.mk
- #
- # Lots of Unixish x86 flavors
- #
--ifneq (,$(filter FreeBSD NetBSD OpenBSD BSD_OS Darwin,$(OS_ARCH)))
-+ifneq (,$(filter DragonFly FreeBSD NetBSD OpenBSD BSD_OS Darwin,$(OS_ARCH)))
-+ifeq (x86_64,$(OS_TEST))
-+CPPSRCS		:= xptcinvoke_x86_64_linux.cpp xptcstubs_x86_64_linux.cpp
-+else
+@@ -76,7 +76,7 @@ endif
+ endif
+ endif
+ 
+-ifneq (,$(filter FreeBSD NetBSD OpenBSD BSD_OS,$(OS_ARCH)))
++ifneq (,$(filter FreeBSD DragonFly NetBSD OpenBSD BSD_OS,$(OS_ARCH)))
  ifeq (86,$(findstring 86,$(OS_TEST)))
  CPPSRCS		:= xptcinvoke_unixish_x86.cpp xptcstubs_unixish_x86.cpp
-+endif
-+ifeq (amd64,$(OS_TEST))
-+CPPSRCS		:= xptcinvoke_x86_64_linux.cpp xptcstubs_x86_64_linux.cpp
-+endif
-+endif
- ifeq (Darwin,$(OS_ARCH))
- DEFINES		+= -DKEEP_STACK_16_BYTE_ALIGNED
  endif
+@@ -108,12 +108,28 @@ endif
+ ifeq ($(OS_ARCH)$(OS_TEST),OpenBSDx86_64)
+ CPPSRCS		:= xptcinvoke_amd64_openbsd.cpp xptcstubs_amd64_openbsd.cpp
  endif
--endif
++
++#
++# NetBSD/amd64
++#
++ifeq ($(OS_ARCH)$(OS_TEST),NetBSDx86_64)
++CPPSRCS		:= xptcinvoke_amd64_openbsd.cpp xptcstubs_amd64_openbsd.cpp
++endif
++
  #
- # New code for Linux, et. al., with gcc
- # Migrate other platforms here after testing
-@@ -185,7 +192,7 @@ endif
+ # FreeBSD/amd64
+ #
+ ifeq ($(OS_ARCH)$(OS_TEST),FreeBSDx86_64)
+ CPPSRCS		:= xptcinvoke_amd64_linux.cpp xptcstubs_amd64_linux.cpp
+ endif
++
++#
++# DragonFlyBSD/amd64
++#
++ifeq ($(OS_ARCH)$(OS_TEST),DragonFlyx86_64)
++CPPSRCS		:= xptcinvoke_amd64_linux.cpp xptcstubs_amd64_linux.cpp
++endif
++
+ #
+ # BeOS/Intel (uses the same unixish_x86 code)
+ #
+@@ -200,7 +216,7 @@ endif
  # NetBSD/ARM
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -35,7 +49,7 @@ $NetBSD: patch-mb,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
  CPPSRCS		:= xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
  endif
  endif
-@@ -240,7 +247,7 @@ endif
+@@ -255,7 +271,7 @@ endif
  # NetBSD/m68k
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -44,7 +58,7 @@ $NetBSD: patch-mb,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -325,9 +332,10 @@ endif
+@@ -340,9 +356,10 @@ endif
  #
  # NetBSD/PPC
  #
@@ -56,7 +70,7 @@ $NetBSD: patch-mb,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
  endif
  
  #
-@@ -399,6 +407,13 @@ CPPSRCS		:= xptcinvoke_sparc64_openbsd.c
+@@ -414,6 +431,13 @@ CPPSRCS		:= xptcinvoke_sparc64_openbsd.c
  ASFILES		:= xptcinvoke_asm_sparc64_openbsd.s xptcstubs_asm_sparc64_openbsd.s
  endif
  #

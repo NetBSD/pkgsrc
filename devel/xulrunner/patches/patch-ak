@@ -1,19 +1,13 @@
-$NetBSD: patch-ak,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
+$NetBSD: patch-ak,v 1.2 2010/03/16 15:57:02 tnn Exp $
 
---- toolkit/components/places/src/nsMorkHistoryImporter.cpp.orig	2009-06-29 18:15:22.000000000 +0200
-+++ toolkit/components/places/src/nsMorkHistoryImporter.cpp
-@@ -148,9 +148,12 @@ AddToHistoryCB(const nsCSubstring &aRowI
-     }
- 
-     PRTime date;
--    if (PR_sscanf(values[kLastVisitColumn].get(), "%lld", &date) != 1) {
-+    long long ld;
-+    if (PR_sscanf(values[kLastVisitColumn].get(), "%lld", &ld) != 1) {
-       date = -1;
--    }
-+    } else {
-+      date = ld;
-+   }
- 
-     PRBool isTyped = values[kTypedColumn].EqualsLiteral("1");
-     PRInt32 transition = isTyped ?
+--- js/ctypes/libffi/configure.orig	2010-01-21 03:30:16.000000000 +0000
++++ js/ctypes/libffi/configure
+@@ -21033,7 +21033,7 @@ case "$host" in
+   powerpc-*-aix* | rs6000-*-aix*)
+ 	TARGET=POWERPC_AIX; TARGETDIR=powerpc
+ 	;;
+-  powerpc-*-freebsd*)
++  powerpc-*-freebsd* | powerpc-*-netbsd*)
+ 	TARGET=POWERPC_FREEBSD; TARGETDIR=powerpc
+ 	;;
+   powerpc*-*-rtems*)
