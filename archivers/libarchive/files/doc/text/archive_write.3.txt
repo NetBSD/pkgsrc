@@ -1,4 +1,4 @@
-archive_write(3)	NetBSD Library Functions Manual	      archive_write(3)
+archive_write(3)       FreeBSD Library Functions Manual       archive_write(3)
 
 NAME
      archive_write_new, archive_write_set_format_cpio,
@@ -134,7 +134,7 @@ DESCRIPTION
 
      archive_write_get_bytes_per_block()
 	     Retrieve the block size to be used for writing.  A value of -1
-	     here indicates that the library should use default values.	 A
+	     here indicates that the library should use default values.  A
 	     value of zero indicates that internal blocking is suppressed.
 
      archive_write_set_bytes_in_last_block()
@@ -159,7 +159,7 @@ DESCRIPTION
 	     archive_write_set_format_shar(),
 	     archive_write_set_format_shar_binary(),
 	     archive_write_set_format_ustar()
-	     Sets the format that will be used for the archive.	 The library
+	     Sets the format that will be used for the archive.  The library
 	     can write POSIX octet-oriented cpio format archives, POSIX-stan-
 	     dard ``pax interchange'' format archives, traditional ``shar''
 	     archives, enhanced ``binary'' shar archives that store a variety
@@ -262,7 +262,7 @@ DESCRIPTION
 	     archive_write_open_filename() will adjust the last-block padding
 	     depending on the file: it will enable padding when writing to
 	     standard output or to a character or block device node, it will
-	     disable padding otherwise.	 You can override this by manually
+	     disable padding otherwise.  You can override this by manually
 	     invoking archive_write_set_bytes_in_last_block() before calling
 	     archive_write_open().  The archive_write_open_filename() function
 	     is safe for use with tape drives or other block-oriented devices.
@@ -309,7 +309,7 @@ IMPLEMENTATION
 
 CLIENT CALLBACKS
      To use this library, you will need to define and register callback func-
-     tions that will be invoked to write data to the resulting archive.	 These
+     tions that will be invoked to write data to the resulting archive.  These
      functions are registered by calling archive_write_open():
 
 	   typedef int archive_open_callback(struct archive *, void
@@ -325,7 +325,7 @@ CLIENT CALLBACKS
 
      The write callback is invoked whenever the library needs to write raw
      bytes to the archive.  For correct blocking, each call to the write call-
-     back function should translate into a single write(2) system call.	 This
+     back function should translate into a single write(2) system call.  This
      is especially critical when writing archives to tape drives.  On success,
      the write callback should return the number of bytes actually written.
      On error, the callback should invoke archive_set_error() to register an
@@ -466,7 +466,7 @@ AUTHORS
 
 BUGS
      There are many peculiar bugs in historic tar implementations that may
-     cause certain programs to reject archives written by this library.	 For
+     cause certain programs to reject archives written by this library.  For
      example, several historic implementations calculated header checksums
      incorrectly and will thus reject valid archives; GNU tar does not fully
      support pax interchange format; some old tar implementations required
@@ -483,4 +483,4 @@ BUGS
      correctly restore device nodes with large device numbers from archives
      created by this library.
 
-NetBSD 5.0			 May 11, 2008			    NetBSD 5.0
+FreeBSD 9.0			 May 11, 2008			   FreeBSD 9.0

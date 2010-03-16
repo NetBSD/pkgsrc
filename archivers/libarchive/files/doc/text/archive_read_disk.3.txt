@@ -1,4 +1,4 @@
-archive_read_disk(3)	NetBSD Library Functions Manual	  archive_read_disk(3)
+archive_read_disk(3)   FreeBSD Library Functions Manual   archive_read_disk(3)
 
 NAME
      archive_read_disk_new, archive_read_disk_set_symlink_logical,
@@ -84,7 +84,7 @@ DESCRIPTION
 	     This convenience function installs a standard set of user and
 	     group name lookup functions.  These functions use getpwid(3) and
 	     getgrid(3) to convert ids to names, defaulting to NULL if the
-	     names cannot be looked up.	 These functions also implement a sim-
+	     names cannot be looked up.  These functions also implement a sim-
 	     ple memory cache to reduce the number of calls to getpwid(3) and
 	     getgrid(3).
 
@@ -201,4 +201,4 @@ BUGS
      such methods are implemented, the ``hybrid'' symbolic link mode will make
      sense.
 
-NetBSD 5.0			March 10, 2009			    NetBSD 5.0
+FreeBSD 9.0			March 10, 2009			   FreeBSD 9.0

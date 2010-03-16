@@ -1,4 +1,4 @@
-archive_write_disk(3)	NetBSD Library Functions Manual	 archive_write_disk(3)
+archive_write_disk(3)  FreeBSD Library Functions Manual  archive_write_disk(3)
 
 NAME
      archive_write_disk_new, archive_write_disk_set_options,
@@ -50,11 +50,11 @@ SYNOPSIS
 
 DESCRIPTION
      These functions provide a complete API for creating objects on disk from
-     struct archive_entry descriptions.	 They are most naturally used when
+     struct archive_entry descriptions.  They are most naturally used when
      extracting objects from an archive using the archive_read() interface.
      The general process is to read struct archive_entry objects from an ar-
      chive, then write those objects to a struct archive object created using
-     the archive_write_disk() family functions.	 This interface is deliber-
+     the archive_write_disk() family functions.  This interface is deliber-
      ately very similar to the archive_write() interface used to write objects
      to a streaming archive.
 
@@ -79,7 +79,7 @@ DESCRIPTION
 	     ARCHIVE_EXTRACT_PERM
 		     Full permissions (including SGID, SUID, and sticky bits)
 		     should be restored exactly as specified, without obeying
-		     the current umask.	 Note that SUID and SGID bits can only
+		     the current umask.  Note that SUID and SGID bits can only
 		     be restored if the user and group ID of the object on
 		     disk are correct.	If ARCHIVE_EXTRACT_OWNER is not speci-
 		     fied, then SUID and SGID bits will only be restored if
@@ -150,7 +150,7 @@ DESCRIPTION
 	     This convenience function installs a standard set of user and
 	     group lookup functions.  These functions use getpwnam(3) and
 	     getgrnam(3) to convert names to ids, defaulting to the ids if the
-	     names cannot be looked up.	 These functions also implement a sim-
+	     names cannot be looked up.  These functions also implement a sim-
 	     ple memory cache to reduce the number of calls to getpwnam(3) and
 	     getgrnam(3).
 
@@ -181,7 +181,7 @@ DESCRIPTION
 	     Invokes archive_write_close() if it was not invoked manually,
 	     then releases all resources.
      More information about the struct archive object and the overall design
-     of the library can be found in the libarchive(3) overview.	 Many of these
+     of the library can be found in the libarchive(3) overview.  Many of these
      functions are also documented under archive_write(3).
 
 RETURN VALUES
@@ -212,7 +212,7 @@ AUTHORS
      The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
 BUGS
-     Directories are actually extracted in two distinct phases.	 Directories
+     Directories are actually extracted in two distinct phases.  Directories
      are created during archive_write_header(), but final permissions are not
      set until archive_write_close().  This separation is necessary to cor-
      rectly handle borderline cases such as a non-writable directory contain-
@@ -225,7 +225,7 @@ BUGS
 
      The library attempts to create objects with filenames longer than
      PATH_MAX by creating prefixes of the full path and changing the current
-     directory.	 Currently, this logic is limited in scope; the fixup pass
+     directory.  Currently, this logic is limited in scope; the fixup pass
      does not work correctly for such objects and the symlink security check
      option disables the support for very long pathnames.
 
@@ -242,7 +242,7 @@ BUGS
 
      SGID and SUID bits are restored only if the correct user and group could
      be set.  If ARCHIVE_EXTRACT_OWNER is not specified, then no attempt is
-     made to set the ownership.	 In this case, SGID and SUID bits are restored
+     made to set the ownership.  In this case, SGID and SUID bits are restored
      only if the user and group of the final object happen to match those
      specified in the entry.
 
@@ -254,4 +254,4 @@ BUGS
      There should be a corresponding archive_read_disk interface that walks a
      directory heirarchy and returns archive entry objects.
 
-NetBSD 5.0			August 5, 2008			    NetBSD 5.0
+FreeBSD 9.0			August 5, 2008			   FreeBSD 9.0
