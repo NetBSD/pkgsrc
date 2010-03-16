@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1263 2010/03/16 08:40:25 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1264 2010/03/16 09:07:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1499,3 +1499,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated geography/viking to 0.9.92 [gdt 2010-03-15]
 	Updated www/squid31 to 3.1.0.18 [tron 2010-03-15]
 	Updated x11/gtk2 to 2.18.8 [wiz 2010-03-16]
+	Updated textproc/p5-Text-Quoted to 2.06 [sno 2010-03-16]
