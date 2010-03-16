@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1313 2010/03/16 21:59:37 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1314 2010/03/16 22:06:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1559,3 +1559,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Data-Peek to 0.31 [sno 2010-03-16]
 	Updated devel/p5-Path-Dispatcher to 0.15 [sno 2010-03-16]
 	Updated textproc/p5-Text-CSV_XS to 0.72 [sno 2010-03-16]
+	Updated textproc/p5-XML-NamespaceSupport to 1.11 [sno 2010-03-16]
