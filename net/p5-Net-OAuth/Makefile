@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/11/21 15:23:14 sno Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/16 18:23:14 sno Exp $
 #
 
-DISTNAME=	Net-OAuth-0.20
+DISTNAME=	Net-OAuth-0.22
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-Class-Accessor>=0.31:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Inheritable>=0.06:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Digest-HMAC>=1.01:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-Digest-SHA1>=2.12:../../security/p5-Digest-SHA1
-DEPENDS*=	{perl>=5.10.1,p5-Encode>=2.35}:../../textproc/p5-Encode
+DEPENDS+=	{perl>=5.10.1,p5-Encode>=2.35}:../../textproc/p5-Encode
 DEPENDS+=	p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-URI>=1.36:../../www/p5-URI
 
