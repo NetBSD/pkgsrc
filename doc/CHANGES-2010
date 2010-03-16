@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1308 2010/03/16 21:24:46 agc Exp $
+$NetBSD: CHANGES-2010,v 1.1309 2010/03/16 21:31:33 asau Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1554,3 +1554,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Text-Trac version 0.15 [sno 2010-03-16]
 	Updated devel/p5-SVN-Notify to 2.80 [sno 2010-03-16]
 	Added math/itpp version 4.0.7 [agc 2010-03-16]
+	Removed cross/i386-mingw32 [asau 2010-03-16]
