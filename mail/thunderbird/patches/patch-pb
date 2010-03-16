@@ -1,0 +1,11 @@
+$NetBSD: patch-pb,v 1.1 2010/03/16 10:59:09 tnn Exp $
+
+--- mozilla/xulrunner/installer/libxul.pc.in.orig	2009-06-29 18:15:36.000000000 +0200
++++ mozilla/xulrunner/installer/libxul.pc.in
+@@ -12,5 +12,5 @@ Name: libxul
+ Description: The Mozilla Runtime and Embedding Engine
+ Version: %MOZILLA_VERSION%
+ Requires: %NSPR_NAME% >= %NSPR_VERSION%
+-Libs: -L${sdkdir}/lib -lxpcomglue_s -lxul -lxpcom
++Libs: -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner -lxpcomglue_s -lxul -lxpcom
+ Cflags: -I${includedir}/${includetype} %WCHAR_CFLAGS%

@@ -1,0 +1,19 @@
+$NetBSD: patch-bb,v 1.3 2010/03/16 10:59:10 tnn Exp $
+
+Fix build using Sun Studio C++.
+
+--- mozilla/memory/jemalloc/jemalloc.h.orig	2009-12-02 04:29:06.000000000 +0000
++++ mozilla/memory/jemalloc/jemalloc.h	2010-01-09 23:24:34.000000000 +0000
+@@ -1,3 +1,4 @@
++#ifndef  __cplusplus
+ #ifndef MOZ_MEMORY_WINDOWS
+ #  include <stdbool.h>
+ #else
+@@ -6,6 +7,7 @@
+ #    define bool BOOL
+ #  endif
+ #endif
++#endif
+ 
+ extern const char	*_malloc_options;
+ 
