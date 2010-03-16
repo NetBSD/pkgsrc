@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/22 12:01:37 seb Exp $
+$NetBSD: distinfo,v 1.2 2010/03/16 19:14:46 sno Exp $
 
-SHA1 (lib-abs-0.90.tar.gz) = 8d29091cccbca49e8f74899f683e3a9c575f9ae5
-RMD160 (lib-abs-0.90.tar.gz) = e83c7a1ec8bbb64637a47d1b079c6108bdcb4d85
-Size (lib-abs-0.90.tar.gz) = 36960 bytes
+SHA1 (lib-abs-0.91.tar.gz) = b48a930ddd1e5fc12fc587587b87d4790823d6da
+RMD160 (lib-abs-0.91.tar.gz) = 06a5c015936e939daa3fc230bc861f1dd11e58f0
+Size (lib-abs-0.91.tar.gz) = 36126 bytes
