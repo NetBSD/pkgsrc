@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/04 20:46:06 abs Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/16 16:02:20 taca Exp $
 #
 
 DISTNAME=	ampache-3.5.3
@@ -12,7 +12,7 @@ COMMENT=	Web-based Audio file manager
 DEPENDS+=       ${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
 DEPENDS+=       ${PHP_PKG_PREFIX}-gettext>=0:../../devel/php-gettext
 DEPENDS+=       ${PHP_PKG_PREFIX}-iconv>=0:../../converters/php-iconv
-DEPENDS+=       ${PHP_PKG_PREFIX}-mbstring>=0:../../misc/php-mbstring
+DEPENDS+=       ${PHP_PKG_PREFIX}-mbstring>=0:../../converters/php-mbstring
 DEPENDS+=       ${PHP_PKG_PREFIX}-mysql>=0:../../databases/php-mysql
 
 NO_BUILD=		yes
