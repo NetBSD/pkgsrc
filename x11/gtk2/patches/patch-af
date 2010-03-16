@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.16 2009/11/27 16:54:30 tnn Exp $
+$NetBSD: patch-af,v 1.17 2010/03/16 08:40:15 wiz Exp $
 
---- configure.orig	2009-10-17 03:53:05.000000000 +0200
+--- configure.orig	2010-03-15 22:37:29.000000000 +0000
 +++ configure
-@@ -28849,7 +28849,7 @@ $as_echo "$ac_try_echo") >&5
-        }; then
-   { $as_echo "$as_me:$LINENO: result: no" >&5
+@@ -23073,7 +23073,7 @@ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
 -       X_LIBS="$X_LIBS -R$x_libraries"
 +       X_LIBS="$X_LIBS ${COMPILER_RPATH_FLAG}$x_libraries"
  else
-   $as_echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
+   LIBS="$ac_xsave_LIBS -R $x_libraries"
+        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
