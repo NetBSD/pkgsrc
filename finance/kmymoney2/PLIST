@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/09/02 10:05:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/03/16 09:17:38 wiz Exp $
 bin/kmymoney
 bin/kmymoney2
 include/kmymoney/export.h
@@ -257,6 +257,7 @@ share/icons/Tango/128x128/apps/reconcile.png
 share/icons/Tango/128x128/apps/report.png
 share/icons/Tango/128x128/apps/schedule.png
 share/icons/Tango/128x128/apps/transaction_find.png
+share/icons/Tango/16x16/actions/account.png
 share/icons/Tango/16x16/actions/account-types_asset.png
 share/icons/Tango/16x16/actions/account-types_cash.png
 share/icons/Tango/16x16/actions/account-types_checking.png
@@ -268,7 +269,6 @@ share/icons/Tango/16x16/actions/account-types_investments.png
 share/icons/Tango/16x16/actions/account-types_liability.png
 share/icons/Tango/16x16/actions/account-types_loan.png
 share/icons/Tango/16x16/actions/account-types_savings.png
-share/icons/Tango/16x16/actions/account.png
 share/icons/Tango/16x16/actions/account_add.png
 share/icons/Tango/16x16/actions/accounts.png
 share/icons/Tango/16x16/actions/backup.png
@@ -293,6 +293,7 @@ share/icons/Tango/16x16/actions/schedule.png
 share/icons/Tango/16x16/actions/split_transaction.png
 share/icons/Tango/16x16/actions/transaction_find.png
 share/icons/Tango/16x16/actions/view_info.png
+share/icons/Tango/22x22/actions/account.png
 share/icons/Tango/22x22/actions/account-types_asset.png
 share/icons/Tango/22x22/actions/account-types_cash.png
 share/icons/Tango/22x22/actions/account-types_checking.png
@@ -304,7 +305,6 @@ share/icons/Tango/22x22/actions/account-types_investments.png
 share/icons/Tango/22x22/actions/account-types_liability.png
 share/icons/Tango/22x22/actions/account-types_loan.png
 share/icons/Tango/22x22/actions/account-types_savings.png
-share/icons/Tango/22x22/actions/account.png
 share/icons/Tango/22x22/actions/account_add.png
 share/icons/Tango/22x22/actions/accounts.png
 share/icons/Tango/22x22/actions/attention.png
@@ -518,19 +518,52 @@ share/icons/oxygen/32x32/apps/account-types_closed.png
 share/icons/oxygen/32x32/apps/account-types_expense.png
 share/icons/oxygen/32x32/apps/account-types_income.png
 share/icons/oxygen/32x32/apps/account_add.png
+share/icons/oxygen/32x32/apps/accounts.png
+share/icons/oxygen/32x32/apps/budget.png
+share/icons/oxygen/32x32/apps/categories.png
+share/icons/oxygen/32x32/apps/forcast.png
 share/icons/oxygen/32x32/apps/institution_add.png
+share/icons/oxygen/32x32/apps/institutions.png
+share/icons/oxygen/32x32/apps/investments.png
+share/icons/oxygen/32x32/apps/ledger.png
+share/icons/oxygen/32x32/apps/onlinebanking.png
+share/icons/oxygen/32x32/apps/payee.png
 share/icons/oxygen/32x32/apps/reconcile.png
+share/icons/oxygen/32x32/apps/report.png
+share/icons/oxygen/32x32/apps/schedule.png
 share/icons/oxygen/32x32/apps/transaction_find.png
 share/icons/oxygen/48x48/apps/account-types_closed.png
 share/icons/oxygen/48x48/apps/account-types_expense.png
 share/icons/oxygen/48x48/apps/account-types_income.png
 share/icons/oxygen/48x48/apps/account_add.png
+share/icons/oxygen/48x48/apps/accounts.png
+share/icons/oxygen/48x48/apps/budget.png
+share/icons/oxygen/48x48/apps/categories.png
+share/icons/oxygen/48x48/apps/forcast.png
 share/icons/oxygen/48x48/apps/institution_add.png
+share/icons/oxygen/48x48/apps/institutions.png
+share/icons/oxygen/48x48/apps/investments.png
+share/icons/oxygen/48x48/apps/ledger.png
+share/icons/oxygen/48x48/apps/onlinebanking.png
+share/icons/oxygen/48x48/apps/payee.png
 share/icons/oxygen/48x48/apps/reconcile.png
+share/icons/oxygen/48x48/apps/report.png
+share/icons/oxygen/48x48/apps/schedule.png
 share/icons/oxygen/48x48/apps/transaction_find.png
 share/icons/oxygen/64x64/apps/account-add.png
 share/icons/oxygen/64x64/apps/account-types_closed.png
+share/icons/oxygen/64x64/apps/accounts.png
+share/icons/oxygen/64x64/apps/budget.png
+share/icons/oxygen/64x64/apps/categories.png
+share/icons/oxygen/64x64/apps/forcast.png
+share/icons/oxygen/64x64/apps/institutions.png
+share/icons/oxygen/64x64/apps/investments.png
+share/icons/oxygen/64x64/apps/ledger.png
+share/icons/oxygen/64x64/apps/onlinebanking.png
+share/icons/oxygen/64x64/apps/payee.png
 share/icons/oxygen/64x64/apps/reconcile.png
+share/icons/oxygen/64x64/apps/report.png
+share/icons/oxygen/64x64/apps/schedule.png
 share/icons/oxygen/64x64/apps/transaction_find.png
 share/icons/oxygen/scalable/account-add.svgz
 share/icons/oxygen/scalable/account-types_asset.svgz
@@ -625,7 +658,6 @@ share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/account-type_asset.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/account-type_expense.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/account-type_income.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/account-type_liability.png
-share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/account.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/account_add.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/account_open.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/backup.png
@@ -636,6 +668,7 @@ share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/delete.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/hide_categories.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/hide_reconciled.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/institution_add.png
+share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/ledger.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/pay_edit.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/personal_data.png
 share/kde/apps/kmymoney2/icons/hicolor/16x16/actions/reconcile.png
@@ -654,7 +687,6 @@ share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/account-types_income.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/account-types_liability.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/account-types_online.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/account-types_reconcile.png
-share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/account.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/account_add.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/account_open.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/attention.png
@@ -666,6 +698,7 @@ share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/delete.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/hide_categories.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/hide_reconciled.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/institution_add.png
+share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/ledger.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/pay_edit.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/personal_data.png
 share/kde/apps/kmymoney2/icons/hicolor/22x22/actions/reconcile.png
