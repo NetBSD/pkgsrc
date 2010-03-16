@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/02/15 14:46:25 sno Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/16 21:45:28 sno Exp $
 #
 
-DISTNAME=		Data-Peek-0.30
+DISTNAME=		Data-Peek-0.31
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Data/}
