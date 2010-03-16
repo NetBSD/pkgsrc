@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/22 18:40:54 seb Exp $
+$NetBSD: distinfo,v 1.2 2010/03/16 23:05:01 sno Exp $
 
-SHA1 (ShipIt-0.52.tar.gz) = 66dbf51a9e6afbaef0a6b68c2f8b55febbf024da
-RMD160 (ShipIt-0.52.tar.gz) = 37a3bcd874c0657b76d2e3c3e4c4a2c39c705e86
-Size (ShipIt-0.52.tar.gz) = 16293 bytes
+SHA1 (ShipIt-0.53.tar.gz) = 21d6e66e24aad660fb84e8ab6b3c7f274904169a
+RMD160 (ShipIt-0.53.tar.gz) = 01e34adb0b2190eb5ce0bd3187d8ca797d3de551
+Size (ShipIt-0.53.tar.gz) = 16748 bytes
