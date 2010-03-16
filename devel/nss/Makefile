@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2010/02/12 09:01:45 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2010/03/16 16:09:04 tnn Exp $
 
 .include "../../devel/xulrunner/dist.mk"
-PKGNAME=		${DISTNAME:S/firefox-3.5/nss-${NSS_RELEASE}/:S/.source//}
-NSS_RELEASE=		3.12.4.5
+PKGNAME=		nss-${NSS_RELEASE}${MOZ_BRANCH_MINOR}
+NSS_RELEASE=		3.12.6.2
 CATEGORIES=		security
 
 MAINTAINER=		tnn@NetBSD.org
@@ -11,6 +11,7 @@ COMMENT=		Libraries to support development of security-enabled applications
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
+CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 
 USE_TOOLS+=		gmake perl pax pkg-config
 
@@ -45,7 +46,7 @@ pre-configure:
 # sanity check: make sure the nss release is what we think it is.
 	@set -e; if [ '"${NSS_RELEASE}"' !=			\
 	  "`${AWK} '/NSS_VERSION/ {print $$3}' <		\
-	  ${WRKSRC}/security//nss/lib/nss/nss.h`" ]; then	\
+	  ${WRKSRC}/security/nss/lib/nss/nss.h`" ]; then	\
 	  ${ECHO} "package is out of date";			\
 	  exit 1;						\
 	fi
