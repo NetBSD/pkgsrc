@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/11/26 19:46:35 imil Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/03/16 08:03:07 obache Exp $
 bin/compiz
 bin/gtk-window-decorator
 include/compiz/compiz-common.h
@@ -30,7 +30,7 @@ lib/compiz/libresize.la
 lib/compiz/librotate.la
 lib/compiz/libscale.la
 lib/compiz/libscreenshot.la
-lib/compiz/libsvg.la
+${PLIST.gnome}lib/compiz/libsvg.la
 lib/compiz/libswitcher.la
 lib/compiz/libvideo.la
 lib/compiz/libwater.la
@@ -42,8 +42,8 @@ lib/pkgconfig/compiz-gconf.pc
 lib/pkgconfig/compiz-scale.pc
 lib/pkgconfig/compiz.pc
 lib/pkgconfig/libdecoration.pc
-lib/window-manager-settings/libcompiz.la
-share/applications/compiz.desktop
+${PLIST.gnome}lib/window-manager-settings/libcompiz.la
+${PLIST.gnome}share/applications/compiz.desktop
 share/compiz/annotate.xml
 share/compiz/blur.xml
 share/compiz/clone.xml
@@ -112,9 +112,9 @@ share/gconf/schemas/compiz-water.schemas
 share/gconf/schemas/compiz-wobbly.schemas
 share/gconf/schemas/compiz-zoom.schemas
 share/gconf/schemas/gwd.schemas
-share/gnome-control-center/keybindings/50-compiz-desktop-key.xml
-share/gnome-control-center/keybindings/50-compiz-key.xml
-share/gnome/wm-properties/compiz-wm.desktop
+${PLIST.gnome}share/gnome-control-center/keybindings/50-compiz-desktop-key.xml
+${PLIST.gnome}share/gnome-control-center/keybindings/50-compiz-key.xml
+${PLIST.gnome}share/gnome/wm-properties/compiz-wm.desktop
 share/locale/af/LC_MESSAGES/compiz.mo
 share/locale/ar/LC_MESSAGES/compiz.mo
 share/locale/bg/LC_MESSAGES/compiz.mo
