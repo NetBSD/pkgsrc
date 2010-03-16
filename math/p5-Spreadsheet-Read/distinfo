@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/01/25 21:49:30 seb Exp $
+$NetBSD: distinfo,v 1.5 2010/03/16 22:41:56 sno Exp $
 
-SHA1 (Spreadsheet-Read-0.38.tgz) = f9896d760d08d5644ba4f39baaf05a031d2160bc
-RMD160 (Spreadsheet-Read-0.38.tgz) = 8e0b594c4fbc41566f0dcc3bb37649e41a5d199b
-Size (Spreadsheet-Read-0.38.tgz) = 120616 bytes
+SHA1 (Spreadsheet-Read-0.39.tgz) = 8a5b1f556c88a7399f7fc9ffc7e30cf95eb38bc9
+RMD160 (Spreadsheet-Read-0.39.tgz) = aa7057ac08d40dfb64a73330323f14a82a111688
+Size (Spreadsheet-Read-0.39.tgz) = 120682 bytes
