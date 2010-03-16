@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2009/01/19 20:15:49 abs Exp $
+# $NetBSD: options.mk,v 1.5 2010/03/16 16:02:21 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.roundcube
 
@@ -57,7 +57,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=4.3.1:../../databases/php-ldap
 ### Use mbstring
 ###
 .if !empty(PKG_OPTIONS:Mmultibyte)
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.1:../../misc/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.1:../../converters/php-mbstring
 .endif
 
 ###
