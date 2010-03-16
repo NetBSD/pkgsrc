@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9147 2010/03/15 17:12:17 sno Exp $
+$NetBSD: TODO,v 1.9148 2010/03/16 16:30:38 tnn Exp $
 
 Suggested new packages
 ======================
@@ -593,7 +593,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
-	o firefox-3.6.2 [pkgsrc-wip]
 	o fisg-0.3.12
 	o fixesproto-4.1.1 [xorg-server 1.7]
 	o flashplayer-0.4.13
@@ -976,7 +975,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ns-3.5
 	o ns-flash-10
 	o ns-plugger-common-5.1.3
-	o nss-3.12.5.4.8.2
 	o ntp4-4.2.6
 	o nulib2-220
 	o nut-15.3
