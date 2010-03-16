@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2010/03/09 21:54:01 sno Exp $
+$NetBSD: distinfo,v 1.7 2010/03/16 09:53:02 sno Exp $
 
-SHA1 (Text-BibTeX-0.40.tar.gz) = 4b65b761cd5a7ed404f48aad292f6a6a4da37701
-RMD160 (Text-BibTeX-0.40.tar.gz) = f9a8e7fe676c3fa835308ed269ddb020ae86f85a
-Size (Text-BibTeX-0.40.tar.gz) = 265444 bytes
+SHA1 (Text-BibTeX-0.41.tar.gz) = f0b33fd831e7c2cff7391f4c4c901f145f98ef05
+RMD160 (Text-BibTeX-0.41.tar.gz) = 9264d764bcdb3af703a4ef48a21b0c3fadbc0093
+Size (Text-BibTeX-0.41.tar.gz) = 265974 bytes
 SHA1 (btparse-0.35.tar.gz) = bb52c5fc02c1326008bed31a3c8932dd832b8ea8
 RMD160 (btparse-0.35.tar.gz) = afdf8cc2abd0beaa53b142d7277758a32e26d256
 Size (btparse-0.35.tar.gz) = 470546 bytes
-SHA1 (patch-aa) = 33ca774fe490a9c6e809ac17202badf9843e8aaf
+SHA1 (patch-aa) = 6c6193cd464e59b30f8405565cca566d089ca5c5
