@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1324 2010/03/16 23:03:22 pettai Exp $
+$NetBSD: CHANGES-2010,v 1.1325 2010/03/16 23:05:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1570,3 +1570,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.79 [sno 2010-03-16]
 	Updated devel/p5-Lexical-Persistence to 1.02 [sno 2010-03-16]
 	Added www/gallery2 version 2.2.6 [pettai 2010-03-16]
+	Updated devel/p5-ShipIt to 0.53 [sno 2010-03-16]
