@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1303 2010/03/16 19:29:02 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1304 2010/03/16 19:33:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1549,3 +1549,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/mysql51-client to 5.1.44nb1 [wiz 2010-03-16]
 	Updated databases/mysql51-server to 5.1.44nb1 [wiz 2010-03-16]
 	Updated audio/amarok to 2.3.0 [wiz 2010-03-16]
+	Updated x11/gtk-sharp to 2.12.10 [wiz 2010-03-16]
