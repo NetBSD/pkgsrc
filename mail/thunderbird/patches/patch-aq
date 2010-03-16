@@ -1,0 +1,16 @@
+$NetBSD: patch-aq,v 1.5 2010/03/16 10:59:09 tnn Exp $
+
+--- mozilla/media/liboggplay/src/liboggplay/std_semaphore.h.orig	2009-10-16 17:14:09.000000000 +0200
++++ mozilla/media/liboggplay/src/liboggplay/std_semaphore.h
+@@ -74,9 +74,9 @@
+  * @retval non-zero on error 
+  */
+ 
+-#if defined(linux) || defined(SOLARIS) || defined(AIX) || defined(__FreeBSD__)
++#if defined(linux) || defined(SOLARIS) || defined(AIX) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
+ #include <semaphore.h>
+-#if defined(__FreeBSD__) 
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #define SEM_CREATE(p,s) sem_init(&(p), 0, s)  
+ #else
+ #define SEM_CREATE(p,s) sem_init(&(p), 1, s)
