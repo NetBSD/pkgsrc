@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2010/01/25 13:41:30 sno Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/16 21:52:11 sno Exp $
 
-DISTNAME=	Path-Dispatcher-0.14
+DISTNAME=	Path-Dispatcher-0.15
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
