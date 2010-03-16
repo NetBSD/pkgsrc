@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2010/03/02 21:51:06 jkunz Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/03/16 20:02:26 jkunz Exp $
 lib/qlandkartegt/libEtrexClassic.so
 lib/qlandkartegt/libEtrexEuro.so
 lib/qlandkartegt/libEtrexH.so
@@ -27,3 +27,4 @@ lib/qlandkartegt/libQuest.so
 lib/qlandkartegt/libRino120.so
 lib/qlandkartegt/libgarmin.a
 lib/qlandkartegt/libwhatGarmin.so
+include/garmin/IDevice.h
