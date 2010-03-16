@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/03/16 23:05:30 pettai Exp $
+
+Gallery is now installed in the ${G1DIR} directory
+
+To get the final installation & setup instructions, go to the Gallery
+documentation homepage:
+
+	http://codex.gallery2.org/Gallery1:Configuration_Wizard
+
+And don't forget to read the security information regarding gallery:
+
+	http://codex.gallery2.org/Gallery1:Securing
+
+===========================================================================
