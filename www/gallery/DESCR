@@ -1,0 +1,6 @@
+Gallery 1 is a web-based photo album suitable for small to medium-sized
+photo collections. Unlike Gallery 2, Gallery 1 does not need a database
+backend. It provides users with the ability to create and maintain their
+own albums via an intuitive web interface. Photo management includes
+automatic thumbnail creation, image resizing, rotation, ordering,
+captioning, searching and more.
