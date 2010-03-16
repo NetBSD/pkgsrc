@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2010/02/10 19:52:30 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2010/03/16 15:55:08 taca Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -30,6 +30,7 @@ SUBDIR+=	netbsd-doc-print
 SUBDIR+=	netbsd-www
 SUBDIR+=	p5-gnome-bindings
 SUBDIR+=	php5-extensions
+SUBDIR+=	php53-extensions
 SUBDIR+=	pkg_developer
 SUBDIR+=	pkgsrc-guide-tools
 SUBDIR+=	pulseaudio-tools
