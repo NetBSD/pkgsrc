@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2009/07/08 14:10:18 sno Exp $
+# $NetBSD: Makefile,v 1.18 2010/03/16 10:32:38 sno Exp $
 #
 
-DISTNAME=		Net-DNS-SEC-0.15
+DISTNAME=		Net-DNS-SEC-0.16
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5nds
 CATEGORIES=		security net perl5
@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://www.net-dns.org/
 COMMENT=		DNSSEC extension to Net::DNS Perl DNS Resolver Module
+LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,10 +18,10 @@ DEPENDS+=		p5-Crypt-OpenSSL-Bignum>=0.03:../../security/p5-Crypt-OpenSSL-Bignum
 DEPENDS+=		p5-Crypt-OpenSSL-DSA>=0.10:../../security/p5-Crypt-OpenSSL-DSA
 DEPENDS+=		p5-Crypt-OpenSSL-RSA>=0.19:../../security/p5-Crypt-OpenSSL-RSA
 DEPENDS+=		p5-Digest-BubbleBabble>=0.01:../../security/p5-Digest-BubbleBabble
-DEPENDS+=		p5-Digest-SHA>=5.23:../../security/p5-Digest-SHA
+DEPENDS+=		{perl>=5.10.0,p5-Digest-SHA>=5.23}:../../security/p5-Digest-SHA
 DEPENDS+=		p5-Digest-SHA1>=2.04:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-MIME-Base32-[0-9]*:../../converters/p5-MIME-Base32
-DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Net-DNS>=0.64:../../net/p5-Net-DNS
 
 BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.1
