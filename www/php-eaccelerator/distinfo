@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/07/26 18:05:03 jdolecek Exp $
+$NetBSD: distinfo,v 1.6 2010/03/16 13:58:07 taca Exp $
 
-SHA1 (php-eaccelerator/eaccelerator-0.9.5.3.tar.bz2) = 6671a105497f41c4e93e0b84da516b72df159fc5
-RMD160 (php-eaccelerator/eaccelerator-0.9.5.3.tar.bz2) = 9da55beec18e7a36761b5556d3bb4d5292d21650
-Size (php-eaccelerator/eaccelerator-0.9.5.3.tar.bz2) = 555631 bytes
+SHA1 (php-eaccelerator/eaccelerator-0.9.6.tar.bz2) = 65594917d0efa754d35760d2cde8701ffaa2914a
+RMD160 (php-eaccelerator/eaccelerator-0.9.6.tar.bz2) = 86320cbafa31f4b6db308c55035bbf057325a708
+Size (php-eaccelerator/eaccelerator-0.9.6.tar.bz2) = 105833 bytes
