@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.17 2010/02/03 12:22:18 obache Exp $
+# $NetBSD: pear.mk,v 1.18 2010/03/16 15:34:01 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -52,7 +52,8 @@ post-extract:
 	@cd ${WRKSRC} && ${LN} -s ${WRKDIR}/package.xml package.xml
 
 do-install:
-	cd ${WRKSRC} && ${PEAR_CMD} "install" ${PEAR_DESTDIR} package.xml || exit 1
+	cd ${WRKSRC} && ${SETENV} TZ=UTC \
+		${PEAR_CMD} "install" ${PEAR_DESTDIR} package.xml || exit 1
 
 .if ${_USE_DESTDIR} != "no"
 CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/.alias/phpdocs.txt
