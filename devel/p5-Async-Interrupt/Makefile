@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/09/16 18:37:48 sno Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/16 19:10:43 sno Exp $
 #
 
-DISTNAME=	Async-Interrupt-1.02
+DISTNAME=	Async-Interrupt-1.03
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
@@ -14,6 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES+=	c
 PERL5_PACKLIST=	auto/Async/Interrupt/.packlist
 
 .include "../../lang/perl5/module.mk"
