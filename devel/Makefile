@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1311 2010/03/15 09:06:17 obache Exp $
+# $NetBSD: Makefile,v 1.1312 2010/03/16 14:03:50 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1029,6 +1029,7 @@ SUBDIR+=	php-mode
 SUBDIR+=	php-pcntl
 SUBDIR+=	php-posix
 SUBDIR+=	php-shmop
+SUBDIR+=	php-sysvmsg
 SUBDIR+=	php-sysvsem
 SUBDIR+=	php-sysvshm
 SUBDIR+=	physfs
