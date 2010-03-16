@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1283 2010/03/16 16:30:38 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.1284 2010/03/16 16:46:53 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1528,3 +1528,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/nss to 3.12.6.2.2 [tnn 2010-03-16]
 	Updated www/firefox to 3.6.2 [tnn 2010-03-16]
 	Updated net/Transmission to 1.92 [tnn 2010-03-16]
+	Updated audio/cmus to 2.3.1 [ahoka 2010-03-01]
