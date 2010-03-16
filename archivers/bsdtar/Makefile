@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2010/03/14 18:40:15 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2010/03/16 17:13:47 joerg Exp $
 #
 
-DISTNAME=	bsdtar-2.8.2
+DISTNAME=	bsdtar-2.8.3
 CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
