@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1307 2010/03/16 21:17:45 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1308 2010/03/16 21:24:46 agc Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1553,3 +1553,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Removed databases/mysql51-embedded successor databases/mysql51-server [wiz 2010-03-16]
 	Added textproc/p5-Text-Trac version 0.15 [sno 2010-03-16]
 	Updated devel/p5-SVN-Notify to 2.80 [sno 2010-03-16]
+	Added math/itpp version 4.0.7 [agc 2010-03-16]
