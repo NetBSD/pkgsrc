@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2009/01/11 16:26:31 he Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/16 23:10:44 sno Exp $
 
-DISTNAME=	Text-DHCPLeases-v0.8
-PKGNAME=	p5-Text-DHCPLeases-0.8
+DISTNAME=	Text-DHCPLeases-0.9
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-DHCPLeases/
 COMMENT=	Perl 5 module to parse DHCP leases file from ISC dhcpd
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
