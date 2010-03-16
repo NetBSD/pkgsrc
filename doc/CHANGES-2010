@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1298 2010/03/16 18:46:44 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1299 2010/03/16 18:49:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1543,3 +1543,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated geography/p5-Geography-Countries to 2009041301 [sno 2010-03-16]
 	Updated net/p5-IP-Country to 2.27 [sno 2010-03-16]
 	Updated devel/p5-Object-InsideOut to 3.64 [sno 2010-03-16]
+	Updated devel/p5-Config-IniFiles to 2.57 [sno 2010-03-16]
