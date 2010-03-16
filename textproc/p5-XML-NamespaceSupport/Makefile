@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2009/06/15 18:59:23 sno Exp $
+# $NetBSD: Makefile,v 1.18 2010/03/16 22:05:49 sno Exp $
 
-DISTNAME=	XML-NamespaceSupport-1.10
+DISTNAME=	XML-NamespaceSupport-1.11
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# empty
 
 PERL5_PACKLIST=		auto/XML/NamespaceSupport/.packlist
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 post-extract:
 	${CHMOD} a-x ${WRKSRC}/lib/XML/NamespaceSupport.pm
