@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1299 2010/03/16 18:49:15 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1300 2010/03/16 19:10:53 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1544,3 +1544,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/p5-IP-Country to 2.27 [sno 2010-03-16]
 	Updated devel/p5-Object-InsideOut to 3.64 [sno 2010-03-16]
 	Updated devel/p5-Config-IniFiles to 2.57 [sno 2010-03-16]
+	Updated devel/p5-Async-Interrupt to 1.03 [sno 2010-03-16]
