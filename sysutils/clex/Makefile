@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:46 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/17 14:17:49 joerg Exp $
 #
 
 DISTNAME=		clex-3.16
@@ -11,7 +11,7 @@ COMMENT=		File manager with a full-screen user interface
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_NCURSES=		# enter_{bold,reverse,underline}_mode
+USE_NCURSES=		yes # enter_{bold,reverse,underline}_mode
 GNU_CONFIGURE=		yes
 
 .include "../../devel/ncurses/buildlink3.mk"
