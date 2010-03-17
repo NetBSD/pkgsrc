@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
+$NetBSD: patch-ab,v 1.2 2010/03/17 14:02:14 tnn Exp $
 
---- nsprpub/pr/include/md/_netbsd.h.orig	2009-06-29 18:15:06.000000000 +0200
+--- nsprpub/pr/include/md/_netbsd.h.orig	2010-03-15 14:56:04.000000000 +0000
 +++ nsprpub/pr/include/md/_netbsd.h
+@@ -79,7 +79,7 @@
+ #define HAVE_DLL
+ #define USE_DLFCN
+ #define _PR_HAVE_SOCKADDR_LEN
+-#define _PR_NO_LARGE_FILES
++#define _PR_HAVE_LARGE_OFF_T
+ #define _PR_STAT_HAS_ST_ATIMESPEC
+ #define _PR_POLL_AVAILABLE
+ #define _PR_USE_POLL
 @@ -94,6 +94,12 @@
  #define _PR_INET6_PROBE
  #endif
