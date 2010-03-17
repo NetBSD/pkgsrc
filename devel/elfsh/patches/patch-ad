@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2010/03/17 15:32:18 joerg Exp $
+
+--- libelfsh/include/libelfsh-compat.h.orig	2010-03-17 15:23:59.000000000 +0000
++++ libelfsh/include/libelfsh-compat.h
+@@ -38,6 +38,9 @@
+ /* Portability Stuffs */
+ #if defined(__OpenBSD__) || defined(__NetBSD__)
+  #include <sys/exec_elf.h>
++#  if defined(__NetBSD__) && defined(__x86_64__)
++#  include <i386/elf_machdep.h>
++#  endif
+ #elif defined(__linux__) || defined(__FreeBSD__) || defined(sun)
+  #include <elf.h>
+ #endif
