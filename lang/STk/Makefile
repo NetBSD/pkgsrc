@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/09/07 00:23:57 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2010/03/17 15:12:23 joerg Exp $
 
 DISTNAME=	STk-4.0.1
 PKGREVISION=		2
@@ -10,6 +10,7 @@ HOMEPAGE=		http://kaolin.unice.fr/STk/
 COMMENT=	Scheme interpreter with full access to the Tk graphical package
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 OSVERSION_SPECIFIC=	yes
 GNU_CONFIGURE=		yes
