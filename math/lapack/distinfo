@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2009/10/20 14:00:23 tnn Exp $
+$NetBSD: distinfo,v 1.13 2010/03/17 21:47:11 dmcmahill Exp $
 
 SHA1 (lapack-lite-3.1.1.tgz) = 1ec4ef90b544cf82bc7b4f770cee6fb46da457c5
 RMD160 (lapack-lite-3.1.1.tgz) = d81baafd1f0f9859d9f75ac9b658f743544b5f5b
 Size (lapack-lite-3.1.1.tgz) = 5332509 bytes
 SHA1 (patch-aa) = 75671f2cc3233241f03ecab5a5d79cb505eece15
 SHA1 (patch-ab) = fd5989eaafc622f29284759f538ccc0f11dfe624
-SHA1 (patch-ac) = 649f7e40142936af49c8c9dbec376bdd1a11b05a
+SHA1 (patch-ac) = 594736353b377c72bd41969e2ef62ef1871ae2ca
 SHA1 (patch-ad) = eb9cdf3d47cef03e2c679b0eda8d8120c572a2c0
