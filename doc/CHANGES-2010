@@ -1,4 +1,8 @@
-$NetBSD: CHANGES-2010,v 1.1333 2010/03/17 00:01:39 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1334 2010/03/17 00:25:13 agc Exp $
+
+[Please note that pkgsrc is in a freeze in preparation for the
+pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
+until further notice.  Thanks - agc]
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1579,3 +1583,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-IO-Prompt to 0.99.7 [sno 2010-03-16]
 	Updated devel/p5-Getopt-Euclid to 0.2.1 [sno 2010-03-16]
 	Updated databases/p5-Palm to 1.12.0 [sno 2010-03-17]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2010Q1 branch [agc 2010-03-16]
