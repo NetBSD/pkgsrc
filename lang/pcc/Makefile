@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/01 20:37:05 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2010/03/17 19:26:54 joerg Exp $
 
 DISTNAME=	pcc-0.9.9
 CATEGORIES=	lang
@@ -11,6 +11,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://pcc.ludd.ltu.se/
 COMMENT=	Portable C compiler
+
+ONLY_FOR_PLATFORM=	NetBSD-*-arm* NetBSD-*-i386 NetBSD-*-mips* \
+			NetBSD-*-powerpc NetBSD-*-sparc64 NetBSD-*-vax \
+			OpenBSD-*-i386 OpenBSD-*-vax \
+			OpenBSD-*-powerpc OpenBSD-*-sparc64 \
+			DragonFly-*-i386 \
+			Darwin-*-i386 Darwin-*-powerpc \
+			FreeBSD-*-i386 \
+			Linux-*-i386 Linux-*-powerpc
 
 USE_TOOLS+=	lex yacc
 # XXX For some reason building with bmake fails randomly.
