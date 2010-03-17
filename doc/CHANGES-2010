@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1336 2010/03/17 11:06:51 he Exp $
+$NetBSD: CHANGES-2010,v 1.1337 2010/03/17 16:14:03 joerg Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1586,3 +1586,4 @@ Changes to the packages collection and infrastructure in 2010:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2010Q1 branch [agc 2010-03-16]
 	Updated x11/xorg-cf-files to 1.0.2nb10 [sbd 2010-03-17]
 	Updated lang/parrot to 2.2.0 [he 2010-03-17]
+	Updated www/py-uwsgi to 0.9.4.3 [joerg 2010-03-17]
