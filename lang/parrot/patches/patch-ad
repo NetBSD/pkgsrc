@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2010/01/28 13:06:19 he Exp $
+$NetBSD: patch-ad,v 1.5 2010/03/17 11:06:11 he Exp $
 
 Allow parrot to detect perldoc when run as root.  Perldoc changes
 uid to 'nobody', 'nouser' or uid -2 when run as root, so it won't
@@ -7,13 +7,13 @@ files in directories owned by root mode 0755).
 
 --- config/auto/perldoc.pm.orig	2009-12-15 18:22:07.000000000 +0100
 +++ config/auto/perldoc.pm
-@@ -38,7 +38,9 @@ sub runstep {
- 
-     my $cmd = $conf->data->get('scriptdirexp_provisional') . q{/perldoc};
+@@ -39,7 +39,9 @@ sub runstep {
+     my $slash = $conf->data->get('slash');
+     my $cmd = $conf->data->get('scriptdirexp_provisional') . $slash . q{perldoc};
      my ( $fh, $filename ) = tempfile( UNLINK => 1 );
 -    my $content = capture_output("$cmd -ud $filename perldoc") || undef;
-+    my($stdout, $stderr, $retval) = 
-+	capture_output("$cmd -u perldoc > $filename");
++    my($stdout, $stderr, $retval) =
++	capture_output("$cmd -u $filename perldoc") || undef;
 +    my($content) = $retval ? undef : $stderr;
  
      return 1 unless defined( $self->_initial_content_check($conf, $content) );
@@ -21,9 +21,9 @@ files in directories owned by root mode 0755).
 @@ -68,7 +70,7 @@ E_NOTE
          if ( $new_perldoc ) {
              $TEMP_pod_build .= <<"END"
- ops$slash$pod: ..${slash}src${slash}ops${slash}$ops
--\t\$(PERLDOC) -ud ops${slash}$pod ..${slash}src${slash}ops${slash}$ops
-+\t\$(PERLDOC) -u ..${slash}src${slash}ops${slash}$ops > ops${slash}$pod 
- \t\$(CHMOD) 0644 ops${slash}$pod
+ ops/$pod: ../src/ops/$ops
+-\t\$(PERLDOC_BIN) -ud ops/$pod ../src/ops/$ops
++\t\$(PERLDOC_BIN) -u ../src/ops/$ops > ops/$pod
+ \t\$(CHMOD) 0644 ops/$pod
  
  END
