@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2007/12/10 17:50:31 adam Exp $
+$NetBSD: patch-ac,v 1.2 2010/03/17 21:47:11 dmcmahill Exp $
 
 --- /dev/null	2007-11-22 18:29:57.000000000 +0100
 +++ make.inc
-@@ -0,0 +1,10 @@
+@@ -0,0 +1,9 @@
 +SHELL=		/bin/sh
 +PLAT=		_${MACHINE}
 +FORTRAN=	${FC}
@@ -11,5 +11,4 @@ $NetBSD: patch-ac,v 1.1 2007/12/10 17:50:31 adam Exp $
 +NOOPT=
 +LOADER=		${FC}
 +LOADOPTS=
-+TIMER=		EXT_ETIME
 +LAPACKLIB=	liblapack.la
