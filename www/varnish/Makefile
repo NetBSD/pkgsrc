@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/03/08 13:24:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/17 17:45:44 fhajny Exp $
 #
 
 DISTNAME=	varnish-2.0.6
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=varnish/}
 
