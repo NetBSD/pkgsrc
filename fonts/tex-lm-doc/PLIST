@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/07 23:14:05 minskim Exp $
-share/texmf-dist/doc/fonts/lm/GUST-FONT-LICENSE.txt
-share/texmf-dist/doc/fonts/lm/MANIFEST-Latin-Modern.txt
-share/texmf-dist/doc/fonts/lm/README-Latin-Modern.txt
+@comment $NetBSD: PLIST,v 1.2 2010/03/17 15:58:55 minskim Exp $
+share/texmf-dist/doc/fonts/lm/GUST-FONT-LICENSE.TXT
+share/texmf-dist/doc/fonts/lm/MANIFEST-Latin-Modern.TXT
+share/texmf-dist/doc/fonts/lm/README-Latin-Modern.TXT
 share/texmf-dist/doc/fonts/lm/lm-hist.txt
 share/texmf-dist/doc/fonts/lm/lm-info.pdf
 share/texmf-dist/doc/fonts/lm/tstlmot1.pdf
