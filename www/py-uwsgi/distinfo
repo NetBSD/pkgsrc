@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/03/08 13:49:18 joerg Exp $
+$NetBSD: distinfo,v 1.3 2010/03/17 16:13:45 joerg Exp $
 
-SHA1 (uwsgi-0.9.4.2.tar.gz) = 8374bb8b0d09a808a48d82ab8023358eb621ec4e
-RMD160 (uwsgi-0.9.4.2.tar.gz) = c071ab93171b09d72c42a8fc094a96089844b720
-Size (uwsgi-0.9.4.2.tar.gz) = 81952 bytes
+SHA1 (uwsgi-0.9.4.3.tar.gz) = 8271fe6f612176ce1a75d3363b5a63e395cc6830
+RMD160 (uwsgi-0.9.4.3.tar.gz) = d03be633473924239bac1f8861e0c8b293afe635
+Size (uwsgi-0.9.4.3.tar.gz) = 82312 bytes
