@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.7 2010/03/17 21:54:58 dmcmahill Exp $
+
+--- src/frontend/com_sysinfo.c.orig	2009-10-04 15:57:10.000000000 +0000
++++ src/frontend/com_sysinfo.c	2010-03-17 21:53:46.000000000 +0000
+@@ -287,5 +287,5 @@
+ //				numProcs++;
+ 				strPtr += strlen(matchStrProc);
+-				if isblank(*strPtr) numProcs++;
++				if (isblank(*strPtr)) numProcs++;
+ 			}
+ 			info->numLogicalProcessors = numProcs;
