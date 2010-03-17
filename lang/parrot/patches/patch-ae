@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2010/01/28 13:06:19 he Exp $
+$NetBSD: patch-ae,v 1.3 2010/03/17 11:06:11 he Exp $
 
 Perldoc's -d is incompatible with doing the build as root.
 
@@ -8,8 +8,8 @@ Perldoc's -d is incompatible with doing the build as root.
  	$(TOUCH) doc-prep
  
  packfile-c.pod: ../src/packfile.c
--#IF(new_perldoc):	$(PERLDOC) -ud packfile-c.pod ../src/packfile.c
-+#IF(new_perldoc):	$(PERLDOC) -u ../src/packfile.c > packfile-c.pod
- #ELSE:	$(PERLDOC) -u ../src/packfile.c > packfile-c.pod
+-#IF(new_perldoc):	$(PERLDOC_BIN) -ud packfile-c.pod ../src/packfile.c
++#IF(new_perldoc):	$(PERLDOC_BIN) -u ../src/packfile.c > packfile-c.pod 
+ #ELSE:	$(PERLDOC_BIN) -u ../src/packfile.c > packfile-c.pod
  
  clean:
