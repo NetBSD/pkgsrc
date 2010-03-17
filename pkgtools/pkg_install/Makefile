@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2010/03/08 17:20:40 joerg Exp $
+# $NetBSD: Makefile,v 1.175 2010/03/17 08:19:38 obache Exp $
 
 # Notes to package maintainers:
 #
@@ -123,9 +123,10 @@ CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive
 LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.sub
 
 # Hack to make sure that the libarchive version is replaced
-pre-configure: config-guess-override
+pre-configure: config-guess-override config-sub-override
 .endif
 CPPFLAGS+=	-I${WRKDIR}/libfetch
 LDFLAGS+=	-L${WRKDIR}/libfetch
