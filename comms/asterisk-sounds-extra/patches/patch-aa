@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/09/30 21:17:24 mjl Exp $
+$NetBSD: patch-aa,v 1.2 2010/03/17 15:16:55 joerg Exp $
 
 --- Makefile.orig	2005-09-16 23:17:30.000000000 +0200
 +++ Makefile	2005-09-16 23:36:06.000000000 +0200
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/09/30 21:17:24 mjl Exp $
  
  ASTLIBDIR=$(INSTALL_PREFIX)/usr/lib/asterisk
 -ASTVARLIBDIR=$(INSTALL_PREFIX)/var/lib/asterisk
-+ASTVARLIBDIR=$(INSTALL_PREFIX)/libdata/asterisk
++ASTVARLIBDIR=$(INSTALL_PREFIX)${PREFIX}/libdata/asterisk
  ASTETCDIR=$(INSTALL_PREFIX)/etc/asterisk
  ASTSPOOLDIR=$(INSTALL_PREFIX)/var/spool/asterisk
  ASTLOGDIR=$(INSTALL_PREFIX)/var/log/asterisk
