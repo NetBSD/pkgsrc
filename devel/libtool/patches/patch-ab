@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.67 2009/12/18 22:11:10 joerg Exp $
+$NetBSD: patch-ab,v 1.68 2010/03/17 10:59:45 markd Exp $
 
 The last two chunks work around bugs in ksh on NetBSD.
 The problem manifests with wl and no_builtin_flag containing newlines.
 
---- configure.orig	2009-12-17 01:29:54.000000000 +0100
+--- configure.orig	2009-11-16 13:14:55.000000000 +0000
 +++ configure
 @@ -5293,6 +5293,13 @@ else
      lt_cv_sys_max_cmd_len=8192;
@@ -171,9 +171,10 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +  version_type=linux
    need_lib_prefix=no
    need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-   if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | $GREP __G95__ >/dev/null; then
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
@@ -389,9 +390,10 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +  version_type=linux
    need_lib_prefix=no
    need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-   if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | $GREP __G95__ >/dev/null; then
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
@@ -560,9 +562,10 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +  version_type=linux
    need_lib_prefix=no
    need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-   if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | $GREP __G95__ >/dev/null; then
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
@@ -731,9 +734,10 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +  version_type=linux
    need_lib_prefix=no
    need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-   if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | $GREP __G95__ >/dev/null; then
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
@@ -838,7 +842,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  lt_cv_prog_compiler_c_o_RC=yes
  
-@@ -24427,6 +24441,9 @@
+@@ -24296,6 +24429,9 @@ LTCC='$LTCC'
  LTCFLAGS='$LTCFLAGS'
  compiler='$compiler_DEFAULT'
  
@@ -848,7 +852,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  # Quote evaled strings.
  for var in SED \
  GREP \
-@@ -24711,6 +24729,9 @@
+@@ -24580,6 +24716,9 @@ case \$lt_ECHO in
    ;;
  esac
  
