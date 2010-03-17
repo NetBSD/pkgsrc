@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1332 2010/03/16 23:54:59 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1333 2010/03/17 00:01:39 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1578,3 +1578,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/p5-Smart-Comments to 1.0.4 [sno 2010-03-16]
 	Updated devel/p5-IO-Prompt to 0.99.7 [sno 2010-03-16]
 	Updated devel/p5-Getopt-Euclid to 0.2.1 [sno 2010-03-16]
+	Updated databases/p5-Palm to 1.12.0 [sno 2010-03-17]
