@@ -1,10 +1,11 @@
-# $NetBSD: Linux.mk,v 1.36 2010/02/13 08:29:12 obache Exp $
+# $NetBSD: Linux.mk,v 1.37 2010/03/18 22:46:01 sbd Exp $
 #
 # Variable definitions for the Linux operating system.
 
 ECHO_N?=	${ECHO} -n
 .if !defined(X11_TYPE) || ${X11_TYPE} == "native"
 IMAKE_MAKE?=	${GMAKE}	# program which gets invoked by imake
+IMAKE_TOOLS=		gmake	# extra tools required when we use imake
 .endif
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
 PKGLOCALEDIR?=	share
@@ -56,7 +57,6 @@ IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 IMAKE_MANINSTALL?=	maninstall catinstall
-IMAKE_TOOLS=		gmake	# extra tools required when we use imake
 
 _OPSYS_EMULDIR.linux=	# empty
 _OPSYS_EMULDIR.linux32=	# empty
