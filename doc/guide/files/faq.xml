@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.45 2009/04/20 17:07:13 ver Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.46 2010/03/18 10:56:18 wiz Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -528,7 +528,7 @@ do this, refer to the following two tools (installed as part of the
 
   <listitem>
     <para><command>pkg_admin audit</command>, an easy way to audit the
-    current machine, checking each vulnerability which is known.  If a
+    current machine, checking each known vulnerability.  If a
     vulnerable package is installed, it will be shown by output to stdout,
     including a description of the type of vulnerability, and a URL
     containing more information.</para>
