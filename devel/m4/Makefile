@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2010/02/26 15:31:42 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2010/03/18 10:05:48 wiz Exp $
 
 DISTNAME=	m4-1.4.14
 CATEGORIES=	devel
@@ -33,11 +33,6 @@ PLIST.gm4=		yes
 
 .if ${LOWER_OPSYS} == "aix"
 CFLAGS+=	-D_LINUX_SOURCE_COMPAT
-.endif
-
-.if ${OPSYS} == "DragonFly"
-post-patch:
-	${CP} ${FILESDIR}/bsd-fflush.c ${WRKSRC}/lib/fflush.c
 .endif
 
 post-install:
