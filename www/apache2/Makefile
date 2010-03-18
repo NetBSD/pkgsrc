@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.132 2010/02/17 15:14:05 joerg Exp $
+# $NetBSD: Makefile,v 1.133 2010/03/18 12:47:56 joerg Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -159,7 +159,7 @@ SUBST_SED.confs+=	-e 's|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g'
 # so we fix after install to reference the installed path
 SUBST_CLASSES+=		abs_srcdir
 SUBST_STAGE.abs_srcdir=	post-install
-SUBST_FILES.abs_srcdir=	${PREFIX}/share/httpd/build/config_vars.mk
+SUBST_FILES.abs_srcdir=	${DESTDIR}${PREFIX}/share/httpd/build/config_vars.mk
 SUBST_SED.abs_srcdir=	-e 's|^\(abs_srcdir =\) .*|\1 ${PREFIX}/share/httpd|'
 SUBST_MESSAGE.abs_srcdir=	Fixing abs_srcdir
 
