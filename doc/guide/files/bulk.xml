@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.7 2009/10/11 20:50:48 rillig Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.8 2010/03/18 10:56:18 wiz Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -157,13 +157,12 @@ SKIP_LICENSE_CHECK=    yes
 	<itemizedlist>
 
 	  <listitem><para><varname>ALLOW_VULNERABLE_PACKAGES</varname>
-	  should be set to <literal>yes</literal>. The purpose of the bulk
-	  builds is creating binary packages, no matter if they are
-	  vulnerable or not. When uploading the packages to a public
-	  server, the vulnerable packages will be put into a directory of
-	  their own. Leaving this variable unset would prevent the bulk
-	  build system from even trying to build them, so possible
-	  building errors would not show up.</para></listitem>
+	  should be set to <literal>yes</literal>. The purpose of the
+	  bulk builds is creating binary packages, no matter if they
+	  are vulnerable or not. Leaving this variable unset would
+	  prevent the bulk build system from even trying to build
+	  them, so possible building errors would not show
+	  up.</para></listitem>
 
 	  <listitem><para><varname>CHECK_FILES</varname>
 	  (<filename>pkgsrc/mk/check/check-files.mk</filename>) can be set to
@@ -585,8 +584,7 @@ chroot-&rprompt; <userinput>exit</userinput>
       <para>The upload process may take quite some time. Use &man.ls.1; or
       &man.du.1; on the FTP server to monitor progress of the
       upload. The upload script will take care of not uploading
-      restricted packages and putting vulnerable packages into the
-      <filename>vulnerable</filename> subdirectory.</para>
+      restricted packages.</para>
 
       <para>After the upload has ended, first thing is to revoke ssh access:</para>
 

@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.37 2009/08/25 13:19:50 wiz Exp $ -->
+<!-- $NetBSD: using.xml,v 1.38 2010/03/18 10:56:18 wiz Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -60,9 +60,7 @@ and you can still use binary packages from someone else.</para>
     subdirectory called <filename>All</filename>, which contains all the
     binary packages that are available for the platform, excluding those
     that may not be distributed via FTP or CDROM (depending on which
-    medium you are using), and the ones that have vulnerabilities and
-    therefore are considered insecure to install without thinking
-    before.</para>
+    medium you are using).</para>
 
     <para>To install packages directly from an FTP or HTTP server, run
     the following commands in a Bourne-compatible shell (be sure to
@@ -93,13 +91,8 @@ and you can still use binary packages from someone else.</para>
     package in question will be installed, too, assuming they are
     present where you install from.</para>
 
-    <para>As mentioned above, packages for which vulnerabilities get
-    known are not stored in the <filename>All</filename> subdirectory.
-    They don't get deleted since that could be very frustrating if many
-    other packages depend on it. Instead, they are moved to the
-    <filename>vulnerable</filename> subdirectory. So you may need to add
-    this directory to the <varname>PKG_PATH</varname> variable. 
-    However, you should run <command>pkg_admin audit</command>
+    <para>Adding packages might install vulnerable packages.
+    Thus you should run <command>pkg_admin audit</command>
     regularly, especially after installing new packages, and verify
     that the vulnerabilities are acceptable for your configuration.</para>
 
