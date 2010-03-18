@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.10 2010/03/05 13:47:06 taca Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.11 2010/03/18 14:38:13 taca Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -41,14 +41,17 @@ _MYSQL_VERSION_${mv}_OK=	yes
 # check what is installed
 .if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.16)
 _MYSQL_VERSION_51_INSTALLED=	yes
+_MYSQL_VERSION_INSTALLED=	51
 .endif
 
 .if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.15)
 _MYSQL_VERSION_50_INSTALLED=	yes
+_MYSQL_VERSION_INSTALLED=	50
 .endif
 
 .if exists(${LOCALBASE}/lib/mysql/libmysqlclient.so.14)
 _MYSQL_VERSION_41_INSTALLED=	yes
+_MYSQL_VERSION_INSTALLED=	41
 .endif
 
 # if a version is explicitely required, take it
@@ -97,6 +100,15 @@ MYSQL_PKGSRCDIR=	../../databases/mysql4-client
 .else
 # force an error
 PKG_FAIL_REASON+=	"[mysql.buildlink3.mk] ${_MYSQL_VERSION} is not a valid mysql package."
+.endif
+
+#
+# check installed version aginst required:
+#
+.if defined(_MYSQL_VERSION_INSTALLED)
+.if ${_MYSQL_VERSION} != ${_MYSQL_VERSION_INSTALLED}
+PKG_SKIP_REASON+=	"${PKGBASE} requires mysql-${_MYSQL_VERSION}, but mysql-${_MYSQL_VERSION_INSTALLED} is already installed."
+.endif
 .endif
 
 .include "${MYSQL_PKGSRCDIR}/buildlink3.mk"
