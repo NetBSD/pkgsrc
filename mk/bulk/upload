@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.44 2008/11/19 16:27:14 sketch Exp $
+# $NetBSD: upload,v 1.45 2010/03/18 08:58:28 spz Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -365,7 +365,7 @@ cat <<EOF > "$upload_vulnerable"
 #! /bin/sh
 set -e
 cd "$packages/All"
-rsync $RSFLAGS --files-from="${vulnerable_packages}" --exclude-from="${old_packages}" . "$RSYNC_DST/vulnerable/"
+rsync $RSFLAGS --files-from="${vulnerable_packages}" --exclude-from="${old_packages}" . "$RSYNC_DST/All/"
 EOF
 chmod +x "$upload_vulnerable"
 
