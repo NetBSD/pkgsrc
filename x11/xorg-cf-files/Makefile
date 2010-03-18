@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2010/03/17 09:53:08 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2010/03/18 22:42:23 sbd Exp $
 #
 
 DISTNAME=		xorg-cf-files-1.0.2
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,10 +17,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(IMAKE_TOOLS) && !empty(IMAKE_TOOLS:Mgmake)
-USE_TOOLS+=		gmake
-.endif
 
 post-extract:
 	${CP} ${FILESDIR}/host.def ${WRKSRC}
