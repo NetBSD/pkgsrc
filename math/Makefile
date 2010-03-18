@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2010/03/16 21:23:48 agc Exp $
+# $NetBSD: Makefile,v 1.203 2010/03/18 08:05:51 asau Exp $
 
 COMMENT=	Mathematics
 
@@ -90,6 +90,7 @@ SUBDIR+=	grpn
 SUBDIR+=	gsl
 SUBDIR+=	gtklife
 SUBDIR+=	itpp
+SUBDIR+=	kseg
 SUBDIR+=	lapack
 SUBDIR+=	libffm
 SUBDIR+=	libmatheval
