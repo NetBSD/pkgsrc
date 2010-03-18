@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<!-- $NetBSD: README.pkg,v 1.25 2008/12/10 22:06:48 adrianp Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.26 2010/03/18 10:18:19 wiz Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
@@ -50,10 +50,9 @@ The following security vulnerabilities are known for %%PORT%%
 If you have a vulnerable package installed on any machine, you are
 advised to remove the package
 immediately, using the standard package tools.
-The <a href="../../pkgtools/pkg_install/README.html">audit-packages</a>
-command (now integrated with the pkg_install tools) locates any installed 
-package which has been mentioned in security
-advisories as being vulnerable.
+The <a href="../../pkgtools/pkg_install/README.html">pkg_admin audit</a>
+command locates any installed package which has been mentioned in
+security advisories as being vulnerable.
 </P>
 
 
