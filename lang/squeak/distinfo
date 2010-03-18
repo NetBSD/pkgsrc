@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2010/02/11 02:18:34 asau Exp $
+$NetBSD: distinfo,v 1.15 2010/03/18 22:37:38 bad Exp $
 
 SHA1 (squeak/Squeak3.10.2-7179-basic.zip) = 9eb3c6a617b1e6605867102081b24351dc425697
 RMD160 (squeak/Squeak3.10.2-7179-basic.zip) = ba89642f16de25b521f1ca11bf4799589a06f9ff
 Size (squeak/Squeak3.10.2-7179-basic.zip) = 7470879 bytes
-SHA1 (squeak/SqueakV39.sources.gz) = 44f1438c797457ef0981a905da7928c28b13e2f9
-RMD160 (squeak/SqueakV39.sources.gz) = 23ad84695bc3e0596a94fdff8502448579722819
-Size (squeak/SqueakV39.sources.gz) = 4170964 bytes
+SHA1 (squeak/SqueakV39.sources.gz) = 9bff10f168d9e0f9ce9ec259a647e384c5b2df38
+RMD160 (squeak/SqueakV39.sources.gz) = 8f63c7c0c98ab164b4e31bc8bf88ad455a5abe97
+Size (squeak/SqueakV39.sources.gz) = 4185101 bytes
