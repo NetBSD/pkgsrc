@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.820 2010/03/16 23:32:40 sno Exp $
+# $NetBSD: Makefile,v 1.821 2010/03/18 09:20:08 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -330,8 +330,8 @@ SUBDIR+=	p5-Net-Akismet
 SUBDIR+=	p5-Net-Amazon
 SUBDIR+=	p5-Net-Amazon-S3
 SUBDIR+=	p5-Net-Bind
-SUBDIR+=	p5-Net-CIDR-Lite
 SUBDIR+=	p5-Net-Bonjour
+SUBDIR+=	p5-Net-CIDR-Lite
 SUBDIR+=	p5-Net-CIDR-Set
 SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-DNS
@@ -431,7 +431,6 @@ SUBDIR+=	publicfile
 SUBDIR+=	puf
 SUBDIR+=	pure-ftpd
 SUBDIR+=	pxe
-SUBDIR+=	py-dpkt
 SUBDIR+=	py-GeoIP
 SUBDIR+=	py-IP
 SUBDIR+=	py-METAR
@@ -439,6 +438,7 @@ SUBDIR+=	py-ORBit
 SUBDIR+=	py-adns
 SUBDIR+=	py-boto
 SUBDIR+=	py-dns
+SUBDIR+=	py-dpkt
 SUBDIR+=	py-google
 SUBDIR+=	py-kenosis
 SUBDIR+=	py-libdnet
