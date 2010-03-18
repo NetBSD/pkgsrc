@@ -1492,8 +1492,11 @@ packages).
 In the directory from the last section, there is a subdirectory called All,
 which contains all the binary packages that are available for the platform,
 excluding those that may not be distributed via FTP or CDROM (depending on
-which medium you are using), and the ones that have vulnerabilities and
-therefore are considered insecure to install without thinking before.
+which medium you are using). There may be an extra directory for packages
+that have vulnerabilities and therefore are considered insecure to install
+without checking the implications first. This method has been replaced by
+setting CHECK_VULNERABILITIES=yes in pkg_install.conf so pkg_add will
+complain about vulnerabilities, instead.
 
 To install packages directly from an FTP or HTTP server, run the following
 commands in a Bourne-compatible shell (be sure to su to root first):
@@ -1515,14 +1518,6 @@ After these preparations, installing a package is very easy:
 
 Note that any prerequisite packages needed to run the package in question will
 be installed, too, assuming they are present where you install from.
-
-As mentioned above, packages for which vulnerabilities get known are not stored
-in the All subdirectory. They don't get deleted since that could be very
-frustrating if many other packages depend on it. Instead, they are moved to the
-vulnerable subdirectory. So you may need to add this directory to the PKG_PATH
-variable. However, you should run pkg_admin audit regularly, especially after
-installing new packages, and verify that the vulnerabilities are acceptable for
-your configuration.
 
 After you've installed packages, be sure to have /usr/pkg/bin and /usr/pkg/sbin
 in your PATH so you can actually start the just installed program.
@@ -2237,10 +2232,9 @@ Some other options are scattered in the pkgsrc infrastructure:
 
   * ALLOW_VULNERABLE_PACKAGES should be set to yes. The purpose of the bulk
     builds is creating binary packages, no matter if they are vulnerable or
-    not. When uploading the packages to a public server, the vulnerable
-    packages will be put into a directory of their own. Leaving this variable
-    unset would prevent the bulk build system from even trying to build them,
-    so possible building errors would not show up.
+    not. Leaving this variable unset would prevent the bulk build system
+    from even trying to build them, so possible building errors would not
+    show up.
 
   * CHECK_FILES (pkgsrc/mk/check/check-files.mk) can be set to "yes" to check
     that the installed set of files matches the PLIST.
@@ -2520,8 +2514,7 @@ chroot-# exit
 
 The upload process may take quite some time. Use ls(1) or du(1) on the FTP
 server to monitor progress of the upload. The upload script will take care of
-not uploading restricted packages and putting vulnerable packages into the
-vulnerable subdirectory.
+not uploading restricted packages.
 
 After the upload has ended, first thing is to revoke ssh access:
 
