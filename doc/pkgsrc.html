@@ -1661,9 +1661,11 @@ and you can still use binary packages from someone else.</p>
     subdirectory called <code class="filename">All</code>, which contains all the
     binary packages that are available for the platform, excluding those
     that may not be distributed via FTP or CDROM (depending on which
-    medium you are using), and the ones that have vulnerabilities and
-    therefore are considered insecure to install without thinking
-    before.</p>
+    medium you are using). There may be an extra directory for packages
+    that have vulnerabilities and therefore are considered insecure to install
+    without checking the implications first. This method has been replaced by
+    setting CHECK_VULNERABILITIES=yes in pkg_install.conf so pkg_add will
+    complain about vulnerabilities, instead.</p>
 <p>To install packages directly from an FTP or HTTP server, run
     the following commands in a Bourne-compatible shell (be sure to
     <span class="command"><strong>su</strong></span> to root first):</p>
@@ -1687,15 +1689,6 @@ and you can still use binary packages from someone else.</p>
 <p>Note that any prerequisite packages needed to run the
     package in question will be installed, too, assuming they are
     present where you install from.</p>
-<p>As mentioned above, packages for which vulnerabilities get
-    known are not stored in the <code class="filename">All</code> subdirectory.
-    They don't get deleted since that could be very frustrating if many
-    other packages depend on it. Instead, they are moved to the
-    <code class="filename">vulnerable</code> subdirectory. So you may need to add
-    this directory to the <code class="varname">PKG_PATH</code> variable. 
-    However, you should run <span class="command"><strong>pkg_admin audit</strong></span>
-    regularly, especially after installing new packages, and verify
-    that the vulnerabilities are acceptable for your configuration.</p>
 <p>After you've installed packages, be sure to have
     <code class="filename">/usr/pkg/bin</code> and <code class="filename">/usr/pkg/sbin</code> in your
     <code class="varname">PATH</code> so you can actually start the just
@@ -2616,9 +2609,7 @@ SKIP_LICENSE_CHECK=    yes
 <li><p><code class="varname">ALLOW_VULNERABLE_PACKAGES</code>
 	  should be set to <code class="literal">yes</code>. The purpose of the bulk
 	  builds is creating binary packages, no matter if they are
-	  vulnerable or not. When uploading the packages to a public
-	  server, the vulnerable packages will be put into a directory of
-	  their own. Leaving this variable unset would prevent the bulk
+	  vulnerable or not. Leaving this variable unset would prevent the bulk
 	  build system from even trying to build them, so possible
 	  building errors would not show up.</p></li>
 <li><p><code class="varname">CHECK_FILES</code>
@@ -2932,9 +2923,7 @@ chroot-<code class="prompt">#</code> <strong class="userinput"><code>exit</code>
 <p>The upload process may take quite some time. Use <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ls+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">ls</span>(1)</span></a> or
       <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?du+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">du</span>(1)</span></a> on the FTP server to monitor progress of the
       upload. The upload script will take care of not uploading
-      restricted packages and putting vulnerable packages into the
-      <code class="filename">vulnerable</code> subdirectory.</p>
-<p>After the upload has ended, first thing is to revoke ssh access:</p>
+      restricted packages.</p>
 <pre class="screen">nbftp% <strong class="userinput"><code>vi ~/.ssh/authorized_keys</code></strong>
       Gdd:x! </pre>
 <p>Use whatever is needed to remove the key you've entered
