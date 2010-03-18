@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1339 2010/03/18 06:11:47 martti Exp $
+$NetBSD: CHANGES-2010,v 1.1340 2010/03/18 06:26:47 ghen Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1589,3 +1589,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/py-uwsgi to 0.9.4.3 [joerg 2010-03-17]
 	Updated x11/gtk2 to 2.18.9 [wiz 2010-03-17]
 	Updated editors/vim-share to 7.2.402 [martti 2010-03-18]
+	Updated mail/dovecot to 1.2.11 [ghen 2010-03-18]
