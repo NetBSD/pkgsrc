@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/02/11 02:18:34 asau Exp $
-lib/squeak/3.11.3.2135/Squeak3.10.2-7179-basic.changes
-lib/squeak/3.11.3.2135/Squeak3.10.2-7179-basic.image
-lib/squeak/3.11.3.2135/SqueakV39.sources
+@comment $NetBSD: PLIST,v 1.8 2010/03/19 14:41:56 asau Exp $
+share/squeak/${PKGVERSION}/Squeak${PKGVERSION}-basic.changes
+share/squeak/${PKGVERSION}/Squeak${PKGVERSION}-basic.image
+share/squeak/${PKGVERSION}/SqueakV40.sources
