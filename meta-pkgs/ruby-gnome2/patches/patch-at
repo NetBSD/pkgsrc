@@ -1,0 +1,79 @@
+$NetBSD: patch-at,v 1.1 2010/03/19 13:22:42 obache Exp $
+
+* for patch-aa part#3
+http://ruby-gnome2.svn.sourceforge.net/viewvc/ruby-gnome2?view=rev&revision=3748
+
+--- glib/src/lib/glib-mkenums.rb.orig	2008-03-15 01:50:44.000000000 +0000
++++ glib/src/lib/glib-mkenums.rb
+@@ -16,7 +16,8 @@ module GLib
+ 
+     attr_reader :constants
+ 
+-    def initialize(name, const_lines, g_type_prefix)
++    def initialize(name, const_lines, g_type_prefix, options={})
++      @options = options || {}
+       @EnumName = name
+       @g_type_prefix = g_type_prefix
+       @constants = []
+@@ -30,7 +31,7 @@ module GLib
+     def parse_const_lines(const_lines)
+       ret = ""
+ 
+-      if const_lines.include? "<<"
++      if @options[:force_flags] or const_lines.include? "<<"
+         @type = "flags"
+         @Type = "Flags"
+       else
+@@ -92,12 +93,18 @@ GType #{@enum_name}_get_type (void);
+     end
+ 
+ 
+-    def self.parse(data, g_type_prefix)
++    def self.parse(data, g_type_prefix, options={})
++      options ||={}
+       enums = []
+       data.scan(/^\s*typedef\s+enum\s*
+                 \{?\s*(.*?)
+                 \}\s*(\w+);/mx){|constants, name|
+-        enum = new(name, constants, g_type_prefix)
++	enum_options = {}
++	force_flags_patterns = [(options[:force_flags] || [])].flatten
++	if force_flags_patterns.any? {|pattern| pattern === name}
++	  enum_options[:force_flags] = true
++	end
++        enum = new(name, constants, g_type_prefix, enum_options)
+         enums << enum
+       }
+       enums
+@@ -111,9 +118,11 @@ GType #{@enum_name}_get_type (void);
+     # * files: header files to parse
+     # * g_type_prefix: the gtype prefix such as GTK_TYPE_
+     # * include_files: define #include <file> lines into target_filename.c
+-    def self.create(target_filename, files, g_type_prefix, include_files)
++    def self.create(target_filename, files, g_type_prefix, include_files,
++		    options)
+       puts "creating #{target_filename}.c"
+-      mkenums = MkEnums.new(target_filename, files, g_type_prefix, include_files)
++      mkenums = MkEnums.new(target_filename, files, g_type_prefix, include_files,
++			    options)
+ 
+       open("#{target_filename}.c", "w") do |out|
+         out.write(mkenums.create_c)
+@@ -130,7 +139,7 @@ GType #{@enum_name}_get_type (void);
+     # * files: header files to parse
+     # * g_type_prefix: the gtype prefix such as GTK_TYPE_
+     # * include_files: define #include <file> lines into target_filename.c
+-    def initialize(target_filename, files, g_type_prefix, include_files)
++    def initialize(target_filename, files, g_type_prefix, include_files, options)
+       @target_filename = target_filename
+       @include_files = include_files
+       @targets = []
+@@ -139,7 +148,7 @@ GType #{@enum_name}_get_type (void);
+         File.open(path) do |i|
+           data = i.read
+         end
+-        @targets << [path, EnumDefinition.parse(data, g_type_prefix)]
++        @targets << [path, EnumDefinition.parse(data, g_type_prefix, options)]
+       end
+     end
+ 
