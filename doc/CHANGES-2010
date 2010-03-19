@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1342 2010/03/18 22:42:43 sbd Exp $
+$NetBSD: CHANGES-2010,v 1.1343 2010/03/19 11:27:08 gdt Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1592,3 +1592,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/dovecot to 1.2.11 [ghen 2010-03-18]
 	Updated math/ruby-rb-gsl to 1.10.3nb1 [wiz 2010-03-18]
 	Updated x11/xorg-cf-files to 1.0.2nb11 [sbd 2010-03-18]
+	Updated databases/guile-pg to 0.39 [gdt 2010-03-19]
