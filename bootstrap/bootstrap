@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.156 2010/02/06 10:28:54 obache Exp $
+# $NetBSD: bootstrap,v 1.157 2010/03/19 14:11:11 seanb Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -639,6 +639,8 @@ OSF1)
 QNX)
 	root_group=root
 	need_bsd_install=yes
+	need_awk=yes
+	need_sed=yes
 	set_opsys=no
 	groupsprog="id -gn"
 	whoamiprog="id -un"
