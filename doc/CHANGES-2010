@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1344 2010/03/19 11:27:24 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1345 2010/03/19 12:50:24 wiz Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1594,3 +1594,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/xorg-cf-files to 1.0.2nb11 [sbd 2010-03-18]
 	Updated databases/guile-pg to 0.39 [gdt 2010-03-19]
 	Updated devel/devhelp to 2.28.1nb2 [obache 2010-03-19]
+	Updated pkgtools/pkg_install to 20100319 [wiz 2010-03-19]
