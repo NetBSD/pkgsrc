@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1346 2010/03/19 14:42:54 asau Exp $
+$NetBSD: CHANGES-2010,v 1.1347 2010/03/19 14:44:09 asau Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1558,9 +1558,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Added textproc/p5-Text-Trac version 0.15 [sno 2010-03-16]
 	Updated devel/p5-SVN-Notify to 2.80 [sno 2010-03-16]
 	Added math/itpp version 4.0.7 [agc 2010-03-16]
-<<<<<<< CHANGES-2010
-	Removed cross/i386-mingw32 [asau 2010-03-16]
-=======
 	Removed cross/i386-mingw32 [asau 2010-03-16]
 	Updated databases/p5-ORLite to 1.42 [sno 2010-03-16]
 	Updated devel/p5-Data-Peek to 0.31 [sno 2010-03-16]
@@ -1598,5 +1595,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated databases/guile-pg to 0.39 [gdt 2010-03-19]
 	Updated devel/devhelp to 2.28.1nb2 [obache 2010-03-19]
 	Updated pkgtools/pkg_install to 20100319 [wiz 2010-03-19]
->>>>>>> 1.1345
 	Updated lang/squeak to 4.0 [asau 2010-03-19]
