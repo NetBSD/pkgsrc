@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2008/07/28 16:27:42 cube Exp $
+$NetBSD: distinfo,v 1.5 2010/03/19 17:17:05 joerg Exp $
 
 SHA1 (newsx-1.6.tar.gz) = e128e89ba161ceb4ab6d652d8c132ae3a33fbb20
 RMD160 (newsx-1.6.tar.gz) = e9d1785ad94510055ffcd5d3d15aeafbc16c4f46
@@ -6,3 +6,4 @@ Size (newsx-1.6.tar.gz) = 302821 bytes
 SHA1 (patch-aa) = b0996217c88e250ed38900ad1f706d16b9900550
 SHA1 (patch-ab) = d3ca5f2231f14b27ff4ee375c1b19b5c158b71be
 SHA1 (patch-ac) = bc188323938a83c8d5bfeefe389fd6c6f3720c2f
+SHA1 (patch-ad) = 2b5c5ede77aab5b5d2f269452f30664b8a270e61
