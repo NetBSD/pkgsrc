@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/02/02 12:34:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/03/19 12:49:53 wiz Exp $
 man/cat1/pkg_add.0
 man/cat1/pkg_admin.0
 man/cat1/pkg_create.0
@@ -7,6 +7,8 @@ man/cat1/pkg_info.0
 man/cat5/pkg_install.conf.0
 man/cat5/pkg_summary.0
 man/cat7/pkgsrc.0
+man/cat8/audit-packages.0
+man/cat8/download-vulnerability-list.0
 man/man1/pkg_add.1
 man/man1/pkg_admin.1
 man/man1/pkg_create.1
@@ -15,6 +17,8 @@ man/man1/pkg_info.1
 man/man5/pkg_install.conf.5
 man/man5/pkg_summary.5
 man/man7/pkgsrc.7
+man/man8/audit-packages.8
+man/man8/download-vulnerability-list.8
 sbin/audit-packages
 sbin/download-vulnerability-list
 sbin/pkg_add
