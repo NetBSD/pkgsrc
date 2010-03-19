@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/16 23:05:30 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/19 21:34:44 joerg Exp $
 #
 
 DISTNAME=	gallery-1.5.10
+PKGREVISION=	1
 CATEGORIES=	www graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gallery/}
 
@@ -12,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS=              php<5.3.2
+PHP_VERSIONS_ACCEPTED=	53
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=4.1.0:../../devel/php-gettext
@@ -58,4 +59,5 @@ do-install:
 	${CP} -R ${WRKSRC}/* ${DESTDIR}${G1DIR}
 
 .include "../../lang/php/phpversion.mk"
+.include "${PHPPKGSRCDIR}/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
