@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.18 2010/01/22 13:30:41 joerg Exp $
+# $NetBSD: Makefile.in,v 1.19 2010/03/19 12:49:53 wiz Exp $
 
 srcdir=		@srcdir@
 
@@ -10,6 +10,8 @@ datarootdir=	@datarootdir@
 
 man1dir=	$(mandir)/man1
 cat1dir=	$(mandir)/cat1
+man8dir=	$(mandir)/man8
+cat8dir=	$(mandir)/cat8
 
 BOOTSTRAP=	@bootstrap@
 SSL_SUPPORT=	@ssl_support@
@@ -55,10 +57,16 @@ install:
 	$(INSTALL) -m 755 -d ${DESTDIR}$(sbindir)
 	$(INSTALL) -m 755 -d ${DESTDIR}$(man1dir)
 	$(INSTALL) -m 755 -d ${DESTDIR}$(cat1dir)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(man8dir)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(cat8dir)
 	$(INSTALL) $(PROG) ${DESTDIR}$(sbindir)/$(PROG)
 	$(INSTALL) -m 555 $(SCRIPTS) ${DESTDIR}$(sbindir)
 	$(INSTALL) -m 444 $(PROG).1 ${DESTDIR}$(man1dir)/$(PROG).1
 	$(INSTALL) -m 444 $(PROG).cat ${DESTDIR}$(cat1dir)/$(PROG).0
+	$(INSTALL) -m 444 audit-packages.8 ${DESTDIR}$(man8dir)/
+	$(INSTALL) -m 444 audit-packages.cat ${DESTDIR}$(cat8dir)/audit-packages.0
+	$(INSTALL) -m 444 download-vulnerability-list.8 ${DESTDIR}$(man8dir)/
+	$(INSTALL) -m 444 download-vulnerability-list.cat ${DESTDIR}$(cat8dir)/download-vulnerability-list.0
 
 audit-packages: audit-packages.sh.in
 	sed -e 's|@PKG_ADMIN@|${sbindir}/pkg_admin|' \
