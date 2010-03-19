@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.6 2010/03/19 13:22:42 obache Exp $
+
+* for patch-aa part#3
+http://ruby-gnome2.svn.sourceforge.net/viewvc/ruby-gnome2?view=rev&revision=3748
+
+--- glib/src/lib/mkmf-gnome2.rb.orig	2009-09-24 11:30:50.000000000 +0000
++++ glib/src/lib/mkmf-gnome2.rb
+@@ -331,10 +331,10 @@ def add_obj(name)
+   $objs << name unless $objs.index(name)
+ end
+ 
+-def glib_mkenums(prefix, files, g_type_prefix, include_files)
++def glib_mkenums(prefix, files, g_type_prefix, include_files, options={})
+   add_distcleanfile(prefix + ".h")
+   add_distcleanfile(prefix + ".c")
+-  GLib::MkEnums.create(prefix, files, g_type_prefix, include_files)
++  GLib::MkEnums.create(prefix, files, g_type_prefix, include_files, options)
+ end
+ 
+ def check_cairo
