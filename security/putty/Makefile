@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/02/25 18:08:01 roy Exp $
+# $NetBSD: Makefile,v 1.20 2010/03/19 13:28:09 joerg Exp $
 #
 
 DISTNAME=	putty-0.60
@@ -12,7 +12,7 @@ COMMENT=	Free implementation of Telnet and SSH for Win32 and Unix platforms
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 BUILD_DIRS=	unix
 
 MAKE_FILE=	Makefile.gtk
