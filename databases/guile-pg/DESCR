@@ -1,5 +1,4 @@
 Guile-pg is a Guile module providing access and allowing updates to
 PostgreSQL databases from Guile scripts.  Guile is the GNU interpreter
 for the Scheme language and PostgreSQL is a free relational database
-management system.  This package is for Guile 1.6.x and PostgreSQL
-7.4.x.
+management system.  This package is for Guile 1.6.x.
