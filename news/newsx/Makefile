@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/01/31 21:14:28 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/19 17:17:05 joerg Exp $
 #
 
 DISTNAME=	newsx-1.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	news
 MASTER_SITES=	http://www.sfr-fresh.com/unix/misc/
 
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--with-newsinclude=${PREFIX}/include/inn
 CONFIGURE_ARGS+=	--with-rnews=${INN_PATHBIN}/rnews
 CONFIGURE_ARGS+=	--with-inews=${INN_PATHBIN}/inews
 CONFIGURE_ARGS+=	--with-history-mode=indexed
+
+MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/inhosts ${INN_USER} ${INN_GROUP} 0775
 
 .include "../../news/inn/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
