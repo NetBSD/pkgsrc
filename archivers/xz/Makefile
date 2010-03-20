@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/12/13 23:48:15 heinz Exp $
+# $NetBSD: Makefile,v 1.6 2010/03/20 19:46:14 wiz Exp $
 #
 
 DISTNAME=	xz-4.999.9beta
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://tukaani.org/xz/
 
