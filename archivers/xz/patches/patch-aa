@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2009/09/04 16:57:14 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2010/03/20 19:46:14 wiz Exp $
 
 --- src/common/cpucores.h.orig	2009-08-27 15:37:12.000000000 +0000
 +++ src/common/cpucores.h
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1 2009/09/04 16:57:14 wiz Exp $
  	int cpus;
  	size_t cpus_size = sizeof(cpus);
 -	if (!sysctl(name, &cpus, &cpus_size, NULL, NULL)
-+	if (sysctl(name, 2, &cpus, &cpus_size, NULL, 0) > 0
++	if (sysctl(name, 2, &cpus, &cpus_size, NULL, 0) != -1
  			&& cpus_size == sizeof(cpus) && cpus > 0)
  		ret = (uint32_t)(cpus);
  #endif
