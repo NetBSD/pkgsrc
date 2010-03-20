@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/14 18:19:22 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/20 00:04:21 schwarz Exp $
 
 DISTNAME=	traceroute-nanog-6.4.2
 CATEGORIES=	net
@@ -20,8 +20,6 @@ WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES
 USE_FEATURES+=	snprintf
 
-TRN_EXTRALIBS=
-
 .include "../../mk/bsd.prefs.mk"
 .if empty(PKGSRC_COMPILER:Mgcc*)
 CPPFLAGS+=	-D__attribute__=
@@ -31,19 +29,22 @@ CPPFLAGS+=	-D__attribute__=
 .if ${OS_VERSION} >= 5.0
 .if ${OS_VERSION} != 5.4
 CPPFLAGS+=	-DSOLARIS
-TRN_EXTRALIBS+=	-lresolv -lsocket -lnsl
+LIBS+=	-lresolv -lsocket -lnsl
 .endif
 .if ${LOWER_ARCH} == "i386"
 CPPFLAGS+=	-DBYTESWAP_IP_LEN
 .endif
 .endif
 .elif ${OPSYS} == "Linux"
-TRN_EXTRALIBS+=	-lresolv
+LIBS+=	-lresolv
 CPPFLAGS+=	-DSTRING
 .elif ${OPSYS} == "FreeBSD"
 CPPFLAGS+=	-DSTRING
 .elif ${OPSYS} == "Darwin"
 CPPFLAGS+=	-DBIND_8_COMPAT -DRA_SERVICE=\"nicname\"
+.if !empty(OS_VERSION:M10.*) # MacOS X 10.6.X aka Snow Leopard
+LIBS+=	-lresolv
+.endif
 .elif !empty(LOWER_OPSYS:Mirix5*)
 CPPFLAGS+=	-Dsocklen_t=int
 .endif
@@ -53,7 +54,7 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 do-extract:
 		${CP} ${DISTDIR}/${DIST_SUBDIR}/traceroute.c ${WRKSRC}
 do-build:
-		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} traceroute.c -o traceroute-nanog ${LDFLAGS} -lm ${TRN_EXTRALIBS}
+		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} traceroute.c -o traceroute-nanog ${LDFLAGS} -lm ${LIBS}
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/traceroute-nanog ${DESTDIR}${PREFIX}/sbin
