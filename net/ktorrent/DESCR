@@ -1,23 +1,11 @@
-KTorrent is a BitTorrent program for KDE.
-The current release is 2.0rc1 which adds several
-big features since our previous release.
-Among the new features you can find:
+KTorrent is a BitTorrent program for KDE4.
 
-	* Support for distributed hash tables (mainline version)
-	* Protocol encryption
-	* Bandwith scheduling
-	* Directory scanner to automatically load torrents in
-	  certain directories
-	* Trackers can now be added to torrents
-	* File prioritization for multi file torrents
+Changes from the KDE3 version include:
 
-And of course a whole bunch of bug fixes. We already supported
-the following features in the previous version:
-
-	* Downloads torrent files
-	* Upload and download speed capping
-	* Internet searching using various search engines, you
-	  can even add your own UDP Trackers
-	* Port forwarding with UPnP
-	* IP blocking plugin
-	* Importing of partially or fully downloaded files
+    * IPv6 support
+    * SOCKSv4 and v5 support
+    * The network interface to use can now be selected
+    * Alternative flat list mode to display the files of a torrent
+    * Reorganization of the config dialog
+    * Individual files of a torrent can now be moved
+    * New queuemanager gui
