@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/24 16:47:52 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2010/03/20 01:32:56 schmonz Exp $
 
---- Makefile.orig	Thu Sep 30 21:25:58 1999
+--- Makefile.orig	1999-09-30 20:25:58.000000000 +0000
 +++ Makefile
 @@ -569,8 +569,8 @@ compile 8v5.c pre8.c fftc8.h complex8.h 
  	./compile 8v5.c
@@ -24,7 +24,22 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/24 16:47:52 jschauma Exp $
  
  accuracy2.o: \
  compile accuracy2.c fftc4.h complex4.h real4.h fftc8.h complex8.h \
-@@ -649,7 +649,7 @@ warn-auto.sh conf-cc
+@@ -601,6 +601,14 @@ trycpp.c compilebase
+ 	&& echo -malign-double || exit 0 ) > auto_align
+ 	rm -f trycpp.o
+ 
++auto_destdir.c: \
++auto-str conf-destdir
++	./auto-str auto_home `head -1 conf-destdir` > auto_destdir.c
++
++auto_destdir.o: \
++compile auto_destdir.c
++	./compile auto_destdir.c
++
+ auto_home.c: \
+ auto-str conf-home
+ 	./auto-str auto_home `head -1 conf-home` > auto_home.c
+@@ -649,7 +657,7 @@ warn-auto.sh conf-cc
  	) > compilebase
  	chmod 755 compilebase
  
@@ -33,7 +48,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/24 16:47:52 jschauma Exp $
  makelib 8sc.o 8u5.o 8u4.o 8u3.o 8u2.o 8u1.o 8u0.o 8mc.o 8c0.o 8c1.o \
  8c2.o 8c3.o 8c4.o 8c5.o 8d0.o 8d1.o 8d2.o 8d3.o 8d4.o 8d5.o 8v5.o \
  8v4.o 8v3.o 8v2.o 8v1.o 8v0.o 8mr.o 8r0.o 8r1.o 8r2.o 8r3.o 8r4.o \
-@@ -657,7 +657,7 @@ makelib 8sc.o 8u5.o 8u4.o 8u3.o 8u2.o 8u
+@@ -657,7 +665,7 @@ makelib 8sc.o 8u5.o 8u4.o 8u3.o 8u2.o 8u
  4c1.o 4c2.o 4c3.o 4c4.o 4c5.o 4d0.o 4d1.o 4d2.o 4d3.o 4d4.o 4d5.o \
  4v5.o 4v4.o 4v3.o 4v2.o 4v1.o 4v0.o 4mr.o 4r0.o 4r1.o 4r2.o 4r3.o \
  4r4.o 4r5.o 4sr.o fftfreq.o
@@ -42,7 +57,30 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/24 16:47:52 jschauma Exp $
  	8u0.o 8mc.o 8c0.o 8c1.o 8c2.o 8c3.o 8c4.o 8c5.o 8d0.o 8d1.o \
  	8d2.o 8d3.o 8d4.o 8d5.o 8v5.o 8v4.o 8v3.o 8v2.o 8v1.o 8v0.o \
  	8mr.o 8r0.o 8r1.o 8r2.o 8r3.o 8r4.o 8r5.o 8sr.o 4sc.o 4u5.o \
-@@ -758,15 +758,15 @@ compile open_trunc.c open.h
+@@ -695,9 +703,9 @@ compile hier.c auto_home.h
+ 	./compile hier.c
+ 
+ install: \
+-load install.o hier.o auto_home.o strerr.a substdio.a open.a error.a \
++load install.o hier.o auto_destdir.o strerr.a substdio.a open.a error.a \
+ str.a
+-	./load install hier.o auto_home.o strerr.a substdio.a \
++	./load install hier.o auto_destdir.o strerr.a substdio.a \
+ 	open.a error.a str.a 
+ 
+ install.o: \
+@@ -706,8 +714,8 @@ exit.h
+ 	./compile install.c
+ 
+ instcheck: \
+-load instcheck.o hier.o auto_home.o strerr.a substdio.a error.a str.a
+-	./load instcheck hier.o auto_home.o strerr.a substdio.a \
++load instcheck.o hier.o auto_destdir.o strerr.a substdio.a error.a str.a
++	./load instcheck hier.o auto_destdir.o strerr.a substdio.a \
+ 	error.a str.a 
+ 
+ instcheck.o: \
+@@ -758,15 +766,15 @@ compile open_trunc.c open.h
  	./compile open_trunc.c
  
  prog: \
