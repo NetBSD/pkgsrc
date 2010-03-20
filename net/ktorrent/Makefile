@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/01/18 09:59:20 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2010/03/20 21:53:06 wiz Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
 PKGREVISION=	4
@@ -6,28 +6,33 @@ CATEGORIES=	net kde
 MASTER_SITES=	http://ktorrent.org/downloads/${KTORRENT_VER}/
 EXTRACT_SUFX=	.tar.bz2
 
-KTORRENT_VER=	2.2.8
+BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
 
-MAINTAINER=	shattered@NetBSD.org
+KTORRENT_VER=	3.3
+
+MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://ktorrent.org/
-COMMENT=	Graphical BitTorrent client for KDE
+COMMENT=	Graphical BitTorrent client for KDE4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake msgfmt pkg-config bash:run perl:run
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_TOOLS+=		awk msgfmt pkg-config perl
 
-REPLACE_BASH=	scripts/ktshell
-
-.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/kdebase3/buildlink3.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../security/qca2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../x11/kdebase-runtime4/buildlink3.mk"
+.include "../../x11/kdebase-workspace4/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
