@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1350 2010/03/20 19:55:08 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1351 2010/03/20 21:54:31 wiz Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1599,3 +1599,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated misc/mnemosyne to 1.2.2nb2 [wiz 2010-03-20]
 	Updated archivers/xz to 4.999.9betanb1 [wiz 2010-03-20]
 	Updated fonts/vlgothic-ttf to 20100126 [wiz 2010-03-20]
+	Moved net/ktorrent to net/ktorrent-kde3 [wiz 2010-03-20]
+	Moved net/ktorrent3 to net/ktorrent [wiz 2010-03-20]
