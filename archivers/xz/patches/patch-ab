@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2009/09/04 16:57:14 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2010/03/20 19:46:14 wiz Exp $
 
 --- src/common/physmem.h.orig	2009-08-27 15:37:12.000000000 +0000
 +++ src/common/physmem.h
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1 2009/09/04 16:57:14 wiz Exp $
  	} mem;
  	size_t mem_ptr_size = sizeof(mem.u64);
 -	if (!sysctl(name, 2, &mem.u64, &mem_ptr_size, NULL, NULL)) {
-+	if (sysctl(name, 2, &mem.u64, &mem_ptr_size, NULL, 0) > 0) {
++	if (sysctl(name, 2, &mem.u64, &mem_ptr_size, NULL, 0) != -1) {
  		// IIRC, 64-bit "return value" is possible on some 64-bit
  		// BSD systems even with HW_PHYSMEM (instead of HW_PHYSMEM64),
  		// so support both.
