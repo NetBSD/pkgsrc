@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2009/11/12 22:05:55 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/20 21:32:41 adrianp Exp $
 
 DISTNAME=		wordpress-${VERSION}
-VERSION=		2.8.6
+VERSION=		2.9.1
 CATEGORIES=		www
 MASTER_SITES=		http://wordpress.org/
 
-MAINTAINER=		adrianp@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wordpress.org/
 COMMENT=		Blogging tool written in php
 
