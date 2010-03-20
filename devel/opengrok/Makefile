@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/12/13 12:46:06 zafer Exp $
+# $NetBSD: Makefile,v 1.12 2010/03/20 21:32:41 adrianp Exp $
 #
 
 DISTNAME=	opengrok-0.7
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://hub.opensolaris.org/bin/download/Project+opengrok/files/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hub.opensolaris.org/bin/view/Project+opengrok/
 COMMENT=	Fast and usable source code search and cross reference engine
 

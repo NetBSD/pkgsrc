@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2010/02/11 22:14:30 joerg Exp $
+# $NetBSD: Makefile,v 1.96 2010/03/20 21:32:41 adrianp Exp $
 
 DISTNAME=	mrtg-2.16.2
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://oss.oetiker.ch/mrtg/pub/ \
 		http://oss.oetiker.ch/mrtg/pub/old/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oss.oetiker.ch/mrtg/
 COMMENT=	The Multi-Router Traffic Grapher
 LICENSE=	gnu-gpl-v2

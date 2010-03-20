@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2009/07/16 18:41:11 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.6 2010/03/20 21:32:41 adrianp Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -10,7 +10,7 @@ DHVER=			${DISTNAME:S/dhcp-//}
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.isc.org/isc/dhcp/
 
-MAINTAINER=		adrianp@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.isc.org/sw/dhcp
 
 CONFLICTS+=		isc-dhcp-base-3.*{,nb*}
