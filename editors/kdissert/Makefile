@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/02/10 19:17:37 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2010/03/20 19:09:10 joerg Exp $
 #
 
 DISTNAME=		kdissert-1.0.7
@@ -21,7 +21,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 do-configure:
 	${RUN} ${_ULIMIT_CMD} \
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-	${PYTHONBIN} waf configure --prefix=${PTEFIX}
+	${PYTHONBIN} waf configure --prefix=${PREFIX}
 
 do-build:
 	${RUN} ${_ULIMIT_CMD} \
