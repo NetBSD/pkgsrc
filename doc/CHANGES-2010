@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1348 2010/03/20 12:37:29 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1349 2010/03/20 19:46:26 wiz Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1597,3 +1597,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated pkgtools/pkg_install to 20100319 [wiz 2010-03-19]
 	Updated lang/squeak to 4.0 [asau 2010-03-19]
 	Updated misc/mnemosyne to 1.2.2nb2 [wiz 2010-03-20]
+	Updated archivers/xz to 4.999.9betanb1 [wiz 2010-03-20]
