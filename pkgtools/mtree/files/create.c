@@ -1,4 +1,4 @@
-/*	$NetBSD: create.c,v 1.6 2008/11/06 02:14:52 jschauma Exp $	*/
+/*	$NetBSD: create.c,v 1.7 2010/03/21 16:30:17 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)create.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: create.c,v 1.6 2008/11/06 02:14:52 jschauma Exp $");
+__RCSID("$NetBSD: create.c,v 1.7 2010/03/21 16:30:17 joerg Exp $");
 #endif
 #endif /* not lint */
 
@@ -186,7 +186,7 @@ cwalk(void)
 static void
 statf(FTSENT *p)
 {
-	u_int32_t len, val;
+	uint32_t len, val;
 	int fd, indent;
 	const char *name;
 #if !defined(NO_MD5) || !defined(NO_RMD160) || !defined(NO_SHA1) || !defined(NO_SHA2)
