@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/04/09 00:48:10 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/03/21 16:29:41 wiz Exp $
 #
 
 DISTNAME=	binpatch-1.0
@@ -6,7 +6,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	atatat@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Trivial binary patch applicator
 

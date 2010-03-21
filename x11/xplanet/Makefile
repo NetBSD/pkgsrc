@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.44 2010/01/18 09:59:45 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2010/03/21 16:29:44 wiz Exp $
 
 DISTNAME=	xplanet-1.2.1
 PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xplanet/}
 
-MAINTAINER=	atatat@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xplanet.sourceforge.net/
 COMMENT=	Rotating rendered map of the Earth in X11 root window
 LICENSE=	gnu-gpl-v2

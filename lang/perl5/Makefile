@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2009/12/14 12:24:46 seb Exp $
+# $NetBSD: Makefile,v 1.157 2010/03/21 16:29:40 wiz Exp $
 
 .include "license.mk"
 
@@ -8,7 +8,7 @@ CATEGORIES=	lang devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/5.0/,}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.perl.org/
 COMMENT=	Practical Extraction and Report Language
 LICENSE=	${PERL5_LICENSE}

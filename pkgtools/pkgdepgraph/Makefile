@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/02/02 10:45:59 obache Exp $
+# $NetBSD: Makefile,v 1.27 2010/03/21 16:29:42 wiz Exp $
 #
 
 DISTNAME=	pkgdepgraph-2.8
@@ -6,7 +6,7 @@ CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	atatat@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Visual representation of installed NetBSD packages
 

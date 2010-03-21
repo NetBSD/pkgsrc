@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2009/12/15 21:54:17 joerg Exp $
+# $NetBSD: Makefile,v 1.99 2010/03/21 16:29:40 wiz Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
-MAINTAINER=	grant@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clamav.net/
 COMMENT=	Anti-virus toolkit
 

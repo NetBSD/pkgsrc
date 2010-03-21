@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/01/16 19:12:08 asau Exp $
+# $NetBSD: Makefile,v 1.22 2010/03/21 16:29:39 wiz Exp $
 
 DISTNAME=	tremor_snapshot_030406
 PKGNAME=	tremor-1.0.2
@@ -7,7 +7,7 @@ CATEGORIES=	devel audio
 MASTER_SITES=	http://www.xiph.org/ogg/vorbis/download/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	chris@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xiph.org/vorbis/
 COMMENT=	Fixed point decoding library for the Ogg Vorbis audio encoding format
 
