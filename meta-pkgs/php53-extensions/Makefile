@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/16 15:54:08 taca Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/21 17:07:52 jdolecek Exp $
 
 DISTNAME=	php-extensions-${PHP_BASE_VERS}
 CATEGORIES=	meta-pkgs www
@@ -22,6 +22,7 @@ DEPENDS+=	php53-curl>=${PHP_BASE_VERS}<6:../../www/php-curl
 DEPENDS+=	php53-dba>=${PHP_BASE_VERS}<6:../../databases/php-dba
 DEPENDS+=	php53-dom>=${PHP_BASE_VERS}<6:../../textproc/php-dom
 DEPENDS+=	php53-eaccelerator>=${PHP_BASE_VERS}<6:../../www/php-eaccelerator
+DEPENDS+=	php53-enchant>=${PHP_BASE_VERS}<6:../../textproc/php-enchant
 DEPENDS+=	php53-exif>=${PHP_BASE_VERS}<6:../../graphics/php-exif
 DEPENDS+=	php53-ftp>=${PHP_BASE_VERS}<6:../../net/php-ftp
 DEPENDS+=	php53-gd>=${PHP_BASE_VERS}<6:../../graphics/php-gd
@@ -29,6 +30,7 @@ DEPENDS+=	php53-gettext>=${PHP_BASE_VERS}<6:../../devel/php-gettext
 DEPENDS+=	php53-gmp>=${PHP_BASE_VERS}<6:../../devel/php-gmp
 DEPENDS+=	php53-iconv>=${PHP_BASE_VERS}<6:../../converters/php-iconv
 DEPENDS+=	php53-imap>=${PHP_BASE_VERS}<6:../../mail/php-imap
+DEPENDS+=	php53-intl>=${PHP_BASE_VERS}<6:../../textproc/php-intl
 DEPENDS+=	php53-json>=${PHP_BASE_VERS}<6:../../textproc/php-json
 DEPENDS+=	php53-ldap>=${PHP_BASE_VERS}<6:../../databases/php-ldap
 DEPENDS+=	php53-mbstring>=${PHP_BASE_VERS}<6:../../converters/php-mbstring
@@ -62,10 +64,8 @@ DEPENDS+=	php53-zip>=${PHP_BASE_VERS}<6:../../archivers/php-zip
 DEPENDS+=	php53-zlib>=${PHP_BASE_VERS}<6:../../archivers/php-zlib
 
 # PHP 5.3.x only extensions
-DEPENDS+=	php53-intl>=${PHP_BASE_VERS}<6:../../misc/php-intl
 # not yet
 #DEPENDS+=	php53-mysqlnd>=${PHP_BASE_VERS}<6:../../databases/php-mysqlnd
-DEPENDS+=	php53-enchant>=${PHP_BASE_VERS}<6:../../textproc/php-enchant
 
 META_PACKAGE=	yes
 
