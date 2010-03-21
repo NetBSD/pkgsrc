@@ -1,4 +1,4 @@
-/*	$NetBSD: create.c,v 1.7 2010/03/21 16:30:17 joerg Exp $	*/
+/*	$NetBSD: create.c,v 1.8 2010/03/21 16:32:06 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)create.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: create.c,v 1.7 2010/03/21 16:30:17 joerg Exp $");
+__RCSID("$NetBSD: create.c,v 1.8 2010/03/21 16:32:06 joerg Exp $");
 #endif
 #endif /* not lint */
 
@@ -421,7 +421,7 @@ dsort(const FTSENT **a, const FTSENT **b)
 	return (strcmp((*a)->fts_name, (*b)->fts_name));
 }
 
-void
+static void
 output(int *offset, const char *fmt, ...)
 {
 	va_list ap;
