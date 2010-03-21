@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/02/20 14:58:45 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2010/03/21 16:29:44 wiz Exp $
 #
 
 DISTNAME=	mod_mp3-0.35
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:C|mod_|ap13-|}
 CATEGORIES=	www
 MASTER_SITES=	http://www.tangent.org/download/
 
-MAINTAINER=	grant@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tangent.org/index.pl?lastnode_id=478&node_id=380
 COMMENT=	Apache module for streaming mp3 files
 

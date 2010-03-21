@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2008/02/19 18:45:32 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2010/03/21 16:29:41 wiz Exp $
 
 DISTNAME=	sqwebmail-5.2.0
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Webmail CGI for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/sqwebmail/
 

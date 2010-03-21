@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/02/11 23:59:39 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2010/03/21 16:29:42 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ DISTNAME=	foomatic-filters-${FOOMATIC_FILTERS_VERSION}
 PKGREVISION=	5
 MASTER_SITES=	http://www.linuxprinting.org/download/foomatic/
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Spooler-independent PostScript printing filter
 
 CONFLICTS+=	foomatic-gswrapper-[0-9]*

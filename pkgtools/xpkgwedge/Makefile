@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.77 2009/05/19 08:59:30 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2010/03/21 16:29:42 wiz Exp $
 
 DISTNAME=	xpkgwedge-1.16
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Allows X11 pkgs to be built and used outside of $${X11BASE}
 LICENSE=	original-bsd

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2010/02/19 23:39:42 tron Exp $
+# $NetBSD: Makefile,v 1.25 2010/03/21 16:29:41 wiz Exp $
 
 DISTNAME=	netbsd-www-1.5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	grant@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Packages required to build the NetBSD.org web site
 
 PKG_DESTDIR_SUPPORT=	user-destdir

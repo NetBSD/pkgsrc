@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2008/02/21 15:50:29 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2010/03/21 16:29:40 wiz Exp $
 
 DISTNAME=	courier-imap-4.3.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	IMAP server for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/imap/
 

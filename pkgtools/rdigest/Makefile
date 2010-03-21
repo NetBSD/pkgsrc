@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2008/09/18 10:38:45 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/21 16:29:42 wiz Exp $
 
 DISTNAME=	rdigest-${VERSION}
 CATEGORIES=	# be quiet pkglint
 MASTER_SITES=	# be quiet pkglint
 
-MAINTAINER=	atatat@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Recursive message digest wrapper utility
 
 DIGESTDIR=	${.CURDIR}/../../pkgtools/digest

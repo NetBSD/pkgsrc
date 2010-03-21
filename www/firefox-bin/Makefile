@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2009/06/06 14:08:38 obache Exp $
+# $NetBSD: Makefile,v 1.50 2010/03/21 16:29:44 wiz Exp $
 
 MOZILLA=		firefox
 MOZ_VER=		2.0.0.20
 MOZ_DISTVER=		${MOZ_VER}
 
-MAINTAINER=		grant@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mozilla.com/en-US/firefox/
 COMMENT=		Lightweight gecko-based web browser (binary package)
 
