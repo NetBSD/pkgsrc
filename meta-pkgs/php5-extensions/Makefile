@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/03/16 15:52:25 taca Exp $
+# $NetBSD: Makefile,v 1.23 2010/03/21 17:37:22 jdolecek Exp $
 
 DISTNAME=	php-extensions-${PHP_BASE_VERS}
 CATEGORIES=	meta-pkgs www
@@ -23,12 +23,14 @@ DEPENDS+=	php5-dba>=${PHP_BASE_VERS}<5.3:../../databases/php-dba
 DEPENDS+=	php5-dom>=${PHP_BASE_VERS}<5.3:../../textproc/php-dom
 DEPENDS+=	php5-eaccelerator>=${PHP_BASE_VERS}<5.3:../../www/php-eaccelerator
 DEPENDS+=	php5-exif>=${PHP_BASE_VERS}<5.3:../../graphics/php-exif
+DEPENDS+=	php5-enchant>=${PHP_BASE_VERS}<5.3:../../textproc/php-enchant
 DEPENDS+=	php5-ftp>=${PHP_BASE_VERS}<5.3:../../net/php-ftp
 DEPENDS+=	php5-gd>=${PHP_BASE_VERS}<5.3:../../graphics/php-gd
 DEPENDS+=	php5-gettext>=${PHP_BASE_VERS}<5.3:../../devel/php-gettext
 DEPENDS+=	php5-gmp>=${PHP_BASE_VERS}<5.3:../../devel/php-gmp
 DEPENDS+=	php5-iconv>=${PHP_BASE_VERS}<5.3:../../converters/php-iconv
 DEPENDS+=	php5-imap>=${PHP_BASE_VERS}<5.3:../../mail/php-imap
+DEPENDS+=	php5-intl>=${PHP_BASE_VERS}<5.3:../../textproc/php-intl
 DEPENDS+=	php5-json>=${PHP_BASE_VERS}<5.3:../../textproc/php-json
 DEPENDS+=	php5-ldap>=${PHP_BASE_VERS}<5.3:../../databases/php-ldap
 DEPENDS+=	php5-mbstring>=${PHP_BASE_VERS}<5.3:../../converters/php-mbstring
