@@ -1,12 +1,15 @@
 #! /bin/sh
-# $NetBSD: sort-packages,v 1.13 2010/03/21 10:52:29 wiz Exp $
+# $NetBSD: sort-packages,v 1.14 2010/03/21 15:31:41 wiz Exp $
 
 # This program scans all binary packages in the current directory and
-# creates two lists of files in OUTDIR:
+# creates three lists of files in OUTDIR:
 #
 # restricted_packages
 #	contains all packages that must not be published on the FTP
 #	server, for whatever reason
+#
+# vulnerable_packages
+#	contains all packages that are not restricted, but vulnerable
 #
 # regular_packages
 #	contains all the other ("good") packages.
@@ -16,16 +19,19 @@ set -eu
 
 : ${OUTDIR="/tmp"}
 : ${PKG_SUFX=".tgz"}
+: ${AUDIT_PACKAGES="audit-packages"}
 : ${PKG_ADMIN="pkg_admin"}
 : ${PKG_INFO="pkg_info"}
 
 regular_packages="${OUTDIR}/regular_packages"
 restricted_packages="${OUTDIR}/restricted_packages"
+vulnerable_packages="${OUTDIR}/vulnerable_packages"
 newline="
 "
 
 : > "${regular_packages}"
 : > "${restricted_packages}"
+: > "${vulnerable_packages}"
 
 for pkg in *${PKG_SUFX}; do
 	build_info=`${PKG_INFO} -B "${pkg}"`
@@ -58,7 +64,16 @@ for pkg in *${PKG_SUFX}; do
 		;;
 	esac
 
-	if [ "${restricted}" != "unknown" ] && [ "${no_bin_on_ftp}" != "unknown" ]; then
+	if [ "${restricted}" = "no" ] && [ "${no_bin_on_ftp}" = "no" ]; then
+		# Check whether the package is vulnerable or not.
+		pkg_prefix="${pkg%%-*}"
+		category="regular"
+		_INFO_VER=`${PKG_INFO} -V`;
+		vuln=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -p "${pkg}"`
+		if [ -n "${vuln}" ]; then
+			category="vulnerable"
+		fi
+	elif [ "${restricted}" != "unknown" ] && [ "${no_bin_on_ftp}" != "unknown" ]; then
 		category="restricted"
 	else
 		category="unknown"
@@ -69,6 +84,9 @@ for pkg in *${PKG_SUFX}; do
 	case "${category}" in
 	"regular")
 		echo "${pkg}" >> "${regular_packages}"
+		;;
+	"vulnerable")
+		echo "${pkg}" >> "${vulnerable_packages}"
 		;;
 	"restricted")
 		echo "${pkg}" >> "${restricted_packages}"
