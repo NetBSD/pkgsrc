@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1356 2010/03/21 14:44:35 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1357 2010/03/21 14:50:03 taca Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1607,3 +1607,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/py-moin to 1.9.2 [pettai 2010-03-21]
 	Updated databases/mysql51-server to 5.1.44nb2 [taca 2010-03-21]
 	Updated www/typolight28-translations to 20100318 [taca 2010-03-21]
+	Updated sysutils/ruby-quota to 0.5.1nb8 [taca 2010-03-21]
