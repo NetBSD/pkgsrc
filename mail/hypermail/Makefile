@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2010/02/04 02:24:07 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2010/03/21 16:29:41 wiz Exp $
 #
 
 DISTNAME=	hypermail-2.1.8
 CATEGORIES=	mail www
 MASTER_SITES=	http://www.hypermail.org/dist/
 
-MAINTAINER=	grant@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hypermail.org/
 COMMENT=	Creates indexed, threaded HTML archives of email
 

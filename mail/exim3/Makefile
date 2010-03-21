@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/06/30 00:07:19 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2010/03/21 16:29:41 wiz Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	7
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim3/ \
 		http://public.planetmirror.com.au/pub/exim/exim3/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	grant@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2010/01/18 09:59:21 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2010/03/21 16:29:42 wiz Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -18,7 +18,7 @@ MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp.fisek.com.tr/pub/cups/${BASE_VERS}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cups.org/
 COMMENT=	Common UNIX Printing System
 

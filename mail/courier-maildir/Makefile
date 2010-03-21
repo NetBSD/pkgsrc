@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/11/03 19:23:55 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2010/03/21 16:29:40 wiz Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Courier maildir utilities
 HOMEPAGE=	http://www.courier-mta.org/
 
