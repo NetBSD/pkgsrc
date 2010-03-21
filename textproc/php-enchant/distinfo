@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2010/03/21 12:42:08 jdolecek Exp $
+
+SHA1 (php-enchant/enchant-1.1.0.tgz) = 8f70603a5ab438450ce19516e5f3a9ed81ad9740
+RMD160 (php-enchant/enchant-1.1.0.tgz) = 89cfb0e304ceb637d3a91ba28bf2a712fbe291df
+Size (php-enchant/enchant-1.1.0.tgz) = 9464 bytes
