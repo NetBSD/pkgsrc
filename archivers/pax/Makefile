@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.41 2010/03/21 16:29:38 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2010/03/21 16:50:41 joerg Exp $
 
 DISTNAME=		pax-20080110
 CATEGORIES=		archivers
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		POSIX standard archiver with many extensions
 
