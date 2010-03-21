@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/04/09 00:47:12 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2010/03/21 16:29:43 wiz Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -8,7 +8,7 @@ CATEGORIES=	regress
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	test buildlink wrapper transformation
 
 .include "../../mk/bsd.prefs.mk"

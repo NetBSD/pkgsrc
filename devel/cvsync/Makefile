@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2010/01/17 12:02:12 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2010/03/21 16:29:39 wiz Exp $
 #
 
 DISTNAME=	cvsync-0.24.19
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	devel scm
 MASTER_SITES=	ftp://ftp.cvsync.org/pub/cvsync/
 
-MAINTAINER=	gehenna@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cvsync.org/
 COMMENT=	Portable incremental cvs repository syncer
 
