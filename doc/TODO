@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9150 2010/03/21 01:30:55 obache Exp $
+$NetBSD: TODO,v 1.9151 2010/03/21 14:21:15 pettai Exp $
 
 Suggested new packages
 ======================
@@ -1099,8 +1099,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-kenosis-0.96 [pkg/42561]
 	o py-lxml-2.2.6
 	o py-m2crypto-0.20.2
-	o py-moin-1.9.0 [pkg/42602]
-	o py-moin-1.9.2
 	o py-nevow-0.10.0
 	o py-psycopg2-2.0.14
 	o py-pytz-2010e
