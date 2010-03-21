@@ -1,0 +1,22 @@
+$NetBSD: patch-at,v 1.1 2010/03/21 14:41:41 taca Exp $
+
+--- server-tools/instance-manager/Makefile.in.orig	2010-02-04 11:46:23.000000000 +0000
++++ server-tools/instance-manager/Makefile.in
+@@ -81,7 +81,7 @@ libnet_a_DEPENDENCIES = $(top_builddir)/
+ nodist_libnet_a_OBJECTS = net_serv.$(OBJEXT)
+ libnet_a_OBJECTS = $(nodist_libnet_a_OBJECTS)
+ LTLIBRARIES = $(noinst_LTLIBRARIES)
+-liboptions_la_DEPENDENCIES = $(top_builddir)/libmysql/get_password.lo
++liboptions_la_DEPENDENCIES =
+ am_liboptions_la_OBJECTS = liboptions_la-options.lo \
+ 	liboptions_la-priv.lo
+ liboptions_la_OBJECTS = $(am_liboptions_la_OBJECTS)
+@@ -467,7 +467,7 @@ liboptions_la_CXXFLAGS = $(CXXFLAGS) \
+ 	-DPROTOCOL_VERSION=@PROTOCOL_VERSION@
+ 
+ liboptions_la_SOURCES = options.h options.cc priv.h priv.cc
+-liboptions_la_LIBADD = $(top_builddir)/libmysql/get_password.lo
++liboptions_la_LIBADD = -lmysqlclient
+ 
+ # MySQL sometimes uses symlinks to reuse code 
+ # All symlinked files are grouped in libnet.a
