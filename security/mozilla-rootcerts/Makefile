@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/11/03 02:43:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/21 16:29:43 wiz Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
 CATEGORIES=	security
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 DISTFILES=	${CERTDATA}
 EXTRACT_SUFX=	# empty
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt?raw=1
 COMMENT=	root CA certificates from the Mozilla Project
 

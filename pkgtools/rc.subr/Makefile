@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/12/13 07:49:55 martti Exp $
+# $NetBSD: Makefile,v 1.23 2010/03/21 16:29:42 wiz Exp $
 #
 
 DISTNAME=		rc.subr-20090118
@@ -6,7 +6,7 @@ CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		grant@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Portable NetBSD rc.subr implementation for pkgsrc
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2009/04/09 00:47:12 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2010/03/21 16:29:43 wiz Exp $
 
 DISTNAME=	regress-buildlink-unwrap-0.0
 CATEGORIES=	regress
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	test buildlink unwrapping of text files
 
 .include "../../mk/bsd.prefs.mk"

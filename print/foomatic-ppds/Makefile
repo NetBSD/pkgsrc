@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/02/12 00:06:13 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2010/03/21 16:29:42 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,7 +16,7 @@ PKGNAME=	${DISTNAME:S/-filters-/-/}
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://www.linuxprinting.org/download/foomatic/
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Foomatic PPDs collection
 
 DEPENDS=	foomatic-filters>=3.0.2:../../print/foomatic-filters
