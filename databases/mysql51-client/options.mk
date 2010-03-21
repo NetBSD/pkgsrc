@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2010/03/04 16:34:23 taca Exp $
+# $NetBSD: options.mk,v 1.3 2010/03/21 14:40:15 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5
 
-PKG_SUPPORTED_OPTIONS+=	embedded-server ssl
-PKG_SUGGESTED_OPTIONS+=	embedded-server ssl
+PKG_SUPPORTED_OPTIONS+=	embedded-server mysqlmanager ndb-cluster pstack ssl
+PKG_SUGGESTED_OPTIONS+=	embedded-server mysqlmanager ndb-cluster pstack ssl
 
 .include "../../mk/bsd.options.mk"
 
