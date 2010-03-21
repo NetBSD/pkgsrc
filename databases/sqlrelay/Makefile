@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2009/09/09 14:38:58 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2010/03/21 16:29:39 wiz Exp $
 
 DISTNAME=		sqlrelay-0.37
 PKGREVISION=		2
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlrelay/}
 
-MAINTAINER=		grant@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sqlrelay.sourceforge.net/
 COMMENT=		Enables pooling and sharing of database connections
 
