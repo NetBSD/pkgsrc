@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
+# $NetBSD: Makefile.php,v 1.2 2010/03/21 17:10:01 jdolecek Exp $
 # used by lang/php53/Makefile
 # used by www/ap-php/Makefile
 
@@ -29,8 +29,10 @@ CONFIGURE_ARGS+=	--with-regex=system
 
 CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--without-sqlite
+#CONFIGURE_ARGS+=	--without-sqlite3
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-pear
+#CONFIGURE_ARGS+=	--without-intl
 
 CONFIGURE_ARGS+=	--disable-posix
 CONFIGURE_ARGS+=	--disable-dom
@@ -68,8 +70,8 @@ PATCH_SITES=		http://download.suhosin.org/
 PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.9.1.patch.gz
 PATCH_DIST_STRIP=	-p1
 PLIST.suhosin=		yes
-MESSAGE_SRC=		${.CURDIR}/../../lang/php5/MESSAGE
-MESSAGE_SRC+=		${.CURDIR}/../../lang/php5/MESSAGE.suhosin
+MESSAGE_SRC=		${.CURDIR}/../../lang/php53/MESSAGE
+MESSAGE_SRC+=		${.CURDIR}/../../lang/php53/MESSAGE.suhosin
 . endif
 .endif
 
