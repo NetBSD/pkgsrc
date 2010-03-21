@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2009/10/27 15:29:33 taca Exp $
+$NetBSD: patch-ab,v 1.6 2010/03/21 14:49:10 taca Exp $
 
---- quota.c.orig	2002-03-30 23:59:12.000000000 +0900
+--- quota.c.orig	2002-03-30 14:59:12.000000000 +0000
 +++ quota.c
 @@ -5,9 +5,13 @@
  
@@ -99,6 +99,15 @@ $NetBSD: patch-ab,v 1.5 2009/10/27 15:29:33 taca Exp $
  		      UINT2NUM(c_dqb->dqb_curspace),
  #else
  		      UINT2NUM(c_dqb->dqb_curblocks),
+@@ -442,7 +468,7 @@ Init_quota()
+ 				   "curinodes",
+ 				   "btimelimit",
+ 				   "itimelimit",
+-				   0);
++				   NULL);
+ 
+   /* for compatibility */
+ #define DQ_ALIAS(a,b) rb_alias(rb_sDiskQuota,rb_intern(#a),rb_intern(#b))
 @@ -454,7 +480,7 @@ Init_quota()
    DQ_ALIAS(fsoftlimit=, isoftlimit=);
    DQ_ALIAS(curfiles=,   curinodes=);
