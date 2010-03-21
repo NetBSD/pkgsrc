@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/03/16 11:56:22 taca Exp $
+# $NetBSD: Makefile,v 1.11 2010/03/21 11:20:41 jdolecek Exp $
 
 MODNAME=		mhash
 CATEGORIES+=		security
@@ -10,7 +10,7 @@ CONFLICTS=	php-mhash-[0-9]*
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.mhash}
 
-PHP_VERSION_REQD=	5
+PHP_VERSIONS_ACCEPTED=	52
 
 .include "../../lang/php/ext.mk"
 .include "../../security/mhash/buildlink3.mk"
