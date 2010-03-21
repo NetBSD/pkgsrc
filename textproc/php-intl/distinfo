@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/21 16:57:13 jdolecek Exp $
+
+SHA1 (php-intl/intl-1.1.1.tgz) = 052d43b57fea9a3193fe577c9aaa619f6c7508b0
+RMD160 (php-intl/intl-1.1.1.tgz) = 74abe4582aafe9f9bc3da41936fd0116c271ef8b
+Size (php-intl/intl-1.1.1.tgz) = 142269 bytes
+SHA1 (patch-aa) = 7a44fab01351f8f810c8b906f5fcb0ea9dd4160c
+SHA1 (patch-ab) = 01b4fa84d71319f29e0869f25e0dd1be869eaad0
+SHA1 (patch-ac) = 635ac309125521018a13dbb84d741210e80fe635
+SHA1 (patch-ad) = 3e09a48471dcf6fcfdcfca295dac778814fd2bd1
+SHA1 (patch-ae) = 750d9284f86a730fce7733ce488cbb4ae13983ce
+SHA1 (patch-af) = 815006577c08b1cab7f0e5e601770f786c61c910
+SHA1 (patch-ag) = 66db6e293f9eb9e81ccd6f8055aed2e036791247
+SHA1 (patch-ah) = 024f97675087d3f282e6cd8af059179ea7faea60
+SHA1 (patch-aj) = edb43a597a43db653af7be4d3066bf9bd376e8be

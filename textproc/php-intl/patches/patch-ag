@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/03/21 16:57:13 jdolecek Exp $
+
+--- normalizer/normalizer_class.c.orig	2010-03-11 00:18:31.000000000 +0100
++++ normalizer/normalizer_class.c
+@@ -29,7 +29,7 @@ zend_class_entry *Normalizer_ce_ptr = NU
+ 
+ /* {{{ Normalizer methods arguments info */
+ 
+-static
++PHP_INTL_ZEND_ARG_STATIC
+ ZEND_BEGIN_ARG_INFO_EX( normalizer_3_args, 0, 0, 3 )
+ 	ZEND_ARG_INFO( 0, arg1 )
+ 	ZEND_ARG_INFO( 0, arg2 )
