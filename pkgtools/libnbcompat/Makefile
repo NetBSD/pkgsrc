@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2010/03/21 16:29:42 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2010/03/21 16:50:41 joerg Exp $
 #
 # NOTE: If you update this package, it is *mandatory* that you update
 # 	pkgsrc/pkgtools/libnbcompat/files/README to reflect the actual
@@ -10,7 +10,7 @@ CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Portable NetBSD compatibility library
 
