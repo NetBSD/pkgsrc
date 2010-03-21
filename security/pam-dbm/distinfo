@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2008/10/02 18:21:06 joerg Exp $
+$NetBSD: distinfo,v 1.5 2010/03/21 06:54:10 scottr Exp $
 
 SHA1 (pam_dbm-0.2.tar.gz) = 9e9404bb4d8ed1e34c8198ad8e7a2b38735beb6c
 RMD160 (pam_dbm-0.2.tar.gz) = bc4226a1cd3bd379e01b3245f3c6480d620dc2c3
 Size (pam_dbm-0.2.tar.gz) = 109079 bytes
 SHA1 (patch-aa) = a2a07a6cab8b38a44487c7ff1bbacc1966a0196a
+SHA1 (patch-ab) = ca25e09def5032056dc00cfea148e3d3e5053e5b
