@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.46 2010/03/21 10:52:29 wiz Exp $
+# $NetBSD: upload,v 1.47 2010/03/21 15:31:42 wiz Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -218,12 +218,14 @@ TMP="${TMPDIR}"/pkg_upload.$$
         exit 1
 }
 
+vulnerable_packages="$TMP/vulnerable_packages"
 restricted_packages="$TMP/restricted_packages"
 old_packages="$TMP/old_packages"
 good_packages="$TMP/regular_packages"
 all_good_packages="$TMP/all_regular_packages"
 
 upload_general="$TMP"/upload_general
+upload_vulnerable="$TMP"/upload_vulnerable
 
 # May be different than $USR_PKGSRC:
 echo "upload> Running ${BMAKE} to get the pkgsrc variables"
@@ -238,6 +240,19 @@ shell=`cd pkgtools/lintpkgsrc && ${BMAKE} show-var VARNAME=TOOLS_PLATFORM.sh`
 for pkg in ${REQUIRED_PACKAGES}; do
 	install_required $pkg
 done
+
+echo "upload> Making sure vulnerability-list is up-to-date:"
+if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = "yes" ]
+then
+	_PKGVULNDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
+	download-vulnerability-list ${DOWNLOAD_VULNERABILITY_LIST_FLAGS}
+	if [ "x${_PKGVULNDIR}" != "x${distdir}" ]; then
+		cp ${_PKGVULNDIR}/pkg-vulnerabilities ${distdir}
+	fi
+	echo "        done."
+else
+	echo "        (skipped)"
+fi
 
 case $LINTPKGSRC_CACHE in
 yes|YES)
@@ -258,8 +273,10 @@ RSFLAGS="-vap --progress $RSYNC_OPTS"
 failed=no
 cd $packages
 
-echo "upload> Checking for restricted packages"
-(cd All && env PKG_INFO="${pkg_info}" OUTDIR="${TMP}" \
+echo "upload> Checking for restricted and vulnerable packages"
+(cd All && env PKG_INFO="${pkg_info}" OUTDIR="${TMP}" PKGVULNDIR="${distdir}" \
+               AUDIT_PACKAGES_FLAGS="${AUDIT_PACKAGES_FLAGS}" \
+	       DOWNLOAD_VULNERABILITY_LIST_FLAGS="${DOWNLOAD_VULNERABILITY_LIST_FLAGS}" \
 	       ${shell} "${pkgsrcdir}/mk/bulk/sort-packages")
 
 # Add the name of the package file, including all its symlinks to the
@@ -291,7 +308,7 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 	[ -z "${CKSUM}" ] && CKSUM="echo"
 	[ -z "${SYSVSUM}" ] && SYSVSUM="echo"
 
-	for pkg in `cat "${good_packages}"`; do
+	for pkg in `cat "${good_packages}" "${vulnerable_packages}"`; do
 		pkg="All/$pkg"
 		${BSDSUM}	"$pkg" >> BSDSUM
 		${CKSUM}	"$pkg" >> CKSUM
@@ -333,15 +350,35 @@ EOF
 chmod +x "$upload_general"
 
 if [ "$do_upload" = "yes" ]; then
-	echo "upload> Uploading packages"
+	echo "upload> Uploading non-vulnerable packages"
 	${shell} "$upload_general" \
 	|| {
 		echo "upload> ERROR: rsync failed.  To retry later, you can run $upload_general" 1>&2
 		failed=yes
 	}
 else
-	echo "upload> Skipping upload of packages."
+	echo "upload> Skipping upload of non-vulnerable packages."
 	echo "        Run \"$upload_general\" to upload them later."
+fi
+
+cat <<EOF > "$upload_vulnerable"
+#! /bin/sh
+set -e
+cd "$packages/All"
+rsync $RSFLAGS --files-from="${vulnerable_packages}" --exclude-from="${old_packages}" . "$RSYNC_DST/All/"
+EOF
+chmod +x "$upload_vulnerable"
+
+if [ "$do_upload" = "yes" ]; then
+	echo "upload> Uploading vulnerable packages"
+	${shell} "$upload_vulnerable" \
+	|| {
+		echo "upload> ERROR: rsync failed.  To retry later, you can run $upload_vulnerable" 1>&2
+		failed=yes
+	}
+else
+	echo "upload> Skipping upload of vulnerable packages."
+	echo "        Run \"$upload_vulnerable\" to upload them later."
 fi
 
 # clean up temp files
