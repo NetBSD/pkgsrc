@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.11 2010/03/16 15:25:36 taca Exp $
+# $NetBSD: phpversion.mk,v 1.12 2010/03/21 11:07:37 jdolecek Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -8,9 +8,9 @@
 #
 # PHP_VERSION_DEFAULT
 #	The PHP version to choose when more than one is acceptable to
-#	the package.
+#	the package. '5' means any 5.*, 52 only 5.2.*, 53 only 5.3.*
 #
-#	Possible: 5 53
+#	Possible: 5 52 53
 #	Default: 5
 #
 # === Package-settable variables ===
@@ -18,14 +18,14 @@
 # PHP_VERSIONS_ACCEPTED
 #	The PHP versions that are accepted by the package.
 #
-#	Possible: 5 53
+#	Possible: 5 52 53
 #	Default: 5
 #
 # PHP_VERSION_REQD
 #	If the package works only with a specific PHP version, this
 #	variable can be used to force it.
 #
-#	Possible: (undefined) 5 53
+#	Possible: (undefined) 5 52 53
 #	Default: (undefined)
 #
 # === Variables defined by this file ===
@@ -78,13 +78,28 @@ PHP_VERSIONS_ACCEPTED?=		5 53
 _PHP_VERSION_${pv}_OK=	yes
 .endfor
 
+# most pkgsrc PHP5 extensions work on both PHP 5.2.* and 5.3.*; if marked
+# as '5', accent any 5.*
+.if defined(_PHP_VERSION_5_OK)
+.  if !defined(_PHP_VERSION_53_OK)
+_PHP_VERSION_53_OK=	yes
+PHP_VERSIONS_ACCEPTED+= 53
+.  endif
+.  if !defined(_PHP_VERSION_52_OK)
+_PHP_VERSION_52_OK=	yes
+PHP_VERSIONS_ACCEPTED+= 52
+.  endif
+.endif
+
 # check what is installed
 .if exists(${LOCALBASE}/lib/php/20040412)
 _PHP_VERSION_5_INSTALLED=	yes
-_PHP_VERSION_INSTALLED=		5
-.elif exists(${LOCALBASE}/lib/php/20090630)
+_PHP_VERSION_52_INSTALLED=	yes
+_PHP_INSTALLED=		yes
+.endif
+.if exists(${LOCALBASE}/lib/php/20090626) || exists(${LOCALBASE}/include/php/Zend/zend_gc.h)
 _PHP_VERSION_53_INSTALLED=	yes
-_PHP_VERSION_INSTALLED=		53
+_PHP_INSTALLED=		yes
 .endif
 
 # if a version is explicitely required, take it
@@ -122,11 +137,16 @@ _PHP_VERSION=	${_PHP_VERSION_FIRSTACCEPTED}
 .endif
 
 # export some of internal variables
-PKG_PHP_VERSION:=	${_PHP_VERSION}
-PKG_PHP:=		php-${_PHP_VERSION}
+PKG_PHP_VERSION:=	${_PHP_VERSION:C/\.[0-9]//}
+PKG_PHP:=		PHP${_PHP_VERSION:C/([0-9])([0-9])/\1.\2/}
 
 # currently we have only PHP 5.x packages.
 PKG_PHP_MAJOR_VERS:=	5
+
+# if installed PHP isn't compatible with required PHP, bail out
+.if defined(_PHP_INSTALLED) && !defined(_PHP_VERSION_${_PHP_VERSION}_INSTALLED)
+PKG_SKIP_REASON+=	"Package accepts ${PKG_PHP}, but different version is installed"
+.endif
 
 MESSAGE_SUBST+=		PKG_PHP_VERSION=${PKG_PHP_VERSION} \
 			PKG_PHP=${PKG_PHP}
@@ -139,7 +159,7 @@ PHP_VERSION_REQD:=	${PKG_PHP_VERSION}
 #
 # set variables for the version we decided to use:
 #
-.if ${_PHP_VERSION} == "5"
+.if ${_PHP_VERSION} == "5" || ${_PHP_VERSION} == "52"
 PHPPKGSRCDIR=		../../lang/php5
 PHP_PKG_PREFIX=		php5
 .elif ${_PHP_VERSION} == "53"
