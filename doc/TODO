@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9152 2010/03/21 20:34:58 wiz Exp $
+$NetBSD: TODO,v 1.9153 2010/03/21 21:58:56 pettai Exp $
 
 Suggested new packages
 ======================
@@ -987,7 +987,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o newt-0.52.2 (ubuntu)
 	o ng-1.4.4
 	o nikto-2.0.1
-	o nmap-5.21 [pkg/42723]
 	o ns-3.5
 	o ns-flash-10
 	o ns-plugger-common-5.1.3
