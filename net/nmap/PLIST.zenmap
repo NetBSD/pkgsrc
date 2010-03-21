@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.zenmap,v 1.5 2009/07/20 20:49:40 adrianp Exp $
+@comment $NetBSD: PLIST.zenmap,v 1.6 2010/03/21 21:58:23 pettai Exp $
 bin/nmapfe
 bin/uninstall_zenmap
 bin/xnmap
@@ -121,6 +121,8 @@ ${PYSITELIB}/zenmapGUI/DiffCompare.py
 ${PYSITELIB}/zenmapGUI/DiffCompare.pyc
 ${PYSITELIB}/zenmapGUI/FileChoosers.py
 ${PYSITELIB}/zenmapGUI/FileChoosers.pyc
+${PYSITELIB}/zenmapGUI/FilterBar.py
+${PYSITELIB}/zenmapGUI/FilterBar.pyc
 ${PYSITELIB}/zenmapGUI/Icons.py
 ${PYSITELIB}/zenmapGUI/Icons.pyc
 ${PYSITELIB}/zenmapGUI/MainWindow.py
@@ -141,10 +143,10 @@ ${PYSITELIB}/zenmapGUI/ScanHostDetailsPage.py
 ${PYSITELIB}/zenmapGUI/ScanHostDetailsPage.pyc
 ${PYSITELIB}/zenmapGUI/ScanHostsView.py
 ${PYSITELIB}/zenmapGUI/ScanHostsView.pyc
+${PYSITELIB}/zenmapGUI/ScanInterface.py
+${PYSITELIB}/zenmapGUI/ScanInterface.pyc
 ${PYSITELIB}/zenmapGUI/ScanNmapOutputPage.py
 ${PYSITELIB}/zenmapGUI/ScanNmapOutputPage.pyc
-${PYSITELIB}/zenmapGUI/ScanNotebook.py
-${PYSITELIB}/zenmapGUI/ScanNotebook.pyc
 ${PYSITELIB}/zenmapGUI/ScanOpenPortsPage.py
 ${PYSITELIB}/zenmapGUI/ScanOpenPortsPage.pyc
 ${PYSITELIB}/zenmapGUI/ScanRunDetailsPage.py
@@ -214,6 +216,7 @@ share/zenmap/locale/de/LC_MESSAGES/zenmap.mo
 share/zenmap/locale/fr/LC_MESSAGES/zenmap.mo
 share/zenmap/locale/hr/LC_MESSAGES/zenmap.mo
 share/zenmap/locale/pt_BR/LC_MESSAGES/zenmap.mo
+share/zenmap/locale/ru/LC_MESSAGES/zenmap.mo
 share/zenmap/misc/profile_editor.xml
 share/zenmap/pixmaps/default_32.png
 share/zenmap/pixmaps/default_75.png
