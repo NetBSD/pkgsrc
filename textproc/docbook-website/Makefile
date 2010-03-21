@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/07/07 22:12:02 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2010/03/21 16:29:43 wiz Exp $
 #
 
 DISTNAME=	docbook-website-2.6.0
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 
-MAINTAINER=	grant@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://docbook.sourceforge.net/
 COMMENT=	DocBook XML DTD for building websites
 

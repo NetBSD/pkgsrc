@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/17 12:02:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2010/03/21 16:29:39 wiz Exp $
 #
 
 DISTNAME=	sybperl-2.16
@@ -7,7 +7,7 @@ PKGREVISION=	7
 CATEGORIES=	databases perl5
 MASTER_SITES=	http://www.peppler.org/downloads/
 
-MAINTAINER=	grant@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.peppler.org/freeware/sybperl.html
 COMMENT=	Perl modules for using Sybase/MS-SQL databases
 
