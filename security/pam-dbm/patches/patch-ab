@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/03/21 06:54:10 scottr Exp $
+--- pam_dbm.c.orig	2003-12-20 08:19:18.000000000 -0600
++++ pam_dbm.c
+@@ -78,10 +78,10 @@
+ 		       "pam_dbm_authenticate: dbm_fetch(\"%s\") failed", key);
+ 		return -1;
+ 	}
++	strlcpy(buf, valdat.dptr, buflen);
+ 
+ 	dbm_close(dbm);
+ 
+-	strlcpy(buf, valdat.dptr, buflen);
+ 	return 0;
+ }
+ 
