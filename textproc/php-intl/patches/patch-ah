@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2010/03/21 16:57:13 jdolecek Exp $
+
+--- resourcebundle/resourcebundle_class.c.orig	2010-03-21 16:45:18.000000000 +0100
++++ resourcebundle/resourcebundle_class.c
+@@ -212,7 +212,7 @@ zval *resourcebundle_array_get(zval *obj
+ 	MAKE_STD_ZVAL(retval);
+ 
+ 	resourcebundle_array_fetch(object, offset, retval, 1 TSRMLS_CC);
+-	retval->refcount--;
++	Z_DELREF_P(retval);
+ 	return retval;
+ }
+ /* }}} */
