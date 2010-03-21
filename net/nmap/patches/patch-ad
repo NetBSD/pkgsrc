@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.13 2009/04/01 07:56:19 apb Exp $
+$NetBSD: patch-ad,v 1.14 2010/03/21 21:58:23 pettai Exp $
 
 Correct handling of the length of data returned by SIOCGIFCONF.  The
 actual length of each item is never less than sizeof(struct ifreq), but
@@ -24,38 +24,24 @@ had two problems:
    sizeof(ifr->ifr_ifru).  This assumption is incorrect on some
    systems, at least on NetBSD.
 
---- tcpip.cc.orig	2008-09-04 14:41:59.000000000 +0000
-+++ tcpip.cc
-@@ -2890,12 +2890,10 @@ int sd;
-     ifr = (struct ifreq *) buf;
-     if (ifc.ifc_len == 0) 
-       fatal("%s: SIOCGIFCONF claims you have no network interfaces!\n", __func__);
+--- tcpip.cc.orig	2010-01-15 04:55:23.000000000 +0100
++++ tcpip.cc	2010-01-27 22:46:10.000000000 +0100
+@@ -3053,12 +3053,13 @@
+     int rc;
+     char *p;
+ 
+-    /* On some platforms (such as FreeBSD), the length of each ifr changes
+-       based on the sockaddr type used, so we get the next length now. */
 -#if HAVE_SOCKADDR_SA_LEN
--    /*    len = MAX(sizeof(struct sockaddr), ifr->ifr_addr.sa_len);*/
 -    len = ifr->ifr_addr.sa_len + sizeof(ifr->ifr_name);
 -#else
++    /* On some platforms struct sockaddr has an sa_len member, if
++      ifr_ddr.sa_len is larger then sizeof ifr_ifru, then the actual
++      data extends beyond the end of ifr_ifru. */
      len = sizeof(struct ifreq);
--    /* len = sizeof(SA); */
 +#if HAVE_SOCKADDR_SA_LEN
-+    if (ifr->ifr_addr.sa_len > sizeof(ifr->ifr_ifru))
++    len = ifr->ifr_addr.sa_len > sizeof(ifr->ifr_name);
 +      len += (ifr->ifr_addr.sa_len - sizeof(ifr->ifr_ifru));
  #endif
  
-     /* Debugging code
-@@ -2914,10 +2912,13 @@ int sd;
-       printf("ifr = %X\n",(unsigned)(*(char **)&ifr));
-       */
- 
--      /* On some platforms (such as FreeBSD), the length of each ifr changes
--	 based on the sockaddr type used, so we get the next length now */
-+      /* On platforms where struct sockaddr has an sa_len member, if
-+	 ifr_ddr.sa_len is larger then sizeof ifr_ifru, then the actual
-+	 data extends beyond the end of ifr_ifru. */
-+      len = sizeof(struct ifreq);
- #if HAVE_SOCKADDR_SA_LEN
--      len = ifr->ifr_addr.sa_len + sizeof(ifr->ifr_name);
-+      if (ifr->ifr_addr.sa_len > sizeof(ifr->ifr_ifru))
-+        len += (ifr->ifr_addr.sa_len - sizeof(ifr->ifr_ifru));
- #endif 
- 
-       /* skip any device with no name */
+     /* skip any device with no name */

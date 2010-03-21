@@ -1,8 +1,26 @@
-$NetBSD: patch-ab,v 1.12 2006/12/17 17:55:49 salo Exp $
+$NetBSD: patch-ab,v 1.13 2010/03/21 21:58:23 pettai Exp $
 
---- configure.orig	2006-08-17 02:36:16.000000000 +0200
-+++ configure	2006-12-17 15:07:11.000000000 +0100
-@@ -5879,6 +5879,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+--- configure.orig	2009-11-05 20:50:33.000000000 +0100
++++ configure	2010-01-27 23:57:35.000000000 +0100
+@@ -5891,7 +5891,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-	for am_cv_pathless_PYTHON in python python2 python3 python3.0 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 none; do
++	for am_cv_pathless_PYTHON in python python2 python3 python3.0 python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 none; do
+ 	  test "$am_cv_pathless_PYTHON" = none && break
+ 	  prog="import sys
+ # split strings by '.' and convert to numeric.  Append some zeros
+@@ -6145,7 +6145,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-	for am_cv_pathless_PYTHON in python python2 python3 python3.0 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 none; do
++	for am_cv_pathless_PYTHON in python python2 python3 python3.0 python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 none; do
+ 	  test "$am_cv_pathless_PYTHON" = none && break
+ 	  prog="import sys
+ # split strings by '.' and convert to numeric.  Append some zeros
+@@ -7161,6 +7161,7 @@
  extern char pcap_version[];
  int main() {
    int major, minor1, minor2;
