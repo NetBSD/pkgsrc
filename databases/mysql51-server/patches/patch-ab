@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
+$NetBSD: patch-ab,v 1.2 2010/03/21 14:41:41 taca Exp $
 
 --- Makefile.in.orig	2010-02-04 11:46:48.000000000 +0000
 +++ Makefile.in
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/03/04 16:28:58 taca Exp $
 +SUBDIRS = . include scripts @pstack_dir@ \
 +			strings mysys dbug extra regex storage plugin \
 +			libmysql @sql_server@ @man_dirs@ tests \
-+			@libmysqld_dirs@ mysql-test support-files
++			@libmysqld_dirs@ mysql-test support-files @tools_dirs@
  
  DIST_SUBDIRS = . include Docs zlib \
  			cmd-line-utils sql-common scripts \
