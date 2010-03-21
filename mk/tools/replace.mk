@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.223 2010/01/20 14:47:30 joerg Exp $
+# $NetBSD: replace.mk,v 1.224 2010/03/21 10:52:29 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -561,7 +561,7 @@ TOOLS_PATH.lha=			${TOOLS_PREFIX.lha}/bin/lha
 .  if !empty(PKGPATH:Marchivers/xz)
 MAKEFLAGS+=			TOOLS_IGNORE.lzcat=
 .  elif !empty(_TOOLS_USE_PKGSRC.lzcat:M[yY][eE][sS])
-TOOLS_DEPENDS.lzcat?=		xz>=4.999.8beta:../../archivers/xz
+TOOLS_DEPENDS.lzcat?=		xz>=4.999.9betanb1:../../archivers/xz
 TOOLS_CREATE+=			lzcat
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lzcat=lzcat
 TOOLS_PATH.lzcat=		${TOOLS_PREFIX.lzcat}/bin/lzcat
@@ -857,7 +857,7 @@ TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
 .  if !empty(PKGPATH:Marchivers/xz)
 MAKEFLAGS+=			TOOLS_IGNORE.xzcat=
 .  elif !empty(_TOOLS_USE_PKGSRC.xzcat:M[yY][eE][sS])
-TOOLS_DEPENDS.xzcat?=		xz>=4.999.8beta:../../archivers/xz
+TOOLS_DEPENDS.xzcat?=		xz>=4.999.9betanb1:../../archivers/xz
 TOOLS_CREATE+=			xzcat
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xzcat=xzcat
 TOOLS_PATH.xzcat=		${TOOLS_PREFIX.xzcat}/bin/xzcat
