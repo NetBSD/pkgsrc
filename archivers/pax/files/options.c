@@ -1,4 +1,4 @@
-/*	$NetBSD: options.c,v 1.10 2009/08/06 13:54:03 joerg Exp $	*/
+/*	$NetBSD: options.c,v 1.11 2010/03/21 16:35:01 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)options.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: options.c,v 1.10 2009/08/06 13:54:03 joerg Exp $");
+__RCSID("$NetBSD: options.c,v 1.11 2010/03/21 16:35:01 joerg Exp $");
 #endif
 #endif /* not lint */
 
@@ -2048,7 +2048,7 @@ no_op(void)
  *	print the usage summary to the user
  */
 
-void
+static void
 pax_usage(void)
 {
 	fprintf(stderr,
@@ -2077,7 +2077,7 @@ pax_usage(void)
  *	print the usage summary to the user
  */
 
-void
+static void
 tar_usage(void)
 {
 	(void)fputs("usage: tar [-]{crtux}[-befhjlmopqvwzHOPSXZ014578] [archive] "
@@ -2094,7 +2094,7 @@ tar_usage(void)
  *	print the usage summary to the user
  */
 
-void
+static void
 cpio_usage(void)
 {
 

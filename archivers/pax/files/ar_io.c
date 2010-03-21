@@ -1,4 +1,4 @@
-/*	$NetBSD: ar_io.c,v 1.11 2007/09/06 20:10:22 joerg Exp $	*/
+/*	$NetBSD: ar_io.c,v 1.12 2010/03/21 16:35:01 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)ar_io.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: ar_io.c,v 1.11 2007/09/06 20:10:22 joerg Exp $");
+__RCSID("$NetBSD: ar_io.c,v 1.12 2010/03/21 16:35:01 joerg Exp $");
 #endif
 #endif /* not lint */
 
@@ -1634,7 +1634,7 @@ ar_next(void)
  * to keep the fd the same in the calling function (parent). possible
  * programs are GZIP_CMD, BZIP2_CMD, and COMPRESS_CMD.
  */
-void
+static void
 ar_start_gzip(int fd, const char *gzp, int wr)
 {
 	int fds[2];
