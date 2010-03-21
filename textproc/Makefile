@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.529 2010/03/16 22:35:38 pettai Exp $
+# $NetBSD: Makefile,v 1.530 2010/03/21 16:58:55 jdolecek Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -388,6 +388,7 @@ SUBDIR+=	pear-Console_Table
 SUBDIR+=	pear-File_Find
 SUBDIR+=	php-dom
 SUBDIR+=	php-enchant
+SUBDIR+=	php-intl
 SUBDIR+=	php-json
 SUBDIR+=	php-pspell
 SUBDIR+=	php-wddx
