@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2010/03/21 02:50:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.71 2010/03/21 21:58:23 pettai Exp $
 #
 
-DISTNAME=	nmap-5.00
-PKGREVISION=	2
+DISTNAME=	nmap-5.21
 CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://insecure.org/nmap/
 COMMENT=	Network/port scanner with OS detection
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -18,10 +18,13 @@ BUILDLINK_API_DEPENDS.libpcap=	libpcap>=0.9.4
 BUILDLINK_API_DEPENDS.libpcre=	libpcre>=6.7
 
 GNU_CONFIGURE=		yes
+
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+
+BUILD_DEFS+=		IPV6_READY
 
 .include "options.mk"
 
