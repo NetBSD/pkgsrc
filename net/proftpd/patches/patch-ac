@@ -1,14 +1,14 @@
-$NetBSD: patch-ac,v 1.11 2008/11/21 08:00:36 martti Exp $
+$NetBSD: patch-ac,v 1.12 2010/03/21 21:24:25 kim Exp $
 
 Make this pkgsrc friendly.
 
---- configure.in.orig	2008-11-19 05:51:38.000000000 +0200
-+++ configure.in	2008-11-21 09:55:26.000000000 +0200
-@@ -2111,9 +2111,9 @@
+--- configure.in.orig	2010-02-15 14:22:26.000000000 -0500
++++ configure.in	2010-03-21 16:38:07.000000000 -0400
+@@ -2266,9 +2266,9 @@
  locale_dir="`eval echo ${locale_dir}`"
  AC_DEFINE_UNQUOTED(PR_LOCALE_DIR, "`eval echo "${locale_dir}"`")
  
--AC_DEFINE_UNQUOTED(PR_RUN_DIR, "`eval echo "${localstatedir}/proftpd"`")
+-AC_DEFINE_UNQUOTED(PR_RUN_DIR, "`eval echo "${localstatedir}"`")
 +AC_DEFINE_UNQUOTED(PR_RUN_DIR, "`eval echo "${localstatedir}/run"`")
  AC_DEFINE_UNQUOTED(PR_CONFIG_FILE_PATH, "`eval echo "${sysconfdir}/proftpd.conf"`")
 -AC_DEFINE_UNQUOTED(PR_PID_FILE_PATH, "`eval echo "${localstatedir}/proftpd.pid"`")
