@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9153 2010/03/21 21:58:56 pettai Exp $
+$NetBSD: TODO,v 1.9154 2010/03/22 11:25:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -859,6 +859,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liblbxutil-1.1.0
 	o liblzo-2.02
 	o libmatheval-1.1.6
+	o libmikmod-3.1.12
 	o libmp3splt-0.5.8
 	o libnasl-2.3.1
 	o libnice-0.0.11
@@ -887,6 +888,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lout-3.38
 	o lpairs-1.0.4
 	o lq-sp-1.3.4.13
+	o lshell-0.9.10
 	o lsof-4.81
 	o ltris-1.0.14
 	o lucy-1.20
