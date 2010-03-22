@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:35 joerg Exp $
-bin/imapproxy
-share/doc/imapproxy/BUGS
+@comment $NetBSD: PLIST,v 1.3 2010/03/22 08:10:36 manu Exp $
+sbin/in.imapproxyd
+sbin/pimpstat
 share/doc/imapproxy/COPYING
 share/doc/imapproxy/ChangeLog
-share/doc/imapproxy/FAQ
-share/doc/imapproxy/INSTALL
 share/doc/imapproxy/README
-share/doc/imapproxy/THANKS
-share/doc/imapproxy/TODO
+share/doc/imapproxy/README.known_issues
+share/doc/imapproxy/README.ssl
+share/examples/imapproxy/imapproxy.conf
+share/examples/rc.d/imapproxy
