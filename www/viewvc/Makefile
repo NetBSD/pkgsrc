@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2010/03/20 21:32:41 adrianp Exp $
+# $NetBSD: Makefile,v 1.13 2010/03/22 06:55:20 obache Exp $
 #
 
-DISTNAME=	viewvc-1.0.9
-PKGREVISION=	1
+DISTNAME=	viewvc-1.0.10
 CATEGORIES=	devel www
-MASTER_SITES=	http://viewvc.tigris.org/files/documents/3330/46487/
+MASTER_SITES=	http://viewvc.tigris.org/files/documents/3330/47428/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.viewvc.org/
 COMMENT=	Viewing the content of CVS/SVN repositories with a Webbrowser
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
