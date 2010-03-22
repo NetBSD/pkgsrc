@@ -1,26 +1,48 @@
-# $NetBSD: Makefile,v 1.10 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2010/03/22 08:10:36 manu Exp $
 #
 
-DISTNAME=	imapproxy-1.0
+DISTNAME=	up-imapproxy-1.2.7
+PKGNAME=	imapproxy-1.2.7
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES=	http://www.imapproxy.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://web.archive.org/web/20030816021412/http://www.kuleuven.net/projects/imapproxy/
-# http://www.imapproxy.org/ ?
+HOMEPAGE=	http://www.imapproxy.org/
 COMMENT=	Simple connection caching IMAP proxy daemon
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 
-INSTALLATION_DIRS=	bin
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/imapproxy ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/imapproxy
-.for doc in BUGS COPYING ChangeLog FAQ INSTALL README THANKS TODO
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${DESTDIR}${PREFIX}/share/doc/imapproxy
+CONFIGURE_ARGS+=--exec_prefix=${DESTDIR}${PREFIX}
+BUILD_DEFS+=	VARBASE
+CFLAGS+=	-DDEFAULT_CONFIG_FILE=\"${PREFIX}/etc/imapproxy.conf\"
+CFLAGS+=	-DDEFAULT_PID_FILE=\"${VARBASE}/run/imapproxy.pid\"
+RCD_SCRIPTS=	imapproxy
+
+IMAPPROXY_USER?=	imapproxy
+IMAPPROXY_GROUP?=	imapproxy
+IMAPPROXY_CHROOT?=      ${VARBASE}/chroot/imapproxy
+IMAPPROXY_DOC?=      	share/doc/imapproxy
+IMAPPROXY_EXAMPLES?=   	share/examples/imapproxy
+
+PKG_GROUPS_VARS+=       IMAPPROXY_GROUP
+PKG_USERS_VARS+=        IMAPPROXY_USER
+PKG_GROUPS=             ${IMAPPROXY_GROUP}
+PKG_USERS=              ${IMAPPROXY_USER}:${IMAPPROXY_GROUP}
+PKG_GECOS.${IMAPPROXY_USER}=    IMAP Proxy pseudo-user
+PKG_HOME.${IMAPPROXY_USER}=     ${IMAPPROXY_CHROOT}
+
+INSTALLATION_DIRS+=	sbin
+INSTALLATION_DIRS+=	${IMAPPROXY_DOC}
+INSTALLATION_DIRS+=	${IMAPPROXY_EXAMPLES}
+INSTALLATION_DIRS+=	${VARBASE}/chroot/imapproxy
+
+post-install:
+.for doc in COPYING ChangeLog README README.known_issues README.ssl
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${DESTDIR}${PREFIX}/${IMAPPROXY_DOC}
 .endfor
+	${INSTALL_DATA} ${WRKSRC}/scripts/imapproxy.conf \
+			${DESTDIR}${PREFIX}/${IMAPPROXY_EXAMPLES}
 
 .include "../../mk/bsd.pkg.mk"
