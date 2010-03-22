@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.7 2010/02/24 22:09:53 joerg Exp $
+# $NetBSD: mdoclint,v 1.8 2010/03/22 09:18:40 wiz Exp $
 #
 # Copyright (c) 2001-2010 Thomas Klausner
 # All rights reserved.
@@ -345,7 +345,7 @@ sub process_line
 		# nothing else to do
 		return "$_\n";
 	}
-	if (/\[$]NetBSD\b.*\$/o) {
+	if (/[\$]NetBSD\b.*\$/o) {
 		$s->{nxrcsidseen} = 1;
 		# nothing else to do
 		return "$_\n";
