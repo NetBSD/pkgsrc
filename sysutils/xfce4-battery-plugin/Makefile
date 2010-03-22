@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2009/08/26 19:56:54 sno Exp $
+# $NetBSD: Makefile,v 1.10 2010/03/22 15:46:02 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -12,11 +14,12 @@ COMMENT=	Xfce battey monitor plugin
 
 # On NetBSD/sparc64, apmvar.h is not exist in /usr/include/machine.
 # Reported in PR port-sparc64/36735.
-#.if ${OPSYS} == "NetBSD" &&			\
-#    (!exists(/usr/include/machine/apmvar.h) &&	\
-#     !exists(/usr/include/sparc/apmvar.h))
-#PKG_FAIL_REASON+=	"APM is not available on ${MACHINE_PLATFORM}."
-#.endif
+.if ${OPSYS} == "NetBSD" &&			\
+    (!exists(/usr/include/machine/apmvar.h) &&	\
+     !exists(/usr/include/dev/apm/apmio.h) && \
+     !exists(/usr/include/sparc/apmio.h))
+PKG_FAIL_REASON+=	"APM is not available on ${MACHINE_PLATFORM}."
+.endif
 
 USE_TOOLS+=	perl:run
 
