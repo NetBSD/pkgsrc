@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2009/09/15 09:26:07 ghen Exp $
+$NetBSD: distinfo,v 1.28 2010/03/22 07:16:14 obache Exp $
 
-SHA1 (seamonkey/releases/1.1.18/seamonkey-1.1.18.en-US.linux-i686.tar.gz) = e5b2749906d54b60865a14fb5bfafef3439586a1
-RMD160 (seamonkey/releases/1.1.18/seamonkey-1.1.18.en-US.linux-i686.tar.gz) = 57a96244f79b8e4828b897b1ec6a75953bad06fd
-Size (seamonkey/releases/1.1.18/seamonkey-1.1.18.en-US.linux-i686.tar.gz) = 15125907 bytes
+SHA1 (seamonkey/releases/1.1.19/seamonkey-1.1.19.en-US.linux-i686.tar.gz) = 1c0f1c9e8ab1bdfd1249b5a4d17d5f74cf494444
+RMD160 (seamonkey/releases/1.1.19/seamonkey-1.1.19.en-US.linux-i686.tar.gz) = 04f4b035241eaf8f69a3316b2ef26a8751999814
+Size (seamonkey/releases/1.1.19/seamonkey-1.1.19.en-US.linux-i686.tar.gz) = 15090356 bytes
