@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2010/02/17 18:32:18 tnn Exp $
+# $NetBSD: Makefile,v 1.71 2010/03/22 09:04:49 tnn Exp $
 
 .include "../../devel/xulrunner/dist.mk"
 PKGNAME=	firefox-${FIREFOX_VER}
@@ -22,10 +22,10 @@ ALL_ENV+=		MOZILLA_PKG_NAME=firefox
 
 MOZILLA=firefox
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
-MOZILLA_NAME=	Firefox 3.5
+MOZILLA_NAME=	Firefox 3.6
 MOZILLA_ICON=	${WRKSRC}/other-licenses/branding/firefox/default48.png
 .else
-MOZILLA_NAME=	Browser 3.5
+MOZILLA_NAME=	Browser 3.6
 MOZILLA_ICON=	${WRKSRC}/browser/branding/unofficial/default48.png
 .endif
 
