@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.17 2010/02/08 14:47:54 joerg Exp $
+$NetBSD: distinfo,v 1.18 2010/03/23 15:20:09 gson Exp $
 
+SHA1 (08-ssl-retval-fix.patch) = fb8fc92f8af7225a5f33839d5fe7b298aac3b532
+RMD160 (08-ssl-retval-fix.patch) = 98a74fc65f27766bdd378d0c57e7f00a57db9b31
+Size (08-ssl-retval-fix.patch) = 580 bytes
 SHA1 (lighttpd-1.4.26.tar.gz) = c22642dc3616043293fb895b9f049b9270dbb2a0
 RMD160 (lighttpd-1.4.26.tar.gz) = 0b073d66405efb8b2a2ba89dff08ae5813771065
 Size (lighttpd-1.4.26.tar.gz) = 780352 bytes

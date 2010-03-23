@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2010/02/08 14:47:54 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2010/03/23 15:20:09 gson Exp $
 
 DISTNAME=	lighttpd-1.4.26
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.lighttpd.net/lighttpd/releases-1.4.x/
 
@@ -11,6 +12,10 @@ COMMENT=	Fast, light-footprint HTTP server
 #PATCHFILES=	fix-2147-in-1.4.x.patch
 #PATCH_SITES=	http://redmine.lighttpd.net/attachments/download/1091/
 #PATCH_DIST_STRIP.fix-2147-in-1.4.x.patch= -p1
+
+PATCHFILES=	08-ssl-retval-fix.patch
+PATCH_SITES=	http://redmine.lighttpd.net/attachments/download/1095/
+PATCH_DIST_STRIP.08-ssl-retval-fix.patch= -p1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
