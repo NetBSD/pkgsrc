@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2009/08/16 13:53:32 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2010/03/23 19:00:10 tez Exp $
 
-DISTNAME=	gtar-1.22
+DISTNAME=	gtar-1.23
 CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -12,8 +12,8 @@ LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.1
 
 META_PACKAGE=	yes
 
-DEPENDS+=	gtar-base-1.22{,nb*}:../../archivers/gtar-base
-DEPENDS+=	gtar-info-1.22{,nb*}:../../archivers/gtar-info
+DEPENDS+=	gtar-base-1.23{,nb*}:../../archivers/gtar-base
+DEPENDS+=	gtar-info-1.23{,nb*}:../../archivers/gtar-info
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
