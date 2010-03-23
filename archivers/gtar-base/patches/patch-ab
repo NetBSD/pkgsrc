@@ -1,32 +1,34 @@
-$NetBSD: patch-ab,v 1.12 2008/05/18 01:48:09 tnn Exp $
+$NetBSD: patch-ab,v 1.13 2010/03/23 19:00:10 tez Exp $
+add --no-unlink-first option to negate --unlink-first option
+earlier patches made --unlink-first a default, but that was dropped years ago
 
---- src/tar.c.orig	2008-04-14 14:03:13.000000000 +0200
-+++ src/tar.c
-@@ -285,6 +286,7 @@ enum
+--- src/tar.c.orig	2010-03-23 12:11:49.133467100 -0500
++++ src/tar.c	2010-03-23 12:39:58.326191800 -0500
+@@ -299,6 +299,7 @@
    NO_RECURSION_OPTION,
    NO_SAME_OWNER_OPTION,
    NO_SAME_PERMISSIONS_OPTION,
 +  NO_UNLINK_FIRST_OPTION,
+   NO_SEEK_OPTION,
    NO_UNQUOTE_OPTION,
    NO_WILDCARDS_MATCH_SLASH_OPTION,
-   NO_WILDCARDS_OPTION,
-@@ -483,6 +485,8 @@ static struct argp_option options[] = {
-    N_("try extracting files with the same ownership"), GRID+1 },
+@@ -504,6 +505,8 @@
+    N_("try extracting files with the same ownership as exists in the archive (default for superuser)"), GRID+1 },
    {"no-same-owner", NO_SAME_OWNER_OPTION, 0, 0,
-    N_("extract files as yourself"), GRID+1 },
+    N_("extract files as yourself (default for ordinary users)"), GRID+1 },
 +  {"no-unlink-first", NO_UNLINK_FIRST_OPTION, 0, 0,
 +   N_("don't remove each file prior to extracting"), GRID+1 },
    {"numeric-owner", NUMERIC_OWNER_OPTION, 0, 0,
     N_("always use numbers for user/group names"), GRID+1 },
    {"preserve-permissions", 'p', 0, 0,
-@@ -1495,6 +1501,10 @@ parse_opt (int key, char *arg, struct ar
+@@ -1642,6 +1645,10 @@
        old_files_option = UNLINK_FIRST_OLD_FILES;
        break;
- 
+       
 +    case NO_UNLINK_FIRST_OPTION:
-+      old_files_option = 0;
++      old_files_option = DEFAULT_OLD_FILES;
 +      break;
-+
++      
      case UTC_OPTION:
        utc_option = true;
        break;
