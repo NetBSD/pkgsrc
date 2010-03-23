@@ -1,4 +1,4 @@
-# $NetBSD: dist.mk,v 1.8 2010/03/16 15:57:02 tnn Exp $
+# $NetBSD: dist.mk,v 1.9 2010/03/23 12:43:38 tnn Exp $
 #
 # used by devel/nspr/Makefile
 # used by devel/nss/Makefile
@@ -16,8 +16,3 @@ DISTINFO_FILE=	${.CURDIR}/../../devel/xulrunner/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/xulrunner/patches
 
 WRKSRC=		${WRKDIR}/mozilla-${MOZ_BRANCH}
-
-# snapshot overrides
-DISTNAME=	f14062c981ba
-MASTER_SITES=	http://hg.mozilla.org/releases/mozilla-1.9.2/archive/
-WRKSRC=		${WRKDIR}/mozilla-1-9-2-f14062c981ba
