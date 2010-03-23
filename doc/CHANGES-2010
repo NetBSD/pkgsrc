@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1363 2010/03/23 15:22:40 gson Exp $
+$NetBSD: CHANGES-2010,v 1.1364 2010/03/23 19:03:57 tez Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1614,3 +1614,6 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/imapproxy to 1.27 [manu 2010-03-22]
 	Updated textproc/mdoclint to 1.6 [wiz 2010-03-22]
 	Updated www/lighttpd to 1.4.26nb1 [gson 2010-03-23]
+	Updated archivers/gtar to 1.23 [tes 2010-03-23]
+	Updated archivers/gtar-base to 1.23 [tes 2010-03-23]
+	Updated archivers/gtar-info to 1.23 [tes 2010-03-23]
