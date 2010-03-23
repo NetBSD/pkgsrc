@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1362 2010/03/22 09:18:51 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1363 2010/03/23 15:22:40 gson Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1613,3 +1613,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/seamonkey-bin to 1.1.19 [obache 2010-03-22]
 	Updated mail/imapproxy to 1.27 [manu 2010-03-22]
 	Updated textproc/mdoclint to 1.6 [wiz 2010-03-22]
+	Updated www/lighttpd to 1.4.26nb1 [gson 2010-03-23]
