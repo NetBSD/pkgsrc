@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/11/07 18:30:29 hasso Exp $
+$NetBSD: distinfo,v 1.5 2010/03/23 18:01:47 joerg Exp $
 
 SHA1 (prelude-correlator-0.9.0-beta8.tar.gz) = 962f3c899ed01b9a0efc1368687d6a914e176c73
 RMD160 (prelude-correlator-0.9.0-beta8.tar.gz) = 9ed8e35357ba1bbe6a09c6cb906df28d4f84e347
 Size (prelude-correlator-0.9.0-beta8.tar.gz) = 179713 bytes
-SHA1 (patch-aa) = 67b5e6d65044dc30528c08a3e331ddd4a90667ba
+SHA1 (patch-aa) = f6641b5a19d504716dcb51a2d1ec905fed7967f9
