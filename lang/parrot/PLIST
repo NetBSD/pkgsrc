@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2010/02/18 07:59:38 he Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/03/23 15:31:28 he Exp $
 bin/parrot
 bin/parrot-nqp
 bin/parrot_config
 bin/parrot_debugger
+bin/parrot_nci_thunk_gen
 bin/pbc_disassemble
 bin/pbc_dump
 bin/pbc_merge
@@ -27,7 +28,6 @@ include/parrot/${PKGVERSION}/parrot/dynext.h
 include/parrot/${PKGVERSION}/parrot/embed.h
 include/parrot/${PKGVERSION}/parrot/encoding.h
 include/parrot/${PKGVERSION}/parrot/enums.h
-include/parrot/${PKGVERSION}/parrot/events.h
 include/parrot/${PKGVERSION}/parrot/exceptions.h
 include/parrot/${PKGVERSION}/parrot/exit.h
 include/parrot/${PKGVERSION}/parrot/extend.h
@@ -84,7 +84,6 @@ include/parrot/${PKGVERSION}/parrot/sub.h
 include/parrot/${PKGVERSION}/parrot/thr_pthread.h
 include/parrot/${PKGVERSION}/parrot/thr_windows.h
 include/parrot/${PKGVERSION}/parrot/thread.h
-include/parrot/${PKGVERSION}/parrot/tsq.h
 include/parrot/${PKGVERSION}/parrot/vtable.h
 include/parrot/${PKGVERSION}/parrot/vtables.h
 include/parrot/${PKGVERSION}/parrot/warnings.h
@@ -226,8 +225,6 @@ lib/parrot/${PKGVERSION}/library/MIME/Base64.pbc
 lib/parrot/${PKGVERSION}/library/MIME/Base64.pir
 lib/parrot/${PKGVERSION}/library/Math/Rand.pbc
 lib/parrot/${PKGVERSION}/library/Math/Rand.pir
-lib/parrot/${PKGVERSION}/library/Math/Random/mt19937ar.pbc
-lib/parrot/${PKGVERSION}/library/Math/Random/mt19937ar.pir
 lib/parrot/${PKGVERSION}/library/NCI/Utils.pir
 lib/parrot/${PKGVERSION}/library/OpenGL.pir
 lib/parrot/${PKGVERSION}/library/OpenGL/Math.pir
@@ -473,7 +470,6 @@ share/doc/parrot/${PKGVERSION}/README_cygwin.pod
 share/doc/parrot/${PKGVERSION}/README_win32.pod
 share/doc/parrot/${PKGVERSION}/RESPONSIBLE_PARTIES
 share/doc/parrot/${PKGVERSION}/TODO
-src/parrot/${PKGVERSION}/call_list.txt
 src/parrot/${PKGVERSION}/dynpmc/dynlexpad.pmc
 src/parrot/${PKGVERSION}/dynpmc/foo.pmc
 src/parrot/${PKGVERSION}/dynpmc/foo2.pmc
@@ -522,6 +518,7 @@ src/parrot/${PKGVERSION}/pmc/hash.pmc
 src/parrot/${PKGVERSION}/pmc/hashiterator.pmc
 src/parrot/${PKGVERSION}/pmc/hashiteratorkey.pmc
 src/parrot/${PKGVERSION}/pmc/imageio.pmc
+src/parrot/${PKGVERSION}/pmc/imageiosize.pmc
 src/parrot/${PKGVERSION}/pmc/integer.dump
 src/parrot/${PKGVERSION}/pmc/integer.pmc
 src/parrot/${PKGVERSION}/pmc/iterator.pmc
@@ -536,6 +533,8 @@ src/parrot/${PKGVERSION}/pmc/nci.pmc
 src/parrot/${PKGVERSION}/pmc/null.pmc
 src/parrot/${PKGVERSION}/pmc/object.dump
 src/parrot/${PKGVERSION}/pmc/object.pmc
+src/parrot/${PKGVERSION}/pmc/opcode.pmc
+src/parrot/${PKGVERSION}/pmc/oplib.pmc
 src/parrot/${PKGVERSION}/pmc/orderedhash.pmc
 src/parrot/${PKGVERSION}/pmc/orderedhashiterator.pmc
 src/parrot/${PKGVERSION}/pmc/os.pmc
