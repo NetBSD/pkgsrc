@@ -1,13 +1,14 @@
-$NetBSD: patch-af,v 1.5 2009/08/16 13:53:32 wiz Exp $
+$NetBSD: patch-af,v 1.6 2010/03/23 19:00:10 tez Exp $
+skip autotest gzip.at (currently #35 but that changes every release)
 
---- tests/testsuite.orig	2009-03-05 07:18:59.000000000 +0000
-+++ tests/testsuite
-@@ -620,7 +620,7 @@ at_times_file=$at_suite_dir/at-times
+--- tests/testsuite.orig	2010-03-23 13:08:29.122310500 -0500
++++ tests/testsuite	2010-03-23 13:11:27.216980700 -0500
+@@ -621,7 +621,7 @@
  # List of the tested programs.
  at_tested='tar'
  # List of the all the test groups.
--at_groups_all=' 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77'
-+at_groups_all=' 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77'
+-at_groups_all=' 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98'
++at_groups_all=' 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98'
  # As many question marks as there are digits in the last test group number.
  # Used to normalize the test group numbers so that `ls' lists them in
  # numerical order.
