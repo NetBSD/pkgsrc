@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1364 2010/03/23 19:03:57 tez Exp $
+$NetBSD: CHANGES-2010,v 1.1365 2010/03/23 22:30:40 zafer Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1617,3 +1617,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated archivers/gtar to 1.23 [tes 2010-03-23]
 	Updated archivers/gtar-base to 1.23 [tes 2010-03-23]
 	Updated archivers/gtar-info to 1.23 [tes 2010-03-23]
+	Updated net/filezilla to 3.3.2.1 [zafer 2010-03-23]
