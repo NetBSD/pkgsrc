@@ -1,16 +1,26 @@
-$NetBSD: patch-ag,v 1.5 2008/05/18 01:48:09 tnn Exp $
+$NetBSD: patch-ag,v 1.6 2010/03/23 19:00:10 tez Exp $
 
---- src/extract.c.orig	2007-08-26 10:56:55.000000000 +0200
-+++ src/extract.c
-@@ -186,7 +186,11 @@ set_mode (char const *file_name,
+--- src/extract.c.orig	2010-03-23 13:15:18.015134100 -0500
++++ src/extract.c	2010-03-23 13:21:52.818991900 -0500
+@@ -188,13 +188,21 @@
        mode = cur_info->st_mode ^ invert_permissions;
      }
  
 +#if (defined (__NetBSD__) && NetBSD > 199706 && !defined(NetBSD1_2))
-+  if (lchmod (file_name, mode) != 0)
++  failed = lchmod (file_name, mode) != 0;
 +#else
-   if (chmod (file_name, mode) != 0)
+   failed = chmod (file_name, mode) != 0;
 +#endif
-     chmod_error_details (file_name, mode);
- }
- 
+   if (failed && errno == EPERM)
+     {
+       /* On Solaris, chmod may fail if we don't have PRIV_ALL.  */
+       if (priv_set_restore_linkdir () == 0)
+ 	{
++#if (defined (__NetBSD__) && NetBSD > 199706 && !defined(NetBSD1_2))
++	  failed = lchmod (file_name, mode) != 0;
++#else
+ 	  failed = chmod (file_name, mode) != 0;
++#endif
+ 	  priv_set_remove_linkdir ();
+ 	}
+     }
