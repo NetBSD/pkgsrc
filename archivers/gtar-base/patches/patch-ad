@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.8 2008/05/18 01:48:09 tnn Exp $
+$NetBSD: patch-ad,v 1.9 2010/03/23 19:00:10 tez Exp $
 
---- Makefile.in.orig	2008-04-14 14:04:01.000000000 +0200
-+++ Makefile.in
-@@ -532,7 +532,7 @@ top_builddir = @top_builddir@
+--- Makefile.in.orig	2010-03-23 12:41:47.657803000 -0500
++++ Makefile.in	2010-03-23 12:42:22.936337700 -0500
+@@ -899,7 +899,7 @@
  top_srcdir = @top_srcdir@
  ACLOCAL_AMFLAGS = -I m4
- EXTRA_DIST = ChangeLog.1 PORTS
--SUBDIRS = doc lib rmt src scripts po tests
-+SUBDIRS = lib rmt src scripts po tests
- all: config.h
- 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
- 
+ EXTRA_DIST = ChangeLog.1 Make.rules
+-SUBDIRS = doc gnu lib rmt src scripts po tests
++SUBDIRS = gnu lib rmt src scripts po tests
+ gen_start_date = 2009-03-06
+ prev_change_log = ChangeLog.CVS
+ changelog_dir = .
