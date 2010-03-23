@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/02/10 19:17:45 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/23 18:01:47 joerg Exp $
 #
 
 DISTNAME=	prelude-correlator-0.9.0-beta8
 PKGNAME=	prelude-correlator-${DISTNAME:S/-beta/beta/:C/.*-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.prelude-ids.com/download/releases/prelude-correlator/
 
@@ -38,14 +38,16 @@ FILES_SUBST+=		PRELUDE_USER=${PRELUDE_USER:Q}
 FILES_SUBST+=		PRELUDE_GROUP=${PRELUDE_USER:Q}
 
 SUBST_CLASSES+=		code
-SUBST_STAGE.code=	post-patch
+SUBST_STAGE.code=	pre-configure
 SUBST_FILES.code=	run-prelude-correlator.c
 SUBST_FILES.code+=	${WRKSRC}/*.py
 SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
 SUBST_SED.code+=        -e 's,@PRELUDE_HOME@,${PRELUDE_HOME},g'
 
-CONF_FILES=		${EGDIR}/prelude-correlator.conf ${PKG_SYSCONFDIR}/prelude-correlator/prelude-correlator.conf
+CONF_FILES+=		${EGDIR}/prelude-correlator.conf ${PKG_SYSCONFDIR}/prelude-correlator/prelude-correlator.conf
+CONF_FILES+=		${EGDIR}/dshield.dat ${PRELUDE_HOME}/dshield.dat
+CONF_FILES+=		${EGDIR}/spamhaus_drop.dat ${PRELUDE_HOME}/spamhaus_drop.dat
 
 REQD_DIRS+=		${PRELUDE_HOME}
 REQD_DIRS_PERMS+=	${PRELUDE_HOME} ${PRELUDE_USER} ${PRELUDE_GROUP} 0700
@@ -63,6 +65,9 @@ post-build:
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/run-prelude-correlator ${DESTDIR}${PREFIX}/sbin/run-prelude-correlator
 	${INSTALL_DATA} ${WRKSRC}/prelude-correlator.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/PreludeCorrelator/plugins/dshield.dat \
+	    ${WRKSRC}/PreludeCorrelator/plugins/spamhaus_drop.dat \
+	    ${DESTDIR}${EGDIR}
 
 .include "../../security/libprelude-python/buildlink3.mk"
 .include "../../lang/python/egg.mk"
