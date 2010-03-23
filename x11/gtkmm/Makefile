@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2009/10/22 08:22:02 adam Exp $
+# $NetBSD: Makefile,v 1.67 2010/03/23 20:42:55 reed Exp $
 
 DISTNAME=	gtkmm-2.18.2
 CATEGORIES=	x11
@@ -23,6 +23,7 @@ PKGCONFIG_OVERRIDE+=	gtk/gtkmm-2.4.pc.in
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.3
 BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.22.1
+BUILDLINK_API_DEPENDS.pangomm+=	pangomm>=2.26
 
 .include "../../devel/pangomm/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
