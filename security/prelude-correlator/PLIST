@@ -1,12 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/11/07 18:30:29 hasso Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/03/23 18:01:47 joerg Exp $
 bin/prelude-correlator
-sbin/run-prelude-correlator
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/PreludeCorrelator/__init__.py
 ${PYSITELIB}/PreludeCorrelator/__init__.pyc
 ${PYSITELIB}/PreludeCorrelator/__init__.pyo
@@ -64,5 +57,14 @@ ${PYSITELIB}/PreludeCorrelator/siteconfig.pyo
 ${PYSITELIB}/PreludeCorrelator/utils.py
 ${PYSITELIB}/PreludeCorrelator/utils.pyc
 ${PYSITELIB}/PreludeCorrelator/utils.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+sbin/run-prelude-correlator
+share/examples/dshield.dat
 share/examples/prelude-correlator.conf
 share/examples/rc.d/preludecorrelator
+share/examples/spamhaus_drop.dat

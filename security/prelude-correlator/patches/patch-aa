@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2009/11/07 18:30:29 hasso Exp $
+$NetBSD: patch-aa,v 1.5 2010/03/23 18:01:48 joerg Exp $
 
---- setup.py.orig	2009-07-09 18:55:53 +0300
-+++ setup.py	2009-09-30 09:58:19 +0300
-@@ -48,7 +48,8 @@ class my_install(install):
+--- setup.py.orig	2009-11-03 15:57:01.000000000 +0000
++++ setup.py
+@@ -52,7 +52,8 @@ class my_install(install):
  
                  root = self.root or ""
                  for dir, files in data_files:
@@ -12,7 +12,15 @@ $NetBSD: patch-aa,v 1.4 2009/11/07 18:30:29 hasso Exp $
  
                          self.mkpath(dir)
                          for f in files:
-@@ -71,7 +72,7 @@ class my_install(install):
+@@ -68,14 +69,14 @@ class my_install(install):
+                         prefix = ""
+ 
+                 self.init_siteconfig(prefix)
+-                self.__install_data()
++                #self.__install_data()
+                 install.run(self)
+                 os.remove("PreludeCorrelator/siteconfig.py")
+ 
          def init_siteconfig(self, prefix):
                  config = open("PreludeCorrelator/siteconfig.py", "w")
                  print >> config, "conf_dir = '%s'" % os.path.abspath(prefix + "/etc/prelude-correlator")
@@ -21,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 2009/11/07 18:30:29 hasso Exp $
                  config.close()
  
  
-@@ -84,8 +85,7 @@ if is_egg:
+@@ -88,8 +89,7 @@ if is_egg:
          data_files = [ ("", ["prelude-correlator.conf"]) ]
  else:
          package_data = {}
