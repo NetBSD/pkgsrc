@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1367 2010/03/24 04:55:33 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1368 2010/03/24 14:13:01 lukem Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1620,3 +1620,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/filezilla to 3.3.2.1 [zafer 2010-03-23]
 	Updated archivers/gcpio to 2.6nb6 [tez 2010-03-23]
 	Updated www/ja-trac to 0.11.7pl1 [obache 2010-03-24]
+	Updated net/tnftpd to 20100324 [lukem 2010-03-24]
