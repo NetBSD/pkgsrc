@@ -1,12 +1,18 @@
-$NetBSD: distinfo,v 1.51 2010/01/02 03:48:40 heinz Exp $
+$NetBSD: distinfo,v 1.52 2010/03/24 21:41:10 heinz Exp $
 
-SHA1 (Mail-SpamAssassin-3.2.5.tar.gz) = 14b1f6eae0221a152176f7f597f55581445e800a
-RMD160 (Mail-SpamAssassin-3.2.5.tar.gz) = 5a72a97d124e72ff4da1627982748377f1e34128
-Size (Mail-SpamAssassin-3.2.5.tar.gz) = 1223706 bytes
-SHA1 (patch-ab) = debb4851d063404e0a59557603cc08b259050b26
+SHA1 (Mail-SpamAssassin-3.3.1.tar.gz) = 8b32a857cc89c8d057442400bc00f33fd703ce06
+RMD160 (Mail-SpamAssassin-3.3.1.tar.gz) = 154fb16de88b3cc9fac41f721af21b181a2368f3
+Size (Mail-SpamAssassin-3.3.1.tar.gz) = 1196842 bytes
+SHA1 (Mail-SpamAssassin-rules-3.3.1.r923114.tgz) = 7aeeb7abb2d727bb35d3a0927a1390ad3cddad59
+RMD160 (Mail-SpamAssassin-rules-3.3.1.r923114.tgz) = 9b6e17e05b3a323ba820ec2dc432d8b7dfc4d0ac
+Size (Mail-SpamAssassin-rules-3.3.1.r923114.tgz) = 255548 bytes
+SHA1 (Mail-SpamAssassin-rules-3.3.1.r923114.tgz.asc) = 3e11775118e0e4be5720fdc3b99661e187943fd8
+RMD160 (Mail-SpamAssassin-rules-3.3.1.r923114.tgz.asc) = bc9c1755977c0b8677a3a8e700068f0e7288f434
+Size (Mail-SpamAssassin-rules-3.3.1.r923114.tgz.asc) = 823 bytes
+SHA1 (Mail-SpamAssassin-rules-3.3.1.r923114.tgz.sha1) = 949b64216a6bb6833bd4f2ccab18b53719dda311
+RMD160 (Mail-SpamAssassin-rules-3.3.1.r923114.tgz.sha1) = 8b6c82596c158e5e010643a4d16a987dcc65244c
+Size (Mail-SpamAssassin-rules-3.3.1.r923114.tgz.sha1) = 84 bytes
+SHA1 (patch-ab) = 84ebc0f611365c00205a85cb84970772a0931ef8
 SHA1 (patch-ae) = d46b1d8f56c8c61936c307f74b39a49da1b1f353
 SHA1 (patch-aq) = 3a273c7742275647c2334382fed29c0ea33dfbd8
 SHA1 (patch-ay) = ca8ea0b1e6d8fddd29d6ae960e1bf6e534d2f424
-SHA1 (patch-ba) = ea6b8eac3d9475641725dc4aa1e7a4d31912a044
-SHA1 (patch-bc) = 71fcf6297eacbd69a5c5d5b1911f648e4011ce3e
-SHA1 (patch-be) = 42b9975742834e836159b754f4a50a0d68d8ea75
