@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2009/12/03 17:48:58 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2010/03/24 19:43:27 asau Exp $
 
 DISTNAME=		ntl-5.3.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		math devel
 MASTER_SITES=		http://www.shoup.net/ntl/
 
