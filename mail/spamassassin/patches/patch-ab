@@ -1,34 +1,21 @@
-$NetBSD: patch-ab,v 1.15 2010/01/01 13:55:32 heinz Exp $
-
-  - deal with internal changes of ExtUtils::MakeMaker and how SpamAssassin
-    (ab)used those internals regarding DESTDIR support. Will not be necessary
-    starting with SA 3.3.0.
+$NetBSD: patch-ab,v 1.16 2010/03/24 21:41:11 heinz Exp $
 
   - enable build of qmail-spamc
   - some files (local.cf, *.pre) are managed by pkgsrc, disable
     their installation.
   - pkgsrc creates B_DATADIR, so there is no need to re-set permissions
 
---- Makefile.PL.orig	2008-06-10 09:21:07.000000000 +0000
+--- Makefile.PL.orig	2009-08-09 23:01:31.000000000 +0200
 +++ Makefile.PL
-@@ -143,7 +143,7 @@ $mm_knows_destdir    = $ExtUtils::MakeMa
- $mm_has_good_destdir = $mm_version >= 6.11;
- # Add DESTDIR hack only if it's requested (and necessary)
- $mm_needs_destdir    = $opt{'destdir'} && !$mm_has_good_destdir;
--$mm_has_destdir      = $mm_knows_destdir || $mm_needs_destdir;
-+$mm_has_destdir      = $mm_has_good_destdir || $mm_needs_destdir;
- push(@ATT_KEYS, 'DESTDIR') if $mm_needs_destdir;
- 
- # Now make EU::MM understand our extended vars
-@@ -174,6 +174,7 @@ my %makefile = (
+@@ -138,6 +138,7 @@ my %makefile = (
        'spamassassin.raw' => 'spamassassin',
        'sa-learn.raw'     => 'sa-learn',
        'sa-update.raw'    => 'sa-update',
 +      'spamc/qmail-spamc.c' => 'spamc/qmail-spamc$(EXE_EXT)',
-       'sa-compile.raw'    => 'sa-compile',
-       'spamc/spamc.c'    => 'spamc/spamc$(EXE_EXT)',
-       'spamd/spamd.raw'  => 'spamd/spamd',
-@@ -1201,17 +1202,19 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
+       'sa-compile.raw'   => 'sa-compile',
+       'sa-awl.raw'       => 'sa-awl',
+       'sa-check_spamd.raw' => 'sa-check_spamd',
+@@ -1095,18 +1096,20 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
  
  conf__install:
  	-$(MKPATH) $(B_CONFDIR)
@@ -37,12 +24,14 @@ $NetBSD: patch-ab,v 1.15 2010/01/01 13:55:32 heinz Exp $
 -	$(PERL) -MFile::Copy -e "copy(q{rules/v310.pre}, q{$(B_CONFDIR)/v310.pre}) unless -f q{$(B_CONFDIR)/v310.pre}"
 -	$(PERL) -MFile::Copy -e "copy(q{rules/v312.pre}, q{$(B_CONFDIR)/v312.pre}) unless -f q{$(B_CONFDIR)/v312.pre}"
 -	$(PERL) -MFile::Copy -e "copy(q{rules/v320.pre}, q{$(B_CONFDIR)/v320.pre}) unless -f q{$(B_CONFDIR)/v320.pre}"
+-	$(PERL) -MFile::Copy -e "copy(q{rules/v330.pre}, q{$(B_CONFDIR)/v330.pre}) unless -f q{$(B_CONFDIR)/v330.pre}"
 +	@ # manage local.cf and *.pre through pkgsrc .mk files
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/local.cf}, q{$(B_CONFDIR)/local.cf}) unless -f q{$(B_CONFDIR)/local.cf}"
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/init.pre}, q{$(B_CONFDIR)/init.pre}) unless -f q{$(B_CONFDIR)/init.pre}"
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/v310.pre}, q{$(B_CONFDIR)/v310.pre}) unless -f q{$(B_CONFDIR)/v310.pre}"
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/v312.pre}, q{$(B_CONFDIR)/v312.pre}) unless -f q{$(B_CONFDIR)/v312.pre}"
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/v320.pre}, q{$(B_CONFDIR)/v320.pre}) unless -f q{$(B_CONFDIR)/v320.pre}"
++	@ # $(PERL) -MFile::Copy -e "copy(q{rules/v330.pre}, q{$(B_CONFDIR)/v330.pre}) unless -f q{$(B_CONFDIR)/v330.pre}"
  
  data__install:
  	-$(MKPATH) $(B_DATADIR)
