@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2010/03/24 15:53:09 joerg Exp $
+
+--- src/util/Makefile.am.orig	2010-03-24 15:47:33.000000000 +0000
++++ src/util/Makefile.am
+@@ -1,7 +1,7 @@
+ #AUTOMAKE_OPTIONS = no-dependencies
+ 
+-noinst_LIBRARIES= libutil.a
+-libutil_a_SOURCES = 	\
++noinst_LIBRARIES= libmy_util.a
++libmy_util_a_SOURCES = 	\
+ 	sp_time.cpp   sp_time.h 
+ 
+ 

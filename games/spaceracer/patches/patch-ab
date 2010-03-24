@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/03/24 15:53:09 joerg Exp $
+
+--- src/Makefile.am.orig	2010-03-24 15:46:59.000000000 +0000
++++ src/Makefile.am
+@@ -25,7 +25,7 @@ spaceracer_LDADD = \
+ 	@X_EXTRA_LIBS@ \
+ 	-L./stk \
+ 	-L./graphics -L./motor3d -L./physique -L./util -L./math  \
+-	-lm -lphysique -lmotor3d -limage -lutil -lmath -lstk
++	-lm -lphysique -lmotor3d -limage -lmy_util -lmath -lstk
+ #	$(SPACERACER_LIBS) 
+ 
+ 
