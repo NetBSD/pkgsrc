@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.3 2004/12/23 18:11:18 skrll Exp $
+$NetBSD: patch-ad,v 1.4 2010/03/24 15:36:22 joerg Exp $
 
---- src/Makefile.in.orig	2004-09-29 21:56:31.000000000 +0100
+--- src/Makefile.in.orig	2004-09-29 20:56:31.000000000 +0000
 +++ src/Makefile.in
 @@ -114,19 +114,19 @@ all: ${make_bindir}
  
@@ -25,3 +25,11 @@ $NetBSD: patch-ad,v 1.3 2004/12/23 18:11:18 skrll Exp $
  	chmod a+x $@.tmp
  	mv $@.tmp $@
  
+@@ -188,7 +188,6 @@ install:
+ 	$(INSTALL) -m 0755 speedtouch-setup "$(bindir)"
+ 	$(INSTALL) -m 0755 speedtouch-start "$(bindir)"
+ 	$(INSTALL) -m 0755 speedtouch-stop  "$(bindir)"
+-	$(INSTALL) -d "$(sysconfdir)/speedtouch"
+ 
+ uninstall:
+ 	$(RM) "$(bindir)/speedtouch-setup"
