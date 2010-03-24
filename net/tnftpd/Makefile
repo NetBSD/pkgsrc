@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2010/01/28 08:30:39 lukem Exp $
+# $NetBSD: Makefile,v 1.21 2010/03/24 14:12:44 lukem Exp $
 #
 
-DISTNAME=		tnftpd-20091122
+DISTNAME=		tnftpd-20100324
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
 
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		YES
 MANCOMPRESSED_IF_MANZ=	YES
 USE_TOOLS+=		yacc
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CONF_FILES+=		${EXAMPLEDIR}/ftpd.conf ${PKG_SYSCONFDIR}/ftpd.conf
 CONF_FILES+=		${EXAMPLEDIR}/ftpusers ${PKG_SYSCONFDIR}/ftpusers
@@ -31,13 +31,5 @@ MAKE_ENV.SunOS+=	CPPFLAGS=""
 EXAMPLEDIR=		${PREFIX}/share/examples/tnftpd
 INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
 			${EXAMPLEDIR}
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/tnftpd ${DESTDIR}${PREFIX}/libexec
-	${INSTALL_MAN} ${WRKSRC}/src/ftpd.conf.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/ftpd.conf.5
-	${INSTALL_MAN} ${WRKSRC}/src/ftpusers.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/ftpusers.5
-	${INSTALL_MAN} ${WRKSRC}/src/tnftpd.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/tnftpd.8
-	${INSTALL_DATA} ${WRKSRC}/examples/ftpd.conf ${DESTDIR}${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/ftpusers ${DESTDIR}${EXAMPLEDIR}
 
 .include "../../mk/bsd.pkg.mk"
