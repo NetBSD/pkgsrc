@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2010/03/15 05:20:13 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/03/24 21:54:16 asau Exp $
 
 BUILDLINK_TREE+=	ecl
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ecl
 ECL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ecl+=	ecl>=10.3.1
+BUILDLINK_ABI_DEPENDS.ecl?=	ecl>=10.3.1nb1
 BUILDLINK_PKGSRCDIR.ecl?=	../../lang/ecl
 
 .include "../../devel/boehm-gc/buildlink3.mk"
