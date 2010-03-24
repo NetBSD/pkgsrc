@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2009/07/14 10:01:28 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2010/03/24 21:54:16 asau Exp $
 
 BUILDLINK_TREE+=	librep
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	librep
 LIBREP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.librep+=	librep>=0.90.0
+BUILDLINK_ABI_DEPENDS.librep?=	librep>=0.90.0nb1
 BUILDLINK_PKGSRCDIR.librep?=	../../lang/librep
 MAKE_FLAGS+=			rep_LIBTOOL=${LIBTOOL:Q}
 

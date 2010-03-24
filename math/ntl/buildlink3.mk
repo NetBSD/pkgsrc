@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:24:57 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2010/03/24 21:54:16 asau Exp $
 
 BUILDLINK_TREE+=	ntl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ntl
 NTL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ntl+=	ntl>=5.3.1
-BUILDLINK_ABI_DEPENDS.ntl+=	ntl>=5.3.1nb1
+BUILDLINK_ABI_DEPENDS.ntl+=	ntl>=5.3.1nb2
 BUILDLINK_PKGSRCDIR.ntl?=	../../math/ntl
 
 .include "../../devel/gmp/buildlink3.mk"
