@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2004/12/23 18:11:18 skrll Exp $
+$NetBSD: patch-aa,v 1.6 2010/03/24 15:36:22 joerg Exp $
 
---- doc-bsd/Makefile.in.orig	2004-06-10 17:36:35.000000000 +0100
+--- doc-bsd/Makefile.in.orig	2004-09-29 20:56:31.000000000 +0000
 +++ doc-bsd/Makefile.in
-@@ -93,7 +93,9 @@ all :
+@@ -92,8 +92,9 @@ DIST_FILES = \
+ all :
  
  install: install-man
- 	@test -d "$(prefix)/etc/rc.d" || $(INSTALL) -c -d "$(prefix)/etc/rc.d"
+-	@test -d "$(prefix)/etc/rc.d" || $(INSTALL) -c -d "$(prefix)/etc/rc.d"
 -	$(INSTALL) -m 0744 -o $(installuser) adsl.sh.sample "$(prefix)/etc/rc.d"
 +	@test -d "$(datadir)/examples/speedtouch" || $(INSTALL) -c -d $(datadir)/examples/speedtouch
 +	$(INSTALL) -m 0744 -o $(installuser) adsl.sh.sample $(datadir)/examples/speedtouch
