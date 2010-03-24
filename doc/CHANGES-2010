@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1369 2010/03/24 17:06:09 martti Exp $
+$NetBSD: CHANGES-2010,v 1.1370 2010/03/24 21:37:32 sbd Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1622,3 +1622,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/ja-trac to 0.11.7pl1 [obache 2010-03-24]
 	Updated net/tnftpd to 20100324 [lukem 2010-03-24]
 	Updated editors/vim-share to 7.2.411 [martti 2010-03-24]
+	Updated net/tightvnc to 1.3.10nb4 [sbd 2010-03-24]
