@@ -170,7 +170,7 @@ gsl			Use GNU Scientific Library.
 gstreamer		Enable gstreamer support.
 gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
-gtkspell		Enable gtkspell support.	.
+gtkspell		Enable gtkspell support.
 guile			Enable support for GUILE.
 gzip			Enable compression using gzip.
 hal			Support for the freedesktop.org Hardware Abstraction Layer.
