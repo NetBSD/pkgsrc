@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/02/24 19:07:51 tez Exp $
+# $NetBSD: Makefile,v 1.48 2010/03/26 21:44:59 joerg Exp $
 
 DISTNAME=	krb5-1.4.2
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -12,6 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/kerberos/www/
 COMMENT=	MIT Kerberos 5 authentication system
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
@@ -155,7 +156,7 @@ pre-configure:
 post-install:
 	cd ${WRKSRC}/../doc; for f in *.info *.info-[0-9]*; do		\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_MAN} "$$f" ${PREFIX}/${PKGINFODIR};		\
+		${INSTALL_MAN} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};		\
 	done
 
 .include "../../mk/bsd.pkg.mk"
