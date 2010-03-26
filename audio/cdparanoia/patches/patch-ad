@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.4 2006/09/03 17:13:30 ben Exp $
+$NetBSD: patch-ad,v 1.5 2010/03/26 16:38:32 jdc Exp $ 
 
---- utils.h.orig	2000-04-19 15:41:04.000000000 -0700
-+++ utils.h
+--- utils.h.orig	2008-08-22 09:39:06.000000000 +0000
++++ utils.h	2010-03-24 11:10:19.000000000 +0000
 @@ -1,5 +1,20 @@
  #include <stdlib.h>
 +#ifdef __linux__
@@ -23,7 +23,7 @@ $NetBSD: patch-ad,v 1.4 2006/09/03 17:13:30 ben Exp $
  #include <stdio.h>
  #include <errno.h>
  #include <string.h>
-@@ -19,15 +34,34 @@ static inline int bigendianp(void){
+@@ -18,15 +33,35 @@
  }
  
  static inline int32_t swap32(int32_t x){
@@ -44,16 +44,18 @@ $NetBSD: patch-ad,v 1.4 2006/09/03 17:13:30 ben Exp $
 +#endif
  }
  
- static inline int16_t swap16(int16_t x){
+-static inline int16_t swap16(int16_t x){
++static inline int16_t swap16(int16_t x){
 +#ifdef __NetBSD__
 +  return bswap16(x);
 +#else
 +#if defined(__APPLE__) && defined(__MACH__)
 +  return((((uint16_t)x & 0x00ffU) <<  8) | 
 +	 (((uint16_t)x & 0xff00U) >>  8));
-+#endif
++#else
    return((((u_int16_t)x & 0x00ffU) <<  8) | 
  	 (((u_int16_t)x & 0xff00U) >>  8));
++#endif
 +#endif
  }
  
