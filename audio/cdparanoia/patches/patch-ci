@@ -1,8 +1,8 @@
-$NetBSD: patch-ci,v 1.7 2009/08/29 04:54:52 hasso Exp $
+$NetBSD: patch-ci,v 1.8 2010/03/26 16:38:32 jdc Exp $
 
---- interface/interface.c.orig	2008-09-11 13:43:52 +0300
-+++ interface/interface.c	2009-08-26 09:57:44 +0300
-@@ -35,6 +35,10 @@ int cdda_close(cdrom_drive *d){
+--- interface/interface.c.orig	2008-09-11 10:43:52.000000000 +0000
++++ interface/interface.c	2010-03-24 13:57:38.000000000 +0000
+@@ -35,6 +35,10 @@
  
      _clean_messages(d);
      if(d->cdda_device_name)free(d->cdda_device_name);
@@ -13,7 +13,7 @@ $NetBSD: patch-ci,v 1.7 2009/08/29 04:54:52 hasso Exp $
      if(d->ioctl_device_name)free(d->ioctl_device_name);
      if(d->drive_model)free(d->drive_model);
      if(d->cdda_fd!=-1)close(d->cdda_fd);
-@@ -43,6 +47,19 @@ int cdda_close(cdrom_drive *d){
+@@ -43,6 +47,19 @@
        if(d->private->sg_hd)free(d->private->sg_hd);
        free(d->private);
      }
@@ -33,7 +33,7 @@ $NetBSD: patch-ci,v 1.7 2009/08/29 04:54:52 hasso Exp $
  
      free(d);
    }
-@@ -55,22 +72,31 @@ int cdda_open(cdrom_drive *d){
+@@ -55,22 +72,31 @@
    if(d->opened)return(0);
  
    switch(d->interface){
@@ -65,3 +65,12 @@ $NetBSD: patch-ci,v 1.7 2009/08/29 04:54:52 hasso Exp $
    default:
      cderror(d,"100: Interface not supported\n");
      return(-100);
+@@ -113,7 +139,7 @@
+     if(sectors>0){
+       sectors=d->read_audio(d,buffer,beginsector,sectors);
+ 
+-      if(sectors>0){
++      if(sectors>0 && buffer != NULL){
+ 	/* byteswap? */
+ 	if(d->bigendianp==-1) /* not determined yet */
+ 	  d->bigendianp=data_bigendianp(d);
