@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.23 2010/02/24 19:07:51 tez Exp $
+$NetBSD: distinfo,v 1.24 2010/03/26 21:44:59 joerg Exp $
 
 SHA1 (krb5-1.4.2-signed.tar) = bbc03bd319d539fb9523c2545d80ba0784522e88
 RMD160 (krb5-1.4.2-signed.tar) = 44500f5fab8e5959cf43f17f5f52f68e2dc73a1f
 Size (krb5-1.4.2-signed.tar) = 6696960 bytes
 SHA1 (patch-aa) = 17e0934ea2ef21b3457fba54cf3d1c36de2da479
-SHA1 (patch-ab) = 8d6904b80e8576085acbaa3ac0cd17824c7b301d
-SHA1 (patch-ac) = d0777e6005cd1249c7c6406068973f6959d11302
-SHA1 (patch-ad) = 7b17ffcd14cdedeb0ddfb606802a156589995c1b
+SHA1 (patch-ab) = 9650a9c8b6191d6feb99c01ba37b2e60f266e6e9
+SHA1 (patch-ac) = 10884715858367214a562d7d631312c7f8ca1e0e
+SHA1 (patch-ad) = c0beee554840aa80dba0e72bda21b4cf63ec2044
 SHA1 (patch-ae) = fc6d5e11cd827cdfbe1bfc3a3c7ca9f5a71c17d7
 SHA1 (patch-af) = c9631743e3c93aee2aab5c8a370e9bebfc4084e5
 SHA1 (patch-ag) = 5da57455f36a2bd40e0f97db94e93249e90e0b8e

@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.3 2005/09/22 19:45:42 jlam Exp $
+$NetBSD: patch-ad,v 1.4 2010/03/26 21:44:59 joerg Exp $
 
---- config/lib.in.orig	2005-04-07 17:38:51.000000000 -0400
+--- config/lib.in.orig	2005-04-07 21:38:51.000000000 +0000
 +++ config/lib.in
 @@ -26,8 +26,9 @@
  # STOBJLISTS=dir1/OBJS.ST dir2/OBJS.ST etc...
@@ -13,11 +13,15 @@ $NetBSD: patch-ad,v 1.3 2005/09/22 19:45:42 jlam Exp $
  
  # Gets invoked as $(PARSE_OBJLISTS) list-of-OBJS.*-files
  PARSE_OBJLISTS= set -x && $(PERL) -p -e '$$e=$$ARGV; $$e =~ s/OBJS\...$$//; s/^/ /; s/ $$//; s/ / $$e/g;'
-@@ -90,6 +91,17 @@ lib$(LIBBASE)$(PFLIBEXT): $(PFOBJLISTS)
+@@ -90,6 +91,21 @@ lib$(LIBBASE)$(PFLIBEXT): $(PFOBJLISTS)
  	set -x; objlist=`$(PARSE_OBJLISTS) $(PFOBJLISTS)` && $(AR) cq $@ $$objlist
  	$(RANLIB) $@
  
-+lib$(LIBBASE)$(LALIBEXT): $(LAOBJLISTS)
++lib$(LIBBASE)$(LALIBEXT): ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT)
++	$(RM) $@
++	$(LN_S) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT) $@
++
++${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT): $(LAOBJLISTS)
 +	$(RM) $@
 +	@echo "building $(LIBBASE) libtool archive ($(LIBMAJOR).$(LIBMINOR))"
 +	@dirs=`echo $(LAOBJLISTS) | \
@@ -31,39 +35,29 @@ $NetBSD: patch-ad,v 1.3 2005/09/22 19:45:42 jlam Exp $
  $(TOPLIBD)/lib$(LIBBASE)$(STLIBEXT): lib$(LIBBASE)$(STLIBEXT)
  	$(RM) $@
  	(cd $(TOPLIBD) && $(LN_S) $(RELDIR)/lib$(LIBBASE)$(STLIBEXT) .)
-@@ -105,6 +117,9 @@ $(TOPLIBD)/lib$(LIBBASE)$(SHLIBVEXT): li
- $(TOPLIBD)/lib$(LIBBASE)$(PFLIBEXT): lib$(LIBBASE)$(PFLIBEXT)
- 	$(RM) $@
- 	(cd $(TOPLIBD) && $(LN_S) $(RELDIR)/lib$(LIBBASE)$(PFLIBEXT) .)
-+$(TOPLIBD)/lib$(LIBBASE)$(LALIBEXT): lib$(LIBBASE)$(LALIBEXT)
-+	$(RM) $@
-+	(cd $(TOPLIBD) && $(LN_S) $(RELDIR)/lib$(LIBBASE)$(LALIBEXT) .)
- 
- all-libs: $(LIBLIST)
- all-liblinks: $(LIBLINKS)
-@@ -115,6 +130,7 @@ clean-libs:
+@@ -115,6 +131,7 @@ clean-libs:
  	$(RM) lib$(LIBBASE)$(SHLIBSEXT)
  	$(RM) lib$(LIBBASE)$(SHLIBEXT)
  	$(RM) lib$(LIBBASE)$(PFLIBEXT)
-+	$(LIBTOOL) --mode=uninstall $(RM) lib$(LIBBASE)$(LALIBEXT)
++	$(LIBTOOL) --mode=uninstall $(RM) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT)
  	$(RM) binutils.versions osf1.exports
  
  clean-liblinks:
-@@ -123,6 +139,7 @@ clean-liblinks:
+@@ -123,6 +140,7 @@ clean-liblinks:
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(SHLIBSEXT)
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(SHLIBEXT)
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(PFLIBEXT)
-+	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(LALIBEXT)
++	$(RM) lib$(LIBBASE)$(LALIBEXT)
  
  install-libs: $(LIBINSTLIST)
  install-static:
-@@ -143,6 +160,9 @@ install-profiled:
+@@ -143,6 +161,9 @@ install-profiled:
  	$(RM) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIBBASE)$(PFLIBEXT)
  	$(INSTALL_DATA) lib$(LIBBASE)$(PFLIBEXT) $(DESTDIR)$(KRB5_LIBDIR)
  	$(RANLIB) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIBBASE)$(PFLIBEXT)
 +install-libtool:
 +	$(LIBTOOL) --mode=uninstall $(RM) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIBBASE)$(LALIBEXT)
-+	$(LIBTOOL) --mode=install $(INSTALL_DATA) lib$(LIBBASE)$(LALIBEXT) $(DESTDIR)$(KRB5_LIBDIR)
++	$(LIBTOOL) --mode=install $(INSTALL_DATA) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT) $(DESTDIR)$(KRB5_LIBDIR)
  
  Makefile: $(SRCTOP)/config/lib.in
  $(thisconfigdir)/config.status: $(SRCTOP)/config/shlib.conf
