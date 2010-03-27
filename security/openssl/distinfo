@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.70.2.1 2010/01/24 10:56:27 tron Exp $
+$NetBSD: distinfo,v 1.70.2.2 2010/03/27 14:44:42 tron Exp $
 
-SHA1 (openssl-0.9.8l.tar.gz) = d3fb6ec89532ab40646b65af179bb1770f7ca28f
-RMD160 (openssl-0.9.8l.tar.gz) = 9de81ec2583edcba729e62d50fd22c0a98a52903
-Size (openssl-0.9.8l.tar.gz) = 4179422 bytes
-SHA1 (patch-aa) = cb6942b0be960151c185e89af1e09050a6b18dff
-SHA1 (patch-ac) = 3f62d36e18c2b8f587322dac5b329207704f40ad
+SHA1 (openssl-0.9.8m.tar.gz) = 2511c709a47f34d5fa6cd1a1c9cb1699bdffa912
+RMD160 (openssl-0.9.8m.tar.gz) = 0296af151993008526b4f2b3a6810e20c4ad3759
+Size (openssl-0.9.8m.tar.gz) = 3767604 bytes
+SHA1 (patch-aa) = b3899aebeea9bd9ead58771ca52ecec049589a55
+SHA1 (patch-ac) = 6ff4a20440666f5c520837e10547091e1bee2208
 SHA1 (patch-ad) = bb86ac463fc4ab8b485df5f1a4fb9c13c1fc41c3
 SHA1 (patch-ae) = 7a58f1765a3761321dcc8dafc5fe2e33207be480
-SHA1 (patch-af) = 81263ce9dc0e89293ac1fc298e1178253a0b0b1b
+SHA1 (patch-af) = 2610930b6b06397fa2e3955b3244c02193f5b7a6
 SHA1 (patch-ag) = 5f12c72b85e4b6c6a79dfcf87055e9e029fbd8c8
 SHA1 (patch-ak) = 049250b9bd42e6f155145703135dab39a7ec17e0
 SHA1 (patch-al) = 076a606352bdeaeea1cc64f16be2ac1325882302
-SHA1 (patch-ax) = ef0c657de2aa42baa365b9857583d1c55d0e7d1b
-SHA1 (patch-ay) = 6d5de155e5508cd2237387626c8e1ff7ee603f8e
-SHA1 (patch-az) = aa7ef7192d56979ba09aa1dab8a2cdf9868f9c4a
-SHA1 (patch-ba) = b8ab55c0c6ab4b995cae18517609720f0803e11f
-SHA1 (patch-bb) = a4092a65f52d3c9c85c9015901b2a5eeb11d0955
+SHA1 (patch-bc) = 9200ae3c86fb5c278c9692441555faa4c51afb30
