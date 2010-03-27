@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.69 2009/09/02 22:30:34 wiz Exp $
+$NetBSD: distinfo,v 1.70 2010/03/27 12:26:19 tnn Exp $
 
 SHA1 (Mesa-7.4.4/MesaDemos-7.4.4.tar.bz2) = 190b51dd1e456f12c70cd428ec47ca8de0ed72fe
 RMD160 (Mesa-7.4.4/MesaDemos-7.4.4.tar.bz2) = 492850ff48aa54d35f1acdd09ac90e61a9d93bc1
@@ -9,7 +9,7 @@ Size (Mesa-7.4.4/MesaGLUT-7.4.4.tar.bz2) = 328900 bytes
 SHA1 (Mesa-7.4.4/MesaLib-7.4.4.tar.bz2) = 1cdcef24900489bc0a879013b2138c0d9aedffe3
 RMD160 (Mesa-7.4.4/MesaLib-7.4.4.tar.bz2) = 9c9a5e8b7f8d2fd175cc8542e2aecf48edf8c084
 Size (Mesa-7.4.4/MesaLib-7.4.4.tar.bz2) = 3375615 bytes
-SHA1 (patch-aa) = 9afc2758ebbef3737f8c858f74f0c93d86bb0861
+SHA1 (patch-aa) = e1ccbfd075b644b84af23d0185aa92263fe848c6
 SHA1 (patch-ab) = 2d7cb59c5a157142ffbfbed026d8a51cb18d21ee
 SHA1 (patch-ac) = ed3ec49ea2aacf231bbcb38093f3dc01a0cb2468
 SHA1 (patch-ad) = 080413cbdc2ed7484cc2fff25f00bc53dca3a393
