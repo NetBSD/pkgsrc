@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2010/02/28 20:49:21 tonio Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2010/03/27 01:40:22 obache Exp $
 
 BUILDLINK_TREE+=	libsoup24
 
@@ -16,10 +16,17 @@ BUILDLINK_PKGSRCDIR.libsoup24?=		../../net/libsoup24
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/libproxy/buildlink3.mk"
 
+_LIBSOUP24_PRE_GNOME_OPTION!= \
+	if ${PKG_INFO} -qe 'libsoup24<=2.28.2'; then			\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+
 pkgbase := libsoup24
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libsoup24:Mgnome)
+.if ${_LIBSOUP24_PRE_GNOME_OPTION} == "yes" || !empty(PKG_BUILD_OPTIONS.libsoup24:Mgnome)
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .endif
