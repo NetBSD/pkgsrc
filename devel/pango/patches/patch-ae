@@ -1,45 +1,18 @@
-$NetBSD: patch-ae,v 1.4 2009/11/23 17:18:52 tron Exp $
+$NetBSD: patch-ae,v 1.4.2.1 2010/03/27 17:51:38 tron Exp $
 
-Avoid high CPU usage caused by code generaton problems in Apple's toolchain.
+Avoid high CPU usage under Mac OS X caused by questionable C++ code.
 
 Please look here for details:
 https://bugzilla.gnome.org/show_bug.cgi?id=593240
 
---- pango/pango-ot-info.c.orig	2009-11-17 16:35:44.000000000 +0000
-+++ pango/pango-ot-info.c	2009-11-23 13:55:29.000000000 +0000
-@@ -536,13 +536,22 @@
- {
-   unsigned int i;
+--- pango/opentype/hb-open-type-private.hh.orig	2009-11-26 00:44:17.000000000 +0000
++++ pango/opentype/hb-open-type-private.hh	2010-02-21 23:41:06.000000000 +0000
+@@ -61,7 +61,7 @@
+ /* Null objects */
  
-+#if defined(__APPLE__) && defined(__GNUC__)
-+  (void)fflush(stdout);
-+#endif
-+
-   for (i = 0; i < ruleset->rules->len; i++)
-     {
--      PangoOTRule *rule = &g_array_index (ruleset->rules, PangoOTRule, i);
-+      PangoOTRule *rule;
-       hb_mask_t mask;
-       unsigned int lookup_count, j;
-       unsigned int lookup_indexes[1000];
+ /* Global nul-content Null pool.  Enlarge as necessary. */
+-static const char NullPool[32] = "";
++static const void *NullPool[32];
  
-+#if defined(__APPLE__) && defined(__GNUC__)
-+      (void)fprintf(stdout, "%d", i);
-+#endif
-+
-+      rule = &g_array_index (ruleset->rules, const PangoOTRule, i);
-       if (rule->table_type != PANGO_OT_TABLE_GSUB)
- 	continue;
- 
-@@ -561,6 +570,11 @@
- 					lookup_indexes[j],
- 					rule->property_bit);
-     }
-+
-+#if defined(__APPLE__) && defined(__GNUC__)
-+  (void)fpurge(stdout);
-+#endif
-+
- }
- 
- void
+ /* Generic template for nul-content sizeof-sized Null objects. */
+ template <typename Type>
