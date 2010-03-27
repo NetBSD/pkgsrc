@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.47 2010/03/27 14:45:22 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q4,v 1.1.2.48 2010/03/27 17:53:15 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q4 branch:
@@ -201,3 +201,5 @@ Pullup ticket #3054 - requested by martti
 ejabberd: security update
 Pullup ticket #3065 - requested by taca
 openssl: security update
+Pullup ticket #3066 - requested by taca
+pango: security patch
