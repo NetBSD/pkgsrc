@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/04 18:42:03 jdolecek Exp $
-lib/httpd/mod_php${PKG_PHP_VERSION}.so
+@comment $NetBSD: PLIST,v 1.2 2010/03/27 18:20:10 tron Exp $
+lib/httpd/mod_php${PKG_PHP_MAJOR_VERS}.so
