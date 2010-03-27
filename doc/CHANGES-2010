@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1373 2010/03/27 02:25:31 reed Exp $
+$NetBSD: CHANGES-2010,v 1.1374 2010/03/27 06:25:55 taca Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1626,3 +1626,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/spamassassin to 3.3.1 [heinz 2010-03-24]
 	Updated security/openssl to 0.9.8mnb2 [taca 2010-03-26]
 	Updated audio/p5-Audio-Scan to 0.70 [reed 2010-03-27]
+	Updated net/php-xmlrpc to 5.2.13nb1 [taca 2010-03-27]
+	Updated net/php-xmlrpc to 5.3.2nb1 [taca 2010-03-27]
