@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.14 2010/03/21 21:58:23 pettai Exp $
+$NetBSD: patch-ad,v 1.15 2010/03/27 13:37:34 pettai Exp $
 
 Correct handling of the length of data returned by SIOCGIFCONF.  The
 actual length of each item is never less than sizeof(struct ifreq), but
@@ -40,7 +40,7 @@ had two problems:
 +      data extends beyond the end of ifr_ifru. */
      len = sizeof(struct ifreq);
 +#if HAVE_SOCKADDR_SA_LEN
-+    len = ifr->ifr_addr.sa_len > sizeof(ifr->ifr_name);
++    if (ifr->ifr_addr.sa_len > sizeof(ifr->ifr_ifru))
 +      len += (ifr->ifr_addr.sa_len - sizeof(ifr->ifr_ifru));
  #endif
  
