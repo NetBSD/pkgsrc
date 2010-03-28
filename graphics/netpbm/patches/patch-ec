@@ -1,8 +1,17 @@
-$NetBSD: patch-ec,v 1.1 2010/02/19 18:25:44 drochner Exp $
+$NetBSD: patch-ec,v 1.2 2010/03/28 12:36:35 drochner Exp $
 
 --- lib/libsystem.c.orig	2009-12-29 20:46:34.000000000 +0000
 +++ lib/libsystem.c
-@@ -223,8 +223,11 @@ signalName(unsigned int const signalClas
+@@ -216,15 +216,20 @@ signalName(unsigned int const signalClas
+             return "SIGWINCH";
+         case SIGIO:
+             return "SIGIO";
++#if defined(SIGPWR)
+         case SIGPWR:
+             return "SIGPWR";
++#endif
+         case SIGSYS:
+             return "SIGSYS";
          default:
              return "???";
          }
