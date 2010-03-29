@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1376 2010/03/29 04:57:03 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1377 2010/03/29 06:00:28 obache Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1630,3 +1630,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/php-xmlrpc to 5.3.2nb1 [taca 2010-03-27]
 	Updated devel/pango to 1.26.2nb2 [taca 2010-03-27]
 	Updated www/mimetex to 1.71 [obache 2010-03-29]
+	Updated graphics/goocanvasmm to 0.15.1 [obache 2010-03-29]
