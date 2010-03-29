@@ -1,0 +1,31 @@
+$NetBSD: patch-solaris.in,v 1.1 2010/03/29 19:38:54 sborrill Exp $
+
+--- autoconf/solaris.in.orig	2005-08-14 00:47:57.000000000 +0100
++++ autoconf/solaris.in	2010-03-29 20:17:06.000000000 +0100
+@@ -42,14 +42,6 @@
+ 	$(CPP) -o dansguardian $(DGCFLAGS) $(DEBUG) $(OBJ) $(LIBS) dansguardian.cpp
+ 
+ install:
+-	@test -d $I$(SYSVLOCATION) || install -d $I$(SYSVLOCATION)
+-	@test -d $I$(CONFFILELOCATION) || install -d $I$(CONFFILELOCATION)
+-	@test -d $I$(CONFFILELOCATION)phraselists || install -d $I$(CONFFILELOCATION)phraselists
+-	@test -d $I$(CONFFILELOCATION)languages || install -d $I$(CONFFILELOCATION)languages
+-	@test -d $I$(CGIBINLOCATION) || install -d $I$(CGIBINLOCATION)
+-	@test -d $I$(MANUALFILES)man8/ || install -d $I$(MANUALFILES)man8/
+-	@test -d $I$(LOGLOCATION) || install -d $I$(LOGLOCATION)
+-	@test -d $I$(BINARYLOCATION) || install -d $I$(BINARYLOCATION)
+ 	cp -f ./filtergroupslist $I$(CONFFILELOCATION)filtergroupslist
+ 	cp -f ./dansguardianf1.conf $I$(CONFFILELOCATION)dansguardianf1.conf
+ 	cp -f ./dansguardian $I$(BINARYLOCATION)dansguardian
+@@ -80,11 +72,6 @@
+ 	cp -f ./dansguardian.pl $I$(CGIBINLOCATION)dansguardian.pl
+ 	chmod o+x $I$(CGIBINLOCATION)dansguardian.pl
+ 	cp -f ./dansguardian.8 $I$(MANUALFILES)man8/dansguardian.8
+-	chmod -R u+wr $I$(LOGLOCATION)
+-	chmod -R og-w $I$(LOGLOCATION)
+-	chmod u+wrx $I$(LOGLOCATION)
+-	chgrp -R $(PROXYGROUP) $I$(LOGLOCATION)
+-	chown -R $(PROXYUSER) $I$(LOGLOCATION)
+ 	$(CHKCONFIG)
+ 	if [ -d $(LOGROTATELOCATION) ]; then cp -f ./logrotate.dansguardian $I$(LOGROTATELOCATION)dansguardian; fi
+ 
