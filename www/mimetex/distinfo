@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/11/05 13:25:12 obache Exp $
+$NetBSD: distinfo,v 1.3 2010/03/29 04:56:48 obache Exp $
 
-SHA1 (mimetex-1.70/mimetex.zip) = 9ec937238b97664f67bdc862ec8f8f32e323e612
-RMD160 (mimetex-1.70/mimetex.zip) = 42f5ef2e31ad3fc1c1cb306bebb645d307910d23
-Size (mimetex-1.70/mimetex.zip) = 728631 bytes
+SHA1 (mimetex-1.71/mimetex.zip) = 84bdb4daa05344f61e383bc659e41ab57476aa2d
+RMD160 (mimetex-1.71/mimetex.zip) = 487a712c293bad5f42f32d969d930f269cb5463a
+Size (mimetex-1.71/mimetex.zip) = 746966 bytes
