@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/03/14 16:32:16 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/29 13:34:39 joerg Exp $
 #
 
 DISTNAME=	QLandkarteM.0.2.0
@@ -18,11 +18,13 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 QMAKE=		${QTDIR}/bin/qmake
 
+INSTALLATION_DIRS+=	bin
+
 do-configure:
 	cd ${WRKSRC} && ${QMAKE} ${CONFIGURE_ARGS}
 
 do-install:
-	cp ${WRKSRC}/bin/qlm ${PREFIX}/bin
+	cp ${WRKSRC}/bin/qlm ${DESTDIR}${PREFIX}/bin
 
 DEPENDS+=		qt4-sqlite3>=4.4:../../x11/qt4-sqlite3
 
