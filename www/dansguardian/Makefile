@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2010/03/08 12:49:35 sborrill Exp $
+# $NetBSD: Makefile,v 1.9 2010/03/29 19:38:54 sborrill Exp $
 
 DISTNAME=	dansguardian-${VERSION}.source
 PKGNAME=	dansguardian-${VERSION}
 VERSION=	2.8.0.6
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	http://dansguardian.org/downloads/2/Stable/
 
@@ -17,6 +17,8 @@ WRKSRC=		${WRKDIR}/dansguardian-${VERSION}
 HAS_CONFIGURE=	yes
 MANCOMPRESSED=	yes
 RCD_SCRIPTS+=	dansguardian
+
+BUILD_DEFS+=	VARBASE
 
 PKG_SYSCONFSUBDIR=	dansguardian
 
@@ -36,10 +38,19 @@ SUBST_MESSAGE.perlpath=	Fixing path to perl executable
 SUBST_FILES.perlpath=	*.pl
 SUBST_SED.perlpath=	-e 's,/usr/bin,${PREFIX}/bin,g'
 
-DANSGUARDIAN_USER?=	nobody
-DANSGUARDIAN_GROUP?=	nobody
+DANSGUARDIAN_USER?=	dansgrdn
+DANSGUARDIAN_GROUP?=	dansgrdn
 
-INSTALLATION_DIRS=	share/examples/dansguardian
+PKG_USERS_VARS+=		DANSGUARDIAN_USER
+PKG_GROUPS_VARS+=		DANSGUARDIAN_GROUP
+
+PKG_GROUPS=			${DANSGUARDIAN_GROUP}
+PKG_USERS=			${DANSGUARDIAN_USER}:${DANSGUARDIAN_GROUP}
+PKG_GECOS.${DANSGUARDIAN_USER}=	Dansguardian webfilter pseudo-user
+
+INSTALLATION_DIRS=	sbin libexec/cgi-bin ${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	share/examples/dansguardian/phraselists
+INSTALLATION_DIRS+=	share/examples/dansguardian/languages
 
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--cgidir=/libexec/cgi-bin/ \
@@ -147,15 +158,17 @@ LANGUAGEDIRS=	arspanish bulgarian chinesebig5 chinesegb2312 \
 		swedish turkish ukenglish
 
 .for d in ${PHRASEDIRS}
-OWN_DIRS+=	${DESTDIR}${PKG_SYSCONFDIR}/phraselists/${d}
+OWN_DIRS+=	${PKG_SYSCONFDIR}/phraselists/${d}
+INSTALLATION_DIRS+=	share/examples/dansguardian/phraselists/${d}
 .endfor
 
 .for d in ${LANGUAGEDIRS}
-OWN_DIRS+=	${DESTDIR}${PKG_SYSCONFDIR}/languages/${d}
+OWN_DIRS+=	${PKG_SYSCONFDIR}/languages/${d}
 CONF_FILES+=	${EGDIR}/languages/${d}/messages \
 		${PKG_SYSCONFDIR}/languages/${d}/messages
 CONF_FILES+=	${EGDIR}/languages/${d}/template.html \
 		${PKG_SYSCONFDIR}/languages/${d}/template.html
+INSTALLATION_DIRS+=	share/examples/dansguardian/languages/${d}
 .endfor
 
 show-conffiles:
