@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1379 2010/03/30 00:45:10 dholland Exp $
+$NetBSD: CHANGES-2010,v 1.1380 2010/03/30 04:37:10 sbd Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1633,3 +1633,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated graphics/goocanvasmm to 0.15.1 [obache 2010-03-29]
 	Updated www/typolight28-translations to 20100327 [taca 2010-03-29]
 	Updated editors/emacs20 to 20.7nb14 [dholland 2010-03-30]
+	Updated net/libvncserver to 0.9.7nb3 [sbd 2010-03-30]
