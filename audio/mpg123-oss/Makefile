@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/03/14 14:19:19 martin Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/30 10:29:22 martin Exp $
 #
 
 MPG123_MODULE=	oss
@@ -8,11 +8,10 @@ ONLY_FOR_PLATFORM+=	DragonFly-*-*
 
 .include "${.CURDIR}/../../audio/mpg123/Makefile.common"
 
-LIBS+=		-lossaudio
+.include "../../mk/oss.buildlink3.mk"
+LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 CPPFLAGS+=	-DDEVOSSSOUND="\"${DEVOSSSOUND}\""
-
-.include "../../mk/oss.buildlink3.mk"
 
 .include "../../audio/mpg123/buildlink3.mk"
 
