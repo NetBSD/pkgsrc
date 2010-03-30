@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2010/01/22 00:22:19 heinz Exp $
+# $NetBSD: Makefile,v 1.54 2010/03/30 10:29:40 tron Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -47,10 +47,10 @@ CONFIGURE_ARGS+=	--with-non-blocking=none
 # Optionally install compressed help files if MANZ is defined.
 .if defined(MANZ)
 PLIST_SUBST+=		GZSUFFIX=".gz"
-DOC_COMPRESS_ARGS=	-z ${PREFIX}
+DOC_COMPRESS_ARGS=	-z ${DESTDIR}${PREFIX}
 .else
 PLIST_SUBST+=		GZSUFFIX=
-DOC_COMPRESS_ARGS=	${PREFIX}
+DOC_COMPRESS_ARGS=	${DESTDIR}${PREFIX}
 .endif
 
 post-extract:
