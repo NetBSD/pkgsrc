@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.1 2009/05/26 12:27:12 he Exp $
+$NetBSD: patch-af,v 1.2 2010/03/30 09:21:30 jmcneill Exp $
 
 Fixes to support the various NetBSD mips ports.
 
---- src/mips/ffi.c.orig	2008-02-26 18:34:36.000000000 +0100
-+++ src/mips/ffi.c
+--- src/mips/ffi.c.orig	2009-12-29 10:22:26.000000000 -0500
++++ src/mips/ffi.c	2010-03-30 04:57:29.000000000 -0400
 @@ -32,12 +32,19 @@
  
  #ifdef __GNUC__
@@ -26,3 +26,36 @@ Fixes to support the various NetBSD mips ports.
  #endif
  
  #ifdef FFI_DEBUG
+@@ -460,6 +467,7 @@ ffi_status ffi_prep_cif_machdep(ffi_cif 
+               ((cif->arg_types)[index]->type << (arg_reg * FFI_FLAG_BITS));
+ 	    arg_reg++;
+ 	    break;
++#ifdef __mips64
+           case FFI_TYPE_LONGDOUBLE:
+             /* Align it.  */
+             arg_reg = ALIGN(arg_reg, 2);
+@@ -478,7 +486,7 @@ ffi_status ffi_prep_cif_machdep(ffi_cif 
+ 		arg_reg++;
+ 	      }
+             break;
+-
++#endif
+ 	  case FFI_TYPE_STRUCT:
+             loc = arg_reg * FFI_SIZEOF_ARG;
+ 	    cif->flags += calc_n32_struct_flags(soft_float,
+@@ -540,6 +548,7 @@ ffi_status ffi_prep_cif_machdep(ffi_cif 
+ 	  cif->flags += cif->rtype->type << (FFI_FLAG_BITS * 8);
+ 	break;
+ 
++#ifdef __mips64
+       case FFI_TYPE_LONGDOUBLE:
+ 	/* Long double is returned as if it were a struct containing
+ 	   two doubles.  */
+@@ -556,6 +565,7 @@ ffi_status ffi_prep_cif_machdep(ffi_cif 
+ 					      << (4 + (FFI_FLAG_BITS * 8));
+ 	  }
+ 	break;
++#endif
+       default:
+ 	cif->flags += FFI_TYPE_INT << (FFI_FLAG_BITS * 8);
+ 	break;
