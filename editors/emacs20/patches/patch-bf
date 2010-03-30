@@ -1,8 +1,22 @@
-$NetBSD: patch-bf,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+$NetBSD: patch-bf,v 1.2 2010/03/30 00:44:48 dholland Exp $
 
---- src/s/netbsd.h.orig	Sat Apr 11 20:15:19 1998
-+++ src/s/netbsd.h	Sat Jan 22 20:22:29 2000
-@@ -57,7 +57,7 @@
+--- src/s/netbsd.h.orig	1998-04-11 18:15:19.000000000 +0000
++++ src/s/netbsd.h
+@@ -38,6 +42,13 @@
+ #define NEED_ERRNO
+ #define SYSV_SYSTEM_DIR
+ 
++/* netbsd uses terminfo as of 5.99.24 - version is checked in pkg makefile */
++#ifdef __NETBSD_USE_TERMCAP__
++#undef TERMINFO
++#else
++#define TERMINFO
++#endif
++
+ /* Netbsd has POSIX-style pgrp behavior.  */
+ #undef BSD_PGRPS
+ 
+@@ -57,7 +68,7 @@
  #define N_BSSADDR(x) (N_ALIGN(x, N_DATADDR(x)+x.a_data))
  #define N_TRELOFF(x) N_RELOFF(x)
  #endif
@@ -11,7 +25,7 @@ $NetBSD: patch-bf,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  
  #define HAVE_WAIT_HEADER
  #define WAIT_USE_INT
-@@ -66,11 +66,15 @@
+@@ -66,11 +77,15 @@
  
  #define AMPERSAND_FULL_NAME
  
