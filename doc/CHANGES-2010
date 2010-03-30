@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1382 2010/03/30 13:07:09 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1383 2010/03/30 13:36:14 taca Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1636,3 +1636,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/libvncserver to 0.9.7nb3 [sbd 2010-03-30]
 	Updated net/nload to 0.7.2 [obache 2010-03-30]
 	Updated net/amule to 2.2.6 [obache 2010-03-30]
+	Updated time/ruby-tzinfo to 0.3.18 [taca 2010-03-30]
