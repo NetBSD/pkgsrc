@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2010/02/04 06:40:19 dholland Exp $
+# $NetBSD: Makefile,v 1.40 2010/03/30 00:44:47 dholland Exp $
 
 DISTNAME=	emacs-20.7
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	editors
 MASTER_SITES=	http://ftp.gnu.org/pub/old-gnu/emacs/	\
 		ftp://ftp.gnu.org/pub/old-gnu/emacs
@@ -51,6 +51,11 @@ CHECK_WRKREF_SKIP+=	bin/emacs-20.7
 # sections and .data reloc sections, both of which Emacs can't handle
 # properly.  Analyzed by Stephen Ma.
 LDFLAGS+=	-Wl,-z,nocombreloc
+.endif
+
+# NetBSD < 5.99.24 uses termcap; afterwards terminfo. Emacs needs to be told.
+.if (${OPSYS} == "NetBSD") && !exists(/usr/include/term.h)
+CPPFLAGS+=-D__NETBSD_USE_TERMCAP__
 .endif
 
 .if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
