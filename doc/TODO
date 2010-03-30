@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9159 2010/03/30 12:35:12 wiz Exp $
+$NetBSD: TODO,v 1.9160 2010/03/30 13:07:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -387,7 +387,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amavisd-new-2.6.4
 	o amaya-11.1
 	o amsn-0.98.3
-	o amule-2.2.6 [pkg/43069]
 	o angband-3.0.9
 	o anjuta-2.28.2.0 [GNOME 2.28]
 	o anjuta-extras-2.28.0 [GNOME 2.28]
