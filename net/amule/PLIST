@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 21:00:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/03/30 13:06:53 obache Exp $
 ${PLIST.alc}bin/alc
 ${PLIST.alcc}bin/alcc
 ${PLIST.amule}bin/amule
@@ -59,6 +59,12 @@ ${PLIST.cas}man/hu/man1/cas.1
 ${PLIST.ed2k}man/hu/man1/ed2k.1
 ${PLIST.wxcas}man/hu/man1/wxcas.1
 man/hu/man1/xas.1
+${PLIST.amule}man/it/man1/amule.1
+${PLIST.cmd}man/it/man1/amulecmd.1
+${PLIST.daemon}man/it/man1/amuled.1
+${PLIST.gui}man/it/man1/amulegui.1
+${PLIST.web}man/it/man1/amuleweb.1
+${PLIST.ed2k}man/it/man1/ed2k.1
 ${PLIST.alc}man/man1/alc.1
 ${PLIST.alcc}man/man1/alcc.1
 ${PLIST.amule}man/man1/amule.1
