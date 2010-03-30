@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2010/03/30 04:36:54 sbd Exp $
+bin/LinuxVNC
