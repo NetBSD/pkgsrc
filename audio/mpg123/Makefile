@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2010/03/14 17:03:04 tron Exp $
+# $NetBSD: Makefile,v 1.47 2010/03/30 09:12:04 martin Exp $
 
 PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
 COMMENT=	MPEG layer 1, 2, and 3 audio player
@@ -31,6 +31,9 @@ PLIST.coreaudio	=	yes
 .else
 MPG123_DEFAULT_MODULE=	oss
 PLIST.oss	=	yes
+LIBS+=		-lossaudio
+CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
+CPPFLAGS+=	-DDEVOSSSOUND="\"${DEVOSSSOUND}\""
 .endif
 
 # MPG123_MODULE is not finally set yet, to avoid NOT_FOR_PLATFORM triggers
@@ -41,6 +44,3 @@ PLIST.oss	=	yes
 
 # now we can set the default module
 MPG123_MODULE=		${MPG123_DEFAULT_MODULE}
-
-#post-extract:
-#	${RUN} cp ${FILESDIR}/debug.c ${WRKSRC}/src/libmpg123
