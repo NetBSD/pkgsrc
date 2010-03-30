@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/03/30 09:12:04 martin Exp $
+# $NetBSD: Makefile,v 1.48 2010/03/30 10:29:22 martin Exp $
 
 PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
 COMMENT=	MPEG layer 1, 2, and 3 audio player
@@ -31,7 +31,8 @@ PLIST.coreaudio	=	yes
 .else
 MPG123_DEFAULT_MODULE=	oss
 PLIST.oss	=	yes
-LIBS+=		-lossaudio
+.include "../../mk/oss.buildlink3.mk"
+LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 CPPFLAGS+=	-DDEVOSSSOUND="\"${DEVOSSSOUND}\""
 .endif
