@@ -1,12 +1,21 @@
-Squid 3.1 represents a new feature release above 3.0.
-This version is however still in release candidate testing cycle.
+Squid is a fully-featured HTTP/1.0 proxy with partial HTTP/1.1 support
+The 3.1 series brings many new features and upgrades to the basic
+networking  protocols. A short list of the major new features is:
 
-The most important of these new features are:
-* New Version Numbering System
-* Minimal squid.conf improvements
-* Native IPv6 Support
-* Error Page Localization
-* Connection Pinning (for NTLM Auth Passthrough)
-* Quality of Service (QoS) Flow support
-* SSL Bump (for HTTPS Filtering and Adaptation)
-* eCAP Adaptation Module support
+ * Connection Pinning (for NTLM Auth Passthrough)
+ * Native IPv6
+ * Quality of Service (QoS) Flow support
+ * Native Memory Cache
+ * SSL Bump (for HTTPS Filtering and Adaptation)
+ * TProxy v4.1+ support
+ * eCAP Adaptation Module support
+ * Error Page Localization
+ * Follow X-Forwarded-For support
+ * X-Forwarded-For options extended (truncate, delete, transparent)
+ * Peer-Name ACL
+ * Reply headers to external ACL.
+ * ICAP and eCAP Logging
+ * ICAP Service Sets and Chains
+ * ICY (SHOUTcast) streaming protocol support
+ * HTTP/1.1 support on connections to web servers and peers.
+   (with plans to make this full support within the 3.1 series)
