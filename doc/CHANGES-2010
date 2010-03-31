@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1384 2010/03/31 10:00:48 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1385 2010/03/31 11:15:29 tron Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1638,3 +1638,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/amule to 2.2.6 [obache 2010-03-30]
 	Updated time/ruby-tzinfo to 0.3.18 [taca 2010-03-30]
 	Updated math/ruby-rb-gsl to 1.14.3 [taca 2010-03-31]
+	Updated www/squid31 to 3.1.1 [tron 2010-03-31]
