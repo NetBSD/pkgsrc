@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2010/03/16 16:09:04 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2010/03/31 01:25:26 dsainty Exp $
 
 .include "../../devel/xulrunner/dist.mk"
 PKGNAME=		nss-${NSS_RELEASE}${MOZ_BRANCH_MINOR}
@@ -73,7 +73,8 @@ do-install:
 	      "-lnss3 -lsmime3 -lssl3 -lsoftokn3 "${BUILDLINK_LIBS.pthread:Q}; \
 	} >${DESTDIR}${PREFIX}/lib/pkgconfig/nss.pc
 
-.include "../../devel/nspr/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/nspr/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
