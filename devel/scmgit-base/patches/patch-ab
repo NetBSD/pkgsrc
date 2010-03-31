@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.7 2010/03/31 00:44:40 gdt Exp $
+
+Patch from http://article.gmane.org/gmane.comp.version-control.git/143453
+
+--- compat/bswap.h.orig	2009-12-24 00:00:22.000000000 +0000
++++ compat/bswap.h
+@@ -17,6 +17,8 @@ static inline uint32_t default_swab32(ui
+ 		((val & 0x000000ff) << 24));
+ }
+ 
++#undef bswap32
++
+ #if defined(__GNUC__) && (defined(__i386__) || defined(__x86_64__))
+ 
+ #define bswap32(x) ({ \
