@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2009/03/06 16:22:55 abs Exp $
+# $NetBSD: Makefile.common,v 1.13 2010/03/31 02:35:05 joerg Exp $
 # used by lang/sun-jre6/Makefile
 # used by lang/sun-jdk6/Makefile
 
@@ -33,9 +33,6 @@ DIST_ARCH=		${DIST_ARCH.${EMUL_ARCH}}
 .else
 DIST_ARCH=		${EMUL_ARCH}
 .endif
-
-# On DragonFly, this just seems to coredump and/or hang around.
-NOT_FOR_PLATFORM=	DragonFly-*-*
 
 INTERACTIVE_STAGE=	fetch
 BUILD_DIRS=		# empty
