@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:05:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/03/31 10:00:06 taca Exp $
 ${RUBY_VENDORLIB}/gsl.rb
 ${RUBY_VENDORLIB}/gsl/gnuplot.rb
 ${RUBY_VENDORLIB}/gsl/oper.rb
@@ -7,8 +7,10 @@ ${RUBY_VENDORLIB}/ool.rb
 ${RUBY_VENDORLIB}/ool/conmin.rb
 ${RUBY_VENDORLIB}/rbgsl.rb
 ${RUBY_DOC}/gsl/README
+${RUBY_DOC}/gsl/alf.html
 ${RUBY_DOC}/gsl/blas.html
 ${RUBY_DOC}/gsl/bspline.html
+${RUBY_DOC}/gsl/changes.html
 ${RUBY_DOC}/gsl/cheb.html
 ${RUBY_DOC}/gsl/cholesky_complex.html
 ${RUBY_DOC}/gsl/combi.html
@@ -63,6 +65,8 @@ ${RUBY_DOC}/gsl/use.html
 ${RUBY_DOC}/gsl/vector.html
 ${RUBY_DOC}/gsl/vector_complex.html
 ${RUBY_DOC}/gsl/wavelet.html
+${RUBY_EG}/gsl/alf/alf.gp
+${RUBY_EG}/gsl/alf/alf.rb
 ${RUBY_EG}/gsl/blas/blas.rb
 ${RUBY_EG}/gsl/blas/dnrm2.rb
 ${RUBY_EG}/gsl/blas/level1.rb
@@ -82,7 +86,6 @@ ${RUBY_EG}/gsl/complex/michelson.rb
 ${RUBY_EG}/gsl/complex/mul.rb
 ${RUBY_EG}/gsl/complex/oscillator.rb
 ${RUBY_EG}/gsl/complex/set.rb
-${RUBY_EG}/gsl/const/hoge.txt
 ${RUBY_EG}/gsl/const/physconst.rb
 ${RUBY_EG}/gsl/const/travel.rb
 ${RUBY_EG}/gsl/deriv/demo.rb
@@ -156,6 +159,7 @@ ${RUBY_EG}/gsl/histogram/poisson.rb
 ${RUBY_EG}/gsl/histogram/power.rb
 ${RUBY_EG}/gsl/histogram/rebin.rb
 ${RUBY_EG}/gsl/histogram/smp.dat
+${RUBY_EG}/gsl/histogram/xexp.rb
 ${RUBY_EG}/gsl/integration/ahmed.rb
 ${RUBY_EG}/gsl/integration/cosmology.rb
 ${RUBY_EG}/gsl/integration/friedmann.gp
@@ -178,8 +182,8 @@ ${RUBY_EG}/gsl/integration/qng.rb
 ${RUBY_EG}/gsl/interp/demo.gp
 ${RUBY_EG}/gsl/interp/demo.rb
 ${RUBY_EG}/gsl/interp/interp.rb
-${RUBY_EG}/gsl/interp/spline.rb
 ${RUBY_EG}/gsl/interp/points
+${RUBY_EG}/gsl/interp/spline.rb
 ${RUBY_EG}/gsl/jacobi/deriv.rb
 ${RUBY_EG}/gsl/jacobi/integrate.rb
 ${RUBY_EG}/gsl/jacobi/interp.rb
@@ -209,12 +213,15 @@ ${RUBY_EG}/gsl/math/inf_nan.rb
 ${RUBY_EG}/gsl/math/minmax.rb
 ${RUBY_EG}/gsl/math/power.rb
 ${RUBY_EG}/gsl/math/test.rb
+${RUBY_EG}/gsl/matrix/a.dat
 ${RUBY_EG}/gsl/matrix/add.rb
+${RUBY_EG}/gsl/matrix/b.dat
 ${RUBY_EG}/gsl/matrix/cat.rb
 ${RUBY_EG}/gsl/matrix/colvectors.rb
 ${RUBY_EG}/gsl/matrix/complex.rb
 ${RUBY_EG}/gsl/matrix/det.rb
 ${RUBY_EG}/gsl/matrix/diagonal.rb
+${RUBY_EG}/gsl/matrix/get_all.rb
 ${RUBY_EG}/gsl/matrix/hilbert.rb
 ${RUBY_EG}/gsl/matrix/iterator.rb
 ${RUBY_EG}/gsl/matrix/matrix.rb
@@ -224,7 +231,9 @@ ${RUBY_EG}/gsl/matrix/rand.rb
 ${RUBY_EG}/gsl/matrix/read.rb
 ${RUBY_EG}/gsl/matrix/rowcol.rb
 ${RUBY_EG}/gsl/matrix/set.rb
+${RUBY_EG}/gsl/matrix/set_all.rb
 ${RUBY_EG}/gsl/matrix/view.rb
+${RUBY_EG}/gsl/matrix/view_all.rb
 ${RUBY_EG}/gsl/matrix/write.rb
 ${RUBY_EG}/gsl/min.rb
 ${RUBY_EG}/gsl/monte/miser.rb
@@ -288,7 +297,6 @@ ${RUBY_EG}/gsl/pdf/logistic.rb
 ${RUBY_EG}/gsl/pdf/lognormal.rb
 ${RUBY_EG}/gsl/pdf/neg-binomiral.rb
 ${RUBY_EG}/gsl/pdf/pareto.rb
-${RUBY_EG}/gsl/pdf/pareto.rb.bak
 ${RUBY_EG}/gsl/pdf/pascal.rb
 ${RUBY_EG}/gsl/pdf/poisson.rb
 ${RUBY_EG}/gsl/pdf/rayleigh-tail.rb
@@ -304,6 +312,7 @@ ${RUBY_EG}/gsl/poly/cheb_II.rb
 ${RUBY_EG}/gsl/poly/cubic.rb
 ${RUBY_EG}/gsl/poly/demo.rb
 ${RUBY_EG}/gsl/poly/eval.rb
+${RUBY_EG}/gsl/poly/eval_derivs.rb
 ${RUBY_EG}/gsl/poly/fit.rb
 ${RUBY_EG}/gsl/poly/hermite.rb
 ${RUBY_EG}/gsl/poly/poly.rb
@@ -316,6 +325,7 @@ ${RUBY_EG}/gsl/random/poisson.rb
 ${RUBY_EG}/gsl/random/qrng.rb
 ${RUBY_EG}/gsl/random/randomwalk.rb
 ${RUBY_EG}/gsl/random/randomwalk2d.rb
+${RUBY_EG}/gsl/random/rayleigh.rb
 ${RUBY_EG}/gsl/random/rng.rb
 ${RUBY_EG}/gsl/random/rngextra.rb
 ${RUBY_EG}/gsl/roots/bisection.rb
@@ -369,11 +379,15 @@ ${RUBY_EG}/gsl/vector/c.dat
 ${RUBY_EG}/gsl/vector/collect.rb
 ${RUBY_EG}/gsl/vector/compare.rb
 ${RUBY_EG}/gsl/vector/complex.rb
+${RUBY_EG}/gsl/vector/complex_get_all.rb
+${RUBY_EG}/gsl/vector/complex_set_all.rb
+${RUBY_EG}/gsl/vector/complex_view_all.rb
 ${RUBY_EG}/gsl/vector/connect.rb
 ${RUBY_EG}/gsl/vector/decimate.rb
 ${RUBY_EG}/gsl/vector/diff.rb
 ${RUBY_EG}/gsl/vector/filescan.rb
 ${RUBY_EG}/gsl/vector/floor.rb
+${RUBY_EG}/gsl/vector/get_all.rb
 ${RUBY_EG}/gsl/vector/gnuplot.rb
 ${RUBY_EG}/gsl/vector/graph.rb
 ${RUBY_EG}/gsl/vector/histogram.rb
@@ -386,11 +400,13 @@ ${RUBY_EG}/gsl/vector/mul.rb
 ${RUBY_EG}/gsl/vector/narray.rb
 ${RUBY_EG}/gsl/vector/read.rb
 ${RUBY_EG}/gsl/vector/set.rb
+${RUBY_EG}/gsl/vector/set_all.rb
 ${RUBY_EG}/gsl/vector/smpv.dat
 ${RUBY_EG}/gsl/vector/test.rb
 ${RUBY_EG}/gsl/vector/test_gslblock.rb
 ${RUBY_EG}/gsl/vector/vector.rb
 ${RUBY_EG}/gsl/vector/view.rb
+${RUBY_EG}/gsl/vector/view_all.rb
 ${RUBY_EG}/gsl/vector/where.rb
 ${RUBY_EG}/gsl/vector/write.rb
 ${RUBY_EG}/gsl/vector/zip.rb
