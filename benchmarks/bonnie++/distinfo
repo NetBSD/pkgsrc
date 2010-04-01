@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2008/06/20 01:09:08 joerg Exp $
+$NetBSD: distinfo,v 1.8 2010/04/01 06:34:14 obache Exp $
 
-SHA1 (bonnie++-1.03c.tgz) = 90d0118f8a35c7b27b75020f991d891648003baa
-RMD160 (bonnie++-1.03c.tgz) = e430fbfaeb8f288794fd3be44233fca068850a35
-Size (bonnie++-1.03c.tgz) = 80630 bytes
+SHA1 (bonnie++-1.03e.tgz) = cf172c262fea075a83df12d5bde337bacba78ea6
+RMD160 (bonnie++-1.03e.tgz) = c7dfdd5826ef1033f1cae168ee9c1fe07877a10f
+Size (bonnie++-1.03e.tgz) = 80956 bytes
 SHA1 (patch-aa) = 2edc5fb589af0d8fbeaba89e3fd38f01a6115090
 SHA1 (patch-ab) = 3e4b04443a0fd413722819943df502172f6cab1f
