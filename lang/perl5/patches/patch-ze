@@ -1,0 +1,17 @@
+$NetBSD: patch-ze,v 1.1 2010/04/01 22:03:09 fhajny Exp $
+
+Fixes compilation problem on Solaris/SPARC.
+
+--- perl.h.orig	2009-07-06 11:18:58.000000000 +0000
++++ perl.h
+@@ -1435,6 +1435,10 @@ EXTERN_C char *crypt(const char *, const
+  */
+ 
+ #if defined(I_SYSMODE) && !defined(PERL_MICRO)
++#if defined(__sun__)
++#include <sys/stat.h>
++#include <sys/vnode.h>
++#endif
+ #include <sys/mode.h>
+ #endif
+ 
