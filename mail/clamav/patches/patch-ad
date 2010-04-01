@@ -1,8 +1,10 @@
-$NetBSD: patch-ad,v 1.19 2009/10/29 07:06:09 martti Exp $
+$NetBSD: patch-ad,v 1.20 2010/04/01 12:02:22 martti Exp $
 
---- docs/Makefile.in.orig	2009-10-28 17:54:51.000000000 +0200
-+++ docs/Makefile.in	2009-10-29 08:42:26.000000000 +0200
-@@ -261,6 +261,8 @@
+Fix compileation error DragonFly.
+
+--- docs/Makefile.in.orig	2010-03-24 19:01:19.000000000 +0200
++++ docs/Makefile.in	2010-04-01 12:23:43.000000000 +0300
+@@ -270,6 +270,8 @@
  man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/freshclam.conf.5 man/clamconf.1 man/clamdtop.1
  all: all-am
  
