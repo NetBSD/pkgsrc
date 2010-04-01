@@ -1,0 +1,42 @@
+$NetBSD: patch-bf,v 1.1 2010/04/01 08:25:07 jmcneill Exp $
+
+--- js/ctypes/libffi/src/mips/ffitarget.h.orig	2010-03-31 04:09:31.000000000 -0400
++++ js/ctypes/libffi/src/mips/ffitarget.h	2010-03-31 04:12:52.000000000 -0400
+@@ -29,15 +29,28 @@
+ 
+ #ifdef linux
+ #include <asm/sgidefs.h>
+-#  ifndef _ABIN32
+-#    define _ABIN32 _MIPS_SIM_NABI32
+-#  endif
+-#  ifndef _ABI64
+-#    define _ABI64 _MIPS_SIM_ABI64
+-#  endif
+-#  ifndef _ABIO32
+-#    define _ABIO32 _MIPS_SIM_ABI32
+-#  endif
++#elif defined(irix)
++#include <sgidefs.h>
++#else
++#include <sys/cdefs.h>
++#endif
++
++#ifndef _ABIN32
++# define _ABIN32 _MIPS_SIM_NABI32
++#endif
++#ifndef _ABI64
++# define _ABI64 _MIPS_SIM_ABI64
++#endif
++#ifndef _ABIO32
++# define _ABIO32 _MIPS_SIM_ABI32
++#endif
++
++#ifndef _MIPS_SIM
++# ifdef _MIPS_BSD_API
++#  define _MIPS_SIM _MIPS_BSD_API
++# else
++#  define _MIPS_SIM _ABIO32
++# endif
+ #endif
+ 
+ #if !defined(_MIPS_SIM)
