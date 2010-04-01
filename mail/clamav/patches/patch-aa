@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.19 2009/06/11 04:38:18 martti Exp $
+$NetBSD: patch-aa,v 1.20 2010/04/01 12:02:22 martti Exp $
+
+Fix compileation error DragonFly.
 
 --- clamdtop/clamdtop.c.orig	2009-06-01 19:20:12.000000000 +0300
 +++ clamdtop/clamdtop.c	2009-06-11 07:31:58.000000000 +0300

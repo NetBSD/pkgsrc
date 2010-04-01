@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:04:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/04/01 12:02:22 martti Exp $
 bin/clamav-config
+bin/clambc
 bin/clamconf
 bin/clamdscan
 bin/clamdtop
