@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9160 2010/03/30 13:07:09 obache Exp $
+$NetBSD: TODO,v 1.9161 2010/04/01 12:00:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -561,6 +561,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
+	o elinks-0.12pre5
 	o elm-me-2.4pl124d
 	o elscreen-1.4.6
 	o emacs-muse-3.20
