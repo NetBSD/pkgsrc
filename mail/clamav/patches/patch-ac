@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.7 2010/04/01 12:02:22 martti Exp $
+
+Make this pkgsrc friedly.
+
+--- libclamav/c++/configure.orig	2010-04-01 12:30:33.000000000 +0300
++++ libclamav/c++/configure	2010-04-01 12:31:05.000000000 +0300
+@@ -14460,7 +14460,7 @@
+   enable_optimized=default
+ fi
+ 
+- if test "x$enable_optimized" == "xno"; then
++ if test "x$enable_optimized" = "xno"; then
+   DEBUG_BUILD_TRUE=
+   DEBUG_BUILD_FALSE='#'
+ else
