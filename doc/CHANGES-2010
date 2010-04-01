@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1387 2010/04/01 06:34:27 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1388 2010/04/01 12:02:56 martti Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/squid31 to 3.1.1 [tron 2010-03-31]
 	Updated converters/skf to 1.97.1 [obache 2010-04-01]
 	Updated benchmarks/bonnie++ to 1.03e [obache 2010-04-01]
+	Updated mail/clamav to 0.96 [martti 2010-04-01]
