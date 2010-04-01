@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/10/06 10:23:45 obache Exp $
+# $NetBSD: Makefile,v 1.44 2010/04/01 10:42:37 obache Exp $
 
 DISTNAME=		elinks-0.12pre2
 PKGNAME=		${DISTNAME:S/pre/rc/}
@@ -21,6 +21,7 @@ USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--enable-256-colors
 CONFIGURE_ARGS+=	--enable-utf-8
+CONFIGURE_ARGS+=	--without-lzma
 
 .include "options.mk"
 
