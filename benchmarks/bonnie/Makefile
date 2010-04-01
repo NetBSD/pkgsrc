@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/06/12 02:14:15 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2010/04/01 06:59:19 obache Exp $
 
 DISTNAME=	bonnie
 PKGNAME=	bonnie-2.06
@@ -21,6 +21,8 @@ WRKSRC=		${WRKDIR}
 USE_TOOLS+=		expr groff nroff
 USE_BSD_MAKEFILE=	yes
 MANCOMPRESSED_IF_MANZ=	yes
+
+CFLAGS.Linux+=	-D_FILE_OFFSET_BITS=64
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
