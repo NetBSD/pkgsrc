@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2010/04/01 12:02:22 martti Exp $
+# $NetBSD: Makefile,v 1.102 2010/04/02 19:45:23 martti Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_SRC+=		${PKGDIR}/PLIST
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.*)
 CONFIGURE_ARGS+=	--disable-readdir-r
