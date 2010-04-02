@@ -1,11 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2008/04/12 22:43:03 jlam Exp $
+# $NetBSD: options.mk,v 1.5 2010/04/02 19:45:24 martti Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
 PKG_SUPPORTED_OPTIONS=	milter clamav-experimental
 
 .include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=		milter
 
 .if !empty(PKG_OPTIONS:Mmilter)
 # force use of pkgsrc version of libmilter -- clamav uses the sendmail binary
@@ -14,7 +12,7 @@ PLIST_VARS+=		milter
 USE_BUILTIN.libmilter=	no
 .  include "../../mail/libmilter/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-milter
-PLIST.milter=		yes
+PLIST_SRC+=		${PKGDIR}/PLIST.milter
 .else
 CONFIGURE_ARGS+=	--disable-milter
 # XXX --disable-milter doesn't work as expected, so we need this
