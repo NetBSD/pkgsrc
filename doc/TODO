@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9161 2010/04/01 12:00:59 obache Exp $
+$NetBSD: TODO,v 1.9162 2010/04/02 09:58:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1344,7 +1344,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tob-0.26
 	o tomboy-1.2.0 [GNOME 2.30]
 	o top-3.8beta1
-	o tor-0.2.1.25
 	o totem-2.30.0 [GNOME 2.30]
 	o totem-pl-parser-2.30.0 [GNOME 2.30]
 	o tpasm-1.2
