@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1390 2010/04/02 09:58:54 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1391 2010/04/02 20:29:25 tnn Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1644,3 +1644,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated mail/clamav to 0.96 [martti 2010-04-01]
 	Updated databases/sqlite3 to 3.6.23.1 [tnn 2010-04-01]
 	Updated net/tor to 0.2.1.25 [wiz 2010-04-02]
+	Updated www/firefox to 3.6.3 [tnn 2010-04-02]
