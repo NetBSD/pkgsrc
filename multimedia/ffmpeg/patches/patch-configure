@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.8 2009/09/07 20:05:30 ahoka Exp $
+$NetBSD: patch-configure,v 1.9 2010/04/02 11:19:40 jmmv Exp $
 
 --- configure.orig	2009-06-10 22:50:53.000000000 +0200
 +++ configure
@@ -6,7 +6,7 @@ $NetBSD: patch-configure,v 1.8 2009/09/07 20:05:30 ahoka Exp $
          add_cflags -D__EXTENSIONS__
          ;;
      netbsd)
-+	if test $subarch != "x86_32"; then
++	if test "${subarch}" != "x86_32"; then
 +	    LIBOBJFLAGS='$(PIC)'
 +	    SHFLAGS='-shared'
 +	fi
