@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2010/03/02 11:25:59 obache Exp $
+$NetBSD: distinfo,v 1.41 2010/04/02 09:58:44 wiz Exp $
 
-SHA1 (tor-0.2.1.24.tar.gz) = 7b51c9e2f9ad5b70dea2fbe73728cd64213fc505
-RMD160 (tor-0.2.1.24.tar.gz) = d6c65499fbc942afc94e508a8e553091aeadb159
-Size (tor-0.2.1.24.tar.gz) = 2396864 bytes
+SHA1 (tor-0.2.1.25.tar.gz) = 11c176374be47825b4b7fa00b5654277d0838022
+RMD160 (tor-0.2.1.25.tar.gz) = e691b904e0d447b3f590f1e9e71b4daad020bd8d
+Size (tor-0.2.1.25.tar.gz) = 2406985 bytes
