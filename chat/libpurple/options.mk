@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2010/02/26 10:31:10 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2010/04/03 21:00:42 gdt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farsight gnome gnutls
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=	--enable-avahi
 .  include "../../net/avahi/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mgnome) && !empty(PKG_OPTIONS:Mfarsight)
+.if !empty(PKG_OPTIONS:Mgnome)
 PLIST.gnome= 		yes
 .  include "../../devel/GConf/schemas.mk"
 GCONF_SCHEMAS+=		purple.schemas
