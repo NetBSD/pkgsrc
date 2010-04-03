@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9164 2010/04/02 22:28:53 wiz Exp $
+$NetBSD: TODO,v 1.9165 2010/04/03 08:46:56 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1285,7 +1285,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sdcc-2.9.0
 	o seahorse-2.30.0 [GNOME 2.30]
 	o seahorse-plugins-2.30.0 [GNOME 2.30]
-	o seamonkey-2.0.4
 	o sendfile-20010424
 	o ser-0.9.6
 	o sessreg-1.0.5
