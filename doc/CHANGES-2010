@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1395 2010/04/04 17:23:44 schmonz Exp $
+$NetBSD: CHANGES-2010,v 1.1396 2010/04/04 22:24:22 taca Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1649,3 +1649,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/seamonkey to 2.0.4 [tnn 2010-04-03]
 	Updated net/wireshark to 1.2.7 [tron 2010-04-04]
 	Updated www/ikiwiki to 3.20100403 [schmonz 2010-04-04]
+	Updated www/typolight28-translations to 20100404 [taca 2010-04-04]
