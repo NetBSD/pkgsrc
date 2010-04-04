@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1393 2010/04/03 08:46:56 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.1394 2010/04/04 11:40:40 tron Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1647,3 +1647,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/firefox to 3.6.3 [tnn 2010-04-02]
 	Updated devel/mercurial to 1.5.1 [wiz 2010-04-02]
 	Updated www/seamonkey to 2.0.4 [tnn 2010-04-03]
+	Updated net/wireshark to 1.2.7 [tron 2010-04-04]
