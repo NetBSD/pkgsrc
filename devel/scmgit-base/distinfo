@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2010/03/31 00:44:40 gdt Exp $
+$NetBSD: distinfo,v 1.25 2010/04/04 08:12:02 obache Exp $
 
 SHA1 (git-1.6.6.2.tar.gz) = 13b339a55982162753d414731ff1b28791800209
 RMD160 (git-1.6.6.2.tar.gz) = f0b465000a5b5deee156dda6c87ef3e2c744b226
@@ -11,3 +11,4 @@ SHA1 (patch-af) = ea0ac503103429f32d26bd42c37a9ed563ff17b8
 SHA1 (patch-ag) = 048d9449048e417fab01c3e0e8e6e81d9df3bfac
 SHA1 (patch-ah) = d60b5304109f64f70146a222f6eb1deeb58dd6ac
 SHA1 (patch-ai) = 56b63d4790a11f5eb128186ad5efdd1bcf102f2e
+SHA1 (patch-al) = a4850307f1d8eb49887011dd17429ad1d3b457fe
