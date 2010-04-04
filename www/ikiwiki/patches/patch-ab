@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2010/02/13 05:53:36 schmonz Exp $
+$NetBSD: patch-ab,v 1.5 2010/04/04 17:23:30 schmonz Exp $
 
---- IkiWiki/Setup/Standard.pm.orig	2010-02-12 09:09:53.000000000 +0000
+--- IkiWiki/Setup/Standard.pm.orig	2010-03-19 19:44:10.000000000 +0000
 +++ IkiWiki/Setup/Standard.pm
-@@ -117,7 +117,7 @@ sub gendump ($) {
- 	}
+@@ -14,7 +14,7 @@ sub import {
+ sub gendump ($@) {
+ 	my $class=shift;
  
- 	unshift @ret,
--		"#!/usr/bin/perl",
-+		"#!@PERL5@",
- 		"# $description",
- 		"#",
- 		"# Passing this to ikiwiki --setup will make ikiwiki generate",
+-	"#!/usr/bin/perl",
++	"#!@PERL5@",
+ 	"#",
+ 	(map { "# $_" } @_),
+ 	"use IkiWiki::Setup::Standard {",
