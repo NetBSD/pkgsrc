@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.6 2010/04/05 00:36:42 jakllsch Exp $
+
+--- doc/api/Makefile.in.orig	2009-07-01 15:11:33.000000000 +0000
++++ doc/api/Makefile.in
+@@ -493,8 +493,8 @@ latex_src/refman.tex: doxygen.config $(I
+ 		sed -e '/{TabularC}{3}/s/{TabularC}{3}/{longtable}{|l|l|l|}/' \
+ 		-e '/{longtable}{|l|l|l|}/,/TabularC/s/TabularC/longtable/' \
+ 		-e '/Architecture/s/\\\\\\hline/\\endhead\\hline/' \
+-		using_tools.tex > tmp.$$ && \
+-		mv -f tmp.$$ using_tools.tex
++		using__tools.tex > tmp.$$ && \
++		mv -f tmp.$$ using__tools.tex
+ 
+ #doxygen.config: doxygen.config.in $(top_srcdir)/stamp-h1
+ doxygen.config: doxygen.config.in
