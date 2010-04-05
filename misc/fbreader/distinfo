@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2009/10/31 03:20:35 wiz Exp $
+$NetBSD: distinfo,v 1.3 2010/04/05 18:50:48 wiz Exp $
 
 SHA1 (fbreader-sources-0.10.7.tgz) = d47a2fa46d43057cac9408db1f2c409f0d3a9942
 RMD160 (fbreader-sources-0.10.7.tgz) = dec4d8ee716697dd021535295c9fe62970f059a2
@@ -6,10 +6,9 @@ Size (fbreader-sources-0.10.7.tgz) = 1600984 bytes
 SHA1 (patch-aa) = c76391244ee4a5f2efb1729157638ddb1ca97d3e
 SHA1 (patch-ab) = b2b2efd7389a847429003e460bd3ccfe4fb27722
 SHA1 (patch-ac) = 95c7a7bee4cfc017cdf52ac04895d78fde2530df
-SHA1 (patch-ad) = 1ba41ce767a7affeae6a02953eea390b8db88bf7
 SHA1 (patch-ae) = 29b33b9440e013cf87ae02ec4d32826f62e6b2ba
 SHA1 (patch-af) = dad6ecbf5ca5663d11ea4a5dbb0bed1ab3cae6d8
 SHA1 (patch-ag) = 19e92bd82df3cfb134ff17c9bdbb59028aceff95
 SHA1 (patch-ah) = 1a154c4650eefd8d255e3b17583e401000c07a54
-SHA1 (patch-ai) = d851a0cc23f9515afa5433cb31755a792b5a9345
+SHA1 (patch-ai) = d62ca84596a94f1ec020d419eb0c4f0a28422e1e
 SHA1 (patch-aj) = 5db2865b8975eb9972ec78ebc0914a81bd382b4c
