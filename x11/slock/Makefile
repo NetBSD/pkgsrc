@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/07 18:14:15 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2010/04/05 00:06:24 asau Exp $
 
 DISTNAME=		slock-0.7
 CATEGORIES=		x11
@@ -15,7 +15,7 @@ INSTALLATION_DIRS=	bin share/doc/slock
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !(${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin")
+.if !(${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly")
 CFLAGS+=-DHAVE_SHADOW_H
 .endif
 
