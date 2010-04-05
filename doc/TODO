@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9168 2010/04/05 18:14:42 wiz Exp $
+$NetBSD: TODO,v 1.9169 2010/04/05 22:54:57 markd Exp $
 
 Suggested new packages
 ======================
@@ -821,7 +821,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ispell-german-20091006
 	o ispell-slovak-0.3.2
 	o ispman-1.2
-	o ivtools-1.2.8
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
