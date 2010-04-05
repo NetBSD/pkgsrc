@@ -1,27 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2010/04/05 22:52:23 markd Exp $
+$NetBSD: patch-bk,v 1.1 2010/04/05 22:52:23 markd Exp $
 
---- config/site.def.NETBSD.orig	2003-10-22 18:13:39.000000000 +0000
-+++ config/site.def.NETBSD
-@@ -16,6 +16,9 @@
- #undef TroffCmd
- #define TroffCmd groff
- 
-+#undef CppCmd
-+#define CppCmd cpp
-+
- /* 
-  * build RPC classes -- requires iostreams & TCP sockets
-  */
-@@ -35,7 +38,7 @@
- #define ExtraCCLdLibs -lstdc++ -lm
- 
- /* command to create shared libraries */
--#define SharedLibraryCmd(ldobjs,extra_flags) gcc -shared extra_flags -o $@ ldobjs
-+#define SharedLibraryCmd(ldobjs,extra_flags) ${CXX} ${CCLDFLAGS} -shared extra_flags -o $@ ldobjs
- 
- /*
-  * Install a shared library on NetBSD.
-@@ -46,15 +46,15 @@
+--- config/site.def.LINUX.orig	2003-10-22 18:13:39.000000000 +0000
++++ config/site.def.LINUX
+@@ -43,15 +43,15 @@
  #ifndef InstallDynamicSharedLibrary
  #define InstallDynamicSharedLibrary(libname,rev,dest)			@@\
  install:: Concat(lib,libname.so.rev)					@@\
@@ -42,4 +23,4 @@ $NetBSD: patch-ac,v 1.4 2010/04/05 22:52:23 markd Exp $
 +	$(RM) $(DESTDIR)dest/Concat(lib,libname.so)	
  #endif
  
- #ifndef ImakeFlags
+ /* file output by configure script */

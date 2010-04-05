@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 20:05:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/04/05 22:52:23 markd Exp $
 bin/comdraw
 bin/comterp
 bin/comtest
@@ -41,6 +41,7 @@ include/ComTerp/assignfunc.h
 include/ComTerp/bitfunc.h
 include/ComTerp/boolfunc.h
 include/ComTerp/bquotefunc.h
+include/ComTerp/charfunc.h
 include/ComTerp/comfunc.h
 include/ComTerp/comhandler.h
 include/ComTerp/commodule.h
@@ -107,10 +108,12 @@ include/Dispatch/rpcwriter.h
 include/DrawServ/ackback-handler.h
 include/DrawServ/drawcatalog.h
 include/DrawServ/drawclasses.h
+include/DrawServ/drawcmds.h
 include/DrawServ/drawcomps.h
 include/DrawServ/drawcreator.h
 include/DrawServ/draweditor.h
 include/DrawServ/drawfunc.h
+include/DrawServ/drawimport.h
 include/DrawServ/drawkit.h
 include/DrawServ/drawlink.h
 include/DrawServ/drawlinkcomp.h
@@ -131,6 +134,7 @@ include/FrameUnidraw/framecreator.h
 include/FrameUnidraw/frameeditor.h
 include/FrameUnidraw/framefile.h
 include/FrameUnidraw/framefunc.h
+include/FrameUnidraw/frameimport.h
 include/FrameUnidraw/framekit.h
 include/FrameUnidraw/frameps.h
 include/FrameUnidraw/framescripts.h
@@ -374,7 +378,7 @@ include/OverlayUnidraw/clippoly.h
 include/OverlayUnidraw/grayraster.h
 include/OverlayUnidraw/grloctool.h
 include/OverlayUnidraw/indexmixins.h
-include/OverlayUnidraw/leakchecker.h
+include/OverlayUnidraw/leafwalker.h
 include/OverlayUnidraw/ovabout.h
 include/OverlayUnidraw/ovadjuster.h
 include/OverlayUnidraw/ovarrow.h
@@ -437,7 +441,7 @@ include/TIFF/format.h
 include/TIFF/tiff.h
 include/TIFF/tiffio.h
 include/Time/Date.h
-include/Time/Time.h
+include/Time/Time_.h
 include/Time/obstime.h
 include/Time/timeglyph.h
 include/TopoFace/fgeomobjs.h
@@ -565,6 +569,7 @@ include/Unidraw/viewer.h
 include/ivstd/fstream.h
 include/ivstd/iosfwd
 include/ivstd/iostream.h
+include/ivstd/leakchecker.h
 include/ivstd/malloc.h
 include/ivstd/math.h
 include/ivstd/nan.h
