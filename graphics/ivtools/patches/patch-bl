@@ -1,0 +1,26 @@
+$NetBSD: patch-bl,v 1.1 2010/04/05 22:52:23 markd Exp $
+
+--- config/site.def.SUN4.orig	2003-10-22 18:13:39.000000000 +0000
++++ config/site.def.SUN4
+@@ -82,15 +82,15 @@
+ #ifndef InstallDynamicSharedLibrary
+ #define InstallDynamicSharedLibrary(libname,rev,dest)                   @@\
+ install:: Concat(lib,libname.so.rev)                                    @@\
+-	MakeDir(dest)                                                   @@\
+-	$(INSTALL) -c $(INSTLIBFLAGS) Concat(lib,libname.so.rev) dest   @@\
+-	-@if [ -f dest/Concat(lib,libname.so) ]; then exit 0; else \    @@\
+-	cd dest; \                                                   	@@\
++	MakeDir($(DESTDIR)dest)                                                   @@\
++	$(INSTALL) -c $(INSTLIBFLAGS) Concat(lib,libname.so.rev) $(DESTDIR)dest   @@\
++	-@if [ -f $(DESTDIR)dest/Concat(lib,libname.so) ]; then exit 0; else \    @@\
++	cd $(DESTDIR)dest; \                                                   	@@\
+ 	$(LN) Concat(lib,libname.so.rev) Concat(lib,libname.so); fi	@@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) dest/Concat(lib,libname.so.rev)				@@\
+-	$(RM) dest/Concat(lib,libname.so)
++	$(RM) $(DESTDIR)dest/Concat(lib,libname.so.rev)				@@\
++	$(RM) $(DESTDIR)dest/Concat(lib,libname.so)
+ #endif
+ 
+ /* 

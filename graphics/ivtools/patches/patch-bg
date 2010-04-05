@@ -1,0 +1,19 @@
+$NetBSD: patch-bg,v 1.1 2010/04/05 22:52:23 markd Exp $
+
+--- config/InterViews/Imakefile.orig	2003-10-22 18:13:37.000000000 +0000
++++ config/InterViews/Imakefile
+@@ -8,11 +8,11 @@ IvmkcmTargets($(PACKAGE))
+ 
+ #if !InstallRelative
+ install::
+-	MakeDir($(CONFIGDIR)/InterViews)
+-	$(INSTALL) -c $(INSTINCFLAGS) *.cf $(CONFIGDIR)/InterViews
++	MakeDir($(DESTDIR)$(CONFIGDIR)/InterViews)
++	$(INSTALL) -c $(INSTINCFLAGS) *.cf $(DESTDIR)$(CONFIGDIR)/InterViews
+ 
+ uninstall::
+-	(cd $(CONFIGDIR)/InterViews; $(RM) *.cf)
++	(cd $(DESTDIR)$(CONFIGDIR)/InterViews; $(RM) *.cf)
+ #endif
+ 
+ 
