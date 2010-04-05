@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.3 2007/02/15 18:26:15 joerg Exp $
+$NetBSD: patch-aj,v 1.4 2010/04/05 22:52:23 markd Exp $
 
---- src/ComTerp/comterpserv.c.orig	2006-07-20 20:48:00.000000000 +0000
+--- src/ComTerp/comterpserv.c.orig	2009-08-27 16:32:39.000000000 +0000
 +++ src/ComTerp/comterpserv.c
 @@ -161,7 +161,7 @@ char* ComTerpServ::fd_fgets(char* s, int
      fileptr_filebuf fbuf(ifptr, ios_base::in);
      istream in (&fbuf);
      in.get(instr, BUFSIZ, '\n');  // needs to be generalized with <vector.h>
--#elif __GNUC__>3
-+#elif __GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 4)
+-#elif __GNUC__>3 || defined(__CYGWIN__)
++#elif __GNUC__>3 || defined(__CYGWIN__) || (__GNUC__ == 3 && __GNUC_MINOR__ >= 4)
      char instr[BUFSIZ];
      FILE* ifptr = fd==0 ? stdin : server->handler()->rdfptr();
      fileptr_filebuf fbuf(ifptr, ios_base::in);
@@ -15,26 +15,26 @@ $NetBSD: patch-aj,v 1.3 2007/02/15 18:26:15 joerg Exp $
  #elif (__GNUC__==3 && __GNUC_MINOR__<1)
      FILE* ofptr = fd==0 ? stdout : fdopen(fd, "w");
      fileptr_filebuf fbuf(ofptr, ios_base::out);
--#elif __GNUC__>3
-+#elif __GNUC__>3 || (__GNUC__==3 && __GNUC_MINOR__ >= 4)
+-#elif __GNUC__>3 || defined(__CYGWIN__)
++#elif __GNUC__>3 || defined(__CYGWIN__) || (__GNUC__==3 && __GNUC_MINOR__ >= 4)
      FILE* ofptr = fd==0 ? stdout : server->handler()->wrfptr();
      fileptr_filebuf fbuf(ofptr, ios_base::out);
  #else
-@@ -335,7 +335,7 @@ int ComTerpServ::runfile(const char* fil
+@@ -334,7 +334,7 @@ int ComTerpServ::runfile(const char* fil
  #elif __GNUC__==3 && __GNUC_MINOR__<1
                  FILE* ofptr = handler() ? fdopen(handler()->get_handle(), "w") : stdout; 
  	        fileptr_filebuf obuf(ofptr, ios_base::out);
--#elif __GNUC__>3
-+#elif __GNUC__>3 || (__GNUC__==3 && __GNUC_MINOR__ >= 4)
+-#elif __GNUC__>3 || defined(__CYGWIN__)
++#elif __GNUC__>3 || defined(__CYGWIN__) || (__GNUC__==3 && __GNUC_MINOR__ >= 4)
                  FILE* ofptr = handler() ? handler()->wrfptr() : stdout; 
  	        fileptr_filebuf obuf(ofptr, ios_base::out);
  #else
-@@ -363,7 +363,7 @@ int ComTerpServ::runfile(const char* fil
+@@ -362,7 +362,7 @@ int ComTerpServ::runfile(const char* fil
  #elif __GNUC__==3 && __GNUC_MINOR__<1
            FILE* ofptr = handler() ? fdopen(handler()->get_handle(), "w") : stdout; 
  	  fileptr_filebuf obuf(ofptr, ios_base::out);
--#elif __GNUC__>3
-+#elif __GNUC__>3 || (__GNUC__==3 && __GNUC_MINOR__ >= 4)
+-#elif __GNUC__>3 || defined(__CYGWIN__)
++#elif __GNUC__>3 || defined(__CYGWIN__) || (__GNUC__==3 && __GNUC_MINOR__ >= 4)
            FILE* ofptr = handler() ? handler()->wrfptr() : stdout; 
  	  fileptr_filebuf obuf(ofptr, ios_base::out);
  #else

@@ -1,0 +1,26 @@
+$NetBSD: patch-bh,v 1.1 2010/04/05 22:52:23 markd Exp $
+
+--- config/site.def.DARWIN.orig	2005-10-07 16:51:19.000000000 +0000
++++ config/site.def.DARWIN
+@@ -83,15 +83,15 @@ clean::									@@\
+ #ifndef InstallDynamicSharedLibrary
+ #define InstallDynamicSharedLibrary(libname,rev,dest)			@@\
+ install:: Concat(lib,libname.rev.dylib)					@@\
+-	MakeDir(dest)                                                   @@\
+-	$(INSTALL) -c $(INSTLIBFLAGS) Concat(lib,libname.rev.dylib) dest   @@\
+-	-@$(RM) dest/Concat(lib,libname.dylib)		                @@\
+-	-@(cd dest;$(LN) Concat(lib,libname.rev.dylib) \			@@\
++	MakeDir($(DESTDIR)dest)                                                   @@\
++	$(INSTALL) -c $(INSTLIBFLAGS) Concat(lib,libname.rev.dylib) $(DESTDIR)dest   @@\
++	-@$(RM) $(DESTDIR)dest/Concat(lib,libname.dylib)		                @@\
++	-@(cd $(DESTDIR)dest;$(LN) Concat(lib,libname.rev.dylib) \			@@\
+ 	Concat(lib,libname.dylib))					        @@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) dest/Concat(lib,libname.rev.dylib)				@@\
+-	$(RM) dest/Concat(lib,libname.dylib)	
++	$(RM) $(DESTDIR)dest/Concat(lib,libname.rev.dylib)				@@\
++	$(RM) $(DESTDIR)dest/Concat(lib,libname.dylib)	
+ #endif
+ 
+ /* file output by configure script */

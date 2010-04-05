@@ -1,0 +1,27 @@
+$NetBSD: patch-bj,v 1.1 2010/04/05 22:52:23 markd Exp $
+
+--- config/site.def.HP800.orig	2003-10-22 18:13:39.000000000 +0000
++++ config/site.def.HP800
+@@ -50,15 +50,15 @@
+ #ifndef InstallDynamicSharedLibrary
+ #define InstallDynamicSharedLibrary(libname,rev,dest)			@@\
+ install:: Concat(lib,libname.sl.rev)					@@\
+-	MakeDir(dest)							@@\
+-	if [ -f dest/Concat(lib,libname.sl.rev) ]; then \		@@\
+-	$(RM) dest/Concat(lib,libname.sl.rev); else exit 0; fi		@@\
+-	$(INSTALL) -c -m555 Concat(lib,libname.sl.rev) dest   		@@\
+-	$(LN) dest/Concat(lib,libname.sl.rev) dest/Concat(lib,libname.sl)@@\
++	MakeDir($(DESTDIR)dest)							@@\
++	if [ -f $(DESTDIR)dest/Concat(lib,libname.sl.rev) ]; then \		@@\
++	$(RM) $(DESTDIR)dest/Concat(lib,libname.sl.rev); else exit 0; fi		@@\
++	$(INSTALL) -c -m555 Concat(lib,libname.sl.rev) $(DESTDIR)dest   		@@\
++	$(LN) $(DESTDIR)dest/Concat(lib,libname.sl.rev) $(DESTDIR)dest/Concat(lib,libname.sl)@@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) dest/Concat(lib,libname.sl.rev)				@@\
+-	$(RM) dest/Concat(lib,libname.sl)
++	$(RM) $(DESTDIR)dest/Concat(lib,libname.sl.rev)				@@\
++	$(RM) $(DESTDIR)dest/Concat(lib,libname.sl)
+ #endif
+ 
+ #undef BuildProgram

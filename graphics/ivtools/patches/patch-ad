@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.6 2006/07/24 12:04:26 markd Exp $
+$NetBSD: patch-ad,v 1.7 2010/04/05 22:52:23 markd Exp $
 
---- src/Dispatch/dispatcher.c.orig	2005-01-27 07:39:22.000000000 +1300
+--- src/Dispatch/dispatcher.c.orig	2009-09-15 16:36:12.000000000 +0000
 +++ src/Dispatch/dispatcher.c
 @@ -659,7 +659,7 @@ int Dispatcher::waitFor(
  #endif
  #else
  #ifdef SA_NOCLDSTOP                   /* POSIX */
--#if defined(hpux) || defined(linux) || defined(sun) && defined(__svr4__)
-+#if defined(hpux) || defined(linux) || defined(sun) && defined(__svr4__) || defined(__NetBSD__)
+-#if defined(__CYGWIN__) || defined(hpux) || defined(linux) || defined(sun) && defined(__svr4__)
++#if defined(__CYGWIN__) || defined(hpux) || defined(linux) || defined(sun) && defined(__svr4__) || defined(__NetBSD__)
  	sa.sa_handler = (void (*)(int))(&Dispatcher::sigCLD);
  #else
  	sa.sa_handler = fxSIGACTIONHANDLER(&Dispatcher::sigCLD);

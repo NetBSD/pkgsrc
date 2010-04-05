@@ -1,0 +1,191 @@
+$NetBSD: patch-be,v 1.1 2010/04/05 22:52:23 markd Exp $
+
+--- config/rules.def.orig	2005-10-11 21:21:17.000000000 +0000
++++ config/rules.def
+@@ -929,22 +929,22 @@ step::									@@\
+ #ifndef InstallDynamicSharedLibrary
+ #define InstallDynamicSharedLibrary(libname,rev,dest)			@@\
+ install:: Concat(lib,libname.so.rev)					@@\
+-	MakeDir(dest)							@@\
+-	$(INSTALL) -c $(INSTLIBFLAGS) Concat(lib,libname.so.rev) dest   @@\
++	MakeDir($(DESTDIR)dest)							@@\
++	$(INSTALL) -c $(INSTLIBFLAGS) Concat(lib,libname.so.rev) $(DESTDIR)dest   @@\
+ 									@@\
+ uninstall:: 								@@\
+-	$(RM) dest/Concat(lib,libname.so.rev)			
++	$(RM) $(DESTDIR)dest/Concat(lib,libname.so.rev)			
+ #endif
+ 
+ #ifndef InstallNonSharedLibrary
+ #define InstallNonSharedLibrary(libname,dest)				@@\
+ install:: Concat(lib,libname.a)						@@\
+-	MakeDir(dest)							@@\
+-	$(INSTALL) -c $(INSTLIBFLAGS) Concat(lib,libname.a) dest	@@\
+-	RanLibrary($(RANLIBINSTFLAGS) Concat(dest/lib,libname.a))       @@\
++	MakeDir($(DESTDIR)dest)							@@\
++	$(INSTALL) -c $(INSTLIBFLAGS) Concat(lib,libname.a) $(DESTDIR)dest	@@\
++	RanLibrary($(RANLIBINSTFLAGS) Concat($(DESTDIR)dest/lib,libname.a))       @@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) dest/Concat(lib,libname.a)
++	$(RM) $(DESTDIR)dest/Concat(lib,libname.a)
+ #endif
+ 
+ #ifndef InstallLibrary
+@@ -964,20 +964,20 @@ InstallNonSharedLibrary(libname,dest)
+ #if RemoveAfterInstall
+ #define InstallProgramWithFlags(program,destdir,destname,flags)		@@\
+ install:: program							@@\
+-	MakeDir(destdir)						@@\
+-	$(INSTALL) -c $(INSTPGMFLAGS) flags program destdir/destname	@@\
++	MakeDir($(DESTDIR)destdir)						@@\
++	$(INSTALL) -c $(INSTPGMFLAGS) flags program $(DESTDIR)destdir/destname	@@\
+ 	$(RM) program							@@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) destdir/destname
++	$(RM) $(DESTDIR)destdir/destname
+ #else
+ #define InstallProgramWithFlags(program,destdir,destname,flags)		@@\
+ install:: program							@@\
+-	MakeDir(destdir)						@@\
+-	$(INSTALL) -c $(INSTPGMFLAGS) flags program destdir/destname    @@\
++	MakeDir($(DESTDIR)destdir)						@@\
++	$(INSTALL) -c $(INSTPGMFLAGS) flags program $(DESTDIR)destdir/destname    @@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) destdir/destname
++	$(RM) $(DESTDIR)destdir/destname
+ #endif
+ #endif
+ 
+@@ -992,11 +992,11 @@ InstallProgramWithFlags(program,destdir,
+ #ifndef InstallScript
+ #define InstallScript(script,dest)					@@\
+ install:: script							@@\
+-	MakeDir(dest)							@@\
+-	$(INSTALL) -c $(INSTBINFLAGS) script dest			@@\
++	MakeDir($(DESTDIR)dest)							@@\
++	$(INSTALL) -c $(INSTBINFLAGS) script $(DESTDIR)dest			@@\
+ 									@@\
+ uninstall::								@@\
+-	dest/script
++	$(DESTDIR)dest/script
+ #endif
+ 
+ /*
+@@ -1005,11 +1005,11 @@ uninstall::								@@\
+ #ifndef InstallScriptAs
+ #define InstallScriptAs(script,dest,destname)				@@\
+ install:: script							@@\
+-	MakeDir(dest)							@@\
+-	$(INSTALL) -c $(INSTBINFLAGS) script dest/destname		@@\
++	MakeDir($(DESTDIR)dest)							@@\
++	$(INSTALL) -c $(INSTBINFLAGS) script $(DESTDIR)dest/destname		@@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) dest/destname		
++	$(RM) $(DESTDIR)dest/destname		
+ #endif
+ 
+ /*
+@@ -1018,14 +1018,14 @@ uninstall::								@@\
+ #ifndef InstallMultipleFlags
+ #define InstallMultipleFlags(list,dest,flags)				@@\
+ install:: list								@@\
+-	MakeDir(dest)							@@\
++	MakeDir($(DESTDIR)dest)							@@\
+ 	@for i in list; do \						@@\
+-		(set -x; $(INSTALL) -c flags $$i dest); \		@@\
++		(set -x; $(INSTALL) -c flags $$i $(DESTDIR)dest); \		@@\
+ 	done								@@\
+ 									@@\
+ uninstall::								@@\
+ 	@for i in list; do \						@@\
+-		($(RM) dest/$$i); \					@@\
++		($(RM) $(DESTDIR)dest/$$i); \					@@\
+ 	done
+ #endif
+ 
+@@ -1042,12 +1042,12 @@ InstallMultipleFlags(list,dest,$(INSTALL
+ install::  								@@\
+ 	@if [ -f libdir/libbase ]; then \				@@\
+ 	if [ ! -f dest/libbase ]; then \				@@\
+-		 $(LN) libdir/libbase dest/; \				@@\
+-		 echo $(LN) libdir/libbase dest/ \			@@\
++		 $(LN) libdir/libbase $(DESTDIR)dest/; \				@@\
++		 echo $(LN) libdir/libbase $(DESTDIR)dest/ \			@@\
+ 	;fi ;fi								@@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) dest/libbase
++	$(RM) $(DESTDIR)dest/libbase
+ #endif
+ 
+ /*
+@@ -1063,11 +1063,11 @@ install::								@@\
+ #else
+ #define InstallIncludes(dir)						@@\
+ install::								@@\
+-	MakeDir($(INCDIR)/dir)						@@\
+-	$(INSTALL) -c $(INSTINCFLAGS) *.h $(INCDIR)/dir			@@\
++	MakeDir($(DESTDIR)$(INCDIR)/dir)						@@\
++	$(INSTALL) -c $(INSTINCFLAGS) *.h $(DESTDIR)$(INCDIR)/dir			@@\
+ 									@@\
+ uninstall::								@@\
+-	(cd $(INCDIR)/dir;$(RM) *.h)
++	(cd $(DESTDIR)$(INCDIR)/dir;$(RM) *.h)
+ #endif
+ #endif
+ 
+@@ -1080,11 +1080,11 @@ install::								@@\
+ #else
+ #define InstallInclude(dir, file)					@@\
+ install::								@@\
+-	MakeDir($(INCDIR)/dir)						@@\
+-	$(INSTALL) -c $(INSTINCFLAGS) file $(INCDIR)/dir		@@\
++	MakeDir($(DESTDIR)$(INCDIR)/dir)						@@\
++	$(INSTALL) -c $(INSTINCFLAGS) file $(DESTDIR)$(INCDIR)/dir		@@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) $(INCDIR)/dir/file
++	$(RM) $(DESTDIR)$(INCDIR)/dir/file
+ #endif
+ #endif
+ 
+@@ -1095,19 +1095,19 @@ uninstall::								@@\
+ #if !defined(SVR4) && !defined(DarwinArchitecture)
+ #define InstallSymLink(dir, file)					@@\
+ install::								@@\
+-	MakeDir(dir)							@@\
+-	cp -fd file dir							@@\
++	MakeDir($(DESTDIR)dir)							@@\
++	cp -fd file $(DESTDIR)dir							@@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) dir/file	
++	$(RM) $(DESTDIR)dir/file	
+ #else
+ #define InstallSymLink(dir, file)					@@\
+ install::								@@\
+-	MakeDir(dir)							@@\
+-	tar cf - file | (cd dir; tar xfp -)				@@\
++	MakeDir($(DESTDIR)dir)							@@\
++	tar cf - file | (cd $(DESTDIR)dir; tar xfp -)				@@\
+ 									@@\
+ uninstall::								@@\
+-	$(RM) dir/file	
++	$(RM) $(DESTDIR)dir/file	
+ #endif
+ #endif	
+ #endif
+@@ -1119,7 +1119,7 @@ uninstall::								@@\
+ #ifndef InstallXDefaultAs                                        
+ #define InstallXDefaultAs(source,dest,destname)                          @@\
+ install:: source                                                         @@\
+-	MakeDir(dest)                                                    @@\
+-	$(INSTALL) -c $(INSTINCFLAGS) source dest/destname
++	MakeDir($(DESTDIR)dest)                                                    @@\
++	$(INSTALL) -c $(INSTINCFLAGS) source $(DESTDIR)dest/destname
+ #endif
+ 
