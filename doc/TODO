@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9166 2010/04/04 11:40:40 tron Exp $
+$NetBSD: TODO,v 1.9167 2010/04/05 18:12:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -487,7 +487,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o claws-mail-3.7.3
 	o climm-0.6.4
-	o clive-2.2.10
 	o cln-1.3.1
 	o clutter-1.2.2 [obache]
 	o clutter-1.2.4
