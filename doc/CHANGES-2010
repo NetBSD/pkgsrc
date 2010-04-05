@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1396 2010/04/04 22:24:22 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1397 2010/04/05 00:37:14 jakllsch Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1650,3 +1650,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/wireshark to 1.2.7 [tron 2010-04-04]
 	Updated www/ikiwiki to 3.20100403 [schmonz 2010-04-04]
 	Updated www/typolight28-translations to 20100404 [taca 2010-04-04]
+	Updated cross/avr-libc to 1.6.7nb1 [jakllsch 2010-04-05]
