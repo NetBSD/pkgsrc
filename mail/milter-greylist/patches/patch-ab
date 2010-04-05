@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.5 2010/04/05 23:00:42 tron Exp $
+
+Fix build with "flex" under NetBSD 5.99.* and newer.
+
+--- configure.orig	2009-08-14 01:31:15.000000000 +0100
++++ configure	2010-04-05 23:56:44.000000000 +0100
+@@ -3439,7 +3439,7 @@
+ { $as_echo "$as_me:$LINENO: checking if compiler accepts -Wall" >&5
+ $as_echo_n "checking if compiler accepts -Wall... " >&6; }
+ SAVEDCFLAGS=$CFLAGS
+-CFLAGS=$CFLAGS" -Wall"
++CFLAGS=$CFLAGS" -Wall -Wno-unused-label"
+ wall="no"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
