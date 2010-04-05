@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/08/27 15:32:15 hasso Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/04/05 00:36:42 jakllsch Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -490,8 +490,8 @@ share/doc/avr-libc/avr-libc-user-manual/group__util__parity.html
 share/doc/avr-libc/avr-libc-user-manual/group__util__setbaud.html
 share/doc/avr-libc/avr-libc-user-manual/group__util__twi.html
 share/doc/avr-libc/avr-libc-user-manual/index.html
-share/doc/avr-libc/avr-libc-user-manual/inline_asm.html
-share/doc/avr-libc/avr-libc-user-manual/install_tools.html
+share/doc/avr-libc/avr-libc-user-manual/inline__asm.html
+share/doc/avr-libc/avr-libc-user-manual/install__tools.html
 share/doc/avr-libc/avr-libc-user-manual/interrupt_8h.html
 share/doc/avr-libc/avr-libc-user-manual/inttypes_8h.html
 share/doc/avr-libc/avr-libc-user-manual/io_8h.html
@@ -505,7 +505,7 @@ share/doc/avr-libc/avr-libc-user-manual/malloc-x1.png
 share/doc/avr-libc/avr-libc-user-manual/malloc-x2.png
 share/doc/avr-libc/avr-libc-user-manual/malloc.html
 share/doc/avr-libc/avr-libc-user-manual/math_8h.html
-share/doc/avr-libc/avr-libc-user-manual/mem_sections.html
+share/doc/avr-libc/avr-libc-user-manual/mem__sections.html
 share/doc/avr-libc/avr-libc-user-manual/memccpy_8S.html
 share/doc/avr-libc/avr-libc-user-manual/memchr_8S.html
 share/doc/avr-libc/avr-libc-user-manual/memchr__P_8S.html
@@ -526,7 +526,7 @@ share/doc/avr-libc/avr-libc-user-manual/pgmspace.html
 share/doc/avr-libc/avr-libc-user-manual/pgmspace_8h.html
 share/doc/avr-libc/avr-libc-user-manual/porting.html
 share/doc/avr-libc/avr-libc-user-manual/power_8h.html
-share/doc/avr-libc/avr-libc-user-manual/release_method.html
+share/doc/avr-libc/avr-libc-user-manual/release__method.html
 share/doc/avr-libc/avr-libc-user-manual/releases.png
 share/doc/avr-libc/avr-libc-user-manual/setbaud_8h.html
 share/doc/avr-libc/avr-libc-user-manual/setjmp_8h.html
@@ -588,8 +588,8 @@ share/doc/avr-libc/avr-libc-user-manual/structldiv__t.html
 share/doc/avr-libc/avr-libc-user-manual/strupr_8S.html
 share/doc/avr-libc/avr-libc-user-manual/tabs.css
 share/doc/avr-libc/avr-libc-user-manual/todo.html
-share/doc/avr-libc/avr-libc-user-manual/using_avrprog.html
-share/doc/avr-libc/avr-libc-user-manual/using_tools.html
+share/doc/avr-libc/avr-libc-user-manual/using__avrprog.html
+share/doc/avr-libc/avr-libc-user-manual/using__tools.html
 share/doc/avr-libc/avr-libc-user-manual/util_2twi_8h.html
 share/doc/avr-libc/avr-libc-user-manual/wdt_8h.html
 share/doc/avr-libc/examples/asmdemo/Makefile
@@ -1143,9 +1143,9 @@ share/doc/avr-libc/man/man3/getchar.3
 share/doc/avr-libc/man/man3/gets.3
 share/doc/avr-libc/man/man3/hypot.3
 share/doc/avr-libc/man/man3/inb.3
-share/doc/avr-libc/man/man3/inline_asm.3
+share/doc/avr-libc/man/man3/inline__asm.3
 share/doc/avr-libc/man/man3/inp.3
-share/doc/avr-libc/man/man3/install_tools.3
+share/doc/avr-libc/man/man3/install__tools.3
 share/doc/avr-libc/man/man3/int16_t.3
 share/doc/avr-libc/man/man3/int32_t.3
 share/doc/avr-libc/man/man3/int64_t.3
@@ -1198,7 +1198,7 @@ share/doc/avr-libc/man/man3/lround.3
 share/doc/avr-libc/man/man3/ltoa.3
 share/doc/avr-libc/man/man3/malloc.3
 share/doc/avr-libc/man/man3/math.h.3
-share/doc/avr-libc/man/man3/mem_sections.3
+share/doc/avr-libc/man/man3/mem__sections.3
 share/doc/avr-libc/man/man3/memccpy.3
 share/doc/avr-libc/man/man3/memccpy.S.3
 share/doc/avr-libc/man/man3/memchr.3
@@ -1272,7 +1272,7 @@ share/doc/avr-libc/man/man3/rand_r.3
 share/doc/avr-libc/man/man3/random.3
 share/doc/avr-libc/man/man3/random_r.3
 share/doc/avr-libc/man/man3/realloc.3
-share/doc/avr-libc/man/man3/release_method.3
+share/doc/avr-libc/man/man3/release__method.3
 share/doc/avr-libc/man/man3/rem.3
 share/doc/avr-libc/man/man3/reti.3
 share/doc/avr-libc/man/man3/round.3
@@ -1435,8 +1435,8 @@ share/doc/avr-libc/man/man3/uintmax_t.3
 share/doc/avr-libc/man/man3/uintptr_t.3
 share/doc/avr-libc/man/man3/ultoa.3
 share/doc/avr-libc/man/man3/ungetc.3
-share/doc/avr-libc/man/man3/using_avrprog.3
-share/doc/avr-libc/man/man3/using_tools.3
+share/doc/avr-libc/man/man3/using__avrprog.3
+share/doc/avr-libc/man/man3/using__tools.3
 share/doc/avr-libc/man/man3/util_atomic.3
 share/doc/avr-libc/man/man3/util_crc.3
 share/doc/avr-libc/man/man3/util_delay.3
