@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1399 2010/04/05 18:12:33 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.1400 2010/04/05 18:14:42 wiz Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1653,3 +1653,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated cross/avr-libc to 1.6.7nb1 [jakllsch 2010-04-05]
 	Updated www/typolight28-translations to 20100405 [taca 2010-04-05]
 	Updated net/clive to 2.2.11 [wiz 2010-04-05]
+	Updated net/youtube-dl to 20100404 [wiz 2010-04-05]

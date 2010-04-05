@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9167 2010/04/05 18:12:33 wiz Exp $
+$NetBSD: TODO,v 1.9168 2010/04/05 18:14:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1542,7 +1542,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yafc-1.1
 	o yelp-2.30.0 [GNOME 2.30]
 	o yodl-2.14.3
-	o youtube-dl-20100313
 	o ysm-2.9.9.1
 	o yudit-2.9.2
 	o yorick-2.1.05
