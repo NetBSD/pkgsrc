@@ -1,0 +1,77 @@
+$NetBSD: patch-as,v 1.1 2010/04/06 04:36:00 dsainty Exp $
+
+Casts to va_list are forbidden by ISO C++.  Even if everything works as
+intended, the format string parser that generates the va_list does not support
+all formatting characters.
+
+Make this code portable by failing to parse any format string at all, not just
+the ones that aren't fully supported.
+
+--- SrcShared/HostControl.cpp.orig	2010-04-06 15:17:21.970083672 +1200
++++ SrcShared/HostControl.cpp	2010-04-06 15:22:12.868914553 +1200
+@@ -143,8 +143,10 @@
+ 
+ static HostHandler	PrvHostGetHandler		(HostControlSelectorType selector);
+ 
++#ifdef ILLEGAL_VA_LIST_CASTS
+ static Bool 		PrvCollectParameters	(EmSubroutine& sub, const string& fmt,
+ 											 ByteList& stackData, StringList& stringData);
++#endif /* ILLEGAL_VA_LIST_CASTS */
+ static void 		PrvPushShort			(EmSubroutine& sub, ByteList& stackData);
+ static void 		PrvPushLong				(EmSubroutine& sub, ByteList& stackData);
+ static void 		PrvPushDouble			(EmSubroutine& sub, ByteList& stackData);
+@@ -228,6 +230,7 @@
+ 	return fgets (s, n, f);
+ }
+ 
++#ifdef ILLEGAL_VA_LIST_CASTS
+ inline int x_vfprintf (FILE* f, const char* fmt, va_list args)
+ {
+ 	if (f == hostLogFILE)
+@@ -237,6 +240,7 @@
+ 
+ 	return vfprintf (f, fmt, args);
+ }
++#endif /* ILLEGAL_VA_LIST_CASTS */
+ 
+ inline int x_fputc (int c, FILE* f)
+ {
+@@ -1119,11 +1123,14 @@
+ 	ByteList	stackData;
+ 	StringList stringData;
+ 
++#ifdef ILLEGAL_VA_LIST_CASTS
+ 	if (!::PrvCollectParameters (sub, string (fmt), stackData, stringData))
+ 	{
++#endif /* ILLEGAL_VA_LIST_CASTS */
+ 		PUT_RESULT_VAL (long, EOF);
+ 		errno = hostErrInvalidParameter;
+ 		return;
++#ifdef ILLEGAL_VA_LIST_CASTS
+ 	}
+ 
+ 	// Write everything out to the file using vfprintf.
+@@ -1133,6 +1140,7 @@
+ 	// Return the result.
+ 
+ 	PUT_RESULT_VAL (long, result);
++#endif /* ILLEGAL_VA_LIST_CASTS */
+ }
+ 
+ 
+@@ -4190,6 +4198,7 @@
+ //		¥ PrvCollectParameters
+ // ---------------------------------------------------------------------------
+ 
++#ifdef ILLEGAL_VA_LIST_CASTS
+ Bool PrvCollectParameters (EmSubroutine& sub, const string& fmt, ByteList& stackData, StringList& stringData)
+ {
+ 	// Start parsing up the format string.
+@@ -4473,6 +4482,7 @@
+ 	stackData.insert (stackData.end (), sizeof (char*), 0); // Make space for a "char*"
+ 	*(const char**) &stackData[oldSize] = (*(stringData.end () - 1)).c_str ();
+ }
++#endif /* ILLEGAL_VA_LIST_CASTS */
+ 
+ 
+ // ---------------------------------------------------------------------------
