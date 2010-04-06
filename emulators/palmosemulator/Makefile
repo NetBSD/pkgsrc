@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2010/02/15 16:17:29 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2010/04/06 04:36:00 dsainty Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
 PKGNAME=	palmosemulator-${POSE_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://www.palmos.com/dev/tools/emulator/sources/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -15,8 +15,6 @@ COMMENT=	Palm OS Emulator
 #LICENSE=       GPL
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-BROKEN=		Casts to va_list are forbidden by ISO C++.
 
 POSE_VERSION=	3.5
 
@@ -43,9 +41,6 @@ CONFIGURE_ARGS+=	--with-fltk=${BUILDLINK_PREFIX.fltk}
 CONFIGURE_ENV+=		PACKAGE_SKINS_DIR=${POSE_SKINS_DIR:Q}
 
 REPLACE_PERL=	Scripting/Perl/*.pl
-
-# Assumes too much about how to build va_list's from scratch
-NOT_FOR_PLATFORM=	*-*-powerpc
 
 INSTALLATION_DIRS=	bin ${POSE_SHARE_DIR}/docs ${POSE_SHARE_DIR}/scripting
 INSTALLATION_DIRS+=	${POSE_SHARE_DIR}/prc ${POSE_SKINS_DIR}
