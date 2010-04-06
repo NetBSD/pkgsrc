@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1401 2010/04/05 22:54:57 markd Exp $
+$NetBSD: CHANGES-2010,v 1.1402 2010/04/06 00:16:21 taca Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1655,3 +1655,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated net/clive to 2.2.11 [wiz 2010-04-05]
 	Updated net/youtube-dl to 20100404 [wiz 2010-04-05]
 	Updated graphics/ivtools to 1.2.8 [markd 2010-04-05]
+	Updated time/ruby-tzinfo to 0.3.19 [taca 2010-04-06]
