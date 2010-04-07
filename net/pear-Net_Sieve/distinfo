@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/02/03 11:48:04 obache Exp $
+$NetBSD: distinfo,v 1.3 2010/04/07 08:41:54 obache Exp $
 
-SHA1 (pear/Net_Sieve-1.1.7.tgz) = 0182585a225976c1ed7737a1551d093d6c9e1e55
-RMD160 (pear/Net_Sieve-1.1.7.tgz) = dac2c7048acb7e721b6b2808feb484519f9f9e72
-Size (pear/Net_Sieve-1.1.7.tgz) = 13855 bytes
+SHA1 (pear/Net_Sieve-1.2.0.tgz) = 24ba3d1f82db7ae2eede5a3965bf5b0e6e2f5da8
+RMD160 (pear/Net_Sieve-1.2.0.tgz) = 437d66de98cbf77069884243596bb95b3cf9ee94
+Size (pear/Net_Sieve-1.2.0.tgz) = 13936 bytes
