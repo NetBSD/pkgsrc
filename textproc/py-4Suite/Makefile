@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/16 22:31:04 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/07 18:19:42 joerg Exp $
 #
 
 VER=		1.0.2
@@ -13,6 +13,8 @@ COMMENT=	Open-source platform for XML and RDF processing
 LICENSE=	apache-1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PYDISTUTILSPKG= yes
 
