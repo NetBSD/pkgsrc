@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.12.2.1 2010/04/07 10:10:51 tron Exp $
+
+Make this pkgsrc friedly.
+
+--- libclamav/c++/llvm/utils/buildit/build_llvm.orig	2010-04-01 12:29:52.000000000 +0300
++++ libclamav/c++/llvm/utils/buildit/build_llvm	2010-04-01 12:30:04.000000000 +0300
+@@ -232,7 +232,7 @@
+     LLVM_SUBMIT_SUBVERSION=$LLVM_SUBMIT_SUBVERSION \
+     OPTIMIZE_OPTION='-O3' VERBOSE=1 install
+ 
+-if ! test $? == 0 ; then
++if ! test $? = 0 ; then
+     echo "error: LLVM 'make install' failed!"
+     exit 1
+ fi 

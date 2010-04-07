@@ -1,6 +1,10 @@
---- libclamav/others.h.orig	2010-01-06 19:05:29 -1000
-+++ libclamav/others.h	2010-01-06 19:05:39 -1000
-@@ -29,6 +29,7 @@
+$NetBSD: patch-ag,v 1.3.2.1 2010/04/07 10:10:51 tron Exp $
+
+Fix compileation error DragonFly.
+
+--- libclamav/others.h.orig	2010-03-31 19:39:38.000000000 +0300
++++ libclamav/others.h	2010-04-01 12:24:33.000000000 +0300
+@@ -33,6 +33,7 @@
  
  #include <stdio.h>
  #include <stdlib.h>

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.milter,v 1.4.40.1 2010/04/07 10:10:50 tron Exp $
+sbin/clamav-milter
+share/examples/clamav/clamav-milter.conf
