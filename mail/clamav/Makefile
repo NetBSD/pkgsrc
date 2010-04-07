@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.98 2009/12/15 21:54:17 joerg Exp $
+# $NetBSD: Makefile,v 1.98.2.1 2010/04/07 10:10:50 tron Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
-MAINTAINER=	grant@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clamav.net/
 COMMENT=	Anti-virus toolkit
 
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CLAMAV_VERSION=		0.95.3
+CLAMAV_VERSION=		0.96
 
 USE_LIBTOOL=		yes
 
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_SRC+=		${PKGDIR}/PLIST
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.*)
 CONFIGURE_ARGS+=	--disable-readdir-r
