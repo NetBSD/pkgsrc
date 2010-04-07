@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2009/06/14 20:52:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.36 2010/04/07 17:52:04 joerg Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -7364,8 +7364,6 @@ share/kde/applnk/System/ScreenSavers/halftone.desktop
 share/kde/applnk/System/ScreenSavers/halo.desktop
 share/kde/applnk/System/ScreenSavers/helix.desktop
 share/kde/applnk/System/ScreenSavers/hopalong.desktop
-share/kde/applnk/System/ScreenSavers/hyperball.desktop
-share/kde/applnk/System/ScreenSavers/hypercube.desktop
 share/kde/applnk/System/ScreenSavers/hypertorus.desktop
 share/kde/applnk/System/ScreenSavers/ifs.desktop
 share/kde/applnk/System/ScreenSavers/imsmap.desktop
@@ -7374,7 +7372,6 @@ share/kde/applnk/System/ScreenSavers/interference.desktop
 share/kde/applnk/System/ScreenSavers/intermomentary.desktop
 share/kde/applnk/System/ScreenSavers/jigglypuff.desktop
 share/kde/applnk/System/ScreenSavers/jigsaw.desktop
-share/kde/applnk/System/ScreenSavers/juggle.desktop
 share/kde/applnk/System/ScreenSavers/juggler3d.desktop
 share/kde/applnk/System/ScreenSavers/julia.desktop
 share/kde/applnk/System/ScreenSavers/kaleidescope.desktop
