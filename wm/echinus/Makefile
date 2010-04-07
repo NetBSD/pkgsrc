@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2010/02/10 12:32:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2010/04/07 08:11:36 obache Exp $
 #
 
-DISTNAME=	echinus-0.4.0
+DISTNAME=	echinus-0.4.3
 CATEGORIES=	wm
-MASTER_SITES=	http://www.rootshell.be/~polachok/code/
+MASTER_SITES=	http://www.plhk.ru/static/echinus/
 
 MAINTAINER=	polachok@gmail.com
-HOMEPAGE=	http://www.rootshell.be/~polachok/code/
-COMMENT=	Lightweight tiling window manager
+HOMEPAGE=	http://www.plhk.ru/echinus
+COMMENT=	Simple and lightweight tiling window manager
 LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
