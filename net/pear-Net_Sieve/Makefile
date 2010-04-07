@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2010/02/03 11:48:04 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/07 08:41:54 obache Exp $
 
-DISTNAME=	Net_Sieve-1.1.7
+DISTNAME=	Net_Sieve-1.2.0
 CATEGORIES+=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +11,8 @@ LICENSE=	modified-bsd
 CONFLICTS=	php-pear-Net_Sieve-[0-9]*
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_Socket>=1.0.0:../../net/pear-Net_Socket
+# optional for DIGEST-MD5 and CRAM-MD5 SASL Authentication
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Auth_SASL>=1.0.0:../../mail/pear-Auth_SASL
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
