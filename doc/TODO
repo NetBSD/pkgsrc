@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9170 2010/04/07 06:19:46 obache Exp $
+$NetBSD: TODO,v 1.9171 2010/04/07 07:39:28 obache Exp $
 
 Suggested new packages
 ======================
@@ -487,10 +487,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o claws-mail-3.7.3
 	o climm-0.6.4
-	o clive-2.2.11 [pkg/43111]
 	o cln-1.3.1
-	o clutter-1.2.2 [obache]
-	o clutter-1.2.4
+	o clutter-1.2.4 [obache]
+	o clutter-gtk-0.10.4 [obache, wait for gtk2+>=2.19.5]
 	o colorize-0.3.4
 	o cone-0.78 [pkg/41623]
 	o cone-0.80
@@ -988,7 +987,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o midori-0.2.3
 	o milkytracker-0.90.85
 	o mined-2000.16
-	o ming-0.4.3
+	o ming-0.4.3 [obache]
 	o minicom-2.4
 	o minivmac-3.0.4
 	o miredo-1.1.7
@@ -1170,6 +1169,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-bsddb3-4.8.4
 	o py-checker-0.8.17
 	o py-cups-1.9.49
+	o py-clutter-1.0.2 [obache]
 	o py-dbus-0.83.1
 	o py-enchant-1.6.1 [pkg/42927]
 	o py-fpconst-0.7.2 [pkg/42556]
@@ -1250,7 +1250,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-jsmin-1.0.1
 	o ruby-logging-1.3.0
 	o ruby-mechanize-1.0.0
-	o ruby-ming-0.2.1
+	o ruby-ming-0.2.1 [obache]
 	o ruby-mocha-0.9.8
 	o ruby-opengl-0.60.1
 	o ruby-parsetree-3.0.3
@@ -1434,7 +1434,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wwwoffle-2.9f
 	o wxRemind-101
 	o wyrd-1.4.4
-	o x11vnc-0.9.9
 	o x264-devel-20100328
 	o xanalyser-1.30
 	o xaric-0.13.2
