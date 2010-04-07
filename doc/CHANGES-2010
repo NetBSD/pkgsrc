@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1406 2010/04/07 08:11:57 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1407 2010/04/07 08:42:08 obache Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1660,3 +1660,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typolight28-translations to 20100406 [taca 2010-04-06]
 	Updated www/mediawiki to 1.15.3 [martti 2010-04-07]
 	Updated wm/echinus to 0.4.3 [obache 2010-04-07]
+	Updated net/pear-Net_Sieve to 1.2.0 [obache 2010-04-07]
