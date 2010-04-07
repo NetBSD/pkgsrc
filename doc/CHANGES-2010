@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1404 2010/04/06 22:30:51 taca Exp $
+$NetBSD: CHANGES-2010,v 1.1405 2010/04/07 05:40:24 martti Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1658,3 +1658,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated time/ruby-tzinfo to 0.3.19 [taca 2010-04-06]
 	Updated comms/jpilot to 1.6.0nb4 [sbd 2010-04-06]
 	Updated www/typolight28-translations to 20100406 [taca 2010-04-06]
+	Updated www/mediawiki to 1.15.3 [martti 2010-04-07]
