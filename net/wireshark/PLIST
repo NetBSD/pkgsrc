@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/04/04 11:40:25 tron Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/04/08 10:03:31 adam Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -9,7 +9,7 @@ bin/randpkt
 bin/rawshark
 bin/text2pcap
 bin/tshark
-${PLIST.x11}bin/wireshark
+${PLIST.gtk2}bin/wireshark
 lib/libwireshark.la
 lib/libwiretap.la
 lib/libwsutil.la
@@ -39,7 +39,7 @@ man/man1/mergecap.1
 man/man1/rawshark.1
 man/man1/text2pcap.1
 man/man1/tshark.1
-${PLIST.x11}man/man1/wireshark.1
+${PLIST.gtk2}man/man1/wireshark.1
 man/man4/wireshark-filter.4
 share/wireshark/AUTHORS-SHORT
 share/wireshark/COPYING
