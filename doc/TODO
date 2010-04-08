@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9173 2010/04/07 08:16:58 wiz Exp $
+$NetBSD: TODO,v 1.9174 2010/04/08 15:33:11 taca Exp $
 
 Suggested new packages
 ======================
@@ -1353,6 +1353,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sun-jdk6-6.0.19
 	o sun-jre6-6.0.19
 	o suse_base-11.0
+	o sylpheed-3.0.2
 	o sympa-6.0.1
 	o sysinfo-4.2.2
 	o system-tools-backends-2.8.3 [needs polkit>=1.0?|GNOME 2.28]
@@ -1408,6 +1409,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucarp-1.5.1
 	o ucblogo-5.5
 	o udunits-1.12.9
+	o umefont-0.414
 	o unrealircd-3.2.8.1
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
