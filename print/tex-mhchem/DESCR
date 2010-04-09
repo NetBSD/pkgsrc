@@ -1,0 +1,8 @@
+Currently, the mhchem bundle consists of two packages: mhchem
+and rsphrase. The mhchem package provides two commands: one for
+typesetting chemical molecular formulae and one for typesetting
+chemical equations with these formulae. The rsphrase package
+contains the text of all official Risk and Safety (R and S)
+Phrases that are used to label chemicals. At the time being,
+these phrases are available in Danish, English, French, German
+(current spelling), and Spanish.
