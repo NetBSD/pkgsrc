@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/12/13 13:11:55 obache Exp $
+$NetBSD: distinfo,v 1.5 2010/04/09 01:46:49 obache Exp $
 
-SHA1 (libotf-0.9.10.tar.gz) = 590ecb9193926571f1099160f49a376813a8b48a
-RMD160 (libotf-0.9.10.tar.gz) = 09374435e4897a346d99a7597662e5318aa143ce
-Size (libotf-0.9.10.tar.gz) = 350772 bytes
+SHA1 (libotf-0.9.11.tar.gz) = e20889a163ecb336ddc827814a21a3ba76dbc1fc
+RMD160 (libotf-0.9.11.tar.gz) = 986922e9eb6b52d84fb6141428903143b7a8269f
+Size (libotf-0.9.11.tar.gz) = 360687 bytes
