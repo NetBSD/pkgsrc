@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/02/10 15:27:57 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2010/04/09 23:44:28 gdt Exp $
 
 DISTNAME=	Image-ExifTool-${VERSION}
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=	Perl module and program to read EXIF information
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Author requests that we package only "production" versions.
-VERSION=	8.10
+VERSION=	8.15
 
 PERL5_PACKLIST=	auto/Image/ExifTool/.packlist
 
