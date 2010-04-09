@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2010/01/29 18:57:32 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2010/04/09 22:04:37 markd Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -20,6 +20,7 @@ DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
 DEPENDS+=	tex-amscls-[0-9]*:../../print/tex-amscls
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
+DEPENDS+=	tex-beamer-[0-9]*:../../print/tex-beamer
 DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
 DEPENDS+=	tex-caption-[0-9]*:../../print/tex-caption
 DEPENDS+=	tex-carlisle-[0-9]*:../../print/tex-carlisle
@@ -104,6 +105,7 @@ DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-txfonts-[0-9]*:../../fonts/tex-txfonts
 DEPENDS+=	tex-type1cm-[0-9]*:../../print/tex-type1cm
 DEPENDS+=	tex-wasy-[0-9]*:../../fonts/tex-wasy
+DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 DEPENDS+=	tex-zapfding-[0-9]*:../../fonts/tex-zapfding
 
@@ -186,6 +188,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/generic/[a-f]*
 	rm -rf ${WRKSRC}/doc/generic/xk*
 	rm -rf ${WRKSRC}/doc/latex/a[f-m]*
+	rm -rf ${WRKSRC}/doc/latex/beamer
 	rm -rf ${WRKSRC}/doc/latex/ca*
 	rm -rf ${WRKSRC}/doc/latex/enumitem
 	rm -rf ${WRKSRC}/doc/latex/exam
@@ -214,6 +217,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/tools
 	rm -rf ${WRKSRC}/doc/latex/ty*
 	rm -rf ${WRKSRC}/doc/latex/wasysym/wasydoc.dvi
+	rm -rf ${WRKSRC}/doc/latex/xcolor
 	rm -rf ${WRKSRC}/doc/makeindex
 	rm -rf ${WRKSRC}/doc/pdftex
 	rm -rf ${WRKSRC}/dvips/[b-l]*
@@ -312,6 +316,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/ae
 	rm -rf ${WRKSRC}/tex/latex/a[f-m]*
 	rm -rf ${WRKSRC}/tex/latex/base
+	rm -rf ${WRKSRC}/tex/latex/beamer
 	rm -rf ${WRKSRC}/tex/latex/bo[a-np-z]*
 	rm -rf ${WRKSRC}/tex/latex/ca[m-z]*
 	rm -rf ${WRKSRC}/tex/latex/carlisle
@@ -368,6 +373,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/ulem
 	rm -rf ${WRKSRC}/tex/latex/url
 	rm -rf ${WRKSRC}/tex/latex/version
+	rm -rf ${WRKSRC}/tex/latex/xcolor
 	rm -rf ${WRKSRC}/tex/latex/xk*
 	rm -rf ${WRKSRC}/tex/plain/amsfonts
 	rm -f ${WRKSRC}/tex/plain/base/[gmp-z]*
