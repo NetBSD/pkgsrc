@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2010/01/17 11:53:40 wiz Exp $
+$NetBSD: distinfo,v 1.11 2010/04/09 20:00:02 drochner Exp $
 
-SHA1 (jpegsrc.v8.tar.gz) = 1324834b52428d57479faa062f8b2d98d755d85e
-RMD160 (jpegsrc.v8.tar.gz) = f6a11317fd48e388ab034fcd5d66e00e77e8470b
-Size (jpegsrc.v8.tar.gz) = 961697 bytes
+SHA1 (jpegsrc.v8a.tar.gz) = 78077fb22f0b526a506c21199fbca941d5c671a9
+RMD160 (jpegsrc.v8a.tar.gz) = cdf6c356ea1a631e37256893e80206ad6ecc3fab
+Size (jpegsrc.v8a.tar.gz) = 962018 bytes
 SHA1 (patch-af) = 5faed54759b871cc12447364d8b21b2fc05ecc15
 SHA1 (patch-ag) = 04d5977ad490c4ba9b2a38a8e22bc23b50359656
