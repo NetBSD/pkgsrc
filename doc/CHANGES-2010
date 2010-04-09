@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1427 2010/04/09 09:46:43 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.1428 2010/04/09 10:17:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1687,3 +1687,5 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/recordproto to 1.14 [tnn 2010-04-09]
 	Updated devel/xorg-util-macros to 1.7.0 [tnn 2010-04-09]
 	Updated mail/sylpheed to 3.0.2 [tnn 2010-04-09]
+	Updated www/typo3 to 4.3.3 [taca 2010-04-09]
+	Updated mail/pear-Mail_Mime to 1.6.2 [taca 2010-04-09]
