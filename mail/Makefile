@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.393 2010/03/12 22:46:08 pettai Exp $
+# $NetBSD: Makefile,v 1.394 2010/04/09 12:41:32 obache Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -143,6 +143,7 @@ SUBDIR+=	metamail
 SUBDIR+=	mew
 SUBDIR+=	mhonarc
 SUBDIR+=	milter-greylist
+SUBDIR+=	milter-manager
 SUBDIR+=	milter-regex
 SUBDIR+=	mimedefang
 SUBDIR+=	mini_sendmail
