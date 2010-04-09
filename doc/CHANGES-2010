@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1432 2010/04/09 22:28:03 markd Exp $
+$NetBSD: CHANGES-2010,v 1.1433 2010/04/09 23:44:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1717,3 +1717,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added print/tex-wallpaper version 1.10 [markd 2010-04-09]
 	Added print/tex-xcolor version 2.11 [markd 2010-04-09]
 	Added print/tex-xfor version 1.05 [markd 2010-04-09]
+	Updated graphics/p5-Image-ExifTool to 8.15 [gdt 2010-04-09]
