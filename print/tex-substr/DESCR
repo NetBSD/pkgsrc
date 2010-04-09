@@ -1,0 +1,5 @@
+The substr package provides commands to deal with substrings of
+strings. Macros are provided to: - determine if one string is a
+substring of another, - return the parts of a string before or
+after a substring and - count the number of occurrences of a
+substring.
