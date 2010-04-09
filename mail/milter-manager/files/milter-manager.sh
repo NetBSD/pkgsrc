@@ -1,4 +1,7 @@
 #! @RCD_SCRIPTS_SHELL@
+#
+# $NetBSD: milter-manager.sh,v 1.2 2010/04/09 12:45:12 obache Exp $
+#
 
 # PROVIDE: milter-manager
 # REQUIRE: LOGIN
