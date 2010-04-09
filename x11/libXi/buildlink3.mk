@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:45 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/04/09 08:46:32 tnn Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -11,7 +11,7 @@ BUILDLINK_TREE+=	libXi
 .if !defined(LIBXI_BUILDLINK3_MK)
 LIBXI_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libXi+=	libXi>=1.0.0
+BUILDLINK_API_DEPENDS.libXi+=	libXi>=1.3
 BUILDLINK_PKGSRCDIR.libXi?=	../../x11/libXi
 
 .include "../../x11/inputproto/buildlink3.mk"
