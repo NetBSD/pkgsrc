@@ -1,0 +1,4 @@
+The package redefines the LaTeX internal \@for macro so that
+the loop may be prematurely terminated. The action is akin to
+the C/Java break statement, except that the loop does not
+terminate until the end of the current iteration
