@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/01/24 13:26:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2010/04/09 01:48:25 obache Exp $
 #
 
-DISTNAME=	m17n-lib-1.5.5
-PKGREVISION=	1
+DISTNAME=	m17n-lib-1.6.0
 CATEGORIES=	devel converters editors inputmethod textproc time
 MASTER_SITES=	http://www.m17n.org/m17n-lib-download/
 
