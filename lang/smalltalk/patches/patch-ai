@@ -1,0 +1,70 @@
+$NetBSD: patch-ai,v 1.1 2010/04/09 01:54:21 obache Exp $
+
+hack to build with GMP 5
+http://git.savannah.gnu.org/gitweb/?p=smalltalk.git;a=commit;h=04ac00a8126a0b328e231e01ab4b257b28c5da3c
+
+--- libgst/mpz.c.orig	2008-09-18 07:50:57.000000000 +0000
++++ libgst/mpz.c
+@@ -1511,13 +1511,21 @@ _gst_mpz_xor (gst_mpz *res, const gst_mp
+   }
+ }
+ 
++#if __GNU_MP_VERSION >= 5
++extern void __gmpn_divexact (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
++#endif
++
+ void
+ _gst_mpz_divexact (gst_mpz *quot, const gst_mpz *num, const gst_mpz *den)
+ {
+-  mp_ptr qp, tp;
++  mp_ptr qp;
+   mp_srcptr np, dp;
+-  mp_size_t nsize, dsize, qsize, d_zero_limbs;
++  mp_size_t nsize, dsize, qsize;
++#if __GNU_MP_VERSION < 5
++  mp_ptr tp;
++  mp_size_t d_zero_limbs;
+   int d_zero_bits;
++#endif
+ 
+   nsize = ABS (num->size);
+   dsize = ABS (den->size);
+@@ -1540,6 +1548,7 @@ _gst_mpz_divexact (gst_mpz *quot, const 
+       return;
+     }
+ 
++#if __GNU_MP_VERSION < 5
+   /* Avoid quadratic behaviour, but do it conservatively.  */
+   if (nsize - dsize > 1500)
+     {
+@@ -1558,6 +1567,7 @@ _gst_mpz_divexact (gst_mpz *quot, const 
+   dsize -= d_zero_limbs;
+   np += d_zero_limbs;
+   nsize -= d_zero_limbs;
++#endif
+ 
+   /* Allocate where we place the result.  It must be nsize limbs big
+      because it also acts as a temporary area.  */
+@@ -1565,6 +1575,7 @@ _gst_mpz_divexact (gst_mpz *quot, const 
+     gst_mpz_realloc (quot, nsize);
+   qp = quot->d;
+ 
++#if __GNU_MP_VERSION < 5
+   if (d_zero_bits != 0)
+     {
+       tp = (mp_ptr) alloca (dsize * SIZEOF_MP_LIMB_T);
+@@ -1577,9 +1588,14 @@ _gst_mpz_divexact (gst_mpz *quot, const 
+     }
+   else
+     MPN_COPY(qp, np, nsize);
++#endif
+ 
+   qsize = nsize - dsize + 1;
++#if __GNU_MP_VERSION < 5
+   mpn_bdivmod (qp, qp, nsize, dp, dsize, qsize * GMP_NUMB_BITS);
++#else
++  __gmpn_divexact (qp, np, nsize, dp, dsize);
++#endif
+   quot->size = (num->size ^ den->size) >= 0 ? qsize : -qsize;
+ }
+ 
