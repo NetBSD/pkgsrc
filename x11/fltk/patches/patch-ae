@@ -1,17 +1,17 @@
-$NetBSD: patch-ae,v 1.7 2008/11/16 07:13:37 dsainty Exp $
+$NetBSD: patch-ae,v 1.8 2010/04/09 13:35:42 obache Exp $
 
---- fluid/Makefile.orig	2008-02-27 04:26:08.000000000 +1300
-+++ fluid/Makefile	2008-11-16 19:22:46.000000000 +1300
-@@ -57,7 +57,7 @@
- fluid$(EXEEXT):		$(OBJECTS) ../lib/$(LIBNAME) ../lib/$(FLLIBNAME) \
- 			../lib/$(IMGLIBNAME)
+--- fluid/Makefile.orig	2008-12-29 20:21:29.000000000 +0000
++++ fluid/Makefile
+@@ -57,7 +57,7 @@ all:	$(FLUID) fluid$(EXEEXT)
+ fluid$(EXEEXT):		$(OBJECTS) $(LIBNAME) $(FLLIBNAME) \
+ 			$(IMGLIBNAME)
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(OBJECTS) $(LINKFLTKFORMS) $(LINKFLTKIMG) $(LDLIBS)
 +	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(OBJECTS:.o=.lo) $(LINKFLTKFORMS) $(LINKFLTKIMG) $(LDLIBS)
  	$(OSX_ONLY) $(INSTALL_BIN) fluid fluid.app/Contents/MacOS
  	$(POSTBUILD) $@ ../FL/mac.r
  
-@@ -81,7 +81,7 @@
+@@ -81,7 +81,7 @@ include makedepend
  install: all
  	echo "Installing FLUID in $(DESTDIR)$(bindir)..."
  	-$(INSTALL_DIR) $(DESTDIR)$(bindir)
