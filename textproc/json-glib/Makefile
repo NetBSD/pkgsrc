@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/03/02 11:13:26 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/09 01:41:19 obache Exp $
 #
 
-DISTNAME=	json-glib-0.10.2
+DISTNAME=	json-glib-0.10.4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/json-glib/0.10/}
 
