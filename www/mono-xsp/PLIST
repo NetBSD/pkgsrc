@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/02/16 17:47:26 kefren Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/04/09 15:58:36 kefren Exp $
 bin/asp-state
 bin/asp-state1
 bin/asp-state2
@@ -26,18 +26,18 @@ lib/mono/gac/Mono.WebServer/0.1.0.0__0738eb9f132ed756/Mono.WebServer.dll
 lib/mono/gac/Mono.WebServer/0.1.0.0__0738eb9f132ed756/Mono.WebServer.dll.mdb
 lib/mono/gac/Mono.WebServer2/0.2.0.0__0738eb9f132ed756/Mono.WebServer2.dll
 lib/mono/gac/Mono.WebServer2/0.2.0.0__0738eb9f132ed756/Mono.WebServer2.dll.mdb
-lib/mono/gac/fastcgi-mono-server/2.6.0.0__0738eb9f132ed756/fastcgi-mono-server.exe
-lib/mono/gac/fastcgi-mono-server/2.6.0.0__0738eb9f132ed756/fastcgi-mono-server.exe.mdb
-lib/mono/gac/fastcgi-mono-server2/2.6.0.0__0738eb9f132ed756/fastcgi-mono-server2.exe
-lib/mono/gac/fastcgi-mono-server2/2.6.0.0__0738eb9f132ed756/fastcgi-mono-server2.exe.mdb
-lib/mono/gac/mod-mono-server/2.6.0.0__0738eb9f132ed756/mod-mono-server.exe
-lib/mono/gac/mod-mono-server/2.6.0.0__0738eb9f132ed756/mod-mono-server.exe.mdb
-lib/mono/gac/mod-mono-server2/2.6.0.0__0738eb9f132ed756/mod-mono-server2.exe
-lib/mono/gac/mod-mono-server2/2.6.0.0__0738eb9f132ed756/mod-mono-server2.exe.mdb
-lib/mono/gac/xsp/2.6.0.0__0738eb9f132ed756/xsp.exe
-lib/mono/gac/xsp/2.6.0.0__0738eb9f132ed756/xsp.exe.mdb
-lib/mono/gac/xsp2/2.6.0.0__0738eb9f132ed756/xsp2.exe
-lib/mono/gac/xsp2/2.6.0.0__0738eb9f132ed756/xsp2.exe.mdb
+lib/mono/gac/fastcgi-mono-server/2.6.3.0__0738eb9f132ed756/fastcgi-mono-server.exe
+lib/mono/gac/fastcgi-mono-server/2.6.3.0__0738eb9f132ed756/fastcgi-mono-server.exe.mdb
+lib/mono/gac/fastcgi-mono-server2/2.6.3.0__0738eb9f132ed756/fastcgi-mono-server2.exe
+lib/mono/gac/fastcgi-mono-server2/2.6.3.0__0738eb9f132ed756/fastcgi-mono-server2.exe.mdb
+lib/mono/gac/mod-mono-server/2.6.3.0__0738eb9f132ed756/mod-mono-server.exe
+lib/mono/gac/mod-mono-server/2.6.3.0__0738eb9f132ed756/mod-mono-server.exe.mdb
+lib/mono/gac/mod-mono-server2/2.6.3.0__0738eb9f132ed756/mod-mono-server2.exe
+lib/mono/gac/mod-mono-server2/2.6.3.0__0738eb9f132ed756/mod-mono-server2.exe.mdb
+lib/mono/gac/xsp/2.6.3.0__0738eb9f132ed756/xsp.exe
+lib/mono/gac/xsp/2.6.3.0__0738eb9f132ed756/xsp.exe.mdb
+lib/mono/gac/xsp2/2.6.3.0__0738eb9f132ed756/xsp2.exe
+lib/mono/gac/xsp2/2.6.3.0__0738eb9f132ed756/xsp2.exe.mdb
 lib/pkgconfig/xsp-2.pc
 lib/pkgconfig/xsp.pc
 lib/xsp/1.0/asp-state.exe
