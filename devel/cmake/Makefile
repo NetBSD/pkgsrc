@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2010/02/23 19:51:59 drochner Exp $
+# $NetBSD: Makefile,v 1.50 2010/04/09 13:25:34 adam Exp $
 
-DISTNAME=	cmake-${CMAKE_API}.0
-PKGREVISION=	2
+DISTNAME=	cmake-${CMAKE_API}.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.8/
 
@@ -16,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 # wants wsyncup and wcursyncup
-USE_NCURSES=		wsyncup
+USE_NCURSES=		yes
 GNU_CONFIGURE=		yes
 
 BUILD_TARGET=		default_target
