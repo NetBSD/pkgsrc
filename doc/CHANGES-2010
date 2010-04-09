@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1426 2010/04/09 09:34:42 tnn Exp $
+$NetBSD: CHANGES-2010,v 1.1427 2010/04/09 09:46:43 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1686,3 +1686,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated x11/libXext to 1.1.1 [tnn 2010-04-09]
 	Updated x11/recordproto to 1.14 [tnn 2010-04-09]
 	Updated devel/xorg-util-macros to 1.7.0 [tnn 2010-04-09]
+	Updated mail/sylpheed to 3.0.2 [tnn 2010-04-09]
