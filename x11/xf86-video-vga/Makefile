@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/06/10 07:24:48 hasso Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/09 08:53:05 tnn Exp $
 #
 
 DISTNAME=	xf86-video-vga-4.1.0
@@ -25,5 +25,6 @@ pre-configure:
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXext?=	build
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

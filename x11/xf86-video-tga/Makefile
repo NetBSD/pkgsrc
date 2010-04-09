@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/06/09 06:58:12 hasso Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/09 08:53:05 tnn Exp $
 #
 
 DISTNAME=	xf86-video-tga-1.2.0
@@ -19,6 +19,7 @@ USE_TOOLS+=     pkg-config
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXext?=	build
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xf86dgaproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
