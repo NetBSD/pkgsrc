@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:45 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/04/09 08:43:00 tnn Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -11,7 +11,7 @@ BUILDLINK_TREE+=	libXinerama
 .if !defined(LIBXINERAMA_BUILDLINK3_MK)
 LIBXINERAMA_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libXinerama+=	libXinerama>=1.0.1
+BUILDLINK_API_DEPENDS.libXinerama+=	libXinerama>=1.1
 BUILDLINK_PKGSRCDIR.libXinerama?=	../../x11/libXinerama
 
 .include "../../x11/libX11/buildlink3.mk"
