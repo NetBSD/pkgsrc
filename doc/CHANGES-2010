@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1423 2010/04/09 08:15:17 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1424 2010/04/09 08:17:52 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1673,3 +1673,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Added databases/p5-DBD-DB2 version 1.78 [sno 2010-04-09]
 	Added devel/p5-Params-Classify version 0.009 [sno 2010-04-09]
 	Added devel/p5-Lexical-SealRequireHints version 0.002 [sno 2010-04-09]
+	Added devel/p5-Attribute-Lexical version 0.001 [sno 2010-04-09]
