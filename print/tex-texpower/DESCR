@@ -1,0 +1,8 @@
+TeXPower is a bundle of packages intended to provide an all-
+inclusive environment for designing pdf screen presentations to
+be viewed in full-screen mode, especially for projecting
+`online' with a video beamer. For some of its core functions,
+it uses code derived from ppower4 packages. It is, however, not
+a complete environment in itself: it relies on an existing
+class for preparing slides (such as foiltex or seminar) or
+another package such as pdfslide.
