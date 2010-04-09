@@ -1,34 +1,33 @@
-# $NetBSD: Makefile,v 1.10 2008/07/14 12:56:09 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2010/04/09 01:36:34 obache Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
-PKGREVISION=	1
 CATEGORIES=	multimedia
-MASTER_SITES=	http://rubyforge.org/frs/download.php/15678/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/44137/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mingruby.rubyforge.org/
 COMMENT=	Ruby extension to drive the Ming SWF library
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_RUBY_SETUP=	yes
-VER=		0.1.8
+USE_TOOLS+=		pax
+USE_RUBY_SETUP=		yes
+VER=			0.2.1
 
-CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE} \
-			--siterubyver=${PREFIX}/${RUBY_VENDORLIB} \
-			--siterubyverarch=${PREFIX}/${RUBY_VENDORARCHLIB}
+WRKSRC=			${WRKDIR}/ming-ruby
 
-EXAMPLES=		README.examples action.rb drag.rb \
-			gradient.rb gradientxform.rb hello.rb keypress.rb \
-			mousetrack.rb movieclip.rb newbutton.rb shape.rb
-REPLACE_RUBY_DIRS=	examples
-INSTALLATION_DIRS=	${RUBY_EG}/ming
+REPLACE_RUBY_DIRS=	${WRKSRC}/examples
+
+CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE}
+CONFIGURE_ARGS+=	--siterubyver=${PREFIX}/${RUBY_VENDORLIB}
+CONFIGURE_ARGS+=	--siterubyverarch=${PREFIX}/${RUBY_VENDORARCHLIB}
 
 post-install:
-.for f in ${EXAMPLES}
-		${INSTALL_DATA} ${WRKSRC}/examples/${f} ${DESTDIR}${PREFIX}/${RUBY_EG}/ming
-.endfor
+		${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/ming
+		cd ${WRKSRC}/examples && \
+			pax -wrppm '-s|.*/CVS.*$$||' . ${DESTDIR}${RUBY_EXAMPLESDIR}/ming
 
 .include "../../multimedia/ming/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
