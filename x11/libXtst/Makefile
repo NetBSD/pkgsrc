@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/05/24 21:45:15 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/09 08:41:23 tnn Exp $
 #
 
-DISTNAME=		libXtst-1.0.3
+DISTNAME=		libXtst-1.1.0
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,5 +23,6 @@ PKGCONFIG_OVERRIDE+=	xtst.pc.in
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
