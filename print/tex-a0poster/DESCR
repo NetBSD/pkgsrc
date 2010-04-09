@@ -1,0 +1,5 @@
+Provides fonts in sizes of 12pt up to 107pt and also makes sure
+that in math formulas the symbols appear in the right size. Can
+also create a PostScript header file for dvips which ensures
+that the poster will be printed in the right size. Supported
+sizes are DIN A0, DIN A1, DIN A2 and DIN A3.
