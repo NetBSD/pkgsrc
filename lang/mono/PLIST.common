@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.9 2010/02/16 17:01:04 kefren Exp $
+@comment $NetBSD: PLIST.common,v 1.10 2010/04/09 15:35:21 kefren Exp $
 bin/al
 bin/al1
 bin/al2
@@ -199,6 +199,8 @@ lib/mono/1.0/Novell.Directory.Ldap.dll
 lib/mono/1.0/Npgsql.dll
 lib/mono/1.0/OpenSystem.C.dll
 lib/mono/1.0/PEAPI.dll
+lib/mono/1.0/RabbitMQ.Client.Apigen.exe
+lib/mono/1.0/RabbitMQ.Client.Apigen.exe.mdb
 lib/mono/1.0/RabbitMQ.Client.dll
 lib/mono/1.0/System.Configuration.Install.dll
 lib/mono/1.0/System.Data.OracleClient.dll
@@ -361,6 +363,8 @@ lib/mono/2.0/Novell.Directory.Ldap.dll
 lib/mono/2.0/Npgsql.dll
 lib/mono/2.0/OpenSystem.C.dll
 lib/mono/2.0/PEAPI.dll
+lib/mono/2.0/RabbitMQ.Client.Apigen.exe
+lib/mono/2.0/RabbitMQ.Client.Apigen.exe.mdb
 lib/mono/2.0/RabbitMQ.Client.dll
 lib/mono/2.0/System.ComponentModel.DataAnnotations.dll
 lib/mono/2.0/System.Configuration.Install.dll
