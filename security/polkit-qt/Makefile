@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/02/16 14:08:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/09 23:47:19 markd Exp $
 
 DISTNAME=	polkit-qt-0.9.3
 CATEGORIES=	security
@@ -19,6 +19,9 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
 PKGCONFIG_OVERRIDE+=	polkit-qt-core.pc.cmake polkit-qt-gui.pc.cmake polkit-qt.pc.cmake
+
+pre-configure:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../security/policykit/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
