@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2010/04/09 01:33:43 obache Exp $
+
+--- configure.orig	2008-09-18 10:00:06.000000000 +0900
++++ configure
+@@ -4635,7 +4635,7 @@ echo $ECHO_N "checking for Python librar
+ 		py_version=`$PYTHON -c "from distutils.sysconfig import *; \
+ 			from string import join; \
+ 			print join(get_config_vars('VERSION'))"`
+-		if test "$py_version" == "None"; then
++		if test "$py_version" = "None"; then
+ 			if test -n "$PYTHON_VERSION"; then
+ 				py_version=$PYTHON_VERSION
+ 			else
