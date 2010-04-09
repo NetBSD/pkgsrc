@@ -1,0 +1,3 @@
+Redefines LaTeX cross-referencing commands to insert \special
+commands for HyperTeX dvi viewers, such as recent versions of
+xdvi. The package is now largely superseded by hyperref.
