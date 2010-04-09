@@ -1,0 +1,24 @@
+The bundle provides six packages: - datatool.sty: databases may
+be created using LaTeX commands or by importing external files;
+they may be sorted numerically or alphabetically; repetitive
+operations (such as mail merging) may be performed on each row
+of a database, subject to conditions to exclude particular
+rows; commands are provided to examine database elements, and
+to convert formats (for example, to convert a numeric element
+to a format compatible with the fp package; - datapie.sty: a
+database may be represented as a pie chart; flexible options
+allow colouring of the chart, and annotation hooks are
+available; - dataplot.sty: a database may be represented as a
+2-dimensional scatter or line plot; flexible options control of
+the plot's overall appearance, and of legends and other extra
+information; - databar.sty: a database may be represented as a
+bar chart; overall appearance, colouring and annotation are
+controllable; - databib.sty: a bibliography may be loaded into
+a datatool database, and manipulated there before being printed
+(this permits a LaTeX-based route to printing bibliographies in
+formats for which no BibTeX style is available); and -
+person.sty: provides support for displaying a person's name and
+pronoun in a document, thus avoiding cumbersome use of
+"he/she", etc. The drawing packages make use of PGF/TikZ for
+their output. The bundle replaces and supersedes the author's
+csvtools bundle.
