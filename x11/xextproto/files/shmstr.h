@@ -1,4 +1,7 @@
-/* $NetBSD: shmstr.h,v 1.1 2010/04/09 08:33:38 tnn Exp $ */
+/* $NetBSD: shmstr.h,v 1.2 2010/04/09 09:06:52 tnn Exp $ */
+
+#ifndef _SHMSTR_H_
+#define _SHMSTR_H_
 
 #warning this file is deprecated and provided only for source compatibility
 
@@ -30,3 +33,5 @@ typedef struct _ShmFuncs {
     PixmapPtr	(* CreatePixmap)(XSHM_CREATE_PIXMAP_ARGS);
     void	(* PutImage)(XSHM_PUT_IMAGE_ARGS);
 } ShmFuncs, *ShmFuncsPtr;
+
+#endif
