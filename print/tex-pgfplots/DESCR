@@ -1,0 +1,6 @@
+Pgfplots draws high-quality function plots using normal or
+logarithmic scaling, with a user-friendly interface. The user
+supplies axis labels, legend entries and the plot coordinates
+for one or more plots and Pgfplots applies axis scaling,
+computes any logarithms and axis ticks and draws the plots.
+Pgfplots is based on Till Tantau's package PGF/TikZ.
