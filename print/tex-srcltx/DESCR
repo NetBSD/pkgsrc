@@ -1,0 +1,5 @@
+Provides a \special insertion into generated .dvi files
+allowing one to jump from the .dvi file to the .tex source and
+back again (given a .dvi viewer that supports this, such as Yap
+or xdvi version 22.38 or later). This was originally written by
+Aleksander Simonic, the author of the WinEdt shell.
