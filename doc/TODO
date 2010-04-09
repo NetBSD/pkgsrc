@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9176 2010/04/09 01:40:00 obache Exp $
+$NetBSD: TODO,v 1.9177 2010/04/09 01:41:31 obache Exp $
 
 Suggested new packages
 ======================
@@ -844,7 +844,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jools-1.0
 	o jpeg-8a
 	o jpilot-1.6.2
-	o json-glib-0.10.4 [obache]
 	o kadu-0.6.5
 	o kaffe-1.1.9
 	o kaffeine-0.8.7
