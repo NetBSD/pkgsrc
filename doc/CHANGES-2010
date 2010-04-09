@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1420 2010/04/09 05:22:06 agc Exp $
+$NetBSD: CHANGES-2010,v 1.1421 2010/04/09 08:08:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1670,3 +1670,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated devel/m17n-lib to 1.6.0 [obache 2010-04-09]
 	Updated misc/m17n-contrib to 1.1.11 [obache 2010-04-09]
 	Updated lang/smalltalk to 3.1nb6 [obache 2010-04-09]
+	Added databases/p5-DBD-DB2 version 1.78 [sno 2010-04-09]
