@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/02/06 15:15:10 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2010/04/09 08:53:05 tnn Exp $
 #
 
 DISTNAME=	xf86-video-vesa-2.3.0
@@ -17,4 +17,6 @@ GNU_CONFIGURE=  yes
 USE_TOOLS+=     pkg-config
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXext?=	build
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
