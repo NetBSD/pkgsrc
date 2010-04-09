@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/03/11 05:41:24 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/04/09 01:43:23 obache Exp $
 #
 
-DISTNAME=	pyclutter-1.0.0
+DISTNAME=	pyclutter-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/pyclutter/1.0/
 
@@ -26,7 +25,12 @@ PKGCONFIG_OVERRIDE+=	pyclutter.pc.in
 
 PY_PATCHPLIST=	yes
 
+PLIST_VARS+=	x11
+
 .include "../../graphics/clutter/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.clutter:Mx11)
+PLIST.x11=	yes
+.endif
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
