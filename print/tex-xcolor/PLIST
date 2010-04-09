@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 21:37:04 markd Exp $
+share/texmf-dist/dvips/xcolor/xcolor.pro
+share/texmf-dist/tex/latex/xcolor/svgnam.def
+share/texmf-dist/tex/latex/xcolor/x11nam.def
+share/texmf-dist/tex/latex/xcolor/xcolor.sty
