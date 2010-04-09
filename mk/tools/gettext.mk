@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.12 2009/03/22 18:10:27 joerg Exp $
+# $NetBSD: gettext.mk,v 1.13 2010/04/09 15:44:17 wiz Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -122,7 +122,8 @@ TOOLS_PATH.msgfmt=	${TOOLS_PREFIX.msgfmt}/bin/msgfmt
 .    if !empty(_TOOLS_USE_MSGFMT_SH:M[yY][eE][sS])
 USE_TOOLS+=		awk sh
 TOOLS_SCRIPT.msgfmt=	AWK=${TOOLS_AWK:Q} CAT=${TOOLS_CAT:Q}		\
-			MSGFMT=${TOOLS_PATH.msgfmt:Q}		\
+			TR=${TOOLS_TR:Q}				\
+			MSGFMT=${TOOLS_PATH.msgfmt:Q}			\
 			PKGSRCDIR=${PKGSRCDIR:Q}			\
 		        MSGFMT_STRIP_MSGID_PLURAL=${MSGFMT_STRIP_MSGID_PLURAL} \
 			MSGFMT_STRIP_MSGCTXT=${MSGFMT_STRIP_MSGCTXT} \
