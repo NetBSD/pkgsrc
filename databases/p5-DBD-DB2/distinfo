@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/09 08:08:34 sno Exp $
+
+SHA1 (DBD-DB2-1.78.tar.gz) = 4d99b7436f3aea7c2437ef7f423300ded209215b
+RMD160 (DBD-DB2-1.78.tar.gz) = 23ee57b64d54da836f1afef1b8da9aab3519486e
+Size (DBD-DB2-1.78.tar.gz) = 131380 bytes
