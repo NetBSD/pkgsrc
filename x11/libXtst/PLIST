@@ -1,14 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2007/07/12 13:40:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/09 08:41:23 tnn Exp $
+include/X11/extensions/XTest.h
+include/X11/extensions/record.h
 lib/libXtst.la
 lib/pkgconfig/xtst.pc
-man/man3/XTestCompareCurrentCursorWithWindow.3
-man/man3/XTestCompareCursorWithWindow.3
-man/man3/XTestDiscard.3
-man/man3/XTestFakeButtonEvent.3
-man/man3/XTestFakeKeyEvent.3
-man/man3/XTestFakeMotionEvent.3
-man/man3/XTestFakeRelativeMotionEvent.3
-man/man3/XTestGrabControl.3
-man/man3/XTestQueryExtension.3
-man/man3/XTestSetGContextOfGC.3
-man/man3/XTestSetVisualIDOfVisual.3
