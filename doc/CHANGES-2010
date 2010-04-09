@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1408 2010/04/07 14:58:03 gdt Exp $
+$NetBSD: CHANGES-2010,v 1.1409 2010/04/09 01:34:02 obache Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1662,3 +1662,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated wm/echinus to 0.4.3 [obache 2010-04-07]
 	Updated net/pear-Net_Sieve to 1.2.0 [obache 2010-04-07]
 	Updated lang/python25 to 2.5.5 [gdt 2010-04-07]
+	Updated multimedia/ming to 0.4.3 [obache 2010-04-09]
