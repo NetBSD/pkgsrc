@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1429 2010/04/09 12:40:42 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1430 2010/04/09 13:35:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1690,3 +1690,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typo3 to 4.3.3 [taca 2010-04-09]
 	Updated mail/pear-Mail_Mime to 1.6.2 [taca 2010-04-09]
 	Added mail/milter-manager version 1.4.2 [obache 2010-04-09]
+	Updated x11/fltk to 1.1.10 [obache 2010-04-09]
