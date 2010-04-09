@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/17 17:54:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/09 08:43:00 tnn Exp $
+include/X11/extensions/Xinerama.h
+include/X11/extensions/panoramiXext.h
 lib/libXinerama.la
 lib/pkgconfig/xinerama.pc
 man/man3/Xinerama.3
