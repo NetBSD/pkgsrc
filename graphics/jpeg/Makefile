@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2010/01/20 13:14:53 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2010/04/09 20:00:02 drochner Exp $
 #
 
-DISTNAME=		jpegsrc.v8
-PKGNAME=		jpeg-8
-PKGREVISION=		1
+DISTNAME=		jpegsrc.v8a
+PKGNAME=		jpeg-8a
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.ijg.org/files/
 
