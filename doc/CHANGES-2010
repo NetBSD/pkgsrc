@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1411 2010/04/09 01:36:48 obache Exp $
+$NetBSD: CHANGES-2010,v 1.1412 2010/04/09 01:41:31 obache Exp $
 
 [Please note that pkgsrc is in a freeze in preparation for the
 pkgsrc-2010Q1 branch right now.  No new packages in pkgsrc, please,
@@ -1665,3 +1665,4 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated multimedia/ming to 0.4.3 [obache 2010-04-09]
 	Updated multimedia/py-ming to 0.4.3 [obache 2010-04-09]
 	Updated multimedia/ruby-ming to 0.2.1 [obache 2010-04-09]
+	Updated textproc/json-glib to 0.10.4 [obache 2010-04-09]
