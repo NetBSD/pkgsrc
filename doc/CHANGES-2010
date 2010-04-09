@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.1424 2010/04/09 08:17:52 sno Exp $
+$NetBSD: CHANGES-2010,v 1.1425 2010/04/09 09:13:57 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -1674,3 +1674,14 @@ Changes to the packages collection and infrastructure in 2010:
 	Added devel/p5-Params-Classify version 0.009 [sno 2010-04-09]
 	Added devel/p5-Lexical-SealRequireHints version 0.002 [sno 2010-04-09]
 	Added devel/p5-Attribute-Lexical version 0.001 [sno 2010-04-09]
+	Updated sysutils/libpciaccess to 0.11.0 [tnn 2010-04-09]
+	Updated x11/fixesproto to 4.1.1 [tnn 2010-04-09]
+	Updated x11/inputproto to 2.0 [tnn 2010-04-09]
+	Updated x11/xextproto to 7.1.1 [tnn 2010-04-09]
+	Updated x11/xineramaproto to 1.2 [tnn 2010-04-09]
+	Updated x11/libXfixes to 4.0.4 [tnn 2010-04-09]
+	Updated x11/libXtst to 1.1.0 [tnn 2010-04-09]
+	Updated x11/libXinerama to 1.1 [tnn 2010-04-09]
+	Updated x11/libXi to 1.3 [tnn 2010-04-09]
+	Updated x11/libXext to 1.1.1 [tnn 2010-04-09]
+	Updated x11/recordproto to 1.14 [tnn 2010-04-09]
