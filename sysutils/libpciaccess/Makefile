@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/08/31 07:48:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/09 08:09:11 tnn Exp $
 #
 
-DISTNAME=	libpciaccess-0.10.8
+DISTNAME=	libpciaccess-0.11.0
 CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +18,7 @@ ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64 NetBSD-*-x86_64 OpenBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	DragonFly-*-i386 DragonFly-*-x86_64
 ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-*
+ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

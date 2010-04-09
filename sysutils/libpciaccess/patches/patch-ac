@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
+$NetBSD: patch-ac,v 1.6 2010/04/09 08:09:11 tnn Exp $
 
---- src/netbsd_pci.c.orig	2008-12-20 04:21:22.000000000 +0100
+--- src/netbsd_pci.c.orig	2009-02-17 00:10:20.000000000 +0000
 +++ src/netbsd_pci.c
-@@ -20,12 +20,15 @@
+@@ -1,6 +1,7 @@
+ /*
+  * Copyright (c) 2008 Juan Romero Pardines
+  * Copyright (c) 2008 Mark Kettenis
++ * Copyright (c) 2009 Michael Lorenz
+  *
+  * Permission to use, copy, modify, and distribute this software for any
+  * purpose with or without fee is hereby granted, provided that the above
+@@ -20,12 +21,15 @@
  #include <sys/mman.h>
  #include <sys/types.h>
  
@@ -19,7 +27,7 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
  
  #include <errno.h>
  #include <fcntl.h>
-@@ -35,6 +38,8 @@
+@@ -35,126 +39,160 @@
  #include <unistd.h>
  
  
@@ -28,24 +36,62 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
  #include "pciaccess.h"
  #include "pciaccess_private.h"
  
-@@ -43,20 +48,12 @@ static int pcifd;
+-static int pcifd;
++typedef struct _pcibus {
++	int fd;		/* /dev/pci* */
++	int num;	/* bus number */
++	int maxdevs;	/* maximum number of devices */
++} PciBus;
++
++static PciBus buses[32];	/* indexed by pci_device.domain */
++static int nbuses = 0;		/* number of buses found */
++
++/*
++ * NetBSD's userland has a /dev/pci* entry for each bus but userland has no way
++ * to tell if a bus is a subordinate of another one or if it's on a different
++ * host bridge. On some architectures ( macppc for example ) all root buses have
++ * bus number 0 but on sparc64 for example the two roots in an Ultra60 have
++ * different bus numbers - one is 0 and the other 128.
++ * With each /dev/pci* we can map everything on the same root and we can also
++ * see all devices on the same root, trying to do that causes problems though:
++ * - since we can't tell which /dev/pci* is a subordinate we would find some
++ *   devices more than once
++ * - we would have to guess subordinate bus numbers which is a waste of time
++ *   since we can ask each /dev/pci* for its bus number so we can scan only the
++ *   buses we know exist, not all 256 which may exist in each domain.
++ * - some bus_space_mmap() methods may limit mappings to address ranges which
++ *   belong to known devices on that bus only.
++ * Each host bridge may or may not have its own IO range, to avoid guesswork
++ * here each /dev/pci* will let userland map its appropriate IO range at
++ * PCI_MAGIC_IO_RANGE if defined in <machine/param.h>
++ * With all this we should be able to use any PCI graphics device on any PCI
++ * bus on any architecture as long as Xorg has a driver, without allowing
++ * arbitrary mappings via /dev/mem and without userland having to know or care
++ * about translating bus addresses to physical addresses or the other way 
++ * around.
++ */
+ 
  static int
- pci_read(int bus, int dev, int func, uint32_t reg, uint32_t *val)
+-pci_read(int bus, int dev, int func, uint32_t reg, uint32_t *val)
++pci_read(int domain, int bus, int dev, int func, uint32_t reg, uint32_t *val)
  {
 -	struct pciio_bdf_cfgreg io;
 -	int err;
--
++	uint32_t rval;
+ 
 -	bzero(&io, sizeof(io));
 -	io.bus = bus;
 -	io.device = dev;
 -	io.function = func;
 -	io.cfgreg.reg = reg;
-+	uint32_t rval;
++	if ((domain < 0) || (domain > nbuses))
++		return -1;
  
 -	err = ioctl(pcifd, PCI_IOC_BDF_CFGREAD, &io);
 -	if (err)
 -		return (err);
-+	if (pcibus_conf_read(pcifd, bus, dev, func, reg, &rval) == -1)
++	if (pcibus_conf_read(buses[domain].fd, (unsigned int)bus,
++	    (unsigned int)dev, (unsigned int)func, reg, &rval) == -1)
 +		return (-1);
  
 -	*val = io.cfgreg.val;
@@ -53,25 +99,45 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
  
  	return 0;
  }
-@@ -64,16 +61,7 @@ pci_read(int bus, int dev, int func, uin
+ 
  static int
- pci_write(int bus, int dev, int func, uint32_t reg, uint32_t val)
+-pci_write(int bus, int dev, int func, uint32_t reg, uint32_t val)
++pci_write(int domain, int bus, int dev, int func, uint32_t reg, uint32_t val)
  {
 -	struct pciio_bdf_cfgreg io;
--
+ 
 -	bzero(&io, sizeof(io));
 -	io.bus = bus;
 -	io.device = dev;
 -	io.function = func;
 -	io.cfgreg.reg = reg;
 -	io.cfgreg.val = val;
--
++	if ((domain < 0) || (domain > nbuses))
++		return -1;
+ 
 -	return ioctl(pcifd, PCI_IOC_BDF_CFGWRITE, &io);
-+	return pcibus_conf_write(pcifd, bus, dev, func, reg, val);
++	return pcibus_conf_write(buses[domain].fd, (unsigned int)bus,
++	    (unsigned int)dev, (unsigned int)func, reg, val);
  }
  
  static int
-@@ -91,70 +79,68 @@ static int
+-pci_nfuncs(int bus, int dev)
++pci_nfuncs(int domain, int bus, int dev)
+ {
+ 	uint32_t hdr;
+ 
+-	if (pci_read(bus, dev, 0, PCI_BHLC_REG, &hdr) != 0)
++	if ((domain < 0) || (domain > nbuses))
++		return -1;
++
++	if (pci_read(domain, bus, dev, 0, PCI_BHLC_REG, &hdr) != 0)
+ 		return -1;
+ 
+ 	return (PCI_HDRTYPE_MULTIFN(hdr) ? 8 : 1);
+ }
+ 
++/*ARGSUSED*/
+ static int
  pci_device_netbsd_map_range(struct pci_device *dev,
      struct pci_device_mapping *map)
  {
@@ -89,19 +155,29 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
  
  	if (map->flags & PCI_DEV_MAP_FLAG_WRITABLE)
  		prot |= PROT_WRITE;
- 
--	map->memory = mmap(NULL, map->size, prot, MAP_SHARED,
+-
+ 	map->memory = mmap(NULL, map->size, prot, MAP_SHARED,
 -	    fd, map->base);
-+	fd = open("/dev/mem", O_RDWR);
-+	if (fd == -1)
-+		return errno;
-+	map->memory = mmap(NULL, map->size, prot, MAP_SHARED, fd, map->base);
- 	if (map->memory == MAP_FAILED)
- 		return errno;
- 
+-	if (map->memory == MAP_FAILED)
+-		return errno;
++	    buses[dev->domain].fd, (off_t)map->base);
++	if (map->memory == MAP_FAILED) {
++		fd = open("/dev/mem", O_RDWR);
++		if (fd == -1)
++			return errno;
++		map->memory = mmap(NULL, map->size, prot, MAP_SHARED, fd,
++		    (off_t)map->base);
++		if (map->memory == MAP_FAILED) {
++			ret = errno;
++			close(fd);
++			return ret;
++		}
++		close(fd);
++        }
++
 +#ifdef HAVE_MTRR
 +	memset(&m, 0, sizeof(m));
-+
+ 
  	/* No need to set an MTRR if it's the default mode. */
  	if ((map->flags & PCI_DEV_MAP_FLAG_CACHABLE) ||
  	    (map->flags & PCI_DEV_MAP_FLAG_WRITE_COMBINE)) {
@@ -129,14 +205,14 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
 -			close(fd);
 -			return errno;
 -		}
+-	}
 +			m.type = MTRR_TYPE_WC;
-+
+ 
+-	close(fd);
 +		if ((netbsd_set_mtrr(&m, &n)) == -1)
 +			ret = errno;
- 	}
++	}
 +#endif
- 
- 	close(fd);
  
 -	return 0;
 +	return ret;
@@ -178,7 +254,7 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
  
  	return pci_device_generic_unmap_range(dev, map);
  }
-@@ -163,25 +149,22 @@ static int
+@@ -163,25 +201,23 @@ static int
  pci_device_netbsd_read(struct pci_device *dev, void *data,
      pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_read)
  {
@@ -191,14 +267,16 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
  
  	*bytes_read = 0;
  	while (size > 0) {
- 		int toread = MIN(size, 4 - (offset & 0x3));
+-		int toread = MIN(size, 4 - (offset & 0x3));
++		size_t toread = MIN(size, 4 - (offset & 0x3));
  
 -		io.cfgreg.reg = (offset & ~0x3);
-+		reg = (offset & ~0x3);
++		reg = (u_int)(offset & ~0x3);
  
 -		if (ioctl(pcifd, PCI_IOC_BDF_CFGREAD, &io) == -1)
-+		if ((pcibus_conf_read(pcifd, dev->bus, dev->dev, dev->func,
-+		    reg, &rval)) == -1)
++		if ((pcibus_conf_read(buses[dev->domain].fd,
++		    (unsigned int)dev->bus, (unsigned int)dev->dev,
++		    (unsigned int)dev->func, reg, &rval)) == -1)
  			return errno;
  
 -		io.cfgreg.val = htole32(io.cfgreg.val);
@@ -211,7 +289,7 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
  
  		offset += toread;
  		data = (char *)data + toread;
-@@ -196,21 +179,18 @@ static int
+@@ -196,25 +232,23 @@ static int
  pci_device_netbsd_write(struct pci_device *dev, const void *data,
      pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_written)
  {
@@ -229,48 +307,371 @@ $NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
  	while (size > 0) {
 -		io.cfgreg.reg = offset;
 -		memcpy(&io.cfgreg.val, data, 4);
-+		reg = offset;
++		reg = (u_int)offset;
 +		memcpy(&val, data, 4);
  
 -		if (ioctl(pcifd, PCI_IOC_BDF_CFGWRITE, &io) == -1) 
-+		if ((pcibus_conf_write(pcifd, dev->bus, dev->dev, dev->func,
-+		    reg, val)) == -1)
++		if ((pcibus_conf_write(buses[dev->domain].fd,
++		    (unsigned int)dev->bus, (unsigned int)dev->dev,
++		    (unsigned int)dev->func, reg, val)) == -1)
  			return errno;
  
  		offset += 4;
-@@ -222,6 +202,26 @@ pci_device_netbsd_write(struct pci_devic
- 	return 0;
- }
- 
-+static int
-+pci_device_netbsd_read_rom(struct pci_device *device, void *buf)
-+{
-+	int fd, res, err;
-+
-+	fd = open("/dev/mem", O_RDONLY, 0);
-+	if (fd < 0)
-+		return errno;
-+
-+	lseek(fd, 0xc0000, SEEK_SET);
-+	res = read(fd, buf, 64*1024);
-+	if (res < 0) {
-+		err = errno;
-+		close(fd);
-+		return err;
-+	}
-+	close(fd);
-+	return 0;
-+}
-+
+-		data = (char *)data + 4;
++		data = (const char *)data + 4;
+ 		size -= 4;
+ 		*bytes_written += 4;
+ 	}
+@@ -225,7 +259,11 @@ pci_device_netbsd_write(struct pci_devic
  static void
  pci_system_netbsd_destroy(void)
  {
-@@ -312,7 +312,7 @@ pci_device_netbsd_probe(struct pci_devic
+-	close(pcifd);
++	int i;
++
++	for (i = 0; i < nbuses; i++) {
++		close(buses[i].fd);
++	}
+ 	free(pci_sys);
+ 	pci_sys = NULL;
+ }
+@@ -233,17 +271,34 @@ pci_system_netbsd_destroy(void)
+ static int
+ pci_device_netbsd_probe(struct pci_device *device)
+ {
+-	struct pci_device_private *priv = (struct pci_device_private *)device;
++	struct pci_device_private *priv =
++	    (struct pci_device_private *)(void *)device;
+ 	struct pci_mem_region *region;
+ 	uint64_t reg64, size64;
+ 	uint32_t bar, reg, size;
+-	int bus, dev, func, err;
++	int bus, dev, func, err, domain;
+ 
++	domain = device->domain;
+ 	bus = device->bus;
+ 	dev = device->dev;
+ 	func = device->func;
+ 
+-	err = pci_read(bus, dev, func, PCI_BHLC_REG, &reg);
++	/* Enable the device if necessary */
++	err = pci_read(domain, bus, dev, func, PCI_COMMAND_STATUS_REG, &reg);
++	if (err)
++		return err;
++	if ((reg & (PCI_COMMAND_IO_ENABLE | PCI_COMMAND_MEM_ENABLE | PCI_COMMAND_MASTER_ENABLE)) !=
++	    (PCI_COMMAND_IO_ENABLE | PCI_COMMAND_MEM_ENABLE | PCI_COMMAND_MASTER_ENABLE)) {
++		reg |= PCI_COMMAND_IO_ENABLE |
++		       PCI_COMMAND_MEM_ENABLE |
++		       PCI_COMMAND_MASTER_ENABLE;
++		err = pci_write(domain, bus, dev, func, PCI_COMMAND_STATUS_REG,
++				reg);
++		if (err)
++			return err;
++	}
++
++	err = pci_read(domain, bus, dev, func, PCI_BHLC_REG, &reg);
+ 	if (err)
+ 		return err;
+ 
+@@ -254,16 +309,16 @@ pci_device_netbsd_probe(struct pci_devic
+ 	region = device->regions;
+ 	for (bar = PCI_MAPREG_START; bar < PCI_MAPREG_END;
+ 	     bar += sizeof(uint32_t), region++) {
+-		err = pci_read(bus, dev, func, bar, &reg);
++		err = pci_read(domain, bus, dev, func, bar, &reg);
+ 		if (err)
+ 			return err;
+ 
+ 		/* Probe the size of the region. */
+-		err = pci_write(bus, dev, func, bar, ~0);
++		err = pci_write(domain, bus, dev, func, bar, (unsigned int)~0);
+ 		if (err)
+ 			return err;
+-		pci_read(bus, dev, func, bar, &size);
+-		pci_write(bus, dev, func, bar, reg);
++		pci_read(domain, bus, dev, func, bar, &size);
++		pci_write(domain, bus, dev, func, bar, reg);
+ 
+ 		if (PCI_MAPREG_TYPE(reg) == PCI_MAPREG_TYPE_IO) {
+ 			region->is_IO = 1;
+@@ -286,66 +341,188 @@ pci_device_netbsd_probe(struct pci_devic
+ 
+ 				bar += sizeof(uint32_t);
+ 
+-				err = pci_read(bus, dev, func, bar, &reg);
++				err = pci_read(domain, bus, dev, func, bar, &reg);
+ 				if (err)
+ 					return err;
+ 				reg64 |= (uint64_t)reg << 32;
+ 
+-				err = pci_write(bus, dev, func, bar, ~0);
++				err = pci_write(domain, bus, dev, func, bar,
++				    (unsigned int)~0);
+ 				if (err)
+ 					return err;
+-				pci_read(bus, dev, func, bar, &size);
+-				pci_write(bus, dev, func, bar, reg64 >> 32);
++				pci_read(domain, bus, dev, func, bar, &size);
++				pci_write(domain, bus, dev, func, bar,
++				    (unsigned int)(reg64 >> 32));
+ 				size64 |= (uint64_t)size << 32;
+ 
+-				region->base_addr = PCI_MAPREG_MEM64_ADDR(reg64);
+-				region->size = PCI_MAPREG_MEM64_SIZE(size64);
++				region->base_addr =
++				    (unsigned long)PCI_MAPREG_MEM64_ADDR(reg64);
++				region->size =
++				    (unsigned long)PCI_MAPREG_MEM64_SIZE(size64);
+ 				region++;
+ 				break;
+ 			}
+ 		}
+ 	}
+ 
++	/* Probe expansion ROM if present */
++	err = pci_read(domain, bus, dev, func, PCI_MAPREG_ROM, &reg);
++	if (err)
++		return err;
++	if (reg != 0) {
++		err = pci_write(domain, bus, dev, func, PCI_MAPREG_ROM,
++		    (uint32_t)(~PCI_MAPREG_ROM_ENABLE));
++		if (err)
++			return err;
++		pci_read(domain, bus, dev, func, PCI_MAPREG_ROM, &size);
++		pci_write(domain, bus, dev, func, PCI_MAPREG_ROM, reg);
++		if ((reg & PCI_MAPREG_MEM_ADDR_MASK) != 0) {
++			priv->rom_base = reg & PCI_MAPREG_MEM_ADDR_MASK;
++			device->rom_size = -(size & PCI_MAPREG_MEM_ADDR_MASK);
++		}
++	}
++
+ 	return 0;
+ }
+ 
++/**
++ * Read a VGA rom using the 0xc0000 mapping.
++ *
++ * This function should be extended to handle access through PCI resources,
++ * which should be more reliable when available.
++ */
++static int
++pci_device_netbsd_read_rom(struct pci_device *dev, void *buffer)
++{
++    struct pci_device_private *priv = (struct pci_device_private *)(void *)dev;
++    void *bios;
++    pciaddr_t rom_base;
++    size_t rom_size;
++    uint32_t bios_val, command_val;
++    int pci_rom, memfd;
++
++    if (((priv->base.device_class >> 16) & 0xff) != PCI_CLASS_DISPLAY ||
++	((priv->base.device_class >> 8) & 0xff) != PCI_SUBCLASS_DISPLAY_VGA)
++	return ENOSYS;
++
++    if (priv->rom_base == 0) {
++#if defined(__amd64__) || defined(__i386__)
++	/*
++	 * We need a way to detect when this isn't the console and reject
++	 * this request outright.
++	 */
++	rom_base = 0xc0000;
++	rom_size = 0x10000;
++	pci_rom = 0;
++#else
++	return ENOSYS;
++#endif
++    } else {
++	rom_base = priv->rom_base;
++	rom_size = dev->rom_size;
++	pci_rom = 1;
++	if ((pcibus_conf_read(buses[dev->domain].fd, (unsigned int)dev->bus,
++	    (unsigned int)dev->dev, (unsigned int)dev->func,
++	    PCI_COMMAND_STATUS_REG, &command_val)) == -1)
++	    return errno;
++	if ((command_val & PCI_COMMAND_MEM_ENABLE) == 0) {
++	    if ((pcibus_conf_write(buses[dev->domain].fd,
++	        (unsigned int)dev->bus, (unsigned int)dev->dev,
++		(unsigned int)dev->func, PCI_COMMAND_STATUS_REG,
++		command_val | PCI_COMMAND_MEM_ENABLE)) == -1)
++		return errno;
++	}
++	if ((pcibus_conf_read(buses[dev->domain].fd, (unsigned int)dev->bus,
++	    (unsigned int)dev->dev, (unsigned int)dev->func,
++	    PCI_MAPREG_ROM, &bios_val)) == -1)
++	    return errno;
++	if ((bios_val & PCI_MAPREG_ROM_ENABLE) == 0) {
++	    if ((pcibus_conf_write(buses[dev->domain].fd,
++	        (unsigned int)dev->bus,
++		(unsigned int)dev->dev, (unsigned int)dev->func,
++		PCI_MAPREG_ROM, bios_val | PCI_MAPREG_ROM_ENABLE)) == -1)
++		return errno;
++	}
++    }
++
++    fprintf(stderr, "Using rom_base = 0x%lx (pci_rom=%d)\n", (long)rom_base,
++	pci_rom);
++    memfd = open("/dev/mem", O_RDONLY);
++    if (memfd == -1)
++	return errno;
++
++    bios = mmap(NULL, rom_size, PROT_READ, MAP_SHARED, memfd, (off_t)rom_base);
++    if (bios == MAP_FAILED) {
++	int serrno = errno;
++	close(memfd);
++	return serrno;
++    }
++
++    memcpy(buffer, bios, rom_size);
++
++    munmap(bios, rom_size);
++    close(memfd);
++
++    if (pci_rom) {
++	if ((command_val & PCI_COMMAND_MEM_ENABLE) == 0) {
++	    if ((pcibus_conf_write(buses[dev->domain].fd,
++	        (unsigned int)dev->bus,
++		(unsigned int)dev->dev, (unsigned int)dev->func,
++		PCI_COMMAND_STATUS_REG, command_val)) == -1)
++		return errno;
++	}
++	if ((bios_val & PCI_MAPREG_ROM_ENABLE) == 0) {
++	    if ((pcibus_conf_write(buses[dev->domain].fd,
++	        (unsigned int)dev->bus,
++		(unsigned int)dev->dev, (unsigned int)dev->func,
++		PCI_MAPREG_ROM, bios_val)) == -1)
++		return errno;
++	}
++    }
++
++    return 0;
++}
++
  static const struct pci_system_methods netbsd_pci_methods = {
- 	pci_system_netbsd_destroy,
- 	NULL,
+-	pci_system_netbsd_destroy,
 -	NULL,
-+	pci_device_netbsd_read_rom,
- 	pci_device_netbsd_probe,
- 	pci_device_netbsd_map_range,
- 	pci_device_netbsd_unmap_range,
+-	NULL,
+-	pci_device_netbsd_probe,
+-	pci_device_netbsd_map_range,
+-	pci_device_netbsd_unmap_range,
+-	pci_device_netbsd_read,
+-	pci_device_netbsd_write,
+-	pci_fill_capabilities_generic
++	.destroy = pci_system_netbsd_destroy,
++	.destroy_device = NULL,
++	.read_rom = pci_device_netbsd_read_rom,
++	.probe = pci_device_netbsd_probe,
++	.map_range = pci_device_netbsd_map_range,
++	.unmap_range = pci_device_netbsd_unmap_range,
++	.read = pci_device_netbsd_read,
++	.write = pci_device_netbsd_write,
++	.fill_capabilities = pci_fill_capabilities_generic
+ };
+ 
+ int
+ pci_system_netbsd_create(void)
+ {
+ 	struct pci_device_private *device;
+-	int bus, dev, func, ndevs, nfuncs;
++	int bus, dev, func, ndevs, nfuncs, domain, pcifd;
+ 	uint32_t reg;
+-
+-	pcifd = open("/dev/pci0", O_RDWR);
+-	if (pcifd == -1)
+-		return ENXIO;
++	char netbsd_devname[32];
++	struct pciio_businfo businfo;
+ 
+ 	pci_sys = calloc(1, sizeof(struct pci_system));
+-	if (pci_sys == NULL) {
+-		close(pcifd);
+-		return ENOMEM;
+-	}
+ 
+ 	pci_sys->methods = &netbsd_pci_methods;
+ 
+ 	ndevs = 0;
+-	for (bus = 0; bus < 256; bus++) {
+-		for (dev = 0; dev < 32; dev++) {
+-			nfuncs = pci_nfuncs(bus, dev);
++	nbuses = 0;
++	snprintf(netbsd_devname, 32, "/dev/pci%d", nbuses);
++	pcifd = open(netbsd_devname, O_RDWR);
++	while (pcifd > 0) {
++		ioctl(pcifd, PCI_IOC_BUSINFO, &businfo);
++		buses[nbuses].fd = pcifd;
++		buses[nbuses].num = bus = businfo.busno;
++		buses[nbuses].maxdevs = businfo.maxdevs;
++		domain = nbuses;
++		nbuses++;
++		for (dev = 0; dev < businfo.maxdevs; dev++) {
++			nfuncs = pci_nfuncs(domain, bus, dev);
+ 			for (func = 0; func < nfuncs; func++) {
+-				if (pci_read(bus, dev, func, PCI_ID_REG,
++				if (pci_read(domain, bus, dev, func, PCI_ID_REG,
+ 				    &reg) != 0)
+ 					continue;
+ 				if (PCI_VENDOR(reg) == PCI_VENDOR_INVALID ||
+@@ -355,37 +532,43 @@ pci_system_netbsd_create(void)
+ 				ndevs++;
+ 			}
+ 		}
++		snprintf(netbsd_devname, 32, "/dev/pci%d", nbuses);
++		pcifd = open(netbsd_devname, O_RDWR);
+ 	}
+ 
+ 	pci_sys->num_devices = ndevs;
+ 	pci_sys->devices = calloc(ndevs, sizeof(struct pci_device_private));
+ 	if (pci_sys->devices == NULL) {
++		int i;
++
++		for (i = 0; i < nbuses; i++)
++			close(buses[i].fd);
+ 		free(pci_sys);
+-		close(pcifd);
+ 		return ENOMEM;
+ 	}
+ 
+ 	device = pci_sys->devices;
+-	for (bus = 0; bus < 256; bus++) {
+-		for (dev = 0; dev < 32; dev++) {
+-			nfuncs = pci_nfuncs(bus, dev);
++	for (domain = 0; domain < nbuses; domain++) {
++		bus = buses[domain].num;
++		for (dev = 0; dev < buses[domain].maxdevs; dev++) {
++			nfuncs = pci_nfuncs(domain, bus, dev);
+ 			for (func = 0; func < nfuncs; func++) {
+-				if (pci_read(bus, dev, func, PCI_ID_REG,
+-				    &reg) != 0)
++				if (pci_read(domain, bus, dev, func,
++				    PCI_ID_REG, &reg) != 0)
+ 					continue;
+ 				if (PCI_VENDOR(reg) == PCI_VENDOR_INVALID ||
+ 				    PCI_VENDOR(reg) == 0)
+ 					continue;
+ 
+-				device->base.domain = 0;
++				device->base.domain = domain;
+ 				device->base.bus = bus;
+ 				device->base.dev = dev;
+ 				device->base.func = func;
+ 				device->base.vendor_id = PCI_VENDOR(reg);
+ 				device->base.device_id = PCI_PRODUCT(reg);
+ 
+-				if (pci_read(bus, dev, func, PCI_CLASS_REG,
+-				    &reg) != 0)
++				if (pci_read(domain, bus, dev, func,
++				    PCI_CLASS_REG, &reg) != 0)
+ 					continue;
+ 
+ 				device->base.device_class =
+@@ -393,8 +576,8 @@ pci_system_netbsd_create(void)
+ 				    PCI_SUBCLASS(reg) << 8;
+ 				device->base.revision = PCI_REVISION(reg);
+ 
+-				if (pci_read(bus, dev, func, PCI_SUBSYS_ID_REG,
+-				    &reg) != 0)
++				if (pci_read(domain, bus, dev, func,
++				    PCI_SUBSYS_ID_REG, &reg) != 0)
+ 					continue;
+ 
+ 				device->base.subvendor_id = PCI_VENDOR(reg);
