@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9174 2010/04/08 15:33:11 taca Exp $
+$NetBSD: TODO,v 1.9175 2010/04/09 01:34:02 obache Exp $
 
 Suggested new packages
 ======================
@@ -999,7 +999,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o midori-0.2.3
 	o milkytracker-0.90.85
 	o mined-2000.16
-	o ming-0.4.3 [obache]
 	o minicom-2.4
 	o minivmac-3.0.4
 	o miredo-1.1.7
