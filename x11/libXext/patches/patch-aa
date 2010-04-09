@@ -1,13 +1,23 @@
-$NetBSD: patch-aa,v 1.3 2009/02/27 16:00:01 tnn Exp $
+$NetBSD: patch-aa,v 1.4 2010/04/09 08:50:17 tnn Exp $
 
---- src/Xge.c.orig	2008-12-03 20:02:05.000000000 +0100
-+++ src/Xge.c
-@@ -161,6 +161,8 @@ cleanup:
- static Bool
- _xgeCheckExtension(Display* dpy, XExtDisplayInfo* info)
- {
-+    if (!XextHasExtension(info))
-+        return False;
-     XextCheckExtension(dpy, info, xge_extension_name, False);
-     return True;
- }
+--- include/X11/extensions/dpms.h.orig	2009-10-16 21:26:30.000000000 +0000
++++ include/X11/extensions/dpms.h
+@@ -31,10 +31,18 @@ Equipment Corporation.
+ #ifndef _X11_EXTENSIONS_DPMS_H
+ #define _X11_EXTENSIONS_DPMS_H 1
+ 
++#include <X11/Xfuncproto.h>
+ #include <X11/X.h>
+ #include <X11/Xmd.h>
+ #include <X11/extensions/dpmsconst.h>
+ 
++#ifndef Status
++/* XXX: this is a hack to let old xf86-video-* build. Does not belong here. */
++#define Bool int
++#define Status int
++typedef struct _XDisplay Display;
++#endif
++
+ _XFUNCPROTOBEGIN
+ 
+ extern Bool DPMSQueryExtension(Display *, int *, int *);
