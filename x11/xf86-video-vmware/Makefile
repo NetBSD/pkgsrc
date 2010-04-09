@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/02/13 12:01:31 obache Exp $
+# $NetBSD: Makefile,v 1.12 2010/04/09 08:53:05 tnn Exp $
 #
 
 DISTNAME=	xf86-video-vmware-10.16.9
@@ -18,6 +18,7 @@ USE_TOOLS+=	pkg-config
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXext?=	build
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xineramaproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
