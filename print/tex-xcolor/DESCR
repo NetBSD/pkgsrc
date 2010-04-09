@@ -1,0 +1,8 @@
+Provides easy driver-independent access to several kinds of
+color tints, shades, tones, and mixes of arbitrary colors. It
+allows a user to select a document-wide target color model and
+offers complete tools for conversion between eight color
+models. Additionally, there is a command for alternating row
+colors plus repeated non-aligned material (like horizontal
+lines) in tables. Colors can be mixed like
+\color{red!30!green!40!blue}.
