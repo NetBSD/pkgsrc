@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/02/27 16:00:01 tnn Exp $
+$NetBSD: distinfo,v 1.8 2010/04/09 08:50:17 tnn Exp $
 
-SHA1 (libXext-1.0.5.tar.bz2) = 926c7237108aaccbb8e437ebd80b8edc67615249
-RMD160 (libXext-1.0.5.tar.bz2) = a6ed71d3b4d0e7f1442e196fc795324ff3188f5a
-Size (libXext-1.0.5.tar.bz2) = 271301 bytes
-SHA1 (patch-aa) = ac7ff4582731a3c3886ff156979a14c304a81d67
+SHA1 (libXext-1.1.1.tar.bz2) = c2eb8d8d760c6881e51c938812764d1d6cefd51c
+RMD160 (libXext-1.1.1.tar.bz2) = b2659a7ed3034712e811474c039bfd9d8cb0cfe1
+Size (libXext-1.1.1.tar.bz2) = 318737 bytes
+SHA1 (patch-aa) = 37b0fb5da1f238792793c8fd93b5c1f552574cc7
